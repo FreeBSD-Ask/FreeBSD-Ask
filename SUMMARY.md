@@ -2,7 +2,7 @@
 
 * [FreeBSD-Ask](README.md)
 
-## 第一章 走近FreeBSD <a href="第一章" id="第一章"></a>
+## 第一章 走近FreeBSD <a href="di-yi-zhang" id="di-yi-zhang"></a>
 
 * [第一节 什么是UNIX](第一章/di-yi-jie.md)
 * [第二节 什么是类UNIX](第一章/di-er-jie.md)
@@ -29,11 +29,8 @@
 * [第四节 网络配置](第三章/第四节.md)
 * [第五节 物理机下Intel 显卡的配置](第三章/第五节.md)
 * [第六节 物理机下 NVIDIA 显卡的配置](第三章/di-liu-jie-wu-li-ji-xia-nvidia-xian-ka-de-pei-zhi.md)
-
-***
-
-* [第七节 物理机下AMD 显卡的配置](第七节.md)
-* [第八节 笔记本触摸板的配置](第八节.md)
+* [第七节 物理机下AMD 显卡的配置](di-san-zhang/di-qi-jie-wu-li-ji-xia-amd-xian-ka-de-pei-zhi.md)
+* [第八节 笔记本触摸板的配置](di-san-zhang/di-ba-jie-bi-ji-ben-chu-mo-ban-de-pei-zhi.md)
 
 ## 第四章 基础简介 <a href="di-si-zhang" id="di-si-zhang"></a>
 
