@@ -1,7 +1,6 @@
 # Table of contents
 
-* [FreeBSD-Ask](README.md)
-* [testB](testB.md)
+* [testB](README.md)
 
 ## Group 1
 
