@@ -4,15 +4,16 @@
 
 ## 第一章 走近FreeBSD <a href="第一章" id="第一章"></a>
 
-* [第一节 什么是UNIX](第一章/第一节.md)
-* [第二节 什么是类UNIX](第一章/第二节.md)
-* [第三节 什么是Linux](第一章/第三节.md)
-* [第四节 FreeBSD 与其他操作系统的区别和联系](第一章/第四节.md)
-* [第五节 为什么要使用FreeBSD](第一章/第五节.md)
-* [第六节 所谓哲学](第一章/第六节.md)
-* [第七节 其他BSD 简介](<第一章/第七节 .md>)
+* [第一节 什么是UNIX](第一章/di-yi-jie.md)
+* [第二节 什么是类UNIX](第一章/di-er-jie.md)
+* [第三节 什么是Linux](第一章/di-san-jie.md)
+* [第四节 FreeBSD 与其他操作系统的区别和联系](第一章/di-si-jie.md)
+* [第五节 为什么要使用FreeBSD](第一章/di-wu-jie.md)
+* [第六节 所谓哲学](第一章/di-liu-jie.md)
+* [第七节 其他BSD 简介](第一章/di-qi-jie.md)
+* [第八节 参考资料](第一章/第八节.md)
 
-## 第二章 硬件兼容性与磁盘分区 <a href="第二章" id="第二章"></a>
+## 第二章 硬件兼容性与磁盘分区 <a href="di-er-zhang" id="di-er-zhang"></a>
 
 * [第一节 我的计算机能安装FreeBSD 吗](第二章/第一节.md)
 * [第二节 认识磁盘](第二章/第二节.md)
@@ -20,7 +21,7 @@
 * [第四节 安装FreeBSD 前的规划](第二章/第四节.md)
 * [第五节 我该选择哪个版本？](第二章/第五节.md)
 
-## 第三章 安装FreeBSD <a href="第三章" id="第三章"></a>
+## 第三章 安装FreeBSD <a href="di-san-zhang" id="di-san-zhang"></a>
 
 * [第一节 两种虚拟机的安装](第三章/第一节.md)
 * [第二节 FreeBSD 安装——基于Virtual Box](<第三章/第二节 .md>)
@@ -34,7 +35,7 @@
 * [第七节 物理机下AMD 显卡的配置](第七节.md)
 * [第八节 笔记本触摸板的配置](第八节.md)
 
-## 第四章 基础简介 <a href="第四章" id="第四章"></a>
+## 第四章 基础简介 <a href="di-si-zhang" id="di-si-zhang"></a>
 
 * [第一节 什么是镜像站以及FreeBSD 镜像站现状](第四章/第一节.md)
 * [第二节 ee 的用法&配置SSH](第四章/第二节.md)
@@ -43,7 +44,7 @@
 * [第五节 软件包管理器Pkg 简介](第四章/第五节.md)
 * [第六节 通过源代码方式Ports 安装软件](第四章/第六节.md)
 
-## 第五章 安装桌面 <a href="第五章" id="第五章"></a>
+## 第五章 安装桌面 <a href="di-wu-zhang" id="di-wu-zhang"></a>
 
 * [第一节 Xorg 的安装与桌面选择](第五章/第一节.md)
 * [第二节 安装KDE5](第五章/第二节.md)
@@ -55,7 +56,7 @@
 * [第八节 安装XXX](第五章/第八节.md)
 * [第九节 安装XXX](第五章/第九节.md)
 
-## 第六章 桌面基本配置 <a href="第六章" id="第六章"></a>
+## 第六章 桌面基本配置 <a href="di-liu-zhang" id="di-liu-zhang"></a>
 
 * [第一节 Fcitx 输入法框架](第六章/第一节.md)
 * [第二节 Ibus 输入法框架](第六章/第二节.md)
@@ -67,7 +68,7 @@
 * [第八节 安装QQ](第六章/第八节.md)
 * [第九节 安装字体](第六章/第九节.md)
 
-## 第七章 磁盘管理 <a href="第七章" id="第七章"></a>
+## 第七章 磁盘管理 <a href="di-qi-zhang" id="di-qi-zhang"></a>
 
 * [第一节 磁盘扩容](第七章/第一节.md)
 * [第二节 UFS 入门](第七章/第二节.md)
@@ -75,7 +76,7 @@
 * [第四节 如何使用NTFS](第七章/第四节.md)
 * [第五节 交换分区Swap 的设置](第七章/第五节.md)
 
-## 第八章 代理 <a href="第八章" id="第八章"></a>
+## 第八章 代理 <a href="di-ba-zhang" id="di-ba-zhang"></a>
 
 * [第一节 Http 代理的用法](第八章/第一节.md)
 * [第二节 V2ray 的配置](第八章/di-er-jie-v2ray-de-pei-zhi.md)
@@ -83,14 +84,14 @@
 * [第四节 OpenVPN 配置](第八章/第四节.md)
 * [第五节 XXX 的配置](<第八章/第五节 .md>)
 
-## 第九章 用户管理 <a href="第九章" id="第九章"></a>
+## 第九章 用户管理 <a href="di-jiu-zhang" id="di-jiu-zhang"></a>
 
 * [第一节 Sudo 或Dash 的安装](第九章/di-yi-jie-sudo-huo-dash-de-an-zhuang.md)
 * [第二节 添加用户](第九章/第二节.md)
 * [第三节 用户组](第九章/第三节.md)
 * [第四节 用户权限](第九章/第四节.md)
 
-## 第十章 Jail <a href="第十章" id="第十章"></a>
+## 第十章 Jail <a href="di-shi-zhang" id="di-shi-zhang"></a>
 
 * [第一节 jail 与Docker 的比较](第十章/第一节.md)
 * [第二节 jail 相关术语](第十章/第二节.md)
@@ -98,7 +99,7 @@
 * [第四节 Jail 更新](第十章/第四节.md)
 * [第五节 使用ezjail 管理 Jail](第十章/第五节.md)
 
-## 第十一章 虚拟化 <a href="第十一章" id="第十一章"></a>
+## 第十一章 虚拟化 <a href="di-shi-yi-zhang" id="di-shi-yi-zhang"></a>
 
 * [第一节 虚拟化简介](第十一章/第一节.md)
 * [第二节 安装VirtualBox](第十一章/第二节.md)
@@ -108,13 +109,13 @@
 * [第六节 安装XEN](第十一章/第六节.md)
 * [第七节 使用XEN 安装Windows](第十一章/第七节.md)
 
-## 第十二章 更新与升级FreeBSD <a href="第十二章" id="第十二章"></a>
+## 第十二章 更新与升级FreeBSD <a href="di-shi-er-zhang" id="di-shi-er-zhang"></a>
 
 * [第一节 通过freebsd-update 更新](第十二章/第一节.md)
 * [第二节 通过源代码构建](第十二章/第二节.md)
 * [第三节 批量部署](第十二章/第三节.md)
 
-## 第十三章 GEOM存储框架 <a href="第十三章" id="第十三章"></a>
+## 第十三章 GEOM存储框架 <a href="di-shi-san-zhang" id="di-shi-san-zhang"></a>
 
 * [第一节 概述](第十三章/第一节.md)
 * [第二节 RAID 0](第十三章/第二节.md)
@@ -125,12 +126,12 @@
 * [第七节 磁盘装置标签](第十三章/第七节.md)
 * [第八节 UFS Journaling 与GEOM](第十三章/第八节.md)
 
-## 第十四章 DTrace <a href="第十四章" id="第十四章"></a>
+## 第十四章 DTrace <a href="di-shi-si-zhang" id="di-shi-si-zhang"></a>
 
 * [第一节 概述](第十四章/第一节.md)
 * [第二节 开启与使用DTrace](第十四章/第二节.md)
 
-## 第十五章 网络管理 <a href="第十五章" id="第十五章"></a>
+## 第十五章 网络管理 <a href="di-shi-wu-zhang" id="di-shi-wu-zhang"></a>
 
 * [第一节 WIFI](第十五章/第一节.md)
 * [第二节 PPP 拨号](第十五章/第二节.md)
@@ -140,14 +141,14 @@
 * [第六节 CARP](第十五章/第六节.md)
 * [第七节 VLANs](第十五章/第七节.md)
 
-## 第十六章 FreeBSD 网络相关 <a href="第十六章" id="第十六章"></a>
+## 第十六章 FreeBSD 网络相关 <a href="di-shi-liu-zhang" id="di-shi-liu-zhang"></a>
 
 * [第一节 网络参数配置命令](第十六章/第一节.md)
 * [第二节 PF 防火墙](第十六章/第二节.md)
 * [第三节 IPFW 防火墙](第十六章/第三节.md)
 * [第四节 IPFILTER (IPF) 防火墙](第十六章/第四节.md)
 
-## 第十七章 服务器 <a href="第十七章" id="第十七章"></a>
+## 第十七章 服务器 <a href="di-shi-qi-zhang" id="di-shi-qi-zhang"></a>
 
 * [第一节 FTP 服务器](第十七章/第一节.md)
 * [第二节 DHCP 服务器](第十七章/第二节.md)
@@ -159,7 +160,7 @@
 * [第八节 NFS 服务器](第十七章/第八节.md)
 * [第九节 iSCSI](<第十七章/第九节 .md>)
 
-## 第十八章 网络服务器 <a href="第十八章" id="第十八章"></a>
+## 第十八章 网络服务器 <a href="di-shi-ba-zhang" id="di-shi-ba-zhang"></a>
 
 * [第一节 Apache 安装与配置](第十八章/第一节.md)
 * [第二节 Nginx 安装与配置](第十八章/第二节.md)
@@ -170,7 +171,7 @@
 * [第七节 Apache 与SSL](第十八章/第七节.md)
 * [第八节 Nginx 与SSL](第十八章/第八节.md)
 
-## 第十九章 树莓派与ARM <a href="第十九章" id="第十九章"></a>
+## 第十九章 树莓派与ARM <a href="di-shi-jiu-zhang" id="di-shi-jiu-zhang"></a>
 
 * [第一章 概述](第十九章/第一章.md)
 * [第二章 系统安装](第十九章/第二章.md)
