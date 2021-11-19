@@ -10,4 +10,8 @@ FreeBSD 从入门到放弃
 
 2、有问题请在Issue 指出。
 
-3、请加QQ群 731675387 或 Telegram 群 [https://t.me/freebsdba](https://t.me/freebsdba)
+3、Github 编辑者不应改变目录结构，会导致Gtibook同步失效。如有需要请联系ykla。
+
+4、如需插入图片请联系ykla。
+
+5、请加QQ群 731675387 或 Telegram 群 [https://t.me/freebsdba](https://t.me/freebsdba)
