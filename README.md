@@ -12,7 +12,7 @@ FreeBSD 从入门到放弃&#x20;
 
 2、有问题请在Issue 指出。
 
-3、Github 编辑者不应改变目录结构，会导致Gtibook同步失效。如有需要请联系ykla。
+3、Github 编辑者不应改变目录结构，会导致Gitbook同步失效。如有需要请联系ykla。
 
 4、如需插入图片请联系ykla。
 
