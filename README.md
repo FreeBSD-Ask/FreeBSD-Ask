@@ -1,6 +1,8 @@
 # FreeBSD-Ask
 
-FreeBSD 从入门到放弃
+FreeBSD 从入门到放弃&#x20;
+
+项目预览 [https://ykla.gitbook.io/freebsd/](https://ykla.gitbook.io/freebsd/)
 
 ## 编辑指南
 
