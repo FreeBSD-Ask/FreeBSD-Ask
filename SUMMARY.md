@@ -1,6 +1,6 @@
 # Table of contents
 
-* [testB](README.md)
+* [FreeBSD-Ask](README.md)
 
 ## 第一章 走近FreeBSD <a href="第一章" id="第一章"></a>
 
