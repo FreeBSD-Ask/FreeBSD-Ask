@@ -1,6 +1,6 @@
 # FreeBSD-Ask
 
-QQ 群731675387
+FreeBSD 从入门到放弃
 
 ## 编辑指南
 
