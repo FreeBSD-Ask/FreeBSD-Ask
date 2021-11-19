@@ -1,6 +1,10 @@
 # FreeBSD-Ask
 
-FreeBSD 从入门到放弃&#x20;
+FreeBSD 从入门到放弃
+
+目录
+
+https://github.com/FreeBSD-Ask/FreeBSD-Ask/blob/main/SUMMARY.md
 
 项目预览 [https://ykla.gitbook.io/freebsd/](https://ykla.gitbook.io/freebsd/)
 
