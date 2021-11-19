@@ -4,20 +4,20 @@
 
 ## 第一章 走近FreeBSD <a href="di-yi-zhang" id="di-yi-zhang"></a>
 
-* [第一节 什么是UNIX](第一章/di-yi-jie.md)
-* [第二节 什么是类UNIX](第一章/di-er-jie.md)
-* [第三节 什么是Linux](第一章/di-san-jie.md)
-* [第四节 FreeBSD 与其他操作系统的区别和联系](第一章/di-si-jie.md)
-* [第五节 为什么要使用FreeBSD](第一章/di-wu-jie.md)
-* [第六节 所谓哲学](第一章/di-liu-jie.md)
-* [第七节 其他BSD 简介](第一章/di-qi-jie.md)
+* [第一节 什么是UNIX](第一章/第一节.md)
+* [第二节 什么是类UNIX](第一章/第二节.md)
+* [第三节 什么是Linux](第一章/第三节.md)
+* [第四节 FreeBSD 与其他操作系统的区别和联系](第一章/第四节.md)
+* [第五节 为什么要使用FreeBSD](第一章/第五节.md)
+* [第六节 所谓哲学](第一章/第六节.md)
+* [第七节 其他BSD 简介](第一章/第七节.md)
 * [第八节 参考资料](第一章/第八节.md)
 
 ## 第二章 硬件兼容性与磁盘分区 <a href="di-er-zhang" id="di-er-zhang"></a>
 
 * [第一节 我的计算机能安装FreeBSD 吗](第二章/第一节.md)
 * [第二节 认识磁盘](第二章/第二节.md)
-* [第三节 文件系统再认识\&UFS ZFS](第二章/di-san-jie-wen-jian-xi-tong-zai-ren-shi-ufs-zfs.md)
+* [第三节 文件系统再认识\&UFS ZFS](第二章/第三节.md)
 * [第四节 安装FreeBSD 前的规划](第二章/第四节.md)
 * [第五节 我该选择哪个版本？](第二章/第五节.md)
 
@@ -28,9 +28,9 @@
 * [第三节 FreeBSD 安装——基于Vmware](第三章/第三节.md)
 * [第四节 网络配置](第三章/第四节.md)
 * [第五节 物理机下Intel 显卡的配置](第三章/第五节.md)
-* [第六节 物理机下 NVIDIA 显卡的配置](第三章/di-liu-jie-wu-li-ji-xia-nvidia-xian-ka-de-pei-zhi.md)
-* [第七节 物理机下AMD 显卡的配置](di-san-zhang/di-qi-jie-wu-li-ji-xia-amd-xian-ka-de-pei-zhi.md)
-* [第八节 笔记本触摸板的配置](di-san-zhang/di-ba-jie-bi-ji-ben-chu-mo-ban-de-pei-zhi.md)
+* [第六节 物理机下 NVIDIA 显卡的配置](第三章/第六节.md)
+* [第七节 物理机下AMD 显卡的配置](第三章/第七节.md)
+* [第八节 笔记本触摸板的配置](第三章/第八节.md)
 
 ## 第四章 基础简介 <a href="di-si-zhang" id="di-si-zhang"></a>
 
@@ -60,7 +60,7 @@
 * [第三节 其他输入法框架](第六章/第三节.md)
 * [第四节 Firefox 安装](第六章/第四节.md)
 * [第五节 Chromium 的安装](第六章/第五节.md)
-* [第六节 Linux 兼容层简介](第六章/di-liu-jie-linux-jian-rong-ceng-jian-jie.md)
+* [第六节 Linux 兼容层简介](第六章/第六节.md)
 * [第七节 安装WPS](第六章/第七节.md)
 * [第八节 安装QQ](第六章/第八节.md)
 * [第九节 安装字体](第六章/第九节.md)
@@ -76,14 +76,14 @@
 ## 第八章 代理 <a href="di-ba-zhang" id="di-ba-zhang"></a>
 
 * [第一节 Http 代理的用法](第八章/第一节.md)
-* [第二节 V2ray 的配置](第八章/di-er-jie-v2ray-de-pei-zhi.md)
+* [第二节 V2ray 的配置](第八章/第二节.md)
 * [第三节 Clash 的配置](第八章/第三节.md)
 * [第四节 OpenVPN 配置](第八章/第四节.md)
 * [第五节 XXX 的配置](<第八章/第五节 .md>)
 
 ## 第九章 用户管理 <a href="di-jiu-zhang" id="di-jiu-zhang"></a>
 
-* [第一节 Sudo 或Dash 的安装](第九章/di-yi-jie-sudo-huo-dash-de-an-zhuang.md)
+* [第一节 Sudo 或Dash 的安装](第九章/第一节.md)
 * [第二节 添加用户](第九章/第二节.md)
 * [第三节 用户组](第九章/第三节.md)
 * [第四节 用户权限](第九章/第四节.md)
@@ -164,7 +164,7 @@
 * [第三节 PHP 8.X 配置](第十八章/第三节.md)
 * [第四节 MySQL 5.X 配置](第十八章/第四节.md)
 * [第五节 MySQL 8.X 配置](第十八章/第五节.md)
-* [第六节 安装Typecho](第十八章/di-liu-jie-an-zhuang-typecho.md)
+* [第六节 安装Typecho](第十八章/第六节.md)
 * [第七节 Apache 与SSL](第十八章/第七节.md)
 * [第八节 Nginx 与SSL](第十八章/第八节.md)
 
