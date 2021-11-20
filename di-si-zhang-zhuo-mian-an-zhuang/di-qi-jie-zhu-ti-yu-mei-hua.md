@@ -108,7 +108,7 @@
 
 ### 课后练习
 
-按照下面的步骤，试着操作终端来安装 [Papirus 图标](https://www.gnome-look.org/p/1166289/)
+按照下面的步骤，试着在终端下安装 [Papirus 图标](https://www.gnome-look.org/p/1166289/)
 
 ```
 git clone https://github.com/PapirusDevelopmentTeam/papirus-icon-theme
