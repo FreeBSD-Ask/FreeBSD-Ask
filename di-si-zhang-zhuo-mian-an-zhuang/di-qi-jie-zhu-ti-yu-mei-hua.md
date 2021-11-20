@@ -1,6 +1,6 @@
 # 第七节 主题与美化
 
-**FreeBSD**安装桌面环境后，同其它**类Unix**系统一样，很多时候扑面而来的，是一种朴素的色调。这种未加修饰设定，一来是为了系统的稳定，二来众口难调，桌面系统的美化，涉及个人的审美。因此为了提升系统的美观，我们在这一节学习添加 **主题** 和 **图标**。
+**FreeBSD**安装桌面环境后，同其它**类Unix**系统一样，很多时候扑面而来的，呈现的是极其简单朴素的色调。这种未加修饰的设定，可能一时会让新用户无法接受。其实它背后的原因也很简单：一来是为了系统的稳定，二来众口难调，桌面系统的美化，涉及个人的审美。因此为了提升系统的美观，我们在这一节学习添加 **主题** 和 **图标**。
 
 ## 直接安装软件包
 
@@ -54,54 +54,54 @@
 
 - [ ] 高阶任务：为 KDE 或 Gnome 安装一款仿 MacOS 系统样式的主题和图标。
 
-- [x] 提前任务1：安装bash `pkg install bash` 
+- [x] 提前任务1 - 安装bash: `pkg install bash` 
 
-- [x] 提前任务2：安装plank `pkg install plank`
+- [x] 提前任务2 - 安装plank: `pkg install plank`
 
 ### KDE 主题美化
 
 我们要安装的是 [WhiteSur](https://www.pling.com/p/1398840/) 主题。
 
-- 1. 下载主题源码包： `git clone https://github.com/vinceliuice/WhiteSur-kde`
+1. 下载主题源码包： `git clone https://github.com/vinceliuice/WhiteSur-kde`
 
-- 2. 进入主题包目录： `cd WhiteSur-kde`
+2. 进入主题包目录： `cd WhiteSur-kde`
 
-- 3. 修改 shebang： `ee install.sh`，修改第一行为 `#!/usr/local/bin/bash`，然后保存。
+3. 修改 shebang： `ee install.sh`，修改第一行为 `#!/usr/local/bin/bash`，然后保存。
 
-- 4. 执行安装： `bash install.sh`
+4. 执行安装： `bash install.sh`
 
 ### Gnome 主题美化
 
 同样我们要安装的是 [WhiteSur](https://www.pling.com/p/1403328/) 主题。
 
-- 1. 下载主题源码包： `git clone https://github.com/vinceliuice/WhiteSur-gtk-theme`
+1. 下载主题源码包： `git clone https://github.com/vinceliuice/WhiteSur-gtk-theme`
 
-- 2. 进入主题包目录： `cd WhiteSur-gtk-theme`
+2. 进入主题包目录： `cd WhiteSur-gtk-theme`
 
-- 3. 修改 shebang： `ee install.sh`，修改第一行为 `#!/usr/local/bin/bash`，然后保存。
+3. 修改 shebang： `ee install.sh`，修改第一行为 `#!/usr/local/bin/bash`，然后保存。
 
-- 4. 执行安装： `bash install.sh`
+4. 执行安装： `bash install.sh`
 
 
 ### [图标](https://www.pling.com/p/1405756/)
 
-- 1. 下载图标： `git clone https://github.com/vinceliuice/WhiteSur-icon-theme`
+1. 下载图标： `git clone https://github.com/vinceliuice/WhiteSur-icon-theme`
 
-- 2. 进入软件目录： `cd WhiteSur-icon-theme`
+2. 进入软件目录： `cd WhiteSur-icon-theme`
 
-- 3. 修改 shebang： `ee install.sh`，修改第一行为 `#!/usr/local/bin/bash`，然后保存。
+3. 修改 shebang： `ee install.sh`，修改第一行为 `#!/usr/local/bin/bash`，然后保存。
 
-- 4. 执行安装： `bash install.sh`
+4. 执行安装： `bash install.sh`
 
 ### [光标](https://www.pling.com/p/1355701/)
 
-- 1. 下载光标： `git clone https://github.com/vinceliuice/McMojave-cursors`
+1. 下载光标： `git clone https://github.com/vinceliuice/McMojave-cursors`
 
-- 2. 进入软件目录： `cd McMojave-cursors`
+2. 进入软件目录： `cd McMojave-cursors`
 
-- 3. 修改 shebang： `ee install.sh`，修改第一行为 `#!/usr/local/bin/bash`，然后保存。
+3. 修改 shebang： `ee install.sh`，修改第一行为 `#!/usr/local/bin/bash`，然后保存。
 
-- 4. 执行安装： `bash install.sh`
+4. 执行安装： `bash install.sh`
 
 ### 背景图片[下载地址](https://github.com/vinceliuice/WhiteSur-kde/tree/master/wallpaper)
 
@@ -110,7 +110,7 @@
 
 按照下面的步骤，试着在终端下安装 [Papirus 图标](https://www.gnome-look.org/p/1166289/)
 
-```
+```sh
 git clone https://github.com/PapirusDevelopmentTeam/papirus-icon-theme
 cd papirus-icon-theme
 ./install.sh
