@@ -9,8 +9,8 @@
 ### 主题
 
 - matcha 主题： `pkg install matcha-gtk-themes`
-- Qogir 主题： `pkg install qogir-gtk-themes
-- Pop 主题：`pkg install pop-gtk-themes
+- Qogir 主题： `pkg install qogir-gtk-themes`
+- Pop 主题：`pkg install pop-gtk-themes`
 - Flat 主题：`pkg install flat-remix-gtk-themes`
 - Numix 主题： `pkg install numix-gtk-theme`
 
