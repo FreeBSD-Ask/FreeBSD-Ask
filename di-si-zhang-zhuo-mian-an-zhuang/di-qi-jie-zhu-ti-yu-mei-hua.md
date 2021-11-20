@@ -105,8 +105,9 @@
 
 4. 执行安装： `bash install.sh`
 
-### 背景图片 [下载地址](https://github.com/vinceliuice/WhiteSur-kde/tree/master/wallpaper)
+### 背景图片 
 
+[下载地址](https://github.com/vinceliuice/WhiteSur-kde/tree/master/wallpaper)
 
 ### 课后练习
 
