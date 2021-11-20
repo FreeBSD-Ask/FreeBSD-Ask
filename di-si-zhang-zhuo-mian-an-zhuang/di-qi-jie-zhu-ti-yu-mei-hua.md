@@ -52,7 +52,9 @@
 
 - 2. 进入主题包目录： `cd WhiteSur-kde`
 
-- 3. 切换 bash 安装： `bash install.sh`
+- 3. 修改 shebang： `vim install.sh`，修改第一行为 `/usr/local/bin/bash`，然后保存。
+
+- 4. 执行安装： `bash install.sh`
 
 ### Gnome 主题美化
 
