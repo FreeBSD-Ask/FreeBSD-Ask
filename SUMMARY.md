@@ -127,7 +127,7 @@
 ## FreeBSD 防火墙
 
 * [第一节 网络参数配置命令](freebsd-fang-huo-qiang/di-yi-jie-wang-luo-can-shu-pei-zhi-ming-ling.md)
-* [第二节 PF ](freebsd-fang-huo-qiang/di-er-jie-pf.md)
+* [第二节 PF](freebsd-fang-huo-qiang/di-er-jie-pf.md)
 * [第三节 IPFW](freebsd-fang-huo-qiang/di-san-jie-ipfw.md)
 * [第五节 IPFILTER (IPF)](freebsd-fang-huo-qiang/di-wu-jie-ipfilter-ipf.md)
 
@@ -144,7 +144,7 @@
 
 ## 第十七章 网络服务器
 
-* [第一节 Apache ](di-shi-qi-zhang-wang-luo-fu-wu-qi/di-yi-jie-apache.md)
+* [第一节 Apache](di-shi-qi-zhang-wang-luo-fu-wu-qi/di-yi-jie-apache.md)
 * [第二节 Nginx](di-shi-qi-zhang-wang-luo-fu-wu-qi/di-er-jie-nginx.md)
 * [第三节 PHP 8.X](di-shi-qi-zhang-wang-luo-fu-wu-qi/di-san-jie-php-8.x.md)
 * [第四节 MySQL 5.X](di-shi-qi-zhang-wang-luo-fu-wu-qi/di-si-jie-mysql-5.x.md)
@@ -158,3 +158,10 @@
 * [第二节 系统安装](di-shi-ba-zhang-shu-mei-pai/di-er-jie-xi-tong-an-zhuang.md)
 * [第三节 XRDP 与 VNC](di-shi-ba-zhang-shu-mei-pai/di-san-jie-xrdp-yu-vnc.md)
 * [第四节 USB 网卡与 WIFI](di-shi-ba-zhang-shu-mei-pai/di-si-jie-usb-wang-ka-yu-wifi.md)
+
+## 第十九章 文学故事
+
+* [第一节 我与 FreeBSD 的故事](di-shi-jiu-zhang-wen-xue-gu-shi/di-yi-jie-wo-yu-freebsd-de-gu-shi.md)
+* [第二节 FreeBSD 与猫 ——选择1%的生活](di-shi-jiu-zhang-wen-xue-gu-shi/di-er-jie-freebsd-yu-mao-xuan-ze-1-de-sheng-huo.md)
+* [第三节 计算机与苦难哲学](di-shi-jiu-zhang-wen-xue-gu-shi/di-san-jie-ji-suan-ji-yu-ku-nan-zhe-xue.md)
+* [第四节 从一个想法看 FreeBSD 是商业化还是学院派](di-shi-jiu-zhang-wen-xue-gu-shi/di-si-jie-cong-yi-ge-xiang-fa-kan-freebsd-shi-shang-ye-hua-huan-shi-xue-yuan-pai.md)
