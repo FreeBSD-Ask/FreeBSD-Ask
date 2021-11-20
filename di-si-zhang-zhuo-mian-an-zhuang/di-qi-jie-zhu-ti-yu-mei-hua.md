@@ -1,8 +1,8 @@
 # 第七节 主题与美化
 
-**FreeBSD**安装桌面环境后，同其它**类Unix**系统一样，很多时候扑面而来的，呈现的是极其简单朴素的色调。这种未加修饰的设定，可能一时会让新用户无法接受。其实它背后的原因也很简单：一来是为了系统的稳定，二来众口难调，桌面系统的美化，涉及个人的审美。因此为了提升系统的美观，我们在这一节学习添加 **主题** 和 **图标**。
+**FreeBSD**安装桌面环境后，同其它**类Unix**系统一样，很多时候扑面而来的，是简单朴素的色调。这种未加修饰的设定，可能一时会让新用户无法接受。其实它背后的逻辑也很简单：一来是为了系统的稳定，二来众口难调，桌面系统的美化，涉及个人的审美。为了系统的美观，我们在这一节学习添加 **主题** 和 **图标**。
 
-## 直接安装软件包
+## 安装软件包
 
 - [ ] 新手任务 ： 从以下软件包中，各选一款主题和图标来安装。
 
@@ -48,15 +48,17 @@
 
 - Canta 图标：`pkg install canta-icon-theme`
 
-## 终端安装
+## 终端模式安装
 
 *提示： 新接触 Unix 的用户可略过本节*
 
 - [ ] 高阶任务：为 KDE 或 Gnome 安装一款仿 MacOS 系统样式的主题和图标。
 
-- [x] 提前任务1 - 安装bash: `pkg install bash` 
+- [x] 提前任务1 安装 bash：`pkg install bash` 
 
-- [x] 提前任务2 - 安装plank: `pkg install plank`
+- [x] 提前任务2 安装 plank： `pkg install plank`
+
+- [x] 提前任务3 安装 git： `pkg install git`
 
 ### KDE 主题美化
 
@@ -103,7 +105,7 @@
 
 4. 执行安装： `bash install.sh`
 
-### 背景图片[下载地址](https://github.com/vinceliuice/WhiteSur-kde/tree/master/wallpaper)
+### 背景图片 [下载地址](https://github.com/vinceliuice/WhiteSur-kde/tree/master/wallpaper)
 
 
 ### 课后练习
@@ -112,6 +114,8 @@
 
 ```sh
 git clone https://github.com/PapirusDevelopmentTeam/papirus-icon-theme
+
 cd papirus-icon-theme
+
 ./install.sh
 ```
