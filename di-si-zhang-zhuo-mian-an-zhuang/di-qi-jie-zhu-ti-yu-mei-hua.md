@@ -44,11 +44,11 @@
 
 - [x] 提前任务1：安装bash `pkg install bash` 
 
-- [x] 提前任务2：安装plank ``
+- [x] 提前任务2：安装plank `pkg install plank`
 
 ### KDE 主题美化
 
-我们要安装的是 [WhiteSur](https://github.com/vinceliuice/WhiteSur-kde) 主题。
+我们要安装的是 [WhiteSur](https://www.pling.com/p/1398840/) 主题。
 
 - 1. 下载主题源码包： `git clone https://github.com/vinceliuice/WhiteSur-kde`
 
@@ -60,7 +60,7 @@
 
 ### Gnome 主题美化
 
-同样我们要安装的是 [WhiteSur](https://github.com/vinceliuice/WhiteSur-gtk-theme) 主题。
+同样我们要安装的是 [WhiteSur](https://www.pling.com/p/1403328/) 主题。
 
 - 1. 下载主题源码包： `git clone https://github.com/vinceliuice/WhiteSur-gtk-theme`
 
@@ -71,7 +71,7 @@
 - 4. 执行安装： `bash install.sh`
 
 
-### 图标
+### [图标](https://www.pling.com/p/1405756/)
 
 - 1. 下载图标： `git clone https://github.com/vinceliuice/WhiteSur-icon-theme`
 
@@ -81,7 +81,7 @@
 
 - 4. 执行安装： `bash install.sh`
 
-### 光标
+### [光标](https://www.pling.com/p/1355701/)
 
 - 1. 下载光标： `git clone https://github.com/vinceliuice/McMojave-cursors`
 
