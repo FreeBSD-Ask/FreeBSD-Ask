@@ -2,11 +2,11 @@
 
 **FreeBSD**安装桌面环境后，同其它**类Unix**系统一样，很多时候扑面而来的，是一种朴素的色调。这种未加修饰设定，一来是为了系统的稳定，二来众口难调，桌面系统的美化，涉及个人的审美。因此为了提升系统的美观，我们在这一节学习添加 **主题** 和 **图标**。
 
-~~我们常用的图形界面，基本分为了两大工具包：`GTK` 和 `Qt`。使用`GTK`的桌面有`Gnome`、`XFCE`、`Mate`和`LXDE`等；使用`Qt`的桌面有`KDE` 和 `Lxqt`等.~~
-
 ## 直接安装软件包
 
 - [ ] 新手任务 ： 从以下软件包中，各选一款主题和图标来安装。
+
+*注：本节仅涉及`GTK`库的桌面环境，囊括了`Gnome`、`XFCE`、`Mate`、`Cinnamon`和`LXDE`等桌面。* 以下仅收录了部分图标和主题，想要获取更多资源，可到[FreshPorts](https://www.freshports.org)进一步搜寻。
 
 ### 主题
 
@@ -19,6 +19,12 @@
 - Flat 主题：`pkg install flat-remix-gtk-themes`
 
 - Numix 主题： `pkg install numix-gtk-theme`
+
+- Sierra 主题：`pkg install sierra-gtk-themes`
+
+- Yaru 主题： `pkg install yaru-gtk-themes`
+
+- Canta 主题：`pkg install canta-gtk-themes`
 
 
 ### 图标
@@ -35,10 +41,13 @@
 
 - Numix 圆形图标： `pkg install numix-icon-theme-circle`
 
+- Yaru 图标：`pkg install yaru-icon-theme`
+
+- Canta 图标：`pkg install canta-icon-theme`
 
 ## 终端安装
 
-*提示：刚接触 Unix 的用户可略过本节*
+*提示： 新接触 Unix 的用户可略过本节*
 
 - [ ] 高阶任务：为 KDE 或 Gnome 安装一款仿 MacOS 系统样式的主题和图标。
 
@@ -75,7 +84,7 @@
 
 - 1. 下载图标： `git clone https://github.com/vinceliuice/WhiteSur-icon-theme`
 
-- 2. 进入主题包目录： `cd WhiteSur-icon-theme`
+- 2. 进入软件目录： `cd WhiteSur-icon-theme`
 
 - 3. 修改 shebang： `vim install.sh`，修改第一行为 `/usr/local/bin/bash`，然后保存。
 
@@ -85,7 +94,7 @@
 
 - 1. 下载光标： `git clone https://github.com/vinceliuice/McMojave-cursors`
 
-- 2. 进入主题包目录： `cd McMojave-cursors`
+- 2. 进入软件目录： `cd McMojave-cursors`
 
 - 3. 修改 shebang： `vim install.sh`，修改第一行为 `/usr/local/bin/bash`，然后保存。
 
@@ -95,7 +104,7 @@
 
 ### 课后练习
 
-试按照下述步骤，自己在终端安装[Papirus 图标](https://www.gnome-look.org/p/1166289/)
+按照下述步骤，试着在终端安装 [Papirus 图标](https://www.gnome-look.org/p/1166289/)
 
 ```
 git clone https://github.com/PapirusDevelopmentTeam/papirus-icon-theme
