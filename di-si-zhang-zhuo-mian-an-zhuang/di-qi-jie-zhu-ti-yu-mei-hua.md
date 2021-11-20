@@ -66,7 +66,7 @@
 
 - 2. 进入主题包目录： `cd WhiteSur-kde`
 
-- 3. 修改 shebang： `vim install.sh`，修改第一行为 `#!/usr/local/bin/bash`，然后保存。
+- 3. 修改 shebang： `ee install.sh`，修改第一行为 `#!/usr/local/bin/bash`，然后保存。
 
 - 4. 执行安装： `bash install.sh`
 
@@ -78,7 +78,7 @@
 
 - 2. 进入主题包目录： `cd WhiteSur-gtk-theme`
 
-- 3. 修改 shebang： `vim install.sh`，修改第一行为 `#!/usr/local/bin/bash`，然后保存。
+- 3. 修改 shebang： `ee install.sh`，修改第一行为 `#!/usr/local/bin/bash`，然后保存。
 
 - 4. 执行安装： `bash install.sh`
 
@@ -89,7 +89,7 @@
 
 - 2. 进入软件目录： `cd WhiteSur-icon-theme`
 
-- 3. 修改 shebang： `vim install.sh`，修改第一行为 `#!/usr/local/bin/bash`，然后保存。
+- 3. 修改 shebang： `ee install.sh`，修改第一行为 `#!/usr/local/bin/bash`，然后保存。
 
 - 4. 执行安装： `bash install.sh`
 
@@ -99,7 +99,7 @@
 
 - 2. 进入软件目录： `cd McMojave-cursors`
 
-- 3. 修改 shebang： `vim install.sh`，修改第一行为 `#!/usr/local/bin/bash`，然后保存。
+- 3. 修改 shebang： `ee install.sh`，修改第一行为 `#!/usr/local/bin/bash`，然后保存。
 
 - 4. 执行安装： `bash install.sh`
 
