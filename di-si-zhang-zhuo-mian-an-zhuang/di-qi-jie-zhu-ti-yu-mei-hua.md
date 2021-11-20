@@ -42,7 +42,9 @@
 
 - [ ] 高阶任务：为 KDE 或 Gnome 安装一款仿 MacOS 系统样式的主题和图标。
 
-- [x] 提前任务：安装bash `pkg install bash` 
+- [x] 提前任务1：安装bash `pkg install bash` 
+
+- [x] 提前任务2：安装plank ``
 
 ### KDE 主题美化
 
