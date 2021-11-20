@@ -6,7 +6,7 @@
 
 - [ ] 新手任务 ： 从以下软件包中，各选一款主题和图标来安装。
 
-*注：本节仅涉及了`GTK`库的桌面主题，囊括了`Gnome`、`XFCE`、`Mate`、`Cinnamon`和`LXDE`等桌面环境。* 
+*注：本节仅涉及了`GTK`库的桌面主题，囊括了`Gnome`、`XFCE`、`MATE`、`Cinnamon`和`LXDE`等桌面环境。* 
 
 以下仅收录了部分图标和主题，想要获取更多资源，可访问 [FreshPorts](https://www.freshports.org) 。
 
@@ -66,7 +66,7 @@
 
 - 2. 进入主题包目录： `cd WhiteSur-kde`
 
-- 3. 修改 shebang： `vim install.sh`，修改第一行为 `/usr/local/bin/bash`，然后保存。
+- 3. 修改 shebang： `vim install.sh`，修改第一行为 `#!/usr/local/bin/bash`，然后保存。
 
 - 4. 执行安装： `bash install.sh`
 
@@ -78,7 +78,7 @@
 
 - 2. 进入主题包目录： `cd WhiteSur-gtk-theme`
 
-- 3. 修改 shebang： `vim install.sh`，修改第一行为 `/usr/local/bin/bash`，然后保存。
+- 3. 修改 shebang： `vim install.sh`，修改第一行为 `#!/usr/local/bin/bash`，然后保存。
 
 - 4. 执行安装： `bash install.sh`
 
@@ -89,7 +89,7 @@
 
 - 2. 进入软件目录： `cd WhiteSur-icon-theme`
 
-- 3. 修改 shebang： `vim install.sh`，修改第一行为 `/usr/local/bin/bash`，然后保存。
+- 3. 修改 shebang： `vim install.sh`，修改第一行为 `#!/usr/local/bin/bash`，然后保存。
 
 - 4. 执行安装： `bash install.sh`
 
@@ -99,7 +99,7 @@
 
 - 2. 进入软件目录： `cd McMojave-cursors`
 
-- 3. 修改 shebang： `vim install.sh`，修改第一行为 `/usr/local/bin/bash`，然后保存。
+- 3. 修改 shebang： `vim install.sh`，修改第一行为 `#!/usr/local/bin/bash`，然后保存。
 
 - 4. 执行安装： `bash install.sh`
 
