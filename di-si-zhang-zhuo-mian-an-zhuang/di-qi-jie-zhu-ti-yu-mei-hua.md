@@ -6,7 +6,9 @@
 
 - [ ] 新手任务 ： 从以下软件包中，各选一款主题和图标来安装。
 
-*注：本节仅涉及`GTK`库的桌面环境，囊括了`Gnome`、`XFCE`、`Mate`、`Cinnamon`和`LXDE`等桌面。* 以下仅收录了部分图标和主题，想要获取更多资源，可到[FreshPorts](https://www.freshports.org)进一步搜寻。
+*注：本节仅涉及`GTK`库的桌面环境，囊括了`Gnome`、`XFCE`、`Mate`、`Cinnamon`和`LXDE`等桌面。* 
+
+以下仅收录了部分图标和主题，想要获取更多资源，可到[FreshPorts](https://www.freshports.org)进一步搜寻。
 
 ### 主题
 
@@ -102,9 +104,10 @@
 
 ### 背景图片[下载地址](https://github.com/vinceliuice/WhiteSur-kde/tree/master/wallpaper)
 
+
 ### 课后练习
 
-按照下述步骤，试着在终端安装 [Papirus 图标](https://www.gnome-look.org/p/1166289/)
+按照下面的步骤，试着操作终端来安装 [Papirus 图标](https://www.gnome-look.org/p/1166289/)
 
 ```
 git clone https://github.com/PapirusDevelopmentTeam/papirus-icon-theme
