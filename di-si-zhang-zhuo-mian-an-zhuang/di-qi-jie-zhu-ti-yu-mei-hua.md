@@ -8,7 +8,8 @@
 
 *注：本节仅涉及`GTK`库的桌面环境，囊括了`Gnome`、`XFCE`、`Mate`、`Cinnamon`和`LXDE`等桌面。* 
 
-以下仅收录了部分图标和主题，想要获取更多资源，可到[FreshPorts](https://www.freshports.org)进一步搜寻。
+以下仅收录了部分图标和主题，想要获取更多资源，可访问 [FreshPorts](https://www.freshports.org) 。
+
 
 ### 主题
 
