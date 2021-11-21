@@ -167,12 +167,13 @@
 * [第三节 计算机与苦难哲学](di-shi-jiu-zhang-wen-xue-gu-shi/di-san-jie-ji-suan-ji-yu-ku-nan-zhe-xue.md)
 * [第四节 从一个想法看 FreeBSD 是商业化还是学院派](di-shi-jiu-zhang-wen-xue-gu-shi/di-si-jie-cong-yi-ge-xiang-fa-kan-freebsd-shi-shang-ye-hua-huan-shi-xue-yuan-pai.md)
 
-## 第二十章 娱乐与影音
+## 第二十章 娱乐与教育
 
-* [第一节 游戏](di-er-shi-zhang-yu-le-yu-ying-yin/di-yi-jie-you-xi.md)
-* [第二节 音视频播放器](di-er-shi-zhang-yu-le-yu-ying-yin/di-er-jie-yin-shi-pin-bo-fang-qi.md)
-* [第三节 音视频剪辑](di-er-shi-zhang-yu-le-yu-ying-yin/di-san-jie-yin-shi-pin-jian-ji.md)
-* [第四节 教育](di-er-shi-zhang-yu-le-yu-ying-yin/di-si-jie-jiao-yu.md)
+* [第一节 游戏](di-er-shi-zhang-yu-le-yu-jiao-yu/di-yi-jie-you-xi.md)
+* [第二节 音视频播放器](di-er-shi-zhang-yu-le-yu-jiao-yu/di-er-jie-yin-shi-pin-bo-fang-qi.md)
+* [第三节 音视频剪辑](di-er-shi-zhang-yu-le-yu-jiao-yu/di-san-jie-yin-shi-pin-jian-ji.md)
+* [第四节 教育](di-er-shi-zhang-yu-le-yu-jiao-yu/di-si-jie-jiao-yu.md)
+* [第五节 科研与专业工具](di-er-shi-zhang-yu-le-yu-jiao-yu/di-wu-jie-ke-yan-yu-zhuan-ye-gong-ju.md)
 
 ## 第二十一章 内核
 
