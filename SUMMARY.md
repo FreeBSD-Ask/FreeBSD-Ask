@@ -173,3 +173,10 @@
 * [第二节 音视频播放器](di-er-shi-zhang-yu-le-yu-ying-yin/di-er-jie-yin-shi-pin-bo-fang-qi.md)
 * [第三节 音视频剪辑](di-er-shi-zhang-yu-le-yu-ying-yin/di-san-jie-yin-shi-pin-jian-ji.md)
 * [第四节 教育](di-er-shi-zhang-yu-le-yu-ying-yin/di-si-jie-jiao-yu.md)
+
+## 第二十一章 内核
+
+* [第一节 获取 FreeBSD 内核源码](di-er-shi-yi-zhang-nei-he/di-yi-jie-huo-qu-freebsd-nei-he-yuan-ma.md)
+* [第二节 修改内核源码](di-er-shi-yi-zhang-nei-he/di-er-jie-xiu-gai-nei-he-yuan-ma.md)
+* [第三节 编译内核](di-er-shi-yi-zhang-nei-he/di-san-jie-bian-yi-nei-he.md)
+* [第四节 内核分析](di-er-shi-yi-zhang-nei-he/di-si-jie-nei-he-fen-xi.md)
