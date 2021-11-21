@@ -36,7 +36,7 @@
 
 ### 经典开源游戏
 
-## Wine / PlauOnBSD 游戏
+## Wine / PlayOnBSD 游戏
 
 ## Renpy 游戏
 
