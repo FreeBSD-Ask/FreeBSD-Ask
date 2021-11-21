@@ -1,6 +1,4 @@
-# FreeBSD-Ask
-
-FreeBSD 从入门到放弃
+# FreeBSD 从入门到放弃
 
 目录
 
