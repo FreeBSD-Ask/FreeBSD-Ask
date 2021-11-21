@@ -171,3 +171,5 @@
 
 * [第一节 游戏](di-er-shi-zhang-yu-le-yu-ying-yin/di-yi-jie-you-xi.md)
 * [第二节 音视频播放器](di-er-shi-zhang-yu-le-yu-ying-yin/di-er-jie-yin-shi-pin-bo-fang-qi.md)
+* [第三节 音视频剪辑](di-er-shi-zhang-yu-le-yu-ying-yin/di-san-jie-yin-shi-pin-jian-ji.md)
+* [第四节 教育](di-er-shi-zhang-yu-le-yu-ying-yin/di-si-jie-jiao-yu.md)
