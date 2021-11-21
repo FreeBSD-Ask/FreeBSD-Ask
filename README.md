@@ -18,6 +18,4 @@ https://github.com/FreeBSD-Ask/FreeBSD-Ask/blob/main/SUMMARY.md
 
 3、Github 编辑者不应改变目录结构，会导致 Gitbook 同步失效。如有需要请联系 ykla。
 
-4、如需插入图片请联系 ykla。
-
-5、请加 Q Q群 731675387 或 Telegram 群 [https://t.me/freebsdba](https://t.me/freebsdba)
+4、请加 Q Q群 731675387 或 Telegram 群 [https://t.me/freebsdba](https://t.me/freebsdba)
