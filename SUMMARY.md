@@ -1,6 +1,6 @@
 # Table of contents
 
-* [FreeBSD 从入门到放弃](README.md)
+* [FreeBSD 从入门到跑路](README.md)
 
 ## 第一章 走近FreeBSD
 
