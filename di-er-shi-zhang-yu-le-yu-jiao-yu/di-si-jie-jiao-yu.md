@@ -93,5 +93,5 @@ end;
 
 ## 天文地理
 
-- 星图软件 `stellarium`
-- Gnome 地图：`gnome-maps`
+- 星图软件 Stellarium： `pkg install stellarium`
+- Gnome 地图：`pkg install gnome-maps`
