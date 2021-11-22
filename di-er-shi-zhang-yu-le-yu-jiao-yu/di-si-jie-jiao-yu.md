@@ -46,13 +46,13 @@ GLPK 安装：`pkg install glpk`
 
 > 求解银行能获得最高利润的分配方式。
 
-我们来逐步分析。先设 个人、汽车、家用、农业及商业分别的贷款量为 x<sub>1</sub> 、x<sub>2</sub>、x<sub>3</sub>、x<sub>4</sub> 以及 x<sub>5</sub> 。
+我们来逐步分析。先设个人、汽车、家用、农业及商业分别的贷款量为 x<sub>1</sub> 、x<sub>2</sub>、x<sub>3</sub>、x<sub>4</sub> 以及 x<sub>5</sub> 。
 
 利润 = 0.14 × 0.9x<sub>1</sub> + 0.13 × 0.93x<sub>2</sub> + 0.12 × 0.97x<sub>3</sub> + 0.125 × 0.95x<sub>4</sub> + 0.1 × 0.98x<sub>5</sub>
 
 本金损失 = 0.1x<sub>1</sub> + 0.07x<sub>2</sub> + 0.03x<sub>3</sub> + 0.05x<sub>4</sub> + 0.02x<sub>5</sub>
 
-得目标函数 max Z = 利润 - 本金损失
+得目标函数 max z = 利润 - 本金损失
 
 由以上目标函数和约束条件，我们可以给出以下数学模型：
 
