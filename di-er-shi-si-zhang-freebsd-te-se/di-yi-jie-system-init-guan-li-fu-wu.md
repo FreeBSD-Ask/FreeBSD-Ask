@@ -11,7 +11,7 @@ FreeBSD 使用 BSD INIT 管理系统服务。
 出于安全性考虑，服务安装以后默认是禁用状态，以上命令是无法执行的，需要先开启服务：
 
 ```
-vi /etc/rc.conf
+ee /etc/rc.conf
 ```
 
 添加一行，`${name}_enable="YES"`，`${name}` 表示服务名称，这是固定格式：
