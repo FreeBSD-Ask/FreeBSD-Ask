@@ -2,6 +2,8 @@
 
 ## 音频剪辑
 
+- Audacity : `pkg install audacity`
+
 ## 视频剪辑
 
 ### 扣图
@@ -22,6 +24,14 @@ Unix 系统下相关软件有很多，这里我们简单介绍一下矢量制图
 
 ### 剪辑
 
+- Olive 视频编辑器：`pkg install olive-video-editor`
+
 ## 编辑字幕
 
-## 压缩视频
+- Aegisub：`pkg install aegisub`
+
+## 压缩字幕
+
+- ffmpeg : `pkg install ffmpeg`
+
+`ffmpeg -i 视频文件.mp4 -vf subtitles=对应字幕.ass 输出视频.mp4`
