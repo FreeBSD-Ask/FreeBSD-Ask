@@ -193,7 +193,7 @@
 * [第六节 QT 环境的配置](di-er-shi-er-zhang-bian-cheng-yu-kai-fa/di-liu-jie-qt-huan-jing-de-pei-zhi.md)
 * [第七节 Python 与 VScode](di-er-shi-er-zhang-bian-cheng-yu-kai-fa/di-qi-jie-python-yu-vscode.md)
 * [第八节 Rust 环境的配置](di-er-shi-er-zhang-bian-cheng-yu-kai-fa/di-ba-jie-rust-huan-jing-de-pei-zhi.md)
-* [第九节 Csh 与其他 Shell](di-er-shi-er-zhang-bian-cheng-yu-kai-fa/di-jiu-jie-csh-yu-qi-ta-shell.md)
+* [第九节 Csh 与其他 Shell](di-er-shi-er-zhang-bian-cheng-yu-kai-fa/di-jiu-jie-shell-de-xuan-ze.md)
 
 ## 第二十三章  引导与恢复
 
