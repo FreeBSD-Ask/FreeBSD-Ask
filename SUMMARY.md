@@ -46,7 +46,7 @@
 
 * [第一节 Fcitx 输入法框架](di-wu-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-yi-jie-fcitx-shu-ru-fa-kuang-jia.md)
 * [第二节 Ibus 输入法框架](di-wu-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-er-jie-ibus-shu-ru-fa-kuang-jia.md)
-* [第三节 其他输入法框架](di-wu-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-san-jie-qi-ta-shu-ru-fa-kuang-jia.md)
+* [第三节 五笔输入法](di-wu-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-san-jie-qi-ta-shu-ru-fa-kuang-jia.md)
 * [第四节 Firefox 与 Chromium 安装](di-wu-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-si-jie-firefox-yu-chromium-an-zhuang.md)
 * [第五节 Linux 兼容层](di-wu-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-wu-jie-linux-jian-rong-ceng.md)
 * [第六节 安装 金山WPS](di-wu-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-liu-jie-an-zhuang-jin-shan-wps.md)
@@ -193,4 +193,10 @@
 * [第六节 QT 环境的配置](di-er-shi-er-zhang-bian-cheng-yu-kai-fa/di-liu-jie-qt-huan-jing-de-pei-zhi.md)
 * [第七节 Python 与 VScode](di-er-shi-er-zhang-bian-cheng-yu-kai-fa/di-qi-jie-python-yu-vscode.md)
 * [第八节 Rust 环境的配置](di-er-shi-er-zhang-bian-cheng-yu-kai-fa/di-ba-jie-rust-huan-jing-de-pei-zhi.md)
-* [第九节 Shell 的选择](di-er-shi-er-zhang-bian-cheng-yu-kai-fa/di-jiu-jie-shell-de-xuan-ze.md)
+* [第九节 Csh 与其他 Shell](di-er-shi-er-zhang-bian-cheng-yu-kai-fa/di-jiu-jie-csh-yu-qi-ta-shell.md)
+
+## 第二十三章  引导与恢复
+
+* [第一节 恢复模式与密码重置](di-er-shi-san-zhang-yin-dao-yu-hui-fu/di-yi-jie-hui-fu-mo-shi-yu-mi-ma-zhong-zhi.md)
+* [第二节 FreeBSD多硬盘EFI引导统一](di-er-shi-san-zhang-yin-dao-yu-hui-fu/di-er-jie-freebsd-duo-ying-pan-efi-yin-dao-tong-yi.md)
+* [第三节 FreeBSD 中文 TTY 控制台](di-er-shi-san-zhang-yin-dao-yu-hui-fu/di-san-jie-freebsd-zhong-wen-tty-kong-zhi-tai.md)

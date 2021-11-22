@@ -1,4 +1,4 @@
-# 第五章 安装 Xfce
+# 第五节 安装 Xfce
 
 ## 安装xfce4
 
@@ -46,8 +46,18 @@ pkg install thunderbird(邮件客户端)\
 pkg install wqy-fonts（安装文泉驿字体）\
 pkg install transmission (BT下载工具)
 
-## xfce 普通用户关机按钮灰色解决方案
+## 故障排除
+
+### xfce 普通用户关机按钮灰色解决方案
 
 sudo chown -R polkitd /usr/local/etc/polkit-1
 
 &#x20;即可解决xfce4普通用户关机按钮灰色的问题
+
+### FreeBSD 的xfce 终端动态标题不显示问题
+
+tcsh 配置，home 目录创建.tcshrc,
+
+写入以下配置
+
+`alias h history 25 alias j jobs -l alias la ls -aF alias lf ls -FA alias ll ls -lAF setenv EDITOR vi setenv PAGER less switch ($TERM) case “xterm*”: set prompt=”%{\033]0;[]%~\007%}%#” set filec set history = 1000 set savehist = (1000 merge) set autolist = ambiguous # Use history to aid expansion set autoexpand set autorehash breaksw default: set prompt=”%#” breaksw endsw`
