@@ -155,12 +155,13 @@
 * [第六节 Typecho](di-shi-qi-zhang-wang-luo-fu-wu-qi/di-liu-jie-typecho.md)
 * [第七节 SSL 配置](di-shi-qi-zhang-wang-luo-fu-wu-qi/di-qi-jie-ssl-pei-zhi.md)
 
-## 第十八章 树莓派
+## 第十八章 树莓派与嵌入式
 
-* [第一节 树莓派简介](di-shi-ba-zhang-shu-mei-pai/di-yi-jie-shu-mei-pai-jian-jie.md)
-* [第二节 系统安装](di-shi-ba-zhang-shu-mei-pai/di-er-jie-xi-tong-an-zhuang.md)
-* [第三节 XRDP 与 VNC](di-shi-ba-zhang-shu-mei-pai/di-san-jie-xrdp-yu-vnc.md)
-* [第四节 USB 网卡与 WIFI](di-shi-ba-zhang-shu-mei-pai/di-si-jie-usb-wang-ka-yu-wifi.md)
+* [第一节 树莓派简介](di-shi-ba-zhang-shu-mei-pai-yu-qian-ru-shi/di-yi-jie-shu-mei-pai-jian-jie.md)
+* [第二节 系统安装](di-shi-ba-zhang-shu-mei-pai-yu-qian-ru-shi/di-er-jie-xi-tong-an-zhuang.md)
+* [第三节 XRDP 与 VNC](di-shi-ba-zhang-shu-mei-pai-yu-qian-ru-shi/di-san-jie-xrdp-yu-vnc.md)
+* [第四节 USB 网卡与 WIFI](di-shi-ba-zhang-shu-mei-pai-yu-qian-ru-shi/di-si-jie-usb-wang-ka-yu-wifi.md)
+* [第五节 RISC-V](di-shi-ba-zhang-shu-mei-pai-yu-qian-ru-shi/di-wu-jie-riscv.md)
 
 ## 第十九章 文学故事
 
