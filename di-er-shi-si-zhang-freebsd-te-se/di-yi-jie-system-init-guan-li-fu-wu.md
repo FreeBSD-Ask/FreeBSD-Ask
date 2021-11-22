@@ -14,7 +14,7 @@ FreeBSD 使用 BSD INIT 管理系统服务。
 ee /etc/rc.conf
 ```
 
-添加一行，`${name}_enable="YES"`，`${name}` 表示服务名称，这是固定格式：
+添加一行，`XXX_enable="YES"`，`XXX` 表示服务名称（这里只是举例，实际上可以是nginx samba等），这是固定格式：
 
 ```
 XXX_enable="YES"
