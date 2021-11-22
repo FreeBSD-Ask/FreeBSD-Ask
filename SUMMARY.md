@@ -183,8 +183,14 @@
 * [第三节 编译内核](di-er-shi-yi-zhang-nei-he/di-san-jie-bian-yi-nei-he.md)
 * [第四节 内核分析](di-er-shi-yi-zhang-nei-he/di-si-jie-nei-he-fen-xi.md)
 
-## 第二十二章 开发者
+## 第二十二章 编程与开发
 
-* [第一节 如何报告 Bug](di-er-shi-er-zhang-kai-fa-zhe/di-yi-jie-ru-he-bao-gao-bug.md)
-* [第二节 如何提交一个软件包](di-er-shi-er-zhang-kai-fa-zhe/di-er-jie-ru-he-ti-jiao-yi-ge-ruan-jian-bao.md)
-* [第三节 如何参与 FreeBSD 协作](di-er-shi-er-zhang-kai-fa-zhe/di-san-jie-ru-he-can-yu-freebsd-xie-zuo.md)
+* [第一节 如何报告 Bug](di-er-shi-er-zhang-bian-cheng-yu-kai-fa/di-yi-jie-ru-he-bao-gao-bug.md)
+* [第二节 如何提交一个软件包](di-er-shi-er-zhang-bian-cheng-yu-kai-fa/di-er-jie-ru-he-ti-jiao-yi-ge-ruan-jian-bao.md)
+* [第三节 如何参与 FreeBSD 协作](di-er-shi-er-zhang-bian-cheng-yu-kai-fa/di-san-jie-ru-he-can-yu-freebsd-xie-zuo.md)
+* [第四节 C/C++ 环境的配置](di-er-shi-er-zhang-bian-cheng-yu-kai-fa/di-si-jie-cc++-huan-jing-de-pei-zhi.md)
+* [第五节 Java 环境的配置](di-er-shi-er-zhang-bian-cheng-yu-kai-fa/di-wu-jie-java-huan-jing-de-pei-zhi.md)
+* [第六节 QT 环境的配置](di-er-shi-er-zhang-bian-cheng-yu-kai-fa/di-liu-jie-qt-huan-jing-de-pei-zhi.md)
+* [第七节 Python 与 VScode](di-er-shi-er-zhang-bian-cheng-yu-kai-fa/di-qi-jie-python-yu-vscode.md)
+* [第八节 Rust 环境的配置](di-er-shi-er-zhang-bian-cheng-yu-kai-fa/di-ba-jie-rust-huan-jing-de-pei-zhi.md)
+* [第九节 Shell 的选择](di-er-shi-er-zhang-bian-cheng-yu-kai-fa/di-jiu-jie-shell-de-xuan-ze.md)
