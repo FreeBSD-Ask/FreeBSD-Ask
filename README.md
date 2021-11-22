@@ -1,4 +1,4 @@
-# FreeBSD 从入门到放弃
+# FreeBSD 从入门到跑路
 
 目录 https://github.com/FreeBSD-Ask/FreeBSD-Ask/blob/main/SUMMARY.md
 
