@@ -19,3 +19,13 @@ alias ls ls –G, 并重新登录
 　　`set correct = cmd lz/usr/bin tcsh>ls /usr/bin (y|n|e|a)?`
 
 `　　set fignore = (.o ~) emacs ma[^D] main.c main.c~ main.o emacs ma[tab] emacs main.c`
+
+## 更换默认 Shell <a href="geng-huan-mo-ren-shell" id="geng-huan-mo-ren-shell"></a>
+
+`例如切换到` zsh：
+
+```
+pkg install zsh
+chsh -s /usr/local/bin/zsh
+touch ~/.zshrc
+```

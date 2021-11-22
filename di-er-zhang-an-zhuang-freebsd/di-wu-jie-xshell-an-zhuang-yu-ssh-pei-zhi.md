@@ -1,2 +1,48 @@
-# 第五节 Xshell安装 与 SSH 配置
+# 第五节 Xshell 安装 与 SSH 配置
 
+## 配置SSH
+
+ee /etc/ssh/sshd\_config
+
+PermitRootLogin yes          #允许 root 登录&#x20;
+
+PasswordAuthentication yes   # 设置是否使用口令验证&#x20;
+
+PermitEmptyPasswords no      #不允许空密码登录
+
+## 开启SSH 服务
+
+/etc/rc.d/sshd restart
+
+## 保持 SSH 在线 <a href="bao-chi-ssh-zai-xian" id="bao-chi-ssh-zai-xian"></a>
+
+服务端设置：
+
+编辑 `/etc/ssh/sshd_config`，调整 `ClientAlive` 的设置：
+
+```
+ClientAliveInterval 10
+ClientAliveCountMax 3
+```
+
+10 秒给客户端发一次检测，客户端如果 3 次都不回应，则认为客户端已断开连接。
+
+`ClientAliveInterval` 默认是 `0`，表示禁用检测。
+
+客户端设置：
+
+全局用户生效：`/etc/ssh/ssh_config` ，仅对当前用户生效：`~/.ssh/config`。
+
+```
+Host *
+ServerAliveInterval 10
+ServerAliveCountMax 3
+```
+
+或者在连接的时候使用 `-o` 指定参数：
+
+```
+ssh user@server -p 22 -o ServerAliveInterval=10 -o ServerAliveCountMax=3
+```
+
+客户端和服务端任一开启检测即可。

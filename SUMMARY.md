@@ -70,7 +70,7 @@
 
 ## 第八章 用户与权限
 
-* [第一节 sudo 或 dash 的安装](di-ba-zhang-yong-hu-yu-quan-xian/di-yi-jie-sudo-huo-dash-de-an-zhuang.md)
+* [第一节 sudo](di-ba-zhang-yong-hu-yu-quan-xian/di-yi-jie-sudo-huo-dash-de-an-zhuang.md)
 * [第二节 添加用户](di-ba-zhang-yong-hu-yu-quan-xian/di-er-jie-tian-jia-yong-hu.md)
 * [第三节 用户组](di-ba-zhang-yong-hu-yu-quan-xian/di-san-jie-yong-hu-zu.md)
 * [第四节 用户权限](di-ba-zhang-yong-hu-yu-quan-xian/di-si-jie-yong-hu-quan-xian.md)
@@ -200,3 +200,9 @@
 * [第一节 恢复模式与密码重置](di-er-shi-san-zhang-yin-dao-yu-hui-fu/di-yi-jie-hui-fu-mo-shi-yu-mi-ma-zhong-zhi.md)
 * [第二节 FreeBSD 多硬盘EFI引导统一](di-er-shi-san-zhang-yin-dao-yu-hui-fu/di-er-jie-freebsd-duo-ying-pan-efi-yin-dao-tong-yi.md)
 * [第三节 FreeBSD 中文 TTY 控制台](di-er-shi-san-zhang-yin-dao-yu-hui-fu/di-san-jie-freebsd-zhong-wen-tty-kong-zhi-tai.md)
+* [第四节 引导界面](di-er-shi-san-zhang-yin-dao-yu-hui-fu/di-si-jie-yin-dao-jie-mian.md)
+
+## 第二十四章 FreeBSD 特色
+
+* [第一节 System INIT 管理服务](di-er-shi-si-zhang-freebsd-te-se/di-yi-jie-system-init-guan-li-fu-wu.md)
+* [第二节 FreeBSD 目录结构](di-er-shi-si-zhang-freebsd-te-se/di-er-jie-freebsd-mu-lu-jie-gou.md)
