@@ -22,6 +22,7 @@
 * [第五节 Xshell 安装 与 SSH 配置](di-er-zhang-an-zhuang-freebsd/di-wu-jie-xshell-an-zhuang-yu-ssh-pei-zhi.md)
 * [第六节 物理机下显卡的配置](di-er-zhang-an-zhuang-freebsd/di-liu-jie-wu-li-ji-xia-xian-ka-de-pei-zhi.md)
 * [第七节 物理机下触摸板的设置](di-er-zhang-an-zhuang-freebsd/di-qi-jie-wu-li-ji-xia-chu-mo-ban-de-she-zhi.md)
+* [第八节 中文化](di-er-zhang-an-zhuang-freebsd/di-ba-jie-zhong-wen-hua.md)
 
 ## 第三章 软件源及包管理器
 
@@ -181,3 +182,9 @@
 * [第二节 修改内核源码](di-er-shi-yi-zhang-nei-he/di-er-jie-xiu-gai-nei-he-yuan-ma.md)
 * [第三节 编译内核](di-er-shi-yi-zhang-nei-he/di-san-jie-bian-yi-nei-he.md)
 * [第四节 内核分析](di-er-shi-yi-zhang-nei-he/di-si-jie-nei-he-fen-xi.md)
+
+## 第二十二章 开发者
+
+* [第一节 如何报告 Bug](di-er-shi-er-zhang-kai-fa-zhe/di-yi-jie-ru-he-bao-gao-bug.md)
+* [第二节 如何提交一个软件包](di-er-shi-er-zhang-kai-fa-zhe/di-er-jie-ru-he-ti-jiao-yi-ge-ruan-jian-bao.md)
+* [第三节 如何参与 FreeBSD 协作](di-er-shi-er-zhang-kai-fa-zhe/di-san-jie-ru-he-can-yu-freebsd-xie-zuo.md)
