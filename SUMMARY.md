@@ -196,12 +196,13 @@
 * [第八节 Rust 环境的配置](di-er-shi-er-zhang-bian-cheng-yu-kai-fa/di-ba-jie-rust-huan-jing-de-pei-zhi.md)
 * [第九节 Csh 与其他 Shell](di-er-shi-er-zhang-bian-cheng-yu-kai-fa/di-jiu-jie-shell-de-xuan-ze.md)
 
-## 第二十三章  引导与恢复
+## 第二十三章 引导与恢复
 
 * [第一节 恢复模式与密码重置](di-er-shi-san-zhang-yin-dao-yu-hui-fu/di-yi-jie-hui-fu-mo-shi-yu-mi-ma-zhong-zhi.md)
 * [第二节 FreeBSD 多硬盘 EFI 引导统一](di-er-shi-san-zhang-yin-dao-yu-hui-fu/di-er-jie-freebsd-duo-ying-pan-efi-yin-dao-tong-yi.md)
 * [第三节 FreeBSD 中文 TTY 控制台](di-er-shi-san-zhang-yin-dao-yu-hui-fu/di-san-jie-freebsd-zhong-wen-tty-kong-zhi-tai.md)
 * [第四节 引导界面](di-er-shi-san-zhang-yin-dao-yu-hui-fu/di-si-jie-yin-dao-jie-mian.md)
+* [第五节 Grub 及其他引导](di-er-shi-san-zhang-yin-dao-yu-hui-fu/di-wu-jie-grub-ji-qi-ta-yin-dao.md)
 
 ## 第二十四章 FreeBSD 特色
 
