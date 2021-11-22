@@ -89,6 +89,8 @@ end;
 
 ## 物理化学
 
+- 元素周期表 `GPeriodic`: `pkg install gperiodic`
+
 ## 天文地理
 
 - 星图软件 `stellarium`
