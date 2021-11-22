@@ -2,7 +2,7 @@
 
 目录 https://github.com/FreeBSD-Ask/FreeBSD-Ask/blob/main/SUMMARY.md
 
-项目预览 [https://ykla.gitbook.io/freebsd/](https://ykla.gitbook.io/freebsd/)
+项目预览 [https://book.freebsdcn.org](https://ykla.gitbook.io/freebsd/)
 
 ## 编辑指南
 
