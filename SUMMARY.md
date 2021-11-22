@@ -49,7 +49,7 @@
 * [第三节 五笔输入法](di-wu-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-san-jie-qi-ta-shu-ru-fa-kuang-jia.md)
 * [第四节 Firefox 与 Chromium 安装](di-wu-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-si-jie-firefox-yu-chromium-an-zhuang.md)
 * [第五节 Linux 兼容层](di-wu-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-wu-jie-linux-jian-rong-ceng.md)
-* [第六节 安装 金山WPS](di-wu-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-liu-jie-an-zhuang-jin-shan-wps.md)
+* [第六节 安装 金山 WPS](di-wu-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-liu-jie-an-zhuang-jin-shan-wps.md)
 * [第七节 安装 QQ](di-wu-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-qi-jie-an-zhuang-qq.md)
 * [第八节 更换字体](di-wu-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-ba-jie-geng-huan-zi-ti.md)
 
@@ -198,5 +198,5 @@
 ## 第二十三章  引导与恢复
 
 * [第一节 恢复模式与密码重置](di-er-shi-san-zhang-yin-dao-yu-hui-fu/di-yi-jie-hui-fu-mo-shi-yu-mi-ma-zhong-zhi.md)
-* [第二节 FreeBSD多硬盘EFI引导统一](di-er-shi-san-zhang-yin-dao-yu-hui-fu/di-er-jie-freebsd-duo-ying-pan-efi-yin-dao-tong-yi.md)
+* [第二节 FreeBSD 多硬盘EFI引导统一](di-er-shi-san-zhang-yin-dao-yu-hui-fu/di-er-jie-freebsd-duo-ying-pan-efi-yin-dao-tong-yi.md)
 * [第三节 FreeBSD 中文 TTY 控制台](di-er-shi-san-zhang-yin-dao-yu-hui-fu/di-san-jie-freebsd-zhong-wen-tty-kong-zhi-tai.md)
