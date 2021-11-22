@@ -2,7 +2,7 @@
 
 ## N卡
 
-注意：检查是否开启 linux 兼容层
+注意：检查是否开启 linux 兼容层，因为没有原生的 FreeBSD N 卡显卡驱动，只是调用 Linux 下的驱动。
 
 ```shell
 #安装几个nvidia相关的包以及xorg。
