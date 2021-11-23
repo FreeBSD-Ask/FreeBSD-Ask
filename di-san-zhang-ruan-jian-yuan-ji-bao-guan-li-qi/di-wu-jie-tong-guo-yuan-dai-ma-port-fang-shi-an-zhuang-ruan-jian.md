@@ -1,4 +1,4 @@
-# 通过源代码 port 方式安装软件
+# 第五节 通过源代码 port 方式安装软件
 
 ## FreeBSD ports 基本用法 <a href="freebsdports-ji-ben-yong-fa" id="freebsdports-ji-ben-yong-fa"></a>
 
@@ -66,10 +66,10 @@ portmaster -a -m “BATCH=yes” 或者-D -G –no-confirm 都可以免除确认
 
 ## FreeBSD ports 多线程编译
 
-linux如gentoo上一般是直接 -jx 或者-jx+1 x为核心数。\
+Linux 如 gentoo上一般是直接 -jx 或者-jx+1 x为核心数。\
 FreeBSD ports 多线程编译\
 FORCE\_MAKE\_JOBS=yes\
 MAKE\_JOBS\_NUMBER=4\
-写入/etc/make.conf\
-没有就新建。4是处理器核心数，不知道就别改。\
+写入 /etc/make.conf\
+没有就新建。4 是处理器核心数，不知道就别改。\
 \#其他见 /usr/ports/Mk/bsd.port.mk
