@@ -4,6 +4,5 @@
 
 ```
 #ee /boot/loader.conf
-
 autoboot_delay="2"
 ```
