@@ -6,7 +6,7 @@
 
 ```
 #cd /usr/ports/x11-wm/xfce4
-m#ake install clean
+#make install clean
 ```
 
 通过pkg安装
