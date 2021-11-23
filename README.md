@@ -14,7 +14,7 @@
 
 3、Github 编辑者不应改变目录结构，会导致 Gitbook 同步失效。如有需要请联系 ykla。
 
-4、使用大型软件（如IDE JAVA）时，请注明软件版本号。
+  4、使用大型软件（如IDE、JAVA）时，请注明软件版本号。
 
 5、请加 QQ 群 731675387 或 Telegram 群 [https://t.me/freebsdba](https://t.me/freebsdba)
 
