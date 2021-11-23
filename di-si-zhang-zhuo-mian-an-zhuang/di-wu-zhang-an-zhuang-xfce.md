@@ -34,8 +34,12 @@
 
 ## 可选配置
 
-`#pkg install zh-fcitx `#(安装中文输入法，需要设置中文输入环境)
+`#pkg install zh-fcitx `
+
+#(安装中文输入法，需要设置中文输入环境)
+
 #cd ~
+
 #ee .xinitrc #文件添加以下内容
 
 ```
