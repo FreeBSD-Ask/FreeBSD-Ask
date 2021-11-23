@@ -6,33 +6,33 @@
 
 在.cshrc 和/etc/csh.cshrc 中进行如下配置，此配置可以解决部分窗口fcitx 无效的问题。
 
-setenv QT4\_IM\_MODULE fcitx
+`setenv QT4_IM_MODULE fcitx`
 
-setenv GTK\_IM\_MODULE fcitx
+`setenv GTK_IM_MODULE fcitx`
 
-setenv QT\_IM\_MODULE fcitx
+`setenv QT_IM_MODULE fcitx`
 
-setenv GTK2\_IM\_MODULE fcitx
+`setenv GTK2_IM_MODULE fcitx`
 
-setenv GTK3\_IM\_MODULE fcitx
+`setenv GTK3_IM_MODULE fcitx`
 
-setenv XMODIFIERS @im=fcitx
+`setenv XMODIFIERS @im=fcitx`
 
 在.cshrc 和/etc/csh.cshrc 中进行下面两行配置可以解决终端无法输入中文和无法显示中文的问题。
 
-setenv LANG zh\_CN.UTF-8
+`setenv LANG zh_CN.UTF-8`
 
-setenv MM\_CHARSET zh\_CN.UTF-8
+`setenv MM_CHARSET zh_CN.UTF-8`
 
 接Fcitx 输入法补充：
 
 要想终端不乱码还需要
 
-setenv LANG zh\_CN.UTF-8
+`setenv LANG zh_CN.UTF-8`
 
-setenv LC\_CTYPE zh\_CN.UTF-8
+`setenv LC_CTYPE zh_CN.UTF-8`
 
-setenv LC\_ALL zh\_CN.UTF-8
+`setenv LC_ALL zh_CN.UTF-8`
 
 ## Fcitx5
 
@@ -51,14 +51,14 @@ chinese/fcitx5-rime\
 cp /usr/local/share/applications/fcitx.desktop \~/.config/autostart/
 
 　　在.cshrc 和 /etc/csh.cshrc 中进行如下配置，此配置可以解决部分窗口 fcitx 无效以及无法输入显示中文的问题。\
-setenv QT4\_IM\_MODULE fcitx\
-setenv GTK\_IM\_MODULE fcitx\
-setenv QT\_IM\_MODULE fcitx\
-setenv GTK2\_IM\_MODULE fcitx\
-setenv GTK3\_IM\_MODULE fcitx\
-setenv XMODIFIERS @im=fcitx\
-setenv LANG zh\_CN.UTF-8\
-setenv MM\_CHARSET zh\_CN.UTF-8
+`setenv QT4_IM_MODULE fcitx`\
+`setenv GTK_IM_MODULE fcitx`\
+`setenv QT_IM_MODULE fcitx`\
+`setenv GTK2_IM_MODULE fcitx`\
+`setenv GTK3_IM_MODULE fcitx`\
+`setenv XMODIFIERS @im=fcitx`\
+`setenv LANG zh_CN.UTF-8`\
+`setenv MM_CHARSET zh_CN.UTF-8`
 
 　　在 root 用户下 rime 不会自动被添加到输入法，需要手动添加完成初始化！
 

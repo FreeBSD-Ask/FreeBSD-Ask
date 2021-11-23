@@ -36,5 +36,5 @@ freebsd-update install
 
 终端执行命令
 
-pw groupadd ntpd -g 123\
-pw useradd ntpd -u 123 -g ntpd -h - -d /var/db/ntp -s /usr/sbin/nologin -c “NTP Daemon”
+`pw groupadd ntpd -g 123`\
+`pw useradd ntpd -u 123 -g ntpd -h - -d /var/db/ntp -s /usr/sbin/nologin -c “NTP Daemon”`
