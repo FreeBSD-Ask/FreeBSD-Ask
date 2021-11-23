@@ -35,6 +35,7 @@ FreeBSD 提供了实用工具 `freebsd-update` 来安装系统更新，包括升
 ### **FreeBSD 升级出错，没有ntp 用户**
 
 终端执行命令
-
-`#pw groupadd ntpd -g 123`\
-`#pw useradd ntpd -u 123 -g ntpd -h - -d /var/db/ntp -s /usr/sbin/nologin -c “NTP Daemon”`
+```
+#pw groupadd ntpd -g 123
+#pw useradd ntpd -u 123 -g ntpd -h - -d /var/db/ntp -s /usr/sbin/nologin -c “NTP Daemon”
+```
