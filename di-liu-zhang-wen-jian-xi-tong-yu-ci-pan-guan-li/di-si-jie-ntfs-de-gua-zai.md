@@ -3,7 +3,7 @@
 
 
 1. 安裝 ntfs-3g 软件\
-   `pkg install sysutils/fusefs-ntfs`
+   \#`pkg install sysutils/fusefs-ntfs`
 2. 把你的 ntfs 硬盘或 U 盘插入计算机。\
    这时候你会看到它的设备名，例如 da0。
 3. 修改 rc.conf

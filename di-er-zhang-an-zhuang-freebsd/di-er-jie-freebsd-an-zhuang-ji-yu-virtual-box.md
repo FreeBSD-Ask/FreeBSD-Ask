@@ -1,8 +1,8 @@
-# 第二节 FreeBSD 安装——基于 Virtual Box
+# 第二节 FreeBSD 13.0 安装——基于 Virtual Box
 
 ## VirtualBOX 虚拟机 FreeBSD配置
 
-　pkg 装 virtualbox-ose-additions，
+`#pkg install virtualbox-ose-additions`
 
 　　再将
 

@@ -14,20 +14,22 @@ Gentoo: Portage，对应 Ports（Portage 本身就是 Ports 的仿制品）
 \#pkg 回车即可输入y 确认下载\
 ————————————————————————————————————\
 pkg使用https，先安装ssl 证书：\
-\#pkg install ca\_root\_nss\
+`#pkg install ca_root_nss`\
 然后把repo.conf 里的pkg+http 改成pkg+https 即可。\
-最后刷新pkg数据库：pkg update -f\
+最后刷新pkg数据库：
+
+`#pkg update -f`\
 ————————————————————————————————————\
 安装python 3：\
-\#pkg install python\
+`#pkg install python`\
 ————————————————————————————————————\
 pkg 升级：\
-\#pkg upgrade\
+`#pkg upgrade`\
 ———————————————————————————————————-—\
 错误：You must upgrade the ports-mgmt/pkg port first\
 解决：\
-\#cd /usr/ports/ports-mgmt/pkg\
-\#make deinstall reinstall
+`#cd /usr/ports/ports-mgmt/pkg`\
+`#make deinstall reinstall`
 
 ## 故障排除
 

@@ -2,22 +2,24 @@
 
 ## 1.安装 <a href="1-an-zhuang" id="1-an-zhuang"></a>
 
-pkg install -y xorg sddm kde5 wqy-fonts
+`#pkg install -y xorg sddm kde5 wqy-fonts`
 
 ## 2.配置
 
-ee /etc/fstab\
+`#ee /etc/fstab`\
 添加内容如下:
 
-proc /proc procfs rw 0 0
+`proc /proc procfs rw 0 0`
 
-ee /etc/rc.conf\
+然后
+
+`#ee /etc/rc.conf`\
 添加：\
-dbus\_enable=”YES”\
-hald\_enable=”YES”\
-sddm\_enable=”YES”
+`dbus_enable=”YES”`\
+`hald_enable=”YES”`\
+`sddm_enable=”YES”`
 
-echo “exec /usr/local/bin/startkde” > \~/.xinitrc
+`echo “exec /usr/local/bin/startkde” > ~/.xinitrc`
 
 
 

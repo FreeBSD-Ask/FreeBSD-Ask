@@ -10,7 +10,7 @@
 #添加一行
 kldload ext2fs
 #重启后，挂载（请注意，这里不一定是ada0pX）
-sudo mount -t /dev/ada0pX /home/test
+#mount -t /dev/ada0pX /home/test
 ```
 
 \
