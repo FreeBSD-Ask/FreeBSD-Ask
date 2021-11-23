@@ -15,19 +15,19 @@
 打开 IP 转发功能：
 
 ```
-sysrc gateway_enable="YES"
-sysrc ipv6_gateway_enable="YES"
+#sysrc gateway_enable="YES"
+#sysrc ipv6_gateway_enable="YES"
 ```
 
 打开防火墙，开启 NAT：
 
 ```
-sysrc firewall_enable="YES"
-sysrc firewall_script="/etc/ipfw.rules"
-sysrc firewall_nat_enable="YES"
+#sysrc firewall_enable="YES"
+#sysrc firewall_script="/etc/ipfw.rules"
+#sysrc firewall_nat_enable="YES"
 ```
 
-设置默认接受连接： `vi /boot/loader.conf`
+设置默认接受连接： `ee /boot/loader.conf`
 
 ```
 net.inet.ip.fw.default_to_accept=1
@@ -50,5 +50,5 @@ resolv_conf="/dev/null"
 每 `1` 秒刷新一次：
 
 ```
-systat -if 1
+#systat -if 1
 ```
