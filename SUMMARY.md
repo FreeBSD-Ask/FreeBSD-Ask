@@ -23,7 +23,7 @@
 * [第五节 Xshell 安装 与 SSH 配置](di-er-zhang-an-zhuang-freebsd/di-wu-jie-xshell-an-zhuang-yu-ssh-pei-zhi.md)
 * [第六节 物理机下显卡的配置](di-er-zhang-an-zhuang-freebsd/di-liu-jie-wu-li-ji-xia-xian-ka-de-pei-zhi.md)
 * [第七节 物理机下触摸板的设置](di-er-zhang-an-zhuang-freebsd/di-qi-jie-wu-li-ji-xia-chu-mo-ban-de-she-zhi.md)
-* [第八节 Wine](di-er-zhang-an-zhuang-freebsd/di-ba-jie-zhong-wen-hua.md)
+* [第八节 物理机电源管理](di-er-zhang-an-zhuang-freebsd/di-ba-jie-zhong-wen-hua.md)
 * [第九节 声卡与网卡设置](di-er-zhang-an-zhuang-freebsd/di-jiu-jie-sheng-ka-yu-wang-ka-she-zhi.md)
 
 ## 第三章 软件源及包管理器
@@ -54,6 +54,7 @@
 * [第六节 安装 金山 WPS](di-wu-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-liu-jie-an-zhuang-jin-shan-wps.md)
 * [第七节 安装 QQ](di-wu-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-qi-jie-an-zhuang-qq.md)
 * [第八节 更换字体](di-wu-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-ba-jie-geng-huan-zi-ti.md)
+* [第九节 wine](di-wu-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-jiu-jie-wine.md)
 
 ## 第六章 文件系统与磁盘管理
 
