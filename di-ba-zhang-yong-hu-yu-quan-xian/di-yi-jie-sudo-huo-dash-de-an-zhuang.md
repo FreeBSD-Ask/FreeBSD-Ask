@@ -5,7 +5,7 @@
 系统默认不提供 `sudo` 命令，需要使用 `root` 用户自行安装：
 
 ```
-pkg install sudo
+#pkg install sudo
 ```
 
 ## sudo 免密码
