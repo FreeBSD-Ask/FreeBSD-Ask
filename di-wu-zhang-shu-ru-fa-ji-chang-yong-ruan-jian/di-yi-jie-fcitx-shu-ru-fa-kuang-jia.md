@@ -48,7 +48,7 @@ chinese/fcitx5-rime\
 　　可通过 ports 安装。环境变量取决于你的窗口管理器和桌面以及 shell 。经测试不支持 slim，可能是配置问题。sddm 可用。
 
 　　自动启动：\
-cp /usr/local/share/applications/fcitx.desktop \~/.config/autostart/
+`cp /usr/local/share/applications/fcitx.desktop ~/.config/autostart/`
 
 　　在.cshrc 和 /etc/csh.cshrc 中进行如下配置，此配置可以解决部分窗口 fcitx 无效以及无法输入显示中文的问题。\
 `setenv QT4_IM_MODULE fcitx`\
