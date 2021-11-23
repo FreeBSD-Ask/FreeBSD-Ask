@@ -60,7 +60,7 @@
 * [第三节 磁盘扩容](di-liu-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-san-jie-ci-pan-kuo-rong.md)
 * [第四节 NTFS 的挂载](di-liu-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-si-jie-ntfs-de-gua-zai.md)
 * [第五节 SWAP 交换分区的设置](di-liu-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-wu-jie-swap-jiao-huan-fen-qu-de-she-zhi.md)
-* [第六节 Ext 4 等文件系统](di-liu-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-liu-jie-ext-4-deng-wen-jian-xi-tong.md)
+* [第六节 Ext 2/3/4 等文件系统](di-liu-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-liu-jie-ext-4-deng-wen-jian-xi-tong.md)
 
 ## 第七章 VPN与代理
 
