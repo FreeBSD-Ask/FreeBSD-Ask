@@ -20,7 +20,7 @@ sysrc kld_list=”linux linux64”
 
 ```
 mkdir /home/work
-wget [https://down.qq.com/qqweb/LinuxQQ/linuxqq_2.0.0-b2-1089_x86_64.rpm](https://down.qq.com/qqweb/LinuxQQ/linuxqq\_2.0.0-b2-1089\_x86\_64.rpm)
+wget https://down.qq.com/qqweb/LinuxQQ/linuxqq_2.0.0-b2-1089_x86_64.rpm
 ```
 
 提示：后续如果版本更新请自行前往[https://im.qq.com/linuxqq/download.html](https://im.qq.com/linuxqq/download.html) 手动下载。
@@ -39,10 +39,9 @@ rpm2cpio < /home/work/linuxqq_2.0.0-b2-1089_x86_64.rpm | cpio -id
 
 ```
 cd /home/work
-wget [http://mirror.centos.org/centos/7/os/x86_64/Packages/gtk2-immodule-xim-2.24.31-1.el7.x86_64.rpm`](http://mirror.centos.org/centos/7/os/x86\_64/Packages/gtk2-immodule-xim-2.24.31-1.el7.x86\_64.rpm)
-wget [https://download-ib01.fedoraproject.org/pub/epel/7/x86_64/Packages/f/fcitx-gtk2-4.2.9.6-1.el7.x86_64.rpm`](https://download-ib01.fedoraproject.org/pub/epel/7/x86\_64/Packages/f/fcitx-gtk2-4.2.9.6-1.el7.x86\_64.rpm)
-wget [https://download-ib01.fedoraproject.org/pub/epel/7/x86_64/Packages/f/fcitx-4.2.9.6-1.el7.x86_64.rpm`](https://download-ib01.fedoraproject.org/pub/epel/7/x86\_64/Packages/f/fcitx-4.2.9.6-1.el7.x86\_64.rpm)
-
+wget http://mirror.centos.org/centos/7/os/x86_64/Packages/gtk2-immodule-xim-2.24.31-1.el7.x86_64.rpm
+wget https://download-ib01.fedoraproject.org/pub/epel/7/x86_64/Packages/f/fcitx-gtk2-4.2.9.6-1.el7.x86_64.rpm
+wget https://download-ib01.fedoraproject.org/pub/epel/7/x86_64/Packages/f/fcitx-4.2.9.6-1.el7.x86_64.rpm
 ```
 然后分别安装以上3个包：
 
@@ -57,9 +56,9 @@ rpm2cpio < /home/work/fcitx-4.2.9.6-1.el7.x86_64.rpm | cpio -id
 ```
 cd /home/work
 pkg install git
-git clone [https://gitee.com/ykla/Linux-QQ.git](https://gitee.com/ykla/Linux-QQ.git)
+git clone https://gitee.com/ykla/Linux-QQ.git
 ```
-其余步骤自行参考。\
+其余步骤自行参考。
 境外用户可以使用github： [https://github.com/ykla/FreeBSD-Linux-QQ](https://github.com/ykla/FreeBSD-Linux-QQ)
 
 **4、刷新gtk 缓存：**
