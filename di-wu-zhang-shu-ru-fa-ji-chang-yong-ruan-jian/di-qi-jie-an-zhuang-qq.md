@@ -13,7 +13,6 @@ FreeBSD 安装 Linux QQ 方法
 开启服务：
 ```
 sysrc linux_enable=”YES”
-
 sysrc kld_list=”linux linux64”
 ```
 
@@ -21,7 +20,6 @@ sysrc kld_list=”linux linux64”
 
 ```
 mkdir /home/work
-
 wget [https://down.qq.com/qqweb/LinuxQQ/linuxqq_2.0.0-b2-1089_x86_64.rpm](https://down.qq.com/qqweb/LinuxQQ/linuxqq\_2.0.0-b2-1089\_x86\_64.rpm)
 ```
 
@@ -31,9 +29,7 @@ wget [https://down.qq.com/qqweb/LinuxQQ/linuxqq_2.0.0-b2-1089_x86_64.rpm](https:
 
 ```
 pkg install archivers/rpm4
-
 cd /compat/linux
-
 rpm2cpio < /home/work/linuxqq_2.0.0-b2-1089_x86_64.rpm | cpio -id
 ```
 
@@ -43,11 +39,8 @@ rpm2cpio < /home/work/linuxqq_2.0.0-b2-1089_x86_64.rpm | cpio -id
 
 ```
 cd /home/work
-
 wget [http://mirror.centos.org/centos/7/os/x86_64/Packages/gtk2-immodule-xim-2.24.31-1.el7.x86_64.rpm`](http://mirror.centos.org/centos/7/os/x86\_64/Packages/gtk2-immodule-xim-2.24.31-1.el7.x86\_64.rpm)
-
 wget [https://download-ib01.fedoraproject.org/pub/epel/7/x86_64/Packages/f/fcitx-gtk2-4.2.9.6-1.el7.x86_64.rpm`](https://download-ib01.fedoraproject.org/pub/epel/7/x86\_64/Packages/f/fcitx-gtk2-4.2.9.6-1.el7.x86\_64.rpm)
-
 wget [https://download-ib01.fedoraproject.org/pub/epel/7/x86_64/Packages/f/fcitx-4.2.9.6-1.el7.x86_64.rpm`](https://download-ib01.fedoraproject.org/pub/epel/7/x86\_64/Packages/f/fcitx-4.2.9.6-1.el7.x86\_64.rpm)
 
 ```
@@ -55,21 +48,15 @@ wget [https://download-ib01.fedoraproject.org/pub/epel/7/x86_64/Packages/f/fcitx
 
 ```
 cd /compat/linux
-
 rpm2cpio < /home/work/gtk2-immodule-xim-2.24.31-1.el7.x86_64.rpm | cpio -id
-
 rpm2cpio < fcitx-gtk2-4.2.9.6-1.el7.x86_64.rpm | cpio -id
-
 rpm2cpio < /home/work/fcitx-4.2.9.6-1.el7.x86_64.rpm | cpio -id
-
 ```
 注意：为了方便境内FreeBSD 用户，可以使用境内的gitee 同步下载以上三个文件；
 
 ```
 cd /home/work
-
 pkg install git
-
 git clone [https://gitee.com/ykla/Linux-QQ.git](https://gitee.com/ykla/Linux-QQ.git)
 ```
 其余步骤自行参考。\

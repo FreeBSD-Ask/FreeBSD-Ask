@@ -10,7 +10,6 @@
 
 ```
 #chmod -R +755 /usr/local/share/fonts/WindowsFonts #刷新权限，然后
-
 #fc-cache
 ```
 即可.

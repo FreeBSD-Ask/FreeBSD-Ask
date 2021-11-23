@@ -17,8 +17,8 @@
 4、修改 fstab 自动挂载
 
 为了开机自动挂载，修改添加\
-`#ee /etc/fstab `
 ```
+#ee /etc/fstab
 /dev/da0s1  /media/NTFS ntfs  rw,mount_prog=/usr/local/bin/ntfs-3g,late  0  0
 ```
 注意：以上是一行

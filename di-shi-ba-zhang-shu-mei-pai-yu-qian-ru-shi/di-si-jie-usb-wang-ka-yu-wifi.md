@@ -9,17 +9,15 @@
 　　/boot/loader.conf
 
 　　中写入
-
+```
 　　rtwn\_usb\_load=”YES”
-
 　　legal.realtek.license\_ack=1
-
+```
 　　在 /etc/rc.conf 中写入
-
+```
 　　wlans\_rtwn0=”wlan0”
-
 　　ifconfig\_wlan0=”WPA DHCP”
-
+```
 　　注意在 /etc/wpa\_supplicant.conf 文件中（没有就自己通 touch 命令新建一个）写入
 
 　　network={ ssid=”wifi 名字，别搞什么中文” psk=”密码” }

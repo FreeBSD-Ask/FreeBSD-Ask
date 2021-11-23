@@ -16,7 +16,7 @@
 
 　　#`service lightdm start`
 
-&#x20;即可。
+即可。
 
 ## FreeBSD KDE5 SDDM root登录
 

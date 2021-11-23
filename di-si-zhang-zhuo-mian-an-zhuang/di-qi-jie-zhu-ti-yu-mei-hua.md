@@ -83,8 +83,6 @@ _提示： 新接触 Unix 的用户可略过本节_
 
 ```
 git clone https://github.com/PapirusDevelopmentTeam/papirus-icon-theme
-
 cd papirus-icon-theme
-
 ./install.sh
 ```

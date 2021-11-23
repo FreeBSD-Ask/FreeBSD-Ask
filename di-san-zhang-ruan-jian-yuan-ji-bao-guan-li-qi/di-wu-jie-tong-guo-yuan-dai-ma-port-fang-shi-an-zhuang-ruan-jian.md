@@ -61,12 +61,12 @@ portupgrade -ai #自动升级所有软件
 portupgrade -R screen #升级单个软件
 
 二、portmaster （推荐）
-
-`cd /usr/ports/ports-mgmt/portmaster && make install clean`
-`portmaster -ai #自动升级所有软件`
-`portmaster screen#升级单个软件`
-`portmaster -a -m “BATCH=yes” 或者-D -G –no-confirm 都可以免除确认`
-
+```
+cd /usr/ports/ports-mgmt/portmaster && make install clean
+portmaster -ai #自动升级所有软件
+portmaster screen#升级单个软件
+portmaster -a -m “BATCH=yes” 或者-D -G –no-confirm 都可以免除确认
+```
 ## FreeBSD ports 多线程编译
 
 Linux 如 gentoo上一般是直接 -jx 或者-jx+1 x为核心数。

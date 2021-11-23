@@ -10,6 +10,5 @@
 
 ```
 sysrc linux_enable=”YES”
-
 sysrc kld_list=”linux linux64”
 ```
