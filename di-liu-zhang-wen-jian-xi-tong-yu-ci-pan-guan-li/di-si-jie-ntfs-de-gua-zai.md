@@ -2,21 +2,21 @@
 
 
 
-1. 安裝 ntfs-3g 软件\
-   \#`pkg install sysutils/fusefs-ntfs`
-2. 把你的 ntfs 硬盘或 U 盘插入计算机。\
+1. 安裝 ntfs-3g 软件
+   #`pkg install sysutils/fusefs-ntfs`
+2. 把你的 ntfs 硬盘或 U 盘插入计算机。
    这时候你会看到它的设备名，例如 da0。
 3. 修改 rc.conf
 
-`#ee /etc/rc.conf`\
+`#ee /etc/rc.conf`
 加入
 
-`fusefs_enable="YES"`\
+`fusefs_enable="YES"`
 该设置理论上在步骤1会自动加入，但是还需要你去检查看看有没有。
 
 4、修改 fstab 自动挂载
 
-为了开机自动挂载，修改添加\
+为了开机自动挂载，修改添加
 ```
 #ee /etc/fstab
 /dev/da0s1  /media/NTFS ntfs  rw,mount_prog=/usr/local/bin/ntfs-3g,late  0  0
