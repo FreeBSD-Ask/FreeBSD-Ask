@@ -5,7 +5,7 @@
 ## 第一章 走近FreeBSD
 
 * [第一节 什么是 UNIX](di-yi-zhang-zou-jin-freebsd/di-yi-jie-shi-mo-shi-unix.md)
-* [第二节 什么是类 UNIX](di-yi-zhang-zou-jin-freebsd/di-er-jie-shi-mo-shi-lei-unix.md)
+* [第二节 什么是 Unix-like](di-yi-zhang-zou-jin-freebsd/di-er-jie-shi-mo-shi-lei-unix.md)
 * [第三节 什么是 Linux](di-yi-zhang-zou-jin-freebsd/di-san-jie-shi-mo-shi-linux.md)
 * [第四节 FreeBSD 与其他操作系统](di-yi-zhang-zou-jin-freebsd/di-si-jie-freebsd-yu-qi-ta-cao-zuo-xi-tong.md)
 * [第五节 为什么要使用 FreeBSD](di-yi-zhang-zou-jin-freebsd/di-wu-jie-wei-shi-mo-yao-shi-yong-freebsd.md)
