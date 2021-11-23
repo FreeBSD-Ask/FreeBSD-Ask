@@ -18,11 +18,12 @@
 
 ## 启动服务
 
-`#syrc hald_enable=”YES”`\
-`#syrc dbus_enable=”YES”`\
-`#service hald start`\
-`#service dbus start`
-
+```
+#syrc hald_enable=”YES”
+#syrc dbus_enable=”YES”
+#service hald start
+#service dbus start
+```
 ## 设置中文显示
 
 在.xinitrc添加以下内容（但要在最前面才正常启用）\
@@ -33,19 +34,21 @@
 `#pkg install zh-fcitx `#(安装中文输入法，需要设置中文输入环境)\
 \#cd \~\
 \#ee .xinitrc #文件添加以下内容\
-`export XMODIFIERS=”@im=fcitx”`\
-`export XIM_PROGRAM=”fcitx”`\
-`export GTK_IM_MODULE=”fcitx”`\
-`fcitx &`
-
-`#pkg install firefox #（火狐浏览器）`\
-`#pkg install smplayer  #(视频播放器)`\
-`#pkg install zh_CN-libreoffice #(办公软件)`\
-`#pkg install gimp #(图片处理)`\
-`#pkg install thunderbird #(邮件客户端)`\
-`#pkg install wqy-fonts #（安装文泉驿字体）`\
-`#pkg install transmission  #(BT下载工具)`
-
+```
+export XMODIFIERS=”@im=fcitx”
+export XIM_PROGRAM=”fcitx”
+export GTK_IM_MODULE=”fcitx”
+fcitx &
+```
+```
+#pkg install firefox #（火狐浏览器）
+#pkg install smplayer  #(视频播放器)
+#pkg install zh_CN-libreoffice #(办公软件)
+#pkg install gimp #(图片处理)
+#pkg install thunderbird #(邮件客户端)
+#pkg install wqy-fonts #（安装文泉驿字体）
+#pkg install transmission  #(BT下载工具)`
+```
 ## 故障排除
 
 ### xfce 普通用户关机按钮灰色解决方案

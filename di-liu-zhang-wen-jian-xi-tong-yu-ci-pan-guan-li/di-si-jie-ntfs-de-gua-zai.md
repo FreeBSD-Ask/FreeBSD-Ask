@@ -9,7 +9,7 @@
 3. 修改 rc.conf
 
 `#ee /etc/rc.conf`\
-加入&#x20;
+加入
 
 `fusefs_enable="YES"`\
 该设置理论上在步骤1会自动加入，但是还需要你去检查看看有没有。
@@ -18,11 +18,13 @@
 
 为了开机自动挂载，修改添加\
 `#ee /etc/fstab `
-
-`/dev/da0s1  /media/NTFS ntfs  rw,mount_prog=/usr/local/bin/ntfs-3g,late  0  0`
-
+```
+/dev/da0s1  /media/NTFS ntfs  rw,mount_prog=/usr/local/bin/ntfs-3g,late  0  0
+```
 注意：以上是一行
 
-1. 或者，手动挂载\
-   `ntfs-3g  /dev/da0s1  /media/NTFS   -o  rw,uid=1000,gid=1000,umask=0`\
+1. 或者，手动挂载
+```
+ntfs-3g  /dev/da0s1  /media/NTFS   -o  rw,uid=1000,gid=1000,umask=0`
+```
    详细参数见 [ntfs-3g manpage。](https://www.freebsd.org/cgi/man.cgi?query=ntfs-3g\&format=html)

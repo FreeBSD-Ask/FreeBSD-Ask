@@ -1,14 +1,16 @@
 # 第五节 Xshell 安装 与 SSH 配置
 
 ## 配置SSH
+```
 
-`#ee /etc/ssh/sshd_config #（删去前边的#，并将yes 或no 修改为如下）`
+#ee /etc/ssh/sshd_config #（删去前边的#，并将yes 或no 修改为如下）
 
-`PermitRootLogin yes          #允许 root 登录 `
+PermitRootLogin yes          #允许 root 登录 
 
-`PasswordAuthentication yes   # 设置是否使用口令验证 `
+PasswordAuthentication yes   # 设置是否使用口令验证 
 
-`PermitEmptyPasswords no      #不允许空密码登录`
+PermitEmptyPasswords no      #不允许空密码登录
+```
 
 ## 开启SSH 服务
 

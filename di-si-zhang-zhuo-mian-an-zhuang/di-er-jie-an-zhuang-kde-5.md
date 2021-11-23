@@ -12,15 +12,14 @@
 `proc /proc procfs rw 0 0`
 
 然后
-
-`#ee /etc/rc.conf`\
-添加：\
-`dbus_enable=”YES”`\
-`hald_enable=”YES”`\
-`sddm_enable=”YES”`
-
-`echo “exec /usr/local/bin/startkde” > ~/.xinitrc`
-
+```
+#ee /etc/rc.conf
+#添加：
+dbus_enable=”YES”
+hald_enable=”YES”
+sddm_enable=”YES”
+echo “exec /usr/local/bin/startkde” > ~/.xinitrc
+```
 
 
 ## 中文化

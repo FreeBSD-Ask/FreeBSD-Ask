@@ -2,7 +2,7 @@
 
 ## 音频剪辑
 
-- Audacity : `pkg install audacity`
+- Audacity : `#pkg install audacity`
 
 ## 视频剪辑
 
@@ -10,7 +10,7 @@
 
 Unix 系统下相关软件有很多，这里我们简单介绍一下矢量制图程序**Inkscape**的使用方法
 
-- [ ] 安装方式： `pkg install inkscape`
+- [ ] 安装方式： `#pkg install inkscape`
 
 1. <kbd>Ctrl</kbd>  + <kbd>O</kbd> （拉丁字母）打开图片
 1. 点击图片
@@ -24,14 +24,14 @@ Unix 系统下相关软件有很多，这里我们简单介绍一下矢量制图
 
 ### 剪辑
 
-- Olive 视频编辑器：`pkg install olive-video-editor`
+- Olive 视频编辑器：`#pkg install olive-video-editor`
 
 ## 编辑字幕
 
-- Aegisub：`pkg install aegisub`
+- Aegisub：`#pkg install aegisub`
 
 ## 压缩字幕
 
-- ffmpeg : `pkg install ffmpeg`
+- ffmpeg : `#pkg install ffmpeg`
 
 `ffmpeg -i 视频文件.mp4 -vf subtitles=对应字幕.ass 输出视频.mp4`

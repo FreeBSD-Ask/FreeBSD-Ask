@@ -8,6 +8,8 @@
 
 开启服务：
 
-`sysrc linux_enable=”YES”`
+```
+sysrc linux_enable=”YES”
 
-`sysrc kld_list=”linux linux64”`
+sysrc kld_list=”linux linux64”
+```
