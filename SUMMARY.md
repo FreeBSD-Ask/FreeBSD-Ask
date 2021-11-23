@@ -12,6 +12,7 @@
 * [第六节 所谓开源哲学](di-yi-zhang-zou-jin-freebsd/di-liu-jie-suo-wei-kai-yuan-zhe-xue.md)
 * [第七节 其他 BSD 简介](di-yi-zhang-zou-jin-freebsd/di-qi-jie-qi-ta-bsd-jian-jie.md)
 * [第八节 参考资料](di-yi-zhang-zou-jin-freebsd/di-ba-jie-can-kao-zi-liao.md)
+* [第九节 编撰说明](di-yi-zhang-zou-jin-freebsd/di-jiu-jie-bian-zhuan-shuo-ming.md)
 
 ## 第二章 安装 FreeBSD
 
