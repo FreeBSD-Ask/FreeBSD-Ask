@@ -4,7 +4,7 @@
 
 现在是一个标准规范和商业商标。更是一种哲学思想，软件工程原则。
 
-**什么是UNIX？**
+**那么，现在到底什么是UNIX？**
 
 查询网址：[http://www.opengroup.org/openbrand/register](http://www.opengroup.org/openbrand/register)
 
