@@ -2,13 +2,13 @@
 
 ## 配置SSH
 
-ee /etc/ssh/sshd\_config
+`ee /etc/ssh/sshd_config （删去前边的#，并将yes 或no 修改为如下）`
 
-PermitRootLogin yes          #允许 root 登录&#x20;
+`PermitRootLogin yes          #允许 root 登录 `
 
-PasswordAuthentication yes   # 设置是否使用口令验证&#x20;
+`PasswordAuthentication yes   # 设置是否使用口令验证 `
 
-PermitEmptyPasswords no      #不允许空密码登录
+`PermitEmptyPasswords no      #不允许空密码登录`
 
 ## 开启SSH 服务
 
