@@ -21,8 +21,7 @@ setenv MM_CHARSET zh_CN.UTF-8
 接Fcitx 输入法补充：
 
 ```
-要想终端不乱码还需要
-
+#要想终端不乱码还需要添加：
 setenv LANG zh_CN.UTF-8
 setenv LC_CTYPE zh_CN.UTF-8
 setenv LC_ALL zh_CN.UTF-8
