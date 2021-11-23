@@ -18,7 +18,7 @@
 
 服务端设置：
 
-编辑 #ee`/etc/ssh/sshd_config`，调整 `ClientAlive` 的设置：
+编辑 `#`ee`/etc/ssh/sshd_config`，调整 `ClientAlive` 的设置：
 
 ```
 ClientAliveInterval 10
