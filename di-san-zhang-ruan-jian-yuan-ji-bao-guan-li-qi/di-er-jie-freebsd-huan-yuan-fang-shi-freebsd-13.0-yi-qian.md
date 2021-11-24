@@ -1,8 +1,8 @@
-# 第二节 FreeBSD 换源方式（FreeBSD 13.0以前）
+# 第二节 FreeBSD 换源方式（FreeBSD 13.0 以前）
 
-### pkg 源:pkg源提供二进制安装包. <a href="pkg-yuan-pkg-yuan-ti-gong-er-jin-zhi-an-zhuang-bao" id="pkg-yuan-pkg-yuan-ti-gong-er-jin-zhi-an-zhuang-bao"></a>
+### pkg 源:pkg 源提供二进制安装包. <a href="pkg-yuan-pkg-yuan-ti-gong-er-jin-zhi-an-zhuang-bao" id="pkg-yuan-pkg-yuan-ti-gong-er-jin-zhi-an-zhuang-bao"></a>
 
-FreeBSD中pkg源分为系统级和用户级两个源.不建议直接修改/etc/pkg/FreeBSD.conf,因为该文件会随着基本系统的更新而发生改变.
+FreeBSD 中 pkg 源分为系统级和用户级两个源.不建议直接修改 /etc/pkg/FreeBSD.conf,因为该文件会随着基本系统的更新而发生改变.
 
 创建用户级源目录:
 
@@ -31,7 +31,7 @@ FreeBSD: { enabled: no }
 
 若要使用https,请先安装security/ca\_root\_nss,并将`http`修改为`https`,最后使用命令`#pkg update -f`刷新缓存即可.
 
-### ports源:提供源码方式安装软件的包管理器
+### ports 源:提供源码方式安装软件的包管理器
 
 创建或修改文件`#ee /etc/make.conf`:
 
@@ -39,7 +39,7 @@ FreeBSD: { enabled: no }
 
 `MASTER_SITE_OVERRIDE?=http://mirror.bjtu.edu.cn/reverse/freebsd-pkg/ports-distfiles/`
 
-### portsnap源:打包的ports文件
+### portsnap 源:打包的 ports文件
 
 编辑portsnap配置文件 `#ee /etc/portsnap.conf` :
 
@@ -49,12 +49,12 @@ FreeBSD: { enabled: no }
 
 `#portsnap fetch extract`
 
-### freebsd-update源:提供基本系统更新
+### freebsd-update 源:提供基本系统更新
 
 编辑`#ee /etc/freebsd-update.conf` 文件:
 
 将`ServerName update.FreeBSD.org` 修改为`ServerName freebsd-update.mirror.bjtulug.org`
 
-例:从FreeBSD 12升级到13.0
+例:从 FreeBSD 12 升级到 13.0
 
 `#freebsd-update -r 13.0-RELEASE upgrade`
