@@ -5,6 +5,7 @@
 `#pkg install virtualbox-ose-additions`
 
 　　再将
+
 ```
 Section “Device”
 Identifier “Card0”
@@ -13,6 +14,26 @@ VendorName “InnoTek Systemberatung GmbH”
 BoardName “VirtualBox Graphics Adapter”
 EndSection`
 ```
+
 　　写到 /usr/local/etc/X11/ xorg.conf
 
 　　显卡控制器用 VBoxSVGA
+
+編輯 `#ee etc/rc.conf`，增加以下內容：
+
+
+
+```
+vboxguest_enable="YES"
+vboxservice_enable="YES"
+```
+
+
+
+```
+#service vboxguest restart% 
+#service vboxservice restart% 
+#pw groupmod wheel -m <yourname> // sudo 权限
+#pw groupmod opt -m <yourname> // 开机重启权限
+```
+

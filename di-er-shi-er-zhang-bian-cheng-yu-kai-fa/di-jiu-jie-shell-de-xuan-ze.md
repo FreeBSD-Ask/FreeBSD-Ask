@@ -22,6 +22,8 @@ alias ls ls –G, 并重新登录
 
 ## 更换默认 Shell <a href="geng-huan-mo-ren-shell" id="geng-huan-mo-ren-shell"></a>
 
+警告：切换默认 Shell 会导致 恢复模式无法正常启动加载命令行环境。
+
 `例如切换到` zsh：
 
 ```
@@ -29,3 +31,11 @@ pkg install zsh
 chsh -s /usr/local/bin/zsh
 touch ~/.zshrc
 ```
+
+切换到 bash：
+
+\#pkg install bash
+
+\#chsh -s /usr/local/bin/bash freebsd
+
+\#ee \~/.bash\_profile
