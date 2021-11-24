@@ -24,7 +24,7 @@
 * [第六节 物理机下显卡的配置](di-er-zhang-an-zhuang-freebsd/di-liu-jie-wu-li-ji-xia-xian-ka-de-pei-zhi.md)
 * [第七节 物理机下触摸板的设置](di-er-zhang-an-zhuang-freebsd/di-qi-jie-wu-li-ji-xia-chu-mo-ban-de-she-zhi.md)
 * [第八节 物理机电源管理](di-er-zhang-an-zhuang-freebsd/di-ba-jie-zhong-wen-hua.md)
-* [第九节 声卡与网卡设置](di-er-zhang-an-zhuang-freebsd/di-jiu-jie-sheng-ka-yu-wang-ka-she-zhi.md)
+* [第九节 物理机声卡与网卡设置](di-er-zhang-an-zhuang-freebsd/di-jiu-jie-sheng-ka-yu-wang-ka-she-zhi.md)
 
 ## 第三章 软件源及包管理器
 
