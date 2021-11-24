@@ -29,9 +29,9 @@ vboxservice_enable="YES"
 启动服务，调整权限：
 
 ```
-#service vboxguest restart% 
-#service vboxservice restart% 
-#pw groupmod wheel -m <yourname> // sudo 权限
-#pw groupmod opt -m <yourname> // 开机重启权限
+#service vboxguest restart
+#service vboxservice restart
+#pw groupmod wheel -m <yourname> #sudo 权限
+#pw groupmod opt -m <yourname>   #开机重启 权限
 ```
 
