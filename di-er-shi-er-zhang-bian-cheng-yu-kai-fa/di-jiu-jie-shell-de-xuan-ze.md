@@ -16,15 +16,15 @@ alias ls ls –G, 并重新登录
 
 比如你用 emacs写c ，但你输完emacs ma按tab回车是，他会匹配所有ma开头的文件，而这个是忽略掉，也就是按tab时不会在有你忽略的东西，对编程之类的友好，不用再匹配到二进制。.o之类的文件，
 
-　　`set correct = cmd lz/usr/bin tcsh>ls /usr/bin (y|n|e|a)?`
-
-`　　set fignore = (.o ~) emacs ma[^D] main.c main.c~ main.o emacs ma[tab] emacs main.c`
-
+```
+　set correct = cmd lz/usr/bin tcsh>ls /usr/bin (y|n|e|a)?
+　set fignore = (.o ~) emacs ma[^D] main.c main.c~ main.o emacs ma[tab] emacs main.c
+```
 ## 更换默认 Shell <a href="geng-huan-mo-ren-shell" id="geng-huan-mo-ren-shell"></a>
 
 警告：切换默认 Shell 会导致 恢复模式无法正常启动加载命令行环境。
 
-`例如切换到` zsh：
+例如切换到 zsh：
 
 ```
 pkg install zsh
@@ -34,8 +34,8 @@ touch ~/.zshrc
 
 切换到 bash：
 
-\#pkg install bash
-
-\#chsh -s /usr/local/bin/bash freebsd
-
-\#ee \~/.bash\_profile
+```
+#pkg install bash
+#chsh -s /usr/local/bin/bash freebsd
+#ee ~/.bash_profile
+```
