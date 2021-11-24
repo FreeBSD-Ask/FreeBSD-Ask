@@ -40,7 +40,7 @@ MALLOC_PRODUCTION=yes
 # make -jN+1
 ```
 
-其中`N`建议为`CPU核心数`。
+其中`N`建议为`CPU 核心数`。
 
 `# make install`
 
@@ -50,7 +50,7 @@ MALLOC_PRODUCTION=yes
 
 如果显示出`GENERIC-bbr`，则表示 TCP BBR 内核编译并安装成功。
 
-**配置和加载BBR模块**
+**配置和加载 BBR 模块**
 
 `# sysrc kld_list+="tcp_rack tcp_bbr"`
 
