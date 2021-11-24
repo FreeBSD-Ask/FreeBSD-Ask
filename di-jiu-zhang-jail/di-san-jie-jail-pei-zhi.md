@@ -155,8 +155,8 @@ awk
 \#全局部分
 
 ```
-exec.start = “/bin/sh /etc/rc”;
-exec.stop = “/bin/sh /etc/rc.shutdown”;
+exec.start = "/bin/sh /etc/rc";
+exec.stop = "/bin/sh /etc/rc.shutdown";
 exec.clean;
 mount.devfs;
 allow.raw_sockets = 1;

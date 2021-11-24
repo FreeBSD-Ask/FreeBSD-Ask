@@ -11,15 +11,15 @@
 　　中写入
 
 ```
-　　rtwn_usb_load=”YES”
+　　rtwn_usb_load="YES"
 　　legal.realtek.license_ack=1
 ```
 
 　　在 /etc/rc.conf 中写入
 
 ```
-　　wlans_rtwn0=”wlan0”
-　　ifconfig_wlan0=”WPA DHCP”
+　　wlans_rtwn0="wlan0"
+　　ifconfig_wlan0="WPA DHCP"
 ```
 
 　　注意在 /etc/wpa\_supplicant.conf 文件中（没有就自己通 touch 命令新建一个）写入

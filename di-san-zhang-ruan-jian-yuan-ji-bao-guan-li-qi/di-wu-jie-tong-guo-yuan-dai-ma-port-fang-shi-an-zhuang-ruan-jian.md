@@ -44,9 +44,21 @@ DISABLE_SIZE=yes
 #cd /usr/ports/ports-mgmt/portmaster && make install clean
 #portmaster -ai #自动升级所有软件
 #portmaster screen#升级单个软件
-#portmaster -a -m “BATCH=yes” 或者-D -G –no-confirm 都可以免除确认
+#portmaster -a -m "BATCH=yes" 或者-D -G –no-confirm 都可以免除确认
 ```
 
 ## FreeBSD ports 多线程编译
 
-Linux 如 gentoo上一般是直接 -jx 或者-jx+1 x为核心数。 FreeBSD ports 多线程编译 `FORCE_MAKE_JOBS=yes` `MAKE_JOBS_NUMBER=4` 写入 /etc/make.conf 没有就新建。4 是处理器核心数，不知道就别改。 #其他见` /usr/ports/Mk/bsd.port.mk`
+Linux 如 gentoo上一般是直接 -jx 或者-jx+1 x为核心数。&#x20;
+
+FreeBSD ports 多线程编译&#x20;
+
+`FORCE_MAKE_JOBS=yes`&#x20;
+
+`MAKE_JOBS_NUMBER=4`&#x20;
+
+写入 /etc/make.conf 没有就新建。
+
+4 是处理器核心数，不知道就别改。
+
+&#x20;\#其他见` /usr/ports/Mk/bsd.port.mk`

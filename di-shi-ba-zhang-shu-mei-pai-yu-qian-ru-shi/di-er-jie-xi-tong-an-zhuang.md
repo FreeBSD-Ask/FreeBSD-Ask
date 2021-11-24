@@ -6,7 +6,9 @@
 
 　　我们所有要准备的有树莓派 3B+板子一块，网线一段，存储卡一枚。从华为云镜像站（速度较快）下载适用于树莓派 3B+的镜像，12 和 13 我用起来感觉都一样，不过 13 的 LLVM 版本太新，很多软件编译不过去，所以还是用 12 的吧。
 
-[https://mirrors.huaweicloud.com/freebsd/snapshots/ISO-IMAGES/13.0/FreeBSD-13.0-CURRENT-arm64-aarch64-RPI3-20200116-r356767.img.xz](https://mirrors.huaweicloud.com/freebsd/snapshots/ISO-IMAGES/13.0/FreeBSD-13.0-CURRENT-arm64-aarch64-RPI3-20200116-r356767.img.xz) 　（该链接不是固定的找不到就去 [https://mirrors.huaweicloud.com/freebsd/snapshots/ISO-IMAGES/13.0](https://mirrors.huaweicloud.com/freebsd/snapshots/ISO-IMAGES/13.0) ）
+[https://mirrors.huaweicloud.com/freebsd/snapshots/ISO-IMAGES/13.0/FreeBSD-13.0-CURRENT-arm64-aarch64-RPI3-20200116-r356767.img.xz](https://mirrors.huaweicloud.com/freebsd/snapshots/ISO-IMAGES/13.0/FreeBSD-13.0-CURRENT-arm64-aarch64-RPI3-20200116-r356767.img.xz) 　
+
+（该链接不是固定的找不到就去 [https://mirrors.huaweicloud.com/freebsd/snapshots/ISO-IMAGES/13.0](https://mirrors.huaweicloud.com/freebsd/snapshots/ISO-IMAGES/13.0) ）
 
 　　下载后解压缩。使用 rufus 刻录。插入网线，将存储卡插入树莓派，通电等待约五分钟，查看路由器后台获取 IP 。
 
@@ -40,10 +42,10 @@ PasswordAuthentication yes # 设置是否使用口令验证。
 　　在 /etc/rc.conf 中加入
 
 ```
-ntpd_enable=”YES”
-ntpdate_enable=”YES”
-ntpdate_program=”ntpdate”
-ntpdate_flags=”0.cn.pool.ntp.org”
+ntpd_enable="YES"
+ntpdate_enable="YES"
+ntpdate_program="ntpdate"
+ntpdate_flags="0.cn.pool.ntp.org"
 ```
 
 　　然后开启时间服务器：

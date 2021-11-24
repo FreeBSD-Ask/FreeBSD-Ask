@@ -7,12 +7,12 @@
 　　再将
 
 ```
-Section “Device”
-Identifier “Card0”
-Driver “vboxvideo”
-VendorName “InnoTek Systemberatung GmbH”
-BoardName “VirtualBox Graphics Adapter”
-EndSection`
+Section "Device"
+Identifier "Card0"
+Driver "vboxvideo"
+VendorName "InnoTek Systemberatung GmbH"
+BoardName "VirtualBox Graphics Adapter"
+EndSection
 ```
 
 　　写到 `/usr/local/etc/X11/ xorg.conf`

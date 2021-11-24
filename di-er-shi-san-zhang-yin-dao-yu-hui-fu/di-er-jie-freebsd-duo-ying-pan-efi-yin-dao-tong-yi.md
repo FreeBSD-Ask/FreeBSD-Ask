@@ -10,6 +10,6 @@
 
 然后复制启动文件到该路径 `#cp /boot/boot1.efi /mnt/efi/EFI/freebsd/bootx64.efi`
 
-最后生成启动项：`#efibootmgr -c -l /mnt/efi/EFI/freebsd/bootx64.efi -L “FreeBSD niu pi”`
+最后生成启动项：`#efibootmgr -c -l /mnt/efi/EFI/freebsd/bootx64.efi -L "FreeBSD niu pi"`
 
 重启进入 Windows ，使用 easyuefi 激活 FreeBSD niu pi 这个启动项即可。如没有问题，可使用 DiskGenius 删除 nvd0 磁盘的 EFI 分区文件。

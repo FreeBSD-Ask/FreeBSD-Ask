@@ -9,9 +9,9 @@ FreeBSD 安装mate 桌面环境
 在文件/etc/rc.conf 中加入下面的行
 
 ```
-moused_enable=”YES”
-dbus_enable=”YES”
-hald_enable=”YES”
+moused_enable="YES"
+dbus_enable="YES"
+hald_enable="YES"
 ```
 
 ## 安装 Slim 作为登陆管理器
@@ -20,7 +20,7 @@ hald_enable=”YES”
 
 在/etc/rc.conf 中加入下面的行：
 
-`slim_enable=”YES”`
+`slim_enable="YES"`
 
 在主目录.xinitrc 文件内加入下面的行:
 

@@ -13,8 +13,8 @@ FreeBSD 安装 Linux QQ 方法
 开启服务：
 
 ```
-#sysrc linux_enable=”YES”
-#sysrc kld_list=”linux linux64”
+#sysrc linux_enable="YES"
+#sysrc kld_list="linux linux64"
 ```
 
 **2、下载Linux QQ：**
