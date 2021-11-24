@@ -18,4 +18,4 @@
 
 5、请加 QQ 群 731675387 或 Telegram 群 [https://t.me/freebsdba](https://t.me/freebsdba)
 
-注意：详细的编辑指南请查看 https://github.com/FreeBSD-Ask/FreeBSD-Ask/wiki
+注意：详细的编辑指南请查看 [https://github.com/FreeBSD-Ask/FreeBSD-Ask/wiki](https://github.com/FreeBSD-Ask/FreeBSD-Ask/wiki)
