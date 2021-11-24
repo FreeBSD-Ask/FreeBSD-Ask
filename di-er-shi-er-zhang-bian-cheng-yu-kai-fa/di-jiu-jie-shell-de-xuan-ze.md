@@ -36,6 +36,6 @@ touch ~/.zshrc
 
 ```
 #pkg install bash
-#chsh -s /usr/local/bin/bash freebsd
+#chsh -s /usr/local/bin/bash
 #ee ~/.bash_profile
 ```
