@@ -16,6 +16,6 @@
 
 4、使用大型软件（如IDE、JAVA）时，请注明软件版本号。
 
-5、请加 QQ 群 731675387 或 ［Telegram 群](https://t.me/freebsdba)
+5、请加 QQ 群 731675387 或 [Telegram 群](https://t.me/freebsdba)
 
 注意：[详细的编辑指南，点击此处](https://github.com/FreeBSD-Ask/FreeBSD-Ask/wiki)
