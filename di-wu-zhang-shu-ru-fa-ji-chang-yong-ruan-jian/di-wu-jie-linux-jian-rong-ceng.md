@@ -4,11 +4,11 @@
 
 以下参考[https://docs.freebsd.org/en/books/handbook/linuxemu/](https://docs.freebsd.org/en/books/handbook/linuxemu/)
 
-`pkg install emulators/linux-c7`
+`#pkg install emulators/linux-c7`
 
 开启服务：
 
 ```
-sysrc linux_enable=”YES”
-sysrc kld_list=”linux linux64”
+#sysrc linux_enable=”YES”
+#sysrc kld_list=”linux linux64”
 ```
