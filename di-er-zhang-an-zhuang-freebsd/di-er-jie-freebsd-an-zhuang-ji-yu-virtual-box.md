@@ -15,20 +15,18 @@ BoardName “VirtualBox Graphics Adapter”
 EndSection`
 ```
 
-　　写到 /usr/local/etc/X11/ xorg.conf
+　　写到 `/usr/local/etc/X11/ xorg.conf`
 
 　　显卡控制器用 VBoxSVGA
 
 編輯 `#ee etc/rc.conf`，增加以下內容：
-
-
 
 ```
 vboxguest_enable="YES"
 vboxservice_enable="YES"
 ```
 
-
+启动服务，调整权限：
 
 ```
 #service vboxguest restart% 
