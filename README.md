@@ -1,6 +1,6 @@
 # FreeBSD 从入门到跑路
 
-目录 https://github.com/FreeBSD-Ask/FreeBSD-Ask/blob/main/SUMMARY.md
+[目录](https://github.com/FreeBSD-Ask/FreeBSD-Ask/blob/main/SUMMARY.md)
 
 项目预览 [https://book.freebsdcn.org](https://ykla.gitbook.io/freebsd/)
 
