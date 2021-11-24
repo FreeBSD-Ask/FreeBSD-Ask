@@ -9,11 +9,11 @@ TCP BBR 是一种拥塞控制算法。作用有两个，
 
 **修改内核配置**
 
-`# cd /usr/src/sys/amd64/conf`\
-如果安装FreeBSD时没有选择安装内核源码，建议阅读[ 第二十章](broken-reference)。\
+`# cd /usr/src/sys/amd64/conf`
+如果安装FreeBSD时没有选择安装内核源码，建议阅读 第二十章。
 `# cp GENERIC GENERIC-bbr`
 
-`# ee GENERIC-bbr`\
+`# ee GENERIC-bbr`
 调整配置，修改`ident`的值为`GENERIC-bbr`，在`ident`这一项下面加入以下项目：
 
 ```
@@ -29,24 +29,27 @@ KERNCONF=GENERIC-bbr
 MALLOC_PRODUCTION=yes
 ```
 
-**编译并安装内核**\
-`# /usr/sbin/config GENERIC-BBR`\
-`# cd ../compile/GENERIC-BBR`\
-`# make cleandepend && make depend`\
-`# make -jN+1`\
-其中`N`建议为`CPU核心数`。\
-`# make install`\
-安装内核，完成后重启使用新内核。\
-`# uname -a`\
+**编译并安装内核**
+```
+# /usr/sbin/config GENERIC-BBR
+# cd ../compile/GENERIC-BBR
+# make cleandepend && make depend
+# make -jN+1
+```
+
+其中`N`建议为`CPU核心数`。
+`# make install`
+安装内核，完成后重启使用新内核。
+`# uname -a`
 如果显示出`GENERIC-bbr`，则表示 TCP BBR 内核编译并安装成功。
 
 **配置和加载BBR模块**
 
-`# sysrc kld_list+="tcp_rack tcp_bbr"`\
-启动时加载 BBR 模块。\
-`# echo 'net.inet.tcp.functions_default=bbr' >> /etc/sysctl.conf`\
-设置默认使用 BBR，重启。\
-`# sysctl net.inet.tcp.functions_default`\
+`# sysrc kld_list+="tcp_rack tcp_bbr"`
+启动时加载 BBR 模块。
+`# echo 'net.inet.tcp.functions_default=bbr' >> /etc/sysctl.conf`
+设置默认使用 BBR，重启。
+`# sysctl net.inet.tcp.functions_default`
 如果结果是`net.inet.tcp.functions_default: bbr`，则启用 TCP BBR 成功。
 
-**注意：**故障排除等事宜请参考 [https://github.com/netflix/tcplog\_dumper](https://github.com/netflix/tcplog\_dumper)
+**注意：**故障排除等事宜请参考 [https://github.com/netflix/tcplog_dumper](https://github.com/netflix/tcplog_dumper)
