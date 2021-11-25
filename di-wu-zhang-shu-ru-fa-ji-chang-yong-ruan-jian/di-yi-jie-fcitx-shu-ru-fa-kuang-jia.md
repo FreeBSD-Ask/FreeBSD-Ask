@@ -5,6 +5,7 @@
 #### 注意：该教程仅在KDE5 下测试通过。 <a href="zhu-yi-gai-jiao-cheng-jin-zai-kde5-xia-ce-shi-tong-guo" id="zhu-yi-gai-jiao-cheng-jin-zai-kde5-xia-ce-shi-tong-guo"></a>
 
 在.cshrc 和/etc/csh.cshrc 中进行如下配置，此配置可以解决部分窗口fcitx 无效的问题。
+
 ```
 setenv QT4_IM_MODULE fcitx
 setenv GTK_IM_MODULE fcitx
@@ -13,11 +14,14 @@ setenv GTK2_IM_MODULE fcitx
 setenv GTK3_IM_MODULE fcitx
 setenv XMODIFIERS @im=fcitx
 ```
+
 在.cshrc 和/etc/csh.cshrc 中进行下面两行配置可以解决终端无法输入中文和无法显示中文的问题。
+
 ```
 setenv LANG zh_CN.UTF-8
 setenv MM_CHARSET zh_CN.UTF-8
 ```
+
 接Fcitx 输入法补充：
 
 ```
@@ -26,6 +30,7 @@ setenv LANG zh_CN.UTF-8
 setenv LC_CTYPE zh_CN.UTF-8
 setenv LC_ALL zh_CN.UTF-8
 ```
+
 ## Fcitx5.X
 
 #### 注意：该教程仅在KDE5 下测试通过。 <a href="zhu-yi-gai-jiao-cheng-jin-zai-kde5-xia-ce-shi-tong-guo" id="zhu-yi-gai-jiao-cheng-jin-zai-kde5-xia-ce-shi-tong-guo"></a>
@@ -44,10 +49,11 @@ chinese/fcitx5-rime
 
 　　可通过 ports 安装。环境变量取决于你的窗口管理器和桌面以及 shell 。经测试不支持 slim，可能是配置问题。sddm 可用。
 
-　　自动启动：
+　　自动启动：&#x20;
+
 `#cp /usr/local/share/applications/fcitx.desktop ~/.config/autostart/`
 
-　　在.cshrc 和 /etc/csh.cshrc 中进行如下配置，此配置可以解决部分窗口 fcitx 无效以及无法输入显示中文的问题。
+　　在 .cshrc 和 /etc/csh.cshrc 中进行如下配置，此配置可以解决部分窗口 fcitx 无效以及无法输入显示中文的问题。
 
 ```
 setenv QT4_IM_MODULE fcitx

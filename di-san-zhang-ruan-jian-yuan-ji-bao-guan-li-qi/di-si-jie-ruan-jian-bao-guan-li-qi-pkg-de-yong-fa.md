@@ -50,7 +50,9 @@ pw: user ‘package’ disappeared during update
 pkg: PRE-INSTALL script failed
 ```
 
-　　问题解析：数据库未同步 　　问题解决:
+问题解析：数据库未同步 　　
+
+问题解决:
 
 ```
 #/usr/sbin/pwd_mkdb -p /etc/master.passwd
