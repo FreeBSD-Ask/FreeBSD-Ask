@@ -2,7 +2,7 @@
 
 * [FreeBSD 从入门到跑路](README.md)
 
-## 第一章 走近FreeBSD
+## 第一章 走近 FreeBSD
 
 * [第一节 什么是 UNIX](di-yi-zhang-zou-jin-freebsd/di-yi-jie-shi-mo-shi-unix.md)
 * [第二节 什么是 Unix-like](di-yi-zhang-zou-jin-freebsd/di-er-jie-shi-mo-shi-lei-unix.md)
