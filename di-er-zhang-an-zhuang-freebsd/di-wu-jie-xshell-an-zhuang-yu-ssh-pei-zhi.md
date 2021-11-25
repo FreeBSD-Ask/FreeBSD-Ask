@@ -1,5 +1,13 @@
 # 第五节 Xshell 安装 与 SSH 配置
 
+## Xshell 下载
+
+Xshell 是 Windows 平台上的强大的 shell 工具，不建议使用苦难哲学的 putty 。
+
+下载地址（输入用户名和邮件即可）：
+
+{% embed url="https://www.netsarang.com/zh/free-for-home-school" %}
+
 ## 配置SSH
 
 ```
