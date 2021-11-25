@@ -21,7 +21,7 @@ IPFIREWALL (IPFW) 是一个由 FreeBSD 发起的防火墙应用软件， 它由 
 2、编辑 `/etc/ipfw.rules`文件：
 
 ```
-root@svros:~ # vi /etc/ipfw.rules 
+# ee /etc/ipfw.rules 
 
 IPF="ipfw -q add"
 ipfw -q -f flush
@@ -62,7 +62,7 @@ $IPF 500 deny log all from any to any
 3、启动ipfw：
 
 ```
-root@svros:~ # service ipfw start
+# service ipfw start
 
 Firewall rules loaded.
 Firewall logging enabled.
@@ -73,7 +73,7 @@ Firewall logging pseudo-interface (ipfw0) created.
 4、查看ipfw状态：
 
 ```
-root@svros:~ # service ipfw status
+# service ipfw status
 
 ipfw is enabled
 ```
@@ -81,7 +81,7 @@ ipfw is enabled
 5、查看ipfw规则条目
 
 ```
-root@svros:~ # ipfw list
+# ipfw list
 
 00010 allow ip from any to any via lo0
 00020 deny ip from any to 127.0.0.0/8
@@ -96,4 +96,3 @@ root@svros:~ # ipfw list
 00500 deny log ip from any to any
 65535 deny ip from any to any
 ```
-
