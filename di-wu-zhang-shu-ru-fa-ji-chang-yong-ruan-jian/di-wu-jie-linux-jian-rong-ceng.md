@@ -12,7 +12,6 @@
 #sysrc linux_enable="YES"
 #sysrc kld_list="linux linux64"
 #service linux start
+#pkg install emulators/linux-c7
 #reboot
 ```
-
-`#pkg install emulators/linux-c7`
