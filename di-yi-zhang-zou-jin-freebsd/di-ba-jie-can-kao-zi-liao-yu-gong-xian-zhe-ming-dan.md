@@ -12,12 +12,12 @@
 
 [凌莞](https://clansty.com)
 
-星不萌
+[星不萌]()https://www.moebsd.cn/
 
 QQ 雨天 2477294049
 
-[**liulitchi**](https://github.com/liulitchi)
+[liulitchi](https://github.com/liulitchi)
 
-peiyafei
+[peiyafei](https://github.com/peiyafei)
 
-ykla
+[ykla](https://github.com/ykla)
