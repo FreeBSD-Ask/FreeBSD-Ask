@@ -67,4 +67,7 @@ MALLOC_PRODUCTION=yes
 
 如果结果是`net.inet.tcp.functions_default: bbr`，则启用 TCP BBR 成功。
 
-**注意：**故障排除等事宜请参考 [https://github.com/netflix/tcplog\_dumper](https://github.com/netflix/tcplog\_dumper)
+**注意：**故障排除等事宜请参考
+
+{% embed url="https://github.com/netflix/tcplog_dumper" %}
+

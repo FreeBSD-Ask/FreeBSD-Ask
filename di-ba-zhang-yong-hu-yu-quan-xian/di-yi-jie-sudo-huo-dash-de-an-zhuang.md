@@ -12,7 +12,7 @@
 
 
 
-在 `/usr/local/etc/sudoers.d/` 下新建两个文件 username（需要免密码的用户）`a（n` 和 `wheel`：
+在 `/usr/local/etc/sudoers.d/` 下新建两个文件 username（需要免密码的用户）`admin` 和 `wheel`：
 
 `username`内容如下：
 
