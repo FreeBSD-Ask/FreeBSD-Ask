@@ -16,7 +16,7 @@ wget https://mfsbsd.vx.sk/files/images/13/amd64/mfsbsd-se-13.0-RELEASE-amd64.img
 
 这里的 `|` 是管道的意思，将上一个命令的标准输出作为下一个命令的标准输入。`-O-` 指把文件下载输出到标准输出，而 dd 没有指定 if 时会自动从标准输入读取内容。
 
-![image-20210725162541398](https://cdn.lwqwq.com/pic/image-20210725162541398.png#vwid=830\&vhei=555)
+![](../.gitbook/assets/1.png)
 
 ### 真正的 mfsBSD 启动方法
 
@@ -34,8 +34,6 @@ initrd (hd0,msdos1)/qwq/initramfs.igz
 boot
 ```
 
-![image-20210725164015858](https://cdn.lwqwq.com/pic/image-20210725164015858.png#vwid=1018\&vhei=481)
-
 这个特制的 initrd 启动之后并没有加载本地的系统，而是自己连接了网络并打开 ssh 服务器。于是我们就获得了一个运行在内存中的 Linux 系统。
 
 这个时候服务器应该就可以被 ssh 连接上了，并且可以安全的格式化硬盘。
@@ -48,6 +46,8 @@ wget https://mfsbsd.vx.sk/files/images/13/amd64/mfsbsd-se-13.0-RELEASE-amd64.img
 dd if=mfsbsd-se-13.0-RELEASE-amd64.img of=/dev/vda
 reboot
 ```
+
+![](../.gitbook/assets/2.png)
 
 ### 安装 FreeBSD
 
