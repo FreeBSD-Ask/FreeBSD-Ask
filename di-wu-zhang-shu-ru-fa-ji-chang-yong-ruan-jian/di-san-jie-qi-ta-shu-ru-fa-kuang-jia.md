@@ -20,4 +20,4 @@
 
 ### 98 五笔码表 下载地址
 
-[https://gitee.com/ykla/free-bsd-98wubi-tables/tree/master/](https://gitee.com/ykla/free-bsd-98wubi-tables/tree/master/)
+{% embed url="https://gitee.com/ykla/free-bsd-98wubi-tables/tree/master" %}

@@ -6,7 +6,9 @@ FreeBSD 安装 Linux QQ 方法
 
 **1、安装Linux 兼容层：**
 
-以下参考[https://docs.freebsd.org/en/books/handbook/linuxemu/](https://docs.freebsd.org/en/books/handbook/linuxemu/)
+以下参考
+
+{% embed url="https://docs.freebsd.org/en/books/handbook/linuxemu" %}
 
 `pkg install emulators/linux-c7`
 
@@ -24,7 +26,11 @@ FreeBSD 安装 Linux QQ 方法
 #wget https://down.qq.com/qqweb/LinuxQQ/linuxqq_2.0.0-b2-1089_x86_64.rpm
 ```
 
-提示：后续如果版本更新请自行前往[https://im.qq.com/linuxqq/download.html](https://im.qq.com/linuxqq/download.html) 手动下载。
+提示：后续如果版本更新请自行前往
+
+{% embed url="https://im.qq.com/linuxqq/download.html" %}
+
+手动下载。
 
 安装Linux QQ：
 
@@ -62,7 +68,9 @@ FreeBSD 安装 Linux QQ 方法
 #git clone https://gitee.com/ykla/Linux-QQ.git
 ```
 
-其余步骤自行参考。 境外用户可以使用github： [https://github.com/ykla/FreeBSD-Linux-QQ](https://github.com/ykla/FreeBSD-Linux-QQ)
+其余步骤自行参考。 境外用户可以使用github：
+
+{% embed url="https://github.com/ykla/FreeBSD-Linux-QQ" %}
 
 **4、刷新gtk 缓存：**
 
