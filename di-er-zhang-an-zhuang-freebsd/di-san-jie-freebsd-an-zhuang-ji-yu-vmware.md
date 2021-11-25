@@ -2,7 +2,9 @@
 
 ## 视频教程
 
-[https://www.bilibili.com/video/BV14i4y137mh](https://www.bilibili.com/video/BV14i4y137mh)
+{% embed url="https://www.bilibili.com/video/BV14i4y137mh" %}
+
+镜像下载地址：[_https://download.freebsd.org/ftp/releases/amd64/amd64/ISO-IMAGES/13.0/FreeBSD-13.0-RELEASE-amd64-disc1.iso_](https://download.freebsd.org/ftp/releases/amd64/amd64/ISO-IMAGES/13.0/FreeBSD-13.0-RELEASE-amd64-disc1.iso)__
 
 ## 故障排除
 
