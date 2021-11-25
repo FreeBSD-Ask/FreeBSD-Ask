@@ -11,8 +11,9 @@
 * [第五节 为什么要使用 FreeBSD](di-yi-zhang-zou-jin-freebsd/di-wu-jie-wei-shi-mo-yao-shi-yong-freebsd.md)
 * [第六节 所谓开源哲学](di-yi-zhang-zou-jin-freebsd/di-liu-jie-suo-wei-kai-yuan-zhe-xue.md)
 * [第七节 其他 BSD 简介](di-yi-zhang-zou-jin-freebsd/di-qi-jie-qi-ta-bsd-jian-jie.md)
-* [第八节 参考资料与贡献者名单](di-yi-zhang-zou-jin-freebsd/di-ba-jie-can-kao-zi-liao-yu-gong-xian-zhe-ming-dan.md)
-* [第九节 编撰说明](di-yi-zhang-zou-jin-freebsd/di-jiu-jie-bian-zhuan-shuo-ming.md)
+* [第八章 Linux 用户迁移指北](di-yi-zhang-zou-jin-freebsd/di-ba-zhang-linux-yong-hu-qian-yi-zhi-bei.md)
+* [第九节 参考资料与贡献者名单](di-yi-zhang-zou-jin-freebsd/di-jiu-jie-can-kao-zi-liao-yu-gong-xian-zhe-ming-dan.md)
+* [第十节 编撰说明](di-yi-zhang-zou-jin-freebsd/di-shi-jie-bian-zhuan-shuo-ming.md)
 
 ## 第二章 安装 FreeBSD
 
