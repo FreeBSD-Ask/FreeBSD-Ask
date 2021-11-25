@@ -1,4 +1,4 @@
-# 第八节 参考资料
+# 第八节 参考资料与贡献者名单
 
 ## 『学习资源』 <a href="xue-xi-zi-yuan" id="xue-xi-zi-yuan"></a>
 
@@ -9,3 +9,7 @@
 ![FreeBSD 操作系统设计与实现（原书第2版）](../.gitbook/assets/zcover.jpg)
 
 在线试读 [http://images.china-pub.com/ebook8080001-8085000/8084481/ch01.pdf](http://images.china-pub.com/ebook8080001-8085000/8084481/ch01.pdf)
+
+## 贡献者名单
+
+凌莞。

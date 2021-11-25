@@ -11,7 +11,7 @@
 * [第五节 为什么要使用 FreeBSD](di-yi-zhang-zou-jin-freebsd/di-wu-jie-wei-shi-mo-yao-shi-yong-freebsd.md)
 * [第六节 所谓开源哲学](di-yi-zhang-zou-jin-freebsd/di-liu-jie-suo-wei-kai-yuan-zhe-xue.md)
 * [第七节 其他 BSD 简介](di-yi-zhang-zou-jin-freebsd/di-qi-jie-qi-ta-bsd-jian-jie.md)
-* [第八节 参考资料](di-yi-zhang-zou-jin-freebsd/di-ba-jie-can-kao-zi-liao.md)
+* [第八节 参考资料与贡献者名单](di-yi-zhang-zou-jin-freebsd/di-ba-jie-can-kao-zi-liao.md)
 * [第九节 编撰说明](di-yi-zhang-zou-jin-freebsd/di-jiu-jie-bian-zhuan-shuo-ming.md)
 
 ## 第二章 安装 FreeBSD
@@ -23,7 +23,7 @@
 * [第五节 Xshell 安装 与 SSH 配置](di-er-zhang-an-zhuang-freebsd/di-wu-jie-xshell-an-zhuang-yu-ssh-pei-zhi.md)
 * [第六节 物理机下显卡的配置](di-er-zhang-an-zhuang-freebsd/di-liu-jie-wu-li-ji-xia-xian-ka-de-pei-zhi.md)
 * [第七节 物理机下触摸板的设置](di-er-zhang-an-zhuang-freebsd/di-qi-jie-wu-li-ji-xia-chu-mo-ban-de-she-zhi.md)
-* [第八节 物理机电源管理](di-er-zhang-an-zhuang-freebsd/di-ba-jie-zhong-wen-hua.md)
+* [第八节 腾讯云轻量云及其他服务器 dd 安装 FreeBSD](di-er-zhang-an-zhuang-freebsd/di-ba-jie-zhong-wen-hua.md)
 * [第九节 物理机声卡与网卡设置](di-er-zhang-an-zhuang-freebsd/di-jiu-jie-sheng-ka-yu-wang-ka-she-zhi.md)
 
 ## 第三章 软件源及包管理器
