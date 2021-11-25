@@ -22,7 +22,7 @@
 * [第三节 FreeBSD 13.0 安装——基于 Vmware Workstation Pro 15](di-er-zhang-an-zhuang-freebsd/di-san-jie-freebsd-an-zhuang-ji-yu-vmware.md)
 * [第四节 ee 用法及虚拟机 网络配置](di-er-zhang-an-zhuang-freebsd/di-si-jie-ee-yong-fa-ji-xu-ni-ji-wang-luo-pei-zhi.md)
 * [第五节 Xshell 安装 与 SSH 配置](di-er-zhang-an-zhuang-freebsd/di-wu-jie-xshell-an-zhuang-yu-ssh-pei-zhi.md)
-* [第六节  物理机安装](di-er-zhang-an-zhuang-freebsd/di-liu-jie-wu-li-ji-an-zhuang.md)
+* [第六节 物理机安装](di-er-zhang-an-zhuang-freebsd/di-liu-jie-wu-li-ji-an-zhuang.md)
 * [第七节 物理机下显卡的配置](di-er-zhang-an-zhuang-freebsd/di-qi-jie-wu-li-ji-xia-xian-ka-de-pei-zhi.md)
 * [第八节 物理机下触摸板的设置](di-er-zhang-an-zhuang-freebsd/di-ba-jie-wu-li-ji-xia-chu-mo-ban-de-she-zhi.md)
 * [第九节 物理机声卡与网卡设置](di-er-zhang-an-zhuang-freebsd/di-jiu-jie-wu-li-ji-sheng-ka-yu-wang-ka-she-zhi.md)
@@ -73,6 +73,7 @@
 * [第二节 V2ray](di-qi-zhang-vpn-yu-dai-li/di-er-jie-v2ray.md)
 * [第三节 Clash](di-qi-zhang-vpn-yu-dai-li/di-san-jie-clash.md)
 * [第四节 OpenVPN](di-qi-zhang-vpn-yu-dai-li/di-si-jie-openvpn.md)
+* [第五节 Wireguard](di-qi-zhang-vpn-yu-dai-li/di-wu-jie-wireguard.md)
 
 ## 第八章 用户与权限
 
