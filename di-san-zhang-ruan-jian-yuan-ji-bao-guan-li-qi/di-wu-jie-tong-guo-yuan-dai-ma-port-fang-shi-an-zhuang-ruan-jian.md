@@ -2,15 +2,15 @@
 
 ## FreeBSD ports 基本用法（仅限FreeBSD13.0以前，不含13.0） <a href="freebsdports-ji-ben-yong-fa" id="freebsdports-ji-ben-yong-fa"></a>
 
-首先获取portsnap `#portsnap fetch extract`
+首先获取portsnap&#x20;
+
+`#portsnap fetch extract`
 
 ***
 
 使用whereis 查询软件地址&#x20;
 
-如#whereis python
-
-&#x20;回应： `#whereis python`&#x20;
+如 `#whereis python`&#x20;
 
 输出 `python: /usr/ports/lang/python`
 
