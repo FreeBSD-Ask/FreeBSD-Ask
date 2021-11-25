@@ -30,11 +30,11 @@
 
 第二个是要调试的文件在虚拟机里的路径
 
-这里target就是具体要调试的文件。
+这里 target 就是具体要调试的文件。
 
-第三个是要传递给main函数的参数，一般不写。
+第三个是要传递给 main 函数的参数，一般不写。
 
-然后是 FreeBSD 系统的主机ip地址，监听的端口号和密码（即 SSH 密码，这里是 root 用户的，因为 linux\_server64 文件运行在 root 用户下）
+然后是 FreeBSD 系统的主机 ip 地址，监听的端口号和密码（即 SSH 密码，这里是 root 用户的，因为 linux\_server64 文件运行在 root 用户下）
 
 在 FreeBSD 系统终端 ifconfig- a 可以查看到自己的 ip 地址
 
