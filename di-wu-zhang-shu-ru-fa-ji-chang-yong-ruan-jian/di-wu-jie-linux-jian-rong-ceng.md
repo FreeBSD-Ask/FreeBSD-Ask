@@ -6,11 +6,13 @@
 
 {% embed url="https://docs.freebsd.org/en/books/handbook/linuxemu" %}
 
-`#pkg install emulators/linux-c7`
-
 开启服务：
 
 ```
 #sysrc linux_enable="YES"
 #sysrc kld_list="linux linux64"
+#service linux start
+#reboot
 ```
+
+`#pkg install emulators/linux-c7`
