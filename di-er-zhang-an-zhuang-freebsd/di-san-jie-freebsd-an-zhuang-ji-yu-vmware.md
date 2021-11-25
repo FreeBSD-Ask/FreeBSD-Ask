@@ -1,6 +1,6 @@
 # 第三节 FreeBSD 13.0 安装——基于 Vmware Workstation Pro 15
 
-## 视频教程
+## 视频教程（一共4节，完整版本请点击去 bilibili 观看）
 
 {% embed url="https://www.bilibili.com/video/BV14i4y137mh" %}
 
