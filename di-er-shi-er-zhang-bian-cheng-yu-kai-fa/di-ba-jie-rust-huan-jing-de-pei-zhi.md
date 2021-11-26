@@ -1,6 +1,6 @@
 # 第八节 Rust/Go 环境的配置
 
-## Rust 环境安装
+## 安装 Rust 语言
 
 以下安装方式二选一
 
@@ -14,10 +14,11 @@
 * 升级： `cd ~` `./.cargo/bin/rustup update`
 * 删除： `./cargo/bin/rustup self uninstall`
 
-安装成功后，输入 `rustc --version` 或 `cargo --version` 查看软件版本
+
+安装成功后，输入 `rustc --version` 或 `cargo --version` 查看软件版本。
 
 
-## Go 语言环境安装
+## 安装 Go 语言
 
 以下安装方式二选一
 
@@ -30,3 +31,6 @@
 * 下载二进制包：[地址](https://golang.google.cn/dl/go1.17.3.freebsd-amd64.tar.gz)
 * 解压二进制包： `tar -C /usr/local -xzf https://golang.google.cn/dl/go1.17.3.freebsd-amd64.tar.gz`
 * 添加环境变量： 文本模式打开`.profile`， 添加一行 `export PATH=$PATH:/usr/local/go/bin`
+
+
+安装成功后，输入 `go version` 查看软件版本。
