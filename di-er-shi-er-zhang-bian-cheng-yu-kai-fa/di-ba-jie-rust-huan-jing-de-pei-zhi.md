@@ -16,11 +16,12 @@
 
 安装成功后，输入 `rustc --version` 或 `cargo --version` 查看软件版本
 
-===
 
 ## Go 语言环境安装
 
-## FreeBSD 打包：&#x20;
+以下安装方式二选其一
+
+### FreeBSD 打包
 
 `#pkg install go`
 
