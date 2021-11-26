@@ -28,21 +28,24 @@ FreeBSD 已从 Linux 移植了显卡驱动，理论上，A 卡 N 卡均可在 am
 
 ## 英伟达显卡
 
-注意：检查是否开启 linux 兼容层，因为没有原生的 FreeBSD N 卡显卡驱动，只是调用 Linux 下的驱动。
-
 ```shell
-#安装几个nvidia相关的包以及xorg。
-#pkg install nvidia-driver nvidia-settings nvidia-xconfig xorg dbus
-#启用相关服务。
-#sysrc kld_list="nvidia nvidia-modeset linux"
-#sysrc dbus_enable="YES"
-#sysrc linux_enable="YES"
-#echo 'linux_enable="YES"' >> /boot/loader.conf
-```
+#安装几个nvidia相关的包
+#pkg install nvidia-driver nvidia-settings nvidia-xconfig
+#配置驱动
+#sysrc kld_list+="nvidia-modeset"
 
+```
+重启
 这时候应该已经可以点亮图形界面了……
-
 ```shell
-#nvidia-xconfig #生成配置文件。
-#startx 
+# 查看驱动信息
+$nvidia-smi
 ```
+
+如果发现系统没有使用nvidia驱动
+需要自动生成配置文件
+```shell
+#Xorg -configure #生成配置文件。
+#cp /root/xorg.conf.new /etc/X11/xorg.conf
+```
+然后重新启动就可以发现正常使用nvidia驱动了
