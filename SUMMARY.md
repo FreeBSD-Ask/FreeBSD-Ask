@@ -201,7 +201,7 @@
 * [第五节 Java 环境的配置](di-er-shi-er-zhang-bian-cheng-yu-kai-fa/di-wu-jie-java-huan-jing-de-pei-zhi.md)
 * [第六节 QT 环境的配置](di-er-shi-er-zhang-bian-cheng-yu-kai-fa/di-liu-jie-qt-huan-jing-de-pei-zhi.md)
 * [第七节 Python 与 VScode](di-er-shi-er-zhang-bian-cheng-yu-kai-fa/di-qi-jie-python-yu-vscode.md)
-* [第八节 Rust 环境的配置](di-er-shi-er-zhang-bian-cheng-yu-kai-fa/di-ba-jie-rust-huan-jing-de-pei-zhi.md)
+* [第八节 Rust/Go 环境的配置](di-er-shi-er-zhang-bian-cheng-yu-kai-fa/di-ba-jie-rust-huan-jing-de-pei-zhi.md)
 * [第九节 Csh 与其他 Shell](di-er-shi-er-zhang-bian-cheng-yu-kai-fa/di-jiu-jie-shell-de-xuan-ze.md)
 * [第十节 通过 IDA 7 调试 FreeBSD](di-er-shi-er-zhang-bian-cheng-yu-kai-fa/di-shi-jie-tong-guo-ida-7-tiao-shi-freebsd.md)
 
