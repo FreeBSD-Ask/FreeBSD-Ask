@@ -2,7 +2,7 @@
 
 [目录](https://github.com/FreeBSD-Ask/FreeBSD-Ask/blob/main/SUMMARY.md)
 
-[项目预览](https://ykla.gitbook.io/freebsd/)
+[项目预览——如果你认为拼音显得奇怪，那么你应该点击此处](https://ykla.gitbook.io/freebsd/)
 
 ## 编辑指南概要
 
