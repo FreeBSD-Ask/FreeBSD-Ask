@@ -31,7 +31,7 @@ pip install matplotlib
 
 ## 统筹学
 
-上一节我们使用 GLPk 求解线性规划问题，本节我们使用功能更为强大的 wxMaxima 来解决问题。以下代码仅供参考，想深入了解，可查看[官方文档](https://maxima.sourceforge.io/docs/manual/index.html)。
+上一节我们使用 GLPK 求解线性规划问题，本节我们使用功能更为强大的 wxMaxima 来解决问题。以下代码仅供参考，想深入了解，可查看[官方文档](https://maxima.sourceforge.io/docs/manual/index.html)。
 
 ```maxima
 load("simplex")$
