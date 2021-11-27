@@ -14,7 +14,7 @@
 
 [星不萌](https://www.moebsd.cn)
 
-QQ 雨天 2477294049
+雨天 QQ 2477294049
 
 [liulitchi](https://github.com/liulitchi)
 
@@ -22,8 +22,12 @@ QQ 雨天 2477294049
 
 [ykla](https://github.com/ykla)
 
-QQ 艳阳天 1392455760
+艳阳天 QQ 1392455760
 
 [Rintim](https://github.com/Rintim)
 
 [tomblackwhite](https://github.com/tomblackwhite)
+
+
+
+**注意：如果缺少了您的信息或者不想被列出，请发起 issue。**
