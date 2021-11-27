@@ -6,14 +6,14 @@
 
 计算机代数系统 wxMaxima： `#pkg install wxmaxima`
 
-Python 及其相关模组：
+Python 及其相关模块：
 
 pyhton 安装：`#pkg install python`
 
-模组安装：
+模块安装：
 
 ```sh
-#pkg install py38-scipy py38-pandas py38-matplotlib
+#pkg install py38-scipy py38-pandas py38-matplotlib py38-sympy
 ```
 
 或者
@@ -23,6 +23,7 @@ pyhton 安装：`#pkg install python`
 pip install scipy
 pip install pandas
 pip install matplotlib
+pip install sympy
 ```
 
 ## 统计学
@@ -42,4 +43,4 @@ x3 >= 0.5 * (x1 + x2 + x3),
 0.1 * x1 + 0.07 * x2 + 0 * 03 * x3 + 0.05 * x4 + 0.02 * x5 <= 0.04 * (x1 + x2 + x3 + x4 + x5)]),
 epsilon_lp = 0, nonnegative_lp = true; 
 ```
-根据该软件给出的答案为：`[436.608,[x5=480.0,x4=0,x3=720.0,x2=0,x1=0]]`，可知与 GLPK 求得的答案相同。问题解决。
+软件给出的答案为：`[436.608,[x5=480.0,x4=0,x3=720.0,x2=0,x1=0]]`，可知与 GLPK 求得的答案相同。问题解决。
