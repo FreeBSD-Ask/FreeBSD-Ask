@@ -2,13 +2,13 @@
 
 ## 工具与软件
 
-科学计算软件 GNU Octave： `#pkg install octave`
+科学计算软件 GNU Octave： `# pkg install octave`
 
-计算机代数系统 wxMaxima： `#pkg install wxmaxima`
+计算机代数系统 wxMaxima： `# pkg install wxmaxima`
 
 Python 及其相关模块：
 
-pyhton 安装：`#pkg install python`
+pyhton 安装：`# pkg install python`
 
 模块安装：
 

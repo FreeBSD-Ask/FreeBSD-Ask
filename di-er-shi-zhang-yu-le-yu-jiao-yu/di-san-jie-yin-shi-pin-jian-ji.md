@@ -10,7 +10,7 @@
 
 Unix 系统下相关软件有很多，这里我们简单介绍一下矢量制图程序**Inkscape**的使用方法
 
-- [ ] 安装方式： `#pkg install inkscape`
+- [ ] 安装方式： `# pkg install inkscape`
 
 1. <kbd>Ctrl</kbd>  + <kbd>O</kbd> （拉丁字母）打开图片
 1. 点击图片

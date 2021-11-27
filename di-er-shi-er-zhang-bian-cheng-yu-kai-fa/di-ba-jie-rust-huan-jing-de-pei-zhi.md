@@ -6,13 +6,13 @@
 
 ### FreeBSD 打包
 
-`#pkg install rust`
+`# pkg install rust`
 
 ### Rust 官方打包（不建议）
 
-* 安装：`curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh`
-* 升级： `cd ~` `./.cargo/bin/rustup update`
-* 删除： `./cargo/bin/rustup self uninstall`
+* 安装：`$ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh`
+* 升级： `$ ~/.cargo/bin/rustup update`
+* 删除： `$ ~/.cargo/bin/rustup self uninstall`
 
 
 安装成功后，输入 `rustc --version` 或 `cargo --version` 查看软件版本。
@@ -24,12 +24,12 @@
 
 ### FreeBSD 打包
 
-`#pkg install go`
+`# pkg install go`
 
 ### Golang 官方打包（不建议）：
 
 * 下载二进制包：[地址](https://golang.google.cn/dl/go1.17.3.freebsd-amd64.tar.gz)
-* 解压二进制包： `tar -C /usr/local -xzf https://golang.google.cn/dl/go1.17.3.freebsd-amd64.tar.gz`
+* 解压二进制包： `$ tar -C /usr/local -xzf https://golang.google.cn/dl/go1.17.3.freebsd-amd64.tar.gz`
 * 添加环境变量： 文本模式打开`.profile`， 添加一行 `export PATH=$PATH:/usr/local/go/bin`
 
 

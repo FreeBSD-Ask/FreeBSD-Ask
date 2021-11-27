@@ -18,11 +18,11 @@ FreeBSD 已从 Linux 移植了显卡驱动，理论上，A 卡 N 卡均可在 am
 
 ### 安装驱动
 
-* FreeBSD 12.0: `#pkg install drm-fbsd12.0-kmod`
+* FreeBSD 12.0: `# pkg install drm-fbsd12.0-kmod`
 
 注意：除了 12.0，对于任意 12.X 均应该安装 `drm-fbsd12.0-kmod `，但应该使用 port 在本地重新构建而不应该使用 pkg 进行安装，否则不会正常运行。
 
-* FreeBSD 13：`#pkg install drm-fbsd13-kmod`
+* FreeBSD 13：`# pkg install drm-fbsd13-kmod`
 
 ### 加载显卡
 
@@ -34,7 +34,7 @@ FreeBSD 已从 Linux 移植了显卡驱动，理论上，A 卡 N 卡均可在 am
 
 ### 视频硬解
 
-`#pkg install xf86-video-intel libva-intel-driver`
+`# pkg install xf86-video-intel libva-intel-driver`
 
 ## 英伟达显卡
 

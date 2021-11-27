@@ -12,34 +12,34 @@ _注：本节仅涉及了`GTK`库的桌面主题，囊括了`Gnome`、`XFCE`、`
 
 ### 主题
 
-* matcha 主题： `#pkg install matcha-gtk-themes`
-* Qogir 主题： `#pkg install qogir-gtk-themes`
-* Pop 主题：`#pkg install pop-gtk-themes`
-* Flat 主题：`#pkg install flat-remix-gtk-themes`
-* Numix 主题： `#pkg install numix-gtk-theme`
-* Sierra 主题：`#pkg install sierra-gtk-themes`
-* Yaru 主题： `#pkg install yaru-gtk-themes`
-* Canta 主题：`#pkg install canta-gtk-themes`
+* matcha 主题： `# pkg install matcha-gtk-themes`
+* Qogir 主题： `# pkg install qogir-gtk-themes`
+* Pop 主题：`# pkg install pop-gtk-themes`
+* Flat 主题：`# pkg install flat-remix-gtk-themes`
+* Numix 主题： `# pkg install numix-gtk-theme`
+* Sierra 主题：`# pkg install sierra-gtk-themes`
+* Yaru 主题： `# pkg install yaru-gtk-themes`
+* Canta 主题：`# pkg install canta-gtk-themes`
 
 ### 图标
 
-* papirus 图标： `#pkg install papirus-icon-theme`
-* Qogir 图标： `#pkg install qogir-icon-themes`
-* Pop 图标： `#pkg install pop-icon-theme`
-* Flat 图标：`#pkg install flat-remix-icon-themes`
-* Numix 图标： `#pkg install numix-icon-theme`
-* Numix 圆形图标： `#pkg install numix-icon-theme-circle`
-* Yaru 图标：`#pkg install yaru-icon-theme`
-* Canta 图标：`#pkg install canta-icon-theme`
+* papirus 图标： `# pkg install papirus-icon-theme`
+* Qogir 图标： `# pkg install qogir-icon-themes`
+* Pop 图标： `# pkg install pop-icon-theme`
+* Flat 图标：`# pkg install flat-remix-icon-themes`
+* Numix 图标： `# pkg install numix-icon-theme`
+* Numix 圆形图标： `# pkg install numix-icon-theme-circle`
+* Yaru 图标：`# pkg install yaru-icon-theme`
+* Canta 图标：`# pkg install canta-icon-theme`
 
 ## 终端模式安装
 
 _提示： 新接触 Unix 的用户可略过本节_
 
 * [ ] 高阶任务：为 KDE 或 Gnome 安装一款仿 MacOS 系统样式的主题和图标。
-* [x] 提前任务1 安装 bash：`#pkg install bash`
-* [x] 提前任务2 安装 plank：`#pkg install plank`
-* [x] 提前任务3 安装 git：  `#pkg install git`
+* [x] 提前任务1 安装 bash：`# pkg install bash`
+* [x] 提前任务2 安装 plank：`# pkg install plank`
+* [x] 提前任务3 安装 git：  `# pkg install git`
 
 ### KDE 主题美化
 

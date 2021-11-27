@@ -9,7 +9,7 @@
 #make install clean
 ```
 
-通过pkg安装 `#pkg install xfce4`
+通过pkg安装 `# pkg install xfce4`
 
 ## 启用xfce
 
@@ -22,10 +22,10 @@
 ## 启动服务
 
 ```
-#syrc hald_enable="YES"
-#syrc dbus_enable="YES"
-#service hald start
-#service dbus start
+# syrc hald_enable="YES"
+# syrc dbus_enable="YES"
+# service hald start
+# service dbus start
 ```
 
 ## 设置中文显示
@@ -34,7 +34,7 @@
 
 ## 可选配置
 
-`#pkg install zh-fcitx`
+`# pkg install zh-fcitx`
 
 \#(安装中文输入法，需要设置中文输入环境)
 
@@ -50,13 +50,13 @@ fcitx &
 ```
 
 ```
-#pkg install firefox #（火狐浏览器）
-#pkg install smplayer  #(视频播放器)
-#pkg install zh_CN-libreoffice #(办公软件)
-#pkg install gimp #(图片处理)
-#pkg install thunderbird #(邮件客户端)
-#pkg install wqy-fonts #（安装文泉驿字体）
-#pkg install transmission  #(BT下载工具)`
+# pkg install firefox #（火狐浏览器）
+# pkg install smplayer  #(视频播放器)
+# pkg install zh_CN-libreoffice #(办公软件)
+# pkg install gimp #(图片处理)
+# pkg install thunderbird #(邮件客户端)
+# pkg install wqy-fonts #（安装文泉驿字体）
+# pkg install transmission  #(BT下载工具)`
 ```
 
 ## 故障排除

@@ -132,7 +132,7 @@ ln -s jusr/var var
 ### 创建fstab
 
 ```
-#ee /jail/www.fstab
+# ee /jail/www.fstab
 #将公共只读系统挂载到项目目录
 /jail/j1/ /jail/www/ mullfs ro 0 0
 #将项目数据目录挂载到项目目录

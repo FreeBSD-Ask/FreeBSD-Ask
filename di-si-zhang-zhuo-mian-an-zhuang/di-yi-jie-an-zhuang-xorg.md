@@ -10,4 +10,4 @@
 #make install clean
 ```
 通过pkg安装\
-`#pkg install xorg`
+`# pkg install xorg`

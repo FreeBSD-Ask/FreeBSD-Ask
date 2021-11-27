@@ -12,7 +12,7 @@
 
 gitup 的代理不取决于系统代理，而是由其配置文件单独决定。
 
-`#ee /usr/local/etc/gitup.conf`
+`# ee /usr/local/etc/gitup.conf`
 
 示例（先删去前边的 # 再改）
 ```

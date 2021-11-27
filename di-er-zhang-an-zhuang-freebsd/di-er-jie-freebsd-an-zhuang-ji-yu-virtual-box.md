@@ -2,7 +2,7 @@
 
 ## VirtualBOX 虚拟机 FreeBSD配置
 
-`#pkg install virtualbox-ose-additions`
+`# pkg install virtualbox-ose-additions`
 
 　　再将
 
@@ -19,7 +19,7 @@ EndSection
 
 　　显卡控制器用 VBoxSVGA
 
-編輯 `#ee etc/rc.conf`，增加以下內容：
+編輯 `# ee etc/rc.conf`，增加以下內容：
 
 ```
 vboxguest_enable="YES"

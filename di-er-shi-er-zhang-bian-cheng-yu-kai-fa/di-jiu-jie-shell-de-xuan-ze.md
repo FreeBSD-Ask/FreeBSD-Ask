@@ -30,15 +30,15 @@
 例如切换到 zsh：
 
 ```
-pkg install zsh
-chsh -s /usr/local/bin/zsh
-touch ~/.zshrc
+# pkg install zsh
+# chsh -s /usr/local/bin/zsh
+# touch ~/.zshrc
 ```
 
 切换到 bash：
 
 ```
-#pkg install bash
-#chsh -s /usr/local/bin/bash
-#ee ~/.bash_profile
+# pkg install bash
+# chsh -s /usr/local/bin/bash
+# ee ~/.bash_profile
 ```

@@ -11,7 +11,7 @@
 我试了在正常的 Linux 系统内直接把 mfsBSD 的 img dd 到硬盘里，重启之后虽然正常加载 bootloader，但是可能是因为系统又对硬盘进行了写入而无法正常挂载内存盘。
 
 ```bash
-#wget https://mfsbsd.vx.sk/files/images/13/amd64/mfsbsd-se-13.0-RELEASE-amd64.img -O- | dd of=/dev/vda
+# wget https://mfsbsd.vx.sk/files/images/13/amd64/mfsbsd-se-13.0-RELEASE-amd64.img -O- | dd of=/dev/vda
 ```
 
 这里的 `|` 是管道的意思，将上一个命令的标准输出作为下一个命令的标准输入。`-O-` 指把文件下载输出到标准输出，而 dd 没有指定 if 时会自动从标准输入读取内容。
@@ -41,10 +41,10 @@ boot
 （mfsBSD 和 mfsLinux 镜像的 root 密码默认是 `mfsroot`
 
 ```bash
-#cd /tmp
-#wget https://mfsbsd.vx.sk/files/images/13/amd64/mfsbsd-se-13.0-RELEASE-amd64.img
-#dd if=mfsbsd-se-13.0-RELEASE-amd64.img of=/dev/vda
-#reboot
+# cd /tmp
+# wget https://mfsbsd.vx.sk/files/images/13/amd64/mfsbsd-se-13.0-RELEASE-amd64.img
+# dd if=mfsbsd-se-13.0-RELEASE-amd64.img of=/dev/vda
+# reboot
 ```
 
 ![](../.gitbook/assets/2.png)

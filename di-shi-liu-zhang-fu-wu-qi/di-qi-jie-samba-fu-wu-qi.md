@@ -38,7 +38,7 @@ samba_server_enable="YES"
 （3）创建/usr/local/etc/smb4.conf，添加如下内容并保存
 
 ```
-#vi /usr/local/etc/smb4.conf
+# vi /usr/local/etc/smb4.conf
 
 [root]
     comment = root's stuff

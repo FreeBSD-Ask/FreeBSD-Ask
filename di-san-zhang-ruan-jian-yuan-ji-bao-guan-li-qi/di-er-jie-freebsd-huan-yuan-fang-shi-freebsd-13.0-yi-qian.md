@@ -6,11 +6,11 @@ FreeBSD 中 pkg 源分为系统级和用户级两个源.不建议直接修改 /e
 
 创建用户级源目录:
 
-`#mkdir -p /usr/local/etc/pkg/repos`
+`# mkdir -p /usr/local/etc/pkg/repos`
 
 创建用户级源文件:
 
-`#ee /usr/local/etc/pkg/repos/bjtu.conf`
+`# ee /usr/local/etc/pkg/repos/bjtu.conf`
 
 写入以下内容:
 
@@ -33,7 +33,7 @@ FreeBSD: { enabled: no }
 
 ### ports 源:提供源码方式安装软件的包管理器
 
-创建或修改文件`#ee /etc/make.conf`:
+创建或修改文件`# ee /etc/make.conf`:
 
 写入以下内容:
 
@@ -47,14 +47,14 @@ FreeBSD: { enabled: no }
 
 获取portsnap更新:
 
-`#portsnap fetch extract`
+`# portsnap fetch extract`
 
 ### freebsd-update 源:提供基本系统更新
 
-编辑`#ee /etc/freebsd-update.conf` 文件:
+编辑`# ee /etc/freebsd-update.conf` 文件:
 
 将`ServerName update.FreeBSD.org` 修改为`ServerName freebsd-update.mirror.bjtulug.org`
 
 例:从 FreeBSD 12 升级到 13.0
 
-`#freebsd-update -r 13.0-RELEASE upgrade`
+`# freebsd-update -r 13.0-RELEASE upgrade`

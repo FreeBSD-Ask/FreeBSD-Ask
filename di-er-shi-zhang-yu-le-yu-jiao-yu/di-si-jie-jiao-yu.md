@@ -10,19 +10,19 @@
 
 #### 简单的计算器 **bc**
 
-安装命令：`#pkg install gnubc`
+安装命令：`# pkg install gnubc`
 
 ### 几何学
 
 #### 几何绘图软件 **geogebra**
 
-安装命令：`#pkg install geogebra`
+安装命令：`# pkg install geogebra`
 
 ### 统筹学
 
 #### 线性规划
 
-GLPK 安装：`#pkg install glpk`
+GLPK 安装：`# pkg install glpk`
 
 线性规划里，我们经常会用到**单纯形法**。在计算机层面，有很多软件可以解放我们的大脑，甚至你可以在 OFFICE 表格软件的“规划求解”里，得到很好的解答。这里我们简单介绍一下命令行免费线性规划软件包 GLPK 的使用方法。希望大家可以触类旁通，举一反三。
 
@@ -87,9 +87,9 @@ end;
 
 ## 物理和化学
 
-* 元素周期表 `GPeriodic`: ` #pkg install gperiodic`
+* 元素周期表 `GPeriodic`: `# pkg install gperiodic`
 
 ## 天文地理
 
-* 星图软件 Stellarium： `#pkg install stellarium`
-* Gnome 地图：`#pkg install gnome-maps`
+* 星图软件 Stellarium： `# pkg install stellarium`
+* Gnome 地图：`# pkg install gnome-maps`
