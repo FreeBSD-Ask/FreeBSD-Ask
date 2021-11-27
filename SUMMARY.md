@@ -217,3 +217,4 @@
 
 * [第一节 System INIT 管理服务](di-er-shi-si-zhang-freebsd-te-se/di-yi-jie-system-init-guan-li-fu-wu.md)
 * [第二节 FreeBSD 目录结构](di-er-shi-si-zhang-freebsd-te-se/di-er-jie-freebsd-mu-lu-jie-gou.md)
+* [第三节 bsdinstall 与 bsdconfig](di-er-shi-si-zhang-freebsd-te-se/di-san-jie-bsdinstall-yu-bsdconfig.md)
