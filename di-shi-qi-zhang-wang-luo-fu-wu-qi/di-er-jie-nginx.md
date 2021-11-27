@@ -32,7 +32,7 @@
 
 此时你应该通过`# service nginx start`启动Nginx而不是`# service nginx onestart`
 
-### 2.2 配置文件
+### 2.2 配置文件 <a href="2.2-pei-zhi-wen-jian" id="2.2-pei-zhi-wen-jian"></a>
 
 FreeBSD中，Nginx的配置文件位于`/usr/local/etc/nginx/`中，而主要的配置文件则在`/usr/local/etc/nginx/nginx.conf`
 
