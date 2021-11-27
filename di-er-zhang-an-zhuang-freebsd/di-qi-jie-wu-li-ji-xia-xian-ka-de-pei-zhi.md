@@ -20,9 +20,9 @@ FreeBSD 已从 Linux 移植了显卡驱动，理论上，A 卡 N 卡均可在 am
 
 * FreeBSD 12.0: `#pkg install drm-fbsd12.0-kmod`
 
-注意：对于任意 12.X 均应该安装 `drm-fbsd12.0-kmod `，但应该使用 port 在本地重新构建而不应该使用 pkg 进行安装，否则不会正常运行。
+注意：除了 12.0，对于任意 12.X 均应该安装 `drm-fbsd12.0-kmod `，但应该使用 port 在本地重新构建而不应该使用 pkg 进行安装，否则不会正常运行。
 
-* FreeBSD13：`#pkg install drm-fbsd13-kmod`
+* FreeBSD 13：`#pkg install drm-fbsd13-kmod`
 
 ### 加载显卡
 
@@ -59,9 +59,9 @@ $nvidia-smi
 #cp /root/xorg.conf.new /etc/X11/xorg.conf
 ```
 
-然后重新启动就可以发现正常使用nvidia驱动了&#x20;
+然后重新启动就可以发现正常使用 nvidia 驱动了&#x20;
 
-**注意**： 默认情况下，通过 pkg 安装的 nvidia-driver 是包含 linux compatibility support, 如果要使用 linux软件，需要执行以下命令，（实际上使用linux兼容层，以下命令是必须的。） 如果不需要使用 linux 兼容层，则不需要执行。
+**注意**： 默认情况下，通过 pkg 安装的 nvidia-driver 是包含 linux compatibility support, 如果要使用 Linux 软件，需要执行以下命令，（实际上使用linux兼容层，以下命令是必须的。） 如果不需要使用 Linux 兼容层，则不需要执行。
 
 ```shell
 #sysrc linux_enable="YES"
