@@ -6,9 +6,7 @@
 
 ![FreeBSD 操作系统设计与实现（原书第2版）](../.gitbook/assets/zcover.jpg)
 
-在线试读 &#x20;
-
-{% embed url="http://images.china-pub.com/ebook8080001-8085000/8084481/ch01.pdf" %}
+[在线试读地址](http://images.china-pub.com/ebook8080001-8085000/8084481/ch01.pdf)
 
 ## 贡献者名单（以下排名不分前后）
 
