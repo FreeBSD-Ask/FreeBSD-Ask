@@ -17,10 +17,15 @@
 #ee /etc/rc.conf
 #添加：
 dbus_enable="YES"
-hald_enable="YES"
 sddm_enable="YES"
 echo "exec /usr/local/bin/startkde" > ~/.xinitrc
 ```
+
+
+
+提示：hal 已经被删除。**不需要**再添加~~hald\_enable="YES",~~ 见：
+
+{% embed url="https://www.freshports.org/sysutils/hal" %}
 
 ## 中文化
 

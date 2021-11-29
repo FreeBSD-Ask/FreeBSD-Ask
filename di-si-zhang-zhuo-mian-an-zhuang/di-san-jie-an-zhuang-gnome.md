@@ -17,7 +17,6 @@
 
 ```
 dbus_enable="YES"
-hald_enable="YES"
 gdm_enable="YES"
 gnome_enable="YES"
 snd_hda="YES"

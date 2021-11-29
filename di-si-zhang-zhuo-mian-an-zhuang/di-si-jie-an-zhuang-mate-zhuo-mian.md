@@ -11,7 +11,6 @@ FreeBSD 安装mate 桌面环境
 ```
 moused_enable="YES"
 dbus_enable="YES"
-hald_enable="YES"
 ```
 
 ## 安装 Slim 作为登陆管理器

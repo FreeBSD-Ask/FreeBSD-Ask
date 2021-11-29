@@ -22,9 +22,7 @@
 ## 启动服务
 
 ```
-#syrc hald_enable="YES"
 #syrc dbus_enable="YES"
-#service hald start
 #service dbus start
 ```
 
