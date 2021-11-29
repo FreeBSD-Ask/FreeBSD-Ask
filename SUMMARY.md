@@ -219,3 +219,12 @@
 * [第二节 FreeBSD 目录结构](di-er-shi-si-zhang-freebsd-te-se/di-er-jie-freebsd-mu-lu-jie-gou.md)
 * [第三节 bsdinstall 与 bsdconfig](di-er-shi-si-zhang-freebsd-te-se/di-san-jie-bsdinstall-yu-bsdconfig.md)
 * [第三节 BSD 风格的 make/grep/sed/awk](di-er-shi-si-zhang-freebsd-te-se/di-san-jie-bsd-feng-ge-de-makegrepsedawk.md)
+
+## 第二十五章 系统设计与分析
+
+* [第一节 FreeBSD 设计概要](di-er-shi-wu-zhang-xi-tong-she-ji-yu-fen-xi/di-yi-jie-freebsd-she-ji-gai-yao.md)
+* [第二节 内核](di-er-shi-wu-zhang-xi-tong-she-ji-yu-fen-xi/di-er-jie-nei-he.md)
+* [第三节 进程](di-er-shi-wu-zhang-xi-tong-she-ji-yu-fen-xi/di-san-jie-jin-cheng.md)
+* [第四节 内存管理](di-er-shi-wu-zhang-xi-tong-she-ji-yu-fen-xi/di-si-jie-nei-cun-guan-li.md)
+* [第五节 安全](di-er-shi-wu-zhang-xi-tong-she-ji-yu-fen-xi/di-wu-jie-an-quan.md)
+* [第六节 I/O 系统](di-er-shi-wu-zhang-xi-tong-she-ji-yu-fen-xi/di-liu-jie-io-xi-tong.md)
