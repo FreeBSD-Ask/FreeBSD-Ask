@@ -84,7 +84,7 @@ pkg: PRE-INSTALL script failed
 
 ```
 #pkg  install bsdadminscripts`
-#pkg\_libchk
+#pkg_libchk
 #port-rebuild`
 ```
 
