@@ -10,23 +10,37 @@ Gentoo: Portage，对应 Ports（Portage 本身就是 Ports 的仿制品）
 
 ## 如何用 pkg 安装软件
 
-装上系统默认没有 pkg，先获取 pkg：\
-\#pkg 回车即可输入y 确认下载\
-————————————————————————————————————\
-pkg使用https，先安装ssl 证书：\
-`#pkg install ca_root_nss`\
-然后把 repo.conf 里的 pkg+http 改成 pkg+https 即可。\
+装上系统默认没有 pkg，先获取 pkg：
+
+#pkg 回车即可输入y 确认下载
+————————————————————————————————————
+
+pkg使用https，先安装ssl 证书：
+
+`#pkg install ca_root_nss`
+
+然后把 repo.conf 里的 pkg+http 改成 pkg+https 即可。
+
 最后刷新 pkg 数据库：
 
-`#pkg update -f`\
-————————————————————————————————————\
-安装 python 3：\
-`#pkg install python`\
-————————————————————————————————————\
-pkg 升级：\
-`#pkg upgrade`\
-———————————————————————————————————-—\
-错误：You must upgrade the ports-mgmt/pkg port first\
+`#pkg update -f`
+
+————————————————————————————————————
+
+安装 python 3：
+
+`#pkg install python`
+
+————————————————————————————————————
+
+pkg 升级：
+
+`#pkg upgrade`
+
+———————————————————————————————————-—
+
+错误：You must upgrade the ports-mgmt/pkg port first
+
 解决：
 
 ```
@@ -68,11 +82,10 @@ pkg: PRE-INSTALL script failed
 
 出现该问题一般是由于 ABI 破坏，更新即可。
 
-`#pkg  install bsdadminscripts`
-
-`#`pkg\_libchk
-
-`#port-rebuild`
-
+```
+#pkg  install bsdadminscripts`
+#pkg\_libchk
+#port-rebuild`
+```
 
 
