@@ -1,6 +1,6 @@
 # 第五节 通过源代码 port 方式安装软件
 
-## FreeBSD ports 基本用法（仅限FreeBSD13.0以前，不含 13.0） <a href="freebsdports-ji-ben-yong-fa" id="freebsdports-ji-ben-yong-fa"></a>
+## FreeBSD ports 基本用法（仅限 FreeBSD 13. 0以前，不含 13.0） <a href="freebsdports-ji-ben-yong-fa" id="freebsdports-ji-ben-yong-fa"></a>
 
 ### 首先获取 portsnap
 
@@ -65,11 +65,11 @@ DISABLE_SIZE=yes
 
 首先更新 Ports 树
 
-#`portsnap fetch update `
+\#`portsnap fetch update`
 
 然后列出过时 Ports 组件
 
-pkg_version -l ‘<’
+pkg\_version -l ‘<’
 
 下边分别列出 2 种 FreeBSD 手册中提及的升级工具:
 
