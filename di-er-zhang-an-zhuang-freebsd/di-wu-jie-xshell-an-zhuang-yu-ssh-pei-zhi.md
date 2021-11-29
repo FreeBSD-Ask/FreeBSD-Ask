@@ -1,6 +1,14 @@
-# 第五节 Xshell 安装 与 SSH 配置
+# 第五节 常用软件 与 SSH 配置
 
-## Xshell 下载
+## WinSCP 下载
+
+WinSCP 是对 scp 命令的图形化封装，同时支持 FTP 等多种协议。可以快捷的传输文件与 Windows 系统和 Linux 或 BSD 之间。
+
+下载地址：
+
+{% embed url="https://winscp.net/eng/download.php" %}
+
+## X shell 下载
 
 Xshell 是 Windows 平台上的强大的 shell 工具，不建议使用苦难哲学的 putty 。
 
