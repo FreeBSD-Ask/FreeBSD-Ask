@@ -8,19 +8,19 @@ Arch: pacman，对应 pkg（秉承同样的 KISS 理念）
 
 Gentoo: Portage，对应 Ports（Portage 本身就是 Ports 的仿制品）
 
-## FreeBSD pkg基础教程1
+## 如何用 pkg 安装软件
 
-装上系统默认没有pkg，先获取pkg：\
+装上系统默认没有 pkg，先获取 pkg：\
 \#pkg 回车即可输入y 确认下载\
 ————————————————————————————————————\
 pkg使用https，先安装ssl 证书：\
 `#pkg install ca_root_nss`\
-然后把repo.conf 里的pkg+http 改成pkg+https 即可。\
-最后刷新pkg数据库：
+然后把 repo.conf 里的 pkg+http 改成 pkg+https 即可。\
+最后刷新 pkg 数据库：
 
 `#pkg update -f`\
 ————————————————————————————————————\
-安装python 3：\
+安装 python 3：\
 `#pkg install python`\
 ————————————————————————————————————\
 pkg 升级：\
@@ -33,6 +33,12 @@ pkg 升级：\
 #cd /usr/ports/ports-mgmt/pkg
 #make deinstall reinstall
 ```
+
+## 如何卸载软件
+
+直接使用 pkg delete 会破坏正常的依赖关系，应该尽量避免使用（ports 的 make deinstall 也一样），转而使用 pkg-rmleaf 命令，该命令属于的软件需要自行安装：
+
+`pkg install pkg-rmleaf`
 
 ## 故障排除
 
@@ -57,3 +63,16 @@ pkg: PRE-INSTALL script failed
 ```
 #/usr/sbin/pwd_mkdb -p /etc/master.passwd
 ```
+
+### Shared object "x.so.x" not found, required by "xxx"
+
+出现该问题一般是由于 ABI 破坏，更新即可。
+
+`#pkg  install bsdadminscripts`
+
+`#`pkg\_libchk
+
+`#port-rebuild`
+
+
+
