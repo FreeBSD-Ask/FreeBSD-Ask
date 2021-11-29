@@ -1,6 +1,12 @@
 # 第二节 FreeBSD 13.0 安装——基于 Virtual Box
 
-## VirtualBOX 虚拟机 FreeBSD配置
+## VirtualBox 下载
+
+点击“download” 即可下载：
+
+{% embed url="https://www.virtualbox.org" %}
+
+## VirtualBox 虚拟机 FreeBSD 配置
 
 `#pkg install virtualbox-ose-additions`
 
@@ -34,4 +40,3 @@ vboxservice_enable="YES"
 #pw groupmod wheel -m <yourname> #sudo 权限
 #pw groupmod opt -m <yourname>   #开机重启 权限
 ```
-

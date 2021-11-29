@@ -6,6 +6,18 @@
 
 镜像下载地址：[_https://download.freebsd.org/ftp/releases/amd64/amd64/ISO-IMAGES/13.0/FreeBSD-13.0-RELEASE-amd64-disc1.iso_](https://download.freebsd.org/ftp/releases/amd64/amd64/ISO-IMAGES/13.0/FreeBSD-13.0-RELEASE-amd64-disc1.iso)__
 
+## VMware Workstation Pro 下载
+
+VMware Workstation Pro 是免费试用下载的，请勿从第三方站点下载，否则会造成一些苦难哲学的后果。点击 Download NOW 即可。左边是 Windows 系统使用，右侧是 Linux 系统使用。该软件虽是收费的，但是授权码并不难获得。
+
+{% embed url="https://www.vmware.com/products/workstation-pro/workstation-pro-evaluation.html" %}
+
+### VMware Workstation 16 Player 下载
+
+VMware Workstation 16 Player 是个人免费使用的，你也可以选择此版本。
+
+{% embed url="https://www.vmware.com/products/workstation-player/workstation-player-evaluation.html" %}
+
 ## 故障排除
 
 vmware 自动缩放屏幕请安装 x11-drivers/xf86-video-vmware：&#x20;
