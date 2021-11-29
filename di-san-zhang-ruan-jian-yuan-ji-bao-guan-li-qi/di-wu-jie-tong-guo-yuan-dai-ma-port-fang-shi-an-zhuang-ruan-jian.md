@@ -61,6 +61,10 @@ DISABLE_SIZE=yes
 
 `# portsnap fetch extract`
 
+ports 编译的软件也可以转换为 pkg 包
+
+`#pkg create nginx`
+
 ### FreeBSD 包升级管理工具
 
 首先更新 Ports 树
