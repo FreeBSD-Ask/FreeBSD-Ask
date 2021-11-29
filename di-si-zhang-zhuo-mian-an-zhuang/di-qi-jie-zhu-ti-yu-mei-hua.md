@@ -6,7 +6,7 @@
 
 * [ ] 新手任务 ： 从以下软件包中，各选一款主题和图标来安装。
 
-_注：本节仅涉及了`GTK`库的桌面主题，囊括了`Gnome`、`XFCE`、`MATE`、`Cinnamon`和`LXDE`等桌面环境。_
+**注：本节仅涉及了`GTK`库的桌面主题，囊括了`Gnome`、`XFCE`、`MATE`、`Cinnamon`和`LXDE`等桌面环境。**
 
 以下仅收录了部分图标和主题，想要获取更多资源，可访问 [FreshPorts](https://www.freshports.org) 。
 
@@ -39,7 +39,7 @@ _提示： 新接触 Unix 的用户可略过本节_
 * [ ] 高阶任务：为 KDE 或 Gnome 安装一款仿 MacOS 系统样式的主题和图标。
 * [x] 提前任务1 安装 bash：`#pkg install bash`
 * [x] 提前任务2 安装 plank：`#pkg install plank`
-* [x] 提前任务3 安装 git：  `#pkg install git`
+* [x] 提前任务3 安装 git： `#pkg install git`
 
 ### KDE 主题美化
 

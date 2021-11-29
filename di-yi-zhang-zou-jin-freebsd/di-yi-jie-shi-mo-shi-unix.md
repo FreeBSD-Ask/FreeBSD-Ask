@@ -6,7 +6,7 @@
 
 **那么，现在到底什么是 UNIX？**
 
-查询网址：[http://www.opengroup.org/openbrand/register](http://www.opengroup.org/openbrand/register)
+查询网址：[_http://www.opengroup.org/openbrand/register_](http://www.opengroup.org/openbrand/register)__
 
 1、符合单一 UNIX 规范
 

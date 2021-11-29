@@ -72,4 +72,4 @@ mirror.bjtu.edu.cn
 
 　　FreeBSD 官方联系方式：
 
-[freebsd-hubs@freebsd.org](mailto:freebsd-hubs@freebsd.org)
+[_freebsd-hubs@freebsd.org_](mailto:freebsd-hubs@freebsd.org)__
