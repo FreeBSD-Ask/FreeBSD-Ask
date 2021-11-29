@@ -40,7 +40,7 @@ rc.conf 掌管着所有系统服务。与之相关的文件和路径如下：
 2. 用户自定义的配置位于 `/etc/rc.conf`。例如，如果想让系统自动启动 ssh、ipfw、nginx 等服务，就要修改本文件。**注意，如果某项配置与默认的配置有冲突，则以本文件为准。**
 3. 基系统的服务脚本位于 `/etc/rc.d/`。第三方应用的服务脚本位于 `/usr/local/etc/rc.d/`。当遇到问题时，通过查阅配置文件，找出问题所在。
 
-### periodic.conf <a href="periodicconf" id="periodicconf"></a>
+## periodic.conf <a href="periodicconf" id="periodicconf"></a>
 
 FreeBSD 默认有一些周期执行的任务，它们是通过 `periodic` 命令执行的，由 `cron` 自动调用。与 `periodic` 有关的配置和路径如下：
 
@@ -55,7 +55,7 @@ FreeBSD 默认有一些周期执行的任务，它们是通过 `periodic` 命令
 
 如果你要立即更新，也可以直接执行这个脚本。
 
-### 其他配置文件 <a href="qi-ta-pei-zhi-wen-jian" id="qi-ta-pei-zhi-wen-jian"></a>
+## 其他配置文件 <a href="qi-ta-pei-zhi-wen-jian" id="qi-ta-pei-zhi-wen-jian"></a>
 
 * crontab: `cron` 配置，位于 `/etc/crontab`，请参考 `man crontab`。
 * syslog.conf: 系统日志配置，位于 `/etc/syslog.conf`，请参考 `man syslog.conf`。
