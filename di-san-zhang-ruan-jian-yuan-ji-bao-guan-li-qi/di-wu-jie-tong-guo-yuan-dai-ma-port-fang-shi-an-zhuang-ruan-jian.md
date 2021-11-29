@@ -38,11 +38,11 @@ DISABLE_SIZE=yes
 
 如果不选择 BATCH=yes 的方法手动配置依赖：
 
-看看python 的ports 在哪：
+看看 python 的 ports 在哪：
 
 ```
-#whereis python;
-python: /usr/ports/lang/pytho
+#whereis python
+#python: /usr/ports/lang/python
 ```
 
 安装python3：
