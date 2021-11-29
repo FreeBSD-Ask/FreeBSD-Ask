@@ -12,10 +12,10 @@ Gentoo: Portage，对应 Ports（Portage 本身就是 Ports 的仿制品）
 
 装上系统默认没有 pkg，先获取 pkg：
 
-#pkg 回车即可输入y 确认下载
+#pkg 回车即可输入 y 确认下载
 ————————————————————————————————————
 
-pkg使用https，先安装ssl 证书：
+pkg 使用 https，先安装 ssl 证书：
 
 `#pkg install ca_root_nss`
 
