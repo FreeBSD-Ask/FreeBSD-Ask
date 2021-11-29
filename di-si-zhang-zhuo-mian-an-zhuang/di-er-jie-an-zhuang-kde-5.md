@@ -18,7 +18,7 @@
 #添加：
 dbus_enable="YES"
 sddm_enable="YES"
-echo "exec /usr/local/bin/startkde" > ~/.xinitrc
+echo "exec ck-launch-session startplasma-x11" > ~/.xinitrc
 ```
 
 
