@@ -20,17 +20,17 @@ FreeBSD 使用 BSD INIT 管理系统服务。
 XXX_enable="YES"
 ```
 
-服务所对应的脚本路径是： `/usr/local/etc/rc.d/`
+服务所对应的脚本路径是： `#/usr/local/etc/rc.d/`
 
 当然也可以直接调用 `/etc/rc.d/` 和 `/usr/local/etc/rc.d/` 下的那些脚本`。`
 
-* `/usr/local/etc/rc.d/XXX reload`
-* `/usr/local/etc/rc.d/XXX stop`
+* `#/usr/local/etc/rc.d/XXX reload`
+* `#/usr/local/etc/rc.d/XXX stop`
 
 如果 rc.conf 中并没有启用某项服务，但想临时启动它，那么可以这样：
 
-* `service XXX onestart`
-* `service XXX onestop`
+* `#service XXX onestart`
+* `#service XXX onestop`
 
 ## 进阶
 
@@ -49,11 +49,13 @@ FreeBSD 默认有一些周期执行的任务，它们是通过 `periodic` 命令
 3. 基系统的任务脚本位于 `/etc/periodic/`。
 4. 第三方应用的任务脚本位于 `/usr/local/etc/periodic/`。
 
-以 `locate` 命令的所依赖的路径数据库 `/var/db/locate.database` 为例，\
-该数据库由 `/etc/periodic/weekly/310.locate` 这个脚本每周更新一次。\
+以 `locate` 命令的所依赖的路径数据库 `/var/db/locate.database` 为例，
+
+该数据库由 `/etc/periodic/weekly/310.locate` 这个脚本每周更新一次。
+
 如果你要立即更新，也可以直接执行这个脚本。
 
-### &#x20;其他配置文件 <a href="qi-ta-pei-zhi-wen-jian" id="qi-ta-pei-zhi-wen-jian"></a>
+### 其他配置文件 <a href="qi-ta-pei-zhi-wen-jian" id="qi-ta-pei-zhi-wen-jian"></a>
 
 * crontab: `cron` 配置，位于 `/etc/crontab`，请参考 `man crontab`。
 * syslog.conf: 系统日志配置，位于 `/etc/syslog.conf`，请参考 `man syslog.conf`。
