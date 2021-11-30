@@ -1,6 +1,10 @@
-# 第二节 FreeBSD 换源方式（FreeBSD 13.0 以前）
+# 第二节 FreeBSD 换源方式（FreeBSD 13.0以前）
 
-### pkg 源:pkg 源提供二进制安装包. <a href="pkg-yuan-pkg-yuan-ti-gong-er-jin-zhi-an-zhuang-bao" id="pkg-yuan-pkg-yuan-ti-gong-er-jin-zhi-an-zhuang-bao"></a>
+**注意：以下教程使用北京交通大学自由与开源软件镜像站，如果故障请翻到页面底部参考其他镜像站使用。**
+
+{% embed url="https://mirror.bjtu.edu.cn" %}
+
+### pkg 源:pkg 源提供二进制安装包. <a href="#pkg-yuan-pkg-yuan-ti-gong-er-jin-zhi-an-zhuang-bao" id="pkg-yuan-pkg-yuan-ti-gong-er-jin-zhi-an-zhuang-bao"></a>
 
 FreeBSD 中 pkg 源分为系统级和用户级两个源.不建议直接修改 /etc/pkg/FreeBSD.conf,因为该文件会随着基本系统的更新而发生改变.
 
@@ -13,8 +17,6 @@ FreeBSD 中 pkg 源分为系统级和用户级两个源.不建议直接修改 /e
 `#ee /usr/local/etc/pkg/repos/bjtu.conf`
 
 写入以下内容:
-
-
 
 ```
 bjtu: {  
@@ -58,3 +60,17 @@ FreeBSD: { enabled: no }
 例:从 FreeBSD 12 升级到 13.0
 
 `#freebsd-update -r 13.0-RELEASE upgrade`
+
+## 其他镜像站
+
+网易开源镜像站&#x20;
+
+{% embed url="https://mirrors.163.com" %}
+
+中国科学技术大学开源软件镜像
+
+{% embed url="https://mirrors.ustc.edu.cn" %}
+
+freebsd.cn （非官方）
+
+{% embed url="http://freebsd.cn" %}
