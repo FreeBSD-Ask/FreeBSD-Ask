@@ -159,7 +159,8 @@ rm -f $index
 rm -f $pdftarget_noidx
 rm -f $pdfindex
 rm -f $sorted_index
-
 ```
 
-运行脚本即可在同路径文件夹下找到 PDF 文档。现成的文档请看扉页加 QQ 群。
+运行脚本即可在同路径文件夹下找到 PDF 文档。现成的文档请看：
+
+{% embed url="https://github.com/FreeBSD-Ask/BSDlibc" %}
