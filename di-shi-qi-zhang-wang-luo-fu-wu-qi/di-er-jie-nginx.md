@@ -44,10 +44,9 @@ root	/usr/lccal/www/nginx;
 
 改成你想要的目录位置，例如`root /path/to/new/webroot;`
 
-示例文件（Nginx + mysql + Typecho 伪静态 + SSL）
+## 3 示例文件（Nginx + mysql + Typecho 伪静态 + SSL）
 
 ```
-
 #user  nobody;
 worker_processes  1;
 
