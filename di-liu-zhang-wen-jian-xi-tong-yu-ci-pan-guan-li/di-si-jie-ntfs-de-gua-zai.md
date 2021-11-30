@@ -6,7 +6,9 @@
 
 `#ee /etc/rc.conf` 加入
 
-`fusefs_enable="YES"` 该设置理论上在步骤1会自动加入，但是还需要你去检查看看有没有。
+`fusefs_enable="YES"`&#x20;
+
+该设置理论上在步骤1会自动加入，但是还需要你去检查看看有没有。
 
 4、修改 fstab 自动挂载
 
@@ -23,7 +25,7 @@
 ntfs-3g  /dev/da0s1  /media/NTFS   -o  rw,uid=1000,gid=1000,umask=0`
 ```
 
-如果不知道哪个磁盘分区是NTFS，可以用命令来查看
+如果不知道哪个磁盘分区是 NTFS，可以用命令来查看
 
 ```
 diskinfo -tv /dev/da1s1
