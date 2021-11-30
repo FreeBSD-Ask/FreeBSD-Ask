@@ -2,7 +2,7 @@
 
 ## 1、内核优化
 
-编辑/etc/sysctl.conf，添加如下内容
+编辑 /etc/sysctl.conf，添加如下内容
 
 ```
 kern.maxfiles=25600
@@ -11,7 +11,7 @@ net.inet.tcp.sendspace=65536
 net.inet.tcp.recvspace=65536
 ```
 
-编辑/boot/loader.conf，添加
+编辑 /boot/loader.conf，添加
 
 ```
 aio_load="YES"
@@ -64,8 +64,8 @@ writable = yes
 #service samba_server start
 ```
 
-5、添加Samba用户
+5、添加 samba 用户
 
 ```
-#pdbedit -a -u nasuser
+#pdbedit -a -u username #此处应根据实际填写
 ```
