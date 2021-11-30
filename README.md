@@ -24,7 +24,7 @@
 
 注意：[详细的编辑指南，点击此处](https://github.com/FreeBSD-Ask/FreeBSD-Ask/wiki)
 
-## 捐助 FreeBSD 基金会:
+## 捐助 FreeBSD 基金会
 
 ![](.gitbook/assets/proud\_donor.gif)
 
