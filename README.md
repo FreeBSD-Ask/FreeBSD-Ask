@@ -23,3 +23,8 @@
 5、请加 QQ 群 731675387 或 [Telegram 群](https://t.me/freebsdba)
 
 注意：[详细的编辑指南，点击此处](https://github.com/FreeBSD-Ask/FreeBSD-Ask/wiki)
+
+## 捐助FreeBSD基金会: ****&#x20;
+
+![](https://freebsdfoundation.org/wp-content/uploads/2015/12/proud\_donor.gif)
+
