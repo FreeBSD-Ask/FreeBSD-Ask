@@ -222,6 +222,7 @@
 * [第二节 FreeBSD 目录结构](di-er-shi-si-zhang-freebsd-te-se/di-er-jie-freebsd-mu-lu-jie-gou.md)
 * [第三节 bsdinstall 与 bsdconfig](di-er-shi-si-zhang-freebsd-te-se/di-san-jie-bsdinstall-yu-bsdconfig.md)
 * [第三节 BSD 风格的 make/grep/sed/awk](di-er-shi-si-zhang-freebsd-te-se/di-san-jie-bsd-feng-ge-de-makegrepsedawk.md)
+* [第四节 禁用 Sendmail](di-er-shi-si-zhang-freebsd-te-se/di-si-jie-jin-yong-sendmail.md)
 
 ## 第二十五章 系统设计与分析
 

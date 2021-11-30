@@ -1,6 +1,6 @@
 # 第一节 System INIT 管理服务
 
-## 基础 <a href="fu-wu-guan-li-xi-tong" id="fu-wu-guan-li-xi-tong"></a>
+## 基础 <a href="#fu-wu-guan-li-xi-tong" id="fu-wu-guan-li-xi-tong"></a>
 
 FreeBSD 使用 BSD INIT 管理系统服务。
 
@@ -40,7 +40,28 @@ rc.conf 掌管着所有系统服务。与之相关的文件和路径如下：
 2. 用户自定义的配置位于 `/etc/rc.conf`。例如，如果想让系统自动启动 ssh、ipfw、nginx 等服务，就要修改本文件。**注意，如果某项配置与默认的配置有冲突，则以本文件为准。**
 3. 基系统的服务脚本位于 `/etc/rc.d/`。第三方应用的服务脚本位于 `/usr/local/etc/rc.d/`。当遇到问题时，通过查阅配置文件，找出问题所在。
 
-## periodic.conf <a href="periodicconf" id="periodicconf"></a>
+### /etc/rc.conf 常用配置文件
+
+
+
+```
+hostname="server.shuang.ca" #设定主机名
+ifconfig_vtnet0="inet xxx.xxx.xxx.xxx netmask 255.255.255.0" #设定IP地址，其中vtnet0是网卡名称，注意设置正确
+defaultrouter="xxx.xxx.xxx.1" #网关地址
+syslogd_enable="YES" #开启日志
+syslogd_flags="-s -s" #禁止接收其他主机的日志
+fsck_y_enable="YES" #开机自动fsck硬盘
+enable_quotas="YES"
+check_quotas="YES" #系统配额
+clear_tmp_enable="YES" #开机自动清空/tmp
+update_motd="NO" #禁用内核信息提示
+icmp_drop_redirect="YES"
+icmp_log_redirect="YES" #ICMP重定向
+log_in_vain="YES" #记录每一个企图到关闭端口的连接
+accounting_enable="YES" #系统审计功能
+```
+
+## periodic.conf <a href="#periodicconf" id="periodicconf"></a>
 
 FreeBSD 默认有一些周期执行的任务，它们是通过 `periodic` 命令执行的，由 `cron` 自动调用。与 `periodic` 有关的配置和路径如下：
 
@@ -55,7 +76,7 @@ FreeBSD 默认有一些周期执行的任务，它们是通过 `periodic` 命令
 
 如果你要立即更新，也可以直接执行这个脚本。
 
-## 其他配置文件 <a href="qi-ta-pei-zhi-wen-jian" id="qi-ta-pei-zhi-wen-jian"></a>
+## 其他配置文件 <a href="#qi-ta-pei-zhi-wen-jian" id="qi-ta-pei-zhi-wen-jian"></a>
 
 * crontab: `cron` 配置，位于 `/etc/crontab`，请参考 `man crontab`。
 * syslog.conf: 系统日志配置，位于 `/etc/syslog.conf`，请参考 `man syslog.conf`。

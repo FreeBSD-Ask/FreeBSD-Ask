@@ -23,16 +23,20 @@
 　set fignore = (.o ~) emacs ma[^D] main.c main.c~ main.o emacs ma[tab] emacs main.c
 ```
 
-## 更换默认 Shell <a href="geng-huan-mo-ren-shell" id="geng-huan-mo-ren-shell"></a>
+## 更换默认 Shell <a href="#geng-huan-mo-ren-shell" id="geng-huan-mo-ren-shell"></a>
 
 警告：切换默认 Shell 会导致 恢复模式无法正常启动加载命令行环境。
 
 例如切换到 zsh：
 
 ```
-pkg install zsh
+pkg install zsh zsh-autosuggestions zsh-syntax-highlighting
 chsh -s /usr/local/bin/zsh
 touch ~/.zshrc
+ee ~/.zshrc #添加下面几行
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.p10k.zsh
 ```
 
 切换到 bash：
