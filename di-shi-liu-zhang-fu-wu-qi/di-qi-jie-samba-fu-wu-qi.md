@@ -1,8 +1,6 @@
 # 第七节 Samba 服务器
 
-## 一、安装 samba
-
-1、内核优化
+## 1、内核优化
 
 编辑/etc/sysctl.conf，添加如下内容
 
@@ -19,7 +17,7 @@ net.inet.tcp.recvspace=65536
 aio_load="YES"
 ```
 
-2、安装
+## 2、安装
 
 1、查找相关包
 
