@@ -6,25 +6,8 @@
 
 计算机代数系统 wxMaxima： `#pkg install wxmaxima`
 
-Python 及其相关模块：
+Python 及其相关模块： `#pkg install python py38-scipy py38-pandas py38-matplotlib py38-sympy`
 
-pyhton 安装：`#pkg install python`
-
-模块安装：
-
-```sh
-#pkg install py38-scipy py38-pandas py38-matplotlib py38-sympy
-```
-
-或者
-
-```sh
-#pkg install py38-pip
-pip install scipy
-pip install pandas
-pip install matplotlib
-pip install sympy
-```
 
 ## 统计学
 
