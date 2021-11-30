@@ -63,14 +63,16 @@ FreeBSD: { enabled: no }
 
 ## 其他镜像站
 
-网易开源镜像站&#x20;
+**注意：FreeBSD 目前在中国大陆并没有官方镜像站提供，具体可参考前一节。**
+
+网易开源镜像站 （pkg+ ports）
 
 {% embed url="https://mirrors.163.com" %}
 
-中国科学技术大学开源软件镜像
+中国科学技术大学开源软件镜像 (p
 
 {% embed url="https://mirrors.ustc.edu.cn" %}
 
-freebsd.cn （非官方）
+freebsd.cn&#x20;
 
 {% embed url="http://freebsd.cn" %}
