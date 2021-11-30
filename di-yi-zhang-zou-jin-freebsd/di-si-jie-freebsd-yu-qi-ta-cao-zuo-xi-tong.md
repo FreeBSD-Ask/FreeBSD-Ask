@@ -2,7 +2,7 @@
 
 　 FreeBSD 不是 Linux，不是国产操作系统，不兼容 Systemd，不能吃鸡，亦不是 UNIX 。目前在 BSD 系中，FreeBSD 的用户是最多的。一些 Linux 下的软件基本上在 FreeBSD 中都能够被找到，即使找不到的也可以通过 CentOS 兼容层运行，你也可以自己通过 debootstrap 构建一个 debian 或者 ubuntu 的 / 系统。
 
-![](../.gitbook/assets/图片3.png)** FreeBSD 不是Linux，亦不是UNIX。**
+![](../.gitbook/assets/图片3.png) **FreeBSD 不是Linux，亦不是UNIX。**
 
 UNIX -> Networking Release 1->Networking Release 2  ->386BSD -> FreeBSD 1.0
 
@@ -12,13 +12,13 @@ Linus“I have never even checked 386BSD out; when I started on Linux it wast av
 
 
 
-## 『FreeBSD or Others 』 <a href="freebsd-or-others" id="freebsd-or-others"></a>
+## 『FreeBSD or Others 』 <a href="#freebsd-or-others" id="freebsd-or-others"></a>
 
 　　①Linux
 
 　　首先大概许多人是从 Linux 跑过来的，这样说我也没什么统计依据，不过姑且这样说罢。如果你发现在哪本书是举例提到 FreeBSD 是一种 Linux 发行版，那么我个人是不建议你继续看下去的，这属于误人子弟，我也曾在某些慕课网站上看到过类似行为。
 
-　　严格来说 Linux 是指 Linux kernel，只是个内核而非操作系统。而 FreeBSD 是个操作系统。FreeBSD 采用 BSD 授权许可（见 [_https://www.freebsd.org/zh\_CN/copyright/freebsd-license.html_](https://www.freebsd.org/zh\_CN/copyright/freebsd-license.html)_ _）。FreeBSD 驱动方面一直是个大 Bug，不如 Linux 。
+　　严格来说 Linux 是指 Linux kernel，只是个内核而非操作系统。而 FreeBSD 是个操作系统。FreeBSD 采用 BSD 授权许可（见 [_https://www.freebsd.org/zh\_CN/copyright/freebsd-license.html_](https://www.freebsd.org/zh\_CN/copyright/freebsd-license.html) __ ）。FreeBSD 驱动方面一直是个大 Bug，不如 Linux 。
 
 　　②Mac OS & iOS
 

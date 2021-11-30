@@ -4,7 +4,7 @@
 
 首先在 Windwos  系统里 IDA 的安装路径里找到 dbgsrv 文件夹里的 linux\_server64 文件。
 
-复制到** FreeBSD **里，可以用 Winscp
+复制到 **FreeBSD** 里，可以用 Winscp
 
 那就复制 linux\_server64 和你需要远程调试的文件 target（假设）到  /root/reverse 文件夹里（文件夹任意），给权限 777，并且运行 linux\_server64。
 
@@ -12,19 +12,9 @@
 
 ![](../.gitbook/assets/IDA1.png)
 
-&#x20;
-
-&#x20;
-
 请用 64位的 IDA， 按照如下截图操作。
 
-&#x20;
-
 ![](../.gitbook/assets/IDA2.png)
-
-
-
-&#x20;
 
 第一个是要调试的文件在虚拟机里的位置。
 

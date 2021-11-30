@@ -1,6 +1,6 @@
 # 第一节 我与 FreeBSD 的故事
 
-## 我与FreeBSD 的故事之一 <a href="wo-yu-freebsd-de-gu-shi-zhi-yi" id="wo-yu-freebsd-de-gu-shi-zhi-yi"></a>
+## 我与FreeBSD 的故事之一 <a href="#wo-yu-freebsd-de-gu-shi-zhi-yi" id="wo-yu-freebsd-de-gu-shi-zhi-yi"></a>
 
 记得还是那些无聊的日子，群里有网友称 Linux 只能玩 WPS，我表示质疑，并通过百度这个搜索引擎搜索到 了Ubuntu Kylin，即由湖南的国防科技大学 与 Ubuntu 社区合作并由其主导的 UbuntKylin 麒麟项目。
 
@@ -132,7 +132,7 @@ Gentoo 的 TG 群就更有意思了，他们的管理员各自称呼对方为“
 
 委员长是在加拿大的 University of Waterloo 留学，University of Waterloo 的 Co-operative project 使委员长得以名副其实。当时还不怎么羡慕委员长，现在再羡慕也已然没有丝毫用处了。
 
-委员长是 doc committer，负责文档的修订翻译等工作。所以委员长在 QQ 群里招兵买马翻译 Handbook 手册就是一件理所当然的事情。但是往往事与愿违，委员长搞了一套对翻译者比较复杂的翻译流程，大体来说就是先在 Github 创建一个项目，然后通过Issue 认领自己翻译部分，最后通过 pull 申请合并翻译后的po 翻译文本。对于一个经验丰富的程序员来说这算不上难事，但是对于一般人来说同步到本地都有点费劲，因为 Github 直接下是 404 的，有的地区甚至_ http://github.com_ 都打不开，其中原因大家都知道。
+委员长是 doc committer，负责文档的修订翻译等工作。所以委员长在 QQ 群里招兵买马翻译 Handbook 手册就是一件理所当然的事情。但是往往事与愿违，委员长搞了一套对翻译者比较复杂的翻译流程，大体来说就是先在 Github 创建一个项目，然后通过Issue 认领自己翻译部分，最后通过 pull 申请合并翻译后的po 翻译文本。对于一个经验丰富的程序员来说这算不上难事，但是对于一般人来说同步到本地都有点费劲，因为 Github 直接下是 404 的，有的地区甚至 _http://github.com_ 都打不开，其中原因大家都知道。
 
 于是我的朋友毛狗子说自己不会 git，直接下载 po文档，翻译完再发 QQ 给委员长不行吗？委员长当即表示可以，于是毛狗子开始了他的翻译之路……
 
