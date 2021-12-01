@@ -74,7 +74,9 @@ mkdir /data mount /dev/da0s2a /data
 printf "/dev/da0s2a\t/data\t\tufs\trw\t2\t2\n" >> /etc/fstab
 ```
 ```
-#3.GPT 在系统盘新建分区(假设已为系统盘增加 50G 磁盘空间) gpart add -t freebsd-ufs /dev/da0 #在磁盘/dev/da0 上添加分区，GPT 中没有分片的概念 
+#3.GPT 在系统盘新建分区(假设已为系统盘增加 50G 磁盘空间) 
+
+gpart add -t freebsd-ufs /dev/da0 #在磁盘/dev/da0 上添加分区，GPT 中没有分片的概念 
 
 newfs /dev/da0p4 #格式化新分区。这里注意新分区名称，p1 是 boot 分区，p2 是系统分区，p3 是 swap 分区，因此新分区默认为 p4 
 mkdir /data mount /dev/da0p4 /data 
@@ -85,7 +87,8 @@ printf "/dev/da0p4\t/data\t\tufs\trw\t2\t2\n" >> /etc/fstab
 
 gpart create -s GPT /dev/da1 #为磁盘/dev/da1 设置分区表。若想用 MBR 分区，则将-s 参数的值改为 MBR 
 
-gpart add -t freebsd-ufs /dev/da1 #在磁盘/dev/da1 上添加分区，类型 freebsd-ufs newfs /dev/da1p1 #格式化新分区。由于当前分区是当前分片上的第一个分区，因此系统默认分配为 p1 
+gpart add -t freebsd-ufs /dev/da1 #在磁盘/dev/da1 上添加分区，类型 freebsd-ufs 
+newfs /dev/da1p1 #格式化新分区。由于当前分区是当前分片上的第一个分区，因此系统默认分配为 p1 
 mkdir /data mount /dev/da1p1 /data 
 printf "/dev/da1p1\t/data\t\tufs\trw\t2\t2\n" >> /etc/fstab
 ```
