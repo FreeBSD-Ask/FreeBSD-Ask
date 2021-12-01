@@ -59,3 +59,10 @@ ntpdate_flags="0.cn.pool.ntp.org"
 　　输入 `date` 查看时间，完成校时。我国使用 UTC+8 北京时，虽然不更改不会影响软件使用，但看起来不方便，可通过 `bsdconfig` 命令将地区调整到亚洲 /中国 /上海。
 
 　　树莓派应该会自动接通互联网，所以不必考虑联网问题。
+
+CPU 频率调整（600MHZ 到 1500MHZ）：
+
+```
+# sysrc powerd_enable="YES"
+# service powerd restart
+```
