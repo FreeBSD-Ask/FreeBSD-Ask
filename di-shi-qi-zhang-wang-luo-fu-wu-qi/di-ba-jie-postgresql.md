@@ -6,9 +6,9 @@ FreeBSD 的软件源有提供 PostgreSQL 的安装包，版本 12.2，可以通�
 ```
 pkg install -y postgresql12-server postgresql12-client 
 ```
-安装后会在系统中生成 postgresql 服务，可以用 service 命令管理
+安装后会在系统中生成 postgresql 服务，可以用 service 命令管理。
 
-。但此刻启动服务只会报 错，这是因为 PostgreSQL 尚未初始化，故此还需要执行命令： 
+但此刻启动服务只会报 错，这是因为 PostgreSQL 尚未初始化，故此还需要执行命令： 
 ```
 su postgres -c "pg\_ctl -D /var/db/postgres/data12 initdb" 
 ```
