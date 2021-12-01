@@ -4,7 +4,9 @@
 
 　　因此不建议使用 U 盘启动，慢的我要打年年猫，年年猫是谁？是一只调皮的狸花猫而已。
 
-　　我们所有要准备的有树莓派 4 板子一块，网线一段，存储卡一枚。从 FreeBSD.org 下载适用于树莓派 4 的镜像。
+　　我们所有要准备的有树莓派 4 板子一块，网线一段，存储卡一枚。从 FreeBSD.org 下载适用于树莓派 4 的镜像:
+
+{% embed url="https://download.freebsd.org/ftp/releases/arm64/aarch64/ISO-IMAGES/13.0/FreeBSD-13.0-RELEASE-arm64-aarch64-RPI.img.xz" %}
 
 　　下载后解压缩。使用 rufus 刻录。插入网线，将存储卡插入树莓派，通电等待约五分钟，查看路由器后台获取 IP 。
 
