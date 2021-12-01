@@ -45,6 +45,7 @@
 * [第五节 安装 Xfce](di-si-zhang-zhuo-mian-an-zhuang/di-wu-zhang-an-zhuang-xfce.md)
 * [第六节 root 登录桌面](di-si-zhang-zhuo-mian-an-zhuang/di-liu-zhang-root-deng-lu-zhuo-mian.md)
 * [第七节 主题与美化](di-si-zhang-zhuo-mian-an-zhuang/di-qi-jie-zhu-ti-yu-mei-hua.md)
+* [第八节 远程桌面管理](di-si-zhang-zhuo-mian-an-zhuang/di-ba-jie-yuan-cheng-zhuo-mian-guan-li.md)
 
 ## 第五章 输入法及常用软件
 
@@ -57,6 +58,7 @@
 * [第七节 安装 QQ](di-wu-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-qi-jie-an-zhuang-qq.md)
 * [第八节 更换字体](di-wu-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-ba-jie-geng-huan-zi-ti.md)
 * [第九节 wine](di-wu-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-jiu-jie-wine.md)
+* [第十节 压缩与解压](di-wu-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-shi-jie-ya-suo-yu-jie-ya.md)
 
 ## 第六章 文件系统与磁盘管理
 
@@ -151,6 +153,7 @@
 * [第七节 Samba 服务器](di-shi-liu-zhang-fu-wu-qi/di-qi-jie-samba-fu-wu-qi.md)
 * [第八节 NFS 服务器](di-shi-liu-zhang-fu-wu-qi/di-ba-jie-nfs-fu-wu-qi.md)
 * [第九节 iSCSI](di-shi-liu-zhang-fu-wu-qi/di-jiu-jie-iscsi.md)
+* [第十节 Webmin](di-shi-liu-zhang-fu-wu-qi/di-shi-jie-webmin.md)
 
 ## 第十七章 网络服务器
 
