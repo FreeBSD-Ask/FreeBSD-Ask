@@ -51,6 +51,7 @@ ntpdate_flags="0.cn.pool.ntp.org"
 　　然后开启时间服务器：
 
 ```
+#systc ntpdate_enable="YES"
 #service ntpdate start
 ```
 
