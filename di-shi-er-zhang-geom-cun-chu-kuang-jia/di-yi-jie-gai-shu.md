@@ -1,3 +1,91 @@
 # 第一节 概述
 
-GEOM 模块化磁盘变换框架 及其他磁盘管理常用命令： fdisk -s /dev/da0 #打印磁盘对象汇总信息。其中/dev/da0 即磁盘对象，表示本机的第一块硬盘，如果不写 默认显示启动盘信息。还可以写成分片或分区，如/dev/da0s1 和/dev/da0s1a，其中硬盘用 da 表示，从 0 起算，分片用 s 表示，从 1 起算，分区则用字母 a-h 表示，/dev/da0s1a 即表示第一块硬盘第一个分片的 第一个分区，这是 MBR 的表示方法。GPT 由于没有分片的概念，直接就是分区，因此用 p 表示分区， 从 1 起算，/dev/da0p1 即表示第一块硬盘的第一个分区 dd if=/dev/zero of=/dev/da1 bs=1k count=1 #清理磁盘信息 fdisk -BI /dev/da1 #初始化磁盘，默认 MBR 模式 bsdlabel -w /dev/da1s1 #写入 bsdlabel bsdlabel -e /dev/da1s1 #用 vi 编辑器编辑 bsdlabel geom -t #树状结构显示磁盘对象关系 geom disk lsit #列表显示已使用的物理磁盘 geom disk status #显示已使用的物理磁盘状态信息 gpart list | geom part list #列表显示已创建的分片和分区 gpart status | geom part status #显示已创建的分片和分区状态信息 gpart show /dev/da1 #显示已使用的硬盘信息 gpart create -s GPT /dev/da1 #为磁盘/dev/da1 创建分区表，本例为 GPT 模式，还可以设置 MBR、APM、 BSD、BSD64、LDM、VTOC8 gpart add -b 64 -s 2048m -t freebsd-ufs -i 2 -l root0 /dev/da1 #在磁盘/dev/da1 上创建新分区。-b 表示起始位 置；-s 表示分配空间；-t 为分区格式，分片时可以用 freebsd，还有 freebsd-boot、freebsd-swap、freebsdzfs 等类型；-i 表示索引，本例为 2，即新分区名为/dev/da1p2；-l 为标签 newfs /dev/da1p2 #格式化分区 gpart modify -i 2 -t freebsd-zfs -l myroot /dev/da1 #在磁盘/dev/da1 上修改索引为 2 的分区，分区格式和标 签均可修改 gpart resize -i 2 -s 4g /dev/da1 #在磁盘/dev/da1 上调整索引为 2 的分区大小，单位可以用 k、m、g、t。注 意，如果要缩小分区，则分区不能处于使用状态，这意味着系统分区默认情况下无法缩小；如果要扩大 分区，则分区后面必须是空闲空间，而不能有其他分区，这意味着系统分区默认情况下也无法扩展。因 此在创建 FreeBSD 虚机时，应充份考虑可能使用系统盘的情况，或尽量避免使用系统盘 gpart bootcode -b /boot/mbr /dev/da1 #写入启动代码，常用的还有/boot/gptboot 和/boot/boot gpart set -a active -i 1 /dev/da0 #设置活动分片。分区表为 MBR 时，bsdinstall 和 sade 会自动把新建的分片 设置为活动分片，从而导致操作系统重启时无法正确加载启动分区，故需要重设 gpart delete -i 2 /dev/da1 #在磁盘/dev/da1 上删除索引为 2 的分区 gpart destroy -F /dev/da1 #销毁磁盘/dev/da1 上的信息，-F 参数表示强制 mount /dev/da1p1 /data #将分区/dev/da1p1 挂载到/data 目录，挂载后注意用 chown 命令设置归属，若希望 重启后自动挂载，请在终端执行命令：printf "/dev/da1p1\t/data\t\tufs\trw\t0\t0\n" >> /etc/fstab umount /data #卸载/data 目录上的挂载 下面再给出四组示例，谨供参考： #1.MBR 在系统盘扩展分片后新建分区(假设已为系统盘增加 50G 磁盘空间) gpart resize -i 1 -s 149g /dev/da0 #调整分片/dev/da0s1 的空间为 149G。尽管磁盘的大小为 150G，但由于技术原 因，实际可使用的空间并没有那么多 gpart add -t freebsd-ufs /dev/da0s1 #在分片/dev/da0s1 上添加分区，类型 freebsd-ufs。不指定-s 参数时，表示将 剩余空间都分配给该分区 newfs /dev/da0s1d #格式化新分区。这里注意新分区名称，由于 a 是启动分区，b 是 swap 分区，c 已经被分 片本身占用，因此新分区默认分配为 d mkdir /data mount /dev/da0s1d /data printf "/dev/da0s1d\t/data\t\tufs\trw\t2\t2\n" >> /etc/fstab #2.MBR 在系统盘新建分片后再建分区(假设已为系统盘增加 50G 磁盘空间) gpart add -t freebsd /dev/da0 #在次跑/dev/da0 上添加分片，类型 freebsd。不指定-s 参数时，表示将剩余空间都 分配给该分片 gpart create -s BSD /dev/da0s2 #设置分片生效 gpart add -t freebsd-ufs /dev/da0s2 #在分片/dev/da0s2 上添加分区，类型 freebsd-ufs。不指定-s 参数时，表示将 剩余空间都分配给该分区 newfs /dev/da0s2a #格式化新分区。由于当前分区是当前分片上的第一个分区，因此系统默认分配为 a gpart set -a active -i 1 /dev/da0 #设置活动分片。若用 bsdinstall 或 sade 创建新分片，则此步骤为必须 mkdir /data mount /dev/da0s2a /data printf "/dev/da0s2a\t/data\t\tufs\trw\t2\t2\n" >> /etc/fstab #3.GPT 在系统盘新建分区(假设已为系统盘增加 50G 磁盘空间) gpart add -t freebsd-ufs /dev/da0 #在磁盘/dev/da0 上添加分区，GPT 中没有分片的概念 newfs /dev/da0p4 #格式化新分区。这里注意新分区名称，p1 是 boot 分区，p2 是系统分区，p3 是 swap 分 区，因此新分区默认为 p4 mkdir /data mount /dev/da0p4 /data printf "/dev/da0p4\t/data\t\tufs\trw\t2\t2\n" >> /etc/fstab #4.GPT 创建数据分区 gpart create -s GPT /dev/da1 #为磁盘/dev/da1 设置分区表。若想用 MBR 分区，则将-s 参数的值改为 MBR gpart add -t freebsd-ufs /dev/da1 #在磁盘/dev/da1 上添加分区，类型 freebsd-ufs newfs /dev/da1p1 #格式化新分区。由于当前分区是当前分片上的第一个分区，因此系统默认分配为 p1 mkdir /data mount /dev/da1p1 /data printf "/dev/da1p1\t/data\t\tufs\trw\t2\t2\n" >> /etc/fstab
+GEOM 模块化磁盘变换框架及其他磁盘管理常用命令： 
+
+```
+fdisk -s /dev/da0 #打印磁盘对象汇总信息。其中/dev/da0 即磁盘对象，表示本机的第一块硬盘，如果不写 默认显示启动盘信息。还可以写成分片或分区，如/dev/da0s1 和/dev/da0s1a，其中硬盘用 da 表示，从 0 起算，分片用 s 表示，从 1 起算，分区则用字母 a-h 表示，/dev/da0s1a 即表示第一块硬盘第一个分片的 第一个分区，这是 MBR 的表示方法。GPT 由于没有分片的概念，直接就是分区，因此用 p 表示分区， 从 1 起算，/dev/da0p1 即表示第一块硬盘的第一个分区 
+
+dd if=/dev/zero of=/dev/da1 bs=1k count=1 #清理磁盘信息 
+
+fdisk -BI /dev/da1 #初始化磁盘，默认 MBR 模式 bsdlabel -w /dev/da1s1 #写入 bsdlabel 
+
+bsdlabel -e /dev/da1s1 #用 vi 编辑器编辑 
+
+bsdlabel geom -t #树状结构显示磁盘对象关系
+
+geom disk lsit #列表显示已使用的物理磁盘 
+
+geom disk status #显示已使用的物理磁盘状态信息 
+
+gpart list | geom part list #列表显示已创建的分片和分区 
+
+gpart status | geom part status #显示已创建的分片和分区状态信息 
+
+gpart show /dev/da1 #显示已使用的硬盘信息 
+
+gpart create -s GPT /dev/da1 #为磁盘/dev/da1 创建分区表，本例为 GPT 模式，还可以设置 MBR、APM、 BSD、BSD64、LDM、VTOC8 
+
+gpart add -b 64 -s 2048m -t freebsd-ufs -i 2 -l root0 /dev/da1 #在磁盘/dev/da1 上创建新分区。-b 表示起始位 置；-s 表示分配空间；-t 为分区格式，分片时可以用 freebsd，还有 freebsd-boot、freebsd-swap、freebsdzfs 等类型；-i 表示索引，本例为 2，即新分区名为/dev/da1p2；-l 为标签 newfs /dev/da1p2 #格式化分区 
+
+gpart modify -i 2 -t freebsd-zfs -l myroot /dev/da1 #在磁盘/dev/da1 上修改索引为 2 的分区，分区格式和标签均可修改 
+
+gpart resize -i 2 -s 4g /dev/da1 #在磁盘/dev/da1 上调整索引为 2 的分区大小，单位可以用 k、m、g、t。注 意，如果要缩小分区，则分区不能处于使用状态，这意味着系统分区默认情况下无法缩小；如果要扩大 分区，则分区后面必须是空闲空间，而不能有其他分区，这意味着系统分区默认情况下也无法扩展。因 此在创建 FreeBSD 虚机时，应充份考虑可能使用系统盘的情况，或尽量避免使用系统盘 
+
+gpart bootcode -b /boot/mbr /dev/da1 #写入启动代码，常用的还有/boot/gptboot 和/boot/boot 
+
+gpart set -a active -i 1 /dev/da0 #设置活动分片。分区表为 MBR 时，bsdinstall 和 sade 会自动把新建的分片设置为活动分片，从而导致操作系统重启时无法正确加载启动分区，故需要重设 
+
+gpart delete -i 2 /dev/da1 #在磁盘/dev/da1 上删除索引为 2 的分区 
+
+gpart destroy -F /dev/da1 #销毁磁盘/dev/da1 上的信息，-F 参数表示强制 
+
+mount /dev/da1p1 /data #将分区/dev/da1p1 挂载到/data 目录，挂载后注意用 chown 命令设置归属，若希望重启后自动挂载，请在终端执行命令：
+printf "/dev/da1p1\t/data\t\tufs\trw\t0\t0\n" >> /etc/fstab 
+umount /data #卸载/data 目录上的挂载 
+```
+
+
+下面再给出四组示例，谨供参考： 
+
+#1.MBR 在系统盘扩展分片后新建分区(假设已为系统盘增加 50G 磁盘空间) gpart resize -i 1 -s 149g /dev/da0 #调整分片/dev/da0s1 的空间为 149G。尽管磁盘的大小为 150G，但由于技术原因，实际可使用的空间并没有那么多 
+
+```
+gpart add -t freebsd-ufs /dev/da0s1 #在分片/dev/da0s1 上添加分区，类型 freebsd-ufs。不指定-s 参数时，表示将 剩余空间都分配给该分区 
+
+newfs /dev/da0s1d #格式化新分区。这里注意新分区名称，由于 a 是启动分区，b 是 swap 分区，c 已经被分 片本身占用，因此新分区默认分配为 d 
+mkdir /data 
+mount /dev/da0s1d /data 
+printf "/dev/da0s1d\t/data\t\tufs\trw\t2\t2\n" >> /etc/fstab
+```
+
+#2.MBR 在系统盘新建分片后再建分区(假设已为系统盘增加 50G 磁盘空间) 
+
+```
+gpart add -t freebsd /dev/da0 #在次跑/dev/da0 上添加分片，类型 freebsd。不指定-s 参数时，表示将剩余空间都 分配给该分片 
+
+gpart create -s BSD /dev/da0s2 #设置分片生效 gpart add -t freebsd-ufs /dev/da0s2 #在分片/dev/da0s2 上添加分区，类型 freebsd-ufs。不指定-s 参数时，表示将 剩余空间都分配给该分区 
+
+newfs /dev/da0s2a #格式化新分区。由于当前分区是当前分片上的第一个分区，因此系统默认分配为 a 
+
+gpart set -a active -i 1 /dev/da0 #设置活动分片。若用 bsdinstall 或 sade 创建新分片，则此步骤为必须 
+mkdir /data mount /dev/da0s2a /data 
+printf "/dev/da0s2a\t/data\t\tufs\trw\t2\t2\n" >> /etc/fstab
+```
+
+#3.GPT 在系统盘新建分区(假设已为系统盘增加 50G 磁盘空间) gpart add -t freebsd-ufs /dev/da0 #在磁盘/dev/da0 上添加分区，GPT 中没有分片的概念 
+
+```
+newfs /dev/da0p4 #格式化新分区。这里注意新分区名称，p1 是 boot 分区，p2 是系统分区，p3 是 swap 分区，因此新分区默认为 p4 
+mkdir /data mount /dev/da0p4 /data 
+printf "/dev/da0p4\t/data\t\tufs\trw\t2\t2\n" >> /etc/fstab 
+```
+
+#4.GPT 创建数据分区 
+
+```
+gpart create -s GPT /dev/da1 #为磁盘/dev/da1 设置分区表。若想用 MBR 分区，则将-s 参数的值改为 MBR 
+
+gpart add -t freebsd-ufs /dev/da1 #在磁盘/dev/da1 上添加分区，类型 freebsd-ufs newfs /dev/da1p1 #格式化新分区。由于当前分区是当前分片上的第一个分区，因此系统默认分配为 p1 
+mkdir /data mount /dev/da1p1 /data 
+printf "/dev/da1p1\t/data\t\tufs\trw\t2\t2\n" >> /etc/fstab
+```
