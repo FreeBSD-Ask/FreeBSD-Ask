@@ -83,7 +83,9 @@ echo password | pw usermod test2 -h 0 #修改用户 test2 密码为 password
 -r，删除用户同时删除用户主目录及所有相关信息，不使用该参数则信息保留，仅删除用户 
 
 示例： 
+```
 pw userdel test2 -r 
+```
 
 4、usershow 命令，用于显示用户信息，
 
