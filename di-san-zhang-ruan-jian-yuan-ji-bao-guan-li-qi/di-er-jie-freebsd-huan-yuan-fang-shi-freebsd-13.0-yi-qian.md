@@ -76,3 +76,7 @@ FreeBSD: { enabled: no }
 freebsd.cn&#x20;
 
 {% embed url="http://freebsd.cn" %}
+
+南京大学开源镜像站
+
+{% embed url="https://mirrors.nju.edu.cn" %}
