@@ -6,10 +6,6 @@
 
 　　我们所有要准备的有树莓派 3B+板子一块，网线一段，存储卡一枚。从华为云镜像站（速度较快）下载适用于树莓派 3B+的镜像，12 和 13 我用起来感觉都一样，不过 13 的 LLVM 版本太新，很多软件编译不过去，所以还是用 12 的吧。
 
-__[_https://mirrors.huaweicloud.com/freebsd/snapshots/ISO-IMAGES/13.0/FreeBSD-13.0-CURRENT-arm64-aarch64-RPI3-20200116-r356767.img.xz_](https://mirrors.huaweicloud.com/freebsd/snapshots/ISO-IMAGES/13.0/FreeBSD-13.0-CURRENT-arm64-aarch64-RPI3-20200116-r356767.img.xz) 　__ 　
-
-（该链接不是固定的找不到就去 [_https://mirrors.huaweicloud.com/freebsd/snapshots/ISO-IMAGES/13.0_](https://mirrors.huaweicloud.com/freebsd/snapshots/ISO-IMAGES/13.0) ）
-
 　　下载后解压缩。使用 rufus 刻录。插入网线，将存储卡插入树莓派，通电等待约五分钟，查看路由器后台获取 IP 。
 
 　　使用 XShell 即可登录树莓派。用户名密码均为 freebsd 。root 需要登录后输入 su，密码为 root 。可通过更改
