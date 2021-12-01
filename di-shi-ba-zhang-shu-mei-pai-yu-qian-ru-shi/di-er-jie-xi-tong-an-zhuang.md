@@ -14,13 +14,13 @@ __[_https://mirrors.huaweicloud.com/freebsd/snapshots/ISO-IMAGES/13.0/FreeBSD-13
 
 　　使用 XShell 即可登录树莓派。用户名密码均为 freebsd 。root 需要登录后输入 su，密码为 root 。可通过更改
 
-　　/etc/ssh/sshd\_config
+　　`/etc/ssh/sshd_config`
 
 　　文件来开启 root 账户的 ssh 远程登录权限。
 
 　　方法：
 
-　　编辑 /etc/sh/sshd\_config （注意是 sshd 不是 ssh ！这是两个文件），修改或者加入
+　　编辑 `/etc/sh/sshd_config` （注意是 sshd 不是 ssh ！这是两个文件），修改或者加入
 
 ```
 PermitRootLogin yes #允许 root 登录
@@ -51,9 +51,9 @@ ntpdate_flags="0.cn.pool.ntp.org"
 　　然后开启时间服务器：
 
 ```
-#server ntpdate start
+#service ntpdate start
 ```
 
-　　输入 date 查看时间，完成校时。我国使用 UTC+8 北京时，虽然不更改不会影响软件使用，但看起来不方便，可通过 bsdconfig 命令将地区调整到亚洲 /中国 /上海。
+　　输入 `date` 查看时间，完成校时。我国使用 UTC+8 北京时，虽然不更改不会影响软件使用，但看起来不方便，可通过 bsdconfig 命令将地区调整到亚洲 /中国 /上海。
 
 　　树莓派应该会自动接通互联网，所以不必考虑联网问题。
