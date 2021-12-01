@@ -47,9 +47,11 @@ umount /data #卸载/data 目录上的挂载
 
 下面再给出四组示例，谨供参考： 
 
-#1.MBR 在系统盘扩展分片后新建分区(假设已为系统盘增加 50G 磁盘空间) gpart resize -i 1 -s 149g /dev/da0 #调整分片/dev/da0s1 的空间为 149G。尽管磁盘的大小为 150G，但由于技术原因，实际可使用的空间并没有那么多 
-
 ```
+#1.MBR 在系统盘扩展分片后新建分区(假设已为系统盘增加 50G 磁盘空间) 
+
+gpart resize -i 1 -s 149g /dev/da0 #调整分片/dev/da0s1 的空间为 149G。尽管磁盘的大小为 150G，但由于技术原因，实际可使用的空间并没有那么多 
+
 gpart add -t freebsd-ufs /dev/da0s1 #在分片/dev/da0s1 上添加分区，类型 freebsd-ufs。不指定-s 参数时，表示将 剩余空间都分配给该分区 
 
 newfs /dev/da0s1d #格式化新分区。这里注意新分区名称，由于 a 是启动分区，b 是 swap 分区，c 已经被分 片本身占用，因此新分区默认分配为 d 
@@ -58,9 +60,9 @@ mount /dev/da0s1d /data
 printf "/dev/da0s1d\t/data\t\tufs\trw\t2\t2\n" >> /etc/fstab
 ```
 
+```
 #2.MBR 在系统盘新建分片后再建分区(假设已为系统盘增加 50G 磁盘空间) 
 
-```
 gpart add -t freebsd /dev/da0 #在次跑/dev/da0 上添加分片，类型 freebsd。不指定-s 参数时，表示将剩余空间都 分配给该分片 
 
 gpart create -s BSD /dev/da0s2 #设置分片生效 gpart add -t freebsd-ufs /dev/da0s2 #在分片/dev/da0s2 上添加分区，类型 freebsd-ufs。不指定-s 参数时，表示将 剩余空间都分配给该分区 
@@ -71,18 +73,16 @@ gpart set -a active -i 1 /dev/da0 #设置活动分片。若用 bsdinstall 或 sa
 mkdir /data mount /dev/da0s2a /data 
 printf "/dev/da0s2a\t/data\t\tufs\trw\t2\t2\n" >> /etc/fstab
 ```
-
+```
 #3.GPT 在系统盘新建分区(假设已为系统盘增加 50G 磁盘空间) gpart add -t freebsd-ufs /dev/da0 #在磁盘/dev/da0 上添加分区，GPT 中没有分片的概念 
 
-```
 newfs /dev/da0p4 #格式化新分区。这里注意新分区名称，p1 是 boot 分区，p2 是系统分区，p3 是 swap 分区，因此新分区默认为 p4 
 mkdir /data mount /dev/da0p4 /data 
 printf "/dev/da0p4\t/data\t\tufs\trw\t2\t2\n" >> /etc/fstab 
 ```
-
+```
 #4.GPT 创建数据分区 
 
-```
 gpart create -s GPT /dev/da1 #为磁盘/dev/da1 设置分区表。若想用 MBR 分区，则将-s 参数的值改为 MBR 
 
 gpart add -t freebsd-ufs /dev/da1 #在磁盘/dev/da1 上添加分区，类型 freebsd-ufs newfs /dev/da1p1 #格式化新分区。由于当前分区是当前分片上的第一个分区，因此系统默认分配为 p1 
