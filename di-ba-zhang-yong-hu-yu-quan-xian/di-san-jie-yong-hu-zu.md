@@ -62,7 +62,7 @@
 示例：
 ```
 pw useradd test1 #创建用户 test1，uid 系统默认，test1 组，登陆环境/bin/sh，主目录未创建
-pw useradd test2 -u 1200 -m -d /tmp/test -g test1 -G wheel -s csh -c test2 #创建用户 test2，uid 为 1200，创建 主目录，主目录为/tmp/test，test1 组，有管理员权限，登陆环境/bin/csh，全名 test2 
+pw useradd test2 -u 1200 -m -d /tmp/test -g test1 -G wheel -s csh -c test2 #创建用户 test2，uid 为 1200，创建主目录，主目录为/tmp/test，test1 组，有管理员权限，登陆环境/bin/csh，全名 test2 
 echo password | pw useradd test3 -h 0 #创建用户 test3，同时设置密码为 password 
 ```
 
@@ -73,9 +73,9 @@ echo password | pw useradd test3 -h 0 #创建用户 test3，同时设置密码�
 示例： 
 
 ```
-pw usermod test1 -G wheel #为用户 test1 增加管理员权限 pw usermod test1 -l myuser
-#用户 test1 改名为 myuser echo password | pw usermod test2 -h 0 
-#修改用户 test2 密码为 password 
+pw usermod test1 -G wheel #为用户 test1 增加管理员权限 
+pw usermod test1 -l myuser #用户 test1 改名为 myuser 
+echo password | pw usermod test2 -h 0 #修改用户 test2 密码为 password 
 ```
 
 3、userdel 命令，用于删除用户，常用参数： 
