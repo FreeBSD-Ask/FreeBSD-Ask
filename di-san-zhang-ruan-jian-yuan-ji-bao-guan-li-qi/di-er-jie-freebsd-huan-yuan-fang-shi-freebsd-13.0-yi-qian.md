@@ -69,14 +69,14 @@ FreeBSD: { enabled: no }
 
 {% embed url="https://mirrors.163.com" %}
 
-中国科学技术大学开源软件镜像 (p
+中国科学技术大学开源软件镜像 (pkg + ports)
 
 {% embed url="https://mirrors.ustc.edu.cn" %}
 
-freebsd.cn&#x20;
+freebsd.cn (pkg + ports + update + portsnap)
 
 {% embed url="http://freebsd.cn" %}
 
-南京大学开源镜像站
+南京大学开源镜像站（pkg + ports）
 
 {% embed url="https://mirrors.nju.edu.cn" %}
