@@ -1,6 +1,6 @@
 # 第五节 为什么要使用 FreeBSD
 
-## 『选择 FreeBSD 的一般原因』 <a href="xuan-ze-freebsd-de-yi-ban-yuan-yin" id="xuan-ze-freebsd-de-yi-ban-yuan-yin"></a>
+## 选择 FreeBSD 的一般原因 <a href="#xuan-ze-freebsd-de-yi-ban-yuan-yin" id="xuan-ze-freebsd-de-yi-ban-yuan-yin"></a>
 
 　　从道家来讲，你爱选不选，太长不看，不用？左转 Linux , Windows 吧，不谢。
 
@@ -18,7 +18,7 @@
 
 　　 BSD 是一个完整的 OS，而不是内核。内核和基本系统作为一个项目来整体维护。
 
-## 『选择 FreeBSD 的技术性原因』
+## 选择 FreeBSD 的技术性原因
 
 　　系统配置文件与第三方软件配置文件分离。/etc 与 /usr/local/etc 等
 
