@@ -10,7 +10,7 @@ UNIX -> Networking Release 1->Networking Release 2  ->386BSD -> FreeBSD 1.0
 
 Linus“I have never even checked 386BSD out; when I started on Linux it wast available”
 
-
+![](../.gitbook/assets/图片2.png)
 
 ## 『FreeBSD or Others 』 <a href="#freebsd-or-others" id="freebsd-or-others"></a>
 
