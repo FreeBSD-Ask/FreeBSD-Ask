@@ -28,7 +28,7 @@ FreeBSD 已从 Linux 移植了显卡驱动，理论上，A 卡 N 卡均可在 am
 
 打开`/etc/rc.conf`:
 
-* 如果为 intel 核心显卡，添加 `kld_list="i915kms"`
+* 如果为 intel 核芯显卡，添加 `kld_list="i915kms"`
 * 如果为 HD7000 以后的 AMD 显卡，添加` kld_list="amdgpu"`
 * 如果为 HD7000 以前的 AMD 显卡，添加 `kld_list="radeonkms"`
 
