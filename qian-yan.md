@@ -11,7 +11,7 @@
 具体请参考 [WIKI](https://github.com/FreeBSD-Ask/FreeBSD-Ask/wiki/%E3%80%8AFreeBSD-%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E8%B7%91%E8%B7%AF%E3%80%8B%E7%BC%96%E8%BE%91%E6%8C%87%E5%8D%97)，关于贡献者请参考 第一章 第九节。
  
  ## 意见反馈
- 如果您对本书有任何意见或者建议，欢迎与我们联系。您可以利用 Github 的各种交互功能与我们联系：提交 Issue、Pull request 或者加入 QQ 群或 TG 群直接联系作者等。
+由于编写者水平所限，书中缺点和谬误之处自不可免，希望同志们随时提出批评意见，以便修正。您可以利用 Github 的各种交互功能与我们联系：提交 Issue、Pull request 或者加入 QQ 群或 TG 群直接联系作者等。
 
 ## TODO
 后续还有很多需要完善的工作，包括不限于:
@@ -22,4 +22,4 @@
 - 积极对外宣传并寻求正式出版
 
 ## 许可证
-本书采用 [BSD-3-Clause License](https://github.com/FreeBSD-Ask/FreeBSD-Ask/blob/main/LICENSE) 许可证开源。我们在编写过程中不可避免地参考了一些作者的教程，在此表示感谢，如果您不想被引用，请联系我们。
+本书采用 [BSD-3-Clause License](https://github.com/FreeBSD-Ask/FreeBSD-Ask/blob/main/LICENSE) 许可证开源。我们在编写过程吸收了一些现有的研究成果，在此表示感谢。
