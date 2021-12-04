@@ -18,4 +18,4 @@
 
 ![](.gitbook/assets/proud\_donor.gif)
 
-{% embed url="https://freebsdfoundation.org/donate" %}
+[点此捐赠](https://freebsdfoundation.org/donate)
