@@ -20,7 +20,7 @@ VMware Workstation 16 Player 是个人免费使用的，你也可以选择此版
 
 ## 故障排除
 
-vmware 自动缩放屏幕请安装 x11-drivers/xf86-video-vmware：&#x20;
+vmware 自动缩放屏幕请安装 x11-drivers/xf86-video-vmware：
 
 `#pkg install xf86-video-vmware`
 

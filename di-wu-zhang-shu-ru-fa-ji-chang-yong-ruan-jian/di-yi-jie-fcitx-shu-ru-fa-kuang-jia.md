@@ -49,7 +49,7 @@ chinese/fcitx5-rime
 
 　　可通过 ports 安装。环境变量取决于你的窗口管理器和桌面以及 shell 。经测试不支持 slim，可能是配置问题。sddm 可用。
 
-　　自动启动：&#x20;
+　　自动启动：
 
 `#cp /usr/local/share/applications/fcitx.desktop ~/.config/autostart/`
 

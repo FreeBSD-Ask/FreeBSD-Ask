@@ -13,11 +13,11 @@
 
 ## 启用xfce
 
-`echo ". /usr/local/etc/xdg/xfce4/xinitrc"> ~/.xinitrc`&#x20;
+`echo ". /usr/local/etc/xdg/xfce4/xinitrc"> ~/.xinitrc`
 
 或者
 
-&#x20;`echo ". /usr/local/etc/xdg/xfce4/xinitrc" > ~/.xsession` 根据条件使用
+`echo ". /usr/local/etc/xdg/xfce4/xinitrc" > ~/.xsession` 根据条件使用
 
 ## 启动服务
 

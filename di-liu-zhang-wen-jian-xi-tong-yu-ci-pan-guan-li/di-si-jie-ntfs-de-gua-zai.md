@@ -6,7 +6,7 @@
 
 `#ee /etc/rc.conf` 加入
 
-`fusefs_enable="YES"`&#x20;
+`fusefs_enable="YES"`
 
 该设置理论上在步骤1会自动加入，但是还需要你去检查看看有没有。
 

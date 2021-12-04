@@ -10,7 +10,7 @@ FreeBSD 已从 Linux 移植了显卡驱动，理论上，A 卡 N 卡均可在 am
 
 对于 FreeBSD 13，支持情况同 Linux 5.4，最高可以支持 Intel 第十二代处理器。
 
-详细情况可以看&#x20;
+详细情况可以看
 
 {% embed url="https://wiki.freebsd.org/Graphics" %}
 
@@ -59,7 +59,7 @@ $nvidia-smi
 #cp /root/xorg.conf.new /etc/X11/xorg.conf
 ```
 
-然后重新启动就可以发现正常使用 nvidia 驱动了&#x20;
+然后重新启动就可以发现正常使用 nvidia 驱动了
 
 **注意**： 默认情况下，通过 pkg 安装的 nvidia-driver 是包含 linux compatibility support, 如果要使用 Linux 软件，需要执行以下命令，（实际上使用linux兼容层，以下命令是必须的。） 如果不需要使用 Linux 兼容层，则不需要执行。
 

@@ -4,7 +4,7 @@
 
 二者的使用都需要先安装 Linux 兼容层，见[ 第六节](di-wu-jie-linux-jian-rong-ceng.md)。字体问题见 [第八节](di-ba-jie-geng-huan-zi-ti.md)
 
-## 1、国内版&#x20;
+## 1、国内版
 
 linux-wps-office-zh_CN
 

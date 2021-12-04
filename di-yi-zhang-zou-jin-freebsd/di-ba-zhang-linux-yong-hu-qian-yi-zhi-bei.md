@@ -14,11 +14,11 @@ Ubuntu 是著名的内部错误发行版。有些人为此争辩“那是 Ubuntu
 
 Fedora 俗称“地沟油”，是基于 RHEL 的上游系统，我更喜欢称其为小白鼠发行版，其发行的根本目的是为了测试 RHEL 系统的新设计和新架构，待稳定后迁移到 RHEL。稳定性可见一斑。
 
-## CentOS/Rocky Linux/RHEL&#x20;
+## CentOS/Rocky Linux/RHEL
 
 目前，CentOS 已经不再是以往的基于 RHEL 源代码构建的操作系统，而是 RHEL 的中游测试系统，和Fedora 差不多了。其替代品五花八门，甚至还有取得了 UNIX 认证的所谓**欧拉系统**。但是我认为Rocky Linux 更加有前景。这些系统在服务器上被广泛部署，具体缺点就是以牺牲软件的“新”来换取“稳”，软件版本非常陈旧。
 
-## Debian&#x20;
+## Debian
 
 Debian 俗称“大便”。有个很奇怪的事情，设置了 root 密码就不会安装 sudo。Debian 的软件包也不甚更新。（此处仅指 stable）。、
 
