@@ -6,10 +6,11 @@
 
 **那么，现在到底什么是 UNIX？**
 
-查询网址：[_http://www.opengroup.org/openbrand/register_](http://www.opengroup.org/openbrand/register)__
+查询网址：[http://www.opengroup.org/openbrand/register](http://www.opengroup.org/openbrand/register)
 
 1、符合单一 UNIX 规范
 
 2、交钱认证
 
 ![](../.gitbook/assets/图片1.png)
+![图片1](https://user-images.githubusercontent.com/10327999/144707295-56258024-5ae9-429b-9005-ea94329248c2.png)
