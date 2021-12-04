@@ -13,4 +13,3 @@
 2、交钱认证
 
 ![](../.gitbook/assets/图片1.png)
-![图片1](https://user-images.githubusercontent.com/10327999/144707295-56258024-5ae9-429b-9005-ea94329248c2.png)
