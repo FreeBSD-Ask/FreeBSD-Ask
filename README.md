@@ -4,6 +4,8 @@
 
 [项目预览——如果你认为拼音显得奇怪，那么你应该点击此处](https://book.freebsdcn.org)
 
+详情请点击[前言](https://book.freebsdcn.org/qian-yan)
+
 ## 本书定位
 
 我们的目标并非是 Handbook 的翻译，而是编写一本类似于《鸟哥的 Linux 私房菜：基础学习篇》+《鸟哥的 Linux 私房菜：服务器架设篇》二合一的基于 FreeBSD 的教程。也就说我们是 Handbook 的超集。
