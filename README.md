@@ -12,9 +12,7 @@
 
 ## 编辑指南概要
 
-{% embed url="https://github.com/FreeBSD-Ask/FreeBSD-Ask" %}
-
-注意：[详细的编辑指南，点击此处](https://github.com/FreeBSD-Ask/FreeBSD-Ask/wiki)
+[详细的编辑指南，点击此处](https://github.com/FreeBSD-Ask/FreeBSD-Ask/wiki)
 
 ## 捐助 FreeBSD 基金会
 
