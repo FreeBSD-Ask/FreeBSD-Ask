@@ -8,7 +8,7 @@
 
 ## 2.配置
 
-#ee /etc/fstab
+`#ee /etc/fstab`
 添加内容如下:
 `proc /proc procfs rw 0 0`
 
@@ -70,4 +70,3 @@ setenv LC_ALL zh_CN.UTF-8`
 
 gnome-tweaks
 
-##
