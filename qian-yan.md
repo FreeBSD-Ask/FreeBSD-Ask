@@ -22,4 +22,4 @@
 - 积极对外宣传并寻求正式出版
 
 ## 许可证
-本书采用 [BSD-3-Clause License](https://github.com/FreeBSD-Ask/FreeBSD-Ask/blob/main/LICENSE) 许可证开源。
+本书采用 [BSD-3-Clause License](https://github.com/FreeBSD-Ask/FreeBSD-Ask/blob/main/LICENSE) 许可证开源。我们在编写过程中不可避免地参考了一些作者的教程，在此表示感谢，如果您不想被引用，请联系我们。
