@@ -36,9 +36,11 @@ setenv LC_CTYPE zh_CN.UTF-8
 
 ## 安装输入法
 
-`#pkg install zh-ibus-libpinyin`（安装好运行初始化命令ibus-setup）
+`#pkg install zh-ibus-libpinyin`（安装好运行初始化命令`ibus-setup`）
 设置输入法变量
-ee .xinitrc
+
+`ee .xinitrc`
+
 文件添加以下内容
 
 ```
