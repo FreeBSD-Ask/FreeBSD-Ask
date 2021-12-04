@@ -22,4 +22,4 @@
 
 [点此捐赠 FreeBSD 基金会](https://freebsdfoundation.org/donate)。
 
-注意：如果您想对本项目进行捐赠，请看[前言](https://book.freebsdcn.org/qian-yan)。
+**注意：如果您想对本项目进行捐赠，请看[前言](https://book.freebsdcn.org/qian-yan)。**
