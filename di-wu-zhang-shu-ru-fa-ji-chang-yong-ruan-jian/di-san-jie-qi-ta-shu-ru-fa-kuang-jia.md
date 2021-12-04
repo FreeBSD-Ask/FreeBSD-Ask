@@ -16,7 +16,7 @@
 
 打开default.yaml 找到schema_lis：
 
-下面第一行添加 - schema: wubi98 保存退出重新加载ibus 输入法即可。
+下面第一行添加 `- schema: wubi98` 保存退出重新加载ibus 输入法即可。
 
 ### 98 五笔码表 下载地址
 
