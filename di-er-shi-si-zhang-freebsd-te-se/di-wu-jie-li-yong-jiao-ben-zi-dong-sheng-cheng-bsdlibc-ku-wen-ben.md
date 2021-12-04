@@ -59,7 +59,7 @@ mkidx()
        currp=`expr $currp + $nextp`
    done
    mv $index.tmp $index
-   for i in `cat $index | sed -E 's/(^[^:]+):.*/\1/' | tr ',' ' '`; do
+   for i in `cat $index | sed -E 's/(^[^:]+):.*/1/' | tr ',' ' '`; do
        echo $i
    done | sort -n > $keywords
    
@@ -73,8 +73,8 @@ mkpsdoc()
 {
    for i in `cat $index`; do
        fname=`echo $i | cut -d: -f3`
-       zcat $fname | sed -e 's/^\.Dd.*$/\.Dd __PAGENO__/' \
-                 -e '/\.Os.*/d' | mandoc -T ps >> $pstarget
+       zcat $fname | sed -e 's/^.Dd.*$/.Dd __PAGENO__/' 
+                 -e '/.Os.*/d' | mandoc -T ps >> $pstarget
    done
 }
 
@@ -86,7 +86,7 @@ mktoc()
        kword=`echo $i | cut -d: -f 1`
        page=`echo $i | cut -d: -f 2`
        page=`expr $content_offset + $page`
-       printf ".XA $page\n$kword\n" >> $tocin
+       printf ".XA $pagen$kwordn" >> $tocin
    done
    echo ".XE" >> $tocin
    echo ".PX" >> $tocin
@@ -95,7 +95,7 @@ mktoc()
 get_content_offset()
 {
    mktoc
-   content_offset=`groff -T ps -ms $tocin | egrep '%%Pages: [0-9]+' | \
+   content_offset=`groff -T ps -ms $tocin | egrep '%%Pages: [0-9]+' | 
        cut -d: -f2`
    content_offset=`expr $content_offset + 0`
 }
@@ -113,7 +113,7 @@ prepend_toc()
 mkpdfidx()
 {
    printf "[/Page 1 /View [/XYZ null null null] " > $pdfindex
-   printf "/Title (Table of Contents) /OUT pdfmark\n" >> $pdfindex
+   printf "/Title (Table of Contents) /OUT pdfmarkn" >> $pdfindex
 
    for i in `cat $sorted_index`; do
        kword=`echo $i | cut -d: -f 1`
@@ -121,14 +121,14 @@ mkpdfidx()
        page=`expr $page + $content_offset`
        printf "[/Page $page /View "       >> $pdfindex
        printf "[/XYZ null null null] "       >> $pdfindex
-       printf "/Title ($kword) /OUT pdfmark\n" >> $pdfindex
+       printf "/Title ($kword) /OUT pdfmarkn" >> $pdfindex
    done
 }
 
 gettitles()
 {
-   zcat $1 | sed -n '/.Sh NAME/,/.Sh LIBRARY/p' | \
-       egrep '^\.Nm [^ ]+' | cut -d" " -f 2 | sort -n | uniq
+   zcat $1 | sed -n '/.Sh NAME/,/.Sh LIBRARY/p' | 
+       egrep '^.Nm [^ ]+' | cut -d" " -f 2 | sort -n | uniq
 }
 
 mkidx
@@ -139,9 +139,9 @@ prepend_toc $pstarget
 mkpdfidx
 
 cat $pstarget | awk -v p=$content_offset '{
-   if ($0 ~ /\(__PAGENO__\)/) {
+   if ($0 ~ /(__PAGENO__)/) {
         t = sprintf("(%s)", ++p);
-        sub(/\(__PAGENO__\)/, t);
+        sub(/(__PAGENO__)/, t);
    }
    print $0;
  }' > $pstarget.tmp
@@ -150,7 +150,7 @@ mv $pstarget.tmp $pstarget
 
 ps2pdf $pstarget $pdftarget_noidx
 
-gs -sDEVICE=pdfwrite -q -dBATCH -dNOPAUSE -sOutputFile=$pdftarget $pdfindex \
+gs -sDEVICE=pdfwrite -q -dBATCH -dNOPAUSE -sOutputFile=$pdftarget $pdfindex 
    -f $pdftarget_noidx
 
 rm -f $tocin

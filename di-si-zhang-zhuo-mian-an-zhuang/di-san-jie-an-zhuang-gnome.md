@@ -8,11 +8,11 @@
 
 ## 2.配置
 
-\#ee /etc/fstab\
-添加内容如下:\
+#ee /etc/fstab
+添加内容如下:
 `proc /proc procfs rw 0 0`
 
-`#ee /etc/rc.conf`\
+`#ee /etc/rc.conf`
 添加：
 
 ```
@@ -24,7 +24,7 @@ linux_enable="YES"
 kld_list="/boot/modules/i915kms.ko"
 ```
 
-输入以下指令（或者在.xinitrc文件加入“”内容）\
+输入以下指令（或者在.xinitrc文件加入“”内容）
 `% echo "/usr/local/bin/gnome-session" > ~/.xinitrc`
 
 ## 安装显卡驱动

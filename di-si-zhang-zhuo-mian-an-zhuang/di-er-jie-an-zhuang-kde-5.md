@@ -6,7 +6,7 @@
 
 ## 2.配置
 
-`#ee /etc/fstab`\
+`#ee /etc/fstab`
 添加内容如下:
 
 `proc /proc procfs rw 0 0`
@@ -23,7 +23,7 @@ echo "exec ck-launch-session startplasma-x11" > ~/.xinitrc
 
 
 
-提示：hal 已经被删除。**不需要**再添加~~hald\_enable="YES",~~ 见：
+提示：hal 已经被删除。**不需要**再添加~~hald_enable="YES",~~ 见：
 
 {% embed url="https://www.freshports.org/sysutils/hal" %}
 

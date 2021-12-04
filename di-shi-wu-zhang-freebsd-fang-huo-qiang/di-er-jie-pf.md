@@ -5,7 +5,7 @@ OpenBSD Packet Filter(PF) 是一款自 OpenBSD 移植来的防火墙，提供了
 如需启用，可以在终端执行命令： 
 ```
 sudo cp /usr/share/examples/pf/pf.conf /etc #复制示例文件作为默认配置规则集文件，否则 pf 无法启动 
-sudo service pf enable #设置 pf 开机启动，也可以通过 bsdconfig 设置 pf\_enable 
+sudo service pf enable #设置 pf 开机启动，也可以通过 bsdconfig 设置 pf_enable 
 sudo service pf start #启动 pf 
 ```
 pf 的管理命令为 pfctl，常用操作示例如下： 

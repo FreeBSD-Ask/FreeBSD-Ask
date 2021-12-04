@@ -9,5 +9,5 @@
 #cd /usr/ports/x11/xorg
 #make install clean
 ```
-通过pkg安装\
+通过pkg安装
 `#pkg install xorg`

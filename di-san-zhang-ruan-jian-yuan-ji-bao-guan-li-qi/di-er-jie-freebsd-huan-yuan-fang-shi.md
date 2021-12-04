@@ -31,7 +31,7 @@ FreeBSD: { enabled: no }
 
 若要获取滚动更新的包,请将`quarterly`修改为`latest`.请注意,`CURRENT`版本只有`latest`.
 
-若要使用https,请先安装security/ca\_root\_nss,并将`http`修改为`https`,最后使用命令`#pkg update -f`刷新缓存即可.
+若要使用https,请先安装security/ca_root_nss,并将`http`修改为`https`,最后使用命令`#pkg update -f`刷新缓存即可.
 
 ### ports 源:提供源码方式安装软件的包管理器
 

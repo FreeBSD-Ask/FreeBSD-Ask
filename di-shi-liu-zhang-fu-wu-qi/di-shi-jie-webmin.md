@@ -20,4 +20,4 @@
 
 **切换中文：**
 
-Webmin->Change Language and Theme，在“ Change Language and Theme” 的 Webmin UI language 字段中， 先选择 Personal choice 再选择 Simplified Chinese(ZH\_CN.UTF 点击“ Make Changes”按钮 然后点击菜单 ->Dashboard 控制台会刷新为中文界面。
+Webmin->Change Language and Theme，在“ Change Language and Theme” 的 Webmin UI language 字段中， 先选择 Personal choice 再选择 Simplified Chinese(ZH_CN.UTF 点击“ Make Changes”按钮 然后点击菜单 ->Dashboard 控制台会刷新为中文界面。

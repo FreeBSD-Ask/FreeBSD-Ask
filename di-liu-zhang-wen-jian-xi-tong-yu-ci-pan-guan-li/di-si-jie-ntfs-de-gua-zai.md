@@ -31,5 +31,5 @@ ntfs-3g  /dev/da0s1  /media/NTFS   -o  rw,uid=1000,gid=1000,umask=0`
 diskinfo -tv /dev/da1s1
 ```
 
-详细参数见 [ntfs-3g manpage。](https://www.freebsd.org/cgi/man.cgi?query=ntfs-3g\&format=html)
+详细参数见 [ntfs-3g manpage。](https://www.freebsd.org/cgi/man.cgi?query=ntfs-3g&format=html)
 

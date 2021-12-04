@@ -8,11 +8,11 @@ IPF是一款开源软件，作者 Darren Reed。
 
 sudo cp /usr/share/examples/ipfilter/ipf.conf.sample /etc/ipf.rules #复制示例文件作为默认配置规则集文件， 否则 ipfilter 启动后会没有规则。示例文件自带的规则不会影响使用 
 
-sudo service ipfilter enable #设置 ipfilter 开机启动，也可以通过 bsdconfig 设置 ipfilter\_enable 
+sudo service ipfilter enable #设置 ipfilter 开机启动，也可以通过 bsdconfig 设置 ipfilter_enable 
 
 sudo service ipfilter start #启动 ipfilter #ipnat sudo cp /usr/share/examples/ipfilter/ipnat.conf.sample /etc/ipnat.rules #复制示例文件作为默认配置规则集文件，否则 ipnat 无法启动 
 
-sudo service ipnat enable #设置 ipnat 开机启动，也可以通过 bsdconfig 设置 ipnat\_enable 
+sudo service ipnat enable #设置 ipnat 开机启动，也可以通过 bsdconfig 设置 ipnat_enable 
 
 sudo service ipnat start #启动 ipnat。注意，ipfilter 服务重启后，ipnat 也需要重启 ipf 的管理命令主要用 ipf、ipfstat 和 ipnat，常用操作示例如下： 
 ```

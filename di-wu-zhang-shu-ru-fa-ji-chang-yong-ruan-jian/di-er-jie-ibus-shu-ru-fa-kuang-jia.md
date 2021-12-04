@@ -22,5 +22,5 @@ setenv LC_ALL zh_CN.UTF-8
 setenv XMODIFIERS @im=ibus
 ```
 
-　　.profile 中添加\
+　　.profile 中添加
 `export LC_ALL=zh_CN.UTF-8`

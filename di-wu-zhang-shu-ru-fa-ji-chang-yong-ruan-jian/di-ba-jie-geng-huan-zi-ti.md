@@ -1,6 +1,6 @@
 # 第八节 更换字体
 
-首先提取c:\windows\fonts 里所有的ttf 和ttc 字体文件。
+首先提取c:windowsfonts 里所有的ttf 和ttc 字体文件。
 
 为新字体新建一个目录便于管理：
 

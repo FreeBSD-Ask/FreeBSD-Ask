@@ -40,7 +40,7 @@ gpart delete -i 2 /dev/da1 #在磁盘/dev/da1 上删除索引为 2 的分区
 gpart destroy -F /dev/da1 #销毁磁盘/dev/da1 上的信息，-F 参数表示强制 
 
 mount /dev/da1p1 /data #将分区/dev/da1p1 挂载到/data 目录，挂载后注意用 chown 命令设置归属，若希望重启后自动挂载，请在终端执行命令：
-printf "/dev/da1p1\t/data\t\tufs\trw\t0\t0\n" >> /etc/fstab 
+printf "/dev/da1p1t/datattufstrwt0t0n" >> /etc/fstab 
 umount /data #卸载/data 目录上的挂载 
 ```
 
@@ -57,7 +57,7 @@ gpart add -t freebsd-ufs /dev/da0s1 #在分片/dev/da0s1 上添加分区，类�
 newfs /dev/da0s1d #格式化新分区。这里注意新分区名称，由于 a 是启动分区，b 是 swap 分区，c 已经被分 片本身占用，因此新分区默认分配为 d 
 mkdir /data 
 mount /dev/da0s1d /data 
-printf "/dev/da0s1d\t/data\t\tufs\trw\t2\t2\n" >> /etc/fstab
+printf "/dev/da0s1dt/datattufstrwt2t2n" >> /etc/fstab
 ```
 
 ```
@@ -71,7 +71,7 @@ newfs /dev/da0s2a #格式化新分区。由于当前分区是当前分片上的�
 
 gpart set -a active -i 1 /dev/da0 #设置活动分片。若用 bsdinstall 或 sade 创建新分片，则此步骤为必须 
 mkdir /data mount /dev/da0s2a /data 
-printf "/dev/da0s2a\t/data\t\tufs\trw\t2\t2\n" >> /etc/fstab
+printf "/dev/da0s2at/datattufstrwt2t2n" >> /etc/fstab
 ```
 ```
 #3.GPT 在系统盘新建分区(假设已为系统盘增加 50G 磁盘空间) 
@@ -80,7 +80,7 @@ gpart add -t freebsd-ufs /dev/da0 #在磁盘/dev/da0 上添加分区，GPT 中�
 
 newfs /dev/da0p4 #格式化新分区。这里注意新分区名称，p1 是 boot 分区，p2 是系统分区，p3 是 swap 分区，因此新分区默认为 p4 
 mkdir /data mount /dev/da0p4 /data 
-printf "/dev/da0p4\t/data\t\tufs\trw\t2\t2\n" >> /etc/fstab 
+printf "/dev/da0p4t/datattufstrwt2t2n" >> /etc/fstab 
 ```
 ```
 #4.GPT 创建数据分区 
@@ -90,5 +90,5 @@ gpart create -s GPT /dev/da1 #为磁盘/dev/da1 设置分区表。若想用 MBR 
 gpart add -t freebsd-ufs /dev/da1 #在磁盘/dev/da1 上添加分区，类型 freebsd-ufs 
 newfs /dev/da1p1 #格式化新分区。由于当前分区是当前分片上的第一个分区，因此系统默认分配为 p1 
 mkdir /data mount /dev/da1p1 /data 
-printf "/dev/da1p1\t/data\t\tufs\trw\t2\t2\n" >> /etc/fstab
+printf "/dev/da1p1t/datattufstrwt2t2n" >> /etc/fstab
 ```

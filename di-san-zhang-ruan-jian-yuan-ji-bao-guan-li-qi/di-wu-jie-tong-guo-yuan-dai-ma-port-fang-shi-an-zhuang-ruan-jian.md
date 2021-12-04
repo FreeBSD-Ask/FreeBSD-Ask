@@ -69,11 +69,11 @@ ports 编译的软件也可以转换为 pkg 包
 
 首先更新 Ports 树
 
-\#`portsnap fetch update`
+#`portsnap fetch update`
 
 然后列出过时 Ports 组件
 
-pkg\_version -l ‘<’
+pkg_version -l ‘<’
 
 下边分别列出 2 种 FreeBSD 手册中提及的升级工具:
 

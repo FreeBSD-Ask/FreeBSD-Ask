@@ -20,7 +20,7 @@ PDF 请点击 “release”，请注意，PDF 仅供参考，应该以在线版�
 
 ## 捐助
 
-![](.gitbook/assets/proud\_donor.gif)
+![](.gitbook/assets/proud_donor.gif)
 
 [点此捐赠 FreeBSD 基金会](https://freebsdfoundation.org/donate)。
 
