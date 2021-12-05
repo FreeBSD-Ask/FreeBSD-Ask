@@ -28,6 +28,8 @@
 
 [tomblackwhite](https://github.com/tomblackwhite)
 
+[星不萌](https://www.moebsd.cn)
+
 
 
 **注意：如果缺少了您的信息或者不想被列出，请发起 issue。**
