@@ -6,7 +6,7 @@
 
 ```
 # kldload if_urndis #安卓 Android 
-# kdload if_ipheth  #苹果 IOS
+# kldload if_ipheth  #苹果 IOS
 # kldload if_cdce   #其他设备
 ```
 
