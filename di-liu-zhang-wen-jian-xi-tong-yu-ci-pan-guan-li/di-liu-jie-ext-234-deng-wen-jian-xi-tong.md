@@ -7,9 +7,9 @@
 # pkg install fusefs-ext2
 # 加载
 # ee /boot/loader.conf
-#添加一行
+# 添加一行
 kldload ext2fs
-#重启后，挂载（请注意，这里不一定是ada0pX）
+# 重启后，挂载（请注意，这里不一定是ada0pX）
 # mount -t /dev/ada0pX /home/test
 ```
 
@@ -28,7 +28,7 @@ kldload ext2fs
     # mount -t ext2fs /dev/da0sX /home/XiaoMing/media/first/
     ```
 
-    _提示：上式不一定是 da0sX（X 为对应的阿拉伯数字），可通过 `gpart list` 命令查看硬盘名。_
+    _提示：上式不一定是 da0sX（X 为对应的阿拉伯数字），可通过 `# gpart list` 命令查看硬盘名。_
 *   卸载硬盘
 
-    `#umount /home/XiaoMing/media/first/`
+    `# umount /home/XiaoMing/media/first/`
