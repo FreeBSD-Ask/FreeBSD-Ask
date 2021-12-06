@@ -13,23 +13,22 @@ kldload ext2fs
 # mount -t /dev/ada0pX /home/test
 ```
 
-- 加载
+*   加载
 
     打开`/etc/rc.conf`，在 `kld_list`一栏里添加 **ext2fs** ，结果可能如 `kld_list="ext2fs i915kms"`
-
-- 重启后，挂载。
+*   重启后，挂载。
 
     对于用户名为 `XiaoMing` 的账号，可如下操作：
 
     ```
-    cd ~
-    mkdir media
-    cd media
-    mkdir first
-    #mount -t ext2fs /dev/da0sX /home/XiaoMing/media/first/
+    $ cd ~
+    $ mkdir media
+    $ cd media
+    $ mkdir first
+    # mount -t ext2fs /dev/da0sX /home/XiaoMing/media/first/
     ```
-    *提示：上式不一定是 da0sX（X 为对应的阿拉伯数字），可通过 `gpart list` 命令查看硬盘名。*
 
-- 卸载硬盘
+    _提示：上式不一定是 da0sX（X 为对应的阿拉伯数字），可通过 `gpart list` 命令查看硬盘名。_
+*   卸载硬盘
 
     `#umount /home/XiaoMing/media/first/`
