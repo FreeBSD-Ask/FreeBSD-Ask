@@ -146,6 +146,7 @@
 * [第六节 CARP](di-shi-si-zhang-wang-luo-guan-li/di-liu-jie-carp.md)
 * [第七节 VLAN](di-shi-si-zhang-wang-luo-guan-li/di-qi-jie-vlan.md)
 * [第八节 TCP BBR](di-shi-si-zhang-wang-luo-guan-li/di-ba-jie-tcp-bbr.md)
+* [第九节 USB RNDIS (USB 网络共享)](di-shi-si-zhang-wang-luo-guan-li/di-jiu-jie-usb-rndis-usb-wang-luo-gong-xiang.md)
 
 ## 第十五章 FreeBSD 防火墙
 
