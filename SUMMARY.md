@@ -52,7 +52,7 @@
 * [第一节 安装 Xorg](di-si-zhang-zhuo-mian-an-zhuang/di-yi-jie-an-zhuang-xorg.md)
 * [第二节 安装 KDE 5](di-si-zhang-zhuo-mian-an-zhuang/di-er-jie-an-zhuang-kde-5.md)
 * [第三节 安装 Gnome 3](di-si-zhang-zhuo-mian-an-zhuang/di-san-jie-an-zhuang-gnome.md)
-* [第四节 安装 Mate 桌面](di-si-zhang-zhuo-mian-an-zhuang/di-si-jie-an-zhuang-mate-zhuo-mian.md)
+* [第四节 安装 Mate](di-si-zhang-zhuo-mian-an-zhuang/di-si-jie-an-zhuang-mate.md)
 * [第五节 安装 Xfce](di-si-zhang-zhuo-mian-an-zhuang/di-wu-zhang-an-zhuang-xfce.md)
 * [第六节 root 登录桌面](di-si-zhang-zhuo-mian-an-zhuang/di-liu-zhang-root-deng-lu-zhuo-mian.md)
 * [第七节 主题与美化](di-si-zhang-zhuo-mian-an-zhuang/di-qi-jie-zhu-ti-yu-mei-hua.md)
