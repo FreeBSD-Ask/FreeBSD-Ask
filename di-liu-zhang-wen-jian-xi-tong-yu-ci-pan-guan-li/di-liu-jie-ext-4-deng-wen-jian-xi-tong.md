@@ -16,7 +16,7 @@
 
     ```
     cd ~
-    mkdir /media
+    mkdir media
     cd media
     mkdir first
     #mount -t ext2fs /dev/da0sX /home/XiaoMing/media/first/
