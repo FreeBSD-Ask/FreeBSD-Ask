@@ -2,15 +2,25 @@
 
 请注意：这里应该安装 fusefs-ext2（同时支持EXT2/3/4） 而非 fusefs-ext4fuse，因为后者是只读且被废弃的。
 
-```
-# 安装fusefs-ext2
-#pkg install fusefs-ext2
-# 加载
-#ee /boot/loader.conf
-#添加一行
-kldload ext2fs
-#重启后，挂载（请注意，这里不一定是ada0pX）
-#mount -t /dev/ada0pX /home/test
-```
+- 安装fusefs-ext2
 
+`#pkg install fusefs-ext2`
 
+- 加载
+
+打开`/etc/rc.conf`，在 `kld_list`一栏里添加**ext2fs**，结果可能如`kld_list="ext2fs i915kms"`
+
+- 重启后，挂载。
+
+对于`XiaoMing`的用户名，可如下操作：
+
+```
+cd ~
+mkdir /media/first/
+#mount -t ext2fs /dev/da0sX /home/XiaoMing/media/first/
+```
+*提示：上式不一定是da0sX（X 为对应的阿拉伯数字），可通过`gpart list`命令查看硬盘名。*
+
+- 卸载硬盘
+
+`#umount /home/XiaoMing/media/first/`
