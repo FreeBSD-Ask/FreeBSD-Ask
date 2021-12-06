@@ -13,13 +13,21 @@ moused_enable="YES"
 dbus_enable="YES"
 ```
 
-## 安装 Slim 作为登陆管理器
+## 安装登陆管理器
 
-`# pkg install -y slim`
+Slim 和 Lightdm 任选其一
 
-在/etc/rc.conf 中加入下面的行：
+### 安装 Slim
 
-`slim_enable="YES"`
+- `# pkg install -y slim`
+
+- 在/etc/rc.conf 中加入一行：`slim_enable="YES"`
+
+### 安装 Lightdm
+
+- `# pkg install lightdm lightdm-gtk-greeter`
+
+- 在/etc/rc.conf 中加入一行：`lightdm_enable="YES"`
 
 在主目录.xinitrc 文件内加入下面的行:
 
@@ -53,7 +61,7 @@ ibus &
 ## 安装软件/安装字体
 
 ```
-# pkg install -y noto-sc zh-sourcehanserif-sc-otf
+# pkg install -y noto-sc
 # pkg install -y firefox
 # pkg install -y networkmgr
 # pkg install -y zh_CN-libreoffice
