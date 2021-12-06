@@ -1,6 +1,6 @@
 # 第一节 FreeBSD 镜像站现状
 
-## 现状 <a href="xian-zhuang" id="xian-zhuang"></a>
+## 现状 <a href="#xian-zhuang" id="xian-zhuang"></a>
 
 　　主要问题在于官方无论如何也不开放 rsync 且不接受镜像站的官方二级镜像申请。
 
@@ -46,7 +46,7 @@ BGP 网络；
 
 FreeBSD 在中国大陆境内没有非官方镜像站；
 
-FreeBSD 目前在大陆非官方镜像站有 4 个：
+FreeBSD 目前在大陆非官方镜像站有若干个（详见第二节。）：
 
 USTC
 
