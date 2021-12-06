@@ -14,13 +14,13 @@
 
     对于 `XiaoMing` 的用户名，可如下操作：
 
-```
-cd ~
-mkdir /media/first/
-#mount -t ext2fs /dev/da0sX /home/XiaoMing/media/first/
-```
+    ```
+    cd ~
+    mkdir /media/first/
+    #mount -t ext2fs /dev/da0sX /home/XiaoMing/media/first/
+    ```
 *提示：上式不一定是 da0sX（X 为对应的阿拉伯数字），可通过 `gpart list` 命令查看硬盘名。*
 
 - 卸载硬盘
 
-`#umount /home/XiaoMing/media/first/`
+    `#umount /home/XiaoMing/media/first/`
