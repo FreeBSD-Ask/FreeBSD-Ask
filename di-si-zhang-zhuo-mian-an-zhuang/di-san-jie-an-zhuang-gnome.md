@@ -17,7 +17,7 @@ gnome_enable="YES"
 snd_hda="YES"
 ```
 
-输入以下指令（或者在.xinitrc文件加入“”内容）&#x20;
+输入以下指令（或者在.xinitrc文件加入“”内容）
 
 `% echo "/usr/local/bin/gnome-session" > ~/.xinitrc`
 
@@ -33,7 +33,7 @@ LC_ALL="zh_CN.UTF-8"
 
 ## 安装输入法
 
-`# pkg install zh-ibus-libpinyin`（安装好运行初始化命令ibus-setup）
+`# pkg install zh-ibus-libpinyin`（安装好运行初始化命令 ibus-setup）
 
 ## 安装字体
 
