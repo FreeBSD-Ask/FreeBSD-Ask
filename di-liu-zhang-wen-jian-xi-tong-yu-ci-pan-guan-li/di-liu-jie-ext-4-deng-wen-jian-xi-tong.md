@@ -16,7 +16,9 @@
 
     ```
     cd ~
-    mkdir /media/first/
+    mkdir /media
+    cd media
+    mkdir first
     #mount -t ext2fs /dev/da0sX /home/XiaoMing/media/first/
     ```
     *提示：上式不一定是 da0sX（X 为对应的阿拉伯数字），可通过 `gpart list` 命令查看硬盘名。*
