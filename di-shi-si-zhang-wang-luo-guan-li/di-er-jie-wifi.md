@@ -2,11 +2,11 @@
 
 **注意：目前暂不支持 WIFI 5/6 ，即不能完全支持AX200/AX201（需要自行应用脚本然后编译内核，见**[**https://wiki.freebsd.org/WiFi/Iwlwifi**](https://wiki.freebsd.org/WiFi/Iwlwifi)**）。如果安装 FreeBSD 的时候就不能识别出无线网卡，那么就是不支持你的无线网卡。请忽略下文。**
 
-首先运行 `ifconfig`，看看能不能找到你的网卡，如果能，那么你可以走了
+首先运行 `# ifconfig`，看看能不能找到你的网卡，如果能，那么你可以走了
 
 ﹉﹉﹉﹉﹉﹉﹉﹉﹉﹉﹉﹉﹉﹉﹉﹉﹉﹉﹉﹉
 
-运行 `sysctl net.wlan.devices`，他可以告诉你，找到的无线网卡，如果冒号输出后边没有东西，那就是识别不了。请更换无线网卡。
+运行 `# sysctl net.wlan.devices`，他可以告诉你，找到的无线网卡，如果冒号输出后边没有东西，那就是识别不了。请更换无线网卡。
 
 编辑/boot/loader.conf文件
 
@@ -21,32 +21,32 @@ if_urtwn_load =“YES” legal.realtek.license_ack = 1
 接下来，创建wlan0
 
 ```
-ifconfig wlan0 create wlandev at0
+# ifconfig wlan0 create wlandev at0
 ```
 
 at0是你的网卡，具体看自己的 该命令是临时的，需要永久开机生效，在rc.conf中，加入
 
 ```
-wlans_ath0 =“ wlan0” ifconfig wlan0 up scan
+# wlans_ath0 =“ wlan0” ifconfig wlan0 up scan
 ```
 
 扫描wifi
 
 ```
-ifconfig wlan0 ssid abc
+# ifconfig wlan0 ssid abc
 ```
 
 连接wifi abc
 
 ```
-dhclient wlan0
+# dhclient wlan0
 ```
 
 获取地址
 
 连接加密网络
 
-创建wpa\_supplicant.conf
+创建wpa_supplicant.conf
 
 ```
 network={ scan_ssid=1 如果是隐藏wifi加入这个，不是就不要加了 ssid=”abc” wifi名字 psk=”1234” 密码 }
@@ -55,14 +55,14 @@ network={ scan_ssid=1 如果是隐藏wifi加入这个，不是就不要加了 ss
 在rc.conf里面加入
 
 ```
-ifconfig_wlan0 =“ WPA SYNCDHCP”
+# ifconfig_wlan0 =“ WPA SYNCDHCP”
 ```
 
 然后重启电脑（因为命令有点问题，只能重启让rc.conf生效）
 
 ```
-wpa_supplicant -B -i wlan0 -c /etc/wpa_supplicant.conf
-wpa_cli -i wlan0 scan // 搜索附近wifi网络
+# wpa_supplicant -B -i wlan0 -c /etc/wpa_supplicant.conf
+# wpa_cli -i wlan0 scan // 搜索附近wifi网络
 $ wpa_cli -i wlan0 scan_result // 打印搜索wifi网络结果
 $ wpa_cli -i wlan0 add_network // 添加一个网络连接
 $ wpa_cli -i wlan0 remove_network 1 // 删除一个网络连接
@@ -110,13 +110,13 @@ ifconfig wlan0 inet 192.168.0.100 netmask 255.255.255.0
 开启无线ap，先确认下你的网卡是否支持hostap
 
 ```
-ifconfig wlan0 list caps
+# ifconfig wlan0 list caps
 ```
 
 先销毁
 
 ```
-ifconfig wlan0 destroy
+# ifconfig wlan0 destroy
 ```
 
 再创建
@@ -132,7 +132,7 @@ ifconfig wlan0 create wlandev ath0 wlanmode hostap
 ## 简单版本
 
 ```
-#ee /boot/loader.conf 　　#加入
+# ee /boot/loader.conf 　　#加入
 rtwn_usb_load="YES"
 legal.realtek.license_ack=1
 ```

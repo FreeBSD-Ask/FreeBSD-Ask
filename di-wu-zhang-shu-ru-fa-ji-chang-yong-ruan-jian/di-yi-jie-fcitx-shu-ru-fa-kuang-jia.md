@@ -51,7 +51,7 @@ chinese/fcitx5-rime
 
 　　自动启动：
 
-`#cp /usr/local/share/applications/fcitx.desktop ~/.config/autostart/`
+`# cp /usr/local/share/applications/fcitx.desktop ~/.config/autostart/`
 
 　　在 .cshrc 和 /etc/csh.cshrc 中进行如下配置，此配置可以解决部分窗口 fcitx 无效以及无法输入显示中文的问题。
 

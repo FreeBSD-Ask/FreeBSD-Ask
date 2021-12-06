@@ -30,10 +30,10 @@
 例如切换到 zsh：
 
 ```
-pkg install zsh zsh-autosuggestions zsh-syntax-highlighting
-chsh -s /usr/local/bin/zsh
-touch ~/.zshrc
-ee ~/.zshrc #添加下面几行
+# pkg install zsh zsh-autosuggestions zsh-syntax-highlighting
+# chsh -s /usr/local/bin/zsh
+# touch ~/.zshrc
+# ee ~/.zshrc #添加下面几行
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.p10k.zsh
@@ -42,7 +42,7 @@ source ~/.p10k.zsh
 切换到 bash：
 
 ```
-#pkg install bash
-#chsh -s /usr/local/bin/bash
-#ee ~/.bash_profile
+# pkg install bash
+# chsh -s /usr/local/bin/bash
+# ee ~/.bash_profile
 ```

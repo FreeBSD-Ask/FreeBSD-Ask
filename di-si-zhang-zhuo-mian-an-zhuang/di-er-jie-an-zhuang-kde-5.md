@@ -2,11 +2,11 @@
 
 ## 1.安装 <a href="1-an-zhuang" id="1-an-zhuang"></a>
 
-`#pkg install -y xorg sddm kde5 wqy-fonts`
+`# pkg install -y xorg sddm kde5 wqy-fonts`
 
 ## 2.配置
 
-`#ee /etc/fstab`
+`# ee /etc/fstab`
 添加内容如下:
 
 `proc /proc procfs rw 0 0`
@@ -14,7 +14,7 @@
 然后
 
 ```
-#ee /etc/rc.conf
+# ee /etc/rc.conf
 #添加：
 dbus_enable="YES"
 sddm_enable="YES"

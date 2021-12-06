@@ -22,13 +22,13 @@ aio_load="YES"
 1、查找相关包
 
 ```
-#pkg search samba
+# pkg search samba
 ```
 
 2、选择要安装的版本
 
 ```
-#pkg install samba413
+# pkg install samba413
 ```
 
 3、配置 /usr/local/etc/smb4.conf (默认没这个文件，请自行新建)
@@ -60,12 +60,12 @@ writable = yes
 4、自启动设置
 
 ```
-#sysrc samba_server_enalbe="YES"
-#service samba_server start
+# sysrc samba_server_enalbe="YES"
+# service samba_server start
 ```
 
 5、添加 samba 用户
 
 ```
-#pdbedit -a -u username #此处应根据实际填写
+# pdbedit -a -u username #此处应根据实际填写
 ```

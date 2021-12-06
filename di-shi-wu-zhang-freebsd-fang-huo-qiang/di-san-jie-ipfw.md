@@ -26,35 +26,35 @@ IPFIREWALL (IPFW) 是一个由 FreeBSD 发起的防火墙应用软件， 它由 
 IPF="ipfw -q add"
 ipfw -q -f flush
 
-#loopback 
-$IPF 10 allow all from any to any via lo0
-$IPF 20 deny all from any to 127.0.0.0/8
-$IPF 30 deny all from 127.0.0.0/8 to any
-$IPF 40 deny tcp from any to any frag
+# loopback 
+$ IPF 10 allow all from any to any via lo0
+$ IPF 20 deny all from any to 127.0.0.0/8
+$ IPF 30 deny all from 127.0.0.0/8 to any
+$ IPF 40 deny tcp from any to any frag
 
 # statefull
-$IPF 50 check-state
-$IPF 60 allow tcp from any to any established
-$IPF 70 allow all from any to any out keep-state
-$IPF 80 allow icmp from any to any
+$ IPF 50 check-state
+$ IPF 60 allow tcp from any to any established
+$ IPF 70 allow all from any to any out keep-state
+$ IPF 80 allow icmp from any to any
 
 # open port for ssh
-$IPF 110 allow tcp from any to any 22 out
-$IPF 120 allow tcp from any to any 22 in
+$ IPF 110 allow tcp from any to any 22 out
+$ IPF 120 allow tcp from any to any 22 in
 
 # open port for samba
-$IPF 130 allow tcp from any to any 139 out
-$IPF 140 allow tcp from any to any 139 in
-$IPF 150 allow tcp from any to any 445 out
-$IPF 160 allow tcp from any to any 445 in
-$IPF 170 allow udp from any to any 137 out
-$IPF 180 allow udp from any to any 137 in
-$IPF 190 allow udp from any to any 138 out
-$IPF 200 allow udp from any to any 138 in
+$ IPF 130 allow tcp from any to any 139 out
+$ IPF 140 allow tcp from any to any 139 in
+$ IPF 150 allow tcp from any to any 445 out
+$ IPF 160 allow tcp from any to any 445 in
+$ IPF 170 allow udp from any to any 137 out
+$ IPF 180 allow udp from any to any 137 in
+$ IPF 190 allow udp from any to any 138 out
+$ IPF 200 allow udp from any to any 138 in
 
 
 # deny and log everything 
-$IPF 500 deny log all from any to any
+$ IPF 500 deny log all from any to any
 ```
 
 额外说明： samba开放tcp/139,445端口，udp/137,138端口

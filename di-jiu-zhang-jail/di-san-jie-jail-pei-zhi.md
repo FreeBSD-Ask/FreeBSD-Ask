@@ -7,21 +7,21 @@
 方案一
 
 ```
-make buildworld #编译基本系统
-make installworld DESTDIR=/usr/jail/ #安装到jail
-make distribution DESTDIR=/usr/jail/ #或者
+# make buildworld #编译基本系统
+# make installworld DESTDIR=/usr/jail/ #安装到jail
+# make distribution DESTDIR=/usr/jail/ #或者
 ```
 
 方案二
 ```
 #下载base.txz 或者从iso提取baes.txz，然后解压到jail
-tar -xvf base.txz -C /usr/jail/
+# tar -xvf base.txz -C /usr/jail/
 #挂载 devfs文件系统。(不是必须)
-mount -t devfs devfs /usr/jail/dev
+# mount -t devfs devfs /usr/jail/dev
  ```
 ### 写入rc.conf
 ```
-sysrc jail_enable="YES"
+# sysrc jail_enable="YES"
 ```
 创建jail.conf文件(可以写进rc.conf但这样便于管理)
 ```
@@ -51,21 +51,21 @@ Path 监狱路径
 
 ## 启动与停止jail
 ```
-service jail start www
-service jail stop www
+# service jail start www
+# service jail stop www
 ```
 ## 登录jail
 ```
-jexec 1 tcsh
+# jexec 1 tcsh
 ```
 ## 干净关闭jail
 ```
-jexec 3 /etc/rc.shutdown
+# jexec 3 /etc/rc.shutdown
 ```
 ## 升级jail
 ```
-freebsd-update -b /here/is/the/jail fetch
-freebsd-update -b /here/is/the/jail install
+# freebsd-update -b /here/is/the/jail fetch
+# freebsd-update -b /here/is/the/jail install
 ```
 ## ping与网络
 
@@ -94,42 +94,42 @@ nameserver 223.6.6.6
 
 ### 创建模板目录
 ```
-mkdir -p /jail/j1
+# mkdir -p /jail/j1
 #然后放入基本目录，上边说过不再写
 ```
 ### 创建骨架目录
 ```
-mkdir -p /jail/j2
+# mkdir -p /jail/j2
 #移动目录 etc usr tmp var root
 ```
 ```
-cd /jail/j2/ # 注意目录
-mv /jail/j1/etc ./etc
-mv /jail/j1/tmp ./tmp
-mv /jail/j1/var ./var
-mv /jail/j1/root ./root
+# cd /jail/j2/ # 注意目录
+# mv /jail/j1/etc ./etc
+# mv /jail/j1/tmp ./tmp
+# mv /jail/j1/var ./var
+# mv /jail/j1/root ./root
 ```
 
 ### 创建数据目录
 
 就是复制一份骨架给他用
-cp -R /jail/j2/ /jail/js/www/
+`# cp -R /jail/j2/ /jail/js/www/`
 
 ### 创建项目目录
 ```
-mkdir -p /jail/www/
+# mkdir -p /jail/www/
 ```
 ### 建立链接
 
 ```
-cd /jail/j1 #cd 到模板目录
-mkdir -p jusr #创建用来做链接数据的目录
-ln -s jusr/etc etc
-ln -s jusr/home home
-ln -s jusr/root root
-ln -s jusr/usr usr
-ln -s jusr/tmp tmp
-ln -s jusr/var var
+# cd /jail/j1 #cd 到模板目录
+# mkdir -p jusr #创建用来做链接数据的目录
+# ln -s jusr/etc etc
+# ln -s jusr/home home
+# ln -s jusr/root root
+# ln -s jusr/usr usr
+# ln -s jusr/tmp tmp
+# ln -s jusr/var var
 #链接目录，注意链接的目录
 ```
 
@@ -146,7 +146,7 @@ ln -s jusr/var var
 创建fstab
 
 ```
-ee /jail/www.fstab
+# ee /jail/www.fstab
 #将公共只读系统挂载到项目目录
 /jail/j1/ /jail/www/ mullfs ro 0 0
 #将项目数据目录挂载到项目目录
@@ -193,5 +193,5 @@ $ip=2
 ```
 ## 删除文件没有权限
 ```
-chflags -R noschg directory
+# chflags -R noschg directory
 ```

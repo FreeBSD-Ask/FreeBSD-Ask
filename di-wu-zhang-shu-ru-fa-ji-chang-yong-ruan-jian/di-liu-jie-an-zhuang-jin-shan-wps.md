@@ -11,7 +11,7 @@ linux-wps-office-zh_CN
 安装，目前只能通过 ports 安装：
 
 ```
-#cd /usr/ports/chinese/linux-wps-office-zh_CN/ && make install clean #如要默认请添加 BATCH=yes
+# cd /usr/ports/chinese/linux-wps-office-zh_CN/ && make install clean #如要默认请添加 BATCH=yes
 ```
 
 
@@ -24,5 +24,5 @@ linux-wps-office
 安装，目前只能通过 ports 安装：
 
 ```
-#cd /usr/ports/editors/linux-wps-office/ && make install clean #如要默认请添加 BATCH=yes
+# cd /usr/ports/editors/linux-wps-office/ && make install clean #如要默认请添加 BATCH=yes
 ```

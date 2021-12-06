@@ -3,7 +3,7 @@
 首先安装依赖：
 
 ```
-#pkg install  netpbm groff ghostscript9-base
+# pkg install  netpbm groff ghostscript9-base
 ```
 
 ```

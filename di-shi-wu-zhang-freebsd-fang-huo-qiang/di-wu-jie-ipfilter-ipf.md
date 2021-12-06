@@ -6,34 +6,34 @@ IPF是一款开源软件，作者 Darren Reed。
 ```
 #ipfilter 
 
-sudo cp /usr/share/examples/ipfilter/ipf.conf.sample /etc/ipf.rules #复制示例文件作为默认配置规则集文件， 否则 ipfilter 启动后会没有规则。示例文件自带的规则不会影响使用 
+# cp /usr/share/examples/ipfilter/ipf.conf.sample /etc/ipf.rules #复制示例文件作为默认配置规则集文件， 否则 ipfilter 启动后会没有规则。示例文件自带的规则不会影响使用 
 
-sudo service ipfilter enable #设置 ipfilter 开机启动，也可以通过 bsdconfig 设置 ipfilter_enable 
+# service ipfilter enable #设置 ipfilter 开机启动，也可以通过 bsdconfig 设置 ipfilter_enable 
 
-sudo service ipfilter start #启动 ipfilter #ipnat sudo cp /usr/share/examples/ipfilter/ipnat.conf.sample /etc/ipnat.rules #复制示例文件作为默认配置规则集文件，否则 ipnat 无法启动 
+# service ipfilter start #启动 ipfilter #ipnat sudo cp /usr/share/examples/ipfilter/ipnat.conf.sample /etc/ipnat.rules #复制示例文件作为默认配置规则集文件，否则 ipnat 无法启动 
 
-sudo service ipnat enable #设置 ipnat 开机启动，也可以通过 bsdconfig 设置 ipnat_enable 
+# service ipnat enable #设置 ipnat 开机启动，也可以通过 bsdconfig 设置 ipnat_enable 
 
-sudo service ipnat start #启动 ipnat。注意，ipfilter 服务重启后，ipnat 也需要重启 ipf 的管理命令主要用 ipf、ipfstat 和 ipnat，常用操作示例如下： 
+# service ipnat start #启动 ipnat。注意，ipfilter 服务重启后，ipnat 也需要重启 ipf 的管理命令主要用 ipf、ipfstat 和 ipnat，常用操作示例如下： 
 ```
 ```
-ipf -E #启动 ipfilter，相当于 service ipfilter start 
+# ipf -E #启动 ipfilter，相当于 service ipfilter start 
 
-ipf -D #停止 ipfilter，相当于 server ipfilter stop 
+# ipf -D #停止 ipfilter，相当于 server ipfilter stop 
 
-ipf -f /etc/ipf.rules #加载规则集文件中的规则 ipfstat #查看所有规则 
+# ipf -f /etc/ipf.rules #加载规则集文件中的规则 ipfstat #查看所有规则 
 
-ipfstat -iohn #查看规则，i 表示输入规则，o 表示输出规则，h 表示通过该规则的流量，n 表示记录编号
+# ipfstat -iohn #查看规则，i 表示输入规则，o 表示输出规则，h 表示通过该规则的流量，n 表示记录编号
 
-ipfstat -t #进入监控模式，按 Q 退出 
+# ipfstat -t #进入监控模式，按 Q 退出 
 
-ipf -Fa #清理已加载的规则 
+# ipf -Fa #清理已加载的规则 
 
-ipnat -f /etc/ipnat.rules #加载规则集文件中的 nat 规则 
+# ipnat -f /etc/ipnat.rules #加载规则集文件中的 nat 规则 
 
-ipnat -s #汇总并显示 nat 状态 ipnat -lh #列表显示 nat 规则，加 h 表示同时显示通过该规则的流量 
+# ipnat -s #汇总并显示 nat 状态 ipnat -lh #列表显示 nat 规则，加 h 表示同时显示通过该规则的流量 
 
-ipnat -CF #清理已加载的 nat 规则 不过以上操作并没有对规则的管理，因此还需要修改规则集文件，常用示例如下：block all # #拒绝所有访问。ipfilter 是默认明示禁止的防火墙，因此需要通过下列规则禁止所有访问 block in all #block 是动作，block 表示拒绝，pass 表示通过；in 为数据方向，in 为入，out 为出，在 ipfilter 里数据方向是必须的；all 是 from any to any 的简写，表示从源地址到目标地址，地址通常用网段(如 192.168.1.0/24)或 IP 地址(如 192.168.1.100)，any 是特殊词，表示任何地址 
+# ipnat -CF #清理已加载的 nat 规则 不过以上操作并没有对规则的管理，因此还需要修改规则集文件，常用示例如下：block all # #拒绝所有访问。ipfilter 是默认明示禁止的防火墙，因此需要通过下列规则禁止所有访问 block in all #block 是动作，block 表示拒绝，pass 表示通过；in 为数据方向，in 为入，out 为出，在 ipfilter 里数据方向是必须的；all 是 from any to any 的简写，表示从源地址到目标地址，地址通常用网段(如 192.168.1.0/24)或 IP 地址(如 192.168.1.100)，any 是特殊词，表示任何地址 
 
 block out all #放开回环接口的访问权限，回环接口不对外部 
 
@@ -89,12 +89,12 @@ pass in quick proto tcp from any to 192.168.1.184 port = 8080 #数据转发前�
 然后再整理 NAT 规则集文件/etc/ipnat.rules 如下： 
 
 ```
-rdr em0 192.168.1.184 port 8080 -> 192.168.1.184 port 80 #设置本机 8080 到 80 端口的映射 
+# rdr em0 192.168.1.184 port 8080 -> 192.168.1.184 port 80 #设置本机 8080 到 80 端口的映射 
 ```
 保存文件，接下来在终端执行命令： 
 
 ```
-ipf -Fa -f /etc/ipf.rules #加载规则集文件中的规则
+# ipf -Fa -f /etc/ipf.rules #加载规则集文件中的规则
 
-ipnat -CF -f /etc/ipnat.rules #加载规则集文件中的 nat 规则就可以看到效果了。
+# ipnat -CF -f /etc/ipnat.rules #加载规则集文件中的 nat 规则就可以看到效果了。
 ```

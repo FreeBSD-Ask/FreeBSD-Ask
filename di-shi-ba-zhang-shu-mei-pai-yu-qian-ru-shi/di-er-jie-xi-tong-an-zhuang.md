@@ -34,7 +34,7 @@ PasswordAuthentication yes # 设置是否使用口令验证。
 　　然后重启服务：
 
 ```
-#server sshd restart
+# server sshd restart
 ```
 
 　　然后就是时间设置问题，树莓派没有板载的纽扣电池确保 CMOS 时钟准确。所以完全依靠 NTP 服务来校正时间，如果时间不准确，将影响很多服务的运行，比如无法执行 portsnap fetch 命令。
@@ -53,10 +53,10 @@ ntpdate_flags="0.cn.pool.ntp.org"
 　　然后开启时间服务器：
 
 ```
-#service ntpdate start
+# service ntpdate start
 ```
 
-　　输入 `date` 查看时间，完成校时。我国使用 UTC+8 北京时，虽然不更改不会影响软件使用，但看起来不方便，可通过 `bsdconfig` 命令将地区调整到亚洲 /中国 /上海。
+　　输入 `# date` 查看时间，完成校时。我国使用 UTC+8 北京时，虽然不更改不会影响软件使用，但看起来不方便，可通过 `# bsdconfig` 命令将地区调整到亚洲 /中国 /上海。
 
 　　树莓派应该会自动接通互联网，所以不必考虑联网问题。
 

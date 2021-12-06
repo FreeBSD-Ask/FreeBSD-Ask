@@ -9,7 +9,7 @@ FreeBSD 新型终端 VT，支持 cjk，所以丢个字体进去，就能显示�
 
 字体格式为 .fnt
 
-命令: `vidcontrol -f ABC.fnt`
+命令: `$ vidcontrol -f ABC.fnt`
 
 系统提供了一个工具，可用于将 bdf,hex 转换为 fnt
 

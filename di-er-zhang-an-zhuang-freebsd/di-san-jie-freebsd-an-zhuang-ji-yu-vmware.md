@@ -22,6 +22,6 @@ VMware Workstation 16 Player 是个人免费使用的，你也可以选择此版
 
 vmware 自动缩放屏幕请安装 x11-drivers/xf86-video-vmware：
 
-`#pkg install xf86-video-vmware`
+`# pkg install xf86-video-vmware`
 
 **由于 BUG，FreeBSD 11/12 可能在 Vmware 的 UEFI 环境下无法启动。13.0 经测试正常启动。**

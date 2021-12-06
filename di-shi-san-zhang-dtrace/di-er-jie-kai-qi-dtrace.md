@@ -2,7 +2,7 @@
 
 ## FreeBSD 11 以后
 
-`#kldload dtraceall`
+`# kldload dtraceall`
 
 即可开启
 

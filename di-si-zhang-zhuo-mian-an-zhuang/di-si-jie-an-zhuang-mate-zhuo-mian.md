@@ -4,7 +4,7 @@ FreeBSD 安装mate 桌面环境
 
 ## 安装开始（主要程序）
 
-`#pkg install -y mate xorg`
+`# pkg install -y mate xorg`
 
 在文件/etc/rc.conf 中加入下面的行
 
@@ -15,7 +15,7 @@ dbus_enable="YES"
 
 ## 安装 Slim 作为登陆管理器
 
-`#pkg install -y slim`
+`# pkg install -y slim`
 
 在/etc/rc.conf 中加入下面的行：
 
@@ -36,10 +36,10 @@ setenv LC_CTYPE zh_CN.UTF-8
 
 ## 安装输入法
 
-`#pkg install zh-ibus-libpinyin`（安装好运行初始化命令`ibus-setup`）
+`# pkg install zh-ibus-libpinyin`（安装好运行初始化命令`ibus-setup`）
 设置输入法变量
 
-`ee .xinitrc`
+`# ee .xinitrc`
 
 文件添加以下内容
 
@@ -53,8 +53,8 @@ ibus &
 ## 安装软件/安装字体
 
 ```
-#pkg install -y noto-sc zh-sourcehanserif-sc-otf
-#pkg install -y firefox
-#pkg install -y networkmgr
-#pkg install -y zh_CN-libreoffice
+# pkg install -y noto-sc zh-sourcehanserif-sc-otf
+# pkg install -y firefox
+# pkg install -y networkmgr
+# pkg install -y zh_CN-libreoffice
 ```

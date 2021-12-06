@@ -17,25 +17,25 @@ Gentoo: Portage，对应 Ports（Portage 本身就是 Ports 的仿制品）
 
 pkg 使用 https，先安装 ssl 证书：
 
-`#pkg install ca_root_nss`
+`# pkg install ca_root_nss`
 
 然后把 repo.conf 里的 pkg+http 改成 pkg+https 即可。
 
 最后刷新 pkg 数据库：
 
-`#pkg update -f`
+`# pkg update -f`
 
 ————————————————————————————————————
 
 安装 python 3：
 
-`#pkg install python`
+`# pkg install python`
 
 ————————————————————————————————————
 
 pkg 升级：
 
-`#pkg upgrade`
+`# pkg upgrade`
 
 ———————————————————————————————————-—
 
@@ -44,15 +44,15 @@ pkg 升级：
 解决：
 
 ```
-#cd /usr/ports/ports-mgmt/pkg
-#make deinstall reinstall
+# cd /usr/ports/ports-mgmt/pkg
+# make deinstall reinstall
 ```
 
 ## 如何卸载软件
 
 直接使用 pkg delete 会破坏正常的依赖关系，应该尽量避免使用（ports 的 make deinstall 也一样），转而使用 pkg-rmleaf 命令，该命令属于的软件需要自行安装：
 
-`pkg install pkg-rmleaf`
+`# pkg install pkg-rmleaf`
 
 ## 故障排除
 
@@ -75,7 +75,7 @@ pkg: PRE-INSTALL script failed
 问题解决:
 
 ```
-#/usr/sbin/pwd_mkdb -p /etc/master.passwd
+# /usr/sbin/pwd_mkdb -p /etc/master.passwd
 ```
 
 ### Shared object "x.so.x" not found, required by "xxx"
@@ -83,9 +83,9 @@ pkg: PRE-INSTALL script failed
 出现该问题一般是由于 ABI 破坏，更新即可。
 
 ```
-#pkg  install bsdadminscripts`
-#pkg_libchk
-#port-rebuild`
+# pkg  install bsdadminscripts`
+# pkg_libchk
+# port-rebuild`
 ```
 
 

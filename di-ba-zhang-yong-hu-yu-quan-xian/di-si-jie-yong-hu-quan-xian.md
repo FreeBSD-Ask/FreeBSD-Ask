@@ -29,16 +29,16 @@ FreeBSD 文件访问权限可以用 10 个标志位来说明，10 个标志位�
 示例：
 
 ```
-ls -l -a #列表显示包括隐藏文件在内的所有文件 
-ll -a #与上例效果相同 
-ls -l /tmp/a.log #列表显示/tmp/a.log 文件 
+# ls -l -a #列表显示包括隐藏文件在内的所有文件 
+# ll -a #与上例效果相同 
+# ls -l /tmp/a.log #列表显示/tmp/a.log 文件 
 ```
 
 2、chmod 命令，修改文件访问权限，有两种操作方式。
 
 一种是操作符方式，如：
 
-`chmod a+x t.sh` 在“a+x”中:
+`# chmod a+x t.sh` 在“a+x”中:
 
 第一位表示操作对象，u 是所属用户，g 是所属组，o 是其他用户，a 则表示所有用户，不写按系统默认操作;
 
@@ -55,8 +55,8 @@ ls -l /tmp/a.log #列表显示/tmp/a.log 文件
 示例：
 
 ```
-chmod -R 777 /tmp #/tmp 目录下所有文件将允许任何用户读、写、执行 
-chmod -R a+rwx /tmp #/tmp 目录下所有文件将允许任何用户读、写、执行 
+# chmod -R 777 /tmp #/tmp 目录下所有文件将允许任何用户读、写、执行 
+# chmod -R a+rwx /tmp #/tmp 目录下所有文件将允许任何用户读、写、执行 
 ```
 
 3、chown 命令，修改文件的属主，包括所属用户和所属组。
@@ -68,7 +68,7 @@ chmod -R a+rwx /tmp #/tmp 目录下所有文件将允许任何用户读、写、
 示例：
 
 ```
-chown test1 t.sh #修改 t.sh 属主为用户 test1 
-chown test1:test t.sh #修改 t.sh 属主为用户 test1、组 test 
-chown -R test1:test /tmp #修改/tmp 目录下所有文件的属主为用户 test1、组 test
+# chown test1 t.sh #修改 t.sh 属主为用户 test1 
+# chown test1:test t.sh #修改 t.sh 属主为用户 test1、组 test 
+# chown -R test1:test /tmp #修改/tmp 目录下所有文件的属主为用户 test1、组 test
 ```

@@ -19,7 +19,7 @@ Xshell 是 Windows 平台上的强大的 shell 工具，不建议使用苦难哲
 ## 配置SSH
 
 ```
-#ee /etc/ssh/sshd_config #（删去前边的#，并将yes 或no 修改为如下）
+# ee /etc/ssh/sshd_config #（删去前边的#，并将yes 或no 修改为如下）
 PermitRootLogin yes          #允许 root 登录 
 PasswordAuthentication yes   # 设置是否使用口令验证 
 PermitEmptyPasswords no      #不允许空密码登录
@@ -33,7 +33,7 @@ PermitEmptyPasswords no      #不允许空密码登录
 
 服务端设置：
 
-编辑 `#`ee`/etc/ssh/sshd_config`，调整 `ClientAlive` 的设置：
+编辑 `# ee/etc/ssh/sshd_config`，调整 `ClientAlive` 的设置：
 
 ```
 ClientAliveInterval 10
@@ -46,7 +46,7 @@ ClientAliveCountMax 3
 
 客户端设置：
 
-全局用户生效：#ee`/etc/ssh/ssh_config` ，仅对当前用户生效：`~/.ssh/config`。
+全局用户生效：`# ee/etc/ssh/ssh_config` ，仅对当前用户生效：`~/.ssh/config`。
 
 ```
 Host *
@@ -57,7 +57,7 @@ ServerAliveCountMax 3
 或者在连接的时候使用 `-o` 指定参数：
 
 ```
-ssh user@server -p 22 -o ServerAliveInterval=10 -o ServerAliveCountMax=3
+# ssh user@server -p 22 -o ServerAliveInterval=10 -o ServerAliveCountMax=3
 ```
 
 客户端和服务端任一开启检测即可。

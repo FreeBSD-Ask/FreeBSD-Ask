@@ -6,7 +6,7 @@
 
 ### 安装
 
-`#pkg install zh-ibus-rime`
+`# pkg install zh-ibus-rime`
 
 ### 配置
 

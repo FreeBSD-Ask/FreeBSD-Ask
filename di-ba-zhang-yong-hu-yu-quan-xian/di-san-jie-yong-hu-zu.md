@@ -3,27 +3,27 @@
 创建一个 `admin` 分组，并添加 `ykla` 和 `root` 两位用户：
 
 ```
-#pw groupadd admin
-#pw groupmod admin -m ykla root
+# pw groupadd admin
+# pw groupmod admin -m ykla root
 ```
 
 创建一个 `wheel` 分组，只添加 `root` 用户：
 
 ```
-#pw groupadd wheel
-#pw groupmod wheel -m root
+# pw groupadd wheel
+# pw groupmod wheel -m root
 ```
 
 从 `admin` 组里移除用户 `ykla`：
 
 ```
-#pw groupmod admin -d ykla
+# pw groupmod admin -d ykla
 ```
 
 删除 `admin` 用户组：
 
 ```
-#pw groupdel admin
+# pw groupdel admin
 ```
 
 `admin` 和 `wheel` 权限的区别：
@@ -37,7 +37,7 @@
 
 ***
 
-在 FreeBSD 中，用户和组统一用 pw 命令管理，下面介绍几个常用的 pw 子命令：
+在 FreeBSD 中，用户和组统一用 `pw` 命令管理，下面介绍几个常用的 `pw` 子命令：
 
 1、useradd 命令，用于新建用户，常用参数： -u，指定 uid，不指定则由操作系统根据已存在的 uid 自动生成。
 
@@ -60,9 +60,9 @@
 示例：
 
 ```
-pw useradd test1 #创建用户 test1，uid 系统默认，test1 组，登陆环境/bin/sh，主目录未创建
-pw useradd test2 -u 1200 -m -d /tmp/test -g test1 -G wheel -s csh -c test2 #创建用户 test2，uid 为 1200，创建主目录，主目录为/tmp/test，test1 组，有管理员权限，登陆环境/bin/csh，全名 test2 
-echo password | pw useradd test3 -h 0 #创建用户 test3，同时设置密码为 password 
+# pw useradd test1 #创建用户 test1，uid 系统默认，test1 组，登陆环境/bin/sh，主目录未创建
+# pw useradd test2 -u 1200 -m -d /tmp/test -g test1 -G wheel -s csh -c test2 #创建用户 test2，uid 为 1200，创建主目录，主目录为/tmp/test，test1 组，有管理员权限，登陆环境/bin/csh，全名 test2 
+# echo password | pw useradd test3 -h 0 #创建用户 test3，同时设置密码为 password 
 ```
 
 2、usermod 命令，用于修改用户信息，常用参数：
@@ -72,9 +72,9 @@ echo password | pw useradd test3 -h 0 #创建用户 test3，同时设置密码�
 示例：
 
 ```
-pw usermod test1 -G wheel #为用户 test1 增加管理员权限 
-pw usermod test1 -l myuser #用户 test1 改名为 myuser 
-echo password | pw usermod test2 -h 0 #修改用户 test2 密码为 password 
+# pw usermod test1 -G wheel #为用户 test1 增加管理员权限 
+# pw usermod test1 -l myuser #用户 test1 改名为 myuser 
+# echo password | pw usermod test2 -h 0 #修改用户 test2 密码为 password 
 ```
 
 3、userdel 命令，用于删除用户，常用参数：
@@ -84,7 +84,7 @@ echo password | pw usermod test2 -h 0 #修改用户 test2 密码为 password
 示例：
 
 ```
-pw userdel test2 -r 
+# pw userdel test2 -r 
 ```
 
 4、usershow 命令，用于显示用户信息，
@@ -92,7 +92,7 @@ pw userdel test2 -r
 示例：
 
 ```
-pw usershow test2 
+# pw usershow test2 
 ```
 
 5、usernext 命令，返回下一个可用的 uid，
@@ -100,7 +100,7 @@ pw usershow test2
 示例：
 
 ```
-pw usernext 
+# pw usernext 
 ```
 
 6、lock 命令，锁定账号，锁定后账号无法登录使用，
@@ -108,7 +108,7 @@ pw usernext
 示例：
 
 ```
-pw lock test2 
+# pw lock test2 
 ```
 
 7、unlock 命令，解锁账号，解锁后账号可以正常使用，
@@ -116,7 +116,7 @@ pw lock test2
 示例：
 
 ```
-pw unlock test2 
+# pw unlock test2 
 ```
 
 8、groupadd 命令，用于新建组，常用参数：
@@ -128,8 +128,8 @@ pw unlock test2
 示例：
 
 ```
-pw groupadd test -g 1200 #创建组 test，gid 为 1200，注意，gid 与 uid 不是一回事 
-pw groupadd test5 -M test1,test2 #创建组 test5，成员有 test1 和 test2 
+# pw groupadd test -g 1200 #创建组 test，gid 为 1200，注意，gid 与 uid 不是一回事 
+# pw groupadd test5 -M test1,test2 #创建组 test5，成员有 test1 和 test2 
 ```
 
 9、groupmod 命令，用于修改组信息，常用参数：
@@ -147,10 +147,10 @@ pw groupadd test5 -M test1,test2 #创建组 test5，成员有 test1 和 test2
 示例：
 
 ```
-pw groupmod test -g 1300 #修改 test 组的 gid 为 1300 
-pw groupmod test -l mygroup 组 test 改名为 mygroup 
-pw groupmod test5 -M test1 #设置组 test5 的成员为 test1 
-pw groupmod test5 -m test3 #为组 test5 增加成员 test3 
+# pw groupmod test -g 1300 #修改 test 组的 gid 为 1300 
+# pw groupmod test -l mygroup 组 test 改名为 mygroup 
+# pw groupmod test5 -M test1 #设置组 test5 的成员为 test1 
+# pw groupmod test5 -m test3 #为组 test5 增加成员 test3 
 ```
 
 10、groupdel 命令，用于删除组，
@@ -158,7 +158,7 @@ pw groupmod test5 -m test3 #为组 test5 增加成员 test3
 示例：
 
 ```
-pw groupdel mygroup 
+# pw groupdel mygroup 
 ```
 
 11、groupshow 命令，用于显示组信息，
@@ -166,7 +166,7 @@ pw groupdel mygroup
 示例：
 
 ```
-pw groupshow test 
+# pw groupshow test 
 ```
 
 12、groupnext 命令，返回下一个可用的 gid，
@@ -174,21 +174,21 @@ pw groupshow test
 示例：
 
 ```
-pw groupnext 
+# pw groupnext 
 ```
 
 ***
 
 其他用户管理命令
 
-1、 adduser 命令，用于新建用户，与 pw useradd 的区别在于该命令是交互式的，安装操 作系统时自建的用户，就是基于该命令创建的。
+1、adduser 命令，用于新建用户，与 pw 相比，useradd 的区别在于该命令是交互式的，安装操作系统时自建的用户，就是基于该命令创建的。
 
 2、rmuser 命令，用于删除用户，与 adduser 命令一样，也是交互式的。不过该命令带-y 参数，并允许列出用户列表，
 
 示例：
 
 ```
-rmuser -y test1 test2 #同时删除用户 test1 和 test2，
+# rmuser -y test1 test2 #同时删除用户 test1 和 test2，
 ```
 
 -y 参数用于省略询问步骤
@@ -200,8 +200,8 @@ rmuser -y test1 test2 #同时删除用户 test1 和 test2，
 示例：
 
 ```
-chpass -s csh test1 #更换用户 test1 的登陆环境为/bin/csh 
-chpass #以 vi 方式打开当前用户信息进行修改 d.passwd 命令，修改用户密码，如不指定用户则默认为当前用户。
+# chpass -s csh test1 #更换用户 test1 的登陆环境为/bin/csh 
+# chpass #以 vi 方式打开当前用户信息进行修改 d.passwd 命令，修改用户密码，如不指定用户则默认为当前用户。
 ```
 
 示例： passwd 用户 #回车后根据系统提示设置用户密码
@@ -211,8 +211,8 @@ chpass #以 vi 方式打开当前用户信息进行修改 d.passwd 命令，修�
 示例：
 
 ```
-id #查看当前用户 id 信息 
-id test1 #查看用户 test1 的 id 信息 
+# id #查看当前用户 id 信息 
+# id test1 #查看用户 test1 的 id 信息 
 ```
 
 5、whoami 命令，查看当前用户是谁。

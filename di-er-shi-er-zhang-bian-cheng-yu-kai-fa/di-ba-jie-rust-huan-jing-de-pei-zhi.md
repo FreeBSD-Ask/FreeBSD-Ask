@@ -6,7 +6,7 @@
 
 ### FreeBSD 打包
 
-`#pkg install rust`
+`# pkg install rust`
 
 ### Rust 官方打包（不建议）
 
@@ -24,7 +24,7 @@
 
 ### FreeBSD 打包
 
-`#pkg install go`
+`# pkg install go`
 
 ### Golang 官方打包（不建议）：
 

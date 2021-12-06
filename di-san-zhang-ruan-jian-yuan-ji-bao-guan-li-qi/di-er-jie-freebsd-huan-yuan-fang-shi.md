@@ -10,11 +10,11 @@ FreeBSD 中 pkg 源分为系统级和用户级两个源.不建议直接修改 /e
 
 创建用户级源目录:
 
-`#mkdir -p /usr/local/etc/pkg/repos`
+`# mkdir -p /usr/local/etc/pkg/repos`
 
 创建用户级源文件:
 
-`#ee /usr/local/etc/pkg/repos/bjtu.conf`
+`# ee /usr/local/etc/pkg/repos/bjtu.conf`
 
 写入以下内容:
 
@@ -31,11 +31,11 @@ FreeBSD: { enabled: no }
 
 若要获取滚动更新的包,请将`quarterly`修改为`latest`.请注意,`CURRENT`版本只有`latest`.
 
-若要使用https,请先安装security/ca_root_nss,并将`http`修改为`https`,最后使用命令`#pkg update -f`刷新缓存即可.
+若要使用https,请先安装security/ca_root_nss,并将`http`修改为`https`,最后使用命令`# pkg update -f`刷新缓存即可.
 
 ### ports 源:提供源码方式安装软件的包管理器
 
-创建或修改文件`#ee /etc/make.conf`:
+创建或修改文件`# ee /etc/make.conf`:
 
 写入以下内容:
 
@@ -43,23 +43,23 @@ FreeBSD: { enabled: no }
 
 ### portsnap 源:打包的 ports文件
 
-编辑portsnap配置文件 `#ee /etc/portsnap.conf` :
+编辑portsnap配置文件 `# ee /etc/portsnap.conf` :
 
 将`SERVERNAME=portsnap.FreeBSD.org` 修改为`SERVERNAME=freebsd-portsnap.mirror.bjtulug.org`
 
 获取portsnap更新:
 
-`#portsnap fetch extract`
+`# portsnap fetch extract`
 
 ### freebsd-update 源:提供基本系统更新
 
-编辑`#ee /etc/freebsd-update.conf` 文件:
+编辑`# ee /etc/freebsd-update.conf` 文件:
 
 将`ServerName update.FreeBSD.org` 修改为`ServerName freebsd-update.mirror.bjtulug.org`
 
 例:从 FreeBSD 12 升级到 13.0
 
-`#freebsd-update -r 13.0-RELEASE upgrade`
+`# freebsd-update -r 13.0-RELEASE upgrade`
 
 ## 其他镜像站
 

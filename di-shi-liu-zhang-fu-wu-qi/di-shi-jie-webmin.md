@@ -1,8 +1,8 @@
 # 第十节 Webmin
 
 ```
-#pkg install  webmin  #安装 webmin
-#/usr/local/lib/webmin/setup.sh  #启动 webmin安装向导
+# pkg install  webmin  #安装 webmin
+# /usr/local/lib/webmin/setup.sh  #启动 webmin安装向导，SSL需要配置开启。
 ```
 
 ```
