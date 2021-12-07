@@ -22,7 +22,7 @@
 
 ## 选择 FreeBSD 的技术性原因
 
-　　系统配置文件与第三方软件配置文件分离。/etc 与 /usr/local/etc 等
+　　系统配置文件与第三方软件配置文件分离。/etc 与 /usr/local/etc 等——见[第二十四章第二节](../di-er-shi-si-zhang-freebsd-te-se/di-er-jie-freebsd-mu-lu-jie-gou.md)。
 
 　　文档齐全，所有涉及一般性的问题 Handbook 手册都有记述。
 
