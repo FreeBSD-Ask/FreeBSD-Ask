@@ -1,5 +1,23 @@
 # 第一节 什么是 UNIX
 
+从前是一个操作系统。最后由C语言改写产生。——AT&T 公司
+
+现在是一个标准规范和商业商标。更是一种哲学思想，软件工程原则。
+
+**那么，现在到底什么是 UNIX？**
+
+查询网址：[http://www.opengroup.org/openbrand/register](http://www.opengroup.org/openbrand/register)
+
+1、符合单一 UNIX 规范
+
+2、交钱认证
+
+![](../.gitbook/assets/图片1.png)
+
+----
+
+**以下为详细说明：**
+
 ### 1.Unix的前身
 1964年麻省理工学院推出的CTSS（兼容分时系统），是当时最有创造性的操作系统，有了CTSS这种高效的操作系统，麻省理工学院的研究人员决定做一个更好的版本。他们开始设计Multics系统。Mutlics意思是多路复用信息和计算服务。
 
@@ -17,16 +35,3 @@ Multics意图创造强悍的新软件和比肩IBM 7094功能更丰富的新硬�
 
 新的PDP-7操作系统编写没多时，汤普逊和几个同事讨论，当时新系统还没有名字，当时它被命名为“UNICS”，UNICS最后改名为**UNIX**，这个名字更加方便记忆。
 
----
-
-现在是一个标准规范和商业商标。更是一种哲学思想，软件工程原则。
-
-**那么，现在到底什么是 UNIX？**
-
-查询网址：[http://www.opengroup.org/openbrand/register](http://www.opengroup.org/openbrand/register)
-
-1、符合单一 UNIX 规范
-
-2、交钱认证
-
-![](../.gitbook/assets/图片1.png)
