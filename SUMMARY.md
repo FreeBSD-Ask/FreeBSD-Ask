@@ -33,7 +33,7 @@
 * [第三节 FreeBSD 13.0 安装——基于 Vmware Workstation Pro 15](di-er-zhang-an-zhuang-freebsd/di-san-jie-freebsd-an-zhuang-ji-yu-vmware.md)
 * [第四节 ee 用法及虚拟机网络配置](di-er-zhang-an-zhuang-freebsd/di-si-jie-ee-yong-fa-ji-xu-ni-ji-wang-luo-pei-zhi.md)
 * [第五节 常用软件 与 SSH 配置](di-er-zhang-an-zhuang-freebsd/di-wu-jie-xshell-an-zhuang-yu-ssh-pei-zhi.md)
-* [第六节 物理机安装](di-er-zhang-an-zhuang-freebsd/di-liu-jie-wu-li-ji-an-zhuang.md)
+* [第六节 物理机安装与硬件选配](di-er-zhang-an-zhuang-freebsd/di-liu-jie-wu-li-ji-an-zhuang-yu-ying-jian-xuan-pei.md)
 * [第七节 物理机下显卡的配置](di-er-zhang-an-zhuang-freebsd/di-qi-jie-wu-li-ji-xia-xian-ka-de-pei-zhi.md)
 * [第八节 物理机下触摸板的设置](di-er-zhang-an-zhuang-freebsd/di-ba-jie-wu-li-ji-xia-chu-mo-ban-de-she-zhi.md)
 * [第九节 物理机声卡与网卡设置](di-er-zhang-an-zhuang-freebsd/di-jiu-jie-wu-li-ji-sheng-ka-yu-wang-ka-she-zhi.md)
