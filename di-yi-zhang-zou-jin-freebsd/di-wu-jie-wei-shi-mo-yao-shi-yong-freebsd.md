@@ -18,7 +18,7 @@
 
 　　 BSD 是一个完整的 OS，而不是内核。内核和基本系统作为一个项目来整体维护。
 
-　　 Linux 社区已经成为一个肮脏的泥潭，无论是内核开发还是用户群组。
+　　 Linux 社区已经成为一个肮脏的泥潭，无论是内核开发还是用户群组。——见[第十九章第五节。](../di-shi-jiu-zhang-wen-xue-gu-shi/di-wu-jie-linux-she-qu-yi-jing-cheng-wei-le-yi-ge-ang-zang-de-ni-tan.md)
 
 ## 选择 FreeBSD 的技术性原因
 
