@@ -29,11 +29,11 @@ PermitEmptyPasswords no      #不允许空密码登录
 
 `#service sshd restart`
 
-## 保持 SSH 在线 <a href="bao-chi-ssh-zai-xian" id="bao-chi-ssh-zai-xian"></a>
+## 保持 SSH 在线 <a href="#bao-chi-ssh-zai-xian" id="bao-chi-ssh-zai-xian"></a>
 
 服务端设置：
 
-编辑 `# ee/etc/ssh/sshd_config`，调整 `ClientAlive` 的设置：
+编辑 `# ee /etc/ssh/sshd_config`，调整 `ClientAlive` 的设置：
 
 ```
 ClientAliveInterval 10
@@ -46,7 +46,7 @@ ClientAliveCountMax 3
 
 客户端设置：
 
-全局用户生效：`# ee/etc/ssh/ssh_config` ，仅对当前用户生效：`~/.ssh/config`。
+全局用户生效：`# ee /etc/ssh/ssh_config` ，仅对当前用户生效：`~/.ssh/config`。
 
 ```
 Host *
