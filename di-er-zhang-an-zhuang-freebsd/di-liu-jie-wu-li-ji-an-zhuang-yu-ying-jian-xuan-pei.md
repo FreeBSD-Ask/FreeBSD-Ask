@@ -16,6 +16,6 @@ __[_https://download.freebsd.org/ftp/releases/amd64/amd64/ISO-IMAGES/13.0/FreeBS
 
 {% embed url="https://bsd-hardware.info/?d=FreeBSD" %}
 
-1、小米笔记本 12.5  一代 ：处理器 6Y30 、显卡 HD515 、WIFI intel 8260AC、声卡 ACL233（实际上是 233）、硬盘 NVME INTEL 600P。
+1、小米笔记本 12.5  一代 ：处理器 6Y30 、显卡 HD515 、WIFI intel 8260AC、声卡 ALC 233（实际上是 233）、硬盘 NVME INTEL 600P。
 
 2、联想 G400 ：处理器 i3-3110M/i5-3230M、显卡 HD4000、WIFI intel N135（联想 G400 网卡白名单支持三种网卡，如果是博通 BCM43142 建议更换为 N135）。注意：如果要使用 UEFI，必须使用 FreeBSD 13.0 及以上，否则启动会花屏……
