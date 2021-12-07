@@ -192,6 +192,7 @@
 * [第二节 FreeBSD 与猫 ——选择1%的生活](di-shi-jiu-zhang-wen-xue-gu-shi/di-er-jie-freebsd-yu-mao-xuan-ze-1-de-sheng-huo.md)
 * [第三节 Linux 与苦难哲学](di-shi-jiu-zhang-wen-xue-gu-shi/di-san-jie-linux-yu-ku-nan-zhe-xue.md)
 * [第四节 从一个想法看 FreeBSD 是商业化还是学院派](di-shi-jiu-zhang-wen-xue-gu-shi/di-si-jie-cong-yi-ge-xiang-fa-kan-freebsd-shi-shang-ye-hua-huan-shi-xue-yuan-pai.md)
+* [第五节 Linux 社区已经成为了一个肮脏的泥潭](di-shi-jiu-zhang-wen-xue-gu-shi/di-wu-jie-linux-she-qu-yi-jing-cheng-wei-le-yi-ge-ang-zang-de-ni-tan.md)
 
 ## 第二十章 娱乐与教育
 
