@@ -50,15 +50,15 @@ JID IP Address    Hostname   Path
 3   192.168.0.10  www       /usr/jail/www
 ```
 
-中英对照 英语 中文&#x20;
+中英对照
 
-JID jail ID&#x20;
+| 英语        | 中文    |
+|:----------:|:-------:|
+| JID        | jail ID |
+| IP Address | IP地址    |
+| Hostname   | 主机名     |
+| Path       | Jail 路径 |
 
-IP Address IP地址&#x20;
-
-Hostname 主机名&#x20;
-
-Path Jail路径
 
 ## 启动与停止jail
 
