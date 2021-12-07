@@ -2,7 +2,7 @@
 
 标题这句话是 Linux 内核首席维护者、Linux 之父 Linus Torvalds 所说的。原话是（The Linux community is now a dirty quagmire）。
 
-这句话不仅仅体现在内核开发中，而是体现在 Linux 的各个阶段，包括不限于国内的各种Linux社区社团组织。本文主要讨论的就是后者。至于 Linux 内核、systemd、Code of Conduct 那些乱七八糟的争议问题，更是泥潭一滩。
+这句话不仅仅体现在内核开发中，而是体现在 Linux 的各个阶段，包括不限于国内的各种 Linux 社区社团组织。本文主要讨论的就是后者。至于 Linux 内核、systemd、Code of Conduct 那些乱七八糟的争议问题，更是泥潭一滩。
 
 不得不承认，国内大多数 Linux 社团，又一个算一个，几乎都被所谓的巨苣所支配。看着花里胡哨的，漂亮，居然把自己的 Linux 社区打造成了一个只有巨苣们说话，没有一点实际作用的，一个虚幻的组织。你看你的群里有新人敢说话吗？
 
