@@ -40,6 +40,6 @@
 
 　　 DTrace 框架与 GEOM 存储框架。
 
-　　 Linux CentOS 二进制兼容层，可运行 Linux 软件，只要其支持 CentOS 。
+　　 Linux CentOS 二进制兼容层，可运行 Linux 软件，只要其支持 CentOS 。且软件运行速度快于 Linux。
 
 　　安全事件审计。
