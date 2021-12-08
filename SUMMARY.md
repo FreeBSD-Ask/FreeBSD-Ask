@@ -129,6 +129,7 @@
 * [第六节 GEOM Gate Network](di-shi-er-zhang-geom-cun-chu-kuang-jia/di-liu-jie-geom-gate-network.md)
 * [第七节 磁盘装置标签](di-shi-er-zhang-geom-cun-chu-kuang-jia/di-qi-jie-ci-pan-zhuang-zhi-biao-qian.md)
 * [第八节 UFS Journaling 与 GEOM](di-shi-er-zhang-geom-cun-chu-kuang-jia/di-ba-jie-ufs-journaling-yu-geom.md)
+* [第九节 ZFS 磁盘加解密](di-shi-er-zhang-geom-cun-chu-kuang-jia/di-jiu-jie-zfs-ci-pan-jia-jie-mi.md)
 
 ## 第十三章 DTrace
 
