@@ -1,24 +1,25 @@
 # 第九节 ZFS 磁盘加解密
- 
+
 ## 概述
 
 如果在安装的时候选择了 ZFS 磁盘加密，那么如何挂载该磁盘呢？
 
 磁盘结构（FreeBSD 11 以后）
 
-|  分区类型   | 挂载点  | 设备 |
-|  :----:  | :----:  | :----:
-| freebsd-boot /EFI  |  |/dev/ada0p1|
-| freebsd-zfs  | / |/dev/ada0p2/、/dev/ada0p2.eli |
-|freebsd-swap| |/dev/ada0p3、/dev/ada0p3.eli|
+|        分区类型       | 挂载点 |              设备              |
+| :---------------: | :-: | :--------------------------: |
+| freebsd-boot /EFI |     |          /dev/ada0p1         |
+|    freebsd-zfs    |  /  | /dev/ada0p2/、/dev/ada0p2.eli |
+|    freebsd-swap   |     |  /dev/ada0p3、/dev/ada0p3.eli |
 
 很简单，也不需要密钥。
 
-执行命令 `# geli attach /dev/ada0p3`&#x20;
+执行命令 `# geli attach /dev/ada0p3`
 
-然后输入正确的密码即可通过 `zfs import` 命令导入磁盘。
+然后输入正确的密码即可通过 `zfs mount zroot/ROOT/default` 命令导入磁盘。
 
-## 使用 GELI 加密 ZFS 卷 
+## 使用 GELI 加密 ZFS 卷
+
 ```
 # 创建一个块设备
 # zfs create -V 256M zroot/test
@@ -32,7 +33,6 @@
 # 我们可以在该设备上创建一个新的文件分区
 # zpool create -m /tmp/ztest ztest /dev/zvol/zroot/test.eli
 ```
-
 
 ## GELI 数据备份和恢复
 
@@ -51,6 +51,7 @@
 ```
 
 ## 调整 GELI 磁盘大小
+
 ```
 # 调整 ZFS 卷
 # zfs set volsize=512M zroot/test
@@ -62,4 +63,3 @@
 # geli attach -k /tmp/test.key /dev/zvol/zroot/test
 # zpool import
 ```
-
