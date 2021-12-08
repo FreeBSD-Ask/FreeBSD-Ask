@@ -40,6 +40,41 @@
 
 ## Renpy 游戏
 
+
+`Renpy` 是一款视觉小说引擎，可以很方便地拿来制作互动视频游戏。由于游戏骨架是 `Python` 语言，因此可以很方便地移植到不同的系统平台上，如 Windows 及 Linux 。
+
+虽然 `Renpy` 暂时未对`FreeBSD`作系统适配，但是 `FreeBSD` 自己对其作了二次打包。如此一来，就可以在 FreeBSD 上畅玩互动游戏了么？显然不是！不过，我们可以作一番小小的尝试。
+
+
+### 操作
+
+1. 安装 renpy 
+
+    `# pkg install renpy`
+    
+2. 下载游戏
+    这里以[心跳文学部！](https://teamsalvato.itch.io/ddlc)为例，其它游戏均同此理。选择附有 Linux 版本的游戏解压。
+    
+3. 运行 renpy
+    
+    在引擎界面左侧`工程(Projects)`处可以看到列出来刷新的游戏`DDLC-1.1.1`，点击该游戏后，选择右下角的`启动工程(Launch Project)`即可加载游戏。
+
+### 补充
+
+- 游戏分发站： [itch](https://itch.io/)
+
+- 尽量选择附有 Linux 版本的游戏
+    如果游戏仅支持 Windows 系统，可通过 renpy 引擎打包 Linux 版本。
+    
+- rpa 文件解包：[unrpa](https://github.com/Lattyware/unrpa)
+
+    `python3 unrpa -mp "解包目录" "XXX.rpa"`
+    
+- rpyc 文件解包：[unrpyc](https://github.com/CensoredUsername/unrpyc)
+
+    `python3 unrpyc -c "XXX.rpyc"` 
+    这是为了翻译游戏必要的步骤。
+    
 ## Godot 游戏
 
 ## 其它
