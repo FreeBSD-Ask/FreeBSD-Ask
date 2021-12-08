@@ -32,7 +32,7 @@
 | 纸牌接龙  | aisleriot          |             |         |
 |       | atomix             | katomic     | 解谜游戏    |
 
-更多逻辑/益智游戏请访问[网页谜题](https://cn.puzzle-sudoku.com/)， [补充](https://gottcode.org/)。
+更多逻辑/益智游戏请访问[网页谜题](https://cn.puzzle-sudoku.com/)，及[本地小游戏](https://gottcode.org/)。
 
 ### 经典开源游戏
 
