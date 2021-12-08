@@ -75,7 +75,8 @@
 - rpyc 文件解包：[unrpyc](https://github.com/CensoredUsername/unrpyc)
 
     `python3 unrpyc -c "XXX.rpyc"` 
-    这是为了翻译游戏必要的步骤。
+    
+    这一步非必要，仅为了方便翻译成其它语言。
     
 ## Godot 游戏
 
