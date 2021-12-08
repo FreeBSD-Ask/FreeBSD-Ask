@@ -32,7 +32,7 @@
 | 纸牌接龙  | aisleriot          |             |         |
 |       | atomix             | katomic     | 解谜游戏    |
 
-更多逻辑/益智游戏请访问[该页面](https://cn.puzzle-sudoku.com/)
+更多逻辑/益智游戏请访问[网页谜题](https://cn.puzzle-sudoku.com/)， [补充](https://gottcode.org/)。
 
 ### 经典开源游戏
 
@@ -54,7 +54,7 @@
     
 2. 下载游戏
 
-    这里以[心跳文学部！](https://teamsalvato.itch.io/ddlc)为例，其它游戏均同此理。选择附有 Linux 版本的游戏解压。
+    这里以[心跳文学社！](https://teamsalvato.itch.io/ddlc)为例，其它游戏也可同样操作。选择附有 Linux 版本的游戏解压。
     
 3. 运行 renpy
     
