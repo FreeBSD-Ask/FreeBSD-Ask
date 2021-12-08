@@ -53,6 +53,7 @@
     `# pkg install renpy`
     
 2. 下载游戏
+
     这里以[心跳文学部！](https://teamsalvato.itch.io/ddlc)为例，其它游戏均同此理。选择附有 Linux 版本的游戏解压。
     
 3. 运行 renpy
@@ -64,6 +65,7 @@
 - 游戏分发站： [itch](https://itch.io/)
 
 - 尽量选择附有 Linux 版本的游戏
+
     如果游戏仅支持 Windows 系统，可通过 renpy 引擎打包 Linux 版本。
     
 - rpa 文件解包：[unrpa](https://github.com/Lattyware/unrpa)
