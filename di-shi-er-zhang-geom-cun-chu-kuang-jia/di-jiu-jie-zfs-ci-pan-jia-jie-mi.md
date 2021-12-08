@@ -10,7 +10,7 @@
 |  :----:  | :----:  | :----:
 | freebsd-boot /EFI  |  |/dev/ada0p1|
 | freebsd-zfs  | / |/dev/ada0p2/、dev/ada0p2.eli |
-|freebsd-swap||/dev/ada0p3、/dev/ada0p3.eli|
+|freebsd-swap| |/dev/ada0p3、/dev/ada0p3.eli|
 
 很简单，也不需要密钥。
 
