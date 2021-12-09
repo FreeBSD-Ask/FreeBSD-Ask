@@ -167,6 +167,7 @@
 * [第八节 NFS 服务器](di-shi-liu-zhang-fu-wu-qi/di-ba-jie-nfs-fu-wu-qi.md)
 * [第九节 iSCSI](di-shi-liu-zhang-fu-wu-qi/di-jiu-jie-iscsi.md)
 * [第十节 Webmin](di-shi-liu-zhang-fu-wu-qi/di-shi-jie-webmin.md)
+* [第十一节 rsync 同步服务](di-shi-liu-zhang-fu-wu-qi/di-shi-yi-jie-rsync-tong-bu-fu-wu.md)
 
 ## 第十七章 网络服务器
 
