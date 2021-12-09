@@ -10,7 +10,7 @@
 
 我试了在正常的 Linux 系统内直接把 mfsBSD 的 img dd 到硬盘里，重启之后虽然正常加载 bootloader，但是可能是因为系统又对硬盘进行了写入而无法正常挂载内存盘。
 
-```bash
+```
 # wget https://mfsbsd.vx.sk/files/images/13/amd64/mfsbsd-se-13.0-RELEASE-amd64.img -O- | dd of=/dev/vda
 ```
 
@@ -40,7 +40,7 @@ boot
 
 （mfsBSD 和 mfsLinux 镜像的 root 密码默认是 `mfsroot`
 
-```bash
+```
 # cd /tmp
 # wget https://mfsbsd.vx.sk/files/images/13/amd64/mfsbsd-se-13.0-RELEASE-amd64.img
 # dd if=mfsbsd-se-13.0-RELEASE-amd64.img of=/dev/vda
@@ -53,13 +53,12 @@ boot
 
 等待系统初始化完成之后就可以 ssh 上去了，不过还需要一个步骤才能正常安装（不然走完安装向导会报错）
 
-我们需要下载 FreeBSD 的安装清单文件。
+我们还需要下载 FreeBSD 的安装清单文件。
 
-其实直接在自己电脑上[下载](http://ftp.freebsd.org/pub/FreeBSD/releases/amd64/12.0-RELEASE/MANIFEST)之后把内容贴上去
-
-```bash
+```
 # mkdir -p /usr/freebsd-dist
-# ee /usr/freebsd-dist/MANIFEST
+# cd /usr/freebsd-dist
+# fetch http://ftp.freebsd.org/pub/FreeBSD/releases/amd64/13.0-RELEASE/MANIFEST
 ```
 
 最后执行 `# bsdinstall` 进行正常的安装即可。
