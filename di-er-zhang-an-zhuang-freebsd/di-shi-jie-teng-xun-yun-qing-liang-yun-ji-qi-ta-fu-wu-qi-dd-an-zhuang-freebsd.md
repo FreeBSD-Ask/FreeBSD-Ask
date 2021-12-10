@@ -1,5 +1,11 @@
 # 第十节 腾讯云轻量云及其他服务器 dd 安装 FreeBSD
 
+## 视频教程
+
+{% embed url="http://b23.tv/zcfHa4K" %}
+
+## 文字教程
+
 腾讯云轻量云以及阿里云等机器都没有 FreeBSD 系统的支持，只能通过 dd 的方法自己暴力安装。请注意数据安全，以下教程有一定危险性和要求你有一定的动手能力。
 
 又是一个服务器面板里没有镜像的系统，又要用奇怪的方法来安装了。因为 FreeBSD 和 Linux 的内核不通用，可执行文件也不通用，所以无法通过 chroot 再删掉源系统的方法安装。安装的方法是先在内存盘中启动 FreeBSD 系统，也就是 [mfsBSD](https://mfsbsd.vx.sk)，再格式化硬盘安装新系统。mfsBSD 是一个完全载入内存的 FreeBSD 系统，类似于 Windows 中的 PE。
@@ -61,4 +67,4 @@ boot
 # fetch http://ftp.freebsd.org/pub/FreeBSD/releases/amd64/13.0-RELEASE/MANIFEST
 ```
 
-最后执行 `# bsdinstall` 进行正常的安装即可。
+最后执行 `# bsdinstall` 进行正常的安装即可。请注意大多数服务器是不支持 UEFI 的，仍然是传统的 BIOS。
