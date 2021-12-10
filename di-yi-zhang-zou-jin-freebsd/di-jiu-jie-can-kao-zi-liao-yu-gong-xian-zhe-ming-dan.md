@@ -14,7 +14,7 @@
 
 [星不萌](https://www.moebsd.cn)
 
-雨天:z477zq4o4q(a)99.c0m
+雨天：z477zq4o4q(a)99.c0m
 
 [liulitchi](https://github.com/liulitchi)
 
