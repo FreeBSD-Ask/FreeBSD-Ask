@@ -61,4 +61,4 @@ boot
 # fetch http://ftp.freebsd.org/pub/FreeBSD/releases/amd64/13.0-RELEASE/MANIFEST
 ```
 
-最后执行 `# bsdinstall` 进行正常的安装即可。请注意大多数服务器是不支持 UEFI 的，仍然是传统的 BIOS。
+最后执行 `# bsdinstall` 进行正常的安装即可。
