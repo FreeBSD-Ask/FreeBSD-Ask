@@ -14,7 +14,7 @@
 
 [星不萌](https://www.moebsd.cn)
 
-雨天：z477zq4o4q(a)qq.c0m
+雨天
 
 [liulitchi](https://github.com/liulitchi)
 
@@ -22,7 +22,7 @@
 
 [ykla](https://github.com/ykla)
 
-艳阳天：lEqz4ss7bO(a)qq.c0m
+艳阳天
 
 [Rintim](https://github.com/Rintim)
 
