@@ -22,7 +22,7 @@
 
 [ykla](https://github.com/ykla)
 
-艳阳天 1392455760 AT qq DOT com>
+艳阳天 1392455760 AT qq DOT com
 
 [Rintim](https://github.com/Rintim)
 
@@ -32,6 +32,6 @@
 
 [qinghecyn](https://github.com/qinghecyn)
 
-清热解毒口服液 1959777923 AT qq DOT com>
+清热解毒口服液 1959777923 AT qq DOT com
 
 **注意：如果缺少了您的信息或者不想被列出，请发起 issue。**
