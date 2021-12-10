@@ -14,7 +14,7 @@
 
 [星不萌](https://www.moebsd.cn)
 
-雨天 2477294049 AT qq DOT com
+雨天:z477zq4o4q(a)99.c0m
 
 [liulitchi](https://github.com/liulitchi)
 
@@ -22,7 +22,7 @@
 
 [ykla](https://github.com/ykla)
 
-艳阳天 1392455760 AT qq DOT com
+艳阳天：lEqz4ss7bO(a)99.c0m
 
 [Rintim](https://github.com/Rintim)
 
