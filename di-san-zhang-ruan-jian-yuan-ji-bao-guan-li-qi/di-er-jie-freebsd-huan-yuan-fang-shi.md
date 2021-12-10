@@ -1,6 +1,6 @@
-# 第二节 FreeBSD 换源方式（FreeBSD 13.0以前）
+# 第二节 FreeBSD 换源方式
 
-**注意：以下教程使用北京交通大学自由与开源软件镜像站，如果故障请翻到页面底部参考其他镜像站使用。**
+**注意：以下教程使用北京交通大学自由与开源软件镜像站，如果故障请翻到页面底部参考其他镜像站使用。对于失去安全支持的版本，如 FreeBSD 9.0 是没有 pkg 源可用的，只能使用当时的 ports 编译安装软件。**
 
 {% embed url="https://mirror.bjtu.edu.cn" %}
 
@@ -31,7 +31,7 @@ FreeBSD: { enabled: no }
 
 若要获取滚动更新的包,请将`quarterly`修改为`latest`.请注意,`CURRENT`版本只有`latest`.
 
-若要使用https,请先安装security/ca_root_nss,并将`http`修改为`https`,最后使用命令`# pkg update -f`刷新缓存即可.
+若要使用https,请先安装security/ca\_root\_nss,并将`http`修改为`https`,最后使用命令`# pkg update -f`刷新缓存即可.
 
 ### ports 源:提供源码方式安装软件的包管理器
 
