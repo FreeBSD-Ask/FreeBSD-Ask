@@ -57,6 +57,7 @@
 * [第六节 root 登录桌面](di-si-zhang-zhuo-mian-an-zhuang/di-liu-zhang-root-deng-lu-zhuo-mian.md)
 * [第七节 主题与美化](di-si-zhang-zhuo-mian-an-zhuang/di-qi-jie-zhu-ti-yu-mei-hua.md)
 * [第八节 远程桌面管理](di-si-zhang-zhuo-mian-an-zhuang/di-ba-jie-yuan-cheng-zhuo-mian-guan-li.md)
+* [第九节 安装 Wayland （可选）](di-si-zhang-zhuo-mian-an-zhuang/di-jiu-jie-an-zhuang-wayland-ke-xuan.md)
 
 ## 第五章 输入法及常用软件
 
