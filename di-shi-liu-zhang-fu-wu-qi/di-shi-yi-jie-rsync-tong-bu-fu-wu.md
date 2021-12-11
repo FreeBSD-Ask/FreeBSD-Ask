@@ -6,7 +6,7 @@
 
 ### （一）：背景环境介绍
 
-服务器A、服务器B 均为 `FreeBSD-12.2-RELEASE-amd64-dvd1`
+服务器A、服务器B 均为 `FreeBSD-12.2-RELEASE-amd64`
 
 服务器A（发起端）：`192.168.100.10/24`
 
@@ -16,20 +16,20 @@
 
 ### （二）服务器B（同步源）配置
 
-#### 1：安装rsync软件包
+#### 1：安装 rsync 软件包
 
 ```
 # pkg install -y rsync
 ```
 
-#### 2：查询已安装rsync软件包的信息
+#### 2：查询已安装 rsync 软件包的信息
 
 ```
 # pkg info | grep rsync 
 rsync-3.2.3            
 ```
 
-#### 3：新建需要备份的文件夹`test`，并且设置其属主为root，以及在其内部新建测试文件
+#### 3：新建需要备份的文件夹`test`，并且设置其属主为 root，以及在其内部新建测试文件
 
 ```
 # mkdir test
@@ -75,7 +75,7 @@ root:12345678          //格式：授权账户用户名：密码
 # chmod 600 /etc/rsyncd_users.db
 ```
 
-**7：rsync的服务名是rsyncd，启动rsync服务程序**
+**7：rsync 的服务名是 rsyncd，启动 rsync 服务程序**
 
 ```
 # rsync --daemon    //启动服务
@@ -85,7 +85,7 @@ root:12345678          //格式：授权账户用户名：密码
 # /usr/local/etc/rc.d/rsyncd start //启动服务
 ```
 
-#### 8：**查看rsync运行端口号**
+#### 8：**查看 rsync 运行端口号**
 
 ```
 # sockstat | grep rsync
@@ -93,7 +93,7 @@ root     rsync      1185  4  dgram  -> /var/run/logpriv
 root     rsync      1185  5  tcp4   192.168.100.20:873    *:* 
 ```
 
-#### 9：**防火墙放行rsync服务**
+#### 9：**防火墙放行 rsync 服务**
 
 ```
 # ee /etc/ipfw.rules 
@@ -124,19 +124,19 @@ $IPF 130 allow tcp from any to any 873 in
 $IPF 500 deny log all from any to any
 ```
 
-### （二）服务器A（发起端）配置
+### （二）服务器 A（发起端）配置
 
-#### 1：**创建本地文件夹/home/testBackUp/并设置好相关权限**
+#### 1：**创建本地文件夹 `/home/testBackUp/` 并设置好相关权限**
 
 ```
 # mkdir testBackUp
 # chown root:root testBackUp
 ```
 
-#### 2：**发起端访问同步源，将文件下载到本地/home/testBackUp/下载目录下，需要人机交互手动输入密码**
+#### 2：**发起端访问同步源，将文件下载到本地 `/home/testBackUp/` 下载目录下，需要人机交互手动输入密码**
 
 ```
-rsync -avz root@192.168.100.20::testcom /home/testBackUp     
+# rsync -avz root@192.168.100.20::testcom /home/testBackUp     
 ```
 
 #### 3：查看同步情况
