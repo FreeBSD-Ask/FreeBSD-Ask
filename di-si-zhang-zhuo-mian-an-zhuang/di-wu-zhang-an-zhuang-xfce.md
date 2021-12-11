@@ -17,7 +17,9 @@
 
 或者
 
-`# echo ". /usr/local/etc/xdg/xfce4/xinitrc" > ~/.xsession` 根据条件使用
+`# echo ". /usr/local/etc/xdg/xfce4/xinitrc" > ~/.xsession` 
+
+根据条件使用
 
 ## 启动服务
 
@@ -32,15 +34,16 @@
 
 ## 可选配置
 
-`# pkg install zh-fcitx`
+```
+# pkg install zh-fcitx
 
 #(安装中文输入法，需要设置中文输入环境)
-
+```
+```
 #cd ~
 
 #ee .xinitrc #文件添加以下内容
 
-```
 export XMODIFIERS="@im=fcitx"
 export XIM_PROGRAM="fcitx"
 export GTK_IM_MODULE="fcitx"
