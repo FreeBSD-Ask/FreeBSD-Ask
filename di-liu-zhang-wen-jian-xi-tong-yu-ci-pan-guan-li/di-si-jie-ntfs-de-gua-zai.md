@@ -4,11 +4,9 @@
 2. 把你的 ntfs 硬盘或 U 盘插入计算机。 这时候你会看到它的设备名，例如 da0。
 3. 修改 rc.conf
 
-`# ee /etc/rc.conf` 加入
-
-`fusefs_enable="YES"`
-
-该设置理论上在步骤1会自动加入，但是还需要你去检查看看有没有。
+```
+sysrc kld_list+=fusefs
+```
 
 4、修改 fstab 自动挂载
 
