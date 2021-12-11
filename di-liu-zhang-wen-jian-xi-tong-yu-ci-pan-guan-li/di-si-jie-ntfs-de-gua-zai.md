@@ -5,7 +5,7 @@
 3. 修改 rc.conf
 
 ```
-sysrc kld_list+=fusefs
+sysrc kld_list+="fusefs"
 ```
 
 4、修改 fstab 自动挂载
