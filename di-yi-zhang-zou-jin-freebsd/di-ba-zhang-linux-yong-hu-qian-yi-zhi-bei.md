@@ -20,7 +20,7 @@ Fedora 俗称“地沟油”，是基于 RHEL 的上游系统，我更喜欢称�
 
 ## Debian
 
-Debian 俗称“大便”。有个很奇怪的事情，设置了 root 密码就不会安装 sudo。Debian 的软件包也不甚更新。（此处仅指 stable）。、
+Debian 俗称“大便”。有个很奇怪的事情，设置了 root 密码就不会安装 sudo。Debian 的软件包也不甚更新。（此处仅指 stable）。
 
 ## OpenSUSE
 
