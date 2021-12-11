@@ -22,6 +22,5 @@ FreeBSD 项目在2021 年从 SVN 全面迁移到了 Git，即&#x20;
 
 ```
 # fetch https://download.freebsd.org/ftp/releases/amd64/13.0-RELEASE/src.txz
-# tar xvzfp src.txz -C 
-``
+# tar xvzfp src.txz  -C /
 ```
