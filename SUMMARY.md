@@ -47,6 +47,7 @@
 * [第三节 gitup 的用法](di-san-zhang-ruan-jian-yuan-ji-bao-guan-li-qi/di-san-jie-gitup-de-yong-fa.md)
 * [第四节 软件包管理器 pkg 的用法](di-san-zhang-ruan-jian-yuan-ji-bao-guan-li-qi/di-si-jie-ruan-jian-bao-guan-li-qi-pkg-de-yong-fa.md)
 * [第五节 通过源代码 ports 方式安装软件](di-san-zhang-ruan-jian-yuan-ji-bao-guan-li-qi/di-wu-jie-tong-guo-yuan-dai-ma-port-fang-shi-an-zhuang-ruan-jian.md)
+* [第六节 通过 DVD 安装软件](di-san-zhang-ruan-jian-yuan-ji-bao-guan-li-qi/di-liu-jie-tong-guo-dvd-an-zhuang-ruan-jian.md)
 
 ## 第四章 桌面安装
 
