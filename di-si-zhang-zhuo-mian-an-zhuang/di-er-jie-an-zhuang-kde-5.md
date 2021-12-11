@@ -13,7 +13,7 @@
 
 然后
 
-```shell
+```
 # ee /etc/rc.conf
 #添加：
 dbus_enable="YES"
