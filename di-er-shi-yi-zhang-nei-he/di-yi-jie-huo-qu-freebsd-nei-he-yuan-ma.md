@@ -6,10 +6,19 @@ FreeBSD 项目在2021 年从 SVN 全面迁移到了 Git，即 https://git.freebs
 
 ## 从 Git 获取源代码
 
-## 从压缩包获取源代码
+```
+# pkg install -y gitup 
+# gitup release # 具体版本需要参考当前 gitup 配置 https://github.com/johnmehr/gitup/blob/main/gitup.conf
+# gitup current # 获取 current 源代码
+```
+
+## 从压缩包获取源代码(推荐)
+
+该方法比较简单快捷。
 
 以 13.0 为例：
 
-`fetch https://download.freebsd.org/ftp/releases/amd64/13.0-RELEASE/src.txz`
-
-tar xvzfp src.txz -C `` /
+```
+# fetch https://download.freebsd.org/ftp/releases/amd64/13.0-RELEASE/src.txz
+# tar xvzfp src.txz -C 
+``
