@@ -51,6 +51,7 @@
 
 ## 第四章 桌面安装
 
+* [第〇节 概述](di-si-zhang-zhuo-mian-an-zhuang/di-ling-jie-gai-shu.md)
 * [第一节 安装 Xorg](di-si-zhang-zhuo-mian-an-zhuang/di-yi-jie-an-zhuang-xorg.md)
 * [第二节 安装 KDE 5](di-si-zhang-zhuo-mian-an-zhuang/di-er-jie-an-zhuang-kde-5.md)
 * [第三节 安装 Gnome 3](di-si-zhang-zhuo-mian-an-zhuang/di-san-jie-an-zhuang-gnome.md)
