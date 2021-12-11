@@ -20,7 +20,7 @@ dbus_enable="YES"
 sddm_enable="YES"
 
 #然后
-echo "exec ck-launch-session startplasma-x11" > ~/.xinitrc
+# echo "exec ck-launch-session startplasma-x11" > ~/.xinitrc
 ```
 
 
