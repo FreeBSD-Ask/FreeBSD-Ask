@@ -69,11 +69,13 @@ ports 编译的软件也可以转换为 pkg 包
 
 首先更新 Ports 树
 
-#`portsnap fetch update`
+```
+# portsnap fetch update
+```
 
 然后列出过时 Ports 组件
 ```
-# pkg_version -l ‘<’
+# pkg_version -l '<'
 ```
 下边分别列出 2 种 FreeBSD 手册中提及的升级工具:
 
@@ -108,5 +110,3 @@ MAKE_JOBS_NUMBER=4
 写入 /etc/make.conf 没有就新建。
 
 4 是处理器核心数，不知道就别改。
-
-**调整格式**
