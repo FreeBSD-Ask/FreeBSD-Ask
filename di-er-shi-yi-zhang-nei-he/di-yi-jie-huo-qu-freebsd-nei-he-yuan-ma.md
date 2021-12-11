@@ -3,3 +3,13 @@
 FreeBSD 项目在2021 年从 SVN 全面迁移到了 Git，即 https://git.freebsd.org
 
 所以获取源代码的方式也产生了变化。
+
+## 从 Git 获取源代码
+
+## 从压缩包获取源代码
+
+以 13.0 为例：
+
+`fetch https://download.freebsd.org/ftp/releases/amd64/13.0-RELEASE/src.txz`
+
+tar xvzfp src.txz -C `` /
