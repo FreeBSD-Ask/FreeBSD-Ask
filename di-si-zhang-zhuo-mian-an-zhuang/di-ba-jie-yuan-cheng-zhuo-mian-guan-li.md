@@ -1,5 +1,7 @@
 # 第八节 远程桌面管理
 
+## VNC
+
 启用 VNC 服务
 
 FreeBSD 操作系统的 VNC 服务可以使用 TigerVNC Server，在终端下执行命令
@@ -31,12 +33,13 @@ FreeBSD 操作系统的 VNC 服务可以使用 TigerVNC Server，在终端下执
 4.如果启用了防火墙，那么此时还需要开通防火墙，以 ipfw 为例，在终端输入命令：
 
 ```
-# ipfw add allow tcp from any to me 5900-5910 in keep-state #表示开通 5900-5910 的端口，即 DISPLAY 的 0-10 端口，通常情况下，即便需要开启很多桌面，10 个端口也足够了。最后别忘了将指令加入规则集文件，否则操作系统重启后会佚失。
+# ipfw add allow tcp from any to me 5900-5910 in keep-state 
+# 表示开通 5900-5910 的端口，即 DISPLAY 的 0-10 端口，
+# 通常情况下，即便需要开启很多桌面，10 个端口也足够了。
+# 最后别忘了将指令加入规则集文件，否则操作系统重启后会丢失。
 ```
 
-***
-
-Linux/BSD 等一系列操作系统的远程桌面服务都是基于 VNC 协议的，唯独 MS Windows 有自己的一套做法。那么 BSD 下要如何访问 Windows 远程桌面呢？
+## XRDP
 
 这里介绍一款软件 rdesktop。 安装命令：
 
