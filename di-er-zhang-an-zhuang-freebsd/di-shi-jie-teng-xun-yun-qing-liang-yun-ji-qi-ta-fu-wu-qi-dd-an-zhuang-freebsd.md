@@ -40,11 +40,13 @@ initrd (hd0,msdos1)/qwq/initramfs.igz
 boot
 ```
 
+![](../.gitbook/assets/2.png)
+
 这个特制的 initrd 启动之后并没有加载本地的系统，而是自己连接了网络并打开 ssh 服务器。于是我们就获得了一个运行在内存中的 Linux 系统。
 
 这个时候服务器应该就可以被 ssh 连接上了，并且可以安全的格式化硬盘。
 
-（mfsBSD 和 mfsLinux 镜像的 root 密码默认是 `mfsroot`
+mfsBSD 和 mfsLinux 镜像的 root 密码默认是 `mfsroot`
 
 ```
 # cd /tmp
@@ -52,8 +54,6 @@ boot
 # dd if=mfsbsd-se-13.0-RELEASE-amd64.img of=/dev/vda
 # reboot
 ```
-
-![](../.gitbook/assets/2.png)
 
 ### 安装 FreeBSD
 
