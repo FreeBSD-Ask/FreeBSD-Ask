@@ -7,24 +7,31 @@
 FreeBSD 操作系统的 VNC 服务可以使用 TigerVNC Server，在终端下执行命令
 
 ```
-# pkg install -y tigervnc-server 进行安装。安装之后，还要做一些设置： 
+# pkg install -y tigervnc-server 
+# 进行安装。安装之后，还要做一些设置。
 ```
 
-1.在终端执行命令 vncpasswd，设置访问密码。
+1.在终端执行命令 `vncpasswd`，设置访问密码。
 
-2.创建\~/.vnc/xstartup 文件，内容如下：
+2.创建 `~/.vnc/xstartup` 文件，内容如下：
 
 ```
-#!/bin/sh unset SESSION_MANAGER unset DBUS_SESSION_BUS_ADDRESS [ -x /etc/X11/xinit/xinitrc ] && exec /etc/X11/xinit/xinitrc [ -f /etc/X11/xinit/xinitrc ] && exec sh /etc/X11/xinit/xinitrc xsetroot -solid grey $command & #$command 
+#!/bin/sh 
+unset SESSION_MANAGER 
+unset DBUS_SESSION_BUS_ADDRESS 
+[ -x /etc/X11/xinit/xinitrc ] && exec /etc/X11/xinit/xinitrc 
+[ -f /etc/X11/xinit/xinitrc ] && exec sh /etc/X11/xinit/xinitrc 
+xsetroot -solid grey 
+$command &  
 ```
 
-在不同桌面下需要替换，Gnome 用 `gnome-session`，KDE 用 `startplasma-x11`， MATE 用 `mate-session`，Xfce 用 `xfce4-session`。
+注意：`$command` 需要替换，请注意保留 &，在不同桌面下需要替换，Gnome 用 `gnome-session`，KDE 用 `startplasma-x11`， MATE 用 `mate-session`，Xfce 用 `xfce4-session`。
 
 保存后执行命令 `# chmod 755 ~/.vnc/xstartup`。
 
 3.接下来在终端执行命令 `vncserver` 或 `vncserver :1`。
 
-其中“:1”相当于 DISPLAY=:1，即 指定桌面显示的通信端口为 1，对应 VNC 服务的通信端口为 5901。尽管桌面显示通信端口 是从 0 开始，但该端口已被当前桌面占用，因此 VNC 服务默认端口虽为 5900，但实际执行往往从 5901 开始。
+其中“`:1`”相当于 `DISPLAY=:1`，即 指定桌面显示的通信端口为 1，对应 VNC 服务的通信端口为 5901。尽管桌面显示通信端口 是从 0 开始，但该端口已被当前桌面占用，因此 VNC 服务默认端口虽为 5900，但实际执行往往从 5901 开始。
 
 如果启动服务时不指定通信端口，则系统根据使用情况自动指定。
 
@@ -53,4 +60,4 @@ FreeBSD 操作系统的 VNC 服务可以使用 TigerVNC Server，在终端下执
 # rdesktop windows 设备 ip 
 ```
 
-首次登陆设备会有安全提示，输入 yes，回车后远程桌面窗口就会弹出：
+首次登陆设备会有安全提示，输入 `yes`，回车后远程桌面窗口就会弹出：
