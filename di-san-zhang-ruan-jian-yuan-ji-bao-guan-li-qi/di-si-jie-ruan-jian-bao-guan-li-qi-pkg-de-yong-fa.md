@@ -1,6 +1,6 @@
 # 第四节 软件包管理器 pkg 的用法
 
-## FreeBSD 包管理器设计理念 <a href="freebsd-bao-guan-li-qi-she-ji-li-nian" id="freebsd-bao-guan-li-qi-she-ji-li-nian"></a>
+## FreeBSD 包管理器设计理念 <a href="#freebsd-bao-guan-li-qi-she-ji-li-nian" id="freebsd-bao-guan-li-qi-she-ji-li-nian"></a>
 
 熟悉 Linux 的人也许会发现，FreeBSD 的包管理方案实际上大约等于以下两大 Linux 发行版包管理器的完美合体：
 
@@ -12,8 +12,7 @@ Gentoo: Portage，对应 Ports（Portage 本身就是 Ports 的仿制品）
 
 装上系统默认没有 pkg，先获取 pkg：
 
-#pkg 回车即可输入 y 确认下载
-————————————————————————————————————
+\#pkg 回车即可输入 y 确认下载 ————————————————————————————————————
 
 pkg 使用 https，先安装 ssl 证书：
 
@@ -88,4 +87,22 @@ pkg: PRE-INSTALL script failed
 # port-rebuild`
 ```
 
+## Newer FreeBSD version for package pkg
 
+
+
+Neuer FreeBSD version for package pkg:&#x20;
+
+To ignore this error set IGNORE\_OSVERSION=yes
+
+package: 1402843
+
+running kernel: 1400042&#x20;
+
+Ignore the mismatch and continue? \[y/N]:
+
+这通常发生在失去安装支持的或者Current版本的系统上，不影响使用，输入 y 即可。
+
+如果想要从根源上解决，需要自己卸载pkg，从ports安装pkg；或者从源代码更新整个系统。
+
+如果只是不想看到这个提示只需要按照提示将 IGNORE\_OSVERSION=yes 写到 /etc/make.conf里面
