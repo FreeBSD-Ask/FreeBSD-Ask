@@ -2,7 +2,7 @@
 
 ## 火狐浏览器
 
-安装普通版本：
+### 安装普通版本：
 ```
 # pkg install firefox
 ```
@@ -14,7 +14,7 @@
 # make install clean 
 ```
 
-安装长期支持版本：
+### 安装长期支持版本：
 
 ```
 pkg install firefox-esr
