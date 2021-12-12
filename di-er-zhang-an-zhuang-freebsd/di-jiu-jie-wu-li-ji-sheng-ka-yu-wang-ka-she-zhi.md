@@ -5,7 +5,7 @@
 用以下命令查看当前声卡设备
 
 ```shell
-$cat /dev/sndstat
+$ cat /dev/sndstat
 Installed devices:
 pcm0: <NVIDIA (0x0083) (HDMI/DP 8ch)> (play)
 pcm1: <NVIDIA (0x0083) (HDMI/DP 8ch)> (play)
@@ -23,7 +23,7 @@ FreeBSD大部分软件的音频输出驱动为oss。有些默认是pulseaudio(�
 最后的数字是对应的pcm后面的数字。
 
 ```shell
-$sysctl hw.snd.default_unit=5
+$ sysctl hw.snd.default_unit=5
 ```
 这里推荐几个oss mixer
 
