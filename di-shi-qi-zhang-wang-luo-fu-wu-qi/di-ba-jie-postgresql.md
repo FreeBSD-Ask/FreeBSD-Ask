@@ -61,18 +61,6 @@ Success. You can now start the database server using:
 
 root@ykla:~ # 
 ```
-### 启动服务
-
-```
-# service postgresql start
-```
-示例输出：
-```
-root@ykla:~ # service postgresql start
-LOG:  ending log output to stderr
-HINT:  Future log output will go to log destination "syslog".
-root@ykla:~ # 
-```
 ### 登录使用
 
 Postgresql 默认是没有 root 用户的，需要使用其创建的 postgres 用户登录。
@@ -87,6 +75,9 @@ psql: FATAL:  role "root" does not exist
 ```
 # 切换用户
 root@ykla:~ # su - postgres  
+
+#启动服务
+$ /usr/local/bin/pg_ctl -D /var/db/postgres/data96 -l logfile start
 
 #创建新用户 ykla，并设置密码
 $ createuser -sdrP ykla
