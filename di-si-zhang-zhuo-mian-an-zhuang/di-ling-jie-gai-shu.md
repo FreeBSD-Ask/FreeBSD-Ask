@@ -4,12 +4,14 @@
 
 安装桌面的基本步骤是：①安装显卡驱动 -> ②安装 Xorg/Wayland -> ③安装KDE5/Gnome3/XFCE/MATE -> ④安装显示管理器 sddm/lightdm/slim
 
-其中，Gnome3可省略第四步，因为其显示管理器 gdm 早就在第二步就进行了安装。
+其中，Gnome3 可省略第四步，因为其显示管理器 gdm 早就在第二步就进行了安装。
 
-目前支持 Wayland 的桌面经测试只有 Gnome3，还是建议使用 xorg。
+目前支持 Wayland 的桌面经测试只有 Gnome3，还是建议使用 Xorg。
 
 显示管理器推荐搭配是 ：
 
 KDE5 + sddm
 
 Xfce/Mate + lightdm
+
+Slim 由于作者早在 2013 年就停止了开发，不推荐使用，会产生一些奇怪的 bug。
