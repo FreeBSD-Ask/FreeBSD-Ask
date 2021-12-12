@@ -187,11 +187,13 @@ root@localhost [(none)]>
 ```
 ### 修改密码
 
-将现在的密码修改为`your_new_password`
+将现在的密码修改为`your_new_password`，然后刷新权限。
 
 ```
 root@localhost [(none)]> SET PASSWORD = PASSWORD('your_new_password');
 Query OK, 0 rows affected, 1 warning (0.00 sec)
+root@localhost [(none)]> flush privileges;
+Query OK, 0 rows affected (0.00 sec)
 
 ```
 
