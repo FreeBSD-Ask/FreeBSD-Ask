@@ -17,7 +17,7 @@ pcm6: <Realtek ALC892 (Rear Digital)> (play)
 No devices installed from userspace.
 ```
 后面带有default是oss默认设备。如果软件的音频使用的oss且输出是默认的，音频就会从这个设备输出。  
-FreeBSD大部分软件的音频输出驱动为oss。有些默认是pulseaudio ，这些软件的设置看最后的提示。
+FreeBSD大部分软件的音频输出驱动为oss。有些默认是pulseaudio(比如firefox) ，这些软件的设置看最后的提示。
 
 下列命令可以修改输出的设备。
 最后的数字是对应的pcm后面的数字。
