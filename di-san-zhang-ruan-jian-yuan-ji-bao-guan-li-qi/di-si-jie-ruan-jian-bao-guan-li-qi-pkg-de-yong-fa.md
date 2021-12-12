@@ -90,19 +90,15 @@ pkg: PRE-INSTALL script failed
 ## Newer FreeBSD version for package pkg
 
 
-
+```
 Neuer FreeBSD version for package pkg:&#x20;
+To ignore this error set IGNORE_OSVERSION=yes
+- package: 1402843
+- running kernel: 1400042
+Ignore the mismatch and continue? [y/N]:
+```
+这通常发生在失去安装支持的或者 Current 版本的系统上，不影响使用，输入 y 即可。
 
-To ignore this error set IGNORE\_OSVERSION=yes
+如果想要从根源上解决，需要自己卸载 pkg，从 ports 安装 `ports-mgmt/pkg`；或者从源代码更新整个系统。
 
-package: 1402843
-
-running kernel: 1400042&#x20;
-
-Ignore the mismatch and continue? \[y/N]:
-
-这通常发生在失去安装支持的或者Current版本的系统上，不影响使用，输入 y 即可。
-
-如果想要从根源上解决，需要自己卸载pkg，从ports安装pkg；或者从源代码更新整个系统。
-
-如果只是不想看到这个提示只需要按照提示将 IGNORE\_OSVERSION=yes 写到 /etc/make.conf里面
+如果只是不想看到这个提示只需要按照提示将 `IGNORE_OSVERSION=yes` 写到 `/etc/make.conf`里面（没有就新建）。
