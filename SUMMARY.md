@@ -29,7 +29,7 @@
 
 ## 第二章 安装 FreeBSD
 
-* [第〇章 图解安装](di-er-zhang-an-zhuang-freebsd/di-ling-zhang-tu-jie-an-zhuang.md)
+* [第〇节 图解安装](di-er-zhang-an-zhuang-freebsd/di-ling-jie-tu-jie-an-zhuang.md)
 * [第一节 两种虚拟机比较](di-er-zhang-an-zhuang-freebsd/di-yi-jie-liang-zhong-xu-ni-ji-bi-jiao.md)
 * [第二节 FreeBSD 13.0 安装——基于 Virtual Box](di-er-zhang-an-zhuang-freebsd/di-er-jie-freebsd-an-zhuang-ji-yu-virtual-box.md)
 * [第三节 FreeBSD 13.0 安装——基于 Vmware Workstation Pro 15](di-er-zhang-an-zhuang-freebsd/di-san-jie-freebsd-an-zhuang-ji-yu-vmware.md)
