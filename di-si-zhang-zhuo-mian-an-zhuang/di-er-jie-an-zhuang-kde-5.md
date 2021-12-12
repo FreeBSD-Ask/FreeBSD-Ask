@@ -13,12 +13,14 @@
 
 然后
 
-```shell
+```
 # ee /etc/rc.conf
 #添加：
 dbus_enable="YES"
 sddm_enable="YES"
-echo "exec ck-launch-session startplasma-x11" > ~/.xinitrc
+
+#然后
+# echo "exec ck-launch-session startplasma-x11" > ~/.xinitrc
 ```
 
 

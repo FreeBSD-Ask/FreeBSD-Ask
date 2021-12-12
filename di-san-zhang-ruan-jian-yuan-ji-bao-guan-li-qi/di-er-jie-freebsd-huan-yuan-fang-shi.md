@@ -53,6 +53,10 @@ FreeBSD: { enabled: no }
 
 ### freebsd-update 源:提供基本系统更新
 
+注意：只有一级架构的 release 版本才提供该源。也就是说 current 和 stable 是没有的。关于架构的支持等级说明请看：
+
+{% embed url="https://www.freebsd.org/platforms" %}
+
 编辑`# ee /etc/freebsd-update.conf` 文件:
 
 将`ServerName update.FreeBSD.org` 修改为`ServerName freebsd-update.mirror.bjtulug.org`

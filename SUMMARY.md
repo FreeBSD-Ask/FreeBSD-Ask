@@ -1,6 +1,7 @@
 # Table of contents
 
 * [FreeBSD 从入门到跑路](README.md)
+* [关于](guan-yu.md)
 * [前言](qian-yan.md)
 
 ## 第〇章 计算机基础知识
@@ -22,12 +23,13 @@
 * [第五节 为什么要使用 FreeBSD](di-yi-zhang-zou-jin-freebsd/di-wu-jie-wei-shi-mo-yao-shi-yong-freebsd.md)
 * [第六节 所谓开源哲学](di-yi-zhang-zou-jin-freebsd/di-liu-jie-suo-wei-kai-yuan-zhe-xue.md)
 * [第七节 其他 BSD 简介](di-yi-zhang-zou-jin-freebsd/di-qi-jie-qi-ta-bsd-jian-jie.md)
-* [第八章 Linux 用户迁移指北](di-yi-zhang-zou-jin-freebsd/di-ba-zhang-linux-yong-hu-qian-yi-zhi-bei.md)
+* [第八节 Linux 用户迁移指北](di-yi-zhang-zou-jin-freebsd/di-ba-jie-linux-yong-hu-qian-yi-zhi-bei.md)
 * [第九节 参考资料与贡献者名单](di-yi-zhang-zou-jin-freebsd/di-jiu-jie-can-kao-zi-liao-yu-gong-xian-zhe-ming-dan.md)
 * [第十节 编撰说明](di-yi-zhang-zou-jin-freebsd/di-shi-jie-bian-zhuan-shuo-ming.md)
 
 ## 第二章 安装 FreeBSD
 
+* [第〇节 图解安装](di-er-zhang-an-zhuang-freebsd/di-ling-jie-tu-jie-an-zhuang.md)
 * [第一节 两种虚拟机比较](di-er-zhang-an-zhuang-freebsd/di-yi-jie-liang-zhong-xu-ni-ji-bi-jiao.md)
 * [第二节 FreeBSD 13.0 安装——基于 Virtual Box](di-er-zhang-an-zhuang-freebsd/di-er-jie-freebsd-an-zhuang-ji-yu-virtual-box.md)
 * [第三节 FreeBSD 13.0 安装——基于 Vmware Workstation Pro 15](di-er-zhang-an-zhuang-freebsd/di-san-jie-freebsd-an-zhuang-ji-yu-vmware.md)
@@ -46,15 +48,17 @@
 * [第三节 gitup 的用法](di-san-zhang-ruan-jian-yuan-ji-bao-guan-li-qi/di-san-jie-gitup-de-yong-fa.md)
 * [第四节 软件包管理器 pkg 的用法](di-san-zhang-ruan-jian-yuan-ji-bao-guan-li-qi/di-si-jie-ruan-jian-bao-guan-li-qi-pkg-de-yong-fa.md)
 * [第五节 通过源代码 ports 方式安装软件](di-san-zhang-ruan-jian-yuan-ji-bao-guan-li-qi/di-wu-jie-tong-guo-yuan-dai-ma-port-fang-shi-an-zhuang-ruan-jian.md)
+* [第六节 通过 DVD 安装软件](di-san-zhang-ruan-jian-yuan-ji-bao-guan-li-qi/di-liu-jie-tong-guo-dvd-an-zhuang-ruan-jian.md)
 
 ## 第四章 桌面安装
 
+* [第〇节 概述](di-si-zhang-zhuo-mian-an-zhuang/di-ling-jie-gai-shu.md)
 * [第一节 安装 Xorg](di-si-zhang-zhuo-mian-an-zhuang/di-yi-jie-an-zhuang-xorg.md)
 * [第二节 安装 KDE 5](di-si-zhang-zhuo-mian-an-zhuang/di-er-jie-an-zhuang-kde-5.md)
 * [第三节 安装 Gnome 3](di-si-zhang-zhuo-mian-an-zhuang/di-san-jie-an-zhuang-gnome.md)
 * [第四节 安装 Mate](di-si-zhang-zhuo-mian-an-zhuang/di-si-jie-an-zhuang-mate.md)
-* [第五节 安装 Xfce](di-si-zhang-zhuo-mian-an-zhuang/di-wu-zhang-an-zhuang-xfce.md)
-* [第六节 root 登录桌面](di-si-zhang-zhuo-mian-an-zhuang/di-liu-zhang-root-deng-lu-zhuo-mian.md)
+* [第五节 安装 Xfce](di-si-zhang-zhuo-mian-an-zhuang/di-wu-jie-an-zhuang-xfce.md)
+* [第六节 root 登录桌面](di-si-zhang-zhuo-mian-an-zhuang/di-liu-jie-root-deng-lu-zhuo-mian.md)
 * [第七节 主题与美化](di-si-zhang-zhuo-mian-an-zhuang/di-qi-jie-zhu-ti-yu-mei-hua.md)
 * [第八节 远程桌面管理](di-si-zhang-zhuo-mian-an-zhuang/di-ba-jie-yuan-cheng-zhuo-mian-guan-li.md)
 * [第九节 安装 Wayland （可选）](di-si-zhang-zhuo-mian-an-zhuang/di-jiu-jie-an-zhuang-wayland-ke-xuan.md)

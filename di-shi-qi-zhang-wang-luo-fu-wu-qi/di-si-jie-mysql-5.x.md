@@ -1,2 +1,229 @@
 # 第四节 MySQL 5.X
 
+## mysql 5.5（请参考5.6）/5.6
+
+### 安装
+
+pkg、ports 安装二选一
+
+```
+# pkg install mysql56-server
+# 或者
+# cd /usr/ports/databases/mysql56-server/ && make install clean
+```
+
+### 启动服务
+
+```
+# sysrc mysql_enable=YES
+# service mysql-server start
+```
+
+### 配置
+
+```
+# mysql_secure_installation
+```
+
+输出：
+
+```
+root@ykla:~ # mysql_secure_installation
+
+
+NOTE: RUNNING ALL PARTS OF THIS SCRIPT IS RECOMMENDED FOR ALL MySQL
+      SERVERS IN PRODUCTION USE!  PLEASE READ EACH STEP CAREFULLY!
+
+In order to log into MySQL to secure it, we'll need the current
+password for the root user.  If you've just installed MySQL, and
+you haven't set the root password yet, the password will be blank,
+so you should just press enter here.
+
+
+Enter current password for root (enter for none): 
+OK, successfully used password, moving on...
+
+Setting the root password ensures that nobody can log into the MySQL
+root user without the proper authorisation.
+
+Set root password? [Y/n] y
+New password: 
+Re-enter new password: 
+Password updated successfully!
+Reloading privilege tables..
+ ... Success!
+
+
+By default, a MySQL installation has an anonymous user, allowing anyone
+to log into MySQL without having to have a user account created for
+them.  This is intended only for testing, and to make the installation
+go a bit smoother.  You should remove them before moving into a
+production environment.
+
+Remove anonymous users? [Y/n] y
+ ... Success!
+
+Normally, root should only be allowed to connect from 'localhost'.  This
+ensures that someone cannot guess at the root password from the network.
+
+Disallow root login remotely? [Y/n] n
+ ... skipping.
+
+By default, MySQL comes with a database named 'test' that anyone can
+access.  This is also intended only for testing, and should be removed
+before moving into a production environment.
+
+Remove test database and access to it? [Y/n] n
+ ... skipping.
+
+Reloading the privilege tables will ensure that all changes made so far
+will take effect immediately.
+
+Reload privilege tables now? [Y/n] 
+ ... Success!
+
+
+
+
+All done!  If you've completed all of the above steps, your MySQL
+installation should now be secure.
+
+Thanks for using MySQL!
+
+
+Cleaning up...
+
+```
+
+### 使用
+
+登录
+
+```
+# mysql -u root -p
+```
+示例输出
+```
+root@ykla:~ # mysql -u root -p
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 12
+Server version: 5.6.51 Source distribution
+
+Copyright (c) 2000, 2021, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| test               |
++--------------------+
+4 rows in set (0.00 sec)
+
+mysql> 
+
+```
+## mysql 5.7
+
+注意：如果是从旧版本升级，请先执行`mysql_upgrade`
+
+### 安装
+以下二选一
+```
+# pkg install mysql57-server
+# 或
+# cd /usr/ports/databases/mysql57-server/ && make install clean
+```
+
+### 启动服务
+
+```
+# sysrc mysql_enable=YES
+# service mysql-server start
+```
+示例输出(可以看到密码在`/root/.mysql_secret`文件夹下，是`q(<p2ZZ>lX/:`
+```
+root@ykla:~ # sysrc mysql_enable=YES
+mysql_enable:  -> YES
+root@ykla:~ # service mysql-server start
+Starting mysql.
+root@ykla:~ # cat /root/.mysql_secret
+# Password set for user 'root@localhost' at 2021-12-13 00:21:02 
+q(<p2ZZ>lX/:
+root@ykla:~ # 
+```
+
+### 尝试登录
+
+登录出现报错，提示需要修改密码。
+
+```
+root@ykla:~ # mysql -u root -p
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 2
+Server version: 5.7.36-log
+
+Copyright (c) 2000, 2021, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+root@localhost [(none)]> show databases;
+ERROR 1820 (HY000): You must reset your password using ALTER USER statement before executing this statement.
+root@localhost [(none)]> 
+```
+### 修改密码
+
+将现在的密码修改为`your_new_password`，然后刷新权限。
+
+```
+root@localhost [(none)]> SET PASSWORD = PASSWORD('your_new_password');
+Query OK, 0 rows affected, 1 warning (0.00 sec)
+root@localhost [(none)]> flush privileges;
+Query OK, 0 rows affected (0.00 sec)
+
+```
+
+正常登录
+
+```
+root@ykla:~ # mysql -u root -p
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 3
+Server version: 5.7.36-log Source distribution
+
+Copyright (c) 2000, 2021, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+root@localhost [(none)]> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+4 rows in set (0.00 sec)
+
+root@localhost [(none)]> 
+```

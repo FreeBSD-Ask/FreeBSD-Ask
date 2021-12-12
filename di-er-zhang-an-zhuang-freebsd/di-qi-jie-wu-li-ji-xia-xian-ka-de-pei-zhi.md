@@ -18,18 +18,21 @@ FreeBSD 已从 Linux 移植了显卡驱动，理论上，A 卡 N 卡均可在 am
 
 ### 安装驱动
 
+注意，如果要通过 ports 安装必须先取得系统源代码。请见第二十一章。
+
 * FreeBSD 12.0: `#pkg install drm-fbsd12.0-kmod`
 
-注意：除了 12.0，对于任意 12.X 均应该安装 `drm-fbsd12.0-kmod `，但应该使用 port 在本地重新构建而不应该使用 pkg 进行安装，否则不会正常运行。
+注意：除了 12.0，对于任意 12.X 均应该安装 `drm-fbsd12.0-kmod` ，但应该使用 port 在本地重新构建而不应该使用 pkg 进行安装，否则不会正常运行。
 
 * FreeBSD 13：`# pkg install drm-fbsd13-kmod`
+* FreeBSD 14: `# cd /usr/ports/graphics/drm-kmod/ && make BATCH=yes install clean`&#x20;
 
 ### 加载显卡
 
 打开`/etc/rc.conf`:
 
 * 如果为 intel 核芯显卡，添加 `kld_list="i915kms"`
-* 如果为 HD7000 以后的 AMD 显卡，添加` kld_list="amdgpu"`
+* 如果为 HD7000 以后的 AMD 显卡，添加 `kld_list="amdgpu"`
 * 如果为 HD7000 以前的 AMD 显卡，添加 `kld_list="radeonkms"`
 
 ### 视频硬解
