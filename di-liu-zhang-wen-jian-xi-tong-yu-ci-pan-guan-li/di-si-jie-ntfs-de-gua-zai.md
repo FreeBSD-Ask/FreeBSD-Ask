@@ -26,8 +26,7 @@ sysrc kld_list+="fusefs"
 如果不知道哪个磁盘分区是 NTFS，可以用命令来查看
 
 ```
-# diskinfo -tv /dev/da1s1
+# fstyp /dev/da0s1
 ```
 
-详细参数见 [ntfs-3g manpage。](https://www.freebsd.org/cgi/man.cgi?query=ntfs-3g&format=html)
-
+详细参数见 [ntfs-3g manpage。](https://www.freebsd.org/cgi/man.cgi?query=ntfs-3g\&format=html)
