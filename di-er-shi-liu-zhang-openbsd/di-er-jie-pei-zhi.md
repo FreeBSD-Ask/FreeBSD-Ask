@@ -119,7 +119,7 @@ export GTK_IM_MODULE=XIM
 
 ## 6. 主题和图标
 
-以下仅举两个实例，[Qogir](https://www.gnome-look.org/p/1230631/) 主题、和 [Tela](https://www.gnome-look.org/p/1279924/)图标，大家可访问[相关网站](https://www.gnome-look.org)，自行选择喜欢的主题和图标来安装。
+以下仅举两个实例，[Qogir](https://www.gnome-look.org/p/1230631/) 主题、和 [Tela](https://www.gnome-look.org/p/1279924/) 图标，大家可访问[相关网站](https://www.gnome-look.org)，自行选择喜欢的主题和图标来安装。
 
 ### 提前准备
 
@@ -131,7 +131,7 @@ export GTK_IM_MODULE=XIM
  
 `cd Qogir-theme`
 
-`vi .install.sh`，修改文件中的第一行 shebang 为 `#!/usr/local/share/bin/bash`
+`vi .install.sh`，修改文件中的第一行 shebang 为 `#!/usr/local/bin/bash`
 
 `bash ./install.sh`
 
@@ -141,7 +141,7 @@ export GTK_IM_MODULE=XIM
 
 `cd Tela-icon-theme`
 
-`vi .install.sh`，修改文件中的第一行 shebang 为 `#!/usr/local/share/bin/bash`
+`vi .install.sh`，修改文件中的第一行 shebang 为 `#!/usr/local/bin/bash`
 
 `bash ./install.sh`
 
