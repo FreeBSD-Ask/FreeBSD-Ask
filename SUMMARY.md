@@ -255,3 +255,8 @@
 * [第四节 内存管理](di-er-shi-wu-zhang-xi-tong-she-ji-yu-fen-xi/di-si-jie-nei-cun-guan-li.md)
 * [第五节 安全](di-er-shi-wu-zhang-xi-tong-she-ji-yu-fen-xi/di-wu-jie-an-quan.md)
 * [第六节 I/O 系统](di-er-shi-wu-zhang-xi-tong-she-ji-yu-fen-xi/di-liu-jie-io-xi-tong.md)
+
+## 第二十五章 OpenBSD&#x20;
+
+* [第一节 安装](di-er-shi-wu-zhang-openbsd/di-yi-jie-an-zhuang.md)
+* [第二节 配置](di-er-shi-wu-zhang-openbsd/di-er-jie-pei-zhi.md)
