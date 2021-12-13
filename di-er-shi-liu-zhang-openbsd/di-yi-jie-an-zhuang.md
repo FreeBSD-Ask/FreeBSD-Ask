@@ -183,7 +183,7 @@ sets by prepending a '-' to the set name, name pattern or 'all'. Selected sets a
 
 Set name(s)? (or 'abort' or 'done') [done] `-game*`
 ```
-这里我们不选择 `game70。tgz` ，其它都勾选。
+这里我们取消 `game70.tgz` 选项，其它都勾选。
 
 注：即使不使用桌面，也请勾选 `X` 选项，否则部分软件可能无法正常运行。
 ```
