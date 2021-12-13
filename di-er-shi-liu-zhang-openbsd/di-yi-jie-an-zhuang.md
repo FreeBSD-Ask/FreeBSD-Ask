@@ -172,17 +172,16 @@ What timezone are you in? ('?' for list)
 
 软件地址，选择`disk` 。这里我们选择安装盘为软件地址。需要提示一点的是，系统询问是否已识别U盘时，一定要选择否，以便我们再确认一遍U盘位置。本例中，U盘的位置为 `sd2`。
 
-> Select sets by entering a set name, a file name pattern or 'all'. De-select sets by prepending a '-' to the set name, name pattern or 'all'. Selected sets are labelled '[X]'.
+> Select sets by entering a set name, a file name pattern or 'all'. De-select sets by prepending a '-' to the set name, name pattern or 'all'. Selected sets are labelled `[X]`
 > 
-> [X] bsd [X] etc70.tgz [X] xbase70.tgz
-> 
-> [X] xserv70.tgz [X] bsd.rd [X] comp53.tgz
-> 
-> [X] xetc53.tgz [X] bsd.mp [X] man53.tgz
-> 
-> [X] xshare70.tgz [X] base70.tgz [X] game70.tgz 
-> [X] xfont70.tgz 
-> Set name(s)? (or 'abort' or 'done') [done] `-game*`
+> > [X] bsd [X] etc70.tgz [X] xbase70.tgz  
+> > [X] xserv70.tgz [X] bsd.rd [X] comp53.tgz 
+ 
+> > [X] xetc53.tgz [X] bsd.mp [X] man53.tgz
+ 
+> > [X] xshare70.tgz [X] base70.tgz [X] game70.tgz 
+> > [X] xfont70.tgz 
+> > Set name(s)? (or 'abort' or 'done') [done] `-game*`
 
 这里我们不选择 `game70。tgz` ，其它都勾选。
 
