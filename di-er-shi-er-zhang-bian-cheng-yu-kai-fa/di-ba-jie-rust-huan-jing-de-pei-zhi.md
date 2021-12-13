@@ -17,6 +17,21 @@
 
 安装成功后，输入 `rustc --version` 或 `cargo --version` 查看软件版本。
 
+### 为美好的世界献上祝福
+
+`cd ~`
+`mkdir projects`
+`cd projects`
+`cargo new greeting`
+`cd greeting`
+`ee src/main.rs`，添加如下文本：
+
+```rust
+fn main() {
+println!("Hello, world!");
+}
+```
+保存后，运行 `cargo run` 即可输出代码。
 
 ## 安装 Go 语言
 
