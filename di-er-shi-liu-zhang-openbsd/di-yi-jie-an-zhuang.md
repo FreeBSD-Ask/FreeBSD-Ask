@@ -19,6 +19,7 @@
 ### 安装过程
 
 > Welcome to the OpenBSD/amd64 7.0 installation program. 
+> 
 > (I)nstall, (U)pgrade or (S)hell? `i`
 
 选择 i 进行安装
@@ -28,6 +29,7 @@
 系统主机名，可以选择一个字母少的，将来会显示`XiaoMing.DHCP`这样的主机名。 
 
 > Available network interfaces are: em0 rtwn0. 
+> 
 > Which one do you wish to configure? (or 'done') [em0]
 
 这一步选择网络连接。为免去不必要麻烦，请尽量选择有线网络。本例中 `em0` 为有线网络，`rtwn0` 为无线网络。
