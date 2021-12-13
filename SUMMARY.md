@@ -260,3 +260,11 @@
 
 * [第一节 安装](di-er-shi-wu-zhang-openbsd/di-yi-jie-an-zhuang.md)
 * [第二节 配置](di-er-shi-wu-zhang-openbsd/di-er-jie-pei-zhi.md)
+
+## 第二十六章 NetBSD
+
+* [第一节 安装与配置](di-er-shi-liu-zhang-netbsd/di-yi-jie-an-zhuang-yu-pei-zhi.md)
+
+## 第二十七章 DragonFlyBSD
+
+* [第一节 安装与配置](di-er-shi-qi-zhang-dragonflybsd/di-yi-jie-an-zhuang-yu-pei-zhi.md)
