@@ -6,7 +6,7 @@
 
 ## 自定义安装
 
-这里推荐大家使用**自定义安装**，不要使用系统推荐的方式。因为为了安全考虑，**OpenBSD**默认大量分区。新用户初次遇到，会一头雾水，极不适应。
+这里推荐大家使用**自定义安装**，不要使用系统推荐的方式。因为为了安全考虑，**OpenBSD** 默认大量分区。新用户初次遇到，会一头雾水，极不适应。
 
 ### 推荐分区
 
@@ -27,7 +27,8 @@
 
 系统主机名，可以选择一个字母少的，将来会显示`XiaoMing.DHCP`这样的主机名。
 
-> Available network interfaces are: em0 rtwn0.\n
+> Available network interfaces are: em0 rtwn0.
+> 
 > Which one do you wish to configure? (or 'done') [em0]
 
 这一步选择网络连接。为免去不必要麻烦，请尽量选择有线网络。本例中 `em0` 为有线网络，`rtwn0` 为无线网络。
@@ -111,10 +112,15 @@ What timezone are you in? ('?' for list)
 > partition: [a]
 >
 > offset: [64]
+> 
 > size: [xxxxxxxx] `20g`
+> 
 > Rounding size to cylinder (bbbbb sectors): yyyyyyyy
+> 
 > FS type: [4.2BSD]
+> 
 > mount point: [none] `/`
+> 
 > Rounding size to bsize (w sectors): zzzzzzz
 > 
 > \>
@@ -122,10 +128,15 @@ What timezone are you in? ('?' for list)
 这里设置了 20GB 的 / 分区，`阴影框`为我们输入的设置，其余的皆为回车键默认选择。
 
 > \> a
+> 
 > partition: [b]
+> 
 > offset: []
+> 
 > size: [xxxxxxxxxx] 4g
+> 
 > Rounding size to cylinder (w sectors): zzzzzz
+> 
 > FS type: [swap]
 > 
 > \>
@@ -133,11 +144,17 @@ What timezone are you in? ('?' for list)
 这里设置了 4GB 的 swap 分区，`阴影框` 为我们输入的设置，其余的皆为回车键默认选择。
 
 > \> `a`
+> 
 > partition: [h]
+> 
 > offset: [aaaaaaaaa]
+> 
 > size: [ASDFGHJKL]
+> 
 > FS type: [4.2BSD]
+> 
 > mount point: [none] `/home`
+> 
 > Rounding size to bsize (w sectors): zzzzzzzz
 > 
 > \>
