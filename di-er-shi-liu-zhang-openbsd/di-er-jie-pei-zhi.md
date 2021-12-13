@@ -161,7 +161,7 @@ mkdir first second third forth
 
 ### 检查分区
 
-如插入的盘符为 sd1，则输入 sudo disklabel sd1 查看分区情况。如下
+如插入的盘符为 sd1，则输入 `disklabel sd1` 查看分区情况。如下
 ```
 #                size           offset  fstype [fsize bsize   cpg]
  c:         60062500                0  unused                    
