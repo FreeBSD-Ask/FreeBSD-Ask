@@ -27,7 +27,7 @@
 
 系统主机名，可以选择一个字母少的，将来会显示`XiaoMing.DHCP`这样的主机名。
 
-> Available network interfaces are: em0 rtwn0.
+> Available network interfaces are: em0 rtwn0.\n
 > Which one do you wish to configure? (or 'done') [em0]
 
 这一步选择网络连接。为免去不必要麻烦，请尽量选择有线网络。本例中 `em0` 为有线网络，`rtwn0` 为无线网络。
@@ -107,7 +107,9 @@ What timezone are you in? ('?' for list)
 以下假设一块 64 GB 硬盘，分区为：/ 20GB ， swap 4GB ，然后剩下的空间全部划分给 /home 。
 
 > \> `a`
+> 
 > partition: [a]
+>
 > offset: [64]
 > size: [xxxxxxxx] `20g`
 > Rounding size to cylinder (bbbbb sectors): yyyyyyyy
