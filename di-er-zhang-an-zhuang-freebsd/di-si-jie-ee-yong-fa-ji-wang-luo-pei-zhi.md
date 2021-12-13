@@ -49,7 +49,7 @@ nameserver 223.6.6.6
 nameserver 8.8.8.8   #谷歌 DNS，境外设备专用
 ```
 之后重启一下网络配置
-`/etc/netstart restart`
+`# /etc/netstart restart`
 
 尝试 ping 一下 163.com。（按下ctrl + C 可中断）
 
