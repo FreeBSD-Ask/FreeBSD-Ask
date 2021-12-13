@@ -2,12 +2,23 @@
 
 开机按 2 进入 single user 单用户模式。
 
-UFS 文件系统
+## UFS 文件系统
 
-mount -u /
+```
+# mount -u /
+# mount -a -t ufs
+```
 
-mount -a -t ufs
+## ZFS 文件系统
 
-ZFS 文件系统
+```
+# mount -u
+# zfs mount -a
+```
 
-mount u -
+## 使用 U 盘设备
+
+```
+# mount /dev/adaXpN -o rw /mnt
+```
+X、N 的参数取决于具体设备。
