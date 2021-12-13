@@ -33,7 +33,7 @@
 * [第一节 两种虚拟机比较](di-er-zhang-an-zhuang-freebsd/di-yi-jie-liang-zhong-xu-ni-ji-bi-jiao.md)
 * [第二节 FreeBSD 13.0 安装——基于 Virtual Box](di-er-zhang-an-zhuang-freebsd/di-er-jie-freebsd-an-zhuang-ji-yu-virtual-box.md)
 * [第三节 FreeBSD 13.0 安装——基于 Vmware Workstation Pro 15](di-er-zhang-an-zhuang-freebsd/di-san-jie-freebsd-an-zhuang-ji-yu-vmware.md)
-* [第四节 ee 用法及虚拟机网络配置](di-er-zhang-an-zhuang-freebsd/di-si-jie-ee-yong-fa-ji-xu-ni-ji-wang-luo-pei-zhi.md)
+* [第四节 ee 用法及网络配置](di-er-zhang-an-zhuang-freebsd/di-si-jie-ee-yong-fa-ji-wang-luo-pei-zhi.md)
 * [第五节 常用软件 与 SSH 配置](di-er-zhang-an-zhuang-freebsd/di-wu-jie-xshell-an-zhuang-yu-ssh-pei-zhi.md)
 * [第六节 物理机安装与硬件选配](di-er-zhang-an-zhuang-freebsd/di-liu-jie-wu-li-ji-an-zhuang-yu-ying-jian-xuan-pei.md)
 * [第七节 物理机下显卡的配置](di-er-zhang-an-zhuang-freebsd/di-qi-jie-wu-li-ji-xia-xian-ka-de-pei-zhi.md)
