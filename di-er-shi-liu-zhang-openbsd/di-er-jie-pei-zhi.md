@@ -191,9 +191,8 @@ mount /dev/cd0a /$USER/media/forth   # CD
 
 ## 8. 无线测试
 
-OpenBSD 里的无线网络，配置文件通常是 `hostname.if` ，其中 `if` 为你的无线驱动名称。如一台笔记本无线型号为 rtl8188cu ，OpenBSD 下驱动为 rtwn0 ，为了可以自动识别无线，可打开
-
-`/etc/hostname.rtwn0` 文件 ，而后添加：
+OpenBSD 里的无线网络，配置文件通常是 `hostname.if` ，其中 `if` 为无线驱动名称+序号。如一台笔记本无线型号为 rtl8188cu ，OpenBSD 下驱动为 rtwn0 。为了让系统自动加载无线，可打开
+ `/etc/hostname.rtwn0` 文件 ，而后添加：
 
 ```
 dhcp 
