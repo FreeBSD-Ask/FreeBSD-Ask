@@ -172,7 +172,7 @@ mkdir first second third forth
 
 由上则可知分区为 i ，使用以下命令挂载：
 
-`mount /dev/sd1i /$USER/media/first`
+`mount /dev/sd1i /$USER/media/first` ，`$USER` 替换为当前用户名。
 
 ### 其它格式
 
@@ -187,7 +187,7 @@ mount /dev/cd0a /$USER/media/forth   # CD
 
 ### 卸载磁盘
 
-`umount /$User/media/first`
+`umount /$USER/media/first`
 
 ## 8. 无线测试
 
