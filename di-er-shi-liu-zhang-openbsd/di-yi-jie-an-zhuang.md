@@ -177,8 +177,8 @@ Select sets by entering a set name, a file name pattern or 'all'. De-select
 sets by prepending a '-' to the set name, name pattern or 'all'. Selected sets are labelled `[X]`
 
 [X] bsd          [X] etc70.tgz     [X] xbase70.tgz  
-[X] xserv70.tgz  [X] bsd.rd        [X] comp53.tgz 
-[X] xetc53.tgz   [X] bsd.mp        [X] man53.tgz 
+[X] xserv70.tgz  [X] bsd.rd        [X] comp70.tgz 
+[X] xetc70.tgz   [X] bsd.mp        [X] man70.tgz 
 [X] xshare70.tgz [X] base70.tgz    [X] game70.tgz 
 [X] xfont70.tgz 
 
@@ -191,8 +191,8 @@ Set name(s)? (or 'abort' or 'done') [done] -game*
 Set name(s)? (or 'abort' or 'done') [done] `-game*`
 
 [X] bsd          [X] etc70.tgz     [X] xbase70.tgz  
-[X] xserv70.tgz  [X] bsd.rd        [X] comp53.tgz 
-[X] xetc53.tgz   [X] bsd.mp        [X] man53.tgz 
+[X] xserv70.tgz  [X] bsd.rd        [X] comp70.tgz 
+[X] xetc70.tgz   [X] bsd.mp        [X] man70.tgz 
 [X] xshare70.tgz [X] base70.tgz    [ ] game70.tgz 
 [X] xfont70.tgz 
 
