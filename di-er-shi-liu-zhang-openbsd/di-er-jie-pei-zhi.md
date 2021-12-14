@@ -16,31 +16,32 @@
 
 ## 2. 系统更新
 
-以下命令皆为在 root 账号下操作。
-
 ### 添加 sudo
 
-终端命令：`pkg_add sudo`
+终端命令：`# pkg_add sudo`
 
-然后在终端输入 `visudo` ，然后添加一行 $USER ALL=(ALL) SETENV: ALL （请将 $USER 替换为你的用户名)，保存后退出。
+然后在终端输入 `# visudo` ，然后添加一行 $USER ALL=(ALL) SETENV: ALL （请将 $USER 替换为你的用户名)，保存后退出。
 
 ### 内核更新
 
-内核更新：`syspatch`
+内核更新：`# syspatch`
 
-驱动升级：`fw_update`
+驱动升级：`# fw_update`
 
-软件升级：`pkg_add -u`
+软件升级：`# pkg_add -u`
 
-修改shell：`chsh`
+修改shell：默认是 `chsh`
  
-    示例：`chsh -s /usr/local/bin/bash $USER`
-    
+    示例：
+```    
+  # chsh -s /usr/local/bin/bash $USER`
+```
+
 ## 3. 安装桌面
 
 ### 3.1 安装 MATE 桌面
 
-登入 root 账号，终端运行 `pkg_add slim mate mate-utils mate-extras`
+登入 root 账号，终端运行 `# pkg_add slim mate mate-utils mate-extras`
 
 打开 `/etc/rc.local`，添加一行 `/usr/local/bin/slim -d` 。
 
@@ -58,7 +59,7 @@ multicast_host=YES
 
 ### 3.2 安装 XFCE 桌面
 
-登入 root 账号，终端运行 `pkg_add slim xfce`
+终端运行 `# pkg_add slim xfce`
 
 打开 `/etc/rc.local`，添加一行 `/usr/local/bin/slim -d` 。
 
@@ -80,21 +81,21 @@ multicast_host=YES
 
 ## 4. 软件管理
 
-- 查找软件： `pkg_info -Q foo`
+- 查找软件： `# pkg_info -Q foo`
 
-- 安装软件： `pkg_add foo`
+- 安装软件： `# pkg_add foo`
 
-- 升级软件： `pkg_add -iu foo`
+- 升级软件： `# pkg_add -iu foo`
 
 ## 5. 中文设置
 
 ### 5.1 安装字体
 
-`pkg_add noto-cjk noto-emoji`
+`# pkg_add noto-cjk noto-emoji`
 
 ### 5.2 安装输入法
 
-`pkg_add fcitx fcitx-configtool zh-libpinyin`
+`# pkg_add fcitx fcitx-configtool zh-libpinyin`
 
 ### 5.3 设置中文
 
@@ -123,7 +124,7 @@ export GTK_IM_MODULE=XIM
 
 ### 提前准备
 
-终端运行 `pkg_add git bash`
+终端运行 # `pkg_add git bash`
 
 ### 主题安装
 
@@ -150,10 +151,10 @@ export GTK_IM_MODULE=XIM
 ### 新建挂载点
 
 ```
-cd ~
-mkdir media
-cd media
-mkdir first second third forth
+# cd ~
+# mkdir media
+# cd media
+# mkdir first second third forth
 ```
 ### 查看盘符
 
@@ -172,22 +173,22 @@ mkdir first second third forth
 
 由上则可知分区为 i ，使用以下命令挂载：
 
-`mount /dev/sd1i /$USER/media/first` ，`$USER` 替换为当前用户名。
+`# mount /dev/sd1i /$USER/media/first` ，`$USER` 替换为当前用户名。
 
 ### 其它格式
 
 OpenBSD 可挂载的外接硬盘格式有 NTFS、ext2/ext3 以及 CD 磁盘等，具体命令可参考如下：
 
 ```
-mount /dev/sd3i /$USER/media/first   # fat32
-mount /dev/sd2k /$USER/media/second  # ntfs
-mount /dev/sd1l /$USER/media/third   # ext2/ext3
-mount /dev/cd0a /$USER/media/forth   # CD
+# mount /dev/sd3i /$USER/media/first   # fat32
+# mount /dev/sd2k /$USER/media/second  # ntfs
+# mount /dev/sd1l /$USER/media/third   # ext2/ext3
+# mount /dev/cd0a /$USER/media/forth   # CD
 ```
 
 ### 卸载磁盘
 
-`umount /$USER/media/first`
+`# umount /$USER/media/first`
 
 ## 8. 无线测试
 
