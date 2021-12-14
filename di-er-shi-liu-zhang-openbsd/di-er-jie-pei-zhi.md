@@ -30,7 +30,7 @@
 
 软件升级：`# pkg_add -u`
 
-修改shell：默认是 `chsh`
+修改shell： `chsh`
  
  示例：
  
@@ -38,49 +38,7 @@
   # chsh -s /usr/local/bin/bash $USER`
 ```
 
-## 3. 安装桌面
-
-### 3.1 安装 MATE 桌面
-
-登入 root 账号，终端运行 `# pkg_add slim mate mate-utils mate-extras`
-
-打开 `/etc/rc.local`，添加一行 `/usr/local/bin/slim -d` 。
-
-打开 `/etc/rc.conf.local`，添加以下几行：
-```
-pkg_scripts="dbus_daemon avahi_daemon"
-dbus_enable=YES
-multicast_host=YES
-```
-退出 root 账号，以普通账号登录。
-
-打开 `.xinitrc` (没有就新建一个)，添加一行 `exec mate-session`。
-
-全部设置完毕，重启后即可进入 MATE 桌面。
-
-### 3.2 安装 XFCE 桌面
-
-终端运行 `# pkg_add slim xfce`
-
-打开 `/etc/rc.local`，添加一行 `/usr/local/bin/slim -d` 。
-
-打开 `/etc/rc.conf.local`，添加以下几行：
-```
-pkg_scripts="dbus_daemon avahi_daemon"
-dbus_enable=YES
-multicast_host=YES
-```
-退出 root 账号，以普通账号登录。
-
-打开 `.xinitrc` (没有就新建一个)，添加一行 `exec startxfce4`。
-
-全部设置完毕，重启后即可进入 XFCE 桌面。
-
-### 3.3 安装 Gnome 桌面
-
-待补充。
-
-## 4. 软件管理
+## 3. 软件管理
 
 - 查找软件： `# pkg_info -Q foo`
 
@@ -88,17 +46,17 @@ multicast_host=YES
 
 - 升级软件： `# pkg_add -iu foo`
 
-## 5. 中文设置
+## 4. 中文设置
 
-### 5.1 安装字体
+### 4.1 安装字体
 
 `# pkg_add noto-cjk noto-emoji`
 
-### 5.2 安装输入法
+### 4.2 安装输入法
 
 `# pkg_add fcitx fcitx-configtool zh-libpinyin`
 
-### 5.3 设置中文
+### 4.3 设置中文
 
 打开用户目录下的 `.profile` 文件 ，添加以下文本：
 ```
@@ -119,7 +77,7 @@ export GTK_IM_MODULE=XIM
 ```
 重启后，界面变为中文，Fcitx 输入法亦可正常运行。
 
-## 6. 主题和图标
+## 5. 主题和图标
 
 以下仅举两个实例，[Qogir](https://www.gnome-look.org/p/1230631/) 主题、和 [Tela](https://www.gnome-look.org/p/1279924/) 图标，大家可访问[相关网站](https://www.gnome-look.org)，自行选择喜欢的主题和图标来安装。
 
@@ -147,14 +105,14 @@ export GTK_IM_MODULE=XIM
 
 `bash ./install.sh`
 
-## 7. 挂载可移动磁盘
+## 6. 挂载可移动磁盘
 
 ### 新建挂载点
 
 ```
-# cd ~
-# mkdir media
-# cd media
+$ cd ~
+$ mkdir media
+$ cd media
 # mkdir first second third forth
 ```
 ### 查看盘符
@@ -191,9 +149,9 @@ OpenBSD 可挂载的外接硬盘格式有 NTFS、ext2/ext3 以及 CD 磁盘等�
 
 `# umount /$USER/media/first`
 
-## 8. 无线测试
+## 7. 无线测试
 
-OpenBSD 里的无线网络，配置文件通常是 `hostname.if` ，其中 `if` 为无线驱动名称+序号。如一台笔记本无线型号为 rtl8188cu ，OpenBSD 下驱动为 rtwn0 。为了让系统自动加载无线，可打开
+OpenBSD 里的无线网络，配置文件通常是 `hostname.if` ，其中 `if` 为无线驱动名称+序号。如一台笔记本无线型号为 rtl8188cu ，OpenBSD 下驱动为 rtwn ，序号从 0 开始。为了让系统自动加载无线，可打开
  `/etc/hostname.rtwn0` 文件 ，而后添加：
 
 ```
@@ -202,7 +160,7 @@ nwid '无线名称' wpakey '无线密码'
 ```
 保存后即可。
 
-## 9. 补遗
+## 8. 补遗
 
 ### 加载触摸板
 
