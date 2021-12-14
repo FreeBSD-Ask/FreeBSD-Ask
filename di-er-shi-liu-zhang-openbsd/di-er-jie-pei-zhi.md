@@ -47,35 +47,7 @@
 - 升级软件： `# pkg_add -iu foo`
 
 
-## 4. 主题和图标
-
-以下仅举两个实例，[Qogir](https://www.gnome-look.org/p/1230631/) 主题、和 [Tela](https://www.gnome-look.org/p/1279924/) 图标，大家可访问[相关网站](https://www.gnome-look.org)，自行选择喜欢的主题和图标来安装。
-
-### 提前准备
-
-终端运行 # `pkg_add git bash`
-
-### 主题安装
-
-`git clone https://github.com/vinceliuice/Qogir-theme`
- 
-`cd Qogir-theme`
-
-`vi .install.sh`，修改文件中的第一行 shebang 为 `#!/usr/local/bin/bash`
-
-`bash ./install.sh`
-
-### 图标安装
-
-`git clone https://github.com/vinceliuice/Tela-icon-theme`
-
-`cd Tela-icon-theme`
-
-`vi .install.sh`，修改文件中的第一行 shebang 为 `#!/usr/local/bin/bash`
-
-`bash ./install.sh`
-
-## 5. 挂载可移动磁盘
+## 4. 挂载可移动磁盘
 
 ### 新建挂载点
 
@@ -119,7 +91,7 @@ OpenBSD 可挂载的外接硬盘格式有 NTFS、ext2/ext3 以及 CD 磁盘等�
 
 `# umount /$USER/media/first`
 
-## 6. 无线测试
+## 5. 无线测试
 
 OpenBSD 里的无线网络，配置文件通常是 `hostname.if` ，其中 `if` 为无线驱动名称+序号。如一台笔记本无线型号为 rtl8188cu ，OpenBSD 下驱动为 rtwn ，序号从 0 开始。为了让系统自动加载无线，可打开
  `/etc/hostname.rtwn0` 文件 ，而后添加：
@@ -130,7 +102,7 @@ nwid '无线名称' wpakey '无线密码'
 ```
 保存后即可。
 
-## 7. 补遗
+## 6. 补遗
 
 ### 加载触摸板
 
