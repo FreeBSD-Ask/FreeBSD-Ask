@@ -48,7 +48,7 @@
 
 > Do you expect to run the X Window System? [yes] `no`
 
-图形窗口界面，这一步选择 `no`，后续我们会安装自己需要的桌面环境。
+是否运行图形窗口界面，这一步选择 `no`，后续我们会安装自己需要的桌面环境。
 
 > Setup a user? (enter a lower-case loginname, or 'no') [no] `XiaoMing`
 
