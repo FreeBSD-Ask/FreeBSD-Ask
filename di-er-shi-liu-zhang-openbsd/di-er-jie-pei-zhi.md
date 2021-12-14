@@ -46,38 +46,8 @@
 
 - 升级软件： `# pkg_add -iu foo`
 
-## 4. 中文设置
 
-### 4.1 安装字体
-
-`# pkg_add noto-cjk noto-emoji`
-
-### 4.2 安装输入法
-
-`# pkg_add fcitx fcitx-configtool zh-libpinyin`
-
-### 4.3 设置中文
-
-打开用户目录下的 `.profile` 文件 ，添加以下文本：
-```
-export LANG="zh_CN.UTF-8"
-export LC_CTYPE="zh_CN.UTF-8"               
-export LC_COLLATE="zh_CN.UTF-8"               
-export LC_TIME="zh_CN.UTF-8"                
-export LC_NUMERIC="zh_CN.UTF-8"               
-export LC_MONETARY="zh_CN.UTF-8"        
-export LC_MESSAGES="zh_CN.UTF-8"       
-export LC_ALL="zh_CN.UTF-8"
-
-export XIM_PROGRAM=fcitx
-export XIM=fcitx
-export XMODIFIERS="@im=fcitx"
-export QT_IM_MODULE=XIM
-export GTK_IM_MODULE=XIM
-```
-重启后，界面变为中文，Fcitx 输入法亦可正常运行。
-
-## 5. 主题和图标
+## 4. 主题和图标
 
 以下仅举两个实例，[Qogir](https://www.gnome-look.org/p/1230631/) 主题、和 [Tela](https://www.gnome-look.org/p/1279924/) 图标，大家可访问[相关网站](https://www.gnome-look.org)，自行选择喜欢的主题和图标来安装。
 
@@ -105,7 +75,7 @@ export GTK_IM_MODULE=XIM
 
 `bash ./install.sh`
 
-## 6. 挂载可移动磁盘
+## 5. 挂载可移动磁盘
 
 ### 新建挂载点
 
@@ -149,7 +119,7 @@ OpenBSD 可挂载的外接硬盘格式有 NTFS、ext2/ext3 以及 CD 磁盘等�
 
 `# umount /$USER/media/first`
 
-## 7. 无线测试
+## 6. 无线测试
 
 OpenBSD 里的无线网络，配置文件通常是 `hostname.if` ，其中 `if` 为无线驱动名称+序号。如一台笔记本无线型号为 rtl8188cu ，OpenBSD 下驱动为 rtwn ，序号从 0 开始。为了让系统自动加载无线，可打开
  `/etc/hostname.rtwn0` 文件 ，而后添加：
@@ -160,7 +130,7 @@ nwid '无线名称' wpakey '无线密码'
 ```
 保存后即可。
 
-## 8. 补遗
+## 7. 补遗
 
 ### 加载触摸板
 
