@@ -146,7 +146,7 @@ What timezone are you in? ('?' for list)
 
 > \> `a`
 > 
-> partition: [h]
+> partition: [d]
 > 
 > offset: [aaaaaaaaa]
 > 
