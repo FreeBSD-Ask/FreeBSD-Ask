@@ -256,14 +256,19 @@
 * [第五节 安全](di-er-shi-wu-zhang-xi-tong-she-ji-yu-fen-xi/di-wu-jie-an-quan.md)
 * [第六节 I/O 系统](di-er-shi-wu-zhang-xi-tong-she-ji-yu-fen-xi/di-liu-jie-io-xi-tong.md)
 
-## 第二十六章 OpenBSD&#x20;
+## 第二十六章 OpenBSD
 
 * [第一节 安装](di-er-shi-liu-zhang-openbsd/di-yi-jie-an-zhuang.md)
 * [第二节 配置](di-er-shi-liu-zhang-openbsd/di-er-jie-pei-zhi.md)
+* [第三节 换源](di-er-shi-liu-zhang-openbsd/di-san-jie-huan-yuan.md)
+* [第四节 包管理器](di-er-shi-liu-zhang-openbsd/di-si-jie-bao-guan-li-qi.md)
+* [第五节 桌面与其他软件](di-er-shi-liu-zhang-openbsd/di-wu-jie-zhuo-mian-yu-qi-ta-ruan-jian.md)
 
 ## 第二十七章 NetBSD
 
 * [第一节 安装与配置](di-er-shi-qi-zhang-netbsd/di-yi-jie-an-zhuang-yu-pei-zhi.md)
+* [第二节 换源与包管理器](di-er-shi-qi-zhang-netbsd/di-er-jie-huan-yuan-yu-bao-guan-li-qi.md)
+* [第三节 桌面与其他软件](di-er-shi-qi-zhang-netbsd/di-san-jie-zhuo-mian-yu-qi-ta-ruan-jian.md)
 
 ## 第二十八章 DragonFlyBSD
 
