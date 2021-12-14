@@ -41,3 +41,35 @@ multicast_host=YES
 ### 安装 Gnome 桌面
 
 待补充。
+
+
+## 中文设置
+
+### 安装字体
+
+`#pkg_add noto-cjk noto-emoji`
+
+### 安装输入法
+
+`#pkg_add fcitx fcitx-configtool zh-libpinyin`
+
+### 设置中文
+
+打开用户目录下的 `.profile` 文件 ，添加以下文本：
+```
+export LANG="zh_CN.UTF-8"
+export LC_CTYPE="zh_CN.UTF-8"               
+export LC_COLLATE="zh_CN.UTF-8"               
+export LC_TIME="zh_CN.UTF-8"                
+export LC_NUMERIC="zh_CN.UTF-8"               
+export LC_MONETARY="zh_CN.UTF-8"        
+export LC_MESSAGES="zh_CN.UTF-8"       
+export LC_ALL="zh_CN.UTF-8"
+
+export XIM_PROGRAM=fcitx
+export XIM=fcitx
+export XMODIFIERS="@im=fcitx"
+export QT_IM_MODULE=XIM
+export GTK_IM_MODULE=XIM
+```
+重启后，界面变为中文，Fcitx 输入法亦可正常运行。
