@@ -32,7 +32,8 @@
 
 修改shell：默认是 `chsh`
  
-    示例：
+ 示例：
+ 
 ```    
   # chsh -s /usr/local/bin/bash $USER`
 ```
