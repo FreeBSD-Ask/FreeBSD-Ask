@@ -1,12 +1,12 @@
 # 第一节 安装
 
-下载镜像
+## 下载镜像
 
-访问 [链接](https://mirrors.bfsu.edu.cn/OpenBSD/7.0/amd64/) ，下载系统镜像。若是刻录 U盘 安装，就下载 installXX.img ；若是虚拟机体验，请下载 installXX.iso 。（注：截止 OpenBSD 7.0 时，请不要使用 ventory 引导安装。）
+访问 [下载链接](https://mirrors.bfsu.edu.cn/OpenBSD/7.0/amd64/) ，获取系统镜像。若是刻录 U盘 安装，就下载 installXX.img ；若是虚拟机体验，请下载 installXX.iso 。（注：截止 OpenBSD 7.0 时，请不要使用 ventory 引导安装。）
 
 ## 自定义安装
 
-这里推荐大家使用**自定义安装**，不要使用系统推荐的方式。因为为了安全考虑，**OpenBSD** 默认大量分区。新用户初次遇到，会一头雾水，极不适应。
+这里推荐大家使用**自定义安装**，不要使用系统推荐的方式。为了安全考虑，**OpenBSD** 默认大量分区。新用户初次遇到，会一头雾水，极不适应。
 
 ### 推荐分区
 
