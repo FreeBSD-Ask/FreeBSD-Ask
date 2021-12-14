@@ -73,3 +73,33 @@ export QT_IM_MODULE=XIM
 export GTK_IM_MODULE=XIM
 ```
 重启后，界面变为中文，Fcitx 输入法亦可正常运行。
+
+## 主题和图标
+
+以下仅举两个实例，[Qogir](https://www.gnome-look.org/p/1230631/) 主题、和 [Tela](https://www.gnome-look.org/p/1279924/) 图标，大家可访问[相关网站](https://www.gnome-look.org/)，自行选择喜欢的主题和图标来安装。
+
+### 提前准备
+
+终端运行 `#pkg_add git bash`。
+
+
+### 主题安装
+
+`git clone https://github.com/vinceliuice/Qogir-theme`
+
+`cd Qogir-theme`
+
+`vi .install.sh`，修改文件中的第一行**shebang** 为 `#!/usr/local/bin/bash`
+
+`bash ./install.sh`
+
+### 图标安装
+
+`git clone https://github.com/vinceliuice/Tela-icon-theme`
+
+`cd Tela-icon-theme`
+
+`vi .install.sh`，修改文件中的第一行**shebang** 为 `#!/usr/local/bin/bash`
+
+`bash ./install.sh`
+```
