@@ -258,6 +258,7 @@
 
 ## 第二十六章 OpenBSD
 
+* [第〇节 概述](di-er-shi-liu-zhang-openbsd/di-ling-jie-gai-shu.md)
 * [第一节 安装](di-er-shi-liu-zhang-openbsd/di-yi-jie-an-zhuang.md)
 * [第二节 配置](di-er-shi-liu-zhang-openbsd/di-er-jie-pei-zhi.md)
 * [第三节 换源](di-er-shi-liu-zhang-openbsd/di-san-jie-huan-yuan.md)
@@ -266,10 +267,12 @@
 
 ## 第二十七章 NetBSD
 
+* [第〇节 概述](di-er-shi-qi-zhang-netbsd/di-ling-jie-gai-shu.md)
 * [第一节 安装与配置](di-er-shi-qi-zhang-netbsd/di-yi-jie-an-zhuang-yu-pei-zhi.md)
 * [第二节 换源与包管理器](di-er-shi-qi-zhang-netbsd/di-er-jie-huan-yuan-yu-bao-guan-li-qi.md)
 * [第三节 桌面与其他软件](di-er-shi-qi-zhang-netbsd/di-san-jie-zhuo-mian-yu-qi-ta-ruan-jian.md)
 
 ## 第二十八章 DragonFlyBSD
 
+* [第〇节 概述](di-er-shi-ba-zhang-dragonflybsd/di-ling-jie-gai-shu.md)
 * [第一节 安装与配置](di-er-shi-ba-zhang-dragonflybsd/di-yi-jie-an-zhuang-yu-pei-zhi.md)
