@@ -1,5 +1,7 @@
 # 7.1 设置samba为独立服务器
 
+背景环境：freebsd 11
+
 ## 7.1.1 安装samba
 
 ```
@@ -87,6 +89,8 @@ service samba_server status
 ```
 
 # 7.2 FreeBSD12之将Samba设置为域成员
+
+背景环境：freebsd 12
 
 ## 7.2.1 系统镜像下载地址
 
