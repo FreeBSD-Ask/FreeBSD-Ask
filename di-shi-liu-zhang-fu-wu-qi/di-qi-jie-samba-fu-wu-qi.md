@@ -1,14 +1,14 @@
 环境：freebsd 11
 
-# 设置samba为独立服务器
+# 设置 samba 为独立服务器
 
-## 安装samba
+## 安装 samba
 
 ```
 # pkg install samba413
 ```
 
-## 配置samba
+## 配置 samba
 
 （1）打开/etc/rc.conf
 
@@ -16,7 +16,7 @@
 # ee /etc/rc.conf
 ```
 
-（2）在/etc/rc.conf最后加入如下，并保存：
+（2）在 /etc/rc.conf 最后加入如下，并保存：
 
 ```
 nmbd_enable="YES"
@@ -25,7 +25,7 @@ samba_enable="YES"
 samba_server_enable="YES"
 ```
 
-（3）创建/usr/local/etc/smb4.conf，添加如下内容并保存
+（3）创建 /usr/local/etc/smb4.conf，添加如下内容并保存
 
 ```
 #vi /usr/local/etc/smb4.conf
@@ -40,7 +40,7 @@ samba_server_enable="YES"
     create mask = 0755
 ```
 
-（4）创建samba root用户：
+（4）创建 samba root 用户：
 
 ```
 # smbpasswd -a root
@@ -70,7 +70,7 @@ samba_server_enable="YES"
 # service samba_server status
 ```
 
-（8）在 windows 下利用 \\192.168.X.X 访问共享文件夹（以实际 IP 为准，windows需要先开启 SMB 1.0 支持）
+（8）在 windows 下利用 \\192.168.X.X 访问共享文件夹（以实际 IP 为准，windows 需要先开启 SMB 1.0 支持）
 
 ```
 \\192.168.X.X
@@ -96,7 +96,7 @@ bsdconfig
 hostname="fb"
 ```
 
-## 配置DNS
+## 配置 DNS
 
 ```
 # ee /etc/resolv.conf
@@ -121,7 +121,7 @@ options edns0
 ```
 
 
-## 创建/etc/krb5.conf
+## 创建 /etc/krb5.conf
 
 ```
 [libdefaults]
@@ -133,14 +133,14 @@ options edns0
 	forwardable = yes
 ```
 
-## 修改/etc/nsswitch.conf
+## 修改 /etc/nsswitch.conf
 
 ```
 # sed -i -e "s/^passwd:.*/passwd: files winbind/" /etc/nsswitch.conf
 # sed -i -e "s/^group:.*/group: files winbind/" /etc/nsswitch.conf
 ```
 
-##  创建/usr/local/etc/smb4.conf
+##  创建 /usr/local/etc/smb4.conf
 
 ```
 [global]
@@ -194,7 +194,7 @@ create mode = 0750
 force create mode = 0750
 ```
 
-## 将samba加入到域
+## 将 samba 加入到域
 
 ```
 net ads join --no-dns-updates -U administrator
@@ -203,7 +203,7 @@ net ads testjoin
 # On your DC, open the DNS MMC and add an "A" entry for your BSD server so clients can find it
 ```
 
-##  使 SAMBA启动并设置为开机自启动
+##  使 samba 启动并设置为开机自启动
 
 ```
 # echo "samba_server_enable=YES" >> /etc/rc.conf
@@ -225,7 +225,7 @@ klist
 # Dec  6 10:15:39 2021  Feb  4 20:15:39 2021  krbtgt
 ```
 
-##  测试Winbind
+##  测试 Winbind
 
 ```
 wbinfo -u
@@ -241,7 +241,7 @@ getent group
 # Should return domain groups at the end of the list with 10000+ GIDs
 ```
 
-## 如果wbinfo命令不能正常显示且报错，请执行一下命令
+## 如果 wbinfo 命令显示报错，请执行命令
 
 ```
 # service samba_server restart
