@@ -16,11 +16,9 @@
 
 ## 2. 系统更新
 
-### 添加 sudo
+### 普通账号获取权限
 
-终端命令：`# pkg_add sudo`
-
-然后在终端输入 `# visudo` ，然后添加一行 $USER ALL=(ALL) SETENV: ALL （请将 $USER 替换为你的用户名)，保存后退出。
+以 root 账号登录系统，而后新建 `/etc/doas.conf` 文本，打开`doas.conf`，添加一行 `permit persist :wheel`
 
 ### 内核更新
 
@@ -32,11 +30,7 @@
 
 修改shell： `chsh`
  
- 示例：
- 
-```    
-  # chsh -s /usr/local/bin/bash $USER`
-```
+ 示例：`# chsh -s /usr/local/bin/bash $USER`
 
 ## 3. 软件管理
 
