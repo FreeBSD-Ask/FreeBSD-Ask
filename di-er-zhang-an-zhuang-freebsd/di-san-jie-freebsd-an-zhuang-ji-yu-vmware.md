@@ -18,7 +18,26 @@ VMware Workstation 16 Player 是个人免费使用的，你也可以选择此版
 
 {% embed url="https://www.vmware.com/products/workstation-player/workstation-player-evaluation.html" %}
 
-## 故障排除
+## 虚拟机增强工具以及显卡驱动
+
+如果没有桌面：
+```
+# pkg install open-vm-tools-nox11
+```
+如果有桌面
+
+```
+# pkg install open-vm-tools
+```
+具体配置
+
+```
+# echo "vmware_guest_vmblock_enable=YES" >> /etc/rc.conf
+# echo "vmware_guest_vmhgfs_enable=YES" >> /etc/rc.conf
+# echo "vmware_guest_vmmemctl_enable=YES" >> /etc/rc.conf
+# echo "vmware_guest_vmxnet_enable=YES" >> /etc/rc.conf
+# echo "vmware_guestd_enable=YES" >> /etc/rc.conf
+```
 
 vmware 自动缩放屏幕请安装 x11-drivers/xf86-video-vmware：
 
