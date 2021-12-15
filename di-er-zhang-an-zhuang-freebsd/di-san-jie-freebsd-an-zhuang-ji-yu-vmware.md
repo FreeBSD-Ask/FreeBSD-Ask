@@ -39,7 +39,8 @@ VMware Workstation 16 Player 是个人免费使用的，你也可以选择此版
 # echo "vmware_guestd_enable=YES" >> /etc/rc.conf
 ```
 
-编辑 /boot/loader.conf
+编辑 `/boot/loader.conf`
+
 写入 
 ```
 fusefs_load="YES"
@@ -51,13 +52,13 @@ vmware 自动缩放屏幕请安装 x11-drivers/xf86-video-vmware：
 ### 共享文件夹
 
 ```
-mount -t .host:/ /mnt/hgfs
+# mount -t .host:/ /mnt/hgfs
 ```
 
 查看共享文件夹
 
 ```
-ls /mnt/hgfs
+# ls /mnt/hgfs
 ```
 
 **注意：由于 BUG，FreeBSD 11/12 可能在 Vmware 的 UEFI 环境下无法启动。13.0 经测试正常启动。**
