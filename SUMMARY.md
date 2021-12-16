@@ -43,6 +43,7 @@
 
 ## 第三章 软件源及包管理器
 
+* [第〇节 包管理器概述](di-san-zhang-ruan-jian-yuan-ji-bao-guan-li-qi/di-ling-jie-bao-guan-li-qi-gai-shu.md)
 * [第一节 FreeBSD 镜像站现状](di-san-zhang-ruan-jian-yuan-ji-bao-guan-li-qi/di-yi-jie-freebsd-jing-xiang-zhan-xian-zhuang.md)
 * [第二节 FreeBSD 换源方式](di-san-zhang-ruan-jian-yuan-ji-bao-guan-li-qi/di-er-jie-freebsd-huan-yuan-fang-shi.md)
 * [第三节 gitup 的用法](di-san-zhang-ruan-jian-yuan-ji-bao-guan-li-qi/di-san-jie-gitup-de-yong-fa.md)
