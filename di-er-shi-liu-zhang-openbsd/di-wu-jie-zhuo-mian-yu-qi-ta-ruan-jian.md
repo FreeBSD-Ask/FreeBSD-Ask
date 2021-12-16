@@ -4,14 +4,14 @@
 
 ### 安装 MATE 桌面
 
-登入 root 账号，终端运行 `# pkg_add slim mate mate-utils mate-extras`
+登入 root 账号，终端运行 `# pkg_add slim slim-themes elementary-dock mate mate-utils mate-extras`
 
 打开 `/etc/rc.local`，添加一行 `/usr/local/bin/slim -d` 。
 
 打开 `/etc/rc.conf.local`，添加以下几行：
 ```
-pkg_scripts="dbus_daemon avahi_daemon"
-dbus_enable=YES
+pkg_scripts="dbus_daemon messagebus"
+
 multicast_host=YES
 ```
 退出 root 账号，以普通账号登录。
@@ -22,14 +22,14 @@ multicast_host=YES
 
 ### 安装 XFCE 桌面
 
-终端运行 `# pkg_add slim xfce`
+终端运行 `# pkg_add slim slim-themes xfce`
 
 打开 `/etc/rc.local`，添加一行 `/usr/local/bin/slim -d` 。
 
 打开 `/etc/rc.conf.local`，添加以下几行：
 ```
-pkg_scripts="dbus_daemon avahi_daemon"
-dbus_enable=YES
+pkg_scripts="dbus_daemon messagebus"
+apmd_flags=-A
 multicast_host=YES
 ```
 退出 root 账号，以普通账号登录。
