@@ -87,8 +87,7 @@ pkg: PRE-INSTALL script failed
 # port-rebuild`
 ```
 
-## Newer FreeBSD version for package pkg
-
+### Newer FreeBSD version for package pkg
 
 ```
 Neuer FreeBSD version for package pkg:&#x20;
@@ -97,6 +96,7 @@ To ignore this error set IGNORE_OSVERSION=yes
 - running kernel: 1400042
 Ignore the mismatch and continue? [y/N]:
 ```
+
 这通常发生在失去安全支持的或者在 Current 版本的系统上，不影响使用，输入 y 即可。
 
 如果想要从根源上解决，需要自己卸载 pkg，从 ports 安装 `ports-mgmt/pkg`；或者从源代码更新整个系统。
