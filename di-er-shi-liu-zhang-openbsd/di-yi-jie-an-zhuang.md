@@ -104,6 +104,7 @@ What timezone are you in? ('?' for list)
 | p m | 查看分区大小 |
 | a   | 增加分区 |
 | d   | 删除分区 |
+| z   | 删除全部分区 |
 | q   | 确认分区 |
 
 以下假设一块 64 GB 硬盘，分区为：/ 20GB ， swap 4GB ，然后剩下的空间全部划分给 /home 。
