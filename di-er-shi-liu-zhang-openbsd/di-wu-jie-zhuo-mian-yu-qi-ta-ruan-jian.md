@@ -11,7 +11,7 @@
 打开 `/etc/rc.conf.local`，添加以下几行：
 ```
 pkg_scripts="dbus_daemon messagebus"
-
+apmd_flags=-A
 multicast_host=YES
 ```
 退出 root 账号，以普通账号登录。
