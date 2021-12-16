@@ -9,6 +9,7 @@
 打开 `/etc/rc.local`，添加一行 `/usr/local/bin/slim -d` 。
 
 打开 `/etc/rc.conf.local`，添加以下几行：
+
 ```
 pkg_scripts="dbus_daemon messagebus"
 apmd_flags=-A
