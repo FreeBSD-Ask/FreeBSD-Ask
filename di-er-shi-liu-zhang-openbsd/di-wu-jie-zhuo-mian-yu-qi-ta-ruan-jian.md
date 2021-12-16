@@ -38,6 +38,13 @@ multicast_host=YES
 
 全部设置完毕，重启后即可进入 XFCE 桌面。
 
+### Slim 修改主题
+
+注：本节仅涉及 MATE/XFCE ，Gnome 有自己的显示管理器（GDM）。
+
+Slim 的主题文件位于 `/usr/local/share/slim/themes/` 文件夹内，大家可以自己选择喜欢的主题。
+这里我们以 `flower2` 主题为例，打开`/etc/slim.conf`，找到含有 `current_theme` 的一行，将 `default` 改为 `flower2`，保存后即可。
+
 ### 安装 Gnome 桌面
 
 待补充。
