@@ -116,7 +116,7 @@ pgAdmin4 需要在 python 环境下运行，并且安装时要通过 python 的 
 # python
 python: Command not found   #说明当前没有 python 命令
 ```
-安装 Python
+## 安装 Python 及 pip
 
 ```
 # pkg install python
@@ -135,7 +135,7 @@ virtualenv 用来建立一个虚拟的 python 环境，一个专属于项目的 
 # pkg install py38-pip   
 ```
 
-
+## 安装配置 virtualenv 
 使用 virtualenv 创建独立的 Python 环境。 Virtualenv 会创建一个自己的 Python 安装的环境，它不支持具有全局或另一个虚拟环境的库。 运行以下命令来安装 Virtualenv。
 
 ```
@@ -158,7 +158,7 @@ Installing setuptools, pip, wheel…done.
 done.
 ```
 
-安装 sqlite3
+## 安装 sqlite3
 
 ```
 #pkg install py38-sqlite3
@@ -176,7 +176,7 @@ done.
 ```
 (pgadmin4) root@ykla:~ # 
 ```
-安装 pgadmin4：
+## 安装 pgadmin4：
 
 现在 PIP 源一律要求使用 https，由于缺少 SSL 证书还需要安装。
 
@@ -218,7 +218,7 @@ ntpdate ntp.api.bz
 
 注意：如果内存不足且没有 swap，会提示 killed，如出现该问题请先添加一块 swap。
 
-配置并运行 pgAdmin4
+## 配置并运行 pgAdmin4
 
 安装完成后为 pgAdmin4 创建配置文件,复制 pgAdmin4 配置文件：
 
@@ -265,6 +265,6 @@ Retype password:			//再次输入密码
 Starting pgAdmin 4. Please navigate to http://0.0.0.0:5050 in your browser.
 ```
 
-现在我们已经安装并运行了 pgAdmin4，并可以通过http://ip:5050 访问 Web 控制面板：
+现在我们已经安装并运行了 pgAdmin4，并可以通过 `http://ip:5050` 访问 Web 控制面板：
 
 
