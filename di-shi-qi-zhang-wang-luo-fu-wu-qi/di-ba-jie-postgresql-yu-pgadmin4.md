@@ -321,13 +321,13 @@ root@ykla:~# source pgadmin4/bin/activate.csh
 激活后不要开启服务，直接执行升级
 
 ```
-root@ykla:~# pip install --upgrade pgadmin4 
+(pgadmin4) root@ykla:~# pip install --upgrade pgadmin4 
 ```
 
 完成升级后启动服务
 
 ```
-root@ykla:~# pgadmin4
+(pgadmin4) root@ykla:~# pgadmin4
 ```
 
 登录帐号和密码还是原来的(登陆后再无更新提示，查看版本已是为最新)。
