@@ -74,7 +74,7 @@ FreeBSD 安装 Linux QQ 方法
 
 **4、刷新 gtk 缓存：**
 
-`# /compat/linux/usr/bin/gtk-query-immodules-2.0-64 -–update-cache`
+`# /compat/linux/usr/bin/gtk-query-immodules-2.0-64 --update-cache`
 
 **5、运行 Linux QQ：**
 
