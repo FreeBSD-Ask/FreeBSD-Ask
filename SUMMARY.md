@@ -185,7 +185,7 @@
 * [第五节 MySQL 8.X](di-shi-qi-zhang-wang-luo-fu-wu-qi/di-wu-jie-mysql-8.x.md)
 * [第六节 Typecho](di-shi-qi-zhang-wang-luo-fu-wu-qi/di-liu-jie-typecho.md)
 * [第七节 SSL 配置](di-shi-qi-zhang-wang-luo-fu-wu-qi/di-qi-jie-ssl-pei-zhi.md)
-* [第八节 PostgreSQL](di-shi-qi-zhang-wang-luo-fu-wu-qi/di-ba-jie-postgresql.md)
+* [第八节 PostgreSQL 与 pgAdmin4](di-shi-qi-zhang-wang-luo-fu-wu-qi/di-ba-jie-postgresql-yu-pgadmin4.md)
 
 ## 第十八章 树莓派与嵌入式
 
