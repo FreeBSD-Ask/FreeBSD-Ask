@@ -1,10 +1,14 @@
 # 第二节 FreeBSD 换源方式
 
+FreeBSD 有四类源，pkg、ports、portsnap、update。
+
 **对于失去安全支持的版本，如 FreeBSD 9.0 是没有 pkg 源可用的，只能使用当时的 ports 编译安装软件。**
 
 {% embed url="https://mirror.bjtu.edu.cn" %}
 
 **本文对于一个源列出了多个镜像站，无需全部配置，只需选择其一即可。**
+
+**目前境内没有官方镜像站，以下均为非官方镜像站**
 
 ## pkg 源:pkg 源提供二进制安装包. 
 
@@ -32,14 +36,87 @@ enabled: yes
 }
 FreeBSD: { enabled: no }
 ```
+**故障排除**
 
 **若要获取滚动更新的包,请将`quarterly`修改为`latest`.请注意,`CURRENT`版本只有`latest`.**
 
 **若要使用https,请先安装security/ca\_root\_nss,并将`http`修改为`https`,最后使用命令`# pkg update -f`刷新缓存即可,下同。**
 
+### 网易开源镜像站
 
+创建用户级源文件:
+
+`# ee /usr/local/etc/pkg/repos/163.conf`
+
+写入以下内容:
+
+```
+163: {  
+url: "pkg+http://mirrors.163.com/freebsd-pkg/${ABI}/quarterly",  
+mirror_type: "srv",  
+signature_type: "none",  
+fingerprints: "/usr/share/keys/pkg",  
+enabled: yes
+}
+FreeBSD: { enabled: no }
+```
+
+### 中国科学技术大学开源软件镜像站
+
+创建用户级源文件:
+
+`# ee /usr/local/etc/pkg/repos/ustc.conf`
+
+写入以下内容:
+
+```
+ustc: {  
+url: "pkg+http://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/quarterly",  
+mirror_type: "srv",  
+signature_type: "none",  
+fingerprints: "/usr/share/keys/pkg",  
+enabled: yes
+}
+FreeBSD: { enabled: no }
+```
+
+### 南京大学开源镜像站
+
+`# ee /usr/local/etc/pkg/repos/nju.conf`
+
+写入以下内容:
+
+```
+nju: {  
+url: "pkg+http://mirrors.nju.edu.cn/freebsd-pkg/${ABI}/quarterly",  
+mirror_type: "srv",  
+signature_type: "none",  
+fingerprints: "/usr/share/keys/pkg",  
+enabled: yes
+}
+FreeBSD: { enabled: no }
+```
+
+## freebsd.cn
+
+`# ee /usr/local/etc/pkg/repos/freebsdcn.conf`
+
+写入以下内容:
+
+```
+freebsdcn: {  
+url: "pkg+http://pkg.freebsd.cn/${ABI}/quarterly",  
+mirror_type: "srv",  
+signature_type: "none",  
+fingerprints: "/usr/share/keys/pkg",  
+enabled: yes
+}
+FreeBSD: { enabled: no }
+```
 
 ## ports 源:提供源码方式安装软件的包管理器
+
+### 北京交通大学自由与开源软件镜像站
 
 创建或修改文件`# ee /etc/make.conf`:
 
@@ -47,15 +124,61 @@ FreeBSD: { enabled: no }
 
 `MASTER_SITE_OVERRIDE?=http://mirror.bjtu.edu.cn/reverse/freebsd-pkg/ports-distfiles/`
 
+### 网易开源镜像站
+
+创建或修改文件`# ee /etc/make.conf`:
+
+写入以下内容:
+
+`MASTER_SITE_OVERRIDE?=http://mirrors.163.com/freebsd-ports/ports-distfiles/`
+
+### 中国科学技术大学开源软件镜像站
+
+创建或修改文件`# ee /etc/make.conf`:
+
+写入以下内容:
+
+`MASTER_SITE_OVERRIDE?=http://mirrors.ustc.edu.cn/freebsd-ports/distfiles/${DIST_SUBDIR}/`
+
+### freebsd.cn
+
+创建或修改文件`# ee /etc/make.conf`:
+
+写入以下内容:
+
+`MASTER_SITE_OVERRIDE?=http://freebsd.cn/ports-distfiles/`
+
 ## portsnap 源:打包的 ports文件
+
+### 北京交通大学自由与开源软件镜像站
 
 编辑portsnap配置文件 `# ee /etc/portsnap.conf` :
 
 将`SERVERNAME=portsnap.FreeBSD.org` 修改为`SERVERNAME=freebsd-portsnap.mirror.bjtulug.org`
 
-获取portsnap更新:
+**获取portsnap更新**
 
 `# portsnap fetch extract`
+
+**故障排除**
+
+```
+Snapshot appears to have been created more than one day into the future!
+(Is the system clock correct?)
+Cowardly refusing to proceed any further.
+```
+
+需要同步时间。
+
+```
+ntpdate ntp.api.bz
+```
+
+### freebsd.cn
+
+编辑portsnap配置文件 `# ee /etc/portsnap.conf` :
+
+将`SERVERNAME=portsnap.FreeBSD.org` 修改为`SERVERNAME=portsnap.FreeBSD.cn`
 
 ## freebsd-update 源:提供基本系统更新
 
@@ -63,30 +186,19 @@ FreeBSD: { enabled: no }
 
 {% embed url="https://www.freebsd.org/platforms" %}
 
+### 北京交通大学自由与开源软件镜像站
+
 编辑`# ee /etc/freebsd-update.conf` 文件:
 
 将`ServerName update.FreeBSD.org` 修改为`ServerName freebsd-update.mirror.bjtulug.org`
 
-例:从 FreeBSD 12 升级到 13.0
+**例:从 FreeBSD 12 升级到 13.0**
 
 `# freebsd-update -r 13.0-RELEASE upgrade`
 
-# 其他镜像站
+### freebsd.cn
 
-**注意：FreeBSD 目前在中国大陆并没有官方镜像站提供，具体可参考前一节。**
+编辑`# ee /etc/freebsd-update.conf` 文件:
 
-网易开源镜像站 （pkg+ ports）
+将`ServerName update.FreeBSD.org` 修改为`ServerName update.FreeBSD.cn`
 
-{% embed url="https://mirrors.163.com" %}
-
-中国科学技术大学开源软件镜像 (pkg + ports)
-
-{% embed url="https://mirrors.ustc.edu.cn" %}
-
-freebsd.cn (pkg + ports + update + portsnap)
-
-{% embed url="http://freebsd.cn" %}
-
-南京大学开源镜像站（pkg + ports）
-
-{% embed url="https://mirrors.nju.edu.cn" %}
