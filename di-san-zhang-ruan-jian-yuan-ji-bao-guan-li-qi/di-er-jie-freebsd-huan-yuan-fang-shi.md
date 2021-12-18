@@ -1,6 +1,6 @@
 # 第二节 FreeBSD 换源方式
 
-FreeBSD 有四类源，pkg、ports、portsnap、update。
+FreeBSD 有四类源，pkg、ports、portsnap、update。freebsd.cn 暂不可用。
 
 **对于失去安全支持的版本，如 FreeBSD 9.0 是没有 pkg 源可用的，只能使用当时的 ports 编译安装软件。**
 
@@ -11,6 +11,8 @@ FreeBSD 有四类源，pkg、ports、portsnap、update。
 **目前境内没有官方镜像站，以下均为非官方镜像站**
 
 ## pkg 源:pkg 源提供二进制安装包. 
+
+pkg 的下载路径是 `/var/cache/pkg/`
 
 FreeBSD 中 pkg 源分为系统级和用户级两个源.不建议直接修改`/etc/pkg/FreeBSD.conf`,因为该文件会随着基本系统的更新而发生改变.
 
@@ -99,9 +101,9 @@ FreeBSD: { enabled: no }
 
 ## freebsd.cn
 
-`# ee /usr/local/etc/pkg/repos/freebsdcn.conf`
+~~`# ee /usr/local/etc/pkg/repos/freebsdcn.conf`~~
 
-写入以下内容:
+~~写入以下内容:~~
 
 ```
 freebsdcn: {  
@@ -115,6 +117,8 @@ FreeBSD: { enabled: no }
 ```
 
 ## ports 源:提供源码方式安装软件的包管理器
+
+ports 下载路径是`/usr/ports/distfiles`
 
 ### 北京交通大学自由与开源软件镜像站
 
@@ -138,15 +142,15 @@ FreeBSD: { enabled: no }
 
 写入以下内容:
 
-`MASTER_SITE_OVERRIDE?=http://mirrors.ustc.edu.cn/freebsd-ports/distfiles/${DIST_SUBDIR}/`
+`MASTER_SITE_OVERRIDE?=http://mirrors.ustc.edu.cn/freebsd-ports/distfiles/`
 
 ### freebsd.cn
 
-创建或修改文件`# ee /etc/make.conf`:
+~~创建或修改文件`# ee /etc/make.conf`:~~
 
-写入以下内容:
+~~写入以下内容:~~
 
-`MASTER_SITE_OVERRIDE?=http://freebsd.cn/ports-distfiles/`
+~~`MASTER_SITE_OVERRIDE?=http://freebsd.cn/ports-distfiles/`~~
 
 ## portsnap 源:打包的 ports文件
 
@@ -176,9 +180,9 @@ ntpdate ntp.api.bz
 
 ### freebsd.cn
 
-编辑portsnap配置文件 `# ee /etc/portsnap.conf` :
+~~编辑portsnap配置文件 `# ee /etc/portsnap.conf` :~~
 
-将`SERVERNAME=portsnap.FreeBSD.org` 修改为`SERVERNAME=portsnap.FreeBSD.cn`
+~~将`SERVERNAME=portsnap.FreeBSD.org` 修改为`SERVERNAME=portsnap.FreeBSD.cn`~~
 
 ## freebsd-update 源:提供基本系统更新
 
@@ -198,7 +202,7 @@ ntpdate ntp.api.bz
 
 ### freebsd.cn
 
-编辑`# ee /etc/freebsd-update.conf` 文件:
+~~编辑`# ee /etc/freebsd-update.conf` 文件:~~
 
-将`ServerName update.FreeBSD.org` 修改为`ServerName update.FreeBSD.cn`
+~~将`ServerName update.FreeBSD.org` 修改为`ServerName update.FreeBSD.cn`~~
 
