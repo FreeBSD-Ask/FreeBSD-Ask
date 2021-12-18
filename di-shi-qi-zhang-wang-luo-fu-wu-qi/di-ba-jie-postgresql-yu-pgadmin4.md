@@ -294,7 +294,7 @@ Starting pgAdmin 4. Please navigate to http://0.0.0.0:5050 in your browser.
 如果服务关闭下次要运行时需使用 pgadmin4 的安装用户（此处是`root`）进入根目录，执行如下命令：
 
 ```
-(pgadmin4) root@ykla:~# source pgadmin4/bin/activate.csh
+root@ykla:~# source pgadmin4/bin/activate.csh
 (pgadmin4) root@ykla:~# pgadmin4 & 
 ```
 
