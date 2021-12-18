@@ -6,10 +6,6 @@ FreeBSD 安装 Linux QQ 方法
 
 **1、安装Linux 兼容层：**
 
-以下参考
-
-{% embed url="https://docs.freebsd.org/en/books/handbook/linuxemu" %}
-
 `# pkg install linux-c7 linux-c7-gtk2`
 
 开启服务：
