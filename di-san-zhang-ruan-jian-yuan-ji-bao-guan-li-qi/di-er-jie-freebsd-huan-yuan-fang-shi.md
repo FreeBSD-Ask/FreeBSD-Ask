@@ -97,7 +97,7 @@ enabled: yes
 FreeBSD: { enabled: no }
 ```
 
-## freebsd.cn
+## FreeBSD.cn （暂不可用）
 
 ~~`# ee /usr/local/etc/pkg/repos/freebsdcn.conf`~~
 
@@ -142,7 +142,7 @@ ports 下载路径是`/usr/ports/distfiles`
 
 `MASTER_SITE_OVERRIDE?=http://mirrors.ustc.edu.cn/freebsd-ports/distfiles/`
 
-### freebsd.cn
+### FreeBSD.cn （暂不可用）
 
 ~~创建或修改文件`# ee /etc/make.conf`:~~
 
@@ -176,7 +176,7 @@ Cowardly refusing to proceed any further.
 ntpdate ntp.api.bz
 ```
 
-### freebsd.cn
+### FreeBSD.cn （暂不可用）
 
 ~~编辑portsnap配置文件 `# ee /etc/portsnap.conf` :~~
 
@@ -198,7 +198,7 @@ ntpdate ntp.api.bz
 
 `# freebsd-update -r 13.0-RELEASE upgrade`
 
-### freebsd.cn
+### FreeBSD.cn （暂不可用）
 
 ~~编辑`# ee /etc/freebsd-update.conf` 文件:~~
 
