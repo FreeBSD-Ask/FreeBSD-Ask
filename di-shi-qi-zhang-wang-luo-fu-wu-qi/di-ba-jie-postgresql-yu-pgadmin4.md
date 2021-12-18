@@ -190,7 +190,7 @@ done.
 (pgadmin4) root@ykla:~ # 
 ```
 
-### 安装 pgadmin4：
+### 安装 pgAdmin4：
 
 现在 pip 源一律要求使用 https，由于缺少 SSL 证书还需要安装。
 
