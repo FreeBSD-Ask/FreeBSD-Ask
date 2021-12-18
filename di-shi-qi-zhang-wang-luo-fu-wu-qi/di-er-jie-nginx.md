@@ -1,6 +1,6 @@
 # 第二节 Nginx
 
-## 1.安装 <a href="#1-an-zhuang" id="1-an-zhuang"></a>
+## 1.安装
 
 * ports: `# cd /usr/ports/www/nginx/ && make install clean`
 * pkg: `# pkg install nginx`
