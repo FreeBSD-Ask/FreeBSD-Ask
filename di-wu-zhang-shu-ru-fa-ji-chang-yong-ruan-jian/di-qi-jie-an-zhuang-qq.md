@@ -10,7 +10,7 @@ FreeBSD 安装 Linux QQ 方法
 
 {% embed url="https://docs.freebsd.org/en/books/handbook/linuxemu" %}
 
-`# pkg install emulators/linux-c7 linux-c7-gtk2`
+`# pkg install linux-c7 linux-c7-gtk2`
 
 开启服务：
 
