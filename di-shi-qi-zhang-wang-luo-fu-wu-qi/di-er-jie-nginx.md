@@ -27,10 +27,6 @@
 
 你可以通过`$ sockstat -4 | grep nginx`检查nginx是否启动并正常运行。
 
-
-
-此时你应该通过`# service nginx start`启动Nginx而不是`# service nginx onestart`
-
 ### 2.2 配置文件
 
 FreeBSD中，Nginx的配置文件位于`/usr/local/etc/nginx/`中，而主要的配置文件则在`/usr/local/etc/nginx/nginx.conf`
