@@ -19,7 +19,7 @@ FreeBSD 安装 Linux QQ 方法
 
 ```
 # mkdir /home/work
-# wget https://down.qq.com/qqweb/LinuxQQ/linuxqq_2.0.0-b2-1089_x86_64.rpm
+# fetch https://down.qq.com/qqweb/LinuxQQ/linuxqq_2.0.0-b2-1089_x86_64.rpm
 ```
 
 提示：后续如果版本更新请自行前往
