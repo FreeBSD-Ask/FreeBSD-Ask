@@ -76,4 +76,4 @@ FreeBSD 安装 Linux QQ 方法
 
 **5、运行 Linux QQ：**
 
-`$ /compat/linux/user/local/bin/qq`
+`$ /compat/linux/usr/local/bin/qq`
