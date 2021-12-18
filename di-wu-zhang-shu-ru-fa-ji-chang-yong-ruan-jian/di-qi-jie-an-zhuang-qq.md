@@ -6,7 +6,7 @@ FreeBSD 安装 Linux QQ 方法
 
 **1、安装Linux 兼容层：**
 
-`# pkg install linux-c7 linux-c7-gtk2`
+`# pkg install linux-c7 linux-c7-gtk2 linux-c7-libxkbcommon`
 
 开启服务：
 
