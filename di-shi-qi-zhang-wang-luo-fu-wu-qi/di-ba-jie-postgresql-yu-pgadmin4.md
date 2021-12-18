@@ -289,7 +289,7 @@ Starting pgAdmin 4. Please navigate to http://0.0.0.0:5050 in your browser.
 
 ![](../.gitbook/assets/登录3.png)
 
-## 保持 pgadmin4 后台运行
+## 保持 pgAdmin4 后台运行
 
 如果服务关闭下次要运行时需使用 pgadmin4 的安装用户（此处是`root`）进入根目录，执行如下命令：
 
@@ -302,7 +302,7 @@ Starting pgAdmin 4. Please navigate to http://0.0.0.0:5050 in your browser.
 
 服务启动后在当前界面中输入 `&`按回车键,可切换至前台命令行，让服务程序在后台运行。
 
-## 升级 pgadmin4
+## 升级 pgAdmin4
 
 本文测试如果直接使用 pip 升级后还是提示旧版本。
 
