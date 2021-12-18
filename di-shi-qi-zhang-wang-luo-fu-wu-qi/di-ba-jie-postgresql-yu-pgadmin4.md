@@ -302,9 +302,7 @@ Starting pgAdmin 4. Please navigate to http://0.0.0.0:5050 in your browser.
 
 ## 升级 pgadmin4
 
-pgadmin4 更新频率较高，如需升级要先删除原有用 virtualenv 创建的 pgadmin4 目录然后
-
-用安装用户再次执行如下指令：
+pgadmin4 更新频率较高，如需升级要先删除原有用 virtualenv 创建的 pgadmin4 目录然后用安装用户再次执行如下指令：
 
 ```
 (pgadmin4) root@ykla:~# virtualenv-3.8 pgadmin4 
