@@ -288,3 +288,44 @@ Starting pgAdmin 4. Please navigate to http://0.0.0.0:5050 in your browser.
 
 ![](../.gitbook/assets/登录3.png)
 
+## 保持 pgadmin4 后台运行
+
+如果服务关闭下次要运行时需使用 pgadmin4 的安装用户进入根目录，执行如下命令：
+```
+(pgadmin4) root@ykla:~# source pgadmin4/bin/activate.csh
+(pgadmin4) root@ykla:~# pgadmin4 & 
+```
+
+提示：`&`表示后台运行
+
+服务启动后在当前界面中输入 `&`按回车键,可切换至前台命令行，让服务程序在后台运行。
+
+## 升级 pgadmin4
+
+pgadmin4 更新频率较高，如需升级要先删除原有用 virtualenv 创建的 pgadmin4 目录然后
+
+用安装用户再次执行如下指令：
+
+```
+(pgadmin4) root@ykla:~# virtualenv-3.8 pgadmin4 
+```
+
+虚拟目录创建完成后激活
+
+```
+(pgadmin4) root@ykla:~# source pgadmin4/bin/activate.csh
+```
+
+激活后不要开启服务，直接执行升级
+
+```
+(pgadmin4) root@ykla:~# pip install --upgrade pgadmin4 
+```
+
+完成升级后启动服务
+
+```
+(pgadmin4) root@ykla:~# pgadmin4
+```
+
+登录帐号和密码还是原来的(登陆后再无更新提示，查看版本已是为最新)。
