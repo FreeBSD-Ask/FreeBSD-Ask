@@ -1,29 +1,37 @@
-# 第八节 PostgreSQL
+# 第八节 PostgreSQL 与 pgAdmin4
+
+## 第八节 PostgreSQL
 
 PostgreSQL 是一款自由的对象-关系型数据库，最早发布于 1989 年 6 月。在FreeBSD 上，提供了 9.6、10、11、12、13、14共计6个大版本可选。
 
-## postgresql 安装示例，6个版本都如此。
+### postgresql 安装示例，6个版本都如此。
 
-### 安装：二选一
+#### 安装：二选一
 
 ```
 # pkg install -y postgresql96-server
 ```
+
 或者
 
 ```
 cd /usr/ports/databases/postgresql96-server/ && make install clean
 ```
-### 加入启动项
+
+#### 加入启动项
+
 ```
 # sysrc postgresql_enable=YES
 ```
 
-### 初始化数据库
+#### 初始化数据库
+
 ```
 /usr/local/etc/rc.d/postgresql initdb
 ```
+
 示例输出：
+
 ```
 root@ykla:~ # /usr/local/etc/rc.d/postgresql initdb
 The files belonging to this database system will be owned by user "postgres".
@@ -61,7 +69,8 @@ Success. You can now start the database server using:
 
 root@ykla:~ # 
 ```
-### 登录使用
+
+#### 登录使用
 
 Postgresql 默认是没有 root 用户的，需要使用其创建的 postgres 用户登录。
 
@@ -71,7 +80,9 @@ Postgresql 默认是没有 root 用户的，需要使用其创建的 postgres �
 root@ykla:~ # psql
 psql: FATAL:  role "root" does not exist
 ```
+
 正确用法：
+
 ```
 # 切换用户
 root@ykla:~ # su - postgres  
@@ -102,7 +113,7 @@ $exit
 root@ykla:~ #
 ```
 
-# 安装 pgAdmin4
+## 安装 pgAdmin4
 
 以下教程以 FreeBSD 13.0 为基准。
 
@@ -116,18 +127,18 @@ pgAdmin4 需要在 python 环境下运行，并且安装时要通过 python 的 
 # python
 python: Command not found   #说明当前没有 python 命令
 ```
-## 安装 Python 及 pip
+
+### 安装 Python 及 pip
 
 ```
 # pkg install python
 ```
 
-pip 是 Python 包的包管理器。它用于安装和管理 Python 包和依赖包的关系。 
+pip 是 Python 包的包管理器。它用于安装和管理 Python 包和依赖包的关系。
 
 virtualenv 用来建立一个虚拟的 python 环境，一个专属于项目的 python 环境。
 
 本文实际安装过程中是通过 virtualenv 创建独立的 Python 环境来安装 pgAdmin4。
-
 
 从 py38-pip 包安装 pip：
 
@@ -135,7 +146,8 @@ virtualenv 用来建立一个虚拟的 python 环境，一个专属于项目的 
 # pkg install py38-pip   
 ```
 
-## 安装配置 virtualenv 
+### 安装配置 virtualenv
+
 使用 virtualenv 创建独立的 Python 环境。 Virtualenv 会创建一个自己的 Python 安装的环境，它不支持具有全局或另一个虚拟环境的库。 运行以下命令来安装 Virtualenv。
 
 ```
@@ -158,11 +170,12 @@ Installing setuptools, pip, wheel…done.
 done.
 ```
 
-## 安装 sqlite3
+### 安装 sqlite3
 
 ```
 #pkg install py38-sqlite3
 ```
+
 激活创建的虚拟环境.
 
 ```
@@ -176,7 +189,8 @@ done.
 ```
 (pgadmin4) root@ykla:~ # 
 ```
-## 安装 pgadmin4：
+
+### 安装 pgadmin4：
 
 现在 PIP 源一律要求使用 https，由于缺少 SSL 证书还需要安装。
 
@@ -191,6 +205,7 @@ pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 
 其中有依赖 openjpeg，先进行安装
+
 ```
 (pgadmin4) root@ykla:~# pkg install openjpeg
 ```
@@ -211,14 +226,14 @@ ntpdate ntp.api.bz
 
 然后再安装 pgAmdin4 及其依赖环境 rust
 
-````
+```
 (pgadmin4) root@ykla:~# pkg install rust
 (pgadmin4) root@ykla:~# pip install pgadmin4
-````
+```
 
 注意：如果内存不足且没有 swap，会提示 killed，如出现该问题请先添加一块 swap。
 
-## 配置并运行 pgAdmin4
+### 配置并运行 pgAdmin4
 
 安装完成后为 pgAdmin4 创建配置文件,复制 pgAdmin4 配置文件：
 
@@ -226,13 +241,13 @@ ntpdate ntp.api.bz
 (pgadmin4) root@ykla:~# cp ./pgadmin4/lib/python3.8/site-packages/pgadmin4/config.py  ./pgadmin4/lib/python3.8/site-packages/pgadmin4/config_local.py
 ```
 
-使用 ee 编辑器编辑配置文件的本地副本。 
+使用 ee 编辑器编辑配置文件的本地副本。
 
 ```
 (pgadmin4) root@ykla:~# ee ./pgadmin4/lib/python3.8/site-packages/pgadmin4/config_local.py
 ```
 
-找到`DEFAULT_SERVER`将默认服务器侦听地址更改为`0.0.0.0`。找`到DEFAULT_SERVER_PORT`可改应用程序监听的端口。 
+找到`DEFAULT_SERVER`将默认服务器侦听地址更改为`0.0.0.0`。找`到DEFAULT_SERVER_PORT`可改应用程序监听的端口。
 
 实例如下:
 
@@ -246,8 +261,8 @@ DEFAULT_SERVER_PORT = 5050
 ```
 (pgadmin4) root@ykla:~# mkdir  -p /var/lib/pgadmin   
 (pgadmin4) root@ykla:~# mkdir /var/log/pgadmin
-
 ```
+
 配置文件编辑完成后执行以下命令来初始化账号和登录密码
 
 ```
@@ -267,4 +282,7 @@ Starting pgAdmin 4. Please navigate to http://0.0.0.0:5050 in your browser.
 
 现在我们已经安装并运行了 pgAdmin4，并可以通过 `http://ip:5050` 访问 Web 控制面板：
 
+![](../.gitbook/assets/pg登录.png)
+
+![](../.gitbook/assets/登录2.png)
 
