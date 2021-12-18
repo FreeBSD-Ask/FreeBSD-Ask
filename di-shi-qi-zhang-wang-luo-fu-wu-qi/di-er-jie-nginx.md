@@ -2,7 +2,7 @@
 
 ## 1.安装 <a href="#1-an-zhuang" id="1-an-zhuang"></a>
 
-* ports: `# make -C /usr/ports/www/nginx install`
+* ports: `# cd /usr/ports/www/nginx/ && make install clean`
 * pkg: `# pkg install nginx`
 
 ### 查找相关的软件包
