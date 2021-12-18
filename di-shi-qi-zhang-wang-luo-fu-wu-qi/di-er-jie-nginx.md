@@ -18,17 +18,16 @@
 
 ### 2.1 启动 <a href="#2.1-qi-dong" id="2.1-qi-dong"></a>
 
+
+
 ```
-# service nginx onestart
+# sysrc nginx_enable=YES
+# service nginx start
 ```
 
 你可以通过`$ sockstat -4 | grep nginx`检查nginx是否启动并正常运行。
 
-#### 开机自启动
 
-```
-# sysrc nginx_enable="yes"
-```
 
 此时你应该通过`# service nginx start`启动Nginx而不是`# service nginx onestart`
 
