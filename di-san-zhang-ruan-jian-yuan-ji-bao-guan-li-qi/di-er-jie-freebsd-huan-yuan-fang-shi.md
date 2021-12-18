@@ -4,8 +4,6 @@ FreeBSD 有四类源，pkg、ports、portsnap、update。freebsd.cn 暂不可用
 
 **对于失去安全支持的版本，如 FreeBSD 9.0 是没有 pkg 源可用的，只能使用当时的 ports 编译安装软件。**
 
-{% embed url="https://mirror.bjtu.edu.cn" %}
-
 **本文对于一个源列出了多个镜像站，无需全部配置，只需选择其一即可。**
 
 **目前境内没有官方镜像站，以下均为非官方镜像站。**
