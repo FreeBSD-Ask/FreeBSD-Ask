@@ -317,6 +317,8 @@ Starting pgAdmin 4. Please navigate to http://0.0.0.0:5050 in your browser.
 
 ## 升级 pgadmin4
 
+本文测试如果直接使用 pip 升级后还是提示旧版本。
+
 pgadmin4 更新频率较高，如需升级要先删除原有用 virtualenv 创建的 pgadmin4 目录然后用安装用户再次执行如下指令：
 
 ```
