@@ -121,6 +121,8 @@ pgAdmin4 是用于管理 PostgreSQL 数据库服务器的最流行的开源应�
 
 注意：在安装 pgAdmin4 前先行安装 PostgreSQL 数据库,否则安装 pgAdmin4 会失败。
 
+注意：在安装 pgAdmin4 前先行安装 PostgreSQL 数据库,否则安装 pgAdmin4 会失败。
+
 pgAdmin4 需要在 python 环境下运行，并且安装时要通过 python 的 pip 进行安装，所以先安装 python。本文用的默认版本是 Python3.8，请注意，FreeBSD 13 系统上默认没有 python 环境。可通过以下命令查看
 
 ```
@@ -192,11 +194,15 @@ done.
 
 ### 安装 pgadmin4：
 
+现在 pip 源一律要求使用 https，由于缺少 SSL 证书还需要安装。
+
 现在 PIP 源一律要求使用 https，由于缺少 SSL 证书还需要安装。
 
 ```
 (pgadmin4) root@ykla:~# pkg install ca_root_nss
 ```
+
+然后对 pip 进行换源，此处使用清华源：
 
 然后对 pip 换源，此处使用清华源：
 
@@ -209,6 +215,8 @@ pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 (pgadmin4) root@ykla:~# pkg install openjpeg
 ```
+
+如果报错：
 
 如果报错
 
@@ -224,12 +232,16 @@ ntpdate ntp.api.bz
 17 Dec 16:35:36 ntpdate[1453]: step time server 114.118.7.161 offset +401965.911037 sec
 ```
 
+然后再安装 pgAmdin4 及其依赖环境 rust：
+
 然后再安装 pgAmdin4 及其依赖环境 rust
 
 ```
 (pgadmin4) root@ykla:~# pkg install rust
 (pgadmin4) root@ykla:~# pip install pgadmin4
 ```
+
+**注意：如果内存不足（小于 4GB）且没有 swap，会提示 killed，如出现该问题请先添加一块 swap。**
 
 注意：如果内存不足且没有 swap，会提示 killed，如出现该问题请先添加一块 swap。
 
@@ -246,6 +258,8 @@ ntpdate ntp.api.bz
 ```
 (pgadmin4) root@ykla:~# ee ./pgadmin4/lib/python3.8/site-packages/pgadmin4/config_local.py
 ```
+
+找到`DEFAULT_SERVER`将默认服务器侦听地址更改为`0.0.0.0`。找到`DEFAULT_SERVER_PORT`可改应用程序监听的端口。&#x20;
 
 找到`DEFAULT_SERVER`将默认服务器侦听地址更改为`0.0.0.0`。找`到DEFAULT_SERVER_PORT`可改应用程序监听的端口。
 
@@ -291,6 +305,7 @@ Starting pgAdmin 4. Please navigate to http://0.0.0.0:5050 in your browser.
 ## 保持 pgadmin4 后台运行
 
 如果服务关闭下次要运行时需使用 pgadmin4 的安装用户进入根目录，执行如下命令：
+
 ```
 (pgadmin4) root@ykla:~# source pgadmin4/bin/activate.csh
 (pgadmin4) root@ykla:~# pgadmin4 & 
