@@ -286,3 +286,5 @@ Starting pgAdmin 4. Please navigate to http://0.0.0.0:5050 in your browser.
 
 ![](../.gitbook/assets/登录2.png)
 
+![](../.gitbook/assets/登录3.png)
+
