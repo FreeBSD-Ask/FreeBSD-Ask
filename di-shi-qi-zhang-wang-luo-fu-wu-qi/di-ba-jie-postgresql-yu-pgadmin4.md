@@ -121,8 +121,6 @@ pgAdmin4 是用于管理 PostgreSQL 数据库服务器的最流行的开源应�
 
 注意：在安装 pgAdmin4 前先行安装 PostgreSQL 数据库,否则安装 pgAdmin4 会失败。
 
-注意：在安装 pgAdmin4 前先行安装 PostgreSQL 数据库,否则安装 pgAdmin4 会失败。
-
 pgAdmin4 需要在 python 环境下运行，并且安装时要通过 python 的 pip 进行安装，所以先安装 python。本文用的默认版本是 Python3.8，请注意，FreeBSD 13 系统上默认没有 python 环境。可通过以下命令查看
 
 ```
