@@ -234,8 +234,6 @@ ntpdate ntp.api.bz
 
 **注意：如果内存不足（小于 4GB）且没有 swap，会提示 killed，如出现该问题请先添加一块 swap。**
 
-注意：如果内存不足且没有 swap，会提示 killed，如出现该问题请先添加一块 swap。
-
 ### 配置并运行 pgAdmin4
 
 安装完成后为 pgAdmin4 创建配置文件,复制 pgAdmin4 配置文件：
