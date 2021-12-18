@@ -196,15 +196,11 @@ done.
 
 现在 pip 源一律要求使用 https，由于缺少 SSL 证书还需要安装。
 
-现在 PIP 源一律要求使用 https，由于缺少 SSL 证书还需要安装。
-
 ```
 (pgadmin4) root@ykla:~# pkg install ca_root_nss
 ```
 
 然后对 pip 进行换源，此处使用清华源：
-
-然后对 pip 换源，此处使用清华源：
 
 ```
 pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
@@ -218,7 +214,6 @@ pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 
 如果报错：
 
-如果报错
 
 ```
 WARNING: Retrying (Retry(total=3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate is not yet valid (_ssl.c:1136)'))': /simple/pgadmin4/
@@ -233,8 +228,6 @@ ntpdate ntp.api.bz
 ```
 
 然后再安装 pgAmdin4 及其依赖环境 rust：
-
-然后再安装 pgAmdin4 及其依赖环境 rust
 
 ```
 (pgadmin4) root@ykla:~# pkg install rust
@@ -259,9 +252,7 @@ ntpdate ntp.api.bz
 (pgadmin4) root@ykla:~# ee ./pgadmin4/lib/python3.8/site-packages/pgadmin4/config_local.py
 ```
 
-找到`DEFAULT_SERVER`将默认服务器侦听地址更改为`0.0.0.0`。找到`DEFAULT_SERVER_PORT`可改应用程序监听的端口。&#x20;
-
-找到`DEFAULT_SERVER`将默认服务器侦听地址更改为`0.0.0.0`。找`到DEFAULT_SERVER_PORT`可改应用程序监听的端口。
+找到`DEFAULT_SERVER`将默认服务器侦听地址更改为`0.0.0.0`。找到`DEFAULT_SERVER_PORT`可改应用程序监听的端口。
 
 实例如下:
 
