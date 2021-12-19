@@ -38,11 +38,11 @@
 
 > Password for root account? (will not echo)
 
-设置根账号密码，输入后回车确认（密码不会在屏幕上显示）。
+设置 root 账号密码，输入后回车确认（密码不会在屏幕上显示）。
 
 > Password for root account? (again)
 
-再次输入一遍根账号密码，回车键确认。
+再次输入一遍 root 账号密码，回车键确认。
 
 后续配置回车确认。
 
@@ -188,7 +188,7 @@ Set name(s)? (or 'abort' or 'done') [done] -game*
 ```
 这里我们输入`-game*` 来取消 `game70.tgz` ，其它都勾选。
 
-注：即使不使用桌面，也请勾选 `X` 选项，否则部分软件可能无法正常运行。
+注：即使不使用桌面，也请勾选 `X11` 选项，否则部分软件可能无法正常运行。
 ```
 Set name(s)? (or 'abort' or 'done') [done] `-game*`
 
