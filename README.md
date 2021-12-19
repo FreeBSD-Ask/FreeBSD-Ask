@@ -30,7 +30,7 @@ PDF 请点击 “[Release](https://github.com/FreeBSD-Ask/FreeBSD-Ask/releases)�
 
 ### 开源维护与捐赠
 
-![](.gitbook/assets/proud\_donor.gif)
+![](.gitbook/assets/proud_donor.gif)
 
 [点此捐赠 FreeBSD 基金会](https://freebsdfoundation.org/donate)。
 
