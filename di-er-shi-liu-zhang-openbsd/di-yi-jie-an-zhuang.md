@@ -172,7 +172,12 @@ What timezone are you in? ('?' for list)
 > Let's install the sets!
 > Location of sets? (cd disk ftp http or 'done') [cd] `disk`
 
-软件地址，选择`disk` 。这里我们选择安装盘为软件地址。需要提示一点的是，系统询问是否已识别U盘时，一定要选择否，以便我们再确认一遍U盘位置。本例中，U盘的位置为 `sd2`。
+软件地址，选择`disk` 。这里我们选择安装盘为软件地址。
+
+> Is the disk partition already mounted? [yes] `no`
+
+需要提示一点的是，系统询问是否已识别 U盘时，一定要选择否，以便我们再确认一遍 U盘位置。如不确定 U盘编号，可输入 `？` 查看。
+
 ```
 Select sets by entering a set name, a file name pattern or 'all'. De-select 
 sets by prepending a '-' to the set name, name pattern or 'all'. Selected sets are labelled `[X]`
