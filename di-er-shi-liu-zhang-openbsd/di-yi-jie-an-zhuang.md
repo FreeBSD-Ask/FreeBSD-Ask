@@ -70,11 +70,7 @@
 
 > What timezone are you in? ('?' for list) [US/Eastern] ?
 
-时区选择，`？` 列出所有选项。依次进入 `Asia/Shanghai`
-
-What timezone are you in? ('?' for list)
-
-时区选择，找到 `Beijing` 选择北京时区。
+时区选择，找到 `Asia/Shanghai`
 
 > Available disks are: sd0, sd1, sd2.
 > Which one is the root disk? (or 'done') [sd0] `?`
