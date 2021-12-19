@@ -212,5 +212,5 @@ To boot the new system, enter 'reboot' at the command prompt.
 When you login to your new system the first time, 
 please read your mail using the 'mail' command.
 ```
-恭喜！系统已安装完成。
+恭喜！系统已成功安装，重启后可进入系统。
 
