@@ -1,6 +1,6 @@
 # 第五节 安装 Xfce
 
-## 安装xfce4
+## 安装 xfce4
 
 通过ports安装
 
@@ -11,7 +11,7 @@
 
 通过pkg安装 `# pkg install xfce4`
 
-## 启用xfce
+## 启用 xfce
 
 `# echo ". /usr/local/etc/xdg/xfce4/xinitrc"> ~/.xinitrc`
 
@@ -30,7 +30,7 @@
 
 ## 设置中文显示
 
-在.xinitrc添加以下内容（但要在最前面才正常启用） `export LANG=zh_CN.UTF-8`
+在·.xinitrc·添加以下内容（但要在最前面才正常启用） `export LANG=zh_CN.UTF-8`
 
 ## 可选配置
 

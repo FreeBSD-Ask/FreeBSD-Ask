@@ -6,7 +6,7 @@
 
 　　方法：
 
-　　/boot/loader.conf
+　　`/boot/loader.conf`
 
 　　中写入
 
@@ -22,7 +22,7 @@
 　　ifconfig_wlan0="WPA DHCP"
 ```
 
-　　注意在 /etc/wpa_supplicant.conf 文件中（没有就自己通 touch 命令新建一个）写入
+　　注意在 /etc/wpa_supplicant.conf 文件中（没有就自己通过 `touch` 命令新建一个）写入
 ```
 　　network={ ssid=”wifi 名字，别搞什么中文” psk=”密码” }
 ```

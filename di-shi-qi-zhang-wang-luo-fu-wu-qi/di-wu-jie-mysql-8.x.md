@@ -28,7 +28,7 @@ mysql 8.0 默认密码是空，直接回车即可。
 ```
 root@ykla:~ # mysql -uroot -p
 Enter password: 
-Welcome to the MySQL monitor.  Commands end with ; or \g.
+Welcome to the MySQL monitor.  Commands end with ; or g.
 Your MySQL connection id is 8
 Server version: 8.0.27 Source distribution
 
@@ -38,7 +38,7 @@ Oracle is a registered trademark of Oracle Corporation and/or its
 affiliates. Other names may be trademarks of their respective
 owners.
 
-Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+Type 'help;' or 'h' for help. Type 'c' to clear the current input statement.
 
 root@localhost [(none)]> 
 
@@ -62,7 +62,7 @@ root@localhost [(none)]> quit;
 Bye
 root@ykla:~ # mysql -uroot -p
 Enter password: 
-Welcome to the MySQL monitor.  Commands end with ; or \g.
+Welcome to the MySQL monitor.  Commands end with ; or g.
 Your MySQL connection id is 9
 Server version: 8.0.27 Source distribution
 
@@ -72,7 +72,7 @@ Oracle is a registered trademark of Oracle Corporation and/or its
 affiliates. Other names may be trademarks of their respective
 owners.
 
-Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+Type 'help;' or 'h' for help. Type 'c' to clear the current input statement.
 
 root@localhost [(none)]> show databases;
 +--------------------+

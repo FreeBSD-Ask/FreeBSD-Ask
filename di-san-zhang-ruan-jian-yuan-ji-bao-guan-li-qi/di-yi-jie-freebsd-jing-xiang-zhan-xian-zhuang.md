@@ -1,6 +1,6 @@
 # 第一节 FreeBSD 镜像站现状
 
-## 现状 <a href="#xian-zhuang" id="xian-zhuang"></a>
+## 现状
 
 　　主要问题在于官方无论如何也不开放 rsync 且不接受镜像站的官方二级镜像申请。
 

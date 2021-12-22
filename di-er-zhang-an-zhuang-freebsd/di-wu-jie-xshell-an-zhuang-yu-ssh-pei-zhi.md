@@ -2,7 +2,7 @@
 
 ## WinSCP 下载
 
-WinSCP 是对 scp 命令的图形化封装，同时支持 FTP 等多种协议。可以快捷的传输文件与 Windows 系统和 Linux 或 BSD 之间。
+WinSCP 是对 `scp` 命令的图形化封装，同时支持 FTP 等多种协议。可以快捷的传输文件与 Windows 系统和 Linux 或 BSD 之间。
 
 下载地址：
 

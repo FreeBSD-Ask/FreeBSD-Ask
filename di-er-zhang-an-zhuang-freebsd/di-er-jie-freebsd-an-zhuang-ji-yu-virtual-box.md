@@ -23,7 +23,7 @@ EndSection
 
 　　写到 `/usr/local/etc/X11/xorg.conf`
 
-　　显卡控制器用 VBoxSVGA
+　　显卡控制器用 `VBoxSVGA`
 
 編輯 `# ee etc/rc.conf`，增加以下內容：
 

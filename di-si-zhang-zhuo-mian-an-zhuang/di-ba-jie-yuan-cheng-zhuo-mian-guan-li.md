@@ -25,13 +25,13 @@ xsetroot -solid grey
 $command &  
 ```
 
-注意：`$command` 需要替换，请注意保留 &，在不同桌面下需要替换，Gnome 用 `gnome-session`，KDE 用 `startplasma-x11`， MATE 用 `mate-session`，Xfce 用 `xfce4-session`。
+注意：`$command` 需要替换，请注意保留 `&`，在不同桌面下需要替换，Gnome 用 `gnome-session`，KDE 用 `startplasma-x11`， MATE 用 `mate-session`，Xfce 用 `xfce4-session`。
 
 保存后执行命令 `# chmod 755 ~/.vnc/xstartup`。
 
 3.接下来在终端执行命令 `vncserver` 或 `vncserver :1`。
 
-其中“`:1`”相当于 `DISPLAY=:1`，即 指定桌面显示的通信端口为 1，对应 VNC 服务的通信端口为 5901。尽管桌面显示通信端口 是从 0 开始，但该端口已被当前桌面占用，因此 VNC 服务默认端口虽为 5900，但实际执行往往从 5901 开始。
+其中“`:1`”相当于 `DISPLAY=:1`，即指定桌面显示的通信端口为 `1`，对应 VNC 服务的通信端口为 `5901`。尽管桌面显示通信端口 是从 0 开始，但该端口已被当前桌面占用，因此 VNC 服务默认端口虽为 5900，但实际执行往往从 5901 开始。
 
 如果启动服务时不指定通信端口，则系统根据使用情况自动指定。
 

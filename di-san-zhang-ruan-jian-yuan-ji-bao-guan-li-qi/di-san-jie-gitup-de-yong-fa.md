@@ -1,6 +1,6 @@
 # 第三节 gitup 的用法
 
-在 FreeBSD 13.0，FreeBSD 官方准备将 portsnap 移除（但仍可使用），转而使用 gitup，换用 git 方式获取系统源代码和 ports 打包套件。
+在 FreeBSD 13.0，FreeBSD 官方准备将 `portsnap` 移除（但仍可使用），转而使用 `gitup`，换用 git 方式获取系统源代码和 ports 打包套件。
 
 ```
 # pkg install gitup #安装 gitup
@@ -12,7 +12,7 @@
 
 设置 HTTP 代理
 
-gitup 的代理不取决于系统代理，而是由其配置文件单独决定。
+`gitup` 的代理不取决于系统代理，而是由其配置文件单独决定。
 
 `# ee /usr/local/etc/gitup.conf`
 

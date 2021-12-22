@@ -2,7 +2,7 @@
 
 ## 下载镜像
 
-访问 [下载链接](https://mirrors.bfsu.edu.cn/OpenBSD/7.0/amd64/) ，获取系统镜像。若是刻录 U盘 安装，就下载 installXX.img ；若是虚拟机体验，请下载 installXX.iso 。（注：截止 OpenBSD 7.0 时，请不要使用 ventory 引导实体机安装。）
+访问 [下载链接](https://mirrors.bfsu.edu.cn/OpenBSD/7.0/amd64/) ，获取系统镜像。若是刻录 U盘 安装，就下载 `installXX.img` ；若是虚拟机体验，请下载 `installXX.iso` 。（注：截止 OpenBSD 7.0 时，请不要使用 ventory 引导实体机安装。）
 
 ## 自定义安装
 
@@ -10,9 +10,9 @@
 
 ### 推荐分区
 
-对于尝鲜的朋友，假设有 32GB 的容量，推荐两个分区： swap 2GB ，/ 为剩下的全部容量。
+对于尝鲜的朋友，假设有 32GB 的容量，推荐两个分区： `swap 2GB` ，`/`为剩下的全部容量。
 
-如果有 128GB 容量，推荐分区： / 32GB ，swap 4GB ，/home 为剩下的全部容量。
+如果有 128GB 容量，推荐分区： `/ 32GB` ，`swap 4GB` ，`/home` 为剩下的全部容量。
 
 对于更大的容量，可依自己喜好，进一步细化分区配置。
 

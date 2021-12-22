@@ -1,6 +1,6 @@
 # 第一节 安装 Xorg
 
-## 安装xorg <a href="an-zhuang-xorg" id="an-zhuang-xorg"></a>
+## 安装xorg 
 
 ### 可选包：
 

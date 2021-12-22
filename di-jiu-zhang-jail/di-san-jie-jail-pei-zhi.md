@@ -1,6 +1,6 @@
 # 第三节 jail 配置
 
-## 创建jail目录 <a href="#chuang-jian-jail-mu-lu" id="chuang-jian-jail-mu-lu"></a>
+## 创建jail目录
 
 ### 放入基本系统
 
@@ -99,7 +99,7 @@ allow.sysvipc=1;
 
 ### 网络
 
-创建/etc/resolv.conf,并编辑
+创建`/etc/resolv.conf`,并编辑
 
 ```
 search lan
@@ -139,7 +139,9 @@ nameserver 223.6.6.6
 
 ### 创建数据目录
 
-就是复制一份骨架给他用 `# cp -R /jail/j2/ /jail/js/www/`
+就是复制一份骨架给他用 
+
+`# cp -R /jail/j2/ /jail/js/www/`
 
 ### 创建项目目录
 
@@ -184,36 +186,37 @@ awk
 
 写入 jail.conf
 
-\#全局部分
-
 ```
+#全局部分
+
+
 exec.start = "/bin/sh /etc/rc";
 exec.stop = "/bin/sh /etc/rc.shutdown";
 exec.clean;
 mount.devfs;
 allow.raw_sockets = 1;
 allow.sysvipc = 1;
-```
 
-\#网关 没用就不写
+
+#网关 没用就不写
 
 interface = "网卡地址"； #主机名也可以用变量代替
 
-```
+
 hostname = "$name.domain.local";
 #jail 位置，也可以用变量
 path = "/jail/$name";
-```
 
-\#ip地址
 
-```
+#ip地址
+
+
 ip4.addr = 192.168.1.$ip;
-```
 
-\#fstab位置
 
-```
+#fstab位置
+
+
 mount.fstab = /jail/www.fstab；
 www {
 $ip=2

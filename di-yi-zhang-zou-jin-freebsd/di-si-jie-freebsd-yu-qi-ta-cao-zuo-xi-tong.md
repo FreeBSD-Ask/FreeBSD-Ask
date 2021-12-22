@@ -14,7 +14,7 @@ Linus“I have never even checked 386BSD out; when I started on Linux it wast av
 
 ![](../.gitbook/assets/图片2.png)
 
-## FreeBSD or Others  <a href="#freebsd-or-others" id="freebsd-or-others"></a>
+## FreeBSD or Others
 
 　　①Linux
 

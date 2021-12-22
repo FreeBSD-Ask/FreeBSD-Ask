@@ -1,8 +1,8 @@
 # 第三节 五笔输入法
 
-## FreeBSD 使用98 五笔输入法教程
+## FreeBSD 使用 98 五笔输入法教程
 
-#### 注意：该教程可能仅适用于GNOME 桌面 <a href="zhu-yi-gai-jiao-cheng-ke-neng-jin-kuo-yong-yu-gnome-zhuo-mian" id="zhu-yi-gai-jiao-cheng-ke-neng-jin-kuo-yong-yu-gnome-zhuo-mian"></a>
+#### 注意：该教程可能仅适用于 GNOME 桌面
 
 ### 安装
 
@@ -10,13 +10,13 @@
 
 ### 配置
 
-环境变量配置：安装好运行初始化命令ibus-setup
-将98 五笔码表（wubi86.dict.yaml、wubi86.schema.yaml）复制到/usr/local/share/rime-date 目录下
-修改rime-date 目录下default.yaml 文件:
+环境变量配置：安装好运行初始化命令`ibus-setup`
+将 98 五笔码表（`wubi86.dict.yaml`、`wubi86.schema.yaml`）复制到`/usr/local/share/rime-date` 目录下
+修改 rime-date 目录下default.yaml 文件:
 
-打开default.yaml 找到schema_lis：
+打开`default.yaml` 找到`schema_lis`：
 
-下面第一行添加 `- schema: wubi98` 保存退出重新加载ibus 输入法即可。
+下面第一行添加 `- schema: wubi98` 保存退出重新加载 ibus 输入法即可。
 
 ### 98 五笔码表 下载地址
 

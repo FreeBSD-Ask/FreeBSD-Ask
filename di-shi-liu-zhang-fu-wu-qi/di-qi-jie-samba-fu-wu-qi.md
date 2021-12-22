@@ -16,7 +16,7 @@
 # ee /etc/rc.conf
 ```
 
-（2）在 /etc/rc.conf 最后加入如下，并保存：
+（2）在 `/etc/rc.conf` 最后加入如下，并保存：
 
 ```
 nmbd_enable="YES"
@@ -25,7 +25,7 @@ samba_enable="YES"
 samba_server_enable="YES"
 ```
 
-（3）创建 /usr/local/etc/smb4.conf，添加如下内容并保存
+（3）创建 `/usr/local/etc/smb4.conf`，添加如下内容并保存
 
 ```
 #vi /usr/local/etc/smb4.conf
@@ -46,7 +46,7 @@ samba_server_enable="YES"
 # smbpasswd -a root
 ```
 
-（5）进入/usr/local/etc
+（5）进入`/usr/local/etc`
 
 ```
 # cd /usr/local/etc
@@ -64,16 +64,16 @@ samba_server_enable="YES"
 # service samba_server restart //重启命令
 ```
 
-（7）查看samba状态：
+（7）查看 samba 状态：
 
 ```
 # service samba_server status
 ```
 
-（8）在 windows 下利用 \\192.168.X.X 访问共享文件夹（以实际 IP 为准，windows 需要先开启 SMB 1.0 支持）
+（8）在 windows 下利用 192.168.X.X 访问共享文件夹（以实际 IP 为准，Windows 需要先开启 SMB 1.0 支持）
 
 ```
-\\192.168.X.X
+192.168.X.X
 ```
 
 # 将Samba设置为域成员

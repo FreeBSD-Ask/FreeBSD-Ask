@@ -4,7 +4,7 @@
 
 ### 安装 MATE 桌面
 
-登入 root 账号，终端运行 `# pkg_add slim slim-themes elementary-dock mate mate-utils mate-extras`
+登入 `root` 账号，终端运行 `# pkg_add slim slim-themes elementary-dock mate mate-utils mate-extras`
 
 打开 `/etc/rc.local`，添加一行 `/usr/local/bin/slim -d` 。
 
@@ -33,7 +33,7 @@ pkg_scripts="dbus_daemon messagebus"
 apmd_flags=-A
 multicast_host=YES
 ```
-退出 root 账号，以普通账号登录。
+退出 `root` 账号，以普通账号登录。
 
 打开 `.xinitrc` (没有就新建一个)，添加一行 `exec startxfce4`。
 

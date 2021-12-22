@@ -4,7 +4,7 @@
 
 装上系统默认没有 pkg，先获取 pkg：
 
-\#pkg 回车即可输入 y 确认下载 ————————————————————————————————————
+#pkg 回车即可输入 y 确认下载 ————————————————————————————————————
 
 pkg 使用 https，先安装 ssl 证书：
 
@@ -41,7 +41,7 @@ pkg 升级：
 
 ## 如何卸载软件
 
-直接使用 pkg delete 会破坏正常的依赖关系，应该尽量避免使用（ports 的 make deinstall 也一样），转而使用 pkg-rmleaf 命令，该命令属于的软件需要自行安装：
+直接使用 `pkg delete` 会破坏正常的依赖关系，应该尽量避免使用（ports 的 `make deinstall` 也一样），转而使用 `pkg-rmleaf` 命令，该命令属于的软件需要自行安装：
 
 `# pkg install pkg-rmleaf`
 
@@ -82,7 +82,7 @@ pkg: PRE-INSTALL script failed
 ### Newer FreeBSD version for package pkg
 
 ```
-Neuer FreeBSD version for package pkg:&#x20;
+Neuer FreeBSD version for package pkg:
 To ignore this error set IGNORE_OSVERSION=yes
 - package: 1402843
 - running kernel: 1400042

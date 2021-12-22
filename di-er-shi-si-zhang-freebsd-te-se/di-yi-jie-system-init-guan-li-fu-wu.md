@@ -1,6 +1,6 @@
 # 第一节 System INIT 管理服务
 
-## 基础 <a href="#fu-wu-guan-li-xi-tong" id="fu-wu-guan-li-xi-tong"></a>
+## 基础
 
 FreeBSD 使用 BSD INIT 管理系统服务。
 
@@ -14,20 +14,20 @@ FreeBSD 使用 BSD INIT 管理系统服务。
 # ee /etc/rc.conf
 ```
 
-添加一行，`XXX_enable="YES"`，`XXX` 表示服务名称（这里只是举例，实际上可以是nginx samba等），这是固定格式：
+添加一行，`XXX_enable="YES"`，`XXX` 表示服务名称（这里只是举例，实际上可以是 nginx samba 等），这是固定格式：
 
 ```
 XXX_enable="YES"
 ```
 
-服务所对应的脚本路径是： `#/usr/local/etc/rc.d/`
+服务所对应的脚本路径是：`#/usr/local/etc/rc.d/`
 
 当然也可以直接调用 `/etc/rc.d/` 和 `/usr/local/etc/rc.d/` 下的那些脚本`。`
 
 * `# /usr/local/etc/rc.d/XXX reload`
 * `# /usr/local/etc/rc.d/XXX stop`
 
-如果 rc.conf 中并没有启用某项服务，但想临时启动它，那么可以这样：
+如果 `rc.conf` 中并没有启用某项服务，但想临时启动它，那么可以这样：
 
 * `# service XXX onestart`
 * `# service XXX onestop`

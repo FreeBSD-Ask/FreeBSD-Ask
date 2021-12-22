@@ -4,7 +4,7 @@
 
 {% embed url="https://reviews.freebsd.org/D27262" %}
 
-## 更新系统 <a href="#geng-xin-xi-tong" id="geng-xin-xi-tong"></a>
+## 更新系统
 
 FreeBSD 提供了实用工具 `freebsd-update` 来安装系统更新，包括升级到大版本。
 

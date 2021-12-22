@@ -4,32 +4,32 @@
 
 ![](../.gitbook/assets/image.png)
 
-### （一）：背景环境介绍
+### 环境介绍
 
-服务器A、服务器B 均为 `FreeBSD-12.2-RELEASE-amd64`
+服务器 A、服务器 B 均为 `FreeBSD-12.2-RELEASE-amd64`
 
-服务器A（发起端）：`192.168.100.10/24`
+服务器 A（发起端）：`192.168.100.10/24`
 
-服务器B（同步源）：`192.168.100.20/24`
+服务器 B（同步源）：`192.168.100.20/24`
 
 **需求：**实现服务器B的数据同步到服务器A上
 
-### （二）服务器B（同步源）配置
+### 服务器B（同步源）配置
 
-#### 1：安装 rsync 软件包
+#### 安装 rsync 软件包
 
 ```
 # pkg install -y rsync
 ```
 
-#### 2：查询已安装 rsync 软件包的信息
+#### 查询已安装 rsync 软件包的信息
 
 ```
 # pkg info | grep rsync 
 rsync-3.2.3            
 ```
 
-#### 3：新建需要备份的文件夹`test`，并且设置其属主为 root，以及在其内部新建测试文件
+#### 新建需要备份的文件夹`test`，并且设置其属主为 `root`，以及在其内部新建测试文件
 
 ```
 # mkdir test
@@ -37,7 +37,7 @@ rsync-3.2.3
 # touch txt001 /home/test/
 ```
 
-#### 4：编辑`rsyncd.conf`文件
+#### 编辑`rsyncd.conf`文件
 
 ```
 # ee /usr/local/etc/rsync/rsyncd.conf
@@ -61,7 +61,7 @@ auth users = root    //授权账户
 secrets file = /etc/rsyncd_users.db          //定义rsync客户端用户认证的密码文件
 ```
 
-#### 5：**创建授权备份账户认证的密码文件**
+#### **创建授权备份账户认证的密码文件**
 
 ```
 # ee /etc/rsyncd_users.db
@@ -69,13 +69,13 @@ secrets file = /etc/rsyncd_users.db          //定义rsync客户端用户认证�
 root:12345678          //格式：授权账户用户名：密码
 ```
 
-#### 6：**修改数据文件权限**
+#### **修改数据文件权限**
 
 ```
 # chmod 600 /etc/rsyncd_users.db
 ```
 
-**7：rsync 的服务名是 rsyncd，启动 rsync 服务程序**
+**rsync 的服务名是 rsyncd，启动 rsync 服务程序**
 
 ```
 # rsync --daemon    //启动服务
@@ -85,7 +85,7 @@ root:12345678          //格式：授权账户用户名：密码
 # /usr/local/etc/rc.d/rsyncd start //启动服务
 ```
 
-#### 8：**查看 rsync 运行端口号**
+#### **查看 rsync 运行端口号**
 
 ```
 # sockstat | grep rsync
@@ -93,7 +93,7 @@ root     rsync      1185  4  dgram  -> /var/run/logpriv
 root     rsync      1185  5  tcp4   192.168.100.20:873    *:* 
 ```
 
-#### 9：**防火墙放行 rsync 服务**
+#### **防火墙放行 rsync 服务**
 
 ```
 # ee /etc/ipfw.rules 
@@ -124,22 +124,22 @@ $IPF 130 allow tcp from any to any 873 in
 $IPF 500 deny log all from any to any
 ```
 
-### （二）服务器 A（发起端）配置
+### 服务器 A（发起端）配置
 
-#### 1：**创建本地文件夹 `/home/testBackUp/` 并设置好相关权限**
+#### **创建本地文件夹 `/home/testBackUp/` 并设置好相关权限**
 
 ```
 # mkdir testBackUp
 # chown root:root testBackUp
 ```
 
-#### 2：**发起端访问同步源，将文件下载到本地 `/home/testBackUp/` 下载目录下，需要人机交互手动输入密码**
+#### **发起端访问同步源，将文件下载到本地 `/home/testBackUp/` 下载目录下，需要人机交互手动输入密码**
 
 ```
 # rsync -avz root@192.168.100.20::testcom /home/testBackUp     
 ```
 
-#### 3：查看同步情况
+#### 查看同步情况
 
 ```
 # ls -l /home/testBackUp/

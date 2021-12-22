@@ -14,7 +14,9 @@
 
 {% embed url="https://github.com/FreeBSD-Ask/FreeBSD-rpi4-firmware" %}
 
-　　使用 XShell 即可登录树莓派。用户名密码均为 freebsd 。root 需要登录后输入 su，密码为 root 。可通过更改
+　　使用 XShell 即可登录树莓派。用户名密码均为 `freebsd` 。root 需要登录后输入 `su`，密码为 `root` 。
+
+    可通过更改
 
 　　`/etc/ssh/sshd_config`
 
@@ -29,7 +31,7 @@ PermitRootLogin yes #允许 root 登录
 PasswordAuthentication yes # 设置是否使用口令验证。
 ```
 
-　　（也可以把对应行前面的注释 # 去掉，注意 PermitRootLogin 一行默认是 no，去掉后要改成 yes 。即 PermitRootLogin yes ）。
+　　（也可以把对应行前面的注释 # 去掉，注意 `PermitRootLogin` 一行默认是 no，去掉后要改成 yes 。即 `PermitRootLogin yes` ）。
 
 　　然后重启服务：
 

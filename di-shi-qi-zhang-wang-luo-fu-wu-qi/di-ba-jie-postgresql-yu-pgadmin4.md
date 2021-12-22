@@ -108,7 +108,7 @@ postgres=#
 postgres=# GRANT ALL PRIVILEGES ON DATABASE new_db TO ykla;
 GRANT
 #退出数据库
-postgres=# \q
+postgres=# q
 $exit
 root@ykla:~ #
 ```
@@ -160,7 +160,7 @@ virtualenv 用来建立一个虚拟的 python 环境，一个专属于项目的 
 #virtualenv-3.8 pgadmin4
 ```
 
-如果创建完成则有如下显示，在 root 用户的根目录下生成了一个名为 pgadmin4 的虚拟环境。
+如果创建完成则有如下显示，在 root 用户的根目录下生成了一个名为 `pgadmin4` 的虚拟环境。
 
 ```
 Using base prefix '/usr/local'

@@ -106,7 +106,7 @@ Cleaning up...
 ```
 root@ykla:~ # mysql -u root -p
 Enter password: 
-Welcome to the MySQL monitor.  Commands end with ; or \g.
+Welcome to the MySQL monitor.  Commands end with ; or g.
 Your MySQL connection id is 12
 Server version: 5.6.51 Source distribution
 
@@ -116,7 +116,7 @@ Oracle is a registered trademark of Oracle Corporation and/or its
 affiliates. Other names may be trademarks of their respective
 owners.
 
-Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+Type 'help;' or 'h' for help. Type 'c' to clear the current input statement.
 
 mysql> show databases;
 +--------------------+
@@ -137,6 +137,7 @@ mysql>
 注意：如果是从旧版本升级，请先执行`mysql_upgrade`
 
 ### 安装
+
 以下二选一
 ```
 # pkg install mysql57-server
@@ -169,7 +170,7 @@ root@ykla:~ #
 ```
 root@ykla:~ # mysql -u root -p
 Enter password: 
-Welcome to the MySQL monitor.  Commands end with ; or \g.
+Welcome to the MySQL monitor.  Commands end with ; or g.
 Your MySQL connection id is 2
 Server version: 5.7.36-log
 
@@ -179,7 +180,7 @@ Oracle is a registered trademark of Oracle Corporation and/or its
 affiliates. Other names may be trademarks of their respective
 owners.
 
-Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+Type 'help;' or 'h' for help. Type 'c' to clear the current input statement.
 
 root@localhost [(none)]> show databases;
 ERROR 1820 (HY000): You must reset your password using ALTER USER statement before executing this statement.
@@ -202,7 +203,7 @@ Query OK, 0 rows affected (0.00 sec)
 ```
 root@ykla:~ # mysql -u root -p
 Enter password: 
-Welcome to the MySQL monitor.  Commands end with ; or \g.
+Welcome to the MySQL monitor.  Commands end with ; or g.
 Your MySQL connection id is 3
 Server version: 5.7.36-log Source distribution
 
@@ -212,7 +213,7 @@ Oracle is a registered trademark of Oracle Corporation and/or its
 affiliates. Other names may be trademarks of their respective
 owners.
 
-Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+Type 'help;' or 'h' for help. Type 'c' to clear the current input statement.
 
 root@localhost [(none)]> show databases;
 +--------------------+

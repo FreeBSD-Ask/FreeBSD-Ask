@@ -1,6 +1,6 @@
 # 第五节 为什么要使用 FreeBSD
 
-## 选择 FreeBSD 的一般原因 <a href="#xuan-ze-freebsd-de-yi-ban-yuan-yin" id="xuan-ze-freebsd-de-yi-ban-yuan-yin"></a>
+## 选择 FreeBSD 的一般原因
 
 　　从道家来讲，你爱选不选，太长不看，不用？左转 Linux , Windows 吧，不谢。
 

@@ -64,7 +64,7 @@ $ nvidia-smi
 
 然后重新启动就可以发现正常使用 nvidia 驱动了
 
-**注意**： 默认情况下，通过 pkg 安装的 nvidia-driver 是包含 linux compatibility support, 如果要使用 Linux 软件，需要执行以下命令，（实际上使用linux兼容层，以下命令是必须的。） 如果不需要使用 Linux 兼容层，则不需要执行。
+**注意**： 默认情况下，通过 pkg 安装的 nvidia-driver 是包含 `linux` 兼容层支持的, 如果要使用 Linux 软件，需要执行以下命令，（实际上使用linux兼容层，以下命令是必须的。） 如果不需要使用 Linux 兼容层，则不需要执行。
 
 ```
 # sysrc linux_enable="YES"
@@ -76,4 +76,4 @@ $ nvidia-smi
 $ kldstat
 ```
 
-会发现系统自动加载 linux.ko 模块。如果觉得太臃肿，不需要 Linux 兼容层 可以自己编译 nvidia-driver ports,去掉 linux compatibility support
+会发现系统自动加载 `linux.ko` 模块。如果觉得太臃肿，不需要 Linux 兼容层 可以自己编译 `nvidia-driver ports`,去掉 `linux compatibility support`

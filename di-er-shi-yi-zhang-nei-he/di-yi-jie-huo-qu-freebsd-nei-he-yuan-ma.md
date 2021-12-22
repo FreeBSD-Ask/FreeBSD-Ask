@@ -1,6 +1,6 @@
 # 第一节 获取 FreeBSD 内核源码
 
-FreeBSD 项目在2021 年从 SVN 全面迁移到了 Git，即&#x20;
+FreeBSD 项目在 2021 年从 SVN 全面迁移到了 Git，即
 
 {% embed url="https://git.freebsd.org" %}
 
@@ -18,7 +18,7 @@ FreeBSD 项目在2021 年从 SVN 全面迁移到了 Git，即&#x20;
 
 该方法比较简单快捷。
 
-以 13.0 为例：
+以 FreeBSD 13.0 为例：
 
 ```
 # fetch https://download.freebsd.org/ftp/releases/amd64/13.0-RELEASE/src.txz

@@ -1,6 +1,6 @@
 # 第一节 我与 FreeBSD 的故事
 
-## 我与FreeBSD 的故事之一 <a href="#wo-yu-freebsd-de-gu-shi-zhi-yi" id="wo-yu-freebsd-de-gu-shi-zhi-yi"></a>
+## 我与FreeBSD 的故事之一
 
 记得还是那些无聊的日子，群里有网友称 Linux 只能玩 WPS，我表示质疑，并通过百度这个搜索引擎搜索到 了Ubuntu Kylin，即由湖南的国防科技大学 与 Ubuntu 社区合作并由其主导的 UbuntKylin 麒麟项目。
 

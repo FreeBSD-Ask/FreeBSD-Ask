@@ -2,7 +2,7 @@
 
 ## ZIP
 
-安装zip压缩文件 `# pkg install zip unzip`
+安装 zip 压缩文件 `# pkg install zip unzip`
 
 ```
 # zip test.zip test #打包 zip 格式文件 
@@ -36,7 +36,9 @@
 
 FreeBSD 操作系统下，7z 和 7za 命令均通过
 
-`# pkg install -y p7zip`获取。示例如下：
+`# pkg install -y p7zip`获取。
+
+示例如下：
 
 ```
 # 7z a test.7z test #7z 打包文件 

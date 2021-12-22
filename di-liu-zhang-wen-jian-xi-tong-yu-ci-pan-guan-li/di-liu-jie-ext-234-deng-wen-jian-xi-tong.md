@@ -1,11 +1,12 @@
 # 第六节 Ext 2/3/4 等文件系统
 
-请注意：这里应该安装 fusefs-ext2（同时支持EXT2/3/4） 而非 fusefs-ext4fuse ，因为后者是只读且被废弃的。
+请注意：这里应该安装 `fusefs-ext2`（同时支持EXT2/3/4） 而非 `fusefs-ext4fuse` ，因为后者是只读且被废弃的。
 
 *   安装 fusefs-ext2
 
+```
     pkg install fusefs-ext2
-
+```
 
 *   加载
 
@@ -23,7 +24,7 @@
     # mount -t ext2fs /dev/da0sX /home/XiaoMing/media/first/
     ```
 
-    _提示：上式不一定是 da0sX（X 为对应的阿拉伯数字），可通过 `# gpart list` 命令查看硬盘名。_
+    _提示：上式不一定是 `da0sX`（X 为对应的阿拉伯数字），可通过 `# gpart list` 命令查看硬盘名。_
     
 *   卸载硬盘
 

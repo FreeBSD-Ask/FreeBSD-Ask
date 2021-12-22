@@ -6,9 +6,9 @@ OpenBSD Packet Filter(PF) 是一款自 OpenBSD 移植来的防火墙，提供了
 ```
 # cp /usr/share/examples/pf/pf.conf /etc #复制示例文件作为默认配置规则集文件，否则 pf 无法启动 
 # service pf enable #设置 pf 开机启动，也可以通过 bsdconfig 设置 pf_enable 
-# service pf start #启动 pf 
+# service pf start  #启动 pf 
 ```
-pf 的管理命令为 pfctl，常用操作示例如下： 
+pf 的管理命令为 `pfctl`，常用操作示例如下： 
 
 ```
 # pfctl -e #启动 pf，相当于 service pf start 
@@ -45,7 +45,7 @@ pass out quick inet proto icmp from 192.168.1.184 to any icmp-type 11 code 0 #�
 pass out quick proto udp from 192.168.1.184 to any port 33434 >< 34500 #traceroute 默认协议 UDP，端口号 从 33434 开始，每转发一次端口号加 1 
 ```
 
-下面根据我的操作系统整理规则集文件/etc/pf.conf 如下：
+下面根据我的操作系统整理规则集文件`/etc/pf.conf` 如下：
 
 ```
 #流量整形 scrub in all #转发规则 
