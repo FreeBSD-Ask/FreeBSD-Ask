@@ -44,7 +44,12 @@
 
 ——以上发生在 RockyLinux 中文群组 QQ 群里。
 
-有人会说孤证不立，那以上 5 个例子够不够呢？并且可以看出，和社区成立时间以及人数都是没有关系的，RockyLinux 群组成立不到一年，人数不过百。
+ipxe isn't a priority at the moment. We need many more mirrors around the world in more countries for that to be useful.Considering most people don't network boot from their personal notebooks/desktops, I call bullshit.Network booting is typical in data centers and large enterprises.omg bro you're trying so hard to put your malware inside artix.You can't audit it. You and your images are not part of our infrastructure. Which means we have no control over it and therefore cannot stand behind it.As long as you don't share it here, you're are fine. It is unofficial and potentially very dangerous.i see,i think they force me to talk about bedrock.Again, your response has nothing to do with the conversation... your translator is pure shit.What is the point having those in the repo?, one cannot use them.
+
+——以上发生在 telegram @artixlinux 群组。
+
+
+有人会说孤证不立，那以上 6 个例子够不够呢？并且可以看出，和社区成立时间以及人数都是没有关系的，RockyLinux 群组成立不到一年，人数不过百。
 
 那么我要问一问，到底谁才是真正的畜生呢？显而易见，这些巨苣都不是什么好东西。有问题他不在，一开始吹牛逼他就出来了。大家你好我好，互吹大佬，互捧巨苣。
 
