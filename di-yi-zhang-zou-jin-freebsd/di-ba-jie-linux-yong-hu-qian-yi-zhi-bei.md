@@ -70,7 +70,7 @@ FreeBSD 没有 free 命令也不支持安装这个包，FreeBSD 基本系统自�
 |lspci|lspci|pkg install pciutils|显示主板信息|粗略地可以用 `cat /var/run/dmesg`|
 |lsblk|lsblk|pkg install lsblk|显示磁盘使用情况|/|
 |free|freecolor|pkg install freecolor|显示内存使用情况|FreeBSD 没有提供 free 命令，因为其依赖 Linux，由包 procps 提供，如实在需要 free 可以用 `https://github.com/j-keck/free` 其他可选命令是 `vmstat -m`|
-|lscpu|lscpu|显示 CPU 信息|pkg install lscpu|/|
+|lscpu|lscpu|pkg install lscpu|显示处理器信息|/|
 ||||||
 ||||||
 ||||||
