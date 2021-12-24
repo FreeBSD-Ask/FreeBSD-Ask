@@ -97,11 +97,11 @@ enabled: yes
 FreeBSD: { enabled: no }
 ```
 
-## FreeBSD.cn （暂不可用）
+## FreeBSD.cn
 
-~~`# ee /usr/local/etc/pkg/repos/freebsdcn.conf`~~
+`# ee /usr/local/etc/pkg/repos/freebsdcn.conf`
 
-~~写入以下内容:~~
+写入以下内容:
 
 ```
 freebsdcn: {  
@@ -132,7 +132,7 @@ ports 下载路径是`/usr/ports/distfiles`
 
 写入以下内容:
 
-`MASTER_SITE_OVERRIDE?=http://mirrors.163.com/freebsd-ports/ports-distfiles/`
+`MASTER_SITE_OVERRIDE?=http://mirrors.163.com/freebsd-ports/distfiles/`
 
 ### 中国科学技术大学开源软件镜像站
 
@@ -144,11 +144,11 @@ ports 下载路径是`/usr/ports/distfiles`
 
 ### FreeBSD.cn （暂不可用）
 
-~~创建或修改文件`# ee /etc/make.conf`:~~
+创建或修改文件`# ee /etc/make.conf`:
 
-~~写入以下内容:~~
+写入以下内容:
 
-~~`MASTER_SITE_OVERRIDE?=http://freebsd.cn/ports-distfiles/`~~
+`MASTER_SITE_OVERRIDE?=http://ports.freebsd.cn/ports-distfiles/
 
 ## portsnap 源:打包的 ports文件
 
@@ -178,9 +178,9 @@ ntpdate ntp.api.bz
 
 ### FreeBSD.cn （暂不可用）
 
-~~编辑portsnap配置文件 `# ee /etc/portsnap.conf` :~~
+编辑portsnap配置文件 `# ee /etc/portsnap.conf` :
 
-~~将`SERVERNAME=portsnap.FreeBSD.org` 修改为`SERVERNAME=portsnap.FreeBSD.cn`~~
+将`SERVERNAME=portsnap.FreeBSD.org` 修改为`SERVERNAME=portsnap.FreeBSD.cn`
 
 ## freebsd-update 源:提供基本系统更新
 
@@ -200,7 +200,7 @@ ntpdate ntp.api.bz
 
 ### FreeBSD.cn （暂不可用）
 
-~~编辑`# ee /etc/freebsd-update.conf` 文件:~~
+编辑`# ee /etc/freebsd-update.conf` 文件:
 
-~~将`ServerName update.FreeBSD.org` 修改为`ServerName update.FreeBSD.cn`~~
+将`ServerName update.FreeBSD.org` 修改为`ServerName update.FreeBSD.cn`
 
