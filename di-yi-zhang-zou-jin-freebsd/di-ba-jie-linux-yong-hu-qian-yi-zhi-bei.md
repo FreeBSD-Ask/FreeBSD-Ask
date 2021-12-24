@@ -64,16 +64,16 @@ FreeBSD 没有 free 命令也不支持安装这个包，FreeBSD 基本系统自�
 
 因为 Linux 广泛使用的也是 GNU 工具，因此只要理论上不是依赖于特定的 Linux 函数库，该工具都可以在 FreeBSD 上运行。
 
-|Linux 命令|FreeBSD 命令|需要安装的包|额外说明/苦难哲学|
-|:---:|:---:|:---:|:---:|
-|lsusb|lsusb|pkg install usbutils|粗略地可以用 `cat /var/run/dmesg`|
-|lspci|lspci|pkg install pciutils|粗略地可以用 `cat /var/run/dmesg`|
-|lsblk|lsblk|pkg install lsblk|/|
-|free|freecolor|pkg install freecolor|FreeBSD 没有提供 free 命令，因为其依赖 Linux，由包 procps 提供，如实在需要 free 可以用 `https://github.com/j-keck/free` 其他可选命令是 `vmstat -m`|
-|lscpu|lscpu|pkg install lscpu|/|
-|||||
-|||||
-|||||
-|||||
-|||||
+|Linux 命令|FreeBSD 命令|需要安装的包|作用说明|额外说明/苦难哲学|
+|:---:|:---:|:---:|:---:|:---:|
+|lsusb|lsusb|pkg install usbutils|显示 USB 信息|粗略地可以用 `cat /var/run/dmesg`|
+|lspci|lspci|pkg install pciutils|显示主板信息|粗略地可以用 `cat /var/run/dmesg`|
+|lsblk|lsblk|pkg install lsblk|显示磁盘使用情况|/|
+|free|freecolor|pkg install freecolor|显示内存使用情况|FreeBSD 没有提供 free 命令，因为其依赖 Linux，由包 procps 提供，如实在需要 free 可以用 `https://github.com/j-keck/free` 其他可选命令是 `vmstat -m`|
+|lscpu|lscpu|显示 CPU 信息|pkg install lscpu|/|
+||||||
+||||||
+||||||
+||||||
+||||||
 
