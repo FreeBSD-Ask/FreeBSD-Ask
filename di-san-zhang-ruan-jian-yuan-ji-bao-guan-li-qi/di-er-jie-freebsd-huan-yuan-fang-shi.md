@@ -148,7 +148,7 @@ ports 下载路径是`/usr/ports/distfiles`
 
 写入以下内容:
 
-`MASTER_SITE_OVERRIDE?=http://ports.freebsd.cn/ports-distfiles/
+`MASTER_SITE_OVERRIDE?=http://ports.freebsd.cn/ports-distfiles/`
 
 ## portsnap 源:打包的 ports文件
 
