@@ -1,6 +1,6 @@
 # 第二节 FreeBSD 换源方式
 
-FreeBSD 有四类源，pkg、ports、portsnap、update。freebsd.cn 暂不可用。
+FreeBSD 有四类源，pkg、ports、portsnap、update。
 
 **对于失去安全支持的版本，如 FreeBSD 9.0 是没有 pkg 源可用的，只能使用当时的 ports 编译安装软件。**
 
@@ -142,7 +142,7 @@ ports 下载路径是`/usr/ports/distfiles`
 
 `MASTER_SITE_OVERRIDE?=http://mirrors.ustc.edu.cn/freebsd-ports/distfiles/`
 
-### FreeBSD.cn （暂不可用）
+### FreeBSD.cn
 
 创建或修改文件`# ee /etc/make.conf`:
 
