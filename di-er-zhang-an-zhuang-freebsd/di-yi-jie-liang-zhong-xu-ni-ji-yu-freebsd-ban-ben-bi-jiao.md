@@ -10,7 +10,7 @@ Current 相对稳定后会推送到 stable，但是不保证 stable 没有大的
 
 其中 rc 和 beta 都是测试版本；
 
-日常使用应该选择 release 版本；
+日常使用应该选择 release 版本，当有多个 release 版本时，应该选择最新的一个；
 
 如果硬件比较新或者需要测试 ax200 网卡，应该选择 current 版本，是滚动开发版。
 
