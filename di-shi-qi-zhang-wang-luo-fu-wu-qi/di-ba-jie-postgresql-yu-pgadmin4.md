@@ -1,6 +1,6 @@
 # 第八节 PostgreSQL 与 pgAdmin4
 
-## 第八节 PostgreSQL
+##  PostgreSQL
 
 PostgreSQL 是一款自由的对象-关系型数据库，最早发布于 1989 年 6 月。在FreeBSD 上，提供了 9.6、10、11、12、13、14共计6个大版本可选。
 
