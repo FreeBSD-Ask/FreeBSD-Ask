@@ -14,6 +14,8 @@ Current 相对稳定后会推送到 stable，但是不保证 stable 没有大的
 
 如果硬件比较新或者需要测试 ax200 网卡，应该选择 current 版本，是滚动开发版。
 
+注意：只有 rc、beta 和 release 才能使用 freebsd-update 命令更新系统（且是一级架构），其余系统均需要通过源代码编译的方式更新系统。
+
 ## 两种虚拟机比较
 
 个人计算机上常用的虚拟机有两种，一是 Virtual Box，另一个是 Vmware Workstation Pro。
