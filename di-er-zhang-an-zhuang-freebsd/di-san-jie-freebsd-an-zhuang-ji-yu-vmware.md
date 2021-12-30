@@ -31,12 +31,13 @@ VMware Workstation 16 Player 是个人免费使用的，你也可以选择此版
 ```
 具体配置
 
+将下面几行加入 `/etc/rc.conf`
 ```
-# echo "vmware_guest_vmblock_enable=YES" >> /etc/rc.conf
-# echo "vmware_guest_vmhgfs_enable=YES" >> /etc/rc.conf
-# echo "vmware_guest_vmmemctl_enable=YES" >> /etc/rc.conf
-# echo "vmware_guest_vmxnet_enable=YES" >> /etc/rc.conf
-# echo "vmware_guestd_enable=YES" >> /etc/rc.conf
+vmware_guest_vmblock_enable="YES"
+vmware_guest_vmhgfs_enable="YES"
+vmware_guest_vmmemctl_enable="YES"
+vmware_guest_vmxnet_enable="YES" 
+vmware_guestd_enable="YES"
 ```
 
 编辑 `/boot/loader.conf`
