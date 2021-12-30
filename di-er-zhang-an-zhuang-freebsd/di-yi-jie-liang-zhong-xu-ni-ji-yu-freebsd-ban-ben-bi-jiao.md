@@ -1,4 +1,20 @@
-# 第一节 两种虚拟机比较
+# 两种虚拟机与 FreeBSD 版本比较
+
+## FreeBSD 版本比较
+
+已知 FreeBSD 有以下版本：rc、beta、release、current、stable。
+
+FreeBSD 版本选择 release 是绝对的 stable，而 stable 和 current 都是开发分支，不太稳定。 
+
+Current 相对稳定后会推送到 stable，但是不保证 stable 没有大的 Bug，只是确保其 ABI 兼容。
+
+其中 rc 和 beta 都是测试版本；
+
+日常使用应该选择 release 版本；
+
+如果硬件比较新或者需要测试 ax200 网卡，应该选择 current 版本，是滚动开发版。
+
+## 两种虚拟机比较
 
 个人计算机上常用的虚拟机有两种，一是 Virtual Box，另一个是 Vmware Workstation Pro。
 
