@@ -18,6 +18,12 @@ VMware Workstation 16 Player 是个人免费使用的，你也可以选择此版
 
 {% embed url="https://www.vmware.com/products/workstation-player/workstation-player-evaluation.html" %}
 
+## 网络设置
+
+请使用 NAT 模式，如果不能与宿主机（物理机）互通，请打开 Vmware 编辑-虚拟网络管理器，移除第一项“桥接”。移除后重启虚拟机应该就可以了。
+
+如果没有网络请设置 DNS 为223.5.5.5。请看第四节。
+
 ## 虚拟机增强工具以及显卡驱动
 
 如果没有桌面：
