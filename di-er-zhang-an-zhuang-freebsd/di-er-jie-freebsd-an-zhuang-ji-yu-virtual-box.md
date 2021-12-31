@@ -22,6 +22,8 @@
 
 ![](../.gitbook/assets/QQ图片20211231155139.png)
 
+使用命令`# ifconfig`看一下，如果第二块网卡`em1`没有获取到 ip 地址,请手动 DHCP 获取一下: `# dhclient em1`即可。
+
 #### 安装增强工具
 
 `# pkg install virtualbox-ose-additions`
