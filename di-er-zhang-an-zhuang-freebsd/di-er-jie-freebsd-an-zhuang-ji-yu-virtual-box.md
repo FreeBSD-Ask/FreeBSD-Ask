@@ -1,5 +1,7 @@
 # 第二节 FreeBSD 13.0 安装——基于 Virtual Box
 
+**注意：不推荐新手使用此虚拟机，因为需要踩的坑比较多。**
+
 ## VirtualBox 下载
 
 点击“download” 即可下载：
@@ -7,6 +9,20 @@
 {% embed url="https://www.virtualbox.org" %}
 
 ## VirtualBox 虚拟机 FreeBSD 配置
+
+#### 安装设置
+
+安装完成后请手动关机，卸载或删除安装光盘，否则还会进入安装界面。
+
+#### 网络设置
+
+网络设置比较复杂，为了达到使用宿主机（如windows10 ）控制虚拟机里的 FreeBSD 系统的目的，需要设置两块网卡——一块是NAT网络模式的网卡用来上网、另一块是仅主机模式的网卡用来互通宿主机。如图所示：
+
+![](../.gitbook/assets/QQ图片20211231155133.png)
+
+![](../.gitbook/assets/QQ图片20211231155139.png)
+
+#### 安装增强工具
 
 `# pkg install virtualbox-ose-additions`
 
