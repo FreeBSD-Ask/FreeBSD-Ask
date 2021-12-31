@@ -45,7 +45,9 @@ EndSection
 
 　　显卡控制器用 `VBoxSVGA`
 
-編輯 `# ee etc/rc.conf`，增加以下內容：
+请注意，`/usr/local/etc/X11/xorg.conf`在我本地测试的时候会导致 GUI 非常卡顿。删掉恢复正常，原因未知。
+
+编辑 `# ee etc/rc.conf`，增加以下內容：
 
 ```
 vboxguest_enable="YES"
