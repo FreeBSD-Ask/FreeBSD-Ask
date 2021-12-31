@@ -32,7 +32,7 @@
 
 xorg 可以自动识别驱动，不需要手动配置`/usr/local/etc/X11/xorg.conf`。
 
-　　显卡控制器用 `VBoxSVGA`即可。
+显卡控制器用 `VBoxSVGA`即可。
 
 编辑 `# ee etc/rc.conf`，增加以下內容：
 
@@ -44,7 +44,7 @@ vboxservice_enable="YES"
 启动服务，调整权限：
 
 ```
-# service vboxguest restart
+# service vboxguest restart #可能会提示找不到模块，但是不影响使用
 # service vboxservice restart
 # pw groupmod wheel -m <yourname> #sudo 权限
 # pw groupmod opt -m <yourname>   #开机重启 权限
