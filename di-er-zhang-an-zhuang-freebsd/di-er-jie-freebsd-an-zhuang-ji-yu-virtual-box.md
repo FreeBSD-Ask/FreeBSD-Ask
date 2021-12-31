@@ -30,22 +30,9 @@
 
 `# pkg install virtualbox-ose-additions`
 
-　　再将
+xorg 可以自动识别驱动，不需要手动配置`/usr/local/etc/X11/xorg.conf`。
 
-```
-Section "Device"
-Identifier "Card0"
-Driver "vboxvideo"
-VendorName "InnoTek Systemberatung GmbH"
-BoardName "VirtualBox Graphics Adapter"
-EndSection
-```
-
-　　写到 `/usr/local/etc/X11/xorg.conf`
-
-　　显卡控制器用 `VBoxSVGA`
-
-请注意，`/usr/local/etc/X11/xorg.conf`在我本地测试的时候会导致 GUI 非常卡顿。删掉恢复正常，原因未知。
+　　显卡控制器用 `VBoxSVGA`即可。
 
 编辑 `# ee etc/rc.conf`，增加以下內容：
 
