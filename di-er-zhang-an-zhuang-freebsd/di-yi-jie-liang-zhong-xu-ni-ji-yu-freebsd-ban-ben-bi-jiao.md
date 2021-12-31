@@ -4,9 +4,12 @@
 
 已知 FreeBSD 有以下版本：rc、beta、release、current、stable。
 
-FreeBSD 版本选择 release 是绝对的 stable，而 stable 和 current 都是开发分支，不太稳定。 
+release 是绝对的 stable，而 stable 和 current 都是开发分支，不太稳定。 
+
 
 Current 相对稳定后会推送到 stable，但是不保证 stable 没有大的 Bug，只是确保其 ABI 兼容。
+
+### FreeBSD 版本选择
 
 其中 rc 和 beta 都是测试版本；
 
