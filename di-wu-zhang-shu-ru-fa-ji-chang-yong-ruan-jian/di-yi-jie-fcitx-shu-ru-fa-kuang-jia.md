@@ -6,7 +6,7 @@
 
 `# pkg install zh-fcitx zh-fcitx-configtool fcitx-qt5 fcitx-m17n zh-fcitx-libpinyin`
 
-在`.cshrc` 和`/etc/csh.cshrc` 中进行如下配置，此配置可以解决部分窗口 fcitx 无效的问题。
+在`.cshrc` 和`/etc/csh.cshrc` 中添加如下配置，此配置可以解决部分窗口 fcitx 无效的问题。
 
 ```
 setenv QT4_IM_MODULE fcitx
@@ -17,7 +17,7 @@ setenv GTK3_IM_MODULE fcitx
 setenv XMODIFIERS @im=fcitx
 ```
 
-在`.cshrc`和`/etc/csh.cshrc` 中进行下面两行配置可以解决终端无法输入中文和无法显示中文的问题。
+在`.cshrc`和`/etc/csh.cshrc` 中添加下面两行配置可以解决终端无法输入中文和无法显示中文的问题。
 
 ```
 setenv LANG zh_CN.UTF-8
