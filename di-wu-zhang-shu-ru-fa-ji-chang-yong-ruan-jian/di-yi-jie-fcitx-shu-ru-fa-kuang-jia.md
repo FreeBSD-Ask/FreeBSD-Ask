@@ -1,5 +1,7 @@
 # 第一节 Fcitx 输入法框架
 
+fcitx 5 相比前一代，增加了对 Wayland 的支持，据说更加流畅。
+
 ## FreeBSD Fcitx 输入法框架设置（4.X）
 
 #### 注意：该教程仅在 KDE5 下测试通过。
@@ -58,6 +60,6 @@ setenv LANG zh_CN.UTF-8
 setenv MM_CHARSET zh_CN.UTF-8
 ```
 
-　　在 root 用户下 rime 不会自动被添加到输入法，需要手动添加完成初始化！对于普通用户如果未生效，请检查自己的 shell，应该是 csh，如果不是请将该用户加入 wheel 组。对于其他 shell 请自行更正为对应 shell 的环境变量。
+　　在 root 用户下 rime 不会自动被添加到输入法，需要手动添加完成初始化（程序里找到 fcitx 配置工具，添加 rime 输入法即可）！对于普通用户如果未生效，请检查自己的 shell，应该是 csh，如果不是请将该用户加入 wheel 组。对于其他 shell 请自行更正为对应 shell 的环境变量。
 
 　　SLIM 窗口下会提示 IBUS 找不到……疑似bug。
