@@ -39,9 +39,7 @@ setenv LC_ALL zh_CN.UTF-8
 
 `# pkg install fcitx5 fcitx5-qt fcitx5-gtk fcitx5-configtool fcitx5-rime`
 
-…
-
-　　可通过 ports 安装。环境变量取决于你的窗口管理器和桌面以及 shell 。经测试不支持 slim，可能是配置问题。sddm 可用。
+　　也可通过 ports 安装。环境变量取决于你的窗口管理器和桌面以及 shell 。经测试不支持 slim，可能是配置问题。sddm 可用。
 
 　　自动启动：
 
