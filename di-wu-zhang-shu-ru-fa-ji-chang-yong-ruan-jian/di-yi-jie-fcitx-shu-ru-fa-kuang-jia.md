@@ -4,6 +4,8 @@
 
 #### 注意：该教程仅在 KDE5 下测试通过。
 
+`# pkg install zh-fcitx zh-fcitx-configtool fcitx-qt5 fcitx-m17n zh-fcitx-libpinyin`
+
 在`.cshrc` 和`/etc/csh.cshrc` 中进行如下配置，此配置可以解决部分窗口 fcitx 无效的问题。
 
 ```
