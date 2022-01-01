@@ -37,15 +37,7 @@ setenv LC_ALL zh_CN.UTF-8
 
 #### 注意：该教程仅在 KDE5 下测试通过。
 
-textproc/fcitx5
-
-textproc/fcitx5-qt
-
-textproc/fcitx5-gtk
-
-textproc/fcitx5-configtool
-
-chinese/fcitx5-rime
+`# pkg install fcitx5 fcitx5-qt fcitx5-gtk fcitx5-configtool fcitx5-rime`
 
 …
 
