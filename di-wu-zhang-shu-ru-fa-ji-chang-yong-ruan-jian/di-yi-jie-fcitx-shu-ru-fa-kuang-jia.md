@@ -43,7 +43,7 @@ setenv LC_ALL zh_CN.UTF-8
 
 　　自动启动：
 
-`# cp /usr/local/share/applications/fcitx.desktop ~/.config/autostart/`
+`# cp /usr/local/share/applications/org.fcitx.Fcitx5.desktop ~/.config/autostart/`
 
 　　在 `.cshrc` 和 `/etc/csh.cshrc` 中进行如下配置，此配置可以解决部分窗口 fcitx 无效以及无法输入显示中文的问题。
 
