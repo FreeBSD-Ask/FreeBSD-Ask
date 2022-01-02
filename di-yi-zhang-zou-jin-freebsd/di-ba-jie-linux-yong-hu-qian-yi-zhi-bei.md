@@ -77,7 +77,7 @@ FreeBSD 没有 free 命令也不支持安装这个包(FreeBSD 早就不使用 pr
 |GCC|LLVM + Clang|/|编译器、编译链工具|/|
 |vim|vim|pkg install vim|文本编辑器|FreeBSD 默认的`vi`并不被软连接到`vim`，而是真正的`vi`|
 |wget|wget|pkg install wget|下载器|系统默认的下载工具是`fetch`|
-||||||
+|bash|bash|pkg install bash|shell|系统默认的`root shell`是`csh`,修改会导致配置输入法环境变量时遇到困难以及可能会无法进入恢复模式|
 ||||||
 ||||||
 ||||||
