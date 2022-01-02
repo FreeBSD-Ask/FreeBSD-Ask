@@ -50,9 +50,11 @@ FreeBSD 仍然使用传统的 INIT 引导，而非 systemd；
 
 FreeBSD root 用户 shell 默认是 csh，而不是 bash；
 
-FreeBSD 基本系统几乎不包含任何非 BSD 协议的软件，并致力于去 GNU 化，见&#x20;
+FreeBSD 基本系统几乎不包含任何非 BSD 协议的软件，并致力于去 GNU 化（这意味着基本系统不使用 Glibc、GCC 等软件），见
 
 {% embed url="https://wiki.freebsd.org/GPLinBase" %}
+
+
 
 FreeBSD 的用户配置文件和系统配置文件严格分离，即内核和基本系统与第三方应用程序是完全分离的；
 
