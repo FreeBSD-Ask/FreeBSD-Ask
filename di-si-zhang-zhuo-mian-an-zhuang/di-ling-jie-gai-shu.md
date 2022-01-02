@@ -2,7 +2,7 @@
 
 本章内容并非是让大家把所有的桌面都安装一遍，而是尽可能多地提供选择。
 
-安装桌面的基本步骤是：①安装显卡驱动 -> ②安装 Xorg/Wayland -> ③安装 KDE5/Gnome3/XFCE/MATE -> ④安装显示管理器 sddm/lightdm/slim
+安装桌面的基本步骤是：①安装显卡驱动 -> ②安装 Xorg/Wayland -> ③安装 KDE5/Gnome3/XFCE/MATE -> ④安装显示管理器 sddm/lightdm/slim -> ⑤安装输入法等软件
 
 其中，Gnome3 可省略第四步，因为其显示管理器 gdm 早就在第二步就进行了安装。
 
@@ -14,4 +14,6 @@ KDE5 + sddm
 
 Xfce/Mate + lightdm
 
-Slim 由于作者早在 2013 年就停止了开发，不推荐使用，会产生一些奇怪的 bug。
+Slim 由于作者早在 2013 年就停止了开发，不推荐使用，会产生一些奇怪的 bug （比如 fcitx5 用不了，加载不了 dbus）。
+
+输入法框架目前推荐使用 fcitx（对于 KDE 5 桌面）、ibus（对于其他基于 GTK 的桌面，如 gnome、xfce、mate……）。请勿使用 scim，作者早就跑路（大概已经距今 16 年了）。
