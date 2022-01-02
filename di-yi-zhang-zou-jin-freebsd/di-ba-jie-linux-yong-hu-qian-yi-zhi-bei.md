@@ -60,7 +60,7 @@ FreeBSD 的用户配置文件和系统配置文件严格分离，即内核和基
 
 FreeBSD 项目是作为一个完整的操作系统维护的，而非内核与 userland 单独维护；也就是说如果你要使用 FreeBSD，那么就只有一个 FreeBSD 可选；
 
-FreeBSD 没有 free 命令也不支持安装这个包，FreeBSD 基本系统自带的文本编辑器有 ee 和 vi（不是软链接到 vim 的 vi，是真实的 vi），没有预装 wget，而是 fetch。
+FreeBSD 没有 free 命令也不支持安装这个包(FreeBSD 早就不使用 procfs 了)，FreeBSD 基本系统自带的文本编辑器有 ee 和 vi（不是软链接到 vim 的 vi，是真实的 vi），没有预装 wget，而是 fetch。
 
 ## 命令替代/软件替代
 
@@ -73,9 +73,26 @@ FreeBSD 没有 free 命令也不支持安装这个包，FreeBSD 基本系统自�
 |lsblk|lsblk|pkg install lsblk|显示磁盘使用情况|/|
 |free|freecolor|pkg install freecolor|显示内存使用情况|FreeBSD 没有提供 free 命令，因为其依赖 Linux，由包 procps 提供，如实在需要 free 可以用 `https://github.com/j-keck/free` 其他可选命令是 `vmstat -m`|
 |lscpu|lscpu|pkg install lscpu|显示处理器信息|/|
-|glibc|bsdlibc|/|/|/|
-|GCC|LLVM + Clang|/|/|/|
-|vim|vim|pkg install vim|/|FreeBSD 默认的`vi`并不被软连接到`vim`，而是真正的`vi`|
+|glibc|bsdlibc|/|C 库|/|
+|GCC|LLVM + Clang|/|编译器、编译链工具|/|
+|vim|vim|pkg install vim|文本编辑器|FreeBSD 默认的`vi`并不被软连接到`vim`，而是真正的`vi`|
+|wget|wget|pkg install wget|下载器|系统默认的下载工具是`fetch`|
+||||||
+||||||
+||||||
+||||||
+||||||
+||||||
+||||||
+||||||
+||||||
+||||||
+||||||
+||||||
+||||||
+||||||
+||||||
+||||||
 ||||||
 ||||||
 
