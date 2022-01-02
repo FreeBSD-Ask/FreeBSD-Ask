@@ -66,7 +66,7 @@ FreeBSD 没有 free 命令也不支持安装这个包(FreeBSD 早就不使用 pr
 
 因为 Linux 广泛使用的也是 GNU 工具，因此只要理论上不是依赖于特定的 Linux 函数库，该工具都可以在 FreeBSD 上运行。
 
-|Linux 命令/GNU 软件|FreeBSD 命令/BSD 软件|需要安装的包|作用说明|额外说明/苦难哲学|
+|Linux 命令/GNU 软件|FreeBSD 命令/BSD 软件|需要安装的包（安装方式）|作用说明|额外说明/苦难哲学|
 |:---:|:---:|:---:|:---:|:---:|
 |lsusb|lsusb|pkg install usbutils|显示 USB 信息|粗略地可以用 `cat /var/run/dmesg`|
 |lspci|lspci|pkg install pciutils|显示主板信息|粗略地可以用 `cat /var/run/dmesg`|
