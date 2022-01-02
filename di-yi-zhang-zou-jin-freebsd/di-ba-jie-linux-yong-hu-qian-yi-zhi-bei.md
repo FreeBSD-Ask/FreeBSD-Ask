@@ -62,20 +62,20 @@ FreeBSD 项目是作为一个完整的操作系统维护的，而非内核与 us
 
 FreeBSD 没有 free 命令也不支持安装这个包，FreeBSD 基本系统自带的文本编辑器有 ee 和 vi（不是软链接到 vim 的 vi，是真实的 vi），没有预装 wget，而是 fetch。
 
-## 命令替代
+## 命令替代/软件替代
 
 因为 Linux 广泛使用的也是 GNU 工具，因此只要理论上不是依赖于特定的 Linux 函数库，该工具都可以在 FreeBSD 上运行。
 
-|Linux 命令|FreeBSD 命令|需要安装的包|作用说明|额外说明/苦难哲学|
+|Linux 命令/GNU 软件|FreeBSD 命令/BSD 软件|需要安装的包|作用说明|额外说明/苦难哲学|
 |:---:|:---:|:---:|:---:|:---:|
 |lsusb|lsusb|pkg install usbutils|显示 USB 信息|粗略地可以用 `cat /var/run/dmesg`|
 |lspci|lspci|pkg install pciutils|显示主板信息|粗略地可以用 `cat /var/run/dmesg`|
 |lsblk|lsblk|pkg install lsblk|显示磁盘使用情况|/|
 |free|freecolor|pkg install freecolor|显示内存使用情况|FreeBSD 没有提供 free 命令，因为其依赖 Linux，由包 procps 提供，如实在需要 free 可以用 `https://github.com/j-keck/free` 其他可选命令是 `vmstat -m`|
 |lscpu|lscpu|pkg install lscpu|显示处理器信息|/|
-||||||
-||||||
-||||||
+|glibc|bsdlibc|/|/|/|
+|GCC|LLVM + Clang|/|/|/|
+|vim|vim|pkg install vim|/|FreeBSD 默认的`vi`并不被软连接到`vim`，而是真正的`vi`|
 ||||||
 ||||||
 
