@@ -16,5 +16,6 @@
 # kldload linux64
 # pkg install emulators/linux-c7
 # service linux start
+# dbus-uuidgen > /compat/linux/etc/machine-id
 # reboot
 ```
