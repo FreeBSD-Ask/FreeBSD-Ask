@@ -74,7 +74,7 @@ FreeBSD 没有 free 命令也不支持安装这个包(FreeBSD 早就不使用 pr
 |free|freecolor|pkg install freecolor|显示内存使用情况|FreeBSD 没有提供`free`命令，因为其依赖 Linux，由包`procps`提供，但是呢，FreeBSD 早就不使用`procfs`了。如实在需要`free`可以用 `https://github.com/j-keck/free` 其他可选命令是 `vmstat -m`|
 |lscpu|lscpu|pkg install lscpu|显示处理器信息|/|
 |glibc|bsdlibc|/|C 库|/|
-|GCC|LLVM + Clang|/|编译器、编译链工具|/|
+|GCC|LLVM + Clang|/|编译器、编译链工具|非要用也可以`pkg install gcc`|
 |vim|vim|pkg install vim|文本编辑器|FreeBSD 默认的`vi`并不被软连接到`vim`，而是真正的`vi`|
 |wget|wget|pkg install wget|下载器|系统默认的下载工具是`fetch`|
 |bash|bash|pkg install bash|shell|系统默认的`root shell`是`csh`,修改会导致配置输入法环境变量时遇到困难以及可能会无法进入恢复模式|
