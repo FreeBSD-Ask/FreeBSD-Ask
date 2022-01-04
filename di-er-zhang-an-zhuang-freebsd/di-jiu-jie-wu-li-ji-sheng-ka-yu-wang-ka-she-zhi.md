@@ -2,6 +2,10 @@
 ## FreeBSD 声卡
 ### 声音设置
 
+先加载声卡驱动：
+
+`echo 'snd_hda="YES"' >> /etc/rc.conf`
+
 用以下命令查看当前声卡设备
 
 ```shell
@@ -27,16 +31,16 @@ $ sysctl hw.snd.default_unit=5
 ```
 这里推荐几个 oss mixer
 
-kde5 audio/dsbmixer
-
-gtk  audio/gtk-mixer
-
-非图形化 audio/mixertui
+|GUI环境|名称|
+|:---:|:---:|
+|kde5|audio/dsbmixer|
+|gtk|audio/gtk-mixer|
+|非图形化|audio/mixertui|
 
 ### 提示
-但是 oss 有些缺点，使用 obs-studio 无法录制 oss 输出。只能录 oss 输入。看官方论坛里，可以 virtual_oss 模拟一个设备实现，这个没具体研究过  
+但是 oss 有些缺点，使用 ·obs-studio· 无法录制 oss 输出。只能录 oss 输入。看官方论坛里，可以 ·virtual_oss· 模拟一个设备实现，这个没具体研究过  
 
-但是 obs-studio 可以录 pulseaudio 输出的音频。
+但是 ·obs-studio· 可以录 pulseaudio 输出的音频。
 所以有些软件可以使用 pulseaudio 作为输出。使用 pulseaudio 的软件的音频输出,不受上面的命令控制音频输出设备。pulseaudio 会根据自己的设置把音频送到对应设备  
 
 所以需要使用 pulseaudio 混音器控制。
