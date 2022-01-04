@@ -6,6 +6,8 @@
 
 `sysrc snd_hda="YES"`
 
+然后重启。
+
 用以下命令查看当前声卡设备
 
 ```shell
