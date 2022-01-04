@@ -19,6 +19,9 @@ FreeBSD 使用 BSD INIT 管理系统服务。
 ```
 XXX_enable="YES"
 ```
+也可以用命令添加：
+
+`sysrc XXX_enable="YES"`
 
 服务所对应的脚本路径是：`#/usr/local/etc/rc.d/`
 
