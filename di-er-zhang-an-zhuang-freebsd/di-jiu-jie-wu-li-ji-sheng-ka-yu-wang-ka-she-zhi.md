@@ -4,7 +4,7 @@
 
 先加载声卡驱动：
 
-`echo 'snd_hda="YES"' >> /etc/rc.conf`
+`sysrc snd_hda="YES"`
 
 用以下命令查看当前声卡设备
 
