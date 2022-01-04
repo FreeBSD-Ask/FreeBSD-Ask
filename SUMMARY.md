@@ -39,6 +39,7 @@
 * [第八节 物理机下触摸板的设置](di-er-zhang-an-zhuang-freebsd/di-ba-jie-wu-li-ji-xia-chu-mo-ban-de-she-zhi.md)
 * [第九节 物理机声卡与网卡设置](di-er-zhang-an-zhuang-freebsd/di-jiu-jie-wu-li-ji-sheng-ka-yu-wang-ka-she-zhi.md)
 * [第十节 腾讯云轻量云及其他服务器 dd 安装 FreeBSD](di-er-zhang-an-zhuang-freebsd/di-shi-jie-teng-xun-yun-qing-liang-yun-ji-qi-ta-fu-wu-qi-dd-an-zhuang-freebsd.md)
+* [第十一节 打印机的安装](di-er-zhang-an-zhuang-freebsd/di-shi-yi-jie-da-yin-ji-de-an-zhuang.md)
 
 ## 第三章 软件源及包管理器
 
