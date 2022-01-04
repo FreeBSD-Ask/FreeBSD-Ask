@@ -2,6 +2,8 @@
 
 fcitx 5 相比前一代，增加了对 Wayland 的支持，据说更加流畅。
 
+注意，在 FreeBSD 14.0 Current 中会出现许多不可预料的奇怪的 bug，如果条件允许应该在 FreeBSD release 中参考使用本文。
+
 ## FreeBSD Fcitx 输入法框架设置（4.X）
 
 #### 注意：该教程仅在 KDE 5 下测试通过。
