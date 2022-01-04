@@ -240,12 +240,12 @@
 
 ## 第二十四章 FreeBSD 特色
 
-* [第一节 System INIT 管理服务](di-er-shi-si-zhang-freebsd-te-se/di-yi-jie-system-init-guan-li-fu-wu.md)
+* [第一节 BSD INIT 管理服务](di-er-shi-si-zhang-freebsd-te-se/di-yi-jie-bsd-init-guan-li-fu-wu.md)
 * [第二节 FreeBSD 目录结构](di-er-shi-si-zhang-freebsd-te-se/di-er-jie-freebsd-mu-lu-jie-gou.md)
 * [第三节 bsdinstall 与 bsdconfig](di-er-shi-si-zhang-freebsd-te-se/di-san-jie-bsdinstall-yu-bsdconfig.md)
-* [第三节 BSD 风格的 make/grep/sed/awk](di-er-shi-si-zhang-freebsd-te-se/di-san-jie-bsd-feng-ge-de-makegrepsedawk.md)
 * [第四节 禁用 Sendmail](di-er-shi-si-zhang-freebsd-te-se/di-si-jie-jin-yong-sendmail.md)
 * [第五节 利用脚本自动生成 BSDlibc 库文本](di-er-shi-si-zhang-freebsd-te-se/di-wu-jie-li-yong-jiao-ben-zi-dong-sheng-cheng-bsdlibc-ku-wen-ben.md)
+* [第六节 BSD 风格的 make/grep/sed/awk](di-er-shi-si-zhang-freebsd-te-se/di-liu-jie-bsd-feng-ge-de-makegrepsedawk.md)
 
 ## 第二十五章 系统设计与分析
 
