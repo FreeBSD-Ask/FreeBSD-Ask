@@ -30,7 +30,7 @@ FreeBSD 大部分软件的音频输出驱动为 oss。有些默认是 pulseaudio
 ```shell
 $ sysctl hw.snd.default_unit=5
 ```
-这里推荐几个 oss mixer
+这里推荐几个 oss mixer：
 
 |GUI环境|名称|
 |:---:|:---:|
