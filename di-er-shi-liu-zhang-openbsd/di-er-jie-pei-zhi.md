@@ -1,6 +1,6 @@
 # 第二节 配置
 
-## 1. 初次登录
+##  初次登录
 
 ### 获取驱动
 
@@ -14,7 +14,7 @@
 
 打开 `/etc/installurl` ，将默认源注释掉，改为 `https://mirrors.bfsu.edu.cn/OpenBSD` 。此处我们选择了北外源，用户也可选择 [清华镜像源](https://mirrors.tuna.tsinghua.edu.cn/OpenBSD)、 [阿里镜像源](https://mirrors.aliyun.com/openbsd)、 及[南京大学源](https://mirror.sjtu.edu.cn/OpenBSD) 等。
 
-## 2. 系统更新
+## 系统更新
 
 ### 普通账号获取权限
 
@@ -32,7 +32,7 @@
  
  示例：`# chsh -s /usr/local/bin/bash $USER`
 
-## 3. 软件管理
+## 软件管理
 
 - 查找软件： `# pkg_info -Q foo`
 
@@ -41,7 +41,7 @@
 - 升级软件： `# pkg_add -iu foo`
 
 
-## 4. 挂载可移动磁盘
+## 挂载可移动磁盘
 
 ### 新建挂载点
 
@@ -85,7 +85,7 @@ OpenBSD 可挂载的外接硬盘格式有 NTFS、ext2/ext3 以及 CD 磁盘等�
 
 `# umount /$USER/media/first`
 
-## 5. 无线测试
+## 无线测试
 
 OpenBSD 里的无线网络，配置文件通常是 `hostname.if` ，其中 `if` 为无线驱动名称+序号。如一台笔记本无线型号为 rtl8188cu ，OpenBSD 下驱动为 rtwn ，序号从 0 开始。为了让系统自动加载无线，可打开
  `/etc/hostname.rtwn0` 文件 ，而后添加：
@@ -96,7 +96,7 @@ nwid '无线名称' wpakey '无线密码'
 ```
 保存后即可。
 
-## 6. 补遗
+## 补遗
 
 ### 加载触摸板
 
