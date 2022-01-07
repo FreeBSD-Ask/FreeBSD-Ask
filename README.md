@@ -81,7 +81,7 @@ PDF 请点击 “[Release](https://github.com/FreeBSD-Ask/FreeBSD-Ask/releases)�
 
 名单如下：
 
-#### 2021
+#### 2018-2021
 
 |QQ 号|黑名单原因|
 |:---:|:---:|
