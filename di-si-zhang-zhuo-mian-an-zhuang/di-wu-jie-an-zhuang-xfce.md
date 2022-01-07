@@ -15,7 +15,7 @@
 
 ## 启用 xfce
 
-`# echo ". /usr/local/etc/xdg/xfce4/xinitrc"> ~/.xinitrc`
+`# echo ". /usr/local/etc/xdg/xfce4/xinitrc" > ~/.xinitrc`
 
 或者
 
