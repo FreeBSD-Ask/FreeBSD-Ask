@@ -93,7 +93,7 @@ setenv MM_CHARSET zh_CN.UTF-8
   
   ## 故障排除
   
-  如果无法输入，请先运行`fcitx`故障诊断
+  如果无法输入，请先运行`fcitx`故障诊断，但是该输出仅对 bash 做了输出。
   
   ### fcitx 4.x
   
@@ -101,4 +101,8 @@ setenv MM_CHARSET zh_CN.UTF-8
   
   ### fcitx 5.x
   
+  如果提示`bash`字样无法输出，需要先安装bash：`# pkg install bash`
+  
   `fcitx5-diagnose`
+  
+  对于 fcitx5.x 来说，找不到`fcitx qt 4`的支持是正常的。
