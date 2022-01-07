@@ -93,7 +93,7 @@ setenv MM_CHARSET zh_CN.UTF-8
   
   ## 故障排除
   
-  如果无法输入，请先运行`fcitx`故障诊断，但是该输出仅对`bash`做了环境变量的配置。也就是说他输出的环境变量仅适用于`bash`、`sh`和`zsh`等 SHELL，而不适用于`csh`。对于`csh`的环境变量配置需要参考上文。
+  遇到问题，请先运行`fcitx`故障诊断，但是该输出仅对`bash`做了环境变量的配置。也就是说他输出的环境变量仅适用于`bash`、`sh`和`zsh`等 SHELL，而不适用于`csh`。对于`csh`的环境变量配置需要参考上文。
   
   如果提示`bash`字样且无法输出诊断信息，则需要先安装`bash`：`# pkg install bash`
   
