@@ -2,14 +2,16 @@
 
 ## 安装 xfce4
 
+通过pkg安装 `# pkg install xfce4`
+
+或
+
 通过ports安装
 
 ```
 # cd /usr/ports/x11-wm/xfce4
 # make install clean
 ```
-
-通过pkg安装 `# pkg install xfce4`
 
 ## 启用 xfce
 
@@ -24,7 +26,7 @@
 ## 启动服务
 
 ```
-# syrc dbus_enable="YES"
+# sysrc dbus_enable="YES"
 # service dbus start
 ```
 
@@ -35,7 +37,7 @@
 ## 可选配置
 
 ```
-# pkg install zh-fcitx
+# pkg install zh-fcitx zh-fcitx-configtool fcitx-qt5 fcitx-m17n zh-fcitx-libpinyin
 
 #(安装中文输入法，需要设置中文输入环境)
 ```
