@@ -1,7 +1,6 @@
 # Table of contents
 
 * [FreeBSD 从入门到跑路](README.md)
-* [关于](guan-yu.md)
 
 ## 第〇章 计算机基础知识
 
