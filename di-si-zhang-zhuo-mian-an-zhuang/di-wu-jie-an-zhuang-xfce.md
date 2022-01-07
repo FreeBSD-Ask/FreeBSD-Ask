@@ -15,11 +15,11 @@
 
 ## 启用 xfce
 
-`# echo ". /usr/local/etc/xdg/xfce4/xinitrc" > ~/.xinitrc`
+`# echo "./usr/local/etc/xdg/xfce4/xinitrc"  >  ~/.xinitrc`
 
 或者
 
-`# echo ". /usr/local/etc/xdg/xfce4/xinitrc" > ~/.xsession` 
+`# echo "./usr/local/etc/xdg/xfce4/xinitrc"  >  ~/.xsession` 
 
 根据条件使用
 
