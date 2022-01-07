@@ -99,10 +99,14 @@ setenv MM_CHARSET zh_CN.UTF-8
   
   ### fcitx 4.x
   
-  `fcitx-diagnose`
+  ```
+  # fcitx-diagnose
+  ```
   
   ### fcitx 5.x
   
-  `fcitx5-diagnose`
+  ```
+  # fcitx5-diagnose
+  ```
   
   对于 fcitx5.x 来说，找不到`fcitx qt 4`的支持是正常的。
