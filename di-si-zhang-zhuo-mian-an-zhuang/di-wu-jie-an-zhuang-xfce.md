@@ -32,7 +32,7 @@
 
 ## 设置中文显示
 
-在·.xinitrc·添加以下内容（但要在最前面才正常启用） `export LANG=zh_CN.UTF-8`
+在`.xinitrc`添加以下内容（但要在最前面才正常启用） `export LANG=zh_CN.UTF-8`
 
 ## 可选配置
 
