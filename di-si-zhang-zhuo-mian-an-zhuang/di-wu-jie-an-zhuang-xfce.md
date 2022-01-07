@@ -2,7 +2,7 @@
 
 ## 安装 xfce4
 
-通过 pkg 安装 `# pkg install xfce4`
+通过 pkg 安装 `# pkg install xorg xfce4`
 
 或
 
