@@ -10,7 +10,7 @@
 
 {% embed url="https://rufus.ie/zh" %}
 
-**注意：不建议使用 Handbook 推荐的 win32diskimager，会出现校验码错误的情况（实际上文件校验码正常）。也不要使用 ventory 引导实体机安装，有时会报错。**
+**注意：不建议使用 Handbook 推荐的 win32diskimager，有时会出现校验码错误的情况（实际上文件校验码正常）。也不要使用 ventory 引导实体机安装，有时会报错找不到安装文件。**
 
 ## 硬件选配（以下硬件均正常运行）
 
