@@ -2,11 +2,11 @@
 
 ## 安装 xfce4
 
-通过pkg安装 `# pkg install xfce4`
+通过 pkg 安装 `# pkg install xfce4`
 
 或
 
-通过ports安装
+通过 ports 安装
 
 ```
 # cd /usr/ports/x11-wm/xfce4
@@ -68,14 +68,14 @@ fcitx &
 
 `# chown -R polkitd /usr/local/etc/polkit-1`
 
-即可解决xfce4普通用户关机按钮灰色的问题
+即可解决 xfce4 普通用户关机按钮灰色的问题
 
-### FreeBSD 的xfce 终端动态标题不显示问题
+### FreeBSD 的 xfce 终端动态标题不显示问题
 
-tcsh 配置，home 目录创建.tcshrc,
+tcsh 配置:
+
+`home`目录创建`.tcshrc`,
 
 写入以下配置
 
-```
-alias h history 25 alias j jobs -l alias la ls -aF alias lf ls -FA alias ll ls -lAF setenv EDITOR vi setenv PAGER less switch ($TERM) case "xterm*": set prompt="%{033]0;[]%~007%}%#" set filec set history = 1000 set savehist = (1000 merge) set autolist = ambiguous # Use history to aid expansion set autoexpand set autorehash breaksw default: set prompt="%#" breaksw endsw
-```
+`alias h history 25 alias j jobs -l alias la ls -aF alias lf ls -FA alias ll ls -lAF setenv EDITOR vi setenv PAGER less switch ($TERM) case "xterm*": set prompt="%{033]0;[]%~007%}%#" set filec set history = 1000 set savehist = (1000 merge) set autolist = ambiguous # Use history to aid expansion set autoexpand set autorehash breaksw default: set prompt="%#" breaksw endsw`
