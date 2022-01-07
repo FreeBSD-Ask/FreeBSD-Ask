@@ -4,7 +4,7 @@
 
 `　# pkg install lightdm-gtk-greeter lightdm`
 
-　　写入`lightdm_enable="YES"`到rc.conf
+　　写入`lightdm_enable="YES"`到`rc.conf`
 
 　　编辑`# ee /usr/local/etc/lightdm/lightdm.conf`
 
