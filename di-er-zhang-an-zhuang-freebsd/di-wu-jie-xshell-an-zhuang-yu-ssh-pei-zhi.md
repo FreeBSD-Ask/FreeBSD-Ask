@@ -27,11 +27,21 @@ PermitEmptyPasswords no      #不允许空密码登录
 
 ## 开启SSH 服务
 
-`#service sshd restart`
+```
+# service sshd restart
+```
 
 如果提示找不到sshd,请执行下一命令:
 
-`# sysrc sshd_enable="YES"`
+```
+# sysrc sshd_enable="YES"
+```
+
+然后再
+
+```
+# service sshd restart
+```
 
 ## 保持 SSH 在线 <a href="#bao-chi-ssh-zai-xian" id="bao-chi-ssh-zai-xian"></a>
 
