@@ -24,7 +24,7 @@ snd_hda="YES"
 ## 中文化GNOME
 
 ```
-# ee locale.conf 文件添加(/usr/local/etc/gdm/ 目录)添加以下内容
+# ee locale.conf 文件添加(`/usr/local/etc/gdm/` 目录)添加以下内容
 LANG="zh_CN.UTF-8"
 LC_CTYPE="zh_CN.UTF-8"
 LC_MESSAGES="zh_CN.UTF-8"
@@ -33,7 +33,7 @@ LC_ALL="zh_CN.UTF-8"
 
 ## 安装输入法
 
-`# pkg install zh-ibus-libpinyin`（安装好运行初始化命令 ·ibus-setup·）
+`# pkg install zh-ibus-libpinyin`（安装好运行初始化命令 `ibus-setup`）
 
 ## 安装字体
 
