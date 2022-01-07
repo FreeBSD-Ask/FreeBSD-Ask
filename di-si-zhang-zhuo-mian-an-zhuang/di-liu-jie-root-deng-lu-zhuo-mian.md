@@ -2,7 +2,11 @@
 
 ## lightdm
 
-`　# pkg install lightdm-gtk-greeter lightdm`
+安装与配置：
+
+```
+# pkg install lightdm-gtk-greeter lightdm
+```
 
 　　写入`lightdm_enable="YES"`到`rc.conf`
 
@@ -24,7 +28,13 @@
 
 ## sddm
 
-更改`/usr/local/etc/pam.d/sddm`文件
+安装
+
+```
+pkg install sddm
+```
+
+更改`/usr/local/etc/pam.d/sddm`文件:
 
 把`include`之后的`login`，替换成`system`，一共4个。
 
