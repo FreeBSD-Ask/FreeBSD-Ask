@@ -2,7 +2,7 @@
 
 ## 物理机安装添加
 
-物理机安装应该选用 **img** 结尾的镜像，例如
+物理机安装应该选用`img`结尾的镜像，例如
 
 [_**https://download.freebsd.org/ftp/releases/amd64/amd64/ISO-IMAGES/13.0/FreeBSD-13.0-RELEASE-amd64-memstick.img**_](https://download.freebsd.org/ftp/releases/amd64/amd64/ISO-IMAGES/13.0/FreeBSD-13.0-RELEASE-amd64-memstick.img)
 
