@@ -2,7 +2,7 @@
 
 fcitx 5 相比前一代，增加了对 Wayland 的支持，据说更加流畅。
 
-#### 注意，在 FreeBSD 14.0 Current 中会出现许多不可预料的奇怪的 bug（fcitx5 诊断信息英文乱码，输入法显示出奇怪的汉字，Fcitx5-qt5 环境不能正常加载……），如果条件允许应该在 FreeBSD release 中参考使用本文。
+#### 注意，在 FreeBSD-14.0-Current 中会出现许多不可预料的奇怪的 bug（fcitx5 诊断信息英文乱码，输入法显示出奇怪的汉字，Fcitx5-qt5 环境不能正常加载……），如果条件允许应该在 FreeBSD-Release 中参考使用本文。
 
 ## FreeBSD Fcitx 输入法框架设置（4.X）
 
