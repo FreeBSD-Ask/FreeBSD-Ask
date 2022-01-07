@@ -10,7 +10,7 @@
 
 {% embed url="https://rufus.ie/zh" %}
 
-**注意：使用 Handbook 推荐的 win32diskimager  亦可。如果安装后需要恢复 U 盘，请参考使用 Windows 的 `diskpart` 命令，也可以使用傲梅分区助手或 diskgenius。另外，请不要使用 ventory 引导实体机安装，有时会报错。**
+**注意：不建议使用 Handbook 推荐的 win32diskimager，会出现校验码错误的情况（实际上文件校验码正常）。请不要使用 ventory 引导实体机安装，有时会报错。**
 
 ## 硬件选配（以下硬件均正常运行）
 
