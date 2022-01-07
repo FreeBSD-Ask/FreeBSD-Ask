@@ -93,7 +93,7 @@ setenv MM_CHARSET zh_CN.UTF-8
   
   ## 故障排除
   
-  如果无法输入，请先运行`fcitx故障诊断
+  如果无法输入，请先运行`fcitx`故障诊断
   
   ### fcitx 4.x
   
