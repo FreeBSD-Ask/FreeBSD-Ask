@@ -108,7 +108,7 @@ PDF 请点击 “[Release](https://github.com/FreeBSD-Ask/FreeBSD-Ask/releases)�
 
 |贴吧 ID|黑名单原因|
 |:---:|:---:|
-|mechrtt|挑衅管理员，用他人教程冒充自己写的教程，无耻至极|
+|mechrtt|挑衅管理员，用他人教程冒充自己写的教程，无耻至极。被识破后恼羞成怒|
 
 #### 2022
 
