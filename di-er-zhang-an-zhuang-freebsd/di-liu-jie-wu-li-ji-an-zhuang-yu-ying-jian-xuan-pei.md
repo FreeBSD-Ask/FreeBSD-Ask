@@ -6,7 +6,7 @@
 
 [_**https://download.freebsd.org/ftp/releases/amd64/amd64/ISO-IMAGES/13.0/FreeBSD-13.0-RELEASE-amd64-memstick.img**_](https://download.freebsd.org/ftp/releases/amd64/amd64/ISO-IMAGES/13.0/FreeBSD-13.0-RELEASE-amd64-memstick.img)
 
-刻录工具 Windows 应该选用 Rufus，Linux 直接使用 `dd`命令即可。：
+刻录工具 Windows 应该选用 Rufus，Linux 直接使用 `dd`命令即可。
 
 {% embed url="https://rufus.ie/zh" %}
 
