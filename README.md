@@ -77,7 +77,7 @@ PDF 请点击 “[Release](https://github.com/FreeBSD-Ask/FreeBSD-Ask/releases)�
 
 ### 黑名单
 
-在建设 FreeBSD 中文社区的时候我们遇到了许多困难：一些 Arch linux 邪教分子的恶意挑衅，上来就说“Arch 牛逼！”；还有一些完全没有使用过 BSD 的人，张口就说 FreeBSD 没有 JAVA、没有JNI，更没有 Eclipse；还有部分华为花粉进入社区故意借套壳安卓的鸿蒙系统，试图引发内讧。为了社区，我们建立了黑名单制度。
+在建设 FreeBSD 中文社区的时候我们遇到了许多困难：一些 Arch linux 邪教分子的恶意挑衅，上来就说“Arch 牛逼！”；还有一些完全没有使用过 BSD 的人，张口就说 FreeBSD 没有 JAVA、没有 JNI，更没有 Eclipse；还有部分华为花粉进入社区故意借套壳安卓的鸿蒙系统，试图引发内讧。为了社区，我们建立了黑名单制度。
 
 名单如下：
 
