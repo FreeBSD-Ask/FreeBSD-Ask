@@ -89,4 +89,4 @@ setenv MM_CHARSET zh_CN.UTF-8
   
   如果输出`csh`，代表配置成功。然后其余环境变量配置方法同上所述。
   
-  提示：如果不想使用 csh，把 `setenv`等环境变量改为`export`形式亦可。
+  #### 提示：如果不想使用 csh，把 `setenv`等环境变量改为`export`形式亦可。
