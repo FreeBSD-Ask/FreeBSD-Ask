@@ -6,7 +6,7 @@
 
 [项目预览——如果你认为拼音显得奇怪，那么你应该点击此处。](https://book.freebsdcn.org)
 
-PDF 请点击 “[Release](https://github.com/FreeBSD-Ask/FreeBSD-Ask/releases)”，请注意，PDF 仅供参考，且存在这样或那样的问题，应该以在线版本为主。
+PDF 请点击 “[Release](https://github.com/FreeBSD-Ask/FreeBSD-Ask/releases)”下载。请注意，PDF 仅供参考，且存在这样或那样的问题，应该以在线版本为主。
 
 ### 本书定位
 
