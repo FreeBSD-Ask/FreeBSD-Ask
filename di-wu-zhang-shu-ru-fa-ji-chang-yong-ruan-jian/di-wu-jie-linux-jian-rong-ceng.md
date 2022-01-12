@@ -23,4 +23,5 @@
 ## 自己构建 ubuntu/debian 兼容层（未经过实际测试，仅供专业人士自行测试！）
 
 FreeBSD 12.0： https://forums.freebsd.org/threads/linuxulator-how-to-run-google-chrome-linux-binary-on-freebsd.77559/
+
 FreeBSD 13.0： https://forums.freebsd.org/threads/linuxulator-how-to-install-brave-linux-app-on-freebsd-13-0.78879/
