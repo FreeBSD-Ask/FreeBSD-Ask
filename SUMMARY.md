@@ -146,13 +146,12 @@
 
 * [第一节 PPP 拨号](di-shi-si-zhang-wang-luo-guan-li/di-yi-jie-ppp-bo-hao.md)
 * [第二节 WIFI](di-shi-si-zhang-wang-luo-guan-li/di-er-jie-wifi.md)
-* [第三节 USB 共享网络](di-shi-si-zhang-wang-luo-guan-li/di-san-jie-usb-gong-xiang-wang-luo.md)
+* [第三节 USB RNDIS (USB 网络共享)](di-shi-si-zhang-wang-luo-guan-li/di-san-jie-usb-rndis-usb-wang-luo-gong-xiang.md)
 * [第四节 蓝牙](di-shi-si-zhang-wang-luo-guan-li/di-si-jie-lan-ya.md)
 * [第五节 IPv6](di-shi-si-zhang-wang-luo-guan-li/di-wu-jie-ipv6.md)
 * [第六节 CARP](di-shi-si-zhang-wang-luo-guan-li/di-liu-jie-carp.md)
 * [第七节 VLAN](di-shi-si-zhang-wang-luo-guan-li/di-qi-jie-vlan.md)
 * [第八节 TCP BBR](di-shi-si-zhang-wang-luo-guan-li/di-ba-jie-tcp-bbr.md)
-* [第九节 USB RNDIS (USB 网络共享)](di-shi-si-zhang-wang-luo-guan-li/di-jiu-jie-usb-rndis-usb-wang-luo-gong-xiang.md)
 
 ## 第十五章 FreeBSD 防火墙
 
