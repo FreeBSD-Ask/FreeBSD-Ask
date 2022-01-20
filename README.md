@@ -53,9 +53,10 @@ PDF 请点击 “[Release](https://github.com/FreeBSD-Ask/FreeBSD-Ask/releases)�
 
 本书采用 [BSD-3-Clause License](LICENSE/) 许可证开源。我们在编写过程吸收了一些现有的研究成果，在此表示感谢。
 
-### 同名小说
+### 其他
 
-起点网——[《FreeBSD从入门到跑路》](https://book.qidian.com/info/1031738676)
+同名小说：起点网——[《FreeBSD从入门到跑路》](https://book.qidian.com/info/1031738676)
+微信公众号: freebsdzh
 
 ## 关于
 
