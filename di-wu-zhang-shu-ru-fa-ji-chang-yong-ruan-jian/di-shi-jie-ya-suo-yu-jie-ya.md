@@ -36,7 +36,7 @@
 
 FreeBSD 操作系统下，7z 和 7za 命令均通过
 
-`# pkg install -y p7zip`获取。
+`# pkg install -y 7-zip`获取。
 
 示例如下：
 
