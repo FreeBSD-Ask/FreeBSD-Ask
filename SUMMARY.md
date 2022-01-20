@@ -158,7 +158,7 @@
 * [第一节 网络参数配置命令](di-shi-wu-zhang-freebsd-fang-huo-qiang/di-yi-jie-wang-luo-can-shu-pei-zhi-ming-ling.md)
 * [第二节 PF](di-shi-wu-zhang-freebsd-fang-huo-qiang/di-er-jie-pf.md)
 * [第三节 IPFW](di-shi-wu-zhang-freebsd-fang-huo-qiang/di-san-jie-ipfw.md)
-* [第五节 IPFILTER (IPF)](di-shi-wu-zhang-freebsd-fang-huo-qiang/di-wu-jie-ipfilter-ipf.md)
+* [第四节 IPFILTER (IPF)](di-shi-wu-zhang-freebsd-fang-huo-qiang/=.md)
 
 ## 第十六章 服务器
 
