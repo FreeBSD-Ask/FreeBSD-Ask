@@ -59,7 +59,7 @@ PDF 请点击 “[Release](https://github.com/FreeBSD-Ask/FreeBSD-Ask/releases)�
 
 微信公众号: freebsdzh （扫码关注）
 
-![](.gitbook/assets/qrcode\_for\_gh\_3b263cc9b20b\_344.jpg)
+![](.gitbook/assets/qrcode\_for\_gh\_3b263cc9b20b\_258.jpg)
 
 ## 关于
 
