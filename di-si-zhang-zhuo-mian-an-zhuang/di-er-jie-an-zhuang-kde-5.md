@@ -30,7 +30,7 @@ sddm_enable="YES"
 {% embed url="https://www.freshports.org/sysutils/hal" %}
 
 
-**注意：如果sddm 登录闪退到登录界面，请检查左下角是不是plasma-X11，闪退的一般都是 Wayland！**
+**注意：如果 sddm 登录闪退到登录界面，请检查左下角是不是 plasma-X11，闪退的一般都是 Wayland！因为目前 FreeBSD 上的 KDE 5 尚不支持 Wayland。**
 
 ## 中文化
 
