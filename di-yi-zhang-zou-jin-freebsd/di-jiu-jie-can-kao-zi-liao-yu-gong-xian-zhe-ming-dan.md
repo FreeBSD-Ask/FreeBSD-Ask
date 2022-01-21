@@ -16,7 +16,7 @@
 
 雨天
 
-[liulitchi](https://github.com/liulitchi)
+[柳离枝](https://github.com/liulitchi)
 
 [peiyafei](https://github.com/peiyafei)
 
