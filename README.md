@@ -42,7 +42,7 @@ PDF 请点击 “[Release](https://github.com/FreeBSD-Ask/FreeBSD-Ask/releases)�
 
 |用户名|金额(¥)|金额结余/用途|
 |:---:|:---:|:---:|
-|喜哥|100|100|
+|喜哥|100|30/70用于freebsdcn.org域名|
 
 
 
