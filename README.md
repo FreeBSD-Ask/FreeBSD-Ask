@@ -36,9 +36,10 @@ PDF 请点击 “[Release](https://github.com/FreeBSD-Ask/FreeBSD-Ask/releases)�
 
 为了能够更好地维护本书，我们采用了 Gitbook 平台来进行协作。对于无法直接从 GitBook 导出为 PDF 的问题（我们提供了 PDF 的参考版本于 release），我们深感抱歉，我们目前没有财力为其提供所需要的企业版本（15 刀一个月）。如果您想为我们提供捐助，请加入我们的 [TG 群](https://t.me/freebsdba) 或者 QQ 群 731675387。 如果您也想参与编写，具体请参考 [WIKI](https://github.com/FreeBSD-Ask/FreeBSD-Ask/wiki/%E3%80%8AFreeBSD-%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E8%B7%91%E8%B7%AF%E3%80%8B%E7%BC%96%E8%BE%91%E6%8C%87%E5%8D%97)，关于贡献者名单请参考 第一章 第九节。
 
-捐赠者:
+**捐赠者:**
 
 2018-2022
+
 |用户名|金额(¥)|金额结余/用途|
 |:---:|:---:|:---:|
 |喜哥|100|100|
