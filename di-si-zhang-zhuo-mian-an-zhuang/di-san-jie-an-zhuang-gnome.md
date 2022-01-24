@@ -106,7 +106,15 @@ export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
 ```
 
-提示：如果要显示`fcitx`输入法面板，需要安装 gnome 插件`TopiconFix`,请勿安装`AppIndicator and KStatusNotifierItem Support`，已知该插件与`fcitx5`相冲突，会造成输入法卡死。
+提示：如果要显示`fcitx`输入法面板，需要安装 gnome 插件`TopIconsFix`,请勿安装`AppIndicator and KStatusNotifierItem Support`，已知该插件与`fcitx5`相冲突，会造成输入法卡死。
+
+该插件需要通过火狐浏览器进行安装：
+
+```
+# pkg install -y firefox chrome-gnome-shell
+```
+
+打开网站`https://extensions.gnome.org/extension/1674/topiconsfix/`即可安装插件。
 
 ## 安装字体
 
