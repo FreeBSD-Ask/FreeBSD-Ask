@@ -28,7 +28,7 @@
 
 请先看第四章 桌面安装——第三节安装Gnome3。
 
-首先下载所需文件：
+首先下载所需文件：https://github.com/FreeBSD-Ask/98-input
 
 把`98wbx.conf`文件复制到`/usr/local/share/fcitx5/inputmethod/`（`inputmethod`目录）下面
 把`fcitx-98wubi.png`和`org.fcitx.Fcitx5.fcitx-98wubi.png`图标复制到`/usr/local/share/icons/hicolor/48x48/apps/`（apps目录）下面
