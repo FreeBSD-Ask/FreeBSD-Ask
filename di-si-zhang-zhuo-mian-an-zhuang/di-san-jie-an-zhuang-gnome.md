@@ -33,7 +33,80 @@ LC_ALL="zh_CN.UTF-8"
 
 ## 安装输入法
 
+以下 `ibus`、`fcitx5`二选一即可。
+
+### ibus
+
+gnome 捆绑的输入法面板是`ibus`。
+
 `# pkg install zh-ibus-libpinyin`（安装好运行初始化命令 `ibus-setup`）
+
+### fcitx 5
+
+首先看看现在自己的 shell 是不是`sh`,`bash`,`zsh`：
+
+```
+# echo  $0
+```
+
+如果是`sh`,`bash`,`zsh`其中之一，请继续；如果不是，请参考第五章第一节。
+
+安装 `fcitx5`:
+
+```
+# pkg install fcitx5 fcitx5-qt fcitx5-gtk fcitx5-configtool zh-fcitx5-chinese-addons
+```
+
+
+
+
+打开或新建文件`~/.xprofile`，写入:
+
+```
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
+```
+参考：以下是该文件的一个示例：
+
+```
+# $FreeBSD$
+#
+# .profile - Bourne Shell startup script for login shells
+#
+# see also sh(1), environ(7).
+#
+
+# These are normally set through /etc/login.conf.  You may override them here
+# if wanted.
+# PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin:$HOME/bin; export PATH
+
+# Setting TERM is normally done through /etc/ttys.  Do only override
+# if you're sure that you'll never log in via telnet or xterm or a
+# serial line.
+# TERM=xterm; 	export TERM
+
+EDITOR=vi;   	export EDITOR
+PAGER=less;  	export PAGER
+
+# set ENV to a file invoked each time sh is started for interactive use.
+ENV=$HOME/.shrc; export ENV
+
+# Let sh(1) know it's at home, despite /home being a symlink.
+if [ "$PWD" != "$HOME" ] && [ "$PWD" -ef "$HOME" ] ; then cd ; fi
+
+# Query terminal size; useful for serial lines.
+if [ -x /usr/bin/resizewin ] ; then /usr/bin/resizewin -z ; fi
+
+# Display a random cookie on each login.
+if [ -x /usr/bin/fortune ] ; then /usr/bin/fortune freebsd-tips ; fi
+
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
+```
+
+提示：如果要显示`fcitx`输入法面板，需要安装 gnome 插件`TopiconFix`,请勿安装`AppIndicator and KStatusNotifierItem Support`，已知该插件与`fcitx5`相冲突，会造成输入法卡死。
 
 ## 安装字体
 
@@ -49,6 +122,8 @@ setenv LANG zh_CN.UTF-8
 setenv LC_CTYPE zh_CN.UTF-8
 setenv LC_ALL zh_CN.UTF-8`
 ```
+
+
 
 ## 优化系统
 
