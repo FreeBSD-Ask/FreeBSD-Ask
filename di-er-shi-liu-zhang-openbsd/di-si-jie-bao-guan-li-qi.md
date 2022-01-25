@@ -4,7 +4,7 @@
 
 ## 二进制包
 
-我们推荐以二进制包的方式来安装软件，以安装火狐浏览器为例：
+我们推荐以二进制包的方式来安装软件，以火狐浏览器为例：
 
 - 安装软件 `pkg_add firefox`
 
@@ -19,5 +19,9 @@
 ## ports 
 
 [查询网站](https://openports.se/)
+
+OpenBSD 的 ports 安装比较复杂，这里只作一番简单介绍，学有余力的网友可进一步查看[手册](https://www.openbsd.org/faq/ports/ports.html)，获取更详细的信息。
+
+OpenBSD 对应多个系统版本(release、stable 以及 current)，各版本间的 ports 并不通用。
 
 ## pkgsrc
