@@ -131,8 +131,12 @@ setenv LC_CTYPE zh_CN.UTF-8
 setenv LC_ALL zh_CN.UTF-8`
 ```
 
-
-
 ## 优化系统
 
 `# pkg install gnome-tweaks`
+
+## 卸载自带游戏（可选）
+
+```
+# pkg delete gnome-2048 gnome-klotski gnome-tetravex gnome-mines gnome-taquin gnome-sudoku gnome-robots gnome-nibbles lightsoff tali quadrapassel swell-foop gnome-mahjongg five-or-more iagno aisleriot four-in-a-row
+```
