@@ -48,8 +48,15 @@ Slim 的主题文件位于 `/usr/local/share/slim/themes/` 文件夹内，大家
 
 ### 安装 Gnome 桌面
 
-待补充。
+打开终端，输入 `# pkg_add gnome gnome-extras`，Gnome 桌面会默认安装 GDM ，因此不需要额外安装显示管理器。
 
+然后打开 `/etc/rc.conf.local`，添加以下几行：
+```
+multicast_host=YES
+pkg_scripts="messagebus dbus_daemon avahi_daemon gdm"
+```
+
+最后打开用户账号下的 `.xinitrc` ，添加一行`exec gnome-session`。
 
 ## 中文设置
 
