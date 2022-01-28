@@ -36,7 +36,8 @@
 安装
 
 ```
-pkg install sddm
+# pkg install sddm
+# sysrc sddm_enable="YES"
 ```
 
 更改`/usr/local/etc/pam.d/sddm`文件:
