@@ -31,7 +31,7 @@
 
 ```
 # sysrc dbus_enable="YES"
-# service dbus start
+# sysrc lightdm_enable="YES"
 ```
 
 ## 设置中文显示
