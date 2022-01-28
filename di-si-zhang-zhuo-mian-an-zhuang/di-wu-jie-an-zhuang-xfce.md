@@ -57,10 +57,12 @@
 配置文件：
 
 ```
-#cd ~
+#ee ~/.xinitrc 
+```
 
-#ee .xinitrc #文件添加以下内容
+在该文件中添加以下内容:
 
+```
 export XMODIFIERS="@im=fcitx"
 export XIM_PROGRAM="fcitx"
 export GTK_IM_MODULE="fcitx"
