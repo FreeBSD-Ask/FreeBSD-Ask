@@ -11,7 +11,7 @@
 首先设置启动服务：
 
 ```
-　　# sysrc lightdm_enable="YES"
+# sysrc lightdm_enable="YES"
 ```
 然后修改配置文件：
 
