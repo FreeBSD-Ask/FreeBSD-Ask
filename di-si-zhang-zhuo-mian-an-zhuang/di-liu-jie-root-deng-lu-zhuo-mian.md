@@ -17,7 +17,7 @@
 
 　　编辑`# ee /usr/local/etc/lightdm/lightdm.conf`
 
-　　往下拉，找到`greeter-show-manual-login=true`移除前面的`#`
+　　往下拉，找到`greeter-show-manual-login=true`移除前面的`#`。该行会多次出现，第一次出现是为你介绍，请勿修改，而应该继续往下拉。
 
 　　编辑 `# ee /usr/local/etc/pam.d/lightdm`
 
