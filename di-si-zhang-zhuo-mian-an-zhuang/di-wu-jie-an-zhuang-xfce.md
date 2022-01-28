@@ -69,7 +69,7 @@ fcitx &
 ## 全局菜单（可选）
 
 ```
-$ sudo pkg install xfce4-appmenu-plugin appmenu-gtk-module appmenu-registrar
+# pkg install xfce4-appmenu-plugin appmenu-gtk-module appmenu-registrar
 $ xfconf-query -c xsettings -p /Gtk/ShellShowsMenubar -n -t bool -s true
 $ xfconf-query -c xsettings -p /Gtk/ShellShowsAppmenu -n -t bool -s true
 $ xfconf-query -c xsettings -p /Gtk/Modules -n -t string -s "appmenu-gtk-module"
