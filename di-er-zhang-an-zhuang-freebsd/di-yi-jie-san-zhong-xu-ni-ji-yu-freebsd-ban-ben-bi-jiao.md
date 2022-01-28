@@ -20,6 +20,7 @@ Current 相对稳定后会推送到 stable，但是不保证 stable 没有大的
 
 ## 三种虚拟机比较
 
+### Virtual Box 与 Vmware Workstation Pro
 个人计算机上常用的虚拟机有两种，一是 Virtual Box，另一个是 Vmware Workstation Pro。
 
 一般来说，在 Windows 系统上建议使用Vmware Workstation Pro （以下简称 VM），在Linux 系统上建议使用 Virtual Box（以下简称 VB）。
@@ -28,3 +29,23 @@ VM 是闭源的由商业公司提供的，是需要付费的，可用免费试�
 
 就个人而已，VM 在实际使用中 Bug 会比 VB 少一些：VB 会有一些奇奇怪怪的问题（详见 VB 章节），且很花时间去排除解决。但是为了给与大家更多自由，我们将两种虚拟机的安装使用方法都提供给大家。
 
+### Hyper-V
+
+Hyper-V 是 Windows 开发的虚拟机，分为`Gen1`和`Gen2`。
+
+`Gen1` 和 `Gen2` 区别如下：
+
+|Hyper-V 代数|硬盘|启动引导|
+|:---:|:---:|:---:|
+|Gen 1|IDE + SCSI|仅 mbr|
+|Gen 2|仅 SCSI|仅 UEFI + 安全启动支持 + PXE支持|
+
+**FreeBSD 目前尚且不能在 Hyper-V 上正常运行鼠标或键盘，不建议使用，具体支持情况如下表： **
+
+系统快速创建的为 `Gen 2`。
+
+|Hyper-V 代数|FreeBSD|鼠标|键盘|备注|
+|:---:|:---:|:---:|:---:|:---:|
+|Gen 1|13.0|支持|不支持|/|
+|Gen 2|13.0|不支持|支持|需要修改参数`sysctl kern.evdev.rcpt_mask=6`|
+|Gen 2|14.0-2022-1-27|不支持|支持|/|
