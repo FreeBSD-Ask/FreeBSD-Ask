@@ -40,7 +40,7 @@ Hyper-V 是 Windows 开发的虚拟机，分为`Gen1`和`Gen2`。
 |Gen 1|IDE + SCSI|仅 mbr|
 |Gen 2|仅 SCSI|仅 UEFI + 安全启动支持 + PXE支持|
 
-**FreeBSD 目前尚且不能在 Hyper-V 上正常运行鼠标或键盘，不建议使用，具体支持情况如下表： **
+**FreeBSD 目前（截止到2022-1-28）尚且不能在 Hyper-V 上正常运行鼠标或键盘，不建议使用，具体支持情况如下表：**
 
 系统快速创建的为 `Gen 2`。
 
