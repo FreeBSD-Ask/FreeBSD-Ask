@@ -62,6 +62,15 @@ fcitx &
 # pkg install transmission  #(BT下载工具)`
 ```
 
+## 全局菜单（可选）
+
+```
+$ sudo pkg install xfce4-appmenu-plugin appmenu-gtk-module appmenu-registrar
+$ xfconf-query -c xsettings -p /Gtk/ShellShowsMenubar -n -t bool -s true
+$ xfconf-query -c xsettings -p /Gtk/ShellShowsAppmenu -n -t bool -s true
+$ xfconf-query -c xsettings -p /Gtk/Modules -n -t string -s "appmenu-gtk-module"
+```
+
 ## 故障排除
 
 ### xfce 普通用户关机按钮灰色解决方案
