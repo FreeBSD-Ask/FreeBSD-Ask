@@ -40,11 +40,22 @@
 
 ## 可选配置
 
+### 输入法
+
+请检查自己的shell是不是 `sh`、`bash`、`zsh` 其中之一。
+
+```
+# echo $0
+```
+
+如果是以上三个 SHELL 之一，请继续，如果不是请参考第五章第一节：
+
 ```
 # pkg install zh-fcitx zh-fcitx-configtool fcitx-qt5 fcitx-m17n zh-fcitx-libpinyin
-
-#(安装中文输入法，需要设置中文输入环境)
 ```
+
+配置文件：
+
 ```
 #cd ~
 
@@ -55,6 +66,8 @@ export XIM_PROGRAM="fcitx"
 export GTK_IM_MODULE="fcitx"
 fcitx &
 ```
+
+### 其他软件
 
 ```
 # pkg install firefox #（火狐浏览器）
