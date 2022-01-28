@@ -1,10 +1,12 @@
-# 第三节 FreeBSD 13.0 安装——基于 Vmware Workstation Pro 15
+# 第三节 FreeBSD 13.0 安装——基于 Vmware Workstation Pro 16
 
 ## 视频教程（一共4节，完整版本请点击去 bilibili 观看）
 
 {% embed url="https://www.bilibili.com/video/BV14i4y137mh" %}
 
 镜像下载地址：[_https://download.freebsd.org/ftp/releases/amd64/amd64/ISO-IMAGES/13.0/FreeBSD-13.0-RELEASE-amd64-disc1.iso_](https://download.freebsd.org/ftp/releases/amd64/amd64/ISO-IMAGES/13.0/FreeBSD-13.0-RELEASE-amd64-disc1.iso)
+
+FreeBSD旧版本下载地址 http://ftp-archive.freebsd.org/pub/FreeBSD-Archive/old-releases/amd64/ISO-IMAGES/
 
 FreeBSD 旧版本下载地址: [http://ftp-archive.freebsd.org/pub/FreeBSD-Archive/old-releases/amd64/ISO-IMAGES/](http://ftp-archive.freebsd.org/pub/FreeBSD-Archive/old-releases/amd64/ISO-IMAGES/)
 
@@ -29,17 +31,21 @@ VMware Workstation 16 Player 是个人免费使用的，你也可以选择此版
 ## 虚拟机增强工具以及显卡驱动
 
 如果没有桌面：
+
 ```
 # pkg install open-vm-tools-nox11
 ```
+
 如果有桌面
 
 ```
 # pkg install open-vm-tools
 ```
+
 具体配置
 
 将下面几行加入 `/etc/rc.conf`
+
 ```
 vmware_guest_vmblock_enable="YES"
 vmware_guest_vmhgfs_enable="YES"
@@ -50,10 +56,12 @@ vmware_guestd_enable="YES"
 
 编辑 `/boot/loader.conf`
 
-写入 
+写入
+
 ```
 fusefs_load="YES"
 ```
+
 vmware 自动缩放屏幕请安装 x11-drivers/xf86-video-vmware：
 
 `# pkg install xf86-video-vmware`
