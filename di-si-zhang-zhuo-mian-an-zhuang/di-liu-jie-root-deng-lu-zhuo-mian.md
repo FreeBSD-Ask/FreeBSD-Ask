@@ -26,7 +26,7 @@
 重启服务
 
 ```
-# service lightdm restart`
+# service lightdm restart
 ```
 
 即可。
