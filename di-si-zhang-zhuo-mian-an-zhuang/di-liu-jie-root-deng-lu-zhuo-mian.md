@@ -8,7 +8,12 @@
 # pkg install lightdm-gtk-greeter lightdm
 ```
 
-　　写入`lightdm_enable="YES"`到`rc.conf`
+首先设置启动服务：
+
+```
+　　# sysrc lightdm_enable="YES"
+```
+然后修改配置文件：
 
 　　编辑`# ee /usr/local/etc/lightdm/lightdm.conf`
 
