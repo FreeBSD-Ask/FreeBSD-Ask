@@ -31,20 +31,20 @@ VM 是闭源的由商业公司提供的，是需要付费的，可用免费试�
 
 ### Hyper-V
 
-Hyper-V 是 Windows 开发的虚拟机，分为`Gen1`和`Gen2`。
+Hyper-V 是 Windows 开发的虚拟机，分为`Gen 1`和`Gen 2`。
 
-`Gen1` 和 `Gen2` 区别如下：
+`Gen 1` 和 `Gen 2` 区别如下：
 
 |Hyper-V 代数|硬盘|启动引导|
 |:---:|:---:|:---:|
-|Gen 1|IDE + SCSI|仅 mbr|
-|Gen 2|仅 SCSI|仅 UEFI + 安全启动支持 + PXE支持|
+|Gen 1|IDE + SCSI|仅 MBR|
+|Gen 2|仅 SCSI|仅 UEFI + 安全启动支持 + PXE 支持|
 
-**FreeBSD 目前（截止到2022-1-28）尚且不能在 Hyper-V 上正常运行鼠标或键盘，不建议使用，具体支持情况如下表：**
+**FreeBSD 目前（截止到 2022-1-28）尚且不能在 Hyper-V 上正常运行鼠标或键盘，因为鼠标没有驱动。不建议使用，具体支持情况如下表。**
 
 系统快速创建的为 `Gen 2`。
 
-|Hyper-V 代数|FreeBSD|鼠标|键盘|备注|
+|Hyper-V 代数|FreeBSD 版本|鼠标|键盘|备注|
 |:---:|:---:|:---:|:---:|:---:|
 |Gen 1|13.0|支持|不支持|/|
 |Gen 2|13.0|不支持|支持|需要修改参数`sysctl kern.evdev.rcpt_mask=6`|
