@@ -44,6 +44,8 @@ PDF 请点击 “[Release](https://github.com/FreeBSD-Ask/FreeBSD-Ask/releases)�
 |:---:|:---:|:---:|
 |喜哥|100|30/70 用于 freebsdcn.org 域名|
 |顾白|5|35|
+|顾雨欣|1|36|
+|鸭子 OS|1|37|
 
 
 
