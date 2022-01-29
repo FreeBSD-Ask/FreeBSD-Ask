@@ -57,7 +57,7 @@ PDF 请点击 “[Release](https://github.com/FreeBSD-Ask/FreeBSD-Ask/releases)�
 |风风火火小白狼|66|80/204，其中70 用于域名`freebsdcn.org`，129 用于向 FreeBSD 基金会捐款|
 |夏文纯一|10|90|
 |施主|50|140|
-|丁至宣|20|160|
+|UniqueDing|20|160|
 
 ### 意见反馈
 
