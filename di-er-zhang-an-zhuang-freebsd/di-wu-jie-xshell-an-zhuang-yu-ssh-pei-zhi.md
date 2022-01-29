@@ -42,7 +42,7 @@ PasswordAuthentication yes   # 设置是否使用口令验证
 # service sshd restart
 ```
 
-## 保持 SSH 在线 <a href="#bao-chi-ssh-zai-xian" id="bao-chi-ssh-zai-xian"></a>
+## 保持 SSH 在线
 
 服务端设置：
 
