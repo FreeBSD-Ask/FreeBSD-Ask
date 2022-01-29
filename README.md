@@ -30,7 +30,7 @@ PDF 请点击 “[Release](https://github.com/FreeBSD-Ask/FreeBSD-Ask/releases)�
 
 ### 开源维护与捐赠
 
-![](.gitbook/assets/proud\_donor.gif)
+![](.gitbook/assets/proud_donor.gif)
 
 [点此捐赠 FreeBSD 基金会](https://freebsdfoundation.org/donate)。
 
@@ -54,7 +54,7 @@ PDF 请点击 “[Release](https://github.com/FreeBSD-Ask/FreeBSD-Ask/releases)�
 |星辰|2|160|
 |凤淋|51.22|211.22|
 |星辰|1.78|213|
-|风风火火小白狼|66|75/204，其中70 用于域名freebsdcn.org，134 用于向 FreeBSD 基金会捐款|
+|风风火火小白狼|66|75/204，其中70 用于域名freebsdcn.org，129 用于向 FreeBSD 基金会捐款|
 
 
 
