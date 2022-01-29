@@ -49,6 +49,7 @@ PDF 请点击 “[Release](https://github.com/FreeBSD-Ask/FreeBSD-Ask/releases)�
 |顾雨欣|1|36|
 |鸭子 OS|1|37|
 |星辰|1|38|
+|邱队长102|20|58|
 
 
 
