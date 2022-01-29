@@ -69,18 +69,6 @@ export GTK_IM_MODULE="fcitx"
 fcitx &
 ```
 
-### 其他软件
-
-```
-# pkg install firefox #（火狐浏览器）
-# pkg install smplayer  #(视频播放器)
-# pkg install zh_CN-libreoffice #(办公软件)
-# pkg install gimp #(图片处理)
-# pkg install thunderbird #(邮件客户端)
-# pkg install wqy-fonts #（安装文泉驿字体）
-# pkg install transmission  #(BT下载工具)`
-```
-
 ## 全局菜单（可选）
 
 ```
