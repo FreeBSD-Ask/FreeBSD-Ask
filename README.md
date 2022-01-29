@@ -58,7 +58,7 @@ PDF 请点击 “[Release](https://github.com/FreeBSD-Ask/FreeBSD-Ask/releases)�
 |夏文纯一|10|90|
 |施主|50|140|
 |UniqueDing|20|160|
-|椰梦加得|20|180|
+|耶梦加得|20|180|
 
 ### 意见反馈
 
