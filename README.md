@@ -50,6 +50,7 @@ PDF 请点击 “[Release](https://github.com/FreeBSD-Ask/FreeBSD-Ask/releases)�
 |鸭子 OS|1|37|
 |星辰|1|38|
 |邱队长102|20|58|
+|nian|100|158|
 
 
 
