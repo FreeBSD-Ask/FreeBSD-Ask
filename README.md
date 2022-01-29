@@ -54,6 +54,7 @@ PDF 请点击 “[Release](https://github.com/FreeBSD-Ask/FreeBSD-Ask/releases)�
 |星辰|2|160|
 |凤淋|51.22|211.22|
 |星辰|1.78|213|
+|风风火火小白狼|60|273|
 
 
 
