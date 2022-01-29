@@ -52,6 +52,8 @@ PDF 请点击 “[Release](https://github.com/FreeBSD-Ask/FreeBSD-Ask/releases)�
 |邱队长102|20|58|
 |bsd.so|100|158|
 |星辰|2|160|
+|凤淋|51.22|211.22|
+|星辰|0.23|211.45|
 
 
 
