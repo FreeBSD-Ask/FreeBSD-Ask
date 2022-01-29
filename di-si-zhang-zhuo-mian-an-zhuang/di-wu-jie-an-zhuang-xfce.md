@@ -5,7 +5,7 @@
 通过 pkg 安装
 
 ```
-# pkg install xorg lightdm lightdm-gtk-greeter xfce
+# pkg install xorg lightdm lightdm-gtk-greeter xfce wqy-fonts
 ```
 
 或
