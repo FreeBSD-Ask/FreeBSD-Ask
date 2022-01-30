@@ -62,6 +62,8 @@ PDF 请点击 “[Release](https://github.com/FreeBSD-Ask/FreeBSD-Ask/releases)�
 |bsd.so|6.66|186.66|
 |天之道|50|236.66|
 |陈杉|1|237.66|
+|QQ 大冰|1|238.66|
+
 
 ### 意见反馈
 
