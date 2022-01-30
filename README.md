@@ -59,6 +59,7 @@ PDF 请点击 “[Release](https://github.com/FreeBSD-Ask/FreeBSD-Ask/releases)�
 |施主|50|140|
 |UniqueDing|20|160|
 |耶梦加得|20|180|
+|bsd.so|6.66|186.66|
 
 ### 意见反馈
 
