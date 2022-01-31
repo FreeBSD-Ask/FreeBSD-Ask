@@ -70,6 +70,7 @@ PDF 请点击 “[Release](https://github.com/FreeBSD-Ask/FreeBSD-Ask/releases)�
 |bsd.so|6.66|704.32|
 |星辰|0.01|704.33|
 |Apple_QAQ|1.82|706.15|
+|星辰顾雨欣顾白|0.03|706.18|
 
 
 ### 意见反馈
