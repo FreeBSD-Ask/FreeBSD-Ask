@@ -65,6 +65,7 @@ PDF 请点击 “[Release](https://github.com/FreeBSD-Ask/FreeBSD-Ask/releases)�
 |QQ 大冰|1|238.66|
 |肖语文 |100|338.66|
 |王刚|300|638.66|
+|andreas|50|688.66|
 
 ### 意见反馈
 
