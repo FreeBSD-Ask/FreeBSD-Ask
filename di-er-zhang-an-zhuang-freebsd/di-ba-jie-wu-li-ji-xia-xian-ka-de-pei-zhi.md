@@ -25,7 +25,7 @@ FreeBSD 已从 Linux 移植了显卡驱动，理论上，A 卡 N 卡均可在 am
 注意：除了 12.0，对于任意 12.X 均应该安装 `drm-fbsd12.0-kmod` ，但应该使用 port 在本地重新构建而不应该使用 pkg 进行安装，否则不会正常运行。
 
 * FreeBSD 13：`# pkg install drm-fbsd13-kmod`
-* FreeBSD 14: `# cd /usr/ports/graphics/drm-kmod/ && make BATCH=yes install clean`&#x20;
+* FreeBSD 14: `# cd /usr/ports/graphics/drm-kmod/ && make BATCH=yes install clean`
 
 ### 加载显卡
 
