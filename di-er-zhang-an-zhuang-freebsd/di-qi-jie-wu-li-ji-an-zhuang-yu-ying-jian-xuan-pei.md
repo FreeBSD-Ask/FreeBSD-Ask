@@ -6,6 +6,8 @@
 
 [_**https://download.freebsd.org/ftp/releases/amd64/amd64/ISO-IMAGES/13.0/FreeBSD-13.0-RELEASE-amd64-memstick.img**_](https://download.freebsd.org/ftp/releases/amd64/amd64/ISO-IMAGES/13.0/FreeBSD-13.0-RELEASE-amd64-memstick.img)
 
+**FreeBSD 所有安装介质包括不限于虚拟机文件都没有提供图形界面，需要自行安装。**
+
 刻录工具 Windows 应该选用 Rufus，Linux 直接使用 `dd`命令即可。
 
 {% embed url="https://rufus.ie/zh" %}
