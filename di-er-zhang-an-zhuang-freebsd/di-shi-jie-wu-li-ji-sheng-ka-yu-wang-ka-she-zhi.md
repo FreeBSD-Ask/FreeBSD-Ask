@@ -42,7 +42,7 @@ $ sysctl hw.snd.default_unit=5
 
 ### 提示
 
-但是 oss 有些缺点，使用 `obs-studio` 无法录制 oss 输出。只能录 oss 输入。看官方论坛里，可以 `virtual_oss` 模拟一个设备实现。
+但是 oss 有些缺点，使用 `obs-studio` 无法录制 oss 输出。只能录制 oss 输入。看官方论坛里，可以 `virtual_oss` 模拟一个设备实现。
 
 但是 `obs-studio` 可以录 pulseaudio 输出的音频。
 
