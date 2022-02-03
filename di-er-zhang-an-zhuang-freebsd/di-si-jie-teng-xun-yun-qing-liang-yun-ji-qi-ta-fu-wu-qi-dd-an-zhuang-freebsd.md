@@ -12,7 +12,7 @@
 
 我们需要下载 [img 格式的 mfsBSD 镜像](https://mfsbsd.vx.sk/files/images/13/amd64/mfsbsd-se-13.0-RELEASE-amd64.img)，我也不知道 mfsBSD 的服务器在国内连接如何，所以就把文件先传到了另一台国内的文件服务器上。
 
-### 为什么不能直接 dd？
+### 为什么不能直接 dd？（错误示范）
 
 我试了在正常的 Linux 系统内直接把 mfsBSD 的 img dd 到硬盘里，重启之后虽然正常加载 bootloader，但是可能是因为系统又对硬盘进行了写入而无法正常挂载内存盘。
 
