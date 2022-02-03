@@ -67,5 +67,5 @@ mfsBSD 和 mfsLinux 镜像的 root 密码默认是 `mfsroot`
 # fetch http://ftp.freebsd.org/pub/FreeBSD/releases/amd64/13.0-RELEASE/MANIFEST
 ```
 
-最后执行 `# bsdinstall` 进行正常的安装即可。请注意大多数服务器是不支持 UEFI 的，仍然是传统的 BIOS,另外请使用 ufs，zfs 会出错。
+最后执行 `# bsdinstall` 进行正常的安装即可（最好使用自动 ufs 分区）。请注意大多数服务器是不支持 UEFI 的，仍然是传统的 BIOS；另外请使用 ufs，zfs 安装时会出错。
 
