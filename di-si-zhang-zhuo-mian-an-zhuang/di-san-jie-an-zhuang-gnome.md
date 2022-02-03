@@ -1,4 +1,6 @@
-# 第三节 安装 Gnome 3
+# 第三节 安装 Gnome
+
+目前 gnome 在不同版本的 pkg 源里的存在形式也是不一样的，在`quarterly`中，为`x11/gnome3`,在`latest`中，为`x11/gnome`。
 
 ## 1.依赖准备
 
