@@ -79,6 +79,7 @@ PDF 请点击 “[Release](https://github.com/FreeBSD-Ask/FreeBSD-Ask/releases)�
 |顾雨欣|1.85|0.85 新年抽奖/829|
 |咕咕咕咕|50|879|
 |笨小孩|50|929|
+|顾白、顾雨欣|2|931|
 
 ### 激励计划
 
