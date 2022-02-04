@@ -22,7 +22,7 @@
 
 ![](../.gitbook/assets/QQ图片20211231155139.png)
 
-使用命令`# ifconfig`看一下，如果第二块网卡`em1`没有获取到 ip 地址,请手动 DHCP 获取一下: `# dhclient em1`即可。
+使用命令`# ifconfig`看一下，如果第二块网卡`em1`没有获取到 ip 地址,请手动 DHCP 获取一下: `# dhclient em1`即可(为了长期生效可在`/etc/rc.conf`中加入`ifconfig_em1="DHCP"`）
 
 如果没有网络（互联网）请设置 DNS 为 `223.5.5.5`。如果不会，请看本章第四节。
 
