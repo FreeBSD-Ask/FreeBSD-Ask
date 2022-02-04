@@ -4,6 +4,6 @@
 
 熟悉 Linux 的人也许会发现，FreeBSD 的包管理方案实际上大约等于以下两大 Linux 发行版包管理器的完美合体：
 
-Arch: Pacman，对应 Pkg（同样秉持 KISS 的理念）
+Arch Linux: Pacman，对应 Pkg（同样秉持 KISS 的理念）
 
-Gentoo: Portage，对应 Ports（Portage 本身就是 Ports 的仿制品）
+Gentoo Linux: Portage，对应 Ports（Portage 本身就是 Ports 的仿制品）
