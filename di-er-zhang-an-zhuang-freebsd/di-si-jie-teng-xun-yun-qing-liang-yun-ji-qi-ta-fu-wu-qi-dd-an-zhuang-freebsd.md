@@ -1,5 +1,8 @@
 # 第十节 腾讯云轻量云及其他服务器 dd 安装 FreeBSD
 
+
+**忠告：如果你还不懂什么是 dd，不建议食用本文。**
+
 ## 视频教程
 
 {% embed url="http://b23.tv/zcfHa4K" %}
@@ -54,6 +57,7 @@ mfsBSD 和 mfsLinux 镜像的 root 密码默认是 `mfsroot`
 # dd if=mfsbsd-se-13.0-RELEASE-amd64.img of=/dev/vda
 # reboot
 ```
+**提示：建议在此处使用服务器的“快照”功能对服务器进行备份，以防以下教程操作失误重来耽误时间。**
 
 ### 安装 FreeBSD
 
