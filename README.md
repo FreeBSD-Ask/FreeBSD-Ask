@@ -102,6 +102,8 @@ PDF 请点击 “[Release](https://github.com/FreeBSD-Ask/FreeBSD-Ask/releases)�
 
 同名小说：起点网——[《FreeBSD从入门到跑路》](https://book.qidian.com/info/1031738676)&#x20;
 
+[FreeBSD Handbook deepl 机器翻译项目](https://handbook.freebsdcn.org)
+
 微信公众号: freebsdzh （扫码关注）
 
 ![](.gitbook/assets/qrcode_for_gh_3b263cc9b20b_258.jpg)
