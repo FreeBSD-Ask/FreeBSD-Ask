@@ -204,7 +204,7 @@ ntpdate ntp.api.bz
 
 将`ServerName update.FreeBSD.org` 修改为`ServerName update.FreeBSD.cn`
 
-## 不受安全支持的版本
+## 不受安全支持的版本（请酌情使用）
 
 不受安全支持的版本也是可以使用二进制源的。
 
