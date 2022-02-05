@@ -228,4 +228,4 @@ root@ykla:~ # pkg_add -r bsdinfo
 Fetching http://ftp-archive.freebsd.org/pub/FreeBSD-Archive/ports/amd64/packages-9.2-release/Latest/bsdinfo.tbz... Done.
 ```
 
-**pkg 是不可用的，会提示找不到`digests.txz`和`repo.txz`，因为当时 pkgng 还没有被官方所支持，仍然使用`pkg_*`命令。**
+**pkg 是不可用的，会提示找不到`digests.txz`和`repo.txz`，因为当时 pkgng 还没有被官方所支持，仍然仅支持使用`pkg_*`命令。**
