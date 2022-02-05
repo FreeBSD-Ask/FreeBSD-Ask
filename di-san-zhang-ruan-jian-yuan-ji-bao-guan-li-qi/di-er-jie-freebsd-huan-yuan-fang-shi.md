@@ -216,7 +216,7 @@ ntpdate ntp.api.bz
 # setenv PACKAGESITE http://ftp-archive.freebsd.org/pub/FreeBSD-Archive/ports/amd64/packages-9.2-release/Latest
 ```
 
-如果 shell 不是 cah，那么:
+如果 shell 不是 csh，那么:
 
 ```
  # export PACKAGESITE=http://ftp-archive.freebsd.org/pub/FreeBSD-Archive/ports/amd64/packages-9.2-release/Latest
