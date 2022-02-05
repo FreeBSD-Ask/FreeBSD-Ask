@@ -83,13 +83,8 @@ PDF 请点击 “[Release](https://github.com/FreeBSD-Ask/FreeBSD-Ask/releases)�
 
 ### 激励计划
 
-代理，bhyve，jail，zfs，UFS，dtrace，GEOM、第十六章 服务器
-
-向大家公开征集以上章节的教程，以完善 https://book.freebsdcn.org 这本书。
-
-要求内容正确完整清晰，遵守编写 wiki 规范。章节划分以我们的目录为准。参考部分应该给出原地址，不得抄袭他人假作原创。
-
-奖励标准是：20 元一节，编写 3 节（不含）以上每节按 30 元计算，上不封顶。征集活动长期有效，以提供先后顺序为准，先到先得。教程直接 Pull 或者群内私聊管理员均可。
+【腾讯文档】FreeBSD 中文社区 2022 教程 激励计划
+https://docs.qq.com/doc/DSUJsUFBHTnVWQmtS
 
 ### 意见反馈
 
