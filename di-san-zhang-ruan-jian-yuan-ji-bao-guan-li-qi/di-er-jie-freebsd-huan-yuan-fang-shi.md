@@ -206,11 +206,11 @@ ntpdate ntp.api.bz
 
 ## 不受安全支持的版本
 
-不受安全支持的版本也是可以使用 pkg 源的。
+不受安全支持的版本也是可以使用二进制源的。
 
 >以下，以`FreeBSD 9.2`为例：
 
-首先切换成可以用的 pkg 源
+首先切换成可以用的二进制源
 
 ```
 # setenv PACKAGESITE http://ftp-archive.freebsd.org/pub/FreeBSD-Archive/ports/amd64/packages-9.2-release/Latest
