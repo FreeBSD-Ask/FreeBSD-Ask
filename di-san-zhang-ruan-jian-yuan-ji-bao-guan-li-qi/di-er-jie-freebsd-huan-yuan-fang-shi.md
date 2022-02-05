@@ -2,7 +2,7 @@
 
 FreeBSD 有四类源，pkg、ports、portsnap、update。
 
-**对于失去安全支持的版本，如 FreeBSD 9.0 是没有 pkg 源可用的，只能使用当时的 ports 编译安装软件。**
+**对于失去安全支持的版本，请参考最后一节**
 
 **本文对于一个源列出了多个镜像站，无需全部配置，只需选择其一即可。**
 
@@ -204,3 +204,28 @@ ntpdate ntp.api.bz
 
 将`ServerName update.FreeBSD.org` 修改为`ServerName update.FreeBSD.cn`
 
+## 不受安全支持的版本
+
+不受安全支持的版本也是可以使用 pkg 源的。
+
+>以下，以`FreeBSD 9.2`为例：
+
+首先切换成可以用的 pkg 源
+
+```
+# setenv PACKAGESITE http://ftp-archive.freebsd.org/pub/FreeBSD-Archive/ports/amd64/packages-9.2-release/Latest
+```
+
+如果 shell 不是 cah，那么:
+
+```
+ # export PACKAGESITE=http://ftp-archive.freebsd.org/pub/FreeBSD-Archive/ports/amd64/packages-9.2-release/Latest
+```
+
+安装示例：现在安装`bsdinfo`。
+```
+root@ykla:~ # pkg_add -r bsdinfo                                                    
+Fetching http://ftp-archive.freebsd.org/pub/FreeBSD-Archive/ports/amd64/packages-9.2-release/Latest/bsdinfo.tbz... Done.
+```
+
+**pkg 在当时是不可用的，会提示找不到`digests.txz`和`repo.txz`，因为当时 pkgng 还没有被官方所支持，仍然使用`pkg_*`命令。**
