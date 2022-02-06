@@ -8,7 +8,7 @@ FreeBSD 有四类源，pkg、ports、portsnap、update。
 
 **目前境内没有官方镜像站，以下均为非官方镜像站。**
 
-## pkg 源:pkg 源提供二进制安装包. 
+## pkg 源:pkg 源提供二进制安装包
 
 pkg 的下载路径是 `/var/cache/pkg/`
 
