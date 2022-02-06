@@ -97,7 +97,7 @@ enabled: yes
 FreeBSD: { enabled: no }
 ```
 
-## FreeBSD.cn
+## FreeBSD.cn(非官方且不稳定，下同）
 
 `# ee /usr/local/etc/pkg/repos/freebsdcn.conf`
 
