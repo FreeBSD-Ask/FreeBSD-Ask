@@ -74,9 +74,9 @@ pkg: PRE-INSTALL script failed
 出现该问题一般是由于 ABI 破坏，更新即可。
 
 ```
-# pkg  install bsdadminscripts`
+# pkg  install bsdadminscripts
 # pkg_libchk
-# port-rebuild`
+# port-rebuild
 ```
 
 ### Newer FreeBSD version for package pkg
