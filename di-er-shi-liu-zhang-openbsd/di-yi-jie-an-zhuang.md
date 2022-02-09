@@ -2,7 +2,7 @@
 
 ## 下载镜像
 
-以 OpenBSD 7.0，AMD 64 架构为例，访问&#x20;
+以 OpenBSD 7.0，AMD 64 架构为例，访问
 
 {% embed url="https://cdn.openbsd.org/pub/OpenBSD/7.0/amd64" %}
 
