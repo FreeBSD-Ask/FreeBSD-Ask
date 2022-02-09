@@ -128,3 +128,4 @@ proftpd.conf解析如下
 ```/usr/local/etc/rc.d/proftpd stop #停止服务```
 
 ```/usr/local/etc/rc.d/proftpd restart #重启服务```
+
