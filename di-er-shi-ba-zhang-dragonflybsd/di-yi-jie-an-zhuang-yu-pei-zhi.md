@@ -1,9 +1,18 @@
 # 第一节 安装与配置
 
+## 换源
+
+```
+# ee /usr/local/etc/pkg/repos/df-latest.conf
+```
+
+找到国内源，把`no`改成`yes`。
+
 ## 中文化
 
 
-`/etc/csh.cshrc`中添加如下内容:
+`/etc/csh.cshrc`中添加:
+
 ```
 setenv LANG "zh_CN.UTF-8"
 ```
