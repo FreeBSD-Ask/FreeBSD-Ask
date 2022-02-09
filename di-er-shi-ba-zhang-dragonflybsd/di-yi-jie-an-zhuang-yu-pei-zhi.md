@@ -6,7 +6,7 @@
 # ee /usr/local/etc/pkg/repos/df-latest.conf
 ```
 
-找到国内源，把`no`改成`yes`。
+找到国内源，把`no`改成`yes`，把之前的源改为`no`。
 
 ## 中文化
 
