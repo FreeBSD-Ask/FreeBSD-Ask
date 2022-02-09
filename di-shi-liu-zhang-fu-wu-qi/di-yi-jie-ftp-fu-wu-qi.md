@@ -127,7 +127,9 @@ DisplayFirstChdir     .message #用户改变目录时显示信息
 
 用法: 
 
-`ftp [选项] [URL]`
+```
+ftp [选项] [URL]
+```
 
 选项：
 
