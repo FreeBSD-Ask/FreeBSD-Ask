@@ -66,7 +66,7 @@ fusefs_load="YES"
 
 ### 显卡驱动
 
-vmware 自动缩放屏幕请安装显卡驱动，即`x11-drivers/xf86-video-vmware`：
+vmware 自动缩放屏幕请安装显卡驱动，即：
 
 `# pkg install xf86-video-vmware`
 
