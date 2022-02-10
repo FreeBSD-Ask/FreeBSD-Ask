@@ -30,6 +30,8 @@ VMware Workstation 16 Player 是个人免费使用的，你也可以选择此版
 
 ## 虚拟机增强工具以及显卡驱动
 
+### 虚拟机增强工具
+
 如果没有桌面：
 
 ```
@@ -62,7 +64,9 @@ vmware_guestd_enable="YES"
 fusefs_load="YES"
 ```
 
-vmware 自动缩放屏幕请安装 x11-drivers/xf86-video-vmware：
+### 显卡驱动
+
+vmware 自动缩放屏幕请安装显卡驱动，即`x11-drivers/xf86-video-vmware`：
 
 `# pkg install xf86-video-vmware`
 
