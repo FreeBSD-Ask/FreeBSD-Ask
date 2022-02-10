@@ -72,6 +72,8 @@ vmware 自动缩放屏幕请安装显卡驱动，即`x11-drivers/xf86-video-vmwa
 
 ### 共享文件夹
 
+请先安装虚拟机增强工具。
+
 ```
 # mount -t .host:/ /mnt/hgfs
 ```
