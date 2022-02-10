@@ -46,21 +46,21 @@ Arch Linux 俗称“**邪教、洗发水**”。这是我所见过的一个最�
 
 ## FreeBSD 与 Linux 不同之处
 
-FreeBSD 仍然使用传统的 INIT 引导，而非 systemd；
+- FreeBSD 仍然使用传统的 INIT 引导，而非 systemd；
 
-FreeBSD root 用户 shell 默认是 csh，而不是 bash；
+- FreeBSD root 用户 shell 默认是 csh，而不是 bash；
 
-FreeBSD 基本系统几乎不包含任何非 BSD 协议的软件，并致力于去 GNU 化（这意味着基本系统不使用 Glibc、GCC 等软件），见
+- FreeBSD 基本系统几乎不包含任何非 BSD 协议的软件，并致力于去 GNU 化（这意味着基本系统不使用 Glibc、GCC 等软件），见
 
 {% embed url="https://wiki.freebsd.org/GPLinBase" %}
 
 
 
-FreeBSD 的用户配置文件和系统配置文件严格分离，即内核和基本系统与第三方应用程序是完全分离的；
+- FreeBSD 的用户配置文件和系统配置文件严格分离，即内核和基本系统与第三方应用程序是完全分离的；
 
-FreeBSD 项目是作为一个完整的操作系统维护的，而非内核与 userland 单独维护；也就是说如果你要使用 FreeBSD，那么就只有一个 FreeBSD 可选；
+- FreeBSD 项目是作为一个完整的操作系统维护的，而非内核与 userland 单独维护；也就是说如果你要使用 FreeBSD，那么就只有一个 FreeBSD 可选；
 
-FreeBSD 没有 free 命令也不支持安装这个包(FreeBSD 早就不使用 procfs 了)，FreeBSD 基本系统自带的文本编辑器有 ee 和 vi（不是软链接到 vim 的 vi，是真实的 vi），没有预装 wget，而是 fetch。
+- FreeBSD 没有 free 命令也不支持安装这个包(FreeBSD 早就不使用 procfs 了)，FreeBSD 基本系统自带的文本编辑器有 ee 和 vi（不是软链接到 vim 的 vi，是真实的 vi），没有预装 wget，而是 fetch。
 
 ## 命令替代/软件替代
 
