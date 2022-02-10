@@ -70,6 +70,8 @@ vmware 自动缩放屏幕请安装显卡驱动，即`x11-drivers/xf86-video-vmwa
 
 `# pkg install xf86-video-vmware`
 
+>wayland 下也需要安装该驱动。
+
 ### 共享文件夹
 
 请先安装虚拟机增强工具。
