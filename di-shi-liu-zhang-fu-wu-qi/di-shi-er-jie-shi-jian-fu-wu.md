@@ -1,7 +1,7 @@
 # 第十二节 时间服务
 
-* 配置时区
-* 同步时间
+- 配置时区
+- 同步时间
 
 ## 选择正确时区
 
@@ -15,19 +15,19 @@
 
 ## 配置同步时间
 
-### 设置ntp服务可用
+### 设置 ntp 服务可用
 
 ```
 # sysrc ntpd_enable="YES"
 ```
 
-### 设置ntp服务开机时候启动
+### 设置 ntp 服务开机时候启动
 
 ```
 # sysrc ntpd_sync_on_start="YES"
 ```
 
-### 编辑`ntp.conf文件`
+### 编辑 `ntp.conf文件`
 
 ```
 # ee /etc/ntp.conf
@@ -51,7 +51,7 @@ server 3.cn.pool.ntp.org
 # service ntpd enable
 ```
 
-### 启动ntp服务
+### 启动 ntp 服务
 
 ```
 # /etc/rc.d/ntpd start
@@ -59,7 +59,7 @@ server 3.cn.pool.ntp.org
 # service ntpd start 
 ```
 
-### 重启ntp服务
+### 重启 ntp 服务
 
 ```
 # /etc/rc.d/ntpd restart

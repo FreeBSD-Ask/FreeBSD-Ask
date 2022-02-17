@@ -4,11 +4,12 @@
 
 IPFIREWALL (IPFW) 是一个由 FreeBSD 发起的防火墙应用软件， 它由 FreeBSD 的志愿者成员编写和维护。
 
-在 FreeBSD 12中，ipfw 已经默认被编译进内核了，它默认会有一条规则，规则号为 `65536`，是不可以删除的，这条规则会把所有流量都切断， 所以还没配置好之前，千万不要随意启动 ipfw，否则就会面临无法连上远程 FreeBSD 的问题。
+在 FreeBSD 12中，ipfw 已经默认被编译进内核了，它默认会有一条规则，规则号为 `65536`，是不可以删除的，这条规则会把所有流量都切断，
+所以还没配置好之前，千万不要随意启动 ipfw，否则就会面临无法连上远程 FreeBSD 的问题。
 
 ## （二）配置ipfw：
 
-1、执行以下命令：
+1. 执行以下命令：
 
 ```
 # sysrc firewall_enable="YES"  # 允许防火墙开机自启
@@ -18,7 +19,7 @@ IPFIREWALL (IPFW) 是一个由 FreeBSD 发起的防火墙应用软件， 它由 
 # sysrc firewall_logif="YES"  # 把日志打到 `ipfw0` 这个设备里
 ```
 
-2、编辑 `/etc/ipfw.rules`文件：
+2. 编辑 `/etc/ipfw.rules` 文件：
 
 ```
 # ee /etc/ipfw.rules 
@@ -59,7 +60,7 @@ $ IPF 500 deny log all from any to any
 
 额外说明： samba 开放 tcp/139,445 端口，udp/137,138 端口
 
-3、启动 ipfw：
+3. 启动 ipfw：
 
 ```
 # service ipfw start
@@ -70,7 +71,7 @@ ifconfig: interface ipfw0 already exists
 Firewall logging pseudo-interface (ipfw0) created.
 ```
 
-4、查看 ipfw 状态：
+4. 查看 ipfw 状态：
 
 ```
 # service ipfw status
@@ -78,7 +79,7 @@ Firewall logging pseudo-interface (ipfw0) created.
 ipfw is enabled
 ```
 
-5、查看 ipfw 规则条目
+5. 查看 ipfw 规则条目
 
 ```
 # ipfw list

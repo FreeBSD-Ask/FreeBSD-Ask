@@ -27,7 +27,7 @@ sysrc XXX_enable="YES"
 
 服务所对应的脚本路径是：`#/usr/local/etc/rc.d/`
 
-当然也可以直接调用 `/etc/rc.d/` 和 `/usr/local/etc/rc.d/` 下的那些脚本`。`
+当然也可以直接调用 `/etc/rc.d/` 和 `/usr/local/etc/rc.d/` 下的那些脚本。
 
 * `# /usr/local/etc/rc.d/XXX reload`
 * `# /usr/local/etc/rc.d/XXX stop`

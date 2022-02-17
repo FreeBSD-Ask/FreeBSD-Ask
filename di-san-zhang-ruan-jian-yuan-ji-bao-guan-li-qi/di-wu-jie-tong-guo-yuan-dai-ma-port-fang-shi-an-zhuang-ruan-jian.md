@@ -25,7 +25,7 @@
 
 `# pkg install axel #下载多线程下载工具#`
 
-新建或者编辑`# ee /etc/make.conf`文件，写入以下两行：
+新建或者编辑 `# ee /etc/make.conf` 文件，写入以下两行：
 
 ```
 FETCH_CMD=axel
@@ -36,11 +36,11 @@ DISABLE_SIZE=yes
 
 ### 进阶
 
-如果不选择 BATCH=yes 的方法手动配置依赖：
+如果不选择 `BATCH=yes` 的方法手动配置依赖：
 
 看看 python 的 ports 在哪：
 
-```
+```shell
 # whereis python
 # python: /usr/ports/lang/python
 ```
@@ -69,19 +69,19 @@ ports 编译的软件也可以转换为 pkg 包
 
 首先更新 Ports 树
 
-```
+```shell
 # portsnap fetch update
 ```
 
 然后列出过时 Ports 组件
-```
+```shell
 # pkg_version -l '<'
 ```
 下边分别列出 2 种 FreeBSD 手册中提及的升级工具:
 
 一、portupgrade
 
-```
+```shell
 # cd /usr/ports/ports-mgmt/portupgrade && make install clean
 # portupgrade -ai #自动升级所有软件
 # portupgrade -R screen #升级单个软件
@@ -89,7 +89,7 @@ ports 编译的软件也可以转换为 pkg 包
 
 二、portmaster （推荐）
 
-```
+```shell
 # cd /usr/ports/ports-mgmt/portmaster && make install clean
 # portmaster -ai #自动升级所有软件
 # portmaster screen #升级单个软件
@@ -102,11 +102,11 @@ Linux 如 gentoo上一般是直接 `-jx` 或者 `jx+1`, `x`为核心数。
 
 FreeBSD ports 多线程编译
 
-```
+```shell
 FORCE_MAKE_JOBS=yes
 MAKE_JOBS_NUMBER=4
 ```
 
 写入 `/etc/make.conf` 没有就新建。
 
-`4` 是处理器核心数，不知道就别改。
+`4` 是处理器核心数，不知道则不改。

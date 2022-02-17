@@ -2,7 +2,8 @@
 
 ##  PostgreSQL
 
-PostgreSQL 是一款自由的对象-关系型数据库，最早发布于 1989 年 6 月。在FreeBSD 上，提供了 9.6、10、11、12、13、14共计6个大版本可选。
+PostgreSQL 是一款自由的对象-关系型数据库，最早发布于 1989 年 6 月。
+在 FreeBSD 上，提供了 9.6、10、11、12、13、14共计6个大版本可选。
 
 ### postgresql 安装示例，6个版本都如此。
 
@@ -117,11 +118,16 @@ root@ykla:~ #
 
 以下教程以 FreeBSD 13.0 为基准。
 
-pgAdmin4 是用于管理 PostgreSQL 数据库服务器的最流行的开源应用程序。pgAdmin4 提供功能丰富的图形用户界面，轻松管理数据库。 它是用 Python 和 Javascript / jQuery 编写的。 它可以在多种环境中使用，如 Linux，Windows，Unix，可在桌面和服务器模式下使用。
+pgAdmin4 是用于管理 PostgreSQL 数据库服务器的最流行的开源应用程序。
+pgAdmin4 提供功能丰富的图形用户界面，轻松管理数据库。 
+它是用 Python 和 Javascript / jQuery 编写的。 
+它可以在多种环境中使用，如 Linux，Windows，Unix，可在桌面和服务器模式下使用。
 
 **注意：在安装 pgAdmin4 前先行安装 PostgreSQL 数据库，否则安装 pgAdmin4 会失败。**
 
-pgAdmin4 需要在 python 环境下运行，并且安装时要通过 python 的 pip 进行安装，所以先安装 python。本文用的默认版本是 Python3.8，请注意，FreeBSD 13 系统上默认没有 python 环境。可通过以下命令查看：
+pgAdmin4 需要在 python 环境下运行，并且安装时要通过 python 的 pip 进行安装，所以先安装 python。
+本文用的默认版本是 Python3.8，请注意，FreeBSD 13 系统上默认没有 python 环境。
+可通过以下命令查看：
 
 ```
 # python
@@ -148,16 +154,18 @@ virtualenv 用来建立一个虚拟的 python 环境，一个专属于项目的 
 
 ### 安装配置 virtualenv
 
-使用 virtualenv 创建独立的 Python 环境。 Virtualenv 会创建一个自己的 Python 安装的环境，它不支持具有全局或另一个虚拟环境的库。 运行以下命令来安装 Virtualenv。
+使用 virtualenv 创建独立的 Python 环境。 
+Virtualenv 会创建一个自己的 Python 安装的环境，它不支持具有全局或另一个虚拟环境的库。 
+运行以下命令来安装 Virtualenv。
 
 ```
-#pkg install py38-virtualenv （本次安装 python 版本是 3.8 故使用 py38）
+# pkg install py38-virtualenv （本次安装 python 版本是 3.8 故使用 py38）
 ```
 
 通过运行以下命令为 pgAdmin4 创建虚拟环境
 
 ```
-#virtualenv-3.8 pgadmin4
+# virtualenv-3.8 pgadmin4
 ```
 
 如果创建完成则有如下显示，在 root 用户的根目录下生成了一个名为 `pgadmin4` 的虚拟环境。
@@ -248,7 +256,7 @@ ntpdate ntp.api.bz
 (pgadmin4) root@ykla:~# ee ./pgadmin4/lib/python3.8/site-packages/pgadmin4/config_local.py
 ```
 
-找到`DEFAULT_SERVER`将默认服务器侦听地址更改为`0.0.0.0`。找到`DEFAULT_SERVER_PORT`可改应用程序监听的端口。
+找到 `DEFAULT_SERVER` 将默认服务器侦听地址更改为 `0.0.0.0`。找到 `DEFAULT_SERVER_PORT` 可改应用程序监听的端口。
 
 实例如下:
 
@@ -291,16 +299,16 @@ Starting pgAdmin 4. Please navigate to http://0.0.0.0:5050 in your browser.
 
 ## 保持 pgAdmin4 后台运行
 
-如果服务关闭下次要运行时需使用 pgadmin4 的安装用户（此处是`root`）进入根目录，执行如下命令：
+如果服务关闭下次要运行时需使用 pgadmin4 的安装用户（此处是 `root`）进入根目录，执行如下命令：
 
 ```
 root@ykla:~# source pgadmin4/bin/activate.csh
 (pgadmin4) root@ykla:~# pgadmin4 & 
 ```
 
-提示：`&`表示后台运行
+提示：`&` 表示后台运行
 
-服务启动后在当前界面中输入 `&`按回车键,可切换至前台命令行，让服务程序在后台运行。
+服务启动后在当前界面中输入 `&` 按回车键,可切换至前台命令行，让服务程序在后台运行。
 
 ## 升级 pgAdmin4
 

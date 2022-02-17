@@ -21,8 +21,6 @@
 
 ### 启动
 
-
-
 ```
 # sysrc nginx_enable=YES
 # service nginx start

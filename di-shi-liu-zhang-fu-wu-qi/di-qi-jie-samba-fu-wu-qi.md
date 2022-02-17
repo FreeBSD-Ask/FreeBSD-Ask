@@ -10,13 +10,13 @@
 
 ## 配置 samba
 
-（1）打开/etc/rc.conf
+1. 打开/etc/rc.conf
 
 ```
 # ee /etc/rc.conf
 ```
 
-（2）在 `/etc/rc.conf` 最后加入如下，并保存：
+2. 在 `/etc/rc.conf` 最后加入如下，并保存：
 
 ```
 nmbd_enable="YES"
@@ -25,7 +25,7 @@ samba_enable="YES"
 samba_server_enable="YES"
 ```
 
-（3）创建 `/usr/local/etc/smb4.conf`，添加如下内容并保存
+3. 创建 `/usr/local/etc/smb4.conf`，添加如下内容并保存
 
 ```
 #vi /usr/local/etc/smb4.conf
@@ -40,19 +40,19 @@ samba_server_enable="YES"
     create mask = 0755
 ```
 
-（4）创建 samba root 用户：
+4. 创建 samba root 用户：
 
 ```
 # smbpasswd -a root
 ```
 
-（5）进入`/usr/local/etc`
+5. 进入 `/usr/local/etc`
 
 ```
 # cd /usr/local/etc
 ```
 
-（6）再执行
+6. 再执行
 
 ```
 # service samba_server start //启动命令
@@ -64,13 +64,13 @@ samba_server_enable="YES"
 # service samba_server restart //重启命令
 ```
 
-（7）查看 samba 状态：
+7. 查看 samba 状态：
 
 ```
 # service samba_server status
 ```
 
-（8）在 windows 下利用 192.168.X.X 访问共享文件夹（以实际 IP 为准，Windows 需要先开启 SMB 1.0 支持）
+8. 在 windows 下利用 192.168.X.X 访问共享文件夹（以实际 IP 为准，Windows 需要先开启 SMB 1.0 支持）
 
 ```
 192.168.X.X

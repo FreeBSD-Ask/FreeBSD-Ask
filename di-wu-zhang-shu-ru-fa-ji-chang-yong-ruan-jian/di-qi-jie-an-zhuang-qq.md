@@ -28,7 +28,7 @@ FreeBSD 安装 Linux QQ 方法
 
 手动下载。
 
-安装Linux QQ：
+安装 Linux QQ：
 
 ```
 # pkg install archivers/rpm4
