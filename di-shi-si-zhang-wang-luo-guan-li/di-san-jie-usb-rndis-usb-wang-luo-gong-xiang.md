@@ -1,4 +1,4 @@
-# 第九节 USB RNDIS (USB 网络共享)
+# 第三节 USB RNDIS (USB 网络共享)
 
 该教程在小米手机上测试通过，理论上同时支持 Android 和 iOS。
 
