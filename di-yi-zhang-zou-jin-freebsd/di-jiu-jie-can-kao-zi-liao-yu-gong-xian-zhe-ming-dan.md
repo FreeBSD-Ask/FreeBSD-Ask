@@ -2,7 +2,7 @@
 
 ## 参考书目
 
-　　相关书籍：《 Absolute FreeBSD 3rd 》《FreeBSD操作系统设计与实现（原书第2版）》。旧的变化也不是很大。不像 linux 有这么多入门书籍，什么 XX 秒精通 Linux，Linux XX 学，_linux_ 。当然上边这些书，学 Linux 的也尽量别看，质量太差。但是由于历史上的原因，看 UNIX 相关书籍即可。
+相关书籍：《Absolute FreeBSD 3rd》、《FreeBSD操作系统设计与实现（原书第2版）》。旧的变化也不是很大。不像 linux 有这么多入门书籍，什么 《XX 秒精通 Linux》，《Linux XX 学》……当然上边这些书，学 Linux 的也尽量别看，质量太差。由于历史上的原因，看 UNIX 相关书籍即可。
 
 ![FreeBSD 操作系统设计与实现（原书第2版）](../.gitbook/assets/zcover.jpg)
 
@@ -43,6 +43,8 @@
 Shengyun
 
 初见4536251
+
+[魔王酱](https://github.com/maouchandesu)
 
 极品盗号
 

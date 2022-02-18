@@ -8,26 +8,27 @@
 
 ```
 # make buildworld #编译基本系统
-# make installworld DESTDIR=/usr/jail/ #安装到jail
+# make installworld DESTDIR=/usr/jail/ #安装到 jail
 # make distribution DESTDIR=/usr/jail/ #或者
 ```
 
 方案二
 
-```
-#下载base.txz 或者从iso提取baes.txz，然后解压到jail
-# tar -xvf base.txz -C /usr/jail/
-#挂载 devfs文件系统。(不是必须)
-# mount -t devfs devfs /usr/jail/dev
-```
+下载 base.txz 或者从 iso 提取 baes.txz，然后解压到 jail
 
-### 写入rc.conf
+`# tar -xvf base.txz -C /usr/jail/`
+
+挂载 devfs 文件系统。(不是必须)
+
+`# mount -t devfs devfs /usr/jail/dev`
+
+### 写入 `rc.conf`
 
 ```
 # sysrc jail_enable="YES"
 ```
 
-创建jail.conf文件(可以写进rc.conf但这样便于管理)
+创建 `jail.conf` 文件(可以写进 `rc.conf` 但这样便于管理)
 
 ```
 www {
@@ -43,7 +44,7 @@ exec.stop = "/bin/sh /etc/rc.shutdown"; # 关闭命令
 
 ## 管理
 
-jails查看在线 jail 信息列表
+jails 查看在线 jail 信息列表
 
 ```
 JID IP Address    Hostname   Path
@@ -90,7 +91,7 @@ JID IP Address    Hostname   Path
 
 ### 开启ping
 
-写入/etc/jail.conf
+写入 `/etc/jail.conf`
 
 ```
 allow.raw_sockets=1;
@@ -99,7 +100,7 @@ allow.sysvipc=1;
 
 ### 网络
 
-创建`/etc/resolv.conf`,并编辑
+创建 `/etc/resolv.conf`,并编辑
 
 ```
 search lan
@@ -111,7 +112,7 @@ nameserver 223.6.6.6
 #不要写路由器地址
 ```
 
-## 创建jail目录
+## 创建 jail 目录
 
 创建4个 分别是模板 骨架 数据 项目
 

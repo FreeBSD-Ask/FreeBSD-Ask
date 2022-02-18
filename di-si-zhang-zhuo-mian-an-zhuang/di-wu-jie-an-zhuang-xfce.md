@@ -36,7 +36,7 @@
 
 ## 设置中文显示
 
-在`.xinitrc`添加以下内容（但要在最前面才正常启用） `export LANG=zh_CN.UTF-8`
+在 `.xinitrc` 添加以下内容（但要在最前面才正常启用） `export LANG=zh_CN.UTF-8`
 
 ## 可选配置
 
@@ -57,7 +57,7 @@
 配置文件：
 
 ```
-#ee ~/.xinitrc 
+# ee ~/.xinitrc 
 ```
 
 在该文件中添加以下内容:
@@ -90,7 +90,7 @@ $ xfconf-query -c xsettings -p /Gtk/Modules -n -t string -s "appmenu-gtk-module"
 
 tcsh 配置:
 
-`home`目录创建`.tcshrc`,
+`home` 目录创建 `.tcshrc`,
 
 写入以下配置
 

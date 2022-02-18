@@ -18,22 +18,22 @@ FreeBSD 已从 Linux 移植了显卡驱动，理论上，A 卡 N 卡均可在 am
 
 ### 安装驱动
 
-注意，如果要通过 ports 安装必须先取得系统源代码。请见第二十一章。
+注意，如果要通过 `ports` 安装必须先取得系统源代码。请见第二十一章。
 
-* FreeBSD 12.0: `#pkg install drm-fbsd12.0-kmod`
+- FreeBSD 12.0: `#pkg install drm-fbsd12.0-kmod`
 
 注意：除了 12.0，对于任意 12.X 均应该安装 `drm-fbsd12.0-kmod` ，但应该使用 port 在本地重新构建而不应该使用 pkg 进行安装，否则不会正常运行。
 
-* FreeBSD 13：`# pkg install drm-fbsd13-kmod`
-* FreeBSD 14: `# cd /usr/ports/graphics/drm-kmod/ && make BATCH=yes install clean`
+- FreeBSD 13：`# pkg install drm-fbsd13-kmod`
+- FreeBSD 14: `# cd /usr/ports/graphics/drm-kmod/ && make BATCH=yes install clean`
 
 ### 加载显卡
 
 打开`/etc/rc.conf`:
 
-* 如果为 intel 核芯显卡，添加 `kld_list="i915kms"`
-* 如果为 HD7000 以后的 AMD 显卡，添加 `kld_list="amdgpu"`
-* 如果为 HD7000 以前的 AMD 显卡，添加 `kld_list="radeonkms"`
+- 如果为 intel 核芯显卡，添加 `kld_list="i915kms"`
+- 如果为 HD7000 以后的 AMD 显卡，添加 `kld_list="amdgpu"`
+- 如果为 HD7000 以前的 AMD 显卡，添加 `kld_list="radeonkms"`
 
 ### 视频硬解
 
@@ -42,9 +42,9 @@ FreeBSD 已从 Linux 移植了显卡驱动，理论上，A 卡 N 卡均可在 am
 ## 英伟达显卡
 
 ```
-#安装几个 nvidia 相关的包
+# 安装几个 nvidia 相关的包
 # pkg install nvidia-driver nvidia-settings nvidia-xconfig
-#配置驱动
+# 配置驱动
 # sysrc kld_list+="nvidia-modeset"
 ```
 
@@ -64,7 +64,7 @@ $ nvidia-smi
 
 然后重新启动就可以发现正常使用 nvidia 驱动了
 
-**注意**： 默认情况下，通过 pkg 安装的 nvidia-driver 是包含 `linux` 兼容层支持的, 如果要使用 Linux 软件，需要执行以下命令，（实际上使用linux兼容层，以下命令是必须的。） 如果不需要使用 Linux 兼容层，则不需要执行。
+**注意**： 默认情况下，通过 pkg 安装的 nvidia-driver 是包含 Linux 兼容层支持的, 如果要使用 Linux 软件，需要执行以下命令，（实际上使用linux兼容层，以下命令是必须的。） 如果不需要使用 Linux 兼容层，则不需要执行。
 
 ```
 # sysrc linux_enable="YES"

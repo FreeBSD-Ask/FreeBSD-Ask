@@ -1,6 +1,6 @@
 # 第五节 Linux 社区已经成为了一个肮脏的泥潭
 
-标题这句话是 Linux 内核首席维护者、Linux 之父 Linus Torvalds 所说的。原话是（The Linux community is now a dirty quagmire）。
+标题这句话是 Linux 内核首席维护者、Linux 之父 Linus Torvalds 所说的。原话是 “The Linux community is now a dirty quagmire”。
 
 这句话不仅仅体现在内核开发中，而是体现在 Linux 的各个阶段，包括不限于国内的各种 Linux 社区社团组织。本文主要讨论的就是后者。至于 Linux 内核、systemd、Code of Conduct 那些乱七八糟的争议问题，更是泥潭一滩。
 
@@ -44,7 +44,20 @@
 
 ——以上发生在 RockyLinux 中文群组 QQ 群里。
 
-ipxe isn't a priority at the moment. We need many more mirrors around the world in more countries for that to be useful.Considering most people don't network boot from their personal notebooks/desktops, I call bullshit.Network booting is typical in data centers and large enterprises.omg bro you're trying so hard to put your malware inside artix.You can't audit it. You and your images are not part of our infrastructure. Which means we have no control over it and therefore cannot stand behind it.As long as you don't share it here, you're are fine. It is unofficial and potentially very dangerous.i see,i think they force me to talk about bedrock.Again, your response has nothing to do with the conversation... your translator is pure shit.What is the point having those in the repo?, one cannot use them.
+ipxe isn't a priority at the moment.
+We need many more mirrors around the world in more countries for that to be useful.
+Considering most people don't network boot from their personal notebooks/desktops, I call bullshit.
+Network booting is typical in data centers and large enterprises.
+omg bro you're trying so hard to put your malware inside artix.
+You can't audit it. 
+You and your images are not part of our infrastructure.
+Which means we have no control over it and therefore cannot stand behind it.
+As long as you don't share it here, you're are fine. 
+It is unofficial and potentially very dangerous.
+i see,i think they force me to talk about bedrock.
+Again, your response has nothing to do with the conversation... 
+your translator is pure shit.
+What is the point having those in the repo?, one cannot use them.
 
 ——以上发生在 telegram @artixlinux 群组。
 

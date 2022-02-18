@@ -8,7 +8,7 @@
 
 ### 桌面支持
 
-上一节安装时，我们屏蔽了桌面选项。这一步我们重新开启。打开 `/etc/sysctl.conf`，添加一行`machdep.allowaperture=2` 。
+上一节安装时，我们屏蔽了桌面选项。这一步我们重新开启。打开 `/etc/sysctl.conf`，添加一行 `machdep.allowaperture=2` 。
 
 ### 修改软件源
 
@@ -30,7 +30,7 @@
 
 修改shell： `chsh`
  
- 示例：`# chsh -s /usr/local/bin/bash $USER`
+示例：`# chsh -s /usr/local/bin/bash $USER`
 
 ## 软件管理
 
@@ -53,11 +53,12 @@ $ cd media
 ```
 ### 查看盘符
 
-使用`dmesg`命令来查看新插入的盘符，如格式为 fat32 的 U盘，可能在 OpenBSD 系统里盘符为 `sd1` 。
+使用 `dmesg` 命令来查看新插入的盘符，如格式为 fat32 的 U盘，可能在 OpenBSD 系统里盘符为 `sd1` 。
 
 ### 检查分区
 
 如插入的盘符为 `sd1`，则输入 `disklabel sd1` 查看分区情况。如下
+
 ```
 #                size           offset  fstype [fsize bsize   cpg]
  c:         60062500                0  unused                    
@@ -87,8 +88,7 @@ OpenBSD 可挂载的外接硬盘格式有 NTFS、ext2/ext3 以及 CD 磁盘等�
 
 ## 无线测试
 
-OpenBSD 里的无线网络，配置文件通常是 `hostname.if` ，其中 `if` 为无线驱动名称+序号。如一台笔记本无线型号为 rtl8188cu ，OpenBSD 下驱动为 rtwn ，序号从 0 开始。为了让系统自动加载无线，可打开
- `/etc/hostname.rtwn0` 文件 ，而后添加：
+OpenBSD 里的无线网络，配置文件通常是 `hostname.if` ，其中 `if` 为无线驱动名称+序号。如一台笔记本无线型号为 rtl8188cu ，OpenBSD 下驱动为 rtwn ，序号从 0 开始。为了让系统自动加载无线，可打开 `/etc/hostname.rtwn0` 文件 ，而后添加：
 
 ```
 dhcp 
@@ -100,11 +100,11 @@ nwid '无线名称' wpakey '无线密码'
 
 ### 加载触摸板
 
-打开 `/etc/wsconsctl.conf`， 添加一行`mouse.tp.tapping=1` 。
+打开 `/etc/wsconsctl.conf`， 添加一行 `mouse.tp.tapping=1` 。
 
 ### 加载多线程
 
-打开 `/etc/sysctl.conf` ，添加一行 `hw.smt=1` 。
+打开 `/etc/sysctl.conf`，添加一行 `hw.smt=1` 。
 
 ### 相关资料
 

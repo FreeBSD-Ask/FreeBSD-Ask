@@ -4,7 +4,7 @@
 
 FreeBSD 安装 Linux QQ 方法
 
-**1、安装 Linux 兼容层：**
+1. **安装 Linux 兼容层：**
 
 `# pkg install linux-c7 linux-c7-gtk2 linux-c7-libxkbcommon`
 
@@ -15,7 +15,7 @@ FreeBSD 安装 Linux QQ 方法
 # sysrc kld_list="linux linux64"
 ```
 
-**2、下载 Linux QQ：**
+2. **下载 Linux QQ：**
 
 ```
 # mkdir /home/work
@@ -28,7 +28,7 @@ FreeBSD 安装 Linux QQ 方法
 
 手动下载。
 
-安装Linux QQ：
+安装 Linux QQ：
 
 ```
 # pkg install archivers/rpm4
@@ -36,9 +36,9 @@ FreeBSD 安装 Linux QQ 方法
 # rpm2cpio < /home/work/linuxqq_2.0.0-b2-1089_x86_64.rpm | cpio -id
 ```
 
-**3、下载并安装 Linux QQ 所需依赖：**
+3. **下载并安装 Linux QQ 所需依赖：**
 
-由于未知原因，安装的linux QQ 无法输入，需要安装以下依赖才可以输入文字，但是只摸索了Fcitx 输入法框架下的依赖。
+由于未知原因，安装的 Linux QQ 无法输入，需要安装以下依赖才可以输入文字，但是只摸索了 Fcitx 输入法框架下的依赖。
 
 ```
 # cd /home/work
@@ -66,14 +66,14 @@ FreeBSD 安装 Linux QQ 方法
 # git clone https://gitee.com/ykla/Linux-QQ.git
 ```
 
-其余步骤自行参考。 境外用户可以使用 github：
+其余步骤自行参考。 境外用户可以使用 Github：
 
 {% embed url="https://github.com/ykla/FreeBSD-Linux-QQ" %}
 
-**4、刷新 gtk 缓存：**
+4. **刷新 gtk 缓存：**
 
 `# /compat/linux/usr/bin/gtk-query-immodules-2.0-64 --update-cache`
 
-**5、运行 Linux QQ：**
+5. **运行 Linux QQ：**
 
 `$ /compat/linux/usr/local/bin/qq`

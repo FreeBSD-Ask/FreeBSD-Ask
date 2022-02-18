@@ -20,7 +20,7 @@
 %admin ALL=(ALL) ALL
 ```
 
-`wheel`内容如下，多加一行 `NOPASSWD:` ，使用 `sudo` 时不需要输入密码：
+`wheel` 内容如下，多加一行 `NOPASSWD:` ，使用 `sudo` 时不需要输入密码：
 
 ```
 %wheel ALL=(ALL) NOPASSWD:ALL

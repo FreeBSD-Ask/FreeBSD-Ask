@@ -46,7 +46,7 @@ root@localhost [(none)]>
 
 ### 修改密码
 
-设置密码为`z`，然后刷新权限。
+设置密码为 `z`，然后刷新权限。
 
 ```
 root@localhost [(none)]> alter user 'root'@'localhost' identified by 'z';

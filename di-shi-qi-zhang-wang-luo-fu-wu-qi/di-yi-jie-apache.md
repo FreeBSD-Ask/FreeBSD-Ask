@@ -20,7 +20,7 @@
 # 添加服务开机自启
 # sysrc apache24_enable=YES
 
-#启动服务
+# 启动服务
 # service apache24 start
 
 # 查看状态

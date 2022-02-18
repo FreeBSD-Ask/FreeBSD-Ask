@@ -6,18 +6,18 @@
 # ee /usr/local/etc/pkg/repos/df-latest.conf
 ```
 
-找到国内源，把`no`改成`yes`，把之前的源改为`no`。
+找到国内源，把 `no` 改成 `yes`，把之前的源改为 `no`。
 
 ## 中文化
 
 
-`/etc/csh.cshrc`中添加:
+`/etc/csh.cshrc` 中添加:
 
 ```
 setenv LANG "zh_CN.UTF-8"
 ```
 
-在`/etc/profile`文件中添加:
+在 `/etc/profile` 文件中添加:
 
 ```
 export LANG=zh_CN.UTF-8

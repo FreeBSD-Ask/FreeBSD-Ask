@@ -3,11 +3,13 @@
 OpenBSD Packet Filter(PF) 是一款自 OpenBSD 移植来的防火墙，提供了大量功能，包括 ALTQ (Alternate Queuing， 交错队列)。
 
 如需启用，可以在终端执行命令： 
+
 ```
 # cp /usr/share/examples/pf/pf.conf /etc #复制示例文件作为默认配置规则集文件，否则 pf 无法启动 
 # service pf enable #设置 pf 开机启动，也可以通过 bsdconfig 设置 pf_enable 
 # service pf start  #启动 pf 
 ```
+
 pf 的管理命令为 `pfctl`，常用操作示例如下： 
 
 ```
@@ -17,12 +19,17 @@ pf 的管理命令为 `pfctl`，常用操作示例如下：
 
 # pfctl -f /etc/pf.conf #加载规则集文件中的规则 
 
-# pfctl -nf /etc/pf.conf #解析规则，但不加载。-f 参数还可以与其他参数配合，如-N 表示只载入 NAT 规则， -R 表示只载入过滤规则，-A 只载入队列规则，-O 只载入选项规则 
+# pfctl -nf /etc/pf.conf #解析规则，但不加载。-f 参数还可以与其他参数配合，如 -N 表示只载入 NAT 规则， -R 表示只载入过滤规则，-A 只载入队列规则，-O 只载入选项规则 
 
 # pfctl -s all #查看 pf 所有对象信息，如果想查看特定对象信息，可以用 nat、queue、rules、Anchors、states、 Sources、info、Running、labels、timeouts、memory、Tables、osfp、Interfaces 替换 all
 
-# pfctl -F all #清理 pf 所有规则，如果想查看特定规则，可以用 nat、queue、rules、states、Sources、info、 Tables、osfp 替换 all 不过以上操作并没有对规则的管理，因此还需要修改规则集文件，常用示例如下： 
+# pfctl -F all #清理 pf 所有规则，
 ```
+
+如果想查看特定规则，可以用 nat、queue、rules、states、Sources、info、 Tables、osfp 替换 all。
+
+不过以上操作并没有对规则的管理，因此还需要修改规则集文件，常用示例如下： 
+
 ```
 # scrub in all #整理所有输入的数据
 

@@ -29,7 +29,7 @@
 rsync-3.2.3            
 ```
 
-#### 新建需要备份的文件夹`test`，并且设置其属主为 `root`，以及在其内部新建测试文件
+#### 新建需要备份的文件夹 `test`，并且设置其属主为 `root`，以及在其内部新建测试文件
 
 ```
 # mkdir test
@@ -37,7 +37,7 @@ rsync-3.2.3
 # touch txt001 /home/test/
 ```
 
-#### 编辑`rsyncd.conf`文件
+#### 编辑 `rsyncd.conf` 文件
 
 ```
 # ee /usr/local/etc/rsync/rsyncd.conf

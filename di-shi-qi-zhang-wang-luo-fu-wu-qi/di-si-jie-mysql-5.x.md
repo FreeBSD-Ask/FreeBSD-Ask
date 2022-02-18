@@ -1,6 +1,6 @@
 # 第四节 MySQL 5.X
 
-## mysql 5.5（请参考5.6）/5.6
+## mysql 5.5（请参考 5.6）/5.6
 
 ### 安装
 
@@ -134,7 +134,7 @@ mysql>
 ```
 ## mysql 5.7
 
-注意：如果是从旧版本升级，请先执行`mysql_upgrade`
+注意：如果是从旧版本升级，请先执行 `mysql_upgrade`
 
 ### 安装
 
@@ -151,7 +151,7 @@ mysql>
 # sysrc mysql_enable=YES
 # service mysql-server start
 ```
-示例输出(可以看到密码在`/root/.mysql_secret`文件夹下，是`q(<p2ZZ>lX/:`
+示例输出(可以看到密码在 `/root/.mysql_secret` 文件夹下，是 `q(<p2ZZ>lX/:`
 ```
 root@ykla:~ # sysrc mysql_enable=YES
 mysql_enable:  -> YES
@@ -188,7 +188,7 @@ root@localhost [(none)]>
 ```
 ### 修改密码
 
-将现在的密码修改为`your_new_password`，然后刷新权限。
+将现在的密码修改为 `your_new_password`，然后刷新权限。
 
 ```
 root@localhost [(none)]> SET PASSWORD = PASSWORD('your_new_password');

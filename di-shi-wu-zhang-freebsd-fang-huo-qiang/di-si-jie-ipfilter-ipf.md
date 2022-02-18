@@ -3,6 +3,7 @@
 IPF是一款开源软件，作者 Darren Reed。
 
 如果想启用 ipf，可以执行以下命令： 
+
 ```
 #ipfilter 
 
@@ -14,8 +15,13 @@ IPF是一款开源软件，作者 Darren Reed。
 
 # service ipnat enable #设置 ipnat 开机启动，也可以通过 bsdconfig 设置 ipnat_enable 
 
-# service ipnat start #启动 ipnat。注意，ipfilter 服务重启后，ipnat 也需要重启 ipf 的管理命令主要用 ipf、ipfstat 和 ipnat，常用操作示例如下： 
+# service ipnat start #启动 ipnat。
 ```
+
+注意，ipfilter 服务重启后，ipnat 也需要重启。
+
+ipf 的管理命令主要用 ipf、ipfstat 和 ipnat，常用操作示例如下： 
+
 ```
 # ipf -E #启动 ipfilter，相当于 service ipfilter start 
 
@@ -56,7 +62,7 @@ pass out quick proto icmp from 192.168.1.184 to any icmp-type 0 #允许 tracerou
 pass out quick proto udp from 192.168.1.184 to any port 33434 >< 34500 keep state #traceroute 默认协议 UDP， 端口号从 33434 开始，每转发一次端口号加 1 
 ```
 
-下面根据我的操作系统整理规则集文件`/etc/ipf.rules` 如下：
+下面根据我的操作系统整理规则集文件 `/etc/ipf.rules` 如下：
 
 ```
 block in all
@@ -86,11 +92,12 @@ pass out quick proto udp from 192.168.1.184 to any port 33434 >< 34500 keep stat
 pass in quick proto tcp from any to 192.168.1.184 port = 8080 #数据转发前要放开相应端口 
 ```
 
-然后再整理 NAT 规则集文件`/etc/ipnat.rules`如下： 
+然后再整理 NAT 规则集文件 `/etc/ipnat.rules` 如下： 
 
 ```
 # rdr em0 192.168.1.184 port 8080 -> 192.168.1.184 port 80 #设置本机 8080 到 80 端口的映射 
 ```
+
 保存文件，接下来在终端执行命令： 
 
 ```

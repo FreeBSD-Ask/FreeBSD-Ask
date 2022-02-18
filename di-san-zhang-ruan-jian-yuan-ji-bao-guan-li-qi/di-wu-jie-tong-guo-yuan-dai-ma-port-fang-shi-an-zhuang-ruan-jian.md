@@ -25,7 +25,7 @@
 
 `# pkg install axel #下载多线程下载工具#`
 
-新建或者编辑`# ee /etc/make.conf`文件，写入以下两行：
+新建或者编辑 `# ee /etc/make.conf` 文件，写入以下两行：
 
 ```
 FETCH_CMD=axel
@@ -36,7 +36,7 @@ DISABLE_SIZE=yes
 
 ### 进阶
 
-如果不选择 BATCH=yes 的方法手动配置依赖：
+如果不选择 `BATCH=yes` 的方法手动配置依赖：
 
 看看 python 的 ports 在哪：
 
@@ -98,7 +98,7 @@ ports 编译的软件也可以转换为 pkg 包
 
 ## FreeBSD ports 多线程编译
 
-Linux 如 gentoo上一般是直接 `-jx` 或者 `jx+1`, `x`为核心数。
+Linux 如 gentoo上一般是直接 `-jx` 或者 `jx+1`, `x` 为核心数。
 
 FreeBSD ports 多线程编译
 

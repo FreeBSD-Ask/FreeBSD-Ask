@@ -13,7 +13,7 @@
 
 ![](../.gitbook/assets/安装2.png)
 
-点击 ：“install” 进行安装。
+选择 `install`,按下 回车键 进行安装。
 
 ![](../.gitbook/assets/安装3.png)
 
@@ -25,7 +25,7 @@
 
 ![](../.gitbook/assets/安装5.png)
 
-推荐：只选 `src`以及`lib32`。即使选了 `ports` 也不会安装的，还是空的。
+推荐：只选 `src` 以及 `lib32` 。即使选了 `ports` 也不会安装的，还是空的。
 
 |选项|解释|
 |:---:|:---:|

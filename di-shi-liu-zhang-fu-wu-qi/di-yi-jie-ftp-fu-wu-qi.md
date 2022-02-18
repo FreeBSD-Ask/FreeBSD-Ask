@@ -1,6 +1,6 @@
 # 第一节 FTP 服务器
 
->**警告：该教程仍在进行测试，请略过。**
+> **警告：该教程仍在进行测试，请略过。**
 
 FTP 意为文件传输协议。使用 FTP 服务搭建服务器可以快速传输文件。
 
@@ -32,13 +32,13 @@ FTP 意为文件传输协议。使用 FTP 服务搭建服务器可以快速传�
 # touch /var/run/proftpd/proftpd.scoreboard
 ```
 
-使用`pw`命令添加访问 ftp 服务器用户组：
+使用 `pw` 命令添加访问 ftp 服务器用户组：
 
 ```
 # pw groupadd -n ftp
 ```
 
-给 ftp 服务器设立主目录，名字可以随便写，本文以`youftp`为例：
+给 ftp 服务器设立主目录，名字可以随便写，本文以 `youftp` 为例：
 
 ```
 # mkdir /youftp
@@ -50,7 +50,7 @@ FTP 意为文件传输协议。使用 FTP 服务搭建服务器可以快速传�
 # ee /usr/local/etc/proftpd.conf
 ```
 
-`proftpd.conf`(部分)解析如下
+`proftpd.conf` (部分)解析如下
 
 ```
 ServerName          "youftp" #服务器名 自行修改
@@ -112,7 +112,7 @@ DisplayFirstChdir     .message #用户改变目录时显示信息
 ```
 #### 举例
 
-阻止用户组`students`上传文件,重命名,删除目录 在   /usr/local/homework  中
+阻止用户组 `students` 上传文件、重命名、删除目录 在 `/usr/local/homework`  中
 ```
 <directory /usr/local/homework>
    <limit APPE RNTO RMD>
@@ -126,7 +126,7 @@ DisplayFirstChdir     .message #用户改变目录时显示信息
 
 ## **连接到 FTP 服务器**
 
-使用`ftp`命令可以快速连接到 FTP 服务器。
+使用 `ftp` 命令可以快速连接到 FTP 服务器。
 
 用法: 
 
@@ -138,44 +138,46 @@ ftp [选项] [URL]
 
 `-4` 强制使用 IPv4 协议连接
 
-`-6`强制使用 IPv6 协议连接
+`-6` 强制使用 IPv6 协议连接
 
 `-a` 使用匿名登录
 
-`-q [quittime]` 在设定时间后连接失败则自动放弃连接
+`-q` [quittime] 在设定时间后连接失败则自动放弃连接
 
-`-r [wait]` 每隔`wait`秒发送一次连接请求
+`-r` [wait] 每隔 `wait` 秒发送一次连接请求
 
 `-A` 强制使用主动模式
 
 `-d` 开启调试模式
 
-`-v`开启啰嗦模式
+`-v` 开启啰嗦模式
 
 `-V` 关闭啰嗦模式
 
+
 #### 登录后的命令：
 
-`account [passwd]` 提交补充密码
+```
+account [passwd] 提交补充密码
 
-`append [locol-file] [remote-file]` 以`remote-file`为文件名向服务器上传本地文件`local-file`
+append [locol-file] [remote-file] 以 remote-file 为文件名向服务器上传本地文件 local-file
 
-`ascii` 将FTP文件传送类型设置为`ASCII`模式
+ascii 将FTP文件传送类型设置为 ASCII 模式
 
-`bell` 在文件传送完后发出提示音
+bell 在文件传送完后发出提示音
 
-`bye` 结束与服务器的会话
+bye 结束与服务器的会话
 
-`cd`切换目录
+cd 切换目录
 
-`cdup` 退回父目录
+cdup 退回父目录
 
-`delete`删除文件
+delete 删除文件
 
-`dir` 显示该目录下的文件及文件夹
+dir 显示该目录下的文件及文件夹
 
-`features` 显示该服务器支持的功能
+features 显示该服务器支持的功能
 
-`get remote-fil` 下载服务器上的 remote-file
-
+get remote-fil 下载服务器上的 remote-file
+```
 

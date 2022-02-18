@@ -19,7 +19,7 @@ TCP BBR 是一种 Google 开发的拥塞控制算法。作用有两个，
 
 `# ee GENERIC-bbr`
 
-调整配置，修改`ident`的值为`GENERIC-bbr`，在`ident`这一项下面加入以下项目：
+调整配置，修改 `ident` 的值为 `GENERIC-bbr`，在 `ident` 这一项下面加入以下项目：
 
 ```
 options TCPHPTS
@@ -27,7 +27,7 @@ options RATELIMIT
 options WITH_EXTRA_TCP_STACKS=1
 ```
 
-新建`/etc/src.conf`，内容为:
+新建 `/etc/src.conf`，内容为:
 
 ```
 KERNCONF=GENERIC-bbr
@@ -43,7 +43,7 @@ MALLOC_PRODUCTION=yes
 # make -jN+1
 ```
 
-其中`N`建议为`CPU 核心数`。
+其中 `N` 建议为 `CPU 核心数`。
 
 `# make install`
 
@@ -51,7 +51,7 @@ MALLOC_PRODUCTION=yes
 
 `# uname -a`
 
-如果显示出`GENERIC-bbr`，则表示 TCP BBR 内核编译并安装成功。
+如果显示出 `GENERIC-bbr`，则表示 TCP BBR 内核编译并安装成功。
 
 **配置和加载 BBR 模块**
 
@@ -65,7 +65,7 @@ MALLOC_PRODUCTION=yes
 
 `# sysctl net.inet.tcp.functions_default`
 
-如果结果是`net.inet.tcp.functions_default: bbr`，则启用 TCP BBR 成功。
+如果结果是 `net.inet.tcp.functions_default: bbr`，则启用 TCP BBR 成功。
 
 **注意：**故障排除等事宜请参考
 

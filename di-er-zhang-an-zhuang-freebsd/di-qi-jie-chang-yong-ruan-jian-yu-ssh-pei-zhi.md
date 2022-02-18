@@ -18,13 +18,13 @@ Xshell 是 Windows 平台上的强大的 shell 工具，不建议使用苦难哲
 
 ## 配置SSH
 
-```
+```     
 # ee /etc/ssh/sshd_config #（删去前边的 #，并将 yes 或 no 修改为如下）
 PermitRootLogin yes          #允许 root 登录 
 PasswordAuthentication yes   # 设置是否使用口令验证 
 ```
 
->提示：删去前边的`#`是什么意思？`#`在 UNIX 当中一般是起到一个注释作用，相当于 C 语言里面的`//`。意味着后边的文字只起到说明作用，不起实际作用。
+> 提示：删去前边的 `#` 是什么意思？`#` 在 UNIX 当中一般是起到一个注释作用，相当于 C 语言里面的 `//`。意味着后边的文字只起到说明作用，不起实际作用。
 
 ## 开启SSH 服务
 
@@ -32,7 +32,7 @@ PasswordAuthentication yes   # 设置是否使用口令验证
 # service sshd restart
 ```
 
-如果提示找不到`sshd`,请执行下一命令:
+如果提示找不到 `sshd`,请执行下一命令:
 
 ```
 # sysrc sshd_enable="YES"

@@ -10,7 +10,7 @@
 
 ## 自定义安装
 
-这里推荐大家使用**自定义安装**，不要使用系统推荐的方式。为了安全考虑，**OpenBSD** 默认大量分区。新用户初次遇到，会一头雾水，极不适应。
+这里推荐大家使用 **自定义安装**，不要使用系统推荐的方式。为了安全考虑，**OpenBSD** 默认大量分区。新用户初次遇到，会一头雾水，极不适应。
 
 ### 推荐分区
 
@@ -30,7 +30,7 @@
 
 > System hostname? (short form, e.g. 'foo') `XiaoMing`
 
-系统主机名，可以选择一个字母少的，将来会显示`XiaoMing.DHCP`这样的主机名。
+系统主机名，可以选择一个字母少的，将来会显示 `XiaoMing.DHCP` 这样的主机名。
 
 > Available network interfaces are: em0 rtwn0.
 >
@@ -38,7 +38,7 @@
 
 这一步选择网络连接。为免去不必要麻烦，请尽量选择有线网络。可先输入 `？` ，详细了解网络名称后再选择。如本例中 `em0` 为有线网络，`rtwn0` 为无线网络。
 
-后续配置直接**回车键**确认即可。
+后续配置直接 **回车键** 确认即可。
 
 > Password for root account? (will not echo)
 
@@ -92,7 +92,7 @@
 
 > Use (A)uto layout, (E)dit auto layout, or create (C)ustom layout? \[a] `C`
 
-这一步一定要选择 `C` ，即`自定义设置` 。
+这一步一定要选择 `C` ，即 `自定义设置` 。
 
 > `p m`
 
@@ -189,7 +189,7 @@ sets by prepending a '-' to the set name, name pattern or 'all'. Selected sets a
 Set name(s)? (or 'abort' or 'done') [done] -game*
 ```
 
-这里我们输入`-game*` 来取消 `game70.tgz` ，其它都勾选。
+这里我们输入 `-game*` 来取消 `game70.tgz` ，其它都勾选。
 
 注：即使不使用桌面，也请勾选 `X11` 选项，否则部分软件可能无法正常运行。
 
