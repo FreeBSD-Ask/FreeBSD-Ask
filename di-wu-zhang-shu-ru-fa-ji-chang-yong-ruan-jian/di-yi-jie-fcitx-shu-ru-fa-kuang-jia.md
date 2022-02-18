@@ -2,9 +2,7 @@
 
 fcitx 5 相比前一代，增加了对 Wayland 的支持，据说更加流畅。
 
-**注意，在 FreeBSD-14.0-Current 中会出现许多不可预料的奇怪的 bug**
-**（fcitx5 诊断信息英文乱码，输入法显示出奇怪的汉字，Fcitx5-qt5 环境不能正常加载……），**
-**如果条件允许应该在 FreeBSD-Release 中参考使用本文。**
+**注意，在 FreeBSD-14.0-Current 中会出现许多不可预料的奇怪的 bug（fcitx5 诊断信息英文乱码，输入法显示出奇怪的汉字，Fcitx5-qt5 环境不能正常加载……），如果条件允许应该在 FreeBSD-Release 中参考使用本文。**
 
 ## FreeBSD 4.X
 
@@ -64,10 +62,7 @@ setenv LANG zh_CN.UTF-8
 setenv MM_CHARSET zh_CN.UTF-8
 ```
 
-在 root 用户下 rime 不会自动被添加到输入法，需要手动添加完成初始化
-（程序里找到 fcitx 配置工具，添加 rime 输入法即可）！
-对于普通用户如果未生效，请检查自己的 shell，应该是 csh，如果不是请将该用户加入 wheel 组。
-对于其他 shell 请自行更正为对应 shell 的环境变量。
+在 root 用户下 rime 不会自动被添加到输入法，需要手动添加完成初始化（程序里找到 fcitx 配置工具，添加 rime 输入法即可）！对于普通用户如果未生效，请检查自己的 shell，应该是 csh，如果不是请将该用户加入 wheel 组。对于其他 shell 请自行更正为对应 shell 的环境变量。
 
 SLIM 窗口下会提示 IBUS 找不到……疑似bug。
   
@@ -75,11 +70,9 @@ SLIM 窗口下会提示 IBUS 找不到……疑似bug。
   
 普通用户的默认 shell 一般不是 `csh`，为了方便配置，需要把默认 shell 改成 csh。然后其余配置方法同上所述。
   
-先看看现在的 shell 是什么: `# echo $0`
+先看看现在的 shell 是什么: `# echo $0`，如果输出不是 `csh`，尝试修改成 `csh`：
 
-如果输出不是 `csh`，尝试修改成 `csh`：
-
-```shell
+```
 # chsh -s /bin/csh
 ```
 
@@ -106,7 +99,7 @@ SLIM 窗口下会提示 IBUS 找不到……疑似bug。
 # fcitx-diagnose
 ```
   
-对于 fcitx5.x 来说，找不到`GTK 4`的支持是正常的。
+对于 fcitx5.x 来说，找不到 `GTK 4` 的支持是正常的。
   
 ### fcitx 5.x
   
@@ -114,4 +107,4 @@ SLIM 窗口下会提示 IBUS 找不到……疑似bug。
 # fcitx5-diagnose
 ```
   
-对于 fcitx5.x 来说，找不到`fcitx qt 4`的支持是正常的。
+对于 fcitx5.x 来说，找不到 `fcitx qt 4` 的支持是正常的。

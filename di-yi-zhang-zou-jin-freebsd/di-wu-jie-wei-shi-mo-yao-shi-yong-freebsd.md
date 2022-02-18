@@ -2,7 +2,7 @@
 
 ## 选择 FreeBSD 的一般原因
 
-从道家来讲，你爱选不选，太长不看，不用？左转 Linux , Windows 吧，不谢。
+从道家来讲，你爱选不选，太长不看，不用？左转 Linux, Windows 吧，不谢。
 
 从佛教来说，因为缘分。万物缘起性空，我们有缘相聚，又会者定离。万般诸相皆如此。
 
@@ -18,11 +18,11 @@ BSD 三则授权协议：并允许自由分发。GPL 与 BSD 协议，究竟何�
 
 BSD 是一个完整的 OS，而不是内核。内核和基本系统作为一个项目来整体维护。
 
-Linux 社区已经成为一个肮脏的泥潭，无论是内核开发还是用户群组。——见[第十九章第五节。](../di-shi-jiu-zhang-wen-xue-gu-shi/di-wu-jie-linux-she-qu-yi-jing-cheng-wei-le-yi-ge-ang-zang-de-ni-tan.md)
+Linux 社区已经成为一个肮脏的泥潭，无论是内核开发还是用户群组。——见 第十九章第五节
 
 ## 选择 FreeBSD 的技术性原因
 
-系统配置文件与第三方软件配置文件分离。/etc 与 /usr/local/etc 等——见[第二十四章第二节](../di-er-shi-si-zhang-freebsd-te-se/di-er-jie-freebsd-mu-lu-jie-gou.md)。
+系统配置文件与第三方软件配置文件分离。/etc 与 /usr/local/etc 等——见 第二十四章第二节。
 
 文档齐全，所有涉及一般性的问题 Handbook 手册都有记述。
 

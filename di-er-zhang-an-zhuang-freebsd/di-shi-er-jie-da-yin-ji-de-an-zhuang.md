@@ -1,18 +1,16 @@
 # 第十一节 打印机的安装
 
-本过程环境使用的是 `KDE5` 桌面系统及 `HP LaserJet Pro MFP M126nw` 多功能激光打印机
-（如果是其它型号的惠普打印机需在添加打印机时能找到对应的型号的驱动就能使用）,
-并且已连入局域网实现网络打印。
+本过程环境使用的是 `KDE5` 桌面系统及 `HP LaserJet Pro MFP M126nw` 多功能激光打印机（如果是其它型号的惠普打印机需在添加打印机时能找到对应的型号的驱动就能使用）,并且已连入局域网实现网络打印。
 
 ## 安装CUPS(通用 Unix 打印系统)
 
-```shell
+```
 # pkg install cups
 ```
 
 或
 
-```shell
+```
 # cd /usr/ports/print/cups
 # make install clean
 ```
@@ -21,19 +19,19 @@
 
 ## 添加服务
 
-```shell
+```
 # sysrc cupsd_enable="YES"
 ```
 
 完成后启动 cups 服务，执行如下命令
 
-```shell
+```
 # service cupsd restart
 ```
 
 ## 安装打印机驱动
 
-```shell
+```
 # pkg install hplip
 ```
 

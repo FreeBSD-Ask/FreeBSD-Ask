@@ -4,7 +4,7 @@
 
 通过 pkg 安装
 
-```shell
+```
 # pkg install xorg lightdm lightdm-gtk-greeter xfce wqy-fonts
 ```
 
@@ -12,7 +12,7 @@
 
 通过 ports 安装
 
-```shell
+```
 # cd /usr/ports/x11-wm/xfce4
 # make install clean
 ```
@@ -29,7 +29,7 @@
 
 ## 启动服务
 
-```shell
+```
 # sysrc dbus_enable="YES"
 # sysrc lightdm_enable="YES"
 ```
@@ -44,25 +44,25 @@
 
 请检查自己的shell是不是 `sh`、`bash`、`zsh` 其中之一。
 
-```shell
+```
 # echo $0
 ```
 
 如果是以上三个 SHELL 之一，请继续，如果不是请参考第五章第一节：
 
-```shell
+```
 # pkg install zh-fcitx zh-fcitx-configtool fcitx-qt5 fcitx-m17n zh-fcitx-libpinyin
 ```
 
 配置文件：
 
-```shell
+```
 # ee ~/.xinitrc 
 ```
 
 在该文件中添加以下内容:
 
-```shell
+```
 export XMODIFIERS="@im=fcitx"
 export XIM_PROGRAM="fcitx"
 export GTK_IM_MODULE="fcitx"
@@ -71,7 +71,7 @@ fcitx &
 
 ## 全局菜单（可选）
 
-```shell
+```
 # pkg install xfce4-appmenu-plugin appmenu-gtk-module appmenu-registrar
 $ xfconf-query -c xsettings -p /Gtk/ShellShowsMenubar -n -t bool -s true
 $ xfconf-query -c xsettings -p /Gtk/ShellShowsAppmenu -n -t bool -s true

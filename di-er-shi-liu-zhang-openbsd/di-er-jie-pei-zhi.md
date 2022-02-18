@@ -4,22 +4,15 @@
 
 ### 获取驱动
 
-第一次进入系统后，OpenBSD 会自动检测无线、显卡和声卡，并下载相关驱动。
-静等几分钟，待其自行更新。
-由于国外网站连接比较慢，如果等待时间过长，可 `Ctrl` + `C` 取消，待进入系统后运行 `# fw_update` 重新获取驱动。
+第一次进入系统后，OpenBSD 会自动检测无线、显卡和声卡，并下载相关驱动。静等几分钟，待其自行更新。由于国外网站连接比较慢，如果等待时间过长，可 `Ctrl` + `C` 取消，待进入系统后运行 `# fw_update` 重新获取驱动。
 
 ### 桌面支持
 
-上一节安装时，我们屏蔽了桌面选项。这一步我们重新开启。
-打开 `/etc/sysctl.conf`，添加一行 `machdep.allowaperture=2` 。
+上一节安装时，我们屏蔽了桌面选项。这一步我们重新开启。打开 `/etc/sysctl.conf`，添加一行 `machdep.allowaperture=2` 。
 
 ### 修改软件源
 
-打开 `/etc/installurl` ，将默认源注释掉，改为 `https://mirrors.bfsu.edu.cn/OpenBSD` 。
-此处我们选择了北外源，用户也可选择 
-[清华镜像源](https://mirrors.tuna.tsinghua.edu.cn/OpenBSD)、 
-[阿里镜像源](https://mirrors.aliyun.com/openbsd)、 及
-[南京大学源](https://mirror.sjtu.edu.cn/OpenBSD) 等。
+打开 `/etc/installurl` ，将默认源注释掉，改为 `https://mirrors.bfsu.edu.cn/OpenBSD` 。此处我们选择了北外源，用户也可选择 [清华镜像源](https://mirrors.tuna.tsinghua.edu.cn/OpenBSD)、 [阿里镜像源](https://mirrors.aliyun.com/openbsd)、 及[南京大学源](https://mirror.sjtu.edu.cn/OpenBSD) 等。
 
 ## 系统更新
 
@@ -65,6 +58,7 @@ $ cd media
 ### 检查分区
 
 如插入的盘符为 `sd1`，则输入 `disklabel sd1` 查看分区情况。如下
+
 ```
 #                size           offset  fstype [fsize bsize   cpg]
  c:         60062500                0  unused                    
@@ -94,9 +88,7 @@ OpenBSD 可挂载的外接硬盘格式有 NTFS、ext2/ext3 以及 CD 磁盘等�
 
 ## 无线测试
 
-OpenBSD 里的无线网络，配置文件通常是 `hostname.if` ，其中 `if` 为无线驱动名称+序号。
-如一台笔记本无线型号为 rtl8188cu ，OpenBSD 下驱动为 rtwn ，序号从 0 开始。为了让系统自动加载无线，可打开
- `/etc/hostname.rtwn0` 文件 ，而后添加：
+OpenBSD 里的无线网络，配置文件通常是 `hostname.if` ，其中 `if` 为无线驱动名称+序号。如一台笔记本无线型号为 rtl8188cu ，OpenBSD 下驱动为 rtwn ，序号从 0 开始。为了让系统自动加载无线，可打开 `/etc/hostname.rtwn0` 文件 ，而后添加：
 
 ```
 dhcp 
@@ -108,11 +100,11 @@ nwid '无线名称' wpakey '无线密码'
 
 ### 加载触摸板
 
-打开 `/etc/wsconsctl.conf`， 添加一行`mouse.tp.tapping=1` 。
+打开 `/etc/wsconsctl.conf`， 添加一行 `mouse.tp.tapping=1` 。
 
 ### 加载多线程
 
-打开 `/etc/sysctl.conf` ，添加一行 `hw.smt=1` 。
+打开 `/etc/sysctl.conf`，添加一行 `hw.smt=1` 。
 
 ### 相关资料
 

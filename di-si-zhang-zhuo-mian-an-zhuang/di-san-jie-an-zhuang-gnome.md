@@ -1,6 +1,6 @@
 # 第三节 安装 Gnome
 
-**截止到 2022-2-3，`Gnome` 在不同版本的 pkg 源里的存在形式也是不一样的，在 `quarterly` 中，为 `x11/gnome3`,在` latest` 中，为 `x11/gnome`,找不到 `gnome3` 的可以试一下 `gnome`。**
+**截止到 2022-2-3，`Gnome` 在不同版本的 pkg 源里的存在形式也是不一样的，在 `quarterly` 中，为 `x11/gnome3`,在 `latest` 中，为 `x11/gnome`,找不到 `gnome3` 的可以试一下 `gnome`。**
 
 ## 1.依赖准备
 
@@ -61,7 +61,7 @@ gnome 捆绑的输入法面板是 `ibus`。
 
 安装 `fcitx5`:
 
-```shell
+```
 # pkg install fcitx5 fcitx5-qt fcitx5-gtk fcitx5-configtool zh-fcitx5-chinese-addons
 ```
 
@@ -116,7 +116,7 @@ export XMODIFIERS=@im=fcitx
 
 该插件需要通过火狐浏览器进行安装：
 
-```shell
+```
 # pkg install -y firefox chrome-gnome-shell
 ```
 
@@ -132,7 +132,7 @@ export XMODIFIERS=@im=fcitx
 
 添加以下内容
 
-```shell
+```
 setenv LANG zh_CN.UTF-8
 setenv LC_CTYPE zh_CN.UTF-8
 setenv LC_ALL zh_CN.UTF-8`
@@ -144,6 +144,6 @@ setenv LC_ALL zh_CN.UTF-8`
 
 ## 卸载自带游戏（可选）
 
-```shell
+```
 # pkg delete gnome-2048 gnome-klotski gnome-tetravex gnome-mines gnome-taquin gnome-sudoku gnome-robots gnome-nibbles lightsoff tali quadrapassel swell-foop gnome-mahjongg five-or-more iagno aisleriot four-in-a-row
 ```

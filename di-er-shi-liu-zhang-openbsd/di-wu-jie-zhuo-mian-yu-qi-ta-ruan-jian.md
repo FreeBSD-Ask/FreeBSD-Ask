@@ -59,7 +59,7 @@ multicast_host=YES
 pkg_scripts="messagebus dbus_daemon avahi_daemon gdm"
 ```
 
-最后打开用户账号下的 `.xinitrc` ，添加一行`exec gnome-session`。
+最后打开用户账号下的 `.xinitrc` ，添加一行 `exec gnome-session`。
 
 ## 中文设置
 
@@ -96,7 +96,7 @@ export GTK_IM_MODULE=XIM
 ## 主题和图标
 
 以下仅举两个实例，[Qogir](https://www.gnome-look.org/p/1230631/) 主题、和 [Tela](https://www.gnome-look.org/p/1279924/) 图标，
-大家可访问[相关网站](https://www.gnome-look.org/)，自行选择喜欢的主题和图标来安装。
+大家可访问 [相关网站](https://www.gnome-look.org/)，自行选择喜欢的主题和图标来安装。
 
 ### 提前准备
 
@@ -107,15 +107,15 @@ export GTK_IM_MODULE=XIM
 
 `git clone https://github.com/vinceliuice/Qogir-theme && cd Qogir-theme`
 
-`vi .install.sh`，修改文件中的第一行**shebang** 为 `#!/usr/local/bin/bash`
+`vi .install.sh`，修改文件中的第一行 **shebang** 为 `#!/usr/local/bin/bash`
  
-之后`bash ./install.sh`
+之后 `bash ./install.sh`
 
 ### 图标安装
 
 `git clone https://github.com/vinceliuice/Tela-icon-theme && cd Tela-icon-theme`
 
-`vi .install.sh`，修改文件中的第一行**shebang** 为 `#!/usr/local/bin/bash`
+`vi .install.sh`，修改文件中的第一行 **shebang** 为 `#!/usr/local/bin/bash`
 
-之后`bash ./install.sh`
+之后 `bash ./install.sh`
 

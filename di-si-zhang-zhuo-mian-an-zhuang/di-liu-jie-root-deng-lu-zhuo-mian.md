@@ -1,20 +1,18 @@
 # 第六节 root 登录桌面
 
-> **警告**：鉴于部分用户希望 root 登录桌面，为贯彻自由精神撰写本章节。
-> 请注意 root 账户拥有最高权限，失误使用 root 账户可能**破坏系统**，因此用其登录图形界面存在**极高的安全风险**。
-> 以下内容请谨慎操作，风险自负。
+> **警告**：鉴于部分用户希望 root 登录桌面，为贯彻自由精神撰写本章节。请注意 root 账户拥有最高权限，失误使用 root 账户可能**破坏系统**，因此用其登录图形界面存在**极高的安全风险**。以下内容请谨慎操作，风险自负。
 
 ## lightdm
 
 安装与配置：
 
-```shell
+```
 # pkg install lightdm-gtk-greeter lightdm
 ```
 
 首先设置启动服务：
 
-```shell
+```
 # sysrc lightdm_enable="YES"
 ```
 
@@ -26,11 +24,11 @@
 
 - 编辑 `# ee /usr/local/etc/pam.d/lightdm`
 
-- 注释`account requisite pam_securetty.so`这一行（往最前面加`#`）
+- 注释 `account requisite pam_securetty.so` 这一行（往最前面加 `#`）
 
 重启服务
 
-```shell
+```
 # service lightdm restart
 ```
 
@@ -40,7 +38,7 @@
 
 安装
 
-```shell
+```
 # pkg install sddm
 # sysrc sddm_enable="YES"
 ```
@@ -51,7 +49,7 @@
 
 重启服务
 
-```shell
+```
 # service sddm restart
 ```
 

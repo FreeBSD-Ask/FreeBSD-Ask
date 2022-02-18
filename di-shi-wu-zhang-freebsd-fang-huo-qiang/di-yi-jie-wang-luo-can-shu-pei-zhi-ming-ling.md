@@ -47,7 +47,7 @@ resolv_conf="/dev/null"
 
 #### 查看网卡速率
 
-每 `1` 秒刷新一次：
+每 1 秒刷新一次：
 
 ```
 # systat -if 1

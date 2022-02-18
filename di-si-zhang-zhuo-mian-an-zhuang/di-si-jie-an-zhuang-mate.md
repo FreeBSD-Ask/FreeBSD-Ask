@@ -46,7 +46,7 @@ setenv LC_CTYPE zh_CN.UTF-8
 
 ## 输入法
 
-`# pkg install zh-ibus-libpinyin`（安装好运行初始化命令`ibus-setup`）
+`# pkg install zh-ibus-libpinyin`（安装好运行初始化命令 `ibus-setup`）
 
 设置输入法变量:
 
@@ -63,7 +63,7 @@ ibus &
 
 ## 安装软件/安装字体
 
-```shell
+```
 # pkg install -y noto-sc
 # pkg install -y firefox
 # pkg install -y networkmgr

@@ -30,7 +30,7 @@
 
 添加如下文本：
 
-```rust
+```
 fn main() {
     println!("Hello, world!");
 }
@@ -55,15 +55,15 @@ fn main() {
 > `tar -C /usr/local -xzf https://golang.google.cn/dl/go1.17.4.freebsd-amd64.tar.gz`
 
 - 添加环境变量： 
-> 文本模式打开`.profile`， 添加一行 `export PATH=$PATH:/usr/local/go/bin`
+> 文本模式打开 `.profile`， 添加一行 `export PATH=$PATH:/usr/local/go/bin`
 
 安装成功后，输入 `go version` 查看软件版本。
 
 ### 为美好的世界献上祝福
 
-新建名为`helloWorld.go`的文本，添加如下内容：
+新建名为 `helloWorld.go` 的文本，添加如下内容：
 
-```go
+```
 package main
 
 import "fmt"

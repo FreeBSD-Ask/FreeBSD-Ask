@@ -9,11 +9,11 @@
 |ACPI Support|ACPI 支持|
 |Safe Mode|安全模式|
 |Single User|单用户模式|
-|Verbose|调试模式，显示更多输出|
+|Verbose|啰嗦模式，显示更多输出|
 
 ![](../.gitbook/assets/安装2.png)
 
-选择 `install`,按下 `回车键` 进行安装。
+选择 `install`,按下 回车键 进行安装。
 
 ![](../.gitbook/assets/安装3.png)
 

@@ -18,7 +18,7 @@ Xshell 是 Windows 平台上的强大的 shell 工具，不建议使用苦难哲
 
 ## 配置SSH
 
-```shell        
+```     
 # ee /etc/ssh/sshd_config #（删去前边的 #，并将 yes 或 no 修改为如下）
 PermitRootLogin yes          #允许 root 登录 
 PasswordAuthentication yes   # 设置是否使用口令验证 
@@ -28,19 +28,19 @@ PasswordAuthentication yes   # 设置是否使用口令验证
 
 ## 开启SSH 服务
 
-```shell
+```
 # service sshd restart
 ```
 
 如果提示找不到 `sshd`,请执行下一命令:
 
-```shell
+```
 # sysrc sshd_enable="YES"
 ```
 
 然后再
 
-```shell
+```
 # service sshd restart
 ```
 
@@ -71,7 +71,7 @@ ServerAliveCountMax 3
 
 或者在连接的时候使用 `-o` 指定参数：
 
-```shell
+```
 # ssh user@server -p 22 -o ServerAliveInterval=10 -o ServerAliveCountMax=3
 ```
 

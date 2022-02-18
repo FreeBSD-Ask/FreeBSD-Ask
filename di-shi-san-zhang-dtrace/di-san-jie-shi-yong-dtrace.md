@@ -6,6 +6,6 @@
 
 `# pkg install shells/ksh93`
 
-接下来安装dtrace-toolkit
+接下来安装 dtrace-toolkit
 
 `# pkg install sysutils/dtrace-toolkit`

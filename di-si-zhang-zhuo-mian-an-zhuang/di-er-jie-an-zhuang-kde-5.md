@@ -38,5 +38,5 @@ sddm_enable="YES"
 
 ## 中文化
 
-点击开始-> System Settings -> Regional Settings 在 `Language` 项的 `Available Language` 栏中找到 `简体中文` 单击 `>` 将其加到 `Preferrred Languages` 栏中，然后单击 `Apply` 按钮；
-再到 `Formats` 项，将 `Region` 文本框中的内容修改为 `中国-简体中文(zh-CN)`，单击 `Apply` 按钮，logout（注销）后重新登录，此时系统语言将变为中文。
+点击开始-> System Settings -> Regional Settings 在 `Language` 项的 `Available Language` 栏中找到 “简体中文” 单击 `>` 将其加到 `Preferrred Languages` 栏中，然后单击 `Apply` 按钮；
+再到 `Formats` 项，将 `Region` 文本框中的内容修改为 “中国-简体中文(zh-CN)”，单击 `Apply` 按钮，logout（注销）后重新登录，此时系统语言将变为中文。

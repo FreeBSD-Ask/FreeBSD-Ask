@@ -6,15 +6,13 @@
 
 以下教程二选一。
 
-### `ibus` 下
+### ibus
 
 `# pkg install zh-ibus-rime`
 
 #### 配置
 
-环境变量配置：安装好运行初始化命令 `ibus-setup`
-将 98 五笔码表（`wubi86.dict.yaml`、`wubi86.schema.yaml`）复制到`/usr/local/share/rime-date` 目录下
-修改 rime-date 目录下default.yaml 文件:
+环境变量配置：安装好运行初始化命令 `ibus-setup`，将 98 五笔码表（`wubi86.dict.yaml`、`wubi86.schema.yaml`）复制到`/usr/local/share/rime-date` 目录下，修改 rime-date 目录下default.yaml 文件:
 
 打开 `default.yaml` 找到`schema_lis`：
 
@@ -24,7 +22,7 @@
 
 {% embed url="https://gitee.com/ykla/free-bsd-98wubi-tables/tree/master" %}
 
-### `fcitx5` 下
+### fcitx5
 
 请先看第四章 桌面安装——第三节安装Gnome3。
 

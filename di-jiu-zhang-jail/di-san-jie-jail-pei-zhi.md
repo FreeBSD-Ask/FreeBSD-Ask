@@ -7,9 +7,9 @@
 方案一
 
 ```
-# make buildworld # 编译基本系统
-# make installworld DESTDIR=/usr/jail/ # 安装到 jail
-# make distribution DESTDIR=/usr/jail/ # 或者
+# make buildworld #编译基本系统
+# make installworld DESTDIR=/usr/jail/ #安装到 jail
+# make distribution DESTDIR=/usr/jail/ #或者
 ```
 
 方案二

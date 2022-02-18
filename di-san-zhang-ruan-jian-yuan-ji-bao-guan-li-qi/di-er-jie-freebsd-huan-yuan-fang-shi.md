@@ -12,12 +12,11 @@ FreeBSD 有四类源，pkg、ports、portsnap、update。
 
 pkg 的下载路径是 `/var/cache/pkg/`
 
-FreeBSD 中 pkg 源分为系统级和用户级两个源。
-不建议直接修改 `/etc/pkg/FreeBSD.conf` ,因为该文件会随着基本系统的更新而发生改变.
+FreeBSD 中 pkg 源分为系统级和用户级两个源。不建议直接修改 `/etc/pkg/FreeBSD.conf` ,因为该文件会随着基本系统的更新而发生改变.
 
 创建用户级源目录:
 
-```shell
+```
 # mkdir -p /usr/local/etc/pkg/repos
 ```
 
@@ -25,7 +24,7 @@ FreeBSD 中 pkg 源分为系统级和用户级两个源。
 
 创建用户级源文件:
 
-```shell
+```
 # ee /usr/local/etc/pkg/repos/bjtu.conf
 ```
 
@@ -52,7 +51,7 @@ FreeBSD: { enabled: no }
 
 创建用户级源文件:
 
-```shell
+```
 # ee /usr/local/etc/pkg/repos/163.conf
 ```
 
@@ -73,7 +72,7 @@ FreeBSD: { enabled: no }
 
 创建用户级源文件:
 
-```shell
+```
 # ee /usr/local/etc/pkg/repos/ustc.conf
 ```
 
@@ -92,7 +91,7 @@ FreeBSD: { enabled: no }
 
 ### 南京大学开源镜像站
 
-```shell
+```
 # ee /usr/local/etc/pkg/repos/nju.conf
 ```
 
@@ -111,7 +110,7 @@ FreeBSD: { enabled: no }
 
 ## FreeBSD.cn(非官方且不稳定，下同）
 
-```shell
+```
 # ee /usr/local/etc/pkg/repos/freebsdcn.conf
 ```
 
@@ -174,13 +173,13 @@ ports 下载路径是 `/usr/ports/distfiles`
 
 **获取portsnap更新**
 
-```shell
+```
 # portsnap fetch extract
 ```
 
 **故障排除**
 
-```shell
+```
 Snapshot appears to have been created more than one day into the future!
 (Is the system clock correct?)
 Cowardly refusing to proceed any further.
@@ -188,7 +187,7 @@ Cowardly refusing to proceed any further.
 
 需要同步时间。
 
-```shell
+```
 ntpdate ntp.api.bz
 ```
 
@@ -200,8 +199,7 @@ ntpdate ntp.api.bz
 
 ## freebsd-update 源:提供基本系统更新
 
-注意：只有一级架构的 release 版本才提供该源。
-也就是说 current 和 stable 是没有的。
+注意：只有一级架构的 release 版本才提供该源。也就是说 current 和 stable 是没有的。
 关于架构的支持等级说明请看：
 
 {% embed url="https://www.freebsd.org/platforms" %}
@@ -230,18 +228,18 @@ ntpdate ntp.api.bz
 
 首先切换成可以用的二进制源
 
-```shell
+```
 # setenv PACKAGESITE http://ftp-archive.freebsd.org/pub/FreeBSD-Archive/ports/amd64/packages-9.2-release/Latest
 ```
 
 如果 shell 不是 csh，那么:
 
-```shell
- # export PACKAGESITE=http://ftp-archive.freebsd.org/pub/FreeBSD-Archive/ports/amd64/packages-9.2-release/Latest
+```
+# export PACKAGESITE=http://ftp-archive.freebsd.org/pub/FreeBSD-Archive/ports/amd64/packages-9.2-release/Latest
 ```
 
 安装示例：现在安装 `bsdinfo`。
-```shell
+```
 root@ykla:~ # pkg_add -r bsdinfo                                                    
 Fetching http://ftp-archive.freebsd.org/pub/FreeBSD-Archive/ports/amd64/packages-9.2-release/Latest/bsdinfo.tbz... Done.
 ```

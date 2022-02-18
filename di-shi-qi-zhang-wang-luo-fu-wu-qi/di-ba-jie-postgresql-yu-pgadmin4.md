@@ -3,7 +3,7 @@
 ##  PostgreSQL
 
 PostgreSQL 是一款自由的对象-关系型数据库，最早发布于 1989 年 6 月。
-在 FreeBSD 上，提供了 9.6、10、11、12、13、14共计6个大版本可选。
+在 FreeBSD 上，提供了 9.6、10、11、12、13、14 共计 6 个大版本可选。
 
 ### postgresql 安装示例，6个版本都如此。
 
@@ -85,7 +85,7 @@ psql: FATAL:  role "root" does not exist
 正确用法：
 
 ```
-# 切换用户
+#切换用户
 root@ykla:~ # su - postgres  
 
 #启动服务
@@ -96,7 +96,7 @@ $ createuser -sdrP ykla
 Enter password for new role: 
 Enter it again: 
 $ 
-# 创建数据库
+#创建数据库
 $ createdb new_db
 #登录进数据库并将数据库权限赋予用户 ykla。
 $ psql
@@ -118,10 +118,7 @@ root@ykla:~ #
 
 以下教程以 FreeBSD 13.0 为基准。
 
-pgAdmin4 是用于管理 PostgreSQL 数据库服务器的最流行的开源应用程序。
-pgAdmin4 提供功能丰富的图形用户界面，轻松管理数据库。 
-它是用 Python 和 Javascript / jQuery 编写的。 
-它可以在多种环境中使用，如 Linux，Windows，Unix，可在桌面和服务器模式下使用。
+pgAdmin4 是用于管理 PostgreSQL 数据库服务器的最流行的开源应用程序。pgAdmin4 提供功能丰富的图形用户界面，轻松管理数据库。 它是用 Python 和 Javascript / jQuery 编写的。 它可以在多种环境中使用，如 Linux，Windows，Unix，可在桌面和服务器模式下使用。
 
 **注意：在安装 pgAdmin4 前先行安装 PostgreSQL 数据库，否则安装 pgAdmin4 会失败。**
 

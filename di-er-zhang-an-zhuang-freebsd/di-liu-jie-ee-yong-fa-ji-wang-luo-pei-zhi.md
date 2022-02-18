@@ -16,12 +16,11 @@ ee 的用法比 nano 还要简单许多。是系统自带的文本编辑器。
 
 ### 网络配置
 
-先 `ifconfig` 看看有没有网卡，没有那就不属于本节的范围之内了。
-请注意 `lo0` 并不是真实网卡，如果你只能看到这个说明你网卡没有被正确驱动。
+先 `ifconfig` 看看有没有网卡，没有那就不属于本节的范围之内了。请注意 `lo0` 并不是真实网卡，如果你只能看到这个说明你网卡没有被正确驱动。
 
 示例输出：
 
-```shell
+```
 root@ykla:~ # ifconfig
 genet0: flags=8843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST> metric 0 mtu 1500
 	options=68000b<RXCSUM,TXCSUM,VLAN_MTU,LINKSTATE,RXCSUM_IPV6,TXCSUM_IPV6>
@@ -44,7 +43,7 @@ root@ykla:~ #
 
 默认情况下，FreeBSD 是无法联网的，因为没有配置 DNS。
 
-```shell
+```
 # ee /etc/resolv.conf
 ```
 
@@ -57,7 +56,7 @@ nameserver 8.8.8.8   #谷歌 DNS，境外设备专用
 ```
 之后重启一下网络配置
 
-```shell
+```
 # /etc/netstart restart
 ```
 
@@ -65,7 +64,7 @@ nameserver 8.8.8.8   #谷歌 DNS，境外设备专用
 
 示例输出：
 
-```shell
+```
 root@ykla:~ # ping 163.com
 PING 163.com (123.58.180.7): 56 data bytes
 64 bytes from 123.58.180.7: icmp_seq=0 ttl=55 time=30.617 ms
@@ -83,13 +82,13 @@ root@ykla:~ #
 ## 详细用法
 
 编辑后按 `ESC` 会弹出提示框，输入 `a` 保存；
+
 - \ 或 [ 键 显示主选单。
 - o 输入 ASCII code，例如输入 65 就会显示 A。
 - u 跳到档案结尾。
 - t 跳到档案开头。
 - c 输入指令。在按了 Ctrl+c 后，上方选单会出现命令说明，例如您可以直接输入数字，表示将光标移到某一行。
-- y 搜寻。按了 Ctrl+y 之后，你可以输入欲搜寻的字符串。如果要搜寻下一个该字符串，只要再按 Ctrl+x 即可。
-	预设的搜寻是不分大小写的，如果要区分大小写，您可以按 Ctrl+c 并输入 case 即可。如果要取消只要再按 Ctrl+c 并输入 nocase。
+- y 搜寻。按了 Ctrl+y 之后，你可以输入欲搜寻的字符串。如果要搜寻下一个该字符串，只要再按 Ctrl+x 即可。预设的搜寻是不分大小写的，如果要区分大小写，您可以按 Ctrl+c 并输入 case 即可。如果要取消只要再按 Ctrl+c 并输入 nocase。
 - a 跳到行首。
 - e 跳到行尾。
 - d 删除光标所在位置的字符。

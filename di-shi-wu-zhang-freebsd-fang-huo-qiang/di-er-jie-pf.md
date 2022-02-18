@@ -19,7 +19,7 @@ pf 的管理命令为 `pfctl`，常用操作示例如下：
 
 # pfctl -f /etc/pf.conf #加载规则集文件中的规则 
 
-# pfctl -nf /etc/pf.conf #解析规则，但不加载。-f 参数还可以与其他参数配合，如-N 表示只载入 NAT 规则， -R 表示只载入过滤规则，-A 只载入队列规则，-O 只载入选项规则 
+# pfctl -nf /etc/pf.conf #解析规则，但不加载。-f 参数还可以与其他参数配合，如 -N 表示只载入 NAT 规则， -R 表示只载入过滤规则，-A 只载入队列规则，-O 只载入选项规则 
 
 # pfctl -s all #查看 pf 所有对象信息，如果想查看特定对象信息，可以用 nat、queue、rules、Anchors、states、 Sources、info、Running、labels、timeouts、memory、Tables、osfp、Interfaces 替换 all
 

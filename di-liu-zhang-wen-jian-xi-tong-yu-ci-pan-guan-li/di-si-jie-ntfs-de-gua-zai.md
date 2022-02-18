@@ -8,7 +8,7 @@
 sysrc kld_list+="fusefs"
 ```
 
-4、修改 fstab 自动挂载
+4. 修改 fstab 自动挂载
 
 为了开机自动挂载，修改添加
 
@@ -29,4 +29,4 @@ sysrc kld_list+="fusefs"
 # fstyp /dev/da0s1
 ```
 
-详细参数见 [ntfs-3g manpage。](https://www.freebsd.org/cgi/man.cgi?query=ntfs-3g\&format=html)
+详细参数见 [ntfs-3g manpage](https://www.freebsd.org/cgi/man.cgi?query=ntfs-3g\&format=html)。

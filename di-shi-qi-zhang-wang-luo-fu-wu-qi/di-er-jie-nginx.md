@@ -2,20 +2,20 @@
 
 ## 安装
 
-* pkg: `# pkg install nginx`
+- pkg: `# pkg install nginx`
 
 或
 
-* ports: `# cd /usr/ports/www/nginx/ && make install clean`
+- ports: `# cd /usr/ports/www/nginx/ && make install clean`
 
 ### 查找相关的软件包
 
-* ports: `$ ls /usr/ports/www/ | grep nginx`
-* pkg: `$ pkg search -o nginx`
+- ports: `$ ls /usr/ports/www/ | grep nginx`
+- pkg: `$ pkg search -o nginx`
 
 ## 配置
 
-配置教程可参阅[官方文档](https://nginx.org/en/docs/)与[官方百科](https://wiki.nginx.org/Configuration)。
+配置教程可参阅 [官方文档](https://nginx.org/en/docs/) 与 [官方百科](https://wiki.nginx.org/Configuration)。
 
 本文仅简单说明 FreeBSD 中如何启动 Nginx 及 Nginx 的配置文件。
 
@@ -30,15 +30,15 @@
 
 ### 配置文件
 
-FreeBSD中，Nginx 的配置文件位于`/usr/local/etc/nginx/`中，而主要的配置文件则在`/usr/local/etc/nginx/nginx.conf`
+FreeBSD中，Nginx 的配置文件位于 `/usr/local/etc/nginx/` 中，而主要的配置文件则在 `/usr/local/etc/nginx/nginx.conf`
 
-默认配置中 Nginx 的根目录为`/usr/lccal/www/nginx/`，如果需要更改目录位置，请将`/usr/local/etc/nginx/nginx.conf`中的
+默认配置中 Nginx 的根目录为 `/usr/lccal/www/nginx/`，如果需要更改目录位置，请将 `/usr/local/etc/nginx/nginx.conf` 中的
 
 ```
 root	/usr/lccal/www/nginx;
 ```
 
-改成你想要的目录位置，例如`root /path/to/new/webroot;`
+改成你想要的目录位置，例如 `root /path/to/new/webroot;`
 
 ## 示例文件（Nginx +  Typecho 伪静态 + SSL）
 
