@@ -35,11 +35,11 @@ Apple公司复用了大量的 FreeBSD 代码，同时也为其提供了资金以
 
 GNU Hurd 错位， Linux 占据了所有开发者的计算机，就像破窗效应那样，如果那些窗没修理好，可能将会有破坏者破坏更多的窗户。越来越多的开发者走向了 Linux 而非 GNU Hurd。可以说是“所有的好东西都给了 Linux ”，那么反过来说集开发之大成的 Linux 是个好东西吗？看上去答案是肯定的，其实不然。
 
-硬件上看， Linux 的 GPL 阻碍了硬件兼容性扩大（他们是怎么解决这个问题的呢？），仍然有许多用户认为 Linux 是完全开源的，他们认为——不开源我是怎么编译的呢？那么“ Linux -libre”项目（https://www.fsfla.org/ikiwiki/selibre/ Linux -libre/）所删减的是什么呢？—— Linux , the kernel developed and distributed by  linus  Torvalds et al, contains non-Free Software, i.e., software that does not respect your essential freedoms, and it induces you to install additional non-Free Software that it doesn't contain. Even after allegedly moving all firmware to a separate project as of release 4.14,  Linux  so-called "sources" published by Mr Torvalds still contain non-Free firmware disguised as source code.  Linux ，由 linus  Torvalds等人开发和发布的内核，包含非自由软件，即不尊重你的基本自由的软件，它诱使你安装它不包含的，额外的非自由软件。即使据称从 4.14 版开始将所有固件转移到一个单独的项目， linus 先生发布的 Linux 所谓的“源代码”仍然包含伪装成源代码的非自由固件。
+硬件上看， Linux 的 GPL 阻碍了硬件兼容性扩大（他们是怎么解决这个问题的呢？），仍然有许多用户认为 Linux 是完全开源的，他们认为——不开源我是怎么编译的呢？那么“ Linux -libre”项目（https://www.fsfla.org/ikiwiki/selibre/ Linux -libre/）所删减的是什么呢？—— Linux , the kernel developed and distributed by  Linus  Torvalds et al, contains non-Free Software, i.e., software that does not respect your essential freedoms, and it induces you to install additional non-Free Software that it doesn't contain. Even after allegedly moving all firmware to a separate project as of release 4.14,  Linux  so-called "sources" published by Mr Torvalds still contain non-Free firmware disguised as source code.  Linux ，由 Linus  Torvalds等人开发和发布的内核，包含非自由软件，即不尊重你的基本自由的软件，它诱使你安装它不包含的，额外的非自由软件。即使据称从 4.14 版开始将所有固件转移到一个单独的项目， Linus 先生发布的 Linux 所谓的“源代码”仍然包含伪装成源代码的非自由固件。
 
 软件上，  Linux 的软件包数量的确很多，甚至比 Windows 的软件还要多，这在一定程度上有积极影响，但是其消极影响更甚。有很多的开发者并没有很好的维护他们的项目，因为他们的 GPL 并不起到任何保证作用，开发者也没有任何义务为软件提供任何保证。可见到的是，先有软件，后有用户需求设计（好吧，实际上压根没有这个东西），他们不在意用户是怎么想的，你想往一个IM软件里加一个截图功能，因为类似的 Windows IM 软件（比如 QQ，微信）有这个功能，而且这个功能很重要。但是开发者会和你说，你用其他的软件截图然后复制进来就可以了；或者说我们是 GPL ，你看得到源码，你自己去改就是了，你不会改那就是你自己的问题了，和我们无关。你可以随便报告 Bug，但是我们可以简单地说“No”。
 
-安全上，OpenBSD 为了改进其安全性移除了 Linux 兼容层以及其常用的软件“sudo”。 linus 此前就抨击 OpenBSD 团队是一群自慰的猴子（OpenBSD crowd is a bunch of masturbating monkeys），认为他们是玩具。至今人们仍不知道那些年 SELinux 和 FBI 的关系（SELinux (Security-Enhanced  Linux ) 是由美国国家安全局（NSA）所开发）。嗯，没错，这也是一个 GPL 软件，“你觉得有问题你可以自己去看源代码吗！并给我们指出来。”但是更多人不知道的是 Windows 的开源是没有意义的，几十 TB 的源代码，无论他是开源还是不开源对于何种意义来说都是一样的——你既看不懂，也看不完，等于没开源。
+安全上，OpenBSD 为了改进其安全性移除了 Linux 兼容层以及其常用的软件“sudo”。 Linus 此前就抨击 OpenBSD 团队是一群自慰的猴子（OpenBSD crowd is a bunch of masturbating monkeys），认为他们是玩具。至今人们仍不知道那些年 SELinux 和 FBI 的关系（SELinux (Security-Enhanced  Linux ) 是由美国国家安全局（NSA）所开发）。嗯，没错，这也是一个 GPL 软件，“你觉得有问题你可以自己去看源代码吗！并给我们指出来。”但是更多人不知道的是 Windows 的开源是没有意义的，几十 TB 的源代码，无论他是开源还是不开源对于何种意义来说都是一样的——你既看不懂，也看不完，等于没开源。
 
 ## 03  Linux 的商业布局
 
@@ -53,11 +53,11 @@ Wine 的商业版叫做 Crossover，境内由著名的“苏州思杰马克丁�
 
 ## 04 “大独裁者”未必是好事
 
-众所周知， Linux 的内核开发是由 linus 一人独裁负责的。我们仍未知道何时独裁也成了一件值得称赞的事情了。或者在他们看来只要项目进展顺利，linus 选好接班人， Linux 内核就可以像中国的秦始皇所畅想的那样——受命于天，既寿永昌。他们把不同意见的人都打成“左派”，给他们扣上帽子，没有人告诉你，那个年代已经过去了吗？
+众所周知， Linux 的内核开发是由 Linus 一人独裁负责的。我们仍未知道何时独裁也成了一件值得称赞的事情了。或者在他们看来只要项目进展顺利，Linus 选好接班人， Linux 内核就可以像中国的秦始皇所畅想的那样——受命于天，既寿永昌。他们把不同意见的人都打成“左派”，给他们扣上帽子，没有人告诉你，那个年代已经过去了吗？
 
  Linux 的社区和他们的开发风格也是一样的，充满了各种巨苣，巨苣们一言以定天下，其他人说了不算。最典型的就是贴吧，如果你想问 Linux 的开发模式是什么，他们的社区是什么——请看百度贴吧：有五六个自诩代表吧友实则毫无贡献的人，在奔走试图合纵连横试图推翻现有吧主；有一个自称贴吧是自己的私有物品，吧主万世万代都得是自己的小丑；还有一个固定的吧宠，但从来都认不清自己的身份，还在说别人哗众取宠；剩下的都是摸鱼躺平的围观群众。
 
- Linux 社区如 linus 所言，是一个肮脏的泥潭，任何想要和这些人辩论并试图驳倒他们的人都将会被其拉低智商到同一水平，并眼睁睁地看着他用丰富的经验打败你。
+ Linux 社区如 Linus 所言，是一个肮脏的泥潭，任何想要和这些人辩论并试图驳倒他们的人都将会被其拉低智商到同一水平，并眼睁睁地看着他用丰富的经验打败你。
 
  Linux 本人所骂走的开发者绝不在少数，他们的行为准则（CoC）制定了和没有制定是一样的，你是能开除 Linux 不让他贡献一行代码，还是你能让他只做事不说话？类似的 GNU 离开了 Richard Matthew Stallman 会怎样？就像现在这样吗？
 
@@ -67,7 +67,7 @@ Wine 的商业版叫做 Crossover，境内由著名的“苏州思杰马克丁�
 
 前文所说到的 GNU Hurd 的确在设计上是一个非常优秀的微内核操作系统。但因为错失良机，使得更多开发者投入了 Linux 的泥潭之中。
 
- Linux 被无数人包装成 GNU 计划的伟大产物， GPL 的伟大产物， linus 独裁领导下的伟大产物。没有任何人可以以任何理由批评他，除了 linus 本人。事实上这就是皇帝的新衣，你想掀开 Linux 光鲜亮丽的外衣去一窥内部却发现 Linux 外边根本没有穿着任何衣物。
+ Linux 被无数人包装成 GNU 计划的伟大产物， GPL 的伟大产物， Linus 独裁领导下的伟大产物。没有任何人可以以任何理由批评他，除了 Linus 本人。事实上这就是皇帝的新衣，你想掀开 Linux 光鲜亮丽的外衣去一窥内部却发现 Linux 外边根本没有穿着任何衣物。
 
 在抨击 FreeBSD 社区以前，请看看泥潭般的 Linux 社区，这不是五十步笑百步，而是大哥莫说二弟。此处的读者可以移步之前的文章——《Linux  社区已经成为了一个肮脏的泥潭》。 Linux 社区的那些巨苣，那些搞苦难哲学的是最没有资格说别人的社区肮脏污秽不堪的人——他们天天说着 RTFM。关于 Linux 社区的种种一直无人敢说，无人敢言，任由他们这群巨苣去践踏，去污蔑，去破坏别的社区。
 
@@ -87,7 +87,7 @@ Wer mit Ungeheuern kämpft, mag zusehn, dass er nicht dabei zum Ungeheuer wird. 
 
  Linux 打败了一系列的操作系统：GNU Hurd、FreeBSD、OpenBSD 以及其他一堆 BSD，在服务器领域击败了 Windows server、MacOS，在移动平台产生了 Android。
 
- Linux 的发展看上去是 GPL 的胜利，是 linus 独裁的胜利，也是这个开源社区的胜利，更是 Linux 商业布局的胜利。
+ Linux 的发展看上去是 GPL 的胜利，是 Linus 独裁的胜利，也是这个开源社区的胜利，更是 Linux 商业布局的胜利。
 
 事实果真如此吗？究竟是皇帝的新衣还是破窗理论呢？
 
