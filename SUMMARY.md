@@ -230,6 +230,7 @@
 * [第八节 Rust/Go 环境的配置](di-er-shi-er-zhang-bian-cheng-yu-kai-fa/di-ba-jie-rust-huan-jing-de-pei-zhi.md)
 * [第九节 Csh 与其他 Shell](di-er-shi-er-zhang-bian-cheng-yu-kai-fa/di-jiu-jie-shell-de-xuan-ze.md)
 * [第十节 通过 IDA 7 调试 FreeBSD](di-er-shi-er-zhang-bian-cheng-yu-kai-fa/di-shi-jie-tong-guo-ida-7-tiao-shi-freebsd.md)
+* [第十一节 Git](di-er-shi-er-zhang-bian-cheng-yu-kai-fa/di-shi-yi-jie-git.md)
 
 ## 第二十三章 引导与恢复
 
