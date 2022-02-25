@@ -64,6 +64,8 @@ fusefs_load="YES"
 
 ### 显卡驱动
 
+>**Vmware 16.2.2 build-19200509 目前无法缩放屏幕，已经报告bug：<https://gitlab.freedesktop.org/xorg/app/appres/-/issues/1>、<https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=262118>**
+
 VMware 自动缩放屏幕请安装显卡驱动，即：
 
 `# pkg install xf86-video-vmware`
