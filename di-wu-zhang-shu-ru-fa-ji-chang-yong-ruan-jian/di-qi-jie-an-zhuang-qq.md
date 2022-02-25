@@ -48,7 +48,7 @@ FreeBSD 安装 Linux QQ 方法
 # fetch https://download-ib01.fedoraproject.org/pub/epel/7/x86_64/Packages/f/fcitx-libs-4.2.9.6-1.el7.x86_64.rpm
 ```
 
-然后分别安装以上 3 个包：
+然后分别安装以上 4 个包：
 
 ```
 # cd /compat/linux
@@ -58,7 +58,7 @@ FreeBSD 安装 Linux QQ 方法
 # rpm2cpio < /home/work/fcitx-libs-4.2.9.6-1.el7.x86_64.rpm | cpio -id
 ```
 
-注意：为了方便境内 FreeBSD 用户，可以使用境内的 gitee 同步下载以上三个文件；
+注意：为了方便境内 FreeBSD 用户，可以使用境内的 gitee 同步下载以上 4 个文件；
 
 ```
 # cd /home/work
