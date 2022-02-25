@@ -31,7 +31,7 @@ sddm_enable="YES"
 
 提示：hal 已经被删除。**不需要**再添加~~hald_enable="YES",~~ 见：
 
-{% embed url="https://www.freshports.org/sysutils/hal" %}
+https://www.freshports.org/sysutils/hal
 
 
 **注意：如果 sddm 登录闪退到登录界面，请检查左下角是不是 plasma-X11，闪退的一般都是 Wayland！因为目前 FreeBSD 上的 KDE 5 尚不支持 Wayland。**

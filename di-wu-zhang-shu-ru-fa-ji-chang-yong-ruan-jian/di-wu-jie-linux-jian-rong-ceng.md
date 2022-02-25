@@ -6,7 +6,7 @@
 
 以下参考
 
-{% embed url="https://docs.freebsd.org/en/books/handbook/linuxemu" %}
+https://docs.freebsd.org/en/books/handbook/linuxemu
 
 开启服务：
 

@@ -6,7 +6,7 @@
 
 ## 视频教程
 
-{% embed url="http://b23.tv/zcfHa4K" %}
+http://b23.tv/zcfHa4K
 
 ## 文字教程
 

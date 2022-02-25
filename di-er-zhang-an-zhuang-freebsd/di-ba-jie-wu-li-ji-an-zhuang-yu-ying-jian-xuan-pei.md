@@ -14,7 +14,7 @@
 
 刻录工具 Windows 应该选用 Rufus，Linux 直接使用 `dd`命令即可。
 
-{% embed url="https://rufus.ie/zh" %}
+https://rufus.ie/zh
 
 **注意：不建议使用 Handbook 推荐的 win32diskimager，有时会出现校验码错误的情况（实际上文件校验码正常）。也不要使用 ventory 引导实体机安装，有时会报错找不到安装文件。**
 
@@ -22,7 +22,7 @@
 
 更多硬件请参考：
 
-{% embed url="https://bsd-hardware.info/?d=FreeBSD" %}
+https://bsd-hardware.info/?d=FreeBSD
 
 1. 小米笔记本 12.5 一代 ：处理器 6Y30 、显卡 HD515 、WIFI intel 8260AC、声卡 ALC 233（实际上是 235）、硬盘 NVME INTEL 600P。
 

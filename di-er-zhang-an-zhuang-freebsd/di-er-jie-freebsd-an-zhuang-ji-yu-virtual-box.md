@@ -6,7 +6,7 @@
 
 点击 `download` 即可下载：
 
-{% embed url="https://www.virtualbox.org" %}
+https://www.virtualbox.org
 
 ## VirtualBox 虚拟机 FreeBSD 配置
 

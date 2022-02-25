@@ -24,7 +24,7 @@ FreeBSD 安装 Linux QQ 方法
 
 提示：后续如果版本更新请自行前往
 
-{% embed url="https://im.qq.com/linuxqq/download.html" %}
+https://im.qq.com/linuxqq/download.html
 
 手动下载。
 
@@ -68,7 +68,7 @@ FreeBSD 安装 Linux QQ 方法
 
 其余步骤自行参考。 境外用户可以使用 Github：
 
-{% embed url="https://github.com/ykla/FreeBSD-Linux-QQ" %}
+https://github.com/ykla/FreeBSD-Linux-QQ
 
 4. **刷新 gtk 缓存：**
 

@@ -16,15 +16,15 @@
 
 USTC：
 
-{% embed url="https://github.com/ustclug/mirrorrequest/issues/172" %}
+https://github.com/ustclug/mirrorrequest/issues/172
 
-{% embed url="https://github.com/ustclug/mirrorrequest/issues/171" %}
+https://github.com/ustclug/mirrorrequest/issues/171
 
 目前已经关闭的非官方 issue 镜像申请：
 
 TUNA：
 
-{% embed url="https://github.com/tuna/issues/issues/16" %}
+https://github.com/tuna/issues/issues/16
 
 ## 官方给出的镜像站基本要求
 
@@ -50,13 +50,13 @@ FreeBSD 目前在大陆非官方镜像站有若干个（详见第二节。）：
 
 USTC
 
-{% embed url="https://mirrors.ustc.edu.cn" %}
+https://mirrors.ustc.edu.cn
 
 仅 pkg ports
 
 ChinaFreeBSD
 
-{% embed url="http://chinafreebsd.cn/article/chinafreebsd-resouce" %}
+http://chinafreebsd.cn/article/chinafreebsd-resouce
 
 或者 freebsd.cn
 
@@ -66,7 +66,7 @@ mirror.bjtu.edu.cn
 
 联系方式:
 
-{% embed url="https://t.me/bjtumirror" %}
+https://t.me/bjtumirror
 
 网易 163 镜像站（仅 ports 源
 

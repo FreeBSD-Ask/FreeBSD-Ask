@@ -2,7 +2,7 @@
 
 ## 视频教程（一共4节，完整版本请点击去 bilibili 观看）
 
-{% embed url="https://www.bilibili.com/video/BV14i4y137mh" %}
+https://www.bilibili.com/video/BV14i4y137mh
 
 Release 正式版 镜像下载地址：[_https://download.freebsd.org/ftp/releases/amd64/amd64/ISO-IMAGES/13.0/FreeBSD-13.0-RELEASE-amd64-disc1.iso_](https://download.freebsd.org/ftp/releases/amd64/amd64/ISO-IMAGES/13.0/FreeBSD-13.0-RELEASE-amd64-disc1.iso)
 
@@ -12,13 +12,13 @@ FreeBSD 旧版本下载地址: [_http://ftp-archive.freebsd.org/pub/FreeBSD-Arch
 
 VMware Workstation Pro 是免费试用下载的，请勿从第三方站点下载，否则会造成一些苦难哲学的后果。点击 Download NOW 即可。左边是 Windows 系统使用，右侧是 Linux 系统使用。该软件虽是收费的，但是授权码并不难获得。
 
-{% embed url="https://www.vmware.com/products/workstation-pro/workstation-pro-evaluation.html" %}
+https://www.vmware.com/products/workstation-pro/workstation-pro-evaluation.html
 
 ### VMware Workstation 16 Player 下载
 
 VMware Workstation 16 Player 是个人免费使用的，你也可以选择此版本。
 
-{% embed url="https://www.vmware.com/products/workstation-player/workstation-player-evaluation.html" %}
+https://www.vmware.com/products/workstation-player/workstation-player-evaluation.html
 
 ## 网络设置
 

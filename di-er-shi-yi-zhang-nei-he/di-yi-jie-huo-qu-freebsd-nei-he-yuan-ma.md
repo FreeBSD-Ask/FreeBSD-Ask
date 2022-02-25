@@ -2,7 +2,7 @@
 
 FreeBSD 项目在 2021 年从 SVN 全面迁移到了 Git，即
 
-{% embed url="https://git.freebsd.org" %}
+https://git.freebsd.org
 
 所以获取源代码的方式也产生了变化。
 

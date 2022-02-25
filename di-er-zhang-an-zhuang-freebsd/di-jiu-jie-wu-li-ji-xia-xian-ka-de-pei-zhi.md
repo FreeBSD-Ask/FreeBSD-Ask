@@ -12,7 +12,7 @@ FreeBSD 已从 Linux 移植了显卡驱动，理论上，A 卡 N 卡均可在 am
 
 详细情况可以看
 
-{% embed url="https://wiki.freebsd.org/Graphics" %}
+https://wiki.freebsd.org/Graphics
 
 ## 英特尔核显 / AMD 独显
 

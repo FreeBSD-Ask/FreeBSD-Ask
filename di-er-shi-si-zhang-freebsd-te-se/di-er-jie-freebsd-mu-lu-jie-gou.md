@@ -35,4 +35,4 @@ FreeBSD 设计上属于学院派，条理清晰。
 
 更多信息，请参考官方的文档：
 
-{% embed url="https://docs.freebsd.org/en/books/handbook/dirstructure.html" %}
+https://docs.freebsd.org/en/books/handbook/dirstructure.html

@@ -69,5 +69,5 @@ MALLOC_PRODUCTION=yes
 
 **注意：**故障排除等事宜请参考
 
-{% embed url="https://github.com/netflix/tcplog_dumper" %}
+https://github.com/netflix/tcplog_dumper
 
