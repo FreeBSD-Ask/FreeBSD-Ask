@@ -43,7 +43,7 @@ tmpfs    /compat/linux/dev/shm	tmpfs	rw,mode=1777	0	0
 
 ```
 # pkg install debootstrap
-# debootstrap bionic /compat/ubuntu http://mirror.bjtu.edu.cn/ubuntu/
+# debootstrap focal /compat/ubuntu http://mirror.bjtu.edu.cn/ubuntu/
 # reboot
 ```
 ### 挂载文件系统
