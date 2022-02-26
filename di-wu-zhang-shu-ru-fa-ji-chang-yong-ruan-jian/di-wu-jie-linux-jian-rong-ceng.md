@@ -20,7 +20,7 @@ https://docs.freebsd.org/en/books/handbook/linuxemu
 # reboot
 ```
 
-## 自己构建 ubuntu/debian 兼容层（未经过实际测试，仅供专业人士自行测试！）
+## 自己构建 Ubuntu 兼容层
 
 >**以下教程仅在 FreeBSD 13.0 测试通过。构建的是 Ubuntu 20.04 LTS。兼容层使用技术实际上是 Linux jail，并非 chroot。**
 
