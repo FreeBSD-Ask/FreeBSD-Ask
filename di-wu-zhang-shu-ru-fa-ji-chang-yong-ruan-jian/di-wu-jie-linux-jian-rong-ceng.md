@@ -105,6 +105,6 @@ deb-src http://mirror.bjtu.edu.cn/ubuntu/ focal-security main restricted univers
 # /usr/bin/google-chrome-stable --no-sandbox --no-zygote --in-process-gpu  # 此时已经位于 Ubuntu 兼容层了。
 ```
 
->其他更多可以运行的软件见<https://wiki.freebsd.org/LinuxApps> 。
->参考文献<https://wiki.freebsd.org/LinuxJails> 。
+>其他更多可以运行的软件见 <https://wiki.freebsd.org/LinuxApps> 。
+>参考文献 <https://wiki.freebsd.org/LinuxJails> 。
 >类似的方法可以构建 Debian、Arch 兼容层（经测试会提示 内核太老，旧版本则强制升级无法使用）。
