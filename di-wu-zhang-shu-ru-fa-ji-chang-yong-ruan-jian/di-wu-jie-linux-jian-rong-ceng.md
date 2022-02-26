@@ -8,7 +8,7 @@
 
 https://docs.freebsd.org/en/books/handbook/linuxemu
 
-开启服务：
+## 开启服务
 
 ```
 # sysrc linux_enable="YES"
@@ -19,7 +19,18 @@ https://docs.freebsd.org/en/books/handbook/linuxemu
 # dbus-uuidgen > /compat/linux/etc/machine-id
 # reboot
 ```
+## 配置 fstab
 
+以下写入 `/etc/fstab`:
+
+```
+linprocfs   /compat/linux/proc	linprocfs	rw	0	0
+linsysfs    /compat/linux/sys	linsysfs	rw	0	0
+tmpfs    /compat/linux/dev/shm	tmpfs	rw,mode=1777	0	0
+```
+```
+# reboot
+```
 ## 自己构建 Ubuntu 兼容层
 
 >**以下教程仅在 FreeBSD 13.0 测试通过。构建的是 Ubuntu 20.04 LTS。兼容层使用技术实际上是 Linux jail，并非 chroot。**
@@ -106,5 +117,5 @@ deb-src http://mirror.bjtu.edu.cn/ubuntu/ focal-security main restricted univers
 ```
 
 >其他更多可以运行的软件见 <https://wiki.freebsd.org/LinuxApps> 。
->参考文献 <https://wiki.freebsd.org/LinuxJails> 。
+>参考文献 <https://wiki.freebsd.org/LinuxJails> 、<https://handbook.freebsdcn.org/di-10-zhang-linux-er-jin-zhi-jian-rong-ceng/10.4.-shi-yong-debootstrap8-gou-jian-debian-ubuntu-ji-ben-xi-tong> 。
 >类似的方法可以构建 Debian、Arch 兼容层（经测试会提示 内核太老，旧版本则强制升级无法使用）。
