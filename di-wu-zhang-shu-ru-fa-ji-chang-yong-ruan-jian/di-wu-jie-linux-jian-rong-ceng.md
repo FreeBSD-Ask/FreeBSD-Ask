@@ -6,7 +6,7 @@
 
 以下参考
 
-https://docs.freebsd.org/en/books/handbook/linuxemu
+https://handbook.freebsdcn.org/di-10-zhang-linux-er-jin-zhi-jian-rong-ceng/10.1.-gai-shu
 
 ## 开启服务
 
