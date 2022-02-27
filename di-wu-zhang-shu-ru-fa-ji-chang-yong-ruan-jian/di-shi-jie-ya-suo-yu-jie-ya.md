@@ -42,7 +42,7 @@ FreeBSD 操作系统下，7z 和 7za 命令均通过`# pkg install -y 7-zip`获�
 
 ```
 # 7z a test.7z test # 7z 打包文件 
-# 7z x test.7z # z 释放文件
+# 7z x test.7z # 7z 释放文件
 # 7za a test.7z test # 7za 打包文件 
 # 7za x test.7z # 7za 释放文件
 ```
