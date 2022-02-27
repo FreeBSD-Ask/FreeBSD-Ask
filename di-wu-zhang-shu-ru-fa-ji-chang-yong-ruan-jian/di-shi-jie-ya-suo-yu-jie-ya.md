@@ -1,6 +1,6 @@
 # 第十节 压缩与解压
 
-## ZIP
+## zip
 
 安装 zip 压缩文件 `# pkg install zip unzip`
 
@@ -10,7 +10,7 @@
 # unzip test.zip # 释放 zip 格式文件 
 ```
 
-## tar 与 xz
+## tar/xz
 
 ```
 # tar -cvf test.tar test # 打包 tar 格式文件 
