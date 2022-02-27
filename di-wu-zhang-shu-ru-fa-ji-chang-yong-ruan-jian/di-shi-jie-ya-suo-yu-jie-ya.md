@@ -8,7 +8,11 @@
 # zip test.zip test # 打包 zip 格式文件 
 
 # unzip test.zip # 释放 zip 格式文件 
+```
 
+## tar 与 xz
+
+```
 # tar -cvf test.tar test # 打包 tar 格式文件 
 
 # tar -xvf test.tar # 释放 tar 格式文件 
