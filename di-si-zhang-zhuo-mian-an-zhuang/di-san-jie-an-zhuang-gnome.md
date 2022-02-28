@@ -2,9 +2,9 @@
 
 **截止到 2022-2-3，`Gnome` 在不同版本的 pkg 源里的存在形式也是不一样的，在 `quarterly` 中，为 `x11/gnome3`,在 `latest` 中，为 `x11/gnome`,找不到 `gnome3` 的可以试一下 `gnome`。**
 
-## 1.依赖准备
+## 1.安装
 
-`# pkg install -y xorg gnome3`
+`# pkg install xorg gnome3 wqy-fonts`
 
 ## 2.配置
 
@@ -121,10 +121,6 @@ export XMODIFIERS=@im=fcitx
 ```
 
 打开网站 `https://extensions.gnome.org/extension/1674/topiconsfix/` 即可安装插件。
-
-## 安装字体
-
-`# pkg install wqy-fonts`
 
 ## 终端显示中文(文件用户根目录)
 
