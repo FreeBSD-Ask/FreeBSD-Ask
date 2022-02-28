@@ -40,3 +40,5 @@ proc /proc procfs rw 0 0
 # sysrc dbus_enable="YES"
 # sysrc lightdm_enable="YES"
 ```
+
+>目前不知道怎么设置中文。如果您知道请提交 issue 或者 pull。
