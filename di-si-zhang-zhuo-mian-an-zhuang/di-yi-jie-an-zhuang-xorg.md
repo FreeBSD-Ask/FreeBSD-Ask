@@ -10,6 +10,10 @@ xorg 最小化包: org-minimal
 
 ### 安装
 
+通过pkg安装
+
+`# pkg install xorg`
+
 通过ports安装
 
 ```
@@ -17,6 +21,4 @@ xorg 最小化包: org-minimal
 # make install clean
 ```
 
-通过pkg安装
 
-`# pkg install xorg`

@@ -12,22 +12,18 @@
 
 添加内容如下: `proc /proc procfs rw 0 0`
 
-`# ee /etc/rc.conf` 
-
-添加：
-
 ```
-dbus_enable="YES"
-gdm_enable="YES"
-gnome_enable="YES"
-snd_hda="YES"
+sysrc dbus_enable="YES"
+sysrc gdm_enable="YES"
+sysrc gnome_enable="YES"
+sysrc snd_hda="YES"
 ```
 
-输入以下指令（或者在 `.xinitrc` 文件加入以下内容）
+输入以下命令（或者在 `.xinitrc` 文件加入以下内容）
 
 `% echo "/usr/local/bin/gnome-session" > ~/.xinitrc`
 
-## 中文化GNOME
+## 中文化 GNOME
 
 `# cd /usr/local/etc/gdm && ee locale.conf`
 

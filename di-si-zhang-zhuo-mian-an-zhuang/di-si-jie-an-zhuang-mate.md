@@ -1,16 +1,19 @@
 # 第四节 安装 Mate 桌面
 
-FreeBSD 安装 mate 桌面环境
+>以下教程适用于shell 为 bash/sh/zsh 的用户。
+>首先看看现在自己的 shell 是不是 `sh`,`bash`,`zsh`：
+>`# echo  $0`
+>如果是 `sh`,`bash`,`zsh` 其中之一，请继续；
 
 ## 安装开始（主要程序）
 
-`# pkg install -y mate xorg`
-
-在文件 `/etc/rc.conf` 中加入下面的行
+```
+# pkg install  mate xorg wqy-fonts lightdm lightdm-gtk-greeter
+```
 
 ```
-moused_enable="YES"
-dbus_enable="YES"
+# sysrc moused_enable="YES"
+# sysrc dbus_enable="YES"
 ```
 
 ## 安装登陆管理器
@@ -26,13 +29,6 @@ Slim 和 Lightdm 任选其一，因为前者已经停止开发，故推荐使用
 - 在主目录`.xinitrc` 文件内加入下面的行:
 
 `exec mate-session`
-
-
-### 安装 Slim
-
-- `# pkg install -y slim`
-
-- 在`/etc/rc.conf` 中加入一行：`slim_enable="YES"`
 
 
 ## 显示中文桌面环境
@@ -59,13 +55,4 @@ export GTK_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
 export QT_IM_MODULE=ibus
 ibus &
-```
-
-## 安装软件/安装字体
-
-```
-# pkg install -y noto-sc
-# pkg install -y firefox
-# pkg install -y networkmgr
-# pkg install -y zh_CN-libreoffice
 ```
