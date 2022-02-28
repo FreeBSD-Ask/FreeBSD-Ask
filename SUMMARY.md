@@ -59,10 +59,12 @@
 * [第三节 安装 Gnome](di-si-zhang-zhuo-mian-an-zhuang/di-san-jie-an-zhuang-gnome.md)
 * [第四节 安装 Mate](di-si-zhang-zhuo-mian-an-zhuang/di-si-jie-an-zhuang-mate.md)
 * [第五节 安装 Xfce](di-si-zhang-zhuo-mian-an-zhuang/di-wu-jie-an-zhuang-xfce.md)
-* [第六节 root 登录桌面](di-si-zhang-zhuo-mian-an-zhuang/di-liu-jie-root-deng-lu-zhuo-mian.md)
-* [第七节 主题与美化](di-si-zhang-zhuo-mian-an-zhuang/di-qi-jie-zhu-ti-yu-mei-hua.md)
-* [第八节 远程桌面管理](di-si-zhang-zhuo-mian-an-zhuang/di-ba-jie-yuan-cheng-zhuo-mian-guan-li.md)
-* [第九节 安装 Wayland （可选）](di-si-zhang-zhuo-mian-an-zhuang/di-jiu-jie-an-zhuang-wayland-ke-xuan.md)
+* [第六节 安装 Cinnamon](di-si-zhang-zhuo-mian-an-zhuang/di-liu-jie-an-zhuang-cinnamon.md)
+* [第七节 安装 Lumina](di-si-zhang-zhuo-mian-an-zhuang/di-qi-jie-an-zhuang-lumina.md)
+* [第八节 root 登录桌面](di-si-zhang-zhuo-mian-an-zhuang/di-ba-jie-root-deng-lu-zhuo-mian.md)
+* [第九节 主题与美化](di-si-zhang-zhuo-mian-an-zhuang/di-jiu-jie-zhu-ti-yu-mei-hua.md)
+* [第十节 远程桌面管理](di-si-zhang-zhuo-mian-an-zhuang/di-shi-jie-yuan-cheng-zhuo-mian-guan-li.md)
+* [第十一节 安装 Wayland （可选）](di-si-zhang-zhuo-mian-an-zhuang/di-shi-yi-jie-an-zhuang-wayland-ke-xuan.md)
 
 ## 第五章 输入法及常用软件
 
