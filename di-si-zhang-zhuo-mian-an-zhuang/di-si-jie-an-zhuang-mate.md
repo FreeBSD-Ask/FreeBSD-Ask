@@ -1,6 +1,6 @@
 # 第四节 安装 Mate 桌面
 
->以下教程适用于shell 为 bash/sh/zsh 的用户。
+>以下教程适用于 shell 为 bash/sh/zsh 的用户。
 >
 >首先看看现在自己的 shell 是不是 `sh`,`bash`,`zsh`：
 >
