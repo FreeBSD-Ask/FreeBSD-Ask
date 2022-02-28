@@ -1,9 +1,12 @@
 # 第二节 安装 KDE 5
 
 >以下教程适用于 shell 为 csh/tcsh 的用户。
+>
 >首先看看现在自己的 shell 是不是 csh/tcsh
+>
 >`# echo  $0`
->如果是 csh/tcsh 其中之一，请继续；
+>
+>如果是 csh/tcsh 其中之一，请继续。
 
 ## 安装
 
