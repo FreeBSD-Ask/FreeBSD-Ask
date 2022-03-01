@@ -67,8 +67,6 @@ https://docs.qq.com/doc/DSUJsUFBHTnVWQmtS
 
 ### 其他
 
-同名小说：起点网——[《FreeBSD从入门到跑路》](https://book.qidian.com/info/1031738676)
-
 [FreeBSD Handbook 2022 中文翻译项目](https://handbook.freebsdcn.org)
 
 微信公众号: freebsdzh （扫码关注）
