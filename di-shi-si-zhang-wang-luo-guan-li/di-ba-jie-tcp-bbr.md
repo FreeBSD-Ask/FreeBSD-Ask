@@ -5,7 +5,8 @@
 TCP BBR 是一种 Google 开发的拥塞控制算法。作用有两个，
 
 1. **在有一定丢包率的网络链路上充分利用带宽。**
-2. **降低网络链路上的 buffer 占用率，从而降低延迟。**
+
+3. **降低网络链路上的 buffer 占用率，从而降低延迟。**
 
 一般来说，如果你使用了代理软件，建议开启 TCP BBR 功能，在速度和稳定性上会有十分显著的作用。该项目在 FreeBSD 中，由 Netflix 团队协助开发。最低系统版本支持：_r363032_，也即推荐 FreeBSD 13.0。
 
@@ -24,7 +25,7 @@ TCP BBR 是一种 Google 开发的拥塞控制算法。作用有两个，
 ```
 options TCPHPTS
 options RATELIMIT
-options WITH_EXTRA_TCP_STACKS=1
+makeoptions WITH_EXTRA_TCP_STACKS=1
 ```
 
 新建 `/etc/src.conf`，内容为:
@@ -37,8 +38,8 @@ MALLOC_PRODUCTION=yes
 **编译并安装内核**
 
 ```
-# /usr/sbin/config GENERIC-BBR
-# cd ../compile/GENERIC-BBR
+# /usr/sbin/config GENERIC-bbr
+# cd ../compile/GENERIC-bbr
 # make cleandepend && make depend
 # make -jN+1
 ```
@@ -67,7 +68,7 @@ MALLOC_PRODUCTION=yes
 
 如果结果是 `net.inet.tcp.functions_default: bbr`，则启用 TCP BBR 成功。
 
-**注意：**故障排除等事宜请参考
+**注意：** 故障排除等事宜请参考：
 
-https://github.com/netflix/tcplog_dumper
+<https://github.com/netflix/tcplog_dumper>
 
