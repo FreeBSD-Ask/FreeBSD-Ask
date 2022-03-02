@@ -24,3 +24,4 @@ https://git.freebsd.org
 # fetch https://download.freebsd.org/ftp/releases/amd64/13.0-RELEASE/src.txz
 # tar xvzfp src.txz  -C /
 ```
+>如果速度慢可以切换到 <https://mirror.bjtu.edu.cn/freebsd/releases/amd64/13.0-RELEASE/lib32.txz>
