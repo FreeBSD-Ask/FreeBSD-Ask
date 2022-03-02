@@ -1,6 +1,6 @@
 # 第八节 TCP BBR
 
-TCP BBR 是一种 Google 开发的拥塞控制算法。作用有两个，
+TCP BBR 是一种 Google 开发的拥塞控制算法。作用有两个：
 
 1. **在有一定丢包率的网络链路上充分利用带宽。**
 
@@ -8,7 +8,7 @@ TCP BBR 是一种 Google 开发的拥塞控制算法。作用有两个，
 
 一般来说，如果你使用了代理软件，建议开启 TCP BBR 功能，在速度和稳定性上会有十分显著的作用。该项目在 FreeBSD 中，由 Netflix 团队协助开发。最低系统版本支持：_r363032_，也即推荐 FreeBSD 13.0。
 
-**修改内核配置**
+## 修改内核配置
 
 `# cd /usr/src/sys/amd64/conf`
 
@@ -33,7 +33,7 @@ KERNCONF=GENERIC-bbr
 MALLOC_PRODUCTION=yes
 ```
 
-**编译并安装内核**
+## 编译并安装内核
 
 ```
 # /usr/sbin/config GENERIC-bbr
@@ -52,7 +52,7 @@ MALLOC_PRODUCTION=yes
 
 如果显示出 `GENERIC-bbr`，则表示 TCP BBR 内核编译并安装成功。
 
-**配置和加载 BBR 模块**
+## 配置和加载 BBR 模块
 
 `# sysrc kld_list+="tcp_rack tcp_bbr"`
 
