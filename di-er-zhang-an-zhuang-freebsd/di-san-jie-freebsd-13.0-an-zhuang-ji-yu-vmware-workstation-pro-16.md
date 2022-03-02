@@ -4,9 +4,13 @@
 
 https://www.bilibili.com/video/BV14i4y137mh
 
-Release 正式版 镜像下载地址：[_https://download.freebsd.org/ftp/releases/amd64/amd64/ISO-IMAGES/13.0/FreeBSD-13.0-RELEASE-amd64-disc1.iso_](https://download.freebsd.org/ftp/releases/amd64/amd64/ISO-IMAGES/13.0/FreeBSD-13.0-RELEASE-amd64-disc1.iso)
+Release 正式版 镜像下载地址：<https://download.freebsd.org/ftp/releases/amd64/amd64/ISO-IMAGES/13.0/FreeBSD-13.0-RELEASE-amd64-disc1.iso>
 
-FreeBSD 旧版本下载地址: [_http://ftp-archive.freebsd.org/pub/FreeBSD-Archive/old-releases/amd64/ISO-IMAGES/_](http://ftp-archive.freebsd.org/pub/FreeBSD-Archive/old-releases/amd64/ISO-IMAGES/)
+(https://download.freebsd.org/ftp/releases/amd64/amd64/ISO-IMAGES/13.0/FreeBSD-13.0-RELEASE-amd64-disc1.iso)
+
+Current 测试版（仅限专业用户） 镜像下载地址（北京交通大学开源镜像站）: <https://mirror.bjtu.edu.cn/freebsd/snapshots/ISO-IMAGES/14.0/>
+
+FreeBSD 旧版本下载地址: [http://ftp-archive.freebsd.org/pub/FreeBSD-Archive/old-releases/amd64/ISO-IMAGES/](http://ftp-archive.freebsd.org/pub/FreeBSD-Archive/old-releases/amd64/ISO-IMAGES/)
 
 ## VMware Workstation Pro 下载
 
