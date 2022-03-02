@@ -4,7 +4,9 @@
 
 ## 1.安装
 
-`# pkg install xorg gnome3 wqy-fonts`
+```
+# pkg install xorg gnome3 wqy-fonts xdg-user-dirs
+```
 
 ## 2.配置
 
