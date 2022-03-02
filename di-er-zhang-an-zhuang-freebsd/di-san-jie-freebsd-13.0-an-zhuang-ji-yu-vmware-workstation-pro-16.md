@@ -6,8 +6,6 @@ https://www.bilibili.com/video/BV14i4y137mh
 
 Release 正式版 镜像下载地址：<https://download.freebsd.org/ftp/releases/amd64/amd64/ISO-IMAGES/13.0/FreeBSD-13.0-RELEASE-amd64-disc1.iso>
 
-(https://download.freebsd.org/ftp/releases/amd64/amd64/ISO-IMAGES/13.0/FreeBSD-13.0-RELEASE-amd64-disc1.iso)
-
 Current 测试版（仅限专业用户，对于该版本来说，无法启动，环境变量错误都是正常的事情！） 镜像下载地址（北京交通大学开源镜像站）: <https://mirror.bjtu.edu.cn/freebsd/snapshots/ISO-IMAGES/14.0/>
 
 FreeBSD 旧版本下载地址: [http://ftp-archive.freebsd.org/pub/FreeBSD-Archive/old-releases/amd64/ISO-IMAGES/](http://ftp-archive.freebsd.org/pub/FreeBSD-Archive/old-releases/amd64/ISO-IMAGES/)
@@ -30,7 +28,7 @@ https://www.vmware.com/products/workstation-player/workstation-player-evaluation
 
 请使用 NAT 模式，如果不能与宿主机（物理机）互通，请打开 VMware 编辑-虚拟网络管理器，移除第一项“桥接”。移除后重启虚拟机应该就可以了。
 
-如果没有网络请设置 DNS 为223.5.5.5。请看本章第四节。
+如果没有网络请设置 DNS 为`223.5.5.5`。请看本章第四节。
 
 ## 虚拟机增强工具以及显卡驱动
 
