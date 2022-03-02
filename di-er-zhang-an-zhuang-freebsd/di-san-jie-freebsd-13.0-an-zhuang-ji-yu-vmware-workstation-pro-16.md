@@ -10,7 +10,7 @@ FreeBSD 旧版本下载地址: [_http://ftp-archive.freebsd.org/pub/FreeBSD-Arch
 
 ## VMware Workstation Pro 下载
 
->**Vmware 16.2.2 build-19200509 目前无法缩放屏幕，已经报告bug：<https://gitlab.freedesktop.org/xorg/app/appres/-/issues/1>、<https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=262118>**正常版本可至群文件下载
+>**Vmware 16.2.2 build-19200509 目前无法缩放屏幕，已经报告bug：<https://gitlab.freedesktop.org/xorg/app/appres/-/issues/1>、<https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=262118>** 正常版本可至群文件下载
 >
 VMware Workstation Pro 是免费试用下载的，请勿从第三方站点下载，否则会造成一些苦难哲学的后果。点击 Download NOW 即可。左边是 Windows 系统使用，右侧是 Linux 系统使用。该软件虽是收费的，但是授权码并不难获得。
 
