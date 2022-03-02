@@ -30,7 +30,22 @@ VMware Workstation 16 Player 是个人免费使用的，你也可以选择此版
 
 如果没有网络请设置 DNS 为`223.5.5.5`。请看本章第四节。
 
-## 虚拟机增强工具以及显卡驱动
+## 显卡驱动以及虚拟机增强工具
+
+### 显卡驱动
+
+>**Vmware 16.2.2 build-19200509 目前无法缩放屏幕，已经报告bug：<https://gitlab.freedesktop.org/xorg/app/appres/-/issues/1>、<https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=262118>** 正常版本可至群文件下载
+
+VMware 自动缩放屏幕请安装显卡驱动，即：
+
+```
+# pkg install xf86-video-vmware
+```
+
+> wayland 下也需要安装该驱动。
+
+> 如果屏幕显示不正常（过大），请尝试：编辑虚拟机设置——>硬件、设备——>显示器——>监视器、指定监视器设置——>任意监视器的最大分辨率，设置为主机的分辨率或者略低于主机分辨率均可。
+
 
 ### 虚拟机增强工具
 
@@ -65,18 +80,6 @@ vmware_guestd_enable="YES"
 ```
 fusefs_load="YES"
 ```
-
-### 显卡驱动
-
->**Vmware 16.2.2 build-19200509 目前无法缩放屏幕，已经报告bug：<https://gitlab.freedesktop.org/xorg/app/appres/-/issues/1>、<https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=262118>** 正常版本可至群文件下载
-
-VMware 自动缩放屏幕请安装显卡驱动，即：
-
-`# pkg install xf86-video-vmware`
-
-> wayland 下也需要安装该驱动。
-
-> 如果屏幕显示不正常（过大），请尝试：编辑虚拟机设置——>硬件、设备——>显示器——>监视器、指定监视器设置——>任意监视器的最大分辨率，设置为主机的分辨率或者略低于主机分辨率均可。
 
 ### 共享文件夹
 
