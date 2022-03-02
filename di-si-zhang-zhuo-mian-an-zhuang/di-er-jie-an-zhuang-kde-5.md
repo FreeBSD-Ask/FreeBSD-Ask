@@ -10,9 +10,12 @@
 
 ## 安装
 
-`# pkg install xorg sddm kde5 wqy-fonts`
+```
+# pkg install xorg sddm kde5 wqy-fonts xdg-user-dirs
+```
 
->上面的命令分别安装了桌面、窗口管理器和中文字体。
+
+>上面的命令分别安装了桌面、窗口管理器和中文字体以及创建用户目录的工具。
 
 ## 配置
 
