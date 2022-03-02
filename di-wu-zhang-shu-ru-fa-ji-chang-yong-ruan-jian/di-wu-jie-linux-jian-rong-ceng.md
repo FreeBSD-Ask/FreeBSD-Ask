@@ -8,7 +8,7 @@
 
 https://handbook.freebsdcn.org/di-10-zhang-linux-er-jin-zhi-jian-rong-ceng/10.1.-gai-shu
 
-## 开启服务
+### 开启服务
 
 ```
 # sysrc linux_enable="YES"
@@ -19,7 +19,7 @@ https://handbook.freebsdcn.org/di-10-zhang-linux-er-jin-zhi-jian-rong-ceng/10.1.
 # dbus-uuidgen > /compat/linux/etc/machine-id
 # reboot
 ```
-## 配置 fstab
+### 配置 fstab
 
 以下写入 `/etc/fstab`:
 
