@@ -21,7 +21,7 @@
 
 提示：后续如果版本更新请自行前往
 
-https://im.qq.com/linuxqq/download.html
+<https://im.qq.com/linuxqq/download.html>
 
 手动下载。
 
@@ -65,7 +65,7 @@ https://im.qq.com/linuxqq/download.html
 
 其余步骤自行参考。 境外用户可以使用 Github：
 
-https://github.com/ykla/FreeBSD-Linux-QQ
+<https://github.com/ykla/FreeBSD-Linux-QQ>
 
 ## 刷新 gtk 缓存
 
