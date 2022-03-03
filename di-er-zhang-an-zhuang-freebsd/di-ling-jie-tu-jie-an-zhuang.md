@@ -93,7 +93,7 @@
 
 ![](../.gitbook/assets/安装25.png)
 
-推荐选择：这里是安全增强选择，应该选择 `disable_sendmail`。
+推荐选择：这里是安全增强选择，应该选择 `disable_sendmail`，如果不选这个服务会使你在每次开机的时候卡上几分钟，而且这个服务本身没什么用，发邮件用的。
 
 ![](../.gitbook/assets/安装26.png)
 
