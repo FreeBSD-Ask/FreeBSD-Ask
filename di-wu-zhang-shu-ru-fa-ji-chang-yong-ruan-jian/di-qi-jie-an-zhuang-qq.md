@@ -1,12 +1,12 @@
 # 第七节 安装 QQ
 
-**介绍**
-
-FreeBSD 安装 Linux QQ 方法
+>介绍
+>
+>FreeBSD 安装 Linux QQ 方法
 
 ## **安装 Linux 兼容层：**
 
->请先安装Linux兼容层，具体请看 第五章 第五节。
+>请先安装 Linux 兼容层，具体请看 第五章 第五节。
 
 ```
 # pkg install linux-c7-gtk2 linux-c7-libxkbcommon
