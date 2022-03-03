@@ -77,7 +77,7 @@
 
 ![](../.gitbook/assets/安装24-修.png)
 
-建议不选`local_unbound`，会影响 DNS,见 [https://bugs.freebsd.org/bugzilla/show\_bug.cgi?id=262290](https://bugs.freebsd.org/bugzilla/show\_bug.cgi?id=262290) 。
+建议不选`local_unbound`，会影响 DNS，见 [https://bugs.freebsd.org/bugzilla/show\_bug.cgi?id=262290](https://bugs.freebsd.org/bugzilla/show\_bug.cgi?id=262290) 。
 
 虚拟机不需要选`powerd`。
 
