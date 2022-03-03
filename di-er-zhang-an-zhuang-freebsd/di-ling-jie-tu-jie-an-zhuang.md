@@ -79,7 +79,7 @@
 
 ![](../.gitbook/assets/安装24.png)
 
-推荐不选`local_unbound`会影响 DNS，虚拟机不需要选`powerd`。
+建议不选`local_unbound`，会影响 DNS；虚拟机不需要选`powerd`。
 
 |选项|解释|
 |:---:|:---:|
