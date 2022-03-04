@@ -5,6 +5,8 @@
 ```
 # sysrc hcsecd_enable="YES"
 # sysrc bthidd_enable="YES"
+# service hcsecd start
+# service bthidd start
 ```
 
 使用`bluetooth-config`工具添加蓝牙设备即可。
