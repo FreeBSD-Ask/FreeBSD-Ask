@@ -1,6 +1,6 @@
 # 第〇节 图解安装
 
-![](broken-reference)
+![](../.gitbook/assets/安装1.png)
 
 推荐等待十秒即可进入，也可以直接回车进入。
 
@@ -11,19 +11,19 @@
 |  Single User |    单用户模式    |
 |    Verbose   | 啰嗦模式，显示更多输出 |
 
-![](broken-reference)
+![](../.gitbook/assets/安装2.png)
 
 选择 `install`,按下 回车键 进行安装。
 
-![](broken-reference)
+![](../.gitbook/assets/安装3.png)
 
 这里是设置键盘，直接回车即可。
 
-![](broken-reference)
+![](../.gitbook/assets/安装4.png)
 
 此处是设置主机名。
 
-![](broken-reference)
+![](../.gitbook/assets/安装5.png)
 
 推荐：只选 `src` 以及 `lib32` 。即使选了 `ports` 也不会安装的，还是空的。
 
@@ -37,43 +37,43 @@
 |     src    |                    系统源代码                    |
 |    tests   |                     测试工具                    |
 
-![](broken-reference)
+![](../.gitbook/assets/安装6.png)
 
 推荐：文件分区详解在第 6 章。这里推荐选择 auto ZFS/UFS
 
-![](broken-reference)
+![](../.gitbook/assets/安装7.png)
 
-![](broken-reference)
+![](../.gitbook/assets/安装8.png)
 
-![](broken-reference)
+![](../.gitbook/assets/安装9.png)
 
-![](broken-reference)
+![](../.gitbook/assets/安装10.png)
 
-![](broken-reference)
+![](../.gitbook/assets/安装11.png)
 
-![](broken-reference)
+![](../.gitbook/assets/安装12.png)
 
-![](broken-reference)
+![](../.gitbook/assets/安装13.png)
 
-![](broken-reference)
+![](../.gitbook/assets/安装14.png)
 
-![](broken-reference)
+![](../.gitbook/assets/安装15.png)
 
-![](broken-reference)
+![](../.gitbook/assets/安装16.png)
 
-![](broken-reference)
+![](../.gitbook/assets/安装17.png)
 
-![](broken-reference)
+![](../.gitbook/assets/安装18.png)
 
-![](broken-reference)
+![](../.gitbook/assets/安装19.png)
 
-![](broken-reference)
+![](../.gitbook/assets/安装20.png)
 
-![](broken-reference)
+![](../.gitbook/assets/安装21.png)
 
-![](broken-reference)
+![](../.gitbook/assets/安装22.png)
 
-![](broken-reference)
+![](../.gitbook/assets/安装23.png)
 
 ![](../.gitbook/assets/安装24-修.png)
 
@@ -91,14 +91,14 @@
 |     powerd     |                       电源管理                      |
 |     dumpdev    |                  启用崩溃转储，用于调试系统                  |
 
-![](broken-reference)
+![](../.gitbook/assets/安装25.png)
 
 推荐选择：这里是安全增强选择，应该选择 `disable_sendmail`，如果不禁止这个服务会使你在每次开机的时候卡上几分钟，而且这个服务本身没什么用，发邮件用的。
 
-![](broken-reference)
+![](../.gitbook/assets/安装26.png)
 
-![](broken-reference)
+![](../.gitbook/assets/安装27.png)
 
-![](broken-reference)
+![](../.gitbook/assets/安装28.png)
 
-![](broken-reference)
+![](../.gitbook/assets/安装29.png)
