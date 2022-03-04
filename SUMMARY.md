@@ -40,7 +40,7 @@
 * [第十节 物理机下触摸板的设置](di-er-zhang-an-zhuang-freebsd/di-shi-jie-wu-li-ji-xia-chu-mo-ban-de-she-zhi.md)
 * [第十一节 物理机声卡与网卡设置](di-er-zhang-an-zhuang-freebsd/di-shi-yi-jie-wu-li-ji-sheng-ka-yu-wang-ka-she-zhi.md)
 * [第十二节 打印机的安装](di-er-zhang-an-zhuang-freebsd/di-shi-er-jie-da-yin-ji-de-an-zhuang.md)
-* [无线蓝牙鼠标的设置](di-er-zhang-an-zhuang-freebsd/wu-xian-lan-ya-shu-biao-de-she-zhi.md)
+* [第十三节 无线蓝牙鼠标的设置](di-er-zhang-an-zhuang-freebsd/di-shi-san-jie-wu-xian-lan-ya-shu-biao-de-she-zhi.md)
 
 ## 第三章 软件源及包管理器
 
