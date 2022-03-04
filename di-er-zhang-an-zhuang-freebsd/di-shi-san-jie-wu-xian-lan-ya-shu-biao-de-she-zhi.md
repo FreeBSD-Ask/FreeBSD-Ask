@@ -7,7 +7,7 @@
 # sysrc bthidd_enable="YES"
 ```
 
-使用`bluetooth-config`工具添加蓝牙设备：
+使用`bluetooth-config`工具添加蓝牙设备即可。
 
 蓝牙鼠标调到配对模式，运行`# bluetooth-config scan`，按提示信息进行添加：
 
