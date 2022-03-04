@@ -8,6 +8,15 @@
 # pkg install xorg gnome3 wqy-fonts xdg-user-dirs
 ```
 
+解释:
+|包|用途|
+|:---:|:---:|
+|xorg|X11|
+|gnome3|Gnome3 主程序|
+|wqy-fonts|文泉驿中文开源字体|
+|xdg-user-dirs|用于创建用户家目录的子目录|
+
+
 ## 配置
 
 `# ee /etc/fstab` 
@@ -26,6 +35,8 @@ sysrc snd_hda="YES"
 `% echo "/usr/local/bin/gnome-session" > ~/.xinitrc`
 
 ## 中文化 GNOME
+
+>本小节用户 shell 应该是默认的`sh`，判断方法见下一小节“安装输入法”（root 用户默认 shell 是 csh，无法适用）。
 
 `# cd /usr/local/etc/gdm && ee locale.conf`
 
