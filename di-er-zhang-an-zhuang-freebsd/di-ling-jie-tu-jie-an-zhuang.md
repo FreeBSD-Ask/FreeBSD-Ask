@@ -1,6 +1,6 @@
 # 第〇节 图解安装
 
-![](<../.gitbook/assets/安装1 (1).png>)
+![](broken-reference)
 
 推荐等待十秒即可进入，也可以直接回车进入。
 
@@ -11,19 +11,19 @@
 |  Single User |    单用户模式    |
 |    Verbose   | 啰嗦模式，显示更多输出 |
 
-![](<../.gitbook/assets/安装2 (1).png>)
+![](broken-reference)
 
 选择 `install`,按下 回车键 进行安装。
 
-![](<../.gitbook/assets/安装3 (1).png>)
+![](broken-reference)
 
 这里是设置键盘，直接回车即可。
 
-![](<../.gitbook/assets/安装4 (1).png>)
+![](broken-reference)
 
 此处是设置主机名。
 
-![](<../.gitbook/assets/安装5 (1).png>)
+![](broken-reference)
 
 推荐：只选 `src` 以及 `lib32` 。即使选了 `ports` 也不会安装的，还是空的。
 
@@ -37,43 +37,43 @@
 |     src    |                    系统源代码                    |
 |    tests   |                     测试工具                    |
 
-![](<../.gitbook/assets/安装6 (1).png>)
+![](broken-reference)
 
 推荐：文件分区详解在第 6 章。这里推荐选择 auto ZFS/UFS
 
-![](<../.gitbook/assets/安装7 (1).png>)
+![](broken-reference)
 
-![](<../.gitbook/assets/安装8 (1).png>)
+![](broken-reference)
 
-![](<../.gitbook/assets/安装9 (1).png>)
+![](broken-reference)
 
-![](<../.gitbook/assets/安装10 (1).png>)
+![](broken-reference)
 
-![](<../.gitbook/assets/安装11 (1).png>)
+![](broken-reference)
 
-![](<../.gitbook/assets/安装12 (1).png>)
+![](broken-reference)
 
-![](<../.gitbook/assets/安装13 (1).png>)
+![](broken-reference)
 
-![](<../.gitbook/assets/安装14 (1).png>)
+![](broken-reference)
 
-![](<../.gitbook/assets/安装15 (1).png>)
+![](broken-reference)
 
-![](<../.gitbook/assets/安装16 (1).png>)
+![](broken-reference)
 
-![](<../.gitbook/assets/安装17 (1).png>)
+![](broken-reference)
 
-![](<../.gitbook/assets/安装18 (1).png>)
+![](broken-reference)
 
-![](<../.gitbook/assets/安装19 (1).png>)
+![](broken-reference)
 
-![](<../.gitbook/assets/安装20 (1).png>)
+![](broken-reference)
 
-![](<../.gitbook/assets/安装21 (1).png>)
+![](broken-reference)
 
-![](<../.gitbook/assets/安装22 (1).png>)
+![](broken-reference)
 
-![](<../.gitbook/assets/安装23 (1).png>)
+![](broken-reference)
 
 ![](../.gitbook/assets/安装24-修.png)
 
@@ -91,14 +91,14 @@
 |     powerd     |                       电源管理                      |
 |     dumpdev    |                  启用崩溃转储，用于调试系统                  |
 
-![](<../.gitbook/assets/安装25 (1).png>)
+![](broken-reference)
 
 推荐选择：这里是安全增强选择，应该选择 `disable_sendmail`，如果不禁止这个服务会使你在每次开机的时候卡上几分钟，而且这个服务本身没什么用，发邮件用的。
 
-![](<../.gitbook/assets/安装26 (1).png>)
+![](broken-reference)
 
-![](<../.gitbook/assets/安装27 (1).png>)
+![](broken-reference)
 
-![](<../.gitbook/assets/安装28 (1).png>)
+![](broken-reference)
 
-![](<../.gitbook/assets/安装29 (1).png>)
+![](broken-reference)
