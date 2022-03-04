@@ -1,6 +1,6 @@
 # 第三节 安装 Gnome
 
-**截止到 2022-2-3，`Gnome` 在不同版本的 pkg 源里的存在形式也是不一样的，在 `quarterly` 中，为 `x11/gnome3`,在 `latest` 中，为 `x11/gnome`,找不到 `gnome3` 的可以试一下 `gnome`。**
+**截止到 2022-2-3，`Gnome` 在不同版本的 pkg 源里的存在形式也是不一样的，在 `quarterly` 中，为 `x11/gnome3`,在 `latest` 中，为 `x11/gnome`,找不到 `gnome3` 的可以试一下 `gnome`。见 <https://www.freshports.org/x11/gnome/>**
 
 ## 1.安装
 
