@@ -23,7 +23,9 @@
 
 添加内容如下:
 
-`proc /proc procfs rw 0 0`
+```
+proc            /proc           procfs  rw      0       0
+```
 
 >添加 proc 挂载这一步是非常必要的，如果不添加会导致桌面服务无法正常运行，部分组件无法加载！
 
