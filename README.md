@@ -132,4 +132,4 @@ https://docs.qq.com/doc/DSUJsUFBHTnVWQmtS
 
 ## 黑名单
 
-见 [CFC](https://github.com/FreeBSD-Ask/CFC)
+见 [CFC。](https://github.com/FreeBSD-Ask/CFC)
