@@ -4,8 +4,8 @@
 
 ## 第〇章 FreeBSD 中文社区
 
-* [第一节 FreeBSD FAQ](di-ling-zhang-freebsd-zhong-wen-she-qu/di-yi-jie-ji-suan-ji-ti-xi-jie-gou-yu-zu-cheng-yuan-li.md)
-* [第二节 FreeBSD 中文社区（CFC）发展规划](di-ling-zhang-freebsd-zhong-wen-she-qu/di-er-jie-cheng-xu-she-ji-ji-chu-yu-bian-yi-yuan-li.md)
+* [第一节 FreeBSD FAQ](di-ling-zhang-freebsd-zhong-wen-she-qu/di-yi-jie-freebsd-faq.md)
+* [第二节 FreeBSD 中文社区（CFC）发展规划](di-ling-zhang-freebsd-zhong-wen-she-qu/di-er-jie-freebsd-zhong-wen-she-qu-cfc-fa-zhan-gui-hua.md)
 
 ## 第一章 走近 FreeBSD
 
