@@ -2,7 +2,7 @@
 
 |问题|答案|
 |:---:|:---:|
-|1、怎么在 VM 虚拟机上安装 FreeBSD（安装视频、图解）？|①文字 <https://book.freebsdcn.org/di-er-zhang-an-zhuang-freebsd/di-san-jie-freebsd-13.0-an-zhuang-ji-yu-vmware-workstation-pro-16 ②视频 https://www.bilibili.com/video/BV14i4y137mh?zw> ③图解 <https://book.freebsdcn.org/di-er-zhang-an-zhuang-freebsd/di-ling-jie-tu-jie-an-zhuang> ④图解 <https://handbook.freebsdcn.org/di-2-zhang-an-zhuang-freebsd/2.4.-kai-shi-an-zhuang>| 
+|1、怎么在 VM 虚拟机上安装 FreeBSD（安装视频、图解）？|①文字 <https://book.freebsdcn.org/di-er-zhang-an-zhuang-freebsd/di-san-jie-freebsd-13.0-an-zhuang-ji-yu-vmware-workstation-pro-16> ②视频 <https://www.bilibili.com/video/BV14i4y137mh?zw> ③图解 <https://book.freebsdcn.org/di-er-zhang-an-zhuang-freebsd/di-ling-jie-tu-jie-an-zhuang> ④图解 <https://handbook.freebsdcn.org/di-2-zhang-an-zhuang-freebsd/2.4.-kai-shi-an-zhuang>| 
 |2、怎么安装显卡驱动？|①VB虚拟机 <https://book.freebsdcn.org/di-er-zhang-an-zhuang-freebsd/di-er-jie-freebsd-an-zhuang-ji-yu-virtual-box> ②VM虚拟机 <https://book.freebsdcn.org/di-er-zhang-an-zhuang-freebsd/di-san-jie-freebsd-13.0-an-zhuang-ji-yu-vmware-workstation-pro-16> ③物理机 （英特尔核显、AMD\N卡）<https://book.freebsdcn.org/di-er-zhang-an-zhuang-freebsd/di-jiu-jie-wu-li-ji-xia-xian-ka-de-pei-zhi>|
 |3、支持Wayland？|不支持（gnome会卡在GDM、kde5会闪退）|
 |4、怎么安装hald 服务|现在不需要这个服务了。<https://book.freebsdcn.org/di-si-zhang-zhuo-mian-an-zhuang/di-er-jie-an-zhuang-kde-5>|
@@ -20,7 +20,7 @@
 |16、怎么配置WIFI？|先查去 <https://bsd-hardware.info/?d=FreeBSD> 查询看支不支持；如果安装的时候不支持，那就是不支持。 AX200/201之类的目前在测试。预计13.1会支持。 支持的话看<https://book.freebsdcn.org/di-shi-si-zhang-wang-luo-guan-li/di-er-jie-wifi>|
 |17、怎么启动/关闭/重启服务|service xxx start、 service xxx stop 、service xxx restart|
 |18、关于FreeBSD的书|看 QQ 群 905149943 文件|
-|19、如何使用Linux软件|建议构建一个ubuntu 20.04 兼容层（实质上是 jail）①<https://book.freebsdcn.org/di-wu-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-wu-jie-linux-jian-rong-ceng> ②<https://handbook.freebsdcn.org/di-10-zhang-linux-er-jin-zhi-jian-rong-ceng/10.4.-shi-yong-debootstrap8-gou-jian-debian-ubuntu-ji-ben-xi-tong ③https://wiki.freebsd.org/LinuxJails> ④<https://wiki.freebsd.org/LinuxApps>|
+|19、如何使用Linux软件|建议构建一个ubuntu 20.04 兼容层（实质上是 jail）①<https://book.freebsdcn.org/di-wu-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-wu-jie-linux-jian-rong-ceng> ②<https://handbook.freebsdcn.org/di-10-zhang-linux-er-jin-zhi-jian-rong-ceng/10.4.-shi-yong-debootstrap8-gou-jian-debian-ubuntu-ji-ben-xi-tong> ③<https://wiki.freebsd.org/LinuxJails> ④<https://wiki.freebsd.org/LinuxApps>|
 |20、怎么安装QQ？|<https://book.freebsdcn.org/di-wu-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-qi-jie-an-zhuang-qq>|
 |21、vmware 虚拟机屏幕缩放不了|去下载群文件的 vmware <https://book.freebsdcn.org/di-er-zhang-an-zhuang-freebsd/di-san-jie-freebsd-13.0-an-zhuang-ji-yu-vmware-workstation-pro-16>|
 |22、有没有中文翻译的、最新的handbook？|<https://handbook.freebsdcn.org/>|
