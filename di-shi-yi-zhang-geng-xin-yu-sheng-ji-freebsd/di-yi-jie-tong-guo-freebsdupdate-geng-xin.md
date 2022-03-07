@@ -5,7 +5,7 @@
 ><https://www.freebsd.org/platforms>
 
 
->前排提示：阿里云用户请注意，目前不支持从12.1升级到任一版本，因为
+>前排提示：阿里云用户请注意，目前不支持从 12.1 升级到任一版本，因为
 ><https://reviews.freebsd.org/D27262>
 
 ## 更新系统
