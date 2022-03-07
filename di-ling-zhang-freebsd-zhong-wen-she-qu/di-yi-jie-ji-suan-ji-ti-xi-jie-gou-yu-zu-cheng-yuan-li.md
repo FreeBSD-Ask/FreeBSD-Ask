@@ -1,4 +1,4 @@
-# 第一节 第一节 FreeBSD FAQ
+# 第一节 FreeBSD FAQ
 
 |问题|答案|
 |:---:|:---:|
