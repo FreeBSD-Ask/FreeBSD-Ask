@@ -2,15 +2,10 @@
 
 * [FreeBSD 从入门到跑路](README.md)
 
-## 第〇章 计算机基础知识
+## 第〇章 FreeBSD 中文社区
 
-* [第一节 计算机体系结构与组成原理](di-ling-zhang-ji-suan-ji-ji-chu-zhi-shi/di-yi-jie-ji-suan-ji-ti-xi-jie-gou-yu-zu-cheng-yuan-li.md)
-* [第二节 程序设计基础与编译原理](di-ling-zhang-ji-suan-ji-ji-chu-zhi-shi/di-er-jie-cheng-xu-she-ji-ji-chu-yu-bian-yi-yuan-li.md)
-* [第三节 数据结构与算法](di-ling-zhang-ji-suan-ji-ji-chu-zhi-shi/di-san-jie-shu-ju-jie-gou-yu-suan-fa.md)
-* [第四节 计算机网络](di-ling-zhang-ji-suan-ji-ji-chu-zhi-shi/di-si-jie-ji-suan-ji-wang-luo.md)
-* [第五节 操作系统](di-ling-zhang-ji-suan-ji-ji-chu-zhi-shi/di-wu-jie-cao-zuo-xi-tong.md)
-* [第六节 数据库与数据库原理](di-ling-zhang-ji-suan-ji-ji-chu-zhi-shi/di-liu-jie-shu-ju-ku-yu-shu-ju-ku-yuan-li.md)
-* [第七节 软件工程](di-ling-zhang-ji-suan-ji-ji-chu-zhi-shi/di-qi-jie-ruan-jian-gong-cheng.md)
+* [第一节 FreeBSD FAQ](di-ling-zhang-freebsd-zhong-wen-she-qu/di-yi-jie-ji-suan-ji-ti-xi-jie-gou-yu-zu-cheng-yuan-li.md)
+* [第二节 FreeBSD 中文社区（CFC）发展规划](di-ling-zhang-freebsd-zhong-wen-she-qu/di-er-jie-cheng-xu-she-ji-ji-chu-yu-bian-yi-yuan-li.md)
 
 ## 第一章 走近 FreeBSD
 
