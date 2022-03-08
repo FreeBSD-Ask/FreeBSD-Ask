@@ -38,7 +38,7 @@
 
 - 为 FreeBSD 项目贡献文档；
 
-- 建- 立 FreeBSD 中文社区自己的项目——使用 FreeBSD；
+- 建立 FreeBSD 中文社区自己的项目——使用 FreeBSD；
 
 - 完成 FreeBSD 其他手册的翻译；
 
