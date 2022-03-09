@@ -41,7 +41,7 @@ sysrc sddm_enable="YES"
 
 `# echo "exec ck-launch-session startplasma-x11" > ~/.xinitrc`
 
->如果你在 root 下已经执行过了，那么新用户仍要再执行一次才能正常使用（无需 root 权限或 sudo 等）。
+>如果你在 root 下已经执行过了，那么新用户仍要再执行一次才能正常使用（无需 root 权限或 sudo 等）`startx`。
 
 提示：hal 已经被删除。**不需要**再添加~~hald_enable="YES",~~ 见：
 
