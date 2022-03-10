@@ -40,13 +40,13 @@ PDF 请点击“[Release](https://github.com/FreeBSD-Ask/FreeBSD-Ask/releases)�
 
 【FreeBSD 2022 捐赠名单】
 
-https://docs.qq.com/doc/DSXZ1Q1JOenRzUkp4
+<https://docs.qq.com/doc/DSXZ1Q1JOenRzUkp4>
 
 ### 激励计划
 
 【FreeBSD 中文社区 2022 教程 激励计划】
 
-https://docs.qq.com/doc/DSUJsUFBHTnVWQmtS
+<https://docs.qq.com/doc/DSUJsUFBHTnVWQmtS>
 
 ### 意见反馈
 
