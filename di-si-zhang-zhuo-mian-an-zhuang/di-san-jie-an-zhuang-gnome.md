@@ -27,6 +27,8 @@
 proc /proc procfs rw 0 0
 ```
 
+配置启动项：
+
 ```
 # sysrc dbus_enable="YES"
 # sysrc gdm_enable="YES"
