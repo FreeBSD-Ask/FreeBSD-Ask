@@ -21,27 +21,30 @@
 
 `# ee /etc/fstab` 
 
-添加内容如下: `proc /proc procfs rw 0 0`
+添加内容如下: 
 
 ```
-sysrc dbus_enable="YES"
-sysrc gdm_enable="YES"
-sysrc gnome_enable="YES"
-sysrc snd_hda="YES"
+proc /proc procfs rw 0 0
 ```
 
-输入以下命令（或者在 `.xinitrc` 文件加入以下内容）
+然后
 
-`% echo "/usr/local/bin/gnome-session" > ~/.xinitrc`
+```
+# sysrc dbus_enable="YES"
+# sysrc gdm_enable="YES"
+# sysrc gnome_enable="YES"
+# sysrc snd_hda="YES"
+```
+
+然后 `% echo "/usr/local/bin/gnome-session" > ~/.xinitrc`
 
 ## 中文化 GNOME
 
->本小节用户 shell 应该是默认的`sh`，判断方法见下一小节“安装输入法”（root 用户默认 shell 是 csh，无法适用）。
+> 本小节用户 shell 应该是默认的 `sh`，判断方法见下一小节“安装输入法”（root 用户默认 shell 是 csh，无法适用）。
 
 `# cd /usr/local/etc/gdm && ee locale.conf`
 
 添加以下内容
-
 
 ```
 LANG="zh_CN.UTF-8"
