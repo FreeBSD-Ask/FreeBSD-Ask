@@ -21,18 +21,24 @@
 
 `# ee /etc/fstab` 
 
-添加内容如下: `proc /proc procfs rw 0 0`
+添加内容如下: 
 
 ```
-sysrc dbus_enable="YES"
-sysrc gdm_enable="YES"
-sysrc gnome_enable="YES"
-sysrc snd_hda="YES"
+proc /proc procfs rw 0 0
 ```
 
-输入以下命令（或者在 `.xinitrc` 文件加入以下内容）
+```
+# sysrc dbus_enable="YES"
+# sysrc gdm_enable="YES"
+# sysrc gnome_enable="YES"
+# sysrc snd_hda="YES"
+```
 
-`% echo "/usr/local/bin/gnome-session" > ~/.xinitrc`
+输入以下命令：
+
+```
+% echo "/usr/local/bin/gnome-session" > ~/.xinitrc
+```
 
 ## 中文化 GNOME
 
