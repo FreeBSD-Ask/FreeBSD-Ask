@@ -27,7 +27,7 @@
 proc /proc procfs rw 0 0
 ```
 
-然后
+配置启动项：
 
 ```
 # sysrc dbus_enable="YES"
@@ -36,7 +36,11 @@ proc /proc procfs rw 0 0
 # sysrc snd_hda="YES"
 ```
 
-然后 `% echo "/usr/local/bin/gnome-session" > ~/.xinitrc`
+输入以下命令：
+
+```
+% echo "/usr/local/bin/gnome-session" > ~/.xinitrc
+```
 
 ## 中文化 GNOME
 
