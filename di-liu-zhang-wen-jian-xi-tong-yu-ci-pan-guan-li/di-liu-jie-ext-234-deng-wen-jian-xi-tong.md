@@ -1,5 +1,7 @@
 # 第六节 Ext 2/3/4 等文件系统
 
+## EXT 文件系统
+
 请注意：这里应该安装 `fusefs-ext2`（同时支持EXT2/3/4） 而非 `fusefs-ext4fuse` ，因为后者是只读且被废弃的。
 
 -   安装 fusefs-ext2
@@ -29,3 +31,11 @@
 -   卸载硬盘
 
     `# umount /home/XiaoMing/media/first/`
+
+## Brtfs/XFS 文件系统
+
+>未经测试
+
+```
+# pkg install fusefs-lkl
+```
