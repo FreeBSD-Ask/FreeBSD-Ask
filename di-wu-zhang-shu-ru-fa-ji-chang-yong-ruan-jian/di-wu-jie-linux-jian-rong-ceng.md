@@ -39,6 +39,8 @@ tmpfs    /compat/linux/dev/shm	tmpfs	rw,mode=1777	0	0
 
 **需要先按照“系统自带”的方法配置好原生的 CentOS 兼容层。**
 
+**更多其他系统请看`/usr/local/share/debootstrap/scripts/`**
+
 将`nullfs_load="YES"`写入`/boot/loader.conf`
 
 ### 开始构建
