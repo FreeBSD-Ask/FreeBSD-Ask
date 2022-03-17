@@ -35,7 +35,7 @@ tmpfs    /compat/linux/dev/shm	tmpfs	rw,mode=1777	0	0
 ```
 ## 自己构建 Ubuntu 兼容层
 
->**以下教程仅在 FreeBSD 13.0 测试通过。构建的是 Ubuntu 20.04 LTS。兼容层使用技术实际上是 Linux jail，并非 chroot。**
+>**以下教程仅在 FreeBSD 13.0 测试通过。构建的是 Ubuntu 20.04 LTS（18.04 亦可）。兼容层使用技术实际上是 Linux jail，并非 chroot。**
 
 **需要先按照“系统自带”的方法配置好原生的 CentOS 兼容层。**
 
