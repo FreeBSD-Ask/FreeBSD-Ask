@@ -1,4 +1,4 @@
-# 第五节 IPFILTER (IPF)
+# 第四节 IPFILTER (IPF)
 
 IPF是一款开源软件，作者 Darren Reed。
 
@@ -75,7 +75,7 @@ pass out quick on lo0 all #设置任何设备可以访问服务器的 22、80、
 
 pass in quick proto tcp from any to 192.168.1.184 port = { 22,80,443,4200,10000 } 
 
-pass out quick proto tcp from 192.168.1.184 port = { 22,80,443,4200,10000 } to any pass out quick proto tcp from 192.168.1.184 to any port = { 80,443 } keep state #设置服务器访问任何网络设 备的 80、443 端口 
+pass out quick proto tcp from 192.168.1.184 port = { 22,80,443,4200,10000 } to any pass out quick proto tcp from 192.168.1.184 to any port = { 80,443 } keep state #设置服务器访问任何网络设备的 80、443 端口 
 
 pass out quick proto udp from any to any port = 53 keep state #设置访问 DNS 服务器 
 
