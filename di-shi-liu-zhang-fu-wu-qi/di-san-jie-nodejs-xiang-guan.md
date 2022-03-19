@@ -2,7 +2,7 @@
 
 ## 在 FreeBSD 13 上的安装
 
-`node` 依赖 `/lib/libcrypto.so.111` 的某个特定版本，而这意味着如果你需要在 FreeBSD 上使用 NodeJS，你必须留意 FreeBSD 本身的版本，尤其是当你的 pkg 配置使用了 latest 源时。
+`nodejs` 依赖 `/lib/libcrypto.so.111` 的某个特定版本，而这意味着如果你需要在 FreeBSD 上使用 NodeJS，你必须留意 FreeBSD 本身的版本，尤其是当你的 pkg 配置使用了 latest 源时。
 
 一般而言，如果想要在 FreeBSD 13.0 上 安装 nodo+yarn，请这么做：
 
