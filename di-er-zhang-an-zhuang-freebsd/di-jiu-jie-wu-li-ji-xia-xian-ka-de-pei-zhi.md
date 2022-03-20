@@ -27,7 +27,7 @@ https://wiki.freebsd.org/Graphics
 >**如果提示`/usr/ports/xxx no such xxx`找不到路径，请先获取 portsnap：`portsnap fetch extract`。portsnap 换源问题请看 第三章 第二节。**
 
 - FreeBSD 13：`# cd /usr/ports/graphics/drm-devel-kmod/ && make BATCH=yes install clean`
-- FreeBSD 14: `# cd /usr/ports/graphics/drm-devel-kmod/ && make BATCH=yes install clean`
+- FreeBSD 14：`# cd /usr/ports/graphics/drm-devel-kmod/ && make BATCH=yes install clean`
 
 ### 加载显卡
 
