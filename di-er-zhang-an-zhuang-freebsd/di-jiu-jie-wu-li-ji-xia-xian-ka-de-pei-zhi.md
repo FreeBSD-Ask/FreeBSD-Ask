@@ -46,7 +46,7 @@ https://wiki.freebsd.org/Graphics
 
 ### 亮度调节
 
-### 通用
+#### 通用
 
 >仅限 FreeBSD 13
 
