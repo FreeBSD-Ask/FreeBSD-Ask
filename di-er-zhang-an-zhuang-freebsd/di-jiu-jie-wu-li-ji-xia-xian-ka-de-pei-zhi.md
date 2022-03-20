@@ -51,7 +51,7 @@ https://wiki.freebsd.org/Graphics
 >仅限 FreeBSD 13
 
 ```
-# backlight decr 20  
+# backlight decr 20  #降低 20% 亮度
 ```
 
 #### 英特尔
