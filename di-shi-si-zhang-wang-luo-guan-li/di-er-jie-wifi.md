@@ -213,7 +213,7 @@ iwlwifi0@pci0:3:0:0:        class=0x028000 rev=0x78 hdr=0x00 vendor=0x8086 devic
 # devctl set driver pci0:3:0:0 iwlwifi
 ```
 
-创建：
+创建并链接：
 
 ```
 # ifconfig wlan0 create wlandev iwlwifi0
