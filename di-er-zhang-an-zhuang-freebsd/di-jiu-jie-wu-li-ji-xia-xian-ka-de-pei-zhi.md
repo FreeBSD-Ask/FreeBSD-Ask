@@ -63,13 +63,12 @@ https://wiki.freebsd.org/Graphics
 ## 英伟达显卡
 
 ```
-# 安装几个 nvidia 相关的包
-# pkg install nvidia-driver nvidia-settings nvidia-xconfig
-# 配置驱动
-# sysrc kld_list+="nvidia-modeset"
+# pkg install nvidia-driver nvidia-settings nvidia-xconfig #安装几个 nvidia 相关的包
+# sysrc kld_list+="nvidia-modeset" #配置驱动
+# reboot #重启
 ```
 
-重启 这时候应该已经可以点亮图形界面了……
+这时候应该已经可以点亮图形界面了……
 
 ```
 # 查看驱动信息
