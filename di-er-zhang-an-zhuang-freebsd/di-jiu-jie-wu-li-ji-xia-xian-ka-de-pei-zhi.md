@@ -1,6 +1,6 @@
 # 第九节 物理机下显卡的配置
 
-FreeBSD 已从 Linux 移植了显卡驱动，理论上，A 卡 N 卡均可在 amd64 架构上正常运行。
+FreeBSD 已从 Linux 移植了显卡驱动，理论上，A 卡 N 卡均在 AMD64 架构上正常运行。
 
 ## 支持情况
 
@@ -12,7 +12,7 @@ FreeBSD 已从 Linux 移植了显卡驱动，理论上，A 卡 N 卡均可在 am
 
 详细情况可以看
 
-https://wiki.freebsd.org/Graphics
+<https://wiki.freebsd.org/Graphics>
 
 ## 英特尔核显 / AMD 独显
 
@@ -68,14 +68,14 @@ https://wiki.freebsd.org/Graphics
 # reboot #重启
 ```
 
-这时候应该已经可以点亮图形界面了……
+这时候应该已经可以驱动显卡了。
 
 ```
 # 查看驱动信息
 $ nvidia-smi
 ```
 
-如果发现系统没有使用 nvidia 驱动 需要自动生成配置文件
+如果发现系统没有使用 nvidia 驱动需要自动生成配置文件：
 
 ```
 # Xorg -configure #生成配置文件。注意，该步骤不是必要！
@@ -84,16 +84,16 @@ $ nvidia-smi
 
 然后重新启动就可以发现正常使用 nvidia 驱动了
 
-**注意**： 默认情况下，通过 pkg 安装的 nvidia-driver 是包含 Linux 兼容层支持的, 如果要使用 Linux 软件，需要执行以下命令，（实际上使用linux兼容层，以下命令是必须的。） 如果不需要使用 Linux 兼容层，则不需要执行。
+**注意**： 默认情况下，通过 pkg 安装的 nvidia-driver 是包含 Linux 兼容层支持的, 如果要使用 Linux 软件，需要执行以下命令，（实际上使用 linux 兼容层，以下命令是必须的。） 如果不需要使用 Linux 兼容层，则不需要执行。
 
 ```
 # sysrc linux_enable="YES"
 ```
 
-当然如果使用官方的 pkg 包，安装好驱动重启后
+当然如果使用官方的 pkg 包，安装好驱动重启后：
 
 ```
 $ kldstat
 ```
 
-会发现系统自动加载 `linux.ko` 模块。如果觉得太臃肿，不需要 Linux 兼容层 可以自己编译 `nvidia-driver ports`,去掉 `linux compatibility support`
+会发现系统自动加载 `linux.ko` 模块。如果觉得太臃肿，不需要 Linux 兼容层 可以自己通过 ports 编译 `nvidia-driver`,去掉 `linux compatibility support`。
