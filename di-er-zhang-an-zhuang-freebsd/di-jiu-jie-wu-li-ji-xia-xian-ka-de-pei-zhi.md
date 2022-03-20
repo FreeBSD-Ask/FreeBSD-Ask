@@ -46,6 +46,15 @@ https://wiki.freebsd.org/Graphics
 
 ### 亮度调节
 
+### 通用
+
+>仅限 FreeBSD 13
+
+```
+# backlight decr 20  
+```
+
+#### 英特尔
 ```
 # pkg install intel-backlight
 # intel-backlight 80 #调整为 80% 亮度
