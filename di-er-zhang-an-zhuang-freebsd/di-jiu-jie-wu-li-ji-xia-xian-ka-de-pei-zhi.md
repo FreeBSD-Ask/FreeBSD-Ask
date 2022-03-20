@@ -8,7 +8,7 @@ FreeBSD 已从 Linux 移植了显卡驱动，理论上，A 卡 N 卡均可在 am
 
 对于 FreeBSD 12，支持情况同 Linux 内核 4.16；
 
-对于 FreeBSD 13，支持情况同 Linux 5.4，最高可以支持 Intel 第十二代处理器。
+对于 FreeBSD 13/14-current，支持情况同 Linux 5.7.19，可以支持 Intel 第十二代处理器，AMD 可支持 R7 4750U。
 
 详细情况可以看
 
@@ -18,26 +18,35 @@ https://wiki.freebsd.org/Graphics
 
 ### 安装驱动
 
-注意，如果要通过 `ports` 安装必须先取得系统源代码。请见第二十一章。
+注意，如果要通过 `ports` 安装提示需要源码，请见第二十一章。
 
 - FreeBSD 12.0: `#pkg install drm-fbsd12.0-kmod`
 
-注意：除了 12.0，对于任意 12.X 均应该安装 `drm-fbsd12.0-kmod` ，但应该使用 port 在本地重新构建而不应该使用 pkg 进行安装，否则不会正常运行。
+>**注意：除了 12.0，对于任意 12.X 均应该安装 `drm-fbsd12.0-kmod` ，但应该使用 port 在本地重新构建而不应该使用 pkg 进行安装，否则不会正常运行。**
+>
+>**如果提示`/usr/ports/xxx no such xxx`找不到路径，请先获取 portsnap：`portsnap fetch extract`。portsnap 换源问题请看 第三章 第二节。**
 
-- FreeBSD 13：`# pkg install drm-fbsd13-kmod`
-- FreeBSD 14: `# cd /usr/ports/graphics/drm-kmod/ && make BATCH=yes install clean`
+- FreeBSD 13：`# cd /usr/ports/graphics/drm-devel-kmod/ && make BATCH=yes install clean`
+- FreeBSD 14: `# cd /usr/ports/graphics/drm-devel-kmod/ && make BATCH=yes install clean`
 
 ### 加载显卡
 
 打开`/etc/rc.conf`:
 
 - 如果为 intel 核芯显卡，添加 `kld_list="i915kms"`
-- 如果为 HD7000 以后的 AMD 显卡，添加 `kld_list="amdgpu"`
-- 如果为 HD7000 以前的 AMD 显卡，添加 `kld_list="radeonkms"`
+- 如果为 HD7000 以后的 AMD 显卡，添加 `kld_list="amdgpu"` （大部分人应该使用这个，如果没用再去使用`radeonkms`）
+- 如果为 HD7000 以前的 AMD 显卡，添加 `kld_list="radeonkms"` （这是十余年前的显卡了）
 
 ### 视频硬解
 
 `# pkg install xf86-video-intel libva-intel-driver`
+
+### 亮度调节
+
+```
+# pkg install intel-backlight
+# intel-backlight 80 #调整为 80% 亮度
+```
 
 ## 英伟达显卡
 
