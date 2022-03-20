@@ -14,7 +14,8 @@
 加入
 
 ```
-if_urtwn_load =“YES” legal.realtek.license_ack = 1
+if_urtwn_load="YES" 
+legal.realtek.license_ack=1
 ```
 
 这里只是示例，请添加自己所需的
@@ -28,12 +29,13 @@ if_urtwn_load =“YES” legal.realtek.license_ack = 1
 `at0` 是你的网卡，具体看自己的,该命令是临时的，若需要永久开机生效，在 `rc.conf` 中，加入
 
 ```
-# wlans_ath0 =“ wlan0” ifconfig wlan0 up scan
+# wlans_ath0 ="wlan0"
 ```
 
 扫描 WiFi
 
 ```
+# ifconfig wlan0 up scan
 # ifconfig wlan0 ssid abc
 ```
 
@@ -50,13 +52,16 @@ if_urtwn_load =“YES” legal.realtek.license_ack = 1
 创建 wpa_supplicant.conf
 
 ```
-network={ scan_ssid=1 如果是隐藏 WiFi 加入这个，不是就不要加了 ssid=”abc” WiFi 名字 psk=”1234” 密码 }
+network={ 
+ssid="WIFI 名字（SSID）" 
+psk="WIFI 密码"
+}
 ```
 
 在 `rc.conf` 里面加入
 
 ```
-# ifconfig_wlan0 =“WPA SYNCDHCP”
+# ifconfig_wlan0="WPA SYNCDHCP"
 ```
 
 然后重启电脑（因为命令有点问题，只能重启让rc.conf生效）
@@ -64,38 +69,38 @@ network={ scan_ssid=1 如果是隐藏 WiFi 加入这个，不是就不要加了 
 ```
 # wpa_supplicant -B -i wlan0 -c /etc/wpa_supplicant.conf
 # wpa_cli -i wlan0 scan // 搜索附近wifi网络
-$ wpa_cli -i wlan0 scan_result // 打印搜索wifi网络结果
-$ wpa_cli -i wlan0 add_network // 添加一个网络连接
-$ wpa_cli -i wlan0 remove_network 1 // 删除一个网络连接
-$ wpa_cli -i wlan0 set_network 0 ssid ‘“name”‘
-$ wpa_cli -i wlan0 set_network 0 psk ‘“psk”‘
-$ wpa_cli -i wlan0 enable_network 0
+# wpa_cli -i wlan0 scan_result // 打印搜索wifi网络结果
+# wpa_cli -i wlan0 add_network // 添加一个网络连接
+# wpa_cli -i wlan0 remove_network 1 // 删除一个网络连接
+# wpa_cli -i wlan0 set_network 0 ssid ‘“name”‘
+# wpa_cli -i wlan0 set_network 0 psk ‘“psk”‘
+# wpa_cli -i wlan0 enable_network 0
 ```
 
 保存连接
 
 ```
-$ wpa_cli -i wlan0 save_config
+# wpa_cli -i wlan0 save_config
 ```
 
 断开连接
 
 ```
-$ wpa_cli -i wlan0 disable_network 0
+# wpa_cli -i wlan0 disable_network 0
 ```
 
 连接已有的连接
 
 ```
-$ wpa_cli -i wlan0 list_network 列举所有保存的连接
-$ wpa_cli -i wlan0 select_network 0 连接第1个保存的连接
-$ wpa_cli -i wlan0 enable_network 0 使能第1个保存的连接
+# wpa_cli -i wlan0 list_network 列举所有保存的连接
+# wpa_cli -i wlan0 select_network 0 连接第1个保存的连接
+# wpa_cli -i wlan0 enable_network 0 使能第1个保存的连接
 ```
 
 断开 WiFi
 
 ```
-$ ifconfig wlan0 down
+# ifconfig wlan0 down
 ```
 
 附配置详情：[https://segmentfault.com/a/1190000011579147](https://segmentfault.com/a/1190000011579147)
@@ -103,9 +108,9 @@ $ ifconfig wlan0 down
 wpa 验证，静态 ip
 
 ```
-ifconfig_wlan0 =“WPA inet 192.168.1.100 netmask 255.255.255.0”
+# ifconfig_wlan0="WPA inet 192.168.1.100 netmask 255.255.255.0"
 
-ifconfig wlan0 inet 192.168.0.100 netmask 255.255.255.0
+# ifconfig wlan0 inet 192.168.0.100 netmask 255.255.255.0
 ```
 
 开启无线 ap，先确认下你的网卡是否支持 hostap
@@ -123,17 +128,22 @@ ifconfig wlan0 inet 192.168.0.100 netmask 255.255.255.0
 再创建
 
 ```
-ifconfig wlan0 create wlandev ath0 wlanmode hostap
+# ifconfig wlan0 create wlandev ath0 wlanmode hostap
 
-#ifconfig wlan0 inet 192.168.0.1 netmask 255.255.255.0 ssid freebsdap mode 11g channel 1
+# ifconfig wlan0 inet 192.168.0.1 netmask 255.255.255.0 ssid freebsdap mode 11g channel 1
 ```
 
-如果连不上或者搜不到调试信道，尝试将 WiFi 区域码选 `Japan` ，然后选 `China`
+>如果连不上或者搜不到调试信道，尝试将 WiFi 区域码选 `Japan` ，然后选 `China`
 
 ## 简单版本
 
 ```
-# ee /boot/loader.conf #加入
+# ee /boot/loader.conf 
+```
+
+加入
+
+```
 rtwn_usb_load="YES"
 legal.realtek.license_ack=1
 ```
