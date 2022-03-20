@@ -1,10 +1,12 @@
 # 第二节 WiFi
 
-**注意：目前暂不支持 WiFi 5/6 ，即不能完全支持 AX200/AX201（需要自行应用脚本然后编译内核，见**[**https://wiki.freebsd.org/WiFi/Iwlwifi**](https://wiki.freebsd.org/WiFi/Iwlwifi)**）。如果安装 FreeBSD 的时候就不能识别出无线网卡，那么就是不支持你的无线网卡。请忽略下文。**
+**英特尔 WIFI 5/6 芯片（AC 8265、AC 9260、AC 9560、AX200、AX201、AX210）驱动见最后一部分。**
+
+**注意：如果安装 FreeBSD 的时候就不能识别出无线网卡，那么就是不支持你的无线网卡。请忽略下文。**
+
+## 一般网卡驱动
 
 首先运行 `# ifconfig`，看看能不能找到你的网卡，如果能，那么你可以跳过本节了。
-
----
 
 运行 `# sysctl net.wlan.devices`，
 他可以告诉你，找到的无线网卡，如果冒号输出后边没有东西，那就是识别不了。请更换无线网卡。
@@ -18,7 +20,7 @@ if_urtwn_load="YES"
 legal.realtek.license_ack=1
 ```
 
-这里只是示例，请添加自己所需的
+>**注意：这里只是示例，请添加自己所需的驱动。*8
 
 接下来，创建 wlan0
 
@@ -49,7 +51,7 @@ legal.realtek.license_ack=1
 
 连接加密网络
 
-创建 wpa_supplicant.conf
+创建 /etc/wpa_supplicant.conf
 
 ```
 network={ 
@@ -135,22 +137,86 @@ wpa 验证，静态 ip
 
 >如果连不上或者搜不到调试信道，尝试将 WiFi 区域码选 `Japan` ，然后选 `China`
 
-## 简单版本
+### 简单版本
+
+以螃蟹卡为例：
+
+>
+>```
+># ee /boot/loader.conf 
+>```
+>
+>加入
+>
+>```
+>rtwn_usb_load="YES"
+>legal.realtek.license_ack=1
+>```
+>
+>在 `/etc/rc.conf` 中写入
+>
+>```
+>wlans_rtwn0="wlan0"
+>ifconfig_wlan0="WPA DHCP"
+>```
+>
+>执行：
+>
+>```
+># /etc/rc.d/netif start
+>```
+
+## WIFI 5/6 芯片
+
+>以下部分仅适用于 FreeBSD 13.1、14.0。
+>
+>iwlwifi 驱动仅适用于`AC 8265、AC 9260、AC 9560、AX200、AX201、AX210`。
+> 
+>**该驱动仍不完善，不会自动加载，每次都需要手动加载。**
+
+将以下部分写入`/etc/rc.conf`：
+```
+wlans_iwlwifi0="wlan0"
+wlandebug_wlan0="+state +crypto +node +auth +assoc +dot1xsm +wpa"
+ifconfig_wlan0="WPA SYNCDHCP"
+kld_list="if_iwlwifi"
+```
+
+创建 /etc/wpa_supplicant.conf
 
 ```
-# ee /boot/loader.conf 
+network={ 
+ssid="WIFI 名字（SSID）" 
+psk="WIFI 密码"
+}
 ```
 
-加入
+先加载驱动看一下：
 
 ```
-rtwn_usb_load="YES"
-legal.realtek.license_ack=1
+# kldload if_iwlwifi
+# pciconf -l | grep iw 
 ```
 
-在 `/etc/rc.conf` 中写入
+`# pciconf -l | grep iw`的输出应该类似：
 
 ```
-wlans_rtwn0="wlan0"
-ifconfig_wlan0="WPA DHCP"
+iwlwifi0@pci0:3:0:0:        class=0x028000 rev=0x78 hdr=0x00 vendor=0x8086 device=0x24fd subvendor=0x8086 subdevice=0x0010
 ```
+
+>**注意：以下部分每次开机都要执行一次方能联网。**
+
+**请根据上面的`# pciconf -l | grep iw `的输出调整下面的数值！：**
+
+```
+# devctl detach pci0:3:0:0
+# devctl set driver pci0:3:0:0 iwlwifi
+```
+
+创建：
+
+```
+# ifconfig wlan0 create wlandev iwlwifi0
+# /etc/rc.d/netif start  wlan0
+```
+
