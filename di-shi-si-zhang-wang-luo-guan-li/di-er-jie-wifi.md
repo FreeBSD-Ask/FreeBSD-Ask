@@ -51,7 +51,7 @@ legal.realtek.license_ack=1
 
 连接加密网络
 
-创建 /etc/wpa_supplicant.conf
+创建 `/etc/wpa_supplicant.conf`：
 
 ```
 network={ 
@@ -175,14 +175,15 @@ wpa 验证，静态 ip
 >**该驱动仍不完善，不会自动加载，每次都需要手动加载。**
 
 将以下部分写入`/etc/rc.conf`：
+
 ```
+kld_list="if_iwlwifi"
 wlans_iwlwifi0="wlan0"
 wlandebug_wlan0="+state +crypto +node +auth +assoc +dot1xsm +wpa"
 ifconfig_wlan0="WPA SYNCDHCP"
-kld_list="if_iwlwifi"
 ```
 
-创建 /etc/wpa_supplicant.conf
+创建 `/etc/wpa_supplicant.conf`：
 
 ```
 network={ 
@@ -206,11 +207,11 @@ iwlwifi0@pci0:3:0:0:        class=0x028000 rev=0x78 hdr=0x00 vendor=0x8086 devic
 
 >**注意：以下部分每次开机都要执行一次方能联网。**
 
-**请根据上面的`# pciconf -l | grep iw `的输出调整下面的数值！：**
+**请根据上面的`# pciconf -l | grep iw`的输出调整下面的数值！：**
 
 ```
-# devctl detach pci0:3:0:0
-# devctl set driver pci0:3:0:0 iwlwifi
+# devctl detach pci0:3:0:0  #请根据上面的`# pciconf -l | grep iw`的输出调整该数值！
+# devctl set driver pci0:3:0:0 iwlwifi #请根据上面的`# pciconf -l | grep iw`的输出调整该数值！
 ```
 
 创建并链接：
