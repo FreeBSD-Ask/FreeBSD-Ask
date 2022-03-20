@@ -220,3 +220,4 @@ iwlwifi0@pci0:3:0:0:        class=0x028000 rev=0x78 hdr=0x00 vendor=0x8086 devic
 # /etc/rc.d/netif start  wlan0
 ```
 
+故障排除：<https://wiki.freebsd.org/WiFi/Iwlwifi>
