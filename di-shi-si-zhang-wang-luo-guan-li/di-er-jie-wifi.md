@@ -166,7 +166,7 @@ wpa 验证，静态 ip
 ># /etc/rc.d/netif start
 >```
 
-## WIFI 5/6 芯片
+## 英特尔 WIFI 5/6 芯片
 
 >以下部分仅适用于 FreeBSD 13.1、14.0。
 >
