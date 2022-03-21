@@ -1,8 +1,10 @@
 # 第三节 安装 Gnome
 
-**截止到 2022-2-3，由于版本号的迁移，`Gnome` 在不同版本的 pkg 源里的存在形式也是不一样的，在 `quarterly` 中，为 `x11/gnome3`（版本 3.36），在 `latest` 中，为 `x11/gnome`（版本 41），找不到 `gnome3` 的可以试一下 `gnome`。见 <https://www.freshports.org/x11/gnome/>**
+>**注意：截止到 2022-3-21，由于版本号的迁移，`Gnome` 在不同版本的 pkg 源里的存在形式也是不一样的：在 `quarterly` 中，为 `x11/gnome3`（版本 3.36）；在 `latest` 中，为 `x11/gnome`（版本 41），见 <https://www.freshports.org/x11/gnome/>**
 
 ## 安装
+
+### quarterly 源（gnome 3.36）
 
 ```
 # pkg install xorg gnome3 wqy-fonts xdg-user-dirs
@@ -16,6 +18,11 @@
 |wqy-fonts|文泉驿中文开源字体|
 |xdg-user-dirs|用于创建用户家目录的子目录|
 
+### latest 源（gnome 41）
+
+```
+# pkg install xorg gnome wqy-fonts xdg-user-dirs
+```
 
 ## 配置
 
