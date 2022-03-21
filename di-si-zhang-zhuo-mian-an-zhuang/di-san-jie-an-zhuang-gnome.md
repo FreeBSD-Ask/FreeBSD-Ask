@@ -4,10 +4,13 @@
 
 ## 安装
 
-### quarterly 源（gnome 3.36）
+>**注意：以下安装二选一。如果你分不清 quarterly 和 latest 源的区别请看 第三章 第二节。这里我建议使用 latest 源，因为可以保持最新。**
+
+
+### latest 源（gnome 41）
 
 ```
-# pkg install xorg gnome3 wqy-fonts xdg-user-dirs
+# pkg install xorg gnome wqy-fonts xdg-user-dirs
 ```
 
 解释:
@@ -18,11 +21,12 @@
 |wqy-fonts|文泉驿中文开源字体|
 |xdg-user-dirs|用于创建用户家目录的子目录|
 
-### latest 源（gnome 41）
+### quarterly 源（gnome 3.36）
 
 ```
-# pkg install xorg gnome wqy-fonts xdg-user-dirs
+# pkg install xorg gnome3 wqy-fonts xdg-user-dirs
 ```
+
 
 ## 配置
 
