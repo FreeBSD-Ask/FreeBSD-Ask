@@ -44,7 +44,6 @@ proc /proc procfs rw 0 0
 # sysrc dbus_enable="YES"
 # sysrc gdm_enable="YES"
 # sysrc gnome_enable="YES"
-# sysrc snd_hda="YES"
 ```
 
 输入以下命令：
