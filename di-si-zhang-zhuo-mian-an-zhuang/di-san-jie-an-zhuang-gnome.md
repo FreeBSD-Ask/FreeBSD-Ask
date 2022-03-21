@@ -154,7 +154,7 @@ export XMODIFIERS=@im=fcitx
 ```
 setenv LANG zh_CN.UTF-8
 setenv LC_CTYPE zh_CN.UTF-8
-setenv LC_ALL zh_CN.UTF-8`
+setenv LC_ALL zh_CN.UTF-8
 ```
 
 ## 优化系统
