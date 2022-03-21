@@ -30,7 +30,7 @@ PDF 请点击“[Release](https://github.com/FreeBSD-Ask/FreeBSD-Ask/releases)�
 
 ### 开源维护与捐赠
 
-![](.gitbook/assets/proud_donor.gif)
+![](./.gitbook/assets/proud_donor.gif)
 
 [点此捐赠 FreeBSD 基金会](https://freebsdfoundation.org/donate)。
 
@@ -56,7 +56,7 @@ PDF 请点击“[Release](https://github.com/FreeBSD-Ask/FreeBSD-Ask/releases)�
 
 后续还有很多需要完善的工作，包括不限于:
 
-- 完善教程
+- FreeBSD 14 统一 shell 为`sh`，教程需要针对其进行统一
 - 整理和上传配置文件和环境
 - 对教程的格式目录进行优化调整
 - 积极对外宣传并寻求正式出版
@@ -71,7 +71,7 @@ PDF 请点击“[Release](https://github.com/FreeBSD-Ask/FreeBSD-Ask/releases)�
 
 微信公众号: freebsdzh （扫码关注）
 
-![](.gitbook/assets/qrcode_for_gh_3b263cc9b20b_258.jpg)
+![](./.gitbook/assets/qrcode_for_gh_3b263cc9b20b_258.jpg)
 
 ## 关于
 
