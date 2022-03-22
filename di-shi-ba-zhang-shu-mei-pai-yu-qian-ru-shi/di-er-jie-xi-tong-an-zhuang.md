@@ -10,7 +10,7 @@ https://download.freebsd.org/ftp/releases/arm64/aarch64/ISO-IMAGES/13.0/FreeBSD-
 
 下载后解压缩。使用 rufus 刻录。插入网线，将存储卡插入树莓派，通电等待约五分钟，查看路由器后台获取 IP 。
 
-**注意：**刻录完需要挂载 FAT 分区 替换里面的所有文件，否则会启动花屏，替换的文件路径为：
+**注意：** 刻录完需要挂载 FAT 分区 替换里面的所有文件，否则会启动花屏，替换的文件路径为：
 
 https://github.com/FreeBSD-Ask/FreeBSD-rpi4-firmware
 
