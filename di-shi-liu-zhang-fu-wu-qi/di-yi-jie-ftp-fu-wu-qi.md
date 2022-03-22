@@ -92,8 +92,7 @@ INSERT INTO `users` VALUES ('demo', 'demo&2022*', 2002, 2000, '/home/www/demo', 
 #### 创建登录数据库用户及设置密码
 
 ```
-grant select,insert,update,delete on pureftp.* to pftp@localhost identified by
-"Ab123456&";
+grant select,insert,update,delete on pureftp.* to pftp@localhost identified by "Ab123456&";
 ```
 
 ### 配置 /usr/local/etc/pureftpd-mysql.conf
