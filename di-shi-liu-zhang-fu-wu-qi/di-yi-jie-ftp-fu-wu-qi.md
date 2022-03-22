@@ -34,7 +34,7 @@ FTP 意为文件传输协议。使用 FTP 服务搭建服务器可以快速传�
 # cp /usr/local/etc/pureftpd-mysql.conf.sample /usr/local/etc/pureftpd-mysql.conf
 ```
 
-编辑配置文件并增加 mysql 的支持：
+#### 编辑配置文件并增加 mysql 的支持：
 
 ```
 #兼容 ie 等非正规化的 ftp 客户端
