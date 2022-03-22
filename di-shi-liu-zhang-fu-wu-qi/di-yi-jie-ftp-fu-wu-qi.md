@@ -1,12 +1,10 @@
 # 第一节 FTP 服务器
 
-
-
 FTP 意为文件传输协议。使用 FTP 服务搭建服务器可以快速传输文件。
 
 ## pure-ftpd（以 MySQL 支持为例）
 
->**注意：本示例以 mysql 5.x 为例。**
+> **注意：本示例以 mysql 5.x 为例。**
 
 ### 安装
 
@@ -16,16 +14,16 @@ FTP 意为文件传输协议。使用 FTP 服务搭建服务器可以快速传�
 # /usr/ports/ftp/pure-ftpd
 # make config-recursive
 ```
-选中 mysql，其余保持默认选项回车即可
 
-sjshhhhh此处插入图片jskkdd
+选中 mysql，其余保持默认选项回车即可：
 
+![](<../.gitbook/assets/在FreeBsd中安装PureFTPD（MySQL） .jpg>)
 
 ```
 # make install clean
 ```
 
->**注意：关于 mysql 的基本设置请看 第十七章**
+> **注意：关于 mysql 的基本设置请看 第十七章**
 
 ### 配置 /usr/local/etc/pure-ftpd.conf 文件
 
@@ -37,6 +35,7 @@ sjshhhhh此处插入图片jskkdd
 ```
 
 编辑配置文件并增加 mysql 的支持：
+
 ```
 #兼容 ie 等非正规化的 ftp 客户端
 
@@ -100,7 +99,6 @@ grant select,insert,update,delete on pureftp.* to pftp@localhost identified by
 ### 配置 /usr/local/etc/pureftpd-mysql.conf
 
 ```
-
 ##############################################
 # #
 # Sample Pure-FTPd Mysql configuration file. #
@@ -231,12 +229,14 @@ MYSQLGetDir SELECT Dir FROM users WHERE User='\L'
 
 # MySQLTransactions On
 ```
+
 ### 添加 ftp 组和用户
 
 ```
 # pw groupadd ftpgroup -g 2000
 # pw useradd ftpuser -u 2001 -g 2000
 ```
+
 或
 
 ```
@@ -260,16 +260,16 @@ MYSQLGetDir SELECT Dir FROM users WHERE User='\L'
 # service pure-ftpd restart #重启服务
 ```
 
-
 ## proftpd
 
 > **警告：该教程仍在进行测试，请略过。**
-> 
+
 ### 安装 proftpd
 
 ```
 # pkg install proftpd
 ```
+
 ### 服务器操作
 
 ```
@@ -323,7 +323,7 @@ AllowOverwrite        on #允许覆盖文件
 <Limit SITE_CHMOD>DenyAll</Limit> #是否允许用户改变文件权限
 ```
 
-### <Anonymous ~ftp>部分
+### \<Anonymous \~ftp>部分
 
 该部分设置匿名登录。若不希望匿名登录服务器，请将此部分注释掉。
 
@@ -346,7 +346,9 @@ DisplayFirstChdir     .message #用户改变目录时显示信息
    </limit>
 </directory>
 ```
-#### [OPTIONS]命令介绍:
+
+#### \[OPTIONS]命令介绍:
+
 ```
      ALL 除了 LOGIN 命令外的所有命令
      DIRS
@@ -368,9 +370,11 @@ DisplayFirstChdir     .message #用户改变目录时显示信息
      SITE_CHMOD 改变权限 
     
 ```
+
 #### 举例
 
-阻止用户组 `students` 上传文件、重命名、删除目录 在 `/usr/local/homework`  中
+阻止用户组 `students` 上传文件、重命名、删除目录 在 `/usr/local/homework` 中
+
 ```
 <directory /usr/local/homework>
    <limit APPE RNTO RMD>
@@ -386,7 +390,7 @@ DisplayFirstChdir     .message #用户改变目录时显示信息
 
 使用 `ftp` 命令可以快速连接到 FTP 服务器。
 
-用法: 
+用法:
 
 ```
 ftp [选项] [URL]
@@ -400,9 +404,9 @@ ftp [选项] [URL]
 
 `-a` 使用匿名登录
 
-`-q` [quittime] 在设定时间后连接失败则自动放弃连接
+`-q` \[quittime] 在设定时间后连接失败则自动放弃连接
 
-`-r` [wait] 每隔 `wait` 秒发送一次连接请求
+`-r` \[wait] 每隔 `wait` 秒发送一次连接请求
 
 `-A` 强制使用主动模式
 
@@ -411,7 +415,6 @@ ftp [选项] [URL]
 `-v` 开启啰嗦模式
 
 `-V` 关闭啰嗦模式
-
 
 #### 登录后的命令：
 
@@ -438,4 +441,3 @@ features 显示该服务器支持的功能
 
 get remote-fil 下载服务器上的 remote-file
 ```
-
