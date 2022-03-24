@@ -6,6 +6,7 @@
 
 * [第一节 FreeBSD FAQ](di-ling-zhang-freebsd-zhong-wen-she-qu/di-yi-jie-freebsd-faq.md)
 * [第二节 FreeBSD 中文社区（CFC）发展规划](di-ling-zhang-freebsd-zhong-wen-she-qu/di-er-jie-freebsd-zhong-wen-she-qu-cfc-fa-zhan-gui-hua.md)
+* [第三节 FreeBSD 的不足之处](di-ling-zhang-freebsd-zhong-wen-she-qu/di-san-jie-freebsd-de-bu-zu-zhi-chu.md)
 
 ## 第一章 走近 FreeBSD
 
@@ -173,6 +174,7 @@
 * [第十节 Webmin](di-shi-liu-zhang-fu-wu-qi/di-shi-jie-webmin.md)
 * [第十一节 rsync 同步服务](di-shi-liu-zhang-fu-wu-qi/di-shi-yi-jie-rsync-tong-bu-fu-wu.md)
 * [第十二节 时间服务](di-shi-liu-zhang-fu-wu-qi/di-shi-er-jie-shi-jian-fu-wu.md)
+* [第十三节 Wildfly](di-shi-liu-zhang-fu-wu-qi/di-shi-san-jie-wildfly.md)
 
 ## 第十七章 网络服务器
 
