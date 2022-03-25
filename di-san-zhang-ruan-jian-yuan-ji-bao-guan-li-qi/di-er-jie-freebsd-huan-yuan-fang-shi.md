@@ -4,7 +4,7 @@ FreeBSD 有四类源，pkg、ports、portsnap、update。
 
 **对于失去安全支持的版本，请参考最后一节**
 
-**本文对于一个源列出了多个镜像站，无需全部配置，只需选择其一即可。**
+**本文对于一个源列出了多个镜像站，无需全部配置，只需选择其一即可。推荐使用北京交通大学自由与开源软件镜像站，因为是反向代理的方式镜像的，可以保持与上游同步。**
 
 **目前境内没有官方镜像站，以下均为非官方镜像站。**
 
@@ -20,7 +20,7 @@ FreeBSD 中 pkg 源分为系统级和用户级两个源。不建议直接修改 
 # mkdir -p /usr/local/etc/pkg/repos
 ```
 
-### 北京交通大学自由与开源软件镜像站
+### 北京交通大学自由与开源软件镜像站（推荐）
 
 创建用户级源文件:
 
@@ -131,7 +131,7 @@ FreeBSD: { enabled: no }
 
 ports 下载路径是 `/usr/ports/distfiles`
 
-### 北京交通大学自由与开源软件镜像站
+### 北京交通大学自由与开源软件镜像站（推荐）
 
 创建或修改文件 `# ee /etc/make.conf`:
 
@@ -165,7 +165,7 @@ ports 下载路径是 `/usr/ports/distfiles`
 
 ## portsnap 源:打包的 ports文件
 
-### 北京交通大学自由与开源软件镜像站
+### 北京交通大学自由与开源软件镜像站（推荐）
 
 编辑portsnap配置文件 `# ee /etc/portsnap.conf` :
 
@@ -204,7 +204,7 @@ ntpdate ntp.api.bz
 
 https://www.freebsd.org/platforms
 
-### 北京交通大学自由与开源软件镜像站
+### 北京交通大学自由与开源软件镜像站（推荐）
 
 编辑 `# ee /etc/freebsd-update.conf` 文件:
 
