@@ -196,23 +196,10 @@ psk="WIFI 密码"
 
 ```
 # kldload if_iwlwifi
-# pciconf -l | grep iw 
-```
-
-`# pciconf -l | grep iw`的输出应该类似：
-
-```
-iwlwifi0@pci0:3:0:0:        class=0x028000 rev=0x78 hdr=0x00 vendor=0x8086 device=0x24fd subvendor=0x8086 subdevice=0x0010
 ```
 
 >**注意：以下部分每次开机都要执行一次方能联网。**
 
-**请根据上面的`# pciconf -l | grep iw`的输出调整下面的数值！：**
-
-```
-# devctl detach pci0:3:0:0  #请根据上面的`# pciconf -l | grep iw`的输出调整该数值！
-# devctl set driver pci0:3:0:0 iwlwifi #请根据上面的`# pciconf -l | grep iw`的输出调整该数值！
-```
 
 创建并链接：
 
