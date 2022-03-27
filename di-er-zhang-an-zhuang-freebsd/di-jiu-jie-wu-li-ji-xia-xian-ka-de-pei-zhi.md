@@ -48,6 +48,18 @@ FreeBSD 已从 Linux 移植了显卡驱动，理论上，A 卡 N 卡均在 AMD64
 
 #### 通用
 
+一般计算机：
+```
+# sysrc -f /boot/loader.conf  acpi_video="YES"
+```
+
+对于 Thinkpad：
+
+```
+# sysrc -f /boot/loader.conf  acpi_ibm_load="YES"
+# sysrc -f /boot/loader.conf  acpi_video="YES"
+```
+
 >仅限 FreeBSD 13
 
 ```
