@@ -256,18 +256,6 @@ MYSQLGetDir SELECT Dir FROM users WHERE User='\L'
 # pkg install proftpd proftpd-mod_sql_mysql
 ```
 
-### 服务器操作
-
-```
-# sysrc  proftpd_enable="YES"
-
-# service proftpd start #启动服务器
-
-# service proftpd stop #停止服务
-
-# service proftpd restart #重启服务
-```
-
 ### 编辑配置文件 /usr/local/etc/proftpd.conf
 
 ```
@@ -451,14 +439,16 @@ INSERT INTO `proftpd`.`users` (`username` , `descr` , `password` , `uid` , `gid`
 Query OK, 1 row affected, 1 warning (0.02 sec)
 ```
 
-
-### 状态操作
+### 服务器操作
 
 ```
-# sysrc pureftpd_enable="YES"
-# service pure-ftpd start   #启动服务器
-# service pure-ftpd stop    #停止服务
-# service pure-ftpd restart #重启服务
+# sysrc  proftpd_enable="YES"
+
+# service proftpd start #启动服务器
+
+# service proftpd stop #停止服务
+
+# service proftpd restart #重启服务
 ```
 
 ## **连接到 FTP 服务器**
