@@ -250,6 +250,14 @@ MYSQLGetDir SELECT Dir FROM users WHERE User='\L'
 # chgrp -R ftpgroup /home/www/
 ```
 
+### 状态操作
+
+```
+# sysrc pureftpd_enable="YES"
+# service pure-ftpd start   #启动服务器
+# service pure-ftpd stop    #停止服务
+# service pure-ftpd restart #重启服务
+
 ## proftpd（以 mysql 支持为例）
 
 ### 安装 proftpd
