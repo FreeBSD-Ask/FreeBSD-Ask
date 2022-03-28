@@ -259,6 +259,7 @@ MYSQLGetDir SELECT Dir FROM users WHERE User='\L'
 # service pure-ftpd restart #重启服务
 
 ## proftpd（以 mysql 支持为例）
+```
 
 ### 安装 proftpd
 
