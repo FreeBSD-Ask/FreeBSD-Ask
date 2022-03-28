@@ -170,7 +170,7 @@ wpa 验证，静态 ip
 
 >以下部分仅适用于 FreeBSD 13.1、14.0。
 >
->iwlwifi 驱动适用于`AC 8265、AC 9260、AC 9560、AX200、AX201、AX210` 以及旧的 iwm 驱动所包含的网卡，见 <https://www.intel.cn/content/www/cn/zh/support/articles/000005511/wireless.html>。
+>iwlwifi 驱动适用于`AC 8265、AC 9260、AC 9560、AX200、AX201、AX210` 以及旧的 iwm 驱动所包含的网卡，见 <https://www.intel.cn/content/www/cn/zh/support/articles/000005511/wireless.html>。iwm(4) 的原有网卡若想使用该驱动，请参考 <https://wiki.freebsd.org/WiFi/Iwlwifi#I_have_an_iwm.284.29_supported_device> 。
 > 
 >**该驱动仍不完善，不会自动加载（可以用命令`# sysctl net.wlan.devices`查看有无加载，如果没有显示`iwlwifi0`就没有加载），每次都需要手动加载。**
 
