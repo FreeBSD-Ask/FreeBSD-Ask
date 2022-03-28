@@ -450,7 +450,7 @@ INSERT INTO `proftpd`.`users` (`username` , `descr` , `password` , `uid` , `gid`
 Query OK, 1 row affected, 1 warning (0.02 sec)
 ```
 
-### 服务器操作
+### 服务操作
 
 ```
 # sysrc  proftpd_enable="YES"
