@@ -132,4 +132,4 @@ PDF 请点击“[Release](https://github.com/FreeBSD-Ask/FreeBSD-Ask/releases)�
 
 ### 黑名单
 
-见 [CFC](https://github.com/FreeBSD-Ask/CFC)。
+见 [FreeBSD 中文社区（CFC）黑名单](https://github.com/FreeBSD-Ask/CFC)。
