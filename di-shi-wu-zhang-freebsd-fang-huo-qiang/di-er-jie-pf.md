@@ -35,11 +35,11 @@ pf 的管理命令为 `pfctl`，常用操作示例如下：
 
 block all #拒绝所有访问。
 
-ipfilter #是默认明示禁止的防火墙，因此需要通过此规则禁止所有访问。其中 block 是动作，block 表示拒绝，pass 表示通过；all 是 from any to any 的简写，表示从源地址到目标地址， 地址通常用网段(如 192.168.1.0/24)或 IP 地址(如 192.168.1.100)，any 是特殊词，表示任何地址；此外，当规则同时适用于输入 in 和输出 out 时，可以省略关键字，因此本条规则同时适用于输入输出 
+ipfilter #是默认明示禁止的防火墙，因此需要通过此规则禁止所有访问。其中 block 是动作，out 表示拒绝，pass 表示通过；all 是 from any to any 的简写，表示从源地址到目标地址， 地址通常用网段(如 192.168.1.0/24)或 IP 地址(如 192.168.1.100)，any 是特殊词，表示任何地址；此外，当规则同时适用于输入 in 和输出 out 时，可以省略关键字，因此本条规则同时适用于输入输出 
 
-pass quick on lo0 all #放开回环接口的访问权限，回环接口不对外部。quick 关键字表示若规则匹配，就停止执行，不会再执行后续规则 #增加 TCP 协议访问 80 端口的规则 
+pass quick on lo0 all #放开回环接口的访问权限，回环接口不对外部。quick 关键字表示若规则匹配，就停止执行，不会再执行后续规则 
 
-pass in quick proto tcp from any to 192.168.1.184 port 80 #允许任何设备以 TCP 协议访问本机 80 端口。其中 proto tcp 是访问协议，常用值有 tcp、udp、icmp、icmp6；port = 80 是端口，写在目标地址之后为目标 端口，源地址之后未写，表示从源地址的任何端口发起访问 
+pass in quick proto tcp from any to 192.168.1.184 port 80 #增加 TCP 协议访问 80 端口的规则，允许任何设备以 TCP 协议访问本机 80 端口。其中 proto tcp 是访问协议，常用值有 tcp、udp、icmp、icmp6；port = 80 是端口，写在目标地址之后为目标 端口，源地址之后未写，表示从源地址的任何端口发起访问 
 
 pass out quick proto tcp from 192.168.1.184 port 80 to any #允许回显信息给任何访问的设备 
 
