@@ -19,9 +19,9 @@ Xshell 是 Windows 平台上的强大的 shell 工具，不建议使用苦难哲
 ## 配置SSH
 
 ```     
-# ee /etc/ssh/sshd_config #（删去前边的 #，并将 yes 或 no 修改为如下）
+# ee /etc/ssh/sshd_config    #（删去前边的 #，并将 yes 或 no 修改为如下）
 PermitRootLogin yes          #允许 root 登录 
-PasswordAuthentication yes   # 设置是否使用口令验证，如果不设置此参数则使用 PAM 认证登录，安全性更高
+PasswordAuthentication yes   #（可选）设置是否使用普通密码验证，如果不设置此参数则使用 PAM 认证登录，安全性更高
 ```
 
 > 提示：删去前边的 `#` 是什么意思？`#` 在 UNIX 当中一般是起到一个注释作用，相当于 C 语言里面的 `//`。意味着后边的文字只起到说明作用，不起实际作用。
@@ -59,8 +59,8 @@ root@ykla:~ # ssh-keygen
 Generating public/private rsa key pair.
 Enter file in which to save the key (/root/.ssh/id_rsa): #此处回车
 Created directory '/root/.ssh'.
-Enter passphrase (empty for no passphrase):  #此处输入密码
-Enter same passphrase again: #此处重复输入密码
+Enter passphrase (empty for no passphrase):    #此处输入密码
+Enter same passphrase again:     #此处重复输入密码
 Your identification has been saved in /root/.ssh/id_rsa.
 Your public key has been saved in /root/.ssh/id_rsa.pub.
 The key fingerprint is:
