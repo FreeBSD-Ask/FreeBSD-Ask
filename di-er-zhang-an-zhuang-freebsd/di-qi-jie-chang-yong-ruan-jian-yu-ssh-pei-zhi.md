@@ -76,3 +76,75 @@ ServerAliveCountMax 3
 ```
 
 客户端和服务端任一开启检测即可。
+
+## SSH 密钥登录
+
+### 生成密钥
+
+```
+# ssh-keygen
+```
+
+>OpenSSH 7.0 及以上版本默认禁用了 ssh-dss(DSA) 公钥算法。FreeBSD 13.0 采用 OpenSSH_7.9。
+
+```
+root@ykla:~ # ssh-keygen
+Generating public/private rsa key pair.
+Enter file in which to save the key (/root/.ssh/id_rsa): #此处回车
+Created directory '/root/.ssh'.
+Enter passphrase (empty for no passphrase):  #此处输入密码
+Enter same passphrase again: #此处重复输入密码
+Your identification has been saved in /root/.ssh/id_rsa.
+Your public key has been saved in /root/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:MkcEjGhWCv6P/8y62JfbpEws9OnRN1W0adxmpceNny8 root@ykla
+The key's randomart image is:
++---[RSA 2048]----+
+|.  o.o...      ..|
+|..+.. ..      o+*|
+| +.     .     o*B|
+|  .    .      o=.|
+|   . .o S    . ..|
+|    + o+o   .   .|
+|   . o *.o o  E .|
+|    + Bo= . .  . |
+|   . ==O..       |
++----[SHA256]-----+
+root@ykla:~ # 
+```
+
+### 配置密钥
+
+检查权限（默认创建的权限如下）：
+
+```
+drwx------  2 root  wheel   512 Mar 22 18:27 /root/.ssh #权限为 700
+-rw-------  1 root  wheel  1856 Mar 22 18:27 /root/.ssh/id_rsa  #私钥，权限为 600
+-rw-r--r--  1 root  wheel  391 Mar 22 18:27 /root/.ssh/id_rsa.pub #公钥，权限为 644
+```
+
+```
+# cat /root/.ssh/id_rsa.pub >> /root/.ssh/authorized_keys
+-rw-r--r--  1 root  wheel  391 Mar 22 18:39 /root/.ssh/authorized_keys #检查权限 644
+```
+
+### 修改 /etc/ssh/sshd_config
+
+``
+# ee /etc/ssh/sshd_config
+```
+
+修改配置如下：
+
+```
+PermitRootLogin yes            #允许 ROOT 用户直接登陆系统
+AuthorizedKeysFile     .ssh/authorized_keys #修改使用用户目录下 KEY 公共文件，默认已经正确配置，请检查
+PasswordAuthentication no     # 不允许用户使用密码方式登录
+PermitEmptyPasswords no       # 禁止空密码的用户进行登录
+```
+
+### 重启服务
+
+```
+# service sshd restart
+```
