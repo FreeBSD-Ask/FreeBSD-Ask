@@ -130,7 +130,7 @@ drwx------  2 root  wheel   512 Mar 22 18:27 /root/.ssh #权限为 700
 
 ### 修改 /etc/ssh/sshd_config
 
-``
+```
 # ee /etc/ssh/sshd_config
 ```
 
