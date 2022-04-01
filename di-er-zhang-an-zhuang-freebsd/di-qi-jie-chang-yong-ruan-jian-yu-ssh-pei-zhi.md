@@ -97,7 +97,7 @@ drwx------  2 root  wheel   512 Mar 22 18:27 /root/.ssh #权限为 700
 -rw-r--r--  1 root  wheel  391 Mar 22 18:39 /root/.ssh/authorized_keys #检查权限 644
 ```
 
-保存私钥和公钥到本地后，删除服务器上的多余文件：
+使用 winscp 把私钥和公钥保存到本地后，删除服务器上的多余文件：
 
 ```
 # rm /root/.ssh/id_rsa*
