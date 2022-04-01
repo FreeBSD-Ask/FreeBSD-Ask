@@ -59,7 +59,7 @@ root@ykla:~ # ssh-keygen
 Generating public/private rsa key pair.
 Enter file in which to save the key (/root/.ssh/id_rsa): #此处回车
 Created directory '/root/.ssh'.
-Enter passphrase (empty for no passphrase):    #此处输入密码
+Enter passphrase (empty for no passphrase):    #此处输入密码（为了安全建议设置密码）
 Enter same passphrase again:     #此处重复输入密码
 Your identification has been saved in /root/.ssh/id_rsa.
 Your public key has been saved in /root/.ssh/id_rsa.pub.
@@ -125,7 +125,7 @@ PermitEmptyPasswords no       # 禁止空密码的用户进行登录
 # service sshd restart
 ```
 
-使用 xshell 登录即可，导入私钥`id_rsa`，即可登录。
+使用 xshell 登录即可，输入密钥密码，导入私钥`id_rsa`，即可登录。
 
 >如果使用其他 ssh 软件无法登陆请自行转换密钥格式。
 
