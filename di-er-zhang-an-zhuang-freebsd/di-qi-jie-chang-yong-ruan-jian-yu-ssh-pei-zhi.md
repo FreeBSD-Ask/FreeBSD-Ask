@@ -128,6 +128,12 @@ drwx------  2 root  wheel   512 Mar 22 18:27 /root/.ssh #权限为 700
 -rw-r--r--  1 root  wheel  391 Mar 22 18:39 /root/.ssh/authorized_keys #检查权限 644
 ```
 
+保存私钥和公钥到本地后，删除服务器上的多余文件：
+
+```
+# rm /root/.ssh/id_rsa*
+```
+
 ### 修改 /etc/ssh/sshd_config
 
 ```
@@ -140,7 +146,8 @@ drwx------  2 root  wheel   512 Mar 22 18:27 /root/.ssh #权限为 700
 PermitRootLogin yes            #允许 ROOT 用户直接登陆系统
 AuthorizedKeysFile     .ssh/authorized_keys #修改使用用户目录下 KEY 公共文件，默认已经正确配置，请检查
 PasswordAuthentication no     # 不允许用户使用密码方式登录
-PermitEmptyPasswords no       # 禁止空密码的用户进行登录
+ChallengeResponseAuthentication no #禁止密码登录验证
+PermitEmptyPasswords no       # 禁止空密码的用户进行登录
 ```
 
 ### 重启服务
@@ -148,3 +155,7 @@ PermitEmptyPasswords no       # 禁止空密码的用户进行登录
 ```
 # service sshd restart
 ```
+
+使用 xshell 登录即可，导入私钥`id_rsa`，即可登录。
+
+>如果无法登陆请自行转换密钥格式。
