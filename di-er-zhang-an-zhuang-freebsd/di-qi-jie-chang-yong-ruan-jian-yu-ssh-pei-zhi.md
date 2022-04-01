@@ -85,7 +85,7 @@ ServerAliveCountMax 3
 # ssh-keygen
 ```
 
->OpenSSH 7.0 及以上版本默认禁用了 ssh-dss(DSA) 公钥算法。FreeBSD 13.0 采用 OpenSSH_7.9。
+>OpenSSH 7.0 及以上版本默认禁用了 ssh-dss(DSA) 公钥算法。FreeBSD 13.0 采用 OpenSSH_7.9。因此使用默认值即可。
 
 ```
 root@ykla:~ # ssh-keygen
