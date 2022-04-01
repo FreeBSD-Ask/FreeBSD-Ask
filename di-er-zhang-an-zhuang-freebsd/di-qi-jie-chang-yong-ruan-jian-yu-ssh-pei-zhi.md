@@ -44,6 +44,40 @@ PasswordAuthentication yes   #（可选）设置是否使用普通密码验证�
 # service sshd restart
 ```
 
+### 保持 SSH 在线
+
+服务端设置：
+
+编辑 `# ee /etc/ssh/sshd_config`，调整 `ClientAlive` 的设置：
+
+```
+ClientAliveInterval 10
+ClientAliveCountMax 3
+```
+
+10 秒给客户端发一次检测，客户端如果 3 次都不回应，则认为客户端已断开连接。
+
+`ClientAliveInterval` 默认是 `0`，表示禁用检测。
+
+客户端设置：
+
+全局用户生效：`# ee /etc/ssh/ssh_config` ，仅对当前用户生效：`~/.ssh/config`。
+
+```
+Host *
+ServerAliveInterval 10
+ServerAliveCountMax 3
+```
+
+或者在连接的时候使用 `-o` 指定参数：
+
+```
+# ssh user@server -p 22 -o ServerAliveInterval=10 -o ServerAliveCountMax=3
+```
+
+客户端和服务端任一开启检测即可。
+
+
 ## SSH 密钥登录
 
 ### 生成密钥
@@ -130,35 +164,3 @@ PermitEmptyPasswords no                      #禁止空密码的用户进行登�
 >如果使用其他 ssh 软件无法登陆请自行转换密钥格式。
 
 
-## 保持 SSH 在线
-
-服务端设置：
-
-编辑 `# ee /etc/ssh/sshd_config`，调整 `ClientAlive` 的设置：
-
-```
-ClientAliveInterval 10
-ClientAliveCountMax 3
-```
-
-10 秒给客户端发一次检测，客户端如果 3 次都不回应，则认为客户端已断开连接。
-
-`ClientAliveInterval` 默认是 `0`，表示禁用检测。
-
-客户端设置：
-
-全局用户生效：`# ee /etc/ssh/ssh_config` ，仅对当前用户生效：`~/.ssh/config`。
-
-```
-Host *
-ServerAliveInterval 10
-ServerAliveCountMax 3
-```
-
-或者在连接的时候使用 `-o` 指定参数：
-
-```
-# ssh user@server -p 22 -o ServerAliveInterval=10 -o ServerAliveCountMax=3
-```
-
-客户端和服务端任一开启检测即可。
