@@ -26,7 +26,7 @@ PasswordAuthentication yes   #（可选）设置是否使用普通密码验证�
 
 > 提示：删去前边的 `#` 是什么意思？`#` 在 UNIX 当中一般是起到一个注释作用，相当于 C 语言里面的 `//`。意味着后边的文字只起到说明作用，不起实际作用。
 
-## 开启 SSH 服务
+### 开启 SSH 服务
 
 ```
 # service sshd restart
