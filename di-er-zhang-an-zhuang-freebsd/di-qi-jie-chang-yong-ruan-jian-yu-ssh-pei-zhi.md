@@ -90,6 +90,8 @@ drwx------  2 root  wheel   512 Mar 22 18:27 /root/.ssh #权限为 700
 -rw-r--r--  1 root  wheel  391 Mar 22 18:27 /root/.ssh/id_rsa.pub #公钥，权限为 644
 ```
 
+生成验证公钥：
+
 ```
 # cat /root/.ssh/id_rsa.pub >> /root/.ssh/authorized_keys
 -rw-r--r--  1 root  wheel  391 Mar 22 18:39 /root/.ssh/authorized_keys #检查权限 644
