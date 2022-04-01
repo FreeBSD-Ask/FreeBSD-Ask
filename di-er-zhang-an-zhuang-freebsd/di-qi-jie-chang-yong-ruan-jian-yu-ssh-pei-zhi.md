@@ -18,6 +18,8 @@ Xshell 是 Windows 平台上的强大的 shell 工具，不建议使用苦难哲
 
 ## 配置 SSH
 
+### 允许 root ssh
+
 ```     
 # ee /etc/ssh/sshd_config    #（删去前边的 #，并将 yes 或 no 修改为如下）
 PermitRootLogin yes          #允许 root 登录 
