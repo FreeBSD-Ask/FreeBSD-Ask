@@ -39,4 +39,8 @@ https://rufus.ie/zh
 |:---:|:---:|:---:|:---:|
 |USB 无线网卡|COMFAST CF-WU810N|RTL8188EUS 150M 2.4G|20|
 |USB 以太网卡|绿联 USB 百兆网卡 CR110|AX88772A 100M|40|
-|Type-C 以太网卡|绿联 Type-C 转百兆网卡 30287|AX88772A 100M|京东 59|
+|USB 以太网卡|绿联 USB 千兆网卡 CM209|AX88179A 1000M|79|
+|USB 以太网卡|绿联 USB 2.5G 网卡 CM275|RTL8156 2.5G|189|
+|Type-C 以太网卡|绿联 Type-C 转百兆网卡 30287|AX88772A 100M|59|
+|Type-C 以太网卡|绿联 Type-C 转千兆网卡 CM199|AX88179A 1000M|99|
+|Type-C 以太网卡|绿联 Type-C 转 2.5G 网卡|RTL8156 2.5G|199|
