@@ -2,11 +2,11 @@
 
 ## 下载镜像
 
-以 OpenBSD 7.0，AMD 64 架构为例，访问
+以 OpenBSD 7.1，AMD 64 架构为例，访问
 
-https://cdn.openbsd.org/pub/OpenBSD/7.0/amd64
+https://cdn.openbsd.org/pub/OpenBSD/7.1/amd64
 
-获取系统镜像。若是刻录 U盘 安装，就下载 `installXX.img` ；若是虚拟机体验，请下载 `installXX.iso` 。（注：截止 OpenBSD 7.0 时，请不要使用 ventory 引导实体机安装。）
+获取系统镜像。若是刻录 U盘 安装，就下载 `installXX.img` ；若是虚拟机体验，请下载 `installXX.iso` 。（注：截止 OpenBSD 7.1 时，请不要使用 ventory 引导实体机安装。）
 
 ## 自定义安装
 
@@ -22,7 +22,7 @@ https://cdn.openbsd.org/pub/OpenBSD/7.0/amd64
 
 ### 安装过程
 
-> Welcome to the OpenBSD/amd64 7.0 installation program.
+> Welcome to the OpenBSD/amd64 7.1 installation program.
 >
 > (I)nstall, (U)pgrade or (S)hell? `i`
 
@@ -50,7 +50,7 @@ https://cdn.openbsd.org/pub/OpenBSD/7.0/amd64
 
 后续配置回车确认。
 
-> Do you expect to run the X Window System? \[yes] `no`
+> Do you want the X Window System to be started by xenodm? \[no] `no`
 
 是否运行图形窗口界面，这一步选择 `no`，后续我们会安装自己需要的桌面环境。
 
@@ -180,27 +180,27 @@ https://cdn.openbsd.org/pub/OpenBSD/7.0/amd64
 Select sets by entering a set name, a file name pattern or 'all'. De-select 
 sets by prepending a '-' to the set name, name pattern or 'all'. Selected sets are labelled `[X]`
 
-[X] bsd          [X] etc70.tgz     [X] xbase70.tgz  
-[X] xserv70.tgz  [X] bsd.rd        [X] comp70.tgz 
-[X] xetc70.tgz   [X] bsd.mp        [X] man70.tgz 
-[X] xshare70.tgz [X] base70.tgz    [X] game70.tgz 
-[X] xfont70.tgz 
+[X] bsd          [X] etc71.tgz     [X] xbase71.tgz  
+[X] xserv71.tgz  [X] bsd.rd        [X] comp71.tgz 
+[X] xetc71.tgz   [X] bsd.mp        [X] man71.tgz 
+[X] xshare71.tgz [X] base71.tgz    [X] game71.tgz 
+[X] xfont71.tgz 
 
 Set name(s)? (or 'abort' or 'done') [done] -game*
 ```
 
-这里我们输入 `-game*` 来取消 `game70.tgz` ，其它都勾选。
+这里我们输入 `-game*` 来取消 `game71.tgz` ，其它都勾选。
 
 注：即使不使用桌面，也请勾选 `X11` 选项，否则部分软件可能无法正常运行。
 
 ```
 Set name(s)? (or 'abort' or 'done') [done] `-game*`
 
-[X] bsd          [X] etc70.tgz     [X] xbase70.tgz  
-[X] xserv70.tgz  [X] bsd.rd        [X] comp70.tgz 
-[X] xetc70.tgz   [X] bsd.mp        [X] man70.tgz 
-[X] xshare70.tgz [X] base70.tgz    [ ] game70.tgz 
-[X] xfont70.tgz 
+[X] bsd          [X] etc71.tgz     [X] xbase71.tgz  
+[X] xserv71.tgz  [X] bsd.rd        [X] comp71.tgz 
+[X] xetc71.tgz   [X] bsd.mp        [X] man71.tgz 
+[X] xshare71.tgz [X] base71.tgz    [ ] game71.tgz 
+[X] xfont71.tgz 
 
 Set name(s)? (or 'abort' or 'done') [done]
 ```
