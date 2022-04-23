@@ -6,7 +6,7 @@
 
 https://cdn.openbsd.org/pub/OpenBSD/7.1/amd64
 
-获取系统镜像。若是刻录 U盘 安装，就下载 `installXX.img` ；若是虚拟机体验，请下载 `installXX.iso` 。（注：截止 OpenBSD 7.1 时，请不要使用 ventory 引导实体机安装。）
+获取系统镜像。若是刻录 U 盘 安装，就下载 `installXX.img` ；若是虚拟机体验，请下载 `installXX.iso` 。（注：截止 OpenBSD 7.1 时，请不要使用 ventory 引导实体机安装。）
 
 ## 自定义安装
 
