@@ -26,7 +26,7 @@ FreeBSD 已从 Linux 移植了显卡驱动，理论上，A 卡 N 卡均在 AMD64
 
 - FreeBSD 13：`# cd /usr/ports/graphics/drm-devel-kmod/ && make BATCH=yes install clean`
 
->FreeBSD 13.0 也可以使用二进制包进行安装`# pkg install drm-fbsd13.0-kmod`，配置方法同“加载显卡”。13.X 需要通过 ports 编译安装，但是不如直接编译`drm-devel-kmod`。因为后者支持的显卡更多。
+>FreeBSD 13.0 也可以使用二进制包进行安装`# pkg install drm-fbsd13-kmod`，配置方法同“加载显卡”。13.X 需要通过 ports 编译安装，但是不如直接编译`drm-devel-kmod`。因为后者支持的显卡更多。
 
 - FreeBSD 14：`# cd /usr/ports/graphics/drm-devel-kmod/ && make BATCH=yes install clean`
 
