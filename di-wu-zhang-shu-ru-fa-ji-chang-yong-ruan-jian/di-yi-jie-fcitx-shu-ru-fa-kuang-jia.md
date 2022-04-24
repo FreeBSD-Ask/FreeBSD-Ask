@@ -6,7 +6,7 @@ fcitx 5 相比前一代，增加了对 Wayland 的支持，据说更加流畅。
 
 ## Fcitx 4.X
 
-#### 注意：该教程仅在 KDE 5 下测试通过。
+#### 注意：该教程仅在 KDE 5/csh 下测试通过。
 
 `# pkg install zh-fcitx zh-fcitx-configtool fcitx-qt5 fcitx-m17n zh-fcitx-libpinyin`
 
@@ -39,7 +39,7 @@ setenv LC_ALL zh_CN.UTF-8
 
 ## Fcitx 5.X
 
-#### 注意：该教程仅在 KDE 5 下测试通过。
+#### 注意：该教程仅在 KDE 5/csh 下测试通过。
 
 `# pkg install fcitx5 fcitx5-qt fcitx5-gtk fcitx5-configtool zh-fcitx5-rime zh-rime-essay zh-fcitx5-chinese-addons`
 
