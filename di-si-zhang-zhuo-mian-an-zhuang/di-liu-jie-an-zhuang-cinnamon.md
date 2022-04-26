@@ -41,4 +41,8 @@ proc /proc procfs rw 0 0
 # sysrc lightdm_enable="YES"
 ```
 
->目前不知道怎么设置中文。如果您知道请提交 issue 或者 pull。
+### 中文化
+
+编辑 `etc/login.conf`：
+
+找到 `default:\` 这一段，把 `:lang=C.UTF-8` 修改为 `:lang=zh_CN.UTF-8`。
