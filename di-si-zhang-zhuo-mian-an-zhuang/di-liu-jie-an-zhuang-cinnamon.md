@@ -47,4 +47,4 @@ proc /proc procfs rw 0 0
 
 找到 `default:\` 这一段，把 `:lang=C.UTF-8` 修改为 `:lang=zh_CN.UTF-8`。
 
-刷新数据库：`# csp_mkdb /etc/login.conf`
+刷新数据库：`# cap_mkdb /etc/login.conf`
