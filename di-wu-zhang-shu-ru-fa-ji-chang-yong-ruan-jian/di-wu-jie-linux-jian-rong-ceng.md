@@ -30,6 +30,13 @@ linprocfs   /compat/linux/proc	linprocfs	rw	0	0
 linsysfs    /compat/linux/sys	linsysfs	rw	0	0
 tmpfs    /compat/linux/dev/shm	tmpfs	rw,mode=1777	0	0
 ```
+
+检查挂载有无报错：
+
+```
+# mount -al
+```
+
 ```
 # reboot
 ```
