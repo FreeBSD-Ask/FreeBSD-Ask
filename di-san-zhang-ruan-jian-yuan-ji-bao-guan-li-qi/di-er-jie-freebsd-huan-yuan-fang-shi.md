@@ -1,5 +1,15 @@
 # 第二节 FreeBSD 换源方式
 
+
+> **通知：**
+>
+>bjtu 北京交通大学开源镜像站镜像站故障。请切换其他源，例如 freebsd.cn/ustc/nju/163。
+>
+​>
+>原因是学校要求保证网课，所以出口限速了100Mbps。现在该镜像站每天都很拥挤。
+>
+>预计修复：放暑假，具体未知。
+
 FreeBSD 有四类源，pkg、ports、portsnap、update。
 
 **对于失去安全支持的版本，请参考最后一节**
@@ -20,7 +30,7 @@ FreeBSD 中 pkg 源分为系统级和用户级两个源。不建议直接修改 
 # mkdir -p /usr/local/etc/pkg/repos
 ```
 
-### 北京交通大学自由与开源软件镜像站（推荐）
+### 北京交通大学自由与开源软件镜像站
 
 创建用户级源文件:
 
@@ -108,7 +118,7 @@ enabled: yes
 FreeBSD: { enabled: no }
 ```
 
-## FreeBSD.cn(非官方且不稳定，下同）
+## FreeBSD.cn(非官方,下同）
 
 ```
 # ee /usr/local/etc/pkg/repos/freebsdcn.conf
@@ -131,7 +141,7 @@ FreeBSD: { enabled: no }
 
 ports 下载路径是 `/usr/ports/distfiles`
 
-### 北京交通大学自由与开源软件镜像站（推荐）
+### 北京交通大学自由与开源软件镜像站
 
 创建或修改文件 `# ee /etc/make.conf`:
 
@@ -165,7 +175,7 @@ ports 下载路径是 `/usr/ports/distfiles`
 
 ## portsnap 源:打包的 ports文件
 
-### 北京交通大学自由与开源软件镜像站（推荐）
+### 北京交通大学自由与开源软件镜像站
 
 编辑portsnap配置文件 `# ee /etc/portsnap.conf` :
 
@@ -191,7 +201,7 @@ Cowardly refusing to proceed any further.
 ntpdate ntp.api.bz
 ```
 
-### FreeBSD.cn （暂不可用）
+### FreeBSD.cn
 
 编辑portsnap配置文件 `# ee /etc/portsnap.conf` :
 
@@ -204,7 +214,7 @@ ntpdate ntp.api.bz
 
 https://www.freebsd.org/platforms
 
-### 北京交通大学自由与开源软件镜像站（推荐）
+### 北京交通大学自由与开源软件镜像站
 
 编辑 `# ee /etc/freebsd-update.conf` 文件:
 
@@ -214,7 +224,7 @@ https://www.freebsd.org/platforms
 
 `# freebsd-update -r 13.0-RELEASE upgrade`
 
-### FreeBSD.cn （暂不可用）
+### FreeBSD.cn 
 
 编辑 `# ee /etc/freebsd-update.conf` 文件:
 
