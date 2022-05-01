@@ -29,7 +29,7 @@
     pkg install -y i3
     ```
 
-2. 安装完成后, 请在用户主目录 /usr/local/bin/i3 下创建.xinitrc 文件以便使用 startx 命令启动 i3wm:
+2. 安装完成后, 请在用户目录 /usr/home/你的用户名/ 下创建 .xinitrc 文件以便使用 startx 命令启动 i3wm:
 
     ```sh
     echo "/usr/local/bin/i3" >> /usr/home/你的用户名/.xinitrc
