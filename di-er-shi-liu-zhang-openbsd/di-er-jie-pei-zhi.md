@@ -112,4 +112,4 @@ join 无线名称 wpakey 无线密码
 
 - Absolute OpenBSD 补充
 
-_如果觉得 Firefox 运行不佳，试试 Chromium 。_
+_如果觉得 Firefox 运行缓慢，试试 Epiphany (Gnome 浏览器) 。_
