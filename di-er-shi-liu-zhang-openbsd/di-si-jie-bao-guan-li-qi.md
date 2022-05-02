@@ -36,6 +36,6 @@ $ cd pkgsrc/bootstrap
 $ ./bootstrap --unprivileged
 ```
 
-然后是添加路径 `~/pkg/bin` 到路径环境变量中。pkgsrc 树位于 `~/pkgsrc/` 中，其工作的所有相关文件均在`〜/pkg/`中。
+然后是添加路径 `~/pkg/bin` 到路径环境变量中。pkgsrc 树位于 `~/pkgsrc/` 中，其工作的所有相关文件均在`~/pkg/`中。
 
 我们就可以在`~/pkgsrc/`中搜索软件来安装程序，之后运行`bmake install`。如在`~/pkgsrc/chat/irssi/`安装 IRC 客户端` IRSSI`。
