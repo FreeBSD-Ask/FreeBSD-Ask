@@ -1,6 +1,6 @@
 # 第一节 安装 i3wm
 
-## 安装 i3wm 
+## 安装 i3wm
 
 ```
 # pkg install -y xorg i3
@@ -23,12 +23,16 @@ $ chown 你的用户名 /usr/home/你的用户名/.xinitrc
 
 可以用 `startx` 启动 i3。
 
-——————————————————————此处插图————————————————————————
+
+
+![](../.gitbook/assets/i3wm\_preview.png)
+
+
 
 ## 参考
 
-- [i3 使用手册](https://www.freebsd.org/cgi/man.cgi?query=i3&apropos=0&sektion=1&manpath=freebsd-ports&format=html)
-- <http://bottlenix.wikidot.com/installing-i3wm>
-- <https://unixsheikh.com/tutorials/how-to-setup-freebsd-with-a-riced-desktop-part-3-i3.html#xterm>
-- <https://forums.freebsd.org/threads/how-to-install-i3.62305/>
-- <https://www.freebsd.org/cgi/man.cgi?query=i3&apropos=0&sektion=1&manpath=freebsd-ports&format=html>
+* [i3 使用手册](https://www.freebsd.org/cgi/man.cgi?query=i3\&apropos=0\&sektion=1\&manpath=freebsd-ports\&format=html)
+* [http://bottlenix.wikidot.com/installing-i3wm](http://bottlenix.wikidot.com/installing-i3wm)
+* [https://unixsheikh.com/tutorials/how-to-setup-freebsd-with-a-riced-desktop-part-3-i3.html#xterm](https://unixsheikh.com/tutorials/how-to-setup-freebsd-with-a-riced-desktop-part-3-i3.html#xterm)
+* [https://forums.freebsd.org/threads/how-to-install-i3.62305/](https://forums.freebsd.org/threads/how-to-install-i3.62305/)
+* [https://www.freebsd.org/cgi/man.cgi?query=i3\&apropos=0\&sektion=1\&manpath=freebsd-ports\&format=html](https://www.freebsd.org/cgi/man.cgi?query=i3\&apropos=0\&sektion=1\&manpath=freebsd-ports\&format=html)
