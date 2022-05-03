@@ -34,6 +34,8 @@ X-Ray
 
 [tomblackwhite](https://github.com/tomblackwhite)
 
+isNijikawa
+
 [星不萌](https://www.moebsd.cn)
 
 [qinghecyn](https://github.com/qinghecyn)
