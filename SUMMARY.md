@@ -279,3 +279,11 @@
 
 * [第〇节 概述](di-er-shi-ba-zhang-dragonflybsd/di-ling-jie-gai-shu.md)
 * [第一节 安装与配置](di-er-shi-ba-zhang-dragonflybsd/di-yi-jie-an-zhuang-yu-pei-zhi.md)
+
+## 第二十九章 桌面高级进阶
+
+* [第〇节 窗口管理器与桌面的区别与联系](di-er-shi-jiu-zhang-zhuo-mian-gao-ji-jin-jie/di-ling-jie-chuang-kou-guan-li-qi-yu-zhuo-mian-de-qu-bie-yu-lian-xi.md)
+* [第一节 安装 i3wm](di-er-shi-jiu-zhang-zhuo-mian-gao-ji-jin-jie/di-yi-jie-an-zhuang-i3wm.md)
+* [第二节 安装 CDE](di-er-shi-jiu-zhang-zhuo-mian-gao-ji-jin-jie/di-er-jie-an-zhuang-cde.md)
+* [第三节 安装 Awesome](di-er-shi-jiu-zhang-zhuo-mian-gao-ji-jin-jie/di-san-jie-an-zhuang-awesome.md)
+* [第三节 安装 FVWM](di-er-shi-jiu-zhang-zhuo-mian-gao-ji-jin-jie/di-san-jie-an-zhuang-fvwm.md)
