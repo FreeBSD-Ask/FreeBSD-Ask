@@ -34,9 +34,9 @@
 www {
 host.hostname =www.example.org; # 主机名
 ip4.addr = 192.168.0.10; # IP 地址
-path ="/usr/jail"; # jail位置
+path ="/usr/jail"; # jail 位置
 devfs_ruleset = "www_ruleset"; # devfs ruleset
-mount.devfs; # 挂载 devfs文件系统到jail
+mount.devfs; # 挂载 devfs 文件系统到 jail
 exec.start = "/bin/sh /etc/rc"; # 启动命令
 exec.stop = "/bin/sh /etc/rc.shutdown"; # 关闭命令
 }
@@ -44,7 +44,7 @@ exec.stop = "/bin/sh /etc/rc.shutdown"; # 关闭命令
 
 ## 管理
 
-jails 查看在线 jail 信息列表
+`jls` 查看在线 jail 信息列表
 
 ```
 JID IP Address    Hostname   Path
