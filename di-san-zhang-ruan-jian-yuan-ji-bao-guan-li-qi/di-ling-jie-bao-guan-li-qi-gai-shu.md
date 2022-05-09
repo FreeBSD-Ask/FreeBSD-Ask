@@ -7,3 +7,5 @@
 Arch Linux: Pacman，对应 Pkg（同样秉持 KISS 的理念）
 
 Gentoo Linux: Portage，对应 Ports（Portage 本身就是 Ports 的仿制品）
+
+>如果需要查询一个软件包在 FreeBSD 中的具体情况可以这样用：谷歌或者必应（很多时候搜索不出来）搜索“fteebsd  ports 包名”。如果无法使用，可以直接在网站里搜索包名 https://www.freshports.org/   
