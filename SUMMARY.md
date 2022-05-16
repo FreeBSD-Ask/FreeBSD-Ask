@@ -7,6 +7,7 @@
 * [第一节 FreeBSD FAQ](di-ling-zhang-freebsd-zhong-wen-she-qu/di-yi-jie-freebsd-faq.md)
 * [第二节 FreeBSD 中文社区（CFC）发展规划](di-ling-zhang-freebsd-zhong-wen-she-qu/di-er-jie-freebsd-zhong-wen-she-qu-cfc-fa-zhan-gui-hua.md)
 * [第三节 FreeBSD 的不足之处](di-ling-zhang-freebsd-zhong-wen-she-qu/di-san-jie-freebsd-de-bu-zu-zhi-chu.md)
+* [第四节 FreeBSD 发行说明](di-ling-zhang-freebsd-zhong-wen-she-qu/di-si-jie-freebsd-fa-hang-shuo-ming.md)
 
 ## 第一章 走近 FreeBSD
 
