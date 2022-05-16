@@ -1,0 +1,33 @@
+name: Push changes to FreeBSD-Ask-Next
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Push changes to FreeBSD-Ask-Next
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout from repository
+        uses: actions/checkout@v3
+
+      - name: Pushes to another repository
+        uses: cpina/github-action-push-to-another-repository@main
+
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+
+        with:
+          source-directory: "."
+          target-directory: "docs"
+          target-branch: main
+
+          destination-github-username: "${{ github.event.pusher.name }}"
+          destination-repository-username: "FreeBSD-Ask"
+          destination-repository-name: "FreeBSD-Ask-Next"
+
+          user-name: "${{ github.event.pusher.name }}"
+          user-email: "${{ github.event.pusher.email }}"
