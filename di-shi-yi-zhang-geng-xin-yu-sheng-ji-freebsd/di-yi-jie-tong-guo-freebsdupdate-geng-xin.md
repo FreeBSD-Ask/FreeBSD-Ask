@@ -19,10 +19,10 @@ FreeBSD 提供了实用工具 `freebsd-update` 来安装系统更新，包括升
 # freebsd-update install
 ```
 
-小版本或者大版本更新，`13.0` 是要更新到的版本号：
+小版本或者大版本更新，`13.1` 是要更新到的版本号：
 
 ```
-# freebsd-update upgrade -r 13.0-RELEASE
+# freebsd-update upgrade -r 13.1-RELEASE
 # freebsd-update install
 ```
 
