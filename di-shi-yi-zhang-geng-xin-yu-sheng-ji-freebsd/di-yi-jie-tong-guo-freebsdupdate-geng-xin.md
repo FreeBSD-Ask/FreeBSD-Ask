@@ -16,6 +16,31 @@ FreeBSD 提供了实用工具 `freebsd-update` 来安装系统更新，包括升
 
 ```
 # freebsd-update fetch
+```
+当出现下列信息时：
+
+```
+
+
+usrlinclude/c++/vl/trllvector usrlinclude/c++/vl/trllversion usrlinclude/c++/v1/trl/wchar.h usr/include/c++/v1/tr1/wctype.h usrlinclude/c++/vllunwind-armh
+
+usrlinclude/c++/v1/unwind-itaniumh usrlinclude/c++/vllunwindh
+
+usr/include/crypto/ cryptodevh usrlinclude/crypto/cbcmac.h usr/include/crypto/deflate.h usrlinclude/crypto/gfmult.h usr/include/crypto/gmac.h
+
+usr/include/crypto/rijndael.h usrlinclude/crypto/rmd160.h usr/include/crypto/xform.h
+
+usr/include/crypto/xformauth.h usr/includecrypto/xformcomp.h usrlincludelcryptolxformenc.h
+
+usr/include/crypto/xformpoly1305.h usrlincludelsys/ cscanatomic.h usrlincludelsys/ cscanbus.h usr/lib/clang/11.0.1
+
+usr/lib/clang/11.0.1/include
+:
+```
+ 
+你只需要输入`q`回车即可。
+
+```
 # freebsd-update install
 ```
 
