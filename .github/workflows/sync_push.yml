@@ -14,20 +14,17 @@ jobs:
       - name: Checkout from repository
         uses: actions/checkout@v3
 
-      - name: Pushes to another repository
-        uses: cpina/github-action-push-to-another-repository@main
+      - name: Push changes to FreeBSD-Ask-Next
+        uses: dmnemec/copy_file_to_another_repo_action@v1.1.1
 
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
 
         with:
-          source-directory: "."
-          target-directory: "docs"
-          target-branch: main
+          source_file: "."
 
-          destination-github-username: "${{ github.event.pusher.name }}"
-          destination-repository-username: "FreeBSD-Ask"
-          destination-repository-name: "FreeBSD-Ask-Next"
+          destination_repo: "FreeBSD-Ask/FreeBSD-Ask-Next"
+          destination_folder: "docs"
 
-          user-name: "${{ github.event.pusher.name }}"
-          user-email: "${{ github.event.pusher.email }}"
+          user_name: "${{ github.event.pusher.name }}"
+          user_email: "${{ github.event.pusher.email }}"
