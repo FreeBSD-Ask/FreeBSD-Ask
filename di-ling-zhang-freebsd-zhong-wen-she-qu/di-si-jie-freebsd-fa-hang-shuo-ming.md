@@ -2,6 +2,8 @@
 
 # FreeBSD 13.1 发行说明
 
+> 原文链接 https://www.freebsd.org/releases/13.1R/relnotes/
+
 ### 摘要
 FreeBSD 13.1-RELEASE 的发行说明包含了在 13-STABLE 开发线上对 FreeBSD 基本系统所做修改的摘要。这份文件列出了自上次发布以来所发布的相关安全公告，以及对 FreeBSD 内核和用户区的重大修改。同时还介绍了一些关于升级的简要说明。
 
