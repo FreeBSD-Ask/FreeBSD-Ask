@@ -3,7 +3,6 @@ name: Push changes to FreeBSD-Ask-Next
 on:
   push:
     branches: [main]
-  workflow_dispatch:
 
 jobs:
   build:
