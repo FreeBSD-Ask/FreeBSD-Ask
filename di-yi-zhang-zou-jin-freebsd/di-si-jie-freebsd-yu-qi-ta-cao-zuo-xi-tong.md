@@ -14,7 +14,7 @@ Linus“I have never even checked 386BSD out; when I started on Linux it wast av
 
 ![](../.gitbook/assets/图片2.png)
 
-图片来源：https://github.com/freebsd/freebsd-src/blob/main/share/misc/bsd-family-tree
+>图片来源：https://github.com/freebsd/freebsd-src/blob/main/share/misc/bsd-family-tree
 
 ## FreeBSD or Others
 
