@@ -8,6 +8,10 @@
 
 [在线试读地址](http://images.china-pub.com/ebook8080001-8085000/8084481/ch01.pdf)
 
+
+
+![UNIX传奇：历史与回忆](../.gitbook/assets/unixchuanqi.jpg)
+
 ## 贡献者名单（以下排名不分前后）
 
 [凌莞](https://clansty.com)
