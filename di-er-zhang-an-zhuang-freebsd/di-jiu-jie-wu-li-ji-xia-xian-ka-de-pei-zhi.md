@@ -33,7 +33,7 @@ FreeBSD 已从 Linux 移植了显卡驱动，理论上，A 卡 N 卡均在 AMD64
 - FreeBSD 14：`# cd /usr/ports/graphics/drm-510-kmod/ && make BATCH=yes install clean`
 
 >**故障排除：如果提示`/usr/ports/xxx no such xxx`找不到路径，请先获取 portsnap：`portsnap fetch extract`。portsnap 换源问题请看 第三章 第二节。**
-
+> `graphics/drm-kmod` 这个包并不是真实存在的，他只是帮助判断系统版本以安装对应的 ports 包的元包。
 ### 加载显卡
 
 打开`/etc/rc.conf`:
