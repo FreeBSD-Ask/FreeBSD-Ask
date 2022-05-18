@@ -4,9 +4,11 @@
 
 - 狭义 Linux 是内核；
 
-Linux 与 GNU/Linux；GNU 项目 1984；Linux kernel 项目 1990；
+Linux kernel 项目 1990；
 
-- GNU 软件 + Linux 内核 + 包管理器
+- Linux 内核 + GNU 软件  + 包管理器
+
+Linux 全称为 GNU/Linux；GNU 项目 1984；
 
 GNU/Linux 发行版 = Ubuntu、RHEL、Deepin、OpenSUSE……
 
