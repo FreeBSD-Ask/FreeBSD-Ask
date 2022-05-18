@@ -1,5 +1,7 @@
 # 第四节 FreeBSD 发行说明
 
+>FreeBSD 的生命周期为每个大版本 5 年，小版本是发布新的小版本版后 +3 个月。
+
 # FreeBSD 13.1 发行说明
 
 > 原文链接 https://www.freebsd.org/releases/13.1R/relnotes/
