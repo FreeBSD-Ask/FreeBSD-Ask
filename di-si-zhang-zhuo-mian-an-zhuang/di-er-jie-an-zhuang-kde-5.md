@@ -55,3 +55,13 @@ https://www.freshports.org/sysutils/hal
 ## 中文化
 
 点击开始-> System Settings -> Regional Settings 在 `Language` 项的 `Available Language` 栏中找到 “简体中文” 单击 `>` 将其加到 `Preferrred Languages` 栏中，然后单击 `Apply` 按钮；再到 `Formats` 项，将 `Region` 文本框中的内容修改为 “中国-简体中文(zh-CN)”，单击 `Apply` 按钮，logout（注销）后重新登录，此时系统语言将变为中文。
+
+## 故障排除
+
+- 新建的普通用户登录KDE，因权限问题，菜单不完整，怎样解决？
+
+>需要将用户加入 root 组：
+>
+>```
+># pw groupmod root -m 用户名
+>```
