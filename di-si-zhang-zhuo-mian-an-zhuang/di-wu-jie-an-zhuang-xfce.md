@@ -34,6 +34,8 @@
 
 `# echo "/usr/local/etc/xdg/xfce4/xinitrc"  >  ~/.xsession` 
 
+> 此处为 root 用户，普通用户需要再在自己的环境下操作一次。下同。
+
 根据条件使用
 
 ## 启动服务
