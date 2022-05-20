@@ -49,7 +49,7 @@
 $ cd ~
 $ mkdir media
 $ cd media
-# mkdir first second third forth
+# mkdir usb1 usb2 usb3 usb4
 ```
 ### 查看盘符
 
@@ -69,22 +69,22 @@ $ cd media
 
 由上则可知分区为 `i` ，使用以下命令挂载：
 
-`# mount /dev/sd1i /$USER/media/first` ，`$USER` 替换为当前用户名。
+`# mount /dev/sd1i /$USER/media/usb1` ，`$USER` 替换为当前用户名。
 
 ### 其它格式
 
 OpenBSD 可挂载的外接硬盘格式有 NTFS（需要安装软件包`ntfs_3g`）、ext2/ext3 以及 CD 磁盘等，具体命令可参考如下：
 
 ```
-# mount /dev/sd3i /$USER/media/first   # fat32
-# mount_ntfs /dev/sd2k /$USER/media/second  # NTFS
-# mount /dev/sd1l /$USER/media/third   # ext2/ext3
-# mount /dev/cd0a /$USER/media/forth   # CD
+# mount /dev/sd3i /$USER/media/usb1   # fat32
+# mount_ntfs /dev/sd2k /$USER/media/usb2  # NTFS
+# mount /dev/sd1l /$USER/media/usb3   # ext2/ext3
+# mount /dev/cd0a /$USER/media/usb4   # CD
 ```
 
 ### 卸载磁盘
 
-`# umount /$USER/media/first`
+`# umount /$USER/media/usb1`
 
 ## 无线测试
 
