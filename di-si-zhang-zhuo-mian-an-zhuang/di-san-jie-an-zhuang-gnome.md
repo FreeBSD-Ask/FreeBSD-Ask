@@ -10,7 +10,7 @@
 |包|用途|
 |:---:|:---:|
 |xorg|X11|
-|gnome3|Gnome3 主程序|
+|gnome|Gnome 主程序|
 |wqy-fonts|文泉驿中文开源字体|
 |xdg-user-dirs|用于创建用户家目录的子目录|
 
