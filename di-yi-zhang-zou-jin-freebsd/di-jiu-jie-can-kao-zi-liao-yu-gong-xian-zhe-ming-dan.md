@@ -40,6 +40,8 @@ X-Ray
 
 isNijikawa
 
+地铁卡
+
 [星不萌](https://www.moebsd.cn)
 
 [qinghecyn](https://github.com/qinghecyn)
