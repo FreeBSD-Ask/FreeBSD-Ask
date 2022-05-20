@@ -73,11 +73,11 @@ $ cd media
 
 ### 其它格式
 
-OpenBSD 可挂载的外接硬盘格式有 NTFS、ext2/ext3 以及 CD 磁盘等，具体命令可参考如下：
+OpenBSD 可挂载的外接硬盘格式有 NTFS（需要安装软件包`ntfs_3g`）、ext2/ext3 以及 CD 磁盘等，具体命令可参考如下：
 
 ```
 # mount /dev/sd3i /$USER/media/first   # fat32
-# mount /dev/sd2k /$USER/media/second  # NTFS
+# mount_ntfs /dev/sd2k /$USER/media/second  # NTFS
 # mount /dev/sd1l /$USER/media/third   # ext2/ext3
 # mount /dev/cd0a /$USER/media/forth   # CD
 ```
