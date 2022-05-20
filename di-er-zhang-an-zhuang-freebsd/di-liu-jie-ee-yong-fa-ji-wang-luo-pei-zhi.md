@@ -41,7 +41,7 @@ root@ykla:~ #
 
 以下内容同时适用于虚拟机和物理机。
 
-默认情况下，FreeBSD 是无法联网的，因为没有配置 DNS。
+默认情况下，FreeBSD 是正常联网的，如果不能可能是因为没有正确配置 DNS。
 
 ```
 # ee /etc/resolv.conf
