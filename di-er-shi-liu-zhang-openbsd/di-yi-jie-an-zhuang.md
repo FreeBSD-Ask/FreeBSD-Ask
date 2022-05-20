@@ -8,17 +8,11 @@ https://cdn.openbsd.org/pub/OpenBSD/7.1/amd64
 
 获取系统镜像。若是刻录 U 盘 安装，就下载 `installXX.img` ；若是虚拟机体验，请下载 `installXX.iso` 。（注：截止 OpenBSD 7.1 时，请不要使用 ventory 引导实体机安装。）
 
-## 自定义安装
+## 安装模式
 
-这里推荐大家使用 **自定义安装**，不要使用系统推荐的方式。为了安全考虑，**OpenBSD** 默认大量分区。新用户初次遇到，会一头雾水，极不适应。
+这里推荐大家使用系统默认的分区来安装，对于有兴趣自定义分区的用户，可查看下面的“自定义分区”。
 
-### 推荐分区
 
-对于尝鲜的朋友，假设有 32GB 的容量，推荐两个分区： `swap 2GB` ，`/`为剩下的全部容量。（UEFI 请自行创建一个 100~300M 大小的 FAT32 格式的 EFI 分区，或者使用已有分区，下同）
-
-如果有 128GB 容量，推荐分区： `/ 32GB` ，`swap 4GB` ，`/home` 为剩下的全部容量。
-
-对于更大的容量，可依自己喜好，进一步细化分区配置。
 
 ### 安装过程
 
@@ -50,9 +44,7 @@ https://cdn.openbsd.org/pub/OpenBSD/7.1/amd64
 
 后续配置回车确认。
 
-> Do you want the X Window System to be started by xenodm? \[no] `no`
-
-是否运行图形窗口界面，这一步选择 `no`，后续我们会安装自己需要的桌面环境。
+Start sshd(8) by default? [yes] `no`
 
 > Setup a user? (enter a lower-case loginname, or 'no') \[no] `XiaoMing`
 
@@ -72,9 +64,7 @@ https://cdn.openbsd.org/pub/OpenBSD/7.1/amd64
 
 后续配置回车确认。
 
-> What timezone are you in? ('?' for list) \[US/Eastern] ?
-
-时区选择，找到 `Asia/Shanghai`
+> What timezone are you in? ('?' for list) \[US/Eastern] `Asia/Shanghai`
 
 > Available disks are: sd0, sd1, sd2. Which one is the root disk? (or 'done') \[sd0] `?`
 
@@ -82,17 +72,73 @@ https://cdn.openbsd.org/pub/OpenBSD/7.1/amd64
 
 再次提醒：请确认好目标硬盘，否则悔之晚矣！
 
-> Use DUIDs rather than device names in fstab? \[yes]
+> Use (W)hole disk MBR, whole disk (G)PT or (E)dit? \[gpt] 在这里，bios 主板选择 `w`，UEFI 主板选择 `g`。
 
-回车确认默认选择。
+> Use (A)uto layout, (E)dit auto layout, or create (C)ustom layout? \[a] 这里我们直接回车，选择系统默认分区。（文末附有自定义分区设置，仅供参考，不推荐新用户尝试。）
 
-> Use (W)hole disk, use the (O)penBSD area, or (E)dit the MBR? \[whole]
+Available disk are: sd0.Which disk do you wish to initialize? (or 'done') [done] 直接回车。
 
-是否选择全部硬盘空间，回车选择全部。
+> Let's install the sets! Location of sets? (cd disk ftp http or 'done') \[cd] `disk`
 
-> Use (A)uto layout, (E)dit auto layout, or create (C)ustom layout? \[a] `C`
+软件地址，选择`disk` 。这里我们选择安装盘为软件地址。
 
-这一步一定要选择 `C` ，即 `自定义设置` 。
+> Is the disk partition already mounted? \[yes] `no`
+
+需要提示一点的是，系统询问是否已识别 U盘时，一定要选择否，以便我们再确认一遍 U盘位置。如不确定 U盘编号，可输入 `？` 查看。
+
+```
+Select sets by entering a set name, a file name pattern or 'all'. De-select 
+sets by prepending a '-' to the set name, name pattern or 'all'. Selected sets are labelled `[X]`
+
+[X] bsd          [X] etc71.tgz     [X] xbase71.tgz  
+[X] xserv71.tgz  [X] bsd.rd        [X] comp71.tgz 
+[X] xetc71.tgz   [X] bsd.mp        [X] man71.tgz 
+[X] xshare71.tgz [X] base71.tgz    [X] game71.tgz 
+[X] xfont71.tgz 
+
+Set name(s)? (or 'abort' or 'done') [done] -game*
+```
+
+这里我们输入 `-game*` 来取消 `game71.tgz` ，其它都勾选。
+
+注：即使不使用桌面，也请勾选 `X11` 选项，否则部分软件可能无法正常运行。
+
+```
+Set name(s)? (or 'abort' or 'done') [done] `-game*`
+
+[X] bsd          [X] etc71.tgz     [X] xbase71.tgz  
+[X] xserv71.tgz  [X] bsd.rd        [X] comp71.tgz 
+[X] xetc71.tgz   [X] bsd.mp        [X] man71.tgz 
+[X] xshare71.tgz [X] base71.tgz    [ ] game71.tgz 
+[X] xfont71.tgz 
+
+Set name(s)? (or 'abort' or 'done') [done]
+```
+
+回车确认。
+
+> Location of sets? (cd disk ftp http or 'done') \[done]
+
+继续回车确认。此后开始安装系统。约 5 分钟后，会出现如下提示：
+
+```
+CONGRATULATIONS! Your OpenBSD install has been successfully completed! 
+To boot the new system, enter 'reboot' at the command prompt.
+When you login to your new system the first time, 
+please read your mail using the 'mail' command.
+```
+
+恭喜！系统已成功安装，重启后可进入系统。
+
+# 附录：自定义分区
+
+对于尝鲜的朋友，假设有 32GB 的容量，可设分区： `swap 2GB` ，`/`为剩下的全部容量。
+
+如果有 128GB 容量，推荐分区： `/ 32GB` ，`swap 4GB` ，`/home` 为剩下的全部容量。
+
+对于更大的容量，可依自己喜好，进一步细化分区配置。
+
+系统分区时，选择 `C` ，即 `自定义设置` 。
 
 > `p m`
 
@@ -167,55 +213,3 @@ https://cdn.openbsd.org/pub/OpenBSD/7.1/amd64
 > \> `q`
 
 以上，分区完毕。
-
-> Let's install the sets! Location of sets? (cd disk ftp http or 'done') \[cd] `disk`
-
-软件地址，选择`disk` 。这里我们选择安装盘为软件地址。
-
-> Is the disk partition already mounted? \[yes] `no`
-
-需要提示一点的是，系统询问是否已识别 U盘时，一定要选择否，以便我们再确认一遍 U盘位置。如不确定 U盘编号，可输入 `？` 查看。
-
-```
-Select sets by entering a set name, a file name pattern or 'all'. De-select 
-sets by prepending a '-' to the set name, name pattern or 'all'. Selected sets are labelled `[X]`
-
-[X] bsd          [X] etc71.tgz     [X] xbase71.tgz  
-[X] xserv71.tgz  [X] bsd.rd        [X] comp71.tgz 
-[X] xetc71.tgz   [X] bsd.mp        [X] man71.tgz 
-[X] xshare71.tgz [X] base71.tgz    [X] game71.tgz 
-[X] xfont71.tgz 
-
-Set name(s)? (or 'abort' or 'done') [done] -game*
-```
-
-这里我们输入 `-game*` 来取消 `game71.tgz` ，其它都勾选。
-
-注：即使不使用桌面，也请勾选 `X11` 选项，否则部分软件可能无法正常运行。
-
-```
-Set name(s)? (or 'abort' or 'done') [done] `-game*`
-
-[X] bsd          [X] etc71.tgz     [X] xbase71.tgz  
-[X] xserv71.tgz  [X] bsd.rd        [X] comp71.tgz 
-[X] xetc71.tgz   [X] bsd.mp        [X] man71.tgz 
-[X] xshare71.tgz [X] base71.tgz    [ ] game71.tgz 
-[X] xfont71.tgz 
-
-Set name(s)? (or 'abort' or 'done') [done]
-```
-
-回车确认。
-
-> Location of sets? (cd disk ftp http or 'done') \[done]
-
-继续回车确认。此后开始安装系统。约 5 分钟后，会出现如下提示：
-
-```
-CONGRATULATIONS! Your OpenBSD install has been successfully completed! 
-To boot the new system, enter 'reboot' at the command prompt.
-When you login to your new system the first time, 
-please read your mail using the 'mail' command.
-```
-
-恭喜！系统已成功安装，重启后可进入系统。
