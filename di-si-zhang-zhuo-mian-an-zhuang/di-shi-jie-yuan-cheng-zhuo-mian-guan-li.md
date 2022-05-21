@@ -4,7 +4,9 @@
 
 启用 VNC 服务
 
-FreeBSD 操作系统的 VNC 服务可以使用 TigerVNC Server，在终端下执行命令进行安装。
+TigerVNC Server：
+
+>使用 tightvnc 也可以。
 
 ```
 # pkg install -y tigervnc-server 
@@ -48,7 +50,7 @@ $command &
 
 ## XRDP
 
-这里介绍一款软件 rdesktop。 安装命令：
+安装命令：
 
 ```
 # pkg install -y rdesktop 
