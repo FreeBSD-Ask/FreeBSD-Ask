@@ -1,6 +1,7 @@
 # 第〇节 概述
 
 > 所有 FreeBSD 安装介质默认均不包含图形界面，需要手动安装。**请勿使用`sysutils/desktop-installer`，会引发不必要的错误和问题。**
+>
 > 执着于一定要让 FreeBSD 表现出如 Linux 甚至是 Windows 一般的桌面力是一种奢求，FreeBSD 的口号是 `The power to serve`。
 
 
