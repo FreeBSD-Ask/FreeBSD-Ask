@@ -7,11 +7,11 @@
 
 本章内容并非是让大家把所有的桌面都安装一遍，而是尽可能多地提供选择。
 
-安装桌面的基本步骤是：① 安装显卡驱动 -> ② 安装 Xorg/Wayland -> ③ 安装 KDE5/Gnome/XFCE/MATE -> ④ 安装显示管理器 sddm/lightdm/slim -> ⑤ 安装输入法等软件
+安装桌面的基本步骤是：① 安装显卡驱动 -> ② 安装 Xorg -> ③ 安装 KDE5/Gnome/XFCE/MATE -> ④ 安装显示管理器 sddm/lightdm/slim -> ⑤ 安装输入法等软件
 
 其中，Gnome 可省略第四步，因为其显示管理器 gdm 早就在第二步就进行了安装。
 
-目前支持 Wayland 的桌面为 0。
+Wayland 是 xorg 的替代品，但是目前 BSD 上支持 Wayland 的桌面为 0。
 
 显示管理器推荐搭配是 ：
 
