@@ -14,7 +14,7 @@ Ubuntu 是著名的内部错误发行版。有些人为此争辩“那是 Ubuntu
 
 ### Fedora
 
-Fedora 俗称“地沟油”，是基于 RHEL 的上游系统，我更喜欢称其为小白鼠发行版，其发行的根本目的是为了测试 RHEL 系统的新设计和新架构，待稳定后迁移到 RHEL。稳定性可见一斑。
+Fedora 俗称“地沟油”，是基于 RHEL 的上游系统，我更喜欢称其为小白鼠发行版，其发行的根本目的是为了测试 RHEL 系统的新设计和新架构，待稳定后迁移到 RHEL。稳定性可见一斑。由此可见 Linux 所谓成功的商业模式就是开源社区免费测试，测试稳定了引入企业版。更多地例如 wine 与 crossover？
 
 ### CentOS/Rocky Linux/RHEL
 
@@ -49,7 +49,7 @@ Arch Linux 俗称“**邪教、洗发水**”。这是我所见过的一个最�
 
 - FreeBSD 仍然使用传统的 INIT 引导，而非 systemd；
 
-- FreeBSD root 用户 shell 默认是 csh，而不是 bash；
+- FreeBSD root 用户 shell 默认是 csh（14 改为 sh），而不是 bash；
 
 - FreeBSD 基本系统几乎不包含任何非 BSD 协议的软件，并致力于去 GNU 化（这意味着基本系统不使用 Glibc、GCC 等软件），见
 
