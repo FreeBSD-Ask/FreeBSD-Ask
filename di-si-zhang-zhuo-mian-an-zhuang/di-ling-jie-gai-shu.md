@@ -1,14 +1,16 @@
 # 第〇节 概述
 
 > 所有 FreeBSD 安装介质默认均不包含图形界面，需要手动安装。**请勿使用`sysutils/desktop-installer`，会引发不必要的错误和问题。**
+> 执着于一定要让 FreeBSD 表现出如 Linux 甚至是 Windows 一般的桌面力是一种奢求，FreeBSD 的口号是 `The power to serve`。
+
 
 本章内容并非是让大家把所有的桌面都安装一遍，而是尽可能多地提供选择。
 
-安装桌面的基本步骤是：① 安装显卡驱动 -> ② 安装 Xorg/Wayland -> ③ 安装 KDE5/Gnome3/XFCE/MATE -> ④ 安装显示管理器 sddm/lightdm/slim -> ⑤ 安装输入法等软件
+安装桌面的基本步骤是：① 安装显卡驱动 -> ② 安装 Xorg/Wayland -> ③ 安装 KDE5/Gnome/XFCE/MATE -> ④ 安装显示管理器 sddm/lightdm/slim -> ⑤ 安装输入法等软件
 
-其中，Gnome3 可省略第四步，因为其显示管理器 gdm 早就在第二步就进行了安装。
+其中，Gnome 可省略第四步，因为其显示管理器 gdm 早就在第二步就进行了安装。
 
-目前支持 Wayland 的桌面经测试只有 Gnome3，还是建议使用 Xorg。
+目前支持 Wayland 的桌面为 0。
 
 显示管理器推荐搭配是 ：
 
