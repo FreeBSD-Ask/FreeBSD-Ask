@@ -1,11 +1,15 @@
 # FreeBSD 从入门到跑路
-## FreeBSD 中文社区（CFC）
+## FreeBSD 中文社区（CFC）版权所有
 
 ## 概述
 
 [项目预览——如果你认为拼音显得奇怪，那么你应该点击此处。](https://book.freebsdcn.org)
 
 请注意，PDF 等电子书版本仅供参考，且存在这样或那样的问题，应该以在线版本为主。
+
+### 编写目的
+
+提高人们的 BSD 自信，树立 BSD 自觉。
 
 ### 本书定位
 
@@ -89,46 +93,3 @@
 我是谁，我们是谁？这个问题永远也不会有结果。
 
 我们选择 FreeBSD，是因为想选择一个清晰、明了、可靠、稳固的一个操作系统在工作上给我们带来收益以及在生活中给我们带来乐趣。当然 FreeBSD 还存在很多问题，有待大家积极发现、探讨、完善，社会在进步，技术在进步，热情丝毫不减在持续，未来越来越美好。
-
-### 社区文档
-
-
-【FreeBSD Q&A】
-
-<https://docs.qq.com/doc/DSVhuclhqZnlyR2Na>
-
---------------------------- 
-
-教程征集计划——【FreeBSD 中文社区 （CFC）2022 教程 激励计划】 
-
-<https://docs.qq.com/doc/DSUJsUFBHTnVWQmtS>
-
------------------------------------------------------------- 
-
-【FreeBSD 中文社区(CFC) 2022 捐赠名单】 
-
-<https://docs.qq.com/doc/DSXZ1Q1JOenRzUkp4>
-
------------------------------------------------------------ 
-
-【2022 FreeBSD 中文社区（CFC）文档翻译须知】 
-
-<https://docs.qq.com/doc/DSUtxYmVwU29EdGVn>
-
---------------------------- 
-
-【FreeBSD 中文社区（CFC）联络名单】 
-
-<https://docs.qq.com/doc/DSUliWGh5ZUlXTFF0>
-
---------------------------- 
-
-【FreeBSD 中文社区（CFC）发展规划】 
-
-<https://docs.qq.com/doc/DSUd5Q2tYSlZWUmpj>
-
---------------------------- 
-
-### 黑名单
-
-见 [FreeBSD 中文社区（CFC）黑名单](https://github.com/FreeBSD-Ask/CFC)。
