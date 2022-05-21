@@ -2,6 +2,8 @@
 
 ## 什么是 FreeBSD？
 
+BSD 最初是伯克利大学研发的，意为`Berkeley Software Distribution`。
+
 FreeBSD 不是 Linux，不是国产操作系统，不兼容 Systemd，不能吃鸡，亦不是 UNIX 。目前在 BSD 系中，FreeBSD 的用户是最多的。一些 Linux 下的软件基本上在 FreeBSD 中都能够被找到，即使找不到的也可以通过 CentOS 兼容层运行，你也可以自己通过 debootstrap 构建一个 debian 或者 ubuntu 的 / 系统。
 
 ![](../.gitbook/assets/图片3.png) **FreeBSD 不是 Linux，亦不是 UNIX，是类 UNIX**
