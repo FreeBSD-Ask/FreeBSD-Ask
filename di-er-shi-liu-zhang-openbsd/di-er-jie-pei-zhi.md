@@ -6,9 +6,9 @@
 
 第一次进入系统后，OpenBSD 会自动检测无线、显卡和声卡，并下载相关驱动。静等几分钟，待其自行更新。由于国外网站连接比较慢，如果等待时间过长，可 `Ctrl` + `C` 取消，待进入系统后运行 `# fw_update` 重新获取驱动。
 
-在新版 7.1 系统中，会出现超时错误。如此则需要用户查看运行 `fw_update` 时需要的驱动名，而后访问 [官方驱动站](http://firmware.openbsd.org/firmware/7.1/)自行获取。下载驱动包后解压，复制到`/etc/firmware/`文件夹内，重启后即可。
+新版 7.1 出现了变动，下载驱动时会遇到超时错误。如此则在运行`fw_update` 后，记住获取失败的驱动名，而后直接访问[官方驱动站](http://firmware.openbsd.org/firmware/7.1/)来手动获取。解压驱动包，将内部驱动文件复制到`/etc/firmware/`文件夹内，之后重启。
 
-如`inteldrm-firmware-xxx.tgz`为 intel 的显卡驱动，解压该文件后，发现该驱动 firmware 目录下有 i915 的目录。可执行以下操作：
+如`inteldrm-firmware-xxx.tgz`为 intel 的显卡驱动，解压该驱动后，发现驱动 firmware 目录下有 i915 的目录。可执行以下操作（操作需要权限）：
 
 ```
 cd /etc/firmware/
@@ -16,7 +16,7 @@ mkdir i915
 cp -r /$PATH/inteldrm-firmware-xxx/firmware/i915/* /etc/firmware/i915/
 ```
 
-同理`amdgpu-firmware-xxx.tgz`为新版 amd 的显卡驱动，解压该文件后，发现该驱动 firmware 目录下有 amdgpu 的目录。可执行以下操作：
+同理`amdgpu-firmware-xxx.tgz`为 amd 的显卡驱动，解压该驱动后，发现驱动 firmware 目录下有 amdgpu 的目录。可执行以下操作（操作需要权限）：
 
 ```
 cd /etc/firmware/
