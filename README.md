@@ -3,8 +3,6 @@
 
 ## 概述
 
-[项目预览——如果你认为拼音显得奇怪，那么你应该点击此处。这本书是运行在 FreeBSD 上面的](https://book.freebsdcn.org)
-
 请注意，PDF 等电子书版本仅供参考，且存在这样或那样的问题，应该以在线版本为主。
 
 ### 编写目的
@@ -37,7 +35,7 @@
 
 [点此捐赠 FreeBSD 基金会](https://freebsdfoundation.org/donate)。
 
-为了能够更好地维护本书，我们采用了 Gitbook 平台来进行协作，并使用 Vuepress 来呈现本书。对于无法直接从 GitBook 导出为 PDF 的问题（我们提供了 PDF 的参考版本于 release）以及访问速度慢等问题，我们深感抱歉。我们目前的服务器约 10 美元一个月，如果您想为我们提供捐助，请加入我们的 [TG 群](https://t.me/freebsdba) 或者 QQ 群 905149943。 如果您也想参与编写，具体请参考 [WIKI](https://github.com/FreeBSD-Ask/FreeBSD-Ask/wiki/%E3%80%8AFreeBSD-%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E8%B7%91%E8%B7%AF%E3%80%8B%E7%BC%96%E8%BE%91%E6%8C%87%E5%8D%97)，关于贡献者名单请参考 [第一章 第九节](https://book.freebsdcn.org/di-yi-zhang-zou-jin-freebsd/di-jiu-jie-can-kao-zi-liao-yu-gong-xian-zhe-ming-dan)。
+为了能够更好地维护本书，我们采用了 Gitbook 平台来进行协作，并使用 Vuepress 来呈现本书。对于无法直接从 GitBook 导出为 PDF 的问题（我们提供了 PDF 的参考版本于 release）以及访问速度慢等问题，我们深感抱歉。我们目前的服务器约 10 美元一个月，如果您想为我们提供捐助，请加入我们的 [TG 群](https://t.me/freebsdba) 或者 QQ 群 319271312。 如果您也想参与编写，具体请参考 [WIKI](https://github.com/FreeBSD-Ask/FreeBSD-Ask/wiki/%E3%80%8AFreeBSD-%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E8%B7%91%E8%B7%AF%E3%80%8B%E7%BC%96%E8%BE%91%E6%8C%87%E5%8D%97)，关于贡献者名单请参考 第一章 第九节。
 
 **捐赠者:**
 
@@ -81,7 +79,7 @@
 
 ### FreeBSD 中文社区的愿景
 
-我们成立于 2018年3月17日，由贴吧——FreeBSD 吧发展到了 QQ 群（主群 905149943），Telegram 群，乃至于微信群。
+我们成立于 2018年3月17日，由贴吧——FreeBSD 吧发展到了 QQ 群（主群 319271312），Telegram 群，乃至于微信群。
 
 我们的成员具有非常大的广泛性和普遍性，能够代表绝大多数 FreeBSD 用户的平均水平：可能根本没有听说过何为 FreeBSD，但这并不影响我们的交流与沟通。也许有人觉得这是浪费时间，但是没有新生力量的培养，何来 FreeBSD 的明天呢？谁不知道新人可能有很多坏习惯呢。
 
