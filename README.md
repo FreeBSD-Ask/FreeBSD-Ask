@@ -7,7 +7,7 @@
 
 ### 编写目的
 
-提高人们的 BSD 自信，使其树立 BSD 自觉。
+Make FreeBSD Great Again.
 
 ### 本书定位
 
