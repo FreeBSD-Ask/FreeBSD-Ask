@@ -6,7 +6,7 @@
 
 Linux kernel 项目 1990；
 
-- Linux 内核 + GNU 软件  + 包管理器
+- Linux 内核 + GNU 等软件  + 包管理器
 
 Linux 全称为 GNU/Linux；GNU 项目 1984；
 
