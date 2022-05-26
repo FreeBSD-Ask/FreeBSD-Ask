@@ -16,8 +16,8 @@ Linux 全称为 GNU/Linux；GNU 项目 1984；
 
 - GNU/Linux 发行版 = Ubuntu、RHEL、Deepin、OpenSUSE……
 
-    - Ubuntu = Linux kernel+ apt/dpkg + Gnome
+    - Ubuntu = Linux kernel + apt/dpkg + Gnome
 
-    - OpenSUSE = Linux kernel+ libzypp/rpm + KDE
+    - OpenSUSE = Linux kernel + libzypp/rpm + KDE
 
 - Gentoo（stage1）或 LFS；
