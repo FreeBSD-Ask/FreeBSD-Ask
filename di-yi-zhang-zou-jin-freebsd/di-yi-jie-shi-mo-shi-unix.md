@@ -14,7 +14,7 @@
 
 ![](../.gitbook/assets/图片1.png)
 
->常见的经过认证的 UNIX 操作系统有 MacOS、
+>常见的经过认证的 UNIX 操作系统有 MacOS。
 ----
 
 **以下为详细说明：**
