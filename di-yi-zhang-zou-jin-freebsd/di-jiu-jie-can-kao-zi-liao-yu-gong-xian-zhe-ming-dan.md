@@ -14,6 +14,8 @@
 
 ![UNIX 编程艺术](../.gitbook/assets/s11345267.jpg)
 
+![大教堂与集市](../.gitbook/assets/dajiaotang.jpg)
+
 ## 贡献者名单（以下排名不分前后）
 
 [凌莞](https://clansty.com)
