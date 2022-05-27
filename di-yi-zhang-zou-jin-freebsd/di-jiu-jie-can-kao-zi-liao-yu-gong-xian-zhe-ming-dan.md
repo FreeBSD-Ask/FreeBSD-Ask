@@ -6,16 +6,26 @@
 
 ![Absolute FreeBSD, 3rd Edition: The Complete Guide to FreeBS](../.gitbook/assets/QQ图片20220527141115.png)
 
+> 英文版，目前没有译文。词汇包括内容都非常基础，有计算机基础的人不需要阅读。
+ 
 ![FreeBSD 操作系统设计与实现（原书第2版）](../.gitbook/assets/zcover.jpg)
+
+> 原版书名为 ***Design and Implementation of the FreeBSD Operating System, 2nd*** 。主要讲解了内核。
 
 [在线试读地址](http://images.china-pub.com/ebook8080001-8085000/8084481/ch01.pdf)
 
 ![UNIX 传奇：历史与回忆](../.gitbook/assets/unixchuanqi.jpg)
 
+> 原版书名为 ***UNIX: A History and a Memoir*** 。主要讲解了 UNIX 的发展历史。
+
 ![UNIX 编程艺术](../.gitbook/assets/s11345267.jpg)
+
+> 原版书名为 ***The Art of Unix Programming*** 。主要讲解了 UNIX 的设计哲学与软件工程理论。
 
 ![大教堂与集市](../.gitbook/assets/dajiaotang.jpg)
 
+> 原版书名为 ***The Cathedral and the Bazaar*** 。主要介绍了开源运动的发展史。
+ 
 ## 贡献者名单（以下排名不分前后）
 
 [凌莞](https://clansty.com)
