@@ -5,8 +5,7 @@
 ><https://www.freebsd.org/platforms>
 
 
->前排提示：阿里云用户请注意，目前不支持从 12.1 升级到任一版本，因为
-><https://reviews.freebsd.org/D27262>
+> **前排提示：阿里云用户升级到 13.x 请看 第二章 第一节 “使用 virtio 技术半虚拟化的虚拟机” 部分。**
 
 ## 更新系统
 
