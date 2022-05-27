@@ -2,7 +2,7 @@
 
 ## 参考书目
 
-相关书籍：《Absolute FreeBSD 3rd》（ISBN：9781593278922）、《FreeBSD操作系统设计与实现（原书第2版）》（ISBN：9787111689973）、《UNIX传奇——历史与回忆》（ISBN: 9787115557179）、《UNIX 编程艺术》（ISBN: 9787121176654）。旧的变化也不是很大。不像 linux 有这么多入门书籍，什么 《XX 秒精通 Linux》，《Linux XX 学》……当然上边这些书，学 Linux 的也尽量别看，质量太差。由于历史上的原因，看 UNIX 相关书籍即可。
+相关书籍：《Absolute FreeBSD 3rd》（ISBN：9781593278922）、《FreeBSD 操作系统设计与实现（原书第2版）》（ISBN：9787111689973）、《UNIX 传奇——历史与回忆》（ISBN: 9787115557179）、《UNIX 编程艺术》（ISBN: 9787121176654）。旧的变化也不是很大。不像 Linux 有这么多入门书籍，什么 《XX 秒精通 Linux》，《Linux XX 学》……当然上边这些书，学 Linux 的也尽量别看，质量太差。由于历史上的原因，看 UNIX 相关书籍即可。
 
 ![Absolute FreeBSD, 3rd Edition: The Complete Guide to FreeBS](../.gitbook/assets/QQ图片20220527141115.png)
 
@@ -10,7 +10,7 @@
 
 [在线试读地址](http://images.china-pub.com/ebook8080001-8085000/8084481/ch01.pdf)
 
-![UNIX传奇：历史与回忆](../.gitbook/assets/unixchuanqi.jpg)
+![UNIX 传奇：历史与回忆](../.gitbook/assets/unixchuanqi.jpg)
 
 ![UNIX 编程艺术](../.gitbook/assets/s11345267.jpg)
 
