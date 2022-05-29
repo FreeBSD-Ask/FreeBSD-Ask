@@ -20,4 +20,4 @@ Linux 全称为 GNU/Linux；GNU 项目 1984；
 
     - OpenSUSE = Linux kernel + libzypp/rpm + KDE
 
-- Gentoo（stage1）或 LFS；
+> 注意：如果你还是不明白，建议亲自安装试试 Gentoo（stage3）或 Slackware，再不明白可以试试 Gentoo（stage1）或 LFS。都 **非常** ~~简单~~ 。
