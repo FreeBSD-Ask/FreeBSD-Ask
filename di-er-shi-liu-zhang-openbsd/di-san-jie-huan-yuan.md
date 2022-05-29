@@ -10,12 +10,15 @@
 
 - 南京大学软件源：`https://mirrors.nju.edu.cn/OpenBSD`
 
+- 重庆邮电镜像源：`https://mirrors.cqupt.edu.cn/openbsd` 
+
+- ----------------------------------------
+
 - 腾讯软件源：`https://mirrors.cloud.tencent.com/OpenBSD`
 
 - 阿里云软件源：`https://mirrors.aliyun.com/pub/OpenBSD`
 
 - 平安云软件源：`https://mirrors.pinganyun.com/OpenBSD` 
 
-- 重庆邮电镜像源：`https://mirrors.cqupt.edu.cn/openbsd` 
 
 保存后即可。
