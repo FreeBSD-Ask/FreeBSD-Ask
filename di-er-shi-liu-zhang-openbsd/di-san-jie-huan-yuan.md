@@ -2,7 +2,7 @@
 
 打开 `/etc/installurl`，注释掉官方源，改为如下国内源（任选其中一个）：
 
-- 北外软件源：`https://mirrors.bfsu.edu.cn/OpenBSD`
+- 北京外国语软件源：`https://mirrors.bfsu.edu.cn/OpenBSD`
 
 - 清华大学软件源：`https://mirrors.tuna.tsinghua.edu.cn/OpenBSD`
 
@@ -10,9 +10,9 @@
 
 - 南京大学软件源：`https://mirrors.nju.edu.cn/OpenBSD`
 
-- 重庆邮电镜像源：`https://mirrors.cqupt.edu.cn/openbsd` 
+- 重庆邮电软件源：`https://mirrors.cqupt.edu.cn/openbsd` 
 
-- ----------------------------------------
+- ---
 
 - 腾讯软件源：`https://mirrors.cloud.tencent.com/OpenBSD`
 
