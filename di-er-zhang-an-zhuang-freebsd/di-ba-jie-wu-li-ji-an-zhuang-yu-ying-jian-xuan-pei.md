@@ -29,7 +29,32 @@ https://rufus.ie/zh
 
 1. 小米笔记本 12.5 一代 ：处理器 6Y30 、显卡 HD515 、WIFI intel 8260AC、声卡 ALC 233（实际上是 235）、硬盘 NVME INTEL 600P。
 
-2. 联想 G400 ：处理器 i3-3110M/i5-3230M、显卡 HD4000、WIFI intel N135（联想 G400 网卡白名单支持三种网卡，如果是博通 BCM43142 建议更换为 N135，FUR 料号：04W3783）。
+2. 联想 G400 ：处理器 i3-3110M/i5-3230M、显卡 HD4000、WIFI intel N135（联想 G400 网卡白名单支持三种网卡，如果是博通 BCM43142 建议更换为 N135，FUR 料号：04W3783，如果更换后提示不能更新，请升级 BIOS）。
+
+#####  故障排除：
+
+Q：联想笔记本无电池如何升级 BIOS？
+
+A：如果找不到电池，请解压缩`78cn25ww.exe`文件（BIOS 文件请自行去联想美国官网获取），用记事本打开`platform.ini`，查找：
+
+```
+[AC_Adapter]
+Flag=1
+BatteryCheck=1
+BatteryBound=30
+```
+
+将以上所有数值都修改为`0`：
+
+```
+[AC_Adapter]
+Flag=0
+BatteryCheck=0
+BatteryBound=0
+```
+保存后，双击`InsydeFlash.exe`即可。
+
+**如果断电，后果自负**
 
 ### 网卡推荐
 
