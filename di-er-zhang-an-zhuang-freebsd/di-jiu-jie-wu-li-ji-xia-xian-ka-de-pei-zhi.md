@@ -68,12 +68,39 @@ FreeBSD 已从 Linux 移植了显卡驱动，理论上，A 卡 N 卡均在 AMD64
 ```
 # backlight decr 20  #降低 20% 亮度
 ```
-
 #### 英特尔
 ```
 # pkg install intel-backlight
 # intel-backlight 80 #调整为 80% 亮度
 ```
+
+## AMD 显卡
+
+>此部分教程经过测试适用于 renoir 显卡。
+
+安装所需驱动（均为 latest 源或从 ports 安装）：
+
+```
+# pkg install drm-510-kmod gpu-firmware-kmod xf86-video-amdgpu
+```
+
+新建并编辑 xorg 配置文件：
+```
+# ee /usr/local/etc/X11/xorg.conf.d/06-driver.conf
+```
+
+加入（**注意 BusID 要改成你自己的，使用`pciconf -l`即可查看**）：
+
+```
+Section "Device"
+    Option      "DRI" "3"
+    Option      "AccelMethod" "exa"
+    Option      "MigrationHeuristic" "greedy
+    Option      "TearFree" "On"
+    Driver      "amdgpu"
+    BusID       "PCI:6:0:0"
+```
+
 
 ## 英伟达显卡
 
