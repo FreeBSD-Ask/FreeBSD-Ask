@@ -72,7 +72,7 @@ Make FreeBSD Great Again.
 
 ### 其他
 
-[FreeBSD Handbook 2022 中文翻译项目](https://handbook.freebsdcn.org)
+[FreeBSD Handbook 2022 中文翻译项目](https://handbook.bsdcn.org)
 
 微信公众号: freebsdzh （扫码关注）
 
