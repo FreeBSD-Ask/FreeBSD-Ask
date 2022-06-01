@@ -68,7 +68,7 @@ Make FreeBSD Great Again.
 
 ### 许可证
 
-本书采用 [BSD-3-Clause License](LICENSE/) 许可证开源。我们在编写过程吸收了一些现有的研究成果，在此表示感谢。引用本书内容时，请务必留下我们的原地址——https://book.freebsdcn.org 及署名——FreeBSD 中文社区（CFC）。
+本书采用 [BSD-3-Clause License](LICENSE/) 许可证开源。我们在编写过程吸收了一些现有的研究成果，在此表示感谢。引用本书内容时，请务必留下我们的原地址——https://book.bsdcn.org 及署名——FreeBSD 中文社区（CFC）。
 
 ### 其他
 
