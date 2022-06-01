@@ -22,3 +22,11 @@
 "proxy_host" : "192.168.27.1",
 "proxy_port" : 7890,
 ```
+
+参考链接：
+
+https://www.freebsd.org/cgi/man.cgi?query=gitup&sektion=1&manpath=freebsd-release-ports
+
+https://www.freshports.org/net/gitup
+
+https://github.com/johnmehr/gitup
