@@ -20,6 +20,8 @@
 
 #### 98 五笔码表 下载地址
 
+<https://github.com/FreeBSD-Ask/98-input/tree/main/free-bsd-98wubi-tables-master>
+
 ~~https://gitee.com/ykla/free-bsd-98wubi-tables/tree/master~~
 
 >经验与教训：
