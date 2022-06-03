@@ -12,8 +12,6 @@
 
 > 原版书名为 ***Design and Implementation of the FreeBSD Operating System, 2nd*** 。主要讲解了内核。
 
-[在线试读地址](http://images.china-pub.com/ebook8080001-8085000/8084481/ch01.pdf)
-
 ![UNIX 传奇：历史与回忆](../.gitbook/assets/unixchuanqi.jpg)
 
 > 原版书名为 ***UNIX: A History and a Memoir*** 。主要讲解了 UNIX 的发展历史。
