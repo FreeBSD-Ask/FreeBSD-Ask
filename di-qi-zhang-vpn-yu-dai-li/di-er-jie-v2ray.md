@@ -18,7 +18,7 @@
 ```
 $ v2ray -c config.json
 ```
-如果用0xray-core，可执行：
+如果用 xray-core，可执行：
 ```
 $ xray -c config.json
 ```
