@@ -60,6 +60,4 @@ v2ray 也事先给了`geosite.dat`、`geoip.dat`,两个资源文件，`geosite.d
         "type": "field"
       },
 ```
-cn 网址直连：
-
-v2ray 社区给的网址不太全，分类也比较少，可自行在 github 上找社区整理的 geosite, geoip 文件，里面也详细的说明了白名单配置模式，黑名单配置模式。
+v2ray 社区给的 cn 网址直连网址不太全，分类也比较少，可自行在 github 上找社区整理的 geosite, geoip 文件，里面也详细的说明了白名单配置模式，黑名单配置模式。
