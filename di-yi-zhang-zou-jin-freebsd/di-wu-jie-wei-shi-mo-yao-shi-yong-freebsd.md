@@ -40,6 +40,12 @@ Jail 与 byhve 虚拟化，不必配置底层虚拟化，节约系统资源。
 
 DTrace 框架与 GEOM 存储框架。
 
-Linux CentOS 二进制兼容层，可运行 Linux 软件，只要其支持 CentOS 。且软件运行速度快于 Linux。
+Linux 二进制兼容层，可运行 Linux 软件，只要其支持 CentOS 或 Ubuntu/Debian。且软件运行速度快于 Linux。
 
 安全事件审计。
+
+## 选择 FreeBSD 的社会意义
+
+选择 FreeBSD，就是选择在 Linux 被 systemd 及其背后的商业公司控制以后，还能够保留一份火种。纵观各大操作系统，有能力替代的，开源的操作系统只有 FreeBSD。
+
+选择 FreeBSD，就是选择保留下一份真正开源的、自由的操作系统。能够使开源事业继续坚持下去，并践行真正的 UNIX 哲学，不走改旗易帜的邪路，封闭之路。

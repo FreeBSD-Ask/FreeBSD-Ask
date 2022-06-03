@@ -55,15 +55,13 @@
 # rpm2cpio < /home/work/fcitx-libs-4.2.9.6-1.el7.x86_64.rpm | cpio -id
 ```
 
-注意：为了方便境内 FreeBSD 用户，可以使用境内的 gitee 同步下载以上 4 个文件；
+~~注意：为了方便境内 FreeBSD 用户，可以使用境内的 gitee 同步下载以上 4 个文件；~~
 
-```
-# cd /home/work
-# pkg install git
-# git clone https://gitee.com/ykla/Linux-QQ.git
-```
+>经验与教训：
+>
+>**请远离境内诸如 gitee 等无良企业和不靠谱的开源组织。**
 
-其余步骤自行参考。 境外用户可以使用 Github：
+Github：
 
 <https://github.com/ykla/FreeBSD-Linux-QQ>
 
