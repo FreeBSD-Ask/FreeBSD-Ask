@@ -28,7 +28,7 @@
 
 [凌莞](https://clansty.com)
 
-[星不萌](https://www.moebsd.cn)
+星不萌
 
 雨天
 
