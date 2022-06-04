@@ -99,6 +99,7 @@ Section "Device"
     Option      "TearFree" "On"
     Driver      "amdgpu"
     BusID       "PCI:6:0:0"
+EndSection
 ```
 
 
