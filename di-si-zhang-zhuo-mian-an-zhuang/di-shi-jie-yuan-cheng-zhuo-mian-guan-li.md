@@ -63,3 +63,13 @@ $command &
 ```
 
 首次登陆设备会有安全提示，输入 `yes`，回车后远程桌面窗口就会弹出：
+
+## anydesk
+
+通过使用 anydesk 可以远程协助：
+
+```
+# cd /usr/ports/deskutils/anydesk/ && make install clean
+```
+
+即可。
