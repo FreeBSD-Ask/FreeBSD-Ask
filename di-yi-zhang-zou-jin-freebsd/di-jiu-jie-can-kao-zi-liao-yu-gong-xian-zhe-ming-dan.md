@@ -24,6 +24,8 @@
 
 > 原版书名为 _**The Cathedral and the Bazaar**_ 。主要介绍了开源运动的发展史。
 
+在线书籍：[FreeBSD 官方简体中文手册 2022 新译](https://handbook.bsdcn.org/)
+
 ## 贡献者名单（以下排名不分前后）
 
 [凌莞](https://clansty.com)
