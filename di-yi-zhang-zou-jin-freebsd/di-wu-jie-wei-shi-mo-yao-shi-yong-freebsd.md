@@ -46,7 +46,7 @@ Linux 二进制兼容层，可运行 Linux 软件，只要其支持 CentOS 或 U
 
 ## 选择 FreeBSD 的社会意义
 
-> 显而易见：目前 FreeBSD 上的桌面部件的缺失很大程度上是因为他们过分依赖了 Linux 特有函数库，更多的原因则是因为这些桌面和 systemd 做了深度捆绑或者根本就是强制依赖。
+> 显而易见：目前 FreeBSD 上的桌面部件的缺失很大程度上是因为他们过分依赖了 Linux 特有函数库，比如包含 `ip`命令的`iproute2`软件包。更多的原因则是因为这些桌面和 systemd 做了深度捆绑或者根本就是强制依赖。
 >
 >这种行为会导致何种后果我们不得而知，但是这种程序愈来愈多了，而且有成为主流的趋势，甚至就连大部分开发者在开发程序时也不再考虑兼容 init，比如 `todesk`。甚至 Java 程序都丧失掉了他的可移植性，为什么 FreeBSD 上的 Eclipse 将近两年没有更新？就是因为这类[捆绑问题](https://git.eclipse.org/r/c/platform/eclipse.platform.swt/+/163641/)。最近甚至还有了 `systemd-boot` 来取代 `grub2`，在可预见的未来，Linux 将被 systemd 统一。而其程序（预计所有可运行在 Linux 上的程序）也不再具有任何的可移植性。
 >
