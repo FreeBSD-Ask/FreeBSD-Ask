@@ -4,6 +4,8 @@
 
 相关书籍：《Absolute FreeBSD 3rd》（ISBN：9781593278922）、《FreeBSD 操作系统设计与实现（原书第2版）》（ISBN：9787111689973）、《UNIX 传奇——历史与回忆》（ISBN: 9787115557179）、《UNIX 编程艺术》（ISBN: 9787121176654）。旧的变化也不是很大。不像 Linux 有这么多入门书籍。由于历史上的原因，看 UNIX 相关书籍即可。
 
+**在线书籍：[FreeBSD 官方简体中文手册 2022 新译](https://handbook.bsdcn.org/)**
+
 ![Absolute FreeBSD, 3rd Edition: The Complete Guide to FreeBS](../.gitbook/assets/QQ图片20220527141115.png)
 
 > 英文版，目前没有译文。词汇包括内容都非常基础，有计算机基础的人不需要阅读。
@@ -24,7 +26,6 @@
 
 > 原版书名为 _**The Cathedral and the Bazaar**_ 。主要介绍了开源运动的发展史。
 
-在线书籍：[FreeBSD 官方简体中文手册 2022 新译](https://handbook.bsdcn.org/)
 
 ## 贡献者名单（以下排名不分前后）
 
