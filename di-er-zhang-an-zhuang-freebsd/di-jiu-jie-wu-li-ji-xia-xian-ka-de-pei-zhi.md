@@ -20,7 +20,9 @@ FreeBSD 已从 Linux 移植了显卡驱动，理论上，A 卡 N 卡均在 AMD64
 
 注意，如果要通过 `ports` 安装提示需要源码，请见第二十一章。
 
-- FreeBSD 12.0: `#pkg install drm-fbsd12.0-kmod`
+- FreeBSD 12.0
+
+`#pkg install drm-fbsd12.0-kmod`
 
 >**注意：除了 12.0，对于任意 12.X 均应该安装 `drm-fbsd12.0-kmod` ，但应该使用 port 在本地重新构建而不应该使用 pkg 进行安装，否则不会正常运行。**
 
@@ -30,7 +32,9 @@ FreeBSD 已从 Linux 移植了显卡驱动，理论上，A 卡 N 卡均在 AMD64
 >
 >FreeBSD 13.1 需要通过 ports 编译安装`drm-510-kmod`。因为后者支持的显卡更多:`# cd /usr/ports/graphics/drm-510-kmod/ && make BATCH=yes install clean`
 
-- FreeBSD 14：`# cd /usr/ports/graphics/drm-510-kmod/ && make BATCH=yes install clean`
+- FreeBSD 14
+
+`# cd /usr/ports/graphics/drm-510-kmod/ && make BATCH=yes install clean`
 
 >**故障排除：如果提示`/usr/ports/xxx no such xxx`找不到路径，请先获取 portsnap：`portsnap fetch extract`。portsnap 换源问题请看 第三章 第二节。**
 >
@@ -77,6 +81,8 @@ FreeBSD 已从 Linux 移植了显卡驱动，理论上，A 卡 N 卡均在 AMD64
 ## AMD 显卡
 
 >此部分教程经过测试适用于 renoir 显卡。
+>
+>在使用 Gnome 时，如果自动锁屏或息屏，可能无法再次进入桌面。见 <https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=255049>。
 
 安装所需驱动（均为 latest 源或从 ports 安装）：
 
