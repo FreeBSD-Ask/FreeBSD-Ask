@@ -32,7 +32,7 @@ FreeBSD 已从 Linux 移植了显卡驱动，理论上，A 卡 N 卡均在 AMD64
 >
 >FreeBSD 13.1 需要通过 ports 编译安装`drm-510-kmod`。因为后者支持的显卡更多:`# cd /usr/ports/graphics/drm-510-kmod/ && make BATCH=yes install clean`
 
-- FreeBSD 14
+- FreeBSD 14 (current）
 
 `# cd /usr/ports/graphics/drm-510-kmod/ && make BATCH=yes install clean`
 
