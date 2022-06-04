@@ -10,7 +10,7 @@
 
 ![FreeBSD 操作系统设计与实现（原书第二版）](../.gitbook/assets/freebsd2rd.png)
 
-原版书名为 _**Design and Implementation of the FreeBSD Operating System, 2nd**_ 。主要讲解了内核。
+> 原版书名为 _**Design and Implementation of the FreeBSD Operating System, 2nd**_ 。主要讲解了内核。
 
 ![UNIX 传奇：历史与回忆](../.gitbook/assets/unixchuanqi.jpg)
 
