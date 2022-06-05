@@ -16,15 +16,41 @@ FreeBSD 已从 Linux 移植了显卡驱动，理论上，A 卡 N 卡均在 AMD64
 
 ## 英特尔核显 / AMD 独显
 
-### 安装驱动
+### 安装驱动——简单版本（推荐）
+
+首先切换到 latest 源，或使用 ports 安装：
+
+```
+# pkg install drm-kmod
+```
+
+或者
+
+```
+# cd /usr/ports/graphics/drm-kmod/ && make install clean
+```
+
+>注意：
+>
+> `graphics/drm-kmod` 这个包并不是真实存在的，他只是帮助判断系统版本以安装对应的 ports 包的元包。
+
+>**故障排除：**
+>
+>**如果提示`/usr/ports/xxx no such xxx`找不到路径，请先获取 portsnap：`portsnap fetch extract`。portsnap 换源问题请看 第三章 第二节。**
+
+### 安装驱动——复杂版本
 
 注意，如果要通过 `ports` 安装提示需要源码，请见第二十一章。
 
-- FreeBSD 12.0
+- FreeBSD 12
 
-`#pkg install drm-fbsd12.0-kmod`
+```
+# cd /usr/ports/graphics/drm-fbsd12.0-kmod/ && make install clean
+```
 
->**注意：除了 12.0，对于任意 12.X 均应该安装 `drm-fbsd12.0-kmod` ，但应该使用 port 在本地重新构建而不应该使用 pkg 进行安装，否则不会正常运行。**
+>**注意：**
+>
+>**除了 12.0，对于任意 12.X 均应该安装 `drm-fbsd12.0-kmod` ，但应该使用 port 在本地重新构建而不应使用 pkg 进行安装，否则不会正常运行。**
 
 - FreeBSD 13
 
@@ -34,18 +60,23 @@ FreeBSD 已从 Linux 移植了显卡驱动，理论上，A 卡 N 卡均在 AMD64
 
 - FreeBSD 14 (current）
 
-`# cd /usr/ports/graphics/drm-510-kmod/ && make BATCH=yes install clean`
+```
+# cd /usr/ports/graphics/drm-510-kmod/ && make BATCH=yes install clean`
+```
 
->**故障排除：如果提示`/usr/ports/xxx no such xxx`找不到路径，请先获取 portsnap：`portsnap fetch extract`。portsnap 换源问题请看 第三章 第二节。**
->
-> `graphics/drm-kmod` 这个包并不是真实存在的，他只是帮助判断系统版本以安装对应的 ports 包的元包。
+
+
 ### 加载显卡
 
-打开`/etc/rc.conf`:
+>**无论是使用以上哪个方法，都需要进行这一步配置。**
+
+
+打开 `/etc/rc.conf`:
 
 - 如果为 intel 核芯显卡，添加 `kld_list="i915kms"`
-- 如果为 HD7000 以后的 AMD 显卡，添加 `kld_list="amdgpu"` （大部分人应该使用这个，如果没用再去使用`radeonkms`）
-- 如果为 HD7000 以前的 AMD 显卡，添加 `kld_list="radeonkms"` （这是十余年前的显卡了）
+- AMD
+  - 如果为 HD7000 以后的 AMD 显卡，添加 `kld_list="amdgpu"` （大部分人应该使用这个，如果没用再去使用`radeonkms`）
+  - 如果为 HD7000 以前的 AMD 显卡，添加 `kld_list="radeonkms"` （这是十余年前的显卡了）
 
 ### 视频硬解
 
