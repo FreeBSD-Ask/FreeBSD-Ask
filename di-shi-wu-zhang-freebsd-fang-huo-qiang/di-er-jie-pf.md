@@ -1,0 +1,81 @@
+# 第二节 PF
+
+OpenBSD Packet Filter(PF) 是一款自 OpenBSD 移植来的防火墙，提供了大量功能，包括 ALTQ (Alternate Queuing， 交错队列)。
+
+如需启用，可以在终端执行命令： 
+
+```
+# cp /usr/share/examples/pf/pf.conf /etc #复制示例文件作为默认配置规则集文件，否则 pf 无法启动 
+# service pf enable #设置 pf 开机启动，也可以通过 bsdconfig 设置 pf_enable 
+# service pf start  #启动 pf 
+```
+
+pf 的管理命令为 `pfctl`，常用操作示例如下： 
+
+```
+# pfctl -e #启动 pf，相当于 service pf start 
+
+# pfctl -d #停止 pf，相当于 server pf stop 
+
+# pfctl -f /etc/pf.conf #加载规则集文件中的规则 
+
+# pfctl -nf /etc/pf.conf #解析规则，但不加载。-f 参数还可以与其他参数配合，如 -N 表示只载入 NAT 规则， -R 表示只载入过滤规则，-A 只载入队列规则，-O 只载入选项规则 
+
+# pfctl -s all #查看 pf 所有对象信息，如果想查看特定对象信息，可以用 nat、queue、rules、Anchors、states、 Sources、info、Running、labels、timeouts、memory、Tables、osfp、Interfaces 替换 all
+
+# pfctl -F all #清理 pf 所有规则，
+```
+
+如果想查看特定规则，可以用 nat、queue、rules、states、Sources、info、 Tables、osfp 替换 all。
+
+不过以上操作并没有对规则的管理，因此还需要修改规则集文件，常用示例如下： 
+
+```
+# scrub in all #整理所有输入的数据
+
+block all #拒绝所有访问。
+
+ipfilter #是默认明示禁止的防火墙，因此需要通过此规则禁止所有访问。其中 block 是动作，out 表示拒绝，pass 表示通过；all 是 from any to any 的简写，表示从源地址到目标地址， 地址通常用网段(如 192.168.1.0/24)或 IP 地址(如 192.168.1.100)，any 是特殊词，表示任何地址；此外，当规则同时适用于输入 in 和输出 out 时，可以省略关键字，因此本条规则同时适用于输入输出 
+
+pass quick on lo0 all #放开回环接口的访问权限，回环接口不对外部。quick 关键字表示若规则匹配，就停止执行，不会再执行后续规则 
+
+pass in quick proto tcp from any to 192.168.1.184 port 80 #增加 TCP 协议访问 80 端口的规则，允许任何设备以 TCP 协议访问本机 80 端口。其中 proto tcp 是访问协议，常用值有 tcp、udp、icmp、icmp6；port = 80 是端口，写在目标地址之后为目标 端口，源地址之后未写，表示从源地址的任何端口发起访问 
+
+pass out quick proto tcp from 192.168.1.184 port 80 to any #允许回显信息给任何访问的设备 
+
+rdr pass on em0 inet proto tcp from any to 192.168.1.184 port 80 -> 192.168.1.166 port 8080 #增加 80 端口到 8080 端口流量转发的规则，由于测试机只有一块网卡，因此转发仅限本机 
+
+pass quick inet proto icmp all icmp-type 8 code 0 #允许本机与外部设备互 ping。其中 icmp-type 8 是查询请 求，code 表示返回码为 0 
+
+pass out quick inet proto icmp from 192.168.1.184 to any icmp-type 11 code 0 #允许 traceroute 命令以 ICMP 协议执行 
+
+pass out quick proto udp from 192.168.1.184 to any port 33434 >< 34500 #traceroute 默认协议 UDP，端口号 从 33434 开始，每转发一次端口号加 1 
+```
+
+下面根据我的操作系统整理规则集文件`/etc/pf.conf` 如下：
+
+```
+#流量整形 scrub in all #转发规则 
+
+rdr pass on em0 inet proto tcp from any to 192.168.1.184 port 8080 -> 192.168.1.184 port 80 #注意规则次序，根据 pf.conf 规则，转发规则应位于过滤规则之前，相关内容请参考帮助 #过滤规则 
+
+block all pass quick on lo0 all #设置任何设备可以访问服务器的 22、80、443、4200、10000 端口 
+
+pass in quick proto tcp from any to 192.168.1.184 port { 22,80,443,4200,10000 } 
+
+pass out quick proto tcp from 192.168.1.184 port { 22,80,443,4200,10000 } to any 
+
+pass out quick proto tcp from 192.168.1.184 to any port { 80,443 } keep state #设置服务器访问任何网络设备 的 80、443 端口 
+
+pass out quick proto udp from any to any port 53 keep state #设置访问 DNS 服务器 
+
+pass out quick proto udp from any to any port 67 keep state #设置访问 DHCP 服务器 
+
+pass quick inet proto icmp all icmp-type 8 code 0 
+
+pass out quick inet proto icmp from 192.168.1.184 to any icmp-type 11 code 0 
+
+pass out quick proto udp from 192.168.1.184 to any port 33434 >< 34500 保存文件，接下来在终端执行命令： 
+
+# pfctl -Fa -f /etc/pf.conf #加载规则集文件中的规则 就可以看到效果了。
+```
