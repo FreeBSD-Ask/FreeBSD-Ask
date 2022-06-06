@@ -25,6 +25,6 @@ exec lumina-desktop
 
 ## 中文化
 
->设置完毕还是英语。原因未知，如果您知道，请提交 issue 或者 pull。
+>设置完毕还是英语。原因未知，如果你知道，请提交 issue 或者 pull。
 
 Desktop Settings ——> Localization ——> 全部调整为“简体中文”，然后“save”，退出登录，重启系统。

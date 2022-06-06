@@ -375,7 +375,7 @@ Add another user? (yes/no): no
 Goodbye!
 ```
 
-现在已经创建了自己的 proftpd 用户和组 ID。 因此，在添加 ftp 用户时，您将使用它。 您可以通过以 下方式确定 UID：
+现在已经创建了自己的 proftpd 用户和组 ID。 因此，在添加 ftp 用户时，你将使用它。 你可以通过以 下方式确定 UID：
 
 ```
 # cat /etc/passwd | grep proftpd
