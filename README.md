@@ -1,5 +1,5 @@
 # FreeBSD 从入门到跑路
-## FreeBSD 中文社区（CFC）版权所有
+## FreeBSD 中文社区（CFC）版权所有 2022
 
 ## 概述
 
