@@ -50,6 +50,61 @@ $command &
 
 ## XRDP
 
+
+### 使用其他机器远程 FreeBSD
+
+安装软件包（以 KDE5 桌面为基准）：
+
+```
+# pkg install xorg kde5 xrdp 
+```
+
+配置：
+
+```
+# sysrc xrdp_enable="YES"
+# sysrc xrdp_sesman_enable="YES"
+# sysrc dbus_enable="YES"
+```
+
+编辑 `# ee /etc/fstab`，添加：
+
+```
+proc            /proc           procfs  rw      0       0
+```
+
+编辑  `/usr/local/etc/xrdp/startwm.sh`：
+
+找到 `#### start desktop environment`，修改如下：
+
+```
+#### start desktop environment
+# exec gnome-session
+# exec mate-session
+# exec start-lumina-desktop
+exec ck-launch-session startplasma-x11   #更改此处
+# exec startxfce4
+# exec xterm                             #更改此处
+```
+
+然后重启系统。
+
+打开 windows 自带的远程桌面链接，输入 IP 地址/用户名/密码进行链接。
+
+>**注意**
+>
+>如果看到一个背景是蓝色的菜单。请保持 xrdp 默认设置，第一行 Xorg，第二行 输入 FreeBSD 系统中的用户名，第三行输入其密码。点击 `OK`，即可进入桌面。
+
+
+#### 中文化(该用户使用 sh 作为 shell）：
+
+```
+#### set environment variables here if you want
+export LANG=zh_CN.UTF-8
+```
+
+
+### 使用 FreeBSD 远程其他机器
 安装命令：
 
 ```
