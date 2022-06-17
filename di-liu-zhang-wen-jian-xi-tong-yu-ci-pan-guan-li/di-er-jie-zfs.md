@@ -76,4 +76,4 @@ root@ykla:/ #
 
 ## 注意事项
 
-- ZFS 并不使用`/etc/fstab`
+- ZFS 并不使用 `/etc/fstab`，但是 EFI、Swap 仍然使用。
