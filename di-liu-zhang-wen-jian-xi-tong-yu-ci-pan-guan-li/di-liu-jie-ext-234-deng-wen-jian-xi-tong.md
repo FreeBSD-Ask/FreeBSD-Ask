@@ -7,7 +7,7 @@
 -   安装 fusefs-ext2
 
 ```
-    pkg install fusefs-ext2
+# pkg install fusefs-ext2
 ```
 
 -   加载
@@ -18,19 +18,19 @@
 
     对于用户名为 `XiaoMing` 的账号，可如下操作：
 
-    ```
-    $ cd ~
-    $ mkdir media
-    $ cd media
-    $ mkdir first
-    # mount -t ext2fs /dev/da0sX /home/XiaoMing/media/first/
-    ```
+```
+$ cd ~
+$ mkdir media
+$ cd media
+$ mkdir first
+# mount -t ext2fs /dev/da0sX /home/XiaoMing/media/first/
+```
 
-    _提示：上式不一定是 `da0sX`（X 为对应的阿拉伯数字），可通过 `# gpart list` 命令查看硬盘名。_
+_提示：上式不一定是 `da0sX`（X 为对应的数字），可通过 `# gpart list` 命令查看硬盘名。_
     
 -   卸载硬盘
 
-    `# umount /home/XiaoMing/media/first/`
+`# umount /home/XiaoMing/media/first/`
 
 ## Brtfs/XFS 文件系统
 
