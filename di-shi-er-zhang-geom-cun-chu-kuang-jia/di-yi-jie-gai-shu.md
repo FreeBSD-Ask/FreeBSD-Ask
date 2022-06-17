@@ -4,10 +4,6 @@
 
 GBDE (基于 GEOM 的磁盘加密)
 
-FreeBSD 5, 2003
-
-Poul-Henning Kamp
-
 内核中的 GEOM 模块 gbde(4)
 
 用户空间工具 gbde(8)
@@ -15,10 +11,6 @@ Poul-Henning Kamp
 创建后缀为 `.bde` 的新设备
 
 GELI (GEOM eli)
-
-FreeBSD 6, 2005
-
-Pawe l Jakub Dawidek
 
 内核中的 GEOM 模块
 
@@ -33,10 +25,6 @@ Pawe l Jakub Dawidek
 ### GEOM 框架
 
 访问存储层的标准化方式
-
-FreeBSD 5, 2003
-
-Poul-Henning Kamp
 
 GEOM 类的集合
 
