@@ -56,7 +56,7 @@ $command &
 安装软件包（以 KDE5 桌面为基准）：
 
 ```
-# pkg install xorg kde5 xrdp 
+# pkg install xorg kde5 xrdp wqy-fonts xdg-user-dirs
 ```
 
 配置：
