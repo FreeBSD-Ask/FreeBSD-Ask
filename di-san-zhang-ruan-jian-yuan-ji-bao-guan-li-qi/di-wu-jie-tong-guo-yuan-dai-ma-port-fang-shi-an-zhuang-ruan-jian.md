@@ -1,4 +1,9 @@
-# 第五节 通过源代码 port 方式安装软件
+# 第五节 通过源代码 ports 方式安装软件
+
+
+>**注意**
+>
+>ports 和 pkg 可以同时使用，大部分人也是这么用的。但是要注意 pkg 必须是 latest，否则会存在一些依赖上或者 lib 库上的问题。latest 的源也比主线上的 ports 要出来的晚（是从中编译出来的），因此即使是 latset 源也可能会出现上述问题，总之有问题出现时就卸载那个 pkg 安装的包，重新使用 ports 编译即可。
 
 ## FreeBSD ports 基本用法（仅限 FreeBSD 13. 0以前，不含 13.0）
 
@@ -20,6 +25,21 @@
 ```
 
 其中 BATCH=yes 的意思是使用默认配置
+
+## FreeBSD ports 多线程编译（推荐）
+
+Linux 如 gentoo 上一般是直接 `-jx` 或者 `jx+1`, `x` 为核心数。
+
+FreeBSD ports 多线程编译
+
+```
+FORCE_MAKE_JOBS=yes
+MAKE_JOBS_NUMBER=4
+```
+
+写入 `/etc/make.conf` 没有就新建。
+
+`4` 是处理器核心数，不知道就别改。
 
 ### 如何使用多线程下载：
 
@@ -95,18 +115,3 @@ ports 编译的软件也可以转换为 pkg 包
 # portmaster screen #升级单个软件
 # portmaster -a -m "BATCH=yes" #或者-D -G –no-confirm 都可以免除确认
 ```
-
-## FreeBSD ports 多线程编译
-
-Linux 如 gentoo上一般是直接 `-jx` 或者 `jx+1`, `x` 为核心数。
-
-FreeBSD ports 多线程编译
-
-```
-FORCE_MAKE_JOBS=yes
-MAKE_JOBS_NUMBER=4
-```
-
-写入 `/etc/make.conf` 没有就新建。
-
-`4` 是处理器核心数，不知道就别改。
