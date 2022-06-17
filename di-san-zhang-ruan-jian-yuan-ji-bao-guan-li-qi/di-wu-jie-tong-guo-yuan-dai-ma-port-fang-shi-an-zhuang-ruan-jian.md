@@ -11,7 +11,7 @@
 
 `# portsnap fetch extract`
 
-### 使用 whereis 查询软件地址
+### 使用 whereis 查询软件路径
 
 如 `# whereis python`
 
@@ -39,7 +39,7 @@ MAKE_JOBS_NUMBER=4
 
 写入 `/etc/make.conf` 没有就新建。
 
-`4` 是处理器核心数，不知道就别改。
+`4` 是处理器核心数（还是线程数？），不知道就别改。英特尔的处理器搜索 `CPU型号+ARK` 转跳英特尔官网可查询线程数。
 
 ### 如何使用多线程下载：
 
@@ -72,6 +72,10 @@ DISABLE_SIZE=yes
 如何设置全部所需的依赖：
 
 `# make config-recursive`
+
+如何删除当前 port 的配置文件：
+
+`# make rmconfig`
 
 如何一次性下载所有需要的软件包：
 
