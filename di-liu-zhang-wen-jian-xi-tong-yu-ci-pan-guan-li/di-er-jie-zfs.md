@@ -15,7 +15,7 @@
 
 ZFS 快照类似于虚拟机快照。
 
-默认创建分区如下：
+默认创建分区（Auto ZFS）如下：
 
 ```
 root@ykla:/home/ykla #  zfs list
