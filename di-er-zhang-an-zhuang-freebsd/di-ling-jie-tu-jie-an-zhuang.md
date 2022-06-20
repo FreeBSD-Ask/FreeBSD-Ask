@@ -43,7 +43,7 @@
 
 ![](../.gitbook/assets/安装7.png)
 
-现代计算机应该选择 UEFI+GPT。较老的计算机应该选择保持与图片一致的选项（GPT(BIOS)）。
+现代计算机应该选择 GPT+UEFI。较老的计算机（比如 2013 年以前的）应该选择保持与图片一致的选项（GPT(BIOS)）。
 
 ![](../.gitbook/assets/安装8.png)
 
