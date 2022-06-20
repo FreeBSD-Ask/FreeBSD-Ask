@@ -58,10 +58,14 @@ https://www.freshports.org/sysutils/hal
 
 ## 故障排除
 
-- 新建的普通用户登录KDE，因权限问题，菜单不完整，怎样解决？
+- 新建的普通用户登录 KDE，因权限问题，菜单不完整，怎样解决？
 
->需要将用户加入 root 组：
+>需要将用户加入 wheel 组：
 >
 >```
-># pw groupmod root -m 用户名
+># pw groupmod wheel -m 用户名
 >```
+
+>>**注意**
+>>
+>>部分用户反馈加入 wheel 组仍然无效，需要创建并加入 root 组。
