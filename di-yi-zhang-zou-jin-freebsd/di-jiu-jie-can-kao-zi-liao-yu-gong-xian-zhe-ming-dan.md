@@ -4,7 +4,7 @@
 
 相关书籍：旧的变化也不是很大。不像 Linux 有这么多入门书籍。由于历史上的原因，看 UNIX 相关书籍即可。
 
-**在线书籍：**[**FreeBSD 官方简体中文手册 2022 新译**](https://handbook.bsdcn.org/)
+**在线书籍：**[《FreeBSD 官方简体中文手册 2022 新译》](https://handbook.bsdcn.org/)
 
 ![Absolute FreeBSD, 3rd Edition: The Complete Guide to FreeBS](../.gitbook/assets/QQ图片20220527141115.png)
 
