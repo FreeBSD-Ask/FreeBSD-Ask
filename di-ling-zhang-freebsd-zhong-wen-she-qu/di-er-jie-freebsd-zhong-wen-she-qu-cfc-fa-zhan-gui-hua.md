@@ -14,7 +14,9 @@
 
 - 继续募集捐款（目标还需约 ¥800）；
 
-- 建设维护 bsdcn.org
+- 建设维护 bsdcn.org；
+
+- 根据《FreeBSD 从入门到跑路》录制视频上传 Bilibili；
 
 - 初步形成 FreeBSD 中文社区核心团队以及管理组；
 
@@ -22,11 +24,13 @@
 
 ## 中期规划（2023-2025）：
 
-- 根据《FreeBSD 从入门到跑路》录制视频上传 Bilibili；
-
 - 在国内大学中广泛推广宣传 FreeBSD，并带领其形成校内社团/开源组织；
 
-- 使用虚拟 VUP 宣传 FreeBSD ；
+- 使用虚拟 VUP 宣传 FreeBSD；
+
+- 有成员成为 FreeBSD 项目 Committer；
+
+- 社区由技术驱动逐渐转为需求驱动；
 
 - 维护审阅 FreeBSD 手册与《FreeBSD 从入门到跑路》；
 
@@ -53,8 +57,6 @@
 - 募集捐款（目标 ¥100000）；
 
 - 继续为 FreeBSD 项目贡献源代码；
-
-- 有成员成为 FreeBSD 项目 Committer；
 
 - 捐赠 FreeBSD 基金会；
 
