@@ -426,9 +426,11 @@ nano /var/www/html/info.php
 
 添加了
 
+```
 <?php
 
 phpinfo();?>
+```
 
 然后重启了httpd服务。service httpd restart
 
