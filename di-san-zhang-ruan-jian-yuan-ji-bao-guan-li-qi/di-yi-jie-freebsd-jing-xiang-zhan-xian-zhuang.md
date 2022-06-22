@@ -2,7 +2,7 @@
 
 ## 现状
 
-主要问题在于官方无论如何也不开放 rsync 且不接受镜像站的官方二级镜像申请。
+主要问题在于官方无论如何也不开放 rsync 且不接受镜像站的官方二级镜像申请（原因可能是没有钱或者防止篡改镜像文件）。
 
 多次联系均无二次联系，如邮件列表，大概五次，其中三次回应，两次无回应。其主要回复内容为“深表歉意，但台湾地区已有镜像”。并未直接说明如何镜像，此外特别向科大 Linux 协会(其中其他镜像站并未理会，如清华大学 TUNA 协会)申请镜像，对方提到，FreeBSD 也是无人回应。中国大陆目前没有 FreeBSD 官方镜像站。
 
@@ -38,38 +38,36 @@ https://github.com/tuna/issues/issues/16
 
 - 上述计算机 5 台。
 
-- 备案问题——需要专门公司组织才能给 cn.FreeBSD.org 备案；
+- 备案问题——需要专门公司/社会组织才能给 cn.FreeBSD.org 备案；
 
 - 还有最大的问题，没有钱； 　
 
 ## 非官方镜像站
 
-FreeBSD 在中国大陆境内没有非官方镜像站；
+FreeBSD 在中国大陆境内没有官方镜像站；在中国台湾地区有官方镜像站。
 
 FreeBSD 目前在大陆非官方镜像站有若干个（详见第二节。）：
 
-USTC
+ - USTC（仅 pkg ports）
 
-https://mirrors.ustc.edu.cn
+    https://mirrors.ustc.edu.cn
 
-仅 pkg ports
+ - http://freebsd.cn（四类源）
 
-ChinaFreeBSD
+ - 北京交通大学自由与开源镜像站（四类源）
 
-http://chinafreebsd.cn/article/chinafreebsd-resouce
+    https://mirror.bjtu.edu.cn
 
-或者 freebsd.cn
+    联系方式:
 
-北京交通大学自由与开源镜像站（四类源
+    https://t.me/bjtumirror
 
-mirror.bjtu.edu.cn
+ - 网易 163 镜像站（仅 ports pkg）
 
-联系方式:
+ - 南京大学开源镜像站
 
-https://t.me/bjtumirror
-
-网易 163 镜像站（仅 ports 源
+    无法进行有效联络，找不到负责人。
 
 FreeBSD 官方联系方式：
 
-[_freebsd-hubs@freebsd.org_](mailto:freebsd-hubs@freebsd.org)
+    [freebsd-hubs@freebsd.org](mailto:freebsd-hubs@freebsd.org)
