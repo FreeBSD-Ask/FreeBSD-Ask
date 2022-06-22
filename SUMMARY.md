@@ -204,6 +204,7 @@
 * [第四节 从一个想法看 FreeBSD 是商业化还是学院派](di-shi-jiu-zhang-wen-xue-gu-shi/di-si-jie-cong-yi-ge-xiang-fa-kan-freebsd-shi-shang-ye-hua-huan-shi-xue-yuan-pai.md)
 * [第五节 Linux 社区已经成为了一个肮脏的泥潭](di-shi-jiu-zhang-wen-xue-gu-shi/di-wu-jie-linux-she-qu-yi-jing-cheng-wei-le-yi-ge-ang-zang-de-ni-tan.md)
 * [第六节 Linux 败局已定——驳 FreeBSD 大败局](di-shi-jiu-zhang-wen-xue-gu-shi/di-liu-jie-linux-bai-ju-yi-ding.md)
+* [第七节 小说——FreeBSD 从入门到跑路](di-shi-jiu-zhang-wen-xue-gu-shi/di-qi-jie-xiao-shuo-freebsd-cong-ru-men-dao-pao-lu.md)
 
 ## 第二十章 娱乐与教育
 
