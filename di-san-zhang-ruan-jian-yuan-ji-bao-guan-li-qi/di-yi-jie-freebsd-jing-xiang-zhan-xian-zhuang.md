@@ -70,4 +70,4 @@ FreeBSD 目前在大陆非官方镜像站有若干个（详见第二节。）：
 
 FreeBSD 官方联系方式：
 
-    [freebsd-hubs@freebsd.org](mailto:freebsd-hubs@freebsd.org)
+[freebsd-hubs@freebsd.org](mailto:freebsd-hubs@freebsd.org)
