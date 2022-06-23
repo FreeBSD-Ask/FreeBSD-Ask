@@ -11,10 +11,18 @@
 # pkg install yarn #会自动安装对应版本的 nodejs
 ```
 
+安装 npm：
+
+```
+# pkg install npm
+```
+
 >如果你跳过了 FreeBSD 的升级直接安装软件，那么在 FreeBSD 13 上，你将会遇到以下错误：
 >
 >```
 ># pkg install yarn
 >% node
 >ld-elf.so.1: /lib/libcrypto.so.111: version OPENSSL_1_1_1e required by /usr/local/bin/node not found
- ```
+>```
+
+
