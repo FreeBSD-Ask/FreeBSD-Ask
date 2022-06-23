@@ -1,5 +1,6 @@
 # 第九节 Csh 与其他 Shell
 
+>注意：该文章可能不再具有现实意义，因为 FreeBSD 14 中的 shell 被统一为了 sh。
 ## FreeBSD csh shell 配置
 
 在 `/etc/csh.cshrc` 里面加入：
@@ -23,7 +24,7 @@
 　set fignore = (.o ~) emacs ma[^D] main.c main.c~ main.o emacs ma[tab] emacs main.c
 ```
 
-## 更换默认
+## 更换默认 shell
 
 警告：切换默认 `Shell` 会导致 **恢复模式无法正常启动加载命令行环境**。
 
