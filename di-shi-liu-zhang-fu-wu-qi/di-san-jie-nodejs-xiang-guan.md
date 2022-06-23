@@ -17,7 +17,7 @@
 # pkg install npm
 ```
 
->如果你跳过了 FreeBSD 的升级直接安装软件，那么在 FreeBSD 13 上，你将会遇到以下错误：
+>如果你跳过了 FreeBSD 的升级直接安装软件，那么在 FreeBSD 13.0 上，你将会遇到以下错误：
 >
 >```
 ># pkg install yarn
