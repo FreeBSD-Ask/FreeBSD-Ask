@@ -6,10 +6,11 @@
 # pkg install -y xorg i3
 ```
 
-或者通过 ports：
+或者通过 ports 安装：
 
 ```
-cd /usr/ports/x11-wm/i3/ && make install clean
+# cd /usr/ports/x11-wm/i3/ 
+# make install clean
 ```
 
 ## 配置
