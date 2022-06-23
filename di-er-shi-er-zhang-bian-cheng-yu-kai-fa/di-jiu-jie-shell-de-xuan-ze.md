@@ -34,7 +34,13 @@
 # pkg install zsh zsh-autosuggestions zsh-syntax-highlighting
 # chsh -s /usr/local/bin/zsh
 # touch ~/.zshrc
-# ee ~/.zshrc #添加下面几行
+```
+```
+# ee ~/.zshrc 
+```
+添加下面几行：
+
+```
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.p10k.zsh
