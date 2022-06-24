@@ -7,8 +7,10 @@
 ```
 # pkg install mysql56-server
 ```
-# 或者
-···
+
+或者
+
+```
 # cd /usr/ports/databases/mysql56-server/ && make install clean
 ```
 
