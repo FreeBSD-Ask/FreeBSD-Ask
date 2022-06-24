@@ -54,6 +54,7 @@ pkg_scripts=messagebus avahi_daemon
 apmd_flags=-A
 multicast=YES
 ```
+
 终端输入`# pkg_add noto-cjk noto-emoji`，安装中文字体。
  
 退出 `root` 账号，以普通账号登录。
@@ -103,6 +104,7 @@ export GTK_IM_MODULE=XIM
 LC_CTYPE="zh_CN.UTF-8"
 LC_MESSAGES="zh_CN.UTF-8"
 ```
+
 重启后，即可进入中文界面。
 
 ## 主题和图标

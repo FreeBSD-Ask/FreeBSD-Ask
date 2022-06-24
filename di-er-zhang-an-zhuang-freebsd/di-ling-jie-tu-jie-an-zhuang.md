@@ -13,7 +13,7 @@
 
 ![](../.gitbook/assets/安装2.png)
 
-选择 `install`,按下 回车键 进行安装。
+选择 `install`,按下`回车键`进行安装。
 
 ![](../.gitbook/assets/安装3.png)
 

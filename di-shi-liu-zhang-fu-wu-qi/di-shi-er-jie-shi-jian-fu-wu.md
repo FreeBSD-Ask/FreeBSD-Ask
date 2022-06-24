@@ -63,7 +63,11 @@ server 3.cn.pool.ntp.org
 
 ```
 # /etc/rc.d/ntpd restart
+```
+
 或
+
+```
 # service ntpd restart
 ```
 

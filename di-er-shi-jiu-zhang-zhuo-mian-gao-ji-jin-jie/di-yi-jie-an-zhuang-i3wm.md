@@ -22,7 +22,7 @@ $ chown 你的用户名 /usr/home/你的用户名/.xinitrc
 
 ## 启动
 
-可以用 `startx` 启动 i3。
+可以用 `startx` 启动 i3 了。
 
 
 

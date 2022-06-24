@@ -1,7 +1,10 @@
 # 第九节 Csh 与其他 Shell
 
->注意：该文章可能不再具有现实意义，因为 FreeBSD 14 中的 shell 被统一为了 sh。
 ## FreeBSD csh shell 配置
+
+>**注意**
+>
+>此部分可能不再具有现实意义，因为 FreeBSD 14 中的 shell 被统一为了 sh。
 
 在 `/etc/csh.cshrc` 里面加入：
 
@@ -38,6 +41,7 @@
 ```
 # ee ~/.zshrc 
 ```
+
 添加下面几行：
 
 ```

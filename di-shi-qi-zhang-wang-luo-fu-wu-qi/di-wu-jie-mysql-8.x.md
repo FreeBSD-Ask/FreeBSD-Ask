@@ -2,12 +2,13 @@
 
 ## mysql 80
 
-### 安装 （以下二选一）
+### 安装
 
 ```
 # pkg install mysql80-server
 
 ```
+
 或者
 
 ```
@@ -17,7 +18,7 @@
 ### 启动服务
 
 ```
-# sysrc mysql_enable=YES
+# sysrc mysql_enable="YES"
 # service  mysql-server start
 ```
 

@@ -21,4 +21,5 @@
 ```
 # mount /dev/adaXpN -o rw /mnt
 ```
+
 `X`、`N` 的参数取决于具体设备。

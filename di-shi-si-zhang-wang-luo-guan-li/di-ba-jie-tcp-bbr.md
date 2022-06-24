@@ -12,7 +12,7 @@ TCP BBR 是一种 Google 开发的拥塞控制算法。作用有两个：
 
 `# cd /usr/src/sys/amd64/conf`
 
-如果安装FreeBSD时没有选择安装内核源码，建议阅读 第二十章。
+如果安装 FreeBSD 时没有选择安装内核源码，建议阅读后文。
 
 `# cp GENERIC GENERIC-bbr`
 

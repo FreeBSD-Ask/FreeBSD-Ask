@@ -2,7 +2,6 @@
 
 ## 安装
 
-以下二选一
 
 ```
 # cd /usr/ports/www/apache24/ && make install clean

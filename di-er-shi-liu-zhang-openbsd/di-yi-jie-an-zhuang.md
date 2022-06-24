@@ -4,14 +4,13 @@
 
 以 OpenBSD 7.1，AMD 64 架构为例，访问
 
-https://cdn.openbsd.org/pub/OpenBSD/7.1/amd64
+<https://cdn.openbsd.org/pub/OpenBSD/7.1/amd64>
 
 获取系统镜像。若是刻录 U 盘 安装，就下载 `installXX.img` ；若是虚拟机体验，请下载 `installXX.iso` 。（注：截止 OpenBSD 7.1 时，请不要使用 ventory 引导实体机安装。）
 
 ## 安装模式
 
 这里推荐大家使用系统默认的分区来安装，对于有兴趣自定义分区的用户，可查看下面的“自定义分区”。
-
 
 
 ### 安装过程

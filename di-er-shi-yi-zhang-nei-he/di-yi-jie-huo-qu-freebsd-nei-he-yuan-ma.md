@@ -2,7 +2,7 @@
 
 FreeBSD 项目在 2021 年从 SVN 全面迁移到了 Git，即
 
-https://git.freebsd.org
+<https://git.freebsd.org>
 
 所以获取源代码的方式也产生了变化。
 
@@ -18,10 +18,10 @@ https://git.freebsd.org
 
 该方法比较简单快捷。
 
-以 FreeBSD 13.0 为例：
+以 FreeBSD 13.1 为例：
 
 ```
-# fetch https://download.freebsd.org/ftp/releases/amd64/13.0-RELEASE/src.txz
+# fetch https://download.freebsd.org/ftp/releases/amd64/13.1-RELEASE/src.txz
 # tar xvzfp src.txz  -C /
 ```
->如果速度慢可以切换到 <https://mirror.bjtu.edu.cn/freebsd/releases/amd64/13.0-RELEASE/src.txz>
+>如果速度慢可以切换到 <https://mirror.bjtu.edu.cn/freebsd/releases/amd64/13.1-RELEASE/src.txz>

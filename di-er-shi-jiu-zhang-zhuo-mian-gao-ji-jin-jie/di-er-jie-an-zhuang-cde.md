@@ -6,8 +6,9 @@
 ## 开始安装
 
 ```
-# pkg install -y iconv bdftopcf libXScrnSaver ksh93 open-motif tcl86 xorg-fonts xorg-fonts-100dpi cde
+# pkg install -y xorg iconv bdftopcf libXScrnSaver ksh93 open-motif tcl86 xorg-fonts xorg-fonts-100dpi cde
 ```
+
 ## 开启各项服务
 
 ```

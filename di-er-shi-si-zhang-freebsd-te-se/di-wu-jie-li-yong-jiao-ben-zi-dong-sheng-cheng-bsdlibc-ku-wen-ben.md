@@ -1,5 +1,8 @@
 # 第五节 利用脚本自动生成 BSDlibc 库文本
 
+>此部分来自 FreeBSD 论坛，作者 mrclksr。原文地址 <https://forums.freebsd.org/threads/wheres-bsd-libc-documentation.63107/>。
+
+
 首先安装依赖：
 
 ```
@@ -163,4 +166,4 @@ rm -f $sorted_index
 
 运行脚本即可在同路径文件夹下找到 PDF 文档。现成的文档请看：
 
-https://github.com/FreeBSD-Ask/BSDlibc
+<https://github.com/FreeBSD-Ask/BSDlibc>

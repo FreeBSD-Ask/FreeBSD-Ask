@@ -6,7 +6,7 @@
 
 release 是绝对的 stable，而 stable 和 current 都是开发分支，不太稳定。
 
-current 相对稳定后会推送到 stable，但是不保证 stable 没有大的 Bug，只是确保其 ABI 兼容。
+current 相对稳定后会推送到 stable，但是不保证 stable 没有大的 bug，只是确保其 ABI 兼容。
 
 ### FreeBSD 版本选择
 
@@ -21,9 +21,10 @@ current 相对稳定后会推送到 stable，但是不保证 stable 没有大的
 ## 三种虚拟机比较
 
 ### Virtual Box 与 VMware Workstation Pro
+
 个人计算机上常用的虚拟机有两种，一是 Virtual Box，另一个是 VMware Workstation Pro。
 
-一般来说，在 Windows 系统上建议使用VMware Workstation Pro （以下简称 VM），在Linux 系统上建议使用 Virtual Box（以下简称 VB）。
+一般来说，在 Windows 系统上建议使用 VMware Workstation Pro （以下简称 VM），在 Linux 系统上建议使用 Virtual Box（以下简称 VB）。
 
 VM 是闭源的由商业公司提供的，是需要付费的，可用免费试用，也有免费版本 _VMware Workstation Player_；VB 是 Oracle 公司的开源产物，是免费的。
 
@@ -40,7 +41,7 @@ Hyper-V 是 Windows 开发的虚拟机，分为 `Gen 1` 和 `Gen 2`。
 |Gen 1|IDE + SCSI|仅 MBR|
 |Gen 2|仅 SCSI|仅 UEFI + 安全启动支持 + PXE 支持|
 
-**FreeBSD 目前（截止到 2022-1-28）尚且不能在 Hyper-V 上正常运行鼠标或键盘，因为鼠标没有驱动。不建议使用，具体支持情况如下表。**
+**FreeBSD 目前（截止到 2022-1-28）尚且不能在 Hyper-V 上正常运行鼠标或键盘，因为鼠标没有驱动。不建议使用，具体支持情况如下表。简而言之，要么鼠标不能用，要么键盘不能用，当然你说你用 VNC 那无话可说。**
 
 系统快速创建的为 `Gen 2`。
 

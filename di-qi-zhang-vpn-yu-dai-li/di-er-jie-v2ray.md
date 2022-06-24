@@ -6,22 +6,29 @@
 ```
 # pkg install v2ray
 ```
+
 也可安装 xray-core：
+
 ```
 # pkg install xray-core
 ```
+
 这两个代理配置基本相同，配置文档可以在各自的官方文档找到，xray 可以完全参考 v2ray 的配置方法。
 
 ## 启动软件
 
 如果事先有代理客户端可以把客户端节点的配置导出来，复制到 FreeBSD，假设导出的文件名为 `config.json` 然后执行：
+
 ```
 $ v2ray -c config.json
 ```
+
 如果用 xray-core，可执行：
+
 ```
 $ xray -c config.json
 ```
+
 这个时候软件应该启动成功了。
 
 ## 配置软件代理
@@ -32,13 +39,14 @@ $ xray -c config.json
 
 大部分软件代理设置方式不同。比较混乱，对于桌面软件需要自行设置对应的代理服务器。终端命令，如果需要走代理就比较简单了。大部分终端命令，都会寻找`HTTP_PROXY`、`HTTPS_PROXY`、`ALL_PROXY` 这三个环境变量，根据这三个环境变量的值设置对应代理。
 
-下面的命令适用于 sh bash zsh：
+下面的命令适用于 sh、bash、zsh：
 
 ```
 $ export HTTP_PROXY="http://127.0.0.1:10809" #设置 http 代理
 $ export HTTPS_PROXY="http://127.0.0.1:10809"
 $ export ALL_PROXY="socks5://127.0.0.1:10808" #设置 socks 代理
 ```
+
 设置完成后，在火狐浏览器中浏览网页，观察 v2ray 输出的日志，就可以看到浏览器流量走了代理。终端命令也走了代理，但是一些命令根据环境变量设置代理，请自行查找对应软件的设置方法。 
 
 ## 代理分流

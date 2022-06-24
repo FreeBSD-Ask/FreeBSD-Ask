@@ -27,7 +27,7 @@ export LC_CTYPE="en_US.ISO8859-1"
 export LANG=zh_CN.eucCN
 ```
 
-## i915kms 显卡支持
+## intel i915kms 显卡支持
 
 ```
 # kldload drm

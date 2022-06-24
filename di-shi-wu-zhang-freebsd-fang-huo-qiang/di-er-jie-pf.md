@@ -1,6 +1,6 @@
 # 第二节 PF
 
-OpenBSD Packet Filter(PF) 是一款自 OpenBSD 移植来的防火墙，提供了大量功能，包括 ALTQ (Alternate Queuing， 交错队列)。
+OpenBSD Packet Filter(PF) 是一款自 OpenBSD 移植来的防火墙，提供了大量功能，包括 ALTQ (Alternate Queuing，交错队列)。
 
 如需启用，可以在终端执行命令： 
 

@@ -4,18 +4,18 @@
 
 ### 安装
 
-pkg、ports 安装二选一
-
 ```
 # pkg install mysql56-server
+```
 # 或者
+···
 # cd /usr/ports/databases/mysql56-server/ && make install clean
 ```
 
 ### 启动服务
 
 ```
-# sysrc mysql_enable=YES
+# sysrc mysql_enable="YES"
 # service mysql-server start
 ```
 

@@ -12,9 +12,9 @@
 
 服务器 B（同步源）：`192.168.100.20/24`
 
-**需求：**实现服务器B的数据同步到服务器A上
+**需求** ：实现服务器B的数据同步到服务器 A 上
 
-### 服务器B（同步源）配置
+### 服务器 B（同步源）配置
 
 #### 安装 rsync 软件包
 
@@ -46,13 +46,13 @@ uid = root  //服务端操作系统的用户
 gid = wheel  //服务端操作系统的用户的组
 use chroot = yes  //禁锢在源目录
 address = 192.168.100.20  //监听地址
-port 873   //用于通信的TCP端口，缺省是873
+port 873   //用于通信的 TCP 端口，缺省是 873
 log file = /var/log/rsyncd.log     //日志文件位置
-pid file = /var/run/rsyncd.pid     //存档进程ID的文件位置
+pid file = /var/run/rsyncd.pid     //存档进程 ID 的文件位置
 hosts allow = 192.168.100.0/24     //允许访问的客户机地址
 
 [testcom]      //共享模块名称，自定义的名称，不一定要与同步目录相同
-path = /home/test         //同步的目录名，必须是uid参数指定的用户和gid参数指定的组
+path = /home/test         //同步的目录名，必须是  uid 参数指定的用户和 gid 参数指定的组
 comment = testcombackup   //模块说明文字     
 read only = yes      //是否为只读
 dont compress   = *.gz *.tgz *.zip *.z *.Z *.rpm *.deb *.bz2   //同步时不再压缩的文件类型

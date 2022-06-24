@@ -15,7 +15,7 @@
 
 ## 配置
 
-配置教程可参阅 [官方文档](https://nginx.org/en/docs/) 与 [官方百科](https://wiki.nginx.org/Configuration)。
+配置教程可参阅 [官方文档](https://nginx.org/en/docs/) 与 [官方维基](https://wiki.nginx.org/Configuration)。
 
 本文仅简单说明 FreeBSD 中如何启动 Nginx 及 Nginx 的配置文件。
 

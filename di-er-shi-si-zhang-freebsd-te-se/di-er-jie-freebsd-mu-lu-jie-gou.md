@@ -1,6 +1,6 @@
 # 第二节 FreeBSD 目录结构
 
-FreeBSD 设计上属于学院派，条理清晰。
+FreeBSD 在设计上属于学院派，条理清晰。
 
 |       路径       |                       简介                      |
 | :------------: | :-------------------------------------------: |
@@ -15,7 +15,7 @@ FreeBSD 设计上属于学院派，条理清晰。
 |   `/var/tmp`   | 临时文件。 这些文件在系统重新启动时通常会保留， 除非 /var 是一个内存中的文件系统。 |
 |   `/var/run`   |                 用来存放 Pidfile。                 |
 
-值得注意地是，FreeBSD 现在并不使用 /proc 以及 procfs。
+值得注意地是，FreeBSD 现在并不使用 `/proc` 以及 procfs。
 
 对于用户安装的程序，允许写入的目录是：
 
@@ -35,4 +35,4 @@ FreeBSD 设计上属于学院派，条理清晰。
 
 更多信息，请参考官方的文档：
 
-https://docs.freebsd.org/en/books/handbook/dirstructure.html
+<https://docs.freebsd.org/en/books/handbook/dirstructure.html>

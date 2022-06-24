@@ -7,7 +7,7 @@
 ```
 
 解释:
-|包|用途|
+|软件|用途|
 |:---:|:---:|
 |xorg|X11|
 |gnome|Gnome 主程序|
@@ -134,7 +134,7 @@ export XMODIFIERS=@im=fcitx
 
 打开网站 `https://extensions.gnome.org/extension/1674/topiconsfix/` 即可安装插件。
 
-## 终端显示中文(文件用户根目录)
+## 终端显示中文（文件用户根目录）
 
 `# ee .cshrc`
 

@@ -10,7 +10,7 @@
 # kldload if_cdce   #其他设备
 ```
 
-启动时开机加载：写入到
+启动时开机加载，写入到：`/boot/loader.conf`。
 
 ```
 if_urndis_load="YES"

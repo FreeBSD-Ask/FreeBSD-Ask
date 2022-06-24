@@ -2,11 +2,11 @@
 
 ## 基础
 
-FreeBSD 使用 BSD INIT 管理系统服务。
+FreeBSD 使用传统的 BSD INIT 管理系统服务。
 
-- 启动一个服务：`# service XXX start`
-- 停止一个服务：`# service XXX stop`
-- 重启一个服务：`# service XXX restart`
+- 启动服务：`# service XXX start`
+- 停止服务：`# service XXX stop`
+- 重启服务：`# service XXX restart`
 
 出于安全性考虑，服务安装以后默认是禁用状态，以上命令是无法执行的，需要先开启服务：
 
@@ -48,25 +48,24 @@ rc.conf 掌管着所有系统服务。与之相关的文件和路径如下：
 ### /etc/rc.conf 常用配置文件
 
 
-
 ```
 hostname="server.shuang.ca" #设定主机名
-ifconfig_vtnet0="inet xxx.xxx.xxx.xxx netmask 255.255.255.0" #设定IP地址，其中vtnet0是网卡名称，注意设置正确
+ifconfig_vtnet0="inet xxx.xxx.xxx.xxx netmask 255.255.255.0" #设定 IP 地址，其中 vtnet0 是网卡名称，注意设置正确
 defaultrouter="xxx.xxx.xxx.1" #网关地址
 syslogd_enable="YES" #开启日志
 syslogd_flags="-s -s" #禁止接收其他主机的日志
-fsck_y_enable="YES" #开机自动fsck硬盘
+fsck_y_enable="YES" #开机自动 fsck 硬盘
 enable_quotas="YES"
 check_quotas="YES" #系统配额
-clear_tmp_enable="YES" #开机自动清空/tmp
+clear_tmp_enable="YES" #开机自动清空 /tmp
 update_motd="NO" #禁用内核信息提示
 icmp_drop_redirect="YES"
-icmp_log_redirect="YES" #ICMP重定向
+icmp_log_redirect="YES" #ICMP 重定向
 log_in_vain="YES" #记录每一个企图到关闭端口的连接
 accounting_enable="YES" #系统审计功能
 ```
 
-## periodic.conf <a href="#periodicconf" id="periodicconf"></a>
+## periodic.conf
 
 FreeBSD 默认有一些周期执行的任务，它们是通过 `periodic` 命令执行的，由 `cron` 自动调用。与 `periodic` 有关的配置和路径如下：
 
@@ -81,7 +80,7 @@ FreeBSD 默认有一些周期执行的任务，它们是通过 `periodic` 命令
 
 如果你要立即更新，也可以直接执行这个脚本。
 
-## 其他配置文件 <a href="#qi-ta-pei-zhi-wen-jian" id="qi-ta-pei-zhi-wen-jian"></a>
+## 其他配置文件 
 
 - crontab: `cron` 配置，位于 `/etc/crontab`，请参考 `man crontab`。
 - syslog.conf: 系统日志配置，位于 `/etc/syslog.conf`，请参考 `man syslog.conf`。

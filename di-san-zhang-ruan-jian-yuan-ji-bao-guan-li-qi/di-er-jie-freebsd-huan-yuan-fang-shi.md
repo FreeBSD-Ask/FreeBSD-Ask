@@ -1,7 +1,7 @@
 # 第二节 FreeBSD 换源方式
 
 
-> **通知：**
+> **通知**
 >
 >bjtu 北京交通大学开源镜像站镜像站故障。请切换其他源，例如 freebsd.cn/ustc/nju/163。
 >
@@ -9,7 +9,7 @@
 >
 >预计修复：放暑假，具体未知。
 
-FreeBSD 有四类源，pkg、ports、portsnap、update。
+FreeBSD 有四类源：pkg、ports、portsnap、update。
 
 **对于失去安全支持的版本，请参考最后一节**
 
@@ -21,7 +21,7 @@ FreeBSD 有四类源，pkg、ports、portsnap、update。
 
 pkg 的下载路径是 `/var/cache/pkg/`
 
-FreeBSD 中 pkg 源分为系统级和用户级两个源。不建议直接修改 `/etc/pkg/FreeBSD.conf` ,因为该文件会随着基本系统的更新而发生改变.
+FreeBSD 中 pkg 源分为系统级和用户级两个配置文件。不建议直接修改 `/etc/pkg/FreeBSD.conf` ,因为该文件会随着基本系统的更新而发生改变。
 
 创建用户级源目录:
 

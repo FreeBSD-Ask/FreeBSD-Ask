@@ -19,7 +19,9 @@ if_urtwn_load="YES"
 legal.realtek.license_ack=1
 ```
 
->**注意：这里只是示例，请添加自己所需的驱动（看`# sysctl net.wlan.devices`的输出）。**
+>**注意**、
+<
+>这里只是示例，请添加自己所需的驱动（看`# sysctl net.wlan.devices`的输出）。
 
 接下来，创建 wlan0
 

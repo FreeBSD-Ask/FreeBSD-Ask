@@ -1,6 +1,6 @@
 # 第三节 jail 配置
 
-## 创建jail目录
+## 创建 jail 目录
 
 ### 放入基本系统
 
@@ -28,7 +28,7 @@
 # sysrc jail_enable="YES"
 ```
 
-创建 `jail.conf` 文件(可以写进 `rc.conf` 但这样便于管理)
+创建 `jail.conf` 文件（可以写进 `rc.conf` 但这样便于管理）
 
 ```
 www {
@@ -56,40 +56,40 @@ JID IP Address    Hostname   Path
 | 英语        | 中文    |
 |:----------:|:-------:|
 | JID        | jail ID |
-| IP Address | IP地址    |
+| IP Address | IP 地址    |
 | Hostname   | 主机名     |
-| Path       | Jail 路径 |
+| Path       | jail 路径 |
 
 
-## 启动与停止jail
+## 启动与停止 jail
 
 ```
 # service jail start www
 # service jail stop www
 ```
 
-## 登录jail
+## 登录 jail
 
 ```
 # jexec 1 tcsh
 ```
 
-## 干净关闭jail
+## 干净关闭 jail
 
 ```
 # jexec 3 /etc/rc.shutdown
 ```
 
-## 升级jail
+## 升级 jail
 
 ```
 # freebsd-update -b /here/is/the/jail fetch
 # freebsd-update -b /here/is/the/jail install
 ```
 
-## ping与网络
+## ping 与网络
 
-### 开启ping
+### 开启 ping
 
 写入 `/etc/jail.conf`
 
@@ -164,7 +164,7 @@ nameserver 223.6.6.6
 #链接目录，注意链接的目录
 ```
 
-### 创建fstab
+### 创建 fstab
 
 ```
 #ee /jail/www.fstab
@@ -174,7 +174,7 @@ nameserver 223.6.6.6
 /jail/js/www/ /jail/www/jusr/ mullfs ro 0 0
 ```
 
-创建fstab
+创建 fstab
 
 ```
 # ee /jail/www.fstab

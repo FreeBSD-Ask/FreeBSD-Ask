@@ -5,7 +5,7 @@
 3. 修改 `rc.conf`
 
 ```
-sysrc kld_list+="fusefs"
+# sysrc kld_list+="fusefs"
 ```
 
 4. 修改 fstab 自动挂载
@@ -14,6 +14,11 @@ sysrc kld_list+="fusefs"
 
 ```
 # ee /etc/fstab
+```
+
+加入：
+
+```
 /dev/da0s1  /media/NTFS ntfs  rw,mount_prog=/usr/local/bin/ntfs-3g,late  0  0
 ```
 

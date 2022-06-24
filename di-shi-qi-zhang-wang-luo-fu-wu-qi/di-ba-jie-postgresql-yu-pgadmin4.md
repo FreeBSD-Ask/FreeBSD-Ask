@@ -7,7 +7,7 @@ PostgreSQL 是一款自由的对象-关系型数据库，最早发布于 1989 �
 
 ### postgresql 安装示例，6个版本都如此。
 
-#### 安装：二选一
+#### 安装
 
 ```
 # pkg install -y postgresql96-server

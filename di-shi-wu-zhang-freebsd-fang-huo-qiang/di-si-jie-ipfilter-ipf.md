@@ -1,6 +1,6 @@
 # 第四节 IPFILTER (IPF)
 
-IPF是一款开源软件，作者 Darren Reed。
+IPF 是一款开源软件，作者 Darren Reed。
 
 如果想启用 ipf，可以执行以下命令： 
 
