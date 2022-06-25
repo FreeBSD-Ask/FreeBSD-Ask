@@ -107,7 +107,7 @@ hostname="fb"
 search SVROS.COM               //设置域控制器域名
 # nameserver 192.168.253.2
  
-nameserver 192.168.253.130     //设置域控制器IP地址
+nameserver 192.168.253.130     //设置域控制器 IP 地址
 nameserver 223.5.5.5 
 nameserver 127.0.0.1
 options edns0
