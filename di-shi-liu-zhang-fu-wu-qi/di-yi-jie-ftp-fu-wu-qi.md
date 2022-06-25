@@ -464,7 +464,7 @@ Query OK, 1 row affected, 1 warning (0.02 sec)
 # service proftpd restart #重启服务
 ```
 
-## **连接到 FTP 服务器**
+## 连接到 FTP 服务器
 
 简单示例：
 
