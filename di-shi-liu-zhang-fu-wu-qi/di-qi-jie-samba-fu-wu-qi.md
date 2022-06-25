@@ -1,8 +1,9 @@
 # 第七节 samba 服务器
 
-## 设置 samba 为独立服务器
 
 环境：freebsd 11
+
+## 设置 samba 为独立服务器
 
 ### 安装 samba
 
