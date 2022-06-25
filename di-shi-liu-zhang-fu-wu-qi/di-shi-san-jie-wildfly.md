@@ -42,7 +42,7 @@
 >还可以用 `/usr/local/wildfly26/bin/add-user.sh ` 生成管理员账户，
 
 
-# 故障排除
+## 故障排除
 
 如果服务无法正常启动，可以通过 `/usr/local/wildfly26/standalone/log/server.log` 查看错误日志。
 
