@@ -401,7 +401,7 @@ CREATE DATABASE `proftpd` CHARACTER SET utf8 COLLATE utf8_general_ci;
 
 ```
 grant select,insert,update,delete on proftpd.* to pftp@localhost identified by "123456";
-FLUSH PRIVILEGES;  立即生效权限
+FLUSH PRIVILEGES;  #立即生效权限
 ```
 
 或
