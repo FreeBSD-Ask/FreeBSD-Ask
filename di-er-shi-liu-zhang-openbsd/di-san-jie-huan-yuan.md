@@ -14,8 +14,6 @@
 
 - ---
 
-~~- 腾讯软件源：*`https://mirrors.cloud.tencent.com/OpenBSD`~~
-
 - 阿里云软件源：**`https://mirrors.aliyun.com/pub/OpenBSD`
 
 - 平安云软件源：*`https://mirrors.pinganyun.com/OpenBSD` 
