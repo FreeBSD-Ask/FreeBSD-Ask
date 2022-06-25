@@ -79,11 +79,11 @@ samba_server_enable="YES"
 192.168.X.X
 ```
 
-## 将Samba设置为域成员
+## 将 Samba 设置为域成员
 
 环境：freebsd 12
 
-### 配置静态IP地址
+### 配置静态 IP 地址
 
 使用如下命令配置：
 
@@ -190,7 +190,7 @@ options edns0
 	force create mode = 0660
 ```
 
-上面【testshare】最后两行内容实际使用权限优化（可选）
+上面“testshare”最后两行内容实际使用权限优化（可选）
 
 ```
 create mode = 0750
@@ -258,13 +258,13 @@ getent group
 # chmod 0770 /samba/testshare
 ```
 
-如果只允许属主可读可写，属组只允许读，用以下命令设置
+如果只允许属主可读可写，属组只允许读，用以下命令设置：
 
 ```
 # chmod 0750 /samba/testshare
 ```
 
-如果只允许属主可读可写，属组和其他均不可读写，用以下命令设置
+如果只允许属主可读可写，属组和其他均不可读写，用以下命令设置：
 
 ```
 # chmod -R 0700 /samba/testshare
