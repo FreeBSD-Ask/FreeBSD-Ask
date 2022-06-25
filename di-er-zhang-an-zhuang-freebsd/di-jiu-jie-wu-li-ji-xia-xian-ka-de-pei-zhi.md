@@ -61,7 +61,7 @@ FreeBSD 已从 Linux 移植了显卡驱动，理论上，A 卡 N 卡均在 AMD64
 - FreeBSD 14 (current）
 
 ```
-# cd /usr/ports/graphics/drm-510-kmod/ && make BATCH=yes install clean`
+# cd /usr/ports/graphics/drm-510-kmod/ && make BATCH=yes install clean
 ```
 
 
