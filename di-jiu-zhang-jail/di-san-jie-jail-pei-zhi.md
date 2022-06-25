@@ -182,7 +182,6 @@ nameserver 223.6.6.6
 /jail/j1/ /jail/www/ mullfs ro 0 0
 #将项目数据目录挂载到项目目录
 /jail/js/www/ /jail/www/jusr/ mullfs ro 0 0
-awk
 ```
 
 写入 jail.conf
