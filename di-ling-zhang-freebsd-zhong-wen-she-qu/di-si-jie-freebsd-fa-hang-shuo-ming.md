@@ -2,15 +2,15 @@
 
 >FreeBSD 的生命周期为每个大版本 5 年，小版本是发布新的小版本版后 +3 个月。
 
-# FreeBSD 13.1 发行说明
+## FreeBSD 13.1 发行说明
 
 > 原文链接 https://www.freebsd.org/releases/13.1R/relnotes/
 
-## 摘要
+### 摘要
 
 FreeBSD 13.1-RELEASE 的发行说明包含了在 13-STABLE 开发线上对 FreeBSD 基本系统所做修改的摘要。这份文件列出了自上次发布以来所发布的相关安全公告，以及对 FreeBSD 内核和用户空间的重大修改。同时还介绍了一些关于升级的简要说明。
 
-## 简介
+### 简介
 
 这份文件包含了 FreeBSD 13.1-RELEASE 的发行说明。它描述了 FreeBSD 最近增加、改变或删除的功能。它还提供了一些关于从以前版本的 FreeBSD 升级的说明。
 
@@ -26,7 +26,7 @@ FreeBSD 13.1-RELEASE 的发行说明包含了在 13-STABLE 开发线上对 FreeB
 
 典型的发布说明记录了在 13.0-RELEASE 之后发布的安全公告，新的驱动或硬件支持，新的命令或选项，主要的错误修正，或贡献的软件升级。他们也可能列出主要的 port/包的变化或发布工程实践。显然，发行说明不可能列出 FreeBSD 在不同版本之间的每一个变化； 这份文件主要关注安全公告、 用户可见的变化，以及主要的架构改进。
 
-## 从以前的 FreeBSD 版本升级
+### 从以前的 FreeBSD 版本升级
 
 使用 freebsd-update(8) 工具可以在 RELEASE 版本 (以及各种安全分支的快照) 之间进行二进制升级。二进制升级过程将更新未修改的用户空间工具，以及作为官方 FreeBSD 发行版一部分的未修改的 GENERIC 内核。freebsd-update(8) 工具要求被升级的主机有互联网连接。
 
@@ -38,11 +38,11 @@ FreeBSD 13.1-RELEASE 的发行说明包含了在 13-STABLE 开发线上对 FreeB
 
 > **升级之后，sshd (来自 OpenSSH 8.8p1) 将不接受新的连接，直到它被重新启动。在安装了新的用户空间之后，要么重新启动(按照源码升级程序中的规定)，要么执行 service sshd 重启。**
 
-## 用户空间
+### 用户空间
 
 本节涵盖了对用户空间应用程序、贡献的软件和系统实用程序的更改和添加。
 
-### 用户空间配置的变化
+#### 用户空间配置的变化
 
 在 /etc/defaults/rc.conf 中的 rtsol(8) 和 rtsold(8) 默认加入了 `-i` 标志，a0fc5094bf4c (由 https://www.patreon.com/cperciva 赞助)
 
@@ -73,7 +73,7 @@ mpsutil(8) 扩展到了显示适配器信息和控制 NCQ。395bc3598b47
 
 在 bsdinstall(8) 中为变量磁盘名称的脚本分区编辑器增加了一种新模式。如果磁盘参数 DEFAULT 被设置为代替实际的设备名称，或没有为 PARTITIONS 参数指定磁盘，则安装程序将遵循自动分区模式中使用的逻辑，即如果有几个磁盘，它将为其中一个提供选择对话框，或在只有一个磁盘时自动选择。这简化了为具有不同磁盘名称的硬件或虚拟机创建全自动安装媒体的工作。5ec4eb443e81
 
-## 贡献的软件
+### 贡献的软件
 在所有 powerpc 架构上都启用了 LLDB 的构建，cb1bee9bd34
 
 一个 True Awk 已经更新到了上游的最新版本 (20210215)。除了一个补丁之外，所有的 FreeBSD 补丁现在都已经被上传到了上游或被抛弃了。值得注意的变化包括：
@@ -104,7 +104,7 @@ scp(1) 实验性地支持使用 SFTP 协议进行传输，以取代传统上使�
 
 在 ssh 中启用了对 FIDO/U2F 硬件认证器的使用，并使用了新的公钥类型 ecdsa-sk 和 ed25519-sk 以及相应的证书类型。对 FIDO/U2F 的支持在 https://www.openssh.com/txt/release-8.2 中有所描述，a613d68fff9a (由 FreeBSD 基金会 赞助)
 
-## 运行时库和 API
+### 运行时库和 API
 在 powerpc、powerpc64 和 powerpc64le 上增加了 OpenSSL 的汇编优化代码，ce35a3bc852
 
 修复了对加速 ARMv7 和 ARM64 的加密操作的 CPU 特性的检测，大大加快了 aes-256-gcm 和 sha256 的速度。32a2fed6e71f（由 Ampere Computing LLC 和 Klara Inc.赞助）
@@ -115,7 +115,7 @@ OFED 库现已在 riscv64 和 riscv64sf 上构建。2b978245733
 
 OPENMP 库现在已在 riscv64 和 riscv64sf 上构建，aaf56e35569
 
-## 内核
+### 内核
 本节涵盖了对内核配置、系统调校和系统控制参数的改变，这些改变没有其他分类。
 
 内核的一般变化
@@ -129,10 +129,10 @@ powerpc64 上串行控制台的输出损坏已经被修复。
 
 在 arm64 上为 32 位 ARM 二进制文件添加了 HWCAP/HWCAP2 辅助参数支持。这修正了在 COMPAT32 仿真环境下 golang 的构建/运行。28e22482279f (由 Rubicon Communications, LLC (`Netgate`)赞助)
 
-## 设备和驱动
+### 设备和驱动
 本节涵盖了自 13.0-RELEASE 以来对设备和设备驱动的变化和补充。
 
-### 设备驱动程序
+#### 设备驱动程序
 igc(4) 驱动程序是为英特尔 I225 以太网控制器引入的。这个控制器支持 2.5G/1G/100Mb/10Mb 的速度，并允许 tx/rx 校验和卸载、 TSO、 LRO 和多队列操作，d7388d33b4dd (由 Rubicon Communications, LLC (`Netgate`) 赞助)
 
 在 powerpc64(le) 的启动过程中，增加了对带有 AST2500 的 VGA/HDMI 控制台的修复，c41d129485e
@@ -157,17 +157,17 @@ ice(4) 驱动程序已经更新到了 1.34.2-k，增加了固件日志和初始 
 
 当内核被配置为 MMCCAM 选项时，现在可以使用 sdhci 控制器在 SD 卡上保存内核崩溃数据。8934d3e7b9b9
 
-### 支持的平台
+#### 支持的平台
 增加了对 HiFive Unmatched RISC-V 板的支持。
 
-## 存储系统
+### 存储系统
 本节涵盖了对文件系统和其他存储子系统（包括本地和网络）的改变和补充。
 
-### 一般存储
+#### 一般存储
 ZFS 的变化
 ZFS 已经升级到 OpenZFS 2.1.4 版本。OpenZFS 的发行说明可以在 https://github.com/openzfs/zfs/releases 找到。
 
-### NFS 的变化
+#### NFS 的变化
 两个新的守护进程 rpc.tlsclntd(8) 和 rpc.tlsservd(8)，现在已经默认在 amd64 和 arm64 上建立了。它们提供了对 NFS-over-TLS 的支持，这在题为“实现远程过程调用默认加密”的互联网草案中有所描述。这些守护进程是在指定 WITH_OPENSSL_KTLS 的情况下建立的。它们使用 KTLS 来加密/解密所有的 NFS RPC 消息流量，并通过 X.509 证书提供可选的机器身份验证。2c76eebca71b 59f6f5e23c1a
 
 用于 NFSv4 挂载的默认次要版本已被修改为 NFSv4 服务器支持的最高次要版本。这个默认值可以通过使用 minorversion mount 选项来覆盖。8a04edfdcbd2
@@ -176,13 +176,13 @@ ZFS 已经升级到 OpenZFS 2.1.4 版本。OpenZFS 的发行说明可以在 http
 
 增加了一个名为`vfs.nfsd.srvmaxio`的 sysctl 设置项，可以用来将 NFS 服务器的最大 I/O 大小从 128Kbytes 增加到 2 的任何幂数，直至 1Mbyte。它只能在 nfsd 线程未运行时进行设置，并且通常需要将 kern.ipc.maxsockbuf 增加到至少是首次尝试设置 `vfs.nfsd.srvmaxio` 时生成的控制台日志消息所建议的值。9fb6e613373c
 
-### UFS 更改
+#### UFS 更改
 继 5cc52631b3b8 之后，fsck_ffs(8) 在 preen 模式下对后台 fsck 不起作用，在该模式下 UFS 被调整为没有软更新日志的软更新。修正: fb2feceac34c
 
-## 引导加载器的变化
+### 引导加载器的变化
 本节涵盖了启动加载器、启动菜单以及其他与启动相关的变化。
 
-### 引导加载器的变化
+#### 引导加载器的变化
 UEFI 启动对 amd64 进行了改进。装载器检测加载的内核是否可以处理原地暂存区（非复制模式）。默认是 copy_staging auto。自动检测可以被覆盖，例如：在 copy_staging enable 下，加载器将无条件地把暂存区复制到 2M，而不管内核的能力如何。另外，增长暂存区的代码更加健壮；为了增长，不再需要手工调整和重新编译加载器。(由 FreeBSD 基金会赞助)
 
 boot1 和 loader 在 powerpc64le 上得到了修正。8a62b07bce7
@@ -194,10 +194,10 @@ EC2 镜像现在被默认构建为使用 UEFI 而不是传统 BIOS 启动。请�
 
 增加了对在 AWS 系统管理器参数库中记录 EC2 AMI Ids 的支持。FreeBSD 将使用公共前缀 `/aws/service/freebsd`，导致参数名称看起来像`/aws/service/freebsd/amd64/base/ufs/13.1/RELEASE`。242d1c32e42c (Sponsored by https://www.patreon.com/cperciva)
 
-## 联网
+### 联网
 这一节说明了影响 FreeBSD 网络的变化。
 
-### 一般网络
+#### 一般网络
 对 IPv4 (sub) net (host 0) 上的最低地址的处理方式进行了修改，使得除非这个地址被设置为广播地址，否则数据包不会以广播方式发送。这使得最低的地址对主机来说是可用的。旧的行为可以通过 `net.inet.ip.broadcast_lowest` sysctl 来恢复。请参阅 https://datatracker.ietf.org/doc/draft-schoen-intarea-unicast-lowest-address/ 了解背景信息。3ee882bf21af
 
 ## 关于未来 FreeBSD 发行版的一般说明
