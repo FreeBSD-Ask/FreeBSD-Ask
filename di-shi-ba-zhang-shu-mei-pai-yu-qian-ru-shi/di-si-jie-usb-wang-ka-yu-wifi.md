@@ -18,7 +18,7 @@ wlans_rtwn0="wlan0"
 ifconfig_wlan0="WPA DHCP"
 ```
 
-注意在 /etc/wpa_supplicant.conf 文件中（没有就自己通过 `touch` 命令新建一个）写入：
+注意在 `/etc/wpa_supplicant.conf` 文件中（没有就自己通过 `touch` 命令新建一个）写入：
 
 ```
 network={ ssid=”wifi 名字，最好是英文” psk=”密码” }
