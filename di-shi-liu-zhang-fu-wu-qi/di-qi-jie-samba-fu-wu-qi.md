@@ -1,14 +1,16 @@
-# 设置 samba 为独立服务器
+# samba 服务器
+
+## 设置 samba 为独立服务器
 
 环境：freebsd 11
 
-## 安装 samba
+### 安装 samba
 
 ```
 # pkg install samba413
 ```
 
-## 配置 samba
+### 配置 samba
 
 1. 打开/etc/rc.conf
 
@@ -76,11 +78,11 @@ samba_server_enable="YES"
 192.168.X.X
 ```
 
-# 将Samba设置为域成员
+## 将Samba设置为域成员
 
 环境：freebsd 12
 
-## 配置静态IP地址
+### 配置静态IP地址
 
 使用如下命令配置：
 
@@ -88,7 +90,7 @@ samba_server_enable="YES"
 bsdconfig
 ```
 
-## 配置主机名
+### 配置主机名
 
 ```
 # ee /etc/rc.conf
@@ -96,7 +98,7 @@ bsdconfig
 hostname="fb"
 ```
 
-## 配置 DNS
+### 配置 DNS
 
 ```
 # ee /etc/resolv.conf
@@ -111,7 +113,7 @@ nameserver 127.0.0.1
 options edns0
 ```
 
-## 修改 /etc/sysctl.conf
+### 修改 /etc/sysctl.conf
 
 ```
 # echo "kern.maxfiles=25600" >> /etc/sysctl.conf
@@ -121,7 +123,7 @@ options edns0
 ```
 
 
-## 创建 /etc/krb5.conf
+### 创建 /etc/krb5.conf
 
 ```
 [libdefaults]
@@ -133,14 +135,14 @@ options edns0
 	forwardable = yes
 ```
 
-## 修改 /etc/nsswitch.conf
+### 修改 /etc/nsswitch.conf
 
 ```
 # sed -i -e "s/^passwd:.*/passwd: files winbind/" /etc/nsswitch.conf
 # sed -i -e "s/^group:.*/group: files winbind/" /etc/nsswitch.conf
 ```
 
-##  创建 /usr/local/etc/smb4.conf
+###  创建 /usr/local/etc/smb4.conf
 
 ```
 [global]
@@ -194,7 +196,7 @@ create mode = 0750
 force create mode = 0750
 ```
 
-## 将 samba 加入到域
+### 将 samba 加入到域
 
 ```
 net ads join --no-dns-updates -U administrator
@@ -203,7 +205,7 @@ net ads testjoin
 # On your DC, open the DNS MMC and add an "A" entry for your BSD server so clients can find it
 ```
 
-##  使 samba 启动并设置为开机自启动
+###  使 samba 启动并设置为开机自启动
 
 ```
 # echo "samba_server_enable=YES" >> /etc/rc.conf
@@ -211,7 +213,7 @@ net ads testjoin
 # service samba_server start
 ```
 
-## 测试 Kerberos
+### 测试 Kerberos
 
 ```
 kinit administrator
@@ -225,7 +227,7 @@ klist
 # Dec  6 10:15:39 2021  Feb  4 20:15:39 2021  krbtgt
 ```
 
-##  测试 Winbind
+###  测试 Winbind
 
 ```
 wbinfo -u
@@ -241,13 +243,13 @@ getent group
 # Should return domain groups at the end of the list with 10000+ GIDs
 ```
 
-## 如果 wbinfo 命令显示报错，请执行命令
+### 如果 wbinfo 命令显示报错，请执行命令
 
 ```
 # service samba_server restart
 ```
 
-## 创建共享文件夹
+### 创建共享文件夹
 
 ```
 # mkdir -p /samba/testshare
