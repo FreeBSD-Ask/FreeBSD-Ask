@@ -39,7 +39,7 @@ PasswordAuthentication yes # 设置是否使用口令验证。
 
 方法很简单：
 
-在 /etc/rc.conf 中加入
+在 `/etc/rc.conf` 中加入
 
 ```
 ntpd_enable="YES"
