@@ -4,10 +4,10 @@
 
 ```
 # ee /boot/loader.conf
-···
+```
 
 修改：
 
-···
+```
 autoboot_delay="2"
 ```
