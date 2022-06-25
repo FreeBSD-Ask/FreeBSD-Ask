@@ -9,8 +9,8 @@
 将字体文件复制进 `WindowsFonts` 即可。
 
 ```
-# chmod -R +755 /usr/local/share/fonts/WindowsFonts #刷新权限，然后
-# fc-cache
+# chmod -R +755 /usr/local/share/fonts/WindowsFonts #刷新权限
+# fc-cache 
 ```
 
 即可。
