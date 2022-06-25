@@ -4,7 +4,7 @@ FTP 意为文件传输协议。使用 FTP 服务搭建服务器可以快速传�
 
 ## pure-ftpd（以 MySQL 支持为例）
 
-> **对于 RFC 2640 的支持已经被移除，所以 Windows 下的 FTP 文件会乱码，见** [**https://www.pureftpd.org/project/pure-ftpd/news/**](https://www.pureftpd.org/project/pure-ftpd/news/) **无法解决，同时不建议把 Windows 的系统编码改为 UTF8 ，会造成更多乱码的发生，比如 zip 文件。**
+> **对于 RFC 2640 的支持已经被移除，所以 Windows 下的非英文的文件上传至 FTP 会乱码，见** [**https://www.pureftpd.org/project/pure-ftpd/news/**](https://www.pureftpd.org/project/pure-ftpd/news/) **无法解决，同时不建议把 Windows 的系统编码改为 UTF8 ，会造成更多乱码的发生，比如 zip 文件。**
 >
 > **注意：本示例以 mysql 5.x 为例。**
 
