@@ -13,7 +13,7 @@
 
 ```
 # sysrc rpcbind_enable="YES"
-# sysrc dtspc_enable=="YES"
-# sysrc dtcms_enable=="YES"
+# sysrc dtspc_enable="YES"
+# sysrc dtcms_enable="YES"
 # ln -s /usr/local/dt/bin/Xsession ~/.Xsession 
 ```
