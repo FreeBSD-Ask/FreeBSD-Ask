@@ -1,6 +1,6 @@
-环境：freebsd 11
-
 # 设置 samba 为独立服务器
+
+环境：freebsd 11
 
 ## 安装 samba
 
