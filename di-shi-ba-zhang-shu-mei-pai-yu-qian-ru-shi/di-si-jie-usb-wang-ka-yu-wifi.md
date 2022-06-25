@@ -4,24 +4,24 @@
 
 如果你购买了上述无线网卡，想实现开机自动连接 wifi 的功能，那也非常简单。
 
-方法：`/boot/loader.conf` 中写入
+方法：`/boot/loader.conf` 中写入：
 
 ```
 rtwn_usb_load="YES"
 legal.realtek.license_ack=1
 ```
 
-在 /etc/rc.conf 中写入
+在 `/etc/rc.conf` 中写入：
 
 ```
 wlans_rtwn0="wlan0"
 ifconfig_wlan0="WPA DHCP"
 ```
 
-注意在 /etc/wpa_supplicant.conf 文件中（没有就自己通过 `touch` 命令新建一个）写入
+注意在 /etc/wpa_supplicant.conf 文件中（没有就自己通过 `touch` 命令新建一个）写入：
 
 ```
-network={ ssid=”wifi 名字，别搞什么中文” psk=”密码” }
+network={ ssid=”wifi 名字，最好是英文” psk=”密码” }
 ```
 
 保存重启即可。能够实现开机自动连接 wifi 。
