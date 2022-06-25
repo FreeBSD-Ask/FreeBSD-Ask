@@ -5,6 +5,8 @@
 >**注意**
 >
 >**当前网站部署域名为 <https://book.bsdcn.org>，如果当前使用的不是这个域名，请切换到该域名。其他域名不保证可用性。**
+>
+>**For the English version, please visit <https://mfga.bsdcn.org>.**
 
 ## 概述
 
