@@ -129,7 +129,7 @@ please read your mail using the 'mail' command.
 
 恭喜！系统已成功安装，重启后可进入系统。
 
-# 附录：自定义分区
+## 附录：自定义分区
 
 对于尝鲜的朋友，假设有 32GB 的容量，可设分区： `swap 2GB` ，`/`为剩下的全部容量。
 
