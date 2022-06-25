@@ -144,7 +144,7 @@ please read your mail using the 'mail' command.
 输入 `p m` 来显示硬盘。其它选项如下表：
 
 | 代码  | 作用     |
-| --- | ------ |
+| :---: | :------: |
 | p m | 查看分区大小 |
 | a   | 增加分区   |
 | d   | 删除分区   |
