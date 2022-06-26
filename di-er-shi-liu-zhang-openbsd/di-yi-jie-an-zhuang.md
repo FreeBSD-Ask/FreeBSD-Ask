@@ -2,7 +2,7 @@
 
 ## 下载镜像
 
-以 OpenBSD 7.1，AMD 64 架构为例，访问
+以 OpenBSD 7.1，AMD 64 架构为例，访问：
 
 <https://cdn.openbsd.org/pub/OpenBSD/7.1/amd64>
 
