@@ -4,7 +4,7 @@
 
 二者的使用都需要先安装 Linux 兼容层，见 第六节。字体问题见 第八节
 
-## 1、国内版
+## 国内版
 
 linux-wps-office-zh_CN
 
@@ -15,7 +15,7 @@ linux-wps-office-zh_CN
 ```
 
 
-## 2、国际版
+## 国际版
 
 linux-wps-office
 
@@ -25,4 +25,12 @@ linux-wps-office
 
 ```
 # cd /usr/ports/editors/linux-wps-office/ && make install clean #如要默认请添加 BATCH=yes
+```
+
+## 故障排除
+
+KDE5 下 WPS 可能会无法启动。因为 WPS 启动文件调用的是 bash shell。所以安装 bash 后就可以正常启动了。
+
+```
+# pkg install bash
 ```
