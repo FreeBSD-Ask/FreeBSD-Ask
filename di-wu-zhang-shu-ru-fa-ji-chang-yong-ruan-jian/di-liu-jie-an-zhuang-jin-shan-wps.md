@@ -29,8 +29,23 @@ linux-wps-office
 
 ## 故障排除
 
-KDE5 下 WPS 可能会无法启动。因为 WPS 启动文件调用的是 bash shell。所以安装 bash 后就可以正常启动了：
+ - KDE5 下 WPS 可能会无法启动。
+
+因为 WPS 启动文件调用的是 bash shell。所以安装 bash 后就可以正常启动了：
 
 ```
 # pkg install bash
 ```
+
+- fcitx 5 在 WPS 下无法使用
+
+这是 WPS 的一个已知 bug：
+
+参考：
+
+<https://bbs.archlinuxcn.org/viewtopic.php?id=10984>
+
+<https://github.com/fcitx/fcitx5/issues/83>
+
+<https://plumz.me/archives/12331/>
+
