@@ -76,6 +76,8 @@ isNijikawa
 
 地铁卡
 
+Personal Blocklist
+
 [星不萌](https://www.moebsd.cn)
 
 [qinghecyn](https://github.com/qinghecyn)
