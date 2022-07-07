@@ -75,7 +75,7 @@ root@ykla:/home/ykla # rm /usr/ports/
 
 - 还原快照
 
-还原时不能递归还原快照，必须挨个还原（如果你有更好的方案请告诉我们,网络上要一些脚本可用）：
+还原时不能递归还原快照，必须挨个还原（如果你有更好的方案请告诉我们,网络上有一些脚本可用）：
 
 ```
 root@ykla:/home/ykla # zfs rollback -rf zroot@test
