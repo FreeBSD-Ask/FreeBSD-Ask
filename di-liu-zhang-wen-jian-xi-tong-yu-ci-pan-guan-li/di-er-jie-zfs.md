@@ -80,15 +80,15 @@ root@ykla:/home/ykla # rm /usr/ports/
 与虚拟机快照有所不同，在缺省情况下，`zfs rollback` 命令无法回滚到除最新快照以外的快照（[参考手册](https://docs.oracle.com/cd/E19253-01/819-7065/gbcxk/index.html)），除非使用`r`，但这会删除该快照创建后的所有快照。
 
 ```
-root@ykla:/home/ykla # zfs rollback -rf zroot@test
-root@ykla:/home/ykla # zfs rollback -rf zroot/ROOT@test 
-root@ykla:/home/ykla # zfs rollback -rf zroot/ROOT/default@test
-root@ykla:/home/ykla # zfs rollback -rf zroot/tmp@test
-root@ykla:/home/ykla # zfs rollback -rf zroot/usr@test
-root@ykla:/home/ykla # zfs rollback -rf zroot/usr/home@test
-root@ykla:/home/ykla # zfs rollback -rf zroot/usr/ports@test
-root@ykla:/home/ykla # zfs rollback -rf zroot/var@test
-root@ykla:/home/ykla # zfs rollback -rf zroot/var/log@test
+root@ykla:/home/ykla # zfs rollback -r zroot@test
+root@ykla:/home/ykla # zfs rollback -r zroot/ROOT@test 
+root@ykla:/home/ykla # zfs rollback -r zroot/ROOT/default@test
+root@ykla:/home/ykla # zfs rollback -r zroot/tmp@test
+root@ykla:/home/ykla # zfs rollback -r zroot/usr@test
+root@ykla:/home/ykla # zfs rollback -r zroot/usr/home@test
+root@ykla:/home/ykla # zfs rollback -r zroot/usr/ports@test
+root@ykla:/home/ykla # zfs rollback -r zroot/var@test
+root@ykla:/home/ykla # zfs rollback -r zroot/var/log@test
 ```
 
 
