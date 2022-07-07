@@ -12,7 +12,10 @@
 
 ## ZFS 快照与还原
 
+
 ZFS 快照类似于虚拟机快照。
+
+- 创建快照
 
 默认创建分区（Auto ZFS）如下：
 
@@ -35,43 +38,71 @@ zroot/var/mail        96K   440G       96K  /var/mail
 zroot/var/tmp         96K   440G       96K  /var/tmp
 ```
 
-快照 `/`（~经测试，在上述默认分区下代表快照整个 ZFS 文件系统~，`start1` 是随便起的名字）：
+快照 `zroot`（经测试，在上述默认分区下代表快照整个 ZFS 文件系统，`-r` 即递归创建快照，`test` 是随便起的名字）：
 
 ```
-root@ykla:/ # zfs snapshot zroot/ROOT/default@start1
-root@ykla:/ # zfs list -t snapshot
-NAME                        USED  AVAIL     REFER  MOUNTPOINT
-zroot@start                   0B      -       96K  -
-zroot/ROOT/default@start1     0B      -     1004M  -
+root@ykla:/home/ykla # zfs snapshot -r zroot@test
+root@ykla:/home/ykla # zfs list -t snap
+NAME                      USED  AVAIL     REFER  MOUNTPOINT
+zroot@test                  0B      -       96K  -
+zroot/ROOT@test             0B      -       96K  -
+zroot/ROOT/default@test     0B      -     7.18G  -
+zroot/tmp@test              0B      -      176K  -
+zroot/usr@test              0B      -       96K  -
+zroot/usr/home@test         0B      -     31.1M  -
+zroot/usr/ports@test        0B      -     1.98G  -
+zroot/var@test              0B      -       96K  -
+zroot/var/log@test          0B      -      444K  -
+root@ykla:/home/ykla # ls /usr/ports/
+CHANGES          archivers/       emulators/       misc/            textproc/
+CONTRIBUTING.md  astro/           finance/         multimedia/      ukrainian/
+COPYRIGHT        audio/           french/          net-im/          vietnamese/
+GIDs             base/            ftp/             net-mgmt/        www/
+INDEX-13         benchmarks/      games/           net-p2p/         x11-clocks/
+Keywords/        biology/         german/          net/             x11-drivers/
+MOVED            cad/             graphics/        news/            x11-fm/
+Makefile         chinese/         hebrew/          polish/          x11-fonts/
+Mk/              comms/           hungarian/       ports-mgmt/      x11-servers/
+README           converters/      irc/             portuguese/      x11-themes/
+Templates/       databases/       japanese/        print/           x11-toolkits/
+Tools/           deskutils/       java/            russian/         x11-wm/
+UIDs             devel/           korean/          science/         x11/
+UPDATING         distfiles/       lang/            security/        
+accessibility/   dns/             mail/            shells/          
+arabic/          editors/         math/            sysutils/        
+root@ykla:/home/ykla # rm /usr/ports/
 ```
 
+- 还原快照
 
-快照还原验证：
-
-```
-root@ykla:/ # rm 1.txt
-root@ykla:/ # ls
-.cshrc		boot		home		mnt		root		usr
-.profile	dev		lib		net		sbin		var
-COPYRIGHT	entropy		libexec		proc		sys		zroot
-bin		etc		media		rescue		tmp
-root@ykla:/ # zfs rollback -r zroot/ROOT/default@start1
-root@ykla:/ # ls
-.cshrc		bin		etc		media		rescue		tmp
-.profile	boot		home		mnt		root		usr
-1.txt		dev		lib		net		sbin		var
-COPYRIGHT	entropy		libexec		proc		sys		zroot
-```
-
-销毁快照：
+还原时不能递归还原快照，必须挨个还原（如果你有更好的方案请告诉我们,网络上要一些脚本可用）：
 
 ```
-root@ykla:/ # zfs destroy zroot@start 
-root@ykla:/ # zfs list -t snap
-NAME                        USED  AVAIL     REFER  MOUNTPOINT
-zroot/ROOT/default@start1     8K      -     1004M  -
-root@ykla:/ # 
+root@ykla:/home/ykla # zfs rollback -rf zroot@test
+root@ykla:/home/ykla # zfs rollback -rf zroot/ROOT@test 
+root@ykla:/home/ykla # zfs rollback -rf zroot/ROOT/default@test
+root@ykla:/home/ykla # zfs rollback -rf zroot/tmp@test
+root@ykla:/home/ykla # zfs rollback -rf zroot/usr@test
+root@ykla:/home/ykla # zfs rollback -rf zroot/usr/home@test
+root@ykla:/home/ykla # zfs rollback -rf zroot/usr/ports@test
+root@ykla:/home/ykla # zfs rollback -rf zroot/var@test
+root@ykla:/home/ykla # zfs rollback -rf zroot/var/log@test
 ```
+
+与虚拟机快照有所不同，zfs 快照在缺省情况下，`zfs rollback` 命令无法回滚到除最新快照以外的快照（[参考手册](https://docs.oracle.com/cd/E19253-01/819-7065/gbcxk/index.html)），除非使用`r`，但这会删除该快照创建后的所有快照。
+
+- 销毁快照
+
+销毁快照（销毁的时候可以使用`r`递归销毁）：
+
+```
+root@ykla:/home/ykla # zfs destroy -r zroot@test
+root@ykla:/home/ykla # zfs list -t snap
+no datasets available
+root@ykla:/home/ykla # 
+```
+
+>`snapshot`在命令中可以缩写为`snap`。
 
 ## 注意事项
 
