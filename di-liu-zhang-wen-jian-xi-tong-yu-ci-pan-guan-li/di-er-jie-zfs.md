@@ -77,6 +77,8 @@ root@ykla:/home/ykla # rm /usr/ports/
 
 还原时不能递归还原快照，必须挨个还原（如果你有更好的方案请告诉我们,网络上有一些脚本可用）：
 
+与虚拟机快照有所不同，在缺省情况下，`zfs rollback` 命令无法回滚到除最新快照以外的快照（[参考手册](https://docs.oracle.com/cd/E19253-01/819-7065/gbcxk/index.html)），除非使用`r`，但这会删除该快照创建后的所有快照。
+
 ```
 root@ykla:/home/ykla # zfs rollback -rf zroot@test
 root@ykla:/home/ykla # zfs rollback -rf zroot/ROOT@test 
@@ -92,7 +94,6 @@ root@ykla:/home/ykla # zfs rollback -rf zroot/var/log@test
 
 - 销毁快照
 
-与虚拟机快照有所不同，zfs 快照在缺省情况下，`zfs rollback` 命令无法回滚到除最新快照以外的快照（[参考手册](https://docs.oracle.com/cd/E19253-01/819-7065/gbcxk/index.html)），除非使用`r`，但这会删除该快照创建后的所有快照。
 
 销毁快照（销毁的时候可以使用`r`递归销毁）：
 
