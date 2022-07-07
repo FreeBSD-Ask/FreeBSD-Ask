@@ -35,7 +35,7 @@ zroot/var/mail        96K   440G       96K  /var/mail
 zroot/var/tmp         96K   440G       96K  /var/tmp
 ```
 
-快照 `/`（经测试，在上述默认分区下代表快照整个 ZFS 文件系统，`start1` 是随便起的名字）：
+快照 `/`（~经测试，在上述默认分区下代表快照整个 ZFS 文件系统~，`start1` 是随便起的名字）：
 
 ```
 root@ykla:/ # zfs snapshot zroot/ROOT/default@start1
