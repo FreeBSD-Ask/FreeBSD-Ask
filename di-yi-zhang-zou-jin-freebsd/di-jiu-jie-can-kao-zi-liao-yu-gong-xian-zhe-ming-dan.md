@@ -76,7 +76,7 @@ isNijikawa
 
 地铁卡
 
-Personal Blocklist
+liguangsheng
 
 [星不萌](https://www.moebsd.cn)
 
