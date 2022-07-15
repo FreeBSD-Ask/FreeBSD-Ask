@@ -96,7 +96,14 @@
 
 ### 其他
 
-[FreeBSD Handbook 2022 中文翻译项目](https://handbook.bsdcn.org)
+|资源|链接|
+|:---:|:---:|
+|Telegram 群|https://t.me/freebsdba|
+|QQ 群|319271312|
+|Handbook 翻译|https://handbook.bsdcn.org|
+|FreeBSD 入门书籍|https://book.bsdcn.org|
+|FreeBSD 中文论坛|https://bbs.bsdcn.org|
+
 
 微信公众号: freebsdzh （扫码关注）
 
