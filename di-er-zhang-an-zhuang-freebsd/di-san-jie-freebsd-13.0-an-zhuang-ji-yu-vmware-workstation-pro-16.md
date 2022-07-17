@@ -34,13 +34,13 @@ VMware Workstation 16 Player 是个人免费使用的，你也可以选择此版
 
 ### 显卡驱动
 
->**Vmware 16.2.2 build-19200509 目前无法缩放屏幕，已经报告bug：<https://gitlab.freedesktop.org/xorg/app/appres/-/issues/1>、<https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=262118>** 正常版本可至群文件下载
-
-VMware 自动缩放屏幕请安装显卡驱动，即：
+VMware 自动缩放屏幕请安装显卡驱动和虚拟机增强工具，即：
 
 ```
-# pkg install xf86-video-vmware
+# pkg install xf86-video-vmware open-vm-tools
 ```
+
+安装完毕后无需任何多余配置即可实现屏幕自动缩放。
 
 > wayland 下也需要安装该驱动。
 
@@ -49,29 +49,19 @@ VMware 自动缩放屏幕请安装显卡驱动，即：
 
 ### 虚拟机增强工具
 
-如果没有桌面：
-
-```
-# pkg install open-vm-tools-nox11
-```
-
 如果有桌面
 
 ```
 # pkg install open-vm-tools
 ```
 
+如果没有桌面：
+
+```
+# pkg install open-vm-tools-nox11
+```
+
 具体配置
-
-将下面几行加入 `/etc/rc.conf`
-
-```
-vmware_guest_vmblock_enable="YES"
-vmware_guest_vmhgfs_enable="YES"
-vmware_guest_vmmemctl_enable="YES"
-vmware_guest_vmxnet_enable="YES" 
-vmware_guestd_enable="YES"
-```
 
 编辑 `/boot/loader.conf`
 
