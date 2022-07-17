@@ -96,3 +96,7 @@ fusefs_load="YES"
 ```
 
 **注意：由于 BUG，FreeBSD 11/12 可能在 VmMare 的 UEFI 环境下无法启动。经测试 13.0 正常启动。**
+
+>**提示**
+>
+  >在使用 Windows 远程桌面或者其他 XRDP 工具远程另一台 Windows 桌面，并使用其上面运行的 Vmware 虚拟机操作 FreeBSD 时，鼠标通常会变得难以控制。
