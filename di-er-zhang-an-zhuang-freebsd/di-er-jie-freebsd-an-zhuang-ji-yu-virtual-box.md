@@ -1,6 +1,5 @@
 # 第二节 FreeBSD 13.0 安装——基于 Virtual Box
 
-**注意：不推荐新手使用此虚拟机，因为需要踩的坑比较多。**
 
 ## 下载 VirtualBox
 
