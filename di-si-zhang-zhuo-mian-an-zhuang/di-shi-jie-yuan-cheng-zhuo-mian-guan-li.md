@@ -128,3 +128,7 @@ export LANG=zh_CN.UTF-8
 ```
 
 即可。
+
+![](../.gitbook/assets/kde1.png)
+
+![](../.gitbook/assets/kde2.png)
