@@ -117,7 +117,13 @@ export LANG=zh_CN.UTF-8
 # rdesktop windows 设备 ip 
 ```
 
-首次登陆设备会有安全提示，输入 `yes`，回车后远程桌面窗口就会弹出：
+首次登陆设备会有安全提示，输入 `yes`，回车后远程桌面窗口就会弹出.
+
+
+![](../.gitbook/assets/kde1.png)
+
+![](../.gitbook/assets/kde2.png)
+
 
 ## anydesk
 
@@ -128,7 +134,3 @@ export LANG=zh_CN.UTF-8
 ```
 
 即可。
-
-![](../.gitbook/assets/kde1.png)
-
-![](../.gitbook/assets/kde2.png)
