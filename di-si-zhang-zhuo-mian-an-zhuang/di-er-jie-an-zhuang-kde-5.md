@@ -33,8 +33,8 @@ proc            /proc           procfs  rw      0       0
 
 
 ```
-sysrc dbus_enable="YES"
-sysrc sddm_enable="YES"
+# sysrc dbus_enable="YES"
+# sysrc sddm_enable="YES"
 ```
 
 然后
