@@ -6,7 +6,7 @@
 
 xorg 完整包: xorg 
 
-xorg 最小化包: org-minimal（不建议）
+xorg 最小化包: xorg-minimal（不建议）
 
 ### 安装
 
