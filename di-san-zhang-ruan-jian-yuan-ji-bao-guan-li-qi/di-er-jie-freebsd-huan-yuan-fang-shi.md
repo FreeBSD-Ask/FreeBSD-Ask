@@ -183,6 +183,12 @@ ports 下载路径是 `/usr/ports/distfiles`
 **获取portsnap更新**
 
 ```
+# portsnap auto #同时支持命令行和 cron
+```
+
+或
+
+```
 # portsnap fetch extract
 ```
 

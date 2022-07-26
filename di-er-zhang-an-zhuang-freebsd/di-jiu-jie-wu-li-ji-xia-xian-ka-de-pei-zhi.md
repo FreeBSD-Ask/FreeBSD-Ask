@@ -36,7 +36,7 @@ FreeBSD 已从 Linux 移植了显卡驱动，理论上，A 卡 N 卡均在 AMD64
 
 >**故障排除：**
 >
->**如果提示 `/usr/ports/xxx no such xxx` 找不到路径，请先获取 portsnap：`portsnap fetch extract`。portsnap 换源问题请看前文。**
+>**如果提示 `/usr/ports/xxx no such xxx` 找不到路径，请先获取 portsnap：`portsnap auto`。portsnap 换源问题请看前文。**
 
 ### 安装驱动——复杂版本
 

@@ -9,7 +9,7 @@
 
 ### 首先获取 portsnap
 
-`# portsnap fetch extract`
+`# portsnap auto`
 
 ### 使用 whereis 查询软件路径
 
@@ -81,9 +81,9 @@ DISABLE_SIZE=yes
 
 `# make BATCH=yes fetch-recursive`
 
-升级 ports collection
+升级 ports
 
-`# portsnap fetch extract`
+`# portsnap auto
 
 ports 编译的软件也可以转换为 pkg 包
 
@@ -91,10 +91,10 @@ ports 编译的软件也可以转换为 pkg 包
 
 ### FreeBSD 包升级管理工具
 
-首先更新 Ports 树
+首先更新 Ports 
 
 ```
-# portsnap fetch update
+# portsnap auto
 ```
 
 然后列出过时 Ports 组件

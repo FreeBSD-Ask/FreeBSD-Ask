@@ -35,7 +35,7 @@ PasswordAuthentication yes # 设置是否使用口令验证。
 # server sshd restart
 ```
 
-然后就是时间设置问题，树莓派没有板载的纽扣电池确保 CMOS 时钟准确。所以完全依靠 NTP 服务来校正时间，如果时间不准确，将影响很多服务的运行，比如无法执行 portsnap fetch 命令。
+然后就是时间设置问题，树莓派没有板载的纽扣电池确保 CMOS 时钟准确。所以完全依靠 NTP 服务来校正时间，如果时间不准确，将影响很多服务的运行，比如无法执行 portsnap auto 命令。
 
 方法很简单：
 
