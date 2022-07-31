@@ -108,6 +108,7 @@ deb-src http://mirror.bjtu.edu.cn/ubuntu/ focal-security main restricted univers
 进入 Ubuntu 兼容层，开始更新系统，安装常用软件：
 
 ```
+# LANG=C #设定字符集，防止错误
 # apt update && apt upgrade && apt install nano wget # 此时已经位于 Ubuntu 兼容层了。
 ```
 
