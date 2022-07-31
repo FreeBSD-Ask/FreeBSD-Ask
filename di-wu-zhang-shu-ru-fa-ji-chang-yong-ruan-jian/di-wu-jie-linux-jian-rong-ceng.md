@@ -117,6 +117,16 @@ deb-src http://mirror.bjtu.edu.cn/ubuntu/ focal-security main restricted univers
 ```
 # xhost +local：#此时处于 FreeBSD 系统！
 ```
+
+#### 不知道程序的命令行启动命令是什么？
+
+请按以下方法依次查找(以 `gedit` 为例)：
+
+ - 直接执行软件包名 `# gedit`；
+ - `whereis 软件包名`，定位后执行。`whereis gedit`；
+ - 通过软件图标定位，找到路径 `/usr/share/applications`,根据软件包名找到软件，用文本编辑器（如 `ee`、`nano`）打开。（软件图标本质上是一个文本文件，不是软连接或者图片），找到程序运行的命令复制到终端运行即可；
+ - 通过 `find` 命令全局查找 `# find / —name 软件包名`，`# find / —name gedit`。
+
 ### 示例：运行 Chrome
 
 ```
