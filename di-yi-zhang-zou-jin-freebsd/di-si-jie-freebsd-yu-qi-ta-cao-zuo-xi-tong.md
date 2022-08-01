@@ -1,18 +1,5 @@
 # 第四节 FreeBSD 与其他操作系统
 
-基本对比
-
-|操作系统|发布/生命周期（主要版本）|主要包管理器（命令）|许可证（主要）|工具链|shell|桌面|
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|Ubuntu|[2 年/10 年](https://ubuntu.com/about/release-cycle)|[apt](https://ubuntu.com/server/docs/package-management)|[GNU](https://ubuntu.com/legal/intellectual-property-policy)|gcc|bash|Gnome|
-|Gentoo Linux|滚动更新|[Portage（emerge）](https://wiki.gentoo.org/wiki/Portage)|GNU|gcc|bash|可选|
-|Arch Linux|滚动更新|[pacman](https://wiki.archlinux.org/title/pacman)|GNU|gcc|bash|可选|
-|RHEL|[3/最长 12 年](https://access.redhat.com/zh_CN/support/policy/updates/errata)|[RPM（yum、dnf）](https://www.redhat.com/sysadmin/how-manage-packages)|GNU|gcc|bash|Gnome|
-|FreeBSD|[约 2.5/5 年](https://www.freebsd.org/security/)|pkg/ports|BSD|clang|csh/sh|可选|
-|Windows|[不固定](https://docs.microsoft.com/zh-cn/lifecycle/faq/windows)|可选|专有|可选|powershell|Windows 桌面|
-|MacOS|1 年/约 5 年|无|[专有](https://www.apple.com/legal/sla/)|clang|zsh|Aqua|
-
-
 ## 什么是 FreeBSD？
 
 BSD 最初是由 University of California, Berkeley 研发的，意为`Berkeley Software Distribution`。
@@ -62,3 +49,16 @@ macOS & iOS 在一定程度上来说，都基于 FreeBSD 。可见 FreeBSD 的 G
 至于安全性，很多人认为 UNIX-like 不需要杀毒软件，但是事实上这种观点是不正确的，当你发现自己中毒的时候，已经成为了病毒的培养基。但是目前来说，FreeBSD 远比 Windows 安全。
 
 至于游戏什么的，已知 Steam 运行正常，运行 Minecraft 这种 java 软件也没毛病。
+
+
+## 基本对比
+
+|操作系统|发布/生命周期（主要版本）|主要包管理器（命令）|许可证（主要）|工具链|shell|桌面|
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+|Ubuntu|[2 年/10 年](https://ubuntu.com/about/release-cycle)|[apt](https://ubuntu.com/server/docs/package-management)|[GNU](https://ubuntu.com/legal/intellectual-property-policy)|gcc|bash|Gnome|
+|Gentoo Linux|滚动更新|[Portage（emerge）](https://wiki.gentoo.org/wiki/Portage)|GNU|gcc|bash|可选|
+|Arch Linux|滚动更新|[pacman](https://wiki.archlinux.org/title/pacman)|GNU|gcc|bash|可选|
+|RHEL|[3/最长 12 年](https://access.redhat.com/zh_CN/support/policy/updates/errata)|[RPM（yum、dnf）](https://www.redhat.com/sysadmin/how-manage-packages)|GNU|gcc|bash|Gnome|
+|FreeBSD|[约 2.5/5 年](https://www.freebsd.org/security/)|pkg/ports|BSD|clang|csh/sh|可选|
+|Windows|[不固定](https://docs.microsoft.com/zh-cn/lifecycle/faq/windows)|可选|专有|可选|powershell|Windows 桌面|
+|MacOS|1 年/约 5 年|无|[专有](https://www.apple.com/legal/sla/)|clang|zsh|Aqua|
