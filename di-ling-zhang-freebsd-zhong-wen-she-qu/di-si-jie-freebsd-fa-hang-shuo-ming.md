@@ -50,7 +50,7 @@ Lorenzo Salvadore，代表现状报告小组。
    - 新的蓝牙®配置守护程序：blued
    - OpenVPN DCO
    - 无线更新
-   - 共享的页面地址随机化
+   - 共享页地址随机化
  - 架构
    - 支持恩智浦 DPAA2
    - 关于 arm64 及其他的中型超级页
@@ -194,16 +194,16 @@ FreeBSD 基金会在全球范围内赞助了许多会议、活动和峰会。这
 请看我们上一季度所做的一些宣传和教育工作：
 
  - 我们获得了 2022 年 10 月 30 日至 11 月 2 日在北卡罗来纳州罗利举行的 All Things Open 的展位和非营利性赞助商地位。
- - 我们在7月28-30 日在加州洛杉矶举行的 Scale 19x 上的展位和研讨会已经确定。 FreeBSD 研讨会将于2022 年 7月 29 日星期五举行，你可以到基金会的 502 号展位参观。
+ - 我们在 7 月 28-30 日在加州洛杉矶举行的 Scale 19x 上的展位和研讨会已经确定。 FreeBSD 研讨会将于 2022 年 7 月 29 日星期五举行，你可以到基金会的 502 号展位参观。
  - 确认我们是 2022 年 9 月 15-18 日在奥地利维也纳举行的 EuroBSDcon 的银牌赞助商
  - 赞助并帮助组织 2022 年 6 月 16-17 日的FreeBSD开发者峰会。视频可以在 FreeBSD 项目的 YouTube 频道上看到。
- - 庆祝2022年6月19日的FreeBSD日，以及接下来的整个一周。
+ - 庆祝 2022 年 6 月 19 日的 FreeBSD 日，以及接下来的整个一周。
  - 我们获得了 7 月 30 日至 31 日在台湾举行的 COSCUP 之友级别的赞助。
  - 发布 FreeBSD 基金会 [2022 年春季更新](https://freebsdfoundation.org/news-and-events/newsletter/freebsd-foundation-spring-2022-update/)
  - 新的博客文章
   - [我们来谈谈基金会的资金问题](https://freebsdfoundation.org/blog/lets-talk-about-foundation-funding/)
   - [新董事会成员访谈：Cat Allman](https://freebsdfoundation.org/blog/new-board-member-interview-cat-allman/)
-  - [欢迎FreeBSD的谷歌代码之夏参与者](https://freebsdfoundation.org/blog/welcome-freebsd-google-summer-of-code-participants/)  
+  - [欢迎 FreeBSD 的谷歌代码之夏参与者](https://freebsdfoundation.org/blog/welcome-freebsd-google-summer-of-code-participants/)  
   - [13.1 版本中的 FreeBSD 基金会工作](https://freebsdfoundation.org/blog/freebsd-foundation-work-in-the-13-1-release/)  
   - [基金会选举新的官员，采访即将离任的董事会成员](https://freebsdfoundation.org/blog/foundation-elects-new-officers-interviews-outgoing-board-members/)  
   - [帮助我们庆祝整个星期的 FreeBSD 日](https://freebsdfoundation.org/blog/help-us-celebrate-freebsd-day-all-week-long/)  
@@ -213,9 +213,9 @@ FreeBSD 基金会在全球范围内赞助了许多会议、活动和峰会。这
    - [用 VirtualBox 安装FreeBSD (Mac/Windows) - 视频指南](https://freebsdfoundation.org/freebsd/how-to-guides/installing-freebsd-with-virtualbox-video-guide/)  
    - [FreeBSD 操作系统简介 - 视频指南](https://freebsdfoundation.org/freebsd-project/resources/an-introduction-to-the-freebsd-operating-system-video/)  
    - [在 FreeBSD 上安装一个桌面环境 - 视频指南](https://freebsdfoundation.org/freebsd-project/resources/installing-a-desktop-environment-on-freebsd-video-guide/)  
-   - [在 FreeBSD 上安装一个 ports - 视频指南](https://freebsdfoundation.org/freebsd-project/resources/installing-a-port-on-freebsd-video-guide/)  
+   - [在 FreeBSD 上安装一个 port - 视频指南](https://freebsdfoundation.org/freebsd-project/resources/installing-a-port-on-freebsd-video-guide/)  
 
-我们通过出版专业的 FreeBSD 杂志来帮助世界了解 FreeBSD。正如我们之前提到的，FreeBSD 杂志现在是一份免费出版物。了解更多信息并访问最新的期刊：https://www.FreeBSDfoundation.org/journal/。
+我们通过出版专业的 FreeBSD 杂志来帮助世界了解 FreeBSD。正如我们之前提到的，FreeBSD 杂志现在是一份免费出版物。了解更多信息并访问最新的期刊：https://www.FreeBSDfoundation.org/journal/ 。
 
 你可以在 https://www.FreeBSDfoundation.org/news-and-events/ 找到更多关于我们参加的活动和即将举行的活动。
 
@@ -272,7 +272,7 @@ FreeBSD 集群管理团队的成员负责管理该项目所依赖的机器，以
  - 与 PowerPC 团队合作，改进软件包构建者、通用和参考机器。
  - 计划硬件更新，并修复各站点的杂项故障
  - 改善成套建筑的基础设施
- - 审查服务监狱和服务管理员的运作情况
+ - 审查服务 jail 和服务管理员的运作情况
  - 与 doceng@ 合作，改善 https://www.freebsd.org 和 https://docs.freebsd.org 的部署 。
  - 改进网络服务架构
  - 完善集群备份计划
@@ -290,7 +290,7 @@ FreeBSD Jenkins Instance 网址：https://ci.FreeBSD.org
 
 FreeBSD CI 软件存档 网址：https://artifact.ci.FreeBSD.org 
 
-FreeBSD Jenkins wiki 网址：https://wiki.freebsd.org/Jenkins Hosted CI wiki URL: https://wiki.freebsd.org/HostedCI
+FreeBSD Jenkins wiki 网址：https://wiki.freebsd.org/Jenkins Hosted CI wiki 网址：https://wiki.freebsd.org/HostedCI
 
 第三方软件 CI 网址：https://wiki.freebsd.org/3rdPartySoftwareCI
 
@@ -304,7 +304,7 @@ dev-ci 邮件列表 网址：https://lists.freebsd.org/subscription/dev-ci
 
 联系：Li-Wen Hsu lwhsu@FreeBSD.org
 
-联系：freebsd-testing 邮件列表
+联系：[freebsd-testing 邮件列表](https://lists.freebsd.org/mailman/listinfo/freebsd-testing)
 
 联系：IRC EFNet 平台上的 #freebsd-ci 
 
@@ -321,7 +321,7 @@ FreeBSD CI 团队负责维护 FreeBSD 项目的持续集成系统。CI 系统检
  - 设计和实施提交前的 CI 构建和测试（以支持[工作流程工作组](https://gitlab.com/bsdimp/freebsd-workflow)的工作）
  - 设计和实施 CI 集群的使用，以建立发布工程的工件。
  - 测试和合并 [FreeBSD-ci repo](https://github.com/freebsd/freebsd-ci/pulls) 中的提交请求
- - 简化贡献者和开发者的CI/测试环境设置
+ - 简化贡献者和开发者的 CI/测试环境设置
  - 设置 CI 阶段环境，并将实验性工作放在上面
  - 整理 freebsd-ci 版本库中的脚本，为合并到 src 版本库做准备
  - 更新 wiki 上的文件 
@@ -335,7 +335,7 @@ FreeBSD CI 团队负责维护 FreeBSD 项目的持续集成系统。CI 系统检
  - 计划运行 ztest 测试
  - 增加更多外部工具链相关的工作
  - 提高硬件实验室的成熟度，增加更多测试用硬件
- - 帮助更多的软件在其CI管道中获得 FreeBSD 支持（Wiki页面:[3rdPartySoftwareCI](https://wiki.freebsd.org/3rdPartySoftwareCI), [HostedCI](https://wiki.freebsd.org/HostedCI)）
+ - 帮助更多的软件在其 CI 管道中获得 FreeBSD 支持（Wiki页面:[3rdPartySoftwareCI](https://wiki.freebsd.org/3rdPartySoftwareCI), [HostedCI](https://wiki.freebsd.org/HostedCI)）
  - 与托管 CI 供应商合作以获得更好的 FreeBSD 支持
 
 更多的 WIP 信息请参见 [freebsd-testing@相关票据](https://preview.tinyurl.com/y9maauwg)，请不要犹豫，加入我们的努力吧!
@@ -360,11 +360,11 @@ Ports Tarball 网址：http://ftp.freebsd.org/pub/FreeBSD/ports/ports/
 
 联系：René Ladan portmgr-secretary@FreeBSD.org
 
-联系：FreeBSDPorts 管理团队 portmgr@FreeBSD.org
+联系：FreeBSD Ports 管理团队 portmgr@FreeBSD.org
 
 Ports 管理团队负责监督 Ports 的整体方向、建筑配套和人事事务。以下是上一季度发生的情况。
 
-Port 的数量略高于 30,000。在上一季度， "main" 分支有 151 个提交者提交了 9137 个代码， "2022Q2" 分支有 61 个提交者提交了 589 个代码。在写这篇文章的时候，有 2700 个开放 port 的 PR，其中 682 个是未分配的。与上一季度相比， 提交活动略有减少， 而 PR 的数量则保持不变。注意：Freshports 似乎大幅多计了。本季度的 port 数是以不同的方式得出的，与上一季度的 port 数没有可比性。
+Port 的数量略高于 30,000。在上一季度，“main”分支有 151 个提交者提交了 9137 个代码， "2022Q2" 分支有 61 个提交者提交了 589 个代码。在写这篇文章的时候，有 2700 个开放 port 的 PR，其中 682 个是未分配的。与上一季度相比， 提交活动略有减少， 而 PR 的数量则保持不变。注意：Freshports 似乎大幅多计了。本季度的 port 数是以不同的方式得出的，与上一季度的 port 数没有可比性。
 
 在上一季度， portmgr 欢迎 salvadore@ 的回归， 但同时也因为缺乏活跃而与七个 ports 提交者告别。
 
@@ -455,7 +455,7 @@ Wei Hu 和他在微软的同事正在从事由微软赞助的几项任务：
 
  - 修复 Azure 中Hyper-V gen2 VM 的启动问题
    - https://bugs.freebsd.org/264267  
- - 移植 Hyper-V 客户支持到 arch64 
+ - 移植 Hyper-V 客户端以支持 arch64 
 
 开启的任务：
 
@@ -483,13 +483,13 @@ Moritz Systems 项目简介网址：https://www.moritz.systems/blog/multiprocess
 
 联系：Kamil Rytarowski kamil@moritz.systems 联系：Michał Górny mgorny@moritz.systems
 
-根据上游的描述，"LLDB 是下一代高性能调试器。它是作为一组可重用的组件构建的，这些组件高度利用了更大的 LLVM 项目中的现有库，例如 Clang 表达式解析器和 LLVM 反汇编器。"
+根据上游的描述，“LLDB 是下一代高性能调试器。它是作为一组可重用的组件构建的，这些组件高度利用了更大的 LLVM 项目中的现有库，例如 Clang 表达式解析器和 LLVM 反汇编器。”
 
 FreeBSD 在基本系统中包括 LLDB。之前赞助的项目改进了 LLDB，使其成为基础系统中可信的调试器，尽管它与 GNU GDB 的当代版本相比仍有一些限制。这个项目于 2022 年 4 月开始。它的目标是实现对多个进程同时调试的全面支持。
 
-在项目开始时，LLDB 对多进程调试的支持非常有限。客户端的特点是支持通过维护与不同服务器实例的多个连接来同时调试多个独立进程。由于我们早期的工作，服务器能够处理 fork(2) 和 vfork(2) 调用，并且要么分离新分叉的子进程并继续跟踪父进程，要么分离父进程并跟踪子进程（等同于 GDB 的 follow-fork-mode 设置）。
+在项目开始时，LLDB 对多进程调试的支持非常有限。客户端的特点是支持通过维护与不同服务器实例的多个连接来同时调试多个独立进程。由于我们早期的工作，服务器能够处理 fork(2) 和 vfork(2) 调用，并且要么分离新分叉的子进程并继续跟踪父进程，要么分离父进程并跟踪子进程（等同于 GDB 的 `follow-fork-mode` 设置）。
 
-一旦项目完成，LLDB 将能够同时追踪任意数量的分叉进程（相当于 GDB 的 detach-on-fork 关闭）。将实现对GDB远程串行协议的多进程扩展的完全支持，以及对不停机扩展的部分支持，该扩展将使多个进程独立恢复和停止。
+一旦项目完成，LLDB 将能够同时追踪任意数量的分叉进程（相当于 GDB 的 `detach-on-fork off`）。将实现对 GDB 远程串行协议的多进程扩展的完全支持，以及对不停机扩展的部分支持，该扩展将使多个进程独立恢复和停止。
 
 赞助商：FreeBSD 基金会
 
@@ -502,7 +502,7 @@ FreeBSD 在基本系统中包括 LLDB。之前赞助的项目改进了 LLDB，�
 
 邮件列表 网址：https://lists.freebsd.org/archives/freebsd-hackers/2022-May/001128.html
 
-makefs(8) 代码审查 网址：https://reviews.freebsd.org/D35248 release(7) 代码审查 URL: https://reviews.freebsd.org/D34426
+makefs(8) 代码审查 网址：https://reviews.freebsd.org/D35248 release(7) 代码审查 网址：https://reviews.freebsd.org/D34426
 
 联系：Mark Johnston <markj@FreeBSD.org>
 
@@ -520,9 +520,9 @@ makefs(8) 是一个源自 NetBSD 的工具，它完全在用户空间创建文�
 
 OpenSSH 网址：https://www.openssh.com/
 
-OpenSSH 8.9发布说明 网址：https://www.openssh.com/txt/release-8.9[https://www.openssh.com/txt/release-8.9
+OpenSSH 8.9 发布说明 网址：https://www.openssh.com/txt/release-8.9[https://www.openssh.com/txt/release-8.9
 
-OpenSSH 9.0发布说明 网址：https://www.openssh.com/txt/release-9.0[https://www.openssh.com/txt/release-9.0
+OpenSSH 9.0 发布说明 网址：https://www.openssh.com/txt/release-9.0[https://www.openssh.com/txt/release-9.0
 
 联系：Ed Maste <emaste@freebsd.org>
 
@@ -560,7 +560,7 @@ pf 最近开始能够使用 dummynet 进行数据包调度。这种支持已经�
 
 #### 最后匹配时间戳
 
-pf 现在可以跟踪一个规则最后一次被匹配的时间。与 ipfw 规则的时间戳类似， 这些时间戳在内部是以秒为单位的系统“墙上时钟时间”的 uint32_t 捕捉。(参见 time(9))。时间戳是CPU本地的，并且在每次规则或状态被匹配时更新。
+pf 现在可以跟踪一个规则最后一次被匹配的时间。与 ipfw 规则的时间戳类似， 这些时间戳在内部是以秒为单位的系统“墙上时钟时间”的 uint32_t 捕捉。(参见 time(9))。时间戳是 CPU 本地的，并且在每次规则或状态被匹配时更新。
 
 赞助商：Rubicon Communications, LLC（"Netgate"）
 
@@ -584,7 +584,7 @@ ENA（Elastic Network Adapter）是亚马逊网络服务（AWS）的虚拟化环
 
 自上次更新以来已完成：
 
- - ENA 驱动程序的上游版本v2.5.0，其中包括：
+ - ENA 驱动程序的上游版本 v2.5.0，其中包括：
    - 改进复位程序的处理
    - 延长定时器服务寿命，以便能够检测更多的硬件故障
    - 修复验证 Tx 请求 ID 的逻辑
@@ -635,9 +635,9 @@ blued 有三个部分：一个库、一个守护程序和一个命令行工具�
 
 为了测试 blued，请获取 [blued v0.1 的源代码](https://git.lysator.liu.se/kempe/blued/-/releases/v0.1)。然后编译它，用 kernel_patches 中的补丁修补你的 FreeBSD 内核，并按照 README 中的解释重新编译 hci 模块。
 
-我主要在 FreeBSD 12.3 上测试了 blued，但在 13.1 上测试时，我的补丁应用得很干净。目前我还没有提供 port，但可以直接从构建目录中运行该软件，或者运行`make install`来安装所有需要的文件。blued 和 bluecontrol 都使用 capsicum，blued 可以被配置为放弃其 root 权限。
+我主要在 FreeBSD 12.3 上测试了 blued，但在 13.1 上测试时，我的补丁应用得很干净。目前我还没有提供 port，但可以直接从构建目录中运行该软件，或者运行`make install`来安装所有需要的文件。blued 和 bluecontrol 都使用 capsicum，blued 可以被配置为无需 root 权限。
 
-更多信息请参考 README 中的运行 blued 部分。
+更多信息请参考 `README` 中的运行 blued 部分。
 
 #### 帮助
 
@@ -673,7 +673,7 @@ OpenVPN DCO（或称数据通道卸载）将 OpenVPN 的数据包处理转移到
 
 用户空间的 OpenVPN 代码也需要修改以使用新的 if_ovpn 卸载驱动。这预计将成为未来 2.6.0 版 OpenVPN 的一部分。
 
-赞助商：Rubicon Communications, LLC ("Netgate")
+赞助商：Rubicon Communications, LLC (“Netgate”)
 
 ***
 
@@ -690,9 +690,9 @@ Realtek rtw89 状态 FreeBSD wiki 页面 网址：https://wiki.freebsd.org/WiFi/
 
 整个项目旨在为目前使用 LinuxKPI 兼容代码的 FreeBSD 带来对较新芯片组的支持，该代码由本地 net80211 和内核代码支撑。此外，我们的目标是继续努力支持更新的无线标准。在第二季度，有 40 个提交进入了 FreeBSD CURRENT。随着越来越多的用户尝试多种驱动，支持时间也在增加。
 
-早期版本的 Intel iwlwifi 衍生的无线驱动在 13.1-RELEASE 中发布了， 这使得这项工作进入了第一个 FreeBSD 版本。此后， iwlwifi 驱动程序和固件又在 CURRENT 和 stable/13 中进行了更新， 这是持续开发的一部分。与上游 Intel Linux 版本的驱动共享的文件中的变化现在不到 400 行。最近，一个长期存在的老式芯片组的问题（希望）得到了解决，允许支持 iwm(4) 的卡在近三个月后再次与iwlwifi(4) 一起工作。在今年年底之前，项目的主要重点将是让我们达到当代的速度。
+早期版本的 Intel iwlwifi 衍生的无线驱动在 13.1-RELEASE 中发布了， 这使得这项工作进入了第一个 FreeBSD 版本。此后， iwlwifi 驱动程序和固件又在 CURRENT 和 stable/13 中进行了更新， 这是持续开发的一部分。与上游 Intel Linux 版本的驱动共享的文件中的变化现在不到 400 行。最近，一个长期存在的老式芯片组的问题（希望）得到了解决，允许支持 iwm(4) 的网卡在近三个月后再次与 iwlwifi(4) 一起工作。在今年年底之前，项目的主要重点将是让我们达到当代的速度。
 
-4月1日，使用与 iwlwifi 工作相同的 LinuxKPI 基础设施，Realtek 的 rtw88(4) 驱动被纳入了 CURRENT。由于 DMA 的问题，在接下来的几周里，一个解决方法被开发出来并放到了代码仓库上，因此用户不再需要修补内核。对于物理内存超过 4GB 的机器，该驱动仍然需要在 loader.conf 中设置一个调整项。这个调整项使得该驱动在六月被合并到了 stable/13，随后又在 CURRENT 和 stable/13 中进一步更新。随着基于 rtw88 的芯片组的 USB 部分被准备纳入 Linux，准备 FreeBSD 也能支持 USB 部分的工作已经开始（需要更多时间）。
+4 月 1 日，使用与 iwlwifi 工作相同的 LinuxKPI 基础设施，Realtek 的 rtw88(4) 驱动被纳入了 CURRENT。由于 DMA 的问题，在接下来的几周里，一个解决方法被开发出来并放到了代码仓库上，因此用户不再需要修补内核。对于物理内存超过 4GB 的机器，该驱动仍然需要在 loader.conf 中设置一个调整项。这个调整项使得该驱动在六月被合并到了 stable/13，随后又在 CURRENT 和 stable/13 中进一步更新。随着基于 rtw88 的芯片组的 USB 部分被准备纳入 Linux，准备 FreeBSD 也能支持 USB 部分的工作已经开始（需要更多时间）。
 
 在过去的几个月里，Realtek 的 rtw89 已经开始编译，在它能够在 URRENT 启用之前，仍然是一个稳定运行和关联的工作。
 
@@ -714,7 +714,7 @@ Realtek rtw89 状态 FreeBSD wiki 页面 网址：https://wiki.freebsd.org/WiFi/
 
 联系：Marcin Wojtas <mw@FreeBSD.org>
 
-共享页是一个 R/X 页，由图像激活器映射到每个进程中。它存储了 signal trampoline，以及其他元数据，例如实现用户空间定时器所需的信息。以前，它被映射在进程虚拟地址空间的顶部。随着上述变化，它的地址将被随机化。我们计划对所有架构的 64 位二进制文件默认开启该功能。目前，这些补丁正在审查中，等待批准。
+共享页是一个 R/X 页，由图像激活器映射到每个进程中。它存储了 signal trampoline 以及其他元数据，例如实现用户空间定时器所需的信息。以前，它被映射在进程虚拟地址空间的顶部。随着上述变化，它的地址将被随机化。我们计划对所有架构的 64 位二进制文件默认开启该功能。目前，这些补丁正在审查中，等待批准。
 
 赞助商：Stormshield
 
@@ -733,6 +733,7 @@ Realtek rtw89 状态 FreeBSD wiki 页面 网址：https://wiki.freebsd.org/WiFi/
 [代码](https://github.com/mcusim/freebsd-src/tree/lx2160acex7-dev/sys/dev/dpaa2)
 
 联系：Dmitry Salychev <dsl@FreeBSD.org>
+
 联系：Bjoern A. Zeeb <bz@FreeBSD.org>
 
 恩智浦的一些 SoC（LX2160A、LS1088A）配备了 [DPAA2](https://www.nxp.com/design/qoriq-developer-resources/second-generation-data-path-acceleration-architecture-dpaa2:DPAA2)，即第二代的数据路径加速架构。它允许动态配置和连接数据包处理“对象”（网络接口的 DPNI，媒体访问控制器的 DPMAC 等），以形成一个片上网络。
@@ -844,7 +845,7 @@ doceng@ 团队是一个处理与 FreeBSD 文档工程相关的一些元项目问
 
 3. 重新设计网络上的“ports”页面
 
-    创建应用门户的端口脚本。(工作正在进行中)
+    创建应用门户的 port 脚本。(工作正在进行中)
 
 4. 重新设计 FreeBSD 的主网站
 
@@ -865,7 +866,7 @@ KDE Community FreeBSD 网址：https://community.kde.org/FreeBSD
 
 联系：Adriaan de Groot <kde@FreeBSD.org>
 
-KDE on FreeBSD 项目将来自 KDE Community 的软件，以及依赖关系和相关软件打包到 FreeBSD ports 树上。这些软件包括一个叫做 KDE Plasma 的完整桌面环境（适用于 X11 和 Wayland）和数百个可以在任何 FreeBSD 机器上使用的应用程序。
+KDE on FreeBSD 项目将来自 KDE Community 的软件，以及依赖关系和相关软件打包到 FreeBSD ports 上。这些软件包括一个叫做 KDE Plasma 的完整桌面环境（适用于 X11 和 Wayland）和数百个可以在任何 FreeBSD 机器上使用的应用程序。
 
 KDE 团队 (kde@) 也是 desktop@ 和 x11@ 的一部分，他们建立了软件栈，使 FreeBSD 成为漂亮的、可用于日常驱动的基于图形的桌面机器。下面的说明主要是描述 KDE 的 Ports ，但也包括对整个桌面堆栈有意义的项目。
 
@@ -888,10 +889,10 @@ KDE Gear 每季度发布一次，KDE Plasma 每月更新一次，KDE Frameworks 
 #### 相关应用程序
 
  - Archivers/quazip 被更新了。
- - deskutils/semantik已更新。
- - 更新了develop/py-qt5-pyqt，以便该 port 现在也能拉入DBus。几乎所有桌面 Qt 应用程序都需要 DBus，包括那些用 Python 编写的应用程序。
+ - deskutils/semantik 已更新。
+ - 更新了develop/py-qt5-pyqt，以便该 port 现在也能拉入 DBus。几乎所有桌面 Qt 应用程序都需要 DBus，包括那些用 Python 编写的应用程序。
  - devel/qcoro 在某些 FreeBSD 版本上有构建问题，已解决。
- - devel/qtcreator随每个新版本的发布而更新。
+ - devel/qtcreator 随每个新版本的发布而更新。
  - devel/qt5 在 ports 中更新了它的基础架构，这样它在卸载时就不会产生奇怪的错误信息。
  - graphics/ksnip 和相关库已更新到最近的版本。
  - Matrix 客户端 Nheko (net-im/nheko) 和 Neochat (net-im/neochat) 在发布和库升级之后进行了更新。
@@ -917,16 +918,20 @@ KDE Gear 每季度发布一次，KDE Plasma 每月更新一次，KDE Frameworks 
 链接：
 
 GCC 项目 网址：https://gcc.gnu.org
+
 GCC 11 发布系列 网址：https://gcc.gnu.org/gcc-11/
 
 联系：<toolchain@FreeBSD.org>
+
 联系：Gerald Pfeifer <gerald@pfeifer.com>
+
 联系：Lorenzo Salvadore <salvadore@FreeBSD.org>
+
 联系：Lorenzo Salvadore Piotr Kubaj <pkubaj@FreeBSD.org>
 
  - salvadore@ 致力于将 Mk/bsd.default-versions.mk 中的 GCC_DEFAULT 从 10 升级到 11，根据 antoine@ 的 exp-runs 打开 bug 报告并修复了一些：非常感谢所有帮助这项工作的人。GCC_DEFAULT 从 GCC 10 到 GCC 11 的更新现在已经由 gerald@ 提交，并在下一个季度的分支中及时发生。https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=258378
-pkubaj@ 通过引入一个默认启用的新选项，将 GCC 引导转换为使用 GCC 本身的链接时间优化，适用于 GCC 11 和更新版本。启用LTO_BOOTSTRAP进行构建需要大量的内存和时间。实际需要多少资源取决于您的配置 (例如，您是用 port 还是用 poudriere 构建？你的架构是什么？）。举个例子，一个用户报告说需要5 GiB的临时文件，而在PR 265254中，由于产生了过多的进程，估计需要大约130 GB的内存（也见https://gcc.gnu.org/bugzilla/show_bug.cgi?id=106328）。考虑禁用LTO_BOOTSTRAP，改用STANDARD_BOOTSTRAP（或者完全禁用BOOTSTRAP），以防出现问题。
- - pkubaj@ 还添加了 lang/gcc12 和 lang/gcc13-devel 端口， 并将 lang/gcc9 更新到 9.5。
+pkubaj@ 通过引入一个默认启用的新选项，将 GCC 引导转换为使用 GCC 本身的链接时间优化，适用于 GCC 11 和更新版本。启用 LTO_BOOTSTRAP 进行构建需要大量的内存和时间。实际需要多少资源取决于您的配置 (例如，您是用 port 还是用 poudriere 构建？你的架构是什么？）。举个例子，一个用户报告说需要 5 GiB 的临时文件，而在 PR 265254 中，由于产生了过多的进程，估计需要大约 130 GB 的内存（也见https://gcc.gnu.org/bugzilla/show_bug.cgi?id=106328）。考虑禁用LTO_BOOTSTRAP，改用STANDARD_BOOTSTRAP（或者完全禁用BOOTSTRAP），以防出现问题。
+ - pkubaj@ 还添加了 lang/gcc12 和 lang/gcc13-devel port， 并将 lang/gcc9 更新到 9.5。
  - 这三个改动仍然需要帮助，以便与上游的 GCC 一起工作（需要 src 专业知识，而不是 ports）。
   - 上游的 lang/gcc11/patch-gets-no-more
   - upstreaming lang/gcc11/patch-arm-unwind-cxx-support
@@ -961,13 +966,12 @@ devel/valgrind-devel port 已经提升到 3.20.0.g20220612,1，其中包括以�
 
 对于 FreeBSD 13.1 / 14.0，有
 
-funlinkat, copy_file_range, swapoff, shm_open2 的系统调用包装器。
-
-在 fcntl 中添加 K_INFO 处理程序
-
+ - funlinkat, copy_file_range, swapoff, shm_open2 的系统调用包装器。
+ - 在 fcntl 中添加 K_INFO 处理程序
  - 增加了对新的 auxv 条目的处理
  - 为 DRD 和 Helgrind 增加了一些默认的抑制措施
- - 现在有一个初始版本的 vgdb invoker 支持 - 这允许 vgdb 使用 ptrace 来强迫 valgrind 轮询 gdb 命令。这在 port 版本中还不能使用。
+
+现在有一个初始版本的 vgdb invoker 支持——这允许 vgdb 使用 ptrace 来强迫 valgrind 轮询 gdb 命令。这在 port 版本中还不能使用。
 
 这并没有留下多少悬而未决的问题。我希望 14.0 和更新的 llvm 版本会继续需要支持。除此以外，还有
 
@@ -1020,13 +1024,13 @@ Intel 的 igt-gpu-tools 是 Linux 上 drm 驱动的一个通用测试套件。ig
 
 将该项目移植到 FreeBSD 上可以为 FreeBSD 的 LinuxKPI 驱动的 drm 驱动的未来版本带来更大的稳定性。一个合适的 kms 驱动的测试套件也可以增加代码输出，使 FreeBSD 的桌面体验与 Linux 代码库同步。
 
-该项目于 2022 年 6 月 13 日在 FreeBSD 的 Google Summer of Code 计划下正式启动。我改编的代码可以在删除非 FreeBSD 兼容片段后进行编译。我们的计划是以符合 POSIX 的方式重新实现这些被剥离的组件。
+该项目于 2022 年 6 月 13 日在 FreeBSD 的谷歌代码之夏计划下正式启动。我改编的代码可以在删除非 FreeBSD 兼容片段后进行编译。我们的计划是以符合 POSIX 的方式重新实现这些被剥离的组件。
 
-值得注意的不兼容代码包括：debugfs，libkmod，libprocps，Linux 性能事件，和Linux userfaultfd。如果您愿意协助将 libkmod 或 libprocps 移植到 ports 中，请不要犹豫，与我联系。
+值得注意的不兼容代码包括：debugfs，libkmod，libprocps，Linux 性能事件，和 Linux userfaultfd。如果您愿意协助将 libkmod 或 libprocps 移植到 ports 中，请不要犹豫，与我联系。
 
 当 FreeBSD 兼容代码完成后， 我将在 FreeBSD 14.0-CURRENT 上使用一系列图形处理器运行修改后的 igt 测试。如果一切顺利， 这个项目的 diff 将被提交到 ports 中。
 
-赞助商：FreeBSD Google Summer of Code
+赞助商：谷歌代码之夏
 
 ## FreeBSD 13.1 发行说明
 
