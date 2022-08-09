@@ -123,7 +123,7 @@ FreeBSD 基金会是一个 501(c)(3) 的非营利组织，致力于支持和促�
 
 我们今年的目标是为大约 200 万美元的支出预算筹集至少 140 万美元。在我写这份报告的时候，我们为实现这一目标筹集了不到 20 万美元。因此，我们显然需要加紧努力筹款。这是迄今为止我工作中最困难的部分。我更愿意和社区中的人们讨论我们如何帮助你们，帮助创造内容以招募更多的用户和贡献者加入项目，并了解个人和组织在使用 FreeBSD 时遇到的挑战和痛点，以便我们能够帮助改善这些方面。索取金钱并不在此列。
 
-我们在五个主要领域支持 FreeBSD。软件开发是我们资助的最大的领域，我们有六个软件开发人员，他们介入实现新的功能，支持一级平台，审查补丁，并修复问题。您可以在这份报告中了解到我们在操作系统改进方面所做的一些工作。FreeBSD 宣传是我们支持的另一个领域，通过会议、网上和现场的演讲、教程和操作指南来传播 FreeBSD 的信息。我们购买并支持用于支持该项目工作的 FreeBSD 基础设施的硬件。基金会组织的虚拟和现场活动帮助联系和吸引社区成员分享他们的知识并进行项目合作。最后，我们在需要时为项目提供法律支持，并保护 FreeBSD 的商标。
+我们在五个主要领域支持 FreeBSD。软件开发是我们资助的最大的领域，我们有六个软件开发人员，他们介入实现新的功能，支持一级平台，审查补丁，并修复问题。你可以在这份报告中了解到我们在操作系统改进方面所做的一些工作。FreeBSD 宣传是我们支持的另一个领域，通过会议、网上和现场的演讲、教程和操作指南来传播 FreeBSD 的信息。我们购买并支持用于支持该项目工作的 FreeBSD 基础设施的硬件。基金会组织的虚拟和现场活动帮助联系和吸引社区成员分享他们的知识并进行项目合作。最后，我们在需要时为项目提供法律支持，并保护 FreeBSD 的商标。
 
 如果你今年还没有捐款，请考虑一下捐款，地址是：<https://freebsdfoundation.org/donate/> 。
 
@@ -829,7 +829,7 @@ doceng@ 团队是一个处理与 FreeBSD 文档工程相关的一些元项目问
 
 我们要感谢每一个作出贡献、翻译或审阅文件的人。
 
-同时，请在您的本地用户组中帮助推广这项工作，我们总是需要更多的志愿者。
+同时，请在你的本地用户组中帮助推广这项工作，我们总是需要更多的志愿者。
 
 ### FreeBSD 网站改版——WebApps 工作组
 
@@ -933,7 +933,7 @@ GCC 11 发布系列 网址：https://gcc.gnu.org/gcc-11/
 联系：Lorenzo Salvadore Piotr Kubaj <pkubaj@FreeBSD.org>
 
  - salvadore@ 致力于将 Mk/bsd.default-versions.mk 中的 GCC_DEFAULT 从 10 升级到 11，根据 antoine@ 的 exp-runs 打开 bug 报告并修复了一些：非常感谢所有帮助这项工作的人。GCC_DEFAULT 从 GCC 10 到 GCC 11 的更新现在已经由 gerald@ 提交，并在下一个季度的分支中及时发生。https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=258378
-pkubaj@ 通过引入一个默认启用的新选项，将 GCC 引导转换为使用 GCC 本身的链接时间优化，适用于 GCC 11 和更新版本。启用 LTO_BOOTSTRAP 进行构建需要大量的内存和时间。实际需要多少资源取决于您的配置 (例如，您是用 port 还是用 poudriere 构建？你的架构是什么？）。举个例子，一个用户报告说需要 5 GiB 的临时文件，而在 PR 265254 中，由于产生了过多的进程，估计需要大约 130 GB 的内存（也见 https://gcc.gnu.org/bugzilla/show_bug.cgi?id=106328 ）。考虑禁用 LTO_BOOTSTRAP，改用 STANDARD_BOOTSTRAP（或者完全禁用 BOOTSTRAP），以防出现问题。
+pkubaj@ 通过引入一个默认启用的新选项，将 GCC 引导转换为使用 GCC 本身的链接时间优化，适用于 GCC 11 和更新版本。启用 LTO_BOOTSTRAP 进行构建需要大量的内存和时间。实际需要多少资源取决于你的配置 (例如，你是用 port 还是用 poudriere 构建？你的架构是什么？）。举个例子，一个用户报告说需要 5 GiB 的临时文件，而在 PR 265254 中，由于产生了过多的进程，估计需要大约 130 GB 的内存（也见 https://gcc.gnu.org/bugzilla/show_bug.cgi?id=106328 ）。考虑禁用 LTO_BOOTSTRAP，改用 STANDARD_BOOTSTRAP（或者完全禁用 BOOTSTRAP），以防出现问题。
  - pkubaj@ 还添加了 lang/gcc12 和 lang/gcc13-devel port， 并将 lang/gcc9 更新到 9.5。
  - 这三个改动仍然需要帮助，以便与上游的 GCC 一起工作（需要 src 专业知识，而不是 ports）。
   - 上游的 lang/gcc11/patch-gets-no-more
@@ -1030,7 +1030,7 @@ Intel 的 igt-gpu-tools 是 Linux 上 drm 驱动的一个通用测试套件。ig
 
 该项目于 2022 年 6 月 13 日在 FreeBSD 的谷歌代码之夏计划下正式启动。我改编的代码可以在删除非 FreeBSD 兼容片段后进行编译。我们的计划是以符合 POSIX 的方式重新实现这些被剥离的组件。
 
-值得注意的不兼容代码包括：debugfs，libkmod，libprocps，Linux 性能事件，和 Linux userfaultfd。如果您愿意协助将 libkmod 或 libprocps 移植到 ports 中，请不要犹豫，与我联系。
+值得注意的不兼容代码包括：debugfs，libkmod，libprocps，Linux 性能事件，和 Linux userfaultfd。如果你愿意协助将 libkmod 或 libprocps 移植到 ports 中，请不要犹豫，与我联系。
 
 当 FreeBSD 兼容代码完成后， 我将在 FreeBSD 14.0-CURRENT 上使用一系列图形处理器运行修改后的 igt 测试。如果一切顺利， 这个项目的 diff 将被提交到 ports 中。
 
