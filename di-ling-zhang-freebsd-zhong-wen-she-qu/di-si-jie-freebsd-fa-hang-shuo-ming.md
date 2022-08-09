@@ -101,7 +101,7 @@ FreeBSD 核心团队是 FreeBSD 的管理机构。
 
 链接：
 
-FreeBSD基金会 网址：https://www.FreeBSDFoundation.org
+FreeBSD 基金会 网址：https://www.FreeBSDFoundation.org
 
 技术路线图 网址：https://FreeBSDFoundation.org/blog/technology-roadmap/
 
@@ -125,9 +125,9 @@ FreeBSD 基金会是一个 501(c)(3) 的非营利组织，致力于支持和促�
 
 我们在五个主要领域支持 FreeBSD。软件开发是我们资助的最大的领域，我们有六个软件开发人员，他们介入实现新的功能，支持一级平台，审查补丁，并修复问题。您可以在这份报告中了解到我们在操作系统改进方面所做的一些工作。FreeBSD 宣传是我们支持的另一个领域，通过会议、网上和现场的演讲、教程和操作指南来传播 FreeBSD 的信息。我们购买并支持用于支持该项目工作的 FreeBSD 基础设施的硬件。基金会组织的虚拟和现场活动帮助联系和吸引社区成员分享他们的知识并进行项目合作。最后，我们在需要时为项目提供法律支持，并保护 FreeBSD 的商标。
 
-如果你今年还没有捐款，请考虑捐款，地址是：https://freebsdfoundation.org/donate/ 。
+如果你今年还没有捐款，请考虑一下捐款，地址是：<https://freebsdfoundation.org/donate/> 。
 
-我们还有一个针对大型商业捐助者的合作伙伴计划。你可以在[ https://freebsdfoundation.org/our-donors/ ](https://freebsdfoundation.org/our-donors/freebsd-foundation-partnership-program/) 找到更多信息。
+我们还有一个针对大型商业捐助者的合作伙伴计划。你可以在 [https://freebsdfoundation.org/our-donors/ ](https://freebsdfoundation.org/our-donors/freebsd-foundation-partnership-program/) 找到更多信息。
 
 #### 操作系统的改进
 
@@ -167,7 +167,7 @@ FreeBSD 基金会是一个 501(c)(3) 的非营利组织，致力于支持和促�
 
 >基金会最近签署了一份支持 Byhve 的新合同。
 >
->这份合同将使 John Baldwin 能够在出现问题时为Bhyve奉献时间，特别是安全问题。
+>这份合同将使 John Baldwin 能够在 Bhyve 出现问题时为其奉献时间，特别是安全问题。
 
  - Handbook 改进探索
 
@@ -181,7 +181,7 @@ FreeBSD 基金会是一个 501(c)(3) 的非营利组织，致力于支持和促�
 
 #### 支持 FreeBSD 基础设施
 
-基金会为该项目提供硬件和支持。一个新的澳大利亚镜像被集群管理团队带到了网上。 如果你是大洋洲或东南亚的 FreeBSD 用户，请让我们知道安装程序镜像和软件包的下载速度是否有所提高。
+基金会为该项目提供硬件和支持。一个新的澳大利亚镜像被集群管理团队部署到了网上。 如果你是大洋洲或东南亚的 FreeBSD 用户，请让我们知道安装程序镜像和软件包的下载速度是否有所提高。
 
 通过你们的捐款，基金会购买了新的硬件来修复两个 PowerPC 软件包的构建器，一个是小端软件包（powerpc64le），第二个是大端软件包（powerpc64，powerpc）。新的硬件刚刚到达数据中心，很快就会安装。预计在不久的将来会有很多 PowerPC 软件包。
 
@@ -193,12 +193,12 @@ FreeBSD 基金会在全球范围内赞助了许多会议、活动和峰会。这
 
 请看我们上一季度所做的一些宣传和教育工作：
 
- - 我们获得了 2022 年 10 月 30 日至 11 月 2 日在北卡罗来纳州罗利举行的 All Things Open 的展位和非营利性赞助商地位。
- - 我们在 7 月 28-30 日在加州洛杉矶举行的 Scale 19x 上的展位和研讨会已经确定。 FreeBSD 研讨会将于 2022 年 7 月 29 日星期五举行，你可以到基金会的 502 号展位参观。
+ - 我们获得了 2022 年 10 月 30 日至 11 月 2 日在北卡罗来纳州罗利举行的 All Things Open 的展位和非营利性赞助商地位
+ - 我们在 7 月 28-30 日在加州洛杉矶举行的 Scale 19x 上的展位和研讨会已经确定。 FreeBSD 研讨会将于 2022 年 7 月 29 日星期五举行，你可以到基金会的 502 号展位参观
  - 确认我们是 2022 年 9 月 15-18 日在奥地利维也纳举行的 EuroBSDcon 的银牌赞助商
- - 赞助并帮助组织 2022 年 6 月 16-17 日的FreeBSD开发者峰会。视频可以在 FreeBSD 项目的 YouTube 频道上看到。
- - 庆祝 2022 年 6 月 19 日的 FreeBSD 日，以及接下来的整个一周。
- - 我们获得了 7 月 30 日至 31 日在台湾举行的 COSCUP 之友级别的赞助。
+ - 赞助并帮助组织 2022 年 6 月 16-17 日的FreeBSD开发者峰会。视频可以在 FreeBSD 项目的 YouTube 频道上看到
+ - 庆祝 2022 年 6 月 19 日的 FreeBSD 日，以及接下来的整个一周
+ - 我们获得了 7 月 30 日至 31 日在台湾举行的 COSCUP 之友级别的赞助
  - 发布 FreeBSD 基金会 [2022 年春季更新](https://freebsdfoundation.org/news-and-events/newsletter/freebsd-foundation-spring-2022-update/)
  - 新的博客文章
   - [我们来谈谈基金会的资金问题](https://freebsdfoundation.org/blog/lets-talk-about-foundation-funding/)
@@ -366,7 +366,7 @@ Ports 管理团队负责监督 Ports 的整体方向、建筑配套和人事事�
 
 Port 的数量略高于 30,000。在上一季度，“main”分支有 151 个提交者提交了 9137 个代码， "2022Q2" 分支有 61 个提交者提交了 589 个代码。在写这篇文章的时候，有 2700 个开放 port 的 PR，其中 682 个是未分配的。与上一季度相比， 提交活动略有减少， 而 PR 的数量则保持不变。注意：Freshports 似乎大幅多计了。本季度的 port 数是以不同的方式得出的，与上一季度的 port 数没有可比性。
 
-在上一季度， portmgr 欢迎 salvadore@ 的回归， 但同时也因为缺乏活跃而与七个 ports 提交者告别。
+在上一季度， portmgr 欢迎 salvadore@ 的回归， 但同时也因为缺乏活跃而与七个 port 提交者告别。
 
 在两周一次的会议上，portmgr 讨论了以下主题。* ca_root_nss 的未来 * 基础系统提供某些 .pc 文件的可行性 * 处理基础系统小版本升级时内核模块 port 不兼容问题的方法
 
@@ -388,7 +388,7 @@ Port 的数量略高于 30,000。在上一季度，“main”分支有 151 个�
 
 Y2k38 Linux 项目的实施已基本完成；所有 `'*_time64()'`  系统调用都已提交。
 
-arm64 Linux 仿真层的状态被带到了 amd64 Linux 仿真层的状态：即实现了 vDSO、机器依赖的 futexes、信号传递。
+arm64 Linux 仿真层的状态与 amd64 Linux 仿真层的状态保持一致：即实现了 vDSO、机器依赖的 futexes、信号传递。
 
 线程亲和性系统调用被修改以实现 Linux 语义。
 
@@ -547,7 +547,7 @@ pf 最近增加了对以太网层过滤的支持。见 2021q2 pf_ethernet 报告
 从那时起，以太网层的过滤功能得到了扩展：
 
  - anchor 支持
- - 查看第三层头的能力，以便与源/目的IP（v4/v6）地址匹配
+ - 查看第三层头的能力，以便与源/目的 IP（v4/v6）地址匹配
  - 对 IP 地址匹配的表格支持
  - 直接派发到 dummynet
  - 将以太网层的数据包直接传给 dummynet，而不是对数据包进行标记，并依靠第三层来处理 dummynet
@@ -690,7 +690,7 @@ Realtek rtw89 状态 FreeBSD wiki 页面 网址：https://wiki.freebsd.org/WiFi/
 
 整个项目旨在为目前使用 LinuxKPI 兼容代码的 FreeBSD 带来对较新芯片组的支持，该代码由本地 net80211 和内核代码支撑。此外，我们的目标是继续努力支持更新的无线标准。在第二季度，有 40 个提交进入了 FreeBSD CURRENT。随着越来越多的用户尝试多种驱动，支持时间也在增加。
 
-早期版本的 Intel iwlwifi 衍生的无线驱动在 13.1-RELEASE 中发布了， 这使得这项工作进入了第一个 FreeBSD 版本。此后， iwlwifi 驱动程序和固件又在 CURRENT 和 stable/13 中进行了更新， 这是持续开发的一部分。与上游 Intel Linux 版本的驱动共享的文件中的变化现在不到 400 行。最近，一个长期存在的老式芯片组的问题（希望）得到了解决，允许支持 iwm(4) 的网卡在近三个月后再次与 iwlwifi(4) 一起工作。在今年年底之前，项目的主要重点将是让我们达到当代的速度。
+早期版本的 Intel iwlwifi 衍生的无线驱动在 13.1-RELEASE 中发布了，这使得这项工作进入了第一个 FreeBSD 版本。此后， iwlwifi 驱动程序和固件又在 CURRENT 和 stable/13 中进行了更新， 这是持续开发的一部分。与上游 Intel Linux 版本的驱动共享的文件中的变化现在不到 400 行。最近，一个长期存在的老式芯片组的问题（有希望）得到解决，允许支持 iwm(4) 的网卡在近三个月后再次与 iwlwifi(4) 一起工作。在今年年底之前，项目的主要重点将是让我们达到当代的速度。
 
 4 月 1 日，使用与 iwlwifi 工作相同的 LinuxKPI 基础设施，Realtek 的 rtw88(4) 驱动被纳入了 CURRENT。由于 DMA 的问题，在接下来的几周里，一个解决方法被开发出来并放到了代码仓库上，因此用户不再需要修补内核。对于物理内存超过 4GB 的机器，该驱动仍然需要在 loader.conf 中设置一个调整项。这个调整项使得该驱动在六月被合并到了 stable/13，随后又在 CURRENT 和 stable/13 中进一步更新。随着基于 rtw88 的芯片组的 USB 部分被准备纳入 Linux，准备 FreeBSD 也能支持 USB 部分的工作已经开始（需要更多时间）。
 
@@ -714,7 +714,7 @@ Realtek rtw89 状态 FreeBSD wiki 页面 网址：https://wiki.freebsd.org/WiFi/
 
 联系：Marcin Wojtas <mw@FreeBSD.org>
 
-共享页是一个 R/X 页，由图像激活器映射到每个进程中。它存储了 signal trampoline 以及其他元数据，例如实现用户空间定时器所需的信息。以前，它被映射在进程虚拟地址空间的顶部。随着上述变化，它的地址将被随机化。我们计划对所有架构的 64 位二进制文件默认开启该功能。目前，这些补丁正在审查中，等待批准。
+共享页是一个 R/X 页，由 image activator 映射到每个进程中。它存储了 signal trampoline 以及其他元数据，例如实现用户空间定时器所需的信息。以前，它被映射在进程虚拟地址空间的顶部。随着上述变化，它的地址将被随机化。我们计划对所有架构的 64 位二进制文件默认开启该功能。目前，这些补丁正在审查中，等待批准。
 
 赞助商：Stormshield
 
@@ -740,7 +740,7 @@ Realtek rtw89 状态 FreeBSD wiki 页面 网址：https://wiki.freebsd.org/WiFi/
 
 在上个季度，该驱动开始运行良好，足以用于 [SolidRun 的 Honeycomb LX2](https://solidrun.atlassian.net/wiki/spaces/developer/pages/197494288/HoneyComb+LX2+ClearFog+CX+LX2+Quick+Start+Guide)（ACPI 测试平台），Traverse Technologies 已经为（他们的）Ten64（用作 FDT 测试平台）制作了一个 [FreeBSD 预览](https://forum.traverse.com.au/t/freebsd-preview-for-ten64/173)。
 
-该驱动仍在进行中，但已接近审查，以便将第一个版本放入树中，让大家从中受益。
+该驱动仍在进行中，但已接近审查，以便将第一个版本放入代码库中，让大家从中受益。
 
 WIP：
 
@@ -750,10 +750,10 @@ WIP：
 
 TODO:
 
- - 对 DPIOs 和 DPNIs 的 CPU 亲和力
+ - 对 DPIO 和 DPNI 的处理器亲和性
  - 缓存的内存支持的软件门户
  - 缓解瓶颈
- - 硬件支持的更多部件（DPSW、DCE 等）
+ - 支持更多的硬件组件（DPSW、DCE 等）
 
 赞助商：赤裸裸的热情 :)
 
@@ -785,7 +785,9 @@ TODO:
 ### 文档工程团队
 
 链接：FreeBSD 文档项目
+
 链接：为新的贡献者提供的 FreeBSD 文档项目入门手册
+
 链接：文档工程团队
 
 联系：FreeBSD Doceng 团队 <doceng@FreeBSD.org>
@@ -862,6 +864,7 @@ doceng@ 团队是一个处理与 FreeBSD 文档工程相关的一些元项目问
 链接：
 
 KDE FreeBSD 网址：https://freebsd.kde.org/
+
 KDE Community FreeBSD 网址：https://community.kde.org/FreeBSD
 
 联系：Adriaan de Groot <kde@FreeBSD.org>
@@ -930,7 +933,7 @@ GCC 11 发布系列 网址：https://gcc.gnu.org/gcc-11/
 联系：Lorenzo Salvadore Piotr Kubaj <pkubaj@FreeBSD.org>
 
  - salvadore@ 致力于将 Mk/bsd.default-versions.mk 中的 GCC_DEFAULT 从 10 升级到 11，根据 antoine@ 的 exp-runs 打开 bug 报告并修复了一些：非常感谢所有帮助这项工作的人。GCC_DEFAULT 从 GCC 10 到 GCC 11 的更新现在已经由 gerald@ 提交，并在下一个季度的分支中及时发生。https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=258378
-pkubaj@ 通过引入一个默认启用的新选项，将 GCC 引导转换为使用 GCC 本身的链接时间优化，适用于 GCC 11 和更新版本。启用 LTO_BOOTSTRAP 进行构建需要大量的内存和时间。实际需要多少资源取决于您的配置 (例如，您是用 port 还是用 poudriere 构建？你的架构是什么？）。举个例子，一个用户报告说需要 5 GiB 的临时文件，而在 PR 265254 中，由于产生了过多的进程，估计需要大约 130 GB 的内存（也见https://gcc.gnu.org/bugzilla/show_bug.cgi?id=106328）。考虑禁用LTO_BOOTSTRAP，改用STANDARD_BOOTSTRAP（或者完全禁用BOOTSTRAP），以防出现问题。
+pkubaj@ 通过引入一个默认启用的新选项，将 GCC 引导转换为使用 GCC 本身的链接时间优化，适用于 GCC 11 和更新版本。启用 LTO_BOOTSTRAP 进行构建需要大量的内存和时间。实际需要多少资源取决于您的配置 (例如，您是用 port 还是用 poudriere 构建？你的架构是什么？）。举个例子，一个用户报告说需要 5 GiB 的临时文件，而在 PR 265254 中，由于产生了过多的进程，估计需要大约 130 GB 的内存（也见 https://gcc.gnu.org/bugzilla/show_bug.cgi?id=106328 ）。考虑禁用 LTO_BOOTSTRAP，改用 STANDARD_BOOTSTRAP（或者完全禁用 BOOTSTRAP），以防出现问题。
  - pkubaj@ 还添加了 lang/gcc12 和 lang/gcc13-devel port， 并将 lang/gcc9 更新到 9.5。
  - 这三个改动仍然需要帮助，以便与上游的 GCC 一起工作（需要 src 专业知识，而不是 ports）。
   - 上游的 lang/gcc11/patch-gets-no-more
@@ -945,6 +948,7 @@ pkubaj@ 通过引入一个默认启用的新选项，将 GCC 引导转换为使�
 链接：
 
 Valgrind 主页 网址：https://www.valgrind.org/
+
 Valgrind 新闻 网址：https://www.valgrind.org/docs/manual/dist.news.html
 
 联系：Paul Floyd <pjfloyd@wanadoo.fr>
