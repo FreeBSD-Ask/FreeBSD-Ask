@@ -32,7 +32,8 @@ rsync-3.2.3
 ```
 # mkdir test
 # chown root /home/test/
-# touch txt001 /home/test/
+# cd /home/test/
+# touch txt001
 ```
 
 ### 编辑 `rsyncd.conf` 文件
@@ -74,7 +75,7 @@ secrets file = /etc/rsyncd_users.db
 #定义rsync客户端用户认证的密码文件
 ```
 
-### 创建授权备份账户认证的密码文件
+### 创建授权备份账户认证的密码文件(服务端)
 
 ```
 # ee /etc/rsyncd_users.db
@@ -139,18 +140,32 @@ $IPF 500 deny log all from any to any
 
 ## 服务器 A（发起端）配置
 
-### **创建本地文件夹 `/home/testBackUp/` 并设置好相关权限**
+### 创建本地文件夹 `/home/testBackUp/` 并设置好相关权限
 
 ```
 # mkdir testBackUp
 # chown root:root testBackUp
 ```
 
-### **发起端访问同步源，将文件下载到本地 `/home/testBackUp/` 下载目录下，需要人机交互手动输入密码**
+### 发起端访问同步源，将文件下载到本地 `/home/testBackUp/` 下载目录下，需要人机交互手动输入密码
 
 ```
 # rsync -avz root@192.168.100.20::testcom /home/testBackUp     
 ```
+
+>**免密码方式**
+>
+>### 创建授权备份账户认证的密码文件(客户端)
+>
+>```
+># ee /etc/rsyncd_users.db
+>
+>12345678          #格式：密码
+>```
+>进行同步：
+>```
+># rsync -auvz --progress --password-file=/etc/rsyncd_users.db root@192.168.0.222.::share /home/testBackUp/
+>```
 
 ### 查看同步情况
 
