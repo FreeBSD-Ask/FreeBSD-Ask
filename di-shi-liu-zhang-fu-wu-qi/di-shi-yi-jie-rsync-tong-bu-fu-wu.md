@@ -156,7 +156,7 @@ $IPF 500 deny log all from any to any
 
 >**指定密码文件方式**
 >
->### 创建授权备份账户认证的密码文件(客户端)
+>创建授权备份账户认证的密码文件(客户端)
 >
 >```
 ># ee /etc/rsyncd_users.db
