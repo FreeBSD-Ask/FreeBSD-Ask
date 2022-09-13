@@ -152,6 +152,7 @@ $IPF 500 deny log all from any to any
 ```
 # rsync -avz root@192.168.100.20::testcom /home/testBackUp     
 ```
+`testcom` 是要从服务器同步的目录，由上方 `/usr/local/etc/rsync/rsyncd.conf` 自定义。
 
 >**免密码方式**
 >
@@ -165,7 +166,6 @@ $IPF 500 deny log all from any to any
 >进行同步：
 >```
 ># rsync -auvz --progress --password-file=/etc/rsyncd_users.db root@192.168.100.20::testcom /home/testBackUp
-
 >```
 
 ### 查看同步情况
