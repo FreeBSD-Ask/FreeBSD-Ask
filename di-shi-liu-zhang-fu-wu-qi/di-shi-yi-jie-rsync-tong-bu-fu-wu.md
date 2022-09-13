@@ -164,7 +164,8 @@ $IPF 500 deny log all from any to any
 >```
 >进行同步：
 >```
-># rsync -auvz --progress --password-file=/etc/rsyncd_users.db root@192.168.0.222.::share /home/testBackUp/
+># rsync -auvz --progress --password-file=/etc/rsyncd_users.db root@192.168.100.20::testcom /home/testBackUp
+
 >```
 
 ### 查看同步情况
