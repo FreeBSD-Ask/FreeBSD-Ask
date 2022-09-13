@@ -78,7 +78,7 @@ root:12345678          //格式：授权账户用户名：密码
 ```
 # rsync --daemon    //启动服务
 
-# sysnc rsyncd_enable="YES"  //设置开机自启动
+# sysrc rsyncd_enable="YES"  //设置开机自启动
 
 # /usr/local/etc/rc.d/rsyncd start //启动服务
 ```
