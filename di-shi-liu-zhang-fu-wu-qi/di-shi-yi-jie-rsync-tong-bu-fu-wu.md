@@ -154,7 +154,7 @@ $IPF 500 deny log all from any to any
 ```
 `testcom` 是要从服务器同步的目录，由上方 `/usr/local/etc/rsync/rsyncd.conf` 自定义。
 
->**免密码方式**
+>**指定密码文件方式**
 >
 >### 创建授权备份账户认证的密码文件(客户端)
 >
