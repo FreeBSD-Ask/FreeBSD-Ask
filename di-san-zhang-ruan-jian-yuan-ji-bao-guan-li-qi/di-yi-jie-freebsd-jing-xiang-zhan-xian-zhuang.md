@@ -71,3 +71,5 @@ FreeBSD 目前在大陆非官方镜像站有若干个（详见第二节。）：
 FreeBSD 官方联系方式：
 
 [freebsd-hubs@freebsd.org](mailto:freebsd-hubs@freebsd.org)
+
+>附 [FreeBSD committer 名单](https://github.com/freebsd/freebsd-src/blob/fcaf016796cc0272a8c239850fa87244eebefe13/usr.bin/calendar/calendars/calendar.freebsd)
