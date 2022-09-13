@@ -1,5 +1,11 @@
 # 第一节 如何报告 Bug
 
+>**提示**
+>
+>FreeBSD 邮件订阅列表在 <https://lists.freebsd.org/> 列出。建议订阅 freebsd-current，几乎所以人都在那里。订阅只需要输入你的邮箱即可，然后你会收到回信，按要求给他列出的邮箱随便发一封包含内容的邮件即可，你应该就会收到订阅成功的提示。如果要从摘要订阅转为全文一般订阅，只需要重新向 Subscribe 的邮件地址（比如 freebsd-doc 是 freebsd-doc+subscribe@freebsd.org）发送任意内容的邮件即可。
+>
+>请使用英语，如果不会可以用 <https://deepl.com> 来进行翻译。出现问题时建议先发邮件问一问再提交 bug 报告。
+
 当你遇到问题时，你该怎么做？
 
 
