@@ -80,7 +80,7 @@ secrets file = /etc/rsyncd_users.db
 ```
 # ee /etc/rsyncd_users.db
 
-root:12345678          #格式：授权账户用户名：密码
+root:12345678          #格式为 授权账户用户名：密码。支持多个用户，一行一个即可。
 ```
 
 #### 修改数据文件权限
