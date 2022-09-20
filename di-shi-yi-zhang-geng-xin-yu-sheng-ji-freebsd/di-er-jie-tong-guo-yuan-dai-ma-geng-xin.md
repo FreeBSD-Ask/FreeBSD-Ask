@@ -1,2 +1,10 @@
 # 第二节 通过源代码更新
 
+
+基本思路就是获取 FreeBSD 的源代码，然后进行编译安装。可以使用 git 直接拉取代码，也可以直接下载 ISO 镜像里面的 txz 压缩文件或者去 github 上下载当前 FreeBSD 项目的 zip 包。
+
+编译流程见 Handbook 即可。非常地简单。
+
+## 参考资料
+
+ - <https://handbook.bsdcn.org/di-24-zhang-geng-xin-yu-sheng-ji-freebsd/24.6.-cong-yuan-dai-ma-geng-xin-freebsd.html#>
