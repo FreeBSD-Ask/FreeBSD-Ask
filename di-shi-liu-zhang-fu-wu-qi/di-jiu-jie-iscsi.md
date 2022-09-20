@@ -1,2 +1,7 @@
 # 第九节 iSCSI
 
+iSCSI 就是将网络磁盘映射为本地磁盘的一种技术。在本书的参考文献之一的《鸟哥的 Linux 私房菜》服务器篇中有详细介绍。
+
+## 参考资料
+
+ - <https://handbook.bsdcn.org/di-30-zhang-wang-luo-fu-wu-qi/30.12.iscsi-target-he-initiator-de-pei-zhi.html>
