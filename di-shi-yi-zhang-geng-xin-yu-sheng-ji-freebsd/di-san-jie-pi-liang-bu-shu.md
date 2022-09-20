@@ -1,2 +1,9 @@
 # 第三节 批量部署
 
+FreeBSD 的更新似乎难以被打包成一个二进制包。但是似乎也有 pkg 更新基本系统的方法（未经测试）。
+
+
+## 参考资料
+
+ - <https://wiki.freebsd.org/PkgBase>
+ - <https://alpha.pkgbase.live/>
