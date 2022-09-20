@@ -1,2 +1,10 @@
 # 第八节 NFS 服务器
 
+NFS 相当于一个网盘协议，用于在不同的操作系统间共享文件。在本书的参考文献之一的《鸟哥的 Linux 私房菜》服务器篇中有详细介绍。
+
+
+## 参考文献
+
+ - <https://handbook.bsdcn.org/di-30-zhang-wang-luo-fu-wu-qi/30.3.-wang-luo-wen-jian-xi-tong-nfs.html>
+ - <https://www.freebsd.org/cgi/man.cgi?mount_nfs(8)>
+ - <https://www.dounaite.com/article/626fd2b947394b6d80e867fe.html>
