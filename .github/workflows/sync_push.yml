@@ -21,6 +21,7 @@ jobs:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
 
         with:
+          rm: "true" ## remove target folder before upload data
           source_file: "."
           destination_repo: "FreeBSD-Ask/FreeBSD-Ask-Next"
           destination_folder: "docs"
