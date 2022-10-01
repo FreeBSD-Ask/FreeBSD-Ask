@@ -5,6 +5,12 @@
 >本文可能不再有效。
 >
 >经过测试 最新的 xorg 等软件更新后会造成 VMware 16 的显卡无法被驱动。谨慎更新。能够解决者请提交 issue。已经报告 bug。
+
+>**警告**
+>
+>FreeBSD 暂不支持驱动 UEFI 下 Vmware 的显卡。能够解决者请提交 issue。
+
+
 ## 视频教程（一共4节，完整版本请点击去 bilibili 观看）
 
 https://www.bilibili.com/video/BV14i4y137mh
