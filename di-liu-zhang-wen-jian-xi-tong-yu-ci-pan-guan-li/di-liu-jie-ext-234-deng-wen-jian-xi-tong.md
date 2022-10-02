@@ -2,7 +2,7 @@
 
 ## EXT 文件系统
 
-请注意：这里应该安装 `fusefs-ext2`（同时支持EXT2/3/4）而非 `fusefs-ext4fuse` ，因为后者是只读且被废弃的。
+请注意：这里应该安装 `fusefs-ext2`（同时支持EXT2/3/4）而非 `fusefs-ext4fuse`，因为后者是只读且被废弃的。
 
 -   安装 fusefs-ext2
 
@@ -12,7 +12,7 @@
 
 -   加载
 
-    打开`/etc/rc.conf`，在 `kld_list`一栏里添加 **ext2fs** ，结果可能如 `kld_list="ext2fs i915kms"`
+    打开`/etc/rc.conf`，在 `kld_list`一栏里添加 **ext2fs**，结果可能如 `kld_list="ext2fs i915kms"`
     
 -   重启后，挂载。
 

@@ -4,7 +4,7 @@ FTP 意为文件传输协议。使用 FTP 服务搭建服务器可以快速传�
 
 ## pure-ftpd（以 MySQL 支持为例）
 
-> **对于 RFC 2640 的支持已经被移除，所以 Windows 下的非英文的文件上传至 FTP 会乱码，见** [**https://www.pureftpd.org/project/pure-ftpd/news/**](https://www.pureftpd.org/project/pure-ftpd/news/) **无法解决，同时不建议把 Windows 的系统编码改为 UTF8 ，会造成更多乱码的发生，比如 zip 文件。**
+> **对于 RFC 2640 的支持已经被移除，所以 Windows 下的非英文的文件上传至 FTP 会乱码，见** [**https://www.pureftpd.org/project/pure-ftpd/news/**](https://www.pureftpd.org/project/pure-ftpd/news/) **无法解决，同时不建议把 Windows 的系统编码改为 UTF8，会造成更多乱码的发生，比如 zip 文件。**
 >
 > **注意：本示例以 mysql 5.x 为例。**
 
@@ -338,7 +338,7 @@ LoadModule mod_sql_mysql.c
 </Global>
 ```
 
-我们在设置中指定服务器将在主动模式下在端口 21 上工作，在被动模式下在 50000-60000 范围内工作.这些端口应该在防火墙中打开。 对于 PF，这是通过以下规则完成的：
+我们在设置中指定服务器将在主动模式下在端口 21 上工作，在被动模式下在 50000-60000 范围内工作.这些端口应该在防火墙中打开。对于 PF，这是通过以下规则完成的：
 
 ```
 pass in quick on $ext_if proto tcp from any to $ext_if port { 21, 50000:60000 }
@@ -346,7 +346,7 @@ pass in quick on $ext_if proto tcp from any to $ext_if port { 21, 50000:60000 }
 
 ### 创建用户
 
-出于安全目的，我们将以非 root 用户身份运行 Proftpd。 因此，我们将创建此用户：
+出于安全目的，我们将以非 root 用户身份运行 Proftpd。因此，我们将创建此用户：
 
 ```
 # adduser
@@ -376,7 +376,7 @@ Add another user? (yes/no): no
 Goodbye!
 ```
 
-现在已经创建了自己的 proftpd 用户和组 ID。 因此，在添加 ftp 用户时，你将使用它。 你可以通过以 下方式确定 UID：
+现在已经创建了自己的 proftpd 用户和组 ID。因此，在添加 ftp 用户时，你将使用它。你可以通过以 下方式确定 UID：
 
 ```
 # cat /etc/passwd | grep proftpd

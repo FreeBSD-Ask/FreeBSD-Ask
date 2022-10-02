@@ -118,7 +118,7 @@ root@ykla:~ #
 
 以下教程以 FreeBSD 13.0 为基准。
 
-pgAdmin4 是用于管理 PostgreSQL 数据库服务器的最流行的开源应用程序。pgAdmin4 提供功能丰富的图形用户界面，轻松管理数据库。 它是用 Python 和 Javascript / jQuery 编写的。 它可以在多种环境中使用，如 Linux，Windows，Unix，可在桌面和服务器模式下使用。
+pgAdmin4 是用于管理 PostgreSQL 数据库服务器的最流行的开源应用程序。pgAdmin4 提供功能丰富的图形用户界面，轻松管理数据库。它是用 Python 和 Javascript / jQuery 编写的。它可以在多种环境中使用，如 Linux，Windows，Unix，可在桌面和服务器模式下使用。
 
 **注意：在安装 pgAdmin4 前先行安装 PostgreSQL 数据库，否则安装 pgAdmin4 会失败。**
 
@@ -151,8 +151,8 @@ virtualenv 用来建立一个虚拟的 python 环境，一个专属于项目的 
 
 ### 安装配置 virtualenv
 
-使用 virtualenv 创建独立的 Python 环境。 
-Virtualenv 会创建一个自己的 Python 安装的环境，它不支持具有全局或另一个虚拟环境的库。 
+使用 virtualenv 创建独立的 Python 环境。
+Virtualenv 会创建一个自己的 Python 安装的环境，它不支持具有全局或另一个虚拟环境的库。
 运行以下命令来安装 Virtualenv。
 
 ```

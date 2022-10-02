@@ -32,7 +32,7 @@ Linus“I have never even checked 386BSD out; when I started on Linux it wast av
 
 macOS & iOS 在一定程度上来说，都基于 FreeBSD 。可见 FreeBSD 的 GUI 并不是搞不好，只是 Xorg 和开发方向有问题。
 
-首先 macOS 和 iOS 某种程度上都基于 FreeBSD 。但是这时候就要说易用性了，FreeBSD 和 Linux 还都是那套 Xorg ，很明显不行。但是本着你行你上的观点我也上不去……图形界面才是第一 x3 。
+首先 macOS 和 iOS 某种程度上都基于 FreeBSD 。但是这时候就要说易用性了，FreeBSD 和 Linux 还都是那套 Xorg，很明显不行。但是本着你行你上的观点我也上不去……图形界面才是第一 x3 。
 
 到底是苹果成就了 macOS、iOS 还是反过来 二者成就了苹果呢？举例来说，买 Mac 装 Windows 当然这是个人喜好，没有任何值得批评的地方。假设 iOS 预装 Android （这么举例可能不恰当），相当一部分纯果粉应该是接受不了的。
 

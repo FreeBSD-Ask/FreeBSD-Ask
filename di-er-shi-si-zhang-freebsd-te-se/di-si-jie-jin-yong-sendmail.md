@@ -3,7 +3,7 @@
 FreeBSD 系统中的 sendmail 一直默认启动，这对于大多数人来说是无用的，并造成了启动时好几分钟的延迟，可以在安装时禁止其服务，详见安装说明。
 
 
-编辑 `/etc/rc.conf` ，加入以下几行：
+编辑 `/etc/rc.conf`，加入以下几行：
 
 ```
 sendmail_enable="NO"
@@ -12,7 +12,7 @@ sendmail_outbound_enable="NO"
 sendmail_msp_queue_enable="NO"
 ```
 
-编辑 `/etc/periodic.conf` ，加入以下几行，关闭某些 Sendmail 才会用到的设定。
+编辑 `/etc/periodic.conf`，加入以下几行，关闭某些 Sendmail 才会用到的设定。
 
 ```
 daily_clean_hoststat_enable="NO"

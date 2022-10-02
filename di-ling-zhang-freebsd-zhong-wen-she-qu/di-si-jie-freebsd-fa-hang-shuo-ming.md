@@ -181,7 +181,7 @@ FreeBSD 基金会是一个 501(c)(3) 的非营利组织，致力于支持和促�
 
 #### 支持 FreeBSD 基础设施
 
-基金会为该项目提供硬件和支持。一个新的澳大利亚镜像被集群管理团队部署到了网上。 如果你是大洋洲或东南亚的 FreeBSD 用户，请让我们知道安装程序镜像和软件包的下载速度是否有所提高。
+基金会为该项目提供硬件和支持。一个新的澳大利亚镜像被集群管理团队部署到了网上。如果你是大洋洲或东南亚的 FreeBSD 用户，请让我们知道安装程序镜像和软件包的下载速度是否有所提高。
 
 通过你们的捐款，基金会购买了新的硬件来修复两个 PowerPC 软件包的构建器，一个是小端软件包（powerpc64le），第二个是大端软件包（powerpc64，powerpc）。新的硬件刚刚到达数据中心，很快就会安装。预计在不久的将来会有很多 PowerPC 软件包。
 
@@ -194,7 +194,7 @@ FreeBSD 基金会在全球范围内赞助了许多会议、活动和峰会。这
 请看我们上一季度所做的一些宣传和教育工作：
 
  - 我们获得了 2022 年 10 月 30 日至 11 月 2 日在北卡罗来纳州罗利举行的 All Things Open 的展位和非营利性赞助商地位
- - 我们在 7 月 28-30 日在加州洛杉矶举行的 Scale 19x 上的展位和研讨会已经确定。 FreeBSD 研讨会将于 2022 年 7 月 29 日星期五举行，你可以到基金会的 502 号展位参观
+ - 我们在 7 月 28-30 日在加州洛杉矶举行的 Scale 19x 上的展位和研讨会已经确定。FreeBSD 研讨会将于 2022 年 7 月 29 日星期五举行，你可以到基金会的 502 号展位参观
  - 确认我们是 2022 年 9 月 15-18 日在奥地利维也纳举行的 EuroBSDcon 的银牌赞助商
  - 赞助并帮助组织 2022 年 6 月 16-17 日的FreeBSD开发者峰会。视频可以在 FreeBSD 项目的 YouTube 频道上看到
  - 庆祝 2022 年 6 月 19 日的 FreeBSD 日，以及接下来的整个一周
@@ -364,15 +364,15 @@ Ports Tarball 网址：http://ftp.freebsd.org/pub/FreeBSD/ports/ports/
 
 Ports 管理团队负责监督 Ports 的整体方向、建筑配套和人事事务。以下是上一季度发生的情况。
 
-Port 的数量略高于 30,000。在上一季度，“main”分支有 151 个提交者提交了 9137 个代码， "2022Q2" 分支有 61 个提交者提交了 589 个代码。在写这篇文章的时候，有 2700 个开放 port 的 PR，其中 682 个是未分配的。与上一季度相比， 提交活动略有减少， 而 PR 的数量则保持不变。注意：Freshports 似乎大幅多计了。本季度的 port 数是以不同的方式得出的，与上一季度的 port 数没有可比性。
+Port 的数量略高于 30,000。在上一季度，“main”分支有 151 个提交者提交了 9137 个代码，"2022Q2" 分支有 61 个提交者提交了 589 个代码。在写这篇文章的时候，有 2700 个开放 port 的 PR，其中 682 个是未分配的。与上一季度相比，提交活动略有减少，而 PR 的数量则保持不变。注意：Freshports 似乎大幅多计了。本季度的 port 数是以不同的方式得出的，与上一季度的 port 数没有可比性。
 
-在上一季度， portmgr 欢迎 salvadore@ 的回归， 但同时也因为缺乏活跃而与七个 port 提交者告别。
+在上一季度，portmgr 欢迎 salvadore@ 的回归，但同时也因为缺乏活跃而与七个 port 提交者告别。
 
 在两周一次的会议上，portmgr 讨论了以下主题。* ca_root_nss 的未来 * 基础系统提供某些 .pc 文件的可行性 * 处理基础系统小版本升级时内核模块 port 不兼容问题的方法
 
-经过开发人员的讨论， portmgr 决定授予所有文档和源码提交者批准， 以修复 Ports 树中任何与文档相关的错误， 但不影响其功能。
+经过开发人员的讨论，portmgr 决定授予所有文档和源码提交者批准，以修复 Ports 树中任何与文档相关的错误，但不影响其功能。
 
-以下是在 2022q2 期间对 Ports Tree 所做的修改： * pkg 更新到了 1.18.3 版， Firefox 更新到了 102.0 版， Chromium 更新到了 103.0.50060.53 版 * GCC、 Lazarus、 Python 和 Ruby 的默认版本分别更新为 11 (powerpcspe 保持 8 版)、 2.2.2、 3.9 和 3.0。* 加入了两个新的USES，gstreamer用于支持基于GStreamer插件的 port，pytest 用于帮助使用 pytest 进行测试。
+以下是在 2022q2 期间对 Ports Tree 所做的修改： * pkg 更新到了 1.18.3 版，Firefox 更新到了 102.0 版，Chromium 更新到了 103.0.50060.53 版 * GCC、 Lazarus、 Python 和 Ruby 的默认版本分别更新为 11 (powerpcspe 保持 8 版)、 2.2.2、 3.9 和 3.0。* 加入了两个新的USES，gstreamer用于支持基于GStreamer插件的 port，pytest 用于帮助使用 pytest 进行测试。
 
 ***
 
@@ -442,7 +442,7 @@ Azure Marketplace 上的 [13.1-RELEASE 镜像](https://azuremarketplace.microsof
 
  - 实现镜像构建和发布过程的自动化
  - 构建并向 Azure 市场发布基于 ZFS 的镜像
-    - 通过合并 [makefs(8)](https://www.freebsd.org/cgi/man.cgi?query=makefs&sektion=8&format=html) 和 [release(7)](https://www.freebsd.org/cgi/man.cgi?query=release&sektion=7&format=html) 的 ZFS 支持，taks 将受益。  
+    - 通过合并 [makefs(8)](https://www.freebsd.org/cgi/man.cgi?query=makefs&sektion=8&format=html) 和 [release(7)](https://www.freebsd.org/cgi/man.cgi?query=release&sektion=7&format=html) 的 ZFS 支持，taks 将受益。 
       - https://reviews.freebsd.org/D23334  
       - https://reviews.freebsd.org/D34426  
       - https://reviews.freebsd.org/D35248  
@@ -560,7 +560,7 @@ pf 最近开始能够使用 dummynet 进行数据包调度。这种支持已经�
 
 #### 最后匹配时间戳
 
-pf 现在可以跟踪一个规则最后一次被匹配的时间。与 ipfw 规则的时间戳类似， 这些时间戳在内部是以秒为单位的系统“墙上时钟时间”的 uint32_t 捕捉。(参见 time(9))。时间戳是 CPU 本地的，并且在每次规则或状态被匹配时更新。
+pf 现在可以跟踪一个规则最后一次被匹配的时间。与 ipfw 规则的时间戳类似，这些时间戳在内部是以秒为单位的系统“墙上时钟时间”的 uint32_t 捕捉。(参见 time(9))。时间戳是 CPU 本地的，并且在每次规则或状态被匹配时更新。
 
 赞助商：Rubicon Communications, LLC（"Netgate"）
 
@@ -690,7 +690,7 @@ Realtek rtw89 状态 FreeBSD wiki 页面 网址：https://wiki.freebsd.org/WiFi/
 
 整个项目旨在为目前使用 LinuxKPI 兼容代码的 FreeBSD 带来对较新芯片组的支持，该代码由本地 net80211 和内核代码支撑。此外，我们的目标是继续努力支持更新的无线标准。在第二季度，有 40 个提交进入了 FreeBSD CURRENT。随着越来越多的用户尝试多种驱动，支持时间也在增加。
 
-早期版本的 Intel iwlwifi 衍生的无线驱动在 13.1-RELEASE 中发布了，这使得这项工作进入了第一个 FreeBSD 版本。此后， iwlwifi 驱动程序和固件又在 CURRENT 和 stable/13 中进行了更新， 这是持续开发的一部分。与上游 Intel Linux 版本的驱动共享的文件中的变化现在不到 400 行。最近，一个长期存在的老式芯片组的问题（有希望）得到解决，允许支持 iwm(4) 的网卡在近三个月后再次与 iwlwifi(4) 一起工作。在今年年底之前，项目的主要重点将是让我们达到当代的速度。
+早期版本的 Intel iwlwifi 衍生的无线驱动在 13.1-RELEASE 中发布了，这使得这项工作进入了第一个 FreeBSD 版本。此后，iwlwifi 驱动程序和固件又在 CURRENT 和 stable/13 中进行了更新，这是持续开发的一部分。与上游 Intel Linux 版本的驱动共享的文件中的变化现在不到 400 行。最近，一个长期存在的老式芯片组的问题（有希望）得到解决，允许支持 iwm(4) 的网卡在近三个月后再次与 iwlwifi(4) 一起工作。在今年年底之前，项目的主要重点将是让我们达到当代的速度。
 
 4 月 1 日，使用与 iwlwifi 工作相同的 LinuxKPI 基础设施，Realtek 的 rtw88(4) 驱动被纳入了 CURRENT。由于 DMA 的问题，在接下来的几周里，一个解决方法被开发出来并放到了代码仓库上，因此用户不再需要修补内核。对于物理内存超过 4GB 的机器，该驱动仍然需要在 loader.conf 中设置一个调整项。这个调整项使得该驱动在六月被合并到了 stable/13，随后又在 CURRENT 和 stable/13 中进一步更新。随着基于 rtw88 的芯片组的 USB 部分被准备纳入 Linux，准备 FreeBSD 也能支持 USB 部分的工作已经开始（需要更多时间）。
 
@@ -857,7 +857,7 @@ doceng@ 团队是一个处理与 FreeBSD 文档工程相关的一些元项目问
 
 ### Ports
 
-影响 Ports 的变化， 无论是涉及大部分目录的全面变化， 还是个别 Ports 本身的变化。
+影响 Ports 的变化，无论是涉及大部分目录的全面变化，还是个别 Ports 本身的变化。
 
 ### FreeBSD 上的 KDE
 
@@ -871,14 +871,14 @@ KDE Community FreeBSD 网址：https://community.kde.org/FreeBSD
 
 KDE on FreeBSD 项目将来自 KDE Community 的软件，以及依赖关系和相关软件打包到 FreeBSD ports 上。这些软件包括一个叫做 KDE Plasma 的完整桌面环境（适用于 X11 和 Wayland）和数百个可以在任何 FreeBSD 机器上使用的应用程序。
 
-KDE 团队 (kde@) 也是 desktop@ 和 x11@ 的一部分，他们建立了软件栈，使 FreeBSD 成为漂亮的、可用于日常驱动的基于图形的桌面机器。下面的说明主要是描述 KDE 的 Ports ，但也包括对整个桌面堆栈有意义的项目。
+KDE 团队 (kde@) 也是 desktop@ 和 x11@ 的一部分，他们建立了软件栈，使 FreeBSD 成为漂亮的、可用于日常驱动的基于图形的桌面机器。下面的说明主要是描述 KDE 的 Ports，但也包括对整个桌面堆栈有意义的项目。
 
 #### KDE 堆栈
 
 KDE Gear 每季度发布一次，KDE Plasma 每月更新一次，KDE Frameworks 每月也有一个新版本。这些（大型）更新在其上游发布后不久就登陆，不单独列出。
 
  - astro/kstars 最新版本3.5.9。
- - deskutils/grantleetheme 在 UPDATING 中得到了一个条目， 因为这个 port 的安装结构发生了一些不寻常的变化。
+ - deskutils/grantleetheme 在 UPDATING 中得到了一个条目，因为这个 port 的安装结构发生了一些不寻常的变化。
  - deskutils/kalendar 加入了 KDE Gear 版本。
  - devel/okteta 更新了二进制（以及八进制和十六进制）数据查看器和编辑器。
  - finance/kraft 需要对较新的KDE框架进行特定的构建修复。
@@ -934,7 +934,7 @@ GCC 11 发布系列 网址：https://gcc.gnu.org/gcc-11/
 
  - salvadore@ 致力于将 Mk/bsd.default-versions.mk 中的 GCC_DEFAULT 从 10 升级到 11，根据 antoine@ 的 exp-runs 打开 bug 报告并修复了一些：非常感谢所有帮助这项工作的人。GCC_DEFAULT 从 GCC 10 到 GCC 11 的更新现在已经由 gerald@ 提交，并在下一个季度的分支中及时发生。https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=258378
 pkubaj@ 通过引入一个默认启用的新选项，将 GCC 引导转换为使用 GCC 本身的链接时间优化，适用于 GCC 11 和更新版本。启用 LTO_BOOTSTRAP 进行构建需要大量的内存和时间。实际需要多少资源取决于你的配置 (例如，你是用 port 还是用 poudriere 构建？你的架构是什么？）。举个例子，一个用户报告说需要 5 GiB 的临时文件，而在 PR 265254 中，由于产生了过多的进程，估计需要大约 130 GB 的内存（也见 https://gcc.gnu.org/bugzilla/show_bug.cgi?id=106328 ）。考虑禁用 LTO_BOOTSTRAP，改用 STANDARD_BOOTSTRAP（或者完全禁用 BOOTSTRAP），以防出现问题。
- - pkubaj@ 还添加了 lang/gcc12 和 lang/gcc13-devel port， 并将 lang/gcc9 更新到 9.5。
+ - pkubaj@ 还添加了 lang/gcc12 和 lang/gcc13-devel port，并将 lang/gcc9 更新到 9.5。
  - 这三个改动仍然需要帮助，以便与上游的 GCC 一起工作（需要 src 专业知识，而不是 ports）。
   - 上游的 lang/gcc11/patch-gets-no-more
   - upstreaming lang/gcc11/patch-arm-unwind-cxx-support
@@ -1032,7 +1032,7 @@ Intel 的 igt-gpu-tools 是 Linux 上 drm 驱动的一个通用测试套件。ig
 
 值得注意的不兼容代码包括：debugfs，libkmod，libprocps，Linux 性能事件，和 Linux userfaultfd。如果你愿意协助将 libkmod 或 libprocps 移植到 ports 中，请不要犹豫，与我联系。
 
-当 FreeBSD 兼容代码完成后， 我将在 FreeBSD 14.0-CURRENT 上使用一系列图形处理器运行修改后的 igt 测试。如果一切顺利， 这个项目的 diff 将被提交到 ports 中。
+当 FreeBSD 兼容代码完成后，我将在 FreeBSD 14.0-CURRENT 上使用一系列图形处理器运行修改后的 igt 测试。如果一切顺利，这个项目的 diff 将被提交到 ports 中。
 
 赞助商：谷歌代码之夏
 
@@ -1095,7 +1095,7 @@ bhyve(8) 中针对大型 IO 的 NVMe iovec 结构已被修复。这个问题是�
 
 chroot 工具现在支持非特权操作了，chroot(8) 程序现在有了 `-n` 选项来启用它。460b4b550dc9 (由 EPSRC 赞助)
 
-对 CAM 库进行了修改，以便在解析设备名称之前对其使用 realpath(3) ，这使得诸如 camcontrol(8) 和 smartctl(8) 等工具在使用符号链接时能够更加友好，e32acf95ea25
+对 CAM 库进行了修改，以便在解析设备名称之前对其使用 realpath(3)，这使得诸如 camcontrol(8) 和 smartctl(8) 等工具在使用符号链接时能够更加友好，e32acf95ea25
 
 md5sum(1) 和类似的消息加密程序与 Linux 上的程序兼容，如果程序名称以 sum 结尾，则让相应的 BSD 程序以 `-r` 选项运行，c0d5665be0dc (由 Netflix 赞助)
 

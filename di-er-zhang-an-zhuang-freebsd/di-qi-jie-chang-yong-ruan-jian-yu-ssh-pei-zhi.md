@@ -63,7 +63,7 @@ ClientAliveCountMax 3
 
 客户端设置：
 
-全局用户生效：`# ee /etc/ssh/ssh_config` ，仅对当前用户生效：`~/.ssh/config`。
+全局用户生效：`# ee /etc/ssh/ssh_config`，仅对当前用户生效：`~/.ssh/config`。
 
 ```
 Host *

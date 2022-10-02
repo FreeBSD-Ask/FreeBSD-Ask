@@ -7,7 +7,7 @@ IPF 是一款开源软件，作者 Darren Reed。
 ```
 #ipfilter 
 
-# cp /usr/share/examples/ipfilter/ipf.conf.sample /etc/ipf.rules #复制示例文件作为默认配置规则集文件， 否则 ipfilter 启动后会没有规则。示例文件自带的规则不会影响使用 
+# cp /usr/share/examples/ipfilter/ipf.conf.sample /etc/ipf.rules #复制示例文件作为默认配置规则集文件，否则 ipfilter 启动后会没有规则。示例文件自带的规则不会影响使用 
 
 # service ipfilter enable #设置 ipfilter 开机启动，也可以通过 bsdconfig 设置 ipfilter_enable 
 
@@ -47,19 +47,19 @@ pass in quick on lo0 all #quick 关键字表示若规则匹配，就停止执行
 
 pass out quick on lo0 all #增加 TCP 协议访问 80 端口的规则 
 
-pass in quick proto tcp from any to 192.168.1.184 port = 80 #允许任何设备以 TCP 协议访问本机 80 端口。 其中 proto tcp 是访问协议，常用值有 tcp、udp、tcp/udp、icmp，不写则表示支持所有协议；port = 80 是 端口，写在目标地址之后为目标端口，源地址之后未写，表示从源地址的任何端口发起访问 
+pass in quick proto tcp from any to 192.168.1.184 port = 80 #允许任何设备以 TCP 协议访问本机 80 端口。其中 proto tcp 是访问协议，常用值有 tcp、udp、tcp/udp、icmp，不写则表示支持所有协议；port = 80 是 端口，写在目标地址之后为目标端口，源地址之后未写，表示从源地址的任何端口发起访问 
 
 pass out quick proto tcp from 192.168.1.184 to any #允许回显信息给任何访问的设备 #增加 80 端口到 8080 端口流量转发的规则 
 
 pass in quick proto tcp from any to 192.168.1.184 port = 80 #首先放开 ipfilter 的访问限制 rdr em0 192.168.1.184 port 80 -> 192.168.1.184 port 8080 #由于测试机只有一块网卡，因此转发仅限本机 
 
-pass out quick proto icmp from 192.168.1.184 to any icmp-type 8 keep state #允许本机 ping 任何外部设备。 其中 ICMP type 8 是查询请求；keep state 表示维持状态。如与下例合并，会完全放开 ping 的功能 
+pass out quick proto icmp from 192.168.1.184 to any icmp-type 8 keep state #允许本机 ping 任何外部设备。其中 ICMP type 8 是查询请求；keep state 表示维持状态。如与下例合并，会完全放开 ping 的功能 
 
 pass in quick proto icmp from any to 192.168.1.184 icmp-type 8 keep state #允许任何外部设备 ping 本机 
 
 pass out quick proto icmp from 192.168.1.184 to any icmp-type 0 #允许 traceroute 命令以 ICMP 协议执行 
 
-pass out quick proto udp from 192.168.1.184 to any port 33434 >< 34500 keep state #traceroute 默认协议 UDP， 端口号从 33434 开始，每转发一次端口号加 1 
+pass out quick proto udp from 192.168.1.184 to any port 33434 >< 34500 keep state #traceroute 默认协议 UDP，端口号从 33434 开始，每转发一次端口号加 1 
 ```
 
 下面根据我的操作系统整理规则集文件 `/etc/ipf.rules` 如下：

@@ -31,7 +31,7 @@ cp -r /$PATH/amdgpu-firmware-xxx/firmware/amdgpu/* /etc/firmware/amdgpu/
 
 ### 修改软件源
 
-打开 `/etc/installurl` ，将默认源注释掉，改为 `https://mirrors.bfsu.edu.cn/OpenBSD` 。此处我们选择了北外源，用户也可选择 [清华镜像源](https://mirrors.tuna.tsinghua.edu.cn/OpenBSD)、 [阿里镜像源](https://mirrors.aliyun.com/openbsd)、 及[南京大学源](https://mirror.sjtu.edu.cn/OpenBSD) 等。
+打开 `/etc/installurl`，将默认源注释掉，改为 `https://mirrors.bfsu.edu.cn/OpenBSD` 。此处我们选择了北外源，用户也可选择 [清华镜像源](https://mirrors.tuna.tsinghua.edu.cn/OpenBSD)、 [阿里镜像源](https://mirrors.aliyun.com/openbsd)、 及[南京大学源](https://mirror.sjtu.edu.cn/OpenBSD) 等。
 
 ## 系统更新
 
@@ -86,9 +86,9 @@ $ cd media
 
 ### 挂载
 
-由上则可知分区为 `i` ，使用以下命令挂载：
+由上则可知分区为 `i`，使用以下命令挂载：
 
-`# mount /dev/sd1i /$USER/media/usb1` ，`$USER` 替换为当前用户名。
+`# mount /dev/sd1i /$USER/media/usb1`，`$USER` 替换为当前用户名。
 
 ### 其它格式
 
@@ -107,7 +107,7 @@ OpenBSD 可挂载的外接硬盘格式有 NTFS（需要安装软件包`ntfs_3g`�
 
 ## 无线测试
 
-OpenBSD 里的无线网络，配置文件通常是 `hostname.if` ，其中 `if` 为无线驱动名称+序号。如一台笔记本无线型号为 rtl8188cu ，OpenBSD 下驱动为 rtwn ，序号从 0 开始。为了让系统自动加载无线，可打开 `/etc/hostname.rtwn0` 文件 ，而后添加：
+OpenBSD 里的无线网络，配置文件通常是 `hostname.if`，其中 `if` 为无线驱动名称+序号。如一台笔记本无线型号为 rtl8188cu，OpenBSD 下驱动为 rtwn，序号从 0 开始。为了让系统自动加载无线，可打开 `/etc/hostname.rtwn0` 文件，而后添加：
 
 ```
 dhcp 
@@ -119,7 +119,7 @@ join 无线名称 wpakey 无线密码
 
 ### 加载触摸板
 
-打开 `/etc/wsconsctl.conf`， 添加一行 `mouse.tp.tapping=1` 。
+打开 `/etc/wsconsctl.conf`，添加一行 `mouse.tp.tapping=1` 。
 
 ### 加载多线程
 

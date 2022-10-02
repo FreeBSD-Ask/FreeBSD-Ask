@@ -55,7 +55,7 @@ fn main() {
 > `tar -C /usr/local -xzf https://golang.google.cn/dl/go1.18.1.freebsd-amd64.tar.gz`
 
 - 添加环境变量： 
-> 文本模式打开 `.profile`， 添加一行 `export PATH=$PATH:/usr/local/go/bin`
+> 文本模式打开 `.profile`，添加一行 `export PATH=$PATH:/usr/local/go/bin`
 
 安装成功后，输入 `go version` 查看软件版本。
 

@@ -28,7 +28,7 @@ xsetroot -solid grey
 $command &  
 ```
 
-注意：`$command` 需要替换，请注意保留 `&`，在不同桌面下需要替换，Gnome 用 `gnome-session`，KDE 用 `startplasma-x11`， MATE 用 `mate-session`，Xfce 用 `xfce4-session`。
+注意：`$command` 需要替换，请注意保留 `&`，在不同桌面下需要替换，Gnome 用 `gnome-session`，KDE 用 `startplasma-x11`，MATE 用 `mate-session`，Xfce 用 `xfce4-session`。
 
 保存后执行命令 `# chmod 755 ~/.vnc/xstartup`。
 

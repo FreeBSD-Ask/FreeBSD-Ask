@@ -57,7 +57,7 @@
 
 之后就可以 root 登录 sddm了！
 
-#### 注意 sddm 左下角选项不能为 Wayland ，应该是 Plasma-X11，目前 KDE 5 不支持 wayland，选错无法登陆！
+#### 注意 sddm 左下角选项不能为 Wayland，应该是 Plasma-X11，目前 KDE 5 不支持 wayland，选错无法登陆！
 
 > 再次警告
 >

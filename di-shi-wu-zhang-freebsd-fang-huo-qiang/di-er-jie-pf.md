@@ -19,7 +19,7 @@ pf 的管理命令为 `pfctl`，常用操作示例如下：
 
 # pfctl -f /etc/pf.conf #加载规则集文件中的规则 
 
-# pfctl -nf /etc/pf.conf #解析规则，但不加载。-f 参数还可以与其他参数配合，如 -N 表示只载入 NAT 规则， -R 表示只载入过滤规则，-A 只载入队列规则，-O 只载入选项规则 
+# pfctl -nf /etc/pf.conf #解析规则，但不加载。-f 参数还可以与其他参数配合，如 -N 表示只载入 NAT 规则，-R 表示只载入过滤规则，-A 只载入队列规则，-O 只载入选项规则 
 
 # pfctl -s all #查看 pf 所有对象信息，如果想查看特定对象信息，可以用 nat、queue、rules、Anchors、states、 Sources、info、Running、labels、timeouts、memory、Tables、osfp、Interfaces 替换 all
 
@@ -35,7 +35,7 @@ pf 的管理命令为 `pfctl`，常用操作示例如下：
 
 block all #拒绝所有访问。
 
-ipfilter #是默认明示禁止的防火墙，因此需要通过此规则禁止所有访问。其中 block 是动作，out 表示拒绝，pass 表示通过；all 是 from any to any 的简写，表示从源地址到目标地址， 地址通常用网段(如 192.168.1.0/24)或 IP 地址(如 192.168.1.100)，any 是特殊词，表示任何地址；此外，当规则同时适用于输入 in 和输出 out 时，可以省略关键字，因此本条规则同时适用于输入输出 
+ipfilter #是默认明示禁止的防火墙，因此需要通过此规则禁止所有访问。其中 block 是动作，out 表示拒绝，pass 表示通过；all 是 from any to any 的简写，表示从源地址到目标地址，地址通常用网段(如 192.168.1.0/24)或 IP 地址(如 192.168.1.100)，any 是特殊词，表示任何地址；此外，当规则同时适用于输入 in 和输出 out 时，可以省略关键字，因此本条规则同时适用于输入输出 
 
 pass quick on lo0 all #放开回环接口的访问权限，回环接口不对外部。quick 关键字表示若规则匹配，就停止执行，不会再执行后续规则 
 

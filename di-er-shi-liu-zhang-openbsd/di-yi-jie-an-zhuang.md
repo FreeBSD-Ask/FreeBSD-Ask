@@ -29,7 +29,7 @@
 >
 > Which one do you wish to configure? (or 'done') \[em0]
 
-这一步选择网络连接。为免去不必要麻烦，请尽量选择有线网络。可先输入 `？` ，详细了解网络名称后再选择。如本例中 `em0` 为有线网络，`rtwn0` 为无线网络。
+这一步选择网络连接。为免去不必要麻烦，请尽量选择有线网络。可先输入 `？`，详细了解网络名称后再选择。如本例中 `em0` 为有线网络，`rtwn0` 为无线网络。
 
 后续配置直接 **回车键** 确认即可。
 
@@ -98,7 +98,7 @@ sets by prepending a '-' to the set name, name pattern or 'all'. Selected sets a
 Set name(s)? (or 'abort' or 'done') [done] -game*
 ```
 
-这里我们输入 `-game*` 来取消 `game71.tgz` ，其它都勾选。
+这里我们输入 `-game*` 来取消 `game71.tgz`，其它都勾选。
 
 注：即使不使用桌面，也请勾选 `X11` 选项，否则部分软件可能无法正常运行。
 
@@ -131,13 +131,13 @@ please read your mail using the 'mail' command.
 
 ## 附录：自定义分区
 
-对于尝鲜的朋友，假设有 32GB 的容量，可设分区： `swap 2GB` ，`/`为剩下的全部容量。
+对于尝鲜的朋友，假设有 32GB 的容量，可设分区： `swap 2GB`，`/`为剩下的全部容量。
 
-如果有 128GB 容量，推荐分区： `/ 32GB` ，`swap 4GB` ，`/home` 为剩下的全部容量。
+如果有 128GB 容量，推荐分区： `/ 32GB`，`swap 4GB`，`/home` 为剩下的全部容量。
 
 对于更大的容量，可依自己喜好，进一步细化分区配置。
 
-系统分区时，选择 `C` ，即 `自定义设置` 。
+系统分区时，选择 `C`，即 `自定义设置` 。
 
 > `p m`
 
@@ -151,7 +151,7 @@ please read your mail using the 'mail' command.
 | z   | 删除全部分区 |
 | q   | 确认分区   |
 
-以下假设一块 64 GB 硬盘，分区为：/ 20GB ， swap 4GB ，然后剩下的空间全部划分给 /home 。
+以下假设一块 64 GB 硬盘，分区为：/ 20GB，swap 4GB，然后剩下的空间全部划分给 /home 。
 
 > \> `a`
 >

@@ -136,7 +136,7 @@ wpa 验证，静态 ip
 # ifconfig wlan0 inet 192.168.0.1 netmask 255.255.255.0 ssid freebsdap mode 11g channel 1
 ```
 
->如果连不上或者搜不到调试信道，尝试将 WiFi 区域码选 `Japan` ，然后选 `China`
+>如果连不上或者搜不到调试信道，尝试将 WiFi 区域码选 `Japan`，然后选 `China`
 
 ### 简单版本
 

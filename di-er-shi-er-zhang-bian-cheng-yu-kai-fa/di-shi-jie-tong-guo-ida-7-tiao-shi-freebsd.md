@@ -12,7 +12,7 @@
 
 ![](../.gitbook/assets/IDA1.png)
 
-请用 **64位** 的 IDA， 按照如下截图操作。
+请用 **64位** 的 IDA，按照如下截图操作。
 
 ![](../.gitbook/assets/IDA2.png)
 

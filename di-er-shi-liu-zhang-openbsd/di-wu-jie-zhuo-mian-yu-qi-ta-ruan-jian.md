@@ -29,7 +29,7 @@ multicast=YES
 
 ### 中文界面：
 
-打开用户目录下的 `.profile` 文件 ，添加以下文本：
+打开用户目录下的 `.profile` 文件，添加以下文本：
 
 ```
 export LANG="zh_CN.UTF-8"
@@ -70,7 +70,7 @@ multicast=YES
 
 ### 中文界面：
 
-打开用户目录下的 `.profile` 文件 ，添加以下文本：
+打开用户目录下的 `.profile` 文件，添加以下文本：
 
 ```
 export LANG="zh_CN.UTF-8"
@@ -90,7 +90,7 @@ export GTK_IM_MODULE=XIM
 
 然后打开终端，运行以下几条命令：
 
-`#usermod -L gnome 用户名`， `#rcctl disable xenodm`， `#rcctl enable messagebus avahi_daemon gdm`。最后重启系统，即可登入 Gnome 桌面。
+`#usermod -L gnome 用户名`，`#rcctl disable xenodm`，`#rcctl enable messagebus avahi_daemon gdm`。最后重启系统，即可登入 Gnome 桌面。
 
  ### 中文字体
  
