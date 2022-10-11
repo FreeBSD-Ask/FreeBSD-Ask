@@ -2,9 +2,9 @@
 
 >**提示**
 >
->FreeBSD 邮件订阅列表在 <https://lists.freebsd.org/> 列出。建议订阅 freebsd-current，几乎所以人都在那里。订阅只需要输入你的邮箱即可，然后你会收到回信，按要求给他列出的邮箱随便发一封包含内容的邮件即可，你应该就会收到订阅成功的提示。如果要从摘要订阅转为全文一般订阅，只需要重新向 Subscribe 的邮件地址（比如 freebsd-doc 是 freebsd-doc+subscribe@freebsd.org）发送任意内容的邮件即可。
->
->请使用英语，如果不会可以用 <https://deepl.com> 来进行翻译。出现问题时建议先发邮件问一问再提交 bug 报告。
+>建议先发到邮件列表问问看。
+
+FreeBSD Bug 报告系统 <https://bugs.freebsd.org/bugzilla/>。
 
 当你遇到问题时，你该怎么做？
 
@@ -119,10 +119,5 @@
 
 - Description 问题描述，完整、详细。不要加上你对问题的猜测
 
-***
-
-提交之后，你会收到一则确认电子邮件，可以通过它来跟踪进展情况。保持关注，如果有人要求提供更多信息，记得及时回复，耐心等候，[_坐和放宽_](https://jikipedia.com/definition/732345544)，相信你的问题会很快得到解决的！
-
-***
 
 祝你在 **FreeBSD** 大家庭中玩得愉快！
