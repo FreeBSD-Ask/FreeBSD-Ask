@@ -223,6 +223,7 @@
 
 ## 第二十二章 编程与开发
 
+* [第〇节 如何订阅 FreeBSD 邮件列表](di-er-shi-er-zhang-bian-cheng-yu-kai-fa/di-ling-jie-ru-he-ding-yue-freebsd-you-jian-lie-biao.md)
 * [第一节 如何报告 Bug](di-er-shi-er-zhang-bian-cheng-yu-kai-fa/di-yi-jie-ru-he-bao-gao-bug.md)
 * [第二节 如何提交一个软件包](di-er-shi-er-zhang-bian-cheng-yu-kai-fa/di-er-jie-ru-he-ti-jiao-yi-ge-ruan-jian-bao.md)
 * [第三节 如何参与 FreeBSD 协作](di-er-shi-er-zhang-bian-cheng-yu-kai-fa/di-san-jie-ru-he-can-yu-freebsd-xie-zuo.md)
