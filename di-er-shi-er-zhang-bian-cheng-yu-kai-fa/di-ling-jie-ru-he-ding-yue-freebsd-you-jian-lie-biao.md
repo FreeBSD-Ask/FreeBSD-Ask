@@ -14,19 +14,18 @@ FreeBSD 邮件订阅列表在 [https://lists.freebsd.org/](https://lists.freebsd
 
 ## 详细版本
 
-打开 [https://lists.freebsd.org/](https://lists.freebsd.org/) 找到要订阅的邮件列表，点红色的字进去。
+打开 [https://lists.freebsd.org/](https://lists.freebsd.org/) 找到要订阅的邮件列表（以 freebsd-current 为例）：
 
-此处插图-------------------
+![](../.gitbook/assets/mail1.png)
 
-<figure><img src="../.gitbook/assets/mail1.png" alt=""><figcaption></figcaption></figure>
+点红色的字进去：
 
-<figure><img src="../.gitbook/assets/mail2.png" alt=""><figcaption></figcaption></figure>
+![](../.gitbook/assets/mail2.png)
 
-<figure><img src="../.gitbook/assets/mail3.png" alt=""><figcaption></figcaption></figure>
+![](../.gitbook/assets/mail3.png)
 
-此处插图-------------------
 
-给这一行列出的邮件地址，发邮件内容标题无所谓。他会给你回一封，又列出了一个邮件地址让你给他列出的地址再发一封，内容标题无所谓。这样你就在邮件列表里了。
+给这一行列出的邮件地址，发邮件内容标题无所谓。他会给你回一封，又列出了一个邮件地址让你给他列出的地址再发一封，内容标题无所谓。这样你就在邮件列表里了。如果输入邮箱回车你没有得到回复，你就手动给在 `subscribe` 那一行的邮箱发邮件，标题内容随机。
 
 要测试自己的邮件别人能不能收到，请按上述步骤订阅发测试邮件给 [freebsd-test](https://lists.freebsd.org/subscription/freebsd-test)。
 
@@ -43,7 +42,7 @@ FreeBSD 邮件订阅列表在 [https://lists.freebsd.org/](https://lists.freebsd
 
 ### 摘要
 
-* 友​好耐心
+* 友好耐心
 * 热情好客
 * 体贴
 * 相互尊敬
