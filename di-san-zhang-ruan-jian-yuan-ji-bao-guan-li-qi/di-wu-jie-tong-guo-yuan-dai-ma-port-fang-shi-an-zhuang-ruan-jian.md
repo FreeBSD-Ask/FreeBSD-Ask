@@ -45,7 +45,7 @@ MAKE_JOBS_NUMBER=4
 
 >**警告**
 >
->**注意此小节内容不再对 FreeBSD 13 有效，在 2022-10-11 日 axel 由于上游长期停止开发[被移除了](https://www.freshports.org/ftp/axel/)。推荐使用 `www/aria2` **
+>**注意此小节内容不再对 FreeBSD 13 有效，在 2022-10-11 日 axel 由于上游长期停止开发[被移除了](https://www.freshports.org/ftp/axel/)。推荐使用 `www/aria2`**
 
 
 ~`# pkg install axel #下载多线程下载工具#`~
