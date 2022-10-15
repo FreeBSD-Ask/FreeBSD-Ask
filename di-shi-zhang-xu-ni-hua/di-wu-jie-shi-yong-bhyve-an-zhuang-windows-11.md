@@ -25,11 +25,11 @@
 
 ## 安装系统
 
-通过指定 Windows iso 文件开始正常的安装。当在安装模式下运行时，`vm-bhyve`将等待，直到 VNC 客户端连接后再启动客户机。这允许你抓住 Windows 可能显示的“从 CD/DVD 启动“选项。你可以在 `vm list` 中看到，在这一点上，客户机将显示为锁定。
+通过指定 Windows iso 文件开始正常的安装。当在安装模式下运行时，`vm-bhyve` 将等待，直到 VNC 客户端连接后再启动客户机。这允许你抓住 Windows 可能显示的“从 CD/DVD 启动“选项。你可以在 `vm list` 中看到，在这一点上，客户机将显示为锁定：
 
     # vm install winguest Windows-Installer.iso
 
-一旦与VNC客户端连接，就可以像平常一样完成Windows的安装。
+一旦与 VNC 客户端连接，就可以像平常一样完成 Windows 的安装。
 
 ## 添加 VirtIO 网络驱动
 
@@ -41,6 +41,7 @@
     ```
     # vm install winguest virtio-installer.iso
     ```
+    
 * 可以添加 CD 设备到客户机上，并指向 ISO 文件
 
     ```
@@ -51,13 +52,13 @@
 
 ## 关于 CPU
 
-某些版本的 Windows（大多数桌面版本）不支持一个以上的物理 CPU。默认情况下，bhyve 配置单个虚拟 CPU 和一个单独的软件包。
+某些版本的 Windows（大多数桌面版本）不支持一个以上的物理 CPU。默认情况下，bhyve 配置单个虚拟 CPU 和单核心。
 
 可以修改 sysctl `hw.vmm.topology.cores_per_package` 以告诉 bhyve 为每个 CPU 创建多核心，而不是单核心。例如，将这个 sysctl 设置为 4 将配置一个有 8 个 vCPU 的客户机，有 2  x 4 个核心。
 
 必须在 /boot/loader.conf 中设置（并重新启动才能生效）`hw.vmm.topology.cores_per_package`。
 
-当在 FreeBSD 12 上，使用 vm-bhyve 1.3 时，可以使用配置选项来控制每个客户的 CPU 拓扑结构
+当在 FreeBSD 12 上，使用 vm-bhyve 1.3 时，可以使用配置选项来控制每个客户的 CPU 拓扑结构：
 
     cpu=8
     cpu_sockets=2
@@ -159,7 +160,7 @@ graphics_listen="1.2.3.4"
 graphics_port="5901"
 ```
 
-默认情况下，屏幕分辨率被设置为 `800x600'。要指定一个不同的分辨率，请使用以下选项：、
+默认情况下，屏幕分辨率被设置为 `800x600`。要指定一个不同的分辨率，请使用以下选项：
 
 ```
 graphics_res="1600x900"
