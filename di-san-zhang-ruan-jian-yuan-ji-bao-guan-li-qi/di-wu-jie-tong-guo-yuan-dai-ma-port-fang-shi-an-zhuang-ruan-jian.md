@@ -7,6 +7,11 @@
 
 ## FreeBSD ports 基本用法
 
+>**警告**
+>
+>FreeBSD 关于在未来弃用 portsnap 的说明：<https://marc.info/?l=freebsd-ports&m=159656662608767&w=2>
+
+
 ### 首先获取 portsnap
 
 `# portsnap auto`
