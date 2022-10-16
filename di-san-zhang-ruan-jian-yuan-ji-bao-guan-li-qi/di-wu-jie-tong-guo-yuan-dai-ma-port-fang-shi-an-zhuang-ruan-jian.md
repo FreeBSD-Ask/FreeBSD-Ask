@@ -9,7 +9,69 @@
 
 >**警告**
 >
->FreeBSD 关于在未来弃用 portsnap 的说明：<https://marc.info/?l=freebsd-ports&m=159656662608767&w=2>
+>FreeBSD 关于在未来弃用 portsnap 的说明：<https://marc.info/?l=freebsd-ports&m=159656662608767&w=2>。
+>
+>以下是邮件翻译：
+>
+>我们正计划废除在 ports 中使用 portsnap 的做法。
+>
+>原因如下 (无特定排序)。
+>
+>* Portsnap 不支持季度分支，即使在季度分支被创建并改为非 HEAD 软件包的默认值的多年之后。
+>
+>* 与 svn 或 git 相比，Portsnap 似乎并不节省磁盘空间，如果你算上元数据（存储的）的话。算上元数据（默认存储在 /var/db/portsnap 中），并且你对 svn 或 git 做一个没有历史记录的相同的比较，并且忽略可能的 ZFS 压缩。也就是说，你用 `svn export` 或 `git clone --depth 1`，你会看到这样的磁盘用量：
+>
+>```
+>     342M svnexport
+>     426M git
+>     477M portsnap
+>```
+>
+>* Portsnap 也不像 git 那样可以离线工作。使用 git，你可以 也可以通过运行 `git pull --unshallow` 轻松添加历史记录。
+>
+>* 这种从 portsnap 的迁移与计划中的向 git 的迁移很相称。
+>
+>* 另外，根据我们在 Bugzilla 上看到的补丁，使用使用 portsnap 导致人们很容易意外地提交补丁到 Bugzilla，而这些补丁并不容易应用。
+>
+>* 由于 portsnap 不支持季度分支，它经常导致用户在错误的分支上进行编译，或最终使用不匹配的软件包。也就是说，他们通过 pkg 从季度分支安装软件包，然后想要定制，因此运行 portsnap 并从 head 编译，这可能会导致问题。正如我们经常看到的那样。即使这种情况没有发生，也会增加故障排除的几率，以确认它没有发生。
+>
+>我们知道人们已经习惯了 portsnap，但我们相信：
+>
+>* 人们应该能够轻松地使用在基本系统或 git 来使用 pkg 的 svnlite。(似乎很少有人真正使用 WITHOUT_SVNLITE)。
+>
+>* 也有可能退回到来获取 tar 或 zip。从 <https://cgit-beta.freebsd.org/ports/>，尽管这确实使更新难度增加。
+>
+>我们将如何做，按顺序进行：
+>
+>* 更新 poudriere 以默认使用 svn。这已经完成了：
+>
+>https://github.com/freebsd/poudriere/pull/764
+> 
+>https://github.com/freebsd/poudriere/commit/bd68f30654e2a8e965fbdc09aad238c8bf5cdc10
+>
+>* 更新文档，不再提及 portsnap。这项工作已经在进行中了：
+>
+>   https://reviews.freebsd.org/D25800
+>   
+>   https://reviews.freebsd.org/D25801
+>   
+>   https://reviews.freebsd.org/D25803
+>   
+>   https://reviews.freebsd.org/D25805
+>   
+>   https://reviews.freebsd.org/D25808
+>   
+>   https://svnweb.freebsd.org/changeset/base/363798
+>
+>   非常感谢那些已经和正在从事这项工作的人们！
+>
+>* 让 WITHOUT_PORTSNAP 成为默认的基本系统参数。目前还不确定这一点何时会发生。可能在 13.0 之前不会发生，但希望它能生效。
+>
+>* 最终，portsnap 服务器的使用率会低至可以被禁用。
+>
+>我们欢迎任何有建设性的反馈。所有的意见都会被听取，如果计划需要修改，我们会在几周内把修改后的计划反馈给你。这个过程将需要一些时间，但希望不会对任何人的正常工作流程造成太大的干扰。
+>
+>Steve (portmgr@)
 
 
 ### 首先获取 portsnap
