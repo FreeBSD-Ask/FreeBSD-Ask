@@ -2,11 +2,15 @@
 
 ## FreeBSD 中文社区 版权所有 2022
 
->**注意**
+>**域名部署**
 >
 >**当前网站部署域名为 <https://book.bsdcn.org>，如果当前使用的不是这个域名，请切换到该域名。其他域名不保证可用性。**
 >
 >**For the English version, please visit <https://mfga.bsdcn.org>.**
+
+> **PDF 文档**
+>
+> **当前文档的 PDF 实时更新地址为** [**https://book.bsdcn.org/FreeBSD-从入门到跑路.pdf**](https://book.bsdcn.org/FreeBSD-从入门到跑路.pdf)**，历史存档在 [Release](https://github.com/FreeBSD-Ask/FreeBSD-Ask/releases)。**
 
 ## 概述
 
