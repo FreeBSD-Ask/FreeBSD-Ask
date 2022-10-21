@@ -44,7 +44,7 @@
 
 [点此捐赠 FreeBSD 基金会](https://freebsdfoundation.org/donate)
 
-为了能够更好地维护本书，我们采用了 Gitbook 平台来进行协作，并使用 Vuepress 来呈现本书。对于无法直接从 GitBook 导出为 PDF 的问题（我们提供了 PDF 的参考版本于 release）以及访问速度慢等问题，我们深感抱歉。我们目前的服务器约 10 美元一个月，如果你想为我们提供捐助，请加入我们的 [TG 群](https://t.me/freebsdba) 或者 QQ 群 319271312。如果你也想参与编写，具体请参考 [WIKI](https://github.com/FreeBSD-Ask/FreeBSD-Ask/wiki/%E3%80%8AFreeBSD-%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E8%B7%91%E8%B7%AF%E3%80%8B%E7%BC%96%E8%BE%91%E6%8C%87%E5%8D%97)，关于贡献者名单请参考第一章 第九节。
+为了能够更好地维护本书，我们采用了 Gitbook 平台来进行协作，并使用 Vuepress 来呈现本书。对于无法直接从 GitBook 导出为 PDF 的问题（我们提供了 PDF 的参考版本于 release）以及访问速度慢等问题，我们深感抱歉。我们目前的服务器约 10 美元一个月，如果你想为我们提供捐助，请加入我们的 [TG 群](https://t.me/freebsdba) 或者 QQ 群 787969044。如果你也想参与编写，具体请参考 [WIKI](https://github.com/FreeBSD-Ask/FreeBSD-Ask/wiki/%E3%80%8AFreeBSD-%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E8%B7%91%E8%B7%AF%E3%80%8B%E7%BC%96%E8%BE%91%E6%8C%87%E5%8D%97)，关于贡献者名单请参考第一章 第九节。
 
 **捐赠者:**
 
