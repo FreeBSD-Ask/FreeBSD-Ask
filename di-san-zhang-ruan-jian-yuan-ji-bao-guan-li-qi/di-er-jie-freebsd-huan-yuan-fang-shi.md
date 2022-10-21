@@ -1,13 +1,6 @@
 # 第二节 FreeBSD 换源方式
 
 
-> **通知**
->
->bjtu 北京交通大学开源镜像站镜像站故障。请切换其他源，例如 freebsd.cn/ustc/nju/163。
->
->原因是学校要求保证网课，所以出口限速了100Mbps。现在该镜像站每天都很拥挤。
->
->预计修复：放暑假，具体未知。
 
 FreeBSD 有四类源：pkg、ports、portsnap、update。
 
@@ -29,32 +22,7 @@ FreeBSD 中 pkg 源分为系统级和用户级两个配置文件。不建议直�
 # mkdir -p /usr/local/etc/pkg/repos
 ```
 
-### 北京交通大学自由与开源软件镜像站
 
-创建用户级源文件:
-
-```
-# ee /usr/local/etc/pkg/repos/bjtu.conf
-```
-
-写入以下内容:
-
-```
-bjtu: {  
-url: "pkg+http://mirror.bjtu.edu.cn/reverse/freebsd-pkg/${ABI}/quarterly",  
-mirror_type: "srv",  
-signature_type: "none",  
-fingerprints: "/usr/share/keys/pkg",  
-enabled: yes
-}
-FreeBSD: { enabled: no }
-```
-
-**故障排除**
-
-**若要获取滚动更新的包,请将 `quarterly` 修改为 `latest`。请注意, `CURRENT` 版本只有 `latest`.**
-
-**若要使用 https,请先安装 `security/ca_root_nss` ,并将 `http` 修改为 `https`,最后使用命令 `# pkg update -f` 刷新缓存即可,下同。**
 
 ### 网易开源镜像站
 
@@ -76,6 +44,12 @@ enabled: yes
 }
 FreeBSD: { enabled: no }
 ```
+
+**故障排除**
+
+**若要获取滚动更新的包,请将 `quarterly` 修改为 `latest`。请注意, `CURRENT` 版本只有 `latest`.**
+
+**若要使用 https,请先安装 `security/ca_root_nss` ,并将 `http` 修改为 `https`,最后使用命令 `# pkg update -f` 刷新缓存即可,下同。**
 
 ### 中国科学技术大学开源软件镜像站
 
@@ -140,14 +114,6 @@ FreeBSD: { enabled: no }
 
 ports 下载路径是 `/usr/ports/distfiles`
 
-### 北京交通大学自由与开源软件镜像站
-
-创建或修改文件 `# ee /etc/make.conf`:
-
-写入以下内容:
-
-`MASTER_SITE_OVERRIDE?=http://mirror.bjtu.edu.cn/reverse/freebsd-pkg/ports-distfiles/`
-
 ### 网易开源镜像站
 
 创建或修改文件 `# ee /etc/make.conf`:
@@ -174,11 +140,11 @@ ports 下载路径是 `/usr/ports/distfiles`
 
 ## portsnap 源:打包的 ports文件
 
-### 北京交通大学自由与开源软件镜像站
+### FreeBSD.cn
 
 编辑portsnap配置文件 `# ee /etc/portsnap.conf` :
 
-将`SERVERNAME=portsnap.FreeBSD.org` 修改为 `SERVERNAME=freebsd-portsnap.mirror.bjtulug.org`
+将 `SERVERNAME=portsnap.FreeBSD.org` 修改为 `SERVERNAME=portsnap.FreeBSD.cn`
 
 **获取portsnap更新**
 
@@ -206,11 +172,6 @@ Cowardly refusing to proceed any further.
 ntpdate ntp.api.bz
 ```
 
-### FreeBSD.cn
-
-编辑portsnap配置文件 `# ee /etc/portsnap.conf` :
-
-将 `SERVERNAME=portsnap.FreeBSD.org` 修改为 `SERVERNAME=portsnap.FreeBSD.cn`
 
 ## freebsd-update 源:提供基本系统更新
 
@@ -219,21 +180,16 @@ ntpdate ntp.api.bz
 
 https://www.freebsd.org/platforms
 
-### 北京交通大学自由与开源软件镜像站
-
-编辑 `# ee /etc/freebsd-update.conf` 文件:
-
-将 `ServerName update.FreeBSD.org` 修改为 `ServerName freebsd-update.mirror.bjtulug.org`
-
-**例:从 FreeBSD 12 升级到 13.0**
-
-`# freebsd-update -r 13.0-RELEASE upgrade`
-
 ### FreeBSD.cn 
 
 编辑 `# ee /etc/freebsd-update.conf` 文件:
 
 将 `ServerName update.FreeBSD.org` 修改为 `ServerName update.FreeBSD.cn`
+
+**例:从 FreeBSD 12 升级到 13.0**
+
+`# freebsd-update -r 13.0-RELEASE upgrade`
+
 
 ## 不受安全支持的版本（请酌情使用）
 

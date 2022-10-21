@@ -54,7 +54,7 @@ tmpfs    /compat/linux/dev/shm	tmpfs	rw,mode=1777	0	0
 
 ```
 # pkg install debootstrap
-# debootstrap focal /compat/ubuntu http://mirror.bjtu.edu.cn/ubuntu/
+# debootstrap focal /compat/ubuntu http://mirrors.163.com/ubuntu/
 # reboot
 ```
 ### 挂载文件系统
@@ -96,14 +96,14 @@ linsysfs        /compat/ubuntu/sys      linsysfs        rw,late                 
 ```
 写入：
 ```
-deb http://mirror.bjtu.edu.cn/ubuntu/ focal main restricted universe multiverse
-deb-src http://mirror.bjtu.edu.cn/ubuntu/ focal main restricted universe multiverse
-deb http://mirror.bjtu.edu.cn/ubuntu/ focal-updates main restricted universe multiverse
-deb-src http://mirror.bjtu.edu.cn/ubuntu/ focal-updates main restricted universe multiverse
-deb http://mirror.bjtu.edu.cn/ubuntu/ focal-backports main restricted universe multiverse
-deb-src http://mirror.bjtu.edu.cn/ubuntu/ focal-backports main restricted universe multiverse
-deb http://mirror.bjtu.edu.cn/ubuntu/ focal-security main restricted universe multiverse
-deb-src http://mirror.bjtu.edu.cn/ubuntu/ focal-security main restricted universe multiverse
+deb http://mirrors.163.com/ubuntu/ focal main restricted universe multiverse
+deb-src http://mirrors.163.com/ubuntu/ focal main restricted universe multiverse
+deb http://mirrors.163.com/ubuntu/ focal-updates main restricted universe multiverse
+deb-src http://mirrors.163.com/ubuntu/ focal-updates main restricted universe multiverse
+deb http://mirrors.163.com/ubuntu/ focal-backports main restricted universe multiverse
+deb-src http://mirrors.163.com/ubuntu/ focal-backports main restricted universe multiverse
+deb http://mirrors.163.com/ubuntu/ focal-security main restricted universe multiverse
+deb-src http://mirrors.163.com/ubuntu/ focal-security main restricted universe multiverse
 ```
 进入 Ubuntu 兼容层，开始更新系统，安装常用软件：
 
