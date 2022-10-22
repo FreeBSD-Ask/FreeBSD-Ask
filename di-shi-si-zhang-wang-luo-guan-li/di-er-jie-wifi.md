@@ -4,6 +4,12 @@
 
 **注意：如果安装 FreeBSD 的时候就不能识别出无线网卡，那么就是不支持你的无线网卡。请忽略下文。**
 
+类似 plasma-nm/networkmanager 的图形化网络配置工具：
+
+```
+pkg install net-mgmt/networkmgr
+```
+
 ## 一般网卡驱动
 
 首先运行 `# ifconfig`，看看能不能找到你的网卡，如果能，那么你可以跳过本节了。
