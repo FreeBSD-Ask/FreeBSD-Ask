@@ -37,7 +37,7 @@ Lorenzo Salvadore，代表状态报告小组。
     - FreeBSD 发布工程团队
     - 集群管理团队
     - 持续集成
-    - ports收集
+    - ports
   - 项目
     - OpenStack 与 FreeBSD
     - 作为一级云计算平台的 FreeBSD
