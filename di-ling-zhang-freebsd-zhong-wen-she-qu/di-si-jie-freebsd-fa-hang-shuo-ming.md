@@ -6,7 +6,7 @@
 
 ## FreeBSD 2022 年第三季度 季度状况报告 
 
->原文地址 <https://www.freebsd.org/status/report-2022-04-2022-06/>
+>原文地址 <https://www.freebsd.org/status/report-2022-07-2022-09/>
 
 FreeBSD 季度状态报告 2022 年第三季度
 
