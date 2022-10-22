@@ -131,7 +131,6 @@ FreeBSD 已从 Linux 移植了显卡驱动，理论上，A 卡 N 卡均在 AMD64
 
 ```
 Section "Device"
-#    Option      "DRI" "3"  # 此行存疑，如果没用，把 3 改成 2
     Identifier  "Card 0"
     Option      "AccelMethod" "exa"
 EndSection
