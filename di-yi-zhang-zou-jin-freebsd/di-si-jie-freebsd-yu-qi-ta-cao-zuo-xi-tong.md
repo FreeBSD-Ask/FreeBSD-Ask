@@ -2,7 +2,9 @@
 
 ## 什么是 FreeBSD？
 
-BSD 最初是由 University of California, Berkeley 研发的，意为`Berkeley Software Distribution`。
+BSD 最初是由 University of California, Berkeley 所开发的，意为 `Berkeley Software Distribution`。值得注意地是，Berkeley 伯克利之名来自著名的近代经验论哲学家乔治·贝克莱（George Berkeley）。
+
+>esse est percipi, to be is to be perceived（存在就是被感知）。——乔治·贝克莱
 
 FreeBSD 不是 Linux，不是国产操作系统，不兼容 Systemd，不能吃鸡，亦不是 UNIX 。目前在 BSD 系中，FreeBSD 的用户是最多的。一些 Linux 下的软件基本上在 FreeBSD 中都能够被找到，即使找不到的也可以通过 CentOS 兼容层运行，你也可以自己通过 debootstrap 构建一个 debian 或者 ubuntu 的 / 系统。
 
