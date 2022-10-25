@@ -6,7 +6,7 @@
 
 <https://cdn.openbsd.org/pub/OpenBSD/7.1/amd64>
 
-获取系统镜像。若是刻录 U 盘 安装，就下载 `installXX.img` ；若是虚拟机体验，请下载 `installXX.iso` 。（注：截止 OpenBSD 7.1 时，请不要使用 ventory 引导实体机安装。）
+获取系统镜像。若是刻录 U 盘 安装，就下载 `installXX.img` ；若是虚拟机体验，请下载 `installXX.iso`。（注：截止 OpenBSD 7.1 时，请不要使用 ventory 引导实体机安装。）
 
 ## 安装模式
 
@@ -67,7 +67,7 @@ Start sshd(8) by default? [yes] `no`
 
 > Available disks are: sd0, sd1, sd2. Which one is the root disk? (or 'done') \[sd0] `?`
 
-这一步是选择要将系统安装在哪一块硬盘。按 `？` 列出识别的所有硬盘。请务必记住所有的盘符：所要安装系统的盘符，以及我们的U盘 盘符。然后输入需要安装的位置，如 `sd0` 。
+这一步是选择要将系统安装在哪一块硬盘。按 `？` 列出识别的所有硬盘。请务必记住所有的盘符：所要安装系统的盘符，以及我们的U盘 盘符。然后输入需要安装的位置，如 `sd0`。
 
 再次提醒：请确认好目标硬盘，否则悔之晚矣！
 
@@ -79,7 +79,7 @@ Available disk are: sd0.Which disk do you wish to initialize? (or 'done') [done]
 
 > Let's install the sets! Location of sets? (cd disk ftp http or 'done') \[cd] `disk`
 
-软件地址，选择`disk` 。这里我们选择安装盘为软件地址。
+软件地址，选择`disk`。这里我们选择安装盘为软件地址。
 
 > Is the disk partition already mounted? \[yes] `no`
 
@@ -137,7 +137,7 @@ please read your mail using the 'mail' command.
 
 对于更大的容量，可依自己喜好，进一步细化分区配置。
 
-系统分区时，选择 `C`，即 `自定义设置` 。
+系统分区时，选择 `C`，即 `自定义设置`。
 
 > `p m`
 
@@ -151,7 +151,7 @@ please read your mail using the 'mail' command.
 | z   | 删除全部分区 |
 | q   | 确认分区   |
 
-以下假设一块 64 GB 硬盘，分区为：/ 20GB，swap 4GB，然后剩下的空间全部划分给 /home 。
+以下假设一块 64 GB 硬盘，分区为：/ 20GB，swap 4GB，然后剩下的空间全部划分给 /home。
 
 > \> `a`
 >

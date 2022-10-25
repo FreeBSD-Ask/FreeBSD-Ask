@@ -25,7 +25,7 @@
 
 ![](../.gitbook/assets/安装5.png)
 
-推荐：只选 `src` 以及 `lib32` 。部分显卡驱动或其他程序需要 `src`，经测试 `lib32` 后天安装无效。不推荐选 `ports`，因为即使选了 `ports` 也不会安装的，还是空的。
+推荐：只选 `src` 以及 `lib32`。部分显卡驱动或其他程序需要 `src`，经测试 `lib32` 后天安装无效。不推荐选 `ports`，因为即使选了 `ports` 也不会安装的，还是空的。
 
 |     选项     |                      解释                     |
 | :--------: | :-----------------------------------------: |
@@ -83,7 +83,7 @@
 
 ![](../.gitbook/assets/安装24-修.png)
 
-不建议选`local_unbound`，会影响 DNS，见 [https://bugs.freebsd.org/bugzilla/show\_bug.cgi?id=262290](https://bugs.freebsd.org/bugzilla/show\_bug.cgi?id=262290) 。
+不建议选`local_unbound`，会影响 DNS，见 [https://bugs.freebsd.org/bugzilla/show\_bug.cgi?id=262290](https://bugs.freebsd.org/bugzilla/show\_bug.cgi?id=262290)。
 
 虚拟机不需要选 `powerd`。
 

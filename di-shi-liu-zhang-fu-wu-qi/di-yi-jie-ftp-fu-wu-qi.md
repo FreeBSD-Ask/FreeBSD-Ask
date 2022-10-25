@@ -48,7 +48,7 @@ BrokenClientsCompatibility yes
 # 被动连接响应的端口范围。
 PassivePortRange 30000 50000
 
-# 认证用户允许登陆的最小组 ID（UID） 。
+# 认证用户允许登陆的最小组 ID（UID）。
 MinUID 2000
 
 # 仅允许认证用户进行 FXP 传输。

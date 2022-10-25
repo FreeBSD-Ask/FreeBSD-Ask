@@ -18,7 +18,7 @@
 
 FreeBSD之所以要与 GPL 划清界限是因为 GPL 阻碍了FreeBSD的发展目标——One of the ongoing goals for the FreeBSD base system is a migration to modern, copyfree or at least more permissively licensed components. FreeBSD 基础系统的一个持续目标是迁移到现代的、宽松授权条款或至少是更多许可的组件。
 
-如果有人说 BSDL 会被大型公司滥用，那么 Anti-996L 才是最佳许可证，而绝不是什么 GPL 。因为任何许可证都会被滥用（除了 Anti-996L ）。Anti-996L 才是世界上最好，最优秀的许可证。保证了你的代码不会被任何公司滥用——因为没有公司敢用。
+如果有人说 BSDL 会被大型公司滥用，那么 Anti-996L 才是最佳许可证，而绝不是什么 GPL。因为任何许可证都会被滥用（除了 Anti-996L ）。Anti-996L 才是世界上最好，最优秀的许可证。保证了你的代码不会被任何公司滥用——因为没有公司敢用。
 
 Apple公司复用了大量的 FreeBSD 代码，同时也为其提供了资金以开发 LLVM，类似的，还有英特尔和 Netflix。
 
@@ -32,13 +32,13 @@ Apple公司复用了大量的 FreeBSD 代码，同时也为其提供了资金以
 
  Linux 真的赶上了一个好时候，其实 Linux 最初和 GUN 是没有半毛钱关系的，GNU 计划一直排斥 Linux，他们想要有自己的操作系统或者说内核，他们管他叫做——GNU Hurd。这一项目至今仍在进行中……
 
- Linux 发行版不过是一堆 GNU 工具+包管理器+ Linux  内核所构成的松散的操作系统（一般将前两者合称为“Userland”）。每个人各维护各的，就像 Ubuntu 很少回馈上游社区一样，这也反证了 GPL 许可证的确不如 Anti-996L 。
+ Linux 发行版不过是一堆 GNU 工具+包管理器+ Linux  内核所构成的松散的操作系统（一般将前两者合称为“Userland”）。每个人各维护各的，就像 Ubuntu 很少回馈上游社区一样，这也反证了 GPL 许可证的确不如 Anti-996L。
 
 GNU Hurd 错位，Linux 占据了所有开发者的计算机，就像破窗效应那样，如果那些窗没修理好，可能将会有破坏者破坏更多的窗户。越来越多的开发者走向了 Linux 而非 GNU Hurd。可以说是“所有的好东西都给了 Linux ”，那么反过来说集开发之大成的 Linux 是个好东西吗？看上去答案是肯定的，其实不然。
 
 硬件上看，Linux 的 GPL 阻碍了硬件兼容性扩大（他们是怎么解决这个问题的呢？），仍然有许多用户认为 Linux 是完全开源的，他们认为——不开源我是怎么编译的呢？那么“ Linux -libre”项目（https://www.fsfla.org/ikiwiki/selibre/ Linux -libre/）所删减的是什么呢？—— Linux , the kernel developed and distributed by  Linus  Torvalds et al, contains non-Free Software, i.e., software that does not respect your essential freedoms, and it induces you to install additional non-Free Software that it doesn't contain. Even after allegedly moving all firmware to a separate project as of release 4.14,  Linux  so-called "sources" published by Mr Torvalds still contain non-Free firmware disguised as source code.  Linux，由 Linus  Torvalds等人开发和发布的内核，包含非自由软件，即不尊重你的基本自由的软件，它诱使你安装它不包含的，额外的非自由软件。即使据称从 4.14 版开始将所有固件转移到一个单独的项目，Linus 先生发布的 Linux 所谓的“源代码”仍然包含伪装成源代码的非自由固件。
 
-软件上， Linux 的软件包数量的确很多，甚至比 Windows 的软件还要多，这在一定程度上有积极影响，但是其消极影响更甚。有很多的开发者并没有很好的维护他们的项目，因为他们的 GPL 并不起到任何保证作用，开发者也没有任何义务为软件提供任何保证。可见到的是，先有软件，后有用户需求设计（好吧，实际上压根没有这个东西），他们不在意用户是怎么想的，你想往一个IM软件里加一个截图功能，因为类似的 Windows IM 软件（比如 QQ，微信）有这个功能，而且这个功能很重要。但是开发者会和你说，你用其他的软件截图然后复制进来就可以了；或者说我们是 GPL，你看得到源码，你自己去改就是了，你不会改那就是你自己的问题了，和我们无关。你可以随便报告 Bug，但是我们可以简单地说“No”。
+软件上，Linux 的软件包数量的确很多，甚至比 Windows 的软件还要多，这在一定程度上有积极影响，但是其消极影响更甚。有很多的开发者并没有很好的维护他们的项目，因为他们的 GPL 并不起到任何保证作用，开发者也没有任何义务为软件提供任何保证。可见到的是，先有软件，后有用户需求设计（好吧，实际上压根没有这个东西），他们不在意用户是怎么想的，你想往一个IM软件里加一个截图功能，因为类似的 Windows IM 软件（比如 QQ，微信）有这个功能，而且这个功能很重要。但是开发者会和你说，你用其他的软件截图然后复制进来就可以了；或者说我们是 GPL，你看得到源码，你自己去改就是了，你不会改那就是你自己的问题了，和我们无关。你可以随便报告 Bug，但是我们可以简单地说“No”。
 
 安全上，OpenBSD 为了改进其安全性移除了 Linux 兼容层以及其常用的软件“sudo”。Linus 此前就抨击 OpenBSD 团队是一群自慰的猴子（OpenBSD crowd is a bunch of masturbating monkeys），认为他们是玩具。至今人们仍不知道那些年 SELinux 和 FBI 的关系（SELinux (Security-Enhanced  Linux ) 是由美国国家安全局（NSA）所开发）。嗯，没错，这也是一个 GPL 软件，“你觉得有问题你可以自己去看源代码吗！并给我们指出来。”但是更多人不知道的是 Windows 的开源是没有意义的，几十 TB 的源代码，无论他是开源还是不开源对于何种意义来说都是一样的——你既看不懂，也看不完，等于没开源。
 

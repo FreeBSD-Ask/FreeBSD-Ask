@@ -27,11 +27,11 @@ cp -r /$PATH/amdgpu-firmware-xxx/firmware/amdgpu/* /etc/firmware/amdgpu/
 
 ### 桌面支持(新版请忽略此项)
 
-旧版本安装时，可能会遇到是否启用 X 的选项。若是不小心屏蔽了，我们可以重新开启。打开 `/etc/sysctl.conf`，添加一行 `machdep.allowaperture=2` 。
+旧版本安装时，可能会遇到是否启用 X 的选项。若是不小心屏蔽了，我们可以重新开启。打开 `/etc/sysctl.conf`，添加一行 `machdep.allowaperture=2`。
 
 ### 修改软件源
 
-打开 `/etc/installurl`，将默认源注释掉，改为 `https://mirrors.bfsu.edu.cn/OpenBSD` 。此处我们选择了北外源，用户也可选择 [清华镜像源](https://mirrors.tuna.tsinghua.edu.cn/OpenBSD)、 [阿里镜像源](https://mirrors.aliyun.com/openbsd)、 及[南京大学源](https://mirror.sjtu.edu.cn/OpenBSD) 等。
+打开 `/etc/installurl`，将默认源注释掉，改为 `https://mirrors.bfsu.edu.cn/OpenBSD`。此处我们选择了北外源，用户也可选择 [清华镜像源](https://mirrors.tuna.tsinghua.edu.cn/OpenBSD)、 [阿里镜像源](https://mirrors.aliyun.com/openbsd)、 及[南京大学源](https://mirror.sjtu.edu.cn/OpenBSD) 等。
 
 ## 系统更新
 
@@ -72,7 +72,7 @@ $ cd media
 ```
 ### 查看盘符
 
-使用 `dmesg` 命令来查看新插入的盘符，如格式为 fat32 的 U盘，可能在 OpenBSD 系统里盘符为 `sd1` 。
+使用 `dmesg` 命令来查看新插入的盘符，如格式为 fat32 的 U盘，可能在 OpenBSD 系统里盘符为 `sd1`。
 
 ### 检查分区
 
@@ -119,11 +119,11 @@ join 无线名称 wpakey 无线密码
 
 ### 加载触摸板
 
-打开 `/etc/wsconsctl.conf`，添加一行 `mouse.tp.tapping=1` 。
+打开 `/etc/wsconsctl.conf`，添加一行 `mouse.tp.tapping=1`。
 
 ### 加载多线程
 
-打开 `/etc/sysctl.conf`，添加一行 `hw.smt=1` 。
+打开 `/etc/sysctl.conf`，添加一行 `hw.smt=1`。
 
 ### 相关资料
 
@@ -131,4 +131,4 @@ join 无线名称 wpakey 无线密码
 
 - Absolute OpenBSD 补充
 
-_如果觉得 Firefox 运行缓慢，试试 Epiphany (Gnome 浏览器) 。_
+_如果觉得 Firefox 运行缓慢，试试 Epiphany (Gnome 浏览器)。_

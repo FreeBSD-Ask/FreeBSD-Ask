@@ -50,7 +50,7 @@ Eric S. Raymond 写过一本书叫做《大教堂与集市》，论述了开源�
 
 UbuntuKylin 即“优麒麟”，是由国防科技大学和Ubuntu 基金会合作的 Ubuntu 本地化产物。
 
-“反正官网是这么写的”，本来张宏楷打算安个 Linux 来着，在百毒上搜索Linux就出来了Ubuntu，而一搜 Ubuntu 直接跳转到了 UbuntuKylin网站https://www.ubuntukylin.com/ 。
+“反正官网是这么写的”，本来张宏楷打算安个 Linux 来着，在百毒上搜索Linux就出来了Ubuntu，而一搜 Ubuntu 直接跳转到了 UbuntuKylin网站https://www.ubuntukylin.com/。
 
 至于为什么要安装 Linux，很简单，一是为了看看那本书里写的系统怎么样子，二是看看Linux 是不是只能用WPS。
 
@@ -204,7 +204,7 @@ G400很快就重启了，自动进入了一个叫做Unity的桌面。
 
 是的。有时候快乐就是这么容易。
 
-接下来该安装WPS了，等会这个亚马逊怎么删除，为什么还有亚马逊？？还有这一堆libreoffice又是什么鬼？张宏楷百毒到的命令是sudo apt-get remove libreoffice* unity-webapps-common  --purge 。
+接下来该安装WPS了，等会这个亚马逊怎么删除，为什么还有亚马逊？？还有这一堆libreoffice又是什么鬼？张宏楷百毒到的命令是sudo apt-get remove libreoffice* unity-webapps-common  --purge。
 
 “啊！终于卸载了这些毒瘤了”张宏楷不禁发出一声长叹！
 

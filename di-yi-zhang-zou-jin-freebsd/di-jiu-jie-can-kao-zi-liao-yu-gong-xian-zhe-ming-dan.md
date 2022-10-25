@@ -18,19 +18,19 @@
 
 ![FreeBSD 操作系统设计与实现（原书第二版）](../.gitbook/assets/freebsd2rd.png)
 
-> 《FreeBSD 操作系统设计与实现（原书第2版）》，Marshall McKusick、George Neville-Neil 著，ISBN：9787111689973，机械工业出版社。原版书名为 _**Design and Implementation of the FreeBSD Operating System, 2nd**_ 。主要讲解了内核。
+> 《FreeBSD 操作系统设计与实现（原书第2版）》，Marshall McKusick、George Neville-Neil 著，ISBN：9787111689973，机械工业出版社。原版书名为 _**Design and Implementation of the FreeBSD Operating System, 2nd**_。主要讲解了内核。
 
 ![UNIX 传奇：历史与回忆](../.gitbook/assets/unixchuanqi.jpg)
 
-> 《UNIX 传奇——历史与回忆》，Brian W Kernighan 著，ISBN: 9787115557179，人民邮电出版社。原版书名为 _**UNIX: A History and a Memoir**_ 。主要讲解了 UNIX 的发展历史。
+> 《UNIX 传奇——历史与回忆》，Brian W Kernighan 著，ISBN: 9787115557179，人民邮电出版社。原版书名为 _**UNIX: A History and a Memoir**_。主要讲解了 UNIX 的发展历史。
 
 ![UNIX 编程艺术](../.gitbook/assets/s11345267.jpg)
 
-> 《UNIX 编程艺术》，Eric Raymond 著，ISBN: 9787121176654，电子工业出版社。原版书名为 _**The Art of Unix Programming**_ 。主要讲解了 UNIX 的设计哲学与软件工程理论。
+> 《UNIX 编程艺术》，Eric Raymond 著，ISBN: 9787121176654，电子工业出版社。原版书名为 _**The Art of Unix Programming**_。主要讲解了 UNIX 的设计哲学与软件工程理论。
 
 ![大教堂与集市](../.gitbook/assets/dajiaotang.jpg)
 
-> 《大教堂与集市》，Eric S. Raymond 著，ISBN: 9787111452478，机械工业出版社。原版书名为 _**The Cathedral and the Bazaar**_ 。主要介绍了开源运动的发展史。
+> 《大教堂与集市》，Eric S. Raymond 著，ISBN: 9787111452478，机械工业出版社。原版书名为 _**The Cathedral and the Bazaar**_。主要介绍了开源运动的发展史。
 
 ![](../.gitbook/assets/53967433.\_SX318\_.jpg)
 

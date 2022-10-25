@@ -24,4 +24,4 @@ ifconfig_wlan0="WPA DHCP"
 network={ ssid=”wifi 名字，最好是英文” psk=”密码” }
 ```
 
-保存重启即可。能够实现开机自动连接 wifi 。
+保存重启即可。能够实现开机自动连接 wifi。

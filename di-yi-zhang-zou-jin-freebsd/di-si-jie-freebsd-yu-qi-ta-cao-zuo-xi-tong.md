@@ -6,7 +6,7 @@ BSD 最初是由 University of California, Berkeley 所开发的，意为 `Berke
 
 >esse est percipi, to be is to be perceived（存在就是被感知）。——乔治·贝克莱
 
-FreeBSD 不是 Linux，不是国产操作系统，不兼容 Systemd，不能吃鸡，亦不是 UNIX 。目前在 BSD 系中，FreeBSD 的用户是最多的。一些 Linux 下的软件基本上在 FreeBSD 中都能够被找到，即使找不到的也可以通过 CentOS 兼容层运行，你也可以自己通过 debootstrap 构建一个 debian 或者 ubuntu 的 / 系统。
+FreeBSD 不是 Linux，不是国产操作系统，不兼容 Systemd，不能吃鸡，亦不是 UNIX。目前在 BSD 系中，FreeBSD 的用户是最多的。一些 Linux 下的软件基本上在 FreeBSD 中都能够被找到，即使找不到的也可以通过 CentOS 兼容层运行，你也可以自己通过 debootstrap 构建一个 debian 或者 ubuntu 的 / 系统。
 
 ![](../.gitbook/assets/图片3.png)
 
@@ -32,15 +32,15 @@ Linus“I have never even checked 386BSD out; when I started on Linux it wast av
 
 - macOS & iOS
 
-macOS & iOS 在一定程度上来说，都基于 FreeBSD 。可见 FreeBSD 的 GUI 并不是搞不好，只是 Xorg 和开发方向有问题。
+macOS & iOS 在一定程度上来说，都基于 FreeBSD。可见 FreeBSD 的 GUI 并不是搞不好，只是 Xorg 和开发方向有问题。
 
-首先 macOS 和 iOS 某种程度上都基于 FreeBSD 。但是这时候就要说易用性了，FreeBSD 和 Linux 还都是那套 Xorg，很明显不行。但是本着你行你上的观点我也上不去……图形界面才是第一 x3 。
+首先 macOS 和 iOS 某种程度上都基于 FreeBSD。但是这时候就要说易用性了，FreeBSD 和 Linux 还都是那套 Xorg，很明显不行。但是本着你行你上的观点我也上不去……图形界面才是第一 x3。
 
 到底是苹果成就了 macOS、iOS 还是反过来 二者成就了苹果呢？举例来说，买 Mac 装 Windows 当然这是个人喜好，没有任何值得批评的地方。假设 iOS 预装 Android （这么举例可能不恰当），相当一部分纯果粉应该是接受不了的。
 
-生态环境。这个见 Windows Phone 。那么为什么选择 Apple 就不是 1% 的生活了？成功的商业化运作起着很大的用处。就像在这个贴吧里总有人看我不爽但又骂不过我一样，逞得口舌之利都不如我。FreeBSD 在大陆镜像站都没有，甚至因为 free 这个英文单词连官网都被电信屏蔽过。这个生态环境相比可知了。而且现在 UNIX 认证很宽容，所谓什么血统那是扯淡。好不好用自己心里没数吗？资本家之所以是资本家就在于产出再投入。对于这里而言，苹果的软件多就是因为用的人多。这个初期是怎么积累的？ FreeBSD 一场官司，初期就没有得到很好的发展，不然就没有 Linux 了，这话是 linus 说的。
+生态环境。这个见 Windows Phone。那么为什么选择 Apple 就不是 1% 的生活了？成功的商业化运作起着很大的用处。就像在这个贴吧里总有人看我不爽但又骂不过我一样，逞得口舌之利都不如我。FreeBSD 在大陆镜像站都没有，甚至因为 free 这个英文单词连官网都被电信屏蔽过。这个生态环境相比可知了。而且现在 UNIX 认证很宽容，所谓什么血统那是扯淡。好不好用自己心里没数吗？资本家之所以是资本家就在于产出再投入。对于这里而言，苹果的软件多就是因为用的人多。这个初期是怎么积累的？ FreeBSD 一场官司，初期就没有得到很好的发展，不然就没有 Linux 了，这话是 linus 说的。
 
-国民素质有待提高。这个不是看不起嘲讽，这是客观事实。很多大学生甚至不知道什么是 Android，还有人说万物基于 MIUI 。这和术业有专攻这句话已经完全无关了。当然不是说用水果就是素质低，这么理解的人语文有毛病。
+国民素质有待提高。这个不是看不起嘲讽，这是客观事实。很多大学生甚至不知道什么是 Android，还有人说万物基于 MIUI。这和术业有专攻这句话已经完全无关了。当然不是说用水果就是素质低，这么理解的人语文有毛病。
 
 水果摆脱了开源界所谓的苦难哲学。
 

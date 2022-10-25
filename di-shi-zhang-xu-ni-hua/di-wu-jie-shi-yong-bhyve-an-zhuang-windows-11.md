@@ -73,7 +73,7 @@
     disk0_name="disk0.img"
     disk0_opts="maxq=16,qsz=8,ioslots=1,sectsz=512,ser=ABCDEFGH"
 
-你甚至可以在没有虚拟磁盘的情况下将客户机安装到物理 NVMe 磁盘上。 以下是一个例子：
+你甚至可以在没有虚拟磁盘的情况下将客户机安装到物理 NVMe 磁盘上。以下是一个例子：
 
     loader="uefi"
     graphics="yes"
@@ -95,7 +95,7 @@
 * 关闭客户机电源，交换客户机配置中的 disk0.img 和 disk1.img。再次启动。
 * 关闭客户机电源，删除 ahci 控制器和 disk1.img。留下 nvme 控制器和 disk0.img，再次启动。
 
-现在 Windows 7 客户机设备管理器中只有 nvme 控制器，没有 ahci 控制器。 
+现在 Windows 7 客户机设备管理器中只有 nvme 控制器，没有 ahci 控制器。
 
 ## 从 VNC 访问 GUI
 
@@ -109,7 +109,7 @@
 
 #### 使用支持的 FreeBSD 版本
 
-如果从源码编译，目前在 12-CURRENT 和 11-STABLE 中有图形支持。如果您喜欢使用二进制版本， 可以使用 11.0 候选版本。
+如果从源码编译，目前在 12-CURRENT 和 11-STABLE 中有图形支持。如果您喜欢使用二进制版本，可以使用 11.0 候选版本。
 
 我们不支持在任何低于 11 的版本上运行图形界面。
 

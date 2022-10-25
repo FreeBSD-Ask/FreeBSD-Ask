@@ -43,7 +43,7 @@ UOS 和 Deepin 的关系就好比 RHEL 之于 Fedora。本质上是一种东西�
 
 ### Arch Linux/Manjaro
 
-Arch Linux 俗称“**邪教、洗发水**”。这是我所见过的一个最不稳定的 Linux 发行版，也是个人计算机上用户人数最多的。我难以理解为什么有这么多人选择如此不稳定的一个操作系统。你安装的软件越多，挂的越快。有人会说这是你不看软件发行注记的后果，此言差矣。一个需要看发行注记才能更新的系统，本身就是有问题。Arch Linux 唯一优点就是软件新。似乎随处可见的就是 Arch Linux。Arch Linux 似乎是与苦难哲学挂钩的，关于这一点，请参看 [第十九章-第三节](../di-shi-jiu-zhang-wen-xue-gu-shi/di-san-jie-linux-yu-ku-nan-zhe-xue.md) 。
+Arch Linux 俗称“**邪教、洗发水**”。这是我所见过的一个最不稳定的 Linux 发行版，也是个人计算机上用户人数最多的。我难以理解为什么有这么多人选择如此不稳定的一个操作系统。你安装的软件越多，挂的越快。有人会说这是你不看软件发行注记的后果，此言差矣。一个需要看发行注记才能更新的系统，本身就是有问题。Arch Linux 唯一优点就是软件新。似乎随处可见的就是 Arch Linux。Arch Linux 似乎是与苦难哲学挂钩的，关于这一点，请参看 [第十九章-第三节](../di-shi-jiu-zhang-wen-xue-gu-shi/di-san-jie-linux-yu-ku-nan-zhe-xue.md)。
 
 ## FreeBSD 与 Linux 不同之处
 
