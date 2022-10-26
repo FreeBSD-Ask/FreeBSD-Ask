@@ -106,3 +106,7 @@ tcsh 配置:
 写入以下配置
 
 `alias h history 25 alias j jobs -l alias la ls -aF alias lf ls -FA alias ll ls -lAF setenv EDITOR vi setenv PAGER less switch ($TERM) case "xterm*": set prompt="%{033]0;[]%~007%}%#" set filec set history = 1000 set savehist = (1000 merge) set autolist = ambiguous # Use history to aid expansion set autoexpand set autorehash breaksw default: set prompt="%#" breaksw endsw`
+
+## 配置集参考
+
+ - <https://github.com/Wamphyre/BSD-XFCE>
