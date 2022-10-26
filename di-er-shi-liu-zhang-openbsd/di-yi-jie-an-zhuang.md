@@ -2,11 +2,11 @@
 
 ## 下载镜像
 
-以 OpenBSD 7.1，AMD 64 架构为例，访问：
+以 OpenBSD 7.2，AMD 64 架构为例，访问：
 
-<https://cdn.openbsd.org/pub/OpenBSD/7.1/amd64>
+<https://cdn.openbsd.org/pub/OpenBSD/7.2/amd64>
 
-获取系统镜像。若是刻录 U 盘 安装，就下载 `installXX.img` ；若是虚拟机体验，请下载 `installXX.iso`。（注：截止 OpenBSD 7.1 时，请不要使用 ventory 引导实体机安装。）
+获取系统镜像。若是刻录 U 盘 安装，就下载 `installXX.img` ；若是虚拟机体验，请下载 `installXX.iso`。（注：截止 OpenBSD 7.2 时，请不要使用 ventoy 引导实体机安装。）
 
 ## 安装模式
 
@@ -15,11 +15,15 @@
 
 ### 安装过程
 
-> Welcome to the OpenBSD/amd64 7.1 installation program.
+> Welcome to the OpenBSD/amd64 7.2 installation program.
 >
 > (I)nstall, (U)pgrade or (S)hell? `i`
 
 选择 i 进行安装
+
+> Choose your keyboard layout ('?', or 'L' for list) \[default]?
+
+选择键盘格式，回车选择默认的美国键盘即可。
 
 > System hostname? (short form, e.g. 'foo') `XiaoMing`
 
@@ -27,7 +31,7 @@
 
 > Available network interfaces are: em0 rtwn0.
 >
-> Which one do you wish to configure? (or 'done') \[em0]
+> Which network interface do you wish to configure? (or 'done') \[em0]
 
 这一步选择网络连接。为免去不必要麻烦，请尽量选择有线网络。可先输入 `？`，详细了解网络名称后再选择。如本例中 `em0` 为有线网络，`rtwn0` 为无线网络。
 
@@ -89,27 +93,27 @@ Available disk are: sd0.Which disk do you wish to initialize? (or 'done') [done]
 Select sets by entering a set name, a file name pattern or 'all'. De-select 
 sets by prepending a '-' to the set name, name pattern or 'all'. Selected sets are labelled `[X]`
 
-[X] bsd          [X] etc71.tgz     [X] xbase71.tgz  
-[X] xserv71.tgz  [X] bsd.rd        [X] comp71.tgz 
-[X] xetc71.tgz   [X] bsd.mp        [X] man71.tgz 
-[X] xshare71.tgz [X] base71.tgz    [X] game71.tgz 
-[X] xfont71.tgz 
+[X] bsd          [X] etc72.tgz     [X] xbase72.tgz  
+[X] xserv72.tgz  [X] bsd.rd        [X] comp72.tgz 
+[X] xetc72.tgz   [X] bsd.mp        [X] man72.tgz 
+[X] xshare72.tgz [X] base72.tgz    [X] game72.tgz 
+[X] xfont72.tgz 
 
 Set name(s)? (or 'abort' or 'done') [done] -game*
 ```
 
-这里我们输入 `-game*` 来取消 `game71.tgz`，其它都勾选。
+这里我们输入 `-game*` 来取消 `game72.tgz`，其它都勾选。
 
 注：即使不使用桌面，也请勾选 `X11` 选项，否则部分软件可能无法正常运行。
 
 ```
 Set name(s)? (or 'abort' or 'done') [done] `-game*`
 
-[X] bsd          [X] etc71.tgz     [X] xbase71.tgz  
-[X] xserv71.tgz  [X] bsd.rd        [X] comp71.tgz 
-[X] xetc71.tgz   [X] bsd.mp        [X] man71.tgz 
-[X] xshare71.tgz [X] base71.tgz    [ ] game71.tgz 
-[X] xfont71.tgz 
+[X] bsd          [X] etc72.tgz     [X] xbase72.tgz  
+[X] xserv72.tgz  [X] bsd.rd        [X] comp72.tgz 
+[X] xetc72.tgz   [X] bsd.mp        [X] man72.tgz 
+[X] xshare72.tgz [X] base72.tgz    [ ] game72.tgz 
+[X] xfont72.tgz 
 
 Set name(s)? (or 'abort' or 'done') [done]
 ```
