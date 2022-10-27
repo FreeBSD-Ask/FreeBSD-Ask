@@ -48,6 +48,8 @@ legal.realtek.license_ack=1
 # ifconfig wlan0 ssid abc
 ```
 
+如果扫描不出来，让你设置 `FCC` 的时候，选择 `no`。
+
 连接 WiFi ：
 
 ```
