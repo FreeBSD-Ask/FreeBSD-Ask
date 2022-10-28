@@ -12,7 +12,9 @@
 
 首先，你需要确保你有 UEFI 固件，如果还没有安装的话。
 
-    # pkg install bhyve-firmware
+```
+# pkg install bhyve-firmware
+```
 
 ## 客户机配置
 
@@ -21,13 +23,17 @@
 > 注意，如果你运行的是比 Windows 10 更早的 Windows 版本，你将需要使用 `disk0_opts="sectorsize=512"` 选项将磁盘扇区大小设置为 512。
 当你想在 Windows 系统上安装 Microsoft SQL Server 时，你也必须将磁盘扇区大小设置为 512。
 
-    # vm create -t windows winguest
+```
+# vm create -t windows winguest
+```
 
 ## 安装系统
 
 通过指定 Windows iso 文件开始正常的安装。当在安装模式下运行时，`vm-bhyve` 将等待，直到 VNC 客户端连接后再启动客户机。这允许你抓住 Windows 可能显示的“从 CD/DVD 启动“选项。你可以在 `vm list` 中看到，在这一点上，客户机将显示为锁定：
 
-    # vm install winguest Windows-Installer.iso
+```
+# vm install winguest Windows-Installer.iso
+```
 
 一旦与 VNC 客户端连接，就可以像平常一样完成 Windows 的安装。
 
@@ -38,17 +44,17 @@
 * 如果机器可以通过 e1000 设备访问互联网，你可以直接在客户机中下载并安装 virtio 驱动。安装完毕后，关闭客户机，在客户机配置中改变设备并重新启动。
 * 可以在安装模式下启动客户机，但要指定 VirtIO ISO 文件。
 
-    ```
-    # vm install winguest virtio-installer.iso
-    ```
+```
+# vm install winguest virtio-installer.iso
+```
     
 * 可以添加 CD 设备到客户机上，并指向 ISO 文件
 
-    ```
-    disk1_type="ahci-cd"
-    disk1_dev="custom"
-    disk1_name="/full/path/to/virtio-installer.iso"
-    ```
+```
+disk1_type="ahci-cd"
+disk1_dev="custom"
+disk1_name="/full/path/to/virtio-installer.iso"
+```
 
 ## 关于 CPU
 
@@ -60,32 +66,38 @@
 
 当在 FreeBSD 12 上，使用 vm-bhyve 1.3 时，可以使用配置选项来控制每个客户的 CPU 拓扑结构：
 
-    cpu=8
-    cpu_sockets=2
-    cpu_cores=4
-    cpu_threads=1
+```
+cpu=8
+cpu_sockets=2
+cpu_cores=4
+cpu_threads=1
+```
 
 ## 关于 NVMe 支持
 
 如同 FreeBSD 12.1R，bhyve 支持 NVMe 仿真。对于 vm-bhyve 配置，请遵循以下选项：
 
-    disk0_type="nvme"
-    disk0_name="disk0.img"
-    disk0_opts="maxq=16,qsz=8,ioslots=1,sectsz=512,ser=ABCDEFGH"
+```
+disk0_type="nvme"
+disk0_name="disk0.img"
+disk0_opts="maxq=16,qsz=8,ioslots=1,sectsz=512,ser=ABCDEFGH"
+```
 
 你甚至可以在没有虚拟磁盘的情况下将客户机安装到物理 NVMe 磁盘上。以下是一个例子：
 
-    loader="uefi"
-    graphics="yes"
-    xhci_mouse="yes"
-    cpu=2
-    内存=8G
-    network0_type="e1000"
-    network0_switch="public"
-    utctime="no"
-    passthru0="4/0/0"
+```
+loader="uefi"
+graphics="yes"
+xhci_mouse="yes"
+cpu=2
+ram=8G
+network0_type="e1000"
+network0_switch="public"
+utctime="no"
+passthru0="4/0/0"
+```
 
-4/0/0 是一个 passthru NVMe SSD。
+`4/0/0` 是一个 passthru NVMe SSD。
 
 目前，NVMe 启动支持 Windows 8.1 及更新的 Windows 操作系统，如果你想从 NVMe 磁盘启动 Windows 7，请按照以下步骤进行。
 
