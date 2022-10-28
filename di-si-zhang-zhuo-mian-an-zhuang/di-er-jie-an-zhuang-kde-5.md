@@ -11,7 +11,7 @@
 ## 安装
 
 ```
-# pkg install xorg sddm kde5 wqy-fonts xdg-user-dirs
+# pkg install xorg sddm kde5 plasma5-sddm-kcm wqy-fonts xdg-user-dirs
 ```
 
 
