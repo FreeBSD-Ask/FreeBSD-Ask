@@ -46,11 +46,11 @@
 >```
 ># gpart recover ada0
 >```
->你在手动安装的时候可以判断是哪块硬盘，以确定 ada0。
+>你在手动安装的时候可以判断是哪块硬盘，以确定 ada0 这个参数的时候。
 >
->刷新后，输入`bsdinstall`即可进入安装模式。
+>刷新后，输入 `bsdinstall` 即可进入安装模式。
 >
->原因详情见[FreeBSD 手册](https://handbook.bsdcn.org/di-18-zhang-cun-chu/18.3.-tiao-zheng-he-zeng-jia-ci-pan-da-xiao.html)，但是我认为这是一个 bug。
+>原因详情见 [FreeBSD 手册](https://handbook.bsdcn.org/di-18-zhang-cun-chu/18.3.-tiao-zheng-he-zeng-jia-ci-pan-da-xiao.html)，但是我认为这是一个 bug。
  
 ![](../.gitbook/assets/安装7.png)
 
