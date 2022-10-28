@@ -41,6 +41,17 @@
 
 推荐：文件分区详解在第 6 章。这里推荐选择 auto ZFS/UFS，一般来说内存小于 8GB 的应该选择 UFS，内存 8G 及以上的应该选用 ZFS。允许手动分区解压 txz 文件以自定义。
 
+>注意：如果使用手动分区一直提示分区表损坏（corrupted）或类似字样，请先退出重启进入 shell 模式，刷新分区表：
+>
+>```
+># gpart recover ada0
+>```
+>你在手动安装的时候可以判断是哪块硬盘，以确定 ada0。
+>
+>刷新后，输入`bsdinstall`即可进入安装模式。
+>
+>原因详情见[FreeBSD 手册](https://handbook.bsdcn.org/di-18-zhang-cun-chu/18.3.-tiao-zheng-he-zeng-jia-ci-pan-da-xiao.html)，但是我认为这是一个 bug。
+ 
 ![](../.gitbook/assets/安装7.png)
 
 现代计算机应该选择 GPT+UEFI。较老的计算机（比如 2013 年以前的）应该选择保持与图片一致的选项（GPT(BIOS)）。
