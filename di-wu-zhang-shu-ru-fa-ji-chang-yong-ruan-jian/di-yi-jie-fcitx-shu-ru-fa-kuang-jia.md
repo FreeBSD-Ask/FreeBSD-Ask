@@ -50,7 +50,7 @@ setenv LC_ALL zh_CN.UTF-8
 >
 >该教程仅在 KDE 5/csh 下测试通过。
 
-`# pkg install fcitx5 fcitx5-qt fcitx5-gtk fcitx5-configtool zh-fcitx5-rime zh-rime-essay zh-fcitx5-chinese-addons`
+`# pkg install fcitx5 fcitx5-qt5 fcitx5-qt6 fcitx5-gtk fcitx5-configtool zh-fcitx5-chinese-addons`
 
 也可通过 ports 安装。环境变量取决于你的窗口管理器和桌面以及 shell。经测试不支持 slim，可能是配置问题。sddm 可用。
 
@@ -71,7 +71,7 @@ setenv LANG zh_CN.UTF-8
 setenv MM_CHARSET zh_CN.UTF-8
 ```
 
-在 root 用户下 rime 不会自动被添加到输入法，需要手动添加完成初始化（程序里找到 fcitx 配置工具，添加 rime 输入法即可）！对于普通用户如果未生效，请检查自己的 shell，应该是 csh，如果不是请将该用户加入 wheel 组。对于其他 shell 请自行更正为对应 shell 的环境变量。
+rime 不会自动被添加到输入法，需要手动添加完成初始化（程序里找到 fcitx 配置工具，添加 rime 输入法即可），这个输入法我不知道配置文件在哪，有意者可以自行安装 zh-fcitx5-rime zh-rime-essay。对于普通用户如果未生效，请检查自己的 shell，应该是 csh，如果不是请将该用户加入 wheel 组。对于其他 shell 请自行更正为对应 shell 的环境变量。
 
 SLIM 窗口下会提示 IBUS 找不到……疑似bug。
   
