@@ -171,7 +171,7 @@ $ nvidia-smi
 # sysrc linux_enable="YES"
 ```
 
-当然如果使用官方的 pkg 包，安装好驱动重启后：
+当然如果使用官方的 pkg 软件包，安装好驱动重启后：
 
 ```
 $ kldstat
