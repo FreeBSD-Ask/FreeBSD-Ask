@@ -129,7 +129,7 @@ localhost:5900
 root@ykla:/usr/home/ykla # ifconfig
 alc0: flags=8802<BROADCAST,SIMPLEX,MULTICAST> metric 0 mtu 1500
         options=c319a<TXCSUM,VLAN_MTU,VLAN_HWTAGGING,VLAN_HWCSUM,TSO4,WOL_MCAST,WOL_MAGIC,VLAN_HWTSO,LINKSTATE>
-        ether 20:89:84:99:9c:c9
+        ether 20:89:82:94:7c:c9
         media: Ethernet autoselect
         nd6 options=29<PERFORMNUD,IFDISABLED,AUTO_LINKLOCAL>
 lo0: flags=8049<UP,LOOPBACK,RUNNING,MULTICAST> metric 0 mtu 16384
@@ -141,7 +141,7 @@ lo0: flags=8049<UP,LOOPBACK,RUNNING,MULTICAST> metric 0 mtu 16384
         nd6 options=21<PERFORMNUD,AUTO_LINKLOCAL>
 ue0: flags=8943<UP,BROADCAST,RUNNING,PROMISC,SIMPLEX,MULTICAST> metric 0 mtu 1500
         options=8000b<RXCSUM,TXCSUM,VLAN_MTU,LINKSTATE>
-        ether f8:e4:3b:9f:ea:3c
+        ether f8:e2:3b:3f:ea:4c
         inet 192.168.31.169 netmask 0xffffff00 broadcast 192.168.31.255
         media: Ethernet autoselect (1000baseT <full-duplex>)
         status: active
@@ -158,6 +158,21 @@ vm-public: flags=8843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST> metric 0 mtu 1500
 root@ykla:/usr/home/ykla # 
 ```
 
+```
+tap0: flags=8943<UP,BROADCAST,RUNNING,PROMISC,SIMPLEX,MULTICAST> metric 0 mtu 1500
+        description: vmnet/winguest/0/public
+        options=80000<LINKSTATE>
+        ether 58:9c:fc:10:ff:d6
+        groups: tap vm-port
+        media: Ethernet autoselect
+        status: active
+        nd6 options=29<PERFORMNUD,IFDISABLED,AUTO_LINKLOCAL>
+        Opened by PID 2519
+```
+```
+root@ykla:/usr/home/ykla # vm stop winguest
+Sending ACPI shutdown to winguest
+```
 
 ## 安装系统
 
