@@ -349,15 +349,14 @@ passthru0="4/0/0"
 * [https://github.com/churchers/vm-bhyve/wiki](https://github.com/churchers/vm-bhyve/wiki)
 * [https://srobb.net/vm-bhyve.html](https://srobb.net/vm-bhyve.html)
 
+## 图片
 
+![](../.gitbook/assets/win1.png)
 
-<figure><img src="../.gitbook/assets/win1.png" alt=""><figcaption></figcaption></figure>
+![](../.gitbook/assets/win2.png)
 
-<figure><img src="../.gitbook/assets/win2.png" alt=""><figcaption></figcaption></figure>
+![](../.gitbook/assets/win3.png)
 
-<figure><img src="../.gitbook/assets/win3.png" alt=""><figcaption></figcaption></figure>
+![](../.gitbook/assets/win4.png)
 
-<figure><img src="../.gitbook/assets/win4.png" alt=""><figcaption></figcaption></figure>
-
-<figure><img src="../.gitbook/assets/win5.png" alt=""><figcaption></figcaption></figure>
-
+![](../.gitbook/assets/win5.png)
