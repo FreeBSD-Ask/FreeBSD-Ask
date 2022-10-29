@@ -11,6 +11,10 @@
 首先，你需要确保你有 UEFI 固件与  vm-bhyve，如果还没有安装的话。
 
 ```
+cp /usr/local/share/examples/vm-bhyve/* /vm/.templates
+```
+
+```
 # pkg install bhyve-firmware vm-bhyve
 ```
 
@@ -74,6 +78,53 @@ vm_dir="/home/ykla/vm"
 ```
 # vm create -t windows winguest
 ```
+
+```
+root@ykla:/usr/home/ykla # vm info winguest
+------------------------
+Virtual Machine: winguest
+------------------------
+  state: stopped
+  datastore: default
+  loader: uefi
+  uuid: af86e094-56da-11ed-958f-208984999cc9
+  cpu: 2
+  memory: 4G
+
+  network-interface
+    number: 0
+    emulation: e1000
+    virtual-switch: public
+    fixed-mac-address: 58:9c:fc:0c:5e:bb
+    fixed-device: -
+
+  virtual-disk
+    number: 0
+    device-type: file
+    emulation: ahci-hd
+    options: -
+    system-path: /home/ykla/vm/winguest/disk0.img
+    bytes-size: 53687091200 (50.000G)
+    bytes-used: 23557898240 (21.940G)
+
+root@ykla:/usr/home/ykla # 
+```
+
+```
+# vm switch destroy public
+```
+
+```
+root@ykla:/usr/home/ykla # vm  destroy winguest
+
+Are you sure you want to completely remove this virtual machine (y/n)? Are you sure you want to completely remove this virtual machine (y/n)?
+```
+
+```
+pkg install tigervnc-viewer
+localhost:5900
+```
+
 
 ## 安装系统
 
@@ -255,4 +306,5 @@ graphics_wait="yes"
  - <https://dadv.livejournal.com/209650.html>
  - <https://wiki.freebsd.org/bhyve/Windows>
  - <https://github.com/churchers/vm-bhyve/wiki>
+ - <https://srobb.net/vm-bhyve.html>
 
