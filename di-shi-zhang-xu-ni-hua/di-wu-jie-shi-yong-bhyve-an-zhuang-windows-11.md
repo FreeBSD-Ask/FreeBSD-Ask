@@ -1,7 +1,5 @@
 # 第五节 使用 bhyve 安装 Windows 11
 
-**以下部分内容翻译自 <https://github.com/churchers/vm-bhyve/wiki>，未经测试，谨慎参考，成功者可向我报告。**
-
 ## 基本思路
 
 首先，完全可行，已经有人实现（见参考资料）。其次，Windows 11 与 Windows 10 的不同之处在于前者对硬件的设备的要求更高，要求强制的 TPM 模块（受信任的平台）。并且强制要求使用 UEFI GPT。所以需要对镜像做一些额外的修改才可以加载使用（参考资料似乎不需要这些）。最后，其他的应该和 Windows 10 是相同的。
@@ -14,6 +12,56 @@
 
 ```
 # pkg install bhyve-firmware vm-bhyve
+```
+
+```
+root@ykla:/usr/home/ykla # cat vm/winguest/winguest.conf 
+loader="uefi"
+graphics="yes"
+xhci_mouse="yes"
+cpu=2
+memory=4G
+
+# put up to 8 disks on a single ahci controller.
+# without this, adding a disk pushes the following network devices onto higher slot numbers,
+# which causes windows to see them as a new interface
+ahci_device_limit="8"
+
+# ideally this should be changed to virtio-net and drivers installed in the guest
+# e1000 works out-of-the-box
+network0_type="e1000"
+network0_switch="public"
+
+disk0_type="ahci-hd"
+disk0_name="disk0.img"
+
+# windows expects the host to expose localtime by default, not UTC
+utctime="no"
+
+graphics_res="1024x768"
+uuid="af86e094-56da-11ed-958f-208984999cc9"
+network0_mac="58:9c:fc:0c:5e:bb"
+root@ykla:/usr/home/ykla # 
+```
+
+```
+# vm switch create public
+# vm switch add public em0
+```
+
+```
+root@ykla:/usr/home/ykla # vm switch list
+NAME    TYPE      IFACE      ADDRESS  PRIVATE  MTU  VLAN  PORTS
+public  standard  vm-public  -        no       -    -     ue0
+root@ykla:/usr/home/ykla # vm list
+NAME      DATASTORE  LOADER  CPU  MEMORY  VNC  AUTO  STATE
+winguest  default    uefi    2    4G      -    No    Stopped
+root@ykla:/usr/home/ykla # 
+```
+
+```
+vm_enable="YES"
+vm_dir="/home/ykla/vm"
 ```
 
 ## 客户机配置
