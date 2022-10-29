@@ -8,9 +8,15 @@
 >
 >magnet:?xt=urn:btih:7bcf7952a6c114c25c92cdefc64a35fa4d30cd75&dn=SW_DVD9_Win_Pro_10_22H2_64BIT_ChnSimp_Pro_Ent_EDU_N_MLF_X23-20012.ISO&xl=5953392640
 
+加载内核模块：
+
+>只需要这一次，以后 vm-bhyve 会自己加载该模块的。
+
+```
+kldload vmm
+```
+
 首先，安装 UEFI 固件、VNC 与 vm-bhyve：
-
-
 
 ```
 # pkg install bhyve-firmware vm-bhyve tigervnc-viewer
@@ -112,6 +118,29 @@ network0_mac="58:9c:fc:0c:5e:bb"
 root@ykla:/usr/home/ykla # 
 ```
 
+
+
+
+终止虚拟机：
+
+>如果虚拟机卡死该命令无效，请自行 `kill -9` 以免影响关机，如果真的阻碍了物理机关机，可以在 tty 按 `Ctrl`+ `C` 跳过等待虚拟机，强制关机
+
+```
+root@ykla:/usr/home/ykla # vm stop winguest
+Sending ACPI shutdown to winguest
+```
+
+## 安装系统
+
+通过指定 Windows iso 文件开始正常的安装。当在安装模式下运行时，`vm-bhyve` 将等待，直到 VNC 客户端连接后再启动客户机。这允许你抓住 Windows 可能显示的“从 CD/DVD 启动“选项。你可以在 `vm list` 中看到，在这一点上，客户机将显示为锁定：
+
+```
+# vm install winguest Windows.iso
+```
+
+
+## 从 VNC 访问 Win10
+
 查看指定的虚拟机状态：
 
 ```
@@ -144,6 +173,23 @@ Virtual Machine: winguest
 
 root@ykla:/usr/home/ykla # 
 ```
+
+查看所有虚拟机状态：
+  
+```
+root@ykla:/usr/home/ykla # vm list
+NAME      DATASTORE  LOADER  CPU  MEMORY  VNC  AUTO  STATE
+winguest  default    uefi    2    4G      -    No    Stopped
+```
+
+打开  tigervnc-viewer 输入 `localhost:5900`，点击连接，然后按任意键以进入安装过程。
+
+
+## 故障排除
+
+有问题先重启一遍自己的物理机。还有问题自己 `ifconfig` 对比上文看看是不是有了多余的网卡，将其销毁掉。
+
+如果虚拟机一直是 stopped 的状态，检查一下你的网络。
 
 查看网络，这是虚拟机关闭状态下的：
 
@@ -193,38 +239,6 @@ tap0: flags=8943<UP,BROADCAST,RUNNING,PROMISC,SIMPLEX,MULTICAST> metric 0 mtu 15
         nd6 options=29<PERFORMNUD,IFDISABLED,AUTO_LINKLOCAL>
         Opened by PID 2519
 ```
-
-终止虚拟机：
-
->如果虚拟机卡死该命令无效，请自行 `kill -9` 以免影响关机，如果真的阻碍了物理机关机，可以在 tty 按 `Ctrl`+ `C` 跳过等待虚拟机，强制关机
-
-```
-root@ykla:/usr/home/ykla # vm stop winguest
-Sending ACPI shutdown to winguest
-```
-
-## 安装系统
-
-通过指定 Windows iso 文件开始正常的安装。当在安装模式下运行时，`vm-bhyve` 将等待，直到 VNC 客户端连接后再启动客户机。这允许你抓住 Windows 可能显示的“从 CD/DVD 启动“选项。你可以在 `vm list` 中看到，在这一点上，客户机将显示为锁定：
-
-```
-# vm install winguest Windows.iso
-```
-
-
-## 从 VNC 访问 Win10
-
-
-查看虚拟机状态：
-  
-```
-root@ykla:/usr/home/ykla # vm list
-NAME      DATASTORE  LOADER  CPU  MEMORY  VNC  AUTO  STATE
-winguest  default    uefi    2    4G      -    No    Stopped
-```
-
-打开  tigervnc-viewer 输入 `localhost:5900`，点击连接，然后按任意键以进入安装过程。
-
 
 ## 可选配置（我没测试过，自己试用）
 
