@@ -4,13 +4,13 @@
 
 以下教程基于 FreeBSD 13.1 release + Windows 10 22H2
 
->Windows 10 22H2 原版系统磁力链接：
+> Windows 10 22H2 原版系统磁力链接：
 >
->magnet:?xt=urn:btih:7bcf7952a6c114c25c92cdefc64a35fa4d30cd75&dn=SW_DVD9_Win_Pro_10_22H2_64BIT_ChnSimp_Pro_Ent_EDU_N_MLF_X23-20012.ISO&xl=5953392640
+> magnet:?xt=urn:btih:7bcf7952a6c114c25c92cdefc64a35fa4d30cd75\&dn=SW\_DVD9\_Win\_Pro\_10\_22H2\_64BIT\_ChnSimp\_Pro\_Ent\_EDU\_N\_MLF\_X23-20012.ISO\&xl=5953392640
 
 加载内核模块：
 
->只需要这一次，以后 vm-bhyve 会自己加载该模块的。
+> 只需要这一次，以后 vm-bhyve 会自己加载该模块的。
 
 ```
 kldload vmm
@@ -42,11 +42,11 @@ vm_dir="/home/ykla/vm" #注意该位置，以下操作都会用到
 # vm switch add public ue0
 ```
 
->如果创建错了，可以销毁之：
+> 如果创建错了，可以销毁之：
 >
->```
-># vm switch destroy public
->```
+> ```
+> # vm switch destroy public
+> ```
 
 查看分配的虚拟交换机：
 
@@ -65,10 +65,7 @@ usbhid_load="YES"
 
 ## 进一步配置
 
-
-> 注意，如果你运行的是比 Windows 10 更早的 Windows 版本，你将需要使用 `disk0_opts="sectorsize=512"` 选项将磁盘扇区大小设置为 512。
-当你想在 Windows 系统上安装 Microsoft SQL Server 时，你也必须将磁盘扇区大小设置为 512。
-
+> 注意，如果你运行的是比 Windows 10 更早的 Windows 版本，你将需要使用 `disk0_opts="sectorsize=512"` 选项将磁盘扇区大小设置为 512。 当你想在 Windows 系统上安装 Microsoft SQL Server 时，你也必须将磁盘扇区大小设置为 512。
 
 根据模板创建 windows 虚拟机，磁盘占用 50GB：
 
@@ -76,18 +73,17 @@ usbhid_load="YES"
 # vm create -t windows -s 50G winguest
 ```
 
->销毁虚拟机的命令:
+> 销毁虚拟机的命令:
 >
+> ```
+> root@ykla:/usr/home/ykla # vm  destroy winguest
 >
->```
->root@ykla:/usr/home/ykla # vm  destroy winguest
->
->Are you sure you want to completely remove this virtual machine (y/n)? Are you sure you want to completely remove this virtual machine (y/n)? #这里输入 y 回车即可删除
->```
+> Are you sure you want to completely remove this virtual machine (y/n)? Are you sure you want to completely remove this virtual machine (y/n)? #这里输入 y 回车即可删除
+> ```
 
 但是注意该模板是有问题的，需要进行修改如下，文件路径是 `/usr/home/ykla/vm/winguest/winguest.conf`：
 
->不必疑惑路径问题，`/home/` 是被软连接到 `/usr/home/` 的，是一样的。
+> 不必疑惑路径问题，`/home/` 是被软连接到 `/usr/home/` 的，是一样的。
 
 ```
 loader="uefi" #不支持 UEFI 的 windows 不能够启动，例如 XP 操作系统，但是请注意 win7 是支持 UEFI 的
@@ -118,12 +114,9 @@ network0_mac="58:9c:fc:0c:5e:bb"
 root@ykla:/usr/home/ykla # 
 ```
 
-
-
-
 终止虚拟机：
 
->如果虚拟机卡死该命令无效，请自行 `kill -9` 以免影响关机，如果真的阻碍了物理机关机，可以在 tty 按 `Ctrl`+ `C` 跳过等待虚拟机，强制关机
+> 如果虚拟机卡死该命令无效，请自行 `kill -9` 以免影响关机，如果真的阻碍了物理机关机，可以在 tty 按 `Ctrl`+ `C` 跳过等待虚拟机，强制关机
 
 ```
 root@ykla:/usr/home/ykla # vm stop winguest
@@ -137,7 +130,6 @@ Sending ACPI shutdown to winguest
 ```
 # vm install winguest Windows.iso
 ```
-
 
 ## 从 VNC 访问 Win10
 
@@ -175,15 +167,14 @@ root@ykla:/usr/home/ykla #
 ```
 
 查看所有虚拟机状态：
-  
+
 ```
 root@ykla:/usr/home/ykla # vm list
 NAME      DATASTORE  LOADER  CPU  MEMORY  VNC  AUTO  STATE
 winguest  default    uefi    2    4G      -    No    Stopped
 ```
 
-打开  tigervnc-viewer 输入 `localhost:5900`，点击连接，然后按任意键以进入安装过程。
-
+打开 tigervnc-viewer 输入 `localhost:5900`，点击连接，然后按任意键以进入安装过程。
 
 ## 故障排除
 
@@ -244,7 +235,6 @@ tap0: flags=8943<UP,BROADCAST,RUNNING,PROMISC,SIMPLEX,MULTICAST> metric 0 mtu 15
 
 ### VNC 配置选项
 
-
 如果你想让 VNC 监听一个特定的主机 IP 地址，请指定以下选项：
 
 ```
@@ -277,7 +267,6 @@ graphics_res="1600x900"
 640x480
 ```
 
-
 ### 添加 VirtIO 网络驱动
 
 虽然“e1000”网络适配器开箱即用，允许访客获得网络访问，但建议尽可能使用“virtio-net”设备。有几种安装这些驱动程序的方法。
@@ -288,7 +277,7 @@ graphics_res="1600x900"
 ```
 # vm install winguest virtio-installer.iso
 ```
-    
+
 * 可以添加 CD 设备到客户机上，并指向 ISO 文件
 
 ```
@@ -301,7 +290,7 @@ disk1_name="/full/path/to/virtio-installer.iso"
 
 某些版本的 Windows（大多数桌面版本）不支持一个以上的物理 CPU。默认情况下，bhyve 配置单个虚拟 CPU 和单核心。
 
-可以修改 sysctl `hw.vmm.topology.cores_per_package` 以告诉 bhyve 为每个 CPU 创建多核心，而不是单核心。例如，将这个 sysctl 设置为 4 将配置一个有 8 个 vCPU 的客户机，有 2  x 4 个核心。
+可以修改 sysctl `hw.vmm.topology.cores_per_package` 以告诉 bhyve 为每个 CPU 创建多核心，而不是单核心。例如，将这个 sysctl 设置为 4 将配置一个有 8 个 vCPU 的客户机，有 2 x 4 个核心。
 
 必须在 /boot/loader.conf 中设置（并重新启动才能生效）`hw.vmm.topology.cores_per_package`。
 
@@ -344,7 +333,7 @@ passthru0="4/0/0"
 
 * 使用 ahci-HD 控制器安装 Windows 7 客户机，就像正常程序一样。
 * 安装后，用 nvme 控制器附加一个额外的 disk1.img。
-* 安装微软的 nvme 补丁，即 ``Windows6.1-KB2990941-v3-x64.msu`` 和 ``Windows6.1-KB3087873-v2-x64.msu``，确保 nvme 控制器和磁盘 1 出现在 windows7 客户的设备管理器中。
+* 安装微软的 nvme 补丁，即 `Windows6.1-KB2990941-v3-x64.msu` 和 `Windows6.1-KB3087873-v2-x64.msu`，确保 nvme 控制器和磁盘 1 出现在 windows7 客户的设备管理器中。
 * 关闭客户机电源，交换客户机配置中的 disk0.img 和 disk1.img。再次启动。
 * 关闭客户机电源，删除 ahci 控制器和 disk1.img。留下 nvme 控制器和 disk0.img，再次启动。
 
@@ -352,11 +341,23 @@ passthru0="4/0/0"
 
 ## 参考资料
 
- - <https://github.com/churchers/vm-bhyve/wiki/Running-Windows>
- - <https://twitter.com/bhyve_dev/status/1446404943020056581>
- - <https://forums.freebsd.org/threads/windows-11-on-bhyve.82371/>
- - <https://dadv.livejournal.com/209650.html>
- - <https://wiki.freebsd.org/bhyve/Windows>
- - <https://github.com/churchers/vm-bhyve/wiki>
- - <https://srobb.net/vm-bhyve.html>
+* [https://github.com/churchers/vm-bhyve/wiki/Running-Windows](https://github.com/churchers/vm-bhyve/wiki/Running-Windows)
+* [https://twitter.com/bhyve\_dev/status/1446404943020056581](https://twitter.com/bhyve\_dev/status/1446404943020056581)
+* [https://forums.freebsd.org/threads/windows-11-on-bhyve.82371/](https://forums.freebsd.org/threads/windows-11-on-bhyve.82371/)
+* [https://dadv.livejournal.com/209650.html](https://dadv.livejournal.com/209650.html)
+* [https://wiki.freebsd.org/bhyve/Windows](https://wiki.freebsd.org/bhyve/Windows)
+* [https://github.com/churchers/vm-bhyve/wiki](https://github.com/churchers/vm-bhyve/wiki)
+* [https://srobb.net/vm-bhyve.html](https://srobb.net/vm-bhyve.html)
+
+
+
+<figure><img src="../.gitbook/assets/win1.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/win2.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/win3.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/win4.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/win5.png" alt=""><figcaption></figcaption></figure>
 
