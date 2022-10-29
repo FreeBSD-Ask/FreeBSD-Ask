@@ -125,6 +125,39 @@ pkg install tigervnc-viewer
 localhost:5900
 ```
 
+```
+root@ykla:/usr/home/ykla # ifconfig
+alc0: flags=8802<BROADCAST,SIMPLEX,MULTICAST> metric 0 mtu 1500
+        options=c319a<TXCSUM,VLAN_MTU,VLAN_HWTAGGING,VLAN_HWCSUM,TSO4,WOL_MCAST,WOL_MAGIC,VLAN_HWTSO,LINKSTATE>
+        ether 20:89:84:99:9c:c9
+        media: Ethernet autoselect
+        nd6 options=29<PERFORMNUD,IFDISABLED,AUTO_LINKLOCAL>
+lo0: flags=8049<UP,LOOPBACK,RUNNING,MULTICAST> metric 0 mtu 16384
+        options=680003<RXCSUM,TXCSUM,LINKSTATE,RXCSUM_IPV6,TXCSUM_IPV6>
+        inet6 ::1 prefixlen 128
+        inet6 fe80::1%lo0 prefixlen 64 scopeid 0x2
+        inet 127.0.0.1 netmask 0xff000000
+        groups: lo
+        nd6 options=21<PERFORMNUD,AUTO_LINKLOCAL>
+ue0: flags=8943<UP,BROADCAST,RUNNING,PROMISC,SIMPLEX,MULTICAST> metric 0 mtu 1500
+        options=8000b<RXCSUM,TXCSUM,VLAN_MTU,LINKSTATE>
+        ether f8:e4:3b:9f:ea:3c
+        inet 192.168.31.169 netmask 0xffffff00 broadcast 192.168.31.255
+        media: Ethernet autoselect (1000baseT <full-duplex>)
+        status: active
+        nd6 options=29<PERFORMNUD,IFDISABLED,AUTO_LINKLOCAL>
+vm-public: flags=8843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST> metric 0 mtu 1500
+        ether 3a:e1:fa:98:33:b4
+        id 00:00:00:00:00:00 priority 32768 hellotime 2 fwddelay 15
+        maxage 20 holdcnt 6 proto rstp maxaddr 2000 timeout 1200
+        root id 00:00:00:00:00:00 priority 32768 ifcost 0 port 0
+        member: ue0 flags=143<LEARNING,DISCOVER,AUTOEDGE,AUTOPTP>
+                ifmaxaddr 0 port 3 priority 128 path cost 20000
+        groups: bridge vm-switch viid-4c918@
+        nd6 options=9<PERFORMNUD,IFDISABLED>
+root@ykla:/usr/home/ykla # 
+```
+
 
 ## 安装系统
 
