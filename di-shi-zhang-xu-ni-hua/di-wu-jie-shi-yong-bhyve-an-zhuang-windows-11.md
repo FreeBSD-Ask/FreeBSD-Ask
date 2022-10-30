@@ -32,7 +32,7 @@ vm_dir="/home/ykla/vm" #注意该位置，以下操作都会用到
 复制模板到虚拟机模板位置：
 
 ```
-#cp /usr/local/share/examples/vm-bhyve/* /vm/.templates
+#cp /usr/local/share/examples/vm-bhyve/* /home/ykla/vm/.templates
 ```
 
 创建虚拟交换机，`public` 是你在模板里指定的，`ue0` 是我正在上网用的网卡，你需要改成你自己的，否则会创建失败且虚拟机报错：`exit with error 4`：
