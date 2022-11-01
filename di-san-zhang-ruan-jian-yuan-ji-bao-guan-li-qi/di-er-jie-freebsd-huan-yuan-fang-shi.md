@@ -146,11 +146,11 @@ ports 下载路径是 `/usr/ports/distfiles`
 
 ### FreeBSD.cn
 
-编辑portsnap配置文件 `# ee /etc/portsnap.conf` :
+编辑 portsnap 配置文件 `# ee /etc/portsnap.conf` :
 
 将 `SERVERNAME=portsnap.FreeBSD.org` 修改为 `SERVERNAME=portsnap.FreeBSD.cn`
 
-**获取portsnap更新**
+**获取 portsnap 更新**
 
 ```
 # portsnap auto #同时支持命令行和 cron
