@@ -3,15 +3,15 @@
 ## 安装
 
 ```
-# pkg install xorg gnome wqy-fonts xdg-user-dirs
+# pkg install xorg gnome-shell noto-sc xdg-user-dirs
 ```
 
 解释:
 |软件|用途|
 |:---:|:---:|
 |xorg|X11|
-|gnome|Gnome 主程序|
-|wqy-fonts|文泉驿中文开源字体|
+|gnome-shell|Gnome 主程序|
+|noto-sc|思源黑体|
 |xdg-user-dirs|用于创建用户家目录的子目录|
 
 ## 配置
@@ -149,9 +149,3 @@ setenv LC_ALL zh_CN.UTF-8
 ## 优化系统
 
 `# pkg install gnome-tweaks`
-
-## 卸载自带游戏（可选）
-
-```
-# pkg delete gnome-2048 gnome-klotski gnome-tetravex gnome-mines gnome-taquin gnome-sudoku gnome-robots gnome-nibbles lightsoff tali quadrapassel swell-foop gnome-mahjongg five-or-more iagno aisleriot four-in-a-row
-```
