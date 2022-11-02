@@ -69,3 +69,8 @@ BatteryBound=0
 |Type-C 以太网卡|绿联 Type-C 转百兆网卡 30287|AX88772A 100M|59|
 |Type-C 以太网卡|绿联 Type-C 转千兆网卡 CM199|AX88179A 1000M|99|
 |Type-C 以太网卡|绿联 Type-C 转 2.5G 网卡|RTL8156 2.5G|199|
+
+>RTL8156 网卡如果时断时续，请安装 `realtek-re-kmod`。？（此处存疑）
+>见 
+> -  <https://www.freshports.org/net/realtek-re-kmod> 
+> - <https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=166724>
