@@ -31,7 +31,7 @@ cp -r /$PATH/amdgpu-firmware-xxx/firmware/amdgpu/* /etc/firmware/amdgpu/
 
 ### 修改软件源
 
-打开 `/etc/installurl`，将默认源注释掉，改为 `https://mirrors.bfsu.edu.cn/OpenBSD`。此处我们选择了北外源，用户也可选择 [清华镜像源](https://mirrors.tuna.tsinghua.edu.cn/OpenBSD)、 [阿里镜像源](https://mirrors.aliyun.com/openbsd)、 及[南京大学源](https://mirror.sjtu.edu.cn/OpenBSD) 等。
+打开 `/etc/installurl`，将默认源注释掉，改为 `https://mirrors.bfsu.edu.cn/OpenBSD`。此处我们选择了北外源，用户也可选择 [清华镜像源](https://mirrors.tuna.tsinghua.edu.cn/OpenBSD)、 [阿里镜像源](https://mirrors.aliyun.com/openbsd)、 及[南京大学源](https://mirror.nju.edu.cn/OpenBSD) 等。
 
 ## 系统更新
 
