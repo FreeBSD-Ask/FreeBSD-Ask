@@ -52,7 +52,7 @@ fn main() {
 > 选择 `goXXX.freebsd-amd64.tar.gz` 或 `goXXX.freebsd-386.tar.gz` 软件包。
 
 - 解压二进制包：以 amd64 架构为例，终端代码如下
-> `tar -C /usr/local -xzf https://golang.google.cn/dl/go1.18.1.freebsd-amd64.tar.gz`
+> `tar -C /usr/local -xzf https://golang.google.cn/dl/go1.19.3.freebsd-amd64.tar.gz`
 
 - 添加环境变量： 
 > 文本模式打开 `.profile`，添加一行 `export PATH=$PATH:/usr/local/go/bin`
