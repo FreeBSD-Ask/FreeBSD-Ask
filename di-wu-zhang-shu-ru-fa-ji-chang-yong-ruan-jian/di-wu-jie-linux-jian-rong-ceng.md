@@ -127,6 +127,14 @@ deb-src http://mirrors.163.com/ubuntu/ focal-security main restricted universe m
  - 通过软件图标定位，找到路径 `/usr/share/applications`,根据软件包名找到软件，用文本编辑器（如 `ee`、`nano`）打开。（软件图标本质上是一个文本文件，不是软连接或者图片），找到程序运行的命令复制到终端运行即可；
  - 通过 `find` 命令全局查找 `# find / —name 软件包名`，`# find / —name gedit`。
 
+>如何查找软件？
+>
+>```
+>#apt search --names-only XXX
+>```
+>
+>把 XXX 换成想要搜索的软件名即可。
+
 ### 示例：运行 Chrome
 
 ```
