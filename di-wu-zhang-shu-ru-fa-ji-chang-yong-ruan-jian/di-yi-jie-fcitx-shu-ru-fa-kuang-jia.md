@@ -71,7 +71,9 @@ setenv LANG zh_CN.UTF-8
 setenv MM_CHARSET zh_CN.UTF-8
 ```
 
-rime 不会自动被添加到输入法，需要手动添加完成初始化（程序里找到 fcitx 配置工具，添加 rime 输入法即可），这个输入法我不知道配置文件在哪，有意者可以自行安装 zh-fcitx5-rime zh-rime-essay。对于普通用户如果未生效，请检查自己的 shell，应该是 csh，如果不是请将该用户加入 wheel 组。对于其他 shell 请自行更正为对应 shell 的环境变量。
+>**可选**
+>
+>你还可以选择安装 rime，`#pkg install zh-fcitx5-rime zh-rime-essay`。rime 不会自动被添加到输入法，需要手动添加完成初始化（程序里找到 fcitx 配置工具，添加 rime 输入法即可），这个输入法我不知道配置文件在哪，有意者可以自行安装。而且经常切换到繁体，即使你选择了简体，原因未知。对于普通用户如果未生效，请检查自己的 shell，应该是 csh，如果不是请将该用户加入 wheel 组。对于其他 shell 请自行更正为对应 shell 的环境变量。
 
 SLIM 窗口下会提示 IBUS 找不到……疑似bug。
   
