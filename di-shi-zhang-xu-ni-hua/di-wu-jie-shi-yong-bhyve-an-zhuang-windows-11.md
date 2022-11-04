@@ -22,7 +22,7 @@ kldload vmm
 # pkg install bhyve-firmware vm-bhyve tigervnc-viewer
 ```
 
-在 `/etc.rc.conf` 中指定启动 vm 与虚拟机的位置：
+在 `/etc/rc.conf` 中指定启动 vm 与虚拟机的位置：
 
 ```
 vm_enable="YES"
