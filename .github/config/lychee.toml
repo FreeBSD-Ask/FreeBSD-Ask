@@ -7,7 +7,7 @@ verbose = true
 progress = true
 
 # Path to summary output file.
-output = "./lychee2/out.md"
+# output = "./lychee2/out.md"
 
 #############################  Cache  ###############################
 
@@ -98,7 +98,7 @@ exclude_all_private = true
 # exclude_link_local = false
 
 # # Exclude loopback IP address range and localhost from checking
-# exclude_loopback = false
+exclude_loopback = true
 
 # Exclude all mail addresses from checking
 exclude_mail = true
