@@ -7,7 +7,7 @@ verbose = true
 progress = true
 
 # Path to summary output file.
-# output = "report.md"
+output = "./lychee2/out.md"
 
 #############################  Cache  ###############################
 
@@ -25,7 +25,7 @@ threads = 6
 max_redirects = 10
 
 # Maximum number of concurrent network requests [default: 128]
-max_concurrency = 10
+max_concurrency = 128
 
 #############################  Requests  ############################
 
@@ -33,7 +33,7 @@ max_concurrency = 10
 user_agent = "curl/7.83.1"
 
 # Website timeout from connect to response finished
-timeout = 10
+timeout = 15
 
 # Minimum wait time in seconds between retries of failed requests.
 retry_wait_time = 2
