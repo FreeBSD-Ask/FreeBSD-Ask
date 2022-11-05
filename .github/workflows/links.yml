@@ -6,7 +6,6 @@ on:
   push:
     branches:
       - main
-  workflow_dispatch:
 
 jobs:
   linkChecker:
@@ -25,12 +24,12 @@ jobs:
             # Use json as output format (instead of markdown)
             format: markdown
             # Use different output file path
-            output: ./lychee2/out.md
+            output: ./lychee/out.md
 
       - name: Create Issue From File
         if: steps.lychee.outputs.exit_code != 0
         uses: peter-evans/create-issue-from-file@v4
         with:
           title: 🔗 链接检查报告
-          content-filepath: ./lychee2/out.md
+          content-filepath: ./lychee/out.md
           labels: report, automated issue
