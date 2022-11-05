@@ -1,3 +1,4 @@
+
 name: 🔗 检查链接
 
 on:
@@ -6,8 +7,6 @@ on:
     branches:
       - main
   workflow_dispatch:
-  schedule:
-    - cron: "* * */15 * *"
 
 jobs:
   linkChecker:
