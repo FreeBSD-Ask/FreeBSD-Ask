@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - run: rm -rf ./lychee
+      - run: rm -rf *
 
       - name: Link Checker
         id: lychee
