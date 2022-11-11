@@ -25,18 +25,11 @@ setenv GTK3_IM_MODULE fcitx
 setenv XMODIFIERS @im=fcitx
 ```
 
-在 `.cshrc` 和 `/etc/csh.cshrc` 中添加下面两行配置可以解决终端无法输入中文和无法显示中文的问题。
+在 `.cshrc` 和 `/etc/csh.cshrc` 中添加下面几行配置可以解决终端无法输入中文和无法显示中文的问题。
 
 ```
 setenv LANG zh_CN.UTF-8
 setenv MM_CHARSET zh_CN.UTF-8
-```
-
-接Fcitx 输入法补充：
-
-```
-#要想终端不乱码还需要添加：
-setenv LANG zh_CN.UTF-8
 setenv LC_CTYPE zh_CN.UTF-8
 setenv LC_ALL zh_CN.UTF-8
 ```
