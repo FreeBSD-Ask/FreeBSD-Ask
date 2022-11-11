@@ -1,6 +1,6 @@
 # 第一节 Fcitx 输入法框架
 
-fcitx 5 相比前一代，增加了对 Wayland 的支持，据说更加流畅。
+
 
 >**注意**
 >
@@ -38,6 +38,8 @@ setenv LC_ALL zh_CN.UTF-8
 `# cp /usr/local/share/applications/fcitx.desktop ~/.config/autostart/`
 
 ## Fcitx 5.X
+
+fcitx 5 相比前一代，增加了对 Wayland 的支持，据说更加流畅。
 
 `# pkg install fcitx5 fcitx5-qt5 fcitx5-qt6 fcitx5-gtk fcitx5-configtool zh-fcitx5-chinese-addons`
 
