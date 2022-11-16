@@ -26,10 +26,10 @@ jobs:
             # Use different output file path
             output: ./lychee2/out.md
 
-      - name: Create Issue From File
-        if: env.lychee_exit_code != 0
-        uses: peter-evans/create-issue-from-file@v4
-        with:
-            title: Link Checker Report
-            content-filepath: ./lychee2/out.md
-            labels: report, automated issue
+ #     - name: Create Issue From File
+ #       if: env.lychee_exit_code != 0
+ #       uses: peter-evans/create-issue-from-file@v4
+ #       with:
+ #           title: Link Checker Report
+ #           content-filepath: ./lychee2/out.md
+ #           labels: report, automated issue
