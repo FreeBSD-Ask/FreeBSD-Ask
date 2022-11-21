@@ -2,104 +2,104 @@
 
 * [FreeBSD 从入门到跑路](README.md)
 
-## 第〇章 FreeBSD 中文社区
+## 第0章 FreeBSD 中文社区
 
-* [第一节 FreeBSD FAQ](di-ling-zhang-freebsd-zhong-wen-she-qu/di-yi-jie-freebsd-faq.md)
-* [第二节 FreeBSD 中文社区（CFC）发展规划](di-ling-zhang-freebsd-zhong-wen-she-qu/di-er-jie-freebsd-zhong-wen-she-qu-cfc-fa-zhan-gui-hua.md)
-* [第三节 FreeBSD 的不足之处](di-ling-zhang-freebsd-zhong-wen-she-qu/di-san-jie-freebsd-de-bu-zu-zhi-chu.md)
-* [第四节 FreeBSD 发行说明](di-ling-zhang-freebsd-zhong-wen-she-qu/di-si-jie-freebsd-fa-hang-shuo-ming.md)
+* [第0.1节 FreeBSD FAQ](di-0-zhang-freebsd-zhong-wen-she-qu/di-0.1-jie-freebsd-faq.md)
+* [第0.2节 FreeBSD 中文社区（CFC）发展规划](di-0-zhang-freebsd-zhong-wen-she-qu/di-0.2-jie-freebsd-zhong-wen-she-qu-cfc-fa-zhan-gui-hua.md)
+* [第0.3节 FreeBSD 的不足之处](di-0-zhang-freebsd-zhong-wen-she-qu/di-0.3-jie-freebsd-de-bu-zu-zhi-chu.md)
+* [第0.4节 FreeBSD 发行说明](di-0-zhang-freebsd-zhong-wen-she-qu/di-0.4-jie-freebsd-fa-hang-shuo-ming.md)
 
-## 第一章 走近 FreeBSD
+## 第1章 走进 FreeBSD
 
-* [第一节 什么是 UNIX](di-yi-zhang-zou-jin-freebsd/di-yi-jie-shi-mo-shi-unix.md)
-* [第二节 什么是 Unix-like](di-yi-zhang-zou-jin-freebsd/di-er-jie-shi-mo-shi-lei-unix.md)
-* [第三节 什么是 Linux](di-yi-zhang-zou-jin-freebsd/di-san-jie-shi-mo-shi-linux.md)
-* [第四节 FreeBSD 与其他操作系统](di-yi-zhang-zou-jin-freebsd/di-si-jie-freebsd-yu-qi-ta-cao-zuo-xi-tong.md)
-* [第五节 为什么要使用 FreeBSD](di-yi-zhang-zou-jin-freebsd/di-wu-jie-wei-shi-mo-yao-shi-yong-freebsd.md)
-* [第六节 所谓开源哲学](di-yi-zhang-zou-jin-freebsd/di-liu-jie-suo-wei-kai-yuan-zhe-xue.md)
-* [第七节 其他 BSD 简介](di-yi-zhang-zou-jin-freebsd/di-qi-jie-qi-ta-bsd-jian-jie.md)
-* [第八节 Linux 用户迁移指北](di-yi-zhang-zou-jin-freebsd/di-ba-jie-linux-yong-hu-qian-yi-zhi-bei.md)
-* [第九节 参考资料与贡献者名单](di-yi-zhang-zou-jin-freebsd/di-jiu-jie-can-kao-zi-liao-yu-gong-xian-zhe-ming-dan.md)
-* [第十节 编撰说明](di-yi-zhang-zou-jin-freebsd/di-shi-jie-bian-zhuan-shuo-ming.md)
+* [第1.1节 什么是 UNIX](di-1-zhang-zou-jin-freebsd/di-1.1-jie-shi-mo-shi-unix.md)
+* [第1.2节 什么是 Unix-like](di-1-zhang-zou-jin-freebsd/di-1.2-jie-shi-mo-shi-unixlike.md)
+* [第1.3节 什么是 Linux](di-1-zhang-zou-jin-freebsd/di-1.3-jie-shi-mo-shi-linux.md)
+* [第1.4节 FreeBSD 与其他操作系统](di-1-zhang-zou-jin-freebsd/di-1.4-jie-freebsd-yu-qi-ta-cao-zuo-xi-tong.md)
+* [第1.5节 为什么要使用 FreeBSD](di-1-zhang-zou-jin-freebsd/di-1.5-jie-wei-shi-mo-yao-shi-yong-freebsd.md)
+* [第1.6节 所谓开源哲学](di-1-zhang-zou-jin-freebsd/di-1.6-jie-suo-wei-kai-yuan-zhe-xue.md)
+* [第1.7节 其他 BSD 简介](di-1-zhang-zou-jin-freebsd/di-1.7-jie-qi-ta-bsd-jian-jie.md)
+* [第1.8节 Linux 用户迁移指北](di-1-zhang-zou-jin-freebsd/di-1.8-jie-linux-yong-hu-qian-yi-zhi-bei.md)
+* [第1.9节 参考资料与贡献者名单](di-1-zhang-zou-jin-freebsd/di-1.9-jie-can-kao-zi-liao-yu-gong-xian-zhe-ming-dan.md)
+* [第1.10节 编撰说明](di-1-zhang-zou-jin-freebsd/di-1.10-jie-bian-zhuan-shuo-ming.md)
 
-## 第二章 安装 FreeBSD
+## 第2章 安装 FreeBSD
 
-* [第〇节 图解安装](di-er-zhang-an-zhuang-freebsd/di-ling-jie-tu-jie-an-zhuang.md)
-* [第一节 三种虚拟机与 FreeBSD 版本比较](di-er-zhang-an-zhuang-freebsd/di-yi-jie-san-zhong-xu-ni-ji-yu-freebsd-ban-ben-bi-jiao.md)
-* [第二节 FreeBSD 13.0 安装——基于 Virtual Box](di-er-zhang-an-zhuang-freebsd/di-er-jie-freebsd-an-zhuang-ji-yu-virtual-box.md)
-* [第三节 FreeBSD 13.0 安装——基于 Vmware Workstation Pro 16](di-er-zhang-an-zhuang-freebsd/di-san-jie-freebsd-13.0-an-zhuang-ji-yu-vmware-workstation-pro-16.md)
-* [第四节 腾讯云轻量云及其他服务器 dd 安装 FreeBSD](di-er-zhang-an-zhuang-freebsd/di-si-jie-teng-xun-yun-qing-liang-yun-ji-qi-ta-fu-wu-qi-dd-an-zhuang-freebsd.md)
-* [第五节 手动安装 FreeBSD](di-er-zhang-an-zhuang-freebsd/di-wu-jie-shou-dong-an-zhuang-freebsd.md)
-* [第六节 ee 用法及网络配置](di-er-zhang-an-zhuang-freebsd/di-liu-jie-ee-yong-fa-ji-wang-luo-pei-zhi.md)
-* [第七节 常用软件 与 SSH 配置](di-er-zhang-an-zhuang-freebsd/di-qi-jie-chang-yong-ruan-jian-yu-ssh-pei-zhi.md)
-* [第八节 物理机安装与硬件选配](di-er-zhang-an-zhuang-freebsd/di-ba-jie-wu-li-ji-an-zhuang-yu-ying-jian-xuan-pei.md)
-* [第九节 物理机下显卡的配置](di-er-zhang-an-zhuang-freebsd/di-jiu-jie-wu-li-ji-xia-xian-ka-de-pei-zhi.md)
-* [第十节 物理机下触摸板的设置](di-er-zhang-an-zhuang-freebsd/di-shi-jie-wu-li-ji-xia-chu-mo-ban-de-she-zhi.md)
-* [第十一节 物理机声卡与网卡设置](di-er-zhang-an-zhuang-freebsd/di-shi-yi-jie-wu-li-ji-sheng-ka-yu-wang-ka-she-zhi.md)
-* [第十二节 打印机的安装](di-er-zhang-an-zhuang-freebsd/di-shi-er-jie-da-yin-ji-de-an-zhuang.md)
-* [第十三节 无线蓝牙鼠标的设置](di-er-zhang-an-zhuang-freebsd/di-shi-san-jie-wu-xian-lan-ya-shu-biao-de-she-zhi.md)
+* [第2.0节 图解安装](di-2-zhang-an-zhuang-freebsd/di-2.0-jie-tu-jie-an-zhuang.md)
+* [第2.1节 三种虚拟机与 FreeBSD 版本比较](di-2-zhang-an-zhuang-freebsd/di-2.1-jie-san-zhong-xu-ni-ji-yu-freebsd-ban-ben-bi-jiao.md)
+* [第2.2节 FreeBSD 13.0 安装——基于 Virtual Box](di-2-zhang-an-zhuang-freebsd/di-2.2-jie-freebsd-13.0-an-zhuang-ji-yu-virtual-box.md)
+* [第2.3节 FreeBSD 13.0 安装——基于 Vmware Workstation Pro](di-2-zhang-an-zhuang-freebsd/di-2.3-jie-freebsd-13.0-an-zhuang-ji-yu-vmware-workstation-pro.md)
+* [第2.4节 腾讯云轻量云及其他服务器 dd 安装 FreeBSD](di-2-zhang-an-zhuang-freebsd/di-2.4-jie-teng-xun-yun-qing-liang-yun-ji-qi-ta-fu-wu-qi-dd-an-zhuang-freebsd.md)
+* [第2.5节 手动安装 FreeBSD](di-2-zhang-an-zhuang-freebsd/di-2.5-jie-shou-dong-an-zhuang-freebsd.md)
+* [第2.6节 ee 用法及网络配置](di-2-zhang-an-zhuang-freebsd/di-2.6-jie-ee-yong-fa-ji-wang-luo-pei-zhi.md)
+* [第2.7节 常用软件 与 SSH 配置](di-2-zhang-an-zhuang-freebsd/di-2.7-jie-chang-yong-ruan-jian-yu-ssh-pei-zhi.md)
+* [第2.8节 物理机安装与硬件选配](di-2-zhang-an-zhuang-freebsd/di-2.8-jie-wu-li-ji-an-zhuang-yu-ying-jian-xuan-pei.md)
+* [第2.9节 物理机下显卡的配置](di-2-zhang-an-zhuang-freebsd/di-2.9-jie-wu-li-ji-xia-xian-ka-de-pei-zhi.md)
+* [第2.10节 物理机下触摸板的设置](di-2-zhang-an-zhuang-freebsd/di-2.10-jie-wu-li-ji-xia-chu-mo-ban-de-she-zhi.md)
+* [第2.11节 物理机声卡与网卡设置](di-2-zhang-an-zhuang-freebsd/di-2.11-jie-wu-li-ji-sheng-ka-yu-wang-ka-she-zhi.md)
+* [第2.12节 打印机的安装](di-2-zhang-an-zhuang-freebsd/di-2.12-jie-da-yin-ji-de-an-zhuang.md)
+* [第2.13节 无线蓝牙鼠标的设置](di-2-zhang-an-zhuang-freebsd/di-2.13-jie-wu-xian-lan-ya-shu-biao-de-she-zhi.md)
 
-## 第三章 软件源及包管理器
+## 第3章 软件源及包管理器
 
-* [第〇节 包管理器概述](di-san-zhang-ruan-jian-yuan-ji-bao-guan-li-qi/di-ling-jie-bao-guan-li-qi-gai-shu.md)
-* [第一节 FreeBSD 镜像站现状](di-san-zhang-ruan-jian-yuan-ji-bao-guan-li-qi/di-yi-jie-freebsd-jing-xiang-zhan-xian-zhuang.md)
-* [第二节 FreeBSD 换源方式](di-san-zhang-ruan-jian-yuan-ji-bao-guan-li-qi/di-er-jie-freebsd-huan-yuan-fang-shi.md)
-* [第三节 gitup 的用法](di-san-zhang-ruan-jian-yuan-ji-bao-guan-li-qi/di-san-jie-gitup-de-yong-fa.md)
-* [第四节 软件包管理器 pkg 的用法](di-san-zhang-ruan-jian-yuan-ji-bao-guan-li-qi/di-si-jie-ruan-jian-bao-guan-li-qi-pkg-de-yong-fa.md)
-* [第五节 通过源代码 ports 方式安装软件](di-san-zhang-ruan-jian-yuan-ji-bao-guan-li-qi/di-wu-jie-tong-guo-yuan-dai-ma-port-fang-shi-an-zhuang-ruan-jian.md)
-* [第六节 通过 DVD 安装软件](di-san-zhang-ruan-jian-yuan-ji-bao-guan-li-qi/di-liu-jie-tong-guo-dvd-an-zhuang-ruan-jian.md)
+* [第3.0节 包管理器概述](di-3-zhang-ruan-jian-yuan-ji-bao-guan-li-qi/di-3.0-jie-bao-guan-li-qi-gai-shu.md)
+* [第3.1节 FreeBSD 镜像站现状](di-3-zhang-ruan-jian-yuan-ji-bao-guan-li-qi/di-3.1-jie-freebsd-jing-xiang-zhan-xian-zhuang.md)
+* [第3.2节 FreeBSD 换源方式](di-3-zhang-ruan-jian-yuan-ji-bao-guan-li-qi/di-3.2-jie-freebsd-huan-yuan-fang-shi.md)
+* [第3.3节 gitup 的用法](di-3-zhang-ruan-jian-yuan-ji-bao-guan-li-qi/di-3.3-jie-gitup-de-yong-fa.md)
+* [第3.4节 软件包管理器 pkg 的用法](di-3-zhang-ruan-jian-yuan-ji-bao-guan-li-qi/di-3.4-jie-ruan-jian-bao-guan-li-qi-pkg-de-yong-fa.md)
+* [第3.5节 通过源代码 ports 方式安装软件](di-3-zhang-ruan-jian-yuan-ji-bao-guan-li-qi/di-3.5-jie-tong-guo-yuan-dai-ma-ports-fang-shi-an-zhuang-ruan-jian.md)
+* [第3.6节 通过 DVD 安装软件](di-3-zhang-ruan-jian-yuan-ji-bao-guan-li-qi/di-3.6-jie-tong-guo-dvd-an-zhuang-ruan-jian.md)
 
-## 第四章 桌面安装
+## 第4章 桌面安装
 
-* [第〇节 概述](di-si-zhang-zhuo-mian-an-zhuang/di-ling-jie-gai-shu.md)
-* [第一节 安装 Xorg](di-si-zhang-zhuo-mian-an-zhuang/di-yi-jie-an-zhuang-xorg.md)
-* [第二节 安装 KDE 5](di-si-zhang-zhuo-mian-an-zhuang/di-er-jie-an-zhuang-kde-5.md)
-* [第三节 安装 Gnome](di-si-zhang-zhuo-mian-an-zhuang/di-san-jie-an-zhuang-gnome.md)
-* [第四节 安装 Mate](di-si-zhang-zhuo-mian-an-zhuang/di-si-jie-an-zhuang-mate.md)
-* [第五节 安装 Xfce](di-si-zhang-zhuo-mian-an-zhuang/di-wu-jie-an-zhuang-xfce.md)
-* [第六节 安装 Cinnamon](di-si-zhang-zhuo-mian-an-zhuang/di-liu-jie-an-zhuang-cinnamon.md)
-* [第七节 安装 Lumina](di-si-zhang-zhuo-mian-an-zhuang/di-qi-jie-an-zhuang-lumina.md)
-* [第八节 root 登录桌面](di-si-zhang-zhuo-mian-an-zhuang/di-ba-jie-root-deng-lu-zhuo-mian.md)
-* [第九节 主题与美化](di-si-zhang-zhuo-mian-an-zhuang/di-jiu-jie-zhu-ti-yu-mei-hua.md)
-* [第十节 远程桌面管理](di-si-zhang-zhuo-mian-an-zhuang/di-shi-jie-yuan-cheng-zhuo-mian-guan-li.md)
-* [第十一节 安装 Wayland （可选）](di-si-zhang-zhuo-mian-an-zhuang/di-shi-yi-jie-an-zhuang-wayland-ke-xuan.md)
+* [第4.0节 概述](di-4-zhang-zhuo-mian-an-zhuang/di-4.0-jie-gai-shu.md)
+* [第4.1节 安装 Xorg](di-4-zhang-zhuo-mian-an-zhuang/di-4.1-jie-an-zhuang-xorg.md)
+* [第4.2节 安装 KDE 5](di-4-zhang-zhuo-mian-an-zhuang/di-4.2-jie-an-zhuang-kde-5.md)
+* [第4.3节 安装 Gnome](di-4-zhang-zhuo-mian-an-zhuang/di-4.3-jie-an-zhuang-gnome.md)
+* [第4.4节 安装 Mate](di-4-zhang-zhuo-mian-an-zhuang/di-4.4-jie-an-zhuang-mate.md)
+* [第4.5节 安装 Xfce](di-4-zhang-zhuo-mian-an-zhuang/di-4.5-jie-an-zhuang-xfce.md)
+* [第4.6节 安装 Cinnamon](di-4-zhang-zhuo-mian-an-zhuang/di-4.6-jie-an-zhuang-cinnamon.md)
+* [第4.7节 安装 Lumina](di-4-zhang-zhuo-mian-an-zhuang/di-4.7-jie-an-zhuang-lumina.md)
+* [第4.8节 root 登录桌面](di-4-zhang-zhuo-mian-an-zhuang/di-4.8-jie-root-deng-lu-zhuo-mian.md)
+* [第4.9节 主题与美化](di-4-zhang-zhuo-mian-an-zhuang/di-4.9-jie-zhu-ti-yu-mei-hua.md)
+* [第4.10节 远程桌面管理](di-4-zhang-zhuo-mian-an-zhuang/di-4.10-jie-yuan-cheng-zhuo-mian-guan-li.md)
+* [第4.11节 安装 Wayland （可选）](di-4-zhang-zhuo-mian-an-zhuang/di-4.11-jie-an-zhuang-wayland-ke-xuan.md)
 
-## 第五章 输入法及常用软件
+## 第5章 输入法及常用软件
 
-* [第一节 Fcitx 输入法框架](di-wu-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-yi-jie-fcitx-shu-ru-fa-kuang-jia.md)
-* [第二节 Ibus 输入法框架](di-wu-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-er-jie-ibus-shu-ru-fa-kuang-jia.md)
-* [第三节 五笔输入法](di-wu-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-san-jie-qi-ta-shu-ru-fa-kuang-jia.md)
-* [第四节 Firefox 与 Chromium 安装](di-wu-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-si-jie-firefox-yu-chromium-an-zhuang.md)
-* [第五节 Linux 兼容层](di-wu-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-wu-jie-linux-jian-rong-ceng.md)
-* [第六节 安装 金山 WPS](di-wu-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-liu-jie-an-zhuang-jin-shan-wps.md)
-* [第七节 安装 QQ](di-wu-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-qi-jie-an-zhuang-qq.md)
-* [第八节 更换字体](di-wu-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-ba-jie-geng-huan-zi-ti.md)
-* [第九节 wine](di-wu-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-jiu-jie-wine.md)
-* [第十节 压缩与解压](di-wu-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-shi-jie-ya-suo-yu-jie-ya.md)
+* [第5.1节 Fcitx 输入法框架](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.1-jie-fcitx-shu-ru-fa-kuang-jia.md)
+* [第5.2节 Ibus 输入法框架](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.2-jie-ibus-shu-ru-fa-kuang-jia.md)
+* [第5.3节 五笔输入法](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.3-jie-wu-bi-shu-ru-fa.md)
+* [第5.4节 Firefox 与 Chromium 安装](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.4-jie-firefox-yu-chromium-an-zhuang.md)
+* [第5.5节 Linux 兼容层](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.5-jie-linux-jian-rong-ceng.md)
+* [第5.6节 安装 金山 WPS](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.6-jie-an-zhuang-jin-shan-wps.md)
+* [第5.7节 安装 QQ](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.7-jie-an-zhuang-qq.md)
+* [第5.8节 更换字体](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.8-jie-geng-huan-zi-ti.md)
+* [第5.9节 wine](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.9-jie-wine.md)
+* [第5.10节 压缩与解压](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.10-jie-ya-suo-yu-jie-ya.md)
 
-## 第六章 文件系统与磁盘管理
+## 第6章 文件系统与磁盘管理
 
-* [第一节 UFS](di-liu-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-yi-jie-ufs.md)
-* [第二节 ZFS](di-liu-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-er-jie-zfs.md)
-* [第三节 磁盘扩容](di-liu-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-san-jie-ci-pan-kuo-rong.md)
-* [第四节 NTFS 的挂载](di-liu-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-si-jie-ntfs-de-gua-zai.md)
-* [第五节 SWAP 交换分区的设置](di-liu-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-wu-jie-swap-jiao-huan-fen-qu-de-she-zhi.md)
-* [第六节 Ext 2/3/4 等文件系统](di-liu-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-liu-jie-ext-234-deng-wen-jian-xi-tong.md)
+* [第6.1节 UFS](di-6-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-6.1-jie-ufs.md)
+* [第6.2节 ZFS](di-6-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-6.2-jie-zfs.md)
+* [第6.3节 磁盘扩容](di-6-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-6.3-jie-ci-pan-kuo-rong.md)
+* [第6.4节 NTFS 的挂载](di-6-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-6.4-jie-ntfs-de-gua-zai.md)
+* [第6.5节 SWAP 交换分区的设置](di-6-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-6.5-jie-swap-jiao-huan-fen-qu-de-she-zhi.md)
+* [第6.6节 Ext 2/3/4 等文件系统](di-6-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-6.6-jie-ext-234-deng-wen-jian-xi-tong.md)
 
-## 第七章 VPN与代理
+## 第7章 VPN与代理
 
-* [第一节 HTTP 代理](di-qi-zhang-vpn-yu-dai-li/di-yi-jie-http-dai-li.md)
-* [第二节 V2ray](di-qi-zhang-vpn-yu-dai-li/di-er-jie-v2ray.md)
-* [第三节 Clash](di-qi-zhang-vpn-yu-dai-li/di-san-jie-clash.md)
-* [第四节 OpenVPN](di-qi-zhang-vpn-yu-dai-li/di-si-jie-openvpn.md)
-* [第五节 Wireguard](di-qi-zhang-vpn-yu-dai-li/di-wu-jie-wireguard.md)
+* [第7.1节 HTTP 代理](di-7-zhang-vpn-yu-dai-li/di-7.1-jie-http-dai-li.md)
+* [第7.2节 V2ray](di-7-zhang-vpn-yu-dai-li/di-7.2-jie-v2ray.md)
+* [第7.3节 Clash](di-7-zhang-vpn-yu-dai-li/di-7.3-jie-clash.md)
+* [第7.4节 OpenVPN](di-7-zhang-vpn-yu-dai-li/di-7.4-jie-openvpn.md)
+* [第7.5节 Wireguard](di-7-zhang-vpn-yu-dai-li/di-7.5-jie-wireguard.md)
 
-## 第八章 用户与权限
+## 第8章 用户与权限
 
-* [第一节 sudo](di-ba-zhang-yong-hu-yu-quan-xian/di-yi-jie-sudo-huo-dash-de-an-zhuang.md)
-* [第二节 添加用户](di-ba-zhang-yong-hu-yu-quan-xian/di-er-jie-tian-jia-yong-hu.md)
-* [第三节 用户组](di-ba-zhang-yong-hu-yu-quan-xian/di-san-jie-yong-hu-zu.md)
-* [第四节 用户权限](di-ba-zhang-yong-hu-yu-quan-xian/di-si-jie-yong-hu-quan-xian.md)
+* [第8.1节 sudo](di-8-zhang-yong-hu-yu-quan-xian/di-8.1-jie-sudo.md)
+* [第8.2节 添加用户](di-8-zhang-yong-hu-yu-quan-xian/di-8.2-jie-tian-jia-yong-hu.md)
+* [第8.3节 用户组](di-8-zhang-yong-hu-yu-quan-xian/di-8.3-jie-yong-hu-zu.md)
+* [第8.4节 用户权限](di-8-zhang-yong-hu-yu-quan-xian/di-8.4-jie-yong-hu-quan-xian.md)
 
 ## 第九章 Jail
 
