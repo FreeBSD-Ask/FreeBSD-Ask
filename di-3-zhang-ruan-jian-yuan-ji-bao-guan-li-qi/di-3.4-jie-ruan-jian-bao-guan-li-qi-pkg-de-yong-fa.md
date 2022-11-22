@@ -1,6 +1,6 @@
-# 第四节 软件包管理器 pkg 的用法
+# 第3.4节 软件包管理器 pkg 的用法
 
-包管理器目前是 pkgng，命令是 pkg。
+包管理器目前是 pkgng，其命令是 pkg。
 
 > 请注意：pkg 只能管理第三方软件包，并不能起到升级系统，获取安全更新的作用。这是因为 FreeBSD 项目是把内核与用户空间作为一个整体来进行维护的，而不是像 Linux 那样 linus torvalds 负责维护内核，各个发行版的人负责维护 GNU 工具（他们这些软件实际上被设计为单个软件包，因此可以用包管理器更新与升级系统）。FreeBSD 使用 `freebsd-update` 来升级系统，获取安全补丁。
 
@@ -10,7 +10,7 @@
 
 `# pkg` 回车即可输入 y 确认下载
 
----
+***
 
 pkg 使用 https，先安装 ssl 证书：
 
@@ -22,19 +22,19 @@ pkg 使用 https，先安装 ssl 证书：
 
 `# pkg update -f`
 
----
+***
 
 安装 python 3：
 
 `# pkg install python`
 
----
+***
 
 pkg 升级：
 
 `# pkg upgrade`
 
----
+***
 
 错误：`You must upgrade the ports-mgmt/pkg port first`
 

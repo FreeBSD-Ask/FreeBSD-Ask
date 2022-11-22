@@ -1,12 +1,4 @@
-# 第二节 安装 KDE 5
-
->以下教程适用于 shell 为 csh/tcsh 的用户。
->
->首先看看现在自己的 shell 是不是 csh/tcsh
->
->`# echo  $0`
->
->如果是 csh/tcsh 其中之一，请继续。
+# 第4.2节 安装 KDE 5
 
 ## 安装
 
@@ -14,8 +6,7 @@
 # pkg install xorg sddm kde5 plasma5-sddm-kcm wqy-fonts xdg-user-dirs
 ```
 
-
->上面的命令分别安装了桌面、窗口管理器和中文字体以及创建用户目录的工具。
+> 上面的命令分别安装了桌面、窗口管理器和中文字体以及创建用户目录的工具。
 
 ## 配置
 
@@ -27,14 +18,13 @@
 proc            /proc           procfs  rw      0       0
 ```
 
->添加 proc 挂载这一步是非常必要的，如果不添加会导致桌面服务无法正常运行，部分组件无法加载！
+> 添加 proc 挂载这一步是非常必要的，如果不添加会导致桌面服务无法正常运行，部分组件无法加载！
 
->>**注意**
->>
->>如果你不配置 proc，在普通用户下，你的所有图标都将变成无法点击的白色方块。且后续再进行配置也是无效的，必须重装系统。
+> > **注意**
+> >
+> > 如果你不配置 proc，在普通用户下，你的所有图标都将变成无法点击的白色方块。且后续再进行配置也是无效的，必须重装系统。
 
 然后
-
 
 ```
 # sysrc dbus_enable="YES"
@@ -47,24 +37,23 @@ proc            /proc           procfs  rw      0       0
 # echo "exec ck-launch-session startplasma-x11" > ~/.xinitrc
 ```
 
->如果你在 root 下已经执行过了，那么新用户仍要再执行一次才能正常使用（无需 root 权限或 sudo 等）`startx`。
+> 如果你在 root 下已经执行过了，那么新用户仍要再执行一次才能正常使用（无需 root 权限或 sudo 等）`startx`。
 
-提示：hal 已经被删除。**不需要**再添加~~hald_enable="YES",~~ 见：
+提示：hal 已经被删除。**不需要**再添加~~hald\_enable="YES",~~ 见：
 
-<https://www.freshports.org/sysutils/hal>
+[https://www.freshports.org/sysutils/hal](https://www.freshports.org/sysutils/hal)
 
->普通用户还需要将用户加入 wheel 组：
+> 普通用户还需要将用户加入 wheel 组：
 >
->```
-># pw groupmod wheel -m 用户名
->```
+> ```
+> # pw groupmod wheel -m 用户名
+> ```
 
-
->**注意：**
+> **注意：**
 >
->**如果 sddm 登录闪退到登录界面，请检查左下角是不是 plasma-X11，闪退的一般都是 Wayland！因为目前 FreeBSD 上的 KDE 5 尚不支持 Wayland。**
+> **如果 sddm 登录闪退到登录界面，请检查左下角是不是 plasma-X11，闪退的一般都是 Wayland！因为目前 FreeBSD 上的 KDE 5 尚不支持 Wayland。**
 >
->**如果你使用 VMware 虚拟机时，压根看不见 sddm 最下边的选项，请按照配置虚拟机章节的教程配置屏幕自动缩放。**
+> **如果你使用 VMware 虚拟机时，压根看不见 sddm 最下边的选项，请按照配置虚拟机章节的教程配置屏幕自动缩放。**
 
 ## 中文化
 

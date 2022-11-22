@@ -1,6 +1,6 @@
-# 第三节 gitup 的用法
+# 第3.3节 gitup 的用法
 
-> 在 FreeBSD 13.0，FreeBSD 官方准备将 `portsnap` 移除（但仍可使用），转而使用 `gitup`，换用 git 方式获取系统源代码和 ports 打包套件。但是目前尚不清楚这一替代是否会生效。
+> 在 FreeBSD 13.0，FreeBSD 官方准备将 `portsnap` 移除（但 13.1 仍可使用），转而使用 `gitup`，换用 git 方式获取系统源代码和 ports 打包套件。但是目前尚不清楚这一替代是否会生效。
 
 ```
 # pkg install gitup #安装 gitup
@@ -25,8 +25,8 @@
 
 参考链接：
 
-<https://www.freebsd.org/cgi/man.cgi?query=gitup&sektion=1&manpath=freebsd-release-ports>
+[https://www.freebsd.org/cgi/man.cgi?query=gitup\&sektion=1\&manpath=freebsd-release-ports](https://www.freebsd.org/cgi/man.cgi?query=gitup\&sektion=1\&manpath=freebsd-release-ports)
 
-<https://www.freshports.org/net/gitup>
+[https://www.freshports.org/net/gitup](https://www.freshports.org/net/gitup)
 
-<https://github.com/johnmehr/gitup>
+[https://github.com/johnmehr/gitup](https://github.com/johnmehr/gitup)

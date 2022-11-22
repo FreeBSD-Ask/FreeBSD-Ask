@@ -1,16 +1,15 @@
-# 第五节 安装 Xfce
+# 第4.5节 安装 Xfce
 
 ## 安装 xfce4
 
->以下教程适用于 shell 为 bash/sh/zsh 的用户。
+> 以下教程适用于 shell 为 bash/sh/zsh 的用户。
 >
->首先看看现在自己的 shell 是不是 `sh`,`bash`,`zsh`：
+> 首先看看现在自己的 shell 是不是 `sh`,`bash`,`zsh`：
 >
->`# echo  $0`
+> `# echo $0`
 >
->如果是 `sh`,`bash`,`zsh` 其中之一，请继续；
+> 如果是 `sh`,`bash`,`zsh` 其中之一，请继续；
 
- 
 通过 pkg 安装
 
 ```
@@ -28,11 +27,11 @@
 
 ## 启用 xfce
 
-`# echo "/usr/local/etc/xdg/xfce4/xinitrc"  >  ~/.xinitrc`
+`# echo "/usr/local/etc/xdg/xfce4/xinitrc" > ~/.xinitrc`
 
 或者
 
-`# echo "/usr/local/etc/xdg/xfce4/xinitrc"  >  ~/.xsession` 
+`# echo "/usr/local/etc/xdg/xfce4/xinitrc" > ~/.xsession`
 
 > 此处为 root 用户，普通用户需要再在自己的环境下操作一次。下同。
 
@@ -51,7 +50,7 @@
 
 ## 可选配置
 
-### 输入法
+### 安装输入法
 
 请检查自己的shell是不是 `sh`、`bash`、`zsh` 其中之一。
 
@@ -109,4 +108,4 @@ tcsh 配置:
 
 ## 配置集参考
 
- - <https://github.com/Wamphyre/BSD-XFCE>
+* [https://github.com/Wamphyre/BSD-XFCE](https://github.com/Wamphyre/BSD-XFCE)

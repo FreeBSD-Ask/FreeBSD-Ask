@@ -1,12 +1,12 @@
-# 第七节 常用软件与 SSH 配置
+# 第2.7节 常用软件 与 SSH 配置
 
 ## WinSCP 下载
 
-WinSCP 是对 `scp` 命令的图形化封装，同时支持 FTP 等多种协议。可以快捷的传输文件与 Windows 系统和 Linux 或 BSD 之间。
+WinSCP 是对 `scp` 命令的图形化封装，并同时支持 FTP 等多种协议。可以快捷的传输文件与 Windows 系统和 Linux 或 BSD 之间。
 
 下载地址：
 
-<https://winscp.net/eng/download.php>
+[https://winscp.net/eng/download.php](https://winscp.net/eng/download.php)
 
 ## Xshell 下载
 
@@ -14,13 +14,13 @@ Xshell 是 Windows 平台上的强大的 shell 工具，不建议使用苦难哲
 
 下载地址（输入用户名和邮件即可）：
 
-<https://www.netsarang.com/zh/free-for-home-school>
+[https://www.netsarang.com/zh/free-for-home-school](https://www.netsarang.com/zh/free-for-home-school)
 
 ## 配置 SSH
 
 ### 允许 root ssh
 
-```     
+```
 # ee /etc/ssh/sshd_config    #（删去前边的 #，并将 yes 或 no 修改为如下）
 PermitRootLogin yes          #允许 root 登录 
 PasswordAuthentication yes   #（可选）设置是否使用普通密码验证，如果不设置此参数则使用 PAM 认证登录，安全性更高
@@ -79,7 +79,6 @@ ServerAliveCountMax 3
 
 客户端和服务端任一开启检测即可。
 
-
 ## SSH 密钥登录
 
 ### 生成密钥
@@ -88,7 +87,7 @@ ServerAliveCountMax 3
 # ssh-keygen
 ```
 
->OpenSSH 7.0 及以上版本默认禁用了 ssh-dss(DSA) 公钥算法。FreeBSD 13.0 采用 OpenSSH_7.9。因此使用默认值即可。
+> OpenSSH 7.0 及以上版本默认禁用了 ssh-dss(DSA) 公钥算法。FreeBSD 13.0 采用 OpenSSH\_7.9。因此使用默认值即可。
 
 ```
 root@ykla:~ # ssh-keygen
@@ -139,7 +138,7 @@ drwx------  2 root  wheel   512 Mar 22 18:27 /root/.ssh #权限为 700
 # rm /root/.ssh/id_rsa*
 ```
 
-### 修改 /etc/ssh/sshd_config
+### 修改 /etc/ssh/sshd\_config
 
 ```
 # ee /etc/ssh/sshd_config
@@ -148,7 +147,7 @@ drwx------  2 root  wheel   512 Mar 22 18:27 /root/.ssh #权限为 700
 修改配置如下（删去前边的 #，并将 yes 或 no 修改为如下）：
 
 ```
-PermitRootLogin yes                          #允许 ROOT 用户直接登陆系统
+PermitRootLogin yes                          #允许 ROOT 用户直接登陆系统
 AuthorizedKeysFile     .ssh/authorized_keys  #修改使用用户目录下密钥文件，默认已经正确配置，请检查
 PasswordAuthentication no                    #不允许用户使用密码方式登录
 ChallengeResponseAuthentication no           #禁止密码登录验证
@@ -163,6 +162,4 @@ PermitEmptyPasswords no                      #禁止空密码的用户进行登�
 
 使用 xshell 登录即可，输入密钥密码，导入私钥`id_rsa`，即可登录。
 
->如果使用其他 ssh 软件无法登陆请自行转换密钥格式。
-
-
+> 如果使用其他 ssh 软件无法登陆请自行转换密钥格式。

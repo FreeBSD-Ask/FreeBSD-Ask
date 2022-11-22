@@ -1,8 +1,8 @@
-# 第三节 jail 配置
+# 第9.3节 jail 配置
 
 ## 创建 jail 目录
 
-### 放入基本系统
+### 放入 FreeBSD 基本系统
 
 方案一
 
@@ -53,13 +53,12 @@ JID IP Address    Hostname   Path
 
 中英对照
 
-| 英语        | 中文    |
-|:----------:|:-------:|
-| JID        | jail ID |
-| IP Address | IP 地址    |
-| Hostname   | 主机名     |
-| Path       | jail 路径 |
-
+|     英语     |    中文   |
+| :--------: | :-----: |
+|     JID    | jail ID |
+| IP Address |  IP 地址  |
+|  Hostname  |   主机名   |
+|    Path    | jail 路径 |
 
 ## 启动与停止 jail
 
@@ -140,7 +139,7 @@ nameserver 223.6.6.6
 
 ### 创建数据目录
 
-就是复制一份骨架给他用 
+就是复制一份骨架给他用
 
 `# cp -R /jail/j2/ /jail/js/www/`
 

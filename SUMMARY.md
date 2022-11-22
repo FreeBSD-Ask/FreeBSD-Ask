@@ -98,7 +98,7 @@
 
 * [第8.1节 sudo](di-8-zhang-yong-hu-yu-quan-xian/di-8.1-jie-sudo.md)
 * [第8.2节 添加用户](di-8-zhang-yong-hu-yu-quan-xian/di-8.2-jie-tian-jia-yong-hu.md)
-* [第8.3节 用户组](di-8-zhang-yong-hu-yu-quan-xian/di-8.3-jie-yong-hu-zu.md)
+* [第8.3节 组](di-8-zhang-yong-hu-yu-quan-xian/di-8.3-jie-zu.md)
 * [第8.4节 用户权限](di-8-zhang-yong-hu-yu-quan-xian/di-8.4-jie-yong-hu-quan-xian.md)
 
 ## 第9章 Jail
@@ -115,9 +115,9 @@
 * [第10.2节 安装 Virtual Box](di-10-zhang-xu-ni-hua/di-10.2-jie-an-zhuang-virtual-box.md)
 * [第10.3节 安装 bhyve](di-10-zhang-xu-ni-hua/di-san-jie-an-zhuang-bhyve.md)
 * [第10.4节 使用 cbsd 管理 bhyve](di-10-zhang-xu-ni-hua/di-10.4-jie-shi-yong-cbsd-guan-li-bhyve.md)
-* [第10.5节 使用 bhyve 安装 Windows 11](di-10-zhang-xu-ni-hua/di-10.5-jie-shi-yong-bhyve-an-zhuang-windows-11.md)
+* [第10.5节 使用 bhyve 安装 Windows 10](di-10-zhang-xu-ni-hua/di-10.5-jie-shi-yong-bhyve-an-zhuang-windows-10.md)
 * [第10.6节 安装 XEN](di-10-zhang-xu-ni-hua/di-10.6-jie-an-zhuang-xen.md)
-* [第10.7节 使用 XEN 安装 Windows 11](di-10-zhang-xu-ni-hua/di-10.7-jie-shi-yong-xen-an-zhuang-windows-11.md)
+* [第10.7节 使用 XEN 安装 Windows](di-10-zhang-xu-ni-hua/di-10.7-jie-shi-yong-xen-an-zhuang-windows.md)
 
 ## 第11章 更新与升级 FreeBSD
 
@@ -190,7 +190,7 @@
 
 ## 第18章 树莓派与嵌入式
 
-* [第18.1节 树莓派简介](di-18-zhang-shu-mei-pai-yu-qian-ru-shi/di-18.1-jie-shu-mei-pai-jian-jie.md)
+* [第18.1节 树莓派简介](di-18-zhang-shu-mei-pai-yu-qian-ru-shi/di-yi-jie-shu-mei-pai-jian-jie.md)
 * [第18.2节 系统安装](di-18-zhang-shu-mei-pai-yu-qian-ru-shi/di-18.2-jie-xi-tong-an-zhuang.md)
 * [第18.3节 使用配置](di-18-zhang-shu-mei-pai-yu-qian-ru-shi/di-18.3-jie-shi-yong-pei-zhi.md)
 * [第18.4节 USB 网卡与 WIFI](di-18-zhang-shu-mei-pai-yu-qian-ru-shi/di-18.4-jie-usb-wang-ka-yu-wifi.md)
@@ -223,7 +223,7 @@
 
 ## 第22章 编程与开发
 
-* [第22.0节 如何订阅 FreeBSD 邮件列表](di-22-zhang-bian-cheng-yu-kai-fa/di-22.0-jie-ru-he-ding-yue-freebsd-you-jian-lie-biao.md)
+* [第22.0节 如何订阅 FreeBSD 邮件列表](di-22-zhang-bian-cheng-yu-kai-fa/di-ling-jie-ru-he-ding-yue-freebsd-you-jian-lie-biao.md)
 * [第22.1节 如何报告 Bug](di-22-zhang-bian-cheng-yu-kai-fa/di-22.1-jie-ru-he-bao-gao-bug.md)
 * [第22.2节 如何提交一个软件包](di-22-zhang-bian-cheng-yu-kai-fa/di-22.2-jie-ru-he-ti-jiao-yi-ge-ruan-jian-bao.md)
 * [第22.3节 如何参与 FreeBSD 协作](di-22-zhang-bian-cheng-yu-kai-fa/di-22.3-jie-ru-he-can-yu-freebsd-xie-zuo.md)
@@ -255,7 +255,7 @@
 
 ## 第25章 系统设计与分析
 
-* [第25.1节 FreeBSD 设计概要](di-25-zhang-xi-tong-she-ji-yu-fen-xi/di-25.1-jie-freebsd-she-ji-gai-yao.md)
+* [第25.1节 FreeBSD 设计概要](di-25-zhang-xi-tong-she-ji-yu-fen-xi/di-yi-jie-freebsd-she-ji-gai-yao.md)
 * [第25.2节 内核](di-25-zhang-xi-tong-she-ji-yu-fen-xi/di-25.2-jie-nei-he.md)
 * [第25.3节 进程](di-25-zhang-xi-tong-she-ji-yu-fen-xi/di-25.3-jie-jin-cheng.md)
 * [第25.4节 内存管理](di-25-zhang-xi-tong-she-ji-yu-fen-xi/di-25.4-jie-nei-cun-guan-li.md)

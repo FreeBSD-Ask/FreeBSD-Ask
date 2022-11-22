@@ -1,10 +1,10 @@
-# 第一节 三种虚拟机与 FreeBSD 版本比较
+# 第2.1节 三种虚拟机与 FreeBSD 版本比较
 
 ## FreeBSD 版本比较
 
 已知 FreeBSD 有以下版本：rc、beta、release、current、stable。
 
-release 是绝对的 stable，而 stable 和 current 都是开发分支，不太稳定。
+release 是绝对的 stable，而 stable 和 current 都是开发分支，不太稳定。所以 stable 并不是和其他发行版的“稳定版”的概念一致，反而是“开发版”。
 
 current 相对稳定后会推送到 stable，但是不保证 stable 没有大的 bug，只是确保其 ABI 兼容。
 
@@ -36,20 +36,20 @@ Hyper-V 是 Windows 开发的虚拟机，分为 `Gen 1` 和 `Gen 2`。
 
 `Gen 1` 和 `Gen 2` 区别如下：
 
-|Hyper-V 代数|硬盘|启动引导|
-|:---:|:---:|:---:|
-|Gen 1|IDE + SCSI|仅 MBR|
-|Gen 2|仅 SCSI|仅 UEFI + 安全启动支持 + PXE 支持|
+| Hyper-V 代数 |     硬盘     |           启动引导           |
+| :--------: | :--------: | :----------------------: |
+|    Gen 1   | IDE + SCSI |           仅 MBR          |
+|    Gen 2   |   仅 SCSI   | 仅 UEFI + 安全启动支持 + PXE 支持 |
 
 **FreeBSD 目前（截止到 2022-1-28）尚且不能在 Hyper-V 上正常运行鼠标或键盘，因为鼠标没有驱动。不建议使用，具体支持情况如下表。简而言之，要么鼠标不能用，要么键盘不能用，当然你说你用 VNC 那无话可说。**
 
 系统快速创建的为 `Gen 2`。
 
-|Hyper-V 代数|FreeBSD 版本|鼠标|键盘|备注|
-|:---:|:---:|:---:|:---:|:---:|
-|Gen 1|13.0|支持|不支持|/|
-|Gen 2|13.0|不支持|支持|需要修改参数`sysctl kern.evdev.rcpt_mask=6`|
-|Gen 2|14.0-2022-1-27|不支持|支持|/|
+| Hyper-V 代数 |   FreeBSD 版本   |  鼠标 |  键盘 |                   备注                  |
+| :--------: | :------------: | :-: | :-: | :-----------------------------------: |
+|    Gen 1   |      13.0      |  支持 | 不支持 |                   /                   |
+|    Gen 2   |      13.0      | 不支持 |  支持 | 需要修改参数`sysctl kern.evdev.rcpt_mask=6` |
+|    Gen 2   | 14.0-2022-1-27 | 不支持 |  支持 |                   /                   |
 
 ### 使用 virtio 技术半虚拟化的虚拟机
 

@@ -1,4 +1,4 @@
-# 第十一节 声卡与网卡设置
+# 第2.11节 物理机声卡与网卡设置
 
 ## FreeBSD 声卡
 
@@ -31,25 +31,25 @@ No devices installed from userspace.
 
 FreeBSD 大部分软件的音频输出驱动为 oss。有些默认是 pulseaudio(比如 firefox)，这些软件的设置看最后的提示。
 
-下列命令可以修改输出的设备。最后的数字是对应的pcm后面的数字。
+下列命令可以修改输出的设备。最后的数字是对应的 pcm 后面的数字。
 
 ```
 $ sysctl hw.snd.default_unit=5
 ```
 
-这里推荐几个 oss mixer：
+此处推荐几个 oss mixer：
 
-|GUI环境|名称|
-|:---:|:---:|
-|kde5|audio/dsbmixer|
-|gtk|audio/gtk-mixer|
-|非图形化|audio/mixertui|
+| GUI环境 |        名称       |
+| :---: | :-------------: |
+|  kde5 |  audio/dsbmixer |
+|  gtk  | audio/gtk-mixer |
+|  非图形化 |  audio/mixertui |
 
 ### 提示
 
 但是 oss 有些缺点，使用 `obs-studio` 无法录制 oss 输出。只能录制 oss 输入。看官方论坛里，可以 `virtual_oss` 模拟一个设备实现。
 
-但是 `obs-studio` 可以录 pulseaudio 输出的音频。
+但是 `obs-studio` 可以录制 pulseaudio 输出的音频。
 
 所以有些软件可以使用 pulseaudio 作为输出。使用 pulseaudio 的软件的音频输出,不受上面的命令控制音频输出设备。pulseaudio 会根据自己的设置把音频送到对应设备，所以需要使用 pulseaudio 混音器控制。
 

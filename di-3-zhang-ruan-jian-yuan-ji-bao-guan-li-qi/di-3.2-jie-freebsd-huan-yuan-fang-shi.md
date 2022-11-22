@@ -1,10 +1,8 @@
-# 第二节 FreeBSD 换源方式
-
-
+# 第3.2节 FreeBSD 换源方式
 
 FreeBSD 有四类源：pkg、ports、portsnap、update。
 
-**对于失去安全支持的版本，请参考最后一节**
+**对于失去安全支持的版本，请参考最后一节。**
 
 **本文对于一个源列出了多个镜像站，无需全部配置，只需选择其一即可。**
 
@@ -21,8 +19,6 @@ FreeBSD 中 pkg 源分为系统级和用户级两个配置文件。不建议直�
 ```
 # mkdir -p /usr/local/etc/pkg/repos
 ```
-
-
 
 ### 网易开源镜像站
 
@@ -176,15 +172,13 @@ Cowardly refusing to proceed any further.
 ntpdate ntp.api.bz
 ```
 
-
 ## freebsd-update 源:提供基本系统更新
 
-注意：只有一级架构的 release 版本才提供该源。也就是说 current 和 stable 是没有的。
-关于架构的支持等级说明请看：
+注意：只有一级架构的 release 版本才提供该源。也就是说 current 和 stable 是没有的。 关于架构的支持等级说明请看：
 
 https://www.freebsd.org/platforms
 
-### FreeBSD.cn 
+### FreeBSD.cn
 
 编辑 `# ee /etc/freebsd-update.conf` 文件:
 
@@ -193,7 +187,6 @@ https://www.freebsd.org/platforms
 **例:从 FreeBSD 12 升级到 13.0**
 
 `# freebsd-update -r 13.0-RELEASE upgrade`
-
 
 ## 不受安全支持的版本（请酌情使用）
 
@@ -214,6 +207,7 @@ https://www.freebsd.org/platforms
 ```
 
 安装示例：现在安装 `bsdinfo`。
+
 ```
 root@ykla:~ # pkg_add -r bsdinfo                                                    
 Fetching http://ftp-archive.freebsd.org/pub/FreeBSD-Archive/ports/amd64/packages-9.2-release/Latest/bsdinfo.tbz... Done.

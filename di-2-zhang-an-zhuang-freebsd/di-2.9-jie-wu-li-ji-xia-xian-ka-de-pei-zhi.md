@@ -1,6 +1,6 @@
-# 第九节 物理机下显卡的配置
+# 第2.9节 物理机下显卡的配置
 
-FreeBSD 已从 Linux 移植了显卡驱动，理论上，A 卡 N 卡均在 AMD64 架构上正常运行。
+FreeBSD 已从 Linux 移植了显卡驱动，理论上，I  卡 A 卡 N 卡均在 AMD64 架构上正常运行。
 
 ## 支持情况
 
@@ -12,7 +12,7 @@ FreeBSD 已从 Linux 移植了显卡驱动，理论上，A 卡 N 卡均在 AMD64
 
 详细情况可以看
 
-<https://wiki.freebsd.org/Graphics>
+[https://wiki.freebsd.org/Graphics](https://wiki.freebsd.org/Graphics)
 
 ## 英特尔核显 / AMD 独显
 
@@ -30,58 +30,54 @@ FreeBSD 已从 Linux 移植了显卡驱动，理论上，A 卡 N 卡均在 AMD64
 # cd /usr/ports/graphics/drm-kmod/ && make install clean
 ```
 
->注意：
+> 注意：
 >
 > `graphics/drm-kmod` 这个包并不是真实存在的，他只是帮助判断系统版本以安装对应的 ports 包的元包。
 >
->即使是像英特尔三代处理器的 HD 4000 这种比较古老的显卡，他在传统的 BIOS 模式下不需要额外安装显卡驱动，但是 UEFI 下有可能会花屏（FreeBSD 13.0 及以后无此问题），而且需要安装此 DRM 显卡驱动。
+> 即使是像英特尔三代处理器的 HD 4000 这种比较古老的显卡，他在传统的 BIOS 模式下不需要额外安装显卡驱动，但是 UEFI 下有可能会花屏（FreeBSD 13.0 及以后无此问题），而且需要安装此 DRM 显卡驱动。
 
->**故障排除：**
+> **故障排除：**
 >
->**如果提示 `/usr/ports/xxx no such xxx` 找不到路径，请先获取 portsnap：`portsnap auto`。portsnap 换源问题请看前文。**
+> **如果提示 `/usr/ports/xxx no such xxx` 找不到路径，请先获取 portsnap：`portsnap auto`。portsnap 换源问题请看前文。**
 >
->**如果提示内核版本不符，请先升级系统或使用 ports 编译安装。**
+> **如果提示内核版本不符，请先升级系统或使用 ports 编译安装。**
 
 ### 安装驱动——复杂版本
 
 注意，如果要通过 `ports` 安装提示需要源码，请见第二十一章。
 
-- FreeBSD 12
+* FreeBSD 12
 
 ```
 # cd /usr/ports/graphics/drm-fbsd12.0-kmod/ && make install clean
 ```
 
->**注意：**
+> **注意：**
 >
->**除了 12.0，对于任意 12.X 均应该安装 `drm-fbsd12.0-kmod`，但应该使用 port 在本地重新构建而不应使用 pkg 进行安装，否则不会正常运行。**
+> **除了 12.0，对于任意 12.X 均应该安装 `drm-fbsd12.0-kmod`，但应该使用 port 在本地重新构建而不应使用 pkg 进行安装，否则不会正常运行。**
 
-- FreeBSD 13
-
-```
-# cd /usr/ports/graphics/drm-510-kmod/ && make BATCH=yes install clean
-```
-
-
-- FreeBSD 14 (current）
+* FreeBSD 13
 
 ```
 # cd /usr/ports/graphics/drm-510-kmod/ && make BATCH=yes install clean
 ```
 
+* FreeBSD 14 (current）
 
+```
+# cd /usr/ports/graphics/drm-510-kmod/ && make BATCH=yes install clean
+```
 
 ### 加载显卡
 
->**无论是使用以上哪个方法，都需要进行这一步配置。**
-
+> **无论是使用以上哪个方法，都需要进行这一步配置。**
 
 打开 `/etc/rc.conf`:
 
-- 如果为 intel 核芯显卡，添加 `kld_list="i915kms"`
-- AMD
-  - 如果为 HD7000 以后的 AMD 显卡，添加 `kld_list="amdgpu"` （大部分人应该使用这个，如果没用再去使用`radeonkms`）
-  - 如果为 HD7000 以前的 AMD 显卡，添加 `kld_list="radeonkms"` （这是十余年前的显卡了）
+* 如果为 intel 核芯显卡，添加 `kld_list="i915kms"`
+* AMD
+  * 如果为 HD7000 以后的 AMD 显卡，添加 `kld_list="amdgpu"` （大部分人应该使用这个，如果没用再去使用`radeonkms`）
+  * 如果为 HD7000 以前的 AMD 显卡，添加 `kld_list="radeonkms"` （这是十余年前的显卡了）
 
 ### 视频硬解
 
@@ -92,6 +88,7 @@ FreeBSD 已从 Linux 移植了显卡驱动，理论上，A 卡 N 卡均在 AMD64
 #### 通用
 
 一般计算机：
+
 ```
 # sysrc -f /boot/loader.conf  acpi_video="YES"
 ```
@@ -103,12 +100,14 @@ FreeBSD 已从 Linux 移植了显卡驱动，理论上，A 卡 N 卡均在 AMD64
 # sysrc -f /boot/loader.conf  acpi_video="YES"
 ```
 
->仅限 FreeBSD 13
+> 仅限 FreeBSD 13
 
 ```
 # backlight decr 20  #降低 20% 亮度
 ```
+
 #### 英特尔
+
 ```
 # pkg install intel-backlight
 # intel-backlight 80 #调整为 80% 亮度
@@ -116,9 +115,9 @@ FreeBSD 已从 Linux 移植了显卡驱动，理论上，A 卡 N 卡均在 AMD64
 
 ## AMD 显卡
 
->此部分教程经过测试适用于 renoir 显卡。
+> 此部分教程经过测试适用于 renoir 显卡。
 >
->在使用 Gnome 时，如果自动锁屏或息屏，可能无法再次进入桌面。见 <https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=255049>。
+> 在使用 Gnome 时，如果自动锁屏或息屏，可能无法再次进入桌面。见 [https://bugs.freebsd.org/bugzilla/show\_bug.cgi?id=255049](https://bugs.freebsd.org/bugzilla/show\_bug.cgi?id=255049)。
 
 安装所需驱动（均为 latest 源或从 ports 安装）：
 
@@ -127,6 +126,7 @@ FreeBSD 已从 Linux 移植了显卡驱动，理论上，A 卡 N 卡均在 AMD64
 ```
 
 新建并编辑 xorg 配置文件：
+
 ```
 # ee /usr/local/etc/X11/xorg.conf.d/06-driver.conf
 ```
@@ -139,7 +139,6 @@ Section "Device"
     Option      "AccelMethod" "exa"
 EndSection
 ```
-
 
 ## 英伟达显卡
 

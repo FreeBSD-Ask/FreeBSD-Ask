@@ -1,9 +1,8 @@
-# 第四节 腾讯云轻量云及其他服务器 dd 安装 FreeBSD
+# 第2.4节 腾讯云轻量云及其他服务器 dd 安装 FreeBSD
 
+> **注意：尽管本文和 dd 没什么关系，但是如果你还不懂什么是 `dd`，不建议使用本文。这一切也许超越了你的动手能力和知识储备。**
 >
->**注意：尽管本文和 dd 没什么关系，但是如果你还不懂什么是 `dd`，不建议使用本文。这一切超越了你的动手能力和知识储备。**
->
->**此外，对于不再受安全支持的版本如 `9.2`，请参考本文并结合手动安装 FreeBSD 章节操作。**
+> **此外，对于不再受安全支持的版本如 `9.2`，请参考本文并结合手动安装 FreeBSD 章节操作。**
 
 ## 视频教程
 
@@ -25,8 +24,7 @@ http://b23.tv/zcfHa4K
 # wget https://mfsbsd.vx.sk/files/images/13/amd64/mfsbsd-se-13.0-RELEASE-amd64.img -O- | dd of=/dev/vda
 ```
 
-这里的 `|` 是管道的意思，将上一个命令的标准输出作为下一个命令的标准输入。
-`-O-` 指把文件下载输出到标准输出，而 dd 没有指定 if 时会自动从标准输入读取内容。
+这里的 `|` 是管道的意思，将上一个命令的标准输出作为下一个命令的标准输入。 `-O-` 指把文件下载输出到标准输出，而 dd 没有指定 if 时会自动从标准输入读取内容。
 
 ![](../.gitbook/assets/1.png)
 
@@ -60,6 +58,7 @@ mfsBSD 和 mfsLinux 镜像的 root 密码默认是 `mfsroot`
 # dd if=mfsbsd-se-13.0-RELEASE-amd64.img of=/dev/vda
 # reboot
 ```
+
 **提示：建议在此处使用服务器的“快照”功能对服务器进行备份，以防以下教程操作失误重来耽误时间。**
 
 ### 安装 FreeBSD
@@ -74,6 +73,4 @@ mfsBSD 和 mfsLinux 镜像的 root 密码默认是 `mfsroot`
 # fetch http://ftp.freebsd.org/pub/FreeBSD/releases/amd64/13.0-RELEASE/MANIFEST
 ```
 
-最后执行 `# bsdinstall` 进行正常的安装即可（最好使用自动 ufs 分区）。
-请注意大多数服务器如本文的示例腾讯云轻量云，是不支持 UEFI 的，仍然使用传统的 BIOS；另外请使用 ufs，zfs 安装时会出错。
-
+最后执行 `# bsdinstall` 进行正常的安装即可（最好使用自动 ufs 分区）。 请注意大多数服务器如本文的示例腾讯云轻量云，是不支持 UEFI 的，仍然使用传统的 BIOS；另外请使用 ufs，zfs 安装时会出错。

@@ -1,10 +1,10 @@
-# 第四节 FreeBSD 与其他操作系统
+# 第1.4节 FreeBSD 与其他操作系统
 
 ## 什么是 FreeBSD？
 
-BSD 最初是由 University of California, Berkeley 所开发的，意为 `Berkeley Software Distribution`。值得注意地是，Berkeley 伯克利之名来自著名的近代经验论哲学家乔治·贝克莱（George Berkeley）。
+BSD 最初是由 University of California, Berkeley 所开发的，意为 `Berkeley Software Distribution`。值得注意地是，Berkeley 伯克利之名来自著名的近代经验论哲学家乔治·贝克莱（George Berkeley，音译问题，原词是一致的）。
 
->esse est percipi, to be is to be perceived（存在就是被感知）。——乔治·贝克莱
+> esse est percipi, to be is to be perceived（存在就是被感知）。——乔治·贝克莱
 
 FreeBSD 不是 Linux，不是国产操作系统，不兼容 Systemd，不能吃鸡，亦不是 UNIX。目前在 BSD 系中，FreeBSD 的用户是最多的。一些 Linux 下的软件基本上在 FreeBSD 中都能够被找到，即使找不到的也可以通过 CentOS 兼容层运行，你也可以自己通过 debootstrap 构建一个 debian 或者 ubuntu 的 / 系统。
 
@@ -20,17 +20,17 @@ Linus“I have never even checked 386BSD out; when I started on Linux it wast av
 
 ![](../.gitbook/assets/图片2.png)
 
->图片来源：https://github.com/freebsd/freebsd-src/blob/main/share/misc/bsd-family-tree
+> 图片来源：https://github.com/freebsd/freebsd-src/blob/main/share/misc/bsd-family-tree
 
 ## FreeBSD or Others
 
-- Linux
+* Linux
 
 首先大概许多人是从 Linux 跑过来的，这样说我也没什么统计依据，不过姑且这样说罢。如果你发现在哪本书是举例提到 FreeBSD 是一种 Linux 发行版，那么我个人是不建议你继续看下去的，这属于误人子弟，我也曾在某些慕课网站上看到过类似行为。
 
 严格来说 Linux 是指 Linux kernel，只是个内核而非操作系统,而 FreeBSD 是个操作系统。FreeBSD 采用 BSD 授权许可（见 [https://www.freebsd.org/zh\_CN/copyright/freebsd-license.html](https://www.freebsd.org/zh\_CN/copyright/freebsd-license.html) ）。FreeBSD 驱动方面一直是个大 Bug，不如 Linux。
 
-- macOS & iOS
+* macOS & iOS
 
 macOS & iOS 在一定程度上来说，都基于 FreeBSD。可见 FreeBSD 的 GUI 并不是搞不好，只是 Xorg 和开发方向有问题。
 
@@ -44,7 +44,7 @@ macOS & iOS 在一定程度上来说，都基于 FreeBSD。可见 FreeBSD 的 GU
 
 水果摆脱了开源界所谓的苦难哲学。
 
-- Microsoft Windows
+* Microsoft Windows
 
 微软非常重视用户体验，而一些社区可能完全忽视了这一点。直接的结果就是需要自己动手解决的地方略多。有人认为 Windows 简单因为都是图形化界面。事实上这是一种非常错误的说法，Windows 非常复杂。举例来说，你精通注册表否？知道每个选项什么意思吗？
 
@@ -52,15 +52,14 @@ macOS & iOS 在一定程度上来说，都基于 FreeBSD。可见 FreeBSD 的 GU
 
 至于游戏什么的，已知 Steam 运行正常，运行 Minecraft 这种 java 软件也没毛病。
 
-
 ## 基本对比
 
-|操作系统|发布/生命周期（主要版本）|主要包管理器（命令）|许可证（主要）|工具链|shell|桌面|
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|Ubuntu|[2 年/10 年](https://ubuntu.com/about/release-cycle)|[apt](https://ubuntu.com/server/docs/package-management)|[GNU](https://ubuntu.com/legal/intellectual-property-policy)|gcc|bash|Gnome|
-|Gentoo Linux|滚动更新|[Portage（emerge）](https://wiki.gentoo.org/wiki/Portage)|GNU|gcc|bash|可选|
-|Arch Linux|滚动更新|[pacman](https://wiki.archlinux.org/title/pacman)|GNU|gcc|bash|可选|
-|RHEL|[3/最长 12 年](https://access.redhat.com/zh_CN/support/policy/updates/errata)|[RPM（yum、dnf）](https://www.redhat.com/sysadmin/how-manage-packages)|GNU|gcc|bash|Gnome|
-|FreeBSD|[约 2.5/5 年](https://www.freebsd.org/security/)|pkg/ports|BSD|clang|csh/sh|可选|
-|Windows|[不固定](https://docs.microsoft.com/zh-cn/lifecycle/faq/windows)|可选|专有|可选|powershell|Windows 桌面|
-|MacOS|1 年/约 5 年|无|[专有](https://www.apple.com/legal/sla/)|clang|zsh|Aqua|
+|     操作系统     |                                发布/生命周期（主要版本）                                |                              主要包管理器（命令）                             |                            许可证（主要）                           |  工具链  |    shell   |     桌面     |
+| :----------: | :-------------------------------------------------------------------------: | :-----------------------------------------------------------------: | :----------------------------------------------------------: | :---: | :--------: | :--------: |
+|    Ubuntu    |              [2 年/10 年](https://ubuntu.com/about/release-cycle)             |       [apt](https://ubuntu.com/server/docs/package-management)      | [GNU](https://ubuntu.com/legal/intellectual-property-policy) |  gcc  |    bash    |    Gnome   |
+| Gentoo Linux |                                     滚动更新                                    |       [Portage（emerge）](https://wiki.gentoo.org/wiki/Portage)       |                              GNU                             |  gcc  |    bash    |     可选     |
+|  Arch Linux  |                                     滚动更新                                    |          [pacman](https://wiki.archlinux.org/title/pacman)          |                              GNU                             |  gcc  |    bash    |     可选     |
+|     RHEL     | [3/最长 12 年](https://access.redhat.com/zh\_CN/support/policy/updates/errata) | [RPM（yum、dnf）](https://www.redhat.com/sysadmin/how-manage-packages) |                              GNU                             |  gcc  |    bash    |    Gnome   |
+|    FreeBSD   |                [约 2.5/5 年](https://www.freebsd.org/security/)               |                              pkg/ports                              |                              BSD                             | clang |   csh/sh   |     可选     |
+|    Windows   |        [不固定](https://docs.microsoft.com/zh-cn/lifecycle/faq/windows)        |                                  可选                                 |                              专有                              |   可选  | powershell | Windows 桌面 |
+|     MacOS    |                                  1 年/约 5 年                                  |                                  无                                  |            [专有](https://www.apple.com/legal/sla/)            | clang |     zsh    |    Aqua    |

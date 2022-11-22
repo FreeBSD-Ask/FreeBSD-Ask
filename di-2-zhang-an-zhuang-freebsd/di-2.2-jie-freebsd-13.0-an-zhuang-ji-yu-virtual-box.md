@@ -1,11 +1,10 @@
-# 第二节 FreeBSD 13.0 安装——基于 Virtual Box
-
+# 第2.2节 FreeBSD 13.0 安装——基于 Virtual Box
 
 ## 下载 VirtualBox
 
-点击 `download` 即可下载：
+进入网页点击 `download` 即可下载：
 
-<https://www.virtualbox.org>
+[https://www.virtualbox.org](https://www.virtualbox.org)
 
 ## 安装设置
 
@@ -19,7 +18,7 @@
 
 ![](../.gitbook/assets/VBbridge.png)
 
-设置后  `# dhclient em0` 即可（为了长期生效可在 `/etc/rc.conf` 中加入 `ifconfig_em0="DHCP"`）。
+设置后 `# dhclient em0` 即可（为了长期生效可在 `/etc/rc.conf` 中加入 `ifconfig_em0="DHCP"`）。
 
 如果没有网络（互联网）请设置 DNS 为 `223.5.5.5`。如果不会，请看本章其他章节。
 
@@ -37,7 +36,8 @@
 
 ## 显卡驱动与增强工具
 
->**UEFI 下显卡无法驱动。**
+> **UEFI 下显卡无法驱动。**
+
 ```
 # pkg install virtualbox-ose-additions
 ```
@@ -63,5 +63,5 @@ vboxservice_enable="YES"
 ```
 
 ## 故障排除
- 
+
 如果鼠标进去了出不来，请先按一下右边的 `ctrl`（键盘左右各有一个 `ctrl`，为默认设置）；如果自动缩放屏幕需要还原或者找不到菜单栏了请按 `home`+ 右 `ctrl`（提示：`Home` 键在 108 键盘上位于 `Scroll Lock` 的下边。

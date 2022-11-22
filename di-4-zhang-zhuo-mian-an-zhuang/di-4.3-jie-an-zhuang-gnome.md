@@ -1,4 +1,4 @@
-# 第三节 安装 Gnome
+# 第4.3节 安装 Gnome
 
 ## 安装
 
@@ -7,18 +7,19 @@
 ```
 
 解释:
-|软件|用途|
-|:---:|:---:|
-|xorg|X11|
-|gnome-shell|Gnome 主程序|
-|noto-sc|思源黑体|
-|xdg-user-dirs|用于创建用户家目录的子目录|
+
+|       软件      |       用途      |
+| :-----------: | :-----------: |
+|      xorg     |      X11      |
+|  gnome-shell  |   Gnome 主程序   |
+|    noto-sc    |   思源黑体-简体中文   |
+| xdg-user-dirs | 用于创建用户家目录的子目录 |
 
 ## 配置
 
-`# ee /etc/fstab` 
+`# ee /etc/fstab`
 
-添加内容如下: 
+添加内容如下:
 
 ```
 proc /proc procfs rw 0 0
@@ -67,7 +68,7 @@ gnome 捆绑的输入法面板是 `ibus`。
 
 首先看看现在自己的 shell 是不是 `sh`,`bash`,`zsh`：
 
-`# echo  $0`
+`# echo $0`
 
 如果是 `sh`,`bash`,`zsh` 其中之一，请继续；如果不是，请参考第五章第一节。
 

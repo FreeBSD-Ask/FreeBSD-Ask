@@ -1,6 +1,6 @@
-# 第十三节 无线蓝牙鼠标的设置
+# 第2.13节 无线蓝牙鼠标的设置
 
->本文以 FreeBSD 13.0 为基准，使用罗技 m337。
+> 本文以 FreeBSD 13.0 为基准，并使用罗技 m337。
 
 ```
 # sysrc hcsecd_enable="YES"
@@ -24,5 +24,4 @@ This device provides human interface device services.
 Set it up? [yes]:
 ```
 
->注意： logitech m337 配对连接后会自动断开。解决方案：删除`/var/db/bthidd.hids`文件中对应鼠标的`bd_addr`行`xx:xx:xx:xx:xx`，重启 bthidd 服务 `# service bthidd restart`
-
+> 注意： logitech m337 配对连接后会自动断开。解决方案：删除`/var/db/bthidd.hids`文件中对应鼠标的`bd_addr`行`xx:xx:xx:xx:xx`，重启 bthidd 服务 `# service bthidd restart`

@@ -1,20 +1,19 @@
-# 第六节 Ext 2/3/4 等文件系统
+# 第6.6节 Ext 2/3/4 等文件系统
 
 ## EXT 文件系统
 
-请注意：这里应该安装 `fusefs-ext2`（同时支持EXT2/3/4）而非 `fusefs-ext4fuse`，因为后者是只读且被废弃的。
+请注意：此处应该安装 `fusefs-ext2`（同时支持EXT2/3/4）而非 `fusefs-ext4fuse`，因为后者是只读且被废弃的。
 
--   安装 fusefs-ext2
+* 安装 fusefs-ext2
 
 ```
 # pkg install fusefs-ext2
 ```
 
--   加载
+*   加载
 
     打开`/etc/rc.conf`，在 `kld_list`一栏里添加 **ext2fs**，结果可能如 `kld_list="ext2fs i915kms"`
-    
--   重启后，挂载。
+*   重启后，挂载。
 
     对于用户名为 `XiaoMing` 的账号，可如下操作：
 
@@ -27,14 +26,14 @@ $ mkdir first
 ```
 
 _提示：上式不一定是 `da0sX`（X 为对应的数字），可通过 `# gpart list` 命令查看硬盘名。_
-    
--   卸载硬盘
+
+* 卸载硬盘
 
 `# umount /home/XiaoMing/media/first/`
 
 ## Brtfs/XFS 文件系统
 
->未经测试
+> 未经测试
 
 ```
 # pkg install fusefs-lkl

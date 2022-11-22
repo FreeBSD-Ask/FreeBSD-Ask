@@ -1,26 +1,25 @@
-# 第一节 安装 Xorg
+# 第4.1节 安装 Xorg
 
-## 安装xorg 
+## 安装xorg
 
-### 可选包：
+### 可选软件包：
 
-xorg 完整包: xorg 
+xorg 完整包: xorg
 
 xorg 最小化包: xorg-minimal（不建议）
 
 ### 安装
 
-通过pkg安装
+通过 pkg 安装
 
 `# pkg install xorg`
 
-通过ports安装
+通过 ports 安装
 
 ```
 # cd /usr/ports/x11/xorg
 # make install clean
 ```
-
 
 ## 故障排除
 

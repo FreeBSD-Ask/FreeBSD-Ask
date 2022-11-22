@@ -1,4 +1,4 @@
-# 第〇节 如何订阅 FreeBSD 邮件列表
+# 第22.0节 如何订阅 FreeBSD 邮件列表
 
 ## 简单版本
 
@@ -23,7 +23,6 @@ FreeBSD 邮件订阅列表在 [https://lists.freebsd.org/](https://lists.freebsd
 ![](../.gitbook/assets/mail2.png)
 
 ![](../.gitbook/assets/mail3.png)
-
 
 给这一行列出的邮件地址，发邮件内容标题无所谓。他会给你回一封，又列出了一个邮件地址让你给他列出的地址再发一封，内容标题无所谓。这样你就在邮件列表里了。如果输入邮箱回车你没有得到回复，你就手动给在 `subscribe` 那一行的邮箱发邮件，标题内容随机。
 

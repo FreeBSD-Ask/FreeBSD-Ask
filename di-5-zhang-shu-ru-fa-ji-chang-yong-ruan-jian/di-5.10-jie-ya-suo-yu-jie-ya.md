@@ -1,4 +1,4 @@
-# 第十节 压缩与解压
+# 第5.10节 压缩与解压
 
 ## zip
 
@@ -29,9 +29,9 @@
 
 # tar -Jxvf test.tar.xz # 释放 xz 格式文件 
 
-# xz -z -k test.tar # 打包 xz 格式文件，如不加-k 参数，命令执行完原文件将被删除 
+# xz -z -k test.tar # 打包 xz 格式文件，如不加 -k 参数，命令执行完原文件将被删除 
 
-# xz -d -k test.tar.xz # 释放 xz 格式文件，如不加-k 参数，命令执行完 xz 文件将被删除
+# xz -d -k test.tar.xz # 释放 xz 格式文件，如不加 -k 参数，命令执行完 xz 文件将被删除
 ```
 
 ## 7z/7za

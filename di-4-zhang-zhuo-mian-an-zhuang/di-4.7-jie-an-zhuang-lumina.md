@@ -1,4 +1,6 @@
-# 第七节 安装 Lumina
+# 第4.7节 安装 Lumina
+
+提示：该桌面可能已经停止开发，我向其提交的  pull 长期无人处理，并且没有新的 commit 信息。
 
 ## 安装
 
@@ -25,6 +27,6 @@ exec lumina-desktop
 
 ## 中文化
 
->设置完毕还是英语。原因未知，如果你知道，请提交 issue 或者 pull request。
+> 设置完毕还是英语。原因未知，如果你知道，请提交 issue 或者 pull request。
 
 Desktop Settings ——> Localization ——> 全部调整为“简体中文”，然后“save”，退出登录，重启系统。操作无效。
