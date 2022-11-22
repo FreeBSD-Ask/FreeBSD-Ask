@@ -101,192 +101,192 @@
 * [第8.3节 用户组](di-8-zhang-yong-hu-yu-quan-xian/di-8.3-jie-yong-hu-zu.md)
 * [第8.4节 用户权限](di-8-zhang-yong-hu-yu-quan-xian/di-8.4-jie-yong-hu-quan-xian.md)
 
-## 第九章 Jail
+## 第9章 Jail
 
-* [第一节 jail 与 docker 的比较](di-jiu-zhang-jail/di-yi-jie-jail-yu-docker-de-bi-jiao.md)
-* [第二节 jail 相关术语](di-jiu-zhang-jail/di-er-jie-jail-xiang-guan-shu-yu.md)
-* [第三节 jail 配置](di-jiu-zhang-jail/di-san-jie-jail-pei-zhi.md)
-* [第四节 jail 更新](di-jiu-zhang-jail/di-si-jie-jail-geng-xin.md)
-* [第五节 使用 ezjail 管理 jail](di-jiu-zhang-jail/di-wu-jie-shi-yong-ezjail-guan-li-jail.md)
+* [第9.1节 jail 与 docker 的比较](di-9-zhang-jail/di-9.1-jie-jail-yu-docker-de-bi-jiao.md)
+* [第9.2节 jail 相关术语](di-9-zhang-jail/di-er-jie-jail-xiang-guan-shu-yu.md)
+* [第9.3节 jail 配置](di-9-zhang-jail/di-9.3-jie-jail-pei-zhi.md)
+* [第9.4节 jail 更新](di-9-zhang-jail/di-9.4-jie-jail-geng-xin.md)
+* [第9.5节 使用 ezjail 管理 jail](di-9-zhang-jail/di-9.5-jie-shi-yong-ezjail-guan-li-jail.md)
 
-## 第十章 虚拟化
+## 第10章 虚拟化
 
-* [第一节 虚拟化简介](di-shi-zhang-xu-ni-hua/di-yi-jie-xu-ni-hua-jian-jie.md)
-* [第二节 安装 Virtual Box](di-shi-zhang-xu-ni-hua/di-er-jie-an-zhuang-virtual-box.md)
-* [第三节 安装 bhyve](di-shi-zhang-xu-ni-hua/di-san-jie-an-zhuang-bhyve.md)
-* [第四节 使用 cbsd 管理 bhyve](di-shi-zhang-xu-ni-hua/di-si-jie-shi-yong-cbsd-guan-li-bhyve.md)
-* [第五节 使用 bhyve 安装 Windows 11](di-shi-zhang-xu-ni-hua/di-wu-jie-shi-yong-bhyve-an-zhuang-windows-11.md)
-* [第六节 安装 XEN](di-shi-zhang-xu-ni-hua/di-liu-jie-an-zhuang-xen.md)
-* [第七节 使用 XEN 安装 Windows 11](di-shi-zhang-xu-ni-hua/di-qi-jie-shi-yong-xen-an-zhuang-windows-11.md)
+* [第10.1节 虚拟化简介](di-10-zhang-xu-ni-hua/di-10.1-jie-xu-ni-hua-jian-jie.md)
+* [第10.2节 安装 Virtual Box](di-10-zhang-xu-ni-hua/di-10.2-jie-an-zhuang-virtual-box.md)
+* [第10.3节 安装 bhyve](di-10-zhang-xu-ni-hua/di-san-jie-an-zhuang-bhyve.md)
+* [第10.4节 使用 cbsd 管理 bhyve](di-10-zhang-xu-ni-hua/di-10.4-jie-shi-yong-cbsd-guan-li-bhyve.md)
+* [第10.5节 使用 bhyve 安装 Windows 11](di-10-zhang-xu-ni-hua/di-10.5-jie-shi-yong-bhyve-an-zhuang-windows-11.md)
+* [第10.6节 安装 XEN](di-10-zhang-xu-ni-hua/di-10.6-jie-an-zhuang-xen.md)
+* [第10.7节 使用 XEN 安装 Windows 11](di-10-zhang-xu-ni-hua/di-10.7-jie-shi-yong-xen-an-zhuang-windows-11.md)
 
-## 第十一章 更新与升级 FreeBSD
+## 第11章 更新与升级 FreeBSD
 
-* [第一节 通过 freebsd-update 更新](di-shi-yi-zhang-geng-xin-yu-sheng-ji-freebsd/di-yi-jie-tong-guo-freebsdupdate-geng-xin.md)
-* [第二节 通过源代码更新](di-shi-yi-zhang-geng-xin-yu-sheng-ji-freebsd/di-er-jie-tong-guo-yuan-dai-ma-geng-xin.md)
-* [第三节 批量部署](di-shi-yi-zhang-geng-xin-yu-sheng-ji-freebsd/di-san-jie-pi-liang-bu-shu.md)
+* [第11.1节 通过 freebsd-update 更新](di-11-zhang-geng-xin-yu-sheng-ji-freebsd/di-11.1-jie-tong-guo-freebsdupdate-geng-xin.md)
+* [第11.2节 通过源代码更新](di-11-zhang-geng-xin-yu-sheng-ji-freebsd/di-11.2-jie-tong-guo-yuan-dai-ma-geng-xin.md)
+* [第11.3节 批量部署](di-11-zhang-geng-xin-yu-sheng-ji-freebsd/di-11.3-jie-pi-liang-bu-shu.md)
 
-## 第十二章 GEOM 存储框架
+## 第12章 GEOM 存储框架
 
-* [第一节 概述](di-shi-er-zhang-geom-cun-chu-kuang-jia/di-yi-jie-gai-shu.md)
-* [第二节 RAID 0](di-shi-er-zhang-geom-cun-chu-kuang-jia/di-er-jie-raid-0.md)
-* [第三节 RAID 1](di-shi-er-zhang-geom-cun-chu-kuang-jia/di-san-jie-raid-1.md)
-* [第四节 RAID 3](di-shi-er-zhang-geom-cun-chu-kuang-jia/di-si-jie-raid-3.md)
-* [第五节 软 RAID 配置](di-shi-er-zhang-geom-cun-chu-kuang-jia/di-wu-jie-ruan-raid-pei-zhi.md)
-* [第六节 GEOM Gate Network](di-shi-er-zhang-geom-cun-chu-kuang-jia/di-liu-jie-geom-gate-network.md)
-* [第七节 磁盘装置标签](di-shi-er-zhang-geom-cun-chu-kuang-jia/di-qi-jie-ci-pan-zhuang-zhi-biao-qian.md)
-* [第八节 UFS Journaling 与 GEOM](di-shi-er-zhang-geom-cun-chu-kuang-jia/di-ba-jie-ufs-journaling-yu-geom.md)
-* [第九节 ZFS 磁盘加解密](di-shi-er-zhang-geom-cun-chu-kuang-jia/di-jiu-jie-zfs-ci-pan-jia-jie-mi.md)
+* [第12.1节 概述](di-12-zhang-geom-cun-chu-kuang-jia/di-12.1-jie-gai-shu.md)
+* [第12.2节 RAID 0](di-12-zhang-geom-cun-chu-kuang-jia/di-12.2-jie-raid-0.md)
+* [第12.3节 RAID 1](di-12-zhang-geom-cun-chu-kuang-jia/di-12.3-jie-raid-1.md)
+* [第12.4节 RAID 3](di-12-zhang-geom-cun-chu-kuang-jia/di-si-jie-raid-3.md)
+* [第12.5节 软 RAID 配置](di-12-zhang-geom-cun-chu-kuang-jia/di-12.5-jie-ruan-raid-pei-zhi.md)
+* [第12.6节 GEOM Gate Network](di-12-zhang-geom-cun-chu-kuang-jia/di-12.6-jie-geom-gate-network.md)
+* [第12.7节 磁盘装置标签](di-12-zhang-geom-cun-chu-kuang-jia/di-12.7-jie-ci-pan-zhuang-zhi-biao-qian.md)
+* [第12.8节 UFS Journaling 与 GEOM](di-12-zhang-geom-cun-chu-kuang-jia/di-12.8-jie-ufs-journaling-yu-geom.md)
+* [第12.9节 ZFS 磁盘加解密](di-12-zhang-geom-cun-chu-kuang-jia/di-12.9-jie-zfs-ci-pan-jia-jie-mi.md)
 
-## 第十三章 DTrace
+## 第13章 DTrace
 
-* [第一节 概述](di-shi-san-zhang-dtrace/di-yi-jie-gai-shu.md)
-* [第二节 开启 DTrace](di-shi-san-zhang-dtrace/di-er-jie-kai-qi-dtrace.md)
-* [第三节 使用 DTrace](di-shi-san-zhang-dtrace/di-san-jie-shi-yong-dtrace.md)
+* [第13.1节 概述](di-13-zhang-dtrace/di-13.1-jie-gai-shu.md)
+* [第13.2节 开启 DTrace](di-13-zhang-dtrace/di-13.2-jie-kai-qi-dtrace.md)
+* [第13.3节 使用 DTrace](di-13-zhang-dtrace/di-13.3-jie-shi-yong-dtrace.md)
 
-## 第十四章 网络管理
+## 第14章 网络管理
 
-* [第一节 PPP 拨号](di-shi-si-zhang-wang-luo-guan-li/di-yi-jie-ppp-bo-hao.md)
-* [第二节 WIFI](di-shi-si-zhang-wang-luo-guan-li/di-er-jie-wifi.md)
-* [第三节 USB RNDIS (USB 网络共享)](di-shi-si-zhang-wang-luo-guan-li/di-san-jie-usb-rndis-usb-wang-luo-gong-xiang.md)
-* [第四节 蓝牙](di-shi-si-zhang-wang-luo-guan-li/di-si-jie-lan-ya.md)
-* [第五节 IPv6](di-shi-si-zhang-wang-luo-guan-li/di-wu-jie-ipv6.md)
-* [第六节 CARP](di-shi-si-zhang-wang-luo-guan-li/di-liu-jie-carp.md)
-* [第七节 VLAN](di-shi-si-zhang-wang-luo-guan-li/di-qi-jie-vlan.md)
-* [第八节 TCP BBR](di-shi-si-zhang-wang-luo-guan-li/di-ba-jie-tcp-bbr.md)
+* [第14.1节 PPP 拨号](di-14-zhang-wang-luo-guan-li/di-14.1-jie-ppp-bo-hao.md)
+* [第14.2节 WIFI](di-14-zhang-wang-luo-guan-li/di-14.2-jie-wifi.md)
+* [第14.3节 USB RNDIS (USB 网络共享)](di-14-zhang-wang-luo-guan-li/di-14.3-jie-usb-rndis-usb-wang-luo-gong-xiang.md)
+* [第14.4节 蓝牙](di-14-zhang-wang-luo-guan-li/di-14.4-jie-lan-ya.md)
+* [第14.5节 IPv6](di-14-zhang-wang-luo-guan-li/di-14.5-jie-ipv6.md)
+* [第14.6节 CARP](di-14-zhang-wang-luo-guan-li/di-14.6-jie-carp.md)
+* [第14.7节 VLAN](di-14-zhang-wang-luo-guan-li/di-14.7-jie-vlan.md)
+* [第14.8节 TCP BBR](di-14-zhang-wang-luo-guan-li/di-14.8-jie-tcp-bbr.md)
 
-## 第十五章 FreeBSD 防火墙
+## 第15章 FreeBSD 防火墙
 
-* [第一节 网络参数配置命令](di-shi-wu-zhang-freebsd-fang-huo-qiang/di-yi-jie-wang-luo-can-shu-pei-zhi-ming-ling.md)
-* [第二节 PF](di-shi-wu-zhang-freebsd-fang-huo-qiang/di-er-jie-pf.md)
-* [第三节 IPFW](di-shi-wu-zhang-freebsd-fang-huo-qiang/di-san-jie-ipfw.md)
-* [第四节 IPFILTER (IPF)](di-shi-wu-zhang-freebsd-fang-huo-qiang/di-si-jie-ipfilter-ipf.md)
+* [第15.1节 网络参数配置命令](di-15-zhang-freebsd-fang-huo-qiang/di-15.1-jie-wang-luo-can-shu-pei-zhi-ming-ling.md)
+* [第15.2节 PF](di-15-zhang-freebsd-fang-huo-qiang/di-15.2-jie-pf.md)
+* [第15.3节 IPFW](di-15-zhang-freebsd-fang-huo-qiang/di-15.3-jie-ipfw.md)
+* [第15.4节 IPFILTER (IPF)](di-15-zhang-freebsd-fang-huo-qiang/di-15.4-jie-ipfilter-ipf.md)
 
-## 第十六章 服务器
+## 第16章 服务器
 
-* [第一节 FTP 服务器](di-shi-liu-zhang-fu-wu-qi/di-yi-jie-ftp-fu-wu-qi.md)
-* [第二节 DHCP 服务器](di-shi-liu-zhang-fu-wu-qi/di-er-jie-dhcp-fu-wu-qi.md)
-* [第三节 Nodejs 相关](di-shi-liu-zhang-fu-wu-qi/di-san-jie-nodejs-xiang-guan.md)
-* [第四节 DNS 服务器](di-shi-liu-zhang-fu-wu-qi/di-si-jie-dns-fu-wu-qi.md)
-* [第五节 NIS 服务器](di-shi-liu-zhang-fu-wu-qi/di-wu-jie-nis-fu-wu-qi.md)
-* [第六节 Postfix 服务器](di-shi-liu-zhang-fu-wu-qi/di-liu-jie-postfix-fu-wu-qi.md)
-* [第七节 Samba 服务器](di-shi-liu-zhang-fu-wu-qi/di-qi-jie-samba-fu-wu-qi.md)
-* [第八节 NFS 服务器](di-shi-liu-zhang-fu-wu-qi/di-ba-jie-nfs-fu-wu-qi.md)
-* [第九节 iSCSI](di-shi-liu-zhang-fu-wu-qi/di-jiu-jie-iscsi.md)
-* [第十节 Webmin](di-shi-liu-zhang-fu-wu-qi/di-shi-jie-webmin.md)
-* [第十一节 rsync 同步服务](di-shi-liu-zhang-fu-wu-qi/di-shi-yi-jie-rsync-tong-bu-fu-wu.md)
-* [第十二节 时间服务](di-shi-liu-zhang-fu-wu-qi/di-shi-er-jie-shi-jian-fu-wu.md)
-* [第十三节 Wildfly](di-shi-liu-zhang-fu-wu-qi/di-shi-san-jie-wildfly.md)
+* [第16.1节 FTP 服务器](di-16-zhang-fu-wu-qi/di-16.1-jie-ftp-fu-wu-qi.md)
+* [第16.2节 DHCP 服务器](di-16-zhang-fu-wu-qi/di-16.2-jie-dhcp-fu-wu-qi.md)
+* [第16.3节 Nodejs 相关](di-16-zhang-fu-wu-qi/di-16.3-jie-nodejs-xiang-guan.md)
+* [第16.4节 DNS 服务器](di-16-zhang-fu-wu-qi/di-16.4-jie-dns-fu-wu-qi.md)
+* [第16.5节 NIS 服务器](di-16-zhang-fu-wu-qi/di-16.5-jie-nis-fu-wu-qi.md)
+* [第16.6节 Postfix 服务器](di-16-zhang-fu-wu-qi/di-16.6-jie-postfix-fu-wu-qi.md)
+* [第16.7节 Samba 服务器](di-16-zhang-fu-wu-qi/di-16.7-jie-samba-fu-wu-qi.md)
+* [第16.8节 NFS 服务器](di-16-zhang-fu-wu-qi/di-16.8-jie-nfs-fu-wu-qi.md)
+* [第16.9节 iSCSI](di-16-zhang-fu-wu-qi/di-16.9-jie-iscsi.md)
+* [第16.10节 Webmin](di-16-zhang-fu-wu-qi/di-16.10-jie-webmin.md)
+* [第16.11节 rsync 同步服务](di-16-zhang-fu-wu-qi/di-16.11-jie-rsync-tong-bu-fu-wu.md)
+* [第16.12节 时间服务](di-16-zhang-fu-wu-qi/di-16.12-jie-shi-jian-fu-wu.md)
+* [第16.13节 Wildfly](di-16-zhang-fu-wu-qi/di-16.13-jie-wildfly.md)
 
-## 第十七章 网络服务器
+## 第17章 网络服务器
 
-* [第一节 Apache](di-shi-qi-zhang-wang-luo-fu-wu-qi/di-yi-jie-apache.md)
-* [第二节 Nginx](di-shi-qi-zhang-wang-luo-fu-wu-qi/di-er-jie-nginx.md)
-* [第三节 PHP 8.X](di-shi-qi-zhang-wang-luo-fu-wu-qi/di-san-jie-php-8.x.md)
-* [第四节 MySQL 5.X](di-shi-qi-zhang-wang-luo-fu-wu-qi/di-si-jie-mysql-5.x.md)
-* [第五节 MySQL 8.X](di-shi-qi-zhang-wang-luo-fu-wu-qi/di-wu-jie-mysql-8.x.md)
-* [第六节 Typecho](di-shi-qi-zhang-wang-luo-fu-wu-qi/di-liu-jie-typecho.md)
-* [第七节 SSL 配置](di-shi-qi-zhang-wang-luo-fu-wu-qi/di-qi-jie-ssl-pei-zhi.md)
-* [第八节 PostgreSQL 与 pgAdmin4](di-shi-qi-zhang-wang-luo-fu-wu-qi/di-ba-jie-postgresql-yu-pgadmin4.md)
+* [第17.1节 Apache](di-17-zhang-wang-luo-fu-wu-qi/di-17.1-jie-apache.md)
+* [第17.2节 Nginx](di-17-zhang-wang-luo-fu-wu-qi/di-17.2-jie-nginx.md)
+* [第17.3节 PHP 8.X](di-17-zhang-wang-luo-fu-wu-qi/di-17.3-jie-php-8.x.md)
+* [第17.4节 MySQL 5.X](di-17-zhang-wang-luo-fu-wu-qi/di-17.4-jie-mysql-5.x.md)
+* [第17.5节 MySQL 8.X](di-17-zhang-wang-luo-fu-wu-qi/di-17.5-jie-mysql-8.x.md)
+* [第17.6节 Typecho](di-17-zhang-wang-luo-fu-wu-qi/di-17.6-jie-typecho.md)
+* [第17.7节 SSL 配置](di-17-zhang-wang-luo-fu-wu-qi/di-17.7-jie-ssl-pei-zhi.md)
+* [第17.8节 PostgreSQL 与 pgAdmin4](di-17-zhang-wang-luo-fu-wu-qi/di-17.8-jie-postgresql-yu-pgadmin4.md)
 
-## 第十八章 树莓派与嵌入式
+## 第18章 树莓派与嵌入式
 
-* [第一节 树莓派简介](di-shi-ba-zhang-shu-mei-pai-yu-qian-ru-shi/di-yi-jie-shu-mei-pai-jian-jie.md)
-* [第二节 系统安装](di-shi-ba-zhang-shu-mei-pai-yu-qian-ru-shi/di-er-jie-xi-tong-an-zhuang.md)
-* [第三节 使用配置](di-shi-ba-zhang-shu-mei-pai-yu-qian-ru-shi/di-san-jie-shi-yong-pei-zhi.md)
-* [第四节 USB 网卡与 WIFI](di-shi-ba-zhang-shu-mei-pai-yu-qian-ru-shi/di-si-jie-usb-wang-ka-yu-wifi.md)
-* [第五节 RISC-V](di-shi-ba-zhang-shu-mei-pai-yu-qian-ru-shi/di-wu-jie-riscv.md)
+* [第18.1节 树莓派简介](di-18-zhang-shu-mei-pai-yu-qian-ru-shi/di-yi-jie-shu-mei-pai-jian-jie.md)
+* [第18.2节 系统安装](di-18-zhang-shu-mei-pai-yu-qian-ru-shi/di-18.2-jie-xi-tong-an-zhuang.md)
+* [第18.3节 使用配置](di-18-zhang-shu-mei-pai-yu-qian-ru-shi/di-18.3-jie-shi-yong-pei-zhi.md)
+* [第18.4节 USB 网卡与 WIFI](di-18-zhang-shu-mei-pai-yu-qian-ru-shi/di-18.4-jie-usb-wang-ka-yu-wifi.md)
+* [第18.5节 RISC-V](di-18-zhang-shu-mei-pai-yu-qian-ru-shi/di-18.5-jie-riscv.md)
 
-## 第十九章 文学故事
+## 第19章 文学故事
 
-* [第一节 我与 FreeBSD 的故事](di-shi-jiu-zhang-wen-xue-gu-shi/di-yi-jie-wo-yu-freebsd-de-gu-shi.md)
-* [第二节 FreeBSD 与猫 ——选择1%的生活](di-shi-jiu-zhang-wen-xue-gu-shi/di-er-jie-freebsd-yu-mao-xuan-ze-1-de-sheng-huo.md)
-* [第三节 Linux 与苦难哲学](di-shi-jiu-zhang-wen-xue-gu-shi/di-san-jie-linux-yu-ku-nan-zhe-xue.md)
-* [第四节 从一个想法看 FreeBSD 是商业化还是学院派](di-shi-jiu-zhang-wen-xue-gu-shi/di-si-jie-cong-yi-ge-xiang-fa-kan-freebsd-shi-shang-ye-hua-huan-shi-xue-yuan-pai.md)
-* [第五节 Linux 社区已经成为了一个肮脏的泥潭](di-shi-jiu-zhang-wen-xue-gu-shi/di-wu-jie-linux-she-qu-yi-jing-cheng-wei-le-yi-ge-ang-zang-de-ni-tan.md)
-* [第六节 Linux 败局已定——驳 FreeBSD 大败局](di-shi-jiu-zhang-wen-xue-gu-shi/di-liu-jie-linux-bai-ju-yi-ding.md)
-* [第七节 小说——FreeBSD 从入门到跑路](di-shi-jiu-zhang-wen-xue-gu-shi/di-qi-jie-xiao-shuo-freebsd-cong-ru-men-dao-pao-lu.md)
+* [第19.1节 我与 FreeBSD 的故事](di-19-zhang-wen-xue-gu-shi/di-19.1-jie-wo-yu-freebsd-de-gu-shi.md)
+* [第19.2节 FreeBSD 与猫 ——选择1%的生活](di-19-zhang-wen-xue-gu-shi/di-19.2-jie-freebsd-yu-mao-xuan-ze-1-de-sheng-huo.md)
+* [第19.3节 Linux 与苦难哲学](di-19-zhang-wen-xue-gu-shi/di-19.3-jie-linux-yu-ku-nan-zhe-xue.md)
+* [第19.4节 从一个想法看 FreeBSD 是商业化还是学院派](di-19-zhang-wen-xue-gu-shi/di-19.4-jie-cong-yi-ge-xiang-fa-kan-freebsd-shi-shang-ye-hua-huan-shi-xue-yuan-pai.md)
+* [第19.5节 Linux 社区已经成为了一个肮脏的泥潭](di-19-zhang-wen-xue-gu-shi/di-19.5-jie-linux-she-qu-yi-jing-cheng-wei-le-yi-ge-ang-zang-de-ni-tan.md)
+* [第19.6节 Linux 败局已定——驳 FreeBSD 大败局](di-19-zhang-wen-xue-gu-shi/di-19.6-jie-linux-bai-ju-yi-ding-bo-freebsd-da-bai-ju.md)
+* [第19.7节 小说——FreeBSD 从入门到跑路](di-19-zhang-wen-xue-gu-shi/di-19.7-jie-xiao-shuo-freebsd-cong-ru-men-dao-pao-lu.md)
 
-## 第二十章 娱乐与教育
+## 第20章 娱乐与教育
 
-* [第一节 游戏](di-er-shi-zhang-yu-le-yu-jiao-yu/di-yi-jie-you-xi.md)
-* [第二节 音视频播放器](di-er-shi-zhang-yu-le-yu-jiao-yu/di-er-jie-yin-shi-pin-bo-fang-qi.md)
-* [第三节 音视频剪辑](di-er-shi-zhang-yu-le-yu-jiao-yu/di-san-jie-yin-shi-pin-jian-ji.md)
-* [第四节 教育](di-er-shi-zhang-yu-le-yu-jiao-yu/di-si-jie-jiao-yu.md)
-* [第五节 科研与专业工具](di-er-shi-zhang-yu-le-yu-jiao-yu/di-wu-jie-ke-yan-yu-zhuan-ye-gong-ju.md)
+* [第20.1节 游戏](di-20-zhang-yu-le-yu-jiao-yu/di-20.1-jie-you-xi.md)
+* [第20.2节 音视频播放器](di-20-zhang-yu-le-yu-jiao-yu/di-20.2-jie-yin-shi-pin-bo-fang-qi.md)
+* [第20.3节 音视频剪辑](di-20-zhang-yu-le-yu-jiao-yu/di-20.3-jie-yin-shi-pin-jian-ji.md)
+* [第20.4节 教育](di-20-zhang-yu-le-yu-jiao-yu/di-20.4-jie-jiao-yu.md)
+* [第20.5节 科研与专业工具](di-20-zhang-yu-le-yu-jiao-yu/di-20.5-jie-ke-yan-yu-zhuan-ye-gong-ju.md)
 
-## 第二十一章 内核
+## 第21章 内核
 
-* [第一节 获取 FreeBSD 内核源码](di-er-shi-yi-zhang-nei-he/di-yi-jie-huo-qu-freebsd-nei-he-yuan-ma.md)
-* [第二节 修改内核源码](di-er-shi-yi-zhang-nei-he/di-er-jie-xiu-gai-nei-he-yuan-ma.md)
-* [第三节 编译内核](di-er-shi-yi-zhang-nei-he/di-san-jie-bian-yi-nei-he.md)
-* [第四节 内核分析](di-er-shi-yi-zhang-nei-he/di-si-jie-nei-he-fen-xi.md)
+* [第21.1节 获取 FreeBSD 内核源码](di-21-zhang-nei-he/di-21.1-jie-huo-qu-freebsd-nei-he-yuan-ma.md)
+* [第21.2节 修改内核源码](di-21-zhang-nei-he/di-21.2-jie-xiu-gai-nei-he-yuan-ma.md)
+* [第21.3节 编译内核](di-21-zhang-nei-he/di-21.3-jie-bian-yi-nei-he.md)
+* [第21.4节 内核分析](di-21-zhang-nei-he/di-21.4-jie-nei-he-fen-xi.md)
 
-## 第二十二章 编程与开发
+## 第22章 编程与开发
 
-* [第〇节 如何订阅 FreeBSD 邮件列表](di-er-shi-er-zhang-bian-cheng-yu-kai-fa/di-ling-jie-ru-he-ding-yue-freebsd-you-jian-lie-biao.md)
-* [第一节 如何报告 Bug](di-er-shi-er-zhang-bian-cheng-yu-kai-fa/di-yi-jie-ru-he-bao-gao-bug.md)
-* [第二节 如何提交一个软件包](di-er-shi-er-zhang-bian-cheng-yu-kai-fa/di-er-jie-ru-he-ti-jiao-yi-ge-ruan-jian-bao.md)
-* [第三节 如何参与 FreeBSD 协作](di-er-shi-er-zhang-bian-cheng-yu-kai-fa/di-san-jie-ru-he-can-yu-freebsd-xie-zuo.md)
-* [第四节 C/C++ 环境的配置](di-er-shi-er-zhang-bian-cheng-yu-kai-fa/di-si-jie-cc++-huan-jing-de-pei-zhi.md)
-* [第五节 Java 环境的配置](di-er-shi-er-zhang-bian-cheng-yu-kai-fa/di-wu-jie-java-huan-jing-de-pei-zhi.md)
-* [第六节 QT 环境的配置](di-er-shi-er-zhang-bian-cheng-yu-kai-fa/di-liu-jie-qt-huan-jing-de-pei-zhi.md)
-* [第七节 Python 与 VScode](di-er-shi-er-zhang-bian-cheng-yu-kai-fa/di-qi-jie-python-yu-vscode.md)
-* [第八节 Rust/Go 环境的配置](di-er-shi-er-zhang-bian-cheng-yu-kai-fa/di-ba-jie-rust-huan-jing-de-pei-zhi.md)
-* [第九节 Csh 与其他 Shell](di-er-shi-er-zhang-bian-cheng-yu-kai-fa/di-jiu-jie-shell-de-xuan-ze.md)
-* [第十节 通过 IDA 7 调试 FreeBSD](di-er-shi-er-zhang-bian-cheng-yu-kai-fa/di-shi-jie-tong-guo-ida-7-tiao-shi-freebsd.md)
-* [第十一节 Git](di-er-shi-er-zhang-bian-cheng-yu-kai-fa/di-shi-yi-jie-git.md)
+* [第22.0节 如何订阅 FreeBSD 邮件列表](di-22-zhang-bian-cheng-yu-kai-fa/di-ling-jie-ru-he-ding-yue-freebsd-you-jian-lie-biao.md)
+* [第22.1节 如何报告 Bug](di-22-zhang-bian-cheng-yu-kai-fa/di-22.1-jie-ru-he-bao-gao-bug.md)
+* [第22.2节 如何提交一个软件包](di-22-zhang-bian-cheng-yu-kai-fa/di-22.2-jie-ru-he-ti-jiao-yi-ge-ruan-jian-bao.md)
+* [第22.3节 如何参与 FreeBSD 协作](di-22-zhang-bian-cheng-yu-kai-fa/di-22.3-jie-ru-he-can-yu-freebsd-xie-zuo.md)
+* [第22.4节 C/C++ 环境的配置](di-22-zhang-bian-cheng-yu-kai-fa/di-22.4-jie-cc++-huan-jing-de-pei-zhi.md)
+* [第22.5节 Java 环境的配置](di-22-zhang-bian-cheng-yu-kai-fa/di-22.5-jie-java-huan-jing-de-pei-zhi.md)
+* [第22.6节 QT 环境的配置](di-22-zhang-bian-cheng-yu-kai-fa/di-22.6-jie-qt-huan-jing-de-pei-zhi.md)
+* [第22.7节 Python 与 VScode](di-22-zhang-bian-cheng-yu-kai-fa/di-22.7-jie-python-yu-vscode.md)
+* [第22.8节 Rust/Go 环境的配置](di-22-zhang-bian-cheng-yu-kai-fa/di-22.8-jie-rustgo-huan-jing-de-pei-zhi.md)
+* [第22.9节 Csh 与其他 Shell](di-22-zhang-bian-cheng-yu-kai-fa/di-22.9-jie-csh-yu-qi-ta-shell.md)
+* [第22.10节 通过 IDA 7 调试 FreeBSD](di-22-zhang-bian-cheng-yu-kai-fa/di-22.10-jie-tong-guo-ida-7-tiao-shi-freebsd.md)
+* [第22.11节 Git](di-22-zhang-bian-cheng-yu-kai-fa/di-22.11-jie-git.md)
 
-## 第二十三章 引导与恢复
+## 第23章 引导与恢复
 
-* [第一节 恢复模式与密码重置](di-er-shi-san-zhang-yin-dao-yu-hui-fu/di-yi-jie-hui-fu-mo-shi-yu-mi-ma-zhong-zhi.md)
-* [第二节 FreeBSD 多硬盘 EFI 引导统一](di-er-shi-san-zhang-yin-dao-yu-hui-fu/di-er-jie-freebsd-duo-ying-pan-efi-yin-dao-tong-yi.md)
-* [第三节 FreeBSD 中文 TTY 控制台](di-er-shi-san-zhang-yin-dao-yu-hui-fu/di-san-jie-freebsd-zhong-wen-tty-kong-zhi-tai.md)
-* [第四节 引导界面](di-er-shi-san-zhang-yin-dao-yu-hui-fu/di-si-jie-yin-dao-jie-mian.md)
-* [第五节 Grub 及其他引导](di-er-shi-san-zhang-yin-dao-yu-hui-fu/di-wu-jie-grub-ji-qi-ta-yin-dao.md)
+* [第23.1节 恢复模式与密码重置](di-23-zhang-yin-dao-yu-hui-fu/di-23.1-jie-hui-fu-mo-shi-yu-mi-ma-zhong-zhi.md)
+* [第23.2节 FreeBSD 多硬盘 EFI 引导统一](di-23-zhang-yin-dao-yu-hui-fu/di-23.2-jie-freebsd-duo-ying-pan-efi-yin-dao-tong-yi.md)
+* [第23.3节 FreeBSD 中文 TTY 控制台](di-23-zhang-yin-dao-yu-hui-fu/di-23.3-jie-freebsd-zhong-wen-tty-kong-zhi-tai.md)
+* [第23.4节 引导界面](di-23-zhang-yin-dao-yu-hui-fu/di-23.4-jie-yin-dao-jie-mian.md)
+* [第23.5节 Grub 及其他引导](di-23-zhang-yin-dao-yu-hui-fu/di-23.5-jie-grub-ji-qi-ta-yin-dao.md)
 
-## 第二十四章 FreeBSD 特色
+## 第24章 FreeBSD 特色
 
-* [第一节 BSD INIT 管理服务](di-er-shi-si-zhang-freebsd-te-se/di-yi-jie-bsd-init-guan-li-fu-wu.md)
-* [第二节 FreeBSD 目录结构](di-er-shi-si-zhang-freebsd-te-se/di-er-jie-freebsd-mu-lu-jie-gou.md)
-* [第三节 bsdinstall 与 bsdconfig](di-er-shi-si-zhang-freebsd-te-se/di-san-jie-bsdinstall-yu-bsdconfig.md)
-* [第四节 禁用 Sendmail](di-er-shi-si-zhang-freebsd-te-se/di-si-jie-jin-yong-sendmail.md)
-* [第五节 利用脚本自动生成 BSDlibc 库文本](di-er-shi-si-zhang-freebsd-te-se/di-wu-jie-li-yong-jiao-ben-zi-dong-sheng-cheng-bsdlibc-ku-wen-ben.md)
-* [第六节 BSD 风格的 make/grep/sed/awk](di-er-shi-si-zhang-freebsd-te-se/di-liu-jie-bsd-feng-ge-de-makegrepsedawk.md)
+* [第24.1节 BSD INIT 管理服务](di-24-zhang-freebsd-te-se/di-24.1-jie-bsd-init-guan-li-fu-wu.md)
+* [第24.2节 FreeBSD 目录结构](di-24-zhang-freebsd-te-se/di-24.2-jie-freebsd-mu-lu-jie-gou.md)
+* [第24.3节 bsdinstall 与 bsdconfig](di-24-zhang-freebsd-te-se/di-24.3-jie-bsdinstall-yu-bsdconfig.md)
+* [第24.4节 禁用 Sendmail](di-24-zhang-freebsd-te-se/di-24.4-jie-jin-yong-sendmail.md)
+* [第24.5节 利用脚本自动生成 BSDlibc 库文本](di-24-zhang-freebsd-te-se/di-24.5-jie-li-yong-jiao-ben-zi-dong-sheng-cheng-bsdlibc-ku-wen-ben.md)
+* [第24.6节 BSD 风格的 make/grep/sed/awk](di-24-zhang-freebsd-te-se/di-24.6-jie-bsd-feng-ge-de-makegrepsedawk.md)
 
-## 第二十五章 系统设计与分析
+## 第25章 系统设计与分析
 
-* [第一节 FreeBSD 设计概要](di-er-shi-wu-zhang-xi-tong-she-ji-yu-fen-xi/di-yi-jie-freebsd-she-ji-gai-yao.md)
-* [第二节 内核](di-er-shi-wu-zhang-xi-tong-she-ji-yu-fen-xi/di-er-jie-nei-he.md)
-* [第三节 进程](di-er-shi-wu-zhang-xi-tong-she-ji-yu-fen-xi/di-san-jie-jin-cheng.md)
-* [第四节 内存管理](di-er-shi-wu-zhang-xi-tong-she-ji-yu-fen-xi/di-si-jie-nei-cun-guan-li.md)
-* [第五节 安全](di-er-shi-wu-zhang-xi-tong-she-ji-yu-fen-xi/di-wu-jie-an-quan.md)
-* [第六节 I/O 系统](di-er-shi-wu-zhang-xi-tong-she-ji-yu-fen-xi/di-liu-jie-io-xi-tong.md)
+* [第25.1节 FreeBSD 设计概要](di-25-zhang-xi-tong-she-ji-yu-fen-xi/di-yi-jie-freebsd-she-ji-gai-yao.md)
+* [第25.2节 内核](di-25-zhang-xi-tong-she-ji-yu-fen-xi/di-25.2-jie-nei-he.md)
+* [第25.3节 进程](di-25-zhang-xi-tong-she-ji-yu-fen-xi/di-25.3-jie-jin-cheng.md)
+* [第25.4节 内存管理](di-25-zhang-xi-tong-she-ji-yu-fen-xi/di-25.4-jie-nei-cun-guan-li.md)
+* [第25.5节 安全](di-25-zhang-xi-tong-she-ji-yu-fen-xi/di-25.5-jie-an-quan.md)
+* [第25.6节 I/O 系统](di-25-zhang-xi-tong-she-ji-yu-fen-xi/di-25.6-jie-io-xi-tong.md)
 
-## 第二十六章 OpenBSD
+## 第26章 OpenBSD
 
-* [第〇节 概述](di-er-shi-liu-zhang-openbsd/di-ling-jie-gai-shu.md)
-* [第一节 安装](di-er-shi-liu-zhang-openbsd/di-yi-jie-an-zhuang.md)
-* [第二节 配置](di-er-shi-liu-zhang-openbsd/di-er-jie-pei-zhi.md)
-* [第三节 换源](di-er-shi-liu-zhang-openbsd/di-san-jie-huan-yuan.md)
-* [第四节 包管理器](di-er-shi-liu-zhang-openbsd/di-si-jie-bao-guan-li-qi.md)
-* [第五节 桌面与其他软件](di-er-shi-liu-zhang-openbsd/di-wu-jie-zhuo-mian-yu-qi-ta-ruan-jian.md)
+* [第26.0节 概述](di-26-zhang-openbsd/di-26.0-jie-gai-shu.md)
+* [第26.1节 安装](di-26-zhang-openbsd/di-26.1-jie-an-zhuang.md)
+* [第26.2节 配置](di-26-zhang-openbsd/di-26.2-jie-pei-zhi.md)
+* [第26.3节 换源](di-26-zhang-openbsd/di-26.3-jie-huan-yuan.md)
+* [第26.4节 包管理器](di-26-zhang-openbsd/di-26.4-jie-bao-guan-li-qi.md)
+* [第26.5节 桌面与其他软件](di-26-zhang-openbsd/di-26.5-jie-zhuo-mian-yu-qi-ta-ruan-jian.md)
 
-## 第二十七章 NetBSD
+## 第27章 NetBSD
 
-* [第〇节 概述](di-er-shi-qi-zhang-netbsd/di-ling-jie-gai-shu.md)
-* [第一节 安装与配置](di-er-shi-qi-zhang-netbsd/di-yi-jie-an-zhuang-yu-pei-zhi.md)
-* [第二节 换源与包管理器](di-er-shi-qi-zhang-netbsd/di-er-jie-huan-yuan-yu-bao-guan-li-qi.md)
-* [第三节 桌面与其他软件](di-er-shi-qi-zhang-netbsd/di-san-jie-zhuo-mian-yu-qi-ta-ruan-jian.md)
+* [第27.0节 概述](di-27-zhang-netbsd/di-27.0-jie-gai-shu.md)
+* [第27.1节 安装与配置](di-27-zhang-netbsd/di-27.1-jie-an-zhuang-yu-pei-zhi.md)
+* [第27.2节 换源与包管理器](di-27-zhang-netbsd/di-27.2-jie-huan-yuan-yu-bao-guan-li-qi.md)
+* [第27.3节 桌面与其他软件](di-27-zhang-netbsd/di-27.3-jie-zhuo-mian-yu-qi-ta-ruan-jian.md)
 
-## 第二十八章 DragonFlyBSD
+## 第28章 DragonFlyBSD
 
-* [第〇节 概述](di-er-shi-ba-zhang-dragonflybsd/di-ling-jie-gai-shu.md)
-* [第一节 安装与配置](di-er-shi-ba-zhang-dragonflybsd/di-yi-jie-an-zhuang-yu-pei-zhi.md)
+* [第28.0节 概述](di-28-zhang-dragonflybsd/di-28.0-jie-gai-shu.md)
+* [第28.1节 安装与配置](di-28-zhang-dragonflybsd/di-28.1-jie-an-zhuang-yu-pei-zhi.md)
 
-## 第二十九章 桌面高级进阶
+## 第29章 桌面高级进阶
 
-* [第〇节 窗口管理器与桌面的区别与联系](di-er-shi-jiu-zhang-zhuo-mian-gao-ji-jin-jie/di-ling-jie-chuang-kou-guan-li-qi-yu-zhuo-mian-de-qu-bie-yu-lian-xi.md)
-* [第一节 安装 i3wm](di-er-shi-jiu-zhang-zhuo-mian-gao-ji-jin-jie/di-yi-jie-an-zhuang-i3wm.md)
-* [第二节 安装 CDE](di-er-shi-jiu-zhang-zhuo-mian-gao-ji-jin-jie/di-er-jie-an-zhuang-cde.md)
-* [第三节 安装 Awesome](di-er-shi-jiu-zhang-zhuo-mian-gao-ji-jin-jie/di-san-jie-an-zhuang-awesome.md)
-* [第三节 安装 FVWM](di-er-shi-jiu-zhang-zhuo-mian-gao-ji-jin-jie/di-san-jie-an-zhuang-fvwm.md)
+* [第29.0节 窗口管理器与桌面的区别与联系](di-29-zhang-zhuo-mian-gao-ji-jin-jie/di-29.0-jie-chuang-kou-guan-li-qi-yu-zhuo-mian-de-qu-bie-yu-lian-xi.md)
+* [第29.1节 安装 i3wm](di-29-zhang-zhuo-mian-gao-ji-jin-jie/di-29.1-jie-an-zhuang-i3wm.md)
+* [第29.2节 安装 CDE](di-29-zhang-zhuo-mian-gao-ji-jin-jie/di-29.2-jie-an-zhuang-cde.md)
+* [第29.3节 安装 Awesome](di-29-zhang-zhuo-mian-gao-ji-jin-jie/di-29.3-jie-an-zhuang-awesome.md)
+* [第29.4节 安装 FVWM](di-29-zhang-zhuo-mian-gao-ji-jin-jie/di-29.4-jie-an-zhuang-fvwm.md)
