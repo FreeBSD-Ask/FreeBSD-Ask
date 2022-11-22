@@ -104,7 +104,7 @@
 ## 第9章 Jail
 
 * [第9.1节 jail 与 docker 的比较](di-9-zhang-jail/di-9.1-jie-jail-yu-docker-de-bi-jiao.md)
-* [第9.2节 jail 相关术语](di-9-zhang-jail/di-er-jie-jail-xiang-guan-shu-yu.md)
+* [第9.2节 jail 相关术语](di-9-zhang-jail/di-9.2-jie-jail-xiang-guan-shu-yu.md)
 * [第9.3节 jail 配置](di-9-zhang-jail/di-9.3-jie-jail-pei-zhi.md)
 * [第9.4节 jail 更新](di-9-zhang-jail/di-9.4-jie-jail-geng-xin.md)
 * [第9.5节 使用 ezjail 管理 jail](di-9-zhang-jail/di-9.5-jie-shi-yong-ezjail-guan-li-jail.md)
@@ -130,7 +130,7 @@
 * [第12.1节 概述](di-12-zhang-geom-cun-chu-kuang-jia/di-12.1-jie-gai-shu.md)
 * [第12.2节 RAID 0](di-12-zhang-geom-cun-chu-kuang-jia/di-12.2-jie-raid-0.md)
 * [第12.3节 RAID 1](di-12-zhang-geom-cun-chu-kuang-jia/di-12.3-jie-raid-1.md)
-* [第12.4节 RAID 3](di-12-zhang-geom-cun-chu-kuang-jia/di-si-jie-raid-3.md)
+* [第12.4节 RAID 3](di-12-zhang-geom-cun-chu-kuang-jia/di-12.4-jie-raid-3.md)
 * [第12.5节 软 RAID 配置](di-12-zhang-geom-cun-chu-kuang-jia/di-12.5-jie-ruan-raid-pei-zhi.md)
 * [第12.6节 GEOM Gate 网络](di-12-zhang-geom-cun-chu-kuang-jia/di-12.6-jie-geom-gate-wang-luo.md)
 * [第12.7节 磁盘装置标签](di-12-zhang-geom-cun-chu-kuang-jia/di-12.7-jie-ci-pan-zhuang-zhi-biao-qian.md)
