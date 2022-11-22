@@ -132,7 +132,7 @@
 * [第12.3节 RAID 1](di-12-zhang-geom-cun-chu-kuang-jia/di-12.3-jie-raid-1.md)
 * [第12.4节 RAID 3](di-12-zhang-geom-cun-chu-kuang-jia/di-si-jie-raid-3.md)
 * [第12.5节 软 RAID 配置](di-12-zhang-geom-cun-chu-kuang-jia/di-12.5-jie-ruan-raid-pei-zhi.md)
-* [第12.6节 GEOM Gate Network](di-12-zhang-geom-cun-chu-kuang-jia/di-12.6-jie-geom-gate-network.md)
+* [第12.6节 GEOM Gate 网络](di-12-zhang-geom-cun-chu-kuang-jia/di-12.6-jie-geom-gate-wang-luo.md)
 * [第12.7节 磁盘装置标签](di-12-zhang-geom-cun-chu-kuang-jia/di-12.7-jie-ci-pan-zhuang-zhi-biao-qian.md)
 * [第12.8节 UFS Journaling 与 GEOM](di-12-zhang-geom-cun-chu-kuang-jia/di-12.8-jie-ufs-journaling-yu-geom.md)
 * [第12.9节 ZFS 磁盘加解密](di-12-zhang-geom-cun-chu-kuang-jia/di-12.9-jie-zfs-ci-pan-jia-jie-mi.md)
