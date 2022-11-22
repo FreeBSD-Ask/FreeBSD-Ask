@@ -113,7 +113,7 @@
 
 * [第10.1节 虚拟化简介](di-10-zhang-xu-ni-hua/di-10.1-jie-xu-ni-hua-jian-jie.md)
 * [第10.2节 安装 Virtual Box](di-10-zhang-xu-ni-hua/di-10.2-jie-an-zhuang-virtual-box.md)
-* [第10.3节 安装 bhyve](di-10-zhang-xu-ni-hua/di-san-jie-an-zhuang-bhyve.md)
+* [第10.3节 安装 bhyve](di-10-zhang-xu-ni-hua/di-10.3-jie-an-zhuang-bhyve.md)
 * [第10.4节 使用 cbsd 管理 bhyve](di-10-zhang-xu-ni-hua/di-10.4-jie-shi-yong-cbsd-guan-li-bhyve.md)
 * [第10.5节 使用 bhyve 安装 Windows 10](di-10-zhang-xu-ni-hua/di-10.5-jie-shi-yong-bhyve-an-zhuang-windows-10.md)
 * [第10.6节 安装 XEN](di-10-zhang-xu-ni-hua/di-10.6-jie-an-zhuang-xen.md)
