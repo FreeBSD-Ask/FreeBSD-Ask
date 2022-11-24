@@ -27,7 +27,7 @@ FreeBSD 已从 Linux 移植了显卡驱动，理论上，I  卡 A 卡 N 卡均�
 或者
 
 ```
-# cd /usr/ports/graphics/drm-kmod/ && make install clean
+# cd /usr/ports/graphics/drm-kmod/ && make BATCH=yes install clean
 ```
 
 > 注意：
@@ -49,7 +49,7 @@ FreeBSD 已从 Linux 移植了显卡驱动，理论上，I  卡 A 卡 N 卡均�
 * FreeBSD 12
 
 ```
-# cd /usr/ports/graphics/drm-fbsd12.0-kmod/ && make install clean
+# cd /usr/ports/graphics/drm-fbsd12.0-kmod/ && make BATCH=yes install clean
 ```
 
 > **注意：**
