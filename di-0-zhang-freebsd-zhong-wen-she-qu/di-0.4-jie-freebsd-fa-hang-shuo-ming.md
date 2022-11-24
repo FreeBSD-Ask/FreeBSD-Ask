@@ -728,7 +728,7 @@ UFS/FFS 文件系统有拍摄快照的能力。因为快照的拍摄是在软更
 
 更新特定平台的功能并引入对新硬件平台的支持。
 
-\####FreeBSD/Firecracker
+#### FreeBSD/Firecracker
 
 链接：
 
