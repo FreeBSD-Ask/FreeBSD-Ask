@@ -1,6 +1,7 @@
 # Table of contents
 
 * [FreeBSD 从入门到跑路](README.md)
+* [目录](mu-lu.md)
 
 ## 第0章 FreeBSD 中文社区
 
