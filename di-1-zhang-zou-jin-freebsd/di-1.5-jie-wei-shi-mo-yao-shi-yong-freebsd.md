@@ -27,7 +27,7 @@
 * DTrace 框架与 GEOM 存储框架。
 * Linux 二进制兼容层，可运行 Linux 软件，只要其支持 CentOS 或 Ubuntu/Debian。且软件运行速度快于 Linux。
 * 安全事件审计。
-
+* 不同于 Linux 驱动捆绑内核的做法， FreeBSD 的驱动在大致上与内核解耦合。
 ## 选择 FreeBSD 的社会意义
 
 > 显而易见：目前 FreeBSD 上的桌面部件的缺失很大程度上是因为他们过分依赖了 Linux 特有函数库，比如包含 `ip`命令的`iproute2`软件包。更多的原因则是因为这些桌面或部件和 systemd 做了深度捆绑或者根本就是强制依赖，比如`NetworkManager` 。而 Samba 开发者则会说“We use Linux, we develop for Linux, all others please submit patches”。FreeBSD 社区的人把这种行为叫做“Linuxism”（Linux 主义/Linux 歧视），你会在文学故事章节里引用的链接中再次见到这个词，且某些人以此为豪。
