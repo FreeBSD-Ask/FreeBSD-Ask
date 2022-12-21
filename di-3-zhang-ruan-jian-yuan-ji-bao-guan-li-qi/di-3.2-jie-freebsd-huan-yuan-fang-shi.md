@@ -188,6 +188,10 @@ https://www.freebsd.org/platforms
 
 `# freebsd-update -r 13.0-RELEASE upgrade`
 
+## 境内 Git 镜像站
+
+<https://git.freebsd.cn>
+
 ## 不受安全支持的版本（请酌情使用）
 
 不受安全支持的版本也是可以使用二进制源的。
