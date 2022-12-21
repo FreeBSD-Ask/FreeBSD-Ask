@@ -8,7 +8,7 @@
 # gitup release #获取 release 版本的源代码
 ```
 
-# 境内 Git 镜像站
+## 境内 Git 镜像站
 
 <https://git.freebsd.cn>
 
