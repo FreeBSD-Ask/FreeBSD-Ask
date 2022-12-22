@@ -120,7 +120,7 @@ ports 下载路径是 `/usr/ports/distfiles`
 
 写入以下内容:
 
-`MASTER_SITE_OVERRIDE?=http://mirrors.163.com/freebsd-ports/distfiles/`
+`MASTER_SITE_OVERRIDE?=http://mirrors.163.com/freebsd-ports/distfiles/${DIST_SUBDIR}/`
 
 ### 中国科学技术大学开源软件镜像站
 
