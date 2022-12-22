@@ -123,7 +123,7 @@ ports 下载路径是 `/usr/ports/distfiles`
 
 创建或修改文件 `# ee /etc/make.conf`:
 
-写入以下内容:
+写入以下内容（注意结尾的 / 是必须的！下同）:
 
 `MASTER_SITE_OVERRIDE?=http://ports.freebsd.cn/ports-distfiles/${DIST_SUBDIR}/`
 
