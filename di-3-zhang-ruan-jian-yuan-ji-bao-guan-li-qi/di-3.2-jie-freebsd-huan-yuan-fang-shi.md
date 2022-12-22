@@ -114,6 +114,19 @@ FreeBSD: { enabled: no }
 
 ports 下载路径是 `/usr/ports/distfiles`
 
+>**警告**
+>
+>只有 freebsd.cn 镜像站的 ports 镜像是完整的，其余的大概只镜像了不到十分之一。请优先考虑使用 FreeBSD.cn。见 <https://github.com/ustclug/discussions/issues/408>。
+
+
+### FreeBSD.cn
+
+创建或修改文件 `# ee /etc/make.conf`:
+
+写入以下内容:
+
+`MASTER_SITE_OVERRIDE?=http://ports.freebsd.cn/ports-distfiles/${DIST_SUBDIR}/`
+
 ### 网易开源镜像站
 
 创建或修改文件 `# ee /etc/make.conf`:
@@ -130,13 +143,7 @@ ports 下载路径是 `/usr/ports/distfiles`
 
 `MASTER_SITE_OVERRIDE?=http://mirrors.ustc.edu.cn/freebsd-ports/distfiles/${DIST_SUBDIR}/`
 
-### FreeBSD.cn
 
-创建或修改文件 `# ee /etc/make.conf`:
-
-写入以下内容:
-
-`MASTER_SITE_OVERRIDE?=http://ports.freebsd.cn/ports-distfiles/${DIST_SUBDIR}/`
 
 ## portsnap 源:打包的 ports文件
 
