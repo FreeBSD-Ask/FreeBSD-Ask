@@ -14,7 +14,7 @@ current 相对稳定后会推送到 stable，但是不保证 stable 没有大的
 
 日常使用应该选择 release 版本，当有多个 release 版本时，应该选择最新的一个；
 
-如果硬件比较新或者需要测试 ax200 网卡，应该选择 current 版本，是滚动开发版。
+如果硬件比较新或者需要进行某些测试，应该选择 current 版本，是滚动开发版。
 
 注意：只有 rc、beta 和 release 才能使用 freebsd-update 命令更新系统（[且是一级架构](https://www.freebsd.org/platforms/)），其余系统均需要通过源代码编译的方式更新系统。
 
