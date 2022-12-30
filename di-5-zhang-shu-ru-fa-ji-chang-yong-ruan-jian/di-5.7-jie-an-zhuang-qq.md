@@ -42,6 +42,8 @@
 ```
 root@ykla:/# cp /usr/lib/x86_64-linux-gnu/libgtk2.0-0/gtk-query-immodules-2.0  /usr/bin/
 root@ykla:/# cp /usr/lib/x86_64-linux-gnu/libgtk-3-0/gtk-query-immodules-3.0 /usr/bin/
+root@ykla:/# echo $XDG_SESSION_TYPE
+x11
 ```
 ```
 root@ykla:/home/ykla # fcitx5-diagnose
