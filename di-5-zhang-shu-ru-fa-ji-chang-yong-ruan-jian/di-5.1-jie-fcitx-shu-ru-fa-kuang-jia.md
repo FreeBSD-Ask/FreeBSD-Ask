@@ -52,7 +52,10 @@ SLIM 窗口下会提示 IBUS 找不到……疑似 bug。
 
 自动启动：
 
-`# cp /usr/local/share/applications/org.fcitx.Fcitx5.desktop ~/.config/autostart/`
+```
+# mkdir -p ~/.config/autostart/ #若使用其他用户则需要在其命令行下再执行之。
+# cp /usr/local/share/applications/org.fcitx.Fcitx5.desktop ~/.config/autostart/
+```
 
 ### 根据 Shell 设置环境变量
 
