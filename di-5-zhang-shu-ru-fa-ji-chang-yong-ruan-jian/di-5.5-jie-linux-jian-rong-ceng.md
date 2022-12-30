@@ -184,10 +184,10 @@ root@ykla:/#
 可以看到多个包都提供了这个 so  文件，随便安装一个：
 
 ```
-# apt install qmmp
+# apt install webcamoid-plugins
 ```
 
-刷新 ldd 缓存：
+按照上述路径复制文件，并刷新 ldd 缓存：
 
 ```
 # cp  /usr/lib/x86_64-linux-gnu/avkys/submodules/MultiSink/libffmpeg.so /usr/lib #复制到系统的 lib 中
