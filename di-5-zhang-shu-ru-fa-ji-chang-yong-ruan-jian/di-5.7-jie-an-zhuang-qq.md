@@ -20,17 +20,20 @@
 # cp  /usr/lib/x86_64-linux-gnu/avkys/submodules/MultiSink/libffmpeg.so /usr/lib  #此时位于 Ubuntu 兼容层
 # ldconfig
 ```
+
 启动 QQ：
 
 ```
 # /usr/bin/qq
 ```
 
->**注意**
+<figure><img src="../.gitbook/assets/qq3.0.jpg" alt=""><figcaption></figcaption></figure>
+
+> **注意**
 >
->一旦彻底退出 QQ，那么在本次开机中就再也进不去了。除非重启系统，原因未知，若有人知道请提交报告。
+> 一旦彻底退出 QQ，那么在本次开机中就再也进不去了。除非重启系统，原因未知，若有人知道请提交报告。
 >
->输入法暂不可用，原因未知，若有人知道请提交报告。（我的环境是 X11 KDE5 FBSD-13.1-RELEASE Fcitx5 ）
+> 输入法暂不可用，原因未知，若有人知道请提交报告。（我的环境是 X11 KDE5 FBSD-13.1-RELEASE Fcitx5 ）
 
 ## Linux QQ 2.x （GTK2.0）
 
