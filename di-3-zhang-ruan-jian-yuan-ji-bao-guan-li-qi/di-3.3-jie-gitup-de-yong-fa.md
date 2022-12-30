@@ -12,7 +12,30 @@
 
 <https://git.freebsd.cn>
 
-## 故障排除：速度太慢
+使用说明：
+
+```
+# ee /usr/local/etc/gitup.conf
+```
+
+将
+```
+                "host"           : "git.freebsd.org",
+```
+
+中的 `org` 改为 `cn` 即可：
+
+```
+                "host"           : "git.freebsd.cn",
+```
+
+拉取 ports：
+
+```
+# gitup ports
+```
+
+## 故障排除：速度太慢（若不使用 freebsd.cn 镜像站）
 
 设置 HTTP 代理
 
