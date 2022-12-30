@@ -24,7 +24,7 @@
 启动 QQ：
 
 ```
-# /usr/bin/qq #此时位于 Ubuntu 兼容层
+# /bin/qq #此时位于 Ubuntu 兼容层
 ```
 
 ![](../.gitbook/assets/qq3.0.jpg)
@@ -34,7 +34,7 @@
 >
 > 只能输入英文，中文输入法暂不可用，原因未知，若有人知道请提交报告。（我的环境是 X11 KDE5 FBSD-13.1-RELEASE Fcitx5 ）
 >
->**如果退出后进不去，请加参数 `--in-process-gpu` 执行之即可，即 `/usr/bin/qq --in-process-gpu`**。
+>**如果退出后进不去，请加参数 `--in-process-gpu` 执行之即可，即 `/bin/qq --in-process-gpu`**。
 
 **一些可能会用到的信息**
 
