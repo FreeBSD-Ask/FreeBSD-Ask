@@ -99,7 +99,7 @@ linsysfs        /compat/ubuntu/sys      linsysfs        rw,late                 
 
 ### 换源
 
-在卸载 rsyslog 之后，换源,由于 SSL 证书没有更新，所以还不能用 https：
+在卸载 rsyslog 之后，换源，由于 SSL 证书没有更新，所以还不能用 https 源：
 
 ```
 # ee /compat/ubuntu/etc/apt/sources.list #此时处于 FreeBSD 系统！因为 Ubuntu 兼容层还没有文本编辑器。
