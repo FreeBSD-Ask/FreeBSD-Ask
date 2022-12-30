@@ -27,7 +27,8 @@
 # /usr/bin/qq
 ```
 
-<figure><img src="../.gitbook/assets/qq3.0.jpg" alt=""><figcaption></figcaption></figure>
+![](../.gitbook/assets/qq3.0.jpg)
+
 
 > **注意**
 >
