@@ -18,7 +18,7 @@
 ```
 # apt install libgbm-dev libasound2-dev webcamoid-plugins fonts-wqy-microhei  fonts-wqy-zenhei #此时位于 Ubuntu 兼容层
 # cp  /usr/lib/x86_64-linux-gnu/avkys/submodules/MultiSink/libffmpeg.so /usr/lib  #此时位于 Ubuntu 兼容层
-# ldconfig
+# ldconfig #此时位于 Ubuntu 兼容层
 ```
 
 启动 QQ：
