@@ -44,7 +44,7 @@ tmpfs    /compat/linux/dev/shm	tmpfs	rw,mode=1777	0	0
 
 ## 自己构建 Ubuntu 兼容层
 
-> **以下教程仅在 FreeBSD 13.0 测试通过。构建的是 Ubuntu 20.04 LTS（18.04 亦可）。兼容层使用技术实际上是 Linux jail，并非 chroot。**
+> **以下教程仅在 FreeBSD 13.0 测试通过。构建的是 Ubuntu 22.04 LTS（18.04\20.04 亦可）。兼容层使用技术实际上是 Linux jail，并非 chroot。**
 
 **需要先按照“系统自带”的方法配置好原生的 CentOS 兼容层。**
 
@@ -56,7 +56,8 @@ tmpfs    /compat/linux/dev/shm	tmpfs	rw,mode=1777	0	0
 
 ```
 # pkg install debootstrap
-# debootstrap focal /compat/ubuntu http://mirrors.163.com/ubuntu/
+# chmod 0755 /usr/local/sbin/debootstrap # 见 https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=268205
+# debootstrap jammy /compat/ubuntu http://mirrors.163.com/ubuntu/
 # reboot
 ```
 
@@ -81,10 +82,10 @@ linsysfs        /compat/ubuntu/sys      linsysfs        rw,late                 
 # mount -al
 ```
 
-如果提示没有home文件夹，请新建:
+如果提示没有 home 文件夹，请新建:
 
 ```
-# mkdir /home
+# mkdir /compat/ubuntu/home
 ```
 
 ### Jail
@@ -107,14 +108,14 @@ linsysfs        /compat/ubuntu/sys      linsysfs        rw,late                 
 写入：
 
 ```
-deb http://mirrors.163.com/ubuntu/ focal main restricted universe multiverse
-deb-src http://mirrors.163.com/ubuntu/ focal main restricted universe multiverse
-deb http://mirrors.163.com/ubuntu/ focal-updates main restricted universe multiverse
-deb-src http://mirrors.163.com/ubuntu/ focal-updates main restricted universe multiverse
-deb http://mirrors.163.com/ubuntu/ focal-backports main restricted universe multiverse
-deb-src http://mirrors.163.com/ubuntu/ focal-backports main restricted universe multiverse
-deb http://mirrors.163.com/ubuntu/ focal-security main restricted universe multiverse
-deb-src http://mirrors.163.com/ubuntu/ focal-security main restricted universe multiverse
+deb http://mirrors.163.com/ubuntu/ jammy main restricted universe multiverse
+deb-src http://mirrors.163.com/ubuntu/ jammy main restricted universe multiverse
+deb http://mirrors.163.com/ubuntu/ jammy-updates main restricted universe multiverse
+deb-src http://mirrors.163.com/ubuntu/ jammy-updates main restricted universe multiverse
+deb http://mirrors.163.com/ubuntu/ jammy-backports main restricted universe multiverse
+deb-src http://mirrors.163.com/ubuntu/ jammy-backports main restricted universe multiverse
+deb http://mirrors.163.com/ubuntu/ jammy-security main restricted universe multiverse
+deb-src http://mirrors.163.com/ubuntu/ jammy-security main restricted universe multiverse
 ```
 
 进入 Ubuntu 兼容层，开始更新系统，安装常用软件：
