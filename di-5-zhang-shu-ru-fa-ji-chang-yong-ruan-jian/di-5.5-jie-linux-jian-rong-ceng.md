@@ -150,7 +150,7 @@ deb-src http://mirrors.163.com/ubuntu/ jammy-security main restricted universe m
 
 #### 缺失 .so 文件
 
-*首先看看缺失哪些 .so 文件，一般不会只缺失一个。
+* 首先看看缺失哪些 .so 文件，一般不会只缺失一个。
 
 ```
 root@ykla:/# ldd /usr/bin/qq 
@@ -163,14 +163,14 @@ root@ykla:/# ldd /usr/bin/qq
 
 可以看到 `libffmpeg.so => not found`，缺“libffmpeg.so”。
 
-安装工具：
+* 安装工具
 
 ```
 # apt install apt-file
 # apt-file update
 ```
 
-查看 `libffmpeg.so` 属于哪个包：
+* 查看 `libffmpeg.so` 属于哪个包：
 
 ```
 root@ykla:/# apt-file search libffmpeg.so
@@ -187,14 +187,14 @@ root@ykla:/#
 # apt install webcamoid-plugins
 ```
 
-按照上述路径复制文件，并刷新 ldd 缓存：
+* 按照上述路径复制文件，并刷新 ldd 缓存：
 
 ```
 # cp  /usr/lib/x86_64-linux-gnu/avkys/submodules/MultiSink/libffmpeg.so /usr/lib #复制到系统的 lib 中
 # ldconfig
 ```
 
-查看：
+* 查看：
 
 ```
 root@ykla:/# ldd /usr/bin/qq 
