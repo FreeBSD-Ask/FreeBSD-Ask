@@ -161,7 +161,7 @@ deb-src http://mirrors.163.com/ubuntu/ jammy-security main restricted universe m
 
 > Systemd 不可用，但可以用`server xxx start`。其他更多可以运行的软件见 [https://wiki.freebsd.org/LinuxApps](https://wiki.freebsd.org/LinuxApps)。
 >
-> 参考文献 [https://wiki.freebsd.org/LinuxJails](https://wiki.freebsd.org/LinuxJails) 、[https://handbook.freebsdcn.org/di-10-zhang-linux-er-jin-zhi-jian-rong-ceng/10.4.-shi-yong-debootstrap8-gou-jian-debian-ubuntu-ji-ben-xi-tong](https://handbook.freebsdcn.org/di-10-zhang-linux-er-jin-zhi-jian-rong-ceng/10.4.-shi-yong-debootstrap8-gou-jian-debian-ubuntu-ji-ben-xi-tong)。
+> 参考文献 [https://wiki.freebsd.org/LinuxJails](https://wiki.freebsd.org/LinuxJails) 、<https://handbook.bsdcn.org/di-11-zhang-linux-er-jin-zhi-jian-rong-ceng/11.4.-shi-yong-debootstrap8-gou-jian-debian-ubuntu-ji-ben-xi-tong.html>。
 >
 > 类似的方法可以构建 Debian、Arch 兼容层（经测试会提示 内核太老，旧版本则强制升级无法使用）。Gentoo 兼容层则提示 bash so 文件错误，即使静态编译了 zsh。
 >
