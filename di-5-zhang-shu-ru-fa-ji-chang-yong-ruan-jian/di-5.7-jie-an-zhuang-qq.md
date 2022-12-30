@@ -24,7 +24,7 @@
 启动 QQ：
 
 ```
-# /usr/bin/qq
+# /usr/bin/qq #此时位于 Ubuntu 兼容层
 ```
 
 ![](../.gitbook/assets/qq3.0.jpg)
