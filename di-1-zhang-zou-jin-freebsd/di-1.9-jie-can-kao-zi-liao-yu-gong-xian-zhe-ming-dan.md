@@ -98,6 +98,8 @@ tergel93
 
 兜率
 
+[safreya](https://github.com/safreya)
+
 杭永聪
 
 Shengyun
