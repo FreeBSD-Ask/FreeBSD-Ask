@@ -109,6 +109,7 @@
 * [第9.3节 jail 配置](di-9-zhang-jail/di-9.3-jie-jail-pei-zhi.md)
 * [第9.4节 jail 更新](di-9-zhang-jail/di-9.4-jie-jail-geng-xin.md)
 * [第9.5节 使用 ezjail 管理 jail](di-9-zhang-jail/di-9.5-jie-shi-yong-ezjail-guan-li-jail.md)
+* [第9.6节 使用 qjail 管理 jail](di-9-zhang-jail/di-9.6-jie-shi-yong-qjail-guan-li-jail.md)
 
 ## 第10章 虚拟化
 
