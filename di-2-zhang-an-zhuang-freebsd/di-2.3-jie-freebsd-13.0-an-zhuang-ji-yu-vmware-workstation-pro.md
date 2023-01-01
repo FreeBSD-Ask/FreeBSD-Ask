@@ -4,9 +4,9 @@
 >
 > FreeBSD 暂不支持驱动 UEFI 下 Vmware 的显卡。能够解决者请提交 issue。
 
-## 视频教程（一共4节，完整版本请点击去 bilibili 观看）
+## 视频教程
 
-https://www.bilibili.com/video/BV14i4y137mh （里面有一些错误，例如不应该选择 local dns）
+<https://www.bilibili.com/video/BV1UR4y1U71T/>
 
 Release 正式版 镜像下载地址：[https://download.freebsd.org/ftp/releases/amd64/amd64/ISO-IMAGES/13.0/FreeBSD-13.0-RELEASE-amd64-disc1.iso](https://download.freebsd.org/ftp/releases/amd64/amd64/ISO-IMAGES/13.0/FreeBSD-13.0-RELEASE-amd64-disc1.iso)
 
