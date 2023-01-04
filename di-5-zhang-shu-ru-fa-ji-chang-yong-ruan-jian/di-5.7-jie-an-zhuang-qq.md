@@ -1,6 +1,11 @@
 # 第5.7节 安装 QQ
 
-## Linux QQ 3.x（electron）
+## Linux QQ 3.x（electron）【可选：基于 ArchLinux 兼容层】
+
+
+
+
+## Linux QQ 3.x（electron）【可选：基于 Ubuntu 兼容层】
 
 > 请先安装 CentOS 兼容层及 Ubuntu 兼容层，具体请看 第五章 第五节。
 
