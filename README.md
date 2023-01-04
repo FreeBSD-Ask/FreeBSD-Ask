@@ -10,7 +10,7 @@
 
 > **PDF 文档**
 >
-> **当前文档的 PDF 实时更新地址为** [**https://book.bsdcn.org/FreeBSD-从入门到跑路.pdf**](https://book.bsdcn.org/FreeBSD-从入门到跑路.pdf)**，历史存档在 [Release](https://github.com/FreeBSD-Ask/FreeBSD-Ask/releases)。**
+> **当前文档的 PDF 实时更新地址为** [**https://book.bsdcn.org/FreeBSD-从入门到跑路.pdf**](https://book.bsdcn.org/FreeBSD-从入门到跑路.pdf)**，历史存档位于 [Release](https://github.com/FreeBSD-Ask/FreeBSD-Ask/releases)。**
 
 ## 概述
 
