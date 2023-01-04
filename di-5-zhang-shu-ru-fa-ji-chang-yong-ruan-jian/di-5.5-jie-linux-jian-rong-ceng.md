@@ -63,7 +63,7 @@ tmpfs    /compat/linux/dev/shm	tmpfs	rw,mode=1777	0	0
 
 ### 挂载文件系统
 
-将以下行写入`/etc/fstab`：
+将以下行写入 `/etc/fstab`：
 
 ```
 # Device        Mountpoint              FStype          Options                      Dump    Pass#
@@ -82,17 +82,19 @@ linsysfs        /compat/ubuntu/sys      linsysfs        rw,late                 
 # mount -al
 ```
 
-如果提示没有 home 文件夹，请新建:
+如果提示没有 home 文件夹，请新建之:
 
 ```
 # mkdir /compat/ubuntu/home
 ```
 
+重启：
+
 ```
 # reboot
 ```
 
-### Jail
+### 进入 Ubuntu 兼容层
 
 首先 chroot 进去 Ubuntu，移除会报错的软件：
 
@@ -282,7 +284,7 @@ linsysfs        /compat/arch/sys      linsysfs        rw,late                   
 
 ### 基本配置
 
-初始化 pacman 密匙环
+#### 初始化 pacman 密匙环
 
 ```
 # chroot /compat/arch /bin/bash # 此时已经是 Arch 兼容层了！
