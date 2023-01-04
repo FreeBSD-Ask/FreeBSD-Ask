@@ -40,9 +40,9 @@ FreeBSD 已从 Linux 移植了显卡驱动，理论上，I 卡 A 卡 N 卡均在
 >
 > **如果提示 `/usr/ports/xxx no such xxx` 找不到路径，请先获取 portsnap：`portsnap auto`。portsnap 换源问题请看前文。**
 >
-> **如果提示内核版本不符（如** KLD XXX.ko _depends on kernel_ -_not available or version mismatch_**），请先升级系统或使用 ports 编译安装。**
-
-<figure><img src="../.gitbook/assets/amd_error.jpg" alt=""><figcaption></figcaption></figure>
+> **如果提示内核版本不符（`KLD XXX.ko depends on kernel - not available or version mismatch.`），请先升级系统或使用 ports 编译安装：**
+>
+>![](../.gitbook/assets/amd_error.jpg)
 
 ### 安装驱动——复杂版本
 
