@@ -292,8 +292,6 @@ linsysfs        /compat/arch/sys      linsysfs        rw,late                   
 # pacman-key --populate archlinux
 ```
 
-**提示：若卡在 Locally signing trusted keys in keyring 超过五分钟，就 `ctrl`+`c` 中断了重来。**
-
 #### 换源
 
 由于新安装的 Arch 没有任何文本管理器，所以我们需要在 FreeBSD 中编辑相关文件：
@@ -318,6 +316,12 @@ Server = https://mirrors.tuna.tsinghua.edu.cn/archlinux/$repo/os/$arch
 [archlinuxcn]
 Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch
 ```
+ 导入密钥：
+
+```
+# pacman -S archlinuxcn-keyring
+```
+**提示：若卡在 Locally signing trusted keys in keyring 超过五分钟，就 `ctrl`+`c` 中断了重来。**
 
 由于 yay 及类似 aur 软件均禁止直接 root，故需要在 chroot 中创建一个普通权限的用户（经测试 FreeBSD 中原有的普通用户不可用）：
 
@@ -335,6 +339,9 @@ Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch
 ```
 
 卸载 fakeroot 更改为 fakeroot-tcp，否则无法使用 aur：
+
+
+> 该 Bug 见 <https://archlinuxarm.org/forum/viewtopic.php?t=14466>
 
 ```
 # pacman -S fakeroot-tcp #
