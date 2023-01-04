@@ -6,7 +6,7 @@
 
 以下参考
 
-<https://handbook.bsdcn.org/di-11-zhang-linux-er-jin-zhi-jian-rong-ceng/11.2.-pei-zhi-linux-er-jin-zhi-jian-rong-ceng.html>
+[https://handbook.bsdcn.org/di-11-zhang-linux-er-jin-zhi-jian-rong-ceng/11.2.-pei-zhi-linux-er-jin-zhi-jian-rong-ceng.html](https://handbook.bsdcn.org/di-11-zhang-linux-er-jin-zhi-jian-rong-ceng/11.2.-pei-zhi-linux-er-jin-zhi-jian-rong-ceng.html)
 
 ### 开启服务
 
@@ -44,8 +44,10 @@ tmpfs    /compat/linux/dev/shm	tmpfs	rw,mode=1777	0	0
 
 ## Ubuntu 兼容层
 
+<figure><img src="../.gitbook/assets/UbuntuonBSD.png" alt=""><figcaption></figcaption></figure>
+
 > **以下教程仅在 FreeBSD 13.1-release 测试通过。构建的是 Ubuntu 22.04 LTS（18.04\20.04 亦可）。兼容层使用技术实际上是 Linux jail，并非 chroot。**
-> 
+>
 > 类似的方法可以构建 Debian 兼容层。
 
 **需要先配置好原生的 CentOS 兼容层。**
@@ -187,7 +189,7 @@ webcamoid-plugins: /usr/lib/x86_64-linux-gnu/avkys/submodules/VideoCapture/libff
 root@ykla:/# 
 ```
 
-可以看到多个包都提供了这个 so  文件，随便安装一个：
+可以看到多个包都提供了这个 so 文件，随便安装一个：
 
 ```
 # apt install webcamoid-plugins
@@ -209,7 +211,6 @@ root@ykla:/# ldd /usr/bin/qq
 …………………………以下省略……………………………………
 ```
 
-
 ### 示例：运行 Chrome
 
 ```
@@ -222,15 +223,16 @@ root@ykla:/# ldd /usr/bin/qq
 ```
 
 > Systemd 不可用，但可以用`server xxx start`。
-> 
+>
 > 导入过 [https://github.com/zq1997/deepin-wine](https://github.com/zq1997/deepin-wine) 源以安装 deepin-qq，deepin-wechat 等软件，但都提示`段错误`。所有 Wine 程序都无法正常运行。如果你能解决这个问题，请提出 issue 或者 pull。
 
 ## ArchLinux 兼容层
 
->以下部分参考 [从现有 Linux 发行版安装 Arch Linux](https://wiki.archlinuxcn.org/wiki/%E4%BB%8E%E7%8E%B0%E6%9C%89_Linux_%E5%8F%91%E8%A1%8C%E7%89%88%E5%AE%89%E8%A3%85_Arch_Linux)。
->
->**需要先配置好原生的 CentOS 兼容层。**
+<figure><img src="../.gitbook/assets/Arch.jpg" alt=""><figcaption></figcaption></figure>
 
+> 以下部分参考 [从现有 Linux 发行版安装 Arch Linux](https://wiki.archlinuxcn.org/wiki/%E4%BB%8E%E7%8E%B0%E6%9C%89\_Linux\_%E5%8F%91%E8%A1%8C%E7%89%88%E5%AE%89%E8%A3%85\_Arch\_Linux)。
+>
+> **需要先配置好原生的 CentOS 兼容层。**
 
 由于 Linux 兼容层默认内核是 3.17，太低了。直接构建的话，Arch 兼容层会在 chroot 的时候报错 `FATAL: kernel too old`。需要把 Linux 兼容层的内核版本改为 6.0.0（或其他较高版本）才可以：
 
@@ -248,6 +250,7 @@ root@ykla:/# ldd /usr/bin/qq
 # tar zxvf archlinux-bootstrap*.tar.gz -C /compat
 # mv /compat/root.x86_64 /compat/arch
 ```
+
 ### 挂载文件系统
 
 将以下行写入`/etc/fstab`：
@@ -307,7 +310,6 @@ Server = https://mirrors.tuna.tsinghua.edu.cn/archlinux/$repo/os/$arch
 # pacman -S base base-devel nano yay wqy-zenhei
 ```
 
-
 #### archlinuxcn 源配置
 
 ```
@@ -340,7 +342,7 @@ Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch
 
 #### 区域设置
 
->**提示：如果不设置则无法使用中文输入法。**
+> **提示：如果不设置则无法使用中文输入法。**
 
 编辑 `/etc/locale.gen`，把 `zh_CN.UTF-8 UTF-8` 前面的注释 `#` 删掉。
 
@@ -354,12 +356,10 @@ Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch
 
 > 其他更多可以运行的软件见 [https://wiki.freebsd.org/LinuxApps](https://wiki.freebsd.org/LinuxApps)。
 >
->
->Gentoo 兼容层则提示 bash so 文件错误，即使静态编译了 zsh。
-
+> Gentoo 兼容层则提示 bash so 文件错误，即使静态编译了 zsh。
 
 网站：
 
- - <https://www.freebsd.org/cgi/man.cgi?linux>
- - [https://wiki.freebsd.org/LinuxJails](https://wiki.freebsd.org/LinuxJails)
- - <https://handbook.bsdcn.org/di-11-zhang-linux-er-jin-zhi-jian-rong-ceng/11.4.-shi-yong-debootstrap8-gou-jian-debian-ubuntu-ji-ben-xi-tong.html>
+* [https://www.freebsd.org/cgi/man.cgi?linux](https://www.freebsd.org/cgi/man.cgi?linux)
+* [https://wiki.freebsd.org/LinuxJails](https://wiki.freebsd.org/LinuxJails)
+* [https://handbook.bsdcn.org/di-11-zhang-linux-er-jin-zhi-jian-rong-ceng/11.4.-shi-yong-debootstrap8-gou-jian-debian-ubuntu-ji-ben-xi-tong.html](https://handbook.bsdcn.org/di-11-zhang-linux-er-jin-zhi-jian-rong-ceng/11.4.-shi-yong-debootstrap8-gou-jian-debian-ubuntu-ji-ben-xi-tong.html)
