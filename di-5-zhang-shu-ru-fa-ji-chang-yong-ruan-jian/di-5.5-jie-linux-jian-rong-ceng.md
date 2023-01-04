@@ -226,4 +226,5 @@ root@ykla:/# ldd /usr/bin/qq
 > 类似的方法可以构建 Debian、Arch 兼容层（`FATAL: kernel too old`：需要在 `/etc/sysctl.conf` 添加 `compat.linux.osrelease=6.0.0` 把 Linux 兼容层的内核版本改为 6.0.0 才可以）。Gentoo 兼容层则提示 bash so 文件错误，即使静态编译了 zsh。
 >
 > 导入过 [https://github.com/zq1997/deepin-wine](https://github.com/zq1997/deepin-wine) 源以安装 deepin-qq，deepin-wechat 等软件，但都提示段错误。所有 Wine 程序都无法正常运行。如果你能解决这个问题，请提出 issue 或者 pull。
+> 
 > 参考资料：<https://www.freebsd.org/cgi/man.cgi?linux>
