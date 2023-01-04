@@ -1,5 +1,8 @@
 # 第4.2节 安装 KDE 5
 
+>视频教程：FreeBSD 13.1 + VMware 17 + KDE5: <https://www.bilibili.com/video/BV1UR4y1U71T/>
+
+
 ## 安装
 
 ```
