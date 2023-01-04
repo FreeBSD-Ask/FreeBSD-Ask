@@ -26,7 +26,7 @@
 ```
 # export LANG=zh_CN.UTF-8
 # export LC_ALL=zh_CN.UTF-8 # 如果不添加则中文输入法无法使用。
-# /bin/qq --in-process-gpu #此时位于 Ubuntu 兼容层
+# /bin/qq --no-sandbox --no-zygote --in-process-gpu #此时位于 Ubuntu 兼容层
 ```
 
 ![](../.gitbook/assets/qq3.0.jpg)
