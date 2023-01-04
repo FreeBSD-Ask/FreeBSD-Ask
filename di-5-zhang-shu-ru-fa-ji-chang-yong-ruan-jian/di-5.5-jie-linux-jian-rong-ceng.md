@@ -247,9 +247,9 @@ root@ykla:/# ldd /usr/bin/qq
 
 ```
 # cd /home/ykla
-# wget http://mirrors.cqu.edu.cn/archlinux/iso/2023.01.01/archlinux-bootstrap-2023.01.01-x86_64.tar.gz
-# tar zxvf archlinux-bootstrap*.tar.gz -C /compat
-# mv /compat/root.x86_64 /compat/arch
+# wget http://mirrors.cqu.edu.cn/archlinux/iso/2023.01.01/archlinux-bootstrap-x86_64.tar.gz # 该链接为动态更新。
+# tar zxvf archlinux-bootstrap-x86_64.tar.gz -C /compat # 若有报错 exit 请无视之。
+# mv /compat/root.x86_64 /compat/arch # 重命名 /
 ```
 
 ### 挂载文件系统
@@ -259,7 +259,7 @@ root@ykla:/# ldd /usr/bin/qq
 将以下行写入`/etc/fstab`：
 
 ```
-# Device        Mountpoint              FStype          Options                      Dump    Pass#
+# Device        Mountpoint            FStype          Options                      Dump    Pass#
 devfs           /compat/arch/dev      devfs           rw,late                      0       0
 tmpfs           /compat/arch/dev/shm  tmpfs           rw,late,size=1g,mode=1777    0       0
 fdescfs         /compat/arch/dev/fd   fdescfs         rw,late,linrdlnk             0       0
@@ -275,11 +275,13 @@ linsysfs        /compat/arch/sys      linsysfs        rw,late                   
 # mount -al
 ```
 
-如果提示没有 home 文件夹，请新建:
+如果提示没有 home 文件夹，请新建之:
 
 ```
 # mkdir /compat/arch/home
 ```
+
+重启：
 
 ```
 # reboot
@@ -300,7 +302,7 @@ linsysfs        /compat/arch/sys      linsysfs        rw,late                   
 由于新安装的 Arch 没有任何文本管理器，所以我们需要在 FreeBSD 中编辑相关文件：
 
 ```
-# ee /compat/arch/etc/pacman.d/mirrorlist # 此时位于 FreeBSD！将下行添加至顶部。
+# ee /compat/arch/etc/pacman.d/mirrorlist # 此时位于 FreeBSD！将下行添加至文件顶部。
 
 Server = https://mirrors.tuna.tsinghua.edu.cn/archlinux/$repo/os/$arch
 ```
@@ -314,19 +316,19 @@ Server = https://mirrors.tuna.tsinghua.edu.cn/archlinux/$repo/os/$arch
 #### archlinuxcn 源配置
 
 ```
-# nano /etc/pacman.conf # 将下两行添加至底部。
+# nano /etc/pacman.conf # 将下两行添加至文件底部。
 
 [archlinuxcn]
 Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch
 ```
- 导入密钥：
+导入密钥：
 
 ```
 # pacman -S archlinuxcn-keyring
 ```
-**提示：若卡在 Locally signing trusted keys in keyring 超过五分钟，就 `ctrl`+`c` 中断了重来。**
+**提示：若卡在 `Locally signing trusted keys in keyring` 超过五分钟，就 `ctrl`+`c` 中断了重来。**
 
-由于 yay 及类似 aur 软件均禁止直接 root，故需要在 chroot 中创建一个普通权限的用户（经测试 FreeBSD 中原有的普通用户不可用）：
+由于 yay 及类似安装 aur 的软件均禁止直接 root，故需要在 chroot 中创建一个普通权限的用户（经测试 FreeBSD 中原有的普通用户不可用）：
 
 ```
 # useradd -G wheel -m test
@@ -343,16 +345,15 @@ Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch
 
 卸载 fakeroot 更改为 fakeroot-tcp，否则无法使用 aur：
 
-
 > 该 Bug 见 <https://archlinuxarm.org/forum/viewtopic.php?t=14466>
 
 ```
-# pacman -S fakeroot-tcp #
+# pacman -S fakeroot-tcp #会询问是否卸载 fakeroot，请确认并卸载。
 ```
 
 #### 区域设置
 
-> **提示：如果不设置则无法使用中文输入法。**
+> **提示：如果不设置则无法在 ArchLinux 的图形化程序中使用中文输入法。**
 
 编辑 `/etc/locale.gen`，把 `zh_CN.UTF-8 UTF-8` 前面的注释 `#` 删掉。
 
