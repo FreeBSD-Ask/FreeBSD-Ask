@@ -230,6 +230,8 @@ root@ykla:/# ldd /usr/bin/qq
 
 <figure><img src="../.gitbook/assets/Arch.jpg" alt=""><figcaption></figcaption></figure>
 
+>注:ArchLinux 兼容层看上去占用略大于 Ubuntu 兼容层是因为后方运行的谷歌 Chrome 浏览器。
+
 > 以下部分参考 [从现有 Linux 发行版安装 Arch Linux](https://wiki.archlinuxcn.org/wiki/%E4%BB%8E%E7%8E%B0%E6%9C%89\_Linux\_%E5%8F%91%E8%A1%8C%E7%89%88%E5%AE%89%E8%A3%85\_Arch\_Linux)。
 >
 > **需要先配置好原生的 CentOS 兼容层。**
