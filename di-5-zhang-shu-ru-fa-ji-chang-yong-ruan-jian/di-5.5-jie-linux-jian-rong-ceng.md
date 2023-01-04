@@ -50,7 +50,6 @@ tmpfs    /compat/linux/dev/shm	tmpfs	rw,mode=1777	0	0
 
 **更多其他系统请看`/usr/local/share/debootstrap/scripts/`**
 
-将 `nullfs_load="YES"` 写入 `/boot/loader.conf`。
 
 ### 开始构建
 
@@ -62,6 +61,8 @@ tmpfs    /compat/linux/dev/shm	tmpfs	rw,mode=1777	0	0
 ```
 
 ### 挂载文件系统
+
+将 `nullfs_load="YES"` 写入 `/boot/loader.conf`。
 
 将以下行写入 `/etc/fstab`：
 
@@ -252,6 +253,8 @@ root@ykla:/# ldd /usr/bin/qq
 ```
 
 ### 挂载文件系统
+
+将 `nullfs_load="YES"` 写入 `/boot/loader.conf`。
 
 将以下行写入`/etc/fstab`：
 
