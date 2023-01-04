@@ -4,11 +4,7 @@
 
 ## CentOS 兼容层（原生）
 
-以下参考
-
-[https://handbook.bsdcn.org/di-11-zhang-linux-er-jin-zhi-jian-rong-ceng/11.2.-pei-zhi-linux-er-jin-zhi-jian-rong-ceng.html](https://handbook.bsdcn.org/di-11-zhang-linux-er-jin-zhi-jian-rong-ceng/11.2.-pei-zhi-linux-er-jin-zhi-jian-rong-ceng.html)
-
-### 开启服务
+### 安装基本系统
 
 ```
 # sysrc linux_enable="YES"
@@ -356,12 +352,13 @@ Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch
 
 ## 参考资料
 
-> 其他更多可以运行的软件见 [https://wiki.freebsd.org/LinuxApps](https://wiki.freebsd.org/LinuxApps)。
+> 其他更多可以运行的软件及方法见 [https://wiki.freebsd.org/LinuxApps](https://wiki.freebsd.org/LinuxApps)。
 >
 > Gentoo 兼容层则提示 bash so 文件错误，即使静态编译了 zsh。
 
 网站：
 
+* [https://handbook.bsdcn.org/di-11-zhang-linux-er-jin-zhi-jian-rong-ceng/11.2.-pei-zhi-linux-er-jin-zhi-jian-rong-ceng.html](https://handbook.bsdcn.org/di-11-zhang-linux-er-jin-zhi-jian-rong-ceng/11.2.-pei-zhi-linux-er-jin-zhi-jian-rong-ceng.html)
 * [https://www.freebsd.org/cgi/man.cgi?linux](https://www.freebsd.org/cgi/man.cgi?linux)
 * [https://wiki.freebsd.org/LinuxJails](https://wiki.freebsd.org/LinuxJails)
 * [https://handbook.bsdcn.org/di-11-zhang-linux-er-jin-zhi-jian-rong-ceng/11.4.-shi-yong-debootstrap8-gou-jian-debian-ubuntu-ji-ben-xi-tong.html](https://handbook.bsdcn.org/di-11-zhang-linux-er-jin-zhi-jian-rong-ceng/11.4.-shi-yong-debootstrap8-gou-jian-debian-ubuntu-ji-ben-xi-tong.html)
