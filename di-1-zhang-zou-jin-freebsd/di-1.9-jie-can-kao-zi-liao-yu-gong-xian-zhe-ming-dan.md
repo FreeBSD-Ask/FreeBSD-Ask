@@ -64,6 +64,8 @@ fjh1997
 
 X-Ray
 
+freyr
+
 [fanyang1997](https://github.com/fanyang1997)
 
 [orzyyyy](https://github.com/orzyyyy)
