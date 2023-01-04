@@ -57,7 +57,7 @@ tmpfs    /compat/linux/dev/shm	tmpfs	rw,mode=1777	0	0
 ```
 # pkg install debootstrap
 # chmod 0755 /usr/local/sbin/debootstrap # 见 https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=268205
-# debootstrap jammy /compat/ubuntu http://mirrors.163.com/ubuntu/
+# debootstrap jammy /compat/ubuntu http://mirrors.ustc.edu.cn/ubuntu/
 # reboot
 ```
 
@@ -108,14 +108,14 @@ linsysfs        /compat/ubuntu/sys      linsysfs        rw,late                 
 写入：
 
 ```
-deb http://mirrors.163.com/ubuntu/ jammy main restricted universe multiverse
-deb-src http://mirrors.163.com/ubuntu/ jammy main restricted universe multiverse
-deb http://mirrors.163.com/ubuntu/ jammy-updates main restricted universe multiverse
-deb-src http://mirrors.163.com/ubuntu/ jammy-updates main restricted universe multiverse
-deb http://mirrors.163.com/ubuntu/ jammy-backports main restricted universe multiverse
-deb-src http://mirrors.163.com/ubuntu/ jammy-backports main restricted universe multiverse
-deb http://mirrors.163.com/ubuntu/ jammy-security main restricted universe multiverse
-deb-src http://mirrors.163.com/ubuntu/ jammy-security main restricted universe multiverse
+deb http://mirrors.ustc.edu.cn/ubuntu/ jammy main restricted universe multiverse
+deb-src http://mirrors.ustc.edu.cn/ubuntu/ jammy main restricted universe multiverse
+deb http://mirrors.ustc.edu.cn/ubuntu/ jammy-security main restricted universe multiverse
+deb-src http://mirrors.ustc.edu.cn/ubuntu/ jammy-security main restricted universe multiverse
+deb http://mirrors.ustc.edu.cn/ubuntu/ jammy-updates main restricted universe multiverse
+deb-src http://mirrors.ustc.edu.cn/ubuntu/ jammy-updates main restricted universe multiverse
+deb http://mirrors.ustc.edu.cn/ubuntu/ jammy-backports main restricted universe multiverse
+deb-src http://mirrors.ustc.edu.cn/ubuntu/ jammy-backports main restricted universe multiverse
 ```
 
 进入 Ubuntu 兼容层，开始更新系统，安装常用软件：
