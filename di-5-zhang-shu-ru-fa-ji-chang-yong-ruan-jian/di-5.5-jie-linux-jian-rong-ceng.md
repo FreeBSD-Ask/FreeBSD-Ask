@@ -2,7 +2,7 @@
 
 **注意：一个常见误解就是把 FreeBSD 的 Linux 兼容层当做 Wine，认为这样做会降低软件的运行效率。实际情况是不仅不会慢，而且有些软件的运行速度还会比在 Linux 中更快，运行效率更高。因为他不是模拟器。**
 
-## 系统自带
+## CentOS 兼容层（原生）
 
 以下参考
 
@@ -16,8 +16,8 @@
 # kldload linux64
 # pkg install emulators/linux-c7 dbus
 # service linux start
-# sysrc dbus_enable="YES"
-# service dbus start
+# sysrc dbus_enable="YES" #一般桌面已经配置
+# service dbus start #一般桌面已经配置
 # dbus-uuidgen > /compat/linux/etc/machine-id
 # reboot
 ```
@@ -42,15 +42,17 @@ tmpfs    /compat/linux/dev/shm	tmpfs	rw,mode=1777	0	0
 # reboot
 ```
 
-## 自己构建 Ubuntu 兼容层
+## Ubuntu 兼容层
 
 > **以下教程仅在 FreeBSD 13.1-release 测试通过。构建的是 Ubuntu 22.04 LTS（18.04\20.04 亦可）。兼容层使用技术实际上是 Linux jail，并非 chroot。**
+> 
+> 类似的方法可以构建 Debian 兼容层。
 
-**需要先按照“系统自带”的方法配置好原生的 CentOS 兼容层。**
+**需要先配置好原生的 CentOS 兼容层。**
 
 **更多其他系统请看`/usr/local/share/debootstrap/scripts/`**
 
-将`nullfs_load="YES"`写入`/boot/loader.conf`
+将 `nullfs_load="YES"` 写入 `/boot/loader.conf`。
 
 ### 开始构建
 
@@ -219,12 +221,145 @@ root@ykla:/# ldd /usr/bin/qq
 # /usr/bin/google-chrome-stable --no-sandbox --no-zygote --in-process-gpu  # 此时已经位于 Ubuntu 兼容层了。
 ```
 
-> Systemd 不可用，但可以用`server xxx start`。其他更多可以运行的软件见 [https://wiki.freebsd.org/LinuxApps](https://wiki.freebsd.org/LinuxApps)。
->
-> 参考文献 [https://wiki.freebsd.org/LinuxJails](https://wiki.freebsd.org/LinuxJails) 、<https://handbook.bsdcn.org/di-11-zhang-linux-er-jin-zhi-jian-rong-ceng/11.4.-shi-yong-debootstrap8-gou-jian-debian-ubuntu-ji-ben-xi-tong.html>。
->
-> 类似的方法可以构建 Debian、Arch 兼容层（`FATAL: kernel too old`：需要在 `/etc/sysctl.conf` 添加 `compat.linux.osrelease=6.0.0` 把 Linux 兼容层的内核版本改为 6.0.0 才可以）。Gentoo 兼容层则提示 bash so 文件错误，即使静态编译了 zsh。
->
-> 导入过 [https://github.com/zq1997/deepin-wine](https://github.com/zq1997/deepin-wine) 源以安装 deepin-qq，deepin-wechat 等软件，但都提示段错误。所有 Wine 程序都无法正常运行。如果你能解决这个问题，请提出 issue 或者 pull。
+> Systemd 不可用，但可以用`server xxx start`。
 > 
-> 参考资料：<https://www.freebsd.org/cgi/man.cgi?linux>
+> 导入过 [https://github.com/zq1997/deepin-wine](https://github.com/zq1997/deepin-wine) 源以安装 deepin-qq，deepin-wechat 等软件，但都提示`段错误`。所有 Wine 程序都无法正常运行。如果你能解决这个问题，请提出 issue 或者 pull。
+
+## ArchLinux 兼容层
+
+>以下部分参考 [从现有 Linux 发行版安装 Arch Linux](https://wiki.archlinuxcn.org/wiki/%E4%BB%8E%E7%8E%B0%E6%9C%89_Linux_%E5%8F%91%E8%A1%8C%E7%89%88%E5%AE%89%E8%A3%85_Arch_Linux)。
+>
+>**需要先配置好原生的 CentOS 兼容层。**
+
+
+由于 Linux 兼容层默认内核是 3.17，太低了。直接构建的话，Arch 兼容层会在 chroot 的时候报错 `FATAL: kernel too old`。需要把 Linux 兼容层的内核版本改为 6.0.0（或其他较高版本）才可以：
+
+```
+# sysrc compat.linux.osrelease=6.0.0
+```
+
+即可永久生效。
+
+### 构建基本系统
+
+```
+# cd /home/ykla
+# wget http://mirrors.cqu.edu.cn/archlinux/iso/2023.01.01/archlinux-bootstrap-2023.01.01-x86_64.tar.gz
+# tar zxvf archlinux-bootstrap*.tar.gz -C /compat
+# mv /compat/root.x86_64 /compat/arch
+```
+### 挂载文件系统
+
+将以下行写入`/etc/fstab`：
+
+```
+# Device        Mountpoint              FStype          Options                      Dump    Pass#
+devfs           /compat/arch/dev      devfs           rw,late                      0       0
+tmpfs           /compat/arch/dev/shm  tmpfs           rw,late,size=1g,mode=1777    0       0
+fdescfs         /compat/arch/dev/fd   fdescfs         rw,late,linrdlnk             0       0
+linprocfs       /compat/arch/proc     linprocfs       rw,late                      0       0
+linsysfs        /compat/arch/sys      linsysfs        rw,late                      0       0
+/tmp            /compat/arch/tmp      nullfs          rw,late                      0       0
+/home           /compat/arch/home     nullfs          rw,late                      0       0
+```
+
+检查挂载有无报错：
+
+```
+# mount -al
+```
+
+如果提示没有 home 文件夹，请新建:
+
+```
+# mkdir /compat/arch/home
+```
+
+```
+# reboot
+```
+
+### 基本配置
+
+初始化 pacman 密匙环
+
+```
+# chroot /compat/arch /bin/bash # 此时已经是 Arch 兼容层了！
+# pacman-key --init
+# pacman-key --populate archlinux
+```
+
+**提示：若卡在 Locally signing trusted keys in keyring 超过五分钟，就 `ctrl`+`c` 中断了重来。**
+
+#### 换源
+
+由于新安装的 Arch 没有任何文本管理器，所以我们需要在 FreeBSD 中编辑相关文件：
+
+```
+# ee /compat/arch/etc/pacman.d/mirrorlist # 此时位于 FreeBSD！将下行添加至顶部。
+
+Server = https://mirrors.tuna.tsinghua.edu.cn/archlinux/$repo/os/$arch
+```
+
+安装一些基本软件:
+
+```
+# pacman -S base base-devel nano yay wqy-zenhei
+```
+
+
+#### archlinuxcn 源配置
+
+```
+# nano /etc/pacman.conf # 将下两行添加至底部。
+
+[archlinuxcn]
+Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch
+```
+
+由于 yay 及类似 aur 软件均禁止直接 root，故需要在 chroot 中创建一个普通权限的用户（经测试 FreeBSD 中原有的普通用户不可用）：
+
+```
+# useradd -G wheel -m test
+```
+
+编辑 sudo 配置文件（若有红色警告请无视之）：
+
+```
+# nano /etc/sudoers
+
+将 `%wheel ALL=(ALL) ALL` 前面的 `#` 删掉。
+将 `%sudo ALL=(ALL:ALL) ALL` 前面的 `#` 删掉。
+```
+
+卸载 fakeroot 更改为 fakeroot-tcp，否则无法使用 aur：
+
+```
+# pacman -S fakeroot-tcp #
+```
+
+#### 区域设置
+
+>**提示：如果不设置则无法使用中文输入法。**
+
+编辑 `/etc/locale.gen`，把 `zh_CN.UTF-8 UTF-8` 前面的注释 `#` 删掉。
+
+重新生成区域文件：
+
+```
+# locale-gen
+```
+
+## 参考资料
+
+> 其他更多可以运行的软件见 [https://wiki.freebsd.org/LinuxApps](https://wiki.freebsd.org/LinuxApps)。
+>
+>
+>Gentoo 兼容层则提示 bash so 文件错误，即使静态编译了 zsh。
+
+
+网站：
+
+ - <https://www.freebsd.org/cgi/man.cgi?linux>
+ - [https://wiki.freebsd.org/LinuxJails](https://wiki.freebsd.org/LinuxJails)
+ - <https://handbook.bsdcn.org/di-11-zhang-linux-er-jin-zhi-jian-rong-ceng/11.4.-shi-yong-debootstrap8-gou-jian-debian-ubuntu-ji-ben-xi-tong.html>
