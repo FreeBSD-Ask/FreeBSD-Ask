@@ -88,6 +88,10 @@ linsysfs        /compat/ubuntu/sys      linsysfs        rw,late                 
 # mkdir /compat/ubuntu/home
 ```
 
+```
+# reboot
+```
+
 ### Jail
 
 首先 chroot 进去 Ubuntu，移除会报错的软件：
