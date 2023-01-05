@@ -100,3 +100,72 @@ flavors  包含系统风格（ flavors ）和用户创建的自定义风格，�
 # qjail start (启动所有 jail)
 # qjail start jail1 (启动 jail1)
 ```
+
+停止 jail
+
+```
+# qjail stop (停止所有 jail)
+# qjail stop jail1 (停止 jail1)
+```
+
+
+重启 jail
+
+```
+# qjail restart (重启所有 jail)
+# qjail restart jail1 (重启 jail1)
+```
+
+进入 jail 控制台
+
+```
+# qjail console jail1 (进入 jail1)
+```
+
+进入 jail 控制台后，此时是jail 中的 root 帐号（进入 jail 的控制台，不需要输入密码），因 jail 可能开启对外服务，为安全考虑建议设置帐号密码
+
+## jail 更新
+
+下面更新 jail 的部分不针对单个 jail ，而是针对每个 jail ，因为这些文件利用 nullfs 共享一份。
+
+### 更新 jail 的基本二进制文件
+
+既上面提到的 sharedfs 中的文件
+
+```
+# qjail update -b
+```
+
+### 更新 ports tree 
+
+这里有`-p`（小写） 、 `-P`（大写）两个选项，`-p`（小写）使用 portsnap 更新 jail 的 ports tree，`-P`（大写）使用宿主机的 ports tree 更新 jail 的 ports tree。建议使用 `-P`（大写），避免两次下载 ports tree。
+
+```
+# qjail update -P
+```
+
+更新 src 
+
+```
+# qjail update -S (大写）
+```
+
+### 建议的更新过程
+
+这里使用了 gitup （需自行安装）
+
+```
+# freebsd-update fetch install
+# gitup src
+# gitup ports
+# qjail stop
+# qjail update -b
+# qjail update -S
+# qjail update -P
+# qjail start
+```
+
+## jail 设置
+
+qjail 可以用 `qjail config` 命令对 每个 jail 另作设置
+
