@@ -8,10 +8,33 @@ qjail 是 jail 环境的部署工具，分支自 ezjail 3.1
 
 文中会用到 pf 防火墙，使用其它防火墙的可以自行尝试进行防火墙相关配置
 
+## 预留 jail 的 ip
+
+`/etc/rc.conf` 文件中写入
+
+```
+cloned_interfaces="lo1"  (克隆出 lo1 ，尽量和宿主机网络配置分开）
+ifconfig_lo1_alias0="inet 192.168.1.0-9" (宿主机 ip 为 10.0.2.15, 选择该网段是为了和宿主机网段分开，可自行斟酌）
+```
+
+运行
+
+```
+# service netif restart
+```
+
+lo1 将获得10个 ip 地址，下面将用1-9这9个ip给jail使用。
+
 ## 安装 qjail 工具
 
 ```
 # pkg install qjail
+```
+
+启用 qjail
+
+```
+# sysrc qjail_enable=YES
 ```
 
 ## 部置 qjail 使用的目录结构
@@ -47,4 +70,7 @@ template 包含操作系统的配置文件，将被复制到每个 jail 的基�
 
 archive 保存 jail archive 命令产生的存档文件
 
-flavors  包含系统风格（ flavors ）和用户创建的自定义风格
+flavors  包含系统风格（ flavors ）和用户创建的自定义风格，其实就是自己定义的配置文件等
+
+## 部署 jail
+
