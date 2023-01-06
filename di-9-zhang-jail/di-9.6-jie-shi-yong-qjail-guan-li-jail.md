@@ -167,5 +167,44 @@ flavors  包含系统风格（ flavors ）和用户创建的自定义风格，�
 
 ## jail 设置
 
-qjail 可以用 `qjail config` 命令对 每个 jail 另作设置
+qjail 可以用 `qjail config` 命令对 每个 jail 另作设置，运行 `qjail config` 前须选停用指定的 jail。
+
+`qjail config` 命令选项较多，这里列出几个常用的，更多的请参考手册页
+
+### 1 `-h`
+
+```
+# qjail config -h jail1
+```
+
+快速开启 jail1 的 ssh 服务,新建一个 wheel 组用户，用户名和密码同 jail 名，首次用这个用户登录要求修改密码。也可以在登录 jail 控制台后，自行配置 sshd 服务。 
+
+### 2 `-m` `-M`
+
+```
+# qjail config -m jail1
+```
+
+设置 jail1 需手动启动（manual 状态），`qjail_enable="YES"` 写入 `/etc/rc.conf` 后在系统启动时会自动启动各个 jail ，设为手动启动后则不会在系统启动时自动启动相应的 jail ，须用 `qjail start jailname` 启动。
+
+对应小写的 `-m` 选项，有大写的 `-M` 选项，作用为关闭手动启动状态，即清除 manual 状态，可以在系统启动时自动启用 jail。qjail 中有大量类似的选项，小写字母的选项启用某个功能，大写字母的选项关闭对应功能。如果下文中同时出现小写和大写的选项就不在过多作出说明。
+
+### 3 `-r` `-R`
+
+```
+# qjail config -r jail1
+```
+
+将 jail1 设为不允许启动（norun 状态），相当于禁用该 jail。
+
+### 4 `-y` `-Y`
+
+```
+# qjail config -y jail1
+```
+
+启用该 jail 的 SysV IPC,在 jail 中安装 postgresql 时，需要打开这个选项，postgresql 运行基于这个功能。
+
+## 网络设定
+
 
