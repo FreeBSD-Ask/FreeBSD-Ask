@@ -94,6 +94,12 @@ flavors  包含系统风格（ flavors ）和用户创建的自定义风格，�
 
 ## qjail 基本使用
 
+列出 qjail 管理的 jail
+
+```
+# qjail list
+```
+
 启用 jail
 
 ```
@@ -247,9 +253,11 @@ rdr pass on em0 inet proto tcp from any to em0 port 22 -> 192.168.1.1 port 22  �
 
 ## 举例：部署 postgresql 的 jail
 
-假设已经如上文预留 jail ip
+假设已经如上文所述预留 jail ip，并成功运行 `qjail install` 命令
 
-宿主机中
+这里以 postgresql 15 为例，其它版本也适用
+
+宿主机中操作
 
 ```
 # qjail create -n lo1 -4 192.168.1.3 postgres
@@ -261,7 +269,7 @@ rdr pass on em0 inet proto tcp from any to em0 port 22 -> 192.168.1.1 port 22  �
 
 ```
 nat pass on em0 inet from lo1 to any ->em0  （上文已作说明）
-rdr pass on em0 inet proto tcp from any to em0 port 5432 -> 192.168.1.3 port 5432 （不建议写了此句，作用为使宿方机外可以访问 jail 中的 postgresql，此处应考虑安全和实际需要开启端口转发，不建议直接向外提供 postgresql 连接）
+rdr pass on em0 inet proto tcp from any to em0 port 5432 -> 192.168.1.3 port 5432 （不建议写下此句，作用为使宿方机外可以访问 jail 中的 postgresql，此处应考虑安全和实际需要开启端口转发，不建议直接向外提供 postgresql 连接）
 ```
 
 启用 pf
@@ -270,7 +278,46 @@ rdr pass on em0 inet proto tcp from any to em0 port 5432 -> 192.168.1.3 port 543
 # service pf start
 ```
 
-jail 中
+进入名为 postgres 的 jail 的控制台 
+
+```
+# qjail console postgres
+```
+
+jail 控制台中的操作
+
+下面命令皆在 jail 控制台下运行，pkg 安装是否使用镜像可自行决定，如果使用镜像可以在 jail 控制台中如同宿主机般进行设置，请参考相关文章。
+
+```
+# pkg install postgresql15-server
+# sysrc postgresql_enable=YES
+# mkdir -p -m 0700 /var/db/postgres/data15 (注意版本号）
+# chown postgres:postgres /var/db/postgres/data15 (这个目录应属于 postgres 用户)
+# su postgres   (这里切换到 postgres 用户，注意下面提示符的变化）
+$ initdb -A scram-sha-256 -E UTF8 -W -D /var/db/postgres/data15  
+$ exit   (回到 jail root 用户，注意提示符变化
+# service postgresql start
+```
+
+这里使用 initdb 而不是使用安装时提示的 `/usr/local/etc/rc.d/postgresql initdb` 是为了避免之后设置数据库密码时，来回修改 `pg_hba.conf` 文件，现对选项作简要说明:
+
+`-A` 为本地用户指定在pg_hba.conf中使用的默认认证方法
+
+`-E` 选择模板数据库的编码。
+
+`-W` 让initdb提示要求为数据库超级用户给予一个口令
+
+`-D` 指定数据库集簇应该存放的目录
+
+至此 postgresql 服务已经可以运行
+
+如果在上面的过程中 忘记使用 `qjail config -y postgres` 命令开启 SysV IPC，那么可能会出现下面的错误：
+
+初始化数据库集簇时的错误
+![](../gitbook/assets/qjailpostgresiniterror.png)
+
+启动 postgresql 时的错误
+![](../gitbook/assets/qjailpostgresstarterror.png)
 
 
 
