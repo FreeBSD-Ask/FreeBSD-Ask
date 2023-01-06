@@ -212,14 +212,44 @@ qjail 可以用 `qjail config` 命令对 每个 jail 另作设置，运行 `qjai
 在 `/etc/pf.conf` 中写入
 
 ```
-nat pass on em0 inet from lo1 to any ->em0  （从 lo1 接口发出的连接通过 nat 转发到 em0
-rdr pass on em0 inet proto tcp from any to em0 port 22 -> 192.168.1.1 port 22  （端口重定向，把连接到 em0 上22端口上的 tcp 连接重定向到 192.168.1.1 地址（即 jail1 ）的22端口上
+nat pass on em0 inet from lo1 to any ->em0  （使 jail 可以访问网络，从 lo1 接口发出的连接通过 nat 转发到 em0
+rdr pass on em0 inet proto tcp from any to em0 port 22 -> 192.168.1.1 port 22  （使宿方机外可以访问指定 jail，端口重定向，把连接到 em0 上22端口上的 tcp 连接重定向到 192.168.1.1 地址（即 jail1 ）的22端口上
 ```
 
 ```
 # sysrc pf_enable=YES
 # service pf start
 ```
+
+此时，绑定在 lo1 上的 jail 可以访问宿主机外网络，宿主机外网络可以通过宿主机22号端口连接 jail1 的22号端口。
+
+## 举例：部署 postgresql 的 jail
+
+假设已经如上文预留 jail ip
+
+宿主机中
+
+```
+# qjail create -n lo1 -4 192.168.1.3 postgres
+# qjail config -y postgres   (  开启 SysV IPC)
+# qjail start postgres
+```
+
+编辑 `/etc/pf.conf`
+
+```
+nat pass on em0 inet from lo1 to any ->em0  （上文已作说明）
+rdr pass on em0 inet proto tcp from any to em0 port 5432 -> 192.168.1.3 port 5432 （不建议写了此句，作用为使宿方机外可以访问 jail 中的 postgresql，此处应考虑安全和实际需要开启端口转发，不建议直接向外提供 postgresql 连接）
+```
+
+启用 pf
+
+```
+# service pf start
+```
+
+jail 中
+
 
 
 
