@@ -207,15 +207,19 @@ qjail 可以用 `qjail config` 命令对 每个 jail 另作设置，运行 `qjai
 
 ## 网络设定
 
-此时的 jail 还不能连接网络，因为 jail 绑定在 lo1 网络接口上，接下来通过 pf 设定网络, 其中 `em0` 为
+此时的 jail 还不能连接网络，因为 jail 绑定在 lo1 网络接口上，接下来通过 pf 设定网络, 其中 `em0` 为外网接口
 
 在 `/etc/pf.conf` 中写入
 
 ```
-nat pass on em0 inet from lo1 to any ->em0
-rdr pass on em0 inet proto tcp from any to em0 port 22 -> 192.168.1.1 port 22
+nat pass on em0 inet from lo1 to any ->em0  （从 lo1 接口发出的连接通过 nat 转发到 em0
+rdr pass on em0 inet proto tcp from any to em0 port 22 -> 192.168.1.1 port 22  （端口重定向，把连接到 em0 上22端口上的 tcp 连接重定向到 192.168.1.1 地址（即 jail1 ）的22端口上
 ```
 
+```
+# sysrc pf_enable=YES
+# service pf start
+```
 
 
 
