@@ -314,9 +314,11 @@ $ exit   (回到 jail root 用户，注意提示符变化
 如果在上面的过程中 忘记使用 `qjail config -y postgres` 命令开启 SysV IPC，那么可能会出现下面的错误：
 
 初始化数据库集簇时的错误
+
 ![](../gitbook/assets/qjailpostgresiniterror.png)
 
 启动 postgresql 时的错误
+
 ![](../gitbook/assets/qjailpostgresstarterror.png)
 
 
