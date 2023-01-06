@@ -124,6 +124,26 @@ flavors  包含系统风格（ flavors ）和用户创建的自定义风格，�
 
 进入 jail 控制台后，此时是jail 中的 root 帐号（进入 jail 的控制台，不需要输入密码），因 jail 可能开启对外服务，为安全考虑建议设置帐号密码
 
+备份 jail
+
+```
+# qjail archive -A (备份所有 jail)
+# qjail archive jail1 (备份 jail1)
+```
+
+从备份中恢复 jail
+
+```
+# qjail restore jail1 (从备份中恢复 jail1)
+```
+
+删除 jail
+
+```
+# qjail delete jail1  (删除 jail1 )
+# qjail delete -A     (删除所有 jail )
+```
+
 ## jail 更新
 
 下面更新 jail 的部分不针对单个 jail ，而是针对每个 jail ，因为这些文件利用 nullfs 共享一份。
@@ -207,7 +227,9 @@ qjail 可以用 `qjail config` 命令对 每个 jail 另作设置，运行 `qjai
 
 ## 网络设定
 
-此时的 jail 还不能连接网络，因为 jail 绑定在 lo1 网络接口上，接下来通过 pf 设定网络, 其中 `em0` 为外网接口
+这里作个提示，有的教程里会教你用 `qjail config -k jailname` 打开 raw_sockets 功能来打开外网访问的能力，其实这里是个误解，raw_sockets 只是像 ping 一类的工具需要使用而已，并不是说网络访问一定要打开 raw_sockets 。而且在 jail 中打开 raw_sockets 本身有安全风险，这是 jail 环境默认的一种安全设计。所以除非是你一定要在 jail 中用 ping 一类的工具，不管是用什么方式构建的 jail 都是不建议打开 raw_sockets 功能的。 
+
+此时的 jail 还不能连接网络，因为 jail 绑定在 lo1 网络接口上，lo1 并不能直接访问外网，接下来通过 pf 设定网络, 其中 `em0` 为外网接口
 
 在 `/etc/pf.conf` 中写入
 
