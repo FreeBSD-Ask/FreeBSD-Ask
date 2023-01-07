@@ -52,7 +52,7 @@ proc            /proc           procfs  rw      0       0
 > # pw groupmod wheel -m 用户名
 > ```
 
-> **注意：**
+> **故障排除**
 >
 > **如果 sddm 登录闪退到登录界面，请检查左下角是不是 plasma-X11，闪退的一般都是 Wayland！因为目前 FreeBSD 上的 KDE 5 尚不支持 Wayland。**
 >
@@ -60,7 +60,8 @@ proc            /proc           procfs  rw      0       0
 >![](../.gitbook/assets/x11.png)
 >
 > **如果你使用 VMware 虚拟机时，压根看不见 sddm 最下边的选项，请按照配置虚拟机章节的教程配置屏幕自动缩放。**
-
+> 
+> **如果启动 sddm 提醒 `/usr/bin/xauth: (stdin):1: bad display name`，但是可以正常 `startx`，则你需要在 `/etc/rc.conf` 里面检查你的 `hostname` 是不是空的，有没有设置。**
 
 
 
