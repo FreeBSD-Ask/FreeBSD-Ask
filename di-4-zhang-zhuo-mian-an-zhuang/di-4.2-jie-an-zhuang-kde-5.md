@@ -51,8 +51,9 @@ proc            /proc           procfs  rw      0       0
 > # pw groupmod wheel -m 用户名
 > ```
 
-> **故障排除**
->
+## 故障排除
+
+
 > **如果 sddm 登录闪退到登录界面，请检查左下角是不是 plasma-X11，闪退的一般都是 Wayland！因为目前 FreeBSD 上的 KDE 5 尚不支持 Wayland。**
 >
 > <img src="../.gitbook/assets/Wayland.png" alt="" data-size="original"><img src="../.gitbook/assets/x11.png" alt="" data-size="original">
