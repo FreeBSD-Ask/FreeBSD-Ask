@@ -23,7 +23,7 @@ proc            /proc           procfs  rw      0       0
 
 > 添加 proc 挂载这一步是非常必要的，如果不添加会导致桌面服务无法正常运行，部分组件无法加载！
 
-> > **注意**
+> >**故障排除**
 > >
 > > 如果你不配置 proc，在普通用户下，你的所有图标都将变成无法点击的白色方块。且后续再进行配置也是无效的，必须重装系统。
 
@@ -34,7 +34,7 @@ proc            /proc           procfs  rw      0       0
 # sysrc sddm_enable="YES"
 ```
 
-然后
+然后（可选，如果不需要 `startx`。）
 
 ```
 # echo "exec ck-launch-session startplasma-x11" > ~/.xinitrc
