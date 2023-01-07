@@ -60,10 +60,12 @@ proc            /proc           procfs  rw      0       0
 > **如果你使用 VMware 虚拟机时，压根看不见 sddm 最下边的选项，请按照配置虚拟机章节的教程配置屏幕自动缩放。**
 >
 > **如果启动 sddm 提醒 `/usr/bin/xauth: (stdin):1: bad display name`，但是可以正常 `startx`，则你需要在 `/etc/rc.conf` 里面检查你的 `hostname` 是不是空的，有没有设置。**
+> 
+><figure><img src=".hostname./.gitbook/assets/errornohostname.png" alt=""><figcaption></figcaption></figure>
 >
->
+>设置 `hostname` 即可。
 
-<figure><img src="../.gitbook/assets/errornohostname.png" alt=""><figcaption></figcaption></figure>
+
 
 ## 中文化
 
