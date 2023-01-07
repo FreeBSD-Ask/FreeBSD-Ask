@@ -22,9 +22,9 @@ VMware Workstation Pro 是免费试用下载的，请勿从第三方站点下载
 
 [https://www.vmware.com/products/workstation-pro/workstation-pro-evaluation.html](https://www.vmware.com/products/workstation-pro/workstation-pro-evaluation.html)
 
-### VMware Workstation 16 Player
+### VMware Workstation Player
 
-VMware Workstation 16 Player 是个人免费使用的，你也可以选择此版本。
+VMware Workstation Player 是个人免费使用的，你也可以选择此版本。
 
 [https://www.vmware.com/products/workstation-player/workstation-player-evaluation.html](https://www.vmware.com/products/workstation-player/workstation-player-evaluation.html)
 
