@@ -1,7 +1,6 @@
 # 第4.2节 安装 KDE 5
 
->视频教程：FreeBSD 13.1 + VMware 17 + KDE5: <https://www.bilibili.com/video/BV1UR4y1U71T/>
-
+> 视频教程：FreeBSD 13.1 + VMware 17 + KDE5: [https://www.bilibili.com/video/BV1UR4y1U71T/](https://www.bilibili.com/video/BV1UR4y1U71T/)
 
 ## 安装
 
@@ -23,7 +22,7 @@ proc            /proc           procfs  rw      0       0
 
 > 添加 proc 挂载这一步是非常必要的，如果不添加会导致桌面服务无法正常运行，部分组件无法加载！
 
-> >**故障排除**
+> > **故障排除**
 > >
 > > 如果你不配置 proc，在普通用户下，你的所有图标都将变成无法点击的白色方块。且后续再进行配置也是无效的，必须重装系统。
 
@@ -56,14 +55,15 @@ proc            /proc           procfs  rw      0       0
 >
 > **如果 sddm 登录闪退到登录界面，请检查左下角是不是 plasma-X11，闪退的一般都是 Wayland！因为目前 FreeBSD 上的 KDE 5 尚不支持 Wayland。**
 >
->![](../.gitbook/assets/Wayland.png)
->![](../.gitbook/assets/x11.png)
+> <img src="../.gitbook/assets/Wayland.png" alt="" data-size="original"><img src="../.gitbook/assets/x11.png" alt="" data-size="original">
 >
 > **如果你使用 VMware 虚拟机时，压根看不见 sddm 最下边的选项，请按照配置虚拟机章节的教程配置屏幕自动缩放。**
-> 
+>
 > **如果启动 sddm 提醒 `/usr/bin/xauth: (stdin):1: bad display name`，但是可以正常 `startx`，则你需要在 `/etc/rc.conf` 里面检查你的 `hostname` 是不是空的，有没有设置。**
+>
+>
 
-
+<figure><img src="../.gitbook/assets/errornohostname.png" alt=""><figcaption></figcaption></figure>
 
 ## 中文化
 
