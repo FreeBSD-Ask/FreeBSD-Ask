@@ -257,7 +257,7 @@ root@ykla:/# ldd /usr/bin/qq
 ```
 # cd /home/ykla
 # wget http://mirrors.cqu.edu.cn/archlinux/iso/2023.01.01/archlinux-bootstrap-x86_64.tar.gz # 该链接为动态更新。
-# tar xpvf archlinux-bootstrap-x86_64.tar.gz -C /compat --numeric-owner # 若有报错 exit 请无视之。
+# tar xpvf archlinux-bootstrap-x86_64.tar.gz -C /compat --numeric-owner # 若有报错 exit 请无视之。-
 # mv /compat/root.x86_64 /compat/arch # 重命名 /
 ```
 
@@ -378,7 +378,7 @@ Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch
 ### 构建基本系统
 
 ```
-# wget https://mirrors.ustc.edu.cn/gentoo/releases/amd64/autobuilds/20230101T164658Z/stage3-amd64-systemd-20230101T164658Z.tar.xz
+# wget https://mirrors.ustc.edu.cn/gentoo/releases/amd64/autobuilds/20230101T164658Z/stage3-amd64-systemd-20230101T164658Z.tar.xz #该链接不固定！自己找。
 # mkdir -p /compat/gentoo
 # tar xpvf stage3-amd64-systemd-20230101T164658Z.tar.xz -C /compat/gentoo --numeric-owner
 ```
@@ -408,7 +408,9 @@ linsysfs        /compat/gentoo/sys      linsysfs        rw,late                 
 ```
 MAKEOPTS="-j2"
 GENTOO_MIRRORS="https://mirrors.ustc.edu.cn/gentoo"
+FEATURES="-ipc-sandbox -mount-sandbox -network-sandbox -pid-sandbox -xattr -sandbox -usersandbox"
 ```
+
 
 进行常见配置：
 
@@ -433,11 +435,10 @@ GENTOO_MIRRORS="https://mirrors.ustc.edu.cn/gentoo"
 获取 Gentoo ebuild 数据库快照
 
 ```
-# emerge-webrsync # 请无视 `Cannot change mode to rwxr-xr-x: Bad file descriptor` 权限错误。此处位于 Gentoo!
+# emerge-webrsync # 会产生 `Cannot change mode to rwxr-xr-x: Bad file descriptor` 权限错误。此处位于 Gentoo!
 # chmod -R 755 /var/db/repos/gentoo #修正权限。此处位于 Gentoo!
 # chown -R portage:portage /var/db/repos/gentoo # 无效，似乎 这个文件系统有问题。
 # chown -R portage:portage /var/tmp/portage # 无效，似乎 这个文件系统有问题。
-# export FEATURES="-ipc-sandbox -mount-sandbox -network-sandbox -pid-sandbox -sandbox -usersandbox -xattr" # 禁用 jail 不支持的标志。此处位于 Gentoo!
 ```
 
 测试安装 screenfetch：
@@ -510,6 +511,35 @@ mkfifo: cannot set permissions of '/var/tmp/portage/app-misc/screenfetch-3.9.1/t
 
 测试**失败**，权限看上去还是有些问题，如果有人能解决请报告。
 
+可能有用的信息：
+
+```
+ykla / # mount
+zroot/ROOT/default on / type zfs (rw,noatime)
+devfs on /dev type devfs (rw)
+proc on /proc type proc (rw)
+/sys on /sys type sysfs (rw)
+tmpfs on /dev/shm type tmpfs (rw)
+zroot/tmp on /tmp type zfs (rw,nosuid,noatime)
+zroot/usr/ports on /usr/ports type zfs (rw,nosuid,noatime)
+zroot on /zroot type zfs (rw,noatime)
+zroot/usr/home on /usr/home type zfs (rw,noatime)
+zroot/var/log on /var/log type zfs (rw,noexec,nosuid,noatime)
+zroot/var/mail on /var/mail type zfs (rw)
+zroot/var/tmp on /var/tmp type zfs (rw,nosuid,noatime)
+zroot/var/crash on /var/crash type zfs (rw,noexec,nosuid,noatime)
+zroot/var/audit on /var/audit type zfs (rw,noexec,nosuid,noatime)
+zroot/usr/src on /usr/src type zfs (rw,noatime)
+devfs on /dev type devfs (rw)
+fdescfs on /dev/fd type fdescfs (rw)
+devfs on /compat/gentoo/dev type devfs (rw)
+tmpfs on /compat/gentoo/dev/shm type tmpfs (rw)
+fdescfs on /compat/gentoo/dev/fd type fdescfs (rw)
+proc on /compat/gentoo/proc type proc (rw)
+/sys on /compat/gentoo/sys type sysfs (rw)
+/tmp on /compat/gentoo/tmp type nullfs (rw,nosuid,noatime)
+/usr/home on /compat/gentoo/home type nullfs (rw,noatime)
+```
 
 ## 参考资料
 
