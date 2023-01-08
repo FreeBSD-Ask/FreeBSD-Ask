@@ -70,13 +70,13 @@ remote size / mtime: 195363380 / 1652346155
 
 部署好 qjail 的目录结构后 `/usr/jails` 目录下生成 `sharedfs` `template` `archive` `flavors` 四个目录
 
-sharedfs 包含一份只读的操作系统可执行库文件，挂载为 nullfs ，在各 jail 之间共享，以节省存储空间的使用
+- **sharedfs** 包含一份只读的操作系统可执行库文件，挂载为 nullfs ，在各 jail 之间共享，以节省存储空间的使用
 
-template 包含操作系统的配置文件，将被复制到每个 jail 的基本文件系统中
+- **template** 包含操作系统的配置文件，将被复制到每个 jail 的基本文件系统中
 
-archive 保存 jail archive 命令产生的存档文件
+- **archive** 保存 jail archive 命令产生的存档文件
 
-flavors  包含系统风格（ flavors ）和用户创建的自定义风格，其实就是自己定义的配置文件等
+- **flavors**  包含系统风格（ flavors ）和用户创建的自定义风格，其实就是自己定义的配置文件等
 
 ## 部署 jail
 
