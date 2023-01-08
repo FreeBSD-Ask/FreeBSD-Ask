@@ -396,6 +396,9 @@ linsysfs        /compat/gentoo/sys      linsysfs        rw,late                 
 /home           /compat/gentoo/home     nullfs          rw,late                      0       0
 ```
 
+```
+# mount -al # 检查有无编写错误
+```
 编辑：
 
 `ee /compat/gentoo/etc/portage/make.conf`
