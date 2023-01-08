@@ -209,6 +209,8 @@ qjail 可以用 `qjail config` 命令对每个 jail 另作设置，运行 `qjail
 
 `qjail config` 命令选项较多，这里列出几个常用的，更多的请参考手册页
 
+[qjail](https://www.freebsd.org/cgi/man.cgi?query=qjail&manpath=FreeBSD+13.1-RELEASE+and+Ports)
+
 ### 1 `-h`
 
 ```
