@@ -247,7 +247,7 @@ root@ykla:/# ldd /usr/bin/qq
 由于 Linux 兼容层默认内核是 3.17，太低了。直接构建的话，Arch 兼容层会在 chroot 的时候报错 `FATAL: kernel too old`。需要把 Linux 兼容层的内核版本改为 6.0.0（或其他较高版本）才可以：
 
 ```
-# sysrc compat.linux.osrelease=6.0.0
+# echo "compat.linux.osrelease=6.0.0" >> /etc/sysctl.conf
 ```
 
 即可永久生效。
@@ -420,7 +420,7 @@ GENTOO_MIRRORS="https://mirrors.ustc.edu.cn/gentoo"
 # ee /compat/gentoo/etc/portage/repos.conf/gentoo.conf # 此处位于 FreeBSD！
 ```
 
-把`sync-uri = rsync://rsync.gentoo.org/gentoo-portage` 修改为 `sync-uri = rsync://mirrors.ustc.edu.cn/gentoo-portage`
+把`sync-uri = rsync://rsync.gentoo.org/gentoo-portage` 修改为 `sync-uri = rsync://mirrors.163.com/gentoo-portage`
 
 ```
 # chroot /compat/gentoo /bin/bash # 此处位于 Gentoo!
@@ -429,7 +429,7 @@ GENTOO_MIRRORS="https://mirrors.ustc.edu.cn/gentoo"
 获取 Gentoo ebuild 数据库快照
 
 ```
-# emerge-webrsync # 请无视权限错误。此处位于 Gentoo!
+# emerge --sync # 请无视 `Cannot change mode to rwxr-xr-x: Bad file descriptor` 权限错误。此处位于 Gentoo!
 # chmod -R 755 /var/db/repos/gentoo #修正权限。此处位于 Gentoo!
 # export FEATURES="-ipc-sandbox -mount-sandbox -network-sandbox -pid-sandbox -sandbox -usersandbox -xattr" # 禁用 jail 不支持的标志。此处位于 Gentoo!
 ```
