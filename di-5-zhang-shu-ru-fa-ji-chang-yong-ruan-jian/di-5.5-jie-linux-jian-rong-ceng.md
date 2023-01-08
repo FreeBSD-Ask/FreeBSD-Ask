@@ -132,7 +132,7 @@ deb-src http://mirrors.ustc.edu.cn/ubuntu/ jammy-backports main restricted unive
 # apt update && apt upgrade && apt install nano wget # 此时已经位于 Ubuntu 兼容层了。
 ```
 
-安装 Windows 11 字体【可选。自制包，打包同时兼容与低版本 Ubuntu】
+### 安装 Windows 11 字体【可选。自制包，打包同时兼容与低版本 Ubuntu】
 
 ```
 # apt install git
