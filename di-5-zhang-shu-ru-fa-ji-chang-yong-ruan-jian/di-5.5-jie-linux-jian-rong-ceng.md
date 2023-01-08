@@ -257,7 +257,7 @@ root@ykla:/# ldd /usr/bin/qq
 ```
 # cd /home/ykla
 # wget http://mirrors.cqu.edu.cn/archlinux/iso/2023.01.01/archlinux-bootstrap-x86_64.tar.gz # 该链接为动态更新。
-# tar zxvf archlinux-bootstrap-x86_64.tar.gz -C /compat # 若有报错 exit 请无视之。
+# tar xpvf archlinux-bootstrap-x86_64.tar.gz -C /compat --numeric-owner # 若有报错 exit 请无视之。
 # mv /compat/root.x86_64 /compat/arch # 重命名 /
 ```
 
@@ -379,7 +379,7 @@ Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch
 ```
 # wget https://mirrors.ustc.edu.cn/gentoo/releases/amd64/autobuilds/20230101T164658Z/stage3-amd64-openrc-20230101T164658Z.tar.xz
 # mkdir -p /compat/gentoo
-# tar zxvf stage3-amd64-openrc-20230101T164658Z.tar.xz -C /compat/gentoo
+# tar xpvf stage3-amd64-openrc-20230101T164658Z.tar.xz -C /compat/gentoo --numeric-owner
 ```
 
 编辑 `ee /etc/fstab`，加入：
