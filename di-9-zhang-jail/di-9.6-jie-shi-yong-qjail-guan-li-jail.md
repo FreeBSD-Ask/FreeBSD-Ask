@@ -209,7 +209,7 @@ qjail 可以用 `qjail config` 命令对每个 jail 另作设置，运行 `qjail
 
 `qjail config` 命令选项较多，这里列出几个常用的，更多的请参考手册页
 
-[qjail](https://www.freebsd.org/cgi/man.cgi?query=qjail&manpath=FreeBSD+13.1-RELEASE+and+Ports)
+[https://www.freebsd.org/cgi/man.cgi?query=qjail&manpath=FreeBSD+13.1-RELEASE+and+Ports](https://www.freebsd.org/cgi/man.cgi?query=qjail&manpath=FreeBSD+13.1-RELEASE+and+Ports)
 
 ### 1 `-h`
 
@@ -254,8 +254,8 @@ qjail 可以用 `qjail config` 命令对每个 jail 另作设置，运行 `qjail
 在 `/etc/pf.conf` 中写入
 
 ```
-nat pass on em0 inet from lo1 to any ->em0  （使 jail 可以访问网络，从 lo1 接口发出的连接通过 nat 转发到 em0
-rdr pass on em0 inet proto tcp from any to em0 port 22 -> 192.168.1.1 port 22  （使宿方机外可以访问指定 jail，端口重定向，把连接到 em0 上22端口上的 tcp 连接重定向到 192.168.1.1 地址（即 jail1 ）的22端口上
+nat pass on em0 inet from lo1 to any -> em0  # 使 jail 可以访问网络，从 lo1 接口发出的连接通过 nat 转发到 em0
+rdr pass on em0 inet proto tcp from any to em0 port 22 -> 192.168.1.1 port 22  # 使宿方机外可以访问指定 jail，端口重定向，把连接到 em0 上22端口上的 tcp 连接重定向到 192.168.1.1 地址（即 jail1 ）的22端口上
 ```
 
 ```
@@ -265,7 +265,7 @@ rdr pass on em0 inet proto tcp from any to em0 port 22 -> 192.168.1.1 port 22  �
 
 此时，绑定在 lo1 上的 jail 可以访问宿主机外网络，宿主机外网络可以通过宿主机22号端口连接 jail1 的22号端口。
 
-## 举例：部署 postgresql 的 jail
+## 示例：部署 postgresql 的 jail
 
 假设已经如上文所述预留 jail ip，并成功运行 `qjail install` 命令
 
@@ -315,17 +315,17 @@ $ exit   (回到 jail root 用户，注意提示符变化
 
 这里使用 initdb 而不是使用安装时提示的 `/usr/local/etc/rc.d/postgresql initdb` 是为了避免之后设置数据库密码时，来回修改 `pg_hba.conf` 文件，现对选项作简要说明:
 
-`-A` 为本地用户指定在pg_hba.conf中使用的默认认证方法
+- **`-A`** 为本地用户指定在pg_hba.conf中使用的默认认证方法
 
-`-E` 选择模板数据库的编码。
+- **`-E`** 选择模板数据库的编码。
 
-`-W` 让initdb提示要求为数据库超级用户给予一个口令
+- **`-W`** 让initdb提示要求为数据库超级用户给予一个口令
 
-`-D` 指定数据库集簇应该存放的目录
+- **`-D`** 指定数据库集簇应该存放的目录
 
 至此 postgresql 服务已经可以运行
 
-如果在上面的过程中 忘记使用 `qjail config -y postgres` 命令开启 SysV IPC，那么可能会出现下面的错误：
+如果在上面的过程中忘记使用 `qjail config -y postgres` 命令开启 SysV IPC，那么可能会出现下面的错误：
 
 初始化数据库集簇时的错误
 
@@ -335,6 +335,13 @@ $ exit   (回到 jail root 用户，注意提示符变化
 
 ![](../gitbook/assets/qjailpostgresstarterror.png)
 
+此时在宿主机控制台下执行 `qjail config -y postgres` 即可修正错误，具体如下：
 
+```
+# qjail stop postgres
+# qjail config -y postgres
+# qjail start postgres
+```
 
+再次进入 jail 的控制台就可以正常初始化数据库集簇和运行 postgresql 服务了。
 
