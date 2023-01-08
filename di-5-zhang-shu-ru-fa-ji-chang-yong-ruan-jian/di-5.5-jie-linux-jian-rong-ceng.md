@@ -375,6 +375,7 @@ Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch
 
 ## Gentoo Linux 兼容层（portage 尚不可用）
 
+### 构建基本系统
 
 ```
 # wget https://mirrors.ustc.edu.cn/gentoo/releases/amd64/autobuilds/20230101T164658Z/stage3-amd64-openrc-20230101T164658Z.tar.xz
@@ -431,6 +432,8 @@ GENTOO_MIRRORS="https://mirrors.ustc.edu.cn/gentoo"
 ```
 # emerge --sync # 请无视 `Cannot change mode to rwxr-xr-x: Bad file descriptor` 权限错误。此处位于 Gentoo!
 # chmod -R 755 /var/db/repos/gentoo #修正权限。此处位于 Gentoo!
+# chown -R portage:portage /var/db/repos/gentoo # 无效，似乎 这个文件系统有问题。
+# chown -R portage:portage /var/tmp/portage # 无效，似乎 这个文件系统有问题。
 # export FEATURES="-ipc-sandbox -mount-sandbox -network-sandbox -pid-sandbox -sandbox -usersandbox -xattr" # 禁用 jail 不支持的标志。此处位于 Gentoo!
 ```
 
