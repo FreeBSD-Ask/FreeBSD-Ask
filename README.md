@@ -6,7 +6,7 @@
 >
 >**当前网站部署的域名为 <https://book.bsdcn.org>，如果当前使用的不是这个域名，请切换到该域名。其他域名不保证可用性。**
 >
->**For the English version, please visit <https://mfga.bsdcn.org>.**
+>**For the English version, please visit <https://mfga.bsdcn.org>. The English version book is a stub. Please help out by expanding it.**
 
 > **PDF 文档**
 >
@@ -100,7 +100,6 @@
 |QQ 群|787969044|
 |Handbook 最新翻译|<https://handbook.bsdcn.org>|
 |FreeBSD 入门书籍|<https://book.bsdcn.org>|
-|FreeBSD 中文论坛|<https://bbs.bsdcn.org>|
 
 
 微信公众号: freebsdzh （扫码关注）
