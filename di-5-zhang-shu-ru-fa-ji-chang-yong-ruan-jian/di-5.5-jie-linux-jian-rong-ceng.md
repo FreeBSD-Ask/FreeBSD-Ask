@@ -380,7 +380,7 @@ Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch
 ```
 # wget https://mirrors.ustc.edu.cn/gentoo/releases/amd64/autobuilds/20230101T164658Z/stage3-amd64-systemd-20230101T164658Z.tar.xz
 # mkdir -p /compat/gentoo
-# tar xpvf stage3-amd64-openrc-20230101T164658Z.tar.xz -C /compat/gentoo --numeric-owner
+# tar xpvf stage3-amd64-systemd-20230101T164658Z.tar.xz -C /compat/gentoo --numeric-owner
 ```
 
 编辑 `ee /etc/fstab`，加入：
