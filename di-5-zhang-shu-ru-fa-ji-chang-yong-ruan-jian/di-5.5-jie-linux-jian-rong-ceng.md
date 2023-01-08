@@ -301,7 +301,7 @@ linsysfs        /compat/arch/sys      linsysfs        rw,late                   
 #### 初始化 pacman 密匙环
 
 ```
-# cp /etc/resolv.conf /compat//gentoo/etc/ # 此时位于 FreeBSD！
+# cp /etc/resolv.conf /compat/arch/etc/ # 此时位于 FreeBSD！复制 DNS 解析。
 # chroot /compat/arch /bin/bash # 此时已经是 Arch 兼容层了！
 # pacman-key --init
 # pacman-key --populate archlinux
@@ -373,7 +373,7 @@ Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch
 # locale-gen
 ```
 
-## Gentoo Linux 兼容层
+## Gentoo Linux 兼容层（portage 尚不可用）
 
 
 ```
@@ -411,7 +411,7 @@ GENTOO_MIRRORS="https://mirrors.ustc.edu.cn/gentoo"
 ```
 # mkdir -p /compat/gentoo/etc/portage/repos.conf # 此时位于 FreeBSD！
 # cp /compat/gentoo/usr/share/portage/config/repos.conf /compat/gentoo/etc/portage/repos.conf/gentoo.conf # 此时位于 FreeBSD！
-# cp /etc/resolv.conf /compat//gentoo/etc/ # 此时位于 FreeBSD！
+# cp /etc/resolv.conf /compat/gentoo/etc/ # 此时位于 FreeBSD！复制 DNS 解析。
 ```
 
 ### 换源
@@ -429,8 +429,81 @@ GENTOO_MIRRORS="https://mirrors.ustc.edu.cn/gentoo"
 获取 Gentoo ebuild 数据库快照
 
 ```
-# emerge-webrsync
+# emerge-webrsync # 请无视权限错误。此处位于 Gentoo!
+# chmod -R 755 /var/db/repos/gentoo #修正权限。此处位于 Gentoo!
+# export FEATURES="-ipc-sandbox -mount-sandbox -network-sandbox -pid-sandbox -sandbox -usersandbox -xattr" # 禁用 jail 不支持的标志。此处位于 Gentoo!
 ```
+
+测试安装 screenfetch：
+
+```
+ykla / # emerge --ask screenfetch
+setlocale: unsupported locale setting
+setlocale: unsupported locale setting
+
+ * IMPORTANT: 10 news items need reading for repository 'gentoo'.
+ * Use eselect news read to view new items.
+
+
+These are the packages that would be merged, in order:
+
+Calculating dependencies... done!
+[ebuild  N     ] app-misc/screenfetch-3.9.1  USE="-X -curl" 
+
+Would you like to merge these packages? [Yes/No] y
+
+>>> Verifying ebuild manifests
+
+>>> Emerging (1 of 1) app-misc/screenfetch-3.9.1::gentoo
+ * screenfetch-3.9.1.tar.gz BLAKE2B SHA512 size ;-) ...                                                      [ ok ]
+>>> Unpacking source...
+>>> Unpacking screenfetch-3.9.1.tar.gz to /var/tmp/portage/app-misc/screenfetch-3.9.1/work
+>>> Source unpacked in /var/tmp/portage/app-misc/screenfetch-3.9.1/work
+>>> Preparing source in /var/tmp/portage/app-misc/screenfetch-3.9.1/work/screenFetch-3.9.1 ...
+>>> Source prepared.
+>>> Configuring source in /var/tmp/portage/app-misc/screenfetch-3.9.1/work/screenFetch-3.9.1 ...
+>>> Source configured.
+>>> Compiling source in /var/tmp/portage/app-misc/screenfetch-3.9.1/work/screenFetch-3.9.1 ...
+>>> Source compiled.
+>>> Test phase [not enabled]: app-misc/screenfetch-3.9.1
+
+>>> Install app-misc/screenfetch-3.9.1 into /var/tmp/portage/app-misc/screenfetch-3.9.1/image
+>>> Completed installing app-misc/screenfetch-3.9.1 into /var/tmp/portage/app-misc/screenfetch-3.9.1/image
+
+ * Final size of build directory: 166 KiB
+ * Final size of installed tree:    5 KiB
+
+mkfifo: cannot set permissions of '/var/tmp/portage/app-misc/screenfetch-3.9.1/temp/multijob.rbwYPC': Bad file descriptor
+ * ERROR: app-misc/screenfetch-3.9.1::gentoo failed:
+ *   (no error message)
+ * 
+ * If you need support, post the output of `emerge --info '=app-misc/screenfetch-3.9.1::gentoo'`,
+ * the complete build log and the output of `emerge -pqv '=app-misc/screenfetch-3.9.1::gentoo'`.
+ * The complete build log is located at '/var/tmp/portage/app-misc/screenfetch-3.9.1/temp/build.log'.
+ * The ebuild environment file is located at '/var/tmp/portage/app-misc/screenfetch-3.9.1/temp/environment'.
+ * Working directory: '/var/tmp/portage/app-misc/screenfetch-3.9.1/image'
+ * S: '/var/tmp/portage/app-misc/screenfetch-3.9.1/work/screenFetch-3.9.1'
+!!! post install failed; exiting.
+
+>>> Failed to emerge app-misc/screenfetch-3.9.1, Log file:
+
+>>>  '/var/tmp/portage/app-misc/screenfetch-3.9.1/temp/build.log'
+
+ * Messages for package app-misc/screenfetch-3.9.1:
+
+ * ERROR: app-misc/screenfetch-3.9.1::gentoo failed:
+ *   (no error message)
+ * 
+ * If you need support, post the output of `emerge --info '=app-misc/screenfetch-3.9.1::gentoo'`,
+ * the complete build log and the output of `emerge -pqv '=app-misc/screenfetch-3.9.1::gentoo'`.
+ * The complete build log is located at '/var/tmp/portage/app-misc/screenfetch-3.9.1/temp/build.log'.
+ * The ebuild environment file is located at '/var/tmp/portage/app-misc/screenfetch-3.9.1/temp/environment'.
+ * Working directory: '/var/tmp/portage/app-misc/screenfetch-3.9.1/image'
+ * S: '/var/tmp/portage/app-misc/screenfetch-3.9.1/work/screenFetch-3.9.1'
+```
+
+测试**失败**，权限看上去还是有些问题，如果有人能解决请报告。
+
 
 ## 参考资料
 
