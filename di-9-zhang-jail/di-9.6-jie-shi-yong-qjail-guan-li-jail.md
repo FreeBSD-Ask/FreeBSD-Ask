@@ -329,11 +329,11 @@ $ exit   #  回到 jail root 用户，注意提示符变化
 
 初始化数据库集簇时的错误
 
-![](../gitbook/assets/qjailpostgresiniterror.png)
+![](../.gitbook/assets/qjailpostgresiniterror.png)
 
 启动 postgresql 时的错误
 
-![](../gitbook/assets/qjailpostgresstarterror.png)
+![](../.gitbook/assets/qjailpostgresstarterror.png)
 
 此时在宿主机控制台下执行 `qjail config -y postgres` 即可修正错误，具体如下：
 
