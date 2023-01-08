@@ -420,7 +420,7 @@ GENTOO_MIRRORS="https://mirrors.ustc.edu.cn/gentoo"
 # ee /compat/gentoo/etc/portage/repos.conf/gentoo.conf # 此处位于 FreeBSD！
 ```
 
-把`sync-uri = rsync://rsync.gentoo.org/gentoo-portage` 修改为 `sync-uri = rsync://mirrors.ustc.edu.cn/gentoo-portage`.
+把`sync-uri = rsync://rsync.gentoo.org/gentoo-portage` 修改为 `sync-uri = rsync://mirrors.ustc.edu.cn/gentoo-portage`
 
 ```
 # chroot /compat/gentoo /bin/bash # 此处位于 Gentoo!
