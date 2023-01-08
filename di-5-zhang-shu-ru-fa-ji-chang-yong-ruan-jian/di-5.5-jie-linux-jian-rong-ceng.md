@@ -378,7 +378,7 @@ Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch
 ### 构建基本系统
 
 ```
-# wget https://mirrors.ustc.edu.cn/gentoo/releases/amd64/autobuilds/20230101T164658Z/stage3-amd64-openrc-20230101T164658Z.tar.xz
+# wget https://mirrors.ustc.edu.cn/gentoo/releases/amd64/autobuilds/20230101T164658Z/stage3-amd64-systemd-20230101T164658Z.tar.xz
 # mkdir -p /compat/gentoo
 # tar xpvf stage3-amd64-openrc-20230101T164658Z.tar.xz -C /compat/gentoo --numeric-owner
 ```
@@ -421,7 +421,7 @@ GENTOO_MIRRORS="https://mirrors.ustc.edu.cn/gentoo"
 # ee /compat/gentoo/etc/portage/repos.conf/gentoo.conf # 此处位于 FreeBSD！
 ```
 
-把`sync-uri = rsync://rsync.gentoo.org/gentoo-portage` 修改为 `sync-uri = rsync://mirrors.163.com/gentoo-portage`
+把`sync-uri = rsync://rsync.gentoo.org/gentoo-portage` 修改为 `sync-uri = rsync://mirrors.tuna.tsinghua.edu.cn/gentoo-portage`
 
 ```
 # chroot /compat/gentoo /bin/bash # 此处位于 Gentoo!
@@ -430,7 +430,7 @@ GENTOO_MIRRORS="https://mirrors.ustc.edu.cn/gentoo"
 获取 Gentoo ebuild 数据库快照
 
 ```
-# emerge --sync # 请无视 `Cannot change mode to rwxr-xr-x: Bad file descriptor` 权限错误。此处位于 Gentoo!
+# emerge-webrsync # 请无视 `Cannot change mode to rwxr-xr-x: Bad file descriptor` 权限错误。此处位于 Gentoo!
 # chmod -R 755 /var/db/repos/gentoo #修正权限。此处位于 Gentoo!
 # chown -R portage:portage /var/db/repos/gentoo # 无效，似乎 这个文件系统有问题。
 # chown -R portage:portage /var/tmp/portage # 无效，似乎 这个文件系统有问题。
