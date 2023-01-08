@@ -1,8 +1,6 @@
 # 第9.6节 使用 qjail 管理 jail
 
-qjail 是 jail 环境的部署工具，分支自 ezjail 3.1。jail 管理工具有ezjail、 qjail、 iocage 等。ezjail  在2015年更新到3.4.2后一直没有更新，2018年作过一次错误更新，不过好像也不是作者写的。ezjail 的 ports 更新依赖 portsnap，这个现在已经不建议使用了，这个功能或者哪天就变得不可用了。iocage 可依赖于 zfs 文件系统，使用 ufs 文件系统的并不能使用。qjail 则在这些方面不存在问题。ezjail 并不支持 jail 的 vnet 功能，iocage 和 qjail 则支持。ezjail 和 qjail 使用 sh 编写，iocage 使用 python 编写。
-
-这里选择使用 qjail ，平时使用完全够用。
+qjail 是 jail 环境的部署工具，分支自 ezjail 3.1。jail 管理工具有 ezjail、 qjail、 iocage 等。ezjail  在 2015 年更新到 3.4.2 后一直没有更新，2018 年做过一次错误更新，不过好像也不是作者写的。ezjail 的 ports 更新依赖 portsnap，这个现在已经不建议使用了，将被废弃。iocage 可依赖于 zfs 文件系统，使用 ufs 文件系统的并不能使用。qjail 则在这些方面不存在问题。ezjail 并不支持 jail 的 vnet 功能，iocage 和 qjail 则支持。ezjail 和 qjail 使用 sh 编写，iocage 使用 python 编写。
 
 下文中部署的 jail 在概念上结构如下图：
 
@@ -25,7 +23,7 @@ ifconfig_lo1_alias0="inet 192.168.1.0-9" # 宿主机 ip 为 10.0.2.15, 选择该
 # service netif restart
 ```
 
-lo1 将获得10个 ip 地址，下面将用1-9这9个 ip 给 jail 使用。
+lo1 将获得 10个 ip 地址，下面将用 1-9 这 9 个 ip 给 jail 使用。
 
 ## 安装 qjail 工具
 
@@ -39,11 +37,11 @@ lo1 将获得10个 ip 地址，下面将用1-9这9个 ip 给 jail 使用。
 # sysrc qjail_enable=YES
 ```
 
-## 部置 qjail 使用的目录结构
+## 部署 qjail 使用的目录结构
 
 使用 qjail 前首先要部署 qjail 使用的目录结构，有两种方式：
 
-### 从官网下载
+### 从官方镜像站自动下载（可选）
 
 ```
 # qjail install
@@ -59,18 +57,18 @@ remote size / mtime: 195363380 / 1652346155
 ...
 ```
 
-### 从境内镜像站下载
+### 从境内镜像站下载（可选）
 
-国内网络问题，速度缓慢的，也可以用镜像手动进行，以中国科学技术大学镜像为例（下载文件是注意版本号，qjail 要求文件版本与宿主机一致，这里是 FreeBSD amd64 13.1)
+因境内网络问题，也可以用镜像手动进行，以中国科学技术大学镜像为例（下载文件是注意版本号，qjail 要求文件版本与宿主机一致，这里是 FreeBSD amd64 13.1)
 
 ```
 # fetch https:://mirrors.ustc.edu.cn/freebsd/release/amd64/13.1-RELEASE/base.txz
-# qjail install -f `pwd`/base.txz  # -f 只能接受绝对路径，等价于 qjail install -f /root/base.txz
+# qjail install base.txz
 ```
 
-部署好 qjail 的目录结构后 `/usr/jails` 目录下生成 `sharedfs` `template` `archive` `flavors` 四个目录
+部署好 qjail 的目录结构后 `/usr/jails` 目录下会自动生成 `sharedfs` `template` `archive` `flavors` 四个目录：
 
-- **sharedfs** 包含一份只读的操作系统可执行库文件，挂载为 nullfs ，在各 jail 之间共享，以节省存储空间的使用
+- **sharedfs** 包含一份只读的操作系统可执行库文件，挂载为 nullfs ，在各 jail 之间共享，以节省存储空间的使用。
 
 - **template** 包含操作系统的配置文件，将被复制到每个 jail 的基本文件系统中
 
@@ -160,7 +158,7 @@ remote size / mtime: 195363380 / 1652346155
 
 下面更新 jail 的部分不针对单个 jail ，而是针对每个 jail ，因为这些文件利用 nullfs 共享一份。
 
-### 更新 jail 的基本系统
+### 更新 jail 中的基本系统
 
 既上面提到的 sharedfs 中的文件
 
@@ -170,21 +168,19 @@ remote size / mtime: 195363380 / 1652346155
 
 ### 更新 ports
 
-这里有`-p`（小写） 、 `-P`（大写）两个选项，`-p`（小写）使用 portsnap 更新 jail 的 ports tree，`-P`（大写）使用宿主机的 ports tree 更新 jail 的 ports tree。建议使用 `-P`（大写），因为 portsnap 已不建议使用，同时也避免两次下载 ports tree。
+这里有`-p`（小写） 、 `-P`（大写）两个选项，`-p`（小写）使用 portsnap 更新 jail 的 ports tree，`-P`（大写）使用宿主机的 ports tree 更新 jail 的 ports。如果主机已有 ports，则建议使用 `-P`（大写），避免两次下载 ports。
 
 ```
 # qjail update -P  # 这里注意大写
 ```
 
-### 更新 src 
+### 更新系统源代码
 
 ```
 # qjail update -S # 大写
 ```
 
-### 建议的更新过程
-
-这里使用了 gitup （需自行安装）
+### 更新过程（推荐）
 
 ```
 # pkg install gitup
