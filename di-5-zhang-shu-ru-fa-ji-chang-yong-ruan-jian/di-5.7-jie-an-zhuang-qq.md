@@ -2,8 +2,20 @@
 
 ## Linux QQ 3.x（electron）【可选：基于 ArchLinux 兼容层】
 
+前文请看 Linux 兼容层的 ArchLinux 兼容层部分。
 
+```
+# chroot /compat/arch/ /bin/bash #进入 Arch兼容层
+# su test # 切换到普通用户才能使用 aur，前文已经创建该用户了！
+$ yay -S linuxqq # 此时用户为 test
+# exit #此时用户恢复为 root
+````
 
+```
+# export LANG=zh_CN.UTF-8 # 此时位于 Arch 兼容层！
+# export LC_ALL=zh_CN.UTF-8 # 如果不添加则中文输入法无法使用。如果设置失败请重启一次 FreeBSD 主机。此时位于 Arch 兼容层！
+# /user/bin/qq --no-sandbox --no-zygote --in-process-gpu # 此时位于 Arch 兼容层！
+```
 
 ## Linux QQ 3.x（electron）【可选：基于 Ubuntu 兼容层】
 
