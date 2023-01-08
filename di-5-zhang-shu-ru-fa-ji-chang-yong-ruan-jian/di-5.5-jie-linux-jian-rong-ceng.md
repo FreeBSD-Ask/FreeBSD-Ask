@@ -301,6 +301,7 @@ linsysfs        /compat/arch/sys      linsysfs        rw,late                   
 #### 初始化 pacman 密匙环
 
 ```
+# cp /etc/resolv.conf /compat//gentoo/etc/ # 此时位于 FreeBSD！
 # chroot /compat/arch /bin/bash # 此时已经是 Arch 兼容层了！
 # pacman-key --init
 # pacman-key --populate archlinux
@@ -372,11 +373,69 @@ Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch
 # locale-gen
 ```
 
+## Gentoo Linux 兼容层
+
+
+```
+# wget https://mirrors.ustc.edu.cn/gentoo/releases/amd64/autobuilds/20230101T164658Z/stage3-amd64-openrc-20230101T164658Z.tar.xz
+# mkdir -p /compat/gentoo
+# tar zxvf stage3-amd64-openrc-20230101T164658Z.tar.xz -C /compat/gentoo
+```
+
+编辑 `ee /etc/fstab`，加入：
+
+```
+# Device        Mountpoint              FStype          Options                      Dump    Pass#
+devfs           /compat/gentoo/dev      devfs           rw,late                      0       0
+tmpfs           /compat/gentoo/dev/shm  tmpfs           rw,late,size=1g,mode=1777    0       0
+fdescfs         /compat/gentoo/dev/fd   fdescfs         rw,late,linrdlnk             0       0
+linprocfs       /compat/gentoo/proc     linprocfs       rw,late                      0       0
+linsysfs        /compat/gentoo/sys      linsysfs        rw,late                      0       0
+/tmp            /compat/gentoo/tmp      nullfs          rw,late                      0       0
+/home           /compat/gentoo/home     nullfs          rw,late                      0       0
+```
+
+编辑：
+
+`ee /compat/gentoo/etc/portage/make.conf`
+
+加入：
+
+```
+MAKEOPTS="-j2"
+GENTOO_MIRRORS="https://mirrors.ustc.edu.cn/gentoo"
+```
+
+进行常见配置：
+
+```
+# mkdir -p /compat/gentoo/etc/portage/repos.conf # 此时位于 FreeBSD！
+# cp /compat/gentoo/usr/share/portage/config/repos.conf /compat/gentoo/etc/portage/repos.conf/gentoo.conf # 此时位于 FreeBSD！
+# cp /etc/resolv.conf /compat//gentoo/etc/ # 此时位于 FreeBSD！
+```
+
+### 换源
+
+```
+# ee /compat/gentoo/etc/portage/repos.conf/gentoo.conf # 此处位于 FreeBSD！
+```
+
+把`sync-uri = rsync://rsync.gentoo.org/gentoo-portage` 修改为 `sync-uri = rsync://mirrors.ustc.edu.cn/gentoo-portage`.
+
+```
+# chroot /compat/gentoo /bin/bash # 此处位于 Gentoo!
+```
+
+获取 Gentoo ebuild 数据库快照
+
+```
+# emerge-webrsync
+```
+
 ## 参考资料
 
 > 其他更多可以运行的软件及方法见 [https://wiki.freebsd.org/LinuxApps](https://wiki.freebsd.org/LinuxApps)。
->
-> Gentoo 兼容层则提示 bash so 文件错误，即使静态编译了 zsh。
+
 
 网站：
 
