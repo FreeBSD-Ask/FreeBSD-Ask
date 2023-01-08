@@ -84,19 +84,19 @@ remote size / mtime: 195363380 / 1652346155
 # qjail create -n lo1 -4 192.168.1.1 jail1
 ```
 
-`-n` 指定使用lo1作为网络接口，`-4` 指定 ipv4 地址。
+`-n` 指定使用 lo1 作为网络接口，`-4` 指定 ipv4 地址。
 
 生成 jail1 后，`/usr/jails/` 目录下对应生成 `jail1` 目录( `/usr/jails/jail1/`),保存相应文件。
 
 可以在上面提到的 `flavors` 目录中建立自己的配置文件以便在部署 jail 时复制到新的 jail 中。
 
-如，新建 `/usr/jails/flavors/default/usr/local/etc/pkg/repos/FreeBSD.conf` ,那么之后再新建 jail 时，会自动把这个文件复制到对应的 jail 中，既
+如，新建 `/usr/jails/flavors/default/usr/local/etc/pkg/repos/FreeBSD.conf` ,那么之后再新建 jail 时，会自动把这个文件复制到对应的 jail 中，即
 
 ```
 # qjail create -n lo1 -4 192.168.1.2 jail2
 ```
 
-建立 jail2 后，自动建立 `/usr/jails/jail2/usr/local/etc/pkg/repos/FreeBSD.conf` ,既修改了之后所有 jail 的默认pkg镜像。但对应 jail1 并没有生成这个文件，因为生成 jail1 时，还没有在 flavors 目录中写入相应文件。
+建立 jail2 后，自动建立 `/usr/jails/jail2/usr/local/etc/pkg/repos/FreeBSD.conf` ,既修改了之后所有 jail 的默认 pkg 镜像。但对应 jail1 并没有生成这个文件，因为生成 jail1 时，还没有在 flavors 目录中写入相应文件。
 
 ## qjail 基本使用
 
@@ -156,11 +156,11 @@ remote size / mtime: 195363380 / 1652346155
 # qjail delete -A     (删除所有 jail )
 ```
 
-## jail 更新
+## 更新 jail
 
 下面更新 jail 的部分不针对单个 jail ，而是针对每个 jail ，因为这些文件利用 nullfs 共享一份。
 
-### 更新 jail 的基本二进制文件
+### 更新 jail 的基本系统
 
 既上面提到的 sharedfs 中的文件
 
@@ -168,12 +168,12 @@ remote size / mtime: 195363380 / 1652346155
 # qjail update -b
 ```
 
-### 更新 ports tree 
+### 更新 ports
 
-这里有`-p`（小写） 、 `-P`（大写）两个选项，`-p`（小写）使用 portsnap 更新 jail 的 ports tree，`-P`（大写）使用宿主机的 ports tree 更新 jail 的 ports tree。建议使用 `-P`（大写），避免两次下载 ports tree。
+这里有`-p`（小写） 、 `-P`（大写）两个选项，`-p`（小写）使用 portsnap 更新 jail 的 ports tree，`-P`（大写）使用宿主机的 ports tree 更新 jail 的 ports tree。建议使用 `-P`（大写），因为 portsnap 已不建议使用，同时也避免两次下载 ports tree。
 
 ```
-# qjail update -P
+# qjail update -P  (这里注意大写）
 ```
 
 ### 更新 src 
@@ -185,6 +185,12 @@ remote size / mtime: 195363380 / 1652346155
 ### 建议的更新过程
 
 这里使用了 gitup （需自行安装）
+
+```
+# pkg install gitup
+```
+
+开始更新：
 
 ```
 # freebsd-update fetch install
@@ -199,7 +205,7 @@ remote size / mtime: 195363380 / 1652346155
 
 ## jail 设置
 
-qjail 可以用 `qjail config` 命令对 每个 jail 另作设置，运行 `qjail config` 前须选停用指定的 jail。
+qjail 可以用 `qjail config` 命令对每个 jail 另作设置，运行 `qjail config` 前须选停用指定的 jail。
 
 `qjail config` 命令选项较多，这里列出几个常用的，更多的请参考手册页
 
