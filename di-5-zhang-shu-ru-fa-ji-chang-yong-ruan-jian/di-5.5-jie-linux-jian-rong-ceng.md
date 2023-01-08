@@ -135,10 +135,10 @@ deb-src http://mirrors.ustc.edu.cn/ubuntu/ jammy-backports main restricted unive
 安装 Windows 11 字体【可选。自制包，打包同时兼容与低版本 Ubuntu】
 
 ```
-apt install git
-git clone https://github.com/ykla/ttf-mswin11-zh-deb
-cd ttf-mswin11-zh-deb
-dpkg -i ttf-ms-win11-*.deb
+# apt install git
+# git clone https://github.com/ykla/ttf-mswin11-zh-deb
+# cd ttf-mswin11-zh-deb
+# dpkg -i ttf-ms-win11-*.deb
 ```
 
 ### 运行 X11 软件
@@ -154,7 +154,7 @@ dpkg -i ttf-ms-win11-*.deb
 * 直接执行软件包名 `# gedit`；
 * `whereis 软件包名`，定位后执行。`whereis gedit`；
 * 通过软件图标定位，找到路径 `/usr/share/applications`,根据软件包名找到软件，用文本编辑器（如 `ee`、`nano`）打开。（软件图标本质上是一个文本文件，不是软连接或者图片），找到程序运行的命令复制到终端运行即可；
-* 通过 `find` 命令全局查找 `# find / —name 软件包名`，`# find / —name gedit`。
+* 通过 `find` 命令全局查找 `# find / —name 软件包名`——`# find / —name gedit`。
 
 > 如何查找软件？
 >
