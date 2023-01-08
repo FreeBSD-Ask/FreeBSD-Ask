@@ -520,5 +520,6 @@ mkfifo: cannot set permissions of '/var/tmp/portage/app-misc/screenfetch-3.9.1/t
 
 * [https://handbook.bsdcn.org/di-11-zhang-linux-er-jin-zhi-jian-rong-ceng/11.2.-pei-zhi-linux-er-jin-zhi-jian-rong-ceng.html](https://handbook.bsdcn.org/di-11-zhang-linux-er-jin-zhi-jian-rong-ceng/11.2.-pei-zhi-linux-er-jin-zhi-jian-rong-ceng.html)
 * [https://www.freebsd.org/cgi/man.cgi?linux](https://www.freebsd.org/cgi/man.cgi?linux)
+* <https://wiki.freebsd.org/Linuxulator>
 * [https://wiki.freebsd.org/LinuxJails](https://wiki.freebsd.org/LinuxJails)
 * [https://handbook.bsdcn.org/di-11-zhang-linux-er-jin-zhi-jian-rong-ceng/11.4.-shi-yong-debootstrap8-gou-jian-debian-ubuntu-ji-ben-xi-tong.html](https://handbook.bsdcn.org/di-11-zhang-linux-er-jin-zhi-jian-rong-ceng/11.4.-shi-yong-debootstrap8-gou-jian-debian-ubuntu-ji-ben-xi-tong.html)
