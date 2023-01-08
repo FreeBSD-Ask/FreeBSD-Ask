@@ -15,8 +15,8 @@ qjail 是 jail 环境的部署工具，分支自 ezjail 3.1。jail 管理工具�
 `/etc/rc.conf` 文件中写入
 
 ```
-cloned_interfaces="lo1"  (克隆出 lo1 ，尽量和宿主机网络配置分开）
-ifconfig_lo1_alias0="inet 192.168.1.0-9" (宿主机 ip 为 10.0.2.15, 选择该网段是为了和宿主机网段分开，可自行斟酌）
+cloned_interfaces="lo1"  # 克隆出 lo1 ，尽量和宿主机网络配置分开。注意，如果要生成多个端口，也应该在同一行中描述，以空格隔开，而不是另外创建一行，如 cloned_interfaces="lo1 lo2" 。分成多行写，只会有一行生效。
+ifconfig_lo1_alias0="inet 192.168.1.0-9" # 宿主机 ip 为 10.0.2.15, 选择该网段是为了和宿主机网段分开，可自行斟酌
 ```
 
 运行
@@ -65,7 +65,7 @@ remote size / mtime: 195363380 / 1652346155
 
 ```
 # fetch https:://mirrors.ustc.edu.cn/freebsd/release/amd64/13.1-RELEASE/base.txz
-# qjail install -f `pwd`/base.txz  (-f 只能接受绝对路径，等价于 qjail install -f /root/base.txz)
+# qjail install -f `pwd`/base.txz  # -f 只能接受绝对路径，等价于 qjail install -f /root/base.txz
 ```
 
 部署好 qjail 的目录结构后 `/usr/jails` 目录下生成 `sharedfs` `template` `archive` `flavors` 四个目录
@@ -109,29 +109,29 @@ remote size / mtime: 195363380 / 1652346155
 启用 jail
 
 ```
-# qjail start (启动所有 jail)
-# qjail start jail1 (启动 jail1)
+# qjail start # 启动所有 jail
+# qjail start jail1 # 启动 jail1
 ```
 
 停止 jail
 
 ```
-# qjail stop (停止所有 jail)
-# qjail stop jail1 (停止 jail1)
+# qjail stop # 停止所有 jail
+# qjail stop jail1 # 停止 jail1
 ```
 
 
 重启 jail
 
 ```
-# qjail restart (重启所有 jail)
-# qjail restart jail1 (重启 jail1)
+# qjail restart # 重启所有 jail
+# qjail restart jail1 # 重启 jail1
 ```
 
 进入 jail 控制台
 
 ```
-# qjail console jail1 (进入 jail1)
+# qjail console jail1  # 进入 jail1 控制台
 ```
 
 进入 jail 控制台后，此时是jail 中的 root 帐号（进入 jail 的控制台，不需要输入密码），因 jail 可能开启对外服务，为安全考虑建议设置帐号密码
@@ -139,21 +139,21 @@ remote size / mtime: 195363380 / 1652346155
 备份 jail
 
 ```
-# qjail archive -A (备份所有 jail)
-# qjail archive jail1 (备份 jail1)
+# qjail archive -A  # 备份所有 jail
+# qjail archive jail1  # 备份 jail1
 ```
 
 从备份中恢复 jail
 
 ```
-# qjail restore jail1 (从备份中恢复 jail1)
+# qjail restore jail1  # 从备份中恢复 jail1
 ```
 
 删除 jail
 
 ```
-# qjail delete jail1  (删除 jail1 )
-# qjail delete -A     (删除所有 jail )
+# qjail delete jail1  # 删除 jail1
+# qjail delete -A     # 删除所有 jail
 ```
 
 ## 更新 jail
@@ -173,13 +173,13 @@ remote size / mtime: 195363380 / 1652346155
 这里有`-p`（小写） 、 `-P`（大写）两个选项，`-p`（小写）使用 portsnap 更新 jail 的 ports tree，`-P`（大写）使用宿主机的 ports tree 更新 jail 的 ports tree。建议使用 `-P`（大写），因为 portsnap 已不建议使用，同时也避免两次下载 ports tree。
 
 ```
-# qjail update -P  (这里注意大写）
+# qjail update -P  # 这里注意大写
 ```
 
 ### 更新 src 
 
 ```
-# qjail update -S (大写）
+# qjail update -S # 大写
 ```
 
 ### 建议的更新过程
@@ -275,15 +275,15 @@ rdr pass on em0 inet proto tcp from any to em0 port 22 -> 192.168.1.1 port 22  #
 
 ```
 # qjail create -n lo1 -4 192.168.1.3 postgres
-# qjail config -y postgres   (  开启 SysV IPC)
+# qjail config -y postgres   #  开启 SysV IPC
 # qjail start postgres
 ```
 
 编辑 `/etc/pf.conf`
 
 ```
-nat pass on em0 inet from lo1 to any ->em0  （上文已作说明）
-rdr pass on em0 inet proto tcp from any to em0 port 5432 -> 192.168.1.3 port 5432 （不建议写下此句，作用为使宿方机外可以访问 jail 中的 postgresql，此处应考虑安全和实际需要开启端口转发，不建议直接向外提供 postgresql 连接）
+nat pass on em0 inet from lo1 to any ->em0  # 上文已作说明
+rdr pass on em0 inet proto tcp from any to em0 port 5432 -> 192.168.1.3 port 5432 # 不建议写下此句，作用为使宿方机外可以访问 jail 中的 postgresql，此处应考虑安全和实际需要开启端口转发，不建议直接向外提供 postgresql 连接
 ```
 
 启用 pf
@@ -305,11 +305,11 @@ jail 控制台中的操作
 ```
 # pkg install postgresql15-server
 # sysrc postgresql_enable=YES
-# mkdir -p -m 0700 /var/db/postgres/data15 (注意版本号）
-# chown postgres:postgres /var/db/postgres/data15 (这个目录应属于 postgres 用户)
-# su postgres   (这里切换到 postgres 用户，注意下面提示符的变化）
+# mkdir -p -m 0700 /var/db/postgres/data15     # 注意版本号
+# chown postgres:postgres /var/db/postgres/data15  # 这个目录应属于 postgres 用户
+# su postgres   # 这里切换到 postgres 用户，注意下面提示符的变化
 $ initdb -A scram-sha-256 -E UTF8 -W -D /var/db/postgres/data15  
-$ exit   (回到 jail root 用户，注意提示符变化
+$ exit   #  回到 jail root 用户，注意提示符变化
 # service postgresql start
 ```
 
