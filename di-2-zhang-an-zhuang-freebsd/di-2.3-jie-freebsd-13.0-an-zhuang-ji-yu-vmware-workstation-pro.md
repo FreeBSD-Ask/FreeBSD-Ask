@@ -2,7 +2,7 @@
 
 > **警告**
 >
-> FreeBSD 暂不支持驱动 UEFI 下 Vmware 的显卡。能够解决者请提交 issue。
+> 经过测试，FreeBSD 暂不支持驱动 UEFI 下 Vmware 的显卡。能够解决者请提交 issue。
 
 ## 视频教程
 
