@@ -6,11 +6,15 @@
 
 ## 视频教程
 
+<https://www.bilibili.com/video/BV1UR4y1U71T/>
+
+视频教程环境 VMware 17 + FreeBSD 13.1-RELEASE + BIOS +KDE 5。
+
+## 镜像下载
+
 > **警告**
 >
 >以下镜像不适用于物理机，物理机请参考其他章节。
-
-<https://www.bilibili.com/video/BV1UR4y1U71T/>
 
 Release 正式版 镜像下载地址：[https://download.freebsd.org/ftp/releases/amd64/amd64/ISO-IMAGES/13.1/FreeBSD-13.1-RELEASE-amd64-disc1.iso](https://download.freebsd.org/ftp/releases/amd64/amd64/ISO-IMAGES/13.0/FreeBSD-13.0-RELEASE-amd64-disc1.iso)
 
