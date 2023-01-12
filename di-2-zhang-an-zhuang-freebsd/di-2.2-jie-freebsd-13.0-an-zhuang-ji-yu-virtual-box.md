@@ -53,13 +53,13 @@ vboxguest_enable="YES"
 vboxservice_enable="YES"
 ```
 
-启动服务，调整权限：
+启动服务，调整权限（以普通用户 ykla 为例）：
 
 ```
 # service vboxguest restart # 可能会提示找不到模块，但是不影响使用
 # service vboxservice restart
-# pw groupmod wheel -m <yourname> # sudo 权限
-# pw groupmod opt -m <yourname>   # 开机重启 权限
+# pw groupmod wheel -m ykla # sudo 权限
+# pw groupmod opt -m ykla # 开机重启 权限
 ```
 
 ## 故障排除
