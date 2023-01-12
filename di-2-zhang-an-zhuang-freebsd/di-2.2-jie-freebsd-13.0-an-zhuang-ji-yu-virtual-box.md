@@ -46,7 +46,7 @@ xorg 可以自动识别驱动，不需要手动配置 `/usr/local/etc/X11/xorg.c
 
 显卡控制器用 `VBoxSVGA` 即可。
 
-编辑 `# ee etc/rc.conf`，增加以下內容：
+编辑 `# ee /etc/rc.conf`，增加以下內容：
 
 ```
 vboxguest_enable="YES"
