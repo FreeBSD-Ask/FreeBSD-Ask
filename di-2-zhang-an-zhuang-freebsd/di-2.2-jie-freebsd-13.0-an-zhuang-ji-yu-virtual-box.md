@@ -42,7 +42,7 @@
 # pkg install virtualbox-ose-additions
 ```
 
-xorg 可以自动识别驱动，不需要手动配置 `/usr/local/etc/X11/xorg.conf`（经过测试手动配置反而更卡，点一下要用 5 秒钟动一次……）。
+xorg 可以自动识别驱动，**不需要** 手动配置 `/usr/local/etc/X11/xorg.conf`（经过测试手动配置反而更卡，点一下要用 5 秒钟……）。
 
 显卡控制器用 `VBoxSVGA` 即可。
 
