@@ -49,7 +49,7 @@ VMware Workstation Player 是个人免费使用的，你也可以选择此版本
 VMware 自动缩放屏幕请安装显卡驱动和虚拟机增强工具，即：
 
 ```
-# pkg install xf86-video-vmware open-vm-tools
+# pkg install xf86-video-vmware open-vm-tools xf86-input-vmmouse
 ```
 
 安装完毕后无需任何多余配置即可实现屏幕自动缩放。
