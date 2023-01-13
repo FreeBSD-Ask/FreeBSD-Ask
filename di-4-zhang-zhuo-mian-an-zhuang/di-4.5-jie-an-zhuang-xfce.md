@@ -13,7 +13,7 @@
 通过 pkg 安装
 
 ```
-# pkg install xorg lightdm lightdm-gtk-greeter xfce wqy-fonts
+# pkg install xorg lightdm lightdm-gtk-greeter xfce wqy-fonts xdg-user-dirs	
 ```
 
 或
