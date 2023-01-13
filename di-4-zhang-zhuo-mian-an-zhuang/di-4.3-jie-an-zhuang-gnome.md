@@ -6,7 +6,7 @@
 # pkg install xorg gnome noto-sc xdg-user-dirs
 ```
 
->若要精简安装可以将 `gnome` 替换为 `gnome-shell`。
+>若要精简安装可以将 `gnome` 替换为 `gnome-lite`。
 >
 >如果安装了完整版本也可以使用 pkg 包管理器卸载多余软件：
 >
