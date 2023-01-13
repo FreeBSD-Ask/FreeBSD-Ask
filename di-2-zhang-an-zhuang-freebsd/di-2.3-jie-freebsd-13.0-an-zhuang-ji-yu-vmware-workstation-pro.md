@@ -4,6 +4,10 @@
 >
 > 经过测试，FreeBSD 也可以支持驱动 UEFI 下 Vmware 的显卡。
 
+> **警告**
+>
+>**注意：由于 BUG，FreeBSD 11/12 可能在 VMare 的 UEFI 环境下无法启动。经测试 13.0 正常启动。**
+
 ## 视频教程
 
 <https://www.bilibili.com/video/BV1UR4y1U71T/>
@@ -98,7 +102,7 @@ fusefs_load="YES"
 # ls /mnt/hgfs
 ```
 
-**注意：由于 BUG，FreeBSD 11/12 可能在 VmMare 的 UEFI 环境下无法启动。经测试 13.0 正常启动。**
+
 
 > **提示**
 >
