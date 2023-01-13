@@ -149,6 +149,8 @@ export XMODIFIERS=@im=fcitx
 
 ### 终端显示中文（文件用户根目录）
 
+>此处对用户 shell 存疑。
+
 `# ee .cshrc`
 
 添加以下内容
