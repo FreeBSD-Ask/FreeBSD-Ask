@@ -11,7 +11,7 @@
 ## 安装
 
 ```
-# pkg install xorg lightdm lightdm-gtk-greeter cinnamon wqy-fonts
+# pkg install xorg lightdm lightdm-gtk-greeter cinnamon wqy-fonts xdg-user-dirs	
 ```
 
 ## 配置
