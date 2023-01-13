@@ -1,8 +1,8 @@
 # 第2.3节 FreeBSD 13.1 安装——基于 Vmware Workstation Pro
 
-> **警告**
+> **温馨提示**
 >
-> 经过测试，FreeBSD 暂不支持驱动 UEFI 下 Vmware 的显卡。能够解决者请提交 issue。
+> 经过测试，FreeBSD 也可以支持驱动 UEFI 下 Vmware 的显卡。
 
 ## 视频教程
 
