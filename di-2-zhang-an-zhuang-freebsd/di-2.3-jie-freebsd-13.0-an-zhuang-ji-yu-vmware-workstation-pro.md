@@ -1,8 +1,30 @@
 # 第2.3节 FreeBSD 13.1 安装——基于 Vmware Workstation Pro
 
-> **温馨提示**
+> **BIOS 还是 UEFI**
 >
-> 经过测试，FreeBSD 也可以支持驱动 UEFI 下 Vmware 的显卡。
+>经过测试，FreeBSD 也可以支持驱动 UEFI 下 VMware 的显卡。——2023.1.13
+>
+>默认情况下 VMware 是 BIOS，会提示没有：
+>
+>```
+># efibootmgr # 默认自带、无需安装。
+>efibootmgr: efi variables not supported on this system. root? kldload efirt?
+>```
+>
+>如果当前系统是 UEFI,efibootmgr 则输出：
+>
+>```
+># efibootmgr # 默认自带、无需安装。
+>Boot to FW : false
+>BootCurrent: 0004
+>BootOrder  : 0004, 0000, 0001, 0002, 0003
+>+Boot0004* FreeBSD
+> Boot0000* EFI VMware Virtual SCSI Hard Drive (0.0)
+> Boot0001* EFI VMware Virtual IDE CDROM Drive (IDE 1:0)
+> Boot0002* EFI Network
+> Boot0003* EFI Internal Shell (Unsupported option)
+>```
+
 
 > **警告**
 >
