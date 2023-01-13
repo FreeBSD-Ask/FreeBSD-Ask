@@ -49,12 +49,15 @@ proc /proc procfs rw 0 0
 
 ## 中文化 
 
-### GNOME界面
+### GNOME 界面
+
 > 本小节用户 shell 应该是默认的 `sh`，判断方法见下一小节“安装输入法”（root 用户默认 shell 是 csh，无法适用）。
 
-`# cd /usr/local/etc/gdm && ee locale.conf`
+```
+# cd /usr/local/etc/gdm && ee locale.conf`
+```
 
-添加以下内容
+添加以下内容：
 
 ```
 LANG="zh_CN.UTF-8"
