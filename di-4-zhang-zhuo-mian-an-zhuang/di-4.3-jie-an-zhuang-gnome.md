@@ -3,7 +3,7 @@
 ## 安装
 
 ```
-# pkg install xorg gnome-shell noto-sc xdg-user-dirs
+# pkg install xorg gnome noto-sc xdg-user-dirs
 ```
 
 >若要精简安装可以将 `gnome` 替换为 `gnome-shell`。
