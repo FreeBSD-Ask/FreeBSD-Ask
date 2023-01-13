@@ -1,4 +1,4 @@
-# 第2.2节 FreeBSD 13.0 安装——基于 Virtual Box
+# 第2.2节 FreeBSD 13.1 安装——基于 Virtual Box
 
 ## 下载 VirtualBox
 
