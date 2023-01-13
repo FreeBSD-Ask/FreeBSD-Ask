@@ -5,7 +5,7 @@
 ## 安装
 
 ```
-# pkg install lumina xorg  lightdm lightdm-gtk-greeter wqy-fonts 
+# pkg install lumina xorg  lightdm lightdm-gtk-greeter wqy-fonts xdg-user-dirs	
 ```
 
 ## 配置
