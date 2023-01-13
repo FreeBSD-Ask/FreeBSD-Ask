@@ -6,13 +6,21 @@
 # pkg install xorg gnome-shell noto-sc xdg-user-dirs
 ```
 
+>若要精简安装可以将 `gnome` 替换为 `gnome-shell`。
+>
+>如果安装了完整版本也可以使用 pkg 包管理器卸载多余软件：
+>
+>```
+># pkg delete gnome-2048 gnome-klotski gnome-tetravex gnome-mines gnome-taquin gnome-sudoku gnome-robots gnome-nibbles lightsoff tali quadrapassel swell-foop gnome-mahjongg five-or-more iagno aisleriot four-in-a-row
+>```
+
 解释:
 
-|       软件      |       用途      |
+|       软件     |       用途      |
 | :-----------: | :-----------: |
 |      xorg     |      X11      |
-|  gnome-shell  |   Gnome 主程序   |
-|    noto-sc    |   思源黑体-简体中文   |
+|  gnome         |   Gnome 主程序   |
+|    noto-sc    |   思源黑体——简体中文   |
 | xdg-user-dirs | 用于创建用户家目录的子目录 |
 
 ## 配置
@@ -39,8 +47,9 @@ proc /proc procfs rw 0 0
 % echo "/usr/local/bin/gnome-session" > ~/.xinitrc
 ```
 
-## 中文化 GNOME
+## 中文化 
 
+### GNOME界面
 > 本小节用户 shell 应该是默认的 `sh`，判断方法见下一小节“安装输入法”（root 用户默认 shell 是 csh，无法适用）。
 
 `# cd /usr/local/etc/gdm && ee locale.conf`
@@ -54,17 +63,17 @@ LC_MESSAGES="zh_CN.UTF-8"
 LC_ALL="zh_CN.UTF-8"
 ```
 
-## 安装输入法
+### 中文输入法
 
 以下 `ibus`、`fcitx5` 二选一即可。
 
-### ibus
+#### ibus
 
 gnome 捆绑的输入法面板是 `ibus`。
 
 `# pkg install zh-ibus-libpinyin`（安装好运行初始化命令 `ibus-setup`）
 
-### fcitx 5
+#### fcitx 5
 
 首先看看现在自己的 shell 是不是 `sh`,`bash`,`zsh`：
 
@@ -133,9 +142,9 @@ export XMODIFIERS=@im=fcitx
 # pkg install -y firefox chrome-gnome-shell
 ```
 
-打开网站 `https://extensions.gnome.org/extension/1674/topiconsfix/` 即可安装插件。
+打开链接 `https://extensions.gnome.org/extension/1674/topiconsfix/` 即可安装插件。
 
-## 终端显示中文（文件用户根目录）
+### 终端显示中文（文件用户根目录）
 
 `# ee .cshrc`
 
