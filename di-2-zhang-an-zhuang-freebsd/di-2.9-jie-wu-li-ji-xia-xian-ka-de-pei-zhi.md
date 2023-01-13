@@ -4,11 +4,13 @@ FreeBSD 已从 Linux 移植了显卡驱动，理论上，I 卡 A 卡 N 卡均在
 
 ## 支持情况
 
+截至 2023.1.13 Alder/Raptor Lake 即 12/13 代[暂不支持](https://github.com/freebsd/drm-kmod/issues/219)。
+
 对于 FreeBSD 11，支持情况同 Linux 内核 4.11；
 
 对于 FreeBSD 12，支持情况同 Linux 内核 4.16；
 
-对于 FreeBSD 13.1/14-CURRENT，编译使用`drm-510-kmod`，支持情况同 Linux 5.10，可以支持 Intel 第十二代处理器，AMD 可支持 R7 4750U。
+对于 FreeBSD 13.1/14-CURRENT，编译使用`drm-510-kmod`，支持情况同 Linux 5.10，可以支持 Intel 第十一代处理器，AMD 可支持 R7 4750U。
 
 详细情况可以看
 
