@@ -87,7 +87,7 @@ gnome 捆绑的输入法面板是 `ibus`。
 安装 `fcitx5`:
 
 ```
-# pkg install fcitx5 fcitx5-qt fcitx5-gtk fcitx5-configtool zh-fcitx5-chinese-addons
+# pkg install fcitx5 fcitx5-qt5 fcitx5-qt6 fcitx5-gtk fcitx5-configtool zh-fcitx5-chinese-addons
 ```
 
 打开或新建文件 `~/.xprofile`，写入:
