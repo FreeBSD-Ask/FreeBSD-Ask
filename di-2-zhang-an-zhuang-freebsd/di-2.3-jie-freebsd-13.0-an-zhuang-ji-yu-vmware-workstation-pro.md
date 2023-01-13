@@ -65,7 +65,7 @@ VMware 自动缩放屏幕请安装显卡驱动和虚拟机增强工具，即：
 如果有桌面
 
 ```
-# pkg install open-vm-tools
+# pkg install open-vm-tools xf86-input-vmmouse
 ```
 
 如果没有桌面：
