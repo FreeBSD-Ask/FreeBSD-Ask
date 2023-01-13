@@ -182,3 +182,9 @@ $ kldstat
 ```
 
 会发现系统自动加载了 `linux.ko` 模块。如果觉得太臃肿，不需要 Linux 兼容层 可以自己通过 ports 编译 `nvidia-driver`,去掉 `linux compatibility support`。
+
+## 故障排除
+
+如果显卡使用驱动有问题请直接联系作者：
+
+<https://github.com/freebsd/drm-kmod/issues>
