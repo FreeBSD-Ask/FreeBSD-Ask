@@ -15,7 +15,7 @@
 |    noto-sc    |   思源黑体——简体中文   |
 | xdg-user-dirs | 用于创建用户家目录的子目录 |
 
->若要精简安装（仅限经验丰富的用户）：
+>**精简安装（仅限经验丰富的用户）**
 >
 >```
 ># pkg install xorg-minimal gnome-lite wqy-fonts xdg-user-dirs
