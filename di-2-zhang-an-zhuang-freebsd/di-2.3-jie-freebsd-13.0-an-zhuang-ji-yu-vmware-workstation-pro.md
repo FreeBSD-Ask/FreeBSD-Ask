@@ -28,7 +28,7 @@
 
 > **警告**
 >
->**注意：由于 BUG，FreeBSD 11/12 可能在 VMare 的 UEFI 环境下无法启动。经测试 13.0 正常启动。**
+>**注意：由于 [[BUG](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=250580)，FreeBSD 11/12 可能在 VMare 的 UEFI 环境下无法启动。经测试 13.0 正常启动。**
 
 ## 视频教程
 
