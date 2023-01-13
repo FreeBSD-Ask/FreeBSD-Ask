@@ -6,14 +6,6 @@
 # pkg install xorg gnome noto-sc xdg-user-dirs
 ```
 
->若要精简安装可以将 `gnome` 替换为 `gnome-lite`。
->
->如果安装了完整版本也可以使用 pkg 包管理器卸载多余软件：
->
->```
-># pkg delete gnome-2048 gnome-klotski gnome-tetravex gnome-mines gnome-taquin gnome-sudoku gnome-robots gnome-nibbles lightsoff tali quadrapassel swell-foop gnome-mahjongg five-or-more iagno aisleriot four-in-a-row
->```
-
 解释:
 
 |       软件     |       用途      |
@@ -22,6 +14,20 @@
 |  gnome         |   Gnome 主程序   |
 |    noto-sc    |   思源黑体——简体中文   |
 | xdg-user-dirs | 用于创建用户家目录的子目录 |
+
+>若要精简安装（仅限经验丰富的用户）：
+>
+>```
+># pkg install xorg-minimal gnome-lite wqy-fonts xdg-user-dirs
+>```
+>
+>如果安装了完整版本也可以使用 pkg 包管理器卸载自带的游戏软件：
+>
+>```
+># pkg delete gnome-2048 gnome-klotski gnome-tetravex gnome-mines gnome-taquin gnome-sudoku gnome-robots gnome-nibbles lightsoff tali quadrapassel swell-foop gnome-mahjongg five-or-more iagno aisleriot four-in-a-row
+>```
+
+
 
 ## 配置
 
