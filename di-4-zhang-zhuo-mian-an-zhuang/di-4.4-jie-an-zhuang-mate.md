@@ -11,7 +11,7 @@
 ## 安装与配置
 
 ```
-# pkg install  mate xorg wqy-fonts lightdm lightdm-gtk-greeter
+# pkg install  mate xorg wqy-fonts lightdm lightdm-gtk-greeter xdg-user-dirs	
 ```
 
 ```
