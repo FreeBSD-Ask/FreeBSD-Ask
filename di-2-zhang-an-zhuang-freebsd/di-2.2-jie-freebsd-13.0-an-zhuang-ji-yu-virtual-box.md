@@ -1,5 +1,21 @@
 # 第2.2节 FreeBSD 13.1 安装——基于 Virtual Box
 
+> **UEFI 下显卡也可以正常驱动。——2023.1.14 测试**
+> 
+> ```
+># efibootmgr # 无需安装，自带
+>Boot to FW : false
+>BootCurrent: 0004
+>Timeout    : 0 seconds
+>BootOrder  : 0004, 0000, 0001, 0002, 0003
+>+Boot0004* FreeBSD
+> Boot0000* UiApp
+> Boot0001* UEFI VBOX CD-ROM VB2-01700376 
+> Boot0002* UEFI VBOX HARDDISK VB7aff22ad-deb533d3 
+> Boot0003* EFI Internal Shell
+>```
+
+
 ## 下载 VirtualBox
 
 进入网页点击 `download` 即可下载：
@@ -36,7 +52,7 @@
 
 ## 显卡驱动与增强工具
 
-> **UEFI 下显卡也可以正常驱动。——2023.1.14 测试**
+
 
 ```
 # pkg install virtualbox-ose-additions
