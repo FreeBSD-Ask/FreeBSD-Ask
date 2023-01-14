@@ -36,7 +36,7 @@
 
 ## 显卡驱动与增强工具
 
-> **UEFI 下显卡无法驱动。——2021 年测试**
+> **UEFI 下显卡也可以正常驱动。——2023.1.14 测试**
 
 ```
 # pkg install virtualbox-ose-additions
