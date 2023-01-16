@@ -188,3 +188,5 @@ $ kldstat
 如果显卡使用驱动有问题请直接联系作者：
 
 <https://github.com/freebsd/drm-kmod/issues>
+
+如果笔记本出现了唤醒时屏幕点不亮的问题，可以在 `/boot/loader.conf` 中添加 `hw.acpi.reset_video="1"` 以在唤醒时重置显示适配器。
