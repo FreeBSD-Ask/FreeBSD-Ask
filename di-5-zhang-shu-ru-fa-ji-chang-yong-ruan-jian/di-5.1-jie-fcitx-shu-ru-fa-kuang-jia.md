@@ -118,7 +118,7 @@ export XMODIFIERS="@im=fcitx5"
 # fcitx-diagnose
 ```
 
-对于 fcitx5.x 来说，找不到 `GTK 4` 的支持是正常的。
+对于 fcitx 4.x 来说，找不到 `GTK 4` 的支持是正常的。
 
 ### fcitx 5.x
 
@@ -126,4 +126,4 @@ export XMODIFIERS="@im=fcitx5"
 # fcitx5-diagnose
 ```
 
-对于 fcitx5.x 来说，找不到 `fcitx qt 4` 的支持是正常的。
+对于 fcitx 5.x 来说，找不到 `fcitx qt 4` 的支持是正常的。
