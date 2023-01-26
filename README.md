@@ -10,7 +10,7 @@
 
 > **PDF 文档**
 >
-> **当前文档的 PDF 实时更新地址为** [**https://book.bsdcn.org/FreeBSD-从入门到跑路.pdf**](https://book.bsdcn.org/FreeBSD-从入门到跑路.pdf)**，历史存档位于 [Release](https://github.com/FreeBSD-Ask/FreeBSD-Ask/releases)。**
+> 点击 <https://freebsd.gitbook.io/book/>，选择右上角的“导出为 PDF”，若不成功可多试几次。
 
 ## 概述
 
