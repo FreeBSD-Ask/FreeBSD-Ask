@@ -4,7 +4,7 @@ FreeBSD 已从 Linux 移植了显卡驱动，理论上，I 卡 A 卡 N 卡均在
 
 ## 支持情况
 
-截至 2023.1.13 Alder/Raptor Lake 即 12/13 代[暂不支持](https://github.com/freebsd/drm-kmod/issues/219)。
+**截至 2023.1.13 Alder/Raptor Lake 即 12/13 代[暂不支持](https://github.com/freebsd/drm-kmod/issues/219)，11 代也不支持。**
 
 对于 FreeBSD 11，支持情况同 Linux 内核 4.11；
 
