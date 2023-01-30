@@ -30,6 +30,28 @@ https://rufus.ie/zh
 
 <figure><img src="../.gitbook/assets/h2.png" alt=""><figcaption></figcaption></figure>
 
+### 网卡推荐
+
+> 以下无利益关系。**千兆和 2.5G 网卡似乎都有时断时续的故障。如果有更好的推荐（稳定不掉网）请联系我们。**
+
+|      类型     |            品牌/型号            |        芯片组/参数        | 售价（¥） |
+| :---------: | :-------------------------: | :------------------: | :---: |
+|   USB 无线网卡  |      COMFAST CF-WU810N      | RTL8188EUS 150M 2.4G |   20  |
+|   USB 以太网卡  |      绿联 USB 百兆网卡 CR110      |     AX88772A 100M    |   40  |
+|   USB 以太网卡  | 绿联 USB 千兆网卡 CM209【\* 不建议购入】 |    AX88179A 1000M    |   79  |
+|   USB 以太网卡  |     绿联 USB 2.5G 网卡 CM275    |     RTL8156 2.5G     |  189  |
+| Type-C 以太网卡 |    绿联 Type-C 转百兆网卡 30287    |     AX88772A 100M    |   59  |
+| Type-C 以太网卡 |    绿联 Type-C 转千兆网卡 CM199    |    AX88179A 1000M    |   99  |
+| Type-C 以太网卡 |     绿联 Type-C 转 2.5G 网卡     |     RTL8156 2.5G     |  199  |
+
+> RTL8156 网卡如果时断时续，请安装 `realtek-re-kmod` ？（此处存疑） 见
+>
+> * [https://www.freshports.org/net/realtek-re-kmod](https://www.freshports.org/net/realtek-re-kmod)
+> * [https://bugs.freebsd.org/bugzilla/show\_bug.cgi?id=166724](https://bugs.freebsd.org/bugzilla/show\_bug.cgi?id=166724)
+
+> \* 绿联 USB 千兆网卡 CM209 时断时续。不建议购买：
+>
+> * https://bugs.freebsd.org/bugzilla/show\_bug.cgi?id=267514
 
 ## 归档内容
 
@@ -62,25 +84,4 @@ BatteryBound=0
 
 **如果断电，后果自负**
 
-### 网卡推荐
 
-> 以下无利益关系。
-
-|      类型     |            品牌/型号            |        芯片组/参数        | 售价（¥） |
-| :---------: | :-------------------------: | :------------------: | :---: |
-|   USB 无线网卡  |      COMFAST CF-WU810N      | RTL8188EUS 150M 2.4G |   20  |
-|   USB 以太网卡  |      绿联 USB 百兆网卡 CR110      |     AX88772A 100M    |   40  |
-|   USB 以太网卡  | 绿联 USB 千兆网卡 CM209【\* 不建议购入】 |    AX88179A 1000M    |   79  |
-|   USB 以太网卡  |     绿联 USB 2.5G 网卡 CM275    |     RTL8156 2.5G     |  189  |
-| Type-C 以太网卡 |    绿联 Type-C 转百兆网卡 30287    |     AX88772A 100M    |   59  |
-| Type-C 以太网卡 |    绿联 Type-C 转千兆网卡 CM199    |    AX88179A 1000M    |   99  |
-| Type-C 以太网卡 |     绿联 Type-C 转 2.5G 网卡     |     RTL8156 2.5G     |  199  |
-
-> RTL8156 网卡如果时断时续，请安装 `realtek-re-kmod` ？（此处存疑） 见
->
-> * [https://www.freshports.org/net/realtek-re-kmod](https://www.freshports.org/net/realtek-re-kmod)
-> * [https://bugs.freebsd.org/bugzilla/show\_bug.cgi?id=166724](https://bugs.freebsd.org/bugzilla/show\_bug.cgi?id=166724)
-
-> \* 绿联 USB 千兆网卡 CM209 时断时续。不建议购买：
->
-> * https://bugs.freebsd.org/bugzilla/show\_bug.cgi?id=267514
