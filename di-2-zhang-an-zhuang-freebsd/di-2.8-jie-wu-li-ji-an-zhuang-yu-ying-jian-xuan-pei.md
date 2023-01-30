@@ -1,26 +1,27 @@
 # 第2.8节 物理机安装与硬件选配
 
-## 物理机安装添加
+## 物理机安装镜像
 
-> 注意：请不要问我在安装中应该选用哪个镜像站这类问题，那是因为你的错误操作导致的。 不要选用带有`bootonly`字样的镜像文件，除非你真的知道自己在干什么。
+> 注意：请不要问我在安装中应该选用哪个镜像站这类问题，那是因为你的错误操作导致的。 不要选用带有`bootonly`字样的镜像文件，除非你真的知道自己在干什么。也不要全选所有的组件，要按照前文教程进行选择。
 
-使用 **光盘** 安装应选用 `iso` 结尾的镜像。
 
 使用 **U盘** 安装应该选用 `img` 结尾的镜像，例如
 
-[https://download.freebsd.org/ftp/releases/amd64/amd64/ISO-IMAGES/13.0/FreeBSD-13.0-RELEASE-amd64-memstick.img](https://download.freebsd.org/ftp/releases/amd64/amd64/ISO-IMAGES/13.0/FreeBSD-13.0-RELEASE-amd64-memstick.img)
+[FreeBSD-13.1-RELEASE-amd64-memstick.img](https://download.freebsd.org/ftp/releases/amd64/amd64/ISO-IMAGES/13.1/FreeBSD-13.1-RELEASE-amd64-memstick.img)
 
-**FreeBSD 所有安装介质包括不限于虚拟机文件都没有提供图形界面，需要自行安装。**
+只有当使用 **光盘/虚拟机** 安装时才应选用 `iso` 结尾的镜像。
 
-**注意：如果要在 vmware 虚拟机使用 UEFI，必须使用 FreeBSD 13.0 及以上，否则启动会花屏。**
+**FreeBSD 所有安装介质包括不限于虚拟机文件都没有提供图形界面，均需要自行安装。**
 
-刻录工具 Windows 应该选用 Rufus，Linux 直接使用 `dd`命令即可。
+**注意：如果要在 VMware 虚拟机使用 UEFI，必须使用 FreeBSD 13.0-RELEASE 及以上，否则启动会花屏。**
 
-https://rufus.ie/zh
+刻录工具 Windows 应该选用 **Rufus**，Linux 直接使用 `dd`命令即可。
 
-**注意：不建议使用 Handbook 推荐的 win32diskimager，有时会出现校验码错误的情况（实际上文件校验码正常）。也不要使用 ventory 引导实体机安装，有时会报错找不到安装文件。老老实实 rufus。**
+下载地址：<https://rufus.ie/zh>
 
-## 我的硬件支持不支持呢？
+**注意：不建议使用 FReeBSD 手册推荐的 win32diskimager，有时会出现校验码错误的情况（实际上文件校验码正常）。也不要使用 ventory 引导实体机安装，有时会报错找不到安装文件。老老实实 rufus。**
+
+## 怎么看我的硬件支持不支持呢？
 
 更多硬件请参考：
 
@@ -32,7 +33,7 @@ https://rufus.ie/zh
 
 ### 网卡推荐
 
-> 以下无利益关系。**千兆和 2.5G 网卡似乎都有时断时续的故障。如果有更好的推荐（稳定不掉网）请联系我们。**
+> **千兆和 2.5G 网卡似乎都有时断时续的故障。如果有更好的推荐（稳定不掉网）请联系我们。**
 
 |      类型     |            品牌/型号            |        芯片组/参数        | 售价（¥） |
 | :---------: | :-------------------------: | :------------------: | :---: |
