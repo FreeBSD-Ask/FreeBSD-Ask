@@ -31,6 +31,14 @@
 
 <figure><img src="../.gitbook/assets/h2.png" alt=""><figcaption></figcaption></figure>
 
+>如果你也想上传你的数据到该网站上，请：
+>
+>```
+># pkg install hw-probe
+># hw-probe -all -upload
+>```
+
+
 ### 网卡推荐
 
 > **千兆和 2.5G 网卡似乎都有时断时续的故障。如果有更好的推荐（稳定不掉网）请联系我们。**
