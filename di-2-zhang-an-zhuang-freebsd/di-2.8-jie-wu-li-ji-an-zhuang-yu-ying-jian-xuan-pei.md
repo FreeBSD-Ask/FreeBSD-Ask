@@ -37,6 +37,7 @@
 ># pkg install hw-probe
 ># hw-probe -all -upload
 >```
+>其他系统见 <https://github.com/linuxhw/hw-probe/blob/master/INSTALL.BSD.md>
 
 
 ### 网卡推荐
