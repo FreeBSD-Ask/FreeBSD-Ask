@@ -20,15 +20,18 @@ https://rufus.ie/zh
 
 **注意：不建议使用 Handbook 推荐的 win32diskimager，有时会出现校验码错误的情况（实际上文件校验码正常）。也不要使用 ventory 引导实体机安装，有时会报错找不到安装文件。老老实实 rufus。**
 
-## 硬件选配（以下硬件均正常运行）
+## 我的硬件支持不支持呢？
 
 更多硬件请参考：
 
-[**https://bsd-hardware.info/?d=FreeBSD**](https://bsd-hardware.info/?d=FreeBSD)【首选】
+[**https://bsd-hardware.info/?d=FreeBSD**](https://bsd-hardware.info/?d=FreeBSD)
 
 <figure><img src="../.gitbook/assets/h1.png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../.gitbook/assets/h2.png" alt=""><figcaption></figcaption></figure>
+
+
+## 归档内容
 
 1. 小米笔记本 12.5 一代 ：处理器 6Y30 、显卡 HD515 、WIFI intel 8260AC、声卡 ALC 233（实际上是 235）、硬盘 NVME INTEL 600P。
 2. 联想 G400 ：处理器 i3-3110M/i5-3230M、显卡 HD4000、WIFI intel N135（联想 G400 网卡白名单支持三种网卡，如果是博通 BCM43142 建议更换为 N135，FUR 料号：04W3783，如果更换后提示不能读取，请先在 BIOS 里停用无线网卡，升级 BIOS 后恢复即可）。
