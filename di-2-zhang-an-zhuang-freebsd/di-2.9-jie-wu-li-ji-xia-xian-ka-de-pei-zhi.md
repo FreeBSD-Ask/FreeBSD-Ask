@@ -185,7 +185,9 @@ $ kldstat
 
 ## 拉取开发版 drm-kmod（仅限 FreeBSD-CURRENT）
 
-此部分属于实验性内容，不建议新手操作。
+>**警告**
+>
+>此部分属于实验性内容且仅限 FreeBSD-CURRENT 使用，不建议新手操作。
 
 拉取最新的 drm-kmod 并编译安装：
 
