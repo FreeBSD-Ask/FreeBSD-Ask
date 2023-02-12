@@ -183,10 +183,41 @@ $ kldstat
 
 会发现系统自动加载了 `linux.ko` 模块。如果觉得太臃肿，不需要 Linux 兼容层 可以自己通过 ports 编译 `nvidia-driver`,去掉 `linux compatibility support`。
 
+## 拉取开发版 drm-kmod（仅限 FreeBSD-CURRENT）
+
+此部分属于实验性内容，不建议新手操作。
+
+拉取最新的 drm-kmod 并编译安装：
+
+```
+# pkg install git
+$ git clone --depth=1 https://github.com/freebsd/drm-kmod
+$ cd freebsd/drm-kmod
+$ make
+…
+# make install
+===> linuxkpi (install)
+install -T release -o root -g wheel -m 555   linuxkpi_gplv2.ko /boot/modules/
+===> ttm (install)
+install -T release -o root -g wheel -m 555   ttm.ko /boot/modules/
+===> drm (install)
+install -T release -o root -g wheel -m 555   drm.ko /boot/modules/
+===> amd (install)
+===> amd/amdgpu (install)
+install -T release -o root -g wheel -m 555   amdgpu.ko /boot/modules/
+===> radeon (install)
+install -T release -o root -g wheel -m 555   radeonkms.ko /boot/modules/
+===> i915 (install)
+install -T release -o root -g wheel -m 555   i915kms.ko /boot/modules/
+kldxref /boot/modules
+```
+
+参考资料 
+
+ - <https://github.com/freebsd/drm-kmod/issues/93#issuecomment-962622626>
+
 ## 故障排除
 
-如果显卡使用驱动有问题请直接联系作者：
+ - 如果显卡使用驱动有问题请直接联系作者：<https://github.com/freebsd/drm-kmod/issues>
 
-<https://github.com/freebsd/drm-kmod/issues>
-
-如果笔记本出现了唤醒时屏幕点不亮的问题，可以在 `/boot/loader.conf` 中添加 `hw.acpi.reset_video="1"` 以在唤醒时重置显示适配器。
+ - 如果笔记本出现了唤醒时屏幕点不亮的问题，可以在 `/boot/loader.conf` 中添加 `hw.acpi.reset_video="1"` 以在唤醒时重置显示适配器。
