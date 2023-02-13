@@ -207,6 +207,7 @@
 * [第19.5节 Linux 社区已经成为了一个肮脏的泥潭](di-19-zhang-wen-xue-gu-shi/di-19.5-jie-linux-she-qu-yi-jing-cheng-wei-le-yi-ge-ang-zang-de-ni-tan.md)
 * [第19.6节 Linux 败局已定——驳 FreeBSD 大败局](di-19-zhang-wen-xue-gu-shi/di-19.6-jie-linux-bai-ju-yi-ding-bo-freebsd-da-bai-ju.md)
 * [第19.7节 小说——FreeBSD 从入门到跑路](di-19-zhang-wen-xue-gu-shi/di-19.7-jie-xiao-shuo-freebsd-cong-ru-men-dao-pao-lu.md)
+* [第19.8节 重提 FreeBSD 与大败局](di-19-zhang-wen-xue-gu-shi/di-19.8-jie-zhong-ti-freebsd-yu-da-bai-ju.md)
 
 ## 第20章 娱乐与教育
 
