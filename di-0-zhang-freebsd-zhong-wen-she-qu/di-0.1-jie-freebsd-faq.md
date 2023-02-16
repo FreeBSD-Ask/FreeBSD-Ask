@@ -1,5 +1,34 @@
 # 第0.1节 FreeBSD FAQ
 
+
+## 简单版本
+
+ - 系统安装链接：
+
+<https://www.bilibili.com/video/BV1UR4y1U71T/>
+
+ - 【从入门到跑路教程】遇到问题的小伙伴可以搜索哦！看了有问题再来问！
+
+<https://book.bsdcn.org>
+
+ - 【FreeBSD 中文手册 2022】
+
+<https://handbook.bsdcn.org>
+
+ - 【如何报告 Bug】
+
+<https://book.bsdcn.org/di-22-zhang-bian-cheng-yu-kai-fa/di-22.1-jie-ru-he-bao-gao-bug.html>
+
+ - 【如何参与 FreeBSD 开发】
+
+<https://book.bsdcn.org/di-22-zhang-bian-cheng-yu-kai-fa/di-22.3-jie-ru-he-can-yu-freebsd-xie-zuo.html>
+
+ - 【如何移植软件包】
+
+<https://book.bsdcn.org/di-22-zhang-bian-cheng-yu-kai-fa/di-22.2-jie-ru-he-ti-jiao-yi-ge-ruan-jian-bao.html>
+
+## 复杂版本
+
 |                    问题                    |                                                                                                                    答案                                                                                                                    |
 | :--------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 |  1、怎么在 VM 虚拟机上安装 FreeBSD（安装文字、视频、图解教程）？  |                                                                                                                  文档内自行搜索                                                                                                                 |
