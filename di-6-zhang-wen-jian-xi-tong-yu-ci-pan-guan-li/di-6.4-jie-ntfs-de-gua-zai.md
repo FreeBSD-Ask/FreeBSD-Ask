@@ -25,7 +25,7 @@
 ## 手动挂载
 
 ```
-# ntfs-3g  /dev/da0s1  /media/NTFS   -o  rw,uid=1000,gid=1000,umask=0`
+# ntfs-3g  /dev/da0s1  /media/NTFS   -o  rw,uid=1000,gid=1000,umask=0
 ```
 
 如果不知道哪个磁盘分区是 NTFS，可以用命令来查看
@@ -37,7 +37,7 @@
 **注意：如果报错，尝试删除休眠文件：**
 
 ```
-# mount -t ntfs-3g -o remove_hiberfile /dev/da0s1 /mnt/NTFS
+# ntfs-3g  /dev/da0s1 /mnt/NTFS -o remove_hiberfile
 ```
 
 详细参数见 [ntfs-3g manpage](https://www.freebsd.org/cgi/man.cgi?query=ntfs-3g\&format=html)。如果无法挂载请先关闭 windows 的休眠，然后重启几次。
