@@ -1,12 +1,12 @@
 # 目录
 
-* [FreeBSD 从入门到跑路](README.md)
+* [FreeBSD 从入门到跑路](./)
 * [目录](mu-lu.md)
 
 ## 第0章 FreeBSD 中文社区
 
 * [第0.1节 FreeBSD FAQ](di-0-zhang-freebsd-zhong-wen-she-qu/di-0.1-jie-freebsd-faq.md)
-* [第0.2节 FreeBSD 中文社区（CFC）发展规划](di-0-zhang-freebsd-zhong-wen-she-qu/di-0.2-jie-freebsd-zhong-wen-she-qu-cfc-fa-zhan-gui-hua.md)
+* [第0.2节 FreeBSD 中文社区（CFC）发展规划](di-0-zhang-freebsd-zhong-wen-she-qu/di-0.2-jie-freebsd-zhong-wen-she-qu-fa-zhan-gui-hua.md)
 * [第0.3节 FreeBSD 的不足之处](di-0-zhang-freebsd-zhong-wen-she-qu/di-0.3-jie-freebsd-de-bu-zu-zhi-chu.md)
 * [第0.4节 FreeBSD 发行说明](di-0-zhang-freebsd-zhong-wen-she-qu/di-0.4-jie-freebsd-fa-hang-shuo-ming.md)
 
