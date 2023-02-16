@@ -256,7 +256,7 @@ root@ykla:/# ldd /usr/bin/qq
 
 ```
 # cd /home/ykla
-# wget http://mirrors.cqu.edu.cn/archlinux/iso/2023.01.01/archlinux-bootstrap-x86_64.tar.gz # 该链接为动态更新。
+# fetch http://mirrors.cqu.edu.cn/archlinux/iso/2023.01.01/archlinux-bootstrap-x86_64.tar.gz # 该链接为动态更新。
 # tar xpvf archlinux-bootstrap-x86_64.tar.gz -C /compat --numeric-owner # 若有报错 exit 请无视之。-
 # mv /compat/root.x86_64 /compat/arch # 重命名 /
 ```
