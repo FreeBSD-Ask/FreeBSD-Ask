@@ -8,7 +8,7 @@
 # sysrc kld_list+="fusefs"
 ```
 
-1. 修改 fstab 自动挂载
+## 永久性挂载，修改 fstab 自动挂载
 
 为了开机自动挂载，修改添加
 
@@ -22,7 +22,7 @@
 /dev/da0s1  /media/NTFS ntfs  rw,mount_prog=/usr/local/bin/ntfs-3g,late  0  0
 ```
 
-或者，手动挂载
+## 手动挂载
 
 ```
 # ntfs-3g  /dev/da0s1  /media/NTFS   -o  rw,uid=1000,gid=1000,umask=0`
@@ -32,6 +32,12 @@
 
 ```
 # fstyp /dev/da0s1
+```
+
+**注意：如果报错，尝试删除休眠文件：**
+
+```
+#mount -t ntfs-3g -o remove_hiberfile /dev/sdX /mnt
 ```
 
 详细参数见 [ntfs-3g manpage](https://www.freebsd.org/cgi/man.cgi?query=ntfs-3g\&format=html)。如果无法挂载请先关闭 windows 的休眠，然后重启几次。
