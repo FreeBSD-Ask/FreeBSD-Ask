@@ -8,7 +8,7 @@
 |√ |完成《FreeBSD 从入门到跑路》||
 | √ | 革故鼎新，从头开始建立新的 FreeBSD 中文社区||
 |√ |完成 FreeBSD 手册简体中文翻译 ||
-|√ |继续发展微信公众号——FreeBSD 中||
+|√ |继续发展微信公众号——FreeBSD中文【freebsdzh】||
 |√ | 继续募集捐款（目标 ¥3000）||
 |√ |建设维护 bsdcn.org||
 |进行中 |根据《FreeBSD 从入门到跑路》录制视频上传 BiliBili|<https://space.bilibili.com/2120246893>|
