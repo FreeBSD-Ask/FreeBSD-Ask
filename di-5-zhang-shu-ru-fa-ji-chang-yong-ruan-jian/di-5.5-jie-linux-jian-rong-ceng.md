@@ -10,8 +10,8 @@
 # sysrc linux_enable="YES"
 # sysrc kld_list+="linux linux64"
 # kldload linux64
-# pkg install emulators/linux-c7 dbus
 # service linux start
+# pkg install emulators/linux-c7 dbus
 # sysrc dbus_enable="YES" #一般桌面已经配置
 # service dbus start #一般桌面已经配置
 # dbus-uuidgen > /compat/linux/etc/machine-id
