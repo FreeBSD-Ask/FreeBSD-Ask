@@ -102,6 +102,7 @@
 |FreeBSD 开发者手册 最新翻译|<https://porters-handbook.bsdcn.org>|
 |FreeBSD 入门书籍|<https://book.bsdcn.org>|
 |BiliBili【B站】|<https://space.bilibili.com/2120246893>|
+|微信公众号|freebsdzh|
 
 
 微信公众号: freebsdzh （扫码关注）
