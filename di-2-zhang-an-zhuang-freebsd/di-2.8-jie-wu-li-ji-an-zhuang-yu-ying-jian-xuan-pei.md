@@ -19,11 +19,13 @@
 
 **FreeBSD 所有安装介质包括不限于虚拟机文件都没有提供图形界面，均需要自行安装。**
 
-**注意：如果要在 VMware 虚拟机使用 UEFI，必须使用 FreeBSD 13.0-RELEASE 及以上，否则启动会花屏。**
+>**注意**
+>
+>如果要在 VMware 虚拟机使用 UEFI，必须使用 FreeBSD 13.0-RELEASE 及以上，否则启动会花屏。
 
 刻录工具 Windows 应该选用 **Rufus**，Linux 直接使用 `dd`命令即可。
 
-下载地址：<https://rufus.ie/zh>
+rufus 下载地址：<https://rufus.ie/zh>
 
 >**警告**
 >
