@@ -16,6 +16,7 @@
 >```
 
 
+
 ## 下载 VirtualBox
 
 进入网页点击 `download` 即可下载：
@@ -80,4 +81,22 @@ vboxservice_enable="YES"
 
 ## 故障排除
 
-如果鼠标进去了出不来，请先按一下右边的 `ctrl`（键盘左右各有一个 `ctrl`，为默认设置）；如果自动缩放屏幕需要还原或者找不到菜单栏了请按 `home`+ 右 `ctrl`（提示：`Home` 键在 108 键盘上位于 `Scroll Lock` 的下边。）
+### EFI 下无法正常关机
+
+添加 
+
+```
+hw.efi.poweroff=0 
+```
+
+到 `/etc/sysctl.conf`,然后重启，再关机就正常了。
+
+参考文献：
+
+ - <https://www.truenas.com/community/threads/12-0-u8-1-13-0-u2-poweroff-problem-solution.104813/>
+ - <https://forums.freebsd.org/threads/efi-virtualbox-computer-non-stop-after-successful-shutdown-of-freebsd.84856/>
+
+
+### 鼠标进去了出不来
+
+请先按一下右边的 `ctrl`（正常键盘左右各有一个 `ctrl`，为默认设置）；如果自动缩放屏幕需要还原或者找不到菜单栏了请按 `home`+ 右 `ctrl`（提示：`Home` 键在 108 键盘上位于 `Scroll Lock` 的下边。）
