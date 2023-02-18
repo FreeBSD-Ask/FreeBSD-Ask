@@ -89,7 +89,7 @@ vboxservice_enable="YES"
 hw.efi.poweroff=0 
 ```
 
-到 `/etc/sysctl.conf`,然后重启，再关机就正常了。
+到 `/etc/sysctl.conf`，然后再重启，再关机就正常了。
 
 参考文献：
 
