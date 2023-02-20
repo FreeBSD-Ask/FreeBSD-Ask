@@ -76,7 +76,6 @@ vboxservice_enable="YES"
 # service vboxguest restart # 可能会提示找不到模块，但是不影响使用
 # service vboxservice restart
 # pw groupmod wheel -m ykla # sudo 权限
-# pw groupmod opt -m ykla # 开机重启 权限
 ```
 
 ## 故障排除
