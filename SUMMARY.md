@@ -71,11 +71,10 @@
 * [第5.2节 Ibus 输入法框架](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.2-jie-ibus-shu-ru-fa-kuang-jia.md)
 * [第5.3节 五笔输入法](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.3-jie-wu-bi-shu-ru-fa.md)
 * [第5.4节 Firefox 与 Chromium 安装](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.4-jie-firefox-yu-chromium-an-zhuang.md)
-* [第5.5节 Linux 兼容层](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.5-jie-linux-jian-rong-ceng.md)
-* [第5.6节 安装 金山 WPS](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.6-jie-an-zhuang-jin-shan-wps.md)
-* [第5.7节 安装 QQ](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.7-jie-an-zhuang-qq.md)
-* [第5.8节 更换字体](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.8-jie-geng-huan-zi-ti.md)
-* [第5.9节 wine](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.9-jie-wine.md)
+* [第5.5节 安装 金山 WPS](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.5-jie-an-zhuang-jin-shan-wps.md)
+* [第5.6节 安装 QQ](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.6-jie-an-zhuang-qq.md)
+* [第5.7节 更换字体](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.7-jie-geng-huan-zi-ti.md)
+* [第5.8节 wine](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.8-jie-wine.md)
 * [第5.10节 压缩与解压](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.10-jie-ya-suo-yu-jie-ya.md)
 
 ## 第6章 文件系统与磁盘管理
@@ -293,3 +292,11 @@
 * [第29.2节 安装 CDE](di-29-zhang-zhuo-mian-gao-ji-jin-jie/di-29.2-jie-an-zhuang-cde.md)
 * [第29.3节 安装 Awesome](di-29-zhang-zhuo-mian-gao-ji-jin-jie/di-29.3-jie-an-zhuang-awesome.md)
 * [第29.4节 安装 FVWM](di-29-zhang-zhuo-mian-gao-ji-jin-jie/di-29.4-jie-an-zhuang-fvwm.md)
+
+## 第30章 Linux 兼容层
+
+* [第30.1节 Linux 兼容层实现](di-30-zhang-linux-jian-rong-ceng/di-30.1-jie-linux-jian-rong-ceng-shi-xian.md)
+* [第30.2节 Linux 兼容层——基于 CentOS（原生）](di-30-zhang-linux-jian-rong-ceng/di-30.2-jie-linux-jian-rong-ceng-ji-yu-centos-yuan-sheng.md)
+* [第30.3节 Linux 兼容层——基于 Ubuntu/Debian](di-30-zhang-linux-jian-rong-ceng/di-30.3-jie-linux-jian-rong-ceng-ji-yu-ubuntudebian.md)
+* [第30.4 Linux 兼容层——基于 ArchLinux](di-30-zhang-linux-jian-rong-ceng/di-30.4-linux-jian-rong-ceng-ji-yu-archlinux.md)
+* [第30.5 高级教程：Linux 兼容层与 Jail](di-30-zhang-linux-jian-rong-ceng/di-30.5-gao-ji-jiao-cheng-linux-jian-rong-ceng-yu-jail.md)
