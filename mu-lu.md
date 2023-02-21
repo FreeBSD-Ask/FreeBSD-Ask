@@ -1,8 +1,5 @@
 # 目录
 
-* [FreeBSD 从入门到跑路](./)
-* [目录](mu-lu.md)
-
 ## 第0章 FreeBSD 中文社区
 
 * [第0.1节 FreeBSD FAQ](di-0-zhang-freebsd-zhong-wen-she-qu/di-0.1-jie-freebsd-faq.md)
@@ -71,12 +68,11 @@
 * [第5.2节 Ibus 输入法框架](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.2-jie-ibus-shu-ru-fa-kuang-jia.md)
 * [第5.3节 五笔输入法](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.3-jie-wu-bi-shu-ru-fa.md)
 * [第5.4节 Firefox 与 Chromium 安装](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.4-jie-firefox-yu-chromium-an-zhuang.md)
-* [第5.5节 Linux 兼容层](di-30-zhang-linux-jian-rong-ceng/di-30.2-jie-linux-jian-rong-ceng-ji-yu-centos-yuan-sheng.md)
-* [第5.6节 安装 金山 WPS](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.5-jie-an-zhuang-jin-shan-wps.md)
-* [第5.7节 安装 QQ](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.6-jie-an-zhuang-qq.md)
-* [第5.8节 更换字体](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.7-jie-geng-huan-zi-ti.md)
-* [第5.9节 wine](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.8-jie-wine.md)
-* [第5.10节 压缩与解压](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.10-jie-ya-suo-yu-jie-ya.md)
+* [第5.5节 安装 金山 WPS](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.5-jie-an-zhuang-jin-shan-wps.md)
+* [第5.6节 安装 QQ](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.6-jie-an-zhuang-qq.md)
+* [第5.7节 更换字体](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.7-jie-geng-huan-zi-ti.md)
+* [第5.8节 wine](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.8-jie-wine.md)
+* [第5.9节 压缩与解压](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.9-jie-ya-suo-yu-jie-ya.md)
 
 ## 第6章 文件系统与磁盘管理
 
@@ -207,6 +203,7 @@
 * [第19.5节 Linux 社区已经成为了一个肮脏的泥潭](di-19-zhang-wen-xue-gu-shi/di-19.5-jie-linux-she-qu-yi-jing-cheng-wei-le-yi-ge-ang-zang-de-ni-tan.md)
 * [第19.6节 Linux 败局已定——驳 FreeBSD 大败局](di-19-zhang-wen-xue-gu-shi/di-19.6-jie-linux-bai-ju-yi-ding-bo-freebsd-da-bai-ju.md)
 * [第19.7节 小说——FreeBSD 从入门到跑路](di-19-zhang-wen-xue-gu-shi/di-19.7-jie-xiao-shuo-freebsd-cong-ru-men-dao-pao-lu.md)
+* [第19.8节 重提 FreeBSD 与大败局](di-19-zhang-wen-xue-gu-shi/di-19.8-jie-zhong-ti-freebsd-yu-da-bai-ju.md)
 
 ## 第20章 娱乐与教育
 
@@ -292,3 +289,11 @@
 * [第29.2节 安装 CDE](di-29-zhang-zhuo-mian-gao-ji-jin-jie/di-29.2-jie-an-zhuang-cde.md)
 * [第29.3节 安装 Awesome](di-29-zhang-zhuo-mian-gao-ji-jin-jie/di-29.3-jie-an-zhuang-awesome.md)
 * [第29.4节 安装 FVWM](di-29-zhang-zhuo-mian-gao-ji-jin-jie/di-29.4-jie-an-zhuang-fvwm.md)
+
+## 第30章 Linux 兼容层
+
+* [第30.1节 Linux 兼容层实现](di-30-zhang-linux-jian-rong-ceng/di-30.1-jie-linux-jian-rong-ceng-shi-xian.md)
+* [第30.2节 Linux 兼容层——基于 CentOS（原生）](di-30-zhang-linux-jian-rong-ceng/di-30.2-jie-linux-jian-rong-ceng-ji-yu-centos-yuan-sheng.md)
+* [第30.3节 Linux 兼容层——基于 Ubuntu/Debian](di-30-zhang-linux-jian-rong-ceng/di-30.3-jie-linux-jian-rong-ceng-ji-yu-ubuntudebian.md)
+* [第30.4 Linux 兼容层——基于 ArchLinux](di-30-zhang-linux-jian-rong-ceng/di-30.4-linux-jian-rong-ceng-ji-yu-archlinux.md)
+* [第30.5 高级教程：Linux 兼容层与 Jail](di-30-zhang-linux-jian-rong-ceng/di-30.5-gao-ji-jiao-cheng-linux-jian-rong-ceng-yu-jail.md)
