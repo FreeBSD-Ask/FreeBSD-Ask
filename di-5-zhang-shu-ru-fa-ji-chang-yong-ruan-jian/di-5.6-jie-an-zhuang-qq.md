@@ -2,7 +2,7 @@
 
 ## Linux QQ 3.x（electron）【可选：基于 ArchLinux 兼容层】
 
-前文请看 Linux 兼容层的 ArchLinux 兼容层部分。
+请看第 30 章 Linux 兼容层的 ArchLinux 兼容层部分。
 
 ```
 # chroot /compat/arch/ /bin/bash #进入 Arch兼容层
@@ -19,7 +19,7 @@ $ yay -S linuxqq # 此时用户为 test
 
 ## Linux QQ 3.x（electron）【可选：基于 Ubuntu 兼容层】
 
-> 请先安装 CentOS 兼容层及 Ubuntu 兼容层，具体请看 第五章 第五节。
+> 请先安装 Ubuntu 兼容层，具体请看第 30 章。
 
 ```
 # chroot /compat/ubuntu/ /bin/bash #进入 Ubuntu 兼容层
