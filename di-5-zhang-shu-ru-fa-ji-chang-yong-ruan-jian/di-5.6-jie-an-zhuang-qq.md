@@ -17,24 +17,23 @@ $ yay -S linuxqq # 此时用户为 test
 # /user/bin/qq --no-sandbox --no-zygote --in-process-gpu # 此时位于 Arch 兼容层！
 ```
 
-## Linux QQ 3.x（electron）【可选：基于 Ubuntu 兼容层】
+## Linux QQ 3.x（Electron）【可选：基于 Ubuntu 兼容层】
 
 > 请先安装 Ubuntu 兼容层，具体请看第 30 章。
 
 ```
 # chroot /compat/ubuntu/ /bin/bash #进入 Ubuntu 兼容层
-# wget https://dldir1.qq.com/qqfile/qq/QQNT/64bd2578/linuxqq_3.0.0-565_amd64.deb #此时位于 Ubuntu 兼容层
+# wget https://dldir1.qq.com/qqfile/qq/QQNT/4b2e3220/linuxqq_3.1.0-9572_amd64.deb #此时位于 Ubuntu 兼容层
 ```
 
 ```
-# apt install ./linuxqq_3.0.0-565_amd64.deb  #此时位于 Ubuntu 兼容层
+# apt install ./linuxqq_3.1.0-9572_amd64.deb  #此时位于 Ubuntu 兼容层
 ```
 
 安装依赖文件和字体：
 
 ```
-# apt install libgbm-dev libasound2-dev webcamoid-plugins fonts-wqy-microhei  fonts-wqy-zenhei language-pack-zh-hans #此时位于 Ubuntu 兼容层
-# cp  /usr/lib/x86_64-linux-gnu/avkys/submodules/MultiSink/libffmpeg.so /usr/lib  #此时位于 Ubuntu 兼容层
+# apt install libgbm-dev libasound2-dev fonts-wqy-microhei  fonts-wqy-zenhei language-pack-zh-hans #此时位于 Ubuntu 兼容层
 # ldconfig #此时位于 Ubuntu 兼容层
 ```
 
@@ -55,7 +54,7 @@ $ yay -S linuxqq # 此时用户为 test
 
 
 
-## Linux QQ 2.x （GTK2.0）
+## Linux QQ 2.x （GTK 2.0）
 
 ### **安装 Linux 兼容层：**
 
