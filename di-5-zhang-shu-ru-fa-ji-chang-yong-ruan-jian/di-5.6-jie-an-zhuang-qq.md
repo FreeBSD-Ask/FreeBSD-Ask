@@ -6,14 +6,14 @@
 
 ```
 # chroot /compat/arch/ /bin/bash #进入 Arch兼容层
-# su test # 切换到普通用户才能使用 aur，前文已经创建该用户了！
-$ yay -S linuxqq # 此时用户为 test
-# exit #此时用户恢复为 root
+# su test # 此时位于 Arch 兼容层！切换到普通用户才能使用 aur，第 30 章已经创建过该用户了！
+$ yay -S linuxqq # 此时位于 Arch 兼容层！此时用户为 test
+# exit # 此时位于 Arch 兼容层！此时用户恢复为 root
 ````
 
 ```
 # export LANG=zh_CN.UTF-8 # 此时位于 Arch 兼容层！
-# export LC_ALL=zh_CN.UTF-8 # 如果不添加则中文输入法无法使用。如果设置失败请重启一次 FreeBSD 主机。此时位于 Arch 兼容层！
+# export LC_ALL=zh_CN.UTF-8 # 此时位于 Arch 兼容层！如果不添加环境变量，则中文输入法无法使用。如果设置失败请重启一次 FreeBSD 主机。此时位于 Arch 兼容层！
 # /user/bin/qq --no-sandbox --no-zygote --in-process-gpu # 此时位于 Arch 兼容层！
 ```
 
@@ -40,8 +40,8 @@ $ yay -S linuxqq # 此时用户为 test
 启动 QQ：
 
 ```
-# export LANG=zh_CN.UTF-8
-# export LC_ALL=zh_CN.UTF-8 # 如果不添加则中文输入法无法使用。
+# export LANG=zh_CN.UTF-8 # 此时位于 Ubuntu 兼容层
+# export LC_ALL=zh_CN.UTF-8 # 如果不添加则中文输入法无法使用。此时位于 Ubuntu 兼容层
 # /bin/qq --no-sandbox --no-zygote --in-process-gpu #此时位于 Ubuntu 兼容层
 ```
 
