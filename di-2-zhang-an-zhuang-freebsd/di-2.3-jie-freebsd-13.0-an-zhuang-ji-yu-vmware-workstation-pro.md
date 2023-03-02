@@ -115,7 +115,7 @@ fusefs_load="YES"
 请先安装虚拟机增强工具。
 
 ```
-# mount -t .host:/ /mnt/hgfs
+# vmhgfs-fuse .host:/selfsharefold /mnt/hgfs
 ```
 
 查看共享文件夹
