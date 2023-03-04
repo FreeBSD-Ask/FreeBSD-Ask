@@ -90,12 +90,6 @@ $ xfconf-query -c xsettings -p /Gtk/Modules -n -t string -s "appmenu-gtk-module"
 
 ## 故障排除
 
-### xfce 普通用户关机按钮灰色解决方案
-
-`# chown -R polkitd /usr/local/etc/polkit-1`
-
-即可解决 xfce4 普通用户关机按钮灰色的问题
-
 ### FreeBSD 的 xfce 终端动态标题不显示问题
 
 tcsh 配置:
