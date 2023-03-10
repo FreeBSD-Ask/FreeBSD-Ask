@@ -69,6 +69,12 @@ enabled:yes
 ```
 
 
+测试安装：
+
+```
+# pkg install xorg
+```
+
 参考资料：
 
 [https://www.freebsdmall.com/cgi-bin/fm/bsddvd10.1](https://www.freebsdmall.com/cgi-bin/fm/bsddvd10.1)
