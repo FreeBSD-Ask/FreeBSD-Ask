@@ -40,7 +40,7 @@
 ```
 FreeBSD:{enabled:no}
 DVD:{
-url:"file:///mnt/DVD/packages/FreeBSD:12:amd64",
+url:"file:///mnt/DVD/packages/FreeBSD:13:amd64",
 enabled:yes
 }
 ```
