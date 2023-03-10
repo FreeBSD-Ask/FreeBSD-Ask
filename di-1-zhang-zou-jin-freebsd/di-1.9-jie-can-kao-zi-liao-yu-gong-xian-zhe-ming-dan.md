@@ -98,6 +98,8 @@ kuntop
 
 April Simone🍥
 
+心即理物即心
+
 Jack
 
 Zomby7e
