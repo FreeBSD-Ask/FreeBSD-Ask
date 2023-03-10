@@ -5,8 +5,9 @@
 挂载 DVD 到 **/dist** 目录:
 
 ```
+# mdconfig -a -t vnode -f /tmp/bootable.iso -u 0 #不能直接挂载，显示错误 block device required
 # mkdir -p /dist
-# mount -t cd9660 /dev/cd0 /dist
+# mount -t cd9660 /dev/md0 /dist #若为直接插入的 DVD /dev/md0 则应为 /dev/cd0
 ```
 
 安装软件：
@@ -28,9 +29,10 @@
 ## 换源为 DVD
 
 ```
-mkdir /mnt/DVD
-mount -t /dev/cd0 /mnt/DVD
-mkdir /usr/local/etc/pkg/repos
+# mdconfig -a -t vnode -f /tmp/bootable.iso -u 0 #不能直接挂载，显示错误 block device required
+# mkdir /mnt/DVD
+# mount -t /dev/md0 /mnt/DVD #若为直接插入的 DVD /dev/md0 则应为 /dev/cd0 
+# mkdir /usr/local/etc/pkg/repos
 ```
 
 创建 `/usr/local/etc/pkg/repos/DVD.conf`：
