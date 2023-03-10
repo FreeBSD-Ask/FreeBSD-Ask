@@ -20,7 +20,7 @@
 
 >**故障排除**
 >
->**/dist** 目录若改为其他则无效，原因未知，若你知道请告诉我们。
+>**/dist** 目录若改为其他则无效，因为 `packages/repos/FreeBSD_install_cdrom.conf` 写死了路径且无法修改。
 
 ### 使用环境变量【可选】
 #### 安装软件
@@ -38,19 +38,12 @@
 ```
 
 
-
 ### 换源为 DVD【可选】
 
 #### 创建源
 
-创建 `/usr/local/etc/pkg/repos/DVD.conf`：
-
 ```
-FreeBSD:{enabled:no}
-DVD:{
-url:"file:///dist/packages/FreeBSD:13:amd64",
-enabled:yes
-}
+# cp /dist/packages/repos/FreeBSD_install_cdrom.conf /etc/pkg/FreeBSD_install_cdrom.conf
 ```
 
 测试安装：
@@ -58,6 +51,7 @@ enabled:yes
 ```
 # pkg install xorg
 ```
+##
 
 参考资料：
 
