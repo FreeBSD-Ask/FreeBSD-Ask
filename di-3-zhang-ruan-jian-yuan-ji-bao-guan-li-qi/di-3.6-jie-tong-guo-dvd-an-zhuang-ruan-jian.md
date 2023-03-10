@@ -16,7 +16,7 @@
 
 ```
 # mkdir -p /dist
-# mount -t cd9660 /dev/md0 /dist
+# mount -t cd9660 /dev/cd0 /dist
 ```
 
 ### 安装软件
@@ -53,7 +53,7 @@
 
 ```
 # mkdir -p /dist
-# mount -t cd9660 /dev/md0 /dist
+# mount -t cd9660 /dev/cd0 /dist
 ```
 
 ### 创建源
