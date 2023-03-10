@@ -3,7 +3,7 @@
 
 ## 挂载 DVD 到 **/dist** 目录:
 
-若直接挂载本地 ISO：
+ - 若直接挂载本地 ISO：
 
 ```
 # mdconfig FreeBSD-13.1-RELEASE-amd64-dvd1.iso 
@@ -11,15 +11,14 @@
 # mount -t cd9660 /dev/md0 /dist #不能直接挂载 ISO，会显示错误 block device required
 ```
  
-### 使用环境变量
-
-若直接使用 DVD 设备（如虚拟机直接挂载 ISO 镜像）：
+ - 若直接使用 DVD 设备（如虚拟机直接挂载 ISO 镜像）：
 
 ```
 # mkdir -p /dist
 # mount -t cd9660 /dev/cd0 /dist
 ```
 
+### 使用环境变量【可选】
 #### 安装软件
 
 测试安装：
