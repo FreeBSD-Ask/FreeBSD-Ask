@@ -1,23 +1,27 @@
 # 第3.6节 通过 DVD 安装软件
 
-挂载 DVD 到 **/mnt/DVD** 目录:
+挂载 DVD 到 **/dist** 目录:
 
 ```
-# mkdir -p /mnt/DVD
-# mount -t cd9660 /dev/cd0 /mnt/DVD
+# mkdir -p /dist
+# mount -t cd9660 /dev/cd0 /dist
 ```
 
 安装软件：
 
 ```
-# env REPOS_DIR=/mnt/DVD/packages/repos pkg install xorg
+# env REPOS_DIR=/dist/packages/repos pkg install xorg
 ```
 
 要列出看 DVD 中的可用软件：
 
 ```
-# env REPOS_DIR=/mnt/DVD/packages/repos pkg rquery "%n"
+# env REPOS_DIR=/dist/packages/repos pkg rquery "%n"
 ```
+
+## 故障排除
+
+**/dist** 目录若改为其他则无效，原因未知，若你知道请告诉我们。
 
 参考资料：
 
