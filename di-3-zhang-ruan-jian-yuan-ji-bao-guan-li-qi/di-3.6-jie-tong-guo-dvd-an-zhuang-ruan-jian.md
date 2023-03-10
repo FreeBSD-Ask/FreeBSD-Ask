@@ -33,11 +33,11 @@ mount -t cd9660 /mnt/DVD
 mkdir /usr/local/etc/pkg/repos
 ```
 
-创建 `/usr/local/etc/pkg/repos/FreeBSD.conf`：
+创建 `/usr/local/etc/pkg/repos/DVD.conf`：
 
 ```
 FreeBSD:{enabled:no}
-local:{
+DVD:{
 url:"file:///mnt/DVD/packages/FreeBSD:12:amd64",
 enabled:yes
 }
