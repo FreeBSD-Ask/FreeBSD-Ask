@@ -29,7 +29,7 @@
 
 ```
 mkdir /mnt/DVD
-mount -t cd9660 /mnt/DVD
+mount -t /dev/cd0 /mnt/DVD
 mkdir /usr/local/etc/pkg/repos
 ```
 
