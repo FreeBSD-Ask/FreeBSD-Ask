@@ -6,9 +6,9 @@
 若直接挂载本地 ISO：
 
 ```
-# mdconfig -a -t vnode -f FreeBSD-13.1-RELEASE-amd64-dvd1.iso -u 0 #不能直接挂载，显示错误 block device required
+# mdconfig -a -t vnode -f FreeBSD-13.1-RELEASE-amd64-dvd1.iso -u 0 
 # mkdir -p /dist
-# mount -t cd9660 /dev/md0 /dist
+# mount -t cd9660 /dev/md0 /dist #不能直接挂载 ISO，会显示错误 block device required
 ```
  
 ### 使用环境变量
