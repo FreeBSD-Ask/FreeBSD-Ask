@@ -1,6 +1,6 @@
 # 第2.13节 无线蓝牙鼠标的设置
 
-> 本文以 FreeBSD 13.0 为基准，并使用罗技 m337。
+> 本文基于 FreeBSD 13.0，并使用罗技 m337。
 
 ```
 # sysrc hcsecd_enable="YES"
