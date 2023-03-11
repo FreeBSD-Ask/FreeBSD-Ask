@@ -1,7 +1,7 @@
 # 第3.6节 通过 DVD 安装软件
 
 
-## 挂载 DVD 到 **/dist** 目录:
+## 挂载 DVD 到 /dist 目录:
 
  - 若直接挂载本地 ISO：
 
@@ -43,7 +43,7 @@
 #### 创建源
 
 ```
-# cp /dist/packages/repos/FreeBSD_install_cdrom.conf /etc/pkg/FreeBSD_install_cdrom.conf
+# cp /dist/packages/repos/FreeBSD_install_cdrom.conf /etc/pkg/
 ```
 
 测试安装：
