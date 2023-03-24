@@ -113,6 +113,6 @@
 
 Shengyun
 
-### 黑名单
+### 黑名单与社区失信名单
 
-见 <https://github.com/FreeBSD-Ask?view_as=public>。
+见 <http://chinafreebsd.org/>。
