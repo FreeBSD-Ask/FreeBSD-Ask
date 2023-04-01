@@ -32,7 +32,7 @@ VM 是闭源的由商业公司提供的，是需要付费的，可用免费试�
 
 ### Hyper-V
 
-Hyper-V 是 Windows 开发的虚拟机，分为 `Gen 1` 和 `Gen 2`。
+Hyper-V 是微软为 Windows 开发的虚拟机，分为 `Gen 1` 和 `Gen 2`。
 
 `Gen 1` 和 `Gen 2` 区别如下：
 
