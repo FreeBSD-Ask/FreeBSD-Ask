@@ -47,7 +47,7 @@ Hyper-V 是 Windows 开发的虚拟机，分为 `Gen 1` 和 `Gen 2`。
 | :--------: | :------------: | :-: | :-: | :-----------------------------------: |
 |    Gen 1   |      13.0      |  支持 | 不支持 |                   /                   |
 |    Gen 2   |      13.0      | [不支持](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=221074) |  支持 | 需要修改参数`sysctl kern.evdev.rcpt_mask=6` |
-|    Gen 2   |      14.0      | 支持 |  支持 |    参加[源代码](https://cgit.FreeBSD.org/src/commit/?id=21f4e817fde79d5de79bfbdf180d358ca5f48bf9)                |
+|    Gen 2   |      14.0      | 支持 |  支持 |    参见[源代码](https://cgit.FreeBSD.org/src/commit/?id=21f4e817fde79d5de79bfbdf180d358ca5f48bf9)                |
 
 ### 使用 virtio 技术半虚拟化的虚拟机
 
