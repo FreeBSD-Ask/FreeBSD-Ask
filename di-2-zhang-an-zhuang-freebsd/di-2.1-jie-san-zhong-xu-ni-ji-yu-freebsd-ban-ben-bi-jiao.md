@@ -41,20 +41,18 @@ Hyper-V 是 Windows 开发的虚拟机，分为 `Gen 1` 和 `Gen 2`。
 |    Gen 1   | IDE + SCSI |           仅 MBR          |
 |    Gen 2   |   仅 SCSI   | 仅 UEFI + 安全启动支持 + PXE 支持 |
 
-**FreeBSD 目前（截止到 2022-1-28）尚且不能在 Hyper-V 上正常运行鼠标或键盘，因为鼠标没有驱动。不建议使用，具体支持情况如下表。简而言之，要么鼠标不能用，要么键盘不能用，当然你说你用 VNC 那无话可说。**
-
 系统快速创建的为 `Gen 2`。
 
 | Hyper-V 代数 |   FreeBSD 版本   |  鼠标 |  键盘 |                   备注                  |
 | :--------: | :------------: | :-: | :-: | :-----------------------------------: |
 |    Gen 1   |      13.0      |  支持 | 不支持 |                   /                   |
-|    Gen 2   |      13.0      | 不支持 |  支持 | 需要修改参数`sysctl kern.evdev.rcpt_mask=6` |
-|    Gen 2   | 14.0-2022-1-27 | 不支持 |  支持 |                   /                   |
+|    Gen 2   |      13.0      | [不支持](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=221074) |  支持 | 需要修改参数`sysctl kern.evdev.rcpt_mask=6` |
+|    Gen 2   |      14.0      | 支持 |  支持 |    参加[源代码](https://cgit.FreeBSD.org/src/commit/?id=21f4e817fde79d5de79bfbdf180d358ca5f48bf9)                |
 
 ### 使用 virtio 技术半虚拟化的虚拟机
 
 > **注意：以下内容仅供参考，有待测试。**
 
-根据反馈，在 VMware EXSI 等半虚拟化平台上安装或升级 FreeBSD 会遇到故障（如阿里云 virtio-blk 驱动会出问题），需要在开机时按`ESC`,然后输入`set kern.maxphys=65536`回车，再输入`boot`即可正常启动。安装好后需要在`/boot/loader.conf`加入`kern.maxphys=65536`以免每次开机重复操作。阿里云升级完成后可能会因为此类问题卡在引导界面，此时需要重启并进 VNC 再进行上述操作。
+根据反馈，在 VMware EXSI 等半虚拟化平台上安装或升级 FreeBSD 会遇到故障（如阿里云 virtio-blk 驱动会出问题），需要在开机时按`ESC`,然后输入 `set kern.maxphys=65536` 回车，再输入 `boot` 即可正常启动。安装好后需要在 `/boot/loader.conf` 加入 `kern.maxphys=65536` 以免每次开机重复操作。阿里云升级完成后可能会因为此类问题卡在引导界面，此时需要重启并进 VNC 再进行上述操作。
 
 参考链接：https://wiki.freebsd.org/SystemTuning
