@@ -6,7 +6,7 @@
 
 声卡驱动 snd_hda  默认即加载。
 
-用以下命令查看当前声卡设备
+用以下命令查看当前声卡设备：
 
 ```
 $ cat /dev/sndstat
@@ -41,12 +41,14 @@ $ sysctl hw.snd.default_unit=5
 
 ### 提示
 
+部分声卡需要自行编译内核，请参考 <http://www.opensound.com/freebsd.html>。
+
 但是 oss 有些缺点，使用 `obs-studio` 无法录制 oss 输出。只能录制 oss 输入。看官方论坛里，可以 `virtual_oss` 模拟一个设备实现。
 
 但是 `obs-studio` 可以录制 pulseaudio 输出的音频。
 
-所以有些软件可以使用 pulseaudio 作为输出。使用 pulseaudio 的软件的音频输出,不受上面的命令控制音频输出设备。pulseaudio 会根据自己的设置把音频送到对应设备，所以需要使用 pulseaudio 混音器控制。
+所以有些软件可以使用 pulseaudio 作为输出。使用 pulseaudio 的软件的音频输出，不受上面的命令控制音频输出设备。pulseaudio 会根据自己的设置把音频送到对应设备，所以需要使用 pulseaudio 混音器控制。
 
 在 kde5 下面自带的音频控制器，切换设备就是控制的 pulseaudio。
 
-官方打包好的多媒体软件有些是支持 pulseaudio 但是这些软件中的大部分对应的编译选项没有打开。如果需要录制软件的音频输出，可以自行打开 ports 的编译选项自己编译。在软件中设置 pulseaudio 作为音频驱动输出就可以了
+官方打包好的多媒体软件有些是支持 pulseaudio 但是这些软件中的大部分对应的编译选项没有打开。如果需要录制软件的音频输出，可以自行打开 ports 的编译选项自己编译。在软件中设置 pulseaudio 作为音频驱动输出就可以了。
