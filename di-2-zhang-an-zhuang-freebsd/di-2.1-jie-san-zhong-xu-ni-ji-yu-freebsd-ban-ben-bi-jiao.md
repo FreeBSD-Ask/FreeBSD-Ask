@@ -4,7 +4,7 @@
 
 已知 FreeBSD 有以下版本：rc、beta、release、current、stable。
 
-release 是绝对的 “stable”，而 stable 和 current 都是开发分支，是不稳定的。所以 FreeBSD 的 stable 并不是和其他发行版的“稳定版”的概念一致，反而是“开发版”。
+release 是绝对的“stable”，是可以日常/服务器使用的稳定版。而 stable 和 current 都是开发分支，都是不稳定的。所以 FreeBSD 的 stable 与其他发行版的“稳定版”的概念并不一致，反而是一种“开发版”。
 
 stable 相对稳定后会推送到 current，但是不保证二者没有大的 bug，只是 stable 确保其 ABI 是兼容与大版本的。
 
@@ -55,4 +55,4 @@ Hyper-V 是微软为 Windows 开发的虚拟机，分为 `Gen 1` 和 `Gen 2`。
 
 根据反馈，在 VMware EXSI 等半虚拟化平台上安装或升级 FreeBSD 会遇到故障（如阿里云 virtio-blk 驱动会出问题），需要在开机时按`ESC`,然后输入 `set kern.maxphys=65536` 回车，再输入 `boot` 即可正常启动。安装好后需要在 `/boot/loader.conf` 加入 `kern.maxphys=65536` 以免每次开机重复操作。阿里云升级完成后可能会因为此类问题卡在引导界面，此时需要重启并进 VNC 再进行上述操作。
 
-参考链接：https://wiki.freebsd.org/SystemTuning
+参考链接：<https://wiki.freebsd.org/SystemTuning>
