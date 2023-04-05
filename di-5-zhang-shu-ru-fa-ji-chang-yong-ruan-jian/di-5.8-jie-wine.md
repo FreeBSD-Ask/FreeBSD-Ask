@@ -1,3 +1,4 @@
 # 第5.8节 wine
 
-FreeBSD  的 wine 目前运行 32 位的 exe 存在问题。
+FreeBSD 上的 wine 似乎一直就有问题，[无法运行 win32 程序](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=265273)。一直报错 `0024:fixme:ntdll:create_logical_proc_info stub`。
+
