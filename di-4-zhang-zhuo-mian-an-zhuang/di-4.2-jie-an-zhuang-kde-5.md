@@ -30,9 +30,10 @@ proc            /proc           procfs  rw      0       0
 > >
 > > **如果你不配置 proc，在普通用户下，你的所有图标都将变成无法点击的白色方块，**_**任何软件都打不开**_**，桌面陷入异常。且后续再进行配置也是无效的，必须重装系统。**
 >
->
+>  ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ **这就是后果** ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
+>  <figure><img src="../.gitbook/assets/witekde.jpg" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/witekde.jpg" alt=""><figcaption></figcaption></figure>
+
 
 然后
 
