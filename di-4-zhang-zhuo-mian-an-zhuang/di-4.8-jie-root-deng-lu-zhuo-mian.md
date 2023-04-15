@@ -4,6 +4,20 @@
 >
 > 鉴于部分用户希望 root 登录桌面，为贯彻自由精神撰写本章节。请注意 root 账户拥有最高权限，失误使用 root 账户很可能会**破坏系统**，因此用其登录图形界面存在**极高的安全风险**。以下内容请谨慎操作，风险自负。我们不承担任何责任。
 
+## GDM（GNOME 显示管理器）
+
+打开 `/usr/local/etc/pam.d/gdm-password`
+
+注释掉 `account requisite pam_securetty.so` 这一行（往最前面加 `#`）
+
+重启服务
+
+```
+# service gdm restart
+```
+
+
+
 ## lightdm
 
 安装与配置：
@@ -26,7 +40,7 @@
 
 * 编辑 `# ee /usr/local/etc/pam.d/lightdm`：
 
-注释 `account requisite pam_securetty.so` 这一行（往最前面加 `#`）
+注释掉 `account requisite pam_securetty.so` 这一行（往最前面加 `#`）
 
 重启服务
 
