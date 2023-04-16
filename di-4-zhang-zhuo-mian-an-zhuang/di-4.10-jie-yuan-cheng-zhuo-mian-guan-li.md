@@ -4,18 +4,17 @@
 
 启用 VNC 服务（目前只剩下这个 TigerVNC 了）
 
-TigerVNC Server：
-
-> 使用 tightvnc 也可以。
+安装 TigerVNC Server：
 
 ```
 # pkg install -y tigervnc-server 
 ```
 
-安装之后，还要做一些设置。
+安装之后，还要做一些设置：
 
-1. 在终端执行命令 `vncpasswd`，设置访问密码。
-2. 创建 `~/.vnc/xstartup` 文件，内容如下：
+在终端执行命令 `vncpasswd`，设置访问密码。
+
+创建 `~/.vnc/xstartup` 文件，内容如下：
 
 ```
 #!/bin/sh 
