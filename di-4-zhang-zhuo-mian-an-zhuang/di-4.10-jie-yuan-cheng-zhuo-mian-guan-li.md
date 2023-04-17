@@ -99,6 +99,12 @@ exec ck-launch-session startplasma-x11   #更改此处
 export LANG=zh_CN.UTF-8
 ```
 
+首次登录设备会有安全提示，输入 `yes`，回车后远程桌面窗口就会弹出.
+
+![](../.gitbook/assets/kde1.png)
+
+![](../.gitbook/assets/kde2.png)
+
 ### 使用 FreeBSD 远程其他机器
 
 安装命令：
@@ -113,11 +119,7 @@ export LANG=zh_CN.UTF-8
 # rdesktop windows 设备 ip 
 ```
 
-首次登录设备会有安全提示，输入 `yes`，回车后远程桌面窗口就会弹出.
 
-![](../.gitbook/assets/kde1.png)
-
-![](../.gitbook/assets/kde2.png)
 
 ## anydesk
 
