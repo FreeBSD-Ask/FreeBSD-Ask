@@ -22,7 +22,10 @@
 
 >**提示**
 >
->以下 proc 设置在 FreeBSD 13.2 及以后版本中将 **不再需要**，无需配置。但是旧版本 **必须** 如此做。
+>以下 proc 设置在 FreeBSD 13.2 及以后版本中将 **[不再需要](https://reviews.freebsd.org/R9:60af3bb18c6a0b7c3082e69d0bfb1d5f809e342b)**，无需配置。但是旧版本 **必须** 如此做。
+>
+>但是[其中给出的说法](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=269621)是不正确的，起码在 2023.4.11 之前，还是需要进行该配置的。
+
 
 
 `# ee /etc/fstab`
