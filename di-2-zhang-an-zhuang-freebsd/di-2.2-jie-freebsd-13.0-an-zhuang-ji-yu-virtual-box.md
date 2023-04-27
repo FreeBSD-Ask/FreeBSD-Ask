@@ -63,11 +63,11 @@ xorg 可以自动识别驱动，**不需要** 手动配置 `/usr/local/etc/X11/x
 
 显卡控制器用 `VBoxSVGA` 即可。
 
-编辑 `# ee /etc/rc.conf`，增加以下內容：
+启动服务：
 
 ```
-vboxguest_enable="YES"
-vboxservice_enable="YES"
+# sysrc vboxguest_enable="YES"
+# sysrc vboxservice_enable="YES"
 ```
 
 启动服务，调整权限（以普通用户 ykla 为例）：
