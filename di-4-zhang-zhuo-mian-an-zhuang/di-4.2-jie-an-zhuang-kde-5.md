@@ -16,6 +16,15 @@
 
 ## 配置
 
+
+### Procfs 设置【可选，FreeBSD 13.2 及以后不再需要】
+
+
+>**提示**
+>
+>以下 proc 设置在 FreeBSD 13.2 及以后版本中将 **不再需要**，无需配置。但是旧版本 **必须** 如此做。
+
+
 `# ee /etc/fstab`
 
 添加内容如下:
@@ -35,7 +44,7 @@ proc            /proc           procfs  rw      0       0
 
 
 
-然后
+### 启动项设置
 
 ```
 # sysrc dbus_enable="YES"
@@ -53,6 +62,8 @@ proc            /proc           procfs  rw      0       0
 提示：hal 已经被删除。**不需要**再添加~~hald\_enable="YES",~~ 见：
 
 [https://www.freshports.org/sysutils/hal](https://www.freshports.org/sysutils/hal)
+
+### 权限设置
 
 > 普通用户还需要将用户加入 wheel 组：
 >
