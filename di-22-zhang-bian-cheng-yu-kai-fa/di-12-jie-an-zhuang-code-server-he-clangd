@@ -1,0 +1,134 @@
+# 安装 code-server 和 clangd
+
+## code-server 安装
+
+1. 服务器上通过 pkg 安装依赖包
+
+```
+# pkg update -f
+# pkg install -y git python yarn-node16 npm-node16
+# pkg install -y pkgconf libsecret
+```
+
+2. 配置 yarn 和 npm 源
+
+```
+$ yarn config set registry https://registry.npmmirror.com
+$ npm config set registry https://registry.npmmirror.com
+```
+
+3. 通过 yarn 安装 code-server
+
+```
+$ yarn add code-server@v4.11.0
+```
+
+4. 将 node_modules 目录复制到 /usr/local/libexec
+
+```
+# cp -R node_modules /usr/local/libexec
+```
+
+5. 将 code-server 软链接到 /usr/local/bin
+
+```
+# cd /usr/local/bin
+# ln -s ../libexec/node_modules/.bin/code-server
+```
+
+6. 安装 bash 并将当前用户 shell 设置为 bash
+
+```
+# pkg install bash
+$ chsh -s /usr/local/bin/bash
+```
+
+7. 客户端上通过 ssh 端口转发方式来请求服务器启动 code-server
+
+```
+$ code-server-run () {
+    if [[ -z $1 || -z $2 ]]; then
+      cat << EOF
+usage: $0 port destination
+EOF
+      return 1
+    fi
+
+    local SSH="ssh -o RequestTTY=yes -L $1:127.0.0.1:$1 $2"
+    local CODE_SERVER="code-server --auth=none --port=$1"
+
+    $SSH VSCODE_APPDATA=.local/share $CODE_SERVER
+  }
+$ code-server-run 8000 user@server
+```
+
+8. 浏览器访问 http://127.0.0.1:8000 来使用 code-server
+
+
+## clangd 插件侧载
+
+部分插件可能无法通过 Extensions 自动下载安装，因此需要前往 https://open-vsx.org 自行侧载。
+
+1. 在服务器上侧载 clangd 插件。
+
+```
+$ fetch https://open-vsx.org/api/llvm-vs-code-extensions/vscode-clangd/0.1.24/file/llvm-vs-code-extensions.vscode-clangd-0.1.24.vsix
+$ code-server --install-extension llvm-vs-code-extensions.vscode-clangd-0.1.24.vsix
+```
+
+刷新客户端浏览器页面，可以看到 clangd 插件已被侧载。
+
+2. 在服务器上，通过 pkg 安装 llvm 来获得 FreeBSD 平台编译的 clangd 可执行文件。
+
+```
+# pkg install -y llvm
+```
+
+延伸阅读：
+
+* https://clangd.llvm.org
+
+
+## 推荐的 settings.json 配置
+
+1. 关闭 Workspace Trust
+
+```json
+{
+  "security.workspace.trust.enabled": false
+}
+```
+
+2. 编辑器自动处理空行
+
+```json
+{
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true
+}
+```
+
+3. 保存文件时自动格式化代码
+
+```json
+{
+  "editor.formatOnSave": true
+}
+```
+
+4. 当前工作区存在 git 仓库时，自动运行 git fetch
+
+```json
+{
+  "git.autofetch": true
+}
+```
+
+5. 关闭基于内容的编辑器语言检测
+
+```json
+{
+  "workbench.editor.languageDetection": false
+}
+```
