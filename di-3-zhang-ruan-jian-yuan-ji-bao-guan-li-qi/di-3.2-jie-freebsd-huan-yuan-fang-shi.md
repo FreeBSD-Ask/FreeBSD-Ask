@@ -2,6 +2,14 @@
 
 FreeBSD 有四类源：pkg、ports、portsnap、update。
 
+>portsnap 在 FreeBSD 14 中已经弃用，改为使用 gitup（请参考第3.3节）：
+>```
+>20230422:
+>	Remove portsnap(8).  Users are encouraged to obtain the ports tree
+>	using git instead.
+>	```
+
+
 **对于失去安全支持的版本，请参考最后一节。**
 
 **本文对于一个源列出了多个镜像站，无需全部配置，只需选择其一即可。**
