@@ -40,7 +40,7 @@ setenv LC_ALL zh_CN.UTF-8
 
 fcitx 5 相比前一代，增加了对 Wayland 的支持，据说更加流畅。
 
-`# pkg install fcitx5 fcitx5-qt5 fcitx5-qt6 fcitx5-gtk fcitx5-configtool zh-fcitx5-chinese-addons`
+`# pkg install fcitx5 fcitx5-qt5 fcitx5-qt6 fcitx5-gtk2 fcitx5-gtk3 fcitx5-gtk4 fcitx5-configtool zh-fcitx5-chinese-addons`
 
 也可通过 ports 安装。环境变量取决于你的窗口管理器和桌面以及 shell。经测试不支持 slim，可能是配置问题。sddm 可用。
 
