@@ -72,6 +72,8 @@ freyr
 
 [Rintim](https://github.com/Rintim)
 
+[DogeW](https://github.com/DogeW)
+
 [tomblackwhite](https://github.com/tomblackwhite)
 
 isNijikawa
