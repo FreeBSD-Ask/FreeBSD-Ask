@@ -88,6 +88,8 @@ liguangsheng
 
 kuntop
 
+[matatabi-wang](https://github.com/matatabi-wang)
+
 [星不萌](https://www.moebsd.cn)
 
 [qinghecyn](https://github.com/qinghecyn)
