@@ -9,6 +9,7 @@ FreeBSD 有四类源：pkg、ports、portsnap、update。
 >	using git instead.
 >	```
 
+>freebsd.cn **永久下线**，目前正在与 NJU 进行沟通软件源问题。本教程待补充。
 
 **对于失去安全支持的版本，请参考最后一节。**
 
@@ -99,41 +100,13 @@ enabled: yes
 FreeBSD: { enabled: no }
 ```
 
-### FreeBSD.cn(非官方,下同）
-
-```
-# ee /usr/local/etc/pkg/repos/freebsdcn.conf
-```
-
-写入以下内容:
-
-```
-freebsdcn: {  
-url: "pkg+http://pkg.freebsd.cn/${ABI}/quarterly",  
-mirror_type: "srv",  
-signature_type: "none",  
-fingerprints: "/usr/share/keys/pkg",  
-enabled: yes
-}
-FreeBSD: { enabled: no }
-```
-
 ## ports 源:提供源码方式安装软件的包管理器
 
 ports 下载路径是 `/usr/ports/distfiles`
 
 >**警告**
 >
->只有 freebsd.cn 镜像站的 ports 镜像是完整的，其余的大概只镜像了不到十分之一。请优先考虑使用 FreeBSD.cn。见 <https://github.com/ustclug/discussions/issues/408>。
-
-
-### FreeBSD.cn
-
-创建或修改文件 `# ee /etc/make.conf`:
-
-写入以下内容（注意结尾的 / 是必须的！下同）:
-
-`MASTER_SITE_OVERRIDE?=http://ports.freebsd.cn/ports-distfiles/${DIST_SUBDIR}/`
+> ports 源可能并不完整。其余的大概只镜像了不到十分之一。见 <https://github.com/ustclug/discussions/issues/408>。
 
 ### 网易开源镜像站
 
@@ -154,12 +127,6 @@ ports 下载路径是 `/usr/ports/distfiles`
 
 
 ## portsnap 源:打包的 ports文件
-
-### FreeBSD.cn
-
-编辑 portsnap 配置文件 `# ee /etc/portsnap.conf` :
-
-将 `SERVERNAME=portsnap.FreeBSD.org` 修改为 `SERVERNAME=portsnap.FreeBSD.cn`
 
 **获取 portsnap 更新**
 
@@ -191,13 +158,7 @@ ntpdate ntp.api.bz
 
 注意：只有一级架构的 release 版本才提供该源。也就是说 current 和 stable 是没有的。 关于架构的支持等级说明请看：
 
-https://www.freebsd.org/platforms
-
-### FreeBSD.cn
-
-编辑 `# ee /etc/freebsd-update.conf` 文件:
-
-将 `ServerName update.FreeBSD.org` 修改为 `ServerName update.FreeBSD.cn`
+<https://www.freebsd.org/platforms>
 
 **例:从 FreeBSD 12 升级到 13.0**
 
@@ -205,7 +166,6 @@ https://www.freebsd.org/platforms
 
 ## 境内 Git 镜像站
 
-<https://git.freebsd.cn>
 
 ## 不受安全支持的版本（请酌情使用）
 
