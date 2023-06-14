@@ -1,4 +1,4 @@
-# 本书目录
+# 目录
 
 ## 第0章 FreeBSD 中文社区
 
@@ -14,7 +14,7 @@
 * [第1.3节 什么是 Linux](di-1-zhang-zou-jin-freebsd/di-1.3-jie-shi-mo-shi-linux.md)
 * [第1.4节 FreeBSD 与其他操作系统](di-1-zhang-zou-jin-freebsd/di-1.4-jie-freebsd-yu-qi-ta-cao-zuo-xi-tong.md)
 * [第1.5节 为什么要使用 FreeBSD](di-1-zhang-zou-jin-freebsd/di-1.5-jie-wei-shi-mo-yao-shi-yong-freebsd.md)
-* [第1.6节 所谓开源哲学](di-1-zhang-zou-jin-freebsd/di-1.6-jie-suo-wei-kai-yuan-zhe-xue.md)
+* [第1.6节 所谓开源哲学](di-1-zhang-zou-jin-freebsd/di-1.6-jie-unix-zhe-xue.md)
 * [第1.7节 其他 BSD 简介](di-1-zhang-zou-jin-freebsd/di-1.7-jie-qi-ta-bsd-jian-jie.md)
 * [第1.8节 Linux 用户迁移指北](di-1-zhang-zou-jin-freebsd/di-1.8-jie-linux-yong-hu-qian-yi-zhi-bei.md)
 * [第1.9节 参考资料与贡献者名单](di-1-zhang-zou-jin-freebsd/di-1.9-jie-can-kao-zi-liao-yu-gong-xian-zhe-ming-dan.md)
