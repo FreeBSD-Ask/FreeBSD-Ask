@@ -107,7 +107,7 @@ FreeBSD: { enabled: no }
 这个源是下载 port 本身的源。等于以前的 portsnap。
 
 ```
-# git clone https://mirrors.nju.edu.cn/freebsd-ports/
+# git clone https://mirrors.nju.edu.cn/freebsd-ports/ /usr/ports
 ```
 
 或者
