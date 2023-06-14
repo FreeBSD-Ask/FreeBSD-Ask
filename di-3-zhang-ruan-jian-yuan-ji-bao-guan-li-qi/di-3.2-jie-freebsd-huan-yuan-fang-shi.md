@@ -2,13 +2,17 @@
 
 FreeBSD 有四类源：pkg、ports、portsnap、update。
 
->portsnap 在 FreeBSD 14 中已经弃用，改为使用 gitup（请参考第3.3节）：
+>注意：
+>
+>`portsnap` 在 FreeBSD 14 中已经弃用，改为使用 `gitup`（请参考第3.3节）：
 >```
 >20230422:
 >	Remove portsnap(8).  Users are encouraged to obtain the ports tree
 >	using git instead.
 >	```
 
+>赞助我们：
+>
 >freebsd.cn **永久下线**，目前正在与 NJU 进行沟通软件源问题。本教程待补充。freebsd.cn 镜像站大概需要100M 的 CN2 宽带。要求 HK 最好。有 10T+ 硬盘。如能提供者请通过微信公众号发送你的微信号，我加你好友。或者发你微信的二维码到 <ykla@bsdcn.org>
 
 
