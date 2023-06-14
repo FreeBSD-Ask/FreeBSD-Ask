@@ -177,8 +177,7 @@
 * [第16.11节 rsync 同步服务](di-16-zhang-fu-wu-qi/di-16.11-jie-rsync-tong-bu-fu-wu.md)
 * [第16.12节 时间服务](di-16-zhang-fu-wu-qi/di-16.12-jie-shi-jian-fu-wu.md)
 * [第16.13节 Wildfly](di-16-zhang-fu-wu-qi/di-16.13-jie-wildfly.md)
-* [Page 1](di-16-zhang-fu-wu-qi/page-1.md)
-* [Copy of Page 1](di-16-zhang-fu-wu-qi/copy-of-page-1.md)
+* [第16.14节 Slurm](di-16-zhang-fu-wu-qi/di-16.14-jie-slurm.md)
 
 ## 第17章 网络服务器
 
