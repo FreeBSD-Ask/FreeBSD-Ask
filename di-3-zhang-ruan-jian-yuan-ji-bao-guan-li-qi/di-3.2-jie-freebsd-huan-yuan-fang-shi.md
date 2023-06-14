@@ -151,7 +151,7 @@ ports 下载路径是 `/usr/ports/distfiles`
 `MASTER_SITE_OVERRIDE?=http://mirrors.ustc.edu.cn/freebsd-ports/distfiles/${DIST_SUBDIR}/`
 
 
-## portsnap 源:打包的 ports文件【FreeBSD 14.0 及以后不可用】
+## portsnap 源:打包的 ports 文件【FreeBSD 14.0 及以后不可用】
 
 **获取 portsnap 更新**
 
