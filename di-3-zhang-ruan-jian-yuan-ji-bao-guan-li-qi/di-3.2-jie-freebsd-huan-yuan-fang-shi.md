@@ -102,19 +102,37 @@ FreeBSD: { enabled: no }
 
 ## ports 源:提供源码方式安装软件的包管理器
 
-### 获取 ports 
+### 获取 port
+
+这个源是下载 port 本身的源。等于以前的 portsnap。
+
+```
+# git clone https://mirrors.nju.edu.cn/freebsd-ports/
+```
+
+或者
 
 ```
 # git clone https://mirrors.ustc.edu.cn/freebsd-ports/ports.git /usr/ports
 ```
 
-### ports 源
+### port 源
+
+这个源是下载 port 中的软件的源。
 
 ports 下载路径是 `/usr/ports/distfiles`
 
 >**警告**
 >
 > ports 源可能并不完整。其余的大概只镜像了不到十分之一。见 <https://github.com/ustclug/discussions/issues/408>。
+
+#### 南京大学开源镜像站
+
+创建或修改文件 `# ee /etc/make.conf`:
+
+写入以下内容:
+
+`MASTER_SITE_OVERRIDE?=http://mirrors.nju.edu.cn/freebsd-ports//distfiles/${DIST_SUBDIR}/`
 
 #### 网易开源镜像站
 
@@ -170,8 +188,6 @@ ntpdate ntp.api.bz
 **例:从 FreeBSD 12 升级到 13.0**
 
 `# freebsd-update -r 13.0-RELEASE upgrade`
-
-## 境内 Git 镜像站
 
 
 ## 不受安全支持的版本（请酌情使用）
