@@ -4,29 +4,82 @@
 
 ```
 # pkg install gitup #安装 gitup
-# gitup ports #获取 ports
+# gitup ports #获取 latest 的 ports
 # gitup release #获取 release 版本的源代码
 ```
 
 ## 境内 Git 镜像站
 
-**注：freebsd.cn **永久下线**，本教程暂不可用。**
-
-使用说明：
+```
+# cp /usr/local/etc/gitup.conf.sample /usr/local/etc/gitup.conf
+```
 
 ```
 # ee /usr/local/etc/gitup.conf
 ```
 
-将
-```
-                "host"           : "git.freebsd.org",
-```
-
-中的 `org` 改为 `cn` 即可：
+内容如下（有①②③共计三个需要修改的地方）：
 
 ```
-                "host"           : "git.freebsd.cn",
+# $FreeBSD$
+#
+# Default configuration options for gitup.conf.
+{
+	"defaults" : {
+		"host"           : "mirrors.ustc.edu.cn",  #①改动成这样
+		"port"           : 443,
+#		"proxy_host"     : "",
+#		"proxy_port"     : 0,
+#		"proxy_username" : "",
+#		"proxy_password" : "",
+#		"source_address" : "",
+		"low_memory"     : false,
+		"display_depth"  : 0,
+		"verbosity"      : 1,
+		"work_directory" : "/var/db/gitup",
+	},
+
+	"ports" : {
+		"repository_path"  : "/freebsd-ports/ports.git",  #②改动成这样
+		"branch"           : "main",
+		"target_directory" : "/usr/ports",
+		"ignores"          : [],
+	},
+
+	"quarterly" : {
+		"repository_path"  : "/freebsd-ports/ports.git",  #③改动成这样
+		"branch"           : "quarterly",
+		"target_directory" : "/usr/ports",
+		"ignores"          : [],
+	},
+
+	"release" : {
+		"repository_path"  : "/src.git",
+		"branch"           : "releng/13.2",
+		"target_directory" : "/usr/src",
+		"ignores"          : [
+			"sys/[^\/]+/conf",
+		],
+	},
+
+	"stable" : {
+		"repository_path"  : "/src.git",
+		"branch"           : "stable/13",
+		"target_directory" : "/usr/src",
+		"ignores"          : [
+			"sys/[^\/]+/conf",
+		],
+	},
+
+	"current" : {
+		"repository_path"  : "/src.git",
+		"branch"           : "main",
+		"target_directory" : "/usr/src",
+		"ignores"          : [
+			"sys/[^\/]+/conf",
+		],
+	}
+}
 ```
 
 拉取 ports：
@@ -37,7 +90,7 @@
 
 ## 故障排除：速度太慢（若不使用镜像站）
 
-设置 HTTP 代理
+ - 设置 HTTP 代理
 
 `gitup` 的代理不取决于系统代理，而是由其配置文件单独决定。
 
@@ -50,10 +103,22 @@
 "proxy_port" : 7890,
 ```
 
-参考链接：
+ - 详细调试输出：
 
-[https://www.freebsd.org/cgi/man.cgi?query=gitup\&sektion=1\&manpath=freebsd-release-ports](https://www.freebsd.org/cgi/man.cgi?query=gitup\&sektion=1\&manpath=freebsd-release-ports)
+```
+# gitup -v2 ports
+```
 
-[https://www.freshports.org/net/gitup](https://www.freshports.org/net/gitup)
+ -  gitup: build_repair_command: There are too many files to repair -- please re-clone the repository: Argument list too long 
 
-[https://github.com/johnmehr/gitup](https://github.com/johnmehr/gitup)
+```
+# rm -rf /usr/ports
+```
+
+清空目录即可，可以无视 `rm: /usr/ports/: Device busy` 这个提示。
+
+## 参考链接
+
+- [https://www.freebsd.org/cgi/man.cgi?query=gitup\&sektion=1\&manpath=freebsd-release-ports](https://www.freebsd.org/cgi/man.cgi?query=gitup\&sektion=1\&manpath=freebsd-release-ports)
+- [https://www.freshports.org/net/gitup](https://www.freshports.org/net/gitup)
+- [https://github.com/johnmehr/gitup](https://github.com/johnmehr/gitup)
