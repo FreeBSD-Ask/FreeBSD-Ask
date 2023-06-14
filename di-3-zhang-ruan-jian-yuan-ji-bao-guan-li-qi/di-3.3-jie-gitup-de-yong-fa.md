@@ -113,9 +113,10 @@
 
 ```
 # rm -rf /usr/ports
+# gitup ports
 ```
 
-清空目录即可，可以无视 `rm: /usr/ports/: Device busy` 这个提示。
+清空目录重新拉取即可，可以无视 `rm: /usr/ports/: Device busy` 这个提示。
 
 ## 参考链接
 
