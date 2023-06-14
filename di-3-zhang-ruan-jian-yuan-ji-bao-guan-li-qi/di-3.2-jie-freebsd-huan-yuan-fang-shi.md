@@ -119,7 +119,7 @@ FreeBSD: { enabled: no }
 然后
 
 ```
-# tar -zxvf ports.tar.gz /usr/ports #解压至路径
+# tar -zxvf ports.tar.gz -C /usr/ports #解压至路径
 # rm ports.tar.gz #删除存档
 ```
 
