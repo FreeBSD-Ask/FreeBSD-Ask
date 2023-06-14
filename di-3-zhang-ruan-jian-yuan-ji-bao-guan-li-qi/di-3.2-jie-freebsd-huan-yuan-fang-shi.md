@@ -134,14 +134,9 @@ FreeBSD: { enabled: no }
 
 然后：
 
-```
-# git clone https://mirrors.nju.edu.cn/freebsd-ports/ports.git /usr/ports
-```
-
-或者
 
 ```
-# git clone https://mirrors.ustc.edu.cn/freebsd-ports/ports.git /usr/ports
+# git clone --depth 1 https://mirrors.ustc.edu.cn/freebsd-ports/ports.git /usr/ports
 ```
 
 ### port 源
