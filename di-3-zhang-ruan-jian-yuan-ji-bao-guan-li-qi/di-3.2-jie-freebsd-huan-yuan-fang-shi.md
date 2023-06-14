@@ -106,6 +106,33 @@ FreeBSD: { enabled: no }
 
 这个源是下载 port 本身的源。等于以前的 portsnap。
 
+#### 获取压缩文件方法
+```
+# fetch https://mirrors.nju.edu.cn/freebsd-ports/ports.tar.gz
+```
+
+或者
+
+```
+# fetch https://mirrors.ustc.edu.cn/freebsd-ports/ports.tar.gz
+```
+然后
+
+```
+# tar -zxvf ports.tar.gz /usr/ports #解压至路径
+# rm ports.tar.gz #删除存档
+```
+
+#### Git 方法
+
+须提前安装 git：
+
+```
+# pkg install git
+```
+
+然后：
+
 ```
 # git clone https://mirrors.nju.edu.cn/freebsd-ports/ports.git /usr/ports
 ```
