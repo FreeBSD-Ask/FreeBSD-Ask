@@ -102,13 +102,21 @@ FreeBSD: { enabled: no }
 
 ## ports 源:提供源码方式安装软件的包管理器
 
+### 获取 ports 
+
+```
+# git clone https://mirrors.ustc.edu.cn/freebsd-ports/ports.git /usr/ports
+```
+
+### ports 源
+
 ports 下载路径是 `/usr/ports/distfiles`
 
 >**警告**
 >
 > ports 源可能并不完整。其余的大概只镜像了不到十分之一。见 <https://github.com/ustclug/discussions/issues/408>。
 
-### 网易开源镜像站
+#### 网易开源镜像站
 
 创建或修改文件 `# ee /etc/make.conf`:
 
@@ -116,7 +124,7 @@ ports 下载路径是 `/usr/ports/distfiles`
 
 `MASTER_SITE_OVERRIDE?=http://mirrors.163.com/freebsd-ports/distfiles/${DIST_SUBDIR}/`
 
-### 中国科学技术大学开源软件镜像站
+#### 中国科学技术大学开源软件镜像站
 
 创建或修改文件 `# ee /etc/make.conf`:
 
@@ -125,8 +133,7 @@ ports 下载路径是 `/usr/ports/distfiles`
 `MASTER_SITE_OVERRIDE?=http://mirrors.ustc.edu.cn/freebsd-ports/distfiles/${DIST_SUBDIR}/`
 
 
-
-## portsnap 源:打包的 ports文件
+## portsnap 源:打包的 ports文件【FreeBSD 14.0 及以后不可用】
 
 **获取 portsnap 更新**
 
