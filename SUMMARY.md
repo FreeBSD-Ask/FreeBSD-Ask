@@ -214,6 +214,7 @@
 * [第19.12节 诗歌选](di-19-zhang-wen-xue-gu-shi/di-19.12-jie-shi-ge-xuan.md)
 * [第19.13节 简议道风](di-19-zhang-wen-xue-gu-shi/di-19.13-jie-jian-yi-dao-feng.md)
 * [第19.14节 小说——你与暗](di-19-zhang-wen-xue-gu-shi/di-19.14-jie-xiao-shuo-ni-yu-an.md)
+* [第19.15节 吾乡何处](di-19-zhang-wen-xue-gu-shi/di-19.15-jie-wu-xiang-he-chu.md)
 
 ## 第20章 娱乐与教育
 
