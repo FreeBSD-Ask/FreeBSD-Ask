@@ -14,7 +14,7 @@
 * [第1.3节 什么是 Linux](di-1-zhang-zou-jin-freebsd/di-1.3-jie-shi-mo-shi-linux.md)
 * [第1.4节 FreeBSD 与其他操作系统](di-1-zhang-zou-jin-freebsd/di-1.4-jie-freebsd-yu-qi-ta-cao-zuo-xi-tong.md)
 * [第1.5节 为什么要使用 FreeBSD](di-1-zhang-zou-jin-freebsd/di-1.5-jie-wei-shi-mo-yao-shi-yong-freebsd.md)
-* [第1.6节 所谓开源哲学](di-1-zhang-zou-jin-freebsd/di-1.6-jie-unix-zhe-xue.md)
+* [第1.6节 UNIX 哲学](di-1-zhang-zou-jin-freebsd/di-1.6-jie-unix-zhe-xue.md)
 * [第1.7节 其他 BSD 简介](di-1-zhang-zou-jin-freebsd/di-1.7-jie-qi-ta-bsd-jian-jie.md)
 * [第1.8节 Linux 用户迁移指北](di-1-zhang-zou-jin-freebsd/di-1.8-jie-linux-yong-hu-qian-yi-zhi-bei.md)
 * [第1.9节 参考资料与贡献者名单](di-1-zhang-zou-jin-freebsd/di-1.9-jie-can-kao-zi-liao-yu-gong-xian-zhe-ming-dan.md)
@@ -174,6 +174,7 @@
 * [第16.11节 rsync 同步服务](di-16-zhang-fu-wu-qi/di-16.11-jie-rsync-tong-bu-fu-wu.md)
 * [第16.12节 时间服务](di-16-zhang-fu-wu-qi/di-16.12-jie-shi-jian-fu-wu.md)
 * [第16.13节 Wildfly](di-16-zhang-fu-wu-qi/di-16.13-jie-wildfly.md)
+* [第16.14节 Slurm](di-16-zhang-fu-wu-qi/di-16.14-jie-slurm.md)
 
 ## 第17章 网络服务器
 
@@ -204,6 +205,13 @@
 * [第19.6节 Linux 败局已定——驳 FreeBSD 大败局](di-19-zhang-wen-xue-gu-shi/di-19.6-jie-linux-bai-ju-yi-ding-bo-freebsd-da-bai-ju.md)
 * [第19.7节 小说——FreeBSD 从入门到跑路](di-19-zhang-wen-xue-gu-shi/di-19.7-jie-xiao-shuo-freebsd-cong-ru-men-dao-pao-lu.md)
 * [第19.8节 重提 FreeBSD 与大败局](di-19-zhang-wen-xue-gu-shi/di-19.8-jie-zhong-ti-freebsd-yu-da-bai-ju.md)
+* [第19.9节 所谓开源哲学](di-19-zhang-wen-xue-gu-shi/di-19.9-jie-suo-wei-kai-yuan-zhe-xue.md)
+* [第19.10节 兔子](di-19-zhang-wen-xue-gu-shi/di-19.10-jie-tu-zi.md)
+* [第19.11节 寻道](di-19-zhang-wen-xue-gu-shi/di-19.11-jie-xun-dao.md)
+* [第19.12节 诗歌选](di-19-zhang-wen-xue-gu-shi/di-19.12-jie-shi-ge-xuan.md)
+* [第19.13节 简议道风](di-19-zhang-wen-xue-gu-shi/di-19.13-jie-jian-yi-dao-feng.md)
+* [第19.14节 小说——你与暗](di-19-zhang-wen-xue-gu-shi/di-19.14-jie-xiao-shuo-ni-yu-an.md)
+* [第19.15节 吾乡何处](di-19-zhang-wen-xue-gu-shi/di-19.15-jie-wu-xiang-he-chu.md)
 
 ## 第20章 娱乐与教育
 
@@ -296,5 +304,13 @@
 * [第30.1节 Linux 兼容层实现](di-30-zhang-linux-jian-rong-ceng/di-30.1-jie-linux-jian-rong-ceng-shi-xian.md)
 * [第30.2节 Linux 兼容层——基于 CentOS（原生）](di-30-zhang-linux-jian-rong-ceng/di-30.2-jie-linux-jian-rong-ceng-ji-yu-centos-yuan-sheng.md)
 * [第30.3节 Linux 兼容层——基于 Ubuntu/Debian](di-30-zhang-linux-jian-rong-ceng/di-30.3-jie-linux-jian-rong-ceng-ji-yu-ubuntudebian.md)
-* [第30.4 Linux 兼容层——基于 ArchLinux](di-30-zhang-linux-jian-rong-ceng/di-30.4-jie-linux-jian-rong-ceng-ji-yu-archlinux-bootstrap.md)
-* [第30.5 高级教程：Linux 兼容层与 Jail](di-30-zhang-linux-jian-rong-ceng/di-30.6-jie-gao-ji-jiao-cheng-linux-jian-rong-ceng-yu-jail.md)
+* [第30.4节 Linux 兼容层——基于 ArchLinux bootstrap](di-30-zhang-linux-jian-rong-ceng/di-30.4-jie-linux-jian-rong-ceng-ji-yu-archlinux-bootstrap.md)
+* [第30.5节 Linux 兼容层——基于 archlinux-pacman](di-30-zhang-linux-jian-rong-ceng/di-30.5-jie-linux-jian-rong-ceng-ji-yu-archlinuxpacman.md)
+* [第30.6节 高级教程：Linux 兼容层与 Jail](di-30-zhang-linux-jian-rong-ceng/di-30.6-jie-gao-ji-jiao-cheng-linux-jian-rong-ceng-yu-jail.md)
+
+## 第31章TwinCAT/BSD
+
+* [第31.1节 简介](di-31-zhang-twincatbsd/di-31.1-jie-jian-jie.md)
+* [第31.2节 系统安装与基本配置](di-31-zhang-twincatbsd/di-31.2-jie-xi-tong-an-zhuang-yu-ji-ben-pei-zhi.md)
+* [第31.3节 开发环境配置](di-31-zhang-twincatbsd/di-31.3-jie-kai-fa-huan-jing-pei-zhi.md)
+* [第31.4节 故障排除](di-31-zhang-twincatbsd/di-31.4-jie-gu-zhang-pai-chu.md)
