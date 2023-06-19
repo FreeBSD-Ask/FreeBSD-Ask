@@ -87,7 +87,7 @@ FreeBSD 2.2.8-RELEASE 于 1998 年 11 月 29 日发布（在 FreeBSD 3 发布后
 
 首届 FreeBSD 大会（FreeBSDCon'99）在加利福尼亚州伯克利举行。来自世界各地的 300 多名开发者和用户参加了此次活动，标志着这个操作系统在受欢迎度和影响力上的一个重要里程碑。
 
-### 2000 年 3 月 14 日 FreeBSD 4.0 发布
+### 2000 年 3 月 14 日 FreeBSD 4.0-RELEASE
 
 于 2000 年 3 月 14 日宣布发布的 FreeBSD 4.0-RELEASE 带来了大量的新功能和工具。该版本包括早期的 IPv6 支持和 IPsec，两者都依赖于 KAME 代码，还有 OpenSSH、 `accept()`过滤器以及具备基本的 802.11b WiFi 支持的 wi(4)。
 
