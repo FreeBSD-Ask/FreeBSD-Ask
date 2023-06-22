@@ -224,7 +224,7 @@ LLVM 项目是一组模块化和可重用的编译器和工具链技术。Clang 
 
 FreeBSD 13.0-RELEASE 于 2021 年 4 月 13 日发布。尽管 AArch64 从 FreeBSD 11 开始就得到了支持，但它在 FreeBSD 13.0-RELEASE 中才被提升为一级平台，成为第一个非 x86 架构的一级平台。13.0 还包括内核 TLS 卸载、对 clang 和 LLVM 的升级以及移除了弃用的库和工具。
 
-
+原文地址：https://freebsdfoundation.org/freebsd/timeline/
 ## 什么是 FreeBSD？
 
 BSD 最初是由 University of California, Berkeley 所开发的，意为 `Berkeley Software Distribution`（伯克利软件套件）。值得注意地是，Berkeley 伯克利之名来自著名的近代经验论哲学家乔治·贝克莱（George Berkeley，1685－1753，音译问题，原词是一致的），伯克利市和伯克利大学都是来源他的名字。贝克莱主教通过他的形而上学（反对牛顿绝对时空观等）启发了 20 世纪一众科学家，例如爱因斯坦，在某种意义上指导了现代科技革命。
