@@ -12,7 +12,7 @@
 
 > **PDF 文档**
 >
-> 点击 <https://freebsd.gitbook.io/book/>，选择右上角的“导出为 PDF”，若不成功可多试几次（需要代理软件）。
+> 点击 <https://freebsd.gitbook.io/book/>，选择右上角的“导出为 PDF”（需要代理软件）。
 
 ## 概述
 
