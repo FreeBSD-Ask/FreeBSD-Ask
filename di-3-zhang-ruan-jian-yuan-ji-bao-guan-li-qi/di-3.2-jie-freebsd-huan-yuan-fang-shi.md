@@ -163,7 +163,7 @@ ports 下载路径是 `/usr/ports/distfiles`
 
 写入以下内容:
 
-`MASTER_SITE_OVERRIDE?=http://mirrors.nju.edu.cn/freebsd-ports//distfiles/${DIST_SUBDIR}/`
+`MASTER_SITE_OVERRIDE?=http://mirrors.nju.edu.cn/freebsd-ports/distfiles/${DIST_SUBDIR}/`
 
 #### 网易开源镜像站
 
