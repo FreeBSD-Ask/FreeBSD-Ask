@@ -10,7 +10,9 @@ FreeBSD 已从 Linux 移植了显卡驱动，理论上，I 卡 A 卡 N 卡均在
 
 对于 FreeBSD 12，支持情况同 Linux 内核 4.16；
 
-对于 FreeBSD 13.1 及以上/14-CURRENT，编译使用`drm-510-kmod`，支持情况同 Linux 5.16。AMD 可支持 R7 4750U【但是有 [bug](https://github.com/freebsd/drm-kmod/issues/72)】。
+对于 FreeBSD 13.1，编译使用`drm-510-kmod`，支持情况同 Linux 5.10。AMD 可支持 R7 4750U【但是有 [bug](https://github.com/freebsd/drm-kmod/issues/72)】。
+
+FreeBSD 14 Current，编译使用 `drm-515-kmod`。
 
 详细情况可以看
 
@@ -69,7 +71,7 @@ FreeBSD 已从 Linux 移植了显卡驱动，理论上，I 卡 A 卡 N 卡均在
 * FreeBSD 14 (current）
 
 ```
-# cd /usr/ports/graphics/drm-510-kmod/ && make BATCH=yes install clean
+# cd /usr/ports/graphics/drm-515-kmod/ && make BATCH=yes install clean
 ```
 
 ### 加载显卡
