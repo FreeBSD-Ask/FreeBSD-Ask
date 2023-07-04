@@ -23,8 +23,9 @@
 |![](../.gitbook/assets/server.jpg)|《鸟哥的 Linux 私房菜———服务器架设篇(第三版)》|鸟哥|9787111384991|机械工业出版社|/|/|
 |![4.4BSD 操作系统设计与实现](../.gitbook/assets/4BSD.png)|《4.4BSD 操作系统设计与实现》|Marshall Kirk McKusick|9787111366478|机械工业出版社|_**The Design and Implementation of the 4.4BSD Operating System**_|4.4BSD 操作系统设计与实现|
 |![深入理解 FreeBSD 设备驱动程序开发](../.gitbook/assets/qudong.png)|《深入理解FreeBSD设备驱动程序开发》|Joseph Kong|9787111411574|机械工业出版社|_**FreeBSD Device Drivers: A Guide for the Intrepid**_|FreeBSD 设备驱动程序开发|
-
-
+|![UNIX环境高级编程（第3版）](../.gitbook/assets/unix.png)|《UNIX环境高级编程（第3版）》|W.Richard Stevens、Stephen A.Rago|9787115352118|人民邮电出版社|_**Advanced Programming in the UNIX Environment, Third Edition**_|深入了解驱动 UNIX 内核的编程接口的实用知识|
+|![UNIX 网络编程 卷 1：套接字联网 API（第3版）](../.gitbook/assets/unix1.png)|《UNIX 网络编程 卷 1：套接字联网 API（第3版）》|W. Richard Stevens、Bill Fenner、Andrew M. Rudoff|9787115367198|人民邮电出版社|_**UNIX Network Programming, Volume 1: The Sockets Networking API, Third Edition**_|如何使用套接字 API 进行网络编程|
+|![UNIX 网络编程 卷 2：进程间通信（第2版）](../.gitbook/assets/unix2.jpg)|《UNIX 网络编程 卷 2：进程间通信（第2版）》|W. Richard Stevens|9787115367204|人民邮电出版社|_**UNIX Network Programming,Vovum 2：Interprocess Communications,Second Edition**_|深入了解各种进程间通信形式|
 
 
 
