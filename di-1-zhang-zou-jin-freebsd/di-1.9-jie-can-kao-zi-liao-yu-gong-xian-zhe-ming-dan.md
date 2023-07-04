@@ -21,6 +21,8 @@
 |![大教堂与集市](../.gitbook/assets/dajiaotang.jpg)|《大教堂与集市》|Eric S. Raymond|9787111452478|机械工业出版社|_**The Cathedral and the Bazaar**_|主要介绍了开源运动的发展史。|
 |![](../.gitbook/assets/53967433.\_SX318\_.jpg)|《鸟哥的 Linux 私房菜——基础学习篇(第三版)》|鸟哥|9787115226266|人民邮电出版社|/|注意：存在更新的第四版。但是第四版是针对 systemd 撰写的，完全偏离了传统的 init，仍然建议使用第三版，与 FreeBSD 更有相关性。但是其中的一些 grep 等命令的参数会有所不同，值得注意。有一些章节对于 FreeBSD 是无必要的，可以跳过去：0、2、3、4、15、17、21、22、23、25、26。|
 |![](../.gitbook/assets/server.jpg)|《鸟哥的 Linux 私房菜———服务器架设篇(第三版)》|鸟哥|9787111384991|机械工业出版社|/|/|
+|![4.4BSD操作系统设计与实现](../.gitbook/assets/4BSD.png)|《4.4BSD 操作系统设计与实现》|Marshall Kirk McKusick|9787111366478|机械工业出版社|_**The Design and Implementation of the 4.4BSD Operating System**_|4.4BSD 操作系统设计与实现|
+
 
 
 
