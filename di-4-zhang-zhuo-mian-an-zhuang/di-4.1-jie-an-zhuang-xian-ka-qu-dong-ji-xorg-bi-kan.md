@@ -44,7 +44,7 @@ FreeBSD 已从 Linux 移植了显卡驱动，理论上，I 卡 A 卡 N 卡均在
 >
 > <img src="../.gitbook/assets/amd_error.jpg" alt="" data-size="original">
 >
-> * **如果提示 `/usr/ports/xxx no such xxx` 找不到路径，请先获取 portsnap：`portsnap auto`。portsnap 换源问题请看前文。**
+> * **如果提示 `/usr/ports/xxx no such xxx` 找不到路径，请先获取 ports 请看前文。**
 
 ### 安装驱动——复杂版本
 
