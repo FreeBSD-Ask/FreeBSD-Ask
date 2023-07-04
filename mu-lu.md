@@ -31,11 +31,10 @@
 * [第2.6节 ee 用法及网络配置](di-2-zhang-an-zhuang-freebsd/di-2.6-jie-ee-yong-fa-ji-wang-luo-pei-zhi.md)
 * [第2.7节 常用软件 与 SSH 配置](di-2-zhang-an-zhuang-freebsd/di-2.7-jie-chang-yong-ruan-jian-yu-ssh-pei-zhi.md)
 * [第2.8节 物理机安装与硬件选配](di-2-zhang-an-zhuang-freebsd/di-2.8-jie-wu-li-ji-an-zhuang-yu-ying-jian-xuan-pei.md)
-* [第2.9节 物理机下显卡的配置](broken-reference)
-* [第2.10节 物理机下触摸板的设置](di-2-zhang-an-zhuang-freebsd/di-2.9-jie-wu-li-ji-xia-chu-mo-ban-de-she-zhi.md)
-* [第2.11节 物理机声卡与网卡设置](di-2-zhang-an-zhuang-freebsd/di-2.10-jie-wu-li-ji-sheng-ka-yu-wang-ka-she-zhi.md)
-* [第2.12节 打印机的安装](di-2-zhang-an-zhuang-freebsd/di-2.11-jie-da-yin-ji-de-an-zhuang.md)
-* [第2.13节 无线蓝牙鼠标的设置](di-2-zhang-an-zhuang-freebsd/di-2.12-jie-wu-xian-lan-ya-shu-biao-de-she-zhi.md)
+* [第2.9节 物理机下触摸板的设置](di-2-zhang-an-zhuang-freebsd/di-2.9-jie-wu-li-ji-xia-chu-mo-ban-de-she-zhi.md)
+* [第2.10节 物理机声卡与网卡设置](di-2-zhang-an-zhuang-freebsd/di-2.10-jie-wu-li-ji-sheng-ka-yu-wang-ka-she-zhi.md)
+* [第2.11节 打印机的安装](di-2-zhang-an-zhuang-freebsd/di-2.11-jie-da-yin-ji-de-an-zhuang.md)
+* [第2.12节 无线蓝牙鼠标的设置](di-2-zhang-an-zhuang-freebsd/di-2.12-jie-wu-xian-lan-ya-shu-biao-de-she-zhi.md)
 
 ## 第3章 软件源及包管理器
 
