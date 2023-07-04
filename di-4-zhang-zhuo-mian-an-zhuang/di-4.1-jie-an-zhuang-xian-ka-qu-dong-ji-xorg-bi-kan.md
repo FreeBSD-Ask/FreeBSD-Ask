@@ -1,10 +1,10 @@
-# 第2.9节 物理机下显卡的配置
+# 第4.1节 安装显卡驱动及 Xorg（必看）
 
 FreeBSD 已从 Linux 移植了显卡驱动，理论上，I 卡 A 卡 N 卡均在 AMD64 架构上正常运行。
 
 ## 支持情况
 
-**截至 2023.1.13 Alder/Raptor Lake 即 12/13 代[暂不支持](https://github.com/freebsd/drm-kmod/issues/219)，11 代也不支持。**
+**截至 2023.1.13 Alder/Raptor Lake 即 12/13 代**[**暂不支持**](https://github.com/freebsd/drm-kmod/issues/219)**，11 代也不支持。**
 
 对于 FreeBSD 11，支持情况同 Linux 内核 4.11；
 
@@ -40,12 +40,11 @@ FreeBSD 已从 Linux 移植了显卡驱动，理论上，I 卡 A 卡 N 卡均在
 
 > **故障排除：**
 >
+> * **如果提示内核版本不符（`KLD XXX.ko depends on kernel - not available or version mismatch.`），请先升级系统或使用 ports 编译安装：**
 >
-> - **如果提示内核版本不符（`KLD XXX.ko depends on kernel - not available or version mismatch.`），请先升级系统或使用 ports 编译安装：**
+> <img src="../.gitbook/assets/amd_error.jpg" alt="" data-size="original">
 >
->![](../.gitbook/assets/amd_error.jpg)
->
-> - **如果提示 `/usr/ports/xxx no such xxx` 找不到路径，请先获取 portsnap：`portsnap auto`。portsnap 换源问题请看前文。**
+> * **如果提示 `/usr/ports/xxx no such xxx` 找不到路径，请先获取 portsnap：`portsnap auto`。portsnap 换源问题请看前文。**
 
 ### 安装驱动——复杂版本
 
@@ -185,9 +184,9 @@ $ kldstat
 
 ## 拉取开发版 drm-kmod（仅限 FreeBSD-CURRENT）
 
->**警告**
+> **警告**
 >
->此部分属于实验性内容且仅限 FreeBSD-CURRENT 使用，不建议新手操作。
+> 此部分属于实验性内容且仅限 FreeBSD-CURRENT 使用，不建议新手操作。
 
 拉取最新的 drm-kmod 并编译安装：
 
@@ -214,12 +213,36 @@ install -T release -o root -g wheel -m 555   i915kms.ko /boot/modules/
 kldxref /boot/modules
 ```
 
-参考资料 
+参考资料
 
- - <https://github.com/freebsd/drm-kmod/issues/93#issuecomment-962622626>
+* [https://github.com/freebsd/drm-kmod/issues/93#issuecomment-962622626](https://github.com/freebsd/drm-kmod/issues/93#issuecomment-962622626)
 
 ## 故障排除
 
- - 如果显卡使用驱动有问题请直接联系作者：<https://github.com/freebsd/drm-kmod/issues>
+* 如果显卡使用驱动有问题请直接联系作者：[https://github.com/freebsd/drm-kmod/issues](https://github.com/freebsd/drm-kmod/issues)
+* 如果笔记本出现了唤醒时屏幕点不亮的问题，可以在 `/boot/loader.conf` 中添加 `hw.acpi.reset_video="1"` 以在唤醒时重置显示适配器。
 
- - 如果笔记本出现了唤醒时屏幕点不亮的问题，可以在 `/boot/loader.conf` 中添加 `hw.acpi.reset_video="1"` 以在唤醒时重置显示适配器。
+## 安装xorg
+
+### 可选软件包：
+
+xorg 完整包: xorg
+
+xorg 最小化包: xorg-minimal（不建议）
+
+### 安装
+
+通过 pkg 安装
+
+`# pkg install xorg`
+
+通过 ports 安装
+
+```
+# cd /usr/ports/x11/xorg
+# make install clean
+```
+
+## 故障排除
+
+**总有人试图手动生成`xorg.conf`这个文件，这是非常错误的行为！你打不开桌面很大概率不是因为这个文件的配置有问题！你应该去检查显卡驱动或者桌面本身的问题。Xorg 几乎是不会出问题的！**
