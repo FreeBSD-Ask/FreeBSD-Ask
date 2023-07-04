@@ -2,7 +2,7 @@
 
 ## 安装
 
-> OpenBSD 认为该软件漏洞太多，自行开发了 [doas](https://man.openbsd.org/doas)（FreeBSD 也可以用）。
+> OpenBSD 认为该软件漏洞太多，自行开发了 [doas](https://man.openbsd.org/doas)（FreeBSD 也可以用）。daos 教程在 26.2 节
 
 FreeBSD 基本系统默认不自带 `sudo` 命令，需要使用 `root` 权限自行安装：
 
