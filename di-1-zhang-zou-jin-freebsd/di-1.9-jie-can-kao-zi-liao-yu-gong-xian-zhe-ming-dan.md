@@ -14,7 +14,7 @@
 
 |封面|书名|作者|ISBN|出版社|原版书名|说明|
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|![Absolute FreeBSD, 3rd Edition: The Complete Guide to FreeBS](../.gitbook/assets/QQ图片20220527141115.png)|_**Absolute FreeBSD 3rd**_|Michael W. Lucas|9781593278922|No Starch Press|/|英文版，目前没有译文。词汇包括内容都非常基础，有计算机基础的人不需要阅读。|
+|![Absolute FreeBSD, 3rd Edition: The Complete Guide to FreeBS](../.gitbook/assets/QQ图片20220527141115.png)|_**Absolute FreeBSD 3rd**_|Michael W. Lucas|9781593278922|No Starch Press|/|英文版，目前没有译文。词汇包括内容都非常基础。**有计算机基础的人不需要阅读。**|
 |![Unix & Linux大学教程](../.gitbook/assets/unix3.png)|《Unix & Linux大学教程》|Harley Hahn|9787302209560|清华大学出版社|_**Harley Hahn's Guide to Unix and Linux**_|命令行基础|
 |![Unix & Linux大学教程](../.gitbook/assets/unix4.png)|《UNIX/Linux 系统管理技术手册（第5版）》|Evi Nemeth、Garth Snyder、Trent R.Hein、Ben Whaley、Dan Mackin|9787115532763|人民邮电出版社|_**UNIX and Linux System Administration Handbook 5th Edition**_|命令行进阶|
 |![FreeBSD 操作系统设计与实现（原书第二版）](../.gitbook/assets/freebsd2rd.png)| 《FreeBSD 操作系统设计与实现（原书第2版）》|Marshall McKusick、George Neville-Neil、Robert N.M. Watson|9787111689973| 机械工业出版社| _**Design and Implementation of the FreeBSD Operating System, 2nd**_|主要讲解了内核。|
