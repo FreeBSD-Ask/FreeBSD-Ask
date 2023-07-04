@@ -17,8 +17,8 @@
 |![Absolute FreeBSD, 3rd Edition: The Complete Guide to FreeBS](../.gitbook/assets/QQ图片20220527141115.png)|《Absolute FreeBSD 3rd》|Michael W. Lucas|9781593278922|No Starch Press|/|英文版，目前没有译文。词汇包括内容都非常基础，有计算机基础的人不需要阅读。|
 |![FreeBSD 操作系统设计与实现（原书第二版）](../.gitbook/assets/freebsd2rd.png)| 《FreeBSD 操作系统设计与实现（原书第2版）》|Marshall McKusick、George Neville-Neil、Robert N.M. Watson|9787111689973| 机械工业出版社| _**Design and Implementation of the FreeBSD Operating System, 2nd**_|主要讲解了内核。|
 |![UNIX 传奇：历史与回忆](../.gitbook/assets/unixchuanqi.jpg)|《UNIX 传奇——历史与回忆》|Brian W Kernighan|9787115557179|人民邮电出版社|_**UNIX: A History and a Memoir**_|主要讲解了 UNIX 的发展历史。|
-|![UNIX 编程艺术](../.gitbook/assets/s11345267.jpg)|《UNIX 编程艺术》|Eric Raymond|9787121176654|电子工业出版社| _**The Art of Unix Programming**_|主要讲解了 UNIX 的设计哲学与软件工程理论。|
-|![大教堂与集市](../.gitbook/assets/dajiaotang.jpg)|《大教堂与集市》|Eric S. Raymond|9787111452478|机械工业出版社|_**The Cathedral and the Bazaar**_|主要介绍了开源运动的发展史。|
+|![UNIX 编程艺术](../.gitbook/assets/s11345267.jpg)|《UNIX 编程艺术》|Eric Raymond|9787121176654|电子工业出版社| _**The Art of UNIX Programming (The Addison-Wesley Professional Computng Series)**_|主要讲解了 UNIX 的设计哲学与软件工程理论。|
+|![大教堂与集市](../.gitbook/assets/dajiaotang.jpg)|《大教堂与集市》|Eric S. Raymond|9787111452478|机械工业出版社|_**The Cathedral & the Bazaar**_|主要介绍了开源运动的发展史。|
 |![](../.gitbook/assets/53967433.\_SX318\_.jpg)|《鸟哥的 Linux 私房菜——基础学习篇(第三版)》|鸟哥|9787115226266|人民邮电出版社|/|注意：存在更新的第四版。但是第四版是针对 systemd 撰写的，完全偏离了传统的 init，仍然建议使用第三版，与 FreeBSD 更有相关性。但是其中的一些 grep 等命令的参数会有所不同，值得注意。有一些章节对于 FreeBSD 是无必要的，可以跳过去：0、2、3、4、15、17、21、22、23、25、26。|
 |![](../.gitbook/assets/server.jpg)|《鸟哥的 Linux 私房菜———服务器架设篇(第三版)》|鸟哥|9787111384991|机械工业出版社|/|/|
 |![4.4BSD 操作系统设计与实现](../.gitbook/assets/4BSD.png)|《4.4BSD 操作系统设计与实现》|Marshall Kirk McKusick|9787111366478|机械工业出版社|_**The Design and Implementation of the 4.4BSD Operating System**_|4.4BSD 操作系统设计与实现|
