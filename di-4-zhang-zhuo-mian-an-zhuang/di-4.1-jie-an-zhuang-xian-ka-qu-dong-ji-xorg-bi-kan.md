@@ -146,6 +146,7 @@ EndSection
 
 ## 英伟达显卡
 
+注意，有多个版本的 N 卡驱动，不知道该用哪个的去看[手册](https://handbook.bsdcn.org/di-5-zhang-xwindow-xi-tong/5.3.-xian-ka-qu-dong.html)。
 ```
 # pkg install nvidia-driver nvidia-settings nvidia-xconfig #安装几个 nvidia 相关的包
 # sysrc kld_list+="nvidia-modeset" #配置驱动
@@ -217,7 +218,7 @@ kldxref /boot/modules
 
 * [https://github.com/freebsd/drm-kmod/issues/93#issuecomment-962622626](https://github.com/freebsd/drm-kmod/issues/93#issuecomment-962622626)
 
-## 故障排除
+### 故障排除
 
 * 如果显卡使用驱动有问题请直接联系作者：[https://github.com/freebsd/drm-kmod/issues](https://github.com/freebsd/drm-kmod/issues)
 * 如果笔记本出现了唤醒时屏幕点不亮的问题，可以在 `/boot/loader.conf` 中添加 `hw.acpi.reset_video="1"` 以在唤醒时重置显示适配器。
@@ -243,6 +244,6 @@ xorg 最小化包: xorg-minimal（不建议）
 # make install clean
 ```
 
-## 故障排除
+### 故障排除
 
 **总有人试图手动生成`xorg.conf`这个文件，这是非常错误的行为！你打不开桌面很大概率不是因为这个文件的配置有问题！你应该去检查显卡驱动或者桌面本身的问题。Xorg 几乎是不会出问题的！**
