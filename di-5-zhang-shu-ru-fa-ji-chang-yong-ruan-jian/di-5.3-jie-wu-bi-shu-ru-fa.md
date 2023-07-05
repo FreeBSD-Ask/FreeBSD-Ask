@@ -4,9 +4,9 @@
 
 > **注意**
 >
-> 以下全部教程仅在 GNOME 桌面测试通过。
+> 以下部分教程仅在 GNOME 桌面测试通过。
 
-以下教程二选一。
+
 
 ### ibus
 
@@ -41,3 +41,100 @@
 ```
 $ libime_tabledict 98wbx.txt 98wbx.main.dict
 ```
+
+### rime
+
+
+rime 输入法引擎依赖于输入法面板"ibus/fcitx",所以使用 rime 的前提是先正确配置 ibus/fcitx,下面的择其一，进行安装。
+
+```
+# pkg install zh-fcitx5-rime
+# pkg install zh-ibus-rime
+```
+
+安装完成选择 rime 输入法即可，rime 默认输入法为朗月拼音（我也不知道是什么）。可以使用`pkg search zh-rime`查找支持的输入法。
+
+```
+# pkg install zh-rime-wubi
+```
+
+五笔输入法已经安装好，在开始之前记住两个目录,第一个对应 ibus，第二个对应 fcitx5，都是 rime 的配置文件位置：
+
+```
+~/.config/ibus/rime             # ${XDG_CONFIG_HOME}/ibus/rime
+~/.local/share/fcitx5/rime      # ${XDG_DATA_HOME}/fcitx5/rime
+```
+
+其实两者都尊循 XDG 基本目录规范,但 FreeBSD 中没有定义这两个环境变量，写在这里只是作个介绍。开始设置前**先进入正确的配置目录**
+
+```
+$ cd ~/.config/ibus/rime 
+$ cd ~/.local/share/fcitx5/rime
+```
+
+1. 启用五笔 86 输入法
+
+```
+$ rime_deployer --add-schema wubi86
+```
+
+当前已安装的输入法可以用 `ls /usr/local/share/rime-data`查看，上面命令中`"wubi86"`,即对应其中的`wubi86.schema.yaml`文件。比如目录下有`terra_pinyin.schema.yaml`则可以添加地球拼音
+
+```
+$ rime_deployer --add-schema terra_pinyin
+```
+
+这时配置目录下生成`default.custom.yaml`,这是rime的主要配置文件，示例如下
+
+```
+kamixp% cat default.custom.yaml 
+patch:
+  schema_list:
+    - {schema: wubi86}%
+```
+
+2. 修改候选字为 9 行
+
+形式一：
+
+```
+$ rime_patch default menu
+page_size: 9
+^D
+patch applied.
+```
+
+其中default对应`default.custom.yaml`文件
+
+menu对应一级选项，page_size对应二级选项
+
+`^D` 空行按下 ctrl+D 表示结束，命令反馈输出 “patch applied”
+
+形式二：
+
+```
+$ rime_patch default menu/page_size
+9
+^D
+patch applied.
+```
+
+各项解释同形式一
+
+这里推荐使用形式二进行设置，形式一在复杂一点的设置中要求对配置文件格式有一定了解
+
+3. 默认英文输出
+
+```
+$ rime_patch wubi86 'switches/@1/reset'
+1
+^D
+patch applied.
+```
+
+这里把 patch 应用到 wubi86 输入法上（写入 `wubi86.custom.yaml`)，大部分的选项都是和输入法相关的，只有少部分选项是全局的（写入 `default.custom.yaml`）
+
+具体的可用的设定选项参考下面两个链接：
+
+ - [https://github.com/LEOYoon-Tsaw/Rime_collections/blob/master/Rime_description.md](https://github.com/LEOYoon-Tsaw/Rime_collections/blob/master/Rime_description.md)
+ - [https://github.com/rime/home/wiki/CustomizationGuide](https://github.com/rime/home/wiki/CustomizationGuide)
