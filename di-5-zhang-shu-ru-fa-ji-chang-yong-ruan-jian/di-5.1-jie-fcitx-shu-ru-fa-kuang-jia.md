@@ -4,6 +4,9 @@
 >
 > 在 FreeBSD-14.0-Current 中可能会出现许多不可预料的奇怪的 bug（fcitx5 诊断信息英文乱码，输入法显示出奇怪的汉字，fcitx5-qt5 环境不能正常加载……），如果条件允许应该在 FreeBSD-Release 中参考使用本文。
 
+
+
+
 ## Fcitx 4.X
 
 > **注意**
@@ -40,7 +43,11 @@ setenv LC_ALL zh_CN.UTF-8
 
 fcitx 5 相比前一代，增加了对 Wayland 的支持，据说更加流畅。
 
-`# pkg install fcitx5 fcitx5-qt5 fcitx5-qt6 fcitx5-gtk2 fcitx5-gtk3 fcitx5-gtk4 fcitx5-configtool zh-fcitx5-chinese-addons`
+```
+# pkg install fcitx5 fcitx5-qt5 fcitx5-qt6 fcitx5-gtk2 fcitx5-gtk3 fcitx5-gtk4 fcitx5-configtool zh-fcitx5-chinese-addons
+```
+
+`fcitx5-configtool`是 fcitx5 的图形配置工具。
 
 也可通过 ports 安装。环境变量取决于你的窗口管理器和桌面以及 shell。经测试不支持 slim，可能是配置问题。sddm 可用。
 
@@ -79,32 +86,56 @@ SLIM 窗口下会提示 IBUS 找不到……疑似 bug。
 
 #### Shell 是 csh 或 tcsh
 
-在 `.cshrc` 和 `/etc/csh.cshrc` 中进行如下配置，此配置可以解决部分窗口 fcitx 无效以及无法输入显示中文的问题。
+
+根据自己使用的桌面管理器择一使用：
+
+1. sddm lightdm gdm 都可以在 `~/.xprofile` 中写入 A 组配置
+2. lightdm gdm 可以在 `~/.profile` 中写入 A 组配置
+3. sddm 可以在用户登录 shell 配置文件中写入配置
+  - sh: `~/.profile` 写入 A 组配置
+  - bash: `~/.bash_profile` 或 `~/.profile` 写入 A 组配置
+  - zsh: `~/.zprofile` 写入 A 组配置
+  - csh: `~/.cshrc` 写入 B 组配置
+
+
+A组：
+
+sh/bash/zsh:fcitx5
 
 ```
-setenv QT4_IM_MODULE fcitx
-setenv GTK_IM_MODULE fcitx
-setenv QT_IM_MODULE fcitx
-setenv GTK2_IM_MODULE fcitx
-setenv GTK3_IM_MODULE fcitx
-setenv XMODIFIERS @im=fcitx
+export LANG=zh_CN.UTF-8
+export LANGUAGE=zh_CN.UTF-8
+export LC_ALL=zh_CN.UTF-8
+
+export XMODIFIERS='@im=fcitx'
+export GTK_IM_MODULE=fcitx/xim
+export QT_IM_MODULE=fcitx
+```
+
+
+B组：
+
+csh:fcitx5
+
+```
 setenv LANG zh_CN.UTF-8
-setenv MM_CHARSET zh_CN.UTF-8
+setenv LC_ALL zh_CN.UTF-8
+setenv LANGUAGE zh_CN.UTF-8
+setenv XMODIFIERS @im=fcitx
+setenv GTK_IM_MODULE fcitx/xim
+setenv QT_IM_MODULE fcitx
 ```
 
-#### Shell 是 sh/bash/zsh
+## rime
 
-编辑或者新建 `~/.xprofile`，加入：
+rime 输入法引擎依赖于输入法面板"ibus/fcitx",所以使用 rime 的前提是先正确配置 ibus/fcitx,下面的择其一，进行安装
 
 ```
-export XIM=fcitx5
-export XIM_PROGRAM=fcitx5
-export QT_IM_MODULE=fcitx5
-export GTK_IM_MODULE=fcitx5
-export XMODIFIERS="@im=fcitx5"
+# pkg install zh-fcitx5-rime
+# pkg install zh-ibus-rime
 ```
 
-注意，需要提前在 KDE5 设置里把 KDE5 修改为简体中文。
+安装完成选择 rime 输入法即可，rime 默认输入法为朗月拼音（我也不知道是什么）。
 
 ## 故障排除
 
