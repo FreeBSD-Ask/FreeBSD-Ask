@@ -2,33 +2,6 @@
 
 ## FreeBSD 使用 98 五笔输入法教程
 
-> **注意**
->
-> 以下部分教程仅在 GNOME 桌面测试通过。
-
-
-
-### ibus
-
-`# pkg install zh-ibus-rime`
-
-#### 配置
-
-环境变量配置：安装好运行初始化命令 `ibus-setup`，将 98 五笔码表（`wubi86.dict.yaml`、`wubi86.schema.yaml`）复制到`/usr/local/share/rime-date` 目录下，修改 rime-date 目录下default.yaml 文件:
-
-打开 `default.yaml` 找到`schema_lis`：
-
-下面第一行添加 `- schema: wubi98` 保存退出重新加载 ibus 输入法即可。
-
-#### 98 五笔码表 下载地址
-
-[https://github.com/FreeBSD-Ask/98-input/tree/main/free-bsd-98wubi-tables-master](https://github.com/FreeBSD-Ask/98-input/tree/main/free-bsd-98wubi-tables-master)
-
-~~https://gitee.com/ykla/free-bsd-98wubi-tables/tree/master~~
-
-> 经验与教训：
->
-> **请远离国内打着开源旗号实则封闭的无良企业与其创造的所谓的开源社区。**
 
 ### fcitx5
 
@@ -51,6 +24,15 @@ rime 输入法引擎依赖于输入法面板"ibus/fcitx",所以使用 rime 的�
 # pkg install zh-fcitx5-rime
 # pkg install zh-ibus-rime
 ```
+
+-----
+如果使用 ibus，环境变量配置：安装好运行初始化命令 `ibus-setup`，将 98 五笔码表（`wubi86.dict.yaml`、`wubi86.schema.yaml`）复制到 `/usr/local/share/rime-date` 目录下，修改 rime-date 目录下 default.yaml 文件:
+
+打开 `default.yaml` 找到`schema_lis`：
+
+下面第一行添加 `- schema: wubi98` 保存退出重新加载 ibus 输入法即可。
+
+------
 
 安装完成选择 rime 输入法即可，rime 默认输入法为朗月拼音（我也不知道是什么）。可以使用`pkg search zh-rime`查找支持的输入法。
 
@@ -104,9 +86,9 @@ page_size: 9
 patch applied.
 ```
 
-其中default对应`default.custom.yaml`文件
+其中 default 对应`default.custom.yaml`文件
 
-menu对应一级选项，page_size对应二级选项
+menu 对应一级选项，page_size 对应二级选项
 
 `^D` 空行按下 ctrl+D 表示结束，命令反馈输出 “patch applied”
 
@@ -138,3 +120,13 @@ patch applied.
 
  - [https://github.com/LEOYoon-Tsaw/Rime_collections/blob/master/Rime_description.md](https://github.com/LEOYoon-Tsaw/Rime_collections/blob/master/Rime_description.md)
  - [https://github.com/rime/home/wiki/CustomizationGuide](https://github.com/rime/home/wiki/CustomizationGuide)
+
+#### 98 五笔码表 下载地址
+
+[https://github.com/FreeBSD-Ask/98-input/tree/main/free-bsd-98wubi-tables-master](https://github.com/FreeBSD-Ask/98-input/tree/main/free-bsd-98wubi-tables-master)
+
+~~https://gitee.com/ykla/free-bsd-98wubi-tables/tree/master~~
+
+> 经验与教训：
+>
+> **请远离国内打着开源旗号实则封闭的无良企业与其创造的所谓的开源社区。**
