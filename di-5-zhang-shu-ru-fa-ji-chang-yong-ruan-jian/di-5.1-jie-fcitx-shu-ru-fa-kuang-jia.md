@@ -126,17 +126,6 @@ setenv GTK_IM_MODULE fcitx/xim
 setenv QT_IM_MODULE fcitx
 ```
 
-## rime
-
-rime 输入法引擎依赖于输入法面板"ibus/fcitx",所以使用 rime 的前提是先正确配置 ibus/fcitx,下面的择其一，进行安装
-
-```
-# pkg install zh-fcitx5-rime
-# pkg install zh-ibus-rime
-```
-
-安装完成选择 rime 输入法即可，rime 默认输入法为朗月拼音（我也不知道是什么）。
-
 ## 故障排除
 
 遇到问题，请先运行 `fcitx` 故障诊断，但是该输出仅对 `bash` 做了环境变量的配置。 也就是说他输出的环境变量仅适用于 `bash`、`sh`和`zsh` 等 SHELL，而不适用于 `csh`。于 `csh` 的环境变量配置需要参考上文。
