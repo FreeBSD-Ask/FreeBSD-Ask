@@ -3,17 +3,6 @@
 ## FreeBSD 使用 98 五笔输入法教程
 
 
-### fcitx5
-
-首先下载所需文件：https://github.com/FreeBSD-Ask/98-input
-
-把 `98wbx.conf` 文件复制到 `/usr/local/share/fcitx5/inputmethod/`（`inputmethod` 目录）下面 把 `fcitx-98wubi.png` 和 `org.fcitx.Fcitx5.fcitx-98wubi.png` 图标复制到 `/usr/local/share/icons/hicolor/48x48/apps/`（apps目录）下面 把 `98wbx.main.dict` 词库放到 `/usr/local/share/libime/`（`libime`目录）下面 重启 `fcitx5`，在 `fcitx5-configtool` 起用98五笔即可
-
-提示：王码 98 五笔生成 `.dict` 库方法，直接用下面命令生成：
-
-```
-$ libime_tabledict 98wbx.txt 98wbx.main.dict
-```
 
 ### rime
 
@@ -24,7 +13,7 @@ rime 输入法引擎依赖于输入法面板"ibus/fcitx",所以使用 rime 的�
 # pkg install zh-fcitx5-rime
 # pkg install zh-ibus-rime
 ```
-
+#### ibus
 -----
 如果使用 ibus，环境变量配置：安装好运行初始化命令 `ibus-setup`，将 98 五笔码表（`wubi86.dict.yaml`、`wubi86.schema.yaml`）复制到 `/usr/local/share/rime-date` 目录下，修改 rime-date 目录下 default.yaml 文件:
 
@@ -34,6 +23,18 @@ rime 输入法引擎依赖于输入法面板"ibus/fcitx",所以使用 rime 的�
 
 ------
 
+#### fcitx 5
+------
+首先下载所需文件：https://github.com/FreeBSD-Ask/98-input
+
+把 `98wbx.conf` 文件复制到 `/usr/local/share/fcitx5/inputmethod/`（`inputmethod` 目录）下面 把 `fcitx-98wubi.png` 和 `org.fcitx.Fcitx5.fcitx-98wubi.png` 图标复制到 `/usr/local/share/icons/hicolor/48x48/apps/`（apps目录）下面 把 `98wbx.main.dict` 词库放到 `/usr/local/share/libime/`（`libime`目录）下面 重启 `fcitx5`，在 `fcitx5-configtool` 起用98五笔即可
+
+提示：王码 98 五笔生成 `.dict` 库方法，直接用下面命令生成：
+
+```
+$ libime_tabledict 98wbx.txt 98wbx.main.dict
+```
+-------
 安装完成选择 rime 输入法即可，rime 默认输入法为朗月拼音（我也不知道是什么）。可以使用`pkg search zh-rime`查找支持的输入法。
 
 ```
