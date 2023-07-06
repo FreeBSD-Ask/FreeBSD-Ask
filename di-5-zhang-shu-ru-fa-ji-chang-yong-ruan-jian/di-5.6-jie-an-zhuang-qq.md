@@ -9,7 +9,8 @@
 # sh arch.sh #运行脚本
 # chroot /compat/arch/ /bin/bash #进入 Arch兼容层
 # passwd #为 Arch 的 root 设置一个密码
-# su test # 此时位于 Arch 兼容层！切换到普通用户才能使用 aur，上述脚本已经创建过该用户了！
+# passwd test #为 Arch 的 test 设置一个密码，上述脚本已经创建过该用户了！
+# su test # 此时位于 Arch 兼容层！切换到普通用户才能使用 aur
 $ yay -S linuxqq # 此时位于 Arch 兼容层！此时用户为 test
 # exit # 此时位于 Arch 兼容层！此时用户恢复为 root
 ````
