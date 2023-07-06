@@ -112,6 +112,8 @@ Total Installed Size:  1370.17 MiB
 
 缺啥补啥。
 
+需要 root 才能启动。
+
 * KDE5 下 WPS 可能会无法启动。
 
 因为 WPS 启动文件调用的是 bash shell。所以安装 bash 后就可以正常启动了：
