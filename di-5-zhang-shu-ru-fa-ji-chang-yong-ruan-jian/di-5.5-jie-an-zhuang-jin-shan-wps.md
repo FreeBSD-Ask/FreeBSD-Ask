@@ -1,4 +1,4 @@
-![image](https://github.com/FreeBSD-Ask/FreeBSD-Ask/assets/10327999/27587635-022c-4fdf-8730-95b5364b1704)# 第5.5节 安装 金山 WPS
+# 第5.5节 安装 金山 WPS
 
 > 请勿使用 ports 中的金山 WPS，因为无人更新。推荐自行构建兼容层安装使用。
 
@@ -100,6 +100,7 @@ Total Installed Size:  1370.17 MiB
 安装完毕。
 
 
+Fcitx5 输入法没反应。待测试。
 
 
 ## 故障排除
