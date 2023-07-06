@@ -1,4 +1,4 @@
-# 第5.5节 安装 金山 WPS
+![image](https://github.com/FreeBSD-Ask/FreeBSD-Ask/assets/10327999/27587635-022c-4fdf-8730-95b5364b1704)# 第5.5节 安装 金山 WPS
 
 > 请勿使用 ports 中的金山 WPS，因为无人更新。推荐自行构建兼容层安装使用。
 
@@ -7,14 +7,110 @@
 ```
 # fetch http://book.bsdcn.org/arch.sh #下载脚本构建兼容层
 # sh arch.sh #运行脚本
-# chroot /compat/arch/ /bin/bash #进入 Arch兼容层
+# chroot /compat/arch/ /bin/bash #进入 Arch 兼容层
 # passwd #为 Arch 的 root 设置一个密码
-# su test # 此时位于 Arch 兼容层！切换到普通用户才能使用 aur，脚本已经创建过该用户了！
-$ yay -S linuxqq # 此时位于 Arch 兼容层！此时用户为 test
-# exit # 此时位于 Arch 兼容层！此时用户恢复为 root
+# passwd test #为 Arch 的 test 设置一个密码，脚本已经创建过该用户了！
+```
+新开一个终端，输入 `reboot` 重启 FreeBSD，否则设置的密码可能会不识别。
+
+
+```
+# chroot /compat/arch/ /bin/bash #进入 Arch 兼容层
+# su test # 此时位于 Arch 兼容层！切换到普通用户才能使用 aur
 ```
 
+开始安装：
+
+```
+$ yay -S wps-office-cn ttf-wps-fonts wps-office-mui-zh-cn # 此时位于 Arch 兼容层！此时用户为 test
+[test@ykla /]$ yay -S wps-office-cn ttf-wps-fonts
+AUR Explicit (2): wps-office-cn-11.1.0.11698-1, ttf-wps-fonts-1.0-5
+:: (1/1) Downloaded PKGBUILD: ttf-wps-fonts
+  2 wps-office-cn                            (Build Files Exist)
+  1 ttf-wps-fonts                            (Build Files Exist)
+==> Packages to cleanBuild?
+==> [N]one [A]ll [Ab]ort [I]nstalled [No]tInstalled or (1 2 3, 1-3, ^4)
+==> 1  #这里输入 1 回车
+:: Deleting (1/1): /home/test/.cache/yay/ttf-wps-fonts
+HEAD is now at ba3222c Add upstream URL
+  2 wps-office-cn                            (Build Files Exist)
+  1 ttf-wps-fonts                            (Build Files Exist)
+==> Diffs to show?
+==> [N]one [A]ll [Ab]ort [I]nstalled [No]tInstalled or (1 2 3, 1-3, ^4)
+==> 1 #这里输入 1 回车
+diff --git /home/test/.cache/yay/ttf-wps-fonts/.gitignore /home/test/.cache/yay/ttf-wps-fonts/.gitignore
+new file mode 100644
+index 0000000..12be320
+--- /dev/null
++++ /home/test/.cache/yay/ttf-wps-fonts/.gitignore
+@@ -0,0 +1,5 @@
++*.pkg.tar.xz
++*.src.tar.gz
++src/
++pkg/
++
+diff --git /home/test/.cache/yay/ttf-wps-fonts/PKGBUILD /home/test/.cache/yay/ttf-wps-fonts/PKGBUILD
+new file mode 100644
+index 0000000..21a51bb
+--- /dev/null
+…………
++url="https://github.com/IamDH4/ttf-wps-fonts"
++source=("$pkgname.zip::https://github.com/IamDH4/$pkgname/archive/master.zip"
++        "license.txt")
++sha1sums=('cbc7d2c733b5d3461f3c2200756d4efce9e951d5'
++          '6134a63d775540588ce48884e8cdc47d4a9a62f3')
++
+#这里输入 q 
+:: Proceed with install? [Y/n] y #这里输入 y 回车
+==> Making package: ttf-wps-fonts 1.0-5 (Thu Jul  6 06:23:35 2023)
+…………
+==> Leaving fakeroot environment.
+==> Finished making: wps-office-cn 11.1.0.11698-1 (Thu Jul  6 06:37:32 2023)
+==> Cleaning up...
+
+We trust you have received the usual lecture from the local System
+Administrator. It usually boils down to these three things:
+
+    #1) Respect the privacy of others.
+    #2) Think before you type.
+    #3) With great power comes great responsibility.
+
+For security reasons, the password you type will not be visible.
+
+[sudo] password for test: # 这里输入 test 的密码。注意：如果密码正确但是反复提示密码错误，请你 reboot 重启 FreeBSD 系统重新执行以上操作。
+
+Packages (2) ttf-wps-fonts-1.0-5  wps-office-cn-11.1.0.11698-1
+
+Total Installed Size:  1370.17 MiB
+
+:: Proceed with installation? [Y/n] y # 这里输入 y 确认安装
+(2/2) checking keys in keyring                                      [######################################] 100%
+(2/2) checking package integrity                                    [######################################] 100%
+…………
+(2/2) installing ttf-wps-fonts                                      [######################################] 100%
+:: Running post-transaction hooks...
+(1/4) Arming ConditionNeedsUpdate...
+(2/4) Updating fontconfig cache...
+(3/4) Updating the desktop file MIME type cache...
+(4/4) Updating X fontdir indices...
+[test@ykla ~]$ exit
+# pacman -S libxcomposite #安装缺少的依赖
+```
+
+安装完毕。
+
+
+
+
 ## 故障排除
+
+- 启动没反应
+
+```
+# ldd /usr/lib/office6/wps
+```
+
+缺啥补啥。
 
 * KDE5 下 WPS 可能会无法启动。
 
