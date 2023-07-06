@@ -100,7 +100,7 @@ Total Installed Size:  1370.17 MiB
 安装完毕。
 
 
-Fcitx5 输入法没反应。待测试。
+Fcitx5 输入法没反应。待测试。如你知道怎么做，请告诉我们。
 
 ## 基于 Ubuntu 兼容层
 
@@ -115,6 +115,9 @@ Fcitx5 输入法没反应。待测试。
 # wget https://wps-linux-personal.wpscdn.cn/wps/download/ep/Linux2019/11698/wps-office_11.1.0.11698_amd64.deb
 # apt install ./wps-office_11.1.0.11698_amd64.deb
 ```
+安装完毕。
+
+Fcitx5 输入法没反应。待测试。如你知道怎么做，请告诉我们。
 
 ## 故障排除
 
