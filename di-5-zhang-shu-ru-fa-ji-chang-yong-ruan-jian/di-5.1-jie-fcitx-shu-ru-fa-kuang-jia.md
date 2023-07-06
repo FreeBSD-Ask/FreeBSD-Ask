@@ -87,6 +87,7 @@ SLIM 窗口下会提示 IBUS 找不到……疑似 bug。
 #### 设置环境变量
 
 
+
 根据自己使用的桌面管理器择一使用：
 
 1. sddm lightdm gdm 都可以在 `~/.xprofile` 中写入 A 组配置
@@ -97,6 +98,7 @@ SLIM 窗口下会提示 IBUS 找不到……疑似 bug。
   - zsh: `~/.zprofile` 写入 A 组配置
   - csh: `~/.cshrc` 写入 B 组配置
 
+**注意：如果登录桌面的用户不是 root，就不能使用 root 进行设置，必须切换到当前用户且不使用 sudo 进行配置。**
 
 A组：
 
