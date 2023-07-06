@@ -44,7 +44,7 @@ $ yay -S linuxqq # 此时位于 Arch 兼容层！此时用户为 test
 安装依赖文件和字体：
 
 ```
-# apt install libgbm-dev libasound2-dev fonts-wqy-microhei  fonts-wqy-zenhei language-pack-zh-hans #此时位于 Ubuntu 兼容层
+# apt install libgbm-dev libasound2-dev #此时位于 Ubuntu 兼容层
 # ldconfig #此时位于 Ubuntu 兼容层
 ```
 
