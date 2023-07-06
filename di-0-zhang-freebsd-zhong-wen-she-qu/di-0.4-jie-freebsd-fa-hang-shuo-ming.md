@@ -10,7 +10,7 @@
 
 我们还介绍了 13.2-RELEASE 的一些信息，该版本被推迟到了 2023Q2 的开头。不过，由于这份报告的发布时间在 FreeBSD 新版本发布之后，因此该版本现在已经可以安装了。RELEASE 版本的用户现在可以受益于许多改进，例如更好的 iwlwifi（4）驱动程序支持或新的 rtw88（4）驱动程序。这些主题在过去的状态报告中也有涉及。
 
-祝愉快阅读。
+祝你愉快阅读。
 
 状态团队代表 Lorenzo Salvadore
 
@@ -2088,11 +2088,11 @@ FreeBSD 季度状态报告 2022 年第二季度
 
 Lorenzo Salvadore，代表现状报告小组。
 
-
+***
 
 本报告的渲染版可在此查阅： [https://www.freebsd.org/status/report-2022-04-2022-06/](https://www.freebsd.org/status/report-2022-04-2022-06/)
 
-
+***
 
 目录
 
@@ -2131,7 +2131,7 @@ Lorenzo Salvadore，代表现状报告小组。
   * FreeBSD上 的 Pantheon 桌面
   * 英特尔的 igt-gpu-tools 的完整功能移植
 
-
+***
 
 ### FreeBSD 团队报告
 
@@ -2161,7 +2161,7 @@ FreeBSD 核心团队是 FreeBSD 的管理机构。
 
 在本季度，Kornel Dulęba（kd）和 Dmitry Salychev（dsl）的 src 提交权限已经被批准。
 
-
+***
 
 ### FreeBSD 基金会
 
@@ -2290,7 +2290,7 @@ FreeBSD 基金会在全球范围内赞助了许多会议、活动和峰会。这
 
 进入 https://www.FreeBSDFoundation.org ,了解更多关于我们如何支持 FreeBSD 以及我们如何帮助你的信息。
 
-
+***
 
 ### FreeBSD 发布工程团队
 
@@ -2316,7 +2316,7 @@ FreeBSD 发布工程团队负责为 FreeBSD 的官方项目发布制定并发布
 
 赞助商：Rubicon Communications, LLC ("Netgate") 赞助商：FreeBSD 基金会
 
-
+***
 
 ### 集群管理团队
 
@@ -2345,7 +2345,7 @@ FreeBSD 集群管理团队的成员负责管理该项目所依赖的机器，以
 
 我们正在欧洲寻找一个额外的全镜像站点（五个服务器）。请看[通用镜像布局](https://wiki.freebsd.org/Teams/clusteradm/generic-mirror-layout)，以满足我们的需要。我们也欢迎提供额外的单服务器镜像（见[小镜像](https://wiki.freebsd.org/Teams/clusteradm/tiny-mirror)），特别是在欧洲。
 
-
+***
 
 ### 持续集成
 
@@ -2407,7 +2407,7 @@ FreeBSD CI 团队负责维护 FreeBSD 项目的持续集成系统。CI 系统检
 
 赞助商：FreeBSD 基金会
 
-
+***
 
 ### Ports
 
@@ -2439,7 +2439,7 @@ Port 的数量略高于 30,000。在上一季度，“main”分支有 151 个�
 
 以下是在 2022q2 期间对 Ports Tree 所做的修改： \* pkg 更新到了 1.18.3 版，Firefox 更新到了 102.0 版，Chromium 更新到了 103.0.50060.53 版 \* GCC、 Lazarus、 Python 和 Ruby 的默认版本分别更新为 11 (powerpcspe 保持 8 版)、 2.2.2、 3.9 和 3.0。\* 加入了两个新的USES，gstreamer用于支持基于GStreamer插件的 port，pytest 用于帮助使用 pytest 进行测试。
 
-
+***
 
 ### 项目
 
@@ -2465,7 +2465,7 @@ Linux 仿真层的所有修改都合并到了 stable/13 分支。
 
 赞助商：EPSRC (Edward 的工作)
 
-
+***
 
 ### FreeBSD 与 riscv64
 
@@ -2481,7 +2481,7 @@ FreeBSD riscv64 golang 问题 网址：golang/go#53466
 
 已经完成了将 go 移植到 FreeBSD riscv64 上的工作，它可以构建并通过所有 run.bash 测试，包括 cgo （在 QEMU 和 Unmatched 上测试）。在上游创建了一个拉动请求，该提案已被添加到提案项目的活动栏中，并将在每周的提案审查会议上被审查。
 
-
+***
 
 ### 微软 HyperV 和 Azure 上的FreeBSD
 
@@ -2531,7 +2531,7 @@ Wei Hu 和他在微软的同事正在从事由微软赞助的几项任务：
 
 赞助商:微软提供了 Wei Hu 等人在微软的工作，以及其他方面的资源 赞助商：FreeBSD 基金会提供其他一切
 
-
+***
 
 ### 用户空间
 
@@ -2557,7 +2557,7 @@ FreeBSD 在基本系统中包括 LLDB。之前赞助的项目改进了 LLDB，�
 
 赞助商：FreeBSD 基金会
 
-
+***
 
 ### 在 makefs(8) 中支持 ZFS
 
@@ -2577,7 +2577,7 @@ makefs(8) 是一个源自 NetBSD 的工具，它完全在用户空间创建文�
 
 赞助商：FreeBSD 基金会
 
-
+***
 
 链接：
 
@@ -2597,7 +2597,7 @@ OpenSSH，一套远程登录和文件传输工具，在 FreeBSD 基本系统中�
 
 赞助商：FreeBSD 基金会
 
-
+***
 
 ### pf 的最新状况
 
@@ -2627,7 +2627,7 @@ pf 现在可以跟踪一个规则最后一次被匹配的时间。与 ipfw 规�
 
 赞助商：Rubicon Communications, LLC（"Netgate"）
 
-
+***
 
 ### 内核
 
@@ -2663,7 +2663,7 @@ ENA（Elastic Network Adapter）是亚马逊网络服务（AWS）的虚拟化环
 
 赞助商：亚马逊
 
-
+***
 
 ### 新的蓝牙®配置守护程序：blued
 
@@ -2711,7 +2711,7 @@ blued 有三个部分：一个库、一个守护程序和一个命令行工具�
 
 如果你想参与代码并提交补丁，欢迎你[访问 Lysator 的 Git 上的仓库](https://git.lysator.liu.se/kempe/blued)
 
-
+***
 
 ### OpenVPN DCO
 
@@ -2735,7 +2735,7 @@ OpenVPN DCO（或称数据通道卸载）将 OpenVPN 的数据包处理转移到
 
 赞助商：Rubicon Communications, LLC (“Netgate”)
 
-
+***
 
 ### 无线更新
 
@@ -2761,7 +2761,7 @@ Realtek rtw89 状态 FreeBSD wiki 页面 网址：https://wiki.freebsd.org/WiFi/
 
 赞助商：FreeBSD 基金会
 
-
+***
 
 ### 共享页地址随机化
 
@@ -2777,7 +2777,7 @@ Realtek rtw89 状态 FreeBSD wiki 页面 网址：https://wiki.freebsd.org/WiFi/
 
 赞助商：Stormshield
 
-
+***
 
 ### 架构
 
@@ -2818,7 +2818,7 @@ TODO:
 
 赞助商：Traverse Technologies (提供 Ten64 HW 用于测试)
 
-
+***
 
 ### 关于 arm64 及其他的中等规模的超级页
 
@@ -2834,7 +2834,7 @@ TODO:
 
 赞助商：莱斯大学计算机科学系
 
-
+***
 
 ### 文档
 
@@ -2909,7 +2909,7 @@ doceng@ 团队是一个处理与 FreeBSD 文档工程相关的一些元项目问
 
     新的设计，响应性和暗色主题。(未开始)
 
-
+***
 
 ### Ports
 
@@ -2966,7 +2966,7 @@ KDE Gear 每季度发布一次，KDE Plasma 每月更新一次，KDE Frameworks 
 * graphics/ImageMagick (包括 6 和 7) 更新了若干次。
 * multimedia/gstreamer 已更新。
 
-
+***
 
 ### GCC：更新 GCC\_DEFAULT 和其他改进
 
@@ -2991,7 +2991,7 @@ GCC 11 发布系列 网址：https://gcc.gnu.org/gcc-11/
 * upstreaming lang/gcc11/patch-arm-unwind-cxx-support
 * https://bugs.freebsd.org/bugzilla/show\_bug.cgi?id=256874
 
-
+***
 
 ### Valgrind - 13.1/14.0 的大量错误修正和更新
 
@@ -3033,7 +3033,7 @@ devel/valgrind-devel port 已经提升到 3.20.0.g20220612,1，其中包括以�
 * 更好的核心转储（低优先级）
 * 为 Helgrind 处理 TLS（线程本地存储）（如果不是不可能的话，也很难）。
 
-
+***
 
 ### FreeBSD 上的 Pantheon 桌面
 
@@ -3062,7 +3062,7 @@ Pantheon 桌面环境是为 elementary OS 设计的。它建立在 GNOME 技术�
 * 增加对用户设置的支持（这是非常以 Ubuntu 为中心的）。
 * 完成移植 wingpanel-indicator-power（电源管理）。
 
-
+***
 
 ### 英特尔的 igt-gpu-tools 的完整功能移植
 
