@@ -111,7 +111,7 @@ Fcitx5 输入法没反应。待测试。
 ```
 
 ```
-# apt install  bsdmainutils xdg-utils libxslt1.1 # 安装依赖包
+# apt install  bsdmainutils xdg-utils libxslt1.1 libqt5gui5 xcb # 安装依赖包
 # wget https://wps-linux-personal.wpscdn.cn/wps/download/ep/Linux2019/11698/wps-office_11.1.0.11698_amd64.deb
 # apt install ./wps-office_11.1.0.11698_amd64.deb
 ```
