@@ -31,7 +31,7 @@ https://www.freshports.org/sysutils/docker-freebsd/
 
 最有可能的是，在我的测试中，除了“尝试是否启动，运行一些命令，退出”之外，没有更多的问题了。
 
-以上的计划和工作情况是该项目作者在两年前写就的。目前该项目被迁移到了 https://codeberg.org/decke/ports 而不再使用github。
+以上的计划和工作情况是该项目作者在两年前写就的。目前该项目被迁移到了 https://codeberg.org/decke/ports 而不再使用 Github。
 
 该作者似乎没有对项目进行进一步说明，所以编译起来会有很多问题，详见 https://codeberg.org/decke/ports/issues/18
 
