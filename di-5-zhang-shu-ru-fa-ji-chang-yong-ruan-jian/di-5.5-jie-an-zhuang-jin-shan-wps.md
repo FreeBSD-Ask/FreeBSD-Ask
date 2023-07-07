@@ -23,7 +23,6 @@
 
 ```
 $ yay -S wps-office-cn ttf-wps-fonts wps-office-mui-zh-cn # 此时位于 Arch 兼容层！此时用户为 test
-[test@ykla /]$ yay -S wps-office-cn ttf-wps-fonts
 AUR Explicit (2): wps-office-cn-11.1.0.11698-1, ttf-wps-fonts-1.0-5
 :: (1/1) Downloaded PKGBUILD: ttf-wps-fonts
   2 wps-office-cn                            (Build Files Exist)
