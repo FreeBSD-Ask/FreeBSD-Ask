@@ -1,6 +1,6 @@
-# 第9.6节 使用 qjail 管理 jail
+# 第 9.6 节 使用 qjail 管理 jail
 
-qjail 是 jail 环境的部署工具，分支自 ezjail 3.1。jail 管理工具有 ezjail、 qjail、 iocage 等。ezjail  在 2015 年更新到 3.4.2 后一直没有更新，2018 年做过一次错误更新，不过好像也不是作者写的。ezjail 的 ports 更新依赖 portsnap，这个现在已经不建议使用了，将被废弃。iocage 可依赖于 zfs 文件系统，使用 ufs 文件系统的并不能使用。qjail 则在这些方面不存在问题。ezjail 并不支持 jail 的 vnet 功能，iocage 和 qjail 则支持。ezjail 和 qjail 使用 sh 编写，iocage 使用 python 编写。
+qjail 是 jail 环境的部署工具，分支自 ezjail 3.1。jail 管理工具有 ezjail、 qjail、 iocage 等。ezjail 在 2015 年更新到 3.4.2 后一直没有更新，2018 年做过一次错误更新，不过好像也不是作者写的。ezjail 的 ports 更新依赖 portsnap，这个现在已经不建议使用了，将被废弃。iocage 可依赖于 zfs 文件系统，使用 ufs 文件系统的并不能使用。qjail 则在这些方面不存在问题。ezjail 并不支持 jail 的 vnet 功能，iocage 和 qjail 则支持。ezjail 和 qjail 使用 sh 编写，iocage 使用 python 编写。
 
 下文中部署的 jail 在概念上结构如下图：
 
@@ -23,7 +23,7 @@ ifconfig_lo1_alias0="inet 192.168.1.0-9" # 宿主机 ip 为 10.0.2.15, 选择该
 # service netif restart
 ```
 
-lo1 将获得 10个 ip 地址，下面将用 1-9 这 9 个 ip 给 jail 使用。
+lo1 将获得 10 个 ip 地址，下面将用 1-9 这 9 个 ip 给 jail 使用。
 
 ## 安装 qjail 工具
 
@@ -74,7 +74,7 @@ remote size / mtime: 195363380 / 1652346155
 
 - **archive** 保存 jail archive 命令产生的存档文件
 
-- **flavors**  包含系统风格（ flavors ）和用户创建的自定义风格，其实就是自己定义的配置文件等
+- **flavors** 包含系统风格（ flavors ）和用户创建的自定义风格，其实就是自己定义的配置文件等
 
 ## 部署 jail
 
@@ -118,7 +118,6 @@ remote size / mtime: 195363380 / 1652346155
 # qjail stop jail1 # 停止 jail1
 ```
 
-
 重启 jail
 
 ```
@@ -132,7 +131,7 @@ remote size / mtime: 195363380 / 1652346155
 # qjail console jail1  # 进入 jail1 控制台
 ```
 
-进入 jail 控制台后，此时是jail 中的 root 帐号（进入 jail 的控制台，不需要输入密码），因 jail 可能开启对外服务，为安全考虑建议设置帐号密码
+进入 jail 控制台后，此时是 jail 中的 root 帐号（进入 jail 的控制台，不需要输入密码），因 jail 可能开启对外服务，为安全考虑建议设置帐号密码
 
 备份 jail
 
@@ -213,7 +212,7 @@ qjail 可以用 `qjail config` 命令对每个 jail 另作设置，运行 `qjail
 # qjail config -h jail1
 ```
 
-快速开启 jail1 的 ssh 服务,新建一个 wheel 组用户，用户名和密码同 jail 名，首次用这个用户登录要求修改密码。也可以在登录 jail 控制台后，自行配置 sshd 服务。 
+快速开启 jail1 的 ssh 服务,新建一个 wheel 组用户，用户名和密码同 jail 名，首次用这个用户登录要求修改密码。也可以在登录 jail 控制台后，自行配置 sshd 服务。
 
 ### 2 `-m` `-M`
 
@@ -243,7 +242,7 @@ qjail 可以用 `qjail config` 命令对每个 jail 另作设置，运行 `qjail
 
 ## 网络设定
 
-这里作个提示，有的教程里会教你用 `qjail config -k jailname` 打开 raw_sockets 功能来打开外网访问的能力，其实这里是个误解，raw_sockets 只是像 ping 一类的工具需要使用而已，并不是说网络访问一定要打开 raw_sockets 。而且在 jail 中打开 raw_sockets 本身有安全风险，这是 jail 环境默认的一种安全设计。所以除非是你一定要在 jail 中用 ping 一类的工具，不管是用什么方式构建的 jail 都是不建议打开 raw_sockets 功能的。 
+这里作个提示，有的教程里会教你用 `qjail config -k jailname` 打开 raw_sockets 功能来打开外网访问的能力，其实这里是个误解，raw_sockets 只是像 ping 一类的工具需要使用而已，并不是说网络访问一定要打开 raw_sockets 。而且在 jail 中打开 raw_sockets 本身有安全风险，这是 jail 环境默认的一种安全设计。所以除非是你一定要在 jail 中用 ping 一类的工具，不管是用什么方式构建的 jail 都是不建议打开 raw_sockets 功能的。
 
 此时的 jail 还不能连接网络，因为 jail 绑定在 lo1 网络接口上，lo1 并不能直接访问外网，接下来通过 pf 设定网络, 其中 `em0` 为外网接口
 
@@ -259,7 +258,7 @@ rdr pass on em0 inet proto tcp from any to em0 port 22 -> 192.168.1.1 port 22  #
 # service pf start
 ```
 
-此时，绑定在 lo1 上的 jail 可以访问宿主机外网络，宿主机外网络可以通过宿主机22号端口连接 jail1 的22号端口。
+此时，绑定在 lo1 上的 jail 可以访问宿主机外网络，宿主机外网络可以通过宿主机 22 号端口连接 jail1 的 22 号端口。
 
 ## 示例：部署 postgresql 的 jail
 
@@ -288,7 +287,7 @@ rdr pass on em0 inet proto tcp from any to em0 port 5432 -> 192.168.1.3 port 543
 # service pf start
 ```
 
-进入名为 postgres 的 jail 的控制台 
+进入名为 postgres 的 jail 的控制台
 
 ```
 # qjail console postgres
@@ -304,18 +303,18 @@ jail 控制台中的操作
 # mkdir -p -m 0700 /var/db/postgres/data15     # 注意版本号
 # chown postgres:postgres /var/db/postgres/data15  # 这个目录应属于 postgres 用户
 # su postgres   # 这里切换到 postgres 用户，注意下面提示符的变化
-$ initdb -A scram-sha-256 -E UTF8 -W -D /var/db/postgres/data15  
+$ initdb -A scram-sha-256 -E UTF8 -W -D /var/db/postgres/data15
 $ exit   #  回到 jail root 用户，注意提示符变化
 # service postgresql start
 ```
 
 这里使用 initdb 而不是使用安装时提示的 `/usr/local/etc/rc.d/postgresql initdb` 是为了避免之后设置数据库密码时，来回修改 `pg_hba.conf` 文件，现对选项作简要说明:
 
-- **`-A`** 为本地用户指定在pg_hba.conf中使用的默认认证方法
+- **`-A`** 为本地用户指定在 pg_hba.conf 中使用的默认认证方法
 
 - **`-E`** 选择模板数据库的编码。
 
-- **`-W`** 让initdb提示要求为数据库超级用户给予一个口令
+- **`-W`** 让 initdb 提示要求为数据库超级用户给予一个口令
 
 - **`-D`** 指定数据库集簇应该存放的目录
 
@@ -340,4 +339,3 @@ $ exit   #  回到 jail root 用户，注意提示符变化
 ```
 
 再次进入 jail 的控制台就可以正常初始化数据库集簇和运行 postgresql 服务了。
-

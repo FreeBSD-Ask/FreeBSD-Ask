@@ -60,14 +60,14 @@
 
 后续还有很多需要完善的工作，包括不限于:
 
-* FreeBSD 14 shell 被统一为 `sh`，教程需要针对其进行统一
-* 整理和上传配置文件和环境
-* 对教程的格式目录进行优化调整
-* 完善目前的空白章节，并对已有内容进行测试校验
-* 积极对外宣传并寻求正式出版
-* 删改外部引用文字/图片等内容或给出规范化的引用声明避免版权问题
-* 因为博通收购 VMware 并作出了诸多商业上的改变，考虑提升 Virtual Box 虚拟机在本文中的地位
-* 对于过于主观性或者没有根据的观点需要进行删除或补充例证
+- FreeBSD 14 shell 被统一为 `sh`，教程需要针对其进行统一
+- 整理和上传配置文件和环境
+- 对教程的格式目录进行优化调整
+- 完善目前的空白章节，并对已有内容进行测试校验
+- 积极对外宣传并寻求正式出版
+- 删改外部引用文字/图片等内容或给出规范化的引用声明避免版权问题
+- 因为博通收购 VMware 并作出了诸多商业上的改变，考虑提升 Virtual Box 虚拟机在本文中的地位
+- 对于过于主观性或者没有根据的观点需要进行删除或补充例证
 
 ### 许可证
 
@@ -81,7 +81,7 @@
 
 ### FreeBSD 中文社区的愿景
 
-我们成立于 2018年3月17日，由贴吧——FreeBSD 吧发展到了 QQ 群（主群 787969044），Telegram 群，至于微信群。
+我们成立于 2018 年 3 月 17 日，由贴吧——FreeBSD 吧发展到了 QQ 群（主群 787969044），Telegram 群，至于微信群。
 
 我们的成员具有非常大的广泛性和普遍性，能够代表绝大多数 FreeBSD 用户的平均水平：他们可能根本没有听说过何为 FreeBSD，但这并不影响我们的交流与沟通。也许有人觉得这是浪费时间，但是没有新生力量的培养，何来 FreeBSD 的明天呢？谁不知道新人可能有很多坏习惯呢。
 
@@ -97,15 +97,15 @@
 
 ### 其他
 
-|            资源           |                                       链接                                       |
-| :---------------------: | :----------------------------------------------------------------------------: |
-|        Telegram 群       |                [https://t.me/freebsdba](https://t.me/freebsdba)                |
-|           QQ 群          |                                    787969044                                   |
-|      Handbook 最新翻译      |            [https://handbook.bsdcn.org](https://handbook.bsdcn.org)            |
+|               资源               |                                      链接                                      |
+| :------------------------------: | :----------------------------------------------------------------------------: |
+|           Telegram 群            |                [https://t.me/freebsdba](https://t.me/freebsdba)                |
+|              QQ 群               |                                   787969044                                    |
+|        Handbook 最新翻译         |            [https://handbook.bsdcn.org](https://handbook.bsdcn.org)            |
 | FreeBSD Port 开发者手册 最新翻译 |    [https://porters-handbook.bsdcn.org](https://porters-handbook.bsdcn.org)    |
-|       FreeBSD 入门书籍      |                [https://book.bsdcn.org](https://book.bsdcn.org)                |
-|       BiliBili【B站】      | [https://space.bilibili.com/2120246893](https://space.bilibili.com/2120246893) |
-|          微信公众号          |                                    freebsdzh                                   |
+|         FreeBSD 入门书籍         |                [https://book.bsdcn.org](https://book.bsdcn.org)                |
+|         BiliBili【B 站】         | [https://space.bilibili.com/2120246893](https://space.bilibili.com/2120246893) |
+|            微信公众号            |                                   freebsdzh                                    |
 
 微信公众号: freebsdzh （扫码关注）
 

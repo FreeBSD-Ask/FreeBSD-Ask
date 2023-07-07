@@ -1,4 +1,4 @@
-# 第9.3节 jail 配置
+# 第 9.3 节 jail 配置
 
 ## 创建 jail 目录
 
@@ -53,11 +53,11 @@ JID IP Address    Hostname   Path
 
 中英对照
 
-|     英语     |    中文   |
-| :--------: | :-----: |
-|     JID    | jail ID |
+|    英语    |   中文    |
+| :--------: | :-------: |
+|    JID     |  jail ID  |
 | IP Address |  IP 地址  |
-|  Hostname  |   主机名   |
+|  Hostname  |  主机名   |
 |    Path    | jail 路径 |
 
 ## 启动与停止 jail
@@ -113,7 +113,7 @@ nameserver 223.6.6.6
 
 ## 创建 jail 目录
 
-创建4个 分别是模板 骨架 数据 项目
+创建 4 个 分别是模板 骨架 数据 项目
 
 ### 创建模板目录
 

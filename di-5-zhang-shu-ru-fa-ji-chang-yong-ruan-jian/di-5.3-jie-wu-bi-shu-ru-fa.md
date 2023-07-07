@@ -1,11 +1,8 @@
-# 第5.3节 五笔输入法
+# 第 5.3 节 五笔输入法
 
 ## FreeBSD 使用 98 五笔输入法教程
 
-
-
 ### rime
-
 
 rime 输入法引擎依赖于输入法面板"ibus/fcitx",所以使用 rime 的前提是先正确配置 ibus/fcitx,下面的择其一，进行安装。
 
@@ -13,28 +10,35 @@ rime 输入法引擎依赖于输入法面板"ibus/fcitx",所以使用 rime 的�
 # pkg install zh-fcitx5-rime
 # pkg install zh-ibus-rime
 ```
+
 #### ibus
------
+
+---
+
 如果使用 ibus，环境变量配置：安装好运行初始化命令 `ibus-setup`，将 98 五笔码表（`wubi86.dict.yaml`、`wubi86.schema.yaml`）复制到 `/usr/local/share/rime-date` 目录下，修改 rime-date 目录下 default.yaml 文件:
 
 打开 `default.yaml` 找到`schema_lis`：
 
 下面第一行添加 `- schema: wubi98` 保存退出重新加载 ibus 输入法即可。
 
-------
+---
 
 #### fcitx 5
-------
+
+---
+
 首先下载所需文件：https://github.com/FreeBSD-Ask/98-input
 
-把 `98wbx.conf` 文件复制到 `/usr/local/share/fcitx5/inputmethod/`（`inputmethod` 目录）下面 把 `fcitx-98wubi.png` 和 `org.fcitx.Fcitx5.fcitx-98wubi.png` 图标复制到 `/usr/local/share/icons/hicolor/48x48/apps/`（apps目录）下面 把 `98wbx.main.dict` 词库放到 `/usr/local/share/libime/`（`libime`目录）下面 重启 `fcitx5`，在 `fcitx5-configtool` 起用98五笔即可
+把 `98wbx.conf` 文件复制到 `/usr/local/share/fcitx5/inputmethod/`（`inputmethod` 目录）下面 把 `fcitx-98wubi.png` 和 `org.fcitx.Fcitx5.fcitx-98wubi.png` 图标复制到 `/usr/local/share/icons/hicolor/48x48/apps/`（apps 目录）下面 把 `98wbx.main.dict` 词库放到 `/usr/local/share/libime/`（`libime`目录）下面 重启 `fcitx5`，在 `fcitx5-configtool` 起用 98 五笔即可
 
 提示：王码 98 五笔生成 `.dict` 库方法，直接用下面命令生成：
 
 ```
 $ libime_tabledict 98wbx.txt 98wbx.main.dict
 ```
--------
+
+---
+
 安装完成选择 rime 输入法即可，rime 默认输入法为朗月拼音（我也不知道是什么）。可以使用`pkg search zh-rime`查找支持的输入法。
 
 ```
@@ -51,7 +55,7 @@ $ libime_tabledict 98wbx.txt 98wbx.main.dict
 其实两者都尊循 XDG 基本目录规范,但 FreeBSD 中没有定义这两个环境变量，写在这里只是作个介绍。开始设置前**先进入正确的配置目录**
 
 ```
-$ cd ~/.config/ibus/rime 
+$ cd ~/.config/ibus/rime
 $ cd ~/.local/share/fcitx5/rime
 ```
 
@@ -67,10 +71,10 @@ $ rime_deployer --add-schema wubi86
 $ rime_deployer --add-schema terra_pinyin
 ```
 
-这时配置目录下生成`default.custom.yaml`,这是rime的主要配置文件，示例如下
+这时配置目录下生成`default.custom.yaml`,这是 rime 的主要配置文件，示例如下
 
 ```
-kamixp% cat default.custom.yaml 
+kamixp% cat default.custom.yaml
 patch:
   schema_list:
     - {schema: wubi86}%
@@ -119,8 +123,8 @@ patch applied.
 
 具体的可用的设定选项参考下面两个链接：
 
- - [https://github.com/LEOYoon-Tsaw/Rime_collections/blob/master/Rime_description.md](https://github.com/LEOYoon-Tsaw/Rime_collections/blob/master/Rime_description.md)
- - [https://github.com/rime/home/wiki/CustomizationGuide](https://github.com/rime/home/wiki/CustomizationGuide)
+- [https://github.com/LEOYoon-Tsaw/Rime_collections/blob/master/Rime_description.md](https://github.com/LEOYoon-Tsaw/Rime_collections/blob/master/Rime_description.md)
+- [https://github.com/rime/home/wiki/CustomizationGuide](https://github.com/rime/home/wiki/CustomizationGuide)
 
 #### 98 五笔码表 下载地址
 

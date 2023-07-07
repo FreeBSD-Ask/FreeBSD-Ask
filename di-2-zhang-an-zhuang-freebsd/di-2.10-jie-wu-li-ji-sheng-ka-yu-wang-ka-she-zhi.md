@@ -1,4 +1,4 @@
-# 第2.10节 物理机声卡与网卡设置
+# 第 2.10 节 物理机声卡与网卡设置
 
 ## FreeBSD 声卡
 
@@ -33,11 +33,11 @@ $ sysctl hw.snd.default_unit=5
 
 此处推荐几个 oss mixer：
 
-| GUI环境 |        名称       |
-| :---: | :-------------: |
-|  kde5 |  audio/dsbmixer |
-|  gtk  | audio/gtk-mixer |
-|  非图形化 |  audio/mixertui |
+| GUI 环境 |      名称       |
+| :------: | :-------------: |
+|   kde5   | audio/dsbmixer  |
+|   gtk    | audio/gtk-mixer |
+| 非图形化 | audio/mixertui  |
 
 ### 提示
 

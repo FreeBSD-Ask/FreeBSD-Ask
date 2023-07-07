@@ -1,4 +1,4 @@
-# 第9.1节 jail 与 docker 的比较
+# 第 9.1 节 jail 与 docker 的比较
 
 前文提及过 “Jail 与 byhve 虚拟化，不必配置底层虚拟化，节约系统资源。” FreeBSD 的 docker 处于破损状态，需要志愿者来维护。
 
@@ -16,18 +16,16 @@ https://www.freshports.org/sysutils/docker-freebsd/
 
 大步骤计划：
 
- - 从一个基于 moby 的新 port 开始（已完成）
- - hack 它以使它能编译 (已完成)
- - 运行时测试（“某些东西工作”）。
- - 清理补丁/同步上游
-
+- 从一个基于 moby 的新 port 开始（已完成）
+- hack 它以使它能编译 (已完成)
+- 运行时测试（“某些东西工作”）。
+- 清理补丁/同步上游
 
 目前的工作情况：
 
- - 运行 FreeBSD docker 容器
- - 建立 FreeBSD docker 容器（通过 docker 文件）。
- - 桥接网络（使用 vnet，自动创建 docker0 桥，分配 IP 并设置 PF nat 规则，很可能还需要很多测试，IP 冲突等等）。
-
+- 运行 FreeBSD docker 容器
+- 建立 FreeBSD docker 容器（通过 docker 文件）。
+- 桥接网络（使用 vnet，自动创建 docker0 桥，分配 IP 并设置 PF nat 规则，很可能还需要很多测试，IP 冲突等等）。
 
 最有可能的是，在我的测试中，除了“尝试是否启动，运行一些命令，退出”之外，没有更多的问题了。
 

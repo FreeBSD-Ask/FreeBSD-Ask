@@ -1,4 +1,4 @@
-# 第1.4节 FreeBSD 与其他操作系统
+# 第 1.4 节 FreeBSD 与其他操作系统
 
 ## 时间表
 
@@ -17,7 +17,6 @@ Multics 的最初规划和开发始于 1964 年，地点位于马萨诸塞州的
 ### 1972 年 UNIX 代码迁移到 C 语言
 
 Dennis Ritchie 决定为 UNIX 开发一种高级汇编语言，其中的语句可以翻译成两到三条指令。这促使他开发了 C 编程语言。第四个研究版的 UNIX 被重新编写成 C 语言。这使得 UNIX 具备了可移植性，从而改写了操作系统的历史。
-
 
 ### 1974 年 UNIX 被引入加州大学伯克利分校
 
@@ -49,15 +48,15 @@ Keith Bostic 启动了一个项目，重新实现大部分标准的 Unix 实用�
 
 ### 1992 年 USL 诉讼
 
-BSDi 很快就陷入了与 AT&T 的 Unix System Laboratories（USL）子公司的法律纠纷中，当时 USL 是 System V 版权和 Unix 商标的所有者。USL 对 BSDi 的诉讼于 1992 年提起，并导致对 Net/2 的发布禁令。该诉讼于 1994 年 1 月达成和解。在伯克利发布的18,000 个文件中，只有三个文件需要移除，并对 70 个文件进行修改以显示 USL 的版权声明。这个和解为首个 FreeBSD 版本的发布铺平了道路。
+BSDi 很快就陷入了与 AT&T 的 Unix System Laboratories（USL）子公司的法律纠纷中，当时 USL 是 System V 版权和 Unix 商标的所有者。USL 对 BSDi 的诉讼于 1992 年提起，并导致对 Net/2 的发布禁令。该诉讼于 1994 年 1 月达成和解。在伯克利发布的 18,000 个文件中，只有三个文件需要移除，并对 70 个文件进行修改以显示 USL 的版权声明。这个和解为首个 FreeBSD 版本的发布铺平了道路。
 
 ### 1993 年 6 月 FreeBSD 的创建
 
-386BSD 的开发进展缓慢，在一段时间的忽视后，一群 386BSD 用户决定自己复刻出去，并创建 FreeBSD，以便他们能够使操作系统保持最新状态。1993 年 6 月 19 日，项目选择了名为 FreeBSD 的名称。第一个 FreeBSD 的版本于 1993 年 11月 发布。
+386BSD 的开发进展缓慢，在一段时间的忽视后，一群 386BSD 用户决定自己复刻出去，并创建 FreeBSD，以便他们能够使操作系统保持最新状态。1993 年 6 月 19 日，项目选择了名为 FreeBSD 的名称。第一个 FreeBSD 的版本于 1993 年 11 月 发布。
 
 ### 1994 年 8 月 FreeBSD Ports
 
-FreeBSD 的 Ports 和软件包为用户和管理员提供了一种简单的安装应用程序的方式。Ports 现在提供了超过 34,000 个 port，它们首次现身于 1994 年，当时 Jordan Hubbard 将“port make macros”提交到 FreeBSD 的 CVS 仓库中，以补充他的软件包安装套件“Makefile”。 
+FreeBSD 的 Ports 和软件包为用户和管理员提供了一种简单的安装应用程序的方式。Ports 现在提供了超过 34,000 个 port，它们首次现身于 1994 年，当时 Jordan Hubbard 将“port make macros”提交到 FreeBSD 的 CVS 仓库中，以补充他的软件包安装套件“Makefile”。
 
 ### 1994 年 11 月 22 日 IPFW（IP 防火墙）
 
@@ -67,21 +66,17 @@ ipfirewall（IP 防火墙）是在 FreeBSD 2.0-RELEASE 中被引入的，这种�
 
 FreeBSD 2.1.5 于 1996 年 8 月发布，迅速在互联网服务提供商（ISP）和商业社区中广受欢迎。这个版本对于 FreeBSD 来说是一个巨大的成功。
 
-
 ### 1998 年 5 月 软更新（Soft Updates）
 
 软更新依赖跟踪系统于 1998 年 5 月被 FreeBSD 采用。软更新旨在通过跟踪和执行更新之间的依赖关系，保持文件系统元数据的完整性，以防发生崩溃或停电。
-
 
 ### 1998 年 10 月 16 日 FreeBSD 3.0-RELEASE
 
 FreeBSD 3.0-RELEASE 于 1998 年 10 月 16 日宣布发布，为 i386 带来了最初的对称多处理（SMP）支持。3.0-RELEASE 还默认使用了 SCSI 通用访问方法（CAM）。
 
-
 ### 1998 年 11 月 29 日 FreeBSD 2.2.8-RELEASE
 
 FreeBSD 2.2.8-RELEASE 于 1998 年 11 月 29 日发布（在 FreeBSD 3 发布后一个月）。FreeBSD 2 的最终分支包括 sendfile 和 dummynet 两个关键特性，这些特性在后续的 FreeBSD 版本中得到了进一步的发展。
-
 
 ### 1999 年 10 月 17 日 首届 BSD 大会
 
@@ -91,16 +86,13 @@ FreeBSD 2.2.8-RELEASE 于 1998 年 11 月 29 日发布（在 FreeBSD 3 发布后
 
 于 2000 年 3 月 14 日宣布发布的 FreeBSD 4.0-RELEASE 带来了大量的新功能和工具。该版本包括早期的 IPv6 支持和 IPsec，两者都依赖于 KAME 代码，还有 OpenSSH、 `accept()`过滤器以及具备基本的 802.11b WiFi 支持的 wi(4)。
 
-
 ### 2000 年 3 月 14 日 FreeBSD Jail
 
 FreeBSD Jail 是在 2000 年初发布的 FreeBSD 4.0 中被引入的。Jail 机制是操作系统级别的虚拟化实现，允许系统管理员将一个 FreeBSD 系统分割为多个独立的小系统或"Jail"。这使得系统管理员能够更好地保护和优化他们的 FreeBSD 系统。
 
-
 ### 2000 年 3 月 15 日 FreeBSD 基金会成立
 
-FreeBSD 基金会是一个总部位于美国的非营利组织，注册为 501(c)(3) 机构，致力于支持 FreeBSD 项目、其开发和社区。资金来自个人和企业的捐款，用于赞助开发人员进行特定活动、购买硬件和网络基础设施，并提供开发者峰会的差旅津贴。该基金会由 Justin Gibbs于 2000 年 3 月 15 日创立。
-
+FreeBSD 基金会是一个总部位于美国的非营利组织，注册为 501(c)(3) 机构，致力于支持 FreeBSD 项目、其开发和社区。资金来自个人和企业的捐款，用于赞助开发人员进行特定活动、购买硬件和网络基础设施，并提供开发者峰会的差旅津贴。该基金会由 Justin Gibbs 于 2000 年 3 月 15 日创立。
 
 ### 2000 年 7 月 27 日 kqueue(2)
 
@@ -122,7 +114,6 @@ FreeBSD 5.0-RELEASE 经历了近 3 年的开发，由于引入了先进的多线
 
 在实验性版本的 5.1 中包含后，5.2-RELEASE 正式支持了 amd64，amd64 成为第一个一级 64 位平台。
 
-
 ### 2004 年 3 月 12 日 首届 AsiaBSDCon 和 BSDCan
 
 在 EuroBSDCon 获得成功之后，首届 AsiaBSDCon 于 2004 年 3 月 12 日启动，紧随其后的是 BSDCan，于 5 月 13 日举行。随着 FreeBSD 社区的不断发展壮大，全球范围内对于以 BSD 为重点的会议的需求也随之增长。
@@ -130,7 +121,6 @@ FreeBSD 5.0-RELEASE 经历了近 3 年的开发，由于引入了先进的多线
 ### 2004 年 5 月 1 日 谷歌代码之夏
 
 FreeBSD 基金会在首个年度的谷歌代码之夏中就开始参与。谷歌代码之夏为新开发者提供了一个机会，让他们参与当前的开源编码项目。许多参与该项目的学生在项目结束后成为了 FreeBSD 的贡献者。
-
 
 ### 2004 年 11 月 3 日 移植 PF
 
@@ -150,7 +140,7 @@ Deb Goodkin 于 2005 年加入基金会，成为首位执行董事。她之前�
 
 ### 2005 年 11 月 4 日 FREEBSD 6.0-RELEASE
 
-FreeBSD 6.0-RELEASE 于 2005 年 11 月 4 日发布。FreeBSD 6.0 标志着 sys/arm/arm 中首次提交的 32位 Arm 支持，802.11 WiFi 支持得到升级以包括高级功能，并通过添加 libthr(3) 和进一步的内核改进实现了 1:1 用户级线程。
+FreeBSD 6.0-RELEASE 于 2005 年 11 月 4 日发布。FreeBSD 6.0 标志着 sys/arm/arm 中首次提交的 32 位 Arm 支持，802.11 WiFi 支持得到升级以包括高级功能，并通过添加 libthr(3) 和进一步的内核改进实现了 1:1 用户级线程。
 
 ### 2007 年 JEMALLOC
 
@@ -159,7 +149,6 @@ Jason Evans 于 2005 年开发了 jemalloc，这是一个内存分配器。与�
 ### 2008 年 2 月 27 日 FREEBSD 7.0-RELEASE
 
 因为担心 ULE 调度程序是否准备就绪，FreeBSD 7.0-RELEASE 在发布时作为内核可选参数搭载了它，它在下一个稳定版本中成为了默认调度程序。FreeBSD 7.0 还添加了 SCTP 协议以及与网络、音频和多处理器性能相关的重大更新。
-
 
 ### 2008 年 3 月 ZFS
 
@@ -218,6 +207,7 @@ LLVM 项目是一组模块化和可重用的编译器和工具链技术。Clang 
 2018 年 12 月 11 日发布的 FreeBSD 12.0 版本增强了对 AMD CPU 的支持，并显著提升了对现代显卡的支持。此外，还新增了开放指令集架构（ISA）RISC-V 的支持。
 
 ### 2021 年 4 月 6 日 Git 过渡完毕
+
 于 2021 年 4 月 6 日 完成了从 Subversion 到 Git 的迁移。此过程始于 2019 年 5 月的 DevSummit，在当时成立了一个 Git 工作小组。
 
 ### 2021 年 4 月 13 日 FREEBSD 13.0-RELEASE
@@ -225,6 +215,7 @@ LLVM 项目是一组模块化和可重用的编译器和工具链技术。Clang 
 FreeBSD 13.0-RELEASE 于 2021 年 4 月 13 日发布。尽管 AArch64 从 FreeBSD 11 开始就得到了支持，但它在 FreeBSD 13.0-RELEASE 中才被提升为一级平台，成为第一个非 x86 架构的一级平台。13.0 还包括内核 TLS 卸载、对 clang 和 LLVM 的升级以及移除了弃用的库和工具。
 
 原文地址：https://freebsdfoundation.org/freebsd/timeline/
+
 ## 什么是 FreeBSD？
 
 BSD 最初是由 University of California, Berkeley 所开发的，意为 `Berkeley Software Distribution`（伯克利软件套件）。值得注意地是，Berkeley 伯克利之名来自著名的近代经验论哲学家乔治·贝克莱（George Berkeley，1685－1753，音译问题，原词是一致的），伯克利市和伯克利大学都是来源他的名字。贝克莱主教通过他的形而上学（反对牛顿绝对时空观等）启发了 20 世纪一众科学家，例如爱因斯坦，在某种意义上指导了现代科技革命。
@@ -249,13 +240,13 @@ Linus“I have never even checked 386BSD out; when I started on Linux it wast av
 
 ## FreeBSD or Others
 
-* Linux
+- Linux
 
 首先大概许多人是从 Linux 跑过来的，这样说我也没什么统计依据，不过姑且这样说罢。如果你发现在哪本书是举例提到 FreeBSD 是一种 Linux 发行版，那么我个人是不建议你继续看下去的，这属于误人子弟，我也曾在某些慕课网站上看到过类似行为。
 
-严格来说 Linux 是指 Linux kernel，只是个内核而非操作系统,而 FreeBSD 是个操作系统。FreeBSD 采用 BSD 授权许可（见 [https://www.freebsd.org/zh\_CN/copyright/freebsd-license.html](https://www.freebsd.org/zh\_CN/copyright/freebsd-license.html) ）。FreeBSD 驱动方面一直是个大 Bug，不如 Linux。
+严格来说 Linux 是指 Linux kernel，只是个内核而非操作系统,而 FreeBSD 是个操作系统。FreeBSD 采用 BSD 授权许可（见 [https://www.freebsd.org/zh_CN/copyright/freebsd-license.html](https://www.freebsd.org/zh_CN/copyright/freebsd-license.html) ）。FreeBSD 驱动方面一直是个大 Bug，不如 Linux。
 
-* macOS & iOS
+- macOS & iOS
 
 macOS & iOS 在一定程度上来说，都基于 FreeBSD。可见 FreeBSD 的 GUI 并不是搞不好，只是 Xorg 和开发方向有问题。
 
@@ -269,7 +260,7 @@ macOS & iOS 在一定程度上来说，都基于 FreeBSD。可见 FreeBSD 的 GU
 
 水果摆脱了开源界所谓的苦难哲学。
 
-* Microsoft Windows
+- Microsoft Windows
 
 微软非常重视用户体验，而一些社区可能完全忽视了这一点。直接的结果就是需要自己动手解决的地方略多。有人认为 Windows 简单因为都是图形化界面。事实上这是一种非常错误的说法，Windows 非常复杂。举例来说，你精通注册表否？知道每个选项什么意思吗？
 
@@ -279,12 +270,12 @@ macOS & iOS 在一定程度上来说，都基于 FreeBSD。可见 FreeBSD 的 GU
 
 ## 基本对比
 
-|     操作系统     |                                发布/生命周期（主要版本）                                |                              主要包管理器（命令）                             |                            许可证（主要）                           |  工具链  |    shell   |     桌面     |
-| :----------: | :-------------------------------------------------------------------------: | :-----------------------------------------------------------------: | :----------------------------------------------------------: | :---: | :--------: | :--------: |
-|    Ubuntu    |              [2 年/10 年](https://ubuntu.com/about/release-cycle)             |       [apt](https://ubuntu.com/server/docs/package-management)      | [GNU](https://ubuntu.com/legal/intellectual-property-policy) |  gcc  |    bash    |    Gnome   |
-| Gentoo Linux |                                     滚动更新                                    |       [Portage（emerge）](https://wiki.gentoo.org/wiki/Portage)       |                              GNU                             |  gcc  |    bash    |     可选     |
-|  Arch Linux  |                                     滚动更新                                    |          [pacman](https://wiki.archlinux.org/title/pacman)          |                              GNU                             |  gcc  |    bash    |     可选     |
-|     RHEL     | [3/最长 12 年](https://access.redhat.com/zh\_CN/support/policy/updates/errata) | [RPM（yum、dnf）](https://www.redhat.com/sysadmin/how-manage-packages) |                              GNU                             |  gcc  |    bash    |    Gnome   |
-|    FreeBSD   |                [约 2.5/5 年](https://www.freebsd.org/security/)               |                              pkg/ports                              |                              BSD                             | clang |   csh/sh   |     可选     |
-|    Windows   |        [不固定](https://docs.microsoft.com/zh-cn/lifecycle/faq/windows)        |                                  可选                                 |                              专有                              |   可选  | powershell | Windows 桌面 |
-|     MacOS    |                                  1 年/约 5 年                                  |                                  无                                  |            [专有](https://www.apple.com/legal/sla/)            | clang |     zsh    |    Aqua    |
+|   操作系统   |                           发布/生命周期（主要版本）                           |                          主要包管理器（命令）                          |                        许可证（主要）                        | 工具链 |   shell    |     桌面     |
+| :----------: | :---------------------------------------------------------------------------: | :--------------------------------------------------------------------: | :----------------------------------------------------------: | :----: | :--------: | :----------: |
+|    Ubuntu    |             [2 年/10 年](https://ubuntu.com/about/release-cycle)              |        [apt](https://ubuntu.com/server/docs/package-management)        | [GNU](https://ubuntu.com/legal/intellectual-property-policy) |  gcc   |    bash    |    Gnome     |
+| Gentoo Linux |                                   滚动更新                                    |       [Portage（emerge）](https://wiki.gentoo.org/wiki/Portage)        |                             GNU                              |  gcc   |    bash    |     可选     |
+|  Arch Linux  |                                   滚动更新                                    |           [pacman](https://wiki.archlinux.org/title/pacman)            |                             GNU                              |  gcc   |    bash    |     可选     |
+|     RHEL     | [3/最长 12 年](https://access.redhat.com/zh_CN/support/policy/updates/errata) | [RPM（yum、dnf）](https://www.redhat.com/sysadmin/how-manage-packages) |                             GNU                              |  gcc   |    bash    |    Gnome     |
+|   FreeBSD    |               [约 2.5/5 年](https://www.freebsd.org/security/)                |                               pkg/ports                                |                             BSD                              | clang  |   csh/sh   |     可选     |
+|   Windows    |       [不固定](https://docs.microsoft.com/zh-cn/lifecycle/faq/windows)        |                                  可选                                  |                             专有                             |  可选  | powershell | Windows 桌面 |
+|    MacOS     |                                 1 年/约 5 年                                  |                                   无                                   |           [专有](https://www.apple.com/legal/sla/)           | clang  |    zsh     |     Aqua     |

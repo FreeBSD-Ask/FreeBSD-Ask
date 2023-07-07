@@ -1,4 +1,4 @@
-# 第3.1节 FreeBSD 镜像站现状
+# 第 3.1 节 FreeBSD 镜像站现状
 
 ## 现状
 
@@ -28,13 +28,13 @@ https://github.com/tuna/issues/issues/16
 
 ## 官方给出的镜像站基本要求
 
-* 服务器的 root 权限，这一点上国内的大学开源镜像站不会给与；
-* IPv6 及 CN2 网络——国内也很缺乏；
-* BGP 网络；
-* 足够的存储空间（约50TB）和 1G 带宽；
-* 上述计算机 5 台。
-* 备案问题——需要专门公司/社会组织才能给 cn.FreeBSD.org 备案；
-* 还有最大的问题，没有钱； 　
+- 服务器的 root 权限，这一点上国内的大学开源镜像站不会给与；
+- IPv6 及 CN2 网络——国内也很缺乏；
+- BGP 网络；
+- 足够的存储空间（约 50TB）和 1G 带宽；
+- 上述计算机 5 台。
+- 备案问题——需要专门公司/社会组织才能给 cn.FreeBSD.org 备案；
+- 还有最大的问题，没有钱；
 
 ## 非官方镜像站
 
@@ -42,21 +42,23 @@ FreeBSD 在中国大陆境内没有官方镜像站；在中国台湾地区有官
 
 FreeBSD 目前在大陆非官方镜像站有若干个（详见第二节。）：
 
-*   USTC（仅 pkg ports）
+- USTC（仅 pkg ports）
 
-    https://mirrors.ustc.edu.cn
-* ~~http://freebsd.cn（四类源）~~【不可用】
-*   北京交通大学自由与开源镜像站（四类源）【不可用】
+  https://mirrors.ustc.edu.cn
 
-    https://mirror.bjtu.edu.cn
+- ~~http://freebsd.cn（四类源）~~【不可用】
+- 北京交通大学自由与开源镜像站（四类源）【不可用】
 
-    联系方式:
+  https://mirror.bjtu.edu.cn
 
-    https://t.me/bjtumirror
-* 网易 163 镜像站（仅 ports pkg）
-*   南京大学开源镜像站
+  联系方式:
 
-    无法进行有效联络，找不到负责人。
+  https://t.me/bjtumirror
+
+- 网易 163 镜像站（仅 ports pkg）
+- 南京大学开源镜像站
+
+  无法进行有效联络，找不到负责人。
 
 FreeBSD 官方联系方式：
 

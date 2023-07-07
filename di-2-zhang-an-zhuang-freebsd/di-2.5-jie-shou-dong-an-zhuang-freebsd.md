@@ -1,4 +1,4 @@
-# 第2.5节 手动安装 FreeBSD
+# 第 2.5 节 手动安装 FreeBSD
 
 总是有人想用 [LFS](https://www.linuxfromscratch.org/lfs/) 的方式来安装 FreeBSD，但是 FreeBSD 基本系统是一个有机整体，不是由单个软件包构成的，因此我认为这难以实现，参考 [ghostBSD](https://github.com/GhostBSD) 的代码我也没有看出来他的裁剪方法。有能力者请反馈。
 
@@ -12,7 +12,7 @@
 
 参考文献：
 
-* [https://stanislas.blog/2018/12/how-to-install-freebsd-server/](https://stanislas.blog/2018/12/how-to-install-freebsd-server/)
-* [https://wiki.freebsd.org/RootOnZFS/GPTZFSBoot](https://wiki.freebsd.org/RootOnZFS/GPTZFSBoot)
+- [https://stanislas.blog/2018/12/how-to-install-freebsd-server/](https://stanislas.blog/2018/12/how-to-install-freebsd-server/)
+- [https://wiki.freebsd.org/RootOnZFS/GPTZFSBoot](https://wiki.freebsd.org/RootOnZFS/GPTZFSBoot)
 
 以上我仅测试过 UFS 相关。

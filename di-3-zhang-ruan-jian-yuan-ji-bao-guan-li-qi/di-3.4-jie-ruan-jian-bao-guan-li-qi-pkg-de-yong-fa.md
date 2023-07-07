@@ -1,4 +1,4 @@
-# 第3.4节 软件包管理器 pkg 的用法
+# 第 3.4 节 软件包管理器 pkg 的用法
 
 包管理器目前是 pkgng，其命令是 pkg。
 
@@ -12,8 +12,6 @@
 
 `# pkg` 回车即可输入 y 确认下载
 
-
-
 pkg 使用 https，先安装 ssl 证书：
 
 `# pkg install ca_root_nss`
@@ -24,19 +22,13 @@ pkg 使用 https，先安装 ssl 证书：
 
 `# pkg update -f`
 
-
-
 安装 python 3：
 
 `# pkg install python`
 
-
-
 pkg 升级：
 
 `# pkg upgrade`
-
-
 
 错误：`You must upgrade the ports-mgmt/pkg port first`
 
@@ -69,7 +61,7 @@ pw: user ‘package’ disappeared during update
 pkg: PRE-INSTALL script failed
 ```
 
-问题解析：数据库未同步 　　
+问题解析：数据库未同步
 
 问题解决：
 

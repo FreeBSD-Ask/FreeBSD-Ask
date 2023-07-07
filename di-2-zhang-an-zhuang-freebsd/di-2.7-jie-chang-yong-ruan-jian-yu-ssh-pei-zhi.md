@@ -1,4 +1,4 @@
-# 第2.7节 常用软件与 SSH 配置
+# 第 2.7 节 常用软件与 SSH 配置
 
 ## WinSCP 下载
 
@@ -22,7 +22,7 @@ Xshell 是 Windows 平台上的强大的 shell 工具，不建议使用苦难哲
 
 ```
 # ee /etc/ssh/sshd_config    #（删去前边的 #，并将 yes 或 no 修改为如下）
-PermitRootLogin yes          #允许 root 登录 
+PermitRootLogin yes          #允许 root 登录
 PasswordAuthentication yes   #（可选）设置是否使用普通密码验证，如果不设置此参数则使用 PAM 认证登录，安全性更高
 ```
 
@@ -30,7 +30,7 @@ PasswordAuthentication yes   #（可选）设置是否使用普通密码验证�
 
 > **故障排除**
 >
-> 如果你实在是找不到 `PasswordAuthentication no`，请你看看你改的究竟是 `/etc/ssh/`ssh_**d**_`_config` 还是 `/etc/ssh/`**ssh**`_config`。**sshd** 才是我们真正要改的文件。
+> 如果你实在是找不到 `PasswordAuthentication no`，请你看看你改的究竟是 `/etc/ssh/`ssh***d***`_config` 还是 `/etc/ssh/`**ssh**`_config`。**sshd** 才是我们真正要改的文件。
 
 ### 开启 SSH 服务
 
@@ -91,7 +91,7 @@ ServerAliveCountMax 3
 # ssh-keygen
 ```
 
-> OpenSSH 7.0 及以上版本默认禁用了 ssh-dss(DSA) 公钥算法。FreeBSD 13.0 采用 OpenSSH\_7.9。因此使用默认值即可。
+> OpenSSH 7.0 及以上版本默认禁用了 ssh-dss(DSA) 公钥算法。FreeBSD 13.0 采用 OpenSSH_7.9。因此使用默认值即可。
 
 ```
 root@ykla:~ # ssh-keygen
@@ -116,7 +116,7 @@ The key's randomart image is:
 |    + Bo= . .  . |
 |   . ==O..       |
 +----[SHA256]-----+
-root@ykla:~ # 
+root@ykla:~ #
 ```
 
 ### 配置密钥
@@ -142,7 +142,7 @@ drwx------  2 root  wheel   512 Mar 22 18:27 /root/.ssh #权限为 700
 # rm /root/.ssh/id_rsa*
 ```
 
-### 修改 /etc/ssh/sshd\_config
+### 修改 /etc/ssh/sshd_config
 
 ```
 # ee /etc/ssh/sshd_config

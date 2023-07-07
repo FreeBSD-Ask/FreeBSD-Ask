@@ -1,4 +1,4 @@
-# 第4.6节 安装 Cinnamon
+# 第 4.6 节 安装 Cinnamon
 
 > 以下教程适用于 shell 为 bash/sh/zsh 的用户。
 >
@@ -11,7 +11,7 @@
 ## 安装
 
 ```
-# pkg install xorg lightdm lightdm-gtk-greeter cinnamon wqy-fonts xdg-user-dirs	
+# pkg install xorg lightdm lightdm-gtk-greeter cinnamon wqy-fonts xdg-user-dirs
 ```
 
 ## 配置

@@ -1,4 +1,4 @@
-# 第8.2节 添加用户
+# 第 8.2 节 添加用户
 
 示例：创建一个普通用户（用户名为 `ykla`），并将其添加到 `video` 分组：
 
@@ -10,7 +10,7 @@
 示例：创建一个名为 test 的用户，并添加其到 video 组，设置其默认 shell 是 csh：
 
 ```
-root@ykla:/ #  adduser 
+root@ykla:/ #  adduser
 Username: test #用户名
 Full name:  #全名，可留空
 Uid (Leave empty for default): # UID 设置，可留空
@@ -28,12 +28,12 @@ Enter password again: #重复输入密码
 Lock out the account after creation? [no]: #锁定账号？
 Username   : test
 Password   : *****
-Full Name  : 
+Full Name  :
 Uid        : 1002
-Class      : 
+Class      :
 Groups     : test video
 Home       : /home/test
-Home Mode  : 
+Home Mode  :
 Shell      : /bin/csh
 Locked     : no
 OK? (yes/no): yes #检查有错误否

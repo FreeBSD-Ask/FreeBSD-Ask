@@ -1,21 +1,19 @@
-# 第2.2节 FreeBSD 13.1 安装——基于 Virtual Box
+# 第 2.2 节 FreeBSD 13.1 安装——基于 Virtual Box
 
 > **UEFI 下显卡也可以正常驱动。——2023.1.14 测试**
-> 
+>
 > ```
-># efibootmgr # 无需安装，自带
->Boot to FW : false
->BootCurrent: 0004
->Timeout    : 0 seconds
->BootOrder  : 0004, 0000, 0001, 0002, 0003
->+Boot0004* FreeBSD
+> # efibootmgr # 无需安装，自带
+> Boot to FW : false
+> BootCurrent: 0004
+> Timeout    : 0 seconds
+> BootOrder  : 0004, 0000, 0001, 0002, 0003
+> +Boot0004* FreeBSD
 > Boot0000* UiApp
-> Boot0001* UEFI VBOX CD-ROM VB2-01700376 
-> Boot0002* UEFI VBOX HARDDISK VB7aff22ad-deb533d3 
+> Boot0001* UEFI VBOX CD-ROM VB2-01700376
+> Boot0002* UEFI VBOX HARDDISK VB7aff22ad-deb533d3
 > Boot0003* EFI Internal Shell
->```
-
-
+> ```
 
 ## 下载 VirtualBox
 
@@ -29,7 +27,7 @@
 
 ## 网络设置
 
-### 方法① 桥接
+### 方法 ① 桥接
 
 桥接是最简单的互通主机与虚拟机的方法，并且可以获取一个和宿主机在同一个 IP 段的 IP 地址，如主机是 192.168.31.123，则虚拟机的地址为 192.168.31.x。
 
@@ -39,7 +37,7 @@
 
 如果没有网络（互联网）请设置 DNS 为 `223.5.5.5`。如果不会，请看本章其他章节。
 
-### 方法② NAT
+### 方法 ② NAT
 
 网络设置比较复杂，有时桥接不一定可以生效。为了达到使用宿主机（如 Windows10 ）控制虚拟机里的 FreeBSD 系统的目的，需要设置两块网卡——一块是 NAT 网络模式的网卡用来上网、另一块是仅主机模式的网卡用来互通宿主机。如图所示：
 
@@ -52,8 +50,6 @@
 如果没有网络（互联网）请设置 DNS 为 `223.5.5.5`。如果不会，请看本章其他章节。
 
 ## 显卡驱动与增强工具
-
-
 
 ```
 # pkg install virtualbox-ose-additions
@@ -82,19 +78,18 @@ xorg 可以自动识别驱动，**不需要** 手动配置 `/usr/local/etc/X11/x
 
 ### EFI 下无法正常关机
 
-添加 
+添加
 
 ```
-hw.efi.poweroff=0 
+hw.efi.poweroff=0
 ```
 
 到 `/etc/sysctl.conf`，然后再重启，再关机就正常了。
 
 参考文献：
 
- - <https://www.truenas.com/community/threads/12-0-u8-1-13-0-u2-poweroff-problem-solution.104813/>
- - <https://forums.freebsd.org/threads/efi-virtualbox-computer-non-stop-after-successful-shutdown-of-freebsd.84856/>
-
+- <https://www.truenas.com/community/threads/12-0-u8-1-13-0-u2-poweroff-problem-solution.104813/>
+- <https://forums.freebsd.org/threads/efi-virtualbox-computer-non-stop-after-successful-shutdown-of-freebsd.84856/>
 
 ### 鼠标进去了出不来
 

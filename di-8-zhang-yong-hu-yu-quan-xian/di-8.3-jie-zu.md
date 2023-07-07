@@ -1,4 +1,4 @@
-# 第8.3节 组
+# 第 8.3 节 组
 
 ## 在 FreeBSD 中，用户和组统一用 `pw` 命令管理：
 
@@ -30,8 +30,8 @@
 
 `admin` 和 `wheel` 权限的区别：
 
-* `admin`，具有管理系统的权限（sudo 的默认配置如此），可以使用 `sudo` 命令。
-* `wheel`，超级管理员权限，可以任意修改系统（该名称来源于俚语 big wheel，意为大人物）。
+- `admin`，具有管理系统的权限（sudo 的默认配置如此），可以使用 `sudo` 命令。
+- `wheel`，超级管理员权限，可以任意修改系统（该名称来源于俚语 big wheel，意为大人物）。
 
 用 pw 命令管理用户和组操作系统用户，或许叫账号更恰当，是操作人员登陆操作系统的凭证，如前面的新建用户；
 
@@ -63,8 +63,8 @@
 
 ```
 # pw useradd test1 #创建用户 test1，uid 系统默认，test1 组，登陆环境/bin/sh，主目录未创建
-# pw useradd test2 -u 1200 -m -d /tmp/test -g test1 -G wheel -s csh -c test2 #创建用户 test2，uid 为 1200，创建主目录，主目录为/tmp/test，test1 组，有管理员权限，登陆环境/bin/csh，全名 test2 
-# echo password | pw useradd test3 -h 0 #创建用户 test3，同时设置密码为 password 
+# pw useradd test2 -u 1200 -m -d /tmp/test -g test1 -G wheel -s csh -c test2 #创建用户 test2，uid 为 1200，创建主目录，主目录为/tmp/test，test1 组，有管理员权限，登陆环境/bin/csh，全名 test2
+# echo password | pw useradd test3 -h 0 #创建用户 test3，同时设置密码为 password
 ```
 
 2. `usermod` 命令，用于修改用户信息，常用参数：
@@ -74,9 +74,9 @@
 示例：
 
 ```
-# pw usermod test1 -G wheel #为用户 test1 增加管理员权限 
-# pw usermod test1 -l myuser #用户 test1 改名为 myuser 
-# echo password | pw usermod test2 -h 0 #修改用户 test2 密码为 password 
+# pw usermod test1 -G wheel #为用户 test1 增加管理员权限
+# pw usermod test1 -l myuser #用户 test1 改名为 myuser
+# echo password | pw usermod test2 -h 0 #修改用户 test2 密码为 password
 ```
 
 3. `userdel` 命令，用于删除用户，常用参数：
@@ -86,7 +86,7 @@
 示例：
 
 ```
-# pw userdel test2 -r 
+# pw userdel test2 -r
 ```
 
 4. `usershow` 命令，用于显示用户信息，
@@ -94,7 +94,7 @@
 示例：
 
 ```
-# pw usershow test2 
+# pw usershow test2
 ```
 
 5. `usernext` 命令，返回下一个可用的 uid，
@@ -102,7 +102,7 @@
 示例：
 
 ```
-# pw usernext 
+# pw usernext
 ```
 
 6. `lock` 命令，锁定账号，锁定后账号无法登录使用，
@@ -110,7 +110,7 @@
 示例：
 
 ```
-# pw lock test2 
+# pw lock test2
 ```
 
 7. `unlock` 命令，解锁账号，解锁后账号可以正常使用，
@@ -118,7 +118,7 @@
 示例：
 
 ```
-# pw unlock test2 
+# pw unlock test2
 ```
 
 8. `groupadd` 命令，用于新建组，常用参数：
@@ -132,8 +132,8 @@
 示例：
 
 ```
-# pw groupadd test -g 1200 #创建组 test，gid 为 1200，注意，gid 与 uid 不是一回事 
-# pw groupadd test5 -M test1,test2 #创建组 test5，成员有 test1 和 test2 
+# pw groupadd test -g 1200 #创建组 test，gid 为 1200，注意，gid 与 uid 不是一回事
+# pw groupadd test5 -M test1,test2 #创建组 test5，成员有 test1 和 test2
 ```
 
 9. `groupmod` 命令，用于修改组信息，常用参数：
@@ -151,10 +151,10 @@
 示例：
 
 ```
-# pw groupmod test -g 1300 #修改 test 组的 gid 为 1300 
-# pw groupmod test -l mygroup 组 test 改名为 mygroup 
-# pw groupmod test5 -M test1 #设置组 test5 的成员为 test1 
-# pw groupmod test5 -m test3 #为组 test5 增加成员 test3 
+# pw groupmod test -g 1300 #修改 test 组的 gid 为 1300
+# pw groupmod test -l mygroup 组 test 改名为 mygroup
+# pw groupmod test5 -M test1 #设置组 test5 的成员为 test1
+# pw groupmod test5 -m test3 #为组 test5 增加成员 test3
 ```
 
 10. `groupdel` 命令，用于删除组，
@@ -162,7 +162,7 @@
 示例：
 
 ```
-# pw groupdel mygroup 
+# pw groupdel mygroup
 ```
 
 11. `groupshow` 命令，用于显示组信息，
@@ -170,7 +170,7 @@
 示例：
 
 ```
-# pw groupshow test 
+# pw groupshow test
 ```
 
 12. `groupnext` 命令，返回下一个可用的 `gid`，
@@ -178,7 +178,7 @@
 示例：
 
 ```
-# pw groupnext 
+# pw groupnext
 ```
 
 ## 其他用户管理命令
@@ -201,8 +201,8 @@
 示例：
 
 ```
-# chpass -s csh test1 # 更换用户 test1 的登陆环境为 /bin/csh 
-# chpass # 以 vi 方式打开当前用户信息进行修改 
+# chpass -s csh test1 # 更换用户 test1 的登陆环境为 /bin/csh
+# chpass # 以 vi 方式打开当前用户信息进行修改
 # passwd # 修改用户密码，如不指定用户则默认为当前用户。
 ```
 
@@ -213,10 +213,9 @@
 示例：
 
 ```
-# id # 查看当前用户 id 信息 
-# id test1 # 查看用户 test1 的 id 信息 
+# id # 查看当前用户 id 信息
+# id test1 # 查看用户 test1 的 id 信息
 ```
 
 5. `whoami` 命令，查看当前用户是谁。
 6. `who` 命令，查看当前用户登陆信息。
-

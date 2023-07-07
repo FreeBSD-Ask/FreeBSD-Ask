@@ -1,4 +1,4 @@
-# 第4.10节 远程桌面管理
+# 第 4.10 节 远程桌面管理
 
 ## VNC
 
@@ -7,7 +7,7 @@
 安装 TigerVNC Server：
 
 ```
-# pkg install -y tigervnc-server 
+# pkg install -y tigervnc-server
 ```
 
 安装之后，还要做一些设置：
@@ -17,13 +17,13 @@
 创建 `~/.vnc/xstartup` 文件，内容如下：
 
 ```
-#!/bin/sh 
-unset SESSION_MANAGER 
-unset DBUS_SESSION_BUS_ADDRESS 
-[ -x /etc/X11/xinit/xinitrc ] && exec /etc/X11/xinit/xinitrc 
-[ -f /etc/X11/xinit/xinitrc ] && exec sh /etc/X11/xinit/xinitrc 
-xsetroot -solid grey 
-$command &  
+#!/bin/sh
+unset SESSION_MANAGER
+unset DBUS_SESSION_BUS_ADDRESS
+[ -x /etc/X11/xinit/xinitrc ] && exec /etc/X11/xinit/xinitrc
+[ -f /etc/X11/xinit/xinitrc ] && exec sh /etc/X11/xinit/xinitrc
+xsetroot -solid grey
+$command &
 ```
 
 注意：`$command` 需要替换，请注意保留 `&`，在不同桌面下需要替换，Gnome 用 `gnome-session`，KDE 用 `startplasma-x11`，MATE 用 `mate-session`，Xfce 用 `xfce4-session`。
@@ -41,7 +41,7 @@ $command &
 1. 如果启用了防火墙，那么此时还需要开通防火墙，以 ipfw 为例，在终端输入命令：
 
 ```
-# ipfw add allow tcp from any to me 5900-5910 in keep-state 
+# ipfw add allow tcp from any to me 5900-5910 in keep-state
 ```
 
 上行命令表示开通 5900-5910 的端口，即 DISPLAY 的 0-10 端口，通常情况下，即便需要开启很多桌面，10 个端口也足够了。最后别忘了将指令加入规则集文件，否则操作系统重启后会丢失。
@@ -110,16 +110,14 @@ export LANG=zh_CN.UTF-8
 安装命令：
 
 ```
-# pkg install -y rdesktop 
+# pkg install -y rdesktop
 ```
 
 但 rdesktop 安装后不会在系统中生成菜单，因此要在终端输入命令：
 
 ```
-# rdesktop windows 设备 ip 
+# rdesktop windows 设备 ip
 ```
-
-
 
 ## anydesk
 

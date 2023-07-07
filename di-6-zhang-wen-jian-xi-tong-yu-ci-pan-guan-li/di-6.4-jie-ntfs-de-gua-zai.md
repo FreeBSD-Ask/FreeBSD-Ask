@@ -1,4 +1,4 @@
-# 第6.4节 NTFS 的挂载
+# 第 6.4 节 NTFS 的挂载
 
 1. 安裝 ntfs-3g 软件 `# pkg install sysutils/fusefs-ntfs`
 2. 把你的 ntfs 格式的硬盘或 U 盘插入计算机。这时候你会看到它的设备名，例如 `da0`。
@@ -48,4 +48,4 @@
 
 然后重新挂载。
 
-详细参数见 [ntfs-3g manpage](https://www.freebsd.org/cgi/man.cgi?query=ntfs-3g\&format=html)。如果无法挂载请先关闭 windows 的休眠，然后重启几次。
+详细参数见 [ntfs-3g manpage](https://www.freebsd.org/cgi/man.cgi?query=ntfs-3g&format=html)。如果无法挂载请先关闭 windows 的休眠，然后重启几次。

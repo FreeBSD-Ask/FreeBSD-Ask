@@ -1,4 +1,4 @@
-# 第4.5节 安装 Xfce
+# 第 4.5 节 安装 Xfce
 
 ## 安装 xfce4
 
@@ -13,7 +13,7 @@
 通过 pkg 安装
 
 ```
-# pkg install xorg lightdm lightdm-gtk-greeter xfce wqy-fonts xdg-user-dirs	
+# pkg install xorg lightdm lightdm-gtk-greeter xfce wqy-fonts xdg-user-dirs
 ```
 
 或
@@ -52,7 +52,7 @@
 
 ### 安装输入法
 
-请检查自己的shell是不是 `sh`、`bash`、`zsh` 其中之一。
+请检查自己的 shell 是不是 `sh`、`bash`、`zsh` 其中之一。
 
 ```
 # echo $0
@@ -67,7 +67,7 @@
 配置文件：
 
 ```
-# ee ~/.xinitrc 
+# ee ~/.xinitrc
 ```
 
 在该文件中添加以下内容:
@@ -102,4 +102,4 @@ tcsh 配置:
 
 ## 配置集参考
 
-* [https://github.com/Wamphyre/BSD-XFCE](https://github.com/Wamphyre/BSD-XFCE)
+- [https://github.com/Wamphyre/BSD-XFCE](https://github.com/Wamphyre/BSD-XFCE)

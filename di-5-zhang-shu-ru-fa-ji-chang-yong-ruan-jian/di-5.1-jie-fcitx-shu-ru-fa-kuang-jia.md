@@ -1,11 +1,8 @@
-# 第5.1节 Fcitx 输入法框架
+# 第 5.1 节 Fcitx 输入法框架
 
 > **注意**
 >
 > 在 FreeBSD-14.0-Current 中可能会出现许多不可预料的奇怪的 bug（fcitx5 诊断信息英文乱码，输入法显示出奇怪的汉字，fcitx5-qt5 环境不能正常加载……），如果条件允许应该在 FreeBSD-Release 中参考使用本文。
-
-
-
 
 ## Fcitx 4.X
 
@@ -86,21 +83,20 @@ SLIM 窗口下会提示 IBUS 找不到……疑似 bug。
 
 #### 设置环境变量
 
-
-
 根据自己使用的桌面管理器择一使用：
 
 1. sddm lightdm gdm 都可以在 `~/.xprofile` 中写入 A 组配置
 2. lightdm gdm 可以在 `~/.profile` 中写入 A 组配置
 3. sddm 可以在用户登录 shell 配置文件中写入配置
-  - sh: `~/.profile` 写入 A 组配置
-  - bash: `~/.bash_profile` 或 `~/.profile` 写入 A 组配置
-  - zsh: `~/.zprofile` 写入 A 组配置
-  - csh: `~/.cshrc` 写入 B 组配置
+
+- sh: `~/.profile` 写入 A 组配置
+- bash: `~/.bash_profile` 或 `~/.profile` 写入 A 组配置
+- zsh: `~/.zprofile` 写入 A 组配置
+- csh: `~/.cshrc` 写入 B 组配置
 
 **注意：如果登录桌面的用户不是 root，就不能使用 root 进行设置，必须切换到当前用户且不使用 sudo 进行配置。**
 
-A组：
+A 组：
 
 sh/bash/zsh:fcitx5
 
@@ -114,8 +110,7 @@ export GTK_IM_MODULE=fcitx/xim
 export QT_IM_MODULE=fcitx
 ```
 
-
-B组：
+B 组：
 
 csh:fcitx5
 

@@ -1,4 +1,4 @@
-# 第4.1节 安装显卡驱动及 Xorg（必看）
+# 第 4.1 节 安装显卡驱动及 Xorg（必看）
 
 FreeBSD 已从 Linux 移植了显卡驱动，理论上，I 卡 A 卡 N 卡均在 AMD64 架构上正常运行。
 
@@ -40,17 +40,17 @@ FreeBSD 14 Current，编译使用 `drm-515-kmod`。**截至 2023.7.5 Raptor Lake
 
 > **故障排除：**
 >
-> * **如果提示内核版本不符（`KLD XXX.ko depends on kernel - not available or version mismatch.`），请先升级系统或使用 ports 编译安装：**
+> - **如果提示内核版本不符（`KLD XXX.ko depends on kernel - not available or version mismatch.`），请先升级系统或使用 ports 编译安装：**
 >
 > <img src="../.gitbook/assets/amd_error.jpg" alt="" data-size="original">
 >
-> * **如果提示 `/usr/ports/xxx no such xxx` 找不到路径，请先获取 ports 请看前文。**
+> - **如果提示 `/usr/ports/xxx no such xxx` 找不到路径，请先获取 ports 请看前文。**
 
 ### 安装驱动——复杂版本
 
 注意，如果要通过 `ports` 安装提示需要源码，请见第二十一章。
 
-* FreeBSD 12
+- FreeBSD 12
 
 ```
 # cd /usr/ports/graphics/drm-fbsd12.0-kmod/ && make BATCH=yes install clean
@@ -60,13 +60,13 @@ FreeBSD 14 Current，编译使用 `drm-515-kmod`。**截至 2023.7.5 Raptor Lake
 >
 > **除了 12.0，对于任意 12.X 均应该安装 `drm-fbsd12.0-kmod`，但应该使用 port 在本地重新构建而不应使用 pkg 进行安装，否则不会正常运行。**
 
-* FreeBSD 13
+- FreeBSD 13
 
 ```
 # cd /usr/ports/graphics/drm-510-kmod/ && make BATCH=yes install clean
 ```
 
-* FreeBSD 14 (current）
+- FreeBSD 14 (current）
 
 ```
 # cd /usr/ports/graphics/drm-515-kmod/ && make BATCH=yes install clean
@@ -78,10 +78,10 @@ FreeBSD 14 Current，编译使用 `drm-515-kmod`。**截至 2023.7.5 Raptor Lake
 
 打开 `/etc/rc.conf`:
 
-* 如果为 intel 核芯显卡，添加 `kld_list="i915kms"`
-* AMD
-  * 如果为 HD7000 以后的 AMD 显卡，添加 `kld_list="amdgpu"` （大部分人应该使用这个，如果没用再去使用`radeonkms`）
-  * 如果为 HD7000 以前的 AMD 显卡，添加 `kld_list="radeonkms"` （这是十余年前的显卡了）
+- 如果为 intel 核芯显卡，添加 `kld_list="i915kms"`
+- AMD
+  - 如果为 HD7000 以后的 AMD 显卡，添加 `kld_list="amdgpu"` （大部分人应该使用这个，如果没用再去使用`radeonkms`）
+  - 如果为 HD7000 以前的 AMD 显卡，添加 `kld_list="radeonkms"` （这是十余年前的显卡了）
 
 ### 视频硬解
 
@@ -121,7 +121,7 @@ FreeBSD 14 Current，编译使用 `drm-515-kmod`。**截至 2023.7.5 Raptor Lake
 
 > 此部分教程经过测试适用于 renoir 显卡。
 >
-> 在使用 Gnome 时，如果自动锁屏或息屏，可能无法再次进入桌面。见 [https://bugs.freebsd.org/bugzilla/show\_bug.cgi?id=255049](https://bugs.freebsd.org/bugzilla/show\_bug.cgi?id=255049)。
+> 在使用 Gnome 时，如果自动锁屏或息屏，可能无法再次进入桌面。见 [https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=255049](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=255049)。
 
 安装所需驱动（均为 latest 源或从 ports 安装）：
 
@@ -147,6 +147,7 @@ EndSection
 ## 英伟达显卡
 
 注意，有多个版本的 N 卡驱动，不知道该用哪个的去看[手册](https://handbook.bsdcn.org/di-5-zhang-xwindow-xi-tong/5.3.-xian-ka-qu-dong.html)。
+
 ```
 # pkg install nvidia-driver nvidia-settings nvidia-xconfig #安装几个 nvidia 相关的包
 # sysrc kld_list+="nvidia-modeset" #配置驱动
@@ -216,14 +217,14 @@ kldxref /boot/modules
 
 参考资料
 
-* [https://github.com/freebsd/drm-kmod/issues/93#issuecomment-962622626](https://github.com/freebsd/drm-kmod/issues/93#issuecomment-962622626)
+- [https://github.com/freebsd/drm-kmod/issues/93#issuecomment-962622626](https://github.com/freebsd/drm-kmod/issues/93#issuecomment-962622626)
 
 ### 故障排除
 
-* 如果显卡使用驱动有问题请直接联系作者：[https://github.com/freebsd/drm-kmod/issues](https://github.com/freebsd/drm-kmod/issues)
-* 如果笔记本出现了唤醒时屏幕点不亮的问题，可以在 `/boot/loader.conf` 中添加 `hw.acpi.reset_video="1"` 以在唤醒时重置显示适配器。
+- 如果显卡使用驱动有问题请直接联系作者：[https://github.com/freebsd/drm-kmod/issues](https://github.com/freebsd/drm-kmod/issues)
+- 如果笔记本出现了唤醒时屏幕点不亮的问题，可以在 `/boot/loader.conf` 中添加 `hw.acpi.reset_video="1"` 以在唤醒时重置显示适配器。
 
-## 安装xorg
+## 安装 xorg
 
 ### 可选软件包：
 

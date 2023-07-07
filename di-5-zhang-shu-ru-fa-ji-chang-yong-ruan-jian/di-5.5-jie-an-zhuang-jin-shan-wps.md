@@ -1,4 +1,4 @@
-# 第5.5节 安装金山 WPS
+# 第 5.5 节 安装金山 WPS
 
 > 请勿使用 ports 中的金山 WPS，因为无人更新。推荐自行构建兼容层安装使用。
 
@@ -11,8 +11,8 @@
 # passwd #为 Arch 的 root 设置一个密码
 # passwd test #为 Arch 的 test 设置一个密码，脚本已经创建过该用户了！
 ```
-新开一个终端，输入 `reboot` 重启 FreeBSD，否则设置的密码可能会不识别。
 
+新开一个终端，输入 `reboot` 重启 FreeBSD，否则设置的密码可能会不识别。
 
 ```
 # chroot /compat/arch/ /bin/bash #进入 Arch 兼容层
@@ -60,7 +60,7 @@ index 0000000..21a51bb
 +sha1sums=('cbc7d2c733b5d3461f3c2200756d4efce9e951d5'
 +          '6134a63d775540588ce48884e8cdc47d4a9a62f3')
 +
-#这里输入 q 
+#这里输入 q
 :: Proceed with install? [Y/n] y #这里输入 y 回车
 ==> Making package: ttf-wps-fonts 1.0-5 (Thu Jul  6 06:23:35 2023)
 …………
@@ -99,7 +99,6 @@ Total Installed Size:  1370.17 MiB
 
 安装完毕。
 
-
 Fcitx5 输入法没反应。待测试。如你知道怎么做，请告诉我们。
 
 ## 基于 Ubuntu 兼容层
@@ -115,6 +114,7 @@ Fcitx5 输入法没反应。待测试。如你知道怎么做，请告诉我们�
 # wget https://wps-linux-personal.wpscdn.cn/wps/download/ep/Linux2019/11698/wps-office_11.1.0.11698_amd64.deb
 # apt install ./wps-office_11.1.0.11698_amd64.deb
 ```
+
 安装完毕。
 
 Fcitx5 输入法没反应。待测试。如你知道怎么做，请告诉我们。
@@ -131,9 +131,10 @@ Fcitx5 输入法没反应。待测试。如你知道怎么做，请告诉我们�
 
 需要 root 才能启动。
 
-* KDE5 下 WPS 可能会无法启动。
+- KDE5 下 WPS 可能会无法启动。
 
 因为 WPS 启动文件调用的是 bash shell。所以安装 bash 后就可以正常启动了：
 
 ```
 # pkg install bash
+```

@@ -1,4 +1,4 @@
-# 第5.4节 Firefox 与 Chromium 安装
+# 第 5.4 节 Firefox 与 Chromium 安装
 
 ## 火狐浏览器
 
@@ -12,7 +12,7 @@
 
 ```
 # cd /usr/ports/www/firefox
-# make install clean 
+# make install clean
 ```
 
 ### 安装长期支持版本：

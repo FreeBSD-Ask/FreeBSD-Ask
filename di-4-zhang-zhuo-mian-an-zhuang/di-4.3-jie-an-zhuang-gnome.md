@@ -1,4 +1,4 @@
-# 第4.3节 安装 Gnome
+# 第 4.3 节 安装 Gnome
 
 ## 安装
 
@@ -8,26 +8,24 @@
 
 解释:
 
-|       软件     |       用途      |
-| :-----------: | :-----------: |
-|      xorg     |      X11      |
-|  gnome         |   Gnome 主程序   |
-|    noto-sc    |   思源黑体——简体中文   |
+|     软件      |            用途            |
+| :-----------: | :------------------------: |
+|     xorg      |            X11             |
+|     gnome     |        Gnome 主程序        |
+|    noto-sc    |     思源黑体——简体中文     |
 | xdg-user-dirs | 用于创建用户家目录的子目录 |
 
->**精简安装（仅限经验丰富的用户）**
+> **精简安装（仅限经验丰富的用户）**
 >
->```
-># pkg install xorg-minimal gnome-lite wqy-fonts xdg-user-dirs
->```
+> ```
+> # pkg install xorg-minimal gnome-lite wqy-fonts xdg-user-dirs
+> ```
 >
->如果安装了完整版本也可以使用 pkg 包管理器卸载自带的游戏软件：
+> 如果安装了完整版本也可以使用 pkg 包管理器卸载自带的游戏软件：
 >
->```
-># pkg delete gnome-2048 gnome-klotski gnome-tetravex gnome-mines gnome-taquin gnome-sudoku gnome-robots gnome-nibbles lightsoff tali quadrapassel swell-foop gnome-mahjongg five-or-more iagno aisleriot four-in-a-row
->```
-
-
+> ```
+> # pkg delete gnome-2048 gnome-klotski gnome-tetravex gnome-mines gnome-taquin gnome-sudoku gnome-robots gnome-nibbles lightsoff tali quadrapassel swell-foop gnome-mahjongg five-or-more iagno aisleriot four-in-a-row
+> ```
 
 ## 配置
 
@@ -52,7 +50,7 @@ proc /proc procfs rw 0 0
 % echo "/usr/local/bin/gnome-session" > ~/.xinitrc
 ```
 
-## 中文化 
+## 中文化
 
 ### GNOME 界面
 
@@ -154,7 +152,7 @@ export XMODIFIERS=@im=fcitx
 
 ### 终端显示中文（文件用户根目录）
 
->此处对用户 shell 存疑。
+> 此处对用户 shell 存疑。
 
 `# ee .cshrc`
 

@@ -1,4 +1,4 @@
-# 第2.1节 三种虚拟机与 FreeBSD 版本比较
+# 第 2.1 节 三种虚拟机与 FreeBSD 版本比较
 
 ## FreeBSD 版本比较
 
@@ -36,18 +36,18 @@ Hyper-V 是微软为 Windows 开发的虚拟机，分为 `Gen 1` 和 `Gen 2`。
 
 `Gen 1` 和 `Gen 2` 区别如下：
 
-| Hyper-V 代数 |     硬盘     |           启动引导           |
-| :--------: | :--------: | :----------------------: |
-|    Gen 1   | IDE + SCSI |           仅 MBR          |
-|    Gen 2   |   仅 SCSI   | 仅 UEFI + 安全启动支持 + PXE 支持 |
+| Hyper-V 代数 |    硬盘    |             启动引导              |
+| :----------: | :--------: | :-------------------------------: |
+|    Gen 1     | IDE + SCSI |              仅 MBR               |
+|    Gen 2     |  仅 SCSI   | 仅 UEFI + 安全启动支持 + PXE 支持 |
 
 系统快速创建的为 `Gen 2`。
 
-| Hyper-V 代数 |   FreeBSD 版本   |  鼠标 |  键盘 |                   备注                  |
-| :--------: | :------------: | :-: | :-: | :-----------------------------------: |
-|    Gen 1   |      13.0      |  支持 | 不支持 |                   /                   |
-|    Gen 2   |      13.0      | [不支持](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=221074) |  支持 | 需要修改参数`sysctl kern.evdev.rcpt_mask=6` |
-|    Gen 2   |      14.0      | 支持 |  支持 |    参见[源代码](https://cgit.FreeBSD.org/src/commit/?id=21f4e817fde79d5de79bfbdf180d358ca5f48bf9)                |
+| Hyper-V 代数 | FreeBSD 版本 |                                鼠标                                |  键盘  |                                              备注                                              |
+| :----------: | :----------: | :----------------------------------------------------------------: | :----: | :--------------------------------------------------------------------------------------------: |
+|    Gen 1     |     13.0     |                                支持                                | 不支持 |                                               /                                                |
+|    Gen 2     |     13.0     | [不支持](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=221074) |  支持  |                          需要修改参数`sysctl kern.evdev.rcpt_mask=6`                           |
+|    Gen 2     |     14.0     |                                支持                                |  支持  | 参见[源代码](https://cgit.FreeBSD.org/src/commit/?id=21f4e817fde79d5de79bfbdf180d358ca5f48bf9) |
 
 ### 使用 virtio 技术半虚拟化的虚拟机
 

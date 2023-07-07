@@ -1,20 +1,21 @@
-# 第3.2节 FreeBSD 换源方式
+# 第 3.2 节 FreeBSD 换源方式
 
 FreeBSD 有四类源：pkg、ports、portsnap、update。
 
->注意：
+> 注意：
 >
->`portsnap` 在 FreeBSD 14 中已经弃用，改为使用 `gitup`（请参考第3.3节）：
->```
->20230422:
->	Remove portsnap(8).  Users are encouraged to obtain the ports tree
->	using git instead.
->	```
-
->赞助我们：
+> `portsnap` 在 FreeBSD 14 中已经弃用，改为使用 `gitup`（请参考第 3.3 节）：
 >
->freebsd.cn **永久下线**，目前正在与 NJU 进行沟通软件源问题。本教程待补充。freebsd.cn 镜像站大概需要100M 的 CN2 宽带。要求 HK 最好。有 10T+ 硬盘。如能提供者请通过微信公众号发送你的微信号，我加你好友。或者发你微信的二维码到 <ykla@bsdcn.org>
+> ````
+> 20230422:
+> 	Remove portsnap(8).  Users are encouraged to obtain the ports tree
+> 	using git instead.
+> 	```
+> ````
 
+> 赞助我们：
+>
+> freebsd.cn **永久下线**，目前正在与 NJU 进行沟通软件源问题。本教程待补充。freebsd.cn 镜像站大概需要 100M 的 CN2 宽带。要求 HK 最好。有 10T+ 硬盘。如能提供者请通过微信公众号发送你的微信号，我加你好友。或者发你微信的二维码到 <ykla@bsdcn.org>
 
 **对于失去安全支持的版本，请参考最后一节。**
 
@@ -26,7 +27,7 @@ FreeBSD 有四类源：pkg、ports、portsnap、update。
 
 pkg 的下载路径是 `/var/cache/pkg/`
 
-FreeBSD 中 pkg 源分为系统级和用户级两个配置文件。*不建议* 直接修改 `/etc/pkg/FreeBSD.conf` （~~但是太麻烦啦，一般我都是直接改这个文件的~~）,因为该文件会随着基本系统的更新而发生改变。
+FreeBSD 中 pkg 源分为系统级和用户级两个配置文件。_不建议_ 直接修改 `/etc/pkg/FreeBSD.conf` （~~但是太麻烦啦，一般我都是直接改这个文件的~~）,因为该文件会随着基本系统的更新而发生改变。
 
 创建用户级源目录:
 
@@ -45,11 +46,11 @@ FreeBSD 中 pkg 源分为系统级和用户级两个配置文件。*不建议* �
 写入以下内容:
 
 ```
-163: {  
-url: "pkg+http://mirrors.163.com/freebsd-pkg/${ABI}/quarterly",  
-mirror_type: "srv",  
-signature_type: "none",  
-fingerprints: "/usr/share/keys/pkg",  
+163: {
+url: "pkg+http://mirrors.163.com/freebsd-pkg/${ABI}/quarterly",
+mirror_type: "srv",
+signature_type: "none",
+fingerprints: "/usr/share/keys/pkg",
 enabled: yes
 }
 FreeBSD: { enabled: no }
@@ -76,11 +77,11 @@ FreeBSD: { enabled: no }
 写入以下内容:
 
 ```
-ustc: {  
-url: "pkg+http://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/quarterly",  
-mirror_type: "srv",  
-signature_type: "none",  
-fingerprints: "/usr/share/keys/pkg",  
+ustc: {
+url: "pkg+http://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/quarterly",
+mirror_type: "srv",
+signature_type: "none",
+fingerprints: "/usr/share/keys/pkg",
 enabled: yes
 }
 FreeBSD: { enabled: no }
@@ -95,11 +96,11 @@ FreeBSD: { enabled: no }
 写入以下内容:
 
 ```
-nju: {  
-url: "pkg+http://mirrors.nju.edu.cn/freebsd-pkg/${ABI}/quarterly",  
-mirror_type: "srv",  
-signature_type: "none",  
-fingerprints: "/usr/share/keys/pkg",  
+nju: {
+url: "pkg+http://mirrors.nju.edu.cn/freebsd-pkg/${ABI}/quarterly",
+mirror_type: "srv",
+signature_type: "none",
+fingerprints: "/usr/share/keys/pkg",
 enabled: yes
 }
 FreeBSD: { enabled: no }
@@ -112,6 +113,7 @@ FreeBSD: { enabled: no }
 这个源是下载 port 本身的源。等于以前的 portsnap。
 
 #### 获取压缩文件方法
+
 ```
 # fetch https://mirrors.nju.edu.cn/freebsd-ports/ports.tar.gz
 ```
@@ -121,6 +123,7 @@ FreeBSD: { enabled: no }
 ```
 # fetch https://mirrors.ustc.edu.cn/freebsd-ports/ports.tar.gz
 ```
+
 然后
 
 ```
@@ -130,9 +133,9 @@ FreeBSD: { enabled: no }
 
 #### Git 方法
 
->注意：
+> 注意：
 >
->请参考第 3.3 节，使用 gitup 可能会更简单。
+> 请参考第 3.3 节，使用 gitup 可能会更简单。
 
 须提前安装 git：
 
@@ -141,7 +144,6 @@ FreeBSD: { enabled: no }
 ```
 
 然后：
-
 
 ```
 # git clone --depth 1 https://mirrors.ustc.edu.cn/freebsd-ports/ports.git /usr/ports
@@ -153,7 +155,7 @@ FreeBSD: { enabled: no }
 
 ports 下载路径是 `/usr/ports/distfiles`
 
->**警告**
+> **警告**
 >
 > ports 源可能并不完整。其余的大概只镜像了不到十分之一。见 <https://github.com/ustclug/discussions/issues/408>。
 
@@ -180,7 +182,6 @@ ports 下载路径是 `/usr/ports/distfiles`
 写入以下内容:
 
 `MASTER_SITE_OVERRIDE?=http://mirrors.ustc.edu.cn/freebsd-ports/distfiles/${DIST_SUBDIR}/`
-
 
 ## portsnap 源:打包的 ports 文件【FreeBSD 14.0 及以后不可用】
 
@@ -220,7 +221,6 @@ ntpdate ntp.api.bz
 
 `# freebsd-update -r 13.0-RELEASE upgrade`
 
-
 ## 不受安全支持的版本（请酌情使用）
 
 不受安全支持的版本也是可以使用二进制源的。
@@ -242,7 +242,7 @@ ntpdate ntp.api.bz
 安装示例：现在安装 `bsdinfo`。
 
 ```
-root@ykla:~ # pkg_add -r bsdinfo                                                    
+root@ykla:~ # pkg_add -r bsdinfo
 Fetching http://ftp-archive.freebsd.org/pub/FreeBSD-Archive/ports/amd64/packages-9.2-release/Latest/bsdinfo.tbz... Done.
 ```
 

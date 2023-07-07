@@ -1,4 +1,4 @@
-# 第5.7节 安装 QQ
+# 第 5.7 节 安装 QQ
 
 ## Linux QQ 3.x（electron）【可选：基于 ArchLinux 兼容层】
 
@@ -12,15 +12,15 @@
 # passwd test #为 Arch 的 test 设置一个密码，上述脚本已经创建过该用户了！
 
 ```
-新开一个终端，输入 `reboot` 重启 FreeBSD，否则设置的密码可能会不识别。
 
+新开一个终端，输入 `reboot` 重启 FreeBSD，否则设置的密码可能会不识别。
 
 ```
 # chroot /compat/arch/ /bin/bash #进入 Arch 兼容层
 # su test # 此时位于 Arch 兼容层！切换到普通用户才能使用 aur
 $ yay -S linuxqq # 此时位于 Arch 兼容层！此时用户为 test
 # exit # 此时位于 Arch 兼容层！此时用户恢复为 root
-````
+```
 
 ```
 # export LANG=zh_CN.UTF-8 # 此时位于 Arch 兼容层！
@@ -58,7 +58,6 @@ $ yay -S linuxqq # 此时位于 Arch 兼容层！此时用户为 test
 
 ![](../.gitbook/assets/qq3.0.jpg)
 
-
 > **注意**
 >
->**如果退出后进不去，请加参数 `--in-process-gpu` 执行之即可，即 `/bin/qq --in-process-gpu`**。
+> **如果退出后进不去，请加参数 `--in-process-gpu` 执行之即可，即 `/bin/qq --in-process-gpu`**。

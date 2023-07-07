@@ -1,5 +1,4 @@
-# 第5.0节 输入法与环境变量
-
+# 第 5.0 节 输入法与环境变量
 
 ## 说明
 
@@ -65,7 +64,6 @@ setenv XIM_PROGRAM ibus-daemon
 setenv XIM_ARGS "--daemonize --xim"
 ```
 
-
 ## 可生效配置文件
 
 根据自己使用的桌面管理器择一使用：
@@ -73,11 +71,11 @@ setenv XIM_ARGS "--daemonize --xim"
 1. sddm lightdm gdm 都可以在 `~/.xprofile` 中写入 A 组配置
 2. lightdm gdm 可以在 `~/.profile` 中写入 A 组配置
 3. sddm 可以在用户登录 shell 配置文件中写入配置
-  - sh: `~/.profile` 写入 A 组配置
-  - bash: `~/.bash_profile` 或 `~/.profile` 写入 A 组配置
-  - zsh: `~/.zprofile` 写入 A 组配置
-  - csh: `~/.cshrc` 写入 B 组配置
 
+- sh: `~/.profile` 写入 A 组配置
+- bash: `~/.bash_profile` 或 `~/.profile` 写入 A 组配置
+- zsh: `~/.zprofile` 写入 A 组配置
+- csh: `~/.cshrc` 写入 B 组配置
 
 ## 本地化相关的变量
 
@@ -122,7 +120,7 @@ LC_ALL=
 
 所以中文化其实也可以不同。
 
-1. 单纯的界面中文化只要设置`LC_MESSAGES`为`"zh_CN.UTF-8"`(在sddm/xfce下验证)。
+1. 单纯的界面中文化只要设置`LC_MESSAGES`为`"zh_CN.UTF-8"`(在 sddm/xfce 下验证)。
 2. 较常见的将 `LANG`,`LC_ALL`,`LANGUAGE` 三个环境变量都设为`"zh_CN.UTF-8"`
 3. 纯英文环境，加上中文输入。
 
@@ -151,7 +149,7 @@ jk@freebsd:~ $ date
 
 ## 时区设置
 
-每个用户可以设置自己的时区，在用户的shell配置文件中设置 `TZ` 变量即可
+每个用户可以设置自己的时区，在用户的 shell 配置文件中设置 `TZ` 变量即可
 
 ```
 export TZ=CST-8  # sh,bash,zsh
@@ -172,9 +170,7 @@ CRON_TZ=CST-8
 
 ## 输入法
 
-
 ## Shell 脚本
-
 
 用户可以通过脚本快速安装：
 
@@ -255,10 +251,10 @@ echo -e "\e[1;32m sddm lightdm gdm source .xprofile ,use .xprofile ?y|n \e[0m"
 read -p "use .xprofile[n] ? " myxprofile
 case $myshell in
     sh)
-        
+
         ;;
     csh)
-        
+
         ;;
     bash)
         pkg install -y bash
@@ -272,7 +268,7 @@ esac
 chsh -s $myshell $username
 case $myim in
     fcitx)
-        pkg install -y fcitx5 fcitx5-qt5 fcitx5-qt6 fcitx5-configtool fcitx5-gtk2 fcitx5-gtk3 fcitx5-gtk4 
+        pkg install -y fcitx5 fcitx5-qt5 fcitx5-qt6 fcitx5-configtool fcitx5-gtk2 fcitx5-gtk3 fcitx5-gtk4
         ;;
     *)
         myim="ibus"
@@ -301,7 +297,7 @@ case $myrime in
                 pkg install -y zh-ibus-pinyin
             fi
         fi
-        ;;   
+        ;;
 esac
 
 case $myde in
@@ -376,7 +372,7 @@ if [ $mydm = "sddm" ] && [ $myim = "ibus" ];then
         zsh)
             echo "$bi" >> /home/$username/.zprofile
             chown $username:$username /home/$username/.zprofile
-            ;;                
+            ;;
         csh)
             echo "$ci" >> /home/$username/.cshrc
             chown $username:$username /home/$username/.cshrc
@@ -396,7 +392,7 @@ if [ $mydm = "sddm" ] && [ $myim = "fcitx" ];then
         zsh)
             echo "$bf" >> /home/$username/.zprofile
             chown $username:$username /home/$username/.zprofile
-            ;;                
+            ;;
         csh)
             echo "$cf" >> /home/$username/.cshrc
             chown $username:$username /home/$username/.cshrc
@@ -409,6 +405,3 @@ fi
 echo -e "\e[1;32m all done.please reboot \e[0m"
 exit
 ```
-
-
-

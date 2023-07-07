@@ -1,34 +1,33 @@
-# 第2.3节 FreeBSD 13.1 安装——基于 Vmware Workstation Pro
+# 第 2.3 节 FreeBSD 13.1 安装——基于 Vmware Workstation Pro
 
 > **BIOS 还是 UEFI**
 >
->经过测试，FreeBSD 也可以支持驱动 UEFI 下 VMware 的显卡。——2023.1.13
+> 经过测试，FreeBSD 也可以支持驱动 UEFI 下 VMware 的显卡。——2023.1.13
 >
->默认情况下 VMware 是 BIOS，会提示没有：
+> 默认情况下 VMware 是 BIOS，会提示没有：
 >
->```
-># efibootmgr # 默认自带、无需安装。
->efibootmgr: efi variables not supported on this system. root? kldload efirt?
->```
+> ```
+> # efibootmgr # 默认自带、无需安装。
+> efibootmgr: efi variables not supported on this system. root? kldload efirt?
+> ```
 >
->如果当前系统是 UEFI,efibootmgr 则输出：
+> 如果当前系统是 UEFI,efibootmgr 则输出：
 >
->```
-># efibootmgr # 默认自带、无需安装。
->Boot to FW : false
->BootCurrent: 0004
->BootOrder  : 0004, 0000, 0001, 0002, 0003
->+Boot0004* FreeBSD
+> ```
+> # efibootmgr # 默认自带、无需安装。
+> Boot to FW : false
+> BootCurrent: 0004
+> BootOrder  : 0004, 0000, 0001, 0002, 0003
+> +Boot0004* FreeBSD
 > Boot0000* EFI VMware Virtual SCSI Hard Drive (0.0)
 > Boot0001* EFI VMware Virtual IDE CDROM Drive (IDE 1:0)
 > Boot0002* EFI Network
 > Boot0003* EFI Internal Shell (Unsupported option)
->```
-
+> ```
 
 > **警告**
 >
->**注意：由于 [BUG](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=250580)，FreeBSD 11/12 可能在 VMare 的 UEFI 环境下无法启动。经测试 13.0 正常启动。**
+> **注意：由于 [BUG](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=250580)，FreeBSD 11/12 可能在 VMare 的 UEFI 环境下无法启动。经测试 13.0 正常启动。**
 
 ## 视频教程
 
@@ -40,7 +39,7 @@
 
 > **警告**
 >
->以下镜像不适用于物理机，物理机请参考其他章节。
+> 以下镜像不适用于物理机，物理机请参考其他章节。
 
 Release 正式版 镜像下载地址：[https://download.freebsd.org/ftp/releases/amd64/amd64/ISO-IMAGES/13.1/FreeBSD-13.1-RELEASE-amd64-disc1.iso](https://download.freebsd.org/ftp/releases/amd64/amd64/ISO-IMAGES/13.0/FreeBSD-13.0-RELEASE-amd64-disc1.iso)
 
@@ -123,8 +122,6 @@ fusefs_load="YES"
 ```
 # ls /mnt/hgfs
 ```
-
-
 
 > **提示**
 >

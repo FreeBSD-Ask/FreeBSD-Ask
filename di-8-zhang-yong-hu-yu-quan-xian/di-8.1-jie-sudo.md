@@ -1,4 +1,4 @@
-# 第8.1节 sudo
+# 第 8.1 节 sudo
 
 ## 安装
 
@@ -14,13 +14,13 @@ FreeBSD 基本系统默认不自带 `sudo` 命令，需要使用 `root` 权限�
 
 在 `/usr/local/etc/sudoers.d/` 下新建两个文件 `username`（需要免密码的用户）和 `wheel`：
 
-* 文件 `username`内容如下：
+- 文件 `username`内容如下：
 
 ```
 %admin ALL=(ALL) ALL
 ```
 
-* 文件 `wheel` 内容如下：
+- 文件 `wheel` 内容如下：
 
 多加一行 `NOPASSWD:`，使用 `sudo` 时不需要输入密码：
 

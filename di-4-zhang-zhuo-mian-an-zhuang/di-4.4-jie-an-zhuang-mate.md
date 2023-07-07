@@ -1,4 +1,4 @@
-# 第4.4节 安装 Mate
+# 第 4.4 节 安装 Mate
 
 > 以下教程适用于 shell 为 bash/sh/zsh 的用户。
 >
@@ -11,7 +11,7 @@
 ## 安装与配置
 
 ```
-# pkg install  mate xorg wqy-fonts lightdm lightdm-gtk-greeter xdg-user-dirs	
+# pkg install  mate xorg wqy-fonts lightdm lightdm-gtk-greeter xdg-user-dirs
 ```
 
 ```
@@ -20,7 +20,7 @@
 # sysrc lightdm_enable="YES"
 ```
 
-* 在主目录`.xinitrc` 文件内加入下面一行:
+- 在主目录`.xinitrc` 文件内加入下面一行:
 
 `exec mate-session`
 
