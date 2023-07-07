@@ -104,9 +104,9 @@ Fcitx5 输入法没反应。待测试。如你知道怎么做，请告诉我们�
 ## 基于 Ubuntu 兼容层
 
 ```
-# fetch http://book.bsdcn.org/arch.sh #下载脚本构建兼容层
-# sh arch.sh #运行脚本
-# chroot /compat/arch/ /bin/bash #进入 Ubuntu 兼容层
+# fetch http://book.bsdcn.org/ubuntu.sh #下载脚本构建兼容层
+# sh ubuntu.sh #运行脚本
+# chroot /compat/ubuntu/ /bin/bash #进入 Ubuntu 兼容层
 ```
 
 ```
