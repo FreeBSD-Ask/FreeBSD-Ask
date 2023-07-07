@@ -40,7 +40,7 @@
 
 ### 开源维护与捐赠
 
-![](.gitbook/assets/proud\_donor.gif)
+![](./.gitbook/assets/proud_donor.gif)
 
 [点此捐赠 FreeBSD 基金会](https://freebsdfoundation.org/donate)
 
@@ -109,7 +109,7 @@
 
 微信公众号: freebsdzh （扫码关注）
 
-![](.gitbook/assets/qrcode\_for\_gh\_3b263cc9b20b\_258.jpg)
+![](./.gitbook/assets/qrcode_for_gh_3b263cc9b20b_258.jpg)
 
 ### 网站部署&维护
 
