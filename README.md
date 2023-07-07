@@ -1,18 +1,16 @@
 # FreeBSD 从入门到跑路
 
-**郑重声明：本站所有涉及到“FreeBSD”字样或“freebsd”，均使用了来自美国 FreeBSDFoundation（FreeBSD 基金会）的商标，与他人无关。我们反对任何形式的滥用商标注册行为！见 [FreeBSD 商标被抢注一事（未解决）](https://book.bsdcn.org/di-0-zhang-freebsd-zhong-wen-she-qu/di-0.5-jie-freebsd-shang-biao-bei-qiang-zhu-yi-shi-wei-jie-jue.html)。**
-
 ## FreeBSD 中文社区 版权所有 2023
 
->**域名部署**
+> **域名部署**
 >
->**当前网站部署的域名为 <https://book.bsdcn.org>，如果当前使用的不是这个域名，请切换到该域名。其他域名不保证可用性。**
+> **当前网站部署的域名为** [**https://book.bsdcn.org**](https://book.bsdcn.org)**，如果当前使用的不是这个域名，请切换到该域名。其他域名不保证可用性。**
 >
->**For the English version, please visit <https://mfga.bsdcn.org>. The English version book is a stub. Please help out by expanding it.**
+> **For the English version, please visit** [**https://mfga.bsdcn.org**](https://mfga.bsdcn.org)**. The English version book is a stub. Please help out by expanding it.**
 
 > **PDF 文档**
 >
-> 点击 <https://freebsd.gitbook.io/book/>，选择右上角的“导出为 PDF”（需要代理软件）。
+> 点击 [https://freebsd.gitbook.io/book/](https://freebsd.gitbook.io/book/)，选择右上角的“导出为 PDF”（需要代理软件）。
 
 ## 概述
 
@@ -42,7 +40,7 @@
 
 ### 开源维护与捐赠
 
-![](./.gitbook/assets/proud_donor.gif)
+![](.gitbook/assets/proud\_donor.gif)
 
 [点此捐赠 FreeBSD 基金会](https://freebsdfoundation.org/donate)
 
@@ -52,7 +50,7 @@
 
 【FreeBSD 2022 捐赠名单】
 
-<https://docs.qq.com/doc/DSXZ1Q1JOenRzUkp4>
+[https://docs.qq.com/doc/DSXZ1Q1JOenRzUkp4](https://docs.qq.com/doc/DSXZ1Q1JOenRzUkp4)
 
 ### 意见反馈
 
@@ -62,19 +60,18 @@
 
 后续还有很多需要完善的工作，包括不限于:
 
-- FreeBSD 14 shell 被统一为 `sh`，教程需要针对其进行统一
-- 整理和上传配置文件和环境
-- 对教程的格式目录进行优化调整
-- 完善目前的空白章节，并对已有内容进行测试校验
-- 积极对外宣传并寻求正式出版
-- 删改外部引用文字/图片等内容或给出规范化的引用声明避免版权问题
-- 因为博通收购 VMware 并作出了诸多商业上的改变，考虑提升 Virtual Box 虚拟机在本文中的地位
-- 对于过于主观性或者没有根据的观点需要进行删除或补充例证
+* FreeBSD 14 shell 被统一为 `sh`，教程需要针对其进行统一
+* 整理和上传配置文件和环境
+* 对教程的格式目录进行优化调整
+* 完善目前的空白章节，并对已有内容进行测试校验
+* 积极对外宣传并寻求正式出版
+* 删改外部引用文字/图片等内容或给出规范化的引用声明避免版权问题
+* 因为博通收购 VMware 并作出了诸多商业上的改变，考虑提升 Virtual Box 虚拟机在本文中的地位
+* 对于过于主观性或者没有根据的观点需要进行删除或补充例证
 
 ### 许可证
 
-本书采用 BSD-3-Clause License 许可证开源。我们在编写过程吸收了一些现有的研究成果，在此表示感谢。引用本书内容时，请务必留下我们的原地址——<https://book.bsdcn.org> 及署名——FreeBSD 中文社区（CFC）。
-
+本书采用 BSD-3-Clause License 许可证开源。我们在编写过程吸收了一些现有的研究成果，在此表示感谢。引用本书内容时，请务必留下我们的原地址——[https://book.bsdcn.org](https://book.bsdcn.org) 及署名——FreeBSD 中文社区（CFC）。
 
 ## 关于
 
@@ -100,20 +97,19 @@
 
 ### 其他
 
-|资源|链接|
-|:---:|:---:|
-|Telegram 群|<https://t.me/freebsdba>|
-|QQ 群|787969044|
-|Handbook 最新翻译|<https://handbook.bsdcn.org>|
-|FreeBSD Port 开发者手册 最新翻译|<https://porters-handbook.bsdcn.org>|
-|FreeBSD 入门书籍|<https://book.bsdcn.org>|
-|BiliBili【B站】|<https://space.bilibili.com/2120246893>|
-|微信公众号|freebsdzh|
-
+|            资源           |                                       链接                                       |
+| :---------------------: | :----------------------------------------------------------------------------: |
+|        Telegram 群       |                [https://t.me/freebsdba](https://t.me/freebsdba)                |
+|           QQ 群          |                                    787969044                                   |
+|      Handbook 最新翻译      |            [https://handbook.bsdcn.org](https://handbook.bsdcn.org)            |
+| FreeBSD Port 开发者手册 最新翻译 |    [https://porters-handbook.bsdcn.org](https://porters-handbook.bsdcn.org)    |
+|       FreeBSD 入门书籍      |                [https://book.bsdcn.org](https://book.bsdcn.org)                |
+|       BiliBili【B站】      | [https://space.bilibili.com/2120246893](https://space.bilibili.com/2120246893) |
+|          微信公众号          |                                    freebsdzh                                   |
 
 微信公众号: freebsdzh （扫码关注）
 
-![](./.gitbook/assets/qrcode_for_gh_3b263cc9b20b_258.jpg)
+![](.gitbook/assets/qrcode\_for\_gh\_3b263cc9b20b\_258.jpg)
 
 ### 网站部署&维护
 
@@ -121,4 +117,4 @@ Shengyun
 
 ### 黑名单与社区失信名单
 
-见 <http://chinafreebsd.org/>。
+见 [http://chinafreebsd.org/](http://chinafreebsd.org/)。
