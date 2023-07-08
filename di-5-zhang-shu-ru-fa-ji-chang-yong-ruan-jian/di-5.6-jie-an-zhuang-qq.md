@@ -34,7 +34,7 @@ $ yay -S linuxqq # 此时位于 Arch 兼容层！此时用户为 test
 
 ```
 # chroot /compat/ubuntu/ /bin/bash #进入 Ubuntu 兼容层
-# wget https://dldir1.qq.com/qqfile/qq/QQNT/2355235c/linuxqq_3.1.1-11223_amd64.deb #此时位于 Ubuntu 兼容层
+# wget https://dldir1.qq.com/qqfile/qq/QQNT/ad5b5393/linuxqq_3.1.2-13107_amd64.deb #此时位于 Ubuntu 兼容层
 ```
 
 ```
