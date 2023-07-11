@@ -1,7 +1,11 @@
-# 目录
+# Table of contents
+
+* [FreeBSD 从入门到跑路](README.md)
+* [目录](mu-lu.md)
 
 ## 第0章 FreeBSD 中文社区
 
+* [第0.0节 社区通知（滚动更新）](di-0-zhang-freebsd-zhong-wen-she-qu/di-0.0-jie-she-qu-tong-zhi-gun-dong-geng-xin.md)
 * [第0.1节 FreeBSD FAQ](di-0-zhang-freebsd-zhong-wen-she-qu/di-0.1-jie-freebsd-faq.md)
 * [第0.2节 FreeBSD 中文社区发展规划](di-0-zhang-freebsd-zhong-wen-she-qu/di-0.2-jie-freebsd-zhong-wen-she-qu-fa-zhan-gui-hua.md)
 * [第0.3节 FreeBSD 的不足之处](di-0-zhang-freebsd-zhong-wen-she-qu/di-0.3-jie-freebsd-de-bu-zu-zhi-chu.md)
@@ -48,8 +52,8 @@
 
 ## 第4章 桌面安装
 
-* [第4.0节 概述](di-4-zhang-zhuo-mian-an-zhuang/di-4.0-jie-gai-shu.md)
-* [第4.1节 安装 Xorg](di-4-zhang-zhuo-mian-an-zhuang/di-4.1-jie-an-zhuang-xian-ka-qu-dong-ji-xorg-bi-kan.md)
+* [第4.0节 概述（必看）](di-4-zhang-zhuo-mian-an-zhuang/di-4.0-jie-gai-shu.md)
+* [第4.1节 安装显卡驱动及 Xorg（必看）](di-4-zhang-zhuo-mian-an-zhuang/di-4.1-jie-an-zhuang-xian-ka-qu-dong-ji-xorg-bi-kan.md)
 * [第4.2节 安装 KDE 5](di-4-zhang-zhuo-mian-an-zhuang/di-4.2-jie-an-zhuang-kde-5.md)
 * [第4.3节 安装 Gnome](di-4-zhang-zhuo-mian-an-zhuang/di-4.3-jie-an-zhuang-gnome.md)
 * [第4.4节 安装 Mate](di-4-zhang-zhuo-mian-an-zhuang/di-4.4-jie-an-zhuang-mate.md)
@@ -63,6 +67,7 @@
 
 ## 第5章 输入法及常用软件
 
+* [第 5.0 节 输入法与环境变量](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.0-jie-shu-ru-fa-yu-huan-jing-bian-liang.md)
 * [第5.1节 Fcitx 输入法框架](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.1-jie-fcitx-shu-ru-fa-kuang-jia.md)
 * [第5.2节 Ibus 输入法框架](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.2-jie-ibus-shu-ru-fa-kuang-jia.md)
 * [第5.3节 五笔输入法](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.3-jie-wu-bi-shu-ru-fa.md)
@@ -211,6 +216,7 @@
 * [第19.13节 简议道风](di-19-zhang-wen-xue-gu-shi/di-19.13-jie-jian-yi-dao-feng.md)
 * [第19.14节 小说——你与暗](di-19-zhang-wen-xue-gu-shi/di-19.14-jie-xiao-shuo-ni-yu-an.md)
 * [第19.15节 吾乡何处](di-19-zhang-wen-xue-gu-shi/di-19.15-jie-wu-xiang-he-chu.md)
+* [第19.16节 哲学的学习](di-19-zhang-wen-xue-gu-shi/di-19.16-jie-zhe-xue-de-xue-xi.md)
 
 ## 第20章 娱乐与教育
 
@@ -305,7 +311,12 @@
 * [第30.3节 Linux 兼容层——基于 Ubuntu/Debian](di-30-zhang-linux-jian-rong-ceng/di-30.3-jie-linux-jian-rong-ceng-ji-yu-ubuntudebian.md)
 * [第30.4节 Linux 兼容层——基于 ArchLinux bootstrap](di-30-zhang-linux-jian-rong-ceng/di-30.4-jie-linux-jian-rong-ceng-ji-yu-archlinux-bootstrap.md)
 * [第30.5节 Linux 兼容层——基于 archlinux-pacman](di-30-zhang-linux-jian-rong-ceng/di-30.5-jie-linux-jian-rong-ceng-ji-yu-archlinuxpacman.md)
-* [第30.6节 高级教程：Linux 兼容层与 Jail](di-30-zhang-linux-jian-rong-ceng/di-30.11-jie-gao-ji-jiao-cheng-linux-jian-rong-ceng-yu-jail.md)
+* [第30.6节 Linux 兼容层——基于 OpenSUSE](di-30-zhang-linux-jian-rong-ceng/di-30.6-jie-linux-jian-rong-ceng-ji-yu-opensuse.md)
+* [第30.7节 Linux 兼容层——基于 Gentoo Linux](di-30-zhang-linux-jian-rong-ceng/di-30.7-jie-linux-jian-rong-ceng-ji-yu-gentoo-linux.md)
+* [第30.8节 Linux 兼容层——基于 Rocky Linux](di-30-zhang-linux-jian-rong-ceng/di-30.8-jie-linux-jian-rong-ceng-ji-yu-rocky-linux.md)
+* [第30.9节 Linux 兼容层——基于 Slackware Linux](di-30-zhang-linux-jian-rong-ceng/di-30.9-jie-linux-jian-rong-ceng-ji-yu-slackware-linux.md)
+* [第 30.10 节 Android 兼容层](di-30-zhang-linux-jian-rong-ceng/di-30.10-jie-android-jian-rong-ceng.md)
+* [第 30.11 节 高级教程：Linux 兼容层与 Jail](di-30-zhang-linux-jian-rong-ceng/di-30.11-jie-gao-ji-jiao-cheng-linux-jian-rong-ceng-yu-jail.md)
 
 ## 第31章TwinCAT/BSD
 
