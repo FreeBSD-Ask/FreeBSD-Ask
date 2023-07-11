@@ -95,6 +95,8 @@ Zomby7e
 
 tergel93
 
+奇点
+
 兜率
 
 [safreya](https://github.com/safreya)
