@@ -305,7 +305,7 @@
 * [第30.3节 Linux 兼容层——基于 Ubuntu/Debian](di-30-zhang-linux-jian-rong-ceng/di-30.3-jie-linux-jian-rong-ceng-ji-yu-ubuntudebian.md)
 * [第30.4节 Linux 兼容层——基于 ArchLinux bootstrap](di-30-zhang-linux-jian-rong-ceng/di-30.4-jie-linux-jian-rong-ceng-ji-yu-archlinux-bootstrap.md)
 * [第30.5节 Linux 兼容层——基于 archlinux-pacman](di-30-zhang-linux-jian-rong-ceng/di-30.5-jie-linux-jian-rong-ceng-ji-yu-archlinuxpacman.md)
-* [第30.6节 高级教程：Linux 兼容层与 Jail](di-30-zhang-linux-jian-rong-ceng/di-30.7-jie-gao-ji-jiao-cheng-linux-jian-rong-ceng-yu-jail.md)
+* [第30.6节 高级教程：Linux 兼容层与 Jail](di-30-zhang-linux-jian-rong-ceng/di-30.11-jie-gao-ji-jiao-cheng-linux-jian-rong-ceng-yu-jail.md)
 
 ## 第31章TwinCAT/BSD
 

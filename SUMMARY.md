@@ -316,7 +316,7 @@
 * [第30.8节 Linux 兼容层——基于 Rocky Linux](di-30-zhang-linux-jian-rong-ceng/di-30.8-jie-linux-jian-rong-ceng-ji-yu-rocky-linux.md)
 * [第30.9节 Linux 兼容层——基于 Slackware Linux](di-30-zhang-linux-jian-rong-ceng/di-30.9-jie-linux-jian-rong-ceng-ji-yu-slackware-linux.md)
 * [第 30.10 节 Android 兼容层](di-30-zhang-linux-jian-rong-ceng/di-30.10-jie-android-jian-rong-ceng.md)
-* [第30.11节 高级教程：Linux 兼容层与 Jail](di-30-zhang-linux-jian-rong-ceng/di-30.7-jie-gao-ji-jiao-cheng-linux-jian-rong-ceng-yu-jail.md)
+* [第 30.11 节 高级教程：Linux 兼容层与 Jail](di-30-zhang-linux-jian-rong-ceng/di-30.11-jie-gao-ji-jiao-cheng-linux-jian-rong-ceng-yu-jail.md)
 
 ## 第31章TwinCAT/BSD
 
