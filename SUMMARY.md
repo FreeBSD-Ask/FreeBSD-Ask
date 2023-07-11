@@ -312,7 +312,11 @@
 * [第30.4节 Linux 兼容层——基于 ArchLinux bootstrap](di-30-zhang-linux-jian-rong-ceng/di-30.4-jie-linux-jian-rong-ceng-ji-yu-archlinux-bootstrap.md)
 * [第30.5节 Linux 兼容层——基于 archlinux-pacman](di-30-zhang-linux-jian-rong-ceng/di-30.5-jie-linux-jian-rong-ceng-ji-yu-archlinuxpacman.md)
 * [第30.6节 Linux 兼容层——基于 OpenSUSE](di-30-zhang-linux-jian-rong-ceng/di-30.6-jie-linux-jian-rong-ceng-ji-yu-opensuse.md)
-* [第30.7节 高级教程：Linux 兼容层与 Jail](di-30-zhang-linux-jian-rong-ceng/di-30.7-jie-gao-ji-jiao-cheng-linux-jian-rong-ceng-yu-jail.md)
+* [第30.7节 Linux 兼容层——基于 Gentoo Linux](di-30-zhang-linux-jian-rong-ceng/di-30.7-jie-linux-jian-rong-ceng-ji-yu-gentoo-linux.md)
+* [第30.8节 Linux 兼容层——基于 Rocky Linux](di-30-zhang-linux-jian-rong-ceng/di-30.8-jie-linux-jian-rong-ceng-ji-yu-rocky-linux.md)
+* [第30.9节 Linux 兼容层——基于 Slackware Linux](di-30-zhang-linux-jian-rong-ceng/di-30.9-jie-linux-jian-rong-ceng-ji-yu-slackware-linux.md)
+* [第 30.10 节 Android 兼容层](di-30-zhang-linux-jian-rong-ceng/di-30.10-jie-android-jian-rong-ceng.md)
+* [第30.11节 高级教程：Linux 兼容层与 Jail](di-30-zhang-linux-jian-rong-ceng/di-30.7-jie-gao-ji-jiao-cheng-linux-jian-rong-ceng-yu-jail.md)
 
 ## 第31章TwinCAT/BSD
 
