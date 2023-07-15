@@ -92,23 +92,62 @@ $ xfconf-query -c xsettings -p /Gtk/Modules -n -t string -s "appmenu-gtk-module"
 
 ### FreeBSD 的 xfce 终端动态标题不显示问题
 
->似乎有问题，这一小节，待测试
 
-tcsh 配置:
+ - sh: `~/.profile` 写入配置
+ - bash: `~/.bash_profile` 或 `~/.profile` 写入配置
+ - zsh: `~/.zprofile` 写入配置
+ - csh: `~/.cshrc` 写入配置
+ - tcsh: `~/.tcshrc` 写入配置
 
-`home` 目录创建 `.profile`,
-
-写入以下配置
+zsh:
 
 ```
-alias h history 25
-alias j jobs -l
-alias la ls -aF
-alias lf ls -FA
-alias ll ls -lAF
-export EDITOR=vi
-export PAGER=less switch ($TERM) case "xterm*": set prompt="%{033]0;[]%~007%}%#" set filec set history = 1000 set savehist = (1000 merge) set autolist = ambiguous # Use history to aid expansion set autoexpand set autorehash breaksw default: set prompt="%#" breaksw endsw
+precmd ()   a function which is executed just before each prompt
+chpwd ()    a function which is executed whenever the directory is changed
+\e          escape sequence for escape (ESC)
+\a          escape sequence for bell (BEL)
+%n          expands to $USERNAME
+%m          expands to hostname up to first '.'
+%~          expands to directory, replacing $HOME with '~'
 ```
+
+tcsh:
+
+```
+precmd ()   a function which is executed just before each prompt
+cwdcmd ()   a function which is executed whenever the directory is changed
+%n          expands to username
+%m          expands to hostname
+%~          expands to directory, replacing $HOME with '~'
+%#          expands to '>' for normal users, '#' for root users
+%{...%}     includes a string as a literal escape sequence
+```
+
+bash:
+```
+\u          expands to $USERNAME
+\h          expands to hostname up to first '.'
+\w          expands to directory, replacing $HOME with '~'
+\$          expands to '$' for normal users, '#' for root
+\[...\]     embeds a sequence of non-printing characters
+```
+
+csh
+```
+switch ($TERM)
+    case "xterm*":
+        set host=`hostname`
+        alias cd 'cd \!*; echo -n "^[]0;${user}@${host}: ${cwd}^Gcsh% "'
+        breaksw
+    default:
+        set prompt='csh% '
+        breaksw
+endsw
+```
+
+参考文献： 
+
+ - <http://www.faqs.org/docs/Linux-mini/Xterm-Title.html#ss4.1>
 
 ## 配置集参考
 
