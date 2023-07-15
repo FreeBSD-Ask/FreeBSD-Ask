@@ -2,14 +2,6 @@
 
 ## 安装 xfce4
 
-> 以下教程适用于 shell 为 bash/sh/zsh 的用户。
->
-> 首先看看现在自己的 shell 是不是 `sh`,`bash`,`zsh`：
->
-> `# echo $0`
->
-> 如果是 `sh`,`bash`,`zsh` 其中之一，请继续；
-
 通过 pkg 安装
 
 ```
@@ -50,34 +42,6 @@
 
 ## 可选配置
 
-### 安装输入法
-
-请检查自己的 shell 是不是 `sh`、`bash`、`zsh` 其中之一。
-
-```
-# echo $0
-```
-
-如果是以上三个 SHELL 之一，请继续，如果不是请参考第五章第一节：
-
-```
-# pkg install zh-fcitx zh-fcitx-configtool fcitx-qt5 fcitx-m17n zh-fcitx-libpinyin
-```
-
-配置文件：
-
-```
-# ee ~/.xinitrc
-```
-
-在该文件中添加以下内容:
-
-```
-export XMODIFIERS="@im=fcitx"
-export XIM_PROGRAM="fcitx"
-export GTK_IM_MODULE="fcitx"
-fcitx &
-```
 
 ## 全局菜单（可选）
 
