@@ -70,6 +70,8 @@ USTC: {
 }
 ```
 
+**quarterly** 可以替换为 **latest** 以使用滚动分支。
+
 ```
 [root@ykla /usr/ports/ports-mgmt/pkg]# pkg update -f
 Updating USTC repository catalogue...
