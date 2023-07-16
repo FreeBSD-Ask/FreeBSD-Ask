@@ -2,6 +2,88 @@
 
 > **该页面滚动更新。请随时关注。**
 
+## 2023-07-16
+
+### freebsd pkg 1.20 使用国内源会有错误
+
+目前 pkg 源里使用的仍然是 pkg 1.19，这个版本是没有任何问题的，但是​一旦你使用了 ports 编译安装 pkg 就会出现问题：
+
+```
+[root@ykla /usr/ports/ports-mgmt/pkg]# pkg info pkg
+pkg-1.20.4
+Name           : pkg
+Version        : 1.20.4
+Installed on   : Sun Jul 16 16:02:26 2023 CST
+Origin         : ports-mgmt/pkg
+Architecture   : FreeBSD:13:amd64
+Prefix         : /usr/local
+Categories     : ports-mgmt
+Licenses       : BSD2CLAUSE
+Maintainer     : pkg@FreeBSD.org
+WWW            : https://github.com/freebsd/pkg
+Comment        : Package manager
+Options        :
+	DOCS           : on
+Shared Libs provided:
+	libpkg.so.4
+Annotations    :
+	FreeBSD_version: 1302001
+Flat size      : 35.4MiB
+Description    :
+Package management tool
+
+WWW: https://github.com/freebsd/pkg
+
+[root@ykla /usr/ports/ports-mgmt/pkg]# 
+```
+
+
+```
+[root@ykla /usr/ports/ports-mgmt/pkg]# pkg update -f
+Updating FreeBSD repository catalogue...
+pkg: No SRV record found for the repo 'FreeBSD'
+Fetching meta.conf: 100%    163 B   0.2kB/s    00:01    
+pkg: packagesite URL error for pkg+http://mirrors.ustc.edu.cn/freebsd-pkg/FreeBSD:13:amd64/latest/packagesite.pkg -- pkg+:// implies SRV mirror type
+pkg: packagesite URL error for pkg+http://mirrors.ustc.edu.cn/freebsd-pkg/FreeBSD:13:amd64/latest/packagesite.txz -- pkg+:// implies SRV mirror type
+Unable to update repository FreeBSD
+Error updating repositories!
+[root@ykla /usr/ports/ports-mgmt/pkg]# 
+```
+
+目前的临时解决办法（删去 `pkg+`）：
+
+创建 `/usr/local/etc/pkg/repos/FreeBSD.conf`
+
+```
+# mkdir -p /usr/local/etc/pkg/repos/
+# touch /usr/local/etc/pkg/repos/FreeBSD.conf
+```
+
+写入：
+
+
+```
+FreeBSD: { enabled: no }
+
+USTC: {
+  url: "http://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/quarterly",
+  mirror_type: none
+}
+```
+
+```
+[root@ykla /usr/ports/ports-mgmt/pkg]# pkg update -f
+Updating USTC repository catalogue...
+Fetching meta.conf: 100%    163 B   0.2kB/s    00:01    
+Fetching packagesite.pkg: 100%    7 MiB   7.0MB/s    00:01    
+Processing entries: 100%
+USTC repository update completed. 33793 packages processed.
+All repositories are up to date.
+[root@ykla /usr/ports/ports-mgmt/pkg]# 
+```
+
+问题临时解决。
+
 ## 2023-06-27
 
 ### 1、freebsd 14 发布周期更新
