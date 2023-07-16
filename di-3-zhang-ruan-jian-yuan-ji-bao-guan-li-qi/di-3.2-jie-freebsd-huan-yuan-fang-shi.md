@@ -47,11 +47,7 @@ FreeBSD 中 pkg 源分为系统级和用户级两个配置文件。_不建议_ �
 
 ```
 163: {
-url: "pkg+http://mirrors.163.com/freebsd-pkg/${ABI}/quarterly",
-mirror_type: "srv",
-signature_type: "none",
-fingerprints: "/usr/share/keys/pkg",
-enabled: yes
+url: "http://mirrors.163.com/freebsd-pkg/${ABI}/quarterly",
 }
 FreeBSD: { enabled: no }
 ```
@@ -78,11 +74,7 @@ FreeBSD: { enabled: no }
 
 ```
 ustc: {
-url: "pkg+http://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/quarterly",
-mirror_type: "srv",
-signature_type: "none",
-fingerprints: "/usr/share/keys/pkg",
-enabled: yes
+url: "http://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/quarterly",
 }
 FreeBSD: { enabled: no }
 ```
@@ -97,11 +89,7 @@ FreeBSD: { enabled: no }
 
 ```
 nju: {
-url: "pkg+http://mirrors.nju.edu.cn/freebsd-pkg/${ABI}/quarterly",
-mirror_type: "srv",
-signature_type: "none",
-fingerprints: "/usr/share/keys/pkg",
-enabled: yes
+url: "http://mirrors.nju.edu.cn/freebsd-pkg/${ABI}/quarterly",
 }
 FreeBSD: { enabled: no }
 ```
