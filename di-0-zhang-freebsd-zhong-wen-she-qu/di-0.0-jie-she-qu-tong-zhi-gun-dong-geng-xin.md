@@ -67,7 +67,6 @@ FreeBSD: { enabled: no }
 
 USTC: {
   url: "http://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/quarterly",
-  mirror_type: none
 }
 ```
 
