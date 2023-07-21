@@ -1,4 +1,4 @@
-# 第 2.7 节 常用软件 与 SSH 配置
+# 第2.7节 常用软件 与 SSH 配置
 
 ## WinSCP 下载
 
@@ -30,7 +30,7 @@ PasswordAuthentication yes   #（可选）设置是否使用普通密码验证�
 
 > **故障排除**
 >
-> 如果你实在是找不到 `PasswordAuthentication no`，请你看看你改的究竟是 `/etc/ssh/`ssh***d***`_config` 还是 `/etc/ssh/`**ssh**`_config`。**sshd** 才是我们真正要改的文件。
+> 如果你实在是找不到 `PasswordAuthentication no`，请你看看你改的究竟是 `/etc/ssh/`ssh_**d**_`_config` 还是 `/etc/ssh/`**ssh**`_config`。**sshd** 才是我们真正要改的文件。
 
 ### 开启 SSH 服务
 
@@ -91,7 +91,7 @@ ServerAliveCountMax 3
 # ssh-keygen
 ```
 
-> OpenSSH 7.0 及以上版本默认禁用了 ssh-dss(DSA) 公钥算法。FreeBSD 13.0 采用 OpenSSH_7.9。因此使用默认值即可。
+> OpenSSH 7.0 及以上版本默认禁用了 ssh-dss(DSA) 公钥算法。FreeBSD 13.0 采用 OpenSSH\_7.9。因此使用默认值即可。
 
 ```
 root@ykla:~ # ssh-keygen
@@ -142,7 +142,7 @@ drwx------  2 root  wheel   512 Mar 22 18:27 /root/.ssh #权限为 700
 # rm /root/.ssh/id_rsa*
 ```
 
-### 修改 /etc/ssh/sshd_config
+### 修改 /etc/ssh/sshd\_config
 
 ```
 # ee /etc/ssh/sshd_config
