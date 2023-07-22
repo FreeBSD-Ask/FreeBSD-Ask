@@ -36,6 +36,7 @@ https://github.com/tuna/issues/issues/16
 - 备案问题——需要专门公司/社会组织才能给 cn.FreeBSD.org 备案；
 - 还有最大的问题，没有钱；
 
+细节可看 <https://docs.freebsd.org/en/articles/hubs/>
 ## 非官方镜像站
 
 FreeBSD 在中国大陆境内没有官方镜像站；在中国台湾地区有官方镜像站。
