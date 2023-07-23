@@ -296,6 +296,8 @@
 
 * [第28.0节 概述](di-28-zhang-dragonflybsd/di-28.0-jie-gai-shu.md)
 * [第28.1节 安装与配置](di-28-zhang-dragonflybsd/di-28.1-jie-an-zhuang-yu-pei-zhi.md)
+* [第 28.2 节 换源与包管理器](di-28-zhang-dragonflybsd/di-28.2-jie-huan-yuan-yu-bao-guan-li-qi.md)
+* [第 28.3 节 桌面与其他软件](di-28-zhang-dragonflybsd/di-28.3-jie-zhuo-mian-yu-qi-ta-ruan-jian.md)
 
 ## 第29章 桌面高级进阶
 
