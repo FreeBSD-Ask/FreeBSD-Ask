@@ -1,6 +1,6 @@
 # 目录
 
-* [FreeBSD 从入门到跑路](./)
+* [FreeBSD 从入门到跑路](README.md)
 * [目录](mu-lu.md)
 
 ## 第0章 FreeBSD 中文社区
@@ -179,6 +179,7 @@
 * [第16.12节 时间服务](di-16-zhang-fu-wu-qi/di-16.12-jie-shi-jian-fu-wu.md)
 * [第16.13节 Wildfly](di-16-zhang-fu-wu-qi/di-16.13-jie-wildfly.md)
 * [第16.14节 Slurm](di-16-zhang-fu-wu-qi/di-16.14-jie-slurm.md)
+* [第 16.15 节 MinIO 对象存储服务](di-16-zhang-fu-wu-qi/di-16.15-jie-minio-dui-xiang-cun-chu-fu-wu.md)
 
 ## 第17章 网络服务器
 
@@ -295,6 +296,8 @@
 
 * [第28.0节 概述](di-28-zhang-dragonflybsd/di-28.0-jie-gai-shu.md)
 * [第28.1节 安装与配置](di-28-zhang-dragonflybsd/di-28.1-jie-an-zhuang-yu-pei-zhi.md)
+* [第 28.2 节 换源与包管理器](di-28-zhang-dragonflybsd/di-28.2-jie-huan-yuan-yu-bao-guan-li-qi.md)
+* [第 28.3 节 桌面与其他软件](di-28-zhang-dragonflybsd/di-28.3-jie-zhuo-mian-yu-qi-ta-ruan-jian.md)
 
 ## 第29章 桌面高级进阶
 
@@ -316,7 +319,8 @@
 * [第30.8节 Linux 兼容层——基于 Rocky Linux](di-30-zhang-linux-jian-rong-ceng/di-30.8-jie-linux-jian-rong-ceng-ji-yu-rocky-linux.md)
 * [第30.9节 Linux 兼容层——基于 Slackware Linux](di-30-zhang-linux-jian-rong-ceng/di-30.9-jie-linux-jian-rong-ceng-ji-yu-slackware-linux.md)
 * [第 30.10 节 Android 兼容层](di-30-zhang-linux-jian-rong-ceng/di-30.10-jie-android-jian-rong-ceng.md)
-* [第 30.11 节 高级教程：Linux 兼容层与 Jail](di-30-zhang-linux-jian-rong-ceng/di-30.12-jie-gao-ji-jiao-cheng-linux-jian-rong-ceng-yu-jail.md)
+* [第 30.11 节 Linux 兼容层——基于 Deepin](di-30-zhang-linux-jian-rong-ceng/di-30.11-jie-linux-jian-rong-ceng-ji-yu-deepin.md)
+* [第 30.12 节 高级教程：Linux 兼容层与 Jail](di-30-zhang-linux-jian-rong-ceng/di-30.12-jie-gao-ji-jiao-cheng-linux-jian-rong-ceng-yu-jail.md)
 
 ## 第31章TwinCAT/BSD
 
