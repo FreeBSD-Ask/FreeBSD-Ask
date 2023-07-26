@@ -218,6 +218,7 @@
 * [第19.14节 小说——你与暗](di-19-zhang-wen-xue-gu-shi/di-19.14-jie-xiao-shuo-ni-yu-an.md)
 * [第19.15节 吾乡何处](di-19-zhang-wen-xue-gu-shi/di-19.15-jie-wu-xiang-he-chu.md)
 * [第19.16节 哲学的学习](di-19-zhang-wen-xue-gu-shi/di-19.16-jie-zhe-xue-de-xue-xi.md)
+* [第 19.17 节 杂记](di-19-zhang-wen-xue-gu-shi/di-19.17-jie-za-ji.md)
 
 ## 第20章 娱乐与教育
 
