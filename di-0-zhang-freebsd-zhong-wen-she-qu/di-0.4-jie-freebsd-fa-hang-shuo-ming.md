@@ -3,15 +3,17 @@
 > FreeBSD 的生命周期为每个大版本 5 年，小版本是发布新的小版本版后 +3 个月。
 >
 > FreeBSD 14 开发计划 [https://github.com/bsdjhb/devsummit/blob/main/14.0/planning.md](https://github.com/bsdjhb/devsummit/blob/main/14.0/planning.md)
+>
+> FreeBSD 15 开发计划 <https://github.com/bsdjhb/devsummit/blob/main/15.0/planning.md>
 
 
 ## FreeBSD 2023 年第二季度 季度状况报告
 
 这是第二份 2023 年状态报告，共有 37 个条目。
 
-正如您可能注意到的，我们比上个季度有更多的报告。这是个好消息，也显示了 FreeBSD 社区的活跃程度，他们一直在努力提供高质量的软件。
+正如您可能注意到的，我们比上个季度有更多的报告。这是个好消息，也显示了 FreeBSD 社区的活跃程度，我们一直在努力提供高质量的软件。
 
-特别需要注意的是，夏季已经开始了，请不要错过由我们的 Google Summer of Code 学生分享的令人惊叹的项目。
+特别需要注意的是，夏季已经开始了，请不要错过由我们的谷歌代码之夏学生分享的令人惊叹的项目。
 
 祝您阅读愉快。
 
@@ -206,7 +208,7 @@ FreeBSD 基金会是一个 501(c)(3) 非营利组织，致力于在全球支持�
 
 FreeBSD 基金会赞助全球范围内的许多会议、活动和峰会。这些活动可能与 BSD 相关，也可能是面向弱势群体的开源或技术活动。我们支持以 FreeBSD 为重点的活动，以便为知识分享、项目合作和开发者与商业用户之间的合作提供场所。这些都有助于提供一个健康的生态系统。我们支持非 FreeBSD 活动，以促进和提高 FreeBSD 的认知度，增加在不同应用中使用 FreeBSD 的程度，并吸引更多的项目贡献者。我们很高兴恢复了大多数以亲自参加活动。除了参加和计划活动外，我们还在不断努力推进新的培训计划，并更新我们的[指南](https://freebsdfoundation.org/freebsd-project/resources/)，以鼓励更多的人尝试 FreeBSD。
 
-以下是我们进行的一些倡导和教育工作：
+以下是我们进行的一些宣传和教育工作：
 
 - 协助组织并参加了于 2023 年 5 月 17 日至 18 日在加拿大安大略省渥太华举行的[开发者峰会](https://wiki.freebsd.org/DevSummit/202305)
 - 在于 2023 年 5 月 17 日至 20 日在加拿大安大略省渥太华举行的 BSDCan 活动中，主持了一个展台，并担任 Tote Bag 赞助商
@@ -275,10 +277,10 @@ FreeBSD 集群管理团队负责管理项目依赖的机器，用于同步分布
 
 在本季度，该团队完成了以下工作：
 
-- 定期支持 FreeBSD.org 用户帐户。
+- 为 FreeBSD.org 用户帐户提供定期支持。
 - 为所有物理主机和镜像提供定期磁盘和零件支持（和更换）。
 - 在 FreeBSD 项目管理的镜像中启用了 <https://www.FreeBSD.org> 和 <https://docs.FreeBSD.org> 的镜像。
-- 对所有主机和容器进行了集群刷新，将它们升级到最新版本的 14-CURRENT、13-STABLE 和 12-STABLE。
+- 对所有主机和容器进行了集群更新新，将它们升级到最新版本的 14-CURRENT、13-STABLE 和 12-STABLE。
 
 **正在进行的工作：**
 
@@ -291,7 +293,7 @@ FreeBSD 集群管理团队负责管理项目依赖的机器，用于同步分布
 
 **FreeBSD 官方镜像概述**
 
-当前的位置是澳大利亚、巴西、德国、日本（两个完整的镜像站点）、马来西亚、南非、台湾、英国（完整的镜像站点）、美国加利福尼亚州、新泽西州（主要站点）和华盛顿州。
+当前的镜像位置是澳大利亚、巴西、德国、日本（两个完整的镜像站点）、马来西亚、南非、台湾、英国（完整的镜像站点）、美国加利福尼亚州、新泽西州（主要站点）和华盛顿州。
 
 这些硬件和网络连接是由以下机构慷慨提供的：
 
@@ -331,7 +333,7 @@ FreeBSD Jenkins Wiki 网址：<https://wiki.FreeBSD.org/Jenkins>
 
 第三方软件 CI 网址：<https://wiki.FreeBSD.org/3rdPartySoftwareCI>
 
-与 freebsd-testing@相关的票务网址：<https://bugs.freebsd.org/bugzilla/buglist.cgi?bug_status=open&email1=testing%40FreeBSD.org&emailassigned_to1=1&emailcc1=1&emailtype1=equals>
+与 freebsd-testing@ 相关的事情网址：<https://bugs.freebsd.org/bugzilla/buglist.cgi?bug_status=open&email1=testing%40FreeBSD.org&emailassigned_to1=1&emailcc1=1&emailtype1=equals>
 
 FreeBSD CI 存储库网址：<https://github.com/freebsd/freebsd-ci>
 
@@ -404,11 +406,11 @@ Ports 管理团队负责监督 Ports 的整体方向、构建软件包以及人�
 
 目前，Ports 中有超过 34,400 个 port。目前有 3,019 个未解决的 port 问题(PR)，其中有 746 个未被分配。上个季度 `main` 分支有来自 151 位提交者的 10,439 次提交，2023Q2 分支有来自 55 位提交者的 745 次提交。与上个季度相比，这意味着 port 数量略有增加，未解决的 PR 数量略有减少， port 提交数量有较大增加。
 
-在本季度，我们欢迎 Tom Judge (tj@) 回归，同时告别了 Steve Wills (swills@)。Steve 也是 portmgr 的一员。作为 portmgr 潜伏者计划的一部分，我们欢迎 Ronald Klop (ronald@)、Renato Botelho (garga@)和 Matthias Andree (mandree@)的加入。
+在本季度，我们欢迎 Tom Judge (tj@) 回归，同时告别了 Steve Wills (swills@)。Steve 也是 portmgr 的一员。作为 portmgr 开发计划的一部分，我们欢迎 Ronald Klop (ronald@)、Renato Botelho (garga@)和 Matthias Andree (mandree@) 的加入。
 
 Portmgr 已经恢复了对将子软件包引入树中的工作，但仍有一些事项需要进一步完善。
 
-在软件方面，pkg 已更新至 1.19.2，Firefox 更新至 114.0.2，Chromium 更新至 114.0.5735.198，KDE Gear 更新至 23.04.2。在上个季度，antoine@运行了 23 次 exp-runs 来测试软件包更新，将 CPU_MAXSIZE 提升至 1024，修复了 devel/cmake-core 的 armv7 失败，并在 USES=meson 中添加了--auto-features=enabled 选项。最后，Ports 已更新以支持 FreeBSD-CURRENT 中的 LLVM 16 和 OpenSSL 3。
+在软件方面，pkg 已更新至 1.19.2，Firefox 更新至 114.0.2，Chromium 更新至 114.0.5735.198，KDE Gear 更新至 23.04.2。在上个季度，antoine@运行了 23 次 exp-runs 来测试软件包更新，将 CPU_MAXSIZE 提升至 1024，修复了 devel/cmake-core 的 armv7 失败，并在 USES=meson 中添加了 `--auto-features=enabled` 选项。最后，Ports 已更新以支持 FreeBSD-CURRENT 中的 LLVM 16 和 OpenSSL 3。
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
@@ -417,7 +419,7 @@ Portmgr 已经恢复了对将子软件包引入树中的工作，但仍有一些
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-##$# Cirrus-CI
+#### Cirrus-CI
 
 链接：
 
@@ -433,9 +435,9 @@ FreeBSD doc CI 网址：<https://cirrus-ci.com/github/freebsd/freebsd-doc>
 
 联系人：Li-Wen Hsu <lwhsu@FreeBSD.org>
 
-Cirrus-CI 是一个托管的持续集成服务，支持在 Linux、Windows、macOS 和 FreeBSD 上进行开源项目的 CI 服务。它是我们自己 Jenkins CI 基础设施的补充，支持其他用例，包括测试 GitHub 的 pull requests 和 FreeBSD 的 forks。我们在 2019 年为 FreeBSD src 树添加了 Cirrus-CI 配置，并在 2020 年为 doc 添加了配置。许多其他托管在 GitHub 上的 FreeBSD 项目（如 drm-kmod、kyua、pkg 和 poudriere）也使用了 Cirrus-CI。
+Cirrus-CI 是一个托管的持续集成服务，支持在 Linux、Windows、macOS 和 FreeBSD 上进行开源项目的 CI 服务。它是我们自己 Jenkins CI 基础设施的补充，支持其他用例，包括测试 GitHub 的 pull requests 和 FreeBSD 的 forks。我们在 2019 年为 FreeBSD src 添加了 Cirrus-CI 配置，并在 2020 年为 doc 添加了配置。许多其他托管在 GitHub 上的 FreeBSD 项目（如 drm-kmod、kyua、pkg 和 poudriere）也使用了 Cirrus-CI。
 
-在上一个季度，Cirrus-CI 配置接受了持续的维护更新（转换到最新的 FreeBSD 发布镜像）。在 src 树中，我们添加了一些额外的检查。这些检查确保在需要时更新生成的文件（`make sysent` 和 `make makeman`），并检查是否缺少目录。我们添加了使用 Clang/LLVM 16 工具链包进行构建的作业，与现在在基本系统中的 Clang 版本相匹配。现在，对于所有提交，GCC 作业默认在 GitHub 镜像上运行。
+在上一个季度，Cirrus-CI 配置接受了持续的维护更新（转换到最新的 FreeBSD RELEASE 镜像）。在 src 中，我们添加了一些额外的检查。这些检查确保在需要时更新生成的文件（`make sysent` 和 `make makeman`），并检查是否缺少目录。我们添加了使用 Clang/LLVM 16 工具链包进行构建的作业，与现在在基本系统中的 Clang 版本相匹配。现在，对于所有提交，GCC 作业默认在 GitHub 镜像上运行。
 
 赞助者：DARPA 赞助者：The FreeBSD Foundation
 
@@ -455,11 +457,11 @@ BATMAN （Better Approach to Mobile Ad-hoc Networking）。BATMAN 是由 Freifun
 
 在 Linux 中，由 batman-adv 内核模块提供支持 BATMAN 的功能。而这个项目的目标是将类似的支持带到 FreeBSD，包括开发内核模块本身，以及创建 BATMAN 网络所需的用户空间网络库和工具。
 
-目前，创建接口并与其进行交互已经可以在 Linux 和 FreeBSD 的用户空间中工作，尽管数据包传输（有点）可以工作，但仍然不完整。该项目还在 [ifconfig(8)](https://man.freebsd.org/cgi/man.cgi?query=ifconfig&sektion=8&format=html) 中添加了对 batadv 接口的支持。
+目前，创建接口并与其进行交互已经可以在 Linux 和 FreeBSD 的用户空间中工作，尽管数据包传输（部分）可以工作，但仍然不完整。该项目还在 [ifconfig(8)](https://man.freebsd.org/cgi/man.cgi?query=ifconfig&sektion=8&format=html) 中添加了对 batadv 接口的支持。
 
 导师：Mahdi Mokhtari
 
-赞助商：2023 谷歌代码之夏 项目
+赞助商：2023 谷歌代码之夏项目
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
@@ -473,17 +475,17 @@ LinuxBoot 项目网址：<https://www.linuxboot.org/>
 
 BSDCan 2023 kboot 演讲幻灯片链接：<https://docs.google.com/presentation/d/1N5Jp6XzYWv9Z9RhhETC-e6tFkqRHvp-ldRDW_9h2JCw/edit?usp=sharing>
 
-LinuxBoot 是一个致力于创建干净、健壮、可审计和可重复启动的启动固件的项目。最初是谷歌的一个特定项目，现已扩展到包括使用 Linux 来启动最终操作系统的任何启动环境。现在许多平台都支持这个环境，并且在某些情况下它是唯一可用的启动环境。此外，一些嵌入式设备上有一个硬编码的 LinuxBoot 环境，很难更改，因此能够重新启动到 FreeBSD 是可取的。
+LinuxBoot 是一个致力于创建干净、健壮、可审计和可重复启动的启动固件的项目。最初是谷歌的一个特定项目，现已扩展到包括使用 Linux 来启动最终操作系统的任何启动环境。现在许多平台都支持这个环境，并且在某些情况下它是唯一可用的启动环境。此外，一些嵌入式设备上有一个硬编码的 LinuxBoot 环境，很难更改，因此能够重新启动到 FreeBSD 是有意义的。
 
-旧的 Sony PlayStation 3 port 使用了一个名为'kboot'的引导加载程序来从其 Linux 内核启动 FreeBSD port（都是在 LinuxBoot 项目之前）。该代码已经大大扩展，并且通过易于替换的体系结构插件通用化。正常的 FreeBSD /boot/loader 被构建为 Linux 二进制文件，它读取 FreeBSD 内核、模块和可调整参数，并将它们放入内存，就像它在预启动环境中运行一样，然后使用 kexec_load(2)将该映像加载到 Linux 内核中，并进行特殊的重新启动到该映像。对于支持 UEFI 的系统，它会传递 UEFI 内存表和指向 UEFI 运行时服务的指针给新内核。
+旧的 Sony PlayStation 3 port 使用了一个名为 `kboot` 的引导加载程序来从其 Linux 内核启动 FreeBSD port（都是在 LinuxBoot 项目之前）。该代码已经大大扩展，并且通过易于替换的体系结构插件通用化。正常的 FreeBSD /boot/loader 被构建为 Linux 二进制文件，它读取 FreeBSD 内核、模块和可调整参数，并将它们放入内存，就像它在预启动环境中运行一样，然后使用 kexec_load(2) 将该映像加载到 Linux 内核中，并进行特殊的重新启动到该映像。对于支持 UEFI 的系统，它会传递 UEFI 内存表和指向 UEFI 运行时服务的指针给新内核。
 
-它支持从主机文件系统、主机块设备上的任何 loader(8)支持的文件系统（包括跨多个设备的池）、RAM 磁盘映像以及通过网络下载的文件加载文件。可以混合使用这些功能。例如，可以从主机文件系统加载配置覆盖，同时内核从专用存储（如 NVME）或 RAM 磁盘映像加载。它支持在 stdin/stdout 上运行的主机控制台。它支持显式位置，例如 /dev/nvme0ns1:/boot/loader/gerbil.conf，用于加载文件系统的位置。它还支持 ZFS 引导环境，包括一次性引导功能。
+它支持从主机文件系统、主机块设备上的任何 loader(8) 支持的文件系统（包括跨多个设备的池）、RAM 磁盘映像以及通过网络下载的文件加载文件。可以混合使用这些功能。例如，可以从主机文件系统加载配置覆盖，同时内核从专用存储（如 NVME）或 RAM 磁盘映像加载。它支持在 stdin/stdout 上运行的主机控制台。它支持显式位置，例如 `/dev/nvme0ns1:/boot/loader/gerbil.conf`，用于加载文件系统的位置。它还支持 ZFS 引导环境，包括一次性引导功能。
 
 有关 kboot 的更多详细信息，以及它支持的内容和一些常规背景，可以在 Warner 的 BSDcan 演讲中找到（上面链接的幻灯片）。
 
-FreeBSD/aarch64 现在可以在 LinuxBoot 环境中从 Linux 启动，支持和功能与 loader.efi(8)相当。内存布局传递用于 GICv3 补丁。需要为 aarch64 内核提供 GICv3 补丁（https://reviews.freebsd.org/D40902）。
+FreeBSD/aarch64 现在可以在 LinuxBoot 环境中从 Linux 启动，支持和功能与 loader.efi(8) 相当。内存布局传递用于 GICv3 补丁。需要为 aarch64 内核提供 GICv3 补丁（<https://reviews.freebsd.org/D40902>）。
 
-FreeBSD/amd64 的支持正在进行中，可能已完成 80%。由于 amd64 是一个较早的 port，amd64 引导环境对引导加载程序提供内核数据有更多要求。由于内核无法从长模式访问这些数据，所有 BIOS 环境中的数据来源都必须由引导加载程序提供。虽然 UEFI 和 ACPI 提供了让内核获取这些数据的方式，但许多数据仍然必须由引导加载程序提供。内核在初始化过程中会发生崩溃，因为这些前提条件尚未被发现和实现。
+FreeBSD/amd64 的支持正在进行中，可能已完成了 80%。由于 amd64 是一个较早的 port，amd64 引导环境对引导加载程序提供内核数据有更多要求。由于内核无法从长模式访问这些数据，所有 BIOS 环境中的数据来源都必须由引导加载程序提供。虽然 UEFI 和 ACPI 提供了让内核获取这些数据的方式，但许多数据仍然必须由引导加载程序提供。内核在初始化过程中会发生崩溃，因为这些前提条件尚未被发现和实现。
 
 PowerPC 已经构建，但其状态未知。作者尝试获取合适的 PlayStation 3 证明过于耗时。
 
@@ -558,7 +560,7 @@ Linux 应用程序状态 Wiki 页面网址：<https://wiki.freebsd.org/LinuxApps
 #### Service Jail - 自动将 rc.d 服务加入 jail
 链接：
 
-D40369: 扩展 /usr/bin/service 以设置环境变量的可能性 网址: <https://reviews.freebsd.org/D40369>
+D40369: 扩展 `/usr/bin/service` 以设置环境变量的可能性 网址: <https://reviews.freebsd.org/D40369>
 
 D40370: 自动加入 rc.d 服务的基础设施 网址: <https://reviews.freebsd.org/D40370>
 
@@ -566,7 +568,7 @@ D40371: 自动服务 jail：为在自动服务 jail 中实现服务的全部功�
 
 联系人：Alexander Leidinger <netchild@FreeBSD.org>
 
-Service Jail 扩展了 rc(8)系统，允许自动将 rc.d 服务加入 jail。服务 jail 继承父主机或 jail 的文件系统，但默认情况下使用 jail 的所有其他限制（进程可见性、受限网络访问、文件系统挂载权限、sysvipc 等）。附加配置允许继承父级的 IP 地址、sysvipc、内存页锁定和使用 bhyve 虚拟机监视器（vmm(4)）。
+Service Jail 扩展了 rc(8) 系统，允许自动将 rc.d 服务加入 jail。服务 jail 继承父主机或 jail 的文件系统，但默认情况下使用 jail 的所有其他限制（进程可见性、受限网络访问、文件系统挂载权限、sysvipc 等）。附加配置允许继承父级的 IP 地址、sysvipc、内存页锁定和使用 bhyve 虚拟机监视器（vmm(4)）。
 
 如果您想将例如 local_unbound 加入服务 jail 并允许 IPv4 和 IPv6 访问，只需更改 rc.conf(5)为：
 
@@ -582,24 +584,24 @@ local_unbound_svcj=YES
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-#### 使用 ktrace(1)进行安全沙箱化
+#### 使用 ktrace(1) 进行安全沙箱化
 链接：
 
 ktrace 分支 网址: <https://github.com/jakesfreeland/freebsd-src/tree/ff/ktrace>
 
 联系人：Jake Freeland <jfree@FreeBSD.org>
 
-使用 ktrace(1)进行 Capiscum 化
+使用 ktrace(1) 进行 Capiscum 化
 
-本报告介绍了对 ktrace(1)的扩展，用于记录未进行 Capiscum 化的程序的能力违规情况。
+本报告介绍了对 ktrace(1) 的扩展，用于记录未进行 Capiscum 化的程序的能力违规情况。
 
 在 Capiscum 化的第一步是确定您的程序在哪里引发了能力违规。您可以通过查看源代码并删除与 Capiscum 不兼容的代码来解决此问题，但这可能很繁琐，并要求开发人员熟悉在能力模式中不允许的所有内容。
 
-另一种寻找违规的替代方法是使用 ktrace(1)。ktrace(1)工具记录指定进程的内核活动。能力违规发生在内核内部，因此 ktrace(1)可以使用-t p 选项记录和返回有关程序违规的额外信息。
+另一种寻找违规的替代方法是使用 ktrace(1)。ktrace(1) 工具记录指定进程的内核活动。能力违规发生在内核内部，因此 ktrace(1) 可以使用 `-t p` 选项记录和返回有关程序违规的额外信息。
 
 传统上，需要将程序放入能力模式，然后它们才能报告违规。当输入受限制的系统调用时，它将失败并返回 `ECAPMODE: Not permitted in capability mode`。如果开发人员进行错误检查，那么他们的程序可能会以该错误终止。这种行为使得违规跟踪变得不方便，因为 ktrace(1)只会报告第一个能力违规，然后程序将终止。
 
-幸运的是，ktrace(1)的新扩展可以在程序没有进入能力模式时记录违规。这意味着任何开发人员都可以在其程序上运行能力违规跟踪而无需修改，以查看它引发违规的位置。由于程序实际上从未进入能力模式，因此它仍将获取资源并正常执行。
+幸运的是，ktrace(1) 的新扩展可以在程序没有进入能力模式时记录违规。这意味着任何开发人员都可以在其程序上运行能力违规跟踪而无需修改，以查看它引发违规的位置。由于程序实际上从未进入能力模式，因此它仍将获取资源并正常执行。
 
 **违规跟踪示例**
 
@@ -668,7 +670,7 @@ ktrace 分支 网址: <https://github.com/jakesfreeland/freebsd-src/tree/ff/ktra
 
 这个演示清楚地表明，违规跟踪并不总是完美的。它是检测受限制系统调用的有用指南，但可能并不总是模拟程序在能力模式下的实际行为。在能力模式下，违规等同于错误；它们是停止执行的指示。违规跟踪忽略了这一建议，无论如何继续执行，因此可能会报告无效的违规行为。
 
-下一个示例从 unzip(1)实用程序（在进行 Capsicum 化之前）跟踪违规行为：
+下一个示例从 unzip(1) 实用程序（在进行 Capsicum 化之前）跟踪违规行为：
 
 ```
 # ktrace -t np unzip foo.zip
@@ -745,7 +747,7 @@ extracting: baz/baz.txt
 1926 unzip    CAP   openat: restricted VFS lookup: AT_FDCWD
 ```
 
-unzip(1)的违规跟踪输出更类似于开发人员在首次跟踪自己的程序时所看到的情况。大多数程序都会链接到库。在这种情况下，unzip(1)链接到 libarchive(3)，这在追踪中反映了出来：
+unzip(1) 的违规跟踪输出更类似于开发人员在首次跟踪自己的程序时所看到的情况。大多数程序都会链接到库。在这种情况下，unzip(1)链接到 libarchive(3)，这在追踪中反映了出来：
 
 ```
 1926 unzip    CAP   system call not allowed: open
@@ -754,7 +756,7 @@ unzip(1)的违规跟踪输出更类似于开发人员在首次跟踪自己的程
 1926 unzip    NAMI  "/usr/lib/libarchive.so.7"
 ```
 
-unzip(1)的违规行为可以在 C 运行时违规行为之后找到：
+unzip(1) 的违规行为可以在 C 运行时违规行为之后找到：
 
 ```
 1926 unzip    NAMI  "foo.zip"
@@ -783,7 +785,7 @@ unzip(1)的违规行为可以在 C 运行时违规行为之后找到：
 1926 unzip    CAP   openat: restricted VFS lookup: AT_FDCWD
 ```
 
-在这种情况下，unzip(1)正在重新创建 zip 归档中包含的文件结构。违规行为是因为在能力模式下不能使用 AT_FDCWD 值。这些违规行为的大部分可以通过在进入能力模式之前打开 AT_FDCWD（当前目录）并将该描述符传递给 openat(2)、fstatat(2)和 mkdirat(2)作为相对引用来解决。
+在这种情况下，unzip(1) 正在重新创建 zip 归档中包含的文件结构。违规行为是因为在能力模式下不能使用 AT_FDCWD 值。这些违规行为的大部分可以通过在进入能力模式之前打开 AT_FDCWD（当前目录）并将该描述符传递给 openat(2)、fstatat(2)和 mkdirat(2)作为相对引用来解决。
 
 虽然违规行为跟踪可能不会自动将程序 Capsicum 化，但它是开发者工具箱中的另一种工具。在 ktrace(1)下运行程序只需要几秒钟的时间，结果几乎总是一个不错的起点，用于使用 Capsicum 对程序进行沙盒化。
 
@@ -854,7 +856,7 @@ FreeBSD 支持多种体系结构、文件系统和磁盘分区方案。我正在
 
 目前，开发人员所做的任何更改可能会影响操作系统在某些特定环境中的启动能力。这些脚本确保更改不会导致已测试环境的回归。这些脚本的设计高效且比目前所需的完整构建更便宜。这些特性允许开发人员经常使用脚本，并在 CI 流水线中集成而不会产生过多的成本。
 
-目前脚本相关的工作似乎进展顺利，但在未来我需要找到各种 QEMU 配方以测试不同的环境。如果有任何工作中的 QEMU 配方适用于当前发布版本的 FreeBSD，请随时通过邮件发送至 smk@FreeBSD.org。
+目前脚本相关的工作似乎进展顺利，但在未来我需要找到各种 QEMU 配置以测试不同的环境。如果有任何工作中的 QEMU 配方适用于当前发布版本的 FreeBSD，请随时通过邮件发送至 smk@FreeBSD.org。
 
 赞助者: 2023 谷歌代码之夏项目
 
@@ -869,7 +871,7 @@ FreeBSD 支持多种体系结构、文件系统和磁盘分区方案。我正在
 
 联系人：Bojan Novković <bnovkov@FreeBSD.org>
 
-大多数现代 CPU 架构通过支持大于标准页面大小的页面来提供性能提升。不幸的是，由于高度的物理内存碎片化，分配这种页面可能会失败。这项工作实现了物理内存压缩作为一种主动减少运行系统碎片化的手段。这项工作是正在进行的 Google Summer of Code 项目的一部分，其目标是向虚拟内存子系统添加各种物理内存抗碎片化措施。
+大多数现代 CPU 架构通过支持大于标准页面大小的页面来提供性能提升。不幸的是，由于高度的物理内存碎片化，分配这种页面可能会失败。这项工作实现了物理内存压缩作为一种主动减少运行系统碎片化的手段。这项工作是正在进行的谷歌代码之夏项目的一部分，其目标是向虚拟内存子系统添加各种物理内存抗碎片化措施。
 
 Differential [D40575](https://reviews.freebsd.org/D40575) 实现了用于量化物理内存碎片化程度的众所周知的度量标准。 Differential [D40772](https://reviews.freebsd.org/D40772) 实现了物理内存压缩，并添加了一个守护程序，监视系统并在需要时执行压缩。
 
@@ -956,12 +958,15 @@ pf(4)是 FreeBSD 中包含的防火墙之一，也可能是最受欢迎的。pf 
 Kajetan 引入了"scrub"操作的 OpenBSD 语法在"match"和"pass"规则中。现有规则仍然受支持，但现在也支持 OpenBSD 风格的"scrub"配置。
 
 **pfsync 协议版本**
+
 现在可以配置 pfsync(4)协议版本，允许在支持不同内核版本之间的状态同步的同时进行协议更改。主要好处是允许协议更改以实现新功能。
 
 **pfsync：在 IPv6 上传输**
+
 pfsync 流量现在也可以通过 IPv6 进行传输。Naman 完成了 Luiz Amaral 开始的工作。
 
 **SCTP**
+
 正在进行支持 pf 中的 SCTP 工作。该支持包括对端口号的过滤、状态跟踪、pfsync 故障转移以及返回 ABORT 块以拒绝连接。
 
 赞助：InnoGames GmbH 赞助：Orange Business Services 赞助：FreeBSD 基金会
@@ -971,11 +976,12 @@ pfsync 流量现在也可以通过 IPv6 进行传输。Naman 完成了 Luiz Amar
 #### 网络接口 API（IfAPI）
 
 链接：
+
 原始项目页面 网址：link:https://wiki.freebsd.org/projects/ifnet
 
 联系人：Justin Hibbits <jhibbits@FreeBSD.org>
 
-IfAPI（原名 DrvAPI）项目始于 2014 年，其目标是隐藏网络驱动程序中的 ifnet(9)结构。相反，所有对成员的访问都将通过访问器函数进行。这允许更改网络堆栈而无需重新编译驱动程序，还有可能让单个驱动程序支持多个 FreeBSD 版本。
+IfAPI（原名 DrvAPI）项目始于 2014 年，其目标是隐藏网络驱动程序中的 ifnet(9) 结构。相反，所有对成员的访问都将通过访问器函数进行。这允许更改网络堆栈而无需重新编译驱动程序，还有可能让单个驱动程序支持多个 FreeBSD 版本。
 
 目前，在基本系统中已经实现了这一目标，但是还需要更新一些 port 来使用 IfAPI。有一个工具可以自动完成大部分的转换，即 `tools/ifnet/convert_ifapi.sh`。文档也正在准备中，但可能需要帮助。ifnet(9)需要进行大量的清理，因为目前其中的一些信息已经过时了。
 
@@ -986,9 +992,10 @@ IfAPI（原名 DrvAPI）项目始于 2014 年，其目标是隐藏网络驱动�
 #### 使 Netgraph 无锁化
 
 链接：
-维基页面 网址：<https://wiki.freebsd.org/SummerOfCode2023Projects/LocklessSynchronizationBetweenNodesInNetgraph>
 
-仓库 网址：<https://github.com/zinh88/epoch-netgraph>
+维基页面网址：<https://wiki.freebsd.org/SummerOfCode2023Projects/LocklessSynchronizationBetweenNodesInNetgraph>
+
+仓库网址：<https://github.com/zinh88/epoch-netgraph>
 
 联系人：Zain Khan <zain@FreeBSD.org>
 
@@ -1061,7 +1068,7 @@ SIMD 指令集扩展，如 SSE、AVX 和 NEON，在现代计算机上普遍存�
 
 **位置**
 
-这是 2023 年的 GSoC（Google Summer of Code）项目。因此，官方的编码期限是从 2023 年 5 月 29 日到 2023 年 8 月 28 日。作为开源社区的初学者，作者欢迎在项目存储库中提出所有的意见、建议和拉取请求，该存储库将是整个期间内所有代码的位置。
+这是 2023 年的谷歌代码之夏项目。因此，官方的编码期限是从 2023 年 5 月 29 日到 2023 年 8 月 28 日。作为开源社区的初学者，作者欢迎在项目存储库中提出所有的意见、建议和拉取请求，该存储库将是整个期间内所有代码的位置。
 
 导师：[Juraj Lutter](otis@FreeBSD.org)和 [Joseph Mingone](jrm@FreeBSD.org)
  
@@ -1078,11 +1085,11 @@ SIMD 指令集扩展，如 SSE、AVX 和 NEON，在现代计算机上普遍存�
 
 链接：
 
-cloud-init 网站 网址：<https://cloud-init.io/>
+cloud-init 网站网址：<https://cloud-init.io/>
 
-cloud-init 文档 网址：<https://cloudinit.readthedocs.io/en/latest/>
+cloud-init 文档网址：<https://cloudinit.readthedocs.io/en/latest/>
 
-cloud-init 正在进行的重构 网址：<https://github.com/canonical/cloud-init/blob/main/WIP-ONGOING-REFACTORIZATION.rst>
+cloud-init 正在进行的重构网址：<https://github.com/canonical/cloud-init/blob/main/WIP-ONGOING-REFACTORIZATION.rst>
 
 联系人：Mina Galić <freebsd@igalic.co>
 
@@ -1091,7 +1098,7 @@ cloud-init 是在云中配置服务器的标准方式。不幸的是，除了 Li
 这个季度进展缓慢，但我已经完成了一个新的里程碑：
 
 - 瞬时网络类别已被重写并与平台无关。这些类别被多个云提供商用于在检索实际配置之前初始化临时网络。
-- cloud-init 已经在 Vultr 上成功测试。我希望在下一个发布版本中，我能说服 Vultr 将他们的 FreeBSD 映像切换到 cloud-init。
+- cloud-init 已经在 Vultr 上成功测试。我希望在下一个 RELEASE 版本中，我能说服 Vultr 将他们的 FreeBSD 镜像切换到 cloud-init。
 
 除此之外，我还扩展了 BSD 上的 rsyslog 支持。我还为 cloud-init 的 ds-identify 添加了一个 rc 脚本，这应该使零配置设置的速度提高几个数量级：ds-identify 首先运行，并快速猜测机器正在运行的云提供商。然后 cloud-init 仅使用该猜测，而不是在所有可能的云提供商列表中进行迭代和失败。构建自定义映像的人可以轻松禁用此功能（通过删除 `/usr/local/etc/rc.d/dsidentify`），并自己提供一个特定的列表，从引导中节省几毫秒的时间。
 
@@ -1119,11 +1126,9 @@ FreeBSD 上的 OpenStack 网址：<https://github.com/openstack-on-freebsd>
 
 我们已经开始移植 `nova-novncproxy` 和 `nova-serialproxy`，以增加访问实例控制台的方式。为了降低想要尝试该项目的人的门槛，我们还将开发环境从物理机迁移到虚拟机。但在 Linux KVM 之上运行 bhyve 虚拟机仍然存在问题。关于这个问题的详细解释可以在[这里](https://hackmd.io/@starbops/SkdJON2un)找到。其他的成就包括：
 
-解决实例内部的网络连接问题
-
-能够生成多个实例
-
-从 Python 3.8 移植到 3.9。
+- 解决实例内部的网络连接问题
+- 能够生成多个实例
+- 从 Python 3.8 移植到 3.9。
 
 在下个季度，我们将继续改进控制台代理服务，以使整体工作流更加流畅。
 
@@ -1138,9 +1143,10 @@ FreeBSD 上的 OpenStack 网址：<https://github.com/openstack-on-freebsd>
 #### FreeBSD 在 Microsoft HyperV 和 Azure 上的支持
 
 链接：
-Microsoft Azure 上的 FreeBSD Wiki 文章 网址：<https://wiki.freebsd.org/MicrosoftAzure>
 
-Microsoft HyperV 上的 FreeBSD Wiki 文章 网址：<https://wiki.freebsd.org/HyperV>
+Microsoft Azure 上的 FreeBSD Wiki 文章网址：<https://wiki.freebsd.org/MicrosoftAzure>
+
+Microsoft HyperV 上的 FreeBSD Wiki 文章网址：<https://wiki.freebsd.org/HyperV>
 
 联系人：Microsoft FreeBSD Integration Services 团队 <bsdic@microsoft.com>
 
@@ -1310,13 +1316,13 @@ Ports 脚本以创建一个应用程序门户。（正在进行中）
 #### FreeBSD 上的 KDE
 链接：
 
-KDE/FreeBSD 计划 网址：<https://freebsd.kde.org/>
+KDE/FreeBSD 计划网址：<https://freebsd.kde.org/>
 
-FreeBSD — KDE 社区维基 网址：<https://community.kde.org/FreeBSD>
+FreeBSD — KDE 社区维基网址：<https://community.kde.org/FreeBSD>
 
 联系人：Adriaan de Groot <kde@FreeBSD.org>
 
-KDE on FreeBSD 项目将 CMake、Qt 和来自 KDE 社区的软件打包到 FreeBSD 的 Ports 中。这些软件包括一个完整的桌面环境，名为 KDE Plasma（适用于 X11 和 Wayland），以及数百个可在任何 FreeBSD 机器上使用的应用程序。
+KDE on FreeBSD 项目将 CMake、Qt 和来自 KDE 社区的软件打包到 FreeBSD 的 Ports 中。这些软件包括了一个完整的桌面环境，名为 KDE Plasma（适用于 X11 和 Wayland），以及数百个可在任何 FreeBSD 机器上使用的应用程序。
 
 KDE 团队（kde@）是 desktop@和 x11@的一部分，构建软件堆栈，使 FreeBSD 成为漂亮且可用作日常图形桌面工作站的系统。下面的说明主要描述了与 KDE 有关的 port，但也包括整个桌面堆栈中重要的项目。
 
@@ -1324,7 +1330,7 @@ KDE 团队（kde@）是 desktop@和 x11@的一部分，构建软件堆栈，使 
 
 Qt5 port 进行了各种更新：
 
-- devel/qt5-webengine 在使用 Clang 16 进行构建时进行了修复。这是为了准备即将发布的 FreeBSD 14。\
+- devel/qt5-webengine 在使用 Clang 16 进行构建时进行了修复。这是为了准备即将发布的 FreeBSD 14。
 - devel/qt5-qmake 进行了修复，以解决在否则不安装 Qt 的系统上安装 qmake 会导致奇怪错误的问题。
 
 Qt6 port 进行了各种更新：
@@ -1358,8 +1364,8 @@ KDE Gear 每个季度发布，KDE Plasma 每月更新，KDE Frameworks 每月发
 更新：
 
 - astro/kstars，一个交互式天文馆，更新至版本 3.6.4。
-- devel/qcoro，一个 C++协程实现，更新至版本 0.9.0。
-- devel/qtcreator，一个用于 Qt、C++等的集成开发环境，更新至版本 10.0.2。
+- devel/qcoro，一个 C++ 协程实现，更新至版本 0.9.0。
+- devel/qtcreator，一个用于 Qt、C++ 等的集成开发环境，更新至版本 10.0.2。
 - games/gcompris-qt，一个针对 3-12 岁儿童的教育套件，更新至版本 3.2。
 - graphics/kphotoalbum，一个照片相册和显示实用程序，更新至版本 5.10.0。
 - net-im/tokodon，一个 Mastodon 社交网络客户端，加入了 KDE Gear。
@@ -1367,7 +1373,7 @@ KDE Gear 每个季度发布，KDE Plasma 每月更新，KDE Frameworks 每月发
 
 新增软件：
 
-- devel/kommit，一个 Git 客户端，已添加。它是先前包 gitklient 的改名。
+- devel/kommit，一个 Git 客户端，已添加。它是先前 gitklient 的改名。
 - multimedia/kasts 是 KDE 社区的一个新的播客收听和享受应用程序。
 - textproc/arianna 是 KDE 社区的一款面向移动设备的电子书阅读器，使阅读 FreeBSD 文档变得愉悦。
 
@@ -1517,9 +1523,9 @@ Wazuh 在 FreeBSD 上的移植由 Michael Muenz 开始。他在 2021 年 9 月�
 #### PkgBase.live
 链接：
 
-网站 网址: <https://alpha.pkgbase.live/>
+网站网址: <https://alpha.pkgbase.live/>
 
-源代码 网址: <https://codeberg.org/pkgbase>
+源代码网址: <https://codeberg.org/pkgbase>
 
 联系人：Mina Galić <freebsd@igalic.co>
 
@@ -1554,6 +1560,7 @@ PkgBase 的硬件由 FreeBSD 社区的一名成员慷慨赞助。
 
 #### 容器和 FreeBSD：Pot、Potluck 和 Potman
 链接：
+
 Pot 在 GitHub 上的组织 网址: <https://github.com/bsdpot>
 
 联系人：Luca Pizzamiglio (Pot) <pizzamig@FreeBSD.org>
