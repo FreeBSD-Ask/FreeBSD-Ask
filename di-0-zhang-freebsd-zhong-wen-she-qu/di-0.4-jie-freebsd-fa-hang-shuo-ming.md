@@ -185,7 +185,7 @@ FreeBSD 基金会是一个 501(c)(3) 非营利组织，致力于在全球支持�
 - killpg(2)的错误修复
 - hwpmc 的改进
 - vmm 的改进
-- 针对 LLVM 16 和 OpenSSL 3.0 的端口修复和解决方案
+- 针对 LLVM 16 和 OpenSSL 3.0 的 port 修复和解决方案
 - 将 kinst 移植到 RISC-V 以及相关的 DTrace 工作
 - 将 libfido2 更新到 1.9.0 版本
 - 各种 LinuxKPI 802.11 的改进
@@ -803,9 +803,9 @@ NVMe over Fabrics 目前定义了用于光纤通道、RDMA 和 TCP 的网络传�
 
 在 nvmf2 分支中的工作包括一个用户空间库（`lib/libnvmf`），其中包含用于传输的抽象和 TCP 传输的实现。它还对 nvmecontrol(8)进行了更改，以添加“discover”、“connect”和“disconnect”命令来管理与远程控制器的连接。
 
-该分支还包含一个内核中的 Fabrics 实现。`nvmf_transport.ko` 包含一个在 nvmf 主机（即 SCSI 中的 initiator）和各个传输之间的传输抽象。`nvmf_tcp.ko` 包含一个 TCP 传输层的实现。`nvmf.ko` 包含一个 NVMe over Fabrics 主机（initiator），它连接到远程控制器并将远程命名空间导出为磁盘设备。类似于 NVMe over PCI-express 的 nvme(4)驱动程序，命名空间通过 `/dev/nvmeXnsY` 设备导出，这些设备仅支持简单操作，同时还通过 CAM 导出为 ndaX 磁盘设备。与 nvme(4)不同，nvmf(4)不支持 nvd(4)磁盘驱动程序。nvmecontrol(8)可用于处理远程命名空间和远程控制器，例如获取日志页、显示识别信息等。
+该分支还包含一个内核中的 Fabrics 实现。`nvmf_transport.ko` 包含一个在 nvmf 主机（即 SCSI 中的 initiator）和各个传输之间的传输抽象。`nvmf_tcp.ko` 包含一个 TCP 传输层的实现。`nvmf.ko` 包含一个 NVMe over Fabrics 主机（initiator），它连接到远程控制器并将远程命名空间导出为磁盘设备。类似于 NVMe over PCI-express 的 nvme(4)驱动程序，命名空间通过 `/dev/nvmeXnsY` 设备导出，这些设备仅支持简单操作，同时还通过 CAM 导出为 ndaX 磁盘设备。与 nvme(4)不同，nvmf(4)不支持 nvd(4)磁盘驱动程序。nvmecontrol(8) 可用于处理远程命名空间和远程控制器，例如获取日志页、显示识别信息等。
 
-请注意，nvmf(4)目前还相对简单，有些错误情况仍在待办事项中。如果发生错误，队列（和后端网络连接）将被丢弃，但设备将保留，并暂停 I/O 请求。可以使用 `nvmecontrol reconnect` 命令连接一组新的网络连接以恢复操作。与使用持续型守护程序（iscsid(8)）在错误后重新连接的 iSCSI 不同，重新连接必须手动进行。
+请注意，nvmf(4) 目前还相对简单，有些错误情况仍在待办事项中。如果发生错误，队列（和后端网络连接）将被丢弃，但设备将保留，并暂停 I/O 请求。可以使用 `nvmecontrol reconnect` 命令连接一组新的网络连接以恢复操作。与使用持续型守护程序（iscsid(8)）在错误后重新连接的 iSCSI 不同，重新连接必须手动进行。
 
 当前的代码非常新，可能不太稳定。它肯定还没有准备好用于生产环境。有兴趣在 NVMe over Fabrics 上进行测试的有经验的用户，可以自行承担风险并开始测试。
 
@@ -977,7 +977,7 @@ pfsync 流量现在也可以通过 IPv6 进行传输。Naman 完成了 Luiz Amar
 
 IfAPI（原名 DrvAPI）项目始于 2014 年，其目标是隐藏网络驱动程序中的 ifnet(9)结构。相反，所有对成员的访问都将通过访问器函数进行。这允许更改网络堆栈而无需重新编译驱动程序，还有可能让单个驱动程序支持多个 FreeBSD 版本。
 
-目前，在基本系统中已经实现了这一目标，但是还需要更新一些端口来使用 IfAPI。有一个工具可以自动完成大部分的转换，即 `tools/ifnet/convert_ifapi.sh`。文档也正在准备中，但可能需要帮助。ifnet(9)需要进行大量的清理，因为目前其中的一些信息已经过时了。
+目前，在基本系统中已经实现了这一目标，但是还需要更新一些 port 来使用 IfAPI。有一个工具可以自动完成大部分的转换，即 `tools/ifnet/convert_ifapi.sh`。文档也正在准备中，但可能需要帮助。ifnet(9)需要进行大量的清理，因为目前其中的一些信息已经过时了。
 
 赞助：Juniper Networks, Inc.
 
@@ -1318,7 +1318,7 @@ FreeBSD — KDE 社区维基 网址：<https://community.kde.org/FreeBSD>
 
 KDE on FreeBSD 项目将 CMake、Qt 和来自 KDE 社区的软件打包到 FreeBSD 的 Ports 中。这些软件包括一个完整的桌面环境，名为 KDE Plasma（适用于 X11 和 Wayland），以及数百个可在任何 FreeBSD 机器上使用的应用程序。
 
-KDE 团队（kde@）是 desktop@和 x11@的一部分，构建软件堆栈，使 FreeBSD 成为漂亮且可用作日常图形桌面工作站的系统。下面的说明主要描述了与 KDE 有关的端口，但也包括整个桌面堆栈中重要的项目。
+KDE 团队（kde@）是 desktop@和 x11@的一部分，构建软件堆栈，使 FreeBSD 成为漂亮且可用作日常图形桌面工作站的系统。下面的说明主要描述了与 KDE 有关的 port，但也包括整个桌面堆栈中重要的项目。
 
 **基础设施**
 
@@ -1391,7 +1391,7 @@ GCC 13 版本系列 网址：<https://gcc.gnu.org/gcc-13/>
 
 上游发布了 [GCC 13](https://gcc.gnu.org/gcc-13)。如前面的状态报告中宣布的，我计划尝试在第一个 GCC 13 版本中更新 GCC_DEFAULT，因此本季度的大部分工作都是为此做准备。
 
-随着 GCC 13.1 的发布（第一个 GCC 13 版本：我提醒一下，GCC 从 1 开始计算小版本号），在 ports 树中创建了两个新端口：
+随着 GCC 13.1 的发布（第一个 GCC 13 版本：我提醒一下，GCC 从 1 开始计算小版本号），在 ports 中创建了两个新 port：
 
 lang/gcc13，跟踪 GCC 13 版本；
 
@@ -1441,7 +1441,7 @@ Puppet 团队正在维护 Puppet 和相关工具的 ports。
 
 Puppet 6 已达到生命周期终点，并已被弃用。它现在已过期。因此，建议使用 Puppet 6 的用户更新到 Puppet 7 或 Puppet 8。
 
-目前，Puppet 7 仍然是 ports 中依赖于 Puppet 的端口的默认版本。Puppet 社区正在努力确保各种 Puppet 模块与最新代码兼容，在撰写本报告时，更新到 Puppet 8 可能会有一些挑战。情况每天都在好转，我们预计在几个月后，当模块更新的浪潮结束时，将切换到 Puppet 8 作为 Puppet 的默认版本。
+目前，Puppet 7 仍然是 ports 中依赖于 Puppet 的 port 的默认版本。Puppet 社区正在努力确保各种 Puppet 模块与最新代码兼容，在撰写本报告时，更新到 Puppet 8 可能会有一些挑战。情况每天都在好转，我们预计在几个月后，当模块更新的浪潮结束时，将切换到 Puppet 8 作为 Puppet 的默认版本。
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
@@ -1488,7 +1488,7 @@ Wazuh 是一个免费且开源的平台，用于威胁预防、检测和响应�
 
 Wazuh 解决方案由部署在被监控系统上的终端安全代理和收集和分析代理收集的数据的管理服务器组成。Wazuh 的特性包括与 Elastic Stack 和 OpenSearch 的完全集成，通过这些工具，用户可以浏览安全警报。
 
-Wazuh 在 FreeBSD 上的移植由 Michael Muenz 开始。他在 2021 年 9 月将 Wazuh 首次添加到 ports 树中，即 security/wazuh-agent。在 2022 年 7 月，我接手了这个端口的维护，并开始移植其他 Wazuh 组件。
+Wazuh 在 FreeBSD 上的移植由 Michael Muenz 开始。他在 2021 年 9 月将 Wazuh 首次添加到 ports 树中，即 security/wazuh-agent。在 2022 年 7 月，我接手了这个 port 的维护，并开始移植其他 Wazuh 组件。
 
 目前，所有的 Wazuh 组件都已经移植或适配：security/wazuh-manager、security/wazuh-agent、security/wazuh-server、security/wazuh-indexer 和 security/wazuh-dashboard。
 
@@ -4911,7 +4911,7 @@ FreeBSD 13.2-RELEASE 的发行说明包含了在 13-STABLE 开发线上对 FreeB
 
 这份文件描述了自 13.1-RELEASE 以来 FreeBSD 中最容易被用户看到的新功能或变化。一般来说， 这里描述的变化都是 13-STABLE 分支所特有的， 除非特别标注为合并的特性。
 
-典型的发布说明记录了在 13.1-RELEASE 之后发布的安全公告， 新的驱动或硬件支持，新的命令或选项，主要的错误修正，或贡献的软件升级。它们也可能列出主要的端口/包的变化或发布工程实践。显然，发行说明不可能列出 FreeBSD 在不同版本之间的每一个变化；这份文件主要关注安全公告、用户可见的变化， 以及主要的架构改进。
+典型的发布说明记录了在 13.1-RELEASE 之后发布的安全公告， 新的驱动或硬件支持，新的命令或选项，主要的错误修正，或贡献的软件升级。它们也可能列出主要的 port/包的变化或发布工程实践。显然，发行说明不可能列出 FreeBSD 在不同版本之间的每一个变化；这份文件主要关注安全公告、用户可见的变化， 以及主要的架构改进。
 
 ### 从旧版 FreeBSD 升级
 
