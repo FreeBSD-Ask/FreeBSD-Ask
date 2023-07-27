@@ -191,6 +191,7 @@
 * [第17.6节 Typecho](di-17-zhang-wang-luo-fu-wu-qi/di-17.6-jie-typecho.md)
 * [第17.7节 SSL 配置](di-17-zhang-wang-luo-fu-wu-qi/di-17.7-jie-ssl-pei-zhi.md)
 * [第17.8节 PostgreSQL 与 pgAdmin4](di-17-zhang-wang-luo-fu-wu-qi/di-17.8-jie-postgresql-yu-pgadmin4.md)
+* [第 17.9 节 Telegraf+InfluxDB+Grafana 监控平台](di-17.9-jie-telegraf-jia-influxdb-jia-grafana-jian-kong-ping-tai.md)
 
 ## 第18章 树莓派与嵌入式
 
@@ -218,6 +219,7 @@
 * [第19.14节 小说——你与暗](di-19-zhang-wen-xue-gu-shi/di-19.14-jie-xiao-shuo-ni-yu-an.md)
 * [第19.15节 吾乡何处](di-19-zhang-wen-xue-gu-shi/di-19.15-jie-wu-xiang-he-chu.md)
 * [第19.16节 哲学的学习](di-19-zhang-wen-xue-gu-shi/di-19.16-jie-zhe-xue-de-xue-xi.md)
+* [第 19.17 节 杂记](di-19-zhang-wen-xue-gu-shi/di-19.17-jie-za-ji.md)
 
 ## 第20章 娱乐与教育
 
@@ -322,7 +324,7 @@
 * [第 30.11 节 Linux 兼容层——基于 Deepin](di-30-zhang-linux-jian-rong-ceng/di-30.11-jie-linux-jian-rong-ceng-ji-yu-deepin.md)
 * [第 30.12 节 高级教程：Linux 兼容层与 Jail](di-30-zhang-linux-jian-rong-ceng/di-30.12-jie-gao-ji-jiao-cheng-linux-jian-rong-ceng-yu-jail.md)
 
-## 第31章TwinCAT/BSD
+## 第31章 TwinCAT/BSD
 
 * [第31.1节 简介](di-31-zhang-twincatbsd/di-31.1-jie-jian-jie.md)
 * [第31.2节 系统安装与基本配置](di-31-zhang-twincatbsd/di-31.2-jie-xi-tong-an-zhuang-yu-ji-ben-pei-zhi.md)
