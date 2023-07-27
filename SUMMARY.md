@@ -191,6 +191,7 @@
 * [第17.6节 Typecho](di-17-zhang-wang-luo-fu-wu-qi/di-17.6-jie-typecho.md)
 * [第17.7节 SSL 配置](di-17-zhang-wang-luo-fu-wu-qi/di-17.7-jie-ssl-pei-zhi.md)
 * [第17.8节 PostgreSQL 与 pgAdmin4](di-17-zhang-wang-luo-fu-wu-qi/di-17.8-jie-postgresql-yu-pgadmin4.md)
+* [第 17.9 节 Telegraf+InfluxDB+Grafana 监控平台](di-17.9-jie-telegraf-jia-influxdb-jia-grafana-jian-kong-ping-tai.md)
 
 ## 第18章 树莓派与嵌入式
 
