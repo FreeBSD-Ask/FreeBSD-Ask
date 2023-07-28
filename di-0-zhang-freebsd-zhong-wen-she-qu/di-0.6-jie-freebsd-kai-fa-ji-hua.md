@@ -25,15 +25,15 @@
 | 对于 amd64 的 kboot 支持                         | imp            |                    |
 | NVMe-oF/TCP                                      | jhb            |                    |
 | 在 mv 和 install 中添加 copy_file_range()        | pjd            |                    |
-| 更好的 copy_file_range()回退/包装                | pjd            |                    |
+| 更好的 copy_file_range() fallback/wrapper       | pjd            |                    |
 | arm64 分支目标标识                               | andrew         |                    |
 | arm64 SVE                                        | andrew         |                    |
 | amd64/arm64 救援内核                             | markj / Klara  |                    |
 | arm64 bhyve                                      | andrew         |                    |
-| iovec 包装器                                     | brooks         |                    |
+| iovec wrappers                                  | brooks         |                    |
 | 在 bhyve 中支持单步执行 AMD CPU                  | jhb Bojan      |                    |
 | 在 bhyve 客户机中支持硬件监视点                  | jhb Bojan      |                    |
-| DDB 通过 CTF 进行漂亮打印                        | jhb Bojan      |
+| DDB 通过 CTF 进行优化打印                        | jhb Bojan      |
 | 整合来自我的谷歌代码之夏学生代码的加载器命令行编辑功能 | imp            | 需要协助           |
 | 使用 dtrace 进行内联函数追踪                     | markj Christos |                    |
 | 谷歌代码之夏：squashfs                                   | chuck          |                    |
@@ -65,14 +65,14 @@
 | 9pfs 客户端                                                                 | bkumara，khng / Juniper | --                                                                                                                |
 | overlayfs                                                                   | thj / Klara             |                                                                                                                   |
 | 关于 syscall 表生成的更新（makesyscalls.lua 的库化）                        | imp                     |                                                                                                                   |
-| 简化的安装程序（单盘，更好的默认值，例如按 Enter 键完成）                   | emaste brd              |                                                                                                                   |
+| 简化的安装程序（单个磁盘，有更好的默认值，例如按回车键完成）                   | emaste brd              |                                                                                                                   |
 | 每个文件的 nullfs                                                           | dfr                     |                                                                                                                   |
 | 更多的容器支持                                                              | emaste                  | 合作学生                                                                                                          |
 | MINIMAL 内核                                                                | imp                     |                                                                                                                   |
 | 启动加载程序支持 devmatch                                                   | imp manu                |                                                                                                                   |
 | 重写 config(8)（使用 Lua？）                                                | imp kevans              |                                                                                                                   |
 | 跨 kldxref                                                                  | brooks / jhb            | （kevans 有一种有些混乱的原型或两种）                                                                             |
-| 合并 devmatch 和 devd（库化）                                               | imp                     | meena 愿意协助                                                                                                    |
+| 合并 devmatch 和 devd（库）                                               | imp                     | meena 愿意协助                                                                                                    |
 | 调度器和 VFS 文档覆盖范围                                                   | mhorne                  |                                                                                                                   |
 | 减少 GIANT 的修改                                                           | jhb imp                 |                                                                                                                   |
 | vt(4)的更好 i18n 支持（CJK 字体，Unicode 字体显示（例如表情符号），输入法） | fanchung                | 在 GSoC'21 有一个[IME PoC](https://wiki.freebsd.org/SummerOfCode2021Projects/InputMethodInFreeBSDVirtualTerminal) |
