@@ -14,7 +14,7 @@
 
 使用 **U 盘** 安装应该选用 `img` 结尾的镜像，例如
 
-[FreeBSD-13.1-RELEASE-amd64-memstick.img](https://download.freebsd.org/ftp/releases/amd64/amd64/ISO-IMAGES/13.1/FreeBSD-13.1-RELEASE-amd64-memstick.img)
+[FreeBSD-13.2-RELEASE-amd64-memstick.img](https://download.freebsd.org/ftp/releases/amd64/amd64/ISO-IMAGES/13.2/FreeBSD-13.2-RELEASE-amd64-memstick.img)
 
 只有当使用 **光盘/虚拟机** 安装时才应选用 `iso` 结尾的镜像。
 
@@ -34,7 +34,7 @@ rufus 下载地址：<https://rufus.ie/zh>
 >
 > **不建议** 使用 FreeBSD 手册推荐的 win32diskimager，有时会出现校验码错误的情况（实际上文件校验码正常）。
 >
-> **严禁** 使用 ventoy 引导实体机安装，有时会报错找不到安装文件。
+> **严禁** 使用 Ventoy 引导实体机安装，有时会报错找不到安装文件。
 >
 > 请 **老老实实用 rufus。**
 
