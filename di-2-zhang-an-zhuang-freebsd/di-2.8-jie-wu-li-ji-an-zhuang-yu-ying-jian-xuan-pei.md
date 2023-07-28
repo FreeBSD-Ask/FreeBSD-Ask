@@ -80,7 +80,7 @@ rufus 下载地址：<https://rufus.ie/zh>
 
 > \* 绿联 USB 千兆网卡 CM209 时断时续。不建议购买：
 >
-> - https://bugs.freebsd.org/bugzilla/show\_bug.cgi?id=267514
+> - <https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=267514>
 
 ## 归档内容
 
