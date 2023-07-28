@@ -12,6 +12,8 @@ Linux kernel 项目 1990；
 
 GNU/Linux = Linux kernel + GNU 等软件 + 包管理器
 
+>**chimera linux 除外**
+
 Linux 全称为 GNU/Linux；GNU 项目 1984；
 
 具体地：
