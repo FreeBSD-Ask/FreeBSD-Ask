@@ -63,7 +63,8 @@ freyr
 
 isNijikawa
 
-matatabi-wang
+
+[matatabi-wang](https://github.com/matatabi-wang)
 
 地铁卡
 
