@@ -34,7 +34,7 @@
 | 在 bhyve 中支持单步执行 AMD CPU                  | jhb Bojan      |                    |
 | 在 bhyve 客户机中支持硬件监视点                  | jhb Bojan      |                    |
 | DDB 通过 CTF 进行优化打印                        | jhb Bojan      |
-| 整合来自我的谷歌代码之夏学生代码的加载器命令行编辑功能 | imp            | 需要协助           |
+| 整合来自我的谷歌代码之夏学生的代码的加载器命令行编辑功能 | imp            | 需要协助           |
 | 使用 dtrace 进行内联函数追踪                     | markj Christos |                    |
 | 谷歌代码之夏：squashfs                                   | chuck          |                    |
 
@@ -101,7 +101,7 @@
 | NIS 服务器组件                                                                                        | des?            |                                                                                           |
 | publicwkey(5)                                                                                         | manu            | [D30683](https://reviews.freebsd.org/D30683)、[D30682](https://reviews.freebsd.org/D30682) |
 | targ(4) CAM 目标驱动程序                                                                              | imp             |                                                                                           |
-| fingerd                                                                                               | ??              | meena 愿意自愿负责                                                                        |
+| fingerd                                                                                               | ??              | meena 自愿负责                                                                        |
 | 3dfx(4)和`*_isa`                                                                                      | jhb             |                                                                                           |
 | syscons(4)（至少弃用）                                                                                | emaste / manu   |                                                                                           |
 | 审查以太网驱动程序（100Mbps、少见的 1/10Gbps）                                                        | brooks          |                                                                                           |
