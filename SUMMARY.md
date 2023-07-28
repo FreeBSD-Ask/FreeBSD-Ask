@@ -10,6 +10,7 @@
 * [第0.2节 FreeBSD 中文社区发展规划](di-0-zhang-freebsd-zhong-wen-she-qu/di-0.2-jie-freebsd-zhong-wen-she-qu-fa-zhan-gui-hua.md)
 * [第0.3节 FreeBSD 的不足之处](di-0-zhang-freebsd-zhong-wen-she-qu/di-0.3-jie-freebsd-de-bu-zu-zhi-chu.md)
 * [第0.4节 FreeBSD 发行说明](di-0-zhang-freebsd-zhong-wen-she-qu/di-0.4-jie-freebsd-fa-hang-shuo-ming.md)
+* [第 0.5 节 FreeBSD 季度报告](di-0-zhang-freebsd-zhong-wen-she-qu/di-0.5-jie-freebsd-ji-du-bao-gao.md)
 
 ## 第1章 走进 FreeBSD
 
@@ -191,7 +192,7 @@
 * [第17.6节 Typecho](di-17-zhang-wang-luo-fu-wu-qi/di-17.6-jie-typecho.md)
 * [第17.7节 SSL 配置](di-17-zhang-wang-luo-fu-wu-qi/di-17.7-jie-ssl-pei-zhi.md)
 * [第17.8节 PostgreSQL 与 pgAdmin4](di-17-zhang-wang-luo-fu-wu-qi/di-17.8-jie-postgresql-yu-pgadmin4.md)
-* [第 17.9 节 Telegraf+InfluxDB+Grafana 监控平台](di-17.9-jie-telegraf-jia-influxdb-jia-grafana-jian-kong-ping-tai.md)
+* [第 17.9 节 Telegraf+InfluxDB+Grafana 监控平台](di-17-zhang-wang-luo-fu-wu-qi/di-17.9-jie-telegraf+influxdb+grafana-jian-kong-ping-tai.md)
 
 ## 第18章 树莓派与嵌入式
 
