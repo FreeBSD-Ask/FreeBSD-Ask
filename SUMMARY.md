@@ -11,6 +11,7 @@
 * [第0.3节 FreeBSD 的不足之处](di-0-zhang-freebsd-zhong-wen-she-qu/di-0.3-jie-freebsd-de-bu-zu-zhi-chu.md)
 * [第0.4节 FreeBSD 发行说明](di-0-zhang-freebsd-zhong-wen-she-qu/di-0.4-jie-freebsd-fa-hang-shuo-ming.md)
 * [第 0.5 节 FreeBSD 季度报告](di-0-zhang-freebsd-zhong-wen-she-qu/di-0.5-jie-freebsd-ji-du-bao-gao.md)
+* [第 0.6 节 FreeBSD 开发计划](di-0-zhang-freebsd-zhong-wen-she-qu/di-0.6-jie-freebsd-kai-fa-ji-hua.md)
 
 ## 第1章 走进 FreeBSD
 
