@@ -1,10 +1,6 @@
 # 第 0.4 节 FreeBSD 发行说明
 
-> FreeBSD 的生命周期为每个大版本 5 年，小版本是发布新的小版本版后 +3 个月。
->
-> FreeBSD 14 开发计划 [https://github.com/bsdjhb/devsummit/blob/main/14.0/planning.md](https://github.com/bsdjhb/devsummit/blob/main/14.0/planning.md)
->
-> FreeBSD 15 开发计划 <https://github.com/bsdjhb/devsummit/blob/main/15.0/planning.md>
+
 
 ## FreeBSD 13.2 发行说明
 
