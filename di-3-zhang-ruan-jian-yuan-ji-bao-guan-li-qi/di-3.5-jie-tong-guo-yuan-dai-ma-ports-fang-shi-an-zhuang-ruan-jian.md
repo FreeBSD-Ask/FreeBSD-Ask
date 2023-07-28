@@ -102,13 +102,10 @@ MAKE_JOBS_NUMBER=4
 
 ### 如何使用多线程下载：
 
-> **警告**
->
-> **注意此小节内容不再对 FreeBSD 13 有效，在 2022-10-11 日 axel 由于上游长期停止开发**[**被移除了**](https://www.freshports.org/ftp/axel/)**。推荐使用 `www/aria2`**
 
-~~`# pkg install axel #下载多线程下载工具#`~~
+`# pkg install axel` #下载多线程下载工具
 
-~~新建或者编辑 `# ee /etc/make.conf` 文件，写入以下两行：~~
+新建或者编辑 `# ee /etc/make.conf` 文件，写入以下两行：
 
 ```
 FETCH_CMD=axel
