@@ -8,7 +8,7 @@
 
 ## FreeBSD 13.2 发行说明
 
-> 原文链接 [https://www.freebsd.org/releases/13.1R/relnotes/](https://www.freebsd.org/releases/13.2R/relnotes/)
+> 原文链接 [https://www.freebsd.org/releases/13.2R/relnotes/](https://www.freebsd.org/releases/13.2R/relnotes/)
 
 ### 摘要
 
