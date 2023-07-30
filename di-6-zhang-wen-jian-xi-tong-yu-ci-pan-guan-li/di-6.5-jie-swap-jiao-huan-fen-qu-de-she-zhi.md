@@ -2,6 +2,8 @@
 
 如果在安装系统的时候并未设置 swap 即交换分区，那么后期只能通过 dd 生成一个交换分区文件来实现了。因为无论是 UFS 还是 ZFS 都是不支持缩小文件系统分区的。
 
+## 传统的 dd 单个文件
+
 dd 一个 大小为 1GB 的 swap 文件：
 
 ```
@@ -25,3 +27,19 @@ dd 一个 大小为 1GB 的 swap 文件：
 ```
 swapfile="/usr/swap0"
 ```
+
+## 使用 ZFS 卷充当 swap
+
+```
+# zfs create -V 8G zroot/swap
+# swapon /dev/zvol/zroot/swap
+```
+
+以上，参数 `-V` 创建 zfs 卷而不是 zfs 文件系统。zfs 默认的名字就是 `zroot`。
+
+写入 `/etc/fstab` 开机时自动挂载：
+
+```
+/dev/zvol/zroot/swap none swap sw
+```
+
