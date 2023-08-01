@@ -42,7 +42,7 @@ rufus 下载地址：<https://rufus.ie/zh>
 
 更多硬件请参考：
 
-[**https://bsd-hardware.info/?d=FreeBSD**](https://bsd-hardware.info/?d=FreeBSD)
+<https://bsd-hardware.info/?view=search>
 
 <figure><img src="../.gitbook/assets/h1.png" alt=""><figcaption></figcaption></figure>
 
