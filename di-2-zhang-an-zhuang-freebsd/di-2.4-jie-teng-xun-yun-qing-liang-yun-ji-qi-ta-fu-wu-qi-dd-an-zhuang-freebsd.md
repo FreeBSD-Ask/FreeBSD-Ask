@@ -6,7 +6,7 @@
 
 ## 视频教程
 
-http://b23.tv/zcfHa4K
+<https://www.bilibili.com/video/BV1R341147V4>
 
 ## 文字教程
 
