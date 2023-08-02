@@ -143,7 +143,7 @@ DISABLE_SIZE=yes
 
 升级 ports
 
-\`# portsnap auto
+`# portsnap auto`
 
 ports 编译的软件也可以转换为 pkg 包
 
