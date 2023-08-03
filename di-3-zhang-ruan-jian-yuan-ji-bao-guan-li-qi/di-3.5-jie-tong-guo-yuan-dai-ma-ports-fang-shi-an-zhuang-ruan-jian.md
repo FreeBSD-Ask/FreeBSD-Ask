@@ -122,6 +122,7 @@ tmpfs /tmp tmpfs rw 0 0
 
 
 ### ccache
+**这部分现在有点问题，先不要用**
 
 >**警告**
 >
@@ -149,6 +150,11 @@ export DISTCC_HOSTS="localhost host1 host2"
 ```
 setenv CCACHE_PREFIX distcc
 setenv DISTCC_HOSTS "localhost host1 host2"
+```
+
+做软链接：
+```
+# ccache-update-links
 ```
 ```
 root@ykla:/usr/ports/devel/ccache4 # ccache -M 5G  # 设置编译缓存最大为 5GB
