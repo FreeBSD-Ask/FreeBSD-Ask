@@ -77,9 +77,9 @@ ssh 链接后，`kldload zfs` 加载 zfs 模块，然后运行 `bsdinstall`，�
 
 ![腾讯云轻量云及其他服务器安装 FreeBSD](../.gitbook/assets/installBSD1.png)
 
-![腾讯云轻量云及其他服务器安装 FreeBSD](../.gitbook/assets/installBSD2.png)
+![腾讯云轻量云及其他服务器安装 FreeBSD](../.gitbook/assets/installBSD2.jpg)
 
-![腾讯云轻量云及其他服务器安装 FreeBSD](../.gitbook/assets/installBSD3.png)
+![腾讯云轻量云及其他服务器安装 FreeBSD](../.gitbook/assets/installBSD3.jpg)
 
 #### 原始版本（不推荐，比较麻烦）
 
