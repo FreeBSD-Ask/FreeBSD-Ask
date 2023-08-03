@@ -234,7 +234,7 @@ c) 如 <URL:https://www.FreeBSD.org/handbook/kernelconfig.html> 中所述，重�
 ```
 
 
-或访问以下 URL，将 NNNNNN 替换为修订号：
+或访问以下 URL，将 `NNNNNN` 替换为修订号：
 
 <URL:https://svnweb.freebsd.org/base?view=revision&revision=NNNNNN>
 
