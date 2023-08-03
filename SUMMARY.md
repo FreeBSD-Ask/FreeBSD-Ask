@@ -12,7 +12,7 @@
 * [第 0.4 节 FreeBSD 发行说明](di-0-zhang-freebsd-zhong-wen-she-qu/di-0.4-jie-freebsd-fa-hang-shuo-ming.md)
 * [第 0.5 节 FreeBSD 季度报告](di-0-zhang-freebsd-zhong-wen-she-qu/di-0.5-jie-freebsd-ji-du-bao-gao.md)
 * [第 0.6 节 FreeBSD 开发计划](di-0-zhang-freebsd-zhong-wen-she-qu/di-0.6-jie-freebsd-kai-fa-ji-hua.md)
-* [第 1.7 节 FreeBSD 安全公告](di-0-zhang-freebsd-zhong-wen-she-qu/di-1.7-jie-freebsd-an-quan-gong-gao.md)
+* [第 0.7 节 FreeBSD 安全公告](di-0-zhang-freebsd-zhong-wen-she-qu/di-0.7-jie-freebsd-an-quan-gong-gao.md)
 
 ## 第 1 章 走进 FreeBSD
 
