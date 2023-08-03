@@ -37,17 +37,18 @@
 
 就是因为刚才说的问题，而且 FreeBSD 和一般的 Linux 是不同的生态，我们需要先进入一个 Linux 的内存盘，再在内存中运行的 Linux 里将 mfsBSD 写入硬盘。
 
-就在 mfsBSD 下载位置的下方，有一个 [mfsLinux](https://mfsbsd.vx.sk/files/iso/mfslinux/mfslinux-0.1.9-dd4a135.iso)，就是我们可以用的工具。由于它只有 ISO 格式，没法直接放在当前环境下启动，而它说自己是纯 initrd 类型的，我们就把启动它的 initrd 和内核提取出来，放在硬盘里手动启动。
+就在 mfsBSD 下载位置的下方，有一个 [mfsLinux](https://mfsbsd.vx.sk/files/iso/mfslinux/mfslinux-0.1.10-f9c75a4.iso)，就是我们可以用的工具。由于它只有 ISO 格式，没法直接放在当前环境下启动，而它说自己是纯 initrd 类型的，我们就把启动它的 initrd 和内核提取出来，放在硬盘里手动启动。
 
 我们知道在一般的 Linux 系统中，initrd 是一个打包成内存盘的微型但完整的 Linux 根目录，里面有一些比如说加载驱动，挂载硬盘，以及启动初始化程序的必要数据。开机时内核与 initrd 被 Bootloader 加载，initrd 中的脚本进行启动的准备工作并运行硬盘里的初始化程序。
 
-我们先把从那个 ISO 提取出来的内核和 initrd 文件放在根目录比如说 qwq 这个文件夹下，然后重启机器进入 GRUB 的命令行界面（可以在倒计时的时候按 `e` 进入编辑模式，删掉所有 `linux`、`initrd` 行原有内容，写完后按 `Ctrl X` 即可加载），手动启动指定的内核和 initrd（可以用 `Tab` 键补全路径）。
+我们先把从那个 ISO 提取出来的内核和 initrd 文件放在根目录文件夹下，然后重启机器进入 GRUB 的命令行界面（可以在倒计时的时候按 `e` 进入编辑模式，删掉所有 `linux`、`initrd` 行原有内容，写完后按 `Ctrl X` 即可加载），手动启动指定的内核和 initrd（可以用 `Tab` 键补全路径）。
 
 ```
-linux (hd0,msdos1)/qwq/vmlinuz
-initrd (hd0,msdos1)/qwq/initramfs.igz
-boot
+linux (hd0,msdos1)/vmlinuz
+initrd (hd0,msdos1)/initramfs.igz
 ```
+
+**不一定是 **(hd0,msdos1)**，以实际为准，不要一下都删掉了看不出来了。**
 
 ![](../.gitbook/assets/2.png)
 
