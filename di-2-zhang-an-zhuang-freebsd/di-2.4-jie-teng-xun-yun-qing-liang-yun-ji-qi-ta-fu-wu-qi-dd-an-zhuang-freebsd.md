@@ -19,14 +19,14 @@
 
 他是一个服务器面板里没有 FreeBSD 镜像 IDC，所以要用奇怪的方法来安装了。因为 FreeBSD 和 Linux 的内核不通用，可执行文件也不通用，所以无法通过 chroot 再删掉源系统的方法安装。安装的方法是先在内存盘中启动 FreeBSD 系统，也就是 [mfsBSD](https://mfsbsd.vx.sk)，再格式化硬盘安装新系统。mfsBSD 是一个完全载入内存的 FreeBSD 系统，类似于 Windows 中的 PE。
 
-我们需要下载 [img 格式的 mfsBSD 镜像](https://mfsbsd.vx.sk/files/images/13/amd64/mfsbsd-se-13.0-RELEASE-amd64.img)，我也不知道 mfsBSD 的服务器在国内连接如何，所以就把文件先传到了另一台国内的文件服务器上。
+我们需要下载 [img 格式的 mfsBSD 镜像](https://mfsbsd.vx.sk/files/images/13/amd64/mfsbsd-se-13.1-RELEASE-amd64.img)，我也不知道 mfsBSD 的服务器在国内连接如何，所以就把文件先传到了另一台国内的文件服务器上。
 
 ### 为什么不能直接 dd？（错误示范，仅供说明，请勿执行）
 
 我试了在正常的 Linux 系统内直接把 mfsBSD 的 img dd 到硬盘里，重启之后虽然正常加载 bootloader，但是可能是因为系统又对硬盘进行了写入而无法正常挂载内存盘。
 
 ```
-# wget https://mfsbsd.vx.sk/files/images/13/amd64/mfsbsd-se-13.0-RELEASE-amd64.img -O- | dd of=/dev/vda
+# wget https://mfsbsd.vx.sk/files/images/13/amd64/mfsbsd-se-13.1-RELEASE-amd64.img -O- | dd of=/dev/vda
 ```
 
 这里的 `|` 是管道的意思，将上一个命令的标准输出作为下一个命令的标准输入。 `-O-` 指把文件下载输出到标准输出，而 dd 没有指定 if 时会自动从标准输入读取内容。
@@ -59,8 +59,8 @@ mfsBSD 和 mfsLinux 镜像的 root 密码默认是 `mfsroot`
 
 ```
 # cd /tmp
-# wget https://mfsbsd.vx.sk/files/images/13/amd64/mfsbsd-se-13.0-RELEASE-amd64.img
-# dd if=mfsbsd-se-13.0-RELEASE-amd64.img of=/dev/vda
+# wget https://mfsbsd.vx.sk/files/images/13/amd64/mfsbsd-se-13.1-RELEASE-amd64.img
+# dd if=mfsbsd-se-13.1-RELEASE-amd64.img of=/dev/vda
 # reboot
 ```
 
@@ -75,7 +75,7 @@ mfsBSD 和 mfsLinux 镜像的 root 密码默认是 `mfsroot`
 ```
 # mkdir -p /usr/freebsd-dist
 # cd /usr/freebsd-dist
-# fetch http://ftp.freebsd.org/pub/FreeBSD/releases/amd64/13.0-RELEASE/MANIFEST
+# fetch http://ftp.freebsd.org/pub/FreeBSD/releases/amd64/13.1-RELEASE/MANIFEST
 ```
 
 最后执行 `# bsdinstall` 进行正常的安装即可（最好使用自动 ufs 分区）。 请注意大多数服务器如本文的示例腾讯云轻量云，是不支持 UEFI 的，仍然使用传统的 BIOS；另外请使用 ufs，zfs 安装时会出错（我认为可能是由于当时没有加载 zfs 模块导致的，有意者可试试 `kldload zfs` 后使用 zfs 安装。）。
