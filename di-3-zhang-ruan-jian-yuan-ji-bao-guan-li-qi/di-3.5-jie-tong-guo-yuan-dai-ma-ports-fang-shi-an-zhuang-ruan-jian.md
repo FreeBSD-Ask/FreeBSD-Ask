@@ -85,20 +85,40 @@
 
 其中 BATCH=yes 的意思是使用默认配置
 
-## FreeBSD ports 多线程编译（推荐）
+## 加速编译
 
-Linux 如 gentoo 上一般是直接 `-jx` 或者 `jx+1`, `x` 为核心数。
+### FreeBSD ports 多线程编译（推荐）
 
-FreeBSD ports 多线程编译
+
+- FreeBSD ports 多线程编译
 
 ```
 FORCE_MAKE_JOBS=yes
 MAKE_JOBS_NUMBER=4
 ```
+Linux 如 Gentoo 上一般是直接 `-jx` 或者 `jx+1`, `x` 为核心数。
 
-写入 `/etc/make.conf` 没有就新建。
+写入 `/etc/make.conf` 没有就 `touch` 新建一个。
 
 `4` 是处理器核心数（还是线程数？），不知道就别改。英特尔的处理器搜索 `CPU型号+ARK` 转跳英特尔官网可查询线程数。
+
+- 个别情况下可以设置别名加速编译：（非永久设置）
+
+```
+# alias ninja='ninja -j4'
+```
+
+### 设置内存为 tmp
+
+`ee /etc/fatab` 写入：
+
+```
+tmpfs /tmp tmpfs rw 0 0
+```
+
+重启。
+
+参考资料：<https://man.freebsd.org/cgi/man.cgi?tmpfs(5)>
 
 ### 如何使用多线程下载：
 
@@ -114,7 +134,10 @@ FETCH_AFTER_ARGS=
 DISABLE_SIZE=yes
 ```
 
-### 进阶
+
+
+
+## 进阶
 
 如果不选择 `BATCH=yes` 的方法手动配置依赖：
 
@@ -149,7 +172,7 @@ ports 编译的软件也可以转换为 pkg 包
 
 `# pkg create nginx`
 
-### FreeBSD 包升级管理工具
+## FreeBSD 包升级管理工具
 
 首先更新 Ports
 
