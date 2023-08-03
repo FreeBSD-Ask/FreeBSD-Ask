@@ -121,17 +121,17 @@ tmpfs /tmp tmpfs rw 0 0
 参考资料：<https://man.freebsd.org/cgi/man.cgi?tmpfs(5)>
 
 
-### ccahe
+### ccache
 
 >**警告**
 >
 >使用 ccahe 可能会导致编译失败！只在重复编译时起效果，首次编译不仅不会加速还会慢上一些。是一种以空间换时间的行为。
 
 
-目前最新版本是 ccahe4：
+目前最新版本是 ccache4：
 
 ```
-# pkg install ccahe4
+# pkg install ccache4
 ```
 
 或
