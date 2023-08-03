@@ -151,7 +151,7 @@ setenv CCACHE_PREFIX distcc
 setenv DISTCC_HOSTS "localhost host1 host2"
 ```
 ```
-root@ykla:/usr/ports/devel/ccache4 # ccache -M 5G  # 设置编译缓存为 5GB
+root@ykla:/usr/ports/devel/ccache4 # ccache -M 5G  # 设置编译缓存最大为 5GB
 Set cache size limit to 5.0 GB
 
 root@ykla:/usr/ports/devel/ccache4 # ccache -s  # 查看编译缓存
