@@ -59,8 +59,8 @@ mfsBSD 和 mfsLinux 镜像的 root 密码默认是 `mfsroot`
 
 ```
 # cd /tmp
-# wget https://mfsbsd.vx.sk/files/images/13/amd64/mfsbsd-se-13.1-RELEASE-amd64.img
-# dd if=mfsbsd-se-13.1-RELEASE-amd64.img of=/dev/vda
+# wget https://mfsbsd.vx.sk/files/images/13/amd64/mfsbsd-13.1-RELEASE-amd64.img
+# dd if=mfsbsd-13.1-RELEASE-amd64.img of=/dev/vda
 # reboot
 ```
 
