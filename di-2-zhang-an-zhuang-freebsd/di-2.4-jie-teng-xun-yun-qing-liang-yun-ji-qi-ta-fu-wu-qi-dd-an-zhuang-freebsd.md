@@ -11,9 +11,7 @@
 >**安装前请在原有的 Linux 系统上看看自己的 IP 及 netmask，可以用命令 `ip addr` 及 `ip route show` 查看网关信息。因为有的服务器并不使用 DHCP 服务，而需要手动指定 IP。**
 ## 视频教程
 
-**该视频为老方法，比较复杂。**
 
-<https://www.bilibili.com/video/BV1R341147V4>
 
 ## 文字教程
 
@@ -70,9 +68,6 @@ mfsBSD 和 mfsLinux 镜像的 root 密码默认是 `mfsroot`
 
 ### 安装 FreeBSD
 
-
-#### 优化版本
-
 ssh 链接后，`kldload zfs` 加载 zfs 模块，然后运行 `bsdinstall`，在出现以下图片时，点 `Other` 输入图中的指定镜像版本（地址里有即可，你可以自己改哦）：
 
 示例：如 <https://mirrors.ustc.edu.cn/freebsd/releases/amd64/13.2-RELEASE/> 或 <https://mirrors.nju.edu.cn/freebsd/snapshots/arm64/14.0-CURRENT/>
@@ -83,16 +78,4 @@ ssh 链接后，`kldload zfs` 加载 zfs 模块，然后运行 `bsdinstall`，�
 
 ![腾讯云轻量云及其他服务器安装 FreeBSD](../.gitbook/assets/installBSD3.jpg)
 
-#### 原始版本（不推荐，比较麻烦）
 
-等待系统初始化完成之后就可以 ssh 上去了，不过还需要一个步骤才能正常安装（不然走完安装向导会报错）
-
-我们还需要下载 FreeBSD 的安装清单文件。
-
-```
-# mkdir -p /usr/freebsd-dist
-# cd /usr/freebsd-dist
-# fetch http://ftp.freebsd.org/pub/FreeBSD/releases/amd64/13.1-RELEASE/MANIFEST
-```
-
-最后执行 `# bsdinstall` 进行正常的安装即可（最好使用自动 ufs 分区）。 请注意大多数服务器如本文的示例腾讯云轻量云，是不支持 UEFI 的，仍然使用传统的 BIOS；另外请使用 ufs，zfs 安装时会出错（我认为可能是由于当时没有加载 zfs 模块导致的，有意者可试试 `kldload zfs` 后使用 zfs 安装。）。
