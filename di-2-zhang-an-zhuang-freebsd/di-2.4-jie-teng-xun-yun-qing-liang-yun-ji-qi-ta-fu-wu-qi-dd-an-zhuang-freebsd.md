@@ -11,6 +11,8 @@
 >**安装前请在原有的 Linux 系统上看看自己的 IP 及 netmask，可以用命令 `ip addr` 及 `ip route show` 查看网关信息。因为有的服务器并不使用 DHCP 服务，而需要手动指定 IP。**
 ## 视频教程
 
+**该视频为老方法，比较复杂。**
+
 <https://www.bilibili.com/video/BV1R341147V4>
 
 ## 文字教程
