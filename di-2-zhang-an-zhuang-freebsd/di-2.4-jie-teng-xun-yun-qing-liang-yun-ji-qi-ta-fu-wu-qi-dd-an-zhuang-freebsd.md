@@ -68,6 +68,21 @@ mfsBSD 和 mfsLinux 镜像的 root 密码默认是 `mfsroot`
 
 ### 安装 FreeBSD
 
+
+#### 优化版本
+
+ssh 链接后，`kldload zfs` 加载 zfs 模块，然后运行 `bsdinstall`，在出现以下图片时，输入图中的指定镜像版本（地址里有即可，你可以自己改哦）：
+
+示例：如 <https://mirrors.ustc.edu.cn/freebsd/releases/amd64/13.2-RELEASE/>
+
+![腾讯云轻量云及其他服务器安装 FreeBSD](../.gitbook/assets/installBSD1.png)
+
+![腾讯云轻量云及其他服务器安装 FreeBSD](../.gitbook/assets/installBSD2.png)
+
+![腾讯云轻量云及其他服务器安装 FreeBSD](../.gitbook/assets/installBSD3.png)
+
+#### 原始版本（不推荐，比较麻烦）
+
 等待系统初始化完成之后就可以 ssh 上去了，不过还需要一个步骤才能正常安装（不然走完安装向导会报错）
 
 我们还需要下载 FreeBSD 的安装清单文件。

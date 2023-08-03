@@ -1,5 +1,6 @@
 # 第 4.3 节 安装 Gnome
 
+> 当前 gnome 桌面对 dri3 的支持有问题，见 [Bug1](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=255049)、[Bug2](https://github.com/freebsd/drm-kmod/issues/72)
 ## 安装
 
 ```
