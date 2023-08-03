@@ -120,6 +120,53 @@ tmpfs /tmp tmpfs rw 0 0
 
 参考资料：<https://man.freebsd.org/cgi/man.cgi?tmpfs(5)>
 
+
+### ccahe
+
+>**警告**
+>
+>使用 ccahe 可能会导致编译失败！只在重复编译时起效果，首次编译不仅不会加速还会慢上一些。是一种以空间换时间的行为。
+
+
+目前最新版本是 ccahe4：
+
+```
+# pkg install ccahe4
+```
+
+或
+
+```
+# cd /usr/ports/devel/ccache4/ && make install clean
+```
+
+- ksh/sh 添加到 `/etc/profile`:
+```
+export CCACHE_PREFIX=distcc
+export DISTCC_HOSTS="localhost host1 host2"
+```
+- csh/tcsh 添加到 `/etc/csh.cshrc`:
+```
+setenv CCACHE_PREFIX distcc
+setenv DISTCC_HOSTS "localhost host1 host2"
+```
+```
+root@ykla:/usr/ports/devel/ccache4 # ccache -M 5G  # 设置编译缓存为 5GB
+Set cache size limit to 5.0 GB
+
+root@ykla:/usr/ports/devel/ccache4 # ccache -s  # 查看编译缓存
+Local storage:
+  Cache size (GB): 0.0 / 5.0 ( 0.00%)
+
+root@ykla:~ # find /  -name ccache.conf # 全局查找配置文件路径
+/root/.config/ccache/ccache.conf
+```
+
+
+参考文献：
+
+- <https://github.com/freebsd/freebsd-ports/blob/main/devel/ccache/files/ccache-howto-freebsd.txt.in>
+- <https://man.freebsd.org/cgi/man.cgi?query=ccache&sektion=1&n=1>
 ### 如何使用多线程下载：
 
 
