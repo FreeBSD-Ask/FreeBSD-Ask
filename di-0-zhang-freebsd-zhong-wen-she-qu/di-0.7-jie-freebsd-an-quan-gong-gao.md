@@ -4,10 +4,10 @@
 
 - **主题:**           bhyve 特权客户机通过 fwctl 实现逃逸
 
-- **类别: **          核心
-- **模块: **          bhyve
-- **发布日期: **      2023-08-01
-- **致谢： **        来自微软的 Omri Ben Bassat 和 Vladimir Eli Tokarev
+- **类别:**          核心
+- **模块:**          bhyve
+- **发布日期:**      2023-08-01
+- **致谢：**        来自微软的 Omri Ben Bassat 和 Vladimir Eli Tokarev
 - **影响版本:**       FreeBSD 13.1 和 13.2
 -**修复日期:**
   - 2023-08-01 19:48:53 UTC (stable/13, 13.2-STABLE)
