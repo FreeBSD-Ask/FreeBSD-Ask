@@ -39,6 +39,12 @@ pkg 升级：
 # make deinstall reinstall
 ```
 
+查看已经安装的所有软件：
+
+```
+# pkg info
+```
+
 ## 如何卸载软件
 
 直接使用 `pkg delete` 会破坏正常的依赖关系，应该尽量避免使用（ports 的 `make deinstall` 也一样），转而使用 `pkg-rmleaf` 命令，该命令属于的软件需要自行安装：
