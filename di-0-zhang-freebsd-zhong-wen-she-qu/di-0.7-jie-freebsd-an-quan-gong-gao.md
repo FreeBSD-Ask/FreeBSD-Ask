@@ -245,7 +245,7 @@ c) 如 <URL:https://www.FreeBSD.org/handbook/kernelconfig.html> 中所述，重�
 此安全公告的最新修订版可在以下 URL 上获取：
 <URL:https://security.FreeBSD.org/advisories/FreeBSD-SA-23:06.ipv6.asc>
 
-## FreeBSD FreeBSD-SA-23:08.ssh
+## FreeBSD 安全公告 FreeBSD-SA-23:08.ssh
 
 - **主题：** 潜在的通过 ssh-agent 转发进行远程代码执行
 
