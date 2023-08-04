@@ -9,6 +9,7 @@
 >**警告**
 >
 >**安装前请在原有的 Linux 系统上看看自己的 IP 及 netmask，可以用命令 `ip addr` 及 `ip route show` 查看网关信息。因为有的服务器并不使用 DHCP 服务，而需要手动指定 IP。**
+
 ## 视频教程
 
 
@@ -17,21 +18,10 @@
 
 [腾讯云轻量应用服务器（即腾讯云轻量云）](https://cloud.tencent.com/product/lighthouse)以及[阿里云轻量应用服务器](https://www.aliyun.com/product/swas)等机器都没有 FreeBSD 系统的支持，只能通过特殊的的方法自己暴力安装。**请注意数据安全，以下教程有一定危险性和要求你有一定的动手能力。**
 
-他是一个服务器面板里没有 FreeBSD 镜像 IDC，所以要用奇怪的方法来安装了。因为 FreeBSD 和 Linux 的内核不通用，可执行文件也不通用，所以无法通过 chroot 再删掉源系统的方法安装。安装的方法是先在内存盘中启动 FreeBSD 系统，也就是 [mfsBSD](https://mfsbsd.vx.sk)，再格式化硬盘安装新系统。mfsBSD 是一个完全载入内存的 FreeBSD 系统，类似于 Windows 中的 PE。
+他是一个服务器面板里没有 FreeBSD 镜像 IDC，所以要用奇怪的方法来安装了。因为 FreeBSD 和 Linux 的内核不通用，可执行文件也不通用，所以无法通过 chroot 再删掉源系统的方法安装。安装的方法是先在内存盘中启动 FreeBSD 系统，也就是 [mfsBSD](https://mfsbsd.vx.sk)，再格式化硬盘安装新系统。mfsBSD 是一个完全载入内存的 FreeBSD 系统，类似于 Windows 的 PE。
 
-我们需要下载 [img 格式的 mfsBSD 镜像](https://mfsbsd.vx.sk/files/images/13/amd64/mfsbsd-se-13.1-RELEASE-amd64.img)，我也不知道 mfsBSD 的服务器在国内连接如何，所以就把文件先传到了另一台国内的文件服务器上。
+我们需要下载 [img 格式的 mfsBSD 镜像](https://mfsbsd.vx.sk/files/images/13/amd64/mfsbsd-se-13.1-RELEASE-amd64.img)，可以提前下号使用 winscp 传入服务器，服务器直接下载可能需要两个小时。
 
-### 为什么不能直接 dd？（错误示范，仅供说明，请勿执行）
-
-我试了在正常的 Linux 系统内直接把 mfsBSD 的 img dd 到硬盘里，重启之后虽然正常加载 bootloader，但是可能是因为系统又对硬盘进行了写入而无法正常挂载内存盘。
-
-```
-# wget https://mfsbsd.vx.sk/files/images/13/amd64/mfsbsd-se-13.1-RELEASE-amd64.img -O- | dd of=/dev/vda
-```
-
-这里的 `|` 是管道的意思，将上一个命令的标准输出作为下一个命令的标准输入。 `-O-` 指把文件下载输出到标准输出，而 dd 没有指定 if 时会自动从标准输入读取内容。
-
-![](../.gitbook/assets/1.png)
 
 ### 真正的 mfsBSD 启动方法
 
@@ -79,4 +69,16 @@ ssh 链接后，`kldload zfs` 加载 zfs 模块，然后运行 `bsdinstall`，�
 
 ![腾讯云轻量云及其他服务器安装 FreeBSD](../.gitbook/assets/installBSD3.jpg)
 
+### 故障排除 
 
+- 为什么不能直接 dd？（错误示范，仅供说明，请勿执行）
+
+　　我试了在正常的 Linux 系统内直接把 mfsBSD 的 img dd 到硬盘里，重启之后虽然正常加载 bootloader，但是可能是因为系统又对硬盘进行了写入而无法正常挂载内存盘。
+
+```
+# wget https://mfsbsd.vx.sk/files/images/13/amd64/mfsbsd-se-13.1-RELEASE-amd64.img -O- | dd of=/dev/vda
+```
+
+　　这里的 `|` 是管道的意思，将上一个命令的标准输出作为下一个命令的标准输入。 `-O-` 指把文件下载输出到标准输出，而 dd 没有指定 if 时会自动从标准输入读取内容。
+
+![](../.gitbook/assets/1.png)
