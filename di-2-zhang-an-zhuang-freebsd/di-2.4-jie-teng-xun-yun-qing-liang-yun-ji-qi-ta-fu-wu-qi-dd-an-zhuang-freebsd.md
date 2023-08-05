@@ -12,7 +12,7 @@
 
 ## 视频教程
 
-
+<https://www.bilibili.com/video/BV1y8411d7pp>
 
 ## 文字教程
 
