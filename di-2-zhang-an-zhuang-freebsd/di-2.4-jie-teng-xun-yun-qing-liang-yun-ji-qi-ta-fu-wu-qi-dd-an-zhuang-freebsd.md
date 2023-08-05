@@ -93,3 +93,7 @@ ssh 链接后，`kldload zfs` 加载 zfs 模块，然后运行 `bsdinstall`，�
 
 
 - 如果有云服务器用 lvm 的话，需要把东西全都放到 /boot 里面，要不然 grub 和 mfslinux 都打不开。
+
+## 参考资料
+
+- <https://docs.freebsd.org/en/articles/remote-install/>
