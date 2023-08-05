@@ -167,3 +167,48 @@ PermitEmptyPasswords no                      #禁止空密码的用户进行登�
 使用 xshell 登录即可，输入密钥密码，导入私钥`id_rsa`，即可登录。
 
 > 如果使用其他 ssh 软件无法登陆请自行转换密钥格式。
+
+
+## 使用 screen 保持 SSH 不断线
+
+安装：
+
+```
+# pkg install screen
+```
+
+使用方法：
+
+```
+# screen -S xxx
+```
+
+使用 `-S` 可以指定 `xxx` 为名字，方便找到。
+
+然后就可以进行 ssh 连接了，后续可以关闭这个窗口或软件，不影响 ssh。
+
+查看有哪些正在运行的 screen？
+
+```
+root@ykla:/ # screen -ls
+There are screens on:
+	18380.pts-0.ykla	(Attached)
+	70812.xxx	(Detached)
+	67169.pts-0.ykla	(Detached)
+3 Sockets in /tmp/screens/S-root.
+```
+
+`Detached` 的可以直接 `-r` 恢复。
+
+```
+screen -r xxx
+```
+
+`Attached` 的必须先离线再恢复：
+
+```
+root@ykla:/ # screen -d 18380
+[18380.pts-0.ykla detached.]
+
+root@ykla:/ # screen -r 18380
+```
