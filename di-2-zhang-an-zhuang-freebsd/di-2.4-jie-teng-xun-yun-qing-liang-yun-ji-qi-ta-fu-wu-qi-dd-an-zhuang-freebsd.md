@@ -14,6 +14,14 @@
 
 <https://www.bilibili.com/video/BV1y8411d7pp>
 
+
+>视频与教程有一定出入，按哪个来都可以。
+>
+>SCP 命令可以用图形化的 Winscp 替代。
+>
+>最后安装完毕建议按照 2.7 节设置密钥登录以提高安全性。
+
+
 ## 文字教程
 
 [腾讯云轻量应用服务器（即腾讯云轻量云）](https://cloud.tencent.com/product/lighthouse)以及[阿里云轻量应用服务器](https://www.aliyun.com/product/swas)等机器都没有 FreeBSD 系统的支持，只能通过特殊的的方法自己暴力安装。**请注意数据安全，以下教程有一定危险性和要求你有一定的动手能力。**
