@@ -41,3 +41,10 @@
 
 - 选择 FreeBSD，就是选择在 Linux 被 systemd 及其背后的商业公司控制以后，还能够保留一份火种。纵观各大操作系统，有能力替代的，开源的操作系统只有 FreeBSD。
 - 选择 FreeBSD，就是选择保留下一份真正开源的、自由的操作系统。能够使开源事业继续坚持下去，并践行真正的 UNIX 哲学，不走改旗易帜的邪路，封闭之路。
+
+## 进一步了解
+
+- [systemd 背后的真正动机](https://freebsd.gitbook.io/translated-articles/the-real-motivation-behind-systemd)
+- [systemd 在任何地方都不安全](https://freebsd.gitbook.io/translated-articles/systemd-isnt-safe-to-run-anywhere)
+- [GPL 之殇](https://freebsd.gitbook.io/translated-articles/the-problems-with-the-gpl)
+- [为什么你应该将所有东西从 Linux 迁移到 BSD](https://freebsd.gitbook.io/translated-articles/why-you-should-migrate-everything-from-linux-to-bsd)
