@@ -1,8 +1,8 @@
-# 第2.7节 常用软件 与 SSH 配置
+# 第 2.8 节 常用软件 与 SSH 配置
 
 ## WinSCP 下载
 
-WinSCP 是对 `scp` 命令的图形化封装，并同时支持 FTP 等多种协议。可以快捷的传输文件与 Windows 系统和 Linux 或 BSD 之间。
+WinSCP 是对 `scp` 命令的图形化封装的软件，并同时支持 FTP 等多种协议。可以快捷的传输文件与 Windows 系统和 Linux 或 BSD 之间。
 
 下载地址：
 
@@ -30,7 +30,7 @@ PasswordAuthentication yes   #（可选）设置是否使用普通密码验证�
 
 > **故障排除**
 >
-> 如果你实在是找不到 `PasswordAuthentication no`，请你看看你改的究竟是 `/etc/ssh/`ssh_**d**_`_config` 还是 `/etc/ssh/`**ssh**`_config`。**sshd** 才是我们真正要改的文件。
+> 如果你实在是找不到 `PasswordAuthentication no`，请你看看你改的究竟是 `/etc/ssh/`ssh\_**d**\_`_config` 还是 `/etc/ssh/`**ssh**`_config`。**sshd** 才是我们真正要改的文件。
 
 ### 开启 SSH 服务
 
@@ -167,7 +167,6 @@ PermitEmptyPasswords no                      #禁止空密码的用户进行登�
 使用 xshell 登录即可，输入密钥密码，导入私钥`id_rsa`，即可登录。
 
 > 如果使用其他 ssh 软件无法登陆请自行转换密钥格式。
-
 
 ## 使用 screen 保持 SSH 不断线
 

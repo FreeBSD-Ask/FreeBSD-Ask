@@ -1,6 +1,6 @@
 # 目录
 
-* [FreeBSD 从入门到跑路](README.md)
+* [FreeBSD 从入门到跑路](./)
 * [目录](mu-lu.md)
 
 ## 第 0 章 FreeBSD 中文社区
@@ -37,7 +37,7 @@
 * [第 2.4 节 腾讯云轻量云及其他服务器安装 FreeBSD](di-2-zhang-an-zhuang-freebsd/di-2.4-jie-teng-xun-yun-qing-liang-yun-ji-qi-ta-fu-wu-qi-dd-an-zhuang-freebsd.md)
 * [第 2.5 节 如何在自己的机器上安装 FreeBSD](di-2-zhang-an-zhuang-freebsd/di-2.5-jie-ru-he-zai-zi-ji-de-ji-qi-shang-an-zhuang-freebsd.md)
 * [第 2.6 节 手动安装 FreeBSD](di-2-zhang-an-zhuang-freebsd/di-2.6-jie-shou-dong-an-zhuang-freebsd.md)
-* [第 2.7 节 ee 用法及网络配置](di-2-zhang-an-zhuang-freebsd/wang-luo-pei-zhi.md)
+* [第 2.7 节 ee 用法及网络配置](di-2-zhang-an-zhuang-freebsd/di-2.7-jie-ee-yong-fa-ji-wang-luo-pei-zhi.md)
 * [第 2.8 节 常用软件 与 SSH 配置](di-2-zhang-an-zhuang-freebsd/di-2.8-jie-chang-yong-ruan-jian-yu-ssh-pei-zhi.md)
 * [第 2.9 节 触摸板的设置](di-2-zhang-an-zhuang-freebsd/di-2.9-jie-chu-mo-ban-de-she-zhi.md)
 * [第 2.10 节 声卡与网卡设置](di-2-zhang-an-zhuang-freebsd/di-2.10-jie-sheng-ka-yu-wang-ka-she-zhi.md)
