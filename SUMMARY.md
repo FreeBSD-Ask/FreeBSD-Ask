@@ -336,3 +336,10 @@
 * [第 31.2 节 系统安装与基本配置](di-31-zhang-twincatbsd/di-31.2-jie-xi-tong-an-zhuang-yu-ji-ben-pei-zhi.md)
 * [第 31.3 节 开发环境配置](di-31-zhang-twincatbsd/di-31.3-jie-kai-fa-huan-jing-pei-zhi.md)
 * [第 31.4 节 故障排除](di-31-zhang-twincatbsd/di-31.4-jie-gu-zhang-pai-chu.md)
+
+## 第 32 章 TrueNAS
+
+* [第 32.1 节 TrueNAS 简介](di-32-zhang-truenas/di-32.1-jie-truenas-jian-jie.md)
+* [第 32.2 节 TrueNAS 安装](di-32-zhang-truenas/di-32.2-jie-truenas-an-zhuang.md)
+* [第 32.3 节 TrueNAS 配置与调优](di-32-zhang-truenas/di-32.3-jie-truenas-pei-zhi-yu-tiao-you.md)
+* [第 32.4 节 TrueNAS 故障排除](di-32-zhang-truenas/di-32.4-jie-truenas-gu-zhang-pai-chu.md)
