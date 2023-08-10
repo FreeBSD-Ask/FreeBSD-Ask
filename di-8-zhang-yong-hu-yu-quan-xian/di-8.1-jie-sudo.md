@@ -22,7 +22,7 @@ FreeBSD 基本系统默认不自带 `sudo` 命令，需要使用 `root` 权限�
 
 - 文件 `wheel` 内容如下：
 
-多加一行 `NOPASSWD:`，使用 `sudo` 时不需要输入密码：
+多加一行，使用 `sudo` 时不需要输入密码：
 
 ```
 %wheel ALL=(ALL) NOPASSWD:ALL
