@@ -8,7 +8,7 @@
 
 ## 传统的 dd 单个文件
 
-dd 一个 大小为 1GB 的 swap 文件：
+dd 一个 大小为 1GB 的 swap 文件（1G=1024MB，要更多就做个计算题）：
 
 ```
 # dd if=/dev/zero of=/usr/swap0 bs=1M count=1024
