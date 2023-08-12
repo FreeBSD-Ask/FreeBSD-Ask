@@ -291,7 +291,7 @@ root@ykla:/usr/ports/ports-mgmt/portmaster # portmaster sysutils/htop  --show-wo
 如 Python 现在的默认编译版本是 3.9，要改为 3.11，：
 
 ```
-# echo "DEFAULT_VERSIONS+= python3=3.11" >> /etc/make.conf
+# echo "DEFAULT_VERSIONS+= python=3.11  python3=3.11" >> /etc/make.conf
 ```
 >出现警告是正常的，见 [Bug](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=243034)
 >```
