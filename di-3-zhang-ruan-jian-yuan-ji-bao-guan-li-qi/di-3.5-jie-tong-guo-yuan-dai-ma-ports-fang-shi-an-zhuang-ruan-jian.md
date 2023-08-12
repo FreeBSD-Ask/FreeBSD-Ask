@@ -293,7 +293,7 @@ root@ykla:/usr/ports/ports-mgmt/portmaster # portmaster sysutils/htop  --show-wo
 ```
 # echo "DEFAULT_VERSIONS+= python=3.11  python3=3.11" >> /etc/make.conf
 ```
->出现警告是正常的，见 [Bug](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=243034)
+>如果只设置了单个参数，那么出现警告是正常的，见 [Bug](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=243034)
 >```
 >/!\ WARNING /!\
 >
