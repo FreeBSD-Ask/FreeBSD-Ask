@@ -261,10 +261,10 @@ ports 编译的软件也可以转换为 pkg 包
 
 - 如何指定 Ports 编译的版本？
 
-- 如 Python 现在的默认编译版本是 3.9，要改为 3.11：
+如 Python 现在的默认编译版本是 3.9，要改为 3.11：
 
 ```
-echo "DEFAULT_VERSIONS+= python=3.11" >> /etc/make.conf
+# echo "DEFAULT_VERSIONS+= python=3.11" >> /etc/make.conf
 ```
 
 完整的列表见 <https://cgit.freebsd.org/ports/tree/Mk/bsd.default-versions.mk>
@@ -273,3 +273,11 @@ echo "DEFAULT_VERSIONS+= python=3.11" >> /etc/make.conf
 
 - <https://wiki.freebsd.org/Ports/DEFAULT_VERSIONS>
 - <https://wiki.freebsd.org/Python>
+
+
+- 如何全局屏蔽 mysql
+
+```
+# echo "OPTION_UNSET+= MYSQL" >> /etc/make.conf
+```
+
