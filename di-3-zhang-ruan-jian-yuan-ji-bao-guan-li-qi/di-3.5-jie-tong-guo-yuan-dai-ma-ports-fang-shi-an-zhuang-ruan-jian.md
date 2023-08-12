@@ -110,7 +110,7 @@ Linux 如 Gentoo 上一般是直接 `-jx` 或者 `jx+1`, `x` 为核心数。
 
 ### 设置内存为 tmp
 
-`ee /etc/fatab` 写入：
+`ee /etc/fstab` 写入：
 
 ```
 tmpfs /tmp tmpfs rw 0 0
