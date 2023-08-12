@@ -251,12 +251,39 @@ ports 编译的软件也可以转换为 pkg 包
 
 二、portmaster （推荐）
 
+- 更新：
+
 ```
 # cd /usr/ports/ports-mgmt/portmaster && make install clean
 # portmaster -ai #自动升级所有软件
 # portmaster screen #升级单个软件
 # portmaster -a -m "BATCH=yes" #或者-D -G –no-confirm 都可以免除确认
 ```
+
+- 查看依赖关系：
+
+```
+root@ykla:/usr/ports/ports-mgmt/portmaster # portmaster sysutils/htop  --show-work
+
+===>>> Port directory: /usr/ports/sysutils/htop
+
+===>>> Starting check for all dependencies
+===>>> Gathering dependency list for sysutils/htop from ports
+
+===>>> Installed devel/autoconf
+===>>> Installed devel/automake
+===>>> NOT INSTALLED		devel/libtool
+===>>> NOT INSTALLED		devel/pkgconf
+===>>> NOT INSTALLED		lang/python311
+===>>> Installed ports-mgmt/pkg
+```
+
+- 安装软件
+
+参考资料：
+
+- <https://man.freebsd.org/cgi/man.cgi?portmaster(8)#end>
+  
 ## FreeBSD USE
 
 - 如何指定 Ports 编译的版本？
