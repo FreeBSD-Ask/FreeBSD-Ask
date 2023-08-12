@@ -205,7 +205,7 @@
 * [第 18.2 节 系统安装](di-18-zhang-shu-mei-pai-yu-qian-ru-shi/di-18.2-jie-xi-tong-an-zhuang.md)
 * [第 18.3 节 使用配置](di-18-zhang-shu-mei-pai-yu-qian-ru-shi/di-18.3-jie-shi-yong-pei-zhi.md)
 * [第 18.4 节 USB 网卡与 WIFI](di-18-zhang-shu-mei-pai-yu-qian-ru-shi/di-18.4-jie-usb-wang-ka-yu-wifi.md)
-* [第 18.5 节 RISC-V](di-18-zhang-shu-mei-pai-yu-qian-ru-shi/di-18.5-jie-riscv.md)
+* [第 18.5 节 RISC-V](di-18-zhang-shu-mei-pai-yu-qian-ru-shi/di-18.6-jie-riscv.md)
 
 ## 第 19 章 文学故事
 
