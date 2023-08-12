@@ -281,3 +281,40 @@ ports 编译的软件也可以转换为 pkg 包
 # echo "OPTION_UNSET+= MYSQL" >> /etc/make.conf
 ```
 
+## 查看依赖
+
+```
+root@ykla:/usr/ports/sysutils/htop # make all-depends-list
+/usr/ports/ports-mgmt/pkg
+/usr/ports/devel/pkgconf
+/usr/ports/devel/kyua
+/usr/ports/devel/lutok
+/usr/ports/lang/lua54
+/usr/ports/devel/libedit
+/usr/ports/databases/sqlite3
+/usr/ports/lang/tcl86
+/usr/ports/lang/python311
+/usr/ports/devel/gettext-runtime
+/usr/ports/print/indexinfo
+/usr/ports/devel/gettext-tools
+/usr/ports/devel/libtextstyle
+/usr/ports/devel/libffi
+/usr/ports/misc/dejagnu
+/usr/ports/devel/gmake
+/usr/ports/lang/expect
+/usr/ports/devel/autoconf
+/usr/ports/devel/m4
+/usr/ports/print/texinfo
+/usr/ports/misc/help2man
+/usr/ports/devel/p5-Locale-gettext
+/usr/ports/lang/perl5.34
+/usr/ports/devel/p5-Locale-libintl
+/usr/ports/converters/libiconv
+/usr/ports/converters/p5-Text-Unidecode
+/usr/ports/textproc/p5-Unicode-EastAsianWidth
+/usr/ports/devel/autoconf-switch
+/usr/ports/devel/automake
+/usr/ports/math/mpdecimal
+/usr/ports/devel/readline
+/usr/ports/devel/libtool
+```
