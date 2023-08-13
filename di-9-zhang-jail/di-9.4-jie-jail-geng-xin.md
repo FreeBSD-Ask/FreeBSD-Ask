@@ -60,12 +60,10 @@
 # mv /jail/mroot/root /jail/skel
 ```
 
-使用 etcupdate 安装缺少的配置文件。然后，删除 mergemaster 创建的多余目录
+使用 etcupdate 安装缺少的配置文件。
 
 ```
 # etcupdate -s /jail/mroot/usr/src -d /jail/skel/var/db/etcupdate -D /jail/skel
-# cd /jail/skel
-# rm -R bin boot lib libexec mnt proc rescue sbin sys usr dev
 ```
 
 为`make`创建通用配置文件
