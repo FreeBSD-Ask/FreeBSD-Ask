@@ -299,7 +299,8 @@ root@ykla:/usr/ports/ports-mgmt/portmaster # portmaster sysutils/htop  --show-wo
 >/!\ WARNING /!\
 >
 >PYTHON_DEFAULT must be a version present in PYTHON2_DEFAULT or PYTHON3_DEFAULT,
-if you want more Python flavors, set BUILD_ALL_PYTHON_FLAVORS in your make.conf
+>if you want more Python flavors, set BUILD_ALL_PYTHON_FLAVORS in your make.conf
+>```
 
 
 完整的列表见 <https://cgit.freebsd.org/ports/tree/Mk/bsd.default-versions.mk>
