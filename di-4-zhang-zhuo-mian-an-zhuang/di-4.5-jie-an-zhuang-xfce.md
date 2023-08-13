@@ -40,6 +40,7 @@
 
 在 `.xinitrc` 或者 `.profile` 中添加以下内容（但要在最前面才正常启用） `export LANG=zh_CN.UTF-8`
 
+lightdm 登陆管理器本地化语言见 KDE 章节。
 ## 可选配置
 
 
