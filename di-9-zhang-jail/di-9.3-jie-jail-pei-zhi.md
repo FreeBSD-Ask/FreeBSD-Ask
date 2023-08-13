@@ -7,22 +7,24 @@
 方案一
 
 ```
-# make buildworld #编译基本系统
-# make installworld DESTDIR=/usr/jail/ #安装到 jail
-# make distribution DESTDIR=/usr/jail/ #或者
+# cd /usr/src
+# make buildworld                      # 编译基本系统
+# make installworld DESTDIR=/usr/jail/ # 安装到 jail
+# make distribution DESTDIR=/usr/jail/ # 或者用
 ```
 
 方案二
 
-下载 base.txz 或者从 iso 提取 baes.txz，然后解压到 jail
-
-`# tar -xvf base.txz -C /usr/jail/`
-
+下载 `base.txz` 或者从 iso 提取 `baes.txz`，然后解压到 jail
+```
+# tar -xvf base.txz -C /usr/jail/
+```
 挂载 devfs 文件系统。(不是必须)
 
-`# mount -t devfs devfs /usr/jail/dev`
-
-### 写入 `rc.conf`
+```
+# mount -t devfs devfs /usr/jail/dev
+```
+### 写入 `/etc/rc.conf`
 
 ```
 # sysrc jail_enable="YES"
@@ -32,19 +34,19 @@
 
 ```
 www {
-host.hostname =www.example.org; # 主机名
-ip4.addr = 192.168.0.10; # IP 地址
-path ="/usr/jail"; # jail 位置
-devfs_ruleset = "www_ruleset"; # devfs ruleset
-mount.devfs; # 挂载 devfs 文件系统到 jail
-exec.start = "/bin/sh /etc/rc"; # 启动命令
+host.hostname =www.example.org;         # 主机名
+ip4.addr = 192.168.0.10;                # IP 地址
+path ="/usr/jail";                      # jail 位置
+devfs_ruleset = "www_ruleset";          # devfs ruleset
+mount.devfs;                            # 挂载 devfs 文件系统到 jail
+exec.start = "/bin/sh /etc/rc";         # 启动命令
 exec.stop = "/bin/sh /etc/rc.shutdown"; # 关闭命令
 }
 ```
 
 ## 管理
 
-`jls` 查看在线 jail 信息列表
+用 `jls` 查看在线 jail 信息列表
 
 ```
 JID IP Address    Hostname   Path
@@ -103,12 +105,8 @@ allow.sysvipc=1;
 
 ```
 search lan
-nameserver 119.29.29.29
-nameserver 182.254.116.116
-nameserver 114.114.114.114
-nameserver 223.5.5.5
-nameserver 223.6.6.6
-#不要写路由器地址
+nameserver 223.5.5.5 #不要写路由器地址
+nameserver 223.6.6.6 #不要写路由器地址
 ```
 
 ## 删除文件没有权限
