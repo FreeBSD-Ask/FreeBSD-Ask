@@ -1,22 +1,22 @@
 # 第 9.4 节 jail 更新
 
-如果要同时管理多个jail,那么在更新jail的时候就要对每个jail单独进行一遍操作，这不仅非常耗时而且相当无聊。通过建立统一的模板，可以让所有jail共用一个基础环境，同时拥有各自的可写空间，互不干扰。
+如果要同时管理多个 jail,那么在更新 jail 的时候就要对每个 jail 单独进行一遍操作，这不仅非常耗时而且相当无聊。通过建立统一的模板，可以让所有 jail 共用一个基础环境，同时拥有各自的可写空间，互不干扰。
 
 本教程将建立以下的目录结构（你也可以自行更改）：
 
-一、`/jail/mroot`是模板，是所有jail的共用只读部分，在本例中将被挂载到`/jail/www`。
+1、`/jail/mroot` 是模板，是所有 jail 的共用只读部分，在本例中将被挂载到 `/jail/www`。
 
-二、`/jail/skel`是框架，方便创建jail，本身并不为任何jail使用。
+2、`/jail/skel` 是框架，方便创建 jail，本身并不为任何 jail 使用。
 
-三、`/jail/www`是 jail `www`运行的根目录，也是只读模板的挂载点，本身是个空目录。
+3、`/jail/www` 是 jail `www` 运行的根目录，也是只读模板的挂载点，本身是个空目录。
 
-四、`/jail/www/s`是 jail `www`的可写部分的挂载点，也是个空目录。
+4、`/jail/www/s` 是 jail `www` 的可写部分的挂载点，也是个空目录。
 
-五、`/jail/files/www`是 jail `www`的可写部分的实际存放位置，将被挂载到`/jail/www/s`。
+5、`/jail/files/www` 是 jail `www` 的可写部分的实际存放位置，将被挂载到 `/jail/www/s`。
 
-如果要创建多个jail，则重复创建数据目录和项目目录，这样所有的jail都会共用`/jail/mroot`。
+如果要创建多个 jail，则重复创建数据目录和项目目录，这样所有的 jail 都会共用 `/jail/mroot`。
 
-本教程需要安装```cpdup```
+本教程需要安装 `cpdup`
 
 ```
 # pkg install cpdup
@@ -26,17 +26,17 @@
 
 ```
 # mkdir -p /jail/mroot
-#然后放入基本目录，上边说过不再写
-#将ports和源码放入模板
+# 然后放入基本目录，上边说过不再写
+# 将 ports 和源码放入模板
 # git clone --depth 1 https://mirrors.ustc.edu.cn/freebsd-ports/ports.git /jail/mroot/usr/ports
-# cpdup /usr/src /jail/mroot/usr/src #需要提前获取源码
+# cpdup /usr/src /jail/mroot/usr/src # 需要提前获取源码
 ```
 
 将可写部分连接到可写目录位置
 
 ```
-# cd /jail/mroot #cd 到模板目录
-# mkdir s #创建用来做链接的目录
+# cd /jail/mroot # cd 到模板目录
+# mkdir s        # 创建用来做链接的目录
 # ln -s s/etc etc
 # ln -s s/home home
 # ln -s s/root root
@@ -52,7 +52,7 @@
 ```
 # mkdir -p /jail/skel
 # mkdir /jail/skel /jail/skel/home /jail/skel/usr-X11R6 /jail/skel/distfiles /jail/skel/portbuild
-#移动可写部分
+# 移动可写部分
 # mv /jail/mroot/etc /jail/skel
 # mv /jail/mroot/usr/local /jail/skel/usr-local
 # mv /jail/mroot/tmp /jail/skel
@@ -68,7 +68,7 @@
 # rm -R bin boot lib libexec mnt proc rescue sbin sys usr dev
 ```
 
-为`make`创建通用配置文件
+为 `make` 创建通用配置文件
 
 ```
 # echo “WRKDIRPREFIX?=  /s/portbuild” >> /jail/skel/etc/make.conf
@@ -92,16 +92,16 @@
 
 ```
 # ee /jail/www.fstab
-#将公共只读系统挂载到项目目录
+# 将公共只读系统挂载到项目目录
 /jail/mroot /jail/www mullfs ro 0 0
-#将项目数据目录挂载到项目目录
+# 将项目数据目录挂载到项目目录
 /jail/files/www /jail/www/s mullfs rw 0 0
 ```
 
-##写入 jail.conf
+## 写入 jail.conf
 
 ```
-#全局部分
+# 全局部分
 
 exec.start = "/bin/sh /etc/rc";
 exec.stop = "/bin/sh /etc/rc.shutdown";
@@ -111,13 +111,13 @@ allow.raw_sockets = 1;
 allow.sysvipc = 1;
 interface = "网卡地址";
 
-#主机名也可以用变量代替
+# 主机名也可以用变量代替
 hostname = "$name.domain.local";
 
-#jail 位置，也可以用变量
+# jail 位置，也可以用变量
 path = "/jail/$name";
 
-#ip地址
+# ip地址
 ip4.addr = 192.168.1.$ip;
 
 #fstab位置
@@ -125,8 +125,7 @@ mount.fstab = /jail/$name.fstab;
 
 www {
 $ip=2
-#如不使用fstab,使用
-#mount.fstab ="";
-#替换全局
+                  #如不使用 fstab,使用
+#mount.fstab =""; # 替换全局
 }
 ```
