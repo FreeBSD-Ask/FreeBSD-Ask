@@ -83,6 +83,8 @@ kuntop
 
 [星不萌](https://www.moebsd.cn)
 
+[Alex6357](https://github.com/Alex6357)
+
 [qinghecyn](https://github.com/qinghecyn)
 
 [清热解毒口服液](https://linuxacme.cn)
