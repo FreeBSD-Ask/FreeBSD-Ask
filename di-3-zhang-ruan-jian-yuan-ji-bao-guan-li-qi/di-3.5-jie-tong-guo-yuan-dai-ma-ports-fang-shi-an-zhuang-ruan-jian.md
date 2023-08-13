@@ -39,27 +39,28 @@
 >
 > - 更新 poudriere 以默认使用 svn。这已经完成了：
 >
-> https://github.com/freebsd/poudriere/pull/764
+> <https://github.com/freebsd/poudriere/pull/764>
 >
-> https://github.com/freebsd/poudriere/commit/bd68f30654e2a8e965fbdc09aad238c8bf5cdc10
+> <https://github.com/freebsd/poudriere/commit/bd68f30654e2a8e965fbdc09aad238c8bf5cdc10>
 >
 > - 更新文档，不再提及 portsnap。这项工作已经在进行中了：
 >
->   https://reviews.freebsd.org/D25800
+>   <https://reviews.freebsd.org/D25800>
 >
->   https://reviews.freebsd.org/D25801
+>   <https://reviews.freebsd.org/D25801>
 >
->   https://reviews.freebsd.org/D25803
+>   <https://reviews.freebsd.org/D25803>
 >
->   https://reviews.freebsd.org/D25805
+>   <https://reviews.freebsd.org/D25805>
 >
->   https://reviews.freebsd.org/D25808
+>   <https://reviews.freebsd.org/D25808>
 >
->   https://svnweb.freebsd.org/changeset/base/363798
+>   <https://svnweb.freebsd.org/changeset/base/363798>
 >
 >   非常感谢那些已经和正在从事这项工作的人们！
 >
 > - 让 WITHOUT_PORTSNAP 成为默认的基本系统参数。目前还不确定这一点何时会发生。可能在 13.0 之前不会发生，但希望它能生效。
+>   
 > - 最终，portsnap 服务器的使用率会低至可以被禁用。
 >
 > 我们欢迎任何有建设性的反馈。所有的意见都会被听取，如果计划需要修改，我们会在几周内把修改后的计划反馈给你。这个过程将需要一些时间，但希望不会对任何人的正常工作流程造成太大的干扰。
@@ -102,7 +103,7 @@ Linux 如 Gentoo 上一般是直接 `-jx` 或者 `jx+1`, `x` 为核心数。
 
 `4` 是处理器核心数（还是线程数？），不知道就别改。英特尔的处理器搜索 `CPU型号+ARK` 转跳英特尔官网可查询线程数。
 
-- 个别情况下可以设置别名加速编译：（非永久设置）
+- 个别情况下可以设置别名加速编译：（非永久设置，FreeBSD 14 无需设置，自动生效）
 
 ```
 # alias ninja='ninja -j4'
