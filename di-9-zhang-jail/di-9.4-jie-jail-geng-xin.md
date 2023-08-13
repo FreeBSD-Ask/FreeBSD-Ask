@@ -14,7 +14,7 @@
 
 五、`/jail/files/www`是 jail `www`的可写部分的实际存放位置，将被挂载到`/jail/www/s`。
 
-如果要创建多个jail，则重复三四五三个部分，这样所有的jail都会共用`/jail/mroot`。
+如果要创建多个jail，则重复创建数据目录和项目目录，这样所有的jail都会共用`/jail/mroot`。
 
 本教程需要安装```cpdup```
 
@@ -98,11 +98,10 @@
 /jail/files/www /jail/www/s mullfs rw 0 0
 ```
 
-写入 jail.conf
+##写入 jail.conf
 
 ```
 #全局部分
-
 
 exec.start = "/bin/sh /etc/rc";
 exec.stop = "/bin/sh /etc/rc.shutdown";
@@ -110,33 +109,24 @@ exec.clean;
 mount.devfs;
 allow.raw_sockets = 1;
 allow.sysvipc = 1;
+interface = "网卡地址";
 
-
-#网关 没用就不写
-
-interface = "网卡地址"； #主机名也可以用变量代替
-
-
+#主机名也可以用变量代替
 hostname = "$name.domain.local";
+
 #jail 位置，也可以用变量
 path = "/jail/$name";
 
-
 #ip地址
-
-
 ip4.addr = 192.168.1.$ip;
 
-
 #fstab位置
+mount.fstab = /jail/$name.fstab;
 
-
-mount.fstab = /jail/www.fstab；
 www {
 $ip=2
-#不使用fstab,使用
-#mount.fstab =""；
-
+#如不使用fstab,使用
+#mount.fstab ="";
 #替换全局
 }
 ```
