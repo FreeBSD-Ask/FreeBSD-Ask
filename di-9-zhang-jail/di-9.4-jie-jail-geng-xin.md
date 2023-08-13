@@ -29,7 +29,7 @@
 # 然后放入基本目录，上边说过不再写
 # 将 ports 和源码放入模板
 # git clone --depth 1 https://mirrors.ustc.edu.cn/freebsd-ports/ports.git /jail/mroot/usr/ports
-# cpdup /usr/src /jail/mroot/usr/src # 需要提前获取源码
+# cpdup /usr/src /jail/mroot/usr/src # 需要提前获取源码，且要注意源码对应的版本要与 /jail/mroot 的版本相同
 ```
 
 将可写部分连接到可写目录位置
@@ -60,12 +60,10 @@
 # mv /jail/mroot/root /jail/skel
 ```
 
-使用 mergemaster 安装缺少的配置文件。然后，删除 mergemaster 创建的多余目录
+使用 etcupdate 安装缺少的配置文件。
 
 ```
-# mergemaster -t /jail/skel/var/tmp/temproot -D /jail/skel -i
-# cd /jail/skel
-# rm -R bin boot lib libexec mnt proc rescue sbin sys usr dev
+# etcupdate -s /jail/mroot/usr/src -d /jail/skel/var/db/etcupdate -D /jail/skel
 ```
 
 为 `make` 创建通用配置文件
