@@ -91,9 +91,9 @@
 ```
 # ee /jail/www.fstab
 # 将公共只读系统挂载到项目目录
-/jail/mroot /jail/www mullfs ro 0 0
+/jail/mroot /jail/www nullfs ro 0 0
 # 将项目数据目录挂载到项目目录
-/jail/files/www /jail/www/s mullfs rw 0 0
+/jail/files/www /jail/www/s nullfs rw 0 0
 ```
 
 ## 写入 jail.conf
