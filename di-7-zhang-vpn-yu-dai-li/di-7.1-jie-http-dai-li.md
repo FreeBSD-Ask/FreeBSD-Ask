@@ -7,7 +7,7 @@
 $ echo $SHELL
 ```
 
-如果使用的是 `csh`
+- 如果使用的是 `csh`
 
 设置：
 ```
@@ -19,7 +19,7 @@ $ echo $SHELL
 # unsetenv http_proxy
 ```
 
-如果使用的是 `sh`, `bash`, `zsh`
+- 如果使用的是 `sh`, `bash`, `zsh`
 
 设置：
 ```
