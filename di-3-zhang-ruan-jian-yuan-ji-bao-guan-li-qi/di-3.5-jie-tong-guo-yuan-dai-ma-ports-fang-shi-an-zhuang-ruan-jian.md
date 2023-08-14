@@ -214,7 +214,7 @@ DISABLE_SIZE=yes
 
 ## 进阶
 
-如果不选择 `BATCH=yes` 的方法手动配置依赖：
+如果不选择 `BATCH=yes` 的方法手动配置：
 
 看看 python 的 ports 在哪：
 
@@ -339,6 +339,16 @@ root@ykla:/usr/ports/ports-mgmt/portmaster # portmaster sysutils/htop  --show-wo
 ```
 
 ## 查看依赖
+
+已经安装：
+
+```
+root@ykla:~ # pkg info -d screen
+screen-4.9.0_6:
+	indexinfo-0.3.1
+```
+
+未安装：
 
 ```
 root@ykla:/usr/ports/sysutils/htop # make all-depends-list
