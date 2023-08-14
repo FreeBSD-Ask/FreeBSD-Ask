@@ -197,7 +197,7 @@ DISABLE_SIZE=yes
 **wget2 正在进行测试！先不要用**
   
 ```
-# pkg install wget2
+# cd /usr/ports/www/wget2/ && make install clean
 ```
 新建或者编辑 `# ee /etc/make.conf` 文件，写入以下几行：
 ```
