@@ -115,7 +115,7 @@ Shengyun
 
 仰望天空
 
-[魔王酱](https://github.com/maouchandesu)
+[魔王酱](https://github.com/maou-sama-desu)
 
 极品盗号
 
