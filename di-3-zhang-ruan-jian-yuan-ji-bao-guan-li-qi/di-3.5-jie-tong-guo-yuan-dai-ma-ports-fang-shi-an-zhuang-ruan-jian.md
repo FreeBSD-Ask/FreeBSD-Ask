@@ -124,7 +124,7 @@ tmpfs /tmp tmpfs rw 0 0
 
 ### ccache
 
-**这部分现在有点问题，先不要用**
+**这部分现在有点问题，先不要用，见 [Bug](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=272917)**
 
 >**警告**
 >
