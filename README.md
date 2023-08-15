@@ -119,7 +119,7 @@
 
 微信公众号: freebsdzh （扫码关注）
 
-![](./.gitbook/assets/qrcode_for_gh_3b263cc9b20b_258.jpg)
+![](./.gitbook/assets/qr.png)
 
 ### 网站部署&维护
 
