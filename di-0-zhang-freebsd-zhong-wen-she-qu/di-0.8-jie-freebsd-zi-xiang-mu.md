@@ -6,27 +6,33 @@
 ## 文档和测试实习
 
 <https://freebsdfoundation.org/project/documentation-and-testing-internship/>
+
 进行中
+
 2023 年 7 月，Yan-Hao Wang 开始了与基金会的暑期实习，从事各种任务。以下是部分计划工作的列表。
 
-构建在线手册编辑器
-更新 FreeBSD jenkins-tinderbox
-为/bin、/sbin、/usr/bin、/usr/sbin 中的用户空间工具添加测试用例
-调查并开发用于 FreeBSD 手册和文档的“专家系统”
-修复 libxo 问题，并编写适用的测试
-调查开发 RPI4 和 IPV6 任务的路线图
-针对 FreeBSD 手册和文档的“专家系统”将是一个尽力而为的概念验证任务，其中将包括将 FreeBSD 文档（如手册和手册）导入矢量数据库，以便像 ChatGPT 这样的大型语言模型在查询涉及 FreeBSD 的问题时可以“阅读”它们，从而提供更好的答案。
+- 构建在线手册编辑器
+- 更新 FreeBSD jenkins-tinderbox
+- 为 `/bin`、`/sbin`、`/usr/bin`、`/usr/sbin` 中的用户空间工具添加测试用例
+- 调查并开发用于 FreeBSD 手册和文档的“专家系统”
+- 修复 libxo 问题，并编写适用的测试用例
+- 调查开发 RPI4 和 IPV6 任务的路线图
+- 针对 FreeBSD 手册和文档的“专家系统”将是一个尽力而为的概念验证任务，其中将包括将 FreeBSD 文档（如手册和手册）导入矢量数据库，以便像 ChatGPT 这样的大型语言模型在查询涉及 FreeBSD 的问题时可以“阅读”它们，从而提供更好的答案。
 
 ## 解决 OpenSSL 3 / LLVM 16 移植带来的问题
 
 <https://freebsdfoundation.org/project/addressing-openssl-3-llvm-16-ports-fallout/>
+
 进行中
-随着在 FreeBSD 主分支中将 OpenSSL 更新到版本 3，出现了许多需要修复的端口构建错误，这些错误必须在 FreeBSD 14.0 发布之前修复。大部分涉及 OpenSSL 3 和 LLVM 15 的关键问题已经得到解决，但是在 LLVM 16 中，大约有 800 个附加的端口无法构建，导致在完整的端口树构建中还有 2800 个相关的依赖端口被跳过。Muhammad Moinur (Moin) Rahman 将完成耗时且繁琐的工作，解决与更新到 OpenSSL 3 和 LLVM 16 相关的所有端口问题。
+
+随着在 FreeBSD 主分支中将 OpenSSL 更新到版本 3，出现了许多需要修复的 Port 构建错误，这些错误必须在 FreeBSD 14.0 发布之前修复。大部分涉及 OpenSSL 3 和 LLVM 15 的关键问题已经得到解决，但是在 LLVM 16 中，大约有 800 个额外的 Port 无法编译，导致在完整的 Ports 编译中还有 2800 个相关的依赖的 Port 被跳过。Muhammad Moinur (Moin) Rahman 将完成这一耗时且繁琐的工作，解决与更新到 OpenSSL 3 和 LLVM 16 相关的所有  Port 问题。
 
 ## SIMD 增强的 libc
 
 <https://freebsdfoundation.org/project/simd-enhanced-freebsd-libc-functions/>
+
 进行中
+
 在现代计算机架构中，提供了 SIMD（单指令多数据）指令集扩展，可以同时处理多个数据。这些指令常用于数值应用程序，如视频编解码器、图形渲染和科学计算，同时使用 SIMD 技术还有助于基本的数据处理任务，例如由 libc 函数实现的任务。虽然其他的 libc 实现已经为标准 libc 函数提供了经过 SIMD 增强的变体，但 FreeBSD libc 在这方面尚有很大的提升空间。Robert Clausecker 通过这个项目的目标是为相关的 libc 库函数提供这样的经过 SIMD 增强的版本，从而提高与其链接的软件性能。由于大多数适用于 FreeBSD 的软件都使用这些 libc 函数，因此这些增强预计将为广泛的程序带来显著的好处。该项目的主要关注点是 amd64 架构，旨在根据 x86_64 psAB 定义的架构级别，生成针对 SIMD 优化的实现。
 
 如果特定例程可以受益于更高架构级别的额外指令，计划实现多个不同的例程。通常意味着一个基线例程或 x86-64-v2，以及分别针对 x86-64-v3 和 x86-64-v4 的例程。计划创建基准测试套件，以确定这些例程对 libc 性能的影响。在未来的工作中，如果有足够的兴趣，这些例程可能会被适配到 i386 架构，或者移植到其他架构，包括 arm64（ASIMD，SVE）和 ppc64/ppc64le。
@@ -38,7 +44,9 @@
 ## Capsicum 实习
 
 <https://freebsdfoundation.org/project/capsicum-internship/>
+
 进行中
+
 从 2023 年 6 月 1 日到 9 月 1 日，Jake Freeland 将与基金会一起进行实习，致力于开发 FreeBSD 的沙盒框架 Capsicum。Capsicum 被设计用来限制应用程序和库所具有的能力。Capsicum 模型简单且安全，但近年来在该框架周围的进展和发展已经减缓。Capsicum 的核心思想很直观，一旦进入能力模式，资源获取和外部通信都会受到严格限制。围绕这一原则设计程序相对容易，但问题在于，那些未设计为沙盒化的现有应用程序需要在这个环境中工作。很难确定哪些操作会引发 Capsicum 违规，并且不可能在请求或命名资源之前预先打开尚未被请求或命名的资源。此外，开发人员在实施 Capsicum 功能之前必须对程序非常熟悉。这些原因解释了为什么 Capsicum 化的努力逐渐减少。
 
 这个实习项目将涉及多个项目，总体目标是为希望将现有程序 Capsicum 化的开发人员提供更好的体验和便利。Capsicum 的最大障碍是其陡峭的学习曲线。重构程序以支持能力模式通常需要开发人员知道什么会导致 Capsicum 违规，并知道如何重构给定的程序以避免违规。有时这个过程很简单，但较大的程序通常需要按需获取资源，找到如何满足这些需求可能会很困难。扩展开发人员可用的工具数量，以方便进行程序的 Capsicum 化，将大大减少上述的学习曲线。如果 Capsicum 化变得简单，那么更多的开发人员将会采用它。
@@ -77,60 +85,60 @@ libarchive 库专门用于压缩和解压缩多种流行的存档格式。已经
 
 8. 完成 SIGCAP 违规信号的实现
 
-David Chisnall 在 Differential revision https://reviews.freebsd.org/D33248 中提出了一个可选的 SIGCAP 信号，可以在发生 Capsicum 违规时传递。不幸的是，这个评论没有完成，几个月没有更新。完成这个评论并添加 SIGCAP 信号可以使那些使用违规信号来触发 Capsicum 违规的程序的调试更加容易。我们可以使用 SIGCAP 告诉代码转到备用路径，而不是等待 SIGTRAP，后者可能会被调试器拦截。此外，有一个明确的 Capsicum 违规信号将允许 Capsicum 违规跟踪工具记录特定于 Capsicum 的故障。例如，当设置 kern.tr
-
-ap enotcap=1 时，任何 Capsicum 违规都会引发一个带有程序终止的 SIGTRAP。这不透明，因为无法确定该程序终止是因为违规还是因为无关的 SIGTRAP 信号。将 kern.trap enotcap 改为传递 SIGCAP 将消除这种混淆。这个 SIGCAP 信号还可以为上述 ktrace(1) 中的追踪 Capsicum 违规引入一个替代方法。ktrace(1) 可以截获并记录 SIGCAP 调用，并使用适当的信号处理程序将原始程序送回执行。
+David Chisnall 在 Differential revision https://reviews.freebsd.org/D33248 中提出了一个可选的 SIGCAP 信号，可以在发生 Capsicum 违规时传递。不幸的是，这个评论没有完成，几个月没有更新。完成这个评论并添加 SIGCAP 信号可以使那些使用违规信号来触发 Capsicum 违规的程序的调试更加容易。我们可以使用 SIGCAP 告诉代码转到备用路径，而不是等待 SIGTRAP，后者可能会被调试器拦截。此外，有一个明确的 Capsicum 违规信号将允许 Capsicum 违规跟踪工具记录特定于 Capsicum 的故障。例如，当设置 `kern.trap enotcap=1` 时，任何 Capsicum 违规都会引发一个带有程序终止的 SIGTRAP。这不透明，因为无法确定该程序终止是因为违规还是因为无关的 SIGTRAP 信号。将 kern.trap enotcap 改为传递 SIGCAP 将消除这种混淆。这个 SIGCAP 信号还可以为上述 ktrace(1) 中的追踪 Capsicum 违规引入一个替代方法。ktrace(1) 可以截获并记录 SIGCAP 调用，并使用适当的信号处理程序将原始程序送回执行。
 
 ## 无线网络实习
 
 <https://freebsdfoundation.org/project/wireless-internship/>
+
 **进行中**
 
-2022 年 Google Summer of Code（GSoC）贡献者 En-Wei Wu 于 2023 年初开始在 FreeBSD 基金会进行实习，致力于开发 FreeBSD 的无线驱动程序和工具。该工作分为三个部分。
+2022 年谷歌代码之夏的贡献者 En-Wei Wu 于 2023 年初开始在 FreeBSD 基金会进行实习，致力于开发 FreeBSD 的无线驱动程序和工具。该工作分为三个部分。
 
 - `wtap` 将通过添加对更多 802.11 物理层的支持来进行扩展，目前仅支持 802.11b。`wtap` 的其他工作将包括添加 WPA/WPA2/WPA3 支持，以便可以测试 `wpa_supplicant(8)` 和 `hostapd(8)`。
-
 - 将在 `hostapd(8)` 中添加对 WPA2 预验证的支持。WPA2 是 IEEE 802.11i 规范的一部分，用于认证无线站点以访问接入点。该协议的一部分是能够与一个或多个接入点预先验证一个站点，以便快速进行漫游。FreeBSD 在用于构建支持 WPA 的接入点的 `hostapd` 程序中缺乏对协议的此方面的支持。这项任务将移植现有的 Linux 代码，以支持 `hostapd` 中的预验证。这主要涉及重写一些用户模式的组播代码并测试结果。应将对 FreeBSD 之外托管的第三方源代码的修改在适用时上游到适当的项目中。
-
 - 将完成对 802.11 驱动程序的工作。`ath10k` 驱动程序将通过完成 Adrian Chadd 已开始的驱动程序工作进行移植。此外，还将通过帮助开发和测试诸如 `rtw88` 和 `rtw89` 等 Realtek 驱动程序，为 Bjoern Zeeb 提供协助。
 
-## 持续集成增强
+## 增强持续集成
 
 <https://freebsdfoundation.org/project/continuous-integration-enhancements/>
+
 **进行中**
 
-FreeBSD 的持续集成（CI）基础设施基于 Jenkins。每当开发人员向 FreeBSD 源代码存储库推送提交时，就会运行一个作业。希望在预提交环境中为开发人员提供更多便利。当 CI 运行中出现问题时，解决这些问题可能会很困难。此外，希望拥有私有的 FreeBSD 运行程序，供流行的 Git 托管服务使用，以为推送到私有分支的人创建 CI 基础设施。为此，Muhammad Moinur Rahman 的目标是将由 Li-Wen Hsu 编写的 CI 脚本作为构建系统的一部分提供给开发人员。与`make universe`或`make tinderbox`为所有支持的架构构建类似，`make ci`将为所有支持的构建执行类似的操作。另一个目标是在调试问题时，使开发人员能够运行单个 CI 作业。希望这种灵活性也能让其他人将这些构建/脚本集成到其他 CI 工具（如从 Github 运行的 Cirrus CI）中。
+FreeBSD 的持续集成（CI）基础设施基于 Jenkins。每当开发人员向 FreeBSD 源代码存储库推送提交时，就会运行一个作业。希望在预提交环境中为开发人员提供更多便利。当 CI 运行中出现问题时，解决这些问题可能会很困难。此外，希望拥有私有的 FreeBSD 运行程序，供流行的 Git 托管服务使用，以为推送到私有分支的人创建 CI 基础设施。为此，Muhammad Moinur Rahman 的目标是将由 Li-Wen Hsu 编写的 CI 脚本作为构建系统的一部分提供给开发人员。与 `make universe` 或 `make tinderbox` 为所有支持的架构构建类似，`make ci` 将为所有支持的构建执行类似的操作。另一个目标是在调试问题时，使开发人员能够运行单个 CI 作业。希望这种灵活性也能让其他人将这些构建/脚本集成到其他 CI 工具（如从 Github 运行的 Cirrus CI）中。
 
-## FreeBSD 作为一流的 cloud-init 平台
+## FreeBSD 作为一级的 cloud-init 平台
 
 <https://freebsdfoundation.org/project/freebsd-as-a-tier-i-cloud-init-platform/>
+
 **进行中**
 
-`cloud-init`是在云中配置服务器的标准方式。不幸的是，除了 Linux 以外的操作系统在`cloud-init`上的支持相当有限，而且`FreeBSD`上缺乏`cloud-init`支持成为希望将`FreeBSD`作为一流平台的云提供商的障碍。为了解决这个问题，FreeBSD 基金会已经委托 Mina Galić，以将`FreeBSD`的`cloud-init`支持与`Linux`支持保持一致。项目交付内容包括完成特定网络类的提取，实现`ifconfig(8)`和`login.conf(5)`解析器，实现`IPv6`配置，为 Azure 创建`devd`规则，并编写关于将`FreeBSD`投入生产的 Handbook 文档。
+`cloud-init`是在云中配置服务器的标准方式。不幸的是，除了 Linux 以外的操作系统在`cloud-init`上的支持相当有限，而且 FreeBSD 上缺乏`cloud-init`支持成为希望将 FreeBSD 作为一流平台的云提供商的障碍。为了解决这个问题，FreeBSD 基金会已经委托 Mina Galić，以将 FreeBSD 的`cloud-init`支持与 Linux 支持保持一致。项目交付内容包括完成特定网络类的提取，实现`ifconfig(8)`和`login.conf(5)`解析器，实现`IPv6`配置，为 Azure 创建`devd`规则，并编写关于将 FreeBSD 投入生产的 Handbook 文档。
 
-背景
+### 背景
 
-`cloud-init`最初是一个`Linux`项目，对于除`Linux`以外的`BSD`操作系统的支持是后来添加的。当试图扩展`cloud-init`以更好地与`FreeBSD`配合时，发现即使是不同`Linux`发行版之间的支持也很差。从这个问题诞生了一个重构项目，将网络功能提取到`cloud-init`的发行版类中。该项目最初由 Mina 提出和推动，但`cloud-init`的维护人员和贡献者仍未完成。原因是对于`Linux`来说，当前的设计已经足够好了。然而，为了改善对`FreeBSD`和其他`BSD`的网络支持，这将是第一个重要的步骤。
+`cloud-init`最初是一个 Linux 项目，对于除 Linux 以外的 BSD 操作系统的支持是后来添加的。当试图扩展`cloud-init`以更好地与 FreeBSD 配合时，发现即使是不同 Linux 发行版之间的支持也很差。从这个问题诞生了一个重构项目，将网络功能提取到`cloud-init`的发行版类中。该项目最初由 Mina 提出和推动，但`cloud-init`的维护人员和贡献者仍未完成。原因是对于 Linux 来说，当前的设计已经足够好了。然而，为了改善对 FreeBSD 和其他 BSD 的网络支持，这将是第一个重要的步骤。
 
-网络重构
+### 网络重构
 
-`cloud-init`重构的一个问题是辅助函数在`Linux`上访问`/sys`。在`BSD`上的等效操作是解析`ifconfig(8)`，然而结果会更高级一些。这将允许重构一些低悬的果实，并验证解析器。这项工作包括为`BSD`实现`ifconfig(8)`解析器，并对`is_bond`、`is_bridge`、`is_physical`、`is_up`、`is_vlan`、`get_interfaces`、`get_interface_mac`、`get_interfaces_by_mac`和`interface_has_own_mac`进行重构。在网络更新之后，还需要重构`EphemeralIPv4Network`、`EphemeralIPv6Network`和`EphemeralDHCPv4`类。最后的网络步骤将是将网络渲染器与启动/关闭分离，实现`BSDRenderer.start_services`，为`FreeBSD`实现`IPv6`和`WiFi`配置。
+`cloud-init`重构的一个问题是辅助函数在 Linux 上访问`/sys`。在 BSD 上的等效操作是解析`ifconfig(8)`，然而结果会更高级一些。这将允许重构一些低悬的果实，并验证解析器。这项工作包括为 BSD 实现`ifconfig(8)`解析器，并对`is_bond`、`is_bridge`、`is_physical`、`is_up`、`is_vlan`、`get_interfaces`、`get_interface_mac`、`get_interfaces_by_mac`和`interface_has_own_mac`进行重构。在网络更新之后，还需要重构`EphemeralIPv4Network`、`EphemeralIPv6Network`和`EphemeralDHCPv4`类。最后的网络步骤将是将网络渲染器与启动/关闭分离，实现`BSDRenderer.start_services`，为 FreeBSD 实现`IPv6`和`WiFi`配置。
 
-文档
+### 文档
 
-将编写支持性文档，以链接各种`cloud-init`阶段与`rc.conf`、`rc.local`以及类似的启动阶段，以及涵盖`FreeBSD`特定信息，包括在哪里以及如何自动安装软件包，运行`freebsd-update`，执行安装后步骤等。还将编写`FreeBSD Handbook`文档，描述如何将`FreeBSD`投入生产。
+将编写支持性文档，以链接各种`cloud-init`阶段与`rc.conf`、`rc.local`以及类似的启动阶段，以及涵盖 FreeBSD 特定信息，包括在哪里以及如何自动安装软件包，运行`freebsd-update`，执行安装后步骤等。还将编写 FreeBSD Handbook 文档，描述如何将 FreeBSD 投入生产。
 
-验证
+### 验证
 
 将进行特定于云提供商的验证工作，包括将`pycloudlib`引入其他操作系统及其默认设置，为 Azure 创建`devd`规则，以及审查现有的 GCP/Azure/AWS 等云提供商配置是否有更改。
 
-未来工作
+### 未来工作
 
 一些未来工作的想法包括为`ifconfig(8)`和类似工具实现`libxo(3)`，以及为`cloud-init`实现一个`UCL`解析器。
 
 ## 在 FreeBSD 上运行的 OpenStack
 
 <https://freebsdfoundation.org/project/openstack-on-freebsd/>
+
 **进行中**
 
 OpenStack 是一个开源的云操作系统，用于管理各种资源，包括虚拟机、容器和裸金属服务器。然而，OpenStack 的控制平面主要针对 Linux。FreeBSD 只在非官方上支持作为客户操作系统。用户可以在开放的云平台上创建 FreeBSD 实例，但目前管理员或操作员无法在 FreeBSD 主机上设置运行 OpenStack 的部署。鉴于云部署的日益重要以及 OpenStack 在各种云提供商中的受欢迎程度，FreeBSD 基金会已经委托 Chin-Hsin Chang 来移植 OpenStack 组件，以便在 FreeBSD 主机上运行 OpenStack。
@@ -146,7 +154,7 @@ OpenStack 是一个开源的云操作系统，用于管理各种资源，包括�
 
 该工作还将涉及构建三个基于 FreeBSD 的 OpenStack 集群。第一个集群将用于剑桥大学的 CHERI 团队，用于管理 CHERI 启用的 Morello 开发板，并协调开发人员的访问请求。第二个和第三个集群将部署在主要的 FreeBSD.org 集群中。第二个集群将转换为 netperf 集群的资源管理系统。第三个集群将作为不同开发分支和架构的参考机器的迷你云进行构建。第三个集群将使开发人员能够生成他们可以完全控制的虚拟机，以满足其移植或系统开发的需求。这些 OpenStack 部署都将通过 OpenStack Tempest 和 Rally 进行测试，以确保正确性。
 
-详细信息
+### 详细信息
 
 该项目将包括三个阶段。第一阶段包括在 amd64 FreeBSD 主机上将关键的 OpenStack 组件作为集群控制平面运行起来。这将涉及将 OpenStack 作为 CHERI 启用的 Morello 开发板的生命周期管理器。将基于 Linux 的关键组件 Identity、Keystone 和 Ironic 移植到 FreeBSD。尽管可以将 Ironic 设置为独立服务，也就是说，不需要由 Keystone 提供的服务目录和集成认证，但在这个阶段最好是同时移植 Keystone 和 Ironic。Ironic 使用 BMC（基板管理控制器）来实现带外控制。存在许多现有的协议和解决方案，如 IPMI、Redfish、Dell iDRAC 和 HPE iLO。然而，Morello 开发板不带有 BMC。为了使 Ironic 能够管理这些 ARM 开发板，可能需要开发并测试特定的 Ironic 驱动程序，以成功执行供应、管理和清理任务。
 
@@ -168,6 +176,7 @@ netperf 集群提供了各种规格的机器，让开发人员进行网络功能
 ## 使用日志软更新在文件系统上创建快照
 
 <https://freebsdfoundation.org/project/snapshots-on-filesystems-using-journaled-soft-updates/>
+
 **进行中**
 
 UFS/FFS 文件系统具备创建快照的能力。因为创建快照的能力是在软更新被编写之后添加的，所以它们与软更新完全集成在一起。然而，当日志式软更新于 2010 年添加时，它们从未与快照集成。因此，在运行日志式软更新的文件系统上无法使用快照。
@@ -178,12 +187,13 @@ UFS/FFS 文件系统具备创建快照的能力。因为创建快照的能力是
 
 该项目预计将于 2023 年中旬完成，工作将分为两个里程碑。在里程碑 1 之后，当使用日志式软更新时，将启用快照，并且可以在活动文件系统上执行后台转储。里程碑 2 涉及扩展 fsck_ffs，使其能够在运行日志式软更新的文件系统上使用快照进行后台检查。每个里程碑被认为已完成，当代码通过审核流程并已提交到树的主干。
 
-## WiFi 更新 - Intel 驱动和 802.11ac
+## WiFi 更新——Intel 驱动和 802.11ac
 
 <https://freebsdfoundation.org/project/wifi-update-intel-drivers-and-802-11ac/>
+
 **进行中**
 
-为了跟上新的标准和设备，FreeBSD WiFi 堆栈需要持续的维护和开发。基金会正在资助 Bjoern Zeeb 将支持当前一代 Intel WiFi 设备集成到 FreeBSD 中，通过迁移到 Linux 内核中的双许可上游驱动程序。
+为了跟上新的标准和设备，FreeBSD WiFi 堆栈需要持续的维护和开发。基金会正在资助 Bjoern Zeeb 将通过迁移到 Linux 内核中的双许可上游驱动程序，来支持当前一代的 Intel WiFi 设备集成到 FreeBSD 中。
 
 我们还将与 FreeBSD WiFi 开发社区合作，集成 802.11ac 基础设施支持。
 
