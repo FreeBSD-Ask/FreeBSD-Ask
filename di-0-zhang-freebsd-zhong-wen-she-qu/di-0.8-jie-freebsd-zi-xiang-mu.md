@@ -2,6 +2,17 @@
 
 本页面是对 <https://freebsdfoundation.org/our-work/projects/> 的翻译。
 
+**FreeBSD 项目完全依靠来自 FreeBSD 社区成员和关注我们使命的外部企业的慷慨捐赠进行资助。**
+
+本页面列出的项目是由捐赠给 FreeBSD 基金会的款项资助的。还有很多正在进行中的项目由志愿者、公司等为 FreeBSD 项目进行开发。要了解更多关于这些项目的信息，请访问 [FreeBSD 项目](https://freebsd.org/)的网站。
+
+为了帮助资助未来的项目，请考虑向基金会进行[捐赠](https://freebsdfoundation.org/donate/)。
+
+## 提交项目提案
+
+FreeBSD 基金会正在征集与 FreeBSD 操作系统中的任何主要子系统或基础设施相关的工作提案。将根据其可取性、技术价值和成本效益对提案进行评估。
+
+有关流程的简要概述，请参阅[项目提案概述](https://freebsdfoundation.org/project-proposal-overview/)。要获取详情，请参阅[提交指南](https://freebsdfoundation.org/wp-content/uploads/2017/06/FreeBSDProposalSubmission.pdf)。
 
 ## 文档和测试实习
 
