@@ -39,3 +39,7 @@ pkg install firefox-esr
 # cd /usr/ports/www/chromium
 # make install clean
 ```
+
+- Chromium 加入 Google 同步
+
+- <https://gist.github.com/cvan/44a6d60457b20133191bd7b104f9dcc4>
