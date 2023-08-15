@@ -2,7 +2,7 @@
 
 本页面是对 <https://freebsdfoundation.org/our-work/projects/> 的翻译。
 
-**FreeBSD 项目完全依靠来自 FreeBSD 社区成员和关注我们使命的外部企业的慷慨捐赠进行资助。**
+**FreeBSD 项目完全依靠来自 FreeBSD 社区成员和关注我们使命的外部企业的慷慨捐赠进行的资助。**
 
 本页面列出的项目是由捐赠给 FreeBSD 基金会的款项资助的。还有很多正在进行中的项目由志愿者、公司等为 FreeBSD 项目进行开发。要了解更多关于这些项目的信息，请访问 [FreeBSD 项目](https://freebsd.org/)的网站。
 
@@ -20,14 +20,14 @@ FreeBSD 基金会正在征集与 FreeBSD 操作系统中的任何主要子系统
 
 **进行中**
 
-2023 年 7 月，Yan-Hao Wang 开始了与基金会的暑期实习，从事各种任务。以下是部分计划工作的列表。
+2023 年 7 月，Yan-Hao Wang 开始了与基金会的暑期实习，即从事各种任务。以下是部分计划工作的列表：
 
 - 构建在线手册编辑器
 - 更新 FreeBSD jenkins-tinderbox
 - 为 `/bin`、`/sbin`、`/usr/bin`、`/usr/sbin` 中的用户空间工具添加测试用例
 - 调查并开发用于 FreeBSD 手册和文档的“专家系统”
 - 修复 libxo 问题，并编写适用的测试用例
-- 调查开发 RPI4 和 IPV6 任务的路线图
+- 调查开发树莓派 4 和 IPV6 任务的路线图
 - 针对 FreeBSD 手册和文档的“专家系统”将是一个尽力而为的概念验证任务，其中将包括将 FreeBSD 文档（如手册和手册）导入矢量数据库，以便像 ChatGPT 这样的大型语言模型在查询涉及 FreeBSD 的问题时可以“阅读”它们，从而提供更好的答案。
 
 ## 解决 OpenSSL 3 / LLVM 16 移植带来的问题
@@ -36,7 +36,7 @@ FreeBSD 基金会正在征集与 FreeBSD 操作系统中的任何主要子系统
 
 **进行中**
 
-随着在 FreeBSD 主分支中将 OpenSSL 更新到版本 3，出现了许多需要修复的 Port 构建错误，这些错误必须在 FreeBSD 14.0 发布之前修复。大部分涉及 OpenSSL 3 和 LLVM 15 的关键问题已经得到解决，但是在 LLVM 16 中，大约有 800 个额外的 Port 无法编译，导致在完整的 Ports 编译中还有 2800 个相关的依赖的 Port 被跳过。Muhammad Moinur (Moin) Rahman 将完成这一耗时且繁琐的工作，解决与更新到 OpenSSL 3 和 LLVM 16 相关的所有  Port 问题。
+随着 FreeBSD 在主分支中将 OpenSSL 更新到 3.0 版本，出现了许多需要修复的 Port 构建错误，这些错误必须在 FreeBSD 14.0 发布之前修复。大部分涉及 OpenSSL 3 和 LLVM 15 的关键问题已经得到解决，但是在 LLVM 16 中，大约有 800 个额外的 Port 无法编译，导致在完整的 Ports 编译中还有 2800 个相关的依赖的 Port 被跳过。Muhammad Moinur (Moin) Rahman 将完成这一耗时且繁琐的工作，解决与更新到 OpenSSL 3 和 LLVM 16 相关的所有  Port 问题。
 
 ## SIMD 增强的 libc
 
@@ -44,11 +44,11 @@ FreeBSD 基金会正在征集与 FreeBSD 操作系统中的任何主要子系统
 
 **进行中**
 
-在现代计算机架构中，提供了 SIMD（单指令多数据）指令集扩展，可以同时处理多个数据。这些指令常用于数值应用程序，如视频编解码器、图形渲染和科学计算，同时使用 SIMD 技术还有助于基本的数据处理任务，例如由 libc 函数实现的任务。虽然其他的 libc 实现已经为标准 libc 函数提供了经过 SIMD 增强的变体，但 FreeBSD libc 在这方面尚有很大的提升空间。Robert Clausecker 通过这个项目的目标是为相关的 libc 库函数提供这样的经过 SIMD 增强的版本，从而提高与其链接的软件性能。由于大多数适用于 FreeBSD 的软件都使用这些 libc 函数，因此这些增强预计将为广泛的程序带来显著的好处。该项目的主要关注点是 amd64 架构，旨在根据 x86_64 psAB 定义的架构级别，生成针对 SIMD 优化的实现。
+在现代计算机架构中，提供了 SIMD（单指令多数据）指令集扩展，可以同时处理多个数据。这些指令常用于数值应用程序，如视频编解码器、图形渲染和科学计算，同时使用 SIMD 技术还有助于基本的数据处理任务，例如由 libc 函数实现的任务。虽然其他的 libc 实现已经为标准 libc 函数提供了经过 SIMD 增强的变体，但 FreeBSD libc 在这方面尚有很大的提升空间。Robert Clausecker 对这个项目的目标是为相关的 libc 库函数提供这样的经过 SIMD 增强的版本，从而提高与其链接的软件性能。由于大多数适用于 FreeBSD 的软件都使用这些 libc 函数，因此这些增强预计将为广泛的程序带来显著的好处。该项目的主要关注点是 amd64 架构，旨在根据 x86_64 psAB 定义的架构级别，生成针对 SIMD 优化的实现。
 
 如果特定例程可以受益于更高架构级别的额外指令，计划实现多个不同的例程。通常意味着一个基线例程或 x86-64-v2，以及分别针对 x86-64-v3 和 x86-64-v4 的例程。计划创建基准测试套件，以确定这些例程对 libc 性能的影响。在未来的工作中，如果有足够的兴趣，这些例程可能会被适配到 i386 架构，或者移植到其他架构，包括 arm64（ASIMD，SVE）和 ppc64/ppc64le。
 
-技术细节方面，计划采用汇编语言实现优化例程，以确保与工具链无关。对于动态链接的可执行文件，计划使用 ifunc 机制，在运行时选择每个例程的最佳实现。如果可能，将查询一个环境变量，允许用户选择不同的架构级别，或者完全禁用 SIMD 增强。对于静态链接的可执行文件，或者直接调用函数（例如通过 libc 内部的隐藏别名），计划提供分发跳板。在第一次调用跳板时，调用将解析为一个分发函数，该函数确定要使用哪个实现。分发函数将分发目标写入分发函数指针，然后尾调用选定的例程。在下一次迭代中，将直接调用正确的函数。这两种机制都将以线程安全和异步信号安全的方式实现。通常情况下，最佳实现是使用 CPU 支持的最高架构级别。然而，硬件限制，如热许可和 AVX-SSE 过渡开销，可能会使架构级别 v3 和 v4 在某些处理器上变得不太吸引人。实现可能会被编写成在读取期间超出字符串末尾，但确保不会越过页面边界。这种超出边界在没有设置段限制的情况下是无害的，但可能会混淆诸如 valgrind 等分析工具。这在处理以 NUL 结尾的字符串时尤其需要。
+在技术细节方面，计划采用汇编语言实现优化例程，以确保工具链无关。对于动态链接的可执行文件，计划使用 ifunc 机制，在运行时选择每个例程的最佳实现。如果可能，将查询一个环境变量，可让用户选择不同的架构级别，或者完全禁用 SIMD 增强。对于静态链接的可执行文件，或者直接调用函数（例如通过 libc 内部的隐藏别名），计划提供分发跳板。在第一次调用跳板时，调用将解析为一个分发函数，该函数确定要使用哪个实现。分发函数将分发目标写入分发函数指针，然后尾调用选定的例程。在下一次迭代中，将直接调用正确的函数。这两种机制都将以线程安全和异步信号安全的方式实现。通常情况下，最佳实现是使用 CPU 支持的最高架构级别。然而，硬件限制，如热许可和 AVX-SSE 过渡开销，可能会使架构级别 v3 和 v4 在某些处理器上变得不太吸引人。实现可能会被编写成在读取期间超出字符串末尾，但确保不会越过页面边界。这种超出边界在没有设置段限制的情况下是无害的，但可能会混淆诸如 valgrind 等分析工具。这在处理以 NUL 结尾的字符串时尤其需要。
 
 关于文档方面，存在 SIMD 增强函数的信息将会在一个新的手册页 simd(7) 中进行记录。该页面将向用户解释 libc 如何选择要使用的实现，以及如何配置这种行为。其他手册页，如 environ(7)、string(3) 和 bstring(3)，将根据需要添加交叉引用和额外的信息来进行增强。将产生内部文档，解释分发和函数选择机制。由于不计划将这些机制提供给用户代码，因此不会产生面向最终用户的文档。根据需要，还可能会产生关于基准测试和测试设置的额外文档。还可能会产生最终报告，描述所使用的技术并提供最终的性能改进情况。
 
@@ -58,7 +58,7 @@ FreeBSD 基金会正在征集与 FreeBSD 操作系统中的任何主要子系统
 
 **进行中**
 
-从 2023 年 6 月 1 日到 9 月 1 日，Jake Freeland 将与基金会一起进行实习，致力于开发 FreeBSD 的沙盒框架 Capsicum。Capsicum 被设计用来限制应用程序和库所具有的能力。Capsicum 模型简单且安全，但近年来在该框架周围的进展和发展已经减缓。Capsicum 的核心思想很直观，一旦进入能力模式，资源获取和外部通信都会受到严格限制。围绕这一原则设计程序相对容易，但问题在于，那些未设计为沙盒化的现有应用程序需要在这个环境中工作。很难确定哪些操作会引发 Capsicum 违规，并且不可能在请求或命名资源之前预先打开尚未被请求或命名的资源。此外，开发人员在实施 Capsicum 功能之前必须对程序非常熟悉。这些原因解释了为什么 Capsicum 化的努力逐渐减少。
+从 2023 年 6 月 1 日到 9 月 1 日，Jake Freeland 将与基金会一起进行实习，致力于开发 FreeBSD 的沙盒框架 Capsicum。Capsicum 被设计用来限制应用程序和库所具有的能力。Capsicum 模型简单且安全，但近年来在该框架周围的进展和发展已经减缓。Capsicum 的核心思想很直观，一旦进入能力模式，资源获取和外部通信都会受到严格限制。围绕这一原则设计程序相对容易，但问题在于，那些未设计为沙盒化的现有应用程序需要在这个环境中工作。很难确定哪些操作会引发 Capsicum 违规，并且不可能在请求或命名资源之前预先打开尚未被请求或命名的资源。此外，开发人员在实施 Capsicum 功能之前必须对程序非常熟悉。这些原因解释了为什么 Capsicum 化的努力正逐渐减少。
 
 这个实习项目将涉及多个项目，总体目标是为希望将现有程序 Capsicum 化的开发人员提供更好的体验和便利。Capsicum 的最大障碍是其陡峭的学习曲线。重构程序以支持能力模式通常需要开发人员知道什么会导致 Capsicum 违规，并知道如何重构给定的程序以避免违规。有时这个过程很简单，但较大的程序通常需要按需获取资源，找到如何满足这些需求可能会很困难。扩展开发人员可用的工具数量，以方便进行程序的 Capsicum 化，将大大减少上述的学习曲线。如果 Capsicum 化变得简单，那么更多的开发人员将会采用它。
 
@@ -66,7 +66,7 @@ FreeBSD 基金会正在征集与 FreeBSD 操作系统中的任何主要子系统
 
 1. 跟踪 Capsicum 违规
 
-在撰写本文时，修改程序以支持 Capsicum 需要开发人员手动解析他们的代码，找到 Capsicum 违规。拥有一个在运行时可以跟踪应用程序并找出违规发生位置的实用工具将会很方便。这个功能可以添加到 ktrace(1) 中作为一个选项标志。基本思路是钩子 ENOCAP 通常会返回的位置，记录该位置，并继续正常执行。David Chisnall 在 Differential revision <https://reviews.freebsd.org/D33248> 中提出的想法也可以通过信号通知的方式记录违规。
+在撰写本文时，需要修改程序以支持 Capsicum 需要开发人员手动解析他们的代码，找到 Capsicum 违规。拥有一个在运行时可以跟踪应用程序并找出违规发生位置的实用工具将会很方便。这个功能可以添加到 ktrace(1) 中作为一个选项标志。基本思路是钩子 ENOCAP 通常会返回的位置，记录该位置，并继续正常执行。David Chisnall 在 Differential revision <https://reviews.freebsd.org/D33248> 中提出的想法也可以通过信号通知的方式记录违规。
 
 2. Capsicum 化 syslogd(8)
 
@@ -78,7 +78,7 @@ NFS 套件由许多守护进程组成，包括 nfsd(8)、mountd(8)、rpcbind(8)�
 
 4. Capsicum 化 ggatec(8) 和 ggated(8)
 
-GEOM Gate 网络工具提供对存储设备的远程访问，并建立在 FreeBSD 的 GEOM 框架之上。与 NFS 类似，设备导出可以在 exports 文件 `/etc/gg.exports` 内进行管理。ggate 实用工具非常适合 Capsicum 化，因为它们以 root 身份运行，处理网络请求，并且在 CVE-2021-29630 中已经遭受远程代码执行。ggatec 客户端实用工具用于创建 ggate 设备并与 ggated 进行通信。Capsicum 化 ggatec 应该相对简单，因为远程主机和设备路径都在命令行参数中指定。在进入能力模式之前，应该进行简单的文件和套接字预打开。ggated 实用工具查看 `/etc/gg.exports`，或指定的备用 exports 文件，并从 ggatec 处理 GEOM Gate 请求。所有需要的资源都在命令行参数和 exports 文件中指定，因此在进入能力模式之前，预打开这些资源应该足够了。
+GEOM Gate 网络工具提供了对存储设备的远程访问，并建立在 FreeBSD 的 GEOM 框架之上。与 NFS 类似，设备导出可以在 exports 文件 `/etc/gg.exports` 内进行管理。ggate 实用工具非常适合 Capsicum 化，因为它们以 root 身份运行，处理网络请求，并且在 CVE-2021-29630 中已经遭受远程代码执行。ggatec 客户端实用工具用于创建 ggate 设备并与 ggated 进行通信。Capsicum 化 ggatec 应该相对简单，因为远程主机和设备路径都在命令行参数中指定。在进入能力模式之前，应该进行简单的文件和套接字预打开。ggated 实用工具查看 `/etc/gg.exports`，或指定的备用 exports 文件，并从 ggatec 处理 GEOM Gate 请求。所有需要的资源都在命令行参数和 exports 文件中指定，因此在进入能力模式之前，预打开这些资源应该足够了。
 
 5. Capsicum 化 tftpd(8)
 
@@ -94,7 +94,7 @@ libarchive 库是专门用于压缩和解压缩多种流行的存档格式。已
 
 8. 完成 SIGCAP 违规信号的实现
 
-David Chisnall 在 Differential revision https://reviews.freebsd.org/D33248 中提出了一个可选的 SIGCAP 信号，可以在发生 Capsicum 违规时传递。不幸的是，这个评论没有完成，几个月没有更新。完成这个评论并添加 SIGCAP 信号可以使那些使用违规信号来触发 Capsicum 违规的程序的调试更加容易。我们可以使用 SIGCAP 告诉代码转到备用路径，而不是等待 SIGTRAP，后者可能会被调试器拦截。此外，有一个明确的 Capsicum 违规信号将允许 Capsicum 违规跟踪工具记录特定于 Capsicum 的故障。例如，当设置 `kern.trap enotcap=1` 时，任何 Capsicum 违规都会引发一个带有程序终止的 SIGTRAP。这不透明，因为无法确定该程序终止是因为违规还是因为无关的 SIGTRAP 信号。将 kern.trap enotcap 改为传递 SIGCAP 将消除这种混淆。这个 SIGCAP 信号还可以为上述 ktrace(1) 中的追踪 Capsicum 违规引入一个替代方法。ktrace(1) 可以截获并记录 SIGCAP 调用，并使用适当的信号处理程序将原始程序送回执行。
+David Chisnall 在 Differential revision <https://reviews.freebsd.org/D33248> 中提出了一个可选的 SIGCAP 信号，可以在发生 Capsicum 违规时传递。不幸的是，这个 revision 没有完成，几个月没有进行更新了。完成这个 revision 并添加 SIGCAP 信号可以使那些使用违规信号来触发 Capsicum 违规的程序的调试更加容易。我们可以使用 SIGCAP 告诉代码转到备用路径，而不是等待 SIGTRAP，后者可能会被调试器拦截。此外，有一个明确的 Capsicum 违规信号将允许 Capsicum 违规跟踪工具记录特定于 Capsicum 的故障。例如，当设置 `kern.trap enotcap=1` 时，任何 Capsicum 违规都会引发一个带有程序终止的 SIGTRAP。这不透明，因为无法确定该程序终止是因为违规还是因为无关的 SIGTRAP 信号。将 kern.trap enotcap 改为传递 SIGCAP 将消除这种混淆。这个 SIGCAP 信号还可以为上述 ktrace(1) 中的追踪 Capsicum 违规引入一个替代方法。ktrace(1) 可以截获并记录 SIGCAP 调用，并使用适当的信号处理程序将原始程序送回执行。
 
 ## 无线网络实习
 
@@ -114,7 +114,7 @@ David Chisnall 在 Differential revision https://reviews.freebsd.org/D33248 中�
 
 **进行中**
 
-FreeBSD 的持续集成（CI）基础设施基于 Jenkins。每当开发人员向 FreeBSD 源代码存储库推送提交时，就会运行一个作业。希望在预提交环境中为开发人员提供更多便利。当 CI 运行中出现问题时，解决这些问题可能会很困难。此外，希望拥有私有的 FreeBSD 运行程序，供流行的 Git 托管服务使用，以为推送到私有分支的人创建 CI 基础设施。为此，Muhammad Moinur Rahman 的目标是将由 Li-Wen Hsu 编写的 CI 脚本作为构建系统的一部分提供给开发人员。与 `make universe` 或 `make tinderbox` 为所有支持的架构构建类似，`make ci` 将为所有支持的构建执行类似的操作。另一个目标是在调试问题时，使开发人员能够运行单个 CI 作业。希望这种灵活性也能让其他人将这些构建/脚本集成到其他 CI 工具（如从 Github 运行的 Cirrus CI）中。
+FreeBSD 的持续集成（CI）基础设施基于 Jenkins。每当开发人员向 FreeBSD 源代码存储库推送提交时，就会运行一个作业。现希望在预提交环境中为开发人员提供更多便利。当 CI 运行中出现问题时，解决这些问题可能会很困难。此外，希望拥有私有的 FreeBSD 运行程序，供流行的 Git 托管服务使用，以为推送到私有分支的人创建 CI 基础设施。为此，Muhammad Moinur Rahman 的目标是将由 Li-Wen Hsu 编写的 CI 脚本作为构建系统的一部分提供给开发人员。与 `make universe` 或 `make tinderbox` 为所有支持的架构构建类似，`make ci` 将为所有支持的构建执行类似的操作。另一个目标是在调试问题时，使开发人员能够运行单个 CI 作业。希望这种灵活性也能让其他人将这些构建/脚本集成到其他 CI 工具（如从 Github 运行的 Cirrus CI）中。
 
 ## FreeBSD 作为一级的 cloud-init 平台
 
@@ -122,15 +122,15 @@ FreeBSD 的持续集成（CI）基础设施基于 Jenkins。每当开发人员�
 
 **进行中**
 
- cloud-init 是在云中配置服务器的标准方式。不幸的是，除了 Linux 以外的操作系统在 cloud-init 上的支持相当有限，而且 FreeBSD 上缺乏 cloud-init 支持成为希望将 FreeBSD 作为一流平台的云提供商的障碍。为了解决这个问题，FreeBSD 基金会已经委托 Mina Galić，以将 FreeBSD 的 cloud-init 支持与 Linux 支持保持一致。项目交付内容包括完成特定网络类的提取，实现`ifconfig(8)`和`login.conf(5)`解析器，实现`IPv6`配置，为 Azure 创建`devd`规则，并编写关于将 FreeBSD 投入生产的 Handbook 文档。
+cloud-init 是在云中配置服务器的标准方式。不幸的是，除了 Linux 以外的操作系统在 cloud-init 上的支持相当有限，而且 FreeBSD 上缺乏 cloud-init 支持成为希望将 FreeBSD 作为一级平台的云提供商的障碍。为了解决这个问题，FreeBSD 基金会已经委托 Mina Galić，以将 FreeBSD 的 cloud-init 支持与 Linux 支持保持一致。项目交付内容包括完成特定网络类的提取，实现`ifconfig(8)`和`login.conf(5)`解析器，实现`IPv6`配置，为 Azure 创建`devd`规则，并编写关于将 FreeBSD 投入生产的 Handbook 文档。
 
 ### 背景
 
- cloud-init 最初是一个 Linux 项目，对于除 Linux 以外的 BSD 操作系统的支持是后来添加的。当试图扩展 cloud-init 以更好地与 FreeBSD 配合时，发现即使是不同 Linux 发行版之间的支持也很差。从这个问题诞生了一个重构项目，将网络功能提取到 cloud-init 的发行版类中。该项目最初由 Mina 提出和推动，但 cloud-init 的维护人员和贡献者仍未完成。原因是对于 Linux 来说，当前的设计已经足够好了。然而，为了改善对 FreeBSD 和其他 BSD 的网络支持，这将是第一个重要的步骤。
+cloud-init 最初是一个 Linux 项目，对于除 Linux 以外的 BSD 操作系统的支持是后来添加的。当试图扩展 cloud-init 以更好地与 FreeBSD 配合时，发现即使是不同 Linux 发行版之间的支持也很差。从这个问题诞生了一个重构项目，将网络功能提取到 cloud-init 的发行版类中。该项目最初由 Mina 提出和推动，但 cloud-init 的维护人员和贡献者仍未完成。原因是对于 Linux 来说，当前的设计已经足够好了。然而，为了改善对 FreeBSD 和其他 BSD 的网络支持，这将是第一个重要的步骤。
 
 ### 网络重构
 
- cloud-init 重构的一个问题是辅助函数在 Linux 上访问`/sys`。在 BSD 上的等效操作是解析`ifconfig(8)`，然而结果会更高级一些。这将允许重构一些低悬的果实，并验证解析器。这项工作包括为 BSD 实现`ifconfig(8)`解析器，并对`is_bond`、`is_bridge`、`is_physical`、`is_up`、`is_vlan`、`get_interfaces`、`get_interface_mac`、`get_interfaces_by_mac`和`interface_has_own_mac`进行重构。在网络更新之后，还需要重构`EphemeralIPv4Network`、`EphemeralIPv6Network`和`EphemeralDHCPv4`类。最后的网络步骤将是将网络渲染器与启动/关闭分离，实现`BSDRenderer.start_services`，为 FreeBSD 实现`IPv6`和`WiFi`配置。
+cloud-init 重构的一个问题是辅助函数在 Linux 上访问`/sys`。在 BSD 上的等效操作是解析`ifconfig(8)`，然而结果会更高级一些。这将允许重构一些低悬的果实，并验证解析器。这项工作包括为 BSD 实现`ifconfig(8)`解析器，并对`is_bond`、`is_bridge`、`is_physical`、`is_up`、`is_vlan`、`get_interfaces`、`get_interface_mac`、`get_interfaces_by_mac`和`interface_has_own_mac`进行重构。在网络更新之后，还需要重构`EphemeralIPv4Network`、`EphemeralIPv6Network`和`EphemeralDHCPv4`类。最后的网络步骤将是将网络渲染器与启动/关闭分离，实现`BSDRenderer.start_services`，为 FreeBSD 实现`IPv6`和`WiFi`配置。
 
 ### 文档
 
@@ -142,7 +142,7 @@ FreeBSD 的持续集成（CI）基础设施基于 Jenkins。每当开发人员�
 
 ### 未来工作
 
-一些未来工作的想法包括为`ifconfig(8)`和类似工具实现`libxo(3)`，以及为 cloud-init 实现一个 UCL 解析器。
+一些未来工作的想法包括为`ifconfig(8)`和类似工具实现`libxo(3)`，以及为 cloud-init 实现 UCL 解析器。
 
 ## 在 FreeBSD 上运行的 OpenStack
 
@@ -190,7 +190,7 @@ netperf 集群提供了各种规格的机器，让开发人员进行网络功能
 
 UFS/FFS 文件系统具备创建快照的能力。因为创建快照的能力是在软更新被编写之后添加的，所以它们与软更新完全集成在一起。然而，当日志式软更新于 2010 年被引入时，它们从未与快照集成。因此，在运行日志式软更新的文件系统上无法使用快照。
 
-在支持 ZFS 添加到 FreeBSD 之后，快照变得不再重要。ZFS 可以快速轻松地创建快照。然而，仍然有两种情况，让 UFS 快照仍然很重要。首先，它们允许对活动文件系统进行可靠的转储，从而避免可能的长时间停机。其次，它们允许运行后台 fsck。与 ZFS 中需要 Scrub 类似，fsck 需要定期运行以查找未检测到的磁盘故障。快照允许在活动文件系统上运行 fsck，而无需安排停机时间。
+在支持 ZFS 添加到 FreeBSD 之后，快照变得不再重要。ZFS 可以快速轻松地创建快照。然而，仍然有两种情况，让 UFS 快照很重要。首先，它们允许对活动文件系统进行可靠的转储，从而避免可能的长时间停机。其次，它们允许运行后台 fsck。与 ZFS 中需要 Scrub 类似，fsck 需要定期运行以查找未检测到的磁盘故障。快照允许在活动文件系统上运行 fsck，而无需安排停机时间。
 
 在与开发者社区进行磋商后，FreeBSD 基金会的工作人员认为此类基础设施工作将产生积极影响。因此，基金会开始资助 Marshall Kirk McKusick 进行必要的更改，以允许使用日志式软更新的 UFS/FFS 文件系统创建快照。这项工作需要对 UFS/FFS 软更新和快照内核代码进行广泛的更改，以及对 fsck_ffs 实用程序进行更改。
 
