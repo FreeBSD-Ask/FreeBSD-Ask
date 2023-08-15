@@ -130,7 +130,7 @@ cloud-init 最初是一个 Linux 项目，对于除 Linux 以外的 BSD 操作�
 
 ### 网络重构
 
-cloud-init 重构的一个问题是辅助函数在 Linux 上访问`/sys`。在 BSD 上的等效操作是解析`ifconfig(8)`，然而结果会更高级一些。这将允许重构一些低悬的果实，并验证解析器。这项工作包括为 BSD 实现`ifconfig(8)`解析器，并对`is_bond`、`is_bridge`、`is_physical`、`is_up`、`is_vlan`、`get_interfaces`、`get_interface_mac`、`get_interfaces_by_mac`和`interface_has_own_mac`进行重构。在网络更新之后，还需要重构`EphemeralIPv4Network`、`EphemeralIPv6Network`和`EphemeralDHCPv4`类。最后的网络步骤将是将网络渲染器与启动/关闭分离，实现`BSDRenderer.start_services`，为 FreeBSD 实现`IPv6`和`WiFi`配置。
+cloud-init 重构的一个问题是辅助函数在 Linux 上访问`/sys`。在 BSD 上的等效操作是解析`ifconfig(8)`，然而结果会更高级一些。这将使得一些较为容易的优化机会得以整理，同时也可以对解析器进行验证。这项工作包括为 BSD 实现`ifconfig(8)`解析器，并对`is_bond`、`is_bridge`、`is_physical`、`is_up`、`is_vlan`、`get_interfaces`、`get_interface_mac`、`get_interfaces_by_mac`和`interface_has_own_mac`进行重构。在网络更新之后，还需要重构`EphemeralIPv4Network`、`EphemeralIPv6Network`和`EphemeralDHCPv4`类。最后的网络步骤将是将网络渲染器与启动/关闭分离，实现`BSDRenderer.start_services`，为 FreeBSD 实现`IPv6`和`WiFi`配置。
 
 ### 文档
 
