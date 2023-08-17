@@ -1,6 +1,6 @@
 # 目录
 
-* [FreeBSD 从入门到跑路](./)
+* [FreeBSD 从入门到跑路](README.md)
 * [目录](mu-lu.md)
 
 ## 第 0 章 FreeBSD 中文社区
@@ -13,7 +13,9 @@
 * [第 0.5 节 FreeBSD 季度报告](di-0-zhang-freebsd-zhong-wen-she-qu/di-0.5-jie-freebsd-ji-du-bao-gao.md)
 * [第 0.6 节 FreeBSD 开发计划](di-0-zhang-freebsd-zhong-wen-she-qu/di-0.6-jie-freebsd-kai-fa-ji-hua.md)
 * [第 0.7 节 FreeBSD 安全公告](di-0-zhang-freebsd-zhong-wen-she-qu/di-0.7-jie-freebsd-an-quan-gong-gao.md)
-* [第 0.8 节 FreeBSD 中文社区文章翻译表](di-0-zhang-freebsd-zhong-wen-she-qu/di-0.10-jie-freebsd-zhong-wen-she-qu-wen-zhang-fan-yi-biao.md)
+* [第 0.8 节 FreeBSD 子项目](di-0-zhang-freebsd-zhong-wen-she-qu/di-0.8-jie-freebsd-zi-xiang-mu.md)
+* [第 0.9 节 谁在使用 FreeBSD](di-0-zhang-freebsd-zhong-wen-she-qu/di-0.9-jie-shui-zai-shi-yong-freebsd.md)
+* [第 0.10 节 FreeBSD 中文社区文章翻译表](di-0-zhang-freebsd-zhong-wen-she-qu/di-0.10-jie-freebsd-zhong-wen-she-qu-wen-zhang-fan-yi-biao.md)
 
 ## 第 1 章 走进 FreeBSD
 
@@ -205,7 +207,8 @@
 * [第 18.2 节 系统安装](di-18-zhang-shu-mei-pai-yu-qian-ru-shi/di-18.2-jie-xi-tong-an-zhuang.md)
 * [第 18.3 节 使用配置](di-18-zhang-shu-mei-pai-yu-qian-ru-shi/di-18.3-jie-shi-yong-pei-zhi.md)
 * [第 18.4 节 USB 网卡与 WIFI](di-18-zhang-shu-mei-pai-yu-qian-ru-shi/di-18.4-jie-usb-wang-ka-yu-wifi.md)
-* [第 18.5 节 RISC-V](di-18-zhang-shu-mei-pai-yu-qian-ru-shi/di-18.6-jie-riscv.md)
+* [第 18.5 节 树莓派与 Linux 兼容层](di-18-zhang-shu-mei-pai-yu-qian-ru-shi/di-18.5-jie-shu-mei-pai-yu-linux-jian-rong-ceng.md)
+* [第 18.6 节 RISC-V](di-18-zhang-shu-mei-pai-yu-qian-ru-shi/di-18.6-jie-riscv.md)
 
 ## 第 19 章 文学故事
 
