@@ -64,12 +64,6 @@ $command &
 # sysrc dbus_enable="YES"
 ```
 
-编辑 `# ee /etc/fstab`，添加：
-
-```
-proc            /proc           procfs  rw      0       0
-```
-
 编辑 `/usr/local/etc/xrdp/startwm.sh`：
 
 找到 `#### start desktop environment`，修改如下：
@@ -98,6 +92,8 @@ exec ck-launch-session startplasma-x11   #更改此处
 #### set environment variables here if you want
 export LANG=zh_CN.UTF-8
 ```
+
+#### 登录
 
 首次登录设备会有安全提示，输入 `yes`，回车后远程桌面窗口就会弹出.
 
