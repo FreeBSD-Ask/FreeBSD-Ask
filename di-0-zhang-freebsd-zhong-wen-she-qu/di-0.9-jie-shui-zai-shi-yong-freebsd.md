@@ -1,10 +1,13 @@
 # 第 0.9 节 谁在使用 FreeBSD
 
+本页面是对 <https://freebsdfoundation.org/about-us/testimonials/> 的翻译。
+
+
 **推荐信**
 
 热爱 FreeBSD 为你的组织所做的贡献吗？请给我们发送你的推荐信！
 
-你的公司是否使用 FreeBSD 取得了巨大的成功？通过提交公司的推荐信，帮助我们宣传有关这个项目的信息。你不仅将进一步帮助提升人们对 FreeBSD 的认知，而且你的推荐信还将包含你公司的链接，并将在 FreeBSD 基金会网站首页、推荐信页面以及每月通讯中展示至少一次。推荐信通常由董事或副总裁撰写，内容包括你为何使用 FreeBSD、你获得了哪些益处，*以及为何读者应该向基金会捐款或为项目做出贡献。* 希望您今天能考虑撰写一份推荐下，以帮助增加 FreeBSD 的知名度和发展！感兴趣吗？请填写[此表格](https://goo.gl/forms/EzHZMprvySWKbLO12)或与marketing@freebsdfoundation.org联系。
+你的公司是否使用 FreeBSD 取得了巨大的成功？通过提交公司的推荐信，帮助我们宣传有关这个项目的信息。你不仅将进一步帮助提升人们对 FreeBSD 的认知，而且你的推荐信还将包含你公司的链接，并将在 FreeBSD 基金会网站首页、推荐信页面以及每月通讯中展示至少一次。推荐信通常由董事或副总裁撰写，内容包括你为何使用 FreeBSD、你获得了哪些益处，*以及为何读者应该向基金会捐款或为项目做出贡献。* 希望您今天能考虑撰写一份推荐下，以帮助增加 FreeBSD 的知名度和发展！感兴趣吗？请填写[此表格](https://goo.gl/forms/EzHZMprvySWKbLO12)或与 marketing@freebsdfoundation.org 联系。
 
 **查看已经为 FreeBSD 欢呼的公司名单：**
 
