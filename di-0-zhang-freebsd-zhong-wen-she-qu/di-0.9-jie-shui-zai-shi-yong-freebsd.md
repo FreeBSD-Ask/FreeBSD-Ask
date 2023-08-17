@@ -8,7 +8,7 @@
 
 ## NetApp
 
-![NetApp](../.gitbook/assets/NetApp.png) 
+![NetApp](../.gitbook/assets/netapp.png) 
 
 2020 年 5 月 20 日
 
@@ -86,7 +86,7 @@ FreeBSD的出色安全性和更新、网络性能以及出色的IO和内存管�
 – Jonathan Eastgate，首席技术官，[simPRO](https://www.simpro.us/)
 
 ## MSI/FUNTORO
-![MSI](../.gitbook/assets/MSI.png) 
+![MSI](../.gitbook/assets/FUNTORO.png) 
 
 2018 年 5 月 31 日
 
@@ -265,7 +265,7 @@ NGINX 是现代网络的秘密核心，为全球 1/3 最繁忙的站点和应用
 – Jason M. Anderson，首席产品经理经理，[微软](https://www.microsoft.com/)
 
 ## Tera Bear Consulting
-![Tera](../.gitbook/assets/Terat.png)
+![Tera](../.gitbook/assets/Tera.png)
 
 2015 年 12 月 28 日
 
@@ -396,7 +396,7 @@ Juniper 从领先的大学、个人和商业组织之间强大的合作中受益
 
 ## pair Networks
 
-![pair](../.gitbook/assets/pairr.png)
+![pair](../.gitbook/assets/pair.png)
 
 2015 年 12 月 28 日
 
