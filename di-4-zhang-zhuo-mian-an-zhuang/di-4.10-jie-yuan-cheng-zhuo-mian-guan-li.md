@@ -30,7 +30,7 @@ $command &
 
 保存后执行命令 `# chmod 755 ~/.vnc/xstartup`。
 
-1. 接下来在终端执行命令 `vncserver` 或 `vncserver :1`。
+- 接下来在终端执行命令 `vncserver` 或 `vncserver :1`。
 
 其中“`:1`”相当于 `DISPLAY=:1`，即指定桌面显示的通信端口为 `1`，对应 VNC 服务的通信端口为 `5901`。尽管桌面显示通信端口 是从 0 开始，但该端口已被当前桌面占用，因此 VNC 服务默认端口虽为 5900，但实际执行往往从 5901 开始。
 
@@ -38,7 +38,7 @@ $command &
 
 关闭服务请用命令 `# vncserver -kill :1`，这里通信端口必须指定。
 
-1. 如果启用了防火墙，那么此时还需要开通防火墙，以 ipfw 为例，在终端输入命令：
+- 如果启用了防火墙，那么此时还需要开通防火墙，以 ipfw 为例，在终端输入命令：
 
 ```
 # ipfw add allow tcp from any to me 5900-5910 in keep-state
