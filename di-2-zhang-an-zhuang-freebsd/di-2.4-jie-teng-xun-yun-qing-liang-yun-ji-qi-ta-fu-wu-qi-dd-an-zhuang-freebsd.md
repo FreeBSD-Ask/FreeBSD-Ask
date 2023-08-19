@@ -77,6 +77,15 @@ ssh 链接后，`kldload zfs` 加载 zfs 模块，然后运行 `bsdinstall`，�
 
 ![腾讯云轻量云及其他服务器安装 FreeBSD](../.gitbook/assets/installBSD3.jpg)
 
+
+- 我们还可以手动下载 FreeBSD 的安装文件，以 MANIFEST 为例：
+
+```
+# mkdir -p /usr/freebsd-dist
+# cd /usr/freebsd-dist
+# fetch http://ftp.freebsd.org/pub/FreeBSD/releases/amd64/13.1-RELEASE/MANIFEST
+```
+
 ### 故障排除 
 
 - 为什么不能直接 dd？（错误示范，仅供说明，请勿执行）
