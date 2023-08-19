@@ -7,9 +7,9 @@
 ```
 # fetch http://book.bsdcn.org/arch.sh #下载脚本构建兼容层
 # sh arch.sh #运行脚本
-# chroot /compat/arch/ /bin/bash #进入 Arch兼容层
+# chroot /compat/arch/ /bin/bash #进入 Arch 兼容层
 # passwd #为 Arch 的 root 设置一个密码
-# passwd test #为 Arch 的 test 设置一个密码，上述脚本已经创建过该用户了！
+# passwd test #为 Arch 的 test 设置一个密码，上述脚本已经创建过该用户了！不设置密码无法正常使用 aur。
 
 ```
 
@@ -25,7 +25,7 @@ $ yay -S linuxqq # 此时位于 Arch 兼容层！此时用户为 test
 ```
 # export LANG=zh_CN.UTF-8 # 此时位于 Arch 兼容层！
 # export LC_ALL=zh_CN.UTF-8 # 此时位于 Arch 兼容层！如果不添加环境变量，则中文输入法无法使用。如果设置失败请重启一次 FreeBSD 主机。此时位于 Arch 兼容层！
-# /user/bin/qq --no-sandbox  # 此时位于 Arch 兼容层！
+# /opt/QQ/qq --no-sandbox  # 此时位于 Arch 兼容层！
 ```
 
 ## Linux QQ 3.x（Electron）【可选：基于 Ubuntu 兼容层】
