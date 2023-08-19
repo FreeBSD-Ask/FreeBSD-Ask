@@ -1,12 +1,19 @@
 # 第 0.10 节 FreeBSD 中文社区文章翻译表
 
-|          原标题         |      中文标题     |                                 链接                                 |  作者 |      内容概述     |  译者 | 时间安排 |
-| :------------------: | :-----------: | :----------------------------------------------------------------: | :-: | :-----------: | :-: | :--: |
-| OpenBSD Router Guide | OpenBSD 路由器指南 | [https://openbsdrouterguide.net/](https://openbsdrouterguide.net/) |  /  | OpenBSD 路由器指南 |     |      |
-| ＦｒｅｅＢＳＤでのＣＰＵＴＹＰＥの指定方法    |   如何在 FreeBSD 中指定 CPUTYPE  |    <https://qiita.com/nanorkyo/items/e0417d8c1388750cb72c>    | 重村法克    |               |     |      |
-|     FreeBSD Ports Collection における OPTIONS 機能の紹介 - OPTIONS_SET/OPTIONS_UNSET/NO_DIALOG の活用と実践 |      FreeBSD Ports Collection中OPTIONS 功能介绍-OPTIONS_SET/OPTIONS_UNSET/NO_DIALOG 的利用与实践-         |                                                                    <https://qiita.com/nanorkyo/items/a0068cafcf9112ebbb7b>    |      重村法克          |     |   |    |
-|    ＢＩＯＳブートとＵＥＦＩブートでＧＰＴパーティションの違いと作り方                  |    BIOS 启动和 UEFI 启动的区别以及如何制作 GPT 分区           |          <https://qiita.com/nanorkyo/items/429d7382a418b38de4d3>                                                          |   重村法克   |               |     |      |
-|                      |               |                                                                    |     |               |     |      |
+|          原标题与链接         |      中文标题     |                                                            作者 | 译者 | 时间安排 |
+| :------------------:| :-----------: | :----------------------------------------------------------------:| :-: | :-----------: |
+| [OpenBSD Router Guide ](https://openbsdrouterguide.net/)| OpenBSD 路由器指南 | |  /  |   |      |
+| [ＦｒｅｅＢＳＤでのＣＰＵＴＹＰＥの指定方法](https://qiita.com/nanorkyo/items/e0417d8c1388750cb72c)    |   如何在 FreeBSD 中指定 CPUTYPE     | 重村法克    |               |          |
+|     [FreeBSD Ports Collection における OPTIONS 機能の紹介 - OPTIONS_SET/OPTIONS_UNSET/NO_DIALOG の活用と実践](https://qiita.com/nanorkyo/items/a0068cafcf9112ebbb7b) |      FreeBSD Ports Collection中OPTIONS 功能介绍-OPTIONS_SET/OPTIONS_UNSET/NO_DIALOG 的利用与实践-         |           重村法克          |     |   |    
+|    [ＢＩＯＳブートとＵＥＦＩブートでＧＰＴパーティションの違いと作り方](https://qiita.com/nanorkyo/items/429d7382a418b38de4d3)                  |    BIOS 启动和 UEFI 启动的区别以及如何制作 GPT 分区                                                                  |   重村法克   |               |     |      
+|  [ZFSミラープールのディスク交換による容量増設](https://qiita.com/belgianbeer/items/8df197588462cd7f6b45) | ZFS 镜像池更换磁盘扩容 |   みんみん   |               |     |      
+| [FreeBSDタッチパッドをoffにする](https://qiita.com/fygar256/items/35100d43b096470631d6) | 关闭 FreeBSD 触摸板 | 前川 田井介  |               |     |      
+| [ZFSプールをミラーで構成することで、不正データの影響を無くす](https://qiita.com/belgianbeer/items/0e69cf3c3f0fc3c89adc) | 通过为 ZFS 池配置镜像来消除无效数据的影响| みんみん |               |     |      
+| [FreeBSD BhyveでPCI passthrough](https://qiita.com/yshdsnd/items/0b8c38425a6a3bae289b) | FreeBSD Bhyve 上的 PCI 直通         |      yshdsnd             |     |               |     |      
+|  [ZFSプールを壊してみた](https://qiita.com/belgianbeer/items/477de8ddc64787442c0b)|   我尝试破坏 ZFS 池   |   みんみん     |     |               |     |      
+|                      |               |                         |     |               |     |      
+|                      |               |                        |     |               |     |      
+|                      |               |                             |     |               |     |      
 
 可能用到的资源列表：
 
