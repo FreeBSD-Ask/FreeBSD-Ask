@@ -7,7 +7,6 @@
 |     [FreeBSD Ports Collection における OPTIONS 機能の紹介 - OPTIONS_SET/OPTIONS_UNSET/NO_DIALOG の活用と実践](https://qiita.com/nanorkyo/items/a0068cafcf9112ebbb7b) |      FreeBSD Ports Collection中OPTIONS 功能介绍-OPTIONS_SET/OPTIONS_UNSET/NO_DIALOG 的利用与实践-         |           重村法克          |   ykla  |√   |    
 |    [ＢＩＯＳブートとＵＥＦＩブートでＧＰＴパーティションの違いと作り方](https://qiita.com/nanorkyo/items/429d7382a418b38de4d3)                  |    BIOS 启动和 UEFI 启动的区别以及如何制作 GPT 分区                                                                  |   重村法克   |               |     |      
 |  [ZFSミラープールのディスク交換による容量増設](https://qiita.com/belgianbeer/items/8df197588462cd7f6b45) | ZFS 镜像池更换磁盘扩容 |   みんみん   |               |     |      
-| [FreeBSDタッチパッドをoffにする](https://qiita.com/fygar256/items/35100d43b096470631d6) | 关闭 FreeBSD 触摸板 | 前川 田井介  |               |     |      
 | [ZFSプールをミラーで構成することで、不正データの影響を無くす](https://qiita.com/belgianbeer/items/0e69cf3c3f0fc3c89adc) | 通过为 ZFS 池配置镜像来消除无效数据的影响| みんみん |               |     |      
 | [FreeBSD BhyveでPCI passthrough](https://qiita.com/yshdsnd/items/0b8c38425a6a3bae289b) | FreeBSD Bhyve 上的 PCI 直通         |      yshdsnd             |     |               |     |      
 |  [ZFSプールを壊してみた](https://qiita.com/belgianbeer/items/477de8ddc64787442c0b)|   我尝试破坏 ZFS 池   |   みんみん     |     |               |     |      
