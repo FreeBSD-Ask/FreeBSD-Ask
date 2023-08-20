@@ -4,7 +4,7 @@
 | :------------------:| :-----------: | :----------------------------------------------------------------:| :-: | :-----------: |
 | [OpenBSD Router Guide ](https://openbsdrouterguide.net/)| OpenBSD 路由器指南 | |  /  |   |      |
 | [ＦｒｅｅＢＳＤでのＣＰＵＴＹＰＥの指定方法](https://qiita.com/nanorkyo/items/e0417d8c1388750cb72c)    |   如何在 FreeBSD 中指定 CPUTYPE     | 重村法克    |               |          |
-|     [FreeBSD Ports Collection における OPTIONS 機能の紹介 - OPTIONS_SET/OPTIONS_UNSET/NO_DIALOG の活用と実践](https://qiita.com/nanorkyo/items/a0068cafcf9112ebbb7b) |      FreeBSD Ports Collection中OPTIONS 功能介绍-OPTIONS_SET/OPTIONS_UNSET/NO_DIALOG 的利用与实践-         |           重村法克          |     |   |    
+|     [FreeBSD Ports Collection における OPTIONS 機能の紹介 - OPTIONS_SET/OPTIONS_UNSET/NO_DIALOG の活用と実践](https://qiita.com/nanorkyo/items/a0068cafcf9112ebbb7b) |      FreeBSD Ports Collection中OPTIONS 功能介绍-OPTIONS_SET/OPTIONS_UNSET/NO_DIALOG 的利用与实践-         |           重村法克          |   ykla  |√   |    
 |    [ＢＩＯＳブートとＵＥＦＩブートでＧＰＴパーティションの違いと作り方](https://qiita.com/nanorkyo/items/429d7382a418b38de4d3)                  |    BIOS 启动和 UEFI 启动的区别以及如何制作 GPT 分区                                                                  |   重村法克   |               |     |      
 |  [ZFSミラープールのディスク交換による容量増設](https://qiita.com/belgianbeer/items/8df197588462cd7f6b45) | ZFS 镜像池更换磁盘扩容 |   みんみん   |               |     |      
 | [FreeBSDタッチパッドをoffにする](https://qiita.com/fygar256/items/35100d43b096470631d6) | 关闭 FreeBSD 触摸板 | 前川 田井介  |               |     |      
