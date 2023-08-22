@@ -20,7 +20,7 @@
 > - 方案① 点击 [https://freebsd.gitbook.io/book/](https://freebsd.gitbook.io/book/)，选择右上角的“导出为 PDF”（需要代理软件）。
 > - 方案② 社区成员提供的脚本：
 >   
->> 　　https://github.com/safreya/tobook 用于导出跑路的pdf，打印的话比gitbook导出的应该要好点。该脚本运行于 FreeBSD。
+>> 　　<https://github.com/safreya/tobook> 用于导出跑路的pdf，打印的话比gitbook导出的应该要好点。该脚本运行于 FreeBSD。
 >> 
 >> 　　先安装需要的东西：
 >> ```
