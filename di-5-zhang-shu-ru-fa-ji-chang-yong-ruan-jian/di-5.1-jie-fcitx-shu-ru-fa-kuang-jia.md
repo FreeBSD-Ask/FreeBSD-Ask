@@ -106,7 +106,7 @@ export LANGUAGE=zh_CN.UTF-8
 export LC_ALL=zh_CN.UTF-8
 
 export XMODIFIERS='@im=fcitx'
-export GTK_IM_MODULE=fcitx/xim
+export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 ```
 
@@ -119,7 +119,7 @@ setenv LANG zh_CN.UTF-8
 setenv LC_ALL zh_CN.UTF-8
 setenv LANGUAGE zh_CN.UTF-8
 setenv XMODIFIERS @im=fcitx
-setenv GTK_IM_MODULE fcitx/xim
+setenv GTK_IM_MODULE fcitx
 setenv QT_IM_MODULE fcitx
 ```
 
