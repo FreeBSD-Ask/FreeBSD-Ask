@@ -20,7 +20,9 @@ $ echo $SHELL
 ```
 
 - 如果使用的是 `sh`, `bash`, `zsh`
-
+  
+**环境变量 HTTP_PROXY 一定要是大写！小写不生效！**
+  
 设置：
 ```
 # export HTTP_PROXY=http://192.168.X.X:7890
