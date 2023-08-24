@@ -196,8 +196,9 @@ $ kldstat
 
 ```
 # pkg install git
-$ git clone --depth=1 https://github.com/freebsd/drm-kmod
+$ git clone --depth=1 https://github.com/dumbbell/drm-kmod/
 $ cd freebsd/drm-kmod
+$ git checkout -b update-to-v5.17
 $ make
 …
 # make install
