@@ -10,7 +10,7 @@ FreeBSD 已从 Linux 移植了显卡驱动，理论上，I 卡 A 卡 N 卡均在
 
 对于 FreeBSD 13.1，编译使用`drm-510-kmod`，支持情况同 Linux 5.10。AMD 可支持 R7 4750U【但是有 [bug](https://github.com/freebsd/drm-kmod/issues/72)】。
 
-FreeBSD 14 Current，编译使用 `drm-515-kmod`。**截至 2023.7.5 Raptor Lake 即 13 代** **[**暂不支持**](https://github.com/freebsd/drm-kmod/issues/219)。** 之前的基本支持。
+FreeBSD 14 Current，编译使用 `drm-515-kmod`。**截至 2023.8.24 日，英特尔第 12、 13 代** 显卡 **[**暂不支持**](https://github.com/freebsd/drm-kmod/issues/219)。** 。
 
 详细情况可以看
 
@@ -189,13 +189,16 @@ $ kldstat
 > **警告**
 >
 > 此部分属于实验性内容且仅限 FreeBSD-CURRENT 使用，不建议新手操作。
+>
+> **请提前在 /usr/src 准备好一份系统源码。**
 
 拉取最新的 drm-kmod 并编译安装：
 
 ```
 # pkg install git
-$ git clone --depth=1 https://github.com/freebsd/drm-kmod
+$ git clone --depth=1 https://github.com/dumbbell/drm-kmod/
 $ cd freebsd/drm-kmod
+$ git checkout -b update-to-v5.17
 $ make
 …
 # make install
