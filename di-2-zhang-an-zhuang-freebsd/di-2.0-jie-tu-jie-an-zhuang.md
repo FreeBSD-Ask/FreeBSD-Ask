@@ -63,11 +63,18 @@
 
 ![](../.gitbook/assets/安装8.png)
 
+![](../.gitbook/assets/安装8.1.png)
+
+![](../.gitbook/assets/安装8.2.png)
+
 ![](../.gitbook/assets/安装9.png)
 
 ![](../.gitbook/assets/安装10.png)
 
 ![](../.gitbook/assets/安装11.png)
+
+![](../.gitbook/assets/安装11.1.png)
+
 
 此处输入 root 密码，密码不会显示在屏幕上，且要求重复输入两次以确认一致性。密码强度默认无要求。
 
@@ -124,6 +131,8 @@
 **在 FreeBSD 14 中已不存在该选项，可跳过此步骤。**
 
 ![](../.gitbook/assets/安装26.png)
+
+![](../.gitbook/assets/安装26.2.png)
 
 这个菜单选项是用来创建普通用户的。root 敢死队可以无视之。需要注意的是，最好将该用户其加入 wheel 组，其他参数可以保持默认设置不变。在 FreeBSD 14 及以后，所有用户的 shell 都被统一为了 sh。
 
