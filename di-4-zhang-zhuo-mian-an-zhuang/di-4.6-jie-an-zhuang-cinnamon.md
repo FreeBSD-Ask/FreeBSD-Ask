@@ -8,11 +8,16 @@
 >
 > 如果是 `sh`,`bash`,`zsh` 其中之一，请继续；
 
+
+![cinnamon on FreeBSD](../.gitbook/assets/cinnamon.png) 
+
 ## 安装
 
 ```
 # pkg install xorg lightdm lightdm-gtk-greeter cinnamon wqy-fonts xdg-user-dirs
 ```
+
+**壁纸就是黑色的，不是显示出了问题。**
 
 ## 配置
 
