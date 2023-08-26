@@ -71,6 +71,7 @@
 * [第 4.9 节 主题与美化](di-4-zhang-zhuo-mian-an-zhuang/di-4.9-jie-zhu-ti-yu-mei-hua.md)
 * [第 4.10 节 远程桌面管理](di-4-zhang-zhuo-mian-an-zhuang/di-4.10-jie-yuan-cheng-zhuo-mian-guan-li.md)
 * [第 4.11 节 安装 Wayland （可选）](di-4-zhang-zhuo-mian-an-zhuang/di-4.11-jie-an-zhuang-wayland-ke-xuan.md)
+* [第 4.12 节 Pantheon](di-4-zhang-zhuo-mian-an-zhuang/di-4.12-jie-pantheon.md)
 
 ## 第 5 章 输入法及常用软件
 
