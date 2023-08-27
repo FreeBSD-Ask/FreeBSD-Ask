@@ -1,5 +1,7 @@
 # 第 4.12 节 安装 Pantheon
 
+**尚未完成，仍然在测试！**
+
 ```
 root@ykla:~ # pkg install git
 root@ykla:~ # git clone --depth 1 https://mirrors.ustc.edu.cn/freebsd-ports/ports.git /usr/ports
