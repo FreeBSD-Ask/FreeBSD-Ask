@@ -40,7 +40,7 @@ Switched to a new branch 'elementary'
 
 ```
 root@ykla:~ # cd /usr/ports/x11/elementary-session
-root@ykla:/usr/ports/x11/elementary-session # pkg install cmake pkgconf gnome-settings-daemon desktop-file-utils gnome-keyring
+root@ykla:/usr/ports/x11/elementary-session # pkg install cmake pkgconf gnome-settings-daemon desktop-file-utils gnome-keyring accountsservice
 root@ykla:/usr/ports/x11/elementary-session # make BATCH=yes install clean
 ```
 
