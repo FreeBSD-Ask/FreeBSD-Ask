@@ -1,6 +1,6 @@
 # 目录
 
-* [FreeBSD 从入门到跑路](README.md)
+* [FreeBSD 从入门到跑路](./)
 * [目录](mu-lu.md)
 
 ## 第 0 章 FreeBSD 中文社区
@@ -293,9 +293,9 @@
 * [第 26.0 节 概述](di-26-zhang-openbsd/di-26.0-jie-gai-shu.md)
 * [第 26.1 节 安装](di-26-zhang-openbsd/di-26.1-jie-an-zhuang.md)
 * [第 26.2 节 配置](di-26-zhang-openbsd/di-26.2-jie-pei-zhi.md)
-* [第 26.3 节 换源](di-26-zhang-openbsd/di-26.3-jie-huan-yuan.md)
-* [第 26.4 节 包管理器](di-26-zhang-openbsd/di-26.4-jie-bao-guan-li-qi.md)
-* [第 26.5 节 桌面与其他软件](di-26-zhang-openbsd/di-26.5-jie-zhuo-mian-yu-qi-ta-ruan-jian.md)
+* [第 26.3 节 换源](di-26-zhang-openbsd/di-26.5-jie-openbsd-bian-cheng-yu-kai-fa.md)
+* [第 26.4 节 包管理器](di-26-zhang-openbsd/di-26.3-jie-bao-guan-li-qi.md)
+* [第 26.5 节 桌面与其他软件](di-26-zhang-openbsd/di-26.4-jie-zhuo-mian-yu-qi-ta-ruan-jian.md)
 
 ## 第 27 章 NetBSD
 
