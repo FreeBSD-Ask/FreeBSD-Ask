@@ -106,8 +106,6 @@
 
 ![](../.gitbook/assets/安装23.png)
 
-![](../.gitbook/assets/安装24-修.png)
-
 **严禁全选**
 
 不要选`local_unbound`，会影响 DNS，见 [https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=262290](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=262290)。
