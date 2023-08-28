@@ -7,17 +7,11 @@
 $ echo $SHELL
 ```
 
-- 如果使用的是 `csh`
+>**注意**
+>
+>**本文中的 `192.168.X.X:7890` 均非实际参数，以实际为准，复制粘贴是不会生效的！**
 
-设置：
-```
-# setenv http_proxy http://192.168.X.X:7890
-```
-
-取消：
-```
-# unsetenv http_proxy
-```
+## HTTP_PROXY 代理
 
 - 如果使用的是 `sh`, `bash`, `zsh`
   
@@ -31,4 +25,32 @@ $ echo $SHELL
 取消：
 ```
 # unset HTTP_PROXY
+```
+
+
+- 如果使用的是 `csh`
+
+设置：
+```
+# setenv http_proxy http://192.168.X.X:7890
+```
+
+取消：
+```
+# unsetenv http_proxy
+```
+## Git 代理
+
+- 如果使用的是 `sh`, `bash`, `zsh`：
+
+设置：
+```
+# git config --global http.proxy http://192.168.X.X:7890
+# git config --global https.proxy http://192.168.X.X:7890
+```
+取消：
+
+```
+# git config --global --unset http.proxy
+# git config --global --unset https.proxy
 ```
