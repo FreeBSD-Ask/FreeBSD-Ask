@@ -297,7 +297,7 @@
 * [第 26.3 节 包管理器](di-26-zhang-openbsd/di-26.3-jie-bao-guan-li-qi.md)
 * [第 26.4 节 桌面与其他软件](di-26-zhang-openbsd/di-26.4-jie-zhuo-mian-yu-qi-ta-ruan-jian.md)
 * [第 26.5 节 OpenBSD 编程与开发](di-26-zhang-openbsd/di-26.5-jie-openbsd-bian-cheng-yu-kai-fa.md)
-* [第 26.6 节  路由器与防火墙](di-26-zhang-openbsd/di-26.6-jie-lu-you-qi-yu-fang-huo-qiang.md)
+* [第 26.6 节 路由器与防火墙](di-26-zhang-openbsd/di-26.6-jie-lu-you-qi-yu-fang-huo-qiang.md)
 * [第 26.7 节 OpenBSD 安全](di-26-zhang-openbsd/di-26.7-jie-openbsd-an-quan.md)
 
 ## 第 27 章 NetBSD
@@ -321,6 +321,7 @@
 * [第 29.2 节 安装 CDE](di-29-zhang-zhuo-mian-gao-ji-jin-jie/di-29.2-jie-an-zhuang-cde.md)
 * [第 29.3 节 安装 Awesome](di-29-zhang-zhuo-mian-gao-ji-jin-jie/di-29.3-jie-an-zhuang-awesome.md)
 * [第 29.4 节 安装 FVWM](di-29-zhang-zhuo-mian-gao-ji-jin-jie/di-29.4-jie-an-zhuang-fvwm.md)
+* [第 29.5 节 安装 Hyprland](di-29-zhang-zhuo-mian-gao-ji-jin-jie/di-29.5-jie-an-zhuang-hyprland.md)
 
 ## 第 30 章 Linux 兼容层
 
