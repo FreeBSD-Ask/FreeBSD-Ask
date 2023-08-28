@@ -1,4 +1,4 @@
-# 第 2.2 节 FreeBSD 13.1 安装——基于 Virtual Box
+# 第 2.2 节 FreeBSD 13.2 安装——基于 Virtual Box
 
 > **UEFI 下显卡也可以正常驱动。——2023.1.14 测试**
 >
