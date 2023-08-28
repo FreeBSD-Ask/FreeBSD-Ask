@@ -1,4 +1,4 @@
-# 第 2.3 节 FreeBSD 13.1 安装——基于 Vmware Workstation Pro
+# 第 2.3 节 FreeBSD 安装——基于 Vmware Workstation Pro
 
 > **BIOS 还是 UEFI**
 >
