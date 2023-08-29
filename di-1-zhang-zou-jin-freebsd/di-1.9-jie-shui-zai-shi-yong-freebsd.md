@@ -1,4 +1,4 @@
-# 第 0.9 节 谁在使用 FreeBSD
+# 第 1.9 节 谁在使用 FreeBSD
 
 本页面是对 <https://freebsdfoundation.org/about-us/testimonials/> 的翻译。
 

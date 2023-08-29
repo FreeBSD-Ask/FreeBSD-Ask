@@ -1,4 +1,4 @@
-# 第 0.8 节 FreeBSD 子项目
+# 第 1.11 节 FreeBSD 子项目
 
 本页面是对 <https://freebsdfoundation.org/our-work/projects/> 的翻译。
 
