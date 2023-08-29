@@ -56,7 +56,7 @@ $ yay -S linuxqq # 此时位于 Arch 兼容层！此时用户为 test
 # /bin/qq --no-sandbox --in-process-gpu #此时位于 Ubuntu 兼容层
 ```
 
-![](../.gitbook/assets/qq3.0.jpg)
+![](../.gitbook/assets/qq3.0.png)
 
 > **注意**
 >

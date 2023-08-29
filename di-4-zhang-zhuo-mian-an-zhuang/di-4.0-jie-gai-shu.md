@@ -42,6 +42,6 @@ Slim 由于作者早在 2013 年就停止了开发，不推荐使用，会产生
 
 ## 故障排除
 
-![没安装驱动](../.gitbook/assets/noqudong.jpg)
+![没安装驱动](../.gitbook/assets/noqudong.png)
 
 没有安装显卡驱动。看下一节教程去安装驱动。

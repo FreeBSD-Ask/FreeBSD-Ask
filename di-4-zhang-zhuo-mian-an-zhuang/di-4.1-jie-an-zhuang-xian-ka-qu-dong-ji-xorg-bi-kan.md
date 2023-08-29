@@ -44,7 +44,7 @@ FreeBSD 14 Current，编译使用 `drm-515-kmod`。**截至 2023.8.24 日，英�
 >
 > - **如果提示内核版本不符（`KLD XXX.ko depends on kernel - not available or version mismatch.`），请先升级系统或使用 ports 编译安装：**
 >
-> <img src="../.gitbook/assets/amd_error.jpg" alt="" data-size="original">
+> <img src="../.gitbook/assets/amd_error.png" alt="" data-size="original">
 >
 > - **如果提示 `/usr/ports/xxx no such xxx` 找不到路径，请先获取 ports 请看前文。**
 

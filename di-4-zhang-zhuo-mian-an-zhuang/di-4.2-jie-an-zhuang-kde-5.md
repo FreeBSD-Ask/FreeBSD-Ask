@@ -40,7 +40,7 @@ proc            /proc           procfs  rw      0       0
 >
 > ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ **这就是后果** ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
 >
->  <figure><img src="../.gitbook/assets/witekde.jpg" alt=""><figcaption></figcaption></figure>
+>  <figure><img src="../.gitbook/assets/witekde.png" alt=""><figcaption></figcaption></figure>
 
 ### 启动项设置
 

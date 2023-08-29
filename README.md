@@ -56,7 +56,7 @@
 
 ### 开源维护与捐赠
 
-![](./.gitbook/assets/proud_donor.gif)
+![](./.gitbook/assets/proud_donor.png)
 
 [点此捐赠 FreeBSD 基金会](https://freebsdfoundation.org/donate)
 
