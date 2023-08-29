@@ -3,20 +3,6 @@
 * [FreeBSD 从入门到跑路](README.md)
 * [目录](mu-lu.md)
 
-## 第 0 章 FreeBSD 中文社区
-
-* [第 0.0 节 社区通知（滚动更新）](di-0-zhang-freebsd-zhong-wen-she-qu/di-0.0-jie-she-qu-tong-zhi-gun-dong-geng-xin.md)
-* [第 0.1 节 FreeBSD FAQ](di-0-zhang-freebsd-zhong-wen-she-qu/di-0.1-jie-freebsd-faq.md)
-* [第 0.2 节 FreeBSD 中文社区发展规划](di-0-zhang-freebsd-zhong-wen-she-qu/di-0.2-jie-freebsd-zhong-wen-she-qu-fa-zhan-gui-hua.md)
-* [第 0.3 节 FreeBSD 的不足之处](di-0-zhang-freebsd-zhong-wen-she-qu/di-0.3-jie-freebsd-de-bu-zu-zhi-chu.md)
-* [第 0.4 节 FreeBSD 发行说明](di-0-zhang-freebsd-zhong-wen-she-qu/di-0.4-jie-freebsd-fa-hang-shuo-ming.md)
-* [第 0.5 节 FreeBSD 季度报告](di-0-zhang-freebsd-zhong-wen-she-qu/di-0.5-jie-freebsd-ji-du-bao-gao.md)
-* [第 0.6 节 FreeBSD 开发计划](di-0-zhang-freebsd-zhong-wen-she-qu/di-0.6-jie-freebsd-kai-fa-ji-hua.md)
-* [第 0.7 节 FreeBSD 安全公告](di-0-zhang-freebsd-zhong-wen-she-qu/di-0.7-jie-freebsd-an-quan-gong-gao.md)
-* [第 0.8 节 FreeBSD 子项目](di-0-zhang-freebsd-zhong-wen-she-qu/di-0.8-jie-freebsd-zi-xiang-mu.md)
-* [第 0.9 节 谁在使用 FreeBSD](di-0-zhang-freebsd-zhong-wen-she-qu/di-0.9-jie-shui-zai-shi-yong-freebsd.md)
-* [第 0.10 节 FreeBSD 中文社区文章翻译表](di-0-zhang-freebsd-zhong-wen-she-qu/di-0.10-jie-freebsd-zhong-wen-she-qu-wen-zhang-fan-yi-biao.md)
-
 ## 第 1 章 走进 FreeBSD
 
 * [第 1.1 节 什么是 UNIX](di-1-zhang-zou-jin-freebsd/di-1.1-jie-shi-mo-shi-unix.md)
@@ -27,8 +13,15 @@
 * [第 1.6 节 UNIX 哲学](di-1-zhang-zou-jin-freebsd/di-1.6-jie-unix-zhe-xue.md)
 * [第 1.7 节 其他 BSD 简介](di-1-zhang-zou-jin-freebsd/di-1.7-jie-qi-ta-bsd-jian-jie.md)
 * [第 1.8 节 Linux 用户迁移指北](di-1-zhang-zou-jin-freebsd/di-1.8-jie-linux-yong-hu-qian-yi-zhi-bei.md)
-* [第 1.9 节 参考资料与贡献者名单](di-1-zhang-zou-jin-freebsd/di-1.9-jie-can-kao-zi-liao-yu-gong-xian-zhe-ming-dan.md)
-* [第 1.10 节 编撰说明](di-1-zhang-zou-jin-freebsd/di-1.10-jie-bian-zhuan-shuo-ming.md)
+* [第 1.9 节 谁在使用 FreeBSD](di-1-zhang-zou-jin-freebsd/di-1.9-jie-shui-zai-shi-yong-freebsd.md)
+* [第 1.10 节 FreeBSD 的不足之处](di-1-zhang-zou-jin-freebsd/di-1.10-jie-freebsd-de-bu-zu-zhi-chu.md)
+* [第 1.11 节 FreeBSD 子项目](di-1-zhang-zou-jin-freebsd/di-1.11-jie-freebsd-zi-xiang-mu.md)
+* [第 1.12 节 FreeBSD 发行说明](di-1-zhang-zou-jin-freebsd/di-1.12-jie-freebsd-fa-hang-shuo-ming.md)
+* [第 1.13 节 FreeBSD 季度报告](di-1-zhang-zou-jin-freebsd/di-1.13-jie-freebsd-ji-du-bao-gao.md)
+* [第 1.14 节 FreeBSD 安全公告](di-1-zhang-zou-jin-freebsd/di-1.14-jie-freebsd-an-quan-gong-gao.md)
+* [第 1.15 节 FreeBSD 开发计划](di-1-zhang-zou-jin-freebsd/di-1.15-jie-freebsd-kai-fa-ji-hua.md)
+* [第 1.16 节 编撰说明](di-1-zhang-zou-jin-freebsd/di-1.16-jie-bian-zhuan-shuo-ming.md)
+* [第 1.17 节 参考资料与贡献者名单](di-1-zhang-zou-jin-freebsd/di-1.17-jie-can-kao-zi-liao-yu-gong-xian-zhe-ming-dan.md)
 
 ## 第 2 章 安装 FreeBSD
 
