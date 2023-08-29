@@ -106,6 +106,6 @@ round-trip min/avg/max/stddev = 30.608/30.619/30.633/0.010 ms
 root@ykla:~ #
 ```
 
-网络联通。
+网络连通。
 
 
