@@ -4,7 +4,7 @@ Clash 在 ports 中就有提供。而且在作者的项目中提供了最新版�
 
 使用软件包安装：
 
-```
+```shell
 # pkg install net/clash
 ```
 

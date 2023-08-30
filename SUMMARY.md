@@ -346,3 +346,4 @@
 * [第 32.2 节 TrueNAS 安装](di-32-zhang-truenas/di-32.2-jie-truenas-an-zhuang.md)
 * [第 32.3 节 TrueNAS 配置与调优](di-32-zhang-truenas/di-32.3-jie-truenas-pei-zhi-yu-tiao-you.md)
 * [第 32.4 节 TrueNAS 故障排除](di-32-zhang-truenas/di-32.4-jie-truenas-gu-zhang-pai-chu.md)
+

@@ -4,27 +4,27 @@
 
 创建一个 `admin` 分组，并添加 `ykla` 和 `root` 两位用户：
 
-```
+```shell
 # pw groupadd admin
 # pw groupmod admin -m ykla root
 ```
 
 创建一个 `wheel` 组，只添加 `root` 用户：
 
-```
+```shell
 # pw groupadd wheel
 # pw groupmod wheel -m root
 ```
 
 从 `admin` 组里移除用户 `ykla`：
 
-```
+```shell
 # pw groupmod admin -d ykla
 ```
 
 删除 `admin` 组：
 
-```
+```shell
 # pw groupdel admin
 ```
 
@@ -61,7 +61,7 @@
 
 示例：
 
-```
+```shell
 # pw useradd test1 #创建用户 test1，uid 系统默认，test1 组，登陆环境/bin/sh，主目录未创建
 # pw useradd test2 -u 1200 -m -d /tmp/test -g test1 -G wheel -s csh -c test2 #创建用户 test2，uid 为 1200，创建主目录，主目录为/tmp/test，test1 组，有管理员权限，登陆环境/bin/csh，全名 test2
 # echo password | pw useradd test3 -h 0 #创建用户 test3，同时设置密码为 password
@@ -73,7 +73,7 @@
 
 示例：
 
-```
+```shell
 # pw usermod test1 -G wheel #为用户 test1 增加管理员权限
 # pw usermod test1 -l myuser #用户 test1 改名为 myuser
 # echo password | pw usermod test2 -h 0 #修改用户 test2 密码为 password
@@ -85,7 +85,7 @@
 
 示例：
 
-```
+```shell
 # pw userdel test2 -r
 ```
 
@@ -93,7 +93,7 @@
 
 示例：
 
-```
+```shell
 # pw usershow test2
 ```
 
@@ -101,7 +101,7 @@
 
 示例：
 
-```
+```shell
 # pw usernext
 ```
 
@@ -109,7 +109,7 @@
 
 示例：
 
-```
+```shell
 # pw lock test2
 ```
 
@@ -117,13 +117,13 @@
 
 示例：
 
-```
+```shell
 # pw unlock test2
 ```
 
 8. `groupadd` 命令，用于新建组，常用参数：
 
-```
+```shell
 -g，指定 gid，不指定则由操作系统根据已存在的 `gid` 自动生成
 
 -M，指定组成员列表，多个用户用逗号隔开
@@ -131,7 +131,7 @@
 
 示例：
 
-```
+```shell
 # pw groupadd test -g 1200 #创建组 test，gid 为 1200，注意，gid 与 uid 不是一回事
 # pw groupadd test5 -M test1,test2 #创建组 test5，成员有 test1 和 test2
 ```
@@ -150,7 +150,7 @@
 
 示例：
 
-```
+```shell
 # pw groupmod test -g 1300 #修改 test 组的 gid 为 1300
 # pw groupmod test -l mygroup 组 test 改名为 mygroup
 # pw groupmod test5 -M test1 #设置组 test5 的成员为 test1
@@ -161,7 +161,7 @@
 
 示例：
 
-```
+```shell
 # pw groupdel mygroup
 ```
 
@@ -169,7 +169,7 @@
 
 示例：
 
-```
+```shell
 # pw groupshow test
 ```
 
@@ -177,7 +177,7 @@
 
 示例：
 
-```
+```shell
 # pw groupnext
 ```
 
@@ -188,7 +188,7 @@
 
 示例：
 
-```
+```shell
 # rmuser -y test1 test2 #同时删除用户 test1 和 test2，
 ```
 
@@ -200,7 +200,7 @@
 
 示例：
 
-```
+```shell
 # chpass -s csh test1 # 更换用户 test1 的登陆环境为 /bin/csh
 # chpass # 以 vi 方式打开当前用户信息进行修改
 # passwd # 修改用户密码，如不指定用户则默认为当前用户。
@@ -212,7 +212,7 @@
 
 示例：
 
-```
+```shell
 # id # 查看当前用户 id 信息
 # id test1 # 查看用户 test1 的 id 信息
 ```

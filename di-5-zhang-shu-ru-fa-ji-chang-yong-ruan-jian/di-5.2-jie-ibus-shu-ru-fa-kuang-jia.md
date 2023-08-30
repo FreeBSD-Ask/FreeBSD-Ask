@@ -4,7 +4,7 @@
 
 基本安装
 
-```
+```shell
 # pkg install ibus zh-ibus-pinyin
 ```
 
@@ -32,7 +32,7 @@
 
 A 组：
 
-```
+```shell
 #A 组 在 sh、bash、zsh 中
 export XIM=ibus
 export GTK_IM_MODULE=ibus
@@ -44,7 +44,7 @@ export XIM_ARGS="--daemonize --xim"
 
 或 B 组：
 
-```
+```shell
 #B组 在 csh 中
 setenv XIM ibus
 setenv GTK_IM_MODULE ibus
@@ -59,3 +59,4 @@ setenv XIM_ARGS "--daemonize --xim"
 以前是要配置的现在默认可以不配置，这里我注意到 FreeBSD 13 中 `LC_*`,及`LANG`环境变量的默认值为`"C.UTF-8"`,原来这些环境变量的默认值是`"C"`,这个变化从 FreeBSD 12 开始(chatgpt 查询所得)。所以现在的情况下默认已指定字符编码为`UTF-8`,这可能是 ibus 不需要设置的原因。之前没注意到，或是因为不作汉化使用输入法的情况是很少见的，或是因为来自于 FreeBSD 12 之前的习惯做了环境变量设置而未意识到，或者是之前 ibus 对环境变量的要求比与现在有区别。这里以 lightdm/mate/ibus/rime 环境,`LANG`,`LANGUAGE`,`LC_ALL`设置为`"fr_Fr.UTF-8"`，维持字符编码为`UTF-8`，仍可以正常输入中文，可见 ibus 对编码设置有要求，但对区域设置并无要求
 
 ![ibus](../.gitbook/assets/ibus-fr-ch-ok.png)
+

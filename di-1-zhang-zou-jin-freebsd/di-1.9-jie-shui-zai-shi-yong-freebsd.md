@@ -524,3 +524,4 @@ Colocation America 为那些希望将服务器托管在美国的企业提供托�
 我们的客户不是 FreeBSD 的唯一粉丝。由于操作系统能够管理防火墙和 Web 应用程序，并同时处理多个托管账户的服务器负载，我们使用 FreeBSD 来管理我们的共享托管服务器。通过 WebHost Manager cPanel 附加组件，可以在单个专用服务器上管理多个 Web 托管帐户，我们的共享托管服务器能够为寻求廉价网站托管的客户提供服务。FreeBSD 的社区支持以及其开源性质为我们的客户提供了一个安全的托管环境。要了解更多关于带有 FreeBSD 操作系统的专用服务器托管的信息，你可以访问我们的 FreeBSD 专用服务器页面。
 
 ——[Colocation America](http://www.colocationamerica.com/) 业务发展总监 Albert Ahdoot
+

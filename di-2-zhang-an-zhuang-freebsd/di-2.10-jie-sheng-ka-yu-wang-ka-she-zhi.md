@@ -8,7 +8,7 @@
 
 用以下命令查看当前声卡设备：
 
-```
+```shell
 $ cat /dev/sndstat
 Installed devices:
 pcm0: <NVIDIA (0x0083) (HDMI/DP 8ch)> (play)
@@ -27,7 +27,7 @@ FreeBSD 大部分软件的音频输出驱动为 oss。有些默认是 pulseaudio
 
 下列命令可以修改输出的设备。最后的数字是对应的 pcm 后面的数字。
 
-```
+```shell
 $ sysctl hw.snd.default_unit=5
 ```
 
@@ -52,3 +52,4 @@ $ sysctl hw.snd.default_unit=5
 在 kde5 下面自带的音频控制器，切换设备就是控制的 pulseaudio。
 
 官方打包好的多媒体软件有些是支持 pulseaudio 但是这些软件中的大部分对应的编译选项没有打开。如果需要录制软件的音频输出，可以自行打开 ports 的编译选项自己编译。在软件中设置 pulseaudio 作为音频驱动输出就可以了。
+

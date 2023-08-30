@@ -7,3 +7,4 @@ FreeBSD 是开发者最多用户最多、软件包最多的，有 ZFS 和 Linux 
 NetBSD 架构支持多，但普遍支持的不好，因为一个开发者同时维护好几个架构，开发者数量不足；有 Linux 兼容层。
 
 DragonFlyBSD（蜻蜓 BSD） 自带 i915 显卡驱动，但是文档滞后，架构支持的也不多。无 Linux 兼容层。DPorts 可与 FreeBSD Ports 兼容。
+

@@ -34,14 +34,14 @@ pkg 升级：
 
 解决：
 
-```
+```shell
 # cd /usr/ports/ports-mgmt/pkg
 # make deinstall reinstall
 ```
 
 查看已经安装的所有软件：
 
-```
+```shell
 # pkg info
 ```
 
@@ -57,7 +57,7 @@ pkg 升级：
 
 问题示例：
 
-```
+```shell
 [1/1] Installing package…
 ===> Creating groups.
 Creating group ‘package’ with gid ‘000’.
@@ -71,7 +71,7 @@ pkg: PRE-INSTALL script failed
 
 问题解决：
 
-```
+```shell
 # /usr/sbin/pwd_mkdb -p /etc/master.passwd
 ```
 
@@ -79,7 +79,7 @@ pkg: PRE-INSTALL script failed
 
 出现该问题一般是由于 ABI 破坏，更新即可。
 
-```
+```shell
 # pkg  install bsdadminscripts
 # pkg_libchk
 # port-rebuild
@@ -89,7 +89,7 @@ pkg: PRE-INSTALL script failed
 
 问题示例：
 
-```
+```shell
 Neuer FreeBSD version for package pkg:
 To ignore this error set IGNORE_OSVERSION=yes
 - package: 1402843
@@ -102,3 +102,4 @@ Ignore the mismatch and continue? [y/N]:
 如果想要从根源上解决，需要自己卸载 pkg，从 ports 安装 `ports-mgmt/pkg`；或者从源代码更新整个系统。
 
 如果只是不想看到这个提示只需要按照提示将 `IGNORE_OSVERSION=yes` 写到 `/etc/make.conf`里面（没有就新建）。
+

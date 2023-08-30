@@ -20,7 +20,7 @@ Xshell 是 Windows 平台上的强大的 shell 工具，不建议使用苦难哲
 
 ### 允许 root ssh
 
-```
+```shell
 # ee /etc/ssh/sshd_config    #（删去前边的 #，并将 yes 或 no 修改为如下）
 PermitRootLogin yes          #允许 root 登录
 PasswordAuthentication yes   #（可选）设置是否使用普通密码验证，如果不设置此参数则使用 PAM 认证登录，安全性更高
@@ -34,19 +34,19 @@ PasswordAuthentication yes   #（可选）设置是否使用普通密码验证�
 
 ### 开启 SSH 服务
 
-```
+```shell
 # service sshd restart
 ```
 
 如果提示找不到 `sshd`,请执行下一命令:
 
-```
+```shell
 # sysrc sshd_enable="YES"
 ```
 
 然后再
 
-```
+```shell
 # service sshd restart
 ```
 
@@ -56,7 +56,7 @@ PasswordAuthentication yes   #（可选）设置是否使用普通密码验证�
 
 编辑 `# ee /etc/ssh/sshd_config`，调整 `ClientAlive` 的设置：
 
-```
+```shell
 ClientAliveInterval 10
 ClientAliveCountMax 3
 ```
@@ -69,7 +69,7 @@ ClientAliveCountMax 3
 
 全局用户生效：`# ee /etc/ssh/ssh_config`，仅对当前用户生效：`~/.ssh/config`。
 
-```
+```shell
 Host *
 ServerAliveInterval 10
 ServerAliveCountMax 3
@@ -77,7 +77,7 @@ ServerAliveCountMax 3
 
 或者在连接的时候使用 `-o` 指定参数：
 
-```
+```shell
 # ssh user@server -p 22 -o ServerAliveInterval=10 -o ServerAliveCountMax=3
 ```
 
@@ -87,13 +87,13 @@ ServerAliveCountMax 3
 
 ### 生成密钥
 
-```
+```shell
 # ssh-keygen
 ```
 
 > OpenSSH 7.0 及以上版本默认禁用了 ssh-dss(DSA) 公钥算法。FreeBSD 13.0 采用 OpenSSH\_7.9。因此使用默认值即可。
 
-```
+```shell
 root@ykla:~ # ssh-keygen
 Generating public/private rsa key pair.
 Enter file in which to save the key (/root/.ssh/id_rsa): #此处回车
@@ -123,7 +123,7 @@ root@ykla:~ #
 
 检查权限（默认创建的权限如下）：
 
-```
+```shell
 drwx------  2 root  wheel   512 Mar 22 18:27 /root/.ssh #权限为 700
 -rw-------  1 root  wheel  1856 Mar 22 18:27 /root/.ssh/id_rsa  #私钥，权限为 600
 -rw-r--r--  1 root  wheel  391 Mar 22 18:27 /root/.ssh/id_rsa.pub #公钥，权限为 644
@@ -131,26 +131,26 @@ drwx------  2 root  wheel   512 Mar 22 18:27 /root/.ssh #权限为 700
 
 生成验证公钥：
 
-```
+```shell
 # cat /root/.ssh/id_rsa.pub >> /root/.ssh/authorized_keys
 -rw-r--r--  1 root  wheel  391 Mar 22 18:39 /root/.ssh/authorized_keys #检查权限 644
 ```
 
 使用 winscp 把私钥和公钥保存到本地后，删除服务器上的多余文件：
 
-```
+```shell
 # rm /root/.ssh/id_rsa*
 ```
 
 ### 修改 /etc/ssh/sshd\_config
 
-```
+```shell
 # ee /etc/ssh/sshd_config
 ```
 
 修改配置如下（删去前边的 #，并将 yes 或 no 修改为如下）：
 
-```
+```shell
 PermitRootLogin yes                          #允许 ROOT 用户直接登陆系统
 AuthorizedKeysFile     .ssh/authorized_keys  #修改使用用户目录下密钥文件，默认已经正确配置，请检查
 PasswordAuthentication no                    #不允许用户使用密码方式登录
@@ -160,7 +160,7 @@ PermitEmptyPasswords no                      #禁止空密码的用户进行登�
 
 ### 重启服务
 
-```
+```shell
 # service sshd restart
 ```
 
@@ -172,13 +172,13 @@ PermitEmptyPasswords no                      #禁止空密码的用户进行登�
 
 安装：
 
-```
+```shell
 # pkg install screen
 ```
 
 使用方法：
 
-```
+```shell
 # screen -S xxx
 ```
 
@@ -188,7 +188,7 @@ PermitEmptyPasswords no                      #禁止空密码的用户进行登�
 
 查看有哪些正在运行的 screen？
 
-```
+```shell
 root@ykla:/ # screen -ls
 There are screens on:
 	18380.pts-0.ykla	(Attached)
@@ -199,15 +199,16 @@ There are screens on:
 
 `Detached` 的可以直接 `-r` 恢复。
 
-```
+```shell
 screen -r xxx
 ```
 
 `Attached` 的必须先离线再恢复：
 
-```
+```shell
 root@ykla:/ # screen -d 18380
 [18380.pts-0.ykla detached.]
 
 root@ykla:/ # screen -r 18380
 ```
+

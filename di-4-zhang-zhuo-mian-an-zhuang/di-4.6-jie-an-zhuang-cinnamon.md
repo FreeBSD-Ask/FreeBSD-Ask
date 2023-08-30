@@ -13,7 +13,7 @@
 
 ## 安装
 
-```
+```shell
 # pkg install xorg lightdm lightdm-gtk-greeter cinnamon wqy-fonts xdg-user-dirs
 ```
 
@@ -21,29 +21,29 @@
 
 ## 配置
 
-```
+```shell
 # ee ~/.xinitrc
 ```
 
 添加：
 
-```
+```shell
 exec cinnamon-session
 ```
 
-```
+```shell
 # ee /etc/fstab
 ```
 
 添加：
 
-```
+```shell
 proc /proc procfs rw 0 0
 ```
 
 ### 添加启动项：
 
-```
+```shell
 # sysrc dbus_enable=YES
 # sysrc lightdm_enable=YES
 ```
@@ -55,3 +55,4 @@ proc /proc procfs rw 0 0
 找到 `default:\` 这一段，把 `:lang=C.UTF-8` 修改为 `:lang=zh_CN.UTF-8`。
 
 刷新数据库：`# cap_mkdb /etc/login.conf`
+

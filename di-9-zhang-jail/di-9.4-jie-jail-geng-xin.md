@@ -18,13 +18,13 @@
 
 本教程需要安装 `cpdup`
 
-```
+```shell
 # pkg install cpdup
 ```
 
 ## 创建模板目录
 
-```
+```shell
 # mkdir -p /jail/mroot
 # 然后放入基本目录，上边说过不再写
 # 将 ports 和源码放入模板
@@ -34,7 +34,7 @@
 
 将可写部分连接到可写目录位置
 
-```
+```shell
 # cd /jail/mroot # cd 到模板目录
 # mkdir s        # 创建用来做链接的目录
 # ln -s s/etc etc
@@ -49,7 +49,7 @@
 
 ## 创建框架目录
 
-```
+```shell
 # mkdir -p /jail/skel
 # mkdir /jail/skel /jail/skel/home /jail/skel/usr-X11R6 /jail/skel/distfiles /jail/skel/portbuild
 # 移动可写部分
@@ -62,13 +62,13 @@
 
 使用 etcupdate 安装缺少的配置文件。
 
-```
+```shell
 # etcupdate -s /jail/mroot/usr/src -d /jail/skel/var/db/etcupdate -D /jail/skel
 ```
 
 为 `make` 创建通用配置文件
 
-```
+```shell
 # echo “WRKDIRPREFIX?=  /s/portbuild” >> /jail/skel/etc/make.conf
 ```
 
@@ -76,19 +76,19 @@
 
 就是复制一份框架
 
-```
+```shell
 # cpdup /jail/skel /jail/files/www
 ```
 
 ## 创建项目目录
 
-```
+```shell
 # mkdir /jail/www /jail/www/s
 ```
 
 ## 创建 fstab
 
-```
+```shell
 # ee /jail/www.fstab
 # 将公共只读系统挂载到项目目录
 /jail/mroot /jail/www nullfs ro 0 0
@@ -98,7 +98,7 @@
 
 ## 写入 jail.conf
 
-```
+```shell
 # 全局部分
 
 exec.start = "/bin/sh /etc/rc";
@@ -127,3 +127,4 @@ $ip=2
 #mount.fstab =""; # 替换全局
 }
 ```
+

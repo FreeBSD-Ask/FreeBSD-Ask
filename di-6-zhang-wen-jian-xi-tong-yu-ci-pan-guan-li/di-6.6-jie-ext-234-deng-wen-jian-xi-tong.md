@@ -6,7 +6,7 @@
 
 - 安装 fusefs-ext2
 
-```
+```shell
 # pkg install fusefs-ext2
 ```
 
@@ -18,7 +18,7 @@
 
   对于用户名为 `XiaoMing` 的账号，可如下操作：
 
-```
+```shell
 $ cd ~
 $ mkdir media
 $ cd media
@@ -36,6 +36,6 @@ _提示：上式不一定是 `da0sX`（X 为对应的数字），可通过 `# gp
 
 > 未经测试
 
-```
+```shell
 # pkg install fusefs-lkl
 ```
