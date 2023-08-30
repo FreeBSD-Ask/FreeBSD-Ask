@@ -81,7 +81,7 @@ _提示： 新接触 Unix 的用户可略过本节_
 
 试着按照下面的步骤，在终端安装 [Papirus 图标](https://www.gnome-look.org/p/1166289/):
 
-```
+```shell
 git clone https://github.com/PapirusDevelopmentTeam/papirus-icon-theme
 cd papirus-icon-theme
 ./install.sh

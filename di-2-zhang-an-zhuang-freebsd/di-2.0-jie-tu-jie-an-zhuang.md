@@ -47,7 +47,7 @@
 
 > 注意：如果使用手动分区一直提示分区表损坏（corrupted）或类似字样，请先退出重启进入 shell 模式，刷新分区表：
 >
-> ```
+> ```shell
 > # gpart recover ada0
 > ```
 >
@@ -143,3 +143,4 @@
 ![](../.gitbook/assets/安装28.png)
 
 ![](../.gitbook/assets/安装29.png)
+

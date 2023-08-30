@@ -4,24 +4,24 @@
 
 ## 安装
 
-```
+```shell
 # pkg install lumina xorg  lightdm lightdm-gtk-greeter wqy-fonts xdg-user-dirs
 ```
 
 ## 配置
 
-```
+```shell
 # sysrc dbus_enable="YES"
 # sysrc lightdm_enable="YES"
 ```
 
-```
+```shell
 # ee ~/.xinitrc
 ```
 
 添加：
 
-```
+```shell
 exec lumina-desktop
 ```
 

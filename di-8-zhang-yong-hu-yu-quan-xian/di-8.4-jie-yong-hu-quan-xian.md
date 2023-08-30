@@ -28,7 +28,7 @@ FreeBSD 文件访问权限可以用 10 个标志位来说明，10 个标志位�
 
 示例：
 
-```
+```shell
 # ls -l -a #列表显示包括隐藏文件在内的所有文件
 # ll -a #与上例效果相同
 # ls -l /tmp/a.log #列表显示 /tmp/a.log 文件
@@ -56,7 +56,7 @@ FreeBSD 文件访问权限可以用 10 个标志位来说明，10 个标志位�
 
 示例：
 
-```
+```shell
 # chmod -R 777 /tmp #/tmp 目录下所有文件将允许任何用户读、写、执行
 # chmod -R a+rwx /tmp #/tmp 目录下所有文件将允许任何用户读、写、执行
 ```
@@ -69,7 +69,7 @@ FreeBSD 文件访问权限可以用 10 个标志位来说明，10 个标志位�
 
 示例：
 
-```
+```shell
 # chown test1 t.sh #修改 t.sh 属主为用户 test1
 # chown test1:test t.sh #修改 t.sh 属主为用户 test1、组 test
 # chown -R test1:test /tmp #修改/tmp 目录下所有文件的属主为用户 test1、组 test

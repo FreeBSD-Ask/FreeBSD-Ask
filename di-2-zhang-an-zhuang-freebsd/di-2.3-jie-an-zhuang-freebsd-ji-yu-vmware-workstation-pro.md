@@ -6,14 +6,14 @@
 >
 > 默认情况下 VMware 是 BIOS，会提示没有：
 >
-> ```
+> ```shell
 > # efibootmgr # 默认自带、无需安装。
 > efibootmgr: efi variables not supported on this system. root? kldload efirt?
 > ```
 >
 > 如果当前系统是 UEFI,efibootmgr 则输出：
 >
-> ```
+> ```shell
 > # efibootmgr # 默认自带、无需安装。
 > Boot to FW : false
 > BootCurrent: 0004
@@ -86,7 +86,7 @@ VMware Workstation Player 是个人免费使用的，你也可以选择此版本
 
 VMware 自动缩放屏幕请安装显卡驱动和虚拟机增强工具，即：
 
-```
+```shell
 # pkg install xf86-video-vmware open-vm-tools xf86-input-vmmouse
 ```
 
@@ -102,13 +102,13 @@ VMware 自动缩放屏幕请安装显卡驱动和虚拟机增强工具，即：
 
 如果有桌面
 
-```
+```shell
 # pkg install open-vm-tools xf86-input-vmmouse
 ```
 
 如果没有桌面：
 
-```
+```shell
 # pkg install open-vm-tools-nox11
 ```
 
@@ -118,7 +118,7 @@ VMware 自动缩放屏幕请安装显卡驱动和虚拟机增强工具，即：
 
 写入
 
-```
+```shell
 fusefs_load="YES"
 ```
 
@@ -126,16 +126,17 @@ fusefs_load="YES"
 
 请先安装虚拟机增强工具。
 
-```
+```shell
 # vmhgfs-fuse .host:/selfsharefold /mnt/hgfs
 ```
 
 查看共享文件夹
 
-```
+```shell
 # ls /mnt/hgfs
 ```
 
 > **提示**
 >
 > 在使用 Windows 远程桌面或者其他 XRDP 工具远程另一台 Windows 桌面，并使用其上面运行的 Vmware 虚拟机操作 FreeBSD 时，鼠标通常会变得难以控制。
+

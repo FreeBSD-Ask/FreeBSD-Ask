@@ -48,3 +48,4 @@
 - [systemd 在任何地方都不安全](https://freebsd.gitbook.io/translated-articles/systemd-isnt-safe-to-run-anywhere)
 - [GPL 之殇](https://freebsd.gitbook.io/translated-articles/the-problems-with-the-gpl)
 - [为什么你应该将所有东西从 Linux 迁移到 BSD](https://freebsd.gitbook.io/translated-articles/why-you-should-migrate-everything-from-linux-to-bsd)
+

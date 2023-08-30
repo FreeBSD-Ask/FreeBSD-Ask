@@ -4,7 +4,7 @@
 
 ## 安装
 
-```
+```shell
 # pkg install xorg sddm kde5 plasma5-sddm-kcm wqy-fonts xdg-user-dirs
 ```
 
@@ -28,7 +28,7 @@
 
 添加内容如下:
 
-```
+```shell
 proc            /proc           procfs  rw      0       0
 ```
 
@@ -44,14 +44,14 @@ proc            /proc           procfs  rw      0       0
 
 ### 启动项设置
 
-```
+```shell
 # sysrc dbus_enable="YES"
 # sysrc sddm_enable="YES"
 ```
 
 然后（可选，如果不需要 `startx`。）
 
-```
+```shell
 # echo "exec ck-launch-session startplasma-x11" > ~/.xinitrc
 ```
 
@@ -65,7 +65,7 @@ proc            /proc           procfs  rw      0       0
 
 > 普通用户还需要将用户加入 wheel 组：
 >
-> ```
+> ```shell
 > # pw groupmod wheel -m 用户名
 > ```
 
@@ -94,3 +94,4 @@ proc            /proc           procfs  rw      0       0
 编辑 `/usr/local/share/xgreeters/slick-greeter.desktop`：
 
 `Exec=slick-greeter` 改成 `Exec=env LANGUAGE=zh_CN slick-greeter` 保存，重启 `lightdn` 服务就生效
+

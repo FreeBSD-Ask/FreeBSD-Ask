@@ -2,7 +2,7 @@
 
 > FreeBSD 14.0 已经删除了 portsnap，转而使用 git，如本文所述可以使用 gitup 替代之。
 
-```
+```shell
 # pkg install gitup #安装 gitup
 # gitup ports #获取 latest 的 ports
 # gitup release #获取 release 版本的源代码
@@ -10,17 +10,17 @@
 
 ## 境内 Git 镜像站
 
-```
+```shell
 # cp /usr/local/etc/gitup.conf.sample /usr/local/etc/gitup.conf
 ```
 
-```
+```shell
 # ee /usr/local/etc/gitup.conf
 ```
 
 内容如下（有 ①②③ 共计三个需要修改的地方）：
 
-```
+```shell
 # $FreeBSD$
 #
 # Default configuration options for gitup.conf.
@@ -84,7 +84,7 @@
 
 拉取 ports：
 
-```
+```shell
 # gitup ports
 ```
 
@@ -96,20 +96,20 @@
 
 示例（先删去前边的 # 再改）：
 
-```
+```shell
 "proxy_host" : "192.168.27.1",
 "proxy_port" : 7890,
 ```
 
 - 详细调试输出：
 
-```
+```shell
 # gitup -v2 ports
 ```
 
 - gitup: build_repair_command: There are too many files to repair -- please re-clone the repository: Argument list too long
 
-```
+```shell
 # rm -rf /usr/ports
 # gitup ports
 ```

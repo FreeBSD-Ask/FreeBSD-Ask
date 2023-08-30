@@ -67,3 +67,4 @@ Hyper-V 是微软为 Windows 开发的虚拟机，分为 `Gen 1` 和 `Gen 2`。
 
 - <https://wiki.freebsd.org/SystemTuning>
 - <https://qiita.com/nanorkyo/items/d33e1befd4eb9c004fcd>
+

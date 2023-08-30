@@ -2,14 +2,14 @@
 
 示例：创建一个普通用户（用户名为 `ykla`），并将其添加到 `video` 分组：
 
-```
+```shell
 # adduser -g video -s sh -w yes
 # Username: ykla
 ```
 
 示例：创建一个名为 test 的用户，并添加其到 video 组，设置其默认 shell 是 csh：
 
-```
+```shell
 root@ykla:/ #  adduser
 Username: test #用户名
 Full name:  #全名，可留空

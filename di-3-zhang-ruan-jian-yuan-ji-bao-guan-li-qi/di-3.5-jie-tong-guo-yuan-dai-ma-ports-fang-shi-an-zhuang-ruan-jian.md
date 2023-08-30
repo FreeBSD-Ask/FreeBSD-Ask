@@ -19,7 +19,7 @@
 > - Portsnap 不支持季度分支，即使在季度分支被创建并改为非 HEAD 软件包的默认值的多年之后。
 > - 与 svn 或 git 相比，Portsnap 似乎并不节省磁盘空间，如果你算上元数据（存储的）的话。算上元数据（默认存储在 /var/db/portsnap 中），并且你对 svn 或 git 做一个没有历史记录的相同的比较，并且忽略可能的 ZFS 压缩。也就是说，你用 `svn export` 或 `git clone --depth 1`，你会看到这样的磁盘用量：
 >
-> ```
+> ```shell
 >     342M svnexport
 >     426M git
 >     477M portsnap
@@ -79,7 +79,7 @@
 
 ### 如何安装 python3：
 
-```
+```shell
 # cd /usr/ports/lang/python
 # make BATCH=yes clean
 ```
@@ -93,7 +93,7 @@
 
 - FreeBSD ports 多线程编译
 
-```
+```shell
 FORCE_MAKE_JOBS=yes
 MAKE_JOBS_NUMBER=4
 ```
@@ -105,7 +105,7 @@ Linux 如 Gentoo 上一般是直接 `-jx` 或者 `jx+1`, `x` 为核心数。
 
 - 个别情况下可以设置别名加速编译：（非永久设置，FreeBSD 14 无需设置，自动生效）
 
-```
+```shell
 # alias ninja='ninja -j4'
 ```
 
@@ -113,7 +113,7 @@ Linux 如 Gentoo 上一般是直接 `-jx` 或者 `jx+1`, `x` 为核心数。
 
 `ee /etc/fstab` 写入：
 
-```
+```shell
 tmpfs /tmp tmpfs rw 0 0
 ```
 
@@ -133,32 +133,32 @@ tmpfs /tmp tmpfs rw 0 0
 
 目前最新版本是 ccache4：
 
-```
+```shell
 # pkg install ccache4
 ```
 
 或
 
-```
+```shell
 # cd /usr/ports/devel/ccache4/ && make install clean
 ```
 
 - ksh/sh 添加到 `/etc/profile`:
-```
+```shell
 export CCACHE_PREFIX=distcc
 export DISTCC_HOSTS="localhost host1 host2"
 ```
 - csh/tcsh 添加到 `/etc/csh.cshrc`:
-```
+```shell
 setenv CCACHE_PREFIX distcc
 setenv DISTCC_HOSTS "localhost host1 host2"
 ```
 
 做软链接：
-```
+```shell
 # ccache-update-links
 ```
-```
+```shell
 root@ykla:/usr/ports/devel/ccache4 # ccache -M 5G  # 设置编译缓存最大为 5GB
 Set cache size limit to 5.0 GB
 
@@ -179,13 +179,13 @@ root@ykla:~ # find /  -name ccache.conf # 全局查找配置文件路径
 
 - axel
 
-```  
+```shell  
 # pkg install axel
 ```
 
 新建或者编辑 `# ee /etc/make.conf` 文件，写入以下几行：
 
-```
+```shell
 FETCH_CMD=axel
 FETCH_BEFORE_ARGS= -n 10 -a
 FETCH_AFTER_ARGS=
@@ -196,11 +196,11 @@ DISABLE_SIZE=yes
   
 **wget2 正在进行测试！先不要用**
   
-```
+```shell
 # cd /usr/ports/www/wget2/ && make install clean
 ```
 新建或者编辑 `# ee /etc/make.conf` 文件，写入以下几行：
-```
+```shell
 FETCH_CMD=wwget2
 FETCH_BEFORE_ARGS= -c -t 3 -o 10
 FETCH_AFTER_ARGS=
@@ -218,7 +218,7 @@ DISABLE_SIZE=yes
 
 看看 python 的 ports 在哪：
 
-```
+```shell
 # whereis python
 # python: /usr/ports/lang/python
 ```
@@ -251,13 +251,13 @@ ports 编译的软件也可以转换为 pkg 包
 
 首先更新 Ports
 
-```
+```shell
 # portsnap auto
 ```
 
 然后列出过时 Ports 组件
 
-```
+```shell
 # pkg_version -l '<'
 ```
 
@@ -265,7 +265,7 @@ ports 编译的软件也可以转换为 pkg 包
 
 一、portupgrade
 
-```
+```shell
 # cd /usr/ports/ports-mgmt/portupgrade && make install clean
 # portupgrade -ai #自动升级所有软件
 # portupgrade -R screen #升级单个软件
@@ -275,7 +275,7 @@ ports 编译的软件也可以转换为 pkg 包
 
 - 更新：
 
-```
+```shell
 # cd /usr/ports/ports-mgmt/portmaster && make install clean
 # portmaster -ai #自动升级所有软件
 # portmaster screen #升级单个软件
@@ -284,7 +284,7 @@ ports 编译的软件也可以转换为 pkg 包
 
 - 查看依赖关系：
 
-```
+```shell
 root@ykla:/usr/ports/ports-mgmt/portmaster # portmaster sysutils/htop  --show-work
 
 ===>>> Port directory: /usr/ports/sysutils/htop
@@ -312,11 +312,11 @@ root@ykla:/usr/ports/ports-mgmt/portmaster # portmaster sysutils/htop  --show-wo
 
 如 Python 现在的默认编译版本是 3.9，要改为 3.11，：
 
-```
+```shell
 # echo "DEFAULT_VERSIONS+= python=3.11  python3=3.11" >> /etc/make.conf
 ```
 >如果只设置了单个参数，那么出现警告是正常的，见 [Bug](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=243034)
->```
+>```shell
 >/!\ WARNING /!\
 >
 >PYTHON_DEFAULT must be a version present in PYTHON2_DEFAULT or PYTHON3_DEFAULT,
@@ -334,7 +334,7 @@ root@ykla:/usr/ports/ports-mgmt/portmaster # portmaster sysutils/htop  --show-wo
 
 - 如何全局屏蔽 mysql
 
-```
+```shell
 # echo "OPTION_UNSET+= MYSQL" >> /etc/make.conf
 ```
 
@@ -342,7 +342,7 @@ root@ykla:/usr/ports/ports-mgmt/portmaster # portmaster sysutils/htop  --show-wo
 
 已经安装：
 
-```
+```shell
 root@ykla:~ # pkg info -d screen
 screen-4.9.0_6:
 	indexinfo-0.3.1
@@ -350,7 +350,7 @@ screen-4.9.0_6:
 
 未安装：
 
-```
+```shell
 root@ykla:/usr/ports/sysutils/htop # make all-depends-list
 /usr/ports/ports-mgmt/pkg
 /usr/ports/devel/pkgconf
@@ -385,3 +385,4 @@ root@ykla:/usr/ports/sysutils/htop # make all-depends-list
 /usr/ports/devel/readline
 /usr/ports/devel/libtool
 ```
+

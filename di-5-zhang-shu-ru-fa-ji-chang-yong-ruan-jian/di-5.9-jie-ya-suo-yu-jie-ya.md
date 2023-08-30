@@ -4,7 +4,7 @@
 
 安装 zip 压缩文件 `# pkg install zip unzip`
 
-```
+```shell
 # zip test.zip test # 打包 zip 格式文件
 
 # unzip test.zip # 释放 zip 格式文件
@@ -12,7 +12,7 @@
 
 ## tar/xz
 
-```
+```shell
 # tar -cvf test.tar test # 打包 tar 格式文件
 
 # tar -xvf test.tar # 释放 tar 格式文件
@@ -40,7 +40,7 @@ FreeBSD 操作系统下，7z 和 7za 命令均通过`# pkg install -y 7-zip`获�
 
 示例如下：
 
-```
+```shell
 # 7z a test.7z test # 7z 打包文件
 # 7z x test.7z # 7z 释放文件
 # 7za a test.7z test # 7za 打包文件
