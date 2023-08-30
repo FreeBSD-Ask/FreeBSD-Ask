@@ -6,12 +6,12 @@ FreeBSD 有四类源：pkg、ports、portsnap、update。
 >
 > `portsnap` 在 FreeBSD 14 中已经弃用，改为使用 `gitup`（请参考第 3.3 节）：
 >
-> ```shell`
+> ```shell
 > 20230422:
 > 	Remove portsnap(8).  Users are encouraged to obtain the ports tree
 > 	using git instead.
 > 	```
-> ```shell`
+>
 
 > 赞助我们：
 >
@@ -31,34 +31,34 @@ FreeBSD 中 pkg 源分为系统级和用户级两个配置文件。_不建议_ �
 
 创建用户级源目录:
 
-```
-# mkdir -p /usr/local/etc/pkg/repos
 ```shell
+# mkdir -p /usr/local/etc/pkg/repos
+```
 
 ### 网易开源镜像站
 
 创建用户级源文件:
 
-```
-# ee /usr/local/etc/pkg/repos/163.conf
 ```shell
+# ee /usr/local/etc/pkg/repos/163.conf
+```
 
 写入以下内容:
 
-```
+```shell
 163: {
 url: "http://mirrors.163.com/freebsd-pkg/${ABI}/quarterly",
 }
 FreeBSD: { enabled: no }
-```shell
+```
 
 **故障排除**
 
 **若要获取滚动更新的包，请将 `quarterly` 修改为 `latest`。二者区别见 FreeBSD 手册。请注意, `CURRENT` 版本只有 `latest`：**
 
-```
-# sed -i '' 's/quarterly/latest/g' /etc/pkg/FreeBSD.conf
 ```shell
+# sed -i '' 's/quarterly/latest/g' /etc/pkg/FreeBSD.conf
+```
 
 **若要使用 https,请先安装 `security/ca_root_nss` ,并将 `http` 修改为 `https`,最后使用命令 `# pkg update -f` 刷新缓存即可,下同。**
 
@@ -66,33 +66,33 @@ FreeBSD: { enabled: no }
 
 创建用户级源文件:
 
-```
-# ee /usr/local/etc/pkg/repos/ustc.conf
 ```shell
+# ee /usr/local/etc/pkg/repos/ustc.conf
+```
 
 写入以下内容:
 
-```
+```shell
 ustc: {
 url: "http://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/quarterly",
 }
 FreeBSD: { enabled: no }
-```shell
+```
 
 ### 南京大学开源镜像站
 
-```
-# ee /usr/local/etc/pkg/repos/nju.conf
 ```shell
+# ee /usr/local/etc/pkg/repos/nju.conf
+```
 
 写入以下内容:
 
-```
+```shell
 nju: {
 url: "http://mirrors.nju.edu.cn/freebsd-pkg/${ABI}/quarterly",
 }
 FreeBSD: { enabled: no }
-```shell
+```
 
 ## ports 源:提供源码方式安装软件的包管理器
 
@@ -102,22 +102,22 @@ FreeBSD: { enabled: no }
 
 #### 获取压缩文件方法
 
-```
-# fetch https://mirrors.nju.edu.cn/freebsd-ports/ports.tar.gz
 ```shell
+# fetch https://mirrors.nju.edu.cn/freebsd-ports/ports.tar.gz
+```
 
 或者
 
-```
-# fetch https://mirrors.ustc.edu.cn/freebsd-ports/ports.tar.gz
 ```shell
+# fetch https://mirrors.ustc.edu.cn/freebsd-ports/ports.tar.gz
+```
 
 然后
 
-```
+```shell
 # tar -zxvf ports.tar.gz -C /usr/ports #解压至路径
 # rm ports.tar.gz #删除存档
-```shell
+```
 
 #### Git 方法
 
@@ -127,15 +127,15 @@ FreeBSD: { enabled: no }
 
 须提前安装 git：
 
-```
-# pkg install git
 ```shell
+# pkg install git
+```
 
 然后：
 
-```
-# git clone --depth 1 https://mirrors.ustc.edu.cn/freebsd-ports/ports.git /usr/ports
 ```shell
+# git clone --depth 1 https://mirrors.ustc.edu.cn/freebsd-ports/ports.git /usr/ports
+```
 
 ### port 源
 
@@ -175,29 +175,29 @@ ports 下载路径是 `/usr/ports/distfiles`
 
 **获取 portsnap 更新**
 
-```
-# portsnap auto #同时支持命令行和 cron
 ```shell
+# portsnap auto #同时支持命令行和 cron
+```
 
 或
 
-```
-# portsnap fetch extract
 ```shell
+# portsnap fetch extract
+```
 
 **故障排除**
 
-```
+```shell
 Snapshot appears to have been created more than one day into the future!
 (Is the system clock correct?)
 Cowardly refusing to proceed any further.
-```shell
+```
 
 需要同步时间。
 
-```
-ntpdate ntp.api.bz
 ```shell
+ntpdate ntp.api.bz
+```
 
 ## freebsd-update 源:提供基本系统更新
 
@@ -217,22 +217,22 @@ ntpdate ntp.api.bz
 
 首先切换成可以用的二进制源
 
-```
-# setenv PACKAGESITE http://ftp-archive.freebsd.org/pub/FreeBSD-Archive/ports/amd64/packages-9.2-release/Latest
 ```shell
+# setenv PACKAGESITE http://ftp-archive.freebsd.org/pub/FreeBSD-Archive/ports/amd64/packages-9.2-release/Latest
+```
 
 如果 shell 不是 csh，那么:
 
-```
-# export PACKAGESITE=http://ftp-archive.freebsd.org/pub/FreeBSD-Archive/ports/amd64/packages-9.2-release/Latest
 ```shell
+# export PACKAGESITE=http://ftp-archive.freebsd.org/pub/FreeBSD-Archive/ports/amd64/packages-9.2-release/Latest
+```
 
 安装示例：现在安装 `bsdinfo`。
 
-```
+```shell
 root@ykla:~ # pkg_add -r bsdinfo
 Fetching http://ftp-archive.freebsd.org/pub/FreeBSD-Archive/ports/amd64/packages-9.2-release/Latest/bsdinfo.tbz... Done.
-```shell
+```
 
 **pkg 是不可用的，会提示找不到 `digests.txz` 和 `repo.txz`，因为当时 pkgng 还没有被官方所支持，仍然仅支持使用 `pkg_*` 命令。**
 
