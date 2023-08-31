@@ -151,10 +151,11 @@ EndSection
 注意，有多个版本的 N 卡驱动，不知道该用哪个的去看[手册](https://handbook.bsdcn.org/di-5-zhang-xwindow-xi-tong/5.3.-xian-ka-qu-dong.html)。
 
 ```shell
-# pkg install nvidia-driver nvidia-settings nvidia-xconfig #安装几个 nvidia 相关的包
-# sysrc kld_list+="nvidia-modeset" #配置驱动
+# pkg install nvidia-driver nvidia-settings nvidia-xconfig nvidia-drm-kmod#安装几个 nvidia 相关的包
+# sysrc kld_list+="nvidia-modeset nvidia-drm.ko" #配置驱动
 # reboot #重启
 ```
+**如果找不到 `graphics/nvidia-drm-kmod` 就编译安装，该包提供了 PRIME 等支持。`x11/nvidia-hybrid-graphics` 包提供了 Optimus 支持，如有需要请单独安装。**
 
 这时候应该已经可以驱动显卡了。
 
