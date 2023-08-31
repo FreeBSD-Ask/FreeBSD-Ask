@@ -155,7 +155,7 @@ EndSection
 # sysrc kld_list+="nvidia-modeset nvidia-drm.ko" #配置驱动
 # reboot #重启
 ```
-**如果找不到 `graphics/nvidia-drm-kmod` 就编译安装，该包提供了 PRIME 等支持。`x11/nvidia-hybrid-graphics` 包提供了 Optimus 支持，如有需要请单独安装。**
+**如果找不到 `graphics/nvidia-drm-kmod` 就编译安装，该包提供了 PRIME 等支持。`x11/nvidia-hybrid-graphics` 包提供了 Optimus 支持，如有需要请单独安装，该包的使用方法见 [nvidia-hybrid-graphics](https://www.freshports.org/x11/nvidia-hybrid-graphics/)。**
 
 这时候应该已经可以驱动显卡了。
 
