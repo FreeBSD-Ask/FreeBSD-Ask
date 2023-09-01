@@ -123,8 +123,8 @@ mount.fstab = /jail/$name.fstab;
 
 www {
 $ip=2
-                  #如不使用 fstab,使用
-#mount.fstab =""; # 替换全局
+#                  #如不使用 fstab,使用
+# mount.fstab =""; # 替换全局
 }
 ```
 
