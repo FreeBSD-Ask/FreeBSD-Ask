@@ -6,7 +6,7 @@
 
 安装 TigerVNC Server：
 
-```sh
+```shell-session
 # pkg install -y tigervnc-server
 ```
 
@@ -16,7 +16,7 @@
 
 创建 `~/.vnc/xstartup` 文件，内容如下：
 
-```sh
+```shell-session
 #!/bin/sh
 unset SESSION_MANAGER
 unset DBUS_SESSION_BUS_ADDRESS
@@ -40,7 +40,7 @@ $command &
 
 - 如果启用了防火墙，那么此时还需要开通防火墙，以 ipfw 为例，在终端输入命令：
 
-```sh
+```shell-session
 # ipfw add allow tcp from any to me 5900-5910 in keep-state
 ```
 
@@ -52,13 +52,13 @@ $command &
 
 安装软件包（以 KDE5 桌面为基准）：
 
-```sh
+```shell-session
 # pkg install xorg kde5 xrdp wqy-fonts xdg-user-dirs
 ```
 
 配置：
 
-```sh
+```shell-session
 # sysrc xrdp_enable="YES"
 # sysrc xrdp_sesman_enable="YES"
 # sysrc dbus_enable="YES"
@@ -68,7 +68,7 @@ $command &
 
 找到 `#### start desktop environment`，修改如下：
 
-```sh
+```shell-session
 #### start desktop environment
 # exec gnome-session
 # exec mate-session
@@ -88,7 +88,7 @@ exec ck-launch-session startplasma-x11   #更改此处
 
 #### 中文化(该用户使用 sh 作为 shell）：
 
-```sh
+```shell-session
 #### set environment variables here if you want
 export LANG=zh_CN.UTF-8
 ```
@@ -105,13 +105,13 @@ export LANG=zh_CN.UTF-8
 
 安装命令：
 
-```sh
+```shell-session
 # pkg install -y rdesktop
 ```
 
 但 rdesktop 安装后不会在系统中生成菜单，因此要在终端输入命令：
 
-```sh
+```shell-session
 # rdesktop windows 设备 ip
 ```
 
@@ -119,7 +119,7 @@ export LANG=zh_CN.UTF-8
 
 通过使用 anydesk 可以远程协助：
 
-```sh
+```shell-session
 # cd /usr/ports/deskutils/anydesk/ && make install clean
 ```
 

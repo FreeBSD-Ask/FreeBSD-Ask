@@ -4,7 +4,7 @@
 
 - 若直接挂载本地 ISO：
 
-```sh
+```shell-session
 # mdconfig FreeBSD-13.1-RELEASE-amd64-dvd1.iso
 # mkdir -p /dist
 # mount -t cd9660 /dev/md0 /dist #不能直接挂载 ISO，会显示错误 block device required
@@ -12,7 +12,7 @@
 
 - 若直接使用 DVD 设备（如虚拟机直接挂载 ISO 镜像）：
 
-```sh
+```shell-session
 # mkdir -p /dist
 # mount -t cd9660 /dev/cd0 /dist
 ```
@@ -27,13 +27,13 @@
 
 测试安装：
 
-```sh
+```shell-session
 # env REPOS_DIR=/dist/packages/repos pkg install xorg
 ```
 
 要列出看 DVD 中的可用软件：
 
-```sh
+```shell-session
 # env REPOS_DIR=/dist/packages/repos pkg rquery "%n"
 ```
 
@@ -41,13 +41,13 @@
 
 #### 创建源
 
-```sh
+```shell-session
 # cp /dist/packages/repos/FreeBSD_install_cdrom.conf /etc/pkg/
 ```
 
 测试安装：
 
-```sh
+```shell-session
 # pkg install xorg
 ```
 

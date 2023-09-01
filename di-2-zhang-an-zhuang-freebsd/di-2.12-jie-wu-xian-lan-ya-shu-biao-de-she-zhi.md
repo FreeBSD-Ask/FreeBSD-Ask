@@ -2,7 +2,7 @@
 
 > 本文基于 FreeBSD 13.0，并使用罗技 m337。
 
-```sh
+```shell-session
 # sysrc hcsecd_enable="YES"
 # sysrc bthidd_enable="YES"
 # service hcsecd start
@@ -13,7 +13,7 @@
 
 蓝牙鼠标调到配对模式，运行`# bluetooth-config scan`，按提示信息进行添加：
 
-```sh
+```shell-session
 #  bluetooth-config scan
 Scanning for new Bluetooth devices (Attempt 1 of 5) ... done.
 Found 1 new bluetooth device (now scanning for names):

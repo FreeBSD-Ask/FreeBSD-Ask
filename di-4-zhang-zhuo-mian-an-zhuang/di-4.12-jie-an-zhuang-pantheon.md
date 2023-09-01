@@ -2,7 +2,7 @@
 
 **尚未完成，仍然在测试！**
 
-```sh
+```shell-session
 root@ykla:~ # pkg install git
 root@ykla:~ # git clone --depth 1 https://mirrors.ustc.edu.cn/freebsd-ports/ports.git /usr/ports
 root@ykla:~ # fetch https://codeberg.org/olivierd/freebsd-ports-elementary/raw/branch/master/Tools/scripts/elementary-merge
@@ -23,7 +23,7 @@ Resolving deltas: 100% (54/54), done.
 remote: Total 484 (delta 54), reused 285 (delta 24), pack-reused 0
 ```
 
-```sh
+```shell-session
 root@ykla:~ # sh elementary-merge -m
 Switched to a new branch 'elementary'
 /root/freebsd-ports-elementary/x11-wm/switchboard-plug-pantheon-shell/Makefile -> x11-wm/switchboard-plug-pantheon-shell/Makefile
@@ -38,13 +38,13 @@ Switched to a new branch 'elementary'
 
 **最后使用 `sh elementary-merge -r` 可还原 Ports**
 
-```sh
+```shell-session
 root@ykla:~ # cd /usr/ports/x11/elementary-session
 root@ykla:/usr/ports/x11/elementary-session # pkg install cmake pkgconf gnome-settings-daemon desktop-file-utils gnome-keyring accountsservice
 root@ykla:/usr/ports/x11/elementary-session # make BATCH=yes install clean
 ```
 
-```sh
+```shell-session
 $ cp /usr/local/share/examples/elementary-session/xprofile ~/.xprofile
 ```
 

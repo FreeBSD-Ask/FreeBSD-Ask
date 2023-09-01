@@ -13,7 +13,7 @@
 
 ## 安装
 
-```sh
+```shell-session
 # pkg install xorg lightdm lightdm-gtk-greeter cinnamon wqy-fonts xdg-user-dirs
 ```
 
@@ -21,29 +21,29 @@
 
 ## 配置
 
-```sh
+```shell-session
 # ee ~/.xinitrc
 ```
 
 添加：
 
-```sh
+```shell-session
 exec cinnamon-session
 ```
 
-```sh
+```shell-session
 # ee /etc/fstab
 ```
 
 添加：
 
-```sh
+```shell-session
 proc /proc procfs rw 0 0
 ```
 
 ### 添加启动项：
 
-```sh
+```shell-session
 # sysrc dbus_enable=YES
 # sysrc lightdm_enable=YES
 ```

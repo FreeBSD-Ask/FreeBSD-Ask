@@ -4,13 +4,13 @@
 
 ## 安装 CUPS(通用 Unix 打印系统)
 
-```sh
+```shell-session
 # pkg install cups
 ```
 
 或
 
-```sh
+```shell-session
 # cd /usr/ports/print/cups
 # make install clean
 ```
@@ -19,19 +19,19 @@
 
 ## 添加服务
 
-```sh
+```shell-session
 # sysrc cupsd_enable="YES"
 ```
 
 完成后启动 cups 服务，执行如下命令
 
-```sh
+```shell-session
 # service cupsd restart
 ```
 
 ## 安装打印机驱动
 
-```sh
+```shell-session
 # pkg install hplip
 ```
 

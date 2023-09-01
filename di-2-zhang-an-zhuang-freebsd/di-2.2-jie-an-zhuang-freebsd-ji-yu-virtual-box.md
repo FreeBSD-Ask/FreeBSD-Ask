@@ -2,7 +2,7 @@
 
 > **UEFI 下显卡也可以正常驱动。——2023.1.14 测试**
 >
-> ```sh-session
+> ```shell-session-session
 > # efibootmgr # 无需安装，自带
 > Boot to FW : false
 > BootCurrent: 0004
@@ -72,7 +72,7 @@ FreeBSD 旧版本下载地址: [http://ftp-archive.freebsd.org/pub/FreeBSD-Archi
 
 ## 显卡驱动与增强工具
 
-```sh-session
+```shell-session-session
 # pkg install virtualbox-ose-additions
 ```
 
@@ -82,14 +82,14 @@ xorg 可以自动识别驱动，**不需要** 手动配置 `/usr/local/etc/X11/x
 
 启动服务：
 
-```sh-session
+```shell-session-session
 # sysrc vboxguest_enable="YES"
 # sysrc vboxservice_enable="YES"
 ```
 
 启动服务，调整权限（以普通用户 ykla 为例）：
 
-```sh-session
+```shell-session-session
 # service vboxguest restart # 可能会提示找不到模块，但是不影响使用
 # service vboxservice restart
 # pw groupmod wheel -m ykla # sudo 权限
@@ -101,7 +101,7 @@ xorg 可以自动识别驱动，**不需要** 手动配置 `/usr/local/etc/X11/x
 
 添加
 
-```sh-session
+```shell-session-session
 hw.efi.poweroff=0
 ```
 

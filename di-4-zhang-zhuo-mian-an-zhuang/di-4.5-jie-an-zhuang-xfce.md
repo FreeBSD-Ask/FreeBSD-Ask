@@ -4,7 +4,7 @@
 
 通过 pkg 安装
 
-```sh
+```shell-session
 # pkg install xorg lightdm lightdm-gtk-greeter xfce wqy-fonts xdg-user-dirs
 ```
 
@@ -12,7 +12,7 @@
 
 通过 ports 安装
 
-```sh
+```shell-session
 # cd /usr/ports/x11-wm/xfce4
 # make install clean
 ```
@@ -31,7 +31,7 @@
 
 ## 启动服务
 
-```sh
+```shell-session
 # sysrc dbus_enable="YES"
 # sysrc lightdm_enable="YES"
 ```
@@ -46,7 +46,7 @@ lightdm 登陆管理器本地化语言见 KDE 章节。
 
 ## 全局菜单（可选）
 
-```sh
+```shell-session
 # pkg install xfce4-appmenu-plugin appmenu-gtk-module appmenu-registrar
 $ xfconf-query -c xsettings -p /Gtk/ShellShowsMenubar -n -t bool -s true
 $ xfconf-query -c xsettings -p /Gtk/ShellShowsAppmenu -n -t bool -s true
@@ -66,7 +66,7 @@ $ xfconf-query -c xsettings -p /Gtk/Modules -n -t string -s "appmenu-gtk-module"
 
 zsh:
 
-```sh
+```shell-session
 precmd ()   a function which is executed just before each prompt
 chpwd ()    a function which is executed whenever the directory is changed
 \e          escape sequence for escape (ESC)
@@ -78,7 +78,7 @@ chpwd ()    a function which is executed whenever the directory is changed
 
 tcsh:
 
-```sh
+```shell-session
 precmd ()   a function which is executed just before each prompt
 cwdcmd ()   a function which is executed whenever the directory is changed
 %n          expands to username
@@ -89,7 +89,7 @@ cwdcmd ()   a function which is executed whenever the directory is changed
 ```
 
 bash:
-```sh
+```shell-session
 \u          expands to $USERNAME
 \h          expands to hostname up to first '.'
 \w          expands to directory, replacing $HOME with '~'
@@ -98,7 +98,7 @@ bash:
 ```
 
 csh
-```sh
+```shell-session
 switch ($TERM)
     case "xterm*":
         set host=`hostname`
