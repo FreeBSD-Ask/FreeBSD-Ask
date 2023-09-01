@@ -18,7 +18,7 @@ ZFS 快照类似于虚拟机快照。
 
 默认创建分区（Auto ZFS）如下：
 
-```shell-session
+```sh
 root@ykla:/home/ykla #  zfs list
 NAME                 USED  AVAIL     REFER  MOUNTPOINT
 zroot               1.72G   440G       96K  /zroot
@@ -39,7 +39,7 @@ zroot/var/tmp         96K   440G       96K  /var/tmp
 
 快照 `zroot`（经测试，在上述默认分区下代表快照整个 ZFS 文件系统，`-r` 即递归创建快照，`test` 是随便起的名字）：
 
-```shell-session
+```sh
 root@ykla:/home/ykla # zfs snapshot -r zroot@test
 root@ykla:/home/ykla # zfs list -t snap
 NAME                      USED  AVAIL     REFER  MOUNTPOINT
@@ -78,7 +78,7 @@ root@ykla:/home/ykla # rm /usr/ports/
 
 与虚拟机快照有所不同，在缺省情况下，`zfs rollback` 命令无法回滚到除最新快照以外的快照（[参考手册](https://docs.oracle.com/cd/E19253-01/819-7065/gbcxk/index.html)），除非使用`r`，但这会删除该快照创建后的所有快照。
 
-```shell-session
+```sh
 root@ykla:/home/ykla # zfs rollback -r zroot@test
 root@ykla:/home/ykla # zfs rollback -r zroot/ROOT@test
 root@ykla:/home/ykla # zfs rollback -r zroot/ROOT/default@test
@@ -94,7 +94,7 @@ root@ykla:/home/ykla # zfs rollback -r zroot/var/log@test
 
 销毁快照（销毁的时候可以使用`r`递归销毁）：
 
-```shell-session
+```sh
 root@ykla:/home/ykla # zfs destroy -r zroot@test
 root@ykla:/home/ykla # zfs list -t snap
 no datasets available

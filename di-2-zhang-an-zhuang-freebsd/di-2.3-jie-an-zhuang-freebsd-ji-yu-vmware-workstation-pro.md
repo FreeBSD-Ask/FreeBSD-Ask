@@ -6,14 +6,14 @@
 >
 > 默认情况下 VMware 是 BIOS，会提示没有：
 >
-> ```shell-session
+> ```sh
 > # efibootmgr # 默认自带、无需安装。
 > efibootmgr: efi variables not supported on this system. root? kldload efirt?
 > ```
 >
 > 如果当前系统是 UEFI,efibootmgr 则输出：
 >
-> ```shell-session
+> ```sh
 > # efibootmgr # 默认自带、无需安装。
 > Boot to FW : false
 > BootCurrent: 0004
@@ -86,7 +86,7 @@ VMware Workstation Player 是个人免费使用的，你也可以选择此版本
 
 VMware 自动缩放屏幕请安装显卡驱动和虚拟机增强工具，即：
 
-```shell-session
+```sh
 # pkg install xf86-video-vmware open-vm-tools xf86-input-vmmouse
 ```
 
@@ -102,13 +102,13 @@ VMware 自动缩放屏幕请安装显卡驱动和虚拟机增强工具，即：
 
 如果有桌面
 
-```shell-session
+```sh
 # pkg install open-vm-tools xf86-input-vmmouse
 ```
 
 如果没有桌面：
 
-```shell-session
+```sh
 # pkg install open-vm-tools-nox11
 ```
 
@@ -118,7 +118,7 @@ VMware 自动缩放屏幕请安装显卡驱动和虚拟机增强工具，即：
 
 写入
 
-```shell-session
+```sh
 fusefs_load="YES"
 ```
 
@@ -126,13 +126,13 @@ fusefs_load="YES"
 
 请先安装虚拟机增强工具。
 
-```shell-session
+```sh
 # vmhgfs-fuse .host:/selfsharefold /mnt/hgfs
 ```
 
 查看共享文件夹
 
-```shell-session
+```sh
 # ls /mnt/hgfs
 ```
 

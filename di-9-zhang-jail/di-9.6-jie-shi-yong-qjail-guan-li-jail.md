@@ -12,14 +12,14 @@ qjail 是 jail 环境的部署工具，分支自 ezjail 3.1。jail 管理工具�
 
 `/etc/rc.conf` 文件中写入
 
-```shell-session
+```sh
 cloned_interfaces="lo1"  # 克隆出 lo1 ，尽量和宿主机网络配置分开。注意，如果要生成多个端口，也应该在同一行中描述，以空格隔开，而不是另外创建一行，如 cloned_interfaces="lo1 lo2" 。分成多行写，只会有一行生效。
 ifconfig_lo1_alias0="inet 192.168.1.0-9" # 宿主机 ip 为 10.0.2.15, 选择该网段是为了和宿主机网段分开，可自行斟酌
 ```
 
 运行
 
-```shell-session
+```sh
 # service netif restart
 ```
 
@@ -27,13 +27,13 @@ lo1 将获得 10 个 ip 地址，下面将用 1-9 这 9 个 ip 给 jail 使用�
 
 ## 安装 qjail 工具
 
-```shell-session
+```sh
 # pkg install qjail
 ```
 
 启用 qjail
 
-```shell-session
+```sh
 # sysrc qjail_enable=YES
 ```
 
@@ -43,13 +43,13 @@ lo1 将获得 10 个 ip 地址，下面将用 1-9 这 9 个 ip 给 jail 使用�
 
 ### 从官方镜像站自动下载（可选）
 
-```shell-session
+```sh
 # qjail install
 ```
 
 此时 qjail 会从 FreeBSD 官网下载 base.txz 文件，示例输出如下：
 
-```shell-session
+```sh
 root@freebsd:~ # qjail install
 resolving server address: ftp.freebsd.org:80
 requesting http://ftp.freebsd.org/pub/FreeBSD/releases/amd64/amd64/13.1-RELEASE/base.txz
@@ -61,7 +61,7 @@ remote size / mtime: 195363380 / 1652346155
 
 因境内网络问题，也可以用镜像手动进行，以中国科学技术大学镜像为例（下载文件是注意版本号，qjail 要求文件版本与宿主机一致，这里是 FreeBSD amd64 13.1)
 
-```shell-session
+```sh
 # fetch https:://mirrors.ustc.edu.cn/freebsd/release/amd64/13.1-RELEASE/base.txz
 # qjail install base.txz
 ```
@@ -78,7 +78,7 @@ remote size / mtime: 195363380 / 1652346155
 
 ## 部署 jail
 
-```shell-session
+```sh
 # qjail create -n lo1 -4 192.168.1.1 jail1
 ```
 
@@ -90,7 +90,7 @@ remote size / mtime: 195363380 / 1652346155
 
 如，新建 `/usr/jails/flavors/default/usr/local/etc/pkg/repos/FreeBSD.conf` ,那么之后再新建 jail 时，会自动把这个文件复制到对应的 jail 中，即
 
-```shell-session
+```sh
 # qjail create -n lo1 -4 192.168.1.2 jail2
 ```
 
@@ -100,34 +100,34 @@ remote size / mtime: 195363380 / 1652346155
 
 列出 qjail 管理的 jail
 
-```shell-session
+```sh
 # qjail list
 ```
 
 启用 jail
 
-```shell-session
+```sh
 # qjail start # 启动所有 jail
 # qjail start jail1 # 启动 jail1
 ```
 
 停止 jail
 
-```shell-session
+```sh
 # qjail stop # 停止所有 jail
 # qjail stop jail1 # 停止 jail1
 ```
 
 重启 jail
 
-```shell-session
+```sh
 # qjail restart # 重启所有 jail
 # qjail restart jail1 # 重启 jail1
 ```
 
 进入 jail 控制台
 
-```shell-session
+```sh
 # qjail console jail1  # 进入 jail1 控制台
 ```
 
@@ -135,20 +135,20 @@ remote size / mtime: 195363380 / 1652346155
 
 备份 jail
 
-```shell-session
+```sh
 # qjail archive -A  # 备份所有 jail
 # qjail archive jail1  # 备份 jail1
 ```
 
 从备份中恢复 jail
 
-```shell-session
+```sh
 # qjail restore jail1  # 从备份中恢复 jail1
 ```
 
 删除 jail
 
-```shell-session
+```sh
 # qjail delete jail1  # 删除 jail1
 # qjail delete -A     # 删除所有 jail
 ```
@@ -161,7 +161,7 @@ remote size / mtime: 195363380 / 1652346155
 
 既上面提到的 sharedfs 中的文件
 
-```shell-session
+```sh
 # qjail update -b
 ```
 
@@ -169,25 +169,25 @@ remote size / mtime: 195363380 / 1652346155
 
 这里有`-p`（小写） 、 `-P`（大写）两个选项，`-p`（小写）使用 portsnap 更新 jail 的 ports tree，`-P`（大写）使用宿主机的 ports tree 更新 jail 的 ports。如果主机已有 ports，则建议使用 `-P`（大写），避免两次下载 ports。
 
-```shell-session
+```sh
 # qjail update -P  # 这里注意大写
 ```
 
 ### 更新系统源代码
 
-```shell-session
+```sh
 # qjail update -S # 大写
 ```
 
 ### 更新过程（推荐）
 
-```shell-session
+```sh
 # pkg install gitup
 ```
 
 开始更新：
 
-```shell-session
+```sh
 # freebsd-update fetch install
 # gitup src
 # gitup ports
@@ -208,7 +208,7 @@ qjail 可以用 `qjail config` 命令对每个 jail 另作设置，运行 `qjail
 
 ### 1 `-h`
 
-```shell-session
+```sh
 # qjail config -h jail1
 ```
 
@@ -216,7 +216,7 @@ qjail 可以用 `qjail config` 命令对每个 jail 另作设置，运行 `qjail
 
 ### 2 `-m` `-M`
 
-```shell-session
+```sh
 # qjail config -m jail1
 ```
 
@@ -226,7 +226,7 @@ qjail 可以用 `qjail config` 命令对每个 jail 另作设置，运行 `qjail
 
 ### 3 `-r` `-R`
 
-```shell-session
+```sh
 # qjail config -r jail1
 ```
 
@@ -234,7 +234,7 @@ qjail 可以用 `qjail config` 命令对每个 jail 另作设置，运行 `qjail
 
 ### 4 `-y` `-Y`
 
-```shell-session
+```sh
 # qjail config -y jail1
 ```
 
@@ -248,12 +248,12 @@ qjail 可以用 `qjail config` 命令对每个 jail 另作设置，运行 `qjail
 
 在 `/etc/pf.conf` 中写入
 
-```shell-session
+```sh
 nat pass on em0 inet from lo1 to any -> em0  # 使 jail 可以访问网络，从 lo1 接口发出的连接通过 nat 转发到 em0
 rdr pass on em0 inet proto tcp from any to em0 port 22 -> 192.168.1.1 port 22  # 使宿方机外可以访问指定 jail，端口重定向，把连接到 em0 上22端口上的 tcp 连接重定向到 192.168.1.1 地址（即 jail1 ）的22端口上
 ```
 
-```shell-session
+```sh
 # sysrc pf_enable=YES
 # service pf start
 ```
@@ -268,7 +268,7 @@ rdr pass on em0 inet proto tcp from any to em0 port 22 -> 192.168.1.1 port 22  #
 
 宿主机中操作
 
-```shell-session
+```sh
 # qjail create -n lo1 -4 192.168.1.3 postgres
 # qjail config -y postgres   #  开启 SysV IPC
 # qjail start postgres
@@ -276,20 +276,20 @@ rdr pass on em0 inet proto tcp from any to em0 port 22 -> 192.168.1.1 port 22  #
 
 编辑 `/etc/pf.conf`
 
-```shell-session
+```sh
 nat pass on em0 inet from lo1 to any ->em0  # 上文已作说明
 rdr pass on em0 inet proto tcp from any to em0 port 5432 -> 192.168.1.3 port 5432 # 不建议写下此句，作用为使宿方机外可以访问 jail 中的 postgresql，此处应考虑安全和实际需要开启端口转发，不建议直接向外提供 postgresql 连接
 ```
 
 启用 pf
 
-```shell-session
+```sh
 # service pf start
 ```
 
 进入名为 postgres 的 jail 的控制台
 
-```shell-session
+```sh
 # qjail console postgres
 ```
 
@@ -297,7 +297,7 @@ jail 控制台中的操作
 
 下面命令皆在 jail 控制台下运行，pkg 安装是否使用镜像可自行决定，如果使用镜像可以在 jail 控制台中如同宿主机般进行设置，请参考相关文章。
 
-```shell-session
+```sh
 # pkg install postgresql15-server
 # sysrc postgresql_enable=YES
 # mkdir -p -m 0700 /var/db/postgres/data15     # 注意版本号
@@ -332,7 +332,7 @@ $ exit   #  回到 jail root 用户，注意提示符变化
 
 此时在宿主机控制台下执行 `qjail config -y postgres` 即可修正错误，具体如下：
 
-```shell-session
+```sh
 # qjail stop postgres
 # qjail config -y postgres
 # qjail start postgres

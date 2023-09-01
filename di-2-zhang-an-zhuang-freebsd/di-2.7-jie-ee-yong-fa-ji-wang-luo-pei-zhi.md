@@ -9,7 +9,7 @@ ee 的用法比 nano 还要简单上许多。是 FreeBSD 基本系统自带的�
 
 比如
 
-```shell-session
+```sh
 # ee a.txt
 ```
 
@@ -48,7 +48,7 @@ ee 的用法比 nano 还要简单上许多。是 FreeBSD 基本系统自带的�
 
 示例输出：
 
-```shell-session
+```sh
 root@ykla:~ # ifconfig
 genet0: flags=8843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST> metric 0 mtu 1500
 	options=68000b<RXCSUM,TXCSUM,VLAN_MTU,LINKSTATE,RXCSUM_IPV6,TXCSUM_IPV6>
@@ -71,13 +71,13 @@ root@ykla:~ #
 
 默认情况下，FreeBSD 是正常联网的，如果不能可能是因为没有正确配置 DNS。
 
-```shell-session
+```sh
 # ee /etc/resolv.conf
 ```
 
 清空里面原有内容。添加以下内容.
 
-```shell-session
+```sh
 nameserver 223.5.5.5 # 阿里 DNS，下同
 nameserver 223.6.6.6
 nameserver 8.8.8.8   # 谷歌 DNS，境外设备才用
@@ -85,7 +85,7 @@ nameserver 8.8.8.8   # 谷歌 DNS，境外设备才用
 
 之后重启一下网络配置
 
-```shell-session
+```sh
 # /etc/netstart restart
 ```
 
@@ -93,7 +93,7 @@ nameserver 8.8.8.8   # 谷歌 DNS，境外设备才用
 
 示例输出：
 
-```shell-session
+```sh
 root@ykla:~ # ping 163.com
 PING 163.com (123.58.180.7): 56 data bytes
 64 bytes from 123.58.180.7: icmp_seq=0 ttl=55 time=30.617 ms

@@ -45,7 +45,7 @@ V.   解决方案
 
 在 amd64、i386 或 (FreeBSD 13 及更高版本) arm64 平台上运行 RELEASE 版本的 FreeBSD 系统可以使用 `freebsd-update(8)` 工具进行更新：
 
-```shell-session
+```sh
 freebsd-update fetch
 freebsd-update install
 ```
@@ -60,7 +60,7 @@ freebsd-update install
 a) 从下方的位置下载相关补丁，并使用您的 PGP 工具验证分离的 PGP 签名。
 
 **FreeBSD 13.2**
-```shell-session
+```sh
 fetch https://security.FreeBSD.org/patches/SA-23:07/bhyve.13.2.patch
 fetch https://security.FreeBSD.org/patches/SA-23:07/bhyve.13.2.patch.asc
 gpg --verify bhyve.13.2.patch.asc
@@ -68,7 +68,7 @@ gpg --verify bhyve.13.2.patch.asc
 
 
 **FreeBSD 13.1**
-```shell-session
+```sh
 fetch https://security.FreeBSD.org/patches/SA-23:07/bhyve.13.1.patch
 fetch https://security.FreeBSD.org/patches/SA-23:07/bhyve.13.1.patch.asc
 gpg --verify bhyve.13.1.patch.asc
@@ -76,7 +76,7 @@ gpg --verify bhyve.13.1.patch.asc
 
 
 b) 应用补丁。以 root 身份执行以下命令：
-```shell-session
+```sh
 cd /usr/src
 patch < /path/to/patch
 ```
@@ -99,7 +99,7 @@ VI.  修正详情
 
 运行以下命令查看特定提交修改了哪些文件：
 
-```shell-session
+```sh
 git show --stat <commit hash>
 ```
 
@@ -110,7 +110,7 @@ git show --stat <commit hash>
 
 要确定工作树中的提交数（以与上表中的 `nNNNNNN` 进行比较），运行：
 
-```shell-session
+```sh
 git rev-list --count --first-parent HEAD
 ```
 
@@ -174,7 +174,7 @@ IPv6 数据包的每个片段都包含一个片段头，指定相对于原始数
 
 在 amd64、i386 或（在 FreeBSD 13 及更高版本上）arm64 平台上运行 RELEASE 版本的 FreeBSD 系统可以使用 freebsd-update(8) 工具进行更新：
 
-```shell-session
+```sh
 # freebsd-update fetch
 # freebsd-update install
 # shutdown -r +10min "Rebooting for a security update"
@@ -186,13 +186,13 @@ IPv6 数据包的每个片段都包含一个片段头，指定相对于原始数
 
 a) 从以下位置下载相关补丁，并使用您的 PGP 工具验证已分离的 PGP 签名。
 
-```shell-session
+```sh
 # fetch https://security.FreeBSD.org/patches/SA-23:06/ipv6.patch
 # fetch https://security.FreeBSD.org/patches/SA-23:06/ipv6.patch.asc
 # gpg --verify ipv6.patch.asc
 ```
 b) 应用补丁。 以 root 用户执行以下命令：
-```shell-session
+```sh
 # cd /usr/src
 # patch < /path/to/patch
 ```
@@ -214,7 +214,7 @@ c) 如 <URL:https://www.FreeBSD.org/handbook/kernelconfig.html> 中所述，重�
 
 运行以下命令以查看哪些文件被特定提交修改：
 
-```shell-session
+```sh
 # git show --stat <commit 哈希>
 ```
 
@@ -223,13 +223,13 @@ c) 如 <URL:https://www.FreeBSD.org/handbook/kernelconfig.html> 中所述，重�
 <URL:https://cgit.freebsd.org/src/commit/?id=NNNNNN>
 
 要确定工作树中的提交计数（用于与上表中的 `nNNNNNN` 进行比较），运行：
-```shell-session
+```sh
 # git rev-list --count --first-parent HEAD
 ```
 对于 FreeBSD 12 及更早版本：
 
 运行以下命令以查看特定修订号修改的文件，将 `NNNNNN` 替换为修订号：
-```shell-session
+```sh
 # svn diff -cNNNNNN --summarize svn://svn.freebsd.org/base
 ```
 
@@ -290,7 +290,7 @@ ssh-agent 是用于 OpenSSH 公钥身份验证的私钥持有程序。 可以使
 
 在 amd64、i386 或（在 FreeBSD 13 及更高版本上）arm64 平台上运行 RELEASE 版本的 FreeBSD 系统可以使用 freebsd-update(8) 工具进行更新：
 
-```shell-session
+```sh
 # freebsd-update fetch
 # freebsd-update install
 ```
@@ -301,25 +301,25 @@ ssh-agent 是用于 OpenSSH 公钥身份验证的私钥持有程序。 可以使
 a) 从以下位置下载相关补丁，并使用您的 PGP 工具验证已分离的 PGP 签名。
 
 **FreeBSD 13.2**
-```shell-session
+```sh
 # fetch https://security.FreeBSD.org/patches/SA-23:08/ssh.13.2.patch
 # fetch https://security.FreeBSD.org/patches/SA-23:08/ssh.13.2.patch.asc
 # gpg --verify ssh.13.2.patch.asc
 ```
 **FreeBSD 13.1**
-```shell-session
+```sh
 # fetch https://security.FreeBSD.org/patches/SA-23:08/ssh.13.1.patch
 # fetch https://security.FreeBSD.org/patches/SA-23:08/ssh.13.1.patch.asc
 # gpg --verify ssh.13.1.patch.asc
 ```
 **FreeBSD 12.4**
-```shell-session
+```sh
 # fetch https://security.FreeBSD.org/patches/SA-23:08/ssh.12.4.patch
 # fetch https://security.FreeBSD.org/patches/SA-23:08/ssh.12.4.patch.asc
 # gpg --verify ssh.12.4.patch.asc
 ```
 b) 应用补丁。 以 root 用户执行以下命令：
-```shell-session
+```sh
 # cd /usr/src
 # patch < /path/to/patch
 ```
@@ -340,7 +340,7 @@ c) 如 <URL:https://www.FreeBSD.org/handbook/makeworld.html> 中所述，重新�
 对于 FreeBSD 13 及更高版本：
 
 运行以下命令以查看特定提交修改了哪些文件：
-```shell-session
+```sh
 # git show --stat <提交哈希>
 ```
 或访问以下 URL，将 `NNNNNN` 替换为哈希：
@@ -348,13 +348,13 @@ c) 如 <URL:https://www.FreeBSD.org/handbook/makeworld.html> 中所述，重新�
 <URL:https://cgit.freebsd.org/src/commit/?id=NNNNNN>
 
 要在工作树中确定提交计数（用于与上表中的 `nNNNNNN` 进行比较），运行：
-```shell-session
+```sh
 # git rev-list --count --first-parent HEAD
 ```
 对于 FreeBSD 12 及更早版本：
 
 运行以下命令以查看特定修订修改了哪些文件，将 `NNNNNN` 替换为修订号：
-```shell-session
+```sh
 # svn diff -cNNNNNN --summarize svn://svn.freebsd.org/base
 ```
 或访问以下 URL，将 `NNNNNN` 替换为修订号：
@@ -421,7 +421,7 @@ FreeBSD-SA-23:04.pam_krb5 中详细描述的问题在该公告的补丁后仍存
 1. 通过二进制补丁更新易受攻击的系统：
 
 在 amd64、i386 或（在 FreeBSD 13 及更高版本上）arm64 平台上运行 RELEASE 版本的 FreeBSD 系统可以使用 freebsd-update(8)工具进行更新：
-```shell-session
+```sh
 # freebsd-update fetch
 # freebsd-update install
 ```
@@ -430,13 +430,13 @@ FreeBSD-SA-23:04.pam_krb5 中详细描述的问题在该公告的补丁后仍存
 以下补丁已经验证适用于适用的 FreeBSD 发行版分支。
 
 a) 从以下位置下载相关补丁，并使用您的 PGP 工具验证已分离的 PGP 签名。
-```shell-session
+```sh
 # fetch https://security.FreeBSD.org/patches/SA-23:09/pam_krb5.patch
 # fetch https://security.FreeBSD.org/patches/SA-23:09/pam_krb5.patch.asc
 # gpg --verify pam_krb5.patch.asc
 ```
 b) 应用补丁。 以 root 用户执行以下命令：
-```shell-session
+```sh
 # cd /usr/src
 # patch < /path/to/patch
 ```
@@ -457,7 +457,7 @@ c) 如 <URL:https://www.FreeBSD.org/handbook/makeworld.html> 中所述，重新�
 对于 FreeBSD 13 及更高版本：
 
 运行以下命令以查看特定提交修改了哪些文件：
-```shell-session
+```sh
 # git show --stat <提交哈希>
 ```
 或访问以下 URL，将 `NNNNNN` 替换为哈希：
@@ -465,13 +465,13 @@ c) 如 <URL:https://www.FreeBSD.org/handbook/makeworld.html> 中所述，重新�
 <URL:https://cgit.freebsd.org/src/commit/?id=NNNNNN>
 
 要在工作树中确定提交计数（用于与上表中的 `nNNNNNN` 进行比较），运行：
-```shell-session
+```sh
 # git rev-list --count --first-parent HEAD
 ```
 对于 FreeBSD 12 及更早版本：
 
 运行以下命令以查看特定修订修改了哪些文件，将 `NNNNNN` 替换为修订号：
-```shell-session
+```sh
 # svn diff -cNNNNNN --summarize svn://svn.freebsd.org/base
 ```
 或访问以下 URL，将 `NNNNNN` 替换为修订号：

@@ -573,7 +573,7 @@ Service Jail 扩展了 rc(8) 系统，允许自动将 rc.d 服务加入 jail。�
 
 如果您想将例如 local\_unbound 加入服务 jail 并允许 IPv4 和 IPv6 访问，只需更改 rc.conf(5)为：
 
-```shell-session
+```sh
 local_unbound_svcj_options=net_basic
 local_unbound_svcj=YES
 ```
@@ -610,7 +610,7 @@ ktrace 分支 网址: [https://github.com/jakesfreeland/freebsd-src/tree/ff/ktra
 
 下面显示的 cap\_violate 程序尝试引发 ktrace(1)可以捕获的每种类型的违规：
 
-```shell-session
+```sh
 # ktrace -t p ./cap_violate
 # kdump
 1603 ktrace   CAP   system call not allowed: execve
@@ -635,7 +635,7 @@ ktrace 分支 网址: [https://github.com/jakesfreeland/freebsd-src/tree/ff/ktra
 
 前 7 个 `system call not allowed` 条目并不是显式地来自 `cap_violate` 程序代码。相反，它们是由 FreeBSD 的 C 运行时库引发的。当您使用 `-t np` 选项跟踪 namei 转换和能力违规时，这一点变得明显：
 
-```shell-session
+```sh
 # ktrace -t np ./cap_violate
 # kdump
 1632 ktrace   CAP   system call not allowed: execve
@@ -675,7 +675,7 @@ ktrace 分支 网址: [https://github.com/jakesfreeland/freebsd-src/tree/ff/ktra
 
 下一个示例从 unzip(1) 实用程序（在进行 Capsicum 化之前）跟踪违规行为：
 
-```shell-session
+```sh
 # ktrace -t np unzip foo.zip
 Archive:  foo.zip
 creating: bar/
@@ -752,7 +752,7 @@ extracting: baz/baz.txt
 
 unzip(1) 的违规跟踪输出更类似于开发人员在首次跟踪自己的程序时所看到的情况。大多数程序都会链接到库。在这种情况下，unzip(1)链接到 libarchive(3)，这在追踪中反映了出来：
 
-```shell-session
+```sh
 1926 unzip    CAP   system call not allowed: open
 1926 unzip    NAMI  "/lib/libarchive.so.7"
 1926 unzip    CAP   system call not allowed: open
@@ -761,7 +761,7 @@ unzip(1) 的违规跟踪输出更类似于开发人员在首次跟踪自己的�
 
 unzip(1) 的违规行为可以在 C 运行时违规行为之后找到：
 
-```shell-session
+```sh
 1926 unzip    NAMI  "foo.zip"
 1926 unzip    CAP   openat: restricted VFS lookup: AT_FDCWD
 1926 unzip    CAP   system call not allowed: open
@@ -2070,7 +2070,7 @@ kinst 是由 christos@ 和 markj@ 创建的新的 DTrace provider，允许对内
 
 2022Q3 状态报告简要介绍了 kinst。我们现在正在进行内联函数跟踪（请参见上面的 D38825 审阅）-这是一个备受期待的 DTrace 功能-通过使用内核 DWARF 和 ELF 信息找到每个内联副本的调用点，并使用该信息转换 D 语法，将 kinst 探针转换为以下形式：
 
-```shell-session
+```sh
    kinst::<inline_func>:<entry/return>
         /<pred>/
         {
@@ -2080,7 +2080,7 @@ kinst 是由 christos@ 和 markj@ 创建的新的 DTrace provider，允许对内
 
 变为：
 
-```shell-session
+```sh
    kinst::<caller_func1>:<offset>,
         kinst::<caller_func2>:<offset>,
         kinst::<caller_func3>:<offset>
@@ -2092,7 +2092,7 @@ kinst 是由 christos@ 和 markj@ 创建的新的 DTrace provider，允许对内
 
 示例：
 
-```shell-session
+```sh
    # dtrace -dn 'kinst::cam_iosched_has_more_trim:entry { printf("\t%d\t%s", pid, execname); }'
         kinst::cam_iosched_get_trim:13,
         kinst::cam_iosched_next_bio:13,
@@ -3222,7 +3222,7 @@ kinst 是一个新的 DTrace 提供者，允许任意的内核指令追踪。
 
 kinst 探针是由 libdtrace 按需创建的，几乎可以为内核中的每一条指令创建探针。探针的形式如下：
 
-```shell-session
+```sh
 kinst:<module>:<function>:<offset>
 ```
 
@@ -3230,7 +3230,7 @@ kinst:<module>:<function>:<offset>
 
 例如，要追踪 amd64\_syscall() 中的第二条指令，首先确定第二条指令的偏移量：
 
-```shell-session
+```sh
 # kgdb
 (kgdb) disas /r amd64_syscall
 Dump of assembler code for function amd64_syscall:
@@ -3241,13 +3241,13 @@ Dump of assembler code for function amd64_syscall:
 
 偏移量为 1。然后，要追踪它：
 
-```shell-session
+```sh
 # dtrace -n 'kinst::amd64_syscall:1'
 ```
 
 D 语言中还增加了一个新的关键字 `regs`，提供了对探针启动时的 CPU 寄存器的只读访问。例如，当 kinst::amd64\_syscall:1 探针启动时，追踪帧指针的内容（amd64 上的寄存器 %rbp）:
 
-```shell-session
+```sh
 # dtrace -n 'kinst::amd64_syscall:1 {printf("0x%x", regs[R_RBP]);}'
 ```
 

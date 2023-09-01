@@ -4,6 +4,6 @@ WireGuard 是一个极其简单而又快速的现代 VPN，采用了最先进的
 
 推荐 FreeBSD 13，安装：
 
-```shell-session
+```sh
 # pkg install wireguard
 ```

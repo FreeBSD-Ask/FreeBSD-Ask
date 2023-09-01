@@ -34,14 +34,14 @@ pkg 升级：
 
 解决：
 
-```shell-session
+```sh
 # cd /usr/ports/ports-mgmt/pkg
 # make deinstall reinstall
 ```
 
 查看已经安装的所有软件：
 
-```shell-session
+```sh
 # pkg info
 ```
 
@@ -57,7 +57,7 @@ pkg 升级：
 
 问题示例：
 
-```shell-session
+```sh
 [1/1] Installing package…
 ===> Creating groups.
 Creating group ‘package’ with gid ‘000’.
@@ -71,7 +71,7 @@ pkg: PRE-INSTALL script failed
 
 问题解决：
 
-```shell-session
+```sh
 # /usr/sbin/pwd_mkdb -p /etc/master.passwd
 ```
 
@@ -79,7 +79,7 @@ pkg: PRE-INSTALL script failed
 
 出现该问题一般是由于 ABI 破坏，更新即可。
 
-```shell-session
+```sh
 # pkg  install bsdadminscripts
 # pkg_libchk
 # port-rebuild
@@ -89,7 +89,7 @@ pkg: PRE-INSTALL script failed
 
 问题示例：
 
-```shell-session
+```sh
 Neuer FreeBSD version for package pkg:
 To ignore this error set IGNORE_OSVERSION=yes
 - package: 1402843

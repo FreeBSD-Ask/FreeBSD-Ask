@@ -12,7 +12,7 @@
 
 sh/bash/zsh:fcitx5
 
-```shell-session
+```sh
 export LANG=zh_CN.UTF-8
 export LANGUAGE=zh_CN.UTF-8
 export LC_ALL=zh_CN.UTF-8
@@ -24,7 +24,7 @@ export QT_IM_MODULE=fcitx
 
 sh/bash/zsh:ibus
 
-```shell-session
+```sh
 export LANG=zh_CN.UTF-8
 export LANGUAGE=zh_CN.UTF-8
 export LC_ALL=zh_CN.UTF-8
@@ -41,7 +41,7 @@ B 组
 
 csh:fcitx5
 
-```shell-session
+```sh
 setenv LANG zh_CN.UTF-8
 setenv LC_ALL zh_CN.UTF-8
 setenv LANGUAGE zh_CN.UTF-8
@@ -52,7 +52,7 @@ setenv QT_IM_MODULE fcitx
 
 csh:ibus
 
-```shell-session
+```sh
 setenv LANG zh_CN.UTF-8
 setenv LC_ALL zh_CN.UTF-8
 setenv LANGUAGE zh_CN.UTF-8
@@ -106,7 +106,7 @@ setenv XIM_ARGS "--daemonize --xim"
 
 可以使用 `locale` 命令确定以上变量的当前值,如：
 
-```shell-session
+```sh
 jk@freebsd:~ $ locale
 LANG=C.UTF-8
 LC_CTYPE="C.UTF-8"
@@ -128,7 +128,7 @@ LC_ALL=
 
 第一种设置只影响界面，提示等，但对其他的格式输出等没有响影（参考 `LC_*` 系列变量概述）。如(sh 中)
 
-```shell-session
+```sh
 jk@freebsd:~ $ locale
 LANG=C.UTF-8
 LC_CTYPE="C.UTF-8"
@@ -151,7 +151,7 @@ jk@freebsd:~ $ date
 
 每个用户可以设置自己的时区，在用户的 shell 配置文件中设置 `TZ` 变量即可
 
-```shell-session
+```sh
 export TZ=CST-8  # sh,bash,zsh
 # 或
 export TZ=Asia/Shanghai
@@ -163,7 +163,7 @@ setenv TZ "Asia/Shanghai"
 
 在 crontab 配置文件中，设置 `CRON_TZ` 变量即可
 
-```shell-session
+```sh
 CRON_TZ=CST-8
 0 8 * * * date >> ~/date.log
 ```
@@ -174,14 +174,14 @@ CRON_TZ=CST-8
 
 用户可以通过脚本快速安装：
 
-```shell-session
+```sh
 # fetch http://book.bsdcn.org/input.sh
 # sh input.sh
 ```
 
 shell 脚本内容如下：
 
-```shell-session
+```sh
 #/bin/sh
 
 echo -e "\e[1;32m begin to init ... \e[0m"

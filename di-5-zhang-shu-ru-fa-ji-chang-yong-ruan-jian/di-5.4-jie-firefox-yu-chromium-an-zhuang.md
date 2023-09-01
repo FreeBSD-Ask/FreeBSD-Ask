@@ -4,38 +4,38 @@
 
 ### 安装普通版本（更新频繁）：
 
-```shell-session
+```sh
 # pkg install firefox
 ```
 
 或者
 
-```shell-session
+```sh
 # cd /usr/ports/www/firefox
 # make install clean
 ```
 
 ### 安装长期支持版本：
 
-```shell-session
+```sh
 pkg install firefox-esr
 ```
 
 或者
 
-```shell-session
+```sh
 #cd /usr/ports/www/firefox-esr/ && make install clean
 ```
 
 ## Chromium（Chromium 不是 chrome，但是启动命令是 chrome）
 
-```shell-session
+```sh
 # pkg install chromium
 ```
 
 或者
 
-```shell-session
+```sh
 # cd /usr/ports/www/chromium
 # make install clean
 ```
