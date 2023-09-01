@@ -12,7 +12,7 @@
 
 重启服务
 
-```shell
+```shell-session
 # service gdm restart
 ```
 
@@ -20,13 +20,13 @@
 
 安装与配置：
 
-```shell
+```shell-session
 # pkg install lightdm-gtk-greeter lightdm
 ```
 
 首先设置启动服务：
 
-```shell
+```shell-session
 # sysrc lightdm_enable="YES"
 ```
 
@@ -42,7 +42,7 @@
 
 重启服务
 
-```shell
+```shell-session
 # service lightdm restart
 ```
 
@@ -52,7 +52,7 @@
 
 安装
 
-```shell
+```shell-session
 # pkg install sddm
 # sysrc sddm_enable="YES"
 ```
@@ -63,7 +63,7 @@
 
 重启服务
 
-```shell
+```shell-session
 # service sddm restart
 ```
 

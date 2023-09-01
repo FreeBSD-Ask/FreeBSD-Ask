@@ -6,7 +6,7 @@ FreeBSD 有四类源：pkg、ports、portsnap、update。
 >
 > `portsnap` 在 FreeBSD 14 中已经弃用，改为使用 `gitup`（请参考第 3.3 节）：
 >
-> ```shell
+> ```shell-session
 > 20230422:
 > 	Remove portsnap(8).  Users are encouraged to obtain the ports tree
 > 	using git instead.
@@ -31,7 +31,7 @@ FreeBSD 中 pkg 源分为系统级和用户级两个配置文件。_不建议_ �
 
 创建用户级源目录:
 
-```shell
+```shell-session
 # mkdir -p /usr/local/etc/pkg/repos
 ```
 
@@ -39,13 +39,13 @@ FreeBSD 中 pkg 源分为系统级和用户级两个配置文件。_不建议_ �
 
 创建用户级源文件:
 
-```shell
+```shell-session
 # ee /usr/local/etc/pkg/repos/163.conf
 ```
 
 写入以下内容:
 
-```shell
+```shell-session
 163: {
 url: "http://mirrors.163.com/freebsd-pkg/${ABI}/quarterly",
 }
@@ -56,7 +56,7 @@ FreeBSD: { enabled: no }
 
 **若要获取滚动更新的包，请将 `quarterly` 修改为 `latest`。二者区别见 FreeBSD 手册。请注意, `CURRENT` 版本只有 `latest`：**
 
-```shell
+```shell-session
 # sed -i '' 's/quarterly/latest/g' /etc/pkg/FreeBSD.conf
 ```
 
@@ -66,13 +66,13 @@ FreeBSD: { enabled: no }
 
 创建用户级源文件:
 
-```shell
+```shell-session
 # ee /usr/local/etc/pkg/repos/ustc.conf
 ```
 
 写入以下内容:
 
-```shell
+```shell-session
 ustc: {
 url: "http://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/quarterly",
 }
@@ -81,13 +81,13 @@ FreeBSD: { enabled: no }
 
 ### 南京大学开源镜像站
 
-```shell
+```shell-session
 # ee /usr/local/etc/pkg/repos/nju.conf
 ```
 
 写入以下内容:
 
-```shell
+```shell-session
 nju: {
 url: "http://mirrors.nju.edu.cn/freebsd-pkg/${ABI}/quarterly",
 }
@@ -102,19 +102,19 @@ FreeBSD: { enabled: no }
 
 #### 获取压缩文件方法
 
-```shell
+```shell-session
 # fetch https://mirrors.nju.edu.cn/freebsd-ports/ports.tar.gz
 ```
 
 或者
 
-```shell
+```shell-session
 # fetch https://mirrors.ustc.edu.cn/freebsd-ports/ports.tar.gz
 ```
 
 然后
 
-```shell
+```shell-session
 # tar -zxvf ports.tar.gz -C /usr/ports #解压至路径
 # rm ports.tar.gz #删除存档
 ```
@@ -127,13 +127,13 @@ FreeBSD: { enabled: no }
 
 须提前安装 git：
 
-```shell
+```shell-session
 # pkg install git
 ```
 
 然后：
 
-```shell
+```shell-session
 # git clone --depth 1 https://mirrors.ustc.edu.cn/freebsd-ports/ports.git /usr/ports
 ```
 
@@ -175,19 +175,19 @@ ports 下载路径是 `/usr/ports/distfiles`
 
 **获取 portsnap 更新**
 
-```shell
+```shell-session
 # portsnap auto #同时支持命令行和 cron
 ```
 
 或
 
-```shell
+```shell-session
 # portsnap fetch extract
 ```
 
 **故障排除**
 
-```shell
+```shell-session
 Snapshot appears to have been created more than one day into the future!
 (Is the system clock correct?)
 Cowardly refusing to proceed any further.
@@ -195,7 +195,7 @@ Cowardly refusing to proceed any further.
 
 需要同步时间。
 
-```shell
+```shell-session
 ntpdate ntp.api.bz
 ```
 
@@ -217,19 +217,19 @@ ntpdate ntp.api.bz
 
 首先切换成可以用的二进制源
 
-```shell
+```shell-session
 # setenv PACKAGESITE http://ftp-archive.freebsd.org/pub/FreeBSD-Archive/ports/amd64/packages-9.2-release/Latest
 ```
 
 如果 shell 不是 csh，那么:
 
-```shell
+```shell-session
 # export PACKAGESITE=http://ftp-archive.freebsd.org/pub/FreeBSD-Archive/ports/amd64/packages-9.2-release/Latest
 ```
 
 安装示例：现在安装 `bsdinfo`。
 
-```shell
+```shell-session
 root@ykla:~ # pkg_add -r bsdinfo
 Fetching http://ftp-archive.freebsd.org/pub/FreeBSD-Archive/ports/amd64/packages-9.2-release/Latest/bsdinfo.tbz... Done.
 ```

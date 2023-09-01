@@ -6,7 +6,7 @@
 
 方案一
 
-```shell
+```shell-session
 # cd /usr/src
 # make buildworld                      # 编译基本系统
 # make installworld DESTDIR=/usr/jail/ # 安装到 jail
@@ -16,23 +16,23 @@
 方案二
 
 下载 `base.txz` 或者从 iso 提取 `baes.txz`，然后解压到 jail
-```shell
+```shell-session
 # tar -xvf base.txz -C /usr/jail/
 ```
 挂载 devfs 文件系统。(不是必须)
 
-```shell
+```shell-session
 # mount -t devfs devfs /usr/jail/dev
 ```
 ### 写入 `/etc/rc.conf`
 
-```shell
+```shell-session
 # sysrc jail_enable="YES"
 ```
 
 创建 `jail.conf` 文件（可以写进 `rc.conf` 但这样便于管理）
 
-```shell
+```shell-session
 www {
 host.hostname =www.example.org;         # 主机名
 ip4.addr = 192.168.0.10;                # IP 地址
@@ -48,7 +48,7 @@ exec.stop = "/bin/sh /etc/rc.shutdown"; # 关闭命令
 
 用 `jls` 查看在线 jail 信息列表
 
-```shell
+```shell-session
 JID IP Address    Hostname   Path
 3   192.168.0.10  www       /usr/jail/www
 ```
@@ -64,26 +64,26 @@ JID IP Address    Hostname   Path
 
 ## 启动与停止 jail
 
-```shell
+```shell-session
 # service jail start www
 # service jail stop www
 ```
 
 ## 登录 jail
 
-```shell
+```shell-session
 # jexec 1 tcsh
 ```
 
 ## 干净关闭 jail
 
-```shell
+```shell-session
 # jexec 3 /etc/rc.shutdown
 ```
 
 ## 升级 jail
 
-```shell
+```shell-session
 # freebsd-update -b /here/is/the/jail fetch
 # freebsd-update -b /here/is/the/jail install
 ```
@@ -94,7 +94,7 @@ JID IP Address    Hostname   Path
 
 写入 `/etc/jail.conf`
 
-```shell
+```shell-session
 allow.raw_sockets=1;
 allow.sysvipc=1;
 ```
@@ -103,7 +103,7 @@ allow.sysvipc=1;
 
 创建 `/etc/resolv.conf`,并编辑
 
-```shell
+```shell-session
 search lan
 nameserver 223.5.5.5 #不要写路由器地址
 nameserver 223.6.6.6 #不要写路由器地址
@@ -111,7 +111,7 @@ nameserver 223.6.6.6 #不要写路由器地址
 
 ## 删除文件没有权限
 
-```shell
+```shell-session
 # chflags -R noschg directory
 ```
 

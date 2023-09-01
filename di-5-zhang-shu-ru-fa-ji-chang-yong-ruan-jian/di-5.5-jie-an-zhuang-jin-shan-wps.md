@@ -4,7 +4,7 @@
 
 ## 基于 ArchLinux 兼容层
 
-```shell
+```shell-session
 # fetch http://book.bsdcn.org/arch.sh #下载脚本构建兼容层
 # sh arch.sh #运行脚本
 # chroot /compat/arch/ /bin/bash #进入 Arch 兼容层
@@ -14,14 +14,14 @@
 
 新开一个终端，输入 `reboot` 重启 FreeBSD，否则设置的密码可能会不识别。
 
-```shell
+```shell-session
 # chroot /compat/arch/ /bin/bash #进入 Arch 兼容层
 # su test # 此时位于 Arch 兼容层！切换到普通用户才能使用 aur
 ```
 
 开始安装：
 
-```shell
+```shell-session
 $ yay -S wps-office-cn ttf-wps-fonts wps-office-mui-zh-cn # 此时位于 Arch 兼容层！此时用户为 test
 AUR Explicit (2): wps-office-cn-11.1.0.11698-1, ttf-wps-fonts-1.0-5
 :: (1/1) Downloaded PKGBUILD: ttf-wps-fonts
@@ -102,13 +102,13 @@ Fcitx5 输入法没反应。待测试。如你知道怎么做，请告诉我们�
 
 ## 基于 Ubuntu 兼容层
 
-```shell
+```shell-session
 # fetch http://book.bsdcn.org/ubuntu.sh #下载脚本构建兼容层
 # sh ubuntu.sh #运行脚本
 # chroot /compat/ubuntu/ /bin/bash #进入 Ubuntu 兼容层
 ```
 
-```shell
+```shell-session
 # apt install  bsdmainutils xdg-utils libxslt1.1 libqt5gui5 xcb # 安装依赖包
 # wget https://wps-linux-personal.wpscdn.cn/wps/download/ep/Linux2019/11698/wps-office_11.1.0.11698_amd64.deb
 # apt install ./wps-office_11.1.0.11698_amd64.deb
@@ -122,7 +122,7 @@ Fcitx5 输入法没反应。待测试。如你知道怎么做，请告诉我们�
 
 - 启动没反应
 
-```shell
+```shell-session
 # ldd /usr/lib/office6/wps
 ```
 
@@ -134,7 +134,7 @@ Fcitx5 输入法没反应。待测试。如你知道怎么做，请告诉我们�
 
 因为 WPS 启动文件调用的是 bash shell。所以安装 bash 后就可以正常启动了：
 
-```shell
+```shell-session
 # pkg install bash
 ```
 

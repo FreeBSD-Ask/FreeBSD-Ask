@@ -2,7 +2,7 @@
 
 OpenVPN 在软件包中就有提供。
 
-```shell
+```shell-session
 # pkg install openvpn
 ```
 

@@ -24,13 +24,13 @@ FreeBSD 14 Current，编译使用 `drm-515-kmod`。**截至 2023.8.24 日，英�
 
 首先切换到 latest 源，或使用 ports 安装：
 
-```shell
+```shell-session
 # pkg install drm-kmod
 ```
 
 或者
 
-```shell
+```shell-session
 # cd /usr/ports/graphics/drm-kmod/ && make BATCH=yes install clean
 ```
 
@@ -54,7 +54,7 @@ FreeBSD 14 Current，编译使用 `drm-515-kmod`。**截至 2023.8.24 日，英�
 
 - FreeBSD 12
 
-```shell
+```shell-session
 # cd /usr/ports/graphics/drm-fbsd12.0-kmod/ && make BATCH=yes install clean
 ```
 
@@ -64,13 +64,13 @@ FreeBSD 14 Current，编译使用 `drm-515-kmod`。**截至 2023.8.24 日，英�
 
 - FreeBSD 13
 
-```shell
+```shell-session
 # cd /usr/ports/graphics/drm-510-kmod/ && make BATCH=yes install clean
 ```
 
 - FreeBSD 14 (current）
 
-```shell
+```shell-session
 # cd /usr/ports/graphics/drm-515-kmod/ && make BATCH=yes install clean
 ```
 
@@ -95,26 +95,26 @@ FreeBSD 14 Current，编译使用 `drm-515-kmod`。**截至 2023.8.24 日，英�
 
 一般计算机：
 
-```shell
+```shell-session
 # sysrc -f /boot/loader.conf  acpi_video="YES"
 ```
 
 对于 Thinkpad：
 
-```shell
+```shell-session
 # sysrc -f /boot/loader.conf  acpi_ibm_load="YES"
 # sysrc -f /boot/loader.conf  acpi_video="YES"
 ```
 
 > 仅限 FreeBSD 13
 
-```shell
+```shell-session
 # backlight decr 20  #降低 20% 亮度
 ```
 
 #### 英特尔
 
-```shell
+```shell-session
 # pkg install intel-backlight
 # intel-backlight 80 #调整为 80% 亮度
 ```
@@ -127,19 +127,19 @@ FreeBSD 14 Current，编译使用 `drm-515-kmod`。**截至 2023.8.24 日，英�
 
 安装所需驱动（均为 latest 源或从 ports 安装）：
 
-```shell
+```shell-session
 # pkg install drm-510-kmod gpu-firmware-kmod xf86-video-amdgpu
 ```
 
 新建并编辑 xorg 配置文件：
 
-```shell
+```shell-session
 # ee /usr/local/etc/X11/xorg.conf.d/06-driver.conf
 ```
 
 加入（**注意 BusID 要改成你自己的，使用`pciconf -l`即可查看**）：
 
-```shell
+```shell-session
 Section "Device"
     Identifier  "Card 0"
     Option      "AccelMethod" "exa"
@@ -150,7 +150,7 @@ EndSection
 
 注意，有多个版本的 N 卡驱动，不知道该用哪个的去看[手册](https://handbook.bsdcn.org/di-5-zhang-xwindow-xi-tong/5.3.-xian-ka-qu-dong.html)。
 
-```shell
+```shell-session
 # pkg install nvidia-driver nvidia-settings nvidia-xconfig nvidia-drm-kmod#安装几个 nvidia 相关的包
 # sysrc kld_list+="nvidia-modeset nvidia-drm.ko" #配置驱动
 # reboot #重启
@@ -159,14 +159,14 @@ EndSection
 
 这时候应该已经可以驱动显卡了。
 
-```shell
+```shell-session
 # 查看驱动信息
 $ nvidia-smi
 ```
 
 如果发现系统没有使用 nvidia 驱动需要自动生成配置文件：
 
-```shell
+```shell-session
 # Xorg -configure #生成配置文件。注意，该步骤不是必要！
 # cp /root/xorg.conf.new /etc/X11/xorg.conf
 ```
@@ -175,13 +175,13 @@ $ nvidia-smi
 
 **注意**： 默认情况下，通过 pkg 安装的 nvidia-driver 是包含 Linux 兼容层支持的, 如果要使用 Linux 软件，需要执行以下命令，（实际上使用 linux 兼容层，以下命令是必须的。） 如果不需要使用 Linux 兼容层，则不需要执行。
 
-```shell
+```shell-session
 # sysrc linux_enable="YES"
 ```
 
 当然如果使用官方的 pkg 软件包，安装好驱动重启后：
 
-```shell
+```shell-session
 $ kldstat
 ```
 
@@ -197,7 +197,7 @@ $ kldstat
 
 拉取最新的 drm-kmod 并编译安装：
 
-```shell
+```shell-session
 # pkg install git
 $ git clone --depth=1 https://github.com/dumbbell/drm-kmod/
 $ cd freebsd/drm-kmod
@@ -246,7 +246,7 @@ xorg 最小化包: xorg-minimal（不建议）
 
 通过 ports 安装
 
-```shell
+```shell-session
 # cd /usr/ports/x11/xorg
 # make install clean
 ```
