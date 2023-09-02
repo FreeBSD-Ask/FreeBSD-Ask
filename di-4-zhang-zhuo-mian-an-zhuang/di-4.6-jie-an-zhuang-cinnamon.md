@@ -11,13 +11,15 @@
 
 ![cinnamon on FreeBSD](../.gitbook/assets/cinnamon.png) 
 
+**壁纸就是黑色的，不是显示出了问题。**
+
 ## 安装
 
 ```shell-session
 # pkg install xorg lightdm lightdm-gtk-greeter cinnamon wqy-fonts xdg-user-dirs
 ```
 
-**壁纸就是黑色的，不是显示出了问题。**
+
 
 ## 配置
 
