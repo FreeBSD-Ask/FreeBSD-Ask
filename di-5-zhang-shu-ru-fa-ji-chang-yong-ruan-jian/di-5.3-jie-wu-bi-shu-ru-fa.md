@@ -130,8 +130,3 @@ patch applied.
 
 [https://github.com/FreeBSD-Ask/98-input/tree/main/free-bsd-98wubi-tables-master](https://github.com/FreeBSD-Ask/98-input/tree/main/free-bsd-98wubi-tables-master)
 
-~~https://gitee.com/ykla/free-bsd-98wubi-tables/tree/master~~
-
-> 经验与教训：
->
-> **请远离国内打着开源旗号实则封闭的无良企业与其创造的所谓的开源社区。**
