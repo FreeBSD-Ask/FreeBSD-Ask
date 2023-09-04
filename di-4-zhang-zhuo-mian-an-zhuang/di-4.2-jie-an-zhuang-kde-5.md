@@ -93,5 +93,10 @@ proc            /proc           procfs  rw      0       0
 
 编辑 `/usr/local/share/xgreeters/slick-greeter.desktop`：
 
-`Exec=slick-greeter` 改成 `Exec=env LANGUAGE=zh_CN slick-greeter` 保存，重启 `lightdn` 服务就生效
+`Exec=slick-greeter` 改成 `Exec=env LANGUAGE=zh_CN slick-greeter` 保存，重启 `lightdm` 服务就生效:
+
+
+```shell-session
+# service lightdm restart
+```
 
