@@ -1,6 +1,6 @@
 # 目录
 
-* [FreeBSD 从入门到跑路](./)
+* [FreeBSD 从入门到跑路](README.md)
 * [目录](mu-lu.md)
 
 ## 第 1 章 走进 FreeBSD
@@ -330,8 +330,7 @@
 * [第 30.10 节 Android 兼容层](di-30-zhang-linux-jian-rong-ceng/di-30.10-jie-android-jian-rong-ceng.md)
 * [第 30.11 节 Linux 兼容层——基于 Deepin](di-30-zhang-linux-jian-rong-ceng/di-30.11-jie-linux-jian-rong-ceng-ji-yu-deepin.md)
 * [第 30.12 节 高级教程：Linux 兼容层与 Jail](di-30-zhang-linux-jian-rong-ceng/di-30.12-jie-gao-ji-jiao-cheng-linux-jian-rong-ceng-yu-jail.md)
-* [第 30.13 节 Linux 兼容层与应用](broken-reference)
-* [第 30.14 节 Linux 兼容层故障排除](di-30-zhang-linux-jian-rong-ceng/di-30.13-jie-linux-jian-rong-ceng-gu-zhang-pai-chu-yu-pei-zhi.md)
+* [第 30.13 节 Linux 兼容层故障排除与配置](di-30-zhang-linux-jian-rong-ceng/di-30.13-jie-linux-jian-rong-ceng-gu-zhang-pai-chu-yu-pei-zhi.md)
 
 ## 第 31 章 TwinCAT/BSD
 
