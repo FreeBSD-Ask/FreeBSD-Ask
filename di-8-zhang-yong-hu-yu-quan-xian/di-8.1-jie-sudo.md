@@ -28,3 +28,16 @@ FreeBSD 基本系统默认不自带 `sudo` 命令，需要使用 `root` 权限�
 %wheel ALL=(ALL) NOPASSWD:ALL
 ```
 
+如果使用 sudo 的时候出现 `xxx Is Not in the Sudoers File. This Incident Will Be Reported`，应当在 sudoers 中加入一句话来解决这个问题。
+
+使用 ee 打开 sudoers：
+
+```shell-session
+# ee /usr/local/etc/sudoers
+```
+找到 `root ALL=(ALL:ALL) ALL` 这行，一般是在第 94 行。在这行下面加一句：
+
+```
+你的用户名 ALL=(ALL:ALL) ALL
+```
+然后保存退出即可。
