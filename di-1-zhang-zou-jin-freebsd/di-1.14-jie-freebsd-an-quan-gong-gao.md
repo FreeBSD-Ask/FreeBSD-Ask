@@ -36,7 +36,7 @@ FreeBSD 的 net80211 内核子系统提供了 IEEE 802.11 无线（Wi-Fi）通�
 
 ### V. 解决方案
 
-升级您的受影响系统到受支持的 FreeBSD  ATABLE 版本或 RELEASE/安全分支（releng），日期在纠正日期之后，并重新启动。
+升级您的受影响系统到受支持的 FreeBSD  STABLE 版本或 RELEASE/安全分支（releng），日期在纠正日期之后，并重新启动。
 
 执行以下操作之一：
 
