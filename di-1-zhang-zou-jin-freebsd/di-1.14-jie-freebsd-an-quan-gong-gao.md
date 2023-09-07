@@ -1,9 +1,7 @@
 # 第 1.14节 FreeBSD 安全公告
 
 
-## FreeBSD-SA-23:11.wifi 安全公告
-
-### FreeBSD 项目
+## FreeBSD 安全公告 FreeBSD-SA-23:11.wifi
 
 - **主题:** Wi-Fi 加密绕过
 - **分类:** 核心
@@ -121,8 +119,10 @@ c) 根据 <https://www.FreeBSD.org/handbook/kernelconfig.html> 中说明的方�
 <https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-47522>
 
 
-## 主题: pf 在处理多个 IPv6 分片头时出现错误
+## FreeBSD 安全公告 FreeBSD-SA-23:10.pf
 
+
+- **主题:** pf 在处理多个 IPv6 分片头时出现错误
 - **分类:** 核心
 - **模块:** pf
 - **公告日期:** 2023 年 09 月 06 日
