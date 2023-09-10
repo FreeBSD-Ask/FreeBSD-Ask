@@ -293,7 +293,6 @@ dolphin-23.04.3                    <
 # cd /usr/ports/ports-mgmt/portmaster && make install clean
 # portmaster -a #自动升级所有软件
 # portmaster screen #升级单个软件
-# portmaster -a --no-confirm #免除确认
 ```
 
 - 查看依赖关系：
