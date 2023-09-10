@@ -291,9 +291,9 @@ dolphin-23.04.3                    <
 
 ```shell-session
 # cd /usr/ports/ports-mgmt/portmaster && make install clean
-# portmaster -ai #自动升级所有软件
+# portmaster -a #自动升级所有软件
 # portmaster screen #升级单个软件
-# portmaster -a -m "BATCH=yes" #或者-D -G –no-confirm 都可以免除确认
+# portmaster -a --no-confirm #免除确认
 ```
 
 - 查看依赖关系：
