@@ -259,6 +259,20 @@ ports 编译的软件也可以转换为 pkg 包
 
 ```shell-session
 # pkg_version -l '<'
+7-zip-22.01                        <
+AppStream-0.16.1                   <
+alsa-plugins-1.2.2_11              <
+aom-3.7.0.r1                       <
+ark-23.04.3                        <
+baloo-widgets-23.04.3              <
+brotli-1.0.9,1                     <
+ca_root_nss-3.92                   <
+cargo-c-0.9.23                     <
+chromium-116.0.5845.110            <
+consolekit2-1.2.6_1                <
+discount-2.2.7c                    <
+dolphin-23.04.3                    <
+…………
 ```
 
 下边分别列出 2 种 FreeBSD 手册中提及的升级工具:
