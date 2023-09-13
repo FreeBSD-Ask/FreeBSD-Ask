@@ -21,12 +21,7 @@
 >   
 >> 　　<https://github.com/safreya/tobook> 用于导出本书的 pdf，打印的话比 gitbook 导出的应该要好点。该脚本运行于 FreeBSD。
 >> 
->> 　　先安装需要的东西：
->> 
->> ```shell-session
->> # pkg install git graphicsmagick
->> ```
->>　　 如需设置 git 代理请按跑路教程提前设置以免无法拉取项目。具体使用方法见该项目的 README.
+>> 具体使用方法见该项目的 README.
 
 ## 概述
 
