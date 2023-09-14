@@ -148,7 +148,7 @@ EndSection
 
 ## 英伟达显卡
 
-## 笔记本核显
+### 笔记本核显
 
 请先按照上边的方法配置核显，也就是说不能单独用 nvidia 打开 xorg。
 
@@ -168,7 +168,7 @@ $ nvrun-vgl 程序名 # GUI 运行程序
 ```
 
 
-## 独显直连或台式机
+### 独显直连或台式机
 
 注意，有多个版本的 N 卡驱动，不知道该用哪个的去看[手册](https://handbook.bsdcn.org/di-5-zhang-xwindow-xi-tong/5.3.-xian-ka-qu-dong.html)。
 
