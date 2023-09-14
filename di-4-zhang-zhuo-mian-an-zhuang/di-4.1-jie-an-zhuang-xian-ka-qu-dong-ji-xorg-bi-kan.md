@@ -148,6 +148,28 @@ EndSection
 
 ## 英伟达显卡
 
+## 笔记本核显
+
+请先按照上边的方法配置核显，也就是说不能单独用 nvidia 打开 xorg。
+
+```shell-session
+# pkg install nvidia-hybrid-graphics
+# sysrc kld_list+=nvidia-modeset
+# sysrc nvidia_xorg_enable=YES
+```
+
+开机后在 kde 设置里查看显卡默认用的是 intel 核显，终端里 `nvidia-smi` 只有 `nvidia-xorg-service 8MB`。
+
+然后在终端用这个命令调用 N 卡：
+
+```shell-session
+$ nvrun 程序名 # 默认无 GUI 运行
+$ nvrun-vgl 程序名 # GUI 运行程序
+```
+
+
+## 独显直连或台式机
+
 注意，有多个版本的 N 卡驱动，不知道该用哪个的去看[手册](https://handbook.bsdcn.org/di-5-zhang-xwindow-xi-tong/5.3.-xian-ka-qu-dong.html)。
 
 ```shell-session
@@ -155,7 +177,7 @@ EndSection
 # sysrc kld_list+="nvidia-modeset nvidia-drm.ko" #配置驱动
 # reboot #重启
 ```
-**如果找不到 `graphics/nvidia-drm-kmod` 就编译安装，该包提供了 PRIME 等支持。`x11/nvidia-hybrid-graphics` 包提供了 Optimus 支持，如有需要请单独安装，该包的使用方法见 [nvidia-hybrid-graphics](https://www.freshports.org/x11/nvidia-hybrid-graphics/)。**
+**如果找不到 `graphics/nvidia-drm-kmod` 就编译安装，该包提供了 PRIME 等支持。`**
 
 这时候应该已经可以驱动显卡了。
 
