@@ -156,8 +156,8 @@ EndSection
 - 旧显卡：
   - nvidia-hybrid-graphics-390   用于支持双显卡切换
   - nvidia-secondary-driver-390 对应显卡驱动
-- 
-390 驱动支持的显卡参考[https://www.nvidia.cn/download/driverResults.aspx/196293/cn/](https://www.nvidia.cn/download/driverResults.aspx/196293/cn/),支持一些旧显卡.
+  
+　　390 驱动支持的显卡参考[https://www.nvidia.cn/download/driverResults.aspx/196293/cn/](https://www.nvidia.cn/download/driverResults.aspx/196293/cn/),支持一些旧显卡.
 
 - 新显卡：
   - nvidia-hybrid-graphics  用于支持双显卡切换
@@ -177,9 +177,9 @@ $ nvrun 程序名 # 默认无 GUI 运行
 $ nvrun-vgl 程序名 # GUI 运行程序
 ```
 
-mesa-demos  包含一些 opengl 示例，可用于测试驱动是否可用，非必要安装。
+`mesa-demos` 包含一些 opengl 示例，可用于测试驱动是否可用，非必要安装。
 
-kld_list 中 `nvidia-modeset`  和 `i915kms` 需同时存在
+`kld_list` 中 `nvidia-modeset`  和 `i915kms` 需同时存在。
 
 安装包后如果 xorg 启动成功不需额外配置，如果失败用 `pciconf -lv` 查找显卡的 busid，例如
 
@@ -201,14 +201,12 @@ Section "Device"
 EndSection
 ```
 
-检验是否成功启用独显，可以用 mesa-demos 中程序测试，运行`bounce`，用 `nvidia-smi -l 1` 观察(每隔一秒刷新一次)。没有使用 nvidia 驱动时显存使用 7M，启用程序显存没有变化。
+检验是否成功启用独显，可以用 mesa-demos 中程序测试，运行 `bounce`，用 `nvidia-smi -l 1` 观察(每隔一秒刷新一次)。没有使用 nvidia 驱动时显存使用 7M，启用程序显存没有变化。
 
 
 ![](../.gitbook/assets/418810292836709.png)
 
- 运行 `nvrun-vgl bounce` 用 `nvidia-smi -l 1` 观察
- 
- 使用 nvidia 驱动时显存使用 13M
+ 运行 `nvrun-vgl bounce` 用 `nvidia-smi -l 1` 观察使用 nvidia 驱动时显存使用 13M。
  
  ![](../.gitbook/assets/380531501625801.png)
  
