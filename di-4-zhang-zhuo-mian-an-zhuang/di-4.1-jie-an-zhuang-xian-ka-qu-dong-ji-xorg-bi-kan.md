@@ -220,12 +220,12 @@ pkg install libva-vdpau-driver libvdpau libvdpau-va-gl
 
 工具->偏好设置->输入/编解码器->硬件加速解码：选择VDPAU 视频解码器
 
-![](../.gitbook/assets/121233788899956.png.png)
+![](../.gitbook/assets/121233788899956.png)
 
 用 `nvrun-vgl vlc` 启动 vlc，并播放视频
 
 
-![](../.gitbook/assets/59022617586598.png.png)
+![](../.gitbook/assets/59022617586598.png)
 
 显存使用上升，正在使用硬解
 
