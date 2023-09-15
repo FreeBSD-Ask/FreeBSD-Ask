@@ -152,8 +152,18 @@ EndSection
 
 请先按照上边的方法配置核显，也就是说不能单独用 nvidia 打开 xorg。
 
+
+- 旧显卡：
+  - nvidia-hybrid-graphics-390   用于支持双显卡切换
+  - nvidia-secondary-driver-390 对应显卡驱动
+- 
+390 驱动支持的显卡参考[https://www.nvidia.cn/download/driverResults.aspx/196293/cn/](https://www.nvidia.cn/download/driverResults.aspx/196293/cn/),支持一些旧显卡.
+
+- 新显卡：
+  - nvidia-hybrid-graphics  用于支持双显卡切换
+  - nvidia-secondary-driver  对应显卡驱动
+
 ```shell-session
-# pkg install nvidia-hybrid-graphics
 # sysrc kld_list+=nvidia-modeset
 # sysrc nvidia_xorg_enable=YES
 ```
@@ -167,6 +177,57 @@ $ nvrun 程序名 # 默认无 GUI 运行
 $ nvrun-vgl 程序名 # GUI 运行程序
 ```
 
+mesa-demos  包含一些 opengl 示例，可用于测试驱动是否可用，非必要安装。
+
+kld_list 中 `nvidia-modeset`  和 `i915kms` 需同时存在
+
+安装包后如果 xorg 启动成功不需额外配置，如果失败用 `pciconf -lv` 查找显卡的 busid，例如
+
+```shell-session
+vgapci0@pci0:1:0:0:	class=0x030000 rev=0xa1 hdr=0x00 vendor=0x10de device=0x0df4 subvendor=0x1043 subdevice=0x15f2
+    vendor     = 'NVIDIA Corporation'
+    device     = 'GF108M [GeForce GT 540M]'
+    class      = display
+    subclass   = VGA
+```
+
+在 `/usr/local/etc/X11/xorg-nvidia-headless.conf` 找到 `Device` 一节，并对应修改 BusID ,上面 ”pci0:1:0:0“ 
+
+```shell-session
+Section "Device"
+    Identifier     "Device0"
+    Driver         "nvidia"
+    BusID          "PCI:1:0:0"
+EndSection
+```
+
+检验是否成功启用独显，可以用 mesa-demos 中程序测试，运行`bounce`，用 `nvidia-smi -l 1` 观察(每隔一秒刷新一次)。没有使用 nvidia 驱动时显存使用 7M，启用程序显存没有变化。
+
+
+![](../.gitbook/assets/418810292836709.png)
+
+ 运行 `nvrun-vgl bounce` 用 `nvidia-smi -l 1` 观察
+ 
+ 使用 nvidia 驱动时显存使用 13M
+ 
+ ![](../.gitbook/assets/380531501625801.png)
+ 
+#### 开启 vlc 硬解
+
+```shell-session
+pkg install libva-vdpau-driver libvdpau libvdpau-va-gl
+```
+
+工具->偏好设置->输入/编解码器->硬件加速解码：选择VDPAU 视频解码器
+
+![](../.gitbook/assets/121233788899956.png.png)
+
+用 `nvrun-vgl vlc` 启动 vlc，并播放视频
+
+
+![](../.gitbook/assets/59022617586598.png.png)
+
+显存使用上升，正在使用硬解
 
 ### 独显直连或台式机
 
