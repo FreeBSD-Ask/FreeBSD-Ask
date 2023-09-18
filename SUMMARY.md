@@ -203,6 +203,7 @@
 * [第 18.4 节 USB 网卡与 WIFI](di-18-zhang-shu-mei-pai-yu-qian-ru-shi/di-18.4-jie-usb-wang-ka-yu-wifi.md)
 * [第 18.5 节 树莓派与 Linux 兼容层](di-18-zhang-shu-mei-pai-yu-qian-ru-shi/di-18.5-jie-shu-mei-pai-yu-linux-jian-rong-ceng.md)
 * [第 18.6 节 RISC-V](di-18-zhang-shu-mei-pai-yu-qian-ru-shi/di-18.6-jie-riscv.md)
+* [第 18.7 节 树莓派与 OpenBSD](di-18-zhang-shu-mei-pai-yu-qian-ru-shi/di-18.7-jie-shu-mei-pai-yu-openbsd.md)
 
 ## 第 19 章 文学故事
 
