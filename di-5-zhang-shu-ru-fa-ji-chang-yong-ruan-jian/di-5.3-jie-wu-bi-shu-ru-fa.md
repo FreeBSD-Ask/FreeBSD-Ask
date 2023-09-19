@@ -128,5 +128,5 @@ patch applied.
 
 #### 98 五笔码表 下载地址
 
-[https://github.com/FreeBSD-Ask/98-input/tree/main/free-bsd-98wubi-tables-master](https://github.com/FreeBSD-Ask/98-input/tree/main/free-bsd-98wubi-tables-master)
+[FreeBSD-98wubi-tables](https://github.com/FreeBSD-Ask/98-input/tree/main/free-bsd-98wubi-tables-master)
 
