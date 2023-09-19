@@ -203,7 +203,7 @@ ntpdate ntp.api.bz
 
 注意：只有一级架构的 release 版本才提供该源。也就是说 current 和 stable 是没有的。 关于架构的支持等级说明请看：
 
-<https://www.freebsd.org/platforms>
+[Supported Platforms](https://www.freebsd.org/platforms)
 
 **例:从 FreeBSD 12 升级到 13.0**
 
