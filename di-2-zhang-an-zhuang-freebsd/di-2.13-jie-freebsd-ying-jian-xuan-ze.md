@@ -17,7 +17,7 @@
 > # hw-probe -all -upload
 > ```
 >
-> 其他系统见 [https://github.com/linuxhw/hw-probe/blob/master/INSTALL.BSD.md](https://github.com/linuxhw/hw-probe/blob/master/INSTALL.BSD.md)
+> 其他系统见 [INSTALL HOWTO FOR BSD](https://github.com/linuxhw/hw-probe/blob/master/INSTALL.BSD.md)
 
 ### 网卡推荐
 
