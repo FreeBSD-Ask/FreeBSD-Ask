@@ -118,6 +118,6 @@
 
 ## 参考链接
 
-- [https://www.freebsd.org/cgi/man.cgi?query=gitup\&sektion=1\&manpath=freebsd-release-ports](https://www.freebsd.org/cgi/man.cgi?query=gitup&sektion=1&manpath=freebsd-release-ports)
-- [https://www.freshports.org/net/gitup](https://www.freshports.org/net/gitup)
-- [https://github.com/johnmehr/gitup](https://github.com/johnmehr/gitup)
+- [gitup --	A minimalist, dependency-free program to clone/pull Git	repos-itories.](https://www.freebsd.org/cgi/man.cgi?query=gitup&sektion=1&manpath=freebsd-release-ports)
+- [net/gitup](https://www.freshports.org/net/gitup)
+- [johnmehr/gitup](https://github.com/johnmehr/gitup)

@@ -12,8 +12,8 @@
 
 参考文献：
 
-- [https://stanislas.blog/2018/12/how-to-install-freebsd-server/](https://stanislas.blog/2018/12/how-to-install-freebsd-server/)
-- [https://wiki.freebsd.org/RootOnZFS/GPTZFSBoot](https://wiki.freebsd.org/RootOnZFS/GPTZFSBoot)
+- [How to manually install FreeBSD on a remote server (with UFS, ZFS, encryption...)](https://stanislas.blog/2018/12/how-to-install-freebsd-server/)
+- [RootOnZFS/GPTZFSBoot](https://wiki.freebsd.org/RootOnZFS/GPTZFSBoot)
 
 以上我仅测试过 UFS 相关。
 

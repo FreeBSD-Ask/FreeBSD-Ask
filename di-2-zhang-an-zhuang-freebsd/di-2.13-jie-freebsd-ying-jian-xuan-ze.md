@@ -4,7 +4,7 @@
 
 更多硬件请参考：
 
-[https://bsd-hardware.info/?view=search](https://bsd-hardware.info/?view=search)
+[Hardware for BSD](https://bsd-hardware.info/?view=search)
 
 <figure><img src="../.gitbook/assets/h1.png" alt=""><figcaption></figcaption></figure>
 

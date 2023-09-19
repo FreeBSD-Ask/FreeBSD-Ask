@@ -157,7 +157,7 @@ EndSection
   - nvidia-hybrid-graphics-390   用于支持双显卡切换
   - nvidia-secondary-driver-390 对应显卡驱动
   
-　　390 驱动支持的显卡参考[https://www.nvidia.cn/download/driverResults.aspx/196293/cn/](https://www.nvidia.cn/download/driverResults.aspx/196293/cn/),支持一些旧显卡.
+　　390 驱动支持的显卡参考[FreeBSD Display Driver – X64](https://www.nvidia.cn/download/driverResults.aspx/196293/cn/),支持一些旧显卡.
 
 - 新显卡：
   - nvidia-hybrid-graphics  用于支持双显卡切换

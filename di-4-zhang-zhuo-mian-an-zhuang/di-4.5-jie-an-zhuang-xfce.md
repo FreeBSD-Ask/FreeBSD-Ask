@@ -112,9 +112,9 @@ endsw
 
 参考文献： 
 
- - <http://www.faqs.org/docs/Linux-mini/Xterm-Title.html#ss4.1>
+ - [Xterm-Title](http://www.faqs.org/docs/Linux-mini/Xterm-Title.html#ss4.1)
 
 ## 配置集参考
 
-- [https://github.com/Wamphyre/BSD-XFCE](https://github.com/Wamphyre/BSD-XFCE)
+- [Wamphyre/BSD-XFCE](https://github.com/Wamphyre/BSD-XFCE)
 

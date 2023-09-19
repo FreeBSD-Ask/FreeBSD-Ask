@@ -123,8 +123,8 @@ patch applied.
 
 具体的可用的设定选项参考下面两个链接：
 
-- [https://github.com/LEOYoon-Tsaw/Rime_collections/blob/master/Rime_description.md](https://github.com/LEOYoon-Tsaw/Rime_collections/blob/master/Rime_description.md)
-- [https://github.com/rime/home/wiki/CustomizationGuide](https://github.com/rime/home/wiki/CustomizationGuide)
+- [LEOYoon-Tsaw/Rime_collections/](https://github.com/LEOYoon-Tsaw/Rime_collections/blob/master/Rime_description.md)
+- [rime/CustomizationGuide](https://github.com/rime/home/wiki/CustomizationGuide)
 
 #### 98 五笔码表 下载地址
 

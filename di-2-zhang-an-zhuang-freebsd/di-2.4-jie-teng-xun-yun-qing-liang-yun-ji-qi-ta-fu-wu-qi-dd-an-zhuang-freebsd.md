@@ -105,5 +105,5 @@ ssh 链接后，`kldload zfs` 加载 zfs 模块，然后运行 `bsdinstall`，�
 
 ## 参考资料
 
-- <https://docs.freebsd.org/en/articles/remote-install/>
+- [Remote Installation of the FreeBSD Operating System Without a Remote Console](https://docs.freebsd.org/en/articles/remote-install/)
 

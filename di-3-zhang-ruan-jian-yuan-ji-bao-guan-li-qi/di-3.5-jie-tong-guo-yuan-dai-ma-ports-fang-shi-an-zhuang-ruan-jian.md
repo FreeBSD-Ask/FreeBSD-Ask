@@ -119,7 +119,7 @@ tmpfs /tmp tmpfs rw 0 0
 
 重启。
 
-参考资料：<https://man.freebsd.org/cgi/man.cgi?tmpfs(5)>
+参考资料：[tmpfs --	in-memory file system](https://man.freebsd.org/cgi/man.cgi?tmpfs(5))
 
 
 ### ccache
@@ -173,8 +173,8 @@ root@ykla:~ # find /  -name ccache.conf # 全局查找配置文件路径
 
 参考文献：
 
-- <https://github.com/freebsd/freebsd-ports/blob/main/devel/ccache/files/ccache-howto-freebsd.txt.in>
-- <https://man.freebsd.org/cgi/man.cgi?query=ccache&sektion=1&n=1>
+- [ccache-howto-freebsd.txt.in](https://github.com/freebsd/freebsd-ports/blob/main/devel/ccache/files/ccache-howto-freebsd.txt.in)
+- [ccache -	a fast C/C++ compiler cache](https://man.freebsd.org/cgi/man.cgi?query=ccache&sektion=1&n=1)
 ### 如何使用多线程下载：
 
 - axel
@@ -317,7 +317,7 @@ root@ykla:/usr/ports/ports-mgmt/portmaster # portmaster sysutils/htop  --show-wo
 
 参考资料：
 
-- <https://man.freebsd.org/cgi/man.cgi?portmaster(8)#end>
+- [portmaster -- manage your ports without external	databases or languages](https://man.freebsd.org/cgi/man.cgi?portmaster(8)#end)
   
 ## FreeBSD USE
 
@@ -341,8 +341,8 @@ root@ykla:/usr/ports/ports-mgmt/portmaster # portmaster sysutils/htop  --show-wo
 
 参考资料：
 
-- <https://wiki.freebsd.org/Ports/DEFAULT_VERSIONS>
-- <https://wiki.freebsd.org/Python>
+- [Ports/DEFAULT_VERSIONS](https://wiki.freebsd.org/Ports/DEFAULT_VERSIONS)
+- [Python](https://wiki.freebsd.org/Python)
 
 
 - 如何全局屏蔽 mysql
