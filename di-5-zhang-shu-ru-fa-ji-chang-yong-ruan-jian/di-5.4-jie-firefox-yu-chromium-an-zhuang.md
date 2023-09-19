@@ -42,5 +42,5 @@ pkg install firefox-esr
 
 - Chromium 加入 Google 同步
 
- <https://gist.github.com/cvan/44a6d60457b20133191bd7b104f9dcc4>
+ [Launch Chromium with API Keys on Mac OS X and Windows ](https://gist.github.com/cvan/44a6d60457b20133191bd7b104f9dcc4)
 
