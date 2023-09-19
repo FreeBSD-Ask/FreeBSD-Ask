@@ -30,5 +30,5 @@ Unix 哲学源于 UNIX 操作系统的开发，作者是肯·汤普森。Unix �
 
 参考文献：
 
-- <https://www.ruanyifeng.com/blog/2009/06/unix_philosophy.html>
+- [关于Unix哲学](https://www.ruanyifeng.com/blog/2009/06/unix_philosophy.html)
 - 《UNIX 编程艺术》，Eric Raymond 著，ISBN: 9787121176654，电子工业出版社。
