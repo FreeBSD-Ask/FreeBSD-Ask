@@ -1,6 +1,6 @@
 # 第 4.3 节 安装 Gnome
 
-> 当前 gnome 桌面对 dri3 的支持有问题，见 [Bug1](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=255049)、[Bug2](https://github.com/freebsd/drm-kmod/issues/72)。可能会导致部分 AMD GPU 显示错误，必须降级到 dri2 才能运行。
+> 当前 gnome 桌面对 dri3 的支持有问题，见 [Bug 255049 - x11/gdm doesn't show the login screen ](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=255049)、[amdgpu no hw acceleration on gnome3 ?? - workaround amdgpu disable DRI3 in xorg.conf and switch to DRI2](https://github.com/freebsd/drm-kmod/issues/72)。可能会导致部分 AMD GPU 显示错误，必须降级到 dri2 才能运行。
 ## 安装
 
 ```shell-session
