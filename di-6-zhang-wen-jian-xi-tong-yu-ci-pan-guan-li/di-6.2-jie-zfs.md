@@ -8,7 +8,7 @@
 - 如果要复制某个文件系统，可以用 `zfs send/recv`，这样还能通过 ssh 跨网络传输。
 - 推荐使用固态硬盘，使用 SSD 可以改善 ZFS 随机读能力，并且 ZFS 这种写时复制的文件系统也有益于 SSD 寿命。
 
-以上部分来自网络，更多优化见 [https://wiki.freebsd.org/ZFSTuningGuide](https://wiki.freebsd.org/ZFSTuningGuide)。
+以上部分来自网络，更多优化见 [ZFSTuningGuide](https://wiki.freebsd.org/ZFSTuningGuide)。
 
 ## ZFS 快照与还原
 
