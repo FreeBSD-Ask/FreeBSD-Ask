@@ -41,12 +41,12 @@
 
 > RTL8156 网卡如果时断时续，请安装 `realtek-re-kmod` ？（此处存疑） 见
 >
-> * [https://www.freshports.org/net/realtek-re-kmod](https://www.freshports.org/net/realtek-re-kmod)
-> * [https://bugs.freebsd.org/bugzilla/show\_bug.cgi?id=166724](https://bugs.freebsd.org/bugzilla/show\_bug.cgi?id=166724)
+> * [net/realtek-re-kmod](https://www.freshports.org/net/realtek-re-kmod)
+> * [Bug 166724 - if_re(4): watchdog timeout ](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=166724)
 
 > \* 绿联 USB 千兆网卡 CM209 时断时续。不建议购买：
 >
-> * [https://bugs.freebsd.org/bugzilla/show\_bug.cgi?id=267514](https://bugs.freebsd.org/bugzilla/show\_bug.cgi?id=267514)
+> * [Bug 267514 - AXGE(4) ASIX AX88179A ue0: link state changed to DOWN ](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=267514)
 
 ## 归档内容
 
