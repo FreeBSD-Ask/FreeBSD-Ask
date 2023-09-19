@@ -1,6 +1,6 @@
 # 第 1.11 节 FreeBSD 子项目
 
-本页面是对 <https://freebsdfoundation.org/our-work/projects/> 的翻译。
+本页面是对 [Projects](https://freebsdfoundation.org/our-work/projects/) 的翻译。
 
 **FreeBSD 项目完全依靠来自 FreeBSD 社区成员和关注我们使命的外部企业的慷慨捐赠及资助。**
 
