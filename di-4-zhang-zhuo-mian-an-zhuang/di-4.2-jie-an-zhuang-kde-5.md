@@ -1,6 +1,6 @@
 # 第 4.2 节 安装 KDE 5
 
-> 视频教程：FreeBSD 13.1 + VMware 17 + KDE5: [https://www.bilibili.com/video/BV1UR4y1U71T/](https://www.bilibili.com/video/BV1UR4y1U71T/)
+> 视频教程：FreeBSD 13.1 + VMware 17 + KDE5: [FreeBSD 13.1 安装 KDE5——基于 VMware 17](https://www.bilibili.com/video/BV1UR4y1U71T/)
 
 ## 安装
 
@@ -12,7 +12,7 @@
 
 > **故障排除**
 >
-> **如果有时候提示找不到或者没有 kde5,请去** [**https://www.freshports.org/x11/kde5**](https://www.freshports.org/x11/kde5) **看看是不是二进制包没有被构建出来。有时候需要切换 quarterly（待上游构建出来了再换到 latest 源，pkg upgrade 升级即可）或者 latest 源。类似方法适用于所有软件，故后边不再赘述。**
+> **如果有时候提示找不到或者没有 kde5,请去** [**x11/kde5**](https://www.freshports.org/x11/kde5) **看看是不是二进制包没有被构建出来。有时候需要切换 quarterly（待上游构建出来了再换到 latest 源，pkg upgrade 升级即可）或者 latest 源。类似方法适用于所有软件，故后边不再赘述。**
 
 ## 配置
 
@@ -59,7 +59,7 @@ proc            /proc           procfs  rw      0       0
 
 提示：hal 已经被删除。**不需要**再添加~~hald_enable="YES",~~ 见：
 
-[https://www.freshports.org/sysutils/hal](https://www.freshports.org/sysutils/hal)
+[sysutils/hal](https://www.freshports.org/sysutils/hal)
 
 ### 权限设置
 
