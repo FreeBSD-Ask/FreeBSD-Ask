@@ -27,11 +27,11 @@
 
 > **警告**
 >
-> **注意：由于 [BUG](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=250580)，FreeBSD 11/12 可能在 VMare 的 UEFI 环境下无法启动。经测试 13.0 正常启动。**
+> **注意：由于 [Bug 250580 - VMware UEFI guests crash in virtual hardware after r366691](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=250580)，FreeBSD 11/12 可能在 VMare 的 UEFI 环境下无法启动。经测试 13.0 正常启动。**
 
 ## 视频教程
 
-<https://www.bilibili.com/video/BV1UR4y1U71T/>
+(FreeBSD 13.1 安装 KDE5——基于 VMware 17)[https://www.bilibili.com/video/BV1UR4y1U71T/)
 
 视频教程环境 VMware 17 + FreeBSD 13.1-RELEASE + BIOS +KDE 5。
 
