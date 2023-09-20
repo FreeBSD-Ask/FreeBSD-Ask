@@ -10,13 +10,13 @@ FreeBSD 已从 Linux 移植了显卡驱动，理论上，I 卡 A 卡 N 卡均在
 
 对于 FreeBSD 12，支持情况同 Linux 内核 4.16；
 
-对于 FreeBSD 13.1，编译使用`drm-510-kmod`，支持情况同 Linux 5.10。AMD 可支持 R7 4750U【但是有 [bug](https://github.com/freebsd/drm-kmod/issues/72)】。
+对于 FreeBSD 13.1，编译使用`drm-510-kmod`，支持情况同 Linux 5.10。AMD 可支持 R7 4750U【但是有 [amdgpu no hw acceleration on gnome3 ?? - workaround amdgpu disable DRI3 in xorg.conf and switch to DRI2](https://github.com/freebsd/drm-kmod/issues/72)】。
 
 FreeBSD 14 Current，编译使用 `drm-515-kmod`。**截至 2023.8.24 日，英特尔第 12、 13 代** 显卡 **[**暂不支持**](https://github.com/freebsd/drm-kmod/issues/219)。** 。
 
 详细情况可以看
 
-[https://wiki.freebsd.org/Graphics](https://wiki.freebsd.org/Graphics)
+[wiki/Graphics](https://wiki.freebsd.org/Graphics)
 
 ## 英特尔核显 / AMD 独显
 
@@ -123,7 +123,7 @@ FreeBSD 14 Current，编译使用 `drm-515-kmod`。**截至 2023.8.24 日，英�
 
 > 此部分教程经过测试适用于 renoir 显卡。
 >
-> 在使用 Gnome 时，如果自动锁屏或息屏，可能无法再次进入桌面。见 [https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=255049](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=255049)。
+> 在使用 Gnome 时，如果自动锁屏或息屏，可能无法再次进入桌面。见 [Bug 255049 - x11/gdm doesn't show the login screen](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=255049)。
 
 安装所需驱动（均为 latest 源或从 ports 安装）：
 
@@ -229,7 +229,7 @@ pkg install libva-vdpau-driver libvdpau libvdpau-va-gl
 
 ### 独显直连或台式机
 
-注意，有多个版本的 N 卡驱动，不知道该用哪个的去看[手册](https://handbook.bsdcn.org/di-5-zhang-xwindow-xi-tong/5.3.-xian-ka-qu-dong.html)。
+注意，有多个版本的 N 卡驱动，不知道该用哪个的去看[5.2. 安装 Xorg](https://handbook.bsdcn.org/di-5-zhang-xwindow-xi-tong/5.2.-an-zhuang-xorg.html)。
 
 ```shell-session
 # pkg install nvidia-driver nvidia-settings nvidia-xconfig nvidia-drm-kmod#安装几个 nvidia 相关的包
@@ -304,7 +304,7 @@ kldxref /boot/modules
 
 参考资料
 
-- [https://github.com/freebsd/drm-kmod/issues/93#issuecomment-962622626](https://github.com/freebsd/drm-kmod/issues/93#issuecomment-962622626)
+- [[drm ERROR :radeon_ttm_init] failed initializing buffer object driver(-22) – radeonkms no longer loads with drm-devel-kmod on AMD Thames [Radeon HD 7550M/7570M/7650M]](https://github.com/freebsd/drm-kmod/issues/93#issuecomment-962622626)
 
 ### 故障排除
 
