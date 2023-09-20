@@ -12,7 +12,7 @@
 
 ## 视频教程
 
-<https://www.bilibili.com/video/BV1y8411d7pp>
+[08-腾讯云轻量云及其他服务器安装 FreeBSD](https://www.bilibili.com/video/BV1y8411d7pp)
 
 
 >视频与教程有一定出入，按哪个来都可以。
@@ -90,7 +90,7 @@ ssh 链接后，`kldload zfs` 加载 zfs 模块，然后运行 `bsdinstall`，�
 
 - 为什么不能直接 dd？（错误示范，仅供说明，请勿执行）
 
-　　我试了在正常的 Linux 系统内直接把 mfsBSD 的 img dd 到硬盘里，重启之后虽然正常加载 bootloader，但是可能是因为系统又对硬盘进行了写入而无法正常挂载内存盘。
+　　在正常的 Linux 系统内直接把 mfsBSD 的 img dd 到硬盘里，重启之后虽然正常加载 bootloader，但是可能是因为系统又对硬盘进行了写入而无法正常挂载内存盘。
 
 ```shell-session
 # wget https://mfsbsd.vx.sk/files/images/13/amd64/mfsbsd-se-13.1-RELEASE-amd64.img -O- | dd of=/dev/vda
