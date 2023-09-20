@@ -4,7 +4,7 @@ UNIX 从前是一个操作系统。最后由 C 语言改写产生。——源自
 
 现在是一个 **标准规范和商业商标**。更是 **一种哲学思想（KISS - Keep It Simple, Stupid! 一言以蔽之，即“大道至简”），软件工程原则（比如模块化、管道流等）**。
 
-查询网址：[http://www.opengroup.org/openbrand/register](http://www.opengroup.org/openbrand/register)
+查询网址：[The Open Group official register of UNIX Certified Products](http://www.opengroup.org/openbrand/register)
 
 我们现在可以知道认证 UNIX 需要：
 
