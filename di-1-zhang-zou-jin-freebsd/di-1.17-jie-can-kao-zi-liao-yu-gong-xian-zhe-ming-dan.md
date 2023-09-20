@@ -6,7 +6,7 @@
 
 ### 在线书籍
 
-[《FreeBSD 官方简体中文手册 2022 新译》](https://handbook.bsdcn.org/)
+[《FreeBSD 简体中文手册》](https://handbook.bsdcn.org/)
 
 ### 出版物
 
