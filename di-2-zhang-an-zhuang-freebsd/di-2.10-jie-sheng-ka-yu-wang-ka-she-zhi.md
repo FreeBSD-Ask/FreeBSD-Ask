@@ -41,7 +41,7 @@ $ sysctl hw.snd.default_unit=5
 
 ### 提示
 
-部分声卡需要自行编译内核，请参考 <http://www.opensound.com/freebsd.html>。
+部分声卡需要自行编译内核，请参考 [Open Sound System for FreeBSD](http://www.opensound.com/freebsd.html)。
 
 但是 oss 有些缺点，使用 `obs-studio` 无法录制 oss 输出。只能录制 oss 输入。看官方论坛里，可以 `virtual_oss` 模拟一个设备实现。
 
