@@ -156,7 +156,7 @@ fdescfs                     1        1         0   100%    /dev/fd
 
 切换回 `zroot/ROOT/default` 启动环境，在启动菜单里选择 default 启动环境，或如上用 `bectl activate default` 切换到 default 启动环境
 
-
+用法扩展：可以把一个启动环境升级为 FreeBSD 14，实现 13、14 多版本共存。
 ## 注意事项
 
 - ZFS 并不使用 `/etc/fstab`，但是 EFI、Swap 仍然使用。
