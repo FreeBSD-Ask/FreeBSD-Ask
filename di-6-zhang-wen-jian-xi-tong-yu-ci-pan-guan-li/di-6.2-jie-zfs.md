@@ -108,14 +108,14 @@ root@ykla:/home/ykla #
 
 什么是启动环境？用 snapshot 和 rollback 结合，相当于在一条时间上线进行跳转。启动环境相当于一条时间线，复制一个启动环境相当于再造一条时间线(复制之后两个启动环境互相独立)，两个启动环境间的切换是两条时间线的穿越（或者说平行空间的穿越）。默认安装中 `zroot/ROOT/default` 是默认的启动环境。
 
-```
+```shell-session
 # zfs snap zroot/ROOT/default@new                                             # 建一个 zfs 快照
 # zfs clone zroot/ROOT/default@new zroot/ROOT/new         # 用刚建的快照复制一个镜像
 ```
 
 复制的镜像可以作为一个启动环境，可以用bectl工具查看可用的启动环境
 
-```
+```shell-session
 # bectl list
 BE                                Active Mountpoint Space Created
 0915                              -      -          4.00M 2023-09-19 19:44
@@ -126,14 +126,14 @@ default                           NR     /          40.8G 2023-04-10 10:06
 
 其中 Active 列中 `N` 表示当前使用环境，`R` 表示下次启动时使用的环境。bectl 工具可以改变下次使用的启动环境（在启动 FreeBSD 时，启动菜单里选 `8`，也可以改变启动环境）
 
-```
+```shell-session
 bectl activate new
 Successfully activated boot environment new
 ```
 
 再次用 `bectl list` 查看，观察 Active 列的变化
 
-```
+```shell-session
 bectl list
 BE                                Active Mountpoint Space Created
 0915                              -      -          4.00M 2023-09-19 19:44
@@ -144,14 +144,13 @@ default                           N      -          40.8G 2023-04-10 10:06
 
 重启 FreeBSD （启动菜单里选择 new 启动环境，或如上用 `bectl activate new` 切换到 new 启动环境），用 df 观察，挂载的根目录的文件系统已经是 `zroot/ROOT/new`
 
-```
+```shell-session
 # df
 Filesystem          1K-blocks     Used     Avail Capacity  Mounted on
 zroot/ROOT/new      110611616 42612156  67999460    39%    /
 devfs                       1        1         0   100%    /dev
 /dev/gpt/efiboot0      266176     1872    264304     1%    /boot/efi
 fdescfs                     1        1         0   100%    /dev/fd
-...
 ```
 
 切换回 `zroot/ROOT/default` 启动环境，在启动菜单里选择 default 启动环境，或如上用 `bectl activate default` 切换到 default 启动环境
