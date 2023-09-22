@@ -104,12 +104,12 @@ root@ykla:/home/ykla #
 > `snapshot`在命令中可以缩写为`snap`。
 
 
-## 复制出启动环境
+## 启动环境
 
 什么是启动环境？用 snapshot 和 rollback 结合，相当于在一条时间上线进行跳转。启动环境相当于一条时间线，复制一个启动环境相当于再造一条时间线(复制之后两个启动环境互相独立)，两个启动环境间的切换是两条时间线的穿越（或者说平行空间的穿越）。默认安装中 `zroot/ROOT/default` 是默认的启动环境。
 
 ```shell-session
-# zfs snap zroot/ROOT/default@new                                             # 建一个 zfs 快照
+# zfs snap zroot/ROOT/default@new                         # 建一个 zfs 快照
 # zfs clone zroot/ROOT/default@new zroot/ROOT/new         # 用刚建的快照复制一个镜像
 ```
 
@@ -120,7 +120,7 @@ root@ykla:/home/ykla #
 BE                                Active Mountpoint Space Created
 0915                              -      -          4.00M 2023-09-19 19:44
 13.2-RELEASE-p2_2023-09-13_141111 -      -          29.0M 2023-09-13 14:11
-new                            -      -          432K  2023-09-20 15:17
+new                               -      -          432K  2023-09-20 15:17
 default                           NR     /          40.8G 2023-04-10 10:06
 ```
 
@@ -138,7 +138,7 @@ bectl list
 BE                                Active Mountpoint Space Created
 0915                              -      -          4.00M 2023-09-19 19:44
 13.2-RELEASE-p2_2023-09-13_141111 -      -          29.0M 2023-09-13 14:11
-new                            R      /          2.84M 2023-09-20 15:17
+new                               R      /          2.84M 2023-09-20 15:17
 default                           N      -          40.8G 2023-04-10 10:06
 ```
 
@@ -156,6 +156,12 @@ fdescfs                     1        1         0   100%    /dev/fd
 切换回 `zroot/ROOT/default` 启动环境，在启动菜单里选择 default 启动环境，或如上用 `bectl activate default` 切换到 default 启动环境
 
 用法扩展：可以把一个启动环境升级为 FreeBSD 14，实现 13、14 多版本共存。
+
+参考文献：
+
+- [wiki/BootEnvironments](https://wiki.freebsd.org/BootEnvironments)
+
+  
 ## 注意事项
 
 - ZFS 并不使用 `/etc/fstab`，但是 EFI、Swap 仍然使用。
