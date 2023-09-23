@@ -1,5 +1,7 @@
 # 第 1.13 节 FreeBSD 季度报告
 
+旧的存档可以在这里找到：<https://freebsd.gitbook.io/freebsd-relnotes-cn/>
+
 ## FreeBSD 2023 年第二季度 季度状况报告
 
 这是第二份 2023 年状态报告，共有 37 个条目。
