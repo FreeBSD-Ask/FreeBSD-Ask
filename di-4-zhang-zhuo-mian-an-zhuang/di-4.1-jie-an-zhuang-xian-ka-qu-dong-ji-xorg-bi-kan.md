@@ -129,20 +129,6 @@ FreeBSD 14 Current，编译使用 `drm-515-kmod`。**截至 2023.8.24 日，英�
 # pkg install drm-510-kmod gpu-firmware-kmod xf86-video-amdgpu
 ```
 
-新建并编辑 xorg 配置文件：
-
-```shell-session
-# ee /usr/local/etc/X11/xorg.conf.d/06-driver.conf
-```
-
-加入（**注意 BusID 要改成你自己的，使用`pciconf -l`即可查看**）：
-
-```shell-session
-Section "Device"
-    Identifier  "Card 0"
-    Option      "AccelMethod" "exa"
-EndSection
-```
 
 ## 英伟达显卡
 
