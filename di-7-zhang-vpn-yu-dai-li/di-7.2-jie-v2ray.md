@@ -1,16 +1,16 @@
-# 第7.2节 V2ray
+# 第 7.2 节 V2ray
 
 ## 安装 v2ray
 
 执行命令：
 
-```
+```shell-session
 # pkg install v2ray
 ```
 
 也可安装 xray-core：
 
-```
+```shell-session
 # pkg install xray-core
 ```
 
@@ -20,13 +20,13 @@
 
 如果事先有代理客户端可以把客户端节点的配置导出来，复制到 FreeBSD，假设导出的文件名为 `config.json` 然后执行：
 
-```
+```shell-session
 $ v2ray -c config.json
 ```
 
 如果用 xray-core，可执行：
 
-```
+```shell-session
 $ xray -c config.json
 ```
 
@@ -42,7 +42,7 @@ $ xray -c config.json
 
 下面的命令适用于 sh、bash、zsh：
 
-```
+```shell-session
 $ export HTTP_PROXY="http://127.0.0.1:10809" #设置 http 代理
 $ export HTTPS_PROXY="http://127.0.0.1:10809"
 $ export ALL_PROXY="socks5://127.0.0.1:10808" #设置 socks 代理
@@ -60,7 +60,7 @@ v2ray 也事先给了`geosite.dat`、`geoip.dat`,两个资源文件，`geosite.d
 
 比如直连规则下面配置可设置 geosite 中 cn 网址直连：
 
-```
+```shell-session
       {
         "domain": [
           "geosite:cn"

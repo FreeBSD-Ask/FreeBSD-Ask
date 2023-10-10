@@ -2,15 +2,26 @@
 
 ## FreeBSD 中文社区 版权所有 2023
 
->**域名部署**
+>**注意：**
 >
->**当前网站部署的域名为 <https://book.bsdcn.org>，如果当前使用的不是这个域名，请切换到该域名。其他域名不保证可用性。**
+>**没有人强迫您加入或关注本社区，所以也请您不要诋毁我们。如果不喜欢请左转 [Handbook](https://handbook.bsdcn.org) 或右转点屏幕右上角的 `X`。FreeBSD 在境内这十几年一直在走下坡路，这不是我们想看到的。**
 >
->**For the English version, please visit <https://mfga.bsdcn.org>. The English version book is a stub. Please help out by expanding it.**
+>**请不做事的人或社区不要去嘲讽正在做事的。感谢您的体谅！**
+
+
+> **域名部署**
+>
+> **当前网站部署的域名为** [**https://book.bsdcn.org**](https://book.bsdcn.org)**，如果当前使用的不是这个域名，请切换到该域名。其他域名不保证可用性。**
+>
+> **For the English version, please visit** [**https://mfga.bsdcn.org**](https://mfga.bsdcn.org)**. The English version book is a stub. Please help out by expanding it.**
 
 > **PDF 文档**
 >
-> 点击 <https://freebsd.gitbook.io/book/>，选择右上角的“导出为 PDF”，若不成功可多试几次（需要代理软件）。
+> - 使用社区成员提供的脚本：
+>   
+>> <https://github.com/safreya/tobook> 用于导出本书的 pdf，打印的话比 gitbook 导出的应该要好点。该脚本需运行于 FreeBSD。
+>> 
+>>具体使用方法见该项目的 README.
 
 ## 概述
 
@@ -36,11 +47,11 @@
 
 ### 内容提要
 
-本书是由 ykla 发起，并由 FreeBSD 中文社区的一些群成员参与编写的《FreeBSD 从入门到跑路》。我们尝试从 0 开始，带领普通人走进 FreeBSD 世界，充分参考了 FreeBSD Handbook，构建了一个完整、科学的目录体系。本书不是一个教程的大杂烩亦或者是大集合，而是为了构建一个自成体系的一本开源书籍。全书共分 32 章，既强调了学习 FreeBSD 的必要基础也提供了内核设计与实现等专业性较强的教程。本书可作为高等学校“FreeBSD 操作系统”课程的本科生教材，同时也适合相关专业研究生或计算机技术人员参考阅读。
+本书是由 ykla 发起，并由 FreeBSD 中文社区的一些群成员参与编写的《FreeBSD 从入门到跑路》。我们尝试从 0 开始，带领普通人走进 FreeBSD 世界，充分参考了 FreeBSD Handbook，构建了一个完整、科学的目录体系。本书不是一个教程的大杂烩亦或者是大集合，而是为了构建一个自成体系的一本开源书籍。全书共分 31 章，既强调了学习 FreeBSD 的必要基础也提供了内核设计与实现等专业性较强的教程。本书可作为高等学校“FreeBSD 操作系统”课程的本科生教材，同时也适合相关专业研究生或计算机技术人员参考阅读。
 
 ### 开源维护与捐赠
 
-![](./.gitbook/assets/proud_donor.gif)
+![](./.gitbook/assets/proud_donor.png)
 
 [点此捐赠 FreeBSD 基金会](https://freebsdfoundation.org/donate)
 
@@ -50,7 +61,7 @@
 
 【FreeBSD 2022 捐赠名单】
 
-<https://docs.qq.com/doc/DSXZ1Q1JOenRzUkp4>
+[https://docs.qq.com/doc/DSXZ1Q1JOenRzUkp4](https://docs.qq.com/doc/DSXZ1Q1JOenRzUkp4)
 
 ### 意见反馈
 
@@ -60,19 +71,20 @@
 
 后续还有很多需要完善的工作，包括不限于:
 
-- FreeBSD 14 shell 被统一为 `sh`，教程需要针对其进行统一
-- 整理和上传配置文件和环境
-- 对教程的格式目录进行优化调整
-- 完善目前的空白章节，并对已有内容进行测试校验
-- 积极对外宣传并寻求正式出版
-- 删改外部引用文字/图片等内容或给出规范化的引用声明避免版权问题
-- 因为博通收购 VMware 并作出了诸多商业上的改变，考虑提升 Virtual Box 虚拟机在本文中的地位
-- 对于过于主观性或者没有根据的观点需要进行删除或补充例证
+- FreeBSD 14 shell 被统一为 `sh`，教程需要针对其进行统一；
+- 整理和上传配置文件和环境；
+- 对教程的格式目录进行优化调整；
+- 完善目前的空白章节，并对已有内容进行测试校验；
+- 积极对外宣传并寻求正式出版；
+- 删改外部引用文字/图片等内容或给出规范化的引用声明避免版权问题；
+- ~~因为博通收购 VMware 并作出了诸多商业上的改变，考虑提升 Virtual Box 虚拟机在本文中的地位；~~ （VB 虚拟机太难用了，本条作废）
+- 对于过于主观性或者没有根据的观点需要进行删除或补充例证；
+- 分清 Linuxulator、Linux 兼容层、Linux chroot 还有 Linux Jail 都是什么意思，区别以及联系各是什么。
+- 我的心太累了，现在要为继续维护本项目寻找接班人了。有意者请发送简历到 ykla@bsdcn.org。
 
 ### 许可证
 
-本书采用 BSD-3-Clause License 许可证开源。我们在编写过程吸收了一些现有的研究成果，在此表示感谢。引用本书内容时，请务必留下我们的原地址——<https://book.bsdcn.org> 及署名——FreeBSD 中文社区（CFC）。
-
+本书采用 BSD-3-Clause License 许可证开源。我们在编写过程吸收了一些现有的研究成果，在此表示感谢。引用本书内容时，请务必留下我们的原地址——[https://book.bsdcn.org](https://book.bsdcn.org) 及署名——FreeBSD 中文社区（CFC）。
 
 ## 关于
 
@@ -82,7 +94,7 @@
 
 ### FreeBSD 中文社区的愿景
 
-我们成立于 2018年3月17日，由贴吧——FreeBSD 吧发展到了 QQ 群（主群 787969044），Telegram 群，至于微信群。
+我们成立于 2018 年 3 月 17 日，由贴吧——FreeBSD 吧发展到了 QQ 群（主群 787969044），Telegram 群，至于微信群。
 
 我们的成员具有非常大的广泛性和普遍性，能够代表绝大多数 FreeBSD 用户的平均水平：他们可能根本没有听说过何为 FreeBSD，但这并不影响我们的交流与沟通。也许有人觉得这是浪费时间，但是没有新生力量的培养，何来 FreeBSD 的明天呢？谁不知道新人可能有很多坏习惯呢。
 
@@ -98,20 +110,19 @@
 
 ### 其他
 
-|资源|链接|
-|:---:|:---:|
-|Telegram 群|<https://t.me/freebsdba>|
-|QQ 群|787969044|
-|Handbook 最新翻译|<https://handbook.bsdcn.org>|
-|FreeBSD Port 开发者手册 最新翻译|<https://porters-handbook.bsdcn.org>|
-|FreeBSD 入门书籍|<https://book.bsdcn.org>|
-|BiliBili【B站】|<https://space.bilibili.com/2120246893>|
-|微信公众号|freebsdzh|
-
+|               资源               |                                      链接                                      |
+| :------------------------------: | :----------------------------------------------------------------------------: |
+|           Telegram 群            |                [https://t.me/freebsdba](https://t.me/freebsdba)                |
+|              QQ 群               |                                   787969044                                    |
+|        Handbook 最新翻译         |            [https://handbook.bsdcn.org](https://handbook.bsdcn.org)            |
+| FreeBSD Port 开发者手册 最新翻译 |    [https://porters-handbook.bsdcn.org](https://porters-handbook.bsdcn.org)    |
+|         FreeBSD 入门书籍         |                [https://book.bsdcn.org](https://book.bsdcn.org)                |
+|         BiliBili【B 站】         | [https://space.bilibili.com/2120246893](https://space.bilibili.com/2120246893) |
+|            微信公众号            |                                   freebsdzh                                    |
 
 微信公众号: freebsdzh （扫码关注）
 
-![](./.gitbook/assets/qrcode_for_gh_3b263cc9b20b_258.jpg)
+![](./.gitbook/assets/qr.png)
 
 ### 网站部署&维护
 
@@ -119,4 +130,5 @@ Shengyun
 
 ### 黑名单与社区失信名单
 
-见 <http://chinafreebsd.org/>。
+见 [http://chinafreebsd.org/](http://chinafreebsd.org/)。
+

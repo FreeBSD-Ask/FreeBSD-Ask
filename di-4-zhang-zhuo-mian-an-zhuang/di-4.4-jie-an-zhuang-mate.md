@@ -1,4 +1,4 @@
-# 第4.4节 安装 Mate
+# 第 4.4 节 安装 Mate
 
 > 以下教程适用于 shell 为 bash/sh/zsh 的用户。
 >
@@ -10,17 +10,17 @@
 
 ## 安装与配置
 
-```
-# pkg install  mate xorg wqy-fonts lightdm lightdm-gtk-greeter xdg-user-dirs	
+```shell-session
+# pkg install  mate xorg wqy-fonts lightdm lightdm-gtk-greeter xdg-user-dirs
 ```
 
-```
+```shell-session
 # sysrc moused_enable="YES"
 # sysrc dbus_enable="YES"
 # sysrc lightdm_enable="YES"
 ```
 
-* 在主目录`.xinitrc` 文件内加入下面一行:
+- 在主目录`.xinitrc` 文件内加入下面一行:
 
 `exec mate-session`
 
@@ -28,7 +28,7 @@
 
 默认是 csh，在 `.cshrc` 中添加如下内容：
 
-```
+```shell-session
 setenv LANG zh_CN.UTF-8
 setenv LC_CTYPE zh_CN.UTF-8
 ```
@@ -43,7 +43,7 @@ setenv LC_CTYPE zh_CN.UTF-8
 
 在该文件中添加以下内容
 
-```
+```shell-session
 export GTK_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
 export QT_IM_MODULE=ibus

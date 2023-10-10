@@ -1,4 +1,4 @@
-# 第5.1节 Fcitx 输入法框架
+# 第 5.1 节 Fcitx 输入法框架
 
 > **注意**
 >
@@ -14,7 +14,7 @@
 
 在 `.cshrc` 和 `/etc/csh.cshrc` 中添加如下配置，此配置可以解决部分窗口 fcitx 无效的问题。
 
-```
+```shell-session
 setenv QT4_IM_MODULE fcitx
 setenv GTK_IM_MODULE fcitx
 setenv QT_IM_MODULE fcitx
@@ -25,7 +25,7 @@ setenv XMODIFIERS @im=fcitx
 
 在 `.cshrc` 和 `/etc/csh.cshrc` 中添加下面几行配置可以解决终端无法输入中文和无法显示中文的问题。
 
-```
+```shell-session
 setenv LANG zh_CN.UTF-8
 setenv MM_CHARSET zh_CN.UTF-8
 setenv LC_CTYPE zh_CN.UTF-8
@@ -40,7 +40,11 @@ setenv LC_ALL zh_CN.UTF-8
 
 fcitx 5 相比前一代，增加了对 Wayland 的支持，据说更加流畅。
 
-`# pkg install fcitx5 fcitx5-qt5 fcitx5-qt6 fcitx5-gtk2 fcitx5-gtk3 fcitx5-gtk4 fcitx5-configtool zh-fcitx5-chinese-addons`
+```shell-session
+# pkg install fcitx5 fcitx5-qt5 fcitx5-qt6 fcitx5-gtk2 fcitx5-gtk3 fcitx5-gtk4 fcitx5-configtool zh-fcitx5-chinese-addons
+```
+
+`fcitx5-configtool`是 fcitx5 的图形配置工具。
 
 也可通过 ports 安装。环境变量取决于你的窗口管理器和桌面以及 shell。经测试不支持 slim，可能是配置问题。sddm 可用。
 
@@ -52,7 +56,7 @@ SLIM 窗口下会提示 IBUS 找不到……疑似 bug。
 
 自动启动：
 
-```
+```shell-session
 # mkdir -p ~/.config/autostart/ #若使用其他用户则需要在其命令行下再执行之。
 # cp /usr/local/share/applications/org.fcitx.Fcitx5.desktop ~/.config/autostart/
 ```
@@ -65,46 +69,59 @@ SLIM 窗口下会提示 IBUS 找不到……疑似 bug。
 
 例：尝试将当前 shell 修改成 `csh`：
 
-```
+```shell-session
 # chsh -s /bin/csh
 ```
 
 退出当前账号，重新登录，查看 shell 是否变为 `csh`：
 
-```
+```shell-session
 # echo $0
 ```
 
 如果输出`csh`，代表配置成功。然后其余环境变量配置方法同上所述。
 
-#### Shell 是 csh 或 tcsh
+#### 设置环境变量
 
-在 `.cshrc` 和 `/etc/csh.cshrc` 中进行如下配置，此配置可以解决部分窗口 fcitx 无效以及无法输入显示中文的问题。
+根据自己使用的桌面管理器择一使用：
 
+1. sddm lightdm gdm 都可以在 `~/.xprofile` 中写入 A 组配置
+2. lightdm gdm 可以在 `~/.profile` 中写入 A 组配置
+3. sddm 可以在用户登录 shell 配置文件中写入配置
+
+- sh: `~/.profile` 写入 A 组配置
+- bash: `~/.bash_profile` 或 `~/.profile` 写入 A 组配置
+- zsh: `~/.zprofile` 写入 A 组配置
+- csh: `~/.cshrc` 写入 B 组配置
+
+**注意：如果登录桌面的用户不是 root，就不能使用 root 进行设置，必须切换到当前用户且不使用 sudo 进行配置。**
+
+A 组：
+
+sh/bash/zsh:fcitx5
+
+```shell-session
+export LANG=zh_CN.UTF-8
+export LANGUAGE=zh_CN.UTF-8
+export LC_ALL=zh_CN.UTF-8
+
+export XMODIFIERS='@im=fcitx'
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
 ```
-setenv QT4_IM_MODULE fcitx
+
+B 组：
+
+csh:fcitx5
+
+```shell-session
+setenv LANG zh_CN.UTF-8
+setenv LC_ALL zh_CN.UTF-8
+setenv LANGUAGE zh_CN.UTF-8
+setenv XMODIFIERS @im=fcitx
 setenv GTK_IM_MODULE fcitx
 setenv QT_IM_MODULE fcitx
-setenv GTK2_IM_MODULE fcitx
-setenv GTK3_IM_MODULE fcitx
-setenv XMODIFIERS @im=fcitx
-setenv LANG zh_CN.UTF-8
-setenv MM_CHARSET zh_CN.UTF-8
 ```
-
-#### Shell 是 sh/bash/zsh
-
-编辑或者新建 `~/.xprofile`，加入：
-
-```
-export XIM=fcitx5
-export XIM_PROGRAM=fcitx5
-export QT_IM_MODULE=fcitx5
-export GTK_IM_MODULE=fcitx5
-export XMODIFIERS="@im=fcitx5"
-```
-
-注意，需要提前在 KDE5 设置里把 KDE5 修改为简体中文。
 
 ## 故障排除
 
@@ -114,7 +131,7 @@ export XMODIFIERS="@im=fcitx5"
 
 ### fcitx 4.x
 
-```
+```shell-session
 # fcitx-diagnose
 ```
 
@@ -122,8 +139,9 @@ export XMODIFIERS="@im=fcitx5"
 
 ### fcitx 5.x
 
-```
+```shell-session
 # fcitx5-diagnose
 ```
 
 对于 fcitx 5.x 来说，找不到 `fcitx qt 4` 的支持是正常的。
+

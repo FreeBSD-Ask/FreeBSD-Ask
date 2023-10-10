@@ -1,27 +1,27 @@
-# 第4.7节 安装 Lumina
+# 第 4.7 节 安装 Lumina
 
-提示：该桌面可能已经停止开发，我向其提交的  pull 长期无人处理，并且没有新的 commit 信息。
+提示：该桌面可能已经停止开发，我向其提交的 pull 长期无人处理，并且没有新的 commit 信息。
 
 ## 安装
 
-```
-# pkg install lumina xorg  lightdm lightdm-gtk-greeter wqy-fonts xdg-user-dirs	
+```shell-session
+# pkg install lumina xorg  lightdm lightdm-gtk-greeter wqy-fonts xdg-user-dirs
 ```
 
 ## 配置
 
-```
+```shell-session
 # sysrc dbus_enable="YES"
 # sysrc lightdm_enable="YES"
 ```
 
-```
+```shell-session
 # ee ~/.xinitrc
 ```
 
 添加：
 
-```
+```shell-session
 exec lumina-desktop
 ```
 

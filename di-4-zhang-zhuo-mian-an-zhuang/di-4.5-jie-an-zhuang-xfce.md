@@ -1,26 +1,18 @@
-# 第4.5节 安装 Xfce
+# 第 4.5 节 安装 Xfce
 
 ## 安装 xfce4
 
-> 以下教程适用于 shell 为 bash/sh/zsh 的用户。
->
-> 首先看看现在自己的 shell 是不是 `sh`,`bash`,`zsh`：
->
-> `# echo $0`
->
-> 如果是 `sh`,`bash`,`zsh` 其中之一，请继续；
-
 通过 pkg 安装
 
-```
-# pkg install xorg lightdm lightdm-gtk-greeter xfce wqy-fonts xdg-user-dirs	
+```shell-session
+# pkg install xorg lightdm lightdm-gtk-greeter xfce wqy-fonts xdg-user-dirs
 ```
 
 或
 
 通过 ports 安装
 
-```
+```shell-session
 # cd /usr/ports/x11-wm/xfce4
 # make install clean
 ```
@@ -39,7 +31,7 @@
 
 ## 启动服务
 
-```
+```shell-session
 # sysrc dbus_enable="YES"
 # sysrc lightdm_enable="YES"
 ```
@@ -48,40 +40,13 @@
 
 在 `.xinitrc` 或者 `.profile` 中添加以下内容（但要在最前面才正常启用） `export LANG=zh_CN.UTF-8`
 
+lightdm 登陆管理器本地化语言见 KDE 章节。
 ## 可选配置
 
-### 安装输入法
-
-请检查自己的shell是不是 `sh`、`bash`、`zsh` 其中之一。
-
-```
-# echo $0
-```
-
-如果是以上三个 SHELL 之一，请继续，如果不是请参考第五章第一节：
-
-```
-# pkg install zh-fcitx zh-fcitx-configtool fcitx-qt5 fcitx-m17n zh-fcitx-libpinyin
-```
-
-配置文件：
-
-```
-# ee ~/.xinitrc 
-```
-
-在该文件中添加以下内容:
-
-```
-export XMODIFIERS="@im=fcitx"
-export XIM_PROGRAM="fcitx"
-export GTK_IM_MODULE="fcitx"
-fcitx &
-```
 
 ## 全局菜单（可选）
 
-```
+```shell-session
 # pkg install xfce4-appmenu-plugin appmenu-gtk-module appmenu-registrar
 $ xfconf-query -c xsettings -p /Gtk/ShellShowsMenubar -n -t bool -s true
 $ xfconf-query -c xsettings -p /Gtk/ShellShowsAppmenu -n -t bool -s true
@@ -92,14 +57,64 @@ $ xfconf-query -c xsettings -p /Gtk/Modules -n -t string -s "appmenu-gtk-module"
 
 ### FreeBSD 的 xfce 终端动态标题不显示问题
 
-tcsh 配置:
 
-`home` 目录创建 `.tcshrc`,
+ - sh: `~/.profile` 写入配置
+ - bash: `~/.bash_profile` 或 `~/.profile` 写入配置
+ - zsh: `~/.zprofile` 写入配置
+ - csh: `~/.cshrc` 写入配置
+ - tcsh: `~/.tcshrc` 写入配置
 
-写入以下配置
+zsh:
 
-`alias h history 25 alias j jobs -l alias la ls -aF alias lf ls -FA alias ll ls -lAF setenv EDITOR vi setenv PAGER less switch ($TERM) case "xterm*": set prompt="%{033]0;[]%~007%}%#" set filec set history = 1000 set savehist = (1000 merge) set autolist = ambiguous # Use history to aid expansion set autoexpand set autorehash breaksw default: set prompt="%#" breaksw endsw`
+```shell-session
+precmd ()   a function which is executed just before each prompt
+chpwd ()    a function which is executed whenever the directory is changed
+\e          escape sequence for escape (ESC)
+\a          escape sequence for bell (BEL)
+%n          expands to $USERNAME
+%m          expands to hostname up to first '.'
+%~          expands to directory, replacing $HOME with '~'
+```
+
+tcsh:
+
+```shell-session
+precmd ()   a function which is executed just before each prompt
+cwdcmd ()   a function which is executed whenever the directory is changed
+%n          expands to username
+%m          expands to hostname
+%~          expands to directory, replacing $HOME with '~'
+%#          expands to '>' for normal users, '#' for root users
+%{...%}     includes a string as a literal escape sequence
+```
+
+bash:
+```shell-session
+\u          expands to $USERNAME
+\h          expands to hostname up to first '.'
+\w          expands to directory, replacing $HOME with '~'
+\$          expands to '$' for normal users, '#' for root
+\[...\]     embeds a sequence of non-printing characters
+```
+
+csh
+```shell-session
+switch ($TERM)
+    case "xterm*":
+        set host=`hostname`
+        alias cd 'cd \!*; echo -n "^[]0;${user}@${host}: ${cwd}^Gcsh% "'
+        breaksw
+    default:
+        set prompt='csh% '
+        breaksw
+endsw
+```
+
+参考文献： 
+
+ - [Xterm-Title](http://www.faqs.org/docs/Linux-mini/Xterm-Title.html#ss4.1)
 
 ## 配置集参考
 
-* [https://github.com/Wamphyre/BSD-XFCE](https://github.com/Wamphyre/BSD-XFCE)
+- [Wamphyre/BSD-XFCE](https://github.com/Wamphyre/BSD-XFCE)
+
