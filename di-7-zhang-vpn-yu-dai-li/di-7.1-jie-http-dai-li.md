@@ -113,7 +113,7 @@ Exec=chrome %U --proxy-server="192.168.2.163:20172"
 
 因 Firefox 在 windows GNU/linux Macos 以及 bsd 的所有客户端的浏览器设置页面>网络设置选项卡中均有 gui 配置代理的模块，故此节不再赘述。
 
-<img decoding="async" src="https://i.mij.rip/2023/10/10/bffb29adb2fd30f0d3b7a008ac820a27.png" width="70%">
+![FF-Porxy](../.gitbook/assets/FF-Proxy.png)
 
 ## 参考资料
 
