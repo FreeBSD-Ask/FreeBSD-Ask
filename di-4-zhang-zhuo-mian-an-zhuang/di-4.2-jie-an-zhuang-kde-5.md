@@ -87,6 +87,19 @@ proc            /proc           procfs  rw      0       0
 
 点击开始-> System Settings -> Regional Settings 在 `Language` 项的 `Available Language` 栏中找到 “简体中文” 单击 `>` 将其加到 `Preferrred Languages` 栏中，然后单击 `Apply` 按钮；再到 `Formats` 项，将 `Region` 文本框中的内容修改为 “中国-简体中文(zh-CN)”，单击 `Apply` 按钮，logout（注销）后重新登录，此时系统语言将变为中文。
 
+
+### SDDM 中文化
+
+
+```
+# sysrc sddm_lang="zh_CN.UTF-8"
+```
+
+<img src="../.gitbook/assets/sddmcn.png" alt="" data-size="original">
+
+#### 参考文献
+
+- [SDDM login screen with KDE: change language?](https://forums.freebsd.org/threads/sddm-login-screen-with-kde-change-language.80535/)
 ### lightdm 登陆管理器本地化语言
 
 `sysrc lightdm_LANG="zh_CN"` 不能用了。另一种实现方法是修改 `slick-greeter.desktop`
