@@ -44,58 +44,63 @@ pkg install firefox-esr
 
  [Launch Chromium with API Keys on Mac OS X and Windows ](https://gist.github.com/cvan/44a6d60457b20133191bd7b104f9dcc4)
 
- - Chromium配置`HTTP`代理
-  
-chromium本身并没有在例如~/.config下的配置文件这种东西。亦没有可添加环境变量参数用于指定默认代理服务器。不过可以添加启动参数(Options)。
+ - Chromium 配置`HTTP`代理
 
-如： 
+chromium 本身并没有在例如~/.config 下的配置文件这种东西。亦没有可添加环境变量参数用于指定默认代理服务器。不过可以添加启动参数(Options)。
 
-```  
+如：
+
+```
 --proxy-server="<IP地址>:<端口>"
 ```
 
 例：
 
 ```
-chrome --proxy-server="127.0.0.1:1234" (终端启动)
+$ chrome --proxy-server="127.0.0.1:1234" (终端启动)
 ```
-默认是http协议，如果你的代理程序使用sock:
 
+默认是 http 协议，如果你的代理程序使用 sock:
 
 ```
 --proxy-server="socks://<IP地址>:<端口>"
 ```
-socksv4: 
+
+socksv4:
 
 ```
 --proxy-server="socksv4://<IP地址>:<端口>"
 ```
 
-- 在图形界面下让chromium默认使用代理打开：
+- 在图形界面下让 chromium 默认使用代理打开：
 
-找到你的桌面环境为chromium创建的desktop文件，
+找到你的桌面环境为 chromium 创建的 desktop 文件，
 一般在 `/usr/home/{你的用户名}/.local/share/applications/`这个位置。
 
 ```
-vim/ee chromium-browser.desktop # 使用你喜欢的编辑器打开上述目录下的chromium desktop文件
+$ vim chromium-browser.desktop # 使用你喜欢的编辑器打开上述目录下的chromium desktop文件
 ```
+
 找到 Exec=chrome %U 这行 在其后加入上列你需要的参数。
+
 ```
 Comment[zh_CN]=Google web browser based on WebKit
 Comment=Google web browser based on WebKit
 Encoding=UTF-8
-Exec=chrome %U 
+Exec=chrome %U
 GenericName[zh_CN]=
 ......
 ```
 
 例:
+
 ```
 Exec=chrome %U --proxy-server="192.168.2.163:20172"
 ```
-#### 单独为Firefox配置代理
-  
-因Firefox在windows GNU/linux Macos以及bsd的所有客户端的浏览器设置页面>网络设置选项卡中均有gui配置代理的模块，故此节不再赘述。
+
+#### 单独为 Firefox 配置代理
+
+因 Firefox 在 windows GNU/linux Macos 以及 bsd 的所有客户端的浏览器设置页面>网络设置选项卡中均有 gui 配置代理的模块，故此节不再赘述。
 
 <img decoding="async" src="https://i.mij.rip/2023/10/10/bffb29adb2fd30f0d3b7a008ac820a27.png" width="70%">
 
