@@ -55,46 +55,45 @@ $ echo $SHELL
 # git config --global --unset https.proxy
 ```
 
-## 浏览器配置`HTTP`代理
+## 浏览器配置代理
 
-chromium 本身并没有在例如~/.config 下的配置文件这种东西。亦没有可添加环境变量参数用于指定默认代理服务器。不过可以添加启动参数(Options)。
+chromium 本身并没有在例如 `~/.config` 下的配置文件这种东西。亦没有可添加环境变量参数用于指定默认代理服务器。不过可以添加启动参数（Options）。
 
 如：
 
-```
+```shell-session
 --proxy-server="<IP地址>:<端口>"
 ```
 
 例：
 
-```
+```shell-session
 $ chrome --proxy-server="127.0.0.1:1234" (终端启动)
 ```
 
 默认是 http 协议，如果你的代理程序使用 sock:
 
-```
+```shell-session
 --proxy-server="socks://<IP地址>:<端口>"
 ```
 
 socksv4:
 
-```
+```shell-session
 --proxy-server="socksv4://<IP地址>:<端口>"
 ```
 
 - 在图形界面下让 chromium 默认使用代理打开：
 
-找到你的桌面环境为 chromium 创建的 desktop 文件，
-一般在 `/usr/home/{你的用户名}/.local/share/applications/`这个位置。
+找到你的桌面环境为 chromium 创建的 desktop 文件，一般在 `~/.local/share/applications/` 这个位置。
 
-```
-$ vim chromium-browser.desktop # 使用你喜欢的编辑器打开上述目录下的chromium desktop文件
+```shell-session
+$ ee chromium-browser.desktop # 使用你喜欢的编辑器打开上述目录下的 chromium desktop 文件
 ```
 
-找到 Exec=chrome %U 这行 在其后加入上列你需要的参数。
+找到 `Exec=chrome %U` 这行 在其后加入上列你需要的参数。
 
-```
+```shell-session
 Comment[zh_CN]=Google web browser based on WebKit
 Comment=Google web browser based on WebKit
 Encoding=UTF-8
@@ -105,17 +104,17 @@ GenericName[zh_CN]=
 
 例:
 
-```
+```shell-session
 Exec=chrome %U --proxy-server="192.168.2.163:20172"
 ```
 
-#### 单独为 Firefox 配置代理
+### 单独为 Firefox 配置代理
 
-因 Firefox 在 windows GNU/linux Macos 以及 bsd 的所有客户端的浏览器设置页面>网络设置选项卡中均有 gui 配置代理的模块，故此节不再赘述。
+因 Firefox 在 Windows GNU/linux Macos 以及 BSD 的所有客户端的浏览器设置页面>网络设置选项卡中均有 GUI 配置代理的模块，故此节不再赘述。
 
 ![FF-Porxy](../.gitbook/assets/FF-Proxy.png)
 
-## 参考资料
+### 参考资料
 
 - [FreeBSD Manual Pages: Chromium](https://man.freebsd.org/cgi/man.cgi?query=chrome&apropos=0&sektion=0&manpath=FreeBSD+13.2-RELEASE+and+Ports&arch=default&format=html)
 - [FreeBSD Forums: chromium proxy settings page doesn't exist](https://forums.freebsd.org/threads/chromium-proxy-settings-page-doesnt-exist.31927/)
