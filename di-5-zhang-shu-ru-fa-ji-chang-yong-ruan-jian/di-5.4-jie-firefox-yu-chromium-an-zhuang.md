@@ -30,7 +30,7 @@ pkg install firefox-esr
 ## Chromium（Chromium 不是 chrome，但是启动命令是 chrome）
 
 ```shell-session
-# pkg install chromium
+# pkg install chromium 
 ```
 
 或者
@@ -44,3 +44,4 @@ pkg install firefox-esr
 
  [Launch Chromium with API Keys on Mac OS X and Windows ](https://gist.github.com/cvan/44a6d60457b20133191bd7b104f9dcc4)
 
+ 
