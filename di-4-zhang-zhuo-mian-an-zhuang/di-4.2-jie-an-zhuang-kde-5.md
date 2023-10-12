@@ -102,7 +102,7 @@ proc            /proc           procfs  rw      0       0
 - [SDDM login screen with KDE: change language?](https://forums.freebsd.org/threads/sddm-login-screen-with-kde-change-language.80535/)
 ### lightdm 登陆管理器本地化语言
 
-`sysrc lightdm_LANG="zh_CN"` 不能用了。另一种实现方法是修改 `slick-greeter.desktop`
+修改 `slick-greeter.desktop`：
 
 编辑 `/usr/local/share/xgreeters/slick-greeter.desktop`：
 
