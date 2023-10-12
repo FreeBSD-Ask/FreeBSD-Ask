@@ -114,7 +114,25 @@ endsw
 
  - [Xterm-Title](http://www.faqs.org/docs/Linux-mini/Xterm-Title.html#ss4.1)
 
-### lightdm 登陆管理器本地化语言
+
+
+## 配置集参考
+
+- [Wamphyre/BSD-XFCE](https://github.com/Wamphyre/BSD-XFCE)
+
+
+
+## lightdm 登陆管理器本地化语言
+
+### 方法①
+
+`/etc/rc.conf` 里写入：
+
+```
+lightdm_env="LC_MESSAGES=zh_CN.UTF-8" 
+```
+
+###  方法②
 
 修改 `slick-greeter.desktop`：
 
@@ -126,10 +144,4 @@ endsw
 ```shell-session
 # service lightdm restart
 ```
-
-
-
-## 配置集参考
-
-- [Wamphyre/BSD-XFCE](https://github.com/Wamphyre/BSD-XFCE)
 
