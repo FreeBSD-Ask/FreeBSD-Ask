@@ -68,6 +68,8 @@ isNijikawa
 
 地铁卡
 
+ruur
+
 [puffinjiang](https://github.com/puffinjiang)
 
 [heguru5](https://github.com/heguru5)
