@@ -49,12 +49,27 @@ Chromium 不是 chrome，但在 FreeBSD 中启动命令是 `chrome`。
 
 ### 故障排除
 
-- Chromium 加入 Google 同步
+##  Chromium 登录 Google 账号使用联机同步功能
 
- [Chromium Sync](https://www.learningtopi.com/sbc/chromium-sync/)
+- 首先，`Chromium` 并非 `Google Chrome`，前者是 The Chromium Project 在 [BSD 3-Clause "New" or "Revised" License](https://github.com/chromium/chromium/blob/main/LICENSE)下发布的开源与自由软件，后者是 Google LLC 的专有软件。
+  
+- 由于是开源产物，Chromium 与 Google Chrome 的关系约等于 AOSP 之于 Pixel UI。Chromium没有直接从Google Chrome的在线插件商店开箱即用的下载安装插件的功能，只能手动从本地安装crx。亦没有自带的Google翻译插件等等，更多两者的不同之处可以[查看这个网页](https://chromium.googlesource.com/chromium/src/+/master/docs/chromium_browser_vs_google_chrome.md)
+
+- Chromium在 [Chromium 89](https://archlinux.org/news/chromium-losing-sync-support-in-early-march/) 发布后删除了之前自带的与Chrome同款的登录Google账号的默认api。
+
+注: 由于 Google 并没有为 FreeBSD 分发 Chrome 的二进制，如果您需要使用Chrome除非按照本书的第三十章有关 [Linux兼容层](https://book.bsdcn.org/di-30-zhang-linux-jian-rong-ceng/di-30.4-jie-linux-jian-rong-ceng-ji-yu-archlinux-bootstrap.html) 的指南使用Linux发行版的兼容层运行 Google Chrome
+
+进入正题，在开始获取token之前，你需要加入下列两个 Google 网上论坛（邮件列表）
+
+- https://groups.google.com/u/0/a/chromium.org/g/google-browser-signin-testaccounts
+- https://groups.google.com/a/chromium.org/forum/?fromgroups#!forum/chromium-dev\
+
+因为我们只是需要Chrome Google API的访问权限，所以你可以关闭这两个邮件列表的消息通知。
+
+![join-mail-list-for-google-api](../.gitbook/assets/join-chromium-dev-for-api.png)
+
 
 - 解决 chromium 出现未知错误时占用大量性能（加到图标的启动参数中，图标是文本文件）
-
 ```sh
 chrome --disk-cache-size=0 --disable-gpu
 ```
