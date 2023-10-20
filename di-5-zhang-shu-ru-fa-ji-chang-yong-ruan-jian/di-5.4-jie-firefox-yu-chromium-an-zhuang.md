@@ -82,6 +82,34 @@ Chromium 不是 chrome，但在 FreeBSD 中启动命令是 `chrome`。
 如果之前没有使用过这个网站创建过项目，那点击创建项目即可。
 
 
+![chromium-use-google-api-guide-02](../.gitbook/assets/chromium-use-google-api-guide-02.png)
+
+项目名称任意填写，组织默认即可。
+
+![chromium -use-google-api-guide-03](../.gitbook/assets/chromium-use-google-api-guide-03.png)
+
+选择你刚才创建的项目。
+
+![chromium-use-google-api-guide-04](../.gitbook/assets/chromium-use-google-api-guide-04.png)
+
+启用API和服务
+
+![chromium-use-google-api-guide-06](../.gitbook/assets/chromium-use-google-api-guide-06.png)
+
+ 搜索 'chrome-sync' 找到下列内容并点击启用
+
+ ![chromium-use-google-api-guide-05](../.gitbook/assets/chromium-use-google-api-guide-05.png)
+
+ 之后会在已启用的API和服务列表中显示下列状态
+
+![chromium-use-google-api-guide-07](../.gitbook/assets/chromium-use-google-api-guide-07.png)
+
+选择 OAuth 同意屏幕 列表 ，创建外部应用
+
+![chromium-use-google-api-guide-08](../.gitbook/assets/chromium-use-google-api-guide-08.png)
+
+![chromium-use-google-api-guide-09](../.gitbook/assets/chromium-use-google-api-guide-09.png)
+
 - 解决 chromium 出现未知错误时占用大量性能（加到图标的启动参数中，图标是文本文件）
 ```sh
 chrome --disk-cache-size=0 --disable-gpu
