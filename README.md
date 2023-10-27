@@ -9,12 +9,6 @@
 >**请不做事的人或社区不要去嘲讽正在做事的。感谢您的体谅！**
 
 
-> **域名部署**
->
-> **当前网站部署的域名为** [**https://book.bsdcn.org**](https://book.bsdcn.org)**，如果当前使用的不是这个域名，请切换到该域名。其他域名不保证可用性。**
->
-> **For the English version, please visit** [**https://mfga.bsdcn.org**](https://mfga.bsdcn.org)**. The English version book is a stub. Please help out by expanding it.**
-
 > **PDF 文档**
 >
 > - 使用社区成员提供的脚本：
