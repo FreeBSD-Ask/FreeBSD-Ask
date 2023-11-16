@@ -42,7 +42,7 @@ ee 的用法比 nano 还要简单上许多。是 FreeBSD 基本系统自带的�
 * z 移到下一个字。
 * 离开 ee。如果文件有修改过，它会问你是否要
 
-### 网络配置
+## 网络配置
 
 先 `ifconfig` 看看有没有网卡，没有那就不属于本节的范围之内了。请注意 `lo0` 并不是真实网卡，如果你只能看到这个说明你网卡没有被正确驱动。
 
@@ -109,4 +109,12 @@ root@ykla:~ #
 网络连通。
 
 
+### 将网卡设为混杂模式
+
+```shell-session
+ifconfig_xxx="inet x.x.x.x netmask x.x.x.x promisc"
+```
+#### 参考文献
+
+- [ifconfig(8)](https://man.freebsd.org/cgi/man.cgi?ifconfig(8))
 
