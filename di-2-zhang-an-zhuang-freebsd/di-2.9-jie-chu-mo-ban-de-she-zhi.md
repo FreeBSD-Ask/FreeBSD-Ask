@@ -26,3 +26,7 @@ ykla@ykla-mi:~ $ xinput set-prop 6 "Device Enabled" 0
 
 - [FreeBSDタッチパッドをoffにする](https://qiita.com/fygar256/items/35100d43b096470631d6)
 
+## Fn 键设置
+
+
+- [Adjusting acpi_video brightness increments on FreeBSD](https://www.davidschlachter.com/misc/freebsd-acpi_video-thinkpad-display-brightness)
