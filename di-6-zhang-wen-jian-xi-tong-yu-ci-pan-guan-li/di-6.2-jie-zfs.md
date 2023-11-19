@@ -209,11 +209,13 @@ Pool 'zroot' has the bootfs property set, you might need to update
 the boot code. See gptzfsboot(8) and loader.efi(8) for details.
 ```
 
+### 重写引导
+
 **此处提示重要**
 >
 >bootfs 属性是在 zfs 上引导 FreeBSD 的重要标志，不理睬这个提示可能没事，但出了问题就不能引导系统，建议按提示重写 `boot code` (为什么这么建议？因为我炸了)。
->
->以下是方法：
+
+#### 非 EFI 引导（使用传统的 BIOS+GPT）
 
 查看分区信息：
 
@@ -228,7 +230,7 @@ root@u13t14 # gpart show
   33552384      2008        - free -  (1.0M)
 ```
 
-找到 freebsd-boot 类型分区，这里序号为 1，对应下面命令中 `-i` 选项，接着重写 boot code 
+找到 `freebsd-boot` 类型分区，这里序号为 1，对应下面命令中 `-i` 选项，接着重写 boot code 
 
 ```shell-session
 root@u13t14 # gpart bootcode -p /boot/gptzfsboot -i 1 ada0
