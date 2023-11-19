@@ -161,6 +161,97 @@ fdescfs                     1        1         0   100%    /dev/fd
 
 - [wiki/BootEnvironments](https://wiki.freebsd.org/BootEnvironments)
 
+## FreeBSD on zfs 的 zpool 升级
+
+13.2 升级 14.0 ，zpool 版本有升级。
+
+此处假定已经用 `freebsd-update` 从 13.2 升级到 14.0。
+
+开始前的提醒：准备好 livecd 以应对意外，livecd 要 14.0 及以上的，13.2 不支持（不能访问） 14.0 的 zfs
+
+查看 zpool 状态：
+
+```shell-session
+root@u13t14 # zpool status
+
+  pool: zroot
+ state: ONLINE
+status: Some supported and requested features are not enabled on the pool.
+The pool can still be used, but some features are unavailable.
+action: Enable all features using 'zpool upgrade'. Once this is done,
+the pool may no longer be accessible by software that does not support
+the features. See zpool-features(7) for details.
+config:
+
+NAME        STATE     READ WRITE CKSUM
+zroot       ONLINE       0     0     0
+  ada0p3    ONLINE       0     0     0
+
+errors: No known data errors
+```
+
+未升级前不能使用所有 zfs 新功能，下面进行升级：
+
+```shell-session
+root@u13t14 # zpool upgrade zroot
+
+This system supports ZFS pool feature flags.
+
+Enabled the following features on 'zroot':
+  edonr
+  zilsaxattr
+  head_errlog
+  blake3
+  block_cloning
+  vdev_zaps_v2
+
+Pool 'zroot' has the bootfs property set, you might need to update
+the boot code. See gptzfsboot(8) and loader.efi(8) for details.
+```
+
+**此处提示重要**
+>
+>bootfs 属性是在 zfs 上引导 FreeBSD 的重要标志，不理睬这个提示可能没事，但出了问题就不能引导系统，建议按提示重写 `boot code` (为什么这么建议？因为我炸了)。
+>
+>以下是方法：
+
+查看分区信息：
+
+```shell-session
+root@u13t14 # gpart show
+
+=>      40  33554352  ada0  GPT  (16G)
+        40      1024     1  freebsd-boot  (512K)
+      1064       984        - free -  (492K)
+      2048   4194304     2  freebsd-swap  (2.0G)
+   4196352  29356032     3  freebsd-zfs  (14G)
+  33552384      2008        - free -  (1.0M)
+```
+
+找到 freebsd-boot 类型分区，这里序号为 1，对应下面命令中 `-i` 选项，接着重写 boot code 
+
+```shell-session
+root@u13t14 # gpart bootcode -p /boot/gptzfsboot -i 1 ada0
+partcode written to ada0p1
+```
+
+可再次查看 zpool 状态
+
+```shell-session
+root@u13t14 # zpool status
+
+  pool: zroot
+ state: ONLINE
+config:
+
+NAME        STATE     READ WRITE CKSUM
+zroot       ONLINE       0     0     0
+  ada0p3    ONLINE       0     0     0
+
+errors: No known data errors
+```
+
+
   
 ## 注意事项
 
