@@ -43,13 +43,13 @@
 
 >**提示**
 >
->虚拟机不推荐使用 FreeBSD 官方构建的[虚拟机镜像](https://download.freebsd.org/releases/VM-IMAGES/13.2-RELEASE/amd64/Latest/)，因为需要手动扩容，而且文件系统不能自由选择，默认是 UFS。
+>虚拟机不推荐使用 FreeBSD 官方构建的[虚拟机镜像](https://download.freebsd.org/releases/VM-IMAGES/14.0-RELEASE/amd64/Latest/)，因为需要手动扩容，而且文件系统不能自由选择，默认是 UFS。
 >
->虚拟机一般使用 `FreeBSD-13.2-RELEASE-amd64-disc1.iso` 等类似文件名和后缀的镜像，但是，`FreeBSD-13.2-RELEASE-amd64-memstick.img` 也并非只能用于 U 盘刻录，虚拟机也是可以用的，使用方法参考第 31.2 节。
+>虚拟机一般使用 `FreeBSD-13.2-RELEASE-amd64-disc1.iso` 等类似文件名和后缀的镜像，但是，`FreeBSD-14.0-RELEASE-amd64-memstick.img` 也并非只能用于 U 盘刻录，虚拟机也是可以用的，使用方法参考第 31.2 节。
 
-RELEASE 正式版 镜像下载地址：[https://download.freebsd.org/ftp/releases/amd64/amd64/ISO-IMAGES/13.1/FreeBSD-13.1-RELEASE-amd64-disc1.iso](https://download.freebsd.org/ftp/releases/amd64/amd64/ISO-IMAGES/13.0/FreeBSD-13.0-RELEASE-amd64-disc1.iso)
+RELEASE 正式版 镜像下载地址：[https://download.freebsd.org/ftp/releases/amd64/amd64/ISO-IMAGES/14.0/FreeBSD-14.0-RELEASE-amd64-disc1.iso](https://download.freebsd.org/ftp/releases/amd64/amd64/ISO-IMAGES/14.0/FreeBSD-14.0-RELEASE-amd64-disc1.iso)
 
-CURRENT 测试版（仅限专业用户，对于该版本来说，无法启动，环境变量错误都是正常的事情！） 镜像下载地址: [https://download.freebsd.org/snapshots/amd64/amd64/ISO-IMAGES/14.0/](https://download.freebsd.org/snapshots/amd64/amd64/ISO-IMAGES/14.0/)
+CURRENT 测试版（仅限专业用户，对于该版本来说，无法启动，环境变量错误都是正常的事情！） 镜像下载地址: [https://download.freebsd.org/snapshots/amd64/amd64/ISO-IMAGES/15.0/](https://download.freebsd.org/snapshots/amd64/amd64/ISO-IMAGES/14.0/)
 
 FreeBSD 旧版本下载地址: [http://ftp-archive.freebsd.org/pub/FreeBSD-Archive/old-releases/amd64/ISO-IMAGES/](http://ftp-archive.freebsd.org/pub/FreeBSD-Archive/old-releases/amd64/ISO-IMAGES/)
 
@@ -92,11 +92,48 @@ VMware 自动缩放屏幕请安装显卡驱动和虚拟机增强工具，即：
 
 安装完毕后无需任何多余配置即可实现屏幕自动缩放。
 
-> 请勿做多余配置，比如去修改创建 `xorg.conf`，这会造成虚拟机卡死等问题。
+> 对于显卡来说，请勿做多余配置，比如去修改创建 `xorg.conf`，这会造成虚拟机卡死等问题。
 
 > wayland 下也需要安装该驱动。即使 wayland 暂不可用。
 
 > 如果屏幕显示不正常（过大），请尝试：编辑虚拟机设置——>硬件、设备——>显示器——>监视器、指定监视器设置——>任意监视器的最大分辨率，设置为主机的分辨率或者略低于主机分辨率均可。
+
+
+### 鼠标集成（主机虚拟机鼠标自由切换）
+
+```shell-session
+# pkg install xf86-video-vmware xf86-input-vmmouse open-vm-tools
+# sysrc moused_enable=YES
+# Xorg -configure
+# mv /root/xorg.conf.new /usr/local/share/X11/xorg.conf.d/xorg.conf
+```
+
+编辑 `/usr/local/share/X11/xorg.conf.d/xorg.conf` 修改以下段落为（其他部分不需要动，保留原样即可）：
+
+```shell-session
+…………此处省略一部分…………
+
+Section "ServerLayout"
+        Identifier     "X.org Configured"
+        Screen          0  "Screen0" 0 0
+        InputDevice    "Mouse0" "CorePointer"
+        InputDevice    "Keyboard0" "CoreKeyboard"
+        Option          "AutoAddDevices" "Off"  # 添加此行到此处
+EndSection
+
+…………此处省略一部分…………
+
+Section "InputDevice"
+      Identifier  "Mouse0"
+      Driver      "vmmouse"  # 修改 mouse 为 vmmouse
+      Option      "Protocol" "auto"
+      Option      "Device" "/dev/sysmouse"
+      Option      "ZAxisMapping" "4 5 6 7"
+EndSection
+
+…………此处省略一部分…………
+```
+
 
 ### 虚拟机增强工具
 
