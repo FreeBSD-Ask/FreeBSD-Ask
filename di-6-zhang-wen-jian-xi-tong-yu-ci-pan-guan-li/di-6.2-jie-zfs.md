@@ -213,7 +213,7 @@ the boot code. See gptzfsboot(8) and loader.efi(8) for details.
 
 **此处提示重要**
 >
->bootfs 属性是在 zfs 上引导 FreeBSD 的重要标志，不理睬这个提示可能没事，但出了问题就不能引导系统，建议按提示重写 `boot code` (为什么这么建议？因为我炸了)。
+>bootfs 属性是在 zfs 上引导 FreeBSD 的重要标志，不理睬这个提示可能没事，但出了问题就不能引导系统，建议按提示重写 `boot code` (为什么这么建议？因为我炸了)。如果你没有 **freebsd-boot** 分区就不需要以下操作。
 
 查看分区信息：
 
