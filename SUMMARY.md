@@ -1,7 +1,6 @@
 # Table of contents
 
 * [FreeBSD 从入门到跑路](README.md)
-* [目录](mu-lu.md)
 
 ## 第 1 章 走进 FreeBSD
 
