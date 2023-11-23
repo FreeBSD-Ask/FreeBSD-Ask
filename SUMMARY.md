@@ -131,7 +131,7 @@
 ## 第 11 章 更新与升级 FreeBSD
 
 * [第 11.1 节 通过 freebsd-update 更新](di-11-zhang-geng-xin-yu-sheng-ji-freebsd/di-11.1-jie-tong-guo-freebsdupdate-geng-xin.md)
-* [第 11.3 节 通过源代码更新](di-11-zhang-geng-xin-yu-sheng-ji-freebsd/di-11.3-jie-tong-guo-yuan-dai-ma-geng-xin.md)
+* [第 11.2 节 通过源代码更新](di-11-zhang-geng-xin-yu-sheng-ji-freebsd/di-11.2-jie-tong-guo-yuan-dai-ma-geng-xin.md)
 * [第 11.3 节 批量部署](di-11-zhang-geng-xin-yu-sheng-ji-freebsd/di-11.3-jie-pi-liang-bu-shu.md)
 * [第 11.4 节 使用 pkgbase 更新](di-11-zhang-geng-xin-yu-sheng-ji-freebsd/di-11.4-jie-shi-yong-pkgbase-geng-xin.md)
 
