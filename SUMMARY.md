@@ -67,6 +67,11 @@
 * [第 4.12 节 远程桌面管理](di-4-zhang-zhuo-mian-an-zhuang/di-4.12-jie-yuan-cheng-zhuo-mian-guan-li.md)
 * [第 4.13 节 安装 Wayland （可选）](di-4-zhang-zhuo-mian-an-zhuang/di-4.13-jie-an-zhuang-wayland-ke-xuan.md)
 * [第 4.14 节 安装 Pantheon](di-4-zhang-zhuo-mian-an-zhuang/di-4.14-jie-an-zhuang-pantheon.md)
+* [第 4.15 节 安装 i3wm](di-4-zhang-zhuo-mian-an-zhuang/di-4.15-jie-an-zhuang-i3wm.md)
+* [第 4.16 节 安装 CDE](di-4-zhang-zhuo-mian-an-zhuang/di-4.16-jie-an-zhuang-cde.md)
+* [第 4.17 节 安装 Awesome](di-4-zhang-zhuo-mian-an-zhuang/di-4.17-jie-an-zhuang-awesome.md)
+* [第 4.18 节 安装 FVWM](di-4-zhang-zhuo-mian-an-zhuang/di-4.18-jie-an-zhuang-fvwm.md)
+* [第 4.20 节 安装 Hyprland](di-4-zhang-zhuo-mian-an-zhuang/di-4.20-jie-an-zhuang-hyprland.md)
 
 ## 第 5 章 输入法及常用软件
 
@@ -310,14 +315,12 @@
 * [第 28.2 节 换源与包管理器](di-28-zhang-dragonflybsd/di-28.2-jie-huan-yuan-yu-bao-guan-li-qi.md)
 * [第 28.3 节 桌面与其他软件](di-28-zhang-dragonflybsd/di-28.3-jie-zhuo-mian-yu-qi-ta-ruan-jian.md)
 
-## 第 29 章 桌面高级进阶
+## 第 29 章 TrueNAS
 
-* [第 29.0 节 窗口管理器与桌面的区别与联系](di-29-zhang-zhuo-mian-gao-ji-jin-jie/di-29.0-jie-chuang-kou-guan-li-qi-yu-zhuo-mian-de-qu-bie-yu-lian-xi.md)
-* [第 29.1 节 安装 i3wm](di-29-zhang-zhuo-mian-gao-ji-jin-jie/di-29.1-jie-an-zhuang-i3wm.md)
-* [第 29.2 节 安装 CDE](di-29-zhang-zhuo-mian-gao-ji-jin-jie/di-29.2-jie-an-zhuang-cde.md)
-* [第 29.3 节 安装 Awesome](di-29-zhang-zhuo-mian-gao-ji-jin-jie/di-29.3-jie-an-zhuang-awesome.md)
-* [第 29.4 节 安装 FVWM](di-29-zhang-zhuo-mian-gao-ji-jin-jie/di-29.4-jie-an-zhuang-fvwm.md)
-* [第 29.5 节 安装 Hyprland](di-29-zhang-zhuo-mian-gao-ji-jin-jie/di-29.5-jie-an-zhuang-hyprland.md)
+* [第 29.1 节 TrueNAS 简介](di-29-zhang-truenas/di-29.1-jie-truenas-jian-jie.md)
+* [第 29.2 节 TrueNAS 安装](di-29-zhang-truenas/di-29.2-jie-truenas-an-zhuang.md)
+* [第 29.3 节 TrueNAS 配置与调优](di-29-zhang-truenas/di-29.3-jie-truenas-pei-zhi-yu-tiao-you.md)
+* [第 29.4 节 TrueNAS 故障排除](di-29-zhang-truenas/di-29.4-jie-truenas-gu-zhang-pai-chu.md)
 
 ## 第 30 章 Linux 兼容层
 
@@ -341,10 +344,3 @@
 * [第 31.2 节 系统安装与基本配置](di-31-zhang-twincatbsd/di-31.2-jie-xi-tong-an-zhuang-yu-ji-ben-pei-zhi.md)
 * [第 31.3 节 开发环境配置](di-31-zhang-twincatbsd/di-31.3-jie-kai-fa-huan-jing-pei-zhi.md)
 * [第 31.4 节 故障排除](di-31-zhang-twincatbsd/di-31.4-jie-gu-zhang-pai-chu.md)
-
-## 第 32 章 TrueNAS
-
-* [第 32.1 节 TrueNAS 简介](di-32-zhang-truenas/di-32.1-jie-truenas-jian-jie.md)
-* [第 32.2 节 TrueNAS 安装](di-32-zhang-truenas/di-32.2-jie-truenas-an-zhuang.md)
-* [第 32.3 节 TrueNAS 配置与调优](di-32-zhang-truenas/di-32.3-jie-truenas-pei-zhi-yu-tiao-you.md)
-* [第 32.4 节 TrueNAS 故障排除](di-32-zhang-truenas/di-32.4-jie-truenas-gu-zhang-pai-chu.md)
