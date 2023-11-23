@@ -131,7 +131,7 @@
 ## 第 11 章 更新与升级 FreeBSD
 
 * [第 11.1 节 通过 freebsd-update 更新](di-11-zhang-geng-xin-yu-sheng-ji-freebsd/di-11.1-jie-tong-guo-freebsdupdate-geng-xin.md)
-* [第 11.2 节 通过源代码更新](di-11-zhang-geng-xin-yu-sheng-ji-freebsd/di-11.2-jie-tong-guo-yuan-dai-ma-geng-xin.md)
+* [第 11.3 节 通过源代码更新](di-11-zhang-geng-xin-yu-sheng-ji-freebsd/di-11.3-jie-tong-guo-yuan-dai-ma-geng-xin.md)
 * [第 11.3 节 批量部署](di-11-zhang-geng-xin-yu-sheng-ji-freebsd/di-11.3-jie-pi-liang-bu-shu.md)
 * [第 11.4 节 使用 pkgbase 更新](di-11-zhang-geng-xin-yu-sheng-ji-freebsd/di-11.4-jie-shi-yong-pkgbase-geng-xin.md)
 
@@ -228,7 +228,7 @@
 * [第 19.13 节 简议道风](di-19-zhang-wen-xue-gu-shi/di-19.13-jie-jian-yi-dao-feng.md)
 * [第 19.14 节 小说——你与暗](di-19-zhang-wen-xue-gu-shi/di-19.14-jie-xiao-shuo-ni-yu-an.md)
 * [第 19.15 节 吾乡何处](di-19-zhang-wen-xue-gu-shi/di-19.15-jie-wu-xiang-he-chu.md)
-* [第 19.16 节 哲学的学习](di-19-zhang-wen-xue-gu-shi/di-19.16-jie-zhe-xue-de-xue-xi.md)
+* [第 19.16 节 暂缺](di-19-zhang-wen-xue-gu-shi/di-19.16-jie-zan-que.md)
 * [第 19.17 节 杂记](di-19-zhang-wen-xue-gu-shi/di-19.17-jie-za-ji.md)
 * [第 19.18 节 网络安全中的主体隐私权与主体选择的自由讨论 一网络安全与企业道德](di-19-zhang-wen-xue-gu-shi/di-19.18-jie-wang-luo-an-quan-zhong-de-zhu-ti-yin-si-quan-yu-zhu-ti-xuan-ze-de-zi-you-tao-lun-yi-wan.md)
 
@@ -240,12 +240,21 @@
 * [第 20.4 节 教育](di-20-zhang-yu-le-yu-jiao-yu/di-20.4-jie-jiao-yu.md)
 * [第 20.5 节 科研与专业工具](di-20-zhang-yu-le-yu-jiao-yu/di-20.5-jie-ke-yan-yu-zhuan-ye-gong-ju.md)
 
-## 第 21 章 内核
+## 第 21 章 Linux 兼容层
 
-* [第 21.1 节 获取 FreeBSD 内核源码](di-21-zhang-nei-he/di-21.1-jie-huo-qu-freebsd-nei-he-yuan-ma.md)
-* [第 21.2 节 修改内核源码](di-21-zhang-nei-he/di-21.2-jie-xiu-gai-nei-he-yuan-ma.md)
-* [第 21.3 节 编译内核](di-21-zhang-nei-he/di-21.3-jie-bian-yi-nei-he.md)
-* [第 21.4 节 内核分析](di-21-zhang-nei-he/di-21.4-jie-nei-he-fen-xi.md)
+* [第 21.1 节 Linux 兼容层实现](di-21-zhang-linux-jian-rong-ceng/di-21.1-jie-linux-jian-rong-ceng-shi-xian.md)
+* [第 21.2 节 Linux 兼容层——基于 CentOS（原生）](di-21-zhang-linux-jian-rong-ceng/di-21.2-jie-linux-jian-rong-ceng-ji-yu-centos-yuan-sheng.md)
+* [第 21.3 节 Linux 兼容层——基于 Ubuntu/Debian](di-21-zhang-linux-jian-rong-ceng/di-21.3-jie-linux-jian-rong-ceng-ji-yu-ubuntudebian.md)
+* [第 21.4 节 Linux 兼容层——基于 ArchLinux bootstrap](di-21-zhang-linux-jian-rong-ceng/di-21.4-jie-linux-jian-rong-ceng-ji-yu-archlinux-bootstrap.md)
+* [第 21.5 节 Linux 兼容层——基于 archlinux-pacman](di-21-zhang-linux-jian-rong-ceng/di-21.5-jie-linux-jian-rong-ceng-ji-yu-archlinuxpacman.md)
+* [第 21.6 节 Linux 兼容层——基于 OpenSUSE](di-21-zhang-linux-jian-rong-ceng/di-21.6-jie-linux-jian-rong-ceng-ji-yu-opensuse.md)
+* [第 21.7 节 Linux 兼容层——基于 Gentoo Linux](di-21-zhang-linux-jian-rong-ceng/di-21.7-jie-linux-jian-rong-ceng-ji-yu-gentoo-linux.md)
+* [第 21.8 节 Linux 兼容层——基于 Rocky Linux](di-21-zhang-linux-jian-rong-ceng/di-21.8-jie-linux-jian-rong-ceng-ji-yu-rocky-linux.md)
+* [第 21.9 节 Linux 兼容层——基于 Slackware Linux](di-21-zhang-linux-jian-rong-ceng/di-21.9-jie-linux-jian-rong-ceng-ji-yu-slackware-linux.md)
+* [第 21.10 节 Android 兼容层](di-21-zhang-linux-jian-rong-ceng/di-21.10-jie-android-jian-rong-ceng.md)
+* [第 21.11 节 Linux 兼容层——基于 Deepin](di-21-zhang-linux-jian-rong-ceng/di-21.11-jie-linux-jian-rong-ceng-ji-yu-deepin.md)
+* [第 21.12 节 高级教程：Linux 兼容层与 Jail](di-21-zhang-linux-jian-rong-ceng/di-21.12-jie-gao-ji-jiao-cheng-linux-jian-rong-ceng-yu-jail.md)
+* [第 21.13 节 Linux 兼容层故障排除与配置](di-21-zhang-linux-jian-rong-ceng/di-21.13-jie-linux-jian-rong-ceng-gu-zhang-pai-chu-yu-pei-zhi.md)
 
 ## 第 22 章 编程与开发
 
@@ -320,22 +329,6 @@
 * [第 29.2 节 TrueNAS 安装](di-29-zhang-truenas/di-29.2-jie-truenas-an-zhuang.md)
 * [第 29.3 节 TrueNAS 配置与调优](di-29-zhang-truenas/di-29.3-jie-truenas-pei-zhi-yu-tiao-you.md)
 * [第 29.4 节 TrueNAS 故障排除](di-29-zhang-truenas/di-29.4-jie-truenas-gu-zhang-pai-chu.md)
-
-## 第 30 章 Linux 兼容层
-
-* [第 30.1 节 Linux 兼容层实现](di-30-zhang-linux-jian-rong-ceng/di-30.1-jie-linux-jian-rong-ceng-shi-xian.md)
-* [第 30.2 节 Linux 兼容层——基于 CentOS（原生）](di-30-zhang-linux-jian-rong-ceng/di-30.2-jie-linux-jian-rong-ceng-ji-yu-centos-yuan-sheng.md)
-* [第 30.3 节 Linux 兼容层——基于 Ubuntu/Debian](di-30-zhang-linux-jian-rong-ceng/di-30.3-jie-linux-jian-rong-ceng-ji-yu-ubuntudebian.md)
-* [第 30.4 节 Linux 兼容层——基于 ArchLinux bootstrap](di-30-zhang-linux-jian-rong-ceng/di-30.4-jie-linux-jian-rong-ceng-ji-yu-archlinux-bootstrap.md)
-* [第 30.5 节 Linux 兼容层——基于 archlinux-pacman](di-30-zhang-linux-jian-rong-ceng/di-30.5-jie-linux-jian-rong-ceng-ji-yu-archlinuxpacman.md)
-* [第 30.6 节 Linux 兼容层——基于 OpenSUSE](di-30-zhang-linux-jian-rong-ceng/di-30.6-jie-linux-jian-rong-ceng-ji-yu-opensuse.md)
-* [第 30.7 节 Linux 兼容层——基于 Gentoo Linux](di-30-zhang-linux-jian-rong-ceng/di-30.7-jie-linux-jian-rong-ceng-ji-yu-gentoo-linux.md)
-* [第 30.8 节 Linux 兼容层——基于 Rocky Linux](di-30-zhang-linux-jian-rong-ceng/di-30.8-jie-linux-jian-rong-ceng-ji-yu-rocky-linux.md)
-* [第 30.9 节 Linux 兼容层——基于 Slackware Linux](di-30-zhang-linux-jian-rong-ceng/di-30.9-jie-linux-jian-rong-ceng-ji-yu-slackware-linux.md)
-* [第 30.10 节 Android 兼容层](di-30-zhang-linux-jian-rong-ceng/di-30.10-jie-android-jian-rong-ceng.md)
-* [第 30.11 节 Linux 兼容层——基于 Deepin](di-30-zhang-linux-jian-rong-ceng/di-30.11-jie-linux-jian-rong-ceng-ji-yu-deepin.md)
-* [第 30.12 节 高级教程：Linux 兼容层与 Jail](di-30-zhang-linux-jian-rong-ceng/di-30.12-jie-gao-ji-jiao-cheng-linux-jian-rong-ceng-yu-jail.md)
-* [第 30.13 节 Linux 兼容层故障排除与配置](di-30-zhang-linux-jian-rong-ceng/di-30.13-jie-linux-jian-rong-ceng-gu-zhang-pai-chu-yu-pei-zhi.md)
 
 ## 第 31 章 TwinCAT/BSD
 
