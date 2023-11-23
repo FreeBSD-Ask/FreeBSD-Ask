@@ -61,7 +61,7 @@
 * [第 4.6 节 安装 Cinnamon](di-4-zhang-zhuo-mian-an-zhuang/di-4.6-jie-an-zhuang-cinnamon.md)
 * [第 4.7 节 安装 Lumina](di-4-zhang-zhuo-mian-an-zhuang/di-4.7-jie-an-zhuang-lumina.md)
 * [第 4.8 节 安装 LXQt](di-4-zhang-zhuo-mian-an-zhuang/di-4.8-jie-an-zhuang-lxqt.md)
-* [第 4.9 节 安装 bspwm](di-4-zhang-zhuo-mian-an-zhuang/di-4.9-jie-root-deng-lu-zhuo-mian.md)
+* [第 4.9 节 安装 bspwm](di-4-zhang-zhuo-mian-an-zhuang/di-4.9-jie-an-zhuang-bspwm.md)
 * [第 4.10 节 root 登录桌面](di-4-zhang-zhuo-mian-an-zhuang/di-4.10-jie-root-deng-lu-zhuo-mian.md)
 * [第 4.11 节 主题与美化](di-4-zhang-zhuo-mian-an-zhuang/di-4.11-jie-zhu-ti-yu-mei-hua.md)
 * [第 4.12 节 远程桌面管理](di-4-zhang-zhuo-mian-an-zhuang/di-4.12-jie-yuan-cheng-zhuo-mian-guan-li.md)
