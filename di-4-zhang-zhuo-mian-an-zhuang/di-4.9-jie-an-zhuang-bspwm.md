@@ -6,8 +6,6 @@
 
 自从上次整 i3 窗口管理器失败 ~~（还顺便带走了整个系统）~~ 之后，我就又盯上了 bspwm，据说更符合 UNIX 哲学。
 
-参考了 [知乎 - 从零开始的Bspwm安装与配置教程 - 列奥那多是勇者](https://zhuanlan.zhihu.com/p/568211941)
-
 ## 安装 bspwm
 
 通过 pkg 安装
@@ -78,6 +76,7 @@ polybar example 2>&1 | tee -a /tmp/polybar.log
 ```
 
 并执行
+
 ```shell-session
 $ chmod +x ~/.config/polybar/launch.sh
 ```
@@ -89,7 +88,6 @@ $ echo "picom &" >> ~/.config/bspwm/bspwmrc
 $ echo "\$HOME/.config/polybar/launch.sh" >> ~/.config/bspwm/bspwmrc
 $ echo "dunst &" >> ~/.config/bspwm/bspwmrc
 ```
-
 
 ## 启动 bspwm
 
@@ -110,6 +108,7 @@ $ startx
 ```
 
 写入以下内容
+
 ```
 [Desktop Entry]
 Name=bspwm
@@ -126,7 +125,8 @@ Type=Application
 ```
 
 ## 一些操作和设置
-Windows + 空格：用rofi启动应用
+
+Windows + 空格：用 rofi 启动应用
 
 Windows + 回车：启动终端（即 kitty）
 
@@ -159,3 +159,7 @@ $HOME/.fehbg &
 注：图片中的 Chrome 浏览器，Thunar 文件管理器均需要自己安装
 
 ![](../.gitbook/assets/bspwm.png)
+
+## 参考文献
+
+1. [知乎 - 从零开始的 Bspwm 安装与配置教程 - 列奥那多是勇者](https://zhuanlan.zhihu.com/p/568211941)
