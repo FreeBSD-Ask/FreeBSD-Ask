@@ -1,4 +1,4 @@
-# 第 4.12 节 安装 Wayland （可选）
+# 第 4.13 节 安装 Wayland （可选）
 
 目前安装 xorg 会自动安装 Wayland。
 
