@@ -4,7 +4,7 @@
 
 **如果你想要与 Windows 或 MacOS 类似的体验，请参考之前的章节**
 
-自从上次整 i3 窗口管理器失败 ~~（还顺便带走了整个系统）~~ 之后，我就又盯上了 bspwm，据说更符合 UNIX 哲学。
+bspwm，据说更符合 UNIX 哲学。
 
 ## 安装 bspwm
 
@@ -63,7 +63,7 @@ super + @space
 ### 设置 polybar 启动脚本和配置文件
 
 ```shell-session
-$ mkdir ~/.config/polybar  #一样的普通用户！！！
+$ mkdir ~/.config/polybar  # 一样的普通用户！！！
 $ cp /usr/local/etc/polybar/config.ini ~/.config/polybar
 ```
 
@@ -162,4 +162,4 @@ $HOME/.fehbg &
 
 ## 参考文献
 
-1. [知乎 - 从零开始的 Bspwm 安装与配置教程 - 列奥那多是勇者](https://zhuanlan.zhihu.com/p/568211941)
+ - [知乎 - 从零开始的 Bspwm 安装与配置教程 - 列奥那多是勇者](https://zhuanlan.zhihu.com/p/568211941)
