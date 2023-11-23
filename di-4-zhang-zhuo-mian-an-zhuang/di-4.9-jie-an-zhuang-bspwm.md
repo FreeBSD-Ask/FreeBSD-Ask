@@ -2,11 +2,9 @@
 
 **注意：bspwm 是平铺式窗口管理器，与常规桌面不同**
 
-**如果你想要与 Windows 或 MacOS 类似的体验，请参考之前的章节**
-
 bspwm，据说更符合 UNIX 哲学。
 
-### 安装 bspwm
+## 安装 bspwm
 
 通过 pkg 安装
 
@@ -30,16 +28,16 @@ polybar: 面板
 
 dunst: 通知管理器
 
-### 配置工作
+## 配置工作
 
-#### 启用 dbus 服务
+### 启用 dbus 服务
 
 ```shell-session
 # sysrc dbus_enable="YES"
 # service dbus start
 ```
 
-#### 创建配置文件
+### 创建配置文件
 
 ```shell-session
 $ mkdir ~/.config  #注意这里用普通用户！！！
@@ -60,7 +58,7 @@ super + @space
     rofi -show drun
 ```
 
-#### 设置 polybar 启动脚本和配置文件
+### 设置 polybar 启动脚本和配置文件
 
 ```shell-session
 $ mkdir ~/.config/polybar  # 一样的普通用户！！！
@@ -81,7 +79,7 @@ polybar example 2>&1 | tee -a /tmp/polybar.log
 $ chmod +x ~/.config/polybar/launch.sh
 ```
 
-#### 设置 picom, polybar, dunst 启动
+### 设置 picom, polybar, dunst 启动
 
 ```shell-session
 $ echo "picom &" >> ~/.config/bspwm/bspwmrc
@@ -89,16 +87,16 @@ $ echo "\$HOME/.config/polybar/launch.sh" >> ~/.config/bspwm/bspwmrc
 $ echo "dunst &" >> ~/.config/bspwm/bspwmrc
 ```
 
-### 启动 bspwm
+## 启动 bspwm
 
-#### 通过 startx
+### 通过 startx
 
 ```shell-session
 $ echo "exec bspwm" >> ~/.xinitrc
 $ startx
 ```
 
-#### 通过 lightdm
+### 通过 lightdm
 
 创建 `/usr/local/share/xsessions/bspwm.desktop`
 
@@ -124,7 +122,7 @@ Type=Application
 # service lightdm start
 ```
 
-### 一些操作和设置
+## 一些操作和设置
 
 Windows + 空格：用 rofi 启动应用
 
@@ -152,12 +150,14 @@ $ feh --bg-center "$HOME/.local/share/wallpapers/wallpaper.jpg"
 $HOME/.fehbg &
 ```
 
-### 故障排除什么的以后再写 ~~（其实是懒了）~~
+## 故障排除什么的以后再写 ~~（其实是懒了）~~
 
-### 展示图片
+## 展示图片
+
+![](../.gitbook/assets/bspwm.png)
 
 注：图片中的 Chrome 浏览器，Thunar 文件管理器均需要自己安装
 
-### 参考文献
+## 参考文献
 
 * [知乎 - 从零开始的 Bspwm 安装与配置教程 - 列奥那多是勇者](https://zhuanlan.zhihu.com/p/568211941)
