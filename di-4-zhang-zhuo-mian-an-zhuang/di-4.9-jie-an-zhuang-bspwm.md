@@ -144,8 +144,6 @@ $ feh --bg-center "$HOME/.local/share/wallpapers/wallpaper.jpg"
 $HOME/.fehbg &
 ```
 
-## 故障排除什么的以后再写 ~~（其实是懒了）~~
-
 ## 展示图片
 
 ![](../.gitbook/assets/bspwm.png)
