@@ -21,6 +21,11 @@ bspwm，据说更符合 UNIX 哲学。
 - polybar: 面板
 - dunst: 通知管理器
 
+
+>**提示**
+>
+>polybar 建议换成别的，因为 polybar 在 freebsd 上功能不全。建议换成 tint2，可以显示 systray 图标
+
 ## 配置工作
 
 ### 启用 dbus 服务
