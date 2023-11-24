@@ -70,7 +70,7 @@
 * [第 4.16 节 安装 CDE](di-4-zhang-zhuo-mian-an-zhuang/di-4.16-jie-an-zhuang-cde.md)
 * [第 4.17 节 安装 Awesome](di-4-zhang-zhuo-mian-an-zhuang/di-4.17-jie-an-zhuang-awesome.md)
 * [第 4.18 节 安装 FVWM](di-4-zhang-zhuo-mian-an-zhuang/di-4.18-jie-an-zhuang-fvwm.md)
-* [第 4.20 节 安装 Hyprland](di-4-zhang-zhuo-mian-an-zhuang/di-4.20-jie-an-zhuang-hyprland.md)
+* [第 4.19 节 安装 Hyprland](di-4-zhang-zhuo-mian-an-zhuang/di-4.19-jie-an-zhuang-hyprland.md)
 
 ## 第 5 章 输入法及常用软件
 
