@@ -210,7 +210,7 @@
 * [第 18.5 节 树莓派与 Linux 兼容层](di-18-zhang-shu-mei-pai-yu-riscv/di-18.5-jie-shu-mei-pai-yu-linux-jian-rong-ceng.md)
 * [第 18.6 节 RISC-V](di-18-zhang-shu-mei-pai-yu-riscv/di-18.6-jie-riscv.md)
 * [第 18.7 节 树莓派与 OpenBSD](di-18-zhang-shu-mei-pai-yu-riscv/di-18.7-jie-shu-mei-pai-yu-openbsd.md)
-* [第 18.8 节 OpenBSD 在 RISCV 开发板上的安装](di-18-zhang-shu-mei-pai-yu-riscv/di-18.8-jie-openbsd-zai-riscv-kai-fa-ban-shang-de-an-zhuang.md)
+* [第 18.8 节 在 RISCV 开发板上安装 OpenBSD](di-18-zhang-shu-mei-pai-yu-riscv/di-18.8-jie-zai-riscv-kai-fa-ban-shang-an-zhuang-openbsd.md)
 
 ## 第 19 章 文学故事
 
