@@ -38,5 +38,6 @@ rufus 下载地址：[https://rufus.ie/zh](https://rufus.ie/zh)
 >
 > 请 **老老实实用 rufus。**
 
-##
+## BT 种子下载地址
 
+<https://fosstorrents.com/distributions/freebsd/>
