@@ -201,15 +201,16 @@
 * [第 17.8 节 PostgreSQL 与 pgAdmin4](di-17-zhang-wang-luo-fu-wu-qi/di-17.8-jie-postgresql-yu-pgadmin4.md)
 * [第 17.9 节 Telegraf+InfluxDB+Grafana 监控平台](di-17-zhang-wang-luo-fu-wu-qi/di-17.9-jie-telegraf+influxdb+grafana-jian-kong-ping-tai.md)
 
-## 第 18 章 树莓派与嵌入式
+## 第 18 章 树莓派与 RISCV
 
-* [第 18.1 节 树莓派的简介](di-18-zhang-shu-mei-pai-yu-qian-ru-shi/di-18.1-jie-shu-mei-pai-de-jian-jie.md)
-* [第 18.2 节 系统安装](di-18-zhang-shu-mei-pai-yu-qian-ru-shi/di-18.2-jie-xi-tong-an-zhuang.md)
-* [第 18.3 节 使用配置](di-18-zhang-shu-mei-pai-yu-qian-ru-shi/di-18.3-jie-shi-yong-pei-zhi.md)
-* [第 18.4 节 USB 网卡与 WIFI](di-18-zhang-shu-mei-pai-yu-qian-ru-shi/di-18.4-jie-usb-wang-ka-yu-wifi.md)
-* [第 18.5 节 树莓派与 Linux 兼容层](di-18-zhang-shu-mei-pai-yu-qian-ru-shi/di-18.5-jie-shu-mei-pai-yu-linux-jian-rong-ceng.md)
-* [第 18.6 节 RISC-V](di-18-zhang-shu-mei-pai-yu-qian-ru-shi/di-18.6-jie-riscv.md)
-* [第 18.7 节 树莓派与 OpenBSD](di-18-zhang-shu-mei-pai-yu-qian-ru-shi/di-18.7-jie-shu-mei-pai-yu-openbsd.md)
+* [第 18.1 节 树莓派的简介](di-18-zhang-shu-mei-pai-yu-riscv/di-18.1-jie-shu-mei-pai-de-jian-jie.md)
+* [第 18.2 节 系统安装](di-18-zhang-shu-mei-pai-yu-riscv/di-18.2-jie-xi-tong-an-zhuang.md)
+* [第 18.3 节 使用配置](di-18-zhang-shu-mei-pai-yu-riscv/di-18.3-jie-shi-yong-pei-zhi.md)
+* [第 18.4 节 USB 网卡与 WIFI](di-18-zhang-shu-mei-pai-yu-riscv/di-18.4-jie-usb-wang-ka-yu-wifi.md)
+* [第 18.5 节 树莓派与 Linux 兼容层](di-18-zhang-shu-mei-pai-yu-riscv/di-18.5-jie-shu-mei-pai-yu-linux-jian-rong-ceng.md)
+* [第 18.6 节 RISC-V](di-18-zhang-shu-mei-pai-yu-riscv/di-18.6-jie-riscv.md)
+* [第 18.7 节 树莓派与 OpenBSD](di-18-zhang-shu-mei-pai-yu-riscv/di-18.7-jie-shu-mei-pai-yu-openbsd.md)
+* [第 18.8 节 OpenBSD 在 RISCV 开发板上的安装](di-18-zhang-shu-mei-pai-yu-riscv/di-18.8-jie-openbsd-zai-riscv-kai-fa-ban-shang-de-an-zhuang.md)
 
 ## 第 19 章 文学故事
 
