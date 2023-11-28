@@ -115,6 +115,7 @@
 |         FreeBSD 入门书籍         |                [https://book.bsdcn.org](https://book.bsdcn.org)                |
 |         BiliBili【B 站】         | [https://space.bilibili.com/2120246893](https://space.bilibili.com/2120246893) |
 |            微信公众号            |                                   freebsdzh                                    |
+|    FreeBSD 中文 man 手册       |         [https://man.bsdcn.org](https://man.bsdcn.org)                           |
 
 微信公众号: freebsdzh （扫码关注）
 
