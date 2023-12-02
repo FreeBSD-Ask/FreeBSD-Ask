@@ -120,7 +120,11 @@ endsw
 
 - [Wamphyre/BSD-XFCE](https://github.com/Wamphyre/BSD-XFCE)
 
+## 软件推荐
 
+FreeBSD 的 xfce 邮箱客户端推荐用 evolution，搭配 xfce4-mailwatch-plugin gnome-keyring 使用。
+
+还有推荐 xfce 的一个桌面插件。叫 verve。配合设置智能书签，可以查网页内容。 我这里设置了 FreeBSD 的 man 手册，就可以通过搜索框搜索需要的内容。
 
 ## lightdm 登陆管理器本地化语言
 
