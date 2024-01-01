@@ -1,7 +1,6 @@
 # Table of contents
 
 * [FreeBSD 从入门到跑路](README.md)
-* [关于道长停止一切涉及 FreeBSD 工作的说明](guan-yu-dao-chang-ting-zhi-yi-qie-she-ji-freebsd-gong-zuo-de-shuo-ming.md)
 
 ## 第 1 章 走进 FreeBSD
 

@@ -20,7 +20,9 @@ FreeBSD 中文 man 手册：[https://man.bsdcn.org](https://man.bsdcn.org/)
 
 本书是由 ykla 发起，并由 FreeBSD 中文社区的一些群成员参与编写的《FreeBSD 从入门到跑路》。我们尝试从 0 开始，带领普通人走进 FreeBSD 世界。本书充分参考了 FreeBSD HandBook，构建了一个完整、科学的目录体系。本书不是一个大杂烩或是大集合，而是为了构建一个自成体系的一本开源书籍。全书共分 31 章，既强调了学习 FreeBSD 的必要基础也提供了内核设计与实现等专业性较强的教程。本书可作为高等学校“FreeBSD 操作系统”课程的本科生教材，同时也适合相关专业研究生或计算机技术人员参考阅读。
 
-**开源维护与捐赠**： ![](.gitbook/assets/proud\_donor.png)\
+**开源维护与捐赠**：&#x20;
+
+![](.gitbook/assets/proud\_donor.png)\
 [点此捐赠 FreeBSD 基金会](https://freebsdfoundation.org/donate)\
 **捐赠者名单**：​[https://docs.qq.com/doc/DSXZ1Q1JOenRzUkp4](https://docs.qq.com/doc/DSXZ1Q1JOenRzUkp4) ​
 
