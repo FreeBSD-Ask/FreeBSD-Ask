@@ -127,7 +127,7 @@ Shengyun
 
 livrth
 
-欧卓华
+<font color=purple>Voosk</font>
 
 **注意：如果缺少了你的信息或者不想被列出，请发起 issue。**
 
