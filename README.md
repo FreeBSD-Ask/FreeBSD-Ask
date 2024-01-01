@@ -42,3 +42,5 @@ FreeBSD 中文 man 手册：[https://man.bsdcn.org](https://man.bsdcn.org/)
 **网站部署**：Shengyun\
 黑名单与社区失信名单：[http://chinafreebsd.org/](http://chinafreebsd.org/)\
 _待解决：BiliBili、微信公众号、自动化入群验证与成员管理系统、重修黑名单_
+
+2024 FreeBSD 中文社区 版权所有
