@@ -9,12 +9,18 @@ FreeBSD 从入门到跑路诞生于12月19日2021年。目的是复兴FreeBSD。
 
 ### 资源
 
-QQ群：787969044\
+QQ群：787969044
+
+微信群：需要通过QQ群\
 Telegram群组：[https://t.me/freebsdba](https://t.me/freebsdba)\
 HandBook最新翻译：[https://handbook.bsdcn.org](https://handbook.bsdcn.org/)\
 FreeBSD Port开发者手册 最新翻译：[https://porters-handbook.bsdcn.org](https://porters-handbook.bsdcn.org/)\
 FreeBSD入门书籍：[https://book.bsdcn.org](https://book.bsdcn.org/)\
 FreeBSD 中文 man 手册：[https://man.bsdcn.org](https://man.bsdcn.org/)
+
+### 社区愿景
+
+我们成立于 2018 年 3 月 17 日，由贴吧——FreeBSD 吧发展到了 QQ 群，Telegram 群，至于微信群。 我们的成员具有非常大的广泛性和普遍性，能够代表绝大多数 FreeBSD 用户的平均水平：他们可能根本没有听说过何为 FreeBSD，但这并不影响我们的交流与沟通。也许有人觉得这是浪费时间，但是没有新生力量的培养，何来 FreeBSD 的明天呢？谁不知道新人可能有很多坏习惯呢。 同鲁迅先生说的那样，但愿每个人都是一束光，照亮 FreeBSD 在中国大陆地区前进的光荣的荆棘路。也希望，你可以加入我们，共同组成漫天星光亦或者是莹莹之火。 无穷的远方，无数的人们，都和我有关。 我曾无数次眺望远山，想要找到一汪清泉，天总是不遂人愿，仍旧是没有找到。 我们是谁？我们从何而来？我们将去往何方？这些问题永远也不会有结果。 我们选择 FreeBSD，是因为想选择一个清晰、明了、可靠、稳固的一个操作系统在工作上给我们带来收益以及在生活中给我们带来乐趣。当然 FreeBSD 还存在很多问题，有待大家积极发现、探讨、完善，社会在进步，技术在进步，热情丝毫不减在持续，未来越来越美好。 我们必须团结起来做些什么事情，无论大小，哪怕只是谈谈自己的学习体会（但并非出于炫耀）。否则如果只是夸夸其谈的话，我们和那些只会吹牛逼的、只会键政的、互称大佬的群或社区有任何区别吗？如果没有区别，那就没有任何意义，那么我宁愿这个社区不再存在。如果大家有时间有精力的话可以考虑翻译文档，如果会编程的话可以考虑移植软件到 BSD，如果能力更高甚至可以参与系统开发。
 
 ### 内容提要
 
@@ -23,8 +29,12 @@ FreeBSD 中文 man 手册：[https://man.bsdcn.org](https://man.bsdcn.org/)
 **开源维护与捐赠**：&#x20;
 
 ![](.gitbook/assets/proud\_donor.png)\
-[点此捐赠 FreeBSD 基金会](https://freebsdfoundation.org/donate)\
-**捐赠者名单**：​[https://docs.qq.com/doc/DSXZ1Q1JOenRzUkp4](https://docs.qq.com/doc/DSXZ1Q1JOenRzUkp4) ​
+[点此捐赠 FreeBSD 基金会](https://freebsdfoundation.org/donate)
+
+为了能够更好地维护本书，我们采用了 GitBook 平台来进行协作，并使用 Vuepress 来呈现本书。我们目前的服务器约 5 美元一个月，如果你想为我们提供捐助，请加入我们的 [TG 群](https://t.me/freebsdba) 或者 QQ 群 787969044。如果你也想参与编写，具体请参考 [WIKI](https://github.com/FreeBSD-Ask/FreeBSD-Ask/wiki/%E3%80%8AFreeBSD-%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E8%B7%91%E8%B7%AF%E3%80%8B%E7%BC%96%E8%BE%91%E6%8C%87%E5%8D%97)，关于贡献者名单请参考第 1.17 节。
+
+**贡献者名单**：[https://book.bsdcn.org/di-1-zhang-zou-jin-freebsd/di-1.17-jie-can-kao-zi-liao-yu-gong-xian-zhe-ming-dan](https://book.bsdcn.org/di-1-zhang-zou-jin-freebsd/di-1.17-jie-can-kao-zi-liao-yu-gong-xian-zhe-ming-dan) \
+&#x20;**捐赠者名单**：​[https://docs.qq.com/doc/DSXZ1Q1JOenRzUkp4](https://docs.qq.com/doc/DSXZ1Q1JOenRzUkp4) ​
 
 ### 意见反馈
 
