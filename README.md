@@ -1,4 +1,4 @@
-![image](https://github.com/FreeBSD-Ask/FreeBSD-Ask/assets/138698339/bf67a1cb-4280-4ae7-87d7-e3c9059e6b34)# FreeBSD 从入门到跑路
+# FreeBSD 从入门到跑路
 
 ### 概述
 
