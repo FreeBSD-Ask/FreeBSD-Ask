@@ -12,6 +12,8 @@ FreeBSD 从入门到跑路诞生于12月19日2021年。目的是复兴FreeBSD。
 QQ群：787969044\
 Telegram群组：[https://t.me/oh_my_BSD](https://t.me/oh_my_BSD)\
 微信群：需要通过QQ群\
+Skype: [https://join.skype.com/xktkQtXZopfv](https://join.skype.com/xktkQtXZopfv)\
+FreeBSD运行QQ需要兼容层 Telegram原生运行 Skype可以使用pidgin+插件[net-im/pidgin-skypeweb](https://forums.freebsd.org/threads/skype.66115/)\
 HandBook最新翻译：[https://handbook.bsdcn.org](https://handbook.bsdcn.org/)\
 FreeBSD Port开发者手册 最新翻译：[https://porters-handbook.bsdcn.org](https://porters-handbook.bsdcn.org/)\
 FreeBSD入门书籍：[https://book.bsdcn.org](https://book.bsdcn.org/)\
