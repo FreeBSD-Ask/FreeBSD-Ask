@@ -25,19 +25,20 @@
 ## 第 2 章 安装 FreeBSD
 
 * [第 2.0 节 图解安装](di-2-zhang-an-zhuang-freebsd/di-2.0-jie-tu-jie-an-zhuang.md)
-* [第 2.1 节 三种虚拟机与 FreeBSD 版本比较](di-2-zhang-an-zhuang-freebsd/di-2.1-jie-san-zhong-xu-ni-ji-yu-freebsd-ban-ben-bi-jiao.md)
-* [第 2.2 节 安装 FreeBSD——基于 Virtual Box](di-2-zhang-an-zhuang-freebsd/di-2.2-jie-an-zhuang-freebsd-ji-yu-virtual-box.md)
-* [第 2.3 节 安装 FreeBSD——基于 Vmware Workstation Pro](di-2-zhang-an-zhuang-freebsd/di-2.3-jie-an-zhuang-freebsd-ji-yu-vmware-workstation-pro.md)
-* [第 2.4 节 腾讯云轻量云及其他服务器安装 FreeBSD](di-2-zhang-an-zhuang-freebsd/di-2.4-jie-teng-xun-yun-qing-liang-yun-ji-qi-ta-fu-wu-qi-dd-an-zhuang-freebsd.md)
-* [第 2.5 节 如何在自己的机器上安装 FreeBSD](di-2-zhang-an-zhuang-freebsd/di-2.5-jie-ru-he-zai-zi-ji-de-ji-qi-shang-an-zhuang-freebsd.md)
-* [第 2.6 节 手动安装 FreeBSD](di-2-zhang-an-zhuang-freebsd/di-2.6-jie-shou-dong-an-zhuang-freebsd.md)
-* [第 2.7 节 ee 用法及网络配置](di-2-zhang-an-zhuang-freebsd/di-2.7-jie-ee-yong-fa-ji-wang-luo-pei-zhi.md)
-* [第 2.8 节 常用软件 与 SSH 配置](di-2-zhang-an-zhuang-freebsd/di-2.8-jie-chang-yong-ruan-jian-yu-ssh-pei-zhi.md)
-* [第 2.9 节 触摸板的设置](di-2-zhang-an-zhuang-freebsd/di-2.9-jie-chu-mo-ban-de-she-zhi.md)
-* [第 2.10 节 声卡与网卡设置](di-2-zhang-an-zhuang-freebsd/di-2.10-jie-sheng-ka-yu-wang-ka-she-zhi.md)
-* [第 2.11 节 打印机的安装](di-2-zhang-an-zhuang-freebsd/di-2.11-jie-da-yin-ji-de-an-zhuang.md)
-* [第 2.12 节 无线蓝牙鼠标的设置](di-2-zhang-an-zhuang-freebsd/di-2.12-jie-wu-xian-lan-ya-shu-biao-de-she-zhi.md)
-* [第 2.13 节 FreeBSD 硬件选择](di-2-zhang-an-zhuang-freebsd/di-2.13-jie-freebsd-ying-jian-xuan-ze.md)
+* [第 2.1 节 双系统安装](di-2-zhang-an-zhuang-freebsd/di-2.1-jie-shuang-xi-tong-an-zhuang.md)
+* [第 2.2 节 三种虚拟机与 FreeBSD 版本比较](di-2-zhang-an-zhuang-freebsd/di-2.2-jie-san-zhong-xu-ni-ji-yu-freebsd-ban-ben-bi-jiao.md)
+* [第 2.3 节 安装 FreeBSD——基于 Virtual Box](di-2-zhang-an-zhuang-freebsd/di-2.3-jie-an-zhuang-freebsd-ji-yu-virtual-box.md)
+* [第 2.4 节 安装 FreeBSD——基于 Vmware Workstation Pro](di-2-zhang-an-zhuang-freebsd/di-2.4-jie-an-zhuang-freebsd-ji-yu-vmware-workstation-pro.md)
+* [第 2.5 节 腾讯云轻量云及其他服务器安装 FreeBSD](di-2-zhang-an-zhuang-freebsd/di-2.5-jie-teng-xun-yun-qing-liang-yun-ji-qi-ta-fu-wu-qi-dd-an-zhuang-freebsd.md)
+* [第 2.6 节 如何在自己的机器上安装 FreeBSD](di-2-zhang-an-zhuang-freebsd/di-2.6-jie-ru-he-zai-zi-ji-de-ji-qi-shang-an-zhuang-freebsd.md)
+* [第 2.7 节 手动安装 FreeBSD](di-2-zhang-an-zhuang-freebsd/di-2.7-jie-shou-dong-an-zhuang-freebsd.md)
+* [第 2.8 节 ee 用法及网络配置](di-2-zhang-an-zhuang-freebsd/di-2.8-jie-ee-yong-fa-ji-wang-luo-pei-zhi.md)
+* [第 2.9 节 常用软件 与 SSH 配置](di-2-zhang-an-zhuang-freebsd/di-2.9-jie-chang-yong-ruan-jian-yu-ssh-pei-zhi.md)
+* [第 2.10 节 触摸板的设置](di-2-zhang-an-zhuang-freebsd/di-2.10-jie-chu-mo-ban-de-she-zhi.md)
+* [第 2.11 节 声卡与网卡设置](di-2-zhang-an-zhuang-freebsd/di-2.11-jie-sheng-ka-yu-wang-ka-she-zhi.md)
+* [第 2.12 节 打印机的安装](di-2-zhang-an-zhuang-freebsd/di-2.12-jie-da-yin-ji-de-an-zhuang.md)
+* [第 2.13 节 无线蓝牙鼠标的设置](di-2-zhang-an-zhuang-freebsd/di-2.13-jie-wu-xian-lan-ya-shu-biao-de-she-zhi.md)
+* [第 2.14 节 FreeBSD 硬件选择](di-2-zhang-an-zhuang-freebsd/di-2.14-jie-freebsd-ying-jian-xuan-ze.md)
 
 ## 第 3 章 软件源及包管理器
 
