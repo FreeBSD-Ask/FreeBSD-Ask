@@ -17,7 +17,9 @@ jobs:
         uses: lycheeverse/lychee-action@v1
         with: 
           fail: true
-          args: --base . --verbose --no-progress './**/*.md'
+          format: markdown
+          output: ./lychee/out.md
+          args: --config ./.github/lychee.toml './**/*.md'
 
       - name: Create Issue From File
         if: env.lychee_exit_code != 0
