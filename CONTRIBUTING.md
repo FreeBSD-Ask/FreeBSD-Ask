@@ -19,14 +19,11 @@
 	email = # 你的邮箱
 	signingkey = # 你的密钥 ID，使用密钥签名时需要
 [commit]
-  gpgsign = true # 使用密钥签名需要
+  gpgsign = true # 使用密钥签名时需要
 [core]
 	autocrlf = true
-	compression = 9
 [http]
 	proxy = http://localhost:7890 # 设置使用 http 代理
 	postBuffer = 1048576000 # 扩大缓冲区，约 1 GB
 	maxRequestBuffer = 1048576000 # 扩大缓冲区，约 1 GB
-	version = HTTP/1.1
-	sslBackend = openssl
 ```
