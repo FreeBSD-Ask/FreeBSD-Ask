@@ -10,11 +10,11 @@ jobs:
     - uses: tj-actions/changed-files@v44
       id: changed-files
       with:
-        config: '.github/.markdownlint.json'
         files: '**/*.md'
         separator: ","
     - uses: DavidAnson/markdownlint-cli2-action@v16
       if: steps.changed-files.outputs.any_changed == 'true'
       with:
+        config: '.github/.markdownlint.json'
         globs: ${{ steps.changed-files.outputs.all_changed_files }}
         separator: ","
