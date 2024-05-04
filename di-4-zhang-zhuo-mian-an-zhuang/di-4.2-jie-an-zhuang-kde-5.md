@@ -109,7 +109,7 @@ proc            /proc           procfs  rw      0       0
 
 
 ```
-# sysrc sddm_lang="zh_CN.UTF-8"
+# sysrc sddm_lang="zh_CN"
 ```
 
 <img src="../.gitbook/assets/sddmcn.png" alt="" data-size="original">
