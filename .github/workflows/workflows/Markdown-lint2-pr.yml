@@ -1,5 +1,5 @@
 name: 🔗 提交时检查 Markdown 格式
-on: [push, pull_request]
+on: [pull_request]
 
 jobs:
   lint:

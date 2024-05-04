@@ -1,28 +1,26 @@
 name: 🔗 markdownlint-cli2 语法检查
 
-
-on:
-  repository_dispatch:
-  workflow_dispatch:
-  schedule:
-    - cron: "00 18 15 * *"
-
+# Disable automatic runs
+on: [workflow_dispatch]
 
 jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
-    - uses: DavidAnson/markdownlint-cli2-action@v16
-      continue-on-error: true
-      with:
-        config: '.github/.markdownlint.json'
-        fix: true
-        globs: '**/*.md'
-    - name: Commit markdown-lint changes
-      run: |
-        git config --global user.name 'ykla'
-        git config --global user.email 'yklaxds@gmail.com'
-        git commit -am "自动改正 Markdown 拼写格式相关" || echo "未改变任何东西"
-        git push
-        rm -fr vendor
+      - uses: actions/checkout@v4
+      - uses: DavidAnson/markdownlint-cli2-action@v16
+        with:
+          config: '.github/.markdownlint.json'
+          fix: true
+          globs: '**/*.md'
+
+      - name: markdownlint cli2 RP
+        if: failure()
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: "Markdown 格式化"
+          labels: "Markdown"
+          delete-branch: true
+          title: markdownlint
+          body: |
+            格式化——Markdown
