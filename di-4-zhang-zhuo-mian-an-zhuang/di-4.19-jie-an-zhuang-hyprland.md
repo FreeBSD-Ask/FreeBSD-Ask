@@ -5,7 +5,8 @@ Hyprland 是 Wayland 的一个合成器，支持窗口透明、模糊、圆角�
 ![hyprland on freebsd](../.gitbook/assets/hyprland.png)
 
 ## 安装 Hyprland
-
+包或包名变更（截至2024/05/30）：qt5-base包被移除, waybar-hyprland包被移除。<br>
+解决方案：经过qt5-base经过测试，不安装也可以正常进入窗口管理器，正常使用应用程序。经过测试，waybar-hyprland可以换成waybar。<br>
 ```shell-session
 # pkg ins wayland hyprland waybar-hyprland wofi qt5-base qt6-base qt5-wayland qt6-wayland xdg-desktop-portal-hyprland hyprpicker swaybg mako dbus nerd-fonts slurp grim swaylock
 ```
