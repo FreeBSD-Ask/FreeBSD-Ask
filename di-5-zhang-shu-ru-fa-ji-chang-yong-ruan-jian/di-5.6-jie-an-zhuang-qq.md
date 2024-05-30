@@ -2,8 +2,10 @@
 
 ## Linux QQ 3.x（electron）【可选：基于 ArchLinux 兼容层】
 
-请看第 30 章 Linux 兼容层的 ArchLinux 兼容层部分。
+请看第 30 章 Linux 兼容层的 ArchLinux 兼容层部分。  
 
+！！注意，下面arch.sh的下载链接已经失效，可以使用@Alex的“FreeBSD Linux兼容层管理器”进行快速安装。  
+Github存储库地址：<a href="https://github.com/Alex6357/compatmgr">compatmgr</a><br>
 ```shell-session
 # fetch http://book.bsdcn.org/arch.sh #下载脚本构建兼容层
 # sh arch.sh #运行脚本
