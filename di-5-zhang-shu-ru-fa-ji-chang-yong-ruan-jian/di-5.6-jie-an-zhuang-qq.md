@@ -61,8 +61,8 @@ $ yay -S linuxqq # 此时位于 Arch 兼容层！此时用户为 test
 
 > **注意**
 >
-> **如果你双网卡，例如一个有线一个无线，打开QQ以后可能会遇到网络错误的提示，需要给你的空闲网卡随便指派一个IP.**
-> 参见<a href="https://book.bsdcn.org/di-21-zhang-linux-jian-rong-ceng/di-21.13-jie-linux-jian-rong-ceng-gu-zhang-pai-chu-yu-pei-zhi">Linux兼容层故障排除</a>
+> 如果你双网卡，例如一个有线一个无线，打开QQ以后可能会遇到网络错误的提示，需要给你的空闲网卡随便指派一个IP.
+> 参见<a href="https://book.bsdcn.org/di-21-zhang-linux-jian-rong-ceng/di-21.13-jie-linux-jian-rong-ceng-gu-zhang-pai-chu-yu-pei-zhi">Linux兼容层故障排除</a><br>
 > **如果退出后进不去，请加参数 `--in-process-gpu` 执行之即可，即 `/bin/qq  --no-sandbox --in-process-gpu`**。
 
 ![](../.gitbook/assets/qq3.0.png)
