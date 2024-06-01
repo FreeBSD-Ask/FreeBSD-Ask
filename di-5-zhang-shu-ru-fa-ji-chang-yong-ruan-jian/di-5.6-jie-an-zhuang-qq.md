@@ -4,8 +4,9 @@
 
 请看第 30 章 Linux 兼容层的 ArchLinux 兼容层部分。  
 
-！！注意，下面arch.sh的下载链接已经失效，可以使用@Alex的“FreeBSD Linux兼容层管理器”进行快速安装。  
+！！注意，下面arch.sh的下载链接已经失效，可以使用@Alex的“FreeBSD Linux兼容层管理器”安装兼容层，再根据教程手动配置。  
 Github存储库地址：<a href="https://github.com/Alex6357/compatmgr">compatmgr</a><br>
+由于安装脚本丢失，无法一步安装到位，现在无法输入中文，无法联网的问题，请看这里=》<a href="https://book.bsdcn.org/di-21-zhang-linux-jian-rong-ceng/di-21.13-jie-linux-jian-rong-ceng-gu-zhang-pai-chu-yu-pei-zhi">Linux兼容层故障排除</a>
 ```shell-session
 # fetch http://book.bsdcn.org/arch.sh #下载脚本构建兼容层
 # sh arch.sh #运行脚本
