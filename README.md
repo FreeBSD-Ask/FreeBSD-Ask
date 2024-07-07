@@ -12,6 +12,10 @@ FreeBSD 从入门到跑路诞生于 12 月 19 日 2021 年。目的是复兴 Fre
 
 ## 资源
 
+微信公众号: rpicn2025 （扫码关注）
+
+![](./.gitbook/assets/qr.png)
+
 QQ 群：787969044
 
 Telegram 群组：[https://t.me/oh_my_BSD](https://t.me/oh_my_BSD)
