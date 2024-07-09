@@ -53,3 +53,10 @@ $ sysctl hw.snd.default_unit=5
 
 官方打包好的多媒体软件有些是支持 pulseaudio 但是这些软件中的大部分对应的编译选项没有打开。如果需要录制软件的音频输出，可以自行打开 ports 的编译选项自己编译。在软件中设置 pulseaudio 作为音频驱动输出就可以了。
 
+## 网卡设置
+
+### Realtek RTL8125 2.5 G
+
+常见 2.5 G 的网卡都是这个，即螃蟹卡。可以在 Windows 的设备管理器中查看，以下示例就是这个卡：
+
+![Realtek RTL8125 2.5 G](../.gitbook/assets/rtl8125.png)
