@@ -22,8 +22,8 @@
 | DDB pretty-print with CTF | markj Bojan | [c21bc6f3c242](https://cgit.freebsd.org/src/commit/?id=c21bc6f3c2425de74141bfee07b609bf65b5a6b3)                                                                                                   |
 | 跨架构的 kldxref              | jhb         | [0299afdff145](https://cgit.freebsd.org/src/commit/?id=0299afdff145e5d861797fe9c2de8b090c456fba)                                                                                                   |
 |copy_file_range(2) 于 install(1)  | mmatuska    | [5a50d52f112a](https://cgit.freebsd.org/src/commit/?id=5a50d52f112a86ebd0696da6564c7c7befa27f5d)                                                                                                   |
-| NVMe-oF/TCP               | jhb         | [ 定制](https://cgit.freebsd.org/src/commit/?id=a8089ea5aee578e08acab2438e82fc9a9ae50ed8)                                                                                                          |
-| per-file nullfs         | dfr         | 521fbb722c3 (不支持套接字)                                                                                                                                                                         |
+| NVMe-oF/TCP               | jhb         | [a8089ea5aee5](https://cgit.freebsd.org/src/commit/?id=a8089ea5aee578e08acab2438e82fc9a9ae50ed8)                                                                                                          |
+| per-file nullfs         | dfr         | [521fbb722c3](https://cgit.freebsd.org/src/commit/?id=521fbb722c33663cf00a83bca70ad7cb790687b3)(不支持套接字)                                                                                                                                                                         |
 
 # ✈️ 已存在
 
