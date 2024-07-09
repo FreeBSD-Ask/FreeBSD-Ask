@@ -21,7 +21,13 @@ FreeBSD 15 CUEERNT 及 14-STABLE 1400508（即 2024 年 2 月 18 日后以的 ST
 >**1400508 指的是 OSVERSION**
 >
 >可以在 port 开发者手册中的最后一章中查询对应的版本和 Git 提交。
-
+>
+>查看本机 OSVERSION：
+>
+>```
+>root@ykla:~ # uname -U
+>1500019
+>```
 
 详细情况可以看 [wiki/Graphics](https://wiki.freebsd.org/Graphics)
 
