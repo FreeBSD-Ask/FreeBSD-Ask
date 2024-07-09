@@ -1,11 +1,182 @@
 # 第 1.15 节 FreeBSD 开发计划
 
-
 > FreeBSD 的生命周期为每个大版本 5 年，小版本是发布新的小版本版后 +3 个月。
 >
 > FreeBSD 14 开发计划 [FreeBSD 14.0 Planning](https://github.com/bsdjhb/devsummit/blob/main/14.0/planning.md)
 >
 > FreeBSD 15 开发计划 [FreeBSD 15.0 Planning](https://github.com/bsdjhb/devsummit/blob/main/15.0/planning.md)
+
+##
+
+# FreeBSD 15.0 计划
+
+## ✔️ 已完成
+
+已提交到源代码存储库的项目。
+
+| 项目                      | 负责人      | 已提交 / 审查 / 补丁                                                                                                                                                                               |
+| ------------------------- | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| arm64 分支目标识别（BTI）        | andrew      | [d09a64e15d8f](https://cgit.freebsd.org/src/commit/?id=d09a64e15d8fad6588b9aad62979f20afa8441df)                                                                                                   |
+| arm64 bhyve               | andrew      | [47e073941f4e](https://cgit.freebsd.org/src/commit/?id=47e073941f4e7ca6e9bde3fa65abbfcfed6bfa2b)                                                                                                   |
+| 在 bhyve 中的单步 AMD CPU | jhb Bojan   | [e3b4fe645e50](https://cgit.freebsd.org/src/commit/?id=e3b4fe645e50bfd06becb74e52ea958315024d5f), [ca96a942cafb](https://cgit.freebsd.org/src/commit/?id=ca96a942cafb58476e10e887240e594e7923a6e8) |
+| DDB pretty-print with CTF | markj Bojan | [c21bc6f3c242](https://cgit.freebsd.org/src/commit/?id=c21bc6f3c2425de74141bfee07b609bf65b5a6b3)                                                                                                   |
+| 跨架构的 kldxref              | jhb         | [0299afdff145](https://cgit.freebsd.org/src/commit/?id=0299afdff145e5d861797fe9c2de8b090c456fba)                                                                                                   |
+|copy_file_range(2) 于 install(1)  | mmatuska    | [5a50d52f112a](https://cgit.freebsd.org/src/commit/?id=5a50d52f112a86ebd0696da6564c7c7befa27f5d)                                                                                                   |
+| NVMe-oF/TCP               | jhb         | [ 定制](https://cgit.freebsd.org/src/commit/?id=a8089ea5aee578e08acab2438e82fc9a9ae50ed8)                                                                                                          |
+| per-file nullfs         | dfr         | 521fbb722c3 (不支持套接字)                                                                                                                                                                         |
+
+# ✈️ 已存在
+
+未来 2 年内 / 在下次发布之前已经存在且可以上游的项目（也许需要努力使其达到可上游状态）
+
+| 项目                              | 负责人         | 提交 / 审查 / 补丁                                                                                                                                                                                                                                                                                                         |
+| --------------------------------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 在 mv(1) 中实现 copy_file_range()   | pjd            | [D45243](https://reviews.freebsd.org/D45243)                                                                                                                                                                                                                                                                               |
+| 更好的 copy_file_range()后备机制/封装器 | pjd            | [D45243](https://reviews.freebsd.org/D45243)                                                                                                                                                                                                                                                                               |
+| arm64 SVE                         | andrew         | [D43306](https://reviews.freebsd.org/D43306)                                                                                                                                                                                                                                                                               |
+| amd64/arm64 救援内核              | markj / Klara  |                                                                                                                                                                                                                                                                                                                            |
+| iovec 封装器                      | brooks         |                                                                                                                                                                                                                                                                                                                            |
+| bhyve 虚拟机中的硬件监控功能        | jhb Bojan      |                                                                                                                                                                                                                                                                                                                            |
+| 使用 dtrace 进行内联函数跟踪      | markj Christos |                                                                                                                                                                                                                                                                                                                            |
+| 谷歌编程之夏：squashfs         | chuck          |                                                                                                                                                                                                                                                                                                                            |
+| 多核笔记本电脑上的 Powerd 改进    | cperciva       | （与 gallatin@交谈）                                                                                                                                                                                                                                                                                                       |
+| 9p 文件系统的 Port                | dfr            | 与 Juniper 同步（bkumara，khn）                                                                                                                                                                                                                                                                                            |
+| CHERI 各式先决条件（ABI 位）      | brooks         |                                                                                                                                                                                                                                                                                                                            |
+| 在 ZFS 中的分层速率限制           | pjd            | [16205](https://github.com/openzfs/zfs/pull/16205)                                                                                                                                                                                                                                                                         |
+| 改进 NVMe 复位/恢复功能              | imp            | 95% [D45192](https://reviews.freebsd.org/D45192)                                                                                                                                                                                                                                                                           |
+| 简单的库 ABI 检查器               | brooks         | 原型在 [D44271](https://reviews.freebsd.org/D44271)                                                                                                                                                                                                                                                                                                                |
+| 图形安装程序                      | khorben        | [D44279](https://reviews.freebsd.org/D44279) [D44670](https://reviews.freebsd.org/D44670) [D44671](https://reviews.freebsd.org/D44671) [D44672](https://reviews.freebsd.org/D44672) [D44673](https://reviews.freebsd.org/D44673) [D44674](https://reviews.freebsd.org/D44674) [D45000](https://reviews.freebsd.org/D45000) |
+| bhyve 直接使用 Linux 引导器           | 	robn           | （请参阅 [freebsd 虚拟化](https://lists.freebsd.org/archives/freebsd-virtualization/2024-May/002112.html)）                                                                                                                                                                                                                                                                                            |
+
+# 🚧 在进行中
+
+| 项目                                                              | 负责人        | 状态                                         |
+| ----------------------------------------------------------------- | ------------- | -------------------------------------------- |
+| AMD IOMMU 驱动程序                                                | kib           |                                              |
+|重写 certctl                                                       | des           | [D42320](https://reviews.freebsd.org/D42320) |
+| DRM 回归基本系统                                                      | manu          | 90% 完成                                     |
+| devd 事件 磁盘错误 额外信息                                       | imp           | 75%                                          |
+| 对默认 TCP 堆栈模块化                                             | jtl           | 完成代码；需要 UX 支持，使用户更容易使用     |
+| 真正有效的 UnionFS (overlayfs)                                 | olce          | 开始（在计划中）                           |
+| 符合标准、实际的调度优先级                                        | olce          | 75%                                          |
+| SO_SPLICE                                                         | Klara / markj | 刚开始                                       |
+| 无头 bhyve                                                      | markj        | 进行中                                       |
+| amd64 的 kboot 支持                                               | imp        | 2024 年夏末 80%                              |
+| flua 和引导加载程序的更新至 Lua 5.4.7                              | imp        | release in coming weeks, looks "boring"      |
+| 整合我谷歌编程之夏学生代码中的加载器命令行编辑功能 |imp     | git 重做分支可用，需要帮助                   |
+| riscv64 bhyve                                                     | br           | 在虚拟机中启动 FreeBSD                       |
+
+# 💸 需要
+
+未来两年内支持产品和服务所需的东西
+
+| 项目                                                    | 负责人                        | 投入 / 审查 / 补丁 / 状态                                                               |
+| ------------------------------------------------------- | ----------------------------- | --------------------------------------------------------------------------------------- |
+| 新 ELF 内核转储格式                                     | jhb markj                     |                                                                                         |
+| 使 bsdinstall 支持 pkgbase                                 | emaste manu?                  |                                                                                         |
+| 将 pkgbase 整合到发布和相关流程                         | 	bapt                       | 我们能否每个包都有 Makefile                                                         |
+| pkg 组                                                    | allanjude                       |                                                                                         |
+| 为无工具链的 Poudriere 提供支持 jail                   | allanjude                     |                                                                                         |
+| 外部工具链支持                                          | brooks                        |                                                                                         |
+| 预提交 CI 源码，文档                                    | lwhsu imp bofh                | make ci WIP. 需要与 oth 集成                                                            |
+| 改进 make ci ，更方便提交者                      | imp, bofh                     |                                                                                         |
+| 改进 make ci 使其对诸如登录 github 拉取请求等事项有用 | imp                           |                                                                                         |
+| 预提交 CI ports                                         | lwhsu 将与 bapt 和 decke 审查 | bofh 似乎有一些 PoC                                                                     |
+| 通用闪存存储（UFS）驱动程序                                    | loos                          | 需要用于一些嵌入式部署，但未来将更具通用性。即将登陆英特尔平台。同样对 LinuxBoot 有用。 |
+| DTrace 的 -C（首字母大写）再次工作                   | antranigv，markj              | PR 尚未提交，只需运行 dtrace -c 并查看许多包含                                          |
+| 完善了 BSD 用户支持以供发布流程使用                     | imp, dfr, cperciva            | 32 位系统在 64 位系统上的问题，更新非常陈旧的 qemu-bsd-user-static port                 |
+| 优化 bsd-user binfmt 等以方便 jail 用户               | cperciva, imp                 | Colin would like to have per-jail settings for these things                             |
+| 定制 bsd-user binfmt 等以方便 jail 用户            | cperciva                      |                                                                                         |
+| bsd bsd-user + poudriere 支持 RISCV                         | imp, mhorne, jrtc27           | 软件包构建完全损坏，但基本功能正常，需要修复以便我们可以再次拥有 riscv 软件包           |
+|使用 GitHub runner 拉取请求                             | 	imp                         | 从 cirrus-ci 漏洞中的可能出路                                                           |
+| 使用 GitHub Action 改善外部贡献者的体验                 | imp                           | Need help here                                                                          |
+|  S0ix 低闲状态                                          | 	obiwac, jhb                 |                                                                                         |
+| 原生 inotify（2）                                       | tcberner                      | 许多 ports 需要这个                                                                     |
+| OpenSSL 15.0 版本应该搭配什么？                         | gtetlow                       | 在主版本中运行更新的版本以获取浸泡时间                                                  |
+| 不使用 OpenSSL FIPS                                   | gtetlow                       | 该模块没有经过验证，不要让人们上当                                                 |
+
+# 🥺 想要 🙏
+
+这些东西是不是必需的，但是如果有也非常好
+
+| 东西                                                                      | 拥有者                             | 提交 / 审核 / 补丁 / 状态                              |
+| ------------------------------------------------------------------------- | ---------------------------------- | ------------------------------------------------------ |
+| 清理 make -s                                                              | jhb                                | 清理警告并使其保持在控制之下 🔥                        |
+| TPM 支持（GELI，ZFS）                                                     | allanjude tsoome                   | --                                                     |
+| ZFS 加密启动支持                                                          | tsoome allanjude                   | 仅支持 UEFI                                            |
+| 取代 smbfs（v2 或更高版本）                                               | emaste jhixson                     | --                                                     |
+| virtio-fs                                                                 | ??? asomers                        | 重要性表示存在补丁                                     |
+| 在 Lua 中更新系统调用表生成（makesyscalls.lua 的库化）                    | imp                            |                                                        |
+| 精简安装程序（单盘安装，更好的默认设置，一直按回车键就能完成）           | emaste brd                         |                                                        |
+| 扩展每文件的 nullfs 以支持套接字/命名管道                                 | dfr                                |                                                        |
+| 更多容器支持（OCI）                                                       | dfr                                | 需要志愿者。Containerd port 需要维护者。官方镜像/仓库  |
+| 最小化内核                                                                | imp                               | 进行中                                                 |
+| 引导加载程序支持 devmatch                                                 | imp manu	                        | PCI 和 USB                                             |
+| 重写 config(8) （在 lua 中？）                                                | imp kevans                         |                                                        |
+| 合并 devmatch 和 devd（库化）                                             | imp                                | Meena 想帮助这个                                       |
+| 调度程序和 VFS 文档覆盖                                                   | mhorne，olce                       |                                                        |
+| 在大小核心上进行调度（P，E）                                            | olce, mkarels                    | 我认为其他人感兴趣                                     |
+| 完成内核文档（手册第 9 节）审核                                           | mhorne                             |                                                        |
+| 减少 GIANT 的黑客                                                         | jhb imp                            |                                                        |
+| vt(4) i18n 更好（CJK 字体，unicode 字体显示（即表情符号），输入法） | fanchung                            | 在 GSoC'21 中有一个 IME 概念验证                       |
+| 以 root 运行 tarfs                                                              |imp                               |                                                        |
+| overlayfs（用于 tarfs）                                                   | Klara / allanjude                   |                                                        |
+| 内核中对 Rust 的支持                                                      | brooks                             |                                                        |
+| 在用户空间支持 Rust                                                       | brooks                             |                                                        |
+| 为 ZFS 提供 Netlink（zfsd/zed）                                           | allanjude                          |                                                        |
+| netlink 取代 devd 套接字                                                  | bapt                           | 具有内核部分                                           |
+| 登录配置的 UCL 化                                                         | meena                              | allanjude 拥有补丁的开端：D25365                       |
+| 为其余网络工具添加 libxo                                                  | meena                              | 可以询问人们在提议的新标签上 ping phil@                |
+| 分层动态登录类                                                            | ngor，meena                        |                                                        |
+| gve(4) 的 arm64 支持，GCE 的 arm64 实例需要                               | delphij，kibab（lwhsu 在促进） |                                                        |
+| 删除 MAC "label" 的限制                                                   | 	allanjude des                         | 使用 OSD？建立在 bapt 的 mac_do 使用的 per-jail 机制上 |
+| 用于 jails 的 PID 命名空间                                                | pjd dfr allanjude                  | 你想要哪些其他命名空间?                                |
+| 将 dhcpcd 引入基本系统                                                    |                                    | 初始（日期）版本在这里：[D22012](https://reviews.freebsd.org/D22012)                         |
+| 通过 netlink 访问 jail vnet                                               | dfr                                |                                                        |
+| 在内存中进行文件内容的连线和哈希                                          | sjg (wants)                        | 为 mac_veriexec                                        |
+| 更新 flua，添加更多标准绑定，更多“常见”绑定和一些 FreeBSD 系统调用。      |                                    | 启动加载程序也使用 Lua，因此在这里需要一些小心。       |
+| priv(1)                                                                   | pjd                                | 降低进程权限的能力                                     |
+| rctl                                                                      | DFR，PJD？                         | 当前 RCTL 对于资源限制 jails 的工作效果不佳            |
+
+# 🗑️ 候选删除 🪓
+
+我们可能希望废弃的项目。可能需要进一步讨论以达成共识。
+
+| 项目                                                                                                          | 负责人          | 提交 / 审核 / 补丁                                                                        |
+| ------------------------------------------------------------------------------------------------------------- | ---------------- | ----------------------------------------------------------------------------------------- |
+| Firewire 🔥                                                                                                   | imp              | 后来而不是早点（我们在早点时剥离磁盘支持，因为有一个巨大的锁定的 CAM 驱动程序）           |
+| armv6                                                                                                         |	imp/manu       |                                                                                           |
+| i386 内核                                                                                                     | imp             | 时间？                                                                                    |
+| powerpc，powerpcsce 内核                                                                                      | imp              |                                                                                           |
+| PS3 🎮                                                                                                        | imp               | 沒有人使用了（我们需要 PS5 port！）                                                         |
+| powerpc64, powerpc64le（整个 powerpc 架构）                                                                 |                  | <https://bugs.freebsd.org/271826> FreeBSD 在 PowerMac G5 上速度极慢...                      |
+| SoC 支持审核                                                                                                  |imp/manu/mhorne	 |                                                                                           |
+| ftpd                                                                                                          | allanjude        |                                                                                           |
+| 移除 DES                                                                                              | des?             |                                                                                           |
+| sendmail 📮                                                                                                   | bapt?           |                                                                                           |
+|移除引导中的 Forth 编程语言 🔪                                                                                               | imp/stevek       |                                                                                           |
+| 如果使用 EFI 启动安装程序但请求了 BIOS 安装，则发出警告                                                           |                  |                                                                                           |
+| NIS 服务器组件                                                                                                | ~~des?~~         | 还在使用，请添加到 ports (chuck)                                                          |
+| publicwkey(5)                                                                                                 | manu             | [D30683](https://reviews.freebsd.org/D30683) [D30682](https://reviews.freebsd.org/D30682) |
+| targ(4) CAM 目标驱动程序                                                                                      | imp              |                                                                                           |
+| fingerd                                                                                                       | ??               | Meena 想要为此志愿服务                                                                    |
+| 3dfx(4) & `*_isa`                                                                                             | jhb              |                                                                                           |
+| syscons(4) (deprecation at least)                                                                             | emaste / manu    |                                                                                           |
+| 检查以太网驱动程序（100mbps，冷门的 1/10 gbps）                                                               | brooks           |                                                                                           |
+| 检查 CAM 驱动程序（pms(4), hpt\*, siis, mvs 等）                                                              | imp              |                                                                                           |
+| ACPI 安全定时器                                                                                               | cperciva           |                                                                                           |
+| freebsd-update                                                                                              | cperciva            | 一旦软件包基准准备好                                                                      |
+| 32 位平台（仅内核，仍保留 compat32）                                                                              | jhb              |                                                                                           |
+| arm\*soft removal (支持构建完整的软系统，这是在我移除了 libsoft hack 构建和 ld.so 支持之后剩下的全部内容) | imp              |                                                                                           |
+| 支持交换内核堆栈                                                                                              | markj            | 共识？+1 +1 +1 +1 +1                                                                      |
+| 支持 SMP amd64 内核 !                                                                                          | markj         | 共识？ +1 +1                                                                              |
+
+# 传奇
+
+| 符号 | 意义           |
+| ---- | -------------- |
+| ??   | 状态存疑       |
+| !!   | 需要新的负责人 |
 
 ## FreeBSD 14.0 开发计划
 
@@ -17,9 +188,9 @@
 | -------------------------------------------------------- | ------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 基于 nvlist(9) 的 /dev/sndstat 接口                      | khng                                       | [c96151d33509](https://cgit.freebsd.org/src/commit/?id=c96151d33509655efb7fb26768cb56a041c176f1)                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | bhyve 配置                                               | jhb                                        | [621b5090487d](https://cgit.freebsd.org/src/commit/?id=621b5090487de9fed1b503769702a9a2a27cc7bb)                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| 现代的 virtio (1.x) 客户端驱动程序                         | bryanv                                     | [9da9560c4dd3](https://cgit.freebsd.org/src/commit/sys/dev/virtio/virtio.c?id=9da9560c4dd3556519cd391a04f0db157dc3c295)                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| 现代的 virtio (1.x) 客户端驱动程序                       | bryanv                                     | [9da9560c4dd3](https://cgit.freebsd.org/src/commit/sys/dev/virtio/virtio.c?id=9da9560c4dd3556519cd391a04f0db157dc3c295)                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | 支持 KTLS 的 chacha20+poly1035 AEAD                      | jhb                                        | [9c64fc40290e](https://cgit.freebsd.org/src/commit/?id=9c64fc40290e08f6dc6b75aa04084b04e48a61af)                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| 来自 GitHub 的 Sound pin 补丁                                 | imp                                        | [ef790cc7407e](https://cgit.freebsd.org/src/commit/?id=ef790cc7407e827db9563d08a52a71ab36436986)                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| 来自 GitHub 的 Sound pin 补丁                            | imp                                        | [ef790cc7407e](https://cgit.freebsd.org/src/commit/?id=ef790cc7407e827db9563d08a52a71ab36436986)                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | vnode 的 Hole-punching                                   | khng                                       | [de2e15295966](https://cgit.freebsd.org/src/commit/?id=de2e15295966)                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | 用于 FreeBSD 客户端的 kvmclock 驱动程序                  | allanjude                                  | [6fa88a627d5e](https://cgit.freebsd.org/src/commit/?id=6fa88a627d5e) 和 [6c69c6bb4c7f](https://cgit.freebsd.org/src/commit/?id=6c69c6bb4c7f)                                                                                                                                                                                                                                                                                                                                                                                                    |
 | minidump 实时系统                                        | mhorne/allanjude                           | [0a5c04a8926e](https://cgit.freebsd.org/src/commit/?id=0a5c04a8926e)                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
@@ -30,7 +201,7 @@
 | 移除 an(4)                                               | manu                                       | [663b174b5b53](https://cgit.freebsd.org/src/commit/?id=663b174b5b53)                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | NVMe 错误恢复重写                                        | imp                                        | [9bbd0a7ca999](https://cgit.freebsd.org/src/commit/?id=9bbd0a7ca999) 和 [502dc84a8b67](https://cgit.freebsd.org/src/commit/?id=502dc84a8b67)                                                                                                                                                                                                                                                                                                                                                                                                    |
 | Union GEOM 功能                                          | kirk                                       | [c7996ddf8000](https://cgit.freebsd.org/src/commit/?id=c7996ddf8000cfb19a9e91a636f56747860d03d7)                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| 移除 ISA 声卡驱动                                       | emaste                                     | [df51e63eb5d7 (ad1816)](https://cgit.FreeBSD.org/src/commit/?id=df51e63eb5d7e34e7a79da144e962dbf5e7cdb4c) [aa83e9b189d6 (ess)](https://cgit.FreeBSD.org/src/commit/?id=aa83e9b189d67c8aa772fed4f9dd26cbcbff4e3f) [754decef384a (gusc)](https://cgit.FreeBSD.org/src/commit/?id=754decef384a1ab30b39704264742fa33bfa365e) [5126e5eeeb5e (mss)](https://cgit.FreeBSD.org/src/commit/?id=5126e5eeeb5e07ceef3c809452a8c9f508b2d4d1) [5126e5eeeb5e (sbc/sb8/sb16)](https://cgit.FreeBSD.org/src/commit/?id=716924cb4832ea0a440daf09913a06f3166f243e) |
+| 移除 ISA 声卡驱动                                        | emaste                                     | [df51e63eb5d7 (ad1816)](https://cgit.FreeBSD.org/src/commit/?id=df51e63eb5d7e34e7a79da144e962dbf5e7cdb4c) [aa83e9b189d6 (ess)](https://cgit.FreeBSD.org/src/commit/?id=aa83e9b189d67c8aa772fed4f9dd26cbcbff4e3f) [754decef384a (gusc)](https://cgit.FreeBSD.org/src/commit/?id=754decef384a1ab30b39704264742fa33bfa365e) [5126e5eeeb5e (mss)](https://cgit.FreeBSD.org/src/commit/?id=5126e5eeeb5e07ceef3c809452a8c9f508b2d4d1) [5126e5eeeb5e (sbc/sb8/sb16)](https://cgit.FreeBSD.org/src/commit/?id=716924cb4832ea0a440daf09913a06f3166f243e) |
 | DPAA2                                                    | bz                                         | 正在与 Dmitry Salychev 合作 https://github.com/mcusim/freebsd-src/commits/lx2160acex7-dev                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | wireguard 模块                                           | emaste                                     | 可能在 6 月/7 月底合并                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | OpenVPN DCO                                              | kp                                         | [D34340](https://reviews.freebsd.org/D34340)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
@@ -68,14 +239,14 @@
 | 完整的 GPU Passthrough 支持 bhyve(8) 和 edk2                                | manu / corvin   | --                                                                                                                                                                                 |
 | 在 amd64/armv7/arm64 中将 DRM 放入基本系统                                  | manu            | --                                                                                                                                                                                 |
 | nvme 动态命名空间支持                                                       | imp             | 补丁正在进行中，预计在 2022 年第三季度进行评审                                                                                                                                     |
-| jectl (用于 jail 的启动环境)                                               | rew / allanjude | [github: jectl](https://github.com/KlaraSystems/jectl) - 正在测试                                                                                                                  |
+| jectl (用于 jail 的启动环境)                                                | rew / allanjude | [github: jectl](https://github.com/KlaraSystems/jectl) - 正在测试                                                                                                                  |
 | 通过 USB xHCI 调试进行串行控制台                                            | hrs             | 正在进行中，预计在 2022 年 7 月完成                                                                                                                                                |
 | syslogd(8) 重写以支持 TCP 和 TLS                                            | hrs             | 正在进行中，预计在 2022 年 7 月完成                                                                                                                                                |
 | 各种 bhyve 暂停/恢复修复                                                    |                 | 有一些已合并                                                                                                                                                                       |
 | arm64 从 iscsi 引导                                                         | emaste / dch    | [src](https://github.com/khng300/freebsd-src/tree/khng/current/iscsi) https://reviews.freebsd.org/D34475 + https://reviews.freebsd.org/D34476 + https://reviews.freebsd.org/D34477 |
 | arm64 Scalable Vector Extension                                             | andrew          | --                                                                                                                                                                                 |
 | pmcstat 用于 PIEs                                                           | jrtc27          | [D39595](https://reviews.freebsd.org/D39595)                                                                                                                                       |
-| pmcstat 用于独立调试文件                                                    | jrtc27          | 正在进行中(重新处理 [D39626](https://reviews.freebsd.org/D39626)）                                                                                                                |
+| pmcstat 用于独立调试文件                                                    | jrtc27          | 正在进行中(重新处理 [D39626](https://reviews.freebsd.org/D39626)）                                                                                                                 |
 | lposix - 将更多 POSIX 函数添加到基本系统的 flua                             | kevans          | [D39083](https://reviews.freebsd.org/D39083)                                                                                                                                       |
 | jail devctl                                                                 | dch / jamie     | [jail_devctl](https://github.com/fubarnetes/kmod_devctl_jail/) 约 200 行代码                                                                                                       |
 | 记住原始接口名称                                                            | allanjude       | [D28247](https://reviews.freebsd.org/D28247)                                                                                                                                       |
@@ -105,7 +276,7 @@
 | eBPF (用例，例如，linuxemul seccomp 需要这个功能；可能还有软件定义网络和 Linux 风格的跟踪) https://ebpf.io/summit-2020/  | hrs (可能作为 mentee: 0mp)       |                                                                                                                                              |
 | 故障安全的 ZFS 引导码                                                                                                    | allanjude/imp                    | bootonce 已完成，现在需要处理较困难的部分 (引导码本身)                                                                                       |
 | smbfs (客户端) v2 & v3                                                                                                   | !!                               | ??                                                                                                                                           |
-| 更好的自动调整功能，例如读/写缓存 (来自 Axiado 的演讲)                                                                     | imp                              |                                                                                                                                              |
+| 更好的自动调整功能，例如读/写缓存 (来自 Axiado 的演讲)                                                                   | imp                              |                                                                                                                                              |
 | NPF                                                                                                                      | gnn??                            |                                                                                                                                              |
 | 在 netmap 上使用 VPP                                                                                                     | gnn??                            |                                                                                                                                              |
 | 路由套接字重构                                                                                                           | gnn??                            |                                                                                                                                              |
@@ -169,115 +340,3 @@
 | ---- | -------------- |
 | ??   | 状态有问题     |
 | !!   | 需要新的负责人 |
-
-## FreeBSD 15.0 开发计划
-
-### ✔️ 已完成
-
-已提交到代码库的事项。
-
-| 事项 | 负责人 | 提交 / 审查 / 补丁 |
-| ---- | ------ | ------------------ |
-
-### ✈️ 已有事项
-
-已存在于代码库之外的事项，可以在接下来的两年内或者在下一个发布版本之前合并进来(可能需要进一步工作以满足合并要求）。
-
-| 事项                                             | 负责人         | 提交 / 审查 / 补丁 |
-| ------------------------------------------------ | -------------- | ------------------ |
-| 对于 amd64 的 kboot 支持                         | imp            |                    |
-| NVMe-oF/TCP                                      | jhb            |                    |
-| 在 mv 和 install 中添加 copy_file_range()        | pjd            |                    |
-| 更好的 copy_file_range() fallback/wrapper       | pjd            |                    |
-| arm64 分支目标标识                               | andrew         |                    |
-| arm64 SVE                                        | andrew         |                    |
-| amd64/arm64 救援内核                             | markj / Klara  |                    |
-| arm64 bhyve                                      | andrew         |                    |
-| iovec wrappers                                  | brooks         |                    |
-| 在 bhyve 中支持单步执行 AMD CPU                  | jhb Bojan      |                    |
-| 在 bhyve 客户机中支持硬件监视点                  | jhb Bojan      |                    |
-| DDB 通过 CTF 进行优化打印                        | jhb Bojan      |
-| 整合来自我的谷歌代码之夏学生的代码的加载器命令行编辑功能 | imp            | 需要协助           |
-| 使用 dtrace 进行内联函数追踪                     | markj Christos |                    |
-| 谷歌代码之夏：squashfs                                   | chuck          |                    |
-
-### 💸 需要
-
-在接下来的两年内，某些人需要支持产品或服务的事项。
-
-| 事项                             | 负责人                        | 提交 / 审查 / 补丁 / 状态                                           |
-| -------------------------------- | ----------------------------- | ------------------------------------------------------------------- |
-| 新的 ELF 内核转储格式            | jhb markj                     |                                                                     |
-| 完成 pkgbase                     | emaste                        |                                                                     |
-| Poudriere 支持无需工具链的 jail | allanjude brd                 |                                                                     |
-| 外部工具链支持                   | brooks                        |                                                                     |
-| 预提交 CI(代码库、文档）        | lwhsu imp bofh                |                                                                     |
-| 预提交 CI(Port）                | lwhsu 将与 bapt 和 decke 核实 |                                                                     |
-| 本地和云开发者 CI                | bofh lwhsu                    |                                                                     |
-| 其他 CI 改进                     | lwhsu                         |                                                                     |
-| 通用闪存存储驱动                 | loos                          | 目前在一些嵌入式部署中需要，未来可能更加通用。即将支持 Intel 平台。 |
-
-### 🥺 想要
-
-这些是希望有但不是必要的事项。
-
-| 事项                                                                        | 负责人                  | 提交 / 审查 / 补丁 / 状态                                                                                         |
-| --------------------------------------------------------------------------- | ----------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| TPM 支持(GELI，ZFS）                                                       | allanjude               | --                                                                                                                |
-| smbfs 替代(v2 或更好）                                                     | emaste jhixson          | --                                                                                                                |
-| 9pfs 客户端                                                                 | bkumara，khng / Juniper | --                                                                                                                |
-| overlayfs                                                                   | thj / Klara             |                                                                                                                   |
-| 关于 syscall 表生成的更新(makesyscalls.lua 的库化）                        | imp                     |                                                                                                                   |
-| 简化的安装程序(单个磁盘，有更好的默认值，例如按回车键完成）                   | emaste brd              |                                                                                                                   |
-| 每个文件的 nullfs                                                           | dfr                     |                                                                                                                   |
-| 更多的容器支持                                                              | emaste                  | 合作学生                                                                                                          |
-| MINIMAL 内核                                                                | imp                     |                                                                                                                   |
-| 启动加载程序支持 devmatch                                                   | imp manu                |                                                                                                                   |
-| 重写 config(8)(使用 Lua？）                                                | imp kevans              |                                                                                                                   |
-| 跨 kldxref                                                                  | brooks / jhb            | (kevans 有一种有些混乱的原型或两种）                                                                             |
-| 合并 devmatch 和 devd(库）                                               | imp                     | meena 愿意协助                                                                                                    |
-| 调度器和 VFS 文档覆盖范围                                                   | mhorne                  |                                                                                                                   |
-| 减少 GIANT 的修改                                                           | jhb imp                 |                                                                                                                   |
-| vt(4)的更好 i18n 支持(CJK 字体，Unicode 字体显示(例如表情符号），输入法） | fanchung                | 在 GSoC'21 有一个[IME PoC](https://wiki.freebsd.org/SummerOfCode2021Projects/InputMethodInFreeBSDVirtualTerminal) |
-| 以 tarfs 为根目录                                                           | imp                     |                                                                                                                   |
-| 内核中对 Rust 的支持                                                        | brooks                  |                                                                                                                   |
-| 用户空间中对 Rust 的支持                                                    | brooks                  |                                                                                                                   |
-| 用于 ZFS 的 netlink(zfsd/zed）                                             | allanjude               |                                                                                                                   |
-| 用 netlink 替代 devd 套接字                                                 | bapt                    | 内核部分已完成                                                                                                    |
-| 将 login.conf 转为 UCL 格式                                                 | meena                   | allanjude 已有一些补丁：[D25365](https://reviews.freebsd.org/D25365)                                              |
-| 剩余网络工具的改进(lixo）                                                  | meena                   |                                                                                                                   |
-| 层次化动态登录类别                                                          | ngor，meena             |                                                                                                                   |
-
-### 🗑️ 候选删除项 🪓
-
-这些是我们可能希望弃用的事项。可能需要进一步讨论以达成共识。
-
-| 事项                                                                                                  | 负责人          | 提交 / 审查 / 补丁                                                                        |
-| ----------------------------------------------------------------------------------------------------- | --------------- | ----------------------------------------------------------------------------------------- |
-| Firewire 🔥                                                                                           | imp             |                                                                                           |
-| armv6                                                                                                 | imp/manu        |                                                                                           |
-| SoC 支持审查                                                                                          | imp/manu/mhorne |                                                                                           |
-| ftpd                                                                                                  | allanjude       |                                                                                           |
-| 删除 DES 的相关模块                                                                                   | des?            |                                                                                           |
-| sendmail                                                                                              | bapt?           |                                                                                           |
-| bootloader 中的 forth 支持 🔪                                                                         | imp/stevek      |                                                                                           |
-| NIS 服务器组件                                                                                        | des?            |                                                                                           |
-| publicwkey(5)                                                                                         | manu            | [D30683](https://reviews.freebsd.org/D30683)、[D30682](https://reviews.freebsd.org/D30682) |
-| targ(4) CAM 目标驱动程序                                                                              | imp             |                                                                                           |
-| fingerd                                                                                               | ??              | meena 自愿负责                                                                        |
-| 3dfx(4)和`*_isa`                                                                                      | jhb             |                                                                                           |
-| syscons(4)(至少弃用）                                                                                | emaste / manu   |                                                                                           |
-| 审查以太网驱动程序(100Mbps、少见的 1/10Gbps）                                                        | brooks          |                                                                                           |
-| 审查 CAM 驱动程序(pms(4)等）                                                                         | imp             |                                                                                           |
-| ACPI 安全定时器                                                                                       | cperciva        |                                                                                           |
-| freebsd-update                                                                                        | cperciva        | 如果 pkgbase 准备好                                                                       |
-| 32 位平台(内核，保留 compat32）                                                                      | jhb             |                                                                                           |
-| arm\*soft 移除(支持构建完整的软件系统，在删除 libsoft hack 构建和 ld.so 支持后，这是唯一剩下的部分） | imp             |                                                                                           |
-
-### 图例
-
-| 符号 | 含义           |
-| ---- | -------------- |
-| ??   | 状态有问题     |
-| !!   | 需要新的负责人 |
-
