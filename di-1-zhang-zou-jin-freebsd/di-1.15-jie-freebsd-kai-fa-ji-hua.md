@@ -48,7 +48,7 @@
 | 图形安装程序                      | khorben        | [D44279](https://reviews.freebsd.org/D44279) [D44670](https://reviews.freebsd.org/D44670) [D44671](https://reviews.freebsd.org/D44671) [D44672](https://reviews.freebsd.org/D44672) [D44673](https://reviews.freebsd.org/D44673) [D44674](https://reviews.freebsd.org/D44674) [D45000](https://reviews.freebsd.org/D45000) |
 | bhyve 直接使用 Linux 引导器           | 	robn           | （请参阅 [freebsd 虚拟化](https://lists.freebsd.org/archives/freebsd-virtualization/2024-May/002112.html)）                                                                                                                                                                                                                                                                                            |
 
-# 🚧 在进行中
+# 🚧 进行中
 
 | 项目                                                              | 负责人        | 状态                                         |
 | ----------------------------------------------------------------- | ------------- | -------------------------------------------- |
