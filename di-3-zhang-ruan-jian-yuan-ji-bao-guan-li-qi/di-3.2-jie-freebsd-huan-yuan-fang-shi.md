@@ -6,13 +6,13 @@ FreeBSD 有四类源：pkg、ports、portsnap、update。
 >
 > `portsnap` 在 FreeBSD 14 中已经弃用，改为使用 `gitup`（请参考第 3.3 节）：
 >
-> ```shell-session
+> ````shell-session
 > 20230422:
 > 	Remove portsnap(8).  Users are encouraged to obtain the ports tree
 > 	using git instead.
 > 	```
 >
-
+> ````
 
 **对于失去安全支持的版本，请参考最后一节。**
 
@@ -20,7 +20,7 @@ FreeBSD 有四类源：pkg、ports、portsnap、update。
 
 **目前境内没有官方镜像站，以下均为非官方镜像站。**
 
-## pkg 源:pkg 源提供二进制安装包
+## pkg 源：pkg 源提供二进制安装包
 
 pkg 的下载路径是 `/var/cache/pkg/`
 
@@ -51,15 +51,15 @@ FreeBSD: { enabled: no }
 
 **故障排除**
 
->**并非所有源都有 `quarterly` 和 `latest`，具体请看 <https://pkg.freebsd.org/> 。**
+> **并非所有源都有 `quarterly` 和 `latest`，具体请看 <https://pkg.freebsd.org/> 。**
 >
->**若要获取滚动更新的包，请将 `quarterly` 修改为 `latest`。二者区别见 FreeBSD 手册。请注意, `CURRENT` 版本只有 `latest`：**
+> **若要获取滚动更新的包，请将 `quarterly` 修改为 `latest`。二者区别见 FreeBSD 手册。请注意, `CURRENT` 版本只有 `latest`：**
 >
->>```shell-session
->># sed -i '' 's/quarterly/latest/g' /etc/pkg/FreeBSD.conf
->>```
+> > ```shell-session
+> > # sed -i '' 's/quarterly/latest/g' /etc/pkg/FreeBSD.conf
+> > ```
 >
->**若要使用 https,请先安装 `security/ca_root_nss` ,并将 `http` 修改为 `https`,最后使用命令 `# pkg update -f` 刷新缓存即可,下同。**
+> **若要使用 https,请先安装 `security/ca_root_nss` ,并将 `http` 修改为 `https`,最后使用命令 `# pkg update -f` 刷新缓存即可,下同。**
 
 ### 中国科学技术大学开源软件镜像站
 
@@ -234,4 +234,3 @@ Fetching http://ftp-archive.freebsd.org/pub/FreeBSD-Archive/ports/amd64/packages
 ```
 
 **pkg 是不可用的，会提示找不到 `digests.txz` 和 `repo.txz`，因为当时 pkgng 还没有被官方所支持，仍然仅支持使用 `pkg_*` 命令。**
-
