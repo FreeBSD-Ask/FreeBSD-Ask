@@ -38,8 +38,8 @@
 | iovec 封装器                      | brooks         |                                                                                                                                                                                                                                                                                                                            |
 | bhyve 虚拟机中的硬件监控功能        | jhb Bojan      |                                                                                                                                                                                                                                                                                                                            |
 | 使用 dtrace 进行内联函数跟踪      | markj Christos |                                                                                                                                                                                                                                                                                                                            |
-| 谷歌编程之夏：squashfs         | chuck          |                                                                                                                                                                                                                                                                                                                            |
-| 多核笔记本电脑上的 Powerd 改进    | cperciva       | （与 gallatin@交谈）                                                                                                                                                                                                                                                                                                       |
+| 谷歌编程之夏——squashfs         | chuck          |                                                                                                                                                                                                                                                                                                                            |
+| 改进多核笔记本电脑上的 Powerd     | cperciva       | （与 gallatin@交谈）                                                                                                                                                                                                                                                                                                       |
 | 9p 文件系统的 Port                | dfr            | 与 Juniper 同步（bkumara，khn）                                                                                                                                                                                                                                                                                            |
 | CHERI 各式先决条件（ABI 位）      | brooks         |                                                                                                                                                                                                                                                                                                                            |
 | 在 ZFS 中的分层速率限制           | pjd            | [16205](https://github.com/openzfs/zfs/pull/16205)                                                                                                                                                                                                                                                                         |
@@ -55,7 +55,7 @@
 | AMD IOMMU 驱动程序                                                | kib           |                                              |
 |重写 certctl                                                       | des           | [D42320](https://reviews.freebsd.org/D42320) |
 | DRM 回归基本系统                                                      | manu          | 90% 完成                                     |
-| devd 事件 磁盘错误 额外信息                                       | imp           | 75%                                          |
+| devd 事件磁盘错误额外信息                                       | imp           | 75%                                          |
 | 对默认 TCP 堆栈模块化                                             | jtl           | 完成代码；需要 UX 支持，使用户更容易使用     |
 | 真正有效的 UnionFS (overlayfs)                                 | olce          | 开始（在计划中）                           |
 | 符合标准、实际的调度优先级                                        | olce          | 75%                                          |
@@ -72,18 +72,18 @@
 
 | 项目                                                    | 负责人                        | 投入 / 审查 / 补丁 / 状态                                                               |
 | ------------------------------------------------------- | ----------------------------- | --------------------------------------------------------------------------------------- |
-| 新 ELF 内核转储格式                                     | jhb markj                     |                                                                                         |
+| 新的 ELF 内核转储格式                                     | jhb markj                     |                                                                                         |
 | 使 bsdinstall 支持 pkgbase                                 | emaste manu?                  |                                                                                         |
-| 将 pkgbase 整合到发布和相关流程                         | 	bapt                       | 我们能否每个包都有 Makefile                                                         |
+| 将 pkgbase 整合到发布和相关流程                         | 	bapt                       | 我们能否让每个包都有 Makefile                                                         |
 | pkg 组                                                    | allanjude                       |                                                                                         |
 | 为无工具链的 Poudriere 提供支持 jail                   | allanjude                     |                                                                                         |
 | 外部工具链支持                                          | brooks                        |                                                                                         |
 | 预提交 CI 源码，文档                                    | lwhsu imp bofh                | make ci WIP. 需要与 oth 集成                                                            |
-| 改进 make ci ，更方便提交者                      | imp, bofh                     |                                                                                         |
-| 改进 make ci 使其对诸如登录 github 拉取请求等事项有用 | imp                           |                                                                                         |
+| 改进 make ci 以方便提交者                      | imp, bofh                     |                                                                                         |
+| 改进 make ci 以对诸如登录 github 拉取请求等事项有益 | imp                           |                                                                                         |
 | 预提交 CI ports                                         | lwhsu 将与 bapt 和 decke 审查 | bofh 似乎有一些 PoC                                                                     |
 | 通用闪存存储（UFS）驱动程序                                    | loos                          | 需要用于一些嵌入式部署，但未来将更具通用性。即将登陆英特尔平台。同样支持 LinuxBoot。 |
-| DTrace 的 -C（首字母大写）再次工作                   | antranigv，markj              | PR 尚未提交，只需运行 `dtrace -c` 就可查看所含文件                                          |
+| DTrace 的 -C（大写字母）参数再次生效                  | antranigv，markj              | PR 尚未提交，只需运行 `dtrace -c` 就可查看所含文件                                          |
 | 完善了 bsd-user 支持以供发布流程使用                     | imp, dfr, cperciva            | 32 位系统在 64 位系统上的问题，对非常陈旧的 qemu-bsd-user-static 软件进行更新                |
 | 优化 bsd-user binfmt 等以方便 jail 用户               | cperciva, imp                 | Colin would like to have per-jail settings for these things                             |
 | 定制 bsd-user binfmt 等以方便 jail 用户            | cperciva                      |                                                                                         |
@@ -110,7 +110,7 @@
 | 精简安装程序（使单个盘上的安装有更优的默认设置，一直按回车键就能完成）           | emaste brd                         |                                                        |
 | 增补 per-file 以支持套接字/命名管道                                 | dfr                                |                                                        |
 | 更多容器支持（OCI）                                                       | dfr                                | 需要志愿者。软件 Containerd 需要维护者。官方镜像/仓库  |
-| 最小化内核                                                                | imp                               | 进行中                                                 |
+| 精简内核                                                                | imp                               | 进行中                                                 |
 | 使引导加载程序支持 devmatch                                                 | imp manu	                        | PCI 和 USB                                             |
 | 重写 config(8) （使用 lua ？）                                                | imp kevans                         |                                                        |
 | 合并 devmatch 和 devd（库）                                             | imp                                | Meena 想帮助这个                                       |
@@ -129,12 +129,12 @@
 | 为其余网络工具添加 libxo                                                  | meena                              | 如有问题请在提议的页面上 ping phil@                |
 | 分层动态登录类                                                            | ngor，meena                        |                                                        |
 | gve(4) 的 arm64 支持，GCE 的 arm64 实例需要                               | delphij，kibab（由 lwhsu 推动） |                                                        |
-| 删除 MAC “label” 的限制                                                   | 	allanjude des                         | 使用 OSD？建立在 bapt 的 mac_do 使用的 per-jail 机制上 |
+| 删除 MAC “label”的限制                                                   | 	allanjude des                         | 使用 OSD？建立在 bapt 的 mac_do 使用的 per-jail 机制上 |
 | 用于 jails 的 PID 命名空间                                                | pjd dfr allanjude                  | 你想要哪些其他命名空间?                                |
 | 将 dhcpcd 引入基本系统                                                    |                                    | 初始（日期）版本在这里：[D22012](https://reviews.freebsd.org/D22012)                         |
 | 通过 netlink 访问 jail vnet                                               | dfr                                |                                                        |
-| 在内存中进行文件内容的连线和哈希                                          | sjg (wants)                        | 为 mac_veriexec                                        |
-| 更新 flua，添加更多标准绑定，更多“常见”绑定和一些 FreeBSD 系统调用。      |                                    | 启动加载程序也使用 Lua，因此在这里需要一些小心。       |
+| 在计算哈希值的同时能够在内存中操作文件。                                          | sjg (wants)                        | 为 mac_veriexec                                        |
+| 更新 flua，以添加更多标准组件，更多“常见”组件及 FreeBSD 系统调用。      |                                    | 启动加载程序也使用 Lua，因此在这里需要小心些。       |
 | priv(1)                                                                   | pjd                                | 降低进程权限的能力                                     |
 | rctl                                                                      | DFR，PJD？                         | 当前 RCTL 对于资源限制 jails 的工作效果不佳            |
 
