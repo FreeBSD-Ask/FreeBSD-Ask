@@ -3,7 +3,7 @@
 **翻译同步至 BSDCan 2024 devsummit**
 
 
-> FreeBSD 的生命周期为每个大版本 5 年，小版本是发布新的小版本版后 +3 个月。
+> FreeBSD 的生命周期为每个大版本 4 年，小版本是发布新的小版本版后 +3 个月。
 >
 > FreeBSD 14 开发计划 [FreeBSD 14.0 Planning](https://github.com/bsdjhb/devsummit/blob/main/14.0/planning.md)
 >
