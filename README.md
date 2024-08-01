@@ -71,6 +71,7 @@ FreeBSD 中文 man 手册：[https://man.bsdcn.org](https://man.bsdcn.org/)
 ## 意见反馈
 
 由于编写者水平所限，书中缺点和谬误之处自不可免，希望大家随时提出批评意见，以便修正。你可以利用 Github 的各种交互功能与我们联系：Github上提交 Issue、Pull request 或者加入 QQ 群或 Telegram 群。
+
 **待解决：BiliBili、自动化入群验证与成员管理系统、重修黑名单**
 
 2024 FreeBSD 中文社区 版权所有
