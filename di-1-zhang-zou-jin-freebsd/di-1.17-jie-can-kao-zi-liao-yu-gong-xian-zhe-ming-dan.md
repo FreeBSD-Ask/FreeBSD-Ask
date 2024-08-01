@@ -125,6 +125,6 @@ Shengyun
 
 livrth
 
-<mark style="color:green;">Voosk</mark>
+Voosk
 
 **注意：如果缺少了你的信息或者不想被列出，请发起 issue。**
