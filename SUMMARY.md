@@ -1,6 +1,7 @@
 # Table of contents
 
 * [FreeBSD 从入门到跑路](README.md)
+* [编辑日志](CHANGELOG.md)
 
 ## 第 1 章 走进 FreeBSD
 
