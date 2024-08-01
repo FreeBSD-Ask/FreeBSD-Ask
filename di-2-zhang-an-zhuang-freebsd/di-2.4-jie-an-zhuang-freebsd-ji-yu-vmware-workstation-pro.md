@@ -39,7 +39,7 @@
 
 > **警告**
 >
-> iso 镜像不适用于物理机，物理机请使用 img 镜像。
+> iso 镜像并不适用于物理机，物理机请使用 img 镜像。**除非你有光盘，否则不要下 ISO；也不要没事找事用 Ventoy，下载个 img 刻录并不费事。如果安装中出现任何问题，请回过头来看看这里这句话。**
 
 >**提示**
 >
@@ -54,30 +54,73 @@ CURRENT 测试版（仅限专业用户，对于该版本来说，无法启动，
 FreeBSD 旧版本下载地址: [http://ftp-archive.freebsd.org/pub/FreeBSD-Archive/old-releases/amd64/ISO-IMAGES/](http://ftp-archive.freebsd.org/pub/FreeBSD-Archive/old-releases/amd64/ISO-IMAGES/)
 
 
-
-## 虚拟机下载
+## 博通（broadcom）账号
 
 ### 博通（broadcom）账号注册
 
-VMware 已被博通收购。**故目前下载任何博通产品均须注册博通账号。**
+VMware 已被博通收购。**故目前下载任何博通产品均须先注册、登录博通账号。** 目前任何非此域名（`broadcom.com`）教程均无效。
 
-1. 打开 <https://support.broadcom.com/>
-2. 点击右上角的“Register”（注册）（或者直接打开 <https://profile.broadcom.com/web/registration>）
-3. 在页面“Email Address”（电子邮件）处输入你的电子邮箱。如果没有的话，可以用你的 QQ 号，然后直接加上一个`@qq.com`——比如你的 QQ 号是 `1212111111`，那么你的 QQ 邮箱则为 `1212111111@qq.com`
-4. 在页面“Enter text from image”（输入图片上的文本）处输入图片上的文本信息（实际上是验证码）。如果看不清或者不认识，可以点 `Enter text from image` 右侧的🔁
-5. 点击“Next”（继续）
-6. 如果你使用的是 QQ号生成的邮箱，请打开 <https://wx.mail.qq.com/>。其他邮箱请在各自网站打开，如果不知道，请使用 QQ 邮箱。
-7. 把第五步得到的“Verification Code: 972980”，中的 972980（你的和我不一样，找你自己的）填到“Enter text from image” 里面。
-8. 点击“Verify & Continue”（确认并继续）
-9. 注册完成。
+>**博通（broadcom）账号的注册流程**
+>
+>- 打开 <https://support.broadcom.com/>
+>
+> ![打开 <https://support.broadcom.com/>](../.gitbook/assets/Register.png)
+>
+>- 点击右上角的“Register”（注册）（或者直接打开 <https://profile.broadcom.com/web/registration>）
+>>
+>>在页面“Email Address”（电子邮件）处输入你的电子邮箱。如果没有的话，可以用你的 QQ 号，然后直接加上一个`@qq.com`——比如你的 QQ 号是 `1212111111`，那么你的 QQ 邮箱则为 `1212111111@qq.com`
+>>
+>>在页面“Enter text from image”（输入图片上的文本）处输入图片上的文本信息（实际上是验证码）。如果看不清或者不认识，可以点 `Enter text from image` 右侧的🔁
+>>点击“Next”（继续）
+>>
+>>如果你使用的是 QQ号生成的邮箱，请打开 <https://wx.mail.qq.com/>。其他邮箱请在各自网站打开，如果不知道，请使用 QQ 邮箱。
+>
+>![注册](../.gitbook/assets/Register2.png)
+>
+>- 把第五步得到的“Verification Code: 972980”，中的 972980（你的和我不一样，找你自己的）填到“Enter text from image” 里面。
+>
+>![邮箱验证码](../.gitbook/assets/mail.png)
+>
+>- 点击“Verify & Continue”（确认并继续）
+>
+>![输入邮箱验证码](../.gitbook/assets/Verify.png)
+>
+>- 完成注册
+>
+>![完成注册](../.gitbook/assets/comreg.png)
+>
+>- 结束注册流程
+>  
+>![结束注册](../.gitbook/assets/dolater.png)
+
 
 ### 博通（broadcom）账号登录
 
-1. 打开 <https://support.broadcom.com/>
-2. 点击右上角的“Login”（登录）（或者直接打开 <https://support.broadcom.com/c/portal/login>）
+>**博通（broadcom）账号登录流程**
+>
+>- 打开 <https://support.broadcom.com/>
+>>
+>>点击右上角的“Login”（登录）（或者直接打开 <https://support.broadcom.com/c/portal/login>）
+>
+>![登录](../.gitbook/assets/loginbcm.png)
+>
+>- Username（用户名）就是你注册时候的邮箱。然后点“Next”（下一步）
+>
+>![登录](../.gitbook/assets/loginbcm2.png)
+>
+>- 点击下一步
+>
+>![点击下一步](../.gitbook/assets/loginbcm3.png)
+>
+>- 点击登录
+>
+>![点击登录](../.gitbook/assets/loginbcm4.png)
+>
+>![登录后界面](../.gitbook/assets/afterlogin.png)
+
+## 博通（broadcom）产品下载
 
 ### VMware Workstation Pro 下载（推荐）
-
 
 <https://support.broadcom.com/group/ecx/productdownloads?subfamily=VMware+Workstation+Pro>
 
@@ -88,11 +131,11 @@ VMware Workstation Pro 目前对于个人用户来说是 **免费下载、免费
 
 博通所有开源/社区产品都被整合到了这里进行下载。
 
-访问地址：<https://community.broadcom.com/flings/home>
+访问地址：<https://community.broadcom.com/flings/home>。目前任何非此域名教程（`community.broadcom.com`）均无效。
 
-如：开源网卡驱动、
+如：Community Network Driver for ESXi、ESXi Arm Edition 等。
 
-### VMware Workstation Player（已弃用，不要用）
+## VMware Workstation Player（已弃用，不要用）
 
 VMware Workstation Player 目前已弃用。且功能相对 VMware Workstation Pro 非常有缺失。不建议使用，非要下载，请点击 <https://support.broadcom.com/group/ecx/productdownloads?subfamily=VMware%20Workstation%20Player>。目前所有包含该软件的教程均为旧教程。
 
