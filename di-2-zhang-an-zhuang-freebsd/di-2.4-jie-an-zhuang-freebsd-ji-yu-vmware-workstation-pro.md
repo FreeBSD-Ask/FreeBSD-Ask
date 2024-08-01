@@ -57,17 +57,38 @@ FreeBSD 旧版本下载地址: [http://ftp-archive.freebsd.org/pub/FreeBSD-Archi
 
 ## 虚拟机下载
 
-### VMware Workstation Pro
+### 博通（broadcom）账号注册
 
-VMware Workstation Pro 是免费试用下载的，请勿从第三方站点下载，否则会造成一些苦难哲学的后果。点击 Download NOW 即可。左边是 Windows 系统使用，右侧是 Linux 系统使用。该软件虽是收费的，但是授权码并不难获得。
+VMware 已被博通收购。**故目前下载任何博通产品均须注册博通账号。**
 
-[https://www.vmware.com/products/workstation-pro/workstation-pro-evaluation.html](https://www.vmware.com/products/workstation-pro/workstation-pro-evaluation.html)
+1. 打开 <https://support.broadcom.com/>
+2. 点击右上角的“Register”（注册）（或者直接打开 <https://profile.broadcom.com/web/registration>）
+3. 在页面“Email Address”（电子邮件）处输入你的电子邮箱。如果没有的话，可以用你的 QQ号然后直接加上一个`@qq.com`——比如你的 QQ 号是 `1212111111`，那么你的 QQ 邮箱则为 `1212111111@qq.com`
+4. 在页面“Enter text from image”（输入图片上的文本）处输入图片上的文本信息（实际上是验证码）。如果看不清或者不认识，可以点 `Enter text from image` 右侧的🔁
+5. 点击“Next”（继续）
+6. 如果你使用的是 QQ号生成的邮箱，请打开 <https://wx.mail.qq.com/>。其他邮箱请在各自网站打开，如果不知道，请使用 QQ 邮箱。
+7. 把第五步得到的“Verification Code: 972980”，中的 972980（你的和我不一样，找你自己的）填到“Enter text from image” 里面。
+8. 点击“Verify & Continue”（确认并继续）
+9. 注册完成。
 
-### VMware Workstation Player
+### VMware Workstation Pro（推荐）
 
-VMware Workstation Player 是个人免费使用的，你也可以选择此版本。
+VMware Workstation Pro 目前对于个人用户来说是 **免费下载、免费使用、免费授权的。** **请勿从任何第三方站点下载。** 否则会造成一些未知的后果——90% 的问题都是由此产生的。
 
-[https://www.vmware.com/products/workstation-player/workstation-player-evaluation.html](https://www.vmware.com/products/workstation-player/workstation-player-evaluation.html)
+
+### 博通开源/社区产品
+
+访问地址：<https://community.broadcom.com/flings/home>
+
+如：
+
+### VMware Workstation Player（已弃用，不要用）
+
+VMware Workstation Player 目前已弃用。且功能相对 VMware Workstation Pro 非常有缺失。不建议使用，非要下载，请点击 <https://support.broadcom.com/group/ecx/productdownloads?subfamily=VMware%20Workstation%20Player>。目前所有包含该软件的教程均为旧教程。
+
+### 参考文献
+
+- 中文：[Workstation 和 Fusion 对个人使用完全免费，企业许可转向订阅](https://blogs.vmware.com/china/2024/05/16/workstation-%E5%92%8C-fusion-%E5%AF%B9%E4%B8%AA%E4%BA%BA%E4%BD%BF%E7%94%A8%E5%AE%8C%E5%85%A8%E5%85%8D%E8%B4%B9%EF%BC%8C%E4%BC%81%E4%B8%9A%E8%AE%B8%E5%8F%AF%E8%BD%AC%E5%90%91%E8%AE%A2%E9%98%85/)
 
 ## 网络设置
 
