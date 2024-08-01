@@ -63,7 +63,7 @@ VMware 已被博通收购。**故目前下载任何博通产品均须注册博�
 
 1. 打开 <https://support.broadcom.com/>
 2. 点击右上角的“Register”（注册）（或者直接打开 <https://profile.broadcom.com/web/registration>）
-3. 在页面“Email Address”（电子邮件）处输入你的电子邮箱。如果没有的话，可以用你的 QQ号然后直接加上一个`@qq.com`——比如你的 QQ 号是 `1212111111`，那么你的 QQ 邮箱则为 `1212111111@qq.com`
+3. 在页面“Email Address”（电子邮件）处输入你的电子邮箱。如果没有的话，可以用你的 QQ 号，然后直接加上一个`@qq.com`——比如你的 QQ 号是 `1212111111`，那么你的 QQ 邮箱则为 `1212111111@qq.com`
 4. 在页面“Enter text from image”（输入图片上的文本）处输入图片上的文本信息（实际上是验证码）。如果看不清或者不认识，可以点 `Enter text from image` 右侧的🔁
 5. 点击“Next”（继续）
 6. 如果你使用的是 QQ号生成的邮箱，请打开 <https://wx.mail.qq.com/>。其他邮箱请在各自网站打开，如果不知道，请使用 QQ 邮箱。
@@ -71,16 +71,26 @@ VMware 已被博通收购。**故目前下载任何博通产品均须注册博�
 8. 点击“Verify & Continue”（确认并继续）
 9. 注册完成。
 
-### VMware Workstation Pro（推荐）
+### 博通（broadcom）账号登录
+
+1. 打开 <https://support.broadcom.com/>
+2. 点击右上角的“Login”（登录）（或者直接打开 <https://support.broadcom.com/c/portal/login>）
+
+### VMware Workstation Pro 下载（推荐）
+
+
+<https://support.broadcom.com/group/ecx/productdownloads?subfamily=VMware+Workstation+Pro>
 
 VMware Workstation Pro 目前对于个人用户来说是 **免费下载、免费使用、免费授权的。** **请勿从任何第三方站点下载。** 否则会造成一些未知的后果——90% 的问题都是由此产生的。
 
 
 ### 博通开源/社区产品
 
+博通所有开源/社区产品都被整合到了这里进行下载。
+
 访问地址：<https://community.broadcom.com/flings/home>
 
-如：
+如：开源网卡驱动、
 
 ### VMware Workstation Player（已弃用，不要用）
 
