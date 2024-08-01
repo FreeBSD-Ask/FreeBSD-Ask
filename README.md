@@ -18,27 +18,27 @@
 
 本书定位：入门到跑路这本书的目标，并非是对 HandBook 的翻译，而是编写一本类似《鸟哥的 Linux 私房菜：基础学习篇》&《鸟哥的 Linux 私房菜：服务器架设篇》二合一的 FreeBSD 文档。本书是 HandBook 的超集。
 
-**编辑指南概要**：我们欢迎所有支持 FreeBSD 的人进行编写，并会将他们列入贡献者名单。
+**编辑指南概要**：我们欢迎所有支持 FreeBSD 的人进行编写，并会将其列入贡献者名单。
 
 FreeBSD 从入门到跑路诞生于 12 月 19 日 2021 年。目的是复兴 FreeBSD。编写内容为 FreeBSD 的基础和进阶知识。如果你有一定的 Unix 基础，可以跳过第一章。如果你对 FreeBSD 有一定的认识，欢迎你加入我们，一起编写本书，贡献自己的力量，让 FreeBSD 在中国越走越远！
 
 ## 资源
 
+QQ 群：787969044（须答题验证）
+
 微信公众号: rpicn2025 （扫码关注）
 
 ![](./.gitbook/assets/qr.png)
-
-QQ 群：787969044
 
 Telegram 群组：[https://t.me/oh_my_BSD](https://t.me/oh_my_BSD)
 
 Skype: [https://join.skype.com/xktkQtXZopfv](https://join.skype.com/xktkQtXZopfv)
 
-FreeBSD 运行 QQ 需要兼容层；Telegram 原生运行；Skype 可以使用 pidgin+ 插件[net-im/pidgin-skypeweb](https://forums.freebsd.org/threads/skype.66115/)
+FreeBSD 需要兼容层才能运行 QQ；Telegram 可原生运行；Skype 可使用 pidgin+ 插件 [net-im/pidgin-skypeweb](https://forums.freebsd.org/threads/skype.66115/)
 
-HandBook 最新翻译：[https://handbook.bsdcn.org](https://handbook.bsdcn.org/)
+HandBook 翻译：[https://handbook.bsdcn.org](https://handbook.bsdcn.org/)
 
-FreeBSD Port 开发者手册最新翻译：[https://porters-handbook.bsdcn.org](https://porters-handbook.bsdcn.org/)
+FreeBSD Port 开发者手册翻译：[https://porters-handbook.bsdcn.org](https://porters-handbook.bsdcn.org/)
 
 FreeBSD 入门书籍：[https://book.bsdcn.org](https://book.bsdcn.org/)
 
@@ -56,7 +56,7 @@ FreeBSD 中文 man 手册：[https://man.bsdcn.org](https://man.bsdcn.org/)
 
 ## 内容提要
 
-本书由 ykla 发起，并由 FreeBSD 中文社区的一些群成员参与编写的《FreeBSD 从入门到跑路》。我们尝试从 0 开始，带领普通人走进 FreeBSD 世界。本书充分参考了 FreeBSD HandBook，构建了一个完整、科学的目录体系。本书不是一个大杂烩或是大集合，而是为了构建一个自成体系的一本开源书籍。全书共分 31 章，既强调了学习 FreeBSD 的必要基础也提供了内核设计与实现等专业性较强的教程。本书可作为高等学校“FreeBSD 操作系统”课程的本科生教材，同时也适合相关专业研究生或计算机技术人员参考阅读。
+《FreeBSD 从入门到跑路》 由 FreeBSD 中文社区发起。我们尝试从 0 开始，带领普通人走进 FreeBSD 世界。本书充分参考了 FreeBSD HandBook，构建了一个完整、科学的目录体系。本书不是一个大杂烩或是大集合，而是为了构建一个自成体系的一本开源书籍。全书共分 31 章，既强调了学习 FreeBSD 的必要基础也提供了内核设计与实现等专业性较强的教程。本书可作为高等学校“FreeBSD 操作系统”课程的本科生教材，同时也适合相关专业研究生或计算机技术人员参考阅读。
 
 **开源维护与捐赠**：
 
@@ -64,9 +64,9 @@ FreeBSD 中文 man 手册：[https://man.bsdcn.org](https://man.bsdcn.org/)
 
 [点此捐赠 FreeBSD 基金会](https://freebsdfoundation.org/donate)
 
-为了能够更好地维护本书，我们采用了 GitBook 平台来进行协作，并使用 Vuepress 来呈现本书。我们目前的服务器约 5 美元一个月，如果你想为我们提供捐助，请加入我们的 [TG 群](https://t.me/oh_my_BSD) 或者 QQ 群 787969044。如果你也想参与编写，具体请参考 [WIKI](https://github.com/FreeBSD-Ask/FreeBSD-Ask/wiki/%E3%80%8AFreeBSD-%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E8%B7%91%E8%B7%AF%E3%80%8B%E7%BC%96%E8%BE%91%E6%8C%87%E5%8D%97)。
+~~为了能够更好地维护本书，我们采用了 GitBook 平台来进行协作，并使用 Vuepress 来呈现本书。我们目前的服务器约 5 美元一个月，如果你想为我们提供捐助，请加入我们的 [TG 群](https://t.me/oh_my_BSD) 或者 QQ 群 787969044。如果你也想参与编写，具体请参考 [WIKI](https://github.com/FreeBSD-Ask/FreeBSD-Ask/wiki/%E3%80%8AFreeBSD-%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E8%B7%91%E8%B7%AF%E3%80%8B%E7%BC%96%E8%BE%91%E6%8C%87%E5%8D%97)。~~ 由于没人出钱，故已退回 GitBook。这也没什么问题，能够更加专注于内容，而不是每天都在改没有意义的目录和各种配置文件。有多的钱请捐给 FreeBSD 基金会吧。
 
-**贡献者名单**：[名单](https://book.bsdcn.org/di-1-zhang-zou-jin-freebsd/di-1.17-jie-can-kao-zi-liao-yu-gong-xian-zhe-ming-dan)
+**贡献者[名单](https://book.bsdcn.org/di-1-zhang-zou-jin-freebsd/di-1.17-jie-can-kao-zi-liao-yu-gong-xian-zhe-ming-dan)**
 
 ## 意见反馈
 
@@ -74,6 +74,6 @@ FreeBSD 中文 man 手册：[https://man.bsdcn.org](https://man.bsdcn.org/)
 
 黑名单与社区失信名单：[http://chinafreebsd.org/](http://chinafreebsd.org/)
 
-**待解决：BiliBili、微信公众号、自动化入群验证与成员管理系统、重修黑名单**
+**待解决：BiliBili、自动化入群验证与成员管理系统、重修黑名单**
 
 2024 FreeBSD 中文社区 版权所有
