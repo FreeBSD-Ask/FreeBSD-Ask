@@ -116,13 +116,49 @@ VMware 已被博通收购。**故目前下载任何博通产品均须先注册�
 >
 >![点击登录](../.gitbook/assets/loginbcm4.png)
 >
+>- 登录完成
+>
 >![登录后界面](../.gitbook/assets/afterlogin.png)
 
 ## 博通（broadcom）产品下载
 
 ### VMware Workstation Pro 下载（推荐）
 
-<https://support.broadcom.com/group/ecx/productdownloads?subfamily=VMware+Workstation+Pro>
+>**VMware Workstation Pro 下载流程**
+>
+>- 点击右上角对应图标（名字左侧第一个），选择“VMware Cloud Foundation”（VMware 云计算基础架构）
+>  
+>![](../.gitbook/assets/downbcm1.png)
+>
+>- 点击右侧的“My Downloads”（我的下载）
+>
+>![](../.gitbook/assets/downbcm0.png)
+>
+>- 往下翻，点击“VMware Workstation Pro“
+>
+>![点击“VMware Workstation Pro“](../.gitbook/assets/downbcm2.png)
+>
+>- 点击“Release”（发行版），选择最顶部的那个，你看到的不一定和我一样。
+>
+>![点击“Release”（发行版）](../.gitbook/assets/downbcm3.png)
+>
+>**或者跳过上述步骤，直接打开 <https://support.broadcom.com/group/ecx/productdownloads?subfamily=VMware+Workstation+Pro>**
+>
+>![下载主页](../.gitbook/assets/downbcm4.png)
+>
+>- 把红色的 `*`项目填写完成，不会写的自己编，最好不要抄我的。
+>  
+>![补充信息](../.gitbook/assets/downbcm5.png)
+>
+>- 勾选“I agree to Terms and Conditions”（我同意条款及条件）左侧的方框 ⬜，让他变成 🟦。
+>  
+>![同意许可协议](../.gitbook/assets/downbcm6.png)
+>
+>- 点击右侧箭头的云朵图片 ☁️ 即可下载
+>  
+>![下载](../.gitbook/assets/downbcm7.png)
+
+
 
 VMware Workstation Pro 目前对于个人用户来说是 **免费下载、免费使用、免费授权的。** **请勿从任何第三方站点下载。** 否则会造成一些未知的后果——90% 的问题都是由此产生的。
 
