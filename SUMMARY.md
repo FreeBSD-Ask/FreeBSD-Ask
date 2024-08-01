@@ -34,7 +34,7 @@
 * [第 2.6 节 如何在自己的机器上安装 FreeBSD](di-2-zhang-an-zhuang-freebsd/di-2.6-jie-ru-he-zai-zi-ji-de-ji-qi-shang-an-zhuang-freebsd.md)
 * [第 2.7 节 手动安装 FreeBSD](di-2-zhang-an-zhuang-freebsd/di-2.7-jie-shou-dong-an-zhuang-freebsd.md)
 * [第 2.8 节 ee 用法及网络配置](di-2-zhang-an-zhuang-freebsd/di-2.8-jie-ee-yong-fa-ji-wang-luo-pei-zhi.md)
-* [第 2.9 节 常用软件 与 SSH 配置](di-2-zhang-an-zhuang-freebsd/di-2.9-jie-chang-yong-ruan-jian-yu-ssh-pei-zhi.md)
+* [第 2.9 节 常用软件与 SSH 配置](di-2-zhang-an-zhuang-freebsd/di-2.9-jie-chang-yong-ruan-jian-yu-ssh-pei-zhi.md)
 * [第 2.10 节 触摸板的设置](di-2-zhang-an-zhuang-freebsd/di-2.10-jie-chu-mo-ban-de-she-zhi.md)
 * [第 2.11 节 声卡与网卡设置](di-2-zhang-an-zhuang-freebsd/di-2.11-jie-sheng-ka-yu-wang-ka-she-zhi.md)
 * [第 2.12 节 打印机的安装](di-2-zhang-an-zhuang-freebsd/di-2.12-jie-da-yin-ji-de-an-zhuang.md)
