@@ -264,7 +264,7 @@
 * [第 22.0 节 如何订阅 FreeBSD 的邮件列表](di-22-zhang-bian-cheng-yu-kai-fa/di-22.0-jie-ru-he-ding-yue-freebsd-de-you-jian-lie-biao.md)
 * [第 22.1 节 如何报告 Bug](di-22-zhang-bian-cheng-yu-kai-fa/di-22.1-jie-ru-he-bao-gao-bug.md)
 * [第 22.2 节 如何提交一个软件包](di-22-zhang-bian-cheng-yu-kai-fa/di-22.2-jie-ru-he-ti-jiao-yi-ge-ruan-jian-bao.md)
-* [第 22.3 节 如何参与 FreeBSD 协作](di-22-zhang-bian-cheng-yu-kai-fa/di-22.3-jie-ru-he-can-yu-freebsd-xie-zuo.md)
+* [第 22.3 节 如何参与 FreeBSD 开发](di-22-zhang-bian-cheng-yu-kai-fa/di-22.3-jie-ru-he-can-yu-freebsd-xie-zuo.md)
 * [第 22.4 节 C/C++ 环境的配置](di-22-zhang-bian-cheng-yu-kai-fa/di-22.4-jie-cc++-huan-jing-de-pei-zhi.md)
 * [第 22.5 节 Java 环境的配置](di-22-zhang-bian-cheng-yu-kai-fa/di-22.5-jie-java-huan-jing-de-pei-zhi.md)
 * [第 22.6 节 QT 环境的配置](di-22-zhang-bian-cheng-yu-kai-fa/di-22.6-jie-qt-huan-jing-de-pei-zhi.md)
