@@ -167,9 +167,9 @@ VMware Workstation Pro 目前对于个人用户来说是 **免费下载、免费
 
 博通所有开源/社区产品都被整合到了这里进行下载。
 
-访问地址：<https://community.broadcom.com/flings/home>。目前任何非此域名教程（`community.broadcom.com`）均无效。
-
 如：Community Network Driver for ESXi、ESXi Arm Edition 等。
+
+访问地址：<https://community.broadcom.com/flings/home>。目前任何非此域名教程（`community.broadcom.com`）均无效。
 
 ## VMware Workstation Player（已弃用，不要用）
 
