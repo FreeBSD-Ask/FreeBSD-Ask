@@ -11,7 +11,7 @@
 > efibootmgr: efi variables not supported on this system. root? kldload efirt?
 > ```
 >
-> 如果当前系统是 UEFI,efibootmgr 则输出：
+> 如果当前系统是 UEFI，efibootmgr 则输出：
 >
 > ```shell-session
 > # efibootmgr # 默认自带、无需安装。
