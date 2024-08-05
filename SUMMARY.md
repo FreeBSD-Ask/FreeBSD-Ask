@@ -205,7 +205,7 @@
 
 ## 第 18 章 树莓派与 RISCV
 
-* [第 18.1 节 树莓派简介](di-18-zhang-shu-mei-pai-yu-riscv/di-18.1-jie-shu-mei-pai-de-jian-jie.md)
+* [第 18.1 节 树莓派简介与配件选用](di-18-zhang-shu-mei-pai-yu-riscv/di-18.1-jie-shu-mei-pai-de-jian-jie.md)
 * [第 18.2 节 树莓派安装 FreeBSD](di-18-zhang-shu-mei-pai-yu-riscv/di-18.2-jie-xi-tong-an-zhuang.md)
 * [第 18.3 节 树莓派 FreeBSD 配置](di-18-zhang-shu-mei-pai-yu-riscv/di-18.3-jie-shi-yong-pei-zhi.md)
 * [第 18.4 节 USB 网卡与 WIFI](di-18-zhang-shu-mei-pai-yu-riscv/di-18.4-jie-usb-wang-ka-yu-wifi.md)
