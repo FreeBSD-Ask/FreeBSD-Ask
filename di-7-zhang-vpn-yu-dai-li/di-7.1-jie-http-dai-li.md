@@ -41,19 +41,7 @@ $ echo $SHELL
 ```
 ## Git 代理
 
-- 如果使用的是 `sh`, `bash`, `zsh`：
-
-设置：
-```shell-session
-# git config --global http.proxy http://192.168.X.X:7890
-# git config --global https.proxy http://192.168.X.X:7890
-```
-取消：
-
-```shell-session
-# git config --global --unset http.proxy
-# git config --global --unset https.proxy
-```
+见《通过源代码更新》一节。
 
 ## 浏览器配置代理
 
