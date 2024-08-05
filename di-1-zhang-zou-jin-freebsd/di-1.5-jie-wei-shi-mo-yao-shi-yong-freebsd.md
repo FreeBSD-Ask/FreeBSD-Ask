@@ -2,7 +2,7 @@
 
 >**为什么 GPL 是更好的开源许可证?**
 >
->作者阮一峰无论是技术性还是非技术性的内容，都是在 ***云***，不具有任何可参考性，写 GPL 的文章一看就是连 GPL [原文](https://www.gnu.org/licenses/gpl-3.0.html)甚至[中文机器翻译](https://jxself.org/translations/gpl-3.zh.shtml)都没看过，典型是在云。全文写 GPL，没有一处引用了 GPL，不觉得荒唐吗？而且理解完全错误，综合其他技术性文章，基本断定其网站的所有内容都是在云。——[为什么GPL是更好的开源许可证?](https://www.ruanyifeng.com/blog/2010/02/why_gpl_is_a_better_choice.html)，很简单，因为你在瞎编，你连 GPL 三个字母怎么翻译都不知道。你写的它压根就不是客观存在的 GPL。
+>作者阮一峰无论是技术性还是非技术性的内容，都是在 ***云***，不具有任何可参考性，写 GPL 的文章一看就是连 GPL [原文](https://www.gnu.org/licenses/gpl-3.0.html)甚至[中文机器翻译](https://jxself.org/translations/gpl-3.zh.shtml)都没看过，典型是在云。全文写 GPL，没有一处引用了 GPL，不觉得荒唐吗？而且理解完全错误（更多请见“重提 FreeBSD 与大败局”一节），综合其他技术性文章，基本断定其网站的所有内容都是在云。——[为什么GPL是更好的开源许可证?](https://www.ruanyifeng.com/blog/2010/02/why_gpl_is_a_better_choice.html)，很简单，因为你在瞎编，你连 GPL 三个字母怎么翻译都不知道。你写的它压根就不是客观存在的 GPL。
 
 ## 选择 FreeBSD 的一般原因
 
