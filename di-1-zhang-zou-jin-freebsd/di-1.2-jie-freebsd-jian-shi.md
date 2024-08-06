@@ -20,7 +20,7 @@ UNIX -> Networking Release 1->Networking Release 2 ->386BSD -> FreeBSD 1.0
 
 386BSD -> 诉讼（1991-1994） -> 4.4 BSD-Lite -> FreeBSD 2.0
 
-Linus“I have never even checked 386BSD out; when I started on Linux it wast available”
+“I have never even checked 386BSD out; when I started on Linux it wast available”——Linus
 
 ![](../.gitbook/assets/图片2.png)
 
