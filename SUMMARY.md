@@ -28,10 +28,6 @@
 * [第 2.7 节 手动安装 FreeBSD](di-2-zhang-an-zhuang-freebsd/di-2.7-jie-shou-dong-an-zhuang-freebsd.md)
 * [第 2.8 节 自带文本编辑器 ee 的用法](di-2-zhang-an-zhuang-freebsd/di-2.8-jie-ee-yong-fa-ji-wang-luo-pei-zhi.md)
 * [第 2.9 节 常用软件与 SSH 配置](di-2-zhang-an-zhuang-freebsd/di-2.9-jie-chang-yong-ruan-jian-yu-ssh-pei-zhi.md)
-* [第 2.10 节 触摸板的设置](di-2-zhang-an-zhuang-freebsd/di-2.10-jie-chu-mo-ban-de-she-zhi.md)
-* [第 2.11 节 声卡设置](di-2-zhang-an-zhuang-freebsd/di-2.11-jie-sheng-ka-yu-wang-ka-she-zhi.md)
-* [第 2.12 节 打印机的安装](di-2-zhang-an-zhuang-freebsd/di-2.12-jie-da-yin-ji-de-an-zhuang.md)
-* [第 2.13 节 无线蓝牙鼠标的设置](di-2-zhang-an-zhuang-freebsd/di-2.13-jie-wu-xian-lan-ya-shu-biao-de-she-zhi.md)
 * [第 2.14 节 FreeBSD 硬件选择](di-2-zhang-an-zhuang-freebsd/di-2.14-jie-freebsd-ying-jian-xuan-ze.md)
 
 ### 第 3 章 软件源及包管理器
@@ -65,6 +61,9 @@
 * [第 4.17 节 安装 Awesome](di-4-zhang-zhuo-mian-an-zhuang/di-4.17-jie-an-zhuang-awesome.md)
 * [第 4.18 节 安装 FVWM](di-4-zhang-zhuo-mian-an-zhuang/di-4.18-jie-an-zhuang-fvwm.md)
 * [第 4.19 节 安装 Hyprland](di-4-zhang-zhuo-mian-an-zhuang/di-4.19-jie-an-zhuang-hyprland.md)
+* [第 4.20 节 安装 FVWM](di-4-zhang-zhuo-mian-an-zhuang/di-4.20-jie-da-yin-ji-de-an-zhuang.md)
+* [第 4.21 节 触摸板的设置](di-4-zhang-zhuo-mian-an-zhuang/di-4.21-jie-chu-mo-ban-de-she-zhi.md)
+* [第 4.22 节 声卡设置](di-4-zhang-zhuo-mian-an-zhuang/di-4.22-jie-sheng-ka-yu-wang-ka-she-zhi.md)
 
 ### 第 5 章 输入法及常用软件
 
