@@ -44,7 +44,7 @@ UOS 和 Deepin 的关系就好比 RHEL 之于 Fedora。本质上是一种东西�
 
 ### Arch Linux/Manjaro
 
-Arch Linux 俗称“**邪教、洗发水**”。这是我所见过的一个最不稳定的 Linux 发行版，也是被别人忽悠从而安装最多的一个。我难以理解为什么有这么多人选择如此不稳定的一个操作系统。你安装的软件越多，挂的越快。有人会说这是你不看软件发行注记的后果，此言差矣。一个需要看发行注记才能更新的系统，本身就是有问题。Arch Linux 唯一优点就是软件新。似乎随处可见的就是 Arch Linux。Arch Linux 似乎是与苦难哲学挂钩的，关于这一点，请参看 [第十九章-第三节](../di-19-zhang-wen-xue-gu-shi/di-19.3-jie-linux-yu-ku-nan-zhe-xue.md)。
+Arch Linux 俗称“**邪教、洗发水**”。这是我所见过的一个最不稳定的 Linux 发行版，也是被别人忽悠从而安装最多的一个。我难以理解为什么有这么多人选择如此不稳定的一个操作系统。你安装的软件越多，挂的越快。有人会说这是你不看软件发行注记的后果，此言差矣。一个需要看发行注记才能更新的系统，本身就是有问题。Arch Linux 唯一优点就是软件新。似乎随处可见的就是 Arch Linux。Arch Linux 似乎是与苦难哲学挂钩的。
 
 Arch Linux 官方源里基本上没有什么软件，不导入 aur 源（ Arch User Repository，Arch 用户软件仓库）就完全没法用。而 aur 源是[未经过任何代码审查的](https://wiki.archlinux.org/title/Arch_User_Repository)（`Warning: AUR packages are user-produced content. These PKGBUILDs are completely unofficial and have not been thoroughly vetted. Any use of the provided files is at your own risk.`，`警告： AUR 中的软件包是由其他用户编写的，这些 PKGBUILD 完全是非官方的，未经彻底审查。使用这些文件的风险由您自行承担。`）实际上不是未经彻底审查，是根本没有任何审查：也就是说有人往里面塞 `rm -rf /*` 也是可以的。虽然他使用了 fakeroot 但是也无济于事。
 
