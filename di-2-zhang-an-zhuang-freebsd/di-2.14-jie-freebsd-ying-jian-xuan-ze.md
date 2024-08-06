@@ -19,37 +19,6 @@
 >
 > 其他系统见 [INSTALL HOWTO FOR BSD](https://github.com/linuxhw/hw-probe/blob/master/INSTALL.BSD.md)
 
-### 网卡推荐
-
-> **警告**
->
-> 千兆和 2.5G 网卡 **在 15.0 CURRENT 以前都有时断时续的故障。** 如果你有更好的推荐（稳定不掉网）请联系我们。
->
-> 对于 2.5G USB 网卡，似乎只有 RTL 8156 和 RTL 8156B 可选。
-
-|      类型     |         品牌/型号         |           芯片组/参数          | 售价（¥） |                          备注                          |
-| :---------: | :-------------------: | :-----------------------: | :---: | :--------------------------------------------------: |
-|   USB 无线网卡  |   COMFAST CF-WU810N（已停产）   | RTL8188EUS 150M 2.4G 150M |   20  |                       由 rtwn 驱动                      |
-|   USB 无线网卡  |    COMFAST CF-912AC   | RTL8812AU 2.4G & 5G 1200M |   60  |                       由 rtwn 驱动                      |
-|   USB 无线网卡  |    COMFAST CF-915AC   |  RTL8811AU 2.4G & 5G 600M |   49  | 由 rtwn 驱动，套壳的，该型号为理论上支持，我没有实际测试过，如果不支持/支持，都请提交 issue |
-|   USB 无线网卡  |        绿联 N300M       |    RTL8192EU 2.4G 300M    |   30  |   由 rtwn 驱动，该型号为理论上支持，我没有实际测试过，如果不支持/支持，都请提交 issue   |
-|   USB 无线网卡  |     绿联 AC 1300M-双频    | RTL8812AU 2.4G & 5G 1300M |  129  |   由 rtwn 驱动，该型号为理论上支持，我没有实际测试过，如果不支持/支持，都请提交 issue   |
-|   USB 以太网卡  |   绿联 USB 百兆网卡 CR110   |       AX88772A 100M       |   40  |                                                      |
-|   USB 以太网卡  |   绿联 USB 千兆网卡 CM209   |       AX88179A 1000M      |   79  |                       **在 15.0 CURRENT 以前断流**                     |
-|   USB 以太网卡  |  绿联 USB 2.5G 网卡 CM275 |        RTL8156 2.5G       |  189  |                         **在 15.0 CURRENT 以前断流**                               |
-| Type-C 以太网卡 | 绿联 Type-C 转百兆网卡 30287 |       AX88772A 100M       |   59  |                                                      |
-| Type-C 以太网卡 | 绿联 Type-C 转千兆网卡 CM199 |       AX88179A 1000M      |   99  |                       **在 15.0 CURRENT 以前断流**                                   |
-| Type-C 以太网卡 |  绿联 Type-C 转 2.5G 网卡  |        RTL8156 2.5G       |  199  |                         **在 15.0 CURRENT 以前断流**                                 |
-
-**经过在树莓派 5 上的测试，AX88179A 和 RTL8156B 均可连续正常工作不断流，并维持 72 小时以上。**
-
-**如果随便按芯片组来买网卡，FreeBSD 大概率未支持其 VendorID 和 ProductID——比如“DOREWIN 达而稳。这种情况下要联系开发者将你的硬件写入驱动，然后重新编译内核才可以。”**
-
->相关 Bug：
->
-> * [Bug 166724 - if_re(4): watchdog timeout ](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=166724)
->
-> * [Bug 267514 - AXGE(4) ASIX AX88179A ue0: link state changed to DOWN ](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=267514)
 
 ## 归档内容
 

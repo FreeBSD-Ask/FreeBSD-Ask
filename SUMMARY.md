@@ -26,10 +26,10 @@
 * [第 2.5 节 腾讯云轻量云及其他服务器安装 FreeBSD](di-2-zhang-an-zhuang-freebsd/di-2.5-jie-teng-xun-yun-qing-liang-yun-ji-qi-ta-fu-wu-qi-dd-an-zhuang-freebsd.md)
 * [第 2.6 节 如何在自己的机器上安装 FreeBSD](di-2-zhang-an-zhuang-freebsd/di-2.6-jie-ru-he-zai-zi-ji-de-ji-qi-shang-an-zhuang-freebsd.md)
 * [第 2.7 节 手动安装 FreeBSD](di-2-zhang-an-zhuang-freebsd/di-2.7-jie-shou-dong-an-zhuang-freebsd.md)
-* [第 2.8 节 ee 用法及网络配置](di-2-zhang-an-zhuang-freebsd/di-2.8-jie-ee-yong-fa-ji-wang-luo-pei-zhi.md)
+* [第 2.8 节 自带文本编辑器 ee 的用法](di-2-zhang-an-zhuang-freebsd/di-2.8-jie-ee-yong-fa-ji-wang-luo-pei-zhi.md)
 * [第 2.9 节 常用软件与 SSH 配置](di-2-zhang-an-zhuang-freebsd/di-2.9-jie-chang-yong-ruan-jian-yu-ssh-pei-zhi.md)
 * [第 2.10 节 触摸板的设置](di-2-zhang-an-zhuang-freebsd/di-2.10-jie-chu-mo-ban-de-she-zhi.md)
-* [第 2.11 节 声卡与网卡设置](di-2-zhang-an-zhuang-freebsd/di-2.11-jie-sheng-ka-yu-wang-ka-she-zhi.md)
+* [第 2.11 节 声卡设置](di-2-zhang-an-zhuang-freebsd/di-2.11-jie-sheng-ka-yu-wang-ka-she-zhi.md)
 * [第 2.12 节 打印机的安装](di-2-zhang-an-zhuang-freebsd/di-2.12-jie-da-yin-ji-de-an-zhuang.md)
 * [第 2.13 节 无线蓝牙鼠标的设置](di-2-zhang-an-zhuang-freebsd/di-2.13-jie-wu-xian-lan-ya-shu-biao-de-she-zhi.md)
 * [第 2.14 节 FreeBSD 硬件选择](di-2-zhang-an-zhuang-freebsd/di-2.14-jie-freebsd-ying-jian-xuan-ze.md)
@@ -142,6 +142,8 @@
 * [第 14.2 节 WIFI](di-14-zhang-wang-luo-guan-li/di-14.2-jie-wifi.md)
 * [第 14.3 节 USB RNDIS (USB 网络共享)](di-14-zhang-wang-luo-guan-li/di-14.3-jie-usb-rndis-usb-wang-luo-gong-xiang.md)
 * [第 14.4 节 蓝牙](di-14-zhang-wang-luo-guan-li/di-14.4-jie-lan-ya.md)
+* [第 14.5 节 以太网卡](di-14-zhang-wang-luo-guan-li/di-14.5-yi-tai-wang-ka.md)
+* [第 14.6 节 USB 以太网卡和 USB 无线网卡](di-14-zhang-wang-luo-guan-li/di-14.6-USB-wang-ka.md)
 
 ### 第 15 章 FreeBSD 防火墙
 
