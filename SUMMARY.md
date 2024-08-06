@@ -103,10 +103,9 @@
 ### 第 9 章 Jail
 
 * [第 9.1 节 jail 与 docker 的比较](di-9-zhang-jail/di-9.1-jie-jail-yu-docker-de-bi-jiao.md)
-* [第 9.2 节 jail 相关术语](di-9-zhang-jail/di-9.2-jie-jail-xiang-guan-shu-yu.md)
-* [第 9.3 节 jail 配置](di-9-zhang-jail/di-9.3-jie-jail-pei-zhi.md)
-* [第 9.4 节 jail 更新](di-9-zhang-jail/di-9.4-jie-jail-geng-xin.md)
-* [第 9.5 节 使用 qjail 管理 jail](di-9-zhang-jail/di-9.5-jie-shi-yong-qjail-guan-li-jail.md)
+* [第 9.2 节 jail 配置](di-9-zhang-jail/di-9.2-jie-jail-pei-zhi.md)
+* [第 9.3 节 jail 更新](di-9-zhang-jail/di-9.3-jie-jail-geng-xin.md)
+* [第 9.4 节 使用 qjail 管理 jail](di-9-zhang-jail/di-9.4-jie-shi-yong-qjail-guan-li-jail.md)
 
 ### 第 10 章 虚拟化
 

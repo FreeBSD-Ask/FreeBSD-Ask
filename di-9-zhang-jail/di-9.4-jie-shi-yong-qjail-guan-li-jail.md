@@ -1,4 +1,4 @@
-# 第 9.5 节 使用 qjail 管理 jail
+# 第 9.3 节 使用 qjail 管理 jail
 
 qjail 是 jail 环境的部署工具，分支自 ezjail 3.1。jail 管理工具有 ezjail、 qjail、 iocage 等。ezjail 在 2015 年更新到 3.4.2 后一直没有更新，2018 年做过一次错误更新，不过好像也不是作者写的。ezjail 的 ports 更新依赖 portsnap，这个现在已经不建议使用了，将被废弃。iocage 可依赖于 zfs 文件系统，使用 ufs 文件系统的并不能使用。qjail 则在这些方面不存在问题。ezjail 并不支持 jail 的 vnet 功能，iocage 和 qjail 则支持。ezjail 和 qjail 使用 sh 编写，iocage 使用 python 编写。
 
