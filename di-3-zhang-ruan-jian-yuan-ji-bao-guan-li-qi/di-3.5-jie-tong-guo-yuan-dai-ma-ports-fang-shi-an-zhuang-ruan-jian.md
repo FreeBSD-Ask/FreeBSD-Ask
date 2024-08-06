@@ -32,17 +32,17 @@
 
 - FreeBSD ports 多线程编译
 
+将以下内容写入 `/etc/make.conf`，没有就 `touch` 新建一个。
+
 ```shell-session
 FORCE_MAKE_JOBS=yes
 MAKE_JOBS_NUMBER=4
 ```
 Linux 如 Gentoo 上一般是直接 `-jx` 或者 `jx+1`, `x` 为核心数。
 
-写入 `/etc/make.conf` 没有就 `touch` 新建一个。
+`4` 是处理器核心数（还是线程数？），不知道就别改。英特尔的处理器搜索 `CPU 型号+ARK` 转跳英特尔官网可查询线程数。
 
-`4` 是处理器核心数（还是线程数？），不知道就别改。英特尔的处理器搜索 `CPU型号+ARK` 转跳英特尔官网可查询线程数。
-
-- 个别情况下可以设置别名加速编译：（非永久设置，FreeBSD 14 无需设置，自动生效）
+- 个别情况下可以设置别名加速编译：（非永久设置，FreeBSD 14 无须设置即生效）
 
 ```shell-session
 # alias ninja='ninja -j4'
@@ -58,7 +58,7 @@ tmpfs /tmp tmpfs rw 0 0
 
 重启。
 
-参考资料：[tmpfs --	in-memory file system](https://man.freebsd.org/cgi/man.cgi?tmpfs(5))
+参考资料：[tmpfs --in-memory file system](https://man.freebsd.org/cgi/man.cgi?tmpfs(5))
 
 
 ### ccache
@@ -113,7 +113,7 @@ root@ykla:~ # find /  -name ccache.conf # 全局查找配置文件路径
 参考文献：
 
 - [ccache-howto-freebsd.txt.in](https://github.com/freebsd/freebsd-ports/blob/main/devel/ccache/files/ccache-howto-freebsd.txt.in)
-- [ccache -	a fast C/C++ compiler cache](https://man.freebsd.org/cgi/man.cgi?query=ccache&sektion=1&n=1)
+- [ccache -a fast C/C++ compiler cache](https://man.freebsd.org/cgi/man.cgi?query=ccache&sektion=1&n=1)
 ### 如何使用多线程下载：
 
 - axel
@@ -148,7 +148,7 @@ DISABLE_SIZE=yes
 
 `-c` 断点续传；`-t 3` 重试次数 3；` -o 10` 启用 10 个线程进行下载。
 
-**`10` 这个参数可能过于保守，我一般直接用 50 或 100。但是要注意很多服务器不支持这么多线程同时下载。**
+**`10` 这个参数可能过于保守，我一般直接用 `50` 或 `100`。但是要注意很多服务器不支持这么多线程同时下载。**
 
 
 ## 进阶
@@ -256,7 +256,7 @@ root@ykla:/usr/ports/ports-mgmt/portmaster # portmaster sysutils/htop  --show-wo
 
 参考资料：
 
-- [portmaster -- manage your ports without external	databases or languages](https://man.freebsd.org/cgi/man.cgi?portmaster(8)#end)
+- [portmaster -- manage your ports without external databases or languages](https://man.freebsd.org/cgi/man.cgi?portmaster(8)#end)
   
 ## FreeBSD USE
 
