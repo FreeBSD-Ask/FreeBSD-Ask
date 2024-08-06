@@ -12,9 +12,9 @@
 * [第 1.3 节 为什么要使用 FreeBSD](di-1-zhang-zou-jin-freebsd/di-1.3-jie-wei-shi-mo-yao-shi-yong-freebsd.md)
 * [第 1.4 节 其他 BSD 简介](di-1-zhang-zou-jin-freebsd/di-1.4-jie-qi-ta-bsd-jian-jie.md)
 * [第 1.5 节 Linux 用户迁移指北](di-1-zhang-zou-jin-freebsd/di-1.5-jie-linux-yong-hu-qian-yi-zhi-bei.md)
-* [第 1.6 节 谁在使用 FreeBSD](di-1-zhang-zou-jin-freebsd/di-1.9-jie-shui-zai-shi-yong-freebsd.md)
-* [第 1.7 节 FreeBSD 子项目](di-1-zhang-zou-jin-freebsd/di-1.11-jie-freebsd-zi-xiang-mu.md)
-* [第 1.8 节 FreeBSD 开发计划](di-1-zhang-zou-jin-freebsd/di-1.15-jie-freebsd-kai-fa-ji-hua.md)
+* [第 1.6 节 谁在使用 FreeBSD](di-1-zhang-zou-jin-freebsd/di-1.6-jie-shui-zai-shi-yong-freebsd.md)
+* [第 1.7 节 FreeBSD 子项目](di-1-zhang-zou-jin-freebsd/di-1.7-jie-freebsd-zi-xiang-mu.md)
+* [第 1.8 节 FreeBSD 开发计划](di-1-zhang-zou-jin-freebsd/di-1.8-jie-freebsd-kai-fa-ji-hua.md)
 
 ### 第 2 章 安装 FreeBSD
 
