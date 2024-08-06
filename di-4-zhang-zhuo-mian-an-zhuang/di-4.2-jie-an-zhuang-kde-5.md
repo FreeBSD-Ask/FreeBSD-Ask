@@ -12,7 +12,7 @@
 
 > **故障排除**
 >
-> **如果有时候提示找不到或者没有 kde5,请去** [**x11/kde5**](https://www.freshports.org/x11/kde5) **看看是不是二进制包没有被构建出来。有时候需要切换 quarterly（待上游构建出来了再换到 latest 源，pkg upgrade 升级即可）或者 latest 源。类似方法适用于所有软件，故后边不再赘述。**
+> **如果有时候提示找不到或者没有 kde5,请去** [**x11/kde5**](https://www.freshports.org/x11/kde5) **看看是不是二进制包没有被构建出来。有时候需要切换 quarterly（待上游构建出来了再换到 latest 源，pkg upgrade 升级即可）或者 latest 源。类似方法适用于所有软件，故后边不再赘述。如果没有，需要自己 Ports 编译。**
 
 ## 配置
 
