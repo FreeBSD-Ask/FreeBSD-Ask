@@ -1,4 +1,4 @@
-# 树莓派 5
+# 第 18.9 节 树莓派 5
 
 
 经过测试，树莓派 5 8G，使用 [UEFI](https://github.com/worproject/rpi5-uefi)、FreeBSD 15.0（测试用例 `FreeBSD-15.0-CURRENT-arm64-aarch64-20240628-14fee5324a9b-270986-memstick.img.xz`）、支持从存储卡、USB 设备、m2 扩展板（微雪的 [PCIe_TO_M.2_HAT+](https://www.waveshare.net/wiki/PCIe_TO_M.2_HAT+)）的 m2 NVme SSD 启动，后者亦可兼容 PCIe 3.0 速度。但是网卡等没驱动（可使用 USB 网卡，具体型号参考第一章相关）。风扇由固件控制，所以默认会一直转，不会停。HDMI 正常。USB 2/3 均正常。
