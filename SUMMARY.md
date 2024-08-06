@@ -163,8 +163,7 @@
 * [第 16.11 节 rsync 同步服务](di-16-zhang-fu-wu-qi/di-16.11-jie-rsync-tong-bu-fu-wu.md)
 * [第 16.12 节 时间服务](di-16-zhang-fu-wu-qi/di-16.12-jie-shi-jian-fu-wu.md)
 * [第 16.13 节 Wildfly](di-16-zhang-fu-wu-qi/di-16.13-jie-wildfly.md)
-* [第 16.14 节 Slurm](di-16-zhang-fu-wu-qi/di-16.14-jie-slurm.md)
-* [第 16.15 节 MinIO 对象存储服务](di-16-zhang-fu-wu-qi/di-16.15-jie-minio-dui-xiang-cun-chu-fu-wu.md)
+* [第 16.14 节 MinIO 对象存储服务](di-16-zhang-fu-wu-qi/di-16.14-jie-minio-dui-xiang-cun-chu-fu-wu.md)
 
 ### 第 17 章 网络服务器
 
