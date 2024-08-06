@@ -164,27 +164,39 @@ DISABLE_SIZE=yes
 
 安装 python3：
 
-`# cd /usr/ports/lang/python`
+```
+# cd /usr/ports/lang/python
+```
 
 如何设置全部所需的依赖：
 
-`# make config-recursive`
+```
+# make config-recursive
+```
 
 如何删除当前 port 及其依赖的配置文件：
 
-`# make rmconfig-recursive`
+```
+# make rmconfig-recursive
+```
 
 如何一次性下载所有需要的软件包：
 
-`# make BATCH=yes fetch-recursive`
+```
+# make BATCH=yes fetch-recursive
+```
 
 升级 ports
 
-`# portsnap auto`
+```
+# portsnap auto
+```
 
 ports 编译的软件也可以转换为 pkg 包
 
-`# pkg create nginx`
+```
+# pkg create nginx
+```
 
 ## FreeBSD 包升级管理工具
 
