@@ -117,8 +117,7 @@
 
 * [第 11.1 节 通过 freebsd-update 更新](di-11-zhang-geng-xin-yu-sheng-ji-freebsd/di-11.1-jie-tong-guo-freebsdupdate-geng-xin.md)
 * [第 11.2 节 通过源代码更新](di-11-zhang-geng-xin-yu-sheng-ji-freebsd/di-11.2-jie-tong-guo-yuan-dai-ma-geng-xin.md)
-* [第 11.3 节 批量部署](di-11-zhang-geng-xin-yu-sheng-ji-freebsd/di-11.3-jie-pi-liang-bu-shu.md)
-* [第 11.4 节 使用 pkgbase 更新](di-11-zhang-geng-xin-yu-sheng-ji-freebsd/di-11.4-jie-shi-yong-pkgbase-geng-xin.md)
+* [第 11.3 节 使用 pkgbase 更新](di-11-zhang-geng-xin-yu-sheng-ji-freebsd/di-11.3-jie-shi-yong-pkgbase-geng-xin.md)
 
 ### 第 12 章 GEOM 存储框架
 
@@ -173,9 +172,9 @@
 * [第 17.4 节 MySQL 5.X](di-17-zhang-wang-luo-fu-wu-qi/di-17.4-jie-mysql-5.x.md)
 * [第 17.5 节 MySQL 8.X](di-17-zhang-wang-luo-fu-wu-qi/di-17.5-jie-mysql-8.x.md)
 * [第 17.6 节 Typecho](di-17-zhang-wang-luo-fu-wu-qi/di-17.6-jie-typecho.md)
-* [第 17.7 节 SSL 配置](di-17-zhang-wang-luo-fu-wu-qi/di-17.7-jie-ssl-pei-zhi.md)
+* [第 17.7 节 Telegraf+InfluxDB+Grafana 监控平台](di-17-zhang-wang-luo-fu-wu-qi/di-17.7-jie-telegraf+influxdb+grafana-jian-kong-ping-tai.md)
 * [第 17.8 节 PostgreSQL 与 pgAdmin4](di-17-zhang-wang-luo-fu-wu-qi/di-17.8-jie-postgresql-yu-pgadmin4.md)
-* [第 17.9 节 Telegraf+InfluxDB+Grafana 监控平台](di-17-zhang-wang-luo-fu-wu-qi/di-17.9-jie-telegraf+influxdb+grafana-jian-kong-ping-tai.md)
+
 
 ### 第 18 章 树莓派与 RISCV
 
