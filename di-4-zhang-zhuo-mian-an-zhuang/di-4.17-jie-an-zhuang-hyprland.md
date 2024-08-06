@@ -1,4 +1,4 @@
-# 第 4.19 节 安装 Hyprland
+# 第 4.17 节 安装 Hyprland
 
 Hyprland 是 Wayland 的一个合成器，支持窗口透明、模糊、圆角等等，动画效果做的不错。
 
