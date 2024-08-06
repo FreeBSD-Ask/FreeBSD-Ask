@@ -41,7 +41,7 @@ Multics 意图创造强悍的新软件和比肩 IBM 7094 功能更丰富的新�
 
 ### UNIX 哲学简介
 
-我认为 Linux 的道路走歪了，它把 Unix 之路引向了苦难哲学，而且还在越走越歪，走了改旗易帜的邪路。单是 Linux Kernel 引入 Systemd 就能看出这一点。
+>我认为 Linux 的道路走歪了，它把 Unix 之路引向了苦难哲学，而且还在越走越歪，走了改旗易帜的邪路。单是 Linux Kernel 引入 Systemd 就能看出这一点。
 
 Unix 哲学源于 UNIX 操作系统的开发，作者是 Ken Thompson。Unix 哲学一言以蔽之即大道至简（`keep it simple, stupid`）：
 
