@@ -36,12 +36,11 @@
 
 ### 第 3 章 软件源及包管理器
 
-* [第 3.0 节 包管理器概述](di-3-zhang-ruan-jian-yuan-ji-bao-guan-li-qi/di-3.0-jie-bao-guan-li-qi-gai-shu.md)
 * [第 3.1 节 FreeBSD 镜像站现状](di-3-zhang-ruan-jian-yuan-ji-bao-guan-li-qi/di-3.1-jie-freebsd-jing-xiang-zhan-xian-zhuang.md)
 * [第 3.2 节 FreeBSD 换源方式](di-3-zhang-ruan-jian-yuan-ji-bao-guan-li-qi/di-3.2-jie-freebsd-huan-yuan-fang-shi.md)
 * [第 3.3 节 gitup 的用法](di-3-zhang-ruan-jian-yuan-ji-bao-guan-li-qi/di-3.3-jie-gitup-de-yong-fa.md)
 * [第 3.4 节 软件包管理器 pkg 的用法](di-3-zhang-ruan-jian-yuan-ji-bao-guan-li-qi/di-3.4-jie-ruan-jian-bao-guan-li-qi-pkg-de-yong-fa.md)
-* [第 3.5 节 通过源代码 ports 方式安装软件](di-3-zhang-ruan-jian-yuan-ji-bao-guan-li-qi/di-3.5-jie-tong-guo-yuan-dai-ma-ports-fang-shi-an-zhuang-ruan-jian.md)
+* [第 3.5 节 使用 ports 以源代码方式安装软件](di-3-zhang-ruan-jian-yuan-ji-bao-guan-li-qi/di-3.5-jie-tong-guo-yuan-dai-ma-ports-fang-shi-an-zhuang-ruan-jian.md)
 * [第 3.6 节 通过 DVD 安装软件](di-3-zhang-ruan-jian-yuan-ji-bao-guan-li-qi/di-3.6-jie-tong-guo-dvd-an-zhuang-ruan-jian.md)
 
 ### 第 4 章 桌面安装
