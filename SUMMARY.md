@@ -27,7 +27,7 @@
 * [第 2.6 节 如何在自己的机器上安装 FreeBSD](di-2-zhang-an-zhuang-freebsd/di-2.6-jie-ru-he-zai-zi-ji-de-ji-qi-shang-an-zhuang-freebsd.md)
 * [第 2.7 节 手动安装 FreeBSD](di-2-zhang-an-zhuang-freebsd/di-2.7-jie-shou-dong-an-zhuang-freebsd.md)
 * [第 2.8 节 自带文本编辑器 ee 的用法](di-2-zhang-an-zhuang-freebsd/di-2.8-jie-ee-yong-fa-ji-wang-luo-pei-zhi.md)
-* [第 2.9 节 常用软件与 SSH 配置](di-2-zhang-an-zhuang-freebsd/di-2.9-jie-chang-yong-ruan-jian-yu-ssh-pei-zhi.md)
+* [第 2.9 节 SSH 相关软件推荐与 SSH 配置](di-2-zhang-an-zhuang-freebsd/di-2.9-jie-chang-yong-ruan-jian-yu-ssh-pei-zhi.md)
 * [第 2.14 节 FreeBSD 硬件选择](di-2-zhang-an-zhuang-freebsd/di-2.14-jie-freebsd-ying-jian-xuan-ze.md)
 
 ### 第 3 章 软件源及包管理器
