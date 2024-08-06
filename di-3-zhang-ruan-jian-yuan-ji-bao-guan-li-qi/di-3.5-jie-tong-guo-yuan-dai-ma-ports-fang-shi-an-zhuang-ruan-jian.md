@@ -32,7 +32,7 @@
 >
 > 我们知道人们已经习惯了 portsnap，但我们相信：
 >
-> - 人们应该能够轻松地使用在基本系统或 git 来使用 pkg 的 svnlite（似乎很少有人真正使用 `WITHOUT_SVNLITE``）。
+> - 人们应该能够轻松地使用在基本系统或 git 来使用 pkg 的 svnlite（似乎很少有人真正使用 `WITHOUT_SVNLITE`）。
 > - 也有可能退回到来获取 tar 或 zip。从 [https://cgit-beta.freebsd.org/ports/](https://cgit-beta.freebsd.org/ports/)，尽管这确实使更新难度增加。
 >
 > 我们将如何做，按顺序进行：
