@@ -128,10 +128,8 @@
 ### 第 12 章 GEOM 存储框架
 
 * [第 12.1 节 概述](di-12-zhang-geom-cun-chu-kuang-jia/di-12.1-jie-gai-shu.md)
-* [第 12.2 节 RAID 0](di-12-zhang-geom-cun-chu-kuang-jia/di-12.2-jie-raid-0.md)
-* [第 12.3 节 RAID 1](di-12-zhang-geom-cun-chu-kuang-jia/di-12.3-jie-raid-1.md)
-* [第 12.4 节 RAID 3](di-12-zhang-geom-cun-chu-kuang-jia/di-12.4-jie-raid-3.md)
-* [第 12.5 节 ZFS 磁盘加解密](di-12-zhang-geom-cun-chu-kuang-jia/di-12.5-jie-zfs-ci-pan-jia-jie-mi.md)
+* [第 12.2 节 RAID](di-12-zhang-geom-cun-chu-kuang-jia/di-12.2-jie-raid.md)
+* [第 12.3 节 ZFS 磁盘加解密](di-12-zhang-geom-cun-chu-kuang-jia/di-12.3-jie-zfs-ci-pan-jia-jie-mi.md)
 
 ### 第 13 章 DTrace
 
