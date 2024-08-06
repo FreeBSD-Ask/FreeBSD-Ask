@@ -116,9 +116,7 @@
 
 * [第 10.1 节 虚拟化简介](di-10-zhang-xu-ni-hua/di-10.1-jie-xu-ni-hua-jian-jie.md)
 * [第 10.2 节 安装 Virtual Box](di-10-zhang-xu-ni-hua/di-10.2-jie-an-zhuang-virtual-box.md)
-* [第 10.3 节 安装 bhyve](di-10-zhang-xu-ni-hua/di-10.3-jie-an-zhuang-bhyve.md)
-* [第 10.4 节 使用 cbsd 管理 bhyve](di-10-zhang-xu-ni-hua/di-10.4-jie-shi-yong-cbsd-guan-li-bhyve.md)
-* [第 10.5 节 使用 bhyve 安装 Windows 10](di-10-zhang-xu-ni-hua/di-10.5-jie-shi-yong-bhyve-an-zhuang-windows-10.md)
+* [第 10.3 节 使用 bhyve 安装 Windows 10](di-10-zhang-xu-ni-hua/di-10.3-jie-shi-yong-bhyve-an-zhuang-windows-10.md)
 
 ### 第 11 章 更新与升级 FreeBSD
 
