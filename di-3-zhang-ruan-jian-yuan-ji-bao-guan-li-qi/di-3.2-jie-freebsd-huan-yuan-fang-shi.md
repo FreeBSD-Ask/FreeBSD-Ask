@@ -10,8 +10,6 @@ FreeBSD 有四类源：pkg、ports、portsnap、update。
 > 20230422:
 > 	Remove portsnap(8).  Users are encouraged to obtain the ports tree
 > 	using git instead.
-> 	```
->
 > ````
 
 **对于失去安全支持的版本，请参考最后一节。**
