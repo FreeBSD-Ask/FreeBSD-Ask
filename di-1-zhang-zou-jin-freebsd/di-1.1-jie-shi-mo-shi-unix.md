@@ -73,11 +73,11 @@ Unix-like 即类 Unix，亦即一切基于 UNIX 的操作系统，基本遵守 P
 >
 > _**Those who do not understand Unix are condemned to reinvent it,poorly.**_ ——Henry Spencer（那些不懂 Unix 的人注定要重复发明一个蹩脚的 Unix）
 
-## 狭义是内核
+### 狭义是内核
 
 Linux kernel 项目 1990；
 
-## 广义是 GNU/Linux
+### 广义是 GNU/Linux
 
 GNU/Linux = Linux kernel + GNU 等软件 + 包管理器
 
