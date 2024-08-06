@@ -14,9 +14,9 @@
 >
 > **如果有时候提示找不到或者没有 kde5,请点击** [**x11/kde5**](https://www.freshports.org/x11/kde5) **看看是不是二进制包没有被构建出来。有时候需要切换 quarterly（待上游构建出来了再换到 latest 源，pkg upgrade 升级即可）或者 latest 源。类似方法适用于所有软件，故后边不再赘述。如果没有，需要自己 Ports 编译。**
 
-## 配置
 
-### Procfs 设置【可选，FreeBSD 13.2 及以后不再需要】
+
+## Procfs 设置（FreeBSD 13.2 前必须如此）
 
 > **提示**
 >
@@ -42,7 +42,7 @@ proc            /proc           procfs  rw      0       0
 >
 >  <figure><img src="../.gitbook/assets/witekde.png" alt=""><figcaption></figcaption></figure>
 
-### 启动项设置
+## 启动项设置
 
 ```shell-session
 # sysrc dbus_enable="YES"
@@ -61,7 +61,7 @@ proc            /proc           procfs  rw      0       0
 
 [sysutils/hal](https://www.freshports.org/sysutils/hal)
 
-### 权限设置
+## 权限设置
 
 > 普通用户还需要将用户加入 wheel 组：
 >
