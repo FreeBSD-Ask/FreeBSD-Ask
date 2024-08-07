@@ -16,7 +16,9 @@ Xshell 下载地址（输入用户名和邮件即可）：
 
 [https://www.netsarang.com/zh/free-for-home-school](https://www.netsarang.com/zh/free-for-home-school)
 
->不要没事找事用 PuTTY。PuTTY 没有任何好处：
+>**苦难哲学之 PuTTY**
+>
+>PuTTY 没有任何好处：
 >
 >- PuTTY 安全？请看看新闻（[中文版注入木马等](https://safe.it168.com/a2012/0201/1305/000001305829.shtml)）和漏洞（[CVE-2024-31497](https://nvd.nist.gov/vuln/detail/CVE-2024-31497))。
 >- PuTTY 轻量化？
