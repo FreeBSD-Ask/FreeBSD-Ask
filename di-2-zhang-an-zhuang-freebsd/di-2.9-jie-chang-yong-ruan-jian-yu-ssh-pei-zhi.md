@@ -15,7 +15,10 @@ Xshell 是 Windows 平台上的强大的 shell 工具。支持 **串口**、SSH�
 不要没事找事用 putty。putty 没有任何好处：
 
 - putty 安全？请看看新闻（注入木马等）和漏洞（CVE-2024-31497)。
-- putty 轻量化？Windows 10 已经自带 ssh 了，cmd/powershell 就能用，岂不是更轻量化？
+- putty 轻量化？
+  - Windows 10 已经自带 ssh 了，cmd/powershell 就能用，岂不是更轻量化？
+  - 串口，正经人不会用这玩意吧？
+  - Telnet，Windows 自带。
 - putty 界面简单？反人类才是真的。你自己复制粘贴看看。
 - 你真的知道 putty 官网在哪吗？
 
