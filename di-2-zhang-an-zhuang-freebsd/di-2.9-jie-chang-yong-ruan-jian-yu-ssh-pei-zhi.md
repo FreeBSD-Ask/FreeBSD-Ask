@@ -27,7 +27,7 @@ Xshell 下载地址（输入用户名和邮件即可）：
 >   - 反人类才是真的。你自己用鼠标随意选择，再鼠标复制粘贴看看（无论哪个选择模式都是反人类，鼠标和按键只能二选一）；
 >   - 如果输入错误 IP，除了提示超时以外，界面没变化，也不会退出，完全就是黑的。必须自己退出再开。
 >- 另外，你真的知道 PuTTY 官网在哪吗？你真的用过 PuTTY 吗？<https://www.chiark.greenend.org.uk/~sgtatham/putty/mirrors.html> 这里所列才是，你是在这些里面下载的吗？
->- PuTTY 官方版本目前没有 **[任何其他语言的支持，仅支持英语](https://www.chiark.greenend.org.uk/~sgtatham/putty/wishlist/i18n.html)**
+>- PuTTY 官方版本目前 **没有[任何其他语言的支持，仅支持英语](https://www.chiark.greenend.org.uk/~sgtatham/putty/wishlist/i18n.html)**
 >  
 >>PuTTY 官方页面所列的所有第三方的项目实质上也是不存在的。
 >>
