@@ -20,7 +20,7 @@ Xshell 下载地址（输入用户名和邮件即可）：
 >
 >- PuTTY 安全？请看看新闻（[中文版注入木马等](https://safe.it168.com/a2012/0201/1305/000001305829.shtml)）和漏洞（[CVE-2024-31497](https://nvd.nist.gov/vuln/detail/CVE-2024-31497))。
 >- PuTTY 轻量化？
->   - SSH：[Windows 10 已经自带 SSH 了（客户端和服务端）](https://learn.microsoft.com/zh-cn/windows/terminal/tutorials/ssh)，cmd/powershell 就能用，岂不是更轻量化？
+>   - SSH：[Windows 10、11 已经自带 SSH 了（客户端和服务端）](https://learn.microsoft.com/zh-cn/windows/terminal/tutorials/ssh)，cmd/powershell 就能用，岂不是更轻量化？
 >   - 串口：正经人不会用这玩意吧？串口调试助手都比这个强；
 >   - Telnet：Windows 自带（无服务端）。自己控制面板安装。
 >- PuTTY 界面简单？
