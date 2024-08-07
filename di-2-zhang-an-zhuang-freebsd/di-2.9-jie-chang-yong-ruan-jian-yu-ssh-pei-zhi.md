@@ -10,7 +10,14 @@ WinSCP 是对 `scp` 命令的图形化封装的软件，并同时支持 FTP 等�
 
 ## Xshell 下载
 
-Xshell 是 Windows 平台上的强大的 shell 工具，不建议使用苦难哲学的 putty。
+Xshell 是 Windows 平台上的强大的 shell 工具。支持 **串口**、SSH、Telnet！
+
+不要没事找事用 putty。putty 没有任何好处：
+
+- putty 安全？请看看新闻。
+- putty 轻量化？Windows 10 已经自带 ssh 了，cmd/powershell 就能用，岂不是更轻量化？
+- putty 界面简单？反人类才是真的。
+
 
 下载地址（输入用户名和邮件即可）：
 
