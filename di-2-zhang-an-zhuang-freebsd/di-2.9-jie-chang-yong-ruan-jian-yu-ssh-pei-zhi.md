@@ -284,6 +284,24 @@ me:\
 mosh-server new -s -l LANG=zh_CN.UTF-8
 ```
 
+其他不用变，密码也是用户账户密码需要 22 端口进行验证。
+
+可以看到，所以我主机的端口 60001。[而你需要放通 60000-61000](https://mosh.org/#usage)。
+
+FreeBSD 开放端口：
+
+```
+root@ykla:~ # sockstat -4l
+USER     COMMAND    PID   FD  PROTO  LOCAL ADDRESS         FOREIGN ADDRESS      
+root     mosh-serve 19493 4   udp4   192.168.31.187:60001  *:*
+root     sshd        1140 4   tcp4   *:22                  *:*
+ntpd     ntpd        1068 21  udp4   *:123                 *:*
+ntpd     ntpd        1068 24  udp4   127.0.0.1:123         *:*
+ntpd     ntpd        1068 26  udp4   192.168.31.187:123    *:*
+root     syslogd     1017 7   udp4   *:514                 *:*
+root@ykla:~ # 
+```
+
 测试连接：
 
 <img style="width:20%;"  src="../.gitbook/assets/juicessh2.png" />
@@ -291,3 +309,11 @@ mosh-server new -s -l LANG=zh_CN.UTF-8
 <img style="width:20%;"  src="../.gitbook/assets/juicessh3.png" />
 
 <img style="width:20%;"  src="../.gitbook/assets/juicessh4.png" />
+
+## 参考文献
+
+>Mosh 不支持多窗口、分屏模式、多个客户端连接到同一服务器。Mosh 也不支持在客户端重启（或用户切换到不同机器）时重新连接。要实现这些功能，用户通常须在 Mosh 会话中使用 GNU screen、OpenBSD tmux 等终端多路复用器。
+>
+>——[Mosh: A State-of-the-Art Good Old-Fashioned Mobile Shell](https://www.usenix.org/system/files/login/articles/winstein.pdf)
+
+- [常见问题解答](https://mosh.org/#faq)
