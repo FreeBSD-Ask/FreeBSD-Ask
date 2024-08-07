@@ -312,7 +312,7 @@ root@ykla:~ #
 
 ## 参考文献
 
->Mosh 不支持多窗口、分屏模式、多个客户端连接到同一服务器。Mosh 也不支持在客户端重启（或用户切换到不同机器）时重新连接。要实现这些功能，用户通常须在 Mosh 会话中使用 GNU screen、OpenBSD tmux 等终端多路复用器。
+>Mosh 不支持多窗口、分屏模式、多个客户端连接到同一服务器。Mosh 也不支持在客户端重启（或用户切换到不同机器）时重新连接。要实现上述功能，用户通常须在 Mosh 会话中使用 GNU screen、OpenBSD tmux 等终端多路复用器。
 >
 >——[Mosh: A State-of-the-Art Good Old-Fashioned Mobile Shell](https://www.usenix.org/system/files/login/articles/winstein.pdf)
 
