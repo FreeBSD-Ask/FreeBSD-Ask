@@ -30,7 +30,7 @@ PasswordAuthentication yes   #（可选）设置是否使用普通密码验证�
 
 > **故障排除**
 >
-> 如果你实在是找不到 `PasswordAuthentication no`，请你看看你改的究竟是 `/etc/ssh/`ssh***d***`_config` 还是 `/etc/ssh/`***ssh***`_config`。**ssh***d*** 才是我们真正要改的文件。
+> 如果你实在是找不到 `PasswordAuthentication no`，请你看看你改的究竟是 `/etc/ssh/`ssh***d***`_config` 还是 `/etc/ssh/`***ssh***`_config`。ssh***d*** 才是我们真正要改的文件。
 
 ### 开启 SSH 服务
 
