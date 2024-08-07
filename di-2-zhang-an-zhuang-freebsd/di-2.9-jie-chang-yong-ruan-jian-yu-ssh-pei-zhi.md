@@ -264,6 +264,8 @@ root@ykla:/ # screen -r 18380
 
 ### mosh：移动的 shell
 
+>个人认为，mosh 真的只适合在户外手机或者平板通过流量远程服务器使用。
+
 要使用 mosh：①服务端和客户端都需要配置相同的 UTF-8 编码，②双方都需要安装 mosh。
 
 
@@ -336,6 +338,7 @@ root@ykla:~ #
 >Mosh 不支持多窗口、分屏模式、多个客户端连接到同一服务器。Mosh 也不支持在客户端重启（或用户切换到不同机器）时重新连接。要实现上述功能，用户通常须在 Mosh 会话中使用 GNU screen、OpenBSD tmux 等终端多路复用器。
 >
 >——[Mosh: A State-of-the-Art Good Old-Fashioned Mobile Shell](https://www.usenix.org/system/files/login/articles/winstein.pdf)
+
 
 - [mosh FAQ](https://mosh.org/#faq)
 - [ssh && mosh](https://silbertmonaphia.github.io/ssh%E7%99%BB%E5%BD%95%E3%81%AE%E5%91%A8%E8%BE%BA-&&-Mosh.html)
