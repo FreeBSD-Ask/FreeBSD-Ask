@@ -197,6 +197,8 @@ PermitEmptyPasswords no                      #禁止空密码的用户进行登�
 
 ## 使用 screen 保持 SSH 不断线
 
+### 传统的 screen
+
 安装：
 
 ```shell-session
@@ -239,3 +241,52 @@ root@ykla:/ # screen -d 18380
 root@ykla:/ # screen -r 18380
 ```
 
+### mosh：移动的 shell
+
+要使用 mosh：①服务端和客户端都需要配置相同的 UTF-8 编码，②双方都需要安装 mosh。
+
+
+```
+# pkg install mosh
+```
+
+编辑 `~/.login_conf`，加入：
+
+
+- 默认的系统：
+
+```
+me:\
+        :charset=UTF-8:\
+        :lang=en_US.UTF-8:\
+        :setenv=LC_COLLATE=C:
+```
+
+- 已中文化的系统：
+
+```
+me:\
+        :charset=UTF-8:\
+        :lang=zh_US.CN-8:\
+        :setenv=LC_COLLATE=zh_CN.UTF-8:
+```
+
+你的客户端也需要同样的设置，因为是移动的 shell，所以我们使用安卓上的 [JuiceSSH](https://juicessh.com/) 进行测试。
+
+下载地址：<https://play.google.com/store/apps/details?id=com.sonelli.juicessh>
+
+![juicessh](../.gitbook/assets/juicessh1.png)
+
+点击“服务端命令”，设置如下：
+
+```
+mosh-server new -s -l LANG=zh_CN.UTF-8
+```
+
+测试连接：
+
+![juicessh](../.gitbook/assets/juicessh2.png)
+
+![juicessh](../.gitbook/assets/juicessh3.png)
+
+![juicessh](../.gitbook/assets/juicessh4.png)
