@@ -8,6 +8,26 @@ WinSCP 是对 `scp` 命令的图形化封装的软件，并同时支持 FTP 等�
 
 [https://winscp.net/eng/download.php](https://winscp.net/eng/download.php)
 
+
+
+自 OpenSSH 9.0 起，scp 命令默认使用 `SFTP` 协议进行文件传输。WinSCP 默认即是 `SFTP`。
+
+但是，这个版本号和远程被控的操作系统相关，
+
+FreeBSD 查看内置的 OpenSSH 版本：
+
+```
+root@ykla:~ # ssh -V
+OpenSSH_9.7p1, OpenSSL 3.0.14 4 Jun 2024
+```
+
+- 如果你的输出大于等于 9.0，你可无视， `SFTP`、`SCP` 都能用，且 WinSCP 默认即是 `SFTP`。
+- 如果你的输出小于 9.0，请按下图执行操作，将 `SFTP` 改成 `SCP`
+>
+>请按下图设置协议为 `scp`，然后其他的和 ssh 信息一模一样。scp 是 ssh 的子项目实现。
+>
+><img style="width:50%;"  src="../.gitbook/assets/scp2.png" />
+
 ## Xshell 下载
 
 Xshell 是 Windows 平台上的强大的 shell 工具。支持 **串口**、SSH、Telnet！
