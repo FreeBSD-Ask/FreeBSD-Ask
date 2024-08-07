@@ -275,7 +275,8 @@ me:\
 
 下载地址：<https://play.google.com/store/apps/details?id=com.sonelli.juicessh>
 
-![juicessh](../.gitbook/assets/juicessh1.png)
+<img style="width:20%;"  src="../.gitbook/assets/juicessh1.png" />
+
 
 点击“服务端命令”，设置如下：
 
@@ -285,8 +286,8 @@ mosh-server new -s -l LANG=zh_CN.UTF-8
 
 测试连接：
 
-![juicessh](../.gitbook/assets/juicessh2.png)
+<img style="width:20%;"  src="../.gitbook/assets/juicessh2.png" />
 
-![juicessh](../.gitbook/assets/juicessh3.png)
+<img style="width:20%;"  src="../.gitbook/assets/juicessh3.png" />
 
-![juicessh](../.gitbook/assets/juicessh4.png)
+<img style="width:20%;"  src="../.gitbook/assets/juicessh4.png" />
