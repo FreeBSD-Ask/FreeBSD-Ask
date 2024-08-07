@@ -316,4 +316,5 @@ root@ykla:~ #
 >
 >——[Mosh: A State-of-the-Art Good Old-Fashioned Mobile Shell](https://www.usenix.org/system/files/login/articles/winstein.pdf)
 
-- [常见问题解答](https://mosh.org/#faq)
+- [mosh FAQ](https://mosh.org/#faq)
+- [ssh && mosh](https://silbertmonaphia.github.io/ssh%E7%99%BB%E5%BD%95%E3%81%AE%E5%91%A8%E8%BE%BA-&&-Mosh.html)
