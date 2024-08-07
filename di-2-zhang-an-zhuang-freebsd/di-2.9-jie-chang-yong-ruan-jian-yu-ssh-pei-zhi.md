@@ -12,19 +12,30 @@ WinSCP 是对 `scp` 命令的图形化封装的软件，并同时支持 FTP 等�
 
 Xshell 是 Windows 平台上的强大的 shell 工具。支持 **串口**、SSH、Telnet！
 
-不要没事找事用 putty。putty 没有任何好处：
-
-- putty 安全？请看看新闻（注入木马等）和漏洞（CVE-2024-31497)。
-- putty 轻量化？
-  - Windows 10 已经自带 ssh 了，cmd/powershell 就能用，岂不是更轻量化？
-  - 串口，正经人不会用这玩意吧？
-  - Telnet，Windows 自带。自己控制面板安装。
-- putty 界面简单？反人类才是真的。你自己复制粘贴看看。
-- 你真的知道 putty 官网在哪吗？
-
-下载地址（输入用户名和邮件即可）：
+Xshell 下载地址（输入用户名和邮件即可）：
 
 [https://www.netsarang.com/zh/free-for-home-school](https://www.netsarang.com/zh/free-for-home-school)
+
+>不要没事找事用 PuTTY。PuTTY 没有任何好处：
+>
+>- PuTTY 安全？请看看新闻（[中文版注入木马等](https://safe.it168.com/a2012/0201/1305/000001305829.shtml)）和漏洞（[CVE-2024-31497](https://nvd.nist.gov/vuln/detail/CVE-2024-31497))。
+>- PuTTY 轻量化？
+>   - SSH：[Windows 10 已经自带 SSH 了（客户端和服务端）](https://learn.microsoft.com/zh-cn/windows/terminal/tutorials/ssh)，cmd/powershell 就能用，岂不是更轻量化？
+>   - 串口：正经人不会用这玩意吧？串口调试助手都比这个强；
+>   - Telnet：Windows 自带（无服务端）。自己控制面板安装。
+>- PuTTY 界面简单？
+>  - 反人类才是真的。你自己用鼠标随意选择，再鼠标复制粘贴看看（无论哪个选择模式都是反人类，鼠标和按键只能二选一）；
+>  - 如果输入错误 IP，除了提示超时以外，界面没变化，也不会退出，完全就是黑的。必须自己退出再开。
+>- 另外，你真的知道 PuTTY 官网在哪吗？<https://www.chiark.greenend.org.uk/~sgtatham/putty/mirrors.html> 这里所列才是，你是在这些里面下载的吗？
+>- PuTTY 官方版本目前没有 **[任何其他语言的支持，仅支持英语](https://www.chiark.greenend.org.uk/~sgtatham/putty/wishlist/i18n.html)**
+>  
+>>PuTTY 官方页面所列的所有第三方的项目实质上也是不存在的。
+>>
+>>**PuTTY 项目从一开始就没有为 i18n 做设计上的打算。**
+>>
+>>虽然只是复制粘贴的工作，但是很遗憾就是没有人做（会翻译的不会编译，也找不到要翻译的字符串在哪；会编译的找得到的又懒得翻译，这本质上是软件设计缺陷），即使做了也是一锤子买卖，这在开源项目中很常见.
+>>
+>>如果你的是不知道从哪下的中文（Github 上面有一些开源中文客户端实现，但同样未经代码审查），必定是被篡改过的版本。就存在第一条新闻中的风险。
 
 ## 配置 SSH
 
