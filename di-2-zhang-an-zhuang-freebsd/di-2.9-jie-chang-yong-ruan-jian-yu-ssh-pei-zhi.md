@@ -13,7 +13,7 @@ WinSCP 是对 `scp` 命令的图形化封装的软件，并同时支持 FTP 等�
 
 但是，这个版本号和远程被控的操作系统相关，
 
-FreeBSD 查看内置的 OpenSSH 版本：
+FreeBSD 查看内置的 OpenSSH 版本，本例中，主要版本号为 9.7：
 
 ```
 root@ykla:~ # ssh -V
