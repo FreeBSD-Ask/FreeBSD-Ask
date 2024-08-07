@@ -9,7 +9,6 @@ WinSCP 是对 `scp` 命令的图形化封装的软件，并同时支持 FTP 等�
 [https://winscp.net/eng/download.php](https://winscp.net/eng/download.php)
 
 
-
 自 OpenSSH 9.0 起，scp 命令默认使用 `SFTP` 协议进行文件传输。WinSCP 默认即是 `SFTP`。
 
 但是，这个版本号和远程被控的操作系统相关，
@@ -342,3 +341,4 @@ root@ykla:~ #
 
 - [mosh FAQ](https://mosh.org/#faq)
 - [ssh && mosh](https://silbertmonaphia.github.io/ssh%E7%99%BB%E5%BD%95%E3%81%AE%E5%91%A8%E8%BE%BA-&&-Mosh.html)
+- [scp — OpenSSH secure file copy](https://man.openbsd.org/scp.1)
