@@ -280,9 +280,3 @@
 * [第 28.2 节 换源与包管理器](di-28-zhang-dragonflybsd/di-28.2-jie-huan-yuan-yu-bao-guan-li-qi.md)
 * [第 28.3 节 桌面与其他软件](di-28-zhang-dragonflybsd/di-28.3-jie-zhuo-mian-yu-qi-ta-ruan-jian.md)
 
-## 第 29 章 TrueNAS
-
-* [第 29.1 节 TrueNAS 简介](di-29-zhang-truenas/di-29.1-jie-truenas-jian-jie.md)
-* [第 29.2 节 TrueNAS 安装](di-29-zhang-truenas/di-29.2-jie-truenas-an-zhuang.md)
-* [第 29.3 节 TrueNAS 配置与调优](di-29-zhang-truenas/di-29.3-jie-truenas-pei-zhi-yu-tiao-you.md)
-* [第 29.4 节 TrueNAS 故障排除](di-29-zhang-truenas/di-29.4-jie-truenas-gu-zhang-pai-chu.md)
