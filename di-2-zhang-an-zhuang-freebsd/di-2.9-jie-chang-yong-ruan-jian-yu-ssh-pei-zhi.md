@@ -171,7 +171,7 @@ drwx------  2 root  wheel   512 Mar 22 18:27 /root/.ssh #权限为 700
 # ee /etc/ssh/sshd_config
 ```
 
-修改配置如下（删去前边的 #，并将 yes 或 no 修改为如下）：
+修改配置如下（删去前边的 `#`，并将 yes 或 no 修改为如下）：
 
 ```shell-session
 PermitRootLogin yes                          #允许 ROOT 用户直接登陆系统
