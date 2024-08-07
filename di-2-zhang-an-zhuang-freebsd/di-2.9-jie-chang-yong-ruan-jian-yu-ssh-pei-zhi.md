@@ -25,7 +25,7 @@ OpenSSH_9.7p1, OpenSSL 3.0.14 4 Jun 2024
 >根据 [FreeBSD 官方信息](https://www.freebsd.org/status/report-2022-10-2022-12/openssh/)，FreeBSD 13.2-RELEASE 及以后的操作系统应该都不需要此项变更。
 - 如果你的输出小于 9.0，请按下图执行操作，将 `SFTP` 改成 `SCP`；
 >
->请按下图设置协议为 `scp`，然后其他的和 ssh 信息一模一样。scp 是 ssh 的子项目实现。
+>请按下图设置协议为 `scp`，然后其他的和 ssh 信息一模一样。因为 scp 是 ssh 的子项目实现。
 >
 ><img style="width:50%;"  src="../.gitbook/assets/scp2.png" />
 
