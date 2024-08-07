@@ -171,12 +171,12 @@ drwx------  2 root  wheel   512 Mar 22 18:27 /root/.ssh #权限为 700
 # ee /etc/ssh/sshd_config
 ```
 
-**逐个找到（分散于 `sshd_config`）**，并修改配置如下（删去前边的 `#`，并将 yes 或 no 修改为如下）：
+**逐个找到（分散于 `sshd_config`）**，并修改配置如下（删去前边的 `#`，并将 `yes` 或 `no` 的状态修改为如下）：
 
 ```shell-session
 PermitRootLogin yes                          #允许 ROOT 用户直接登陆系统
 
-AuthorizedKeysFile     .ssh/authorized_keys  #修改使用用户目录下密钥文件，默认已经正确配置，请检查
+AuthorizedKeysFile     .ssh/authorized_keys  #修改使用用户目录下密钥文件，默认已经正确配置，可再检查下
 
 PasswordAuthentication no                    #不允许用户使用密码方式登录
 
