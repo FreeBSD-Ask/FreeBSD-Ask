@@ -21,8 +21,9 @@ root@ykla:~ # ssh -V
 OpenSSH_9.7p1, OpenSSL 3.0.14 4 Jun 2024
 ```
 
-- 如果你的输出大于等于 9.0，你可无视， `SFTP`、`SCP` 都能用，且 WinSCP 默认即是 `SFTP`。
-- 如果你的输出小于 9.0，请按下图执行操作，将 `SFTP` 改成 `SCP`
+- 如果你的输出大于等于 9.0，**你可无视下图**，什么也不用改。`SFTP`、`SCP` 都能用，且 WinSCP 默认即是 `SFTP`；
+>根据 [FreeBSD 官方信息](https://www.freebsd.org/status/report-2022-10-2022-12/openssh/)，FreeBSD 13.2-RELEASE 及以后的操作系统应该都不需要此项变更。
+- 如果你的输出小于 9.0，请按下图执行操作，将 `SFTP` 改成 `SCP`；
 >
 >请按下图设置协议为 `scp`，然后其他的和 ssh 信息一模一样。scp 是 ssh 的子项目实现。
 >
