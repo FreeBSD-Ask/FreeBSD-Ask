@@ -171,6 +171,8 @@ SATA 协议或 SATA 硬盘之所以慢，是由于协议设计问题造成的，
 
 
 >回收废旧电子元器件的一个重要目的就是炼金。
+>
+>——[Royal Mint starts turning e-waste into gold](https://www.bbc.co.uk/news/articles/c6p2k11e41po)
 
 ## 鼓风机与风扇
 
