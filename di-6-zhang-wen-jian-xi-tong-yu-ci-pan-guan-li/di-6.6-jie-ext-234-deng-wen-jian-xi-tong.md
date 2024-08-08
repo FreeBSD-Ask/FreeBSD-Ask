@@ -39,3 +39,11 @@ _提示：上式不一定是 `da0sX`（X 为对应的数字），可通过 `# gp
 ```shell-session
 # pkg install fusefs-lkl
 ```
+
+## FAT32 文件系统
+
+**必须显式声明文件系统类型才能挂载**
+
+```
+# mount -v -t msdosfs  /dev/mmcsd0s1  /mnt
+```
