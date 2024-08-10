@@ -36,7 +36,8 @@ root@ykla:/usr/ports # git pull #同步更新上游 Ports
 
 将输出 
 
-```python: /usr/ports/lang/python
+```
+python: /usr/ports/lang/python
 ```
 
 ### 如何安装 python3：
