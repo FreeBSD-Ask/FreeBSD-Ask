@@ -1,4 +1,4 @@
-# 第 2.1 节 双系统安装
+# 第 2.1 节 手动安装双系统
 
 本篇以 `FreeBSD-14.0-RELEASE-amd64-disc1.iso` 为例，在 `Hyper-V` 中演示 `FreeBSD 14.0 RELEASE` 与 `Windows 11` 在 UEFI 环境下的双系统安装。
 
@@ -91,3 +91,8 @@
 这样我们就手动创建了一套与自动安装相同的结构
 
 ![](../.gitbook/assets/双系统11.png)
+
+## 参考文献
+
+- [How to manually install FreeBSD on a remote server (with UFS, ZFS, encryption...)](https://stanislas.blog/2018/12/how-to-install-freebsd-server/)
+- [RootOnZFS/GPTZFSBoot](https://wiki.freebsd.org/RootOnZFS/GPTZFSBoot)
