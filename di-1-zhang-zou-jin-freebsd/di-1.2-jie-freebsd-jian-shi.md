@@ -38,7 +38,7 @@ Multics 的最初规划和开发始于 1964 年，地点位于马萨诸塞州的
 
 ### 1969 年 UNIX（UNIX 操作系统）
 
-在贝尔实验室退出 Multics 项目之前，Dennis Ritchie 和 Ken Thompson 对 Multics 的潜力有所了解。他们从贝尔实验室法务部门获得了资金，购买了一台更强大的 PDP-11/20 机器。在 1969 年，Ken Thompson、Dennis Ritchie 和其他人开始着手开发一款利用更强大计算机全部功能的新程序。这个程序被称为 Unics（Uniplexed Information and Computing Service，即没路信息计算系统）。
+在贝尔实验室退出 Multics 项目前，Dennis Ritchie 和 Ken Thompson 感受到了 Multics 的潜力。他们从贝尔实验室法务部门获得了资金，购买了一台更强大的 PDP-11/20 机器。在 1969 年，Ken Thompson、Dennis Ritchie 和其他人开始着手开发一款能利用更为强大的计算机全部功能的新程序。这个程序被称为 Unics（Uniplexed Information and Computing Service，即非复用信息和计算机服务）。
 
 ### 1972 年 UNIX 代码迁移到 C 语言
 
