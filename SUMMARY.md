@@ -150,19 +150,14 @@
 ## 第 16 章 服务器
 
 * [第 16.1 节 FTP 服务器](di-16-zhang-fu-wu-qi/di-16.1-jie-ftp-fu-wu-qi.md)
-* [第 16.2 节 DHCP 服务器](di-16-zhang-fu-wu-qi/di-16.2-jie-dhcp-fu-wu-qi.md)
+* [第 16.2 节 MinIO 对象存储服务](di-16-zhang-fu-wu-qi/di-16.14-jie-minio-dui-xiang-cun-chu-fu-wu.md)
 * [第 16.3 节 Nodejs 相关](di-16-zhang-fu-wu-qi/di-16.3-jie-nodejs-xiang-guan.md)
-* [第 16.4 节 DNS 服务器](di-16-zhang-fu-wu-qi/di-16.4-jie-dns-fu-wu-qi.md)
-* [第 16.5 节 NIS 服务器](di-16-zhang-fu-wu-qi/di-16.5-jie-nis-fu-wu-qi.md)
-* [第 16.6 节 Postfix 服务器](di-16-zhang-fu-wu-qi/di-16.6-jie-postfix-fu-wu-qi.md)
+* [第 16.4 节 时间服务](di-16-zhang-fu-wu-qi/di-16.4-jie-shi-jian-fu-wu.md)
+* [第 16.5 节 Wildfly](di-16-zhang-fu-wu-qi/di-16.5-jie-wildfly.md)
+* [第 16.6 节 rsync 同步服务](di-16-zhang-fu-wu-qi/di-16.6-jie-rsync-tong-bu-fu-wu.md)
 * [第 16.7 节 Samba 服务器](di-16-zhang-fu-wu-qi/di-16.7-jie-samba-fu-wu-qi.md)
 * [第 16.8 节 NFS 服务器](di-16-zhang-fu-wu-qi/di-16.8-jie-nfs-fu-wu-qi.md)
-* [第 16.9 节 iSCSI](di-16-zhang-fu-wu-qi/di-16.9-jie-iscsi.md)
-* [第 16.10 节 Webmin](di-16-zhang-fu-wu-qi/di-16.10-jie-webmin.md)
-* [第 16.11 节 rsync 同步服务](di-16-zhang-fu-wu-qi/di-16.11-jie-rsync-tong-bu-fu-wu.md)
-* [第 16.12 节 时间服务](di-16-zhang-fu-wu-qi/di-16.12-jie-shi-jian-fu-wu.md)
-* [第 16.13 节 Wildfly](di-16-zhang-fu-wu-qi/di-16.13-jie-wildfly.md)
-* [第 16.14 节 MinIO 对象存储服务](di-16-zhang-fu-wu-qi/di-16.14-jie-minio-dui-xiang-cun-chu-fu-wu.md)
+* [第 16.9 节 Webmin](di-16-zhang-fu-wu-qi/di-16.9-jie-webmin.md)
 
 ## 第 17 章 网络服务器
 
