@@ -130,7 +130,7 @@ kqueue(2) 是取代 select/poll 的创新解决方案，于 2000 年 7 月 27 �
 
 ### 2001 年 9 月 EuroBSDCon
 
-EuroBSDCon 2001 于 2001 年尾在英国布赖顿举行。随着全球社区的不断扩大，EuroBSDCon 的目标是聚集在 BSD 操作系统家族及相关项目上工作的用户和开发者。
+EuroBSDCon 2001 于 2001 年尾在英国布莱顿举行。随着全球社区的不断扩大，EuroBSDCon 的目标是聚集在 BSD 操作系统家族及相关项目上工作的用户和开发者。
 
 ### 2003 年 1 月 19 日 FreeBSD 5.0-RELEASE
 
