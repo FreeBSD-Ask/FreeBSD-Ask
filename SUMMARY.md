@@ -150,7 +150,7 @@
 ## 第 16 章 服务器
 
 * [第 16.1 节 FTP 服务器](di-16-zhang-fu-wu-qi/di-16.1-jie-ftp-fu-wu-qi.md)
-* [第 16.2 节 MinIO 对象存储服务](di-16-zhang-fu-wu-qi/di-16.14-jie-minio-dui-xiang-cun-chu-fu-wu.md)
+* [第 16.2 节 MinIO 对象存储服务](di-16-zhang-fu-wu-qi/di-16.2-jie-minio-dui-xiang-cun-chu-fu-wu.md)
 * [第 16.3 节 Nodejs 相关](di-16-zhang-fu-wu-qi/di-16.3-jie-nodejs-xiang-guan.md)
 * [第 16.4 节 时间服务](di-16-zhang-fu-wu-qi/di-16.4-jie-shi-jian-fu-wu.md)
 * [第 16.5 节 Wildfly](di-16-zhang-fu-wu-qi/di-16.5-jie-wildfly.md)
