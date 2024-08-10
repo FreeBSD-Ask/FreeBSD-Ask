@@ -303,3 +303,15 @@ export LANG=zh_CN.UTF-8
 ```shell-session
 # cd /usr/ports/deskutils/anydesk/ && make install clean
 ```
+
+## RustDesk 
+
+待测试。
+
+```
+# pkg install rustdesk-server
+```
+
+### 参考文献
+
+- [rustdesk-server Self hosted RustDesk server](https://www.freshports.org/net/rustdesk-server/)
