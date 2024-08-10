@@ -21,16 +21,28 @@ Write password to /root/.vnc/passwd?  [y]/n y #此处键入 y 回车
 Password written to: /root/.vnc/passwd
 ```
 
-启动服务器：
+启动服务器（KDE 5 SDDM 为例）：
 
 ```
-$ x11vnc -display :0
+$ x11vnc -display :0 -rfbauth ~/.vnc/passwd -auth $(find /var/run/sddm/ -type f)
+```
+
+- LightDM
+
+```
+$ x11vnc -display :0 -rfbauth ~/.vnc/passwd -auth /var/run/lightdm/root/\:0
+```
+
+- GDM
+
+```
+$ x11vnc -display :0 -rfbauth ~/.vnc/passwd -auth /var/lib/gdm/:0.Xauth #或 /run/user/120/gdm/Xauthority，取决于你的 gdm 版本，自己 ls 看一下
 ```
 
 #### 参考文献
 
-- [x11vnc -	allow VNC connections to real X11 displays](https://man.freebsd.org/cgi/man.cgi?query=x11vnc&sektion=&manpath=freebsd-release-ports)
-
+- [x11vnc -allow VNC connections to real X11 displays](https://man.freebsd.org/cgi/man.cgi?query=x11vnc&sektion=&manpath=freebsd-release-ports)
+- [X11vnc](https://wiki.archlinux.org/title/X11vnc)
   
 ### TigerVNC
 
