@@ -258,19 +258,18 @@ export LANG=zh_CN.UTF-8
 
 以下为几个配置要点：
 
-![Remote Desktop FreeBSD](../.gitbook/assets/wrdp1.png)
+<img style="width:20%;"  src="../.gitbook/assets/wrdp1.png" />
 
-![Remote Desktop FreeBSD](../.gitbook/assets/wrdp2.png)
-
-![Remote Desktop FreeBSD](../.gitbook/assets/wrdp3.png)
+<img style="width:20%;"  src="../.gitbook/assets/wrdp2.png" />
 
 请注意，须将左上 🖱️ 改为 👆。默认的鼠标操作很不方便：或者你也可以选择手机 OTG 一个鼠标和键盘。
 
+![Remote Desktop FreeBSD](../.gitbook/assets/wrdp3.png)
+
+
+连接示意图（后台正在编译 Chromium，故占用会很高）：
+
 ![Remote Desktop FreeBSD](../.gitbook/assets/wrdp4.png)
-
-连接后示意图（后台正在编译 Chromium，故占用会很高）：
-
-![Remote Desktop FreeBSD](../.gitbook/assets/wrdp5.png)
 
 ### 使用 FreeBSD 远程其他机器
 
