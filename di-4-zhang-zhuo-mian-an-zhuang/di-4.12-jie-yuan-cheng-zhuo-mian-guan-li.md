@@ -2,12 +2,44 @@
 
 ## VNC
 
+### x11vnc（镜像屏幕）
+
+
+安装 x11vnc：
+
+```
+# pkg install x11vnc
+```
+
+创建密码：
+
+```
+$ x11vnc -storepasswd
+Enter VNC password: 
+Verify password:    
+Write password to /root/.vnc/passwd?  [y]/n y #此处键入 y 回车
+Password written to: /root/.vnc/passwd
+```
+
+启动服务器：
+
+```
+$ x11vnc -display :0
+```
+
+#### 参考文献
+
+- [x11vnc -	allow VNC connections to real X11 displays](https://man.freebsd.org/cgi/man.cgi?query=x11vnc&sektion=&manpath=freebsd-release-ports)
+
+  
+### TigerVNC
+
 启用 VNC 服务（目前 Ports 就只剩下这个 [TigerVNC](https://www.freshports.org/net/tigervnc-server/) 了）
 
 安装 TigerVNC Server：
 
 ```shell-session
-# pkg install -y tigervnc-server
+# pkg install tigervnc-server
 ```
 
 安装之后，还要做一些设置：
