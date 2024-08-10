@@ -30,7 +30,7 @@ UNIX -> Networking Release 1->Networking Release 2 ->386BSD -> FreeBSD 1.0
 
 ### 1962 年 分时操作系统（Timesharing OS）
 
-在 20 世纪 60 年代初出现了分时操作系统，其中一个最早的系统是由英国曼彻斯特计划设计的 Atlas 品牌计算机上的 Atlas 监控程序。在那个时代，分时共享系统意味着两个人共享同一台计算机，往往需要设定一个小时时间表来安排他们使用计算机的时间。
+在 20 世纪 60 年代初出现了分时操作系统，其中最早出现的一个系统是由英国曼彻斯特计划设计的 Atlas 品牌计算机上的 Atlas 监控程序。在那个时代，分时共享系统意味着两个人共享同一台计算机，往往需要设定一个小时时间表来安排他们使用计算机的时间。
 
 ### 1964 年 MULTICS（多任务信息与计算系统）
 
@@ -240,7 +240,7 @@ LLVM 项目是一组模块化和可重用的编译器和工具链技术。Clang 
 
 FreeBSD 13.0-RELEASE 于 2021 年 4 月 13 日发布。尽管 AArch64 从 FreeBSD 11 开始就得到了支持，但它在 FreeBSD 13.0-RELEASE 中才被提升为一级平台，成为第一个非 x86 架构的一级平台。13.0 还包括内核 TLS 卸载、对 clang 和 LLVM 的升级以及移除了弃用的库和工具。
 
-原文地址：https://freebsdfoundation.org/freebsd/timeline/
+原文地址：<https://freebsdfoundation.org/freebsd/timeline/>
 
 
 
