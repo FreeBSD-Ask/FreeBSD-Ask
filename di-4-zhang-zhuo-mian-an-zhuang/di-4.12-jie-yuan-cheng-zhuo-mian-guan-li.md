@@ -312,7 +312,7 @@ export LANG=zh_CN.UTF-8
 # pkg install rustdesk-server
 ```
 
-启动 hbbr：
+- 启动 hbbr：
 
 ```
 root@ykla:~ # /usr/local/bin/hbbs
@@ -335,10 +335,21 @@ root@ykla:~ # /usr/local/bin/hbbs
 ^C[2024-08-10 23:10:06.746255 +08:00] INFO [src/common.rs:176] signal interrupt
 ```
 
-启动 hbbs：
+- 再启动 hbbs：
 
 ```
-root@ykla:~ # /usr/local/bin/hbbs
+root@ykla:~ # /usr/local/bin/hbbr
+[2024-08-10 22:58:26.593397 +08:00] INFO [src/relay_server.rs:61] #blacklist(blacklist.txt): 0
+[2024-08-10 22:58:26.593439 +08:00] INFO [src/relay_server.rs:76] #blocklist(blocklist.txt): 0
+[2024-08-10 22:58:26.593445 +08:00] INFO [src/relay_server.rs:82] Listening on tcp :21117
+[2024-08-10 22:58:26.593449 +08:00] INFO [src/relay_server.rs:84] Listening on websocket :21119
+[2024-08-10 22:58:26.593452 +08:00] INFO [src/relay_server.rs:87] Start
+[2024-08-10 22:58:26.593546 +08:00] INFO [src/relay_server.rs:105] DOWNGRADE_THRESHOLD: 0.66
+[2024-08-10 22:58:26.593556 +08:00] INFO [src/relay_server.rs:115] DOWNGRADE_START_CHECK: 1800s
+[2024-08-10 22:58:26.593559 +08:00] INFO [src/relay_server.rs:125] LIMIT_SPEED: 4Mb/s
+[2024-08-10 22:58:26.593564 +08:00] INFO [src/relay_server.rs:136] TOTAL_BANDWIDTH: 1024Mb/s
+[2024-08-10 22:58:26.593567 +08:00] INFO [src/relay_server.rs:146] SINGLE_BANDWIDTH: 16Mb/s
+^C[2024-08-10 23:10:04.393365 +08:00] INFO [src/common.rs:176] signal interrupt
 ```
 
 在其他设备上打开 rustdesk 客户端，两边都要填入相同的 “ID 服务器（FreeBSD 的 IP 地址或域名）”和“Key”，输入显示的 ID 即可连接。
