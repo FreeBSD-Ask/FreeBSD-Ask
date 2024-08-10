@@ -7,7 +7,7 @@ XRDP 是 Microsoft RDP 的开源实现。
 | **特性**         | **VNC**                                                      | **XRDP**                                                     |
 |:------------------:|--------------------------------------------------------------|--------------------------------------------------------------|
 | **协议**         | 基于 RFB（Remote Framebuffer）协议                           | 基于 RDP（Remote Desktop Protocol）协议                      |
-| **设计目标**     | 跨平台远程访问桌面环境，传输屏幕图像数据（基于像素）                     | 兼容 Windows RDP 远程访问，针对 Linux 开发（通过转发 X11 的图形原语、高级命令）（似乎现在 WIndows to WIndows 默认也是串流？） |
+| **设计目标**     | 跨平台远程访问桌面环境，传输屏幕图像数据（基于像素）                     | 兼容 Windows RDP 远程访问，针对 Linux 开发（通过转发 X11 的图形原语、高级命令）（似乎现在 WIndows to WIndows 不是这样？请求出处。） |
 | **性能**         | 图像更新效率较低，带宽和延迟敏感的网络环境下性能差            | 性能较好，适用于低带宽和高延迟网络                           |
 | **资源消耗**     | 资源消耗较高，尤其是高分辨率下             | 资源消耗较低                                                  |
 | **跨平台兼容性** | 支持在 Windows、Linux、macOS 等不同操作系统间的远程连接          | 主要用于 Windows 和 Linux 间的远程连接                   |
@@ -31,6 +31,7 @@ XRDP 是 Microsoft RDP 的开源实现。
 
 - [xrdp: an open source RDP server](https://github.com/neutrinolabs/xrdp)
 - [VNC 还是 RDP? 云上的远程桌面究竟该如何选](https://aws.amazon.com/cn/blogs/china/vnc-or-rdp-how-to-choose-a-remote-desktop-on-the-cloud/)
+- [UOS_远程桌面_xrdp_Xorg_x11vnc](https://www.cnblogs.com/osnosn/p/16690589.html)
 
 ## VNC
 
