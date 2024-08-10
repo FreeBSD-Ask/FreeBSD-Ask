@@ -2,7 +2,7 @@
 
 ## VNC
 
-启用 VNC 服务（目前只剩下这个 TigerVNC 了）
+启用 VNC 服务（目前 Ports 就只剩下这个 [TigerVNC](https://www.freshports.org/net/tigervnc-server/) 了）
 
 安装 TigerVNC Server：
 
@@ -14,7 +14,15 @@
 
 在终端执行命令 `vncpasswd`，设置访问密码。
 
-创建 `~/.vnc/xstartup` 文件，内容如下：
+创建 `~/.vnc/xstartup` 文件：
+
+
+```
+root@ykla:~ # mkdir -p ~/.vnc/
+root@ykla:~ # ee ~/.vnc/xstartup
+```
+
+内容如下：
 
 ```shell-session
 #!/bin/sh
@@ -23,12 +31,16 @@ unset DBUS_SESSION_BUS_ADDRESS
 [ -x /etc/X11/xinit/xinitrc ] && exec /etc/X11/xinit/xinitrc
 [ -f /etc/X11/xinit/xinitrc ] && exec sh /etc/X11/xinit/xinitrc
 xsetroot -solid grey
-$command &
+$command &  #此处不能照抄！
 ```
 
-注意：`$command` 需要替换，请注意保留 `&`，在不同桌面下需要替换，Gnome 用 `gnome-session`，KDE 用 `startplasma-x11`，MATE 用 `mate-session`，Xfce 用 `xfce4-session`。
+注意：`$command` 需要替换，**请注意保留 `&`**，在不同桌面下需要替换，Gnome 用 `gnome-session`，KDE 用 `startplasma-x11`，MATE 用 `mate-session`，Xfce 用 `xfce4-session`。
 
-保存后执行命令 `# chmod 755 ~/.vnc/xstartup`。
+保存后执行命令 
+
+```
+# chmod 755 ~/.vnc/xstartup
+```
 
 - 接下来在终端执行命令 `vncserver` 或 `vncserver :1`。
 
@@ -73,14 +85,14 @@ $command &
 # exec gnome-session
 # exec mate-session
 # exec start-lumina-desktop
-exec ck-launch-session startplasma-x11   #更改此处
-# exec startxfce4
-# exec xterm                             #更改此处
+# exec ck-launch-session startplasma-x11 #KDE5 更改此处
+# exec startxfce4                        #xfce 更改此处
+# exec xterm                             #xterm 更改此处
 ```
 
 然后重启系统。
 
-打开 windows 自带的远程桌面链接，输入 IP 地址/用户名/密码进行链接。
+打开 Windows 自带的远程桌面链接，输入 IP 地址/用户名/密码进行连接。
 
 > **注意**
 >
