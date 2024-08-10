@@ -6,9 +6,9 @@
 
 [Hardware for BSD](https://bsd-hardware.info/?view=search)
 
-<figure><img src="../.gitbook/assets/h1.png" alt=""><figcaption></figcaption></figure>
+![Hardware for BSD](../.gitbook/assets/h1.png)
 
-<figure><img src="../.gitbook/assets/h2.png" alt=""><figcaption></figcaption></figure>
+![Hardware for BSD](../.gitbook/assets/h2.png)
 
 > 如果你也想上传你的数据到该网站上，请：
 >
