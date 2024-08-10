@@ -24,7 +24,7 @@ UNIX -> Networking Release 1->Networking Release 2 ->386BSD -> FreeBSD 1.0
 
 ![](../.gitbook/assets/图片2.png)
 
-> 图片来源：https://github.com/freebsd/freebsd-src/blob/main/share/misc/bsd-family-tree
+> 图片来源：<https://github.com/freebsd/freebsd-src/blob/main/share/misc/bsd-family-tree>
 
 ## 时间表
 
