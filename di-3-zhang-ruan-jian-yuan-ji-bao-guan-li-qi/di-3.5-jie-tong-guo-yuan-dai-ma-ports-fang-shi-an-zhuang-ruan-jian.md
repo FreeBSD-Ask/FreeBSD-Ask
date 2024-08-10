@@ -6,15 +6,38 @@
 
 ## FreeBSD ports 基本用法
 
-### 首先获取 ports
+### 首先使用 Git 获取 Ports（其他方法参见前节）
 
-请参照换源章节。
+安装 Git：
+```
+# pkg install git
+```
+拉取 Ports 存储库：
+
+```
+# git clone --depth 1 https://mirrors.ustc.edu.cn/freebsd-ports/ports.git /usr/ports
+```
+
+#### 同步更新 Ports Git
+
+
+```
+root@ykla:/ # cd /usr/ports/ #切换目标目录
+root@ykla:/usr/ports # git pull #同步更新上游 Ports
+```
 
 ### 使用 whereis 查询软件路径
 
-如 `# whereis python`
+如 
 
-输出 `python: /usr/ports/lang/python`
+```
+# whereis python
+```
+
+将输出 
+
+```python: /usr/ports/lang/python
+```
 
 ### 如何安装 python3：
 
@@ -23,7 +46,7 @@
 # make BATCH=yes clean
 ```
 
-其中 BATCH=yes 的意思是使用默认配置
+其中 `BATCH=yes` 意味着使用默认参数进行编译。
 
 ## 加速编译
 
