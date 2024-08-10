@@ -187,6 +187,9 @@ root     syslogd     1021 7   udp4   *:514                 *:*
 
 ### 使用其他 PC 操作系统远程 FreeBSD
 
+
+#### 在 FreeBSD 上的准备工作
+
 安装软件包（以 KDE5 桌面为基准）：
 
 ```shell-session
@@ -234,8 +237,11 @@ root     syslogd     1021 7   udp4   *:514                 *:*
 export LANG=zh_CN.UTF-8
 ```
 
-#### 登录
+#### Windows 远程访问 FreeBSD
 
+下载 TigerVNC 查看器：
+
+下载地址：<https://sourceforge.net/projects/tigervnc/files/stable/>
 
 ![xrdp FreeBSD](../.gitbook/assets/xrdp1.png)
 
