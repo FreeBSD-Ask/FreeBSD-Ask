@@ -184,7 +184,7 @@ root     syslogd     1021 7   udp4   *:514                 *:*
 
 ## XRDP
 
-### 使用其他机器远程 FreeBSD
+### 使用其他 PC 操作系统远程 FreeBSD
 
 安装软件包（以 KDE5 桌面为基准）：
 
@@ -245,6 +245,32 @@ export LANG=zh_CN.UTF-8
 ![xrdp FreeBSD](../.gitbook/assets/xrdp4.png)
 
 ![xrdp FreeBSD](../.gitbook/assets/xrdp5.png)
+
+#### 使用 Android 通过 XRDP 远程访问 FreeBSD
+
+首先需要下载所需软件：
+
+由微软官方开发的手机 RDP 软件：Remote Desktop
+
+- [Remote Desktop](https://play.google.com/store/apps/details?id=com.microsoft.rdc.androidx&hl=zh_CN)
+
+该软件操作便捷。
+
+以下为几个配置要点：
+
+![Remote Desktop FreeBSD](../.gitbook/assets/wrdp1.png)
+
+![Remote Desktop FreeBSD](../.gitbook/assets/wrdp2.png)
+
+![Remote Desktop FreeBSD](../.gitbook/assets/wrdp3.png)
+
+请注意，须将左上 🖱️ 改为 👆。默认的鼠标操作很不方便：或者你也可以选择手机 OTG 一个鼠标和键盘。
+
+![Remote Desktop FreeBSD](../.gitbook/assets/wrdp4.png)
+
+连接后示意图（后台正在编译 Chromium，故占用会很高）：
+
+![Remote Desktop FreeBSD](../.gitbook/assets/wrdp5.png)
 
 ### 使用 FreeBSD 远程其他机器
 
