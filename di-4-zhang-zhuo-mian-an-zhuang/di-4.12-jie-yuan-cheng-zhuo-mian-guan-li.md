@@ -296,7 +296,7 @@ export LANG=zh_CN.UTF-8
 
 ## anydesk
 
-使用 anydesk 可进行远程访问：
+使用 anydesk 可进行远程访问，FreeBSD 上仅支持 x86 架构：
 
 由于版权问题（**私有软件未经许可默认禁止分发**），必须用户使用 Ports 自行编译：
 
