@@ -133,10 +133,11 @@ exec command &  #此处不能照抄！
 >```
 >root@ykla:~ # vncserver :0
 >
+>
 >Warning: ykla:0 is taken because of /tmp/.X11-unix/X0
 >Remove this file if there is no X server ykla:0
 >A VNC server is already running as :0
-```
+>```
 
 如果启动服务时未通信端口，则系统根据使用情况自动指定。
 
@@ -172,7 +173,7 @@ root     syslogd     1021 7   udp4   *:514                 *:*
 
 - 如果启用了防火墙，以 ipfw 为例，在终端输入命令：
 
-```shell-session
+```
 # ipfw add allow tcp from any to me 5900-5910 in keep-state
 ```
 
@@ -224,9 +225,11 @@ root     syslogd     1021 7   udp4   *:514                 *:*
 
 #### 中文化(该用户使用 sh 作为 shell）：
 
-`/usr/local/etc/xrdp/startwm.sh`：
+```
+# ee /usr/local/etc/xrdp/startwm.sh
+```
 
-```shell-session
+```
 #### set environment variables here if you want
 export LANG=zh_CN.UTF-8
 ```
