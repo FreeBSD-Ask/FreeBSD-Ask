@@ -37,7 +37,7 @@ XRDP 是 Microsoft RDP 的开源实现。
 
 ### x11vnc（镜像屏幕）
 
-**和远程软件 todesk 一样会直接镜像屏幕，简言之，你的所有操作都会被同步到显示器上面**
+**x11vnc 会远程软件 todesk 一样直接镜像屏幕，简言之，你的所有操作都会被同步到显示器上面**
 
 如果没有显示器则不能使用 x11vnc。
 
@@ -126,7 +126,17 @@ exec command &  #此处不能照抄！
 
 - 接下来在终端执行命令 `vncserver` 或 `vncserver :1`。
 
-其中“`:1`”相当于 `DISPLAY=:1`，即指定桌面显示的通信端口为 `1`，对应 VNC 服务的通信端口为 `5901`。尽管桌面显示通信端口是从 0 开始，但该端口已被当前桌面占用，因此 VNC 服务默认端口虽为 5900，但实际执行往往从 5901 开始。
+其中“`:1`”相当于 `DISPLAY=:1`，即指定桌面显示的通信端口为 `1`，对应 VNC 服务的通信端口为 `5901`。桌面显示通信端口是 0 开始，但该端口已被当前桌面占用（除非是镜像 VNC），因此 VNC 服务默认端口虽为 5900，但实际执行往往从 5901 开始。
+>
+>测试：
+>
+>```
+>root@ykla:~ # vncserver :0
+>
+>Warning: ykla:0 is taken because of /tmp/.X11-unix/X0
+>Remove this file if there is no X server ykla:0
+>A VNC server is already running as :0
+```
 
 如果启动服务时未通信端口，则系统根据使用情况自动指定。
 
