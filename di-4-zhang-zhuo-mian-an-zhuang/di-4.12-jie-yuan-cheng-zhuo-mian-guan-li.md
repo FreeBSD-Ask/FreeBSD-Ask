@@ -306,12 +306,44 @@ export LANG=zh_CN.UTF-8
 
 ## RustDesk 
 
-待测试。
+**这个是中继是 ID 服务器，本身不能被远程控制。**
 
 ```
 # pkg install rustdesk-server
 ```
 
+启动 hbbr：
+
+```
+root@ykla:~ # /usr/local/bin/hbbs
+[2024-08-10 23:02:13.782550 +08:00] INFO [src/common.rs:122] Private key comes from id_ed25519
+[2024-08-10 23:02:13.782587 +08:00] INFO [src/rendezvous_server.rs:1191] Key: mgRwOWJy9Vnz3LqQYjtNHwZQYg73uhdj9iCTMmIyoP4=  #此处是 Key
+[2024-08-10 23:02:13.782655 +08:00] INFO [src/peer.rs:84] DB_URL=./db_v2.sqlite3
+[2024-08-10 23:02:13.786349 +08:00] INFO [src/rendezvous_server.rs:99] serial=0
+[2024-08-10 23:02:13.786381 +08:00] INFO [src/common.rs:46] rendezvous-servers=[]
+[2024-08-10 23:02:13.786388 +08:00] INFO [src/rendezvous_server.rs:101] Listening on tcp/udp :21116
+[2024-08-10 23:02:13.786391 +08:00] INFO [src/rendezvous_server.rs:102] Listening on tcp :21115, extra port for NAT test
+[2024-08-10 23:02:13.786395 +08:00] INFO [src/rendezvous_server.rs:103] Listening on websocket :21118
+[2024-08-10 23:02:13.786430 +08:00] INFO [libs/hbb_common/src/udp.rs:35] Receive buf size of udp [::]:21116: Ok(42080)
+[2024-08-10 23:02:13.786581 +08:00] INFO [src/rendezvous_server.rs:138] mask: None
+[2024-08-10 23:02:13.786594 +08:00] INFO [src/rendezvous_server.rs:139] local-ip: ""
+[2024-08-10 23:02:13.786603 +08:00] INFO [src/common.rs:46] relay-servers=[]
+[2024-08-10 23:02:13.786703 +08:00] INFO [src/rendezvous_server.rs:153] ALWAYS_USE_RELAY=N
+[2024-08-10 23:02:13.786734 +08:00] INFO [src/rendezvous_server.rs:185] Start
+[2024-08-10 23:02:13.786793 +08:00] INFO [libs/hbb_common/src/udp.rs:35] Receive buf size of udp [::]:0: Ok(42080)
+[2024-08-10 23:09:11.043094 +08:00] INFO [src/peer.rs:102] update_pk 1101115918 [::ffff:192.168.31.90]:37057 b"\x06\xef\x81\xb4\xe2\x9e\xff(\xcb\xd7\x985S\x95)~1O\xe2\xfcu\xeeE\x91\xf1\xf2\xa1\xbe\rk\xcd\xc1" b"\x06\xef\x81\xb4\xe2\x9e\xff(\xcb\xd7\x985S\x95)~1O\xe2\xfcu\xeeE\x91\xf1\xf2\xa1\xbe\rk\xcd\xc1" #代表设备接入
+^C[2024-08-10 23:10:06.746255 +08:00] INFO [src/common.rs:176] signal interrupt
+```
+
+启动 hbbs：
+
+```
+root@ykla:~ # /usr/local/bin/hbbs
+```
+
+在其他设备上打开 rustdesk 客户端，两边都要填入相同的 “ID 服务器（FreeBSD 的 IP 地址或域名）”和“Key”，输入显示的 ID 即可连接。
+
 ### 参考文献
 
 - [rustdesk-server Self hosted RustDesk server](https://www.freshports.org/net/rustdesk-server/)
+- [远程控制软件RustDesk自建服务器全平台部署及使用教程](https://www.cnblogs.com/safe-rabbit/p/18020812)
