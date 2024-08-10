@@ -304,7 +304,7 @@ export LANG=zh_CN.UTF-8
 # cd /usr/ports/deskutils/anydesk/ && make install clean
 ```
 
-## RustDesk 
+## RustDesk 中继服务器
 
 **这个是中继是 ID 服务器，本身不能被远程控制。**
 
