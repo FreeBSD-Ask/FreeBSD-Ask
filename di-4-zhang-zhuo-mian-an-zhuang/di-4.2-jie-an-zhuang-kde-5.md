@@ -40,7 +40,7 @@ proc            /proc           procfs  rw      0       0
 >
 > ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ **这就是后果** ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
 >
->  <figure><img src="../.gitbook/assets/witekde.png" alt=""><figcaption></figcaption></figure>
+>  ![KDE 5](../.gitbook/assets/witekde.png)
 
 ## 启动项设置
 
