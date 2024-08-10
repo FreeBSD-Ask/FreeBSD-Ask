@@ -306,7 +306,7 @@ export LANG=zh_CN.UTF-8
 
 ## RustDesk 中继服务器
 
-**这个是中继是 ID 服务器，本身不能被远程控制。**
+**这个是中继的 ID 服务器，本身不能被远程控制。**
 
 ```
 # pkg install rustdesk-server
