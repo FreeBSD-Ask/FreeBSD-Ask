@@ -200,6 +200,8 @@ exec command &  #此处不能照抄！
 
 #### 中文化(该用户使用 sh 作为 shell）：
 
+`/usr/local/etc/xrdp/startwm.sh`：
+
 ```shell-session
 #### set environment variables here if you want
 export LANG=zh_CN.UTF-8
