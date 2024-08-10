@@ -119,8 +119,11 @@ exec command &  #此处不能照抄！
 # ipfw add allow tcp from any to me 5900-5910 in keep-state
 ```
 
-上行命令表示放通端口 5900-5910，即 DISPLAY 的端口 0-10。
+上行命令表示放通端口 5900-5910，即 DISPLAY 0-10。
 
+#### 参考文献
+
+- [Xfce4 is not displayed correctly when I connect vncviewer (in Linux) to tightvnc-server (on FreeBSD)](https://forums.freebsd.org/threads/xfce4-is-not-displayed-correctly-when-i-connect-vncviewer-in-linux-to-tightvnc-server-on-freebsd.85709/)
 
 ## XRDP
 
@@ -149,9 +152,9 @@ exec command &  #此处不能照抄！
 # exec gnome-session
 # exec mate-session
 # exec start-lumina-desktop
-# exec ck-launch-session startplasma-x11 #KDE5 更改此处
-# exec startxfce4                        #xfce 更改此处
-# exec xterm                             #xterm 更改此处
+# exec ck-launch-session startplasma-x11 #KDE5 须更改此处
+# exec startxfce4                        #xfce 须更改此处
+# exec xterm                             #xterm 须更改此处
 ```
 
 然后重启系统。
@@ -193,11 +196,10 @@ export LANG=zh_CN.UTF-8
 
 ## anydesk
 
-通过使用 anydesk 可以远程协助：
+使用 anydesk 可进行远程访问：
+
+由于版权问题（**私有软件未经许可默认禁止分发**），必须用户使用 Ports 自行编译：
 
 ```shell-session
 # cd /usr/ports/deskutils/anydesk/ && make install clean
 ```
-
-即可。
-
