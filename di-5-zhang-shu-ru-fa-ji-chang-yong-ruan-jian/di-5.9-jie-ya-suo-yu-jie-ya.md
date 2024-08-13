@@ -18,6 +18,8 @@ zip 解压的话，基本系统自带 `unzip`，不用安装。
 
 ## tar/xz
 
+基本系统自带 tar、xz 相关工具，同样也不用安装。
+
 ```shell-session
 # tar -cvf test.tar test # 压缩成 tar 格式文件
 
@@ -42,10 +44,10 @@ zip 解压的话，基本系统自带 `unzip`，不用安装。
 
 ## 7z/7za
 
-FreeBSD 操作系统下，7z 和 7za 命令均应下载 `7-zip` 使用。
+FreeBSD 操作系统下，7z 和 7za 命令均应通过下载 `7-zip` 使用。
 
 ```
-# pkg install -y 7-zip
+# pkg install 7-zip
 ```
 
 示例如下：
