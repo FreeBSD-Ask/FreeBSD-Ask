@@ -51,9 +51,7 @@
 # pkg install xorg
 ```
 
-##
-
-参考资料：
+## 参考资料：
 
 - [Product Details](https://www.freebsdmall.com/cgi-bin/fm/bsddvd10.1)
 - [HOWTO: Install binary package without internet acces](https://forums.freebsd.org/threads/howto-install-binary-package-without-internet-acces.60723/)
