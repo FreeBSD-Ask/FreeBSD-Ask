@@ -239,9 +239,13 @@ export LANG=zh_CN.UTF-8
 
 #### Windows 远程访问 FreeBSD
 
+##### TigerVNC
+
 下载 TigerVNC 查看器：
 
 下载地址：<https://sourceforge.net/projects/tigervnc/files/stable/>
+
+##### Windows 自带的桌面远程连接
 
 ![xrdp FreeBSD](../.gitbook/assets/xrdp1.png)
 
