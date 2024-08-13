@@ -72,7 +72,7 @@ FreeBSD: { enabled: no }
 > > # sed -i '' 's/quarterly/latest/g' /etc/pkg/FreeBSD.conf
 > > ```
 >
-> **若要使用 https,请先安装 `security/ca_root_nss` ,并将 `http` 修改为 `https`,最后使用命令 `# pkg update -f` 刷新缓存即可,下同。**
+> **若要使用 https,请先安装 `security/ca_root_nss`，并将 `http` 修改为 `https`,最后使用命令 `# pkg update -f` 刷新缓存即可,下同。**
 
 ### 中国科学技术大学开源软件镜像站
 
