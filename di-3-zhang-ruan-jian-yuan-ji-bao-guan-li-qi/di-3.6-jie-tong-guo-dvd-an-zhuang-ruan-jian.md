@@ -21,7 +21,7 @@
 >
 > **/dist** 目录若改为其他则使用环境变量方法无效，因为 `packages/repos/FreeBSD_install_cdrom.conf` 写死了路径且无法修改。
 
-### 使用环境变量【可选】
+### 使用环境变量（可选）
 
 #### 安装软件
 
@@ -37,7 +37,7 @@
 # env REPOS_DIR=/dist/packages/repos pkg rquery "%n"
 ```
 
-### 换源为 DVD【可选】
+### 换源为 DVD（可选）
 
 #### 创建源
 
