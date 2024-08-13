@@ -15,27 +15,40 @@
 
 ## 如何用 pkg 安装软件
 
-基本系统默认没有 pkg，先获取 pkg：
+基本系统默认没有 pkg，需要先下载一下 pkg：
 
-`# pkg` 回车即可输入 y 确认下载
+```
+# pkg
+```
+
+回车即可输入 `y` 确认下载
 
 pkg 使用 https，先安装 ssl 证书：
 
-`# pkg install ca_root_nss`
+```
+# pkg install ca_root_nss
+```
 
 然后把 repo.conf 里的 pkg+http 改成 pkg+https 即可。
 
 最后刷新 pkg 数据库：
 
-`# pkg update -f`
+```
+# pkg update -f
+```
 
 安装 python 3：
 
-`# pkg install python`
+
+```
+# pkg install python
+```
 
 pkg 升级：
 
-`# pkg upgrade`
+```
+# pkg upgrade
+```
 
 错误：`You must upgrade the ports-mgmt/pkg port first`
 
@@ -54,7 +67,7 @@ pkg 升级：
 
 ## 如何卸载软件
 
-***来源请求** 直接使用 `pkg delete` 会破坏正常的依赖关系，应该尽量避免使用（ports 的 `make deinstall` 也一样），转而使用 `pkg-rmleaf` 命令，该命令属于的软件需要自行安装：
+**来源请求** 直接使用 `pkg delete` 会破坏正常的依赖关系，应该尽量避免使用（ports 的 `make deinstall` 也一样），转而使用 `pkg-rmleaf` 命令，该命令属于的软件需要自行安装：
 
 `# pkg install pkg-rmleaf`
 
