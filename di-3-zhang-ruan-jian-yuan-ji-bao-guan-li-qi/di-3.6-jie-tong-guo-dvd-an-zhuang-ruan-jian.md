@@ -10,7 +10,7 @@
 # mount -t cd9660 /dev/md0 /dist #不能直接挂载 ISO，会显示错误 block device required
 ```
 
-- 若直接使用 DVD 设备（如虚拟机直接挂载 ISO 镜像）：
+- 若直接使用 DVD 设备（如通过虚拟机直接挂载的 ISO 镜像）：
 
 ```shell-session
 # mkdir -p /dist
