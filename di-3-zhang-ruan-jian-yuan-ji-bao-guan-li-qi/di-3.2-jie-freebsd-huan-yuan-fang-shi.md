@@ -37,7 +37,7 @@ Gentoo Linux: Portage，对应 Ports（Portage 本身就是 Ports 的仿制品�
 
 pkg 的下载路径是 `/var/cache/pkg/`
 
-FreeBSD 中 pkg 源分为系统级和用户级两个配置文件。_不建议_ 直接修改 `/etc/pkg/FreeBSD.conf` （~~但是太麻烦啦，一般我都是直接改这个文件的~~）,因为该文件会随着基本系统的更新而发生改变。
+FreeBSD 中 pkg 源分为系统级和用户级两个配置文件。_不建议_ 直接修改 `/etc/pkg/FreeBSD.conf` ~~但是太麻烦啦，一般我都是直接改这个文件的~~,因为该文件会随着基本系统的更新而发生改变。
 
 创建用户级源目录:
 
