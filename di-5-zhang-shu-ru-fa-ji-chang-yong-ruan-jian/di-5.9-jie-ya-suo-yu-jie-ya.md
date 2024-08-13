@@ -2,7 +2,13 @@
 
 ## zip
 
-安装 zip 压缩文件 `# pkg install zip`，基本系统自带 `unzip`。
+安装 zip 压缩文件：
+
+```
+# pkg install zip
+```
+
+zip 解压的话，基本系统自带 `unzip`，不用安装。
 
 ```shell-session
 # zip test.zip test # 压缩成 zip 文件
