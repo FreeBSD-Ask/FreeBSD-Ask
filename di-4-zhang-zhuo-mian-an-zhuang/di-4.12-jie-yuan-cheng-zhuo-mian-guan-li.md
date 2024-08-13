@@ -294,7 +294,7 @@ root     syslogd     1021 7   udp4   *:514                 *:*
 但 rdesktop 安装后不会在系统中生成菜单，因此要在终端输入命令：
 
 ```shell-session
-# rdesktop windows 设备 ip
+# rdesktop ip:端口
 ```
 
 ## anydesk
