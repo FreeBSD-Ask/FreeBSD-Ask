@@ -141,33 +141,7 @@ exec command &  #此处不能照抄！
 
 如果启动服务时未通信端口，则系统根据使用情况自动指定。
 
-查看端口：
 
-```
-root@ykla:/usr/ports/deskutils/anydesk # sockstat -4l
-USER     COMMAND    PID   FD  PROTO  LOCAL ADDRESS         FOREIGN ADDRESS      
-root     Xvnc        2585 4   tcp4   127.0.0.1:5910        *:*  #VNC 占用
-root     xrdp        2580 13  tcp46  *:3389                *:*  #XRDP 占用
-root     Xvnc        2016 5   tcp4   *:5901                *:*  #VNC 占用
-root     sshd        1164 4   tcp4   *:22                  *:*  #SSH 占用
-ntpd     ntpd        1127 21  udp4   *:123                 *:* 
-ntpd     ntpd        1127 24  udp4   127.0.0.1:123         *:*
-ntpd     ntpd        1127 26  udp4   192.168.31.187:123    *:*
-root     syslogd     1021 7   udp4   *:514                 *:*
-```
-
->**故障排除：由于目标服务器积极拒绝，无法连接**
->
->非镜像 vnc 在连接时必须指定端口，否则按默认端口 5900 进行连接，但是你不是镜像的屏幕（你用的不是 x11vnc），所以必定连不上。
->
->![SDDM VNC](../.gitbook/assets/vnc1.png)
->
->示例：
->```
->192.168.31.187:5901
->```
-
-![SDDM VNC](../.gitbook/assets/vnc2.png)
 
 关闭服务请用命令 `# vncserver -kill :1`，这里必须指定通信端口。
 
@@ -244,6 +218,34 @@ export LANG=zh_CN.UTF-8
 下载 TigerVNC 查看器：
 
 下载地址：<https://sourceforge.net/projects/tigervnc/files/stable/>
+
+查看 FreeBSD 的 VNC 端口：
+
+```
+root@ykla:/usr/ports/deskutils/anydesk # sockstat -4l
+USER     COMMAND    PID   FD  PROTO  LOCAL ADDRESS         FOREIGN ADDRESS      
+root     Xvnc        2585 4   tcp4   127.0.0.1:5910        *:*  #VNC 占用
+root     xrdp        2580 13  tcp46  *:3389                *:*  #XRDP 占用
+root     Xvnc        2016 5   tcp4   *:5901                *:*  #VNC 占用
+root     sshd        1164 4   tcp4   *:22                  *:*  #SSH 占用
+ntpd     ntpd        1127 21  udp4   *:123                 *:* 
+ntpd     ntpd        1127 24  udp4   127.0.0.1:123         *:*
+ntpd     ntpd        1127 26  udp4   192.168.31.187:123    *:*
+root     syslogd     1021 7   udp4   *:514                 *:*
+```
+
+>**故障排除：由于目标服务器积极拒绝，无法连接**
+>
+>非镜像 vnc 在连接时必须指定端口，否则按默认端口 5900 进行连接，但是你不是镜像的屏幕（你用的不是 x11vnc），所以必定连不上。
+>
+>![SDDM VNC](../.gitbook/assets/vnc1.png)
+>
+>示例：
+>```
+>192.168.31.187:5901
+>```
+
+![SDDM VNC](../.gitbook/assets/vnc2.png)
 
 ##### Windows 自带的桌面远程连接
 
