@@ -358,7 +358,7 @@ root@ykla:~ # /usr/local/bin/hbbr
 ^C[2024-08-10 23:10:04.393365 +08:00] INFO [src/common.rs:176] signal interrupt
 ```
 
-在其他设备上打开 rustdesk 客户端，两边都要填入相同的 “ID 服务器（FreeBSD 的 IP 地址或域名）”和“Key”，输入显示的 ID 即可连接。
+在其他设备上打开 rustdesk 客户端，两边都要填入相同的 “ID 服务器（FreeBSD 的 IP 地址或域名）”和“Key”，其他空着不填，输入显示的 ID 即可连接。
 
 ### 参考文献
 
