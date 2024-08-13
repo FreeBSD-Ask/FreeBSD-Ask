@@ -66,7 +66,7 @@ Linux 如 Gentoo 上一般是直接 `-jx` 或者 `jx+1`, `x` 为核心数。
 
 `4` 是处理器核心数（还是线程数？），不知道就别改。英特尔的处理器搜索 `CPU 型号+ARK` 转跳英特尔官网可查询线程数。
 
-- 个别情况下可以设置别名加速编译：（非永久设置，FreeBSD 14 无须设置即生效）
+- 个别情况下可以设置别名加速编译：（非永久设置，FreeBSD 14 无须设置默认即生效）
 
 ```shell-session
 # alias ninja='ninja -j4'
@@ -80,9 +80,11 @@ Linux 如 Gentoo 上一般是直接 `-jx` 或者 `jx+1`, `x` 为核心数。
 tmpfs /tmp tmpfs rw 0 0
 ```
 
-重启。
+重启即可。
 
-参考资料：[tmpfs --in-memory file system](https://man.freebsd.org/cgi/man.cgi?tmpfs(5))
+#### 参考资料
+
+- [tmpfs --in-memory file system](https://man.freebsd.org/cgi/man.cgi?tmpfs(5))
 
 
 ### ccache
@@ -134,10 +136,11 @@ root@ykla:~ # find /  -name ccache.conf # 全局查找配置文件路径
 ```
 
 
-参考文献：
+#### 参考文献
 
 - [ccache-howto-freebsd.txt.in](https://github.com/freebsd/freebsd-ports/blob/main/devel/ccache/files/ccache-howto-freebsd.txt.in)
 - [ccache -a fast C/C++ compiler cache](https://man.freebsd.org/cgi/man.cgi?query=ccache&sektion=1&n=1)
+
 ### 如何使用多线程下载：
 
 - axel
@@ -252,7 +255,7 @@ dolphin-23.04.3                    <
 
 下边分别列出 2 种 FreeBSD 手册中提及的升级工具:
 
-一、portupgrade
+1、portupgrade
 
 ```shell-session
 # cd /usr/ports/ports-mgmt/portupgrade && make install clean
@@ -260,7 +263,7 @@ dolphin-23.04.3                    <
 # portupgrade -R screen #升级单个软件
 ```
 
-二、portmaster （推荐）
+2、portmaster （推荐）
 
 - 更新：
 
@@ -290,7 +293,7 @@ root@ykla:/usr/ports/ports-mgmt/portmaster # portmaster sysutils/htop  --show-wo
 
 - 安装软件
 
-参考资料：
+### 参考资料
 
 - [portmaster -- manage your ports without external databases or languages](https://man.freebsd.org/cgi/man.cgi?portmaster(8)#end)
   
@@ -314,7 +317,7 @@ root@ykla:/usr/ports/ports-mgmt/portmaster # portmaster sysutils/htop  --show-wo
 
 完整的列表见 <https://cgit.freebsd.org/ports/tree/Mk/bsd.default-versions.mk>
 
-参考资料：
+### 参考资料
 
 - [Ports/DEFAULT_VERSIONS](https://wiki.freebsd.org/Ports/DEFAULT_VERSIONS)
 - [Python](https://wiki.freebsd.org/Python)
