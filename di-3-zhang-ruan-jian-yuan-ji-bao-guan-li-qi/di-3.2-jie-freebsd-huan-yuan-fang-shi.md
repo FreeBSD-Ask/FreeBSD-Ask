@@ -108,9 +108,9 @@ FreeBSD: { enabled: no }
 
 ## ports 源:提供源码方式安装软件的包管理器
 
-### 获取 port
+### 下载 ports
 
-这个源是下载 port 本身的源。等于以前的 portsnap。
+这个源是下载 ports 本身的源。等同于以前的 `portsnap`。
 
 #### 获取压缩文件方法
 
@@ -149,9 +149,9 @@ FreeBSD: { enabled: no }
 # git clone --depth 1 https://mirrors.ustc.edu.cn/freebsd-ports/ports.git /usr/ports
 ```
 
-### port 源
+### ports 源
 
-这个源是下载 port 中的软件的源。
+这个源是下载 ports 中的软件的源。
 
 ports 下载路径是 `/usr/ports/distfiles`
 
