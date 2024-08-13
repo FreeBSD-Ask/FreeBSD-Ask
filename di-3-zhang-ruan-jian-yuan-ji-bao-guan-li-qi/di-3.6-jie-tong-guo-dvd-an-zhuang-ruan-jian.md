@@ -19,7 +19,7 @@
 
 > **故障排除**
 >
-> **/dist** 目录若改为其他则使用环境变量方法无效，因为 `packages/repos/FreeBSD_install_cdrom.conf` 写死了路径且无法修改。
+> **/dist** 目录若改为其他则使用环境变量方法无效，因为 `packages/repos/FreeBSD_install_cdrom.conf` 写死了路径无法修改。
 
 ### 使用环境变量（可选）
 
