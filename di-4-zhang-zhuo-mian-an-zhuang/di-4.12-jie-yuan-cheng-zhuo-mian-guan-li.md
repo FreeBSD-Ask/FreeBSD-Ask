@@ -159,9 +159,6 @@ exec command &  #此处不能照抄！
 
 ## XRDP
 
-### 使用其他 PC 操作系统远程 FreeBSD
-
-
 #### 在 FreeBSD 上的准备工作
 
 安装软件包（以 KDE5 桌面为基准）：
@@ -211,9 +208,9 @@ exec command &  #此处不能照抄！
 export LANG=zh_CN.UTF-8
 ```
 
-#### Windows 远程访问 FreeBSD
+## Windows 远程访问 FreeBSD
 
-##### TigerVNC
+### TigerVNC
 
 下载 TigerVNC 查看器：
 
@@ -247,7 +244,7 @@ root     syslogd     1021 7   udp4   *:514                 *:*
 
 ![SDDM VNC](../.gitbook/assets/vnc2.png)
 
-##### Windows 自带的桌面远程连接
+### Windows 自带的桌面远程连接（RDP）
 
 ![xrdp FreeBSD](../.gitbook/assets/xrdp1.png)
 
@@ -261,7 +258,7 @@ root     syslogd     1021 7   udp4   *:514                 *:*
 
 ![xrdp FreeBSD](../.gitbook/assets/xrdp5.png)
 
-#### 使用 Android 通过 XRDP 远程访问 FreeBSD
+## 使用 Android 通过 XRDP 远程访问 FreeBSD
 
 首先需要下载所需软件：
 
@@ -286,7 +283,7 @@ root     syslogd     1021 7   udp4   *:514                 *:*
 
 ![Remote Desktop FreeBSD](../.gitbook/assets/wrdp4.png)
 
-### 使用 FreeBSD 远程其他机器
+## 使用 FreeBSD 远程其他机器
 
 安装命令：
 
