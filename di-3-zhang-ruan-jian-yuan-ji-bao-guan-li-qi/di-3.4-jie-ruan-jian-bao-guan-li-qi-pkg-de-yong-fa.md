@@ -224,7 +224,7 @@ Ignore the mismatch and continue? [y/N]:
 
 如果想要从根源上解决，需要自己卸载 pkg，从 ports 安装 `ports-mgmt/pkg`；或者从源代码更新整个系统。
 
-如果只是不想看到这个提示只需要按照提示将 `IGNORE_OSVERSION=yes` 写到 `/etc/make.conf`里面（没有就新建）。
+如果只是不想看到这个提示：只需要按照提示将 `IGNORE_OSVERSION=yes` 写到 `/etc/make.conf` 里面（没有就新建）就行。
 
 ## 参考文献
 
