@@ -311,6 +311,8 @@ root     syslogd     1021 7   udp4   *:514                 *:*
 
 **这个是中继的 ID 服务器，本身不能被远程控制。**
 
+换言之，你没法用 RustDesk 控制 FreeBSD。
+
 ```
 # pkg install rustdesk-server
 ```
