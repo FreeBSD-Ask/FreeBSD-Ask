@@ -217,7 +217,7 @@ PermitEmptyPasswords no                      #禁止空密码的用户进行登�
 
 > 如果使用其他 ssh 软件无法登陆请自行转换密钥格式。
 
-## 使用 screen 保持 SSH 不断线
+## 保持 SSH 不断线
 
 ### 传统的 screen
 
