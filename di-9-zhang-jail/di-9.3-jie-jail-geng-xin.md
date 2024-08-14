@@ -21,7 +21,12 @@
 ```shell-session
 # pkg install cpdup
 ```
+或者
 
+```
+# cd /usr/ports/sysutils/cpdup/ 
+# make install clean
+```
 ## 创建模板目录
 
 ```shell-session

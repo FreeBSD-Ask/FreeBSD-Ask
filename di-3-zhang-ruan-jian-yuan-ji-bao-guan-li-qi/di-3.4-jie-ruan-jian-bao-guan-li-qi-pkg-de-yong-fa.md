@@ -28,6 +28,12 @@ pkg 使用 https，先安装 ssl 证书：
 ```
 # pkg install ca_root_nss
 ```
+或者
+
+```
+# cd /usr/ports/security/ca_root_nss/
+# make install clean
+```
 
 然后把 repo.conf 里的 pkg+http 改成 pkg+https 即可。
 
@@ -42,6 +48,13 @@ pkg 使用 https，先安装 ssl 证书：
 
 ```
 # pkg install python
+```
+
+或
+
+```
+# cd /usr/ports/lang/python/
+# make install clean
 ```
 
 pkg 升级：
@@ -67,9 +80,17 @@ pkg 升级：
 
 ## 如何卸载软件
 
-**来源请求** 直接使用 `pkg delete` 会破坏正常的依赖关系，应该尽量避免使用（ports 的 `make deinstall` 也一样），转而使用 `pkg-rmleaf` 命令，该命令属于的软件需要自行安装：
+**来源请求** ~~直接使用 `pkg delete` 会破坏正常的依赖关系，应该尽量避免使用（ports 的 `make deinstall` 也一样），转而使用 `pkg-rmleaf` 命令，该命令属于的软件需要自行安装。~~ [FreeBSD 15 不再可用](https://github.com/bsdelf/pkg-rmleaf/issues/2)，同时该包已近 6 年未经维护。
 
-`# pkg install pkg-rmleaf`
+```
+# pkg install pkg-rmleaf
+```
+
+或者
+```
+# cd /usr/ports/ports-mgmt/pkg-rmleaf/
+# make install clean
+```
 
 ### 如何卸载所有自行安装的第三方软件？
 

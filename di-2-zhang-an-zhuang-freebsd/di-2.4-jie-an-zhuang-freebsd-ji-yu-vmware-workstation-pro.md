@@ -200,6 +200,17 @@ VMware 自动缩放屏幕请安装显卡驱动和虚拟机增强工具，即：
 # pkg install xf86-video-vmware open-vm-tools xf86-input-vmmouse
 ```
 
+或者
+
+```
+# cd /usr/ports/x11-drivers/xf86-video-vmware/ 
+# make install clean
+# cd /usr/ports/emulators/open-vm-tools/
+# make install clean
+# cd /usr/ports/x11-drivers/xf86-input-vmmouse/
+# make install clean
+```
+
 安装完毕后无需任何多余配置即可实现屏幕自动缩放。
 
 > 对于显卡来说，请勿做多余配置，比如去修改创建 `xorg.conf`，这会造成虚拟机卡死等问题。
@@ -257,6 +268,13 @@ EndSection
 
 ```shell-session
 # pkg install open-vm-tools-nox11
+```
+
+或者 
+
+```
+# cd /usr/ports/emulators/open-vm-tools/
+# make install clean
 ```
 
 具体配置

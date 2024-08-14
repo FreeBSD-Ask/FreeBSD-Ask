@@ -14,6 +14,16 @@
 # pkg install  mate xorg wqy-fonts lightdm lightdm-gtk-greeter xdg-user-dirs
 ```
 
+或者：
+
+```
+# cd /usr/ports/x11/mate/ && make install clean
+# cd /usr/ports/x11/xorg/ && make install clean
+# cd /usr/ports/x11-fonts/wqy/ && make install clean
+# cd /usr/ports/x11/lightdm-gtk-greeter/ && make install clean
+# cd /usr/ports/devel/xdg-user-dirs/ && make install clean
+```
+
 ```shell-session
 # sysrc moused_enable="YES"
 # sysrc dbus_enable="YES"
@@ -35,11 +45,25 @@ setenv LC_CTYPE zh_CN.UTF-8
 
 ## 输入法
 
-`# pkg install zh-ibus-libpinyin`（安装好运行初始化命令 `ibus-setup`）
+```
+# pkg install zh-ibus-libpinyin
+
+```
+
+或者:
+
+```
+# cd /usr/ports/chinese/ibus-libpinyin/ 
+# make install clean
+```
+
+安装好运行初始化命令 `ibus-setup`。
 
 设置输入法变量:
 
-`# ee .xinitrc`
+```
+# ee ~/.xinitrc
+```
 
 在该文件中添加以下内容
 

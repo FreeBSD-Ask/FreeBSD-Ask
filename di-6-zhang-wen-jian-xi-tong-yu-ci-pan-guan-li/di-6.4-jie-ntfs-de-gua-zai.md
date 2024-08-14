@@ -1,6 +1,13 @@
 # 第 6.4 节 NTFS 的挂载
 
-1. 安裝 ntfs-3g 软件 `# pkg install sysutils/fusefs-ntfs`
+1. 安裝 ntfs-3g 软件 
+>```
+># pkg install sysutils/fusefs-ntfs
+>```
+>或者
+>```
+># cd /usr/ports/sysutils/fusefs-ntfs/ && make install clean
+>```
 2. 把你的 ntfs 格式的硬盘或 U 盘插入计算机。这时候你会看到它的设备名，例如 `da0`。
 3. 修改 `rc.conf`
 

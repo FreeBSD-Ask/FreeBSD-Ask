@@ -142,6 +142,11 @@ FreeBSD: { enabled: no }
 ```shell-session
 # pkg install git
 ```
+或者
+```
+# cd /usr/ports/devel/git
+# make install clean
+```
 
 然后：
 

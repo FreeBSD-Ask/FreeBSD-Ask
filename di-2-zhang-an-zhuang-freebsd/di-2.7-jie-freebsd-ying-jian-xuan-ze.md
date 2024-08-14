@@ -12,8 +12,17 @@
 
 > 如果你也想上传你的数据到该网站上，请：
 >
+>安装：
 > ```shell-session
 > # pkg install hw-probe
+>```
+>或者
+>```
+># cd /usr/ports/sysutils/hw-probe/
+># make install clean
+>```
+>运行：
+>```
 > # hw-probe -all -upload
 > ```
 >

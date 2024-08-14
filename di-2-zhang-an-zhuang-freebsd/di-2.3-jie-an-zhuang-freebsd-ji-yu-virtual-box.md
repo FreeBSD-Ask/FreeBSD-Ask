@@ -76,6 +76,13 @@ FreeBSD 旧版本下载地址: [http://ftp-archive.freebsd.org/pub/FreeBSD-Archi
 # pkg install virtualbox-ose-additions
 ```
 
+或者
+
+```
+# cd /usr/ports/emulators/virtualbox-ose-additions/
+# make install clean
+```
+
 xorg 可以自动识别驱动，**不需要** 手动配置 `/usr/local/etc/X11/xorg.conf`（经过测试手动配置反而更卡，点一下要用 5 秒钟……）。
 
 显卡控制器用 `VBoxSVGA` 即可。

@@ -11,9 +11,15 @@ rime 输入法引擎依赖于输入法面板"ibus/fcitx",所以使用 rime 的�
 # pkg install zh-ibus-rime
 ```
 
+或者：
+
+```
+# cd /usr/ports/chinese/fcitx5-rime/ && make install clean
+# cd /usr/ports/chinese/ibus-rime/ && make install clean
+```
+
 #### ibus
 
----
 
 如果使用 ibus，环境变量配置：安装好运行初始化命令 `ibus-setup`，将 98 五笔码表（`wubi86.dict.yaml`、`wubi86.schema.yaml`）复制到 `/usr/local/share/rime-date` 目录下，修改 rime-date 目录下 default.yaml 文件:
 
@@ -21,11 +27,9 @@ rime 输入法引擎依赖于输入法面板"ibus/fcitx",所以使用 rime 的�
 
 下面第一行添加 `- schema: wubi98` 保存退出重新加载 ibus 输入法即可。
 
----
 
 #### fcitx 5
 
----
 
 首先下载所需文件：https://github.com/FreeBSD-Ask/98-input
 
@@ -37,12 +41,18 @@ rime 输入法引擎依赖于输入法面板"ibus/fcitx",所以使用 rime 的�
 $ libime_tabledict 98wbx.txt 98wbx.main.dict
 ```
 
----
 
 安装完成选择 rime 输入法即可，rime 默认输入法为朗月拼音（我也不知道是什么）。可以使用`pkg search zh-rime`查找支持的输入法。
 
 ```shell-session
 # pkg install zh-rime-wubi
+```
+
+或者：
+
+```
+# cd /usr/ports/chinese/rime-wubi/
+# make install clean
 ```
 
 五笔输入法已经安装好，在开始之前记住两个目录,第一个对应 ibus，第二个对应 fcitx5，都是 rime 的配置文件位置：

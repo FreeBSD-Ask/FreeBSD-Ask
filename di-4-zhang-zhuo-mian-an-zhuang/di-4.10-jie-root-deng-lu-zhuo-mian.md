@@ -18,10 +18,17 @@
 
 ## lightdm
 
-安装与配置：
+安装：
 
 ```shell-session
 # pkg install lightdm-gtk-greeter lightdm
+```
+
+或者：
+
+```
+# cd /usr/ports/x11/lightdm-gtk-greeter-settings/ && make install clean
+# cd /usr/ports/x11/lightdm/ && make install clean
 ```
 
 首先设置启动服务：
@@ -32,7 +39,7 @@
 
 然后修改配置文件：
 
-- 编辑 `# ee /usr/local/etc/lightdm/lightdm.conf`：
+- 编辑 `/usr/local/etc/lightdm/lightdm.conf`：
 
 往下拉，找到 `greeter-show-manual-login=true` 移除前面的 `#`。该行会多次出现，第一次出现是为你介绍，请勿修改，而应该继续往下拉。
 
@@ -54,6 +61,18 @@
 
 ```shell-session
 # pkg install sddm
+```
+
+或者：
+
+```
+# cd /usr/ports/x11/sddm/
+# make install clean
+```
+
+配置自启：
+
+```
 # sysrc sddm_enable="YES"
 ```
 

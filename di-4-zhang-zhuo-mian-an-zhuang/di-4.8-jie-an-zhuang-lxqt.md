@@ -8,11 +8,22 @@
 # pkg install xorg sddm lxqt gvfs wqy-fonts xdg-user-dirs
 ```
 
+或者：
+
+```shell-session
+# cd /usr/ports/x11/xorg/ && make install clean
+# cd /usr/ports/x11-wm/lxqt/ && make install clean
+# cd /usr/ports/x11-fonts/wqy/ && make install clean
+# cd /usr/ports/x11/sddm/ && make install clean
+# cd /usr/ports/devel/gvfs/ && make install clean
+# cd /usr/ports/devel/xdg-user-dirs/ && make install clean
+```
+
 解释：
 
-sddm：LXQt 首选的显示管理器
+- sddm：LXQt 首选的显示管理器
 
-gvfs：GNOME 虚拟文件系统，LXQt 依赖此打开 Computer 和 Network ，否则会提示 `Operation not supported`
+- gvfs：GNOME 虚拟文件系统，LXQt 依赖此打开 Computer 和 Network ，否则会提示 `Operation not supported`
 
 ## 准备
 

@@ -35,6 +35,13 @@
 # pkg install hplip
 ```
 
+或者：
+
+```
+# cd /usr/ports/print/hplip/
+# make install clean
+```
+
 ## 添加打印机
 
 在浏览器中输入 `http://localhost:631`，该地址为该打印机的管理页面。

@@ -4,8 +4,16 @@
 
 
 ```shell-session
-# pkg install -y xorg i3 i3status dmenu i3lock
+# pkg install xorg i3 i3status dmenu i3lock
 ```
+
+或者：
+
+```
+# cd /usr/ports/x11/xorg/
+# make install clean
+```
+
 - i3status 为状态栏，
 - dmenu 为菜单
 - 默认配置需要以上两个组件（估且称之为组件），i3lock 是锁屏可选

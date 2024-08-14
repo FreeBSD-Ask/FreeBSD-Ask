@@ -2,8 +2,20 @@
 
 > FreeBSD 14.0 已经删除了 portsnap，转而使用 git，如本文所述可以使用 gitup 替代之。
 
+安装 gitup：
+
 ```shell-session
-# pkg install gitup #安装 gitup
+# pkg install gitup 
+```
+
+或者
+
+```
+# cd /usr/ports/net/gitup/
+# make install clean
+```
+
+```
 # gitup ports #获取 latest 的 ports
 # gitup release #获取 release 版本的源代码
 ```

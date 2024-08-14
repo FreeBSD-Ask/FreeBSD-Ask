@@ -8,6 +8,17 @@
 # pkg install lumina xorg  lightdm lightdm-gtk-greeter wqy-fonts xdg-user-dirs
 ```
 
+或者
+
+```shell-session
+# cd /usr/ports/x11/xorg/ && make install clean
+# cd /usr/ports/x11/lumina/ && make install clean
+# cd /usr/ports/x11-fonts/wqy/ && make install clean
+# cd /usr/ports/x11/lightdm/ && make install clean
+# cd /usr/ports/x11/lightdm-gtk-greeter/ && make install clean
+# cd /usr/ports/devel/xdg-user-dirs/ && make install clean
+```
+
 ## 配置
 
 ```shell-session

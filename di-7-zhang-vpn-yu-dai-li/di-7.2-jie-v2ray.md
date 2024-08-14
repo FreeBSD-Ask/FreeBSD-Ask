@@ -8,10 +8,24 @@
 # pkg install v2ray
 ```
 
+或者：
+
+```
+# cd /usr/ports/net/v2ray/
+# make install clean
+```
+
 也可安装 xray-core：
 
 ```shell-session
 # pkg install xray-core
+```
+
+或者
+
+```
+# cd /usr/ports/security/xray-core/ 
+# make install clean
 ```
 
 这两个代理配置基本相同，配置文档可以在各自的官方文档找到，xray 完全可以参考 v2ray 的配置方法。

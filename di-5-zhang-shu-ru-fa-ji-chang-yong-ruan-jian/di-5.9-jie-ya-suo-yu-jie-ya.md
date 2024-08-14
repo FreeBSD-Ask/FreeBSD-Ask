@@ -8,6 +8,13 @@
 # pkg install zip
 ```
 
+或者
+
+```
+# cd /usr/ports/archivers/zip/
+# make install clean
+```
+
 zip 解压的话，基本系统自带 `unzip`，不用安装。
 
 ```shell-session
@@ -46,8 +53,17 @@ zip 解压的话，基本系统自带 `unzip`，不用安装。
 
 FreeBSD 操作系统下，7z 和 7za 命令均应通过下载 `7-zip` 使用。
 
+安装：
+
 ```
 # pkg install 7-zip
+```
+
+或者
+
+```
+# cd /usr/ports/archivers/7-zip/
+# make install clean
 ```
 
 示例如下：

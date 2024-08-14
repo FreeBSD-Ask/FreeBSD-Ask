@@ -44,7 +44,8 @@ FreeBSD 15 CUEERNT 及 14-STABLE 1400508（即 2024 年 2 月 18 日后以的 ST
 或者
 
 ```shell-session
-# cd /usr/ports/graphics/drm-kmod/ && make BATCH=yes install clean
+# cd /usr/ports/graphics/drm-kmod/
+# make BATCH=yes install clean
 ```
 
 > 注意：
@@ -107,7 +108,16 @@ FreeBSD 15 CUEERNT 及 14-STABLE 1400508（即 2024 年 2 月 18 日后以的 ST
 
 ### 视频硬解
 
-`# pkg install xf86-video-intel libva-intel-driver`
+```
+# pkg install xf86-video-intel libva-intel-driver
+```
+
+或者
+
+```
+# cd /usr/ports/x11-drivers/xf86-video-intel/
+# make install clean
+```
 
 ### 亮度调节
 
@@ -134,10 +144,17 @@ FreeBSD 15 CUEERNT 及 14-STABLE 1400508（即 2024 年 2 月 18 日后以的 ST
 
 #### 英特尔
 
+backlight 自 FreeBSD 13 引入。
+
 ```shell-session
-# pkg install intel-backlight
-# intel-backlight 80 #调整为 80% 亮度
+# backlight   #打印当前亮度
+# backlight + #默认调整亮度增加 10%
+# backlight - #默认调整亮度减少 10%
 ```
+
+##### 参考文献
+
+- [backlight -- configure backlight	hardware](https://man.freebsd.org/cgi/man.cgi?backlight)
 
 ## AMD 显卡
 
@@ -148,7 +165,15 @@ FreeBSD 15 CUEERNT 及 14-STABLE 1400508（即 2024 年 2 月 18 日后以的 ST
 安装所需驱动（均为 latest 源或从 ports 安装）：
 
 ```shell-session
-# pkg install drm-510-kmod gpu-firmware-kmod xf86-video-amdgpu
+# pkg install drm-515-kmod gpu-firmware-kmod xf86-video-amdgpu
+```
+
+或者
+
+```
+# cd /usr/ports/graphics/drm-515-kmod/ && make install clean
+# cd /usr/ports/graphics/gpu-firmware-kmod/ && make install clean
+# cd /usr/ports/x11-drivers/xf86-video-amdgpu/ && make install clean
 ```
 
 
@@ -160,14 +185,14 @@ FreeBSD 15 CUEERNT 及 14-STABLE 1400508（即 2024 年 2 月 18 日后以的 ST
 
 
 - 旧显卡：
-  - nvidia-hybrid-graphics-390   用于支持双显卡切换
-  - nvidia-secondary-driver-390 对应显卡驱动
+  - x11/nvidia-hybrid-graphics-390   用于支持双显卡切换
+  - x11/nvidia-secondary-driver-390  对应显卡驱动
   
 　　390 驱动支持的显卡参考[FreeBSD Display Driver – X64](https://www.nvidia.cn/download/driverResults.aspx/196293/cn/),支持一些旧显卡.
 
 - 新显卡：
-  - nvidia-hybrid-graphics  用于支持双显卡切换
-  - nvidia-secondary-driver  对应显卡驱动
+  - x11/nvidia-hybrid-graphics  用于支持双显卡切换
+  - x11/nvidia-secondary-driver  对应显卡驱动
 
 ```shell-session
 # sysrc kld_list+=nvidia-modeset
@@ -218,8 +243,17 @@ EndSection
  
 #### 开启 vlc 硬解
 
+安装：
+
 ```shell-session
 pkg install libva-vdpau-driver libvdpau libvdpau-va-gl
+```
+或者
+
+```
+# cd /usr/ports/multimedia/libva-vdpau-driver/ && make install clean
+# cd /usr/ports/multimedia/libvdpau/ && make install clean
+# cd /usr/ports/multimedia/libvdpau-va-gl/ && make install clean
 ```
 
 工具->偏好设置->输入/编解码器->硬件加速解码：选择VDPAU 视频解码器
@@ -237,8 +271,21 @@ pkg install libva-vdpau-driver libvdpau libvdpau-va-gl
 
 注意，有多个版本的 N 卡驱动，不知道该用哪个的去看[5.2. 安装 Xorg](https://handbook.bsdcn.org/di-5-zhang-xwindow-xi-tong/5.2.-an-zhuang-xorg.html)。
 
+安装几个 nvidia 相关的包:
+
 ```shell-session
-# pkg install nvidia-driver nvidia-settings nvidia-xconfig nvidia-drm-kmod#安装几个 nvidia 相关的包
+# pkg install nvidia-driver nvidia-settings nvidia-xconfig nvidia-drm-kmod
+```
+或者：
+
+```
+# cd /usr/ports/x11/nvidia-driver/ && make install clean
+# cd /usr/ports/x11/nvidia-settings/ && make install clean
+# cd /usr/ports/x11/nvidia-xconfig/ && make install clean
+# cd /usr/ports/graphics/nvidia-drm-kmod/ && make install clean
+```
+
+````
 # sysrc kld_list+="nvidia-modeset nvidia-drm.ko" #配置驱动
 # reboot #重启
 ```
@@ -284,8 +331,19 @@ $ kldstat
 
 拉取最新的 drm-kmod 并编译安装：
 
+安装 git：
+
 ```shell-session
 # pkg install git
+```
+
+或者：
+
+```
+# cd /usr/ports/devel/git/ && make install clean
+```
+
+```
 $ git clone --depth=1 https://github.com/dumbbell/drm-kmod/
 $ cd freebsd/drm-kmod
 $ git checkout -b update-to-v5.17
@@ -329,7 +387,9 @@ xorg 最小化包: xorg-minimal（不建议）
 
 通过 pkg 安装
 
-`# pkg install xorg`
+```
+# pkg install xorg
+```
 
 通过 ports 安装
 

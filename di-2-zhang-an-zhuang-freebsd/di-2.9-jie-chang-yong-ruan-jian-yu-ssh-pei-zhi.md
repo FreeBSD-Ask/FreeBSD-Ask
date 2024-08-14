@@ -227,6 +227,13 @@ PermitEmptyPasswords no                      #禁止空密码的用户进行登�
 # pkg install screen
 ```
 
+或者：
+
+```
+# cd /usr/ports/sysutils/screen/
+# make install clean
+```
+
 使用方法：
 
 ```shell-session
@@ -278,6 +285,13 @@ root@ykla:/ # screen -r 18380
 
 ```
 # pkg install mosh
+```
+
+或者：
+
+```
+# cd /usr/ports/net/mosh/
+# make install clean
 ```
 
 编辑 `~/.login_conf`，加入：

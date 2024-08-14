@@ -10,6 +10,22 @@ bspwm，据说更符合 UNIX 哲学。
 # pkg install xorg bspwm sxhkd rofi kitty feh picom polybar dunst lightdm lightdm-gtk-greeter wqy-fonts xdg-user-dirs
 ```
 
+
+```shell-session
+# cd /usr/ports/x11/xorg/ && make install clean
+# cd /usr/ports/x11-wm/bspwm/ && make install clean
+# cd /usr/ports/x11/sxhkd/ && make install clean
+# cd /usr/ports/x11/rofi/ && make install clean
+# cd /usr/ports/x11/kitty/ && make install clean
+# cd /usr/ports/graphics/feh/ && make install clean
+# cd /usr/ports/x11-wm/picom/ && make install clean
+# cd /usr/ports/x11/polybar/ && make install clean
+# cd /usr/ports/sysutils/dunst/ && make install clean
+# cd /usr/ports/x11-fonts/wqy/ && make install clean
+# cd /usr/ports/x11/lightdm/ && make install clean
+# cd /usr/ports/x11/lightdm-gtk-greeter/ && make install clean
+# cd /usr/ports/devel/xdg-user-dirs/ && make install clean
+``
 解释：
 
 
@@ -24,7 +40,7 @@ bspwm，据说更符合 UNIX 哲学。
 
 >**提示**
 >
->polybar 建议换成别的，因为 polybar 在 freebsd 上功能不全。建议换成 tint2，可以显示 systray 图标
+>polybar 建议换成别的，因为 polybar 在 freebsd 上功能不全。建议换成 `chinese/tintin++`，可显示 systray 图标
 
 ## 配置工作
 

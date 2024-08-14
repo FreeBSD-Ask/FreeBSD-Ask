@@ -10,6 +10,13 @@
 # pkg install fusefs-ext2
 ```
 
+或者
+
+```
+# cd /usr/ports/sysutils/fusefs-ext2/ 
+# make install clean
+```
+
 - 加载
 
   打开`/etc/rc.conf`，在 `kld_list`一栏里添加 **ext2fs**，结果可能如 `kld_list="ext2fs i915kms"`
@@ -38,6 +45,13 @@ _提示：上式不一定是 `da0sX`（X 为对应的数字），可通过 `# gp
 
 ```shell-session
 # pkg install fusefs-lkl
+```
+
+或者
+
+```
+# cd /usr/ports/sysutils/fusefs-lkl/ 
+# make install clean
 ```
 
 ## FAT32 文件系统

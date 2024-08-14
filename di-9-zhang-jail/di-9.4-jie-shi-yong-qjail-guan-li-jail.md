@@ -31,6 +31,13 @@ lo1 将获得 10 个 ip 地址，下面将用 1-9 这 9 个 ip 给 jail 使用�
 # pkg install qjail
 ```
 
+或者
+
+```
+# cd /usr/ports/sysutils/qjail/ 
+# make install clean
+```
+
 启用 qjail
 
 ```shell-session
@@ -185,6 +192,13 @@ remote size / mtime: 195363380 / 1652346155
 # pkg install gitup
 ```
 
+或者
+
+```
+# cd /usr/ports/net/gitup/ 
+# make install clean
+```
+
 开始更新：
 
 ```shell-session
@@ -297,8 +311,21 @@ jail 控制台中的操作
 
 下面命令皆在 jail 控制台下运行，pkg 安装是否使用镜像可自行决定，如果使用镜像可以在 jail 控制台中如同宿主机般进行设置，请参考相关文章。
 
+安装：
+
 ```shell-session
 # pkg install postgresql15-server
+```
+
+或者
+
+```
+# cd /usr/ports/databases/postgresql15-server/ && make install clean
+```
+
+配置：
+
+```
 # sysrc postgresql_enable=YES
 # mkdir -p -m 0700 /var/db/postgres/data15     # 注意版本号
 # chown postgres:postgres /var/db/postgres/data15  # 这个目录应属于 postgres 用户

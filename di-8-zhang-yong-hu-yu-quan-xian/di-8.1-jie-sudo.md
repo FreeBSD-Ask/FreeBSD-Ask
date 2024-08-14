@@ -10,6 +10,14 @@ FreeBSD 基本系统默认不自带 `sudo` 命令，需要使用 `root` 权限�
 # pkg install sudo
 ```
 
+或者：
+
+
+```
+# cd /usr/ports/security/sudo/ 
+# make install clean
+```
+
 ## sudo 免密码
 
 在 `/usr/local/etc/sudoers.d/` 下新建两个文件 `username`（需要免密码的用户）和 `wheel`：

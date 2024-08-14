@@ -12,6 +12,14 @@
 ```
 # pkg install git
 ```
+
+或者：
+
+```
+# cd /usr/ports/devel/git
+# make install clean
+```
+
 拉取 Ports 存储库：
 
 ```
@@ -105,7 +113,8 @@ tmpfs /tmp tmpfs rw 0 0
 或
 
 ```shell-session
-# cd /usr/ports/devel/ccache4/ && make install clean
+# cd /usr/ports/devel/ccache4/
+# make install clean
 ```
 
 - ksh/sh 添加到 `/etc/profile`:
@@ -145,8 +154,16 @@ root@ykla:~ # find /  -name ccache.conf # 全局查找配置文件路径
 
 - axel
 
+安装：
+
 ```shell-session  
 # pkg install axel
+```
+
+或者
+```
+# cd /usr/ports/ftp/axel/
+# make install clean
 ```
 
 新建或者编辑 `# ee /etc/make.conf` 文件，写入以下几行：

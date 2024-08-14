@@ -24,7 +24,8 @@ pkg install firefox-esr
 或者
 
 ```shell-session
-#cd /usr/ports/www/firefox-esr/ && make install clean
+#cd /usr/ports/www/firefox-esr/
+# make install clean
 ```
 
 ## Chromium（Chromium 不是 chrome，但是启动命令是 chrome）

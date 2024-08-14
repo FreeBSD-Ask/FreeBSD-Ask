@@ -138,3 +138,9 @@ Fcitx5 输入法没反应。待测试。如你知道怎么做，请告诉我们�
 # pkg install bash
 ```
 
+或者
+
+```
+# cd /usr/ports/shells/bash/
+# make install clean
+```

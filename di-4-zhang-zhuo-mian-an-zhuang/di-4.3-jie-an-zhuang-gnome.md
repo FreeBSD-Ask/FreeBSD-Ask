@@ -7,6 +7,15 @@
 # pkg install xorg gnome noto-sc xdg-user-dirs
 ```
 
+或者
+
+```
+# cd /usr/ports/x11/xorg/ && make install clean
+# cd /usr/ports/x11/gnome/ && make install clean
+# cd /usr/ports/x11-fonts/noto-serif-sc/ && make install clean
+# cd /usr/ports/devel/xdg-user-dirs/ && make install clean
+```
+
 解释:
 
 |     软件      |            用途            |
@@ -16,12 +25,19 @@
 |    noto-sc    |     思源黑体——简体中文     |
 | xdg-user-dirs | 用于创建用户家目录的子目录 |
 
-> **精简安装（仅限经验丰富的用户）**
+> **精简安装（如果不嫌麻烦）**
 >
 > ```shell-session
 > # pkg install xorg-minimal gnome-lite wqy-fonts xdg-user-dirs
 > ```
->
+>或者
+
+```
+# cd /usr/ports/x11/xorg-minimal/ && make install clean
+# cd /usr/ports/x11/gnome/ && make install clean
+# cd /usr/ports/x11-fonts/wqy/ && make install clean
+# cd /usr/ports/devel/xdg-user-dirs/ && make install clean
+```
 > 如果安装了完整版本也可以使用 pkg 包管理器卸载自带的游戏软件：
 >
 > ```shell-session
@@ -78,7 +94,18 @@ LC_ALL="zh_CN.UTF-8"
 
 gnome 捆绑的输入法面板是 `ibus`。
 
-`# pkg install zh-ibus-libpinyin`（安装好运行初始化命令 `ibus-setup`）
+```
+pkg install zh-ibus-libpinyin
+```
+
+或者
+
+```
+# cd /usr/ports/chinese/ibus-libpinyin/
+# make install clean
+```
+
+安装后运行初始化命令 `ibus-setup`.
 
 #### fcitx 5
 
@@ -91,7 +118,17 @@ gnome 捆绑的输入法面板是 `ibus`。
 安装 `fcitx5`:
 
 ```shell-session
-# pkg install fcitx5 fcitx5-qt5 fcitx5-qt6 fcitx5-gtk fcitx5-configtool zh-fcitx5-chinese-addons
+# pkg install fcitx5 fcitx5-qt5 fcitx5-qt6 fcitx5-gtk2 fcitx5-gtk3 fcitx5-gtk4 fcitx5-configtool zh-fcitx5-chinese-addons
+```
+
+或者：
+
+```
+# cd /usr/ports/textproc/fcitx5/ && make install clean
+# cd /usr/ports/textproc/fcitx5-qt/ && make install clean #同时包含 QT 5 和 QT 6
+# cd /usr/ports/textproc/fcitx5-gtk/ && make install clean #同时包含 gtk 2、3、4
+# cd /usr/ports/textproc/fcitx5-configtool/ && make install clean
+# cd /usr/ports/chinese/fcitx5-chinese-addons/ && make install clean
 ```
 
 打开或新建文件 `~/.xprofile`，写入:
@@ -146,7 +183,14 @@ export XMODIFIERS=@im=fcitx
 该插件需要通过火狐浏览器进行安装：
 
 ```shell-session
-# pkg install -y firefox chrome-gnome-shell
+# pkg install firefox chrome-gnome-shell
+```
+
+或者：
+
+```
+# cd /usr/ports/www/firefox/ && make install clean
+# cd /usr/ports/www/chrome-gnome-shell/ && make install clean
 ```
 
 打开链接 `https://extensions.gnome.org/extension/1674/topiconsfix/` 即可安装插件。
@@ -167,5 +211,12 @@ setenv LC_ALL zh_CN.UTF-8
 
 ## 优化系统
 
-`# pkg install gnome-tweaks`
+```
+# pkg install gnome-tweaks
+```
+或者：
 
+```
+# cd /usr/ports/deskutils/gnome-tweaks/ 
+# make install clean
+```

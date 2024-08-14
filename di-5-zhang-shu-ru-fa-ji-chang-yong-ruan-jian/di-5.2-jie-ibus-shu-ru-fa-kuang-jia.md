@@ -8,14 +8,21 @@
 # pkg install ibus zh-ibus-pinyin
 ```
 
+或者：
+
+```
+# cd /usr/ports/textproc/ibus/ && make install clean
+# cd /usr/ports/chinese/ibus-libpinyin/ && make install clean
+```
+
 其中 `zh-ibus-pinyin` 为拼音输入法
 
 可选的还有
 
-- `zh-ibus-cangjie` 仓颉输入法
-- `zh-ibus-chewing` 酷音输入法
-- `zh-ibus-rime` rime 输入法引擎（另述）
-- `zh-ibus-table-chinese` 包含五笔、仓颉等多种输入法
+- `chinese/ibus-cangjie` 仓颉输入法
+- `chinese/ibus-chewing` 酷音输入法
+- `chinese/ibus-rime` rime 输入法引擎（另述）
+- `chinese/ibus-table-chinese` 包含五笔、仓颉等多种输入法
 
 ## 环境变量配置
 

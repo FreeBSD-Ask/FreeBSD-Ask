@@ -47,6 +47,13 @@ XRDP 是 Microsoft RDP 的开源实现。
 # pkg install x11vnc
 ```
 
+或者：
+
+```
+# cd /usr/ports/net/x11vnc/
+# make install clean
+```
+
 创建密码：
 
 ```
@@ -90,6 +97,13 @@ $ x11vnc -display :0 -rfbauth ~/.vnc/passwd -auth /var/lib/gdm/:0.Xauth #或 /ru
 
 ```shell-session
 # pkg install tigervnc-server
+```
+
+或者：
+
+```
+# cd /usr/ports/net/tigervnc-server/ 
+# make install clean
 ```
 
 安装之后，还要做一些设置：
@@ -165,6 +179,16 @@ exec command &  #此处不能照抄！
 
 ```shell-session
 # pkg install xorg kde5 xrdp wqy-fonts xdg-user-dirs
+```
+
+或者：
+
+```
+# cd /usr/ports/x11/xorg/ && make install clean
+# cd /usr/ports/x11/kde5/ && make install clean
+# cd /usr/ports/net/xrdp/ && make install clean
+# cd /usr/ports/x11-fonts/wqy/ && make install clean
+# cd /usr/ports/devel/xdg-user-dirs/ && make install clean
 ```
 
 配置：
@@ -285,10 +309,17 @@ root     syslogd     1021 7   udp4   *:514                 *:*
 
 ## 使用 FreeBSD 远程其他机器
 
-安装命令：
+安装：
 
 ```shell-session
-# pkg install -y rdesktop
+# pkg install rdesktop
+```
+
+或者：
+
+```
+# cd /usr/ports/net/rdesktop/
+# make install clean
 ```
 
 但 rdesktop 安装后不会在系统中生成菜单，因此要在终端输入命令：
@@ -304,7 +335,8 @@ root     syslogd     1021 7   udp4   *:514                 *:*
 由于版权问题（**私有软件未经许可默认禁止分发**），必须用户使用 Ports 自行编译：
 
 ```shell-session
-# cd /usr/ports/deskutils/anydesk/ && make install clean
+# cd /usr/ports/deskutils/anydesk/
+# make install clean
 ```
 
 ## RustDesk 中继服务器
@@ -313,9 +345,20 @@ root     syslogd     1021 7   udp4   *:514                 *:*
 
 换言之，你没法用 RustDesk 控制 FreeBSD。
 
+安装：
+
 ```
 # pkg install rustdesk-server
 ```
+
+或者：
+
+```
+# cd /usr/ports/net/rustdesk-server/ 
+# make install clean
+```
+
+配置：
 
 - 启动 hbbr：
 

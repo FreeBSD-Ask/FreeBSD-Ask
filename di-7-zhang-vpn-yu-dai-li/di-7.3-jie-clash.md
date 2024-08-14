@@ -8,6 +8,13 @@ Clash 在 [ports](https://www.freshports.org/net/clash) 中就有提供。
 # pkg install net/clash
 ```
 
+或者
+
+```
+# cd /usr/ports/net/clash/ 
+# make install clean
+```
+
 即可完成安装。
 
 

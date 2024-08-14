@@ -1,33 +1,55 @@
 # 第 29.2 节 安装 CDE
 
-> **CDE 是通用桌面环境的缩写。历史悠久的桌面环境，常被用于商业的 Unix 发行版。**
+> **CDE 是 Common Desktop Environment（通用桌面环境）的缩写。历史悠久的桌面环境，常被用于 Unix 商业发行版。**
+>
+>以下内容未经测试，并不可靠。
 
-## 安装软件依赖
+## 安装软件
 
 执行：
 
 ```shell-session
-# pkg install -y xorg iconv bdftopcf libXScrnSaver ksh93 open-motif tcl86 xorg-fonts xorg-fonts-100dpi cde
+# pkg install xorg cde
+```
+
+或者：
+
+```
+# cd /usr/ports/x11/xorg/ && make install clean
+# cd /usr/ports/x11/cde/ && make install clean
 ```
 
 ## 开启各项服务
 
-1.  在 shell 中执行：
+在 shell 中执行：
 
     ```shell-session
     # sysrc rpcbind_enable="YES"
-    # sysrc dtspc_enable="YES"
     # sysrc dtcms_enable="YES"
+	# sysrc inetd_enable=yes
     # ln -s /usr/local/dt/bin/Xsession ~/.Xsession
     # env LANG=C startx
     ```
+	
+将以下内容添加到 `/etc/inetd.conf`：
 
-    需要用哪个用户登录 CDE，就用哪个用户执行最后两行。
+```shell-session
+dtspc	stream	tcp	nowait	root	 /usr/local/dt/bin/dtspcd	/usr/local/dt/bin/dtspcd
+```
 
-2.  将以下内容追加到 `/etc/rc.local`
+将以下内容添加到 `/etc/services`：
 
-    ```shell-session
-    /usr/local/dt/bin/dtlogin
-    ```
+```
+dtspc		6112/tcp
+```
 
-3.  重启系统。
+
+重启系统。
+
+```
+# reboot
+```
+
+## 参考文献
+
+- [cde Common Desktop Environment](https://www.freshports.org/x11/cde)

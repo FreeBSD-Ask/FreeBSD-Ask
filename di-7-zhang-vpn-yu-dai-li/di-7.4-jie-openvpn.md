@@ -6,6 +6,13 @@ OpenVPN 在软件包中就有提供。
 # pkg install openvpn
 ```
 
+或者
+
+```
+# cd /usr/ports/security/openvpn/ 
+# make install clean
+```
+
 即可完成安装。
 
 配置方法请参考 ：

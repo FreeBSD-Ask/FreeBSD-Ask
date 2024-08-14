@@ -8,22 +8,28 @@
 # pkg install xorg lightdm lightdm-gtk-greeter xfce wqy-fonts xdg-user-dirs
 ```
 
-或
-
-通过 ports 安装
+或通过 ports 安装
 
 ```shell-session
-# cd /usr/ports/x11-wm/xfce4
-# make install clean
+# cd /usr/ports/x11/xorg/ && make install clean
+# cd /usr/ports/x11-wm/xfce4 && make install clean #注意有个 4
+# cd /usr/ports/x11-fonts/wqy/ && make install clean
+# cd /usr/ports/x11/lightdm/ && make install clean
+# cd /usr/ports/x11/lightdm-gtk-greeter/ && make install clean
+# cd /usr/ports/devel/xdg-user-dirs/ && make install clean
 ```
 
 ## 启用 xfce
 
-`# echo "/usr/local/etc/xdg/xfce4/xinitrc" > ~/.xinitrc`
+```
+# echo "/usr/local/etc/xdg/xfce4/xinitrc" > ~/.xinitrc
+```
 
 或者
 
-`# echo "/usr/local/etc/xdg/xfce4/xinitrc" > ~/.xsession`
+```
+# echo "/usr/local/etc/xdg/xfce4/xinitrc" > ~/.xsession
+```
 
 > 此处为 root 用户，普通用户需要再在自己的环境下操作一次。下同。
 
@@ -41,13 +47,27 @@
 在 `.xinitrc` 或者 `.profile` 中添加以下内容（但要在最前面才正常启用） `export LANG=zh_CN.UTF-8`
 
 lightdm 登陆管理器本地化语言见 KDE 章节。
+
 ## 可选配置
 
 
 ## 全局菜单（可选）
 
+安装：
+
 ```shell-session
 # pkg install xfce4-appmenu-plugin appmenu-gtk-module appmenu-registrar
+```
+
+或：
+
+```
+# cd /usr/ports/x11/xfce4-appmenu-plugin/ && make install clean
+# cd /usr/ports/x11/gtk-app-menu/ && make install clean
+# cd /usr/ports/x11/appmenu-registrar/ && make install clean
+```
+
+```
 $ xfconf-query -c xsettings -p /Gtk/ShellShowsMenubar -n -t bool -s true
 $ xfconf-query -c xsettings -p /Gtk/ShellShowsAppmenu -n -t bool -s true
 $ xfconf-query -c xsettings -p /Gtk/Modules -n -t string -s "appmenu-gtk-module"
