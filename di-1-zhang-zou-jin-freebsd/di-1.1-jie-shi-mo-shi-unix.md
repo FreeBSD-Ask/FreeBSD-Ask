@@ -75,7 +75,7 @@ Unix-like 即类 Unix，亦即一切基于 UNIX 的操作系统，基本遵守 P
 
 ### 狭义是内核
 
-Linux kernel 项目 1990；
+[Linux kernel](https://www.kernel.org/) 项目 1990；
 
 ### 广义是 GNU/Linux
 
@@ -83,7 +83,7 @@ GNU/Linux = Linux kernel + GNU 等软件 + 包管理器
 
 >**[Chimera Linux](https://chimera-linux.org/) 除外。**
 
-Linux 全称为 GNU/Linux；GNU 项目 1984；
+Linux 全称为 GNU/Linux；[GNU 项目](https://www.gnu.org/) 1984；
 
 具体地：
 
