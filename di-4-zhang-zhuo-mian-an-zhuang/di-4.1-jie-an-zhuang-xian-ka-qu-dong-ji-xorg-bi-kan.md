@@ -14,7 +14,7 @@ FreeBSD 已从 Linux 移植了显卡驱动，理论上，I 卡 A 卡 N 卡均在
 
 对于 FreeBSD 13.1，编译使用`drm-510-kmod`，支持情况同 Linux 5.10。AMD 可支持 R7 4750U（但是有 Bug [amdgpu no hw acceleration on gnome3 ?? - workaround amdgpu disable DRI3 in xorg.conf and switch to DRI2](https://github.com/freebsd/drm-kmod/issues/72)）。
 
-FreeBSD 14 release，编译使用 `drm-515-kmod`。**截至 2023.8.24 日，英特尔第 12、 13 代** 显卡 **[**暂不支持**](https://github.com/freebsd/drm-kmod/issues/219)。** 。
+FreeBSD 14.0-release，编译使用 `drm-515-kmod`。**截至 2023.8.24 日，英特尔第 12、 13 代** 显卡 **[**暂不支持**](https://github.com/freebsd/drm-kmod/issues/219)。** 。
 
 FreeBSD 15 CUEERNT 及 14-STABLE 1400508（即 2024 年 2 月 18 日后以的 STABLE 版本，Git 提交为 `2d120981e26dfef5c9cb9eb9936bb46cb6918136`）版本，编译使用 `drm-61-kmod`，支持情况同 Linux 6.1。
 
