@@ -31,9 +31,9 @@ FreeBSD 15 CUEERNT 及 14-STABLE 1400508（即 2024 年 2 月 18 日后以的 ST
 
 详细情况可以看 [wiki/Graphics](https://wiki.freebsd.org/Graphics)
 
-## 英特尔核显 / AMD 独显
+## 英特尔核显 / AMD 独显驱动
 
-### 安装驱动——简单版本（推荐）
+### 安装英特尔核显/AMD 独显驱动——简单版本（推荐）
 
 首先切换到 latest 源，或使用 ports 安装：
 
@@ -62,7 +62,7 @@ FreeBSD 15 CUEERNT 及 14-STABLE 1400508（即 2024 年 2 月 18 日后以的 ST
 >
 > - **如果提示 `/usr/ports/xxx no such xxx` 找不到路径，请先获取 ports 请看前文。**
 
-### 安装驱动——复杂版本
+### 安装英特尔核显/AMD 独显驱动——复杂版本
 
 注意，如果要使用 `ports` 安装提示需要源码，请见第二十一章。
 
@@ -95,9 +95,9 @@ FreeBSD 15 CUEERNT 及 14-STABLE 1400508（即 2024 年 2 月 18 日后以的 ST
 ```
 
 
-### 加载显卡
+### 配置、加载显卡
 
-> **无论是使用以上哪个方法，都需要进行这一步配置。**
+> **无论是使用以上哪种方法，都需要进行这一步配置。**
 
 打开 `/etc/rc.conf`:
 
@@ -106,7 +106,7 @@ FreeBSD 15 CUEERNT 及 14-STABLE 1400508（即 2024 年 2 月 18 日后以的 ST
   - 如果为 HD7000 以后的 AMD 显卡，添加 `kld_list="amdgpu"` （大部分人应该使用这个，如果没用再去使用`radeonkms`）
   - 如果为 HD7000 以前的 AMD 显卡，添加 `kld_list="radeonkms"` （这是十余年前的显卡了）
 
-### 视频硬解
+#### 视频硬解
 
 ```
 # pkg install xf86-video-intel libva-intel-driver
@@ -119,9 +119,9 @@ FreeBSD 15 CUEERNT 及 14-STABLE 1400508（即 2024 年 2 月 18 日后以的 ST
 # make install clean
 ```
 
-### 亮度调节
+#### 亮度调节
 
-#### 通用
+##### 通用
 
 一般计算机：
 
@@ -136,7 +136,7 @@ FreeBSD 15 CUEERNT 及 14-STABLE 1400508（即 2024 年 2 月 18 日后以的 ST
 # sysrc -f /boot/loader.conf  acpi_video="YES"
 ```
 
-#### 英特尔
+##### 英特尔
 
 backlight 自 FreeBSD 13 引入。
 
@@ -147,37 +147,18 @@ backlight 自 FreeBSD 13 引入。
 # backlight - #默认调整亮度减少 10%
 ```
 
-##### 参考文献
+###### 参考文献
 
 - [backlight -- configure backlight	hardware](https://man.freebsd.org/cgi/man.cgi?backlight)
-
-## AMD 显卡
-
-> 此部分教程经过测试适用于 renoir 显卡。
+- 此部分教程经过测试适用于 renoir 显卡：
 >
 > 在使用 Gnome 时，如果自动锁屏或息屏，可能无法再次进入桌面。见 [Bug 255049 - x11/gdm doesn't show the login screen](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=255049)。
 
-安装所需驱动（均为 latest 源或从 ports 安装）：
+## 英伟达. Nvidia 显卡
 
-```shell-session
-# pkg install drm-515-kmod gpu-firmware-kmod xf86-video-amdgpu
-```
+### 笔记本核显+Nvidia 独显
 
-或者
-
-```
-# cd /usr/ports/graphics/drm-515-kmod/ && make install clean
-# cd /usr/ports/graphics/gpu-firmware-kmod/ && make install clean
-# cd /usr/ports/x11-drivers/xf86-video-amdgpu/ && make install clean
-```
-
-
-## 英伟达显卡
-
-### 笔记本核显
-
-请先按照上边的方法配置核显，也就是说不能单独用 nvidia 打开 xorg。
-
+请先按照上边的方法配置核显，也就是说不能单独用 nvidia 打开 xorg。除非你的设备支持显卡直通。
 
 - 旧显卡：
   - x11/nvidia-hybrid-graphics-390   用于支持双显卡切换
@@ -189,10 +170,14 @@ backlight 自 FreeBSD 13 引入。
   - x11/nvidia-hybrid-graphics  用于支持双显卡切换
   - x11/nvidia-secondary-driver  对应显卡驱动
 
+配置：
+
 ```shell-session
 # sysrc kld_list+=nvidia-modeset
 # sysrc nvidia_xorg_enable=YES
 ```
+
+#### 查看显卡驱动状态
 
 开机后在 kde 设置里查看显卡默认用的是 intel 核显，终端里 `nvidia-smi` 只有 `nvidia-xorg-service 8MB`。
 
@@ -262,9 +247,11 @@ pkg install libva-vdpau-driver libvdpau libvdpau-va-gl
 
 显存使用上升，正在使用硬解
 
-### 独显直连或台式机
+### 独显直连/台式机
 
-注意，有多个版本的 N 卡驱动，不知道该用哪个的去看[5.2. 安装 Xorg](https://handbook.bsdcn.org/di-5-zhang-xwindow-xi-tong/5.2.-an-zhuang-xorg.html)。
+注意，有多个版本的 N 卡驱动，不知道该用哪个的去看 FreeBSD 手册《安装 Xorg》一节。
+
+#### 安装驱动
 
 安装几个 nvidia 相关的包:
 
@@ -285,6 +272,8 @@ pkg install libva-vdpau-driver libvdpau libvdpau-va-gl
 # reboot #重启
 ```
 **如果找不到 `graphics/nvidia-drm-kmod` 就编译安装，该包提供了 PRIME 等支持。**
+
+#### 查看驱动状态
 
 这时候应该已经可以驱动显卡了。
 
@@ -316,7 +305,7 @@ $ kldstat
 
 会发现系统自动加载了 `linux.ko` 模块。如果觉得太臃肿，不需要 Linux 兼容层 可以自己通过 ports 编译 `nvidia-driver`,去掉 `linux compatibility support`。
 
-## 拉取开发版 drm-kmod（仅限 FreeBSD-CURRENT）
+## 附：拉取开发版 drm-kmod（仅限 FreeBSD-CURRENT）
 
 > **警告**
 >
@@ -370,7 +359,7 @@ kldxref /boot/modules
 - 如果显卡使用驱动有问题请直接联系作者：[https://github.com/freebsd/drm-kmod/issues](https://github.com/freebsd/drm-kmod/issues)
 - 如果笔记本出现了唤醒时屏幕点不亮的问题，可以在 `/boot/loader.conf` 中添加 `hw.acpi.reset_video="1"` 以在唤醒时重置显示适配器。
 
-## 安装 xorg
+## xorg
 
 ### 可选软件包：
 
