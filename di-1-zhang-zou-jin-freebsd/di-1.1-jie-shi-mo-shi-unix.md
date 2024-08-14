@@ -57,7 +57,7 @@ Unix 哲学源于 UNIX 操作系统的开发，作者是 Ken Thompson。Unix 哲
 参考文献：
 
 - 《UNIX 编程艺术》，Eric Raymond 著，ISBN: 9787121176654，电子工业出版社。
-- 《Linux/Unix设计思想》，Mike Gancarz 著，9787115266927，人民邮电出版社。【已绝版】
+- 《Linux/Unix 设计思想》，Mike Gancarz 著，9787115266927，人民邮电出版社。（已绝版）
 
 
 
@@ -71,7 +71,7 @@ Unix-like 即类 Unix，亦即一切基于 UNIX 的操作系统，基本遵守 P
 
 > UNIX 标准 SUS 包含了 POSIX 标准，是其超集。Linux 实现了 POSIX 标准，但是没有进行 [POSIX 认证](http://get.posixcertified.ieee.org/)。本质上说 Linux 最初是 UNIX 的一个仿制品。
 >
-> _**Those who do not understand Unix are condemned to reinvent it,poorly.**_ ——Henry Spencer（那些不懂 Unix 的人注定要重复发明一个蹩脚的 Unix）
+> _**Those who do not understand Unix are condemned to reinvent it,poorly.**_ ——[Henry Spencer](https://www.nasa.gov/history/alsj/henry.html)（那些不懂 Unix 的人注定要重复发明一个蹩脚的 Unix）
 
 ### 狭义是内核
 
