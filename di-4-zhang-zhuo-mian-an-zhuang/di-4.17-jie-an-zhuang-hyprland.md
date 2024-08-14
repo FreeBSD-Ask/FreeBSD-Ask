@@ -7,7 +7,7 @@ Hyprland 是 Wayland 的一个合成器，支持窗口透明、模糊、圆角�
 ## 安装 Hyprland
 包或包名变更（截至2024/05/30）：qt5-base包被移除, waybar-hyprland包被移除。<br>
 解决方案：经过qt5-base经过测试，不安装也可以正常进入窗口管理器，正常使用应用程序。经过测试，waybar-hyprland可以换成waybar。<br>
-```shell-session
+```sh
 # pkg ins wayland hyprland waybar-hyprland wofi qt5-base qt6-base qt5-wayland qt6-wayland xdg-desktop-portal-hyprland hyprpicker swaybg mako dbus nerd-fonts slurp grim swaylock
 ```
 
@@ -40,7 +40,7 @@ Hyprland 是 Wayland 的一个合成器，支持窗口透明、模糊、圆角�
 
 可以将以下配置文件下载到本地使用
 
-```shell-session
+```sh
 $ fetch https://book.bsdcn.org/hyprland.zip
 $ unzip -d ~/
 ```
@@ -61,7 +61,7 @@ ck-launch-session Hyprland
 3.悬浮窗口和传统桌面环境中的行为类似，可以随意拖动到屏幕上的任何位置，可以用鼠标调节窗口大小。默认的配置文件中是按住 mod 键，然后鼠标左键按住悬浮窗口可以拖动窗口进行移动，而按住右键拖动窗口可以调节窗口的大小。设置默认悬浮的窗口：`windowrulev2 = float, title:QQ`\
 4.如果你按照开头的命令，安装了 swaybg,你可以设置壁纸（别忘了修改成你自己的图片文件的路径）：
 
-```shell-session
+```sh
 exec-once=swaybg -i "$HOME/Pictures/Wallpapers/2769378.jpg"
 ```
 

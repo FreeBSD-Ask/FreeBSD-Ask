@@ -7,7 +7,7 @@ ee 的用法比 nano 还要简单上许多。是 FreeBSD 基本系统自带的�
 
 比如
 
-```shell-session
+```sh
 # ee a.txt
 ```
 

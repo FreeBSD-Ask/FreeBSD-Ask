@@ -67,14 +67,14 @@ pkg 升级：
 
 解决：
 
-```shell-session
+```sh
 # cd /usr/ports/ports-mgmt/pkg
 # make deinstall reinstall
 ```
 
 查看已经安装的所有软件：
 
-```shell-session
+```sh
 # pkg info
 ```
 
@@ -94,7 +94,7 @@ pkg 升级：
 
 ### 如何卸载所有自行安装的第三方软件？
 
-```shell-session
+```sh
 root@ykla:~ # pkg delete -fa # 如果带上参数 f，会把 pkg 自己也删掉，因为 pkg 也是用户一开始自行安装的软件。
 Checking integrity... done (0 conflicting)
 Deinstallation has been requested for the following 87 packages (of 0 packages in the universe):
@@ -201,7 +201,7 @@ Proceed with deinstalling packages? [y/N]:
 
 问题示例：
 
-```shell-session
+```sh
 [1/1] Installing package…
 ===> Creating groups.
 Creating group ‘package’ with gid ‘000’.
@@ -215,7 +215,7 @@ pkg: PRE-INSTALL script failed
 
 问题解决：
 
-```shell-session
+```sh
 # /usr/sbin/pwd_mkdb -p /etc/master.passwd
 ```
 
@@ -223,7 +223,7 @@ pkg: PRE-INSTALL script failed
 
 出现该问题一般是由于 ABI 破坏，更新即可。
 
-```shell-session
+```sh
 # pkg  install bsdadminscripts
 # pkg_libchk
 # port-rebuild
@@ -233,7 +233,7 @@ pkg: PRE-INSTALL script failed
 
 问题示例：
 
-```shell-session
+```sh
 Neuer FreeBSD version for package pkg:
 To ignore this error set IGNORE_OSVERSION=yes
 - package: 1402843

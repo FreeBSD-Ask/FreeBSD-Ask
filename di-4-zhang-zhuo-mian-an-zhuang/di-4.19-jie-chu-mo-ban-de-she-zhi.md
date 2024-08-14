@@ -6,7 +6,7 @@
 
 查找触摸板：
 
-```shell-session
+```sh
 ykla@ykla-mi:~ $ xinput list
 ⎡ Virtual core pointer                    	id=2	[master pointer  (3)]
 ⎜   ↳ Virtual core XTEST pointer              	id=4	[slave  pointer  (2)]
@@ -18,7 +18,7 @@ ykla@ykla-mi:~ $ xinput list
 
 可以看到 `6` 是触摸板，关闭：（最后 1 为开启）
 
-```shell-session
+```sh
 ykla@ykla-mi:~ $ xinput set-prop 6 "Device Enabled" 0
 ```
 

@@ -6,12 +6,12 @@ bspwm，据说更符合 UNIX 哲学。
 
 通过 pkg 安装
 
-```shell-session
+```sh
 # pkg install xorg bspwm sxhkd rofi kitty feh picom polybar dunst lightdm lightdm-gtk-greeter wqy-fonts xdg-user-dirs
 ```
 
 
-```shell-session
+```sh
 # cd /usr/ports/x11/xorg/ && make install clean
 # cd /usr/ports/x11-wm/bspwm/ && make install clean
 # cd /usr/ports/x11/sxhkd/ && make install clean
@@ -46,14 +46,14 @@ bspwm，据说更符合 UNIX 哲学。
 
 ### 启用 dbus 服务
 
-```shell-session
+```sh
 # sysrc dbus_enable="YES"
 # service dbus start
 ```
 
 ### 创建配置文件
 
-```shell-session
+```sh
 $ mkdir ~/.config
 $ mkdir ~/.config/bspwm
 $ mkdir ~/.config/sxhkd
@@ -74,7 +74,7 @@ super + @space
 
 ### 设置 polybar 启动脚本和配置文件
 
-```shell-session
+```sh
 $ mkdir ~/.config/polybar 
 $ cp /usr/local/etc/polybar/config.ini ~/.config/polybar
 ```
@@ -89,13 +89,13 @@ polybar example 2>&1 | tee -a /tmp/polybar.log
 
 并执行
 
-```shell-session
+```sh
 $ chmod +x ~/.config/polybar/launch.sh
 ```
 
 ### 设置 picom, polybar, dunst 启动
 
-```shell-session
+```sh
 $ echo "picom &" >> ~/.config/bspwm/bspwmrc
 $ echo "\$HOME/.config/polybar/launch.sh" >> ~/.config/bspwm/bspwmrc
 $ echo "dunst &" >> ~/.config/bspwm/bspwmrc
@@ -105,7 +105,7 @@ $ echo "dunst &" >> ~/.config/bspwm/bspwmrc
 
 ### 通过 startx
 
-```shell-session
+```sh
 $ echo "exec bspwm" >> ~/.xinitrc
 $ startx
 ```
@@ -114,7 +114,7 @@ $ startx
 
 创建 `/usr/local/share/xsessions/bspwm.desktop`
 
-```shell-session
+```sh
 # mkdir /usr/local/share/xsessions
 # ee /usr/local/share/xsessions/bspwm.desktop # 写入以下内容
 
@@ -127,7 +127,7 @@ Type=Application
 
 启动 lightdm 服务
 
-```shell-session
+```sh
 # sysrc lightdm_enable="YES"
 # service lightdm start
 ```
@@ -142,13 +142,13 @@ Windows + 回车：启动终端（即 kitty）
 
 生成桌面文件夹（Downloads，Documents 等）
 
-```shell-session
+```sh
 $ xdg-user-dirs-update
 ```
 
 设置桌面背景：
 
-```shell-session
+```sh
 $ feh --bg-center "$HOME/.local/share/wallpapers/wallpaper.jpg"
 ```
 

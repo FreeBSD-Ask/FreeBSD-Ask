@@ -37,13 +37,13 @@ FreeBSD 15 CUEERNT 及 14-STABLE 1400508（即 2024 年 2 月 18 日后以的 ST
 
 首先切换到 latest 源，或使用 ports 安装：
 
-```shell-session
+```sh
 # pkg install drm-kmod
 ```
 
 或者
 
-```shell-session
+```sh
 # cd /usr/ports/graphics/drm-kmod/
 # make BATCH=yes install clean
 ```
@@ -68,7 +68,7 @@ FreeBSD 15 CUEERNT 及 14-STABLE 1400508（即 2024 年 2 月 18 日后以的 ST
 
 - FreeBSD 12
 
-```shell-session
+```sh
 # cd /usr/ports/graphics/drm-fbsd12.0-kmod/ && make BATCH=yes install clean
 ```
 
@@ -78,19 +78,19 @@ FreeBSD 15 CUEERNT 及 14-STABLE 1400508（即 2024 年 2 月 18 日后以的 ST
 
 - FreeBSD 13
 
-```shell-session
+```sh
 # cd /usr/ports/graphics/drm-510-kmod/ && make BATCH=yes install clean
 ```
 
 - FreeBSD 14 release
 
-```shell-session
+```sh
 # cd /usr/ports/graphics/drm-515-kmod/ && make BATCH=yes install clean
 ```
 
 - FreeBSD 15 CUEERNT 及 14-STABLE 1400508（即 2024 年 2 月 18 日以后的 STABLE 版本，Git 提交为 `2d120981e26dfef5c9cb9eb9936bb46cb6918136`）
 
-```shell-session
+```sh
 # cd /usr/ports/graphics/drm-61-kmod/ && make BATCH=yes install clean
 ```
 
@@ -125,13 +125,13 @@ FreeBSD 15 CUEERNT 及 14-STABLE 1400508（即 2024 年 2 月 18 日后以的 ST
 
 一般计算机：
 
-```shell-session
+```sh
 # sysrc -f /boot/loader.conf  acpi_video="YES"
 ```
 
 对于 Thinkpad：
 
-```shell-session
+```sh
 # sysrc -f /boot/loader.conf  acpi_ibm_load="YES"
 # sysrc -f /boot/loader.conf  acpi_video="YES"
 ```
@@ -140,7 +140,7 @@ FreeBSD 15 CUEERNT 及 14-STABLE 1400508（即 2024 年 2 月 18 日后以的 ST
 
 backlight 自 FreeBSD 13 引入。
 
-```shell-session
+```sh
 # backlight   #打印当前亮度
 # backlight decr 20  #降低 20% 亮度
 # backlight + #默认调整亮度增加 10%
@@ -172,7 +172,7 @@ backlight 自 FreeBSD 13 引入。
 
 配置：
 
-```shell-session
+```sh
 # sysrc kld_list+=nvidia-modeset
 # sysrc nvidia_xorg_enable=YES
 ```
@@ -183,7 +183,7 @@ backlight 自 FreeBSD 13 引入。
 
 然后在终端用这个命令调用 N 卡：
 
-```shell-session
+```sh
 $ nvrun 程序名 # 默认无 GUI 运行
 $ nvrun-vgl 程序名 # GUI 运行程序
 ```
@@ -194,7 +194,7 @@ $ nvrun-vgl 程序名 # GUI 运行程序
 
 安装包后如果 xorg 启动成功不需额外配置，如果失败用 `pciconf -lv` 查找显卡的 busid，例如
 
-```shell-session
+```sh
 vgapci0@pci0:1:0:0:	class=0x030000 rev=0xa1 hdr=0x00 vendor=0x10de device=0x0df4 subvendor=0x1043 subdevice=0x15f2
     vendor     = 'NVIDIA Corporation'
     device     = 'GF108M [GeForce GT 540M]'
@@ -204,7 +204,7 @@ vgapci0@pci0:1:0:0:	class=0x030000 rev=0xa1 hdr=0x00 vendor=0x10de device=0x0df4
 
 在 `/usr/local/etc/X11/xorg-nvidia-headless.conf` 找到 `Device` 一节，并对应修改 BusID ,上面 ”pci0:1:0:0“ 
 
-```shell-session
+```sh
 Section "Device"
     Identifier     "Device0"
     Driver         "nvidia"
@@ -225,7 +225,7 @@ EndSection
 
 安装：
 
-```shell-session
+```sh
 pkg install libva-vdpau-driver libvdpau libvdpau-va-gl
 ```
 或者
@@ -255,7 +255,7 @@ pkg install libva-vdpau-driver libvdpau libvdpau-va-gl
 
 安装几个 nvidia 相关的包:
 
-```shell-session
+```sh
 # pkg install nvidia-driver nvidia-settings nvidia-xconfig nvidia-drm-kmod
 ```
 或者：
@@ -277,14 +277,14 @@ pkg install libva-vdpau-driver libvdpau libvdpau-va-gl
 
 这时候应该已经可以驱动显卡了。
 
-```shell-session
+```sh
 # 查看驱动信息
 $ nvidia-smi
 ```
 
 如果发现系统没有使用 nvidia 驱动需要自动生成配置文件：
 
-```shell-session
+```sh
 # Xorg -configure #生成配置文件。注意，该步骤不是必要！
 # cp /root/xorg.conf.new /etc/X11/xorg.conf
 ```
@@ -293,13 +293,13 @@ $ nvidia-smi
 
 **注意**： 默认情况下，通过 pkg 安装的 nvidia-driver 是包含 Linux 兼容层支持的, 如果要使用 Linux 软件，需要执行以下命令，（实际上使用 linux 兼容层，以下命令是必须的。） 如果不需要使用 Linux 兼容层，则不需要执行。
 
-```shell-session
+```sh
 # sysrc linux_enable="YES"
 ```
 
 当然如果使用官方的 pkg 软件包，安装好驱动重启后：
 
-```shell-session
+```sh
 $ kldstat
 ```
 
@@ -317,7 +317,7 @@ $ kldstat
 
 安装 git：
 
-```shell-session
+```sh
 # pkg install git
 ```
 
@@ -377,7 +377,7 @@ xorg 最小化包: xorg-minimal（不建议）
 
 通过 ports 安装
 
-```shell-session
+```sh
 # cd /usr/ports/x11/xorg
 # make install clean
 ```

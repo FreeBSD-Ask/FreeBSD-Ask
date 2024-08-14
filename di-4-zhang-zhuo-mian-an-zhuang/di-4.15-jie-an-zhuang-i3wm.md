@@ -3,7 +3,7 @@
 ## 安装 i3wm
 
 
-```shell-session
+```sh
 # pkg install xorg i3 i3status dmenu i3lock
 ```
 
@@ -21,7 +21,7 @@
 
 ## 配置
 
-```shell-session
+```sh
 $ echo "/usr/local/bin/i3" >> ~/.xinitrc
 $ chown 你的用户名 ~/.xinitrc
 ```
@@ -38,7 +38,7 @@ $ chown 你的用户名 ~/.xinitrc
 # 虚拟机扩展
 如果使用 virtualbox,则下面启用 virtualbox 扩展：
 
-```shell-session
+```sh
 & echo "exec VBoxClient-all" >> ~/.config/i3/config
 ```
 

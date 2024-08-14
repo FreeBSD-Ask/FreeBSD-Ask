@@ -3,7 +3,7 @@
 示例：V2ray 或 clash 开启允许局域网连接。然后按照具体配置可能如下：
 
 首先查看使用的 shell
-```shell-session
+```sh
 $ echo $SHELL
 ```
 
@@ -18,12 +18,12 @@ $ echo $SHELL
 **环境变量 HTTP_PROXY 一定要是大写！小写不生效！**
   
 设置：
-```shell-session
+```sh
 # export HTTP_PROXY=http://192.168.X.X:7890
 ```
 
 取消：
-```shell-session
+```sh
 # unset HTTP_PROXY
 ```
 
@@ -31,12 +31,12 @@ $ echo $SHELL
 - 如果使用的是 `csh`
 
 设置：
-```shell-session
+```sh
 # setenv http_proxy http://192.168.X.X:7890
 ```
 
 取消：
-```shell-session
+```sh
 # unsetenv http_proxy
 ```
 ## Git 代理
@@ -49,25 +49,25 @@ chromium 本身并没有在例如 `~/.config` 下的配置文件这种东西。�
 
 如：
 
-```shell-session
+```sh
 --proxy-server="<IP地址>:<端口>"
 ```
 
 例：
 
-```shell-session
+```sh
 $ chrome --proxy-server="127.0.0.1:1234" (终端启动)
 ```
 
 默认是 http 协议，如果你的代理程序使用 sock:
 
-```shell-session
+```sh
 --proxy-server="socks://<IP地址>:<端口>"
 ```
 
 socksv4:
 
-```shell-session
+```sh
 --proxy-server="socksv4://<IP地址>:<端口>"
 ```
 
@@ -75,13 +75,13 @@ socksv4:
 
 找到你的桌面环境为 chromium 创建的 desktop 文件，一般在 `~/.local/share/applications/` 这个位置。
 
-```shell-session
+```sh
 $ ee chromium-browser.desktop # 使用你喜欢的编辑器打开上述目录下的 chromium desktop 文件
 ```
 
 找到 `Exec=chrome %U` 这行 在其后加入上列你需要的参数。
 
-```shell-session
+```sh
 Comment[zh_CN]=Google web browser based on WebKit
 Comment=Google web browser based on WebKit
 Encoding=UTF-8
@@ -92,7 +92,7 @@ GenericName[zh_CN]=
 
 例:
 
-```shell-session
+```sh
 Exec=chrome %U --proxy-server="192.168.2.163:20172"
 ```
 

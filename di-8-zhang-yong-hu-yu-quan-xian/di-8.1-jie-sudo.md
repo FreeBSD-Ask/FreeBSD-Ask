@@ -6,7 +6,7 @@
 
 FreeBSD 基本系统默认不自带 `sudo` 命令，需要使用 `root` 权限自行安装：
 
-```shell-session
+```sh
 # pkg install sudo
 ```
 
@@ -24,7 +24,7 @@ FreeBSD 基本系统默认不自带 `sudo` 命令，需要使用 `root` 权限�
 
 - 文件 `username`内容如下：
 
-```shell-session
+```sh
 %admin ALL=(ALL) ALL
 ```
 
@@ -32,7 +32,7 @@ FreeBSD 基本系统默认不自带 `sudo` 命令，需要使用 `root` 权限�
 
 多加一行，使用 `sudo` 时不需要输入密码：
 
-```shell-session
+```sh
 %wheel ALL=(ALL) NOPASSWD:ALL
 ```
 
@@ -44,7 +44,7 @@ FreeBSD 基本系统默认不自带 `sudo` 命令，需要使用 `root` 权限�
 
 使用 ee 打开 sudoers：
 
-```shell-session
+```sh
 # ee /usr/local/etc/sudoers
 ```
 找到 `root ALL=(ALL:ALL) ALL` 这行，一般是在第 94 行。在这行下面加一句：

@@ -3,7 +3,7 @@
 > 当前 gnome 桌面对 dri3 的支持有问题，见 [Bug 255049 - x11/gdm doesn't show the login screen ](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=255049)、[amdgpu no hw acceleration on gnome3 ?? - workaround amdgpu disable DRI3 in xorg.conf and switch to DRI2](https://github.com/freebsd/drm-kmod/issues/72)。可能会导致部分 AMD GPU 显示错误，必须降级到 dri2 才能运行。
 ## 安装
 
-```shell-session
+```sh
 # pkg install xorg gnome noto-sc xdg-user-dirs
 ```
 
@@ -27,7 +27,7 @@
 
 > **精简安装（如果不嫌麻烦）**
 >
-> ```shell-session
+> ```sh
 > # pkg install xorg-minimal gnome-lite wqy-fonts xdg-user-dirs
 > ```
 >或者
@@ -40,7 +40,7 @@
 ```
 > 如果安装了完整版本也可以使用 pkg 包管理器卸载自带的游戏软件：
 >
-> ```shell-session
+> ```sh
 > # pkg delete gnome-2048 gnome-klotski gnome-tetravex gnome-mines gnome-taquin gnome-sudoku gnome-robots gnome-nibbles lightsoff tali quadrapassel swell-foop gnome-mahjongg five-or-more iagno aisleriot four-in-a-row
 > ```
 
@@ -50,20 +50,20 @@
 
 添加内容如下:
 
-```shell-session
+```sh
 proc /proc procfs rw 0 0
 ```
 
 配置启动项：
 
-```shell-session
+```sh
 # sysrc dbus_enable="YES"
 # sysrc gdm_enable="YES"
 ```
 
 输入以下命令：
 
-```shell-session
+```sh
 % echo "/usr/local/bin/gnome-session" > ~/.xinitrc
 ```
 
@@ -73,13 +73,13 @@ proc /proc procfs rw 0 0
 
 > 本小节配置参数与用户 shell 无关，即使是 csh 也该如此配置。
 
-```shell-session
+```sh
 # ee /usr/local/etc/gdm/locale.conf
 ```
 
 添加以下内容：
 
-```shell-session
+```sh
 LANG="zh_CN.UTF-8"
 LC_CTYPE="zh_CN.UTF-8"
 LC_MESSAGES="zh_CN.UTF-8"
@@ -117,7 +117,7 @@ pkg install zh-ibus-libpinyin
 
 安装 `fcitx5`:
 
-```shell-session
+```sh
 # pkg install fcitx5 fcitx5-qt5 fcitx5-qt6 fcitx5-gtk2 fcitx5-gtk3 fcitx5-gtk4 fcitx5-configtool zh-fcitx5-chinese-addons
 ```
 
@@ -133,7 +133,7 @@ pkg install zh-ibus-libpinyin
 
 打开或新建文件 `~/.xprofile`，写入:
 
-```shell-session
+```sh
 export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
@@ -141,7 +141,7 @@ export XMODIFIERS=@im=fcitx
 
 参考：以下是该文件的一个示例：
 
-```shell-session
+```sh
 # $FreeBSD$
 #
 # .profile - Bourne Shell startup script for login shells
@@ -182,7 +182,7 @@ export XMODIFIERS=@im=fcitx
 
 该插件需要通过火狐浏览器进行安装：
 
-```shell-session
+```sh
 # pkg install firefox chrome-gnome-shell
 ```
 
@@ -203,7 +203,7 @@ export XMODIFIERS=@im=fcitx
 
 添加以下内容
 
-```shell-session
+```sh
 setenv LANG zh_CN.UTF-8
 setenv LC_CTYPE zh_CN.UTF-8
 setenv LC_ALL zh_CN.UTF-8

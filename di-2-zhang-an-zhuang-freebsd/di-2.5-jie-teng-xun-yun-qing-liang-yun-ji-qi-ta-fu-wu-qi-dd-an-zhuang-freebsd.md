@@ -41,7 +41,7 @@
 
 我们先把从那个 ISO 提取出来的内核和 initrd 文件放在根目录文件夹下，然后重启机器进入 GRUB 的命令行界面（可以在倒计时的时候按 `e` 进入编辑模式，删掉所有 `linux`、`initrd` 行原有内容，写完后按 `Ctrl X` 即可加载），手动启动指定的内核和 initrd（可以用 `Tab` 键补全路径）。
 
-```shell-session
+```sh
 linux (hd0,msdos1)/vmlinuz
 initrd (hd0,msdos1)/initramfs.igz
 ```
@@ -56,7 +56,7 @@ initrd (hd0,msdos1)/initramfs.igz
 
 mfsBSD 和 mfsLinux 镜像的 root 密码默认是 `mfsroot`
 
-```shell-session
+```sh
 # cd /tmp
 # wget https://mfsbsd.vx.sk/files/images/13/amd64/mfsbsd-13.1-RELEASE-amd64.img
 # dd if=mfsbsd-13.1-RELEASE-amd64.img of=/dev/vda
@@ -80,7 +80,7 @@ ssh 链接后，`kldload zfs` 加载 zfs 模块，然后运行 `bsdinstall`，�
 
 - 我们还可以手动下载 FreeBSD 的安装文件，以 MANIFEST 为例：
 
-```shell-session
+```sh
 # mkdir -p /usr/freebsd-dist
 # cd /usr/freebsd-dist
 # fetch http://ftp.freebsd.org/pub/FreeBSD/releases/amd64/13.1-RELEASE/MANIFEST
@@ -92,7 +92,7 @@ ssh 链接后，`kldload zfs` 加载 zfs 模块，然后运行 `bsdinstall`，�
 
 　　在正常的 Linux 系统内直接把 mfsBSD 的 img dd 到硬盘里，重启之后虽然正常加载 bootloader，但是可能是因为系统又对硬盘进行了写入而无法正常挂载内存盘。
 
-```shell-session
+```sh
 # wget https://mfsbsd.vx.sk/files/images/13/amd64/mfsbsd-se-13.1-RELEASE-amd64.img -O- | dd of=/dev/vda
 ```
 

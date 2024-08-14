@@ -54,7 +54,7 @@
 
 之后会进入终端，执行以下命令：
 
-```shell-session
+```sh
 # kldload zfs  # 加载 ZFS 内核模块
 # sysctl vfs.zfs.min_auto_ashift=12  # 强制 4K 对齐
 # gpart add -a 4k -l swap -s 4G -t freebsd-swap da0  # 添加 swap 分区（-t），卷标为 swap（-l），大小为 4G（-s），对齐（-a），注意替换 da0

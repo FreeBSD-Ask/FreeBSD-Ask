@@ -4,7 +4,7 @@
 
 基本安装
 
-```shell-session
+```sh
 # pkg install ibus zh-ibus-pinyin
 ```
 
@@ -39,7 +39,7 @@
 
 A 组：
 
-```shell-session
+```sh
 #A 组 在 sh、bash、zsh 中
 export XIM=ibus
 export GTK_IM_MODULE=ibus
@@ -51,7 +51,7 @@ export XIM_ARGS="--daemonize --xim"
 
 或 B 组：
 
-```shell-session
+```sh
 #B组 在 csh 中
 setenv XIM ibus
 setenv GTK_IM_MODULE ibus

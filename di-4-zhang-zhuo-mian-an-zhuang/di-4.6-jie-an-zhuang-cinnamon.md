@@ -15,13 +15,13 @@
 
 ## 安装
 
-```shell-session
+```sh
 # pkg install xorg lightdm lightdm-gtk-greeter cinnamon wqy-fonts xdg-user-dirs
 ```
 
 或者
 
-```shell-session
+```sh
 # cd /usr/ports/x11/xorg/ && make install clean
 # cd /usr/ports/x11/cinnamon/ && make install clean
 # cd /usr/ports/x11-fonts/wqy/ && make install clean
@@ -33,29 +33,29 @@
 
 ## 配置
 
-```shell-session
+```sh
 # ee ~/.xinitrc
 ```
 
 添加：
 
-```shell-session
+```sh
 exec cinnamon-session
 ```
 
-```shell-session
+```sh
 # ee /etc/fstab
 ```
 
 添加：
 
-```shell-session
+```sh
 proc /proc procfs rw 0 0
 ```
 
 ### 添加启动项：
 
-```shell-session
+```sh
 # sysrc dbus_enable=YES
 # sysrc lightdm_enable=YES
 ```

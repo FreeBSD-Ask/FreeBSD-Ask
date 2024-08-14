@@ -6,7 +6,7 @@
 >
 > 默认情况下 VMware 是 BIOS，会提示没有：
 >
-> ```shell-session
+> ```sh
 > # efibootmgr # 默认自带、无需安装。
 > efibootmgr: efi variables not supported on this system. root? kldload efirt?
 > ```
@@ -196,7 +196,7 @@ VMware Workstation Player 目前已弃用。且功能相对 VMware Workstation P
 
 VMware 自动缩放屏幕请安装显卡驱动和虚拟机增强工具，即：
 
-```shell-session
+```sh
 # pkg install xf86-video-vmware open-vm-tools xf86-input-vmmouse
 ```
 
@@ -222,7 +222,7 @@ VMware 自动缩放屏幕请安装显卡驱动和虚拟机增强工具，即：
 
 ### 鼠标集成（主机虚拟机鼠标自由切换）
 
-```shell-session
+```sh
 # pkg install xf86-video-vmware xf86-input-vmmouse open-vm-tools
 # sysrc moused_enable=YES
 # Xorg -configure
@@ -231,7 +231,7 @@ VMware 自动缩放屏幕请安装显卡驱动和虚拟机增强工具，即：
 
 编辑 `/usr/local/share/X11/xorg.conf.d/xorg.conf` 修改以下段落为（其他部分不需要动，保留原样即可）：
 
-```shell-session
+```sh
 …………此处省略一部分…………
 
 Section "ServerLayout"
@@ -260,13 +260,13 @@ EndSection
 
 如果有桌面
 
-```shell-session
+```sh
 # pkg install open-vm-tools xf86-input-vmmouse
 ```
 
 如果没有桌面：
 
-```shell-session
+```sh
 # pkg install open-vm-tools-nox11
 ```
 
@@ -283,7 +283,7 @@ EndSection
 
 写入
 
-```shell-session
+```sh
 fusefs_load="YES"
 ```
 
@@ -291,13 +291,13 @@ fusefs_load="YES"
 
 请先安装虚拟机增强工具。
 
-```shell-session
+```sh
 # vmhgfs-fuse .host:/selfsharefold /mnt/hgfs
 ```
 
 查看共享文件夹
 
-```shell-session
+```sh
 # ls /mnt/hgfs
 ```
 

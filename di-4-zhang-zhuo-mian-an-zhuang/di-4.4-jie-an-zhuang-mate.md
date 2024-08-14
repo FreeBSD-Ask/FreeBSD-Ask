@@ -10,7 +10,7 @@
 
 ## 安装与配置
 
-```shell-session
+```sh
 # pkg install  mate xorg wqy-fonts lightdm lightdm-gtk-greeter xdg-user-dirs
 ```
 
@@ -24,7 +24,7 @@
 # cd /usr/ports/devel/xdg-user-dirs/ && make install clean
 ```
 
-```shell-session
+```sh
 # sysrc moused_enable="YES"
 # sysrc dbus_enable="YES"
 # sysrc lightdm_enable="YES"
@@ -38,7 +38,7 @@
 
 默认是 csh，在 `.cshrc` 中添加如下内容：
 
-```shell-session
+```sh
 setenv LANG zh_CN.UTF-8
 setenv LC_CTYPE zh_CN.UTF-8
 ```
@@ -67,7 +67,7 @@ setenv LC_CTYPE zh_CN.UTF-8
 
 在该文件中添加以下内容
 
-```shell-session
+```sh
 export GTK_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
 export QT_IM_MODULE=ibus

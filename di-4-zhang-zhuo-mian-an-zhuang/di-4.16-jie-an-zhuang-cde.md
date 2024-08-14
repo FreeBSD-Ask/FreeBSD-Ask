@@ -8,7 +8,7 @@
 
 执行：
 
-```shell-session
+```sh
 # pkg install xorg cde
 ```
 
@@ -23,7 +23,7 @@
 
 在 shell 中执行：
 
-```shell-session
+```sh
 # sysrc rpcbind_enable="YES"
 # sysrc dtcms_enable="YES"
 # sysrc inetd_enable=yes
@@ -33,7 +33,7 @@
 	
 将以下内容添加到 `/etc/inetd.conf`：
 
-```shell-session
+```sh
 dtspc	stream	tcp	nowait	root	 /usr/local/dt/bin/dtspcd	/usr/local/dt/bin/dtspcd
 ```
 

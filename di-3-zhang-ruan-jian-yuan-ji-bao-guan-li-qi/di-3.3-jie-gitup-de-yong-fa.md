@@ -4,7 +4,7 @@
 
 安装 gitup：
 
-```shell-session
+```sh
 # pkg install gitup 
 ```
 
@@ -22,17 +22,17 @@
 
 ## 境内 Git 镜像站
 
-```shell-session
+```sh
 # cp /usr/local/etc/gitup.conf.sample /usr/local/etc/gitup.conf
 ```
 
-```shell-session
+```sh
 # ee /usr/local/etc/gitup.conf
 ```
 
 内容如下（有 ①②③ 共计三个需要修改的地方）：
 
-```shell-session
+```sh
 # $FreeBSD$
 #
 # Default configuration options for gitup.conf.
@@ -96,7 +96,7 @@
 
 拉取 ports：
 
-```shell-session
+```sh
 # gitup ports
 ```
 
@@ -108,20 +108,20 @@
 
 示例（先删去前边的 # 再改）：
 
-```shell-session
+```sh
 "proxy_host" : "192.168.27.1",
 "proxy_port" : 7890,
 ```
 
 - 详细调试输出：
 
-```shell-session
+```sh
 # gitup -v2 ports
 ```
 
 - gitup: build_repair_command: There are too many files to repair -- please re-clone the repository: Argument list too long
 
-```shell-session
+```sh
 # rm -rf /usr/ports
 # gitup ports
 ```

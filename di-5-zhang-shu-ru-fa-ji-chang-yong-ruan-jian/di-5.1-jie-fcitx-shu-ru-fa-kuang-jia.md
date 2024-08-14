@@ -29,7 +29,7 @@
 
 在 `.cshrc` 和 `/etc/csh.cshrc` 中添加如下配置，此配置可以解决部分窗口 fcitx 无效的问题。
 
-```shell-session
+```sh
 setenv QT4_IM_MODULE fcitx
 setenv GTK_IM_MODULE fcitx
 setenv QT_IM_MODULE fcitx
@@ -40,7 +40,7 @@ setenv XMODIFIERS @im=fcitx
 
 在 `.cshrc` 和 `/etc/csh.cshrc` 中添加下面几行配置可以解决终端无法输入中文和无法显示中文的问题。
 
-```shell-session
+```sh
 setenv LANG zh_CN.UTF-8
 setenv MM_CHARSET zh_CN.UTF-8
 setenv LC_CTYPE zh_CN.UTF-8
@@ -59,7 +59,7 @@ fcitx 5 相比前一代，增加了对 Wayland 的支持，据说更加流畅。
 
 安装：
 
-```shell-session
+```sh
 # pkg install fcitx5 fcitx5-qt5 fcitx5-qt6 fcitx5-gtk2 fcitx5-gtk3 fcitx5-gtk4 fcitx5-configtool zh-fcitx5-chinese-addons
 ```
 
@@ -98,7 +98,7 @@ SLIM 窗口下会提示 IBUS 找不到……疑似 bug。
 
 自动启动：
 
-```shell-session
+```sh
 # mkdir -p ~/.config/autostart/ #若使用其他用户则需要在其命令行下再执行之。
 # cp /usr/local/share/applications/org.fcitx.Fcitx5.desktop ~/.config/autostart/
 ```
@@ -111,13 +111,13 @@ SLIM 窗口下会提示 IBUS 找不到……疑似 bug。
 
 例：尝试将当前 shell 修改成 `csh`：
 
-```shell-session
+```sh
 # chsh -s /bin/csh
 ```
 
 退出当前账号，重新登录，查看 shell 是否变为 `csh`：
 
-```shell-session
+```sh
 # echo $0
 ```
 
@@ -142,7 +142,7 @@ A 组：
 
 sh/bash/zsh:fcitx5
 
-```shell-session
+```sh
 export LANG=zh_CN.UTF-8
 export LANGUAGE=zh_CN.UTF-8
 export LC_ALL=zh_CN.UTF-8
@@ -156,7 +156,7 @@ B 组：
 
 csh:fcitx5
 
-```shell-session
+```sh
 setenv LANG zh_CN.UTF-8
 setenv LC_ALL zh_CN.UTF-8
 setenv LANGUAGE zh_CN.UTF-8
@@ -173,7 +173,7 @@ setenv QT_IM_MODULE fcitx
 
 ### fcitx 4.x
 
-```shell-session
+```sh
 # fcitx-diagnose
 ```
 
@@ -181,7 +181,7 @@ setenv QT_IM_MODULE fcitx
 
 ### fcitx 5.x
 
-```shell-session
+```sh
 # fcitx5-diagnose
 ```
 

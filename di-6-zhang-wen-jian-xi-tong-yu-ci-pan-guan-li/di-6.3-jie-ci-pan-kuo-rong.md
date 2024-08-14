@@ -6,7 +6,7 @@
 
 1. `gpart show`
 
-```shell-session
+```sh
 root@freebsd:~ # gpart show
 =>       3  41943035  da0  GPT  (20G)
          3       122    1  freebsd-boot  (61K)
@@ -22,7 +22,7 @@ root@freebsd:~ # gpart show
 
 > **警告** 如果你使用的是 GPT 分区表，上边的扩容操作（**在虚拟机或云服务器上的**）会破坏 GPT 分区表，所以需要先恢复之：
 >
-> ```shell-session
+> ```sh
 > # gpart recover da0
 > ```
 >
@@ -30,14 +30,14 @@ root@freebsd:~ # gpart show
 
 `i` 为要扩容的分区，这里扩容 / 分区 `freebsd-ufs`。
 
-```shell-session
+```sh
 root@freebsd:~ #  gpart resize -i 4 da0
 da0p4 resized
 ```
 
 2. 启动 `growfs` 服务，自动完成扩展
 
-```shell-session
+```sh
 root@freebsd:~ # service growfs onestart
 Growing root partition to fill device
 da0 recovering is not needed
@@ -50,7 +50,7 @@ super-block backups (for fsck_ffs -b #) at:
 
 3. 用 `df -h` 命令查看结果。
 
-```shell-session
+```sh
 root@freebsd:~ # df -hl
 Filesystem         Size    Used   Avail Capacity  Mounted on
 /dev/gpt/rootfs     18G    4.8G     12G    29%    /

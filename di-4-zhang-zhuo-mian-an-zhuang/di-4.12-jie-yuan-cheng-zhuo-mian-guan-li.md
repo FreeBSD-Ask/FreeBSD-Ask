@@ -95,7 +95,7 @@ $ x11vnc -display :0 -rfbauth ~/.vnc/passwd -auth /var/lib/gdm/:0.Xauth #或 /ru
 
 安装 TigerVNC Server：
 
-```shell-session
+```sh
 # pkg install tigervnc-server
 ```
 
@@ -120,7 +120,7 @@ root@ykla:~ # ee ~/.vnc/xstartup
 
 内容如下：
 
-```shell-session
+```sh
 #!/bin/sh
 unset SESSION_MANAGER
 unset DBUS_SESSION_BUS_ADDRESS
@@ -177,7 +177,7 @@ exec command &  #此处不能照抄！
 
 安装软件包（以 KDE5 桌面为基准）：
 
-```shell-session
+```sh
 # pkg install xorg kde5 xrdp wqy-fonts xdg-user-dirs
 ```
 
@@ -193,7 +193,7 @@ exec command &  #此处不能照抄！
 
 配置：
 
-```shell-session
+```sh
 # sysrc xrdp_enable="YES"
 # sysrc xrdp_sesman_enable="YES"
 # sysrc dbus_enable="YES"
@@ -203,7 +203,7 @@ exec command &  #此处不能照抄！
 
 找到 `#### start desktop environment`，修改如下：
 
-```shell-session
+```sh
 #### start desktop environment
 # exec gnome-session
 # exec mate-session
@@ -311,7 +311,7 @@ root     syslogd     1021 7   udp4   *:514                 *:*
 
 安装：
 
-```shell-session
+```sh
 # pkg install rdesktop
 ```
 
@@ -324,7 +324,7 @@ root     syslogd     1021 7   udp4   *:514                 *:*
 
 但 rdesktop 安装后不会在系统中生成菜单，因此要在终端输入命令：
 
-```shell-session
+```sh
 # rdesktop ip:端口
 ```
 
@@ -334,7 +334,7 @@ root     syslogd     1021 7   udp4   *:514                 *:*
 
 由于版权问题（**私有软件未经许可默认禁止分发**），必须用户使用 Ports 自行编译：
 
-```shell-session
+```sh
 # cd /usr/ports/deskutils/anydesk/
 # make install clean
 ```

@@ -13,7 +13,7 @@
 > 如果你也想上传你的数据到该网站上，请：
 >
 >安装：
-> ```shell-session
+> ```sh
 > # pkg install hw-probe
 >```
 >或者
@@ -39,7 +39,7 @@ Q：联想笔记本无电池如何升级 BIOS？
 
 A：如果找不到电池，请解压缩`78cn25ww.exe`文件（BIOS 文件请自行去联想美国官网获取），用记事本打开`platform.ini`，查找：
 
-```shell-session
+```sh
 [AC_Adapter]
 Flag=1
 BatteryCheck=1
@@ -48,7 +48,7 @@ BatteryBound=30
 
 将以上所有数值都修改为`0`：
 
-```shell-session
+```sh
 [AC_Adapter]
 Flag=0
 BatteryCheck=0

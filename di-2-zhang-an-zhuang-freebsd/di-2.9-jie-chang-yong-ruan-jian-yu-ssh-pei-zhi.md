@@ -65,7 +65,7 @@ Xshell 下载地址（输入用户名和邮件即可）：
 
 ### 允许 root ssh
 
-```shell-session
+```sh
 # ee /etc/ssh/sshd_config    #（删去前边的 #，并将 yes 或 no 修改为如下）
 PermitRootLogin yes          #允许 root 登录
 PasswordAuthentication yes   #（可选）设置是否使用普通密码验证，如果不设置此参数则使用 PAM 认证登录，安全性更高
@@ -79,19 +79,19 @@ PasswordAuthentication yes   #（可选）设置是否使用普通密码验证�
 
 ### 开启 SSH 服务
 
-```shell-session
+```sh
 # service sshd restart
 ```
 
 如果提示找不到 `sshd`,请执行下一命令:
 
-```shell-session
+```sh
 # sysrc sshd_enable="YES"
 ```
 
 然后再
 
-```shell-session
+```sh
 # service sshd restart
 ```
 
@@ -101,7 +101,7 @@ PasswordAuthentication yes   #（可选）设置是否使用普通密码验证�
 
 编辑 `# ee /etc/ssh/sshd_config`，调整 `ClientAlive` 的设置：
 
-```shell-session
+```sh
 ClientAliveInterval 10
 ClientAliveCountMax 3
 ```
@@ -114,7 +114,7 @@ ClientAliveCountMax 3
 
 全局用户生效：`# ee /etc/ssh/ssh_config`，仅对当前用户生效：`~/.ssh/config`。
 
-```shell-session
+```sh
 Host *
 ServerAliveInterval 10
 ServerAliveCountMax 3
@@ -122,7 +122,7 @@ ServerAliveCountMax 3
 
 或者在连接的时候使用 `-o` 指定参数：
 
-```shell-session
+```sh
 # ssh user@server -p 22 -o ServerAliveInterval=10 -o ServerAliveCountMax=3
 ```
 
@@ -132,13 +132,13 @@ ServerAliveCountMax 3
 
 ### 生成密钥
 
-```shell-session
+```sh
 # ssh-keygen
 ```
 
 > OpenSSH 7.0 及以上版本默认禁用了 ssh-dss(DSA) 公钥算法。FreeBSD 13.0 采用 OpenSSH\_7.9。因此使用默认值即可。
 
-```shell-session
+```sh
 root@ykla:~ # ssh-keygen
 Generating public/private rsa key pair.
 Enter file in which to save the key (/root/.ssh/id_rsa): #此处回车
@@ -168,7 +168,7 @@ root@ykla:~ #
 
 检查权限（默认创建的权限如下）：
 
-```shell-session
+```sh
 drwx------  2 root  wheel   512 Mar 22 18:27 /root/.ssh #权限为 700
 -rw-------  1 root  wheel  1856 Mar 22 18:27 /root/.ssh/id_rsa  #私钥，权限为 600
 -rw-r--r--  1 root  wheel  391 Mar 22 18:27 /root/.ssh/id_rsa.pub #公钥，权限为 644
@@ -176,26 +176,26 @@ drwx------  2 root  wheel   512 Mar 22 18:27 /root/.ssh #权限为 700
 
 生成验证公钥：
 
-```shell-session
+```sh
 # cat /root/.ssh/id_rsa.pub >> /root/.ssh/authorized_keys
 -rw-r--r--  1 root  wheel  391 Mar 22 18:39 /root/.ssh/authorized_keys #检查权限 644
 ```
 
 使用 winscp 把私钥和公钥保存到本地后，删除服务器上的多余文件：
 
-```shell-session
+```sh
 # rm /root/.ssh/id_rsa*
 ```
 
 ### 修改 /etc/ssh/sshd\_config
 
-```shell-session
+```sh
 # ee /etc/ssh/sshd_config
 ```
 
 **逐个找到（分散于 `sshd_config`）**，并按需修改配置如下（删去前边的 `#`，并将 `yes` 或 `no` 的状态修改为如下）：
 
-```shell-session
+```sh
 PermitRootLogin yes                          #允许 ROOT 用户直接登陆系统
 
 AuthorizedKeysFile     .ssh/authorized_keys  #修改使用用户目录下密钥文件，默认已经正确配置，可再检查下
@@ -209,7 +209,7 @@ PermitEmptyPasswords no                      #禁止空密码的用户进行登�
 
 ### 重启服务
 
-```shell-session
+```sh
 # service sshd restart
 ```
 
@@ -223,7 +223,7 @@ PermitEmptyPasswords no                      #禁止空密码的用户进行登�
 
 安装：
 
-```shell-session
+```sh
 # pkg install screen
 ```
 
@@ -236,7 +236,7 @@ PermitEmptyPasswords no                      #禁止空密码的用户进行登�
 
 使用方法：
 
-```shell-session
+```sh
 # screen -S xxx
 ```
 
@@ -246,7 +246,7 @@ PermitEmptyPasswords no                      #禁止空密码的用户进行登�
 
 查看有哪些正在运行的 screen？
 
-```shell-session
+```sh
 root@ykla:/ # screen -ls
 There are screens on:
 	18380.pts-0.ykla	(Attached)
@@ -257,13 +257,13 @@ There are screens on:
 
 `Detached` 的可以直接 `-r` 恢复。
 
-```shell-session
+```sh
 screen -r xxx
 ```
 
 `Attached` 的必须先离线再恢复：
 
-```shell-session
+```sh
 root@ykla:/ # screen -d 18380
 [18380.pts-0.ykla detached.]
 
