@@ -280,7 +280,7 @@ pkg install libva-vdpau-driver libvdpau libvdpau-va-gl
 # cd /usr/ports/graphics/nvidia-drm-kmod/ && make install clean
 ```
 
-````
+```
 # sysrc kld_list+="nvidia-modeset nvidia-drm.ko" #配置驱动
 # reboot #重启
 ```
