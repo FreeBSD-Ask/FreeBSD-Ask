@@ -136,18 +136,13 @@ FreeBSD 15 CUEERNT 及 14-STABLE 1400508（即 2024 年 2 月 18 日后以的 ST
 # sysrc -f /boot/loader.conf  acpi_video="YES"
 ```
 
-> 仅限 FreeBSD 13
-
-```shell-session
-# backlight decr 20  #降低 20% 亮度
-```
-
 #### 英特尔
 
 backlight 自 FreeBSD 13 引入。
 
 ```shell-session
 # backlight   #打印当前亮度
+# backlight decr 20  #降低 20% 亮度
 # backlight + #默认调整亮度增加 10%
 # backlight - #默认调整亮度减少 10%
 ```
