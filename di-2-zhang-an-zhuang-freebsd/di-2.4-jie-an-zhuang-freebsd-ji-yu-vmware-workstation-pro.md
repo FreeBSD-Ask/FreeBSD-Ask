@@ -13,7 +13,7 @@
 >
 > 如果当前系统是 UEFI，efibootmgr 则输出：
 >
-> ```shell-session
+> ```sh
 > # efibootmgr # 默认自带、无需安装。
 > Boot to FW : false
 > BootCurrent: 0004
@@ -31,7 +31,7 @@
 
 ## 视频教程
 
-(FreeBSD 13.1 安装 KDE5——基于 VMware 17)[https://www.bilibili.com/video/BV1UR4y1U71T/)
+[FreeBSD 13.1 安装 KDE5——基于 VMware 17](https://www.bilibili.com/video/BV1UR4y1U71T)
 
 视频教程环境 VMware 17 + FreeBSD 13.1-RELEASE + BIOS +KDE 5。
 
