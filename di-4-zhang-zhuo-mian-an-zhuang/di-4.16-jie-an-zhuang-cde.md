@@ -2,7 +2,7 @@
 
 > **CDE 是 Common Desktop Environment（通用桌面环境）的缩写。历史悠久的桌面环境，常被用于 Unix 商业发行版。**
 >
->以下内容未经测试，并不可靠。
+>以下内容来自网络，且未经测试，并不可靠。
 
 ## 安装软件
 
@@ -23,13 +23,13 @@
 
 在 shell 中执行：
 
-    ```shell-session
-    # sysrc rpcbind_enable="YES"
-    # sysrc dtcms_enable="YES"
-	# sysrc inetd_enable=yes
-    # ln -s /usr/local/dt/bin/Xsession ~/.Xsession
-    # env LANG=C startx
-    ```
+```shell-session
+# sysrc rpcbind_enable="YES"
+# sysrc dtcms_enable="YES"
+# sysrc inetd_enable=yes
+# ln -s /usr/local/dt/bin/Xsession ~/.Xsession
+# env LANG=C startx
+```
 	
 将以下内容添加到 `/etc/inetd.conf`：
 
