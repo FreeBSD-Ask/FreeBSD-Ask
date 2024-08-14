@@ -227,12 +227,12 @@ Section "Device"
 EndSection
 ```
 
-检验是否成功启用独显，可以用 mesa-demos 中程序测试，运行 `bounce`，用 `nvidia-smi -l 1` 观察(每隔一秒刷新一次)。没有使用 nvidia 驱动时显存使用 7M，启用程序显存没有变化。
+检验是否成功启用独显，可以用 mesa-demos 中程序测试，运行 `bounce`，用 `nvidia-smi -l 1` 观察(每隔一秒刷新一次)。没有使用 nvidia 驱动时使用了 7M 显存，启用程序时显存并没有变化。
 
 
 ![](../.gitbook/assets/418810292836709.png)
 
- 运行 `nvrun-vgl bounce` 用 `nvidia-smi -l 1` 观察使用 nvidia 驱动时显存使用 13M。
+ 运行 `nvrun-vgl bounce` 用 `nvidia-smi -l 1` 观察使用 nvidia 驱动时使用了 13M 显存。
  
  ![](../.gitbook/assets/380531501625801.png)
  
@@ -284,7 +284,7 @@ pkg install libva-vdpau-driver libvdpau libvdpau-va-gl
 # sysrc kld_list+="nvidia-modeset nvidia-drm.ko" #配置驱动
 # reboot #重启
 ```
-**如果找不到 `graphics/nvidia-drm-kmod` 就编译安装，该包提供了 PRIME 等支持。`**
+**如果找不到 `graphics/nvidia-drm-kmod` 就编译安装，该包提供了 PRIME 等支持。**
 
 这时候应该已经可以驱动显卡了。
 
