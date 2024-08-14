@@ -10,11 +10,11 @@
 
 ### Ubuntu
 
-Ubuntu 是著名的内部错误发行版。有些人为此争辩“那是 Ubuntu 太谦虚了，他把不属于自己的报错也揽到自己身上”，但无可辩驳的是 Ubuntu 基于 Debian 的 SID 版本，本身稳定性是没有保证的。
+Ubuntu 是著名的内部错误发行版。有些人为此争辩“那是 Ubuntu 太谦虚了，他把不属于自己的报错也揽到自己身上”，但无可辩驳的是 Ubuntu 基于 Debian 的 SID 版本，本身稳定性是没有保证的。最近测试了 Ubuntu 24.04 LTS，可以说一代不如一代，安装的时候就开始报错，安装后开机更是内部错误接连不断（掐表数过了大概 10 分钟会有 3 次）。
 
 ### Fedora
 
-Fedora 俗称“地沟油”，是基于 RHEL 的上游系统，我更喜欢称其为小白鼠发行版，其发行的根本目的是为了测试 RHEL 系统的新设计和新架构，待稳定后迁移到 RHEL。稳定性可见一斑。由此可见 Linux 所谓成功的商业模式就是开源社区免费测试，测试稳定了引入企业版。更多地例如 wine 与 crossover？
+Fedora 俗称“地沟油”，是基于 RHEL 的上游系统，我更喜欢称其为小白鼠发行版，其发行的根本目的是为了测试 RHEL 系统的新设计和新架构，待稳定后迁移到 RHEL。稳定性可见一斑。由此可见 Linux 所谓成功的商业模式就是开源社区免费测试，测试稳定了引入企业版。更多地例如 wine 与 crossover？这个系统非常吃资源，在虚拟机的 4G 内存完全无法满足他，必须给更多才能进行安装。
 
 ### CentOS/Rocky Linux/RHEL
 
@@ -22,15 +22,17 @@ Fedora 俗称“地沟油”，是基于 RHEL 的上游系统，我更喜欢称�
 
 ### Debian
 
-Debian 俗称“大便”。有个很奇怪的事情，设置了 root 密码就不会安装 sudo。Debian 的软件包也不甚更新。（此处仅指 stable）。
+Debian 俗称“大便”。有个很奇怪的事情，设置了 root 密码就不会安装 sudo。Debian 的软件包也不甚更新（此处仅指 stable）。上述这种肉眼可见的 Bug 随手可拾。
 
 ### OpenSUSE
 
-完整的 OpenSUSE 安装后系统非常的卡顿，据说是 btrfs 文件系统的某个特性，也许卡就是特性之一吧。OpenSUSE 俗称大蜥蜴。他所做的最搞笑的一件事是他的版本号，为了纪念英国作家道格拉斯·亚当斯在《银河系漫游指南》中写到的这个数字“42”，（被称作 “the answer to life, the universe and everything”，生命、宇宙以及任何事情的终极答案），OpenSUSE 把版本号从 13 蹦到了 42，然后又从 42 回到了 15。然后搞笑的一件事是，从 42 到 15 应该是升级的过程，但是 42 的版本号比 15 大，于是你到了 15 再升级就会再反向升级到 42。 那么现在问题来了，到了 41 再升级是到 42 还是 43 呢？
+完整的 OpenSUSE 在物理机上安装后系统非常的卡顿，据说是 btrfs 文件系统的某个特性，也许特别卡就是特性之一吧。
+
+OpenSUSE 俗称大蜥蜴。他所做的最搞笑的一件事是他的版本号，为了纪念英国作家道格拉斯·亚当斯在《银河系漫游指南》中写到的这个数字“42”，（被称作 “the answer to life, the universe and everything”，生命、宇宙以及任何事情的终极答案），OpenSUSE 把版本号从 13 蹦到了 42，然后又从 42 回到了 15。然后搞笑的一件事是，从 42 到 15 应该是升级的过程，但是 42 的版本号比 15 大，于是你到了 15 再升级就会再反向升级到 42。 那么现在问题来了，到了 41 再升级是到 42 还是 43 呢？
 
 ### Gentoo
 
-Gentoo 俗称“元发行版”。一切软件都要通过 **编译** 的方式来进行安装。其缺点也很明显，如果一个程序编译不过去就无法安装了，实际上这种软件非常多。有人会抬杠说 Gentoo 有二进制安装方式，但那也需要自己先本地构建，并没有统一的官方二进制源，自己制作也不具备通用性。一旦你一段时间不更新，Gentoo 会告诉你什么叫做 **循环依赖**。而且 Gentoo 难以大规模部署，也难以在服务器上部署。另外 Gentoo 的 portage（包管理器）是 python 语言编写的，这直接导致计算依赖的时间的延迟：在树莓派 4 上，安装 KDE 5 往往要计算几个小时……
+Gentoo 俗称“元发行版”。一切软件都要通过 **编译** 的方式来进行安装（最近好像有了[官方二进制源了](https://www.gentoo.org/news/2023/12/29/Gentoo-binary.html)，但是很遗憾，这除了让他的依赖更加混乱以外好像没有别的用处……）。其缺点也很明显，如果一个程序编译不过去就无法安装了，实际上这种软件非常多。有人会抬杠说 Gentoo 有二进制安装方式，但是自己制作也不具备通用性。一旦你一段时间不更新，Gentoo 会告诉你什么叫做 **循环依赖**。而且 Gentoo 难以大规模部署，也难以在服务器上部署。另外 Gentoo 的 portage（包管理器）是 python 语言编写的，这直接导致计算依赖的时间的延迟：在树莓派 4 上，安装 KDE 5 往往要计算几个小时……
 
 简而言之，Gentoo 用自己的哲学捆绑了用户，简单问题复杂化，自己折磨自己；USE 过于复杂，对于一些常用软件，都经常出现循环依赖问题，破坏系统稳定性，软件安装升级卸载困难。
 
@@ -44,7 +46,7 @@ UOS 和 Deepin 的关系就好比 RHEL 之于 Fedora。本质上是一种东西�
 
 ### Arch Linux/Manjaro
 
-Arch Linux 俗称“**邪教、洗发水**”。这是我所见过的一个最不稳定的 Linux 发行版，也是被别人忽悠从而安装最多的一个。我难以理解为什么有这么多人选择如此不稳定的一个操作系统。你安装的软件越多，挂的越快（你不信你把完整的 gnome 安装上，看看你能维持几天不挂）。有人会说这是你不看软件发行注记的后果，此言差矣。一个需要看发行注记才能更新的系统，本身就是有问题——和 Deepin 把解决方案写在墙角有区别？Arch Linux 唯一优点就是软件新。似乎随处可见的就是 Arch Linux。Arch Linux 似乎是与苦难哲学挂钩的。
+Arch Linux 俗称“**邪教、洗发水**”。这是我所见过的一个最不稳定的 Linux 发行版，也是被别人忽悠从而安装最多的一个。我难以理解为什么有这么多人选择如此不稳定的一个操作系统。你安装的软件越多，挂的越快（你不信你把完整的 gnome 安装上，看看你能维持几天不挂？）。有人会说这是你不看软件发行注记的后果，此言差矣。一个需要看发行注记才能更新的系统，本身就是有问题——和 Deepin 把解决方案写在墙角有区别？Arch Linux 唯一优点就是软件新。似乎随处可见的就是 Arch Linux。Arch Linux 似乎是与苦难哲学挂钩的。
 
 Arch Linux 官方源里基本上没有什么软件，不导入 aur 源（ Arch User Repository，Arch 用户软件仓库）就完全没法用。而 aur 源是[未经过任何代码审查的](https://wiki.archlinux.org/title/Arch_User_Repository)（`Warning: AUR packages are user-produced content. These PKGBUILDs are completely unofficial and have not been thoroughly vetted. Any use of the provided files is at your own risk.`，`警告： AUR 中的软件包是由其他用户编写的，这些 PKGBUILD 完全是非官方的，未经彻底审查。使用这些文件的风险由您自行承担。`）实际上不是未经彻底审查，是根本没有任何审查：也就是说有人往里面塞 `rm -rf /*` 也是可以的。虽然他使用了 fakeroot 但是也无济于事。
 
@@ -52,10 +54,7 @@ Arch Linux 官方源里基本上没有什么软件，不导入 aur 源（ Arch U
 
 - FreeBSD 仍然使用传统的 INIT 引导，而非 systemd；
 - FreeBSD root 用户 shell 默认是 csh（14 改为 sh），而不是 bash；
-- FreeBSD 基本系统几乎不包含任何非 BSD 协议的软件，并致力于去 GNU 化（这意味着基本系统不使用 Glibc、GCC 等软件），见
-
-https://wiki.freebsd.org/GPLinBase
-
+- FreeBSD 基本系统几乎不包含任何非 BSD 协议的软件，并致力于去 GNU 化（这意味着基本系统不使用 Glibc、GCC 等软件；**其实不是 BSD 一直在去 GNU 化，而是 Linux 一直在 GNU 化**），见 <https://wiki.freebsd.org/GPLinBase>
 - FreeBSD 的用户配置文件和系统配置文件严格分离，即内核和基本系统与第三方应用程序是完全分离的；
 - FreeBSD 项目是作为一个完整的操作系统维护的，而非内核与 userland 单独维护；也就是说如果你要使用 FreeBSD，那么就只有一个 FreeBSD 可选；
 - FreeBSD 没有 free 命令也不支持安装这个包(FreeBSD 早就不使用 procfs 了)，FreeBSD 基本系统自带的文本编辑器有 ee 和 vi（不是软链接到 vim 的 vi，是真实的 nvi），没有预装 wget，而是 fetch。
