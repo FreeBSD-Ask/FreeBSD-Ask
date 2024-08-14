@@ -47,9 +47,11 @@ setenv LC_CTYPE zh_CN.UTF-8
 setenv LC_ALL zh_CN.UTF-8
 ```
 
-自动启动：
+开机自启：
 
-`# cp /usr/local/share/applications/fcitx.desktop ~/.config/autostart/`
+```
+# cp /usr/local/share/applications/fcitx.desktop ~/.config/autostart/
+```
 
 ## Fcitx 5.X
 
