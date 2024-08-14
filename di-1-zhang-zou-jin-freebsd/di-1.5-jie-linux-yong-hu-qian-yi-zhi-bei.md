@@ -14,7 +14,7 @@ Ubuntu 是著名的内部错误发行版。有些人为此争辩“那是 Ubuntu
 
 ```bash
 ykla@ykla-ubuntu:~$ cat /etc/debian_version 
-trixie/sid
+trixie/sid #trixie 即 Debian 13。但是在当前时间点，最新 stable 版本是 Debian 12 bookworm 
 ykla@ykla-ubuntu:~$ cat /etc/lsb-release
 DISTRIB_ID=Ubuntu
 DISTRIB_RELEASE=24.04
