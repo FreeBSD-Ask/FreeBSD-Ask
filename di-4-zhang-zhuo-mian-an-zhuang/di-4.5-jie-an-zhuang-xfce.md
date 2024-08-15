@@ -21,13 +21,13 @@
 
 ## 启用 xfce
 
-```
+```sh
 # echo "/usr/local/etc/xdg/xfce4/xinitrc" > ~/.xinitrc
 ```
 
 或者
 
-```
+```sh
 # echo "/usr/local/etc/xdg/xfce4/xinitrc" > ~/.xsession
 ```
 
@@ -44,7 +44,7 @@
 
 ## 设置中文显示
 
-在 `.xinitrc` 或者 `.profile` 中添加以下内容（但要在最前面才正常启用） `export LANG=zh_CN.UTF-8`
+在 `~/.xinitrc` 或者 `~/.profile` 中添加以下内容（但要在最前面才正常启用） `export LANG=zh_CN.UTF-8`
 
 lightdm 登陆管理器本地化语言见 KDE 章节。
 
@@ -61,13 +61,13 @@ lightdm 登陆管理器本地化语言见 KDE 章节。
 
 或：
 
-```
+```sh
 # cd /usr/ports/x11/xfce4-appmenu-plugin/ && make install clean
 # cd /usr/ports/x11/gtk-app-menu/ && make install clean
 # cd /usr/ports/x11/appmenu-registrar/ && make install clean
 ```
 
-```
+```sh
 $ xfconf-query -c xsettings -p /Gtk/ShellShowsMenubar -n -t bool -s true
 $ xfconf-query -c xsettings -p /Gtk/ShellShowsAppmenu -n -t bool -s true
 $ xfconf-query -c xsettings -p /Gtk/Modules -n -t string -s "appmenu-gtk-module"
@@ -152,7 +152,7 @@ FreeBSD 的 xfce 邮箱客户端推荐用 evolution，搭配 xfce4-mailwatch-plu
 
 `/etc/rc.conf` 里写入：
 
-```
+```sh
 lightdm_env="LC_MESSAGES=zh_CN.UTF-8" 
 ```
 
