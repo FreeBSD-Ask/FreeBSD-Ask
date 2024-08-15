@@ -31,13 +31,13 @@
 > # pkg install xorg-minimal gnome-lite wqy-fonts xdg-user-dirs
 > ```
 >或者
-
-```sh
-# cd /usr/ports/x11/xorg-minimal/ && make install clean
-# cd /usr/ports/x11/gnome/ && make install clean
-# cd /usr/ports/x11-fonts/wqy/ && make install clean
-# cd /usr/ports/devel/xdg-user-dirs/ && make install clean
-```
+>
+>```sh
+># cd /usr/ports/x11/xorg-minimal/ && make install clean
+># cd /usr/ports/x11/gnome/ && make install clean
+># cd /usr/ports/x11-fonts/wqy/ && make install clean
+># cd /usr/ports/devel/xdg-user-dirs/ && make install clean
+>```
 > 如果安装了完整版本也可以使用 pkg 包管理器卸载自带的游戏软件：
 >
 > ```sh
