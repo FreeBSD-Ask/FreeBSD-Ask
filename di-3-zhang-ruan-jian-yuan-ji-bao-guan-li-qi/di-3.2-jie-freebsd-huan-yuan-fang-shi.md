@@ -33,12 +33,11 @@ Gentoo Linux: Portage，对应 Ports（Portage 本身就是 Ports 的仿制品�
 >
 > FreeBSD 关于弃用 portsnap 的说明：[[HEADS UP] Planned deprecation of portsnap](https://marc.info/?l=freebsd-ports&m=159656662608767&w=2)。
 
-
-**对于失去安全支持的版本，请参考最后一节。**
+对于失去安全支持的版本，请参考最后本文一节。
 
 **本文对于一个源列出了多个镜像站，无须全部配置，只需选择其一即可。**
 
-**目前境内没有官方镜像站，以下均为非官方镜像站。**
+目前境内没有官方镜像站，以下均为非官方镜像站。
 
 ## pkg 源：pkg 源提供了二进制软件包
 
@@ -46,17 +45,13 @@ pkg 的下载路径是 `/var/cache/pkg/`
 
 FreeBSD 中 pkg 源分为系统级和用户级两个配置文件。**不建议**直接修改 `/etc/pkg/FreeBSD.conf` ~~但是太麻烦啦，一般我都是直接改这个文件的~~，因为该文件会随着基本系统的更新而发生改变。
 
-创建用户级源目录:
-
-```sh
-# mkdir -p /usr/local/etc/pkg/repos
-```
 
 ### 网易开源镜像站
 
-创建用户级源文件:
+创建用户级源目录和文件:
 
 ```sh
+# mkdir -p /usr/local/etc/pkg/repos
 # ee /usr/local/etc/pkg/repos/163.conf
 ```
 
@@ -83,9 +78,10 @@ FreeBSD: { enabled: no }
 
 ### 中国科学技术大学开源软件镜像站
 
-创建用户级源文件:
+创建用户级源目录和文件:
 
 ```sh
+# mkdir -p /usr/local/etc/pkg/repos
 # ee /usr/local/etc/pkg/repos/ustc.conf
 ```
 
@@ -100,7 +96,10 @@ FreeBSD: { enabled: no }
 
 ### 南京大学开源镜像站
 
+创建用户级源目录和文件:
+
 ```sh
+# mkdir -p /usr/local/etc/pkg/repos
 # ee /usr/local/etc/pkg/repos/nju.conf
 ```
 
@@ -145,8 +144,10 @@ FreeBSD: { enabled: no }
 ```sh
 # pkg install git
 ```
-或者
-```
+
+或
+
+```sh
 # cd /usr/ports/devel/git
 # make install clean
 ```
@@ -169,27 +170,45 @@ ports 下载路径是 `/usr/ports/distfiles`
 
 #### 南京大学开源镜像站
 
-创建或修改文件 `# ee /etc/make.conf`:
+创建或修改文件 :
 
-写入以下内容:
+```sh
+# ee /etc/make.conf
+```
 
-`MASTER_SITE_OVERRIDE?=http://mirrors.nju.edu.cn/freebsd-ports/distfiles/${DIST_SUBDIR}/`
+写入以下内容：
+
+```sh
+MASTER_SITE_OVERRIDE?=http://mirrors.nju.edu.cn/freebsd-ports/distfiles/${DIST_SUBDIR}/
+```
 
 #### 网易开源镜像站
 
-创建或修改文件 `# ee /etc/make.conf`:
+创建或修改文件：
 
-写入以下内容:
+```sh
+# ee /etc/make.conf
+```
 
-`MASTER_SITE_OVERRIDE?=http://mirrors.163.com/freebsd-ports/distfiles/${DIST_SUBDIR}/`
+写入以下内容：
+
+```sh
+MASTER_SITE_OVERRIDE?=http://mirrors.163.com/freebsd-ports/distfiles/${DIST_SUBDIR}/
+```
 
 #### 中国科学技术大学开源软件镜像站
 
-创建或修改文件 `# ee /etc/make.conf`:
+创建或修改文件：
+
+```sh
+# ee /etc/make.conf
+```
 
 写入以下内容:
 
-`MASTER_SITE_OVERRIDE?=http://mirrors.ustc.edu.cn/freebsd-ports/distfiles/${DIST_SUBDIR}/`
+```sh
+MASTER_SITE_OVERRIDE?=http://mirrors.ustc.edu.cn/freebsd-ports/distfiles/${DIST_SUBDIR}/
+```
 
 ## portsnap 源：打包的 ports 文件（FreeBSD 14.0 及以后不可用）
 
@@ -227,7 +246,9 @@ ntpdate ntp.api.bz
 
 **例:从 FreeBSD 12 升级到 13.0**
 
-`# freebsd-update -r 13.0-RELEASE upgrade`
+```sh
+# freebsd-update -r 13.0-RELEASE upgrade
+```
 
 ## 不受安全支持的版本（请酌情使用）
 
