@@ -57,7 +57,7 @@ FreeBSD 中 pkg 源分为系统级和用户级两个配置文件。**不建议**
 > > # sed -i '' 's/quarterly/latest/g' /etc/pkg/FreeBSD.conf
 > > ```
 >
-> **若要使用 https,请先安装 `security/ca_root_nss`，并将 `http` 修改为 `https`,最后使用命令 `# pkg update -f` 刷新缓存即可,下同。**
+> **若要使用 https,请先安装 `security/ca_root_nss`，并将 `http` 修改为 `https`,最后使用命令 `# pkg update -f` 刷新缓存即可，下同。**
 
 
 ### 网易开源镜像站
