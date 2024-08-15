@@ -34,7 +34,7 @@ root@ykla:/ # cd /usr/ports/ #切换目标目录
 root@ykla:/usr/ports # git pull #同步更新上游 Ports
 ```
 
-### 使用 whereis 查询软件路径
+### 使用 `whereis` 查询软件路径
 
 如 
 
@@ -170,7 +170,7 @@ root@ykla:~ # find /  -name ccache.conf # 全局查找配置文件路径
 # make install clean
 ```
 
-新建或者编辑 `# ee /etc/make.conf` 文件，写入以下几行：
+新建或者编辑 `/etc/make.conf` 文件，写入以下几行：
 
 ```sh
 FETCH_CMD=axel
