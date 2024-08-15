@@ -10,7 +10,7 @@
 
 或者：
 
-```
+```sh
 # cd /usr/ports/x11/xorg/ && make install clean # X11
 # cd /usr/ports/x11/sddm/ && make install clean # 窗口管理器
 # cd /usr/ports/deskutils/plasma5-sddm-kcm/ && make install clean # KDE 管理 SDDM 的模块
@@ -33,7 +33,7 @@
 >
 > 但是[其中给出的说法](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=269621)是不正确的，起码在 2023.4.11 之前，还是需要进行该配置的。
 
-```sb
+```sh
 # ee /etc/fstab
 ```
 
@@ -86,7 +86,9 @@ proc            /proc           procfs  rw      0       0
 
 > - **如果 sddm 登录闪退到登录界面，请检查左下角是不是 plasma-X11，闪退的一般都是 Wayland！因为目前 FreeBSD 上的 KDE 5 尚不支持 Wayland。**
 >
-> <img src="../.gitbook/assets/Wayland.png" alt="" data-size="original"><img src="../.gitbook/assets/x11.png" alt="" data-size="original">
+> ![KDE 5](../.gitbook/assets/Wayland.png)
+>
+>![KDE 5](../.gitbook/assets/x11.png")
 >
 > **如果你使用 VMware 虚拟机时，压根看不见 sddm 最下边的选项，请按照配置虚拟机章节的教程配置屏幕自动缩放。**
 
@@ -95,7 +97,7 @@ proc            /proc           procfs  rw      0       0
 
 > 你需要在 `/etc/rc.conf` 里面检查你的 `hostname` 是否为空（理论上不应该为空），有没有设置：
 >
-> <img src="../.gitbook/assets/errornohostname.png" alt="" data-size="original">
+> ![KDE 5](../.gitbook/assets/errornohostname.png)
 >
 > 设置 `hostname` 即可。
 
@@ -123,7 +125,7 @@ proc            /proc           procfs  rw      0       0
 # sysrc sddm_lang="zh_CN"
 ```
 
-<img src="../.gitbook/assets/sddmcn.png" alt="" data-size="original">
+![KDE 5](../.gitbook/assets/sddmcn.png)
 
 #### 参考文献
 
