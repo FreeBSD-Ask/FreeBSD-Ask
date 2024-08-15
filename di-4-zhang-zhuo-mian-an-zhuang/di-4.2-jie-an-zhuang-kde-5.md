@@ -33,7 +33,9 @@
 >
 > 但是[其中给出的说法](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=269621)是不正确的，起码在 2023.4.11 之前，还是需要进行该配置的。
 
-`# ee /etc/fstab`
+```sb
+# ee /etc/fstab
+```
 
 添加内容如下:
 
@@ -45,7 +47,7 @@ proc            /proc           procfs  rw      0       0
 
 > > **警告**
 > >
-> > **在 13.2 以前，如果你不配置 proc，在普通用户下，你的所有图标都将变成无法点击的白色方块，**_**任何软件都打不开**_**，桌面陷入异常。且后续再进行配置也是无效的，必须重装系统。**
+> > **在 13.2 以前，如果你不配置 proc，在普通用户下，你的所有图标都将变成无法点击的白色方块，任何软件都打不开，桌面陷入异常。且后续再进行配置也是无效的，必须重装系统。**
 >
 > ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ **这就是后果** ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
 >
@@ -89,9 +91,9 @@ proc            /proc           procfs  rw      0       0
 > **如果你使用 VMware 虚拟机时，压根看不见 sddm 最下边的选项，请按照配置虚拟机章节的教程配置屏幕自动缩放。**
 
 
-### 启动 sddm 提醒 `/usr/bin/xauth: (stdin):1: bad display name`，但是可以正常 `startx
+### 启动 sddm 提醒 `/usr/bin/xauth: (stdin):1: bad display name`，但是可以正常 `startx`
 
-> 你需要在 `/etc/rc.conf` 里面检查你的 `hostname` 是否为空（理论上不应该为空），有没有设置：**
+> 你需要在 `/etc/rc.conf` 里面检查你的 `hostname` 是否为空（理论上不应该为空），有没有设置：
 >
 > <img src="../.gitbook/assets/errornohostname.png" alt="" data-size="original">
 >
