@@ -9,27 +9,27 @@
 ### 首先使用 Git 获取 Ports（其他方法参见前节）
 
 安装 Git：
-```
+```sh
 # pkg install git
 ```
 
 或者：
 
-```
+```sh
 # cd /usr/ports/devel/git
 # make install clean
 ```
 
 拉取 Ports 存储库：
 
-```
+```sh
 # git clone --depth 1 https://mirrors.ustc.edu.cn/freebsd-ports/ports.git /usr/ports
 ```
 
 #### 同步更新 Ports Git
 
 
-```
+```sh
 root@ykla:/ # cd /usr/ports/ #切换目标目录
 root@ykla:/usr/ports # git pull #同步更新上游 Ports
 ```
@@ -38,13 +38,13 @@ root@ykla:/usr/ports # git pull #同步更新上游 Ports
 
 如 
 
-```
+```sh
 # whereis python
 ```
 
 将输出 
 
-```
+```python
 python: /usr/ports/lang/python
 ```
 
@@ -82,7 +82,11 @@ Linux 如 Gentoo 上一般是直接 `-jx` 或者 `jx+1`, `x` 为核心数。
 
 ### 设置内存为 tmp
 
-`ee /etc/fstab` 写入：
+``
+# ee /etc/fstab
+```` 
+
+写入：
 
 ```sh
 tmpfs /tmp tmpfs rw 0 0
@@ -161,7 +165,7 @@ root@ykla:~ # find /  -name ccache.conf # 全局查找配置文件路径
 ```
 
 或者
-```
+```sh
 # cd /usr/ports/ftp/axel/
 # make install clean
 ```
@@ -208,37 +212,37 @@ DISABLE_SIZE=yes
 
 安装 python3：
 
-```
+```sh
 # cd /usr/ports/lang/python
 ```
 
 如何设置全部所需的依赖：
 
-```
+```sh
 # make config-recursive
 ```
 
 如何删除当前 port 及其依赖的配置文件：
 
-```
+```sh
 # make rmconfig-recursive
 ```
 
 如何一次性下载所有需要的软件包：
 
-```
+```sh
 # make BATCH=yes fetch-recursive
 ```
 
 升级 ports
 
-```
+```sh
 # portsnap auto
 ```
 
 ports 编译的软件也可以转换为 pkg 包
 
-```
+```sh
 # pkg create nginx
 ```
 
