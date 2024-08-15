@@ -1,6 +1,6 @@
 # 第 3.4 节 软件包管理器 pkg 的用法
 
-包管理器目前是 pkgng，其命令是 pkg。
+包管理器目前是 pkgng，其命令是 pkg。`pkg install` 可以缩写成 `pkg ins`，其他类似。
 
 > **请注意**
 >
