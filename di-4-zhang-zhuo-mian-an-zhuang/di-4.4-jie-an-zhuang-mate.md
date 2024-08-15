@@ -4,7 +4,9 @@
 >
 > 首先看看现在自己的 shell 是不是 `sh`,`bash`,`zsh`：
 >
-> `# echo $0`
+>```sh
+># echo $0
+>```
 >
 > 如果是 `sh`,`bash`,`zsh` 其中之一，请继续；
 
@@ -16,7 +18,7 @@
 
 或者：
 
-```
+```sh
 # cd /usr/ports/x11/mate/ && make install clean
 # cd /usr/ports/x11/xorg/ && make install clean
 # cd /usr/ports/x11-fonts/wqy/ && make install clean
@@ -32,11 +34,13 @@
 
 - 在主目录`.xinitrc` 文件内加入下面一行:
 
-`exec mate-session`
+```
+exec mate-session
+```
 
 ## 显示中文桌面环境
 
-默认是 csh，在 `.cshrc` 中添加如下内容：
+默认是 csh，在 `~/.cshrc` 中添加如下内容：
 
 ```sh
 setenv LANG zh_CN.UTF-8
@@ -45,14 +49,13 @@ setenv LC_CTYPE zh_CN.UTF-8
 
 ## 输入法
 
-```
+```sh
 # pkg install zh-ibus-libpinyin
-
 ```
 
 或者:
 
-```
+```sh
 # cd /usr/ports/chinese/ibus-libpinyin/ 
 # make install clean
 ```
@@ -61,7 +64,7 @@ setenv LC_CTYPE zh_CN.UTF-8
 
 设置输入法变量:
 
-```
+```sh
 # ee ~/.xinitrc
 ```
 
