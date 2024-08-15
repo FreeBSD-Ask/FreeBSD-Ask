@@ -45,6 +45,20 @@ pkg 的下载路径是 `/var/cache/pkg/`
 
 FreeBSD 中 pkg 源分为系统级和用户级两个配置文件。**不建议**直接修改 `/etc/pkg/FreeBSD.conf` ~~但是太麻烦啦，一般我都是直接改这个文件的~~，因为该文件会随着基本系统的更新而发生改变。
 
+**故障排除**
+
+> **并非所有源都有 `quarterly` 和 `latest`，具体请看 <https://pkg.freebsd.org/> 。**
+>
+> **若要获取滚动更新的包，请将 `quarterly` 修改为 `latest`。二者区别见 FreeBSD 手册。请注意, `CURRENT` 版本只有 `latest`：**
+>
+>>使用命令修改系统级 pkg 源使用 latest：
+>>
+> > ```sh
+> > # sed -i '' 's/quarterly/latest/g' /etc/pkg/FreeBSD.conf
+> > ```
+>
+> **若要使用 https,请先安装 `security/ca_root_nss`，并将 `http` 修改为 `https`,最后使用命令 `# pkg update -f` 刷新缓存即可,下同。**
+
 
 ### 网易开源镜像站
 
@@ -63,18 +77,6 @@ url: "http://mirrors.163.com/freebsd-pkg/${ABI}/quarterly",
 }
 FreeBSD: { enabled: no }
 ```
-
-**故障排除**
-
-> **并非所有源都有 `quarterly` 和 `latest`，具体请看 <https://pkg.freebsd.org/> 。**
->
-> **若要获取滚动更新的包，请将 `quarterly` 修改为 `latest`。二者区别见 FreeBSD 手册。请注意, `CURRENT` 版本只有 `latest`：**
->
-> > ```sh
-> > # sed -i '' 's/quarterly/latest/g' /etc/pkg/FreeBSD.conf
-> > ```
->
-> **若要使用 https,请先安装 `security/ca_root_nss`，并将 `http` 修改为 `https`,最后使用命令 `# pkg update -f` 刷新缓存即可,下同。**
 
 ### 中国科学技术大学开源软件镜像站
 
