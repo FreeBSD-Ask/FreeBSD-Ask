@@ -14,7 +14,7 @@
 
 或者：
 
-```
+```sh
 # cd /usr/ports/x11/xorg/ && make install clean
 # cd /usr/ports/x11/cde/ && make install clean
 ```
@@ -39,14 +39,14 @@ dtspc	stream	tcp	nowait	root	 /usr/local/dt/bin/dtspcd	/usr/local/dt/bin/dtspcd
 
 将以下内容添加到 `/etc/services`：
 
-```
+```sh
 dtspc		6112/tcp
 ```
 
 
 重启系统。
 
-```
+```sh
 # reboot
 ```
 
