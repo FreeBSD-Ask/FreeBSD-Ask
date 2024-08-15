@@ -15,7 +15,7 @@ WinSCP 是对 `scp` 命令的图形化封装的软件，并同时支持 FTP 等�
 
 FreeBSD 查看内置的 OpenSSH 版本：
 
-```
+```sh
 root@ykla:~ # ssh -V
 OpenSSH_9.7p1, OpenSSL 3.0.14 4 Jun 2024
 ```
@@ -229,7 +229,7 @@ PermitEmptyPasswords no                      #禁止空密码的用户进行登�
 
 或者：
 
-```
+```sh
 # cd /usr/ports/sysutils/screen/
 # make install clean
 ```
@@ -283,13 +283,13 @@ root@ykla:/ # screen -r 18380
 要使用 mosh：①服务端和客户端都需要配置相同的 UTF-8 编码，②双方都需要安装 mosh。
 
 
-```
+```sh
 # pkg install mosh
 ```
 
 或者：
 
-```
+```sh
 # cd /usr/ports/net/mosh/
 # make install clean
 ```
@@ -299,7 +299,7 @@ root@ykla:/ # screen -r 18380
 
 - 默认的系统：
 
-```
+```sh
 me:\
         :charset=UTF-8:\
         :lang=en_US.UTF-8:\
@@ -308,7 +308,7 @@ me:\
 
 - 已中文化的系统：
 
-```
+```sh
 me:\
         :charset=UTF-8:\
         :lang=zh_US.CN-8:\
@@ -324,7 +324,7 @@ me:\
 
 点击“服务端命令”，设置如下：
 
-```
+```sh
 mosh-server new -s -l LANG=zh_CN.UTF-8
 ```
 
@@ -334,7 +334,7 @@ mosh-server new -s -l LANG=zh_CN.UTF-8
 
 FreeBSD 开放端口：
 
-```
+```sh
 root@ykla:~ # sockstat -4l
 USER     COMMAND    PID   FD  PROTO  LOCAL ADDRESS         FOREIGN ADDRESS      
 root     mosh-serve 19493 4   udp4   192.168.31.187:60001  *:*
