@@ -2,9 +2,55 @@
 
 ## pkg 与 ports
 
-因为 FreeBSD 有两种安装软件的方式（但并非所有软件都支持 pkg 的安装方式），因此为了方便，在本跑路教程中可能不会同时出现两种方式的安装说明。但希望大家明白，只是为了方便，而并非不能使用 ports 或者 pkg 进行安装或必须使用二者其一进行安装。
+因为 FreeBSD 有两种安装软件的方式（但并非所有软件都支持 pkg 的安装方式），因此为了方便，在本跑路教程中已经尽可能地列出了两种方式的安装说明。但希望大家明白，只是为了方便，而并非不能使用 ports 或者 pkg 进行安装或必须使用二者其一进行安装。
 
 > **请注意，ports 一般是 HEAD 分支，你的 pkg 最好与 ports 保持在同一主线上，即都选择 `latest`。**
+
+
+示例：
+
+要安装软件 `yyy`，`yyy` 在 ports 里是 `xxx/yyy`。
+
+- 那么首先可以通过 pkg 安装二进制软件包，和绝大多数 Linux 用法一样，下同：
+
+```
+# pkg install yyy
+```
+
+还可以这样：
+
+```
+# pkg install xxx/yyy
+```
+
+或者这样简写：
+
+```
+# pkg install yyy
+```
+
+- 那么还可以通过 Ports 编译安装：
+
+```
+# cd /usr/ports/xxx/yyy
+# make install clean
+```
+
+将会不断地弹出来窗口询问你怎么选。如果是使用默认选项，请这样做，则：
+
+```
+# cd /usr/ports/xxx/yyy
+# make BATCH=yes install clean
+```
+
+如果你想一次性完成所有配置：
+
+```
+# cd /usr/ports/xxx/yyy
+# make config-recursive #会一直问你，直到结束依赖
+# make install clean
+```
+
 
 ## 本书中命令前的符号含义
 
