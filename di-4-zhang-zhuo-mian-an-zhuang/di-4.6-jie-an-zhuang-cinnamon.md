@@ -2,16 +2,18 @@
 
 > 以下教程适用于 shell 为 bash/sh/zsh 的用户。
 >
-> 首先看看现在自己的 shell 是不是 `sh`,`bash`,`zsh`：
+> 首先看看现在自己的 shell 是不是 `sh`、`bash`、`zsh`：
 >
-> `# echo $0`
+>```sh
+># echo $0
+>```
 >
-> 如果是 `sh`,`bash`,`zsh` 其中之一，请继续；
+> 如果是 `sh`、`bash`、`zsh` 其中之一，请继续；
 
 
 ![cinnamon on FreeBSD](../.gitbook/assets/cinnamon.png) 
 
-**壁纸就是黑色的，不是显示出了问题。**
+**壁纸就是黑色的，不是哪出了问题。**
 
 ## 安装
 
@@ -66,5 +68,9 @@ proc /proc procfs rw 0 0
 
 找到 `default:\` 这一段，把 `:lang=C.UTF-8` 修改为 `:lang=zh_CN.UTF-8`。
 
-刷新数据库：`# cap_mkdb /etc/login.conf`
+刷新数据库：
+
+```sh
+# cap_mkdb /etc/login.conf
+```
 
