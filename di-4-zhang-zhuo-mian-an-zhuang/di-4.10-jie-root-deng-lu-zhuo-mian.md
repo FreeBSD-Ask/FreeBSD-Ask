@@ -26,7 +26,7 @@
 
 或者：
 
-```
+```sh
 # cd /usr/ports/x11/lightdm-gtk-greeter-settings/ && make install clean
 # cd /usr/ports/x11/lightdm/ && make install clean
 ```
@@ -43,7 +43,7 @@
 
 往下拉，找到 `greeter-show-manual-login=true` 移除前面的 `#`。该行会多次出现，第一次出现是为你介绍，请勿修改，而应该继续往下拉。
 
-- 编辑 `# ee /usr/local/etc/pam.d/lightdm`：
+- 编辑 `/usr/local/etc/pam.d/lightdm`：
 
 注释掉 `account requisite pam_securetty.so` 这一行（往最前面加 `#`）
 
@@ -65,14 +65,14 @@
 
 或者：
 
-```
+```sh
 # cd /usr/ports/x11/sddm/
 # make install clean
 ```
 
 配置自启：
 
-```
+```sh
 # sysrc sddm_enable="YES"
 ```
 
