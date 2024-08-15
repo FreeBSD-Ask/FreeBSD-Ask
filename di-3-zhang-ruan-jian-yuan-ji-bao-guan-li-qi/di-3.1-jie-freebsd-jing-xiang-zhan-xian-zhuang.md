@@ -47,7 +47,7 @@ FreeBSD 目前在大陆非官方镜像站有若干个（详见第二节。）：
 
   <https://mirrors.ustc.edu.cn>
 
-- ~~http://freebsd.cn（四类源）~~【不可用】
+- ~~http://freebsd.cn（四类源）~~ 【不可用】
 - 北京交通大学自由与开源镜像站（四类源）【不可用】
 
   <https://mirror.bjtu.edu.cn>
