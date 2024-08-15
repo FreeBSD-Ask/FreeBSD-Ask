@@ -17,7 +17,7 @@
 
 基本系统默认没有 pkg，需要先下载一下 pkg：
 
-```
+```sh
 # pkg
 ```
 
@@ -25,12 +25,12 @@
 
 pkg 使用 https，先安装 ssl 证书：
 
-```
+```sh
 # pkg install ca_root_nss
 ```
 或者
 
-```
+```sh
 # cd /usr/ports/security/ca_root_nss/
 # make install clean
 ```
@@ -39,27 +39,27 @@ pkg 使用 https，先安装 ssl 证书：
 
 最后刷新 pkg 数据库：
 
-```
+```sh
 # pkg update -f
 ```
 
 安装 python 3：
 
 
-```
+```sh
 # pkg install python
 ```
 
 或
 
-```
+```sh
 # cd /usr/ports/lang/python/
 # make install clean
 ```
 
 pkg 升级：
 
-```
+```sh
 # pkg upgrade
 ```
 
@@ -82,12 +82,12 @@ pkg 升级：
 
 **来源请求** ~~直接使用 `pkg delete` 会破坏正常的依赖关系，应该尽量避免使用（ports 的 `make deinstall` 也一样），转而使用 `pkg-rmleaf` 命令，该命令属于的软件需要自行安装。~~ [FreeBSD 15 不再可用](https://github.com/bsdelf/pkg-rmleaf/issues/2)，同时该包已近 6 年未经维护。
 
-```
+```sh
 # pkg install pkg-rmleaf
 ```
 
 或者
-```
+```sh
 # cd /usr/ports/ports-mgmt/pkg-rmleaf/
 # make install clean
 ```
