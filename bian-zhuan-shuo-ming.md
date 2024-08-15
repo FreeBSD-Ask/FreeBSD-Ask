@@ -26,7 +26,7 @@
 或者这样简写：
 
 ```
-# pkg install yyy
+# pkg ins yyy
 ```
 
 - 那么还可以通过 Ports 编译安装：
