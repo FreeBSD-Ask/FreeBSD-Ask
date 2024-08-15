@@ -49,14 +49,14 @@ XRDP 是 Microsoft RDP 的开源实现。
 
 或者：
 
-```
+```sh
 # cd /usr/ports/net/x11vnc/
 # make install clean
 ```
 
 创建密码：
 
-```
+```sh
 $ x11vnc -storepasswd
 Enter VNC password: 
 Verify password:    
@@ -66,19 +66,19 @@ Password written to: /root/.vnc/passwd
 
 启动服务器（KDE 5 SDDM 为例）：
 
-```
+```sh
 $ x11vnc -display :0 -rfbauth ~/.vnc/passwd -auth $(find /var/run/sddm/ -type f)
 ```
 
 - LightDM
 
-```
+```sh
 $ x11vnc -display :0 -rfbauth ~/.vnc/passwd -auth /var/run/lightdm/root/\:0
 ```
 
 - GDM
 
-```
+```sh
 $ x11vnc -display :0 -rfbauth ~/.vnc/passwd -auth /var/lib/gdm/:0.Xauth #或 /run/user/120/gdm/Xauthority，取决于你的 gdm 版本，自己 ls 看一下
 ```
 
@@ -101,7 +101,7 @@ $ x11vnc -display :0 -rfbauth ~/.vnc/passwd -auth /var/lib/gdm/:0.Xauth #或 /ru
 
 或者：
 
-```
+```sh
 # cd /usr/ports/net/tigervnc-server/ 
 # make install clean
 ```
@@ -113,7 +113,7 @@ $ x11vnc -display :0 -rfbauth ~/.vnc/passwd -auth /var/lib/gdm/:0.Xauth #或 /ru
 创建 `~/.vnc/xstartup` 文件：
 
 
-```
+```sh
 root@ykla:~ # mkdir -p ~/.vnc/
 root@ykla:~ # ee ~/.vnc/xstartup
 ```
@@ -134,7 +134,7 @@ exec command &  #此处不能照抄！
 
 保存后执行命令 
 
-```
+```sh
 # chmod 755 ~/.vnc/xstartup
 ```
 
@@ -144,7 +144,7 @@ exec command &  #此处不能照抄！
 >
 >测试：
 >
->```
+>```sh
 >root@ykla:~ # vncserver :0
 >
 >
@@ -161,7 +161,7 @@ exec command &  #此处不能照抄！
 
 - 如果启用了防火墙，以 ipfw 为例，在终端输入命令：
 
-```
+```sh
 # ipfw add allow tcp from any to me 5900-5910 in keep-state
 ```
 
@@ -183,7 +183,7 @@ exec command &  #此处不能照抄！
 
 或者：
 
-```
+```sh
 # cd /usr/ports/x11/xorg/ && make install clean
 # cd /usr/ports/x11/kde5/ && make install clean
 # cd /usr/ports/net/xrdp/ && make install clean
@@ -223,11 +223,11 @@ exec command &  #此处不能照抄！
 
 #### 中文化(该用户使用 sh 作为 shell）：
 
-```
+```sh
 # ee /usr/local/etc/xrdp/startwm.sh
 ```
 
-```
+```sh
 #### set environment variables here if you want
 export LANG=zh_CN.UTF-8
 ```
@@ -242,7 +242,7 @@ export LANG=zh_CN.UTF-8
 
 查看 FreeBSD 的 VNC 端口：
 
-```
+```sh
 root@ykla:/usr/ports/deskutils/anydesk # sockstat -4l
 USER     COMMAND    PID   FD  PROTO  LOCAL ADDRESS         FOREIGN ADDRESS      
 root     Xvnc        2585 4   tcp4   127.0.0.1:5910        *:*  #VNC 占用
@@ -262,7 +262,7 @@ root     syslogd     1021 7   udp4   *:514                 *:*
 >![SDDM VNC](../.gitbook/assets/vnc1.png)
 >
 >示例：
->```
+>```sh
 >192.168.31.187:5901
 >```
 
@@ -317,7 +317,7 @@ root     syslogd     1021 7   udp4   *:514                 *:*
 
 或者：
 
-```
+```sh
 # cd /usr/ports/net/rdesktop/
 # make install clean
 ```
@@ -347,13 +347,13 @@ root     syslogd     1021 7   udp4   *:514                 *:*
 
 安装：
 
-```
+```sh
 # pkg install rustdesk-server
 ```
 
 或者：
 
-```
+```sh
 # cd /usr/ports/net/rustdesk-server/ 
 # make install clean
 ```
@@ -362,7 +362,7 @@ root     syslogd     1021 7   udp4   *:514                 *:*
 
 - 启动 hbbr：
 
-```
+```sh
 root@ykla:~ # /usr/local/bin/hbbs
 [2024-08-10 23:02:13.782550 +08:00] INFO [src/common.rs:122] Private key comes from id_ed25519
 [2024-08-10 23:02:13.782587 +08:00] INFO [src/rendezvous_server.rs:1191] Key: mgRwOWJy9Vnz3LqQYjtNHwZQYg73uhdj9iCTMmIyoP4=  #此处是 Key
@@ -385,7 +385,7 @@ root@ykla:~ # /usr/local/bin/hbbs
 
 - 再启动 hbbs：
 
-```
+```sh
 root@ykla:~ # /usr/local/bin/hbbr
 [2024-08-10 22:58:26.593397 +08:00] INFO [src/relay_server.rs:61] #blacklist(blacklist.txt): 0
 [2024-08-10 22:58:26.593439 +08:00] INFO [src/relay_server.rs:76] #blocklist(blocklist.txt): 0
