@@ -32,7 +32,7 @@
 > ```
 >或者
 
-```
+```sh
 # cd /usr/ports/x11/xorg-minimal/ && make install clean
 # cd /usr/ports/x11/gnome/ && make install clean
 # cd /usr/ports/x11-fonts/wqy/ && make install clean
@@ -46,7 +46,9 @@
 
 ## 配置
 
-`# ee /etc/fstab`
+```sh
+# ee /etc/fstab
+```
 
 添加内容如下:
 
@@ -64,7 +66,7 @@ proc /proc procfs rw 0 0
 输入以下命令：
 
 ```sh
-% echo "/usr/local/bin/gnome-session" > ~/.xinitrc
+$ echo "/usr/local/bin/gnome-session" > ~/.xinitrc
 ```
 
 ## 中文化
@@ -94,13 +96,13 @@ LC_ALL="zh_CN.UTF-8"
 
 gnome 捆绑的输入法面板是 `ibus`。
 
-```
-pkg install zh-ibus-libpinyin
+```sh
+# pkg install zh-ibus-libpinyin
 ```
 
 或者
 
-```
+```sh
 # cd /usr/ports/chinese/ibus-libpinyin/
 # make install clean
 ```
@@ -111,7 +113,9 @@ pkg install zh-ibus-libpinyin
 
 首先看看现在自己的 shell 是不是 `sh`,`bash`,`zsh`：
 
-`# echo $0`
+```sh
+# echo $0
+```
 
 如果是 `sh`,`bash`,`zsh` 其中之一，请继续；如果不是，请参考第五章第一节。
 
@@ -123,7 +127,7 @@ pkg install zh-ibus-libpinyin
 
 或者：
 
-```
+```sh
 # cd /usr/ports/textproc/fcitx5/ && make install clean
 # cd /usr/ports/textproc/fcitx5-qt/ && make install clean #同时包含 QT 5 和 QT 6
 # cd /usr/ports/textproc/fcitx5-gtk/ && make install clean #同时包含 gtk 2、3、4
@@ -188,18 +192,20 @@ export XMODIFIERS=@im=fcitx
 
 或者：
 
-```
+```sh
 # cd /usr/ports/www/firefox/ && make install clean
 # cd /usr/ports/www/chrome-gnome-shell/ && make install clean
 ```
 
-打开链接 `https://extensions.gnome.org/extension/1674/topiconsfix/` 即可安装插件。
+打开链接 <https://extensions.gnome.org/extension/1674/topiconsfix/> 即可安装插件。
 
 ### 终端显示中文（文件用户根目录）
 
 > 此处对用户 shell 存疑。
 
-`# ee .cshrc`
+```sh
+# ee ~/.cshrc
+```
 
 添加以下内容
 
@@ -211,12 +217,12 @@ setenv LC_ALL zh_CN.UTF-8
 
 ## 优化系统
 
-```
+```sh
 # pkg install gnome-tweaks
 ```
 或者：
 
-```
+```sh
 # cd /usr/ports/deskutils/gnome-tweaks/ 
 # make install clean
 ```
