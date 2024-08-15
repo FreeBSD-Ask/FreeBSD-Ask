@@ -343,7 +343,6 @@ ntpd     ntpd        1068 21  udp4   *:123                 *:*
 ntpd     ntpd        1068 24  udp4   127.0.0.1:123         *:*
 ntpd     ntpd        1068 26  udp4   192.168.31.187:123    *:*
 root     syslogd     1017 7   udp4   *:514                 *:*
-root@ykla:~ # 
 ```
 
 测试连接：
