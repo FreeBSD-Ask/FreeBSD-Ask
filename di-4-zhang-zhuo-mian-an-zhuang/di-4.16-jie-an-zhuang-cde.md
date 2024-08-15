@@ -1,4 +1,4 @@
-# 第 29.2 节 安装 CDE
+# 第 4.16 节 安装 CDE
 
 > **CDE 是 Common Desktop Environment（通用桌面环境）的缩写。历史悠久的桌面环境，常被用于 Unix 商业发行版。**
 >
