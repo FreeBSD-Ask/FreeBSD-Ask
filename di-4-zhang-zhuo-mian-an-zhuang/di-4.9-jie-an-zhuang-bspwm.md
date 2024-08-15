@@ -25,7 +25,7 @@ bspwm，据说更符合 UNIX 哲学。
 # cd /usr/ports/x11/lightdm/ && make install clean
 # cd /usr/ports/x11/lightdm-gtk-greeter/ && make install clean
 # cd /usr/ports/devel/xdg-user-dirs/ && make install clean
-``
+```
 解释：
 
 
@@ -64,7 +64,7 @@ $ chmod +x ~/.config/bspwm/bspwmrc
 
 修改 `~/.config/sxhkd/sxhkdrc`
 
-```
+```sh
 super + Return
     kitty
 
@@ -81,7 +81,7 @@ $ cp /usr/local/etc/polybar/config.ini ~/.config/polybar
 
 创建 `~/.config/polybar/launch.sh`
 
-```shell
+```sh
 #!/bin/sh
 killall -q polybar
 polybar example 2>&1 | tee -a /tmp/polybar.log
@@ -156,7 +156,7 @@ $ feh --bg-center "$HOME/.local/share/wallpapers/wallpaper.jpg"
 
 在 `~/.config/bspwm/bspwmrc` 中的 polybar 启动脚本**之前**添加
 
-```
+```sh
 $HOME/.fehbg &
 ```
 
