@@ -1,10 +1,9 @@
 # 第 2.5 节 腾讯云轻量云及其他服务器安装 FreeBSD
 
 > **注意**
+
 >
-> **尽管本文和 dd 没什么关系，但是如果你还不懂什么是 `dd`，不建议使用本文。这一切也许超越了你的动手能力和知识储备。**
->
-> **此外，对于不再受安全支持的版本如 `9.2`，请参考本文并结合手动安装 FreeBSD 章节操作。**
+> **对于不再受安全支持的版本如 `9.2`，请参考本文并结合手动安装 FreeBSD 章节操作。**
 
 >**警告**
 >
@@ -19,7 +18,7 @@
 >
 >SCP 命令可以用图形化的 Winscp 替代。
 >
->最后安装完毕建议按照 2.7 节设置密钥登录以提高安全性。
+>最后安装完毕建议按照其他章节来设置密钥登录，并禁止密码验证，以提高安全性。
 
 
 ## 文字教程
@@ -69,7 +68,7 @@ mfsBSD 和 mfsLinux 镜像的 root 密码默认是 `mfsroot`
 
 ssh 链接后，`kldload zfs` 加载 zfs 模块，然后运行 `bsdinstall`，在出现以下图片时，点 `Other` 输入图中的指定镜像版本（地址里有即可，你可以自己改哦）：
 
-示例：如 <https://mirrors.ustc.edu.cn/freebsd/releases/amd64/13.2-RELEASE/> 或 <https://mirrors.nju.edu.cn/freebsd/snapshots/arm64/14.0-CURRENT/>
+示例：如 <https://mirrors.ustc.edu.cn/freebsd/releases/amd64/14.1-RELEASE/> 或 <https://mirrors.nju.edu.cn/freebsd/snapshots/arm64/15.0-CURRENT/>
 
 ![腾讯云轻量云及其他服务器安装 FreeBSD](../.gitbook/assets/installBSD1.png)
 
@@ -101,7 +100,7 @@ ssh 链接后，`kldload zfs` 加载 zfs 模块，然后运行 `bsdinstall`，�
 ![](../.gitbook/assets/1.png)
 
 
-- 如果有云服务器用 lvm 的话，需要把东西全都放到 /boot 里面，要不然 grub 和 mfslinux 都打不开。
+- 如果有云服务器用 lvm 的话，需要把东西全都放到 `/boot` 里面，要不然 grub 和 mfslinux 都打不开。
 
 ## 参考资料
 
