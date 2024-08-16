@@ -38,6 +38,8 @@ Xshell 下载地址（输入用户名和邮件即可）：
 
 [https://www.netsarang.com/zh/free-for-home-school](https://www.netsarang.com/zh/free-for-home-school)
 
+如果提示需要重新验证，请打开上面的网站重装一遍，即可。
+
 >**苦难哲学之 PuTTY**
 >
 >PuTTY 没有任何好处：
