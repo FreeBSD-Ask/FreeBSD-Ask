@@ -6,15 +6,9 @@
 
 BSD 最初是由加州大学伯克利分校（University of California, Berkeley）所开发的，意为 `Berkeley Software Distribution`（伯克利软件套件）。
 
-值得注意地是，Berkeley 伯克利之名来自著名的近代伟大的经验论哲学家乔治·贝克莱（George Berkeley，1685－1753，音译问题，原词是一致的），伯克利市和伯克利大学都是来源他的名字。
-
-贝克莱主教通过他的形而上学（反对牛顿绝对时空观等）启发了 20 世纪一众科学家，例如爱因斯坦，在某种意义上指导了现代科技革命。并且引发了数学史上关于无穷小量的数学哲学讨论。
-
-> esse est percipi, to be is to be perceived（存在就是被感知）。——【英】乔治·贝克莱
-
-![](../.gitbook/assets/图片3.png)
-
 **FreeBSD 不是 Linux，亦不是 UNIX，是类 UNIX**
+
+![FreeBSD 不是 Linux](../.gitbook/assets/图片3.png)
 
 UNIX -> Networking Release 1->Networking Release 2 ->386BSD -> FreeBSD 1.0
 
@@ -22,9 +16,20 @@ UNIX -> Networking Release 1->Networking Release 2 ->386BSD -> FreeBSD 1.0
 
 “I have never even checked 386BSD out; when I started on Linux it wast available”——Linus
 
-![](../.gitbook/assets/图片2.png)
+![图片来源：<https://github.com/freebsd/freebsd-src/blob/main/share/misc/bsd-family-tree>，有删减](../.gitbook/assets/图片2.png)
 
-> 图片来源：<https://github.com/freebsd/freebsd-src/blob/main/share/misc/bsd-family-tree>
+
+### BSD 与哲学家 George Berkeley
+
+值得注意地是，Berkeley 伯克利之名来自著名的近代伟大的经验论哲学家乔治·贝克莱（George Berkeley，1685－1753，在中文音译上虽然存在不同写法，但“Berkeley”的拼写在英文中是统一的），伯克利市和伯克利大学都是来源他的名字。[由于政治正确和翻译习惯](https://www.lib.berkeley.edu/about/news/george-berkeley-portrait)的影响，这一关联在汉语世界中鲜有人知。
+
+贝克莱大主教以其形而上学思想，特别是对牛顿绝对时空观的反对，启发了包括爱因斯坦在内的许多 20 世纪科学家，在某种意义上引领了现代科技革命。他的著作还引发了数学史上关于无穷小量的数学哲学讨论（即贝克莱悖论，参见《分析学家；或一篇致一位不信神数学家的论文，其中审查一下近代分析学的对象、原则及论断是不是比宗教的神秘、信仰的要点有更清晰的表达，或更明显的推理》）。
+
+> esse est percipi, to be is to be perceived（存在就是被感知）。——【英】乔治·贝克莱
+>
+> **需要注意，上述命题并不代表贝克莱主张主观唯心主义，也绝不代表他否认客观物质的存在。**（参加《人类知识原理》等著作里是承认且论证过上帝必然存在的）
+> 
+> 有关他的思想，最著名的哲学实验是：“假如一棵树在森林里倒下而没有人在附近听见，它有没有发出声音？”
 
 ## 时间表
 
