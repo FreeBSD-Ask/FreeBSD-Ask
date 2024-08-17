@@ -32,3 +32,4 @@
   - 为编撰说明一节增加了一个 pkg、ports 用法的简单例子；
 - 2024.8.15
   - “第 24.1 节 BSD INIT 管理服务”完全重写。
+  - “第 1.2 节 FreeBSD 简史”：重写“BSD 与哲学家 George Berkeley”一节。
