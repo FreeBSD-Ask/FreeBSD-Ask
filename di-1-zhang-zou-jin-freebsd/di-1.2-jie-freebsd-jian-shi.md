@@ -41,7 +41,7 @@ UNIX -> Networking Release 1->Networking Release 2 ->386BSD -> FreeBSD 1.0
 
 #### George Berkeley 乔治·贝克莱生平简介
 
-George Berkeley（1685.3.12—1753.1.14）
+George Berkeley（1685.3.12—1753.1.14），2023 年是他逝世 270 周年。
 
 - 1685.3.12 出生于爱尔兰的基尔肯尼，乡绅家庭，是家中长子
 - 1696 年，11 岁时进入基尔肯尼学院
