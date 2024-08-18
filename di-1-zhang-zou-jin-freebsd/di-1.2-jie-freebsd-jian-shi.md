@@ -1,4 +1,4 @@
-# 第 1.2 节 FreeBSD 简史
+# 第 1.2 节 FreeBSD 与哲学家 George Berkeley
 
 ## 什么是 FreeBSD？
 
