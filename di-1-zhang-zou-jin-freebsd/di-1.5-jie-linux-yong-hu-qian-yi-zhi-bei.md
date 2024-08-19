@@ -40,7 +40,7 @@ Fedora 俗称“[地沟油](https://zh.moegirl.org.cn/zh-hans/Fedora%E5%A8%98)�
 
 ### Debian
 
-Debian 俗称“大便”（谐音+Logo 长得像）。有个[很奇怪的事情](https://lists.debian.org/debian-cd/2020/02/msg00000.html)，设置了 root 密码就不会安装 sudo，他们社区似乎认为这是一件合理的事情，但是你不知道 Gnome 和大多数的登录管理器都默认禁止 root 登录？。另外影响远不止此，截止 Debian 12.6，会安装 sudo，但未加入 `wheel` 组，这太搞笑了，都没法重启网络，只能进 tty 自己动手，那还默认安个 GUI 干什么呢。
+Debian 俗称“大便”（谐音+Logo 长得像）。有个[很奇怪的事情](https://lists.debian.org/debian-cd/2020/02/msg00000.html)，设置了 root 密码就不会安装 sudo，他们社区似乎认为这是一件合理的事情，但是你不知道 Gnome 和大多数的登录管理器都默认禁止 root 登录？。另外影响远不止此，截止 Debian 12.6，会安装 sudo，但未加入 `wheel` 组，这太搞笑了，都没法重启网络，只能进 tty 自己登录 root 来动手，那还默认安个 GUI 干什么呢。
 
 ```sh
 ykla@debian:~$ sudo su
