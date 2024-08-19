@@ -85,7 +85,7 @@ Arch Linux 俗称“**[邪教](https://zh.moegirl.org.cn/zh-hans/Arch_Linux%E5%A
 
 Arch Linux 唯一优点就是软件新（但是也不是所有的都新，一些工具类、尤其是大部分 **实用工具** 就不怎么新，例如大部分 R 包还没有 FreeBSD 新）。似乎随处可见的就是 Arch Linux。Arch Linux 似乎是与苦难哲学挂钩的。
 
-Arch Linux 官方源里基本上没有什么软件，不导入 aur 源（ Arch User Repository，Arch 用户软件仓库）就完全没法用。而 aur 源是[未经过任何代码审查的](https://wiki.archlinux.org/title/Arch_User_Repository)（`Warning: AUR packages are user-produced content. These PKGBUILDs are completely unofficial and have not been thoroughly vetted. Any use of the provided files is at your own risk.`，`警告： AUR 中的软件包是由其他用户编写的，这些 PKGBUILD 完全是非官方的，未经彻底审查。使用这些文件的风险由您自行承担。`）实际上不是未经彻底审查，是根本没有任何审查：也就是说有人往里面塞 `rm -rf /*` 也是可以的。虽然他使用了 fakeroot 但是也无济于事。
+Arch Linux 官方源里基本上没有什么软件，不导入 aur 源（ Arch User Repository，Arch 用户软件仓库）就完全没法用。而 aur 源是[未经过任何代码审查的](https://wiki.archlinux.org/title/Arch_User_Repository)（`Warning: AUR packages are user-produced content. These PKGBUILDs are completely unofficial and have not been thoroughly vetted. Any use of the provided files is at your own risk.`，`警告： AUR 中的软件包是由其他用户编写的，这些 PKGBUILD 完全是非官方的，未经彻底审查。使用这些文件的风险由您自行承担。`）实际上不是未经彻底审查，是根本没有任何审查：也就是说有人往里面塞 `rm -rf /*` 也是可以的。虽然 fakeroot 在一定程度上限制了恶意软件的执行权限，但它并不能完全防止用户因安装未审查的软件包而面临的安全风险——你忘记[安卓的格机模块](https://www.bilibili.com/read/cv19088202/)了？即使是谷歌市场也有一堆恶意软件，更何况现在压根没有审查。
 
 ## FreeBSD 与 Linux 不同之处
 
