@@ -64,7 +64,7 @@ Firmware Version: 6.00
 ```
 
 
-上述这种肉眼可见的 Bug 随手可拾——必须断网或者用高级用户安装才能把这款系统装上——因为他系统换源不换 `debian-security`，却要在安装时有网络的情况下进行更新（Ubuntu 也有这个毛病）；他的 [NetworkManager](https://wiki.debian.org/NetworkManager) 一直在和 Systemd 打架。这种反人类设计数不胜数，即使你报告了 Bug 他们也不会改，甚至不会有人回复你——另外我至今也不知道这玩意怎么报告 Bug。看起来，Debian 的 [Bug 收集平台](https://www.debian.org/Bugs/Reporting)就没想着让普通用户报告 Bug？这套流程比常见开源开发系统的都要离谱的多。~~果然看不到问题就是没有了吗。~~
+上述这种肉眼可见的 Bug 随手可拾——必须断网或者用高级用户安装才能把这款系统装上——因为他在安装时进行系统的换源不会换 `debian-security` 源，却要在安装时有网络的情况下进行更新（Ubuntu 也有这个毛病）；他的 [NetworkManager](https://wiki.debian.org/NetworkManager) 一直在和 Systemd 打架。这种反人类设计数不胜数，即使你报告了 Bug 他们也不会改，甚至不会有人回复你——另外我至今也不知道这玩意怎么报告 Bug。看起来，Debian 的 [Bug 收集平台](https://www.debian.org/Bugs/Reporting)就没想着让普通用户报告 Bug？这套流程比常见开源开发系统的都要离谱的多。~~果然看不到问题就是没有了吗。~~
 
 Debian 的软件包也不甚更新（此处仅指 stable）：Debian stable 大部分的软件包在发布后就版本号几乎不会变了。会锁死。除非你切到 unstable 版本或者 sid 之类的，但是那等同于把自己变成 Ubuntu。
 
