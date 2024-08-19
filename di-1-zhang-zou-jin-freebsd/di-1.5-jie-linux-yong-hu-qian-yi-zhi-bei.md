@@ -40,7 +40,7 @@ Fedora 俗称“[地沟油](https://zh.moegirl.org.cn/zh-hans/Fedora%E5%A8%98)�
 
 ### Debian
 
-Debian 俗称“大便”（谐音+Logo 长得像）。有个[很奇怪的事情](https://lists.debian.org/debian-cd/2020/02/msg00000.html)，设置了 root 密码就不会安装 sudo，他们社区似乎认为这是一件合理的事情，但是你不知道 Gnome 和大多数的登录管理器都默认禁止 root 登录？。Debian 的软件包也不甚更新（此处仅指 stable）。上述这种肉眼可见的 Bug 随手可拾——必须断网或者用高级用户安装才能阻止他更新——因为他系统换源不换` debian-security`，却要在安装时有网络的情况下进行更新；他的 [NetworkManager](https://wiki.debian.org/NetworkManager) 一直在和 Systemd 打架。这种反人类设计数不胜数。
+Debian 俗称“大便”（谐音+Logo 长得像）。有个[很奇怪的事情](https://lists.debian.org/debian-cd/2020/02/msg00000.html)，设置了 root 密码就不会安装 sudo，他们社区似乎认为这是一件合理的事情，但是你不知道 Gnome 和大多数的登录管理器都默认禁止 root 登录？。Debian 的软件包也不甚更新（此处仅指 stable）。上述这种肉眼可见的 Bug 随手可拾——必须断网或者用高级用户安装才能阻止他更新——因为他系统换源不换 `debian-security`，却要在安装时有网络的情况下进行更新（Ubuntu 也有这个毛病）；他的 [NetworkManager](https://wiki.debian.org/NetworkManager) 一直在和 Systemd 打架。这种反人类设计数不胜数。
 
 Debian stable 大部分的软件包在发布后就版本号几乎不会变了。会锁死。除非你切到 unstable 版本或者 sid 之类的，但是那等同于把自己变成 Ubuntu。
 
