@@ -49,7 +49,7 @@ ykla 不是 sudoers 文件。
 ykla@debian:~$ id
 uid=1000(ykla) gid=1000(ykla) 组=1000(ykla),24(cdrom),25(floppy),29(audio),30(dip),44(video),46(plugdev),100(users),106(netdev),111(bluetooth),113(Lpadmin),116(scanner)
 ykla@debian:~$ hostnamectl
-  Static hostname: debian
+ Static hostname: debian
        Icon name: computer-vm
          Chassis: vm
       Machine ID: 9b3107b788dd461f94ca93150474946e
@@ -57,7 +57,8 @@ ykla@debian:~$ hostnamectl
   Virtualization: vmware
 Operating System: Debian GNU/Linux 12(bookworm)
           Kernel: Linux 6.1.0-22-amd64
-    Architecture: x86-64 Hardware Vendor: VMware, Inc.
+    Architecture: x86-64
+ Hardware Vendor: VMware, Inc.
   Hardware Model: VMware Virtual Platform
 Firmware Version: 6.00
 ```
