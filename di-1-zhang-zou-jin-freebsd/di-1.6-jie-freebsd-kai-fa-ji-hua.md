@@ -1,4 +1,4 @@
-# 第 1.8 节 FreeBSD 开发计划
+# 第 1.6 节 FreeBSD 开发计划
 
 **翻译同步至 BSDCan 2024 devsummit**
 
