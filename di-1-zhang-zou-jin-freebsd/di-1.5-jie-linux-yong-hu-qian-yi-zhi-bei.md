@@ -10,7 +10,7 @@
 
 ### Ubuntu
 
-Ubuntu 是著名的内部错误发行版。有些人为此争辩“那是 Ubuntu 太谦虚了，他把不属于自己的报错也揽到自己身上”，但无可辩驳的是 Ubuntu 基于 Debian 的 SID 版本，本身稳定性是没有保证的：一是内部错误，二是无法跨大、小版本升级（必挂，即使纯净系统也大概率会挂）。最近测试了 Ubuntu 24.04 LTS，可以说一代不如一代，安装的时候就开始不断地报错，并且 bug 不断，窗口溢出、找不到鼠标光标、定位不到输入框…费劲安装后开机更是内部错误接连不断（掐表数过了大概 10 分钟会有 3 次）。
+[Ubuntu 是著名的内部错误（internal error）发行版](https://www.google.com/search?q=internal+error+ubuntu+site:askubuntu.com)。有些人为此争辩“那是 Ubuntu 太谦虚了，[他把不属于自己的报错也揽到自己身上](https://linux.cn/article-4660-1.html)”，但无可辩驳的是 Ubuntu 基于 Debian 的 SID 版本，本身稳定性是没有保证的：一是内部错误，二是无法跨大、小版本升级（必挂，即使纯净系统也大概率会挂）。最近测试了 Ubuntu 24.04 LTS，可以说一代不如一代，安装的时候就开始不断地报错，并且 bug 不断，窗口溢出、找不到鼠标光标、定位不到输入框…费劲安装后开机更是内部错误接连不断（掐表数过了大概 10 分钟会有 1 次）。
 
 ```bash
 ykla@ykla-ubuntu:~$ cat /etc/debian_version 
@@ -24,7 +24,7 @@ DISTRIB_DESCRIPTION="Ubuntu 24.04 LTS"
 
 ### Fedora
 
-Fedora 俗称“地沟油”，是基于 RHEL 的上游系统，我更喜欢称其为小白鼠发行版，其发行的根本目的是为了测试 RHEL 系统的新设计和新架构，待稳定后迁移到 RHEL。
+Fedora 俗称“[地沟油](https://zh.moegirl.org.cn/zh-hans/Fedora%E5%A8%98)”，是基于 RHEL 的上游系统，我愿称其为小白鼠发行版，其发行的根本目的是为了测试 RHEL 系统的新设计和新架构（[该社区由 RedHat 红帽公司完全控制](https://docs.fedoraproject.org/en-US/council/)），待稳定后迁移到 RHEL。
 
 稳定性是绝对谈不上的，无法跨大版本升级（必挂，除非纯净系统），意味着你基本上每几个月就必须完全重装一次系统以及配置你的环境。与 deb 系不同，即使是细微差别的大版本，软件源亦无法通用（依赖变动极为频繁）。这个系统没有事实上的稳定版，所有版本和 [nightly](https://openqa.fedoraproject.org/nightlies.html) 版本无差别。这个系统的稳定性堪比 ArchLinux。反正不如 Ubuntu：具体测试就是把屏幕保护和锁屏休眠都关掉，然后开始编译软件，比如 Chromium，没几个小时整个 Fedora 系统就会白屏卡死，而 Ubuntu 一点事没有。
 
@@ -61,7 +61,7 @@ openSUSE 有时会往整个正在使用的软件包里加入测试性功能，�
 
 Gentoo 俗称“元发行版”。一切软件都要通过 **编译** 的方式来进行安装（最近好像有了[官方二进制源了](https://www.gentoo.org/news/2023/12/29/Gentoo-binary.html)，但是很遗憾，这除了让他的依赖更加混乱以外好像没有别的用处……）。其缺点也很明显，如果一个程序编译不过去就无法安装了，实际上这种软件非常多。有人会抬杠说 Gentoo 有二进制安装方式，但是自己制作也不具备通用性。一旦你一段时间不更新，Gentoo 会告诉你什么叫做 **循环依赖**。而且 Gentoo 难以大规模部署，也难以在服务器上部署。
 
-另外 Gentoo 的 portage（包管理器）是 python 语言编写的，这直接导致计算依赖的时间的延迟：在树莓派 4 上，安装 KDE 5 往往要计算几个小时……
+另外 Gentoo 的 portage（包管理器）是[纯 Python 语言编写的（92.5 %）](https://github.com/gentoo/portage)，这直接导致了计算依赖的时间延迟：在树莓派 4 上，安装 KDE 5 往往要计算几个小时……即使是在英特尔 i7-6700HQ 处理器上，也要算上个几分钟，如此离谱的包管理器，甚为少见。
 
 简而言之，Gentoo 用自己的哲学捆绑了用户，简单问题复杂化，自己折磨自己；USE 过于复杂，对于一些常用软件，都经常出现循环依赖问题，破坏系统稳定性，软件安装升级卸载困难。
 
