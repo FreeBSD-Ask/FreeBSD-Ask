@@ -89,7 +89,7 @@ Gentoo [自称](https://www.gentoo.org/get-started/about/)是“元发行版（*
 
 简而言之，Gentoo 用自己的哲学捆绑了用户，简单问题复杂化，自己折磨自己；USE 过于复杂，对于一些常用软件，都经常出现循环依赖问题，破坏系统稳定性，软件安装升级卸载困难。
 
-Gentoo 平台几乎没有任何 Bug 跟踪回馈机制。对于使系统完全没法用的包管理器 app-portage/layman 的相关 Bug，他们只会在七八年后，那个软件被删除时告诉你问题不存在了。或者在 [3 年后](https://bugs.gentoo.org/700744)再回复你。他们这个 Bug 报告平台非常难用，[高级搜索](https://bugs.gentoo.org/query.cgi)也一样。各种搜索不到。虽然看上去是和 FreeBSD 用的是一个平台，但还不如直接谷歌“xxx site:bugs.gentoo.org”。现在你他的 Bug 报告平台[去搜](https://bugs.gentoo.org/buglist.cgi?quicksearch=app-portage%2Flayman&list_id=7231000)“app-portage/layman”，居然是“Zarro Boogs found.（没有找到任何 Bug）”。~~果然看不到问题就是没有了吗。~~ 高级搜索也是乱七八糟，找不到泛查询。
+Gentoo 平台几乎没有任何 Bug 跟踪回馈机制。对于使系统完全没法用的包管理器 app-portage/layman 的相关 Bug，他们只会在七八年后，那个软件被删除时告诉你问题不存在了。或者在 [3 年后](https://bugs.gentoo.org/700744)再回复你。他们这个 Bug 报告平台非常难用。各种搜索不到。虽然看上去是和 FreeBSD 用的是一个平台，但还不如直接谷歌“xxx site:bugs.gentoo.org”。现在你他的 Bug 报告平台[去搜](https://bugs.gentoo.org/buglist.cgi?quicksearch=app-portage%2Flayman&list_id=7231000)“app-portage/layman”，居然是“Zarro Boogs found.（没有找到任何 Bug）”。~~果然看不到问题就是没有了吗。~~ [高级搜索](https://bugs.gentoo.org/query.cgi)也一样乱七八糟，找不到泛查询。
 
 ### Deepin/UOS/中标麒麟
 
