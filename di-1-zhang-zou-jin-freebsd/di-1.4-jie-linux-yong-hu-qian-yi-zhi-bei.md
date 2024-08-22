@@ -10,7 +10,7 @@
 
 ### Ubuntu
 
-[Ubuntu 是著名的内部错误（internal error）发行版](https://www.google.com/search?q=internal+error+ubuntu+site:askubuntu.com)。有些人为此争辩“那是 Ubuntu 太谦虚了，[他把不属于自己的报错也揽到自己身上](https://linux.cn/article-4660-1.html)”，但无可辩驳的是 Ubuntu 基于 Debian 的 SID 版本，本身稳定性是没有保证的（无论普通版本还是 LTS）：一是内部错误，二是无法跨大、小版本升级（必挂，即使纯净系统也大概率会挂）。最近在 VMware Workstation 17 Pro 虚拟机上测试了 Ubuntu 24.04 LTS，可以说一代不如一代，安装的时候就开始不断地报错，并且 Bug 不断，窗口溢出、找不到鼠标光标、定位不到输入框……费劲安装后，开机更是各种内部错误接连不断（掐表数过了大概每 10 分钟会有 1 次）。
+[Ubuntu 是著名的内部错误（internal error）发行版](https://www.google.com/search?q=internal+error+ubuntu+site:askubuntu.com)。有些人为此争辩“那是 Ubuntu 太谦虚了，[他把不属于自己的报错也揽到自己身上](https://linux.cn/article-4660-1.html)”，但无可辩驳的是 Ubuntu 基于 Debian 的 SID（不稳定版本的代号），本身稳定性是没有保证的（无论普通版本还是 LTS）：一是内部错误，二是无法跨大、小版本升级（必挂，即使纯净系统也大概率会挂）。最近在 VMware Workstation 17 Pro 虚拟机上测试了 Ubuntu 24.04 LTS，可以说一代不如一代，安装的时候就开始不断地报错，并且 Bug 不断，窗口溢出、找不到鼠标光标、定位不到输入框……费劲安装后，开机更是各种内部错误接连不断（掐表数过了大概每 10 分钟会有 1 次）。
 
 ```bash
 ykla@ykla-ubuntu:~$ cat /etc/debian_version 
