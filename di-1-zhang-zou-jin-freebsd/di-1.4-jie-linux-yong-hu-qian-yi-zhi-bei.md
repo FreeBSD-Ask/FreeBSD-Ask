@@ -46,26 +46,26 @@ Fedora 俗称“[地沟油](https://zh.moegirl.org.cn/zh-hans/Fedora%E5%A8%98)�
 
 Debian 俗称“大便”（谐音+Logo 长得像）。有个[很奇怪的事情](https://lists.debian.org/debian-cd/2020/02/msg00000.html)，设置了 root 密码就不会安装 sudo，他们社区似乎认为这是一件合理的事情，但是你不知道 Gnome 和大多数的登录管理器都默认禁止 root 登录？。另外影响远不止此，截止 Debian 12.6，会安装 sudo，但未加入 `wheel` 组，这太搞笑了，都没法重启网络，只能进 tty 自己登录 root 来动手，那还默认安个 GUI 干什么呢。
 
-```sh
-ykla@debian:~$ sudo su
-[sudo]ykla 的密码：
-ykla 不是 sudoers 文件。
-ykla@debian:~$ id
-uid=1000(ykla) gid=1000(ykla) 组=1000(ykla),24(cdrom),25(floppy),29(audio),30(dip),44(video),46(plugdev),100(users),106(netdev),111(bluetooth),113(Lpadmin),116(scanner)
-ykla@debian:~$ hostnamectl
- Static hostname: debian
-       Icon name: computer-vm
-         Chassis: vm
-      Machine ID: 9b3107b788dd461f94ca93150474946e
-         Boot ID: 081c39d5ac4748fa9ec0b2157c9a5beb
-  Virtualization: vmware
-Operating System: Debian GNU/Linux 12(bookworm)
-          Kernel: Linux 6.1.0-22-amd64
-    Architecture: x86-64
- Hardware Vendor: VMware, Inc.
-  Hardware Model: VMware Virtual Platform
-Firmware Version: 6.00
-```
+>```sh
+>ykla@debian:~$ sudo su
+>[sudo]ykla 的密码：
+>ykla 不是 sudoers 文件。
+>ykla@debian:~$ id
+>uid=1000(ykla) gid=1000(ykla) 组=1000(ykla),24(cdrom),25(floppy),29(audio),30(dip),44(video),46(plugdev),100(users),106(netdev),111(bluetooth),113(Lpadmin),116(scanner)
+>ykla@debian:~$ hostnamectl
+> Static hostname: debian
+>       Icon name: computer-vm
+>         Chassis: vm
+>      Machine ID: 9b3107b788dd461f94ca93150474946e
+>         Boot ID: 081c39d5ac4748fa9ec0b2157c9a5beb
+>  Virtualization: vmware
+>Operating System: Debian GNU/Linux 12(bookworm)
+>          Kernel: Linux 6.1.0-22-amd64
+>    Architecture: x86-64
+> Hardware Vendor: VMware, Inc.
+>  Hardware Model: VMware Virtual Platform
+>Firmware Version: 6.00
+>```
 
 
 上述这种肉眼可见的 Bug 随手可拾——必须断网或者用高级用户安装才能把这款系统装上——因为他在安装时进行系统的换源不会换 `debian-security` 源，却要在安装时有网络的情况下进行更新（Ubuntu 也有这个毛病）；他的 [NetworkManager](https://wiki.debian.org/NetworkManager) 一直在和 Systemd 打架。这种反人类设计数不胜数，即使你报告了 Bug 他们也不会改，甚至不会有人回复你——另外我至今也不知道这玩意怎么报告 Bug。看起来，Debian 的 [Bug 收集平台](https://www.debian.org/Bugs/Reporting)就没想着让普通用户报告 Bug？这套流程比常见开源开发系统的都要离谱的多。~~果然看不到问题就是没有了吗。~~
