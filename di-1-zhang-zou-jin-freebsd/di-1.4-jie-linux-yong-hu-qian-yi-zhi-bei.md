@@ -4,7 +4,7 @@
 
 - FreeBSD 仍然使用古老的 BSD init 而非 systemd；BSD init 与传统的 SysVinit 也不大相同——BSD 没有运行级别（runlevel），也没有 `/etc/inittab`，均由 rc 控制。
 - FreeBSD 所有用户 shell 默认均是 sh（14 之前 root 为 csh，普通用户为 sh），而非 bash；
-- FreeBSD 基本系统几乎不包含任何与 BSD 协议不兼容的软件，并致力于去 GNU 化（这意味着基本系统不使用 Glibc、GCC 等软件；**其实不是 BSD 一直在去 GNU 化，而是 Linux 一直在 GNU 化**），见 <https://wiki.freebsd.org/GPLinBase>
+- FreeBSD 基本系统几乎不包含任何与 BSD 协议不兼容的软件，并致力于去 GNU 化（这意味着基本系统不使用 Glibc、GCC 等软件；**其实不是 BSD 一直在去 GNU 化，而是 Linux 一直在 GNU 化**）。
 - FreeBSD 的用户配置文件和系统配置文件严格分离，即内核和基本系统与第三方应用程序是完全分离的；
 - FreeBSD 项目是作为一个完整的操作系统维护的，而非内核与 userland 单独维护；也就是说如果你要使用 FreeBSD，那么就只有一个 FreeBSD 可选；
 - FreeBSD 没有 free 命令也不支持安装这个包(FreeBSD 早就不使用 procfs 了)，FreeBSD 基本系统自带的文本编辑器有 ee 和 vi（不是软链接到 vim 的 vi，是真实的 nvi），没有预装 wget，而是 fetch。
@@ -15,6 +15,7 @@
 - [浅析 Linux 初始化 init 系统，第 1 部分: sysvinit 第 2 部分: UpStart 第 3 部分: Systemd](https://www.cnblogs.com/MYSQLZOUQI/p/5250336.html)，为存档，原文已佚
 - [init -- process control initialization](https://man.freebsd.org/cgi/man.cgi?query=init)
 - [Comparison of init systems](https://wiki.gentoo.org/wiki/Comparison_of_init_systems)，各大 init 对比图
+- [GPL Software in FreeBSD Base](https://wiki.freebsd.org/GPLinBase)，FreeBSD 基本系统中的 GPL 软件
 
 
 ## FreeBSD 的缺陷
