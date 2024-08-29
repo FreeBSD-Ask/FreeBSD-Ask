@@ -19,6 +19,7 @@
 
 ## FreeBSD 的缺陷
 
+- FreeBSD 系统总体上不够现代化，缺乏现代操作系统应有的实现，比如 [sdio](https://wiki.freebsd.org/SDIO) 到了 FreeBSD 13 才有了实现、TCP 堆栈也远远落后于 Linux。
 - FreeBSD 没有为用户提供一个带 GUI 的基本系统，甚至显卡驱动都需要自己通过 Ports 编译安装（因为 drm 是 GPL，无法进入基本系统，目前在重写）；
 - FreeBSD 的驱动水平较差，直到最近才将将支持 WIFI 6 的网卡，比如 AX210；
 - FreeBSD 的开发者非常少，这意味着你的 Bug 可能很久都无法得到解决，不是所有软件包都能时刻保持最新版；
