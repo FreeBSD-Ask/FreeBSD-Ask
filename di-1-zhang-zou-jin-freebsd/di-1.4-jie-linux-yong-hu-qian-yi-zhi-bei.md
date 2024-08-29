@@ -107,6 +107,8 @@ Deepin 这个系统仅仅是复制文件就会导致桌面卡死，无法理解�
 
 对于中标麒麟无话可说，甚至连最基本的 zip 乱码问题都没打补丁……
 
+一个现实问题就是[漏洞](https://src.uniontech.com/#/security_advisory_detail?utsa_id=UTSA-2024-003941)根本打不上补丁，尤其对于内网机器来说。因为 Linux 的机制是滚动更新，即使阶段版本亦如此。但是内网必定是停留在某版本内的，就存在无穷尽的依赖问题。而这是根本上无法解决的一个悖论。
+
 ### Arch Linux/Manjaro
 
 Arch Linux 俗称“**[邪教](https://zh.moegirl.org.cn/zh-hans/Arch_Linux%E5%A8%98)、[洗发水](https://bbs.archlinuxcn.org/viewtopic.php?id=694)**”。这是我所见过的一个最不稳定的 Linux 发行版，也是被别人忽悠从而安装最多的一个。
