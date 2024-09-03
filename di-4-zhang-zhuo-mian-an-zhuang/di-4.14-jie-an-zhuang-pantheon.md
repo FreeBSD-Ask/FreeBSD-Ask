@@ -2,6 +2,8 @@
 
 **尚未完成，仍然在测试！**
 
+2024.9.3 作者已经跑路，本节内容待删除。
+
 ```sh
 root@ykla:~ # pkg install git
 root@ykla:~ # git clone --depth 1 https://mirrors.ustc.edu.cn/freebsd-ports/ports.git /usr/ports
