@@ -10,9 +10,7 @@
 >
 > **也不要** 不看图文教程就全选所有的组件，要按照前文教程进行选择。
 
-使用 **U 盘** 安装应该选用 `img` 结尾的镜像，例如
-
-[FreeBSD-14.1-RELEASE-amd64-memstick.img](https://download.freebsd.org/ftp/releases/amd64/amd64/ISO-IMAGES/14.1/FreeBSD-14.1-RELEASE-amd64-memstick.img)
+使用 **U 盘** 安装应该选用 `img` 结尾的镜像，例如 [FreeBSD-14.1-RELEASE-amd64-memstick.img](https://download.freebsd.org/ftp/releases/amd64/amd64/ISO-IMAGES/14.1/FreeBSD-14.1-RELEASE-amd64-memstick.img)
 
 只有当使用 **光盘/虚拟机** 安装时才应选用 `iso` 结尾的镜像。这是因为 FreeBSD 的 ISO 镜像没做 Hybrid 混合启动，写入 U 盘会产生错误。见 [Bug](https://bugs.freebsd.org/bugzilla/show\_bug.cgi?id=236786)。
 
