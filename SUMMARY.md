@@ -83,6 +83,7 @@
 * [第 6.4 节 NTFS 的挂载](di-6-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-6.4-jie-ntfs-de-gua-zai.md)
 * [第 6.5 节 SWAP 交换分区的设置](di-6-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-6.5-jie-swap-jiao-huan-fen-qu-de-she-zhi.md)
 * [第 6.6 节 Ext 2/3/4 等文件系统](di-6-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-6.6-jie-ext-234-deng-wen-jian-xi-tong.md)
+* [第 6.7 节 ZFS 磁盘加解密](di-12-zhang-geom-cun-chu-kuang-jia/di-12.3-jie-zfs-ci-pan-jia-jie-mi.md)
 
 ## 第 7 章 VPN 与代理
 
@@ -121,7 +122,6 @@
 
 * [第 12.1 节 概述](di-12-zhang-geom-cun-chu-kuang-jia/di-12.1-jie-gai-shu.md)
 * [第 12.2 节 RAID](di-12-zhang-geom-cun-chu-kuang-jia/di-12.2-jie-raid.md)
-* [第 12.3 节 ZFS 磁盘加解密](di-12-zhang-geom-cun-chu-kuang-jia/di-12.3-jie-zfs-ci-pan-jia-jie-mi.md)
 
 ## 第 13 章 DTrace
 
