@@ -63,3 +63,7 @@
 # geli attach -k /tmp/test.key /dev/zvol/zroot/test
 # zpool import
 ```
+
+## 参考文献
+
+- [GELI — Disk Encryption in FreeBSD](https://bsd-pl.org/assets/talks/2018-11-15_0_Micha%C5%82-Borysiak_GELI-Disk-encryption-in-FreeBSD.pdf)，本文主要来自此处。
