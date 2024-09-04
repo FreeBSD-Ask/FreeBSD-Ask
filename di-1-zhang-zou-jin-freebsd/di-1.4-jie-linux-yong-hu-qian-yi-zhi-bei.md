@@ -7,7 +7,7 @@
 - FreeBSD 基本系统几乎不包含任何与 BSD 协议不兼容的软件。
 
 >**思考题**
->>FreeBSD 致力于去 GNU 化，这意味着基本系统不使用 glibc、GCC 等软件。
+>>- FreeBSD 致力于去 GNU 化，这意味着基本系统不使用 glibc、GCC 等软件。
 >
 >你认为是 BSD 一直在去 GNU 化，还是 Linux 一直在 GNU 化？
 
