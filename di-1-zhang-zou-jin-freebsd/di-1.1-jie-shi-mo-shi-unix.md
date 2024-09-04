@@ -21,7 +21,7 @@ UNIX 认证查询网址：[The Open Group official register of UNIX Certified Pr
 
 >**注意**
 >
->>Linux 已几乎完全背离了 UNIX 哲学，不提 Linux Kernel 引入 Systemd。单是 Wayland、Btrfs、PulseAudio 就能看出这一点。
+>>Linux 几乎已完全放弃了 UNIX 哲学，不提 Linux Kernel 引入 Systemd。单是 Wayland、Btrfs、PulseAudio 就能看出这一点。
 >
 >所以你在 Linux 上，强调传统的 UNIX 哲学或软件工程原则——比如一切皆文件，管道流等，并不十分妥帖。
 
