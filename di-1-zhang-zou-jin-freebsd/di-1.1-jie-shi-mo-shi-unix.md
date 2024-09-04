@@ -35,7 +35,9 @@ UNIX 认证查询网址：[The Open Group official register of UNIX Certified Pr
 
 >**思考题**
 >
-> _**Those who do not understand Unix are condemned to reinvent it,poorly.**_ ——[Henry Spencer](https://www.nasa.gov/history/alsj/henry.html)（那些不懂 Unix 的人注定要重复发明一个蹩脚的 Unix）
+> _**Those who do not understand Unix are condemned to reinvent it,poorly.**_ （那些不懂 Unix 的人注定要重复发明一个蹩脚的 Unix）
+>
+>——[Henry Spencer](https://www.nasa.gov/history/alsj/henry.html)
 >
 >>作者 Henry Spencer 并未明确批评哪个操作系统，那么你认为，现在这句话更适合哪个常见的操作系统？是 FreeBSD、Windows、Android、MacOS 亦或 Linux？又为什么？
 
