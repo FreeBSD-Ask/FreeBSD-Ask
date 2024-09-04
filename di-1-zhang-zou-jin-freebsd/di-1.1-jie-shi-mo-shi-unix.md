@@ -4,7 +4,7 @@
 
 UNIX 从前是一个操作系统。最后由 C 语言改写产生。——源自 AT\&T 的贝尔实验室
 
-现在是一种 **标准规范和商业商标**。更是 **一种哲学思想（KISS - Keep It Simple, Stupid! 一言以蔽之，即“大道至简”），软件工程原则（比如模块化、管道流等）**。
+现在是一种 **标准规范和商业商标**。更是 **一种哲学思想，一项软件工程原则。**
 
 UNIX 认证查询网址：[The Open Group official register of UNIX Certified Products](http://www.opengroup.org/openbrand/register)
 
@@ -17,11 +17,19 @@ UNIX 认证查询网址：[The Open Group official register of UNIX Certified Pr
 
 可以看到，常见的，经过认证的 UNIX 操作系统有 Apple MacOS。即从商标的角度上讲，MacOS 可以称得上是标准的 UNIX 操作系统。
 
-### UNIX 哲学简介
+### UNIX 哲学与软件工程原则简介
 
->我认为 Linux 的道路走歪了，它把 Unix 之路引向了苦难哲学，而且还在越走越歪，走了改旗易帜的邪路。单是 Linux Kernel 引入 Systemd 就能看出这一点。
+>**注意**
+>
+>Linux 已几乎完全背离了 UNIX 哲学，不提 Linux Kernel 引入 Systemd。单是 Wayland、Btrfs、PulseAudio 就能看出这一点。
+>
+>所以你在 Linux 上，强调传统的 UNIX 哲学或软件工程原则——比如一切皆文件，管道流等，并不十分恰当。
+>
+>**思考**
+>>
+>>是 UNIX 哲学过时了，不再适应现代操作系统了？还是 Linux 将开源之路引向了苦难哲学（失去了其原本的简洁和透明性？），走了改旗易帜的邪路？
 
-Unix 哲学源于 UNIX 操作系统的开发，作者是 Ken Thompson。Unix 哲学一言以蔽之即大道至简（`keep it simple, stupid`）：
+Unix 哲学源于 UNIX 操作系统的开发，作者是 Ken Thompson。Unix 哲学一言以蔽之即大道至简（“keep it simple, stupid”）：
 
 - 小即美
 - 一个程序只做一件事
