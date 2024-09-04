@@ -35,7 +35,7 @@ UNIX 认证查询网址：[The Open Group official register of UNIX Certified Pr
 
 >**思考题**
 >
-> _**Those who do not understand Unix are condemned to reinvent it,poorly.**_ （那些不懂 Unix 的人注定要重复发明一个蹩脚的 Unix）
+> _**Those who do not understand Unix are condemned to reinvent it,poorly.**_ （那些不懂 Unix 的人注定要再现一个低劣的 Unix）
 >
 >——[Henry Spencer](https://www.nasa.gov/history/alsj/henry.html)
 >
