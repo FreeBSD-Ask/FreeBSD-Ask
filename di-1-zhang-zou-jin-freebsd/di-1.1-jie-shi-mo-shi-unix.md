@@ -34,7 +34,7 @@ UNIX 认证查询网址：[The Open Group official register of UNIX Certified Pr
 >
 > _**Those who do not understand Unix are condemned to reinvent it,poorly.**_ ——[Henry Spencer](https://www.nasa.gov/history/alsj/henry.html)（那些不懂 Unix 的人注定要重复发明一个蹩脚的 Unix）
 >
->>作者 Henry Spencer 并未明确批评哪个操作系统，那么你认为，现在这句话更适合哪个常见的操作系统？是 FreeBSD、Windows、Android、MacOS 亦或 Linux？
+>>作者 Henry Spencer 并未明确批评哪个操作系统，那么你认为，现在这句话更适合哪个常见的操作系统？是 FreeBSD、Windows、Android、MacOS 亦或 Linux？又为什么？
 
 Unix 哲学源于 UNIX 操作系统的开发，作者是 Ken Thompson。Unix 哲学一言以蔽之即大道至简（“keep it simple, stupid”）：
 
