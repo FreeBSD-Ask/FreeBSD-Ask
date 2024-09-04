@@ -4,7 +4,7 @@
 
 UNIX 从前是一个操作系统。最后由 C 语言改写产生。——源自 AT\&T 的贝尔实验室
 
-现在是一种 **标准规范、法律上的商标**。更是 **一种哲学思想，一项软件工程原则。**
+现在是一种 **标准规范、法律上的商标**。更是一种 **哲学思想**，一项 **软件工程原则。**
 
 UNIX 认证查询网址：[The Open Group official register of UNIX Certified Products](http://www.opengroup.org/openbrand/register)
 
