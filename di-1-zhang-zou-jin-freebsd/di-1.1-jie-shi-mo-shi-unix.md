@@ -21,13 +21,16 @@ UNIX 认证查询网址：[The Open Group official register of UNIX Certified Pr
 
 >**注意**
 >
->Linux 已几乎完全背离了 UNIX 哲学，不提 Linux Kernel 引入 Systemd。单是 Wayland、Btrfs、PulseAudio 就能看出这一点。
+>>Linux 已几乎完全背离了 UNIX 哲学，不提 Linux Kernel 引入 Systemd。单是 Wayland、Btrfs、PulseAudio 就能看出这一点。
 >
 >所以你在 Linux 上，强调传统的 UNIX 哲学或软件工程原则——比如一切皆文件，管道流等，并不十分妥帖。
->
+
+
 >**思考题**
->>
->>是 UNIX 哲学过时了，不再适应现代操作系统了？还是 Linux 将开源之路引向了苦难哲学（失去了其原本的简洁和透明性？），走了改旗易帜的邪路？
+>
+>>在 Huawei EulerOS（基于 CentOS） 都能通过 UNIX 认证的今天，再讨论是不是 UNIX 这件事看起来已经变得索然无味，毫无意义可言。甚至 Windows 加钱也能认证成为 UNIX（其也实现了大部分 POSIX)。
+>
+>是 UNIX 哲学过时了，不再适应现代操作系统了？还是 Linux 将开源之路引向了苦难哲学（失去了其原本的简洁和透明性？），走了改旗易帜的邪路？
 
 
 >**思考题**
@@ -73,7 +76,6 @@ Multics 意图创造强悍的新软件和比肩 IBM 7094 功能更丰富的新�
 
 新的 PDP-7 操作系统编写没多时，Thompson 和几个同事讨论，当时新系统还没有名字，当时它被命名为“UNICS”，UNICS 最后改名为 **UNIX**，这个名字更加方便记忆。
 
-> 在 Huawei EulerOS（基于 CentOS） 都能通过 UNIX 认证的今天，再讨论是不是 UNIX 这件事已经变得索然无味，毫无意义可言。甚至 Windows 加钱也能认证成为 UNIX（其也实现了大部分 POSIX)。
 
 
 ## 什么是 Unix-like？
