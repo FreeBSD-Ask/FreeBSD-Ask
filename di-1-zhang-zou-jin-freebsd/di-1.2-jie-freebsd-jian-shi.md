@@ -283,7 +283,7 @@ ZFS 开源项目衍生于 OpenSolaris 项目。在 2013 年 9 月 17 日，ZFS �
 
 ### 2021 年 4 月 13 日 FREEBSD 13.0-RELEASE
 
-FreeBSD 13.0-RELEASE 于 2021 年 4 月 13 日发布。尽管 aarch64 从 FreeBSD 11 开始就得到了支持，但它在 FreeBSD 13.0-RELEASE 中才被提升为一级平台，成为首个非 x86 架构的一级平台。13.0 还包括内核 TLS 卸载、对 clang 和 LLVM 的升级以及移除了弃用的库和工具。
+FreeBSD 13.0-RELEASE 于 2021 年 4 月 13 日发布。尽管 aarch64 从 FreeBSD 11 开始就得到了支持，但它在 FreeBSD 13.0-RELEASE 中才被提升为一级平台，成为首个非 x86 架构的一级平台。13.0 还涉及内核 TLS 卸载、升级了 clang 和 LLVM，移除了弃用的库、工具。
 
 原文地址：<https://freebsdfoundation.org/freebsd/timeline/>
 
