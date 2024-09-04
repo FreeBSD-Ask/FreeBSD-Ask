@@ -233,7 +233,7 @@
 * [第 22.10 节 通过 IDA 7 调试 FreeBSD](di-22-zhang-bian-cheng-yu-kai-fa/di-22.10-jie-tong-guo-ida-7-tiao-shi-freebsd.md)
 * [第 22.11 节 Git](di-22-zhang-bian-cheng-yu-kai-fa/di-22.11-jie-git.md)
 * [第 22.12 节 安装 code-server 和 clangd](di-22-zhang-bian-cheng-yu-kai-fa/di-22.12-jie-an-zhuang-code-server-he-clangd.md)
-* [第 22.13 节 安装 code-server 和 clangd（不使用 Linux 兼容层）](22.13-code-server.md)
+* [第 22.13 节 安装 code-server 和 clangd（不使用 Linux 兼容层）](di-22-zhang-bian-cheng-yu-kai-fa/22.13-code-server.md)
 
 ## 第 23 章 引导与恢复
 
