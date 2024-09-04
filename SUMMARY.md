@@ -5,6 +5,12 @@
 * [编撰说明](bian-zhuan-shuo-ming.md)
 * [参考资料与贡献者名单](can-kao-zi-liao-yu-gong-xian-zhe-ming-dan.md)
 
+## 第 0 章 计算机概论
+
+* [第 0.1 节 存储卡参数简介与测试](di-18-zhang-shu-mei-pai-yu-riscv/18.10-sd-card-can-shu-jian-shu.md)
+* [第 0.2 节 总线接口与协议](di-18-zhang-shu-mei-pai-yu-riscv/18.11-zong-xian.md)
+* [第 0.3 节 散热器、风扇、鼓风机](di-18-zhang-shu-mei-pai-yu-riscv/18.12-san-re-qi.md)
+
 ## 第 1 章 走进 FreeBSD
 
 * [第 1.1 节 UNIX、Unix-like、Linux 简介](di-1-zhang-zou-jin-freebsd/di-1.1-jie-shi-mo-shi-unix.md)
@@ -180,9 +186,6 @@
 * [第 18.7 节 树莓派与 OpenBSD](di-18-zhang-shu-mei-pai-yu-riscv/di-18.7-jie-shu-mei-pai-yu-openbsd.md)
 * [第 18.8 节 在 RISCV 开发板上安装 OpenBSD](di-18-zhang-shu-mei-pai-yu-riscv/di-18.8-jie-zai-riscv-kai-fa-ban-shang-an-zhuang-openbsd.md)
 * [第 18.9 节 树莓派 5](di-18-zhang-shu-mei-pai-yu-riscv/18.9-shu-mei-pai-5.md)
-* [第 18.10 节 存储卡参数简介与测试](di-18-zhang-shu-mei-pai-yu-riscv/18.10-sd-card-can-shu-jian-shu.md)
-* [第 18.11 节 总线接口与协议](di-18-zhang-shu-mei-pai-yu-riscv/18.11-zong-xian.md)
-* [第 18.12 节 散热器、风扇、鼓风机](di-18-zhang-shu-mei-pai-yu-riscv/18.12-san-re-qi.md)
 
 ## 第 19 章 文学故事
 
