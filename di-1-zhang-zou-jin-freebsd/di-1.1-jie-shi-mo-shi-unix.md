@@ -91,5 +91,5 @@ Linux 全称为 GNU/Linux；[GNU 项目](https://www.gnu.org/) 1984；
   - Ubuntu = Linux kernel + apt/dpkg + Gnome
   - OpenSUSE = Linux kernel + libzypp/rpm + KDE
 
-> 注意：如果你还是不明白，建议亲自安装试试 Gentoo（stage3）或 [Slackware](http://www.slackware.com/)，再不明白可以试试 [Gentoo（stage1）](https://wiki.gentoo.org/wiki/Stage_file)或 [LFS](https://www.linuxfromscratch.org/lfs/)。都非常简单。
+> 注意：如果你还是不明白，建议亲自安装试试 Gentoo（stage3）或 [Slackware](http://www.slackware.com/)，再不明白可以试试 [Gentoo（stage1）](https://wiki.gentoo.org/wiki/Stage_file)或 [LFS](https://www.linuxfromscratch.org/lfs/)。
 
