@@ -7,9 +7,9 @@
 
 ## 第 0 章 计算机概论
 
-* [第 0.1 节 存储卡参数简介与测试](di-18-zhang-shu-mei-pai-yu-riscv/18.10-sd-card-can-shu-jian-shu.md)
-* [第 0.2 节 总线接口与协议](di-18-zhang-shu-mei-pai-yu-riscv/18.11-zong-xian.md)
-* [第 0.3 节 散热器、风扇、鼓风机](di-18-zhang-shu-mei-pai-yu-riscv/18.12-san-re-qi.md)
+* [第 0.1 节 存储卡参数简介与测试](di-0-zhang-ji-suan-ji-gai-lun/0.1-sd-card-can-shu-jian-shu.md)
+* [第 0.2 节 总线接口与协议](di-0-zhang-ji-suan-ji-gai-lun/0.2-zong-xian.md)
+* [第 0.3 节 散热器、风扇、鼓风机](di-0-zhang-ji-suan-ji-gai-lun/0.3-san-re-qi.md)
 
 ## 第 1 章 走进 FreeBSD
 
