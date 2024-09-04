@@ -13,7 +13,7 @@ UNIX 从前是一个操作系统。最后由 C 语言改写产生。——源自
 1. 符合单一 UNIX 规范
 2. 交钱认证
 
-![](../.gitbook/assets/图片1.png)
+![](../.gitbook/assets/unixrenzheng.png)
 
 > 常见的经过认证的 UNIX 操作系统有 MacOS。
 
