@@ -25,9 +25,16 @@ UNIX 认证查询网址：[The Open Group official register of UNIX Certified Pr
 >
 >所以你在 Linux 上，强调传统的 UNIX 哲学或软件工程原则——比如一切皆文件，管道流等，并不十分妥帖。
 >
->**思考**
+>**思考题**
 >>
 >>是 UNIX 哲学过时了，不再适应现代操作系统了？还是 Linux 将开源之路引向了苦难哲学（失去了其原本的简洁和透明性？），走了改旗易帜的邪路？
+
+
+>**思考题**
+>
+> _**Those who do not understand Unix are condemned to reinvent it,poorly.**_ ——[Henry Spencer](https://www.nasa.gov/history/alsj/henry.html)（那些不懂 Unix 的人注定要重复发明一个蹩脚的 Unix）
+>
+>>作者 Henry Spencer 并未明确批评哪个操作系统，那么你认为，现在这句话更适合哪个常见的操作系统？是 FreeBSD、Windows、Android、MacOS 亦或 Linux？
 
 Unix 哲学源于 UNIX 操作系统的开发，作者是 Ken Thompson。Unix 哲学一言以蔽之即大道至简（“keep it simple, stupid”）：
 
@@ -77,9 +84,8 @@ Unix-like 即类 Unix，亦即一切基于 UNIX 的操作系统，基本遵守 P
 
 ## 什么是 Linux？
 
-> UNIX 标准 SUS 包含了 POSIX 标准，是其超集。Linux 实现了 POSIX 标准，但是没有进行 [POSIX 认证](http://get.posixcertified.ieee.org/)。本质上说 Linux 最初是 UNIX 的一个仿制品。
->
-> _**Those who do not understand Unix are condemned to reinvent it,poorly.**_ ——[Henry Spencer](https://www.nasa.gov/history/alsj/henry.html)（那些不懂 Unix 的人注定要重复发明一个蹩脚的 Unix）
+UNIX 标准 SUS 包含了 POSIX 标准，是其超集。Linux 实现了 POSIX 标准，但是未进行 [POSIX 认证](http://get.posixcertified.ieee.org/)。本质上说 Linux 最初是 UNIX 的一款仿制品。
+
 
 ### 狭义 Linux 是内核
 
