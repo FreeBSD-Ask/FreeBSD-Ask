@@ -13,9 +13,9 @@ UNIX 从前是一个操作系统。最后由 C 语言改写产生。——源自
 1. 符合单一 UNIX 规范
 2. 交钱认证
 
-![](../.gitbook/assets/unixrenzheng.png)
+![[The Open Group official register of UNIX Certified Products](../.gitbook/assets/unixrenzheng.png)
 
-> 常见的经过认证的 UNIX 操作系统有 MacOS。
+可以看到，常见的，经过认证的 UNIX 操作系统有 Apple MacOS。即从商标的角度上讲，MacOS 可以称得上是标准的 UNIX 操作系统。
 
 **以下为详细说明：**
 
