@@ -3,8 +3,8 @@
 ## FreeBSD 与 Linux 不同之处
 
 - FreeBSD 仍然使用古老的 BSD init 而非 systemd；BSD init 与传统的 SysVinit 也不大相同——BSD 没有运行级别（runlevel），也没有 `/etc/inittab`，均由 rc 控制。
-- FreeBSD 所有用户 shell 默认均是 sh（14 之前 root 为 csh，普通用户为 sh），而非 bash；
-- FreeBSD 基本系统几乎不包含任何与 BSD 协议不兼容的软件。
+- FreeBSD 所有用户 shell 默认均是 sh（14 之前 root 为 csh，普通用户为 sh），而非 bash（如果你喜欢，亦可切换为 bash 或 zsh）；
+- FreeBSD 基本系统几乎不包含任何与 BSD 协议不兼容的软件（你可以自己额外安装）。
 
 >**思考题**
 >>- FreeBSD 致力于去 GNU 化，这意味着基本系统不使用 glibc、GCC 等软件。
