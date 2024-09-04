@@ -10,7 +10,7 @@ UNIX 从前是一个操作系统。最后由 C 语言改写产生。——源自
 
 我们现在可以知道认证 UNIX 需要：
 
-1. 符合单一 UNIX 规范
+1. [符合单一 UNIX 规范](https://www.opengroup.org/openbrand/register/xym0.htm)
 2. 交钱认证
 
 ![The Open Group official register of UNIX Certified Products](../.gitbook/assets/unixrenzheng.png)
