@@ -1,6 +1,6 @@
 # 第 2.1 节 手动安装双系统
 
-本篇以 `FreeBSD-14.0-RELEASE-amd64-disc1.iso` 为例，在 `Hyper-V` 中演示 `FreeBSD 14.0 RELEASE` 与 `Windows 11` 在 UEFI 环境下的双系统安装。
+本节以“FreeBSD-14.0-RELEASE-amd64-disc1.iso”为例，在 `Hyper-V` 中演示 FreeBSD 14.0 RELEASE 与 Windows 11 在 UEFI 环境下的双系统安装。
 
 > **注意**
 >
@@ -16,15 +16,15 @@
 
 ![](../.gitbook/assets/双系统2.png)
 
-这里可以看到硬盘分区。仅有一块硬盘，有 300M 的 EFI 系统分区，16M 的 MSR 分区，64G 的 Windows 系统分区。空闲空间没有显示。直接选择 `Create`
+这里可以看到硬盘分区。仅有一块硬盘，有 300M 的 EFI 系统分区，16M 的 MSR 分区，64G 的 Windows 系统分区。未显示空闲空间。直接选择 `Create`
 
 ![](../.gitbook/assets/双系统3.png)
 
-此处，第一行输入分区类型（即下方会列出的 `Filesystem type`）。如果想添加 swap 分区推荐首先添加，后添加不好控制分区大小。在添加 UFS 或 ZFS 时，需要在 `Mountpoint` 处添加 `/`，表示分区挂载到 `/`。`Label` 是 FreeBSD 的卷标，方便识别分区，可以根据情况添加或不填。这里使用 ZFS，不添加 swap 分区，并且添加卷标 `zroot`。
+此处，第一行输入分区类型（即下方会列出的 `Filesystem type`）。如要添加 swap 分区，请首先添加，后添加难以控制分区大小。在添加 UFS、ZFS 时，需在 `Mountpoint` 处添加 `/`，表示分区挂载到 `/`。`Label` 是 FreeBSD 的卷标，方便识别分区，可以根据情况添加或不填。此处使用 ZFS，不添加 swap 分区，并且添加卷标 `zroot`。
 
 ![](../.gitbook/assets/双系统4.png)
 
-用 TAB 键选择到 OK 回车
+用 **TAB 键** 选择到 OK 回车
 
 ![](../.gitbook/assets/双系统5.png)
 
