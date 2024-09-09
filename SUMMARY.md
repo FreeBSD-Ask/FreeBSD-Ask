@@ -192,9 +192,6 @@
 
 * [第 19.1 节 开源与苦难哲学](di-19-zhang-wen-xue-gu-shi/di-19.1-jie-linux-yu-ku-nan-zhe-xue.md)
 * [第 19.2 节 Linux 败局与 FreeBSD 败局](di-19-zhang-wen-xue-gu-shi/di-19.2-jie-linux-bai-ju-yi-ding-bo-freebsd-da-bai-ju.md)
-* [第 19.3 节 小说选](di-19-zhang-wen-xue-gu-shi/di-19.3-jie-xiao-shuo-freebsd-cong-ru-men-dao-pao-lu.md)
-* [第 19.4 节 诗歌选](di-19-zhang-wen-xue-gu-shi/di-19.4-jie-shi-ge-xuan.md)
-* [第 19.5 节 杂记](di-19-zhang-wen-xue-gu-shi/di-19.5-jie-za-ji.md)
 
 ## 第 20 章 娱乐与教育
 
