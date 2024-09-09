@@ -63,7 +63,7 @@
 
 ## 选择 FreeBSD 的社会意义
 
-- Linux Kernel 由 Linus 一人裁决：“[Linus Torvalds是决定改动能否进入 Linux 内核的最终裁决者。](https://www.kernel.org/doc/html/latest/translations/zh_CN/process/submitting-patches.html)”而 FreeBSD 最终由两年一届的核心团队集体决策。
+- Linux Kernel 由 Linus 一人裁决：“[Linus Torvalds 是决定改动能否进入 Linux 内核的最终裁决者。](https://www.kernel.org/doc/html/latest/translations/zh_CN/process/submitting-patches.html)”而 FreeBSD 最终由两年一届的核心团队集体决策。
 
 - GNU 与开源软件运动已走到了尽头
 
