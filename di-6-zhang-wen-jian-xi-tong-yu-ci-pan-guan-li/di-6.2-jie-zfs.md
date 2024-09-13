@@ -2,10 +2,10 @@
 
 ## 使用建议
 
-- 建议在 8G 及以上的内存机器上使用 ZFS。
+- 建议在 8G 及以上的内存机器上使用 ZFS（但是这并不意味着 512 M 内存就绝对无法使用）。
 - 为了提高机械硬盘随机读能力，可设置 `vfs.zfs.prefetch_disable=1`。
 - 为了避免 ZFS 吃掉太多内存，可设置 `vfs.zfs.arc_max="XXX"`，例如：1024 M。
-- 如果要复制某个文件系统，可以用 `zfs send/recv`，这样还能通过 ssh 跨网络传输。
+- 如果要复制某个文件系统，可以用 `zfs send/recv`，亦支持通过 ssh 跨网络传输。
 
 
 以上部分来自网络，更多优化见 [ZFSTuningGuide](https://wiki.freebsd.org/ZFSTuningGuide)。
@@ -76,7 +76,7 @@ root@ykla:/home/ykla # rm /usr/ports/
 
 还原时不能递归还原快照，必须挨个还原（如果你有更好的方案请告诉我们,网络上有一些脚本可用）：
 
-与虚拟机快照有所不同，在缺省情况下，`zfs rollback` 命令无法回滚到除最新快照以外的快照（[参考手册](https://docs.oracle.com/cd/E19253-01/819-7065/gbcxk/index.html)），除非使用`r`，但这会删除该快照创建后的所有快照。
+与虚拟机快照有所不同，在缺省情况下，`zfs rollback` 命令无法回滚到除最新快照以外的快照（[参考手册](https://docs.oracle.com/cd/E19253-01/819-7065/gbcxk/index.html)），除非使用 `r`，但这会删除该快照创建后的所有快照。
 
 ```sh
 root@ykla:/home/ykla # zfs rollback -r zroot@test
@@ -92,7 +92,7 @@ root@ykla:/home/ykla # zfs rollback -r zroot/var/log@test
 
 - 销毁快照
 
-销毁快照（销毁的时候可以使用`r`递归销毁）：
+销毁快照（销毁的时候可以使用 `r` 递归销毁）：
 
 ```sh
 root@ykla:/home/ykla # zfs destroy -r zroot@test
@@ -113,7 +113,7 @@ root@ykla:/home/ykla #
 # zfs clone zroot/ROOT/default@new zroot/ROOT/new         # 用刚建的快照复制一个镜像
 ```
 
-复制的镜像可以作为一个启动环境，可以用bectl工具查看可用的启动环境
+复制的镜像可以作为一个启动环境，可以用工具 bectl 查看可用的启动环境
 
 ```sh
 # bectl list
@@ -124,7 +124,7 @@ new                               -      -          432K  2023-09-20 15:17
 default                           NR     /          40.8G 2023-04-10 10:06
 ```
 
-其中 Active 列中 `N` 表示当前使用环境，`R` 表示下次启动时使用的环境。bectl 工具可以改变下次使用的启动环境（在启动 FreeBSD 时，启动菜单里选 `8`，也可以改变启动环境）
+其中 Active 这一列中 `N` 表示当前使用环境，`R` 表示下次启动时使用的环境。bectl 工具可以改变下次使用的启动环境（在启动 FreeBSD 时，启动菜单里选 `8`，也可以改变启动环境）
 
 ```sh
 bectl activate new
@@ -213,7 +213,7 @@ the boot code. See gptzfsboot(8) and loader.efi(8) for details.
 
 **此处提示重要**
 >
->bootfs 属性是在 zfs 上引导 FreeBSD 的重要标志，不理睬这个提示可能没事，但出了问题就不能引导系统，建议按提示重写 `boot code` (为什么这么建议？因为我炸了)。如果你没有 **freebsd-boot** 分区就不需要以下操作。
+>bootfs 属性是在 zfs 上引导 FreeBSD 的重要标志，不理睬这个提示可能没事，但出了问题就不能引导系统，建议按提示重写 `boot code` (为什么这么建议？~~因为我炸了~~)。如果你没有 **freebsd-boot** 分区就不需要以下操作。
 
 查看分区信息：
 
