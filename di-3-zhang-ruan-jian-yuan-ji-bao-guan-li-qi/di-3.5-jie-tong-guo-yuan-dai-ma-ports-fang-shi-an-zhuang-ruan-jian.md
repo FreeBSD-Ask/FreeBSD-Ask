@@ -36,9 +36,9 @@ root@ykla:/usr/ports # git pull #同步更新上游 Ports
 
 如果提示本地已经修改，放弃本地修改，再更新：
 
-```
-/usr/ports # git checkout .
-/usr/ports # git pull
+```sh
+root@ykla:/usr/ports # git checkout .
+root@ykla:/usr/ports # git pull
 ```
 
 ### 使用 `whereis` 查询软件路径
@@ -51,7 +51,7 @@ root@ykla:/usr/ports # git pull #同步更新上游 Ports
 
 将输出 
 
-```python
+```sh
 python: /usr/ports/lang/python
 ```
 
