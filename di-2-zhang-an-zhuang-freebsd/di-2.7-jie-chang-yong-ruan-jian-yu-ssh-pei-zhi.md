@@ -32,9 +32,31 @@ OpenSSH_9.7p1, OpenSSL 3.0.14 4 Jun 2024
 
 ## SSH 工具
 
+ 
+### Xshell 
+
+Xshell 是 Windows 平台上的强大的 shell 工具。支持 **串口**、SSH、Telnet！
+
+Xshell 下载地址（输入用户名和邮件即可）：
+
+[https://www.netsarang.com/zh/free-for-home-school](https://www.netsarang.com/zh/free-for-home-school)
+
+如果提示需要重新验证，请打开上面的网站重装一遍，即可。
+
+
+### MobaXterm
+
+MobaXterm 目前不支持中文，下载地址 <https://mobaxterm.mobatek.net/download-home-edition.html>，左右任选。
+
+在选择鼠标后，行为和 Xshell 一致。
+
+MobaXterm 是一款集成了 SCP 功能的软件。
+
 ### PuTTY
 
-下载地址：<https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html>，界面反人类。一般被集成到其他软件间接使用。
+下载地址：<https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html>
+
+PuTTY 界面反人类。一般被集成到其他软件间接使用。
 
 
 >**思考题**
@@ -61,28 +83,6 @@ OpenSSH_9.7p1, OpenSSL 3.0.14 4 Jun 2024
 >>如果你的是不知道从哪下的中文（Github 上面有一些开源中文客户端实现，但同样未经代码审查），必定是被篡改过的版本。就存在第一条新闻中的风险。
 >
 >以上，是否符合现实？为什么？
-
-
- 
-### Xshell 
-
-Xshell 是 Windows 平台上的强大的 shell 工具。支持 **串口**、SSH、Telnet！
-
-Xshell 下载地址（输入用户名和邮件即可）：
-
-[https://www.netsarang.com/zh/free-for-home-school](https://www.netsarang.com/zh/free-for-home-school)
-
-如果提示需要重新验证，请打开上面的网站重装一遍，即可。
-
-
-### MobaXterm
-
-MobaXterm 目前不支持中文，下载地址 <https://mobaxterm.mobatek.net/download-home-edition.html>，左右任选。
-
-在选择鼠标后，行为和 Xshell 一致。
-
-MobaXterm 是一款集成了 SCP 功能的软件。
-
 
 ### Termius
 
