@@ -289,6 +289,7 @@ dolphin-23.04.3                    <
 # cd /usr/ports/ports-mgmt/portupgrade && make install clean
 # portupgrade -ai #自动升级所有软件
 # portupgrade -R screen #升级单个软件
+# portupgrade -ai --batch		#不要问，只做，等同于  BATCH=yes
 ```
 
 2、portmaster （推荐）
@@ -304,7 +305,7 @@ dolphin-23.04.3                    <
 如果不想回答问题解决依赖，可使用类似 BATCH=yes 的选项 `-G --no-confirm`：
 
 ```sh
-portmaster -a -G --no-confirm
+# portmaster -a -G --no-confirm
 ```
 
 - 查看依赖关系：
@@ -330,6 +331,7 @@ root@ykla:/usr/ports/ports-mgmt/portmaster # portmaster sysutils/htop  --show-wo
 ### 参考资料
 
 - [portmaster -- manage your ports without external databases or languages](https://man.freebsd.org/cgi/man.cgi?portmaster(8))
+- [portupgrade,  portinstall -- tools to upgrade installed packages	or in- stall new ones via ports	or packages](https://man.freebsd.org/cgi/man.cgi?portupgrade(1))
   
 ## FreeBSD USE
 
