@@ -33,7 +33,7 @@
 # mkdir -p /jail/mroot
 # 然后放入基本目录，上边说过不再写
 # 将 ports 和源码放入模板
-# git clone --depth 1 https://mirrors.ustc.edu.cn/freebsd-ports/ports.git /jail/mroot/usr/ports
+# git clone --filter=tree:0 https://mirrors.ustc.edu.cn/freebsd-ports/ports.git /jail/mroot/usr/ports
 # cpdup /usr/src /jail/mroot/usr/src # 需要提前获取源码，且要注意源码对应的版本要与 /jail/mroot 的版本相同
 ```
 
