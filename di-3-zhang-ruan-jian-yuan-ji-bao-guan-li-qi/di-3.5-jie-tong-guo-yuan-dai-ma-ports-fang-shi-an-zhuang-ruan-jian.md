@@ -34,6 +34,13 @@ root@ykla:/ # cd /usr/ports/ #切换目标目录
 root@ykla:/usr/ports # git pull #同步更新上游 Ports
 ```
 
+如果提示本地已经修改，放弃本地修改，再更新：
+
+```
+/usr/ports # git checkout .
+/usr/ports # git pull
+```
+
 ### 使用 `whereis` 查询软件路径
 
 如 
