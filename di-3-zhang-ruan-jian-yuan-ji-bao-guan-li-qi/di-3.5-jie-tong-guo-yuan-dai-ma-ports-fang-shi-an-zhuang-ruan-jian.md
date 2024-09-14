@@ -23,7 +23,7 @@
 拉取 Ports 存储库：
 
 ```sh
-# git clone --depth 1 https://mirrors.ustc.edu.cn/freebsd-ports/ports.git /usr/ports
+# git clone --filter=tree:0 https://mirrors.ustc.edu.cn/freebsd-ports/ports.git /usr/ports
 ```
 
 #### 同步更新 Ports Git
