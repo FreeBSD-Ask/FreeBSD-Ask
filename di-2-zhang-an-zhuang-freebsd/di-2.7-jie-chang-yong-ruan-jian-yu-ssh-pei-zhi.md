@@ -34,6 +34,9 @@ OpenSSH_9.7p1, OpenSSL 3.0.14 4 Jun 2024
 
 ### PuTTY
 
+下载地址：<https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html>，界面反人类。一般被集成到其他软件间接使用。
+
+
 >**思考题**
 >
 >PuTTY 没有任何好处：
