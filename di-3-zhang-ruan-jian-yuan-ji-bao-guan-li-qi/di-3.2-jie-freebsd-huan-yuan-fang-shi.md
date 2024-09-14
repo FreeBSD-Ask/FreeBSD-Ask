@@ -157,8 +157,12 @@ FreeBSD: { enabled: no }
 然后：
 
 ```sh
-# git clone --depth 1 https://mirrors.ustc.edu.cn/freebsd-ports/ports.git /usr/ports
+# git clone  --filter=tree:0 https://mirrors.ustc.edu.cn/freebsd-ports/ports.git /usr/ports
 ```
+
+>**注意**
+>
+>`--depth 1` 会给服务器带来较大计算压力，请尽量使用参数  `--filter=tree:0`。
 
 ### ports 源
 
