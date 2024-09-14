@@ -28,7 +28,7 @@ OpenSSH_9.7p1, OpenSSL 3.0.14 4 Jun 2024
 >
 >请按下图设置协议为 `scp`，然后其他的和 ssh 信息一模一样。因为 scp 是 ssh 的子项目实现。
 >
-><img style="width:50%;"  src="../.gitbook/assets/scp2.png" />
+>![WinSCP](../.gitbook/assets/scp2.png)
 
 ## SSH 工具
 
@@ -45,6 +45,10 @@ Xshell 下载地址（输入用户名和邮件即可）：
 
 
 ### MobaXterm
+
+![MobaXterm](../.gitbook/assets/MobaXterm1.jpg)
+
+![MobaXterm](../.gitbook/assets/MobaXterm2.jpg)
 
 MobaXterm 目前不支持中文，下载地址 <https://mobaxterm.mobatek.net/download-home-edition.html>，左右任选。
 
@@ -86,7 +90,9 @@ PuTTY 界面反人类。一般被集成到其他软件间接使用。
 
 ### Termius
 
-Termius 下载地址：<https://termius.com/download/>3
+![Termius](../.gitbook/assets/Termius.jpg)
+
+Termius 下载地址：<https://termius.com/download/>
 
 目前不支持中文，使用需要登录和注册。
 
