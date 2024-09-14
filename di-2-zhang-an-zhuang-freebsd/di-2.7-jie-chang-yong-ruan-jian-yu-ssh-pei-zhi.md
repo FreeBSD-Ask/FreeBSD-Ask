@@ -30,17 +30,9 @@ OpenSSH_9.7p1, OpenSSL 3.0.14 4 Jun 2024
 >
 ><img style="width:50%;"  src="../.gitbook/assets/scp2.png" />
 
-## Xshell 下载
+## SSH 工具
 
-Xshell 是 Windows 平台上的强大的 shell 工具。支持 **串口**、SSH、Telnet！
-
-Xshell 下载地址（输入用户名和邮件即可）：
-
-[https://www.netsarang.com/zh/free-for-home-school](https://www.netsarang.com/zh/free-for-home-school)
-
-如果提示需要重新验证，请打开上面的网站重装一遍，即可。
-
->Todo：考虑使用其他软件进行代替。或列出更多备选。
+### PuTTY
 
 >**思考题**
 >
@@ -66,6 +58,36 @@ Xshell 下载地址（输入用户名和邮件即可）：
 >>如果你的是不知道从哪下的中文（Github 上面有一些开源中文客户端实现，但同样未经代码审查），必定是被篡改过的版本。就存在第一条新闻中的风险。
 >
 >以上，是否符合现实？为什么？
+
+
+ 
+### Xshell 
+
+Xshell 是 Windows 平台上的强大的 shell 工具。支持 **串口**、SSH、Telnet！
+
+Xshell 下载地址（输入用户名和邮件即可）：
+
+[https://www.netsarang.com/zh/free-for-home-school](https://www.netsarang.com/zh/free-for-home-school)
+
+如果提示需要重新验证，请打开上面的网站重装一遍，即可。
+
+
+### MobaXterm
+
+MobaXterm 目前不支持中文，下载地址 <https://mobaxterm.mobatek.net/download-home-edition.html>，左右任选。
+
+在选择鼠标后，行为和 Xshell 一致。
+
+MobaXterm 是一款集成了 SCP 功能的软件。
+
+
+### Termius
+
+Termius 下载地址：<https://termius.com/download/>3
+
+目前不支持中文，使用需要登录和注册。
+
+Termius 鼠标行为和 PuTTY 接近，一样的反人类（无论选择快捷键还是鼠标）。右键出不来 Xshell 那种行为。
 
 ## 配置 SSH
 
