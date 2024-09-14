@@ -301,6 +301,12 @@ dolphin-23.04.3                    <
 # portmaster screen #升级单个软件
 ```
 
+如果不想回答问题解决依赖，可使用类似 BATCH=yes 的选项 `-G --no-confirm`：
+
+```sh
+portmaster -a -G --no-confirm
+```
+
 - 查看依赖关系：
 
 ```sh
@@ -323,7 +329,7 @@ root@ykla:/usr/ports/ports-mgmt/portmaster # portmaster sysutils/htop  --show-wo
 
 ### 参考资料
 
-- [portmaster -- manage your ports without external databases or languages](https://man.freebsd.org/cgi/man.cgi?portmaster(8)#end)
+- [portmaster -- manage your ports without external databases or languages](https://man.freebsd.org/cgi/man.cgi?portmaster(8))
   
 ## FreeBSD USE
 
