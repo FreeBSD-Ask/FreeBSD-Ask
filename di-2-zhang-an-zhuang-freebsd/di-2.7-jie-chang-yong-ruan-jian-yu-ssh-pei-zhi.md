@@ -392,9 +392,9 @@ root     syslogd     1017 7   udp4   *:514                 *:*
 
 断开测试：
 
-![juicessh 的 mosh 断开 WiFi](../.gitbook/assets/juicessh5.png)
+![juicessh 的 mosh 断开 WiFi](../.gitbook/assets/juicessh5.jpg)
 
-![juicessh 的 mosh 再次恢复连接 WiFi](../.gitbook/assets/juicessh6.png)
+![juicessh 的 mosh 再次恢复连接 WiFi](../.gitbook/assets/juicessh6.jpg)
 
 
 可以看到，在断开后有提示，重连网络后自动恢复，像是没有断开一样。
