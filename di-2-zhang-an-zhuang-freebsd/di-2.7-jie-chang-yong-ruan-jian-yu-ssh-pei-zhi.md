@@ -46,15 +46,15 @@ Xshell 下载地址（输入用户名和邮件即可）：
 
 ### MobaXterm
 
+MobaXterm 是一款集成了 SCP 功能的软件。
+
+MobaXterm 目前不支持中文，下载地址 <https://mobaxterm.mobatek.net/download-home-edition.html>，左右任选。
+
 ![MobaXterm](../.gitbook/assets/MobaXterm1.jpg)
 
 ![MobaXterm](../.gitbook/assets/MobaXterm2.jpg)
 
-MobaXterm 目前不支持中文，下载地址 <https://mobaxterm.mobatek.net/download-home-edition.html>，左右任选。
-
-在选择鼠标后，行为和 Xshell 一致。
-
-MobaXterm 是一款集成了 SCP 功能的软件。
+在选择鼠标后，操作行为和 Xshell 一致。
 
 ### PuTTY
 
