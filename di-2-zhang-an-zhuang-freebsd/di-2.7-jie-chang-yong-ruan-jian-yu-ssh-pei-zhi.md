@@ -224,7 +224,7 @@ drwx------  2 root  wheel   512 Mar 22 18:27 /root/.ssh #权限为 700
 # rm /root/.ssh/id_rsa*
 ```
 
-### 修改 /etc/ssh/sshd\_config
+### 修改 `/etc/ssh/sshd_config`
 
 ```sh
 # ee /etc/ssh/sshd_config
@@ -384,11 +384,21 @@ root     syslogd     1017 7   udp4   *:514                 *:*
 
 测试连接：
 
-<img style="width:20%;"  src="../.gitbook/assets/juicessh2.png" />
+![juicessh 的 mosh](../.gitbook/assets/juicessh2.png)
 
-<img style="width:20%;"  src="../.gitbook/assets/juicessh3.png" />
+![juicessh 的 mosh](../.gitbook/assets/juicessh3.png)
 
-<img style="width:20%;"  src="../.gitbook/assets/juicessh4.png" />
+![juicessh 的 mosh](../.gitbook/assets/juicessh4.png)
+
+断开测试：
+
+![juicessh 的 mosh 断开 WiFi](../.gitbook/assets/juicessh5.png)
+
+![juicessh 的 mosh 再次恢复连接 WiFi](../.gitbook/assets/juicessh6.png)
+
+
+可以看到，在断开后有提示，重连网络后自动恢复，像是没有断开一样。
+
 
 ## 参考文献
 
