@@ -396,7 +396,7 @@ root     syslogd     1017 7   udp4   *:514                 *:*
 ![juicessh 的 mosh 再次恢复连接 WiFi](../.gitbook/assets/juicessh6.jpg)
 
 
-可以看到，在断开后有提示，重连网络后自动恢复，像是没有断开一样。
+可以看到，在断开后有提示，重连网络后自动恢复，像是没有断开一样（已结合 `screen` 使用）。
 
 
 ## 参考文献
