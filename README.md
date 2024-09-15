@@ -1,6 +1,6 @@
 # FreeBSD 从入门到跑路
 
-为何选择 FreeBSD——FreeBSD 能在流变的世界中寻求理想的中道。
+为什么是 FreeBSD？——FreeBSD 能在流变的世界中寻求理想的中道。
 
 ## ToDo
 
