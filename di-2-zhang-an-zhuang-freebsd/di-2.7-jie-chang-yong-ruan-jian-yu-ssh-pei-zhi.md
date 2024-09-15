@@ -356,8 +356,7 @@ me:\
 
 下载地址：<https://play.google.com/store/apps/details?id=com.sonelli.juicessh>
 
-<img style="width:20%;"  src="../.gitbook/assets/juicessh1.png" />
-
+![juicessh](../.gitbook/assets/juicessh1.png)
 
 点击“服务端命令”，设置如下：
 
