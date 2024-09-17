@@ -143,16 +143,24 @@ ln -s ccache	/usr/local/bin/clang
 设置编译缓存最大为 5GB：
 
 ```sh
-root@ykla:/usr/ports/devel/ccache4 # ccache -M 5G  
-Set cache size limit to 5.0 GB
+root@ykla:/usr/ports/devel/ccache4 # ccache -M 20G  
+Set cache size limit to 20.0 GB
 ```
 
-查看编译缓存：
+编译一段时间后，查看编译缓存：
 
 ```sh
-root@ykla:/usr/ports/devel/ccache4 # ccache -s  
+root@ykla:/ # ccache -s
+Cacheable calls:   558 /  579 (96.37%)
+  Hits:            110 /  558 (19.71%)
+    Direct:        110 /  110 (100.0%)
+    Preprocessed:    0 /  110 ( 0.00%)
+  Misses:          448 /  558 (80.29%)
+Uncacheable calls:  21 /  579 ( 3.63%)
 Local storage:
-  Cache size (GB): 0.0 / 5.0 ( 0.00%)
+  Cache size (GB): 0.0 / 20.0 ( 0.11%)
+  Hits:            110 /  558 (19.71%)
+  Misses:          448 /  558 (80.29%)
 ```
 
 查看当前配置文件：
