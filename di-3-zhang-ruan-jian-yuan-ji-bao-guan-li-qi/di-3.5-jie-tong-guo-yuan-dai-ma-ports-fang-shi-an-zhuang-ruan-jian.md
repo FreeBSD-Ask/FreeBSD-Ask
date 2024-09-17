@@ -264,7 +264,7 @@ ports 编译的软件也可以转换为 pkg 包
 然后列出过时 Ports 组件
 
 ```sh
-# pkg_version -l '<'
+# pkg version -l '<'
 7-zip-22.01                        <
 AppStream-0.16.1                   <
 alsa-plugins-1.2.2_11              <
