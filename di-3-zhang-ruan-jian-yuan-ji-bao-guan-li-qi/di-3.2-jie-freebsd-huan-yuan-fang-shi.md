@@ -15,8 +15,8 @@ Gentoo Linux: Portage，对应 Ports（Portage 本身就是 Ports 的仿制品�
 |源|说明|备注|
 |:---:|:---|:---|
 |pkg|类似于传统 Linux 的包管理器，用于安装二进制软件包|不需要可以不配置，默认未安装 `pkg`，输入 `pkg` 回车会提示安装|
-|ports|Gentoo 的包管理器 Portage（命令为 `emerge`）即是源于此。用于帮助用户从源代码编译安装软件。换言之，等同于 Gentoo 的 Distfiles 源|/|
-|portsnap|拉取 Ports 的源代码模板（本身不含源代码，只是一些描述文件和补丁集）。换言之，这个源类似 Gentoo 的 ebuild 数据库|已在 FreeBSD 14 中废弃，无需配置，后续版本亦不再使用，改用 `git`、`gitup` 和压缩包 `ports.tar.gz` 等方式获取。|
+|ports|Gentoo 的包管理器 Portage（命令为 `emerge`）即是源于此。用于帮助用户从源代码编译安装软件。换言之，等同于 Gentoo 的 [Distfiles 源](https://mirrors.ustc.edu.cn/help/gentoo.html)|/|
+|portsnap|拉取 Ports 的源代码模板（本身不含源代码，只是一些描述文件和补丁集）。换言之，这个源类似 Gentoo 的 [ebuild 数据库](https://mirrors.ustc.edu.cn/help/gentoo.html)|已在 FreeBSD 14 中废弃，无需配置，后续版本亦不再使用，改用 `git`、`gitup` 和压缩包 `ports.tar.gz` 等方式获取。|
 |update|用于更新系统工具和系统本身|预计在 FreeBSD 15或 16 中废弃，转而使用 [pkgbase](https://wiki.freebsd.org/PkgBase) 代替之|
 
 > 注意：
