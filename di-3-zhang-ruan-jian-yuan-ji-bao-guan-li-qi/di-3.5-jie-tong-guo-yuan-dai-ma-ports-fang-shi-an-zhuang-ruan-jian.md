@@ -62,7 +62,7 @@ python: /usr/ports/lang/python
 # make BATCH=yes clean
 ```
 
-其中 `BATCH=yes` 意味着使用默认参数进行编译。
+其中 `BATCH=yes` 意味着使用默认参数进行编译。`BATCH` 亦可小写成 `batch`。
 
 ## 加速编译
 
