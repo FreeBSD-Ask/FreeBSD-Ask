@@ -311,7 +311,7 @@ w3m-0.5.3.20230718_1               <
 # portmaster screen #升级单个软件
 ```
 
-如果不想回答问题解决依赖，可使用类似 BATCH=yes 的选项 `-G --no-confirm`：
+如果不想回答问题解决依赖，可使用类似 BATCH=yes 的选项 `-a -G --no-confirm`：
 
 ```sh
 # portmaster -a -G --no-confirm
