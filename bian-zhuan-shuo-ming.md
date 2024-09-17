@@ -13,41 +13,41 @@
 
 - 那么首先可以通过 pkg 安装二进制软件包，和绝大多数 Linux 用法一样，下同：
 
-```
+```sh
 # pkg install yyy
 ```
 
 还可以这样：
 
-```
+```sh
 # pkg install xxx/yyy
 ```
 
 或者这样简写：
 
-```
+```sh
 # pkg ins yyy
 ```
 
 - 那么还可以通过 Ports 编译安装：
 
-```
+```sh
 # cd /usr/ports/xxx/yyy
 # make install clean
 ```
 
 将会不断地弹出来窗口询问你怎么选。如果是使用默认选项，请这样做，则：
 
-```
+```sh
 # cd /usr/ports/xxx/yyy
 # make BATCH=yes install clean
 ```
 
-`BATCH` 也可以写成小写 `batch`。
+全文中，所有的 `BATCH` 也可以写成小写 `batch`。
 
 如果你想一次性完成所有配置：
 
-```
+```sh
 # cd /usr/ports/xxx/yyy
 # make config-recursive #会一直问你，直到结束依赖
 # make install clean
