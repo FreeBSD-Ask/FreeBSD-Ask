@@ -140,7 +140,7 @@ ln -s ccache	/usr/local/bin/c++
 ln -s ccache	/usr/local/bin/clang
 ```
 
-设置编译缓存最大为 5GB：
+设置编译缓存最大为 20GB：
 
 ```sh
 root@ykla:/usr/ports/devel/ccache4 # ccache -M 20G  
