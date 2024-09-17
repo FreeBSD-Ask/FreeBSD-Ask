@@ -130,21 +130,6 @@ tmpfs /tmp tmpfs rw 0 0
 # make install clean
 ```
 
-- ksh/sh 添加到 `/etc/profile`:
-```sh
-export CCACHE_PREFIX=distcc
-export DISTCC_HOSTS="localhost host1 host2"
-```
-- csh/tcsh 添加到 `/etc/csh.cshrc`:
-```sh
-setenv CCACHE_PREFIX distcc
-setenv DISTCC_HOSTS "localhost host1 host2"
-```
-
-做软链接：
-```sh
-# ccache-update-links
-```
 ```sh
 root@ykla:/usr/ports/devel/ccache4 # ccache -M 5G  # 设置编译缓存最大为 5GB
 Set cache size limit to 5.0 GB
