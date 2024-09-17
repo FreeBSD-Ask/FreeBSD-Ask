@@ -138,9 +138,6 @@ root@ykla:/usr/ports/devel/ccache4 # ccache -s  # 查看编译缓存
 Local storage:
   Cache size (GB): 0.0 / 5.0 ( 0.00%)
 
-root@ykla:~ # find /  -name ccache.conf # 全局查找配置文件路径
-/root/.config/ccache/ccache.conf
-
 root@ykla:~ # ccache -p #查看当前配置文件
 (default) absolute_paths_in_stderr = false
 (default) base_dir =
@@ -167,7 +164,7 @@ root@ykla:~ # ccache -p #查看当前配置文件
 (default) keep_comments_cpp = false
 (default) log_file =
 (default) max_files = 0
-(/root/.config/ccache/ccache.conf) max_size = 20.0 GB
+(/root/.config/ccache/ccache.conf) max_size = 20.0 GB #配置文件路径
 (default) msvc_dep_prefix = Note: including file:
 (default) namespace =
 (default) path =
