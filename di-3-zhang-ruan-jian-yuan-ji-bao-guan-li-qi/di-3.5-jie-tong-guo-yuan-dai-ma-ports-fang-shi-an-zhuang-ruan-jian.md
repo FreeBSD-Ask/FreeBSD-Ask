@@ -261,24 +261,33 @@ ports 编译的软件也可以转换为 pkg 包
 # portsnap auto
 ```
 
-然后列出过时 Ports 组件
+然后列出过时 Port 软件：
 
 ```sh
-# pkg version -l '<'
-7-zip-22.01                        <
-AppStream-0.16.1                   <
-alsa-plugins-1.2.2_11              <
-aom-3.7.0.r1                       <
-ark-23.04.3                        <
-baloo-widgets-23.04.3              <
-brotli-1.0.9,1                     <
-ca_root_nss-3.92                   <
-cargo-c-0.9.23                     <
-chromium-116.0.5845.110            <
-consolekit2-1.2.6_1                <
-discount-2.2.7c                    <
-dolphin-23.04.3                    <
-…………
+root@ykla:/usr/ports # pkg version -l '<'
+aom-3.10.0                         <
+chromium-127.0.6533.99             <
+curl-8.9.1_1                       <
+expat-2.6.2                        <
+ffmpeg-6.1.2,1                     <
+firefox-esr-115.15.0,1             <
+gdal-3.9.2                         <
+geos-3.12.2                        <
+imlib2-1.12.3,2                    <
+kf5-kimageformats-5.116.0          <                    libjxl-0.10.3                      <                    libphonenumber-8.13.45             <                    librsvg2-rust-2.58.3_2             <                    libxml2-2.11.8                     <                    liveMedia-2022.06.16,2             <                    llvm18-18.1.8_1                    <
+marble-23.08.5_2                   <
+mosh-1.4.0_3                       <
+protobuf-27.3_1,1                  <
+py311-build-1.2.1                  <
+py311-libxml2-2.11.8_1             <
+py311-mdit-py-plugins-0.4.1        <
+py311-pbr-6.0.0                    <
+ruby-3.2.4,1                       <
+rust-bindgen-cli-0.70.1_1          <
+sdl2_image-2.8.2_1                 <
+texlive-texmf-20240312             <
+vlc-3.0.21_4,4                     <
+w3m-0.5.3.20230718_1               <
 ```
 
 下边分别列出 2 种 FreeBSD 手册中提及的升级工具:
