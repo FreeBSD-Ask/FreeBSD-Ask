@@ -130,15 +130,34 @@ tmpfs /tmp tmpfs rw 0 0
 # make install clean
 ```
 
-```sh
-root@ykla:/usr/ports/devel/ccache4 # ccache -M 5G  # 设置编译缓存最大为 5GB
-Set cache size limit to 5.0 GB
+配置：
 
-root@ykla:/usr/ports/devel/ccache4 # ccache -s  # 查看编译缓存
+```sh
+ln -s ccache	/usr/local/bin/gcc
+ln -s ccache	/usr/local/bin/g++
+ln -s ccache	/usr/local/bin/cc
+ln -s ccache	/usr/local/bin/c++
+```
+
+设置编译缓存最大为 5GB：
+
+```sh
+root@ykla:/usr/ports/devel/ccache4 # ccache -M 5G  
+Set cache size limit to 5.0 GB
+```
+
+查看编译缓存：
+
+```sh
+root@ykla:/usr/ports/devel/ccache4 # ccache -s  
 Local storage:
   Cache size (GB): 0.0 / 5.0 ( 0.00%)
+```
 
-root@ykla:~ # ccache -p #查看当前配置文件
+查看当前配置文件：
+
+```sh
+root@ykla:~ # ccache -p 
 (default) absolute_paths_in_stderr = false
 (default) base_dir =
 (default) cache_dir = /root/.cache/ccache
