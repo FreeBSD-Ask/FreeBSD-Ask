@@ -108,7 +108,9 @@ tmpfs /tmp tmpfs rw 0 0
 
 ### ccache
 
-**这部分现在有点问题，先不要用，见 [Bug](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=272917)**
+>**警告**
+>
+>这部分现在有点问题，先不要用，见 [Bug](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=272917)
 
 >**警告**
 >
@@ -188,22 +190,28 @@ DISABLE_SIZE=yes
 
 - wget2
   
-**wget2 正在进行测试！先不要用**
+>**警告**
+>
+>wget2 正在进行测试！先不要用
   
 ```sh
 # cd /usr/ports/www/wget2/ && make install clean
 ```
 新建或者编辑 `# ee /etc/make.conf` 文件，写入以下几行：
 ```sh
-FETCH_CMD=wwget2
+FETCH_CMD=wget2
 FETCH_BEFORE_ARGS= -c -t 3 -o 10
 FETCH_AFTER_ARGS=
 DISABLE_SIZE=yes
 ```
 
-`-c` 断点续传；`-t 3` 重试次数 3；` -o 10` 启用 10 个线程进行下载。
+- `-c` 断点续传；
+- `-t 3` 重试次数 3；
+- ` -o 10` 启用 10 个线程进行下载。
 
-**`10` 这个参数可能过于保守，我一般直接用 `50` 或 `100`。但是要注意很多服务器不支持这么多线程同时下载。**
+>**技巧**
+>
+>`10` 这个参数可能过于保守，我一般直接用 `50` 或 `100`。但是要注意很多服务器不支持这么多线程同时下载。因为可能会给服务器带来较大压力。
 
 
 ## 进阶
