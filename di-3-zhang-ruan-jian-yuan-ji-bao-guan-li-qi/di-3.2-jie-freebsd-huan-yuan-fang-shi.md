@@ -120,24 +120,7 @@ FreeBSD: { enabled: no }
 
 这个源是下载 ports 本身的源。等同于以前的 `portsnap`。
 
-#### 获取压缩文件方法
 
-```sh
-# fetch https://mirrors.nju.edu.cn/freebsd-ports/ports.tar.gz
-```
-
-或者
-
-```sh
-# fetch https://mirrors.ustc.edu.cn/freebsd-ports/ports.tar.gz
-```
-
-然后
-
-```sh
-# tar -zxvf ports.tar.gz -C /usr/ports #解压至路径
-# rm ports.tar.gz #删除存档
-```
 
 #### Git 方法
 
@@ -164,11 +147,35 @@ FreeBSD: { enabled: no }
 >
 >`--depth 1` 会给服务器带来较大计算压力，请尽量使用参数  `--filter=tree:0`。
 
+#### 下载压缩文件的方法
+
+>**警告**
+>
+>通过下载 Port 的压缩文件来使用 Ports，是一次性的：Ports 后续无法更新，建议你优先采用 Git 方法。
+
+
+```sh
+# fetch https://mirrors.nju.edu.cn/freebsd-ports/ports.tar.gz
+```
+
+或者
+
+```sh
+# fetch https://mirrors.ustc.edu.cn/freebsd-ports/ports.tar.gz
+```
+
+然后
+
+```sh
+# tar -zxvf ports.tar.gz -C /usr/ports #解压至路径
+# rm ports.tar.gz #删除存档
+```
+
 ### ports 源
 
 这个源是下载 ports 中的软件的源。
 
-ports 下载路径是 `/usr/ports/distfiles`
+ports 下载路径是 `/usr/ports/distfiles`。
 
 > **警告**
 >
