@@ -140,6 +140,52 @@ Local storage:
 
 root@ykla:~ # find /  -name ccache.conf # 全局查找配置文件路径
 /root/.config/ccache/ccache.conf
+
+root@ykla:~ # ccache -p #查看当前配置文件
+(default) absolute_paths_in_stderr = false
+(default) base_dir =
+(default) cache_dir = /root/.cache/ccache
+(default) compiler =
+(default) compiler_check = mtime
+(default) compiler_type = auto
+(default) compression = true
+(default) compression_level = 0
+(default) cpp_extension =
+(default) debug = false
+(default) debug_dir =
+(default) debug_level = 2
+(default) depend_mode = false
+(default) direct_mode = true
+(default) disable = false
+(default) extra_files_to_hash =
+(default) file_clone = false
+(default) hard_link = false
+(default) hash_dir = true
+(default) ignore_headers_in_manifest =
+(default) ignore_options =
+(default) inode_cache = true
+(default) keep_comments_cpp = false
+(default) log_file =
+(default) max_files = 0
+(/root/.config/ccache/ccache.conf) max_size = 20.0 GB
+(default) msvc_dep_prefix = Note: including file:
+(default) namespace =
+(default) path =
+(default) pch_external_checksum = false
+(default) prefix_command =
+(default) prefix_command_cpp =
+(default) read_only = false
+(default) read_only_direct = false
+(default) recache = false
+(default) remote_only = false
+(default) remote_storage =
+(default) reshare = false
+(default) run_second_cpp = true
+(default) sloppiness =
+(default) stats = true
+(default) stats_log =
+(default) temporary_dir = /root/.cache/ccache/tmp
+(default) umask =
 ```
 
 
