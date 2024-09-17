@@ -37,7 +37,7 @@ root@ykla:/usr/ports # git pull #同步更新上游 Ports
 如果提示本地已经修改，放弃本地修改，再更新：
 
 ```sh
-root@ykla:/usr/ports # git checkout .
+root@ykla:/usr/ports # git checkout . #放弃本地修改
 root@ykla:/usr/ports # git pull
 ```
 
@@ -73,7 +73,7 @@ python: /usr/ports/lang/python
 
 将以下内容写入 `/etc/make.conf`，没有就 `touch` 新建一个。
 
-```sh
+```json
 FORCE_MAKE_JOBS=yes
 MAKE_JOBS_NUMBER=4
 ```
@@ -87,7 +87,7 @@ Linux 如 Gentoo 上一般是直接 `-jx` 或者 `jx+1`, `x` 为核心数。
 # alias ninja='ninja -j4'
 ```
 
-### 设置内存为 tmp
+### 设置内存为 `tmp`
 
 ```sh
 # ee /etc/fstab
