@@ -214,6 +214,9 @@ DISABLE_SIZE=yes
 >`10` 这个参数可能过于保守，我一般直接用 `50` 或 `100`。但是要注意很多服务器不支持这么多线程同时下载。因为可能会给服务器带来较大压力。
 
 
+### 参考文献
+
+- [ports --	contributed applications](https://man.freebsd.org/cgi/man.cgi?query=ports&sektion=7)，`FETCH_CMD` 的出处
 ## 进阶
 
 如果不选择 `BATCH=yes` 的方法手动配置：
