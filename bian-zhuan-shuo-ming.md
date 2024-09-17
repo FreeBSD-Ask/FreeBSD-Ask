@@ -43,8 +43,6 @@
 # make BATCH=yes install clean
 ```
 
-全文中，所有的 `BATCH` 也可以写成小写 `batch`。
-
 如果你想一次性完成所有配置：
 
 ```sh
