@@ -9,7 +9,7 @@
 
 示例：
 
-要安装软件 `yyy`，`yyy` 在 ports 里是 `xxx/yyy`。
+要安装软件 `yyy`，`yyy` 在 ports 里是 `xxx/yyy`，即路径是 `/usr/ports/xxx/yyy`。
 
 - 那么首先可以通过 pkg 安装二进制软件包，和绝大多数 Linux 用法一样，下同：
 
