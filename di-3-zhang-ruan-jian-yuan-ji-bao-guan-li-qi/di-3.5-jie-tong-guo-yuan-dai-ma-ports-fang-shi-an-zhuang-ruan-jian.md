@@ -110,7 +110,7 @@ tmpfs /tmp tmpfs rw 0 0
 
 >**警告**
 >
->这部分现在有点问题，先不要用，见 [Bug](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=272917)
+>默认的自动化配置工具无论是 ccahe3 还是 4 都有问题，需要手动配置如下，参见 [Bug](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=272917)
 
 >**警告**
 >
