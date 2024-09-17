@@ -255,11 +255,7 @@ ports 编译的软件也可以转换为 pkg 包
 
 ## FreeBSD 包升级管理工具
 
-首先更新 Ports
-
-```sh
-# portsnap auto
-```
+同步更新 Ports Git。
 
 然后列出过时 Port 软件：
 
