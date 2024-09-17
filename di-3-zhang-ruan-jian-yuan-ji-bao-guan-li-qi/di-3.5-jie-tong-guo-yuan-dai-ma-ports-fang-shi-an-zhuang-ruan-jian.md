@@ -266,7 +266,12 @@ firefox-esr-115.15.0,1             <
 gdal-3.9.2                         <
 geos-3.12.2                        <
 imlib2-1.12.3,2                    <
-kf5-kimageformats-5.116.0          <                    libjxl-0.10.3                      <                    libphonenumber-8.13.45             <                    librsvg2-rust-2.58.3_2             <                    libxml2-2.11.8                     <                    liveMedia-2022.06.16,2             <                    llvm18-18.1.8_1                    <
+kf5-kimageformats-5.116.0          <                   
+libjxl-0.10.3                      <                    
+libphonenumber-8.13.45             <                    
+librsvg2-rust-2.58.3_2             <                    
+libxml2-2.11.8                     <                    liveMedia-2022.06.16,2             <                    
+llvm18-18.1.8_1                    <
 marble-23.08.5_2                   <
 mosh-1.4.0_3                       <
 protobuf-27.3_1,1                  <
