@@ -64,6 +64,219 @@ python: /usr/ports/lang/python
 
 其中 `BATCH=yes` 意味着使用默认参数进行编译。
 
+### 查看依赖
+
+已经安装：
+
+```sh
+root@ykla:~ # pkg info -d screen
+screen-4.9.0_6:
+	indexinfo-0.3.1
+```
+
+未安装：
+
+```sh
+root@ykla:/usr/ports/sysutils/htop # make all-depends-list
+/usr/ports/ports-mgmt/pkg
+/usr/ports/devel/pkgconf
+/usr/ports/devel/kyua
+/usr/ports/devel/lutok
+/usr/ports/lang/lua54
+/usr/ports/devel/libedit
+/usr/ports/databases/sqlite3
+/usr/ports/lang/tcl86
+/usr/ports/lang/python311
+/usr/ports/devel/gettext-runtime
+/usr/ports/print/indexinfo
+/usr/ports/devel/gettext-tools
+/usr/ports/devel/libtextstyle
+/usr/ports/devel/libffi
+/usr/ports/misc/dejagnu
+/usr/ports/devel/gmake
+/usr/ports/lang/expect
+/usr/ports/devel/autoconf
+/usr/ports/devel/m4
+/usr/ports/print/texinfo
+/usr/ports/misc/help2man
+/usr/ports/devel/p5-Locale-gettext
+/usr/ports/lang/perl5.34
+/usr/ports/devel/p5-Locale-libintl
+/usr/ports/converters/libiconv
+/usr/ports/converters/p5-Text-Unidecode
+/usr/ports/textproc/p5-Unicode-EastAsianWidth
+/usr/ports/devel/autoconf-switch
+/usr/ports/devel/automake
+/usr/ports/math/mpdecimal
+/usr/ports/devel/readline
+/usr/ports/devel/libtool
+```
+
+### 更新 FreeBSD 软件包/Port
+
+先同步更新 Ports Git。
+
+然后列出过时 Port 软件：
+
+```sh
+root@ykla:/usr/ports # pkg version -l '<'
+aom-3.10.0                         <
+chromium-127.0.6533.99             <
+curl-8.9.1_1                       <
+expat-2.6.2                        <
+ffmpeg-6.1.2,1                     <
+firefox-esr-115.15.0,1             <
+gdal-3.9.2                         <
+geos-3.12.2                        <
+imlib2-1.12.3,2                    <
+kf5-kimageformats-5.116.0          <                   
+libjxl-0.10.3                      <                    
+libphonenumber-8.13.45             <                    
+librsvg2-rust-2.58.3_2             <                    
+libxml2-2.11.8                     <                    
+liveMedia-2022.06.16,2             <                    
+llvm18-18.1.8_1                    <
+marble-23.08.5_2                   <
+mosh-1.4.0_3                       <
+protobuf-27.3_1,1                  <
+py311-build-1.2.1                  <
+py311-libxml2-2.11.8_1             <
+py311-mdit-py-plugins-0.4.1        <
+py311-pbr-6.0.0                    <
+ruby-3.2.4,1                       <
+rust-bindgen-cli-0.70.1_1          <
+sdl2_image-2.8.2_1                 <
+texlive-texmf-20240312             <
+vlc-3.0.21_4,4                     <
+w3m-0.5.3.20230718_1               <
+```
+
+下边分别列出 2 种 FreeBSD 手册中提及的升级工具:
+
+1、portupgrade
+
+```sh
+# cd /usr/ports/ports-mgmt/portupgrade && make install clean
+# portupgrade -ai #自动升级所有软件，i 会挨个确认
+# portupgrade -R screen #升级单个软件
+# portupgrade -a --batch		#不要问，只做，等同于  BATCH=yes
+```
+
+2、portmaster （推荐）
+
+- 更新：
+
+```sh
+# cd /usr/ports/ports-mgmt/portmaster && make install clean
+# portmaster -a #自动升级所有软件
+# portmaster screen #升级单个软件
+```
+
+如果不想回答问题解决依赖，可使用类似 BATCH=yes 的选项 `-a -G --no-confirm`：
+
+```sh
+# portmaster -a -G --no-confirm
+```
+
+- 查看依赖关系：
+
+```sh
+root@ykla:/usr/ports/ports-mgmt/portmaster # portmaster sysutils/htop  --show-work
+
+===>>> Port directory: /usr/ports/sysutils/htop
+
+===>>> Starting check for all dependencies
+===>>> Gathering dependency list for sysutils/htop from ports
+
+===>>> Installed devel/autoconf
+===>>> Installed devel/automake
+===>>> NOT INSTALLED		devel/libtool
+===>>> NOT INSTALLED		devel/pkgconf
+===>>> NOT INSTALLED		lang/python311
+===>>> Installed ports-mgmt/pkg
+```
+
+### 参考资料
+
+- [portmaster -- manage your ports without external databases or languages](https://man.freebsd.org/cgi/man.cgi?portmaster(8))
+- [portupgrade,  portinstall -- tools to upgrade installed packages	or in- stall new ones via ports	or packages](https://man.freebsd.org/cgi/man.cgi?portupgrade(1))
+  
+
+## FreeBSD ports 高阶用法
+
+如果不选择 `BATCH=yes` 的方法手动配置：
+
+看看 python 的 ports 在哪：
+
+```sh
+# whereis python
+# python: /usr/ports/lang/python
+```
+
+安装 python3：
+
+```sh
+# cd /usr/ports/lang/python
+```
+
+如何设置全部所需的依赖：
+
+```sh
+# make config-recursive
+```
+
+如何删除当前 port 及其依赖的配置文件：
+
+```sh
+# make rmconfig-recursive
+```
+
+如何一次性下载所有需要的软件包：
+
+```sh
+# make BATCH=yes fetch-recursive
+```
+
+ports 编译的软件也可以转换为 pkg 包
+
+```sh
+# pkg create nginx
+```
+### FreeBSD USE
+
+- 如何指定 Ports 编译的版本？
+
+如 Python 现在的默认编译版本是 3.9，要改为 3.11，：
+
+```sh
+# echo "DEFAULT_VERSIONS+= python=3.11  python3=3.11" >> /etc/make.conf
+```
+>如果只设置了单个参数，那么出现警告是正常的，见 [Bug](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=243034)
+>```sh
+>/!\ WARNING /!\
+>
+>PYTHON_DEFAULT must be a version present in PYTHON2_DEFAULT or PYTHON3_DEFAULT,
+>if you want more Python flavors, set BUILD_ALL_PYTHON_FLAVORS in your make.conf
+>```
+
+
+完整的列表见 <https://cgit.freebsd.org/ports/tree/Mk/bsd.default-versions.mk>
+
+### 参考资料
+
+- [Ports/DEFAULT_VERSIONS](https://wiki.freebsd.org/Ports/DEFAULT_VERSIONS)
+- [Python](https://wiki.freebsd.org/Python)
+
+
+- 如何全局屏蔽 mysql
+
+```sh
+# echo "OPTION_UNSET+= MYSQL" >> /etc/make.conf
+```
+
+
+
+
 ## 加速编译
 
 ### FreeBSD ports 多线程编译（推荐）
@@ -270,218 +483,7 @@ DISABLE_SIZE=yes
 >`10` 这个参数可能过于保守，我一般直接用 `50` 或 `100`。但是要注意很多服务器不支持这么多线程同时下载。因为可能会给服务器带来较大压力。
 
 
-### 参考文献
+#### 参考文献
 
 - [ports --	contributed applications](https://man.freebsd.org/cgi/man.cgi?query=ports&sektion=7)，`FETCH_CMD` 的出处
-## 进阶
-
-如果不选择 `BATCH=yes` 的方法手动配置：
-
-看看 python 的 ports 在哪：
-
-```sh
-# whereis python
-# python: /usr/ports/lang/python
-```
-
-安装 python3：
-
-```sh
-# cd /usr/ports/lang/python
-```
-
-如何设置全部所需的依赖：
-
-```sh
-# make config-recursive
-```
-
-如何删除当前 port 及其依赖的配置文件：
-
-```sh
-# make rmconfig-recursive
-```
-
-如何一次性下载所有需要的软件包：
-
-```sh
-# make BATCH=yes fetch-recursive
-```
-
-ports 编译的软件也可以转换为 pkg 包
-
-```sh
-# pkg create nginx
-```
-
-## FreeBSD 包升级管理工具
-
-先同步更新 Ports Git。
-
-然后列出过时 Port 软件：
-
-```sh
-root@ykla:/usr/ports # pkg version -l '<'
-aom-3.10.0                         <
-chromium-127.0.6533.99             <
-curl-8.9.1_1                       <
-expat-2.6.2                        <
-ffmpeg-6.1.2,1                     <
-firefox-esr-115.15.0,1             <
-gdal-3.9.2                         <
-geos-3.12.2                        <
-imlib2-1.12.3,2                    <
-kf5-kimageformats-5.116.0          <                   
-libjxl-0.10.3                      <                    
-libphonenumber-8.13.45             <                    
-librsvg2-rust-2.58.3_2             <                    
-libxml2-2.11.8                     <                    
-liveMedia-2022.06.16,2             <                    
-llvm18-18.1.8_1                    <
-marble-23.08.5_2                   <
-mosh-1.4.0_3                       <
-protobuf-27.3_1,1                  <
-py311-build-1.2.1                  <
-py311-libxml2-2.11.8_1             <
-py311-mdit-py-plugins-0.4.1        <
-py311-pbr-6.0.0                    <
-ruby-3.2.4,1                       <
-rust-bindgen-cli-0.70.1_1          <
-sdl2_image-2.8.2_1                 <
-texlive-texmf-20240312             <
-vlc-3.0.21_4,4                     <
-w3m-0.5.3.20230718_1               <
-```
-
-下边分别列出 2 种 FreeBSD 手册中提及的升级工具:
-
-1、portupgrade
-
-```sh
-# cd /usr/ports/ports-mgmt/portupgrade && make install clean
-# portupgrade -ai #自动升级所有软件，i 会挨个确认
-# portupgrade -R screen #升级单个软件
-# portupgrade -a --batch		#不要问，只做，等同于  BATCH=yes
-```
-
-2、portmaster （推荐）
-
-- 更新：
-
-```sh
-# cd /usr/ports/ports-mgmt/portmaster && make install clean
-# portmaster -a #自动升级所有软件
-# portmaster screen #升级单个软件
-```
-
-如果不想回答问题解决依赖，可使用类似 BATCH=yes 的选项 `-a -G --no-confirm`：
-
-```sh
-# portmaster -a -G --no-confirm
-```
-
-- 查看依赖关系：
-
-```sh
-root@ykla:/usr/ports/ports-mgmt/portmaster # portmaster sysutils/htop  --show-work
-
-===>>> Port directory: /usr/ports/sysutils/htop
-
-===>>> Starting check for all dependencies
-===>>> Gathering dependency list for sysutils/htop from ports
-
-===>>> Installed devel/autoconf
-===>>> Installed devel/automake
-===>>> NOT INSTALLED		devel/libtool
-===>>> NOT INSTALLED		devel/pkgconf
-===>>> NOT INSTALLED		lang/python311
-===>>> Installed ports-mgmt/pkg
-```
-
-- 安装软件
-
-### 参考资料
-
-- [portmaster -- manage your ports without external databases or languages](https://man.freebsd.org/cgi/man.cgi?portmaster(8))
-- [portupgrade,  portinstall -- tools to upgrade installed packages	or in- stall new ones via ports	or packages](https://man.freebsd.org/cgi/man.cgi?portupgrade(1))
-  
-## FreeBSD USE
-
-- 如何指定 Ports 编译的版本？
-
-如 Python 现在的默认编译版本是 3.9，要改为 3.11，：
-
-```sh
-# echo "DEFAULT_VERSIONS+= python=3.11  python3=3.11" >> /etc/make.conf
-```
->如果只设置了单个参数，那么出现警告是正常的，见 [Bug](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=243034)
->```sh
->/!\ WARNING /!\
->
->PYTHON_DEFAULT must be a version present in PYTHON2_DEFAULT or PYTHON3_DEFAULT,
->if you want more Python flavors, set BUILD_ALL_PYTHON_FLAVORS in your make.conf
->```
-
-
-完整的列表见 <https://cgit.freebsd.org/ports/tree/Mk/bsd.default-versions.mk>
-
-### 参考资料
-
-- [Ports/DEFAULT_VERSIONS](https://wiki.freebsd.org/Ports/DEFAULT_VERSIONS)
-- [Python](https://wiki.freebsd.org/Python)
-
-
-- 如何全局屏蔽 mysql
-
-```sh
-# echo "OPTION_UNSET+= MYSQL" >> /etc/make.conf
-```
-
-## 查看依赖
-
-已经安装：
-
-```sh
-root@ykla:~ # pkg info -d screen
-screen-4.9.0_6:
-	indexinfo-0.3.1
-```
-
-未安装：
-
-```sh
-root@ykla:/usr/ports/sysutils/htop # make all-depends-list
-/usr/ports/ports-mgmt/pkg
-/usr/ports/devel/pkgconf
-/usr/ports/devel/kyua
-/usr/ports/devel/lutok
-/usr/ports/lang/lua54
-/usr/ports/devel/libedit
-/usr/ports/databases/sqlite3
-/usr/ports/lang/tcl86
-/usr/ports/lang/python311
-/usr/ports/devel/gettext-runtime
-/usr/ports/print/indexinfo
-/usr/ports/devel/gettext-tools
-/usr/ports/devel/libtextstyle
-/usr/ports/devel/libffi
-/usr/ports/misc/dejagnu
-/usr/ports/devel/gmake
-/usr/ports/lang/expect
-/usr/ports/devel/autoconf
-/usr/ports/devel/m4
-/usr/ports/print/texinfo
-/usr/ports/misc/help2man
-/usr/ports/devel/p5-Locale-gettext
-/usr/ports/lang/perl5.34
-/usr/ports/devel/p5-Locale-libintl
-/usr/ports/converters/libiconv
-/usr/ports/converters/p5-Text-Unidecode
-/usr/ports/textproc/p5-Unicode-EastAsianWidth
-/usr/ports/devel/autoconf-switch
-/usr/ports/devel/automake
-/usr/ports/math/mpdecimal
-/usr/ports/devel/readline
-/usr/ports/devel/libtool
-```
 
