@@ -308,12 +308,6 @@ DISABLE_SIZE=yes
 # make BATCH=yes fetch-recursive
 ```
 
-升级 ports
-
-```sh
-# portsnap auto
-```
-
 ports 编译的软件也可以转换为 pkg 包
 
 ```sh
@@ -322,7 +316,7 @@ ports 编译的软件也可以转换为 pkg 包
 
 ## FreeBSD 包升级管理工具
 
-同步更新 Ports Git。
+先同步更新 Ports Git。
 
 然后列出过时 Port 软件：
 
@@ -365,9 +359,9 @@ w3m-0.5.3.20230718_1               <
 
 ```sh
 # cd /usr/ports/ports-mgmt/portupgrade && make install clean
-# portupgrade -ai #自动升级所有软件
+# portupgrade -ai #自动升级所有软件，i 会挨个确认
 # portupgrade -R screen #升级单个软件
-# portupgrade -ai --batch		#不要问，只做，等同于  BATCH=yes
+# portupgrade -a --batch		#不要问，只做，等同于  BATCH=yes
 ```
 
 2、portmaster （推荐）
