@@ -486,5 +486,5 @@ DISABLE_SIZE=yes
 
 #### 参考文献
 
-- [ports --	contributed applications](https://man.freebsd.org/cgi/man.cgi?query=ports&sektion=7)，`FETCH_CMD` 的出处
+- [ports --	contributed applications](https://man.freebsd.org/cgi/man.cgi?query=ports&sektion=7)，`FETCH_CMD` 的出处，同时也是参数 `BATCH` 的出处。
 
