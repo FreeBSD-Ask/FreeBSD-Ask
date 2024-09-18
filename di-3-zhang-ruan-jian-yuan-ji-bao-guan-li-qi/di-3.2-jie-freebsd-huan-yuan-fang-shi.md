@@ -31,9 +31,7 @@ Gentoo Linux: Portage，对应 Ports（Portage 本身就是 Ports 的仿制品�
 > 	using git instead.
 > ````
 
-> **警告**
->
-> FreeBSD 关于弃用 portsnap 的说明：[[HEADS UP] Planned deprecation of portsnap](https://marc.info/?l=freebsd-ports&m=159656662608767&w=2)。
+
 
 对于失去安全支持的版本，请参考最后本文一节。
 
@@ -59,7 +57,7 @@ FreeBSD 中 pkg 源分为系统级和用户级两个配置文件。**不建议**
 > > # sed -i '' 's/quarterly/latest/g' /etc/pkg/FreeBSD.conf
 > > ```
 >
-> **若要使用 https,请先安装 `security/ca_root_nss`，并将 `http` 修改为 `https`，最后使用命令 `# pkg update -f` 刷新缓存即可，下同。**
+> **若要使用 https，请先安装 `security/ca_root_nss`，并将 `http` 修改为 `https`，最后使用命令 `# pkg update -f` 刷新缓存即可，下同。**
 
 
 ### 网易开源镜像站
@@ -226,6 +224,10 @@ MASTER_SITE_OVERRIDE?=http://mirrors.ustc.edu.cn/freebsd-ports/distfiles/${DIST_
 ```
 
 ## portsnap 源：打包的 ports 文件（FreeBSD 14.0 及以后不可用）
+
+> **警告**
+>
+> FreeBSD 关于弃用 portsnap 的说明：[[HEADS UP] Planned deprecation of portsnap](https://marc.info/?l=freebsd-ports&m=159656662608767&w=2)。
 
 **获取 portsnap 更新**
 
