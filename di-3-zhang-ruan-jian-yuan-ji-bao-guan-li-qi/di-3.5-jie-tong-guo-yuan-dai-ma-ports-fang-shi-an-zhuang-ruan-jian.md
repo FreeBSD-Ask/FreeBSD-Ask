@@ -112,6 +112,47 @@ root@ykla:/usr/ports/sysutils/htop # make all-depends-list
 /usr/ports/devel/libtool
 ```
 
+### 杂项
+
+如果不选择 `BATCH=yes` 的方法手动配置：
+
+看看 python 的 ports 在哪：
+
+```sh
+# whereis python
+# python: /usr/ports/lang/python
+```
+
+安装 python3：
+
+```sh
+# cd /usr/ports/lang/python
+```
+
+如何设置全部所需的依赖：
+
+```sh
+# make config-recursive
+```
+
+如何删除当前 port 及其依赖的配置文件：
+
+```sh
+# make rmconfig-recursive
+```
+
+如何一次性下载所有需要的软件包：
+
+```sh
+# make BATCH=yes fetch-recursive
+```
+
+ports 编译的软件也可以转换为 pkg 包
+
+```sh
+# pkg create nginx
+```
+
 ### 更新 FreeBSD 软件包/Port
 
 先同步更新 Ports Git。
@@ -153,7 +194,7 @@ w3m-0.5.3.20230718_1               <
 
 下边分别列出 2 种 FreeBSD 手册中提及的升级工具:
 
-1、portupgrade
+①、portupgrade
 
 ```sh
 # cd /usr/ports/ports-mgmt/portupgrade && make install clean
@@ -162,7 +203,7 @@ w3m-0.5.3.20230718_1               <
 # portupgrade -a --batch		#不要问，只做，等同于  BATCH=yes
 ```
 
-2、portmaster （推荐）
+②、portmaster （推荐）
 
 - 更新：
 
@@ -202,47 +243,7 @@ root@ykla:/usr/ports/ports-mgmt/portmaster # portmaster sysutils/htop  --show-wo
 - [portupgrade,  portinstall -- tools to upgrade installed packages	or in- stall new ones via ports	or packages](https://man.freebsd.org/cgi/man.cgi?portupgrade(1))
   
 
-## FreeBSD ports 高阶用法
-
-如果不选择 `BATCH=yes` 的方法手动配置：
-
-看看 python 的 ports 在哪：
-
-```sh
-# whereis python
-# python: /usr/ports/lang/python
-```
-
-安装 python3：
-
-```sh
-# cd /usr/ports/lang/python
-```
-
-如何设置全部所需的依赖：
-
-```sh
-# make config-recursive
-```
-
-如何删除当前 port 及其依赖的配置文件：
-
-```sh
-# make rmconfig-recursive
-```
-
-如何一次性下载所有需要的软件包：
-
-```sh
-# make BATCH=yes fetch-recursive
-```
-
-ports 编译的软件也可以转换为 pkg 包
-
-```sh
-# pkg create nginx
-```
-### FreeBSD USE
+## FreeBSD USE
 
 - 如何指定 Ports 编译的版本？
 
