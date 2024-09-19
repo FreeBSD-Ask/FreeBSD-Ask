@@ -499,15 +499,16 @@ Local+Descendent permissions:
         user test create,destroy,mount,snapshot
 ```
 
+卸载：
 ```sh
 root safreya # zfs unmount zroot/home/test
 root safreya # zfs unload-key  zroot/home/test
 ```
 
-加载：
+切换到普通用户 `test` 挂载尝试：
 
 ```sh
-root safreya # su test
+# su test
 $ zfs load-key zroot/home/test
 Enter passphrase for 'zroot/home/test':
 Key load error: Permission denied.
