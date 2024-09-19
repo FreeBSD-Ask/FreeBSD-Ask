@@ -113,7 +113,7 @@ root@ykla:/home/ykla #
 # zfs clone zroot/ROOT/default@new zroot/ROOT/new         # 用刚建的快照复制一个镜像
 ```
 
-复制的镜像可以作为一个启动环境，可以用工具 bectl 查看可用的启动环境
+复制的镜像可以作为一个启动环境，可以用工具 `bectl` 查看可用的启动环境
 
 ```sh
 # bectl list
@@ -124,7 +124,7 @@ new                               -      -          432K  2023-09-20 15:17
 default                           NR     /          40.8G 2023-04-10 10:06
 ```
 
-其中 Active 这一列中 `N` 表示当前使用环境，`R` 表示下次启动时使用的环境。bectl 工具可以改变下次使用的启动环境（在启动 FreeBSD 时，启动菜单里选 `8`，也可以改变启动环境）
+其中 Active 这一列中 `N` 表示当前使用环境，`R` 表示下次启动时使用的环境。`bectl` 工具可以改变下次使用的启动环境（在启动 FreeBSD 时，启动菜单里选 `8`，也可以改变启动环境）
 
 ```sh
 bectl activate new
@@ -155,7 +155,7 @@ fdescfs                     1        1         0   100%    /dev/fd
 
 切换回 `zroot/ROOT/default` 启动环境，在启动菜单里选择 default 启动环境，或如上用 `bectl activate default` 切换到 default 启动环境
 
-用法扩展：可以把一个启动环境升级为 FreeBSD 14，实现 13、14 多版本共存（实现的代价是 zfs 不能升级，一升级就挂了，实践的意义不大）。
+用法扩展：可以把一个启动环境升级为 FreeBSD 14，实现 13、14 多版本共存（**实现的代价是 zfs 不能升级，一升级就挂了，因为旧版 ZFS 程序无法向后兼容。实践的意义不大，可以仅做备份还原使用**）。
 
 参考文献：
 
