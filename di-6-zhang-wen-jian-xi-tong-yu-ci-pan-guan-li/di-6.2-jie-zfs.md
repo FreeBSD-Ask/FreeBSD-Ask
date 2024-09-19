@@ -461,7 +461,7 @@ Login class [default]:
 Shell (sh csh tcsh zsh rzsh git-shell bash rbash nologin) [sh]:
 Home directory [/home/test]:
 Home directory permissions (Leave empty for default):
-Enable ZFS encryption? (yes/no) [no]: yes
+Enable ZFS encryption? (yes/no) [no]: yes #该功能为新增功能
 Use password-based authentication? [yes]:
 Use an empty password? (yes/no) [no]:
 Use a random password? (yes/no) [no]:
