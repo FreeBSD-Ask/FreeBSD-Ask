@@ -142,7 +142,7 @@ new                               R      /          2.84M 2023-09-20 15:17
 default                           N      -          40.8G 2023-04-10 10:06
 ```
 
-重启 FreeBSD （启动菜单里选择 new 启动环境，或如上用 `bectl activate new` 切换到 new 启动环境），用 df 观察，挂载的根目录的文件系统已经是 `zroot/ROOT/new`
+重启 FreeBSD （启动菜单里选择 `new` 启动环境，或如上用 `bectl activate new` 切换到 new 启动环境），用 `df` 观察，挂载的根目录的文件系统已经是 `zroot/ROOT/new`
 
 ```sh
 # df
@@ -155,7 +155,7 @@ fdescfs                     1        1         0   100%    /dev/fd
 
 切换回 `zroot/ROOT/default` 启动环境，在启动菜单里选择 default 启动环境，或如上用 `bectl activate default` 切换到 default 启动环境
 
-用法扩展：可以把一个启动环境升级为 FreeBSD 14，实现 13、14 多版本共存。
+用法扩展：可以把一个启动环境升级为 FreeBSD 14，实现 13、14 多版本共存（实现的代价是 zfs 不能升级，一升级就挂了，实践的意义不大）。
 
 参考文献：
 
@@ -251,6 +251,186 @@ zroot       ONLINE       0     0     0
 errors: No known data errors
 ```
 
+## zfs用户级管理
+
+zfs 允许非特权用户管理。
+
+FreeBSD 14.1 开始  `bsdinstall(8)` 使用的 `adduser(8)` 工具, 在用户的主目录的父目录位于 zfs 数据集上时，将为新用户的主目录创建一个 zfs 数据集。`adduser`  的 `-Z` 选项禁用这一行为。zfs 加密功能也已经可用。
+
+以下假设使用 `FreeBSD 14.1` 。
+
+### 基础的 zfs 用户级管理
+
+先了解一下非特权用户的 zfs 数据集。
+
+```
+safreya ~ % zfs list
+NAME                                           USED  AVAIL  REFER  MOUNTPOINT
+zroot                                         53.7G   396G    96K  /zroot
+zroot/ROOT                                    12.8G   396G    96K  none
+zroot/ROOT/14.1-RELEASE-p3_2024-09-17_194642     8K   396G  11.6G  /
+zroot/ROOT/default                            12.8G   396G  11.9G  /
+zroot/aria2                                    187M   396G   187M  /usr/local/data/aria2
+zroot/home                                    7.74G   396G    96K  /home
+zroot/home/aria2                               128K   396G   128K  /home/aria2
+zroot/home/safreya                            7.74G   396G  7.70G  /home/safreya
+zroot/jails                                   3.12G   396G  3.12G  /usr/jails
+zroot/sec                                     28.5G   396G  28.5G  /usr/local/data/sec
+zroot/tmp                                      102M   396G   102M  /tmp
+zroot/usr                                     1.34G   396G    96K  /usr
+zroot/usr/ports                               1.34G   396G  1.34G  /usr/ports
+zroot/usr/src                                   96K   396G    96K  /usr/src
+zroot/var                                     1.58M   396G    96K  /var
+zroot/var/audit                                 96K   396G    96K  /var/audit
+zroot/var/crash                                 96K   396G    96K  /var/crash
+zroot/var/log                                 1.02M   396G  1.02M  /var/log
+zroot/var/mail                                 168K   396G   168K  /var/mail
+zroot/var/tmp                                  120K   396G   120K  /var/tmp
+safreya ~ %
+```
+
+其中
+
+```
+zroot/home/aria2                               128K   396G   128K  /home/aria2
+zroot/home/safreya                            7.74G   396G  7.70G  /home/safreya
+```
+
+指出创建用户时，已经为用户 `safreya` 、`aria2` 创建单独的数据集。
+
+接下来查看一下两个数据集上用户的权限。
+
+```
+safreya ~ % zfs allow zroot/home/aria2
+---- Permissions on zroot/home/aria2 ---------------------------------
+Local+Descendent permissions:
+        user aria2 create,destroy,mount,snapshot
+safreya ~ % zfs allow zroot/home/safreya
+---- Permissions on zroot/home/safreya -------------------------------
+Local+Descendent permissions:
+        user safreya create,destroy,mount,snapshot
+safreya ~ %
+```
+
+创建用户时，默认为用户设置 `create`, `destroy`, `mount`, `snapshot` 四项权限。
+
+所以这里普通用户可以使用快照功能
+
+```
+safreya ~ % zfs snap zroot/home/safreya@snap1
+safreya ~ % zfs list -t snap
+NAME                                       USED  AVAIL  REFER  MOUNTPOINT
+zroot/ROOT/default@20240907                161M      -  11.4G  -
+zroot/ROOT/default@2024-09-17-19:46:42-0   159M      -  11.6G  -
+zroot/home/safreya@test1                  38.3M      -  7.17G  -
+zroot/home/safreya@snap1                     0B      -  7.70G  -
+safreya ~ %
+```
+
+再来看 `create`, `destroy`, `mount` 权限
+
+```
+safreya ~ % zfs create zroot/home/safreya/dataset_1
+cannot mount 'zroot/home/safreya/dataset_1': Insufficient privileges
+filesystem successfully created, but not mounted
+safreya ~ % su -m root -c 'sysctl vfs.usermount=1'
+Password:
+vfs.usermount: 0 -> 1
+safreya ~ % zfs create zroot/home/safreya/dataset_2
+safreya ~ % zfs list
+NAME                                           USED  AVAIL  REFER  MOUNTPOINT
+      ...
+      
+zroot/home                                    7.79G   396G    96K  /home
+zroot/home/aria2                               128K   396G   128K  /home/aria2
+zroot/home/safreya                            7.79G   396G  7.68G  /home/safreya
+zroot/home/safreya/dataset_1                    96K   396G    96K  /home/safreya/dataset_1
+zroot/home/safreya/dataset_2                    96K   396G    96K  /home/safreya/dataset_2
+      ...
+
+safreya ~ % zfs destroy zroot/home/safreya/dataset_1
+safreya ~ % zfs destroy zroot/home/safreya/dataset_2      
+```
+
+创建(create)权限可以正常使用，但是挂载(mount)权限需要开启 `vfs.usermount` 核心参数，以允许用户级挂载。销毁(destroy)权限正常使用。
+
+到这里用户级的 zfs 管理需求已经基本满足。但是你够仔细的话会发现 rollback 权限并不可用,可以用 root 用户授权普通用户 rollback 权限。即：
+
+```
+safreya ~ % zfs rollback zroot/home/safreya@snap1
+cannot rollback 'zroot/home/safreya': permission denied
+safreya ~ % su -m root -c 'zfs allow safreya rollback zroot/home/safreya'
+Password:
+safreya ~ % zfs rollback zroot/home/safreya@snap1
+safreya ~ %
+```
+
+### 用户级 zfs 加密功能
+
+FreeBSD 14.1 中 zfs 已经支持加密功能。在用户级使用中需要为用户授于特定权限。
+
+```
+safreya ~ % su -m root -c 'zfs allow safreya change-key,load-key,keyformat,keylocation,encryption zroot/home/safreya'
+Password:
+safreya ~ % zfs allow zroot/home/safreya
+---- Permissions on zroot/home/safreya -------------------------------
+Local+Descendent permissions:
+        user safreya change-key,create,destroy,encryption,keyformat,keylocation,load-key,mount,snapshot
+safreya ~ %
+```
+
+`change-key`, `load-key`, `keyformat`, `keylocation`, `encryption` 这五个权限属性都用于 zfs 加密功能。现在创建一个加密数据集：
+
+```
+safreya ~ % zfs create -o encryption=on -o keyformat=passphrase zroot/home/safreya/secret
+Enter new passphrase:
+Re-enter new passphrase:
+safreya ~ % zfs get mounted zroot/home/safreya/secret
+NAME                       PROPERTY  VALUE    SOURCE
+zroot/home/safreya/secret  mounted   yes      -
+safreya ~ %
+```
+
+查看 `mounted` 属性，加密数据集创建即挂载，现在创建一个文件，然后卸载加密数据集：
+
+```
+safreya ~ % cd secret
+safreya secret % echo "a secret makes a man mad" >asecretmakesawomanwoman.txt
+safreya secret % cd ..
+safreya ~ % zfs unmount zroot/home/safreya/secret
+safreya ~ % zfs unload-key zroot/home/safreya/secret
+safreya ~ % zfs get mounted zroot/home/safreya/secret
+NAME                       PROPERTY  VALUE    SOURCE
+zroot/home/safreya/secret  mounted   no       -
+safreya ~ % ls secret
+safreya ~ %
+```
+
+卸载加密数据集必须记得也要卸载密钥。挂载加密数据集要先加载密钥：
+
+```sh
+safreya ~ % zfs load-key zroot/home/safreya/secret
+Enter passphrase for 'zroot/home/safreya/secret':
+safreya ~ % zfs mount zroot/home/safreya/secret
+safreya ~ % ls secret
+Permissions Size User    Date Modified Name
+.rw-r--r--    25 safreya 19 Sep 20:26   asecretmakesawomanwoman.txt
+safreya ~ %
+```
+
+注意： destroy 子命令不管数据集是否挂载，都可以成功销毁数据集，因为默认有 destroy 权限，所以如果非用户本人操作系统的话，可能出现 “我得不到的，就毁灭” 的情况。而且要记住的是，“授权” 是授于普通用户“代理权限”，操作有授权的数据集时相当于 root，过程不需要密码。因此在授于权限时还要综合考虑，合理的限制授权范围和权限属性，如禁用 destroy 权限属性等。
+
+```
+safreya ~ % su -m root -c 'zfs unallow safreya destroy zroot/home/safreya'
+Password:
+safreya ~ % zfs allow  zroot/home/safreya
+---- Permissions on zroot/home/safreya -------------------------------
+Local+Descendent permissions:
+        user safreya change-key,create,encryption,keyformat,keylocation,load-key,mount,rollback,snapshot
+safreya ~ %
+```
+
+这里 `zroot/home/safreya/secret` 继承 `zroot/home/safreya` 数据集的权限属性，授权反授权都针对 `zroot/home/safreya`, 对 `zroot/home/safreya/secret` 操作不起作用。
 
   
 ## 注意事项
