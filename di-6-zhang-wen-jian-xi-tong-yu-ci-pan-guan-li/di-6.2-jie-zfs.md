@@ -426,7 +426,7 @@ Enter passphrase for 'zroot/home/safreya/secret':
 safreya ~ % zfs mount zroot/home/safreya/secret
 safreya ~ % ls secret
 Permissions Size User    Date Modified Name
-.rw-r--r--    25 safreya 19 Sep 20:26   abc.txt
+.rw-r--r--    25 safreya 19 Sep 20:26  abc.txt
 ```
 
 注意： 子命令 `destroy` 不管数据集是否挂载，都可以成功销毁数据集，因为 `destroy` 权限是默认就授予的，所以如果非用户本人操作系统的话，可能出现“我得不到的，就毁灭”的情况。而且要记住的是，“授权”是授于普通用户“代理权限”，操作有授权的数据集时相当于 root，过程不需要密码。因此在授于权限时还要综合考虑，合理的限制授权范围和权限属性，如禁用 `destroy` 权限属性等。
