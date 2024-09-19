@@ -215,9 +215,9 @@ the boot code. See gptzfsboot(8) and loader.efi(8) for details.
 
 ### 重写引导（仅非 EFI 引导需要）
 
-**此处提示重要**
+>**警告**
 >
->bootfs 属性是在 zfs 上引导 FreeBSD 的重要标志，不理睬这个提示可能没事，但出了问题就不能引导系统，建议按提示重写 `boot code` (为什么这么建议？~~因为我炸了~~)。如果你没有 **freebsd-boot** 分区就不需要以下操作。
+>`bootfs` 属性是在 zfs 上引导 FreeBSD 的重要标志，不理睬这个提示可能没事，但出了问题就不能引导系统，建议按提示重写 `boot code` (为什么这么建议？~~因为我炸了~~)。如果你没有 **freebsd-boot** 分区就 **不需要** 以下操作。
 
 查看分区信息：
 
@@ -232,14 +232,14 @@ root@u13t14 # gpart show
   33552384      2008        - free -  (1.0M)
 ```
 
-找到 `freebsd-boot` 类型分区，这里序号为 1，对应下面命令中 `-i` 选项，接着重写 boot code 
+找到 `freebsd-boot` 类型分区，这里序号为 `1`，对应下面命令中 `-i` 选项，接着重写 `bootcode`：
 
 ```sh
 root@u13t14 # gpart bootcode -p /boot/gptzfsboot -i 1 ada0
 partcode written to ada0p1
 ```
 
-可再次查看 zpool 状态：
+可再次查看 `zpool` 状态：
 
 ```sh
 root@u13t14 # zpool status
@@ -259,7 +259,7 @@ errors: No known data errors
 
 zfs 允许非特权用户管理。
 
-自 FreeBSD 14.1 以降，`bsdinstall(8)` 使用的工具 `adduser(8)`，当用户主目录的父目录位于 zfs 数据集上时，会为用户的主目录创建一个 zfs 数据集。`adduser`  的参数 `-Z` 可禁用这一行为。zfs 加密功能亦已可用。
+自 FreeBSD 14.1 以降，`bsdinstall(8)` 使用的工具 `adduser(8)`：当用户主目录的父目录位于 zfs 数据集上时（即 `/home` 是 zfs 数据集，`/home/xxx` 亦如此），会为用户的主目录创建一个 zfs 数据集。`adduser`  的参数 `-Z` 可禁用这一行为。zfs 加密功能亦已可用。
 
 以下假设使用 `FreeBSD 14.1` 。
 
