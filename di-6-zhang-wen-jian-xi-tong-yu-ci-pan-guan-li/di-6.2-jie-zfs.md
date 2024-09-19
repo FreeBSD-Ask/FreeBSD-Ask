@@ -512,9 +512,6 @@ root safreya # zfs unload-key  zroot/home/test
 $ zfs load-key zroot/home/test
 Enter passphrase for 'zroot/home/test':
 Key load error: Permission denied.
-$ zfs load-key zroot/home/test
-Enter passphrase for 'zroot/home/test':
-Key load error: Permission denied.
 ```
   
 ### 参考文献
