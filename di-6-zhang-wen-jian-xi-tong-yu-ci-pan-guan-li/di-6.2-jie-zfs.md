@@ -446,6 +446,75 @@ Local+Descendent permissions:
 
 这里 `zroot/home/safreya/secret` 继承了数据集 `zroot/home/safreya` 的权限属性，授权/反授权都针对 `zroot/home/safreya`，对 `zroot/home/safreya/secret` 的操作不起作用（操作后属性不变，原因未知）。
 
+### `adduser` 与加密用户主目录
+
+`adduser` 命令中可以直接使用已加密的用户主目录数据集，但默认给出的权限不足，一经卸载就无法由普通用户直接挂载
+
+```sh
+root safreya # adduser
+Username: test
+Full name:
+Uid (Leave empty for default):
+Login group [test]:
+Login group is test. Invite test into other groups? []:
+Login class [default]:
+Shell (sh csh tcsh zsh rzsh git-shell bash rbash nologin) [sh]:
+Home directory [/home/test]:
+Home directory permissions (Leave empty for default):
+Enable ZFS encryption? (yes/no) [no]: yes
+Use password-based authentication? [yes]:
+Use an empty password? (yes/no) [no]:
+Use a random password? (yes/no) [no]:
+Enter password:
+Enter password again:
+Lock out the account after creation? [no]:
+Username    : test
+Password    : *****
+Full Name   :
+Uid         : 1003
+ZFS dataset : zroot/home/test
+Encrypted   : yes
+Class       :
+Groups      : test
+Home        : /home/test
+Home Mode   :
+Shell       : /bin/sh
+Locked      : no
+OK? (yes/no) [yes]:
+Enter encryption keyphrase for ZFS dataset (zroot/home/test):
+Enter new passphrase:
+Re-enter new passphrase:
+adduser: INFO: Successfully created ZFS dataset (zroot/home/test).
+adduser: INFO: Successfully added (test) to the user database.
+Add another user? (yes/no) [no]: no
+Goodbye!
+```
+
+查看权限：
+
+```sh
+root safreya # zfs allow zroot/home/test
+---- Permissions on zroot/home/test ----------------------------------
+Local+Descendent permissions:
+        user test create,destroy,mount,snapshot
+```
+
+```sh
+root safreya # zfs unmount zroot/home/test
+root safreya # zfs unload-key  zroot/home/test
+```
+
+加载：
+
+```sh
+root safreya # su test
+$ zfs load-key zroot/home/test
+Enter passphrase for 'zroot/home/test':
+Key load error: Permission denied.
+$ zfs load-key zroot/home/test
+Enter passphrase for 'zroot/home/test':
+Key load error: Permission denied.
+```
   
 ## 注意事项
 
