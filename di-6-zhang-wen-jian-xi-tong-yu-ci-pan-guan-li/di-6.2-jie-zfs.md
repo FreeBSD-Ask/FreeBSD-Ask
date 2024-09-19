@@ -372,7 +372,7 @@ safreya ~ % zfs rollback zroot/home/safreya@snap1
 
 ### 用户级 zfs 加密功能
 
-FreeBSD 14.1 中 zfs 已经支持加密功能。在用户级使用中需要为用户授于特定权限。
+FreeBSD 14.1 中，在用户级使用 zfs 加密功能，需要为用户授于特定权限。
 
 ```sh
 safreya ~ % su -m root -c 'zfs allow safreya change-key,load-key,keyformat,keylocation,encryption zroot/home/safreya'
@@ -448,7 +448,7 @@ Local+Descendent permissions:
 
 ### `adduser` 与加密用户主目录
 
-`adduser` 命令中可以直接使用已加密的用户主目录数据集，但默认给出的权限不足，一经卸载就无法由普通用户直接挂载
+`adduser` 命令中可以直接使用加密的用户主目录数据集，但默认给出的权限不足，一经卸载就无法由普通用户直接挂载
 
 ```sh
 root safreya # adduser
