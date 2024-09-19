@@ -16,7 +16,7 @@ ZFS 快照类似于虚拟机快照。
 
 - 创建快照
 
-默认创建分区（Auto ZFS）如下：
+默认创建分区（`Auto ZFS`）如下：
 
 ```sh
 root@ykla:/home/ykla #  zfs list
@@ -124,7 +124,7 @@ new                               -      -          432K  2023-09-20 15:17
 default                           NR     /          40.8G 2023-04-10 10:06
 ```
 
-其中 Active 这一列中 `N` 表示当前使用环境，`R` 表示下次启动时使用的环境。`bectl` 工具可以改变下次使用的启动环境（在启动 FreeBSD 时，启动菜单里选 `8`，也可以改变启动环境）
+其中 `Active` 这一列中 `N` 表示当前使用环境，`R` 表示下次启动时使用的环境。`bectl` 工具可以改变下次使用的启动环境（在启动 FreeBSD 时，启动菜单里选 `8`，也可以改变启动环境）
 
 ```sh
 bectl activate new
@@ -155,25 +155,25 @@ fdescfs                     1        1         0   100%    /dev/fd
 
 切换回 `zroot/ROOT/default` 启动环境，在启动菜单里选择 default 启动环境，或如上用 `bectl activate default` 切换到 default 启动环境
 
-用法扩展：可以把一个启动环境升级为 FreeBSD 14，实现 13、14 多版本共存
+用法扩展：可以把一个启动环境升级为 FreeBSD 14，实现 13、14 多版本共存。
 
 >**警告**
 >
->用法扩展实现的代价是 zfs 不能升级，一升级就挂了，因为旧版 ZFS 程序无法向后兼容。实践的意义不大，可以仅做备份还原使用。
+>“用法扩展”实现的代价是 zfs 不能升级：一升级就挂了，因为旧版 ZFS 程序无法向后兼容。实践的意义不大，可以仅做备份还原使用。
 
-参考文献：
+### 参考文献：
 
 - [wiki/BootEnvironments](https://wiki.freebsd.org/BootEnvironments)
 
-## FreeBSD on zfs 的 zpool 升级
+## FreeBSD zfs 的 zpool 升级
 
-13.2 升级 14.0 ，zpool 版本有升级。
+13.2 到 14.0 ，zpool 版本有所升级。
 
-此处假定已经用 `freebsd-update` 从 13.2 升级到 14.0。
+此处假定已经用 `freebsd-update` 从 13.2 升级到了 14.0。
 
-开始前的提醒：准备好 livecd 以应对意外，livecd 要 14.0 及以上的，13.2 不支持（不能访问） 14.0 的 zfs
+开始前的提醒：准备好 livecd 以应对意外，livecd 要 14.0 及以上的，13.2 不支持（无法访问新版 zfs 文件系统）14.0 的 zfs。
 
-查看 zpool 状态：
+查看 `zpool` 状态：
 
 ```sh
 root@u13t14 # zpool status
@@ -259,13 +259,13 @@ errors: No known data errors
 
 zfs 允许非特权用户管理。
 
-自 FreeBSD 14.1 以降（请参阅发行说明），`bsdinstall(8)` 使用的工具 `adduser(8)`：当用户主目录的父目录位于 zfs 数据集上时（即 `/home` 是 zfs 数据集，`/home/xxx` 亦如此），会为用户的主目录创建一个 zfs 数据集。`adduser`  的参数 `-Z` 可禁用这一行为。zfs 加密功能亦已可用。
+自 FreeBSD 14.1 以降（请参阅发行说明，是由[这个](https://cgit.freebsd.org/src/commit/?id=516009ce8d38)变更做出的），`bsdinstall(8)` 使用的工具 `adduser(8)`：当用户主目录的父目录位于 zfs 数据集上时（即 `/home` 是 zfs 数据集，`/home/xxx` 亦如此），会为用户的主目录创建一个 zfs 数据集。`adduser`  的参数 `-Z` 可禁用这一行为。zfs 加密功能亦已可用。
 
 以下操作基于 `FreeBSD 14.1-RELEASE`。
 
 ### 基础的用户级 zfs 管理
 
-先了解一下非特权用户的 zfs 数据集。
+先来了解一下非特权用户的 zfs 数据集。
 
 我们首先在安装系统时，创建了两个普通用户“aria2”和“safreya”。
 
@@ -295,16 +295,16 @@ zroot/var/tmp                                  120K   396G   120K  /var/tmp
 safreya ~ %
 ```
 
-其中
+其中：
 
 ```sh
 zroot/home/aria2                               128K   396G   128K  /home/aria2
 zroot/home/safreya                            7.74G   396G  7.70G  /home/safreya
 ```
 
-即，在创建用户时，已默认为用户 `safreya` 、`aria2` 分别创建了各自独立的数据集 `zroot/home/aria2` 和 `zroot/home/safreya`。
+即，在创建用户时，已默认为用户 `safreya` 、`aria2` 分别创建了各自独立的数据集 `zroot/home/aria2`、`zroot/home/safreya`。
 
-接下来，查看一下两个数据集上的用户权限。
+接下来，分别查看一下两个数据集上的用户权限。
 
 ```sh
 safreya ~ % zfs allow zroot/home/aria2
@@ -315,7 +315,6 @@ safreya ~ % zfs allow zroot/home/safreya
 ---- Permissions on zroot/home/safreya -------------------------------
 Local+Descendent permissions:
         user safreya create,destroy,mount,snapshot
-safreya ~ %
 ```
 
 可以看到，在创建用户集时，默认为用户创设了 `create`、`destroy`、`mount` 和 `snapshot` 四项权限。
@@ -429,7 +428,12 @@ Permissions Size User    Date Modified Name
 .rw-r--r--    25 safreya 19 Sep 20:26  abc.txt
 ```
 
-注意： 子命令 `destroy` 不管数据集是否挂载，都可以成功销毁数据集，因为 `destroy` 权限是默认就授予的，所以如果非用户本人操作系统的话，可能出现“我得不到的，就毁灭”的情况。而且要记住的是，“授权”是授于普通用户“代理权限”，操作有授权的数据集时相当于 root，过程不需要密码。因此在授于权限时还要综合考虑，合理的限制授权范围和权限属性，如禁用 `destroy` 权限属性等。
+ 
+>**注意**
+>
+>无论数据集是否挂载，子命令 `destroy` 都可以成功销毁数据集，因为 `destroy` 权限是默认就授予的，所以如果非用户本人操作系统的话，可能出现“我得不到的，就毁灭”的情况。
+>
+>而且要记住的是，“授权”是授于普通用户“代理权限”，操作有授权的数据集时就相当于 root，过程中无需密码。因此在授于权限时还要综合考量，合理的限制授权范围和权限属性，如禁用 `destroy` 权限属性等。
 
 ```sh
 safreya ~ % su -m root -c 'zfs unallow safreya destroy zroot/home/safreya'
@@ -440,7 +444,7 @@ Local+Descendent permissions:
         user safreya change-key,create,encryption,keyformat,keylocation,load-key,mount,rollback,snapshot
 ```
 
-这里 `zroot/home/safreya/secret` 会继承 `zroot/home/safreya` 数据集的权限属性，授权反授权都针对 `zroot/home/safreya`，对 `zroot/home/safreya/secret` 操作不起作用。
+这里 `zroot/home/safreya/secret` 继承了 `zroot/home/safreya` 数据集的权限属性，授权/反授权都面向 `zroot/home/safreya`，对 `zroot/home/safreya/secret` 的操作不起作用。
 
   
 ## 注意事项
