@@ -420,7 +420,7 @@ cache size                           0.0 kB
 max cache size                      10.0 GB
 ```
 
-Ports 使用一段时间后：
+在 Ports 编译一段时间后：
 
 ```sh
 root@ykla:~ # ccache -s
@@ -463,21 +463,37 @@ max cache size                      10.0 GB
 配置：
 
 ```sh
-ln -s ccache	/usr/local/bin/gcc
-ln -s ccache	/usr/local/bin/g++
-ln -s ccache	/usr/local/bin/cc
-ln -s ccache	/usr/local/bin/c++
-ln -s ccache	/usr/local/bin/clang
+root@ykla:~ # ls -al  /usr/local/libexec/ccache    total 55
+drwxr-xr-x   3 root wheel 13  9月 20 02:29 .
+drwxr-xr-x  20 root wheel 54  9月 20 02:29 ..
+lrwxr-xr-x   1 root wheel 21  9月 20 02:29 c++ -> /usr/local/bin/ccache
+lrwxr-xr-x   1 root wheel 21  9月 20 02:29 cc -> /usr/local/bin/ccache
+lrwxr-xr-x   1 root wheel 21  9月 20 02:29 CC -> /usr/local/bin/ccache
+lrwxr-xr-x   1 root wheel 21  9月 20 02:29 clang -> /usr/local/bin/ccache
+lrwxr-xr-x   1 root wheel 21  9月 20 02:29 clang++ -> /usr/local/bin/ccache
+lrwxr-xr-x   1 root wheel 21  9月 20 02:29 clang++15 -> /usr/local/bin/ccache
+lrwxr-xr-x   1 root wheel 21  9月 20 02:29 clang15 -> /usr/local/bin/ccache
+lrwxr-xr-x   1 root wheel 21  9月 20 02:29 cpp13 -> /usr/local/bin/ccache
+lrwxr-xr-x   1 root wheel 21  9月 20 02:29 g++13 -> /usr/local/bin/ccache
+lrwxr-xr-x   1 root wheel 21  9月 20 02:29 gcc13 -> /usr/local/bin/ccache
+drwxr-xr-x   2 root wheel 13  9月 20 02:29 world
+```
+
+修改 `/etc/make.conf`：
+
+```sh
+# ee /etc/make.conf #加入下面一行
+WITH_CCACHE_BUILD=yes
 ```
 
 设置编译缓存最大为 20GB：
 
 ```sh
-root@ykla:/usr/ports/devel/ccache4 # ccache -M 20G  
+root@ykla: # ccache -M 20G  
 Set cache size limit to 20.0 GB
 ```
 
-编译一段时间后，查看编译缓存：
+在 Ports 编译一段时间后，查看编译缓存：
 
 ```sh
 root@ykla:/ # ccache -s
