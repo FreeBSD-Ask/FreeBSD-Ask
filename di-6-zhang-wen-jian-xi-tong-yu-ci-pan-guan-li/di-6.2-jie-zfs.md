@@ -259,7 +259,7 @@ errors: No known data errors
 
 zfs 允许非特权用户管理。
 
-自 FreeBSD 14.1 以降（请参阅发行说明，是由[这个](https://cgit.freebsd.org/src/commit/?id=516009ce8d38)变更做出的），`bsdinstall(8)` 使用的工具 `adduser(8)`：当用户主目录的父目录位于 zfs 数据集上时（即 `/home` 是 zfs 数据集，`/home/xxx` 亦如此），会为用户的主目录创建一个 zfs 数据集。`adduser`  的参数 `-Z` 可禁用这一行为。`adduser` 对于 zfs 的非特权用户加密功能亦已可用。
+自 FreeBSD 14.1 以降（请参阅发行说明，是由[这个](https://cgit.freebsd.org/src/commit/?id=516009ce8d38)变更做出的），`bsdinstall(8)` 使用的工具 `adduser(8)`：当用户主目录的父目录位于 zfs 数据集上时（即 `/home` 是 zfs 数据集，`/home/xxx` 亦如此），会为用户的主目录创建一个 zfs 数据集。`adduser`  的参数 `-Z` 可禁用这一行为。`adduser` 对于 zfs 的非特权用户主目录加密功能亦已可用。
 
 以下操作基于 `FreeBSD 14.1-RELEASE`。
 
