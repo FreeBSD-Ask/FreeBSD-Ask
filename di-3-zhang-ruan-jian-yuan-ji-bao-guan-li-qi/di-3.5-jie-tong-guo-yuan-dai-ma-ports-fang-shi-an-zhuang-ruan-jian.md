@@ -544,7 +544,7 @@ DISABLE_SIZE=yes
 ```sh
 # cd /usr/ports/www/wget2/ && make install clean
 ```
-新建或者编辑 `# ee /etc/make.conf` 文件，写入以下几行：
+新建或者编辑 `/etc/make.conf` 文件，写入以下几行：
 ```sh
 FETCH_CMD=wget2
 FETCH_BEFORE_ARGS= -c -t 3 -o 10
