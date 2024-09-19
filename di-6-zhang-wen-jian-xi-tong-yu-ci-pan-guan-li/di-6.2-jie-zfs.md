@@ -444,7 +444,7 @@ Local+Descendent permissions:
         user safreya change-key,create,encryption,keyformat,keylocation,load-key,mount,rollback,snapshot
 ```
 
-这里 `zroot/home/safreya/secret` 继承了 `zroot/home/safreya` 数据集的权限属性，授权/反授权都面向 `zroot/home/safreya`，对 `zroot/home/safreya/secret` 的操作不起作用。
+这里 `zroot/home/safreya/secret` 继承了数据集 `zroot/home/safreya` 的权限属性，授权/反授权都针对 `zroot/home/safreya`，对 `zroot/home/safreya/secret` 的操作不起作用。
 
   
 ## 注意事项
