@@ -517,6 +517,15 @@ Enter passphrase for 'zroot/home/test':
 Key load error: Permission denied.
 ```
   
-## 注意事项
+### 参考文献
+
+
+- [zfs-allow  --  delegate	ZFS administration permissions to unprivileged users](https://man.freebsd.org/cgi/man.cgi?zfs-allow)
+- [zfs-create -- create ZFS	dataset
+](https://man.freebsd.org/cgi/man.cgi?zfs-create)
+- FreeBSD 手册
+
+
+## 备注
 
 - ZFS 并不使用 `/etc/fstab`，但是 EFI、Swap 仍然使用。
