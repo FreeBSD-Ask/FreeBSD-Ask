@@ -318,10 +318,6 @@ tmpfs /tmp tmpfs rw 0 0
 
 >**警告**
 >
->默认的自动化配置工具无论是 ccahe3 还是 4 都有问题，需要手动配置如下，参见 [Bug](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=272917)
-
->**警告**
->
 >使用 ccache 可能会导致编译失败！只在重复编译时起效果，首次编译不仅不会加速还会慢上一些。是一种以空间换时间的行为。
 
 
@@ -378,8 +374,29 @@ Please read /usr/local/share/doc/ccache/ccache-howto-freebsd.txt for
 information on using ccache with FreeBSD ports and src.
 ```
 
-修改 `/etc/make.conf`：
+```sh
+root@ykla: # ls -al  /usr/local/libexec/ccache
+total 56
+drwxr-xr-x   3 root wheel 15 Sep 20 02:02 .
+drwxr-xr-x  18 root wheel 49 Sep 20 01:39 ..
+lrwxr-xr-x   1 root wheel 21 Sep 20 00:29 CC -> /usr/local/bin/ccache
+lrwxr-xr-x   1 root wheel 21 Sep 20 00:29 c++ -> /usr/local/bin/ccache
+lrwxr-xr-x   1 root wheel 21 Sep 20 00:29 cc -> /usr/local/bin/ccache
+lrwxr-xr-x   1 root wheel 21 Sep 20 00:29 clang -> /usr/local/bin/ccache
+lrwxr-xr-x   1 root wheel 21 Sep 20 00:29 clang++ -> /usr/local/bin/ccache
+lrwxr-xr-x   1 root wheel 21 Sep 20 00:29 clang++15 -> /usr/local/bin/ccache
+lrwxr-xr-x   1 root wheel 21 Sep 20 02:02 clang++18 -> /usr/local/bin/ccache
+lrwxr-xr-x   1 root wheel 21 Sep 20 00:29 clang15 -> /usr/local/bin/ccache
+lrwxr-xr-x   1 root wheel 21 Sep 20 02:02 clang18 -> /usr/local/bin/ccache
+lrwxr-xr-x   1 root wheel 21 Sep 20 00:29 cpp13 -> /usr/local/bin/ccache
+lrwxr-xr-x   1 root wheel 21 Sep 20 00:29 g++13 -> /usr/local/bin/ccache
+lrwxr-xr-x   1 root wheel 21 Sep 20 00:29 gcc13 -> /usr/local/bin/ccache
+drwxr-xr-x   2 root wheel 15 Sep 20 02:02 world
 ```
+
+修改 `/etc/make.conf`：
+
+```sh
 # ee /etc/make.conf #加入下面一行
 WITH_CCACHE_BUILD=yes
 ```
@@ -402,8 +419,30 @@ files in cache                         0
 cache size                           0.0 kB
 max cache size                      10.0 GB
 ```
-```sh
 
+Ports 使用一段时间后：
+
+```sh
+root@ykla:~ # ccache -s
+cache directory                     /root/.ccache
+primary config                      /root/.ccache/ccache.conf
+secondary config      (readonly)    /usr/local/etc/ccache.conf
+stats updated                       Fri Sep 20 02:05:35 2024
+cache hit (direct)                    20
+cache hit (preprocessed)              17
+cache miss                           918
+cache hit rate                      3.87 %
+called for link                      121
+called for preprocessing              26
+compile failed                       115
+preprocessor error                    66
+bad compiler arguments                15
+autoconf compile/link                523
+no input file                         71
+cleanups performed                     0
+files in cache                      2305
+cache size                           0.0 kB
+max cache size                      10.0 GB
 ```
 
 #### ccache4
