@@ -194,7 +194,7 @@ w3m-0.5.3.20230718_1               <
 
 下边分别列出 2 种 FreeBSD 手册中提及的升级工具:
 
-①、portupgrade
+① portupgrade
 
 ```sh
 # cd /usr/ports/ports-mgmt/portupgrade && make install clean
@@ -203,7 +203,7 @@ w3m-0.5.3.20230718_1               <
 # portupgrade -a --batch		#不要问，只做，等同于  BATCH=yes
 ```
 
-②、portmaster （推荐）
+② portmaster （推荐）
 
 - 更新：
 
@@ -275,15 +275,9 @@ root@ykla:/usr/ports/ports-mgmt/portmaster # portmaster sysutils/htop  --show-wo
 # echo "OPTION_UNSET+= MYSQL" >> /etc/make.conf
 ```
 
-
-
-
 ## 加速编译
 
-### FreeBSD ports 多线程编译（推荐）
-
-
-- FreeBSD ports 多线程编译
+### FreeBSD ports 多线程编译
 
 将以下内容写入 `/etc/make.conf`，没有就 `touch` 新建一个。
 
@@ -313,7 +307,7 @@ Linux 如 Gentoo 上一般是直接 `-jx` 或者 `jx+1`, `x` 为核心数。
 tmpfs /tmp tmpfs rw 0 0
 ```
 
-重启即可。
+`reboot` 重启即可。
 
 #### 参考资料
 
@@ -330,6 +324,89 @@ tmpfs /tmp tmpfs rw 0 0
 >
 >使用 ccache 可能会导致编译失败！只在重复编译时起效果，首次编译不仅不会加速还会慢上一些。是一种以空间换时间的行为。
 
+
+#### ccache3
+
+
+```sh
+root@ykla:~ # pkg install ccache
+Updating FreeBSD repository catalogue...
+Fetching meta.conf:   0%
+FreeBSD repository is up to date.
+All repositories are up to date.
+The following 1 package(s) will be affected (of 0 checked):
+
+New packages to be INSTALLED:
+	ccache: 3.7.12_7
+
+Number of packages to be installed: 1
+
+133 KiB to be downloaded.
+
+Proceed with this action? [y/N]: y
+[1/1] Fetching ccache-3.7.12_7.pkg: 100%  133 KiB 136.2kB/s    00:01    
+Checking integrity... done (0 conflicting)
+[1/1] Installing ccache-3.7.12_7...
+[1/1] Extracting ccache-3.7.12_7: 100%
+Create compiler links...
+create symlink for cc
+create symlink for cc (world)
+create symlink for c++
+create symlink for c++ (world)
+create symlink for CC
+create symlink for CC (world)
+create symlink for gcc13
+create symlink for gcc13 (world)
+create symlink for g++13
+create symlink for g++13 (world)
+create symlink for cpp13
+create symlink for cpp13 (world)
+create symlink for clang
+create symlink for clang (world)
+create symlink for clang++
+create symlink for clang++ (world)
+create symlink for clang15
+create symlink for clang15 (world)
+create symlink for clang++15
+create symlink for clang++15 (world)
+=====
+Message from ccache-3.7.12_7:
+
+--
+NOTE:
+Please read /usr/local/share/doc/ccache/ccache-howto-freebsd.txt for
+information on using ccache with FreeBSD ports and src.
+```
+
+修改 `/etc/make.conf`：
+```
+# ee /etc/make.conf #加入下面一行
+WITH_CCACHE_BUILD=yes
+```
+
+设置编译缓存最大为 10GB：
+
+```sh
+root@ykla:/usr/ports/devel/ccache4 # ccache -M 10G  
+Set cache size limit to 10.0 GB
+root@ykla:/usr/ports/www/chromium # ccache -s
+cache directory                     /root/.ccache
+primary config                      /root/.ccache/ccache.conf
+secondary config      (readonly)    /usr/local/etc/ccache.conf
+cache hit (direct)                     0
+cache hit (preprocessed)               0
+cache miss                             0
+cache hit rate                      0.00 %
+cleanups performed                     0
+files in cache                         0
+cache size                           0.0 kB
+max cache size                      10.0 GB
+```
+```sh
+
+```
+
+#### ccache4
 
 目前最新版本是 ccache4：
 
