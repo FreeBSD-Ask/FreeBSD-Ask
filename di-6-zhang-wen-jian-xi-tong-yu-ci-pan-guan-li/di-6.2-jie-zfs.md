@@ -524,7 +524,7 @@ Key load error: Permission denied.
 - [zfs-create -- create ZFS	dataset
 ](https://man.freebsd.org/cgi/man.cgi?zfs-create)
 - FreeBSD 手册
-
+- [OpenZFS Encryption Arrives on FreeBSD](https://freebsdfoundation.org/wp-content/uploads/2020/07/OpenZFS-Encryption-Arrives-on-FreeBSD.pdf)，说明了 GELI 加密和 zfs 加密的异同点
 
 ## 备注
 
