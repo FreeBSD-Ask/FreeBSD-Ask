@@ -514,6 +514,9 @@ Enter passphrase for 'zroot/home/test':
 Key load error: Permission denied.
 ```
   
+`Permission denied` 即权限不足，拒绝访问。
+
+
 ### 参考文献
 
 
