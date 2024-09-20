@@ -39,10 +39,6 @@ FreeBSD 15.0-CURRENT
 
 - 已经更新至 `FreeBSD ykla 15.0-CURRENT FreeBSD 15.0-CURRENT main-n272297-5d045d556b1c GENERIC amd64`
 - 已经预配置了 pkgbase，使用 `pkg update  && pkg upgrade` 即可同时更新系统和软件。配置文件路径为 `/usr/local/etc/pkg/repos/FreeBSD-base.conf`。
-
-```json
-
-```
 ## 图片
 
 ### FreeBSD 14.1
