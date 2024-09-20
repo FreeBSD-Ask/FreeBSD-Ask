@@ -7,6 +7,7 @@
 - 虚拟机版本：VMware® Workstation 17 Pro 17.5.2 build-23775571
 - 主机版本：Windows 10 企业版 21H2
 - BIOS+UEFI
+- SWAP 8G + ZFS on root
 - DNS：`223.5.5.5`（阿里 DNS）
 - 主机名：`ykla`
 - 用户名：`root`、`ykla`
