@@ -27,6 +27,10 @@ FreeBSD 14.1：
 
 - 已经更新至 `14.1-RELEASE-p5`。
 
+FreeBSD 15.0
+
+- 已经预配置了 pkgbase，使用 `pkg update  && pkg upgrade` 即可同时更新系统和软件。配置文件路径为 `/usr/local/etc/pkg/repos/FreeBSD-base.conf`。
+
 ## 图片
 
 ### FreeBSD 14.1
