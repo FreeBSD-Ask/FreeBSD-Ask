@@ -130,6 +130,12 @@ bash-5.1# ldd /opt/QQ/qq
 
 可以看到 `ldd` 正常。
 
+启动
+
+```sh
+root@ykla:/home/ykla # /compat/linux/opt/QQ/qq --no-sandbox  --in-process-gpu
+```
+
 ![FreeBSD QQ](../.gitbook/assets/rlqq.png)
 
 
