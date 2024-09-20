@@ -60,3 +60,4 @@
   - “第 3.5 节 使用 ports 以源代码方式安装软件”：重写 ccache 3、ccache 4 两节。测试通过。
   - 制作了 14.1-RELEASE、15.0-CURRENT 两个虚拟机镜像
   - 新建一节“第 2.9 节 虚拟机预安装镜像”
+  - “第 21.10 节 RockyLinux 兼容层（FreeBSD Port）”测试通过，将 QQ 安装方法移动至 QQ 章节。
