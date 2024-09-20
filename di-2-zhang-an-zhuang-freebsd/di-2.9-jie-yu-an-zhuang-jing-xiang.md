@@ -7,7 +7,7 @@
 - 虚拟机版本：VMware® Workstation 17 Pro 17.5.2 build-23775571
 - 主机版本：Windows 10 企业版 21H2
 - BIOS+UEFI
-- DNS：`223.5.5.5`
+- DNS：`223.5.5.5`（阿里 DNS）
 - 主机名：`ykla`
 - 用户名：`root`、`ykla`
 - 密码：`root`、`ykla` 均为 `z`
@@ -67,7 +67,7 @@ FreeBSD 14.1：
 
 FreeBSD 14.1 预装的所有第三方软件清单：
 
-```
+```sh
 root@ykla:/home/ykla # pkg info
 7-zip-24.08                    Console version of the 7-Zip file archiver
 AppStream-1.0.1                Machine-readable software metadata for desktop environments
