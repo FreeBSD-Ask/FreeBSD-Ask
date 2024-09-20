@@ -232,8 +232,6 @@ VMware 自动缩放屏幕请安装显卡驱动和虚拟机增强工具，即：
 编辑 `/usr/local/share/X11/xorg.conf.d/xorg.conf` 修改以下段落为（其他部分不需要动，保留原样即可）：
 
 ```sh
-…………此处省略一部分…………
-
 Section "ServerLayout"
         Identifier     "X.org Configured"
         Screen          0  "Screen0" 0 0
