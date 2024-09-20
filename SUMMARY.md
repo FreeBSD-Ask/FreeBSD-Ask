@@ -34,6 +34,7 @@
 * [第 2.6 节 普通电脑下载安装哪个镜像，如何刻录镜像？](di-2-zhang-an-zhuang-freebsd/di-2.6-jie-ru-he-zai-zi-ji-de-ji-qi-shang-an-zhuang-freebsd.md)
 * [第 2.7 节 SSH 相关软件推荐与 SSH 配置](di-2-zhang-an-zhuang-freebsd/di-2.7-jie-chang-yong-ruan-jian-yu-ssh-pei-zhi.md)
 * [第 2.8 节 自带文本编辑器 ee 的用法](di-2-zhang-an-zhuang-freebsd/di-2.8-jie-ee-yong-fa-ji-wang-luo-pei-zhi.md)
+* [第 2.9 节 虚拟机预安装镜像](di-2.9-jie-yu-an-zhuang-jing-xiang.md)
 
 
 ## 第 3 章 软件源及包管理器
