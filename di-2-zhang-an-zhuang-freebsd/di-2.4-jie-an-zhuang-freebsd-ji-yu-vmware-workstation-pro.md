@@ -1,5 +1,7 @@
 # 第 2.4 节 安装 FreeBSD——基于 Vmware Workstation Pro
 
+**如果需要现成的预安装镜像，请看本章其他章节**
+
 > **BIOS 还是 UEFI**
 >
 > 经过测试，FreeBSD 也可以支持驱动 UEFI 下 VMware 的显卡。——2023.1.13
