@@ -23,11 +23,11 @@
 - 安装了火狐浏览器和 fcitx5 输入法框架及输入法（输入法已为 `root` 用户进行配置）
 
 
-FreeBSD 14.1：
+FreeBSD 14.1-RELEASE：
 
 - 已经更新至 `14.1-RELEASE-p5`。
 
-FreeBSD 15.0
+FreeBSD 15.0-CURRENT
 
 - 已经预配置了 pkgbase，使用 `pkg update  && pkg upgrade` 即可同时更新系统和软件。配置文件路径为 `/usr/local/etc/pkg/repos/FreeBSD-base.conf`。
 
