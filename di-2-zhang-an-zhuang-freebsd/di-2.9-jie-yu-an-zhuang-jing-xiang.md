@@ -62,28 +62,28 @@ FreeBSD 15.0-CURRENT
 
 预装软件一览表（不含依赖包）：
 
-|软件|备注|
+|软件|说明|
 |:---:|:---:|
-|pkg||
-|xorg||
-|sddm||
-|kde5||
-| plasma5-sddm-kcm||
-|wqy-fonts||
-|xdg-user-dirs||
-|xf86-video-vmware||
-| open-vm-tools||
-| xf86-input-vmmouse||
-|git||
-|firefox-esr||
-|fcitx5||
-| fcitx5-qt5 ||
-|fcitx5-qt6||
-| fcitx5-gtk2 ||
-|fcitx5-gtk3 ||
-|fcitx5-gtk4||
-| fcitx5-configtool ||
-|zh-fcitx5-chinese-addons||
+|pkg|包管理器|
+|xorg|XWindow|
+|sddm|登录管理器|
+|kde5|桌面|
+| plasma5-sddm-kcm|登录管理器插件|
+|wqy-fonts|文泉驿字体|
+|xdg-user-dirs|用于生成主目录子目录|
+|xf86-video-vmware|虚拟机显卡驱动|
+| open-vm-tools|虚拟机工具|
+| xf86-input-vmmouse|虚拟机鼠标驱动|
+|git|获取 ports 用|
+|firefox-esr|火狐浏览器|
+|fcitx5|输入法框架|
+| fcitx5-qt5 |输入法框架相关|
+|fcitx5-qt6|输入法框架相关|
+| fcitx5-gtk2 |输入法框架相关|
+|fcitx5-gtk3 |输入法框架相关|
+|fcitx5-gtk4|输入法框架相关|
+| fcitx5-configtool |输入法框架配置工具|
+|zh-fcitx5-chinese-addons|中文输入法|
 
 
 FreeBSD 14.1-RELEASE 预装的所有第三方软件清单：
