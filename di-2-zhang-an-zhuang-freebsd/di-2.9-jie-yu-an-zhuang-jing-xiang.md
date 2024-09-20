@@ -4,6 +4,20 @@
 >
 >所有镜像文件均以 BSD-3-Clause license 进行分发。
 
+```json
+分享文件：FreeBSD15.0
+链接：https://pan.xunlei.com/s/VO7ExI_5jItOdpjJV08VbK6PA1#
+提取码：bcrp
+复制这段内容后打开手机迅雷App，查看更方便
+```
+
+```json
+分享文件：FreeBSD14.1
+链接：https://pan.xunlei.com/s/VO7ExI_49a_uYPUUtqAJ_BGwA1#
+提取码：aq66
+复制这段内容后打开手机迅雷App，查看更方便
+```
+
 ## 环境
 
 公共部分：
