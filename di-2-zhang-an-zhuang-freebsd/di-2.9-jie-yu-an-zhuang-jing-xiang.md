@@ -26,8 +26,18 @@ FreeBSD 14.1：
 
 - 已经更新至 `14.1-RELEASE-p5`。
 
+## 图片
+
+### FreeBSD 14.1
+
+![FreeBSD 14.1](../.gitbook/assets/14.1-1.png)
+
+![FreeBSD 14.1](../.gitbook/assets/14.1-2.png)
+
+![FreeBSD 14.1](../.gitbook/assets/14.1-3.png)
 
 ## 预装软件
+
 
 预装软件一览表（不含依赖包）：
 
