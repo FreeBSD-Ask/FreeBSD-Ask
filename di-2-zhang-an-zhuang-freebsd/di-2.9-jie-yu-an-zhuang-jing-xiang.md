@@ -45,12 +45,7 @@
 |fcitx5-gtk4||
 | fcitx5-configtool ||
 |zh-fcitx5-chinese-addons||
-|||
-|||
-|||
-|||
-|||
-|||
+
 
 
    
