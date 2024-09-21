@@ -1,4 +1,4 @@
-# 第 2.9 节 虚拟机预安装镜像
+# 第 2.9 节 虚拟机预安装镜像（本书自制）
 
 >**声明**
 >
@@ -16,6 +16,14 @@
 链接：https://pan.xunlei.com/s/VO7ExI_49a_uYPUUtqAJ_BGwA1#
 提取码：aq66
 复制这段内容后打开手机迅雷App，查看更方便
+```
+
+```json
+14.1  磁力链接  magnet:?xt=urn:btih:496C343387D74457E441CAFA93B302E791F62924
+```
+
+```json
+15.0 磁力链接   magnet:?xt=urn:btih:CBD49C71E87BC0B1406710A437E7135EF3D8C155
 ```
 
 ## 环境
