@@ -38,7 +38,7 @@
 - 主机名：`ykla`
 - 用户名：`root`、`ykla`
 - 密码：`root`、`ykla` 均为 `z`
-- pkg 源已经配置为 latest 版本的 NJU Mirror（南京大学开源镜像站），如不喜欢可以删除自定义文件 `/usr/local/etc/pkg/repos/ustc.nju`，即可切换回官方源。
+- pkg 源已经配置为 latest 版本的 NJU Mirror（南京大学开源镜像站），如不喜欢可以删除自定义文件 `/usr/local/etc/pkg/repos/nju.conf`，即可切换回官方源。
 - 推荐内存 4-8G；CPU 4。
 - 已经安装虚拟机工具，屏幕可自由拖动缩放，鼠标可无缝切换。
 - 已经关闭锁屏，可以到设置中自行开启。
