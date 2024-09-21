@@ -2,6 +2,15 @@
 
 为什么是 FreeBSD？——FreeBSD 能在流变的世界中寻求理想的中道。
 
+## 现成的虚拟机镜像体验（本书自制）
+
+具体详情请参见第 2 章节部分。
+
+```json
+14.1  磁力链接  magnet:?xt=urn:btih:496C343387D74457E441CAFA93B302E791F62924
+
+15.0 磁力链接   magnet:?xt=urn:btih:CBD49C71E87BC0B1406710A437E7135EF3D8C155
+```
 ## ToDo
 
 ### 需要
