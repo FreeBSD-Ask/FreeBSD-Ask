@@ -27,7 +27,7 @@
 |                       ![UNIX 网络编程 卷 1：套接字联网 API（第3版）](./.gitbook/assets/unix1.png)                       | 《UNIX 网络编程 卷 1：套接字联网 API（第 3 版）》 |       W. Richard Stevens、Bill Fenner、Andrew M. Rudoff      | 9787115367198 |     人民邮电出版社     | _**UNIX Network Programming, Volume 1: The Sockets Networking API, Third Edition**_ |             如何使用套接字 API 进行网络编程            |
 |                         ![UNIX 网络编程 卷 2：进程间通信（第2版）](./.gitbook/assets/unix2.png)                         |   《UNIX 网络编程 卷 2：进程间通信（第 2 版）》   |                     W. Richard Stevens                     | 9787115367204 |     人民邮电出版社     |  _**UNIX Network Programming,Vovum 2：Interprocess Communications,Second Edition**_  |    深入了解各种进程间通信形式。**这书原作者没出第 3 版，不用再找了**   |
 
-## 贡献者名单（以下排名随机排序）
+## 贡献者名单（乱序）
 
 [凌莞](https://clansty.com)
 
@@ -116,6 +116,8 @@ tergel93
 Shengyun
 
 仰望天空
+
+[bduath](https://github.com/bduath)
 
 [魔王酱](https://github.com/maou-sama-desu)
 
