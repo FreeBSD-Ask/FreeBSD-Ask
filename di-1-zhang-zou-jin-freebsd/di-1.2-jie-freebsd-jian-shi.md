@@ -107,7 +107,7 @@ Dennis Ritchie 决定为 UNIX 开发一种高级汇编语言，其中的语句�
 
 ### 1974 年 UNIX 被引入加州大学伯克利分校
 
-1974 年，加州大学伯克利分校的 Bob Fabry 教授从 AT&T 获得了 UNIX 的源代码许可。Bob Fabry 此前在 1973 年的 ACM 操作系统原理研讨会（Association for Computing Machinery）上见过 UNIX 4，并有意将其引入该大学。计算机系统研究小组（CSRG）开始修改和改进 AT&T Research Unix。他们将这个修改后的版本称为“BSD Unix”或“BSD”。
+1974 年，加州大学伯克利分校的 Bob Fabry 教授从 AT&T 获得了 UNIX 的源代码许可。Bob Fabry 此前在 1973 年的 ACM 操作系统原理研讨会（Association for Computing Machinery）上见过 UNIX 4，并有意将其引入该大学。计算机系统研究小组（CSRG）开始修改和改进 AT&T Research Unix。他们将这个修改后的版本称为“BSD Unix”/“BSD”。
 
 ### 1978 年 3 月 9 日 1BSD 发布
 
@@ -115,11 +115,11 @@ Dennis Ritchie 决定为 UNIX 开发一种高级汇编语言，其中的语句�
 
 ### 1979 年 5 月 10 日 2BSD 发布
 
-第二款伯克利软件发行版（2BSD）于 1979 年 5 月发布，涉及 1BSD 软件的更新，以及由 Bill Joy 新开发的两个至今仍在 Unix 系统上使用的程序：vi 文本编辑器（ex 的可视化版本）和 Csh。2BSD 是 Bill Joy 参与 PDP-11 工作的最后一个 BSD 版本。发行了大约 75 份副本。
+第二款伯克利软件发行版（2BSD）于 1979 年 5 月发布，涉及 1BSD 软件的更新，以及由 Bill Joy 新开发的两个至今仍在 Unix 系统上使用的程序：vi 文本编辑器（ex 的可视化版本）和 Csh。2BSD 是 Bill Joy 参与 PDP-11 工作的最后一个 BSD 版本。发行了约 75 份副本。
 
 ### 1980 年 6 月 DARPA 的赞助
 
-在 1980 年初，DARPA（Defense Advanced Research Projects Agency，美国国防高级研究计划局）当时正在寻找一种有助于军事项目的操作系统。Bill Joy 关于 UNIX 系统（特别是 BSD）功能的一篇论文引起了他们的注意。他们在 1980 年 6 月开始赞助伯克利进行相关工作。
+在 1980 年初，DARPA（Defense Advanced Research Projects Agency，美国国防高级研究计划局）当时正在寻找一种有助于军事项目的操作系统。Bill Joy 关于 UNIX 系统（特别是 BSD）功能的一篇论文引起了他们的注意。他们于 1980 年 6 月，开始赞助伯克利进行相关工作。
 
 ### 1983 年 8 月 4.2BSD 发布
 
@@ -127,11 +127,11 @@ Dennis Ritchie 决定为 UNIX 开发一种高级汇编语言，其中的语句�
 
 ### 1988 年 6 月 4.3BSD-Tahoe
 
-随着开发人员逐渐淘汰老旧的 VAX 平台，4.3BSD-Tahoe 发布了针对 Power 6/32 平台（TAHOE）的版本。这个发布相当有价值，因为它将 BSD 中的机器相关代码与机器无关代码分离开来，从而提高了系统的后期可移植性。
+随着开发人员逐渐淘汰老旧的 VAX 平台，4.3BSD-Tahoe 发布了针对 Power 6/32 平台（TAHOE）的版本。这次发布相当有价值，因为它将 BSD 中的机器相关代码同机器无关代码剥离开来，从而提高了后续系统的可移植性。
 
 ### 1991 年 386BSD 和 Net/2
 
-Keith Bostic 发起了一个项目，旨在不使用 AT&T 的代码的前提下，重新实现大多数独立的 Unix 软件。最终发布了 Networking Release 2（Net/2）——一款几乎完整的可自由分发的操作系统。在 Net/2 的基础上，BSD 向英特尔 80386 架构分别移植了两个版本：由 William Jolitz 开发的免费的 386BSD、由 Berkeley Software Design（BSDi）开发的专有 BSD/386（后来更名为 BSD/OS）。386BSD 本身昙花一现，但成为随后不久开始的 NetBSD 和 FreeBSD 项目的原初代码基础。
+Keith Bostic 发起了一个项目，旨在于不使用 AT&T 的代码的前提下，重新实现大多数标准的 Unix 软件。最终发布了 Networking Release 2（Net/2）——一款几乎完全可自由分发的操作系统。在 Net/2 的基础上，BSD 为英特尔 80386 架构分别移植了两个版本：由 William Jolitz 开发的免费的 386BSD、由 Berkeley Software Design（BSDi）开发的专有 BSD/386（后来更名为 BSD/OS）。386BSD 本身昙花一现，但成为随后不久开始的 NetBSD 和 FreeBSD 项目的原初代码基础。
 
 ### 1992 年 USL 诉讼案
 
