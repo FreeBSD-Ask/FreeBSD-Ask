@@ -189,7 +189,6 @@
 >
 >**不要** 选 `local_unbound`，会影响 DNS，见 [https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=262290](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=262290)。除非你知道这是什么。
 
-虚拟机不需要选 `powerd`。
 
 |     选项      |                                                                                  解释                                                                                   |
 | :-----------: | :------------------------ |
