@@ -21,7 +21,7 @@
 
 ![](../.gitbook/assets/ins2.png)
 
-|`7. Boot Options`|启动参数|
+|**`7. Boot Options`**|启动参数|
 | :----------: | :----------------------------------------------------------------------- |
 |`1. Back to main menu [Backspace]`|按 **删除键** 可返回上级菜单 |
 |`2. Load System Defaults`|恢复默认配置|
@@ -115,8 +115,6 @@
 >
 >如不确定，请按 **ctrl** + **c** 选择 `Restart`，再按两次 `ESC` 退回最开始，选择 `Shell` 使用命令查看即可。
 
-![](../.gitbook/assets/ins11.png)
-
 查看完成后输入 `exit` 回车可继续上述安装过程。
 
 ![](../.gitbook/assets/ins12.png)
@@ -191,7 +189,6 @@
 >
 >**不要** 选 `local_unbound`，会影响 DNS，见 [https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=262290](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=262290)。除非你知道这是什么。
 
-虚拟机不需要选 `powerd`。
 
 |     选项      |                                                                                  解释                                                                                   |
 | :-----------: | :------------------------ |
@@ -202,11 +199,11 @@
 |     `ntpd`      |                                                              用于自动时钟同步的网络时间协议（NTP）守护程序                                                              |
 |`ntpd_sync_on_start`|开机同步时间|
 |    `powerd`     |                                                                                电源管理，CPU 频率动态调整                                                                                 |
-|    dumpdev    |                                                                       启用崩溃转储，用于调试系统                                                                        |
+|    `dumpdev`    |                                                                       启用崩溃转储，用于调试系统                                                                        |
 
 ![](../.gitbook/assets/ins29.png)
 
-推荐选择：这里是安全增强选择，可根据需要自行选定。
+这里是安全加固部分，可根据需要自行选定。
 
 >**技巧**
 >
