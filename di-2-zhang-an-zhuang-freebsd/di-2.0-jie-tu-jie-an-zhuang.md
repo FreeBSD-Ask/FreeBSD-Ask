@@ -199,7 +199,7 @@
 |     `ntpd`      |                                                              用于自动时钟同步的网络时间协议（NTP）守护程序                                                              |
 |`ntpd_sync_on_start`|开机同步时间|
 |    `powerd`     |                                                                                电源管理，CPU 频率动态调整                                                                                 |
-|    dumpdev    |                                                                       启用崩溃转储，用于调试系统                                                                        |
+|    `dumpdev`    |                                                                       启用崩溃转储，用于调试系统                                                                        |
 
 ![](../.gitbook/assets/ins29.png)
 
