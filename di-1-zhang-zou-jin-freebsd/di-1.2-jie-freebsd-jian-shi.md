@@ -3,7 +3,7 @@
 
 ## BSD 与哲学家 George Berkeley
 
-值得注意地是，Berkeley 伯克利之名来自著名的近代伟大的英国（爱尔兰）经验论哲学家乔治·贝克莱（George Berkeley，1685－1753，在中文音译上虽然存在不同写法，但“Berkeley”的拼写在英文中是统一的，但是美音和英音发音亦不同），伯克利市和伯克利大学都是来源他的名字。[由于政治正确（黑奴问题）](https://www.lib.berkeley.edu/about/news/george-berkeley-portrait)和翻译习惯（曾译为巴克莱等等）的影响，这一关联在汉语世界中鲜有人知。
+值得注意地是，Berkeley 伯克利之名来自著名的近代伟大的英国（爱尔兰）经验论哲学家乔治·贝克莱（George Berkeley，1685－1753），伯克利市和伯克利大学都是来源他的名字。Berkeley 在中文音译上存在不同写法，美音和英音发音亦不同（ 英 /ˈbɑ:kli,ˈbə:kli/ 美 /ˈbɚkli/），仅“Berkeley”的拼写在英文中是统一的。[由于政治正确（黑奴问题）](https://www.lib.berkeley.edu/about/news/george-berkeley-portrait)和翻译习惯（曾译为巴克莱等等）的影响，这一关联在汉语世界中鲜有人知。
 
 ## George Berkeley 乔治·贝克莱生平简介
 
@@ -31,6 +31,7 @@ George Berkeley（1685.3.12—1753.1.14），2023 年是他逝世 270 周年。
 - 1752 年，67 岁时放弃克洛因主教职位，移居牛津
 - 1753.1.14 67 岁时，在妻子 Anne Forster 诵读《圣经》的陪伴下，他在牛津安息，归于主怀，永享天国安宁
 - 1786 年，妻子 Anne Forster 离世
+
 
 ## 贝克莱悖论与数学基础
 
@@ -72,4 +73,11 @@ esse est percipi, to be is to be perceived（存在就是被感知）。——�
 >以上，为什么？你怎么看。
 
 
+### 参考文献
+
+- [英] 乔治·贝克莱. 人类知识原理[M]. 译者: 张桂权, 人民出版社, 2017-2.（ISBN 9787010163321）
+- Downing, Lisa, "George Berkeley", The Stanford Encyclopedia of Philosophy (Fall 2021 Edition), Edward N. Zalta (ed.), URL = <https://plato.stanford.edu/archives/fall2021/entries/berkeley/>. SEP 相关条目
+- [美] 布鲁斯·乌姆鲍. 贝克莱[M]. 译者: 孟令朋, 清华大学出版社, 2019-5.（ISBN 9787302525554）
+- 汪芳庭. 数学基础 (修订版)[M]. 高等教育出版社, 2018-10.（ISBN 9787040502428）
+- [美] Abraham Robinson. 非标准分析[M]. 译者: 申又根 / 王世强 / 张锦文, 科学出版社, 1980-9.（已绝版，统一书号: 13031-1267）
 
