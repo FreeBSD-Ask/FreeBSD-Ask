@@ -63,4 +63,5 @@
   - “第 21.10 节 RockyLinux 兼容层（FreeBSD Port）”测试通过，将 QQ 安装方法移动至 QQ 章节。
 - 2024.9.27 
   - 将“第 1.2 节 FreeBSD 与哲学家 George Berkeley”中有关 FreeBSD 的内容移动至“第 1.1 节 UNIX、Unix-like、Linux 和 FreeBSD 简介”
+  - 改写“第 1.2 节 BSD 与哲学家 George Berkeley”，并补充参考文献
   - 根据 FreeBSD-14.1-RELEASE 重写“第 2.0 节 图解安装”
