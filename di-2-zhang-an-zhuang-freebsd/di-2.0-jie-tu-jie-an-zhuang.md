@@ -21,7 +21,7 @@
 
 ![](../.gitbook/assets/ins2.png)
 
-|`7. Boot Options`|启动参数|
+|**`7. Boot Options`**|启动参数|
 | :----------: | :----------------------------------------------------------------------- |
 |`1. Back to main menu [Backspace]`|按 **删除键** 可返回上级菜单 |
 |`2. Load System Defaults`|恢复默认配置|
