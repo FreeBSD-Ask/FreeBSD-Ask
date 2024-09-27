@@ -1,4 +1,4 @@
-# 第 1.2 节 FreeBSD 与哲学家 George Berkeley
+# 第 1.2 节 BSD 与哲学家 George Berkeley
 
 
 ## BSD 与哲学家 George Berkeley
