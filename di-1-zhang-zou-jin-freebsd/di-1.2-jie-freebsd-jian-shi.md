@@ -93,7 +93,7 @@ esse est percipi, to be is to be perceived（存在就是被感知）。——�
 
 
 
-## FreeBSD 时间表
+## FreeBSD 时间线
 
 ### 1962 年 分时操作系统（Timesharing OS）
 
