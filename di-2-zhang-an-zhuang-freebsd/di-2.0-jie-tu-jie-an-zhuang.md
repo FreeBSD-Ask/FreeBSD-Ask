@@ -115,8 +115,6 @@
 >
 >如不确定，请按 **ctrl** + **c** 选择 `Restart`，再按两次 `ESC` 退回最开始，选择 `Shell` 使用命令查看即可。
 
-![](../.gitbook/assets/ins11.png)
-
 查看完成后输入 `exit` 回车可继续上述安装过程。
 
 ![](../.gitbook/assets/ins12.png)
