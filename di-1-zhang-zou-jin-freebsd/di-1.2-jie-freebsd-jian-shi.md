@@ -77,7 +77,7 @@ esse est percipi, to be is to be perceived（存在就是被感知）。——�
 
 - [英] 乔治·贝克莱. 人类知识原理[M]. 译者: 张桂权, 人民出版社, 2017-2.（ISBN 9787010163321）
 - Downing, Lisa, "George Berkeley", The Stanford Encyclopedia of Philosophy (Fall 2021 Edition), Edward N. Zalta (ed.), URL = <https://plato.stanford.edu/archives/fall2021/entries/berkeley/>. SEP 贝克莱条目
-- Easwaran, Kenny, Alan Hájek, Paolo Mancosu, and Graham Oppy, "Infinity", The Stanford Encyclopedia of Philosophy (Summer 2024 Edition), Edward N. Zalta & Uri Nodelman (eds.), URL = <https://plato.stanford.edu/archives/sum2024/entries/infinity/>.SEP 无穷条目
+- Easwaran, Kenny, Alan Hájek, Paolo Mancosu, and Graham Oppy, "Infinity", The Stanford Encyclopedia of Philosophy (Summer 2024 Edition), Edward N. Zalta & Uri Nodelman (eds.), URL = <https://plato.stanford.edu/archives/sum2024/entries/infinity/>. SEP 无穷条目
 - [美] 布鲁斯·乌姆鲍. 贝克莱[M]. 译者: 孟令朋, 清华大学出版社, 2019-5.（ISBN 9787302525554）
 - 汪芳庭. 数学基础 (修订版)[M]. 高等教育出版社, 2018-10.（ISBN 9787040502428）
 - [美] Abraham Robinson. 非标准分析[M]. 译者: 申又根 / 王世强 / 张锦文, 科学出版社, 1980-9.（已绝版，统一书号: 13031-1267）
