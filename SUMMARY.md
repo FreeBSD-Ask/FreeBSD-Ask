@@ -14,7 +14,7 @@
 
 ## 第 1 章 走进 FreeBSD
 
-* [第 1.1 节 UNIX、Unix-like、Linux 简介](di-1-zhang-zou-jin-freebsd/di-1.1-jie-shi-mo-shi-unix.md)
+* [第 1.1 节 UNIX、Unix-like、Linux 和 FreeBSD 简介](di-1-zhang-zou-jin-freebsd/di-1.1-jie-shi-mo-shi-unix.md)
 * [第 1.2 节 FreeBSD 与哲学家 George Berkeley](di-1-zhang-zou-jin-freebsd/di-1.2-jie-freebsd-jian-shi.md)
 * [第 1.3 节 为什么要使用 FreeBSD](di-1-zhang-zou-jin-freebsd/di-1.3-jie-wei-shi-mo-yao-shi-yong-freebsd.md)
 * [第 1.4 节 Linux 用户迁移指北](di-1-zhang-zou-jin-freebsd/di-1.4-jie-linux-yong-hu-qian-yi-zhi-bei.md)
