@@ -115,9 +115,8 @@ Linux 全称为 GNU/Linux；[GNU 项目](https://www.gnu.org/) 1984；
 >
 > **上述操作较为复杂，需要一定的经验与基础知识。**
 
-## FreeBSD 简介
 
-### 什么是 FreeBSD？
+## 什么是 FreeBSD？
 
 问：如何定义 FreeBSD？答：一款开源的类 UNIX 操作系统。
 
