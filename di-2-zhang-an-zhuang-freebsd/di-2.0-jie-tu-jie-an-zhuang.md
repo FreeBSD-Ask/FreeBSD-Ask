@@ -27,7 +27,7 @@
 |`2. Load System Defaults`|恢复默认配置|
 |`3. ACPI`|高级配置和电源接口|
 |`4. Safe Mode`|安全模式|
-|`5. Sigle user`|单用户模式|
+|`5. Single user`|单用户模式|
 |`6. Verbose`|啰嗦模式，增加更多调试信息输出|
 
 
