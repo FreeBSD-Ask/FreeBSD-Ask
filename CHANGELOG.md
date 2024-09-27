@@ -61,4 +61,6 @@
   - 制作了 14.1-RELEASE、15.0-CURRENT 两个虚拟机镜像
   - 新建一节“第 2.9 节 虚拟机预安装镜像”
   - “第 21.10 节 RockyLinux 兼容层（FreeBSD Port）”测试通过，将 QQ 安装方法移动至 QQ 章节。
-- 2024.9.27 将“第 1.2 节 FreeBSD 与哲学家 George Berkeley”中有关 FreeBSD 的内容移动至“第 1.1 节 UNIX、Unix-like、Linux 和 FreeBSD 简介”
+- 2024.9.27 
+  - 将“第 1.2 节 FreeBSD 与哲学家 George Berkeley”中有关 FreeBSD 的内容移动至“第 1.1 节 UNIX、Unix-like、Linux 和 FreeBSD 简介”
+  - 根据 FreeBSD-14.1-RELEASE 重写“第 2.0 节 图解安装”
