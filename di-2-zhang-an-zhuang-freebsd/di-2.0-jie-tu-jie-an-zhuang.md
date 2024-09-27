@@ -12,8 +12,8 @@
 
 |     选项     |                                   解释                                    |
 | :----------: | :----------------------------------------------------------------------- |
-|`1. Boot Multi user [Enter]`|默认的多用户模式，可用于安装系统|
-| `2. Boot Sigle user` |  单用户模式，找回 root 密码和修复磁盘时会用到 |
+|`1. Boot Installer [Enter]`|用于安装系统|
+| `2. Boot Single user` |  单用户模式，找回 root 密码和修复磁盘时会用到 |
 |  `3.Escape to loader prompt`   |           离开菜单，进入命令模式，进入后输入 `reboot` 回车可重启                                |
 | `4.Reboot`  |        重启                      |
 |  `5. Cons: Video`    |    选择输出模式：视频（`Video`）、串口（`Serial`）、同时输出，但串口优先（`Dual (Serial primary)`、同时输出，但视频优先（`Dual (Video primary)` 可选）                         |
