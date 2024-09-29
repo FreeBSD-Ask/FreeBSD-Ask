@@ -27,106 +27,57 @@
 |                       ![UNIX 网络编程 卷 1：套接字联网 API（第3版）](./.gitbook/assets/unix1.png)                       | 《UNIX 网络编程 卷 1：套接字联网 API（第 3 版）》 |       W. Richard Stevens、Bill Fenner、Andrew M. Rudoff      | 9787115367198 |     人民邮电出版社     | _**UNIX Network Programming, Volume 1: The Sockets Networking API, Third Edition**_ |             如何使用套接字 API 进行网络编程            |
 |                         ![UNIX 网络编程 卷 2：进程间通信（第2版）](./.gitbook/assets/unix2.png)                         |   《UNIX 网络编程 卷 2：进程间通信（第 2 版）》   |                     W. Richard Stevens                     | 9787115367204 |     人民邮电出版社     |  _**UNIX Network Programming,Vovum 2：Interprocess Communications,Second Edition**_  |    深入了解各种进程间通信形式。**这书原作者没出第 3 版，不用再找了**   |
 
-## 贡献者名单（乱序）
+## 贡献者名单（A-Z 排序）
 
-[凌莞](https://clansty.com)
-
-星不萌
-
-雨天
-
-[柳离枝](https://github.com/liulitchi)
-
-[peiyafei](https://github.com/peiyafei)
-
-[ykla](https://github.com/ykla)
-
-艳阳天
-
-施主
-
-fjh1997
-
-X-Ray
-
-freyr
-
-[fanyang1997](https://github.com/fanyang1997)
-
-[orzyyyy](https://github.com/orzyyyy)
-
-[Rintim](https://github.com/Rintim)
-
-[DogeW](https://github.com/DogeW)
-
-[tomblackwhite](https://github.com/tomblackwhite)
-
-isNijikawa
-
-[matatabi-wang](https://github.com/matatabi-wang)
-
-地铁卡
-
-ruur
-
-[puffinjiang](https://github.com/puffinjiang)
-
-[heguru5](https://github.com/heguru5)
-
-李大鹏
-
-[pengxingwei](https://github.com/pengxingwei)
-
-liguangsheng
-
-kuntop
-
-[matatabi-wang](https://github.com/matatabi-wang)
-
-[星不萌](https://www.moebsd.cn)
-
-[Alex6357](https://github.com/Alex6357)
-
-[qinghecyn](https://github.com/qinghecyn)
-
-[清热解毒口服液](https://linuxacme.cn)
-
-墨子
-
-201724
-
-April Simone🍥
-
-心即理物即心
-
-Jack
-
-Zomby7e
-
-tergel93
-
-奇点
-
-兜率
-
-[safreya](https://github.com/safreya)
-
-杭永聪
-
-Shengyun
-
-仰望天空
-
-[bduath](https://github.com/bduath)
-
-[魔王酱](https://github.com/maou-sama-desu)
-
-极品盗号
-
-[blu10ph](https://github.com/blu10ph)
-
-livrth
-
-Voosk
+- [凌莞](https://clansty.com)
+- [柳离枝](https://github.com/liulitchi)
+- [魔王酱](https://github.com/maou-sama-desu)
+- [清热解毒口服液](https://linuxacme.cn)
+- [星不萌](https://www.moebsd.cn)
+- [Alex6357](https://github.com/Alex6357)
+- [bduath](https://github.com/bduath)
+- [blu10ph](https://github.com/blu10ph)
+- [DogeW](https://github.com/DogeW)
+- [fanyang1997](https://github.com/fanyang1997)
+- [heguru5](https://github.com/heguru5)
+- [matatabi-wang](https://github.com/matatabi-wang)
+- [matatabi-wang](https://github.com/matatabi-wang)
+- [orzyyyy](https://github.com/orzyyyy)
+- [peiyafei](https://github.com/peiyafei)
+- [pengxingwei](https://github.com/pengxingwei)
+- [puffinjiang](https://github.com/puffinjiang)
+- [qinghecyn](https://github.com/qinghecyn)
+- [Rintim](https://github.com/Rintim)
+- [safreya](https://github.com/safreya)
+- [tomblackwhite](https://github.com/tomblackwhite)
+- [ykla](https://github.com/ykla)
+- 201724
+- 地铁卡
+- 兜率
+- 杭永聪
+- 极品盗号
+- 李大鹏
+- 墨子
+- 奇点
+- 施主
+- 心即理物即心
+- 星不萌
+- 艳阳天
+- 仰望天空
+- 雨天
+- April Simone🍥
+- fjh1997
+- freyr
+- isNijikawa
+- Jack
+- kuntop
+- liguangsheng
+- livrth
+- ruur
+- Shengyun
+- tergel93
+- Voosk
+- X-Ray
+- Zomby7e
 
 **注意：如果缺少了你的信息或者不想被列出，请发起 issue。**
