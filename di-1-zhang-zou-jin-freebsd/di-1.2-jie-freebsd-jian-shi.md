@@ -6,7 +6,7 @@
 
 Berkeley 在中文音译上存在不同写法，美音和英音发音亦不同（ 英 /ˈbɑ:kli,ˈbə:kli/ 美 /ˈbɚkli/），仅“Berkeley”的拼写在英文中是统一的。
 
-[由于政治正确（黑奴问题）](https://www.lib.berkeley.edu/about/news/george-berkeley-portrait)和翻译习惯（曾译为巴克莱等等）的影响，这一关联在汉语世界中鲜有人知。
+[由于政治正确（黑奴问题）](https://www.lib.berkeley.edu/about/news/george-berkeley-portrait)和翻译习惯（曾译为巴克莱等等）的影响，这一关联不仅在汉语世界中鲜有人知，恐怕在英语世界当中亦如此。
 
 ## George Berkeley 乔治·贝克莱生平简介
 
