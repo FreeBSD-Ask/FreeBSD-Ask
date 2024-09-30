@@ -28,7 +28,7 @@
 
 >**技巧**
 >
->虚拟机一般使用 `FreeBSD-14.1-RELEASE-amd64-disc1.iso` 等类似文件名和后缀的镜像，但是，`FreeBSD-14.1-RELEASE-amd64-memstick.img` 也并非只能用于 U 盘刻录，虚拟机也是可以用的，使用方法参考其他章节。
+>虚拟机一般使用 `-disc1.iso` 等类似文件名和后缀的镜像，但是，`-memstick.img` 也并非只能用于 U 盘刻录，虚拟机也是可以用的，使用方法参考其他章节。
 
 RELEASE 正式版 镜像下载地址：<https://download.freebsd.org/ftp/releases/amd64/amd64/ISO-IMAGES/14.1/FreeBSD-14.1-RELEASE-amd64-disc1.iso>
 
