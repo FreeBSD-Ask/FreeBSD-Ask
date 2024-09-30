@@ -1,6 +1,6 @@
 # 第 1.2 节 BSD 与哲学家 George Berkeley
 
-值得注意地是，BSD（Berkeley Software Distribution）之名来自著名的近代伟大的英国（爱尔兰）经验论哲学家乔治·贝克莱（George Berkeley，1685－1753）。
+值得注意地是，BSD（Berkeley Software Distribution）之名根源于著名的近代伟大的英国（爱尔兰）经验论哲学家乔治·贝克莱（George Berkeley，1685－1753）。
 
 无论是 FreeBSD 及各种 BSD，还是伯克利市（Berkeley）和加州大学伯克利分校（University of California, Berkeley）的名字均源于他。
 
