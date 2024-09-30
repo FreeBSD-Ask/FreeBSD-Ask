@@ -2,35 +2,41 @@
 
 ## FreeBSD 版本比较
 
-已知 FreeBSD 有以下版本： alpha、rc、beta、release、current、stable。
+已知 FreeBSD 有如下版本： alpha、rc、beta、release、current、stable。
 
-release 是绝对的“stable”，是可以日常/服务器使用的稳定版。而 stable 和 current 都是开发分支，都是不稳定的。所以 FreeBSD 的 stable 与其他发行版的“稳定版”的概念并不一致，反而是一种“开发版”。
+release 是可以日常/服务器使用的，一般意义上的稳定版或者说是 LTS。而 **stable** 和 current 都是开发分支，都是 **不稳定的**。
 
-alpha 是 current 进入 release 的第一步。具体是 current --> alpha（进入 stable 分支）--> beta --> rc --> release。
+>**注意**
+>
+>FreeBSD 的 stable 与一般发行版的“稳定版”的概念并不一致，反而是一种不稳定的“开发版”。
 
-stable 相对稳定后会推送到 current，但是不保证二者没有大的 bug，只是 stable 确保其 ABI 是兼容与大版本的。
+alpha 是 current 进入 release 的第一步。具体过程是 current --> alpha（进入 stable 分支）--> beta --> rc --> release。
+
+current 相对稳定后会推送到 stable，但是不保证二者没有大的 bug。stable 仅确保其 ABI 与所对应的大版本兼容。
 
 ### FreeBSD 版本选择
 
-其中 rc 和 beta 都是测试版本；
+其中 rc 和 beta 都是测试版本。
 
 日常使用应该选择 release 版本，当有多个 release 版本时，应该选择最新的一个；
 
-如果硬件比较新或者需要进行某些测试，应该选择 current 版本，是滚动开发版。
+如果硬件比较新或者需要进行某些测试，应该选择 current 版本，它是滚动地开发版。
 
-注意：只有 rc、beta 和 release 才能使用 freebsd-update 命令更新系统（[且是一级架构](https://www.freebsd.org/platforms/)），其余系统均需要通过源代码编译的方式（或使用二进制的 pkgbase）更新系统。
+>**注意**
+>
+>只有 rc、beta 和 release（[且是一级架构](https://www.freebsd.org/platforms/)）才能使用 freebsd-update 命令更新系统，其余系统均需要通过源代码编译的方式（或使用二进制的 pkgbase）更新系统。
 
 ## 三种虚拟机比较
 
 ### Virtual Box 与 VMware Workstation Pro
 
-个人计算机上常用的虚拟机有两种，一是 Virtual Box，另一个是 VMware Workstation Pro。
+个人计算机上常用的虚拟机有两种，一是 Virtual Box，另一款是 VMware Workstation Pro。
 
 一般来说，在 Windows 系统上建议使用 VMware Workstation Pro （以下简称 VM），在 Linux 系统上建议使用 Virtual Box（以下简称 VB）。
 
-VM 是闭源的由商业公司提供的，个人家庭可免费使用；VB 是 Oracle 公司的开源产物，也是免费的。
+VM 是由闭源的商业公司提供的（目前已被博通收购），个人家庭可免费使用；VB 是 Oracle 公司的开源产物，也是免费的。
 
-就个人而言，VM 在实际使用中 Bug 会比 VB 少一些：VB 会有一些奇奇怪怪的问题（详见 VB 章节），且很花时间去排除解决。但是 VB 不堪大用，休眠/恢复虚拟机往往需要几分钟的时间，而同样的操作，VM 只需要 3 秒钟。在忍无可忍的状态下，我恢复了 VM 的使用，卸载了 VB 虚拟机。
+就个人体验而言，VM 在实际使用中 Bug 会比 VB 少一些：VB 会有一些奇奇怪怪的问题（详见 VB 章节），且很花时间去排除解决。并且 VB 不堪大用，休眠/恢复虚拟机往往需要几分钟的时间，而同样的操作，VM 往往仅需要 3 秒钟。在忍无可忍的状态下，我恢复了 VM 的使用，卸载了 VB 虚拟机。
 
 但是为了给与大家更多自由，我们将两种虚拟机的安装使用方法都提供给大家。
 
