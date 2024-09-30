@@ -65,3 +65,6 @@
   - 将“第 1.2 节 FreeBSD 与哲学家 George Berkeley”中有关 FreeBSD 的内容移动至“第 1.1 节 UNIX、Unix-like、Linux 和 FreeBSD 简介”
   - 改写“第 1.2 节 BSD 与哲学家 George Berkeley”，并补充参考文献
   - 根据 FreeBSD-14.1-RELEASE 完全重写“第 2.0 节 图解安装”
+- 2024.9.30
+  - “第 2.0 节 图解安装”新增“无线网卡/ WiFi 设置”一节
+  - 将全文的 WIFI 区域码调整为 FreeBSD 参考配置文件中设定的 `country CN regdomain NONE`
