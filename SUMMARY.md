@@ -140,7 +140,7 @@
 ## 第 14 章 网络管理
 
 * [第 14.1 节 TCP BBR](di-14-zhang-wang-luo-guan-li/di-14.1-jie-tcp-bbr.md)
-* [第 14.2 节 WiFI](di-14-zhang-wang-luo-guan-li/di-14.2-jie-wifi.md)
+* [第 14.2 节 WiFi](di-14-zhang-wang-luo-guan-li/di-14.2-jie-wifi.md)
 * [第 14.3 节 USB RNDIS (USB 网络共享)](di-14-zhang-wang-luo-guan-li/di-14.3-jie-usb-rndis-usb-wang-luo-gong-xiang.md)
 * [第 14.4 节 蓝牙](di-14-zhang-wang-luo-guan-li/di-14.4-jie-lan-ya.md)
 * [第 14.5 节 以太网卡](di-14-zhang-wang-luo-guan-li/di-14.5-yi-tai-wang-ka.md)
