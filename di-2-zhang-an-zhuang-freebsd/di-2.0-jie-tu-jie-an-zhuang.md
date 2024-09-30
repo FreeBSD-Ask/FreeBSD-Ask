@@ -77,7 +77,7 @@
 |    `src`     |                              系统源代码                               |
 |   `tests`    |                               测试工具                                |
 
-## 文件系统分区与 root 密码设置
+## 磁盘分区与 root 密码设置
 
 ![](../.gitbook/assets/ins7.png)
 
