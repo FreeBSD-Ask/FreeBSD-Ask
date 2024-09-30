@@ -17,7 +17,7 @@
 * [第 1.1 节 UNIX、Unix-like、Linux 和 FreeBSD 简介](di-1-zhang-zou-jin-freebsd/di-1.1-jie-shi-mo-shi-unix.md)
 * [第 1.2 节 BSD 与哲学家 George Berkeley](di-1-zhang-zou-jin-freebsd/di-1.2-jie-freebsd-jian-shi.md)
 * [第 1.3 节 为什么要使用 FreeBSD](di-1-zhang-zou-jin-freebsd/di-1.3-jie-wei-shi-mo-yao-shi-yong-freebsd.md)
-* [第 1.4 节 Linux 用户迁移指北](di-1-zhang-zou-jin-freebsd/di-1.4-jie-linux-yong-hu-qian-yi-zhi-bei.md)
+* [第 1.4 节 Linux 用户迁移指南](di-1-zhang-zou-jin-freebsd/di-1.4-jie-linux-yong-hu-qian-yi-zhi-bei.md)
 * [第 1.5 节 谁在使用 FreeBSD](di-1-zhang-zou-jin-freebsd/di-1.5-jie-shui-zai-shi-yong-freebsd.md)
 * [第 1.6 节 FreeBSD 开发计划](di-1-zhang-zou-jin-freebsd/di-1.6-jie-freebsd-kai-fa-ji-hua.md)
 * [第 1.7 节 FreeBSD 子项目](di-1-zhang-zou-jin-freebsd/di-1.7-jie-freebsd-zi-xiang-mu.md)
