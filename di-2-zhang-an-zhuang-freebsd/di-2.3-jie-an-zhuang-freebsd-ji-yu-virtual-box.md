@@ -116,7 +116,7 @@ hw.efi.poweroff=0
 
 到 `/etc/sysctl.conf`，然后再重启，再关机就正常了。
 
-#### 参考文献：
+#### 参考文献
 
 - [12.0-U8.1 -> 13.0-U2 poweroff problem & solution](https://www.truenas.com/community/threads/12-0-u8-1-13-0-u2-poweroff-problem-solution.104813/)
 - [EFI: VirtualBox computer non-stop after successful shutdown of FreeBSD](https://forums.freebsd.org/threads/efi-virtualbox-computer-non-stop-after-successful-shutdown-of-freebsd.84856/)
