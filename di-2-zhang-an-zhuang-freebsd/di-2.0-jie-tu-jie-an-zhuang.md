@@ -178,7 +178,7 @@
 
 ![](../.gitbook/assets/ins-w2.png)
 
-根据 FreeBSD WiFi 区域码配置参考文件（`/etc/regdomain.xml`），我们应该选 `NONE ROW`。
+我们应该选 `NONE ROW`：
 
 ![](../.gitbook/assets/ins-w3.png)
 
