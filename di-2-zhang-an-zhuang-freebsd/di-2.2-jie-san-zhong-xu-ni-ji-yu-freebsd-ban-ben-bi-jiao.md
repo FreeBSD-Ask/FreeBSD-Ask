@@ -24,7 +24,7 @@ current 相对稳定后会推送到 stable，但是不保证二者没有大的 b
 
 >**注意**
 >
->只有 rc、beta 和 release（[且是一级架构](https://www.freebsd.org/platforms/)）才能使用 freebsd-update 命令更新系统，其余系统均需要通过源代码编译的方式（或使用二进制的 pkgbase）更新系统。
+>只有 rc、beta 和 release（[且是一级架构](https://www.freebsd.org/platforms/)）才能使用命令 `freebsd-update` 更新系统，其余版本系统均需要通过源代码编译的方式（或使用二进制的 pkgbase）更新系统。
 
 ## 三种虚拟机比较
 
