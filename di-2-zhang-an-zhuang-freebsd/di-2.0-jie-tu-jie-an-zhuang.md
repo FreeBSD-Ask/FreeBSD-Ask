@@ -168,23 +168,38 @@
 
 ### 无线网卡/ WiFi 设置
 
->**技巧**
->
->只要能识别出来网卡，肯定就是能用的，但是在安装系统的时候不一定能够正确搜索出 WiFi。请你置空，安装完成后重启到新系统，再参照 WiFi 章节进行处理。
+>**注意**
 >
 >博通网卡请安装后参参照 WiFi 章节进行处理。
 
 ![](../.gitbook/assets/ins-w1.png)
 
+修改 WiFi 区域码：
+
 ![](../.gitbook/assets/ins-w2.png)
+
+根据 FreeBSD WiFi 区域码配置参考文件（`/etc/regdomain.xml`），我们应该选 `NONE ROW`。
 
 ![](../.gitbook/assets/ins-w3.png)
 
+选择区域：
+
 ![](../.gitbook/assets/ins-w4.png)
+
+扫描：
 
 ![](../.gitbook/assets/ins-w5.png)
 
+>**技巧**
+>
+>只要能识别出来网卡，肯定就是能用的，但是在安装系统的时候不一定能够正确搜索出 WiFi。请你置空，安装完成后重启到新系统，再参照 WiFi 章节进行处理。
+
 ![](../.gitbook/assets/ins-w6.png)
+
+
+在列表中找寻你的 WiFi，找不到的话请你换下路由器的信道。
+
+![](../.gitbook/assets/ins18.png)
 
 配置 IPv4。按 **回车键** 可选定。
 
