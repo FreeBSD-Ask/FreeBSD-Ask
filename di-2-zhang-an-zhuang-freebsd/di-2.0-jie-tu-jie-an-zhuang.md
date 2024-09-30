@@ -2,6 +2,8 @@
 
 以下安装说明基于 UEFI 下的 `FreeBSD-14.1-RELEASE-amd64-disc1.iso`。`-dvd1.iso` 大同小异。
 
+## 启动安装盘、设定键盘布局与主机名
+
 ![](../.gitbook/assets/ins1.png)
 
 此界面无需任何操作，等待十秒，可自动进入 `1. Boot Installer [Enter]`；亦可以直接按 **回车键** 进入。
@@ -55,6 +57,8 @@
 >
 >**不要** 在这一步直接按 **回车键**！这样会导致主机名为空！Xorg 会无法启动。
 
+## 选择要安装的组件
+
 ![](../.gitbook/assets/ins6.png)
 
 推荐：在默认的基础上，**额外** 选中 `src` 即可。因为部分显卡驱动（如 `drm`）和其他程序需要 `src`，经测试 `lib32` 后天安装无效。不推荐选 `ports`，因为太老了，还不如直接从源里拉取最新的。
@@ -72,6 +76,8 @@
 |   `ports`    |                                 ports                                 |
 |    `src`     |                              系统源代码                               |
 |   `tests`    |                               测试工具                                |
+
+## 文件系统分区与 root 密码设置
 
 ![](../.gitbook/assets/ins7.png)
 
@@ -136,6 +142,9 @@
 
 此处输入 root 密码，密码不会显示在屏幕上，输入后就是 **什么也没有**，其他地方的密码亦如此。要求重复输入两次以确认一致性。密码强度默认无要求。
 
+## 网络设置
+
+### 以太网卡设置
 
 ![](../.gitbook/assets/ins17.png)
 
@@ -156,6 +165,41 @@
 ![](../.gitbook/assets/ins21.png)
 
 一般保持 DHCP 获取的 DNS 即可，也可以使用其他 DNS。此处使用了阿里 DNS `223.5.5.5`。按 **方向键** 可切换，按 **回车键** 可选定。
+
+## 无线网卡/ WiFi 设置
+
+![](../.gitbook/assets/ins-w1.png)
+
+![](../.gitbook/assets/ins-w2.png)
+
+![](../.gitbook/assets/ins-w3.png)
+
+![](../.gitbook/assets/ins-w4.png)
+
+![](../.gitbook/assets/ins-w5.png)
+
+![](../.gitbook/assets/ins-w6.png)
+
+配置 IPv4。按 **回车键** 可选定。
+
+![](../.gitbook/assets/ins19.png)
+
+配置使用 DHCP。按 **回车键** 可选定。
+
+![](../.gitbook/assets/ins20.png)
+
+配置 IPv6。因本教程未使用 IPv6，故选 `No`，按 **回车键** 可选定。如有需要可自行配置 IPv6。
+
+![](../.gitbook/assets/ins21.png)
+
+一般保持 DHCP 获取的 DNS 即可，也可以使用其他 DNS。此处使用了阿里 DNS `223.5.5.5`。按 **方向键** 可切换，按 **回车键** 可选定。
+
+### 参考文献
+
+- [Regulatory Domain Support](https://wiki.freebsd.org/WiFi/RegulatoryDomainSupport)
+- [regdomain.xml --	802.11 wireless	regulatory definitions](https://man.freebsd.org/cgi/man.cgi?query=regdomain&sektion=5)，对应编码请参考系统中的 `/etc/regdomain.xml` 文件。
+
+## 时区设置
 
 ![](../.gitbook/assets/ins22.png)
 
@@ -181,7 +225,10 @@
 
 按 **回车键** 即可。
 
+## 启动服务设置
+
 ![](../.gitbook/assets/ins28.png)
+
 
 >**警告**
 >
@@ -200,6 +247,8 @@
 |`ntpd_sync_on_start`|开机同步时间|
 |    `powerd`     |                                                                                电源管理，CPU 频率动态调整                                                                                 |
 |    `dumpdev`    |                                                                       启用崩溃转储，用于调试系统                                                                        |
+
+## 安全加固、创建普通用户
 
 ![](../.gitbook/assets/ins29.png)
 
@@ -241,6 +290,8 @@
 其他参数可以保持默认设置不变。在 FreeBSD 14 及以后，所有用户的默认 shell 都被统一为了 `sh`。
 
 最后会询问 `Add another user？ (yes/no) [no]`，按 **回车键** 即可完成创建，输入 `no`，按 **回车键** 可创建第二个普通用户。
+
+## 结束安装
 
 ![](../.gitbook/assets/ins32.png)
 
