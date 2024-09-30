@@ -1,6 +1,6 @@
 # 第 1.2 节 BSD 与哲学家 George Berkeley
 
-值得注意地是，Berkeley 伯克利之名来自著名的近代伟大的英国（爱尔兰）经验论哲学家乔治·贝克莱（George Berkeley，1685－1753），伯克利市（Berkeley）和加州大学伯克利分校（University of California, Berkeley）的名字均源于他。Berkeley 在中文音译上存在不同写法，美音和英音发音亦不同（ 英 /ˈbɑ:kli,ˈbə:kli/ 美 /ˈbɚkli/），仅“Berkeley”的拼写在英文中是统一的。[由于政治正确（黑奴问题）](https://www.lib.berkeley.edu/about/news/george-berkeley-portrait)和翻译习惯（曾译为巴克莱等等）的影响，这一关联在汉语世界中鲜有人知。
+值得注意地是，Berkeley 伯克利之名来自著名的近代伟大的英国（爱尔兰）经验论哲学家乔治·贝克莱（George Berkeley，1685－1753）。无论是 FreeBSD 及各种 BSD（Berkeley Software Distribution），还是伯克利市（Berkeley）和加州大学伯克利分校（University of California, Berkeley）的名字均源于他。Berkeley 在中文音译上存在不同写法，美音和英音发音亦不同（ 英 /ˈbɑ:kli,ˈbə:kli/ 美 /ˈbɚkli/），仅“Berkeley”的拼写在英文中是统一的。[由于政治正确（黑奴问题）](https://www.lib.berkeley.edu/about/news/george-berkeley-portrait)和翻译习惯（曾译为巴克莱等等）的影响，这一关联在汉语世界中鲜有人知。
 
 ## George Berkeley 乔治·贝克莱生平简介
 
