@@ -36,18 +36,13 @@
 
 ## 我该如何刻录 FreeBSD 镜像到 U 盘？
 
-刻录工具 Windows 应该选用 **Rufus**，Linux 直接使用 `dd`命令即可。
+Windows 上的刻录工具应首选 **Rufus**，Linux 直接使用 `dd`命令即可。
 
 rufus 下载地址：[https://rufus.ie/zh](https://rufus.ie/zh)
 
 > **警告**
 >
-> **不建议** 使用 FreeBSD 手册推荐的 win32diskimager，有时会出现校验码错误的情况（实际上文件校验码正常）。**只有在 rufus 无效的情况下才应使用 win32diskimager。** 下载地址 <https://sourceforge.net/projects/win32diskimager/files/Archive/>，点击 `win32diskimager-1.0.0-install.exe` 即可下载。
->
-> 不要使用 Ventoy 引导实体机安装，有时会报错找不到安装文件。
->
-> 请 **老老实实用 rufus。**
-
+> **不建议** 使用 FreeBSD 手册推荐的 win32diskimager，有时会出现校验码错误的情况（实际上文件校验码正常）。**应仅在 rufus 无效的情况下才应使用 win32diskimager。** 下载地址 <https://sourceforge.net/projects/win32diskimager/files/Archive/>，点击 `win32diskimager-1.0.0-install.exe` 即可下载。
 
 
 
