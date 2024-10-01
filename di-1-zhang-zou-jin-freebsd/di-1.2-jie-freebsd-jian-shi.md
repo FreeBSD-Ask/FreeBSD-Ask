@@ -106,7 +106,7 @@ George Berkeley（1685.3.12—1753.1.14），2023 年是他逝世 270 周年。
 - 汪芳庭. 数学基础 (修订版)[M]. 高等教育出版社, 2018-10.（ISBN 9787040502428）
 - [美] Abraham Robinson. 非标准分析[M]. 译者: 申又根 / 王世强 / 张锦文, 科学出版社, 1980-9.（已绝版，统一书号: 13031-1267）
 - [澳] 陶哲轩. 陶哲轩实分析[M]. 译者: 李馨, 第3版. 人民邮电出版社, 2018-5.（ISBN 9787115480255）
-- George Berkeley. *The Querist, containing several queries proposed to the consideration of the public*. Gale ECCO, Print Editions, April 23, 2018（ISBN 9781385411018）
+- George Berkeley. *The Querist, containing several queries proposed to the consideration of the public*[M]. Gale ECCO, Print Editions, April 23, 2018（ISBN 9781385411018）
 - Schabas, Margaret, "Economics in Early Modern Philosophy", The Stanford Encyclopedia of Philosophy (Summer 2022 Edition), Edward N. Zalta (ed.), URL = <https://plato.stanford.edu/archives/sum2022/entries/economics-early-modern/>. SEP 早期现代经济哲学条目
 - [George Berkeley, Bishop of Cloyne/Philosopher](http://cloyne.ie/about/george-berkeley-bishop-of-cloyne/)，Cloyne District Community Council
 - [George Berkeley](https://www.britannica.com/biography/George-Berkeley)，大英百科全书贝克莱条目
