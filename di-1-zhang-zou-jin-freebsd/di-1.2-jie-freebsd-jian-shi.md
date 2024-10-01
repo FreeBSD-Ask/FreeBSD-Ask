@@ -98,7 +98,7 @@ George Berkeley（1685.3.12—1753.1.14），2023 年是他逝世 270 周年。
 
 ### 参考文献
 
-- [英] 乔治·贝克莱. 人类知识原理[M]. 译者: 张桂权, 人民出版社, 2017-2.（ISBN 9787010163321）
+- [英] 乔治·贝克莱. 人类知识原理和三篇对话[M]. 译者: 张桂权, 人民出版社, 2022-11.（ISBN 9787010236841）
 - 阎吉达. 贝克莱思想新探[M]. 复旦大学出版社, 1987-10.（附录部分有《论运动》的翻译）
 - Downing, Lisa, "George Berkeley", The Stanford Encyclopedia of Philosophy (Fall 2021 Edition), Edward N. Zalta (ed.), URL = <https://plato.stanford.edu/archives/fall2021/entries/berkeley/>. SEP 贝克莱条目
 - Easwaran, Kenny, Alan Hájek, Paolo Mancosu, and Graham Oppy, "Infinity", The Stanford Encyclopedia of Philosophy (Summer 2024 Edition), Edward N. Zalta & Uri Nodelman (eds.), URL = <https://plato.stanford.edu/archives/sum2024/entries/infinity/>. SEP 无穷条目
