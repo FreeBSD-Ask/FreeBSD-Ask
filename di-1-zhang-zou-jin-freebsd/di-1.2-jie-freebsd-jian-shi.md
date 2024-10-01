@@ -18,7 +18,7 @@ George Berkeley（1685.3.12—1753.1.14），2023 年是他逝世 270 周年。
 - 1704 年，19 岁时被授予文学学士学位
 - 1707 年，22 岁时被授予文学硕士学位，同年留校任特别研究员，讲授希腊语
 - 1709 年，24 岁时任爱尔兰教会执事（为满足学院规定）。同年发表第一篇著作《视觉新论》，哲学思想基本成形
-- 1710 年，25 岁时任爱尔兰教会牧师。同年发表《人类知识原理》，抨击牛顿的绝对时空观
+- 1710 年，25 岁时任爱尔兰教会牧师。同年发表《人类知识原理》，表示牛顿的许多基本思想都是错误的，抨击牛顿的绝对时空观
 - 1713 年，28 岁时发表《海拉斯与斐洛诺斯对话三篇》
 - 1717 年，32 岁时被任命为圣三一学院高级研究员，但他选择离开学院，旅欧 4 年
 - 1721 年，36 岁时被授予神学博士学位，同年（或次年）任爱尔兰教会德罗莫尔教区座堂主任牧师（Dean）；并再次选择留在都柏林圣三一学院，讲授神学和希伯来语
@@ -88,7 +88,13 @@ George Berkeley（1685.3.12—1753.1.14），2023 年是他逝世 270 周年。
 >请结合上文或进一步阅读贝克莱著作，分别说说以上是为什么。
 
 
-贝克莱还认为货币的价值并不取决于其中金属含量的多寡，货币只是一种用于商品交换的手段。他还主张通过教育、培训，依靠人民来发展经济。
+贝克莱还认为货币的价值并不取决于其中金属含量的多寡，货币只是一种用于商品交换的手段。货币的价值来自信用。他认为应该使收入在国民间平均分配以实现经济公平。
+
+他还主张通过教育、培训，依靠人民来发展经济。他认为应该通过开展大型工程建设来改善贫困问题。
+
+贝克莱主张各个宗教团体放下纷争，为共同的利益而团结。在他淡出人们的视野后，专注为当地人民做好事，无论是天主教徒还是新教徒。
+
+虽然在贝克莱有生之年，他的哲学并未被广泛认同，但在几百年后，大放异彩。
 
 ### 参考文献
 
@@ -101,3 +107,4 @@ George Berkeley（1685.3.12—1753.1.14），2023 年是他逝世 270 周年。
 - [澳] 陶哲轩. 陶哲轩实分析[M]. 译者: 李馨, 第3版. 人民邮电出版社, 2018-5.（ISBN 9787115480255）
 - George Berkeley. *The Querist, containing several queries proposed to the consideration of the public*. Gale ECCO, Print Editions, April 23, 2018（ISBN 9781385411018）
 - Schabas, Margaret, "Economics in Early Modern Philosophy", The Stanford Encyclopedia of Philosophy (Summer 2022 Edition), Edward N. Zalta (ed.), URL = <https://plato.stanford.edu/archives/sum2022/entries/economics-early-modern/>. SEP 早期现代经济哲学条目
+- [George Berkeley, Bishop of Cloyne/Philosopher](http://cloyne.ie/about/george-berkeley-bishop-of-cloyne/)，Cloyne District Community Council
