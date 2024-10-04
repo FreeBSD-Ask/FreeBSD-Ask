@@ -135,6 +135,12 @@ root@ykla:/usr/ports/sysutils/htop # make all-depends-list
 # make config-recursive
 ```
 
+如何使用 pkg 安装缺失的依赖：
+
+```sh
+# make install-missing-packages
+```
+
 如何删除当前 port 及其依赖的配置文件：
 
 ```sh
