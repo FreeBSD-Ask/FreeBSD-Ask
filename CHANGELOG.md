@@ -69,3 +69,5 @@
   - “第 2.0 节 图解安装”新增“无线网卡/ WiFi 设置”一节
   - 将全文的 WIFI 区域码调整为 FreeBSD 参考配置文件中设定的 `country CN regdomain NONE`
   - 完全重写：“第 14.2 节 WiFi”
+- 2024.10.5
+  - 添加贡献者“[dongdigua](https://github.com/dongdigua)” 
