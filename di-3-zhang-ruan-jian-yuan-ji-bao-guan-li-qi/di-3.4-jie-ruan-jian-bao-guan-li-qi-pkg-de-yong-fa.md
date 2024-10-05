@@ -205,10 +205,14 @@ Proceed with deinstalling packages? [y/N]:
 
 
 - RELEASE
+
+请先切换到 latest 源。
   
 ```sh
 # freebsd-update fetch
 # freebsd-update install
+# pkg-static update -f
+# pkg-static upgrade -f pkg
 ```
 
 - CURRENT/STABLE
