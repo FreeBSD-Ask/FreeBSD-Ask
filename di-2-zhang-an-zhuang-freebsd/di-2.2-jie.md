@@ -45,39 +45,74 @@ PS C:\Users\ykla> Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-H
 
 ## 准备 Hyper-V 虚拟机
 
+### 创建虚拟机
+
 ![Hyper-V](../.gitbook/assets/hp2.png)
 
 右键单击这台主机的主机名，选择“新建”——>“虚拟机”。
 
 ![Hyper-V](../.gitbook/assets/hp3.png)
 
+点击“下一页”。
+
 ![Hyper-V](../.gitbook/assets/hp4.png)
+
+起个名字，然后点击“下一页”。
 
 ![Hyper-V](../.gitbook/assets/hp5.png)
 
+设置内存大小，然后点击“下一页”。
+
 ![Hyper-V](../.gitbook/assets/hp6.png)
+
+设置网络，然后点击“下一页”。
+
 
 ![Hyper-V](../.gitbook/assets/hp7.png)
 
+选择虚拟硬盘名称、大小、存储位置。然后点击“下一页”。
+
+
 ![Hyper-V](../.gitbook/assets/hp8.png)
+
+点击“浏览”，找到下载的 `FreeBSD-14.1-RELEASE-amd64-disc1.iso`，选中。然后点击“下一页”。
 
 ![Hyper-V](../.gitbook/assets/hp9.png)
 
+点击“完成”。
+
+### 调整虚拟机
+
 ![Hyper-V](../.gitbook/assets/hp10.png)
+
+点击“设置”
 
 ![Hyper-V](../.gitbook/assets/hp11.png)
 
+请务必关闭安全启动。
+
 ![Hyper-V](../.gitbook/assets/hp12.png)
 
-![Hyper-V](../.gitbook/assets/hp13.png)
+请勾选“来宾服务”。作用见参考文献。
+
+![Hyper-V](../.gitbook/assets/hp16.jpg)
+
+可选择关闭“使用自动检查点”，即关闭自动快照。作用见参考文献。
+
 
 ## 安装 FreeBSD
 
+![Hyper-V](../.gitbook/assets/hp13.png)
+
+启动虚拟机。
+
 ![Hyper-V](../.gitbook/assets/hp14.png)
+
+开始安装。
 
 ![Hyper-V](../.gitbook/assets/hp15.jpg)
 
-
+安装完成。
 
 ## 参考文献
 
