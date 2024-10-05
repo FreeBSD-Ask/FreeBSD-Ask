@@ -197,7 +197,29 @@ Proceed with deinstalling packages? [y/N]:
 
 ## 故障排除
 
-### FreeBSD pkg 安装软件时出现创建用户失败解决
+###  `ld-elf.so.1: Shared object "libmd.so.6" not found, required by "pkg"`
+
+该问题一般是由于软件源未及时同步基本系统 ABI 的变更。
+
+对于一般 RELEASE，更新系统即可。对于 CURRENT/STABLE 系统，重新编译 `pkg` 即可。
+
+
+- RELEASE
+  
+```sh
+# freebsd-update fetch
+# freebsd-update install
+```
+
+- CURRENT/STABLE
+
+```sh
+# pkg-static delete -f pkg #强制卸载当前的 pkg
+# cd ports-mgmt/pkg
+# make BATCH=yes install clean #使用 Ports 重新安装 pkg
+```
+
+### `pw: user ‘package’ disappeared during update`
 
 问题示例：
 
@@ -211,37 +233,79 @@ pw: user ‘package’ disappeared during update
 pkg: PRE-INSTALL script failed
 ```
 
-问题解析：数据库未同步
+问题在于数据库未同步。
 
-问题解决：
+刷新数据库：
 
 ```sh
 # /usr/sbin/pwd_mkdb -p /etc/master.passwd
 ```
 
-### Shared object "x.so.x" not found, required by "xxx"
+### `Shared object "x.so.x" not found, required by "xxx"`
 
 出现该问题一般是由于 ABI 破坏，更新即可。
 
+安装 `bsdadminscripts2`：
+
 ```sh
-# pkg  install bsdadminscripts
-# pkg_libchk
-# port-rebuild
+# pkg install bsdadminscripts2
+```
+或者
+
+```sh
+# cd /usr/ports/ports-mgmt/bsdadminscripts2/ 
+# make install clean
 ```
 
-### Newer FreeBSD version for package pkg
+```sh
+# pkg_libchk
+doxygen-1.9.6_1,2: /usr/local/bin/doxygen misses libmd.so.6
+jbig2dec-0.20_1: /usr/local/bin/jbig2dec misses libmd.so.6
+jbig2dec-0.20_1: /usr/local/lib/libjbig2dec.so misses libmd.so.6
+jbig2dec-0.20_1: /usr/local/lib/libjbig2dec.so.0 misses libmd.so.6
+jbig2dec-0.20_1: /usr/local/lib/libjbig2dec.so.0.0.0 misses libmd.so.6
+x265-3.5_3: /usr/local/bin/x265 misses libmd.so.6
+x265-3.5_3: /usr/local/lib/libx265.so misses libmd.so.6
+x265-3.5_3: /usr/local/lib/libx265.so.200 misses libmd.so.6
+xorg-server-21.1.13,1: /usr/local/libexec/Xorg misses libmd.so.6
+xwayland-24.1.2,1: /usr/local/bin/Xwayland misses libmd.so.6
+root@ykla:/usr/ports/chinese/fcitx # 
+```
+
+按照上述软件列表，使用 Ports 逐个重新编译即可（RELEASE 可以直接 `pkg` 更新。）。
+
+- `bsdadminscripts2` 还可以 **检查系统的完整性**，找出哪些系统文件是经过窜改的的：
+
+```sh
+root@ykla:/ # pkg_validate
+FreeBSD-pkg-bootstrap-15.snap20241004232339: checksum mismatch for /etc/pkg/FreeBSD.conf
+FreeBSD-runtime-15.snap20241004232339: checksum mismatch for /etc/group
+FreeBSD-runtime-15.snap20241004232339: checksum mismatch for /etc/master.passwd
+FreeBSD-runtime-15.snap20241004232339: checksum mismatch for /etc/shells
+FreeBSD-runtime-15.snap20241004232339: checksum mismatch for /etc/sysctl.conf
+FreeBSD-ssh-15.snap20241004232339: checksum mismatch for /etc/ssh/sshd_config
+PackageKit-1.2.8: checksum mismatch for /var/lib/PackageKit/transactions.db
+```
+
+#### 参考文献
+
+
+- [BSD Administration Scripts II](https://github.com/lonkamikaze/bsda2)，项目地址，含详细使用说明
+
+
+### `Newer FreeBSD version for package pkg`
 
 问题示例：
 
 ```sh
-Neuer FreeBSD version for package pkg:
+Newer FreeBSD version for package pkg:
 To ignore this error set IGNORE_OSVERSION=yes
 - package: 1402843
 - running kernel: 1400042
 Ignore the mismatch and continue? [y/N]:
 ```
 
-这通常发生在失去安全支持的或者在 Current 版本的系统上，不影响使用，输入 `y` 即可。
+这通常发生在失去安全支持的或者在 CURRENT/STABLE 版本的系统上，不影响使用，输入 `y` 即可。
 
 如果想要从根源上解决，需要自己卸载 pkg，从 ports 安装 `ports-mgmt/pkg`；或者从源代码更新整个系统。
 
