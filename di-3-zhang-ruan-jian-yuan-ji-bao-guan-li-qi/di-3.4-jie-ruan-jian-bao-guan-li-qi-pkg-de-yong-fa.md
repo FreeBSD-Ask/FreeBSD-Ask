@@ -274,7 +274,14 @@ root@ykla:/usr/ports/chinese/fcitx #
 
 按照上述软件列表，使用 Ports 逐个重新编译即可（RELEASE 可以直接 `pkg` 更新。）。
 
-- `bsdadminscripts2` 还可以 **检查系统的完整性**，找出哪些系统文件是经过窜改的的：
+
+
+#### `bsdadminscripts2` 扩展用法及参考文献
+
+
+- [BSD Administration Scripts II](https://github.com/lonkamikaze/bsda2)，项目地址，含详细使用说明
+
+- `bsdadminscripts2` 能 **检查系统的完整性**，找出哪些系统文件是被窜改过的：
 
 ```sh
 root@ykla:/ # pkg_validate
@@ -287,11 +294,14 @@ FreeBSD-ssh-15.snap20241004232339: checksum mismatch for /etc/ssh/sshd_config
 PackageKit-1.2.8: checksum mismatch for /var/lib/PackageKit/transactions.db
 ```
 
-#### 参考文献
+- `bsdadminscripts2` 亦可查找当前系统的过时软件：
 
-
-- [BSD Administration Scripts II](https://github.com/lonkamikaze/bsda2)，项目地址，含详细使用说明
-
+```sh
+@ykla:/usr/ports # pkg_version -ql\<
+akonadi-23.08.5_1
+build2-0.17.0
+chromium-128.0.6613.137
+```
 
 ### `Newer FreeBSD version for package pkg`
 
