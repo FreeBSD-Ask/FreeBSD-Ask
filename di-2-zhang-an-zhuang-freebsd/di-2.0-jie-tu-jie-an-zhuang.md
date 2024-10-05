@@ -1,6 +1,6 @@
 # 第 2.0 节 图解安装
 
-## FreeBSD 版本比较
+## FreeBSD 版本概述
 
 已知 FreeBSD 有如下版本： alpha、rc、beta、release、current、stable。
 
