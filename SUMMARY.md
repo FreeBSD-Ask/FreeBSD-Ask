@@ -27,7 +27,7 @@
 
 * [第 2.0 节 图解安装](di-2-zhang-an-zhuang-freebsd/di-2.0-jie-tu-jie-an-zhuang.md)
 * [第 2.1 节 手动安装双系统](di-2-zhang-an-zhuang-freebsd/di-2.1-jie-shuang-xi-tong-an-zhuang.md)
-* [第 2.2 节 三种虚拟机与 FreeBSD 版本比较](di-2-zhang-an-zhuang-freebsd/di-2.2-jie-san-zhong-xu-ni-ji-yu-freebsd-ban-ben-bi-jiao.md)
+* [第 2.2 节 安装 FreeBSD——基于 Hyper-V](di-2-zhang-an-zhuang-freebsd/di-2.2-jie.md)
 * [第 2.3 节 安装 FreeBSD——基于 Virtual Box](di-2-zhang-an-zhuang-freebsd/di-2.3-jie-an-zhuang-freebsd-ji-yu-virtual-box.md)
 * [第 2.4 节 安装 FreeBSD——基于 Vmware Workstation Pro](di-2-zhang-an-zhuang-freebsd/di-2.4-jie-an-zhuang-freebsd-ji-yu-vmware-workstation-pro.md)
 * [第 2.5 节 腾讯云轻量云及其他服务器安装 FreeBSD](di-2-zhang-an-zhuang-freebsd/di-2.5-jie-teng-xun-yun-qing-liang-yun-ji-qi-ta-fu-wu-qi-dd-an-zhuang-freebsd.md)
