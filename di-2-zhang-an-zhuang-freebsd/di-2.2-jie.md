@@ -49,10 +49,6 @@ PS C:\Users\ykla> Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-H
 
 右键单击这台主机的主机名，选择“新建”——>“虚拟机”。
 
-![Hyper-V](../.gitbook/assets/hp1.png)
-
-![Hyper-V](../.gitbook/assets/hp2.png)
-
 ![Hyper-V](../.gitbook/assets/hp3.png)
 
 ![Hyper-V](../.gitbook/assets/hp4.png)
