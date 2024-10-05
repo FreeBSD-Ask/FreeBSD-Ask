@@ -108,7 +108,7 @@
 | virtio-fs                                                                 | ??? asomers                        | 重要性表示存在补丁                                     |
 | 在 Lua 中更新系统调用表生成（makesyscalls.lua 的库化）                    | imp                            |                                                        |
 | 精简安装程序（使单个盘上的安装有更优的默认设置，一直按回车键就能完成）           | emaste brd                         |                                                        |
-| 增补 per-file 以支持套接字/命名管道                                 | dfr                                |                                                        |
+| 增补每个文件 file 以支持套接字/命名管道                                 | dfr                                |                                                        |
 | 更多容器支持（OCI）                                                       | dfr                                | 需要志愿者。软件 Containerd 需要维护者。官方镜像/仓库  |
 | 精简内核                                                                | imp                               | 进行中                                                 |
 | 使引导加载程序支持 devmatch                                                 | imp manu	                        | PCI 和 USB                                             |
@@ -125,18 +125,18 @@
 | 在用户空间支持 Rust                                                       | brooks                             |                                                        |
 | 为 ZFS 提供 Netlink（zfsd/zed）                                           | allanjude                          |                                                        |
 | 以 netlink 取代 devd 套接字                                                  | bapt                           | 具有内核部分                                           |
-| 登录配置的 UCL 化                                                         | meena                              | allanjude 拥有补丁的开端：D25365                       |
+| 登录配置的 UCL 化                                                         | meena                              | allanjude 拥有初始补丁：D25365                       |
 | 为其余网络工具添加 libxo                                                  | meena                              | 如有问题请在提议的页面上 ping phil@                |
 | 分层动态登录类                                                            | ngor，meena                        |                                                        |
 | gve(4) 的 arm64 支持，GCE 的 arm64 实例需要                               | delphij，kibab（由 lwhsu 推动） |                                                        |
-| 删除 MAC “label”的限制                                                   | 	allanjude des                         | 使用 OSD？建立在 bapt 的 mac_do 使用的 per-jail 机制上 |
-| 用于 jails 的 PID 命名空间                                                | pjd dfr allanjude                  | 你想要哪些其他命名空间?                                |
+| 删除 MAC “label”的限制                                                   | 	allanjude des                         | 使用 OSD？建立在 bapt 的 mac_do 使用的每个 jail 机制上 |
+| 用于 jail 的 PID 命名空间                                                | pjd dfr allanjude                  | 你想要哪些其他命名空间?                                |
 | 将 dhcpcd 引入基本系统                                                    |                                    | 初始（日期）版本在这里：[D22012](https://reviews.freebsd.org/D22012)                         |
 | 通过 netlink 访问 jail vnet                                               | dfr                                |                                                        |
-| 在计算哈希值的同时能够在内存中操作文件。                                          | sjg (wants)                        | 为 mac_veriexec                                        |
-| 更新 flua，以添加更多标准组件，更多“常见”组件及 FreeBSD 系统调用。      |                                    | 启动加载程序也使用 Lua，因此在这里需要小心些。       |
+| 在计算哈希值的同时能够在内存中操作文件。                                          | sjg (想参加)                        | 为 mac_veriexec                                        |
+| 更新 flua，添加更多标准组件，更多“常见”组件及 FreeBSD 系统调用。      |                                    | 启动加载程序也使用 Lua，因此在这里需要小心些。       |
 | priv(1)                                                                   | pjd                                | 降低进程权限的能力                                     |
-| rctl                                                                      | DFR，PJD？                         | 当前 RCTL 对于资源限制 jails 的工作效果不佳            |
+| rctl                                                                      | DFR，PJD？                         | 当前 RCTL 对于资源限制 jail 的工作效果不佳            |
 
 ### 🗑️ 准备删除 🪓
 
@@ -148,7 +148,7 @@
 | armv6                                                                                                         |	imp/manu       |                                                                                           |
 | i386 内核                                                                                                     | imp             | 时间？                                                                                    |
 | powerpc，powerpcsce 内核                                                                                      | imp              |                                                                                           |
-| PS3 🎮                                                                                                        | imp               | 沒有人使用了（我们需要 PS5 port！）                                                         |
+| PS3 🎮                                                                                                        | imp               | 沒人使用了（我们需要移植 PS5！）                                                         |
 | powerpc64, powerpc64le（整个 powerpc 架构）                                                                 |                  | <https://bugs.freebsd.org/271826> FreeBSD 在 PowerMac G5 上速度极慢……                     |
 | SoC 评估审查                                                                                                 |imp/manu/mhorne	 |                                                                                           |
 | ftpd                                                                                                          | allanjude        |                                                                                           |
