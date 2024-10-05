@@ -37,6 +37,7 @@
 - [Alex6357](https://github.com/Alex6357)
 - [bduath](https://github.com/bduath)
 - [blu10ph](https://github.com/blu10ph)
+- [dongdigua](https://github.com/dongdigua)
 - [DogeW](https://github.com/DogeW)
 - [fanyang1997](https://github.com/fanyang1997)
 - [heguru5](https://github.com/heguru5)
