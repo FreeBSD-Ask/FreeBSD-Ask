@@ -4,11 +4,11 @@
 
 已知 FreeBSD 有如下版本： alpha、rc、beta、release、current、stable。
 
-release 是可以日常/服务器使用的，一般意义上的稳定版或者说是 LTS。而 **stable** 和 current 都是开发分支，都是 **不稳定的**。
+**release** 是可以日常/服务器使用的，即一般意义上的 **稳定版** 或者说是 LTS。而 ***stable*** 和 ***current*** 都是开发分支，都是 **不稳定的**。
 
 >**注意**
 >
->FreeBSD 的 ***stable*** 与一般发行版的“稳定版”的概念并不一致，反而是一种 **不稳定** 的“开发版”。
+>FreeBSD 的 ***stable*** 与一般 Linux 发行版的“稳定版”之概念并不一致，反而是一种 **不稳定** 的“开发版”。
 
 alpha 是 current 进入 release 的第一步。具体过程是 current --> alpha（进入 stable 分支）--> beta --> rc --> release。
 
