@@ -80,15 +80,15 @@ pkg 升级：
 
 ## 如何卸载软件
 
-**来源请求** ~~直接使用 `pkg delete` 会破坏正常的依赖关系，应该尽量避免使用（ports 的 `make deinstall` 也一样），转而使用 `pkg-rmleaf` 命令，该命令属于的软件需要自行安装。~~ [FreeBSD 15 不再可用](https://github.com/bsdelf/pkg-rmleaf/issues/2)，同时该包已近 6 年未经维护。
+直接使用 `pkg delete` 会破坏正常的依赖关系，应该尽量避免使用（ports 的 `make deinstall` 也一样），转而使用 `pkg_rmleaves` 命令，该命令属于的软件需要自行安装。
 
 ```sh
-# pkg install pkg-rmleaf
+# pkg install pkg_rmleaves
 ```
 
 或者
 ```sh
-# cd /usr/ports/ports-mgmt/pkg-rmleaf/
+# cd /usr/ports/ports-mgmt/pkg_rmleaves/
 # make install clean
 ```
 
