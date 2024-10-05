@@ -79,7 +79,7 @@ PS C:\Users\ykla> Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-H
 
 ![Hyper-V](../.gitbook/assets/hp14.png)
 
-![Hyper-V](../.gitbook/assets/hp15.png)
+![Hyper-V](../.gitbook/assets/hp15.jpg)
 
 
 
