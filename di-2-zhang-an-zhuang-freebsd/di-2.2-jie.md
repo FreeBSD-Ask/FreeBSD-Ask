@@ -119,6 +119,15 @@ PS C:\Users\ykla> Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-H
 
 安装完成。
 
+## 测试桌面
+
+鼠标、键盘均表现正常，可无缝切换。但是桌面大小无法调整。
+
+
+![Hyper-V](../.gitbook/assets/hp.jpg)
+
+必须先关机才能删除虚拟机。
+
 ## 参考文献
 
 - [在 Windows 上安装 Hyper-V](https://learn.microsoft.com/zh-cn/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v)，微软官方教程，还有多种方法可选
