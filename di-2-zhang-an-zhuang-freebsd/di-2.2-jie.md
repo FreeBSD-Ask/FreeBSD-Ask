@@ -31,6 +31,7 @@ Hyper-V 不支持家庭版。
 - Windows 11 23H2 专业版
 - FreeBSD 14.1-RELEASE（`FreeBSD-14.1-RELEASE-amd64-disc1.iso`）
 - Hyper-V 版本: 10.0.22621.4249
+- 使用第二代 Hyper-V
 
 ## 安装 Hyper-V
 
@@ -54,6 +55,10 @@ PS C:\Users\ykla> Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-H
 ![Hyper-V](../.gitbook/assets/hp3.png)
 
 点击“下一页”。
+
+![Hyper-V](../.gitbook/assets/hp.png)
+
+选择“第二代”。然后点击“下一页”。
 
 ![Hyper-V](../.gitbook/assets/hp4.png)
 
