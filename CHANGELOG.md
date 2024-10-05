@@ -72,3 +72,4 @@
 - 2024.10.5
   - 添加贡献者“[dongdigua](https://github.com/dongdigua)”
   - “第 3.4 节 软件包管理器 pkg 的用法”：重写故障排除。
+  - 新增一节：“第 2.2 节 安装 FreeBSD——基于 Hyper-V”，原章节拆分到各个子章节。
