@@ -1,4 +1,4 @@
-# 第 2.4 节 安装 FreeBSD——基于 Hyper-V
+# 第 2.2 节 安装 FreeBSD——基于 Hyper-V
 
 ## Hyper-V 简介
 
