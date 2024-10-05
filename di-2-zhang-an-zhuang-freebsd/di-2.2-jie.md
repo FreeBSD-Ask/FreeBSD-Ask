@@ -40,7 +40,8 @@ Hyper-V 不支持家庭版。
 右键单击 Windows 徽标，在弹出窗口中右键单击“终端管理员”：输入以下内容
 
 ```batch
-PS C:\Users\ykla> Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All                             是否立即重启计算机以完成此操作?
+PS C:\Users\ykla> Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All 
+是否立即重启计算机以完成此操作?
 [Y] Yes  [N] No  [?] 帮助 (默认值为“Y”): #此处按回车键确定重启完成 Hyper-V 的安装
 ```
 
