@@ -215,7 +215,7 @@ Proceed with deinstalling packages? [y/N]:
 
 ```sh
 # pkg-static delete -f pkg #强制卸载当前的 pkg
-# cd ports-mgmt/pkg
+# cd /usr/ports/ports-mgmt/pkg #切换目录
 # make BATCH=yes install clean #使用 Ports 重新安装 pkg
 ```
 
