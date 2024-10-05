@@ -13,7 +13,7 @@
 * [第 0.3 节 散热器、风扇、鼓风机](di-0-zhang-ji-suan-ji-gai-lun/0.3-san-re-qi.md)
 * [第 0.4 节 操作系统](di-0-zhang-ji-suan-ji-gai-lun/0.4-cao-zuo-xi-tong.md)
 
-## 第 1 章 走进 FreeBSD
+## 第 1 章 走近 FreeBSD
 
 * [第 1.1 节 UNIX、Unix-like、Linux 和 FreeBSD 简介](di-1-zhang-zou-jin-freebsd/di-1.1-jie-shi-mo-shi-unix.md)
 * [第 1.2 节 BSD 与哲学家 George Berkeley](di-1-zhang-zou-jin-freebsd/di-1.2-jie-freebsd-jian-shi.md)
