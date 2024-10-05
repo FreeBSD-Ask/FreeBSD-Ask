@@ -28,23 +28,34 @@
 
 #### 故障排除
 
+
 ```sh
 fatal: unable to access 'https://mirrors.ustc.edu.cn/freebsd-ports/ports.git/': SSL certificate problem: certificate is not yet valid
 ```
 
-缺少 ssl 证书，安装一下即可。
+先检查时间：
 
 ```sh
-# pkg install ca_root_nss
+# date
+Fri May 31 12:09:26 UTC 2024
 ```
 
-或者
+时间错误。校对时间：
 
 
+```sh
+# ntpdate -u pool.ntp.org
+ 5 Oct 08:39:16 ntpdate[3276]: step time server 202.112.29.82 offset +10960053.088901 sec
 ```
-# cd /usr/ports/security/ca_root_nss/
-# make install clean
+
+检查时间：
+
+```sh
+# date
+Sat Oct  5 08:39:21 UTC 2024
 ```
+
+
 
 #### 同步更新 Ports Git
 
