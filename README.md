@@ -50,6 +50,9 @@
 
 - [X] 将小说诗歌杂记等与 FreeBSD 无关内容下线
 - [ ] 参照 FreeBSD handbook、鸟哥的 Linux 私房菜服务器篇改写服务器相关章节
+- [ ] KDE6
+  - [ ] 基于 Xorg
+  - [ ] 基于 Wayland
 
 ## PDF 文档
 
