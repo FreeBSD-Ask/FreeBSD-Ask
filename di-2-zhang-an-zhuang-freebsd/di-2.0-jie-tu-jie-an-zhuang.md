@@ -4,7 +4,7 @@
 
 已知 FreeBSD 有如下版本： alpha、rc、beta、release、current、stable。
 
-**release** 是可以日常/服务器使用的，即一般意义上的 **稳定版** 或者说是 LTS。而 ***stable*** 和 ***current*** 都是开发分支，都是 **不稳定的**。
+**release** 是可以日常/服务器使用的，即一般意义上的 **稳定版** 或者说 LTS。而 ***stable*** 和 ***current*** 都是开发分支，都是 **不稳定的**。
 
 >**注意**
 >
