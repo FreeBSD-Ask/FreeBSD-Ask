@@ -2,13 +2,7 @@
 
 ## 使用建议
 
-- 建议在 8G 及以上的内存机器上使用 ZFS（但是这并不意味着 512 M 内存就绝对无法使用）。
-- 为了提高机械硬盘随机读能力，可设置 `vfs.zfs.prefetch_disable=1`。
-- 为了避免 ZFS 吃掉太多内存，可设置 `vfs.zfs.arc_max="XXX"`，例如：1024 M。
-- 如果要复制某个文件系统，可以用 `zfs send/recv`，亦支持通过 ssh 跨网络传输。
-
-
-以上部分来自网络，更多优化见 [ZFSTuningGuide](https://wiki.freebsd.org/ZFSTuningGuide)。
+优化见 [ZFSTuningGuide](https://wiki.freebsd.org/ZFSTuningGuide)。
 
 ## ZFS 快照与还原
 
