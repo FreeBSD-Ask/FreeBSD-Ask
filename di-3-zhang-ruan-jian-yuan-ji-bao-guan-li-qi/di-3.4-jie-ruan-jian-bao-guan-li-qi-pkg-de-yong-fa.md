@@ -23,11 +23,20 @@
 
 回车即可输入 `y` 确认下载
 
-pkg 使用 https，先安装 ssl 证书：
+>**技巧**
+>
+>如果提示 `00206176BC680000:error:0A000086:SSL routines:tls_post_process_server_certificate:certificate verify failed:/usr/src/crypto/openssl/ssl/statem/statem_clnt.c:1890:`，请先校准时间。
+>
+>```sh
+># ntpdate -u pool.ntp.org
+>```
+
+FreeBSD pkg 使用 https，可能还需要先安装 ssl 证书（FreeBSD 14.1 及以上无需）：
 
 ```sh
 # pkg install ca_root_nss
 ```
+
 或者
 
 ```sh
@@ -35,7 +44,7 @@ pkg 使用 https，先安装 ssl 证书：
 # make install clean
 ```
 
-然后把 repo.conf 里的 pkg+http 改成 pkg+https 即可。
+然后把 `repo.conf` 里的 `pkg+http` 改成 `pkg+https` 即可。
 
 最后刷新 pkg 数据库：
 
