@@ -1,6 +1,6 @@
 # 第 1.6 节 FreeBSD 开发计划
 
-**翻译同步至 BSDCan 2024 devsummit**
+**翻译同步至 Mark a few things as completed**
 
 
 > FreeBSD 的生命周期为每个大版本 4 年，小版本是发布新的小版本版后 +3 个月。
@@ -25,6 +25,8 @@
 |copy_file_range(2) 于 install(1)  | mmatuska    | [5a50d52f112a](https://cgit.freebsd.org/src/commit/?id=5a50d52f112a86ebd0696da6564c7c7befa27f5d)                                                                                                   |
 | NVMe-oF/TCP               | jhb         | [a8089ea5aee5](https://cgit.freebsd.org/src/commit/?id=a8089ea5aee578e08acab2438e82fc9a9ae50ed8)                                                                                                          |
 | per-file nullfs         | dfr         | [521fbb722c3](https://cgit.freebsd.org/src/commit/?id=521fbb722c33663cf00a83bca70ad7cb790687b3)（不支持套接字）                                                                                                                                                                        |
+| 9p 文件系统 Port| dfr | [e97ad33a89a7](https://cgit.freebsd.org/src/commit/?id=e97ad33a89a78f55280b0485b3249ee9b907a718) |
+|改进 NVMe Reset / Recovery | imp | [aa41354349c1](https://cgit.freebsd.org/src/commit/?id=aa41354349c16ea7220893010df78b47d67d0f74) |
 
 ### ✈️ 已实现
 
@@ -40,11 +42,9 @@
 | bhyve 虚拟机中的硬件监控功能        | jhb Bojan      |                                                                                                                                                                                                                                                                                                                            |
 | 使用 dtrace 进行内联函数跟踪      | markj Christos |                                                                                                                                                                                                                                                                                                                            |
 | 谷歌编程之夏——squashfs         | chuck          |                                                                                                                                                                                                                                                                                                                            |
-| 改进多核笔记本电脑上的 Powerd     | cperciva       | （与 gallatin@交谈）                                                                                                                                                                                                                                                                                                       |
-| 9p 文件系统的 Port                | dfr            | 与 Juniper 同步（bkumara，khn）                                                                                                                                                                                                                                                                                            |
+| 改进多核笔记本电脑上的 Powerd     | cperciva       | （与 gallatin@交谈）                                                                                                                                                                                                                                                                                                       |                                                                                                                                                                                                                                                                 
 | CHERI 各式先决条件（ABI 位）      | brooks         |                                                                                                                                                                                                                                                                                                                            |
-| 在 ZFS 中的分层速率限制           | pjd            | [16205](https://github.com/openzfs/zfs/pull/16205)                                                                                                                                                                                                                                                                         |
-| 改进 NVMe 复位/恢复功能              | imp            | 95% [D45192](https://reviews.freebsd.org/D45192)                                                                                                                                                                                                                                                                           |
+| 在 ZFS 中的分层速率限制           | pjd            | [16205](https://github.com/openzfs/zfs/pull/16205)                                                                                                                                                                                                                                                                         |                                                                                                                                                                                                                                      
 | 简单的库 ABI 检查器               | brooks         | 原型在 [D44271](https://reviews.freebsd.org/D44271)                                                                                                                                                                                                                                                                                                                |
 | 图形安装程序                      | khorben        | [D44279](https://reviews.freebsd.org/D44279) [D44670](https://reviews.freebsd.org/D44670) [D44671](https://reviews.freebsd.org/D44671) [D44672](https://reviews.freebsd.org/D44672) [D44673](https://reviews.freebsd.org/D44673) [D44674](https://reviews.freebsd.org/D44674) [D45000](https://reviews.freebsd.org/D45000) |
 | bhyve 直接使用 Linux 引导器           | 	robn           | （请参阅 [freebsd 虚拟化](https://lists.freebsd.org/archives/freebsd-virtualization/2024-May/002112.html)）                                                                                                                                                                                                                                                                                            |
@@ -65,7 +65,7 @@
 | amd64 的 kboot 支持                                               | imp        | 2024 年夏末 80%                              |
 | flua 和引导加载程序的更新至 Lua 5.4.7                              | imp        | release in coming weeks, looks "boring"      |
 | 整合我谷歌编程之夏学生代码中的加载器命令行编辑功能 |imp     | git 重做分支可用，需要帮助                   |
-| riscv64 bhyve                                                     | br           | 在虚拟机中启动 FreeBSD                       |
+| riscv64 bhyve                                                     | br           |  [在虚拟机中启动 FreeBSD](https://wiki.freebsd.org/riscv/bhyve)                      |
 
 ### 💸 需要做的
 
@@ -165,11 +165,11 @@
 | syscons(4) (deprecation at least)                                                                             | emaste / manu    |                                                                                           |
 | 以太网驱动程序（100mbps，冷门的 1/10 gbps）                                                               | brooks           |                                                                                           |
 |  CAM 驱动程序（pms(4), hpt\*, siis, mvs 等）                                                              | imp              |                                                                                           |
-| ACPI 安全定时器                                                                                               | cperciva           |                                                                                           |
+| ACPI 安全定时器                                                                                               | cperciva           |     [00d061855deb](https://cgit.freebsd.org/src/commit/?id=00d061855deb93df5d709c8a794985ebb55012f8)                                                                                      |
 | freebsd-update                                                                                              | cperciva            | 待 pkgbase 就绪                                                                      |
 | 32 位平台（仅内核，仍保留 compat32）                                                                              | jhb              |                                                                                           |
 | arm\*soft removal (支持构建完整的软系统，这是在我移除了 libsoft hack 构建和 ld.so 支持之后剩下的全部内容) | imp              |                                                                                           |
-| 支持交换内核堆栈                                                                                              | markj            | 达成共识？+1 +1 +1 +1 +1                                                                      |
+| 支持交换内核堆栈                                                                                              | markj            |  [6aa98f78cc6e](https://cgit.freebsd.org/src/commit/?id=6aa98f78cc6e527b801cabddf6881ab5c9256934)                                                                       |
 | 支持 SMP amd64 内核 !                                                                                          | markj         | 达成共识？ +1 +1                                                                              |
 
 ### 图例
