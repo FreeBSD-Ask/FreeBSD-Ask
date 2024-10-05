@@ -37,7 +37,7 @@ Hyper-V 不支持家庭版。
 
 ![Hyper-V](../.gitbook/assets/hp1.png)
 
-右键单击 Windows 徽标，在弹出窗口中右键单击“终端管理员”：输入以下内容
+右键单击 Windows 徽标，在弹出窗口中右键单击“终端管理员”，输入以下内容：
 
 ```batch
 PS C:\Users\ykla> Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All 
