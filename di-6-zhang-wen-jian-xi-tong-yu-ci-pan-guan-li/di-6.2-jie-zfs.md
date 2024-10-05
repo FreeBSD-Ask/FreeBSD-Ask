@@ -4,6 +4,8 @@
 
 优化见 [ZFSTuningGuide](https://wiki.freebsd.org/ZFSTuningGuide)。
 
+目前几乎开箱即用，无需多余配置。
+
 ## ZFS 快照与还原
 
 ZFS 快照类似于虚拟机快照。
