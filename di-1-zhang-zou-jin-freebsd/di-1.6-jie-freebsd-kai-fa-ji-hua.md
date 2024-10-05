@@ -86,7 +86,7 @@
 | 通用闪存存储（UFS）驱动程序                                    | loos                          | 需要用于一些嵌入式部署，但未来将更具通用性。即将登陆英特尔平台。同样支持 LinuxBoot。 |
 | DTrace 的 -C（大写字母）参数再次生效                  | antranigv，markj              | PR 尚未提交，只需运行 `dtrace -c` 就可查看所含文件                                          |
 | 完善了 bsd-user 支持以供发布流程使用                     | imp, dfr, cperciva            | 32 位系统在 64 位系统上的问题，对非常陈旧的 qemu-bsd-user-static 软件进行更新                |
-| 优化 bsd-user binfmt 等以方便 jail 用户               | cperciva, imp                 | Colin would like to have per-jail settings for these things                             |                                                             
+| 优化 bsd-user binfmt 等以方便 jail 用户               | cperciva, imp                 | Colin 希望每个 jail 都能设置这些事项                      |                                                             
 | bsd bsd-user + poudriere 支持 RISCV                         | imp, mhorne, jrtc27           | 软件包构建完全损坏，但基本功能正常，需要修复以便我们可以再次使用 riscv 软件包           |
 |使用 GitHub runner 拉取请求                             | 	imp                         | 对 cirrus-ci 漏洞中的解决方案之一                                                           |
 | 使用 GitHub Action 改善外部贡献者的体验                 | imp                           | Need help here                                                                          |
