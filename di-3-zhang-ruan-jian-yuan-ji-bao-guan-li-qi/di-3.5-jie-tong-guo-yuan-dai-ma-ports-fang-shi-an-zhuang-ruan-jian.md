@@ -116,44 +116,68 @@ root@ykla:/usr/ports/sysutils/htop # make all-depends-list
 
 如果不选择 `BATCH=yes` 的方法手动配置：
 
-看看 python 的 ports 在哪：
+- 看看 python 的 ports 在哪：
 
 ```sh
 # whereis python
 # python: /usr/ports/lang/python
 ```
 
-安装 python3：
+- 安装 python3：
 
 ```sh
 # cd /usr/ports/lang/python
 ```
 
-如何设置全部所需的依赖：
+- 如何设置全部所需的依赖：
 
 ```sh
 # make config-recursive
 ```
 
-如何使用 pkg 安装缺失的依赖：
+- 如何使用 pkg 安装依赖（而不使用 Ports 来编译依赖），仅使用 Ports 来编译软件包本体：
 
 ```sh
 # make install-missing-packages
 ```
 
-如何删除当前 port 及其依赖的配置文件：
+　　以 `chinese/fcitx` 为示例：
+
+```sh
+root@ykla:~ # cd /usr/ports/chinese/fcitx
+root@ykla:/usr/ports/chinese/fcitx # make install-missing-packages
+Updating FreeBSD repository catalogue...
+FreeBSD repository is up to date.
+Updating FreeBSD-base repository catalogue...
+FreeBSD-base repository is up to date.
+All repositories are up to date.
+Updating database digests format: 100%
+The following 2 package(s) will be affected (of 0 checked):
+
+New packages to be INSTALLED:
+	e2fsprogs-libuuid: 1.47.1 [FreeBSD]
+	enchant2: 2.2.15_5 [FreeBSD]
+
+Number of packages to be installed: 2
+
+94 KiB to be downloaded.
+
+Proceed with this action? [y/N]: 
+```
+
+- 如何删除当前 port 及其依赖的配置文件：
 
 ```sh
 # make rmconfig-recursive
 ```
 
-如何一次性下载所有需要的软件包：
+- 如何一次性下载所有需要的软件包：
 
 ```sh
 # make BATCH=yes fetch-recursive
 ```
 
-ports 编译的软件也可以转换为 pkg 包
+- ports 编译的软件也可以转换为 pkg 包
 
 ```sh
 # pkg create nginx
