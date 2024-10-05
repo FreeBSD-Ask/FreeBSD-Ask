@@ -26,6 +26,26 @@
 # git clone --filter=tree:0 https://mirrors.ustc.edu.cn/freebsd-ports/ports.git /usr/ports
 ```
 
+#### 故障排除
+
+```sh
+fatal: unable to access 'https://mirrors.ustc.edu.cn/freebsd-ports/ports.git/': SSL certificate problem: certificate is not yet valid
+```
+
+缺少 ssl 证书，安装一下即可。
+
+```sh
+# pkg install ca_root_nss
+```
+
+或者
+
+
+```
+# cd /usr/ports/security/ca_root_nss/
+# make install clean
+```
+
 #### 同步更新 Ports Git
 
 
