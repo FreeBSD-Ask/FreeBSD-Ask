@@ -281,7 +281,7 @@ root@ykla:/usr/ports/chinese/fcitx #
 
 - [BSD Administration Scripts II](https://github.com/lonkamikaze/bsda2)，项目地址，含详细使用说明
 
-- `bsdadminscripts2` 能 **检查系统的完整性**，找出哪些系统文件是被窜改过的：
+- 若使用了 pkgbase，`bsdadminscripts2` 可 **检查系统的完整性**，找出哪些系统文件是被窜改过的：
 
 ```sh
 root@ykla:/ # pkg_validate
