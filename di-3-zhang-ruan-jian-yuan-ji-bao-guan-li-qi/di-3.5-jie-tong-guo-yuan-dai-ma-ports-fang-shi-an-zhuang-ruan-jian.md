@@ -224,16 +224,7 @@ w3m-0.5.3.20230718_1               <
 
 下边分别列出 2 种 FreeBSD 手册中提及的升级工具:
 
-① portupgrade
-
-```sh
-# cd /usr/ports/ports-mgmt/portupgrade && make install clean
-# portupgrade -ai #自动升级所有软件，i 会挨个确认
-# portupgrade -R screen #升级单个软件
-# portupgrade -a --batch		#不要问，只做，等同于  BATCH=yes
-```
-
-② portmaster （推荐）
+① portmaster （推荐）
 
 - 更新：
 
@@ -265,6 +256,15 @@ root@ykla:/usr/ports/ports-mgmt/portmaster # portmaster sysutils/htop  --show-wo
 ===>>> NOT INSTALLED		devel/pkgconf
 ===>>> NOT INSTALLED		lang/python311
 ===>>> Installed ports-mgmt/pkg
+```
+
+② portupgrade
+
+```sh
+# cd /usr/ports/ports-mgmt/portupgrade && make install clean
+# portupgrade -ai #自动升级所有软件，i 会挨个确认
+# portupgrade -R screen #升级单个软件
+# portupgrade -a --batch		#不要问，只做，等同于  BATCH=yes
 ```
 
 #### 参考资料
