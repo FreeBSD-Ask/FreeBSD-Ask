@@ -3,7 +3,8 @@
 * [FreeBSD 从入门到跑路](README.md)
 * [编辑日志](CHANGELOG.md)
 * [编撰说明](bian-zhuan-shuo-ming.md)
-* [参考资料与贡献者名单](can-kao-zi-liao-yu-gong-xian-zhe-ming-dan.md)
+* [参考资料](can-kao-zi-liao.md)
+* [贡献者名单](gong-xian-zhe-ming-dan.md)
 
 ## 第 0 章 计算机概论
 
