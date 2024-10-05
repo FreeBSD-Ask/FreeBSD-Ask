@@ -139,3 +139,4 @@ PS C:\Users\ykla> Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-H
 - [Hyper-V 集成服务](https://learn.microsoft.com/zh-cn/virtualization/hyper-v-on-windows/reference/integration-services)，对各种 Hyper-V 服务进行了详细说明
 - [使用检查点将虚拟机恢复到以前的状态](https://learn.microsoft.com/zh-cn/virtualization/hyper-v-on-windows/user-guide/checkpoints?source=recommendations&tabs=hyper-v-manager%2Cpowershell)
 - [在 Hyper-V 中在标准检查点与生产检查点之间进行选择](https://learn.microsoft.com/zh-cn/windows-server/virtualization/hyper-v/manage/choose-between-standard-or-production-checkpoints-in-hyper-v)
+- [FreeBSD13 を Hyper-V 環境にインストールしてみた所感](https://qiita.com/nanorkyo/items/d33e1befd4eb9c004fcd)，值得看看
