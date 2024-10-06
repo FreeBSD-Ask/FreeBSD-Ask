@@ -59,12 +59,6 @@ Hyprland 是 Wayland 的一个合成器，支持窗口透明、模糊、圆角�
 
 ## 配置
 
-可以将以下配置文件下载到本地使用
-
-```sh
-$ fetch https://book.bsdcn.org/hyprland.zip
-$ unzip -d ~/
-```
 
 自动启动，将下行写入 `~/.zprofile`：
 
