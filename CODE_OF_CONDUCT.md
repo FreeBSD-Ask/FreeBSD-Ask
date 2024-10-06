@@ -48,8 +48,10 @@
   
 * **在意见不合时，尝试换位思考。** 社会和技术上的分歧时常发生， FreeBSD 中文社区也不例外。重要的是我们要以建设性的方式解决分歧和不同的观点。请记住，我们是不同的。 FreeBSD 中文社区的力量来自于其多样化的社区，来自各种背景的人们。不同的人对问题有不同的看法。无法理解某人为何持有某种观点并不意味着他们是错误的。不要忘记，人非圣贤，孰能无错，互相指责无济于事。相反，专注于帮助解决问题和从错误中学习。
   
-## 问题？
+## 有问题？
 
 如果您有任何问题，请随时通过问题联系 FreeBSD 中文社区行为规范委员会（`yklaxds@gmail.com`）。
 
 （这段文本基于 LLVM 项目的 [行为规范草案](https://llvm.org/docs/CodeOfConduct.html)，而该草案又基于 [Django 项目](https://www.djangoproject.com/conduct/) 的行为规范，后者又来源于 Speak Up! 项目的用语。）
+
+上述文本翻译自 [FreeBSD 社区行为规范](https://www.freebsd.org/internal/code-of-conduct/)。
