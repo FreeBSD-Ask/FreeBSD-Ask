@@ -125,7 +125,7 @@
 | 在用户空间支持 Rust                                                       | brooks                             |                                                        |
 | 为 ZFS 提供 Netlink（zfsd/zed）                                           | allanjude                          |                                                        |
 | 以 netlink 取代 devd 套接字                                                  | bapt                           | 具有内核部分                                           |
-| 登录配置的 UCL 化                                                         | meena                              | allanjude 拥有初始补丁：D25365                       |
+| 登录配置的 UCL 化                                                         | meena                              | allanjude 拥有初始补丁：[D25365](https://reviews.freebsd.org/D25365)                      |
 | 为其余网络工具添加 libxo                                                  | meena                              | 如有问题请在提议的页面上 ping phil@                |
 | 分层动态登录类                                                            | ngor，meena                        |                                                        |
 | gve(4) 的 arm64 支持，GCE 的 arm64 实例需要                               | delphij，kibab（由 lwhsu 推动） |                                                        |
