@@ -3,7 +3,7 @@
 **翻译同步至 Mark a few things as completed**
 
 
-> FreeBSD 的生命周期为每个大版本 4 年、小版本是发布新的小版本版后 +3 个月。
+> FreeBSD 的生命周期为每个大版本 4 年，小版本是发布新的小版本版后 +3 个月。
 >
 >
 > FreeBSD 15 开发计划 [FreeBSD 15.0 Planning](https://github.com/bsdjhb/devsummit/blob/main/15.0/planning.md)
@@ -79,12 +79,12 @@
 | pkg 组                                                    | allanjude                       |                                                                                         |
 | 为无工具链的 Poudriere 提供支持 jail                   | allanjude                     |                                                                                         |
 | 外部工具链支持                                          | brooks                        |                                                                                         |
-| 预提交 CI 源码、文档                                    | lwhsu imp bofh                | make ci WIP. 需要与 oth 集成                                                            |
-| 改进 make ci 以方便提交者                      | imp、 bofh                     |                                                                                         |
-| 改进 make ci 以对诸如登录 github 拉取请求等事项有益 | imp                           |                                                                                         |
+| 预提交 CI 源码、文档                                    | lwhsu imp bofh                | `make ci` 仍在开发，需要与 oth 集成                                                            |
+| 改进 `make ci` 以方便提交者                      | imp、 bofh                     |                                                                                         |
+| 改进 `make ci` 以对诸如登录 github 拉取请求等事项有益 | imp                           |                                                                                         |
 | 预提交 CI ports                                         | lwhsu 将与 bapt 和 decke 审查 | bofh 似乎有一些 PoC                                                                     |
 | 通用闪存存储（UFS）驱动程序                                    | loos                          | 需要用于一些嵌入式部署、但未来将更具通用性。即将登陆英特尔平台。同样支持 LinuxBoot。 |
-| DTrace 的 -C（大写字母）参数再次生效                  | antranigv、markj              | PR 尚未提交、只需运行 `dtrace -c` 就可查看所含文件                                          |
+| DTrace 的 `-C`（大写字母）参数再次生效                  | antranigv、markj              | PR 尚未提交、只需运行 `dtrace -c` 就可查看所含文件                                          |
 | 完善了 bsd-user 支持以供发布流程使用                     | imp、 dfr、 cperciva            | 32 位系统在 64 位系统上的问题、对非常陈旧的 qemu-bsd-user-static 软件进行更新                |
 | 优化 bsd-user binfmt 等以方便 jail 用户               | cperciva、 imp                 | Colin 希望每个 jail 都能设置这些事项                      |                                                             
 | bsd bsd-user + poudriere 支持 RISCV                         | imp、 mhorne、 jrtc27           | 软件包构建完全损坏、但基本功能正常、需要修复以便我们可以再次使用 riscv 软件包           |
@@ -101,7 +101,7 @@
 
 | 东西                                                                      | 拥有者                             | 提交 / 审核 / 补丁 / 状态                              |
 | ------------------------------------------------------------------------- | ---------------------------------- | ------------------------------------------------------ |
-| 清理 make -s                                                              | jhb                                | 清理警告信息并使其保持在控制之下 🔥                        |
+| 清理 `make -s`                                                              | jhb                                | 清理警告信息并使其保持在控制之下 🔥                        |
 | TPM 支持（GELI、ZFS）                                                     | allanjude tsoome                   | --                                                     |
 | ZFS 加密启动支持                                                          | tsoome allanjude                   | 仅支持 UEFI                                            |
 | 取代 smbfs（v2 及更高版本）                                               | emaste jhixson                     | --                                                     |
@@ -144,7 +144,7 @@
 
 | 项目                                                                                                          | 负责人          | 提交 / 审核 / 补丁                                                                        |
 | ------------------------------------------------------------------------------------------------------------- | ---------------- | ----------------------------------------------------------------------------------------- |
-| Firewire 🔥                                                                                                   | imp              | 宁愿晚一些而不是早一点（我们是否应该在更早的时候去除磁盘支持、因为有一个被 GIANT 锁定的 CAM 驱动程序）           |
+| Firewire 🔥（火线）                                                                                                   | imp              | 宁愿晚一些而不是早一点（我们是否应该在更早的时候去除磁盘支持、因为有一个被 GIANT 锁定的 CAM 驱动程序）           |
 | armv6                                                                                                         |	imp/manu       |                                                                                           |
 | i386 内核                                                                                                     | imp             | 时间？                                                                                    |
 | powerpc、powerpcsce 内核                                                                                      | imp              |                                                                                           |
@@ -167,7 +167,7 @@
 | ACPI 安全定时器                                                                                               | cperciva           |     [00d061855deb](https://cgit.freebsd.org/src/commit/?id=00d061855deb93df5d709c8a794985ebb55012f8)                                                                                      |
 | freebsd-update                                                                                              | cperciva            | 待 pkgbase 就绪                                                                      |
 | 32 位平台（仅内核、仍保留 compat32）                                                                              | jhb              |                                                                                           |
-| arm\*soft removal (支持构建完整的软系统、这是在我移除了 libsoft hack 构建和 ld.so 支持之后剩下的全部内容) | imp              |                                                                                           |
+| 移除 arm\*soft  (支持构建完整的软系统、这是在我移除了 libsoft hack 构建和 ld.so 支持之后剩下的全部内容) | imp              |                                                                                           |
 | 支持交换内核堆栈                                                                                              | markj            |  [6aa98f78cc6e](https://cgit.freebsd.org/src/commit/?id=6aa98f78cc6e527b801cabddf6881ab5c9256934)                                                                       |
 | 支持 SMP amd64 内核 !                                                                                          | markj         | 达成共识？ +1 +1                                                                              |
 
