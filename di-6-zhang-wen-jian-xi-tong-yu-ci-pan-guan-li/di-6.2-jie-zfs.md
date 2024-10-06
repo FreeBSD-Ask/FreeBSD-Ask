@@ -157,7 +157,7 @@ fdescfs                     1        1         0   100%    /dev/fd
 >
 >“用法扩展”实现的代价是 zfs 不能升级：一升级就挂了，因为旧版 ZFS 程序无法向后兼容。实践的意义不大，可以仅做备份还原使用。
 
-### 参考文献：
+### 参考文献
 
 - [wiki/BootEnvironments](https://wiki.freebsd.org/BootEnvironments)
 
