@@ -1,5 +1,9 @@
 # 第 1.7 节 FreeBSD 子项目
 
+>**警告**
+>
+>正在校对，请谨慎参考。
+
 本节是对 FreeBSD 基金会赞助的项目进行的解释。
 
 本页面是对 [Projects](https://freebsdfoundation.org/our-work/projects/) 的翻译。
@@ -211,4 +215,216 @@ FreeBSD/RISC-V 项目旨在为 [RISC-V 指令集架构](https://riscv.org/) 提�
 未来计划包括收集 CI 任务和想法，为虚拟机客机测试设置公共网络访问，实现裸金属硬件测试套件，添加针对 -CURRENT 的 DRM 端口构建测试，以及运行 ztest 测试。团队的目标是改善 FreeBSD 在 CI 流水线中的支持，并与托管的 CI 提供商合作。
 
 **更多信息：**  **[持续集成 (GitHub)](https://github.com/Jehops/freebsd-doc/blob/2024q2_ff/website/content/en/status/report-2024-01-2024-03/ci.adoc)**
+
+## FreeBSD 作为 Tier I cloud-init 平台
+
+进行中
+
+### 增强对 cloud-init 的支持，使 FreeBSD 成为 Tier I 平台，以改善其在云环境中的集成和可用性。
+
+**联系人：** Mina Galić \<[freebsd@igalic.co](mailto:freebsd@igalic.co)\>
+
+Cloud-init 现已成为在云中设置服务器的标准。在过去一年半的时间里，FreeBSD 在支持 cloud-init 方面取得了显著进展。今年的重点是与 cloud-init 开发者和 FreeBSD 基金会密切合作，增强 FreeBSD，使 cloud-init 团队能够直接测试未来对 FreeBSD 代码路径的更改。
+
+为此，FreeBSD 必须在 LXD（和 Incus）的控制下运行，并由 lxd-agent（或 incus-agent）管理。最近，已经取得了一些显著的改进。一个小型测试框架在 sh 中开发，正在逐步迁移到 OpenTofu/Terraform。该框架安装并测试 cloud-init-devel 和 cloud-init 的最新版本。为支持这一点，创建了一个专用的公共代码库，包含 FreeBSD 13 和 14 在 amd64 和 aarch64 上的 cloud-init-devel 和 cloud-init 的最新版本。
+
+此外，Linux vsock 测试框架也已移植到 FreeBSD。基于 HyperV Socket 驱动程序创建了 VirtIO Socket 驱动程序的驱动程序框架，导致 HyperV 套接字的多个改进。这些改进已部分接受，但仍需更多工作。
+
+最新的 cloud-init 24.1 系列经过测试并发布，修复了长期存在的错误，例如将 /run/cloud-init 移动到 BSD 上的 /var/run/cloud-init，并纠正了 user_groups 的 homedir 参数。此次发布还包括社区贡献的 OpenBSD 代码路径的多个修复。
+
+展望未来，这项工作涉及几个关键任务。完成 FreeBSD VirtIO Socket 驱动程序和修复 Go 的运行时以支持 FreeBSD 上的 VirtIO 是首要任务。将 lxd-agent 的依赖项及 lxd-agent 本身移植到 FreeBSD 也至关重要。这些努力将与对 BSD 上 cloud-init 的进一步改进和在不同云提供商上的额外测试交替进行。
+
+**更多信息：**  **[Cloud-Init (GitHub)](https://github.com/Jehops/freebsd-doc/blob/2024q2_ff/website/content/en/status/report-2024-01-2024-03/cloud-init.adoc)**
+
+## FreeBSD 上的 OpenStack
+
+进行中
+
+### FreeBSD 上的 OpenStack 项目旨在将 OpenStack 云基础设施与 FreeBSD 操作系统无缝集成，利用 FreeBSD 的独特功能，同时保持与 OpenStack 标准的兼容性。
+
+**联系人：** Chih-Hsin Chang \<[starbops@hey.com](mailto:starbops@hey.com)\>，Li-Wen Hsu \<[lwhsu@FreeBSD.org](mailto:lwhsu@FreeBSD.org)\>
+
+**第一季度：**
+
+在 2024 年第一季度，该项目取得了重大进展。提交了 BSDCan 2024 的提案，团队参加了 AsiaBSDCon 2024，分享了移植经验并收集了有价值的反馈，这帮助完善了项目的方向。第一阶段的任务进行了审查，进行了必要的调整，并将第二和第三阶段的计划与长期目标进行了对齐。一项关键技术成就是验证了 bhyve 串口控制台通过 TCP 的功能。还制作了一个演示视频，以展示项目的进展和特性。
+
+**第二季度：**
+
+第二季度继续取得进展。团队在 BSDCan 2024 上介绍了“朝着强大的基于 FreeBSD 的云：移植 OpenStack 组件”，这增加了项目的可见性，并吸引了潜在贡献者的兴趣。概念验证（POC）站点从单节点设置扩展到三节点设置，涉及详细的环境设置和网络规划。还启动了将基础迁移到 FreeBSD 15.0-CURRENT 的工作，以保持与最新 FreeBSD 发展的对齐。
+
+此外，手动安装步骤和代码补丁开始转换为 FreeBSD 端口，以简化安装过程。一个重要的里程碑是启动了对 FreeBSD 实例和 OpenStack Ironic 服务主机进行裸机配置的工作。
+
+**未来计划：**
+
+展望下一个季度，重点将放在完善这些进展并进一步增强项目的稳健性和易用性。具体计划包括将 OpenStack 组件从 Xena 版本升级到更近期的版本，因为 Xena 正接近生命周期的尽头。欢迎社区的建议和贡献，以帮助实现这些目标。
+
+**更多信息：**  [OpenStack (GitHub)](https://github.com/Jehops/freebsd-doc/blob/2024q2_ff/website/content/en/status/report-2024-04-2024-06/openstack.adoc)
+
+## WiFi 更新 – Intel 驱动程序和 802.11ac
+
+进行中
+
+### 此更新支持当前一代 Intel WiFi 设备和 802.11ac 标准，以改善无线连接性。
+
+**联系人：** Björn Zeeb \<[bz@freebsd.org](mailto:bz@freebsd.org)\>
+
+在 2023 年 11 月，FreeBSD 基金会启动了一项重大举措，以改善 iwlwifi 驱动程序，该驱动程序对支持 FreeBSD 上的 Intel Wi-Fi 芯片至关重要。这个项目由 FreeBSD 开发者 Cheng Cui 领导，并与 Björn Zeeb 合作，旨在通过多个关键里程碑增强 FreeBSD 的无线功能。
+
+项目的主要目标之一是解决影响 iwlwifi 驱动程序的多个关键问题报告（PR）。在 PR 271979、273985、274382 和 275710 中记录的问题通过系统化和创新的调试技术成功解决。例如，使用铝箔包裹的纸板隔离信号是一种新颖的方法，证明在识别和修复这些问题上效果显著。
+
+该项目还专注于提高系统稳定性。审查和实施补丁显著改善了 FreeBSD 版本 13.3-RELEASE 和即将发布的 14.1 的稳定性。项目强调启用硬件支持的加密功能，这涉及创建 PR 277095 和 277100，以应对复杂的调试场景。
+
+改善对 802.11n 标准的支持是另一个重点领域。该项目通过利用深厚的领域专业知识并采用 Linux 中的 Driver API 跟踪等新调试技术，解决了 PR 276083。这一增强对于推动项目目标和改善 FreeBSD 的无线性能至关重要。
+
+此外，该项目在确保 FreeBSD 13.3 成功发布方面发挥了重要作用。通过重现用户报告的问题并测试后续修复，项目为操作系统的整体可靠性和性能做出了贡献。
+
+增强 iwlwifi 驱动程序的努力改善了 FreeBSD 对 Intel Wi-Fi 的支持。该项目确保了用户更好的无线性能和稳定性。持续的工作将继续提升 FreeBSD 的网络功能，使其成为更强大、更可靠的操作系统。
+
+**更多信息：**  [Wi-Fi 增强（FreeBSD 基金会）](https://freebsdfoundation.org/blog/improving-and-debugging-freebsds-intel-wi-fi-support-cheng-cuis-key-role-in-the-iwlwifi-project/)
+
+---
+
+　　　　以下为已完成部分
+
+---
+
+## Bhyve 改进
+
+对 FreeBSD 虚拟机监视器的各种改进
+
+**联系人：** Chris Moerz \<freebsd@ny-central.org\>
+
+### I/O 性能测量
+
+最近，Bhyve 生产用户之间的讨论强调了正式 I/O 性能分析的必要性。作为回应，团队开始使用一组 shell 脚本和 benchmarks/fio 包测试不同的配置。重点评估不同的存储后端、内存设置、CPU 固定选项以及支持存储和虚拟磁盘的块大小。团队还比较了不同 CPU 制造商以及客户和主机环境的性能。
+
+### 虚拟机工具
+
+FreeBSD 基金会的企业工作组识别出需要类似于 jails 的 Bhyve 工具。这促成了“vmstated”的开发，这是一个使用基本 FreeBSD 工具构建的守护进程和管理实用程序。Vmstated 通过 UCL 配置，提供灵活的虚拟机管理，具有类似于 jail 的命令集和状态转换钩子等功能。该工具已在 ports 集合中作为 sysutils/vmstated 提供，并在 GitHub 上持续更新。欢迎贡献和反馈。
+
+### 文档更新
+
+对 FreeBSD 手册和 Porter 手册进行了几次更新，重点关注虚拟化、Bhyve 配置和管理 Bhyve 客户。正在进行 Bhyve 手册页结构的更新审查，并计划进一步改进内容。欢迎对此次更新提出反馈。
+
+### 为 arm64 客户创建的扁平设备树
+
+Mark Johnston 和 Andrew Turner 合作创建了构建 arm64 bhyve 客户的扁平设备树（FDT）的基本例程。FDT 描述了不同的硬件组件，例如 CPU、内存、UART、PCIe 控制器、中断控制器和平台定时器，客户操作系统应当了解这些组件。
+
+**更多信息：** [Bhyve 更新（GitHub）](https://github.com/Jehops/freebsd-doc/blob/2024q2_ff/website/content/en/status/report-2024-01-2024-03/bhyve.adoc)
+
+## FreeBSD 在 Azure 和 Hyper-V 上
+
+### 自动化 Azure Marketplace 中 FreeBSD 镜像的构建过程
+
+**联系人：**
+
+* Microsoft FreeBSD 集成服务团队: bsdic@microsoft.com
+* FreeBSD Azure 发布工程团队: releng-azure@FreeBSD.org
+* Wei Hu: whu@FreeBSD.org
+* Souradeep Chakrabarti: schakrabarti@microsoft.com
+* Li-Wen Hsu: lwhsu@FreeBSD.org
+
+在第一季度，团队成功解决了所有阻塞问题，并在 Azure Marketplace 上发布了 FreeBSD 13.3-RELEASE，使其可以在云环境中供用户使用。
+
+### 进行中的工作：
+
+团队目前专注于几个关键任务：
+
+* **自动化镜像构建和发布过程：**  正在进行的努力旨在自动化镜像构建和发布过程，以将这些改进合并到 FreeBSD 的 src/release/ 仓库中。
+* **构建和发布快照构建：**  快照构建正在开发和发布到 Azure 社区画廊，为用户提供最新的开发和更新。
+
+## .NET (dotnet) 移植
+
+### 将“dotnet”本地移植到 FreeBSD，初始版本为 8，后续版本移植正在进行中
+
+**联系人：** Gleb Popov \<[arrowd@freebsd.org](mailto:arrowd@freebsd.org)\>
+
+在 FreeBSD 上对 .NET 的支持（**dotnet**）使开发者能够选择自己喜欢的平台而不受限制。这种兼容性使他们能够利用 FreeBSD 独特的优势，同时保持与 .NET 一致的开发环境。
+
+新的 .NET 本地移植当前可用于 **amd64** 架构（**aarch64** 支持正在进行中），将 .NET 运行时版本 8 带入 FreeBSD。这确保了完全兼容，同时利用了 FreeBSD 的性能和安全特性，使开发者能够充分利用 FreeBSD 的功能。
+
+将 .NET 移植到 FreeBSD 是一个协作努力，涉及主要社区贡献者。Gleb Popov（**arrowd@FreeBSD.org**）维护 .NET 移植，**[thefrank](https://github.com/Thefrank)**、Naram Qashat（**cyberbotx@cyberbotx.com**）和 Szczepan Ćwikliński（**[sec](https://github.com/sec)**）也做出了重要贡献。团队与 dotnet 上游项目积极合作，包括在 GitHub 上提交 PR。他们的共同努力对实现 .NET 在 FreeBSD 上的运行至关重要。
+
+**更多信息：** **[dotnet (GitHub)](https://github.com/dotnet)**
+
+## FreeBSD 集群现代化
+
+### 加强 FreeBSD 项目基础设施、提升其能力，并为用户提供更好的服务的倡议
+
+**联系人：** Joseph Mingrone \<[jrm@freebsdfoundation.org](mailto:jrm@freebsdfoundation.org)\> 和 Philip Paeps \<[phil@freebsd.org](mailto:phil@freebsd.org)\>
+
+FreeBSD 基金会投资超过 10 万美元在芝加哥安装了一套服务器集群。此项投资旨在加强 FreeBSD 项目的基础设施、提升其能力，并为用户提供更好的服务。为了支持这一扩展，基金会与 NYI 合作，后者慷慨地在其芝加哥设施中提供了四个机架。
+
+新的集群配置旨在优化 FreeBSD 项目的运营效率，包括：
+
+* **两台路由器：** 用于引导网络流量。
+* **五个软件包构建器：** 旨在加速软件包发布过程。
+* **三台通用服务器：** 这些服务器将提升 FreeBSD 项目面向公众和开发者的服务（如 Bugzilla、Git、Phabricator、Wiki 等）的可用性和性能。
+* **两个软件包镜像：** 一个在芝加哥的新集群中托管，另一个由加州的 ISC 托管。这些是 FreeBSD 项目日益扩大的 pkg.FreeBSD.org 和 download.FreeBSD.org 服务器网络的一部分，战略性地分布在全球，以提供更快的软件包下载速度。
+* **两台 CI 服务器：** 以提高自动化代码测试的速度和效率。
+* **一台管理堡垒服务器：** 这是管理集群的安全入口点，运行集群管理团队（clusteradm）工具、集群 DNS、监控以及其他管理系统所需的服务。
+
+这一硬件配置预计将显著提升 FreeBSD 项目的处理能力和服务响应速度。
+
+FreeBSD clusteradm 团队在新集群的集成阶段发挥了关键作用。
+
+* **硬件兼容性和固件调试：** 为确保服务器固件与 FreeBSD 兼容，初期面临的多个障碍需要克服。集群依赖于能够网络启动机器，并要求可靠的带外管理。
+* **网络配置和自动化：** 服务器能够可靠启动后，进行了网络配置，包括集群内部 DNS、数据包过滤规则和与互联网的 BGP 会话。
+* **自动化和系统配置：** 团队的自动化工具大大简化了服务器的安装和配置。在使用临时 FreeBSD 安装克服了一些启动问题后，服务器被网络启动到集群安装镜像中，并使用标准集群构建进行安装。
+* **监控和管理集成：** 团队在管理服务器上安装和配置了监控代理，将新站点集成到项目的中央监控系统中。这使得集群的管理和故障排除更加高效，确保了稳定性和性能。
+* **最终系统安装和网络服务设置：** 团队通过使用工具自动化重新安装管理服务器，设置路由和防火墙配置，并在光纤上行链路上启用 BGP 会话，完成了集成工作。这一设置确保了新集群的运行，并优化了性能和安全性。
+
+## Olivier Certner 的杂项更新
+
+完成
+
+### FreeBSD 源代码树各部分的杂项更新。
+
+**联系人：** Olivier Certner \<[olce@freebsd.org](mailto:olce@freebsd.org)\>
+
+在 2024 年第二季度，长期承包商 Olivier Certner 在树的几个不同部分积极工作：
+
+* [rtprio(2)](https://man.freebsd.org/cgi/man.cgi?query=rtprio&sektion=2&format=html)：将每个运行队列的队列数量从 64 更新到 256。
+* **Vnode 回收/ZFS ARC 回收：** 审查了 [bug #275594](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=275594) 的修复，与上游沟通以获取和测试回移，并发出了一份 EN 并作为 13.3-RELEASE-p2 应用，同时开始了长期工作以改进 vnode 回收机制，并确保 ZFS 传递正确的信息。
+* **ULE 调度器：** 更新为在单个运行队列上工作，而不是为满足 POSIX 合规性而使用 3 个运行队列，以处理 SCHED\_FIFO/SCHED\_RR 优先级级别的数量。
+* **杂项：** 进行了多达 26 项评审、软件包更新，并调查了 DRM 问题。
+* 在 FreeBSD Journal 发布了 [EuroBSDCon 2023 大会报告](https://freebsdfoundation.org/eurobsdcon-2023/)。
+
+## Center for Internet Security (CIS) FreeBSD 14 基准
+
+完成
+
+这是一个全面的安全强化指南，旨在帮助安全高效地配置 FreeBSD 系统。
+
+**联系人：** Moin Rahman \<[bofh@freebsd.org](mailto:bofh@freebsd.org)\>
+
+此新 CIS 基准涵盖了关键领域，包括：
+
+* **用户和组管理：** 采用最佳实践指南安全地管理用户账户和组。
+* **服务配置：** 关于安全配置基本服务的建议。
+* **文件系统和权限：** 管理文件系统安全和权限的最佳实践。
+* **网络配置：** 提供保护网络设置以防止未经授权访问和攻击的安全建议。
+* **审计和日志记录：** 设置强大日志和审计的说明，以监控系统活动。
+
+该基准是系统管理员、安全审计员以及必须遵守行业标准和法规的组织的重要资源。我们鼓励 FreeBSD 社区提供反馈并为这些指南的持续完善做出贡献。安全工作在协作中最为有效，我们期待看到社区如何利用和扩展这一新资源。
+
+我们对 FreeBSD 社区在此基准中的重要贡献表示衷心感谢。特别感谢基准撰写者 Moin Rahman、编辑 Carole Fennelly、评审 Jason Kafer 和 Rick Miller、项目经理 Joe Mingrone，以及 CIS 的 Justin Brown 和 Eric Pinnell。同时，我们也感谢 [Verisign](https://www.verisign.com/) 对创建 CIS FreeBSD 14 基准部分费用的资助，以及对 [FreeBSD 基金会的慷慨捐赠者](https://freebsdfoundation.org/our-donors/donors/) 给予的支持。
+
+**更多信息：** [FreeBSD 14 基准](https://freebsdfoundation.org/blog/new-cis-freebsd-14-benchmark-secure-your-systems-with-expert-guided-best-practices/)（FreeBSD 基金会）
+
+## VPP 在 FreeBSD 上
+
+### 将矢量数据包处理（VPP）框架移植到 FreeBSD，以增强网络性能能力。
+
+**联系人：** Tom Jones \<[tj@freebsdfoundation.org](mailto:tj@freebsdfoundation.org)\>
+
+FreeBSD 上的矢量数据包处理（VPP）项目旨在将 VPP 这一开源的高性能用户空间网络栈移植到 FreeBSD。VPP 通过矢量化操作和并行处理优化数据包处理，非常适合软件定义网络（SDN）和网络功能虚拟化（NFV）应用。该工作于 2023 年 11 月启动，由专注于网络性能的 FreeBSD 开发者 Tom Jones 在 FreeBSD 基金会的合同下领导。
+
+关键里程碑包括修复 VPP 在 FreeBSD 上的构建，以确保其能够编译和运行，验证并添加基本功能，以及开发全面的测试和回归套件以维护可靠性和稳定性。性能基准测试帮助识别和解决潜在瓶颈，并提出改进和优化建议。
+
+文档工作专注于 FreeBSD 特定的 API 和用法，为开发者和用户提供清晰的指导。创建 VPP 的 FreeBSD 移植成功简化了安装和部署，使用户更易于使用。
+
+VPP 的 FreeBSD 移植取得了成功，正在进行的工作旨在进一步增强其能力。不断进行改进和优化，以确保 FreeBSD 的网络性能保持强大和高效，巩固其在高速网络应用中的适用性。
+
+**更多信息：** **[Vector Packet Processor (GitHub)](https://github.com/adventureloop/vpp)**
 
