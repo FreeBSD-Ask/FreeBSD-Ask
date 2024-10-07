@@ -199,7 +199,6 @@ RG Nets 参与 FreeBSD 的发展在塑造电信未来方面至关重要。它还
 
 #### 十年不变的服务——FreeBSD 和 Asterisk 的故事
 
-![](https://freebsdfoundation.org/wp-content/uploads/2024/04/Screenshot-2024-04-12-132016.png)
 
 #### 引言
 
@@ -271,11 +270,10 @@ TwinCAT®、TwinCAT/BSD® 和 EtherCAT® 是 Beckhoff Automation GmbH 的注册�
 
 ### NetApp 案例研究
 
-![](https://freebsdfoundation.org/wp-content/uploads/2024/03/netapp3.jpg)
+
 
 #### FreeBSD 为 NetApp 的 ONTAP 数据管理系统提供灵活性和性能
 
-![](https://freebsdfoundation.org/wp-content/uploads/2024/03/NetApp-Challenge-1024x1024.png)
 
 NetApp 是一家智能数据基础设施公司，为企业客户提供统一的数据存储、集成数据服务和云操作解决方案。作为技术领导者，他们的耐力和行业领先的产品帮助组织在本地和混合云环境中管理数据和应用程序。FreeBSD 是 NetApp 成功故事的重要组成部分，也是其产品的稳定组件。以下是这一关系如何形成以及为何能够持续发展的原因。
 
@@ -287,7 +285,6 @@ NetApp 需要一个许可证模型，以便在其新的数据管理系统中整�
 
 由于 FreeBSD 在实施中的灵活性和行业领先的稳定性，它在 NetApp ONTAP 中一直是一个可靠的组件。过去，NetApp 使用的是较旧版本的 FreeBSD，但现在它更接近当前发布版本（在 FreeBSD 社区中称为“[跟踪 head](https://docs.freebsd.org/en/books/handbook/cutting-edge/)”）。
 
-![](https://freebsdfoundation.org/wp-content/uploads/2024/03/NetApp-Challenge-500-x-500-px-e1710790018446.png)
 
 FreeBSD 在不同组织和多种应用中以多种方式实现。有些组织可能像 NetApp 那样选择跟踪接近头部版本，或者像 Netflix 那样选择跟踪头版本，而有些组织则决定保持在几个版本之前。FreeBSD 为组织提供了稳定性、灵活性和升级的便利，使他们可以选择最适合其特定用例的实施风格，无论是滞后几个版本还是跟踪该项目的最新发布版本。
 
