@@ -129,7 +129,7 @@ FreeBSD 中文 man 手册：[https://man.bsdcn.org](https://man.bsdcn.org/)
 
 《FreeBSD 从入门到跑路》 由 FreeBSD 中文社区发起。我们尝试从 0 开始，和所有人一同徜徉 FreeBSD 世界。
 
-**开源维护与捐赠**：
+## 捐赠
 
 ![](.gitbook/assets/proud_donor.png)
 
