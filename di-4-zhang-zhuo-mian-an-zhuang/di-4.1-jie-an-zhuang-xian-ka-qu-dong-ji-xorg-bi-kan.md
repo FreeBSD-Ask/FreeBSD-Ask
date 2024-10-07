@@ -158,16 +158,15 @@ backlight 自 FreeBSD 13 引入。
 > 在使用 Gnome 时，如果自动锁屏或息屏，可能无法再次进入桌面。见 [Bug 255049 - x11/gdm doesn't show the login screen](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=255049)。
 
 
-## 笔记本核显 +Nvidia 独显
+## 笔记本核显 + Nvidia 独显
 
 **除非** 你的笔记本电脑支持 **显卡直通**，否则笔记本电脑一般请先按照上边的方法配置核显。
-
 
 >**警告**
 >
 >笔记本电脑一般不能单独用 nvidia 打开 xorg。**除非** 你的笔记本电脑支持 **显卡直通**。
 
-- 旧显卡：
+### 旧显卡
 
 >**技巧**
 >
@@ -203,7 +202,7 @@ backlight 自 FreeBSD 13 引入。
 ```
 
 
-- 新显卡：
+### 新显卡
   - 550 驱动驱动支持的显卡参考 [FreeBSD Display Driver – X64](https://www.nvidia.cn/Download/driverResults.aspx/220794/cn/)
 
 ```sh
