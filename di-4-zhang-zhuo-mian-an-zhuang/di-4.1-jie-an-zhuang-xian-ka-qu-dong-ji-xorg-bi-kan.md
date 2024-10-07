@@ -12,7 +12,7 @@
 >
 >虚拟机显卡驱动看前边的章节，不再赘述。
 
-FreeBSD 已从 Linux 移植了显卡驱动，理论上，绝大部分英特尔核显、A 卡 N 卡均在 AMD64 架构上正常运行。
+FreeBSD 已从 Linux 移植了显卡驱动，理论上，绝大部分英特尔核显、A 卡、N 卡均在 AMD64 架构上正常运行。
 
 ## 显卡支持情况
 
@@ -32,12 +32,12 @@ FreeBSD 14.1-RELEASE、14-STABLE（OSVERSION >1400508）、FreeBSD 15 CUEERNT，
 >```
 
 
-## 安装英特尔核显/AMD 独显驱动
+## 安装英特尔核显/AMD 显卡驱动
 
 
 >**注意**
 >
-> 在使用 Gnome 时，如果自动锁屏或息屏，可能无法再次进入桌面。见 [Bug 255049 - x11/gdm doesn't show the login screen](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=255049)。
+> 在使用 Gnome 时，如果自动锁屏/息屏，可能无法再次进入桌面。见 [Bug 255049 - x11/gdm doesn't show the login screen](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=255049)。
 
 首先切换到 latest 源，或使用 ports 安装：
 
@@ -86,15 +86,15 @@ FreeBSD 14.1-RELEASE、14-STABLE（OSVERSION >1400508）、FreeBSD 15 CUEERNT，
   
 即找不到路径，请先获取 ports，请看前文。
 
-### 配置使用英特尔核显/AMD 独显
+### 配置使用英特尔核显/AMD 显卡
 
 
 打开 `/etc/rc.conf`:
 
 - 如果为 intel 核芯显卡，添加 `kld_list="i915kms"`
 - AMD
-  - 如果为 HD7000 以后的 AMD 显卡，添加 `kld_list="amdgpu"` （大部分人应该使用这个，如果没用再去使用 `radeonkms`）
-  - 如果为 HD7000 以前的 AMD 显卡，添加 `kld_list="radeonkms"` （这是十多年前的显卡了）
+  - 如果是 HD7000 以后的 AMD 显卡，添加 `kld_list="amdgpu"`（大部分人应该使用这个，如果没用再换 `radeonkms`）
+  - 如果是 HD7000 以前的 AMD 显卡，添加 `kld_list="radeonkms"`（这是十多年前的显卡了）
 
 ### 视频硬解
 
@@ -173,7 +173,7 @@ backlight 自 FreeBSD 13 引入。
 
 >**技巧**
 >
->下面的 `390` 亦可换成 `340`、`470`。
+>下面的 `390` 亦可换成 `340`、`470` 和 `304`。
 
 - 340 驱动支持的显卡参考 [FreeBSD Display Driver – X64](https://www.nvidia.cn/Download/driverResults.aspx/156260/cn/)
 - 390 驱动支持的显卡参考 [FreeBSD Display Driver – X64](https://www.nvidia.cn/download/driverResults.aspx/196293/cn/)
