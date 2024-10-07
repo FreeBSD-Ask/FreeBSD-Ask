@@ -6,12 +6,12 @@
 
 本页面是对 <https://freebsdfoundation.org/about-us/testimonials/> 的翻译。、
 
-## 参与 FreeBSD 项目
+**参与 FreeBSD**
 
 无论您是担任导师、推广 FreeBSD，还是参与论坛和邮件列表，您的努力都推动着项目的创新和发展。通过加入我们充满活力的社区并帮助构建我们长期发展的开源生态系统，今天就支持 FreeBSD 项目吧！通过 [改善文档](https://docs.freebsd.org/en/books/fdp-primer/)、处理 [错误报告](https://www.freebsd.org/support/bugreports/)、[提交代码](https://wiki.freebsd.org/BecomingACommitter) 和 [参与讨论](https://www.freebsd.org/community/mailinglists/) 来增强 FreeBSD。每一份贡献，无论大小，都有助于将 FreeBSD 发展为一个更稳定、安全和高效的开源操作系统。
 
 
-## FreeBSD 终端用户故事
+**FreeBSD 终端用户故事**
 
 
 从企业到个人，从关键任务服务器到笔记本电脑。了解用户如何利用 FreeBSD 的强大功能来实现安全性、性能和可扩展性。
