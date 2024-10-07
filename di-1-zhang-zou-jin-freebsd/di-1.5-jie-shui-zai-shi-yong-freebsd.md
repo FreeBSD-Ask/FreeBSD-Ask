@@ -41,7 +41,6 @@ E-Card 成功利用 FreeBSD 的案例证明了该操作系统在处理高需求�
 
 ### 对立面：利用 FreeBSD 和 Bhyve 开创确定性虚拟机监控程序
 
-![](https://freebsdfoundation.org/wp-content/uploads/2024/07/Antithesis_header-1024x494.jpg)
 
 Antithesis 正在攻克软件工程中最棘手的问题之一：转变软件测试和调试，使其更高效、更可靠。他们的解决方案基于一个构建于 FreeBSD 和其本地虚拟机监控程序 Bhyve 之上的确定性虚拟机监控程序。让我们探索一下 Antithesis 所应对的具体挑战、选择 FreeBSD 和 Bhyve 的原因，以及这一开创性技术的潜在前景。
 
