@@ -1,528 +1,575 @@
 
 # 第 1.5 节 谁在使用 FreeBSD
 
-本页面是对 <https://freebsdfoundation.org/about-us/testimonials/> 的翻译。
+>**警告**
+>
+>正在校对。
 
+本页面是对 <https://freebsdfoundation.org/about-us/testimonials/> 的翻译。、
 
-**推荐信**
+## 参与 FreeBSD 项目
 
-热爱 FreeBSD 为你的组织所做的贡献吗？请发送你的推荐信给我！
+无论您是担任导师、推广 FreeBSD，还是参与论坛和邮件列表，您的努力都推动着项目的创新和发展。通过加入我们充满活力的社区并帮助构建我们长期发展的开源生态系统，今天就支持 FreeBSD 项目吧！通过 [改善文档](https://docs.freebsd.org/en/books/fdp-primer/)、处理 [错误报告](https://www.freebsd.org/support/bugreports/)、[提交代码](https://wiki.freebsd.org/BecomingACommitter) 和 [参与讨论](https://www.freebsd.org/community/mailinglists/) 来增强 FreeBSD。每一份贡献，无论大小，都有助于将 FreeBSD 发展为一个更稳定、安全和高效的开源操作系统。
 
-你的公司是否已使用 FreeBSD 造就了巨大的辉煌？通过提交公司的推荐信，帮助我们宣传有关这个项目的信息。你不仅将进一步帮助提升人们对 FreeBSD 的认知，而且你的推荐信还将包含你公司的链接，并将在 FreeBSD 基金会网站首页、推荐信页面以及每月通讯中展示至少一次。推荐信通常由董事或副总裁撰写，内容包括你为何使用 FreeBSD、你获得了哪些益处，*以及为何读者应该向基金会捐款或为项目做出贡献。* 希望你今天能考虑撰写一份推荐信，以帮助提升 FreeBSD 的知名度和促进发展！感兴趣吗？请填写[此表格](https://goo.gl/forms/EzHZMprvySWKbLO12)或与 marketing@freebsdfoundation.org 联系。
+---
 
-**看看已经为 FreeBSD 欢呼雀跃的公司名单：**
+FreeBSD 终端用户故事
 
-## NetApp
+---
 
-![NetApp](../.gitbook/assets/netapp.png) 
 
-2020 年 5 月 20 日
+从企业到个人，从关键任务服务器到笔记本电脑。了解用户如何利用 FreeBSD 的强大功能来实现安全性、性能和可扩展性。
 
-NetApp 自豪地将 FreeBSD 作为我们的 ONTAP 存储操作系统的核心组件。借助 FreeBSD，我们能够提供高性能产品，并具备客户所期望的可靠性、安全性和可支持性。作为 FreeBSD 社区的一部分，NetApp 能够与业界领先的技术公司合作。FreeBSD 基金会在推动 FreeBSD 创新和促进跨公司和跨行业合作方面做得非常出色。你持续的成功为所有 FreeBSD 用户的成功作出了贡献。谢谢。
+---
 
-——[ONTAP](https://www.netapp.com/us/index.aspx) 工程总监 Matt Hambrick
+受益于 FreeBSD 的组织
 
-## Netflix
+---
 
-![Netflix](../.gitbook/assets/Netflix.png) 
+## E-Card：使用 FreeBSD 扩展在线游戏和博彩
 
-2015 年 12 月 28 日
 
-在全球范围内有超过 3 千万 Netflix 位流媒体会员每月观看超过 10 亿小时的电影和电视节目。在美国，Netflix 的视频流媒体占据了峰值下行互联网流量的三分之一。Netflix 创建了 Open Connect——一个专用的内容传递网络，以帮助传递这些千万亿字节的数据。
+E-Card 是保加利亚索非亚的一家领先的在线游戏和博彩提供商。自 2000 年成立以来，E-Card 利用 FreeBSD 为其基础设施提供支持，确保其多样化的游戏和博彩服务具有强大的性能、可扩展性和可靠性。E-Card 运营两个主要业务领域：为其他网站制作和托管消费者游戏，以及运营自己的在线赌场和博彩平台。他们的旗舰平台每天为数千名客户提供游戏和体育博彩服务。
 
-Open Connect 的主要组件是 Open Connect Appliance，一种小型的网络流媒体设备。Open Connect Appliance 是一个 4U 的基于 Intel 的服务器，旨在在适合 ISP 数据中心和城域网交换的空间和功耗占用的前提下，经济高效地最大化存储密度。
+### **性能与可扩展性**
 
-Open Connect Appliance 在 FreeBSD 9 上运行。Netflix 选择了 FreeBSD 9，因为它是一个高性能、低维护成本和可靠性的操作系统，得到了主要硬件供应商的支持。FreeBSD 9 提供了可靠性、性能和免管理性的基础。结合轻量级高性能的 Web 服务器 NGINX，FreeBSD 9 提供了一个简单但强大的解决方案，能够通过多个 10Gbit 光纤链路同时传送数以万计的视频流。
+FreeBSD 的 ZFS 文件系统提供数据完整性、压缩和高效的数据处理能力，以管理 E-Card 的大规模数据操作。在高峰时段，E-Card 的服务器可以处理数千名在线玩家。其基础设施每秒可实现约 100,000 次查询和 20,000 次交易，确保用户体验流畅和响应迅速。该公司使用绑定的 10G 网络接口和 Arista 交换机，以确保高网络吞吐量和可靠性。
 
-除了其技术优势之外，FreeBSD 还拥有出色的开发人员、供应商和用户生态系统，他们公开分享专业知识、才能和技术改进。Netflix 已经融入了这个社区，并致力于回馈其错误修复和增强功能，从而完成了社区合作的循环。
+**“自 2000 年以来，FreeBSD 一直是我们基础设施的支柱。它的稳定性、性能和简单的管理使我们能够扩展业务并满足在线游戏行业的严格要求。” – E-Card 首席技术官 Rumen Palov**
 
-——[Netflix](http://www.netflix.com/) 内容传递架构总监 David Fullagar，
+由于保加利亚博彩行业的监管要求，E-Card 的大型服务器必须存储并保留大量数据，最长可达 5 年，因此需要像 ZFS 这样的强大高效的存储解决方案。
 
-## Modirum
 
-![Modirum](../.gitbook/assets/Modirum.png) 
+### E-Card 的社区贡献
 
-2019 年 12 月 30 日
+E-Card 遇到并报告了多个错误，并为满足其特定需求而致力于 FreeBSD 和 ZFS 的定制补丁。它是 FreeBSD 社区的活跃成员，并表示有兴趣撰写文章并分享其技术经验和见解。该公司的参与有助于增强 FreeBSD 生态系统，并支持其他希望利用 FreeBSD 技术的企业。
 
-Modirum 是一家规模虽小但不断发展跨国公司，为全球的银行、商家、支付服务提供商和信用卡公司提供软件和托管服务。我们在世界各地的托管服务中都使用 FreeBSD，从路由器和防火墙到应用服务器和数据库。
+E-Card 成功利用 FreeBSD 的案例证明了该操作系统在处理高需求的大规模在线游戏和博彩应用中的能力。FreeBSD 的稳定性、性能和社区支持使其成为在线游戏行业运营企业的理想选择。
 
-和许多其他情况一样，我们使用 FreeBSD 起源于很久以前做出的个人选择。现在我们可能有更多或不同的原因坚持使用 FreeBSD，但是在很久以前做出这些选择的原因仍然是明智的：它比其他 Unix 更合理，文档更完善，努力更加专注，并且它有一个一致的用户空间，在多年间基本没有变化。
 
-FreeBSD 在很多方面表现出色，而在一些方面甚至表现异常出色。我们喜爱它的审计工具、ZFS、jail 以及整体的高效性。
 
-感谢你们，FreeBSD 社区！
+## 对立面：利用 FreeBSD 和 Bhyve 开创确定性虚拟机监控程序
 
-——[Modirum](https://www.modirum.com/) 首席运营官 Eirik Øverby
+![](https://freebsdfoundation.org/wp-content/uploads/2024/07/Antithesis_header-1024x494.jpg)
 
-## Mellanox
-![Mellanox](../.gitbook/assets/Mellanox.png) 
+Antithesis 正在攻克软件工程中最棘手的问题之一：转变软件测试和调试，使其更高效、更可靠。他们的解决方案基于一个构建于 FreeBSD 和其本地虚拟机监控程序 Bhyve 之上的确定性虚拟机监控程序。让我们探索一下 Antithesis 所应对的具体挑战、选择 FreeBSD 和 Bhyve 的原因，以及这一开创性技术的潜在前景。
 
-2019 年 9 月 6 日
+### 挑战
 
-Mellanox Technologies 是一家领先的以太网和 InfiniBand 智能互连解决方案和服务供应商，为服务器和存储设备提供端到端的解决方案。Mellanox 的互连解决方案通过提供最高吞吐量和最低延迟，提高数据中心效率，将数据更快地传递给应用程序，释放系统性能，提高数据安全性。Mellanox 提供多种快速互连产品：适配器、交换机、软件和硅芯，加速应用程序性能，为云和超大规模、高性能计算、人工智能、企业数据中心、网络安全、存储、金融服务等广泛的市场最大化业务成果。
+在软件工程中，错误可复现性是一个重大挑战。许多错误非常难以捕捉，常常在特定条件下不一致地出现，难以复制。这种不一致性阻碍了调试工作，导致开发周期延长和成本增加。传统的调试工具，例如记录重放机制（如 dtrace 等），面临存储需求、操作系统依赖和可扩展性限制，尤其是在分布式系统中。
 
-Mellanox 的产品解决了对低延迟和高带宽网络不断增长的需求，以及 FreeBSD 用户对低 CPU 利用率的需求。除了严格维护之外，FreeBSD 操作系统还提供尖端技术，吸引了高度专业的用户、开发人员和供应商，他们持续分享想法、专业知识和技术支持，从而实现了不断发展的 FreeBSD 生态系统。
+Antithesis 识别出需要一个强大的解决方案，以提供一致和可复现的测试环境，使开发人员能够全面探索、诊断和修复错误。这一需求促成了他们的确定性虚拟机监控程序项目的诞生。
 
-Mellanox Technologies 长期以来一直是 FreeBSD 社区的开发者和贡献者，在通用的 FreeBSD 操作系统中集成了 Mellanox 领先的 RDMA 和其他先进的卸载技术。目前，Mellanox 有三位 SRC（System Revision Control）提交者。我们很高兴并自豪地继续赞助、贡献和维护 InfiniBand、RDMA、LinuxKPI 和 USB 子系统，并在不断壮大的 FreeBSD 项目中促进基础架构的变化。
+**Antithesis 选择 FreeBSD**：Antithesis 需要一个稳定、灵活、允许自由使用的操作系统来开发其确定性虚拟机监控程序。由于其清晰的架构设计和全面的功能集，FreeBSD 完美满足了这些需求，为 Antithesis 创新和定制其虚拟机监控程序提供了必要的支持。
 
-Mellanox 始终乐于回应并接受广泛社区提出的新挑战，促进了 FreeBSD 和 Mellanox 的进步。
+FreeBSD 的宽松许可模式对 Antithesis 有利，使其能够在不受更严格许可证限制的情况下构建专有解决方案。
 
-——[Mellanox Technologies](https://www.mellanox.com/) 软件副总裁 Yaron Gepstein
+>宽松许可证是一种软件许可证，授予接收者广泛的修改、使用和分发软件的权利，通常限制较少。这些许可证通常允许软件用于专有或闭源项目，而无需要求这些项目发布其源代码。宽松许可证与强制性许可证形成对比，后者对软件的分发和修改施加了更严格的要求。 
 
-## simPRO
+**技术优势：** FreeBSD 以其干净且结构良好的代码库而闻名。这种简洁性和清晰性使其成为确定性虚拟机监控程序的理想基础，因为它需要进行广泛的修改和增强。
 
-![simPRO](../.gitbook/assets/simPRO.png) 
+**成熟与简洁：** Bhyve 是 FreeBSD 的本地虚拟机监控程序，相较于 Xen 和 KVM 等其他虚拟机监控程序，提供了一个成熟且相对简单的代码库。其良好分层和干净的架构为 Antithesis 所需的广泛更改提供了坚实的起点。
 
+**定制化：** Antithesis 需要大幅简化和修改 Bhyve 以实现确定性。通过关注核心确定性行为并逐步构建功能，他们创建了一个确保多个运行之间状态和行为一致的虚拟机监控程序。
 
-2019年8月29日
+### 在 FreeBSD 和 Bhyve 上实施 Determinator
 
-simPRO 是领先的云端工作和项目管理软件提供商，为现场服务和贸易承包行业提供服务，并且是提供SAAS平台软件的早期先驱。
+Antithesis [开发了一个确定性虚拟机监控程序](https://antithesis.com/blog/deterministic_hypervisor/)，称为“Determinator”，以提供一个受控和可复现的测试环境。Determinator 在一个由虚拟机监控程序管理的单一虚拟机内运行多个容器。该设置确保整个系统状态一致且可复现，从而允许深入探索和调试错误。Determinator 的功能包括：
 
-我们从澳大利亚发展起来，现在在新西兰、英国和美国设有办事处。
+**确定性可复现性：** 确保每次软件测试运行产生相同的结果，甚至包括虚拟机内部状态的精确序列。
 
-我们已经使用 FreeBSD 运行了大约 7 年的时间，通过全球 6 个生产数据中心提供所有产品服务，包括 300 多个 FreeBSD 实例的整个平台。
+**状态空间探索：** 使全面探索不同执行路径成为可能，以识别潜在错误和问题。
 
-全球有超过 5000 家公司和 140,000 多名用户在使用 simPRO，而 FreeBSD 为我们提供了所需的可扩展性和可靠性，以向客户提供关键任务的产品。
+**时间旅行调试：** 允许开发人员在执行历史中前后移动，以准确定位错误的发生时刻和原因。
 
-我们大量使用 ZFS 来加速数据库性能并保护 500TB 的客户数据，同时我们还使用 FreeBSD 内置的一系列集群和复制工具来保持我们的实例在全球范围内同步。FreeBSD的 Ports 使我们能够在知道软件包适合目的、维护良好且易于升级的情况下扩展我们的服务。
+**快照能力：** 实现的一个关键特性是高级快照功能，允许整个虚拟机状态瞬间保存和恢复。这一能力对于创建可复现的测试环境和进行软件行为的详细分析至关重要。
 
-FreeBSD 的出色安全性和更新、网络性能以及出色的 IO 和内存管理使得运行这个大型、流量密集且关键性的应用程序变得更加容易。操作系统承担了大部分繁重的工作，这意味着我的工程师可以专注于产品发展，而非服务器维护。
+**可扩展性：** 尽管运行在单个核心上，确定性虚拟机监控程序通过运行多个虚拟机（每个虚拟机探索程序状态的不同部分）支持广泛的并行性。
 
-自从我们转向 FreeBSD 后，我们的正常运行时间显著提高。这不仅是对其稳定性的证明，还表明操作系统的维护和升级以及其附带的软件包的便捷性。
+## 未来方向
 
-——[simPRO](https://www.simpro.us/) 首席技术官 Jonathan Eastgate
+Antithesis 计划继续增强其确定性虚拟机监控程序并扩展其功能。他们的计划包括：
 
-## MSI/FUNTORO
-![MSI](../.gitbook/assets/FUNTORO.png) 
+**开源和社区参与：** 尽管当前关注于产品开发，Antithesis 有兴趣开源部分工作，以回馈社区并促进合作。
 
-2018 年 5 月 31 日
+**新的测试场景：** Antithesis 将为 API 测试、用户界面测试、金融交易系统测试和计算机游戏测试增加未来场景。
 
-MSI/FUNTORO 利用 FreeBSD 为巴士、火车、体育场和酒店提供高性能的按需音视频流媒体服务。
+**更广泛的平台支持：** 扩展对更多操作系统和硬件配置的支持，使虚拟机监控程序更加多功能和广泛适用。
 
-选择 FreeBSD 是因为其稳定性和可靠性，易于升级和维护，安全更新的可靠性以及软件包的整体出色质量。
+**与 CI/CD 管道集成：** 将确定性虚拟机监控程序纳入持续集成和交付管道，以自动化测试并确保高质量发布。
 
-——[MSI/FUNTORO](http://www.funtoro.com/global/) 董事兼总经理 Scott Chen
+## 结论
 
-## cleverbridge
+Antithesis 创新性地利用 FreeBSD 和 Bhyve 创建了一个确定性虚拟机监控程序，这是一个解决软件开发中关键问题的工具：错误的可复现性。通过确保一致和受控的测试环境，它显著提升了软件调试和测试的效率与可靠性。通过持续致力于创新和社区参与，Antithesis 在软件工程领域的贡献前景广阔。
 
-![cleverbridge](../.gitbook/assets/cleverbridge.png) 
+## Cloudnium 采用 FreeBSD 提供先进的托管解决方案
 
-2017 年 10 月 3 日
 
-cleverbridge 公司总部位于德国科隆，办事处遍布芝加哥、旧金山和东京。在我们的开发、测试和生产环境中使用 FreeBSD 已超过 12 年。FreeBSD 为我们提供了独特的安全功能、可靠性、业界领先的技术和惊人的性能。从我们的 Web 服务器、电子邮件服务器到存储服务器，FreeBSD 有助于推动我们的全球电子商务解决方案。
+Cloudnium 由 Earl Adams 在德克萨斯州沃斯堡创立，是一家专注于高密度机柜和人工智能及云计算托管解决方案的前沿服务提供商。Cloudnium 利用 FreeBSD 的稳定性、安全性和性能，以满足客户不断变化的需求。
 
-——[cleverbridge](https://www.cleverbridge.com/corporate/) IT 技术总监 Paul Herman，
+Earl Adams 在 IT 行业有着丰富的历史，曾拥有多家公司和数据中心。Cloudnium 是他的最新创业项目，提供定制化解决方案，满足那些像 AWS 和 Azure 等主要提供商无法轻易满足的特定和高强度计算需求的客户。Cloudnium 的服务包括机房托管、专用服务器以及为开发公司提供的后台支持。
 
-## XipLink
-![XipLink](../.gitbook/assets/XipLink.png) 
+### 挑战
 
-2017 年 6 月 2 日
+Cloudnium 面临着高密度托管提供商所特有的多个挑战。确保其高密度服务器的持续稳定运行至关重要，因为任何停机时间都可能对客户的运营造成重大影响。鉴于客户工作负载的性质，保护敏感数据的强大安全协议也至关重要。此外，Cloudnium 还需要为其服务所需的高能耗提供具有竞争力的定价。可扩展性也是一个主要关注点，因为他们必须管理有效支持人工智能和云计算客户的基础设施。
 
-XipLink 专注于优化无线链接、广域网（WAN）或任何存在高延迟、不对称分配或高比特错误率的网络。XipLink 的解决方案主要应用于卫星网络、航空、军事、政府和海上系统。
+### 解决方案：FreeBSD
 
-由于我们的解决方案涵盖范围广泛，我们需要提供能够同时优化数十万用户会话的软件和硬件。为此，我们需要最稳定、高效、受支持且文档齐全的网络堆栈，我们还可以根据需要进行修改。
+Cloudnium 选择 FreeBSD 作为其核心操作系统，以应对这些挑战。FreeBSD 以其强大的性能和可靠性而闻名；一旦配置完成，需最小的干预即可确保平稳持续的运行。FreeBSD 的高级安全特性为保护客户数据提供了坚实的基础。FreeBSD 的高效网络堆栈和对高性能应用程序的支持，使其成为 Cloudnium 需求的理想选择。此外，FreeBSD 的灵活性使 Cloudnium 能够根据具体要求定制操作系统，进一步提高整体性能。
 
-自从 4.5 版本发布以来，FreeBSD 一直为 XipLink 提供了这些东西。它友好的 BSD 许可模行和丰富的网络堆栈文档（特别是 Wright 和 Stevens 的 TCP/IP Illustrated Series）使我们首次实现空间通信协议标准变得更加容易。
+### 实施
 
-从那时起，情况稳步改善。系统可靠性、性能、广泛的代码审查和对细节的关注贯穿整个源代码，使 FreeBSD 成为我们不断演进和增加功能的完美环境。
+Cloudnium 已将 FreeBSD 集成到其运营的多个关键领域。他们在 FreeBSD 上运行核心服务和支持基础设施，以确保稳定安全的基础。此外，他们在沃斯堡的互联网交换中心将实现大量 FreeBSD，突显该系统的可靠性和性能。
 
-XipLink 很自豪地支持 FreeBSD，通过赞助 FreeBSD 开发人员、提交补丁和功能，或仅通过订阅 FreeBSD Journal 和向基金会捐款来实现。
+采用 FreeBSD 为 Cloudnium 带来了众多好处。FreeBSD 的稳定性降低了停机时间和维护需求，为客户提供了更可靠的服务。增强的安全措施保护了 Cloudnium 及其客户免受潜在威胁，确保数据的完整性和安全性。FreeBSD 提供的高效资源利用导致显著的成本节省，使其服务更具竞争力。此外，其托管环境的高性能和可靠性提高了客户满意度。
 
-——[XipLink Inc](http://www.xiplink.com/) 工程副总裁 Karim Fodil-Lemelin，
+### 未来计划
 
-## Verisign
+Cloudnium 计划在多个方面扩展对 FreeBSD 的使用。他们正在开发基于 FreeBSD 的数据中心管理系统（DCM），以增强其基础设施管理能力。此外，他们希望与 FreeBSD 社区更加紧密地合作，以改善整体支持和工具，进一步增强系统能力。Cloudnium 还致力于通过建立免费的实验室和技术女性教育项目来支持技术领域的多样性。
 
-![Verisign](../.gitbook/assets/Verisign.png) 
+Cloudnium 战略性地利用 FreeBSD，使其在提供高密度和专业计算需求的先进托管解决方案方面处于领先地位。FreeBSD 的稳定性、安全性和性能使 Cloudnium 能够有效满足客户需求，同时为未来的增长和创新做好准备。
 
-2015 年 11 月 19 日
+## Metify 案例研究
 
-Verisign 为全球用户提供关键的互联网基础设施。Verisign 不仅运营着互联网 13 个根域名服务器中的两个，还运营着解析 .com 和 .net 顶级域名的域名服务器。如果你使用全球域名系统（DNS），那么你很可能依赖于 Verisign 的基础设施。
 
-Verisign 的 .com 和 .net 域名服务器每秒响应 1110 亿个查询，而在高流量事件或高带宽分布式拒绝服务（DDOS）攻击时，负载往往更高。这些域名服务器部署在全球约 80 个地点，以确保无论你在哪里，都可以获得低延迟和高可靠性的 DNS 响应。
 
-确保弹性 DNS 服务的一种方式是通过使用多样化的操作系统。FreeBSD 占据了为根区域和 .com、.net 区域提供服务的操作系统组合中的重要部分。多个操作系统仅仅是分层设计的一个组成部分，该设计在系统架构中融合了冗余性和多样性。
+### 通过从 Linux 切换到 FreeBSD 提升网络管理：Metify 的方法
 
-当我们决定改变操作系统组合时，我们进行了全面的调查，考虑了各种替代方案。在审查了所有这些操作系统之后，基于以下六个考虑因素，我们选择了 FreeBSD 用于 .com、.net 和根域名服务器：
 
-- 系统代码多样性：BSD 内核和网络堆栈与 Linux 内核和网络堆栈之间的差异足以提供对零日漏洞的阻止。我们审查了源代码，以及 FreeBSD 开发人员使用的开发哲学。
-- 网络性能：FreeBSD 为域名服务器工作负载提供了类似 Linux 的性能。看到持续关注和努力改进 FreeBSD 上的网络性能令人鼓舞。
-- 硬件支持：Verisign 定期更新构成我们域名服务器环境的硬件。在硬件更新周期内，FreeBSD 通常适用于 Verisign 选择的通用服务器硬件。了解在引入新服务器硬件和在 FreeBSD 中支持该硬件之间将会有合理短的延迟非常重要。
-- 可靠性的历史证明：FreeBSD 作为一个可靠的服务器的声誉对我们来说至关重要。托管在 FreeBSD 上的服务具有非常高的可用性要求，加上 FreeBSD 的坚如磐石的运行记录直接解决了这一标准。
-- 安全运行的历史证明：FreeBSD 开发社区长期以来一直认真对待安全问题。当发现漏洞时，我们通常会看到迅速的披露和几乎立即可用的补丁。
-- 许可证：社区致力于提供高质量的开源内容，而不会限制其使用，这对 Verisign 非常重要。
 
-作为 Verisign“回馈”社区的许多方式之一，就是每两年举办一次 vBSDcon 会议。该会议通常安排在 10 月/11 月时间框架的一个周末；此前的会议分别在 2013 年和 2015 年举行。
+Metify 在网络管理和基础设施优化领域脱颖而出，成为创新的力量。该公司利用 FreeBSD 的能力推动其突破性的软解决方案。Metify 已将 FreeBSD 确立为其技术栈的基石，从而不再严格依赖 Linux。
 
-自从转向使用 FreeBSD 以来，我们很高兴看到它实现了我们的期望。FreeBSD 开发社区应该为在 FreeBSD 上提供关键的互联网基础设施感到自豪；他们的辛勤工作使互联网更加安全和可靠。Verisign 自豪地参与了 FreeBSD 开发社区，并且有员工为 FreeBSD 贡献工作。
+这一战略选择源于 FreeBSD 在网络环境中的无与伦比的性能和稳定性，这些特性在现代网络的快节奏环境中至关重要。Metify 的旗舰网络管理软件 Mojo 和多功能网络设备 Photon 展现了该公司利用 FreeBSD 能力提供先进解决方案的承诺。
 
-——[Verisign，Inc.](http://www.verisign.com/) 首席工程师 Glen Wiley
+### 切换的过程
 
-## Stormshield
-![Stormshield](../.gitbook/assets/Stormshield.png) 
+Metify 的首席技术官 Ian Evans 最近解释了 FreeBSD 相较于其他操作系统的独特优势。他强调了 FreeBSD 与 ZFS 文件系统的紧密集成，确保数据完整性和高效存储管理，简化了整体系统架构。
 
-2016 年 11 月 21 日
+此外，他还强调了 FreeBSD 内核设计的优雅，创造了一个精简和可定制的环境，能够针对性能进行微调，这与 Linux 发行版中常见的复杂性形成鲜明对比。Ian 还指出，FreeBSD 文档的完整性在软件领域中并不常见，并强调了 FreeBSD 社区的活跃与热情。
 
-自 1998 年以来，Stormshield 充分利用 FreeBSD 提供高性能的统一威胁管理（UTM）和下一代防火墙技术。我们通过技术贡献和赞助不断地表达对 FreeBSD 的支持；作为公司，我们完全致力于这个伟大社区的持续成功。
+***“总体来说，FreeBSD 在文档方面做得非常出色。您总能找到参考资料，社区似乎更活跃、更健全。如果我们需要联系或与某人交流，我们发现这种支持更强，深度也更高。” – Ian Evans, Metify 首席技术官***
 
-——[Stormshield](https://www.stormshield.eu/) 首席创新官 Fabien Thomas
+Metify 对 FreeBSD 的承诺不仅仅是采用它。他们正在通过在 Mojo 中集成精心设计的自动化安装流程，努力大规模部署 FreeBSD。Metify 的目标是使 FreeBSD 的使用更易于访问和用户友好，类似于 Linux。通过简化部署和配置过程，Metify 促进了 FreeBSD 在企业网络中的更广泛采用，利用其在性能和可靠性方面的内在优势。
 
-## IXC (IntereXchange Carrier)
-![IXC](../.gitbook/assets/IXC.png) 
+### 回馈社区
 
-2016 年 8 月 19 日
+Metify 的路线图列出了雄心勃勃的目标，包括进一步将 FreeBSD 整合到其生态系统中。该公司计划向上游贡献并增强容器运行时的集成。通过促进 FreeBSD 的采用并鼓励开源社区的合作，Metify 不仅推动了产品的创新，还为网络技术的更广泛发展做出了贡献。值得注意的是，BSD 许可证为 Metify 提供了灵活性，让他们可以立即实施 FreeBSD，并在适当时机回馈社区。
 
-IXC（IntereXchange Carrier）是乌克兰的 VoIP 系统开发商，设计、开发并销售现代的软交换和计费系统，适用于具有大容量用户和广泛市场覆盖的企业。该公司创造了一个独特的综合解决方案，包括高性能软交换、实时计费、用户友好的 Web 界面等模块。它在 50 多个国家广为人知，并成为批发业务的顶级 VoIP 软交换供应商。
+***“FreeBSD 许可证在使用方面提供了更大的灵活性。我们正处于一个阶段，一旦我们的产品达到一定水平，我们计划进行更多的上游贡献。这种对代码使用和集成到我们的软件栈的灵活性至关重要。”***    *-Ian Evans, Metify 首席技术官*
 
-在过去的 17 年里，IXC 一直努力为 VoIP 业务提供竞争力强的解决方案。这种技术需要在性能、容错性和 SLA 保证方面进行大量工作。因此，选择一个满足这些要求的操作系统起着重要作用。
+Metify 战略性地将 FreeBSD 作为其网络管理解决方案的基础，代表了一个重要的关注点。通过利用 FreeBSD 的高性能网络能力和固有的可靠性，Metify 准备重新定义网络管理的卓越标准，为效率、可扩展性和创新设定新的基准。
 
-在 VoIP 服务中，能够在高负载下工作是关键问题，而 FreeBSD 的 sysctl 服务提供了将 NIC 性能调整到最大水平的机会。这种配置可以将并发呼叫数增加到 3000 个甚至更多。
 
-Ports 基础设施是将系统与其他 Unix 派生系统区分开的一个元素，也是构建适合我们自己需求的软件环境的强大工具。最后但同样重要的是，我们想要强调出色的安全性。在当今时代，这是一个难以高估的方面。
+# RG Nets 案例研究
 
-我们每年测试各种 Unix 发行版的操作系统。从 4.X 版本开始，每年 FreeBSD 都是我们的主要操作系统。
+![](https://freebsdfoundation.org/wp-content/uploads/2024/05/RG-Nets-_header-1024x490.jpg)
 
-我们很荣幸能成为一个正在努力发展 FreeBSD 的大型 IT 社区的一部分。
+# RG Nets 如何利用 FreeBSD 构建高性能边缘网络的未来
 
-——[IXC](http://interexc.com/) 运营副总裁 Evgeniy Gordashnik，
+> RG Nets, Inc. 于 2007 年由 Simon Lok 博士创立，已成为设计和部署软件定义网络网关技术的领先者。该公司专注于为各种环境提供高性能、可扩展、安全的网络解决方案，涵盖从小型企业到大规模服务提供商的广泛需求。<br /><br />RG Nets 的 rXg 交钥匙网关设备是一种强大的解决方案，能够将多种网络功能整合到一个设备中。该设备可以从统一控制台轻松管理，这对于需要在多个远程位置管理和监控网络访问的大型组织尤其有用。这些功能对运营商、酒店、大型住宅物业以及大型公共场所（LPVs）如体育场、交通枢纽和拥挤城市热点区域尤其有帮助。| ![RGNETS的挑战、解决方案和影响的项目符号列表](https://freebsdfoundation.org/wp-content/uploads/2024/05/RG-Nets-challeng.png)
 
-## NeoSmart Technologies
-![NeoSmart ](../.gitbook/assets/NeoSmart.png) 
+## RG Nets：利用 FreeBSD 应对现代网络挑战
 
-2016 年 4 月 11 日
+如今，RG Nets 利用 FreeBSD 强大的能力，为复杂的边缘网络挑战提供创新和有效的解决方案。该公司拥有坚实的基础，开发出满足小型企业和大型服务提供商多样化需求的先进网络解决方案。
 
-在 NeoSmart Technologies，我们不仅仅在操作系统之上构建应用程序——我们为操作系统本身构建应用程序。我们的 Easy Recovery Essentials® 系列可启动系统修复光盘每天被全球数千名终端用户、IT 专业人员和系统管理员使用，用于检测和纠正可能出现的与用户的硬件、引导配置、操作系统和应用程序有关的问题，以一种安全、稳定和可靠的方式。
+RG Nets 使用 FreeBSD 的稳健和模块化架构，创造出满足现代网络在性能、安全性和可扩展性方面具体需求的定制解决方案。通过利用 FreeBSD 的灵活性，RG Nets 可以根据客户的规格优化网络功能，在不受商业网络解决方案限制和费用的情况下，显著提高性能。
 
-Easy Recovery Essentials 是有意由（主要是）跨平台的 C/C++ 混合编写，还包含少量汇编代码和一个 HTML 用户界面，以便我们可以评估不同的“宿主”平台，从而在成千上万台不同的 PC 上启动和运行我们的软件，这些 PC 从数十年前的老设备到最新的尖端设备，来自各种制造商和 OEM 厂商。与在数据中心或云中的服务器上部署操作系统不同，那里的硬件完全在你的控制之下，我们实际上需要的是能够可靠地在终端用户的硬件上运行，包括图形用户界面，而且问题较少的解决方案... 这是一个艰巨的任务。
+### 应用的先进领域
 
-在将 Windows® PE 和各种 Linux 发行版在生产环境中试用了几年之后，我们发现只有 FreeBSD 在最底层级别上提供了一个坚固、开放、良构且协调的平台，我们可以在此基础上可靠地构建我们的软件，并期望它在几乎所有客户的任何地方“正常工作”。逻辑和集中化但又模块化的代码库使我们能够轻松理解操作系统的工作原理，并在不破坏系统的情况下为其添加我们需要的功能，从而使我们能够专注于开发我们的产品，而不是解决启动环境中的问题。
+**软件定义网络 (SDN)：**  RG Nets 专注于使用 FreeBSD 进行软件定义网络 (SDN)，这项技术通过将控制平面与数据平面分离，从而实现高效的网络管理和操作。通过利用 FreeBSD 独特的能力作为覆盖集线器并管理基础的控制平面，RG Nets 成为理想的 SDN 前端，具备高性能和能力。RG Nets 在 FreeBSD 上的 SDN 解决方案提供无与伦比的灵活性和控制，支持自动网络管理、高效资源分配和适应性网络基础设施。
 
-最后但同样重要的是，FreeBSD 完全自由、没有任何附加条件的许可模式让我们可以根据自己的意愿并利用 FreeBSD，而不需要一个律师团队告诉我们是否可以使用 FreeBSD 来完成惊人的事情，这使我们可以简单地将几乎所有的改进、Port、集成和错误修复都回馈到社区中，使用与我们最初获取的相同的开放许可证。
+**网络安全：** 在当今的网络环境中，确保网络基础设施的安全至关重要，因为网络威胁不断演变。RG Nets 利用 FreeBSD 天生安全的环境来开发综合安全解决方案。这些解决方案包括先进的防火墙技术、微分段、入侵检测系统和安全网络网关，以确保数据完整性并防止数据泄露。                                      
 
-对我们来说，继续坚持并支持 FreeBSD 是一个不言而喻的选择。我们自豪地每年赞助 FreeBSD，并在被问及我们对于一个快速、经过实战检验且可靠的平台的建议时，毫不犹豫地推荐它。
+**高可用性和灾难恢复：**  FreeBSD 的稳定性和可靠性使其成为需要高可用性和强大灾难恢复能力解决方案的理想选择。RG Nets 实施基于 FreeBSD 的系统，确保持续运行和最小停机时间，这对各行各业的关键任务应用至关重要。                                                                                                                                              
+**网络功能虚拟化和应用虚拟化：** RG Nets 可以利用 FreeBSD 的关键特性集 **bhyve** 虚拟机监控器和 **jails** 容器，为最具挑战性的行业应用和现代运营商网络构建高度竞争的开源网络解决方案。      
 
-——[NeoSmart Technologies](http://neosmart.net/) Mahmoud Al-Qudsi
+**成本效益创新：** RG Nets 致力于降低客户网络基础设施的成本。通过使用 FreeBSD，该公司避免了与专有软件相关的高许可费用，并将这些节省传递给客户。这种方法不仅使先进的网络更易于访问，还促进了更具竞争力的市场。   
 
-## Chelsio Communications
-![Chelsio](../.gitbook/assets/Chelsio.png)
+### 社区贡献和未来技术：推动 RG Nets 的创新
 
-2016 年 4 月 4 日
+该公司在其基于 FreeBSD 的网络边缘解决方案中处于技术集成的前沿，特别是在应用容器化和网络虚拟化方面。这种集成提高了可扩展性和效率，使 RG Nets 能够提供强大而灵活的解决方案，以满足未来数字通信需求，包括 5G 网络和物联网生态系统。
 
-Chelsio Communications 是高性能以太网适配器领域的领导者，为虚拟化企业数据中心、公有云、私有云和集群计算环境提供网络和存储解决方案。Chelsio 的网络适配器提供行业内最全面的网络接口卡（NIC）、iSCSI 和 iWARP 卸载能力，从而在更高的性能下降低处理器的利用率。
+Simon Lok 博士和 RG Nets 积极参与 FreeBSD 社区，展示了他们在推动网络技术边界方面的承诺。这种参与确保了 RG Nets 在创新前沿的地位，并为 FreeBSD 生态系统的发展做出了重大贡献。
 
-我们的许多大客户选择了 FreeBSD，由于我们出色的支持质量和对 FreeBSD 的承诺，我们发现那些选择 FreeBSD 的客户大多也选择了 Chelsio。我们很感谢有机会成为 FreeBSD 社区的一部分。Chelsio 团队很高兴能够为社区做出贡献，学习和共同成长。
+在过去，RG Nets 为 FreeBSD 集成的包过滤防火墙 **pf**、网络数据包调度器 **altq** 以及针对特定配置的英特尔网络接口卡性能提升做出了贡献。
 
-——[Chelsio Communications](http://www.chelsio.com/) 工程副总裁 Mehdi Mohtashemi
+RG Nets 当前贡献的一个显著例子是其对 Vector Packet Processor (VPP) 移植和数据平面开发工具包 (DPDK) 向 FreeBSD 的赞助。这些项目代表了网络数据处理的重大进展：
 
-## Acceleration Systems
-![Acceleration](../.gitbook/assets/Acceleration.png)
+* **Vector Packet Processor (VPP)：**   VPP 最初由思科开发，具有高度可扩展性，能够以极高的速度进行数据包处理。[将 VPP 移植](https://ipng.ch/s/articles/2024/02/10/vpp-freebsd-1.html) 到 [FreeBSD](https://ipng.ch/s/articles/2024/02/17/vpp-freebsd-2.html) 使操作系统能够更高效地处理大规模数据流，从而降低延迟并提高对高要求网络应用的吞吐量。
+* **数据平面开发工具包 (DPDK)：**  DPDK 是一套库和驱动程序，旨在加速各种 CPU 架构上的数据包处理工作负载。通过支持 DPDK 的移植，RG Nets 促进了 FreeBSD 上网络应用的性能提升，使数据包处理更快更可靠。
 
-2016 年 3 月 3 日
+### FreeBSD 对电信和网络行业的未来影响
 
-Acceleration Systems 是一家云服务提供商，在 SaaS 模型中提供 WAN 优化服务。我们的解决方案使企业能够在受限链路上特别是网络性能受限的情况下，获得生产力和网络性能的大幅提升。我们团队的许多成员曾在之前的公司中使用开源软件构建基础设施，并且有着共同的心态，支持支持社区和驱动互联网的项目。
+RG Nets 通过将 VPP 和 DPDK 集成到 FreeBSD 中，在电信和网络领域取得了显著进展。这些技术使电信公司能够更高效地管理更高的数据负载，这对处理来自视频流、云计算和物联网设备的增加流量至关重要。
 
-在我们的旗舰产品“远程业务加速器”中，FreeBSD 扮演了重要角色。尽管我们团队中的大多数人都有 Linux 的基础，但选择 FreeBSD 是因为它的精简占用、大量的 Port 以及在这个极其稳定的操作系统上支持的载波级应用。我们团队的成员认可它作为首选系统，他们有着 15 年前追溯到 FreeBSD 4.1 时代的经验——当时他们在肯塔基大学。
+随着 VPP 的集成，该公司基于 FreeBSD 的网关将显著提升性能，尤其是在边缘网络部署中，这对于处理来自移动设备的 5G 和 Wi-Fi 流量至关重要，尤其是在大型公共场所和人口稠密的城市区域等挑战性环境中。VPP 使这些网关在减少 CPU 使用的同时实现更高性能，从而减少对计算能力的需求。这种效率对于管理像体育场这样在活动期间发生数千个同时连接的地方的 5G 网络的高数据吞吐量和低延迟需求尤为重要。
 
-我们感谢有机会使用 BSD 许可证所提供的灵活性来构建产品。Acceleration Systems 团队很高兴为这个项目做出贡献，帮助保持互联网成为一个学习和创造的好地方！
+此外，RG Nets 的系统提供了更好的性能，减少了对重大硬件投资的需求。这使得能够使用可根据用户需求增长的可扩展解决方案，而无需增加成本。这种可扩展性对于希望有效扩展基础设施的电信提供商特别重要，同时推出新服务。未来，它还为使用具有非常高网络吞吐量的低功耗解决方案（如基于 Arm 和 RISC-V 的解决方案与 VPP 和集成数据处理单元（DPU））提供了机会。
 
-——[Acceleration Systems](http://accelerationsystems.com/) 工程副总裁 Jack McKinney，
+### RG Nets 与 FreeBSD 社区的未来
 
-## ScaleEngine
-![ScaleEngine](../.gitbook/assets/ScaleEngine.png)
+RG Nets 对 FreeBSD 的发展做出了重要贡献，使服务提供商能够提供新颖和创新的服务，以满足消费者和企业不断变化的需求。这些服务包括增强的宽带服务、更强大的安全功能以及下一代移动服务，这对提供高质量、可靠且先进的网络服务至关重要。
 
-2016 年 1 月 28 日
+RG Nets 参与 FreeBSD 的发展在塑造电信未来方面至关重要。它还强调了开源解决方案在促进创新和推动行业标准方面的重要性。通过不断创新和利用开源技术，RG Nets 在电信行业中保持关键地位，并为采用和开发尖端网络技术做出贡献。
 
-ScaleEngine 是一家全球性的视频流媒体和内容传送网络。我们专注于通过靠近用户的服务器向他们提供实时和点播的视频流，以降低延迟，确保最佳的观看体验。我们的小团队的开发人员和系统管理员在遍布 11 个国家的 38 个数据中心中管理着 100 多台服务器。之所以能够在如此小的团队中实现如此规模，主要是因为 FreeBSD 提供了广泛的文档、可观察性、监控和自动化工具。丰富的专业知识资源也使 FreeBSD 特别具有吸引力。
 
-ScaleEngine 在其整个基础设施中都使用了 FreeBSD。在需要管理超过 1000TB 存储的情况下，访问频繁更新的 OpenZFS 对我们的产品至关重要。我们还广泛使用 bhyve、jail 和 FreeBSD 的通用可扩展性。
+## FreeBSD案例研究：Sheridan Computers
 
-ScaleEngine 赞助 FreeBSD 基金会，以确保我们能够定期获得及时的发布，同时为 FreeBSD 项目提供所需的支持，以促使其蓬勃发展。
+### 十年不变的服务——FreeBSD和Asterisk的故事
 
-——[ScaleEngine，Inc.](https://www.scaleengine.com/) 运营副总裁 Allan Jude
+![](https://freebsdfoundation.org/wp-content/uploads/2024/04/Screenshot-2024-04-12-132016.png)
 
-## NGINX
-![NGINX](../.gitbook/assets/NGINX.png)
+### 引言
 
-2016 年 2 月 28 日
+十年前，电信的前景截然不同。基于云的解决方案刚刚开始悄然承诺无限的可扩展性和灵活性。然而，在这些初露端倪的云朵中，我们的一位客户决定将他们的电话需求牢牢固定在地面上，采用一种本地部署的VoIP解决方案。这个方案是FreeBSD与[Asterisk](https://www.asterisk.org/)的和谐结合，不仅经受住了时间的考验，还蓬勃发展，为耐用性、成本效益和技术韧性提供了深刻的见解。
 
-NGINX 是现代网络的隐秘核心，为全球 1/3 最繁忙的站点和应用程序提供动力。开源项目 NGINX 始于 2002 年，由于 Igor Sysoev 的远见和我们忠实用户社区的热情支持，在过去的 10 年里得到了指数级的增长。
+### 设置
 
-我们公司提供屡获殊荣的、业界领先的高性能 Web 应用技术，为互联网上超过 1.3 亿个站点提供可扩展性、速度和安全性，确保了流畅的网络用户体验。公司依赖于 NGINX 技术进行负载均衡、内容缓存、媒体流传输、Web 服务等。超过 40%的互联网最繁忙的网站依赖 NGINX 来提升其 Web 应用程序的性能，包括 Netflix、Pinterest、Airbnb、Box、Instagram、SoundCloud 和 Zappos 等巨头。公司总部位于旧金山。
+在2014年这个辉煌的年份，我们与客户一起踏上了旅程，安装了一种本地部署的VoIP解决方案。以其强大和安全性著称的FreeBSD成为了被选中的操作系统，而VoIP解决方案的明星Asterisk则成为了中心舞台。这个动态组合旨在支持大约30位用户。
 
-从历史上看，NGINX 团队一直是 FreeBSD 项目的忠实支持者。我们中的一些人是活跃的 FreeBSD 提交者、代码贡献者和用户。
+这个设置的魅力何在？它是以12个月的维护方案出售的。但转折在于——客户在一年后觉得没有必要续费，因为系统表现出色。
 
-2002 年，当 Igor 开始着手开发 NGINX 项目时，他的主要开发平台就是 FreeBSD。如今，我们继续将 FreeBSD 作为 NGINX 和 NGINX Plus 开发和测试的参考平台。我们赞赏其成熟性、稳定性和出色的性能。
+### 十年的沉默
 
-我们还赞助 FreeBSD 活动并参与 FreeBSD 会议。
+将近十年来，这个设置就像一个安静而强大的角色，效率高、可靠且完全不引人注目。然后，突然间，一封关于硬盘故障的电子邮件警报闪现。得益于安装了多个硬盘并采用RAID配置，这次小故障不过是个小插曲。系统继续毫不间断地勤奋工作。
 
-——[NGINX](https://www.nginx.com/) 工程副总裁兼联合创始人 Maxim Konovalov
+在接到客户的电话后，我们迅速更换了硬盘。然而，这一事件突显了一个令人印象深刻的事实——这个十年的系统依然表现优异。
 
-## 微软
-![Microsoft](../.gitbook/assets/Microsoft.png)
+### 升级
 
-2015 年 12 月 28 日
+考虑到系统正在运行的是FreeBSD 9.3，算是“享受退休生活”，是时候进行升级了。我们将系统更新到FreeBSD 13.3，并将Asterisk刷新到当前版本。这一转变就像给系统喝了一口青春之泉——它焕然一新。
 
-微软正在构建面向移动优先、云优先世界的一流平台和生产力服务，我们的使命是赋予地球上的每个人和每个组织更多的力量来实现更多。
+### 财务分析
 
-微软 Hyper-V 是基于 hypervisor 的 x86-64 系统的虚拟化系统，为微软的云计算平台 Microsoft Azure 提供服务虚拟化，这是一个日益增长的集成服务集合，包括分析、计算、数据库、移动、网络、存储和 Web 等，以实现更快的进步，取得更大的成就，节省更多的费用。
+让我们来谈谈数字。如果我们的客户选择了基于云的解决方案，设想每位用户每月支付15英镑，那么十年的费用……好吧，简单来说，这会让他们的会计大吃一惊。相反，他们在本地解决方案上的初始投资，加上通话费用（和一次硬盘更换），描绘出一个更可接受的财务画面。
 
-让 FreeBSD 在 Hyper-V 上取得成功的推动几乎完全取决于许多主要的设备（网络、存储、安全等）将 FreeBSD 作为其基础操作系统来构建其产品。
+### 无声的英雄
 
-随着虚拟化的持续趋势，设备供应商越来越多地从物理设备业务转向虚拟设备，因为这可以通过降低开发和制造成本来显著提高毛利率。确保基于 FreeBSD 的这些虚拟设备在 Hyper-V 上以及最终在 Azure 上运行良好，对于微软来说是一项战略性重要的投资，因为它确保了随着这一趋势的继续，微软的技术堆栈在私有云和公共云部署中对于客户来说是最好的选择。
+这个故事不仅仅关乎节省成本。它证明了FreeBSD和Asterisk的可靠性。从十年前的操作系统无缝升级到当前版本，在科技界是极为少见的。这充分体现了FreeBSD在前瞻性设计和兼容性方面的考虑。
 
-——[微软](https://www.microsoft.com/) 首席产品经理经理 Jason M. Anderson
+### 结论
 
-## Tera Bear Consulting
-![Tera](../.gitbook/assets/Tera.png)
+回顾过去十年，这个案例研究不仅关乎技术。这关乎在适当的时机做出正确的选择。这关乎像FreeBSD和Asterisk这样的无形英雄，它们使企业能够有效沟通，而不需占据风头。
 
-2015 年 12 月 28 日
+至于我们的客户？也许在十年后我们会再听到他们的消息，可能是为了更换另一个硬盘。但在那之前，我们可以安然入睡，因为我们提供的解决方案不仅满足了现在，还为未来做好了准备。
 
-Tera Bear Consulting 是科罗拉多州的一个网络应用开发和互联网咨询公司，我们在许多关键客户项目中依赖 FreeBSD。我们提供定制、预配置、硬化和安全的虚拟服务器，使用 FreeBSD Jail 项目进行支持。我们在 FreeBSD 7 之前就已成功地为客户在生产环境中运行 FreeBSD。在过去十多年里，作为网络应用托管提供商和网络开发公司，我们管理系统时所体验到的 FreeBSD 的优点和稳定性几乎是无懈可击的。
+在一个不断追逐下一个重大事物的世界里，有时候，真正的价值在于那些已经存在的东西——坚定、可靠且始终有效。祝愿未来的十年服务如初，干杯！
 
-我第一次了解 FreeBSD 是在博尔德市从事基于网络的草根社区媒体项目时，自那以后我基本上一直在使用它，随着我与开发团队一起合作，生产更大、更复杂的商业应用。我们大部分本地和远程承包商在过渡到 FreeBSD 的语法和更新程序时没有任何问题，他们在这个“真实”的 UNIX 环境中拥有完全的控制权，我们的客户也是如此。这种灵活性，加上该项目对稳定性、安全性和可扩展性的持续承诺，使得在我们的大多数 Web 开发项目中选择 FreeBSD 成为正确的选择。
+– 由[Sheridan Computers](https://sheridancomputers.co.uk/)贡献
 
-因此，Tera Bear Consulting 现在和将来都致力于使用和支持 FreeBSD。
 
-——[Tera Bear Consulting](http://terabear.com/) Jon Lybrook
+## Beckhoff 案例研究
 
-## Tarsnap Backup Inc.
-![Tarsnap](../.gitbook/assets/Tarsnap.png)
+### Beckhoff 通过从 Windows CE 切换到 FreeBSD 实现更小的占用空间
 
-2015 年 12 月 28 日
+Beckhoff Automation 是工业自动化领域的先锋，以其创新的解决方案和尖端技术而闻名。成立于 1980 年，Beckhoff 利用经过验证的基于 PC 的控制技术实施开放的自动化系统。他们的产品组合包括工业 PC、I/O 和现场总线组件、驱动技术、自动化软件、无控制柜自动化和机器视觉硬件。Beckhoff 不断推动自动化的边界，推出基于 PC 的控制系统、EtherCAT 现场总线技术和 TwinCAT 自动化软件。这些产品使全球各行业能够在其流程中实现更高的效率、灵活性和精确度。Beckhoff 对开放标准和模块化架构的承诺促进了无缝集成和可扩展性，使得在制造、汽车、能源等各个领域为多种应用提供量身定制的解决方案。
 
-Tarsnap 是一个适用于 BSD、Linux、OS X 和其他“类 Unix”操作系统的在线备份服务。我在 2006 年开始着手开发 Tarsnap，当时作为 FreeBSD 的安全主管，我对我的笔记本上的信息安全（如未发布的安全公告）感到担忧；这引发了一个备份系统的设计，激发了标语“为真正偏执的人提供在线备份”。
+### 变革的需求
 
-Tarsnap 之所以存在，还有另一个原因是因为 FreeBSD：正如其名称所示，Tarsnap 软件基于标准的 UNIX tar 实用程序，为此，我开始使用在之前几年内在 FreeBSD 内部开发的优秀的 bsdtar 实用程序进行开发。如果我不能从 tar 实用程序中重用代码，启动 Tarsnap 将需要花费我更多的时间；而且 bsdtar 的许可证（BSD）和代码质量（优秀）对于我能够重用它至关重要。
+在过去的 25 年里，Beckhoff 一直将 Windows 作为其工业 PC 产品的唯一操作系统。因此，Windows CE 成为了所有 Beckhoff 小型自动化设备的基础。2015 年，Beckhoff 的客户注意到他们的 Windows 设备遭遇了勒索软件攻击。随着 Windows CE 即将结束支持，Beckhoff 开始寻找其他操作系统。
 
-除了在客户端软件中重用 FreeBSD 的代码外，Tarsnap 还完全依赖 FreeBSD 来支持其服务器基础架构。除了易于维护和管理外，FreeBSD 在“基本”系统和第三方“Port”代码之间的分离在响应安全问题时也被证明是非常有用的：例如，对于最近的“shellshock”漏洞，我只需确认我从未从 Ports 中安装过 bash。如果在 Tarsnap 的任何服务器上安装了 bash，就需要一个更耗时的过程来审查可能使用 bash 的所有方式——即使最终的结论是从未使用过 bash。
+Beckhoff 需要一个经过验证且可靠的操作系统，能够支持其产品线的全系列硬件，从 ARM 到 Intel Xeon。由于更倾向于开放标准，Beckhoff 首先考虑使用 Linux 作为 Windows CE 的替代方案，但由于 GNU 通用公共许可证会给 Beckhoff 的客户带来额外的法律问题，并迫使 Beckhoff 共享其专有的实时 TwinCAT（该软件在内核模式下运行），因此感到受挫。因此，Beckhoff 决定寻找一个具有宽松许可证的开源操作系统，以便能够调整内核以支持 TwinCAT 实时功能，而无需贡献 TwinCAT 的源代码。
 
-Tarsnap Backup Inc.为支持 FreeBSD 感到自豪，不仅通过我的个人工作（最近，维护 FreeBSD/EC2 平台），还通过成为 FreeBSD 基金会的银级赞助商；而且 Tarsnap 直接受益于 FreeBSD 基金会支持的项目和活动。回馈不仅仅是慈善行为；它真正是一种投资，可以产生出色的回报。
+> 宽松许可证是一种软件许可证，授予接收者广泛的权利，可以修改、使用和分发软件，通常限制较少。这些许可证通常允许软件在专有或闭源项目中使用，而无需要求这些项目发布其源代码。宽松许可证与“反向版权”许可证形成对比，后者对软件的分发和修改施加了更严格的要求。
 
-——[Tarsnap Backup Inc.](http://www.tarsnap.com/) 总裁 Colin Percival
+### 识别并构建解决方案
 
-## Netgate Inc.
-![Netgate](../.gitbook/assets/Netgate.png)
+Beckhoff 转向 FreeBSD，因为其在工业领域的验证和可靠声誉以及宽松的许可结构，这使得 Beckhoff 能够将 TwinCAT 添加到内核中。FreeBSD 拥有一个健康活跃的开发者社区，该社区推动了超过 30 年的创新，并持续进行。此外，FreeBSD 支持一些全球最知名的品牌，如 NetApp、Netflix、Netgate、Juniper 等。
 
-2015 年 12 月 28 日
+借助 FreeBSD 的宽松许可结构，Beckhoff 将其专有的 TwinCAT 实时功能与 FreeBSD 结合，创建了 TwinCAT/BSD，这是一个基于包的操作系统，为 Windows 提供了替代方案。
 
-pfSense® 项目提供了一个免费的、开源的 FreeBSD 发行版，专为防火墙、路由器和 VPN 平台设计。该项目由 Netgate 赞助和运营，并包括一长串相关功能和一个允许最终用户添加更多功能的软件包系统。自从十年前开始，pfSense 就基于 FreeBSD。我们最新的发布，pfSense 2.2 是基于 FreeBSD 10.1-RELEASE。pfSense 系统的其他部分来自 FreeBSD Ports。与 FreeBSD 一起，这些组件使 Netgate 和 pfSense 社区的其他成员能够将 pfSense 平台构建成一个在 250,000 多个位置保护网络的安全工具系统。与 FreeBSD 一样，pfSense 采用 BSD 许可证。这种许可证使得其他组织，包括 VMware 和 Avaya，可以将 pfSense 源代码调整为他们的商业产品。BSD 许可证使我们能够自由地使用和贡献代码，也允许我们的客户和 FreeBSD 的使用者做同样的事情。
+TwinCAT/BSD 支持所有 TwinCAT 3 运行时功能，为 Beckhoff 提供了一种低成本和小占用的解决方案，适合 Beckhoff 的最小设备。Beckhoff 的高级产品经理 Heiko Wilke 指出，使用 Windows 时，Beckhoff 的设备仅 Windows 安装就使用了 1.5GB 的内存。而相比之下，Beckhoff 的最小设备只有 2GB 的 RAM。
 
-Netgate 是 FreeBSD 项目的自豪的银级赞助商。如果没有 FreeBSD 社区及其成员和赞助者的贡献，pfSense 项目不会继续像今天这样繁荣。Netgate 致力于回馈其修复错误和增强功能，并继续为 FreeBSD 项目提供财务支持。我们鼓励任何有兴趣的人也捐赠给 FreeBSD 基金会。这样做有助于增加 FreeBSD 的发展和普及，造福所有人。
+由于 FreeBSD 不包含不需要的进程，Beckhoff 能够将内存使用减少到约 200MB，Heiko Wilke 表示，这为其操作系统上额外的程序留出了更多空间。此外，Beckhoff 还将 TwinCAT/BSD 作为基于包的系统进行部署，以便于更新，并允许删除更多不必要的程序。由于其基于包的方法，Beckhoff 的 TwinCAT/BSD 占用空间约为标准 FreeBSD 安装的一半。
 
-——[Netgate Inc.](http://store.netgate.com/) CTO Jim Thompson，
+### 开始使用 FreeBSD
 
-## NYC\*BUG
-![NYC](../.gitbook/assets/NYC.png)
+Beckhoff 给任何希望实施 FreeBSD 的组织的忠告是，尽早并频繁地咨询 FreeBSD 基金会。FreeBSD 基金会不仅可以帮助解决技术和实施问题，还可以帮助建立网络并联系社区成员。如果您的组织考虑开始使用 FreeBSD，请通过他们网站的[联系我们](https://freebsdfoundation.org/about-us/contact-us/)页面向 FreeBSD 基金会发送电子邮件，或[下载 FreeBSD](https://www.freebsd.org/where/)以便今天就开始。
 
-2016 年 1 月 28 日
+TwinCAT®、TwinCAT/BSD® 和 EtherCAT® 是 Beckhoff Automation GmbH 的注册商标。
 
-NYC\*BSD 用户组（NYC*BUG）已经有近 12 年的历史，这为 \*BSD 生态系统提供了一个有用的视角。
+## NetApp 案例研究
 
-NYC\*BUG 是纽约市的一个技术用户组。我们每月举行会议，并在不同形式下举办了五次会议，此外还维护着各种邮件列表。
+![](https://freebsdfoundation.org/wp-content/uploads/2024/03/netapp3.jpg)
 
-我们还在纽约互联网公司管理着一个完整的机柜，托管了许多项目，如 BSD 认证组和一系列镜像。
+### FreeBSD 为 NetApp 的 ONTAP 数据管理系统提供灵活性和性能
 
-我们的位置为我们提供了多个观察 FreeBSD 在纽约大都市区的使用情况的角度，从初次探索 FreeBSD 的终端用户到依赖 FreeBSD 的企业基础架构。我们成功地吸引了有经验的人，也吸引了第一次尝试 \*BSD 的人。尽管 NYC\*BUG 树立了一个旗帜，保持了稳定的 \*BSD 存在，但我们受益于对 FreeBSD 作为一个稳定、明智的操作系统的日益关注和依赖。在过去的几年中，FreeBSD 在 Netflix 的角色以及云服务提供商 Digital Ocean 对 FreeBSD 的支持，更不用说像 Xinuos 和纽约互联网这样严重依赖该项目的公司。
+![](https://freebsdfoundation.org/wp-content/uploads/2024/03/NetApp-Challenge-1024x1024.png)
 
-FreeBSD 的声誉在我们的长期可持续性中起到了关键作用。我们知道我们的组织能力和特定的技术职责只能做到这么多。从 64 位 ARM 到新的 pkg 系统的持续发展为我们提供了继续在纽约技术社区中扮演重要角色的动力。
+NetApp 是一家智能数据基础设施公司，为企业客户提供统一的数据存储、集成数据服务和云操作解决方案。作为技术领导者，他们的耐力和行业领先的产品帮助组织在本地和混合云环境中管理数据和应用程序。FreeBSD 是 NetApp 成功故事的重要组成部分，也是其产品的稳定组件。以下是这一关系如何形成以及为何能够持续发展的原因。
 
-更一般地说，我们指出 FreeBSD 项目和基金会是扩展开源项目的可靠模式，不像许多一炮而红的项目一样，它们的热度迅速就会消失。
+### **历史的进程……**
 
-FreeBSD 基金会定期支持我们的大型活动。我们很高兴继续与更广泛的 FreeBSD 技术社区和基金会紧密合作。
+NetApp 与伯克利软件分发（BSD）有着悠久的历史。2004 年，NetApp 的领导层决定将 NetApp ONTAP（其整个产品系列的数据管理软件）基于更注重性能的系统——FreeBSD。做出这一决定的一个重要因素是 BSD 许可证模型，从 2004 年的 6.0 版本到今天的 14.0 版本，FreeBSD 始终是 NetApp 中的一个稳定和最新的组成部分。
 
-——[NYC*BUG](http://www.nycbug.org/index.cgi) NYC\*BUG 的管理员小组
+NetApp 需要一个许可证模型，以便在其新的数据管理系统中整合其专有技术，而不必担心潜在的软件许可证问题。NetApp 考虑了其他 BSD 分发版本，但最终选择了 FreeBSD，因为它在性能和安全性之间取得了良好的平衡。NetApp 与 FreeBSD 的成功经验使他们在多年来不断增加其使用，最近还改变了 ONTAP 中 FreeBSD 的实现。
 
-## Xinuos
-![Xinuos](../.gitbook/assets/Xinuos.png)
+由于 FreeBSD 在实施中的灵活性和行业领先的稳定性，它在 NetApp ONTAP 中一直是一个可靠的组件。过去，NetApp 使用的是较旧版本的 FreeBSD，但现在它更接近当前发布版本（在 FreeBSD 社区中称为“[跟踪 head](https://docs.freebsd.org/en/books/handbook/cutting-edge/)”）。
 
-2015 年 12 月 28 日
+![](https://freebsdfoundation.org/wp-content/uploads/2024/03/NetApp-Challenge-500-x-500-px-e1710790018446.png)
 
-当 Xinuos 在寻求一款成熟稳定的操作系统，具备现代特性，可以作为其现有客户的替代选择时，FreeBSD 显然是最佳选择。我们 OpenServer X 发行版，是基于 FreeBSD 的，正是我们的客户需要用来运行业务的，Xinuos 将在未来的许多年里支持他们。
+FreeBSD 在不同组织和多种应用中以多种方式实现。有些组织可能像 NetApp 那样选择跟踪接近头部版本，或者像 Netflix 那样选择跟踪头版本，而有些组织则决定保持在几个版本之前。FreeBSD 为组织提供了稳定性、灵活性和升级的便利，使他们可以选择最适合其特定用例的实施风格，无论是滞后几个版本还是跟踪该项目的最新发布版本。
 
-我们的经销商特别赞赏 BSD 许可证的自由度，它为创建定制的解决方案栈提供了业界最好的灵活性。我们预计在未来几年内，对于这种许可证的自由度和灵活性的市场需求将大幅增长，而我们也打算推动和支持这一发展。FreeBSD 是我们未来的重要组成部分。
+### **NetApp 与 FreeBSD 社区**
 
-——[Xinuos](https://www.xinuos.com/) 总裁兼首席运营官 Sean Snyder
+FreeBSD 项目由一组核心的 FreeBSD 提交者管理，还有许多具有直接 Git 访问权限的贡献者，能够访问 FreeBSD 的主代码库。 [FreeBSD 核心团队](https://www.freebsd.org/status/report-2022-04-2022-06/core/) 负责推动项目的运营。FreeBSD 核心团队由 FreeBSD 项目内的活跃开发人员选举产生。这种开放和民主的治理政策以及社区专注的政策使 NetApp 对 FreeBSD 的未来感到更为安心，从而帮助他们更自信地跟踪 FreeBSD 的最新发布版本。
 
-## Atlantic.Net
-![Atlantic](../.gitbook/assets/Atlantic.png)
+FreeBSD 充满活力和支持的开发者和用户社区也是解决问题和学习的极佳资源。实际上，NetApp 得到了另一家商业 FreeBSD 用户的个人指导，这激励他们更接近于 FreeBSD 的最新版本。NetApp 还参加 FreeBSD 会议和活动，例如 BSDCan 和 Vendor Summit，这些活动为 NetApp 开发人员与 FreeBSD 社区交流提供了极好的机会。
 
-2015 年 12 月 28 日
+NetApp 以多种方式为 FreeBSD 做出贡献，包括定期主办 FreeBSD 基金会活动、进行常规的错误修复和增强以及向 FreeBSD 基金会提供财政支持。值得注意的是，NetApp 有一个有趣的上游策略。NetApp 与[Klara Systems](https://klarasystems.com/)合作，获得商业支持并通过 Klara 进行上游开发。NetApp 还拥有一个全面的持续集成测试套件，每天在其代码库上运行，包括 FreeBSD。当测试遇到 FreeBSD 问题时，NetApp 会通过 Klara 报告，并由 Klara 进行上游更改。NetApp 的工程师过去还曾向 FreeBSD 上游提交新技术，例如[bhvye](https://wiki.freebsd.org/bhyve)，这个 BSD 许可证的虚拟机管理程序，近年来，NetApp 上游提交了近 300 项更改。
 
-Atlantic.Net 是一家专注于云计算和 SSD VPS（虚拟服务器）服务的托管解决方案提供商。我们成立于 1994 年，最初为佛罗里达州的次要和农村市场提供拨号上网服务。多年来，我们的业务模式发生了变化，从提供居民拨号上网服务、企业连接和业务解决方案、服务器托管，到最近的托管和 VPS 服务。
+### **开始使用 FreeBSD**
 
-FreeBSD 已经成为塑造许多当今互联网技术的重要组成部分，这些技术惠及了全球所有互联网用户。我们已经使用 FreeBSD 数十年，基于我们的历史，它一直是一个灵活的工具，能够适应随着互联网的增长而发生的变化条件。在这个过程中，FreeBSD 一直是稳定、有序和管理互联网最有价值资源之一——“Free”BSD 操作系统的标志。
+NetApp 建议其他希望寻找高性能操作系统的组织考虑 FreeBSD，原因在于其宽松的软件许可证、充满活力和支持的社区，以及对可扩展性、稳定性和安全性的强烈关注。
 
-我们全力推荐 FreeBSD，并认为它是全球互联网的最佳礼物和永久宝藏之一。这么多年后，许多互联网技术仍然从 FreeBSD 提供的基础中汲取着力量。在过去的 20 年里，我们非常自豪 FreeBSD 和社区如何发展和改进。我们迫不及待地想看到未来 20 年会带来什么！
+在实施方面，NetApp 提供了一些建议：
 
-——[Atlantic.Net](https://www.atlantic.net/) 创始人/CEO Marty Puranik
+- 从小开始，并随着对 FreeBSD 的深入使用逐渐积累经验。
+- 定期升级 FreeBSD，尽量保持接近最新版本。
+- 理解 FreeBSD 的哲学和愿景。
+- 选择 FreeBSD 支持的合适硬件平台。
+- 考虑与提供 FreeBSD 商业支持的公司（如 Klara）签约。
+- 将私有定制限制在关键业务知识产权上，其余的尽量向上游开发。
 
-## WhatsApp
-![WhatsApp](../.gitbook/assets/WhatsApp.png)
+## 案例研究：在 FreeBSD 上维护全球最快的内容分发网络
 
-2015 年 12 月 28 日
+Netflix 是一家全球娱乐公司，通过其流媒体服务彻底改变了人们消费电视节目和电影的方式。Netflix 总部位于加利福尼亚州洛斯加托斯，已发展成为全球领先的流媒体平台之一，在 190 多个国家拥有数百万用户。Netflix 以其广泛的电影、电视剧和纪录片目录而闻名，包括备受好评的原创作品，通过投资创新内容和技术，Netflix 继续塑造娱乐行业。
 
-在 WhatsApp，我们利用 FreeBSD 和 Erlang 来提供行业领先的持续运行时间。在廉价硬件上实现线性扩展的能力使 WhatsApp 能够保持低成本的服务。如我们在[博客文章](http://blog.whatsapp.com/index.php/2012/01/1-million-is-so-2011/)中所述，我们的单个 FreeBSD 服务器上可以同时运行 200 万至 300 万个并发 TCP 连接。
+### 互联网上最快、流量最高的网络，全部运行 FreeBSD
 
-WhatsApp 是全球领先的移动消息服务。WhatsApp Messenger 是一款跨平台移动消息应用程序，让你在不支付短信费用的情况下交换消息，并可用于 Android、BlackBerry、iPhone、Windows Phone 和 Nokia 手机！由于 WhatsApp Messenger 使用与电子邮件和网络浏览相同的互联网数据计划，因此与朋友保持联系和发送消息是没有费用的。
+Gleb Smirnoff 是一位熟练的软件工程师和经验丰富的 FreeBSD 提交者，他在 Netflix 工作，负责管理用于 Open Connect 的定制和性能优化的 FreeBSD 基础固件，这是该公司的内容分发网络（CDN）。
 
-——[WhatsApp](http://www.whatsapp.com/) CEO，即高级 Tweet 经理 Jan Koum
+在他 2023 年 11 月在 FreeBSD 供应商峰会上的演讲中，Smirnoff 强调了 Netflix 运营的庞大规模。
 
-## iXsystems
-![iXsystems](../.gitbook/assets/iXsystems.png)
+**_“我们是互联网上最大的流量来源之一——每秒发送数太比特，所有服务器或设备均运行 FreeBSD。”_**
 
-2015 年 12 月 28 日
+正如 Smirnoff 所指出的，Netflix 的 Open Connect 最初是在标准的 FreeBSD 平台上运行，随后逐渐进行了性能改进。2012 年，一个基于 vanilla FreeBSD 9.0-RELEASE 和 **nginx** 的 CDN 概念验证项目启动，该项目部署在配备单个 10 Gbit/s 接口的服务器上。
 
-iXsystems 是一家领先的服务器级硬件提供商，专为运行 FreeBSD 而设计。我们业务战略的一个重要组成部分是为 FreeBSD 开发人员提供资金，以不断改进和优化 FreeBSD。我们的内部基础设施和服务都基于 FreeBSD，这使我们能够轻松地识别出 FreeBSD 中需要改进的领域。
+随着时间的推移，显而易见，要实现快速增长，需要超越操作系统当前能力的限制。Netflix 的内容分发网络（CDN）的预期规模如此之大，以至于值得在 FreeBSD 的持续开源开发上投资。
 
-我们坚信，对于 FreeBSD 有益的事情也对我们的客户有益，而对于我们的客户有益的事情也对我们有益。BSD 许可证使我们可以自由地使用和贡献代码，也允许我们的客户和 FreeBSD 的使用者做同样的事情。多年来，FreeBSD 受益于开放共享和合作，这使其成为了一个稳定、成熟、高性能的操作系统。
+Netflix 意识到，在全球范围内部署 CDN 时，即使是性能提升一个百分点也能节省数十万美元。Netflix 定制的 FreeBSD 版本实现了更深的集成和更精确的内核级优化，从而带来了显著的性能提升。
 
-——[iXsystems](http://www.ixsystems.com/) CIO Josh Paetzel
+### 在 Netflix 上跟踪 FreeBSD-CURRENT
 
-## NYI
+Netflix 在平衡自定义修改与保持与 FreeBSD 项目核心代码库对齐之间进行了谨慎的管理。这确保了他们的自定义增强功能在不导致与原始 FreeBSD 源代码不再可持续偏离的情况下提升系统能力。这种微妙的平衡使 Netflix 能够利用 FreeBSD 的优势，同时创造出满足其特定高性能需求的定制解决方案。
 
-![NYI](../.gitbook/assets/NYI.png)
+另一位 Open Connect 团队成员 Drew Gallatin 在 2023 年 11 月的 OpenFest 保加利亚会议上详细介绍了 Netflix 如何对 FreeBSD 进行定制。
 
-2015 年 12 月 28 日
+拥有超过 25 年贡献于 FreeBSD 的经验，Gallatin 分享了他在优化 FreeBSD 以服务于 Netflix 的 Open Connect 中的经历和挑战，并强调了跟踪 FreeBSD-CURRENT 背后的战略决策过程：
 
-NYI 是一家数据中心提供商，我们在所有内部和面向客户的解决方案中使用 FreeBSD，包括托管和专用服务器、云计算和托管服务。在公司早期，我们最初选择的技术包括与专有硬件绑定的商业 Unix 系统。然而，FreeBSD 的成本和可移植性是我们在公司创立初期改变平台的决定性因素。
+**_“我们觉得我们所做的是愚蠢的，而我们应该做的是跟踪 FreeBSD-CURRENT。这听起来疯狂，因为这是大家推送所有内容的地方，但对我们来说，这实际上是世界上最好的选择。”_**
 
-从那以后，我们享受了 FreeBSD 的功能和可靠性。我们依赖它进行网络任务，如路由器、VPN、防火墙和流量整形，以及 Web 应用程序，如共享托管、后端界面、负载均衡器和代理。我们特别赞赏社区支持和集中的文档，这意味着我们不必像其他项目那样四处搜寻信息碎片。
+在他的演讲中，他还分享了有关“神奇的神秘合并”的轶事，说明了运行 CURRENT 分支的重要性。Gallatin 反映了 Netflix 在维护系统性能和稳定性方面的主动做法：
 
-——[NYI](http://www.nyi.net/) 运营副总裁 Phillip Koblence
+**_“当我们运行 FreeBSD-CURRENT 时，我们能够非常快速地捕捉到问题。如果有某些回归，我们会立刻发现。没有两年或三年延迟在某人提交某个东西和我们发现它是个问题之间。”_**
 
-## Juniper
+Gallatin 还进一步阐述了子树集成的好处，强调了 Netflix 与 FreeBSD-CURRENT 战略对齐所带来的简化开发和维护流程：
 
-![Juniper](../.gitbook/assets/Juniper.png)
+**_“我们的树几乎与上游 FreeBSD 树完全相同……这大大减少了我们通过保持自己的补丁而积累的技术债务。”_**
 
-2015 年 12 月 28 日
+### FreeBSD 的战略集成与性能优化
 
-Juniper 提供由 JUNOS（TM）软件驱动的高性能网络基础设施，这是一个集成了路由、交换、安全和网络服务的网络操作系统。FreeBSD 是 JUNOS 软件的基础，为 UNIX 系统提供了许多基本的操作系统服务。如今，JUNOS 软件在 Juniper 设计的广泛产品组合上运行，以满足从小型办公室到世界上最大的 TeraPop 站点的各种复杂和严苛需求的融合网络。
+Netflix 精心管理内部 FreeBSD 实现与更广泛的 FreeBSD 社区之间的代码流。严格的测试框架、持续集成和单元测试构成了 Netflix 的开发策略基础。定期合并包括上游更改，并特别关注在正式纳入 FreeBSD 之前集成性能提升补丁。每次合并都会进行 A/B 测试，以保持或提升系统性能和稳定性。
 
-Juniper 从领先的大学、个人和商业组织之间强大的合作中受益，这些合作推动了 FreeBSD 的操作系统功能的进步。FreeBSD 发布系统为 Juniper 提供了功能的路线图和稳定的基础，使我们的代码在其上运行，而其实用的许可证使 Juniper 能够开发知识产权来推动高性能网络的发展。Juniper 拥有许多积极参与 FreeBSD 开发的开发人员，他们不断为 FreeBSD 项目做出贡献，进一步将其发展成为一流的操作系统。
+Netflix 的 FreeBSD 实现的演变涉及对内核的精细调整，以缓解性能瓶颈并处理不断增加的数据流量，这包括 RACK（Recent ACKnowledgment），这是一个由 Randall Stewart 开发的 TCP 栈，旨在改善数据传输的性能和可靠性。Netflix 对 FreeBSD 的其他显著增强包括异步 **sendfile** 操作，便于非阻塞数据传输，以及先进的 VM 页缓存技术，提升数据处理效率和网络吞吐量。
 
-——[Juniper Networks](http://www.juniper.net/) 基础技术部副总裁 Naren Prabhu
+Netflix CDN 团队还与 FreeBSD 社区合作，以增强使用内核 TLS（KTLS）进行数据传输的安全性和效率。
 
-## pair Networks
+### KTLS
 
-![pair](../.gitbook/assets/pair.png)
+KTLS 是一种将 TLS（传输层安全性）处理从用户应用程序转移到操作系统内核的技术。这通过在内核中加密数据，从而提高了使用 **sendfile(9)** 的文件和网络服务器的性能，避免了将数据复制进出用户空间进行加密。KTLS 对于需要安全数据传输的高吞吐量应用（如网络服务器）非常有帮助。它允许高效的数据处理，并使 Netflix 能够在其 CDN 服务器上实现 400 Gb/s 的吞吐量。Gallatin 解释说：
 
-2015 年 12 月 28 日
+**_“我们拥有世界上第一台 100 千兆每秒的生产 CDN 服务器……这要归功于内核 TLS。”_**
 
-Pair Networks 是一家世界一流的网络托管公司，为来自 150 多个国家的企业、博主、艺术家、音乐家、教育机构和非营利组织提供全面的托管服务。在 pair Networks 的数据中心中，数千台服务器每天为数十亿个 Web 访问提供服务。pair Networks 的客户群体包括大量高知名度、高流量的网站。
+**_“内核 TLS 是什么？我们将批量加密处理移到了内核中（从 nginx），以保留 sendfile 流水线。”_**
 
-自 1995 年成立以来，pair Networks 一直将 FreeBSD 作为提供世界级网站托管服务的重要工具。FreeBSD 的可靠性和稳定性使我们能够为客户提供超过 99.9%的服务器正常运行时间。我们的客户依赖 FreeBSD 的卓越安全性，以保持其网站的正常运行和数据的安全性。作为一个开源系统，当安全威胁出现时，FreeBSD 易于更新以提供新的保护措施。我们承诺客户，他们的网站将始终托管在最先进的设备上，并且有足够的空间供其增长。FreeBSD 的稳定性和强大性使我们能够信守这个承诺。
+**_“通过 sendfile 和内核 TLS，我们可以消除许多内存带宽瓶颈，现在许多事情变得更可行。通过考虑带宽和 CPU 利用率，我们在 FreeBSD 上大约可以达到 375 Gb/s，CPU 使用率大约为 53%。”_**
 
-从 FreeBSD 2.0.5 到最新版本，我们对 FreeBSD 的性能和稳定性感到满意，而这些特点也是我们的客户欣赏和期望我们的服务的。FreeBSD 是一项出色的技术，拥有出色的社区支持。
+在 FreeBSD 中，内核 TLS 是一个大型项目，通过社区的合作经历了显著的发展。在 Netflix 工作期间，Scott Long 首次提出将 TLS 集成到内核中。他与 Randall Stewart 共同开发了基础的软件 TLS 传输机制。Drew Gallatin 对该项目贡献巨大，引入了外部页面 mbufs 和 M_NOTREADY mbufs，这对在内核中处理加密数据至关重要。他还开发了一个可插拔接口，以支持各种软件 TLS 后端。
 
-——[pair Networks](http://www.pair.com/) CEO Kevin Martin
+后来的 KTLS 版本对系统进行了显著增强。例如，对于 FreeBSD 13，增加了通过网络接口卡（NIC）卸载进行传输层安全性（TLS）的功能。Drew Gallatin 首次与 Chelsio 合作实现了这一功能，Chelsio 与 Netflix 共同赞助了该项目，针对 Chelsio T6 适配器。随后，[Hans Petter Selasky](https://forums.freebsd.org/threads/in-memoriam-hans-petter-william-sirevag-selasky.89697/)扩展了这一功能，支持 Mellanox ConnectX-6 Dx 适配器，从而支持更广泛的硬件加速。
 
-## isilon
+这一持续的发展得到了 Netflix、Chelsio 和 Mellanox 的支持，突显了增强 FreeBSD 网络安全和性能能力的强大社区驱动努力。
 
-![isilon](../.gitbook/assets/isilon.png)
+### 回馈社区
 
+Netflix 在管理其 FreeBSD 实施 Open Connect 的策略反映了对更广泛 FreeBSD 社区的深切承诺。Smirnoff 强调了与 FreeBSD 开发紧密对齐的重要性：
 
-2015 年 12 月 28 日
+**_“减少操作系统与 FreeBSD 之间的差异至关重要，这意味着你需要将更改提交到上游。”_**
 
-Isilon Systems 选择了 FreeBSD，因为它是一个现代、稳定、高性能的 \* NIX 操作系统，具有非常宽松的许可条款。我们需要一个强大和完整的代码基础，以便我们可以完全专注于我们自己的产品，并具有完全的创新自由，使我们的产品能够变得更好。
+他还阐述了这一策略的实际好处，解释说：
 
-Isilon 从多个方面受益于使用 FreeBSD，但最重要的好处是我们能够利用社区的开源努力来改进我们的产品。由于我们是这个社区的一部分，我们会回馈源代码，赞助特定的开发工作，并雇用社区成员进行合同开发 - 这反过来为我们提供了接触优秀人才和持续访问优秀软件的机会。
+**_“跟踪 FreeBSD-CURRENT…让我们能够与上游开发人员合作，并快速将更改纳入 FreeBSD。”_**
 
-简而言之，FreeBSD 是一个稳定、成熟、高性能的操作系统，拥有活跃的开发社区，摆脱了许可问题和顾虑。
+这种方法最小化了技术债务，促进了最新功能和改进的快速整合，使 Netflix 始终处于流媒体技术创新的前沿。
 
-那么为什么对我们和其他人来说，保持 FreeBSD 的自由如此重要呢？
+### 经验教训与最佳实践
 
-FreeBSD 是那些在创新过程中需要完全自由的个人或公司的唯一选择。诸如 CDDL 和 GPL 之类的许可强制创新者非常谨慎地选择构建代码的方式和位置，这限制了他们的设计选择，可能导致糟糕的技术决策或许可权利的困境。 Isilon 的绝大多数创新都在内核中，我们的知识产权散布在各处。
+成功管理大型 FreeBSD 实施（如 Netflix 的案例）提供了关于社区参与和开源协作重要性的宝贵经验教训。
 
-使用另一个开源操作系统根本不可能实现这一点 - 许可操作系统源代码是一个很高的准入门槛。
+- 及早与社区互动并积极参与项目对于充分发挥 FreeBSD 的潜力至关重要。这些实践确保系统的任何调整都能与更广泛生态系统中的持续发展保持良好对齐。
+- 随着时间的推移，通过优先考虑社区参与、定期测试和战略性上游贡献，精炼管理组织 FreeBSD 实施的策略可以带来显著的好处。
+- 采用新的 FreeBSD 功能并进行彻底的测试，以便在开发早期识别潜在的系统退化是至关重要的。这种主动的方法有助于清晰理解组织的定制分支与主要 FreeBSD 项目之间的差异，确保改进提升系统能力而不导致不可持续的偏离。
+- 建立一个明确的流程以集成外部代码和管理内部更改是关键。为代码审查、集成和测试设定清晰的规范对于维护系统的完整性和性能至关重要。
 
-——[Isilon Systems](http://www.isilon.com/) 软件工程总监 Nicholas Kirsch
+通过采用这些实践，组织可以有效管理其基于 FreeBSD 的系统，确保它们满足特定的操作需求，同时保持在技术进步的前沿。
 
-## Experts Exchange
+### 未来方向
 
+Netflix 致力于利用 FreeBSD 的灵活性和性能能力，并将继续与社区合作，专注于增长和创新。Netflix 在行业内树立了成功维护定制 FreeBSD 实施的先例，依靠战略远见、严格测试和积极的社区参与。
 
-![Experts](../.gitbook/assets/Experts.png)
+---
 
-2015 年 12 月 28 日
+“除了技术优势，FreeBSD 拥有出色的开发者、供应商和用户生态系统，他们开放地分享专业知识、人才和技术改进。Netflix 接纳了这个社区，并致力于回馈其错误修复和增强功能，从而完成了社区协作的循环。”
 
-Experts Exchange 是位于 experts-exchange.com 的技术帮助网站——我们开发了一种专利的问答系统，使查找解决方案更加容易。人们提出问题，由来自世界各地的专家提供可靠的答案。
+——David Fullagar，内容交付架构总监
 
-自 2009 年以来，Experts Exchange 将 FreeBSD 作为其所有外部面向的 Web 服务器和内部工具托管的首选操作系统。
+---
 
-大约 3 年前，Experts Exchange 对我们的网站进行了广泛的性能测试，测试了几种不同的 Linux 和 UNIX 发行版，包括 FreeBSD 7。在页面加载时间指标和 Lucene 搜索索引性能测试中，FreeBSD 的表现超过了所有其他测试的操作系统。从那时起，我们将开发人员、测试和生产服务器迁移到了 FreeBSD。我们还使用 FreeBSD jails 来托管我们的开发测试服务器，并且已经在本地办公数据中心和合作位置数据中心堆栈中依赖于 FreeBSD。
 
-由于我们对 FreeBSD 的投资，我们继续拥有多名系统管理员致力于改进 FreeBSD 以改善我们的生产环境，他们的改进希望也能帮助其他公司和用户。
+---
 
-感谢 FreeBSD 社区的开放友好态度以及你为 Experts Exchange 的发展做出的巨大贡献！
+用户也喜欢 FreeBSD！我们询问了用户对 FreeBSD 的喜爱之处。我们没想到会得到如此热情的回应！
 
-——[Experts Exchange，LLC](http://www.experts-exchange.com/) 网站主管 Andrew Alsup
+---
 
-## Apache 软件基金会
+## Tara Stella  
 
+Tara 拥有多台笔记本电脑，其中超过一半运行 FreeBSD，秉持 KISS 原则：“保持简单和安全。”
 
-![Apache](../.gitbook/assets/Apache.png)
+## Robin Heywood  
 
+Robin 在两台系统上运行 FreeBSD，作为文件服务器和网关。为什么？因为它“非常稳定”，而且是开源的！
 
-2016 年 1 月 18 日
+## Daniel Arves  
+Daniel 在他的笔记本电脑上运行 FreeBSD，他的脚踩在桌子上。他想要一个可定制且简单的系统。
 
-Apache 软件基金会（ASF）为大量的开源软件项目提供组织、法律和财务支持。该基金会为知识产权和财务捐赠提供了一个既限制了捐赠者潜在法律风险，又确立的框架。通过协作和有功开发过程，Apache 项目提供企业级、免费的软件产品，吸引了大量的用户社区。实用的 Apache 许可证使所有用户，包括商业和个人用户，都可以轻松地部署 Apache 产品。
+---
 
-ASF 支持了一半的互联网，处理了 PB 级的数据，进行了 TF 级的操作，处理了数十亿个对象，并丰富了无数用户和开发者的生活。ASF 成立于 1999 年，负责管理、开发和孵化开源创新，以“Apache 方式”为核心，ASF 监督了 150 多个项目，由超过 350 名个人成员和 3000 名贡献者组成，分布在六大洲。
+我们的粉丝：在 20 余年的时间里，FreeBSD 积累了相当多的粉丝！看看他们怎么说！
 
-在加拿大不久前举行的 ApacheCon 北美大会 2011 年度大会中，FreeBSD 在 DevOps 领域的讲座中成为了亮点。Apache 软件基金会本身在几乎所有的公共服务中都使用了 FreeBSD，包括世界上最大的 SVN 仓库之一。我们的仓库在多个大陆上都有镜像，包含了超过 140 万个跨足十多年的版本。我们甚至会协助将 FreeBSD 的 Ports CVS 转换为 SVN。
+---
 
-Apache 软件基金会使用自定义的 FreeBSD Tinderbox 和 FreeBSD Update 服务器，在多个数据中心中自动、快速、高效地执行应用程序和基础系统更新。Apache 基础设施团队经常与 FreeBSD 开发人员直接合作，在真实世界负载下测试先进的功能，比如 ZFS。
+>“NetApp 自豪地将 FreeBSD 作为我们 **ONTAP** 存储操作系统的核心组件。借助 FreeBSD，我们能够提供高性能的产品，满足客户对可靠性、安全性和可支持性的期望。”  
+>
+>Matt Hambrick
+>
+>主任，ONTAP 工程部
 
-与 FreeBSD 基金会一样，ASF 也是一个 501（c）3 组织。通过 FreeBSD 基金会捐赠给 FreeBSD，也会使 Apache 变得更好，帮助你和其他人的日常生活更加轻松。
+>“**Netflix** 选择 FreeBSD 9，因为它是一款高性能、低维护且可靠的操作系统，得到了主要硬件厂商的支持。FreeBSD 提供了一种简单而强大的解决方案，能够通过多个 10Gbit 光纤链接同时服务数万条视频流。”
+>
+>David Fullagar
+>
+>内容交付架构总监
 
-——[Apache 软件基金会](http://www.apache.org/) 前基础设施副主席 Philip M. Gollucci
 
-## Hobnob, Inc.
+>“**Modirum** 为全球的银行、商户、支付服务提供商和卡公司提供软件和托管服务。我们在所有托管服务中使用 FreeBSD，从路由器和防火墙到应用服务器和数据库。”
+>
+>Eirik Øverby
+>
+>首席运营官
 
 
-![Hobnob](../.gitbook/assets/Hobnob.png)
+>“**Mellanox Technologies** 一直是 FreeBSD 社区的长期开发者和贡献者，将 Mellanox 的前沿 RDMA 以及其他先进的卸载技术集成到通用的 FreeBSD 操作系统中。”
+>
+>Yaron Gepstein
+>
+>软件副总裁
 
-2021 年 1 月 18 日
+>“对于我们来说，继续支持 FreeBSD 是个不费脑筋的选择。**NeoSmart** 每年都很自豪地赞助 FreeBSD，并在被问及我们推荐的快速、经过实战考验且可靠的平台时，毫不犹豫地推荐它。”
+>
+>Mahmoud Al-Qudsi
+>
+>创始人
 
-Hobnob 为企业和公共交通机构提供大规模移动 WiFi 网络解决方案。Hobnob Diversified Networks™ 是唯一能够为移动设备和非直线视线（non-LOS）位置（如公交车、铁路车厢、远程办公室和建筑工地）提供企业级速度和可靠性的移动 WiFi 网络。
+>“FreeBSD 出色的安全性和更新、网络性能以及卓越的输入/输出和内存管理，使得运行 **SimPRO** 的大型、高流量和关键任务应用变得更加轻松。该操作系统承担了大部分繁重的工作，这意味着我的工程师可以专注于产品的发展，而不是服务器的维护。”
+>
+>Jonathan Eastgate
+>
+>首席技术官
 
-Hobnob 选择 FreeBSD，因为它是唯一真正支持我们使命的操作系统：为我们的客户提供快速可靠的网络服务。
+>“**MSI/FUNTORO** 利用 FreeBSD 提供高性能的按需音视频流服务，服务对象包括公交车、火车、体育场和酒店。选择 FreeBSD 是因为它的稳定性和可靠性、升级和维护的便利性、安全更新的可靠性，以及软件包的整体出色质量。”
+>
+>Scott Chen
+>
+>常务董事
 
-当 Hobnob 解决一个与我们核心业务无关的技术问题时，我们可以自由地赞助该工作，并将其贡献回社区。然而，当我们有一个对公司未来至关重要的重大技术突破时，我们并不会被迫放弃核心知识产权，从而使自己陷入困境。
+>“**cleverbridge** 在我们的开发、测试和生产环境中使用 FreeBSD。FreeBSD 为我们提供了独特的安全特性、可靠性、行业领先的技术和卓越的性能。从我们的 Web 服务器、邮件服务器到存储服务器，FreeBSD 促进了我们的全球电子商务解决方案。”
+>
+>Paul Herman
+>
+>IT 主管 – 技术
 
-赞助和贡献非 Hobnob 核心代码不仅加强了每个人，包括 Hobnob 在内的基础，还节省了 Hobnob 在维护和持续工程方面的时间和金钱。与 FreeBSD 的这种关系为快速创新和问题解决创造了理想的条件，这是任何计划在当前商业环境中生存的公司所需的两个关键要求。
 
-——[Hobnob](http://www.hobnob.com/) ECO Aron Hall
+>“如果没有 FreeBSD 社区及其成员和赞助者的贡献，Netgate 的 **pfSense** 项目就无法像今天这样蓬勃发展。”
+>
+>Jim Thompson
+>
+>首席技术官
 
-## Summersault Website Development
+>“**Hobnob** 选择 FreeBSD，因为它是唯一真正支持我们使命的操作系统：为我们的客户提供快速可靠的网络服务。”
+>
+>Aron Hall
+>
+>首席执行官
 
-![Summersault](../.gitbook/assets/Summersault.png)
+>“自从切换到 FreeBSD 以来，我们很高兴看到它达到了我们的期望。FreeBSD 开发社区的努力工作使互联网变得更安全、更可靠。**Verisign** 自豪地参与 FreeBSD 开发社区，并拥有为 FreeBSD 回馈工作的员工。”
+>
+>Glen Wiley
+>
+>首席工程师
 
-2021 年 1 月 18 日
+>“**Stormshield** 利用 FreeBSD 提供高性能的统一威胁管理 (UTM) 和下一代防火墙技术。我们通过技术贡献和赞助不断支持 FreeBSD；作为一家公司，我们完全致力于这个伟大社区的持续成功。”
+>
+>Fabien Thomas
+>
+>首席创新官
 
-在 1997 年，我和一个朋友创办了我们的技术公司，当时我们并没有选择 FreeBSD，而是 FreeBSD 选择了我们。但我们非常高兴它这么做了，并且我们开始在 FreeBSD 上建立我们的公司。
+>“我们的许多大型客户选择了 FreeBSD，基于我们提供的高质量支持和对 FreeBSD 的承诺，我们发现选择 FreeBSD 的客户往往会选择 **Chelsio**。Chelsio 团队很高兴能够与社区共同贡献、学习和成长。”
+>
+>Mehdi Mohtashemi
+>
+>工程副总裁
 
-作为一个小型网站设计和 Web 应用程序开发公司，我们并不打算涉足 Web 托管业务。我们开始听到客户说，他们希望能够通过与为他们构建网站的提供商托管他们的网站，因此我们决定尝试提供这项服务作为一种便利。当时，我们与共享办公空间的本地互联网服务提供商有一个带有空间的 FreeBSD 2.1 服务器，所以我们获得了用户名和密码，然后就开始运行了。
+>“FreeBSD 是 **NGINX** 项目的主要开发平台。我们的主要开发平台是 FreeBSD。我们继续将 FreeBSD 作为 NGINX 和 NGINX Plus 开发与测试的参考平台。我们非常欣赏它的成熟性、稳定性和出色的性能。”
+>
+>Maxim Konovalov
+>
+>工程副总裁兼联合创始人
 
-当我们的业务发展到需要自己的服务器来托管网站时，我们没有花太多时间来寻找选择。当时的共识（现在是 1998 年）是 Linux、FreeBSD 和 NetBSD 基本上都是相同的，这主要是一个偏好的问题，以及哪种商业支持可以帮助你解决任何困难（尽管当时的许可证之争确实还在继续）。由于我们的互联网服务提供商朋友就在书架的另一侧，我们知道我们拥有一些最好的 FreeBSD 产品支持，这是我们所能期望的。
+>“**ScaleEngine** 的小型开发和系统管理团队管理着分布在 11 个国家的 38 个数据中心中的 100 多台服务器。能够在如此小的团队中实现这种规模，仅仅依靠于 FreeBSD 提供的丰富文档、可观察性、监控和自动化工具。
+>
+>Allan Jude
+>
+>运营副总裁
 
-到了 2000 年，我们的业务模式基本转向了构建基于数据库的网站应用程序，对于 Web 托管服务应提供哪些功能的期望也有了显著的扩展。我们不再只是在 FreeBSD 上提供基于 Apache 的 Web 托管服务 - 我们知道我们需要支持对 PostgreSQL 和 MySQL 数据库系统、qmail 和 vpopmail 电子邮件系统以及其他专用服务的不断依赖。我们开始构建新的服务器作为专用的单功能盒子，而在每种情况下，安装 FreeBSD 都是毫不费力的。我们使用 Ports 将其转变为我们所需的类型的服务器，从而在这一过程中节省了大量时间。随着我们过渡到更“主流”的托管平台，比如我们使用 cPanel，FreeBSD 仍然在幕后提供支持。
+>“FreeBSD 在我们的旗舰产品——远程业务加速器中扮演着重要角色。尽管 **Acceleration Systems** 的大多数团队成员都有 Linux 的背景，但我们选择 FreeBSD 是因为它的轻量级特点、丰富的端口树以及在这个极其稳定的操作系统上支持的运营级应用程序。”
+>
+>Jack McKinney
+>
+>工程副总裁
 
-你可能不一定需要听到 FreeBSD 是一个可靠的运行互联网服务的平台。但我认为重要的是要记住，像 FreeBSD 这样的软件每天都在影响着人们的生活方式，无论是支持像我们这样的企业，还是帮助刚刚接触开源软件的业余爱好者，或者它在扮演的成千上万个其他“现实世界”的角色。
+>“在 Hyper-V 上成功运行 FreeBSD 的动力几乎完全基于许多主要设备（网络、存储、安全等）将 FreeBSD 作为其基础操作系统来构建产品。确保这些基于 FreeBSD 的虚拟设备在 **Hyper-V** 上顺利运行，并最终在 Azure 上运行，是微软的一项具有战略意义的重要投资。”
+>
+>Jason M. Anderson
+>
+>首席项目经理
 
-对于世界上的许多人来说，选择操作系统是一个随意的决定。我们相信，对于我们来说，这在建立一个成功的业务方面产生了巨大的差异。
+>“当 **Xinuos** 寻求一个成熟且稳定的操作系统，以现代功能集作为其现有客户的替代方案时，FreeBSD 显然是最突出的选择。我们的经销商特别欣赏 BSD 许可证所提供的自由，这为创建定制解决方案堆栈提供了业内最佳的灵活性。”
+>
+>Sean Synder
+>
+>总裁兼首席运营官
 
-——[Summersault Website Development](http://www.summersault.com/) 联合创始人 Chris Hardie
+>“我们需要最稳定、高效、受支持且文档完善的网络栈，可以随心所欲地进行修改。正是 FreeBSD 为 **XipLink** 提供了这一切。它使我们第一次实现空间通信协议标准变得更加容易，因为其内核代码的友好 BSD 许可证模型以及可用的丰富文档。”  
+>
+>Karim Fodil-Lemelin
+>
+>工程副总裁
 
-## Colocation America
-
-![Colocation](../.gitbook/assets/Colocation.png)
-
-2021 年 1 月 18 日
-
-Colocation America 为那些希望将服务器托管在美国的企业提供托管、专用服务器、VoIP 和托管数据中心服务。凭借 22 个数据中心位置，Colocation America 已成为托管服务的领先提供商之一。我们的大多数客户依赖 FreeBSD 操作系统，为他们提供一个安全的环境来托管他们的网络基础设施。他们称赞 FreeBSD 能够加密敏感数据，以及 ZFS 高级文件系统使管理服务器文件变得轻松。许多公司客户选择使用 FreeBSD 来运行他们的 MySQL 数据库系统和电子邮件服务器，这是因为操作系统具有出色的网络组件。
-
-选择与我们合作托管服务器的开发人员也选择在他们的专用服务器上安装 FreeBSD。BSD 许可证的开源性质为他们提供了开发创新软件所需的灵活性。此外，他们可以访问一个免费的企业级操作系统，该操作系统具有活跃的开发社区，并允许他们贡献自己的技能，使系统对于他们自己的开发变得更好。我们问过几个客户为什么决定使用 FreeBSD，答案总是一样的：操作系统的成本和网络能力与商业许可证竞争对手相媲美。
-
-我们的客户不是 FreeBSD 的唯一粉丝。由于操作系统能够管理防火墙和 Web 应用程序，并同时处理多个托管账户的服务器负载，我们使用 FreeBSD 来管理我们的共享托管服务器。通过 WebHost Manager cPanel 附加组件，可以在单个专用服务器上管理多个 Web 托管帐户，我们的共享托管服务器能够为寻求廉价网站托管的客户提供服务。FreeBSD 的社区支持以及其开源性质为我们的客户提供了一个安全的托管环境。要了解更多关于带有 FreeBSD 操作系统的专用服务器托管的信息，你可以访问我们的 FreeBSD 专用服务器页面。
-
-——[Colocation America](http://www.colocationamerica.com/) 业务发展总监 Albert Ahdoot
+>“我们大多数本地和远程承包商在过渡到 FreeBSD 的语法和更新其开发 Jail 的程序时没有遇到任何问题，他们在一个拥有完全控制权的“真实” **UNIX** 环境中工作，正如我们的客户一样。这种灵活性，加上项目对稳定性、安全性和可扩展性的持续承诺，使 FreeBSD 成为 Tera Bear 大多数 Web 开发项目的正确选择。”  
+>
+>Jon Lybrook
+> 
+>Tera Bear Consulting 创始人
 
