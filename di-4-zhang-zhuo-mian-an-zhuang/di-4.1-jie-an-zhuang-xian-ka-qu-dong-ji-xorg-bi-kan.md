@@ -169,6 +169,15 @@ backlight 自 FreeBSD 13 引入。
 
 - 旧显卡：
 
+>**技巧**
+>
+>下面的 `390` 亦可换成 `340`、470。
+
+- 340 驱动支持的显卡参考 [FreeBSD Display Driver – X64](https://www.nvidia.cn/Download/driverResults.aspx/156260/cn/)
+- 390 驱动支持的显卡参考 [FreeBSD Display Driver – X64](https://www.nvidia.cn/download/driverResults.aspx/196293/cn/)
+- 470 驱动支持的显卡参考 [FreeBSD Display Driver – X64](https://www.nvidia.cn/Download/driverResults.aspx/227125/cn/)
+
+
 ```sh
 # pkg install nvidia-secondary-driver-390
 ```
@@ -192,10 +201,10 @@ backlight 自 FreeBSD 13 引入。
 # sysrc kld_list+=nvidia-modeset
 # sysrc nvidia_xorg_enable=YES
 ```
-  
-390 驱动支持的显卡参考[FreeBSD Display Driver – X64](https://www.nvidia.cn/download/driverResults.aspx/196293/cn/)，支持一些旧显卡。
+
 
 - 新显卡：
+  - 550 驱动驱动支持的显卡参考 [FreeBSD Display Driver – X64](https://www.nvidia.cn/Download/driverResults.aspx/220794/cn/)
 
 ```sh
 # cd /usr/ports/graphics/nvidia-drm-kmod/ && make install clean
@@ -213,6 +222,8 @@ backlight 自 FreeBSD 13 引入。
 # sysrc kld_list+="nvidia-drm.ko"
 # sysrc -f /boot/loader.conf  hw.nvidiadrm.modeset=1
 ```
+
+
 ### 查看显卡驱动状态
 
 开机后在 kde 设置里查看显卡默认用的是 intel 核显，终端里 `nvidia-smi` 只有 `nvidia-xorg-service 8MB`。
