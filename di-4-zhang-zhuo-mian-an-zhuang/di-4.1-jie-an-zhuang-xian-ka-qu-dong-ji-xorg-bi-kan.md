@@ -34,6 +34,11 @@ FreeBSD 14.1-RELEASE、14-STABLE（OSVERSION >1400508）、FreeBSD 15 CUEERNT，
 
 ## 安装英特尔核显/AMD 独显驱动
 
+
+>**注意**
+>
+> 在使用 Gnome 时，如果自动锁屏或息屏，可能无法再次进入桌面。见 [Bug 255049 - x11/gdm doesn't show the login screen](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=255049)。
+
 首先切换到 latest 源，或使用 ports 安装：
 
 ```sh
@@ -106,9 +111,9 @@ FreeBSD 14.1-RELEASE、14-STABLE（OSVERSION >1400508）、FreeBSD 15 CUEERNT，
 # cd /usr/ports/multimedia/libva-intel-driver && make install clean
 ```
 
-### 亮度调节
+#### 亮度调节
 
-#### 通用
+##### 通用
 
 对于一般计算机：
 
@@ -123,7 +128,7 @@ FreeBSD 14.1-RELEASE、14-STABLE（OSVERSION >1400508）、FreeBSD 15 CUEERNT，
 # sysrc -f /boot/loader.conf  acpi_video="YES"
 ```
 
-#### 英特尔
+##### 英特尔
 
 backlight 自 FreeBSD 13 引入。
 
@@ -134,24 +139,17 @@ backlight 自 FreeBSD 13 引入。
 # backlight -        #默认调整亮度减少 10%
 ```
 
-##### 参考文献
+###### 参考文献
 
 - [backlight -- configure backlight	hardware](https://man.freebsd.org/cgi/man.cgi?backlight)
 - 经过测试，此部分教程适用于 renoir 显卡：
 
-
->**注意**
->
-> 在使用 Gnome 时，如果自动锁屏或息屏，可能无法再次进入桌面。见 [Bug 255049 - x11/gdm doesn't show the login screen](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=255049)。
-
-
 ## 笔记本核显 + Nvidia 独显
 
-**除非** 你的笔记本电脑支持 **显卡直通**，否则笔记本电脑一般请先按照上边的方法配置核显。
 
 >**警告**
 >
->笔记本电脑一般不能单独用 nvidia 打开 xorg。**除非** 你的笔记本电脑支持 **显卡直通**。
+>笔记本电脑一般不能单独用 nvidia 打开 xorg。**除非** 你的笔记本电脑支持 **显卡直通**。否则请先按照上部分对核显进行配置。
 
 ### 新显卡
 
@@ -209,12 +207,9 @@ backlight 自 FreeBSD 13 引入。
 ```
 
 
-
-
-
 ### 查看显卡驱动状态
 
-开机后在 kde 设置里查看显卡默认用的是 intel 核显，终端里 `nvidia-smi` 只有 `nvidia-xorg-service 8MB`。
+开机后在 kde 设置里查看显卡，默认用的是 intel 核显，终端里 `nvidia-smi` 仅有 `nvidia-xorg-service 8MB`。
 
 然后在终端用这个命令调用 N 卡：
 
@@ -224,8 +219,6 @@ $ nvrun-vgl 程序名 # GUI 运行程序
 ```
 
 `mesa-demos` 包含一些 opengl 示例，可用于测试驱动是否可用，非必要安装。
-
-`kld_list` 中 `nvidia-modeset`  和 `i915kms` 需要同时存在。
 
 安装包后，若 xorg 启动成功则无需额外配置；若失败，再用 `pciconf -lv` 查找显卡的 busid，例如
 
@@ -286,7 +279,7 @@ pkg install libva-vdpau-driver libvdpau libvdpau-va-gl
 
 >**技巧**
 >
->注意，有多个版本的 N 卡驱动，若不知道该用哪个，请看上文笔记本核显 + N卡部分。
+>注意，有多个版本的 N 卡驱动，若不知道该用哪个，请看上文笔记本核显 + N 卡部分。
 
 ### 安装驱动
 
@@ -331,7 +324,7 @@ $ nvidia-smi
 如果发现系统没有使用 nvidia 驱动，需要自动生成配置文件：
 
 ```sh
-# Xorg -configure #生成配置文件。注意，这一步步骤并非必要！
+# Xorg -configure #生成配置文件。注意，若正常显示无需这步和下步！
 # cp /root/xorg.conf.new /etc/X11/xorg.conf
 ```
 
@@ -352,65 +345,6 @@ $ kldstat
 ```
 
 会发现系统自动加载了 `linux.ko` 模块。如果觉得太臃肿，不需要 Linux 兼容层，可以自己通过 ports 编译 `nvidia-driver`,去掉 `linux compatibility support`。
-
-## 附：拉取开发版 drm-kmod（仅限 FreeBSD-CURRENT）
-
-> **警告**
->
-> 此部分属于实验性内容且仅限 FreeBSD-CURRENT 使用，不建议新手操作。
-
->**注意**
->
-> 请提前在 `/usr/src` 准备好一份系统源码。
-
-拉取最新的 drm-kmod 并编译安装：
-
-安装 git：
-
-```sh
-# pkg install git
-```
-
-或者：
-
-```sh
-# cd /usr/ports/devel/git/ 
-# make install clean
-```
-
-然后：
-
-```sh
-$ git clone --depth=1 https://github.com/dumbbell/drm-kmod/
-$ cd freebsd/drm-kmod
-$ git checkout -b update-to-v5.17
-$ make
-…
-# make install
-===> linuxkpi (install)
-install -T release -o root -g wheel -m 555   linuxkpi_gplv2.ko /boot/modules/
-===> ttm (install)
-install -T release -o root -g wheel -m 555   ttm.ko /boot/modules/
-===> drm (install)
-install -T release -o root -g wheel -m 555   drm.ko /boot/modules/
-===> amd (install)
-===> amd/amdgpu (install)
-install -T release -o root -g wheel -m 555   amdgpu.ko /boot/modules/
-===> radeon (install)
-install -T release -o root -g wheel -m 555   radeonkms.ko /boot/modules/
-===> i915 (install)
-install -T release -o root -g wheel -m 555   i915kms.ko /boot/modules/
-kldxref /boot/modules
-```
-
-参考资料
-
-- [[drm ERROR :radeon_ttm_init] failed initializing buffer object driver(-22) – radeonkms no longer loads with drm-devel-kmod on AMD Thames [Radeon HD 7550M/7570M/7650M]](https://github.com/freebsd/drm-kmod/issues/93#issuecomment-962622626)
-
-### 故障排除
-
-- 如果显卡使用驱动有问题请直接联系作者：[https://github.com/freebsd/drm-kmod/issues](https://github.com/freebsd/drm-kmod/issues)
-- 如果笔记本出现了唤醒时屏幕点不亮的问题，可以在 `/boot/loader.conf` 中添加 `hw.acpi.reset_video="1"` 以在唤醒时重置显示适配器。
 
 ## xorg
 
@@ -436,6 +370,9 @@ xorg 最小化包: xorg-minimal（不建议）
 ```
 
 ### 故障排除
+
+- 如果显卡使用驱动有问题请直接联系作者：[https://github.com/freebsd/drm-kmod/issues](https://github.com/freebsd/drm-kmod/issues)
+- 如果笔记本出现了唤醒时屏幕点不亮的问题，可以在 `/boot/loader.conf` 中添加 `hw.acpi.reset_video="1"` 以在唤醒时重置显示适配器。
 
 >**警告**
 >
