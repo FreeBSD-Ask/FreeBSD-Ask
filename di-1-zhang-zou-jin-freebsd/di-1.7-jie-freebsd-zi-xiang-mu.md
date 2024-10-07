@@ -22,13 +22,13 @@ FreeBSD 基金会通过资金和资源支持 FreeBSD 操作系统的开发活动
 
 进行中
 
-### 基于 Jails/Bhyve 实现 OCI 容器，支持 Podman 和 Buildah。
+### 基于 Jail/Bhyve 实现 OCI 容器，支持 Podman 和 Buildah。
 
 **联系人：** Doug Rabson \<[dfr@rabson.org](mailto:dfr@rabson.org)\>
 
-[开放容器计划 (OCI)](https://opencontainers.org/) 为云原生容器格式和运行时制定了开放的行业标准，以确保平台的一致性。一个 [OCI 工作组](https://github.com/opencontainers/wg-freebsd-runtime) 正在为 FreeBSD 定义这些标准，利用 jails 进行实现，并有可能通过 FreeBSD 的 **[bhyve](https://docs.freebsd.org/en/books/handbook/virtualization/#virtualization-host-bhyve)** 虚拟化管理程序支持轻量级虚拟机（这将允许在 FreeBSD 主机上的容器中运行 FreeBSD 以外的其他操作系统）。
+[开放容器计划 (OCI)](https://opencontainers.org/) 为云原生容器格式和运行时制定了开放的行业标准，以确保平台的一致性。一个 [OCI 工作组](https://github.com/opencontainers/wg-freebsd-runtime) 正在为 FreeBSD 定义这些标准，利用 jail 进行实现，并有可能通过 FreeBSD 的 **[bhyve](https://docs.freebsd.org/en/books/handbook/virtualization/#virtualization-host-bhyve)** 虚拟化管理程序支持轻量级虚拟机（这将允许在 FreeBSD 主机上的容器中运行 FreeBSD 以外的其他操作系统）。
 
-FreeBSD 项目成员 Doug Rabson 开发了 **ocijail**，这是一种兼容 OCI 的 FreeBSD jails 运行时实验工具。该工具旨在与容器管理系统（如 Podman 和 Buildah）集成，提供全面的容器管理体验。
+FreeBSD 项目成员 Doug Rabson 开发了 **ocijail**，这是一种兼容 OCI 的 FreeBSD jail 运行时实验工具。该工具旨在与容器管理系统（如 Podman 和 Buildah）集成，提供全面的容器管理体验。
 
 **在 OCI 容器中运行应用程序的优势：**
 
@@ -47,18 +47,18 @@ Doug 还撰写了一篇[文章](https://freebsdfoundation.org/freebsd-container-
 
 进行中
 
-### UnionFS 项目旨在稳定并增强其在 FreeBSD 上的实用性，重点包括：支持对只读文件系统的表面修改，支持多个共享相同基础的 jails 并简化其升级，以及通过分层的预打包镜像促进容器场景的实现。
+### UnionFS 项目旨在稳定并增强其在 FreeBSD 上的实用性，重点包括：支持对只读文件系统的表面修改，支持多个共享相同基础的 jail 并简化其升级，以及通过分层的预打包镜像促进容器场景的实现。
 
 **联系人：** Olivier Certner \<[olce@freebsd.org](mailto:olce@freebsd.org)\>
 
-由 Olivier Certner 领导的 FreeBSD 上的 UnionFS 项目专注于增强和稳定 UnionFS 的功能，特别是涉及分层文件系统、jails、容器和存储优化的场景。Jason Harmening 多年来一直致力于 UnionFS 的开发，继续解决诸如 vnode 锁定、whiteout 管理和其他系统性问题等关键问题。该项目涉及大量代码重写，并进行精心的协调，以确保变更的合理性和与项目目标的一致性。重要的审查包括 D44288、D44601、D44788 和 D45398。
+由 Olivier Certner 领导的 FreeBSD 上的 UnionFS 项目专注于增强和稳定 UnionFS 的功能，特别是涉及分层文件系统、jail、容器和存储优化的场景。Jason Harmening 多年来一直致力于 UnionFS 的开发，继续解决诸如 vnode 锁定、whiteout 管理和其他系统性问题等关键问题。该项目涉及大量代码重写，并进行精心的协调，以确保变更的合理性和与项目目标的一致性。重要的审查包括 D44288、D44601、D44788 和 D45398。
 
 **项目的主要贡献：**
 
 1. **UnionFS 功能：**
 
     * **表面修改：** 允许对只读文件系统（例如 CDROM、NFS）进行更改，而不修改原始文件。适用于创建临时或永久的私人副本。
-    * **Jails：** 支持多个 jails 共享基础文件系统，简化更新并提高存储效率。
+    * **Jail：** 支持多个 jail 共享基础文件系统，简化更新并提高存储效率。
     * **容器：** 支持具有可修改顶层的预打包容器镜像，类似于 Docker。
     * **存储优化：** 将 HDD 支持的文件系统堆叠在 SSD 支持的文件系统上，优化存储使用，同时利用二者的优势。
 2. **协调与开发：**
@@ -74,7 +74,7 @@ Doug 还撰写了一篇[文章](https://freebsdfoundation.org/freebsd-container-
 
     * **Whiteout 处理 (D45987)：** 与 Kirk McKusick 和 Jason Harmening 合作，解决在 tmpfs 中重命名/rmdir 操作期间 whiteout 条目的问题，涉及 UnionFS 导出的元数据。
 
-此项目是一项全面的努力，旨在确保 UnionFS 可靠、高效，并适用于 FreeBSD 的现代用例，包括 jails、容器和复杂的存储配置。
+此项目是一项全面的努力，旨在确保 UnionFS 可靠、高效，并适用于 FreeBSD 的现代用例，包括 jail、容器和复杂的存储配置。
 
 
 ## OpenZFS 分级速率限制
@@ -87,7 +87,7 @@ Doug 还撰写了一篇[文章](https://freebsdfoundation.org/freebsd-container-
 
 FreeBSD 的 OpenZFS 分级速率限制项目旨在通过引入分级速率限制大幅提升 OpenZFS 文件系统的功能。这些速率限制可像配额一样进行配置，用于控制读/写操作次数和读/写带宽，从而提高系统性能并优化资源管理。
 
-OpenZFS 非常适合大规模和高要求的应用程序，如虚拟化和容器化（使用 jails 框架），这些应用程序需要对资源消耗进行精确控制。该项目将实现限制读/写/总操作次数以及读/写/总带宽的功能。限制将在 ZPL（ZFS POSIX 层）强制执行，确保下层数据集不会超过其父数据集上配置的限制。
+OpenZFS 非常适合大规模和高要求的应用程序，如虚拟化和容器化（使用 jail 框架），这些应用程序需要对资源消耗进行精确控制。该项目将实现限制读/写/总操作次数以及读/写/总带宽的功能。限制将在 ZPL（ZFS POSIX 层）强制执行，确保下层数据集不会超过其父数据集上配置的限制。
 
 **主要功能：**
 
@@ -130,7 +130,7 @@ OpenZFS 非常适合大规模和高要求的应用程序，如虚拟化和容器
 
 对于首次尝试新操作系统的用户来说，安装过程是他们面临的第一个挑战，也是他们对系统的初步印象来源。如今，大多数操作系统安装程序都配备了图形界面，如 RedHat Enterprise Linux、Ubuntu 和 Debian GNU/Linux 等流行系统中所见。这种图形化方式在 UNIX 系统（包括 FreeBSD）中也变得越来越普遍。无论用户的技术水平如何，安装过程对于公众对该平台的看法至关重要。
 
-多个项目已将 FreeBSD 转化为面向桌面的系统，其中 GhostBSD 是一个显著例子，它提供了图形化安装程序。然而，GhostBSD 的安装程序依赖于由 Python 驱动的 Gtk+ 界面，如果将其整合到 FreeBSD 常规的镜像生成过程中，可能会大幅增加安装介质的体积。此外，这一方法还需要在端口树中引入并维护新的项目。
+多个项目已将 FreeBSD 转化为面向桌面的系统，其中 GhostBSD 是一个显著例子，它提供了图形化安装程序。然而，GhostBSD 的安装程序依赖于由 Python 驱动的 Gtk+ 界面，如果将其整合到 FreeBSD 常规的镜像生成过程中，可能会大幅增加安装介质的体积。此外，这一方法还需要在 Ports 中引入并维护新的项目。
 
 为了解决这个问题，提出了一个 BSD 许可证下 man:Xdialog[1] 的替代方案，并借鉴了现有的 man:bsdinstall[8] 和 man:bsdconfig[8] 工具的知识。这个新工具名为 man:gbsddialog[1]，将提供图形化安装功能，同时与当前的安装程序基础设施共享资源。与 2006 年发布的过时的 Xdialog 不同，gbsddialog 提供了一个现代化、高效的替代方案，确保占用最小的空间并保持 FreeBSD 的简洁镜像生成流程。
 
@@ -169,10 +169,10 @@ FreeBSD/RISC-V 项目旨在为 [RISC-V 指令集架构](https://riscv.org/) 提�
 - 修改基础系统中的 TUI 工具，以提供高对比度选项，可能处理 GUI 终端模拟器和 vt(4) 的“NO COLOR”环境变量。手册将更新以描述新选项。
 - 新选项可以通过启动对话框菜单选择“安装”或“高对比度安装”来以高对比度运行 bsdinstall(8)。
 - 为 vt(4) 和语音合成器提供新通信方法。手册将更新以描述新功能。
-- 盲文设备框架，可能作为 https://brltty.app 的端口，具有其盲文刷新显示“驱动程序”。如果时间允许，还包括其语音能力功能。
+- 盲文设备框架，可能作为 https://brltty.app 的 Port，具有其盲文刷新显示“驱动程序”。如果时间允许，还包括其语音能力功能。
 - 新工具实现 bsdinstall(8) 对话框，作为适合屏幕阅读器的简单文本界面。
 - 新的“语音安装”选项通过新的 CLI 工具运行 bsdinstall(8)。该功能将作为概念验证提供（会议和社交网络的视频和演示），因为语音合成器和 BRLTTY 在类似 GPL 的许可下发布。
-- 在文档库中新增“可访问性”书籍，以描述新的视觉辅助子系统和端口树中的工具。
+- 在文档库中新增“可访问性”书籍，以描述新的视觉辅助子系统和 Ports 中的工具。
 
 ## 音频改进
 
@@ -212,7 +212,7 @@ FreeBSD/RISC-V 项目旨在为 [RISC-V 指令集架构](https://riscv.org/) 提�
 
 正在进行的努力包括合并关键审查，向 CI 集群添加新硬件，以及设计预提交 CI 系统和拉取/合并请求系统。团队还在致力于利用 CI 集群构建发布工件，简化 CI/测试环境设置，以及重新设计硬件测试实验室。
 
-未来计划包括收集 CI 任务和想法，为虚拟机客机测试设置公共网络访问，实现裸金属硬件测试套件，添加针对 -CURRENT 的 DRM 端口构建测试，以及运行 ztest 测试。团队的目标是改善 FreeBSD 在 CI 流水线中的支持，并与托管的 CI 提供商合作。
+未来计划包括收集 CI 任务和想法，为虚拟机客机测试设置公共网络访问，实现裸金属硬件测试套件，添加针对 -CURRENT 的 DRM Port 构建测试，以及运行 ztest 测试。团队的目标是改善 FreeBSD 在 CI 流水线中的支持，并与托管的 CI 提供商合作。
 
 **更多信息：**  **[持续集成 (GitHub)](https://github.com/Jehops/freebsd-doc/blob/2024q2_ff/website/content/en/status/report-2024-01-2024-03/ci.adoc)**
 
@@ -252,7 +252,7 @@ Cloud-init 现已成为在云中设置服务器的标准。在过去一年半的
 
 第二季度继续取得进展。团队在 BSDCan 2024 上介绍了“朝着强大的基于 FreeBSD 的云：移植 OpenStack 组件”，这增加了项目的可见性，并吸引了潜在贡献者的兴趣。概念验证（POC）站点从单节点设置扩展到三节点设置，涉及详细的环境设置和网络规划。还启动了将基础迁移到 FreeBSD 15.0-CURRENT 的工作，以保持与最新 FreeBSD 发展的对齐。
 
-此外，手动安装步骤和代码补丁开始转换为 FreeBSD 端口，以简化安装过程。一个重要的里程碑是启动了对 FreeBSD 实例和 OpenStack Ironic 服务主机进行裸机配置的工作。
+此外，手动安装步骤和代码补丁开始转换为 FreeBSD Port，以简化安装过程。一个重要的里程碑是启动了对 FreeBSD 实例和 OpenStack Ironic 服务主机进行裸机配置的工作。
 
 **未来计划：**
 
@@ -300,7 +300,7 @@ Cloud-init 现已成为在云中设置服务器的标准。在过去一年半的
 
 ### 虚拟机工具
 
-FreeBSD 基金会的企业工作组识别出需要类似于 jails 的 Bhyve 工具。这促成了“vmstated”的开发，这是一个使用基本 FreeBSD 工具构建的守护进程和管理实用程序。Vmstated 通过 UCL 配置，提供灵活的虚拟机管理，具有类似于 jail 的命令集和状态转换钩子等功能。该工具已在 ports 集合中作为 sysutils/vmstated 提供，并在 GitHub 上持续更新。欢迎贡献和反馈。
+FreeBSD 基金会的企业工作组识别出需要类似于 jail 的 Bhyve 工具。这促成了“vmstated”的开发，这是一个使用基本 FreeBSD 工具构建的守护进程和管理实用程序。Vmstated 通过 UCL 配置，提供灵活的虚拟机管理，具有类似于 jail 的命令集和状态转换钩子等功能。该工具已在 ports 集合中作为 sysutils/vmstated 提供，并在 GitHub 上持续更新。欢迎贡献和反馈。
 
 ### 文档更新
 
@@ -451,11 +451,11 @@ Naman Sood 是 FreeBSD 基金会的夏季实习生，一直在从事与网络相
 FreeBSD 手册页面和文档的“专家系统”将是一个尽力而为的概念验证任务，包括将 FreeBSD 文档（如手册页面和手册）导入到向量数据库中，以便像 ChatGPT 这样的语言模型可以“阅读”它们，从而在查询与 FreeBSD 相关的问题时提供更好的答案。
 
 
-## 解决 OpenSSL 3 / LLVM 16 端口问题
+## 解决 OpenSSL 3 / LLVM 16 Port 问题
 
 完成
 
-随着 FreeBSD 主分支中 OpenSSL 更新到版本 3，许多端口构建错误必须在 FreeBSD 14.0 发布之前解决。与 OpenSSL 3 和 LLVM 15 的大多数关键问题已经得到修复，但使用 LLVM 16 时，约有 800 个额外的端口无法构建，导致在完整的端口树构建中跳过了 2800 个依赖端口。穆罕默德·莫伊努尔（Moin）·拉赫曼将完成与 OpenSSL 3 和 LLVM 16 更新相关的所有端口问题的耗时且繁琐的修复工作。
+随着 FreeBSD 主分支中 OpenSSL 更新到版本 3，许多 Port 构建错误必须在 FreeBSD 14.0 发布之前解决。与 OpenSSL 3 和 LLVM 15 的大多数关键问题已经得到修复，但使用 LLVM 16 时，约有 800 个额外的 Port 无法构建，导致在完整的 Ports 构建中跳过了 2800 个依赖 Port。穆罕默德·莫伊努尔（Moin）·拉赫曼将完成与 OpenSSL 3 和 LLVM 16 更新相关的所有 Port 问题的耗时且繁琐的修复工作。
 
 ## SIMD增强的libc
 
@@ -673,9 +673,9 @@ FreeBSD 长期以来提供了一个 Linux 系统调用兼容层，之前能够�
 
 FreeBSD 的 fuse(4) 驱动程序存在错误且过时。它基本上无法用于任何网络文件系统，如 CephFS、MooseFS 或 Tahoe-LAFS。该项目将修复所有已知的 fuse 错误，更新内核 API，并添加新的测试套件。
 
-FUSE（用户空间中的文件系统）允许 FreeBSD 系统挂载由用户空间守护进程提供服务的文件系统，大多数 FUSE 守护进程很容易移植到 FreeBSD。截至本文撰写时，端口树中包含 41 个 FUSE 文件系统。其中最受欢迎的是 fuse-ntfs，这是使用 FreeBSD 访问 Microsoft NTFS 格式媒体的唯一方法。
+FUSE（用户空间中的文件系统）允许 FreeBSD 系统挂载由用户空间守护进程提供服务的文件系统，大多数 FUSE 守护进程很容易移植到 FreeBSD。截至本文撰写时， Ports 中包含 41 个 FUSE 文件系统。其中最受欢迎的是 fuse-ntfs，这是使用 FreeBSD 访问 Microsoft NTFS 格式媒体的唯一方法。
 
-Fuse(4) 可以使用，但存在错误且不完整。在该项目开始时，错误跟踪器中有 26 个未解决的错误，其中一些已开放多年。最严重的是与缓存相关的错误，这可能导致任何 FUSE 网络文件系统中的数据损坏（在端口中的 11 个，以及一些重要的非端口文件系统，如 CephFS 和 MooseFS）。
+Fuse(4) 可以使用，但存在错误且不完整。在该项目开始时，错误跟踪器中有 26 个未解决的错误，其中一些已开放多年。最严重的是与缓存相关的错误，这可能导致任何 FUSE 网络文件系统中的数据损坏（在 Ports 中的 11 个，以及一些重要的非 Port 文件系统，如 CephFS 和 MooseFS）。
 
 Fuse(4) 的内核 API（内核与文件系统守护进程之间的通信协议）大约滞后于标准 11 年。这意味着我们无法支持与缓存失效、ioctl(2)、poll(2)、chflags(2)、文件锁定、utimes(2)、posix_fallocate(2) 和 ACL 相关的一些功能。我们还缺少一些性能增强功能，如 readdirplus、异步直接 I/O、回写缓存、SEEK_HOLE 和异步读取。
 
