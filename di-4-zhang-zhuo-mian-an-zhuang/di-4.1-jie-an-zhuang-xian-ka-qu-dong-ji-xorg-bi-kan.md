@@ -83,11 +83,8 @@ FreeBSD 14.1-RELEASE、14-STABLE（OSVERSION >1400508）、FreeBSD 15 CUEERNT，
 
 
 
-## 配置使用英特尔核显/AMD 独显
+### 配置使用英特尔核显/AMD 独显
 
->**注意**
->
-> 无论是使用以上哪种方法，都需要进行这一步配置。
 
 打开 `/etc/rc.conf`:
 
