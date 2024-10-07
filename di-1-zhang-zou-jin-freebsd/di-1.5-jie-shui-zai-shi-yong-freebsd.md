@@ -4,7 +4,7 @@
 >
 > 正在校对。
 
-本页面是对 <https://freebsdfoundation.org/about-us/testimonials/> 的翻译。、
+本页面是对 <https://freebsdfoundation.org/about-us/testimonials/> 的翻译。
 
 **参与 FreeBSD**
 
@@ -272,28 +272,28 @@ TwinCAT®、TwinCAT/BSD® 和 EtherCAT® 是 Beckhoff Automation GmbH 的注册�
 
 #### FreeBSD 为 NetApp 的 ONTAP 数据管理系统提供灵活性和性能
 
-NetApp 是一家智能数据基础设施公司，为企业客户提供统一的数据存储、集成数据服务和云操作解决方案。作为技术领导者，他们的耐力和行业领先的产品帮助组织在本地和混合云环境中管理数据和应用程序。FreeBSD 是 NetApp 成功故事的重要组成部分，也是其产品的稳定组件。以下是这一关系如何形成以及为何能够持续发展的原因。
+NetApp 是一家智能数据基础设施公司，为企业客户提供统一数据存储、集成数据服务和云计算运营解决方案。作为技术领导者，NetApp 以其业界领先的产品帮助企业在内部部署和混合云环境中管理数据和应用程序。FreeBSD 是 NetApp 成功故事中不可或缺的一部分，也是其产品的固定组件。FreeBSD 是 NetApp 成功故事中不可或缺的一部分，也是其产品的稳定组件。
 
 #### 历史的进程……
 
-NetApp 与伯克利软件分发（BSD）有着悠久的历史。2004 年，NetApp 的领导层决定将 NetApp ONTAP（其整个产品系列的数据管理软件）基于更注重性能的系统——FreeBSD。做出这一决定的一个重要因素是 BSD 许可证模型，从 2004 年的 6.0 版本到今天的 14.0 版本，FreeBSD 始终是 NetApp 中的一个稳定和最新的组成部分。
+NetApp 与伯克利软件发行版（BSD）有着悠久的历史。在2004 年，NetApp 的领导层决定将 NetApp ONTAP（其所有产品系列的数据管理软件）基于更注重性能的系统——FreeBSD。做出这一决定的一个重要因素是 BSD 许可证模型，从 2004 年的 6.0 版本到今天的 14.0 版本，FreeBSD 始终是 NetApp 中一项稳定和最新的组成部分。
 
-NetApp 需要一个许可证模型，以便在其新的数据管理系统中整合其专有技术，而不必担心潜在的软件许可证问题。NetApp 考虑了其他 BSD 分发版本，但最终选择了 FreeBSD，因为它在性能和安全性之间取得了良好的平衡。NetApp 与 FreeBSD 的成功经验使他们在多年来不断增加其使用，最近还改变了 ONTAP 中 FreeBSD 的实现。
+NetApp 需要的许可证模型：能在其新的数据管理系统中整合其专有技术，而不必担心潜在的软件许可证问题。NetApp 考虑了其他 BSD 分行版本，但最终选择了 FreeBSD，因为它在性能和安全性之间取得了良好的平衡。NetApp 与 FreeBSD 的成功经验使他们在多年来不断增加其使用，最近还改变了 ONTAP 中 FreeBSD 的实现。
 
-由于 FreeBSD 在实施中的灵活性和行业领先的稳定性，它在 NetApp ONTAP 中一直是一个可靠的组件。过去，NetApp 使用的是较旧版本的 FreeBSD，但现在它更接近当前发布版本（在 FreeBSD 社区中称为“[跟踪 head](https://docs.freebsd.org/en/books/handbook/cutting-edge/)”）。
+由于 FreeBSD 在实施中的灵活性和行业领先的稳定性，它在 NetApp ONTAP 中一直是一个可靠的组件。在过去，NetApp 使用的是较旧版本的 FreeBSD，但现在它更接近 CURRENT 发行版本（在 FreeBSD 社区中称为“[跟踪 head](https://docs.freebsd.org/en/books/handbook/cutting-edge/)”）。
 
 
-FreeBSD 在不同组织和多种应用中以多种方式实现。有些组织可能像 NetApp 那样选择跟踪接近头部版本，或者像 Netflix 那样选择跟踪头版本，而有些组织则决定保持在几个版本之前。FreeBSD 为组织提供了稳定性、灵活性和升级的便利，使他们可以选择最适合其特定用例的实施风格，无论是滞后几个版本还是跟踪该项目的最新发布版本。
+在不同组织和多种应用中，FreeBSD 有多种实现方式。有些组织可能像 NetApp 那样选择跟踪接近 head 版本，或者像 Netflix 那样选择跟踪 head 版本，而有些组织则决定保持在几个版本之前。FreeBSD 为组织提供了稳定性、灵活性和升级的便利，使他们可以选择最适合其特定用例的实施风格，无论是滞后几个版本还是跟踪 FreeBSD 的最新发行版本。
 
 #### **NetApp 与 FreeBSD 社区**
 
-FreeBSD 项目由一组核心的 FreeBSD 提交者管理，还有许多具有直接 Git 访问权限的贡献者，能够访问 FreeBSD 的主代码库。 [FreeBSD 核心团队](https://www.freebsd.org/status/report-2022-04-2022-06/core/) 负责推动项目的运营。FreeBSD 核心团队由 FreeBSD 项目内的活跃开发人员选举产生。这种开放和民主的治理政策以及社区专注的政策使 NetApp 对 FreeBSD 的未来感到更为安心，从而帮助他们更自信地跟踪 FreeBSD 的最新发布版本。
+FreeBSD 项目由一组核心的 FreeBSD 提交者管理，还有许多具有直接 Git 访问权限的贡献者，能够访问 FreeBSD 的主代码库。[FreeBSD 核心团队](https://www.freebsd.org/status/report-2022-04-2022-06/core/) 负责推动项目的运营。FreeBSD 核心团队由 FreeBSD 项目内的活跃开发人员选举产生。这种开放和民主的治理政策以及社区专注的政策使 NetApp 对 FreeBSD 的未来感到更为安心，从而帮助他们更自信地跟踪 FreeBSD 的最新发行版本。
 
-FreeBSD 充满活力和支持的开发者和用户社区也是解决问题和学习的极佳资源。实际上，NetApp 得到了另一家商业 FreeBSD 用户的个人指导，这激励他们更接近于 FreeBSD 的最新版本。NetApp 还参加 FreeBSD 会议和活动，例如 BSDCan 和 Vendor Summit，这些活动为 NetApp 开发人员与 FreeBSD 社区交流提供了极好的机会。
+FreeBSD 充满活力和支持的开发者和用户社区也是解决问题和学习的极佳资源。实际上，NetApp 得到了另一家商业 FreeBSD 用户的个人指导，这激励他们更靠近于 FreeBSD 的最新版本。NetApp 还参加了 FreeBSD 会议和活动，如 BSDCan 和 Vendor Summit，这些活动为 NetApp 开发人员与 FreeBSD 社区交流提供了极好的机会。
 
-NetApp 以多种方式为 FreeBSD 做出贡献，包括定期主办 FreeBSD 基金会活动、进行常规的错误修复和增强以及向 FreeBSD 基金会提供财政支持。值得注意的是，NetApp 有一个有趣的上游策略。NetApp 与[Klara Systems](https://klarasystems.com/)合作，获得商业支持并通过 Klara 进行上游开发。NetApp 还拥有一个全面的持续集成测试套件，每天在其代码库上运行，包括 FreeBSD。当测试遇到 FreeBSD 问题时，NetApp 会通过 Klara 报告，并由 Klara 进行上游更改。NetApp 的工程师过去还曾向 FreeBSD 上游提交新技术，例如[bhvye](https://wiki.freebsd.org/bhyve)，这个 BSD 许可证的虚拟机管理程序，近年来，NetApp 上游提交了近 300 项更改。
+NetApp 以多种方式为 FreeBSD 做出贡献，包括定期主办 FreeBSD 基金会活动、进行常规的错误修复和增强以及向 FreeBSD 基金会提供财政支持。值得注意的是，NetApp 有一个有趣的上游策略。NetApp 与 [Klara Systems](https://klarasystems.com/) 合作，获得商业支持并通过 Klara 进行上游开发。NetApp 还拥有一个全面的持续集成测试套件，在其代码库上每日运行，包括 FreeBSD。当测试遇到 FreeBSD 问题时，NetApp 会通过 Klara 报告，并由 Klara 进行上游更改。NetApp 的工程师过去还曾向 FreeBSD 上游提交新技术，如[bhvye](https://wiki.freebsd.org/bhyve)，这是个 BSD 许可证的虚拟机管理程序。近年来，NetApp 为上游提交了近 300 项更改。
 
-#### **开始使用 FreeBSD**
+#### 开始使用 FreeBSD
 
 NetApp 建议其他希望寻找高性能操作系统的组织考虑 FreeBSD，原因在于其宽松的软件许可证、充满活力和支持的社区，以及对可扩展性、稳定性和安全性的强烈关注。
 
@@ -301,14 +301,14 @@ NetApp 建议其他希望寻找高性能操作系统的组织考虑 FreeBSD，�
 
 - 从小开始，并随着对 FreeBSD 的深入使用逐渐积累经验。
 - 定期升级 FreeBSD，尽量保持接近最新版本。
-- 理解 FreeBSD 的哲学和愿景。
+- 理解 FreeBSD 哲学和愿景。
 - 选择 FreeBSD 支持的合适硬件平台。
 - 考虑与提供 FreeBSD 商业支持的公司（如 Klara）签约。
-- 将私有定制限制在关键业务知识产权上，其余的尽量向上游开发。
+- 将专有定制限制在关键业务知识产权上，其余的尽量向上游开放。
 
 ### 案例研究：在 FreeBSD 上维护全球最快的内容分发网络
 
-Netflix 是一家全球娱乐公司，通过其流媒体服务彻底改变了人们消费电视节目和电影的方式。Netflix 总部位于加利福尼亚州洛斯加托斯，已发展成为全球领先的流媒体平台之一，在 190 多个国家拥有数百万用户。Netflix 以其广泛的电影、电视剧和纪录片目录而闻名，包括备受好评的原创作品，通过投资创新内容和技术，Netflix 继续塑造娱乐行业。
+Netflix 是一家全球娱乐公司，其流媒体服务彻底改变了人们消费电视节目和电影的方式。Netflix 总部位于加利福尼亚州洛斯加托斯，已发展成为全球领先的流媒体平台之一，在 190 多个国家拥有数百万用户。Netflix 以其广泛的电影、电视剧和纪录片目录而闻名，包括备受好评的原创作品，通过投资创新内容和技术，Netflix 继续塑造着娱乐行业。
 
 #### 互联网上最快、流量最高的网络，全部运行 FreeBSD
 
@@ -316,9 +316,9 @@ Gleb Smirnoff 是一位熟练的软件工程师和经验丰富的 FreeBSD 提交
 
 在他 2023 年 11 月在 FreeBSD 供应商峰会上的演讲中，Smirnoff 强调了 Netflix 运营的庞大规模。
 
-**“我们是互联网上最大的流量来源之一——每秒发送数太比特，所有服务器或设备均运行 FreeBSD。”**
+**“我们是互联网上最大的流量来源之一——每秒发送数太比特，所有服务器和设备均运行着 FreeBSD。”**
 
-正如 Smirnoff 所指出的，Netflix 的 Open Connect 最初是在标准的 FreeBSD 平台上运行，随后逐渐进行了性能改进。2012 年，一个基于 vanilla FreeBSD 9.0-RELEASE 和 **nginx** 的 CDN 概念验证项目启动，该项目部署在配备单个 10 Gbit/s 接口的服务器上。
+正如 Smirnoff 所指出的，Netflix 的 Open Connect 最初是在标准的 FreeBSD 平台上运行，随后逐渐进行了性能改进。2012 年，一项基于 vanilla FreeBSD 9.0-RELEASE 和 **nginx** 的 CDN 概念验证项目启动，该项目部署在搭载单个 10 Gbit/s 接口的服务器上。
 
 随着时间的推移，显而易见，要实现快速增长，需要超越操作系统当前能力的限制。Netflix 的内容分发网络（CDN）的预期规模如此之大，以至于值得在 FreeBSD 的持续开源开发上投资。
 
@@ -326,25 +326,25 @@ Netflix 意识到，在全球范围内部署 CDN 时，即使是性能提升一�
 
 #### 在 Netflix 上跟踪 FreeBSD-CURRENT
 
-Netflix 在平衡自定义修改与保持与 FreeBSD 项目核心代码库对齐之间进行了谨慎的管理。这确保了他们的自定义增强功能在不导致与原始 FreeBSD 源代码不再可持续偏离的情况下提升系统能力。这种微妙的平衡使 Netflix 能够利用 FreeBSD 的优势，同时创造出满足其特定高性能需求的定制解决方案。
+Netflix 在平衡自定义修改与保持与 FreeBSD 项目核心代码库一致性间进行了谨慎的管理。这确保了他们的自定义增强功能在不触发与 FreeBSD 原始源代码不再可持续性偏离的情况下，提升系统能力。这种微妙的平衡使 Netflix 能够利用 FreeBSD 的优势，同时创造出满足其特定高性能需求的定制解决方案。
 
 另一位 Open Connect 团队成员 Drew Gallatin 在 2023 年 11 月的 OpenFest 保加利亚会议上详细介绍了 Netflix 如何对 FreeBSD 进行定制。
 
-拥有超过 25 年贡献于 FreeBSD 的经验，Gallatin 分享了他在优化 FreeBSD 以服务于 Netflix 的 Open Connect 中的经历和挑战，并强调了跟踪 FreeBSD-CURRENT 背后的战略决策过程：
+拥有超过 25 年为 FreeBSD 贡献的经验，Gallatin 分享了他在优化 FreeBSD 以服务于 Netflix 的 Open Connect 中的经历和挑战，并强调了跟踪 FreeBSD-CURRENT 背后的战略决策过程：
 
-**“我们觉得我们所做的是愚蠢的，而我们应该做的是跟踪 FreeBSD-CURRENT。这听起来疯狂，因为这是大家推送所有内容的地方，但对我们来说，这实际上是世界上最好的选择。”**
+**“我们觉得我们以往所做的是愚蠢的，因为我们应该做的是跟踪 FreeBSD-CURRENT。这听起来疯狂，因为这是大家推送所有内容的地方，但对我们来说，这实际上是世界上最好的选择。”**
 
 在他的演讲中，他还分享了有关“神奇的神秘合并”的轶事，说明了运行 CURRENT 分支的重要性。Gallatin 反映了 Netflix 在维护系统性能和稳定性方面的主动做法：
 
-**“当我们运行 FreeBSD-CURRENT 时，我们能够非常快速地捕捉到问题。如果有某些回归，我们会立刻发现。没有两年或三年延迟在某人提交某个东西和我们发现它是个问题之间。”**
+**“当我们运行 FreeBSD-CURRENT 时，我们能够非常快速地捕捉到问题。如果有某些回归，我们会立刻发现。在某人提交某个东西与我们发现它有问题之间，不会存在两到三年的延迟。”**
 
-Gallatin 还进一步阐述了子树集成的好处，强调了 Netflix 与 FreeBSD-CURRENT 战略对齐所带来的简化开发和维护流程：
+Gallatin 还进一步阐述了子树集成的好处，强调了 Netflix 与 FreeBSD-CURRENT 战略性一致性所带来的简化开发和维护流程：
 
 **“我们的树几乎与上游 FreeBSD 树完全相同……这大大减少了我们通过保持自己的补丁而积累的技术债务。”**
 
 #### FreeBSD 的战略集成与性能优化
 
-Netflix 精心管理内部 FreeBSD 实现与更广泛的 FreeBSD 社区之间的代码流。严格的测试框架、持续集成和单元测试构成了 Netflix 的开发策略基础。定期合并包括上游更改，并特别关注在正式纳入 FreeBSD 之前集成性能提升补丁。每次合并都会进行 A/B 测试，以保持或提升系统性能和稳定性。
+Netflix 精心管理内部 FreeBSD 实现与更广泛的 FreeBSD 社区之间的代码流。严格的测试框架、持续集成和单元测试构成了 Netflix 的开发策略基础。定期合并包括上游更改，并特别关注在正式纳入 FreeBSD 之前集成性能提升补丁。每次合并都会进行 A/B 测试，以保持/提升系统性能和稳定性。
 
 Netflix 的 FreeBSD 实现的演变涉及对内核的精细调整，以缓解性能瓶颈并处理不断增加的数据流量，这包括 RACK（Recent ACKnowledgment），这是一个由 Randall Stewart 开发的 TCP 栈，旨在改善数据传输的性能和可靠性。Netflix 对 FreeBSD 的其他显著增强包括异步 **sendfile** 操作，便于非阻塞数据传输，以及先进的 VM 页缓存技术，提升数据处理效率和网络吞吐量。
 
@@ -352,13 +352,13 @@ Netflix CDN 团队还与 FreeBSD 社区合作，以增强使用内核 TLS（KTLS
 
 #### KTLS
 
-KTLS 是一种将 TLS（传输层安全性）处理从用户应用程序转移到操作系统内核的技术。这通过在内核中加密数据，从而提高了使用 **sendfile(9)** 的文件和网络服务器的性能，避免了将数据复制进出用户空间进行加密。KTLS 对于需要安全数据传输的高吞吐量应用（如网络服务器）非常有帮助。它允许高效的数据处理，并使 Netflix 能够在其 CDN 服务器上实现 400 Gb/s 的吞吐量。Gallatin 解释说：
+KTLS 是一种将 TLS（传输层安全性）处理从用户应用程序转移到操作系统内核的技术。通过在内核中加密数据，提高了使用 **sendfile(9)** 的文件和网络服务器的性能，避免了将数据复制进出用户空间进行加密。KTLS 对于需要安全数据传输的高吞吐量应用（如网络服务器）非常有帮助。它实现了高效的数据处理，并使 Netflix 能够在其 CDN 服务器上实现 400 Gb/s 的吞吐量。Gallatin 解释说：
 
 **“我们拥有世界上第一台 100 千兆每秒的生产 CDN 服务器……这要归功于内核 TLS。”**
 
 **“内核 TLS 是什么？我们将批量加密处理移到了内核中（从 nginx），以保留 sendfile 流水线。”**
 
-**“通过 sendfile 和内核 TLS，我们可以消除许多内存带宽瓶颈，现在许多事情变得更可行。通过考虑带宽和 CPU 利用率，我们在 FreeBSD 上大约可以达到 375 Gb/s，CPU 使用率大约为 53%。”**
+**“通过 sendfile 和内核 TLS，我们可以消除许多内存带宽瓶颈，现在许多事情变得更可行。通过考虑带宽和 CPU 利用率，我们在 FreeBSD 上大约可以达到 375 Gb/s，CPU 使用率约为 53%。”**
 
 在 FreeBSD 中，内核 TLS 是一个大型项目，通过社区的合作经历了显著的发展。在 Netflix 工作期间，Scott Long 首次提出将 TLS 集成到内核中。他与 Randall Stewart 共同开发了基础的软件 TLS 传输机制。Drew Gallatin 对该项目贡献巨大，引入了外部页面 mbufs 和 M_NOTREADY mbufs，这对在内核中处理加密数据至关重要。他还开发了一个可插拔接口，以支持各种软件 TLS 后端。
 
@@ -368,7 +368,7 @@ KTLS 是一种将 TLS（传输层安全性）处理从用户应用程序转移�
 
 #### 回馈社区
 
-Netflix 在管理其 FreeBSD 实施 Open Connect 的策略反映了对更广泛 FreeBSD 社区的深切承诺。Smirnoff 强调了与 FreeBSD 开发紧密对齐的重要性：
+Netflix 在管理其 FreeBSD 实施 Open Connect 的策略反映了对更广泛 FreeBSD 社区的深切承诺。Smirnoff 强调了与 FreeBSD 开发紧密跟踪的重要性：
 
 **“减少操作系统与 FreeBSD 之间的差异至关重要，这意味着你需要将更改提交到上游。”**
 
@@ -382,10 +382,10 @@ Netflix 在管理其 FreeBSD 实施 Open Connect 的策略反映了对更广泛 
 
 成功管理大型 FreeBSD 实施（如 Netflix 的案例）提供了关于社区参与和开源协作重要性的宝贵经验教训。
 
-- 及早与社区互动并积极参与项目对于充分发挥 FreeBSD 的潜力至关重要。这些实践确保系统的任何调整都能与更广泛生态系统中的持续发展保持良好对齐。
+- 及早与社区互动，积极参与项目对于充分发挥 FreeBSD 的潜力至关重要。这些实践确保系统的任何调整都能与更广泛生态系统中的持续发展保持良好平衡。
 - 随着时间的推移，通过优先考虑社区参与、定期测试和战略性上游贡献，精炼管理组织 FreeBSD 实施的策略可以带来显著的好处。
-- 采用新的 FreeBSD 功能并进行彻底的测试，以便在开发早期识别潜在的系统退化是至关重要的。这种主动的方法有助于清晰理解组织的定制分支与主要 FreeBSD 项目之间的差异，确保改进提升系统能力而不导致不可持续的偏离。
-- 建立一个明确的流程以集成外部代码和管理内部更改是关键。为代码审查、集成和测试设定清晰的规范对于维护系统的完整性和性能至关重要。
+- 采用新的 FreeBSD 功能并进行彻底的测试，以便在开发早期识别潜在的系统退化是至关重要的。这种主动的方法有助于厘清组织的定制分支与主要 FreeBSD 项目之间的差异，确保改进提升系统能力而不引发不可持续性的偏离。
+- 建立一个明确的流程来集成外部代码和管理内部更改是关键。为代码审查、集成和测试设定清晰的规范对于维护系统的完整性和性能至关重要。
 
 通过采用这些实践，组织可以有效管理其基于 FreeBSD 的系统，确保它们满足特定的操作需求，同时保持在技术进步的前沿。
 
@@ -393,32 +393,31 @@ Netflix 在管理其 FreeBSD 实施 Open Connect 的策略反映了对更广泛 
 
 Netflix 致力于利用 FreeBSD 的灵活性和性能能力，并将继续与社区合作，专注于增长和创新。Netflix 在行业内树立了成功维护定制 FreeBSD 实施的先例，依靠战略远见、严格测试和积极的社区参与。
 
----
 
-“除了技术优势，FreeBSD 拥有出色的开发者、供应商和用户生态系统，他们开放地分享专业知识、人才和技术改进。Netflix 接纳了这个社区，并致力于回馈其错误修复和增强功能，从而完成了社区协作的循环。”
 
-——David Fullagar，内容交付架构总监
-
+>“除了技术优势外，FreeBSD 还拥有出色的开发者、供应商和用户生态系统，他们开放地分享专业知识、人才和技术改进。Netflix 接纳了这个社区，并致力于回馈其错误修复和增强功能，从而完成了社区协作的循环。”
+>
+>——David Fullagar
+>
+>内容交付架构总监
 
 
 ## 用户也喜欢 FreeBSD！
 
-我们询问了用户对 FreeBSD 的喜爱之处。我们没想到会得到如此热情的回应！
-
+我们询问了用户对 FreeBSD 的喜爱之处。我们没想到会得到如此热切的回应！
 
 
 ### Tara Stella
 
-Tara 拥有多台笔记本电脑，其中超过一半运行 FreeBSD，秉持 KISS 原则：“保持简单和安全。”
+Tara 拥有多台笔记本电脑，其中一多半运行着 FreeBSD，秉持 KISS 原则：“保持简单和安全。”
 
 ### Robin Heywood
 
-Robin 在两台系统上运行 FreeBSD，作为文件服务器和网关。为什么？因为它“非常稳定”，而且是开源的！
+Robin 在两台系统上运行着 FreeBSD，作为文件服务器和网关。为什么？因为它“非常稳定”，而且是开源的！
 
 ### Daniel Arves
 
-Daniel 在他的笔记本电脑上运行 FreeBSD，他的脚踩在桌子上。他想要一个可定制且简单的系统。
-
+Daniel 在他的笔记本电脑上运行着 FreeBSD，他把脚踩在桌子上。他想要一款可定制且简单的系统。
 
 
 ## 我们的粉丝
@@ -430,33 +429,33 @@ Daniel 在他的笔记本电脑上运行 FreeBSD，他的脚踩在桌子上。�
 >
 > Matt Hambrick
 >
-> 主任，ONTAP 工程部
+> ONTAP 工程部主任
 
-> “**Netflix** 选择 FreeBSD 9，因为它是一款高性能、低维护且可靠的操作系统，得到了主要硬件厂商的支持。FreeBSD 提供了一种简单而强大的解决方案，能够通过多个 10Gbit 光纤链接同时服务数万条视频流。”
+> “**Netflix** 选择 FreeBSD 9，因为它是一款高性能、低维护且可靠的操作系统，得到了主流硬件厂商的支持。FreeBSD 提供了一种简单而强大的解决方案，能够通过多个 10Gbit 光纤链接同时服务数万条视频流。”
 >
 > David Fullagar
 >
 > 内容交付架构总监
 
-> “**Modirum** 为全球的银行、商户、支付服务提供商和卡公司提供软件和托管服务。我们在所有托管服务中使用 FreeBSD，从路由器和防火墙到应用服务器和数据库。”
+> “**Modirum** 为全球的银行、商户、支付服务提供商和卡公司提供了软件和托管服务。我们在所有托管服务中使用 FreeBSD，从路由器和防火墙到应用服务器和数据库。”
 >
 > Eirik Øverby
 >
 > 首席运营官
 
-> “**Mellanox Technologies** 一直是 FreeBSD 社区的长期开发者和贡献者，将 Mellanox 的前沿 RDMA 以及其他先进的卸载技术集成到通用的 FreeBSD 操作系统中。”
+> “**Mellanox Technologies** 一直是 FreeBSD 社区的长期开发者和贡献者，将 Mellanox 的前沿 RDMA 以及其他先进的卸载技术集成到了通用的 FreeBSD 操作系统中。”
 >
 > Yaron Gepstein
 >
 > 软件副总裁
 
-> “对于我们来说，继续支持 FreeBSD 是个不费脑筋的选择。**NeoSmart** 每年都很自豪地赞助 FreeBSD，并在被问及我们推荐的快速、经过实战考验且可靠的平台时，毫不犹豫地推荐它。”
+> “对于我们来说，继续支持 FreeBSD 是个毋庸置疑的选择。**NeoSmart** 每年都很自豪地赞助 FreeBSD。在被问及我们推荐的快速、经过实战考验且可靠的平台时，都毫不犹豫地推荐 FreeBSD。”
 >
 > Mahmoud Al-Qudsi
 >
 > 创始人
 
-> “FreeBSD 出色的安全性和更新、网络性能以及卓越的输入/输出和内存管理，使得运行 **SimPRO** 的大型、高流量和关键任务应用变得更加轻松。该操作系统承担了大部分繁重的工作，这意味着我的工程师可以专注于产品的发展，而不是服务器的维护。”
+> “FreeBSD 出色的安全性和更新、网络性能以及卓越的输入/输出和内存管理，使得运行 **SimPRO** 的大型、高流量和关键任务应用变得更加轻松。该操作系统承担了大部分繁重的工作，这意味着我的工程师可以专注于产品的发展，而非服务器的维护。”
 >
 > Jonathan Eastgate
 >
@@ -480,13 +479,13 @@ Daniel 在他的笔记本电脑上运行 FreeBSD，他的脚踩在桌子上。�
 >
 > 首席技术官
 
-> “**Hobnob** 选择 FreeBSD，因为它是唯一真正支持我们使命的操作系统：为我们的客户提供快速可靠的网络服务。”
+> “**Hobnob** 选择 FreeBSD，因为它是唯一真正支撑我们使命的操作系统：为我们的客户提供快速可靠的网络服务。”
 >
 > Aron Hall
 >
 > 首席执行官
 
-> “自从切换到 FreeBSD 以来，我们很高兴看到它达到了我们的期望。FreeBSD 开发社区的努力工作使互联网变得更安全、更可靠。**Verisign** 自豪地参与 FreeBSD 开发社区，并拥有为 FreeBSD 回馈工作的员工。”
+> “自从切换到 FreeBSD 以来，我们很高兴看到它达到了我们的预期。FreeBSD 开发社区的努力工作使互联网变得更安全、更可靠。**Verisign** 自豪地参与 FreeBSD 开发社区，并拥有为 FreeBSD 回馈工作的员工。”
 >
 > Glen Wiley
 >
@@ -522,13 +521,13 @@ Daniel 在他的笔记本电脑上运行 FreeBSD，他的脚踩在桌子上。�
 >
 > 工程副总裁
 
-> “在 Hyper-V 上成功运行 FreeBSD 的动力几乎完全基于许多主要设备（网络、存储、安全等）将 FreeBSD 作为其基础操作系统来构建产品。确保这些基于 FreeBSD 的虚拟设备在 **Hyper-V** 上顺利运行，并最终在 Azure 上运行，是微软的一项具有战略意义的重要投资。”
+> “在 Hyper-V 上成功运行 FreeBSD 的动力几乎完全基于许多主要设备（网络、存储、安全等）将 FreeBSD 作为其基础操作系统来构建产品。确保这些基于 FreeBSD 的虚拟设备在 **Hyper-V** 上顺利运行，并最终在 Azure 上运行，是 **微软** 具有战略意义的一项重要投资。”
 >
 > Jason M. Anderson
 >
 > 首席项目经理
 
-> “当 **Xinuos** 寻求一个成熟且稳定的操作系统，以现代功能集作为其现有客户的替代方案时，FreeBSD 显然是最突出的选择。我们的经销商特别欣赏 BSD 许可证所提供的自由，这为创建定制解决方案堆栈提供了业内最佳的灵活性。”
+> “当 **Xinuos** 寻求一款成熟且稳定的操作系统，以现代功能集作为其现有客户的替代方案时，FreeBSD 显然是最明智的选择。我们的经销商尤为欣赏 BSD 许可证所提供的自由，这为创建定制解决方案堆栈提供了业内最佳的灵活性。”
 >
 > Sean Synder
 >
@@ -546,13 +545,13 @@ Daniel 在他的笔记本电脑上运行 FreeBSD，他的脚踩在桌子上。�
 >
 > Tera Bear Consulting 创始人
 
-> “在 **WhatsApp**，我们利用 FreeBSD 和 Erlang 来提供行业领先的正常运行时间。能够在普通硬件上实现线性扩展，使 WhatsApp 能够保持低廉的服务成本。如今，我们在一台 FreeBSD 服务器上运行的并发 TCP 连接数量通常在 200 万到 300 万之间。”
+> “在 **WhatsApp**，我们利用 FreeBSD 和 Erlang 来提供行业领先的正常运行时间。能够在普通硬件上实现线性扩展，使 WhatsApp 能够保持低廉的服务成本。如今，我们在一台 FreeBSD 服务器上运行的并发 TCP 连接数量通常在 200 到 300 万之间。”
 >
 > Jan Koum
 >
 > 首席执行官，高级社交媒体经理
 
-> “我们坚信，对 FreeBSD 有利的就是对我们的客户有利，而对我们的客户有利的就是对 **iXsystems** 有利。BSD 许可证使我们能够自由使用和贡献代码，也使我们的客户和 FreeBSD 的用户能够这样做。FreeBSD 得益于多年的开放共享与协作，从而发展成为一个稳定、成熟、高性能的操作系统。”
+> “我们坚信，对 FreeBSD 有利就是对我们的客户有利，而对我们的客户有利就是对 **iXsystems** 有利。BSD 许可证使我们能够自由使用和贡献代码，也使我们的客户和 FreeBSD 的用户能够这样做。FreeBSD 得益于多年的开放共享与协作，从而发展成为一款稳定、成熟、高性能的操作系统。”
 >
 > Josh Paetzel
 >
@@ -562,7 +561,7 @@ Daniel 在他的笔记本电脑上运行 FreeBSD，他的脚踩在桌子上。�
 >
 > Marty Puranik
 >
-> **Atlantic.Net** 创始人、首席执行官
+> **Atlantic.Net** 创始人兼首席执行官
 
 > “FreeBSD 发布系统为 **Juniper** 提供了功能的路线图和代码的稳定基础，同时其实用的许可协议使 Juniper 能够开发知识产权，以推动高性能网络的发展。Juniper 拥有许多活跃的 FreeBSD 开发人员，他们不断为 FreeBSD 项目做出贡献，以进一步推动其作为领先操作系统的发展。”
 >
@@ -570,7 +569,7 @@ Daniel 在他的笔记本电脑上运行 FreeBSD，他的脚踩在桌子上。�
 >
 > 基础技术部副总裁
 
-> “**Pair Networks**一直以来依赖 FreeBSD 作为提供世界级网络托管服务的重要工具。FreeBSD 的可靠性和稳定性使我们能够为客户提供超过 99.9%的服务器正常运行时间。我们的客户依赖 FreeBSD 的 proven security 来确保他们的网站正常运行和数据安全。作为一个开源系统，FreeBSD 在出现安全威胁时易于更新新保护措施。FreeBSD 的稳定性和健壮性使我们能够轻松兑现这一承诺。”
+> “**Pair Networks**一直以来依赖 FreeBSD 作为提供世界级网络托管服务的重要工具。FreeBSD 的可靠性和稳定性使我们能够为客户提供超过 99.9% 的服务器正常运行时间。我们的客户依赖 FreeBSD 的 proven security 来确保他们的网站正常运行和数据安全。作为一款开源系统，FreeBSD 在出现安全威胁时易于更新新保护措施。FreeBSD 的稳定性和健壮性使我们能够轻松兑现这一承诺。”
 >
 > Kevin Martin
 >
@@ -582,7 +581,7 @@ Daniel 在他的笔记本电脑上运行 FreeBSD，他的脚踩在桌子上。�
 >
 >运营副总裁
 
->“使用 **Experts Exchange** 对我们的网站、几种不同版本的 Linux 和 UNIX（包括 FreeBSD）进行了广泛的性能测试。FreeBSD 在页面加载时间指标和 Lucene 搜索索引性能测试中超越了所有其他测试的操作系统。从那时起，我们已将我们的开发、测试和生产服务器迁移到 FreeBSD。我们还使用 FreeBSD Jail 来托管我们的开发测试服务器，并且我们已经在本地办公室数据中心和我们的托管数据中心架构中依赖 FreeBSD。”
+>“使用 **Experts Exchange** 对我们的网站、几种不同版本的 Linux 和 UNIX（包括 FreeBSD）进行了大量的性能测试。FreeBSD 在页面加载时间指标和 Lucene 搜索索引性能测试中超越了所有其他测试的操作系统。自那时起，我们已将我们的开发、测试和生产服务器迁移到 FreeBSD。我们还使用 FreeBSD Jail 来托管我们的开发测试服务器，并且我们已经在本地办公室数据中心和我们的托管数据中心架构中依赖 FreeBSD。”
 >
 >Andrew Alsup
 >
@@ -591,5 +590,5 @@ Daniel 在他的笔记本电脑上运行 FreeBSD，他的脚踩在桌子上。�
 
 >“我们的立场提供了关于 FreeBSD 在纽约大都会地区使用的多角度视野，从首次探索 FreeBSD 的终端用户到依赖 FreeBSD 的企业基础设施。虽然 NYC\*BUG 树立了标志并保持了稳定的 \*BSD 存在，我们受益于对 FreeBSD 作为稳定、理智的操作系统日益增长的兴趣和依赖。”
 >
->NYC\*BUG（New York City BSD User Group，纽约 BSD 用户组） 管理小组
+>NYC\*BUG（New York City BSD User Group，纽约 BSD 用户组）管理小组
 
