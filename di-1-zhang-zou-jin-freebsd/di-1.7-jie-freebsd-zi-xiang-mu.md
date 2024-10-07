@@ -4,14 +4,14 @@
 >
 >正在校对，请谨慎参考。
 
-本节是对 FreeBSD 基金会赞助的项目进行的解释。
+本节是对 FreeBSD 基金会赞助的项目进行的说明。
 
-本页面是对 [Projects](https://freebsdfoundation.org/our-work/projects/) 的翻译。
+本节是对 [Projects](https://freebsdfoundation.org/our-work/projects/) 的翻译。
 
 
 ## FreeBSD 基金会赞助和社区贡献的特色 FreeBSD 项目
 
-FreeBSD 基金会通过资金和资源支持 FreeBSD 操作系统的开发活动，重点是提升其安全性、性能和可用性。我们与社区携手合作，共同努力，确保 FreeBSD 的长期生命力。
+FreeBSD 基金会以资金和资源支持 FreeBSD 操作系统的开发活动，重点是提升 FreeBSD 的安全性、性能和可用性。我们与社区携手合作，共同努力，确保 FreeBSD 的恒久生命力。
 
 基金会参与的开发项目由多种因素决定，包括与核心团队讨论需要填补的开发空白、该开发工作对改进项目的总体影响，以及基金会可提供的资金。以下是这些项目。
 
@@ -20,11 +20,11 @@ FreeBSD 基金会通过资金和资源支持 FreeBSD 操作系统的开发活动
 
 ## OCI 容器支持
 
-进行中
+正在进行
 
 ### 基于 Jail/Bhyve 实现 OCI 容器，支持 Podman 和 Buildah。
 
-**联系人：** Doug Rabson \<[dfr@rabson.org](mailto:dfr@rabson.org)\>
+**联系人：** Doug Rabson [dfr@rabson.org](mailto:dfr@rabson.org)
 
 [开放容器计划 (OCI)](https://opencontainers.org/) 为云原生容器格式和运行时制定了开放的行业标准，以确保平台的一致性。一个 [OCI 工作组](https://github.com/opencontainers/wg-freebsd-runtime) 正在为 FreeBSD 定义这些标准，利用 jail 进行实现，并有可能通过 FreeBSD 的 **[bhyve](https://docs.freebsd.org/en/books/handbook/virtualization/#virtualization-host-bhyve)** 虚拟化管理程序支持轻量级虚拟机（这将允许在 FreeBSD 主机上的容器中运行 FreeBSD 以外的其他操作系统）。
 
