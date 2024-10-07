@@ -76,4 +76,4 @@
   - 将“参考资料与贡献者名单”拆分成独立的两个小节
 - 2024.10.6
   - 同步上游：“第 1.6 节 FreeBSD 开发计划”
-  - USTC、163、NJU pkg-freebsd 源故障
+  - USTC、163、NJU pkg-freebsd 源故障，已经反馈
