@@ -1,39 +1,40 @@
 # 第 4.1 节 安装显卡驱动及 Xorg（必看）
 
-**对于没有显卡直通的笔记本，必须安装英特尔 drm！不要上来就安装 Nvidia 然后说打不开。**
+>**警告**
+>
+>当前页面的 N 卡驱动部分仍有待测试！可能存在问题。
 
-**虚拟机显卡驱动看前边的章节，不再赘述。**
+>**警告**
+>
+>对于没有显卡直通的笔记本，必须安装英特尔 drm！
 
-FreeBSD 已从 Linux 移植了显卡驱动，理论上，I 卡 A 卡 N 卡均在 AMD64 架构上正常运行。
+>**注意**
+>
+>虚拟机显卡驱动看前边的章节，不再赘述。
+
+FreeBSD 已从 Linux 移植了显卡驱动，理论上，绝大部分英特尔核显、A 卡 N 卡均在 AMD64 架构上正常运行。
 
 ## 显卡支持情况
 
-对于 FreeBSD 11，支持情况同 Linux 内核 4.11；
+对于 FreeBSD 13.1，编译使用`drm-510-kmod`，支持情况同 Linux 5.10。AMD 可支持 R7 4750U。
 
-对于 FreeBSD 12，支持情况同 Linux 内核 4.16；
+FreeBSD 14.1-RELEASE、14-STABLE 1400508（即 2024 年 2 月 18 日后以的 STABLE 版本，Git 提交为 `2d120981e26dfef5c9cb9eb9936bb46cb6918136`）FreeBSD 15 CUEERNT，编译使用 `drm-61-kmod`，支持情况同 Linux 6.1。
 
-对于 FreeBSD 13.1，编译使用`drm-510-kmod`，支持情况同 Linux 5.10。AMD 可支持 R7 4750U（但是有 Bug [amdgpu no hw acceleration on gnome3 ?? - workaround amdgpu disable DRI3 in xorg.conf and switch to DRI2](https://github.com/freebsd/drm-kmod/issues/72)）。
-
-FreeBSD 14.0-release，编译使用 `drm-515-kmod`。**截至 2023.8.24 日，英特尔第 12、 13 代** 显卡 **[**暂不支持**](https://github.com/freebsd/drm-kmod/issues/219)。** 。
-
-FreeBSD 15 CUEERNT 及 14-STABLE 1400508（即 2024 年 2 月 18 日后以的 STABLE 版本，Git 提交为 `2d120981e26dfef5c9cb9eb9936bb46cb6918136`）版本，编译使用 `drm-61-kmod`，支持情况同 Linux 6.1。
-
->**1400508 指的是 OSVERSION**
+>**技巧**
+>
+>1400508 指的是 OSVERSION。
 >
 >可以在 port 开发者手册中的最后一章中查询对应的版本和 Git 提交。
 >
 >查看本机 OSVERSION：
 >
->```
+>```sh
 >root@ykla:~ # uname -U
 >1500019
 >```
 
-详细情况可以看 [wiki/Graphics](https://wiki.freebsd.org/Graphics)
 
-## 英特尔核显 / AMD 独显驱动
-
-### 安装英特尔核显/AMD 独显驱动——简单版本（推荐）
+## 安装英特尔核显/AMD 独显驱动——简单版本（推荐）
 
 首先切换到 latest 源，或使用 ports 安装：
 
@@ -48,82 +49,81 @@ FreeBSD 15 CUEERNT 及 14-STABLE 1400508（即 2024 年 2 月 18 日后以的 ST
 # make BATCH=yes install clean
 ```
 
-> 注意：
->
-> `graphics/drm-kmod` 这个包并不是真实存在的，他只是帮助判断系统版本以安装对应的 ports 包的元包。
->
-> 即使是像英特尔三代处理器的 HD 4000 这种比较古老的显卡，他在传统的 BIOS 模式下不需要额外安装显卡驱动，但是 UEFI 下有可能会花屏（FreeBSD 13.0 及以后无此问题），而且需要安装此 DRM 显卡驱动。
 
-> **故障排除：**
+>**注意**
 >
-> - **如果提示内核版本不符（`KLD XXX.ko depends on kernel - not available or version mismatch.`），请先升级系统或使用 ports 编译安装：**
+>在使用 Ports 时，drm 需要在 `/usr/src` 中有一份系统源代码。
+
+> **注意**
 >
-> <img src="../.gitbook/assets/amd_error.png" alt="" data-size="original">
+> `graphics/drm-kmod` 这个包并非真实存在，他只是帮助判断系统版本以安装对应的 port 的元包。
 >
-> - **如果提示 `/usr/ports/xxx no such xxx` 找不到路径，请先获取 ports 请看前文。**
+> 像英特尔三代处理器的 HD 4000 这种比较古老的显卡，他在传统的 BIOS 模式下无需额外安装显卡驱动，但是 UEFI 下有可能会花屏（FreeBSD 13.0 及以后无此问题），且需要安装此 DRM 显卡驱动。
 
-### 安装英特尔核显/AMD 独显驱动——复杂版本
+### 故障排除
 
-注意，如果要使用 `ports` 安装提示需要源码，请见其他章节。
+- `KLD XXX.ko depends on kernel - not available or version mismatch.`
 
-- FreeBSD 12
+提示内核版本不符，请先升级系统或使用 ports 编译安装。
+
+![](../.gitbook/assets/amd_error.png)
+
+- 提示 `/usr/ports/xxx no such xxx`
+  
+即找不到路径，请先获取 ports，请看前文。
+
+## 安装英特尔核显/AMD 独显驱动——复杂版本
+
+>**注意**
+>
+>如果要使用 `ports` 安装提示需要源码，请见其他章节。
+
+- FreeBSD 13.X
 
 ```sh
-# cd /usr/ports/graphics/drm-fbsd12.0-kmod/ && make BATCH=yes install clean
+# cd /usr/ports/graphics/drm-510-kmod/ 
+# make BATCH=yes install clean
 ```
 
-> **注意：**
->
-> **除了 12.0，对于任意 12.X 均应该安装 `drm-fbsd12.0-kmod`，但应该使用 port 在本地重新构建而不应使用 pkg 进行安装，否则不会正常运行。下同。**
-
-- FreeBSD 13
+- FreeBSD 14.1 RELEASE、14-STABLE 1400508（即 2024 年 2 月 18 日以后的 STABLE 版本，Git 提交为 `2d120981e26dfef5c9cb9eb9936bb46cb6918136`）及 FreeBSD 15 CUEERNT
 
 ```sh
-# cd /usr/ports/graphics/drm-510-kmod/ && make BATCH=yes install clean
-```
-
-- FreeBSD 14 release
-
-```sh
-# cd /usr/ports/graphics/drm-515-kmod/ && make BATCH=yes install clean
-```
-
-- FreeBSD 15 CUEERNT 及 14-STABLE 1400508（即 2024 年 2 月 18 日以后的 STABLE 版本，Git 提交为 `2d120981e26dfef5c9cb9eb9936bb46cb6918136`）
-
-```sh
-# cd /usr/ports/graphics/drm-61-kmod/ && make BATCH=yes install clean
+# cd /usr/ports/graphics/drm-61-kmod/ 
+# make BATCH=yes install clean
 ```
 
 
-### 配置、加载显卡
+## 配置、加载英特尔核显/AMD 独显
 
-> **无论是使用以上哪种方法，都需要进行这一步配置。**
+>**注意**
+>
+> 无论是使用以上哪种方法，都需要进行这一步配置。
 
 打开 `/etc/rc.conf`:
 
 - 如果为 intel 核芯显卡，添加 `kld_list="i915kms"`
 - AMD
-  - 如果为 HD7000 以后的 AMD 显卡，添加 `kld_list="amdgpu"` （大部分人应该使用这个，如果没用再去使用`radeonkms`）
-  - 如果为 HD7000 以前的 AMD 显卡，添加 `kld_list="radeonkms"` （这是十余年前的显卡了）
+  - 如果为 HD7000 以后的 AMD 显卡，添加 `kld_list="amdgpu"` （大部分人应该使用这个，如果没用再去使用 `radeonkms`）
+  - 如果为 HD7000 以前的 AMD 显卡，添加 `kld_list="radeonkms"` （这是十多年前的显卡了）
 
-#### 视频硬解
+### 视频硬解
 
-```
+```sh
 # pkg install xf86-video-intel libva-intel-driver
 ```
 
 或者
 
+```sh
+# cd /usr/ports/x11-drivers/xf86-video-intel/ && make install clean
+# cd /usr/ports/multimedia/libva-intel-driver && make install clean
 ```
-# cd /usr/ports/x11-drivers/xf86-video-intel/
-# make install clean
-```
 
-#### 亮度调节
+### 亮度调节
 
-##### 通用
+#### 通用
 
-一般计算机：
+对于一般计算机：
 
 ```sh
 # sysrc -f /boot/loader.conf  acpi_video="YES"
@@ -136,39 +136,55 @@ FreeBSD 15 CUEERNT 及 14-STABLE 1400508（即 2024 年 2 月 18 日后以的 ST
 # sysrc -f /boot/loader.conf  acpi_video="YES"
 ```
 
-##### 英特尔
+#### 英特尔
 
 backlight 自 FreeBSD 13 引入。
 
 ```sh
-# backlight   #打印当前亮度
+# backlight          #打印当前亮度
 # backlight decr 20  #降低 20% 亮度
-# backlight + #默认调整亮度增加 10%
-# backlight - #默认调整亮度减少 10%
+# backlight +        #默认调整亮度增加 10%
+# backlight -        #默认调整亮度减少 10%
 ```
 
-###### 参考文献
+##### 参考文献
 
 - [backlight -- configure backlight	hardware](https://man.freebsd.org/cgi/man.cgi?backlight)
-- 此部分教程经过测试适用于 renoir 显卡：
+- 经过测试，此部分教程适用于 renoir 显卡：
+
+
+>**注意**
 >
 > 在使用 Gnome 时，如果自动锁屏或息屏，可能无法再次进入桌面。见 [Bug 255049 - x11/gdm doesn't show the login screen](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=255049)。
 
-## 英伟达. Nvidia 显卡
 
-### 笔记本核显+Nvidia 独显
+## 笔记本核显 +Nvidia 独显
 
-请先按照上边的方法配置核显，也就是说不能单独用 nvidia 打开 xorg。除非你的设备支持显卡直通。
+**除非** 你的笔记本电脑支持 **显卡直通**，否则笔记本电脑一般请先按照上边的方法配置核显。
+
+
+>**警告**
+>
+>笔记本电脑一般不能单独用 nvidia 打开 xorg。**除非** 你的笔记本电脑支持 **显卡直通**。
 
 - 旧显卡：
-  - x11/nvidia-hybrid-graphics-390   用于支持双显卡切换
-  - x11/nvidia-secondary-driver-390  对应显卡驱动
-  
-　　390 驱动支持的显卡参考[FreeBSD Display Driver – X64](https://www.nvidia.cn/download/driverResults.aspx/196293/cn/),支持一些旧显卡.
 
-- 新显卡：
-  - x11/nvidia-hybrid-graphics  用于支持双显卡切换
-  - x11/nvidia-secondary-driver  对应显卡驱动
+```sh
+# pkg install nvidia-secondary-driver-390
+```
+
+或者：
+
+```sh
+# cd /usr/ports/x11/nvidia-secondary-driver-390/ 
+# make install clean
+```
+
+其中：
+
+  - x11/nvidia-hybrid-graphics-390   用于支持双显卡切换
+  - x11/nvidia-secondary-driver-390  对应的显卡驱动
+
 
 配置：
 
@@ -176,8 +192,28 @@ backlight 自 FreeBSD 13 引入。
 # sysrc kld_list+=nvidia-modeset
 # sysrc nvidia_xorg_enable=YES
 ```
+  
+390 驱动支持的显卡参考[FreeBSD Display Driver – X64](https://www.nvidia.cn/download/driverResults.aspx/196293/cn/)，支持一些旧显卡。
 
-#### 查看显卡驱动状态
+- 新显卡：
+
+```sh
+# cd /usr/ports/graphics/nvidia-drm-kmod/ && make install clean
+# cd /usr/ports/x11/nvidia-secondary-driver && make install clean
+```
+
+其中：
+
+  - graphics/nvidia-drm-kmod    用于支持双显卡切换
+  - x11/nvidia-secondary-driver 对应的显卡驱动
+
+配置：
+
+```sh
+# sysrc kld_list+="nvidia-drm.ko"
+# sysrc -f /boot/loader.conf  hw.nvidiadrm.modeset=1
+```
+### 查看显卡驱动状态
 
 开机后在 kde 设置里查看显卡默认用的是 intel 核显，终端里 `nvidia-smi` 只有 `nvidia-xorg-service 8MB`。
 
@@ -190,9 +226,9 @@ $ nvrun-vgl 程序名 # GUI 运行程序
 
 `mesa-demos` 包含一些 opengl 示例，可用于测试驱动是否可用，非必要安装。
 
-`kld_list` 中 `nvidia-modeset`  和 `i915kms` 需同时存在。
+`kld_list` 中 `nvidia-modeset`  和 `i915kms` 需要同时存在。
 
-安装包后如果 xorg 启动成功不需额外配置，如果失败用 `pciconf -lv` 查找显卡的 busid，例如
+安装包后，若 xorg 启动成功则无需额外配置；若失败，再用 `pciconf -lv` 查找显卡的 busid，例如
 
 ```sh
 vgapci0@pci0:1:0:0:	class=0x030000 rev=0xa1 hdr=0x00 vendor=0x10de device=0x0df4 subvendor=0x1043 subdevice=0x15f2
@@ -202,7 +238,7 @@ vgapci0@pci0:1:0:0:	class=0x030000 rev=0xa1 hdr=0x00 vendor=0x10de device=0x0df4
     subclass   = VGA
 ```
 
-在 `/usr/local/etc/X11/xorg-nvidia-headless.conf` 找到 `Device` 一节，并对应修改 BusID ,上面 ”pci0:1:0:0“ 
+在 `/usr/local/etc/X11/xorg-nvidia-headless.conf` 找到 `Device` 一节，并对应修改 `BusID` ,上面为 ”pci0:1:0:0“：
 
 ```sh
 Section "Device"
@@ -212,7 +248,7 @@ Section "Device"
 EndSection
 ```
 
-检验是否成功启用独显，可以用 mesa-demos 中程序测试，运行 `bounce`，用 `nvidia-smi -l 1` 观察(每隔一秒刷新一次)。没有使用 nvidia 驱动时使用了 7M 显存，启用程序时显存并没有变化。
+检验是否成功启用独显，可以用 mesa-demos 中的程序测试，运行 `bounce`，用 `nvidia-smi -l 1` 观察(每隔一秒刷新一次)。在未使用 nvidia 驱动时会使用 7M 显存，在启用程序时显存并没有变化。
 
 
 ![](../.gitbook/assets/418810292836709.png)
@@ -221,7 +257,7 @@ EndSection
  
  ![](../.gitbook/assets/380531501625801.png)
  
-#### 开启 vlc 硬解
+### 开启 vlc 硬解
 
 安装：
 
@@ -230,7 +266,7 @@ pkg install libva-vdpau-driver libvdpau libvdpau-va-gl
 ```
 或者
 
-```
+```sh
 # cd /usr/ports/multimedia/libva-vdpau-driver/ && make install clean
 # cd /usr/ports/multimedia/libvdpau/ && make install clean
 # cd /usr/ports/multimedia/libvdpau-va-gl/ && make install clean
@@ -247,51 +283,62 @@ pkg install libva-vdpau-driver libvdpau libvdpau-va-gl
 
 显存使用上升，正在使用硬解
 
-### 独显直连/台式机
+## 独显直连/台式机
 
-注意，有多个版本的 N 卡驱动，不知道该用哪个的去看 FreeBSD 手册《安装 Xorg》一节。
+注意，有多个版本的 N 卡驱动，不知道该用哪个的去看 FreeBSD 手册《X Window 系统》一节。
 
-#### 安装驱动
+### 安装驱动
 
 安装几个 nvidia 相关的包:
 
 ```sh
 # pkg install nvidia-driver nvidia-settings nvidia-xconfig nvidia-drm-kmod
 ```
+
+
+>**注意**
+>
+>如果 pkg 找不到 `graphics/nvidia-drm-kmod` 就编译安装，该包提供了 PRIME 等支持。
+
+
 或者：
 
-```
+```sh
 # cd /usr/ports/x11/nvidia-driver/ && make install clean
 # cd /usr/ports/x11/nvidia-settings/ && make install clean
 # cd /usr/ports/x11/nvidia-xconfig/ && make install clean
 # cd /usr/ports/graphics/nvidia-drm-kmod/ && make install clean
 ```
 
-```
-# sysrc kld_list+="nvidia-modeset nvidia-drm.ko" #配置驱动
+```sh
+# sysrc kld_list+="nvidia-drm.ko" #配置驱动
+# sysrc -f /boot/loader.conf hw.nvidiadrm.modeset=1 
 # reboot #重启
 ```
-**如果找不到 `graphics/nvidia-drm-kmod` 就编译安装，该包提供了 PRIME 等支持。**
 
-#### 查看驱动状态
+
+### 查看驱动状态
 
 这时候应该已经可以驱动显卡了。
 
+查看驱动信息:
+
 ```sh
-# 查看驱动信息
 $ nvidia-smi
 ```
 
 如果发现系统没有使用 nvidia 驱动需要自动生成配置文件：
 
 ```sh
-# Xorg -configure #生成配置文件。注意，该步骤不是必要！
+# Xorg -configure #生成配置文件。注意，这一步步骤并非必要！
 # cp /root/xorg.conf.new /etc/X11/xorg.conf
 ```
 
 然后重新启动就可以发现正常使用 nvidia 驱动了
 
-**注意**： 默认情况下，通过 pkg 安装的 nvidia-driver 是包含 Linux 兼容层支持的, 如果要使用 Linux 软件，需要执行以下命令，（实际上使用 linux 兼容层，以下命令是必须的。） 如果不需要使用 Linux 兼容层，则不需要执行。
+>**注意**
+>
+>在默认情况下，通过 pkg 安装的 nvidia-driver 是包含 Linux 兼容层支持的, 如果要使用 Linux 软件，需要执行以下命令（实际上使用 linux 兼容层，以下命令是必须的） ，如果不需要使用 Linux 兼容层，则不需要执行。
 
 ```sh
 # sysrc linux_enable="YES"
@@ -303,15 +350,17 @@ $ nvidia-smi
 $ kldstat
 ```
 
-会发现系统自动加载了 `linux.ko` 模块。如果觉得太臃肿，不需要 Linux 兼容层 可以自己通过 ports 编译 `nvidia-driver`,去掉 `linux compatibility support`。
+会发现系统自动加载了 `linux.ko` 模块。如果觉得太臃肿，不需要 Linux 兼容层可以自己通过 ports 编译 `nvidia-driver`,去掉 `linux compatibility support`。
 
 ## 附：拉取开发版 drm-kmod（仅限 FreeBSD-CURRENT）
 
 > **警告**
 >
 > 此部分属于实验性内容且仅限 FreeBSD-CURRENT 使用，不建议新手操作。
+
+>**注意**
 >
-> **请提前在 /usr/src 准备好一份系统源码。**
+> 请提前在 `/usr/src` 准备好一份系统源码。
 
 拉取最新的 drm-kmod 并编译安装：
 
@@ -323,11 +372,14 @@ $ kldstat
 
 或者：
 
-```
-# cd /usr/ports/devel/git/ && make install clean
+```sh
+# cd /usr/ports/devel/git/ 
+# make install clean
 ```
 
-```
+然后：
+
+```sh
 $ git clone --depth=1 https://github.com/dumbbell/drm-kmod/
 $ cd freebsd/drm-kmod
 $ git checkout -b update-to-v5.17
@@ -361,7 +413,7 @@ kldxref /boot/modules
 
 ## xorg
 
-### 可选软件包：
+可选软件包：
 
 xorg 完整包: xorg
 
@@ -371,7 +423,7 @@ xorg 最小化包: xorg-minimal（不建议）
 
 通过 pkg 安装
 
-```
+```sh
 # pkg install xorg
 ```
 
@@ -384,5 +436,10 @@ xorg 最小化包: xorg-minimal（不建议）
 
 ### 故障排除
 
-**总有人试图手动生成`xorg.conf`这个文件，这是非常错误的行为！你打不开桌面很大概率不是因为这个文件的配置有问题！你应该去检查显卡驱动或者桌面本身的问题。Xorg 几乎是不会出问题的！**
+>**警告**
+>
+>总有人试图手动生成 `xorg.conf` 这个文件，这是非常错误的行为！你打不开桌面很大概率不是因为这个文件的配置有问题！你应该去检查显卡驱动或者桌面本身的问题。Xorg 几乎是不会出问题的！
 
+## 参考文献
+
+- 详细情况可以看 [wiki/Graphics](https://wiki.freebsd.org/Graphics)
