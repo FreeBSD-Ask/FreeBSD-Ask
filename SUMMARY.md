@@ -26,7 +26,7 @@
 
 ## 第 2 章 安装 FreeBSD
 
-* [第 2.0 节 图解 FreeBSD 安装](di-2-zhang-an-zhuang-freebsd/di-2.0-jie-tu-jie-an-zhuang.md)
+* [第 2.0 节 FreeBSD 安装图解](di-2-zhang-an-zhuang-freebsd/di-2.0-jie-tu-jie-an-zhuang.md)
 * [第 2.1 节 手动安装双系统](di-2-zhang-an-zhuang-freebsd/di-2.1-jie-shuang-xi-tong-an-zhuang.md)
 * [第 2.2 节 安装 FreeBSD——基于 Hyper-V](di-2-zhang-an-zhuang-freebsd/di-2.2-jie.md)
 * [第 2.3 节 安装 FreeBSD——基于 Virtual Box](di-2-zhang-an-zhuang-freebsd/di-2.3-jie-an-zhuang-freebsd-ji-yu-virtual-box.md)
