@@ -338,13 +338,13 @@ Mark Johnston 和 Andrew Turner 合作创建了构建 arm64 bhyve 客户的扁�
 
 ## 移植 .NET (dotnet) 
 
-### 将“dotnet”原生移植到 FreeBSD，初始版本为 8，后续版本移植正在进行
+### 将“dotnet”原生移植到 FreeBSD，初始版本为 8，后续版本的移植正在进行
 
 **联系人：** Gleb Popov [arrowd@freebsd.org](mailto:arrowd@freebsd.org)
 
 在 FreeBSD 上对 .NET 的支持（**dotnet**）使开发者能够选择自己喜欢的平台而不受限制。这种兼容性使他们能够利用 FreeBSD 独特的优势，同时保持与 .NET 一致的开发环境。
 
-新的 .NET 本地移植当前可用于 **amd64** 架构（**aarch64** 支持正在进行中），将 .NET 运行时版本 8 带入 FreeBSD。这确保了完全兼容，同时利用了 FreeBSD 的性能和安全特性，使开发者能够充分利用 FreeBSD 的功能。
+新的 .NET 原生移植目前可用于 **amd64** 架构（对 **aarch64** 的支持正在进行中），将 .NET 运行时版本 8 带入 FreeBSD。这确保了完全兼容，同时利用了 FreeBSD 的性能和安全特性，使开发者能够充分利用 FreeBSD 的功能。
 
 将 .NET 移植到 FreeBSD 是一个协作努力，涉及主要社区贡献者。Gleb Popov（**arrowd@FreeBSD.org**）维护 .NET 移植，**[thefrank](https://github.com/Thefrank)**、Naram Qashat（**cyberbotx@cyberbotx.com**）和 Szczepan Ćwikliński（**[sec](https://github.com/sec)**）也做出了重要贡献。团队与 dotnet 上游项目积极合作，包括在 GitHub 上提交 PR。他们的共同努力对实现 .NET 在 FreeBSD 上的运行至关重要。
 
@@ -354,16 +354,16 @@ Mark Johnston 和 Andrew Turner 合作创建了构建 arm64 bhyve 客户的扁�
 
 ### 加强 FreeBSD 项目基础设施、提升其能力，并为用户提供更好的服务的倡议
 
-**联系人：** Joseph Mingrone \<[jrm@freebsdfoundation.org](mailto:jrm@freebsdfoundation.org)\> 和 Philip Paeps \<[phil@freebsd.org](mailto:phil@freebsd.org)\>
+**联系人：** Joseph Mingrone [jrm@freebsdfoundation.org](mailto:jrm@freebsdfoundation.org) 和 Philip Paeps [phil@freebsd.org](mailto:phil@freebsd.org)
 
-FreeBSD 基金会投资超过 10 万美元在芝加哥安装了一套服务器集群。此项投资旨在加强 FreeBSD 项目的基础设施、提升其能力，并为用户提供更好的服务。为了支持这一扩展，基金会与 NYI 合作，后者慷慨地在其芝加哥设施中提供了四个机架。
+FreeBSD 基金会投资 10 余万美元在芝加哥部署了一套服务器集群。此项投资旨在加强 FreeBSD 项目的基础设施、提升其能力，并为用户提供更好的服务。为了支持这一扩展，基金会与 NYI 合作，后者慷慨地在其芝加哥设施中提供了四个机架。
 
 新的集群配置旨在优化 FreeBSD 项目的运营效率，包括：
 
 * **两台路由器：** 用于引导网络流量。
 * **五个软件包构建器：** 旨在加速软件包发布过程。
 * **三台通用服务器：** 这些服务器将提升 FreeBSD 项目面向公众和开发者的服务（如 Bugzilla、Git、Phabricator、Wiki 等）的可用性和性能。
-* **两个软件包镜像：** 一个在芝加哥的新集群中托管，另一个由加州的 ISC 托管。这些是 FreeBSD 项目日益扩大的 pkg.FreeBSD.org 和 download.FreeBSD.org 服务器网络的一部分，战略性地分布在全球，以提供更快的软件包下载速度。
+* **两个软件包镜像站：** 一个托管在芝加哥的新集群，另一个托管在加州的 ISC。这些是 FreeBSD 项目日益扩大的 pkg.FreeBSD.org 和 download.FreeBSD.org 服务器网络的一部分，战略性地分布在全球，可提供更快的软件包下载速度。
 * **两台 CI 服务器：** 以提高自动化代码测试的速度和效率。
 * **一台管理堡垒服务器：** 这是管理集群的安全入口点，运行集群管理团队（clusteradm）工具、集群 DNS、监控以及其他管理系统所需的服务。
 
@@ -371,7 +371,7 @@ FreeBSD 基金会投资超过 10 万美元在芝加哥安装了一套服务器�
 
 FreeBSD clusteradm 团队在新集群的集成阶段发挥了关键作用。
 
-* **硬件兼容性和固件调试：** 为确保服务器固件与 FreeBSD 兼容，初期面临的多个障碍需要克服。集群依赖于能够网络启动机器，并要求可靠的带外管理。
+* **硬件兼容性和固件调试：** 为确保服务器固件与 FreeBSD 兼容，需要克服初期面临的多个障碍。集群依赖于能够网络启动机器，并要求可靠的带外管理。
 * **网络配置和自动化：** 服务器能够可靠启动后，进行了网络配置，包括集群内部 DNS、数据包过滤规则和与互联网的 BGP 会话。
 * **自动化和系统配置：** 团队的自动化工具大大简化了服务器的安装和配置。在使用临时 FreeBSD 安装克服了一些启动问题后，服务器被网络启动到集群安装镜像中，并使用标准集群构建进行安装。
 * **监控和管理集成：** 团队在管理服务器上安装和配置了监控代理，将新站点集成到项目的中央监控系统中。这使得集群的管理和故障排除更加高效，确保了稳定性和性能。
@@ -379,15 +379,15 @@ FreeBSD clusteradm 团队在新集群的集成阶段发挥了关键作用。
 
 ## Olivier Certner 的杂项更新
 
-完成
+已完成
 
 ### FreeBSD 源代码树各部分的杂项更新。
 
-**联系人：** Olivier Certner \<[olce@freebsd.org](mailto:olce@freebsd.org)\>
+**联系人：** Olivier Certner [olce@freebsd.org](mailto:olce@freebsd.org)
 
-在 2024 年第二季度，长期承包商 Olivier Certner 在树的几个不同部分积极工作：
+在 2024 年第二季度，长期承包商 Olivier Certner 在系统的多个不同部分积极工作：
 
-* [rtprio(2)](https://man.freebsd.org/cgi/man.cgi?query=rtprio&sektion=2&format=html)：将每个运行队列的队列数量从 64 更新到 256。
+* [rtprio(2)](https://man.freebsd.org/cgi/man.cgi?query=rtprio&sektion=2&format=html)：将每个运行队列的队列数量从 64 升级到 256。
 * **Vnode 回收/ZFS ARC 回收：** 审查了 [bug #275594](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=275594) 的修复，与上游沟通以获取和测试回移，并发出了一份 EN 并作为 13.3-RELEASE-p2 应用，同时开始了长期工作以改进 vnode 回收机制，并确保 ZFS 传递正确的信息。
 * **ULE 调度器：** 更新为在单个运行队列上工作，而不是为满足 POSIX 合规性而使用 3 个运行队列，以处理 SCHED\_FIFO/SCHED\_RR 优先级级别的数量。
 * **杂项：** 进行了多达 26 项评审、软件包更新，并调查了 DRM 问题。
@@ -395,11 +395,11 @@ FreeBSD clusteradm 团队在新集群的集成阶段发挥了关键作用。
 
 ## Center for Internet Security (CIS) FreeBSD 14 基准
 
-完成
+已完成
 
-这是一个全面的安全强化指南，旨在帮助安全高效地配置 FreeBSD 系统。
+这是一个全面的安全加固指南，旨在帮助安全高效地配置 FreeBSD 系统。
 
-**联系人：** Moin Rahman \<[bofh@freebsd.org](mailto:bofh@freebsd.org)\>
+**联系人：** Moin Rahman [bofh@freebsd.org](mailto:bofh@freebsd.org)
 
 此新 CIS 基准涵盖了关键领域，包括：
 
@@ -415,15 +415,15 @@ FreeBSD clusteradm 团队在新集群的集成阶段发挥了关键作用。
 
 **更多信息：** [FreeBSD 14 基准](https://freebsdfoundation.org/blog/new-cis-freebsd-14-benchmark-secure-your-systems-with-expert-guided-best-practices/)（FreeBSD 基金会）
 
-## VPP 在 FreeBSD 上
+## 在 FreeBSD 上的 VPP
 
-### 将矢量数据包处理（VPP）框架移植到 FreeBSD，以增强网络性能能力。
+### 将矢量数据包处理（VPP）框架移植到 FreeBSD，来增强网络性能能力。
 
-**联系人：** Tom Jones \<[tj@freebsdfoundation.org](mailto:tj@freebsdfoundation.org)\>
+**联系人：** Tom Jones [tj@freebsdfoundation.org](mailto:tj@freebsdfoundation.org)
 
-FreeBSD 上的矢量数据包处理（VPP）项目旨在将 VPP 这一开源的高性能用户空间网络栈移植到 FreeBSD。VPP 通过矢量化操作和并行处理优化数据包处理，非常适合软件定义网络（SDN）和网络功能虚拟化（NFV）应用。该工作于 2023 年 11 月启动，由专注于网络性能的 FreeBSD 开发者 Tom Jones 在 FreeBSD 基金会的合同下领导。
+FreeBSD 上的矢量数据包处理（VPP）项目旨在将 VPP 这一开源的高性能用户空间网络栈移植到 FreeBSD。VPP 通过矢量化操作和并行处理优化数据包处理，非常适合软件定义网络（SDN）和网络功能虚拟化（NFV）应用。该工作启动于 2023 年 11 月，由专注于网络性能的 FreeBSD 开发者 Tom Jones 在 FreeBSD 基金会的合同下领导。
 
-关键里程碑包括修复 VPP 在 FreeBSD 上的构建，以确保其能够编译和运行，验证并添加基本功能，以及开发全面的测试和回归套件以维护可靠性和稳定性。性能基准测试帮助识别和解决潜在瓶颈，并提出改进和优化建议。
+关键里程碑包括修复 VPP 在 FreeBSD 上的构建，确保其能够编译和运行，验证并添加基本功能，以及开发全面的测试和回归套件以维护可靠性和稳定性。性能基准测试帮助识别和解决潜在瓶颈，并提出改进和优化建议。
 
 文档工作专注于 FreeBSD 特定的 API 和用法，为开发者和用户提供清晰的指导。创建 VPP 的 FreeBSD 移植成功简化了安装和部署，使用户更易于使用。
 
@@ -434,33 +434,33 @@ VPP 的 FreeBSD 移植取得了成功，正在进行的工作旨在进一步增�
 
 ## 网络夏季实习
 
-完成
+已完成
 
-Naman Sood 是 FreeBSD 基金会的夏季实习生，一直在从事与网络相关的任务。Naman 开始实习时提交了对 FreeBSD 中一个防火墙（pf）的改进。例如，他们完成了 Luiz Amaral 开展的工作，以允许 pfsync（pf 的状态表同步接口）流量通过 IPv6 进行传输。他们还提交了对 pf 完全圆锥 NAT 实现 RFC 4787 REQs 1 和 3 的工作。完全圆锥 NAT 意味着来自内部 IP/端口的所有请求都映射到相同的外部 IP/端口，这使得某些设备（如 Nintendo Switch）能够在 FreeBSD 上运行 pf 的情况下正常工作。Naman 还承担了一些杂项任务，例如探索从 Klaus P. Ohrhallinger 开展的 FreeBSD 项目 VPS 中提取 TCP 检查点和故障转移的工作，以及提交 pw(8) 和 du(1) 的 bug 修复。
+Naman Sood 是 FreeBSD 基金会的夏季实习生，一直在从事与网络相关的任务。Naman 在开始实习时提交了对 FreeBSD 中一个防火墙（pf）的改进。如，他们完成了 Luiz Amaral 开展的工作，以允许 pfsync（pf 的状态表同步接口）流量通过 IPv6 进行传输。他们还提交了对 pf 完全圆锥 NAT 实现 RFC 4787 REQs 1 和 3 的工作。完全圆锥 NAT 意味着来自内部 IP/端口的所有请求都映射到相同的外部 IP/端口，这使得某些设备（如 Nintendo Switch）能够在 FreeBSD 上运行 pf 的情况下正常工作。Naman 还承担了一些杂项任务，例如探索从 Klaus P. Ohrhallinger 开展的 FreeBSD 项目 VPS 中提取 TCP 检查点和故障转移的工作，以及提交 pw(8) 和 du(1) 的 bug 修复。
 
 ## 文档和测试实习
 
-完成
+已完成
 
-2023年7月，Yan-Hao Wang 开始在基金会进行夏季实习，承担各种任务。以下是一些计划的工作内容：
+2023 年 7 月，Yan-Hao Wang 开始在基金会进行夏季实习，承担各种任务。以下是一些计划的工作内容：
 
-* 构建一个在线手册页面编辑器
+* 构建一款在线手册页面编辑器
 * 更新 FreeBSD 的 jenkins-tinderbox
 * 为 /bin、/sbin、/usr/bin 和 /usr/sbin 中的用户空间工具添加测试用例
-* 调查并开发 FreeBSD 手册页面和文档的“专家系统”
+* 研究开发 FreeBSD 手册页面和文档的“专家系统”
 * 修复 libxo 问题，并编写相关测试
 * 调查 RPI4 和 IPV6 待办事项的开发路线图
 
-FreeBSD 手册页面和文档的“专家系统”将是一个尽力而为的概念验证任务，包括将 FreeBSD 文档（如手册页面和手册）导入到向量数据库中，以便像 ChatGPT 这样的语言模型可以“阅读”它们，从而在查询与 FreeBSD 相关的问题时提供更好的答案。
+FreeBSD 手册页面和文档的“专家系统”将是一个尽力而为的概念验证任务，包括将 FreeBSD 文档（如手册页面和手册）导入到向量数据库中，以便像 ChatGPT 这样的语言模型可以“阅读”它们，从而在查询与 FreeBSD 相关的问题时能提供更好的答案。
 
 
 ## 解决 OpenSSL 3 / LLVM 16 Port 问题
 
-完成
+已完成
 
-随着 FreeBSD 主分支中 OpenSSL 更新到版本 3，许多 Port 构建错误必须在 FreeBSD 14.0 发布之前解决。与 OpenSSL 3 和 LLVM 15 的大多数关键问题已经得到修复，但使用 LLVM 16 时，约有 800 个额外的 Port 无法构建，导致在完整的 Ports 构建中跳过了 2800 个依赖 Port。穆罕默德·莫伊努尔（Moin）·拉赫曼将完成与 OpenSSL 3 和 LLVM 16 更新相关的所有 Port 问题的耗时且繁琐的修复工作。
+随着 FreeBSD 主分支中 OpenSSL 更新到版本 3，许多 Port 构建错误必须在 FreeBSD 14.0 发布之前解决。与 OpenSSL 3 和 LLVM 15 的大多数关键问题已经得到修复，但在使用 LLVM 16 时，约有 800 个额外的 Port 无法构建，导致在完整的 Ports 构建中跳过了 2800 个依赖 Port。穆罕默德·莫伊努尔（Moin）·拉赫曼将完成所有与 OpenSSL 3 和 LLVM 16 更新相关 Port 问题的耗时且繁琐的修复工作。
 
-## SIMD增强的libc
+## SIMD 增强的 libc
 
 完成
 
@@ -478,7 +478,7 @@ SIMD增强函数的存在将在新的手册页simd(7)中记录。该页面将向
 
 ## Capsicum 实习
 
-完成
+已完成
 
 从 2023 年 6 月 1 日到 9 月 1 日，Jake Freeland 将在基金会实习，致力于 Capsicum，这是 FreeBSD 的沙箱框架。Capsicum 的设计目的是限制应用程序和库的能力。Capsicum 模型简单且安全，但围绕该框架的进展和发展在近年来逐渐减缓。Capsicum 的核心思想直观易懂；一旦进入能力模式，资源获取和外部通信就会受到严格限制。围绕这一原则设计程序相对容易，但当现有的未设计为沙箱的应用程序需要在此环境中运行时，问题便随之而来。确定哪些操作会导致 Capsicum 违规是困难的，而预先打开尚未请求或命名的资源是不可能的。此外，开发人员在开始实现 Capsicum 功能之前需要对程序有充分的了解。这些原因解释了为何 Capsicum 化的努力逐渐减弱。
 
