@@ -26,74 +26,77 @@ FreeBSD 基金会以资金和资源支持 FreeBSD 操作系统的开发活动，
 
 **联系人：** Doug Rabson [dfr@rabson.org](mailto:dfr@rabson.org)
 
-[开放容器计划 (OCI)](https://opencontainers.org/) 为云原生容器格式和运行时制定了开放的行业标准，以确保平台的一致性。一个 [OCI 工作组](https://github.com/opencontainers/wg-freebsd-runtime) 正在为 FreeBSD 定义这些标准，利用 jail 进行实现，并有可能通过 FreeBSD 的 **[bhyve](https://docs.freebsd.org/en/books/handbook/virtualization/#virtualization-host-bhyve)** 虚拟化管理程序支持轻量级虚拟机（这将允许在 FreeBSD 主机上的容器中运行 FreeBSD 以外的其他操作系统）。
+[开放容器计划 (OCI)](https://opencontainers.org/) 为云原生容器格式和运行时制定了开放的行业标准，来确保平台的一致性。一个 [OCI 工作组](https://github.com/opencontainers/wg-freebsd-runtime) 正在为 FreeBSD 制定这些标准，利用 jail 进行实现，并有可能通过 FreeBSD 的 **[bhyve](https://docs.freebsd.org/en/books/handbook/virtualization/#virtualization-host-bhyve)** 虚拟化管理程序支持轻量级虚拟机（可在 FreeBSD 主机上的容器中运行 FreeBSD 以外的其他操作系统）。
 
-FreeBSD 项目成员 Doug Rabson 开发了 **ocijail**，这是一种兼容 OCI 的 FreeBSD jail 运行时实验工具。该工具旨在与容器管理系统（如 Podman 和 Buildah）集成，提供全面的容器管理体验。
+FreeBSD 项目成员 Doug Rabson 开发了 **ocijail**，这是一种兼容 OCI 的 FreeBSD jail 运行时实验工具。该工具旨在与容器管理系统（如 Podman 和 Buildah）集成，提供完善的容器管理体验。
 
 **在 OCI 容器中运行应用程序的优势：**
 
-* **标准化：** 确保不同环境之间的兼容性和互操作性，简化开发和部署过程。
+* **标准化：** 确保不同环境间的兼容性和互操作性，简化开发和部署过程。
 * **可移植性：** 封装应用程序及其依赖项，使其能够在任何支持 OCI 的环境中一致运行。
 * **高效性：** 轻量且高效，具备快速启动时间和最佳资源利用率，减少了与传统虚拟机相比的开销。
-* **隔离性：** 提供类似虚拟机的强隔离功能，但开销较小，适合微服务和现代架构。它确保应用程序独立安全运行，防止冲突并增强系统稳定性。
+* **隔离性：** 提供类似虚拟机的强隔离功能，但开销较小，适合微服务和现代架构。它确保应用程序独立安全运行，避免冲突，增强了系统稳定性。
 
-Doug Rabson 的 [GitHub 仓库](https://github.com/dfr/ocijail) 提供了与 Podman 和 Buildah 集成的初始代码。您还可以观看 Doug Rabson 在 Open Source Summit Seattle 前的 Container Plumbing Day 活动上关于 **ocijail** 实现的演讲 [这里](https://www.youtube.com/watch?v=pggcc6fi-ow)。
+Doug Rabson 的 [GitHub 仓库](https://github.com/dfr/ocijail) 有与 Podman 和 Buildah 集成的初始代码。您还可以观看 Doug Rabson 在 Open Source Summit Seattle 前的 Container Plumbing Day 活动上关于实现 **ocijail** 的演讲 [这里](https://www.youtube.com/watch?v=pggcc6fi-ow)。
 
-Doug 还撰写了一篇[文章](https://freebsdfoundation.org/freebsd-container-images/)，讨论了预构建的 FreeBSD OCI 容器镜像的实现选项。FreeBSD 项目设想将使用现有的容器镜像基础设施（例如 Docker Hub 或 [GitHub 容器注册表](https://github.blog/2020-09-01-introducing-github-container-registry/)）进行管理，或者通过 FreeBSD 自有基础设施托管镜像注册表。
+Doug 还撰写了一篇[文章](https://freebsdfoundation.org/freebsd-container-images/)，讨论了预构建的 FreeBSD OCI 容器镜像的实现功能。FreeBSD 项目设想将使用现有的容器镜像基础设施（例如 Docker Hub 和 [GitHub 容器注册表](https://github.blog/2020-09-01-introducing-github-container-registry/)）进行管理，或者通过 FreeBSD 自有基础设施托管镜像注册表。
 
 更多信息请访问：**[ocijail (GitHub)](https://github.com/dfr/ocijail)**
 
 ## UnionFS 稳定性与增强
 
-进行中
+正在进行
 
-### UnionFS 项目旨在稳定并增强其在 FreeBSD 上的实用性，重点包括：支持对只读文件系统的表面修改，支持多个共享相同基础的 jail 并简化其升级，以及通过分层的预打包镜像促进容器场景的实现。
+### UnionFS 项目旨在稳定、增强其在 FreeBSD 上的实用性，重点包括：支持对只读文件系统的表面修改，支持多个共享相同基础的 jail 并简化升级，以及通过分层的预打包镜像促进容器场景的实现。
 
-**联系人：** Olivier Certner \<[olce@freebsd.org](mailto:olce@freebsd.org)\>
+**联系人：** Olivier Certner [olce@freebsd.org](mailto:olce@freebsd.org)
 
-由 Olivier Certner 领导的 FreeBSD 上的 UnionFS 项目专注于增强和稳定 UnionFS 的功能，特别是涉及分层文件系统、jail、容器和存储优化的场景。Jason Harmening 多年来一直致力于 UnionFS 的开发，继续解决诸如 vnode 锁定、whiteout 管理和其他系统性问题等关键问题。该项目涉及大量代码重写，并进行精心的协调，以确保变更的合理性和与项目目标的一致性。重要的审查包括 D44288、D44601、D44788 和 D45398。
+由 Olivier Certner 领导的 FreeBSD 上的 UnionFS 项目专注于增强和稳定 UnionFS 的功能，特别是涉及分层文件系统、jail、容器和存储优化的场景。Jason Harmening 多年来一直致力于 UnionFS 的开发，持续解决诸如 vnode 锁、whiteout 管理和其他系统性问题等关键问题。该项目涉及大量代码重写，并进行了精心的协调，以确保变更的合理性和与项目目标的一致性。重要的审查包括 D44288、D44601、D44788 和 D45398。
 
 **项目的主要贡献：**
 
 1. **UnionFS 功能：**
 
-    * **表面修改：** 允许对只读文件系统（例如 CDROM、NFS）进行更改，而不修改原始文件。适用于创建临时或永久的私人副本。
-    * **Jail：** 支持多个 jail 共享基础文件系统，简化更新并提高存储效率。
+    * **表面修改：** 允许对只读文件系统（例如 CDROM、NFS）进行更改，而不修改原始文件。适用于创建临时/永久的私人副本。
+    * **Jail：** 支持多个 jail 共享基础文件系统，简化更新，提高存储效率。
     * **容器：** 支持具有可修改顶层的预打包容器镜像，类似于 Docker。
     * **存储优化：** 将 HDD 支持的文件系统堆叠在 SSD 支持的文件系统上，优化存储使用，同时利用二者的优势。
+
+
 2. **协调与开发：**
 
-    * Olivier Certner 与 Jason Harmening 协同，继续开发和稳定 UnionFS。Certner 的方法是尽量减少变更的范围，同时确保变更与重写 UnionFS 大部分代码的总体目标相一致。
+    * Olivier Certner 与 Jason Harmening 协作，继续开发和稳定 UnionFS。Certner 的方法是尽量减少变更的范围，同时确保变更与重写 UnionFS 大部分代码的总体目标相一致。
+
 3. **审查贡献：**
 
     * **D44288：** 实现了 VOP\_UNP\_\*，并移除了对 VSOCK vnode 的特殊处理。
     * **D44601：** 解决了对 vnode 私有数据的非法访问问题，并提出了强制卸载的测试方案。
     * **D44788：** 修复了 unionfs\_rename 中的多个锁定问题，确保变更最小化以保证稳定性。
-    * **D45398：** 重新设计了锁定方案，使其仅锁定一个 vnode，经过多轮审查后于 7 月 13 日最终提交。
+    * **D45398：** 重新设计了锁方案，使其仅锁定一个 vnode，经过多轮审查后，最终于 7 月 13 日提交。
+
 4. **咨询：**
 
-    * **Whiteout 处理 (D45987)：** 与 Kirk McKusick 和 Jason Harmening 合作，解决在 tmpfs 中重命名/rmdir 操作期间 whiteout 条目的问题，涉及 UnionFS 导出的元数据。
+    * **Whiteout 处理 (D45987)：** 与 Kirk McKusick 和 Jason Harmening 合作，解决了在 tmpfs 中重命名/rmdir 操作期间 whiteout 条目的问题，涉及 UnionFS 导出的元数据。
 
-此项目是一项全面的努力，旨在确保 UnionFS 可靠、高效，并适用于 FreeBSD 的现代用例，包括 jail、容器和复杂的存储配置。
+此项目是一项全方位的努力，旨在确保 UnionFS 可靠、高效，并适用于 FreeBSD 的现代用例，包括 jail、容器和复杂的存储配置。
 
 
 ## OpenZFS 分级速率限制
 
-进行中
+正在进行
 
 ### 该项目旨在通过引入类似配额可配置的分级速率限制，控制读/写操作次数和读/写带宽，从而提升系统性能和资源管理。
 
-**联系人：** Pawel Dawidek \<[pjd@freebsd.org](mailto:pjd@freebsd.org)\>
+**联系人：** Pawel Dawidek [pjd@freebsd.org](mailto:pjd@freebsd.org)
 
-FreeBSD 的 OpenZFS 分级速率限制项目旨在通过引入分级速率限制大幅提升 OpenZFS 文件系统的功能。这些速率限制可像配额一样进行配置，用于控制读/写操作次数和读/写带宽，从而提高系统性能并优化资源管理。
+FreeBSD 的 OpenZFS 分级速率限制项目旨在通过引入分级速率限制大幅提升 OpenZFS 文件系统的功能。这些速率限制可像配额一样进行配置，用于控制读/写操作次数和读/写带宽，从而提高系统性能，优化资源管理。
 
-OpenZFS 非常适合大规模和高要求的应用程序，如虚拟化和容器化（使用 jail 框架），这些应用程序需要对资源消耗进行精确控制。该项目将实现限制读/写/总操作次数以及读/写/总带宽的功能。限制将在 ZPL（ZFS POSIX 层）强制执行，确保下层数据集不会超过其父数据集上配置的限制。
+OpenZFS 尤为适合大规模和高要求的应用程序，如虚拟化和容器化（使用 jail 框架），这些应用程序需要对资源消耗进行精确控制。该项目将实现限制读/写/总操作次数以及读/写/总带宽的功能。限制将在 ZPL（ZFS POSIX 层）强制执行，确保下层数据集不会超过其父数据集上配置的限制。
 
 **主要功能：**
 
 * **分级强制执行：**  限制将在 ZPL 层强制执行，确保下层数据集不会超过其父数据集上配置的限制。
 * **六个新属性：**
-
   * **ratelimit bw read：** 限制每秒读取的字节数。
   * **ratelimit bw write：** 限制每秒写入的字节数。
   * **ratelimit bw total：** 限制每秒可以读取或写入的总字节数。
@@ -108,11 +111,11 @@ OpenZFS 非常适合大规模和高要求的应用程序，如虚拟化和容器
 
 ## AMD IOMMU
 
-进行中
+正在进行
 
 ### 开发完整的 FreeBSD AMD IOMMU（输入输出内存管理单元）驱动的项目。
 
-**联系人：** Konstantin Belousov \<[kib@FreeBSD.org](mailto:kib@FreeBSD.org)\>
+**联系人：** Konstantin Belousov [kib@FreeBSD.org](mailto:kib@FreeBSD.org)
 
 由 Advanced Micro Devices（AMD）与 FreeBSD 基金会共同发起的新项目，旨在开发完整的 FreeBSD AMD IOMMU（输入输出内存管理单元）驱动程序。此项目的目标是使 FreeBSD 完全支持超过 256 核的系统，并集成高级功能，如 CPU 映射和 bhyve 虚拟化支持。
 
@@ -120,35 +123,35 @@ OpenZFS 非常适合大规模和高要求的应用程序，如虚拟化和容器
 
 **更多信息：**  **[Konstantin Belousov 的代码提交 (GitHub)](https://github.com/freebsd/freebsd-src/commits/main/?author=kostikbel)**
 
-## FreeBSD 图形安装程序
+## FreeBSD 图形化安装程序
 
-进行中
+正在进行
 
-### **开发 FreeBSD 图形化安装界面的项目**
+### 开发 FreeBSD 图形化安装界面的项目
 
-**联系人：** Pierre Pronchery \<[pierre@freebsdfoundation.org](mailto:pierre@freebsdfoundation.org)\>
+**联系人：** Pierre Pronchery [pierre@freebsdfoundation.org](mailto:pierre@freebsdfoundation.org)
 
-对于首次尝试新操作系统的用户来说，安装过程是他们面临的第一个挑战，也是他们对系统的初步印象来源。如今，大多数操作系统安装程序都配备了图形界面，如 RedHat Enterprise Linux、Ubuntu 和 Debian GNU/Linux 等流行系统中所见。这种图形化方式在 UNIX 系统（包括 FreeBSD）中也变得越来越普遍。无论用户的技术水平如何，安装过程对于公众对该平台的看法至关重要。
+对于首次尝试新操作系统的用户来说，安装过程是他们面临的第一个挑战，也是他们对系统的原初印象来源。如今，大多数操作系统安装程序都搭载了图形界面，如 RedHat Enterprise Linux、Ubuntu 和 Debian GNU/Linux 等流行系统中所见。这种图形化方式在 UNIX 系统（包括 FreeBSD）中也变得越来越普遍。无论用户的技术水平如何，安装过程对于公众对该平台的看法至关重要。
 
-多个项目已将 FreeBSD 转化为面向桌面的系统，其中 GhostBSD 是一个显著例子，它提供了图形化安装程序。然而，GhostBSD 的安装程序依赖于由 Python 驱动的 Gtk+ 界面，如果将其整合到 FreeBSD 常规的镜像生成过程中，可能会大幅增加安装介质的体积。此外，这一方法还需要在 Ports 中引入并维护新的项目。
+有多个项目已将 FreeBSD 转化为面向桌面的系统，其中 GhostBSD 就是个重要的例子，它提供了图形化安装程序。然而，GhostBSD 的安装程序依赖于由 Python 编写的 Gtk+ 界面，如果将其整合到 FreeBSD 常规的镜像生成过程中，可能会大幅增加安装介质的体积。此外，这一方法还需要在 Ports 中引入、维护新的项目。
 
 为了解决这个问题，提出了一个 BSD 许可证下 man:Xdialog[1] 的替代方案，并借鉴了现有的 man:bsdinstall[8] 和 man:bsdconfig[8] 工具的知识。这个新工具名为 man:gbsddialog[1]，将提供图形化安装功能，同时与当前的安装程序基础设施共享资源。与 2006 年发布的过时的 Xdialog 不同，gbsddialog 提供了一个现代化、高效的替代方案，确保占用最小的空间并保持 FreeBSD 的简洁镜像生成流程。
 
-在 FreeBSD 14.0 版本发布后，完成了一个概念验证原型。FreeBSD 基金会随后提供了两个月的时间以完成一个可用的实现。该项目最终在 2024 年 AsiaBSDCon 大会的 WIP 环节中展示了功能齐全的图形安装程序，标志着 FreeBSD 安装过程在用户友好性和视觉吸引力方面的重大进展。
+在 FreeBSD 14.0 版本发布后，完成了概念验证原型。FreeBSD 基金会随后用两个月的时间完成了一个可用的实现。该项目最终在 2024 年 AsiaBSDCon 大会的 WIP（半成品）环节中展示了功能齐全的图形化安装程序，标志着 FreeBSD 安装过程在用户友好性和视觉吸引力方面的重大进展。
 
 **更多信息：**  **[图形安装程序 (GitHub)](https://github.com/Jehops/freebsd-doc/blob/2024q2_ff/website/content/en/status/report-2024-01-2024-03/bsdinstall.adoc)**
 
-## FreeBSD 的 RISC-V 64 位支持
+## FreeBSD 对 RISC-V 64 位的支持
 
-进行中
+正在进行
 
-### **为 64 位 RISC-V 架构提供支持的项目**
+### 为 64 位 RISC-V 架构提供支持的项目
 
-**联系人：** Mitchell Horne \<mhorne@FreeBSD.org\>
+**联系人：** [Mitchell Horne](mhorne@FreeBSD.org)
 
-**联系人：** Ruslan Bukin \<br@FreeBSD.org\>
+**联系人：** [Ruslan Bukin](br@FreeBSD.org)
 
-**联系人：** Jari Sihvola \<jsihv@gmx.com\>
+**联系人：** [Jari Sihvola](jsihv@gmx.com)
 
 FreeBSD/RISC-V 项目旨在为 [RISC-V 指令集架构](https://riscv.org/) 提供 FreeBSD 的支持。
 
@@ -156,41 +159,41 @@ FreeBSD/RISC-V 项目旨在为 [RISC-V 指令集架构](https://riscv.org/) 提�
 
 ## FreeBSD 的视觉辅助子系统
 
-进行中
+正在进行
 
 ### 为盲人、低视力和色盲用户提供子系统的项目
 
-**联系人：** Joe Mingrone \<jrm@freebsdfoundation.org\>
+**联系人：** [Joe Mingrone](<jrm@freebsdfoundation.org)
 
-该项目将为盲人、低视力和色盲用户提供一个“视觉辅助子系统”的起始点。新功能将包括盲文刷新显示框架、虚拟终端控制台的通信通道、语音合成器、高对比度 TUI 工具和一本文档化 FreeBSD 上可用辅助技术的辅助技术书籍。
+该项目将为盲人、低视力和色盲用户提供一个“视觉辅助子系统”的开端。新功能将包括盲文刷新显示框架、虚拟终端控制台的通信通道、语音合成器、高对比度 TUI 工具和一本文档化 FreeBSD 上可用辅助技术的辅助技术书籍。
 
 项目交付物包括：
 
-- 修改基础系统中的 TUI 工具，以提供高对比度选项，可能处理 GUI 终端模拟器和 vt(4) 的“NO COLOR”环境变量。手册将更新以描述新选项。
-- 新选项可以通过启动对话框菜单选择“安装”或“高对比度安装”来以高对比度运行 bsdinstall(8)。
+- 修改基础系统中的 TUI 工具，以提供高对比度选项，可能处理 GUI 终端模拟器和 vt(4) 的“NO COLOR”环境变量。更新手册描述新功能。
+- 新选项可以通过启动对话框菜单选择“安装”和“高对比度安装”来以高对比度运行 bsdinstall(8)。
 - 为 vt(4) 和语音合成器提供新通信方法。手册将更新以描述新功能。
 - 盲文设备框架，可能作为 https://brltty.app 的 Port，具有其盲文刷新显示“驱动程序”。如果时间允许，还包括其语音能力功能。
 - 新工具实现 bsdinstall(8) 对话框，作为适合屏幕阅读器的简单文本界面。
 - 新的“语音安装”选项通过新的 CLI 工具运行 bsdinstall(8)。该功能将作为概念验证提供（会议和社交网络的视频和演示），因为语音合成器和 BRLTTY 在类似 GPL 的许可下发布。
 - 在文档库中新增“可访问性”书籍，以描述新的视觉辅助子系统和 Ports 中的工具。
 
-## 音频改进
+## 改进音频
 
-进行中
+正在进行中
 
 ### 加强 FreeBSD 的音频堆栈，以改善对现代音频硬件和软件应用程序的支持。
 
-**联系人：** Christos Margiolis \<[christos@FreeBSD.org](mailto:christos@FreeBSD.org)\>
+**联系人：** Christos Margiolis [christos@FreeBSD.org](mailto:christos@FreeBSD.org)
 
-尽管以其高质量著称，FreeBSD 的音频堆栈一直处于维护不足的状态。一个新项目旨在全面增强该堆栈，解决框架、实用程序和内核驱动程序的 bug，以改善整体功能。
+尽管以其高质量著称，但 FreeBSD 的音频堆栈一直处于欠缺维护的状态。一个新项目旨在全面增强该堆栈，解决框架、实用程序和内核驱动程序的 bug，以改善整体功能。
 
-近期开发中已经取得了几项重大改进。FreeBSD 14.1-RELEASE 和 14-STABLE 现已支持异步音频设备分离，提供了更灵活的音频设备管理。过时的 “snd_clone” 框架已被 DEVFS_CDEVPRIV(9) 取代，该框架也随 FreeBSD 14.1-RELEASE 和 14-STABLE 一同发布，现代化了设备管理框架。
+近期开发中已经取得了几项重大改进。FreeBSD 14.1-RELEASE 和 14-STABLE 现已支持异步音频设备分离，提供了更灵活的音频设备管理。过时的 “snd_clone” 框架已被 DEVFS_CDEVPRIV(9) 取代，该框架也随 FreeBSD 14.1-RELEASE 和 14-STABLE 一同发布，使设备管理框架现代化。
 
-音频系统进行了多次崩溃和 bug 修复，并且在笔记本电脑上对 man:snd_hda[4] 的支持得到了改善，确保了更稳定可靠的音频性能。OSS API 的增强改善了 SNDCTL_AUDIOINFO 和 SNDCTL_ENGINEINFO IOCTL 的实现，从而提高了兼容性和功能。
+音频系统进行了多次崩溃和 bug 修复，并且在笔记本电脑上，对 man:snd_hda[4] 的支持得到了改善，确保了更稳定可靠的音频性能。OSS API 的增强改善了 SNDCTL_AUDIOINFO 和 SNDCTL_ENGINEINFO IOCTL 的实现，从而提高了兼容性和功能。
 
 新实现包括启动 man:audio[3]，一个 OSS 音频和 MIDI 库，以及接管 man:virtual_oss[8] 的维护，这两者都为扩展 FreeBSD 音频堆栈的功能作出了贡献。
 
-展望未来，该项目计划开发新的 man:audio[8] 实用程序和蓝牙管理实用程序，进一步改善用户体验。还计划对 man:mixer[3] 和 man:mixer[8] 进行增强。此外，项目将改进文档和测试套件，以确保全面的测试和用户指导。还在进行一项实验尝试，以自动化 man:snd_hda[4] 引脚补丁，如果成功，将显著简化音频配置。
+展望未来，该项目计划开发新的 man:audio[8] 工具和蓝牙管理工具，进一步改善用户体验。还计划对 man:mixer[3] 和 man:mixer[8] 进行增强。此外，项目将改进文档和测试套件，以确保全面的测试和用户指导。还在进行一项实验尝试，以自动化 man:snd_hda[4] 引脚补丁，如果成功，将显著简化音频配置。
 
 这些努力旨在全面提升 FreeBSD 的音频能力，确保更好的用户支持和功能，并巩固 FreeBSD 在高质量音频性能方面的声誉。
 
@@ -198,11 +201,11 @@ FreeBSD/RISC-V 项目旨在为 [RISC-V 指令集架构](https://riscv.org/) 提�
 
 ## CI 增强
 
-进行中
+正在进行
 
 ### 改进持续集成 (CI) 基础设施，以确保更可靠和高效的软件开发和测试过程。
 
-**联系人：** Li-Wen Hsu: \<[lwhsu@FreeBSD.org](mailto:lwhsu@FreeBSD.org)\>
+**联系人：** Li-Wen Hsu: [lwhsu@FreeBSD.org](mailto:lwhsu@FreeBSD.org)
 
 在 2024 年第一季度，我们与项目贡献者和开发人员合作，解决他们的测试需求。同时，我们与外部项目和公司合作，通过在 FreeBSD 上进行更多测试来增强他们的产品。
 
@@ -216,17 +219,17 @@ FreeBSD/RISC-V 项目旨在为 [RISC-V 指令集架构](https://riscv.org/) 提�
 
 **更多信息：**  **[持续集成 (GitHub)](https://github.com/Jehops/freebsd-doc/blob/2024q2_ff/website/content/en/status/report-2024-01-2024-03/ci.adoc)**
 
-## FreeBSD 作为 Tier I cloud-init 平台
+##  将 FreeBSD 作为 cloud-init 一级平台
 
-进行中
+正在进行
 
-### 增强对 cloud-init 的支持，使 FreeBSD 成为 Tier I 平台，以改善其在云环境中的集成和可用性。
+### 增强对 cloud-init 的支持，使 FreeBSD 成为 Tier I 平台，改善FreeBSD 在云环境中的集成和可用性。
 
-**联系人：** Mina Galić \<[freebsd@igalic.co](mailto:freebsd@igalic.co)\>
+**联系人：** Mina Galić [freebsd@igalic.co](mailto:freebsd@igalic.co)
 
-Cloud-init 现已成为在云中设置服务器的标准。在过去一年半的时间里，FreeBSD 在支持 cloud-init 方面取得了显著进展。今年的重点是与 cloud-init 开发者和 FreeBSD 基金会密切合作，增强 FreeBSD，使 cloud-init 团队能够直接测试未来对 FreeBSD 代码路径的更改。
+Cloud-init 现已成为在云中设置服务器的标准。在过去一年半的时间里，FreeBSD 在支持 cloud-init 方面取得了显著进展。今年的重点是同 cloud-init 开发者和 FreeBSD 基金会密切合作，增强 FreeBSD，使 cloud-init 团队能够直接测试未来对 FreeBSD 代码路径的更改。
 
-为此，FreeBSD 必须在 LXD（和 Incus）的控制下运行，并由 lxd-agent（或 incus-agent）管理。最近，已经取得了一些显著的改进。一个小型测试框架在 sh 中开发，正在逐步迁移到 OpenTofu/Terraform。该框架安装并测试 cloud-init-devel 和 cloud-init 的最新版本。为支持这一点，创建了一个专用的公共代码库，包含 FreeBSD 13 和 14 在 amd64 和 aarch64 上的 cloud-init-devel 和 cloud-init 的最新版本。
+为此，FreeBSD 必须在 LXD（和 Incus）的控制下运行，并由 lxd-agent（或 incus-agent）管理。最近，已经取得了一些可见的改进。一个小型测试框架在 sh 中开发，正在逐步迁移到 OpenTofu/Terraform。该框架安装测试 cloud-init-devel 和 cloud-init 的最新版本。为支持这一点，创建了一个专用的公共代码库，包含 FreeBSD 13 和 14 在 amd64 和 aarch64 上的 cloud-init-devel 和 cloud-init 的最新版本。
 
 此外，Linux vsock 测试框架也已移植到 FreeBSD。基于 HyperV Socket 驱动程序创建了 VirtIO Socket 驱动程序的驱动程序框架，导致 HyperV 套接字的多个改进。这些改进已部分接受，但仍需更多工作。
 
@@ -238,15 +241,15 @@ Cloud-init 现已成为在云中设置服务器的标准。在过去一年半的
 
 ## FreeBSD 上的 OpenStack
 
-进行中
+正在进行
 
 ### FreeBSD 上的 OpenStack 项目旨在将 OpenStack 云基础设施与 FreeBSD 操作系统无缝集成，利用 FreeBSD 的独特功能，同时保持与 OpenStack 标准的兼容性。
 
-**联系人：** Chih-Hsin Chang \<[starbops@hey.com](mailto:starbops@hey.com)\>，Li-Wen Hsu \<[lwhsu@FreeBSD.org](mailto:lwhsu@FreeBSD.org)\>
+**联系人：** Chih-Hsin Chang [starbops@hey.com](mailto:starbops@hey.com)，Li-Wen Hsu [lwhsu@FreeBSD.org](mailto:lwhsu@FreeBSD.org)
 
 **第一季度：**
 
-在 2024 年第一季度，该项目取得了重大进展。提交了 BSDCan 2024 的提案，团队参加了 AsiaBSDCon 2024，分享了移植经验并收集了有价值的反馈，这帮助完善了项目的方向。第一阶段的任务进行了审查，进行了必要的调整，并将第二和第三阶段的计划与长期目标进行了对齐。一项关键技术成就是验证了 bhyve 串口控制台通过 TCP 的功能。还制作了一个演示视频，以展示项目的进展和特性。
+在 2024 年第一季度，该项目取得了重大进展。提交了 BSDCan 2024 的提案，团队参加了 AsiaBSDCon 2024，分享了移植经验并收集了有价值的反馈，这帮助完善了项目的方向。第一阶段的任务进行了审查，进行了必要的调整，并将第二和第三阶段的计划与长期目标进行了对齐。一项关键技术成就是验证了 bhyve 串口控制台通过 TCP 的功能。还制作了一个演示视频，展示了项目的进展和特性。
 
 **第二季度：**
 
@@ -262,13 +265,13 @@ Cloud-init 现已成为在云中设置服务器的标准。在过去一年半的
 
 ## WiFi 更新 – Intel 驱动程序和 802.11ac
 
-进行中
+正在进行
 
-### 此更新支持当前一代 Intel WiFi 设备和 802.11ac 标准，以改善无线连接性。
+### 此更新支持了当前一代 Intel WiFi 设备和 802.11ac 标准，来改善无线连接性。
 
-**联系人：** Björn Zeeb \<[bz@freebsd.org](mailto:bz@freebsd.org)\>
+**联系人：** Björn Zeeb [bz@freebsd.org](mailto:bz@freebsd.org)
 
-在 2023 年 11 月，FreeBSD 基金会启动了一项重大举措，以改善 iwlwifi 驱动程序，该驱动程序对支持 FreeBSD 上的 Intel Wi-Fi 芯片至关重要。这个项目由 FreeBSD 开发者 Cheng Cui 领导，并与 Björn Zeeb 合作，旨在通过多个关键里程碑增强 FreeBSD 的无线功能。
+在 2023 年 11 月，FreeBSD 基金会启动了一项重大举措，来改善 iwlwifi 驱动程序，该驱动程序对支持 FreeBSD 上的 Intel Wi-Fi 芯片至关重要。这个项目由 FreeBSD 开发者 Cheng Cui 领导，并与 Björn Zeeb 合作，旨在通过多个关键里程碑增强 FreeBSD 的无线功能。
 
 项目的主要目标之一是解决影响 iwlwifi 驱动程序的多个关键问题报告（PR）。在 PR 271979、273985、274382 和 275710 中记录的问题通过系统化和创新的调试技术成功解决。例如，使用铝箔包裹的纸板隔离信号是一种新颖的方法，证明在识别和修复这些问题上效果显著。
 
@@ -288,11 +291,11 @@ Cloud-init 现已成为在云中设置服务器的标准。在过去一年半的
 
 ---
 
-## Bhyve 改进
+## 改进 Bhyve
 
 对 FreeBSD 虚拟机监视器的各种改进
 
-**联系人：** Chris Moerz \<freebsd@ny-central.org\>
+**联系人：** [Chris Moerz](freebsd@ny-central.org)
 
 ### I/O 性能测量
 
@@ -300,7 +303,7 @@ Cloud-init 现已成为在云中设置服务器的标准。在过去一年半的
 
 ### 虚拟机工具
 
-FreeBSD 基金会的企业工作组识别出需要类似于 jail 的 Bhyve 工具。这促成了“vmstated”的开发，这是一个使用基本 FreeBSD 工具构建的守护进程和管理实用程序。Vmstated 通过 UCL 配置，提供灵活的虚拟机管理，具有类似于 jail 的命令集和状态转换钩子等功能。该工具已在 ports 集合中作为 sysutils/vmstated 提供，并在 GitHub 上持续更新。欢迎贡献和反馈。
+FreeBSD 基金会的企业工作组认为需要类似于 jail 的 Bhyve 工具。这促成了“vmstated”的开发，这是一款使用基本 FreeBSD 工具构建的守护进程和管理实用程序。Vmstated 通过 UCL 配置，提供灵活的虚拟机管理，具有类似于 jail 的命令集和状态转换钩子等功能。该工具已在 ports 中作为 sysutils/vmstated 提供，并在 GitHub 上持续更新。欢迎贡献和反馈。
 
 ### 文档更新
 
@@ -312,7 +315,7 @@ Mark Johnston 和 Andrew Turner 合作创建了构建 arm64 bhyve 客户的扁�
 
 **更多信息：** [Bhyve 更新（GitHub）](https://github.com/Jehops/freebsd-doc/blob/2024q2_ff/website/content/en/status/report-2024-01-2024-03/bhyve.adoc)
 
-## FreeBSD 在 Azure 和 Hyper-V 上
+## 在 Azure 和 Hyper-V 上的 FreeBSD
 
 ### 自动化 Azure Marketplace 中 FreeBSD 镜像的构建过程
 
@@ -333,11 +336,11 @@ Mark Johnston 和 Andrew Turner 合作创建了构建 arm64 bhyve 客户的扁�
 * **自动化镜像构建和发布过程：**  正在进行的努力旨在自动化镜像构建和发布过程，以将这些改进合并到 FreeBSD 的 src/release/ 仓库中。
 * **构建和发布快照构建：**  快照构建正在开发和发布到 Azure 社区画廊，为用户提供最新的开发和更新。
 
-## .NET (dotnet) 移植
+## 移植 .NET (dotnet) 
 
-### 将“dotnet”本地移植到 FreeBSD，初始版本为 8，后续版本移植正在进行中
+### 将“dotnet”原生移植到 FreeBSD，初始版本为 8，后续版本移植正在进行
 
-**联系人：** Gleb Popov \<[arrowd@freebsd.org](mailto:arrowd@freebsd.org)\>
+**联系人：** Gleb Popov [arrowd@freebsd.org](mailto:arrowd@freebsd.org)
 
 在 FreeBSD 上对 .NET 的支持（**dotnet**）使开发者能够选择自己喜欢的平台而不受限制。这种兼容性使他们能够利用 FreeBSD 独特的优势，同时保持与 .NET 一致的开发环境。
 
