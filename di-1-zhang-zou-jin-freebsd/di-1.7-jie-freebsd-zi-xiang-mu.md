@@ -683,3 +683,461 @@ Fuse(4) 的内核 API（内核与文件系统守护进程之间的通信协议�
 
 预计于 2019 年夏季完成。
 
+
+## SDIO 集成
+
+完成
+
+该项目旨在集成 SDIO 支持，为支持 SDIO 连接的 WiFi 模块（如 Raspberry Pi 等设备）迈出第一步。
+
+Raspberry Pi 3 和 Zero W，以及 3A+ 和 3B+ 都基于博通的 FullMAC WiFi 设备集成了 WLAN。这些设备通过 SDIO WiFi 连接。目前，FreeBSD 既不支持 FullMAC WLAN 驱动程序，也没有其他 SDIO WiFi 连接。
+
+基于 Ilya Bakulin 的 MMCCAM SDIO 堆栈工作，该项目将帮助整合进一步的工作，并在必要时进行测试和增强，以提供 SDIO WiFi 通信基础设施。
+
+
+## USB 大容量存储目标
+
+完成
+
+该项目提供了一个 USB 大容量存储目标，使得运行在嵌入式设备上的 FreeBSD 能够作为 USB 闪存驱动器出现，为用户提供必要的文档和驱动程序，以便充分利用嵌入式目标。这在教学和产品环境中是非常宝贵的，成为出色的“开箱即用”体验的一部分。
+
+许多嵌入式板，例如 Beaglebone Black，提供 USB 目标或 USB On-the-Go (OTG) 接口。这允许嵌入式目标充当 USB 设备，并向 USB 主机（可能运行 FreeBSD、Linux、Mac OS、Windows、Android 或其他操作系统）呈现一个或多个接口（USB 设备类）。USB 设备类包括音频输入或输出（例如耳机）、大容量存储（USB 闪存驱动器）、人机接口设备（键盘、鼠标）、通信（以太网适配器）等。
+
+## 博通 Wi-Fi 现代化
+
+完成
+
+该基金会资助了 Landon Fuller 的工作，以现代化 FreeBSD 对博通 Wi-Fi 适配器的支持，为 FreeBSD 上全面的博通 Wi-Fi 支持奠定基础，包括启用从博通的 ISC 许可的 Linux 驱动程序中采用额外的 softmac PHY 和 fullmac 设备支持。
+
+此前，FreeBSD 对博通 Wi-Fi 适配器的支持由 bwn(4) 和 siba(4) 驱动程序提供，其中 siba(4) 负责调解 bwn(4) 访问通过片上 SSB 互连可访问的硬件核心。该项目将当前的 bwn(4) 驱动程序移植到 bhnd(4)——这是为了替换不再支持的 siba(4) 驱动程序而编写的，且被 FreeBSD/MIPS 博通移植使用——提供了一个统一的接口，支持 SSB 和 BCMA 互连，兼容 Wi-Fi 适配器和 Wi-Fi SoC。
+
+该项目于 2018 年 2 月完成，并将在 FreeBSD 12.0 中发布。
+
+
+## 开箱即用的无头模式
+
+完成
+
+该基金会资助了 Edward Napiarala 的工作，以提供 USB 供电功能（USB On The Go，USB OTG）的无头操作支持。虽然 FreeBSD 具备 OTG 支持，但默认情况下未启用或配置，且往往无法正常工作。这使得在嵌入式设备上使用 FreeBSD（例如 Raspberry Pi Zero）变得繁琐。
+
+该项目旨在添加开箱即用的 USB OTG 支持，使 FreeBSD 对于缺乏设备来设置无头操作的新手以及寻求更友好的选项的公司来说，更具吸引力。
+
+该项目的成功完成意味着用户只需下载映像，将其复制到 SD 卡上，通过 MicroUSB 电缆将开发板连接到笔记本电脑，然后…就完成了：控制台和网络将作为虚拟 USB 设备出现，随时可以使用。这将显著降低新用户在嵌入式设备上使用 FreeBSD 的门槛，使我们与 Linux 处于同一水平。
+
+## ZFS 的“RAID-Z 扩展”功能开发
+
+完成
+
+Zettabyte 文件系统（ZFS）是一种组合文件系统和逻辑卷管理器，旨在防止数据损坏并支持高存储容量。
+
+该基金会资助 Matthew Ahrens 开发“RAID-Z 扩展”功能。这将允许向现有的 RAID-Z 组添加额外的磁盘，例如将一个 4 宽的 RAID-Z1 组扩展为一个 5 宽的 RAID-Z1 组。
+
+这将通过“重新排列”所有现有数据来实现，将数据重新写入新的磁盘排列中，在逻辑 RAID-Z 组的末尾（因此在每个物理磁盘的末尾）留出一个新的连续空闲空间。重新排列的数据仍将保持原有的逻辑条带宽度，即数据与校验的比例将保持不变，而新写入的数据将使用新的逻辑条带宽度，具有改进的数据与校验比。重新排列的过程将在在线进行的同时，其他 zfs 和 zpool 操作也可以进行。
+
+该项目已完成。
+
+## 将 'blacklistd' 守护进程移植到 FreeBSD
+
+完成
+
+该项目提供了一个轻量级的守护进程，可以实时通知各种守护进程的“恶意行为”尝试。该守护进程将攻击的数据存储在一个持久化数据库中，并可以更新数据包过滤器，以阻止来自攻击者网络地址的访问。
+
+该项目于 2016 年 6 月完成，并在此之后进行了额外改进，并在 FreeBSD 11.0 中发布。
+
+## 在 FreeBSD 中集成 VIMAGE 支持
+
+完成
+
+该项目旨在完善 VIMAGE 网络栈代码，使其准备好投入生产。首先将更新以前在 Perforce 仓库中审查过的工作，逐步测试补丁，向社区展示，并将其纳入 FreeBSD SVN 基系统仓库的头部/分支。重点关注的两个主要领域是 (i) 网络栈的拆卸和排序，以及 (ii) 在拆卸过程中填补最后剩余的内存泄漏。
+
+该项目于 2016 年中完成。VIMAGE 是 FreeBSD 11 的一部分。在 2017 年 10 月，为了准备 FreeBSD 12.0，VIMAGE 默认启用。
+
+## 增强网络栈虚拟化项目
+
+完成
+
+FreeBSD 开发者：Bjoern Zeeb
+
+虚拟化的网络栈将显著增强 FreeBSD 的 jail 功能，使 jail 可以拥有自己完整且本地管理的网络栈，包括防火墙、路由和 IPsec 配置。基金会将资助 FreeBSD 网络开发者 Bjoern Zeeb 来增强现有原型，目前正在合并到 FreeBSD 8.x，并提供代码审查。
+
+该项目于 2011 年完成。
+
+## FreeBSD 的多路径 TCP
+
+完成
+
+多路径操作的 TCP 扩展（MPTCP）允许一个多宿主主机在单个 TCP 会话中利用多个网络接口或路径。该协议目前正在 IETF 中标准化，参考文献为 [RFC 6824](http://tools.ietf.org/html/rfc6824)。
+
+基金会资助了一个专注于 FreeBSD 多路径 TCP 的硕士研究奖学金。从现有实现出发，网络栈的设计将被完善，并增加其他功能，目标是在 2015 年中期发布一个功能性实现。还计划在 2014 年和 2015 年初进行几次增量发布。
+
+该项目的目标是设计和实现一个 FreeBSD MPTCP 栈，以促进进一步的 MPTCP 研究活动。关键在于实现一个可扩展的设计，以简化拥塞控制、调度和路径管理方案的实验。
+
+之前已经发布了一个 [实验内核补丁](http://caia.swin.edu.au/urp/newtcp/mptcp/tools.html)。正在对 HEAD 分支进行持续开发。
+
+目前正在进行的功能包括扩展单路径模块 CC 代码以与 MPTCP 连接一起使用，以及添加一个模块化的数据包调度框架。此过程的一部分涉及重构现有 MPTCP 会话管理代码的大部分，以及创建新的多路径特定协议挂钩，这些步骤减少了 MPTCP 代码与现有 TCP 代码之间的耦合。
+
+基金会很高兴能够支持使用 FreeBSD 的大学研究，并通过这样的赞助为项目的增强作出贡献。
+
+## FreeBSD ARMv8 64 位 ARM 移植
+
+完成
+
+开发者：Andrew Turner 和 Semihalf sp.j.
+
+官方称为 AArch64 的 64 位 ARM 架构也被称为 ARMv8 和 arm64。与广泛采用 32 位 ARM 的嵌入式和移动市场相比，预计 64 位 ARM 架构将在传统服务器市场中找到应用。
+
+FreeBSD 基金会与 ARM、Cavium、Semihalf sp.j. 和 Andrew Turner 合作，将 FreeBSD 移植到 arm64。Cavium 直接向基金会提供支持，为开发社区提供工程专业知识和硬件。Cavium 的 ThunderX 平台与 FreeBSD 作为服务器操作系统的优势非常契合，支持在单个封装中最多 48 个核心。ThunderX 将是该项目的初始参考目标，但后续还会移植到其他 arm64 平台。
+
+该项目的总体目标是使 FreeBSD/arm64 达到一级地位，包括发布媒体和预构建的软件包集。有关 arm64 移植的更多信息，请访问 [FreeBSD wiki](https://wiki.freebsd.org/arm64)，正在进行中的源代码树可通过 FreeBSD 基金会的 [GitHub 账号](https://github.com/FreeBSDFoundation/freebsd/tree/arm64-dev) 获得。
+
+## Newcons 控制台驱动集成
+
+完成
+
+FreeBSD 开发者：Aleksandr Rybalko、Ed Maste
+
+Newcons 项目交付了一个更新的 FreeBSD 控制台驱动，增加了对 Unicode 的支持，并改善了对图形模式的支持。这提高了与 X11 和内核模式设置 (KMS) 图形驱动的互操作性。
+
+该项目已集成，并在 FreeBSD 10.1 中进行了初始发布。对新控制台基础设施的其他改进仍在进行中。
+
+## 改进硬件性能计数器支持
+
+完成
+
+FreeBSD 开发者：Joseph Koshy
+
+在 Google 的慷慨资助下，FreeBSD 基金会与 Joseph Koshy 合作，旨在改善 FreeBSD 中的硬件性能计数器支持。该项目的目标是在 hwpmc 驱动中添加调用图支持。通过调用图支持，开发人员可以更清晰地可视化性能问题，了解确切的代码路径，而不仅仅是某个特定函数，因为该函数可能仅通过一条路径显示出问题，而其他路径却没有问题。除了对软件的改进外，Google 还提供了资金用于购买两台现代 CPU 机器，用于开发和测试。这些新机器被放置在由加拿大安大略省的 Sentex Corp 托管的网络性能集群中。
+
+以下是更详细的新增功能列表：
+
+* hwpmc 驱动现在支持调用链捕获，适用于内核和用户进程。
+* 对于 i386 和 amd64 架构的内核（hwpmc 可用的架构），机器相关和无关的部分进行了增强，以支持 hwpmc(4) 调用图支持所需的额外功能。
+* libpmc(3) 库已增强，以处理内核模块收集的新信息。
+* pmcstat(8) 工具使用捕获的调用链数据生成两种类型的报告：(a) 传统的 gprof(1) 调用图和 (b) 调用链摘要，为收集到的数据提供两种不同的“视图”。
+* 驱动程序 hwpmc(4)、命令行工具 pmcstat(8) 和接口库 pmc(3) 的手册页现在反映了可用的新功能。
+
+该项目于 2007 年完成。
+
+## 确保安全地移除挂载文件系统的磁盘设备
+
+完成
+
+FreeBSD 开发者：Edward Tomasz Napierala
+
+该项目旨在使 FreeBSD 能够容忍活动磁盘设备的移除，例如当用户物理拔掉带有挂载文件系统的 USB 闪存设备时。目前，在这种情况下，系统可能会出现崩溃。该工作涉及在内核的关键部分添加适当的引用计数，并修改文件系统以正确处理“设备丢失”错误。
+
+该项目于 2009 年完成。
+
+## 对 FreeBSD TCP 堆栈的改进
+
+完成
+
+FreeBSD 开发者：Lawrence Stewart 和 [斯威本科技大学](http://caia.swin.edu.au/) 的高级互联网架构中心（CAIA）
+
+该三部分项目将包括实现适当字节计数（ABC）RFC3465 支持、将 CAIA 的 TCP 研究统计信息（SIFTR）TCP 分析工具适配并合并到 FreeBSD 中，以及对 TCP 重新组装队列进行改进。
+
+该项目于 2009 年 7 月完成。
+
+## 无线网状网络支持
+
+完成
+
+FreeBSD 开发者：Rui Paulo
+
+Rui Paulo 将为 FreeBSD 实现即将推出的 IEEE 802.11s 无线网状网络标准。预计无线网状网络将变得普遍，因为路由器和网络设备将部署它们，从而允许动态构建和扩展无线网络。对该标准的支持将使 FreeBSD 用户能够利用这一新技术。
+
+
+#@ 扁平设备树项目
+
+完成
+
+FreeBSD 开发者：Rafal Jaworowski
+
+Rafal Jaworowski 和 Semihalf 获得了一笔资助，以为 FreeBSD 提供对扁平设备树（FDT）技术的支持。该项目允许以平台中立和可移植的方式描述计算机系统的硬件资源及其依赖关系。
+
+这一功能的主要消费者是嵌入式系统，其硬件资源分配无法探测或自我发现。FDT 的概念源自 Open Firmware IEEE 1275 设备树的概念（常规 Open Firmware 实现的一部分），并且在其他部署中作为 Power.org 嵌入式平台参考规范（ePAPR）的基础。
+
+您可以在 [http://wiki.freebsd.org/FlattenedDeviceTree](http://wiki.freebsd.org/FlattenedDeviceTree) 上了解更多关于该项目的信息。
+
+该项目于 2010 年完成。
+
+## 高可用存储项目
+
+FreeBSD 开发者：Pawel Jakub Dawidek
+
+Pawel Jakub Dawidek 获得了一笔资助，以实施存储复制软件，使用户能够使用 FreeBSD 操作系统进行高可用配置，其中数据必须在集群节点之间共享。该项目部分由 [OMCnet Internet Service GmbH](http://www.omc.net/ "OMCnet Internet Service GmbH") 和 [TransIP BV](https://www.transip.nl/ "TransIP BV") 资助。
+
+该软件将允许通过 TCP/IP 网络对任何存储介质（GEOM 提供者，使用 FreeBSD 术语）进行同步块级复制，并实现快速故障恢复。HAST 将利用 GEOM 基础设施提供存储，这意味着它将与文件系统和应用程序无关，并可以与任何现有的 GEOM 类结合使用。在主节点发生故障的情况下，集群将能够切换到从节点，检查并挂载 UFS 文件系统或导入 ZFS 池，并继续工作而不会丢失任何数据。
+
+该项目于 2010 年完成。
+
+## 网络栈虚拟化项目
+
+完成
+
+FreeBSD 开发者：Marko Zec
+
+网络栈虚拟化项目旨在扩展 FreeBSD 内核，以维护多个独立的网络状态实例。这将允许系统上不同 jail 之间实现完全的网络独立性，包括为每个 jail 提供自己的防火墙、虚拟网络接口、流量限制、路由表和 IPSEC 配置。
+
+该原型与 FreeBSD -CURRENT 保持同步，目前已经足够稳定以进行测试。它虚拟化了基本的 INET 和 INET6 内核结构和子系统，包括 IPFW 和 PF 防火墙等。下一步是对 IPSEC 代码进行完全虚拟化，并完善和记录管理 API。短期目标是为 FreeBSD 7.0-RELEASE 提供生产级内核支持的虚拟化网络（作为可插拔内核替换），同时继续与 -CURRENT 保持代码同步，以便将来可能合并。
+
+该项目于 2008 年完成。
+
+## 基于 FreeBSD Jail 的虚拟化项目
+
+完成
+
+FreeBSD 开发者：Bjoern Zeeb
+
+Bjoern A. Zeeb 获得了一项资助，以改善 FreeBSD 的基于 jail 的虚拟化基础设施，并继续开发虚拟网络栈。他的雇主 CK Software GmbH 也在以工时形式匹配基金会的资助。
+
+在过去的十年中，FreeBSD 以其基于 jail 的虚拟化而闻名。随着虚拟网络栈的引入，FreeBSD 的操作系统级虚拟化达到了一个新的高度。
+
+该项目包括对两年的导入工作和开发进行清理，更重要的是，带来了网络栈拆解的基础设施。干净地关闭 FreeBSD 中的网络栈将是虚拟化领域面临的主要挑战，以使新特性达到 9.x 版本生命周期的生产就绪质量。
+
+此外，该项目还包括虚拟网络栈框架的通用化，将公共代码分离出来。这将提供一个基础设施，并将最小化开销地简化进一步子系统（如 SYSV/Posix IPC）的虚拟化。所有进一步虚拟化的子系统将立即受益于共享的调试设施，这是新技术早期采用者的一个重要特性。
+
+“改进的基于 jail 的虚拟化支持将继续保持轻量且易于管理，这将是未来几年的一大杀手级特性，”FreeBSD 开发者 Bjoern A. Zeeb 说。他还补充道：“这将使人们能够对他们的 FreeBSD 服务器进行分区，无需大量硬件就能运行模拟，或者在托管环境中相对轻松高效地提供数千个虚拟实例。虽然这符合绿色计算的趋势，但它也增强了 FreeBSD 的虚拟化组合，支持 Xen 或其他更重量级的虚拟机监控器，可以根据需要与 jail 混合使用。”
+
+该项目的资助持续至 2010 年 7 月。
+
+## DTrace 用户空间项目
+
+完成
+
+FreeBSD 开发者：Rui Paulo
+
+Rui Paulo 获得了一项资助，以在 FreeBSD 中添加 DTrace 用户空间支持。
+
+DTrace 是一个通用且轻量的跟踪框架，允许管理员、开发者和用户调查系统故障或性能瓶颈的原因。自 FreeBSD 8.0 起，FreeBSD 操作系统就支持内核专用的 DTrace，但缺少用户空间支持。具备用户空间支持的 DTrace 允许检查用户空间软件及其与内核的关联，从而提供更清晰的后台运行情况。
+
+该项目将首先集中于添加 libproc 支持，包括符号与地址的映射、地址与符号的映射、断点设置以及 rtld 与 DTrace 的交互。接下来将重点关注 DTrace 进程控制，导入 pid 提供者并将其适配到 FreeBSD，同时移植用户空间静态定义探测提供者 (usdt)。最后将引入 plockstat 提供者。
+
+“通过拥有用户空间 DTrace 支持，公司可以使其产品在 FreeBSD 上表现得更好，因为他们现在可以访问这个出色的工具，”FreeBSD 开发者 Rui Paulo 说。他还表示：“当我们将用户空间支持与内核侧的 DTrace 支持结合时，我们还可以使 FreeBSD 成为更好的操作系统，因为我们可以更容易地调查性能瓶颈。”
+
+该项目于 2010 年 9 月完成。
+
+## DAHDI FreeBSD 驱动程序移植
+
+完成
+
+FreeBSD 开发者：Max Khon
+
+Max Khon 获得了一项资助，以完成 DAHDI FreeBSD 驱动程序的移植。
+
+DAHDI/FreeBSD 项目的目的是使 FreeBSD 能够作为软件 PBX 解决方案的基础系统。
+
+DAHDI（Digium/Asterisk 硬件设备接口）是一个开源设备驱动程序框架和一套用于 E1/T1、ISDN 数字卡和 FXO/FXS 模拟卡的硬件驱动程序（[http://www.asterisk.org/dahdi/](http://www.asterisk.org/dahdi/)）。Asterisk 是最流行的开源软件 PBX 解决方案之一（[http://www.asterisk.org/](http://www.asterisk.org/)）。
+
+该项目包括将 DAHDI 框架和 E1/T1、FXO/FXS 模拟卡以及 ISDN 数字卡的硬件驱动程序移植到 FreeBSD。这还包括 TDMoE 支持、软件和硬件回声消除（Octasic, VPMADT032）以及硬件转码支持（TC400B）。该工作在官方的 DAHDI SVN 仓库中进行，并与 Digium 的 DAHDI 团队密切合作。
+
+目前，大部分 DAHDI 组件已被移植，包括 DAHDI 框架本身、硬件驱动程序、TDMoE 驱动程序、软件和硬件回声消除（Octasic, VPMADT032）以及硬件转码（TC400B）。该项目托管在 [官方 DAHDI SVN 仓库](http://svn.digium.com/svn/dahdi/freebsd/) 中。
+
+FreeBSD ports 集合中的 [misc/dahdi](http://www.freshports.org/misc/dahdi/) 现在包含 DAHDI/FreeBSD 的最新组件以及由于许可和版权限制而不在 DAHDI/FreeBSD SVN 中提供的一些内容。这些内容包括 OSLEC 回声消除器和实验性的 zaphfc 驱动程序。
+
+该项目于 2010 年 9 月完成。
+
+## 资源容器项目
+
+完成
+
+FreeBSD 开发者：Edward Tomasz Napierala
+
+Edward Tomasz Napierala 获得了一项资助，以实现资源容器和简单的每个 jail 资源限制机制。
+
+与 Solaris 区域（zones）不同，当前的 FreeBSD Jail 实现并不提供每个 jail 的资源限制。因此，用户通常被迫用其他虚拟化机制替代 jail。该项目的目标是创建一个统一的框架来控制资源使用，并利用该框架实现每个 jail 的资源限制。未来，同一框架可能会用于实现更复杂的资源控制，例如层次资源限制，或实现类似于 AIX WLM 的机制。它还可以用于提供精确的资源使用计量，以便于管理或计费。
+
+“基金会决定资助这个项目真是太好了，”Edward 表示。“这将使基于 jail 的虚拟化在许多场景中成为更好的选择，例如对于虚拟专用服务器提供商。”
+
+该项目于 2011 年初完成。
+
+## BSNMP 改进项目
+
+完成
+
+FreeBSD 开发者：Shteryana Shopova
+
+FreeBSD 基金会很高兴宣布 Shteryana Shopova 获得了一项资助，用于改进 BSNMP。
+
+该项目包括对现有 FreeBSD SNMP 框架的几项增强功能，其中包括符合 SNMPv3 的用户身份验证、数据包加密和基于视图的访问控制。此外，该项目还包括一个新模块，该模块将允许对 FreeBSD 无线网络栈进行完整的 SNMP 管理和监控。项目完成后，FreeBSD 将成为构建基于开源的嵌入式无线设备的首选操作系统，这得益于其先进的无线网络栈能力，以及由 bsnmpd(1) 提供的轻量级、安全且完整的管理解决方案。使用 bsnmpd(1) 进行监控的现有 FreeBSD 安装也将从新增的安全功能和更细粒度的 SNMP 数据访问控制中受益。
+
+“SNMP 是网络监控的事实标准，”FreeBSD 开发者 Shteryana Shopova 说道。她还补充道：“SNMP 无处不在——用于网络服务器、交换机、路由器、防火墙、工作站、IP 电话、打印机、不间断电源设备和各种嵌入式设备。很高兴有机会为 bsnmpd(1) 增加一些 FreeBSD 社区请求的功能。”
+
+该项目于 2010 年 12 月完成。
+
+## FreeBSD 和 PC-BSD 中的 IPv6 支持
+
+完成
+
+FreeBSD 开发者：Bjoern Zeeb
+
+FreeBSD 基金会很高兴地宣布，已授予 Bjoern Zeeb 资助，以提高 FreeBSD 和 PC-BSD 中 IPv6 支持的成熟度。该项目由 iXsystems 联合赞助。
+
+FreeBSD 基于 KAME 的 IPv6 参考实现最早出现在 FreeBSD 4.0 中，并广泛应用于各种基于 FreeBSD 的商业产品中。到目前为止，IPv6 是默认 FreeBSD 内核中可选配置的功能，但配置 IPv6 时通常也意味着同时配置 IPv4。由于许多“IPv6 准备好”的应用程序依赖双栈行为，破损的 IPv6 应用程序往往被忽视。为不带 IPv4 的内核添加 IPv6 支持，将使 FreeBSD 和 PC-BSD 成为开源和专有 IPv6 兼容应用软件的理想测试和开发平台。
+
+“减少代码库对传统 IP 的依赖将有助于我们识别需要改进的操作系统和应用组件，以便在 IPv6 环境中良好运行。该项目将有助于确保 FreeBSD 作为全球互联网的组成部分继续在 IPv6 未来中占据重要地位：从根域名服务器、存储设备、路由器、防火墙、电视、桌面和移动系统，到全球一些最繁忙的网站，”Zeeb 先生说道。FreeBSD 基金会董事会成员兼 FreeBSD 核心团队成员 Robert Watson 将该项目描述为 FreeBSD 未来的关键，“Bjoern 的工作不仅会提高我们 IPv6 实现的成熟度，还将推动数百万部署的 FreeBSD 和其衍生系统上应用程序的改进。”该项目还将提高 FreeBSD IPv6 栈的质量和性能。
+
+Bjoern Zeeb 是一位总部位于德国的顾问，自 2004 年起成为 FreeBSD 的活跃提交者。他目前也是 FreeBSD 安全和发布工程团队的成员，最近因其在 FreeBSD 中的 IPv6 工作荣获 Itojun 服务奖。
+
+该项目于 2011 年 6 月完成。
+
+## 为 Intel 驱动程序实现 GEM、KMS 和 DRI 支持
+
+完成
+
+FreeBSD 开发者：Konstantin Belousov
+
+FreeBSD 基金会很高兴地宣布，Konstantin Belousov 已获得资助，为 Intel 驱动程序实现 GEM、KMS 和 DRI 支持。该项目由 iXsystems 共同赞助。
+
+该项目的目标是实现 GEM、移植 KMS 并为 Intel 图形驱动编写新的 DRI 驱动程序，包括最新的 Sandy Bridge 集成图形单元。此工作将使最新的 Intel 开源驱动程序在 FreeBSD 上运行，从而扩大 FreeBSD 适用于桌面系统的硬件范围。
+
+“基金会资助的项目将允许我花更多的时间在这项有趣的工作上，并希望解决 FreeBSD 桌面系统持续使用的一个重大问题，”Konstantin 表示。
+
+iXsystems 公司首席技术官 Matt Olander 说：“为 GEM/KMS 提供支持将使 FreeBSD 和 PC-BSD 能在未来具有集成 3D 加速图形功能的高级架构上运行增强的本地图形支持。FreeBSD 长期以来在服务器市场占据主导地位，这是让 FreeBSD 成为笔记本、台式机和服务器完整平台的又一步。我们很高兴参与该项目。”
+
+Konstantin 是一位软件开发者，居住在乌克兰基辅。他在 2006 年获得了 src 提交权限，自那时起，他将大部分空闲时间花在操作系统上，修复错误并实现他认为有趣的功能。他目前还担任项目的发布工程师和核心团队成员。
+
+该项目于 2011 年 8 月完成。
+
+## 五种新的 TCP 拥塞控制算法
+
+完成
+
+FreeBSD 开发者：斯威本科技大学
+
+FreeBSD 基金会很高兴地宣布，斯威本科技大学高级互联网架构中心已获得资助，在 FreeBSD 中实现五种新的 TCP 拥塞控制算法。
+
+正确运行的拥塞控制（CC）对互联网和 IP 网络的高效运行至关重要。拥塞控制动态地在流的吞吐量与对网络的推测影响之间取得平衡，必要时降低吞吐量以保护网络。
+
+目前，FreeBSD 操作系统的 TCP 协议栈采用了事实上的标准——基于丢包的 NewReno 拥塞控制算法，但该算法在处理现代数据网络的诸多方面（如高丢包率或大带宽/延迟路径）时存在已知问题。研究界和工业界都在持续进行大量工作，解决与拥塞控制相关的问题，特别是在广泛部署和使用的 TCP 协议上。
+
+斯威本科技大学与 FreeBSD 的 TCP 协议栈和拥塞控制实现的持续研究工作已逐步成熟。该项目旨在完善我们的原型并将其集成到 FreeBSD 中。
+
+该项目于 2011 年 3 月完成。
+
+## 前馈时钟同步算法
+
+完成
+
+FreeBSD 开发者：墨尔本大学
+
+FreeBSD 基金会很高兴地宣布，墨尔本大学的 Julien Ridoux 和 Darryl Veitch 获得了资助，来实现前馈时钟同步算法的支持。
+
+网络时间协议（NTP）被广泛用于通过网络进行同步，而 ntpd 守护进程是当前参考的同步算法。FreeBSD 的系统时钟目前是以 ntpd 为基础设计的，这导致了内核与同步守护进程之间的强耦合反馈。
+
+[RADclock](http://www.cubinlab.ee.unimelb.edu.au/radclock/) 是基于前馈原理的另一类同步算法的一个示例。该项目将为前馈算法提供核心支持，使得可以开发和测试 ntpd 的替代方案。其核心动机在于这些方法在提供高度稳健和精确的同步方面具有巨大的潜力。
+
+此外，虚拟化是时间保持系统即将面临的主要挑战之一。目前的反馈同步模型过于复杂，并引入了自身的动态，这种方法不适合虚拟化的要求。基于前馈的同步提供了一种更简洁、更简单的方法，能够在虚拟机实时迁移时提供精确的时间保持。
+
+该项目于 2011 年 9 月完成。
+
+## 实现 xlocale API
+
+完成
+
+FreeBSD 开发者：David Chisnall
+
+C 标准库（libc）是 UNIX 系统中最重要的部分之一，因为大多数程序通过用 C 语言编写的接口与内核交互。在类似的 libc 实现之间移植代码是非常容易的，如果某个功能在 libc 中得到支持，高级语言可以使用它，而无需重新实现。
+
+随着时间的推移，C 语言逐渐演变以适应现代多核系统，但仍然存在一些问题区域，其中之一就是本地化支持。C 语言最初并不支持本地化。FreeBSD 的 libc 和 Darwin 的 libc（Mac OS X 使用的库）相似，这使得从 OS X 移植代码到 FreeBSD 比移植到 Linux 容易得多。OS X 使用的 libc 支持一组扩展的本地化函数（xlocale），允许在每个线程的基础上设置本地化。
+
+此外，LLVM 项目中的 libc++ 最初是在 Darwin 上开发的，因此它使用 xlocale 来支持大部分 C++ 的本地化功能。缺乏这种支持是将 libc++ 移植到 FreeBSD 的主要障碍。
+
+一旦 FreeBSD libc 支持 xlocale，我们就可以将 libc++ 移植到 FreeBSD，从而为我们提供一个 MIT 许可的 C++11 标准库实现。结合 Clang 和 libcxxrt，这意味着 FreeBSD 中的整个 C++ 栈将不再包含任何 GNU 代码。此时，链接器将成为实现完全无 GPL 的 FreeBSD 10 唯一显著的障碍。
+
+该项目于 2011 年 9 月完成。
+
+## 分析 FreeBSD 的 IPv6 栈性能
+
+完成
+
+FreeBSD 开发者：Bjoern Zeeb
+
+FreeBSD 基金会很高兴宣布已向 Bjoern Zeeb 提供资助，以分析 FreeBSD 的 IPv6 栈性能。该项目由 iXsystems 共同赞助。
+
+去年，Bjoern 改进了 FreeBSD 的 IPv6 支持，使得构建不包含 IPv4 支持的 FreeBSD 系统成为可能。该项目将基于这一工作，专注于内核，分析 FreeBSD 的 IPv6 栈性能。不同用户在对比 FreeBSD 上的 IPv4 和 IPv6 性能时，发现了 IPv6 性能较低的情况。尽管不同版本之间的数据有所不同，但原因大多未知。
+
+该项目将首先通过基准测试对 IPv6 和 IPv4 进行详细的性能分析，以获取最新的数据，帮助更好地理解当前的状况。接下来将继续确定性能差异的原因，并在可能的情况下直接解决这些问题，或为未来的工作确定改进方向。初步的基准测试数据将使我们能够通过重新运行测量来评估变更，并量化改进效果。
+
+“随着全球开始部署 IPv6，流量模式从 IPv4 向 IPv6 转移，不仅需要关注正确性和稳定性，功能一致性和性能也至关重要，”开发者 Bjoern Zeeb 说道。“使性能数据与 IPv4 对齐将确保用户在使用 IPv6 时不会需要更多的资源。”
+
+## 实现 auditdistd 守护进程
+
+完成
+
+FreeBSD 开发者：Paweł Jakub Dawidek
+
+FreeBSD 的审计功能提供了针对安全相关事件的细粒度、可配置的日志记录。记录安全事件日志的一个关键目的是在系统遭到入侵时进行事后分析。目前，内核可以将审计记录直接写入文件或通过 /dev/auditpipe 设备进行读取。由于审计日志由内核本地存储，一旦系统被入侵，攻击者就可以访问这些日志，从而有可能清除其活动痕迹。
+
+auditdistd 项目的目标是通过 TCP/IP 网络在本地 auditdistd 守护进程和远程 auditdistd 守护进程之间安全且可靠地分发审计记录。如果源系统遭到入侵，可以通过远程系统收集的数据分析攻击者的活动，因为此时只有远程系统的审计日志是可信的。
+
+该项目于 2012 年 2 月完成。
+
+## 已挂载文件系统的 Growfs
+
+完成
+
+FreeBSD 开发者：Edward Tomasz Napierała
+
+该项目实现了在读写挂载状态下扩展 UFS 或 ZFS 文件系统的功能。此功能涉及对文件系统、GEOM 基础设施以及驱动程序的修改。
+
+从系统管理员的角度来看，这使得可以通过 gpart(8) 扩展分区，然后使用 growfs(8) 调整其包含的文件系统大小，而无需先卸载文件系统。这对于扩展根文件系统特别有用，尤其对于虚拟机而言尤为重要。
+
+该项目于 2012 年 11 月完成。
+
+## 文档项目基础设施增强
+
+完成
+
+FreeBSD 开发者：Gabor Kovesdan
+
+FreeBSD 文档项目长期依赖过时的工具来生成 FreeBSD 手册和其他文档。该项目将文档集升级到 DocBook 5.0，并提供了改进的渲染流程。
+
+该项目于 2013 年 7 月完成。
+
+## ARMv7 的超页支持
+
+完成
+
+FreeBSD 开发者：Zbigniew Bodek，Semihalf
+
+ARM 架构正在扩展到高端服务器计算市场，支持该平台的复杂特性是 FreeBSD 在这些新领域取得成功的关键。该项目为大型内存工作负载增加了超页支持，以提升性能。
+
+此项工作专门针对 ARMv7 架构，同时保持与 ARMv6 的兼容性。该项目由 FreeBSD 基金会和 Semihalf 共同资助。
+
+该项目于 2013 年 9 月完成，并在 FreeBSD 10.0 中发布。
+
+## 原生 iSCSI 内核栈
+
+完成
+
+FreeBSD 开发者：Edward Tomasz Napierala
+
+该项目提供了一个原生的内核级 iSCSI 栈（包括目标和发起者），以支持日益流行的块存储协议。虽然已有多个支持 FreeBSD 的 iSCSI 实现，但项目缺乏一个高性能且可靠的内核级目标。iSCSI 栈首次出现在 FreeBSD 10.0 中。后续版本将进一步优化并支持硬件卸载。
+
+该项目于 2014 年初完成，并在 FreeBSD 11.0 中发布。
+
+## Capsicum 集成
+
+完成
+
+FreeBSD 开发者：Paweł Jakub Dawidek
+
+该项目继续将 Capsicum 和 Casper 守护进程集成到 FreeBSD 中。新结构的能力权利增加了可能的能力权利数量，约为 1000，既支持了未来的开发，又保持了 API/ABI 兼容性。该项目还将 Casper、libcapsicum 和 libcasper 合并到 FreeBSD 中。
+
+该项目于 2014 年初完成，并与 FreeBSD 11.0 一同发布。
+
+## 基于 Autofs 的自动挂载程序
+
+完成
+
+FreeBSD 开发者：Edward Tomasz Napierała
+
+amd(8) 自动挂载程序的局限性是许多 FreeBSD 用户反映的一个反复出现的问题。新的自动挂载程序项目旨在解决这些问题。
+
+该自动挂载程序是对大多数其他 Unix 系统中可用功能的独立实现，使用通过 autofs 文件系统实现的内核支持。自动挂载程序支持标准的 Sun 映射格式，并与轻量级目录访问协议（LDAP）服务集成。
+
+FreeBSD 基金会与企业和大学用户合作，在现有的基于 LDAP 的环境中测试新的自动挂载程序，其中包括一些具有数千个映射条目的环境。
+
+该项目于 2014 年 9 月完成，并在 FreeBSD 10.1 和 11.0 中发布。
+
