@@ -1,9 +1,5 @@
 # 第 1.5 节 谁在使用 FreeBSD
 
-> **警告**
->
-> 正在校对。
-
 本页面是对 <https://freebsdfoundation.org/about-us/testimonials/> 的翻译。
 
 **参与 FreeBSD**
