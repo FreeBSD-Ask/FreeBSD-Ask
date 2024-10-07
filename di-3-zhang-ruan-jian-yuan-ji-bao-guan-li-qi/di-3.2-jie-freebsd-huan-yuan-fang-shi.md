@@ -1,5 +1,10 @@
 # 第 3.2 节 FreeBSD 换源方式
 
+>**注意**
+>
+>目前 USTC、163、NJU 镜像站均故障。[已反馈](https://github.com/ustclug/discussions/issues/476)。
+
+
 ## FreeBSD 包管理器设计理念
 
 熟悉 Linux 的人也许会发现，FreeBSD 的包管理方案实际上大约等于以下两大 Linux 发行版包管理器的完美合体：
