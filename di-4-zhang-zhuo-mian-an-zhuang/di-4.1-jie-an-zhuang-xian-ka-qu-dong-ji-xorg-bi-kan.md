@@ -160,8 +160,8 @@ backlight 自 FreeBSD 13 引入。
 
 其中：
 
-  - graphics/nvidia-drm-kmod    用于支持双显卡切换
-  - x11/nvidia-secondary-driver 对应的显卡驱动
+  - `graphics/nvidia-drm-kmod`    用于支持双显卡切换
+  - `x11/nvidia-secondary-driver` 对应的显卡驱动
 
 配置：
 
@@ -171,39 +171,13 @@ backlight 自 FreeBSD 13 引入。
 ```
 ### 旧显卡
 
+将上小节的 `nvidia-secondary-driver` 改成：
+
+- `nvidia-secondary-driver-390`
+
 >**技巧**
 >
->下面的 `390` 亦可换成 `340`、`470` 和 `304`。
-
-- 304 驱动支持的显卡参考 [FreeBSD Display Driver – X64](https://www.nvidia.com/Download/driverResults.aspx/123712/cn/)
-- 340 驱动支持的显卡参考 [FreeBSD Display Driver – X64](https://www.nvidia.cn/Download/driverResults.aspx/156260/cn/)
-- 390 驱动支持的显卡参考 [FreeBSD Display Driver – X64](https://www.nvidia.cn/download/driverResults.aspx/196293/cn/)
-- 470 驱动支持的显卡参考 [FreeBSD Display Driver – X64](https://www.nvidia.cn/Download/driverResults.aspx/227125/cn/)
-
-
-```sh
-# pkg install nvidia-secondary-driver-390
-```
-
-或者：
-
-```sh
-# cd /usr/ports/x11/nvidia-secondary-driver-390/ 
-# make install clean
-```
-
-其中：
-
-  - x11/nvidia-hybrid-graphics-390   用于支持双显卡切换
-  - x11/nvidia-secondary-driver-390  对应的显卡驱动
-
-
-配置：
-
-```sh
-# sysrc kld_list+=nvidia-modeset
-# sysrc nvidia_xorg_enable=YES
-```
+>390 驱动支持的显卡参考 [FreeBSD Display Driver – X64](https://www.nvidia.cn/download/driverResults.aspx/196293/cn/)
 
 
 ### 查看显卡驱动状态
@@ -276,9 +250,10 @@ pkg install libva-vdpau-driver libvdpau libvdpau-va-gl
 
 ## 独显直连/台式机
 
->**技巧**
->
->注意，有多个版本的 N 卡驱动，若不知道该用哪个，请看上文笔记本核显 + N 卡部分。
+- 304 驱动支持的显卡参考 [FreeBSD Display Driver – X64](https://www.nvidia.com/Download/driverResults.aspx/123712/cn/)
+- 340 驱动支持的显卡参考 [FreeBSD Display Driver – X64](https://www.nvidia.cn/Download/driverResults.aspx/156260/cn/)
+- 390 驱动支持的显卡参考 [FreeBSD Display Driver – X64](https://www.nvidia.cn/download/driverResults.aspx/196293/cn/)
+- 470 驱动支持的显卡参考 [FreeBSD Display Driver – X64](https://www.nvidia.cn/Download/driverResults.aspx/227125/cn/)
 
 ### 安装驱动
 
