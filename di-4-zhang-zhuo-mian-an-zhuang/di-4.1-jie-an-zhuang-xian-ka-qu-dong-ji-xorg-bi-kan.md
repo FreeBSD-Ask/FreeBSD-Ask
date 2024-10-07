@@ -156,6 +156,26 @@ backlight 自 FreeBSD 13 引入。
 >
 >笔记本电脑一般不能单独用 nvidia 打开 xorg。**除非** 你的笔记本电脑支持 **显卡直通**。
 
+### 新显卡
+
+  - 550 驱动驱动支持的显卡参考 [FreeBSD Display Driver – X64](https://www.nvidia.cn/Download/driverResults.aspx/220794/cn/)
+
+```sh
+# cd /usr/ports/graphics/nvidia-drm-kmod/ && make install clean
+# cd /usr/ports/x11/nvidia-secondary-driver && make install clean
+```
+
+其中：
+
+  - graphics/nvidia-drm-kmod    用于支持双显卡切换
+  - x11/nvidia-secondary-driver 对应的显卡驱动
+
+配置：
+
+```sh
+# sysrc kld_list+="nvidia-drm.ko"
+# sysrc -f /boot/loader.conf  hw.nvidiadrm.modeset=1
+```
 ### 旧显卡
 
 >**技巧**
@@ -192,26 +212,7 @@ backlight 自 FreeBSD 13 引入。
 ```
 
 
-### 新显卡
 
-  - 550 驱动驱动支持的显卡参考 [FreeBSD Display Driver – X64](https://www.nvidia.cn/Download/driverResults.aspx/220794/cn/)
-
-```sh
-# cd /usr/ports/graphics/nvidia-drm-kmod/ && make install clean
-# cd /usr/ports/x11/nvidia-secondary-driver && make install clean
-```
-
-其中：
-
-  - graphics/nvidia-drm-kmod    用于支持双显卡切换
-  - x11/nvidia-secondary-driver 对应的显卡驱动
-
-配置：
-
-```sh
-# sysrc kld_list+="nvidia-drm.ko"
-# sysrc -f /boot/loader.conf  hw.nvidiadrm.modeset=1
-```
 
 
 ### 查看显卡驱动状态
