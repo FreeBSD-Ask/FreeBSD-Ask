@@ -160,7 +160,7 @@ backlight 自 FreeBSD 13 引入。
 
 >**技巧**
 >
->下面的 `390` 亦可换成 `340`、470。
+>下面的 `390` 亦可换成 `340`、`470`。
 
 - 340 驱动支持的显卡参考 [FreeBSD Display Driver – X64](https://www.nvidia.cn/Download/driverResults.aspx/156260/cn/)
 - 390 驱动支持的显卡参考 [FreeBSD Display Driver – X64](https://www.nvidia.cn/download/driverResults.aspx/196293/cn/)
@@ -193,6 +193,7 @@ backlight 自 FreeBSD 13 引入。
 
 
 ### 新显卡
+
   - 550 驱动驱动支持的显卡参考 [FreeBSD Display Driver – X64](https://www.nvidia.cn/Download/driverResults.aspx/220794/cn/)
 
 ```sh
@@ -255,7 +256,7 @@ EndSection
 
  运行 `nvrun-vgl bounce` 用 `nvidia-smi -l 1` 观察使用 nvidia 驱动时使用了 13M 显存。
  
- ![](../.gitbook/assets/380531501625801.png)
+![](../.gitbook/assets/380531501625801.png)
  
 ### 开启 vlc 硬解
 
@@ -272,7 +273,7 @@ pkg install libva-vdpau-driver libvdpau libvdpau-va-gl
 # cd /usr/ports/multimedia/libvdpau-va-gl/ && make install clean
 ```
 
-工具->偏好设置->输入/编解码器->硬件加速解码：选择VDPAU 视频解码器
+工具->偏好设置->输入/编解码器->硬件加速解码：选择 VDPAU  视频解码器
 
 ![](../.gitbook/assets/121233788899956.png)
 
@@ -285,7 +286,9 @@ pkg install libva-vdpau-driver libvdpau libvdpau-va-gl
 
 ## 独显直连/台式机
 
-注意，有多个版本的 N 卡驱动，不知道该用哪个的去看 FreeBSD 手册《X Window 系统》一节。
+>**技巧**
+>
+>注意，有多个版本的 N 卡驱动，若不知道该用哪个，请看上文笔记本核显 + N卡部分。
 
 ### 安装驱动
 
@@ -327,7 +330,7 @@ pkg install libva-vdpau-driver libvdpau libvdpau-va-gl
 $ nvidia-smi
 ```
 
-如果发现系统没有使用 nvidia 驱动需要自动生成配置文件：
+如果发现系统没有使用 nvidia 驱动，需要自动生成配置文件：
 
 ```sh
 # Xorg -configure #生成配置文件。注意，这一步步骤并非必要！
@@ -336,21 +339,21 @@ $ nvidia-smi
 
 然后重新启动就可以发现正常使用 nvidia 驱动了
 
->**注意**
+>**技巧**
 >
->在默认情况下，通过 pkg 安装的 nvidia-driver 是包含 Linux 兼容层支持的, 如果要使用 Linux 软件，需要执行以下命令（实际上使用 linux 兼容层，以下命令是必须的） ，如果不需要使用 Linux 兼容层，则不需要执行。
+>在默认情况下，通过 pkg 安装的 nvidia-driver 是包含 Linux 兼容层支持的, 如果要使用 Linux 兼容层，需要执行以下命令；如果不需要，则无需执行：
+>
+>```sh
+># sysrc linux_enable="YES"
+>```
 
-```sh
-# sysrc linux_enable="YES"
-```
-
-当然如果使用官方的 pkg 软件包，安装好驱动重启后：
+当然，如果使用官方的 pkg 软件包，安装好驱动重启后：
 
 ```sh
 $ kldstat
 ```
 
-会发现系统自动加载了 `linux.ko` 模块。如果觉得太臃肿，不需要 Linux 兼容层可以自己通过 ports 编译 `nvidia-driver`,去掉 `linux compatibility support`。
+会发现系统自动加载了 `linux.ko` 模块。如果觉得太臃肿，不需要 Linux 兼容层，可以自己通过 ports 编译 `nvidia-driver`,去掉 `linux compatibility support`。
 
 ## 附：拉取开发版 drm-kmod（仅限 FreeBSD-CURRENT）
 
