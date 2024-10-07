@@ -173,7 +173,7 @@
 * [第 17.3 节 PHP 8.X](di-17-zhang-wang-luo-fu-wu-qi/di-17.3-jie-php-8.x.md)
 * [第 17.4 节 MySQL 5.X](di-17-zhang-wang-luo-fu-wu-qi/di-17.4-jie-mysql-5.x.md)
 * [第 17.5 节 MySQL 8.X](di-17-zhang-wang-luo-fu-wu-qi/di-17.5-jie-mysql-8.x.md)
-* [第 17.6 节 Typecho](di-17-zhang-wang-luo-fu-wu-qi/di-17.6-jie-typecho.md)
+* [第 17.6 节 NextCloud](di-17-zhang-wang-luo-fu-wu-qi/di-17.6-jie-NextCloud.md)
 * [第 17.7 节 Telegraf+InfluxDB+Grafana 监控平台](di-17-zhang-wang-luo-fu-wu-qi/di-17.7-jie-telegraf+influxdb+grafana-jian-kong-ping-tai.md)
 * [第 17.8 节 PostgreSQL 与 pgAdmin4](di-17-zhang-wang-luo-fu-wu-qi/di-17.8-jie-postgresql-yu-pgadmin4.md)
 
