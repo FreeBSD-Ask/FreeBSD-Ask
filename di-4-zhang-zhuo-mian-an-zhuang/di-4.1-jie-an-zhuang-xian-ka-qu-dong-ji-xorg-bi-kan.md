@@ -74,6 +74,16 @@ FreeBSD 14.1-RELEASE、14-STABLE（OSVERSION >1400508）、FreeBSD 15 CUEERNT，
 >
 > 像英特尔三代处理器的 HD 4000 这种比较古老的显卡，他在传统的 BIOS 模式下无需额外安装显卡驱动，但是 UEFI 下有可能会花屏（FreeBSD 13.0 及以后无此问题），且需要安装此 DRM 显卡驱动。
 
+### 配置英特尔核显/AMD 显卡驱动
+
+打开 `/etc/rc.conf`:
+
+- 如果为 intel 核芯显卡，添加 `kld_list="i915kms"`
+- AMD
+  - 如果是 HD7000 以后的 AMD 显卡，添加 `kld_list="amdgpu"`（大部分人应该使用这个，如果没用再换 `radeonkms`）
+  - 如果是 HD7000 以前的 AMD 显卡，添加 `kld_list="radeonkms"`（这是十多年前的显卡了）
+
+
 ### 故障排除
 
 - `KLD XXX.ko depends on kernel - not available or version mismatch.`
@@ -82,19 +92,10 @@ FreeBSD 14.1-RELEASE、14-STABLE（OSVERSION >1400508）、FreeBSD 15 CUEERNT，
 
 ![](../.gitbook/assets/amd_error.png)
 
-- 提示 `/usr/ports/xxx no such xxx`
+- `/usr/ports/xxx no such xxx`
   
 即找不到路径，请先获取 ports，请看前文。
 
-### 配置使用英特尔核显/AMD 显卡
-
-
-打开 `/etc/rc.conf`:
-
-- 如果为 intel 核芯显卡，添加 `kld_list="i915kms"`
-- AMD
-  - 如果是 HD7000 以后的 AMD 显卡，添加 `kld_list="amdgpu"`（大部分人应该使用这个，如果没用再换 `radeonkms`）
-  - 如果是 HD7000 以前的 AMD 显卡，添加 `kld_list="radeonkms"`（这是十多年前的显卡了）
 
 ### 视频硬解
 
@@ -149,9 +150,15 @@ backlight 自 FreeBSD 13 引入。
 >
 >笔记本电脑一般不能单独用 nvidia 打开 xorg。**除非** 你的笔记本电脑支持 **显卡直通**。否则请先按照上部分对核显进行配置。
 
-### 新显卡
-
   - 550 驱动驱动支持的显卡参考 [FreeBSD Display Driver – X64](https://www.nvidia.cn/Download/driverResults.aspx/220794/cn/)
+
+安装：
+
+```sh
+# pkg install nvidia-drm-kmod nvidia-secondary-driver
+```
+
+或者
 
 ```sh
 # cd /usr/ports/graphics/nvidia-drm-kmod/ && make install clean
@@ -169,16 +176,6 @@ backlight 自 FreeBSD 13 引入。
 # sysrc kld_list+="nvidia-drm.ko"
 # sysrc -f /boot/loader.conf  hw.nvidiadrm.modeset=1
 ```
-### 旧显卡
-
-将上小节的 `nvidia-secondary-driver` 改成：
-
-- `nvidia-secondary-driver-390`
-
->**技巧**
->
->390 驱动支持的显卡参考 [FreeBSD Display Driver – X64](https://www.nvidia.cn/download/driverResults.aspx/196293/cn/)
-
 
 ### 查看显卡驱动状态
 
@@ -246,25 +243,20 @@ pkg install libva-vdpau-driver libvdpau libvdpau-va-gl
 
 ![](../.gitbook/assets/59022617586598.png)
 
-显存使用上升，正在使用硬解
+显存使用上升，标志着正在使用硬解。
 
 ## 独显直连/台式机
-
-- 304 驱动支持的显卡参考 [FreeBSD Display Driver – X64](https://www.nvidia.com/Download/driverResults.aspx/123712/cn/)
-- 340 驱动支持的显卡参考 [FreeBSD Display Driver – X64](https://www.nvidia.cn/Download/driverResults.aspx/156260/cn/)
-- 390 驱动支持的显卡参考 [FreeBSD Display Driver – X64](https://www.nvidia.cn/download/driverResults.aspx/196293/cn/)
-- 470 驱动支持的显卡参考 [FreeBSD Display Driver – X64](https://www.nvidia.cn/Download/driverResults.aspx/227125/cn/)
 
 ### 安装驱动
 
 安装几个 nvidia 相关的包:
 
 ```sh
-# pkg install nvidia-driver nvidia-settings nvidia-xconfig nvidia-drm-kmod
+# pkg install nvidia-drm-kmod nvidia-settings nvidia-xconfig
 ```
 >**技巧**
 >
->`nvidia-driver` 默认为 550，其他版本比如 `304` 可以写成 `nvidia-driver-304`。
+>`nvidia-drm-kmod` 目前依赖安装的 `nvidia-driver` 默认为 550。
 
 >**注意**
 >
@@ -274,10 +266,9 @@ pkg install libva-vdpau-driver libvdpau libvdpau-va-gl
 或者：
 
 ```sh
-# cd /usr/ports/x11/nvidia-driver/ && make install clean
+# cd /usr/ports/graphics/nvidia-drm-kmod/ && make install clean
 # cd /usr/ports/x11/nvidia-settings/ && make install clean
 # cd /usr/ports/x11/nvidia-xconfig/ && make install clean
-# cd /usr/ports/graphics/nvidia-drm-kmod/ && make install clean
 ```
 
 ```sh
