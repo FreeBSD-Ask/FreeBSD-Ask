@@ -86,8 +86,6 @@ FreeBSD 14.1-RELEASE、14-STABLE（OSVERSION >1400508）、FreeBSD 15 CUEERNT，
   
 即找不到路径，请先获取 ports，请看前文。
 
-
-
 ### 配置使用英特尔核显/AMD 独显
 
 
