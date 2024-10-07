@@ -175,6 +175,7 @@ backlight 自 FreeBSD 13 引入。
 >
 >下面的 `390` 亦可换成 `340`、`470` 和 `304`。
 
+- 304 驱动支持的显卡参考 [FreeBSD Display Driver – X64](https://www.nvidia.com/Download/driverResults.aspx/123712/cn/)
 - 340 驱动支持的显卡参考 [FreeBSD Display Driver – X64](https://www.nvidia.cn/Download/driverResults.aspx/156260/cn/)
 - 390 驱动支持的显卡参考 [FreeBSD Display Driver – X64](https://www.nvidia.cn/download/driverResults.aspx/196293/cn/)
 - 470 驱动支持的显卡参考 [FreeBSD Display Driver – X64](https://www.nvidia.cn/Download/driverResults.aspx/227125/cn/)
