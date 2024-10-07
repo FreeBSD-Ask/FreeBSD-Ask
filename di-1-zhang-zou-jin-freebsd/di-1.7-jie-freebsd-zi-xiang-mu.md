@@ -1141,3 +1141,26 @@ FreeBSD 基金会与企业和大学用户合作，在现有的基于 LDAP 的环
 
 该项目于 2014 年 9 月完成，并在 FreeBSD 10.1 和 11.0 中发布。
 
+## UEFI 引导集成
+
+完成
+
+开发者：Ed Maste
+
+统一可扩展固件接口（UEFI）为 x86 计算机提供引导和运行时服务，取代了传统的 BIOS。本项目旨在适配 FreeBSD 的加载程序和内核引导过程，以兼容当今服务器、台式机和笔记本电脑上常见的 UEFI 固件。
+
+该项目建立在 Benno Rice 的赞助项目基础上，旨在改进 UEFI 引导程序，并于 2013 年提供了一个可行性证明。
+
+此项目于 2014 年完成，并在 FreeBSD 10.1 和 11.0 中发布。
+
+## OpenCrypto 的 AES 模式更新
+
+完成
+
+开发者：John-Mark Gurney
+
+本项目为 FreeBSD 的 OpenCrypto 加密框架添加了现代 AES 模式，以供 IPsec 和其他使用者使用。该项目由 FreeBSD 基金会和 Netgate 联合赞助，Netgate 是一家领先的 BSD 基础防火墙和网络设备供应商。
+
+该项目增加了新的加密模式，同时从 OpenBSD 导入了基础设施更新，为 FreeBSD 用户提供前所未有的高性能加密通信支持。新增模式包括 AES-CTR 和 AES-GCM，并使用 Intel 的 AES-NI 指令实现硬件加速。
+
+该项目的工作于 2014 年 12 月提交到 FreeBSD，并在 FreeBSD 11.0 中发布。
