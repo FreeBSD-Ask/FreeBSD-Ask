@@ -262,7 +262,9 @@ pkg install libva-vdpau-driver libvdpau libvdpau-va-gl
 ```sh
 # pkg install nvidia-driver nvidia-settings nvidia-xconfig nvidia-drm-kmod
 ```
-
+>**技巧**
+>
+>`nvidia-driver` 默认为 550，其他版本比如 `304` 可以写成 `nvidia-driver-304`。
 
 >**注意**
 >
