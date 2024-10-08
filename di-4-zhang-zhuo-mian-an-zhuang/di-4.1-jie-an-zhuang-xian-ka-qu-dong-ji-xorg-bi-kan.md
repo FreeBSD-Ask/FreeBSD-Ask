@@ -2,7 +2,7 @@
 
 >**警告**
 >
->当前页面的 N 卡驱动部分仍有待测试！可能存在问题。
+>当前页面的 N 卡驱动部分仍存在问题。无法使用。
 
 >**警告**
 >
@@ -143,7 +143,7 @@ backlight 自 FreeBSD 13 引入。
 - [backlight -- configure backlight	hardware](https://man.freebsd.org/cgi/man.cgi?backlight)
 - 经过测试，此部分教程适用于 renoir 显卡：
 
-## 笔记本核显 + Nvidia 独显
+## 笔记本核显 + Nvidia 独显（仍存在问题！不要用）
 
 
 >**警告**
@@ -240,7 +240,8 @@ pkg install libva-vdpau-driver libvdpau libvdpau-va-gl
 
 显存使用上升，标志着正在使用硬解。
 
-## 独显直连/台式机
+## 独显直连/台式机（仍存在问题！不要用）
+
 
 ### 安装驱动
 
