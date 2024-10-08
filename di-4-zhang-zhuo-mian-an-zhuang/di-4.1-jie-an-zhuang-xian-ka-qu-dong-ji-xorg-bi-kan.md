@@ -155,7 +155,7 @@ backlight 自 FreeBSD 13 引入。
 安装：
 
 ```sh
-# pkg install nvidia-drm-kmod nvidia-secondary-driver
+# pkg install nvidia-drm-kmod
 ```
 
 或者
