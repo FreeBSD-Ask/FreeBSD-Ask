@@ -161,20 +161,15 @@ backlight 自 FreeBSD 13 引入。
 或者
 
 ```sh
-# cd /usr/ports/graphics/nvidia-drm-kmod/ && make install clean
-# cd /usr/ports/x11/nvidia-secondary-driver && make install clean
+# cd /usr/ports/graphics/nvidia-drm-kmod/ 
+# make install clean
 ```
-
-其中：
-
-  - `graphics/nvidia-drm-kmod`    用于支持双显卡切换
-  - `x11/nvidia-secondary-driver` 对应的显卡驱动
 
 配置：
 
 ```sh
 # sysrc kld_list+="nvidia-drm.ko"
-# sysrc -f /boot/loader.conf  hw.nvidiadrm.modeset=1
+# echo 'hw.nvidiadrm.modeset="1"' >> /boot/loader.conf
 ```
 
 ### 查看显卡驱动状态
@@ -273,7 +268,7 @@ pkg install libva-vdpau-driver libvdpau libvdpau-va-gl
 
 ```sh
 # sysrc kld_list+="nvidia-drm.ko" #配置驱动
-# sysrc -f /boot/loader.conf hw.nvidiadrm.modeset=1 
+# echo 'hw.nvidiadrm.modeset="1"' >> /boot/loader.conf
 # reboot #重启
 ```
 
