@@ -193,7 +193,7 @@ VMware Workstation Player 目前已弃用。且功能相对 VMware Workstation P
 
 >**警告**
 >
->这三种模式前面的“名称”是与你主机的 `控制面板\网络和 Internet\网络连接` 中的 `VMware Network Adapter VMnet8` 绑定的，默认绑定的是 `8`：比如 `NAT 模式` 默认必须指定为下图的 `VMnat8`，指定为其他名称虚拟机不会有网络！
+>NAT 模式“名称”是与你主机的 `控制面板\网络和 Internet\网络连接` 中的 `VMware Network Adapter VMnet8` 绑定的，默认绑定的是 `8`：换言之，`NAT 模式` “名称”默认必须指定为下图的 `VMnat8`，指定为其他名称虚拟机不会有网络！
 
 
 ![vmware network on freebsd](../.gitbook/assets/net1.png)
