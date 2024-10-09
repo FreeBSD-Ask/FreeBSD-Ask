@@ -216,7 +216,16 @@ Proceed with deinstalling packages? [y/N]:
 - RELEASE
 
 请先切换到 latest 源。
-  
+
+
+先重启获取软件源里的 pkg：
+
+```sh
+# pkg-static bootstrap -f
+```
+
+若无效，则再：
+
 ```sh
 # freebsd-update fetch
 # freebsd-update install
