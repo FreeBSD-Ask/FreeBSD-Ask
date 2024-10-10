@@ -26,7 +26,7 @@ FreeBSD 基金会以资金和资源赞助 FreeBSD 操作系统的开发活动，
 
 **联系人：** Doug Rabson [dfr@rabson.org](mailto:dfr@rabson.org)
 
-[开放容器计划 (OCI)](https://opencontainers.org/) 为云原生容器格式和运行时制定了开放的行业标准，来确保平台的一致性。一个 [OCI 工作组](https://github.com/opencontainers/wg-freebsd-runtime) 正在为 FreeBSD 制定这些标准，利用 jail 进行实现，并有可能通过 FreeBSD 的 **[bhyve](https://docs.freebsd.org/en/books/handbook/virtualization/#virtualization-host-bhyve)** 虚拟化管理程序支持轻量级虚拟机（可在 FreeBSD 主机上的容器中运行 FreeBSD 以外的其他操作系统）。
+[开放容器计划 (OCI)](https://opencontainers.org/) 为云原生容器格式和运行时制定了开放的行业标准，来确保平台的一致性。一个 [OCI 工作组](https://github.com/opencontainers/wg-freebsd-runtime) 正在为 FreeBSD 制定这些标准，利用 jail 进行实现，并有可能通过 FreeBSD 的 **[bhyve](https://docs.freebsd.org/en/books/handbook/virtualization/#virtualization-host-bhyve)** 虚拟化管理程序支持轻量级虚拟机——可在 FreeBSD 主机上的容器中运行 FreeBSD 以外的其他操作系统。
 
 FreeBSD 项目成员 Doug Rabson 开发了 **ocijail**，这是一种兼容 OCI 的 FreeBSD jail 运行时实验工具。该工具旨在与容器管理系统（如 Podman 和 Buildah）集成，提供完善的容器管理体验。
 
@@ -47,11 +47,11 @@ Doug 还撰写了一篇[文章](https://freebsdfoundation.org/freebsd-container-
 
 正在进行
 
-### UnionFS 项目旨在稳定、增强其在 FreeBSD 上的实用性，重点包括：支持对只读文件系统的表面修改，支持多个共享相同基础的 jail 并简化升级，以及通过分层的预打包镜像促进容器场景的实现。
+### UnionFS 项目旨在使其稳定、增强其在 FreeBSD 上的实用性，重点包括：支持对只读文件系统的表面修改，支持多个共享相同基础的 jail 并简化升级，以及通过分层的预打包镜像促进容器场景的实现。
 
 **联系人：** Olivier Certner [olce@freebsd.org](mailto:olce@freebsd.org)
 
-由 Olivier Certner 领导的 FreeBSD 上的 UnionFS 项目专注于增强和稳定 UnionFS 的功能，特别是涉及分层文件系统、jail、容器和存储优化的场景。Jason Harmening 多年来一直致力于 UnionFS 的开发，持续解决诸如 vnode 锁、whiteout 管理和其他系统性问题等关键问题。该项目涉及大量代码重写，并进行了精心的协调，以确保变更的合理性和与项目目标的一致性。重要的审查包括 D44288、D44601、D44788 和 D45398。
+由 Olivier Certner 领导的 FreeBSD 上的 UnionFS 项目专注于增强和稳定 UnionFS 的功能，特别是涉及分层文件系统、jail、容器和存储优化的场景。Jason Harmening 多年来一直致力于 UnionFS 的开发，持续解决诸如 vnode 锁、whiteout 管理和其他系统性问题等关键问题。该项目涉及大量代码重写，并进行了精心的协调，以确保变更的合理性和与项目目标的一致性。重要的审查包括 [D44288](https://reviews.freebsd.org/D44288)、[D44601](https://reviews.freebsd.org/D44601)、[D44788](https://reviews.freebsd.org/D44788) 和 [D45398](https://reviews.freebsd.org/D45398)。
 
 **项目的主要贡献：**
 
@@ -69,16 +69,16 @@ Doug 还撰写了一篇[文章](https://freebsdfoundation.org/freebsd-container-
 
 3. **审查贡献：**
 
-    * **D44288：** 实现了 VOP\_UNP\_\*，并移除了对 VSOCK vnode 的特殊处理。
-    * **D44601：** 解决了对 vnode 私有数据的非法访问问题，并提出了强制卸载的测试方案。
-    * **D44788：** 修复了 unionfs\_rename 中的多个锁定问题，确保变更最小化以保证稳定性。
-    * **D45398：** 重新设计了锁方案，使其仅锁定一个 vnode，经过多轮审查后，最终于 7 月 13 日提交。
+    * **[D44288](https://reviews.freebsd.org/D44288)：** 实现了 VOP\_UNP\_\*，并移除了对 VSOCK vnode 的特殊处理。
+    * **[D44601](https://reviews.freebsd.org/D44601)：** 解决了对 vnode 私有数据的非法访问问题，并提出了强制卸载的测试方案。
+    * **[D44788](https://reviews.freebsd.org/D44788)：** 修复了 unionfs\_rename 中的多个锁定问题，确保变更最小化以保证稳定性。
+    * **[D45398](https://reviews.freebsd.org/D45398)：** 重新设计了锁方案，使其仅锁定一个 vnode，经过多轮审查后，最终提交于 7 月 13 日。
 
 4. **咨询：**
 
-    * **Whiteout 处理 (D45987)：** 与 Kirk McKusick 和 Jason Harmening 合作，解决了在 tmpfs 中重命名/rmdir 操作期间 whiteout 条目的问题，涉及 UnionFS 导出的元数据。
+    * **Whiteout 处理 ([D45987](https://reviews.freebsd.org/D45987))：** 与 Kirk McKusick 和 Jason Harmening 合作，解决了在 tmpfs 中rename/rmdir 操作期间 whiteout 条目的问题，涉及 UnionFS 导出的元数据。
 
-此项目是一项全方位的努力，旨在确保 UnionFS 可靠、高效，并适用于 FreeBSD 的现代用例，包括 jail、容器和复杂的存储配置。
+此项目是一项全方位的努力，旨在确保 UnionFS 可靠、高效。适用于 FreeBSD 的现代用例，包括 jail、容器和复杂的存储配置。
 
 
 ## OpenZFS 分级速率限制
@@ -131,11 +131,11 @@ OpenZFS 尤为适合大规模和高要求的应用程序，如虚拟化和容器
 
 **联系人：** Pierre Pronchery [pierre@freebsdfoundation.org](mailto:pierre@freebsdfoundation.org)
 
-对于首次尝试新操作系统的用户来说，安装过程是他们面临的第一个挑战，也是他们对系统的原初印象来源。如今，大多数操作系统安装程序都搭载了图形界面，如 RedHat Enterprise Linux、Ubuntu 和 Debian GNU/Linux 等流行系统中所见。这种图形化方式在 UNIX 系统（包括 FreeBSD）中也变得越来越普遍。无论用户的技术水平如何，安装过程对于公众对该平台的看法至关重要。
+对于首次尝试新操作系统的用户来说，他们面临的第一个挑战是安装过程，安装过程也是他们对系统的原初印象来源。如今，大多数操作系统安装程序都搭载了图形界面，如 RedHat Enterprise Linux、Ubuntu 和 Debian GNU/Linux 等流行系统中所见。这种图形化方式在 UNIX 系统（包括 FreeBSD）中也变得越来越普遍。无论用户的技术水平如何，安装过程对于公众对该平台的看法至关重要。
 
 有多个项目已将 FreeBSD 转化为面向桌面的系统，其中 GhostBSD 就是个重要的例子，它提供了图形化安装程序。然而，GhostBSD 的安装程序依赖于由 Python 编写的 Gtk+ 界面，如果将其整合到 FreeBSD 常规的镜像生成过程中，可能会大幅增加安装介质的体积。此外，这一方法还需要在 Ports 中引入、维护新的项目。
 
-为了解决这个问题，提出了一个 BSD 许可证下 man:Xdialog[1] 的替代方案，并借鉴了现有的 man:bsdinstall[8] 和 man:bsdconfig[8] 工具的知识。这个新工具名为 man:gbsddialog[1]，将提供图形化安装功能，同时与当前的安装程序基础设施共享资源。与 2006 年发布的过时的 Xdialog 不同，gbsddialog 提供了一个现代化、高效的替代方案，确保占用最小的空间并保持 FreeBSD 的简洁镜像生成流程。
+为了解决这个问题，提出了一个 BSD 许可证下 man:Xdialog[1] 的替代方案，并借鉴了现有的 man:bsdinstall[8] 和 man:bsdconfig[8] 工具的知识。这个新工具名为 man:gbsddialog[1]，将提供图形化安装功能，同时与当前的安装程序基础设施共享资源。与 2006 年发布的，过时的 Xdialog 不同，gbsddialog 提供了一个现代化、高效的替代方案，确保占用最小的空间并保持 FreeBSD 的精简镜像生成流程。
 
 在 FreeBSD 14.0 版本发布后，完成了概念验证原型。FreeBSD 基金会随后用两个月的时间完成了一个可用的实现。该项目最终在 2024 年 AsiaBSDCon 大会的 WIP（半成品）环节中展示了功能齐全的图形化安装程序，标志着 FreeBSD 安装过程在用户友好性和视觉吸引力方面的重大进展。
 
@@ -165,14 +165,14 @@ FreeBSD/RISC-V 项目旨在为 [RISC-V 指令集架构](https://riscv.org/) 提�
 
 **联系人：** [Joe Mingrone](jrm@freebsdfoundation.org)
 
-该项目将为盲人、低视力和色盲用户提供一个“视觉辅助子系统”的开端。新功能将包括盲文刷新显示框架、虚拟终端控制台的通信通道、语音合成器、高对比度 TUI 工具和一本文档化 FreeBSD 上可用辅助技术的辅助技术书籍。
+该项目是为盲人、低视力和色盲用户提供“视觉辅助子系统”的开端。新功能将包括盲文刷新显示框架、虚拟终端控制台的通信通道、语音合成器、高对比度 TUI 工具和一本文档化 FreeBSD 上可用辅助技术的辅助技术书籍。
 
 项目交付物包括：
 
-- 修改基础系统中的 TUI 工具，以提供高对比度选项，可能处理 GUI 终端模拟器和 vt(4) 的“NO COLOR”环境变量。更新手册描述新功能。
+- 修改基础系统中的 TUI 工具，以提供高对比度选项，可能处理 GUI 终端模拟器和环境变量 vt(4) 的“NO COLOR”。更新手册描述新功能。
 - 新选项可以通过启动对话框菜单选择“安装”和“高对比度安装”来以高对比度运行 bsdinstall(8)。
 - 为 vt(4) 和语音合成器提供新通信方法。手册将更新以描述新功能。
-- 盲文设备框架，可能作为 https://brltty.app 的 Port，具有其盲文刷新显示“驱动程序”。如果时间允许，还包括其语音能力功能。
+- 盲文设备框架，可能作为 <https://brltty.app> 的 Port，具有其盲文刷新显示“驱动程序”。如果时间允许，还包括其语音能力功能。
 - 新工具实现 bsdinstall(8) 对话框，作为适合屏幕阅读器的简单文本界面。
 - 新的“语音安装”选项通过新的 CLI 工具运行 bsdinstall(8)。该功能将作为概念验证提供（会议和社交网络的视频和演示），因为语音合成器和 BRLTTY 在类似 GPL 的许可下发布。
 - 在文档库中新增“可访问性”书籍，以描述新的视觉辅助子系统和 Ports 中的工具。
@@ -191,7 +191,7 @@ FreeBSD/RISC-V 项目旨在为 [RISC-V 指令集架构](https://riscv.org/) 提�
 
 音频系统进行了多次崩溃和 bug 修复，并且在笔记本电脑上，对 man:snd_hda[4] 的支持得到了改善，确保了更稳定可靠的音频性能。OSS API 的增强改善了 SNDCTL_AUDIOINFO 和 SNDCTL_ENGINEINFO IOCTL 的实现，从而提高了兼容性和功能。
 
-新实现包括启动 man:audio[3]，一个 OSS 音频和 MIDI 库，以及接管 man:virtual_oss[8] 的维护，这两者都为扩展 FreeBSD 音频堆栈的功能作出了贡献。
+新实现包括启动 man:audio[3]，一个 OSS 音频和 MIDI 库，以及接管 man:virtual_oss[8] 的维护：这两者都为扩展 FreeBSD 音频堆栈的功能作出了贡献。
 
 展望未来，该项目计划开发新的 man:audio[8] 工具和蓝牙管理工具，进一步改善用户体验。还计划对 man:mixer[3] 和 man:mixer[8] 进行增强。此外，项目将改进文档和测试套件，以确保全面的测试和用户指导。还在进行一项实验尝试，以自动化 man:snd_hda[4] 引脚补丁，如果成功，将显著简化音频配置。
 
@@ -199,7 +199,7 @@ FreeBSD/RISC-V 项目旨在为 [RISC-V 指令集架构](https://riscv.org/) 提�
 
 **更多信息：**  **[音频堆栈改进 (GitHub)](https://github.com/Jehops/freebsd-doc/blob/2024q2_ff/website/content/en/status/report-2024-04-2024-06/audio.adoc)**
 
-## CI 增强
+## 完善 CI 
 
 正在进行
 
@@ -229,11 +229,11 @@ FreeBSD/RISC-V 项目旨在为 [RISC-V 指令集架构](https://riscv.org/) 提�
 
 Cloud-init 现已成为在云中设置服务器的标准。在过去一年半的时间里，FreeBSD 在支持 cloud-init 方面取得了显著进展。今年的重点是同 cloud-init 开发者和 FreeBSD 基金会密切合作，增强 FreeBSD，使 cloud-init 团队能够直接测试未来对 FreeBSD 代码路径的更改。
 
-为此，FreeBSD 必须在 LXD（和 Incus）的控制下运行，并由 lxd-agent（或 incus-agent）管理。最近，已经取得了一些可见的改进。一个小型测试框架在 sh 中开发，正在逐步迁移到 OpenTofu/Terraform。该框架安装测试 cloud-init-devel 和 cloud-init 的最新版本。为支持这一点，创建了一个专用的公共代码库，包含 FreeBSD 13 和 14 在 amd64 和 aarch64 上的 cloud-init-devel 和 cloud-init 的最新版本。
+为此，FreeBSD 必须在 LXD（和 Incus）的控制下运行，并由 lxd-agent（或 incus-agent）管理。最近，已经取得了一些可见的改进。一个小型测试框架在 sh 中开发，正在逐步迁移到 OpenTofu/Terraform。该框架安装测试了 cloud-init-devel 和 cloud-init 的最新版本。为支持这一点，创建了专用的公共代码库，包含 FreeBSD 13 和 14 在 amd64 和 aarch64 上的 cloud-init-devel 和 cloud-init 的最新版本。
 
 此外，Linux vsock 测试框架也已移植到 FreeBSD。基于 HyperV Socket 驱动程序创建了 VirtIO Socket 驱动程序的驱动程序框架，导致 HyperV 套接字的多个改进。这些改进已部分接受，但仍需更多工作。
 
-最新的 cloud-init 24.1 系列经过测试并发布，修复了长期存在的错误，例如将 /run/cloud-init 移动到 BSD 上的 /var/run/cloud-init，并纠正了 user_groups 的 homedir 参数。此次发布还包括社区贡献的 OpenBSD 代码路径的多个修复。
+最新的 cloud-init 24.1 系列经过测试并发布，修复了长期存在的错误，例如将 /run/cloud-init 移动到 BSD 上的 /var/run/cloud-init，并纠正了 user_groups 的参数 homedir 。此次发布还包括社区贡献的 OpenBSD 代码路径的多个修复。
 
 展望未来，这项工作涉及几个关键任务。完成 FreeBSD VirtIO Socket 驱动程序和修复 Go 的运行时以支持 FreeBSD 上的 VirtIO 是首要任务。将 lxd-agent 的依赖项及 lxd-agent 本身移植到 FreeBSD 也至关重要。这些努力将与对 BSD 上 cloud-init 的进一步改进和在不同云提供商上的额外测试交替进行。
 
@@ -249,13 +249,13 @@ Cloud-init 现已成为在云中设置服务器的标准。在过去一年半的
 
 **第一季度：**
 
-在 2024 年第一季度，该项目取得了重大进展。提交了 BSDCan 2024 的提案，团队参加了 AsiaBSDCon 2024，分享了移植经验并收集了有价值的反馈，这帮助完善了项目的方向。第一阶段的任务进行了审查，进行了必要的调整，并将第二和第三阶段的计划与长期目标进行了对齐。一项关键技术成就是验证了 bhyve 串口控制台通过 TCP 的功能。还制作了一个演示视频，展示了项目的进展和特性。
+在 2024 年第一季度，该项目取得了重大进展。提交了 BSDCan 2024 的提案，团队参加了 AsiaBSDCon 2024，分享了移植经验并收集了有价值的反馈，这帮助完善了项目的方向。第一阶段的任务进行了审查，进行了必要的调整，并将第二和第三阶段的计划与长期目标进行了对齐。一项关键技术成就是验证了 bhyve 串口控制台通过 TCP 的功能。还制作了个演示视频，展示了项目的进展和特性。
 
 **第二季度：**
 
 第二季度继续取得进展。团队在 BSDCan 2024 上介绍了“朝着强大的基于 FreeBSD 的云：移植 OpenStack 组件”，这增加了项目的可见性，并吸引了潜在贡献者的兴趣。概念验证（POC）站点从单节点设置扩展到三节点设置，涉及详细的环境设置和网络规划。还启动了将基础迁移到 FreeBSD 15.0-CURRENT 的工作，以保持与最新 FreeBSD 发展的对齐。
 
-此外，手动安装步骤和代码补丁开始转换为 FreeBSD Port，以简化安装过程。一个重要的里程碑是启动了对 FreeBSD 实例和 OpenStack Ironic 服务主机进行裸机配置的工作。
+此外，手动安装步骤和代码补丁开始转换为 FreeBSD Port，简化安装过程。一个重要的里程碑是启动了对 FreeBSD 实例和 OpenStack Ironic 服务主机进行裸机配置的工作。
 
 **未来计划：**
 
@@ -356,7 +356,7 @@ Mark Johnston 和 Andrew Turner 合作创建了构建 arm64 bhyve 客户的扁�
 
 **联系人：** Joseph Mingrone [jrm@freebsdfoundation.org](mailto:jrm@freebsdfoundation.org) 和 Philip Paeps [phil@freebsd.org](mailto:phil@freebsd.org)
 
-FreeBSD 基金会投资 10 余万美元在芝加哥部署了一套服务器集群。此项投资旨在加强 FreeBSD 项目的基础设施、提升其能力，并为用户提供更好的服务。为了支持这一扩展，基金会与 NYI 合作，后者慷慨地在其芝加哥设施中提供了四个机架。
+FreeBSD 基金会投资 10 余万美元，在芝加哥部署了一套服务器集群。此项投资旨在完善 FreeBSD 项目的基础设施、提升其能力，并为用户提供更好的服务。为了支持这一扩展，基金会与 NYI 合作，后者慷慨地在其芝加哥设施中提供了四个机架。
 
 新的集群配置旨在优化 FreeBSD 项目的运营效率，包括：
 
@@ -381,7 +381,7 @@ FreeBSD clusteradm 团队在新集群的集成阶段发挥了关键作用。
 
 已完成
 
-### FreeBSD 源代码树各部分的杂项更新。
+### FreeBSD 源代码树各部分的杂项更新
 
 **联系人：** Olivier Certner [olce@freebsd.org](mailto:olce@freebsd.org)
 
@@ -393,11 +393,11 @@ FreeBSD clusteradm 团队在新集群的集成阶段发挥了关键作用。
 * **杂项：** 进行了多达 26 项评审、软件包更新，并调查了 DRM 问题。
 * 在 FreeBSD Journal 发布了 [EuroBSDCon 2023 大会报告](https://freebsdfoundation.org/eurobsdcon-2023/)。
 
-## Center for Internet Security (CIS) FreeBSD 14 基准
+## FreeBSD 14 CIS 基准（互联网安全中心）
 
 已完成
 
-这是一个全面的安全加固指南，旨在帮助安全高效地配置 FreeBSD 系统。
+这是个全面的安全加固指南，旨在帮助安全高效地配置 FreeBSD 系统。
 
 **联系人：** Moin Rahman [bofh@freebsd.org](mailto:bofh@freebsd.org)
 
@@ -409,7 +409,7 @@ FreeBSD clusteradm 团队在新集群的集成阶段发挥了关键作用。
 * **网络配置：** 提供保护网络设置以防止未经授权访问和攻击的安全建议。
 * **审计和日志记录：** 设置强大日志和审计的说明，以监控系统活动。
 
-该基准是系统管理员、安全审计员以及必须遵守行业标准和法规的组织的重要资源。我们鼓励 FreeBSD 社区提供反馈并为这些指南的持续完善做出贡献。安全工作在协作中最为有效，我们期待看到社区如何利用和扩展这一新资源。
+该基准是系统管理员、安全审计员以及必须遵守行业标准和法规的组织的重要资源。我们欢迎 FreeBSD 社区提供反馈，为这些指南的不断完善做出贡献。安全工作在协作中最为有效，我们期待看到社区如何利用和扩展这一新资源。
 
 我们对 FreeBSD 社区在此基准中的重要贡献表示衷心感谢。特别感谢基准撰写者 Moin Rahman、编辑 Carole Fennelly、评审 Jason Kafer 和 Rick Miller、项目经理 Joe Mingrone，以及 CIS 的 Justin Brown 和 Eric Pinnell。同时，我们也感谢 [Verisign](https://www.verisign.com/) 对创建 CIS FreeBSD 14 基准部分费用的资助，以及对 [FreeBSD 基金会的慷慨捐赠者](https://freebsdfoundation.org/our-donors/donors/) 给予的支持。
 
@@ -436,7 +436,7 @@ VPP 的 FreeBSD 移植取得了成功，正在进行的工作旨在进一步增�
 
 已完成
 
-Naman Sood 是 FreeBSD 基金会的夏季实习生，一直在从事与网络相关的任务。Naman 在开始实习时提交了对 FreeBSD 中一个防火墙（pf）的改进。如，他们完成了 Luiz Amaral 开展的工作，以允许 pfsync（pf 的状态表同步接口）流量通过 IPv6 进行传输。他们还提交了对 pf 完全圆锥 NAT 实现 RFC 4787 REQs 1 和 3 的工作。完全圆锥 NAT 意味着来自内部 IP/端口的所有请求都映射到相同的外部 IP/端口，这使得某些设备（如 Nintendo Switch）能够在 FreeBSD 上运行 pf 的情况下正常工作。Naman 还承担了一些杂项任务，例如探索从 Klaus P. Ohrhallinger 开展的 FreeBSD 项目 VPS 中提取 TCP 检查点和故障转移的工作，以及提交 pw(8) 和 du(1) 的 bug 修复。
+Naman Sood 是 FreeBSD 基金会的夏季实习生，一直在从事与网络相关的任务。Naman 在开始实习时提交了对 FreeBSD 中一个防火墙（pf）的改进。如，他们完成了 Luiz Amaral 开展的工作，以使 pfsync（pf 的状态表同步接口）流量通过 IPv6 进行传输。他们还提交了对 pf 完全圆锥 NAT 实现 RFC 4787 REQs 1 和 3 的工作。完全圆锥 NAT 意味着来自内部 IP/端口的所有请求都映射到相同的外部 IP/端口，这使得某些设备（如 Nintendo Switch）能够在 FreeBSD 上运行 pf 的情况下正常工作。Naman 还承担了一些杂项任务，例如探索从 Klaus P. Ohrhallinger 开展的 FreeBSD 项目 VPS 中提取 TCP 检查点和故障转移的工作，以及提交 pw(8) 和 du(1) 的 bug 修复。
 
 ## 文档和测试实习
 
@@ -516,7 +516,7 @@ libarchive 库专注于压缩和解压缩多种流行的归档格式。已注意
 
 **8. 完成 SIGCAP 违规信号实现**
 
-David Chisnall 提出的差异修订 https://reviews.freebsd.org/D33248 提议在 Capsicum 违规时可选地发送 SIGCAP 信号。不幸的是，该审查尚未完成，几个月来没有更新。完成此审查并添加 SIGCAP 信号可以使使用违规信号来触发 Capsicum 违规的程序的调试变得更加容易。我们可以使用 SIGCAP 告诉代码退回到替代路径，而不是等待可能被调试器拦截的 SIGTRAP。此外，拥有一个明确的 Capsicum 违规信号将允许 Capsicum 违规跟踪工具记录 Capsicum 特定的失败。例如，当 kern.trap enotcap=1 被设置时，任何 Capsicum 违规将提示 SIGTRAP 及程序终止。并不透明的是，这个程序是否因为违规而终止，还是因为不相关的 SIGTRAP 信号而终止。将 kern.trap enotcap 更改为发送 SIGCAP 将消除这种混淆。这个 SIGCAP 信号还可以为前述的 ktrace(1) 引入一种跟踪 Capsicum 违规的替代方法。ktrace(1) 程序可以拦截并记录 SIGCAP 调用，并使用适当的信号处理程序将原始程序送回执行。
+David Chisnall 提出的差异修订 <https://reviews.freebsd.org/D33248> 提议在 Capsicum 违规时可选地发送 SIGCAP 信号。不幸的是，该审查尚未完成，几个月来没有更新。完成此审查并添加 SIGCAP 信号可以使使用违规信号来触发 Capsicum 违规的程序的调试变得更加容易。我们可以使用 SIGCAP 告诉代码退回到替代路径，而不是等待可能被调试器拦截的 SIGTRAP。此外，拥有一个明确的 Capsicum 违规信号将允许 Capsicum 违规跟踪工具记录 Capsicum 特定的失败。例如，当 kern.trap enotcap=1 被设置时，任何 Capsicum 违规将提示 SIGTRAP 及程序终止。并不透明的是，这个程序是否因为违规而终止，还是因为不相关的 SIGTRAP 信号而终止。将 kern.trap enotcap 更改为发送 SIGCAP 将消除这种混淆。这个 SIGCAP 信号还可以为前述的 ktrace(1) 引入一种跟踪 Capsicum 违规的替代方法。ktrace(1) 程序可以拦截并记录 SIGCAP 调用，并使用适当的信号处理程序将原始程序送回执行。
 
 ## 无线实习
 
