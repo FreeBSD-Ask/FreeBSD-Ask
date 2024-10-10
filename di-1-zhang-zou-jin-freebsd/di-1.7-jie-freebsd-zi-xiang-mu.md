@@ -9,9 +9,9 @@
 本节是对 [Projects](https://freebsdfoundation.org/our-work/projects/) 的翻译。
 
 
-**FreeBSD 基金会赞助和社区贡献的特色 FreeBSD 项目**
+**FreeBSD 基金会赞助和社区贡献的 FreeBSD 特色项目**
 
-FreeBSD 基金会以资金和资源支持 FreeBSD 操作系统的开发活动，重点是提升 FreeBSD 的安全性、性能和可用性。我们与社区携手合作，共同努力，确保 FreeBSD 的恒久生命力。
+FreeBSD 基金会以资金和资源赞助 FreeBSD 操作系统的开发活动，重点是提升 FreeBSD 的安全性、性能和可用性。我们与社区携手合作，共同努力，确保 FreeBSD 的恒久生命力。
 
 基金会参与的开发项目由多种因素决定，包括与核心团队讨论需要填补的开发空白、该开发工作对改进项目的总体影响，以及基金会可提供的资金。以下是这些项目。
 
