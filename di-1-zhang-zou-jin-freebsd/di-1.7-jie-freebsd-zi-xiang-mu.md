@@ -1064,7 +1064,7 @@ FreeBSD 基金会很高兴宣布已向 Bjoern Zeeb 提供资助，用来分析 F
 
 “随着全球开始部署 IPv6，流量模式从 IPv4 向 IPv6 转移，不仅需要关注正确性和稳定性，功能一致性和性能也至关重要，”开发者 Bjoern Zeeb 说道。“使性能数据与 IPv4 看齐将确保用户在使用 IPv6 时不会消耗更多的资源。”
 
-## 实现 auditdistd 守护进程
+## 实现守护进程 auditdistd 
 
 已完成
 
@@ -1076,7 +1076,7 @@ auditdistd 项目的目标是通过 TCP/IP 网络在本地 auditdistd 守护进�
 
 该项目于 2012 年 2 月完成。
 
-## 已挂载文件系统的 Growfs
+## Growfs 已挂载的文件系统
 
 已完成
 
@@ -1098,7 +1098,7 @@ FreeBSD 文档项目长期依赖过时的工具来生成 FreeBSD 手册和其他
 
 该项目于 2013 年 7 月完成。
 
-## ARMv7 的超级页（SuperPage）支持
+## 支持 ARMv7 的超级页（SuperPage）
 
 已完成
 
@@ -1116,7 +1116,7 @@ ARM 架构正在扩展到高端服务器计算市场，支持该平台的复杂�
 
 FreeBSD 开发者：Edward Tomasz Napierala
 
-该项目提供了一个原生的内核级 iSCSI 栈（包括目标和发起者），以支持日益流行的块存储协议。虽然已有多个支持 FreeBSD 的 iSCSI 实现，但 FreeBSD 项目缺乏一个高性能且可靠的内核级目标。iSCSI 栈首次出现在 FreeBSD 10.0 中。后续版本将进一步优化并支持硬件卸载。
+该项目提供了原生的内核级 iSCSI 栈（包括目标和发起者），以支持日益流行的块存储协议。虽然已有多个支持 FreeBSD 的 iSCSI 实现，但 FreeBSD 项目缺乏高性能且可靠的内核级目标。iSCSI 栈首次出现在 FreeBSD 10.0 中。后续版本将进一步优化并支持硬件卸载。
 
 该项目于 2014 年初完成，并随 FreeBSD 11.0 发布。
 
@@ -1136,7 +1136,7 @@ FreeBSD 开发者：Paweł Jakub Dawidek
 
 FreeBSD 开发者：Edward Tomasz Napierała
 
-amd(8) 自动挂载程序的局限性是一个许多 FreeBSD 用户反映的反复出现的问题。新的自动挂载程序项目旨在解决这些问题。
+amd(8) 自动挂载程序的局限性是一个许多 FreeBSD 用户频繁反映的问题。新款自动挂载程序项目旨在解决这些问题。
 
 该自动挂载程序是对大多数其他 Unix 系统中此类功能的独立实现，使用通过 autofs 文件系统实现的内核支持。自动挂载程序支持标准的 Sun 映射格式，并与轻量级目录访问协议（LDAP）服务集成。
 
