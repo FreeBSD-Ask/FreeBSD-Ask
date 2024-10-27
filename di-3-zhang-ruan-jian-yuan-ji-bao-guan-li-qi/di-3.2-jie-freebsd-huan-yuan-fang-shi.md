@@ -59,26 +59,8 @@ FreeBSD 中 pkg 源分为系统级和用户级两个配置文件。**不建议**
 > > # sed -i '' 's/quarterly/latest/g' /etc/pkg/FreeBSD.conf
 > > ```
 >
-> **若要使用 https，请先安装 `security/ca_root_nss`，并将 `http` 修改为 `https`，最后使用命令 `# pkg update -f` 刷新缓存即可，下同。**
+> **若要使用 https，请先安装 `security/ca_root_nss`（FreeBSD 14.1 及以后不需要），并将 `http` 修改为 `https`，最后使用命令 `# pkg update -f` 刷新缓存即可，下同。**
 
-
-### 网易开源镜像站
-
-创建用户级源目录和文件:
-
-```sh
-# mkdir -p /usr/local/etc/pkg/repos
-# ee /usr/local/etc/pkg/repos/163.conf
-```
-
-写入以下内容:
-
-```sh
-163: {
-url: "http://mirrors.163.com/freebsd-pkg/${ABI}/quarterly",
-}
-FreeBSD: { enabled: no }
-```
 
 ### 中国科学技术大学开源软件镜像站
 
@@ -115,6 +97,25 @@ url: "http://mirrors.nju.edu.cn/freebsd-pkg/${ABI}/quarterly",
 }
 FreeBSD: { enabled: no }
 ```
+
+### 网易开源镜像站
+
+创建用户级源目录和文件:
+
+```sh
+# mkdir -p /usr/local/etc/pkg/repos
+# ee /usr/local/etc/pkg/repos/163.conf
+```
+
+写入以下内容:
+
+```sh
+163: {
+url: "http://mirrors.163.com/freebsd-pkg/${ABI}/quarterly",
+}
+FreeBSD: { enabled: no }
+```
+
 
 ## ports 源:以源代码方式编译安装软件的包管理器
 
