@@ -82,10 +82,30 @@
 
 - [X] 将小说诗歌杂记等与 FreeBSD 无关内容下线
 - [ ] 参照 FreeBSD handbook、鸟哥的 Linux 私房菜服务器篇改写服务器相关章节
+  - [ ] BSD 常用网络命令
+  - [ ] IPv6 配置
+    - [ ] WiFi
+    - [ ] 以太网
+  - [ ] DNS
+  - [ ] DHCP
+  - [ ] NTP
+  - [ ] NFS
+  - [ ] iSCSI
+  - [ ] Postfix
+  - [ ] LDAP（OpenLDAP，也许可以参考 [WiKi LDAP/Setup](https://wiki.freebsd.org/LDAP/Setup)）
 - [ ] NextCloud（最好基于 PostgreSQL）
 - [ ] KDE6
   - [ ] 基于 Xorg
   - [ ] 基于 Wayland
+- [ ] FreeBSD 安全加固（可参照 [FreeBSD 14 CIS 基准](https://www.cisecurity.org/cis-benchmarks)，[阿里云盘](https://www.alipan.com/s/9Vced5R3Wit)）
+  - [ ] 云服务器
+  - [ ] 小主机
+  - [ ] 桌面用户
+  - [ ] 虚拟机
+  - [ ] 限制端口
+  - [ ] 防火墙
+
+
 
 ## PDF 文档
 
