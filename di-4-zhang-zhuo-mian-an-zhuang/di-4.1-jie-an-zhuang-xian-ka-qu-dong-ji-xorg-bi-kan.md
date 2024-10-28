@@ -110,9 +110,9 @@ FreeBSD 14.1-RELEASE、14-STABLE（OSVERSION >1400508）、FreeBSD 15 CUEERNT，
 # cd /usr/ports/multimedia/libva-intel-driver && make install clean
 ```
 
-#### 亮度调节
+### 亮度调节
 
-##### 通用
+#### 通用
 
 对于一般计算机：
 
@@ -127,7 +127,7 @@ FreeBSD 14.1-RELEASE、14-STABLE（OSVERSION >1400508）、FreeBSD 15 CUEERNT，
 # sysrc -f /boot/loader.conf  acpi_video="YES"
 ```
 
-##### 英特尔
+#### 英特尔/AMD
 
 backlight 自 FreeBSD 13 引入。
 
@@ -136,6 +136,15 @@ backlight 自 FreeBSD 13 引入。
 # backlight decr 20  #降低 20% 亮度
 # backlight +        #默认调整亮度增加 10%
 # backlight -        #默认调整亮度减少 10%
+```
+
+如果上述操作不起作用，请检查路径 `/dev/backlight` 下都有哪些设备。
+
+示例（照抄不会起作用的，自己 `ls /dev/backlight` 看看）：
+
+```sh
+# backlight -f /dev/backlight/amdgpu_bl00 - 10
+# backlight -f /dev/backlight/backlight0 - 10  
 ```
 
 ###### 参考文献
