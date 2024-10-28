@@ -140,14 +140,14 @@ backlight 自 FreeBSD 13 引入。
 
 如果上述操作不起作用，请检查路径 `/dev/backlight` 下都有哪些设备。
 
-示例（照抄不会起作用的，自己 `ls /dev/backlight` 看看）：
+- 示例（照抄不会起作用的，自己 `ls /dev/backlight` 看看）：
 
 ```sh
 # backlight -f /dev/backlight/amdgpu_bl00 - 10
 # backlight -f /dev/backlight/backlight0 - 10  
 ```
 
-###### 参考文献
+##### 参考文献
 
 - [backlight -- configure backlight	hardware](https://man.freebsd.org/cgi/man.cgi?backlight)
 - 经过测试，此部分教程适用于 renoir 显卡：
