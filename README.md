@@ -76,7 +76,19 @@
     - [ ] 说明各大 Linux 操作系统的优势
 - [ ] 补充一些实验
   - [ ] 我的世界（服务器、客户端）
-
+- [ ] ZFS（可以参考 [Oracle Solaris 管理：ZFS 文件系统](https://docs.oracle.com/cd/E26926_01/html/E25826/index.html)）
+  - [ ] ZFS 共享
+  - [ ] ZFS 加密
+  - [ ] ZFS 调优
+  - [ ] ZFS iSCSI
+  - [ ] 补充 ZFS 委托管理
+  - [ ] 归档快照和根池恢复
+  - [ ] ZFS 故障排除
+  - [ ] ZFS 克隆
+  - [ ] ZFS 与 ACL
+  - [ ] ZFS 高级主题
+  - [ ] ZFS 池管理
+  - [ ] ZFS 与 RAID
 
 ### 也许需要
 
