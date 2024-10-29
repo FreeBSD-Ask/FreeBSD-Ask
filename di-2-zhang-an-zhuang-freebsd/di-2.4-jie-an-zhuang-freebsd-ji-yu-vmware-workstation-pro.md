@@ -57,6 +57,18 @@ CURRENT 测试版（仅限专业用户，对于该版本来说，无法启动，
 
 FreeBSD 旧版本下载地址: [http://ftp-archive.freebsd.org/pub/FreeBSD-Archive/old-releases/amd64/ISO-IMAGES/](http://ftp-archive.freebsd.org/pub/FreeBSD-Archive/old-releases/amd64/ISO-IMAGES/)
 
+## 博通直链
+
+>**技巧**
+>
+>**可以免注册登录**
+>
+>博通直链：<https://softwareupdate.vmware.com/cds/vmw-desktop/ws/>，`windows/core/` 下的 `VMware-workstation-XX.X.X-XXXXXXXX.exe.tar` 即是，解压缩即可。
+
+### 参考文献
+
+- [[经验] 上直链！！ VMWare Workstation Pro免费给个人用了](https://hostloc.com/thread-1306968-1-1.html)
+
 
 ## 博通（broadcom）账号
 
@@ -322,4 +334,5 @@ fusefs_load="YES"
 > **注意**
 >
 > 在使用 Windows 远程桌面或者其他 XRDP 工具远程另一台 Windows 桌面，并使用其上面运行的 Vmware 虚拟机操作 FreeBSD 时，鼠标通常会变得难以控制。这是正常的！
+
 
