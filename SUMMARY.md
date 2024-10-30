@@ -12,6 +12,7 @@
 * [第 0.2 节 总线接口与协议](di-0-zhang-ji-suan-ji-gai-lun/0.2-zong-xian.md)
 * [第 0.3 节 散热器、风扇、鼓风机](di-0-zhang-ji-suan-ji-gai-lun/0.3-san-re-qi.md)
 * [第 0.4 节 操作系统](di-0-zhang-ji-suan-ji-gai-lun/0.4-cao-zuo-xi-tong.md)
+* [第 0.5 节 MySQL 数据库](di-0-zhang-ji-suan-ji-gai-lun/0.5-shu-jv-ku.md)
 
 ## 第 1 章 走近 FreeBSD
 
