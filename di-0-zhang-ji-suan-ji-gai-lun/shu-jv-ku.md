@@ -16,7 +16,7 @@ UNIX 连接 MySQL
 
 设置用户可以被某个特定主机连接， `Host = 'xxx'` 是指定能连接的 IP， `%` 就是随意一个主机都能连接。
 
-```MySQL
+```sql
 UPDATE mysql.user SET Host = '%' WHERE User = 'root';
 FLUSH PRIVILEGES;
 ```
