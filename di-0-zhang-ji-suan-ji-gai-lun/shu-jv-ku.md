@@ -1,4 +1,21 @@
-# MySQL数据库
+# MySQL
+
+修改用户密码
+```mysql
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'your_new_password';
+```
+UNIX连接MySQL
+```shell
+$ sudo mysql -u root -p
+```
+在修改完用户、权限或主机以后，使用`FLUSH PRIVILEGES;`命令刷新是个好习惯，可以确保更改生效。  
+
+设置用户可以被某个特定主机连接，`Host = 'xxx'`是指定能连接的IP，`%`就是随意一个主机都能连接。
+```MySQL
+UPDATE mysql.user SET Host = '%' WHERE User = 'root';
+FLUSH PRIVILEGES;
+```
+
 ## 建立数据库
 
 ```mysql
@@ -13,15 +30,16 @@ Creat database if not exists;
 
 ## 数据库命名
 
-数据库名称区分大小写。
-数据库名称最长 64 个字符，别名（alias）最长 256 字符。
-数据库名不能使用数据库的关键字。
+数据库名称区分大小写。  
+数据库名称最长 64 个字符，别名（alias）最长 256 字符。  
+数据库名不能使用数据库的关键字。  
 
 ## 查看数据库
 
-`show databases;`
+```mysql
+show databases;
+```
 输出的表格：
-
 ```
 +--------------------+
 | Database           |
@@ -42,16 +60,17 @@ Creat database if not exists;
 再进入其他数据库重复上面语句。
 
 ## 删除数据库
-
-`drop database xxx;`
+```mysql
+drop database xxx;
+``` 
 注意不能删除系统数据库：
-Information_schema
-Mysql
-Performance_schema
-Test
+- Information_schema
+- Mysql
+- Performance_schema
+- Test
 
-GBK: 国家标准扩展码（Guo-Biao Kuozhan）
-BIG5：大五码，繁体中文社区最常用的电脑汉字字符集标准。
+GBK: 国家标准扩展码（Guo-Biao Kuozhan）  
+BIG5：大五码，繁体中文社区最常用的电脑汉字字符集标准。  
 
 ## 数据库重命名
 
@@ -73,19 +92,19 @@ default character set UTF-8;
 范围视有符号和无符号而定，无符号范围更大。根据实际要存储的数据选择合适的数据类型。
 
 **数字类型**：
-TINYINT，1 字节
-SMALLINT，2 字节
-MEDIUMINT，3 字节
-INT，4 字节
-BIGINT，8 字节
+- TINYINT，1 字节
+- SMALLINT，2 字节
+- MEDIUMINT，3 字节
+- INT，4 字节
+- BIGINT，8 字节
 
-FLOAT，4 字节，
-DOUBLE，8 字节
-DECIMAL：
-P 是表示有效数字数的精度。 P 范围是 1 到 65。
-D 是表示小数点后的位数。 D 的范围是 0 到 30。D 肯定是要小于或等于(<=)P 的。
+- FLOAT，4 字节，
+- DOUBLE，8 字节
+DECIMAL：  
+P 是表示有效数字数的精度。 P 范围是 1 到 65。  
+D 是表示小数点后的位数。 D 的范围是 0 到 30。D 肯定是要小于或等于(<=)P 的。  
 
-想要数据库类型为无符号，请添加 UNSIGNED 属性。
+想要数据库类型为无符号，请添加 UNSIGNED 属性。  
 
 ## 建立表格
 
@@ -147,7 +166,7 @@ mysql> desc MyTable;
 2 rows in set (0.01 sec)
 ```
 
-Null：是否允许为空
+Null：是否允许为空  
 Extra: 对于该列的备注
 
 ## 表约束
@@ -166,13 +185,18 @@ create table if not exists stu_table
 ```
 
 上面代码：
-stu_id 被设置为主键，
-stu_name 被设置为唯一，
-stu_age 被设置为禁止为空。
+stu_id 被设置为主键，  
+stu_name 被设置为唯一，  
+stu_age 被设置为禁止为空。  
 
 ## 如何执行 MySQL 脚本
 
 在命令行中执行：
-`mysql -u root -p 密码 < SQL脚本路径`
+```mysql
+mysql -u root -p 密码 < SQL脚本路径
+```
 数据库中执行：
-`mysql> source test.sql`
+```mysql
+mysql> source test.sql
+```
+
