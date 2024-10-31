@@ -1,9 +1,5 @@
 # 第 3.9 节 使用 pkgbase 更新 FreeBSD
 
->**警告**
->
->境内镜像站的 pkgbase 待测试，若你测试通过可提交 issue 或 PR。
-
 现在 FreeBSD 的系统更新是与第三方软件更新的分离的（现在使用 `freebsd-update`），pkgbase 是目的就是将其合并起来统一使用 `pkg` 命令进行管理（学习 Linux？）。因为现在只有一级架构的 RELEASE 才有 `freebsd-update` 可用。pkgbase 早在 2016 年就有了，原计划在 FreeBSD 14 就进入系统替代 `freebsd-update`，但是现在推迟到了 15。另外个人感觉 `freebsd-update` 体验非常差，非常慢（网络无关）。
 
 **pkgbase 的设计初衷是为了让 stable、current 和 release（BETA、RC 等）都能使用一种二进制工具进行更新。当下，stable、current 只能通过完全编译源代码的方式来更新。**
@@ -29,8 +25,6 @@
 
 **以上表格的时间已转换为北京时间，即东八区时间。**
 
-
-
 以 FreeBSD 15.0-CURRENT 为例（当下仅支持 14 和 15）
 
 创建文件夹：
@@ -47,14 +41,12 @@
 
 写入以下内容，保存退出：
 
-### 官方镜像站
+
+### 南京大学开源镜像站 NJU
 
 ```sh
 FreeBSD-base: {
-  url: "pkg+https://pkg.FreeBSD.org/${ABI}/base_latest",
-  mirror_type: "srv",
-  signature_type: "fingerprints",
-  fingerprints: "/usr/share/keys/pkg",
+  url: "https://mirrors.nju.edu.cn/freebsd-pkg/${ABI}/base_latest",
   enabled: yes
 }
 ```
@@ -68,14 +60,6 @@ FreeBSD-base: {
 }
 ```
 
-### 南京大学开源镜像站 NJU
-
-```sh
-FreeBSD-base: {
-  url: "https://mirrors.nju.edu.cn/freebsd-pkg/${ABI}/base_latest",
-  enabled: yes
-}
-```
 
 ### 网易开源镜像站 163
 
@@ -86,6 +70,17 @@ FreeBSD-base: {
 }
 ```
 
+### FreeBSD 官方镜像站
+
+```sh
+FreeBSD-base: {
+  url: "pkg+https://pkg.FreeBSD.org/${ABI}/base_latest",
+  mirror_type: "srv",
+  signature_type: "fingerprints",
+  fingerprints: "/usr/share/keys/pkg",
+  enabled: yes
+}
+```
 
 ### 第一次安装更新
 
