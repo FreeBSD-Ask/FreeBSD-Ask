@@ -676,7 +676,9 @@ Proceed with this action? [y/N]:
 
 经过实际测试，按照 WIKI，直接删掉旧系统的文件就行：
 
->我这是纯净系统，没有任何多余配置，只开了 SSH 服务。
+>**注意**
+>
+>我测试的是纯净系统，没有任何多余配置及第三方程序（除了 pkg），仅开了 SSH 服务。
 
 ```
 # find / -name \*.pkgsave -delete
