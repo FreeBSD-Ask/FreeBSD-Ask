@@ -6,14 +6,15 @@
 
 目前不清楚是否让系统组件成为可选的部分（比如 cron、ntp 等第三方软件），这样就可以在 `bsdinstall` 安装的时候选择系统组件了。
 
-## FreeBSD 官方镜像站
-
+## 配置方法
 
 >**警告**
 >
 >**存在风险，可能会丢失所有数据！**
 
 ### 配置软件源
+
+
 | **分支** | **更新频率** | **URL 地址** |
 | :---: | :---: | :--- |
 | main（15.0-CURRENT） | 每天两次：08:00、20:00 | <https://pkg.freebsd.org/${ABI}/base_latest> |
@@ -23,7 +24,7 @@
 | releng/14.0（RELEASE） | 每天两次：08:00、20:00 | <https://pkg.freebsd.org/${ABI}/base_release_0> |
 | releng/14.1（RELEASE） | 每天两次：08:00、20:00 | <https://pkg.freebsd.org/${ABI}/base_release_1> |
 
-**以上表格的时间已转换为北京时间，即东八区时间。**
+**以上表格的时间已转换为北京时间，即东八区时间。为 FreeBSD 官方镜像站时间。**
 
 以 FreeBSD 15.0-CURRENT 为例（当下仅支持 14 和 15）
 
