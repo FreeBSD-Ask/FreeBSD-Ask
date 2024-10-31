@@ -60,7 +60,7 @@ FreeBSD-base: {
 
 ```sh
 FreeBSD-base: {
-  url: "https://mirrors.ustc.edu.cn/${ABI}/base_latest",
+  url: "https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/base_latest",
   enabled: yes
 }
 ```
@@ -69,7 +69,7 @@ FreeBSD-base: {
 
 ```sh
 FreeBSD-base: {
-  url: "https://mirrors.nju.edu.cn/${ABI}/base_latest",
+  url: "https://mirrors.nju.edu.cn/freebsd-pkg/${ABI}/base_latest",
   enabled: yes
 }
 ```
@@ -78,7 +78,7 @@ FreeBSD-base: {
 
 ```sh
 FreeBSD-base: {
-  url: "https://mirrors.163.com/${ABI}/base_latest",
+  url: "https://mirrors.163.com/freebsd-pkg/${ABI}/base_latest",
   enabled: yes
 }
 ```
