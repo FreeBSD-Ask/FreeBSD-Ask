@@ -670,14 +670,14 @@ Proceed with this action? [y/N]:
 # cp /etc/sysctl.conf.pkgsave /etc/sysctl.conf
 ```
 
-比对旧系统文件（这谁比的完？）：
+- 比对旧系统文件（这谁比的完？）：
 
 ```sh
 # find / -name "*.pkgsave" -type f -exec sh -c "f='{}'; echo '==== OLD ===='; ls -l \${f}; md5sum \${f}; echo '==== NEW ===='; ls -l \${f%.pkgsave}; md5sum \${f%.pkgsave}; cp -vi \${f} \${f%.pkgsave}" \;
 ```
+这是不可行的。
 
-
-经过实际测试，按照 WIKI，直接删掉旧系统的文件就行：
+故，经过实际测试，按照 WIKI，直接删掉旧系统的文件就行：
 
 >**注意**
 >
