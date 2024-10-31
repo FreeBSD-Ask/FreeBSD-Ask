@@ -6,14 +6,6 @@
 * [参考资料](can-kao-zi-liao.md)
 * [贡献者名单](gong-xian-zhe-ming-dan.md)
 
-## 第 0 章 计算机概论
-
-* [第 0.1 节 存储卡参数简介与测试](di-0-zhang-ji-suan-ji-gai-lun/0.1-sd-card-can-shu-jian-shu.md)
-* [第 0.2 节 总线接口与协议](di-0-zhang-ji-suan-ji-gai-lun/0.2-zong-xian.md)
-* [第 0.3 节 散热器、风扇、鼓风机](di-0-zhang-ji-suan-ji-gai-lun/0.3-san-re-qi.md)
-* [第 0.4 节 操作系统](di-0-zhang-ji-suan-ji-gai-lun/0.4-cao-zuo-xi-tong.md)
-* [第 0.5 节 MySQL 数据库](di-0-zhang-ji-suan-ji-gai-lun/0.5-shu-jv-ku.md)
-
 ## 第 1 章 走近 FreeBSD
 
 * [第 1.1 节 UNIX、Unix-like、Linux 和 FreeBSD 简介](di-1-zhang-zou-jin-freebsd/di-1.1-jie-shi-mo-shi-unix.md)
@@ -23,7 +15,6 @@
 * [第 1.5 节 谁在使用 FreeBSD](di-1-zhang-zou-jin-freebsd/di-1.5-jie-shui-zai-shi-yong-freebsd.md)
 * [第 1.6 节 FreeBSD 开发计划](di-1-zhang-zou-jin-freebsd/di-1.6-jie-freebsd-kai-fa-ji-hua.md)
 * [第 1.7 节 FreeBSD 特色开发项目](di-1-zhang-zou-jin-freebsd/di-1.7-jie-freebsd-zi-xiang-mu.md)
-
 
 ## 第 2 章 安装 FreeBSD
 
@@ -38,15 +29,17 @@
 * [第 2.8 节 自带文本编辑器 ee 的用法](di-2-zhang-an-zhuang-freebsd/di-2.8-jie-ee-yong-fa-ji-wang-luo-pei-zhi.md)
 * [第 2.9 节 虚拟机预安装镜像（本书自制）](di-2-zhang-an-zhuang-freebsd/di-2.9-jie-yu-an-zhuang-jing-xiang.md)
 
+## 第 3 章 包管理器暨 FreeBSD 更新与升级
 
-## 第 3 章 软件源及包管理器
-
-* [第 3.1 节 FreeBSD 镜像站现状](di-3-zhang-ruan-jian-yuan-ji-bao-guan-li-qi/di-3.1-jie-freebsd-jing-xiang-zhan-xian-zhuang.md)
-* [第 3.2 节 FreeBSD 换源方式](di-3-zhang-ruan-jian-yuan-ji-bao-guan-li-qi/di-3.2-jie-freebsd-huan-yuan-fang-shi.md)
-* [第 3.3 节 gitup 的用法](di-3-zhang-ruan-jian-yuan-ji-bao-guan-li-qi/di-3.3-jie-gitup-de-yong-fa.md)
-* [第 3.4 节 软件包管理器 pkg 的用法](di-3-zhang-ruan-jian-yuan-ji-bao-guan-li-qi/di-3.4-jie-ruan-jian-bao-guan-li-qi-pkg-de-yong-fa.md)
-* [第 3.5 节 使用 ports 以源代码方式安装软件](di-3-zhang-ruan-jian-yuan-ji-bao-guan-li-qi/di-3.5-jie-tong-guo-yuan-dai-ma-ports-fang-shi-an-zhuang-ruan-jian.md)
-* [第 3.6 节 通过 DVD 安装软件](di-3-zhang-ruan-jian-yuan-ji-bao-guan-li-qi/di-3.6-jie-tong-guo-dvd-an-zhuang-ruan-jian.md)
+* [第 3.1 节 FreeBSD 镜像站现状](di-3-zhang-bao-guan-li-qi/di-3.1-jie-freebsd-jing-xiang-zhan-xian-zhuang.md)
+* [第 3.2 节 FreeBSD 换源方式](di-3-zhang-bao-guan-li-qi/di-3.2-jie-freebsd-huan-yuan-fang-shi.md)
+* [第 3.3 节 gitup 的用法](di-3-zhang-bao-guan-li-qi/di-3.3-jie-gitup-de-yong-fa.md)
+* [第 3.4 节 软件包管理器 pkg 的用法](di-3-zhang-bao-guan-li-qi/di-3.4-jie-ruan-jian-bao-guan-li-qi-pkg-de-yong-fa.md)
+* [第 3.5 节 使用 ports 以源代码方式安装软件](di-3-zhang-bao-guan-li-qi/di-3.5-jie-tong-guo-yuan-dai-ma-ports-fang-shi-an-zhuang-ruan-jian.md)
+* [第 3.6 节 通过 DVD 安装软件](di-3-zhang-bao-guan-li-qi/di-3.6-jie-tong-guo-dvd-an-zhuang-ruan-jian.md)
+* [第 3.7 节 通过 freebsd-update 更新 FreeBSD](di-3-zhang-bao-guan-li-qi/di-3.7-jie-tong-guo-freebsdupdate-geng-xin.md)
+* [第 3.8 节 通过源代码更新 FreeBSD](di-3-zhang-bao-guan-li-qi/di-3.8-jie-tong-guo-yuan-dai-ma-geng-xin.md)
+* [第 3.9 节 使用 pkgbase 更新 FreeBSD](di-3-zhang-bao-guan-li-qi/di-3.9-jie-shi-yong-pkgbase-geng-xin.md)
 
 ## 第 4 章 桌面安装
 
@@ -122,11 +115,13 @@
 * [第 10.2 节 安装 Virtual Box](di-10-zhang-xu-ni-hua/di-10.2-jie-an-zhuang-virtual-box.md)
 * [第 10.3 节 使用 bhyve 安装 Windows 10](di-10-zhang-xu-ni-hua/di-10.3-jie-shi-yong-bhyve-an-zhuang-windows-10.md)
 
-## 第 11 章 更新与升级 FreeBSD
+## 第 11 章 计算机概论
 
-* [第 11.1 节 通过 freebsd-update 更新 FreeBSD](di-11-zhang-geng-xin-yu-sheng-ji-freebsd/di-11.1-jie-tong-guo-freebsdupdate-geng-xin.md)
-* [第 11.2 节 通过源代码更新 FreeBSD](di-11-zhang-geng-xin-yu-sheng-ji-freebsd/di-11.2-jie-tong-guo-yuan-dai-ma-geng-xin.md)
-* [第 11.3 节 使用 pkgbase 更新 FreeBSD](di-11-zhang-geng-xin-yu-sheng-ji-freebsd/di-11.3-jie-shi-yong-pkgbase-geng-xin.md)
+* [第 11.1 节 存储卡参数简介与测试](di-11-zhang-ji-suan-ji-gai-lun/0.1-sd-card-can-shu-jian-shu.md)
+* [第 11.2 节 总线接口与协议](di-11-zhang-ji-suan-ji-gai-lun/0.2-zong-xian.md)
+* [第 11.3 节 散热器、风扇、鼓风机](di-11-zhang-ji-suan-ji-gai-lun/0.3-san-re-qi.md)
+* [第 11.4 节 操作系统](di-11-zhang-ji-suan-ji-gai-lun/0.4-cao-zuo-xi-tong.md)
+* [第 11.5 节 MySQL 数据库](di-11-zhang-ji-suan-ji-gai-lun/0.5-shu-jv-ku.md)
 
 ## 第 12 章 GEOM 存储框架
 
