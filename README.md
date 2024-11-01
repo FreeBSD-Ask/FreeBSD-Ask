@@ -100,6 +100,7 @@
     - [ ] 以太网
   - [ ] DNS
   - [ ] DHCP
+  - [ ] 更新：第 17.8 节 PostgreSQL 与 pgAdmin4
   - [ ] NTP
   - [ ] NFS
   - [ ] iSCSI
