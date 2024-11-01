@@ -106,7 +106,7 @@
   - [ ] iSCSI
   - [ ] Postfix
   - [ ] LDAP（OpenLDAP，也许可以参考 [WiKi LDAP/Setup](https://wiki.freebsd.org/LDAP/Setup)）
-- [ ] NextCloud（最好基于 PostgreSQL）
+- [X] NextCloud（最好基于 PostgreSQL）
 - [ ] KDE6
   - [ ] 基于 Xorg
   - [ ] 基于 Wayland
