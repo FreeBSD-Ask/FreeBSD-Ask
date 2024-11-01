@@ -33,7 +33,7 @@ lo1 将获得 10 个 ip 地址，下面将用 1-9 这 9 个 ip 给 jail 使用�
 
 或者
 
-```
+```sh
 # cd /usr/ports/sysutils/qjail/ 
 # make install clean
 ```
@@ -220,7 +220,7 @@ qjail 可以用 `qjail config` 命令对每个 jail 另作设置，运行 `qjail
 
 [qjail --	Utility	for deployment of jail environments](https://www.freebsd.org/cgi/man.cgi?query=qjail&manpath=FreeBSD+13.1-RELEASE+and+Ports)
 
-### 1 `-h`
+### `-h`
 
 ```sh
 # qjail config -h jail1
@@ -228,7 +228,7 @@ qjail 可以用 `qjail config` 命令对每个 jail 另作设置，运行 `qjail
 
 快速开启 jail1 的 ssh 服务,新建一个 wheel 组用户，用户名和密码同 jail 名，首次用这个用户登录要求修改密码。也可以在登录 jail 控制台后，自行配置 sshd 服务。
 
-### 2 `-m` `-M`
+### `-m` `-M`
 
 ```sh
 # qjail config -m jail1
@@ -238,7 +238,7 @@ qjail 可以用 `qjail config` 命令对每个 jail 另作设置，运行 `qjail
 
 对应小写的 `-m` 选项，有大写的 `-M` 选项，作用为关闭手动启动状态，即清除 manual 状态，可以在系统启动时自动启用 jail。qjail 中有大量类似的选项，小写字母的选项启用某个功能，大写字母的选项关闭对应功能。如果下文中同时出现小写和大写的选项就不在过多作出说明。
 
-### 3 `-r` `-R`
+### `-r` `-R`
 
 ```sh
 # qjail config -r jail1
@@ -246,7 +246,7 @@ qjail 可以用 `qjail config` 命令对每个 jail 另作设置，运行 `qjail
 
 将 jail1 设为不允许启动（norun 状态），相当于禁用该 jail。
 
-### 4 `-y` `-Y`
+### `-y` `-Y`
 
 ```sh
 # qjail config -y jail1
@@ -319,13 +319,13 @@ jail 控制台中的操作
 
 或者
 
-```
+```sh
 # cd /usr/ports/databases/postgresql15-server/ && make install clean
 ```
 
 配置：
 
-```
+```sh
 # sysrc postgresql_enable=YES
 # mkdir -p -m 0700 /var/db/postgres/data15     # 注意版本号
 # chown postgres:postgres /var/db/postgres/data15  # 这个目录应属于 postgres 用户
