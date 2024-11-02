@@ -95,5 +95,6 @@
 - 2024.11.1
   - 新建一章：“第 17.6 节 NextCloud——基于 PostgreSQL”，并测试通过
 - 2024.11.2
-  - “第 1.1 节 UNIX、Unix-like、Linux 和 FreeBSD 简介” 补充思考题
+  - “第 19.2 节 Linux 败局与 FreeBSD 败局” 补充思考题
   - 新建“第 19.3 节 驳《还有人记得 Linux 之前，那个理想又骄傲的 BSD 吗？》”
+  - “第 17.6 节 NextCloud——基于 PostgreSQL”补充一节：“在 nextcloud 中挂载 samba 共享”
