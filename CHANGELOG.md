@@ -94,3 +94,5 @@
   - “第 3.9 节 使用 pkgbase 更新 FreeBSD”补充境内镜像站，并测试通过 NJU 163 USTC
 - 2024.11.1
   - 新建一章：“第 17.6 节 NextCloud——基于 PostgreSQL”，并测试通过
+- 2024.11.2
+  - “第 1.1 节 UNIX、Unix-like、Linux 和 FreeBSD 简介” 补充思考题
