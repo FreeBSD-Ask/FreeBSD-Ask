@@ -107,6 +107,13 @@
 - [ ] KDE6
   - [ ] 基于 Xorg
   - [ ] 基于 Wayland
+- [ ] Wayland
+  - [ ] 远程软件
+  - [ ] 桌面
+- [ ] Wine
+  - [ ] 填充实质性内容
+  - [ ] 微信
+  - [ ] 64 位 Windows 程序（64 位 Wine？）
 - [ ] FreeBSD 安全加固（可参照 [FreeBSD 14 CIS 基准](https://www.cisecurity.org/cis-benchmarks)，[阿里云盘](https://www.alipan.com/s/9Vced5R3Wit)）
   - [ ] 云服务器
   - [ ] 小主机
