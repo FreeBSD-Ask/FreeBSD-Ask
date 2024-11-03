@@ -281,7 +281,6 @@ current 相对稳定后会推送到 stable，但是不保证二者没有大的 b
 | `local_unbound` | 启用 Unbound。这是基本系统预置的 unbound，仅用于本地缓存转发解析器使用。注意：如果开启，你的系统将不会正确联网，需要手动配置 DNS。如果你不知道这是什么不建议开启 |
 |     `sshd`      |                                                                              开启 ssh 服务                                                                              |
 |    `moused`     |                                                                           在 tty 界面显示鼠标                                                                           |
-|    `ntpdate`    |                                                                      启用启动时的自动时钟同步功能                                                                       |
 |     `ntpd`      |                                                              用于自动时钟同步的网络时间协议（NTP）守护程序                                                              |
 |`ntpd_sync_on_start`|开机同步时间|
 |    `powerd`     |                                                                                电源管理，CPU 频率动态调整                                                                                 |
