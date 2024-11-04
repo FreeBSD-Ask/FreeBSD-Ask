@@ -127,7 +127,7 @@
 ---
 
 - [ ] OpenBSD
-  - [ ] KDE5
+  - [ ] KDE5（现在进入桌面黑屏）
   - [ ] OpenBSD 调优
   - [ ] OpenBSD 安全加固
   - [ ] 网络
@@ -140,7 +140,7 @@
     - [ ] PF 等防火墙
     - [ ] IPv6
     - [ ] 常用网络命令
-  - [ ] OpenBSD 路由器
+  - [ ] OpenBSD 路由器（可参考 [OpenBSD 路由器指南](https://translated-articles.bsdcn.org/2023-nian-9-yue/openbsd-router-guide)）
     - [ ] WiFi
     - [ ] 链路聚合
     - [ ] 路由表
