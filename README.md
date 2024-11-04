@@ -44,6 +44,7 @@
 ```
 ## ToDo
 
+### FreeBSD
 
 - [ ] 整合现有的上游 FreeBSD 社区文章
 - [ ] 重写“第 4.1 节 安装显卡驱动及 Xorg（必看）”，尤其是 N 卡驱动部分，目前是无效的，必须重写
@@ -110,18 +111,66 @@
 - [ ] Wayland
   - [ ] 远程软件
   - [ ] 桌面
+- [ ] FreeBSD 路由器
 - [ ] Wine
   - [ ] 填充实质性内容
-  - [ ] 微信
   - [ ] 64 位 Windows 程序（64 位 Wine？）
 - [ ] FreeBSD 安全加固（可参照 [FreeBSD 14 CIS 基准](https://www.cisecurity.org/cis-benchmarks)，[阿里云盘](https://www.alipan.com/s/9Vced5R3Wit)）
   - [ ] 云服务器
+  - [ ] 路由器
   - [ ] 小主机
   - [ ] 桌面用户
   - [ ] 虚拟机
   - [ ] 限制端口
   - [ ] 防火墙
+- [ ] 微信
 
+
+### BSD 家族
+
+- [ ] OpenBSD
+  - [ ] KDE5
+  - [ ] OpenBSD 安全加固
+  - [ ] OpenBSD 路由器
+  - [ ] OpenBSD 基础知识
+    - [ ] 版本概况
+    - [ ] 开发宗旨与项目目标
+    - [ ] 注意事项
+    - [ ] 跟踪新版本
+    - [ ] pkgsrc
+  - [ ] 嵌入式
+
+- [ ] NetBSD
+  - [ ] 桌面
+    - [ ] 火狐浏览器
+    - [ ] Chromium
+    - [ ] KDE 4（现在进入桌面黑屏）
+  - [ ] 树莓派 4 & 5
+  - [ ] NetBSD 安全加固
+  - [ ] NetBSD 基础知识
+    - [ ] 版本概况
+    - [ ] 开发宗旨与项目目标
+    - [ ] 注意事项
+    - [ ] 跟踪新版本
+    - [ ] pkgsrc
+  - [ ] 嵌入式  
+
+- [ ] DragonFlyBSD
+  - [ ] 桌面
+    - [ ] KDE5
+    - [ ] Gnome
+    - [ ] XFCE
+    - [ ] 火狐浏览器
+    - [ ] Chromium
+  - [ ] NetBSD 安全加固
+  - [ ] DragonFlyBSD 基础知识
+    - [ ] 版本概况
+    - [ ] 开发宗旨与项目目标
+    - [ ] 注意事项
+    - [ ] 跟踪新版本
+    - [ ] pkgsrc
+    - [ ] FreeBSD Ports
+  - [ ] 换源与包管理器
 
 
 ## PDF 文档
