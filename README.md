@@ -128,6 +128,7 @@
 
 - [ ] OpenBSD
   - [ ] KDE5
+  - [ ] OpenBSD 调优
   - [ ] OpenBSD 安全加固
   - [ ] 网络
     - [ ] DNS
@@ -156,6 +157,7 @@
 ---
 
 - [ ] NetBSD
+  - [ ] NetBSD 调优
   - [ ] 桌面
     - [ ] 火狐浏览器
     - [ ] Chromium
@@ -189,6 +191,7 @@
        
       
 - [ ] DragonFlyBSD
+  - [ ] DragonFlyBSD调优
   - [ ] 桌面
     - [ ] KDE5
     - [ ] Gnome
