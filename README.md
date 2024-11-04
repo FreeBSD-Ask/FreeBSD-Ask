@@ -182,7 +182,7 @@
     - [ ] PF 等防火墙
     - [ ] IPv6
     - [ ] 常用网络命令
-  - [ ] OpenBSD 路由器
+  - [ ] NetBSD 路由器
     - [ ] WiFi
     - [ ] 链路聚合
     - [ ] 路由表
@@ -199,7 +199,7 @@
     - [ ] XFCE
     - [ ] 火狐浏览器
     - [ ] Chromium
-  - [ ] NetBSD 安全加固
+  - [ ] DragonFlyBSD 安全加固
   - [ ] DragonFlyBSD 基础知识
     - [ ] 版本概况
     - [ ] 开发宗旨与项目目标
