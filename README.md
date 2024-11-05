@@ -56,8 +56,8 @@
   - [ ] 防火墙
   - [ ] jail
   - [ ] 用户与权限
-  - [ ] geom 合并到第 6 章
-  - [ ] 删除无实际内容的 DTrace 章节
+  - [ ] geom
+  - [ ] DTrace
 - [ ] 完全面向新手介绍 FreeBSD
   - [ ] 对比 Linux、Windows、MacOS、Android 和 IOS 等常见操作系统
   - [ ] 客观化论证
@@ -105,7 +105,7 @@
   - [ ] Postfix
   - [ ] LDAP（OpenLDAP，也许可以参考 [WiKi LDAP/Setup](https://wiki.freebsd.org/LDAP/Setup)）
 - [X] NextCloud（最好基于 PostgreSQL）
-- [ ] KDE6
+- [ ] KDE6（注意：**不**应使用 Port x11/kde6：kde6-devel）
   - [ ] 基于 Xorg
   - [ ] 基于 Wayland
 - [ ] Wayland
