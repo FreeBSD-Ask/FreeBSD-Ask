@@ -13,7 +13,7 @@
 或者
 
 ```
-# cd /usr/ports/sysutils/fusefs-ext2/ 
+# cd /usr/ports/filesystems/fusefs-ext2/ 
 # make install clean
 ```
 
@@ -50,7 +50,7 @@ _提示：上式不一定是 `da0sX`（X 为对应的数字），可通过 `# gp
 或者
 
 ```
-# cd /usr/ports/sysutils/fusefs-lkl/ 
+# cd /usr/ports/filesystems/fusefs-lkl/ 
 # make install clean
 ```
 
