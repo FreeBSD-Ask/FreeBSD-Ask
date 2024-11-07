@@ -100,3 +100,4 @@
   - “第 17.6 节 NextCloud——基于 PostgreSQL”补充一节：“在 nextcloud 中挂载 samba 共享”
 - 2024.11.7
   - “第 6.4 节 NTFS 的挂载”：新建“格式化”、挂载部分。
+  - 针对“[Add new category fs for file systems](https://github.com/freebsd/freebsd-ports/pull/302)” 进行修改
