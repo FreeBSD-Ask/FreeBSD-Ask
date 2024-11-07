@@ -98,3 +98,5 @@
   - “第 19.2 节 Linux 败局与 FreeBSD 败局” 补充思考题
   - 新建“第 19.3 节 驳《还有人记得 Linux 之前，那个理想又骄傲的 BSD 吗？》”
   - “第 17.6 节 NextCloud——基于 PostgreSQL”补充一节：“在 nextcloud 中挂载 samba 共享”
+- 2024.11.7
+  - “第 6.4 节 NTFS 的挂载”：新建“格式化”、挂载部分。
