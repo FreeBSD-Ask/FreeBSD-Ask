@@ -68,12 +68,12 @@
 安装：
 
 ```sh
-# pkg install automounter
+# pkg install automount
 ```
 或：
 
 ```sh
-# cd /usr/ports/sysutils/automounter/
+# cd /usr/ports/filesystems/automount/
 # make install clean
 ```
 
