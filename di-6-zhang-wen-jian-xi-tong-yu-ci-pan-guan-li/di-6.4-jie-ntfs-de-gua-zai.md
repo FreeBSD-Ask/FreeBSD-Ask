@@ -1,21 +1,83 @@
 # 第 6.4 节 NTFS 的挂载
 
-1. 安裝 ntfs-3g 软件 
->```
-># pkg install sysutils/fusefs-ntfs
->```
->或者
->```
-># cd /usr/ports/sysutils/fusefs-ntfs/ && make install clean
->```
-2. 把你的 ntfs 格式的硬盘或 U 盘插入计算机。这时候你会看到它的设备名，例如 `da0`。
-3. 修改 `rc.conf`
+安裝 ntfs-3g 软件:
+
+由于 [Bug 206978 - sysutils/fusefs-ntfs: Disable UBLIO as it breaks mkntfs](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=206978) 和 [Bug 194526 - sysutils/fusefs-ntfs: ntfs-3g with libublio lost files](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=194526)。请勿使用 pkg 安装，请使用 Ports：
+
+```sh
+# cd /usr/ports/sysutils/fusefs-ntfs/
+# make config
+```
+
+![FreeBSD 安装 ntfs-3g](../.gitbook/assets/ntfs1.png)
+
+
+取消勾选 `UBLIO`，再编译安装：
+
+
+```sh
+# make BATCH=yes install clean
+```
+
+
+把你的 ntfs 格式的硬盘/U 盘插入计算机。这时候你会看到它的设备名，例如 `da0`。
+
+修改 `rc.conf`：
 
 ```sh
 # sysrc kld_list+="fusefs"
 ```
 
-## 永久性挂载，修改 fstab 自动挂载
+## 创建 nfts 分区
+
+1. MBR 分区表
+
+```
+# gpart create -s mbr da0    #  使用 mbr 分区，如果已经是，则不需要
+# gpart add -t ntfs da0
+```
+
+2. GPT 分区表
+
+```
+# gpart create -s gpt da0    #  使用 gpt 分区，如果已经是，则不需要
+# gpart add -t ms-basic-data da0
+```
+
+## 格式化 ntfs 分区
+
+
+```sh
+# mkntfs -vf /dev/da0s1
+```
+
+- `-f` 表示快速格式化。`-v` 表示详细输出。
+
+
+### 参考文献
+
+[ntfs on freebsdn](https://www.gridbugs.org/ntfs-on-freebsd/)
+
+
+## 全自动挂载
+
+支持 NTFS/FAT/exFAT/EXT2/EXT3/EXT4/UFS/HFS/XFS/ISO9660。
+
+安装：
+
+```sh
+# pkg install automounter
+```
+或：
+
+```sh
+# cd /usr/ports/sysutils/automounter/
+# make install clean
+```
+
+即可。
+
+## 修改 fstab 自动挂载
 
 为了开机自动挂载，修改添加
 
