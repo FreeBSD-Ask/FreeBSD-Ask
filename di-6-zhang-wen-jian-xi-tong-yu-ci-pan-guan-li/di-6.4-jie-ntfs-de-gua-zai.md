@@ -2,7 +2,9 @@
 
 安裝 ntfs-3g 软件:
 
-由于 [Bug 206978 - sysutils/fusefs-ntfs: Disable UBLIO as it breaks mkntfs](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=206978) 和 [Bug 194526 - sysutils/fusefs-ntfs: ntfs-3g with libublio lost files](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=194526)。请勿使用 pkg 安装，请使用 Ports：
+>**警告**
+>
+>由于 [Bug 206978 - sysutils/fusefs-ntfs: Disable UBLIO as it breaks mkntfs](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=206978) 和 [Bug 194526 - sysutils/fusefs-ntfs: ntfs-3g with libublio lost files](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=194526)。请勿使用 pkg 安装，请使用 Ports：
 
 ```sh
 # cd /usr/ports/sysutils/fusefs-ntfs/
