@@ -101,3 +101,5 @@
 - 2024.11.7
   - “第 6.4 节 NTFS 的挂载”：新建“格式化”、挂载部分。
   - 针对“[Add new category fs for file systems](https://github.com/freebsd/freebsd-ports/pull/302)” 进行修改
+- 2024.11.8
+  - "第 1.1 节 UNIX、Unix-like、Linux 和 FreeBSD 简介"：补充“MacOS/iOS 等与 BSD 的关系”
