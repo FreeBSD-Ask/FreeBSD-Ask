@@ -1,5 +1,8 @@
 # 第 1.3 节 为什么要使用 FreeBSD
 
+>**技巧**
+>
+>有基金会的官方版本，请参见[为什么你应该使用 FreeBSD](https://book.bsdcn.org/fan-yi-wen-zhang-cun-dang/2024-nian-11-yue/why)。
 
 
 ## 选择 FreeBSD 的一句话原因——FreeBSD 能在流变的世界中寻求理想的中道
