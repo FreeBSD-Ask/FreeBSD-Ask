@@ -54,6 +54,11 @@ FreeBSD 是真正自由（Liberal）的操作系统，在这个大流变的世�
   - [ ] 找到一款我认为能替代二者的工具
 - [X] 将全书主观性文字转换为思考题供读者自行思考与判断
 - [ ] 更新“第 16.7 节 Samba 服务器”
+- [ ] Bhyve
+  - [ ] `sysutils/bhyvemgr` GUI
+  - [ ] Windows 11
+  - [ ] Windows XP ？
+  - [ ] Ubuntu
 - [ ] 删除重写部分来源于网络的错误内容
   - [ ] 防火墙
   - [ ] jail
