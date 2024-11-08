@@ -23,7 +23,7 @@ UNIX 认证查询网址：[The Open Group official register of UNIX Certified Pr
 >
 >从历史与现实来看，MacOS 基于 BSD 是确凿无疑，但并非全然基于某款 BSD：MacOS 应该被理解为一款独立的 BSD 操作系统——同 OpenBSD、NetBSD 和 FreeBSD 一样。参见[《苹果的开源基石：macOS 和 iOS 背后的 BSD 传统》](https://book.bsdcn.org/fan-yi-wen-zhang-cun-dang/2024-nian-11-yue/apple)
 >
->所以看似是安卓和苹果之争，其实是 Linux 与 BSD 之争。
+>所以看似是安卓和苹果之争，其实是 Linux 与 BSD 之争。~~也许也是大教堂与市集之争。~~
 
 ### UNIX 哲学与软件工程原则简介
 
