@@ -57,8 +57,10 @@ FreeBSD 是真正自由（Liberal）的操作系统，在这个大流变的世�
 - [ ] Bhyve
   - [ ] `sysutils/bhyvemgr` GUI
   - [ ] Windows 11
-  - [ ] Windows XP ？
+  - [ ] ~~Windows XP~~
   - [ ] Ubuntu
+  - [ ] FreeBSD
+  - [ ] ~~MacOS~~
 - [ ] 删除重写部分来源于网络的错误内容
   - [ ] 防火墙
   - [ ] jail
