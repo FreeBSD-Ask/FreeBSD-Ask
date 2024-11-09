@@ -54,6 +54,8 @@ FreeBSD 是真正自由（Liberal）的操作系统，在这个大流变的世�
   - [ ] 找到一款我认为能替代二者的工具
 - [X] 将全书主观性文字转换为思考题供读者自行思考与判断
 - [ ] 更新“第 16.7 节 Samba 服务器”
+- [ ] 树莓派 5
+  - [ ] 微信
 - [ ] Bhyve
   - [ ] `sysutils/bhyvemgr` GUI
   - [ ] Windows 11
@@ -143,6 +145,9 @@ FreeBSD 是真正自由（Liberal）的操作系统，在这个大流变的世�
 
 - [ ] OpenBSD
   - [ ] KDE5（现在进入桌面黑屏）
+  - [ ] QQ？原生可能吗
+  - [ ] 微信？原生可能吗
+  - [ ] Wine
   - [ ] OpenBSD 调优
   - [ ] OpenBSD 安全加固
   - [ ] 网络
@@ -177,6 +182,9 @@ FreeBSD 是真正自由（Liberal）的操作系统，在这个大流变的世�
     - [ ] 火狐浏览器
     - [ ] Chromium
     - [ ] KDE 4（现在进入桌面黑屏）
+    - [ ] QQ
+    - [ ] 微信
+    - [ ] Wine
   - [ ] 树莓派 4 & 5
   - [ ] NetBSD 安全加固
   - [ ] NetBSD 基础知识
@@ -210,6 +218,9 @@ FreeBSD 是真正自由（Liberal）的操作系统，在这个大流变的世�
   - [ ] 桌面
     - [ ] KDE5
     - [ ] Gnome
+    - [ ] QQ
+    - [ ] 微信
+    - [ ] Wine
     - [ ] XFCE
     - [ ] 火狐浏览器
     - [ ] Chromium
