@@ -72,11 +72,12 @@
 * [第 5.2 节 Ibus 输入法框架](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.2-jie-ibus-shu-ru-fa-kuang-jia.md)
 * [第 5.3 节 五笔输入法](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.3-jie-wu-bi-shu-ru-fa.md)
 * [第 5.4 节 Firefox 与 Chromium 安装](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.4-jie-firefox-yu-chromium-an-zhuang.md)
-* [第 5.5 节 安装金山 WPS](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.5-jie-an-zhuang-jin-shan-wps.md)
-* [第 5.6 节 安装 QQ](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.6-jie-an-zhuang-qq.md)
+* [第 5.5 节 FreeBSD 安装金山 WPS](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.5-jie-an-zhuang-jin-shan-wps.md)
+* [第 5.6 节 FreeBSD 安装 QQ](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.6-jie-an-zhuang-qq.md)
 * [第 5.7 节 更换字体](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.7-jie-geng-huan-zi-ti.md)
 * [第 5.8 节 wine](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.8-jie-wine.md)
 * [第 5.9 节 压缩与解压](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.9-jie-ya-suo-yu-jie-ya.md)
+* [第 5.10 节 FreeBSD 安装微信（Linux 版）](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/5.10-wechat.md)
 
 ## 第 6 章 文件系统与磁盘管理
 
