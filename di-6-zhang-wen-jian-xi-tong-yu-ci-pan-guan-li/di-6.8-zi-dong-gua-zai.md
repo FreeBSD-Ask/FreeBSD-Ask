@@ -3,6 +3,10 @@
 
 ## automount 自动挂载
 
+>**注意**
+>
+>`automount` 可能存在权限问题，有这方面要求的请使用 DSBMD。
+
 支持 NTFS/FAT/exFAT/EXT2/EXT3/EXT4/UFS/HFS/XFS/ISO9660。
 
 安装：
