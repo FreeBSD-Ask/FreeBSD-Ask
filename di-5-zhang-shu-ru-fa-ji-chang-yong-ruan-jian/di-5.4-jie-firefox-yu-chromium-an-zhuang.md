@@ -41,6 +41,10 @@ pkg install firefox-esr
 # make install clean
 ```
 
+>**警告**
+>
+>要编译 Chromium，你必须拥有至少 12G 内存，或等量的交换分区 + 内存。
+
 - Chromium 加入 Google 同步
 
  [Chromium Sync](https://www.learningtopi.com/sbc/chromium-sync/)
