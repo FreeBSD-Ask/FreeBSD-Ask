@@ -105,3 +105,4 @@
   - "第 1.1 节 UNIX、Unix-like、Linux 和 FreeBSD 简介"：补充“MacOS/iOS 等与 BSD 的关系”
 - 2024.11.9
   - 新增一节：“第 6.8 节 自动挂载文件系统”
+  - 新增一节：“第 5.10 节 FreeBSD 安装微信（Linux 版）”
