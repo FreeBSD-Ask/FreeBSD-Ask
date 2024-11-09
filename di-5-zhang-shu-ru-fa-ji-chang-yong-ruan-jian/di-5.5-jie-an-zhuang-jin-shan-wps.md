@@ -1,6 +1,88 @@
 # 第 5.5 节 FreeBSD 安装金山 WPS（Linux 版）
 
-> 请勿使用 ports 中的金山 WPS，因为无人更新。推荐自行构建兼容层安装使用。
+>**警告**
+>
+>请勿使用 ports 中的金山 WPS，因为无人更新。推荐自行构建兼容层安装使用。
+
+## 基于 RockyLinux 兼容层（FreeBSD Port）
+
+>**注意**
+>
+>请先参照本书其他章节先行安装 RockyLinux 兼容层（FreeBSD Port）
+
+### 安装 rpm 工具
+
+```sh
+# pkg install rpm4
+```
+
+或者：
+
+```
+# cd /usr/ports/archivers/rpm4/ 
+# make install clean
+```
+
+### 下载安装金山 WPS
+
+
+
+#### 下载金山 WPS
+
+官方地址：[WPS Office for Linux](https://linux.wps.cn/)
+
+
+<https://wps-linux-personal.wpscdn.cn/wps/download/ep/Linux2023/17900/wps-office-12.1.0.17900-1.x86_64.rpm?t=1731150867&k=8e9446b92a6e5b727047ec256307be78> 
+
+请自行获取有效链接，我使用浏览器下载。
+
+>**备注**
+>
+>这个链接有问题，我不知道怎么使用 fetch 下载，wget 也不行。如果你知道怎么解决，请提交 PR 或 issue。
+
+#### 安装金山 WPS
+
+```sh
+root@ykla:/ # cd /compat/linux/
+root@ykla:/compat/linux #  rpm2cpio < /home/ykla/Downloads/wps-office-12.1.0.17900-1.x86_64.rpm  | cpio -id  # 注意路径要换成你自己的
+```
+
+
+### 解决依赖问题
+
+查看依赖：
+
+```bash
+root@ykla:/compat/linux # /compat/linux/usr/bin/bash # 切换到兼容层的 shell
+bash-5.1# ldd /opt/kingsoft/wps-office/office6/wps
+	linux-vdso.so.1 (0x00007fffffffe000)
+	libdl.so.2 => /lib64/libdl.so.2 (0x000000080105c000)
+	libpthread.so.0 => /lib64/libpthread.so.0 (0x0000000801061000)
+	libtcmalloc_minimal.so.4 => /opt/kingsoft/wps-office/office6/libtcmalloc_minimal.so.4 (0x0000000801600000)
+	liblibsafec.so => /opt/kingsoft/wps-office/office6/liblibsafec.so (0x0000000801066000)
+	libstdc++.so.6 => /opt/kingsoft/wps-office/office6/libstdc++.so.6 (0x0000000801a00000)
+	libm.so.6 => /lib64/libm.so.6 (0x0000000801083000)
+	libgcc_s.so.1 => /lib64/libgcc_s.so.1 (0x000000080115e000)
+	libc.so.6 => /lib64/libc.so.6 (0x0000000801e00000)
+	/lib64/ld-linux-x86-64.so.2 (0x0000000001021000)
+	librt.so.1 => /lib64/librt.so.1 (0x0000000801179000)
+```
+
+可以看到，依赖齐全。
+
+### 运行金山 WPS
+
+
+```bash
+ykla@ykla:~ $ /compat/linux//opt/kingsoft/wps-office/office6/wps
+```
+
+
+![FreeBSD WPS](../.gitbook/assets/wps1.png)
+
+输入法正常。
+
+![FreeBSD WPS](../.gitbook/assets/wps2.png)
 
 ## 基于 ArchLinux 兼容层
 
@@ -116,9 +198,11 @@ Fcitx5 输入法没反应。待测试。如你知道怎么做，请告诉我们�
 
 安装完毕。
 
-Fcitx5 输入法没反应。待测试。如你知道怎么做，请告诉我们。
+>**注意**
+>
+>写作本文时，Fcitx5 输入法没反应。待测试。如你知道怎么做，请告诉我们。
 
-## 故障排除
+### 故障排除
 
 - 启动没反应
 
