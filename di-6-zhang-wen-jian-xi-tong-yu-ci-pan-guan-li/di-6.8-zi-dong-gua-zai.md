@@ -65,7 +65,7 @@ DSBMD 是 FreeBSD 的介质/文件系统类型检测守护进程，它允许客�
 
 #### QT 客户端
 
-`dsbmc` 客户端在运行时，才会向守护进程发送请求，所以要在桌面上启动客户端。下面以 xfce 为例。
+`dsbmc` 客户端在运行时，才会向守护进程发送请求，所以要在桌面上启动客户端。
 
 打开 `dsbmc`
 
@@ -88,6 +88,14 @@ DSBMD 是 FreeBSD 的介质/文件系统类型检测守护进程，它允许客�
 默认挂载在 `/media/` 下面，属主为客户端用户。
 
 ![mount 信息](../.gitbook/assets/dsbmd_dsbmc_userperm.png)
+
+##### xfce 自动启动
+
+![会话与启动](../.gitbook/assets/dsbmd_dsbmc_5.png)
+
+配置如下：
+
+![开机自启](../.gitbook/assets/dsbmd_dsbmc_7.png)
 
 #### 命令行客户端
 
