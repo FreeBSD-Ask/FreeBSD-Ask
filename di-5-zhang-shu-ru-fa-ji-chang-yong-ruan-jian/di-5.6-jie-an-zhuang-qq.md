@@ -34,6 +34,8 @@ root@ykla:/compat/linux # rpm2cpio < /QQ_3.2.12_240919_x86_64_01.rpm  | cpio -id
 1040641 blocks
 ```
 
+查看依赖库：
+
 ```sh
 root@ykla:/compat/linux #  /compat/linux/usr/bin/bash
 bash-5.1# ldd /opt/QQ/qq 
