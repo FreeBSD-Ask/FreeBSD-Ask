@@ -61,23 +61,6 @@
 [ntfs on freebsdn](https://www.gridbugs.org/ntfs-on-freebsd/)
 
 
-## 全自动挂载
-
-支持 NTFS/FAT/exFAT/EXT2/EXT3/EXT4/UFS/HFS/XFS/ISO9660。
-
-安装：
-
-```sh
-# pkg install automount
-```
-或：
-
-```sh
-# cd /usr/ports/filesystems/automount/
-# make install clean
-```
-
-即可。
 
 ## 修改 fstab 自动挂载
 

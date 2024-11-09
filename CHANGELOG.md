@@ -103,3 +103,5 @@
   - 针对“[Add new category fs for file systems](https://github.com/freebsd/freebsd-ports/pull/302)” 进行修改
 - 2024.11.8
   - "第 1.1 节 UNIX、Unix-like、Linux 和 FreeBSD 简介"：补充“MacOS/iOS 等与 BSD 的关系”
+- 2024.11.9
+  - 新增一节：“第 6.8 节 自动挂载文件系统”
