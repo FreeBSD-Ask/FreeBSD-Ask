@@ -3,8 +3,12 @@
 
 ## Linux QQ 3.x（electron）【可选：基于 RockyLinux 兼容层（FreeBSD Port）】
 
+下载 QQ：
+
+官方链接：[QQ Linux 版-轻松做自己](https://im.qq.com/linuxqq/index.shtml)
+
 ```sh
-root@ykla:/ # fetch https://dldir1.qq.com/qqfile/qq/QQNT/Linux/QQ_3.2.12_240919_x86_64_01.rpm
+root@ykla:/ # fetch https://dldir1.qq.com/qqfile/qq/QQNT/Linux/QQ_3.2.12_240919_x86_64_01.rpm # 写作本文时链接如此，请自行获取最新链接
 ```
 
 
