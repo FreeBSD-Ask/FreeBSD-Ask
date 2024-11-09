@@ -7,8 +7,23 @@
 root@ykla:/ # fetch https://dldir1.qq.com/qqfile/qq/QQNT/Linux/QQ_3.2.12_240919_x86_64_01.rpm
 ```
 
+
+安装 rpm 工具：
+
 ```sh
-root@ykla:/compat/linux # pkg install archivers/rpm4
+# pkg install rpm4
+```
+
+或者：
+
+```
+# cd /usr/ports/archivers/rpm4/ 
+# make install clean
+```
+
+安装 QQ：
+
+```sh
 root@ykla:/compat/linux # rpm2cpio < /QQ_3.2.12_240919_x86_64_01.rpm  | cpio -id
 ./usr/share/icons/hicolor/512x512/apps/qq.png: Cannot extract through symlink usr/share/icons/hicolor/512x512/apps/qq.png
 1040641 blocks
