@@ -3,16 +3,13 @@
 
 ## Linux QQ 3.x（electron）【可选：基于 RockyLinux 兼容层（FreeBSD Port）】
 
-下载 QQ：
-
-官方链接：[QQ Linux 版-轻松做自己](https://im.qq.com/linuxqq/index.shtml)
-
-```sh
-root@ykla:/ # fetch https://dldir1.qq.com/qqfile/qq/QQNT/Linux/QQ_3.2.12_240919_x86_64_01.rpm # 写作本文时链接如此，请自行获取最新链接
-```
+>**注意**
+>
+>请先参照本书其他章节先行安装 RockyLinux 兼容层（FreeBSD Port）
 
 
-安装 rpm 工具：
+
+### 安装 rpm 工具
 
 ```sh
 # pkg install rpm4
@@ -25,6 +22,16 @@ root@ykla:/ # fetch https://dldir1.qq.com/qqfile/qq/QQNT/Linux/QQ_3.2.12_240919_
 # make install clean
 ```
 
+### 下载安装 QQ
+
+下载 QQ：
+
+官方链接：[QQ Linux 版-轻松做自己](https://im.qq.com/linuxqq/index.shtml)
+
+```sh
+root@ykla:/ # fetch https://dldir1.qq.com/qqfile/qq/QQNT/Linux/QQ_3.2.12_240919_x86_64_01.rpm # 写作本文时链接如此，请自行获取最新链接
+```
+
 安装 QQ：
 
 ```sh
@@ -34,7 +41,9 @@ root@ykla:/compat/linux # rpm2cpio < /QQ_3.2.12_240919_x86_64_01.rpm  | cpio -id
 1040641 blocks
 ```
 
-查看依赖库：
+### 解决依赖库
+
+查看依赖：
 
 ```sh
 root@ykla:/compat/linux #  /compat/linux/usr/bin/bash # 切换到兼容层的 shell
@@ -152,7 +161,7 @@ bash-5.1# ldd /opt/QQ/qq
 
 可以看到 `ldd` 正常。
 
-启动
+## 启动 QQ
 
 ```sh
 root@ykla:/home/ykla # /compat/linux/opt/QQ/qq --no-sandbox  --in-process-gpu
