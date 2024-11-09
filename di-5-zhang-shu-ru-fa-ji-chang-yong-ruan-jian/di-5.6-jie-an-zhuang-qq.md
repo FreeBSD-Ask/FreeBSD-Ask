@@ -37,7 +37,7 @@ root@ykla:/compat/linux # rpm2cpio < /QQ_3.2.12_240919_x86_64_01.rpm  | cpio -id
 查看依赖库：
 
 ```sh
-root@ykla:/compat/linux #  /compat/linux/usr/bin/bash
+root@ykla:/compat/linux #  /compat/linux/usr/bin/bash # 切换到兼容层的 shell
 bash-5.1# ldd /opt/QQ/qq 
 	linux-vdso.so.1 (0x00007fffffffe000)
 	libffmpeg.so => /opt/QQ/libffmpeg.so (0x000000080c000000)
