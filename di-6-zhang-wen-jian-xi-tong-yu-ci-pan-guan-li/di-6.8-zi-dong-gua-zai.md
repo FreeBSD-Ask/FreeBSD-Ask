@@ -194,4 +194,4 @@ ntfs_mount_cmd_usr = "/sbin/mount_fusefs auto \"${DSBMD_MNTPT}\" ntfs-3g -o fmas
 
 这里为 ntfs-3g 的挂载选项提供的 `fmask=137,dmask=027` 掩码参数，以控制挂载选项。
 
-![改变挂载权限](../.gitbook/assetsdsbmd_customperm.png)
+![改变挂载权限](../.gitbook/assets/dsbmd_customperm.png)
