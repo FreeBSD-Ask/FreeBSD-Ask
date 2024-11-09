@@ -106,3 +106,4 @@
 - 2024.11.9
   - 新增一节：“第 6.8 节 自动挂载文件系统”
   - 新增一节：“第 5.10 节 FreeBSD 安装微信（Linux 版）”
+  - “第 5.5 节 FreeBSD 安装金山 WPS（Linux 版）”：新增“基于 RockyLinux 兼容层（FreeBSD Port）”安装 WPS
