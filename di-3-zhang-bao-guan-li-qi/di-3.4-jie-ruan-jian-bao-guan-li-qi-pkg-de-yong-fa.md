@@ -270,7 +270,7 @@ Fetching provides database: 100%   19 MiB   6.6MB/s    00:03
 Extracting database....success
 ```
 
-示例：查找 `libxcb-icccm.so.4`：
+### 示例：查找 `libxcb-icccm.so.4`：
 
 ```sh
 root@ykla:/home/ykla # pkg provides libxcb-icccm.so.4
