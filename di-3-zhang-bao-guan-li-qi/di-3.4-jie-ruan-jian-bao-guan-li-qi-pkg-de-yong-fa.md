@@ -226,7 +226,7 @@ Proceed with deinstalling packages? [y/N]:
 
 查看配置说明：
 
-```
+```sh
 root@ykla:/home/ykla # pkg info -D pkg-provides
 pkg-provides-0.7.4:
 On install:
