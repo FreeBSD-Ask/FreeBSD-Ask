@@ -203,7 +203,7 @@
 ## 第 21 章 Linux 兼容层
 
 * [第 21.1 节 Linux 兼容层实现](di-21-zhang-linux-jian-rong-ceng/di-21.1-jie-linux-jian-rong-ceng-shi-xian.md)
-* [第 21.2 节 Linux 兼容层——基于 CentOS（原生）](di-21-zhang-linux-jian-rong-ceng/di-21.2-jie-linux-jian-rong-ceng-ji-yu-centos-yuan-sheng.md)
+* [第 21.2 节 Linux 兼容层——基于 CentOS（FreeBSD Port）](di-21-zhang-linux-jian-rong-ceng/di-21.2-jie-linux-jian-rong-ceng-ji-yu-centos-yuan-sheng.md)
 * [第 21.3 节 Linux 兼容层——基于 Ubuntu/Debian](di-21-zhang-linux-jian-rong-ceng/di-21.3-jie-linux-jian-rong-ceng-ji-yu-ubuntudebian.md)
 * [第 21.4 节 Linux 兼容层——基于 ArchLinux bootstrap](di-21-zhang-linux-jian-rong-ceng/di-21.4-jie-linux-jian-rong-ceng-ji-yu-archlinux-bootstrap.md)
 * [第 21.5 节 Linux 兼容层——基于 archlinux-pacman](di-21-zhang-linux-jian-rong-ceng/di-21.5-jie-linux-jian-rong-ceng-ji-yu-archlinuxpacman.md)
