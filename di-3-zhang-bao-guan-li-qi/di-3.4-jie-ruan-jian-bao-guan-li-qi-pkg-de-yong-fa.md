@@ -204,6 +204,85 @@ The operation will free 825 MiB.
 Proceed with deinstalling packages? [y/N]: 
 ```
 
+## 如何查找缺少的 `.so`（适用于 Linux 兼容层）
+
+>**警告**
+>
+>本部分仅针对 Linux 兼容层缺少 `.so` 的问题。如果你是在 FreeBSD 中遇到了此类问题，应首先更新系统。然后再更新软件源和软件。
+
+### 安装 pkg-provides
+
+```sh
+# pkg install pkg-provides
+```
+
+或者：
+
+```sh
+# cd /usr/ports/ports-mgmt/pkg-provides/ 
+# make install clean
+```
+### 配置 pkg-provides
+
+查看配置说明：
+
+```
+root@ykla:/home/ykla # pkg info -D pkg-provides
+pkg-provides-0.7.4:
+On install:
+In order to use the pkg-provides plugin you need to enable plugins in pkg.
+To do this, uncomment the following lines in /usr/local/etc/pkg.conf file
+and add pkg-provides to the supported plugin list:
+
+PKG_PLUGINS_DIR = "/usr/local/lib/pkg/";
+PKG_ENABLE_PLUGINS = true;
+PLUGINS [ provides ];
+
+After that run `pkg plugins' to see the plugins handled by pkg.
+
+On upgrade:
+To update the provides database run `pkg provides -u`.
+```
+
+编辑 `/usr/local/etc/pkg.conf`，找到空行，写入：
+
+
+```sh
+PKG_PLUGINS_DIR = "/usr/local/lib/pkg/";
+PKG_ENABLE_PLUGINS = true;
+PLUGINS [ provides ];
+```
+
+运行：`pkg plugins`：
+
+```sh
+root@ykla:/home/ykla # pkg plugins
+NAME       DESC                                          VERSION   
+provides   A plugin for querying which package provides a particular file 0.7.4     
+root@ykla:/home/ykla # 
+```
+
+刷新数据库：
+
+```sh
+root@ykla:/home/ykla # pkg provides -u
+Fetching provides database: 100%   19 MiB   6.6MB/s    00:03    
+Extracting database....success
+```
+
+示例：查找 `libxcb-icccm.so.4`：
+
+```sh
+root@ykla:/home/ykla # pkg provides libxcb-icccm.so.4
+Name    : xcb-util-wm-0.4.2
+Comment : Framework for window manager implementation
+Repo    : FreeBSD
+Filename: usr/local/lib/libxcb-icccm.so.4.0.0
+          usr/local/lib/libxcb-icccm.so.4
+```
+
+
+
 ## 故障排除
 
 ###  `ld-elf.so.1: Shared object "libmd.so.6" not found, required by "pkg"`
