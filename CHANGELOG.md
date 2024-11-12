@@ -108,4 +108,5 @@
   - 新增一节：“第 5.10 节 FreeBSD 安装微信（Linux 版）”
   - “第 5.5 节 FreeBSD 安装金山 WPS（Linux 版）”：新增“基于 RockyLinux 兼容层（FreeBSD Port）”安装 WPS
 - 2024.11...12
-  - “第 3.4 节 软件包管理器 pkg 的用法”新增：“如何查找缺少的 .so（适用于 Linux 兼容层）”
+  - “第 3.4 节 软件包管理器 pkg 的用法”新增“如何查找缺少的 .so（适用于 Linux 兼容层）”
+  - “第 21.13 节 Linux 兼容层故障排除与配置”更新“sysctl 变量（基于 FreeBSD 14.1）”
