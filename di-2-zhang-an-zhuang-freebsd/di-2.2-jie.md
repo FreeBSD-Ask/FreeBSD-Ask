@@ -4,7 +4,7 @@
 
 Hyper-V 是微软为 Windows 开发的虚拟机，分为 `Gen 1` 和 `Gen 2`。
 
-Hyper-V 不支持家庭版。
+Windows 家庭版不支持 Hyper-V。
 
 `Gen 1` 和 `Gen 2` 区别如下：
 
