@@ -14,6 +14,7 @@
 
 ```sh
 # cd /usr/ports/x11/xorg/ && make install clean # X11
+# cd /usr/ports/x11/kde5/ && make install clean # KDE5
 # cd /usr/ports/x11/sddm/ && make install clean # 窗口管理器
 # cd /usr/ports/deskutils/plasma5-sddm-kcm/ && make install clean # KDE 管理 SDDM 的模块
 # cd /usr/ports/x11-fonts/wqy/ && make install clean # 文泉驿字体
