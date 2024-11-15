@@ -190,7 +190,7 @@ Current=sddm-freebsd-black-theme
 如果没有直接写入 `security.bsd.see_other_uid=1` 到 `/etc/sysctl.conf` 即可。
 
 
-#### 参考文献：
+#### 参考文献
 
 - [Missing power buttons when logged in from SDDM](https://forums.freebsd.org/threads/missing-power-buttons-when-logged-in-from-sddm.88231/)
 
