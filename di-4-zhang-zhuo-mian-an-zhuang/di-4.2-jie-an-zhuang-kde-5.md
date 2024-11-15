@@ -80,6 +80,87 @@ proc            /proc           procfs  rw      0       0
 > # pw groupmod wheel -m 用户名
 > ```
 
+## 登录界面主题
+
+安装：
+
+```sh
+# pkg install sddm-freebsd-black-theme
+```
+
+或：
+
+```sh
+# cd /usr/ports/x11-themes/sddm-freebsd-black-theme/ 
+# make install clean
+```
+
+
+查看配置：
+
+```sh
+root@ykla:/home/ykla # pkg info -D sddm-freebsd-black-theme
+sddm-freebsd-black-theme-1.3:
+On install:
+To enable this theme edit:
+
+ /usr/local/etc/sddm.conf
+
+ This theme use the x11-fonts/montserrat font by default. However, it
+ can be changed to any desired font editing:
+
+ /usr/local/share/sddm/themes/sddm-freebsd-black-theme/theme.conf
+
+Always:
+===>   NOTICE:
+
+The sddm-freebsd-black-theme port currently does not have a maintainer. As a result, it is
+more likely to have unresolved issues, not be up-to-date, or even be removed in
+the future. To volunteer to maintain this port, please create an issue at:
+
+https://bugs.freebsd.org/bugzilla
+
+More information about port maintainership is available at:
+
+https://docs.freebsd.org/en/articles/contributing/#ports-contributing
+```
+
+编辑 `/usr/local/etc/sddm.conf`：
+
+写入：
+
+```sh
+[Theme]
+Current=sddm-freebsd-black-theme
+```
+
+重启，设置完成：
+
+ ![KDE 5 FreeBSD 主题](../.gitbook/assets/kde-theme.png)
+
+### 参考文献
+
+- [デスクトップ環境の構築 - 4-7. LXQTのインストールと設定(LXQT 2.0.0)](http://silversack.my.coocan.jp/bsd/fbsd11x_bde-4-7_lxqt.htm)
+
+## 中文化
+
+点击开始-> System Settings -> Regional Settings 在 `Language` 项的 `Available Language` 栏中找到 “简体中文” 单击 `>` 将其加到 `Preferrred Languages` 栏中，然后单击 `Apply` 按钮；再到 `Formats` 项，将 `Region` 文本框中的内容修改为 “中国-简体中文(zh-CN)”，单击 `Apply` 按钮，logout（注销）后重新登录，此时系统语言将变为中文。
+
+
+### SDDM 中文化
+
+
+```
+# sysrc sddm_lang="zh_CN"
+```
+
+![KDE 5](../.gitbook/assets/sddmcn.png)
+
+#### 参考文献
+
+- [SDDM login screen with KDE: change language?](https://forums.freebsd.org/threads/sddm-login-screen-with-kde-change-language.80535/)
+
+
 ## 故障排除
 
 ### sddm 登录闪退
@@ -113,20 +194,3 @@ proc            /proc           procfs  rw      0       0
 
 - [Missing power buttons when logged in from SDDM](https://forums.freebsd.org/threads/missing-power-buttons-when-logged-in-from-sddm.88231/)
 
-## 中文化
-
-点击开始-> System Settings -> Regional Settings 在 `Language` 项的 `Available Language` 栏中找到 “简体中文” 单击 `>` 将其加到 `Preferrred Languages` 栏中，然后单击 `Apply` 按钮；再到 `Formats` 项，将 `Region` 文本框中的内容修改为 “中国-简体中文(zh-CN)”，单击 `Apply` 按钮，logout（注销）后重新登录，此时系统语言将变为中文。
-
-
-### SDDM 中文化
-
-
-```
-# sysrc sddm_lang="zh_CN"
-```
-
-![KDE 5](../.gitbook/assets/sddmcn.png)
-
-#### 参考文献
-
-- [SDDM login screen with KDE: change language?](https://forums.freebsd.org/threads/sddm-login-screen-with-kde-change-language.80535/)
