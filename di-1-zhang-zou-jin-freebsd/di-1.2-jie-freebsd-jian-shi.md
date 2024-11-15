@@ -10,7 +10,9 @@ Berkeley 在中文音译上存在不同写法，美音和英音发音亦不同�
 
 ## George Berkeley 乔治·贝克莱生平简介
 
-![图片出处：[George Berkeley](https://www.npg.org.uk/collections/search/portrait.php?search=ap&npgno=653&eDate=&lDate=)](../.gitbook/assets/Berkeley2.png)
+![George Berkeley](../.gitbook/assets/Berkeley2.png)
+
+图片出处：[George Berkeley](https://www.npg.org.uk/collections/search/portrait.php?search=ap&npgno=653&eDate=&lDate=)
 
 
 George Berkeley（1685.3.12—1753.1.14），2023 年是他逝世 270 周年。2025 年是其冥诞 340 周年。
