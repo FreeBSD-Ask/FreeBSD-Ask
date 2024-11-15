@@ -4,7 +4,7 @@
 
 目前版本兼容 FreeBSD 14.1-RELEASE 及 FreeBSD 15.0-CURRENT，并尽量向下兼容。
 
-主要面向 X86、Aarch64 架构，并尽量支持可能多的架构。
+主要面向 X86、AArch64 架构，并支持尽可能多的架构。
 
 Windows 测试环境为 Windows 10、11，并尽量使用最新版本的 Windows。
 
@@ -55,7 +55,7 @@ Windows 测试环境为 Windows 10、11，并尽量使用最新版本的 Windows
 
 ```sh
 # cd /usr/ports/xxx/yyy
-# make config-recursive #会一直问你，直到结束依赖
+# make config-recursive # 会一直问你，直到结束依赖
 # make install clean
 ```
 
