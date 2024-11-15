@@ -2,7 +2,7 @@
 
 >**技巧**
 >
-> 视频教程：FreeBSD 13.1 + VMware 17 + KDE5: [FreeBSD 13.1 安装 KDE5——基于 VMware 17](https://www.bilibili.com/video/BV1UR4y1U71T/)
+> 视频教程：FreeBSD 13.1 + VMware 17 + KDE5：[FreeBSD 13.1 安装 KDE5——基于 VMware 17](https://www.bilibili.com/video/BV1UR4y1U71T/)
 
 ## 安装
 
