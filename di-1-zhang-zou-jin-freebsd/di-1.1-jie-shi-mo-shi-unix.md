@@ -144,6 +144,8 @@ UNIX -> Networking Release 1->Networking Release 2 ->386BSD -> FreeBSD 1.0
 
 ![图片来源：<https://github.com/freebsd/freebsd-src/blob/main/share/misc/bsd-family-tree>，有删减](../.gitbook/assets/图片2.png)
 
+FreeBSD 日为 6 月 19 日。FreeBSD 基金会和社区在这天庆祝 FreeBSD 的生日。——[Join us to celebrate FreeBSD Day! ](https://freebsdfoundation.org/freebsd-day/)
+
 ### FreeBSD 时间线
 
 #### 1962 年 分时操作系统（Timesharing OS）
