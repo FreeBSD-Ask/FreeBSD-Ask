@@ -10,7 +10,7 @@ Berkeley 在中文音译上存在不同写法，美音和英音发音亦不同�
 
 ## George Berkeley 乔治·贝克莱生平简介
 
-![George Berkeley 乔治·贝克莱](../.gitbook/assets/Berkeley2.jpg)
+![George Berkeley 乔治·贝克莱](../.gitbook/assets/Berkeley2.png)
 
 图片出处：[George Berkeley](https://www.npg.org.uk/collections/search/portrait.php?search=ap&npgno=653&eDate=&lDate=)
 
