@@ -197,3 +197,9 @@ Current=sddm-freebsd-black-theme
 
 - [Missing power buttons when logged in from SDDM](https://forums.freebsd.org/threads/missing-power-buttons-when-logged-in-from-sddm.88231/)
 
+### 解除自动锁屏
+
+单击“工作区行为”——>“锁屏”——>取消勾选“自动锁定屏幕”，然后点击“应用”。注销后重新登录即可。
+
+
+![关闭 KDE5 锁屏](../.gitbook/assets/suoping.png)
