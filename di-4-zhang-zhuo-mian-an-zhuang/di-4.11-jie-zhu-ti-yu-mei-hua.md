@@ -86,3 +86,51 @@ git clone https://github.com/PapirusDevelopmentTeam/papirus-icon-theme
 cd papirus-icon-theme
 ./install.sh
 ```
+
+## 系统更新提示 `freebsd-update-notify`
+
+>**技巧**
+>
+>FreeBSD 上的 KDE5 自带类似功能，无需安装 `freebsd-update-notify`，本教程仅做示例。
+
+
+`freebsd-update-notify` 可以自动检测更新 FreeBSD 系统和 pkg 包。
+
+### 安装 `freebsd-update-notify`
+
+```sh
+# pkg install freebsd-update-notify
+```
+
+或
+
+```sh
+# cd /usr/ports/deskutils/freebsd-update-notify/ \
+# make install clean
+```
+
+### 配置 `freebsd-update-notify`
+
+配置文件位于 ` /usr/local/etc/freebsd-update-notify/freebsd-update-notify.conf`：
+
+可以改成：
+
+```ini
+max-days-between-updates    1   # 更新检测间隔（日）      
+hours-between-reminders     8   # 提醒间隔（小时）
+```
+
+### 图片示例
+
+
+>**注意**
+>
+>截图为手动执行示例，实际上程序可以在后台自动运行，无需手动运行验证。若无法再现，可以尝试将 `freebsd-update-notify.conf` 中两个值都改为 `0`，日志位于 `/var/log/freebsd-update-cron`、`/var/log/freebsd-update-notify`。
+
+
+![freebsd-update-notify on FreeBSD](../.gitbook/assets/notify1.png) 
+
+![freebsd-update-notify on FreeBSD](../.gitbook/assets/notify1.png) 
+
+![freebsd-update-notify on FreeBSD](../.gitbook/assets/notify3.png) 
+
