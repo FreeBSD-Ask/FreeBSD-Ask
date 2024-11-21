@@ -113,7 +113,7 @@ cd papirus-icon-theme
 
 配置文件位于 ` /usr/local/etc/freebsd-update-notify/freebsd-update-notify.conf`：
 
-可以改成：
+默认配置更新间隔太久，可以改成：
 
 ```ini
 max-days-between-updates    1   # 更新检测间隔（日）      
