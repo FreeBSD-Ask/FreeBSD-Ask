@@ -9,6 +9,10 @@
 >**注意**
 >
 >FreeBSD 的 ***stable*** 与一般 Linux 发行版的“稳定版”之概念并不一致，反而是一种 **不稳定** 的“开发版”。
+>
+>FreeBSD 的 ***stable*** 的真实意思是该分支内的 ABI 是稳定的。
+>
+>    ——参见 [FreeBSD Glossary STABLE](https://wiki.freebsd.org/Glossary#STABLE)
 
 alpha 是 current 进入 release 的第一步。具体过程是 current --> alpha（进入 stable 分支）--> beta --> rc --> release。
 
