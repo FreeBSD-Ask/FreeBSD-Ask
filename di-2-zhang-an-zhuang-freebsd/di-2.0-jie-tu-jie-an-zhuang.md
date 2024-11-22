@@ -16,11 +16,15 @@
 
 alpha 是 current 进入 release 的第一步。具体过程是 current --> alpha（进入 stable 分支）--> beta --> rc --> release。
 
-current 相对稳定后会推送到 stable，但是不保证二者没有大的 bug。stable 仅确保其 ABI 与所对应的大版本兼容。
+current 相对稳定后（即 MFC 最短三天）会推送到 stable，但是不保证二者没有大的 bug。参见 [FreeBSD Release Engineering](https://docs.freebsd.org/en/articles/freebsd-releng/)。
 
 >**注意**
 >
->只有 rc、beta 和 release（[且是一级架构](https://www.freebsd.org/platforms/)）才能使用命令 `freebsd-update` 更新系统，其余版本系统均需要通过源代码编译的方式（或使用二进制的 pkgbase）更新系统。
+>只有 ALPHA、rc、beta 和 release（[且是一级架构](https://www.freebsd.org/platforms/)）才能使用命令 `freebsd-update` 更新系统，其余版本系统均需要通过源代码编译的方式（或使用二进制的 pkgbase）更新系统。
+>
+>FreeBSD 开发计划准备删除 命令 `freebsd-update`，一律改用 pkgbase。
+>
+>    ——参见 [FreeBSD Manual Pages freebsd-update](https://man.freebsd.org/cgi/man.cgi?freebsd-update)
 
 以下安装说明基于 UEFI 下的 `FreeBSD-14.1-RELEASE-amd64-disc1.iso`。`-dvd1.iso` 大同小异。
 
