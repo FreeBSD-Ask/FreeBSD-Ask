@@ -29,7 +29,13 @@ current 相对稳定后（即 MFC 最短三天）会推送到 stable，但是不
 >
 >    ——参见 [FreeBSD Manual Pages freebsd-update](https://man.freebsd.org/cgi/man.cgi?freebsd-update)
 
-以下安装说明基于 UEFI 下的 `FreeBSD-14.1-RELEASE-amd64-disc1.iso`。`-dvd1.iso` 大同小异。
+以下安装说明基于 `FreeBSD-14.1-RELEASE-amd64-disc1.iso`。`-dvd1.iso` 和 `-memstick.img`大同小异。
+
+>**警告**
+>
+>本文基于 VMware 17 进行演示（使用 UEFI+ZFS）。
+>
+>若是物理机，请考虑使用 [rufus](https://rufus.ie/zh/) + [img 镜像](https://download.freebsd.org/ftp/releases/ISO-IMAGES/14.1/FreeBSD-14.1-RELEASE-amd64-memstick.img)。
 
 ## 启动安装盘、设定键盘布局与主机名
 
@@ -395,7 +401,7 @@ current 相对稳定后（即 MFC 最短三天）会推送到 stable，但是不
 
 - 无法进入安装界面
 
-若是虚拟机，请检查自己的配置。若是物理机，请考虑使用 [rufus](https://rufus.ie/zh/) + [img 镜像](https://download.freebsd.org/ftp/releases/ISO-IMAGES/14.1/FreeBSD-14.1-RELEASE-amd64-memstick.img)；若仍出现问题，请先在[官方论坛](https://forums.freebsd.org/)使用英语询问；若无结果，可按其他章节指引提交 bug。
+若是虚拟机，请检查自己的配置。若仍出现问题，请先在[官方论坛](https://forums.freebsd.org/)使用英语询问；若无结果，可按其他章节指引提交 bug。
 
 - 卡在某项服务
 
