@@ -1,6 +1,9 @@
 # 第 2.0 节 FreeBSD 安装图解
 
+
 ## FreeBSD 版本概述
+
+FreeBSD 是一款开源的类 UNIX 操作系统。
 
 已知 FreeBSD 有如下版本： alpha、rc、beta、release、current、stable。
 
