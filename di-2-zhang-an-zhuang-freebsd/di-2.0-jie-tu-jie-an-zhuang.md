@@ -23,9 +23,9 @@ current 相对稳定后（即 MFC 最短三天）会推送到 stable，但是不
 
 >**注意**
 >
->只有 ALPHA、rc、beta 和 release（[且是一级架构](https://www.freebsd.org/platforms/)）才能使用命令 `freebsd-update` 更新系统，其余版本系统均需要通过源代码编译的方式（或使用二进制的 pkgbase）更新系统。
+>只有 alpha、rc、beta 和 release（[且是一级架构](https://www.freebsd.org/platforms/)）才能使用命令 `freebsd-update` 更新系统，其余版本系统均需要通过源代码编译的方式（或使用二进制的 pkgbase）更新系统。
 >
->FreeBSD 开发计划准备删除 命令 `freebsd-update`，一律改用 pkgbase。
+>FreeBSD 开发计划准备删除命令 `freebsd-update`，一律改用 pkgbase。
 >
 >    ——参见 [FreeBSD Manual Pages freebsd-update](https://man.freebsd.org/cgi/man.cgi?freebsd-update)
 
