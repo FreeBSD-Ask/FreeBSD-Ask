@@ -44,7 +44,7 @@ George Berkeley（1685.3.12—1753.1.14），2023 年是他逝世 270 周年。2
 
 ## 贝克莱悖论与数学基础
 
-贝克莱主教以其形而上学思想，特别是对牛顿绝对时空观的反对，启发了包括爱因斯坦（其认为时间并非绝对，而是与观察者的运动状态密切相关）在内的一众 20 世纪科学家，在某种意义上引领了现代科技革命。他的著作还引发了数学史上关于无穷小量的数学哲学讨论（即贝克莱悖论，参见 1734，《分析学家；或一篇致一位不信神数学家的论文，其中审查一下近代分析学的对象、原则及论断是不是比宗教的神秘、信仰的要点有更清晰的表达，或更明显的推理》）。
+贝克莱大主教的著作还引发了数学史上关于无穷小量的数学哲学讨论（即贝克莱悖论，参见 1734，《分析学家；或一篇致一位不信神数学家的论文，其中审查一下近代分析学的对象、原则及论断是不是比宗教的神秘、信仰的要点有更清晰的表达，或更明显的推理》）。
 
 >**思考题**
 >
@@ -61,6 +61,36 @@ George Berkeley（1685.3.12—1753.1.14），2023 年是他逝世 270 周年。2
 >>涉及这个问题的讨论而不涉足非标准分析和超实数的，必定是其本人数学基础太差，而不是旁人。
 >
 >问题二：究竟是有些人 **基础数学** 太差看不懂定义；还是某些人 **数学基础** 太差，以其昏昏，使人昭昭？
+
+## 贝克莱与爱因斯坦
+
+贝克莱主教以其形而上学思想，特别是对牛顿绝对时空观的反对，启发了包括爱因斯坦（其认为时间并非绝对，而是与观察者的运动状态密切相关）在内的一众 20 世纪科学家，在某种意义上引领了现代科技革命。
+
+>**Gradually, philosophers and scientists arrived at the startling conclusion** that since every object is simply the sum of its qualities, and since qualities exist only in the mind, the whole objective universe of matter and energy, atoms and stars, does not exist except as a construction of the consciousness, an edifice of conventional symbols shaped by the senses of man.  
+>
+>As Berkeley, the archenemy of materialism, phrased it:  
+>> “All the choir of heaven and furniture of earth, in a word all those bodies which compose the mighty frame of the world, have not any substance without the mind…. So long as they are not actually perceived by me, or do not exist in my mind, or that of any other created spirit, they must either have no existence at all, or else subsist in the mind of some Eternal Spirit.”  
+>
+>Einstein carried this train of logic to its ultimate limits by showing that even space and time are forms of intuition, which can no more be divorced from consciousness than can our concepts of color, shape, or size. Space has no objective reality except as an order or arrangement of the objects we perceive in it, and time has no independent existence apart from the order of events by which we measure it.  
+>
+>**Realization** that our whole knowledge of the universe is simply a residue of impressions clouded by our imperfect senses makes the quest for reality seem hopeless. If nothing has existence save in its being perceived, the world should dissolve into an anarchy of individual perceptions.  
+>
+>But a curious order runs through our perceptions, as if indeed there might be an underlayer of objective reality which our senses translate. Although no man can ever know whether his sensation of red or of Middle C is the same as another man’s, it is nevertheless possible to act on the assumption that everyone sees colors and hears tones more or less alike.
+>
+>——*THE UNIVERSE AND DR. EINSTEIN* Lincoln Barnett 1949 年伦敦版
+
+>**逐渐地，哲学家和科学家们得出了一个令人震惊的结论**：既然每个物体仅仅是其性质的总和，而这些性质又只存在于心灵之中，那么整个由物质与能量、原子与星辰组成的客观宇宙，除了作为意识的建构外，并不存在——这是一个由人类感官塑造的常规符号体系。
+>
+>正如贝克莱——唯物主义的死敌——所表述的那样：  
+>> “天上的浩瀚星辰与地下的山川草木，简而言之，所有构成这个宏伟世界框架的实体，离开心灵便毫无实体可言……只要它们没有被我实际感知，或不存在于我的心灵，或者其他被创造的灵魂之中，它们要么根本不存在，要么只能存在于某个永恒灵的心中。”  
+>
+>爱因斯坦将这一逻辑推向了极致，证明了即便是空间与时间，也只是直觉的形式，无法与意识分离，正如我们关于颜色、形状或大小的概念一样。空间除了作为我们感知中物体的排列和次序外，没有客观实在性；而时间也无法脱离我们用以衡量事件顺序的体系独立存在。  
+>
+>**意识到**我们对宇宙的全部认知不过是被我们不完美的感官所蒙蔽的印象残余，这让对现实的追求显得无望。如果一切的存在都必须以被感知为前提，那么世界似乎会分崩离析，沦为个体感知的无序状态。  
+>
+>然而，我们的感知中却存在一种奇特的秩序，仿佛确实存在某种客观现实的底层，而我们的感官将其翻译了出来。尽管没有人能够确定自己对红色或中央 C 的感受是否与他人相同，但我们仍然可以基于这样的假设行动：每个人对颜色和音调的感知大致相似。
+>
+>——《宇宙与爱因斯坦博士》林肯·巴尼特 1949 年伦敦版
 
 ## 贝克莱思想简介
 
