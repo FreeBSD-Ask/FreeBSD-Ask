@@ -66,6 +66,10 @@ George Berkeley（1685.3.12—1753.1.14），2023 年是他逝世 270 周年。2
 
 贝克莱主教以其形而上学思想，特别是对牛顿绝对时空观的反对，启发了包括爱因斯坦（其认为时间并非绝对，而是与观察者的运动状态密切相关）在内的一众 20 世纪科学家，在某种意义上引领了现代科技革命。
 
+>**技巧**
+>
+>爱因斯坦信奉马赫主义，而马赫是贝克莱主义者。
+
 >**Gradually, philosophers and scientists arrived at the startling conclusion** that since every object is simply the sum of its qualities, and since qualities exist only in the mind, the whole objective universe of matter and energy, atoms and stars, does not exist except as a construction of the consciousness, an edifice of conventional symbols shaped by the senses of man.  
 >
 >As Berkeley, the archenemy of materialism, phrased it:  
@@ -91,6 +95,7 @@ George Berkeley（1685.3.12—1753.1.14），2023 年是他逝世 270 周年。2
 >然而，我们的感知中却存在一种奇特的秩序，仿佛确实存在某种客观现实的底层，而我们的感官将其翻译了出来。尽管没有人能够确定自己对红色或中央 C 的感受是否与他人相同，但我们仍然可以基于这样的假设行动：每个人对颜色和音调的感知大致相似。
 >
 >——《宇宙与爱因斯坦博士》林肯·巴尼特 1949 年伦敦版
+
 
 ## 贝克莱思想简介
 
