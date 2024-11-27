@@ -157,3 +157,4 @@ George Berkeley（1685.3.12—1753.1.14），2023 年是他逝世 270 周年。2
 - Schabas, Margaret, "Economics in Early Modern Philosophy", The Stanford Encyclopedia of Philosophy (Summer 2022 Edition), Edward N. Zalta (ed.), URL = <https://plato.stanford.edu/archives/sum2022/entries/economics-early-modern/>. SEP 早期现代经济哲学条目
 - [George Berkeley, Bishop of Cloyne/Philosopher](http://cloyne.ie/about/george-berkeley-bishop-of-cloyne/)，Cloyne District Community Council
 - [George Berkeley](https://www.britannica.com/biography/George-Berkeley)，大英百科全书贝克莱条目
+- 胡化凯. 20世纪50-70年代中国科学批判资料选（上下）[M]. 2009年10月第9版第1次印刷. 山东教育出版社, 2009-10 :472.（已绝版，ISBN 7532853861）
