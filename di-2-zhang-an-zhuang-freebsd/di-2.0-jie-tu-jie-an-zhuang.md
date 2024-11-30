@@ -78,7 +78,7 @@ current 相对稳定后（即 MFC 最短三天）会推送到 stable，但是不
 
 >**技巧**
 >
->注意观察图片中的红色加粗大写首字母，如 `Install`、`Shell` 和 `Live System` 中的 <span style="color: red; font-weight: bold;">I</span>、<span style="color: red; font-weight: bold;">S</span>、<span style="color: red; font-weight: bold;">L</span> 分别是红色加粗大写的。若你直接按键盘上面的对应按键（无论大小写），均会直接选定进入该界面。
+>注意观察图片中的红色加粗大写首字母，如 `Install`、`Shell` 和 `Live System` 中的 **`I`**、**`S`**、**`L`** 分别是红色加粗大写的。若你直接按键盘上面的对应按键（无论大小写），均会直接选定进入该界面。
 
 
 >**警告**
