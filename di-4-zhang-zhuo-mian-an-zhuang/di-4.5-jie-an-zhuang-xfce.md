@@ -51,10 +51,29 @@
 ```sh
 export LANG=zh_CN.UTF-8`
 ```
+### lightdm 登陆管理器本地化语言
 
-lightdm 登陆管理器的本地化语言见 KDE 章节。
+#### 方法①
 
-## 可选配置
+`/etc/rc.conf` 里写入：
+
+```sh
+lightdm_env="LC_MESSAGES=zh_CN.UTF-8" 
+```
+
+####  方法②
+
+修改 `slick-greeter.desktop`：
+
+编辑 `/usr/local/share/xgreeters/slick-greeter.desktop`：
+
+`Exec=slick-greeter` 改成 `Exec=env LANGUAGE=zh_CN slick-greeter` 保存，重启 `lightdm` 服务就生效:
+
+
+```sh
+# service lightdm restart
+```
+
 
 
 ## 全局菜单（可选）
@@ -78,6 +97,12 @@ $ xfconf-query -c xsettings -p /Gtk/ShellShowsMenubar -n -t bool -s true
 $ xfconf-query -c xsettings -p /Gtk/ShellShowsAppmenu -n -t bool -s true
 $ xfconf-query -c xsettings -p /Gtk/Modules -n -t string -s "appmenu-gtk-module"
 ```
+
+## 软件推荐
+
+FreeBSD 的 xfce 邮箱客户端推荐用 evolution，搭配 xfce4-mailwatch-plugin gnome-keyring 使用。
+
+还有推荐 xfce 的一个桌面插件。叫 verve。配合设置智能书签，可以查网页内容。 我这里设置了 FreeBSD 的 man 手册，就可以通过搜索框搜索需要的内容。
 
 ## 故障排除
 
@@ -142,36 +167,10 @@ endsw
 
 
 
-## 配置集参考
+### 配置集参考
 
 - [Wamphyre/BSD-XFCE](https://github.com/Wamphyre/BSD-XFCE)
 
-## 软件推荐
-
-FreeBSD 的 xfce 邮箱客户端推荐用 evolution，搭配 xfce4-mailwatch-plugin gnome-keyring 使用。
-
-还有推荐 xfce 的一个桌面插件。叫 verve。配合设置智能书签，可以查网页内容。 我这里设置了 FreeBSD 的 man 手册，就可以通过搜索框搜索需要的内容。
-
-## lightdm 登陆管理器本地化语言
-
-### 方法①
-
-`/etc/rc.conf` 里写入：
-
-```sh
-lightdm_env="LC_MESSAGES=zh_CN.UTF-8" 
-```
-
-###  方法②
-
-修改 `slick-greeter.desktop`：
-
-编辑 `/usr/local/share/xgreeters/slick-greeter.desktop`：
-
-`Exec=slick-greeter` 改成 `Exec=env LANGUAGE=zh_CN slick-greeter` 保存，重启 `lightdm` 服务就生效:
 
 
-```sh
-# service lightdm restart
-```
 
