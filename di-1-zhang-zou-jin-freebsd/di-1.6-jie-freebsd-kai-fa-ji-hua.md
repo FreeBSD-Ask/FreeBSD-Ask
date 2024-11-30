@@ -1,5 +1,9 @@
 # 第 1.6 节 FreeBSD 开发计划
 
+>**技巧**
+>
+>关注实时开发状态或使用 CURRENT 的用户应该关注 [freebsd-src/UPDATING](https://github.com/freebsd/freebsd-src/blob/main/UPDATING)。
+
 **翻译同步至 Updates from srcmgr@ call**
 
 
