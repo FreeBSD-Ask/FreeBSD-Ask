@@ -127,3 +127,4 @@
 - 2024.11.30
   - “第 3.7 节 通过 freebsd-update 更新 FreeBSD”更新至 FreeBSD 14.2-RELEASE
   - “第 2.0 节 FreeBSD 安装图解”更新至 FreeBSD 14.2-RELEASE
+  - “第 3.4 节 软件包管理器 pkg 的用法”修订“安装 pkg”一节
