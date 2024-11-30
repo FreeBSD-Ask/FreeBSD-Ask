@@ -310,10 +310,7 @@ Filename: usr/local/lib/libxcb-icccm.so.4.0.0
 
 - RELEASE
 
-请先切换到 latest 源。
-
-
-先重启获取软件源里的 pkg：
+请先切换到 latest 源，再使用软件源里的 pkg 包重装 pkg：
 
 ```sh
 # pkg-static bootstrap -f
