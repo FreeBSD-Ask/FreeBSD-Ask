@@ -45,6 +45,11 @@ For more information on available commands and options see 'pkg help'.
 ># ntpdate -u pool.ntp.org
 >```
 
+>**技巧**
+>
+>pkg 的下载路径是 `/var/cache/pkg/`。
+
+
 FreeBSD pkg 使用 https，可能还需要先安装 ssl 证书（FreeBSD 14.1 及以上无需）：
 
 ```sh
