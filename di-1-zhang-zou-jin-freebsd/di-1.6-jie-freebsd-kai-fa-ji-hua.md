@@ -33,7 +33,7 @@
 | 实现 SO_SPLICE                   | Klara / markj | [a1da7dc1cdad](https://cgit.freebsd.org/src/commit/?id=a1da7dc1cdad8c000622a7b23ff5994ccfe9cac6)                             |
 | riscv64 bhyve 支持              | br            | [d3916eace506](https://cgit.freebsd.org/src/commit/?id=d3916eace506b8ab23537223f5c92924636a1c41) [7ab1a32cd43c](https://cgit.freebsd.org/src/commit/?id=7ab1a32cd43cbae61ad4dd435d6a482bbf61cb52) |
 | 使用 Lua 生成系统调用表的更新（makesyscalls.lua 的库化） | brooks        | [9ded074e875c](https://cgit.freebsd.org/src/commit/sys/tools/syscalls?id=9ded074e875c29cb92d5f643801990d7bb23cca4)           |
-| gve(4) 的 arm64 支持、GCE 的 arm64 实例需要 | delphij, kibab (lwhsu 推送) | [54dfc97b0bd9](https://cgit.freebsd.org/src/commit/?id=54dfc97b0bd99f1c3bcbb37357cf28cd81a7cf00)                             |
+| gve(4) 的 arm64 支持、GCE 的 arm64 实例需要 | delphij, kibab (由 lwhsu 推进) | [54dfc97b0bd9](https://cgit.freebsd.org/src/commit/?id=54dfc97b0bd99f1c3bcbb37357cf28cd81a7cf00)                             |
 | 移除 ACPI 安全定时器            | cperciva      | [00d061855deb](https://cgit.freebsd.org/src/commit/?id=00d061855deb93df5d709c8a794985ebb55012f8)                             |
 | 移除对交换内核栈的支持          | markj         | [6aa98f78cc6e](https://cgit.freebsd.org/src/commit/?id=6aa98f78cc6e527b801cabddf6881ab5c9256934)                             |
 | 移除 armv6 支持                 | imp/manu      | [7818c2d37c2c](https://cgit.freebsd.org/src/commit/Makefile?id=7818c2d37c2c600fc9ad6f2a0951e50dd21b17c8)                    |
