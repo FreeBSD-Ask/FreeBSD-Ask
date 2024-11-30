@@ -6,7 +6,7 @@
 
 >**技巧**
 >
->ports 下载路径是 `/usr/ports/distfiles`。
+>ports 下载路径是 `/usr/ports/distfiles/`。
 
 ## FreeBSD ports 基本用法
 
