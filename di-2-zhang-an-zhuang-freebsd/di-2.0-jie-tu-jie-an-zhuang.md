@@ -29,7 +29,7 @@ current 相对稳定后（即 MFC 最短三天）会推送到 stable，但是不
 >
 >    ——参见 [FreeBSD Manual Pages freebsd-update](https://man.freebsd.org/cgi/man.cgi?freebsd-update)
 
-以下安装说明基于 `FreeBSD-14.1-RELEASE-amd64-disc1.iso`。`-dvd1.iso` 和 `-memstick.img`大同小异。
+以下安装说明基于 `FreeBSD-14.2-RELEASE-amd64-disc1.iso`。`-dvd1.iso` 和 `-memstick.img`大同小异。
 
 >**警告**
 >
@@ -339,6 +339,9 @@ current 相对稳定后（即 MFC 最短三天）会推送到 stable，但是不
 |`8 secure_console`|启用控制台密码（单用户模式下也需要 root 密码）|
 |`9 disable_ddttrace`|禁止 DTrace 破坏性（destructive）模式|
 
+![](../.gitbook/assets/install-14.2.png)
+
+自动检测安装所需固件（14.2 [引入](https://cgit.freebsd.org/src/commit/?id=03c07bdc8b31)）。
 
 ![](../.gitbook/assets/ins30.png)
 
