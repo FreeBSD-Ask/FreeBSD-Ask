@@ -18,6 +18,7 @@
 # cd /usr/ports/x11/lightdm/ && make install clean
 # cd /usr/ports/x11/lightdm-gtk-greeter/ && make install clean
 # cd /usr/ports/devel/xdg-user-dirs/ && make install clean
+# cd /usr/ports/x11/xfce4-goodies/ && make install clean
 ```
 
 ## 启用 xfce
