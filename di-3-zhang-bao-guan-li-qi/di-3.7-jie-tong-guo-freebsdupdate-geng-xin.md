@@ -26,6 +26,13 @@
 >ESP 可能已经挂载到了 **/boot/efi**。如果没有，可以手动挂载分区，使用 `efibootmgr` 输出中列出的分区（本例为 `nda0p1`）：`mount_msdosfs /dev/nda0p1 /boot/efi`。有关另一则示例，请参阅 [ loader.efi(8)  ](https://man.freebsd.org/cgi/man.cgi?query=loader.efi&sektion=8&format=html)。
 >
 >在 `efibootmgr -v` 输出的 `File` 字段中的值，例如 `\EFI\freebsd\loader.efi`，是 EFI 上正在使用的引导加载程序的位置。如果挂载点是 **/boot/efi**，则此文件将变成为 `/boot/efi/efi/freebsd/loader.efi`。 （在 FAT32 文件系统上大小写不敏感；FreeBSD 使用小写）`File` 的另一个常见值可能是 `\EFI\boot\bootXXX.efi`，其中 `XXX` 是 amd64（即 `x64`）、aarch64（即 `aa64`）或 riscv64（即 `riscv64`）；如未配置，则为默认引导加载程序。应把 **/boot/loader.efi** 复制到 **/boot/efi** 上的正确路径来更新已配置及默认的引导加载程序。
+>
+>~~上面是废话~~ 一般来说，即
+>
+>
+>```sh
+># cp /boot/loader.efi /boot/efi/efi/freebsd/
+>```
 
 ——引自 FreeBSD 14.0 发行说明，有改动。
 
@@ -344,6 +351,9 @@ root@ykla:/home/ykla # freebsd-version -u
 14.2-RELEASE
 ```
 
+### 可选更新
+
+EFI、boot code、ZFS 等相关更新请自行查看相关部分章节。
 
 ## 查看 FreeBSD 版本
 
