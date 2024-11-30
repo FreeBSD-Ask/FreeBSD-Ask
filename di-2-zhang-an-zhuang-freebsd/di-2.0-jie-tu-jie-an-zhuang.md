@@ -316,7 +316,7 @@ current 相对稳定后（即 MFC 最短三天）会推送到 stable，但是不
 |    `powerd`     |                                                                                电源管理，CPU 频率动态调整                                                                                 |
 |    `dumpdev`    |                                                                       启用崩溃转储，用于调试系统                                                                        |
 
-## 安全加固、创建普通用户
+## 安全加固、更新固件和创建普通用户
 
 ![](../.gitbook/assets/ins29.png)
 
