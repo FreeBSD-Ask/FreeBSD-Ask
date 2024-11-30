@@ -18,10 +18,24 @@
 基本系统默认没有 pkg，需要先下载一下 pkg：
 
 ```sh
-# pkg
+root@ykla:/home/ykla # pkg # 输入 pkg  回车
+The package management tool is not yet installed on your system.
+Do you want to fetch and install it now? [y/N]: y # 请在这里输入 y 或 直接回车
+Bootstrapping pkg from pkg+https://pkg.FreeBSD.org/FreeBSD:14:amd64/quarterly, please wait...
+Verifying signature with trusted certificate pkg.freebsd.org.2013102301... done
+Installing pkg-1.21.3...
+Extracting pkg-1.21.3: 100%
+pkg: not enough arguments
+Usage: pkg [-v] [-d] [-l] [-N] [-j <jail name or id>|-c <chroot path>|-r <rootdir>] [-C <configuration file>] [-R <repo config dir>] [-o var=value] [-4|-6] <command> [<args>]
+
+For more information on available commands and options see 'pkg help'.
 ```
 
-回车即可输入 `y` 确认下载
+可以看到，默认的基本系统使用的是官方源的 quarterly 分支，对于 release 这没有问题，但是对于 current 等版本会有问题。建议先换成 latest 再执行 `pkg`。
+
+>**技巧**
+>
+>如果长时间卡在 `Bootstrapping pkg from ……, please wait...`，请按 **Ctrl + C** 中断这一过程，换境内源后再进行。
 
 >**技巧**
 >
