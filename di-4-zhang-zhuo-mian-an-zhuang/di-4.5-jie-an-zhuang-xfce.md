@@ -92,6 +92,8 @@ lightdm_env="LC_MESSAGES=zh_CN.UTF-8"
 # cd /usr/ports/x11/appmenu-registrar/ && make install clean
 ```
 
+配置：
+
 ```sh
 $ xfconf-query -c xsettings -p /Gtk/ShellShowsMenubar -n -t bool -s true
 $ xfconf-query -c xsettings -p /Gtk/ShellShowsAppmenu -n -t bool -s true
