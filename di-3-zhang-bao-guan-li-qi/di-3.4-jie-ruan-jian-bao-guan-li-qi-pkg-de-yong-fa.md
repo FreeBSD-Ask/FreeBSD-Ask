@@ -13,7 +13,7 @@
 >
 > 偏好图形化的用户可以安装使用 `ports-mgmt/octopkg`，该工具是 pkg 的图形化前端，由 ghostbsd 开发。
 
-## 如何用 pkg 安装软件
+## 安装 pkg
 
 基本系统默认没有 pkg，需要先下载一下 pkg：
 
@@ -65,6 +65,8 @@ FreeBSD pkg 使用 https，可能还需要先安装 ssl 证书（FreeBSD 14.1 �
 ```sh
 # pkg update -f
 ```
+
+## pkg 简单使用示例
 
 安装 python 3：
 
