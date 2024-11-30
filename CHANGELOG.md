@@ -124,3 +124,6 @@
   - “第 1.2 节 BSD 与哲学家 George Berkeley”新增“贝克莱与爱因斯坦”。
 - 2024.11.29
   - 更新“第 1.6 节 FreeBSD 开发计划”：同步上游 
+- 2024.11.30
+  - “第 3.7 节 通过 freebsd-update 更新 FreeBSD”更新至 FreeBSD 14.2-RELEASE
+  - “第 2.0 节 FreeBSD 安装图解”更新至 FreeBSD 14.2-RELEASE
