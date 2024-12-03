@@ -4,7 +4,7 @@
 
 > **请注意**
 >
-> ~~pkg 只能管理第三方软件包，并不能起到升级系统，获取安全更新的作用。这是因为 FreeBSD 项目是把内核与用户空间作为一个整体来进行维护的，而不是像 Linux 那样 linus torvalds 负责维护内核，各个发行版的人负责维护 GNU 工具（他们这些软件实际上被设计为单个软件包，因此可以用包管理器更新与升级系统）。~~
+> pkg 只能管理第三方软件包，并不能起到升级系统，获取安全更新的作用。这是因为 FreeBSD 项目是把内核与用户空间作为一个整体来进行维护的，而不是像 Linux 那样 linus torvalds 负责维护内核，各个发行版的人负责维护 GNU 工具（他们这些软件实际上被设计为单个软件包，因此可以用包管理器更新与升级系统）。
 >
 >FreeBSD 现在也正[试图使用 pkg 来实现用户空间和内核的更新](https://wiki.freebsd.org/PkgBase)。解决上述问题。
 >
@@ -37,7 +37,6 @@ Usage: pkg [-v] [-d] [-l] [-N] [-j <jail name or id>|-c <chroot path>|-r <rootdi
 For more information on available commands and options see 'pkg help'.
 ```
 
-可以看到，默认的基本系统使用的是官方源的 quarterly 分支，对于 release 这没有问题，但是对于 current 等版本会有问题。建议先换成 latest 再执行 `pkg`。
 
 >**技巧**
 >
