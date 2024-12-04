@@ -44,7 +44,6 @@ Gentoo Linux: Portage，对应 Ports（Portage 本身就是 Ports 的仿制品�
 ## pkg 源：pkg 源提供了二进制软件包
 
 
-
 FreeBSD 中 pkg 源分为系统级和用户级两个配置文件。**不建议**直接修改 `/etc/pkg/FreeBSD.conf` ~~但是太麻烦啦，一般我都是直接改这个文件的~~，因为该文件会随着基本系统的更新而发生改变。
 
 **故障排除**
@@ -66,6 +65,10 @@ FreeBSD 中 pkg 源分为系统级和用户级两个配置文件。**不建议**
 >[NJU](https://github.com/nju-lug/NJU-Mirror-Issue/issues/54) 和 163 均同步自 USTC 而非 FreeBSD 直接上游。
 
 ### 中国科学技术大学开源软件镜像站（USTC）
+
+>**技巧**
+>
+>视频教程见 [005-FreeBSD14.2 更换 pkg 源为 USTC 镜像站](https://www.bilibili.com/video/BV13ji2YLEkV)
 
 创建用户级源目录和文件:
 
