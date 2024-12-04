@@ -102,6 +102,10 @@ Termius 鼠标行为和 PuTTY 接近，一样的反人类（无论选择快捷�
 
 ### 允许 root ssh
 
+>**技巧**
+>
+>视频教程见 [004-FreBSD14.2 允许 root 登录 ssh](https://www.bilibili.com/video/BV1gji2YLE2o)
+
 ```sh
 # ee /etc/ssh/sshd_config    #（删去前边的 #，并将 yes 或 no 修改为如下）
 PermitRootLogin yes          #允许 root 登录
