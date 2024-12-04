@@ -130,3 +130,5 @@
   - “第 3.4 节 软件包管理器 pkg 的用法”修订“安装 pkg”一节
 - 2024.12.3
   - “第 1.3 节 为什么要使用 FreeBSD”新增“旧闻：《FreeBSD 基金会收到史上最大一笔捐款》” 
+- 2024.12.4
+  - 制作了视频教程《[001-WIndows11安装VMware17](https://www.bilibili.com/video/BV1Qji2YLEgS)》、《[002-VMware17安装FreeBSD14.2](https://www.bilibili.com/video/BV1gji2YLEoC)》《[003-FreeBSD14.2安装KDE5](https://www.bilibili.com/video/BV13ji2YLELM)》、《[004-FreBSD14.2允许root登录ssh](https://www.bilibili.com/video/BV1gji2YLE2o)》、《[005-FreeBSD14.2更换pkg源为USTC镜像站](https://www.bilibili.com/video/BV13ji2YLEkV)》和《[006-FreeBSD14.2安装fcitx5及其输入法](https://www.bilibili.com/video/BV13ji2YLE3m)》。已经分别插入了对应的目录。
