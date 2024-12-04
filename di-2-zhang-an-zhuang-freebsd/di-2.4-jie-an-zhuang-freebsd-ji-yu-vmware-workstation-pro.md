@@ -35,9 +35,8 @@
 
 ## 视频教程
 
-[FreeBSD 13.1 安装 KDE5——基于 VMware 17](https://www.bilibili.com/video/BV1UR4y1U71T)
+- [001-WIndows11 安装 VMware17](https://www.bilibili.com/video/BV1Qji2YLEgS)
 
-视频教程环境 VMware 17 + FreeBSD 13.1-RELEASE + BIOS +KDE 5。
 
 ## 镜像下载
 
