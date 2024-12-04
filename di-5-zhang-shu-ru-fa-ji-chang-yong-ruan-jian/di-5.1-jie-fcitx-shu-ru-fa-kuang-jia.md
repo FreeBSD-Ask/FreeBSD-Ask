@@ -1,5 +1,10 @@
 # 第 5.1 节 Fcitx 输入法框架
 
+>**技巧**
+>
+>视频教程见 [006-FreeBSD14.2 安装 fcitx5 及其输入法](https://www.bilibili.com/video/BV13ji2YLE3m)
+
+
 > **注意**
 >
 > 在 FreeBSD-CURRENT 中可能会出现许多不可预料的怪异 bug：fcitx5 诊断信息英文乱码，输入法显示出奇怪的汉字，fcitx5-qt5 环境不能正常加载……如果条件允许，应该在 FreeBSD-RELEASE 中参考使用本文。
