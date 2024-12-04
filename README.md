@@ -4,6 +4,10 @@
 
 FreeBSD 是真正自由（Liberal）的操作系统，在这个大流变的世界中仍然坚守 BSD UNIX 哲学——恪守古老的法则，追寻真正的自由。
 
+>**技巧**
+>
+>视频教程合集见 《[FreeBSD 从入门到跑路 第二版](https://www.bilibili.com/video/BV1Qji2YLEgS)》
+
 ## 贡献指南
 
 如果你想让你的教程出现在本书中，你可以这样做：
