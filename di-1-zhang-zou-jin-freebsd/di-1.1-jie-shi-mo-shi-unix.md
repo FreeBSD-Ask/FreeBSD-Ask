@@ -284,7 +284,7 @@ Deb Goodkin 于 2005 年加入基金会，成为首位执行董事。她之前�
 
 举行了一项 Logo 设计竞赛，由 Anton K. Gural 设计的 Logo 获胜（当前仍在使用）。
 
-#### 2005 年 11 月 4 日 FREEBSD 6.0-RELEASE
+#### 2005 年 11 月 4 日 FreeBSD 6.0-RELEASE
 
 FreeBSD 6.0-RELEASE 于 2005 年 11 月 4 日发布。FreeBSD 6.0 首次提交了支持 32 位 Arm 的 sys/arm/arm，丰富了 802.11 WiFi 支持，扩展了高级功能，并通过 libthr(3) 和进一步的内核修改增加了 1:1 用户级线程。
 
@@ -292,7 +292,7 @@ FreeBSD 6.0-RELEASE 于 2005 年 11 月 4 日发布。FreeBSD 6.0 首次提交�
 
 Jason Evans 于 2005 年开发了 jemalloc，这是一款内存分配器。与此同时，FreeBSD 需要一个可扩展的多处理器内存分配器，因此 Evans 将 jemalloc 集成到了 FreeBSD 的 libc 中，并改进了其可扩展性和碎片化行为。
 
-#### 2008 年 2 月 27 日 FREEBSD 7.0-RELEASE
+#### 2008 年 2 月 27 日 FreeBSD 7.0-RELEASE
 
 因为担心 ULE 调度器的就绪状态，在发布时， FreeBSD 7.0-RELEASE 将其作为内核可选参数搭载，它在下一个稳定版本中成为了默认的调度程序。FreeBSD 7.0 还添加了 SCTP 协议以及与网络、音频和多处理器性能相关的重大更新。
 
@@ -320,7 +320,7 @@ Capsicum 是一个轻量级的操作系统能力和沙盒框架。它可以用�
 
 Poudriere 是一个利用 jail 来测试 port 并后续构建 FreeBSD 镜像的工具，它被添加到了 Ports 中。
 
-#### 2012 年 1 月 12 日 FREEBSD 9.0-RELEASE
+#### 2012 年 1 月 12 日 FreeBSD 9.0-RELEASE
 
 FreeBSD 9.0-RELEASE 于 2012 年 1 月 12 日发布，其中包括了全新的安装程序——bsdinstall。其他主要特性包括软更新日志（SUJ）、NFS 版本 4 和模块化拥塞控制。FreeBSD 9 是索尼用于开发 PlayStation 4 操作系统（Obris OS）所使用的版本。
 
@@ -340,7 +340,7 @@ ZFS 开源项目衍生于 OpenSolaris 项目。在 2013 年 9 月 17 日，ZFS �
 
 于 2014 年 1 月 20 日宣布发布 FreeBSD 10.0-RELEASE，带来了大量的新功能和工具。10.0 版本搭载了 pkg(7)（并切换到 pkgng），这个新的软件包管理工具能让用户不再需要手动编译 Port。该发布还包括 FUSE 实现、高级 iSCSI 支持（包括目标（服务器）和发起者（客户端））、VirtIO 驱动程序、bhyve 虚拟化技术和 amd64 架构上的 UEFI 支持。
 
-#### 2016 年 10 月 10 日 FREEBSD 11.0-RELEASE
+#### 2016 年 10 月 10 日 FreeBSD 11.0-RELEASE
 
 于 2016 年 10 月 10 日宣布发布 FreeBSD 11.0-RELEASE。该版本包含了对无线网络的多项改进以及集成 UDP-lite。最重要的是，FreeBSD 11 还涉及对 aarch64（arm64）的支持，aarch64 最初被分类为二级架构。
 
@@ -348,7 +348,7 @@ ZFS 开源项目衍生于 OpenSolaris 项目。在 2013 年 9 月 17 日，ZFS �
 
 国际 FreeBSD 日是每年一度的庆祝活动，旨在赞扬 FreeBSD 对技术的开创性和持续影响，并纪念其传承的价值。
 
-#### 2018 年 12 月 11 日 FREEBSD 12.0-RELEASE
+#### 2018 年 12 月 11 日 FreeBSD 12.0-RELEASE
 
 2018 年 12 月 11 日发布的 FreeBSD 12.0 版本增强了对 AMD CPU 的支持，并显著提升了对现代显卡的支持。此外，还新增了开放指令集架构（ISA）RISC-V 的支持。
 
@@ -356,11 +356,11 @@ ZFS 开源项目衍生于 OpenSolaris 项目。在 2013 年 9 月 17 日，ZFS �
 
 于 2021 年 4 月 6 日 完成了从 Subversion 到 Git 的迁移。此过程始于 2019 年 5 月的 DevSummit，当时成立了一个 Git 工作小组。
 
-#### 2021 年 4 月 13 日 FREEBSD 13.0-RELEASE
+#### 2021 年 4 月 13 日 FreeBSD 13.0-RELEASE
 
 FreeBSD 13.0-RELEASE 于 2021 年 4 月 13 日发布。尽管 aarch64 从 FreeBSD 11 开始就得到了支持，但它在 FreeBSD 13.0-RELEASE 中才被提升为一级平台，成为首个非 x86 架构的一级平台。13.0 还涉及内核 TLS 卸载、升级了 clang 和 LLVM，移除了弃用的库、工具。
 
-#### 2023 年 11 月 20 日 FREEBSD 14.0-RELEASE
+#### 2023 年 11 月 20 日 FreeBSD 14.0-RELEASE
 
 FreeBSD 14.0-RELEASE 于 2023 年 11 月 20 日发布。`portsnap` 已被弃用。64 位可执行文件默认启用了地址空间布局随机化（ASLR）。
 
