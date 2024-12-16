@@ -442,19 +442,15 @@ Telegram 群组：[https://t.me/oh_my_BSD](https://t.me/oh_my_BSD)
 
 Skype: [https://join.skype.com/xktkQtXZopfv](https://join.skype.com/xktkQtXZopfv)
 
-FreeBSD 需要兼容层才能运行 QQ；Telegram 可原生运行；Skype 可使用 pidgin+ 插件 [net-im/pidgin-skypeweb](https://forums.freebsd.org/threads/skype.66115/)
+在 FreeBSD 中：
 
-HandBook 翻译：[https://handbook.bsdcn.org](https://handbook.bsdcn.org/)
-
-FreeBSD Port 开发者手册翻译：[https://porters-handbook.bsdcn.org](https://porters-handbook.bsdcn.org/)
-
-FreeBSD 入门书籍：[https://book.bsdcn.org](https://book.bsdcn.org/)
-
-FreeBSD 中文 man 手册：[https://man.bsdcn.org](https://man.bsdcn.org/)
+- 需要兼容层才能运行 QQ
+- Telegram 可原生运行
+- Skype 可使用 pidgin+ 插件 [net-im/pidgin-skypeweb](https://forums.freebsd.org/threads/skype.66115/)
 
 ## 内容提要
 
-《FreeBSD 从入门到跑路》 由 FreeBSD 中文社区发起。我们尝试从 0 开始，和所有人一同徜徉 FreeBSD 世界。
+《FreeBSD 从入门到跑路》 由 FreeBSD 中文社区 ykla 发起。我们尝试从 0 开始，和所有人一同徜徉 FreeBSD 世界。
 
 ## 捐赠
 
