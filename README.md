@@ -318,7 +318,7 @@ Skype: [https://join.skype.com/xktkQtXZopfv](https://join.skype.com/xktkQtXZopfv
 在 FreeBSD 中：
 
 - 需要兼容层才能运行 QQ（请参见正文章节）
-- Telegram 可原生运行 [net-im/telegram-desktop]https://www.freshports.org/net-im/telegram-desktop/()
+- Telegram 可原生运行 [net-im/telegram-desktop](https://www.freshports.org/net-im/telegram-desktop/)
 - Skype 可使用 pidgin+ 插件 [net-im/pidgin-skypeweb](https://forums.freebsd.org/threads/skype.66115/)
 
 ## 内容提要
