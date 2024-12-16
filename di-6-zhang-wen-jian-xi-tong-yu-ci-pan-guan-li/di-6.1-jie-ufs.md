@@ -1,6 +1,6 @@
 # 第 6.1 节 UFS
 
-UFS 全称是 Unix File System，即 UNIX 文件系统，基于 UNIX v7。过去，MACOS 也使用该文件系统作为 root 文件系统。目前 FreeBSD 在使用的是 UFS2。Linux 对 UFS 的读写支持也不完整。这个文件系统只能扩大不能被缩小。
+UFS 全称是 Unix File System，即 UNIX 文件系统，基于 UNIX v7。过去，macOS 也使用该文件系统作为 root 文件系统。目前 FreeBSD 在使用的是 UFS2。Linux 对 UFS 的读写支持也不完整。这个文件系统只能扩大不能被缩小。
 
 > **注意**
 >
