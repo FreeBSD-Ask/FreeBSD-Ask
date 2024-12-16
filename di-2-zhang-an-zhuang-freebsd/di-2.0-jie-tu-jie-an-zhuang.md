@@ -226,7 +226,7 @@ current 相对稳定后（即 MFC 最短三天）会推送到 stable，但是不
 
 >**注意**
 >
->博通网卡请安装后参参照 WiFi 章节进行处理。
+>博通网卡请安装后再参照 WiFi 章节进行处理。
 
 ![](../.gitbook/assets/ins-w1.png)
 
@@ -275,6 +275,8 @@ current 相对稳定后（即 MFC 最短三天）会推送到 stable，但是不
 
 - [Regulatory Domain Support](https://wiki.freebsd.org/WiFi/RegulatoryDomainSupport)
 - [regdomain.xml --	802.11 wireless	regulatory definitions](https://man.freebsd.org/cgi/man.cgi?query=regdomain&sektion=5)，对应编码请参考系统中的 `/etc/regdomain.xml` 文件。
+- [阿里公共DNS](https://www.alidns.com/)
+
 
 ## 时区设置
 
