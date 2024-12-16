@@ -15,6 +15,9 @@ FreeBSD 是真正自由（Liberal）的操作系统，在这个大流变的世�
 - 如果你熟悉 GitHub，可以点击电脑端右侧的“编辑此页”，进入项目进行操作。整个项目使用 Markdown 语法 +  Gitbook，简单易上手（具体详见项目 WiKi）；
 - 如果以上有困难，你还可以发 PDF、Word 或者 TXT 给我。请将文件发送至电子邮件 `yklaxds@gmail.com`；如果有视频教程，以各大云盘链接为宜。
 
+<details> 
+<summary>---点击此处展开贡献指南详情---</summary>
+  
 本书现接受以下内容：
 
 - 一切与 BSD 相关（包括不限于 FreeBSD，OpenBSD，NetBSD）以及各种体系结构的教程。你既可以扩充当前教程，也可以新建一节；
@@ -35,6 +38,8 @@ FreeBSD 是真正自由（Liberal）的操作系统，在这个大流变的世�
 
 唯一要注意的是，你的教程会以本项目的开源许可证（BSD）进行发布。
 
+</pre> </details>
+
 ### 意见反馈
 
 由于编写者水平所限，书中缺点和谬误之处自不可免，希望大家随时提出批评意见，以便修正。你可以利用 Github 提交 Issue 或者发邮件至 `yklaxds@gmail.com`。
@@ -49,6 +54,9 @@ FreeBSD 是真正自由（Liberal）的操作系统，在这个大流变的世�
 15.0  磁力链接  magnet:?xt=urn:btih:CBD49C71E87BC0B1406710A437E7135EF3D8C155
 ```
 ## ToDo
+
+<details> 
+<summary>点击此处展开 FreeBSD ToDo</summary>
 
 - [ ] 整合现有的上游 FreeBSD 社区文章
 - [ ] 重写“第 4.1 节 安装显卡驱动及 Xorg（必看）”，尤其是 N 卡驱动部分，目前是无效的，必须重写
@@ -145,8 +153,12 @@ FreeBSD 是真正自由（Liberal）的操作系统，在这个大流变的世�
   - [ ] 微信双开
 - [ ] WPS
   - [ ] 解决 fcitx、fcitx5 输入法不能输入的问题
----
 
+</pre> </details>
+
+<details> 
+<summary>点击此处展开 OpenBSD ToDo</summary>
+  
 - [ ] OpenBSD
   - [ ] KDE5（现在进入桌面黑屏）
   - [ ] QQ？原生可能吗
@@ -178,8 +190,11 @@ FreeBSD 是真正自由（Liberal）的操作系统，在这个大流变的世�
     - [ ] pkgsrc
   - [ ] 嵌入式
 
----
+</pre> </details>
 
+<details> 
+<summary>点击此处展开 NetBSD ToDo</summary>
+  
 - [ ] NetBSD
   - [ ] NetBSD 调优
   - [ ] 桌面
@@ -214,9 +229,11 @@ FreeBSD 是真正自由（Liberal）的操作系统，在这个大流变的世�
     - [ ] 路由表
     - [ ] 默认路由
 
----
-       
-      
+</pre> </details>
+
+<details> 
+<summary>点击此处展开 DragonFlyBSD ToDo</summary>
+  
 - [ ] DragonFlyBSD
   - [ ] DragonFlyBSD调优
   - [ ] 桌面
@@ -238,7 +255,12 @@ FreeBSD 是真正自由（Liberal）的操作系统，在这个大流变的世�
     - [ ] FreeBSD Ports
   - [ ] 换源与包管理器
 
+</pre> </details>
+
 ## 规范化质量审核
+
+<details> 
+<summary>点击此处展开规范化质量审核详情</summary>
 
 |**图例**|✅|❌|ⁿ/ₐ|
 |:---:|:---:|:---:|:---:|
@@ -387,6 +409,10 @@ FreeBSD 是真正自由（Liberal）的操作系统，在这个大流变的世�
 注释：
 
 - ①：找了学力偏下的初二学生和非计算机专业大专毕业生进行了验证，可顺利在 VMware 虚拟机中安装 FreeBSD。
+
+
+</pre> </details>
+
 
 ## PDF 文档
 
