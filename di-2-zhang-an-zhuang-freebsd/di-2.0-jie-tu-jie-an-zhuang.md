@@ -416,7 +416,7 @@ current 相对稳定后（即 MFC 最短三天）会推送到 stable，但是不
 
 - 无法进入安装界面
 
-若是虚拟机，请检查自己的配置；若是物理机，请使用 U 盘+img 镜像刻录，并使用 RELEASE 版本——若仍出现问题，请先在[官方论坛](https://forums.freebsd.org/)使用英语询问；若无果，可按其他章节指引提交 bug。
+若是虚拟机，请检查自己的配置；若是物理机，请使用 U 盘+img 镜像刻录（刻录软件使用 [rufus](https://rufus.ie/zh/)，不要用 [ventoy](https://www.ventoy.net/cn/index.html)），并使用 RELEASE 版本——若仍出现问题，请先在[官方论坛](https://forums.freebsd.org/)使用英语询问；若无果，可按其他章节指引提交 bug。
 
 - 重启后又进入了安装界面
 
