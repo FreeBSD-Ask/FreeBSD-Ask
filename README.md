@@ -43,9 +43,9 @@ FreeBSD 是真正自由（Liberal）的操作系统，在这个大流变的世�
 
 本项目太大，拉取时可能会导致缓冲区溢出，可改变 git 配置文件，以实现对缓冲区的扩大：
 
-以下是一个可用的 `.gitconfig` 的文件示例;
+以下是一个可用的 `.gitconfig` 的文件示例：
 
-```
+```json
 [filter "lfs"]
 	required = true
 	clean = git-lfs clean -- %f
