@@ -49,7 +49,25 @@ rufus 下载地址：[https://rufus.ie/zh](https://rufus.ie/zh)
 >
 > **不建议** 使用 FreeBSD 手册推荐的 win32diskimager，有时会出现校验码错误的情况（实际上文件校验码正常）。**应仅在 rufus 无效的情况下才应使用 win32diskimager。** 下载地址 <https://sourceforge.net/projects/win32diskimager/files/Archive/>，点击 `win32diskimager-1.0.0-install.exe` 即可下载。
 
+## 故障排除
 
+请依次检查如下列表：
+
+- 你是普通家用电脑吗？
+  - 处理器是 intel 或 amd？
+- 是否关闭了 BIOS 里的安全启动（（Secure Boot）？
+- 是否从 <https://freebsd.org> 下载的镜像？
+  - 是否下载了最新版本的 RELEASE 镜像？
+  - 你下载的镜像后缀名是不是 `img`？
+  - 镜像校验（sha256）是否通过？
+  - 你下载的镜像带有 `amd64`（普通家用电脑）字样吗？
+    - 看清楚是 `amd64` **不是** `arm64`（开发板用）！
+- 你的 U 盘是扩容的吗？
+  - 你是否使用了 Ventoy？
+    - 刻录软件请使用 [Rufus](https://rufus.ie/zh/)，不要用 [Ventoy](https://www.ventoy.net/cn/index.html)
+
+
+若仍出现问题，请先在[官方论坛](https://forums.freebsd.org/)使用英语询问；若无果，可按其他章节指引提交 bug。
 
 ## 存档内容
 
