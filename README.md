@@ -16,7 +16,7 @@ FreeBSD 是真正自由（Liberal）的操作系统，在这个大流变的世�
 - 如果以上有困难，你还可以发 PDF、Word 或者 TXT 给我。请将文件发送至电子邮件 `yklaxds@gmail.com`；如果有视频教程，以各大云盘链接为宜。
 
 <details> 
-<summary>---点击此处展开贡献指南详情---</summary>
+<summary>点击此处展开贡献指南详情</summary>
   
 本书现接受以下内容：
 
