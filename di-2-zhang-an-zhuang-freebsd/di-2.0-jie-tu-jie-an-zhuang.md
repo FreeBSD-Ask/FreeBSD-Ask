@@ -93,16 +93,48 @@ FreeBSD-14.2-RELEASE-amd64-mini-memstick.img.xz	107445036	   2024-Nov-29 13:04
 |FreeBSD-14.2-RELEASE-amd64-mini-memstick.img	 | U 盘用的网络安装镜像，安装时需联网 |
 |FreeBSD-14.2-RELEASE-amd64-mini-memstick.img.xz|压缩的 U 盘用的网络安装镜像，安装时需联网 |
 
+> **注意**
+>
+>FreeBSD 所有安装介质包括不限于虚拟机文件都没有提供图形界面（DVD 有 pkg 包，但是会出问题），均需要自行安装。
+
+
 
 >**技巧**
 >
->U 盘安装最好使用 `-img` 或 `-img.xz`。因为 `.iso` 镜像没做混合启动。
->
->但事无绝对，某些机器使用 `.iso` 刻录 U 盘启动盘，仍然可以顺利进入安装界面。
+>FreeBSD 14.1 RELEASE 两个 ISO 均在 Ventoy 下测试通过（英特尔三代处理器下的 UEFI）。但是仍不排除出现问题的可能性。如果出现问题，请首先考虑下载 `img` 正常刻录。
+
+
 
 >**技巧**
 >
->无需解压缩，刻录镜像时，直接选择 `-img.xz` 亦可进行启动盘制作的过程。
+>U 盘安装最好使用 `-img` 或 `-img.xz`。因为 `.iso` 镜像没做 Hybrid 混合启动，写入 U 盘会产生错误。见 [FreeBSD -.iso files not support written to USB drive](https://bugs.freebsd.org/bugzilla/show\_bug.cgi?id=236786)。
+>
+>
+>只有当使用 **光盘/虚拟机** 安装时才应选用 `iso` 结尾的镜像。
+>
+>但事无绝对，某些机器使用 `.iso` 刻录 U 盘启动盘，仍然可以顺利进入安装界面。部分机器（如老款神舟电脑）就支持 ISO 下的 UEFI 启动。但并非所有机器（比如小米就不支持）都如此。
+
+- 我该如何刻录 FreeBSD 镜像到 U 盘？
+
+Windows 上的刻录工具应首选 **Rufus**，Linux 直接使用 `dd`命令即可。
+
+rufus 下载地址：[https://rufus.ie/zh](https://rufus.ie/zh)
+
+> **警告**
+>
+> **不建议** 使用 FreeBSD 手册推荐的 win32diskimager，有时会出现校验码错误的情况（实际上文件校验码正常）。**应仅在 rufus 无效的情况下才应使用 win32diskimager。** 下载地址 <https://sourceforge.net/projects/win32diskimager/files/Archive/>，点击 `win32diskimager-1.0.0-install.exe` 即可下载。
+
+
+>**技巧**
+>
+>无需解压缩，rufus 刻录镜像时，直接选择 `-img.xz` 亦可进行启动盘制作的过程。
+
+
+>**技巧**
+>
+>FreeBSD 镜像 BT 种子下载地址
+>
+><https://fosstorrents.com/distributions/freebsd/>
 
 
 ---
@@ -114,6 +146,11 @@ FreeBSD-14.2-RELEASE-amd64-mini-memstick.img.xz	107445036	   2024-Nov-29 13:04
 >本文基于 VMware 17 进行演示（使用 UEFI+ZFS）。
 >
 >若是物理机，请考虑使用 [rufus](https://rufus.ie/zh/) + [img 镜像](https://download.freebsd.org/ftp/releases/ISO-IMAGES/14.1/FreeBSD-14.1-RELEASE-amd64-memstick.img)。
+
+
+> **警告**
+>
+> 如果要在 VMware 虚拟机使用 UEFI，必须使用 FreeBSD 13.0-RELEASE 及以上，否则启动会花屏。
 
 ## 启动安装盘、设定键盘布局与主机名
 
@@ -197,6 +234,9 @@ FreeBSD-14.2-RELEASE-amd64-mini-memstick.img.xz	107445036	   2024-Nov-29 13:04
 >**警告**
 >
 >**不要** 全选，全选组件会使用网络进行安装，极慢。
+>
+> 如果在安装中出现应该选用哪个镜像站这个问题，是因为你全选了组件，请不要这样做。
+
 
 |    选项    |                                 解释                                  |
 | :--------: | :------------------------------------------------------------------- |
@@ -477,6 +517,8 @@ FreeBSD-14.2-RELEASE-amd64-mini-memstick.img.xz	107445036	   2024-Nov-29 13:04
 >
 >FreeBSD 基本系统并无图形界面，亦未安装 Xorg，所以就是这个样子的。
 
+
+
 ![](../.gitbook/assets/ins36.png)
 
 输入用户名 `root` 和安装的时候设置的 `root` 密码登录到系统。
@@ -493,7 +535,25 @@ FreeBSD-14.2-RELEASE-amd64-mini-memstick.img.xz	107445036	   2024-Nov-29 13:04
 
 　　若是虚拟机，请检查自己的配置；
 
-　　若是物理机：请参照物理机安装章节。
+　　若是物理机：
+
+>请依次检查如下列表：
+>
+>- 你是普通家用电脑吗？
+>  - 处理器是 intel 或 amd？
+>- 是否关闭了 BIOS 里的安全启动（（Secure Boot）？
+>- 是否从 <https://freebsd.org> 下载的镜像？
+>  - 是否下载了最新版本的 RELEASE 镜像？
+>  - 你下载的镜像后缀名是不是 `img`？
+>  - 镜像校验（sha256）是否通过？
+>  - 你下载的镜像带有 `amd64`（普通家用电脑）字样吗？
+>    - 看清楚是 `amd64` **不是** `arm64`（开发板用）！
+>- 你的 U 盘是扩容的吗？
+>  - 你是否使用了 Ventoy？
+>    - 刻录软件请使用 [Rufus](https://rufus.ie/zh/)，不要用 [Ventoy](https://www.ventoy.net/cn/index.html)
+
+
+若仍出现问题，请先在[官方论坛](https://forums.freebsd.org/)使用英语询问；若无果，可按其他章节指引提交 bug。
 
 - 重启后又进入了安装界面
 
@@ -504,3 +564,27 @@ FreeBSD-14.2-RELEASE-amd64-mini-memstick.img.xz	107445036	   2024-Nov-29 13:04
 　　在以前的版本安装中，可能在启动时长期卡在 sendmail 等服务，或者需要配置静态 IP 地址，但是系统一直在尝试 DHCP。
 
 　　可以尝试输入 **ctrl** + **c** 中断该服务，以启动系统。
+
+- 联想笔记本无电池如何升级 BIOS？
+
+　　如果找不到电池，请解压缩`78cn25ww.exe`文件（BIOS 文件请自行去联想美国官网获取），用记事本打开`platform.ini`，查找：
+
+```sh
+[AC_Adapter]
+Flag=1
+BatteryCheck=1
+BatteryBound=30
+```
+
+将以上所有数值都修改为`0`：
+
+```sh
+[AC_Adapter]
+Flag=0
+BatteryCheck=0
+BatteryBound=0
+```
+
+保存后，双击`InsydeFlash.exe`即可。
+
+**如果断电，后果自负**
