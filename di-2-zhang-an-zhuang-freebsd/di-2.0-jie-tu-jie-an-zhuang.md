@@ -128,6 +128,8 @@ rufus 下载地址：[https://rufus.ie/zh](https://rufus.ie/zh)
 >**技巧**
 >
 >无需解压缩，rufus 刻录镜像时，直接选择 `-img.xz` 亦可进行启动盘制作的过程。
+>
+>![rufus](../.gitbook/assets/rufus.png)
 
 
 >**技巧**
