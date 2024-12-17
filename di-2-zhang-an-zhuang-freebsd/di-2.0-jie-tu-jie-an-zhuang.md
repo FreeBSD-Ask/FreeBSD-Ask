@@ -32,6 +32,81 @@ current 相对稳定后（即 MFC 最短三天）会推送到 stable，但是不
 >
 >    ——参见 [FreeBSD Manual Pages freebsd-update](https://man.freebsd.org/cgi/man.cgi?freebsd-update)
 
+### FreeBSD 镜像说明
+
+首先我们打开 FreeBSD 项目官网：<https://www.freebsd.org/>：
+
+![FreeBSD 项目官网](../.gitbook/assets/do1.png)
+
+我们点击黄底黑字 `Download FreeBSD`，会跳转如下：
+
+![下载 FreeBSD](../.gitbook/assets/do2.png)
+
+|Installer|VM|SD Card|Documentation|
+|:---:|:---:|:---:|:---:|
+|安装镜像|虚拟机预安装镜像|存储卡镜像|文档|
+|一般安装使用|需要自己扩容|单板机/嵌入式用|就是文档|
+
+>**技巧**
+>
+>如果你不知道选哪个，请你选择 `Installer`（普通家用电脑，苹果除外）。
+
+>**技巧**
+>
+>如果你不知道 `amd64` `i386` `aarch64` `armv7` 是什么意思，请你选择 `amd64`（普通家用电脑，苹果除外）。
+
+![FreeBSD 镜像](../.gitbook/assets/do3.png)
+
+
+```sh
+File Name  ↓ 	                                  File Size  ↓ 	Date  ↓ 
+Parent directory/	-	-
+CHECKSUM.SHA256-FreeBSD-14.2-RELEASE-amd64	    1171	       2024-Nov-29 14:11
+CHECKSUM.SHA512-FreeBSD-14.2-RELEASE-amd64    	1811	       2024-Nov-29 14:09
+FreeBSD-14.2-RELEASE-amd64-bootonly.iso	        459491328	   2024-Nov-29 13:04
+FreeBSD-14.2-RELEASE-amd64-bootonly.iso.xz	    100595956	   2024-Nov-29 13:04
+FreeBSD-14.2-RELEASE-amd64-disc1.iso	          1310040064   2024-Nov-29 13:05
+FreeBSD-14.2-RELEASE-amd64-disc1.iso.xz	        855850608	   2024-Nov-29 13:05
+FreeBSD-14.2-RELEASE-amd64-dvd1.iso	            4826406912	 2024-Nov-29 13:05
+FreeBSD-14.2-RELEASE-amd64-dvd1.iso.xz	        3812250832	 2024-Nov-29 13:05
+FreeBSD-14.2-RELEASE-amd64-memstick.img	        1559351808	 2024-Nov-29 13:05
+FreeBSD-14.2-RELEASE-amd64-memstick.img.xz	    867177260	   2024-Nov-29 13:05
+FreeBSD-14.2-RELEASE-amd64-mini-memstick.img	  564220416	   2024-Nov-29 13:04
+FreeBSD-14.2-RELEASE-amd64-mini-memstick.img.xz	107445036	   2024-Nov-29 13:04
+```
+
+以上：第一列代表文件名，第二列是文件大小，第三列是发布日期。
+
+|第一列|说明|
+|:---|:---|
+|Parent directory/	-	-|点击后返回上级目录|
+|CHECKSUM.SHA256-FreeBSD-14.2-RELEASE-amd64	  | 本页所有镜像的 SHA256 校验值 |
+|CHECKSUM.SHA512-FreeBSD-14.2-RELEASE-amd64   |  本页所有镜像的 SHA512 校验值 |
+|FreeBSD-14.2-RELEASE-amd64-bootonly.iso	      | 网络安装镜像，安装时需联网 |
+|FreeBSD-14.2-RELEASE-amd64-bootonly.iso.xz	    | 压缩的网络安装镜像，安装时需联网|
+|FreeBSD-14.2-RELEASE-amd64-disc1.iso	 | cd 镜像    |     
+|FreeBSD-14.2-RELEASE-amd64-disc1.iso.xz	|  压缩的 cd 镜像 |    
+|FreeBSD-14.2-RELEASE-amd64-dvd1.iso	 | dvd 镜像，相比 cd 镜像多了一些没用的 pkg 包    |      
+|FreeBSD-14.2-RELEASE-amd64-dvd1.iso.xz	  | 压缩的 dvd 镜像，相比 cd 镜像多了一些没用的 pkg 包  |     
+|FreeBSD-14.2-RELEASE-amd64-memstick.img	| U 盘用的镜像   |     
+|FreeBSD-14.2-RELEASE-amd64-memstick.img.xz	 | 压缩的 U 盘用的镜像   | 
+|FreeBSD-14.2-RELEASE-amd64-mini-memstick.img	 | U 盘用的网络安装镜像，安装时需联网 |
+|FreeBSD-14.2-RELEASE-amd64-mini-memstick.img.xz|压缩的 U 盘用的网络安装镜像，安装时需联网 |
+
+
+>**技巧**
+>
+>U 盘安装最好使用 `-img` 或 `-img.xz`。因为 `.iso` 镜像没做混合启动。
+>
+>但事无绝对，某些机器使用 `.iso` 刻录 U 盘启动盘，仍然可以顺利进入安装界面。
+
+>**技巧**
+>
+>无需解压缩，刻录镜像时，直接选择 `-img.xz` 亦可进行启动盘制作的过程。
+
+
+---
+
 以下安装说明基于 `FreeBSD-14.2-RELEASE-amd64-disc1.iso`。`-dvd1.iso` 和 `-memstick.img`大同小异。
 
 >**警告**
