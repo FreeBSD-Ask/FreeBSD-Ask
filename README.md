@@ -149,6 +149,7 @@ FreeBSD 是真正自由（Liberal）的操作系统，在这个大流变的世�
   - [ ] DHCP
   - [ ] 更新：第 17.8 节 PostgreSQL 与 pgAdmin4
   - [ ] NTP
+  - [ ] Redis
   - [ ] NFS
   - [ ] iSCSI
   - [ ] Postfix
