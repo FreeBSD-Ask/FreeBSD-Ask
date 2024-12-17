@@ -1,4 +1,4 @@
-# 第 1.5 节 谁在使用 FreeBSD
+# 第 1.5 节 谁在使用 FreeBSD（基金会官方版本）
 
 本页面是对 [FreeBSD End User Stories](https://freebsdfoundation.org/about-us/testimonials/) 的翻译。
 
