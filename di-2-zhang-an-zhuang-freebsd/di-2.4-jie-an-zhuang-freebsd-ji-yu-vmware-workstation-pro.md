@@ -4,6 +4,70 @@
 >
 >如果需要 **现成的** 预安装镜像（本书自制），请参看本章虚拟机预安装镜像一节。
 
+
+## 视频教程
+
+- [001-WIndows11 安装 VMware17](https://www.bilibili.com/video/BV1Qji2YLEgS)
+
+
+## 镜像下载
+
+>**提示**
+>
+>虚拟机也可以使用 FreeBSD 官方构建的[虚拟机镜像](https://download.freebsd.org/releases/VM-IMAGES/14.1-RELEASE/amd64/Latest/)，需要手动扩容，文件系统可选 UFS 与 ZFS。
+>
+>虚拟机一般使用 `FreeBSD-13.2-RELEASE-amd64-disc1.iso` 等类似文件名和后缀的镜像，但是，`FreeBSD-14.1-RELEASE-amd64-memstick.img` 也并非只能用于 U 盘刻录，虚拟机也是可以用的，使用方法参考第 31.2 节。
+
+
+## 博通直链
+
+>**技巧**
+>
+>**可以免注册登录**
+>
+>博通直链：<https://softwareupdate.vmware.com/cds/vmw-desktop/ws/>，`windows/core/` 下的 `VMware-workstation-XX.X.X-XXXXXXXX.exe.tar` 即是，解压缩即可。
+
+### 参考文献
+
+- [[经验] 上直链！！ VMWare Workstation Pro 免费给个人用了](https://hostloc.com/thread-1306968-1-1.html)
+
+
+
+### 参考文献
+
+- 中文：[Workstation 和 Fusion 对个人使用完全免费，企业许可转向订阅](https://blogs.vmware.com/china/2024/05/16/workstation-%E5%92%8C-fusion-%E5%AF%B9%E4%B8%AA%E4%BA%BA%E4%BD%BF%E7%94%A8%E5%AE%8C%E5%85%A8%E5%85%8D%E8%B4%B9%EF%BC%8C%E4%BC%81%E4%B8%9A%E8%AE%B8%E5%8F%AF%E8%BD%AC%E5%90%91%E8%AE%A2%E9%98%85/)
+
+## 配置虚拟机
+
+
+
+![VMware 安装 FreeBSD](../.gitbook/assets/vm1.png)
+
+![VMware 安装 FreeBSD](../.gitbook/assets/vm2.png)
+
+![VMware 安装 FreeBSD](../.gitbook/assets/vm3.png)
+
+![VMware 安装 FreeBSD](../.gitbook/assets/vm4.png)
+
+![VMware 安装 FreeBSD](../.gitbook/assets/vm5.png)
+
+![VMware 安装 FreeBSD](../.gitbook/assets/vm6.png)
+
+![VMware 安装 FreeBSD](../.gitbook/assets/vm7.png)
+
+![VMware 安装 FreeBSD](../.gitbook/assets/vm8.png)
+
+![VMware 安装 FreeBSD](../.gitbook/assets/vm9.png)
+
+![VMware 安装 FreeBSD](../.gitbook/assets/vm10.png)
+
+![VMware 安装 FreeBSD](../.gitbook/assets/vm11.png)
+
+![VMware 安装 FreeBSD](../.gitbook/assets/vm12.png)
+
+
+>**技巧**
+>
 > **BIOS 还是 UEFI**
 >
 > 经过测试，FreeBSD 也可以支持驱动 UEFI 下 VMware 的显卡。——2023.1.13
@@ -31,39 +95,18 @@
 
 > **警告**
 >
-> **注意：由于 [Bug 250580 - VMware UEFI guests crash in virtual hardware after r366691](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=250580)，FreeBSD 11/12 在 VMware 的 UEFI 环境下可能无法启动。经测试 13.0 正常启动。**
-
-## 视频教程
-
-- [001-WIndows11 安装 VMware17](https://www.bilibili.com/video/BV1Qji2YLEgS)
+> 由于 [Bug 250580 - VMware UEFI guests crash in virtual hardware after r366691](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=250580)，FreeBSD 11/12 在 VMware 的 UEFI 环境下可能无法启动。经测试 13.0 正常启动。
 
 
-## 镜像下载
+![VMware 安装 FreeBSD](../.gitbook/assets/vm13.png)
 
->**提示**
->
->虚拟机也可以使用 FreeBSD 官方构建的[虚拟机镜像](https://download.freebsd.org/releases/VM-IMAGES/14.1-RELEASE/amd64/Latest/)，需要手动扩容，文件系统可选 UFS 与 ZFS。
->
->虚拟机一般使用 `FreeBSD-13.2-RELEASE-amd64-disc1.iso` 等类似文件名和后缀的镜像，但是，`FreeBSD-14.1-RELEASE-amd64-memstick.img` 也并非只能用于 U 盘刻录，虚拟机也是可以用的，使用方法参考第 31.2 节。
+![VMware 安装 FreeBSD](../.gitbook/assets/vm14.png)
 
-
-## 博通直链
-
->**技巧**
->
->**可以免注册登录**
->
->博通直链：<https://softwareupdate.vmware.com/cds/vmw-desktop/ws/>，`windows/core/` 下的 `VMware-workstation-XX.X.X-XXXXXXXX.exe.tar` 即是，解压缩即可。
-
-### 参考文献
-
-- [[经验] 上直链！！ VMWare Workstation Pro免费给个人用了](https://hostloc.com/thread-1306968-1-1.html)
+![VMware 安装 FreeBSD](../.gitbook/assets/vm15.png)
 
 
 
-### 参考文献
 
-- 中文：[Workstation 和 Fusion 对个人使用完全免费，企业许可转向订阅](https://blogs.vmware.com/china/2024/05/16/workstation-%E5%92%8C-fusion-%E5%AF%B9%E4%B8%AA%E4%BA%BA%E4%BD%BF%E7%94%A8%E5%AE%8C%E5%85%A8%E5%85%8D%E8%B4%B9%EF%BC%8C%E4%BC%81%E4%B8%9A%E8%AE%B8%E5%8F%AF%E8%BD%AC%E5%90%91%E8%AE%A2%E9%98%85/)
 
 ## 网络设置
 
