@@ -337,21 +337,23 @@ root@ykla:/home/ykla # freebsd-version -u
 
 >**警告**
 >
->使用 EFI 引导的系统，EFI 系统分区（ESP）上有一个/多个引导加载程序的副本，用于固件来引导内核。如果根文件系统是 ZFS，则引导加载程序必须得支持读取 ZFS 引导文件系统。在系统升级后，且执行 `zpool upgrade` 前，必须更新 ESP 上的引导加载程序，否则系统可能无法引导。虽然不是强制性的，但在 UFS 作为根文件系统时亦应如此。可以使用命令 `efibootmgr -v` 来确定当前引导加载程序的位置。`BootCurrent` 显示的值是用于引导系统的当前引导配置的编号。输出的相应条目以 `+` 号开头，例如
+>使用 EFI 引导的系统，EFI 系统分区（ESP）上有引导加载程序的副本，用于固件引导内核。如果根文件系统是 ZFS，则引导加载程序必须得能读取 ZFS 引导文件系统。在系统升级后，且执行 `zpool upgrade` 前，必须更新 ESP 上的引导加载程序，否则系统可能无法引导。虽然不是强制性的，但在 UFS 作为根文件系统时亦应如此。
+>
+>可以使用命令 `efibootmgr -v` 来确定当前引导加载程序的位置。`BootCurrent` 显示的值是用于引导系统的当下引导配置的编号。输出的相应条目以 `+` 开头，如
 >
 >```
 >+Boot0000* FreeBSD HD(1,GPT,f859c46d-19ee-4e40-8975-3ad1ab00ac09,0x800,0x82000)/File(\EFI\freebsd\loader.efi) nda0p1:/EFI/freebsd/loader.efi (null)
 >```
 >
->ESP 应该已经挂载到了 **/boot/efi**。如果没有，可以手动挂载分区，使用 `efibootmgr` 输出中列出的分区（本例为 `nda0p1`）：`mount_msdosfs /dev/nda0p1 /boot/efi`。有关另一则示例，请参阅 [loader.efi(8)](https://man.freebsd.org/cgi/man.cgi?query=loader.efi&sektion=8&format=html)。
+>ESP 应该已经挂载到了 **/boot/efi**。如果没有，可手动挂载之，使用 `efibootmgr` 输出中列出的分区（本例为 `nda0p1`）：`mount_msdosfs /dev/nda0p1 /boot/efi`。有关另一则示例，请参阅 [loader.efi(8)](https://man.freebsd.org/cgi/man.cgi?query=loader.efi&sektion=8&format=html)。
 >
->在 `efibootmgr -v` 输出的 `File` 字段中的值，例如 `\EFI\freebsd\loader.efi`，是 EFI 上正在使用的引导加载程序的位置。如果挂载点是 **/boot/efi**，则此文件将变成为 `/boot/efi/efi/freebsd/loader.efi`。 （在 FAT32 文件系统上大小写不敏感；FreeBSD 使用小写）`File` 的另一个常见值可能是 `\EFI\boot\bootXXX.efi`，其中 `XXX` 是 amd64（即 `x64`）、aarch64（即 `aa64`）或 riscv64（即 `riscv64`）；如未配置，则为默认引导加载程序。应把 **/boot/loader.efi** 复制到 **/boot/efi** 上的正确路径来更新已配置及默认的引导加载程序。
+>在 `efibootmgr -v` 输出的 `File` 字段中的值，如 `\EFI\freebsd\loader.efi`，是 EFI 上正在使用的引导加载程序的位置。若挂载点是 **/boot/efi**，则此文件为 `/boot/efi/efi/freebsd/loader.efi`。（在 FAT32 文件系统上大小写不敏感；FreeBSD 使用小写）`File` 的另一个常见值可能是 `\EFI\boot\bootXXX.efi`，其中 `XXX` 是 amd64（即 `x64`）、aarch64（即 `aa64`）或 riscv64（即 `riscv64`）；如未配置，则为默认引导加载程序。应把 **/boot/loader.efi** 复制到 **/boot/efi** 中的正确路径来更新已配置及默认的引导加载程序。
 >
 >——引自 FreeBSD 14.0 发行说明，有改动。
 
 ---
 
-~~上面是废话~~
+~~上面是废话，不用看~~
 
 
 在版本更新后，在启动菜单出现之前，可能出现下面的画面
