@@ -43,15 +43,28 @@
 
 ![VMware 安装 FreeBSD](../.gitbook/assets/vm1.png)
 
+
 ![VMware 安装 FreeBSD](../.gitbook/assets/vm2.png)
 
 ![VMware 安装 FreeBSD](../.gitbook/assets/vm3.png)
 
+请务必选择“稍后安装操作系统”，否则启动会出问题。
+
 ![VMware 安装 FreeBSD](../.gitbook/assets/vm4.png)
+
+请选择“其他”，然后选择 FreeBSD。
+
+>**技巧**
+>
+>这一步其实无意义。甚至选择 Windows 也能顺利启动。但是对于低版本的 FreeBSD，虚拟机增强工具没有开源，可能会出问题。
 
 ![VMware 安装 FreeBSD](../.gitbook/assets/vm5.png)
 
+虚拟机占用磁盘空间极大。若你不想 C 盘被占满，请自行调整存储位置。
+
 ![VMware 安装 FreeBSD](../.gitbook/assets/vm6.png)
+
+请调整最大磁盘大小。默认值不合理。若要安装桌面，最小要大于 20 G。
 
 ![VMware 安装 FreeBSD](../.gitbook/assets/vm7.png)
 
@@ -59,9 +72,15 @@
 
 ![VMware 安装 FreeBSD](../.gitbook/assets/vm9.png)
 
+默认值 256 M 能够启动。但是不建议这么做。实在不行给 512 M 也行。
+
 ![VMware 安装 FreeBSD](../.gitbook/assets/vm10.png)
 
+默认值 1 CPU 能够启动。但是不合理。
+
 ![VMware 安装 FreeBSD](../.gitbook/assets/vm11.png)
+
+在“使用 ISO 映像文件”中，点击浏览找到，并选中你下载的 `-RELEASE-amd64-disc1.iso` 文件。
 
 ![VMware 安装 FreeBSD](../.gitbook/assets/vm12.png)
 
@@ -96,6 +115,7 @@
 > **警告**
 >
 > 由于 [Bug 250580 - VMware UEFI guests crash in virtual hardware after r366691](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=250580)，FreeBSD 11/12 在 VMware 的 UEFI 环境下可能无法启动。经测试 13.0 正常启动。
+
 
 
 ![VMware 安装 FreeBSD](../.gitbook/assets/vm13.png)
