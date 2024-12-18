@@ -13,15 +13,18 @@
 
 
 
-
-
 >**注意**
 >
 >ZFS 相关升级请参见 ZFS 章节
 
 ## 更新系统
 
-FreeBSD 提供了实用工具 `freebsd-update` 来安装系统更新，包括升级到大版本。
+FreeBSD 提供了实用工具 `freebsd-update` 来安装系统更新，包括升级到大版本。`freebsd-update` 在 FreeBSD 7.0-RELEASE 中得到了正式支持。
+
+### 参考文献
+
+- [FreeBSD 7.0-RELEASE Announcement](https://www.freebsd.org/releases/7.0R/announce/)，`freebsd-update(8) provides officially supported binary upgrades to new releases in addition to security fixes and errata patches.`
+
 
 ## 环境准备
 
