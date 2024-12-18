@@ -13,28 +13,7 @@
 
 
 
-## 更新 EFI 引导
 
->**警告**
->
->对于通过 EFI 引导的系统，EFI 系统分区（ESP）上有一个/多个引导加载程序的副本，用于固件来引导内核。如果根文件系统是 ZFS，则引导加载程序必须得支持读取 ZFS 引导文件系统。在系统升级后，且执行 `zpool upgrade` 前，必须更新 ESP 上的引导加载程序，否则系统可能无法引导。虽然不是强制性的，但在 UFS 作为根文件系统时亦应如此。可以使用命令 `efibootmgr -v` 来确定当前引导加载程序的位置。`BootCurrent` 显示的值是用于引导系统的当前引导配置的编号。输出的相应条目以 `+` 号开头，例如
->
->```
->+Boot0000* FreeBSD HD(1,GPT,f859c46d-19ee-4e40-8975-3ad1ab00ac09,0x800,0x82000)/File(\EFI\freebsd\loader.efi) nda0p1:/EFI/freebsd/loader.efi (null)
->```
->
->ESP 可能已经挂载到了 **/boot/efi**。如果没有，可以手动挂载分区，使用 `efibootmgr` 输出中列出的分区（本例为 `nda0p1`）：`mount_msdosfs /dev/nda0p1 /boot/efi`。有关另一则示例，请参阅 [ loader.efi(8)  ](https://man.freebsd.org/cgi/man.cgi?query=loader.efi&sektion=8&format=html)。
->
->在 `efibootmgr -v` 输出的 `File` 字段中的值，例如 `\EFI\freebsd\loader.efi`，是 EFI 上正在使用的引导加载程序的位置。如果挂载点是 **/boot/efi**，则此文件将变成为 `/boot/efi/efi/freebsd/loader.efi`。 （在 FAT32 文件系统上大小写不敏感；FreeBSD 使用小写）`File` 的另一个常见值可能是 `\EFI\boot\bootXXX.efi`，其中 `XXX` 是 amd64（即 `x64`）、aarch64（即 `aa64`）或 riscv64（即 `riscv64`）；如未配置，则为默认引导加载程序。应把 **/boot/loader.efi** 复制到 **/boot/efi** 上的正确路径来更新已配置及默认的引导加载程序。
->
->~~上面是废话~~ 一般来说，即
->
->
->```sh
-># cp /boot/loader.efi /boot/efi/efi/freebsd/
->```
-
-——引自 FreeBSD 14.0 发行说明，有改动。
 
 >**注意**
 >
@@ -351,9 +330,71 @@ root@ykla:/home/ykla # freebsd-version -u
 14.2-RELEASE
 ```
 
+### 更新 EFI 引导
+
+>**警告**
+>
+>使用 EFI 引导的系统，EFI 系统分区（ESP）上有一个/多个引导加载程序的副本，用于固件来引导内核。如果根文件系统是 ZFS，则引导加载程序必须得支持读取 ZFS 引导文件系统。在系统升级后，且执行 `zpool upgrade` 前，必须更新 ESP 上的引导加载程序，否则系统可能无法引导。虽然不是强制性的，但在 UFS 作为根文件系统时亦应如此。可以使用命令 `efibootmgr -v` 来确定当前引导加载程序的位置。`BootCurrent` 显示的值是用于引导系统的当前引导配置的编号。输出的相应条目以 `+` 号开头，例如
+>
+>```
+>+Boot0000* FreeBSD HD(1,GPT,f859c46d-19ee-4e40-8975-3ad1ab00ac09,0x800,0x82000)/File(\EFI\freebsd\loader.efi) nda0p1:/EFI/freebsd/loader.efi (null)
+>```
+>
+>ESP 应该已经挂载到了 **/boot/efi**。如果没有，可以手动挂载分区，使用 `efibootmgr` 输出中列出的分区（本例为 `nda0p1`）：`mount_msdosfs /dev/nda0p1 /boot/efi`。有关另一则示例，请参阅 [loader.efi(8)](https://man.freebsd.org/cgi/man.cgi?query=loader.efi&sektion=8&format=html)。
+>
+>在 `efibootmgr -v` 输出的 `File` 字段中的值，例如 `\EFI\freebsd\loader.efi`，是 EFI 上正在使用的引导加载程序的位置。如果挂载点是 **/boot/efi**，则此文件将变成为 `/boot/efi/efi/freebsd/loader.efi`。 （在 FAT32 文件系统上大小写不敏感；FreeBSD 使用小写）`File` 的另一个常见值可能是 `\EFI\boot\bootXXX.efi`，其中 `XXX` 是 amd64（即 `x64`）、aarch64（即 `aa64`）或 riscv64（即 `riscv64`）；如未配置，则为默认引导加载程序。应把 **/boot/loader.efi** 复制到 **/boot/efi** 上的正确路径来更新已配置及默认的引导加载程序。
+>
+>——引自 FreeBSD 14.0 发行说明，有改动。
+
+---
+
+~~上面是废话~~
+
+
+在版本更新后，在启动菜单出现之前，可能出现下面的画面
+
+![loader 更新提示界面](../.gitbook/assets/loader.png)
+
+即
+
+```sh
+**************************************************************
+**************************************************************
+*****                                                    *****   
+*****      BOOT LOADER IS TOO OLD, PLEASE UPGRADE.       *****
+*****                                                    *****
+**************************************************************
+************************************************************** 
+```
+
+这说明 loader 需要更新了。还可以使用命令进行版本验证：
+
+```sh
+# strings /boot/efi/efi/freebsd/loader.efi|grep FreeBSD|grep EFI
+DFreeBSD/amd64 EFI loader, Revision 1.1
+# strings /boot/loader.efi|grep FreeBSD|grep EFI
+DFreeBSD/amd64 EFI loader, Revision 3.0
+```
+
+此处命令参考了手册 [loader.efi](https://man.freebsd.org/cgi/man.cgi?query=loader.efi) 中的例子。`/boot/efi/efi/freebsd/loader.efi` 为正在使用的 loader（版本确实旧了）
+
+更新：
+
+```sh
+# cp /boot/loader.efi /boot/efi/efi/freebsd/
+```
+
+>**警告**
+>
+>请先更新 loader，再更新 ZFS 版本！
+
+>**重要**
+>
+>非 EFI、bootcode、ZFS 等相关更新请自行查看相关部分章节！
+
+
 ### 可选更新
 
-EFI、boot code、ZFS 等相关更新请自行查看相关部分章节。
 
 ## 查看 FreeBSD 版本
 
