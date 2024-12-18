@@ -144,6 +144,38 @@ CURRENT 测试版（仅限专业用户，对于该版本来说，无法启动，
 
 FreeBSD 旧版本下载地址: [http://ftp-archive.freebsd.org/pub/FreeBSD-Archive/old-releases/amd64/ISO-IMAGES/](http://ftp-archive.freebsd.org/pub/FreeBSD-Archive/old-releases/amd64/ISO-IMAGES/)
 
+
+## 怎么看你的硬件支持不支持呢？
+
+更多硬件请参考：
+
+[Hardware for BSD](https://bsd-hardware.info/?view=search)
+
+
+![](../.gitbook/assets/h1.png)
+
+![](../.gitbook/assets/h2.png)
+
+> 如果你也想上传你的数据到该网站上，请：
+>安装：
+> ```sh
+> # pkg install hw-probe
+> ```
+>或者
+>
+> ```sh
+> # cd /usr/ports/sysutils/hw-probe/
+> # make install clean
+> ```
+> 
+> 然后
+> 
+> ```sh
+> # hw-probe -all -upload
+> ```
+>
+> 其他系统见 [INSTALL HOWTO FOR BSD](https://github.com/linuxhw/hw-probe/blob/master/INSTALL.BSD.md)
+
 ---
 
 以下安装说明基于 `FreeBSD-14.2-RELEASE-amd64-disc1.iso`。`-dvd1.iso` 和 `-memstick.img`大同小异。
