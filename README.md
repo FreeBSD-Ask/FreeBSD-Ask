@@ -339,3 +339,5 @@ Skype: [https://join.skype.com/xktkQtXZopfv](https://join.skype.com/xktkQtXZopfv
 ---
 
 ![](.gitbook/assets/ai.png)
+
+[Not Ny AI](https://notbyai.fyi/cn/)
