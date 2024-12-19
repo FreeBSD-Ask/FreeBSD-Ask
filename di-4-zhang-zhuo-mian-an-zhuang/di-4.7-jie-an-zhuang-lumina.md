@@ -1,6 +1,8 @@
 # 第 4.7 节 安装 Lumina
 
-提示：该桌面可能已经停止开发，我向其提交的 pull 长期无人处理，并且没有新的 commit 信息。
+>**注意**
+>
+>[Lumina](https://github.com/lumina-desktop/lumina) 在换了开发者后，开发长期处于停滞状态，我向其提交的 pull 长期无人处理，并且没有新的 commit 信息。
 
 ## 安装
 
