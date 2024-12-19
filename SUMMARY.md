@@ -266,7 +266,7 @@
 ## 第 27 章 NetBSD
 
 * [第 27.0 节 概述](di-27-zhang-netbsd/di-27.0-jie-gai-shu.md)
-* [第 27.1 节 安装与配置](di-27-zhang-netbsd/di-27.1-jie-an-zhuang-yu-pei-zhi.md)
+* [第 27.1 节 NetBSD 安装图解](di-27-zhang-netbsd/di-27.1-jie-an-zhuang-yu-pei-zhi.md)
 * [第 27.2 节 换源与包管理器](di-27-zhang-netbsd/di-27.2-jie-huan-yuan-yu-bao-guan-li-qi.md)
 * [第 27.3 节 桌面与其他软件](di-27-zhang-netbsd/di-27.3-jie-zhuo-mian-yu-qi-ta-ruan-jian.md)
 
@@ -274,6 +274,5 @@
 
 * [第 28.0 节 概述](di-28-zhang-dragonflybsd/di-28.0-jie-gai-shu.md)
 * [第 28.1 节 安装与配置](di-28-zhang-dragonflybsd/di-28.1-jie-an-zhuang-yu-pei-zhi.md)
-* [第 28.2 节 换源与包管理器](di-28-zhang-dragonflybsd/di-28.2-jie-huan-yuan-yu-bao-guan-li-qi.md)
-* [第 28.3 节 桌面与其他软件](di-28-zhang-dragonflybsd/di-28.3-jie-zhuo-mian-yu-qi-ta-ruan-jian.md)
+
 
