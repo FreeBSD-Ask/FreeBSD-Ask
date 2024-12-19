@@ -1,6 +1,6 @@
 # FreeBSD 从入门到跑路
 
-~~为了拯救即将归档（Archived）的 FreeBSD.....我们决定写一本书。让我们一起，以温柔的心随坚定的信念，为 FreeBSD 的未来添砖加瓦！~~
+~~为了拯救即将归档（Archived）的 FreeBSD.....我们决定写一本书。~~
 
 FreeBSD 是真正自由（Liberal）的操作系统，在这个大流变的世界中仍然坚守 BSD UNIX 哲学——恪守古老的法则，追寻真正的自由。
 
@@ -340,4 +340,4 @@ Skype: [https://join.skype.com/xktkQtXZopfv](https://join.skype.com/xktkQtXZopfv
 
 ![](.gitbook/assets/ai.png)
 
-[Not Ny AI](https://notbyai.fyi/cn/)
+[Not By AI](https://notbyai.fyi/cn/)
