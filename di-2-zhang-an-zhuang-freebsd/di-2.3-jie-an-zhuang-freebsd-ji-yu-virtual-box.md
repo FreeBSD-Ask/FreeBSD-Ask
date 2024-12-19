@@ -1,6 +1,27 @@
 # 第 2.3 节 安装 FreeBSD——基于 Virtual Box
 
-> **UEFI 下显卡也可以正常驱动。——2023.1.14 测试**
+
+## 下载 VirtualBox
+
+进入网页点击 `Download` 即可下载：
+
+[https://www.virtualbox.org](https://www.virtualbox.org)
+
+## 安装设置
+
+
+
+以下演示基于 VirtualBox 7.1.4 和 Windows11 24H2。
+
+![](../.gitbook/assets/vb1.png)
+
+![](../.gitbook/assets/vb2.png)
+
+![](../.gitbook/assets/vb3.png)
+
+>**技巧**
+>
+>UEFI 下显卡也可以正常驱动。——2023.1.14 测试
 >
 > ```sh
 > # efibootmgr # 无需安装，自带
@@ -15,36 +36,27 @@
 > Boot0003* EFI Internal Shell
 > ```
 
-## FreeBSD 镜像下载
+![](../.gitbook/assets/vb4.png)
 
-> **警告**
->
-> iso 镜像不适用于物理机，物理机请使用 img 镜像。
+![](../.gitbook/assets/vb4.5.png)
 
+![](../.gitbook/assets/vb5.png)
 
->**注意**
->
->虚拟机也可以使用 FreeBSD 官方构建的[虚拟机镜像](https://download.freebsd.org/releases/VM-IMAGES/14.1-RELEASE/amd64/Latest/)，需要手动扩容，文件系统可选 UFS 与 ZFS。
+显卡控制器用 `VBoxSVGA` 即可。
 
->**技巧**
->
->虚拟机一般使用 `-disc1.iso` 等类似文件名和后缀的镜像，但是，`-memstick.img` 也并非只能用于 U 盘刻录，虚拟机也是可以用的，使用方法参考其他章节。
+![](../.gitbook/assets/vb5.5.png)
 
-RELEASE 正式版 镜像下载地址：<https://download.freebsd.org/ftp/releases/amd64/amd64/ISO-IMAGES/14.1/FreeBSD-14.1-RELEASE-amd64-disc1.iso>
+![](../.gitbook/assets/vb6.png)
 
-CURRENT 测试版（仅限专业用户，对于该版本来说，无法启动，环境变量错误都是正常的事情！） 镜像下载地址: [https://download.freebsd.org/snapshots/amd64/amd64/ISO-IMAGES/15.0/](https://download.freebsd.org/snapshots/amd64/amd64/ISO-IMAGES/15.0/)
+![](../.gitbook/assets/vb7.png)
 
-FreeBSD 旧版本下载地址: [http://ftp-archive.freebsd.org/pub/FreeBSD-Archive/old-releases/amd64/ISO-IMAGES/](http://ftp-archive.freebsd.org/pub/FreeBSD-Archive/old-releases/amd64/ISO-IMAGES/)
+![](../.gitbook/assets/vb8.png)
 
+安装后的系统：
+
+![](../.gitbook/assets/vb9.png)
 
 
-## 下载 VirtualBox
-
-进入网页点击 `download` 即可下载：
-
-[https://www.virtualbox.org](https://www.virtualbox.org)
-
-## 安装设置
 
 安装完成后请手动关机，卸载或删除安装光盘，否则还会进入安装界面。
 
@@ -87,7 +99,7 @@ FreeBSD 旧版本下载地址: [http://ftp-archive.freebsd.org/pub/FreeBSD-Archi
 
 xorg 可以自动识别驱动，**不需要** 手动配置 `/usr/local/etc/X11/xorg.conf`（经过测试手动配置反而更卡，点一下要用 5 秒钟……）。
 
-显卡控制器用 `VBoxSVGA` 即可。
+
 
 启动服务：
 
