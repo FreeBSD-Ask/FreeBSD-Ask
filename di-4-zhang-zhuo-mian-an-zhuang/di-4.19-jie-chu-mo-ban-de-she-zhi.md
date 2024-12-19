@@ -22,7 +22,7 @@ ykla@ykla-mi:~ $ xinput list
 ykla@ykla-mi:~ $ xinput set-prop 6 "Device Enabled" 0
 ```
 
-参考文献：
+### 参考文献
 
 - [FreeBSDタッチパッドをoffにする](https://qiita.com/fygar256/items/35100d43b096470631d6)
 
