@@ -1,6 +1,9 @@
 # 第 4.21 节 安装 KDE6
 
-## 安装
+
+## KDE6-基于 Xorg
+
+### 安装
 
 ```sh
 # pkg install xorg sddm x11/kde6 plasma6-sddm-kcm wqy-fonts xdg-user-dirs
@@ -17,7 +20,7 @@
 # cd /usr/ports/devel/xdg-user-dirs/ && make install clean # 自动创建用户目录的工具
 ```
 
-## 配置
+### 配置
 
 - 启动项设置
 
