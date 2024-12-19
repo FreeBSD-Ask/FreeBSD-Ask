@@ -74,6 +74,9 @@ NAME    SIZE  ALLOC   FREE  CKPOINT  EXPANDSZ   FRAG    CAP  DEDUP    HEALTH  AL
 zroot  77.5G  2.20G  75.3G        -         -     2%     2%  1.00x    ONLINE  -
 ```
 
+### 参考文献
+
+- [Solved-extend ZFS partition](https://forums.freebsd.org/threads/extend-zfs-partition.55964/)
 
 ## UFS 磁盘扩容
 
