@@ -62,6 +62,7 @@
 * [第 4.18 节 打印机的安装](di-4-zhang-zhuo-mian-an-zhuang/di-4.18-jie-da-yin-ji-de-an-zhuang.md)
 * [第 4.19 节 触摸板的设置](di-4-zhang-zhuo-mian-an-zhuang/di-4.19-jie-chu-mo-ban-de-she-zhi.md)
 * [第 4.20 节 声卡设置](di-4-zhang-zhuo-mian-an-zhuang/di-4.20-jie-sheng-ka-yu-wang-ka-she-zhi.md)
+* [第 4.21 节 安装 KDE6](di-4-zhang-zhuo-mian-an-zhuang/di.4.21.md)
 
 ## 第 5 章 输入法及常用软件
 
