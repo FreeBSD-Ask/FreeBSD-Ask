@@ -62,7 +62,7 @@ errors: No known data errors
 
 扩展 zfs 池：
 
-···sh
+```sh
 root@ykla:~ #  zpool online -e zroot nda0p4
 ```
 
