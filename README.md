@@ -92,6 +92,7 @@ FreeBSD 是真正自由（Liberal）的操作系统，在这个大流变的世�
   - [ ] 找到一款我认为能替代二者的工具
 - [X] 将全书主观性文字转换为思考题供读者自行思考与判断
 - [ ] 更新“第 16.7 节 Samba 服务器”
+- [ ] steam
 - [ ] 树莓派 5
   - [ ] 微信
 - [ ] Bhyve
@@ -338,3 +339,5 @@ Skype: [https://join.skype.com/xktkQtXZopfv](https://join.skype.com/xktkQtXZopfv
 ---
 
 ![](.gitbook/assets/ai.png)
+
+[Not Ny AI](https://notbyai.fyi/cn/)
