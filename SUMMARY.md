@@ -54,7 +54,7 @@
 * [第 4.10 节 root 登录桌面](di-4-zhang-zhuo-mian-an-zhuang/di-4.10-jie-root-deng-lu-zhuo-mian.md)
 * [第 4.11 节 主题与美化](di-4-zhang-zhuo-mian-an-zhuang/di-4.11-jie-zhu-ti-yu-mei-hua.md)
 * [第 4.12 节 远程桌面管理](di-4-zhang-zhuo-mian-an-zhuang/di-4.12-jie-yuan-cheng-zhuo-mian-guan-li.md)
-* [第 4.13 节 安装 Wayland （可选）](di-4-zhang-zhuo-mian-an-zhuang/di-4.13-jie-an-zhuang-wayland-ke-xuan.md)
+* [第 4.21 节 安装 KDE6](di-4-zhang-zhuo-mian-an-zhuang/di-4.13.md)
 * [第 4.14 节 安装 Pantheon](di-4-zhang-zhuo-mian-an-zhuang/di-4.14-jie-an-zhuang-pantheon.md)
 * [第 4.15 节 安装 i3wm](di-4-zhang-zhuo-mian-an-zhuang/di-4.15-jie-an-zhuang-i3wm.md)
 * [第 4.16 节 安装 CDE](di-4-zhang-zhuo-mian-an-zhuang/di-4.16-jie-an-zhuang-cde.md)
@@ -62,7 +62,6 @@
 * [第 4.18 节 打印机的安装](di-4-zhang-zhuo-mian-an-zhuang/di-4.18-jie-da-yin-ji-de-an-zhuang.md)
 * [第 4.19 节 触摸板的设置](di-4-zhang-zhuo-mian-an-zhuang/di-4.19-jie-chu-mo-ban-de-she-zhi.md)
 * [第 4.20 节 声卡设置](di-4-zhang-zhuo-mian-an-zhuang/di-4.20-jie-sheng-ka-yu-wang-ka-she-zhi.md)
-* [第 4.21 节 安装 KDE6](di-4-zhang-zhuo-mian-an-zhuang/di.4.21.md)
 
 ## 第 5 章 输入法及常用软件
 
