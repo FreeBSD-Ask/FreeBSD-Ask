@@ -15,9 +15,16 @@
 
 ![](../.gitbook/assets/vb1.png)
 
+选择“新建”。
+
 ![](../.gitbook/assets/vb2.png)
 
+
+名称输入“FreeBSD”，最下面几个选项会自动补全。
+
 ![](../.gitbook/assets/vb3.png)
+
+设置内存大小，CPU 数量，并开启 EFI。
 
 >**技巧**
 >
@@ -38,13 +45,19 @@
 
 ![](../.gitbook/assets/vb4.png)
 
+调整硬盘大小。
+
 ![](../.gitbook/assets/vb4.5.png)
+
+打开设置。
 
 ![](../.gitbook/assets/vb5.png)
 
 显卡控制器用 `VBoxSVGA` 即可。
 
 ![](../.gitbook/assets/vb5.5.png)
+
+开始安装！
 
 ![](../.gitbook/assets/vb6.png)
 
