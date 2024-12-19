@@ -1,10 +1,84 @@
 # 第 6.3 节 磁盘扩容
 
-## 扩容方法
 
-请注意 ZFS 和 UFS 都只能扩大不能缩小！
 
-1. `gpart show`
+>**警告**
+>
+>ZFS 和 UFS 都只能扩大不能缩小！
+
+## ZFS 磁盘扩容
+
+
+```sh
+root@ykla:~ # gpart show
+=>       40  167772087  nda0  GPT  (80G)
+         40     532480     1  efi  (260M)
+     532520       1024     2  freebsd-boot  (512K)
+     533544        984        - free -  (492K)
+     534528    4194304     3  freebsd-swap  (2.0G)
+    4728832  142071775     4  freebsd-zfs  (68G)
+  146800607   20971520        - free -  (10G)
+```
+
+可以看到，`free` 空闲空间是 10GB。
+
+```sh
+root@ykla:~ # gpart resize -i 4 nda0
+nda0p4 resized
+```
+
+再看下：
+
+```sh
+root@ykla:~ # gpart show
+=>       40  167772087  nda0  GPT  (80G)
+         40     532480     1  efi  (260M)
+     532520       1024     2  freebsd-boot  (512K)
+     533544        984        - free -  (492K)
+     534528    4194304     3  freebsd-swap  (2.0G)
+    4728832  163043295     4  freebsd-zfs  (78G)
+```
+
+```sh
+root@ykla:~ # zpool list
+NAME    SIZE  ALLOC   FREE  CKPOINT  EXPANDSZ   FRAG    CAP  DEDUP    HEALTH  ALTROOT
+zroot  67.5G  2.20G  65.3G        -         -     2%     3%  1.00x    ONLINE  - # 这里看到还是 67.5G 没有扩容
+root@ykla:~ # zpool status
+  pool: zroot
+ state: ONLINE
+status: Some supported and requested features are not enabled on the pool.
+	The pool can still be used, but some features are unavailable.
+action: Enable all features using 'zpool upgrade'. Once this is done,
+	the pool may no longer be accessible by software that does not support
+	the features. See zpool-features(7) for details.
+config:
+
+	NAME        STATE     READ WRITE CKSUM
+	zroot       ONLINE       0     0     0 # 可以看到池名是默认的 zroot
+	  nda0p4    ONLINE       0     0     0 # 这里看到是 nda0p4
+
+errors: No known data errors
+```
+
+扩展 zfs 池：
+
+···sh
+root@ykla:~ #  zpool online -e zroot nda0p4
+```
+
+查看扩容后：
+
+```sh
+root@ykla:~ # zpool list
+NAME    SIZE  ALLOC   FREE  CKPOINT  EXPANDSZ   FRAG    CAP  DEDUP    HEALTH  ALTROOT
+zroot  77.5G  2.20G  75.3G        -         -     2%     2%  1.00x    ONLINE  -
+```
+
+
+## UFS 磁盘扩容
+
+
+- `gpart show`
 
 ```sh
 root@freebsd:~ # gpart show
@@ -18,7 +92,7 @@ root@freebsd:~ # gpart show
 
 查看系统盘大小只有 5G，显示 `da0` 只有这一个盘。
 
-1. 执行扩容命令，`da0` 可从 `gpart show` 执行后查看到具体名称
+- 执行扩容命令，`da0` 可从 `gpart show` 执行后查看到具体名称
 
 > **警告** 如果你使用的是 GPT 分区表，上边的扩容操作（**在虚拟机或云服务器上的**）会破坏 GPT 分区表，所以需要先恢复之：
 >
@@ -35,7 +109,7 @@ root@freebsd:~ #  gpart resize -i 4 da0
 da0p4 resized
 ```
 
-2. 启动 `growfs` 服务，自动完成扩展
+- 启动 `growfs` 服务，自动完成扩展
 
 ```sh
 root@freebsd:~ # service growfs onestart
@@ -48,7 +122,7 @@ super-block backups (for fsck_ffs -b #) at:
  25653952, 26936640, 28219328, 29502016, 30784704, 32067392, 33350080, 34632768, 35915456, 37198144, 38480832
 ```
 
-3. 用 `df -h` 命令查看结果。
+- 用 `df -h` 命令查看结果。
 
 ```sh
 root@freebsd:~ # df -hl
