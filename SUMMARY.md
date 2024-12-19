@@ -111,9 +111,8 @@
 
 ## 第 10 章 虚拟化
 
-* [第 10.1 节 虚拟化简介](di-10-zhang-xu-ni-hua/di-10.1-jie-xu-ni-hua-jian-jie.md)
-* [第 10.2 节 安装 Virtual Box](di-10-zhang-xu-ni-hua/di-10.2-jie-an-zhuang-virtual-box.md)
-* [第 10.3 节 使用 bhyve 安装 Windows 11](di-10-zhang-xu-ni-hua/di-10.3-jie-shi-yong-bhyve-an-zhuang-windows-10.md)
+* [第 10.1 节 安装 Virtual Box](di-10-zhang-xu-ni-hua/di-10.1-jie-an-zhuang-virtual-box.md)
+* [第 10.2 节 使用 bhyve 安装 Windows 11](di-10-zhang-xu-ni-hua/di-10.2-jie-shi-yong-bhyve-an-zhuang-windows-10.md)
 
 ## 第 11 章 计算机概论
 
