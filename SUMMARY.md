@@ -22,7 +22,7 @@
 * [第 2.2 节 安装 FreeBSD——基于 Hyper-V](di-2-zhang-an-zhuang-freebsd/di-2.2-jie.md)
 * [第 2.3 节 安装 FreeBSD——基于 Virtual Box](di-2-zhang-an-zhuang-freebsd/di-2.3-jie-an-zhuang-freebsd-ji-yu-virtual-box.md)
 * [第 2.4 节 安装 FreeBSD——基于 VMware Workstation Pro](di-2-zhang-an-zhuang-freebsd/di-2.4-jie-an-zhuang-freebsd-ji-yu-vmware-workstation-pro.md)
-* [第 2.5 节 腾讯云轻量云及其他云服务器安装 FreeBSD](di-2-zhang-an-zhuang-freebsd/di-2.5-jie-teng-xun-yun-qing-liang-yun-ji-qi-ta-fu-wu-qi-dd-an-zhuang-freebsd.md)
+* [第 2.5 节 第 2.5 节 云服务器安装 FreeBSD（以腾讯云轻量云为例）](di-2-zhang-an-zhuang-freebsd/di-2.5-jie-teng-xun-yun-qing-liang-yun-ji-qi-ta-fu-wu-qi-dd-an-zhuang-freebsd.md)
 * [第 2.6 节 SSH 相关软件推荐与 SSH 配置](di-2-zhang-an-zhuang-freebsd/di-2.6-jie-chang-yong-ruan-jian-yu-ssh-pei-zhi.md)
 * [第 2.7 节 自带文本编辑器 ee 的用法](di-2-zhang-an-zhuang-freebsd/di-2.7-jie-ee-yong-fa-ji-wang-luo-pei-zhi.md)
 * [第 2.8 节 虚拟机预安装镜像（本书自制）](di-2-zhang-an-zhuang-freebsd/di-2.8-jie-yu-an-zhuang-jing-xiang.md)
