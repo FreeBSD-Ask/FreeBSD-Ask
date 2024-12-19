@@ -16,7 +16,7 @@ ykla@ykla-mi:~ $ xinput list
     ↳ Windows keyboard                        	id=7	[slave  keyboard (3)]
 ```
 
-可以看到 `6` 是触摸板，关闭：（最后 1 为开启）
+可以看到 `6` 是触摸板，关闭：（最后 `1` 为开启；`0` 关闭）
 
 ```sh
 ykla@ykla-mi:~ $ xinput set-prop 6 "Device Enabled" 0
