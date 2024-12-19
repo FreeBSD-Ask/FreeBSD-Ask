@@ -57,3 +57,10 @@ $ echo "exec ck-launch-session startplasma-x11" > ~/.xinitrc
 
 ![FreeBSD 安装 KDE6](../.gitbook/assets/kde6-3.png)
 
+##  KDE6-基于 Wayland
+
+在 KDE6-基于 Xorg 的基础上，把 `/usr/local/share/xsessions/plasmax11.desktop` 中的 `Exec` 和 `TryExec` 都改成 `/usr/local/bin/startplasma-wayland`。重启即可。
+
+![FreeBSD 安装 KDE6](../.gitbook/assets/kde6-4.png)
+
+
