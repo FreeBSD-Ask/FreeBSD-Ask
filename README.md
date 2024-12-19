@@ -156,9 +156,9 @@ FreeBSD 是真正自由（Liberal）的操作系统，在这个大流变的世�
   - [ ] Postfix
   - [ ] LDAP（OpenLDAP，也许可以参考 [WiKi LDAP/Setup](https://wiki.freebsd.org/LDAP/Setup)）
 - [X] NextCloud（最好基于 PostgreSQL）
-- [ ] KDE6（注意：**不**应使用 Port x11/kde6：kde6-devel）
-  - [ ] 基于 Xorg
-  - [ ] 基于 Wayland
+- [ ] KDE6
+  - [X] 基于 Xorg
+  - [X] 基于 Wayland（部分完成）
 - [ ] Wayland
   - [ ] 远程软件
   - [ ] KDE5
