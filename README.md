@@ -334,3 +334,7 @@ Skype: [https://join.skype.com/xktkQtXZopfv](https://join.skype.com/xktkQtXZopfv
 
 有多的钱请捐给 FreeBSD 基金会吧。
 
+
+---
+
+![](.gitbook/assets/ai.png)
