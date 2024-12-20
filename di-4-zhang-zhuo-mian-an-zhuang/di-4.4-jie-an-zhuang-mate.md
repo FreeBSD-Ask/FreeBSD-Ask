@@ -26,6 +26,8 @@
 # cd /usr/ports/devel/xdg-user-dirs/ && make install clean
 ```
 
+安装后启动服务：
+
 ```sh
 # sysrc moused_enable="YES"
 # sysrc dbus_enable="YES"
