@@ -24,10 +24,16 @@
 # make install clean
 ```
 
-拉取 Ports 存储库：
+拉取 Ports 存储库（USTC）：
 
 ```sh
 # git clone --filter=tree:0 https://mirrors.ustc.edu.cn/freebsd-ports/ports.git /usr/ports
+```
+
+拉取 Ports 存储库（FreeBSD 官方）：
+
+```sh
+# git clone --filter=tree:0 https://git.FreeBSD.org/ports.git /usr/ports
 ```
 
 #### 故障排除
