@@ -113,6 +113,7 @@
 
 * [第 10.1 节 安装 Virtual Box](di-10-zhang-xu-ni-hua/di-10.1-jie-an-zhuang-virtual-box.md)
 * [第 10.2 节 使用 bhyve 安装 Windows 11](di-10-zhang-xu-ni-hua/di-10.2-jie-shi-yong-bhyve-an-zhuang-windows-10.md)
+* [第 10.3 节 使用 BVCP 通过网页管理 BHyve](di-10-zhang-xu-ni-hua/di-10.3.md)
 
 ## 第 11 章 计算机概论
 
