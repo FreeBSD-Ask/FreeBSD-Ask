@@ -100,14 +100,14 @@ FreeBSD 14.1-RELEASE、14-STABLE（OSVERSION >1400508）、FreeBSD 15 CUEERNT，
 ### 视频硬解
 
 ```sh
-# pkg install xf86-video-intel libva-intel-driver
+# pkg install xf86-video-intel libva-intel-media-driver
 ```
 
 或者
 
 ```sh
 # cd /usr/ports/x11-drivers/xf86-video-intel/ && make install clean
-# cd /usr/ports/multimedia/libva-intel-driver && make install clean
+# cd /usr/ports/multimedia/libva-intel-media-driver/ && make install clean
 ```
 
 ### 亮度调节
