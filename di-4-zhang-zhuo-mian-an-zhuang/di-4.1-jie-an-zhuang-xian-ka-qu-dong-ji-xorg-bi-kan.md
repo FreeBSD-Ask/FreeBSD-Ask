@@ -83,7 +83,6 @@ FreeBSD 14.1-RELEASE、14-STABLE（OSVERSION >1400508）、FreeBSD 15 CUEERNT，
   - 如果是 HD7000 以后的 AMD 显卡，添加 `kld_list="amdgpu"`（大部分人应该使用这个，如果没用再换 `radeonkms`）
   - 如果是 HD7000 以前的 AMD 显卡，添加 `kld_list="radeonkms"`（这是十多年前的显卡了）
 
-
 ### 故障排除
 
 - `KLD XXX.ko depends on kernel - not available or version mismatch.`
@@ -97,7 +96,9 @@ FreeBSD 14.1-RELEASE、14-STABLE（OSVERSION >1400508）、FreeBSD 15 CUEERNT，
 即找不到路径，请先获取 ports，请看前文。
 
 
-### 视频硬解
+#### 视频硬解（重要）
+
+如果不配置此节，blender 等软件将无法运行！直接段错误。
 
 ```sh
 # pkg install xf86-video-intel libva-intel-media-driver
@@ -109,6 +110,8 @@ FreeBSD 14.1-RELEASE、14-STABLE（OSVERSION >1400508）、FreeBSD 15 CUEERNT，
 # cd /usr/ports/x11-drivers/xf86-video-intel/ && make install clean
 # cd /usr/ports/multimedia/libva-intel-media-driver/ && make install clean
 ```
+
+
 
 ### 亮度调节
 
