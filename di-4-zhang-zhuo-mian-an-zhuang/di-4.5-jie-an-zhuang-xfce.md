@@ -49,7 +49,7 @@
 在 `~/.xinitrc` 或者 `~/.profile` 中添加以下内容（但要在最前面才正常启用） 
 
 ```sh
-export LANG=zh_CN.UTF-8`
+export LANG=zh_CN.UTF-8
 ```
 ### lightdm 登陆管理器本地化语言
 
