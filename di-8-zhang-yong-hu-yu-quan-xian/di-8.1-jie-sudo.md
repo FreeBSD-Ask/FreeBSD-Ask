@@ -1,8 +1,12 @@
 # 第 8.1 节 sudo
 
-## 安装
+>**技巧**
+>
+>还有其他软件可以代替 sudo。
+>
+> OpenBSD 认为该软件配置复杂，代码质量差，漏洞太多，故自行开发了 [doas](https://man.openbsd.org/doas)（FreeBSD 也可以用）。doas 教程见其他章节。
 
-> OpenBSD 认为该软件配置复杂，代码质量差，漏洞太多，故自行开发了 [doas](https://man.openbsd.org/doas)（FreeBSD 也可以用）。daos 教程在 26.2 节
+## 安装
 
 FreeBSD 基本系统默认不自带 `sudo` 命令，需要使用 `root` 权限自行安装：
 
@@ -13,7 +17,7 @@ FreeBSD 基本系统默认不自带 `sudo` 命令，需要使用 `root` 权限�
 或者：
 
 
-```
+```sh
 # cd /usr/ports/security/sudo/ 
 # make install clean
 ```
@@ -49,7 +53,7 @@ FreeBSD 基本系统默认不自带 `sudo` 命令，需要使用 `root` 权限�
 ```
 找到 `root ALL=(ALL:ALL) ALL` 这行，一般是在第 94 行。在这行下面加一句：
 
-```
+```sh
 你的用户名 ALL=(ALL:ALL) ALL
 ```
 然后保存退出即可。
