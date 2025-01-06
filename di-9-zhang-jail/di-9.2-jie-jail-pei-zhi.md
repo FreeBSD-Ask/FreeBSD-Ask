@@ -99,6 +99,15 @@ allow.raw_sockets=1;
 allow.sysvipc=1;
 ```
 
+配置完毕请重启 jail。
+
+- 示例：
+
+```sh
+# jail -rc test
+```
+
+
 ### 网络
 
 创建 `/etc/resolv.conf`,并编辑
@@ -176,7 +185,7 @@ Consider changing PACKAGESITE or installing it from ports: 'ports-mgmt/pkg'
 # certctl rehash
 ```
 
-重启执行 `pkg` 即可。
+重新执行 `pkg` 即可。
 
 原因未知，参见
 
