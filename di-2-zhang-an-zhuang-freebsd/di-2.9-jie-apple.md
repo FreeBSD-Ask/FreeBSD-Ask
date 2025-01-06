@@ -56,7 +56,7 @@
 
 ![Parallels Desktop 20 安装 FreeBSD 15.0](../.gitbook/assets/pd10.png)
 
-桌面正常。
+在手动安装桌面后，桌面正常。
 
 ## 故障排除
 
