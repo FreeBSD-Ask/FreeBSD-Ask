@@ -16,14 +16,17 @@
 方案二
 
 下载 `base.txz` 或者从 iso 提取 `baes.txz`，然后解压到 jail
+
 ```sh
 # tar -xvf base.txz -C /usr/jail/
 ```
+
 挂载 devfs 文件系统。(不是必须)
 
 ```sh
 # mount -t devfs devfs /usr/jail/dev
 ```
+
 ### 写入 `/etc/rc.conf`
 
 ```sh
