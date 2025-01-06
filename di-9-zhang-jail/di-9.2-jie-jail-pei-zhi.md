@@ -110,7 +110,6 @@ allow.sysvipc=1;
 # jail -rc test
 ```
 
-
 ### 网络
 
 创建 `/etc/resolv.conf`,并编辑
