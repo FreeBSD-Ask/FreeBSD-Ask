@@ -1,4 +1,4 @@
-# 第 2.9 节 安装 FreeBSD——基于 Apple M1、Parallels Desktop 20
+# 第 2.9 节 安装 FreeBSD——基于 Apple M1&Parallels Desktop 20
 
 >**注意**
 >
