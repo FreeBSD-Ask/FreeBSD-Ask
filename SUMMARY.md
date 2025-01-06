@@ -26,6 +26,7 @@
 * [第 2.6 节 SSH 相关软件推荐与 SSH 配置](di-2-zhang-an-zhuang-freebsd/di-2.6-jie-chang-yong-ruan-jian-yu-ssh-pei-zhi.md)
 * [第 2.7 节 自带文本编辑器 ee 的用法](di-2-zhang-an-zhuang-freebsd/di-2.7-jie-ee-yong-fa-ji-wang-luo-pei-zhi.md)
 * [第 2.8 节 虚拟机预安装镜像（本书自制）](di-2-zhang-an-zhuang-freebsd/di-2.8-jie-yu-an-zhuang-jing-xiang.md)
+* [第 2.9 节 安装 FreeBSD——基于 Apple M1、Parallels Desktop 20](di-2-zhang-an-zhuang-freebsd/di-2.9-jie-apple.md)
 
 ## 第 3 章 包管理器暨 FreeBSD 更新与升级
 

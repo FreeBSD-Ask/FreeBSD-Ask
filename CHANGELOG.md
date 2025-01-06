@@ -163,5 +163,6 @@
   - “序言”新增“存在即破烂（2025 代序）”
 - 2024.12.22
   - “第 2.4 节 安装 FreeBSD——基于 VMware Workstation Pro”新增“故障排除”
-- 2024.12.23
-  - 因身体原因，ykla 的贡献就此中断。
+- 2024.1.6
+  - 新增“第 2.9 节 安装 FreeBSD——基于 Apple M1、Parallels Desktop 20”
+
