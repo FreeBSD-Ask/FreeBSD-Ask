@@ -18,7 +18,7 @@
 ## 第 2 章 安装 FreeBSD
 
 * [第 2.0 节 FreeBSD 安装图解](di-2-zhang-an-zhuang-freebsd/di-2.0-jie-tu-jie-an-zhuang.md)
-* [第 2.1 节 手动安装双系统](di-2-zhang-an-zhuang-freebsd/di-2.1-jie-shuang-xi-tong-an-zhuang.md)
+* [第 2.1 节 手动安装双系统（复杂版本）](di-2-zhang-an-zhuang-freebsd/di-2.1-jie-shuang-xi-tong-an-zhuang.md)
 * [第 2.2 节 安装 FreeBSD——基于 Hyper-V](di-2-zhang-an-zhuang-freebsd/di-2.2-jie.md)
 * [第 2.3 节 安装 FreeBSD——基于 Virtual Box](di-2-zhang-an-zhuang-freebsd/di-2.3-jie-an-zhuang-freebsd-ji-yu-virtual-box.md)
 * [第 2.4 节 安装 FreeBSD——基于 VMware Workstation Pro](di-2-zhang-an-zhuang-freebsd/di-2.4-jie-an-zhuang-freebsd-ji-yu-vmware-workstation-pro.md)
@@ -27,6 +27,7 @@
 * [第 2.7 节 自带文本编辑器 ee 的用法](di-2-zhang-an-zhuang-freebsd/di-2.7-jie-ee-yong-fa-ji-wang-luo-pei-zhi.md)
 * [第 2.8 节 虚拟机预安装镜像（本书自制）](di-2-zhang-an-zhuang-freebsd/di-2.8-jie-yu-an-zhuang-jing-xiang.md)
 * [第 2.9 节 安装 FreeBSD——基于 Apple M1&Parallels Desktop 20](di-2-zhang-an-zhuang-freebsd/di-2.9-jie-apple.md)
+* [第 2.10 节 手动安装双系统（简单版本）](di-2-zhang-an-zhuang-freebsd/di-2.10.md)
 
 ## 第 3 章 包管理器暨 FreeBSD 更新与升级
 
