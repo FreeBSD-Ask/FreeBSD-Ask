@@ -243,7 +243,7 @@ rEFInd 有多款主题可选。
 
 将项目下载下来解压缩 `Matrix-rEFInd-master.zip`。将解压出的文件夹 `Matrix-rEFInd-master` 重命名为 `Matrix-rEFInd`。
 
-在新建目录 `themes`，将 `Matrix-rEFInd` 放到 `themes` 里面。
+再新建目录 `themes`，将 `Matrix-rEFInd` 放到 `themes` 里面。
 
 将 `themes` 复制到 EFI 分区的 efi 文件夹下的 `refind` 文件夹中。
 
