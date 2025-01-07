@@ -84,8 +84,6 @@ Device              Size     Used    Avail Capacity
 
 我们设置了 208G，很明显有 8G 是为 swap 创设的。现在需要将其还原。需要用到 [diskgenius](https://www.diskgenius.com/)。
 
-
-
 ![](../.gitbook/assets/shuang8.png)
 
 打开 diskgenius，压缩 C 盘，空出 8G 剩余空间。
@@ -142,6 +140,31 @@ root@ykla:/home/ykla # swapon /dev/nda0p5
 root@ykla:/home/ykla # swapinfo -mh
 Device              Size     Used    Avail Capacity
 /dev/nda0p5         8.0G       0B     8.0G     0%
+```
+
+查看 ZFS 卷：
+
+```sh
+root@ykla:/home/ykla # zpool list
+NAME    SIZE  ALLOC   FREE  CKPOINT  EXPANDSZ   FRAG    CAP  DEDUP    HEALTH  ALTROOT
+zroot  91.5G   922M  90.6G        -         -     0%     0%  1.00x    ONLINE  -
+root@ykla:/home/ykla # zfs list
+NAME                 USED  AVAIL  REFER  MOUNTPOINT
+zroot                922M  87.8G    96K  /zroot
+zroot/ROOT           919M  87.8G    96K  none
+zroot/ROOT/default   919M  87.8G   919M  /
+zroot/home           224K  87.8G    96K  /home
+zroot/home/ykla      128K  87.8G   128K  /home/ykla
+zroot/tmp            104K  87.8G   104K  /tmp
+zroot/usr            288K  87.8G    96K  /usr
+zroot/usr/ports       96K  87.8G    96K  /usr/ports
+zroot/usr/src         96K  87.8G    96K  /usr/src
+zroot/var            668K  87.8G    96K  /var
+zroot/var/audit       96K  87.8G    96K  /var/audit
+zroot/var/crash       96K  87.8G    96K  /var/crash
+zroot/var/log        188K  87.8G   188K  /var/log
+zroot/var/mail        96K  87.8G    96K  /var/mail
+zroot/var/tmp         96K  87.8G    96K  /var/tmp
 ```
 
 ## 配置 rEFInd
