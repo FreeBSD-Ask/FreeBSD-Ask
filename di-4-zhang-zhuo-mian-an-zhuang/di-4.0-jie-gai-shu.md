@@ -14,7 +14,7 @@ GhostBSD 适合对 BSD 好奇的人体验。本质上还是 FreeBSD 的预配置
 
 安装桌面的基本步骤是：① 安装显卡驱动 -> ② 安装 Xorg -> ③ 安装 KDE5/Gnome/XFCE/MATE -> ④ 安装显示管理器 sddm/lightdm -> ⑤ 安装输入法等软件
 
-Wayland 是 xorg 的替代品，但是目前 BSD 上支持 Wayland 的桌面数量为 0，仅有一些窗口管理器是支持的。
+Wayland 是 xorg 的替代品，但是目前 BSD 上的 Wayland 支持欠佳。
 
 其中，Gnome 可省略第四步，因为其显示管理器 gdm 早就在第二步就进行了自动安装。
 
