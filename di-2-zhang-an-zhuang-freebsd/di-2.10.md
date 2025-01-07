@@ -232,3 +232,23 @@ zroot/var/tmp         96K  87.8G    96K  /var/tmp
 
 
 两个选项都能进入。
+
+### 主题美化（可选）
+
+rEFInd 有多款主题可选。
+
+本例采用 Matrix-rEFInd 进行说明。
+
+项目地址：[Matrix-rEFInd](https://github.com/Yannis4444/Matrix-rEFInd/)
+
+将项目下载下来解压缩 `Matrix-rEFInd-master.zip`。将解压出的文件夹 `Matrix-rEFInd-master` 重命名为 `Matrix-rEFInd`。
+
+在新建目录 `themes`，将 `Matrix-rEFInd` 放到 `themes` 里面。
+
+将 `themes` 复制到 EFI 分区的 efi 文件夹下的 `refind` 文件夹中。
+
+再编辑 `refind.conf`（无法直接编辑可先复制到桌面，编辑后再覆盖回去），在此文件的最后一行加入 `include themes/Matrix-rEFInd/theme.conf`。
+
+重启：
+
+![](../.gitbook/assets/shuang18.png)
