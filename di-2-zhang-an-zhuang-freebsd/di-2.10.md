@@ -19,7 +19,7 @@
 
 ![](../.gitbook/assets/shuang3.png)
 
-在这一步修改 `S Swap Size` 的大小（计算方法为 swap大小+Windows 大小）。
+在这一步修改 `S Swap Size` 的大小（计算方法为 swap 大小 + Windows 大小）。
 
 本文中，交换分区（Swap）占 8G，其他的 200G 留给 Windows。
 
