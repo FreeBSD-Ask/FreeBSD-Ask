@@ -93,7 +93,7 @@ Device              Size     Used    Avail Capacity
 ![](../.gitbook/assets/shuang9.png)
 
 
-将其格式化为 `FreeBSD Swap partition`,然后点击“保存更改”。
+将这 8G 剩余空间格式化为 `FreeBSD Swap partition`，然后点击“保存更改”。
 
 ![](../.gitbook/assets/shuang10.png)
 
