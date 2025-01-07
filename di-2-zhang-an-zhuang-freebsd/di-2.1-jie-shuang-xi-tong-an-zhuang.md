@@ -2,6 +2,10 @@
 
 本节以“FreeBSD-14.0-RELEASE-amd64-disc1.iso”为例，在 `Hyper-V` 中演示 FreeBSD 14.0 RELEASE 与 Windows 11 在 UEFI 环境下的双系统安装。
 
+>**技巧**
+>
+>本文示例要求先安装其他操作系统，再安装 FreeBSD。
+
 ## 简单方法
 
 > **注意**
