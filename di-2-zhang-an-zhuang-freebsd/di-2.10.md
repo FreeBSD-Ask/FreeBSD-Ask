@@ -2,7 +2,7 @@
 
 >**注意**
 >
->本文要求先安装 FreeBSD，再安装 Windows。
+>本文要求先安装 FreeBSD，再安装 Windows 或其他操作系统。
 
 ## 安装 FreeBSD 14.2 RELEASE
 
