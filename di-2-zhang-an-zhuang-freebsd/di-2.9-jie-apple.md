@@ -32,6 +32,10 @@
 
 选中 FreeBSD 镜像。
 
+>**警告**
+>
+>本文基于 Apple M1，故你选择的 FreeBSD 架构应该是 aarch64！
+
 ![Parallels Desktop 20 安装 FreeBSD 15.0](../.gitbook/assets/pd5.png)
 
 会提示“无法检测操作系统”，不用管，点击“继续”即可。
