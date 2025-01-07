@@ -251,4 +251,4 @@ rEFInd 有多款主题可选。
 
 重启：
 
-![](../.gitbook/assets/shuang18.png)
+![](../.gitbook/assets/shuang18.jpg)
