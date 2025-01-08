@@ -58,6 +58,8 @@ proc           /proc       procfs  rw  0   0
 
 ![FreeBSD 安装 Budgie](../.gitbook/assets/budgie2.png)
 
+图中壁纸为默认。
+
 ## 中文环境
 
 在 `/etc/rc.conf` 下加入：
