@@ -58,7 +58,7 @@ proc           /proc       procfs  rw  0   0
 
 ![FreeBSD 安装 Budgie](../.gitbook/assets/budgie2.png)
 
-图中壁纸为默认。
+图中壁纸为默认。拍摄地为新加坡滨海湾区。
 
 ## 中文环境
 
