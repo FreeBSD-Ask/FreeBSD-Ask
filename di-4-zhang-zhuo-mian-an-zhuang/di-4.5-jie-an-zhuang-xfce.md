@@ -51,6 +51,14 @@
 ```sh
 export LANG=zh_CN.UTF-8
 ```
+
+
+![FreeBSD 安装 Xfce](../.gitbook/assets/xfce1.png)
+
+![FreeBSD 安装 Xfce](../.gitbook/assets/xfce2.png)
+
+![FreeBSD 安装 Xfce](../.gitbook/assets/xfce3.png)
+
 ### lightdm 登陆管理器本地化语言
 
 #### 方法①
