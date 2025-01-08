@@ -24,7 +24,7 @@
 编辑 `~/.xinitrc`，加入：
 
 ```sh
-exec exec wmaker
+exec wmaker
 ```
 
 ### 参考文献
