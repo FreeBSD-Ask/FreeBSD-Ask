@@ -165,7 +165,7 @@
   - “第 2.4 节 安装 FreeBSD——基于 VMware Workstation Pro”新增“故障排除”
 - 2025.1.6
   - 新增“第 2.9 节 安装 FreeBSD——基于 Apple M1&Parallels Desktop 20”
-  - 新增“第 2.10 节 手动安装双系统（简单版本）”
+  - 新增“第 2.10 节 手动安装双系统（先安装 FreeBSD）”
   - “第 2.9 节 安装 FreeBSD——基于 Apple M1&Parallels Desktop 20”新增“虚拟机工具”
 - 2025.1.8
   - “第 4.0 节 概述（必看）”合并入 4.1 节。
