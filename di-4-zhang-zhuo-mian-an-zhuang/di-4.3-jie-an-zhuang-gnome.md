@@ -25,7 +25,7 @@
 |    noto-sc    |     思源黑体——简体中文     |
 | xdg-user-dirs | 用于创建用户家目录的子目录 |
 
-> **精简安装（如果不嫌麻烦）**
+> **精简安装**
 >
 > ```sh
 > # pkg install xorg-minimal gnome-lite wqy-fonts xdg-user-dirs
@@ -43,6 +43,8 @@
 > ```sh
 > # pkg delete gnome-2048 gnome-klotski gnome-tetravex gnome-mines gnome-taquin gnome-sudoku gnome-robots gnome-nibbles lightsoff tali quadrapassel swell-foop gnome-mahjongg five-or-more iagno aisleriot four-in-a-row
 > ```
+>
+>![Gnome 精简安装](../.gitbook/assets/gnome-lite.png)
 
 ## 配置
 
@@ -68,6 +70,15 @@ proc /proc procfs rw 0 0
 ```sh
 $ echo "/usr/local/bin/gnome-session" > ~/.xinitrc
 ```
+
+![FreeBSD Gnome](../.gitbook/assets/gnome1.png)
+
+默认是禁止 root 登录的。
+
+![FreeBSD Gnome](../.gitbook/assets/gnome2.png)
+
+默认壁纸就是这样。
+
 
 ## 中文化
 
@@ -226,3 +237,37 @@ setenv LC_ALL zh_CN.UTF-8
 # cd /usr/ports/deskutils/gnome-tweaks/ 
 # make install clean
 ```
+
+## 一些反人类设置的调整
+
+GNOME 一直以反人类著称：桌面不让放图标、右上角没托盘等等。
+
+### 恢复 GNOME 顶栏的托盘图标
+
+由于 [TopIcons Plus](https://extensions.gnome.org/extension/1031/topicons/) 已经长期不更新了，所以只能用 [AppIndicator and KStatusNotifierItem Support](https://extensions.gnome.org/extension/615/appindicator-support/) 了。
+
+![Gnome 恢复 GNOME 顶栏的托盘图标](../.gitbook/assets/gnome3.png)
+
+![Gnome 恢复 GNOME 顶栏的托盘图标](../.gitbook/assets/gnome4.png)
+
+![Gnome 恢复 GNOME 顶栏的托盘图标](../.gitbook/assets/gnome5.png)
+
+![Gnome 恢复 GNOME 顶栏的托盘图标](../.gitbook/assets/gnome6.png)
+
+![Gnome 恢复 GNOME 顶栏的托盘图标](../.gitbook/assets/gnome7.png)
+
+![Gnome 恢复 GNOME 顶栏的托盘图标](../.gitbook/assets/gnome8.png)
+
+#### 参考文献
+
+- [恢复 GNOME 顶栏的托盘图标](https://linux.cn/article-13785-1.html)
+
+### 在桌面放图标
+
+扩展 [gnome-shell-extension-desktop-icons](https://extensions.gnome.org/extension/1465/desktop-icons/)已经长期未更新，项目地址：[Desktop Icons](https://gitlab.gnome.org/World/ShellExtensions/desktop-icons)。
+
+可以用 [Desktop Icons NG (DING) ](https://extensions.gnome.org/extension/2087/desktop-icons-ng-ding/)解决。安装方式同上。
+
+![Gnome 在桌面放图标](../.gitbook/assets/gnome9.png)
+
+壁纸是我自己设置的。火狐也是我自己放的。其他是默认的。
