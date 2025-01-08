@@ -56,7 +56,7 @@
 * [第 4.11 节 主题与美化](di-4-zhang-zhuo-mian-an-zhuang/di-4.11-jie-zhu-ti-yu-mei-hua.md)
 * [第 4.12 节 远程桌面管理](di-4-zhang-zhuo-mian-an-zhuang/di-4.12-jie-yuan-cheng-zhuo-mian-guan-li.md)
 * [第 4.13 节 安装 KDE6](di-4-zhang-zhuo-mian-an-zhuang/di-4.13.md)
-* [第 4.14 节 安装 Pantheon](di-4-zhang-zhuo-mian-an-zhuang/di-4.14-jie-an-zhuang-pantheon.md)
+* [第 4.14 节 安装 Budgie](di-4-zhang-zhuo-mian-an-zhuang/di-4.14-jie-an-zhuang-budgie.md)
 * [第 4.15 节 安装 i3wm](di-4-zhang-zhuo-mian-an-zhuang/di-4.15-jie-an-zhuang-i3wm.md)
 * [第 4.16 节 安装 CDE](di-4-zhang-zhuo-mian-an-zhuang/di-4.16-jie-an-zhuang-cde.md)
 * [第 4.17 节 安装 Hyprland](di-4-zhang-zhuo-mian-an-zhuang/di-4.17-jie-an-zhuang-hyprland.md)
