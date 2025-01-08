@@ -193,26 +193,12 @@ export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
 ```
 
-提示：如果要显示 `fcitx` 输入法面板，需要安装 gnome 插件 `TopIconsFix`,请勿安装 `AppIndicator and KStatusNotifierItem Support`，已知该插件与 `fcitx5` 相冲突，会造成输入法卡死。
-
-该插件需要通过火狐浏览器进行安装：
-
-```sh
-# pkg install firefox chrome-gnome-shell
-```
-
-或者：
-
-```sh
-# cd /usr/ports/www/firefox/ && make install clean
-# cd /usr/ports/www/chrome-gnome-shell/ && make install clean
-```
-
-打开链接 <https://extensions.gnome.org/extension/1674/topiconsfix/> 即可安装插件。
 
 ### 终端显示中文（文件用户根目录）
 
-> 此处对用户 shell 存疑。
+>**注意**
+>
+>此处内容对 FreeBSD 14 以下有效。
 
 ```sh
 # ee ~/.cshrc
