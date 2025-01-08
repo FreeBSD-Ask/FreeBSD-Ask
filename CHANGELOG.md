@@ -179,3 +179,4 @@
   - "第 4.7 节 安装 Lumina"补图
   - 新增"第 4.21 节 安装 LXDE"
   - 新增“第 4.22 节 安装 Window Maker”
+  - "第 19.2 节 Linux 败局与 FreeBSD 败局"新增“为何不能选择 Linux 桌面操作系统？”
