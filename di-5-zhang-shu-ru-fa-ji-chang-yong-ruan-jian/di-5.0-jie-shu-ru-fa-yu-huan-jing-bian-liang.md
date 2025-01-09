@@ -1,8 +1,7 @@
 # 第 5.0 节 输入法与环境变量
 
-## 说明
 
-方法：在**可生效配置文件**中写入配置内容
+方法：在 **可生效配置文件** 中写入配置内容
 
 ## 配置内容
 
@@ -10,7 +9,7 @@
 
 先 A 组
 
-sh/bash/zsh:fcitx5
+sh/bash/zsh：fcitx5
 
 ```sh
 export LANG=zh_CN.UTF-8
@@ -22,7 +21,7 @@ export GTK_IM_MODULE=fcitx/xim
 export QT_IM_MODULE=fcitx
 ```
 
-sh/bash/zsh:ibus
+sh/bash/zsh：ibus
 
 ```sh
 export LANG=zh_CN.UTF-8
@@ -39,7 +38,7 @@ export XIM_ARGS="--daemonize --xim"
 
 B 组
 
-csh:fcitx5
+csh：fcitx5
 
 ```sh
 setenv LANG zh_CN.UTF-8
@@ -50,7 +49,7 @@ setenv GTK_IM_MODULE fcitx/xim
 setenv QT_IM_MODULE fcitx
 ```
 
-csh:ibus
+csh：ibus
 
 ```sh
 setenv LANG zh_CN.UTF-8
@@ -96,15 +95,15 @@ setenv XIM_ARGS "--daemonize --xim"
 - `LC_MEASUREMENT`: 定义度量单位的格式。
 - `LC_IDENTIFICATION`: 定义文件特征的格式。
 
-特殊的
+特殊的：
 
 - `LC_ALL`: 通过设置该变量，可以同时覆盖所有其他 `LC_*` 变量的值。
 - `LANG`: 用于设置默认的语言和字符集。它通常用于在没有其他 `LC_*` 变量设置时提供区域设置信息。如果同时设置了 `LANG` 和 `LC_*` 变量，`LC_*` 变量将覆盖 `LANG` 变量中相应的设置。
-- `LANGUAGE`: 用于设置当前系统的语言环境，它影响了许多程序的行为，如日期格式、数字格式、字符编码等。具体地说，这个环境变量通常会被一些程序自动读取，并根据其值来确定应该使用哪种语言和本地化设置。如果未设置该变量，则程序可能会使用默认的系统语言环境或其他环境变量（如`LC_ALL`、`LC_MESSAGES`等）来确定语言环境。
+- `LANGUAGE`: 用于设置当前系统的语言环境，它影响了许多程序的行为，如日期格式、数字格式、字符编码等。具体地说，这个环境变量通常会被一些程序自动读取，并根据其值来确定应该使用哪种语言和本地化设置。如果未设置该变量，则程序可能会使用默认的系统语言环境或其他环境变量（如 `LC_ALL`、`LC_MESSAGES` 等）来确定语言环境。
 
 使用这些变量，用户可以轻松地调整操作系统的语言和本地化设置以适应不同的地域和语言环境。
 
-可以使用 `locale` 命令确定以上变量的当前值,如：
+可以使用 `locale` 命令确定以上变量的当前值，如：
 
 ```sh
 jk@freebsd:~ $ locale
@@ -120,13 +119,13 @@ LC_ALL=
 
 所以中文化其实也可以不同。
 
-1. 单纯的界面中文化只要设置`LC_MESSAGES`为`"zh_CN.UTF-8"`(在 sddm/xfce 下验证)。
-2. 较常见的将 `LANG`,`LC_ALL`,`LANGUAGE` 三个环境变量都设为`"zh_CN.UTF-8"`
+1. 单纯的界面中文化只要设置 `LC_MESSAGES` 为 `"zh_CN.UTF-8"`（在 sddm/xfce 下验证）。
+2. 较常见的将 `LANG`、`LC_ALL`、`LANGUAGE` 三个环境变量都设为 `"zh_CN.UTF-8"`。
 3. 纯英文环境，加上中文输入。
 
-为什么要将 `LANG`,`LC_ALL`,`LANGUAGE` 三个环境变量都设为`"zh_CN.UTF-8"`，主要是开发人员在写程序的时候各自用了不同的变量，为了更大的适应性，就全进行设置
+为什么要将 `LANG`、`LC_ALL`、`LANGUAGE` 三个环境变量都设为 `"zh_CN.UTF-8"`，主要是开发人员在写程序的时候各自用了不同的变量，为了更大的适应性，就全进行设置
 
-第一种设置只影响界面，提示等，但对其他的格式输出等没有响影（参考 `LC_*` 系列变量概述）。如(sh 中)
+第一种设置只影响界面、提示等，但对其他的格式输出等没有响影（参考 `LC_*` 系列变量概述）如（sh）。
 
 ```sh
 jk@freebsd:~ $ locale
@@ -145,17 +144,19 @@ jk@freebsd:~ $ date
 2023年 4月21日 星期五 21时15分07秒 UTC
 ```
 
-默认情况 `LC_TIME` 环境变量值为 `C.UTF-8`,`date`命令输出`Fri Apr 21 21:14:43 UTC 2023`。`LC_TIME` 环境变量值设置为 `zh_CN.UTF-8`,`date`命令输出`2023年 4月21日 星期五 21时15分07秒 UTC`。维持`date`命令的英文输出对一些脚本编写者有时很重要（这只是一种情况，还有其它特殊的需求等）。这样的情况也存在于其它一样`LC_*`变量控制的信息中。
+默认情况 `LC_TIME` 环境变量值为 `C.UTF-8`,`date` 命令输出 `Fri Apr 21 21:14:43 UTC 2023`。`LC_TIME` 环境变量值设置为 `zh_CN.UTF-8`,`date` 命令输出 `2023年 4月21日 星期五 21时15分07秒 UTC`。维持 `date` 命令的英文输出对一些脚本编写者有时很重要（这只是一种情况，还有其它特殊的需求等）。这样的情况也存在于其它一样 `LC_*` 变量控制的信息中。
 
 ## 时区设置
 
 每个用户可以设置自己的时区，在用户的 shell 配置文件中设置 `TZ` 变量即可
 
 ```sh
-export TZ=CST-8  # sh,bash,zsh
+export TZ=CST-8  # sh、bash、zsh
 # 或
 export TZ=Asia/Shanghai
+```
 
+```sh
 setenv TZ CST-8  # csh
 # 或
 setenv TZ "Asia/Shanghai"
@@ -168,9 +169,7 @@ CRON_TZ=CST-8
 0 8 * * * date >> ~/date.log
 ```
 
-## 输入法
-
-## Shell 脚本
+## 安装输入法的 Shell 脚本
 
 用户可以通过脚本快速安装：
 
