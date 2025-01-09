@@ -71,8 +71,9 @@ To start the Common Desktop Enviroment Login Manager:
 # sysrc rpcbind_enable="YES"
 # sysrc dtcms_enable="YES"
 # sysrc inetd_enable=yes
-# ln -s /usr/local/dt/bin/Xsession ~/.xinitrc
-# startx
+# sysrc dtlogin_enable=yes
+# echo "allowed_users=anybody" > /usr/local/etc/X11/Xwrapper.config
+# ln -s /usr/local/dt/bin/Xsession ~/.xinitrc # 为了 startx
 ```
 	
 将以下内容添加到 `/etc/inetd.conf`：
@@ -109,6 +110,9 @@ dtspc		6112/tcp
 
 ## 图片
 
+
+![dtlogin](../.gitbook/assets/cde2.png)
+
 ![FreeBSD 安装 CDE](../.gitbook/assets/cde4.png)
 
 每次启动时都会在这里卡上几分钟。
@@ -121,11 +125,7 @@ dtspc		6112/tcp
 
 - 无法中文化（似乎日历是中文）
 
-待解决
 
-- 从自带登录管理器进入鼠标动不了，`startx` 正常
-
-![从自带登录管理器进入鼠标动不了](../.gitbook/assets/cde2.png)
 
 待解决
 
@@ -134,3 +134,4 @@ dtspc		6112/tcp
 
 - [cde Common Desktop Environment](https://www.freshports.org/x11/cde)
 - [Setting up Common Desktop Environment for modern use](https://forums.freebsd.org/threads/setting-up-common-desktop-environment-for-modern-use.69475/)，详细配置可参考此处
+- [CDE - Common Desktop Environment Wiki](https://sourceforge.net/p/cdesktopenv/wiki/FreeBSDBuild/)，CDE 项目官方 WiKi
