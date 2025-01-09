@@ -88,13 +88,6 @@ dtspc	stream	tcp	nowait	root	 /usr/local/dt/bin/dtspcd	/usr/local/dt/bin/dtspcd
 dtspc		6112/tcp
 ```
 
-登录管理器配置：
-
-`/etc/rc.local` 加入：
-
-```sh
-/usr/local/dt/bin/dtlogin -l zh_CN.UTF-8
-```
 
 ### 中文配置
 
@@ -124,8 +117,6 @@ dtspc		6112/tcp
 ## 故障排除
 
 - 无法中文化（似乎日历是中文）
-
-
 
 待解决
 
