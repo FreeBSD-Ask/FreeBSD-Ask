@@ -9,7 +9,6 @@
 
 - [001-WIndows11 安装 VMware17](https://www.bilibili.com/video/BV1Qji2YLEgS)
 
-
 ## 镜像下载
 
 >**提示**
@@ -30,8 +29,6 @@
 ### 参考文献
 
 - [[经验] 上直链！！ VMWare Workstation Pro 免费给个人用了](https://hostloc.com/thread-1306968-1-1.html)
-
-
 
 ### 参考文献
 
@@ -151,10 +148,7 @@
 如果没有网络请设置 DNS 为`223.5.5.5`。请看本章其余章节。
 
 
-
-## 显卡驱动以及虚拟机增强工具
-
-### 虚拟机增强工具与显卡驱动
+## 虚拟机增强工具与显卡驱动
 
 安装显卡驱动和虚拟机增强工具，即：
 
@@ -171,6 +165,14 @@
 # cd /usr/ports/emulators/open-vm-kmod/ && make install clean
 ```
 
+>**注意**
+>
+>若你不使用桌面还可以这样（仍然是 Port `emulators/open-vm-tools`）：
+>
+>```sh
+># pkg install open-vm-tools-nox11
+>```
+
 安装完毕后无需任何多余配置即可实现屏幕自动缩放。
 
 >**注意**
@@ -184,8 +186,9 @@
 
 ### 鼠标集成（主机虚拟机鼠标自由切换）
 
+请先安装显卡驱动和虚拟机增强工具。
+
 ```sh
-# pkg install xf86-video-vmware xf86-input-vmmouse open-vm-tools open-vm-kmod
 # sysrc moused_enable=YES
 # Xorg -configure
 # mv /root/xorg.conf.new /usr/local/share/X11/xorg.conf.d/xorg.conf
@@ -214,8 +217,6 @@ EndSection
 
 …………此处省略一部分…………
 ```
-
-
 
 ### 共享文件夹
 
