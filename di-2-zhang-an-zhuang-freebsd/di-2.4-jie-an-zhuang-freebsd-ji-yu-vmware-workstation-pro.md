@@ -239,35 +239,71 @@ EndSection
 # make install clean
 ```
 
-具体配置
-
-编辑 `/boot/loader.conf`
-
-写入
-
-```sh
-fusefs_load="YES"
-```
 
 ### 共享文件夹
 
 请先安装虚拟机增强工具。
 
+在物理机设置共享文件夹：
+
+![FreeBSD VMware 共享文件夹](../.gitbook/assets/hgfs1.png)
+
+![FreeBSD VMware 共享文件夹](../.gitbook/assets/hgfs2.png)
+
+先看看设置的文件夹：
+
 ```sh
-# vmhgfs-fuse .host:/selfsharefold /mnt/hgfs
+root@ykla:/home/ykla # vmware-hgfsclient
+123pan
 ```
 
-查看共享文件夹
+加载 fuse，将下文写入 `/boot/loader.conf`：
 
 ```sh
-# ls /mnt/hgfs
+fusefs_load="YES"
 ```
+
+手动挂载（请将 `123pan` 换成你自己的路径）:
+
+```sh
+# vmhgfs-fuse .host:/123pan /mnt/hgfs
+```
+
+自动挂载：
+
+编辑 `/etc/fstab/`（请将 `123pan` 换成你自己的路径）：写入：
+
+```sh
+.host:/123pan      /mnt/hgfs    fusefs  rw,mountprog=/usr/local/bin/vmhgfs-fuse,allow_other,failok 0
+```
+
+检查：
+
+```sh
+# mount -al #若无输出则正常
+```
+
+查看共享文件夹：
+
+```sh
+root@ykla:/home/ykla # ls /mnt/hgfs/
+Downloads
+root@ykla:/home/ykla # ls /mnt/hgfs/Downloads/
+零跑
+```
+
+#### 参考文献
+
+- [解决vmware上Ubuntu共享文件夹（2022年7月）](https://www.cnblogs.com/MaRcOGO/p/16463460.html)，整体方法参考此处
+- [fuse: failed to open fuse device](https://forums.freebsd.org/threads/fuse-failed-to-open-fuse-device.44544/)，解决 `fuse: failed to open fuse device: No such file or directory` 的问题
+- [VMware shared folders](https://forums.freebsd.org/threads/vmware-shared-folders.10318/)，挂载方法参考此处
+
+
+## 故障排除
 
 > **注意**
 >
 > 在使用 Windows 远程桌面或者其他 XRDP 工具远程另一台 Windows 桌面，并使用其上面运行的 VMware 虚拟机操作 FreeBSD 时，鼠标通常会变得难以控制。这是正常的！
-
-## 故障排除
 
 - 每次进入图形界面，窗口都会异常扩大。
 
@@ -277,7 +313,11 @@ fusefs_load="YES"
 
 硬件——显示——监视器——任意监视器的最大分辨率(M)，将其由默认最大的 `2560 x 1600`（2K） 改成其他较小值即可，亦可自定义数值。
 
-## 附：博通（broadcom）账号相关
+- 没有声音
+
+加载声卡后若仍然没有声音，请将音量拉满到 100% 再看一下。因为默认声音几乎微不可闻。
+
+## 附录：博通（broadcom）账号相关
 
 ### 博通（broadcom）账号注册
 
