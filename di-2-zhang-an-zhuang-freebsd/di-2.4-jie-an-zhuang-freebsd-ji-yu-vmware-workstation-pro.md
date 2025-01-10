@@ -252,8 +252,6 @@ EndSection
 >
 >不必疑惑虚拟机的名字是 Windows 11，因为这是 Windows11 和 BSD 双系统虚拟机。
 
-![FreeBSD VMware 共享文件夹](../.gitbook/assets/hgfs2.png)
-
 先看看设置的文件夹：
 
 ```sh
@@ -295,6 +293,10 @@ Downloads
 root@ykla:/home/ykla # ls /mnt/hgfs/Downloads/
 零跑
 ```
+
+![FreeBSD VMware 共享文件夹](../.gitbook/assets/hgfs2.png)
+
+文件符合。
 
 #### 参考文献
 
