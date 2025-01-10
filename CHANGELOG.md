@@ -182,3 +182,5 @@
   - "第 19.2 节 Linux 败局与 FreeBSD 败局"新增“为何不能选择 Linux 桌面操作系统？”
 - 2025.1.9
   - “第 4.16 节 安装 CDE”补图
+- 2025.1.10
+  - “第 2.4 节 安装 FreeBSD——基于 VMware Workstation Pro”重写“共享文件夹”
