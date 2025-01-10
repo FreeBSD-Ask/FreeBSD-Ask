@@ -313,6 +313,10 @@ root@ykla:/home/ykla # ls /mnt/hgfs/Downloads/
 
 加载声卡后若仍然没有声音，请将音量拉满到 100% 再看一下。因为默认声音几乎微不可闻。
 
+- 只能按比例缩放，不能自由缩放拉抻
+
+疑似 Bug，待解决
+
 ## 附录：博通（broadcom）账号相关
 
 ### 博通（broadcom）账号注册
