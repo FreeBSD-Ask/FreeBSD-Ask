@@ -248,6 +248,10 @@ EndSection
 
 ![FreeBSD VMware 共享文件夹](../.gitbook/assets/hgfs1.png)
 
+>**注意**
+>
+>不必疑惑虚拟机的名字是 Windows 11，因为这是 Windows11 和 BSD 双系统虚拟机。
+
 ![FreeBSD VMware 共享文件夹](../.gitbook/assets/hgfs2.png)
 
 先看看设置的文件夹：
