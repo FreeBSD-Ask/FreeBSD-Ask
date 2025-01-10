@@ -154,23 +154,21 @@
 
 ## 显卡驱动以及虚拟机增强工具
 
-### 显卡驱动
+### 虚拟机增强工具与显卡驱动
 
-VMware 自动缩放屏幕请安装显卡驱动和虚拟机增强工具，即：
+安装显卡驱动和虚拟机增强工具，即：
 
 ```sh
-# pkg install xf86-video-vmware open-vm-tools xf86-input-vmmouse
+# pkg install xf86-video-vmware open-vm-tools xf86-input-vmmouse open-vm-kmod
 ```
 
 或者
 
 ```
-# cd /usr/ports/x11-drivers/xf86-video-vmware/ 
-# make install clean
-# cd /usr/ports/emulators/open-vm-tools/
-# make install clean
-# cd /usr/ports/x11-drivers/xf86-input-vmmouse/
-# make install clean
+# cd /usr/ports/x11-drivers/xf86-video-vmware/  && make install clean
+# cd /usr/ports/emulators/open-vm-tools/ && make install clean
+# cd /usr/ports/x11-drivers/xf86-input-vmmouse/  && make install clean
+# cd /usr/ports/emulators/open-vm-kmod/ && make install clean
 ```
 
 安装完毕后无需任何多余配置即可实现屏幕自动缩放。
@@ -187,7 +185,7 @@ VMware 自动缩放屏幕请安装显卡驱动和虚拟机增强工具，即：
 ### 鼠标集成（主机虚拟机鼠标自由切换）
 
 ```sh
-# pkg install xf86-video-vmware xf86-input-vmmouse open-vm-tools
+# pkg install xf86-video-vmware xf86-input-vmmouse open-vm-tools open-vm-kmod
 # sysrc moused_enable=YES
 # Xorg -configure
 # mv /root/xorg.conf.new /usr/local/share/X11/xorg.conf.d/xorg.conf
@@ -217,27 +215,6 @@ EndSection
 …………此处省略一部分…………
 ```
 
-
-### 虚拟机增强工具
-
-如果有桌面
-
-```sh
-# pkg install open-vm-tools xf86-input-vmmouse
-```
-
-如果没有桌面：
-
-```sh
-# pkg install open-vm-tools-nox11
-```
-
-或者 
-
-```
-# cd /usr/ports/emulators/open-vm-tools/
-# make install clean
-```
 
 
 ### 共享文件夹
