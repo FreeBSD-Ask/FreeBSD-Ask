@@ -244,7 +244,7 @@ EndSection
 
 请先安装虚拟机增强工具。
 
-在物理机设置共享文件夹：
+#### 在物理机设置共享文件夹
 
 ![FreeBSD VMware 共享文件夹](../.gitbook/assets/hgfs1.png)
 
@@ -252,12 +252,14 @@ EndSection
 >
 >不必疑惑虚拟机的名字是 Windows 11，因为这是 Windows11 和 BSD 双系统虚拟机。
 
-先看看设置的文件夹：
+在 FreeBSD 虚拟机中查看设置的文件夹：
 
 ```sh
 root@ykla:/home/ykla # vmware-hgfsclient
 123pan
 ```
+
+#### 加载 fuse 模块
 
 加载 fuse，将下文写入 `/boot/loader.conf`：
 
@@ -265,27 +267,37 @@ root@ykla:/home/ykla # vmware-hgfsclient
 fusefs_load="YES"
 ```
 
-手动挂载（请将 `123pan` 换成你自己的路径）:
+#### 挂载
+
+##### 手动挂载
+
+>**注意**
+>
+>请将 `123pan` 换成你自己的路径。
 
 ```sh
 # vmhgfs-fuse .host:/123pan /mnt/hgfs
 ```
 
-自动挂载：
+##### 自动挂载
 
-编辑 `/etc/fstab/`（请将 `123pan` 换成你自己的路径）：写入：
+编辑 `/etc/fstab/`：写入：
+
+>**注意**
+>
+>请将 `123pan` 换成你自己的路径。
 
 ```sh
 .host:/123pan      /mnt/hgfs    fusefs  rw,mountprog=/usr/local/bin/vmhgfs-fuse,allow_other,failok 0
 ```
 
-检查：
+检查（请务必执行，否则若写错了会卡在开机处）：
 
 ```sh
-# mount -al #若无输出则正常
+# mount -al # 若无输出则正常
 ```
 
-查看共享文件夹：
+#### 查看共享文件夹
 
 ```sh
 root@ykla:/home/ykla # ls /mnt/hgfs/
