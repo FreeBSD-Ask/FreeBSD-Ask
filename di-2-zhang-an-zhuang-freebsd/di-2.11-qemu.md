@@ -64,7 +64,7 @@ RISC-V FreeBSD 磁盘镜像（以 FreeBSD 14.2 RELEASE 为例）：
 # make install clean
 ```
 
-查看位置：
+查看 `u-boot` 位置：
 
 ```sh
 # /etc/periodic/weekly/310.locate # 刷新数据库
