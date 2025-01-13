@@ -120,7 +120,7 @@ cd /d "C:\Program Files\qemu"
 
 但是该镜像默认未配置 ssh 与普通用户，直接 ssh 是无法连接的。
 
-先创建一个普通用户：
+先创建一个普通用户（注意加入 wheel 组）：
 
 ```sh
 root@freebsd:~ # adduser 
@@ -128,7 +128,7 @@ Username: ykla
 Full name:
 Uid (Leave empty for default):
 Login group [ykla]:
-Login group is ykla. Invite ykla into other groups? []: wheel
+Login group is ykla. Invite ykla into other groups? []: wheel  # 请在此处输入 wheel，否则无法 su
 Login class [default]:
 Shell (sh csh tcsh nologin) [sh]:
 Home directory [/home/ykla]:
