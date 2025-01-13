@@ -113,6 +113,8 @@ cd /d "C:\Program Files\qemu"
 
 ![Qemu 安装 FreeBSD](../.gitbook/assets/qemu1.png)
 
+输入用户名 `root` 回车即可，默认没有密码。
+
 ## 故障排除
 
 - 图形化无法显示
