@@ -310,10 +310,6 @@ FreeBSD 从入门到跑路诞生于 2021 年 12 月 19 日。
 
 QQ 群：787969044（须答题验证）
 
-微信公众号: rpicn2025 （手机扫码关注）
-
-![](./.gitbook/assets/qr.png)
-
 Telegram 群组：[https://t.me/oh_my_BSD](https://t.me/oh_my_BSD)
 
 Skype: [https://join.skype.com/xktkQtXZopfv](https://join.skype.com/xktkQtXZopfv)
