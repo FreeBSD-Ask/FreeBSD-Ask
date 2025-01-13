@@ -11,9 +11,6 @@
 > 如果是 `sh`、`bash`、`zsh` 其中之一，请继续；
 
 
-![cinnamon on FreeBSD](../.gitbook/assets/cinnamon.png) 
-
-**壁纸就是黑色的，不是哪出了问题。**
 
 ## 安装
 
@@ -45,6 +42,8 @@
 exec cinnamon-session
 ```
 
+然后
+
 ```sh
 # ee /etc/fstab
 ```
@@ -66,7 +65,7 @@ proc /proc procfs rw 0 0
 
 编辑 `/etc/login.conf`：
 
-找到 `default:\` 这一段，把 `:lang=C.UTF-8` 修改为 `:lang=zh_CN.UTF-8`。
+找到 `default:\` 这一段（写作时为第 24 行），把 `:lang=C.UTF-8` 修改为 `:lang=zh_CN.UTF-8`。
 
 刷新数据库：
 
@@ -74,3 +73,13 @@ proc /proc procfs rw 0 0
 # cap_mkdb /etc/login.conf
 ```
 
+
+![cinnamon on FreeBSD](../.gitbook/assets/cinnamon1.png) 
+
+![cinnamon on FreeBSD](../.gitbook/assets/cinnamon2.png) 
+
+壁纸就是黑色的，不是哪儿出了问题。
+
+![cinnamon on FreeBSD](../.gitbook/assets/cinnamon3.png) 
+
+自定义壁纸。

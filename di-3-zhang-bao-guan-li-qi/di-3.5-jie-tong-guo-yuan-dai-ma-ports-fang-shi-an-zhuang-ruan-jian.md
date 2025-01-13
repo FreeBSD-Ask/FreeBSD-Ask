@@ -358,13 +358,34 @@ MAKE_JOBS_NUMBER=4
 ```
 Linux 如 Gentoo 上一般是直接 `-jx` 或者 `jx+1`, `x` 为核心数。
 
-`4` 是处理器核心数（还是线程数？），不知道就别改。英特尔的处理器搜索 `CPU 型号+ARK` 转跳英特尔官网可查询线程数。
+`4` 是处理器核心数（还是线程数？）。
+
+可以通过命令查询：
+
+```sh
+root@ykla:/home/ykla # sysctl kern.smp.cpus
+kern.smp.cpus: 16
+```
+
+或者：
+
+```sh
+root@ykla:/home/ykla # sysctl hw.ncpu 
+hw.ncpu: 16
+```
+
+输出值即为 `MAKE_JOBS_NUMBER` 值。
+
+英特尔的处理器搜索 `CPU 型号+ARK` 转跳英特尔官网可查询线程数。
 
 - 个别情况下可以设置别名加速编译：（非永久设置，FreeBSD 14 无须设置默认即生效）
 
 ```sh
 # alias ninja='ninja -j4'
 ```
+#### 参考资料
+
+- [Easy way to get cpu features](https://forums.freebsd.org/threads/easy-way-to-get-cpu-features.10553/)，获取 CPU 线程数量的命令来自此处。
 
 ### 设置内存为 `tmp`
 

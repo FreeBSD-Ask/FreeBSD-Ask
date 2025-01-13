@@ -55,19 +55,33 @@ $ echo "exec ck-launch-session startlxqt" > ~/.xinitrc
 # sysrc sddm_enable="YES"
 ```
 
+中文化：
+
+```sh
+# sysrc sddm_lang="zh_CN"
+```
+
+![FreeBSD 安装 LXQt](../.gitbook/assets/lxqt1.png)
+
+![FreeBSD 安装 LXQt](../.gitbook/assets/lxqt2.png)
+
+![FreeBSD 安装 LXQt](../.gitbook/assets/lxqt3.png)
+
 ## 设置中文显示
 
 进入 LXQt 后 菜单 -> "Preferences" -> "LXQt Settings" -> "Locale" -> "Region" 下拉菜单选择中文
 
-sddm 本地化语言见 KDE 章节。
+![FreeBSD 安装 LXQt](../.gitbook/assets/lxqt4.png)
 
+![FreeBSD 安装 LXQt](../.gitbook/assets/lxqt5.png)
 
 ## 故障排除
 
-### 桌面图标不显示
+- 桌面图标不显示
 
-菜单 -> "Preferences" -> "LXQt Settings" -> "Appearance" -> "Icons Theme" 选择 "Oxygen" -> "Apply"
+请事先安装自己喜欢的其他图标。
 
-之后重新登陆
+菜单 -> "Preferences" -> "LXQt Settings" -> "Appearance" -> "Icons Theme" 选择你安装的图标 -> "Apply"
 
-你也可以事先安装自己喜欢的其他图标在这里启用
+之后重新登陆。
+

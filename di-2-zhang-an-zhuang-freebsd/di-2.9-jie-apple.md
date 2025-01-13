@@ -62,7 +62,7 @@
 
 在手动安装桌面后，桌面正常。
 
-## 故障排除
+## 解决鼠标不能移动之问题
 
 - 解决 Parallels Desktop 中 FreeBSD 鼠标不能移动的问题，在 `/boot/loader.conf` 中加入：
 
@@ -71,6 +71,32 @@
 ums_load="YES"
 ```
 
+
 ### 参考文献
 
 [Issue(s) booting FreeBSD 12.2 aarch64 on Parallels Desktop on Apple Silicon](https://forums.freebsd.org/threads/issue-s-booting-freebsd-12-2-aarch64-on-parallels-desktop-on-apple-silicon.78654/)
+
+## 虚拟机工具
+
+安装：
+
+```sh
+# pkg install parallels-tools
+```
+
+如果提示找不到包：
+
+```sh
+# cd /usr/ports/emulators/parallels-tools/ 
+# make install clean
+```
+
+>**注意**
+>
+>若使用 Ports 编译安装，需要有一份当前系统的源码位于 `usr/src`。
+
+疑问：这个虚拟机工具看起来长期未更新，也并未起到什么肉眼可见的实质性作用？所以到底是干什么用的？
+
+### 参考文献
+
+- [parallels-tools Parallels Desktop Tools for FreeBSD](https://www.freshports.org/emulators/parallels-tools/)

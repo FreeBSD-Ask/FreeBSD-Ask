@@ -163,6 +163,28 @@
   - “序言”新增“存在即破烂（2025 代序）”
 - 2024.12.22
   - “第 2.4 节 安装 FreeBSD——基于 VMware Workstation Pro”新增“故障排除”
-- 2024.1.6
+- 2025.1.6
   - 新增“第 2.9 节 安装 FreeBSD——基于 Apple M1&Parallels Desktop 20”
-
+  - 新增“第 2.10 节 手动安装双系统（先安装 FreeBSD）”
+  - “第 2.9 节 安装 FreeBSD——基于 Apple M1&Parallels Desktop 20”新增“虚拟机工具”
+- 2025.1.8
+  - “第 4.0 节 概述（必看）”合并入 4.1 节。
+  - “第 4.1 节 安装显卡驱动及 Xorg（必看）”更名为“第 4.1 节 桌面环境概述、安装显卡驱动&Xorg”
+  - “第 4.3 节 安装 Gnome”新增“一些反人类设置的调整”，补图
+  - “第 4.5 节 安装 Xfce”补图
+  - “第 4.6 节 安装 Cinnamon”补图
+  - “第 4.8 节 安装 LXQt”补图
+  - "第 4.4 节 安装 Mate"补图，删除冗余
+  - 新增“第 4.14 节 安装 Budgie”
+  - "第 4.7 节 安装 Lumina"补图
+  - 新增"第 4.21 节 安装 LXDE"
+  - 新增“第 4.22 节 安装 Window Maker”
+  - "第 19.2 节 Linux 败局与 FreeBSD 败局"新增“为何不能选择 Linux 桌面操作系统？”
+- 2025.1.9
+  - “第 4.16 节 安装 CDE”补图
+- 2025.1.10
+  - “第 2.4 节 安装 FreeBSD——基于 VMware Workstation Pro”重写“共享文件夹”
+- 2025.1.11
+  - "第 4.13 节 安装 KDE6"新增“基于开发中的 Ports（需要长时间编译）”
+- 2025.1.13
+  - 关闭 Issue [第 1.5 章，内容有误 ](https://github.com/FreeBSD-Ask/FreeBSD-Ask/issues/159)

@@ -13,7 +13,7 @@
 ## 安装与配置
 
 ```sh
-# pkg install  mate xorg wqy-fonts lightdm lightdm-gtk-greeter xdg-user-dirs
+# pkg install mate xorg wqy-fonts lightdm lightdm-gtk-greeter xdg-user-dirs
 ```
 
 或者：
@@ -34,47 +34,34 @@
 # sysrc lightdm_enable="YES"
 ```
 
-- 在主目录`.xinitrc` 文件内加入下面一行:
+在 `~/.xinitrc` 文件内加入下面一行:
 
-```
+```sh
 exec mate-session
 ```
 
 ## 显示中文桌面环境
 
-默认是 csh，在 `~/.cshrc` 中添加如下内容：
+
+编辑 `/etc/login.conf`：
+
+找到 `default:\` 这一段，把 `:lang=C.UTF-8` 修改为 `:lang=zh_CN.UTF-8`。
+
+刷新数据库：
 
 ```sh
-setenv LANG zh_CN.UTF-8
-setenv LC_CTYPE zh_CN.UTF-8
+# cap_mkdb /etc/login.conf
 ```
+
+![FreeBSD 安装 MATE](../.gitbook/assets/mate1.png)
+
+![FreeBSD 安装 MATE](../.gitbook/assets/mate2.png)
+
+![FreeBSD 安装 MATE](../.gitbook/assets/mate3.png)
 
 ## 输入法
 
-```sh
-# pkg install zh-ibus-libpinyin
-```
+![FreeBSD 安装 MATE](../.gitbook/assets/mate4.png)
 
-或者:
+ibus 测试成功。请参见输入法相关章节。
 
-```sh
-# cd /usr/ports/chinese/ibus-libpinyin/ 
-# make install clean
-```
-
-安装好运行初始化命令 `ibus-setup`。
-
-设置输入法变量:
-
-```sh
-# ee ~/.xinitrc
-```
-
-在该文件中添加以下内容
-
-```sh
-export GTK_IM_MODULE=ibus
-export XMODIFIERS=@im=ibus
-export QT_IM_MODULE=ibus
-ibus &
-```

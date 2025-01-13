@@ -9,7 +9,6 @@
 
 - [001-WIndows11 安装 VMware17](https://www.bilibili.com/video/BV1Qji2YLEgS)
 
-
 ## 镜像下载
 
 >**提示**
@@ -30,8 +29,6 @@
 ### 参考文献
 
 - [[经验] 上直链！！ VMWare Workstation Pro 免费给个人用了](https://hostloc.com/thread-1306968-1-1.html)
-
-
 
 ### 参考文献
 
@@ -151,27 +148,30 @@
 如果没有网络请设置 DNS 为`223.5.5.5`。请看本章其余章节。
 
 
+## 虚拟机增强工具与显卡驱动
 
-## 显卡驱动以及虚拟机增强工具
-
-### 显卡驱动
-
-VMware 自动缩放屏幕请安装显卡驱动和虚拟机增强工具，即：
+安装显卡驱动和虚拟机增强工具，即：
 
 ```sh
-# pkg install xf86-video-vmware open-vm-tools xf86-input-vmmouse
+# pkg install xf86-video-vmware open-vm-tools xf86-input-vmmouse open-vm-kmod
 ```
 
 或者
 
 ```
-# cd /usr/ports/x11-drivers/xf86-video-vmware/ 
-# make install clean
-# cd /usr/ports/emulators/open-vm-tools/
-# make install clean
-# cd /usr/ports/x11-drivers/xf86-input-vmmouse/
-# make install clean
+# cd /usr/ports/x11-drivers/xf86-video-vmware/  && make install clean
+# cd /usr/ports/emulators/open-vm-tools/ && make install clean
+# cd /usr/ports/x11-drivers/xf86-input-vmmouse/  && make install clean
+# cd /usr/ports/emulators/open-vm-kmod/ && make install clean
 ```
+
+>**注意**
+>
+>若你不使用桌面还可以这样（仍然是 Port `emulators/open-vm-tools`）：
+>
+>```sh
+># pkg install open-vm-tools-nox11
+>```
 
 安装完毕后无需任何多余配置即可实现屏幕自动缩放。
 
@@ -186,8 +186,9 @@ VMware 自动缩放屏幕请安装显卡驱动和虚拟机增强工具，即：
 
 ### 鼠标集成（主机虚拟机鼠标自由切换）
 
+请先安装显卡驱动和虚拟机增强工具。
+
 ```sh
-# pkg install xf86-video-vmware xf86-input-vmmouse open-vm-tools
 # sysrc moused_enable=YES
 # Xorg -configure
 # mv /root/xorg.conf.new /usr/local/share/X11/xorg.conf.d/xorg.conf
@@ -217,57 +218,88 @@ EndSection
 …………此处省略一部分…………
 ```
 
+### 共享文件夹
 
-### 虚拟机增强工具
+请先安装虚拟机增强工具。
 
-如果有桌面
+#### 在物理机设置共享文件夹
+
+![FreeBSD VMware 共享文件夹](../.gitbook/assets/hgfs1.png)
+
+>**注意**
+>
+>不必疑惑虚拟机的名字是 Windows 11，因为这是 Windows11 和 BSD 双系统虚拟机。
+
+在 FreeBSD 虚拟机中查看设置的文件夹：
 
 ```sh
-# pkg install open-vm-tools xf86-input-vmmouse
+root@ykla:/home/ykla # vmware-hgfsclient
+123pan
 ```
 
-如果没有桌面：
+#### 加载 fuse 模块
 
-```sh
-# pkg install open-vm-tools-nox11
-```
-
-或者 
-
-```
-# cd /usr/ports/emulators/open-vm-tools/
-# make install clean
-```
-
-具体配置
-
-编辑 `/boot/loader.conf`
-
-写入
+加载 fuse，将下文写入 `/boot/loader.conf`：
 
 ```sh
 fusefs_load="YES"
 ```
 
-### 共享文件夹
+#### 挂载
 
-请先安装虚拟机增强工具。
+##### 手动挂载
 
-```sh
-# vmhgfs-fuse .host:/selfsharefold /mnt/hgfs
-```
-
-查看共享文件夹
+>**注意**
+>
+>请将 `123pan` 换成你自己的路径。
 
 ```sh
-# ls /mnt/hgfs
+# vmhgfs-fuse .host:/123pan /mnt/hgfs
 ```
+
+##### 自动挂载
+
+编辑 `/etc/fstab/`：写入：
+
+>**注意**
+>
+>请将 `123pan` 换成你自己的路径。
+
+```sh
+.host:/123pan      /mnt/hgfs    fusefs  rw,mountprog=/usr/local/bin/vmhgfs-fuse,allow_other,failok 0
+```
+
+检查（请务必执行，否则若写错了会卡在开机处）：
+
+```sh
+# mount -al # 若无输出则正常
+```
+
+#### 查看共享文件夹
+
+```sh
+root@ykla:/home/ykla # ls /mnt/hgfs/
+Downloads
+root@ykla:/home/ykla # ls /mnt/hgfs/Downloads/
+零跑
+```
+
+![FreeBSD VMware 共享文件夹](../.gitbook/assets/hgfs2.png)
+
+文件符合。
+
+#### 参考文献
+
+- [解决vmware上Ubuntu共享文件夹（2022年7月）](https://www.cnblogs.com/MaRcOGO/p/16463460.html)，整体方法参考此处
+- [fuse: failed to open fuse device](https://forums.freebsd.org/threads/fuse-failed-to-open-fuse-device.44544/)，解决 `fuse: failed to open fuse device: No such file or directory` 的问题
+- [VMware shared folders](https://forums.freebsd.org/threads/vmware-shared-folders.10318/)，挂载方法参考此处
+
+
+## 故障排除
 
 > **注意**
 >
 > 在使用 Windows 远程桌面或者其他 XRDP 工具远程另一台 Windows 桌面，并使用其上面运行的 VMware 虚拟机操作 FreeBSD 时，鼠标通常会变得难以控制。这是正常的！
-
-## 故障排除
 
 - 每次进入图形界面，窗口都会异常扩大。
 
@@ -277,7 +309,15 @@ fusefs_load="YES"
 
 硬件——显示——监视器——任意监视器的最大分辨率(M)，将其由默认最大的 `2560 x 1600`（2K） 改成其他较小值即可，亦可自定义数值。
 
-## 附：博通（broadcom）账号相关
+- 没有声音
+
+加载声卡后若仍然没有声音，请将音量拉满到 100% 再看一下。因为默认声音几乎微不可闻。
+
+- 只能按比例缩放，不能自由缩放拉抻
+
+疑似 Bug，待解决
+
+## 附录：博通（broadcom）账号相关
 
 ### 博通（broadcom）账号注册
 

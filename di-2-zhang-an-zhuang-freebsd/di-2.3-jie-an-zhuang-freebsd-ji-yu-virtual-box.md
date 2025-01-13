@@ -55,6 +55,10 @@
 
 显卡控制器用 `VBoxSVGA` 即可。
 
+>**警告**
+>
+>不要试图勾选下方的 3D，这会在实际上放弃选定 `VBoxSVGA`。
+
 ![](../.gitbook/assets/vb5.5.png)
 
 开始安装！
@@ -113,6 +117,45 @@
 # make install clean
 ```
 
+查看安装说明：
+
+```sh
+root@ykla:/home/ykla # pkg info -D virtualbox-ose-additions
+virtualbox-ose-additions-6.1.50.1401000:
+On install:
+VirtualBox Guest Additions are installed.
+
+To enable and start the required services:
+
+# sysrc vboxguest_enable="YES"
+# sysrc vboxservice_enable="YES"
+
+To start the services, restart the system.
+
+In some situations, a panic will occur when the kernel module loads.
+Having no more than one virtual CPU might mitigate the issue.
+
+For features such as window scaling and clipboard sharing, membership of
+the wheel group is required. With username "jerry" as an example:
+
+# pw groupmod wheel -m jerry
+
+The settings dialogue for FreeBSD guests encourages use of the VMSVGA
+graphics controller. Whilst this might suit installations of FreeBSD
+without a desktop environment (a common use case), it is not appropriate
+where Guest Additions are installed.
+
+Where Guest Additions are installed:
+
+1. prefer VBoxSVGA
+
+2. do not enable 3D acceleration (doing so will invisibly
+   lose the preference for VBoxSVGA)
+
+You may ignore the yellow alert that encourages use of VMSVGA.
+
+```
+
 xorg 可以自动识别驱动，**不需要** 手动配置 `/usr/local/etc/X11/xorg.conf`（经过测试手动配置反而更卡，点一下要用 5 秒钟……）。
 
 
@@ -129,7 +172,7 @@ xorg 可以自动识别驱动，**不需要** 手动配置 `/usr/local/etc/X11/x
 ```sh
 # service vboxguest restart # 可能会提示找不到模块，但是不影响使用
 # service vboxservice restart
-# pw groupmod wheel -m ykla # sudo 权限
+# pw groupmod wheel -m ykla # 管理员权限
 ```
 
 ## 故障排除

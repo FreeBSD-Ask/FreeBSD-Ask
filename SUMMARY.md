@@ -18,7 +18,7 @@
 ## 第 2 章 安装 FreeBSD
 
 * [第 2.0 节 FreeBSD 安装图解](di-2-zhang-an-zhuang-freebsd/di-2.0-jie-tu-jie-an-zhuang.md)
-* [第 2.1 节 手动安装双系统](di-2-zhang-an-zhuang-freebsd/di-2.1-jie-shuang-xi-tong-an-zhuang.md)
+* [第 2.1 节 手动安装双系统（后安装 FreeBSD）](di-2-zhang-an-zhuang-freebsd/di-2.1-jie-shuang-xi-tong-an-zhuang.md)
 * [第 2.2 节 安装 FreeBSD——基于 Hyper-V](di-2-zhang-an-zhuang-freebsd/di-2.2-jie.md)
 * [第 2.3 节 安装 FreeBSD——基于 Virtual Box](di-2-zhang-an-zhuang-freebsd/di-2.3-jie-an-zhuang-freebsd-ji-yu-virtual-box.md)
 * [第 2.4 节 安装 FreeBSD——基于 VMware Workstation Pro](di-2-zhang-an-zhuang-freebsd/di-2.4-jie-an-zhuang-freebsd-ji-yu-vmware-workstation-pro.md)
@@ -27,6 +27,7 @@
 * [第 2.7 节 自带文本编辑器 ee 的用法](di-2-zhang-an-zhuang-freebsd/di-2.7-jie-ee-yong-fa-ji-wang-luo-pei-zhi.md)
 * [第 2.8 节 虚拟机预安装镜像（本书自制）](di-2-zhang-an-zhuang-freebsd/di-2.8-jie-yu-an-zhuang-jing-xiang.md)
 * [第 2.9 节 安装 FreeBSD——基于 Apple M1&Parallels Desktop 20](di-2-zhang-an-zhuang-freebsd/di-2.9-jie-apple.md)
+* [第 2.10 节 手动安装双系统（先安装 FreeBSD）](di-2-zhang-an-zhuang-freebsd/di-2.10.md)
 
 ## 第 3 章 包管理器暨 FreeBSD 更新与升级
 
@@ -42,8 +43,7 @@
 
 ## 第 4 章 桌面安装
 
-* [第 4.0 节 概述（必看）](di-4-zhang-zhuo-mian-an-zhuang/di-4.0-jie-gai-shu.md)
-* [第 4.1 节 安装显卡驱动及 Xorg（必看）](di-4-zhang-zhuo-mian-an-zhuang/di-4.1-jie-an-zhuang-xian-ka-qu-dong-ji-xorg-bi-kan.md)
+* [第 4.1 节 桌面环境概述、安装显卡驱动&Xorg](di-4-zhang-zhuo-mian-an-zhuang/di-4.1-jie-an-zhuang-xian-ka-qu-dong-ji-xorg-bi-kan.md)
 * [第 4.2 节 安装 KDE5](di-4-zhang-zhuo-mian-an-zhuang/di-4.2-jie-an-zhuang-kde-5.md)
 * [第 4.3 节 安装 Gnome](di-4-zhang-zhuo-mian-an-zhuang/di-4.3-jie-an-zhuang-gnome.md)
 * [第 4.4 节 安装 Mate](di-4-zhang-zhuo-mian-an-zhuang/di-4.4-jie-an-zhuang-mate.md)
@@ -56,13 +56,15 @@
 * [第 4.11 节 主题与美化](di-4-zhang-zhuo-mian-an-zhuang/di-4.11-jie-zhu-ti-yu-mei-hua.md)
 * [第 4.12 节 远程桌面管理](di-4-zhang-zhuo-mian-an-zhuang/di-4.12-jie-yuan-cheng-zhuo-mian-guan-li.md)
 * [第 4.13 节 安装 KDE6](di-4-zhang-zhuo-mian-an-zhuang/di-4.13.md)
-* [第 4.14 节 安装 Pantheon](di-4-zhang-zhuo-mian-an-zhuang/di-4.14-jie-an-zhuang-pantheon.md)
+* [第 4.14 节 安装 Budgie](di-4-zhang-zhuo-mian-an-zhuang/di-4.14-jie-an-zhuang-budgie.md)
 * [第 4.15 节 安装 i3wm](di-4-zhang-zhuo-mian-an-zhuang/di-4.15-jie-an-zhuang-i3wm.md)
 * [第 4.16 节 安装 CDE](di-4-zhang-zhuo-mian-an-zhuang/di-4.16-jie-an-zhuang-cde.md)
 * [第 4.17 节 安装 Hyprland](di-4-zhang-zhuo-mian-an-zhuang/di-4.17-jie-an-zhuang-hyprland.md)
 * [第 4.18 节 打印机的安装](di-4-zhang-zhuo-mian-an-zhuang/di-4.18-jie-da-yin-ji-de-an-zhuang.md)
 * [第 4.19 节 触摸板的设置](di-4-zhang-zhuo-mian-an-zhuang/di-4.19-jie-chu-mo-ban-de-she-zhi.md)
 * [第 4.20 节 声卡设置](di-4-zhang-zhuo-mian-an-zhuang/di-4.20-jie-sheng-ka-yu-wang-ka-she-zhi.md)
+* [第 4.21 节 安装 LXDE](di-4-zhang-zhuo-mian-an-zhuang/di-4.21-lxde.md)
+* [第 4.22 节 安装 Window Maker](di-4-zhang-zhuo-mian-an-zhuang/di-4.22-winmaker.md)
 
 ## 第 5 章 输入法及常用软件
 
