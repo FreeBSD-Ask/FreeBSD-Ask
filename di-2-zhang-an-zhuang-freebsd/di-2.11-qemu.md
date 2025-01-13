@@ -106,6 +106,7 @@ cd /d "C:\Program Files\qemu"
 - `smp` 为 CPU 数量
 - `cpu` 指定 CPU 架构
 - `m` 指定内存大小
+- `hostfwd=tcp` 映射的本地端口
 
 以上，请将 `C:\Users\ykla\Desktop\` 替换为你自己的路径。
 
@@ -115,9 +116,72 @@ cd /d "C:\Program Files\qemu"
 
 输入用户名 `root` 回车即可，默认没有密码。
 
+由于在 PowerShell 和 CMD 中运行都会产生各种乱码（比如 `ee` 命令，或按 **TAB 键**）。
+
+但是该镜像默认未配置 ssh 与普通用户，直接 ssh 是无法连接的。
+
+先创建一个普通用户：
+
+```sh
+root@freebsd:~ # adduser 
+Username: ykla
+Full name:
+Uid (Leave empty for default):
+Login group [ykla]:
+Login group is ykla. Invite ykla into other groups? []: wheel
+Login class [default]:
+Shell (sh csh tcsh nologin) [sh]:
+Home directory [/home/ykla]:
+Home directory permissions (Leave empty for default):
+
+Enable ZFS encryption? (yes/no) [no]: Use password-based authentication? [yes]:
+Use an empty password? (yes/no) [no]:
+Use a random password? (yes/no) [no]:
+Enter password:
+Enter password again:
+Lock out the account after creation? [no]:
+Username    : ykla
+Password    : *****
+Full Name   :
+Uid         : 1001
+ZFS dataset : zroot/home/ykla
+Class       :
+Groups      : ykla wheel
+Home        : /home/ykla
+Home Mode   :
+Shell       : /bin/sh
+Locked      : no
+OK? (yes/no) [yes]:
+adduser: INFO: Successfully created ZFS dataset (zroot/home/ykla).
+adduser: INFO: Successfully added (ykla) to the user database.
+Add another user? (yes/no) [no]:
+Goodbye!
+```
+
+配置 sshd：
+
+```sh
+root@freebsd:~ # service sshd enable # 添加启动项
+sshd enabled in /etc/rc.conf
+root@freebsd:~ # service sshd start # 启动 sshd 服务
+Generating RSA host key.
+3072 SHA256:kXxPXoTuyVXz+KG7eE3J3NH+3rlbMXQg6pW+1d9RGLM root@freebsd (RSA)
+Generating ECDSA host key.
+256 SHA256:fCNrjiI5KPXvM29hxSVjRPL0NKGceijgYucUJttOIuo root@freebsd (ECDSA)
+Generating ED25519 host key.
+256 SHA256:o6DJs5xfC9gUJP0Yjmr4iL9J77nebJnvmlUExBUPyQY root@freebsd (ED25519)
+Performing sanity check on sshd configuration.
+Starting sshd.
+```
+
+然后就可以在 Windows 上通过 ssh 连接了（IP 就是 `localhost`）：
+
+```batch
+ssh ykla@localhost:8022
+```
+
 ## 故障排除
 
-- 在 PowerShell 和 CMD 中运行都会产生各种乱码（比如 `ee` 命令，或按 **TAB 键**）。
 
 待解决
 
