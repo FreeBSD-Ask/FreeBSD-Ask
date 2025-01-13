@@ -117,6 +117,10 @@ cd /d "C:\Program Files\qemu"
 
 ## 故障排除
 
+- 在 PowerShell 和 CMD 中运行都会产生各种乱码（比如 `ee` 命令，或按 **TAB 键**）。
+
+待解决
+
 - 图形化无法显示
 
 待解决
