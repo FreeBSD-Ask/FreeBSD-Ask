@@ -186,3 +186,5 @@
   - “第 2.4 节 安装 FreeBSD——基于 VMware Workstation Pro”重写“共享文件夹”
 - 2025.1.11
   - "第 4.13 节 安装 KDE6"新增“基于开发中的 Ports（需要长时间编译）”
+- 2025.1.13
+  - 关闭 Issue [第 1.5 章，内容有误 ](https://github.com/FreeBSD-Ask/FreeBSD-Ask/issues/159)
