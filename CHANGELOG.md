@@ -188,3 +188,4 @@
   - "第 4.13 节 安装 KDE6"新增“基于开发中的 Ports（需要长时间编译）”
 - 2025.1.13
   - 关闭 Issue [第 1.5 章，内容有误 ](https://github.com/FreeBSD-Ask/FreeBSD-Ask/issues/159)
+  - 新增“第 2.11 节 Qemu 安装 RISC-V FreeBSD（基于 x86 Windows）”
