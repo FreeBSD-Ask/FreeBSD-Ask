@@ -75,7 +75,7 @@ FreeBSD 是真正自由（Liberal）的操作系统，在这个大流变的世�
 
 具体详情请参见第 2 章节。
 
-```json
+```
 14.1  磁力链接  magnet:?xt=urn:btih:496C343387D74457E441CAFA93B302E791F62924
 
 15.0  磁力链接  magnet:?xt=urn:btih:CBD49C71E87BC0B1406710A437E7135EF3D8C155
