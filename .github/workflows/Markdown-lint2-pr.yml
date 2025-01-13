@@ -14,7 +14,6 @@ jobs:
         files: '**/*.md'
         separator: ","
     - uses: DavidAnson/markdownlint-cli2-action@v19
-      continue-on-error: true
       if: steps.changed-files.outputs.any_changed == 'true'
       with:
         config: '.github/.markdownlint.json'
