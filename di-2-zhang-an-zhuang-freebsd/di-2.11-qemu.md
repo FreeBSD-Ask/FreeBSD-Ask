@@ -1,5 +1,7 @@
 # 第 2.11 节 Qemu 安装 RISC-V FreeBSD（基于 x86 Windows）
 
+Qemu 是一款纯软件模拟的开源虚拟机，支持模拟不同的体系结构。
+
 ## 下载软件与镜像
 
 本文基于 Windows 11 24H2（物理机）X86-64，FreeBSD 14.2 RELEASE RISC-V（虚拟机），qemu 20241220。
@@ -95,7 +97,7 @@ cd /d "C:\Program Files\qemu"
     -bios "C:\Users\ykla\Desktop\fw_jump.elf" ^
     -kernel "C:\Users\ykla\Desktop\u-boot.bin" ^
     -append “root=LABEL=rootfs” ^
-	-nographic
+    -nographic
 ```
 
 概述：
