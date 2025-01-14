@@ -41,18 +41,6 @@ exec icewm-session
 proc           /proc       procfs  rw  0   0
 ```
 
-## 中文配置
-
-
-编辑 `/etc/login.conf`：
-
-找到 `default:\` 这一段，把 `:lang=C.UTF-8` 修改为 `:lang=zh_CN.UTF-8`。
-
-刷新数据库：
-
-```sh
-# cap_mkdb /etc/login.conf
-```
 
 ## 桌面欣赏
 
