@@ -189,3 +189,5 @@
 - 2025.1.13
   - 关闭 Issue [第 1.5 章，内容有误 ](https://github.com/FreeBSD-Ask/FreeBSD-Ask/issues/159)
   - 新增“第 2.11 节 Qemu 安装 RISC-V FreeBSD（基于 x86 Windows）”
+  - 新增“第 4.23 节 安装 Fluxbox”
+  - 新增“第 4.24 节 安装 IceWM”

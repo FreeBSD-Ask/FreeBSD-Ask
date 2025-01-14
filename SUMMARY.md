@@ -66,6 +66,8 @@
 * [第 4.20 节 声卡设置](di-4-zhang-zhuo-mian-an-zhuang/di-4.20-jie-sheng-ka-yu-wang-ka-she-zhi.md)
 * [第 4.21 节 安装 LXDE](di-4-zhang-zhuo-mian-an-zhuang/di-4.21-lxde.md)
 * [第 4.22 节 安装 Window Maker](di-4-zhang-zhuo-mian-an-zhuang/di-4.22-winmaker.md)
+* [第 4.23 节 安装 Fluxbox](di-4-zhang-zhuo-mian-an-zhuang/di-4.23-fluxbox.md)
+* [第 4.24 节 安装 IceWM](di-4-zhang-zhuo-mian-an-zhuang/di-4.24-icewm.md)
 
 ## 第 5 章 输入法及常用软件
 
