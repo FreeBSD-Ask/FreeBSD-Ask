@@ -191,3 +191,5 @@
   - 新增“第 2.11 节 Qemu 安装 RISC-V FreeBSD（基于 x86 Windows）”
   - 新增“第 4.23 节 安装 Fluxbox”
   - 新增“第 4.24 节 安装 IceWM”
+  - “第 24.5 节 利用脚本自动生成 BSDlibc 库文本”：脚本更新
+  - “第 8.1 节 sudo 与 doas”新增“doas”
