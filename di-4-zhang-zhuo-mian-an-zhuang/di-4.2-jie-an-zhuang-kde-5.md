@@ -135,13 +135,9 @@ Current=sddm-freebsd-black-theme
 # cap_mkdb /etc/login.conf
 ```
 
-
 ### 系统中文化方法②系统设置
 
 点击开始-> System Settings -> Regional Settings 在 `Language` 项的 `Available Language` 栏中找到 “简体中文” 单击 `>` 将其加到 `Preferrred Languages` 栏中，然后单击 `Apply` 按钮；再到 `Formats` 项，将 `Region` 文本框中的内容修改为 “中国-简体中文(zh-CN)”，单击 `Apply` 按钮，logout（注销）后重新登录，此时系统语言将变为中文。
-
-
-
 
 ![KDE 5](../.gitbook/assets/sddmcn.png)
 
@@ -173,11 +169,9 @@ Current=sddm-freebsd-black-theme
 
 ### 菜单缺失关机、重启等四个按纽
 
+如果无效请先看看你是不是在 sddm 界面选择了`用户会话`（读取 `.xinitrc`），应该选择 `plasma-x11`。
 
-修改 `/etc/sysctl.conf` 将其中 `security.bsd.see_other_uid` 的值改为 `1`。重启后即可。
-
-如果没有直接写入 `security.bsd.see_other_uid=1` 到 `/etc/sysctl.conf` 即可。
-
+修改 `/etc/sysctl.conf` 将其中 `security.bsd.see_other_uid` 的值改为 `1`（`1` 为开启）。重启后即可。
 
 #### 参考文献
 
