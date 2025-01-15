@@ -103,7 +103,7 @@
 
 ## 第 8 章 用户与权限
 
-* [第 8.1 节 sudo](di-8-zhang-yong-hu-yu-quan-xian/di-8.1-jie-sudo.md)
+* [第 8.1 节 sudo 与 doas](di-8-zhang-yong-hu-yu-quan-xian/di-8.1-jie-sudo.md)
 * [第 8.2 节 添加用户](di-8-zhang-yong-hu-yu-quan-xian/di-8.2-jie-tian-jia-yong-hu.md)
 * [第 8.3 节 组](di-8-zhang-yong-hu-yu-quan-xian/di-8.3-jie-zu.md)
 * [第 8.4 节 用户权限](di-8-zhang-yong-hu-yu-quan-xian/di-8.4-jie-yong-hu-quan-xian.md)
