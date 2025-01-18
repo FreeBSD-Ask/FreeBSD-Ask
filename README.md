@@ -308,7 +308,13 @@ FreeBSD 从入门到跑路诞生于 2021 年 12 月 19 日。
 
 ## 资源
 
-QQ 群：787969044（须答题验证）
+>**技巧**
+>
+>如遇本文直接相关问题：如错别字、教程过时、错误、投稿、翻译等问题，请直接发送邮件至 `yklaxds@gmail.com`。
+
+**首要** 联系方式：**QQ 群**：787969044（须答题验证）
+
+微信群：（须先加入 QQ 群，再联系群主）
 
 Telegram 群组：[https://t.me/oh_my_BSD](https://t.me/oh_my_BSD)
 
@@ -316,13 +322,13 @@ Skype: [https://join.skype.com/xktkQtXZopfv](https://join.skype.com/xktkQtXZopfv
 
 在 FreeBSD 中：
 
-- 需要兼容层才能运行 QQ、微信（请参见正文章节）
-- Telegram 可原生运行 [net-im/telegram-desktop](https://www.freshports.org/net-im/telegram-desktop/)
-- Skype 可使用 pidgin+ 插件 [net-im/pidgin-skypeweb](https://forums.freebsd.org/threads/skype.66115/)
+- 需要兼容层才能运行 QQ、微信（软件运行方法参见正文）
+- Telegram 可原生运行 by [net-im/telegram-desktop](https://www.freshports.org/net-im/telegram-desktop/)
+- Skype 可使用 pidgin+ 插件 by [net-im/pidgin-skypeweb](https://forums.freebsd.org/threads/skype.66115/)
 
 ## 内容提要
 
-《FreeBSD 从入门到跑路》 由 FreeBSD 中文社区 ykla 发起。我们尝试从 0 开始，和所有人一同徜徉 FreeBSD 世界。
+《FreeBSD 从入门到跑路》 由 FreeBSD 中文社区（CFC）ykla 发起。我们尝试从 0 开始，和所有人一同徜徉 FreeBSD 世界。
 
 ## 捐赠
 
@@ -330,8 +336,9 @@ Skype: [https://join.skype.com/xktkQtXZopfv](https://join.skype.com/xktkQtXZopfv
 
 [点此捐赠 FreeBSD 基金会](https://freebsdfoundation.org/donate)
 
-有多的钱请捐给 FreeBSD 基金会吧。
+有多的钱请捐给 FreeBSD 基金会吧
 
+需要有 Visa 信用卡：若直接提交无法支付，请使用捐赠页面的 `Amazon Pay` 或 `Google Pay`，经测试均可以顺利支付。
 
 ---
 
