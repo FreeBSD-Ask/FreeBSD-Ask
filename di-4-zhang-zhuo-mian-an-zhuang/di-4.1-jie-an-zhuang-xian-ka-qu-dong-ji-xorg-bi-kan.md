@@ -26,30 +26,20 @@ Wayland 是 xorg 的替代品，但是目前 BSD 上的 Wayland 支持欠佳。
 
 >**警告**
 >
->slim 由于作者早在 2013 年就停止了开发，不推荐使用，会产生一些奇怪的 bug （比如 fcitx5 用不了，加载不了 dbus）。
-输入法框架目前推荐使用 fcitx（对于 KDE 5 桌面）、ibus（对于其他基于 GTK 的桌面，如 gnome、xfce、mate 等等）。
+>由于 slim 的作者早在 2013 年就停止了开发，不推荐使用，会产生一些奇怪的 bug——比如 fcitx5 用不了，加载不了 dbus。
+
+输入法框架目前推荐使用：
+
+- fcitx（对于 KDE 5 桌面）
+- ibus（对于其他基于 GTK 的桌面，如 gnome、xfce、mate 等等）。
 
 >**警告**
 >
->请勿使用 scim，作者早就跑路（大概已经距今 18 年了）。
+>一般地，请勿使用 scim，作者早就跑路（大概已经距今 18 年了）。
 
 >**技巧**
 >
 >对于不同的 SHELL，环境变量的配置方法是不一样的，FreeBSD 14 前默认使用 `csh`，14 及以后默认使用 `sh`。而且不同桌面加载环境变量的方法也是不一样的，所以针对不同桌面，不同 SHELL 的配置方法是不一样的，具体方法请看具体桌面。
-
-> **小故事**
->
-> sddm gdm lightdm slim 在系统里乱战：
->
-> sddm：我背后是 kde
->
-> gdm：我背后是 gnome
->
-> lightdm：我背后可以是任何一个
->
-> slim：怎么办？好慌，潜水太久，管理员要踢我了。
->
-> 系统：合着你们在我地盘上养蛊呢？
 
 ## 故障排除
 
@@ -415,3 +405,17 @@ xorg 最小化包: xorg-minimal（不建议）
 ## 参考文献
 
 - 详细情况可以看 [wiki/Graphics](https://wiki.freebsd.org/Graphics)
+
+> **小故事**
+>
+> sddm gdm lightdm slim 在系统里乱战：
+>
+> sddm：我背后是 kde
+>
+> gdm：我背后是 gnome
+>
+> lightdm：我背后可以是任何一个
+>
+> slim：怎么办？好慌，潜水太久，管理员要踢我了。
+>
+> FreeBSD：合着你们在我地盘上养蛊呢？
