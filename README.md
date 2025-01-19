@@ -336,7 +336,7 @@ Skype: [https://join.skype.com/xktkQtXZopfv](https://join.skype.com/xktkQtXZopfv
 
 [点此捐赠 FreeBSD 基金会](https://freebsdfoundation.org/donate)
 
-有多的钱请捐给 FreeBSD 基金会吧
+有余力者请捐给 FreeBSD 基金会吧！
 
 需要有 Visa 信用卡：若直接提交无法支付，请使用捐赠页面的 `Amazon Pay` 或 `Google Pay`，经测试均可以顺利支付。
 
