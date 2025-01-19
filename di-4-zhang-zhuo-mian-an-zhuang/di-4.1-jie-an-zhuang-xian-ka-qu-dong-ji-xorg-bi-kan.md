@@ -88,36 +88,37 @@ FreeBSD 14.1-RELEASE、14-STABLE（OSVERSION >1400508）、FreeBSD 15 CUEERNT，
 >
 > 在使用 Gnome 时，如果自动锁屏/息屏，可能无法再次进入桌面。见 [Bug 255049 - x11/gdm doesn't show the login screen](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=255049)。
 
-首先切换到 latest 源，或使用 ports 安装：
+>**注意**
+>
+>在使用 Ports 时，drm 需要在 `/usr/src` 中有一份当前版本系统源代码，可参考系统更新章节。
+
+
+- FreeBSD 13.X
 
 ```sh
-# pkg install drm-kmod
-```
-
-或者
-
-```sh
-# cd /usr/ports/graphics/drm-kmod/
+# cd /usr/ports/graphics/drm-510-kmod
 # make BATCH=yes install clean
 ```
 
+或者（如有问题请使用 Ports）
 
->**注意**
->
->在使用 Ports 时，drm 需要在 `/usr/src` 中有一份系统源代码。
+```sh
+# pkg install drm-510-kmod
+```
 
-> **注意**
->
-> `graphics/drm-kmod` 这个包并非真实存在，他只是帮助判断系统版本以安装对应的 port 的元包：
->
->- FreeBSD 13.X
->
->`graphics/drm-510-kmod`
->
->- FreeBSD 14.1 RELEASE、14-STABLE 及 FreeBSD 15 CUEERNT
->
->`graphics/drm-61-kmod`
 
+- FreeBSD 14.1 RELEASE、14-STABLE 及 FreeBSD 15 CUEERNT
+
+```sh
+# cd /usr/ports/graphics/drm-61-kmod
+# make BATCH=yes install clean
+```
+
+或者（如有问题请使用 Ports）
+
+```sh
+# pkg install drm-61-kmod
+```
 
 >**注意**
 >
@@ -133,6 +134,10 @@ FreeBSD 14.1-RELEASE、14-STABLE（OSVERSION >1400508）、FreeBSD 15 CUEERNT，
   - 如果是 HD7000 以前的 AMD 显卡，添加 `kld_list="radeonkms"`（这是十多年前的显卡了）
 
 ### 故障排除
+
+>**注意**
+>
+>遇到任何问题时，请先使用 Ports 重新编译安装。尤其是在版本升级时。
 
 - `KLD XXX.ko depends on kernel - not available or version mismatch.`
 
