@@ -12,7 +12,9 @@ Windows 测试环境为 Windows 10、11，并尽量使用最新版本的 Windows
 
 因为 FreeBSD 有两种安装软件的方式（但并非所有软件都支持 pkg 的安装方式），因此为了方便，在本跑路教程中已经尽可能地列出了两种方式的安装说明。但希望大家明白，只是为了方便，而并非不能使用 ports 或者 pkg 进行安装或必须使用二者其一进行安装。
 
-> **请注意，ports 一般是 HEAD 分支，你的 pkg 最好与 ports 保持在同一主线上，即都选择 `latest`。**
+>**请注意**
+>
+> ports 一般是 HEAD 分支，你的 pkg 最好与 ports 保持在同一主线上，即都选择 `latest`。
 
 
 示例：
@@ -85,7 +87,7 @@ Windows 测试环境为 Windows 10、11，并尽量使用最新版本的 Windows
 
 |                                                     封面                                                    |                书名                |                             作者                             |      ISBN     |       出版社       |                                         原版书名                                        |                     说明                    |
 | :-------------------------------------------------------------------------------------------------------: | :------------------------------: | :--------------------------------------------------------: | :-----------: | :-------------: | :---------------------------------------------------------------------------------: | :---------------------------------------: |
-| ![Absolute FreeBSD, 3rd Edition: The Complete Guide to FreeBS](./.gitbook/assets/QQ图片20220527141115.png) |    _**Absolute FreeBSD 3rd**_    |                      Michael W. Lucas                      | 9781593278922 | No Starch Press |                                          /                                          | 英文版，目前没有译文。词汇包括内容都非常基础。**有计算机基础的人不需要阅读。** |
+| ![Absolute FreeBSD, 3rd Edition: The Complete Guide to FreeBS](./.gitbook/assets/AbsoluteBSD.png) |    _**Absolute FreeBSD 3rd**_    |                      Michael W. Lucas                      | 9781593278922 | No Starch Press |                                          /                                          | 英文版，目前没有译文。词汇包括内容都非常基础。**有计算机基础的人不需要阅读。** |
 |                             ![Unix & Linux大学教程](./.gitbook/assets/unix3.png)                             |        《Unix & Linux 大学教程》       |                         Harley Hahn                        | 9787302209560 |     清华大学出版社     |                     _**Harley Hahn's Guide to Unix and Linux**_                     |                   命令行基础                   |
 |                         ![UNIX/Linux 系统管理技术手册（第5版）](./.gitbook/assets/unix4.png)                         |   《UNIX/Linux 系统管理技术手册（第 5 版）》   | Evi Nemeth、Garth Snyder、Trent R.Hein、Ben Whaley、Dan Mackin | 9787115532763 |     人民邮电出版社     |           _**UNIX and Linux System Administration Handbook 5th Edition**_           |               命令行进阶与 UNIX 基础              |
 |                       ![FreeBSD 操作系统设计与实现（原书第二版）](./.gitbook/assets/freebsd2rd.png)                      |   《FreeBSD 操作系统设计与实现（原书第 2 版）》   |  Marshall McKusick、George Neville-Neil、Robert N.M. Watson  | 9787111689973 |     机械工业出版社     |         _**Design and Implementation of the FreeBSD Operating System, 2nd**_        |                  主要讲解了内核。轻型纸，居然还有几个章节要自己在网络自己下载？                 |
