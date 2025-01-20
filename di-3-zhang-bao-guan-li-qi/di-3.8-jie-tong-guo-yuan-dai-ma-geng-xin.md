@@ -101,10 +101,10 @@
 
 该方法比较简单快捷。
 
-以 FreeBSD 14.1 为例：
+以 FreeBSD 14.2 为例：
 
 ```sh
-# fetch https://download.freebsd.org/ftp/releases/amd64/14.1-RELEASE/src.txz
+# fetch https://download.freebsd.org/ftp/releases/amd64/14.2-RELEASE/src.txz
 # tar xvzf src.txz  -C /
 ```
 
@@ -114,7 +114,7 @@
 
 >**技巧**
 >
->如果速度慢可以切换到 <https://mirror.bjtu.edu.cn/freebsd/releases/amd64/14.1-RELEASE/src.txz>
+>如果速度慢可以切换到 <https://mirrors.ustc.edu.cn/freebsd/releases/amd64/14.2-RELEASE/src.txz>
 
 ## 开始编译
 

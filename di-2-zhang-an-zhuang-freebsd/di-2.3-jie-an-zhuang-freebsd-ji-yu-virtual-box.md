@@ -96,9 +96,9 @@
 
 网络设置比较复杂，有时桥接不一定可以生效。为了达到使用宿主机（如 Windows10 ）控制虚拟机里的 FreeBSD 系统的目的，需要设置两块网卡——一块是 NAT 网络模式的网卡用来上网、另一块是仅主机模式的网卡用来互通宿主机。如图所示：
 
-![](../.gitbook/assets/QQ图片20211231155133.png)
+![](../.gitbook/assets/vbnat1.png)
 
-![](../.gitbook/assets/QQ图片20211231155139.png)
+![](../.gitbook/assets/vbnat2.png)
 
 使用命令 `# ifconfig` 看一下，如果第二块网卡 `em1` 没有获取到 ip 地址,请手动 DHCP 获取一下: `# dhclient em1` 即可（为了长期生效可在 `/etc/rc.conf` 中加入 `ifconfig_em1="DHCP"`）。
 

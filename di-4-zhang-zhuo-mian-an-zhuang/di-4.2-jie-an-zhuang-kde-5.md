@@ -26,36 +26,6 @@
 >
 > **如果有时候提示 `pkg` 找不到或者没有 kde5,请点击** [**x11/kde5**](https://www.freshports.org/x11/kde5) **看看是不是二进制包没有被构建出来。有时候需要切换 quarterly（待上游构建出来了再换到 latest 源，`pkg upgrade` 更新即可）或者 latest 源。类似方法适用于所有软件，故后边不再赘述。如果没有，需要自己使用上述的 Port 进行编译。**
 
-
-
-## Procfs 设置（FreeBSD 13.2 前必须如此）
-
-> **提示**
->
-> 以下 proc 设置在 FreeBSD 13.2 及以后版本中将 **[不再需要](https://reviews.freebsd.org/R9:60af3bb18c6a0b7c3082e69d0bfb1d5f809e342b)**，无需配置。但是旧版本 **必须** 如此做。
->
-> 但是[其中给出的说法](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=269621)是不正确的，起码在 2023.4.11 之前，还是需要进行该配置的。
-
-```sh
-# ee /etc/fstab
-```
-
-添加内容如下:
-
-```sh
-proc            /proc           procfs  rw      0       0
-```
-
-> 在 13.2 以前，无论虚拟机还是物理机，添加 proc 挂载这一步都是非常必要的，如果不添加会导致桌面服务无法正常运行，部分组件无法加载！
-
-> > **警告**
-> >
-> > **在 13.2 以前，如果你不配置 proc，在普通用户下，你的所有图标都将变成无法点击的白色方块，任何软件都打不开，桌面陷入异常。且后续再进行配置也是无效的，必须重装系统。**
->
-> ↓↓↓ **这就是后果** ↓↓↓
->
->  ![KDE 5](../.gitbook/assets/witekde.png)
-
 ## 启动项设置
 
 ```sh
@@ -63,7 +33,7 @@ proc            /proc           procfs  rw      0       0
 # sysrc sddm_enable="YES"
 ```
 
-然后（可选，如果不需要 `startx`。）
+### `startx`
 
 ```sh
 # echo "exec ck-launch-session startplasma-x11" > ~/.xinitrc
@@ -147,15 +117,27 @@ Current=sddm-freebsd-black-theme
 
 ## 中文化
 
-点击开始-> System Settings -> Regional Settings 在 `Language` 项的 `Available Language` 栏中找到 “简体中文” 单击 `>` 将其加到 `Preferrred Languages` 栏中，然后单击 `Apply` 按钮；再到 `Formats` 项，将 `Region` 文本框中的内容修改为 “中国-简体中文(zh-CN)”，单击 `Apply` 按钮，logout（注销）后重新登录，此时系统语言将变为中文。
-
-
 ### SDDM 中文化
 
-
-```
+```sh
 # sysrc sddm_lang="zh_CN"
 ```
+
+### 系统中文化方法①
+
+编辑 `/etc/login.conf`：
+
+找到 `default:\` 这一段，把 `:lang=C.UTF-8` 修改为 `:lang=zh_CN.UTF-8`。
+
+刷新数据库：
+
+```sh
+# cap_mkdb /etc/login.conf
+```
+
+### 系统中文化方法②系统设置
+
+点击开始-> System Settings -> Regional Settings 在 `Language` 项的 `Available Language` 栏中找到 “简体中文” 单击 `>` 将其加到 `Preferrred Languages` 栏中，然后单击 `Apply` 按钮；再到 `Formats` 项，将 `Region` 文本框中的内容修改为 “中国-简体中文(zh-CN)”，单击 `Apply` 按钮，logout（注销）后重新登录，此时系统语言将变为中文。
 
 ![KDE 5](../.gitbook/assets/sddmcn.png)
 
@@ -187,11 +169,9 @@ Current=sddm-freebsd-black-theme
 
 ### 菜单缺失关机、重启等四个按纽
 
+如果无效请先看看你是不是在 sddm 界面选择了`用户会话`（读取 `.xinitrc`），应该选择 `plasma-x11`。
 
-修改 `/etc/sysctl.conf` 将其中 `security.bsd.see_other_uid` 的值改为 `1`。重启后即可。
-
-如果没有直接写入 `security.bsd.see_other_uid=1` 到 `/etc/sysctl.conf` 即可。
-
+修改 `/etc/sysctl.conf` 将其中 `security.bsd.see_other_uid` 的值改为 `1`（`1` 为开启）。重启后即可。
 
 #### 参考文献
 
@@ -203,3 +183,32 @@ Current=sddm-freebsd-black-theme
 
 
 ![关闭 KDE5 锁屏](../.gitbook/assets/suoping.png)
+
+
+### Procfs 设置（FreeBSD 13.2 前必须如此）
+
+> **提示**
+>
+> 以下 proc 设置在 FreeBSD 13.2 及以后版本中将 **[不再需要](https://reviews.freebsd.org/R9:60af3bb18c6a0b7c3082e69d0bfb1d5f809e342b)**，无需配置。但是旧版本 **必须** 如此做。
+>
+> 但是[其中给出的说法](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=269621)是不正确的，起码在 2023.4.11 之前，还是需要进行该配置的。
+
+```sh
+# ee /etc/fstab
+```
+
+添加内容如下:
+
+```sh
+proc            /proc           procfs  rw      0       0
+```
+
+> 在 13.2 以前，无论虚拟机还是物理机，添加 proc 挂载这一步都是非常必要的，如果不添加会导致桌面服务无法正常运行，部分组件无法加载！
+
+> > **警告**
+> >
+> > **在 13.2 以前，如果你不配置 proc，在普通用户下，你的所有图标都将变成无法点击的白色方块，任何软件都打不开，桌面陷入异常。且后续再进行配置也是无效的，必须重装系统。**
+>
+> ↓↓↓ **这就是后果** ↓↓↓
+>
+>  ![KDE 5](../.gitbook/assets/witekde.png)

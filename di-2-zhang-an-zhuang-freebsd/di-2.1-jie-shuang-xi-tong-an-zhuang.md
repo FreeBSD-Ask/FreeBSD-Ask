@@ -16,47 +16,47 @@
 
 然后正常引导 FreeBSD 进行安装流程，直到分区选择。
 
-![](../.gitbook/assets/双系统1.png)
+![](../.gitbook/assets/shuangxitong1.png)
 
 此处选择 `Manual`
 
-![](../.gitbook/assets/双系统2.png)
+![](../.gitbook/assets/shuangxitong2.png)
 
 这里可以看到硬盘分区。仅有一块硬盘，有 300M 的 EFI 系统分区，16M 的 MSR 分区，64G 的 Windows 系统分区。未显示空闲空间。直接选择 `Create`
 
-![](../.gitbook/assets/双系统3.png)
+![](../.gitbook/assets/shuangxitong3.png)
 
 此处，第一行输入分区类型（即下方会列出的 `Filesystem type`）。如要添加 swap 分区，请首先添加，后添加难以控制分区大小。在添加 UFS、ZFS 时，需在 `Mountpoint` 处添加 `/`，表示分区挂载到 `/`。`Label` 是 FreeBSD 的卷标，方便识别分区，可以根据情况添加或不填。此处使用 ZFS，不添加 swap 分区，并且添加卷标 `zroot`。
 
-![](../.gitbook/assets/双系统4.png)
+![](../.gitbook/assets/shuangxitong4.png)
 
 用 **TAB 键** 选择到 OK 回车
 
-![](../.gitbook/assets/双系统5.png)
+![](../.gitbook/assets/shuangxitong5.png)
 
 这里会提示 ZFS 分区无法启动，但经过实测是可以正常启动的，选择 `yes` 忽略
 
-![](../.gitbook/assets/双系统6.png)
+![](../.gitbook/assets/shuangxitong6.png)
 
 选择 `Finish`
 
-![](../.gitbook/assets/双系统7.png)
+![](../.gitbook/assets/shuangxitong7.png)
 
 选择 `Commit`
 
 之后会进入正常安装的流程。
 
-![](../.gitbook/assets/双系统8.png)
+![](../.gitbook/assets/shuangxitong8.png)
 
 进入系统后可以看到，仅有一个 `root` 数据集。可以逐渐将数据集改为自动安装的样子，也可以参照下文在安装时进入 shell 进行分区。
 
 ## Shell 分区
 
-![](../.gitbook/assets/双系统9.png)
+![](../.gitbook/assets/shuangxitong9.png)
 
 仍然进行到分区选择，选择 `Shell`
 
-![](../.gitbook/assets/双系统10.png)
+![](../.gitbook/assets/shuangxitong10.png)
 
 之后会进入终端，执行以下命令：
 
@@ -96,7 +96,7 @@
 
 这样我们就手动创建了一套与自动安装相同的结构
 
-![](../.gitbook/assets/双系统11.png)
+![](../.gitbook/assets/shuangxitong11.png)
 
 ## 参考文献
 
