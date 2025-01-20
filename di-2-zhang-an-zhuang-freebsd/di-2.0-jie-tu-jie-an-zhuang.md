@@ -514,7 +514,7 @@ FreeBSD 旧版本下载地址:
 
 自动检测安装所需固件（14.2 [引入](https://cgit.freebsd.org/src/commit/?id=03c07bdc8b31)）。
 
-经过实际测试（无线网卡 rtl8852be），这一步可能并不起作用。如果你在安装时有无线网络，重启后丢失，`dmesg` 发现有很多关于无线网卡的报错，如 `failed with error -2`（rtw89），你会发现 `/boot/firmware` 是空的，请你安装对应固件（本例中应该使用 pkg 或者 port `net/wifi-firmware-rtw89-kmod`（安装到路径 `/boot/modules`。
+经过实际测试（无线网卡 rtl8852be），这一步可能并不起作用。如果你在安装时有无线网络，重启后丢失，`dmesg` 发现有很多关于无线网卡的报错，如 `failed with error -2`（rtw89），你会发现 `/boot/firmware` 是空的，请你安装对应固件（本例中应该使用 pkg 或者 port `net/wifi-firmware-rtw89-kmod`（安装至路径 `/boot/modules`）。
 
 ![](../.gitbook/assets/ins30.png)
 
