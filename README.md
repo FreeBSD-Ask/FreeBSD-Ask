@@ -288,15 +288,13 @@ FreeBSD 是真正自由（Liberal）的操作系统，在这个大流变的世�
 </pre> </details>
 
 
-
-
 ## PDF 文档
 
 > **PDF 文档导出流程**
 >
 > - 使用由 [safreya](https://github.com/safreya) 提供的脚本：
 >   
->> 　　<https://github.com/FreeBSD-Ask/gitbook-pdf-export> 用于导出本书的 PDF 文档。该脚本使用 Python 3 编写，仅在 Windows 10、FreeBSD 14 上测试过。
+>> <https://github.com/FreeBSD-Ask/gitbook-pdf-export> 用于导出本书的 PDF 文档。该脚本使用 Python 3 编写，仅在 Windows 10、FreeBSD 14 上测试过。
 >> 
 >> 具体使用方法见该项目的 README.
 
@@ -339,6 +337,12 @@ Skype: [https://join.skype.com/xktkQtXZopfv](https://join.skype.com/xktkQtXZopfv
 有余力者请捐给 FreeBSD 基金会吧！
 
 需要有 Visa 信用卡：若直接提交无法支付，请使用捐赠页面的 `Amazon Pay` 或 `Google Pay`，经测试均可以顺利支付。
+
+## 授权许可
+
+本项目使用《CC BY 4.0 署名 4.0 协议国际版》，具体细则参见 [许可证](https://github.com/FreeBSD-Ask/FreeBSD-Ask/blob/main/LICENSE)。
+
+![CC BY](assets/image-20250121202257-uaegjj2.png)
 
 ---
 
