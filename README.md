@@ -342,7 +342,7 @@ Skype: [https://join.skype.com/xktkQtXZopfv](https://join.skype.com/xktkQtXZopfv
 
 本项目使用《CC BY 4.0 署名 4.0 协议国际版》，具体细则参见 [许可证](https://github.com/FreeBSD-Ask/FreeBSD-Ask/blob/main/LICENSE)。
 
-![CC BY](assets/image-20250121202257-uaegjj2.png)
+![CC BY](https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by.png)
 
 ---
 
