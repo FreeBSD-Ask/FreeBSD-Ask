@@ -75,4 +75,8 @@ $ echo "exec ck-launch-session startplasma-x11" > ~/.xinitrc
 # make BATCH=yes install clean
 ```
 
+中间 `plasma6-plasma-desktop` 这个包会报错找不到文件，使用 pkg 安装即可绕过去。比较大型的包如 llvm17 亦可如此。
+
 配置方法同上。
+
+经过两天的编译后，启动了 KDE 6。笔者没有发现什么显著的 Bug，同样也没有发现对比 KDE 5 有任何改进之处。

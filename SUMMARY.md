@@ -2,7 +2,10 @@
 
 * [FreeBSD 从入门到跑路](README.md)
 * [编辑日志](CHANGELOG.md)
+* [献词](xian-ci.md)
+* [致谢](zhi-xie.md)
 * [序言](xu-yan.md)
+* [凡例](fan-li.md)
 
 ## 第 1 章 走近 FreeBSD
 
@@ -28,6 +31,7 @@
 * [第 2.8 节 虚拟机预安装镜像（本书自制）](di-2-zhang-an-zhuang-freebsd/di-2.8-jie-yu-an-zhuang-jing-xiang.md)
 * [第 2.9 节 安装 FreeBSD——基于 Apple M1&Parallels Desktop 20](di-2-zhang-an-zhuang-freebsd/di-2.9-jie-apple.md)
 * [第 2.10 节 手动安装双系统（先安装 FreeBSD）](di-2-zhang-an-zhuang-freebsd/di-2.10.md)
+* [第 2.11 节 Qemu 安装 RISC-V FreeBSD（基于 x86 Windows）](di-2-zhang-an-zhuang-freebsd/di-2.11-qemu.md)
 
 ## 第 3 章 包管理器暨 FreeBSD 更新与升级
 
@@ -65,6 +69,8 @@
 * [第 4.20 节 声卡设置](di-4-zhang-zhuo-mian-an-zhuang/di-4.20-jie-sheng-ka-yu-wang-ka-she-zhi.md)
 * [第 4.21 节 安装 LXDE](di-4-zhang-zhuo-mian-an-zhuang/di-4.21-lxde.md)
 * [第 4.22 节 安装 Window Maker](di-4-zhang-zhuo-mian-an-zhuang/di-4.22-winmaker.md)
+* [第 4.23 节 安装 Fluxbox](di-4-zhang-zhuo-mian-an-zhuang/di-4.23-fluxbox.md)
+* [第 4.24 节 安装 IceWM](di-4-zhang-zhuo-mian-an-zhuang/di-4.24-icewm.md)
 
 ## 第 5 章 输入法及常用软件
 
@@ -100,7 +106,7 @@
 
 ## 第 8 章 用户与权限
 
-* [第 8.1 节 sudo](di-8-zhang-yong-hu-yu-quan-xian/di-8.1-jie-sudo.md)
+* [第 8.1 节 sudo 与 doas](di-8-zhang-yong-hu-yu-quan-xian/di-8.1-jie-sudo.md)
 * [第 8.2 节 添加用户](di-8-zhang-yong-hu-yu-quan-xian/di-8.2-jie-tian-jia-yong-hu.md)
 * [第 8.3 节 组](di-8-zhang-yong-hu-yu-quan-xian/di-8.3-jie-zu.md)
 * [第 8.4 节 用户权限](di-8-zhang-yong-hu-yu-quan-xian/di-8.4-jie-yong-hu-quan-xian.md)
@@ -141,7 +147,7 @@
 
 * [第 14.1 节 TCP BBR](di-14-zhang-wang-luo-guan-li/di-14.1-jie-tcp-bbr.md)
 * [第 14.2 节 WiFi](di-14-zhang-wang-luo-guan-li/di-14.2-jie-wifi.md)
-* [第 14.3 节 USB RNDIS (USB 网络共享)](di-14-zhang-wang-luo-guan-li/di-14.3-jie-usb-rndis-usb-wang-luo-gong-xiang.md)
+* [第 14.3 节 USB 网络共享（USB tethering）](di-14-zhang-wang-luo-guan-li/di-14.3-jie-usb-rndis-usb-wang-luo-gong-xiang.md)
 * [第 14.4 节 蓝牙](di-14-zhang-wang-luo-guan-li/di-14.4-jie-lan-ya.md)
 * [第 14.5 节 以太网卡](di-14-zhang-wang-luo-guan-li/di-14.5-yi-tai-wang-ka.md)
 * [第 14.6 节 USB 以太网卡和 USB 无线网卡](di-14-zhang-wang-luo-guan-li/di-14.6-USB-wang-ka.md)
@@ -192,7 +198,7 @@
 ## 第 19 章 文学故事
 
 * [第 19.1 节 开源与苦难哲学](di-19-zhang-wen-xue-gu-shi/di-19.1-jie-linux-yu-ku-nan-zhe-xue.md)
-* [第 19.2 节 Linux 败局与 FreeBSD 败局](di-19-zhang-wen-xue-gu-shi/di-19.2-jie-linux-bai-ju-yi-ding-bo-freebsd-da-bai-ju.md)
+* [第 19.2 节 Git&Linux 败局与 FreeBSD 败局](di-19-zhang-wen-xue-gu-shi/di-19.2-jie-linux-bai-ju-yi-ding-bo-freebsd-da-bai-ju.md)
 * [第 19.3 节 驳《还有人记得 Linux 之前，那个理想又骄傲的 BSD 吗？》](di-19-zhang-wen-xue-gu-shi/19.3-linux-da-bai-ju.md)
 * [第 19.4 节 杂记与小说](di-19-zhang-wen-xue-gu-shi/19.4.md)
 

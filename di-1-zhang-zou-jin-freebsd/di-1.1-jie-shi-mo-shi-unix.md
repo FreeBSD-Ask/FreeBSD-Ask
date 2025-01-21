@@ -44,7 +44,7 @@ UNIX 认证查询网址：[The Open Group official register of UNIX Certified Pr
 
 >**思考题**
 >
-> _**Those who do not understand Unix are condemned to reinvent it,poorly.**_ （那些不懂 Unix 的人注定要再现一个低劣的 Unix）
+> _**Those who do not understand Unix are condemned to reinvent it, poorly.**_ （那些不懂 Unix 的人注定要再造一个四不像式 Unix）
 >
 >——[Henry Spencer](https://www.nasa.gov/history/alsj/henry.html)
 >
@@ -134,7 +134,7 @@ BSD 最初是由加州大学伯克利分校（University of California, Berkeley
 
 **FreeBSD 不是 Linux，亦不是 UNIX，是类 UNIX**
 
-![FreeBSD 不是 Linux](../.gitbook/assets/图片3.png)
+![FreeBSD 不是 Linux](../.gitbook/assets/nolinux.png)
 
 UNIX -> Networking Release 1->Networking Release 2 ->386BSD -> FreeBSD 1.0
 
@@ -142,7 +142,7 @@ UNIX -> Networking Release 1->Networking Release 2 ->386BSD -> FreeBSD 1.0
 
 “I have never even checked 386BSD out; when I started on Linux it wast available”——Linus
 
-![图片来源：<https://github.com/freebsd/freebsd-src/blob/main/share/misc/bsd-family-tree>，有删减](../.gitbook/assets/图片2.png)
+![图片来源：<https://github.com/freebsd/freebsd-src/blob/main/share/misc/bsd-family-tree>，有删减](../.gitbook/assets/bsd-family-tree.png)
 
 FreeBSD 日为 6 月 19 日。FreeBSD 基金会和社区在这天庆祝 FreeBSD 的生日。——[Join us to celebrate FreeBSD Day! ](https://freebsdfoundation.org/freebsd-day/)
 

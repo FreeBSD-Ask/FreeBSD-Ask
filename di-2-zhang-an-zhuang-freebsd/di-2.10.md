@@ -193,7 +193,7 @@ zroot/var/tmp         96K  87.8G    96K  /var/tmp
 >```json
 >menuentry "FreeBSD" { 
 >	icon \EFI\refind\icons\os_freebsd.png 
->	volume ""FreeBSD" " 
+>	volume "FreeBSD"
 >	loader \EFI\freebsd\loader.efi 
 >}
 >

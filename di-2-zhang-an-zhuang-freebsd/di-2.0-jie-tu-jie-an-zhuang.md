@@ -318,6 +318,10 @@ FreeBSD 旧版本下载地址:
 
 现代计算机应该选择 `GPT+UEFI`。较老的计算机（比如 2013 年以前的）应该选择保持与图片一致的选项（`GPT(BIOS)`）——默认选项同时兼容二者。
 
+>**技巧**
+>
+>如果在此处设置 `P Partition Scheme` 为 `GPT (UEFI)` 而非其他（只有老电脑才需要 `GPT (BIOS+UEFI)` 等选项），后续分区与系统更新过程会更加简单，也能实现 4K 对齐。
+
 >**注意**
 >
 >最好想清楚再设定 `Swap Size`（即交换分区）的大小（一般理论是内存的两倍，但由于设计问题，不应超过 64G），因为 zfs、ufs 文件系统都是不能缩小文件系统的，而 `dd` 一个 swap 文件或文件系统会有负面作用。
@@ -509,6 +513,8 @@ FreeBSD 旧版本下载地址:
 ![](../.gitbook/assets/install-14.2.png)
 
 自动检测安装所需固件（14.2 [引入](https://cgit.freebsd.org/src/commit/?id=03c07bdc8b31)）。
+
+经过实际测试（无线网卡 rtl8852be），这一步可能并不起作用。如果你在安装时有无线网络，重启后丢失，`dmesg` 发现有很多关于无线网卡的报错，如 `failed with error -2`（rtw89），你会发现 `/boot/firmware` 是空的，请你安装对应固件（本例中应该使用 pkg 或者 port `net/wifi-firmware-rtw89-kmod`（安装至路径 `/boot/modules`）。
 
 ![](../.gitbook/assets/ins30.png)
 
