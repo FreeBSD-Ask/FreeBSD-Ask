@@ -316,15 +316,17 @@ FreeBSD 旧版本下载地址:
 
 ![](../.gitbook/assets/ins8.png)
 
-现代计算机应该选择 `GPT+UEFI`。较老的计算机（比如 2013 年以前的）应该选择保持与图片一致的选项（`GPT(BIOS)`）——默认选项同时兼容二者。
+现代计算机应该选择 `GPT+UEFI`。较老的计算机（比如 2013 年以前的）应该选择选项 `GPT(BIOS)`——此默认选项同时兼容二者。
 
 >**技巧**
 >
->如果在此处设置 `P Partition Scheme` 为 `GPT (UEFI)` 而非其他（只有老电脑才需要 `GPT (BIOS+UEFI)` 等选项），后续分区与系统更新过程会更加简单，也能实现 4K 对齐。
+>如果在此处设置 `P Partition Scheme` 为 `GPT (UEFI)` 而非其他（只有老电脑才需要 `GPT (BIOS+UEFI)` 等选项），后续分区与系统更新过程会更加简单。
 
 >**注意**
 >
 >最好想清楚再设定 `Swap Size`（即交换分区）的大小（一般理论是内存的两倍，但由于设计问题，不应超过 64G），因为 zfs、ufs 文件系统都是不能缩小文件系统的，而 `dd` 一个 swap 文件或文件系统会有负面作用。
+
+![](../.gitbook/assets/ins8.2.png)
 
 ![](../.gitbook/assets/ins9.png)
 

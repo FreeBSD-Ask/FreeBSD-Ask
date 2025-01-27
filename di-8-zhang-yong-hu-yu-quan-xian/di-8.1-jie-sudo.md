@@ -77,7 +77,7 @@ permit alice as root # 允许用户 alice doas
 
 # Permit user bob to run programs as root, maintaining
 # environment variables. Useful for GUI applications.
-permit keepenv bob as root  # 允许用户 bob doas，并继承用户 bob 的环境变量
+permit keepenv bob as root  # 允许用户 bob doas，并继承用户 bob 的环境变量，GUI 程序需要，但会降低安全性（参见查看安装后信息）
 
 # Permit user cindy to run only the pkg package manager as root
 # to perform package updates and upgrades.
