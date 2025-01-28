@@ -38,7 +38,7 @@ current 相对稳定后（即 MFC 最短三天）会推送到 stable，但是不
 
 ![FreeBSD 项目官网](../.gitbook/assets/do1.png)
 
-我们点击黄底黑字 `Download FreeBSD`，会跳转如下：
+我们点击黄底红字 `Download FreeBSD`，会跳转如下：
 
 ![下载 FreeBSD](../.gitbook/assets/do2.png)
 
