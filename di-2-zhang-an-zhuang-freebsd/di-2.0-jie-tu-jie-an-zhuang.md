@@ -42,6 +42,10 @@ current 相对稳定后（即 MFC 最短三天）会推送到 stable，但是不
 
 ![下载 FreeBSD](../.gitbook/assets/do2.png)
 
+>**注意**
+>
+>随着岁月的流逝，在你下载的时候就不一定要下，也不一定就有 14.2。你只需要选择最顶部的一个 `FreeBSD-X-RELEASE` 即可。`X` 是比 `14.2` 大的值。
+
 |Installer|VM|SD Card|Documentation|
 |:---:|:---:|:---:|:---:|
 |安装镜像|虚拟机预安装镜像|存储卡镜像|文档|
