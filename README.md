@@ -8,6 +8,36 @@ FreeBSD 是真正自由（Liberal）的操作系统，在这个大流变的世�
 >
 >视频教程合集见 《[FreeBSD 从入门到跑路 第二版](https://www.bilibili.com/video/BV1Qji2YLEgS)》
 
+## 概述
+
+FreeBSD 从入门到跑路诞生于 2021 年 12 月 19 日。
+
+本书定位：本书旨在敉平新手与进阶之间的台阶，与你一道进入另一片开源世界。
+
+## 资源
+
+>**技巧**
+>
+>如遇本文直接相关问题：如错别字、教程过时、错误、投稿、翻译等问题，请直接发送邮件至 `yklaxds@gmail.com`。
+
+**首要** 联系方式：**QQ 群**：787969044（须答题验证）
+
+微信群：（须先加入 QQ 群，再联系群主）
+
+Telegram 群组：[https://t.me/oh_my_BSD](https://t.me/oh_my_BSD)
+
+Skype: [https://join.skype.com/xktkQtXZopfv](https://join.skype.com/xktkQtXZopfv)
+
+在 FreeBSD 中：
+
+- 需要兼容层才能运行 QQ、微信（软件运行方法参见正文）
+- Telegram 可原生运行 by [net-im/telegram-desktop](https://www.freshports.org/net-im/telegram-desktop/)
+- Skype 可使用 pidgin+ 插件 by [net-im/pidgin-skypeweb](https://forums.freebsd.org/threads/skype.66115/)
+
+## 内容提要
+
+《FreeBSD 从入门到跑路》 由 FreeBSD 中文社区（CFC）ykla 发起。我们尝试从 0 开始，和所有人一同徜徉 FreeBSD 世界。
+
 ## 贡献指南
 
 如果你想让你的教程出现在本书中，你可以这样做：
@@ -298,35 +328,6 @@ FreeBSD 是真正自由（Liberal）的操作系统，在这个大流变的世�
 >> 
 >> 具体使用方法见该项目的 README.
 
-## 概述
-
-FreeBSD 从入门到跑路诞生于 2021 年 12 月 19 日。
-
-本书定位：本书旨在敉平新手与进阶之间的台阶，与你一道进入另一片开源世界。
-
-## 资源
-
->**技巧**
->
->如遇本文直接相关问题：如错别字、教程过时、错误、投稿、翻译等问题，请直接发送邮件至 `yklaxds@gmail.com`。
-
-**首要** 联系方式：**QQ 群**：787969044（须答题验证）
-
-微信群：（须先加入 QQ 群，再联系群主）
-
-Telegram 群组：[https://t.me/oh_my_BSD](https://t.me/oh_my_BSD)
-
-Skype: [https://join.skype.com/xktkQtXZopfv](https://join.skype.com/xktkQtXZopfv)
-
-在 FreeBSD 中：
-
-- 需要兼容层才能运行 QQ、微信（软件运行方法参见正文）
-- Telegram 可原生运行 by [net-im/telegram-desktop](https://www.freshports.org/net-im/telegram-desktop/)
-- Skype 可使用 pidgin+ 插件 by [net-im/pidgin-skypeweb](https://forums.freebsd.org/threads/skype.66115/)
-
-## 内容提要
-
-《FreeBSD 从入门到跑路》 由 FreeBSD 中文社区（CFC）ykla 发起。我们尝试从 0 开始，和所有人一同徜徉 FreeBSD 世界。
 
 ## 捐赠
 
@@ -340,7 +341,7 @@ Skype: [https://join.skype.com/xktkQtXZopfv](https://join.skype.com/xktkQtXZopfv
 
 ## 授权许可
 
-本项目使用《CC BY 4.0 署名 4.0 协议国际版》，具体细则参见[许可证](https://github.com/FreeBSD-Ask/FreeBSD-Ask/LICENSE)。
+本项目使用《CC BY 4.0 署名 4.0 协议国际版》，具体细则参见 <https://github.com/FreeBSD-Ask/FreeBSD-Ask> 项目下的 `LICENSE.md` 文件。
 
 ![CC BY](https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by.png)
 
