@@ -4,9 +4,6 @@
 
 FreeBSD 是真正自由（Liberal）的操作系统，在这个大流变的世界中仍然坚守 BSD UNIX 哲学——恪守古老的法则，追寻真正的自由。
 
->**技巧**
->
->视频教程合集见 《[FreeBSD 从入门到跑路 第二版](https://www.bilibili.com/video/BV1Qji2YLEgS)》
 
 ## 概述
 
@@ -19,6 +16,11 @@ FreeBSD 从入门到跑路诞生于 2021 年 12 月 19 日。
 >**技巧**
 >
 >如遇本文直接相关问题：如错别字、教程过时、错误、投稿、翻译等问题，请直接发送邮件至 `yklaxds@gmail.com`。
+
+>**技巧**
+>
+>视频教程合集见 《[FreeBSD 从入门到跑路 第二版](https://www.bilibili.com/video/BV1Qji2YLEgS)》
+
 
 **首要** 联系方式：**QQ 群**：787969044（须答题验证）
 
@@ -33,6 +35,16 @@ Skype: [https://join.skype.com/xktkQtXZopfv](https://join.skype.com/xktkQtXZopfv
 - 需要兼容层才能运行 QQ、微信（软件运行方法参见正文）
 - Telegram 可原生运行 by [net-im/telegram-desktop](https://www.freshports.org/net-im/telegram-desktop/)
 - Skype 可使用 pidgin+ 插件 by [net-im/pidgin-skypeweb](https://forums.freebsd.org/threads/skype.66115/)
+
+### 现成的虚拟机镜像体验（本书自制）
+
+具体详情请参见第 2 章节。
+
+```
+14.1  磁力链接  magnet:?xt=urn:btih:496C343387D74457E441CAFA93B302E791F62924
+
+15.0  磁力链接  magnet:?xt=urn:btih:CBD49C71E87BC0B1406710A437E7135EF3D8C155
+```
 
 ## 内容提要
 
@@ -101,15 +113,7 @@ Skype: [https://join.skype.com/xktkQtXZopfv](https://join.skype.com/xktkQtXZopfv
 
 由于编写者水平所限，书中缺点和谬误之处自不可免，希望大家随时提出批评意见，以便修正。你可以利用 Github 提交 Issue 或者发邮件至 `yklaxds@gmail.com`。
 
-## 现成的虚拟机镜像体验（本书自制）
 
-具体详情请参见第 2 章节。
-
-```
-14.1  磁力链接  magnet:?xt=urn:btih:496C343387D74457E441CAFA93B302E791F62924
-
-15.0  磁力链接  magnet:?xt=urn:btih:CBD49C71E87BC0B1406710A437E7135EF3D8C155
-```
 ## ToDo
 
 <details> 
