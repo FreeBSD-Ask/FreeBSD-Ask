@@ -337,11 +337,11 @@ FreeBSD 旧版本下载地址:
 
 >**注意**
 >
->最好想清楚再设定 `Swap Size`（即交换分区）的大小（一般理论是内存的两倍，但由于设计问题，不应超过 64G），因为 zfs、ufs 文件系统都是不能缩小文件系统的，而 `dd` 一个 swap 文件或文件系统会有负面作用。
+>最好想清楚再设置 `Swap Size`（即交换分区）的大小（一般理论是内存的两倍，但由于设计问题，不应超过 64G），因为 zfs、ufs 文件系统都是不能缩小文件系统的，而 `dd` 一个 swap 文件或文件系统会有负面作用。
 
 >**技巧**
 >
->如果你的确不需要 Swap，输入 `0` 或 `0G` 即可不设置交换分区。
+>如果你的确不需要 Swap，`Swap Size` 输入 `0` 或 `0G` 即可不设置交换分区。
 
 ![](../.gitbook/assets/ins8.2.png)
 
@@ -355,13 +355,13 @@ FreeBSD 旧版本下载地址:
 
 >**技巧**
 >
->如不确定，请按 **ctrl** + **c** 选择 `Restart`，再按两次 `ESC` 退回最开始，选择 `Shell` 使用命令查看即可。
+>如不确定，请按 **ctrl** + **c** 选择 `Restart`，再按两次 `ESC` 退回最开始，选择 `Shell` 使用命令查看即可。查看完成后输入 `exit` 回车可继续上述安装过程。
 
 >**注意**
 >
 >如果你的硬盘是 eMMC，可能会出现三个选项，类似于 `mmcsd0`、`mmcsd0boot0` 和 `mmcboot1`。请选择 `mmcsd0`。另外如果多硬盘与 eMMC 共存，若另一块硬盘分区量大于 5 个，eMMC 中的 FreeBSD 会卡在 `Mounting from zfs:zroot/ROOT/default failed with error 22: retrying for 3 more seconds`。且若手动指定，会直接 Panic。疑似 Bug，但我不知道如何报告，无法获取进一步的细节。
 
-查看完成后输入 `exit` 回车可继续上述安装过程。
+
 
 ![](../.gitbook/assets/ins12.png)
 
