@@ -335,15 +335,19 @@ Skype: [https://join.skype.com/xktkQtXZopfv](https://join.skype.com/xktkQtXZopfv
 
 ## 捐赠
 
+资金有余力者请捐给 FreeBSD 基金会吧！
+
 FreeBSD 基金会（501(c)(3)）日常年份收到的捐款仅有 Linux 基金会（501(c)(6)）的千分之五。因此亦十分需要个人捐款。
 
 ![](.gitbook/assets/proud_donor.png)
 
 [点此捐赠 FreeBSD 基金会](https://freebsdfoundation.org/donate)
 
-有余力者请捐给 FreeBSD 基金会吧！
-
 需要有 Visa 信用卡：若直接提交无法支付，请使用捐赠页面的 `Amazon Pay` 或 `Google Pay`，经测试均可以顺利支付。
+
+>**技巧**
+>
+>我需要一些你不已用的设备（FreeBSD 支持）做测试写教程用，虚拟机已经不大能满足需求了。如能提供，请邮件联系 `yklaxds@gmail.com`。
 
 ## 授权许可
 
