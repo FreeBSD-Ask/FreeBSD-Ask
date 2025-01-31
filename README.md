@@ -335,7 +335,7 @@ Skype: [https://join.skype.com/xktkQtXZopfv](https://join.skype.com/xktkQtXZopfv
 
 ## 捐赠
 
-FreeBSD 基金会日常年份收到的捐款仅有 Linux 基金会的千分之五。因此亦十分需要个人捐款。
+FreeBSD 基金会（501(c)(3)）日常年份收到的捐款仅有 Linux 基金会（501(c)(6)）的千分之五。因此亦十分需要个人捐款。
 
 ![](.gitbook/assets/proud_donor.png)
 
