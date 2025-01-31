@@ -345,10 +345,6 @@ FreeBSD 基金会（501(c)(3)）日常年份收到的捐款仅有 Linux 基金�
 
 需要有 Visa 信用卡：若直接提交无法支付，请使用捐赠页面的 `Amazon Pay` 或 `Google Pay`，经测试均可以顺利支付。
 
->**技巧**
->
->我需要一些你不已用的设备（FreeBSD 支持）做测试写教程用，虚拟机已经不大能满足需求了。如能提供，请邮件联系 `yklaxds@gmail.com`。
-
 ## 授权许可
 
 本项目使用《CC BY 4.0 署名 4.0 协议国际版》，具体细则参见 <https://github.com/FreeBSD-Ask/FreeBSD-Ask> 项目下的 `LICENSE.md` 文件。
