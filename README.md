@@ -7,9 +7,9 @@ FreeBSD 是真正自由（Liberal）的**操作系统**，在这个大流变的�
 
 ## 概述
 
-FreeBSD 从入门到跑路诞生于 2021 年 12 月 19 日。
+《FreeBSD 从入门到跑路》诞生于 2021 年 12 月 19 日，由 FreeBSD 中文社区（CFC）ykla 发起。
 
-本书定位：本书旨在敉平新手与进阶之间的台阶，与你一道进入另一片开源世界。
+**本书定位**：本书旨在敉平新手与进阶之间的台阶，与你一道进入另一片开源世界。
 
 ## 资源
 
@@ -48,7 +48,7 @@ Skype: [https://join.skype.com/xktkQtXZopfv](https://join.skype.com/xktkQtXZopfv
 
 ## 内容提要
 
-《FreeBSD 从入门到跑路》 由 FreeBSD 中文社区（CFC）ykla 发起。我们尝试从 0 开始，和所有人一同徜徉 FreeBSD 世界。
+我们尝试从 0 开始，和所有人一同徜徉 FreeBSD 世界。
 
 ## 贡献指南
 
