@@ -2,7 +2,7 @@
 
 ## 目标平台
 
-目前版本兼容 FreeBSD 14.1-RELEASE 及 FreeBSD 15.0-CURRENT，并尽量向下兼容。
+目前版本兼容 FreeBSD 14.2-RELEASE 及 FreeBSD 15.0-CURRENT，并尽量向下兼容。
 
 主要面向 X86、AArch64 架构，并支持尽可能多的架构。
 

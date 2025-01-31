@@ -38,9 +38,13 @@ current 相对稳定后（即 MFC 最短三天）会推送到 stable，但是不
 
 ![FreeBSD 项目官网](../.gitbook/assets/do1.png)
 
-我们点击黄底黑字 `Download FreeBSD`，会跳转如下：
+我们点击黄底红字 `Download FreeBSD`，会跳转如下：
 
 ![下载 FreeBSD](../.gitbook/assets/do2.png)
+
+>**注意**
+>
+>随着岁月的流逝，在你下载的时候就不一定要下，也不一定就有 14.2。你只需要选择最顶部的一个 `FreeBSD-X-RELEASE` 即可。`X` 是比 `14.2` 大的值。
 
 |Installer|VM|SD Card|Documentation|
 |:---:|:---:|:---:|:---:|
@@ -93,6 +97,11 @@ FreeBSD-14.2-RELEASE-amd64-mini-memstick.img.xz	107445036	   2024-Nov-29 13:04
 |FreeBSD-14.2-RELEASE-amd64-mini-memstick.img	 | U 盘用的网络安装镜像，安装时需联网 |
 |FreeBSD-14.2-RELEASE-amd64-mini-memstick.img.xz|压缩的 U 盘用的网络安装镜像，安装时需联网 |
 
+>**技巧**
+>
+>网络是随时波动的，因此下载的文件时而会与源文件有差异，产生错误。~~百度网盘就经常这样~~。因此我们需要一种机制确保你获取的文件与 FreeBSD 项目发布的镜像是完全一致的。就需要用到 **校验值**。如何校验的方法请查阅网络。WIndows 10、11 均自带命令行工具 `CertUtil`，无需额外的软件。你还可以参考[如何确定用于安全应用程序的文件 SHA-256 哈希](https://www.dell.com/support/kbdoc/en-bs/000130826/%E5%A6%82%E4%BD%95-%E7%A1%AE%E5%AE%9A-%E7%94%A8%E4%BA%8E-%E9%98%B2-%E7%97%85%E6%AF%92-%E5%92%8C-%E6%81%B6%E6%84%8F%E8%BD%AF%E4%BB%B6-%E9%98%B2%E6%8A%A4-%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F-%E7%9A%84-%E6%96%87%E4%BB%B6-sha-256-%E5%93%88%E5%B8%8C?lang=zh)这篇文章。
+
+
 > **注意**
 >
 >FreeBSD 所有安装介质包括不限于虚拟机文件都没有提供图形界面（DVD 有 pkg 包，但是会出问题），均需要自行安装。
@@ -122,7 +131,7 @@ rufus 下载地址：[https://rufus.ie/zh](https://rufus.ie/zh)
 
 > **警告**
 >
-> **不建议** 使用 FreeBSD 手册推荐的 win32diskimager，有时会出现校验码错误的情况（实际上文件校验码正常）。**应仅在 rufus 无效的情况下才应使用 win32diskimager。** 下载地址 <https://sourceforge.net/projects/win32diskimager/files/Archive/>，点击 `win32diskimager-1.0.0-install.exe` 即可下载。
+> **不建议** 使用 FreeBSD 手册推荐的 win32diskimager，有时会出现校验码错误的情况（实际上文件校验码正常）。**应仅在 rufus 无效的情况下才应使用 win32diskimager。** win32diskimager 下载地址 <https://sourceforge.net/projects/win32diskimager/files/Archive/>，点击 `win32diskimager-1.0.0-install.exe` 即可下载。
 
 
 >**技巧**
@@ -201,6 +210,10 @@ FreeBSD 旧版本下载地址:
 此界面无需任何操作，等待十秒，可自动进入 `1. Boot Installer [Enter]`；亦可以直接按 **回车键** 进入。
 
 按 **空格键** 可暂停，可选定以下选项。
+
+>**技巧**
+>
+>如果按其他任意键盘会进入提示符 `OK`，可输入 `menu` 再按 **回车键** 返回菜单。
 
 以下操作：按最开头的数字可进行选定。`on` 代表已开启，`off` 代表已关闭。
 
@@ -326,6 +339,10 @@ FreeBSD 旧版本下载地址:
 >
 >最好想清楚再设定 `Swap Size`（即交换分区）的大小（一般理论是内存的两倍，但由于设计问题，不应超过 64G），因为 zfs、ufs 文件系统都是不能缩小文件系统的，而 `dd` 一个 swap 文件或文件系统会有负面作用。
 
+>**技巧**
+>
+>如果你的确不需要 Swap，输入 `0` 或 `0G` 即可不设置交换分区。
+
 ![](../.gitbook/assets/ins8.2.png)
 
 ![](../.gitbook/assets/ins9.png)
@@ -339,6 +356,10 @@ FreeBSD 旧版本下载地址:
 >**技巧**
 >
 >如不确定，请按 **ctrl** + **c** 选择 `Restart`，再按两次 `ESC` 退回最开始，选择 `Shell` 使用命令查看即可。
+
+>**注意**
+>
+>如果你的硬盘是 eMMC，可能会出现三个选项，类似于 `mmcsd0`、`mmcsd0boot0` 和 `mmcboot1`。请选择 `mmcsd0`。另外如果多硬盘与 eMMC 共存，若另一块硬盘分区量大于 5 个，eMMC 中的 FreeBSD 会卡在 `Mounting from zfs:zroot/ROOT/default failed with error 22: retrying for 3 more seconds`。且若手动指定，会直接 Panic。疑似 Bug，但我不知道如何报告，无法获取进一步的细节。
 
 查看完成后输入 `exit` 回车可继续上述安装过程。
 
@@ -517,6 +538,10 @@ FreeBSD 旧版本下载地址:
 自动检测安装所需固件（14.2 [引入](https://cgit.freebsd.org/src/commit/?id=03c07bdc8b31)）。
 
 经过实际测试（无线网卡 rtl8852be），这一步可能并不起作用。如果你在安装时有无线网络，重启后丢失，`dmesg` 发现有很多关于无线网卡的报错，如 `failed with error -2`（rtw89），你会发现 `/boot/firmware` 是空的，请你安装对应固件（本例中应该使用 pkg 或者 port `net/wifi-firmware-rtw89-kmod`（安装至路径 `/boot/modules`）。
+
+>**技巧**
+>
+>如果这一步你回车直接出现了 Panic 重启，请再来一次，全部取消勾选之。即不安装。可以参考其他章节文章安装显卡驱动和网卡驱动。
 
 ![](../.gitbook/assets/ins30.png)
 
