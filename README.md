@@ -343,7 +343,7 @@ FreeBSD 基金会（501(c)(3)）日常年份收到的捐款仅有 Linux 基金�
 
 [点此捐赠 FreeBSD 基金会](https://freebsdfoundation.org/donate)
 
-需要有 Visa 信用卡：若直接提交无法支付，请使用捐赠页面的 `Amazon Pay` 或 `Google Pay`，经测试均可以顺利支付。
+需要你有 Visa 信用卡：若直接提交无法支付，请使用捐赠页面的 `Amazon Pay` 或 `Google Pay`，经测试均可以顺利支付。
 
 ## 授权许可
 
