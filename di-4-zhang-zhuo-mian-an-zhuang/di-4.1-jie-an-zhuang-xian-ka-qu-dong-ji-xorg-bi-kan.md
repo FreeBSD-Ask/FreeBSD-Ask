@@ -403,6 +403,7 @@ xorg 最小化包: xorg-minimal（不建议）
 
 - 如果显卡使用驱动有问题请直接联系作者：[https://github.com/freebsd/drm-kmod/issues](https://github.com/freebsd/drm-kmod/issues)
 - 如果笔记本出现了唤醒时屏幕点不亮的问题，可以在 `/boot/loader.conf` 中添加 `hw.acpi.reset_video="1"` 以在唤醒时重置显示适配器。
+- 普通用户若非 `wheel` 组成员，那么请加入 `video` 组。
 
 >**警告**
 >
