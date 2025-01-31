@@ -413,6 +413,8 @@ xorg 最小化包: xorg-minimal（不建议）
 
 - 详细情况可以看 [wiki/Graphics](https://wiki.freebsd.org/Graphics)
 
+---
+
 > **小故事**
 >
 > sddm gdm lightdm slim 在系统里乱战：
