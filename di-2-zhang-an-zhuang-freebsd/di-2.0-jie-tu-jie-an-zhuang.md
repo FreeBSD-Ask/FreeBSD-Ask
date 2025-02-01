@@ -22,7 +22,7 @@ FreeBSD 是一款开源的类 UNIX 操作系统。
 
 alpha 是 current 进入 release 的第一步。具体过程是 current --> alpha（进入 stable 分支）--> beta --> rc --> release。
 
-current 相对稳定后（即 MFC 最短三天）会推送到 stable，但是不保证二者没有大的 bug。参见 [FreeBSD Release Engineering](https://docs.freebsd.org/en/articles/freebsd-releng/)。
+current 相对稳定后（即 MFC 最短三天，MFC 即 `Merge From Head`，类似向后移植 `backporting`）会推送到 stable，但是不保证二者没有大的 bug。参见 [FreeBSD Release Engineering](https://docs.freebsd.org/en/articles/freebsd-releng/)。
 
 >**注意**
 >
@@ -240,6 +240,10 @@ FreeBSD 旧版本下载地址:
 
 ![](../.gitbook/assets/ins3.png)
 
+欢迎菜单。
+
+`欢迎使用 FreeBSD！您想要开始安装还是使用 Live 系统？`
+
 选中 `install`，按下 **回车键** 可进行安装。中间 `Shell` 是命令行，左右侧 `Live System` 是 LiveCD 模式。
 
 >**技巧**
@@ -255,21 +259,17 @@ FreeBSD 旧版本下载地址:
 >
 >无论在任何步骤，按 **ESC 键** 均 **不能** 返回上一菜单，都会直接跳到下一步直至退出安装或结束安装。
 
->**技巧**
->
->如果不确定自己的硬盘是哪块（比如分不清是 `da0` 还是 `nv0` 之类的），可选择 `Shell` 使用命令查看：
->
->![](../.gitbook/assets/ins11.png)
->
->查看完成后输入 `exit` 回车可继续以下安装过程。
-
 ![](../.gitbook/assets/ins4.png)
 
-这里是设置键盘，直接按 **回车键** 即可（因目前中国使用美式键盘布局）。
+`FreeBSD 系统控制台驱动程序默认使用标准 `US`（美式）键盘布局。可以在下面选择别的键盘布局。`
+
+这里是键盘布局菜单，直接按 **回车键** 使用默认键盘布局即可（因目前中国使用美式键盘布局）。
 
 ![](../.gitbook/assets/ins5.png)
 
-此处设置主机名。
+`请选择此机器的主机名。如果您正运行在受管理的网络上，请向您的网络管理员询问合适的名称。`
+
+此处为设置主机名菜单。
 
 >**警告**
 >
@@ -279,6 +279,7 @@ FreeBSD 旧版本下载地址:
 
 ![](../.gitbook/assets/ins6.png)
 
+`选择要安装的可选系统组件`
 
 >**技巧**
 >
@@ -307,7 +308,16 @@ FreeBSD 旧版本下载地址:
 
 ![](../.gitbook/assets/ins7.png)
 
-推荐：文件分区详解见其他章节。这里推荐选择默认选项 `auto ZFS`，一般来说内存小于 8GB 的应该选择 UFS，内存 8G 及以上的应该选用 ZFS。可手动分区解压 `txz` 文件以自定义，参加其他章节。
+分区菜单。`您希望如何分区您的磁盘？`
+
+|配置选项|中文说明|
+|---|---|
+|`Auto (ZFS) – Guided Root-on-ZFS`|自动 (ZFS) – 引导式 ZFS root 分区|
+|`Auto (UFS) – Guided UFS Disk Setup`|自动 (UFS) – 引导式 UFS 磁盘设置|
+|`Manual – Manual Disk Setup (experts)`|手动 – 手动磁盘设置（适合专家）|
+|`Shell – Open a shell and partition by hand`|Shell – 打开 Shell 并手动分区|
+
+文件分区详解见其他章节（可手动分区解压 `txz` 文件以自定义，参见其他章节）。这里，推荐选择默认选项 `auto ZFS`：一般来说，内存小于 8GB 的应该选择 UFS，内存 8G 及以上的应该选用 ZFS。
 
 >**技巧**
 >
@@ -322,6 +332,11 @@ FreeBSD 旧版本下载地址:
 > ```
 >
 > 你在手动安装的时候可以判断是哪块硬盘，以确定 `ada0` 这个参数是多少。
+> 
+>如果不确定自己的硬盘是哪块（比如分不清是 `da0` 还是 `nv0` 之类的）：可使用图片中的命令查看。
+>
+>![](../.gitbook/assets/ins11.png)
+>
 >
 > 刷新后，输入 `bsdinstall` 即可进入安装模式。
 >
@@ -331,45 +346,76 @@ FreeBSD 旧版本下载地址:
 
 现代计算机应该选择 `GPT+UEFI`。较老的计算机（比如 2013 年以前的）应该选择选项 `GPT(BIOS)`——此默认选项同时兼容二者。
 
+![](../.gitbook/assets/ins8.2.png)
+
+|配置选项|中文|说明|
+|---|---|---|
+|`>> Install Proceed with Installation`| >> 安装 继续安装||
+|`T Pool Type/Disks: stripe: 0 disks` |存储池类型/磁盘： stripe：0 块磁盘|详细说明见下|
+|`- Rescan Devices *` |- 重新扫描设备 *||
+|`- Disk Info *` |- 磁盘信息 *||
+|`N Pool Name zroot` |存储池名称 `zroot`|默认池名 `zroot`|
+|`4 Force 4K Sectors? YES` |强制 4K 扇区？ 是|4K 对齐|
+|`E Encrypt Disks? NO` |加密磁盘？ 否|加密后的登录系统方案请参照本书其他文章|
+|`P Partition Scheme` |GPT (UEFI) 分区方案 GPT (UEFI)|只有老电脑才需要 `GPT (BIOS+UEFI)` 等选项|
+|`S Swap Size 2g` |交换分区大小 2g|如果你的确不需要 Swap，`Swap Size` 输入 `0` 或 `0G` 即可不设置交换分区。|
+|`M Mirror Swap? NO`| 交换分区镜像？ 否|是否在多个磁盘之间镜像交换分区，若选否，则每个磁盘的交换分区是独立的|
+|`W Encrypt Swap? NO` |加密交换分区？ 否|  |
+
+
 >**技巧**
 >
->如果在此处设置 `P Partition Scheme` 为 `GPT (UEFI)` 而非其他（只有老电脑才需要 `GPT (BIOS+UEFI)` 等选项），后续分区与系统更新过程会更加简单。
+>如果在此处设置 `P Partition Scheme` 为 `GPT (UEFI)` 而非其他，后续分区与系统更新过程会更加简单。
 
 >**注意**
 >
->最好想清楚再设定 `Swap Size`（即交换分区）的大小（一般理论是内存的两倍，但由于设计问题，不应超过 64G），因为 zfs、ufs 文件系统都是不能缩小文件系统的，而 `dd` 一个 swap 文件或文件系统会有负面作用。
+>最好想清楚再设置 `Swap Size`（即交换分区）的大小（一般理论是内存的两倍，但由于设计问题，不应超过 64G），因为 zfs、ufs 文件系统都是不能缩小文件系统的，而 `dd` 一个 swap 文件或文件系统会有负面作用。
 
 >**技巧**
 >
->如果你的确不需要 Swap，输入 `0` 或 `0G` 即可不设置交换分区。
-
-![](../.gitbook/assets/ins8.2.png)
+>如果分不清应该后续选择哪块磁盘，可以在此步选择 `- Disk Info *`，查看磁盘信息：
+>
+>![](../.gitbook/assets/diskinfo.png)
+>
+>此界面，选中磁盘按 **回车键** 可查看详情；选中 `<Back>` 可返回上一菜单。
+>
+>![](../.gitbook/assets/diskinfo2.png)
+>
+>此界面按 **上下方向键** 可浏览。按 **回车键** 可返回到上一菜单。
 
 ![](../.gitbook/assets/ins9.png)
 
-直接按 **回车键** 即可
+`选择虚拟设备类型：`
+
+|配置选项|中文|特点|
+|---|---|---|
+|`Striping` |条带化 |无冗余，一块硬盘即可|
+|`mirror` |镜像| n 路镜像，最少需要 2 块硬盘|
+|`raid10` |RAID 1+0 | n 组 2 路镜像，最少需要 2 块硬盘（要求偶数块硬盘）|
+|`raidz1`| RAID-Z1 | 单冗余 RAID，最少需要 3 块硬盘|
+|`raidz2` |RAID-Z2 | 双冗余 RAID，最少需要 4 块硬盘|
+|`raidz3` |RAID-Z3 | 三重冗余 RAID，最少需要 5 块硬盘|
+
+我们直接按 **回车键** 使用默认的 `Striping` 即可。
 
 ![](../.gitbook/assets/ins10.png)
 
 选中你的硬盘，直接按 **回车键** 即可。
 
->**技巧**
->
->如不确定，请按 **ctrl** + **c** 选择 `Restart`，再按两次 `ESC` 退回最开始，选择 `Shell` 使用命令查看即可。
-
 >**注意**
 >
 >如果你的硬盘是 eMMC，可能会出现三个选项，类似于 `mmcsd0`、`mmcsd0boot0` 和 `mmcboot1`。请选择 `mmcsd0`。另外如果多硬盘与 eMMC 共存，若另一块硬盘分区量大于 5 个，eMMC 中的 FreeBSD 会卡在 `Mounting from zfs:zroot/ROOT/default failed with error 22: retrying for 3 more seconds`。且若手动指定，会直接 Panic。疑似 Bug，但我不知道如何报告，无法获取进一步的细节。
 
-查看完成后输入 `exit` 回车可继续上述安装过程。
 
 ![](../.gitbook/assets/ins12.png)
 
-按 **方向键** 和 **Tab 键** 可左右切换，按 **回车键** 可选定。
+`最后机会！您确定要销毁以下磁盘的当下内容吗：`
+
+这是最后一次警告与确认。你的确已经备份完成，指定磁盘全盘都会被格式化。按 **方向键** 和 **Tab 键** 可左右切换到 `<YES>`，按 **回车键** 可选定之。
 
 >**警告**
 >
->这是全盘安装，会丢失所有数据！
+>这是全盘安装，会丢失所有数据！非全盘安装请参考本书其他文章。
 
 ![](../.gitbook/assets/ins13.png)
 
@@ -379,6 +425,7 @@ FreeBSD 旧版本下载地址:
 
 ![](../.gitbook/assets/ins16.png)
 
+`请选择系统管理账户（root）的密码：输入的字符不可见。正在更改要安装的系统的 root 密码。`
 
 此处输入 root 密码，密码不会显示在屏幕上，输入后就是 **什么也没有**，其他地方的密码亦如此。要求重复输入两次以确认一致性。密码强度默认无要求。
 
@@ -388,21 +435,31 @@ FreeBSD 旧版本下载地址:
 
 ![](../.gitbook/assets/ins17.png)
 
-选择网卡。按 **方向键** 可切换，按 **回车键** 可选定。
+`请选择一个网络接口进行配置`
+
+即选择网卡。按 **方向键** 可切换，按 **回车键** 可选定。
 
 ![](../.gitbook/assets/ins18.png)
+
+`您希望为此接口配置 IPv4 吗？`
 
 配置 IPv4。按 **回车键** 可选定。
 
 ![](../.gitbook/assets/ins19.png)
 
+`您希望使用 DHCP 配置此接口吗？`
+
 配置使用 DHCP。按 **回车键** 可选定。
 
 ![](../.gitbook/assets/ins20.png)
 
+`您希望为此接口配置 IPv6 吗？`
+
 配置 IPv6。因本教程未使用 IPv6，故选 `No`，按 **回车键** 可选定。如有需要可自行配置 IPv6。
 
 ![](../.gitbook/assets/ins21.png)
+
+`配置解析器`
 
 一般保持 DHCP 获取的 DNS 即可，也可以使用其他 DNS。此处使用了阿里 DNS `223.5.5.5`。按 **方向键** 可切换，按 **回车键** 可选定。
 
@@ -414,21 +471,34 @@ FreeBSD 旧版本下载地址:
 
 ![](../.gitbook/assets/ins-w1.png)
 
-修改 WiFi 区域码：
+`请选择网络接口进行配置`
+
+
 
 ![](../.gitbook/assets/ins-w2.png)
 
-我们应该选 `NONE ROW`：
+`更改地区/国家（FCC/US）？`
+
+修改 WiFi 区域码，按回车确认。
 
 ![](../.gitbook/assets/ins-w3.png)
 
-选择区域：
+`选择您的区域码`
+
+我们应该选 `NONE ROW`。
+
 
 ![](../.gitbook/assets/ins-w4.png)
 
-扫描：
+`选择您的地区`
+
+选择区域：
 
 ![](../.gitbook/assets/ins-w5.png)
+
+`等待 5 秒钟，正在扫描无线网络……`
+
+扫描。
 
 >**技巧**
 >
@@ -436,22 +506,31 @@ FreeBSD 旧版本下载地址:
 
 ![](../.gitbook/assets/ins-w6.png)
 
+`选择您要链接的无线网络`
 
 在列表中找寻你的 WiFi，找不到的话请你换下路由器的信道。
 
 ![](../.gitbook/assets/ins18.png)
 
+`您想要为此接口配置 IPv4 吗`
+
 配置 IPv4。按 **回车键** 可选定。
 
 ![](../.gitbook/assets/ins19.png)
+
+`您希望使用 DHCP 配置此接口吗？`
 
 配置使用 DHCP。按 **回车键** 可选定。
 
 ![](../.gitbook/assets/ins20.png)
 
+`您希望为此接口配置 IPv6 吗？`
+
 配置 IPv6。因本教程未使用 IPv6，故选 `No`，按 **回车键** 可选定。如有需要可自行配置 IPv6。
 
 ![](../.gitbook/assets/ins21.png)
+
+`配置解析器`
 
 一般保持 DHCP 获取的 DNS 即可，也可以使用其他 DNS。此处使用了阿里 DNS `223.5.5.5`。按 **方向键** 可切换，按 **回车键** 可选定。
 
@@ -466,11 +545,15 @@ FreeBSD 旧版本下载地址:
 
 ![](../.gitbook/assets/ins22.png)
 
+`选择地区`
+
 设置时区。中国位于 `5 Asia`（亚洲）。按 **方向键** 可切换，按 **回车键** 可选定。
 
 ![](../.gitbook/assets/ins23.png)
 
-设置国家或区域。中国选择 `9 China`（中国）。按 **方向键** 可切换，按 **回车键** 可选定。
+`设置国家或区域`
+
+中国选择 `9 China`（中国）。按 **方向键** 可切换，按 **回车键** 可选定。
 
 ![](../.gitbook/assets/ins24.png)
 
@@ -478,13 +561,19 @@ FreeBSD 旧版本下载地址:
 
 ![](../.gitbook/assets/ins25.png)
 
+`时区缩写 'CST' 看起来合理吗？`
+
 我们使用中国标准时间：China Standard Time（CST），没有问题，按 **回车键** 选定 `Yes`。
 
 ![](../.gitbook/assets/ins26.png)
 
+`时间与日期`
+
 按 **回车键** 即可。
 
 ![](../.gitbook/assets/ins27.png)
+
+`时间与日期`
 
 按 **回车键** 即可。
 
@@ -492,6 +581,7 @@ FreeBSD 旧版本下载地址:
 
 ![](../.gitbook/assets/ins28.png)
 
+`选择您希望在开机时启动的服务`
 
 >**警告**
 >
@@ -513,6 +603,8 @@ FreeBSD 旧版本下载地址:
 ## 安全加固、更新固件和创建普通用户
 
 ![](../.gitbook/assets/ins29.png)
+
+`选择系统安全加固选项`
 
 这里是安全加固部分，可根据需要自行选定。
 
@@ -545,7 +637,9 @@ FreeBSD 旧版本下载地址:
 
 ![](../.gitbook/assets/ins30.png)
 
-询问你是否需要创建普通用户。如需创建，请按 **回车键** 选 `Yes`；如果不需要普通用户，~~是 root 敢死队~~，请用 **方向键** 选 `No`。
+`您现在希望向已安装的系统添加用户吗？`
+
+如需创建，请按 **回车键** 选 `Yes`；如果不需要普通用户，~~是 root 敢死队~~，请用 **方向键** 选 `No`。
 
 
 >**技巧**
@@ -568,13 +662,19 @@ FreeBSD 旧版本下载地址:
 
 ![](../.gitbook/assets/ins32.png)
 
+`您的 FreeBSD 系统设置即将完成。您现在可以修改您的配置选项。此菜单之后，您将有机会使用 shell 进行更复杂的更改。`
+
 按 **回车键** 可结束安装。
 
 ![](../.gitbook/assets/ins33.png)
 
+`安装现已完成。在退出安装程序前，您是否想在新系统中打开 shell 以进行最后的手动修改？`
+
 按 **回车键** 可完成安装。
 
 ![](../.gitbook/assets/ins34.png)
+
+`FreeBSD 安装完成！您现在是否希望重新启动并进入已安装的系统？`
 
 按 **回车键** 可重启进入新安装的系统。
 

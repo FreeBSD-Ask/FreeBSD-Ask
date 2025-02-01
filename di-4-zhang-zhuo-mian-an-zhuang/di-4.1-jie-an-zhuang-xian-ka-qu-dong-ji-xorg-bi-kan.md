@@ -91,7 +91,7 @@ FreeBSD 14.1-RELEASE、14-STABLE（OSVERSION >1400508）、FreeBSD 15 CUEERNT，
 
 >**注意**
 >
->在使用 Ports 时，drm 需要在 `/usr/src` 中有一份当前版本系统源代码，可参考系统更新章节。
+>在使用 Ports 时，drm 需要在 `/usr/src` 中有一份当前版本系统源代码，可参考系统更新章节。如果你是参考的本书其他章节进行的安装，那么你的系统中很可能已经有一份源码了，无需再获取源码。
 
 
 - FreeBSD 13.X
@@ -403,6 +403,7 @@ xorg 最小化包: xorg-minimal（不建议）
 
 - 如果显卡使用驱动有问题请直接联系作者：[https://github.com/freebsd/drm-kmod/issues](https://github.com/freebsd/drm-kmod/issues)
 - 如果笔记本出现了唤醒时屏幕点不亮的问题，可以在 `/boot/loader.conf` 中添加 `hw.acpi.reset_video="1"` 以在唤醒时重置显示适配器。
+- 普通用户若非 `wheel` 组成员，那么请加入 `video` 组。
 
 >**警告**
 >
@@ -411,6 +412,8 @@ xorg 最小化包: xorg-minimal（不建议）
 ## 参考文献
 
 - 详细情况可以看 [wiki/Graphics](https://wiki.freebsd.org/Graphics)
+
+---
 
 > **小故事**
 >

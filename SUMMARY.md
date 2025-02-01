@@ -190,10 +190,9 @@
 * [第 18.3 节 树莓派 FreeBSD 配置](di-18-zhang-shu-mei-pai-yu-riscv/di-18.3-jie-shi-yong-pei-zhi.md)
 * [第 18.4 节 USB 网卡与 WiFi](di-18-zhang-shu-mei-pai-yu-riscv/di-18.4-jie-usb-wang-ka-yu-wifi.md)
 * [第 18.5 节 树莓派与 Linux 兼容层](di-18-zhang-shu-mei-pai-yu-riscv/di-18.5-jie-shu-mei-pai-yu-linux-jian-rong-ceng.md)
-* [第 18.6 节 RISC-V 简介](di-18-zhang-shu-mei-pai-yu-riscv/di-18.6-jie-riscv.md)
+* [第 18.6 节 树莓派 5](di-18-zhang-shu-mei-pai-yu-riscv/18.6-shu-mei-pai-5.md)
 * [第 18.7 节 树莓派与 OpenBSD](di-18-zhang-shu-mei-pai-yu-riscv/di-18.7-jie-shu-mei-pai-yu-openbsd.md)
 * [第 18.8 节 在 RISCV 开发板上安装 OpenBSD](di-18-zhang-shu-mei-pai-yu-riscv/di-18.8-jie-zai-riscv-kai-fa-ban-shang-an-zhuang-openbsd.md)
-* [第 18.9 节 树莓派 5](di-18-zhang-shu-mei-pai-yu-riscv/18.9-shu-mei-pai-5.md)
 
 ## 第 19 章 文学故事
 
