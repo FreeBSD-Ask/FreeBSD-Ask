@@ -389,14 +389,14 @@ FreeBSD 旧版本下载地址:
 
 |配置选项|中文|特点|
 |---|---|---|
-|`Striping` |条带化 |无冗余，一块硬盘即可|
+|`Stripe` |条带化 |无冗余，一块硬盘即可|
 |`mirror` |镜像| n 路镜像，最少需要 2 块硬盘|
 |`raid10` |RAID 1+0 | n 组 2 路镜像，最少需要 2 块硬盘（要求偶数块硬盘）|
 |`raidz1`| RAID-Z1 | 单冗余 RAID，最少需要 3 块硬盘|
 |`raidz2` |RAID-Z2 | 双冗余 RAID，最少需要 4 块硬盘|
 |`raidz3` |RAID-Z3 | 三重冗余 RAID，最少需要 5 块硬盘|
 
-我们直接按 **回车键** 使用默认的 `Striping` 即可。
+我们直接按 **回车键** 使用默认的 `Stripe` 即可。
 
 ![](../.gitbook/assets/ins10.png)
 
@@ -625,15 +625,23 @@ FreeBSD 旧版本下载地址:
 |`8 secure_console`|启用控制台密码（单用户模式下也需要 root 密码）|
 |`9 disable_ddttrace`|禁止 DTrace 破坏性（destructive）模式|
 
-![](../.gitbook/assets/install-14.2.png)
+![虚拟机无固件可安装](../.gitbook/assets/install-14.2.png)
 
 自动检测安装所需固件（14.2 [引入](https://cgit.freebsd.org/src/commit/?id=03c07bdc8b31)）。
+
+**此图片来自虚拟机安装界面**
+
+![物理机也许有些固件需要安装](../.gitbook/assets/2-install.png)
+
+**此图片来自物理机安装界面**
 
 经过实际测试（无线网卡 rtl8852be），这一步可能并不起作用。如果你在安装时有无线网络，重启后丢失，`dmesg` 发现有很多关于无线网卡的报错，如 `failed with error -2`（rtw89），你会发现 `/boot/firmware` 是空的，请你安装对应固件（本例中应该使用 pkg 或者 port `net/wifi-firmware-rtw89-kmod`（安装至路径 `/boot/modules`）。
 
 >**技巧**
 >
 >如果这一步你回车直接出现了 Panic 重启，请再来一次，全部取消勾选之。即不安装。可以参考其他章节文章安装显卡驱动和网卡驱动。
+>
+>![](../.gitbook/assets/1-install.png)
 
 ![](../.gitbook/assets/ins30.png)
 
@@ -662,7 +670,7 @@ FreeBSD 旧版本下载地址:
 
 ![](../.gitbook/assets/ins32.png)
 
-`您的 FreeBSD 系统设置即将完成。您现在可以修改您的配置选项。此菜单之后，您将有机会使用 shell 进行更复杂的更改。`
+`您的 FreeBSD 系统设置即将完成。您现在可以修改您的配置选项。此菜单之后，您可使用 shell 进行更复杂的更改。`
 
 按 **回车键** 可结束安装。
 
