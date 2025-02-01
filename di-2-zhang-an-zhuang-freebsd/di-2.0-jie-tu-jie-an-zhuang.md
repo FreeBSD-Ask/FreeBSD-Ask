@@ -314,6 +314,11 @@ FreeBSD 旧版本下载地址:
 > ```
 >
 > 你在手动安装的时候可以判断是哪块硬盘，以确定 `ada0` 这个参数是多少。
+> 
+>如果不确定自己的硬盘是哪块（比如分不清是 `da0` 还是 `nv0` 之类的）：可使用图片中的命令查看。
+>
+>![](../.gitbook/assets/ins11.png)
+>
 >
 > 刷新后，输入 `bsdinstall` 即可进入安装模式。
 >
@@ -323,9 +328,27 @@ FreeBSD 旧版本下载地址:
 
 现代计算机应该选择 `GPT+UEFI`。较老的计算机（比如 2013 年以前的）应该选择选项 `GPT(BIOS)`——此默认选项同时兼容二者。
 
+
+![](../.gitbook/assets/ins8.2.png)
+
+|选项|中文|说明|
+|---|---|---|
+|`>> Install Proceed with Installation`| >> 安装 继续安装||
+|`T Pool Type/Disks: stripe: 0 disks` |存储池类型/磁盘： stripe：0 块磁盘|详细说明见下|
+|`- Rescan Devices *` |- 重新扫描设备 *||
+|`- Disk Info *` |- 磁盘信息 *||
+|`N Pool Name zroot` |存储池名称 `zroot`|默认池名 `zroot`|
+|`4 Force 4K Sectors? YES` |强制 4K 扇区？ 是|4K 对其|
+|`E Encrypt Disks? NO` |加密磁盘？ 否|加密后的登录系统方案请参照本书其他文章|
+|`P Partition Scheme` |GPT (UEFI) 分区方案 GPT (UEFI)|只有老电脑才需要 `GPT (BIOS+UEFI)` 等选项，请不要使用此处的默认选项|
+|`S Swap Size 2g` |交换分区大小 2g|如果你的确不需要 Swap，`Swap Size` 输入 `0` 或 `0G` 即可不设置交换分区。|
+|`M Mirror Swap? NO`| 交换分区镜像？ 否|是否在多个磁盘之间镜像交换分区，若选否，则每个磁盘的交换分区是独立的|
+|`W Encrypt Swap? NO` |加密交换分区？ 否|  |
+
+
 >**技巧**
 >
->如果在此处设置 `P Partition Scheme` 为 `GPT (UEFI)` 而非其他（只有老电脑才需要 `GPT (BIOS+UEFI)` 等选项），后续分区与系统更新过程会更加简单。
+>如果在此处设置 `P Partition Scheme` 为 `GPT (UEFI)` 而非其他，后续分区与系统更新过程会更加简单。
 
 >**注意**
 >
@@ -333,9 +356,15 @@ FreeBSD 旧版本下载地址:
 
 >**技巧**
 >
->如果你的确不需要 Swap，`Swap Size` 输入 `0` 或 `0G` 即可不设置交换分区。
-
-![](../.gitbook/assets/ins8.2.png)
+>如果分不清应该后续选择哪块磁盘，可以在此步选择 `- Disk Info *`，查看磁盘信息：
+>
+>![](../.gitbook/assets/diskinfo.png)
+>
+>此界面，选中磁盘按 **回车键** 可查看详情；选中 `<Back>` 可返回上一菜单。
+>
+>![](../.gitbook/assets/diskinfo2.png)
+>
+>此界面按 **上下方向键** 可浏览。按 **回车键** 可返回到上一菜单。
 
 ![](../.gitbook/assets/ins9.png)
 
@@ -353,16 +382,6 @@ FreeBSD 旧版本下载地址:
 ![](../.gitbook/assets/ins10.png)
 
 选中你的硬盘，直接按 **回车键** 即可。
-
-
->**技巧**
->
->如果不确定自己的硬盘是哪块（比如分不清是 `da0` 还是 `nv0` 之类的）：请按 **ctrl** + **c** 选择 `Restart`，再按两次 `ESC` 退回最开始，选择 `Shell`，然后使用图片中的命令查看。
->
->![](../.gitbook/assets/ins11.png)
->
->查看完成后输入 `exit` 回车可继续以下安装过程。
-
 
 >**注意**
 >
