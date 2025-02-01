@@ -328,7 +328,6 @@ FreeBSD 旧版本下载地址:
 
 现代计算机应该选择 `GPT+UEFI`。较老的计算机（比如 2013 年以前的）应该选择选项 `GPT(BIOS)`——此默认选项同时兼容二者。
 
-
 ![](../.gitbook/assets/ins8.2.png)
 
 |选项|中文|说明|
@@ -338,9 +337,9 @@ FreeBSD 旧版本下载地址:
 |`- Rescan Devices *` |- 重新扫描设备 *||
 |`- Disk Info *` |- 磁盘信息 *||
 |`N Pool Name zroot` |存储池名称 `zroot`|默认池名 `zroot`|
-|`4 Force 4K Sectors? YES` |强制 4K 扇区？ 是|4K 对其|
+|`4 Force 4K Sectors? YES` |强制 4K 扇区？ 是|4K 对齐|
 |`E Encrypt Disks? NO` |加密磁盘？ 否|加密后的登录系统方案请参照本书其他文章|
-|`P Partition Scheme` |GPT (UEFI) 分区方案 GPT (UEFI)|只有老电脑才需要 `GPT (BIOS+UEFI)` 等选项，请不要使用此处的默认选项|
+|`P Partition Scheme` |GPT (UEFI) 分区方案 GPT (UEFI)|只有老电脑才需要 `GPT (BIOS+UEFI)` 等选项|
 |`S Swap Size 2g` |交换分区大小 2g|如果你的确不需要 Swap，`Swap Size` 输入 `0` 或 `0G` 即可不设置交换分区。|
 |`M Mirror Swap? NO`| 交换分区镜像？ 否|是否在多个磁盘之间镜像交换分区，若选否，则每个磁盘的交换分区是独立的|
 |`W Encrypt Swap? NO` |加密交换分区？ 否|  |
