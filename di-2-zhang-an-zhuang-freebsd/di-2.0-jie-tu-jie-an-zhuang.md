@@ -394,7 +394,7 @@ FreeBSD 旧版本下载地址:
 |`raid10` |RAID 1+0 | n 组 2 路镜像|
 |`raidz1`| RAID-Z1 | 单冗余 RAID|
 |`raidz2` |RAID-Z2 | 双冗余 RAID|
-|raidz3` |RAID-Z3 | 三重冗余 RAID|
+|`raidz3` |RAID-Z3 | 三重冗余 RAID|
 
 我们直接按 **回车键** 使用默认的 `Striping` 即可。
 
