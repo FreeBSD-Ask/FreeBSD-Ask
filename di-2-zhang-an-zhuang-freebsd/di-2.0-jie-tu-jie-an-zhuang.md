@@ -299,7 +299,14 @@ FreeBSD 旧版本下载地址:
 
 ![](../.gitbook/assets/ins7.png)
 
-推荐：文件分区详解见其他章节。这里推荐选择默认选项 `auto ZFS`，一般来说内存小于 8GB 的应该选择 UFS，内存 8G 及以上的应该选用 ZFS。可手动分区解压 `txz` 文件以自定义，参加其他章节。
+|选项|中文说明|
+|---|---|
+|`Auto (ZFS) – Guided Root-on-ZFS`|自动 (ZFS) – 引导式 ZFS root 分区|
+|`Auto (UFS) – Guided UFS Disk Setup`|自动 (UFS) – 引导式 UFS 磁盘设置|
+|`Manual – Manual Disk Setup (experts)`|手动 – 手动磁盘设置（适合专家）|
+|`Shell – Open a shell and partition by hand`|Shell – 打开 Shell 并手动分区|
+
+文件分区详解见其他章节（可手动分区解压 `txz` 文件以自定义，参见其他章节）。这里，推荐选择默认选项 `auto ZFS`：一般来说，内存小于 8GB 的应该选择 UFS，内存 8G 及以上的应该选用 ZFS。
 
 >**技巧**
 >
