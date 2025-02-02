@@ -217,6 +217,13 @@ Skype: [https://join.skype.com/xktkQtXZopfv](https://join.skype.com/xktkQtXZopfv
   - [ ] 微信双开
 - [ ] WPS
   - [ ] 解决 fcitx、fcitx5 输入法不能输入的问题
+- [ ] HTTP代理
+  - [ ] 测试 [Clash Verge Rev](https://github.com/clash-verge-rev/clash-verge-rev) 能否在 FreeBSD 上正常运行
+  - [ ] 测试 [V2raya](https://github.com/v2rayA/v2rayA) 能否在 FreeBSD 上正常运行
+- [ ] 浏览器
+  - [ ] Google Chrome / Chromium Google 账号同步
+
+
 
 </pre> </details>
 
