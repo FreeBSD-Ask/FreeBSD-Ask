@@ -47,4 +47,15 @@ swapfile="/usr/swap0"
 /dev/zvol/zroot/swap none swap sw
 ```
 
+写入后用命令 `mount -al` 检查一下，无错误输出才可。
 
+## 查看 swap 用量
+
+
+```sh
+root@ykla:~ # swapinfo -h
+Device              Size     Used    Avail Capacity
+/dev/nda0p3         2.0G       0B     2.0G     0%
+```
+
+可以看到，`/dev/nda0p3` 是交换分区，大小为 2G，已用 0。
