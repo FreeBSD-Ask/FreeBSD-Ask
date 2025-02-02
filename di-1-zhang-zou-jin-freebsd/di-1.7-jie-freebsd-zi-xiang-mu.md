@@ -9,6 +9,8 @@
 本节是对 [Projects](https://freebsdfoundation.org/our-work/projects/) 的翻译。
 
 
+
+
 **FreeBSD 基金会赞助和社区贡献的 FreeBSD 特色项目**
 
 FreeBSD 基金会以资金和资源赞助 FreeBSD 操作系统的开发活动，重点是提升 FreeBSD 的安全性、性能和可用性。我们与社区携手合作，共同努力，确保 FreeBSD 的恒久生命力。
@@ -18,9 +20,19 @@ FreeBSD 基金会以资金和资源赞助 FreeBSD 操作系统的开发活动，
 如想参与，请访问 [FreeBSD 项目页面](https://www.freebsd.org/projects/)。
 
 
+
+## 改进 FreeBSD 上的 OpenJDK
+
+**正在进行**
+
+本项目的主要目标是改善 OpenJDK 在 FreeBSD/amd64 和 FreeBSD/arm64 平台上的支持。为此，我们将与 FreeBSD 及 OpenJDK 社区密切合作，共同识别并解决问题和缺失的功能。在可能的情况下，相关工作将提交至上游，并且我们的一个重要目标是让 OpenJDK 的 JCK 测试套件在 FreeBSD 上全部通过。
+
+此外，该项目还着力于在 FreeBSD 平台上打造强大的 Java 生态系统。我们将通过加入 FreeBSD 企业工作组、通过邮件列表和博客定期发布更新，以及广泛征集想法和测试反馈，与社区保持积极互动。同时，项目还包括为 FreeBSD 上的 OpenJDK 搭建并维护持续集成系统。
+
+
 ## OCI 容器支持
 
-正在进行
+**正在进行**
 
 ### 基于 Jail/Bhyve 实现 OCI 容器，支持 Podman 和 Buildah。
 
@@ -45,7 +57,7 @@ Doug 还撰写了一篇[文章](https://freebsdfoundation.org/freebsd-container-
 
 ## UnionFS 稳定性与增强
 
-正在进行
+**正在进行**
 
 ### UnionFS 项目旨在使其稳定、增强其在 FreeBSD 上的实用性，重点包括：支持对只读文件系统的表面修改，支持多个共享相同基础的 jail 并简化升级，以及通过分层的预打包镜像促进容器场景的实现。
 
@@ -83,7 +95,7 @@ Doug 还撰写了一篇[文章](https://freebsdfoundation.org/freebsd-container-
 
 ## OpenZFS 分级速率限制
 
-正在进行
+**正在进行**
 
 ### 该项目旨在通过引入类似配额可配置的分级速率限制，控制读/写操作次数和读/写带宽，从而提升系统性能和资源管理。
 
@@ -111,7 +123,7 @@ OpenZFS 尤为适合大规模和高要求的应用程序，如虚拟化和容器
 
 ## AMD IOMMU
 
-正在进行
+**正在进行**
 
 ### 开发完整的 FreeBSD AMD IOMMU（输入输出内存管理单元）驱动的项目。
 
@@ -125,7 +137,7 @@ OpenZFS 尤为适合大规模和高要求的应用程序，如虚拟化和容器
 
 ## FreeBSD 图形化安装程序
 
-正在进行
+**正在进行**
 
 ### 开发 FreeBSD 图形化安装界面的项目
 
@@ -143,7 +155,7 @@ OpenZFS 尤为适合大规模和高要求的应用程序，如虚拟化和容器
 
 ## FreeBSD 对 RISC-V 64 位的支持
 
-正在进行
+**正在进行**
 
 ### 为 64 位 RISC-V 架构提供支持的项目
 
@@ -159,7 +171,7 @@ FreeBSD/RISC-V 项目旨在为 [RISC-V 指令集架构](https://riscv.org/) 提�
 
 ## FreeBSD 的视觉辅助子系统
 
-正在进行
+**正在进行**
 
 ### 为盲人、低视力和色盲用户提供子系统的项目
 
@@ -179,7 +191,7 @@ FreeBSD/RISC-V 项目旨在为 [RISC-V 指令集架构](https://riscv.org/) 提�
 
 ## 改进音频
 
-正在进行中
+**正在进行**中
 
 ### 加强 FreeBSD 的音频堆栈，以改善对现代音频硬件和软件应用程序的支持。
 
@@ -201,7 +213,7 @@ FreeBSD/RISC-V 项目旨在为 [RISC-V 指令集架构](https://riscv.org/) 提�
 
 ## 完善 CI 
 
-正在进行
+**正在进行**
 
 ### 改进持续集成 (CI) 基础设施，以确保更可靠和高效的软件开发和测试过程。
 
@@ -213,7 +225,7 @@ FreeBSD/RISC-V 项目旨在为 [RISC-V 指令集架构](https://riscv.org/) 提�
 
 关键成就包括使用来自退役机器的零件升级测试虚拟机的磁盘和内存，将 stable/13 任务的构建环境更新为 13.3-RELEASE，并将主分支上的 i386 构建过渡为使用 amd64 的交叉构建。
 
-正在进行的努力包括合并关键审查，向 CI 集群添加新硬件，以及设计预提交 CI 系统和拉取/合并请求系统。团队还在致力于利用 CI 集群构建发布工件，简化 CI/测试环境设置，以及重新设计硬件测试实验室。
+**正在进行**的努力包括合并关键审查，向 CI 集群添加新硬件，以及设计预提交 CI 系统和拉取/合并请求系统。团队还在致力于利用 CI 集群构建发布工件，简化 CI/测试环境设置，以及重新设计硬件测试实验室。
 
 未来计划包括收集 CI 任务和想法，为虚拟机客机测试设置公共网络访问，实现裸金属硬件测试套件，添加针对 -CURRENT 的 DRM Port 构建测试，以及运行 ztest 测试。团队的目标是改善 FreeBSD 在 CI 流水线中的支持，并与托管的 CI 提供商合作。
 
@@ -221,7 +233,7 @@ FreeBSD/RISC-V 项目旨在为 [RISC-V 指令集架构](https://riscv.org/) 提�
 
 ##  将 FreeBSD 作为 cloud-init 一级平台
 
-正在进行
+**正在进行**
 
 ### 增强对 cloud-init 的支持，使 FreeBSD 成为 Tier I 平台，改善FreeBSD 在云环境中的集成和可用性。
 
@@ -241,7 +253,7 @@ Cloud-init 现已成为在云中设置服务器的标准。在过去一年半的
 
 ## FreeBSD 上的 OpenStack
 
-正在进行
+**正在进行**
 
 ### FreeBSD 上的 OpenStack 项目旨在将 OpenStack 云基础设施与 FreeBSD 操作系统无缝集成，利用 FreeBSD 的独特功能，同时保持与 OpenStack 标准的兼容性。
 
@@ -265,7 +277,7 @@ Cloud-init 现已成为在云中设置服务器的标准。在过去一年半的
 
 ## WiFi 更新 – Intel 驱动程序和 802.11ac
 
-正在进行
+**正在进行**
 
 ### 此更新支持了当前一代 Intel WiFi 设备和 802.11ac 标准，来改善无线连接性。
 
@@ -287,7 +299,7 @@ Cloud-init 现已成为在云中设置服务器的标准。在过去一年半的
 
 ---
 
-　　　　以下为已完成部分
+　　　　以下为**已完成**部分
 
 ---
 
@@ -307,7 +319,7 @@ FreeBSD 基金会的企业工作组认为需要类似于 jail 的 Bhyve 工具�
 
 ### 文档更新
 
-对 FreeBSD 手册和 Porter 手册进行了几次更新，重点关注虚拟化、Bhyve 配置和管理 Bhyve 客户。正在进行 Bhyve 手册页结构的更新审查，并计划进一步改进内容。欢迎对此次更新提出反馈。
+对 FreeBSD 手册和 Porter 手册进行了几次更新，重点关注虚拟化、Bhyve 配置和管理 Bhyve 客户。**正在进行** Bhyve 手册页结构的更新审查，并计划进一步改进内容。欢迎对此次更新提出反馈。
 
 ### 为 arm64 客户创建的扁平设备树
 
@@ -333,18 +345,18 @@ Mark Johnston 和 Andrew Turner 合作创建了构建 arm64 bhyve 客户的扁�
 
 团队目前专注于几个关键任务：
 
-* **自动化镜像构建和发布过程：**  正在进行的努力旨在自动化镜像构建和发布过程，以将这些改进合并到 FreeBSD 的 src/release/ 仓库中。
+* **自动化镜像构建和发布过程：**  **正在进行**的努力旨在自动化镜像构建和发布过程，以将这些改进合并到 FreeBSD 的 src/release/ 仓库中。
 * **构建和发布快照构建：**  快照构建正在开发和发布到 Azure 社区画廊，为用户提供最新的开发和更新。
 
 ## 移植 .NET (dotnet) 
 
-### 将“dotnet”原生移植到 FreeBSD，初始版本为 8，后续版本的移植正在进行
+### 将“dotnet”原生移植到 FreeBSD，初始版本为 8，后续版本的移植**正在进行**
 
 **联系人：** Gleb Popov [arrowd@freebsd.org](mailto:arrowd@freebsd.org)
 
 在 FreeBSD 上对 .NET 的支持（**dotnet**）使开发者能够选择自己喜欢的平台而不受限制。这种兼容性使他们能够利用 FreeBSD 独特的优势，同时保持与 .NET 一致的开发环境。
 
-新的 .NET 原生移植目前可用于 **amd64** 架构（对 **aarch64** 的支持正在进行中），将 .NET 运行时版本 8 带入 FreeBSD。这确保了完全兼容，同时利用了 FreeBSD 的性能和安全特性，使开发者能够充分利用 FreeBSD 的功能。
+新的 .NET 原生移植目前可用于 **amd64** 架构（对 **aarch64** 的支持**正在进行**中），将 .NET 运行时版本 8 带入 FreeBSD。这确保了完全兼容，同时利用了 FreeBSD 的性能和安全特性，使开发者能够充分利用 FreeBSD 的功能。
 
 将 .NET 移植到 FreeBSD 是一个协作努力，涉及主要社区贡献者。Gleb Popov（**arrowd@FreeBSD.org**）维护 .NET 移植，**[thefrank](https://github.com/Thefrank)**、Naram Qashat（**cyberbotx@cyberbotx.com**）和 Szczepan Ćwikliński（**[sec](https://github.com/sec)**）也做出了重要贡献。团队与 dotnet 上游项目积极合作，包括在 GitHub 上提交 PR。他们的共同努力对实现 .NET 在 FreeBSD 上的运行至关重要。
 
@@ -379,7 +391,7 @@ FreeBSD clusteradm 团队在新集群的集成阶段发挥了关键作用。
 
 ## Olivier Certner 的杂项更新
 
-已完成
+**已完成**
 
 ### FreeBSD 源代码树各部分的杂项更新
 
@@ -395,7 +407,7 @@ FreeBSD clusteradm 团队在新集群的集成阶段发挥了关键作用。
 
 ## FreeBSD 14 CIS 基准（互联网安全中心）
 
-已完成
+**已完成**
 
 这是个全面的安全加固指南，旨在帮助安全高效地配置 FreeBSD 系统。
 
@@ -427,20 +439,20 @@ FreeBSD 上的矢量数据包处理（VPP）项目旨在将 VPP 这一开源的�
 
 文档工作专注于 FreeBSD 特定的 API 和用法，为开发者和用户提供清晰的指导。创建 VPP 的 FreeBSD 移植成功简化了安装和部署，使用户更易于使用。
 
-VPP 的 FreeBSD 移植取得了成功，正在进行的工作旨在进一步增强其能力。不断进行改进和优化，以确保 FreeBSD 的网络性能保持强大和高效，巩固其在高速网络应用中的适用性。
+VPP 的 FreeBSD 移植取得了成功，**正在进行**的工作旨在进一步增强其能力。不断进行改进和优化，以确保 FreeBSD 的网络性能保持强大和高效，巩固其在高速网络应用中的适用性。
 
 **更多信息：** **[Vector Packet Processor (GitHub)](https://github.com/adventureloop/vpp)**
 
 
 ## 网络夏季实习
 
-已完成
+**已完成**
 
 Naman Sood 是 FreeBSD 基金会的夏季实习生，一直在从事与网络相关的任务。Naman 在开始实习时提交了对 FreeBSD 中一个防火墙（pf）的改进。如，他们完成了 Luiz Amaral 开展的工作，以使 pfsync（pf 的状态表同步接口）流量通过 IPv6 进行传输。他们还提交了对 pf 完全圆锥 NAT 实现 RFC 4787 REQs 1 和 3 的工作。完全圆锥 NAT 意味着来自内部 IP/端口的所有请求都映射到相同的外部 IP/端口，这使得某些设备（如 Nintendo Switch）能够在 FreeBSD 上运行 pf 的情况下正常工作。Naman 还承担了一些杂项任务，例如探索从 Klaus P. Ohrhallinger 开展的 FreeBSD 项目 VPS 中提取 TCP 检查点和故障转移的工作，以及提交 pw(8) 和 du(1) 的 bug 修复。
 
 ## 文档和测试实习
 
-已完成
+**已完成**
 
 2023 年 7 月，Yan-Hao Wang 开始在基金会进行夏季实习，承担各种任务。以下是一些计划的工作内容：
 
@@ -456,7 +468,7 @@ FreeBSD 手册页面和文档的“专家系统”将是一个尽力而为的概
 
 ## 解决 OpenSSL 3 / LLVM 16 Port 问题
 
-已完成
+**已完成**
 
 随着 FreeBSD 主分支中 OpenSSL 更新到版本 3，许多 Port 构建错误必须在 FreeBSD 14.0 发布之前解决。与 OpenSSL 3 和 LLVM 15 的大多数关键问题已经得到修复，但在使用 LLVM 16 时，约有 800 个额外的 Port 无法构建，导致在完整的 Ports 构建中跳过了 2800 个依赖 Port。穆罕默德·莫伊努尔（Moin）·拉赫曼将完成所有与 OpenSSL 3 和 LLVM 16 更新相关 Port 问题的耗时且繁琐的修复工作。
 
@@ -478,7 +490,7 @@ SIMD 增强函数的存在将在新的手册页 simd(7)中记录。该页面将�
 
 ## Capsicum 实习
 
-已完成
+**已完成**
 
 从 2023 年 6 月 1 日到 9 月 1 日，Jake Freeland 将在基金会实习，致力于 Capsicum，这是 FreeBSD 的沙箱框架。Capsicum 的设计目的是限制应用程序和库的能力。Capsicum 模型简单且安全，但围绕该框架的进展和发展在近年来逐渐减缓。Capsicum 的核心思想直观易懂；一旦进入能力模式，资源获取和外部通信就会受到严格限制。围绕这一原则设计程序相对容易，但当现有的未设计为沙箱的应用程序需要在此环境中运行时，问题便接踵而来。确定哪些操作会导致 Capsicum 违规是困难的，而预先打开尚未请求/命名的资源是不可能的。此外，开发人员在开始实现 Capsicum 功能之前需要对程序有充分的了解。这些原因解释了为何 Capsicum 化的工作逐渐减缓。
 
@@ -520,7 +532,7 @@ David Chisnall 提出的差异修订 <https://reviews.freebsd.org/D33248> 提议
 
 ## 无线实习
 
-已完成
+**已完成**
 
 En-Wei Wu 是 2022 年谷歌编程之夏的贡献者，他于 2023 年初开始在 FreeBSD 基金会实习，专注于 FreeBSD 的无线驱动程序和工具。工作分为三个部分。
 
@@ -532,7 +544,7 @@ wtap(4) 是由 Monthadar Al Jaberi 和 Adrian Chadd 于 2012 年推出的 net802
 
 ## 改进 kinst DTrace 提供程序
 
-已完成
+**已完成**
 
 DTrace 是一个框架，赋予管理员和内核开发人员实时观察内核行为的能力。DTrace 具有称为“提供程序”的内核模块，这些模块通过“探针”在内核中执行特定的插桩。
 
@@ -551,7 +563,7 @@ kinst 探针的形式为 \`kinst::\<function\>:\<instruction\>\`，其中 \`\<fu
 
 ## 使用日志化软更新的文件系统快照
 
-已完成
+**已完成**
 
 UFS/FFS 文件系统有快照能力。由于快照功能是在软更新编写之后添加的，因此它们与软更新完全集成。然而，当在 2010 年添加日志化软更新时，它们从未与快照集成。因此，在运行日志化软更新的文件系统上无法使用快照。
 
@@ -563,7 +575,7 @@ UFS/FFS 文件系统有快照能力。由于快照功能是在软更新编写之
 
 ## WireGuard 审查、更新与集成
 
-已完成
+**已完成**
 
 WireGuard 是一种安全的隧道协议，具有用户空间和内核实现。在初期的修复程序发布后，FreeBSD 内核的 WireGuard 代码库更加完整和稳定。现在为每个提交设置了自动 CI，对 wireguard-freebsd 支持的版本进行编译并运行小规模的冒烟测试。
 
@@ -575,7 +587,7 @@ WireGuard 是一种安全的隧道协议，具有用户空间和内核实现。�
 
 ## LLDB 改进第三部分 – 内核调试支持
 
-已完成
+**已完成**
 
 FreeBSD 的基础系统有 LLDB，它是 LLVM 家族的调试器。与 GNU GDB 调试器相比，FreeBSD 的 LLDB 目前存在一些限制，尚未完全取代 GDB。这个多阶段项目旨在为 FreeBSD 提供现代化的调试器，使 LLDB 更接近于一款功能齐全的 GDB 替代品。
 
@@ -589,7 +601,7 @@ libkvm 是 FreeBSD 基础系统的一部分，提供了一种统一的接口，�
 
 ## LLDB 改进第二部分 – 额外的 CPU 支持、跟踪 Fork 操作和 SaveCore 功能
 
-已完成
+**已完成**
 
 FreeBSD 的基础系统有 LLDB，它是 LLVM 家族的调试器。与 GNU GDB 调试器相比，FreeBSD 的 LLDB 目前存在一些限制，尚未完全取代 GDB。这个多阶段项目旨在为 FreeBSD 提供现代化的调试器，使 LLDB 更接近于一款功能齐全的 GDB 替代品。
 
@@ -604,7 +616,7 @@ FreeBSD 的基础系统有 LLDB，它是 LLVM 家族的调试器。与 GNU GDB �
 
 ## LLDB 改进第一部分 – 改进基础设施
 
-已完成
+**已完成**
 
 FreeBSD 的基础系统有 LLDB，它是 LLVM 家族的调试器。与 GNU GDB 调试器相比，FreeBSD 的 LLDB 目前存在一些限制，尚未完全取代 GDB。这个多阶段项目旨在为 FreeBSD 提供现代化的调试器，使 LLDB 更接近于一款功能齐全的 GDB 替代品。
 
@@ -612,7 +624,7 @@ FreeBSD 的 LLDB 使用的传统单体目标支持在同一进程空间中执行
 
 ## 针对 Linuxulator 兼容性的改进
 
-已完成
+**已完成**
 
 基金会此前资助了改善 Linux ABI 层（“Linuxulator”）的项目，重点是基础设施和诊断工具。这些早期项目为进一步的工作奠定了良好的基础，并修复了许多问题，但对用户的实际影响并不一定明确。
 
@@ -624,7 +636,7 @@ FreeBSD 的 LLDB 使用的传统单体目标支持在同一进程空间中执行
 
 ## 更新 DRM 图形驱动
 
-已完成
+**已完成**
 
 FreeBSD 当前的直接渲染管理器（DRM）图形驱动程序在源代码树之外进行维护。这部分是由于许可问题，因为它们依赖于 GPL 下的一些 Linux 代码（尽管驱动程序本身是双重 BSD + GPL 许可）。这些驱动程序也越来越过时。
 
@@ -634,7 +646,7 @@ FreeBSD 当前的直接渲染管理器（DRM）图形驱动程序在源代码树
 
 ## ZStd 集成到 OpenZFS
 
-已完成
+**已完成**
 
 ZFS 是一个结合了文件系统和逻辑卷管理器的设计，旨在防止数据损坏并支持高存储容量。OpenZFS 提供了一种透明的压缩功能，能够在存储数据之前对其进行压缩，并在将数据返回给应用程序之前进行解压缩。这种压缩不仅节省空间，而且借助高性能的压缩算法，可以通过减少数据总量来降低读写延迟。
 
@@ -646,17 +658,17 @@ OpenZFS 提供了两种主要的压缩参数，分别是 LZ4（高速，低节�
 
 ## 提升 if_bridge 性能
 
-已完成
+**已完成**
 
 当前的 if_bridge 实现严重依赖于单个 BRIDGE_LOCK 互斥锁。因此，其性能限制在每秒略高于 100 万个数据包，无论系统中有多少核心。这意味着，对于小数据包，它几乎可以饱和 1Gbps 的链路，但也仅此而已。对于完整的（1500 字节）数据包，它可以饱和 10Gbps 的链路，但无法满足 40Gbps 或更高速度的链路。系统在等待获取桥接锁的过程中花费了绝大多数时间。
 
 总体思路是用两个读多写锁替换单个互斥锁，一个保护整体桥接，另一个保护转发表。绝大多数数据包只需要读取锁，从而允许多个核心同时通过桥接传输数据包。
 
-该项目正在进行中，目标完成日期为 2020 年春初。
+该项目**正在进行**中，目标完成日期为 2020 年春初。
 
 ## 可扩展性和性能提升
 
-已完成
+**已完成**
 
 CPU 的核心和线程数量每年都在不断增加，而在这些新 CPU 上运行 FreeBSD 往往会显示出新的可扩展性瓶颈。该项目将使用一些激励性的用例，例如“poudriere -j 128”软件包构建和“will-it-scale”。
 
@@ -664,7 +676,7 @@ CPU 的核心和线程数量每年都在不断增加，而在这些新 CPU 上�
 
 ## 改进 Linuxulator 诊断
 
-已完成
+**已完成**
 
 FreeBSD 长期以来提供了一个 Linux 系统调用兼容层，之前能够执行大多数 Linux 二进制文件（在某些情况下速度甚至超过 Linux）。不幸的是，它最近没有得到太多开发，已逐渐落后，无法执行大多数现代 Linux 二进制文件。
 
@@ -672,7 +684,7 @@ FreeBSD 长期以来提供了一个 Linux 系统调用兼容层，之前能够�
 
 ## FUSE 用户空间文件系统更新
 
-已完成
+**已完成**
 
 FreeBSD 的 fuse(4) 驱动程序存在错误且过时。它基本上无法用于任何网络文件系统，如 CephFS、MooseFS 或 Tahoe-LAFS。该项目将修复所有已知的 fuse 错误，更新内核 API，并添加新的测试套件。
 
@@ -689,7 +701,7 @@ Fuse(4) 的内核 API（内核与文件系统守护进程之间的通信协议�
 
 ## 集成 SDIO 
 
-已完成
+**已完成**
 
 该项目旨在集成对 SDIO 的支持，为支持 SDIO 连接的 WiFi 模块（如树莓派等设备）迈出第一步。
 
@@ -700,7 +712,7 @@ Fuse(4) 的内核 API（内核与文件系统守护进程之间的通信协议�
 
 ## USB 大容量存储目标
 
-已完成
+**已完成**
 
 该项目提供了一个 USB 大容量存储目标，使得运行在嵌入式设备上的 FreeBSD 能够作为 USB 闪存驱动器出现，为用户提供了必要的文档和驱动程序，以便充分利用嵌入式目标。这在教学和产品环境中是非常宝贵的，成为出色的“开箱即用”体验的一部分。
 
@@ -708,7 +720,7 @@ Fuse(4) 的内核 API（内核与文件系统守护进程之间的通信协议�
 
 ## 现代化博通 Wi-Fi 
 
-已完成
+**已完成**
 
 该基金会资助了 Landon Fuller 的工作，以现代化 FreeBSD 对博通 Wi-Fi 适配器的支持，为 FreeBSD 上全面的博通 Wi-Fi 支持奠定基础，包括启用从博通的 ISC 许可的 Linux 驱动程序中采用额外的 softmac PHY 和 fullmac 设备支持。
 
@@ -719,7 +731,7 @@ Fuse(4) 的内核 API（内核与文件系统守护进程之间的通信协议�
 
 ## 开箱即用的无头模式
 
-已完成
+**已完成**
 
 该基金会资助了 Edward Napiarala 的工作，以提供 USB 供电功能（USB On The Go，USB OTG）的无头操作支持。虽然 FreeBSD 具备 OTG 支持，但默认情况下未启用/未配置，且往往无法正常工作。这使得在嵌入式设备（如树莓派 Zero）上使用 FreeBSD变得繁琐。
 
@@ -729,7 +741,7 @@ Fuse(4) 的内核 API（内核与文件系统守护进程之间的通信协议�
 
 ## ZFS 的“RAID-Z 扩展”功能开发
 
-已完成
+**已完成**
 
 Zettabyte 文件系统（ZFS）是一种组合文件系统和逻辑卷管理器，旨在防止数据损坏并支持高存储容量。
 
@@ -737,11 +749,11 @@ Zettabyte 文件系统（ZFS）是一种组合文件系统和逻辑卷管理器�
 
 这将通过“重新排列”所有现有数据来实现，将数据重新写入新的磁盘排列中，在逻辑 RAID-Z 组的末尾（因此在每个物理磁盘的末尾）留出一个新的连续空闲空间。重新排列的数据仍将保持原有的逻辑条带宽度，即数据与校验的比例将保持不变，而新写入的数据将使用新的逻辑条带宽度，具有改进的数据与校验比。重新排列的过程将在在线进行的同时，其他 zfs 和 zpool 操作也可以进行。
 
-该项目已完成。
+该项目**已完成**。
 
 ## 将 'blacklistd' 守护进程移植到 FreeBSD
 
-已完成
+**已完成**
 
 该项目提供了一个轻量级的守护进程，可以实时通知各种守护进程的“恶意行为”尝试。该守护进程将攻击的数据存储在一个持久化数据库中，并可以更新数据包过滤器，以阻止来自攻击者网络地址的访问。
 
@@ -749,7 +761,7 @@ Zettabyte 文件系统（ZFS）是一种组合文件系统和逻辑卷管理器�
 
 ## 在 FreeBSD 中集成 VIMAGE 支持
 
-已完成
+**已完成**
 
 该项目旨在完善 VIMAGE 网络栈代码，使其准备好投入生产。首先将更新以前在 Perforce 仓库中审查过的工作，逐步测试补丁，向社区展示，并将其纳入 FreeBSD SVN 基系统仓库的头部/分支。重点关注的两个主要领域是 (i) 网络栈的拆卸和排序，以及 (ii) 在拆卸过程中填补最后剩余的内存泄漏。
 
@@ -757,7 +769,7 @@ Zettabyte 文件系统（ZFS）是一种组合文件系统和逻辑卷管理器�
 
 ## 增强网络栈虚拟化项目
 
-已完成
+**已完成**
 
 FreeBSD 开发者：Bjoern Zeeb
 
@@ -767,7 +779,7 @@ FreeBSD 开发者：Bjoern Zeeb
 
 ## FreeBSD 的多路径 TCP
 
-已完成
+**已完成**
 
 多路径操作的 TCP 扩展（MPTCP）允许一个多宿主主机在单个 TCP 会话中利用多个网络接口/路径。该协议目前正在 IETF 中标准化，参考文献为 [RFC 6824](http://tools.ietf.org/html/rfc6824)。
 
@@ -777,13 +789,13 @@ FreeBSD 开发者：Bjoern Zeeb
 
 之前已经发布了一个[实验内核补丁](http://caia.swin.edu.au/urp/newtcp/mptcp/tools.html)。正在对 HEAD 分支进行持续开发。
 
-目前正在进行的功能包括扩展单路径模块 CC 代码以与 MPTCP 连接一起使用，以及添加一个模块化的数据包调度框架。此过程的一部分涉及重构现有 MPTCP 会话管理代码的大部分，以及创建新的多路径特定协议挂钩，这些步骤减少了 MPTCP 代码与现有 TCP 代码之间的耦合。
+目前**正在进行**的功能包括扩展单路径模块 CC 代码以与 MPTCP 连接一起使用，以及添加一个模块化的数据包调度框架。此过程的一部分涉及重构现有 MPTCP 会话管理代码的大部分，以及创建新的多路径特定协议挂钩，这些步骤减少了 MPTCP 代码与现有 TCP 代码之间的耦合。
 
 基金会很高兴能够支持使用 FreeBSD 的大学研究，并通过这样的赞助为项目的增强作出贡献。
 
 ## 移植 FreeBSD ARMv8 64 位 ARM 
 
-已完成
+**已完成**
 
 开发者：Andrew Turner 和 Semihalf sp.j.
 
@@ -791,11 +803,11 @@ FreeBSD 开发者：Bjoern Zeeb
 
 FreeBSD 基金会与 ARM、Cavium、Semihalf sp.j. 和 Andrew Turner 合作，将 FreeBSD 移植到 arm64。Cavium 直接向基金会提供支持，为开发社区提供工程专业知识和硬件。Cavium 的 ThunderX 平台与 FreeBSD 作为服务器操作系统的优势非常契合，支持在单个封装中最多 48 个核心。ThunderX 将是该项目的初始参考目标，但后续还会移植到其他 arm64 平台。
 
-该项目的总体目标是使 FreeBSD/arm64 达到一级地位，包括发布媒体和预构建的软件包集。有关 arm64 移植的更多信息，请访问 [FreeBSD wiki](https://wiki.freebsd.org/arm64)，正在进行中的源代码树可通过 FreeBSD 基金会的 [GitHub 账号](https://github.com/FreeBSDFoundation/freebsd/tree/arm64-dev) 获得。
+该项目的总体目标是使 FreeBSD/arm64 达到一级地位，包括发布媒体和预构建的软件包集。有关 arm64 移植的更多信息，请访问 [FreeBSD wiki](https://wiki.freebsd.org/arm64)，**正在进行**中的源代码树可通过 FreeBSD 基金会的 [GitHub 账号](https://github.com/FreeBSDFoundation/freebsd/tree/arm64-dev) 获得。
 
 ## 集成 Newcons 控制台驱动
 
-已完成
+**已完成**
 
 FreeBSD 开发者：Aleksandr Rybalko、Ed Maste
 
@@ -805,7 +817,7 @@ Newcons 项目交付了一个更新的 FreeBSD 控制台驱动，增加了对 Un
 
 ## 改进硬件性能计数器支持
 
-已完成
+**已完成**
 
 FreeBSD 开发者：Joseph Koshy
 
@@ -823,7 +835,7 @@ FreeBSD 开发者：Joseph Koshy
 
 ## 确保安全地移除挂载文件系统的磁盘设备
 
-已完成
+**已完成**
 
 FreeBSD 开发者：Edward Tomasz Napierala
 
@@ -833,7 +845,7 @@ FreeBSD 开发者：Edward Tomasz Napierala
 
 ## 对 FreeBSD TCP 堆栈的改进
 
-已完成
+**已完成**
 
 FreeBSD 开发者：Lawrence Stewart 和 [斯威本科技大学](http://caia.swin.edu.au/) 的高级互联网架构中心（CAIA）
 
@@ -843,7 +855,7 @@ FreeBSD 开发者：Lawrence Stewart 和 [斯威本科技大学](http://caia.swi
 
 ## 无线网状网络支持
 
-已完成
+**已完成**
 
 FreeBSD 开发者：Rui Paulo
 
@@ -852,7 +864,7 @@ Rui Paulo 将为 FreeBSD 实现即将推出的 IEEE 802.11s 无线网状网络�
 
 ## 扁平设备树项目
 
-已完成
+**已完成**
 
 FreeBSD 开发者：Rafal Jaworowski
 
@@ -876,7 +888,7 @@ Pawel Jakub Dawidek 获得了一笔资助，以实施存储复制软件，使用
 
 ## 网络栈虚拟化项目
 
-已完成
+**已完成**
 
 FreeBSD 开发者：Marko Zec
 
@@ -888,7 +900,7 @@ FreeBSD 开发者：Marko Zec
 
 ## 基于 FreeBSD Jail 的虚拟化项目
 
-已完成
+**已完成**
 
 FreeBSD 开发者：Bjoern Zeeb
 
@@ -906,7 +918,7 @@ Bjoern A. Zeeb 获得了一项资助，以改善 FreeBSD 的基于 jail 的虚�
 
 ## DTrace 用户空间项目
 
-已完成
+**已完成**
 
 FreeBSD 开发者：Rui Paulo
 
@@ -922,7 +934,7 @@ DTrace 是一款通用且轻量的跟踪框架，能让管理员、开发者和�
 
 ## 移植 DAHDI FreeBSD 驱动程序
 
-已完成
+**已完成**
 
 FreeBSD 开发者：Max Khon
 
@@ -942,7 +954,7 @@ FreeBSD ports 中的 [misc/dahdi](http://www.freshports.org/misc/dahdi/) 现在�
 
 ## 资源容器项目
 
-已完成
+**已完成**
 
 FreeBSD 开发者：Edward Tomasz Napierala
 
@@ -956,7 +968,7 @@ Edward Tomasz Napierala 获得了一项资助，以实现资源容器和简单�
 
 ## BSNMP 改进项目
 
-已完成
+**已完成**
 
 FreeBSD 开发者：Shteryana Shopova
 
@@ -970,7 +982,7 @@ FreeBSD 基金会很高兴宣布 Shteryana Shopova 获得了一项资助，用�
 
 ## FreeBSD 和 PC-BSD 中的 IPv6 支持
 
-已完成
+**已完成**
 
 FreeBSD 开发者：Bjoern Zeeb
 
@@ -986,7 +998,7 @@ Bjoern Zeeb 是一位总部位于德国的顾问，自 2004 年起成为 FreeBSD
 
 ## 为 Intel 驱动程序实现 GEM、KMS 和 DRI 支持
 
-已完成
+**已完成**
 
 FreeBSD 开发者：Konstantin Belousov
 
@@ -1004,7 +1016,7 @@ Konstantin 是一位软件开发者，居住在乌克兰基辅。他在 2006 年
 
 ## 五种新的 TCP 拥塞控制算法
 
-已完成
+**已完成**
 
 FreeBSD 开发者：斯威本科技大学
 
@@ -1020,7 +1032,7 @@ FreeBSD 基金会很高兴地宣布，斯威本科技大学高级互联网架构
 
 ## 前馈时钟同步算法
 
-已完成
+**已完成**
 
 FreeBSD 开发者：墨尔本大学
 
@@ -1036,7 +1048,7 @@ FreeBSD 基金会很高兴地宣布，墨尔本大学的 Julien Ridoux 和 Darry
 
 ## 实现 xlocale API
 
-已完成
+**已完成**
 
 FreeBSD 开发者：David Chisnall
 
@@ -1052,7 +1064,7 @@ C 标准库（libc）是 UNIX 系统中最重要的部分之一，因为大多�
 
 ## 分析 FreeBSD 的 IPv6 栈性能
 
-已完成
+**已完成**
 
 FreeBSD 开发者：Bjoern Zeeb
 
@@ -1066,7 +1078,7 @@ FreeBSD 基金会很高兴宣布已向 Bjoern Zeeb 提供资助，用来分析 F
 
 ## 实现守护进程 auditdistd 
 
-已完成
+**已完成**
 
 FreeBSD 开发者：Paweł Jakub Dawidek
 
@@ -1078,7 +1090,7 @@ auditdistd 项目的目标是通过 TCP/IP 网络在本地 auditdistd 守护进�
 
 ## Growfs 已挂载的文件系统
 
-已完成
+**已完成**
 
 FreeBSD 开发者：Edward Tomasz Napierała
 
@@ -1090,7 +1102,7 @@ FreeBSD 开发者：Edward Tomasz Napierała
 
 ## 文档项目基础设施增强
 
-已完成
+**已完成**
 
 FreeBSD 开发者：Gabor Kovesdan
 
@@ -1100,7 +1112,7 @@ FreeBSD 文档项目长期依赖过时的工具来生成 FreeBSD 手册和其他
 
 ## 支持 ARMv7 的超级页（SuperPage）
 
-已完成
+**已完成**
 
 FreeBSD 开发者：Zbigniew Bodek，Semihalf
 
@@ -1112,7 +1124,7 @@ ARM 架构正在扩展到高端服务器计算市场，支持该平台的复杂�
 
 ## 原生 iSCSI 内核栈
 
-已完成
+**已完成**
 
 FreeBSD 开发者：Edward Tomasz Napierala
 
@@ -1122,7 +1134,7 @@ FreeBSD 开发者：Edward Tomasz Napierala
 
 ## Capsicum 集成
 
-已完成
+**已完成**
 
 FreeBSD 开发者：Paweł Jakub Dawidek
 
@@ -1132,7 +1144,7 @@ FreeBSD 开发者：Paweł Jakub Dawidek
 
 ## 基于 Autofs 的自动挂载程序
 
-已完成
+**已完成**
 
 FreeBSD 开发者：Edward Tomasz Napierała
 
@@ -1146,7 +1158,7 @@ FreeBSD 基金会与企业和大学用户合作，在现有的基于 LDAP 的环
 
 ## UEFI 引导集成
 
-已完成
+**已完成**
 
 开发者：Ed Maste
 
@@ -1158,7 +1170,7 @@ FreeBSD 基金会与企业和大学用户合作，在现有的基于 LDAP 的环
 
 ## 为 OpenCrypto 添加 AES 模式
 
-已完成
+**已完成**
 
 开发者：John-Mark Gurney
 
