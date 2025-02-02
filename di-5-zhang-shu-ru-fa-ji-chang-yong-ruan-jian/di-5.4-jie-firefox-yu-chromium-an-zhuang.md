@@ -1,8 +1,8 @@
-# 第 5.4 节 Firefox 与 Chromium 安装
+# 第 5.4 节 安装 Firefox 与 Chromium 
 
 ## 火狐浏览器
 
-### 安装普通版本（更新频繁）：
+### 安装普通版本（更新频繁）
 
 ```sh
 # pkg install firefox
@@ -15,7 +15,7 @@
 # make install clean
 ```
 
-### 安装长期支持版本：
+### 安装长期支持版本
 
 ```sh
 pkg install firefox-esr
@@ -28,7 +28,9 @@ pkg install firefox-esr
 # make install clean
 ```
 
-## Chromium（Chromium 不是 chrome，但是启动命令是 chrome）
+## Chromium
+
+Chromium 不是 chrome，但在 FreeBSD 中启动命令是 `chrome`。
 
 ```sh
 # pkg install chromium 
@@ -45,11 +47,13 @@ pkg install firefox-esr
 >
 >要编译 Chromium，你必须拥有至少 12G 内存，或等量的交换分区 + 内存。
 
+### 故障排除
+
 - Chromium 加入 Google 同步
 
  [Chromium Sync](https://www.learningtopi.com/sbc/chromium-sync/)
 
-- 解决 chromium 出现未知错误时占用大量性能（加到图标的启动参数中）
+- 解决 chromium 出现未知错误时占用大量性能（加到图标的启动参数中，图标是文本文件）
 
 ```sh
 chrome --disk-cache-size=0 --disable-gpu
