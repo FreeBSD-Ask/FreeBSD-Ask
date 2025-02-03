@@ -6,9 +6,7 @@
 
 ## FreeBSD 版本概述
 
-FreeBSD 是一款开源的类 UNIX 操作系统。
-
-已知 FreeBSD 有如下版本： alpha、rc、beta、release、current、stable。
+已知 FreeBSD 有如下版本（或阶段）： alpha、rc、beta、release、current、stable。
 
 **release** 是可以日常/服务器使用的，即一般意义上的 **稳定版** 或者说 LTS。而 ***stable*** 和 ***current*** 都是开发分支，都是 **不稳定的**（稳定与不稳定是相对的，[Netflix 几乎所有节点都运行着 **current**](https://freebsdfoundation.org/netflix-case-study/)）。
 
