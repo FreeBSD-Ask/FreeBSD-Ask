@@ -145,8 +145,6 @@ BSD 操作系统并非克隆产物，而是 AT&T 研究 UNIX（Research Unix）�
 
 ---
 
-**FreeBSD 不是 Linux，亦不是 UNIX，是类 UNIX**
-
 ![FreeBSD 不是 Linux](../.gitbook/assets/nolinux.png)
 
 UNIX -> Networking Release 1->Networking Release 2 ->386BSD -> FreeBSD 1.0
