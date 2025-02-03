@@ -349,7 +349,7 @@ FreeBSD 旧版本下载地址:
 |配置选项|中文|说明|
 |---|---|---|
 |`>> Install Proceed with Installation`| >> 安装 继续安装||
-|`T Pool Type/Disks: stripe: 0 disks` |存储池类型/磁盘： stripe：0 块磁盘|详细说明见下|
+|`T Pool Type/Disks: stripe: 0 disks` |存储池类型/磁盘： 条带化：0 块磁盘|详细说明见下|
 |`- Rescan Devices *` |- 重新扫描设备 *||
 |`- Disk Info *` |- 磁盘信息 *||
 |`N Pool Name zroot` |存储池名称 `zroot`|默认池名 `zroot`|
