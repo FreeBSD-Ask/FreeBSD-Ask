@@ -151,7 +151,6 @@ UNIX -> Networking Release 1->Networking Release 2 ->386BSD -> FreeBSD 1.0
 
 386BSD -> 诉讼（1991-1994） -> 4.4 BSD-Lite -> FreeBSD 2.0
 
-“I have never even checked 386BSD out; when I started on Linux it wast available”——Linus
 
 ![图片来源：<https://github.com/freebsd/freebsd-src/blob/main/share/misc/bsd-family-tree>，有删减](../.gitbook/assets/bsd-family-tree.png)
 
