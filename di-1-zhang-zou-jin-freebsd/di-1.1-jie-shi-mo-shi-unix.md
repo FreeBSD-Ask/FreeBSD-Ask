@@ -2,7 +2,7 @@
 
 ## 什么是 UNIX？
 
-UNIX 从前是一款操作系统。最后由 C 语言改写产生。——源自 AT\&T 的贝尔实验室
+UNIX 从前是一款操作系统。最后由 C 语言改写产生。——源自 `AT&T`（美国电话电报公司）的贝尔实验室。
 
 现在是一种**标准规范、法律上的商标**。更是一种**哲学思想**，一项**软件工程原则。**
 
@@ -15,7 +15,7 @@ UNIX 认证查询网址：[The Open Group official register of UNIX Certified Pr
 
 ![The Open Group official register of UNIX Certified Products](../.gitbook/assets/unixrenzheng.png)
 
-可以看到，常见的，经过认证的 UNIX 操作系统有 Apple MacOS。即从商标的角度上讲，MacOS 可以称得上是标准的 UNIX 操作系统。
+可以看到，常见的，经过认证的 UNIX 操作系统有 Apple MacOS。即从商标的角度上讲，MacOS 可以称得上是标准的 UNIX 操作系统。~~故，要安装 UNIX 的人可以去黑苹果了~~
 
 >**技巧**
 >
@@ -128,7 +128,7 @@ Linux 全称为 GNU/Linux；[GNU 项目](https://www.gnu.org/) 1984；
 
 ## 什么是 FreeBSD？
 
-BSD 最初是由加州大学伯克利分校（University of California, Berkeley）所开发的，意为 `Berkeley Software Distribution`（伯克利软件套件）。FreeBSD 未进行过 UNIX认证，从版权角度来看，FreeBSD 的确不是 UNIX。
+BSD 最初是由加州大学伯克利分校（University of California, Berkeley）所开发的，意为 `Berkeley Software Distribution`（伯克利软件套件）。FreeBSD 未进行过 UNIX认证，从版权角度来看，FreeBSD 的确不是 UNIX。但 FreeBSD 可以被视为 UNIX 的直系后裔。
 
 BSD 操作系统并非克隆产物，而是 AT&T 研究 UNIX（Research Unix）操作系统的开源衍生版本，也是现代 UNIX® System V 的祖先。BSD 系统逐渐演化成为 4.2BSD，BSD 4.4-lite……进而成为了 386BSD，并在 1993 年分化成了两个项目：NetBSD 和 FreeBSD。1996 年，OpenBSD 从 NetBSD 中复刻出来；2003 年，DragonFlyBSD 从 FreeBSD 中复刻出来。
 
