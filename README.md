@@ -54,13 +54,16 @@ Skype: [https://join.skype.com/xktkQtXZopfv](https://join.skype.com/xktkQtXZopfv
 
 ## 贡献指南
 
+
 如果你想让你的教程出现在本书中，你可以这样做：
+
+<details> 
+<summary>点击此处展开贡献指南详情</summary>
 
 - 如果你熟悉 GitHub，可以点击电脑端右侧的“编辑此页”，进入项目进行操作。整个项目使用 Markdown 语法 +  Gitbook，简单易上手（具体详见项目 WiKi）；
 - 如果以上有困难，你还可以发 PDF、Word 或者 TXT 给我。请将文件发送至电子邮件 `yklaxds@gmail.com`；如果有视频教程，以各大云盘链接为宜。
 
-<details> 
-<summary>点击此处展开贡献指南详情</summary>
+
   
 本书现接受以下内容：
 
