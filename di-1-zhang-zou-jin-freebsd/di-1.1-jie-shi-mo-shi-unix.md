@@ -128,9 +128,9 @@ Linux 全称为 GNU/Linux；[GNU 项目](https://www.gnu.org/) 1984；
 
 ## 什么是 FreeBSD？
 
-问：如何定义 FreeBSD？答：一款开源的类 UNIX 操作系统。
+BSD 最初是由加州大学伯克利分校（University of California, Berkeley）所开发的，意为 `Berkeley Software Distribution`（伯克利软件套件）。FreeBSD 未进行过 UNIX认证，从版权角度来看，FreeBSD 的确不是 UNIX。
 
-BSD 最初是由加州大学伯克利分校（University of California, Berkeley）所开发的，意为 `Berkeley Software Distribution`（伯克利软件套件）。
+BSD 操作系统并非克隆产物，而是 AT&T 研究 UNIX（Research Unix）操作系统的开源衍生版本，也是现代 UNIX® System V 的祖先。BSD 系统逐渐演化成为 4.2BSD，BSD 4.4-lite……进而成为了 386BSD，并在 1993 年分化成了两个项目：NetBSD 和 FreeBSD。1996 年，OpenBSD 从 NetBSD 中复刻出来；2003 年，DragonFlyBSD 从 FreeBSD 中复刻出来。
 
 **FreeBSD 不是 Linux，亦不是 UNIX，是类 UNIX**
 
