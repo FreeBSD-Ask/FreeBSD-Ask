@@ -4,14 +4,19 @@
 
 FreeBSD 是真正自由（Liberal）的**操作系统**，在这个大流变的世界中仍然坚守 BSD UNIX 哲学——恪守古老的法则，追寻真正的自由。
 
+## 什么是 FreeBSD？UNIX 与忒修斯之船
 
-## 概述
+>忒修斯和雅典青年安全返航所乘的是有三十支桨的大帆船，雅典人把这只船一直保存到德米特里·法勒琉斯的时代。他们一次又一次地拆掉了朽烂的旧船板，换上坚实的新船板。从此以后，这只船就成为哲学家们就事物的发展问题展开争论时经常援引的实例，一派认为它还是原来那只船，另一派争辩说它已不再是原来的船了。
+>
+>- [古希腊] 普鲁塔克. 希腊罗马名人传[M]. 译者: 黄宏煦 主编 / 陆永庭 / 吴彭鹏, 第1版. 商务印书馆, 1990-11. 第 23 页（23）。
 
-《FreeBSD 从入门到跑路》诞生于 2021 年 12 月 19 日，由 FreeBSD 中文社区（CFC）ykla 发起。
 
-**本书定位**：本书旨在敉平新手与进阶之间的台阶，与你一道进入另一片开源世界。
+最初，Unix 是 `AT&T` 开发的操作系统，可以获取源代码，但并非开源。在 20 世纪 70 年代末，伯克利大学的计算机科学研究小组（Computer Systems Research Group，CSRG）开始对 Unix 进行深入研究，并为其开发了大量用户空间的程序，形成了名为 BSD（Berkeley Software Distribution，伯克利软件套件）的新系统。随着时间推移，BSD 系统逐渐发展，加入了许多创新，比如实现了 TCP/IP 协议栈。尽管 Unix 内核经历了多个版本的演变，但到了 90 年代，Net/2 版本发布后，Unix 内核中的 AT&T 代码已经被完全替换，成为了一款没有专利代码的系统。
 
-## 资源
+在此过程中，BSD 和 AT&T 之间的关系发生了变化，最终引发了法律争议，导致 BSD 系统的分裂。1993 年，BSD 的核心代码分裂为两个主要的项目：NetBSD 和 FreeBSD。
+
+
+## 关于
 
 >**技巧**
 >
@@ -36,15 +41,12 @@ Skype: [https://join.skype.com/xktkQtXZopfv](https://join.skype.com/xktkQtXZopfv
 - Telegram 可原生运行 by [net-im/telegram-desktop](https://www.freshports.org/net-im/telegram-desktop/)
 - Skype 可使用 pidgin+ 插件 by [net-im/pidgin-skypeweb](https://forums.freebsd.org/threads/skype.66115/)
 
-### 现成的虚拟机镜像体验（本书自制）
+## 概述
 
-具体详情请参见第 2 章节。
+《FreeBSD 从入门到跑路》诞生于 2021 年 12 月 19 日，由 FreeBSD 中文社区（CFC）ykla 发起。
 
-```
-14.1  磁力链接  magnet:?xt=urn:btih:496C343387D74457E441CAFA93B302E791F62924
+**本书定位**：本书旨在敉平新手与进阶之间的台阶，与你一道进入另一片开源世界。
 
-15.0  磁力链接  magnet:?xt=urn:btih:CBD49C71E87BC0B1406710A437E7135EF3D8C155
-```
 
 ## 内容提要
 
