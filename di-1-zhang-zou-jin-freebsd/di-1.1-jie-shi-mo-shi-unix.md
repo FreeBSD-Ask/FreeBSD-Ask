@@ -15,13 +15,13 @@ UNIX 认证查询网址：[The Open Group official register of UNIX Certified Pr
 
 ![The Open Group official register of UNIX Certified Products](../.gitbook/assets/unixrenzheng.png)
 
-可以看到，常见的，经过认证的 UNIX 操作系统有 Apple MacOS。即从商标的角度上讲，MacOS 可以称得上是标准的 UNIX 操作系统。~~故，要安装 UNIX 的人可以去黑苹果了~~
+可以看到，常见的，经过认证的 UNIX 操作系统有 Apple  macOS。即从商标的角度上讲，macOS 可以称得上是标准的 UNIX 操作系统。~~故，要安装 UNIX 的人可以去黑苹果了~~
 
 >**技巧**
 >
->MacOS/iOS 等与 BSD 的关系
+>macOS/iOS 等与 BSD 的关系
 >
->从历史与现实来看，MacOS/iOS 等基于 BSD 是确凿无疑，但并非全然基于某款 BSD：MacOS/iOS 等应该被理解为一款独立的 BSD 操作系统——同 OpenBSD、NetBSD 和 FreeBSD 一样。参见[《苹果的开源基石：macOS 和 iOS 背后的 BSD 传统》](https://book.bsdcn.org/fan-yi-wen-zhang-cun-dang/2024-nian-11-yue/apple)
+>从历史与现实来看，macOS/iOS 等基于 BSD 是确凿无疑，但并非全然基于某款 BSD：macOS/iOS 等应该被理解为一款独立的 BSD 操作系统——同 OpenBSD、NetBSD 和 FreeBSD 一样。参见[《苹果的开源基石：macOS 和 iOS 背后的 BSD 传统》](https://book.bsdcn.org/fan-yi-wen-zhang-cun-dang/2024-nian-11-yue/apple)
 >
 >所以看似是安卓和苹果之争，其实是 Linux 与 BSD 之争。~~也许也是大教堂与市集之争。~~
 
