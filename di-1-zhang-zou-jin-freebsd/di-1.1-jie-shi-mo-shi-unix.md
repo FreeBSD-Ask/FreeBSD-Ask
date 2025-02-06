@@ -2,7 +2,7 @@
 
 ## 什么是 UNIX？
 
-UNIX 从前是一款操作系统。最后由 C 语言改写产生。——源自 AT\&T 的贝尔实验室
+UNIX 从前是一款操作系统。最后由 C 语言改写产生。——源自 `AT&T`（美国电话电报公司）的贝尔实验室。
 
 现在是一种**标准规范、法律上的商标**。更是一种**哲学思想**，一项**软件工程原则。**
 
@@ -15,13 +15,13 @@ UNIX 认证查询网址：[The Open Group official register of UNIX Certified Pr
 
 ![The Open Group official register of UNIX Certified Products](../.gitbook/assets/unixrenzheng.png)
 
-可以看到，常见的，经过认证的 UNIX 操作系统有 Apple MacOS。即从商标的角度上讲，MacOS 可以称得上是标准的 UNIX 操作系统。
+可以看到，常见的，经过认证的 UNIX 操作系统有 Apple  macOS。即从商标的角度上讲，macOS 可以称得上是标准的 UNIX 操作系统。~~故，要安装 UNIX 的人可以去黑苹果了~~
 
 >**技巧**
 >
->MacOS/iOS 等与 BSD 的关系
+>macOS/iOS 等与 BSD 的关系
 >
->从历史与现实来看，MacOS/iOS 等基于 BSD 是确凿无疑，但并非全然基于某款 BSD：MacOS/iOS 等应该被理解为一款独立的 BSD 操作系统——同 OpenBSD、NetBSD 和 FreeBSD 一样。参见[《苹果的开源基石：macOS 和 iOS 背后的 BSD 传统》](https://book.bsdcn.org/fan-yi-wen-zhang-cun-dang/2024-nian-11-yue/apple)
+>从历史与现实来看，macOS/iOS 等基于 BSD 是确凿无疑，但并非全然基于某款 BSD：macOS/iOS 等应该被理解为一款独立的 BSD 操作系统——同 OpenBSD、NetBSD 和 FreeBSD 一样。参见[《苹果的开源基石：macOS 和 iOS 背后的 BSD 传统》](https://book.bsdcn.org/fan-yi-wen-zhang-cun-dang/2024-nian-11-yue/apple)
 >
 >所以看似是安卓和苹果之争，其实是 Linux 与 BSD 之争。~~也许也是大教堂与市集之争。~~
 
@@ -48,7 +48,7 @@ UNIX 认证查询网址：[The Open Group official register of UNIX Certified Pr
 >
 >——[Henry Spencer](https://www.nasa.gov/history/alsj/henry.html)
 >
->>作者 Henry Spencer 并未明确批评哪个操作系统，那么你认为，现在这句话更适合哪个常见的操作系统？是 FreeBSD、Windows、Android、MacOS 亦或 Linux？又为什么？
+>>作者 Henry Spencer 并未明确批评哪个操作系统，那么你认为，现在这句话更适合哪个常见的操作系统？为什么？
 
 Unix 哲学源于 UNIX 操作系统的开发，作者是 Ken Thompson。Unix 哲学一言以蔽之即大道至简（“keep it simple, stupid”）：
 
@@ -128,11 +128,22 @@ Linux 全称为 GNU/Linux；[GNU 项目](https://www.gnu.org/) 1984；
 
 ## 什么是 FreeBSD？
 
-问：如何定义 FreeBSD？答：一款开源的类 UNIX 操作系统。
+BSD 最初是由加州大学伯克利分校（University of California, Berkeley）所开发的，意为 `Berkeley Software Distribution`（伯克利软件套件）。FreeBSD 未进行过 UNIX认证，从版权角度来看，FreeBSD 的确不是 UNIX。但 FreeBSD 可以被视为 UNIX 的直系后裔。
 
-BSD 最初是由加州大学伯克利分校（University of California, Berkeley）所开发的，意为 `Berkeley Software Distribution`（伯克利软件套件）。
+BSD 操作系统并非克隆产物，而是 AT&T 研究 UNIX（Research Unix）操作系统的开源衍生版本（类似忒修斯之船），也是现代 UNIX® System V 的祖先。BSD 系统逐渐演化成为 4.2BSD，BSD 4.4-lite……进而成为了 386BSD，并在 1993 年分化成了两个项目：NetBSD 和 FreeBSD。1996 年，OpenBSD 从 NetBSD 中复刻出来；2003 年，DragonFlyBSD 从 FreeBSD 中复刻出来。
 
-**FreeBSD 不是 Linux，亦不是 UNIX，是类 UNIX**
+### UNIX 与忒修斯之船
+
+>忒修斯和雅典青年安全返航所乘的是有三十支桨的大帆船，雅典人把这只船一直保存到德米特里·法勒琉斯的时代。他们一次又一次地拆掉了朽烂的旧船板，换上坚实的新船板。从此以后，这只船就成为哲学家们就事物的发展问题展开争论时经常援引的实例，一派认为它还是原来那只船，另一派争辩说它已不再是原来的船了。
+>
+>- [古希腊] 普鲁塔克. 希腊罗马名人传[M]. 译者: 黄宏煦 主编 / 陆永庭 / 吴彭鹏, 第1版. 商务印书馆, 1990-11. 第 23 页（23）。
+
+
+最初，Unix 是 `AT&T` 开发的操作系统，可以获取源代码，但并非开源。在 20 世纪 70 年代末，伯克利大学的计算机系统研究小组（Computer Systems Research Group，CSRG）开始对 Unix 进行深入研究，并为其开发了大量用户空间的程序，形成了名为 BSD（Berkeley Software Distribution，伯克利软件套件）的新系统。随着时间推移，BSD 系统逐渐发展，加入了许多创新，比如实现了 TCP/IP 协议栈。尽管 Unix 内核经历了多个版本的演变，但到了 90 年代，Net/2 版本发布后，Unix 内核中的 AT&T 代码已经被完全替换，成为了一款没有专利代码的系统。
+
+在此过程中，BSD 和 AT&T 之间的关系发生了变化，最终引发了法律争议，导致 BSD 系统的分裂。1993 年，BSD 的核心代码分裂为两个主要的项目：NetBSD 和 FreeBSD。
+
+---
 
 ![FreeBSD 不是 Linux](../.gitbook/assets/nolinux.png)
 
@@ -140,7 +151,6 @@ UNIX -> Networking Release 1->Networking Release 2 ->386BSD -> FreeBSD 1.0
 
 386BSD -> 诉讼（1991-1994） -> 4.4 BSD-Lite -> FreeBSD 2.0
 
-“I have never even checked 386BSD out; when I started on Linux it wast available”——Linus
 
 ![图片来源：<https://github.com/freebsd/freebsd-src/blob/main/share/misc/bsd-family-tree>，有删减](../.gitbook/assets/bsd-family-tree.png)
 

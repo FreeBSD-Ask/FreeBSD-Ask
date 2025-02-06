@@ -5,13 +5,7 @@
 FreeBSD 是真正自由（Liberal）的**操作系统**，在这个大流变的世界中仍然坚守 BSD UNIX 哲学——恪守古老的法则，追寻真正的自由。
 
 
-## 概述
-
-《FreeBSD 从入门到跑路》诞生于 2021 年 12 月 19 日，由 FreeBSD 中文社区（CFC）ykla 发起。
-
-**本书定位**：本书旨在敉平新手与进阶之间的台阶，与你一道进入另一片开源世界。
-
-## 资源
+## 关于
 
 >**技巧**
 >
@@ -21,30 +15,30 @@ FreeBSD 是真正自由（Liberal）的**操作系统**，在这个大流变的�
 >
 >视频教程合集见 《[FreeBSD 从入门到跑路 第二版](https://www.bilibili.com/video/BV1Qji2YLEgS)》
 
+---
 
 **首要** 联系方式：**QQ 群**：787969044（须答题验证）
 
 微信群：（须先加入 QQ 群，再联系群主）
 
+Discord 群组：<https://discord.gg/n5wu65Z6tw>
+
 Telegram 群组：[https://t.me/oh_my_BSD](https://t.me/oh_my_BSD)
 
-Skype: [https://join.skype.com/xktkQtXZopfv](https://join.skype.com/xktkQtXZopfv)
+---
 
 在 FreeBSD 中：
 
 - 需要兼容层才能运行 QQ、微信（软件运行方法参见正文）
 - Telegram 可原生运行 by [net-im/telegram-desktop](https://www.freshports.org/net-im/telegram-desktop/)
-- Skype 可使用 pidgin+ 插件 by [net-im/pidgin-skypeweb](https://forums.freebsd.org/threads/skype.66115/)
+- Discord 可使用 Port `net-im/linux-discord`，或自行构建兼容层
 
-### 现成的虚拟机镜像体验（本书自制）
+## 概述
 
-具体详情请参见第 2 章节。
+《FreeBSD 从入门到跑路》诞生于 2021 年 12 月 19 日，由 FreeBSD 中文社区（CFC）ykla 发起。
 
-```
-14.1  磁力链接  magnet:?xt=urn:btih:496C343387D74457E441CAFA93B302E791F62924
+**本书定位**：本书旨在敉平新手与进阶之间的台阶，与你一道进入另一片开源世界。
 
-15.0  磁力链接  magnet:?xt=urn:btih:CBD49C71E87BC0B1406710A437E7135EF3D8C155
-```
 
 ## 内容提要
 
@@ -52,13 +46,16 @@ Skype: [https://join.skype.com/xktkQtXZopfv](https://join.skype.com/xktkQtXZopfv
 
 ## 贡献指南
 
+
 如果你想让你的教程出现在本书中，你可以这样做：
+
+<details> 
+<summary>点击此处展开贡献指南详情</summary>
 
 - 如果你熟悉 GitHub，可以点击电脑端右侧的“编辑此页”，进入项目进行操作。整个项目使用 Markdown 语法 +  Gitbook，简单易上手（具体详见项目 WiKi）；
 - 如果以上有困难，你还可以发 PDF、Word 或者 TXT 给我。请将文件发送至电子邮件 `yklaxds@gmail.com`；如果有视频教程，以各大云盘链接为宜。
 
-<details> 
-<summary>点击此处展开贡献指南详情</summary>
+
   
 本书现接受以下内容：
 
@@ -78,7 +75,7 @@ Skype: [https://join.skype.com/xktkQtXZopfv](https://join.skype.com/xktkQtXZopfv
 - **便于反馈**：快速迭代教程，并验证每一步骤的正确性与合理性；
 - **易于分享**：本项目既支持在线浏览亦支持 PDF 文档导出，宽松的许可证、简单的项目结构允许自由部署。
 
-唯一要注意的是，你的教程会以本项目的开源许可证（BSD）进行发布。
+唯一要注意的是，你的教程会以本项目的开源许可证（CC BY 4.0）进行发布。
 
 
 ### 如何使用 git 拉取本项目

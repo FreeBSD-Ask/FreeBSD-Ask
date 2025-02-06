@@ -6,9 +6,7 @@
 
 ## FreeBSD 版本概述
 
-FreeBSD 是一款开源的类 UNIX 操作系统。
-
-已知 FreeBSD 有如下版本： alpha、rc、beta、release、current、stable。
+已知 FreeBSD 有如下版本（或阶段）： alpha、rc、beta、release、current、stable。
 
 **release** 是可以日常/服务器使用的，即一般意义上的 **稳定版** 或者说 LTS。而 ***stable*** 和 ***current*** 都是开发分支，都是 **不稳定的**（稳定与不稳定是相对的，[Netflix 几乎所有节点都运行着 **current**](https://freebsdfoundation.org/netflix-case-study/)）。
 
@@ -99,7 +97,7 @@ FreeBSD-14.2-RELEASE-amd64-mini-memstick.img.xz	107445036	   2024-Nov-29 13:04
 
 >**技巧**
 >
->网络是随时波动的，因此下载的文件时而会与源文件有差异，产生错误。~~百度网盘就经常这样~~。因此我们需要一种机制确保你获取的文件与 FreeBSD 项目发布的镜像是完全一致的。就需要用到 **校验值**。如何校验的方法请查阅网络。WIndows 10、11 均自带命令行工具 `CertUtil`，无需额外的软件。你还可以参考[如何确定用于安全应用程序的文件 SHA-256 哈希](https://www.dell.com/support/kbdoc/en-bs/000130826/%E5%A6%82%E4%BD%95-%E7%A1%AE%E5%AE%9A-%E7%94%A8%E4%BA%8E-%E9%98%B2-%E7%97%85%E6%AF%92-%E5%92%8C-%E6%81%B6%E6%84%8F%E8%BD%AF%E4%BB%B6-%E9%98%B2%E6%8A%A4-%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F-%E7%9A%84-%E6%96%87%E4%BB%B6-sha-256-%E5%93%88%E5%B8%8C?lang=zh)这篇文章。
+>网络是随时波动的，因此下载的文件时而会与源文件有差异，产生错误。~~百度网盘就经常这样~~。因此我们需要一种机制确保你获取的文件与 FreeBSD 项目发布的镜像是完全一致的。就需要用到 **校验值**。Windows 10、11 均自带命令行工具 `CertUtil`，无需额外的软件。你还可以参考[如何确定用于安全应用程序的文件 SHA-256 哈希](https://www.dell.com/support/kbdoc/en-bs/000130826/%E5%A6%82%E4%BD%95-%E7%A1%AE%E5%AE%9A-%E7%94%A8%E4%BA%8E-%E9%98%B2-%E7%97%85%E6%AF%92-%E5%92%8C-%E6%81%B6%E6%84%8F%E8%BD%AF%E4%BB%B6-%E9%98%B2%E6%8A%A4-%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F-%E7%9A%84-%E6%96%87%E4%BB%B6-sha-256-%E5%93%88%E5%B8%8C?lang=zh)这篇文章。
 
 
 > **注意**
@@ -351,7 +349,7 @@ FreeBSD 旧版本下载地址:
 |配置选项|中文|说明|
 |---|---|---|
 |`>> Install Proceed with Installation`| >> 安装 继续安装||
-|`T Pool Type/Disks: stripe: 0 disks` |存储池类型/磁盘： stripe：0 块磁盘|详细说明见下|
+|`T Pool Type/Disks: stripe: 0 disks` |存储池类型/磁盘： 条带化：0 块磁盘|详细说明见下|
 |`- Rescan Devices *` |- 重新扫描设备 *||
 |`- Disk Info *` |- 磁盘信息 *||
 |`N Pool Name zroot` |存储池名称 `zroot`|默认池名 `zroot`|
@@ -389,14 +387,14 @@ FreeBSD 旧版本下载地址:
 
 |配置选项|中文|特点|
 |---|---|---|
-|`Striping` |条带化 |无冗余，一块硬盘即可|
+|`Stripe` |条带化 |无冗余，一块硬盘即可|
 |`mirror` |镜像| n 路镜像，最少需要 2 块硬盘|
 |`raid10` |RAID 1+0 | n 组 2 路镜像，最少需要 2 块硬盘（要求偶数块硬盘）|
 |`raidz1`| RAID-Z1 | 单冗余 RAID，最少需要 3 块硬盘|
 |`raidz2` |RAID-Z2 | 双冗余 RAID，最少需要 4 块硬盘|
 |`raidz3` |RAID-Z3 | 三重冗余 RAID，最少需要 5 块硬盘|
 
-我们直接按 **回车键** 使用默认的 `Striping` 即可。
+我们直接按 **回车键** 使用默认的 `Stripe` 即可。
 
 ![](../.gitbook/assets/ins10.png)
 
@@ -625,15 +623,23 @@ FreeBSD 旧版本下载地址:
 |`8 secure_console`|启用控制台密码（单用户模式下也需要 root 密码）|
 |`9 disable_ddttrace`|禁止 DTrace 破坏性（destructive）模式|
 
-![](../.gitbook/assets/install-14.2.png)
+![虚拟机无固件可安装](../.gitbook/assets/install-14.2.png)
 
 自动检测安装所需固件（14.2 [引入](https://cgit.freebsd.org/src/commit/?id=03c07bdc8b31)）。
+
+**此图片来自虚拟机安装界面**
+
+![物理机也许有些固件需要安装](../.gitbook/assets/2-install.png)
+
+**此图片来自物理机安装界面**
 
 经过实际测试（无线网卡 rtl8852be），这一步可能并不起作用。如果你在安装时有无线网络，重启后丢失，`dmesg` 发现有很多关于无线网卡的报错，如 `failed with error -2`（rtw89），你会发现 `/boot/firmware` 是空的，请你安装对应固件（本例中应该使用 pkg 或者 port `net/wifi-firmware-rtw89-kmod`（安装至路径 `/boot/modules`）。
 
 >**技巧**
 >
 >如果这一步你回车直接出现了 Panic 重启，请再来一次，全部取消勾选之。即不安装。可以参考其他章节文章安装显卡驱动和网卡驱动。
+>
+>![](../.gitbook/assets/1-install.png)
 
 ![](../.gitbook/assets/ins30.png)
 
@@ -662,7 +668,7 @@ FreeBSD 旧版本下载地址:
 
 ![](../.gitbook/assets/ins32.png)
 
-`您的 FreeBSD 系统设置即将完成。您现在可以修改您的配置选项。此菜单之后，您将有机会使用 shell 进行更复杂的更改。`
+`您的 FreeBSD 系统设置即将完成。您现在可以修改您的配置选项。此菜单之后，您可使用 shell 进行更复杂的更改。`
 
 按 **回车键** 可结束安装。
 

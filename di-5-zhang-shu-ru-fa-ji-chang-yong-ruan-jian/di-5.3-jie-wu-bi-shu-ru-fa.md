@@ -1,8 +1,6 @@
 # 第 5.3 节 五笔输入法
 
-## FreeBSD 使用 98 五笔输入法教程
-
-### rime
+## rime
 
 rime 输入法引擎依赖于输入法面板"ibus/fcitx",所以使用 rime 的前提是先正确配置 ibus/fcitx,下面的择其一，进行安装。
 
@@ -18,7 +16,7 @@ rime 输入法引擎依赖于输入法面板"ibus/fcitx",所以使用 rime 的�
 # cd /usr/ports/chinese/ibus-rime/ && make install clean
 ```
 
-#### ibus
+## ibus
 
 
 如果使用 ibus，环境变量配置：安装好运行初始化命令 `ibus-setup`，将 98 五笔码表（`wubi86.dict.yaml`、`wubi86.schema.yaml`）复制到 `/usr/local/share/rime-date` 目录下，修改 rime-date 目录下 default.yaml 文件:
@@ -28,7 +26,7 @@ rime 输入法引擎依赖于输入法面板"ibus/fcitx",所以使用 rime 的�
 下面第一行添加 `- schema: wubi98` 保存退出重新加载 ibus 输入法即可。
 
 
-#### fcitx 5
+## fcitx 5
 
 
 首先下载所需文件：https://github.com/FreeBSD-Ask/98-input
@@ -136,7 +134,7 @@ patch applied.
 - [LEOYoon-Tsaw/Rime_collections/](https://github.com/LEOYoon-Tsaw/Rime_collections/blob/master/Rime_description.md)
 - [rime/CustomizationGuide](https://github.com/rime/home/wiki/CustomizationGuide)
 
-#### 98 五笔码表 下载地址
+## 98 五笔码表下载地址
 
 [FreeBSD-98wubi-tables](https://github.com/FreeBSD-Ask/98-input/tree/main/free-bsd-98wubi-tables-master)
 
