@@ -634,7 +634,7 @@ rufus 下载地址：[https://rufus.ie/zh](https://rufus.ie/zh)
 
 ![物理机也许有些固件需要安装](../.gitbook/assets/2-install.png)
 
-**此图片来自物理机安装界面**
+**此图片来自物理机安装界面（使用采集卡）**
 
 经过实际测试（无线网卡 rtl8852be），这一步可能并不起作用。如果你在安装时有无线网络，重启后丢失，`dmesg` 发现有很多关于无线网卡的报错，如 `failed with error -2`（rtw89），你会发现 `/boot/firmware` 是空的，请你安装对应固件（本例中应该使用 pkg 或者 port `net/wifi-firmware-rtw89-kmod`（安装至路径 `/boot/modules`）。
 
@@ -643,6 +643,8 @@ rufus 下载地址：[https://rufus.ie/zh](https://rufus.ie/zh)
 >如果这一步你回车直接出现了 Panic 重启，请再来一次，全部取消勾选之。即不安装。可以参考其他章节文章安装显卡驱动和网卡驱动。
 >
 >![](../.gitbook/assets/1-install.png)
+>
+>**此图片来自物理机安装界面（使用采集卡）**
 
 ![](../.gitbook/assets/ins30.png)
 
