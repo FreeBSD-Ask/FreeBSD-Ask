@@ -353,7 +353,9 @@ FreeBSD 基金会（501(c)(3)）日常年份收到的捐款仅有 Linux 基金�
 
 本项目使用《CC BY 4.0 署名 4.0 协议国际版》，具体细则参见 <https://github.com/FreeBSD-Ask/FreeBSD-Ask> 项目下的 `LICENSE.md` 文件。
 
-![CC BY](https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by.png)
+<a ><img style="width:10%;" src="https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by.png" alt="CC BY" /></a> 
+
+
 
 ---
 
