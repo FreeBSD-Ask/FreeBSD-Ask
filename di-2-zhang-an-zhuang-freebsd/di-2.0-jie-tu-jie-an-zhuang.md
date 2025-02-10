@@ -448,10 +448,10 @@ rufus 下载地址：[https://rufus.ie/zh](https://rufus.ie/zh)
 
 |英文|中文|注释|
 |---|---|---|
-|`APM Apple Partition Map`|苹果分区表|`PowerPC` 用|
+|`APM Apple Partition Map`|苹果分区表|苹果 `PowerPC` 用（2006 以前）|
 |`BSD BSD Labels`|BSD 磁盘标签|仅 BSD 可识别|
 |`GPT GUID Partition Table`|GPT 全局唯一标识分区表|现代计算机使用（2013+）|
-|`MBR DOS Partitions`|MBR 主引导记录分区表|老式计算机使用（xp win7 年代）|
+|`MBR DOS Partitions`|MBR 主引导记录分区表|老式计算机使用（XP、Win7 年代）|
 
 ![](../.gitbook/assets/ufs4.png)
 
