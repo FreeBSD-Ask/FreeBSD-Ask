@@ -70,19 +70,6 @@ George Berkeley（1685.3.12—1753.1.14），2023 年是他逝世 270 周年。2
 >
 >爱因斯坦信奉马赫主义，而马赫是贝克莱主义者。
 
->**Gradually, philosophers and scientists arrived at the startling conclusion** that since every object is simply the sum of its qualities, and since qualities exist only in the mind, the whole objective universe of matter and energy, atoms and stars, does not exist except as a construction of the consciousness, an edifice of conventional symbols shaped by the senses of man.  
->
->As Berkeley, the archenemy of materialism, phrased it:  
->> “All the choir of heaven and furniture of earth, in a word all those bodies which compose the mighty frame of the world, have not any substance without the mind…. So long as they are not actually perceived by me, or do not exist in my mind, or that of any other created spirit, they must either have no existence at all, or else subsist in the mind of some Eternal Spirit.”  
->
->Einstein carried this train of logic to its ultimate limits by showing that even space and time are forms of intuition, which can no more be divorced from consciousness than can our concepts of color, shape, or size. Space has no objective reality except as an order or arrangement of the objects we perceive in it, and time has no independent existence apart from the order of events by which we measure it.  
->
->**Realization** that our whole knowledge of the universe is simply a residue of impressions clouded by our imperfect senses makes the quest for reality seem hopeless. If nothing has existence save in its being perceived, the world should dissolve into an anarchy of individual perceptions.  
->
->But a curious order runs through our perceptions, as if indeed there might be an underlayer of objective reality which our senses translate. Although no man can ever know whether his sensation of red or of Middle C is the same as another man’s, it is nevertheless possible to act on the assumption that everyone sees colors and hears tones more or less alike.
->
->——*THE UNIVERSE AND DR. EINSTEIN* Lincoln Barnett 1949 年伦敦版
-
 >**逐渐地，哲学家和科学家们得出了一个令人震惊的结论**：既然每个物体仅仅是其性质的总和，而这些性质又只存在于心灵之中，那么整个由物质与能量、原子与星辰组成的客观宇宙，除了作为意识的建构外，并不存在——这是一个由人类感官塑造的常规符号体系。
 >
 >正如贝克莱——唯物主义的死敌——所表述的那样：  
