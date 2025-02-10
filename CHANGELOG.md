@@ -1,6 +1,7 @@
 # 编辑日志
 
-
+- 2025.2.10
+  - “第 2.0 节 FreeBSD 安装图解”新增“Auto (ZFS)”
 - 2025.2.3
   - “第 1.1 节 UNIX、Unix-like、Linux 和 FreeBSD 简介”新增“UNIX 与忒修斯之船”一节
 - 2025.2.1

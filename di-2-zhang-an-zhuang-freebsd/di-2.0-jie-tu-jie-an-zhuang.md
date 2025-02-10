@@ -305,7 +305,9 @@ rufus 下载地址：[https://rufus.ie/zh](https://rufus.ie/zh)
 |    `src`     |                              系统源代码                               |
 |   `tests`    |                               测试工具                                |
 
-## 磁盘分区与 root 密码设置
+## 磁盘分区 
+
+
 
 ![](../.gitbook/assets/ins7.png)
 
@@ -319,6 +321,9 @@ rufus 下载地址：[https://rufus.ie/zh](https://rufus.ie/zh)
 |`Shell – Open a shell and partition by hand`|Shell – 打开 Shell 并手动分区|
 
 文件分区详解见其他章节（可手动分区解压 `txz` 文件以自定义，参见其他章节）。这里，推荐选择默认选项 `auto ZFS`：一般来说，内存小于 8GB 的应该选择 UFS，内存 8G 及以上的应该选用 ZFS。
+
+
+### Auto (ZFS)
 
 >**技巧**
 >
@@ -422,11 +427,61 @@ rufus 下载地址：[https://rufus.ie/zh](https://rufus.ie/zh)
 >
 >这是全盘安装，会丢失所有数据！非全盘安装请参考本书其他文章。
 
+### Auto (UFS)
+
+![](../.gitbook/assets/ufs1.png)
+
+`您想如何对您的磁盘进行分区？`
+
+>**技巧**
+>
+>若选择 `Partition`（分区），选项同下文。
+
+![](../.gitbook/assets/ufs2.png)
+
+`您是想使用整个磁盘还是将其分区以与其他操作系统共享？使用整个磁盘将擦除当前存储在那里的所有目录。`
+
+![](../.gitbook/assets/ufs3.png)
+
+
+`为该卷选择分区方案`
+
+|英文|中文|注释|
+|`APM Apple Partition Map`|苹果分区表|`PowerPC` 用|
+|`BSD BSD Labels`|BSD 磁盘标签|仅 BSD 可识别|
+|`GPT GUID Partition Table`|GPT 全局唯一标识分区表|现代计算机使用（2013+）|
+|`MBR DOS Partitions`|MBR 主引导记录分区表|老式计算机使用（xp win7 年代）|
+
+![](../.gitbook/assets/ufs4.png)
+
+`请审查磁盘设置。若无问题，可点击 “Finish”（完成）按钮`
+
+|英文|中文|
+|`Create`|创建|
+|`Delete`|删除|
+|`Modify`|调整|
+|`Revert`|还原|
+|`Auto`|自动|
+|`Finish`|完成|
+
+![](../.gitbook/assets/ufs5.png)
+
+`您的更改不会被保存到磁盘。如果您选择了覆盖现有数据。它将被删除。您确定要提交您的更改吗？`
+
+|英文|中文|
+|`Commit`|提交|
+|`Revert & Exit`|还原并退出|
+|`Back`|返回|
+
+---
+
 ![](../.gitbook/assets/ins13.png)
 
 ![](../.gitbook/assets/ins14.png)
 
 ![](../.gitbook/assets/ins15.png)
+
+## 设置 root 密码
 
 ![](../.gitbook/assets/ins16.png)
 
