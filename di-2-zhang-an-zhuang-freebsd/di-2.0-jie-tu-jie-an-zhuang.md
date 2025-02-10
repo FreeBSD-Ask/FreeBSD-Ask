@@ -447,6 +447,7 @@ rufus 下载地址：[https://rufus.ie/zh](https://rufus.ie/zh)
 `为该卷选择分区方案`
 
 |英文|中文|注释|
+|---|---|---|
 |`APM Apple Partition Map`|苹果分区表|`PowerPC` 用|
 |`BSD BSD Labels`|BSD 磁盘标签|仅 BSD 可识别|
 |`GPT GUID Partition Table`|GPT 全局唯一标识分区表|现代计算机使用（2013+）|
@@ -457,6 +458,7 @@ rufus 下载地址：[https://rufus.ie/zh](https://rufus.ie/zh)
 `请审查磁盘设置。若无问题，可点击 “Finish”（完成）按钮`
 
 |英文|中文|
+|---|---|
 |`Create`|创建|
 |`Delete`|删除|
 |`Modify`|调整|
@@ -469,6 +471,7 @@ rufus 下载地址：[https://rufus.ie/zh](https://rufus.ie/zh)
 `您的更改不会被保存到磁盘。如果您选择了覆盖现有数据。它将被删除。您确定要提交您的更改吗？`
 
 |英文|中文|
+|---|---|
 |`Commit`|提交|
 |`Revert & Exit`|还原并退出|
 |`Back`|返回|
