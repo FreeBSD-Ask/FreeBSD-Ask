@@ -307,7 +307,7 @@ rufus 下载地址：[https://rufus.ie/zh](https://rufus.ie/zh)
 
 ## 磁盘分区 
 
-
+FreeBSD 14.2 RELEASE 的 `/` 分区支持 UFS 和 ZFS 两种文件系统。旧版 FreeBSD 系统 root 分区仅支持 UFS 一种文件系统。
 
 ![](../.gitbook/assets/ins7.png)
 
