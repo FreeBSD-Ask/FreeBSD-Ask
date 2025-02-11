@@ -195,7 +195,7 @@ rufus 下载地址：[https://rufus.ie/zh](https://rufus.ie/zh)
 
 >**警告**
 >
->本文基于 VMware 17 进行演示（使用 UEFI+ZFS）。
+>本文基于 VMware 17 进行演示（使用 UEFI）。
 >
 >若是物理机，请考虑使用 [rufus](https://rufus.ie/zh/) + [img 镜像](https://download.freebsd.org/ftp/releases/ISO-IMAGES/14.1/FreeBSD-14.1-RELEASE-amd64-memstick.img)。
 
@@ -478,7 +478,7 @@ FreeBSD 14.2 RELEASE 的 `/` 分区支持 UFS 和 ZFS 两种文件系统。旧�
 
 ![](../.gitbook/assets/ufs6.png)
 
-初始化磁盘
+初始化磁盘——此界面一闪而过
 
 ---
 
