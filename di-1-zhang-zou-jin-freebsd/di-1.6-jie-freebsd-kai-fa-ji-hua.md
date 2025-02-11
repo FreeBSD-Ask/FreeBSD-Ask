@@ -4,7 +4,7 @@
 >
 >关注实时开发状态或使用 CURRENT 的用户应该关注 [freebsd-src/UPDATING](https://github.com/freebsd/freebsd-src/blob/main/UPDATING) 及 [freebsd-src/RELNOTES](https://github.com/freebsd/freebsd-src/blob/main/RELNOTES)。
 
-**翻译同步至 Updates from srcmgr@ call**
+**翻译同步至 [Updates in January 2025](https://github.com/bsdjhb/devsummit/commit/232e12d0d20d9b603d75690f66bed95d940bed48)**
 
 
 > FreeBSD 的生命周期为每个大版本 4 年，小版本是发布新的小版本版后 +3 个月。
@@ -41,7 +41,9 @@
 | 移除 ACPI 安全定时器            | cperciva      | [00d061855deb](https://cgit.freebsd.org/src/commit/?id=00d061855deb93df5d709c8a794985ebb55012f8)                             |
 | 移除对交换内核栈的支持          | markj         | [6aa98f78cc6e](https://cgit.freebsd.org/src/commit/?id=6aa98f78cc6e527b801cabddf6881ab5c9256934)                             |
 | 移除 armv6 支持                 | imp/manu      | [7818c2d37c2c](https://cgit.freebsd.org/src/commit/Makefile?id=7818c2d37c2c600fc9ad6f2a0951e50dd21b17c8)                    |
-
+| 移除了 publicwkey(5)         | manu         | [9dcb984251b3](https://cgit.freebsd.org/src/commit/?id=9dcb984251b35ab1959bcaafcb3f129c8ae2f25b)  |
+| 内联 IPSEC 加速            | kib          | [ef2a572bf6bd](https://cgit.freebsd.org/src/commit/?id=ef2a572bf6bdcac97ef29)  |
+| 移除了 gvinum              | jhb / emaste | [f87bb5967670](https://cgit.freebsd.org/src/commit/?id=f87bb5967670914f2f6d9ab4c732ab083a61b4c8) [e51036fbf3f8](https://cgit.freebsd.org/src/commit/?id=e51036fbf3f896e8802ed0a5ef06ae1bcd7c0737) |
 
 ### ✈️ 已实现
 
@@ -62,6 +64,7 @@
 | 简单的库 ABI 检查器               | brooks         | 原型在 [D44271](https://reviews.freebsd.org/D44271)                                                                                                                                                                                                                                                                                                                |
 | 图形化安装程序                      | khorben        | [D44279](https://reviews.freebsd.org/D44279) [D44670](https://reviews.freebsd.org/D44670) [D44671](https://reviews.freebsd.org/D44671) [D44672](https://reviews.freebsd.org/D44672) [D44673](https://reviews.freebsd.org/D44673) [D44674](https://reviews.freebsd.org/D44674) [D45000](https://reviews.freebsd.org/D45000) |
 | bhyve 直接使用 Linux 引导器           | 	robn           | （请参阅 [freebsd 虚拟化](https://lists.freebsd.org/archives/freebsd-virtualization/2024-May/002112.html)）                                                                                                                                                                                                                                                                                            |
+| S0ix 低空闲状态         | obiwac, jhb | |
 
 ### 🚧 正在进行
 
@@ -96,15 +99,15 @@
 | 预提交 CI ports                                         | lwhsu 将与 bapt 和 decke 审查 | bofh 似乎有一些 PoC                                                                     |
 | 通用闪存存储（UFS）驱动程序                                    | loos                          | 需要用于一些嵌入式部署、但未来将更具通用性。即将登陆英特尔平台。同样支持 LinuxBoot。 |
 | DTrace 的 `-C`（大写字母）参数再次生效                  | antranigv、markj              | PR 尚未提交、只需运行 `dtrace -c` 就可查看所含文件                                          |
-| 完善了 bsd-user 支持以供发布流程使用                     | imp、 dfr、 cperciva            | 32 位系统在 64 位系统上的问题、对非常陈旧的 qemu-bsd-user-static 软件进行更新                |
-| 优化 bsd-user binfmt 等以方便 jail 用户               | cperciva、 imp                 | Colin 希望每个 jail 都能设置这些事项                      |                                                             
+| ~~优化 bsd-user 对发布过程的支持~~ | imp, dfr, cperciva | 解决 32 位在 64 位上的问题，更新非常旧的 qemu-bsd-user-static 端口。完成 STA 工作后，对发布工程不再相关。 |
+| ~~优化 bsd-user binfmt 等以适应 jail~~ | cperciva, imp | ~~Colin 希望为这些设置提供每个 jail 的配置。~~  完成 STA 工作后，对发布工程不再相关。 |                                                       
 | bsd bsd-user + poudriere 支持 RISCV                         | imp、 mhorne、 jrtc27           | 软件包构建完全损坏、但基本功能正常、需要修复以便我们可以再次使用 riscv 软件包           |
 |使用 GitHub runner 拉取请求                             | 	imp                         | 针对 cirrus-ci 漏洞中的解决方案之一                                                           |
 | 使用 GitHub Action 改善外部贡献者的体验                 | imp                           | 这里需要帮助                                                                       |
-|  S0ix 低闲状态                                          | 	obiwac、 jhb                 |                                                                                         |
 | 原生 inotify（2）                                       | tcberner                      | 许多软件都需要这个                                                                     |
 | 15.0 应该使用哪个版本的 OpenSSL                         | gtetlow                       | 通过在现行环境中运行更新的版本以获取调试时间。                                                 |
-
+| PCIe 激活状态电源管理 (ASPM) | jhb | 某些系统上正确实现 PCIe原生热插拔所必需 |
+| PCIe 下行端口控制 (DPC) | jhb | Thunderbolt 所需，取代 PCIe 原生热插拔 |
 
 ### 🥺 想要 🙏
 
@@ -153,9 +156,9 @@
 
 | 项目                                                                                                          | 负责人          | 提交 / 审核 / 补丁                                                                        |
 | ------------------------------------------------------------------------------------------------------------- | ---------------- | ----------------------------------------------------------------------------------------- |
-| Firewire 🔥（火线）                                                                                                   | imp              | 宁愿晚一些而不是早一点（我们是否应该在更早的时候去除磁盘支持、因为有一个被 GIANT 锁定的 CAM 驱动程序）           |
+| Firewire 🔥（火线）                                                                                                   | imp              | 宁愿晚一些而不是早一点（我们是否应该在更早的时候去除磁盘支持、因为有一个被 GIANT 锁定的 CAM 驱动程序）（我们是否迁移到 16？ 是的）           |
 | i386 内核                                                                                                     | imp             | 时间？                                                                                    |
-| powerpc、powerpcsce 内核                                                                                      | imp              |                                                                                           |
+| powerpc、powerpcspe 内核                                                                                      | imp              |                                                                                           |
 | PS3 🎮                                                                                                        | imp               | 沒人使用了（我们需要移植 PS5！）                                                         |
 | powerpc64、powerpc64le（整个 powerpc 架构）                                                                 |                  | <https://bugs.freebsd.org/271826> FreeBSD 在 PowerMac G5 上速度极慢……                     |
 | SoC 评估审查                                                                                                 |imp/manu/mhorne	 |                                                                                           |
