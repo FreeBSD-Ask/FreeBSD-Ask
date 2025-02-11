@@ -697,7 +697,7 @@ FreeBSD 14.2 RELEASE 的 `/` 分区支持 UFS 和 ZFS 两种文件系统。旧�
 |`9 disable_ddttrace`|禁止 DTrace 破坏性（destructive）模式|
 
 
-## 更新固件和创建普通用户
+## 安装固件
 
 ![虚拟机无固件可安装](../.gitbook/assets/install-14.2.png)
 
