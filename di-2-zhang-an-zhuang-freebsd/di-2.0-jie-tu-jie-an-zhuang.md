@@ -204,7 +204,7 @@ rufus 下载地址：[https://rufus.ie/zh](https://rufus.ie/zh)
 >
 > 如果要在 VMware 虚拟机使用 UEFI，必须使用 FreeBSD 13.0-RELEASE 及以上，否则启动会花屏。
 
-## 启动安装盘、设定键盘布局与主机名
+## 启动安装盘
 
 ![](../.gitbook/assets/ins1.png)
 
@@ -260,11 +260,15 @@ rufus 下载地址：[https://rufus.ie/zh](https://rufus.ie/zh)
 >
 >无论在任何步骤，按 **ESC 键** 均 **不能** 返回上一菜单，都会直接跳到下一步直至退出安装或结束安装。
 
+## 设定键盘布局
+
 ![](../.gitbook/assets/ins4.png)
 
 `FreeBSD 系统控制台驱动程序默认使用标准 `US`（美式）键盘布局。可以在下面选择别的键盘布局。`
 
 这里是键盘布局菜单，直接按 **回车键** 使用默认键盘布局即可（因目前中国使用美式键盘布局）。
+
+## 设定主机名
 
 ![](../.gitbook/assets/ins5.png)
 
@@ -667,7 +671,7 @@ FreeBSD 14.2 RELEASE 的 `/` 分区支持 UFS 和 ZFS 两种文件系统。旧�
 |    `powerd`     |                                                                                电源管理，CPU 频率动态调整                                                                                 |
 |    `dumpdev`    |                                                                       启用崩溃转储，用于调试系统                                                                        |
 
-## 安全加固、更新固件和创建普通用户
+## 安全加固
 
 ![](../.gitbook/assets/ins29.png)
 
@@ -692,6 +696,9 @@ FreeBSD 14.2 RELEASE 的 `/` 分区支持 UFS 和 ZFS 两种文件系统。旧�
 |`8 secure_console`|启用控制台密码（单用户模式下也需要 root 密码）|
 |`9 disable_ddttrace`|禁止 DTrace 破坏性（destructive）模式|
 
+
+## 更新固件和创建普通用户
+
 ![虚拟机无固件可安装](../.gitbook/assets/install-14.2.png)
 
 自动检测安装所需固件（14.2 [引入](https://cgit.freebsd.org/src/commit/?id=03c07bdc8b31)）。
@@ -711,6 +718,8 @@ FreeBSD 14.2 RELEASE 的 `/` 分区支持 UFS 和 ZFS 两种文件系统。旧�
 >![](../.gitbook/assets/1-install.png)
 >
 >**此图片来自物理机安装界面（使用采集卡）**
+
+## 创建普通用户
 
 ![](../.gitbook/assets/ins30.png)
 
