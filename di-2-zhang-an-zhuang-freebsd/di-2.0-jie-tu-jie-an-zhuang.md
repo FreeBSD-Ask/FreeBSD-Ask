@@ -324,7 +324,10 @@ FreeBSD 14.2 RELEASE 的 `/` 分区支持 UFS 和 ZFS 两种文件系统。旧�
 |`Manual – Manual Disk Setup (experts)`|手动 – 手动磁盘设置（适合专家）|
 |`Shell – Open a shell and partition by hand`|Shell – 打开 Shell 并手动分区|
 
-文件分区详解见其他章节（可手动分区解压 `txz` 文件以自定义，参见其他章节）。这里，推荐选择默认选项 `auto ZFS`：一般来说，内存小于 8GB 的应该选择 UFS，内存 8G 及以上的应该选用 ZFS。
+文件系统详解见其他章节（可手动分区解压 `txz` 文件以自定义，参见其他章节）。这里，推荐选择默认选项 `auto ZFS`：一般来说，内存小于 8GB 的应该选择 UFS，内存 8G 及以上的应该选用 ZFS。
+
+
+手动分区和 Shell 分区参见手动安装 FreeBSD 相关章节。
 
 
 ### Auto (ZFS)（使用 ZFS 作为 `	/`）
