@@ -107,7 +107,7 @@
 | 原生 inotify（2）                                       | tcberner                      | 许多软件都需要这个                                                                     |
 | 15.0 应该使用哪个版本的 OpenSSL                         | gtetlow                       | 通过在现行环境中运行更新的版本以获取调试时间。                                                 |
 | PCIe 激活状态电源管理 (ASPM) | jhb | 某些系统上正确实现 PCIe原生热插拔所必需 |
-| PCIe 下行端口控制 (DPC) | jhb | Thunderbolt 所需，取代 PCIe 原生热插拔 |
+| PCIe 下行端口控制 (DPC) | jhb | 雷电（Thunderbolt）所需，取代 PCIe 原生热插拔 |
 
 ### 🥺 想要 🙏
 
