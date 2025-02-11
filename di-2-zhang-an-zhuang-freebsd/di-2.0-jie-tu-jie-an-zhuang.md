@@ -330,7 +330,7 @@ FreeBSD 14.2 RELEASE 的 `/` 分区支持 UFS 和 ZFS 两种文件系统。旧�
 手动分区和 Shell 分区参见手动安装 FreeBSD 相关章节。
 
 
-### Auto (ZFS)（使用 ZFS 作为 `	/`）
+### Auto (ZFS)（使用 ZFS 作为 `	/` 文件系统）
 
 >**技巧**
 >
@@ -438,7 +438,7 @@ FreeBSD 14.2 RELEASE 的 `/` 分区支持 UFS 和 ZFS 两种文件系统。旧�
 >
 >这是全盘安装，会丢失所有数据！非全盘安装请参考本书其他文章。
 
-### Auto (UFS)（使用 UFS 作为 `	/`）
+### Auto (UFS)（使用 UFS 作为 `	/` 文件系统）
 
 ![](../.gitbook/assets/ufs1.png)
 
