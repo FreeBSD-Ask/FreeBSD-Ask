@@ -476,6 +476,10 @@ rufus 下载地址：[https://rufus.ie/zh](https://rufus.ie/zh)
 |`Revert & Exit`|还原并退出|
 |`Back`|返回|
 
+![](../.gitbook/assets/ufs6.png)
+
+初始化磁盘
+
 ---
 
 ![](../.gitbook/assets/ins13.png)
