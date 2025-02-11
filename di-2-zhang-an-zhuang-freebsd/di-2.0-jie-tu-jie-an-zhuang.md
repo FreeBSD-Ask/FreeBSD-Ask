@@ -738,9 +738,48 @@ FreeBSD 14.2 RELEASE 的 `/` 分区支持 UFS 和 ZFS 两种文件系统。旧�
 
 ![](../.gitbook/assets/ins31.png)
 
+
 >**注意**
 >
 >如果你要创建普通用户，请务必将其加入到 `wheel` 组中（请参见箭头位置）。
+
+
+```sh
+FreeBSD Installer
+========================
+Add Users
+
+Username: ykla # 此处输入用户名
+Full name: # 此处输入用户全名
+Uid (Leave empty for default):  # 用户 UID
+Login group [ykla]: # 用户组
+Login group is ykla. Invite ykla into other groups? []: wheel # 此处输入“wheel”，邀请用户“ykla”加入“wheel”以便于使用
+Login class [default]: # 用户分级
+Shell (sh csh tcsh nologin) [sh]: # 用户默认 shell
+Home directory [/home/ykla]: # 用户家目录
+Home directory permissions (Leave empty for default): # 用户家目录权限
+Use password-based authentication? [yes]:  # 是否启用密码验证
+Use an empty password? (yes/no) [no]:  # 是否使用空密码
+Use a random password? (yes/no) [no]:  # 是否使用随机密码
+Enter password:  # 输入密码，密码不显示在屏幕上，也不会是 ****，就是什么也没有
+Enter password again:  # 重复输入密码，密码不显示在屏幕上，也不会是 ****，就是什么也没有
+Lock out the account after creation? [no]: # 创建账户后锁定账户
+Username    : ykla
+Password    : *****
+Full Name   : 
+Uid         : 1001
+Class       : 
+Groups      : ykla wheel
+Home        : /home/ykla
+Home Mode   : 
+Shell       : /bin/sh
+Locked      : no
+OK? (yes/no) [yes]: # 看起来正常吗
+adduser: INFO: Successfully added (ykla) to the user database. # 已成功将 ykla 添加到用户数据库
+Add another user? (yes/no) [no]: # 是否还要再添加一位用户
+```
+
+
 
 其他参数可以保持默认设置不变。在 FreeBSD 14 及以后，所有用户的默认 shell 都被统一为了 `sh`。
 
