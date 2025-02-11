@@ -327,7 +327,7 @@ FreeBSD 14.2 RELEASE 的 `/` 分区支持 UFS 和 ZFS 两种文件系统。旧�
 文件分区详解见其他章节（可手动分区解压 `txz` 文件以自定义，参见其他章节）。这里，推荐选择默认选项 `auto ZFS`：一般来说，内存小于 8GB 的应该选择 UFS，内存 8G 及以上的应该选用 ZFS。
 
 
-### Auto (ZFS)
+### Auto (ZFS)（使用 ZFS 作为 `	/`）
 
 >**技巧**
 >
@@ -351,6 +351,10 @@ FreeBSD 14.2 RELEASE 的 `/` 分区支持 UFS 和 ZFS 两种文件系统。旧�
 > 刷新后，输入 `bsdinstall` 即可进入安装模式。
 >
 > 原因详情见 [FreeBSD 手册](https://handbook.bsdcn.org/di-18-zhang-cun-chu/18.3.-tiao-zheng-he-zeng-jia-ci-pan-da-xiao.html)，但是我认为这是一个 bug。
+
+![](../.gitbook/assets/zfs1.png)
+
+`正在探测设备，请稍候（这可能需要一些时间）……`
 
 ![](../.gitbook/assets/ins8.png)
 
@@ -431,7 +435,7 @@ FreeBSD 14.2 RELEASE 的 `/` 分区支持 UFS 和 ZFS 两种文件系统。旧�
 >
 >这是全盘安装，会丢失所有数据！非全盘安装请参考本书其他文章。
 
-### Auto (UFS)
+### Auto (UFS)（使用 UFS 作为 `	/`）
 
 ![](../.gitbook/assets/ufs1.png)
 
