@@ -48,7 +48,7 @@
 ## 第 4 章 桌面安装
 
 * [第 4.1 节 桌面环境概述、安装显卡驱动&Xorg](di-4-zhang-zhuo-mian-an-zhuang/di-4.1-jie-an-zhuang-xian-ka-qu-dong-ji-xorg-bi-kan.md)
-* [第 4.2 节 安装 KDE5](di-4-zhang-zhuo-mian-an-zhuang/di-4.2-jie-an-zhuang-kde-5.md)
+* [第 4.2 节 安装 KDE](di-4-zhang-zhuo-mian-an-zhuang/di-4.2-jie-an-zhuang-kde.md)
 * [第 4.3 节 安装 Gnome](di-4-zhang-zhuo-mian-an-zhuang/di-4.3-jie-an-zhuang-gnome.md)
 * [第 4.4 节 安装 Mate](di-4-zhang-zhuo-mian-an-zhuang/di-4.4-jie-an-zhuang-mate.md)
 * [第 4.5 节 安装 Xfce](di-4-zhang-zhuo-mian-an-zhuang/di-4.5-jie-an-zhuang-xfce.md)
@@ -59,7 +59,7 @@
 * [第 4.10 节 root 登录桌面](di-4-zhang-zhuo-mian-an-zhuang/di-4.10-jie-root-deng-lu-zhuo-mian.md)
 * [第 4.11 节 主题与美化](di-4-zhang-zhuo-mian-an-zhuang/di-4.11-jie-zhu-ti-yu-mei-hua.md)
 * [第 4.12 节 远程桌面管理](di-4-zhang-zhuo-mian-an-zhuang/di-4.12-jie-yuan-cheng-zhuo-mian-guan-li.md)
-* [第 4.13 节 安装 KDE6](di-4-zhang-zhuo-mian-an-zhuang/di-4.13.md)
+* [第 4.13 节 安装 IceWM](di-4-zhang-zhuo-mian-an-zhuang/di-4.13.md)
 * [第 4.14 节 安装 Budgie](di-4-zhang-zhuo-mian-an-zhuang/di-4.14-jie-an-zhuang-budgie.md)
 * [第 4.15 节 安装 i3wm](di-4-zhang-zhuo-mian-an-zhuang/di-4.15-jie-an-zhuang-i3wm.md)
 * [第 4.16 节 安装 CDE](di-4-zhang-zhuo-mian-an-zhuang/di-4.16-jie-an-zhuang-cde.md)
@@ -70,7 +70,6 @@
 * [第 4.21 节 安装 LXDE](di-4-zhang-zhuo-mian-an-zhuang/di-4.21-lxde.md)
 * [第 4.22 节 安装 Window Maker](di-4-zhang-zhuo-mian-an-zhuang/di-4.22-winmaker.md)
 * [第 4.23 节 安装 Fluxbox](di-4-zhang-zhuo-mian-an-zhuang/di-4.23-fluxbox.md)
-* [第 4.24 节 安装 IceWM](di-4-zhang-zhuo-mian-an-zhuang/di-4.24-icewm.md)
 
 ## 第 5 章 输入法及常用软件
 
