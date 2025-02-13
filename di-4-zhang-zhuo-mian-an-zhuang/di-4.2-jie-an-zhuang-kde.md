@@ -1,22 +1,27 @@
-# 第 4.2 节 安装 KDE5
+# 第 4.2 节 安装 KDE
 
->**技巧**
+>**注意**
 >
-> 视频教程：[003-FreeBSD14.2 安装 KDE5](https://www.bilibili.com/video/BV13ji2YLELM)
+>旧版本升级说明：即卸载后安装新的 KDE。
+>
+>```
+># pkg remove -f kde[56] && pkg autoremove
+>```
 
+然后按下文操作即可。
 ## 安装
 
 ```sh
-# pkg install xorg sddm kde5 plasma5-sddm-kcm wqy-fonts xdg-user-dirs
+# pkg install xorg sddm kde plasma6-sddm-kcm wqy-fonts xdg-user-dirs
 ```
 
 或者：
 
 ```sh
 # cd /usr/ports/x11/xorg/ && make install clean # X11
-# cd /usr/ports/x11/kde5/ && make install clean # KDE5
+# cd /usr/ports/x11/kde/ && make install clean # KDE5
 # cd /usr/ports/x11/sddm/ && make install clean # 窗口管理器
-# cd /usr/ports/deskutils/plasma5-sddm-kcm/ && make install clean # KDE 管理 SDDM 的模块
+# cd /usr/ports/deskutils/plasma6-sddm-kcm/ && make install clean # KDE 管理 SDDM 的模块
 # cd /usr/ports/x11-fonts/wqy/ && make install clean # 文泉驿字体
 # cd /usr/ports/devel/xdg-user-dirs/ && make install clean # 自动创建用户目录的工具
 ```
@@ -24,7 +29,7 @@
 
 > **故障排除**
 >
-> **如果有时候提示 `pkg` 找不到或者没有 kde5,请点击** [**x11/kde5**](https://www.freshports.org/x11/kde5) **看看是不是二进制包没有被构建出来。有时候需要切换 quarterly（待上游构建出来了再换到 latest 源，`pkg upgrade` 更新即可）或者 latest 源。类似方法适用于所有软件，故后边不再赘述。如果没有，需要自己使用上述的 Port 进行编译。**
+> 如果有时候提示 `pkg` 找不到或者没有 kde5,请点击 [x11/kde](https://www.freshports.org/x11/kde) 看看是不是二进制包没有被构建出来。有时候需要切换 quarterly（待上游构建出来了再换到 latest 源，`pkg upgrade` 更新即可）或者 latest 源。类似方法适用于所有软件，故后边不再赘述。如果没有，需要自己使用上述的 Port 进行编译。
 
 ## 启动项设置
 
@@ -32,6 +37,8 @@
 # sysrc dbus_enable="YES"
 # sysrc sddm_enable="YES"
 ```
+
+![KDE 6 界面](../.gitbook/assets/kde6-1.png)
 
 ### `startx`
 
@@ -41,13 +48,10 @@
 
 > 如果你在 root 下已经执行过了，那么新用户仍要再执行一次才能正常使用（无需 root 权限或 sudo 等）`startx`。
 
-提示：hal 已经被删除。**不需要**再添加~~hald_enable="YES",~~ 见：
-
-[sysutils/hal](https://www.freshports.org/sysutils/hal)
 
 ## 权限设置
 
-> 普通用户还需要将用户加入 wheel 组：
+> 普通用户还需要将用户加入 wheel 组（或 `video` 组）：
 >
 > ```sh
 > # pw groupmod wheel -m 用户名
@@ -109,7 +113,7 @@ Current=sddm-freebsd-black-theme
 
 重启，设置完成：
 
- ![KDE 5 FreeBSD 主题](../.gitbook/assets/kde-theme.png)
+ ![KDE 6 FreeBSD 主题](../.gitbook/assets/kde-theme.png)
 
 ### 参考文献
 
@@ -123,7 +127,7 @@ Current=sddm-freebsd-black-theme
 # sysrc sddm_lang="zh_CN"
 ```
 
-### 系统中文化方法①
+### 系统中文化方法①用户分级
 
 编辑 `/etc/login.conf`：
 
@@ -139,7 +143,9 @@ Current=sddm-freebsd-black-theme
 
 点击开始-> System Settings -> Regional Settings 在 `Language` 项的 `Available Language` 栏中找到 “简体中文” 单击 `>` 将其加到 `Preferrred Languages` 栏中，然后单击 `Apply` 按钮；再到 `Formats` 项，将 `Region` 文本框中的内容修改为 “中国-简体中文(zh-CN)”，单击 `Apply` 按钮，logout（注销）后重新登录，此时系统语言将变为中文。
 
-![KDE 5](../.gitbook/assets/sddmcn.png)
+![SDDM](../.gitbook/assets/sddmcn.png)
+
+![KDE 6](../.gitbook/assets/kde6-2.png)
 
 #### 参考文献
 
@@ -150,22 +156,18 @@ Current=sddm-freebsd-black-theme
 
 ### sddm 登录闪退
 
-> - **如果 sddm 登录闪退到登录界面，请检查左下角是不是 plasma-X11，闪退的一般都是 Wayland！因为目前 FreeBSD 上的 KDE 5 尚不支持 Wayland。**
->
-> ![KDE 5](../.gitbook/assets/Wayland.png)
->
->![KDE 5](../.gitbook/assets/x11.png)
->
-> **如果你使用 VMware 虚拟机时，压根看不见 sddm 最下边的选项，请按照配置虚拟机章节的教程配置屏幕自动缩放。**
+
+
+如果你使用 VMware 虚拟机时，压根看不见 sddm 最下边的选项，请按照配置虚拟机章节的教程配置屏幕自动缩放。
 
 
 ### 启动 sddm 提醒 `/usr/bin/xauth: (stdin):1: bad display name`，但是可以正常 `startx`
 
-> 你需要在 `/etc/rc.conf` 里面检查你的 `hostname` 是否为空（理论上不应该为空），有没有设置：
->
-> ![KDE 5](../.gitbook/assets/errornohostname.png)
->
-> 设置 `hostname` 即可。
+你需要在 `/etc/rc.conf` 里面检查你的 `hostname` 是否为空（理论上不应该为空），有没有设置：
+
+![](../.gitbook/assets/errornohostname.png)
+
+按需设置 `hostname` 即可。
 
 ### 菜单缺失关机、重启等四个按纽
 
@@ -179,10 +181,12 @@ Current=sddm-freebsd-black-theme
 
 ### 解除自动锁屏
 
-单击“设置”——>“工作区行为”——>“锁屏”——>取消勾选“自动锁定屏幕”，然后点击“应用”。注销后重新登录即可。
+单击“设置”——>“安全和隐私”——>“锁屏”——>“自动锁定屏幕”选择“不自动锁屏”，然后点击“应用”。（休眠唤醒后锁定屏幕可按需设置）
+
+注销后重新登录即可。
 
 
-![关闭 KDE5 锁屏](../.gitbook/assets/suoping.png)
+![关闭 KDE 6 锁屏](../.gitbook/assets/suoping.png)
 
 
 ### Procfs 设置（FreeBSD 13.2 前必须如此）
@@ -207,8 +211,8 @@ proc            /proc           procfs  rw      0       0
 
 > > **警告**
 > >
-> > **在 13.2 以前，如果你不配置 proc，在普通用户下，你的所有图标都将变成无法点击的白色方块，任何软件都打不开，桌面陷入异常。且后续再进行配置也是无效的，必须重装系统。**
+> > 在 13.2 以前，如果你不配置 proc，在普通用户下，你的所有图标都将变成无法点击的白色方块，任何软件都打不开，桌面陷入异常。且后续再进行配置也是无效的，必须重装系统。
 >
-> ↓↓↓ **这就是后果** ↓↓↓
+> ↓↓↓ 这就是后果 ↓↓↓
 >
 >  ![KDE 5](../.gitbook/assets/witekde.png)
