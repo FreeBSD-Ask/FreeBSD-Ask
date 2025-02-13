@@ -53,7 +53,7 @@
 
 在前文的基础上，把 `/usr/local/share/xsessions/plasmax11.desktop` 中的 `/usr/local/bin/startplasma-x11` 都改成 `/usr/local/bin/startplasma-wayland`。重启即可。
 
-![KDE 6 wayland FreeBSD](../.gitbook/assets/kde6-2.png)
+![KDE 6 wayland FreeBSD](../.gitbook/assets/kde6-3.png)
 
 ## 权限设置
 
