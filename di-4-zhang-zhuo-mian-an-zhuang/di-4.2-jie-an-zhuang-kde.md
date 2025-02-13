@@ -145,7 +145,7 @@ Current=sddm-freebsd-black-theme
 
 ![SDDM](../.gitbook/assets/sddmcn.png)
 
-![KDE6](../.gitbook/assets/kde-2.png)
+![KDE 6](../.gitbook/assets/kde6-2.png)
 
 #### 参考文献
 
@@ -186,7 +186,7 @@ Current=sddm-freebsd-black-theme
 注销后重新登录即可。
 
 
-![关闭 KDE6 锁屏](../.gitbook/assets/suoping.png)
+![关闭 KDE 6 锁屏](../.gitbook/assets/suoping.png)
 
 
 ### Procfs 设置（FreeBSD 13.2 前必须如此）
