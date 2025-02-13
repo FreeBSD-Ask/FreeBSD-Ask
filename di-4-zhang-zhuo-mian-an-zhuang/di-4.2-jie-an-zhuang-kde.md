@@ -49,6 +49,12 @@
 > 如果你在 root 下已经执行过了，那么新用户仍要再执行一次才能正常使用（无需 root 权限或 sudo 等）`startx`。
 
 
+##  基于 Wayland
+
+在前文的基础上，把 `/usr/local/share/xsessions/plasmax11.desktop` 中的 `/usr/local/bin/startplasma-x11` 都改成 `/usr/local/bin/startplasma-wayland`。重启即可。
+
+![KDE 6 wayland FreeBSD](../.gitbook/assets/kde6-2.png)
+
 ## 权限设置
 
 > 普通用户还需要将用户加入 wheel 组（或 `video` 组）：
