@@ -5,7 +5,7 @@
 >旧版本升级说明：即卸载后安装新的 KDE。
 >
 >```
->># pkg remove -f kde[56] && pkg autoremove
+># pkg remove -f kde[56] && pkg autoremove
 >```
 
 然后按下文操作即可。
