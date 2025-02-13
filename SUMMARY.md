@@ -48,7 +48,7 @@
 ## 第 4 章 桌面安装
 
 * [第 4.1 节 桌面环境概述、安装显卡驱动&Xorg](di-4-zhang-zhuo-mian-an-zhuang/di-4.1-jie-an-zhuang-xian-ka-qu-dong-ji-xorg-bi-kan.md)
-* [第 4.2 节 安装 KDE](di-4-zhang-zhuo-mian-an-zhuang/di-4.2-jie-an-zhuang-kde.md)
+* [第 4.2 节 安装 KDE6](di-4-zhang-zhuo-mian-an-zhuang/di-4.2-jie-an-zhuang-kde.md)
 * [第 4.3 节 安装 Gnome](di-4-zhang-zhuo-mian-an-zhuang/di-4.3-jie-an-zhuang-gnome.md)
 * [第 4.4 节 安装 Mate](di-4-zhang-zhuo-mian-an-zhuang/di-4.4-jie-an-zhuang-mate.md)
 * [第 4.5 节 安装 Xfce](di-4-zhang-zhuo-mian-an-zhuang/di-4.5-jie-an-zhuang-xfce.md)
