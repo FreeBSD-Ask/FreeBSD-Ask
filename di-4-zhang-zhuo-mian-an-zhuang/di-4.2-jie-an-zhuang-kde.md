@@ -38,7 +38,7 @@
 # sysrc sddm_enable="YES"
 ```
 
-![KDE6](../.gitbook/assets/kde6-1.png)
+![KDE 6 界面](../.gitbook/assets/kde6-1.png)
 
 ### `startx`
 
