@@ -147,7 +147,7 @@ Current=sddm-freebsd-black-theme
 
 ### 系统中文化方法②系统设置
 
-点击开始-> System Settings -> Regional Settings 在 `Language` 项的 `Available Language` 栏中找到 “简体中文” 单击 `>` 将其加到 `Preferrred Languages` 栏中，然后单击 `Apply` 按钮；再到 `Formats` 项，将 `Region` 文本框中的内容修改为 “中国-简体中文(zh-CN)”，单击 `Apply` 按钮，logout（注销）后重新登录，此时系统语言将变为中文。
+点击开始-> System Settings ->  `Language & Time` 在 `Region & Language` 项的 `Language` 栏点击右侧 `Modify` 中找到 “简体中文”（一般是倒数第二，如果都是`□□□□`，检查你的中文字体安装否） 单击 `>` 将其加到 `Preferrred Languages` 栏中，然后单击 `Apply` 按钮；logout（注销）后重新登录，此时系统语言将变为中文。
 
 ![SDDM](../.gitbook/assets/sddmcn.png)
 
