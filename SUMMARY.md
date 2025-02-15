@@ -198,9 +198,12 @@
 ## 第 19 章 文学故事
 
 * [第 19.1 节 开源与苦难哲学](di-19-zhang-wen-xue-gu-shi/di-19.1-jie-linux-yu-ku-nan-zhe-xue.md)
-* [第 19.2 节 Git&Linux 败局与 FreeBSD 败局](di-19-zhang-wen-xue-gu-shi/di-19.2-jie-linux-bai-ju-yi-ding-bo-freebsd-da-bai-ju.md)
+* [第 19.2 节 Linux 败局与 FreeBSD 败局](di-19-zhang-wen-xue-gu-shi/di-19.2-jie-linux-bai-ju-yi-ding-bo-freebsd-da-bai-ju.md)
 * [第 19.3 节 驳《还有人记得 Linux 之前，那个理想又骄傲的 BSD 吗？》](di-19-zhang-wen-xue-gu-shi/19.3-linux-da-bai-ju.md)
 * [第 19.4 节 杂记与小说](di-19-zhang-wen-xue-gu-shi/19.4.md)
+* [第 19.5 节 Git 大败局](di-19-zhang-wen-xue-gu-shi/19.5-git.md)
+* [第 19.6 节 为何不能选择 Linux 桌面操作系统？](di-19-zhang-wen-xue-gu-shi/19.6.md)
+* [第 19.7 节  各大 GNU/Linux 发行版缺陷对比](di-19-zhang-wen-xue-gu-shi/19.7.md)
 
 ## 第 20 章 娱乐与教育
 
