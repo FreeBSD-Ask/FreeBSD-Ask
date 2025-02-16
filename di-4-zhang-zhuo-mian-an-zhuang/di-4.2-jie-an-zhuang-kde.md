@@ -196,6 +196,9 @@ Current=sddm-freebsd-black-theme
 
 ![关闭 KDE 6 锁屏](../.gitbook/assets/suoping.png)
 
+### 状态栏不显示时钟和时间
+
+？
 
 ### Procfs 设置（FreeBSD 13.2 前必须如此）
 
