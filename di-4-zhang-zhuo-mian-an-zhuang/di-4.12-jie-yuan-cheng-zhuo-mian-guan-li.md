@@ -176,7 +176,7 @@ exec command &  #此处不能照抄！
 ### 安装软件包（基于 kde6）
 
 ```sh
-# pkg install xorg kde xrdp wqy-fonts xdg-user-dirs
+# pkg install xorg kde xrdp wqy-fonts xdg-user-dirs pulseaudio-module-xrdp
 ```
 
 或者：
@@ -187,6 +187,31 @@ exec command &  #此处不能照抄！
 # cd /usr/ports/net/xrdp/ && make install clean
 # cd /usr/ports/x11-fonts/wqy/ && make install clean
 # cd /usr/ports/devel/xdg-user-dirs/ && make install clean
+# cd /usr/ports/audio/pulseaudio-module-xrdp && make install clean
+```
+
+查看配置文件：
+
+```sh
+root@ykla:/usr/ports/net/xrdp # pkg info -D xrdp
+xrdp-0.10.2_2,1:
+On install:
+xrdp has been installed.
+
+There is an rc.d script, so the service can be enabled by adding this line
+in /etc/rc.conf:
+
+xrdp_enable="YES"
+xrdp_sesman_enable="YES"
+
+Do not forget to edit the configuration files in "/usr/local/etc/xrdp"
+and the "/usr/local/etc/xrdp/startwm.sh" script.
+
+To enable audio redirection, install the following ports/packages to meet
+your environment.
+
+- audio/pipewire-module-xrdp
+- audio/pulseaudio-module-xrdp
 ```
 
 ### 配置
@@ -220,6 +245,7 @@ exec command &  #此处不能照抄！
 > 如果看到一个背景是蓝色的菜单。请保持 xrdp 默认设置，第一行 Xorg，第二行 输入 FreeBSD 系统中的用户名，第三行输入其密码。点击 `OK`，即可进入桌面。
 
 ### 中文化(该用户使用 sh 作为 shell）：
+
 
 ```sh
 # ee /usr/local/etc/xrdp/startwm.sh
