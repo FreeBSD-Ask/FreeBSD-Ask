@@ -173,25 +173,23 @@ exec command &  #此处不能照抄！
 
 ## XRDP
 
-#### 在 FreeBSD 上的准备工作
-
-安装软件包（以 KDE5 桌面为基准）：
+### 安装软件包（基于 kde6）
 
 ```sh
-# pkg install xorg kde5 xrdp wqy-fonts xdg-user-dirs
+# pkg install xorg kde xrdp wqy-fonts xdg-user-dirs
 ```
 
 或者：
 
 ```sh
 # cd /usr/ports/x11/xorg/ && make install clean
-# cd /usr/ports/x11/kde5/ && make install clean
+# cd /usr/ports/x11/kde/ && make install clean
 # cd /usr/ports/net/xrdp/ && make install clean
 # cd /usr/ports/x11-fonts/wqy/ && make install clean
 # cd /usr/ports/devel/xdg-user-dirs/ && make install clean
 ```
 
-配置：
+### 配置
 
 ```sh
 # sysrc xrdp_enable="YES"
@@ -205,12 +203,12 @@ exec command &  #此处不能照抄！
 
 ```sh
 #### start desktop environment
-# exec gnome-session
-# exec mate-session
-# exec start-lumina-desktop
-# exec ck-launch-session startplasma-x11 #KDE5 须更改此处
-# exec startxfce4                        #xfce 须更改此处
-# exec xterm                             #xterm 须更改此处
+# exec gnome-session # Gnome 须删除此处开头的 #
+# exec mate-session # mate 须删除此处开头的 #
+# exec start-lumina-desktop # lumina 须删除此处开头的 #
+# exec ck-launch-session startplasma-x11 # KDE6 须删除此处开头的 #
+# exec startxfce4                        # xfce 须删除此处开头的 #
+# exec xterm                             # xterm 须删除此处开头的 #
 ```
 
 然后重启系统。
@@ -221,7 +219,7 @@ exec command &  #此处不能照抄！
 >
 > 如果看到一个背景是蓝色的菜单。请保持 xrdp 默认设置，第一行 Xorg，第二行 输入 FreeBSD 系统中的用户名，第三行输入其密码。点击 `OK`，即可进入桌面。
 
-#### 中文化(该用户使用 sh 作为 shell）：
+### 中文化(该用户使用 sh 作为 shell）：
 
 ```sh
 # ee /usr/local/etc/xrdp/startwm.sh
