@@ -1,5 +1,7 @@
 # 编辑日志
 
+- 2025.2.19
+  - 制作了视频教程[《003-FreeBSD14.2 安装 KDE6》](https://www.bilibili.com/video/BV12zAYeKEej)
 - 2025.2.16
   - 拆分“Git&Linux 败局与 FreeBSD 败局”到 19.5、19.6、19.7
 - 2025.2.15
