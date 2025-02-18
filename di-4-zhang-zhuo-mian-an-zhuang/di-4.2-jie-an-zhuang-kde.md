@@ -5,7 +5,11 @@
 >旧版本升级说明：即卸载后安装新的 KDE。
 >
 >```
-># pkg remove -f kde[56] && pkg autoremove
+># pkg remove -f kde5 && pkg autoremove
+>```
+>或
+>```
+># pkg remove -f kde6 && pkg autoremove
 >```
 
 然后按下文操作即可。
@@ -198,7 +202,7 @@ Current=sddm-freebsd-black-theme
 
 ### 状态栏不显示时钟和时间
 
-？
+点击时区设置，输入 `beijing`，设置上海即可。若无效，请先更新软件包。
 
 ### Procfs 设置（FreeBSD 13.2 前必须如此）
 
