@@ -1,5 +1,9 @@
 # 第 4.2 节 安装 KDE6
 
+>**技巧**
+>
+>视频教程见 [003-FreeBSD14.2 安装 KDE6](https://www.bilibili.com/video/BV12zAYeKEej)
+
 >**注意**
 >
 >旧版本升级说明：即卸载后安装新的 KDE。
