@@ -22,9 +22,9 @@ FreeBSD 是真正自由（Liberal）的**操作系统**，在这个大流变的�
 
 微信群：（须先加入 QQ 群，再联系群主）
 
-Discord 群组：<https://discord.gg/n5wu65Z6tw>
+Discord (Non-Chinese users, please join this group.)：<https://discord.gg/n5wu65Z6tw>
 
-Telegram 群组：[https://t.me/oh_my_BSD](https://t.me/oh_my_BSD)
+Telegram：[https://t.me/oh_my_BSD](https://t.me/oh_my_BSD)
 
 ---
 
