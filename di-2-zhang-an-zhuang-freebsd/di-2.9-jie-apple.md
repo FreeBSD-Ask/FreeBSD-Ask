@@ -3,7 +3,7 @@
 
 本文基于 Apple M1（macOS 14.7）、Parallels Desktop 20.1.3-55743。
 
-在 Parallels Desktop 20 中，FreeBSD 15.0 CURRENT 图形界面、键盘、鼠标均正常。
+在 Parallels Desktop 20 中，FreeBSD 15.0 CURRENT 图形界面（不可自动缩放）、键盘、鼠标均正常。
 
 >**注意**
 >
