@@ -1,8 +1,5 @@
 # 第 2.9 节 安装 FreeBSD——基于 Apple M1&Parallels Desktop 20
 
->**注意**
->
->在 VMWare Fusion Pro（13.6.2）中 FreeBSD 15.0 CURRENT 键盘无法使用。
 
 本文基于 Apple M1（macOS 14.7）、Parallels Desktop 20.1.3-55743。
 
