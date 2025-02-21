@@ -2,6 +2,10 @@
 
 本文基于 macOS 15.3.1、VMware Fusion Pro 13.6.2、FreeBSD 15.0，UEFI（默认）。经过测试 14.2-RELEASE 亦可。
 
+>**注意**
+>
+>如果你使用 macOS 14，则可能存在键盘无法移动的故障。
+
 ## 下载 VMware Fusion Pro
 
 博通直链：<https://softwareupdate.vmware.com/cds/vmw-desktop/fusion/>
