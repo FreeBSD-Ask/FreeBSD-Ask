@@ -1,6 +1,6 @@
 # 第 2.12 节 安装 FreeBSD——基于 Apple M1&VMware Fusion Pro
 
-本文基于 macOS 15.3.1，VMware Fusion Pro 13.6.2,FreeBSD 15.0，UEFI（默认）。
+本文基于 macOS 15.3.1，VMware Fusion Pro 13.6.2,FreeBSD 15.0，UEFI（默认）。经过测试 14.2-RELEASE 亦可。
 
 ## 下载 VMware Fusion Pro
 
@@ -16,11 +16,19 @@
 
 ![](../.gitbook/assets/Fusion1.png)
 
+选择下载的 FreeBSD 镜像。
+
 ![](../.gitbook/assets/Fusion2.png)
+
+默认的内存太小了，点击：“自定设置”
 
 ![](../.gitbook/assets/Fusion3.png)
 
+点击“处理器和内存”
+
 ![](../.gitbook/assets/Fusion4.png)
+
+修改处理器数量内存大小。`4096MB` 即 4G。
 
 ## 开始安装
 
