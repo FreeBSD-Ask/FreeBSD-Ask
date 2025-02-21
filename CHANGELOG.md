@@ -1,5 +1,7 @@
 # 编辑日志
 
+- 2025.2.21
+  - 新增“第 2.12 节 安装 FreeBSD——基于 Apple M1&VMware Fusion Pro”
 - 2025.2.19
   - 制作了视频教程[《003-FreeBSD14.2 安装 KDE6》](https://www.bilibili.com/video/BV12zAYeKEej)
 - 2025.2.16
