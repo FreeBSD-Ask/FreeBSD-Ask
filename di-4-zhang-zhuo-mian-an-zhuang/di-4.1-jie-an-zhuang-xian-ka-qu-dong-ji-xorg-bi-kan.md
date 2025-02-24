@@ -113,7 +113,7 @@ FreeBSD 15 CUEERNT，编译使用 `drm-66-kmod`，支持情况同 Linux 6.6。
 ```
 
 
-- FreeBSD 14.1 RELEASE、14-STABLE
+- FreeBSD 14.X
 
 ```sh
 # cd /usr/ports/graphics/drm-61-kmod
