@@ -42,8 +42,8 @@
 ## 启动项设置
 
 ```sh
-# sysrc dbus_enable="YES"
-# sysrc sddm_enable="YES"
+# service dbus enable # 用于桌面环境的进程间通信
+# service sddm enable # SDDM 登录管理器
 ```
 
 ![KDE 6 界面](../.gitbook/assets/kde6-1.png)
@@ -65,11 +65,11 @@
 
 ## 权限设置
 
-> 普通用户还需要将用户加入 wheel 组（或 `video` 组）：
->
-> ```sh
-> # pw groupmod wheel -m 用户名
-> ```
+普通用户还需要将用户加入 wheel 组（或 `video` 组）：
+
+```sh
+# pw groupmod wheel -m 用户名
+```
 
 ## 登录界面主题
 
@@ -87,7 +87,7 @@
 ```
 
 
-查看配置：
+查看安装后配置：
 
 ```sh
 root@ykla:/home/ykla # pkg info -D sddm-freebsd-black-theme
