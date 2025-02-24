@@ -6,6 +6,82 @@
 
 目前几乎开箱即用，无需多余配置。
 
+## ZFS 压缩
+
+查看 FreeBSD 14 默认的压缩格式：
+
+```sh
+root@ykla:~ # zfs get compression
+NAME                PROPERTY     VALUE           SOURCE
+zroot               compression  lz4             local
+zroot/ROOT          compression  lz4             inherited from zroot
+zroot/ROOT/default  compression  lz4             inherited from zroot
+zroot/home          compression  lz4             inherited from zroot
+zroot/home/ykla     compression  lz4             inherited from zroot
+zroot/tmp           compression  lz4             inherited from zroot
+zroot/usr           compression  lz4             inherited from zroot
+zroot/usr/ports     compression  lz4             inherited from zroot
+zroot/usr/src       compression  lz4             inherited from zroot
+zroot/var           compression  lz4             inherited from zroot
+zroot/var/audit     compression  lz4             inherited from zroot
+zroot/var/crash     compression  lz4             inherited from zroot
+zroot/var/log       compression  lz4             inherited from zroot
+zroot/var/mail      compression  lz4             inherited from zroot
+zroot/var/tmp       compression  lz4             inherited from zroot
+```
+
+换成 zstd 试试：
+
+```sh
+root@ykla:/home/ykla # zfs set compression=zstd-5 zroot
+```
+
+重启后查看：
+
+```sh
+root@ykla:/home/ykla # zfs get compression
+NAME                PROPERTY     VALUE           SOURCE
+zroot               compression  zstd-5          local
+zroot/ROOT          compression  zstd-5          inherited from zroot
+zroot/ROOT/default  compression  zstd-5          inherited from zroot
+zroot/home          compression  zstd-5          inherited from zroot
+zroot/home/ykla     compression  zstd-5          inherited from zroot
+zroot/tmp           compression  zstd-5          inherited from zroot
+zroot/usr           compression  zstd-5          inherited from zroot
+zroot/usr/ports     compression  zstd-5          inherited from zroot
+zroot/usr/src       compression  zstd-5          inherited from zroot
+zroot/var           compression  zstd-5          inherited from zroot
+zroot/var/audit     compression  zstd-5          inherited from zroot
+zroot/var/crash     compression  zstd-5          inherited from zroot
+zroot/var/log       compression  zstd-5          inherited from zroot
+zroot/var/mail      compression  zstd-5          inherited from zroot
+zroot/var/tmp       compression  zstd-5          inherited from zroot
+```
+
+查看实际压缩率：
+
+```sh
+root@ykla:/home/ykla # zfs get compressratio
+NAME                PROPERTY       VALUE  SOURCE
+zroot               compressratio  2.70x  -
+zroot/ROOT          compressratio  2.68x  -
+zroot/ROOT/default  compressratio  2.68x  -
+zroot/home          compressratio  1.00x  -
+zroot/home/ykla     compressratio  1.01x  -
+zroot/tmp           compressratio  1.00x  -
+zroot/usr           compressratio  2.73x  -
+zroot/usr/ports     compressratio  1.00x  -
+zroot/usr/src       compressratio  2.73x  -
+zroot/var           compressratio  1.47x  -
+zroot/var/audit     compressratio  1.00x  -
+zroot/var/crash     compressratio  1.01x  -
+zroot/var/log       compressratio  2.90x  -
+zroot/var/mail      compressratio  1.00x  -
+zroot/var/tmp       compressratio  1.00x  -
+```
+
+
+
 ## ZFS 快照与还原
 
 ZFS 快照类似于虚拟机快照。
