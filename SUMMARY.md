@@ -33,6 +33,7 @@
 * [第 2.10 节 手动安装双系统（先安装 FreeBSD）](di-2-zhang-an-zhuang-freebsd/di-2.10.md)
 * [第 2.11 节 Qemu 安装 RISC-V FreeBSD（基于 x86 Windows）](di-2-zhang-an-zhuang-freebsd/di-2.11-qemu.md)
 * [第 2.12 节 安装 FreeBSD——基于 Apple M1 & VMware Fusion Pro](di-2-zhang-an-zhuang-freebsd/di-2.12-jie-apple.md)
+* [第 2.13 节 配置 rEFInd（双系统用）](di-2-zhang-an-zhuang-freebsd/2.13-refind.md)
 
 ## 第 3 章 包管理器暨 FreeBSD 更新与升级
 
