@@ -184,6 +184,7 @@
 * [第 17.8 节 PostgreSQL 与 pgAdmin4](di-17-zhang-wang-luo-fu-wu-qi/di-17.8-jie-postgresql-yu-pgadmin4.md)
 * [第 17.9 节 AList](di-17-zhang-wang-luo-fu-wu-qi/di-17.9-alist.md)
 * [第 17.10 节 prometheus 监控部署](di-17-zhang-wang-luo-fu-wu-qi/17.10.prometheus.md)
+* [第 17.11 节 MongoDB 80](di-17-zhang-wang-luo-fu-wu-qi/17.11-mongodb.md)
 
 ## 第 18 章 树莓派嵌入式 & RISCV
 
