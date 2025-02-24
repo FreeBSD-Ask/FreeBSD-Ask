@@ -29,10 +29,10 @@
 * [第 2.6 节 SSH 相关软件推荐与 SSH 配置](di-2-zhang-an-zhuang-freebsd/di-2.6-jie-chang-yong-ruan-jian-yu-ssh-pei-zhi.md)
 * [第 2.7 节 自带文本编辑器 ee 的用法](di-2-zhang-an-zhuang-freebsd/di-2.7-jie-ee-yong-fa-ji-wang-luo-pei-zhi.md)
 * [第 2.8 节 虚拟机预安装镜像（本书自制）](di-2-zhang-an-zhuang-freebsd/di-2.8-jie-yu-an-zhuang-jing-xiang.md)
-* [第 2.9 节 安装 FreeBSD——基于 Apple M1&Parallels Desktop 20](di-2-zhang-an-zhuang-freebsd/di-2.9-jie-apple.md)
+* [第 2.9 节 安装 FreeBSD——基于 Apple M1 & Parallels Desktop 20](di-2-zhang-an-zhuang-freebsd/di-2.9-jie-apple.md)
 * [第 2.10 节 手动安装双系统（先安装 FreeBSD）](di-2-zhang-an-zhuang-freebsd/di-2.10.md)
 * [第 2.11 节 Qemu 安装 RISC-V FreeBSD（基于 x86 Windows）](di-2-zhang-an-zhuang-freebsd/di-2.11-qemu.md)
-* [第 2.12 节 安装 FreeBSD——基于 Apple M1&VMware Fusion Pro](di-2-zhang-an-zhuang-freebsd/di-2.12-jie-apple.md)
+* [第 2.12 节 安装 FreeBSD——基于 Apple M1 & VMware Fusion Pro](di-2-zhang-an-zhuang-freebsd/di-2.12-jie-apple.md)
 
 ## 第 3 章 包管理器暨 FreeBSD 更新与升级
 
@@ -250,7 +250,7 @@
 * [第 23.1 节 恢复模式与密码重置](di-23-zhang-yin-dao-yu-hui-fu/di-23.1-jie-hui-fu-mo-shi-yu-mi-ma-zhong-zhi.md)
 * [第 23.2 节 FreeBSD 多硬盘 EFI 引导统一](di-23-zhang-yin-dao-yu-hui-fu/di-23.2-jie-freebsd-duo-ying-pan-efi-yin-dao-tong-yi.md)
 * [第 23.3 节 FreeBSD 中文 TTY 控制台](di-23-zhang-yin-dao-yu-hui-fu/di-23.3-jie-freebsd-zhong-wen-tty-kong-zhi-tai.md)
-* [第 23.4 节 引导界面](di-23-zhang-yin-dao-yu-hui-fu/di-23.4-jie-yin-dao-jie-mian.md)
+* [第 23.5 节 Grub & UEFI 与 efibootmgr](di-23-zhang-yin-dao-yu-hui-fu/di-23.4-jie-yin-dao-jie-mian.md)
 * [第 23.5 节 Grub 及其他引导](di-23-zhang-yin-dao-yu-hui-fu/di-23.5-jie-grub-ji-qi-ta-yin-dao.md)
 
 ## 第 24 章 FreeBSD 特色
