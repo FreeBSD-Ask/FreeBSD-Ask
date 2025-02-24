@@ -16,7 +16,7 @@ FreeBSD 传统上有四类源：FreeBSD 之所以有这么多源是因为其既�
 >
 > 如果需要查询一个软件包在 FreeBSD 中的具体情况可以这样用：谷歌或者必应（必应很多时候搜索不出来）搜索“freebsd ports 包名”。如果无法使用，可以直接在网站里搜索包名 [https://www.freshports.org/](https://www.freshports.org/)。
 
-### FreeBSD 传统上有四类源：pkg、ports、~~portsnap~~、update
+### FreeBSD 传统上有四类源：pkg、ports、~~portsnap~~、update、kernel modules 源
 
 |源|说明|备注|
 |:---:|:---|:---|
@@ -24,7 +24,7 @@ FreeBSD 传统上有四类源：FreeBSD 之所以有这么多源是因为其既�
 |~~portsnap~~|拉取 Ports 的源代码模板（本身不含源代码，只是一些描述文件和补丁集）。换言之，这个源类似 Gentoo 的 [ebuild 数据库](https://mirrors.ustc.edu.cn/help/gentoo.html)|**已在 FreeBSD 14 中废弃，无需配置，后续版本亦不再使用，** 改用 `git`、`gitup` 和压缩包 `ports.tar.gz` 等方式获取。|
 |ports|Gentoo 的包管理器 Portage（命令为 `emerge`）即是源于此。用于帮助用户从源代码编译安装软件。换言之，等同于 Gentoo 的 [Distfiles 源](https://mirrors.ustc.edu.cn/help/gentoo.html)|不需要源代码方式编译软件可以不配置。|
 |update|用于更新系统工具和系统本身|预计在 FreeBSD 15或 16 中废弃，转而使用 [pkgbase](https://wiki.freebsd.org/PkgBase) 代替之|
-
+|kernel modules（kmods）|内核模块源，为解决小版本间可能存在的 ABI 不兼容问题|参见 [Possible solution to the drm-kmod kernel mismatch after upgrade from Bapt](https://forums.freebsd.org/threads/possible-solution-to-the-drm-kmod-kernel-mismatch-after-upgrade-from-bapt.96058/#post-682984)、[CFT: repository for kernel modules](https://lists.freebsd.org/archives/freebsd-ports/2024-December/006997.html)|
 > 注意：
 >
 > `portsnap` 在 FreeBSD 14 中已经弃用，改为使用 `gitup`（请参考第 3.3 节）：
@@ -275,6 +275,37 @@ ntpdate ntp.api.bz
 
 ```sh
 # freebsd-update -r 13.0-RELEASE upgrade
+```
+
+## kernel modules（kmods）内核模块源：面向 FreeBSD 14.2 及更高版本（不含 15.0-CURRENT）
+
+### FreeBSD 官方源
+新建文件夹 `/usr/local/etc/pkg/repos`（即 `mkdir -p /usr/local/etc/pkg/repos`），再新建文件 `/usr/local/etc/pkg/repos/FreeBSD-kmods.conf`：
+
+写入：
+
+#### quarterly 分支
+
+```sh
+FreeBSD-kmods {
+	url: pkg+https://pkg.freebsd.org/${ABI}/kmods_quarterly_${VERSION_VERSION}
+	signature_type: "fingerprints"
+	fingerprints: "/usr/share/keys/pkg"
+	mirror_type: "srv"
+	enabled: yes
+}
+```
+
+#### latest 源
+
+```sh
+FreeBSD-kmods {
+	url: pkg+https://pkg.freebsd.org/${ABI}/kmods_latest_${VERSION_VERSION}
+	signature_type: "fingerprints"
+	fingerprints: "/usr/share/keys/pkg"
+	mirror_type: "srv"
+	enabled: yes
+}
 ```
 
 ## 不受安全支持的版本（请酌情使用）
