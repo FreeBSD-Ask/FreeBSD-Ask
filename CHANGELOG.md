@@ -2,6 +2,7 @@
 
 - 2025.2.25
   - “第 17.5 节 MySQL 8.X”新增“MySQL 8.4 LTS”
+  - 新增“第 17.11 节 MongoDB 80”
 - 2025.2.24
    “第 6.2 节 ZFS”新增“ZFS 压缩”
    “第 23.5 节 Grub 及其他引导”新增“UEFI 与 efibootmgr”
