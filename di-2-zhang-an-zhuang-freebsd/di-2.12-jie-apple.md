@@ -1,4 +1,4 @@
-# 第 2.12 节 安装 FreeBSD——基于 Apple M1&VMware Fusion Pro
+# 第 2.12 节 安装 FreeBSD——基于 Apple M1 & VMware Fusion Pro
 
 本文基于 macOS 15.3.1、VMware Fusion Pro 13.6.2、FreeBSD 15.0，UEFI（默认）。经过测试 14.2-RELEASE 亦可。
 
