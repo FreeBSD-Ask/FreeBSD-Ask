@@ -1,8 +1,10 @@
 # 编辑日志
 
+- 2025.2.25
+  - “第 17.5 节 MySQL 8.X”新增“MySQL 8.4 LTS”
 - 2025.2.24
-  - “第 6.2 节 ZFS”新增“ZFS 压缩”
-  - “第 23.5 节 Grub 及其他引导”新增“UEFI 与 efibootmgr”
+   “第 6.2 节 ZFS”新增“ZFS 压缩”
+   “第 23.5 节 Grub 及其他引导”新增“UEFI 与 efibootmgr”
   - “第 3.2 节 FreeBSD 换源方式”新增“kernel modules（kmods）内核模块源：面向 FreeBSD 14.2 及更高版本（不含 15.0-CURRENT）”
   - 从“第 2.10 节 手动安装双系统（先安装 FreeBSD）”拆分出“第 2.13 节 配置 rEFInd（双系统用）”
 - 2025.2.23
