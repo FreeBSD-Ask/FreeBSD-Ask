@@ -35,7 +35,7 @@ Fiat Lux 意味着接受教育，获得知识不仅可以改变自己的命运�
 ## 参考文献
 
 - [Fiat Lux Scholarship](https://financialaid.berkeley.edu/types-of-aid-at-berkeley/scholarships/fiat-lux-scholarship/)，Fiat Lux 奖学金
-- 〔德〕伊曼努尔•康德. 历史理性批判文集[M]. 译者: 何兆武, 天津人民出版社, 2014-10.ISBN: 9787201086415，第 22 页《答复这个问题：“什么是启蒙运动”？》
+- [德] 伊曼努尔•康德. 历史理性批判文集[M]. 译者: 何兆武, 天津人民出版社, 2014-10.ISBN: 9787201086415，第 22 页《答复这个问题：“什么是启蒙运动”？》
 - [Portrait of UC Berkeley namesake no longer on display in Doe Library](https://www.lib.berkeley.edu/about/news/george-berkeley-portrait)，加州大学伯克利分校图书馆摘除了贝克莱的画像
 - [德] 尼采. 善恶的彼岸[M]. 译者: 赵千帆, 商务印书馆, 2015-12. ISBN: 9787100117494 第四章第 146 小节
 - 《迪迦奥特曼》第 47 集告别黑暗 梅塔莫尔加登场 第 21 分沙耶香
