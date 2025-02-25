@@ -4,6 +4,9 @@
   - “第 17.5 节 MySQL 8.X”新增“MySQL 8.4 LTS”
   - 新增“第 17.11 节 MongoDB 80”
   - “第 23.5 节 Grub & UEFI 与 efibootmgr”新增“EFI 分区删除与重建”，但仍存在文件簇的疑问
+  - 完全重写“第 17.1 节 Apache”
+  - 完全重写“第 17.2 节 Nginx”
+  - 完全重写“第 17.3 节 PHP 8.X”
 - 2025.2.24
    “第 6.2 节 ZFS”新增“ZFS 压缩”
    “第 23.5 节 Grub 及其他引导”新增“UEFI 与 efibootmgr”
