@@ -32,6 +32,8 @@ Fiat Lux 意味着接受教育，获得知识不仅可以改变自己的命运�
 
 伯克利大学也孕育了 BSD、RISC-V、RAID 等计算机技术。FreeBSD 等 BSD 操作系统的开源精神（BSD 许可证并不像 GPL 那样具有传染性，并非“Copyleft”），实现知识共享，让尽可能广泛的人使用以产生最大化的社会利益，忠实恪守了 Fiat Lux 的精神。
 
+只有真正理解 Fiat Lux，才能明白为什么是 BSD 而不是 GPL。为什么是 FreeBSD 而不是 Linux。
+
 ## 参考文献
 
 - [Fiat Lux Scholarship](https://financialaid.berkeley.edu/types-of-aid-at-berkeley/scholarships/fiat-lux-scholarship/)，Fiat Lux 奖学金
