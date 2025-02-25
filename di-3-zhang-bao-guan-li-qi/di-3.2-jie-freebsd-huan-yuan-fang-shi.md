@@ -280,6 +280,7 @@ ntpdate ntp.api.bz
 ## kernel modules（kmods）内核模块源：面向 FreeBSD 14.2 及更高版本（不含 15.0-CURRENT）
 
 ### FreeBSD 官方源
+
 新建文件夹 `/usr/local/etc/pkg/repos`（即 `mkdir -p /usr/local/etc/pkg/repos`），再新建文件 `/usr/local/etc/pkg/repos/FreeBSD-kmods.conf`：
 
 写入：
@@ -296,7 +297,7 @@ FreeBSD-kmods {
 }
 ```
 
-#### latest 源
+#### latest 分支
 
 ```sh
 FreeBSD-kmods {
@@ -307,6 +308,32 @@ FreeBSD-kmods {
 	enabled: yes
 }
 ```
+
+### 中国科学技术大学开源软件镜像站
+
+新建文件夹 `/usr/local/etc/pkg/repos`（即 `mkdir -p /usr/local/etc/pkg/repos`），再新建文件 `/usr/local/etc/pkg/repos/FreeBSD-kmods.conf`：
+
+写入：
+
+#### quarterly 分支
+
+```sh
+FreeBSD-kmods {
+	url: https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/kmods_quarterly_${VERSION_VERSION}
+	enabled: yes
+}
+```
+
+#### latest 分支
+
+```sh
+FreeBSD-kmods {
+	url: https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/kmods_latest_${VERSION_VERSION}
+	enabled: yes
+}
+```
+
+
 
 ## 不受安全支持的版本（请酌情使用）
 
