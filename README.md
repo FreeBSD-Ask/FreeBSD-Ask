@@ -118,24 +118,24 @@ Telegram：[https://t.me/oh_my_BSD](https://t.me/oh_my_BSD)
 <summary>点击此处展开 FreeBSD ToDo</summary>
 
 - [ ] 整合现有的上游 FreeBSD 社区文章
-- [ ] 介绍伯克利大学与校训思想
+- [X] 介绍伯克利大学与校训思想
 - [ ] 从 FreeBSD 期刊引入 IPv6、Zabbix 等教程
 - [ ] 为所有需要额外配置的文件，使用命令 `pkg info -D` 列出正文如此配置之原因
 - [ ] 重写“第 4.1 节 安装显卡驱动及 Xorg（必看）”，尤其是 N 卡驱动部分，目前是无效的，必须重写
-- [ ] `pkg autoremove`（会把整个系统都带走）及 `pkg delete`（破坏依赖）都不是正经的卸载软件及孤包依赖的方法，`pkg-rmleaf` 亦已过时无法使用。需要找到正常合理的卸载软件包的方法。`pkg_rmleaves` 似乎可以
+- [X] `pkg autoremove`（会把整个系统都带走）及 `pkg delete`（破坏依赖）都不是正经的卸载软件及孤包依赖的方法，`pkg-rmleaf` 亦已过时无法使用。需要找到正常合理的卸载软件包的方法。`pkg_rmleaves` 似乎可以
 - [X] 补充一些 WinSCP、XShell 的替代工具，避免单一来源
   - [ ] 找到一款我认为能替代二者的工具
 - [X] 将全书主观性文字转换为思考题供读者自行思考与判断
 - [ ] 更新“第 16.7 节 Samba 服务器”
 - [ ] steam
 - [ ] Wayland 化桌面
-- [ ] 树莓派 5
-  - [ ] 微信
+- [ ] ~~树莓派 5~~
+  - [ ] ~~微信~~
 - [ ] Bhyve
   - [ ] `sysutils/bhyvemgr` GUI
-  - [ ] Windows 11
+  - [X] Windows 11
   - [ ] ~~Windows XP~~
-  - [ ] Ubuntu
+  - [X] Ubuntu
   - [ ] FreeBSD
   - [ ] ~~MacOS~~
 - [ ] 删除重写部分来源于网络的错误内容
@@ -197,7 +197,7 @@ Telegram：[https://t.me/oh_my_BSD](https://t.me/oh_my_BSD)
   - [X] 基于 Wayland（部分完成）
 - [ ] Wayland
   - [ ] 远程软件
-  - [ ] KDE5
+  - [ ] KDE6
   - [ ] Gnome
   - [ ] 经典登录管理器
   - [ ] 窗口管理器
@@ -216,8 +216,8 @@ Telegram：[https://t.me/oh_my_BSD](https://t.me/oh_my_BSD)
   - [ ] 防火墙
 - [X] 微信
   - [ ] 微信双开
-- [ ] WPS
-  - [ ] 解决 fcitx、fcitx5 输入法不能输入的问题
+- [X] WPS
+  - [X] 解决 fcitx、fcitx5 输入法不能输入的问题
 - [ ] HTTP代理
   - [ ] 测试 [Clash Verge Rev](https://github.com/clash-verge-rev/clash-verge-rev) 能否在 FreeBSD 上正常运行
   - [ ] 测试 [V2raya](https://github.com/v2rayA/v2rayA) 能否在 FreeBSD 上正常运行
