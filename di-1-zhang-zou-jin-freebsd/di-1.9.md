@@ -12,7 +12,7 @@
 
 本文将聚焦于加州大学伯克利分校的校训“Fiat Lux”（Let There Be Light，要有光），还可以翻译为“让世界充满光明”。加州大学伯克利分校的许多奖项都以“Fiat Lux”为名。
 
-加州大学伯克利分校建立于 1868 年，是一所公立大学。在这一年，代表中国近代第一所国立大学的北京大学校长蔡元培出生了；日本开始明治维新，带领日本迈入新时代。
+加州大学伯克利分校建立于 1868 年，是一所公立大学。在这一年，代表中国近代第一所国立大学的北京大学校长蔡元培出生了，蔡元培认为“要有良好的社会，必先有良好的个人，要有良好的'个人，就要先有良好的教育。”与 Fiat Lux 提倡的以个人带动社会进步的观点类似，他被尊为北大“永远的校长”；日本开始明治维新，带领日本迈入新时代，从此日本进入了现代化，光影随行，这也为日本将来的侵略战争埋下了种子。
 
 Fiat Lux 出自拉丁文圣经“1.3：Dixitque Deus : Fiat lux. Et facta est lux.”（圣经武加大译本）。“And God said, "1.3: Let there be light, and there was light.”（NIV 版圣经）“1.3：神说、要有光、就有了光。”（《和合本圣经》）
 
@@ -47,3 +47,4 @@ Fiat Lux！
 - [Portrait of UC Berkeley namesake no longer on display in Doe Library](https://www.lib.berkeley.edu/about/news/george-berkeley-portrait)，加州大学伯克利分校图书馆摘除了贝克莱的画像
 - [德] 尼采. 善恶的彼岸[M]. 译者: 赵千帆, 商务印书馆, 2015-12. ISBN: 9787100117494 第四章第 146 小节
 - 《迪迦奥特曼》第 47 集告别黑暗 梅塔莫尔加登场 第 21 分沙耶香
+- [蔡元培像](https://www.xsg.pku.edu.cn/details/1893.html)，北京大学校史馆
