@@ -40,7 +40,7 @@ Fiat Lux 不仅有关教育与知识，也辐射到了现代计算机技术发�
 
 如同光一样，BSD 渗透在方方面面而不为人所知，从 iPhone 到新能源车机，从索尼 PS5 再到奈飞。
 
-只有真正理解 Fiat Lux，才能明白为什么是 BSD 而不是 GPL。为什么是 FreeBSD 而不是 Linux。
+唯有真正理解 Fiat Lux，方能领悟为什么是 BSD。为什么是 FreeBSD。
 
 Fiat Lux！
 
