@@ -51,7 +51,7 @@ Fiat Lux！
 - 蔡元培. 蔡元培：言有物，行有伦[M]. 北京: 中国文史出版社, 2023. 蔡元培名言出自《何为文化》一节 ISBN 9787520538169.
 - 随着明治维新，国力渐增，日本逐步迈上了对外侵略扩张的军国主义道路，1887 年，日本参谋本部制定了所谓“清国征讨策略”，逐渐演化为以侵略中国为中心的“大陆政策”。
 - Piazza L, Lummen TTA, Quiñonez E, Murooka Y, Reed BW, Barwick B, Carbone F.Simultaneous observation of the quantization and the interference pattern of a plasmonic near-field. Nature Communications 02 March 2015.
-- [德] 伊曼努尔•康德. 历史理性批判文集[M]. 译者: 何兆武, 天津人民出版社, 2014-10.ISBN: 9787201086415，第 22 页《答复这个问题：“什么是启蒙运动”？》
+- [德] 伊曼努尔•康德. 历史理性批判文集[M]. 译者: 何兆武, 天津人民出版社, 2014-10.ISBN: 9787201086415，第 22 页《答复这个问题：“什么是启蒙运动？”》
 - [Portrait of UC Berkeley namesake no longer on display in Doe Library](https://www.lib.berkeley.edu/about/news/george-berkeley-portrait)，加州大学伯克利分校图书馆摘除了贝克莱的画像
 - [德] 尼采. 善恶的彼岸[M]. 译者: 赵千帆, 商务印书馆, 2015-12. ISBN: 9787100117494 第四章第 146 小节
 - 《迪迦奥特曼》第 47 集告别黑暗 梅塔莫尔加登场 第 21 分沙耶香
