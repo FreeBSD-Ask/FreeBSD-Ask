@@ -1,4 +1,4 @@
-# 第 1.8 节 谁在使用 FreeBSD？（中文社区版本）
+# 第 1.2 节 谁在使用 FreeBSD？（中文社区版本）
 
 ![谁在使用 FreeBSD](../.gitbook/assets/whousingbsd.png)
 

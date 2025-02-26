@@ -2,6 +2,7 @@
 
 - 2025.2.26
   - 新增“第 1.9 节 加州大学伯克利分校与“Fiat Lux”（要有光）”
+  - 将文学故事移动至 <https://freebsd.gitbook.io/cfc>
 - 2025.2.25
   - “第 17.5 节 MySQL 8.X”新增“MySQL 8.4 LTS”
   - 新增“第 17.11 节 MongoDB 80”
