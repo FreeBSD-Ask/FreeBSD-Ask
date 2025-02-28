@@ -4,6 +4,25 @@
 
 主要问题在于官方无论如何也不开放 rsync 且不接受镜像站的官方二级镜像申请（原因可能是没有钱或者防止篡改镜像文件？）。
 
+收到的回复：
+
+>On Fri, 28 Feb 2025, at 17:45, ykla wrote:
+>> How to mirror pkg and update from official mirror sites?
+>
+>As we replied on several occasions before: pkg and freebsd-update need machines under our control with internet connectivity to the rest of our cluster.
+>
+>At one point someone tried to offer a machine in Nanjing. That then turned into a virtual machine and the conversation went nowhere. We can't use a virtual machine. We need real hardware. With real storage. And real transit.
+
+翻译如下；
+
+>2025 年2 月 28 日 星期五 17:45，ykla 写道：
+>> 如何通过官方镜像站点进行 pkg 镜像和系统更新？
+>
+>正如我们此前多次回复的：pkg 和 freebsd-update 功能需要由我们管控的物理服务器支持（**注：这里对方指 root 权限**），这些服务器需与我们的集群保持网络连接。
+>
+>此前有人曾提议提供南京的一台机器，但后续方案变更为虚拟机形式后讨论便陷入停滞。我们无法使用虚拟机方案，需要真实的硬件设备（**注：对方指裸金属**）、实体存储介质和物理网络传输链路。
+
+
 多次联系均无二次联系，如邮件列表，大概五次，其中三次回应，两次无回应。其主要回复内容为“深表歉意，但台湾地区已有镜像”。并未直接说明如何镜像，此外特别向中国科学技术大学 Linux 用户协会（其中其他镜像站并未理会，如清华大学 TUNA 协会）申请镜像，对方提到，FreeBSD 也是无人回应。中国大陆目前没有 FreeBSD 官方镜像站。
 
 如有朋友们能够联系 FreeBSD 官方，还望早日开放镜像，非官方镜像站不能解决问题。此外，Kernel 或者 Base system 源码 SVN 速度更加感人，除非安装系统的时候安装源码，否则……国内网络环境如此，提升速度采取代理方式也是基本功，但是，不能够要求每个人都一样，提供便捷的网络服务，方便更多人的使用，才是发展 FreeBSD 的核心要义。
