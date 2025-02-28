@@ -2,6 +2,9 @@
 
 ## 现状
 
+主要问题在于官方无论如何也不开放 rsync 且不接受镜像站的官方二级镜像申请（原因可能是没有钱或者防止篡改镜像文件？）。
+
+
 根据目前可查信息，FreeBSD 项目至迟在 2015 年 5 月就停止了公开 rsync。参见 [Add small section explaining we are not allowing public mirrors of packages and possible workarounds.](https://reviews.freebsd.org/R9:3418e47d2f6cd8dd04ac934f38d136ba9101a5a8)。给出的说明理由是：
 
 >Due to very high requirements of bandwidth, storage and adminstration the FreeBSD; Project has decided not to allow public mirrors of packages.
@@ -12,7 +15,6 @@
 
 ---
 
-主要问题在于官方无论如何也不开放 rsync 且不接受镜像站的官方二级镜像申请（原因可能是没有钱或者防止篡改镜像文件？）。
 
 2025 收到的回复：
 
