@@ -13,7 +13,7 @@
 >
 >At one point someone tried to offer a machine in Nanjing. That then turned into a virtual machine and the conversation went nowhere. We can't use a virtual machine. We need real hardware. With real storage. And real transit.
 
-翻译如下；
+翻译如下：
 
 >2025 年2 月 28 日 星期五 17:45，ykla 写道：
 >> 如何通过官方镜像站点进行 pkg 镜像和系统更新？
