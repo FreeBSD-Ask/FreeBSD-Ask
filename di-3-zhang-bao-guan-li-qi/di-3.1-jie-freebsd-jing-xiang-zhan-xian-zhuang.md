@@ -67,7 +67,9 @@ FreeBSD 目前在大陆非官方镜像站有若干个（详见第二节。）：
 
 FreeBSD 官方联系方式：
 
-[freebsd-hubs@freebsd.org](mailto:freebsd-hubs@freebsd.org)
+[mirror-admin@FreeBSD.org](mailto:mirror-admin@FreeBSD.org)
+
+[freebsd-hubs@freebsd.org](mailto:freebsd-hubs@freebsd.org)，这个邮件列表似乎已经死亡，没有任何人回复和收发邮件
 
 > 附
 >
