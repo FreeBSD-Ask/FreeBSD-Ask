@@ -189,6 +189,7 @@
 * [第 17.12 节 Tomcat](di-17-zhang-wang-luo-fu-wu-qi/17.12-Tomcat.md)
 * [第 17.13 节 Caddy](di-17-zhang-wang-luo-fu-wu-qi/17.13-caddy.md)
 * [第 17.14 节 OnlyOffice（基于 PostgreSQL）](di-17-zhang-wang-luo-fu-wu-qi/17.14.md)
+* [第 17.15 节 Zabbix 监控（基于 PostgreSQL）](di-17-zhang-wang-luo-fu-wu-qi/17.15-Zabbix.md)
 
 ## 第 18 章 树莓派嵌入式 & RISCV
 
