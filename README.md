@@ -120,6 +120,7 @@ Telegram：[https://t.me/oh_my_BSD](https://t.me/oh_my_BSD)
 - [ ] 整合现有的上游 FreeBSD 社区文章
 - [X] 介绍伯克利大学与校训思想
 - [ ] 从 FreeBSD 期刊引入 IPv6  教程
+- [ ] Makefile
 - [X] 从 FreeBSD 期刊引入 Zabbix 教程
 - [ ] gitlab-ee
 - [ ] 为所有需要额外配置的文件，使用命令 `pkg info -D` 列出正文如此配置之原因
