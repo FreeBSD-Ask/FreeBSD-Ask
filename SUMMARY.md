@@ -134,10 +134,13 @@
 * [第 11.4 节 操作系统](di-11-zhang-ji-suan-ji-gai-lun/11.4-cao-zuo-xi-tong.md)
 * [第 11.5 节 MySQL 数据库](di-11-zhang-ji-suan-ji-gai-lun/11.5-shu-jv-ku.md)
 
-## 第 12 章 GEOM 存储框架
+## 第 12 章 FreeBSD 源代码分析
 
-* [第 12.1 节 概述](di-12-zhang-geom-cun-chu-kuang-jia/di-12.1-jie-gai-shu.md)
-* [第 12.2 节 RAID](di-12-zhang-geom-cun-chu-kuang-jia/di-12.2-jie-raid.md)
+* [第 12.1 节](di-12-zhang/12.1.md)
+* [第 12.2 节](di-12-zhang/12.2.md)
+* [第 12.3 节](di-12-zhang/12.3.md)
+* [第 12.4 节](di-12-zhang/12.4.md)
+
 
 ## 第 13 章 DTrace
 
