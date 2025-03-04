@@ -133,6 +133,7 @@
 * [第 11.3 节 散热器、风扇、鼓风机](di-11-zhang-ji-suan-ji-gai-lun/11.3-san-re-qi.md)
 * [第 11.4 节 操作系统](di-11-zhang-ji-suan-ji-gai-lun/11.4-cao-zuo-xi-tong.md)
 * [第 11.5 节 MySQL 数据库](di-11-zhang-ji-suan-ji-gai-lun/11.5-shu-jv-ku.md)
+* [第 11.6 节 网络基础](di-11-zhang-ji-suan-ji-gai-lun/11.6-wang-luo-ji-chu.md)
 
 ## 第 12 章 FreeBSD 源代码分析
 
