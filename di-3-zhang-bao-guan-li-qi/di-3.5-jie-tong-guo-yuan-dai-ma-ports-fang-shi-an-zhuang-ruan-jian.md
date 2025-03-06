@@ -12,7 +12,7 @@
 
 ### 首先使用 Git 获取 Ports（其他方法参见前节）
 
-安装 Git：
+#### 安装 Git
 ```sh
 # pkg install git
 ```
@@ -24,17 +24,59 @@
 # make install clean
 ```
 
-拉取 Ports 存储库（USTC）：
+#### 拉取 Ports 存储库（USTC）浅克隆
 
 ```sh
 # git clone --filter=tree:0 https://mirrors.ustc.edu.cn/freebsd-ports/ports.git /usr/ports
 ```
 
-拉取 Ports 存储库（FreeBSD 官方）：
+#### 拉取 Ports 存储库（FreeBSD 官方）浅克隆
 
 ```sh
 # git clone --filter=tree:0 https://git.FreeBSD.org/ports.git /usr/ports
 ```
+
+#### 完全拉取 Ports 存储库（FreeBSD 官方）并指定分支
+
+```sh
+# git clone https://git.FreeBSD.org/ports.git /usr/ports
+```
+
+查看所有分支：
+
+```sh
+# cd /usr/ports/ # 切换到 git 项目
+# git branch -a
+* main # * 代表当前分支
+  remotes/origin/2014Q1
+
+	……省略…………
+
+  remotes/origin/2025Q1
+  remotes/origin/HEAD -> origin/main
+  remotes/origin/main
+```
+
+切换到 `2025Q1` 分支：
+
+
+```sh
+root@ykla:/usr/ports # git switch 2025Q1
+正在更新文件: 100% (14323/14323), 完成.
+分支 '2025Q1' 设置为跟踪 'origin/2025Q1'。
+切换到一个新分支 '2025Q1'
+```
+
+查看本地分支：
+
+```sh
+root@ykla:/usr/ports # git branch
+* 2025Q1
+  main
+```
+
+已经切换成功。
+
 
 #### 故障排除
 
