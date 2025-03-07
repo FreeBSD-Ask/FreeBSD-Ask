@@ -158,8 +158,11 @@ Chromium 不是 chrome，但在 FreeBSD 中启动命令是 `chrome`。
 ![](../.gitbook/assets/chromium-use-google-api-guide-19.png)
 
 
-编辑 `/home/ykla/.profile`，加入（这是我的，是无效的，你必须自己生成你自己的）：
+编辑 `~/.profile`，加入（这是我的，是无效的，你必须自己生成你自己的）：
 
+>**注意**
+>
+>本文仅在默认 shell sh + KDE 6 下测试通过。如果你使用的环境不同，欢迎 PR。
 
 ```sh
 export GOOGLE_API_KEY=AIzaSyDVpYvJQUn9HTjAiD89y3xBDOG3oaxV5_E # 这里填 API 密钥
