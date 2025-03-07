@@ -16,7 +16,7 @@
 ## 安装
 
 ```sh
-# pkg install xorg lightdm slick-greeter cinnamon wqy-fonts xdg-user-dirs  lightdm-gtk-greeter-settings dbus
+# pkg install xorg lightdm slick-greeter cinnamon wqy-fonts xdg-user-dirs lightdm-gtk-greeter-settings
 ```
 
 或者
@@ -27,7 +27,7 @@
 # cd /usr/ports/x11-fonts/wqy/ && make install clean # 文泉驿字体
 # cd /usr/ports/x11/lightdm/ && make install clean # 登录管理器
 # cd /usr/ports/x11/slick-greeter/ && make install clean # 登录管理器插件
-# cd /usr/ports/devel/dbus/ && make install clean # dbus
+# cd /usr/ports/x11/lightdm-gtk-greeter-settings/ && make install clean # 登录管理器插件配置工具
 # cd /usr/ports/devel/xdg-user-dirs/ && make install clean # 创建用户家目录子目录
 ```
 
