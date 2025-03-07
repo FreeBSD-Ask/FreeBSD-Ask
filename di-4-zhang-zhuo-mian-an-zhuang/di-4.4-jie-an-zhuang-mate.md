@@ -13,7 +13,7 @@
 >```
 
 
-## 安装与配置
+## 安装
 
 ```sh
 # pkg install mate xorg wqy-fonts lightdm slick-greeter xdg-user-dirs
@@ -30,7 +30,7 @@
 # cd /usr/ports/devel/xdg-user-dirs/ && make install clean # 创建家目录的子目录
 ```
 
-安装后启动服务：
+## 安装后启动服务
 
 ```sh
 # service moused enable 
