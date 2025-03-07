@@ -41,6 +41,8 @@
 # service lightdm enable 
 ```
 
+## `startx` 配置文件
+
 在 `~/.xinitrc` 文件内加入下面一行:
 
 ```sh
