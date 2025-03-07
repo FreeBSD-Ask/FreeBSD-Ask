@@ -15,18 +15,18 @@
 ## 安装
 
 ```sh
-# pkg install xorg lightdm lightdm-gtk-greeter cinnamon wqy-fonts xdg-user-dirs
+# pkg install xorg lightdm slick-greeter cinnamon wqy-fonts xdg-user-dirs
 ```
 
 或者
 
 ```sh
-# cd /usr/ports/x11/xorg/ && make install clean
-# cd /usr/ports/x11/cinnamon/ && make install clean
-# cd /usr/ports/x11-fonts/wqy/ && make install clean
-# cd /usr/ports/x11/lightdm/ && make install clean
-# cd /usr/ports/x11/lightdm-gtk-greeter/ && make install clean
-# cd /usr/ports/devel/xdg-user-dirs/ && make install clean
+# cd /usr/ports/x11/xorg/ && make install clean # X11
+# cd /usr/ports/x11/cinnamon/ && make install clean # 桌面元包
+# cd /usr/ports/x11-fonts/wqy/ && make install clean # 文泉驿字体
+# cd /usr/ports/x11/lightdm/ && make install clean # 登录管理器
+# cd /usr/ports/x11/slick-greeter/ && make install clean # 登录管理器插件
+# cd /usr/ports/devel/xdg-user-dirs/ && make install clean # 创建用户家目录子目录
 ```
 
 
@@ -57,8 +57,8 @@ proc /proc procfs rw 0 0
 ### 添加启动项：
 
 ```sh
-# sysrc dbus_enable=YES
-# sysrc lightdm_enable=YES
+# service dbus enable 
+# service lightdm enable
 ```
 
 ### 中文化
