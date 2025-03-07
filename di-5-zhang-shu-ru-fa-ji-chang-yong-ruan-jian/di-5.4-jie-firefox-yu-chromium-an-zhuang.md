@@ -63,7 +63,7 @@ Chromium 不是 chrome，但在 FreeBSD 中启动命令是 `chrome`。
 
 ![](../.gitbook/assets/join-chromium-dev-for-api1.png)
 
-因为我们只是需要 Chrome Google API 的访问权限，所以你必须关闭这两个邮件列表的消息通知，否则你就会在事实上遭遇邮件列表的轰炸（其交流频繁）。
+因为我们只是需要 Chrome Google API 的访问权限，所以你必须关闭这两个邮件列表的消息通知（即“不接收电子邮件”），否则你就会在事实上遭遇邮件列表的轰炸（其交流频繁）。
 
 ![](../.gitbook/assets/join-chromium-dev-for-api2.png)
 
