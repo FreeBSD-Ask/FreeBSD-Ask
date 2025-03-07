@@ -16,7 +16,7 @@
 ## 安装与配置
 
 ```sh
-# pkg install mate xorg wqy-fonts lightdm lightdm-gtk-greeter xdg-user-dirs
+# pkg install mate xorg wqy-fonts lightdm slick-greeter xdg-user-dirs
 ```
 
 或者：
@@ -26,7 +26,7 @@
 # cd /usr/ports/x11/xorg/ && make install clean # X11
 # cd /usr/ports/x11-fonts/wqy/ && make install clean # 文泉驿字体
 # cd /usr/ports/x11/lightdm/ && make install clean # lightdm
-# cd /usr/ports/x11/lightdm-gtk-greeter/ && make install clean # lightdm 需要
+# cd /usr/ports/x11/slick-greeter/ && make install clean # lightdm 需要
 # cd /usr/ports/devel/xdg-user-dirs/ && make install clean # 创建家目录的子目录
 ```
 
