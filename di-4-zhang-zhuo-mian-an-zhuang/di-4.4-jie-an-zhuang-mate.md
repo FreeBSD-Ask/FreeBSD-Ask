@@ -36,7 +36,6 @@
 ## 安装后启动服务
 
 ```sh
-# service moused enable 
 # service dbus enable 
 # service lightdm enable 
 ```
