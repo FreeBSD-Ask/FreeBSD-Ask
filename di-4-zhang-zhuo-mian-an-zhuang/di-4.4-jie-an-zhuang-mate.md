@@ -61,7 +61,7 @@ exec mate-session
 # cap_mkdb /etc/login.conf
 ```
 
-![FreeBSD 安装 MATE](../.gitbook/assets/mate1.png)
+![FreeBSD 安装 MATE](../.gitbook/assets/cinnamon1.png)
 
 ![FreeBSD 安装 MATE](../.gitbook/assets/mate2.png)
 
