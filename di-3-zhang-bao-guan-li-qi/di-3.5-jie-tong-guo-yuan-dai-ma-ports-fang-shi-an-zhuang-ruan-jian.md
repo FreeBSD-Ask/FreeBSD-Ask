@@ -10,7 +10,38 @@
 
 ## FreeBSD ports 基本用法
 
-### 首先使用 Git 获取 Ports（其他方法参见前节）
+### 使用 ports 压缩包
+
+使用压缩包成功地规避了先有鸡还是先有蛋的哲学问题。
+
+#### 下载 ports 压缩包
+
+NJU:
+
+```sh
+# fetch https://mirrors.nju.edu.cn/freebsd-ports/ports.tar.gz
+```
+
+或 USTC
+
+```sh
+# fetch https://mirrors.ustc.edu.cn/freebsd-ports/ports.tar.gz
+```
+
+又或
+
+```sh
+# fetch https://download.freebsd.org/ftp/ports/ports/ports.tar.gz
+```
+
+#### 解压 ports 压缩包
+
+```sh
+# tar -zxvf ports.tar.gz -C /usr/ports # 解压至路径
+# rm ports.tar.gz # 删除存档
+```
+
+### 使用 Git 获取 Ports
 
 #### 安装 Git
 ```sh
@@ -76,6 +107,8 @@ root@ykla:/usr/ports # git branch
 ```
 
 已经切换成功。
+
+
 
 
 #### 故障排除
