@@ -1,5 +1,7 @@
 # 第 4.4 节 安装 Mate
 
+你也许不认识 mate，即巴拉圭冬青（Ilex paraguariensis），但是你可能听说“马黛茶”。许多南美球员（如梅西）非常热衷于这种植物制成的茶饮。
+
 > 以下教程适用于 shell 为 bash/sh/zsh 的用户。
 >
 > 首先看看现在自己的 shell 是不是 `sh`、`bash` 或 `zsh`：
