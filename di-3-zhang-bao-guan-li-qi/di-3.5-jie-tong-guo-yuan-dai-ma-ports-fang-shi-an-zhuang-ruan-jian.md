@@ -28,7 +28,7 @@ NJU:
 # fetch https://mirrors.ustc.edu.cn/freebsd-ports/ports.tar.gz
 ```
 
-又或
+又或 FreeBSD 官方
 
 ```sh
 # fetch https://download.freebsd.org/ftp/ports/ports/ports.tar.gz

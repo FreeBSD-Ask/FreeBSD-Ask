@@ -1,32 +1,34 @@
 # 第 4.6 节 安装 Cinnamon
 
+>**注意**
+>
 > 以下教程适用于 shell 为 bash/sh/zsh 的用户。
 >
-> 首先看看现在自己的 shell 是不是 `sh`、`bash`、`zsh`：
+> 首先看看现在自己的 shell 是不是 `sh`（FreeBSD 默认）、`bash`、`zsh`：
 >
 >```sh
 ># echo $0
 >```
->
-> 如果是 `sh`、`bash`、`zsh` 其中之一，请继续；
+
 
 
 
 ## 安装
 
 ```sh
-# pkg install xorg lightdm lightdm-gtk-greeter cinnamon wqy-fonts xdg-user-dirs
+# pkg install xorg lightdm slick-greeter cinnamon wqy-fonts xdg-user-dirs lightdm-gtk-greeter-settings
 ```
 
 或者
 
 ```sh
-# cd /usr/ports/x11/xorg/ && make install clean
-# cd /usr/ports/x11/cinnamon/ && make install clean
-# cd /usr/ports/x11-fonts/wqy/ && make install clean
-# cd /usr/ports/x11/lightdm/ && make install clean
-# cd /usr/ports/x11/lightdm-gtk-greeter/ && make install clean
-# cd /usr/ports/devel/xdg-user-dirs/ && make install clean
+# cd /usr/ports/x11/xorg/ && make install clean # X11
+# cd /usr/ports/x11/cinnamon/ && make install clean # 桌面元包
+# cd /usr/ports/x11-fonts/wqy/ && make install clean # 文泉驿字体
+# cd /usr/ports/x11/lightdm/ && make install clean # 登录管理器
+# cd /usr/ports/x11/slick-greeter/ && make install clean # 登录管理器插件
+# cd /usr/ports/x11/lightdm-gtk-greeter-settings/ && make install clean # 登录管理器插件配置工具
+# cd /usr/ports/devel/xdg-user-dirs/ && make install clean # 创建用户家目录子目录
 ```
 
 
@@ -57,8 +59,8 @@ proc /proc procfs rw 0 0
 ### 添加启动项：
 
 ```sh
-# sysrc dbus_enable=YES
-# sysrc lightdm_enable=YES
+# service dbus enable 
+# service lightdm enable
 ```
 
 ### 中文化
