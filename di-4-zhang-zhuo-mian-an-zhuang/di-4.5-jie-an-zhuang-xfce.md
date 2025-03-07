@@ -5,18 +5,19 @@
 通过 pkg 安装
 
 ```sh
-# pkg install xorg lightdm lightdm-gtk-greeter xfce wqy-fonts xdg-user-dirs xfce4-goodies 
+# pkg install xorg lightdm lightdm-gtk-greeter xfce wqy-fonts xdg-user-dirs xfce4-goodies lightdm-gtk-greeter-settings
 ```
 
 或通过 ports 安装
 
 ```sh
 # cd /usr/ports/x11/xorg/ && make install clean
-# cd /usr/ports/x11-wm/xfce4 && make install clean #注意有个 4
+# cd /usr/ports/x11-wm/xfce4 && make install clean # 注意有个 4
 # cd /usr/ports/x11/xfce4-goodies/ && make install clean
 # cd /usr/ports/x11-fonts/wqy/ && make install clean
 # cd /usr/ports/x11/lightdm/ && make install clean
 # cd /usr/ports/x11/lightdm-gtk-greeter/ && make install clean
+# cd /usr/ports/x11/lightdm-gtk-greeter-settings/ && make install clean
 # cd /usr/ports/devel/xdg-user-dirs/ && make install clean
 # cd /usr/ports/x11/xfce4-goodies/ && make install clean
 ```
