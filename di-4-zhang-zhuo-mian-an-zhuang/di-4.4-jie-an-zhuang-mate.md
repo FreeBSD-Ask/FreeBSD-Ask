@@ -88,7 +88,7 @@ ibus 测试成功。请参见输入法相关章节。
 ```ini
 [Greeter]
 # 设置登录界面的背景图片路径
-background=/home/ykla/pg.png
+background=/home/ykla/cat.png
 
 # 是否绘制用户自定义的背景图片
 draw-user-backgrounds=false
@@ -117,3 +117,9 @@ show-clock=true
 # 是否显示退出选项
 show-quit=true
 ```
+
+![FreeBSD 安装 MATE](../.gitbook/assets/mate1.png)
+
+#### 参考文献
+
+- [lightdm not reading slick-greeter.conf](https://forums.freebsd.org/threads/lightdm-not-reading-slick-greeter-conf.92256/)
