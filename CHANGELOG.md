@@ -1,5 +1,8 @@
 # 编辑日志
 
+
+- 2025.3.7
+  - “第 5.4 节 安装 Firefox 与 Chromium”新增“Chromium 使用 Google 账号同步”
 - 2025.3.4
   - 重建“第 12 章 FreeBSD 源代码分析”
 - 2025.3.3
