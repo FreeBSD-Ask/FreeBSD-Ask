@@ -64,7 +64,7 @@ NJU:
 #### 拉取 Ports 存储库（FreeBSD 官方）浅克隆
 
 ```sh
-# git clone --filter=tree:0 https://git.FreeBSD.org/ports.git /usr/ports
+# git clone --filter=tree:0 https://git.FreeBSD.org/ports.git /usr/
 ```
 
 #### 完全拉取 Ports 存储库（FreeBSD 官方）并指定分支
