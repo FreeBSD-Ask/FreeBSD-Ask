@@ -73,3 +73,47 @@ exec mate-session
 
 ibus 测试成功。请参见输入法相关章节。
 
+## 故障排除
+
+### lightdm-gtk-greeter-settings 不生效
+
+创建：
+
+```sh
+/usr/local/etc/lightdm/slick-greeter.conf
+```
+
+写入
+
+```ini
+[Greeter]
+# 设置登录界面的背景图片路径
+background=/home/ykla/pg.png
+
+# 是否绘制用户自定义的背景图片
+draw-user-backgrounds=false
+
+# 设置 GTK+ 主题名称
+theme-name=Dracula
+
+# 设置图标主题名称
+icon-theme-name=Adwaita
+
+# 是否显示主机名
+show-hostname=true
+
+# 设置字体名称和大小
+font-name=Sans 12
+
+# 是否显示虚拟键盘选项
+show-keyboard=true
+
+# 是否显示电源管理选项（如关机、重启）
+show-power=true
+
+# 是否显示时钟
+show-clock=true
+
+# 是否显示退出选项
+show-quit=true
+```
