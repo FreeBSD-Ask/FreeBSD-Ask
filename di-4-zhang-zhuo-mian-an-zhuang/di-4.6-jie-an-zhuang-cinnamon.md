@@ -1,14 +1,15 @@
 # 第 4.6 节 安装 Cinnamon
 
+>**注意**
+>
 > 以下教程适用于 shell 为 bash/sh/zsh 的用户。
 >
-> 首先看看现在自己的 shell 是不是 `sh`、`bash`、`zsh`：
+> 首先看看现在自己的 shell 是不是 `sh`（FreeBSD 默认）、`bash`、`zsh`：
 >
 >```sh
 ># echo $0
 >```
->
-> 如果是 `sh`、`bash`、`zsh` 其中之一，请继续；
+
 
 
 
