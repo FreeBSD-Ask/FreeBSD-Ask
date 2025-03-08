@@ -18,7 +18,7 @@
 ## 安装
 
 ```sh
-# pkg install mate xorg wqy-fonts lightdm slick-greeter xdg-user-dirs lightdm-gtk-greeter-settings
+# pkg install mate xorg wqy-fonts lightdm slick-greeter xdg-user-dirs
 ```
 
 或者：
@@ -29,7 +29,6 @@
 # cd /usr/ports/x11-fonts/wqy/ && make install clean # 文泉驿字体
 # cd /usr/ports/x11/lightdm/ && make install clean # lightdm
 # cd /usr/ports/x11/slick-greeter/ && make install clean # lightdm 需要
-# cd /usr/ports/x11/lightdm-gtk-greeter-settings && make install clean # slick-greeter 配置工具
 # cd /usr/ports/devel/xdg-user-dirs/ && make install clean # 创建家目录的子目录
 ```
 
@@ -77,7 +76,7 @@ ibus 测试成功。请参见输入法相关章节。
 
 ## 故障排除
 
-### lightdm-gtk-greeter-settings 不生效
+### 配置 slick-greeter
 
 创建：
 
