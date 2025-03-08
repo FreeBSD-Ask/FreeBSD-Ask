@@ -32,7 +32,7 @@ Telegram：[https://t.me/oh_my_BSD](https://t.me/oh_my_BSD)
 
 - 需要兼容层才能运行 QQ、微信（软件运行方法参见正文）
 - Telegram 可原生运行 by [net-im/telegram-desktop](https://www.freshports.org/net-im/telegram-desktop/)
-- Discord 可使用 Port `net-im/linux-discord`，或自行构建兼容层
+- Discord 可使用 Port `net-im/linux-discord`，或使用 `net-im/dissent`。
 
 ## 概述
 
