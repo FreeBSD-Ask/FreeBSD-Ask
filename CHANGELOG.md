@@ -1,6 +1,7 @@
 # 编辑日志
 
-
+- 2025.3.9
+  - “第 22.4 节 C/C++ 环境的配置”新增“vim-codefmt 代码美化”
 - 2025.3.7
   - “第 5.4 节 安装 Firefox 与 Chromium”新增“Chromium 使用 Google 账号同步”
 - 2025.3.4
