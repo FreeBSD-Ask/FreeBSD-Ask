@@ -17,9 +17,9 @@
 
 >**技巧**
 >
->根据 man 页面 [PKG(7)](https://man.freebsd.org/cgi/man.cgi?query=pkg) 的页面解释：
+>根据 man [pkg(7)](https://man.freebsd.org/cgi/man.cgi?query=pkg) 页面解释：
 >
->>为了避免出现向下兼容问题，实际的 `pkg(8)` 工具不会预装在基本系统中。
+>>为了避免出现向后兼容问题，实际的 `pkg(8)` 工具不会预装在基本系统中。
 
 基本系统默认没有 pkg，需要先下载一下 pkg：
 
