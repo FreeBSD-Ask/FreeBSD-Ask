@@ -127,7 +127,7 @@ PasswordAuthentication yes   #（可选）设置是否使用普通密码验证�
 如果提示找不到 `sshd`,请执行下一命令:
 
 ```sh
-# sysrc sshd_enable="YES"
+# service sshd enable
 ```
 
 然后再

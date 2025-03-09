@@ -50,8 +50,8 @@ proc           /proc       procfs  rw  0   0
 添加启动项：
 
 ```sh
-# sysrc dbus_enable="YES"
-# sysrc lightdm_enable="YES"
+# service dbus enable
+# service lightdm enable
 ```
 
 ![FreeBSD 安装 Budgie](../.gitbook/assets/budgie1.png)

@@ -34,7 +34,7 @@
 首先设置启动服务：
 
 ```sh
-# sysrc lightdm_enable="YES"
+# service lightdm enable
 ```
 
 然后修改配置文件：
@@ -73,7 +73,7 @@
 配置自启：
 
 ```sh
-# sysrc sddm_enable="YES"
+# service sddm enable
 ```
 
 更改 `/usr/local/etc/pam.d/sddm` 文件:

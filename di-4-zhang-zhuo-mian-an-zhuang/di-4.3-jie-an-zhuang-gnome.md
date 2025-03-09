@@ -63,7 +63,7 @@ proc /proc procfs rw 0 0
 配置启动项：
 
 ```sh
-# sysrc dbus_enable="YES"
+# service dbus enable
 # sysrc gdm_enable="YES"
 ```
 

@@ -326,7 +326,7 @@ jail 控制台中的操作
 配置：
 
 ```sh
-# sysrc postgresql_enable=YES
+# service postgresql enable
 # mkdir -p -m 0700 /var/db/postgres/data15     # 注意版本号
 # chown postgres:postgres /var/db/postgres/data15  # 这个目录应属于 postgres 用户
 # su postgres   # 这里切换到 postgres 用户，注意下面提示符的变化

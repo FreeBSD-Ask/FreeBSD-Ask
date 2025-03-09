@@ -31,7 +31,7 @@ exec startfluxbox
 ## 启动项
 
 ```sh
-# sysrc dbus_enable="YES"
+# service dbus enable
 # sysrc slim_enable="YES"
 ```
 

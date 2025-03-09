@@ -32,8 +32,8 @@ exec startlxde
 ## 启动项
 
 ```sh
-# sysrc dbus_enable="YES"
-# sysrc lightdm_enable="YES"
+# service dbus enable
+# service lightdm enable
 ```
 
 ## fstab

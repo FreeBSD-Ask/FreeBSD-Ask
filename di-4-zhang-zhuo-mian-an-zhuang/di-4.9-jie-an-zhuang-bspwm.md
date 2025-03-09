@@ -51,7 +51,7 @@ xdg-user-dirs 可自动管理家目录子目录（可选安装）
 ### 启用 dbus 服务
 
 ```sh
-# sysrc dbus_enable="YES"
+# service dbus enable
 # service dbus start
 ```
 
@@ -132,7 +132,7 @@ Type=Application
 启动 lightdm 服务
 
 ```sh
-# sysrc lightdm_enable="YES"
+# service lightdm enable
 # service lightdm start
 ```
 

@@ -43,8 +43,8 @@ xdg-user-dirs 可自动管理家目录子目录（可选安装）
 ## 启动服务
 
 ```sh
-# sysrc dbus_enable="YES"
-# sysrc lightdm_enable="YES"
+# service dbus enable
+# service lightdm enable
 ```
 
 ## 设置中文显示

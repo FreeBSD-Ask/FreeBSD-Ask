@@ -33,7 +33,7 @@ xdg-user-dirs 可自动管理家目录子目录（可选安装）
 启用 dbus 服务
 
 ```sh
-# sysrc dbus_enable="YES"
+# service dbus enable
 ```
 
 修改 fstab
@@ -55,7 +55,7 @@ $ echo "exec ck-launch-session startlxqt" > ~/.xinitrc
 ### 通过 sddm
 
 ```sh
-# sysrc sddm_enable="YES"
+# service sddm enable
 ```
 
 中文化：
