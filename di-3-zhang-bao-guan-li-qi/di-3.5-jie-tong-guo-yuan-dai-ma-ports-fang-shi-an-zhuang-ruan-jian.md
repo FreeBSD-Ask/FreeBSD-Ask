@@ -8,13 +8,12 @@
 >
 >ports 下载路径是 `/usr/ports/distfiles/`。
 
-## FreeBSD ports 基本用法
 
-### 使用 ports 压缩包
+## 使用 ports 压缩包
 
 使用压缩包成功地规避了先有鸡还是先有蛋的哲学问题。
 
-#### 下载 ports 压缩包
+### 下载 ports 压缩包
 
 NJU:
 
@@ -34,16 +33,16 @@ NJU:
 # fetch https://download.freebsd.org/ftp/ports/ports/ports.tar.gz
 ```
 
-#### 解压 ports 压缩包
+### 解压 ports 压缩包
 
 ```sh
 # tar -zxvf ports.tar.gz -C /usr # 解压至路径
 # rm ports.tar.gz # 删除存档
 ```
 
-### 使用 Git 获取 Ports
+## 使用 Git 获取 Ports
 
-#### 安装 Git
+### 安装 Git
 ```sh
 # pkg install git
 ```
@@ -55,19 +54,19 @@ NJU:
 # make install clean
 ```
 
-#### 拉取 Ports 存储库（USTC）浅克隆
+### 拉取 Ports 存储库（USTC）浅克隆
 
 ```sh
 # git clone --filter=tree:0 https://mirrors.ustc.edu.cn/freebsd-ports/ports.git /usr/ports
 ```
 
-#### 拉取 Ports 存储库（FreeBSD 官方）浅克隆
+### 拉取 Ports 存储库（FreeBSD 官方）浅克隆
 
 ```sh
 # git clone --filter=tree:0 https://git.FreeBSD.org/ports.git /usr/ports
 ```
 
-#### 完全拉取 Ports 存储库（FreeBSD 官方）并指定分支
+### 完全拉取 Ports 存储库（FreeBSD 官方）并指定分支
 
 ```sh
 # git clone https://git.FreeBSD.org/ports.git /usr/ports
@@ -109,9 +108,22 @@ root@ykla:/usr/ports # git branch
 已经切换成功。
 
 
+### 同步更新 Ports Git
 
 
-#### 故障排除
+```sh
+root@ykla:/ # cd /usr/ports/ # 切换目标目录
+root@ykla:/usr/ports # git pull # 同步更新上游 Ports
+```
+
+如果提示本地已经修改，放弃本地修改，再更新：
+
+```sh
+root@ykla:/usr/ports # git checkout . # 放弃本地修改
+root@ykla:/usr/ports # git pull
+```
+
+### 故障排除
 
 
 ```sh
@@ -142,20 +154,7 @@ Sat Oct  5 08:39:21 UTC 2024
 
 
 
-#### 同步更新 Ports Git
 
-
-```sh
-root@ykla:/ # cd /usr/ports/ #切换目标目录
-root@ykla:/usr/ports # git pull #同步更新上游 Ports
-```
-
-如果提示本地已经修改，放弃本地修改，再更新：
-
-```sh
-root@ykla:/usr/ports # git checkout . #放弃本地修改
-root@ykla:/usr/ports # git pull
-```
 
 ### 使用 `whereis` 查询软件路径
 
@@ -171,16 +170,9 @@ root@ykla:/usr/ports # git pull
 python: /usr/ports/lang/python
 ```
 
-### 如何安装 python3：
 
-```sh
-# cd /usr/ports/lang/python
-# make BATCH=yes clean
-```
 
-其中 `BATCH=yes` 意味着使用默认参数进行编译。
-
-### 查看依赖
+## 查看依赖
 
 已经安装：
 
@@ -228,30 +220,35 @@ root@ykla:/usr/ports/sysutils/htop # make all-depends-list
 /usr/ports/devel/libtool
 ```
 
-### 杂项
+## 杂项
 
 如果不选择 `BATCH=yes` 的方法手动配置：
 
-- 看看 python 的 ports 在哪：
+### 看看 python 的 ports 在哪
 
 ```sh
 # whereis python
 # python: /usr/ports/lang/python
 ```
 
-- 安装 python3：
+### 安装 python3：
 
 ```sh
 # cd /usr/ports/lang/python
+# make BATCH=yes clean
 ```
 
-- 如何设置全部所需的依赖：
+其中 `BATCH=yes` 意味着使用默认参数进行编译。
+
+### 如何设置全部所需的依赖
 
 ```sh
 # make config-recursive
 ```
 
-- 如何使用 pkg 安装依赖（而不使用 Ports 来编译依赖），仅使用 Ports 来编译软件包本体：
+### 如何使用 pkg 安装依赖
+
+不使用 Ports 来编译依赖，仅使用 Ports 来编译软件包本体：
 
 ```sh
 # make install-missing-packages
@@ -281,25 +278,25 @@ Number of packages to be installed: 2
 Proceed with this action? [y/N]: 
 ```
 
-- 如何删除当前 port 及其依赖的配置文件：
+### 如何删除当前 port 及其依赖的配置文件
 
 ```sh
 # make rmconfig-recursive
 ```
 
-- 如何一次性下载所有需要的软件包：
+### 如何一次性下载所有需要的软件包：
 
 ```sh
 # make BATCH=yes fetch-recursive
 ```
 
-- ports 编译的软件也可以转换为 pkg 包
+### ports 编译的软件也可以转换为 pkg 包
 
 ```sh
 # pkg create nginx
 ```
 
-### 更新 FreeBSD 软件包/Port
+## 更新 FreeBSD 软件包/Port
 
 先同步更新 Ports Git。
 
@@ -340,7 +337,7 @@ w3m-0.5.3.20230718_1               <
 
 下边分别列出 2 种 FreeBSD 手册中提及的升级工具:
 
-① portmaster （推荐）
+### ① portmaster （推荐）
 
 - 更新：
 
@@ -356,7 +353,7 @@ w3m-0.5.3.20230718_1               <
 # portmaster -a -G --no-confirm
 ```
 
-- 查看依赖关系：
+#### 查看依赖关系：
 
 ```sh
 root@ykla:/usr/ports/ports-mgmt/portmaster # portmaster sysutils/htop  --show-work
@@ -374,7 +371,7 @@ root@ykla:/usr/ports/ports-mgmt/portmaster # portmaster sysutils/htop  --show-wo
 ===>>> Installed ports-mgmt/pkg
 ```
 
-② portupgrade
+### ② portupgrade
 
 ```sh
 # cd /usr/ports/ports-mgmt/portupgrade && make install clean
@@ -409,7 +406,7 @@ root@ykla:/usr/ports/ports-mgmt/portmaster # portmaster sysutils/htop  --show-wo
 
 完整的列表见 <https://cgit.freebsd.org/ports/tree/Mk/bsd.default-versions.mk>
 
-#### 参考资料
+### 参考资料
 
 - [Ports/DEFAULT_VERSIONS](https://wiki.freebsd.org/Ports/DEFAULT_VERSIONS)
 - [Python](https://wiki.freebsd.org/Python)
@@ -421,9 +418,7 @@ root@ykla:/usr/ports/ports-mgmt/portmaster # portmaster sysutils/htop  --show-wo
 # echo "OPTION_UNSET+= MYSQL" >> /etc/make.conf
 ```
 
-## 加速编译
-
-### FreeBSD ports 多线程编译
+## FreeBSD ports 多线程编译
 
 将以下内容写入 `/etc/make.conf`，没有就 `touch` 新建一个。
 
@@ -458,11 +453,11 @@ hw.ncpu: 16
 ```sh
 # alias ninja='ninja -j4'
 ```
-#### 参考资料
+### 参考资料
 
 - [Easy way to get cpu features](https://forums.freebsd.org/threads/easy-way-to-get-cpu-features.10553/)，获取 CPU 线程数量的命令来自此处。
 
-### 设置内存为 `tmp`
+## 设置内存为 `tmp`
 
 ```sh
 # ee /etc/fstab
@@ -476,12 +471,12 @@ tmpfs /tmp tmpfs rw 0 0
 
 `reboot` 重启即可。
 
-#### 参考资料
+### 参考资料
 
 - [tmpfs --in-memory file system](https://man.freebsd.org/cgi/man.cgi?tmpfs(5))
 
 
-### ccache
+## ccache
 
 >**警告**
 >
@@ -612,7 +607,7 @@ cache size                           0.0 kB
 max cache size                      10.0 GB
 ```
 
-#### ccache4
+### ccache4
 
 目前最新版本是 ccache4：
 
@@ -727,14 +722,14 @@ root@ykla:~ # ccache -p
 ```
 
 
-#### 参考文献
+### 参考文献
 
 - [ccache-howto-freebsd.txt.in](https://github.com/freebsd/freebsd-ports/blob/main/devel/ccache/files/ccache-howto-freebsd.txt.in)
 - [ccache -a fast C/C++ compiler cache](https://man.freebsd.org/cgi/man.cgi?query=ccache&sektion=1&n=1)
 
-### 如何使用多线程下载：
+## 如何使用多线程下载
 
-- axel
+### axel
 
 安装：
 
@@ -757,7 +752,7 @@ FETCH_AFTER_ARGS=
 DISABLE_SIZE=yes
 ```
 
-- wget2
+### wget2
   
 >**警告**
 >
@@ -766,7 +761,9 @@ DISABLE_SIZE=yes
 ```sh
 # cd /usr/ports/www/wget2/ && make install clean
 ```
+
 新建或者编辑 `/etc/make.conf` 文件，写入以下几行：
+
 ```sh
 FETCH_CMD=wget2
 FETCH_BEFORE_ARGS= -c -t 3 -o 10
@@ -783,7 +780,7 @@ DISABLE_SIZE=yes
 >`10` 这个参数可能过于保守，我一般直接用 `50` 或 `100`。但是要注意很多服务器不支持这么多线程同时下载。因为可能会给服务器带来较大压力。
 
 
-#### 参考文献
+### 参考文献
 
 - [ports --	contributed applications](https://man.freebsd.org/cgi/man.cgi?query=ports&sektion=7)，`FETCH_CMD` 的出处，同时也是参数 `BATCH` 的出处。
 
