@@ -220,7 +220,7 @@ root@ykla:/usr/ports/sysutils/htop # make all-depends-list
 /usr/ports/devel/libtool
 ```
 
-## 杂项
+## 扩展用法
 
 如果不选择 `BATCH=yes` 的方法手动配置：
 
