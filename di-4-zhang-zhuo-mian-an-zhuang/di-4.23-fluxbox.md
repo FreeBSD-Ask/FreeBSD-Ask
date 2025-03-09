@@ -6,7 +6,7 @@
 # pkg install xorg fluxbox fluxbox-tenr-styles-pack slim wqy-fonts xdg-user-dirs
 ```
 
-xdg-user-dirs 可自动创建家目录子目录（可选安装）
+xdg-user-dirs 可自动管理家目录子目录（可选安装）
 
 或者：
 
@@ -16,7 +16,7 @@ xdg-user-dirs 可自动创建家目录子目录（可选安装）
 # cd /usr/ports/x11/xorg/ && make install clean # X11
 # cd /usr/ports/x11/slim/ && make install clean # slim 窗口管理器
 # cd /usr/ports/x11-fonts/wqy/ && make install clean # 文泉驿字体
-# cd /usr/ports/devel/xdg-user-dirs/ && make install clean # 自动创建家目录子目录
+# cd /usr/ports/devel/xdg-user-dirs/ && make install clean # 自动管理家目录子目录
 ```
 
 
