@@ -19,6 +19,8 @@
 # pkg install xorg lightdm slick-greeter cinnamon wqy-fonts xdg-user-dirs
 ```
 
+xdg-user-dirs 可自动创建家目录子目录（可选安装）
+
 或者
 
 ```sh

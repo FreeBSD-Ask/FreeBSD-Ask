@@ -8,6 +8,8 @@
 # pkg install xorg lightdm lightdm-gtk-greeter xfce wqy-fonts xdg-user-dirs xfce4-goodies lightdm-gtk-greeter-settings
 ```
 
+xdg-user-dirs 可自动创建家目录子目录（可选安装）
+
 或通过 ports 安装
 
 ```sh
@@ -18,7 +20,7 @@
 # cd /usr/ports/x11/lightdm/ && make install clean
 # cd /usr/ports/x11/lightdm-gtk-greeter/ && make install clean
 # cd /usr/ports/x11/lightdm-gtk-greeter-settings/ && make install clean
-# cd /usr/ports/devel/xdg-user-dirs/ && make install clean
+# cd /usr/ports/devel/xdg-user-dirs/ && make install clean # 自动创建家目录子目录
 # cd /usr/ports/x11/xfce4-goodies/ && make install clean
 ```
 

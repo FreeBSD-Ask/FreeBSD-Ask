@@ -7,14 +7,16 @@
 # pkg install xorg gnome noto-sc xdg-user-dirs
 ```
 
+xdg-user-dirs 可自动创建家目录子目录（可选安装）
+
 或者
 
 ```
 # cd /usr/ports/x11/xorg/ && make install clean
 # cd /usr/ports/x11/gnome/ && make install clean
 # cd /usr/ports/x11-fonts/noto-serif-sc/ && make install clean
-# cd /usr/ports/devel/xdg-user-dirs/ && make install clean
-```
+# cd /usr/ports/devel/xdg-user-dirs/ && make install clean # 自动创建家目录子目录
+``` 
 
 解释:
 

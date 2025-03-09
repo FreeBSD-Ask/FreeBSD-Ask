@@ -10,6 +10,10 @@ bspwm，据说更符合 UNIX 哲学。
 # pkg install xorg bspwm sxhkd rofi kitty feh picom polybar dunst lightdm lightdm-gtk-greeter wqy-fonts xdg-user-dirs
 ```
 
+xdg-user-dirs 可自动创建家目录子目录（可选安装）
+
+通过 Ports 安装：
+
 
 ```sh
 # cd /usr/ports/x11/xorg/ && make install clean
@@ -24,7 +28,7 @@ bspwm，据说更符合 UNIX 哲学。
 # cd /usr/ports/x11-fonts/wqy/ && make install clean
 # cd /usr/ports/x11/lightdm/ && make install clean
 # cd /usr/ports/x11/lightdm-gtk-greeter/ && make install clean
-# cd /usr/ports/devel/xdg-user-dirs/ && make install clean
+# cd /usr/ports/devel/xdg-user-dirs/ && make install clean # 自动创建家目录子目录
 ```
 解释：
 
