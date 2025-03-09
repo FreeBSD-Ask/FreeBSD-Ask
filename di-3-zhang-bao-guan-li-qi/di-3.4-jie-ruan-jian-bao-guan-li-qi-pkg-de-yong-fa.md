@@ -122,9 +122,10 @@ FreeBSD pkg 使用 https，可能还需要先安装 ssl 证书（FreeBSD 14.1 �
 ```
 
 或者
+
 ```sh
 # cd /usr/ports/ports-mgmt/pkg_rmleaves/
-# make install clean
+# make deinstall
 ```
 
 ### 如何卸载所有自行安装的第三方软件？
@@ -250,7 +251,7 @@ Proceed with deinstalling packages? [y/N]:
 ```
 ### 配置 pkg-provides
 
-查看配置说明：
+- 查看配置说明：
 
 ```sh
 root@ykla:/home/ykla # pkg info -D pkg-provides
@@ -270,7 +271,7 @@ On upgrade:
 To update the provides database run `pkg provides -u`.
 ```
 
-编辑 `/usr/local/etc/pkg.conf`，找到空行，写入：
+- 编辑 `/usr/local/etc/pkg.conf`，找到空行，写入：
 
 
 ```sh
@@ -279,7 +280,7 @@ PKG_ENABLE_PLUGINS = true;
 PLUGINS [ provides ];
 ```
 
-运行：`pkg plugins`：
+- 运行：`pkg plugins`：
 
 ```sh
 root@ykla:/home/ykla # pkg plugins
@@ -288,7 +289,7 @@ provides   A plugin for querying which package provides a particular file 0.7.4
 root@ykla:/home/ykla # 
 ```
 
-刷新数据库：
+- 刷新数据库：
 
 ```sh
 root@ykla:/home/ykla # pkg provides -u
