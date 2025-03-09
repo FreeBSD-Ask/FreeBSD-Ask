@@ -78,7 +78,7 @@ FreeBSD pkg 使用 https，可能还需要先安装 ssl 证书（FreeBSD 14.1 �
 
 ## pkg 简单使用示例
 
-安装 python 3：
+### 安装 python 3
 
 
 ```sh
@@ -92,7 +92,7 @@ FreeBSD pkg 使用 https，可能还需要先安装 ssl 证书（FreeBSD 14.1 �
 # make install clean
 ```
 
-pkg 升级：
+### pkg 升级软件
 
 ```sh
 # pkg upgrade
@@ -107,13 +107,13 @@ pkg 升级：
 # make deinstall reinstall
 ```
 
-查看已经安装的所有软件：
+### 查看已经安装的所有软件
 
 ```sh
 # pkg info
 ```
 
-## 如何卸载软件
+## 卸载软件
 
 直接使用 `pkg delete` 会破坏正常的依赖关系，应该尽量避免使用（ports 的 `make deinstall` 也一样），转而使用 `pkg_rmleaves` 命令，该命令属于的软件需要自行安装。
 
