@@ -181,12 +181,17 @@ rufus 下载地址：[https://rufus.ie/zh](https://rufus.ie/zh)
 > # make install clean
 > ```
 > 
-> 然后
-> 
-> ```sh
-> # hw-probe -all -upload
+> 然后：
 > ```
+># hw-probe -all -upload
+>Probe for hardware ... Ok
+>Reading logs ... Ok
+>Uploaded to DB, Thank you!
 >
+>Probe URL: https://bsd-hardware.info/?probe=f64606c4b1
+>```
+>打开上面的链接，即可看到你的设备。
+> 
 > 其他系统见 [INSTALL HOWTO FOR BSD](https://github.com/linuxhw/hw-probe/blob/master/INSTALL.BSD.md)
 
 ---
