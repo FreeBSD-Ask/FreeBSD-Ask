@@ -173,3 +173,81 @@ root@ykla:~ # gpart show -p
   975323136    1445937  nda0p6  ms-recovery  (706M)
   976769073       4062          - free -  (2.0M)
 ```
+
+- 打印分区类型 GUID
+（如果是 GPT）或原始分区类型（MBR）
+
+```sh
+root@ykla:~ # gpart show -rp
+=>       40  244277168    mmcsd0  GPT  (116G)
+         40     532480  mmcsd0p1  c12a7328-f81f-11d2-ba4b-00a0c93ec93b  (260M)
+     532520       2008            - free -  (1.0M)
+     534528  243740672  mmcsd0p2  516e7cba-6ecf-11d6-8ff8-00022d09712b  (116G)
+  244275200       2008            - free -  (1.0M)
+
+=>       34  976773101    nda0  GPT  (466G)
+         34          6          - free -  (3.0K)
+         40     567256  nda0p1  c12a7328-f81f-11d2-ba4b-00a0c93ec93b  (277M)
+     567296  419436064  nda0p2  ebd0a0a2-b9e5-4433-87c0-68b6b72699c7  (200G)
+  420003360  310592132  nda0p3  ebd0a0a2-b9e5-4433-87c0-68b6b72699c7  (148G)
+  730595492          4          - free -  (2.0K)
+  730595496  177626968  nda0p4  ebd0a0a2-b9e5-4433-87c0-68b6b72699c7  (85G)
+  908222464   67100672  nda0p5  516e7cb5-6ecf-11d6-8ff8-00022d09712b  (32G)
+  975323136    1445937  nda0p6  de94bba4-06d1-4d40-a16a-bfd50179d6ac  (706M)
+  976769073       4062          - free -  (2.0M)
+```
+
+- 查看详情：
+
+```sh
+root@ykla:~ # gpart list mmcsd0
+Geom name: mmcsd0
+modified: false
+state: OK
+fwheads: 255
+fwsectors: 63
+last: 244277207
+first: 40
+entries: 128
+scheme: GPT
+Providers:
+1. Name: mmcsd0p1
+   Mediasize: 272629760 (260M)
+   Sectorsize: 512
+   Stripesize: 512
+   Stripeoffset: 0
+   Mode: r1w1e2
+   efimedia: HD(1,GPT,ea7e17b0-f265-11ef-a633-1002b5860ef9,0x28,0x82000)
+   rawuuid: ea7e17b0-f265-11ef-a633-1002b5860ef9 # 这个是 fstab 中可用的 UUID，下同
+   rawtype: c12a7328-f81f-11d2-ba4b-00a0c93ec93b # 这个是分区类型 GUID，下同
+   label: efiboot0
+   length: 272629760
+   offset: 20480
+   type: efi
+   index: 1
+   end: 532519
+   start: 40
+2. Name: mmcsd0p2
+   Mediasize: 124795224064 (116G)
+   Sectorsize: 512
+   Stripesize: 512
+   Stripeoffset: 0
+   Mode: r1w1e1
+   efimedia: HD(2,GPT,ea843e57-f265-11ef-a633-1002b5860ef9,0x82800,0xe873000)
+   rawuuid: ea843e57-f265-11ef-a633-1002b5860ef9
+   rawtype: 516e7cba-6ecf-11d6-8ff8-00022d09712b
+   label: zfs0
+   length: 124795224064
+   offset: 273678336
+   type: freebsd-zfs
+   index: 2
+   end: 244275199
+   start: 534528
+Consumers:
+1. Name: mmcsd0
+   Mediasize: 125069950976 (116G)
+   Sectorsize: 512
+   Stripesize: 512
+   Stripeoffset: 0
+   Mode: r2w2e5
+```
