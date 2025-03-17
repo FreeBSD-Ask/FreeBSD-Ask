@@ -150,7 +150,7 @@ tmpfs               32M    156K     32M     0%    /var
 
 分区扩展完成。
 
----
+## 附录
 
 **技巧：** 分区编号可从 `gpart show` 执行后查看到具体名称，或使用参数 `-p`：
 
@@ -251,3 +251,7 @@ Consumers:
    Stripeoffset: 0
    Mode: r2w2e5
 ```
+
+### 参考文献
+
+- [如何轻松改变分区类型ID？试试这2种方法！](https://www.disktool.cn/content-center/change-partition-type-id-2111.html)，分不清分区类型 ID 和分区 UUID 的可以参考此文。~~旧时，安装过黑苹果的人应该都设置过~~
