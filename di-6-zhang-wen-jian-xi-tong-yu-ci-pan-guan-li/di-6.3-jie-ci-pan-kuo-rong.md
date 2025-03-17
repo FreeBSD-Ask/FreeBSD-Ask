@@ -254,4 +254,4 @@ Consumers:
 
 ### 参考文献
 
-- [如何轻松改变分区类型ID？试试这2种方法！](https://www.disktool.cn/content-center/change-partition-type-id-2111.html)，分不清分区类型 ID 和分区 UUID 的可以参考此文。~~旧时，安装过黑苹果的人应该都设置过~~
+- [如何轻松改变分区类型ID？试试这2种方法！](https://www.disktool.cn/content-center/change-partition-type-id-2111.html)，分不清分区类型 ID 和分区 UUID 的可以参考此文。~~旧时，安装过黑苹果的人应该都设置过分区类型 ID~~
