@@ -22,6 +22,8 @@ root@ykla:~ # gpart show
 
 可以看到，`free` 空闲空间是 10GB。
 
+选择第四分区进行扩容：
+
 ```sh
 root@ykla:~ # gpart resize -i 4 nda0
 nda0p4 resized
@@ -38,6 +40,7 @@ root@ykla:~ # gpart show
      534528    4194304     3  freebsd-swap  (2.0G)
     4728832  163043295     4  freebsd-zfs  (78G)
 ```
+
 
 ```sh
 root@ykla:~ # zpool list
@@ -74,6 +77,8 @@ NAME    SIZE  ALLOC   FREE  CKPOINT  EXPANDSZ   FRAG    CAP  DEDUP    HEALTH  AL
 zroot  77.5G  2.20G  75.3G        -         -     2%     2%  1.00x    ONLINE  -
 ```
 
+已经扩展完成。
+
 ### 参考文献
 
 - [Solved-extend ZFS partition](https://forums.freebsd.org/threads/extend-zfs-partition.55964/)
@@ -81,7 +86,7 @@ zroot  77.5G  2.20G  75.3G        -         -     2%     2%  1.00x    ONLINE  -
 ## UFS 磁盘扩容
 
 
-- `gpart show`
+- `gpart show` 查看磁盘分区
 
 ```sh
 root@freebsd:~ # gpart show
@@ -95,9 +100,11 @@ root@freebsd:~ # gpart show
 
 查看系统盘大小只有 5G，显示 `da0` 只有这一个盘。
 
-- 执行扩容命令，`da0` 可从 `gpart show` 执行后查看到具体名称
+- 执行扩容命令，`da0` 这个分区编号可从 `gpart show` 执行后查看到具体名称
 
-> **警告** 如果你使用的是 GPT 分区表，上边的扩容操作（**在虚拟机或云服务器上的**）会破坏 GPT 分区表，所以需要先恢复之：
+> **警告** 
+>
+>如果你使用的是 GPT 分区表，上边的扩容操作（**在虚拟机或云服务器上的**）会破坏 GPT 分区表，所以需要先恢复之：
 >
 > ```sh
 > # gpart recover da0
@@ -137,3 +144,4 @@ tmpfs               20M    4.0K     20M     0%    /tmp
 tmpfs               32M    156K     32M     0%    /var
 ```
 
+分区扩展完成。
