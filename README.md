@@ -134,20 +134,18 @@ Telegram：[https://t.me/oh_my_BSD](https://t.me/oh_my_BSD)
 - [ ] 更新“第 16.7 节 Samba 服务器”
 - [ ] steam
 - [ ] Wayland 化桌面
-- [ ] ~~树莓派 5~~
-  - [ ] ~~微信~~
 - [ ] Bhyve
   - [ ] `sysutils/bhyvemgr` GUI
   - [X] Windows 11
-  - [ ] ~~Windows XP~~
+  - [ ] ~~Windows XP ?~~
   - [X] Ubuntu
-  - [ ] FreeBSD
-  - [ ] ~~MacOS~~
+  - [X] FreeBSD
+  - [ ] ~~MacOS ?~~
 - [ ] 删除重写部分来源于网络的错误内容
   - [ ] 防火墙
   - [ ] jail
   - [ ] 用户与权限
-  - [ ] geom
+  - [ ] GEOM
   - [ ] DTrace
 - [ ] 完全面向新手介绍 FreeBSD
   - [ ] 对比 Linux、Windows、MacOS、Android 和 IOS 等常见操作系统
@@ -166,7 +164,7 @@ Telegram：[https://t.me/oh_my_BSD](https://t.me/oh_my_BSD)
     - [X] 参考文献
     - [ ] 说明各大 Linux 操作系统的优势
 - [ ] 补充一些实验
-  - [ ] 我的世界（服务器、客户端）
+  - [X] 我的世界（服务器、客户端）
 - [ ] ZFS（可以参考 [Oracle Solaris 管理：ZFS 文件系统](https://docs.oracle.com/cd/E26926_01/html/E25826/index.html)）
   - [ ] ZFS 共享
   - [ ] ZFS 加密
@@ -227,7 +225,7 @@ Telegram：[https://t.me/oh_my_BSD](https://t.me/oh_my_BSD)
   - [ ] 测试 [Clash Verge Rev](https://github.com/clash-verge-rev/clash-verge-rev) 能否在 FreeBSD 上正常运行
   - [ ] 测试 [V2raya](https://github.com/v2rayA/v2rayA) 能否在 FreeBSD 上正常运行
 - [ ] 浏览器
-  - [ ] Google Chrome / Chromium Google 账号同步
+  - [X] Google Chrome / Chromium Google 账号同步
 
 
 
