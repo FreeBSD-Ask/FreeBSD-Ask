@@ -102,27 +102,7 @@ root@freebsd:~ # gpart show
 
 - 执行扩容命令
 
-**技巧：** `da0` 这个分区编号可从 `gpart show` 执行后查看到具体名称，或使用参数 `-p`：
 
-```sh
-root@ykla:~ # gpart show -p
-=>       40  244277168    mmcsd0  GPT  (116G)
-         40     532480  mmcsd0p1  efi  (260M)
-     532520       2008            - free -  (1.0M)
-     534528  243740672  mmcsd0p2  freebsd-zfs  (116G)
-  244275200       2008            - free -  (1.0M)
-
-=>       34  976773101    nda0  GPT  (466G)
-         34          6          - free -  (3.0K)
-         40     567256  nda0p1  efi  (277M)
-     567296  419436064  nda0p2  ms-basic-data  (200G)
-  420003360  310592132  nda0p3  ms-basic-data  (148G)
-  730595492          4          - free -  (2.0K)
-  730595496  177626968  nda0p4  ms-basic-data  (85G)
-  908222464   67100672  nda0p5  freebsd-swap  (32G)
-  975323136    1445937  nda0p6  ms-recovery  (706M)
-  976769073       4062          - free -  (2.0M)
-```
 
 
 
@@ -169,3 +149,27 @@ tmpfs               32M    156K     32M     0%    /var
 ```
 
 分区扩展完成。
+
+---
+
+**技巧：** 分区编号可从 `gpart show` 执行后查看到具体名称，或使用参数 `-p`：
+
+```sh
+root@ykla:~ # gpart show -p
+=>       40  244277168    mmcsd0  GPT  (116G)
+         40     532480  mmcsd0p1  efi  (260M)
+     532520       2008            - free -  (1.0M)
+     534528  243740672  mmcsd0p2  freebsd-zfs  (116G)
+  244275200       2008            - free -  (1.0M)
+
+=>       34  976773101    nda0  GPT  (466G)
+         34          6          - free -  (3.0K)
+         40     567256  nda0p1  efi  (277M)
+     567296  419436064  nda0p2  ms-basic-data  (200G)
+  420003360  310592132  nda0p3  ms-basic-data  (148G)
+  730595492          4          - free -  (2.0K)
+  730595496  177626968  nda0p4  ms-basic-data  (85G)
+  908222464   67100672  nda0p5  freebsd-swap  (32G)
+  975323136    1445937  nda0p6  ms-recovery  (706M)
+  976769073       4062          - free -  (2.0M)
+```
