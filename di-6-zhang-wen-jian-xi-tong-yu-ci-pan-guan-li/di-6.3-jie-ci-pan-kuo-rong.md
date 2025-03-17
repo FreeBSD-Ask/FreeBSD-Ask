@@ -218,8 +218,8 @@ Providers:
    Stripeoffset: 0
    Mode: r1w1e2
    efimedia: HD(1,GPT,ea7e17b0-f265-11ef-a633-1002b5860ef9,0x28,0x82000)
-   rawuuid: ea7e17b0-f265-11ef-a633-1002b5860ef9 # 这个是 fstab 中可用的 UUID，下同
-   rawtype: c12a7328-f81f-11d2-ba4b-00a0c93ec93b # 这个是分区类型 GUID，下同
+   rawuuid: ea7e17b0-f265-11ef-a633-1002b5860ef9 # 这个是 fstab 中可用的 UUID，是唯一的，下同
+   rawtype: c12a7328-f81f-11d2-ba4b-00a0c93ec93b # 这个是分区类型 GUID，相同类型的文件系统其 ID 也是一样的，下同
    label: efiboot0
    length: 272629760
    offset: 20480
