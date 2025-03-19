@@ -1,6 +1,6 @@
 # 第 9.3 节 使用 qjail 管理 jail
 
-qjail 是 jail 环境的部署工具，分支自 ezjail 3.1。jail 管理工具有 ezjail、 qjail、 iocage 等。ezjail 在 2015 年更新到 3.4.2 后一直没有更新，2018 年做过一次错误更新，不过好像也不是作者写的。ezjail 的 ports 更新依赖 portsnap，这个现在已经不建议使用了，将被废弃。iocage 可依赖于 zfs 文件系统，使用 ufs 文件系统的并不能使用。qjail 则在这些方面不存在问题。ezjail 并不支持 jail 的 vnet 功能，iocage 和 qjail 则支持。ezjail 和 qjail 使用 sh 编写，iocage 使用 python 编写。
+qjail 是 jail 环境的部署工具，复刻自 ezjail 3.1。jail 管理工具有 ezjail、 qjail、 iocage 等。ezjail 在 2015 年更新到 3.4.2 后一直没有更新，2018 年做过一次错误更新，不过好像也不是作者写的。ezjail 的 ports 更新依赖 portsnap，这个现在已经废弃了。iocage 依赖于 zfs 文件系统，使用 ufs 文件系统的用户无法使用。qjail 则在这些方面不存在问题。ezjail 不支持 jail 的 vnet 功能，iocage 和 qjail 则支持。ezjail 和 qjail 使用 sh 编写，iocage 使用 python 编写。
 
 下文中部署的 jail 在概念上结构如下图：
 
@@ -10,7 +10,7 @@ qjail 是 jail 环境的部署工具，分支自 ezjail 3.1。jail 管理工具�
 
 ## 预留 jail 的 ip
 
-`/etc/rc.conf` 文件中写入
+在 `/etc/rc.conf` 文件中写入
 
 ```sh
 cloned_interfaces="lo1"  # 克隆出 lo1 ，尽量和宿主机网络配置分开。注意，如果要生成多个端口，也应该在同一行中描述，以空格隔开，而不是另外创建一行，如 cloned_interfaces="lo1 lo2" 。分成多行写，只会有一行生效。
@@ -69,7 +69,7 @@ remote size / mtime: 195363380 / 1652346155
 因境内网络问题，也可以用镜像手动进行，以中国科学技术大学镜像为例（下载文件是注意版本号，qjail 要求文件版本与宿主机一致，这里是 FreeBSD amd64 13.1)
 
 ```sh
-# fetch https:://mirrors.ustc.edu.cn/freebsd/release/amd64/13.1-RELEASE/base.txz
+# fetch https://mirrors.ustc.edu.cn/freebsd/release/amd64/13.1-RELEASE/base.txz
 # qjail install base.txz
 ```
 
@@ -105,34 +105,34 @@ remote size / mtime: 195363380 / 1652346155
 
 ## qjail 基本使用
 
-列出 qjail 管理的 jail
+- 列出 qjail 管理的 jail
 
 ```sh
 # qjail list
 ```
 
-启用 jail
+- 启用 jail
 
 ```sh
 # qjail start # 启动所有 jail
 # qjail start jail1 # 启动 jail1
 ```
 
-停止 jail
+- 停止 jail
 
 ```sh
 # qjail stop # 停止所有 jail
 # qjail stop jail1 # 停止 jail1
 ```
 
-重启 jail
+- 重启 jail
 
 ```sh
 # qjail restart # 重启所有 jail
 # qjail restart jail1 # 重启 jail1
 ```
 
-进入 jail 控制台
+- 进入 jail 控制台
 
 ```sh
 # qjail console jail1  # 进入 jail1 控制台
@@ -140,20 +140,20 @@ remote size / mtime: 195363380 / 1652346155
 
 进入 jail 控制台后，此时是 jail 中的 root 帐号（进入 jail 的控制台，不需要输入密码），因 jail 可能开启对外服务，为安全考虑建议设置帐号密码
 
-备份 jail
+- 备份 jail
 
 ```sh
 # qjail archive -A  # 备份所有 jail
 # qjail archive jail1  # 备份 jail1
 ```
 
-从备份中恢复 jail
+- 从备份中恢复 jail
 
 ```sh
 # qjail restore jail1  # 从备份中恢复 jail1
 ```
 
-删除 jail
+- 删除 jail
 
 ```sh
 # qjail delete jail1  # 删除 jail1
@@ -268,7 +268,7 @@ rdr pass on em0 inet proto tcp from any to em0 port 22 -> 192.168.1.1 port 22  #
 ```
 
 ```sh
-# sysrc pf_enable=YES
+# service pf enable
 # service pf start
 ```
 
