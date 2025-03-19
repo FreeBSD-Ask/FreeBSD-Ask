@@ -1,45 +1,46 @@
 # 第 8.3 节 组
 
-## 在 FreeBSD 中，用户和组统一用 `pw` 命令管理：
+## `pw` 命令
 
-创建一个 `admin` 分组，并添加 `ykla` 和 `root` 两位用户：
+在 FreeBSD 中，用户和组可以用 `pw` 命令管理：
+
+- 创建 `admin` 分组，并添加 `ykla` 和 `root` 两位用户：
 
 ```sh
 # pw groupadd admin
 # pw groupmod admin -m ykla root
 ```
 
-创建一个 `wheel` 组，只添加 `root` 用户：
+- 创建 `wheel` 组，只添加 `root` 用户：
 
 ```sh
 # pw groupadd wheel
 # pw groupmod wheel -m root
 ```
 
-从 `admin` 组里移除用户 `ykla`：
+- 从 `admin` 组里移除用户 `ykla`：
 
 ```sh
 # pw groupmod admin -d ykla
 ```
 
-删除 `admin` 组：
+- 删除 `admin` 组：
 
 ```sh
 # pw groupdel admin
 ```
 
+---
+
 `admin` 和 `wheel` 权限的区别：
 
 - `admin`，具有管理系统的权限（sudo 的默认配置如此），可以使用 `sudo` 命令。
-- `wheel`，超级管理员权限，可以任意修改系统（该名称来源于俚语 big wheel，意为大人物）。
+- `wheel`，超级管理员权限，可以任意修改系统（该名称来源于俚语 big wheel，即大人物）。
 
-用 pw 命令管理用户和组操作系统用户，或许叫账号更恰当，是操作人员登陆操作系统的凭证，如前面的新建用户；
 
-而操作系统组，也可以简单理解为角色，限制了操作系统用户的基础权限。
+## `useradd` 命令
 
-## 子命令
-
-1. `useradd` 命令，用于新建用户，常用参数：
+用于新建用户，常用参数：
 
 \-u，指定 uid，不指定则由操作系统根据已存在的 `uid` 自动生成。
 
@@ -67,7 +68,9 @@
 # echo password | pw useradd test3 -h 0 #创建用户 test3，同时设置密码为 password
 ```
 
-2. `usermod` 命令，用于修改用户信息，常用参数：
+## `usermod` 命令
+
+用于修改用户信息，常用参数：
 
 `-l`，为用户改名 其他参数参考 useradd 子命令。
 
@@ -79,7 +82,9 @@
 # echo password | pw usermod test2 -h 0 #修改用户 test2 密码为 password
 ```
 
-3. `userdel` 命令，用于删除用户，常用参数：
+## `userdel` 命令
+
+用于删除用户，常用参数：
 
 `-r`，删除用户同时删除用户主目录及所有相关信息，不使用该参数则信息保留，仅删除用户
 
@@ -89,7 +94,9 @@
 # pw userdel test2 -r
 ```
 
-4. `usershow` 命令，用于显示用户信息，
+## `usershow` 命令
+
+用于显示用户信息，
 
 示例：
 
@@ -97,7 +104,9 @@
 # pw usershow test2
 ```
 
-5. `usernext` 命令，返回下一个可用的 uid，
+## `usernext` 命令
+
+可返回下一个可用的 uid，
 
 示例：
 
@@ -105,7 +114,9 @@
 # pw usernext
 ```
 
-6. `lock` 命令，锁定账号，锁定后账号无法登录使用，
+## `lock` 命令
+
+锁定账号，锁定后账号无法登录使用，
 
 示例：
 
@@ -113,7 +124,9 @@
 # pw lock test2
 ```
 
-7. `unlock` 命令，解锁账号，解锁后账号可以正常使用，
+## `unlock` 命令
+
+解锁账号，解锁后账号可以正常使用，
 
 示例：
 
@@ -121,7 +134,9 @@
 # pw unlock test2
 ```
 
-8. `groupadd` 命令，用于新建组，常用参数：
+## `groupadd` 命令
+
+用于新建组，常用参数：
 
 ```sh
 -g，指定 gid，不指定则由操作系统根据已存在的 `gid` 自动生成
@@ -136,7 +151,9 @@
 # pw groupadd test5 -M test1,test2 #创建组 test5，成员有 test1 和 test2
 ```
 
-9. `groupmod` 命令，用于修改组信息，常用参数：
+## `groupmod` 命令
+
+用于修改组信息，常用参数：
 
 `-g`，指定新的 `gid`
 
@@ -157,7 +174,9 @@
 # pw groupmod test5 -m test3 #为组 test5 增加成员 test3
 ```
 
-10. `groupdel` 命令，用于删除组，
+## `groupdel` 命令
+
+用于删除组，
 
 示例：
 
@@ -165,7 +184,9 @@
 # pw groupdel mygroup
 ```
 
-11. `groupshow` 命令，用于显示组信息，
+## `groupshow` 命令
+
+用于显示组信息，
 
 示例：
 
@@ -173,7 +194,9 @@
 # pw groupshow test
 ```
 
-12. `groupnext` 命令，返回下一个可用的 `gid`，
+## `groupnext` 命令
+
+可返回下一个可用的 `gid`，
 
 示例：
 
@@ -183,8 +206,8 @@
 
 ## 其他用户管理命令
 
-1. `adduser` 命令，用于新建用户，与 `pw` 相比，`useradd` 的区别在于该命令是交互式的，安装操作系统时自建的用户，就是基于该命令创建的。
-2. `rmuser` 命令，用于删除用户，与 `adduser` 命令一样，也是交互式的。不过该命令带`-y`参数，并允许列出用户列表，
+- `adduser` 命令，用于新建用户，与 `pw` 相比，`useradd` 的区别在于该命令是交互式的，安装操作系统时自建的用户，就是基于该命令创建的。
+- `rmuser` 命令，用于删除用户，与 `adduser` 命令一样，也是交互式的。不过该命令有 `-y` 参数，且能列出用户列表，
 
 示例：
 
@@ -194,9 +217,9 @@
 
 \-y 参数用于省略询问步骤
 
-3. `chpass` 命令，以 `vi` 编辑器方式打开并修改指定用户信息，如不指定用户则默认为当前用户。
+- `chpass` 命令，以 `vi` 编辑器方式打开并修改指定用户信息，如不指定用户则默认为当前用户。
 
-常用参数： -s，用于登录环境
+常用参数：`-s`，用于登录环境
 
 示例：
 
@@ -206,16 +229,8 @@
 # passwd # 修改用户密码，如不指定用户则默认为当前用户。
 ```
 
-示例： `passwd` 用户 #回车后根据系统提示设置用户密码
+示例： `passwd 用户名` 
 
-4. `id` 命令，查看用户 `id` 信息，包括用户 `id` 和起始组 `id`，
+回车后根据系统提示设置用户密码。
 
-示例：
 
-```sh
-# id # 查看当前用户 id 信息
-# id test1 # 查看用户 test1 的 id 信息
-```
-
-5. `whoami` 命令，查看当前用户是谁。
-6. `who` 命令，查看当前用户登陆信息。
