@@ -35,7 +35,11 @@ drwxr-xr-x   2 ykla ykla     2 Mar  9 20:45 视频
 drwxr-xr-x   2 ykla ykla     2 Mar  9 20:45 音乐
 ```
 
-`--------`：
+再观察：
+
+```sh
+----------   1 root wheel         0 Mar 19 22:26 test
+```
 
 FreeBSD 文件访问权限可以用 10 个标志位来说明（数一数第一列是不是 10 位），而这 10 个标志位由 4 部分组成：
 
