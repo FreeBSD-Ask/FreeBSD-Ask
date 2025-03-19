@@ -1,16 +1,53 @@
 # 第 8.4 节 用户权限
 
-FreeBSD 文件访问权限可以用 10 个标志位来说明，10 个标志位由 4 部分组成：
+
+首先观察以下命令输出：
+
+```sh
+root@ykla:~ # ls -al /home/ykla
+total 74
+drwxr-xr-x  17 ykla ykla    27 Mar 19 17:57 .
+drwxr-xr-x   3 root wheel    4 Mar 19 16:05 ..
+-rw-------   1 ykla ykla    50 Mar 18 17:23 .Xauthority
+drwx------   6 ykla ykla     6 Mar 10 16:21 .cache
+drwx------   9 ykla ykla    12 Mar 19 15:01 .config
+-rw-r--r--   1 ykla ykla   950 Feb 24 12:18 .cshrc
+drwx------   3 ykla ykla     3 Mar  9 20:44 .dbus
+-rw-r--r--   1 ykla ykla  6858 Mar  9 23:46 .face
+drwxr-xr-x   2 ykla ykla     2 Mar  9 23:48 .icons
+drwxr-xr-x   3 ykla ykla     3 Mar  9 20:44 .local
+-rw-r--r--   1 ykla ykla   311 Feb 24 12:18 .login
+-rw-r--r--   1 ykla ykla    79 Feb 24 12:18 .login_conf
+-rw-------   1 ykla ykla   289 Feb 24 12:18 .mail_aliases
+-rw-r--r--   1 ykla ykla   255 Feb 24 12:18 .mailrc
+drwx------   4 ykla ykla     4 Mar 10 16:21 .mozilla
+-rw-r--r--   1 ykla ykla   966 Feb 24 12:18 .profile
+-rw-------   1 ykla ykla   200 Mar 19 17:57 .sh_history
+-rw-r--r--   1 ykla ykla  1003 Feb 24 12:18 .shrc
+drwxr-xr-x   2 ykla ykla     2 Mar  9 23:48 .themes
+drwxr-xr-x   2 ykla ykla     2 Mar  9 20:45 下载
+drwxr-xr-x   2 ykla ykla     2 Mar  9 20:45 公共
+drwxr-xr-x   2 ykla ykla     2 Mar  9 20:45 图片
+drwxr-xr-x   2 ykla ykla     2 Mar  9 20:45 文档
+drwxr-xr-x   2 ykla ykla     2 Mar  9 20:45 桌面
+drwxr-xr-x   2 ykla ykla     2 Mar  9 20:45 模板
+drwxr-xr-x   2 ykla ykla     2 Mar  9 20:45 视频
+drwxr-xr-x   2 ykla ykla     2 Mar  9 20:45 音乐
+```
+
+`--------`：
+
+FreeBSD 文件访问权限可以用 10 个标志位来说明（数一数第一列是不是 10 位），而这 10 个标志位由 4 部分组成：
 
 第一部分是第 1 位，用 d 表示目录，- 表示普通文件，l 表示链接，b 表示块设备文件，p 表示管道文件，c 表示字符设备文件，s 表示套接字文件；
 
 第二部分是第 2-4 位，用于标识文件所属用户对文件的访问权限，用 `rwx` 表示读、写、 执行权限，无权限就写成 `-`；
 
-第三部分是第 5-7 位，用于标识文件所属组成员对文件的访问权限，标识参考第二部分。
+第三部分是第 5-7 位，用于标识文件所属组成员对文件的访问权限。
 
-第四部分是第 8-10 位，用于标识文件其他用户对文件的访问权限，标识参考第二部分。
+第四部分是第 8-10 位，用于标识文件其他用户对文件的访问权限。
 
-读、写、执行除了用 `rwx` 表示，也可以对应成数字 4、2、1，没有权限用 0，每部分的 数字相加后，组合在一起，就是 3 位数字的表示方式。
+读、写、执行除了用 `rwx` 表示，也可以对应成数字 4、2、1，无权限即 0，每部分的数字相加后，组合在一起，就是 3 位数字的表示方式。（记忆口诀：“读 4 写 2 执行 1”）
 
 如：
 
@@ -20,21 +57,9 @@ FreeBSD 文件访问权限可以用 10 个标志位来说明，10 个标志位�
 |  drw-------  |     600      |                       这是一个目录，只有所属用户可以读、写                       |
 |  -rwxr-xr-x  |     755      | 普通文件，所属用户有读、写、执行权限，同组用户和其他用户只能读取或执行，不可写入 |
 
-1. ls 命令，列出文件，常用参数：
 
-`-l`，列表显示文件信息，信息中包含权限、属主、文件大小、修改日期和时间等信息，也可以直接用 ll 命令
 
-`-a`，隐藏文件也要显示
-
-示例：
-
-```sh
-# ls -l -a #列表显示包括隐藏文件在内的所有文件
-# ll -a #与上例效果相同
-# ls -l /tmp/a.log #列表显示 /tmp/a.log 文件
-```
-
-2. chmod 命令，修改文件访问权限，有两种操作方式。
+- chmod 命令，修改文件访问权限，有两种操作方式。
 
 一种是操作符方式，如：
 
