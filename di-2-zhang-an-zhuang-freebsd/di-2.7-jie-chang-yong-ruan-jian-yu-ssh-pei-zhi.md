@@ -4,6 +4,27 @@ SSH 即 Secure Shell，安全 shell，顾名思义是一种安全地使用 shell
 
 ## SSH 工具
 
+FreeBSD 自带 ssh，可以接入其他安装了 ssh 的设备，用法：
+
+```sh
+$ ssh 用户名@IP:端口
+```
+
+即 
+
+```sh
+$ ssh ykla@192.168.31.1:1022
+```
+
+>**技巧**
+>
+>`ssh` FreeBSD 的话，接入的是哪个 tty？
+>
+>```sh
+>$ tty
+>/dev/pts/1 # 即 pseudo-terminal，伪终端
+>```
+
 ### WinSCP
 
 `scp` 即 Secure Copy，安全复制，顾名思义是一种安全地使用 `cp` 命令的方式。一般用作远程使用，在不同设备间传输文件。
