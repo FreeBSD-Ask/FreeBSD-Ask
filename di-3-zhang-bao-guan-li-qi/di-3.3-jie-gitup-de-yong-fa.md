@@ -1,8 +1,14 @@
 # 第 3.3 节 gitup 的用法
 
-> FreeBSD 14.0 已经删除了 portsnap，转而使用 git，如本文所述可以使用 gitup 替代之。
+>**技巧**
+>
+>FreeBSD 14.0 已经删除了 portsnap，转而使用 git，如本文所述可以使用 gitup 替代之。
 
-安装 gitup：
+`gitup`，即更新 git 的意思。
+
+## 安装 gitup
+
+使用 pkg
 
 ```sh
 # pkg install gitup 
@@ -10,14 +16,16 @@
 
 或者
 
-```
+```sh
 # cd /usr/ports/net/gitup/
 # make install clean
 ```
 
-```
-# gitup ports #获取 latest 的 ports
-# gitup release #获取 release 版本的源代码
+## 使用 gitup
+
+```sh
+# gitup ports # 获取 latest 的 ports
+# gitup release # 获取 release 版本的源代码
 ```
 
 ## 境内 Git 镜像站
@@ -106,7 +114,7 @@
 
 `gitup` 的代理不取决于系统代理，而是由其配置文件 `/usr/local/etc/gitup.conf` 单独决定。
 
-示例（先删去前边的 # 再改）：
+示例（先删去前边的 `#` 再改）：
 
 ```sh
 "proxy_host" : "192.168.27.1",
@@ -119,8 +127,8 @@
 # gitup -v2 ports
 ```
 
-- gitup: build_repair_command: There are too many files to repair -- please re-clone the repository: Argument list too long
-
+- gitup: `build_repair_command: There are too many files to repair -- please re-clone the repository: Argument list too long`
+  
 ```sh
 # rm -rf /usr/ports
 # gitup ports
@@ -130,6 +138,6 @@
 
 ## 参考链接
 
-- [gitup --	A minimalist, dependency-free program to clone/pull Git	repos-itories.](https://www.freebsd.org/cgi/man.cgi?query=gitup&sektion=1&manpath=freebsd-release-ports)
+- [gitup --A minimalist, dependency-free program to clone/pull Git repos-itories.](https://www.freebsd.org/cgi/man.cgi?query=gitup&sektion=1&manpath=freebsd-release-ports)，man 手册
 - [net/gitup](https://www.freshports.org/net/gitup)
-- [johnmehr/gitup](https://github.com/johnmehr/gitup)
+- [johnmehr/gitup](https://github.com/johnmehr/gitup)，开发者官网
