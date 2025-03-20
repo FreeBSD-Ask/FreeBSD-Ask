@@ -80,6 +80,27 @@ FreeBSD pkg 使用 https，可能还需要先安装 ssl 证书（FreeBSD 14.1 �
 
 ## pkg 简单使用示例
 
+### 列出 pkg 包安装的文件
+
+>**注意**
+>
+>只能列出已安装的包的文件，未安装的不能用这个命令。
+
+```sh
+root@ykla:~ # pkg info -l xrdp
+xrdp-0.10.2_2,1:
+	/usr/local/bin/xrdp-dis
+	/usr/local/bin/xrdp-dumpfv1
+	/usr/local/bin/xrdp-genkeymap
+	/usr/local/bin/xrdp-keygen
+	/usr/local/bin/xrdp-sesadmin
+	/usr/local/bin/xrdp-sesrun
+	/usr/local/etc/pam.d/xrdp-sesman
+	/usr/local/etc/rc.d/xrdp
+	……省略一部分……
+```
+
+
 ### 安装 python 3
 
 
@@ -141,87 +162,11 @@ Installed packages to be REMOVED:
 	alsa-lib: 1.2.12
 	brotli: 1.1.0,1
 	curl: 8.8.0
-	dejavu: 2.37_3
-	encodings: 1.1.0,1
-	expat: 2.6.2
-	font-bh-ttf: 1.0.3_5
-	font-misc-ethiopic: 1.0.4
-	font-misc-meltho: 1.0.3_5
-	fontconfig: 2.15.0_2,1
-	freetype2: 2.13.2
-	gettext-runtime: 0.22.5
-	giflib: 5.2.2
-	git: 2.45.2_1
-	glib: 2.80.3,2
-	graphite2: 1.3.14
-	harfbuzz: 8.5.0
-	htop: 3.3.0_2
-	indexinfo: 0.3.1
-	javavmwrapper: 2.7.10
-	jbigkit: 2.1_3
-	jpeg-turbo: 3.0.3
-	lcms2: 2.16_2
-	lerc: 4.0.0
-	libICE: 1.1.1,1
-	libSM: 1.2.3_1,1
-	libX11: 1.8.9,1
-	libXau: 1.0.9_1
-	libXdmcp: 1.1.5
-	libXext: 1.3.6,1
-	libXfixes: 6.0.0_1
-	libXi: 1.8_1,1
-	libXrandr: 1.5.2_1
-	libXrender: 0.9.10_2
-	libXt: 1.3.0,1
-	libXtst: 1.2.3_3
-	libdeflate: 1.20
-	libffi: 3.4.6
-	libfontenc: 1.1.8
-	libiconv: 1.17_1
-	libidn2: 2.3.7
-	liblz4: 1.9.4_1,1
-	libnghttp2: 1.62.1
-	libpci: 3.12.0
-	libpsl: 0.21.5_1
-	libssh2: 1.11.0_1,3
-	libunistring: 1.2
-	libxcb: 1.17.0
-	mkfontscale: 1.2.3
-	mpdecimal: 4.0.0
-	openjdk21: 21.0.3+9.1
-	p5-Authen-SASL: 2.17
-	p5-CGI: 4.66
-	p5-Clone: 0.46
-	p5-Digest-HMAC: 1.04
-	p5-Encode-Locale: 1.05
-	p5-Error: 0.17029
-	p5-GSSAPI: 0.28_2
-	p5-HTML-Parser: 3.82
-	p5-HTML-Tagset: 3.24
-	p5-HTTP-Date: 6.06
-	p5-HTTP-Message: 6.46
-	p5-IO-HTML: 1.004
-	p5-IO-Socket-IP: 0.42
-	p5-IO-Socket-SSL: 2.088
-	p5-LWP-MediaTypes: 6.04
-	p5-Mozilla-CA: 20240313
-	p5-Net-SSLeay: 1.94
-	p5-TimeDate: 2.33,1
-	p5-URI: 5.28
-	pciids: 20240531
-	pciutils: 3.12.0
+……省略一部分……
 	pcre2: 10.43
 	perl5: 5.36.3_1
 	pkg: 1.21.3   # 如果带上参数 f，就会把 pkg 自己也删掉，因为这个 pkg 也是用户一开始自行安装的软件。
 	png: 1.6.43
-	py311-packaging: 24.1
-	python311: 3.11.9
-	readline: 8.2.10
-	screen: 4.9.1_3
-	tiff: 4.6.0
-	usbhid-dump: 1.4
-	usbids: 20240318
-	usbutils: 0.91
 	xorg-fonts-truetype: 7.7_1
 	xorgproto: 2024.1
 	zstd: 1.5.6
