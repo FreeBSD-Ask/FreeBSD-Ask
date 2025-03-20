@@ -1,5 +1,7 @@
 # 第 5.2 节 Ibus 输入法框架
 
+ibus 即“Intelligent Input Bus”（智能输入总线）。
+
 ## ibus
 
 基本安装
