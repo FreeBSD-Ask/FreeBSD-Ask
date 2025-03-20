@@ -1,6 +1,12 @@
 # 第 2.7 节 SSH 相关软件推荐与 SSH 配置
 
-## WinSCP 下载
+SSH 即 Secure Shell，安全 shell，顾名思义是一种安全地使用 shell 的方式。一般用作远程使用。
+
+## SSH 工具
+
+### WinSCP
+
+`scp` 即 Secure Copy，安全复制，顾名思义是一种安全地使用 `cp` 命令的方式。一般用作远程使用，在不同设备间传输文件。
 
 WinSCP 是对 `scp` 命令的图形化封装的软件，并同时支持 FTP 等多种协议。可以快捷的传输文件与 Windows 系统和 Linux 或 BSD 之间。
 
@@ -30,9 +36,7 @@ OpenSSH_9.7p1, OpenSSL 3.0.14 4 Jun 2024
 >
 >![WinSCP](../.gitbook/assets/scp2.png)
 
-## SSH 工具
 
- 
 ### Xshell 
 
 Xshell 是 Windows 平台上的强大的 shell 工具。支持 **串口**、SSH、Telnet！
@@ -100,23 +104,26 @@ Termius 鼠标行为和 PuTTY 接近，一样的反人类（无论选择快捷�
 
 ## 配置 SSH
 
-### 允许 root ssh
+### 允许 root 使用 ssh
 
 >**技巧**
 >
 >视频教程见 [004-FreBSD14.2 允许 root 登录 ssh](https://www.bilibili.com/video/BV1gji2YLE2o)
 
-```sh
-# ee /etc/ssh/sshd_config    #（删去前边的 #，并将 yes 或 no 修改为如下）
-PermitRootLogin yes          #允许 root 登录
+编辑“/etc/ssh/sshd_config”（删去前边的 #，并将 yes 或 no 修改为如下）：
+
+```ini
+PermitRootLogin yes          # 允许 root 登录
 PasswordAuthentication yes   #（可选）设置是否使用普通密码验证，如果不设置此参数则使用 PAM 认证登录，安全性更高
 ```
 
-> 提示：删去前边的 `#` 是什么意思？`#` 在 UNIX 当中一般是起到一个注释作用，相当于 C 语言里面的 `//`。意味着后边的文字只起到说明作用，不起实际作用。
+> **技巧**
+>
+> 删去前边的 `#` 是什么意思？`#` 在 UNIX 当中一般是起到一个注释作用，相当于 C 语言里面的 `//`。意味着后边的文字只起到说明作用，不起实际作用。
 
 > **故障排除**
 >
-> 如果你实在是找不到 `PasswordAuthentication no`，请你看看你改的究竟是 `/etc/ssh/`ssh***d***`_config` 还是 `/etc/ssh/`***ssh***`_config`。ssh***d*** 才是我们真正要改的文件。
+> 如果你实在是找不到 `#PasswordAuthentication no` 这行，请你看看你改的究竟是 `/etc/ssh/`ssh***d***`_config` 还是 `/etc/ssh/`***ssh***`_config`。ssh***d*** 才是我们真正要改的文件。
 
 ### 开启 SSH 服务
 
@@ -140,7 +147,7 @@ PasswordAuthentication yes   #（可选）设置是否使用普通密码验证�
 
 服务端设置：
 
-编辑 `# ee /etc/ssh/sshd_config`，调整 `ClientAlive` 的设置：
+编辑 `/etc/ssh/sshd_config`，调整 `ClientAlive` 的设置：
 
 ```sh
 ClientAliveInterval 10
@@ -153,7 +160,7 @@ ClientAliveCountMax 3
 
 客户端设置：
 
-全局用户生效：`# ee /etc/ssh/ssh_config`，仅对当前用户生效：`~/.ssh/config`。
+全局用户生效：编辑 `/etc/ssh/ssh_config`，仅对当前用户生效：`~/.ssh/config`。
 
 ```sh
 Host *
@@ -262,6 +269,8 @@ PermitEmptyPasswords no                      #禁止空密码的用户进行登�
 
 ### 传统的 screen
 
+`screen` 即英文“屏幕”的意思，即提供一块虚拟屏幕给你用。
+
 安装：
 
 ```sh
@@ -313,12 +322,11 @@ root@ykla:/ # screen -r 18380
 
 ### mosh：移动的 shell
 
->个人认为，mosh 真的只适合在户外用手机、平板通过流量远程控制服务器使用。
+`mosh` 即 `mobile shell`，移动的 shell。
 
+个人认为，mosh 真的只适合在户外用手机、平板通过流量远程控制服务器使用。
 
->Mosh 不支持多窗口、分屏模式、多个客户端连接到同一服务器。Mosh 也不支持在客户端重启（或用户切换到不同机器）时重新连接。要实现上述功能，用户通常须在 Mosh 会话中使用 GNU screen、OpenBSD tmux 等终端多路复用器。
->
->——[Mosh: A State-of-the-Art Good Old-Fashioned Mobile Shell](https://www.usenix.org/system/files/login/articles/winstein.pdf)
+Mosh 不支持多窗口、分屏模式、多个客户端连接到同一服务器。Mosh 也不支持在客户端重启（或用户切换到不同机器）时重新连接。要实现上述功能，用户通常须在 Mosh 会话中使用 GNU screen、OpenBSD tmux 等终端多路复用器。——[Mosh: A State-of-the-Art Good Old-Fashioned Mobile Shell](https://www.usenix.org/system/files/login/articles/winstein.pdf)
 
 
 要使用 mosh：①服务端和客户端都需要配置相同的 UTF-8 编码，②双方都需要安装 mosh。
