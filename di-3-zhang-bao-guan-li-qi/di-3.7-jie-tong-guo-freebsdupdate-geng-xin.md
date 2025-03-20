@@ -451,6 +451,12 @@ FreeBSD 13.1-RELEASE amd64
 
 ## 故障排除
 
+### 回滚更新
+
+```sh
+# freebsd-update rollback
+```
+
 ### pkg 找不到 `.so`：
 
 终端执行命令
