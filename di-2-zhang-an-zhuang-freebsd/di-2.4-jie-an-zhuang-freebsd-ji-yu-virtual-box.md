@@ -1,4 +1,4 @@
-# 第 2.3 节 安装 FreeBSD——基于 Virtual Box
+# 第 2.4 节 安装 FreeBSD——基于 Virtual Box
 
 
 ## 下载 VirtualBox

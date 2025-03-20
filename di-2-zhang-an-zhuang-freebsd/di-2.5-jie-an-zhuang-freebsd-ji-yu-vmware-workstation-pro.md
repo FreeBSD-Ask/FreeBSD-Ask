@@ -1,4 +1,4 @@
-# 第 2.4 节 安装 FreeBSD——基于 VMware Workstation Pro
+# 第 2.5 节 安装 FreeBSD——基于 VMware Workstation Pro
 
 >**技巧**
 >
