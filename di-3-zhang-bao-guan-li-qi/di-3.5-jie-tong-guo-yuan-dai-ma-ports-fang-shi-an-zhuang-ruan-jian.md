@@ -1,5 +1,9 @@
 # 第 3.5 节 使用 ports 以源代码方式安装软件
 
+一款软件的相关文件或文件夹的（补丁文件、校验码、Makefile 等）集合（表现为一个文件夹）为一个 Port，所有 Port 的集合即 Ports Collection，即 Ports。
+
+NetBSD 和 OpenBSD 也使用 Ports。
+
 > **注意**
 >
 > ports 和 pkg 可以同时使用，而且大部分人也是这么用的。但是要注意 pkg 的源必须是 latest，否则会存在一些依赖上的问题（比如 ssl）。latest 的源也比主线上的 ports 要出来的晚（是从中编译出来的），因此即使是 latset 源也可能会出现上述问题，总之有问题出现时就卸载那个 pkg 安装的包，重新使用 ports 编译即可。
