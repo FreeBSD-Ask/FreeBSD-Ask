@@ -45,9 +45,9 @@
 示例：
 
 ```sh
-# pw useradd test1 #创建用户 test1，uid 系统默认，test1 组，登陆环境/bin/sh，主目录未创建
-# pw useradd test2 -u 1200 -m -d /tmp/test -g test1 -G wheel -s csh -c test2 #创建用户 test2，uid 为 1200，创建主目录，主目录为/tmp/test，test1 组，有管理员权限，登陆环境/bin/csh，全名 test2
-# echo password | pw useradd test3 -h 0 #创建用户 test3，同时设置密码为 password
+# pw useradd test1 # 创建用户 test1，uid 系统默认，test1 组，登陆环境 /bin/sh，主目录未创建
+# pw useradd test2 -u 1200 -m -d /tmp/test -g test1 -G wheel -s sh -c test2 # 创建用户 test2，uid 为 1200，创建主目录，主目录为 /tmp/test，test1 组，有管理员权限，登陆环境 /bin/sh，全名 test2
+# echo password | pw useradd test3 -h 0 # 创建用户 test3，同时设置密码为 password
 ```
 
 ## `usermod` 命令
@@ -118,19 +118,13 @@
 
 ## `groupadd` 命令
 
-用于新建组，常用参数：
-
-```sh
--g，指定 gid，不指定则由操作系统根据已存在的 `gid` 自动生成
-
--M，指定组成员列表，多个用户用逗号隔开
-```
+用于新建组。
 
 示例：
 
 ```sh
-# pw groupadd test -g 1200 #创建组 test，gid 为 1200，注意，gid 与 uid 不是一回事
-# pw groupadd test5 -M test1,test2 #创建组 test5，成员有 test1 和 test2
+# pw groupadd test -g 1200 # 创建组 test，gid 为 1200，注意，gid 与 uid 不是一回事
+# pw groupadd test5 -M test1,test2 # 创建组 test5，成员有 test1 和 test2
 ```
 
 ## `groupmod` 命令
@@ -150,10 +144,10 @@
 示例：
 
 ```sh
-# pw groupmod test -g 1300 #修改 test 组的 gid 为 1300
-# pw groupmod test -l mygroup 组 test 改名为 mygroup
-# pw groupmod test5 -M test1 #设置组 test5 的成员为 test1
-# pw groupmod test5 -m test3 #为组 test5 增加成员 test3
+# pw groupmod test -g 1300 # 修改 test 组的 gid 为 1300
+# pw groupmod test -l mygroup # test 组改名为 mygroup
+# pw groupmod test5 -M test1 # 设置组 test5 的成员为 test1
+# pw groupmod test5 -m test3 # 为组 test5 增加成员 test3
 ```
 
 ## `groupdel` 命令
@@ -189,7 +183,7 @@
 ## 其他用户管理命令
 
 - `adduser` 命令，用于新建用户，与 `pw` 相比，`useradd` 的区别在于该命令是交互式的，安装操作系统时自建的用户，就是基于该命令创建的。
-- `rmuser` 命令，用于删除用户，与 `adduser` 命令一样，也是交互式的。不过该命令有 `-y` 参数，且能列出用户列表，
+- `rmuser` 命令，用于删除用户，与 `adduser` 命令一样，也是交互式的。该命令带参数 `-y`，且能列出用户列表，
 
 示例：
 
@@ -197,7 +191,7 @@
 # rmuser -y test1 test2 #同时删除用户 test1 和 test2，
 ```
 
-\-y 参数用于省略询问步骤
+参数 `-y` 用于跳过确认步骤。
 
 - `chpass` 命令，以 `vi` 编辑器方式打开并修改指定用户信息，如不指定用户则默认为当前用户。
 
@@ -206,8 +200,8 @@
 示例：
 
 ```sh
-# chpass -s csh test1 # 更换用户 test1 的登陆环境为 /bin/csh
-# chpass # 以 vi 方式打开当前用户信息进行修改
+# chpass -s sh test1 # 更换用户 test1 的登陆环境为 /bin/sh
+# chpass # 以 vi（nvi） 方式打开当前用户信息进行修改
 # passwd # 修改用户密码，如不指定用户则默认为当前用户。
 ```
 
@@ -215,4 +209,4 @@
 
 回车后根据系统提示设置用户密码。
 
-
+root 用户可以修改所有用户的密码。
