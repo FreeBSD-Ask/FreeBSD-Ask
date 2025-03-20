@@ -1,5 +1,7 @@
 # 第 5.1 节 Fcitx 输入法框架
 
+fcitx 即“A flexible input method framework（一款灵活的输入法框架）”小企鹅输入法。关于其英文命名来源参见[历史](https://fcitx-im.org/wiki/History/zh-cn)。
+
 >**技巧**
 >
 >视频教程见 [006-FreeBSD14.2 安装 fcitx5 及其输入法](https://www.bilibili.com/video/BV13ji2YLE3m)

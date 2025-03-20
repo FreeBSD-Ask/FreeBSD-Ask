@@ -1,22 +1,5 @@
 # 第 2.1 节 命令行基础（新手入门版本）
 
-
-## `ee` 基础入门
-
-`ee` 是 FreeBSD 基本系统内置的编辑器。还有一个是 `vi`（实际上是 nvi），用法较为复杂，读者可自行研究。
-
-`ee` 的用法比 `nano` 还要简单上许多，你从其名字“easy editor”（简单的编辑器）就能看出来。
-
-比如
-
-```sh
-# ee a.txt
-```
-
-可以直接编辑，就和 `nano` 或 Windows 记事本一样。
-
-按 **ESC 键**，会显示提示框，按两次 **回车键** 即可保存。
-
 ## 登录到 FreeBSD
 
 当你安装 FreeBSD 后，若一切正常，你应该会在屏幕上看到以下内容：
@@ -549,6 +532,22 @@ root       pts/0    3413e8b6b43f   3:00PM     - w
 $ pwd
 /usr/ports/editors/vscode
 ```
+
+## `ee` 基础入门
+
+`ee` 是 FreeBSD 基本系统内置的编辑器。还有一款内置的编辑器是 `vi`（实际上是 `nvi`，即新 vi，4.4BSD 再实现），用法较为复杂，读者可自行研究。
+
+`ee` 的用法比 `[nano](https://www.redhat.com/zh/blog/getting-started-nano)`（一款 GNU 编辑器） 还要简单上许多，你从其名字“easy editor”（简单的编辑器）就能看出来。
+
+比如
+
+```sh
+# ee a.txt
+```
+
+可以直接编辑，就和 `nano` 或 Windows 记事本一样。
+
+按 **ESC 键**，会显示提示框，按两次 **回车键** 即可保存。
 
 ## 查看、创建、复制、移动、删除
 
