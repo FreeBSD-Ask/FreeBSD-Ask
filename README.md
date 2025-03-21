@@ -119,6 +119,7 @@ Telegram：[https://t.me/oh_my_BSD](https://t.me/oh_my_BSD)
 
 - [ ] 整合现有的上游 FreeBSD 社区文章
 - [ ] fail2ban（须适配自带的几种防火墙）
+- [ ] 删除或重写“第 9.2 节 jail 更新”
 - [ ] 使用关键字 `enable`、`disable`、`delete` 替代旧式 sysrc 写法
 - [X] 介绍伯克利大学与校训思想
 - [ ] 从 FreeBSD 期刊引入 IPv6  教程
