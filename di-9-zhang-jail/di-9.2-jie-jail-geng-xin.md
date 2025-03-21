@@ -1,27 +1,25 @@
 # 第 9.2 节 jail 更新
 
-如果要同时管理多个 jail,那么在更新 jail 的时候就要对每个 jail 单独进行一遍操作，这不仅非常耗时而且相当无聊。通过建立统一的模板，可以让所有 jail 共用一个基础环境，同时拥有各自的可写空间，互不干扰。
+如果要同时管理多个 jail，那么在更新 jail 的时候就要对每个 jail 单独进行一遍操作。通过建立统一的模板，可以让所有 jail 共用一个基础环境，同时拥有各自的可写空间，互不干扰。
 
-本教程将建立以下的目录结构（你也可以自行更改）：
+本文将建立以下的目录结构：
 
-1、`/jail/mroot` 是模板，是所有 jail 的共用只读部分，在本例中将被挂载到 `/jail/www`。
-
-2、`/jail/skel` 是框架，方便创建 jail，本身并不为任何 jail 使用。
-
-3、`/jail/www` 是 jail `www` 运行的根目录，也是只读模板的挂载点，本身是个空目录。
-
-4、`/jail/www/s` 是 jail `www` 的可写部分的挂载点，也是个空目录。
-
-5、`/jail/files/www` 是 jail `www` 的可写部分的实际存放位置，将被挂载到 `/jail/www/s`。
+- `/jail/mroot` 是模板，是所有 jail 的共用只读部分，在本例中将被挂载到 `/jail/www`。
+- `/jail/skel` 是框架，方便创建 jail，本身并不为任何 jail 使用。
+- `/jail/www` 是 jail `www` 运行的根目录，也是只读模板的挂载点，本身是个空目录。
+- `/jail/www/s` 是 jail `www` 的可写部分的挂载点，也是个空目录。
+- `/jail/files/www` 是 jail `www` 的可写部分的实际存放位置，将被挂载到 `/jail/www/s`。
 
 如果要创建多个 jail，则重复创建数据目录和项目目录，这样所有的 jail 都会共用 `/jail/mroot`。
 
-本教程需要安装 `cpdup`
+需要安装 `cpdup`
 
+- 使用 pkg 安装
 ```sh
 # pkg install cpdup
 ```
-或者
+
+- 使用 Ports 安装：
 
 ```
 # cd /usr/ports/sysutils/cpdup/ 
@@ -31,7 +29,7 @@
 
 ```sh
 # mkdir -p /jail/mroot
-# 然后放入基本目录，上边说过不再写
+# 然后放入基本目录
 # 将 ports 和源码放入模板
 # git clone --filter=tree:0 https://mirrors.ustc.edu.cn/freebsd-ports/ports.git /jail/mroot/usr/ports
 # cpdup /usr/src /jail/mroot/usr/src # 需要提前获取源码，且要注意源码对应的版本要与 /jail/mroot 的版本相同
@@ -128,7 +126,7 @@ mount.fstab = /jail/$name.fstab;
 
 www {
 $ip=2
-#                  #如不使用 fstab,使用
+#                  # 如不使用 fstab,使用
 # mount.fstab =""; # 替换全局
 }
 ```
