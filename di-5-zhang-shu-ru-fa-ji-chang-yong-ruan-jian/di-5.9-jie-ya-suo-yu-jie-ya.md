@@ -42,28 +42,27 @@ $ zip test.zip test # 压缩成 zip 文件
 $ unzip test.zip # 解压 zip 文件到当前路径
 $ unzip test.zip -d /home/ykla/test # 解压到指定路径，-d 即 directory，目录的意思
 ```
+## tar
 
-## tar/xz
-
-基本系统自带 `tar`、`xz`、`unxz` 相关工具，同样也不用安装。
-
-### tar
+基本系统自带 `tar`，不用安装。
 
 tar 即“tape archive”（磁带归档），最早是为了在磁带上进行存储的。
 
-- 解压 tar:
+### 解压 tar:
 
 
 
 ```sh
 $ tar -xvf test.tar # 解压 tar 格式文件、包括不限于 test.tar.bz2、test.tar.gz、test.tar.xz：
+$ tar -xvf test.tar -C /home/ykla/mytest # 解压到指定路径
 ```
 
 - `x`：Extract 解压的意思
 - `v`：verbose 啰嗦模式即输出详细信息
 - `f`：file 指定文件
+- `C`：`cd` 的意思，即指定路径
 
-- 压缩成 tar：
+### 压缩成 tar：
   
 ```sh
 $ tar -cvf test.tar test # 压缩成 tar 格式文件。-c 即 Create，创建；
@@ -72,16 +71,18 @@ $ tar -jcvf test.tar.bz2 test # 压缩成 bzip2 格式文件。参数 -j 即 bzi
 $ tar -Jcvf test.tar.xz test # 压缩成 xz 格式文件。参数 -J 即 xz，请注意大小写
 ```
 
-###  xz
+##  xz
 
-- 解压缩 `unxz`
+基本系统自带 `xz`、`unxz`，同样也不用安装。
+
+### 解压缩 `unxz`
 
 ```sh
 $ unxz -k test.tar.xz  # 解压并保留原文件，参数 -k 即 keep（保留），下同
 $ unxz test.tar.xz     # 解压并删除原文件
 ```
 
-- 压缩成 `xz`
+### 压缩成 `xz`
 
 ```sh
 $ xz -k test.txt  # 压缩并保留原文件
@@ -124,7 +125,7 @@ $ 7z x test.7z -o /home/ykla/下载/test # 解压到指定路径。-o 即 Output
 
 rar 是 Windows 上常见的压缩工具。
 
-### 安装 rar 工具
+### 安装 rar 
 
 - 通过 pkg;
 
@@ -144,7 +145,7 @@ rar 是 Windows 上常见的压缩工具。
 - 压缩成 rar
 
 ```
-$ rar a archive.rar test
+$ rar a archive.rar test # -a 即 add，把文件添加到 archive.rar 的意思
 ```
 - 解压 rar
 
