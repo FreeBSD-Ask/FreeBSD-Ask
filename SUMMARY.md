@@ -261,8 +261,8 @@
 
 ## 第 25 章 TwinCAT/BSD
 
-* [第 25.1 节 TwinCAT/BSD 系统安装与基本配置](di-25-zhang-twincatbsd/di-25.2-jie-xi-tong-an-zhuang-yu-ji-ben-pei-zhi.md)
-* [第 25.2 节 TwinCAT/BSD 开发环境配置](di-25-zhang-twincatbsd/di-25.3-jie-kai-fa-huan-jing-pei-zhi.md)
+* [第 25.1 节 TwinCAT/BSD 系统安装与基本配置](di-25-zhang-twincatbsd/di-25.1-jie-xi-tong-an-zhuang-yu-ji-ben-pei-zhi.md)
+* [第 25.2 节 TwinCAT/BSD 开发环境配置](di-25-zhang-twincatbsd/di-25.2-jie-kai-fa-huan-jing-pei-zhi.md)
 
 ## 第 26 章 OpenBSD
 
