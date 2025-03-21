@@ -2,75 +2,154 @@
 
 ## zip
 
-安装 zip 压缩文件：
+>**技巧**
+>
+>zip 中文或非英文字符乱码是很正常的一件事。因为 Windows 默认使用 GBK，而 Linux 或 UNIX 则使用 UTF-8。至于为什么这个补丁没有提交到上游，
+>
+>```batch
+>PS C:\Users\ykla> chcp
+>活动代码页: 936 # 即 GBK
+>```
 
-```
+### 安装 zip
+
+- 使用 pkg
+```sh
 # pkg install zip
 ```
 
-或者
+- 使用 ports
 
-```
+```sh
 # cd /usr/ports/archivers/zip/
 # make install clean
 ```
 
+### zip 压缩与解压
+
+
+
+- 解压 zip
+
 zip 解压的话，基本系统自带 `unzip`，不用安装。
 
 ```sh
-# zip test.zip test # 压缩成 zip 文件
-
-# unzip test.zip # 解压 zip 文件
+$ zip test.zip test # 压缩成 zip 文件
 ```
 
-## tar/xz
+- 压缩成 zip
+```
+$ unzip test.zip # 解压 zip 文件到当前路径
+$ unzip test.zip -d /home/ykla/test # 解压到指定路径，-d 即 directory，目录的意思
+```
+## tar
 
-基本系统自带 tar、xz 相关工具，同样也不用安装。
+基本系统自带 `tar`，不用安装。
+
+tar 即“tape archive”（磁带归档），最早是为了在磁带上进行存储的。
+
+### 解压 tar
+
+
 
 ```sh
-# tar -cvf test.tar test # 压缩成 tar 格式文件
-
-# tar -xvf test.tar # 解压 tar 格式文件
-
-# tar -zcvf test.tar.gz test # 压缩成 gzip 格式文件
-
-# tar -zxvf test.tar.gz # 解压 gzip 格式文件
-
-# tar -jcvf test.tar.bz2 test # 压缩成 bzip2 格式文件
-
-# tar -jxvf test.tar.bz2 # 解压 bzip2 格式文件
-
-# tar -Jcvf test.tar.xz test # 压缩成 xz 格式文件
-
-# tar -Jxvf test.tar.xz # 解压 xz 格式文件
-
-# xz -z -k test.tar # 压缩成 xz 格式文件；如不带参数 -k，命令执行后将删除原文件
-
-# xz -d -k test.tar.xz # 解压 xz 格式文件；如不带参数 -k，命令执行后将删除原文件
+$ tar -xvf test.tar # 解压 tar 格式文件、包括不限于 test.tar.bz2、test.tar.gz、test.tar.xz：
+$ tar -xvf test.tar -C /home/ykla/mytest # 解压到指定路径
 ```
 
-## 7z/7za
+- `x`：Extract 解压的意思
+- `v`：verbose 啰嗦模式即输出详细信息
+- `f`：file 指定文件
+- `C`：`cd` 的意思，即指定路径
 
-FreeBSD 操作系统下，7z 和 7za 命令均应通过下载 `7-zip` 使用。
+### 压缩成 tar
+  
+```sh
+$ tar -cvf test.tar test # 压缩成 tar 格式文件。-c 即 Create，创建；
+$ tar -zcvf test.tar.gz test # 压缩成 gzip 格式文件。-z 即 gzip
+$ tar -jcvf test.tar.bz2 test # 压缩成 bzip2 格式文件。参数 -j 即 bzip2，请注意大小写
+$ tar -Jcvf test.tar.xz test # 压缩成 xz 格式文件。参数 -J 即 xz，请注意大小写
+```
 
-安装：
+##  xz
 
+基本系统自带 `xz`、`unxz`，同样也不用安装。
+
+### 解压缩 `unxz`
+
+```sh
+$ unxz -k test.tar.xz  # 解压并保留原文件，参数 -k 即 keep（保留），下同
+$ unxz test.tar.xz     # 解压并删除原文件
+```
+
+### 压缩成 `xz`
+
+```sh
+$ xz -k test.txt  # 压缩并保留原文件
+$ xz test.pdf     # 压缩并删除原文件
+```
+
+## 7z
+
+FreeBSD 操作系统下，7z 命令通过下载 `archivers/7-zip` 使用。
+
+### 安装 7-zip
+
+- 使用 pkg：
 ```
 # pkg install 7-zip
 ```
 
-或者
+- 通过 Ports：
 
 ```
 # cd /usr/ports/archivers/7-zip/
 # make install clean
 ```
 
-示例如下：
+### 示例
+
+- 压缩成 7z
+  
+```sh
+$ 7z a test.7z test # 压缩成 7z 文件。-a 就是 add，即把要压缩的文件添加到 test.7z
+```
+
+- 解压缩 7z
+```
+$ 7z x test.7z # 解压 7z 文件
+$ 7z x test.7z -o /home/ykla/下载/test # 解压到指定路径。-o 即 Output，指定输出路径
+```
+
+## rar
+
+rar 是 Windows 上常见的压缩工具。
+
+### 安装 rar 
+
+- 通过 pkg;
 
 ```sh
-# 7z a test.7z test # 压缩成 7z 文件
-# 7z x test.7z # 解压 7z 文件
-# 7za a test.7z test # 压缩成 7za 文件
-# 7za x test.7z # 解压 7za 文件
+# pkg ins rar unrar
+```
+
+- 通过 Ports：
+
+```sh
+# cd /usr/ports/archivers/rar/ && make install clean
+# cd /usr/ports/archivers/unrar/ && make install clean
+```
+
+### 使用 rar
+
+- 压缩成 rar
+
+```
+$ rar a archive.rar test # -a 即 add，把文件添加到 archive.rar 的意思
+```
+- 解压 rar
+
+```sh
+$ unrar x archive.rar # 解压到当前路径。参数 -x 即 Extract，解压的意思
+$ unrar x archive.rar /home/ykla/桌面/test/ # 解压缩到指定目录
 ```
