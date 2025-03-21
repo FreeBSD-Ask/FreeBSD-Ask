@@ -255,16 +255,14 @@
 * [第 24.1 节 BSD INIT 管理服务](di-24-zhang-freebsd-te-se/di-24.1-jie-bsd-init-guan-li-fu-wu.md)
 * [第 24.2 节 BSD 风格的 make/grep/sed/awk](di-24-zhang-freebsd-te-se/di-24.2-jie-bsd-feng-ge-de-makegrepsedawk.md)
 * [第 24.3 节 bsdconfig 系统配置工具](di-24-zhang-freebsd-te-se/di-24.3-jie-bsdinstall-yu-bsdconfig.md)
-* [第 24.4 节 禁用 Sendmail](di-24-zhang-freebsd-te-se/di-24.4-jie-jin-yong-sendmail.md)
+* [第 24.4 节 SSH 配置与相关工具](di-2-zhang-an-zhuang-freebsd/di-24.4-jie-chang-yong-ruan-jian-yu-ssh-pei-zhi.md)
 * [第 24.5 节 利用脚本自动生成 BSDlibc 库文本](di-24-zhang-freebsd-te-se/di-24.5-jie-li-yong-jiao-ben-zi-dong-sheng-cheng-bsdlibc-ku-wen-ben.md)
-* [第 24.6 节 SSH 配置与相关工具](di-2-zhang-an-zhuang-freebsd/di-24.6-jie-chang-yong-ruan-jian-yu-ssh-pei-zhi.md)
+
 
 ## 第 25 章 TwinCAT/BSD
 
-* [第 25.1 节 TwinCAT/BSD 简介](di-25-zhang-twincatbsd/di-25.1-jie-jian-jie.md)
-* [第 25.2 节 TwinCAT/BSD 系统安装与基本配置](di-25-zhang-twincatbsd/di-25.2-jie-xi-tong-an-zhuang-yu-ji-ben-pei-zhi.md)
-* [第 25.3 节 TwinCAT/BSD 开发环境配置](di-25-zhang-twincatbsd/di-25.3-jie-kai-fa-huan-jing-pei-zhi.md)
-* [第 25.4 节 TwinCAT/BSD 故障排除](di-25-zhang-twincatbsd/di-25.4-jie-gu-zhang-pai-chu.md)
+* [第 25.1 节 TwinCAT/BSD 系统安装与基本配置](di-25-zhang-twincatbsd/di-25.2-jie-xi-tong-an-zhuang-yu-ji-ben-pei-zhi.md)
+* [第 25.2 节 TwinCAT/BSD 开发环境配置](di-25-zhang-twincatbsd/di-25.3-jie-kai-fa-huan-jing-pei-zhi.md)
 
 ## 第 26 章 OpenBSD
 
