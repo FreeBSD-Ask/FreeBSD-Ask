@@ -17,7 +17,7 @@ fusefs-ext2 只是名字叫“ext2”，实际上也支持 ext3、ext 4。
 或者
 
 ```sh
-# cd /usr/ports/filesystems/fusefs-ext2/ 
+# cd /usr/ports/filesystems/ext2/ 
 # make install clean
 ```
 
@@ -44,7 +44,7 @@ $ mkdir -p /home/ykla/test # 这是我的示例文件夹，改成你自己的
 # umount /home/ykla/test
 ```
 
-## Brtfs/XFS 文件系统
+## Brtfs/XFS/Ext4 文件系统
 
 ```sh
 # pkg install fusefs-lkl
@@ -53,7 +53,7 @@ $ mkdir -p /home/ykla/test # 这是我的示例文件夹，改成你自己的
 或者
 
 ```sh
-# cd /usr/ports/filesystems/fusefs-lkl/ 
+# cd /usr/ports/filesystems/lkl/ 
 # make install clean
 ```
 
