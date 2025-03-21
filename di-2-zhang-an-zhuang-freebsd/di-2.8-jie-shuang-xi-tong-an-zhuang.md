@@ -1,4 +1,4 @@
-# 第 2.7 节 手动安装双系统（后安装 FreeBSD）
+# 第 2.8 节 手动安装双系统（后安装 FreeBSD）
 
 本节以“FreeBSD-14.0-RELEASE-amd64-disc1.iso”为例，在 `Hyper-V` 中演示 FreeBSD 14.0 RELEASE 与 Windows 11 在 UEFI 环境下的双系统安装。
 

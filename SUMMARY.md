@@ -23,13 +23,11 @@
 * [第 2.4 节 安装 FreeBSD——基于 Virtual Box](di-2-zhang-an-zhuang-freebsd/di-2.4-jie-an-zhuang-freebsd-ji-yu-virtual-box.md)
 * [第 2.5 节 安装 FreeBSD——基于 VMware Workstation Pro](di-2-zhang-an-zhuang-freebsd/di-2.5-jie-an-zhuang-freebsd-ji-yu-vmware-workstation-pro.md)
 * [第 2.6 节 云服务器安装 FreeBSD（基于腾讯云轻量云）](di-2-zhang-an-zhuang-freebsd/di-2.6-jie-teng-xun-yun-qing-liang-yun-ji-qi-ta-fu-wu-qi-dd-an-zhuang-freebsd.md)
-* [第 2.7 节 手动安装双系统（后安装 FreeBSD）](di-2-zhang-an-zhuang-freebsd/di-2.7-jie-shuang-xi-tong-an-zhuang.md)
-* [第 2.8 节 虚拟机预安装镜像（本书自制）](di-2-zhang-an-zhuang-freebsd/di-2.8-jie-yu-an-zhuang-jing-xiang.md)
+* [第 2.7 节 手动安装双系统（先安装 FreeBSD）](di-2-zhang-an-zhuang-freebsd/di-2.7.md)
+* [第 2.8 节 手动安装双系统（后安装 FreeBSD）](di-2-zhang-an-zhuang-freebsd/di-2.8-jie-shuang-xi-tong-an-zhuang.md)
 * [第 2.9 节 安装 FreeBSD——基于 Apple M1 & Parallels Desktop 20](di-2-zhang-an-zhuang-freebsd/di-2.9-jie-apple.md)
-* [第 2.10 节 手动安装双系统（先安装 FreeBSD）](di-2-zhang-an-zhuang-freebsd/di-2.10.md)
+* [第 2.10 节 安装 FreeBSD——基于 Apple M1 & VMware Fusion Pro](di-2-zhang-an-zhuang-freebsd/di-2.10-jie-apple.md)
 * [第 2.11 节 Qemu 安装 RISC-V FreeBSD（基于 x86 Windows）](di-2-zhang-an-zhuang-freebsd/di-2.11-qemu.md)
-* [第 2.12 节 安装 FreeBSD——基于 Apple M1 & VMware Fusion Pro](di-2-zhang-an-zhuang-freebsd/di-2.12-jie-apple.md)
-
 
 ## 第 3 章 包管理器 & FreeBSD 更新
 
