@@ -153,3 +153,63 @@ $ rar a archive.rar test # -a 即 add，把文件添加到 archive.rar 的意思
 $ unrar x archive.rar # 解压到当前路径。参数 -x 即 Extract，解压的意思
 $ unrar x archive.rar /home/ykla/桌面/test/ # 解压缩到指定目录
 ```
+
+## zstd
+
+### 安装 zstd
+
+- 使用 pkg
+
+```
+# pkg install zstd
+```
+- 使用 Ports
+
+```sh
+# cd /usr/ports/archivers/zstd/ 
+# make install clean
+```
+
+### 压缩成 zstd
+
+- 使用 zstd 压缩单个文件
+
+```sh
+$ zstd test.pdf
+```
+
+- 使用 zstd 压缩文件夹
+  
+zstd 不支持压缩文件夹，故需要先打包成 tar：
+
+```sh
+$ tar -cf test.tar /home/ykla/test/ # 先压缩成 tar。参数 -f 即 file（文件）
+```
+
+再把 `test.tar` 压缩成 `test.tar.zst`
+
+```sh
+$ zstd -o test.tar.zst test.tar # 参数 -o 代表 file，文件
+```
+
+### 解压 zstd
+
+- 解压到当前路径
+
+```sh
+$ zstd -d test.tar.zst
+```
+
+>**注意**
+>
+>这样解压出来的是 `test.tar`，还需要再使用 `tar` 解压一遍。
+
+- 解压到指定路径
+
+```sh
+$ zstd -d test.tar.zst -o /home/ykla/mytest # 参数 -d 即 decompress（解压缩）
+```
+
+>**注意**
+>
+>这样解压出来的是 `test.tar`，还需要再使用 `tar` 解压一遍。
