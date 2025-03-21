@@ -47,7 +47,7 @@
 # gpart add -t ms-basic-data da0
 ```
 
-## 格式化 ntfs 分区
+### 格式化 ntfs 分区
 
 
 ```sh
@@ -64,7 +64,7 @@
 
 
 
-## 修改 fstab 自动挂载
+### 自动挂载 NTFS
 
 为了开机自动挂载，修改 `/etc/fstab`，加入：
 
@@ -72,7 +72,7 @@
 /dev/da0s1  /media/NTFS ntfs  rw,mount_prog=/usr/local/bin/ntfs-3g,late  0  0
 ```
 
-## 手动挂载
+### 手动挂载 NTFS
 
 ```sh
 # ntfs-3g  /dev/da0s1  /media/NTFS   -o  rw,uid=1000,gid=1000,umask=0
