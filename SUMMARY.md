@@ -254,7 +254,7 @@
 * [第 23.4 节 引导界面](di-23-zhang-yin-dao-yu-hui-fu/di-23.4-jie-yin-dao-jie-mian.md)
 * [第 23.5 节 Grub & UEFI 与 efibootmgr](di-23-zhang-yin-dao-yu-hui-fu/di-23.5-jie-grub-ji-qi-ta-yin-dao.md)
 
-## 第 24 章 FreeBSD 特色
+## 第 24 章 FreeBSD 系统管理
 
 * [第 24.1 节 BSD INIT 管理服务](di-24-zhang-freebsd-te-se/di-24.1-jie-bsd-init-guan-li-fu-wu.md)
 * [第 24.2 节 BSD 风格的 make/grep/sed/awk](di-24-zhang-freebsd-te-se/di-24.2-jie-bsd-feng-ge-de-makegrepsedawk.md)
