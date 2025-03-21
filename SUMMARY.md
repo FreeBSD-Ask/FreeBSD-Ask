@@ -7,7 +7,7 @@
 * [序言](xu-yan.md)
 * [凡例](fan-li.md)
 
-## 第 1 章 相遇 FreeBSD
+## 第 1 章 FreeBSD 初见
 
 * [第 1.1 节 UNIX、Unix-like、Linux 和 FreeBSD 简介](di-1-zhang-zou-jin-freebsd/di-1.1-jie-shi-mo-shi-unix.md)
 * [第 1.2 节 谁在使用 FreeBSD？](di-1-zhang-zou-jin-freebsd/di-1.2.md)
