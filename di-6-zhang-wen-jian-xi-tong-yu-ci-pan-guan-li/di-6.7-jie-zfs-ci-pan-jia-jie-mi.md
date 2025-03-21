@@ -1,5 +1,9 @@
 # 第 6.7 节 ZFS 磁盘加解密
 
+>**警告**
+>
+>本文来自网络，待测试。
+
 ## ZFS 加密后-挂载磁盘
 
 如果在安装的时候选择了 ZFS 磁盘加密，那么如何挂载该磁盘呢？
@@ -14,9 +18,13 @@
 
 很简单，也不需要密钥。
 
-执行命令 `# geli attach /dev/ada0p3`
+执行命令 
 
-然后输入正确的密码即可通过 `zfs mount zroot/ROOT/default` 命令导入磁盘。
+```
+# geli attach /dev/ada0p3
+```
+
+然后输入正确的密码即可通过 `# zfs mount zroot/ROOT/default` 命令导入磁盘。
 
 ## 使用 GELI 加密 ZFS 卷
 
