@@ -16,6 +16,7 @@
   - 删除“第 24.2 节 BSD 风格的 make/grep/sed/awk”，无实质性内容
   - 删除“第 13 章 DTrace”，无实质性内容
   - “第 12 章 FreeBSD 目录注释”合并入“第 13 章 FreeBSD 系统管理”
+  - 删除“第 10.1 节 FreeBSD 安装 Virtual Box”，无实质性内容
 - 2025.3.21
   - 重写“第 22.9 节 Shell”
   - 新增“第 24.3 节 bsdconfig 系统配置工具”
