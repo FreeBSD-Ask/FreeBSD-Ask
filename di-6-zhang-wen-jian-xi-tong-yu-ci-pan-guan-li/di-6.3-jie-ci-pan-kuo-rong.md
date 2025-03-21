@@ -2,6 +2,7 @@
 
 
 
+
 >**警告**
 >
 >ZFS 和 UFS 都只能扩大不能缩小！
@@ -84,6 +85,7 @@ zroot  77.5G  2.20G  75.3G        -         -     2%     2%  1.00x    ONLINE  -
 - [Solved-extend ZFS partition](https://forums.freebsd.org/threads/extend-zfs-partition.55964/)
 
 ## UFS 磁盘扩容
+
 
 
 - `gpart show` 查看磁盘分区
@@ -256,3 +258,10 @@ Consumers:
 
 - [GPT 分区详解](https://www.jinbuguo.com/storage/gpt.html)，GPT 基础知识
 - [如何轻松改变分区类型 ID？试试这2种方法！](https://www.disktool.cn/content-center/change-partition-type-id-2111.html)，分不清分区类型 ID 和分区 UUID 的可以参考此文。~~旧时，安装过黑苹果的人应该都设置过分区类型 ID~~
+
+### 关于 UFS
+UFS 全称是 Unix File System，即 UNIX 文件系统，基于 UNIX v7。过去，macOS 也使用该文件系统作为 root 文件系统。目前 FreeBSD 在使用的是 UFS2。Linux 对 UFS 的读写支持也不完整。这个文件系统只能扩大不能被缩小。
+
+> **注意**
+>
+> UFS 文件系统和手机等设备中使用的 UFS 存储完全不是一回事，那个 UFS 是 Universal Flash Storage（通用闪存存储）的缩写，已经出到 4.0 了（FreeBSD 于 10.4 支持 eMMC；而 UFS 出现在 FreeBSD 15.0 的开发计划中，尚不支持）。而作为文件系统的 UFS 版本号才是 2。而且手机内部的系统也不可能是 UFS 文件系统，因为基于 Linux 的安卓根本不支持 UFS 这个文件系统，这些设备一般的根文件系统是 ext4（一些新设备是 F2FS）。
