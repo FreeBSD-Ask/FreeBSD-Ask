@@ -156,19 +156,7 @@ $ unrar x archive.rar /home/ykla/桌面/test/ # 解压缩到指定目录
 
 ## zstd
 
-### 安装 zstd
-
-- 使用 pkg
-
-```
-# pkg install zstd
-```
-- 使用 Ports
-
-```sh
-# cd /usr/ports/archivers/zstd/ 
-# make install clean
-```
+基本系统内置 zstd，无需安装。参见 [Add support for zstd-compressed user and kernel core dumps.](https://svnweb.freebsd.org/base?view=revision&revision=329240)
 
 ### 压缩成 zstd
 
