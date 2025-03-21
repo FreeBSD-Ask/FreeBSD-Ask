@@ -258,7 +258,7 @@
 
 * [第 24.1 节 BSD INIT 管理服务](di-24-zhang-freebsd-te-se/di-24.1-jie-bsd-init-guan-li-fu-wu.md)
 * [第 24.2 节 BSD 风格的 make/grep/sed/awk](di-24-zhang-freebsd-te-se/di-24.2-jie-bsd-feng-ge-de-makegrepsedawk.md)
-* [第 24.3 节 bsdinstall 与 bsdconfig](di-24-zhang-freebsd-te-se/di-24.3-jie-bsdinstall-yu-bsdconfig.md)
+* [第 24.3 节 bsdconfig 系统配置工具](di-24-zhang-freebsd-te-se/di-24.3-jie-bsdinstall-yu-bsdconfig.md)
 * [第 24.4 节 禁用 Sendmail](di-24-zhang-freebsd-te-se/di-24.4-jie-jin-yong-sendmail.md)
 * [第 24.5 节 利用脚本自动生成 BSDlibc 库文本](di-24-zhang-freebsd-te-se/di-24.5-jie-li-yong-jiao-ben-zi-dong-sheng-cheng-bsdlibc-ku-wen-ben.md)
 
