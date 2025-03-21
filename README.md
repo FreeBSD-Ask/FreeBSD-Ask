@@ -236,7 +236,7 @@ Telegram：[https://t.me/oh_my_BSD](https://t.me/oh_my_BSD)
 <summary>点击此处展开 OpenBSD ToDo</summary>
   
 - [ ] OpenBSD
-  - [ ] KDE5（现在进入桌面黑屏）
+  - [ ] KDE5（现在 UEFI 下进入桌面黑屏）
   - [ ] QQ？原生可能吗
   - [ ] 微信？原生可能吗
   - [ ] Wine
