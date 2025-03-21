@@ -10,7 +10,7 @@ FreeBSD 是真正自由（Liberal）的**操作系统**，在这个大流变的�
 
 微信群：出于微信的封闭性，你须先加入 QQ 群，再联系 QQ 群主方可加入
 
-Discord (Non-Chinese users, please join this group.)：<https://discord.gg/n5wu65Z6tw>（需要代理。可直接通过网页使用，无需安装任何软件）
+Discord：<https://discord.gg/n5wu65Z6tw>（需要代理。可直接通过网页使用，无需安装任何软件）
 
 Telegram：[https://t.me/oh_my_BSD](https://t.me/oh_my_BSD)（需要代理）
 
