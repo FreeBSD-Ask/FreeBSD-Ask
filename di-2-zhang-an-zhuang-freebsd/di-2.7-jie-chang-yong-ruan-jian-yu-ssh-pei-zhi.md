@@ -1,4 +1,4 @@
-# 第 2.7 节 SSH 相关软件推荐与 SSH 配置
+# 第 2.7 节 SSH 配置与相关工具
 
 SSH 即 Secure Shell，安全 shell，顾名思义是一种安全地使用 shell 的方式。一般用作远程使用。
 
