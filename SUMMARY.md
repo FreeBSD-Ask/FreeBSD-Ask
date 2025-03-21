@@ -17,20 +17,19 @@
 
 ## 第 2 章 安装 FreeBSD
 
-* [第 2.0 节 FreeBSD 安装图解](di-2-zhang-an-zhuang-freebsd/di-2.0-jie-tu-jie-an-zhuang.md)
-* [第 2.1 节 命令行基础（新手入门版本）](di-2-zhang-an-zhuang-freebsd/di-2.1-jie-ee-yong-fa-ji-wang-luo-pei-zhi.md)
-* [第 2.2 节 手动安装双系统（后安装 FreeBSD）](di-2-zhang-an-zhuang-freebsd/di-2.2-jie-shuang-xi-tong-an-zhuang.md)
+* [第 2.1 节 FreeBSD 安装图解](di-2-zhang-an-zhuang-freebsd/di-2.1-jie-tu-jie-an-zhuang.md)
+* [第 2.2 节 命令行基础（新手入门版本）](di-2-zhang-an-zhuang-freebsd/di-2.2-jie-ee-yong-fa-ji-wang-luo-pei-zhi.md)
 * [第 2.3 节 安装 FreeBSD——基于 Hyper-V](di-2-zhang-an-zhuang-freebsd/di-2.3-jie.md)
 * [第 2.4 节 安装 FreeBSD——基于 Virtual Box](di-2-zhang-an-zhuang-freebsd/di-2.4-jie-an-zhuang-freebsd-ji-yu-virtual-box.md)
 * [第 2.5 节 安装 FreeBSD——基于 VMware Workstation Pro](di-2-zhang-an-zhuang-freebsd/di-2.5-jie-an-zhuang-freebsd-ji-yu-vmware-workstation-pro.md)
 * [第 2.6 节 云服务器安装 FreeBSD（基于腾讯云轻量云）](di-2-zhang-an-zhuang-freebsd/di-2.6-jie-teng-xun-yun-qing-liang-yun-ji-qi-ta-fu-wu-qi-dd-an-zhuang-freebsd.md)
-* [第 2.7 节 SSH 配置与相关工具](di-2-zhang-an-zhuang-freebsd/di-2.7-jie-chang-yong-ruan-jian-yu-ssh-pei-zhi.md)
+* [第 2.7 节 手动安装双系统（后安装 FreeBSD）](di-2-zhang-an-zhuang-freebsd/di-2.7-jie-shuang-xi-tong-an-zhuang.md)
 * [第 2.8 节 虚拟机预安装镜像（本书自制）](di-2-zhang-an-zhuang-freebsd/di-2.8-jie-yu-an-zhuang-jing-xiang.md)
 * [第 2.9 节 安装 FreeBSD——基于 Apple M1 & Parallels Desktop 20](di-2-zhang-an-zhuang-freebsd/di-2.9-jie-apple.md)
 * [第 2.10 节 手动安装双系统（先安装 FreeBSD）](di-2-zhang-an-zhuang-freebsd/di-2.10.md)
 * [第 2.11 节 Qemu 安装 RISC-V FreeBSD（基于 x86 Windows）](di-2-zhang-an-zhuang-freebsd/di-2.11-qemu.md)
 * [第 2.12 节 安装 FreeBSD——基于 Apple M1 & VMware Fusion Pro](di-2-zhang-an-zhuang-freebsd/di-2.12-jie-apple.md)
-* [第 2.13 节 配置 rEFInd（双系统用）](di-2-zhang-an-zhuang-freebsd/2.13-refind.md)
+
 
 ## 第 3 章 包管理器 & FreeBSD 更新
 
@@ -55,34 +54,34 @@
 * [第 4.7 节 安装 Lumina](di-4-zhang-zhuo-mian-an-zhuang/di-4.7-jie-an-zhuang-lumina.md)
 * [第 4.8 节 安装 LXQt](di-4-zhang-zhuo-mian-an-zhuang/di-4.8-jie-an-zhuang-lxqt.md)
 * [第 4.9 节 安装 bspwm](di-4-zhang-zhuo-mian-an-zhuang/di-4.9-jie-an-zhuang-bspwm.md)
-* [第 4.10 节 root 登录桌面](di-4-zhang-zhuo-mian-an-zhuang/di-4.10-jie-root-deng-lu-zhuo-mian.md)
-* [第 4.11 节 主题与美化](di-4-zhang-zhuo-mian-an-zhuang/di-4.11-jie-zhu-ti-yu-mei-hua.md)
-* [第 4.12 节 远程桌面管理](di-4-zhang-zhuo-mian-an-zhuang/di-4.12-jie-yuan-cheng-zhuo-mian-guan-li.md)
-* [第 4.13 节 安装 IceWM](di-4-zhang-zhuo-mian-an-zhuang/di-4.13.md)
-* [第 4.14 节 安装 Budgie](di-4-zhang-zhuo-mian-an-zhuang/di-4.14-jie-an-zhuang-budgie.md)
-* [第 4.15 节 安装 i3wm](di-4-zhang-zhuo-mian-an-zhuang/di-4.15-jie-an-zhuang-i3wm.md)
-* [第 4.16 节 安装 CDE](di-4-zhang-zhuo-mian-an-zhuang/di-4.16-jie-an-zhuang-cde.md)
-* [第 4.17 节 安装 Hyprland](di-4-zhang-zhuo-mian-an-zhuang/di-4.17-jie-an-zhuang-hyprland.md)
+* [第 4.10 节 安装 IceWM](di-4-zhang-zhuo-mian-an-zhuang/di-4.10.md)
+* [第 4.11 节 安装 Budgie](di-4-zhang-zhuo-mian-an-zhuang/di-4.11-jie-an-zhuang-budgie.md)
+* [第 4.12 节 安装 i3wm](di-4-zhang-zhuo-mian-an-zhuang/di-4.12-jie-an-zhuang-i3wm.md)
+* [第 4.13 节 安装 CDE](di-4-zhang-zhuo-mian-an-zhuang/di-4.13-jie-an-zhuang-cde.md)
+* [第 4.14 节 安装 Hyprland](di-4-zhang-zhuo-mian-an-zhuang/di-4.14-jie-an-zhuang-hyprland.md)
+* [第 4.15 节 安装 LXDE](di-4-zhang-zhuo-mian-an-zhuang/di-4.15-lxde.md)
+* [第 4.16 节 安装 Window Maker](di-4-zhang-zhuo-mian-an-zhuang/di-4.16-winmaker.md)
+* [第 4.17 节 安装 Fluxbox](di-4-zhang-zhuo-mian-an-zhuang/di-4.17-fluxbox.md)
 * [第 4.18 节 打印机的安装](di-4-zhang-zhuo-mian-an-zhuang/di-4.18-jie-da-yin-ji-de-an-zhuang.md)
 * [第 4.19 节 触摸板的设置](di-4-zhang-zhuo-mian-an-zhuang/di-4.19-jie-chu-mo-ban-de-she-zhi.md)
 * [第 4.20 节 声卡设置](di-4-zhang-zhuo-mian-an-zhuang/di-4.20-jie-sheng-ka-yu-wang-ka-she-zhi.md)
-* [第 4.21 节 安装 LXDE](di-4-zhang-zhuo-mian-an-zhuang/di-4.21-lxde.md)
-* [第 4.22 节 安装 Window Maker](di-4-zhang-zhuo-mian-an-zhuang/di-4.22-winmaker.md)
-* [第 4.23 节 安装 Fluxbox](di-4-zhang-zhuo-mian-an-zhuang/di-4.23-fluxbox.md)
+* [第 4.21 节 root 登录桌面](di-4-zhang-zhuo-mian-an-zhuang/di-4.21-jie-root-deng-lu-zhuo-mian.md)
+* [第 4.22 节 主题与美化](di-4-zhang-zhuo-mian-an-zhuang/di-4.22-jie-zhu-ti-yu-mei-hua.md)
+* [第 4.23 节 远程桌面管理](di-4-zhang-zhuo-mian-an-zhuang/di-4.23-jie-yuan-cheng-zhuo-mian-guan-li.md)
 
 ## 第 5 章 输入法及中文环境常用软件
 
-* [第 5.0 节 输入法与环境变量](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.0-jie-shu-ru-fa-yu-huan-jing-bian-liang.md)
-* [第 5.1 节 Fcitx 输入法框架](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.1-jie-fcitx-shu-ru-fa-kuang-jia.md)
-* [第 5.2 节 Ibus 输入法框架](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.2-jie-ibus-shu-ru-fa-kuang-jia.md)
-* [第 5.3 节 五笔输入法](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.3-jie-wu-bi-shu-ru-fa.md)
-* [第 5.4 节 安装 Firefox 与 Chromium](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.4-jie-firefox-yu-chromium-an-zhuang.md)
-* [第 5.5 节 FreeBSD 安装金山 WPS（Linux 版）](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.5-jie-an-zhuang-jin-shan-wps.md)
+* [第 5.1 节 输入法与环境变量](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.1-jie-shu-ru-fa-yu-huan-jing-bian-liang.md)
+* [第 5.2 节 Fcitx 输入法框架](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.2-jie-fcitx-shu-ru-fa-kuang-jia.md)
+* [第 5.3 节 Ibus 输入法框架](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.3-jie-ibus-shu-ru-fa-kuang-jia.md)
+* [第 5.4 节 五笔输入法](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.4-jie-wu-bi-shu-ru-fa.md)
+* [第 5.5 节 安装 Firefox 与 Chromium](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.5-jie-firefox-yu-chromium-an-zhuang.md)
 * [第 5.6 节 FreeBSD 安装 QQ（Linux 版）](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.6-jie-an-zhuang-qq.md)
 * [第 5.7 节 更换字体](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.7-jie-geng-huan-zi-ti.md)
 * [第 5.8 节 Wine](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.8-jie-wine.md)
 * [第 5.9 节 压缩与解压](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.9-jie-ya-suo-yu-jie-ya.md)
 * [第 5.10 节 FreeBSD 安装微信（Linux 版）](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/5.10-wechat.md)
+* [第 5.11 节 FreeBSD 安装金山 WPS（Linux 版）](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.11-jie-an-zhuang-jin-shan-wps.md)
 
 ## 第 6 章 文件系统与磁盘管理
 
@@ -140,8 +139,7 @@
 ## 第 13 章 DTrace
 
 * [第 13.1 节 概述](di-13-zhang-dtrace/di-13.1-jie-gai-shu.md)
-* [第 13.2 节 开启 DTrace](di-13-zhang-dtrace/di-13.2-jie-kai-qi-dtrace.md)
-* [第 13.3 节 使用 DTrace](di-13-zhang-dtrace/di-13.3-jie-shi-yong-dtrace.md)
+* [第 13.2 节 使用 DTrace](di-13-zhang-dtrace/di-13.2-jie-shi-yong-dtrace.md)
 
 ## 第 14 章 网络管理
 
@@ -231,7 +229,6 @@
 
 ## 第 22 章 编程环境与开发
 
-* [第 22.0 节 如何订阅 FreeBSD 的邮件列表](di-22-zhang-bian-cheng-yu-kai-fa/di-22.0-jie-ru-he-ding-yue-freebsd-de-you-jian-lie-biao.md)
 * [第 22.1 节 如何报告 Bug](di-22-zhang-bian-cheng-yu-kai-fa/di-22.1-jie-ru-he-bao-gao-bug.md)
 * [第 22.2 节 如何开发一个 Port](di-22-zhang-bian-cheng-yu-kai-fa/di-22.2-jie-ru-he-ti-jiao-yi-ge-ruan-jian-bao.md)
 * [第 22.3 节 如何参与 FreeBSD 开发](di-22-zhang-bian-cheng-yu-kai-fa/di-22.3-jie-ru-he-can-yu-freebsd-xie-zuo.md)
@@ -242,7 +239,7 @@
 * [第 22.8 节 Rust/Go 环境的配置](di-22-zhang-bian-cheng-yu-kai-fa/di-22.8-jie-rustgo-huan-jing-de-pei-zhi.md)
 * [第 22.9 节 Shell](di-22-zhang-bian-cheng-yu-kai-fa/di-22.9-jie-csh-yu-qi-ta-shell.md)
 * [第 22.10 节 通过 IDA 7 调试 FreeBSD](di-22-zhang-bian-cheng-yu-kai-fa/di-22.10-jie-tong-guo-ida-7-tiao-shi-freebsd.md)
-* [第 22.11 节 安装 code-server 和 clangd（不使用 Linux 兼容层）](di-22-zhang-bian-cheng-yu-kai-fa/22.11-code-server.md)
+* [第 22.11 节 如何订阅 FreeBSD 的邮件列表](di-22-zhang-bian-cheng-yu-kai-fa/di-22.11-jie-ru-he-ding-yue-freebsd-de-you-jian-lie-biao.md)
 * [第 22.12 节 安装 code-server 和 clangd](di-22-zhang-bian-cheng-yu-kai-fa/di-22.12-jie-an-zhuang-code-server-he-clangd.md)
 
 
@@ -253,6 +250,7 @@
 * [第 23.3 节 FreeBSD 中文 TTY 控制台](di-23-zhang-yin-dao-yu-hui-fu/di-23.3-jie-freebsd-zhong-wen-tty-kong-zhi-tai.md)
 * [第 23.4 节 引导界面与控制台界面](di-23-zhang-yin-dao-yu-hui-fu/di-23.4-jie-yin-dao-jie-mian.md)
 * [第 23.5 节 Grub & UEFI 与 efibootmgr](di-23-zhang-yin-dao-yu-hui-fu/di-23.5-jie-grub-ji-qi-ta-yin-dao.md)
+* [第 23.6 节 配置 rEFInd（双系统用）](di-23-zhang-yin-dao-yu-hui-fu//23.6-refind.md)
 
 ## 第 24 章 FreeBSD 系统管理
 
@@ -261,34 +259,34 @@
 * [第 24.3 节 bsdconfig 系统配置工具](di-24-zhang-freebsd-te-se/di-24.3-jie-bsdinstall-yu-bsdconfig.md)
 * [第 24.4 节 禁用 Sendmail](di-24-zhang-freebsd-te-se/di-24.4-jie-jin-yong-sendmail.md)
 * [第 24.5 节 利用脚本自动生成 BSDlibc 库文本](di-24-zhang-freebsd-te-se/di-24.5-jie-li-yong-jiao-ben-zi-dong-sheng-cheng-bsdlibc-ku-wen-ben.md)
-
+* [第 24.6 节 SSH 配置与相关工具](di-2-zhang-an-zhuang-freebsd/di-24.6-jie-chang-yong-ruan-jian-yu-ssh-pei-zhi.md)
 
 ## 第 25 章 TwinCAT/BSD
 
-* [第 25.1 节 简介](di-25-zhang-twincatbsd/di-25.1-jie-jian-jie.md)
-* [第 25.2 节 系统安装与基本配置](di-25-zhang-twincatbsd/di-25.2-jie-xi-tong-an-zhuang-yu-ji-ben-pei-zhi.md)
-* [第 25.3 节 开发环境配置](di-25-zhang-twincatbsd/di-25.3-jie-kai-fa-huan-jing-pei-zhi.md)
-* [第 25.4 节 故障排除](di-25-zhang-twincatbsd/di-25.4-jie-gu-zhang-pai-chu.md)
+* [第 25.1 节 TwinCAT/BSD 简介](di-25-zhang-twincatbsd/di-25.1-jie-jian-jie.md)
+* [第 25.2 节 TwinCAT/BSD 系统安装与基本配置](di-25-zhang-twincatbsd/di-25.2-jie-xi-tong-an-zhuang-yu-ji-ben-pei-zhi.md)
+* [第 25.3 节 TwinCAT/BSD 开发环境配置](di-25-zhang-twincatbsd/di-25.3-jie-kai-fa-huan-jing-pei-zhi.md)
+* [第 25.4 节 TwinCAT/BSD 故障排除](di-25-zhang-twincatbsd/di-25.4-jie-gu-zhang-pai-chu.md)
 
 ## 第 26 章 OpenBSD
 
-* [第 26.0 节 概述](di-26-zhang-openbsd/di-26.0-jie-gai-shu.md)
-* [第 26.1 节 安装](di-26-zhang-openbsd/di-26.1-jie-an-zhuang.md)
-* [第 26.2 节 配置](di-26-zhang-openbsd/di-26.2-jie-pei-zhi.md)
-* [第 26.3 节 包管理器](di-26-zhang-openbsd/di-26.3-jie-bao-guan-li-qi.md)
-* [第 26.4 节 桌面与其他软件](di-26-zhang-openbsd/di-26.4-jie-zhuo-mian-yu-qi-ta-ruan-jian.md)
+* [第 26.1 节 OpenBSD 概述](di-26-zhang-openbsd/di-26.1-jie-gai-shu.md)
+* [第 26.2 节 安装 OpenBSD](di-26-zhang-openbsd/di-26.2-jie-an-zhuang.md)
+* [第 26.3 节 配置 OpenBSD](di-26-zhang-openbsd/di-26.3-jie-pei-zhi.md)
+* [第 26.4 节 OpenBSD 包管理器](di-26-zhang-openbsd/di-26.4-jie-bao-guan-li-qi.md)
+* [第 26.5 节 桌面与其他软件](di-26-zhang-openbsd/di-26.5-jie-zhuo-mian-yu-qi-ta-ruan-jian.md)
 
 ## 第 27 章 NetBSD
 
-* [第 27.0 节 概述](di-27-zhang-netbsd/di-27.0-jie-gai-shu.md)
-* [第 27.1 节 NetBSD 安装图解](di-27-zhang-netbsd/di-27.1-jie-an-zhuang-yu-pei-zhi.md)
-* [第 27.2 节 换源与包管理器](di-27-zhang-netbsd/di-27.2-jie-huan-yuan-yu-bao-guan-li-qi.md)
-* [第 27.3 节 桌面与其他软件](di-27-zhang-netbsd/di-27.3-jie-zhuo-mian-yu-qi-ta-ruan-jian.md)
+* [第 27.1 节 NetBSD 概述](di-27-zhang-netbsd/di-27.1-jie-gai-shu.md)
+* [第 27.2 节 NetBSD 安装图解](di-27-zhang-netbsd/di-27.2-jie-an-zhuang-yu-pei-zhi.md)
+* [第 27.3 节 NetBSD 换源与包管理器](di-27-zhang-netbsd/di-27.3-jie-huan-yuan-yu-bao-guan-li-qi.md)
+* [第 27.4 节 桌面与其他软件](di-27-zhang-netbsd/di-27.4-jie-zhuo-mian-yu-qi-ta-ruan-jian.md)
 
 ## 第 28 章 DragonFlyBSD
 
-* [第 28.0 节 概述](di-28-zhang-dragonflybsd/di-28.0-jie-gai-shu.md)
-* [第 28.1 节 安装与配置](di-28-zhang-dragonflybsd/di-28.1-jie-an-zhuang-yu-pei-zhi.md)
+* [第 28.1 节 DragonFlyBSD 概述](di-28-zhang-dragonflybsd/di-28.1-jie-gai-shu.md)
+* [第 28.2 节 DragonFlyBSD 安装与配置](di-28-zhang-dragonflybsd/di-28.2-jie-an-zhuang-yu-pei-zhi.md)
 
 ## 后记
 
