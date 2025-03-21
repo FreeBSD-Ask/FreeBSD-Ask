@@ -101,7 +101,7 @@
 
 ---
 
-详细参数见 [ntfs-3g manpage](https://www.freebsd.org/cgi/man.cgi?query=ntfs-3g&format=html)。如果无法挂载请先关闭 windows 的休眠，然后重启几次。
+详细参数见 [ntfs-3g manpage](https://www.freebsd.org/cgi/man.cgi?query=ntfs-3g&format=html)。
 
 ## FAT32 文件系统
 
