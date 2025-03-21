@@ -133,10 +133,12 @@
 * [第 12.2 节 FreeBSD 系统及内核源码概览](di-12-zhang/12.2.md)
 * [第 12.3 节 FreeBSD 系统概览](di-12-zhang/12.3.md)
 
-## 第 13 章 DTrace
+## 第 13 章 FreeBSD 系统管理
 
-* [第 13.1 节 概述](di-13-zhang-dtrace/di-13.1-jie-gai-shu.md)
-* [第 13.2 节 使用 DTrace](di-13-zhang-dtrace/di-13.2-jie-shi-yong-dtrace.md)
+* [第 13.1 节 BSD INIT 管理服务](di-13-zhang-freebsd-te-se/di-13.1-jie-bsd-init-guan-li-fu-wu.md)
+* [第 13.2 节 利用脚本自动生成 BSDlibc 库文本](di-24-zhang-freebsd-te-se/di-13.2-jie-li-yong-jiao-ben-zi-dong-sheng-cheng-bsdlibc-ku-wen-ben.md)
+* [第 13.3 节 bsdconfig 系统配置工具](di-13-zhang-freebsd-te-se/di-13.3-jie-bsdinstall-yu-bsdconfig.md)
+* [第 13.4 节 SSH 配置与相关工具](di-24-zhang-freebsd-te-se/di-13.4-jie-chang-yong-ruan-jian-yu-ssh-pei-zhi.md)
 
 ## 第 14 章 网络管理
 
@@ -247,13 +249,10 @@
 * [第 23.5 节 Grub & UEFI 与 efibootmgr](di-23-zhang-yin-dao-yu-hui-fu/di-23.5-jie-grub-ji-qi-ta-yin-dao.md)
 * [第 23.6 节 配置 rEFInd（双系统用）](di-23-zhang-yin-dao-yu-hui-fu//23.6-refind.md)
 
-## 第 24 章 FreeBSD 系统管理
+## 第 24 章 DragonFlyBSD
 
-* [第 24.1 节 BSD INIT 管理服务](di-24-zhang-freebsd-te-se/di-24.1-jie-bsd-init-guan-li-fu-wu.md)
-* [第 24.2 节 利用脚本自动生成 BSDlibc 库文本](di-24-zhang-freebsd-te-se/di-24.2-jie-li-yong-jiao-ben-zi-dong-sheng-cheng-bsdlibc-ku-wen-ben.md)
-* [第 24.3 节 bsdconfig 系统配置工具](di-24-zhang-freebsd-te-se/di-24.3-jie-bsdinstall-yu-bsdconfig.md)
-* [第 24.4 节 SSH 配置与相关工具](di-24-zhang-freebsd-te-se/di-24.4-jie-chang-yong-ruan-jian-yu-ssh-pei-zhi.md)
-
+* [第 24.1 节 DragonFlyBSD 概述](di-28-zhang-dragonflybsd/di-24.1-jie-gai-shu.md)
+* [第 24.2 节 DragonFlyBSD 安装与配置](di-28-zhang-dragonflybsd/di-24.2-jie-an-zhuang-yu-pei-zhi.md)
 
 ## 第 25 章 TwinCAT/BSD
 
@@ -274,8 +273,3 @@
 * [第 27.2 节 NetBSD 安装图解](di-27-zhang-netbsd/di-27.2-jie-an-zhuang-yu-pei-zhi.md)
 * [第 27.3 节 NetBSD 换源与包管理器](di-27-zhang-netbsd/di-27.3-jie-huan-yuan-yu-bao-guan-li-qi.md)
 * [第 27.4 节 桌面与其他软件](di-27-zhang-netbsd/di-27.4-jie-zhuo-mian-yu-qi-ta-ruan-jian.md)
-
-## 第 28 章 DragonFlyBSD
-
-* [第 28.1 节 DragonFlyBSD 概述](di-28-zhang-dragonflybsd/di-28.1-jie-gai-shu.md)
-* [第 28.2 节 DragonFlyBSD 安装与配置](di-28-zhang-dragonflybsd/di-28.2-jie-an-zhuang-yu-pei-zhi.md)
