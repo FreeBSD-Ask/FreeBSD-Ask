@@ -125,7 +125,7 @@
 
 ## 第 12 章 引导、恢复与 TTY 配置
 
-* [第 12.1 节 恢复模式与密码重置](di-12-zhang-yin-dao-yu-hui-fu/di-12.1-jie-hui-fu-mo-shi-yu-mi-ma-zhong-zhi.md)
+* [第 12.1 节 单用户模式与密码重置](di-12-zhang-yin-dao-yu-hui-fu/di-12.1-jie-hui-fu-mo-shi-yu-mi-ma-zhong-zhi.md)
 * [第 12.2 节 FreeBSD EFI 引导管理](di-12-zhang-yin-dao-yu-hui-fu/di-12.2-jie-freebsd-duo-ying-pan-efi-yin-dao-tong-yi.md)
 * [第 12.3 节 FreeBSD 中文 TTY 控制台](di-12-zhang-yin-dao-yu-hui-fu/di-12.3-jie-freebsd-zhong-wen-tty-kong-zhi-tai.md)
 * [第 12.4 节 引导界面与控制台界面](di-12-zhang-yin-dao-yu-hui-fu/di-12.4-jie-yin-dao-jie-mian.md)
