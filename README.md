@@ -6,10 +6,6 @@ FreeBSD 是真正自由（Liberal）的**操作系统**，在这个大流变的�
 
 ## 关于
 
-视频教程合集见 《[FreeBSD 从入门到跑路 第二版](https://www.bilibili.com/video/BV1Qji2YLEgS)》
-
----
-
 **首要**联系方式：**QQ 群**：787969044
 
 微信群：出于微信的封闭性，你须先加入 QQ 群，再联系 QQ 群主方可加入
