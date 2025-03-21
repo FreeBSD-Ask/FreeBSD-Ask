@@ -344,7 +344,9 @@ Telegram：[https://t.me/oh_my_BSD](https://t.me/oh_my_BSD)（需要代理）
 
 ## 捐赠
 
-资金有余力者请捐给 FreeBSD 基金会吧！
+资金有余力者请捐给 FreeBSD 基金会吧！如果你觉得有帮助，可以给 [GitHub 项目](https://github.com/FreeBSD-Ask)加颗 ⭐。
+
+---
 
 FreeBSD 基金会（501(c)(3)）日常年份收到的捐款仅有 Linux 基金会（501(c)(6)）的千分之五。因此亦十分需要个人捐款。
 
@@ -354,9 +356,6 @@ FreeBSD 基金会（501(c)(3)）日常年份收到的捐款仅有 Linux 基金�
 
 需要你有 Visa 信用卡：若直接提交无法支付，请使用捐赠页面的 `Amazon Pay` 或 `Google Pay`，经测试均可以顺利支付。
 
----
-
-如果你觉得有帮助，可以给[这个 GitHub 项目](https://github.com/FreeBSD-Ask)加颗 ⭐。
 
 ## 授权许可
 
