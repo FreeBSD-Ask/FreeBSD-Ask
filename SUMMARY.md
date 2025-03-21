@@ -86,7 +86,7 @@
 * [第 6.3 节 磁盘扩容](di-6-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-6.3-jie-ci-pan-kuo-rong.md)
 * [第 6.4 节 NTFS](di-6-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-6.4-jie-ntfs-de-gua-zai.md)
 * [第 6.5 节 Swap 交换分区的设置](di-6-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-6.5-jie-swap-jiao-huan-fen-qu-de-she-zhi.md)
-* [第 6.6 节 Ext 2/3/4 等文件系统](di-6-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-6.6-jie-ext-234-deng-wen-jian-xi-tong.md)
+* [第 6.6 节 其他文件系统](di-6-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-6.6-jie-ext-234-deng-wen-jian-xi-tong.md)
 * [第 6.7 节 ZFS 磁盘加解密](di-6-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-6.7-jie-zfs-ci-pan-jia-jie-mi.md)
 
 ## 第 7 章 代理服务器
