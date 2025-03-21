@@ -144,8 +144,7 @@
 * [第 14.2 节 WiFi](di-14-zhang-wang-luo-guan-li/di-14.2-jie-wifi.md)
 * [第 14.3 节 USB 网络共享（USB tethering）](di-14-zhang-wang-luo-guan-li/di-14.3-jie-usb-rndis-usb-wang-luo-gong-xiang.md)
 * [第 14.4 节 蓝牙](di-14-zhang-wang-luo-guan-li/di-14.4-jie-lan-ya.md)
-* [第 14.5 节 以太网卡](di-14-zhang-wang-luo-guan-li/di-14.5-yi-tai-wang-ka.md)
-* [第 14.6 节 USB 以太网卡和 USB 无线网卡](di-14-zhang-wang-luo-guan-li/di-14.6-USB-wang-ka.md)
+* [第 14.5 节 USB 网卡 & 以太网卡](di-14-zhang-wang-luo-guan-li/di-14.5-yi-tai-wang-ka.md)
 
 ## 第 15 章 FreeBSD 防火墙
 
@@ -195,7 +194,7 @@
 * [第 18.6 节 树莓派 5](di-18-zhang-shu-mei-pai-yu-riscv/18.6-shu-mei-pai-5.md)
 * [第 18.7 节 树莓派与 OpenBSD](di-18-zhang-shu-mei-pai-yu-riscv/di-18.7-jie-shu-mei-pai-yu-openbsd.md)
 * [第 18.8 节 在 RISCV 开发板上安装 OpenBSD](di-18-zhang-shu-mei-pai-yu-riscv/di-18.8-jie-zai-riscv-kai-fa-ban-shang-an-zhuang-openbsd.md)
-* [第 18.9 节 Radxa X4](di-18-zhang-shu-mei-pai-yu-riscv/18.9-radxax4.md)
+* [第 18.9 节 Radxa X4（x86）](di-18-zhang-shu-mei-pai-yu-riscv/18.9-radxax4.md)
 
 ## 第 19 章 文学故事
 
@@ -224,7 +223,7 @@
 * [第 21.12 节 高级教程：Linux 兼容层与 Jail](di-21-zhang-linux-jian-rong-ceng/di-21.12-jie-gao-ji-jiao-cheng-linux-jian-rong-ceng-yu-jail.md)
 * [第 21.13 节 Linux 兼容层故障排除与配置](di-21-zhang-linux-jian-rong-ceng/di-21.13-jie-linux-jian-rong-ceng-gu-zhang-pai-chu-yu-pei-zhi.md)
 
-## 第 22 章 编程环境与开发
+## 第 22 章 编程环境与软件开发
 
 * [第 22.1 节 如何报告 Bug](di-22-zhang-bian-cheng-yu-kai-fa/di-22.1-jie-ru-he-bao-gao-bug.md)
 * [第 22.2 节 如何开发一个 Port](di-22-zhang-bian-cheng-yu-kai-fa/di-22.2-jie-ru-he-ti-jiao-yi-ge-ruan-jian-bao.md)
@@ -239,11 +238,10 @@
 * [第 22.11 节 如何订阅 FreeBSD 的邮件列表](di-22-zhang-bian-cheng-yu-kai-fa/di-22.11-jie-ru-he-ding-yue-freebsd-de-you-jian-lie-biao.md)
 * [第 22.12 节 安装 code-server 和 clangd](di-22-zhang-bian-cheng-yu-kai-fa/di-22.12-jie-an-zhuang-code-server-he-clangd.md)
 
-
-## 第 23 章 引导与恢复
+## 第 23 章 引导、恢复与 TTY 配置
 
 * [第 23.1 节 恢复模式与密码重置](di-23-zhang-yin-dao-yu-hui-fu/di-23.1-jie-hui-fu-mo-shi-yu-mi-ma-zhong-zhi.md)
-* [第 23.2 节 FreeBSD 多硬盘 EFI 引导统一](di-23-zhang-yin-dao-yu-hui-fu/di-23.2-jie-freebsd-duo-ying-pan-efi-yin-dao-tong-yi.md)
+* [第 23.2 节 第 23.2 节 FreeBSD EFI 引导管理](di-23-zhang-yin-dao-yu-hui-fu/di-23.2-jie-freebsd-duo-ying-pan-efi-yin-dao-tong-yi.md)
 * [第 23.3 节 FreeBSD 中文 TTY 控制台](di-23-zhang-yin-dao-yu-hui-fu/di-23.3-jie-freebsd-zhong-wen-tty-kong-zhi-tai.md)
 * [第 23.4 节 引导界面与控制台界面](di-23-zhang-yin-dao-yu-hui-fu/di-23.4-jie-yin-dao-jie-mian.md)
 * [第 23.5 节 Grub & UEFI 与 efibootmgr](di-23-zhang-yin-dao-yu-hui-fu/di-23.5-jie-grub-ji-qi-ta-yin-dao.md)
@@ -252,10 +250,9 @@
 ## 第 24 章 FreeBSD 系统管理
 
 * [第 24.1 节 BSD INIT 管理服务](di-24-zhang-freebsd-te-se/di-24.1-jie-bsd-init-guan-li-fu-wu.md)
-* [第 24.2 节 BSD 风格的 make/grep/sed/awk](di-24-zhang-freebsd-te-se/di-24.2-jie-bsd-feng-ge-de-makegrepsedawk.md)
+* [第 24.2 节 利用脚本自动生成 BSDlibc 库文本](di-24-zhang-freebsd-te-se/di-24.2-jie-li-yong-jiao-ben-zi-dong-sheng-cheng-bsdlibc-ku-wen-ben.md)
 * [第 24.3 节 bsdconfig 系统配置工具](di-24-zhang-freebsd-te-se/di-24.3-jie-bsdinstall-yu-bsdconfig.md)
 * [第 24.4 节 SSH 配置与相关工具](di-24-zhang-freebsd-te-se/di-24.4-jie-chang-yong-ruan-jian-yu-ssh-pei-zhi.md)
-* [第 24.5 节 利用脚本自动生成 BSDlibc 库文本](di-24-zhang-freebsd-te-se/di-24.5-jie-li-yong-jiao-ben-zi-dong-sheng-cheng-bsdlibc-ku-wen-ben.md)
 
 
 ## 第 25 章 TwinCAT/BSD
@@ -282,7 +279,3 @@
 
 * [第 28.1 节 DragonFlyBSD 概述](di-28-zhang-dragonflybsd/di-28.1-jie-gai-shu.md)
 * [第 28.2 节 DragonFlyBSD 安装与配置](di-28-zhang-dragonflybsd/di-28.2-jie-an-zhuang-yu-pei-zhi.md)
-
-## 后记
-
-* [后记](houji.md)
