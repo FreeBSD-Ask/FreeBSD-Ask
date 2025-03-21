@@ -7,9 +7,9 @@
 * [序言](xu-yan.md)
 * [凡例](fan-li.md)
 
-## 第 1 章 走近 FreeBSD
+## 第 1 章 FreeBSD 初见
 
-* [第 1.1 节 UNIX、Unix-like、Linux 和 FreeBSD 简介](di-1-zhang-zou-jin-freebsd/di-1.1-jie-shi-mo-shi-unix.md)
+* [第 1.1 节 操作系统的历程：UNIX、Unix-like、Linux 和 FreeBSD](di-1-zhang-zou-jin-freebsd/di-1.1-jie-shi-mo-shi-unix.md)
 * [第 1.2 节 谁在使用 FreeBSD？](di-1-zhang-zou-jin-freebsd/di-1.2.md)
 * [第 1.3 节 为什么要使用 FreeBSD？](di-1-zhang-zou-jin-freebsd/di-1.3-jie-wei-shi-mo-yao-shi-yong-freebsd.md)
 * [第 1.4 节 Linux 用户迁移指南](di-1-zhang-zou-jin-freebsd/di-1.4-jie-linux-yong-hu-qian-yi-zhi-bei.md)
@@ -24,7 +24,7 @@
 * [第 2.4 节 安装 FreeBSD——基于 Virtual Box](di-2-zhang-an-zhuang-freebsd/di-2.4-jie-an-zhuang-freebsd-ji-yu-virtual-box.md)
 * [第 2.5 节 安装 FreeBSD——基于 VMware Workstation Pro](di-2-zhang-an-zhuang-freebsd/di-2.5-jie-an-zhuang-freebsd-ji-yu-vmware-workstation-pro.md)
 * [第 2.6 节 云服务器安装 FreeBSD（基于腾讯云轻量云）](di-2-zhang-an-zhuang-freebsd/di-2.6-jie-teng-xun-yun-qing-liang-yun-ji-qi-ta-fu-wu-qi-dd-an-zhuang-freebsd.md)
-* [第 2.7 节 SSH 相关软件推荐与 SSH 配置](di-2-zhang-an-zhuang-freebsd/di-2.7-jie-chang-yong-ruan-jian-yu-ssh-pei-zhi.md)
+* [第 2.7 节 SSH 配置与相关工具](di-2-zhang-an-zhuang-freebsd/di-2.7-jie-chang-yong-ruan-jian-yu-ssh-pei-zhi.md)
 * [第 2.8 节 虚拟机预安装镜像（本书自制）](di-2-zhang-an-zhuang-freebsd/di-2.8-jie-yu-an-zhuang-jing-xiang.md)
 * [第 2.9 节 安装 FreeBSD——基于 Apple M1 & Parallels Desktop 20](di-2-zhang-an-zhuang-freebsd/di-2.9-jie-apple.md)
 * [第 2.10 节 手动安装双系统（先安装 FreeBSD）](di-2-zhang-an-zhuang-freebsd/di-2.10.md)
@@ -32,7 +32,7 @@
 * [第 2.12 节 安装 FreeBSD——基于 Apple M1 & VMware Fusion Pro](di-2-zhang-an-zhuang-freebsd/di-2.12-jie-apple.md)
 * [第 2.13 节 配置 rEFInd（双系统用）](di-2-zhang-an-zhuang-freebsd/2.13-refind.md)
 
-## 第 3 章 包管理器暨 FreeBSD 更新与升级
+## 第 3 章 包管理器 & FreeBSD 更新
 
 * [第 3.1 节 FreeBSD 镜像站现状](di-3-zhang-bao-guan-li-qi/di-3.1-jie-freebsd-jing-xiang-zhan-xian-zhuang.md)
 * [第 3.2 节 FreeBSD 换源方式](di-3-zhang-bao-guan-li-qi/di-3.2-jie-freebsd-huan-yuan-fang-shi.md)
@@ -44,9 +44,9 @@
 * [第 3.8 节 通过源代码更新 FreeBSD](di-3-zhang-bao-guan-li-qi/di-3.8-jie-tong-guo-yuan-dai-ma-geng-xin.md)
 * [第 3.9 节 使用 pkgbase 更新 FreeBSD](di-3-zhang-bao-guan-li-qi/di-3.9-jie-shi-yong-pkgbase-geng-xin.md)
 
-## 第 4 章 桌面安装
+## 第 4 章 桌面环境
 
-* [第 4.1 节 桌面环境概述、显卡驱动安装 & Xorg](di-4-zhang-zhuo-mian-an-zhuang/di-4.1-jie-an-zhuang-xian-ka-qu-dong-ji-xorg-bi-kan.md)
+* [第 4.1 节 桌面环境概述、Xorg & 显卡驱动](di-4-zhang-zhuo-mian-an-zhuang/di-4.1-jie-an-zhuang-xian-ka-qu-dong-ji-xorg-bi-kan.md)
 * [第 4.2 节 安装 KDE6](di-4-zhang-zhuo-mian-an-zhuang/di-4.2-jie-an-zhuang-kde.md)
 * [第 4.3 节 安装 Gnome](di-4-zhang-zhuo-mian-an-zhuang/di-4.3-jie-an-zhuang-gnome.md)
 * [第 4.4 节 安装 Mate](di-4-zhang-zhuo-mian-an-zhuang/di-4.4-jie-an-zhuang-mate.md)
@@ -70,7 +70,7 @@
 * [第 4.22 节 安装 Window Maker](di-4-zhang-zhuo-mian-an-zhuang/di-4.22-winmaker.md)
 * [第 4.23 节 安装 Fluxbox](di-4-zhang-zhuo-mian-an-zhuang/di-4.23-fluxbox.md)
 
-## 第 5 章 输入法及常用软件
+## 第 5 章 输入法及中文环境常用软件
 
 * [第 5.0 节 输入法与环境变量](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.0-jie-shu-ru-fa-yu-huan-jing-bian-liang.md)
 * [第 5.1 节 Fcitx 输入法框架](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.1-jie-fcitx-shu-ru-fa-kuang-jia.md)
@@ -95,14 +95,14 @@
 * [第 6.7 节 ZFS 磁盘加解密](di-6-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-6.7-jie-zfs-ci-pan-jia-jie-mi.md)
 * [第 6.8 节 自动挂载文件系统](di-6-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-6.8-zi-dong-gua-zai.md)
 
-## 第 7 章 VPN 与代理
+## 第 7 章 代理服务器
 
 * [第 7.1 节 HTTP 代理](di-7-zhang-vpn-yu-dai-li/di-7.1-jie-http-dai-li.md)
 * [第 7.2 节 V2ray](di-7-zhang-vpn-yu-dai-li/di-7.2-jie-v2ray.md)
 * [第 7.3 节 Clash](di-7-zhang-vpn-yu-dai-li/di-7.3-jie-clash.md)
 * [第 7.4 节 OpenVPN](di-7-zhang-vpn-yu-dai-li/di-7.4-jie-openvpn.md)
 
-## 第 8 章 用户与权限
+## 第 8 章 账户与权限
 
 * [第 8.1 节 sudo 与 doas](di-8-zhang-yong-hu-yu-quan-xian/di-8.1-jie-sudo.md)
 * [第 8.2 节 添加用户](di-8-zhang-yong-hu-yu-quan-xian/di-8.2-jie-tian-jia-yong-hu.md)
@@ -131,7 +131,7 @@
 * [第 11.5 节 MySQL 数据库](di-11-zhang-ji-suan-ji-gai-lun/11.5-shu-jv-ku.md)
 * [第 11.6 节 网络基础](di-11-zhang-ji-suan-ji-gai-lun/11.6-wang-luo-ji-chu.md)
 
-## 第 12 章 FreeBSD 源代码分析
+## 第 12 章 FreeBSD 目录注释
 
 * [第 12.1 节 常用工具](di-12-zhang/12.1.md)
 * [第 12.2 节 FreeBSD 系统及内核源码概览](di-12-zhang/12.2.md)
@@ -190,7 +190,7 @@
 * [第 17.14 节 OnlyOffice（基于 PostgreSQL）](di-17-zhang-wang-luo-fu-wu-qi/17.14.md)
 * [第 17.15 节 Zabbix 监控（基于 PostgreSQL）](di-17-zhang-wang-luo-fu-wu-qi/17.15-Zabbix.md)
 
-## 第 18 章 树莓派嵌入式 & RISCV
+## 第 18 章 嵌入式（树莓派 & RISCV）
 
 * [第 18.1 节 树莓派简介与配件选用](di-18-zhang-shu-mei-pai-yu-riscv/di-18.1-jie-shu-mei-pai-de-jian-jie.md)
 * [第 18.2 节 树莓派安装 FreeBSD](di-18-zhang-shu-mei-pai-yu-riscv/di-18.2-jie-xi-tong-an-zhuang.md)
@@ -207,7 +207,7 @@
 * [第 19.1 节 BSD 与哲学家 George Berkeley（乔治·贝克莱）](di-19-zhang-wen-xue-gu-shi/di-19.1-jie-freebsd-jian-shi.md)
 * [第 19.2 节 加州大学伯克利分校与“Fiat Lux”（要有光）](di-19-zhang-wen-xue-gu-shi/di-19.2.md)
 
-## 第 20 章 娱乐与教育
+## 第 20 章 娱乐、教育与科学
 
 * [第 20.1 节 游戏](di-20-zhang-yu-le-yu-jiao-yu/di-20.1-jie-you-xi.md)
 * [第 20.2 节 音视频播放器与剪辑](di-20-zhang-yu-le-yu-jiao-yu/di-20.2-jie-yin-shi-pin-bo-fang-qi.md)
@@ -229,7 +229,7 @@
 * [第 21.12 节 高级教程：Linux 兼容层与 Jail](di-21-zhang-linux-jian-rong-ceng/di-21.12-jie-gao-ji-jiao-cheng-linux-jian-rong-ceng-yu-jail.md)
 * [第 21.13 节 Linux 兼容层故障排除与配置](di-21-zhang-linux-jian-rong-ceng/di-21.13-jie-linux-jian-rong-ceng-gu-zhang-pai-chu-yu-pei-zhi.md)
 
-## 第 22 章 编程与开发
+## 第 22 章 编程环境与开发
 
 * [第 22.0 节 如何订阅 FreeBSD 的邮件列表](di-22-zhang-bian-cheng-yu-kai-fa/di-22.0-jie-ru-he-ding-yue-freebsd-de-you-jian-lie-biao.md)
 * [第 22.1 节 如何报告 Bug](di-22-zhang-bian-cheng-yu-kai-fa/di-22.1-jie-ru-he-bao-gao-bug.md)
@@ -242,9 +242,9 @@
 * [第 22.8 节 Rust/Go 环境的配置](di-22-zhang-bian-cheng-yu-kai-fa/di-22.8-jie-rustgo-huan-jing-de-pei-zhi.md)
 * [第 22.9 节 Shell](di-22-zhang-bian-cheng-yu-kai-fa/di-22.9-jie-csh-yu-qi-ta-shell.md)
 * [第 22.10 节 通过 IDA 7 调试 FreeBSD](di-22-zhang-bian-cheng-yu-kai-fa/di-22.10-jie-tong-guo-ida-7-tiao-shi-freebsd.md)
-* [第 22.11 节 Git](di-22-zhang-bian-cheng-yu-kai-fa/di-22.11-jie-git.md)
+* [第 22.11 节 安装 code-server 和 clangd（不使用 Linux 兼容层）](di-22-zhang-bian-cheng-yu-kai-fa/22.11-code-server.md)
 * [第 22.12 节 安装 code-server 和 clangd](di-22-zhang-bian-cheng-yu-kai-fa/di-22.12-jie-an-zhuang-code-server-he-clangd.md)
-* [第 22.13 节 安装 code-server 和 clangd（不使用 Linux 兼容层）](di-22-zhang-bian-cheng-yu-kai-fa/22.13-code-server.md)
+
 
 ## 第 23 章 引导与恢复
 
