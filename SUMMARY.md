@@ -136,9 +136,9 @@
 ## 第 13 章 FreeBSD 系统管理
 
 * [第 13.1 节 BSD init 管理服务](di-13-zhang-freebsd-te-se/di-13.1-jie-bsd-init-guan-li-fu-wu.md)
-* [第 13.2 节 利用脚本自动生成 BSDlibc 库文本](di-24-zhang-freebsd-te-se/di-13.2-jie-li-yong-jiao-ben-zi-dong-sheng-cheng-bsdlibc-ku-wen-ben.md)
+* [第 13.2 节 利用脚本自动生成 BSDlibc 库文本](di-13-zhang-freebsd-te-se/di-13.2-jie-li-yong-jiao-ben-zi-dong-sheng-cheng-bsdlibc-ku-wen-ben.md)
 * [第 13.3 节 bsdconfig 系统配置工具](di-13-zhang-freebsd-te-se/di-13.3-jie-bsdinstall-yu-bsdconfig.md)
-* [第 13.4 节 SSH 配置与相关工具](di-24-zhang-freebsd-te-se/di-13.4-jie-chang-yong-ruan-jian-yu-ssh-pei-zhi.md)
+* [第 13.4 节 SSH 配置与相关工具](di-13-zhang-freebsd-te-se/di-13.4-jie-chang-yong-ruan-jian-yu-ssh-pei-zhi.md)
 
 ## 第 14 章 网络管理
 
