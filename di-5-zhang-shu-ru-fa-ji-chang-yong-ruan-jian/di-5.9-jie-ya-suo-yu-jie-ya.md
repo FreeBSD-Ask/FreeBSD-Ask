@@ -6,7 +6,7 @@
 
 >**技巧**
 >
->zip 中文或非英文字符乱码是很正常的一件事。因为 Windows 默认使用 GBK，而 Linux 或 UNIX 则使用 UTF-8。至于为什么这个补丁没有提交到上游，有知道的人欢迎 PR。
+>zip 中文或非英文字符乱码是很正常的一件事。因为 Windows 默认使用 GBK，而 Linux 或 UNIX 则使用 UTF-8。一般国产操作系统（如 UOS、UbuntuKylin）之所以不乱码是打了补丁的。至于为什么这个补丁没有提交到上游，有知道的人欢迎 PR。
 >
 >```batch
 >PS C:\Users\ykla> chcp
