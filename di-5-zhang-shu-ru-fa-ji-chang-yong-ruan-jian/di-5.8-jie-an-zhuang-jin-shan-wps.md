@@ -1,4 +1,4 @@
-# 第 5.11 节 FreeBSD 安装金山 WPS（Linux 版）
+# 第 5.8 节 FreeBSD 安装金山 WPS（Linux 版）
 
 >**警告**
 >

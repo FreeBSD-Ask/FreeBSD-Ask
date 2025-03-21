@@ -76,10 +76,10 @@
 * [第 5.5 节 安装 Firefox 与 Chromium](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.5-jie-firefox-yu-chromium-an-zhuang.md)
 * [第 5.6 节 FreeBSD 安装 QQ（Linux 版）](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.6-jie-an-zhuang-qq.md)
 * [第 5.7 节 更换字体](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.7-jie-geng-huan-zi-ti.md)
-* [第 5.8 节 Wine](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.8-jie-wine.md)
+* [第 5.8 节 FreeBSD 安装金山 WPS（Linux 版）](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.8-jie-an-zhuang-jin-shan-wps.md)
 * [第 5.9 节 压缩与解压](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.9-jie-ya-suo-yu-jie-ya.md)
 * [第 5.10 节 FreeBSD 安装微信（Linux 版）](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/5.10-wechat.md)
-* [第 5.11 节 FreeBSD 安装金山 WPS（Linux 版）](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.11-jie-an-zhuang-jin-shan-wps.md)
+
 
 ## 第 6 章 文件系统与磁盘管理
 
