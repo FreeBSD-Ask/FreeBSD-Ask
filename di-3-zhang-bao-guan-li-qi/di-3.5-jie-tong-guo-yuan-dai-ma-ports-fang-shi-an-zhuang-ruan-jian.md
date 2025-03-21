@@ -1,4 +1,4 @@
-# 第 3.5 节 通过 ports 以源代码方式安装软件
+# 第 3.5 节 通过 Ports 以源代码方式安装软件
 
 一款软件的相关文件或文件夹的（补丁文件、校验码、Makefile 等）集合（表现为一个文件夹）为一个 Port，所有 Port 的集合即 Ports Collection，即 Ports。
 
