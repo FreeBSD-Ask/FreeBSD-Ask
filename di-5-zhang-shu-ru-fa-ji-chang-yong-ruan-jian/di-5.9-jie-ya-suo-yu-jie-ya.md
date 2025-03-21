@@ -178,6 +178,10 @@ $ zstd test.pdf
   
 zstd 不支持压缩文件夹（参见 [How can I compress a directory?](https://github.com/facebook/zstd/issues/1526)），故需要先打包成 tar：
 
+>**思考题**
+>
+>zstd 为什么不支持压缩文件夹？有哪些可能性。
+
 ```sh
 $ tar -cf test.tar /home/ykla/test/ # 先压缩成 tar。参数 -f 即 file（文件）
 ```
