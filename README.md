@@ -1,6 +1,6 @@
 # FreeBSD 从入门到跑路
 
-~~为了拯救即将归档（Archived）的 FreeBSD······我们决定写一本书。~~
+~~为了拯救即将归档（Archived）的 FreeBSD······我们决定写一本书。[^1]~~
 
 FreeBSD 是真正自由（Liberal）的**操作系统**，在这个大流变的世界中仍然坚守 BSD UNIX 哲学——恪守古老的法则，追寻真正的自由。
 
@@ -360,6 +360,7 @@ FreeBSD 基金会（501(c)(3)）日常年份收到的捐款仅有 Linux 基金�
 
 ![CC BY](.gitbook/assets/by.png)
 
+[^1]: 参见 [为了保护我们心爱的ooo……成为偶像！](https://mobile.moegirl.org.cn/%E4%B8%BA%E4%BA%86%E4%BF%9D%E6%8A%A4%E6%88%91%E4%BB%AC%E5%BF%83%E7%88%B1%E7%9A%84ooo%E2%80%A6%E2%80%A6%E6%88%90%E4%B8%BA%E5%81%B6%E5%83%8F%EF%BC%81)
 ---
 
 ![](.gitbook/assets/ai.png)
