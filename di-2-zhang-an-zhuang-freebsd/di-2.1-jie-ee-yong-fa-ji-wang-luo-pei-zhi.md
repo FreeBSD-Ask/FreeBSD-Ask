@@ -298,6 +298,37 @@ Linux 中常见的 shell 一般是 bash。而 macOS 中的默认 shell 通常是
 
 ### 快捷键
 
+>**注意**
+>
+>以下快捷键不一定非要是小写状态才能执行，大写状态下一样可以执行。
+
+#### 在 TTY 界面上下翻页/翻行
+
+#### 使用 Scroll Lock 键在 TTY 界面上下翻页/翻行
+
+使用 **Scroll Lock** 键（滚动键）：按下 **Scroll Lock** 键后，你可以使用上 ↑/下 ↓ 方向键、**Page Up**/**Page Down** 键来对屏幕进行操作。
+
+不同点：
+- 上 ↑/下 ↓ 方向键：使 TTY 界面上下滚动一行
+- **Page Up**/**Page Down** 键：使 TTY 界面上下滚动一页
+
+再次按下 **Scroll Lock** 键将退出此模式。
+
+>**技巧**
+>
+>SL 键在 **HOME** 键上方，PS 截图键 **Print Screen** 右侧，PB 键 **Pause break** 左侧。
+
+事实上，在历史上 **Scroll Lock** 这个按键就是为此而设计的。
+
+#### 使用 Shift 组合键在 TTY 界面上下翻页/翻行
+
+使用 **Shift** 快捷键：
+
+- **Shift** + 上 ↑/下 ↓ 方向键——使 TTY 界面上下滚动一行
+- **Shift** + **Page Up**/**Page Down** 键——使 TTY 界面上下滚动一页
+
+#### 补全命令或目录
+
 一般可以用 **Tab** 键补全命令或目录。上箭头 **↑** 是查看上一条命令，下箭头 **↓** 是查看下一条命令。
 
 - 补全命令
@@ -325,6 +356,7 @@ $ cp /home/ykla/test/1.txt
 .k5login                .shrc
 ```
 
+#### 终止命令
 若想终止命令，可以用 **ctrl**+**c**：
 
 ```sh
@@ -337,6 +369,8 @@ PING 163.com (59.111.160.244): 56 data bytes
 2 packets transmitted, 2 packets received, 0.0% packet loss
 round-trip min/avg/max/stddev = 27.580/27.626/27.672/0.046 ms
 ```
+
+#### 命令后台前台
 
 **ctrl**+**z**: 把当前进程放到后台，然后用 `fg` 命令可回到前台：
 
@@ -358,14 +392,13 @@ ping 163.com
 round-trip min/avg/max/stddev = 27.465/27.596/27.701/0.085 ms
 ```
 
-其他：
+#### 其他
+
 - **ctrl**+**l**（L 的小写）：清空屏幕
 - **ctrl**+**a**： 移动光标到命令行首
 - **ctrl**+**a**: 移动光标到命令行尾
 
->**注意**
->
->上述快捷键不一定非要是小写状态才能执行，大写状态下一样可以执行。
+
 
 
 ## 命令的来源
