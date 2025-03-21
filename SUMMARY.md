@@ -127,18 +127,23 @@
 * [第 11.5 节 MySQL 数据库](di-11-zhang-ji-suan-ji-gai-lun/11.5-shu-jv-ku.md)
 * [第 11.6 节 网络基础](di-11-zhang-ji-suan-ji-gai-lun/11.6-wang-luo-ji-chu.md)
 
-## 第 12 章 FreeBSD 目录注释
+## 第 12 章 引导、恢复与 TTY 配置
 
-* [第 12.1 节 常用工具](di-12-zhang/12.1.md)
-* [第 12.2 节 FreeBSD 系统及内核源码概览](di-12-zhang/12.2.md)
-* [第 12.3 节 FreeBSD 系统概览](di-12-zhang/12.3.md)
+* [第 12.1 节 恢复模式与密码重置](di-12-zhang-yin-dao-yu-hui-fu/di-12.1-jie-hui-fu-mo-shi-yu-mi-ma-zhong-zhi.md)
+* [第 12.2 节 FreeBSD EFI 引导管理](di-12-zhang-yin-dao-yu-hui-fu/di-12.2-jie-freebsd-duo-ying-pan-efi-yin-dao-tong-yi.md)
+* [第 12.3 节 FreeBSD 中文 TTY 控制台](di-12-zhang-yin-dao-yu-hui-fu/di-12.3-jie-freebsd-zhong-wen-tty-kong-zhi-tai.md)
+* [第 12.4 节 引导界面与控制台界面](di-12-zhang-yin-dao-yu-hui-fu/di-12.4-jie-yin-dao-jie-mian.md)
+* [第 12.5 节 Grub & UEFI 与 efibootmgr](di-12-zhang-yin-dao-yu-hui-fu/di-12.5-jie-grub-ji-qi-ta-yin-dao.md)
+* [第 12.6 节 配置 rEFInd（双系统用）](di-12-zhang-yin-dao-yu-hui-fu/12.6-refind.md)
 
 ## 第 13 章 FreeBSD 系统管理
 
-* [第 13.1 节 BSD init 管理服务](di-13-zhang-freebsd-te-se/di-13.1-jie-bsd-init-guan-li-fu-wu.md)
-* [第 13.2 节 利用脚本自动生成 BSDlibc 库文本](di-13-zhang-freebsd-te-se/di-13.2-jie-li-yong-jiao-ben-zi-dong-sheng-cheng-bsdlibc-ku-wen-ben.md)
+* [第 13.1 节 FreeBSD src 源码概览](di-13-zhang-freebsd-te-se/13.1.md)
+* [第 13.2 节 FreeBSD 系统概览](di-13-zhang-freebsd-te-se/13.2.md)
 * [第 13.3 节 bsdconfig 系统配置工具](di-13-zhang-freebsd-te-se/di-13.3-jie-bsdinstall-yu-bsdconfig.md)
 * [第 13.4 节 SSH 配置与相关工具](di-13-zhang-freebsd-te-se/di-13.4-jie-chang-yong-ruan-jian-yu-ssh-pei-zhi.md)
+* [第 13.5 节 BSD init 管理服务](di-13-zhang-freebsd-te-se/di-13.5-jie-bsd-init-guan-li-fu-wu.md)
+* [第 13.6 节 利用脚本自动生成 BSDlibc 库文本](di-13-zhang-freebsd-te-se/di-13.6-jie-li-yong-jiao-ben-zi-dong-sheng-cheng-bsdlibc-ku-wen-ben.md)
 
 ## 第 14 章 网络管理
 
@@ -240,14 +245,12 @@
 * [第 22.11 节 如何订阅 FreeBSD 的邮件列表](di-22-zhang-bian-cheng-yu-kai-fa/di-22.11-jie-ru-he-ding-yue-freebsd-de-you-jian-lie-biao.md)
 * [第 22.12 节 安装 code-server 和 clangd](di-22-zhang-bian-cheng-yu-kai-fa/di-22.12-jie-an-zhuang-code-server-he-clangd.md)
 
-## 第 23 章 引导、恢复与 TTY 配置
+## 第 23 章 NetBSD
 
-* [第 23.1 节 恢复模式与密码重置](di-23-zhang-yin-dao-yu-hui-fu/di-23.1-jie-hui-fu-mo-shi-yu-mi-ma-zhong-zhi.md)
-* [第 23.2 节 FreeBSD EFI 引导管理](di-23-zhang-yin-dao-yu-hui-fu/di-23.2-jie-freebsd-duo-ying-pan-efi-yin-dao-tong-yi.md)
-* [第 23.3 节 FreeBSD 中文 TTY 控制台](di-23-zhang-yin-dao-yu-hui-fu/di-23.3-jie-freebsd-zhong-wen-tty-kong-zhi-tai.md)
-* [第 23.4 节 引导界面与控制台界面](di-23-zhang-yin-dao-yu-hui-fu/di-23.4-jie-yin-dao-jie-mian.md)
-* [第 23.5 节 Grub & UEFI 与 efibootmgr](di-23-zhang-yin-dao-yu-hui-fu/di-23.5-jie-grub-ji-qi-ta-yin-dao.md)
-* [第 23.6 节 配置 rEFInd（双系统用）](di-23-zhang-yin-dao-yu-hui-fu//23.6-refind.md)
+* [第 23.1 节 NetBSD 概述](di-23-zhang-netbsd/di-23.1-jie-gai-shu.md)
+* [第 23.2 节 NetBSD 安装图解](di-23-zhang-netbsd/di-23.2-jie-an-zhuang-yu-pei-zhi.md)
+* [第 23.3 节 NetBSD 换源与包管理器](di-23-zhang-netbsd/di-23.3-jie-huan-yuan-yu-bao-guan-li-qi.md)
+* [第 23.4 节 桌面与其他软件](di-23-zhang-netbsd/di-23.4-jie-zhuo-mian-yu-qi-ta-ruan-jian.md)
 
 ## 第 24 章 DragonFlyBSD
 
@@ -267,9 +270,4 @@
 * [第 26.4 节 OpenBSD 包管理器](di-26-zhang-openbsd/di-26.4-jie-bao-guan-li-qi.md)
 * [第 26.5 节 桌面与其他软件](di-26-zhang-openbsd/di-26.5-jie-zhuo-mian-yu-qi-ta-ruan-jian.md)
 
-## 第 27 章 NetBSD
 
-* [第 27.1 节 NetBSD 概述](di-27-zhang-netbsd/di-27.1-jie-gai-shu.md)
-* [第 27.2 节 NetBSD 安装图解](di-27-zhang-netbsd/di-27.2-jie-an-zhuang-yu-pei-zhi.md)
-* [第 27.3 节 NetBSD 换源与包管理器](di-27-zhang-netbsd/di-27.3-jie-huan-yuan-yu-bao-guan-li-qi.md)
-* [第 27.4 节 桌面与其他软件](di-27-zhang-netbsd/di-27.4-jie-zhuo-mian-yu-qi-ta-ruan-jian.md)
