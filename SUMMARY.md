@@ -38,7 +38,7 @@
 * [第 3.2 节 FreeBSD 换源方式](di-3-zhang-bao-guan-li-qi/di-3.2-jie-freebsd-huan-yuan-fang-shi.md)
 * [第 3.3 节 gitup 的用法](di-3-zhang-bao-guan-li-qi/di-3.3-jie-gitup-de-yong-fa.md)
 * [第 3.4 节 通过 pkg 包管理器安装二进制包](di-3-zhang-bao-guan-li-qi/di-3.4-jie-ruan-jian-bao-guan-li-qi-pkg-de-yong-fa.md)
-* [第 3.5 节 通过 ports 以源代码方式安装软件](di-3-zhang-bao-guan-li-qi/di-3.5-jie-tong-guo-yuan-dai-ma-ports-fang-shi-an-zhuang-ruan-jian.md)
+* [第 3.5 节 通过 Ports 以源代码方式安装软件](di-3-zhang-bao-guan-li-qi/di-3.5-jie-tong-guo-yuan-dai-ma-ports-fang-shi-an-zhuang-ruan-jian.md)
 * [第 3.6 节 通过 DVD 安装软件](di-3-zhang-bao-guan-li-qi/di-3.6-jie-tong-guo-dvd-an-zhuang-ruan-jian.md)
 * [第 3.7 节 通过 freebsd-update 更新 FreeBSD](di-3-zhang-bao-guan-li-qi/di-3.7-jie-tong-guo-freebsdupdate-geng-xin.md)
 * [第 3.8 节 通过源代码更新 FreeBSD](di-3-zhang-bao-guan-li-qi/di-3.8-jie-tong-guo-yuan-dai-ma-geng-xin.md)
