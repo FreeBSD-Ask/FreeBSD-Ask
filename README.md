@@ -6,11 +6,7 @@ FreeBSD 是真正自由（Liberal）的**操作系统**，在这个大流变的�
 
 ## 关于
 
-如遇本站直接相关问题：如错别字、过时、网站配色、错误、投稿、翻译等问题，请直接发送邮件至 `yklaxds@gmail.com`（优先）或联系 QQ 群群主。如果可以的话，欢迎 PR。在桌面端网页右侧有当前页面的 GitHub 编辑地址。
-
->**技巧**
->
->视频教程合集见 《[FreeBSD 从入门到跑路 第二版](https://www.bilibili.com/video/BV1Qji2YLEgS)》
+视频教程合集见 《[FreeBSD 从入门到跑路 第二版](https://www.bilibili.com/video/BV1Qji2YLEgS)》
 
 ---
 
@@ -91,7 +87,9 @@ Telegram：[https://t.me/oh_my_BSD](https://t.me/oh_my_BSD)（需要代理）
 
 ### 意见反馈
 
-由于编写者水平所限，书中缺点和谬误之处自不可免，希望大家随时提出批评意见，以便修正。你可以利用 Github 提交 Issue 或者发邮件至 `yklaxds@gmail.com`。
+由于编写者水平所限，书中缺点和谬误之处自不可免。
+
+如遇本站直接相关问题：如错别字、过时、网站配色、错误、投稿、翻译等问题，请直接发送邮件至 `yklaxds@gmail.com`（优先）或联系 QQ 群群主。如果可以的话，欢迎 PR。在桌面端网页右侧有当前页面的 GitHub 编辑地址。
 
 
 ## ToDo
