@@ -1,4 +1,4 @@
-# 第 6.6 节 其他文件系统
+# 第 6.6 节 Linux 文件系统
 
 >**警告**
 >
@@ -57,12 +57,3 @@ $ mkdir -p /home/ykla/test # 这是我的示例文件夹，改成你自己的
 # make install clean
 ```
 
-## FAT32 文件系统
-
->**注意**
->
->必须显式声明文件系统类型才能挂载
-
-```sh
-# mount -v -t msdosfs  /dev/mmcsd0s1  /mnt
-```
