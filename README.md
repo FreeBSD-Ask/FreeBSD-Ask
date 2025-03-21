@@ -1,16 +1,12 @@
 # FreeBSD 从入门到跑路
 
-~~为了拯救即将归档（Archived）的 FreeBSD.....我们决定写一本书。~~
+~~为了拯救即将归档（Archived）的 FreeBSD······我们决定写一本书。~~
 
 FreeBSD 是真正自由（Liberal）的**操作系统**，在这个大流变的世界中仍然坚守 BSD UNIX 哲学——恪守古老的法则，追寻真正的自由。
 
-
 ## 关于
 
-
->**技巧**
->
->如遇本文直接相关问题：如错别字、过时、错误、投稿、翻译等问题，请直接发送邮件至 `yklaxds@gmail.com`。
+如遇本站直接相关问题：如错别字、过时、网站配色、错误、投稿、翻译等问题，请直接发送邮件至 `yklaxds@gmail.com`。
 
 >**技巧**
 >
@@ -18,9 +14,9 @@ FreeBSD 是真正自由（Liberal）的**操作系统**，在这个大流变的�
 
 ---
 
-**首要** 联系方式：**QQ 群**：787969044（须答题验证）
+**首要**联系方式：**QQ 群**：787969044（须答题验证）
 
-微信群：（须先加入 QQ 群，再联系群主）
+微信群：（须先加入 QQ 群，再联系 QQ 群主）
 
 Discord (Non-Chinese users, please join this group.)：<https://discord.gg/n5wu65Z6tw>
 
@@ -30,23 +26,19 @@ Telegram：[https://t.me/oh_my_BSD](https://t.me/oh_my_BSD)
 
 在 FreeBSD 中：
 
-- 需要兼容层才能运行 QQ、微信（软件运行方法参见正文）
+- 需要兼容层才能运行 QQ、微信（参见正文）
 - Telegram 可原生运行 by [net-im/telegram-desktop](https://www.freshports.org/net-im/telegram-desktop/)
 - Discord 可使用 Port `net-im/linux-discord`，或使用 `net-im/dissent`。
 
-## 概述
+## 历史
 
 《FreeBSD 从入门到跑路》诞生于 2021 年 12 月 19 日，由 FreeBSD 中文社区（CFC）ykla 发起。
 
-**本书定位**：本书旨在敉平新手与进阶之间的台阶，与你一道进入另一片开源世界。
-
-
 ## 内容提要
 
-我们尝试从 0 开始，和所有人一同徜徉 FreeBSD 世界。
+本书旨在敉平入门到进阶之间的台阶，与你一道进入这片开源世界。
 
 ## 贡献指南
-
 
 如果你想让你的教程出现在本书中，你可以这样做：
 
@@ -56,8 +48,6 @@ Telegram：[https://t.me/oh_my_BSD](https://t.me/oh_my_BSD)
 - 如果你熟悉 GitHub，可以点击电脑端右侧的“编辑此页”，进入项目进行操作。整个项目使用 Markdown 语法 +  Gitbook，简单易上手（具体详见项目 WiKi）；
 - 如果以上有困难，你还可以发 PDF、Word 或者 TXT 给我。请将文件发送至电子邮件 `yklaxds@gmail.com`；如果有视频教程，以各大云盘链接为宜。
 
-
-  
 本书现接受以下内容：
 
 - 一切与 BSD 相关（包括不限于 FreeBSD，OpenBSD，NetBSD）以及各种体系结构的教程。你既可以扩充当前教程，也可以新建一节；
@@ -387,7 +377,6 @@ FreeBSD 基金会（501(c)(3)）日常年份收到的捐款仅有 Linux 基金�
 本项目使用《CC BY 4.0 署名 4.0 协议国际版》，具体细则参见 <https://github.com/FreeBSD-Ask/FreeBSD-Ask> 项目下的 `LICENSE.md` 文件。
 
 ![CC BY](.gitbook/assets/by.png)
-
 
 ---
 
