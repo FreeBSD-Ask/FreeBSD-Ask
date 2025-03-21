@@ -14,13 +14,19 @@ Discord：<https://discord.gg/n5wu65Z6tw>（需要代理。可直接通过网页
 
 Telegram：[https://t.me/oh_my_BSD](https://t.me/oh_my_BSD)（需要代理）
 
-## 历史
+### 历史
 
 《FreeBSD 从入门到跑路》诞生于 2021 年 12 月 19 日，由 FreeBSD 中文社区（CFC）ykla 发起。
 
-## 内容提要
+### 内容提要
 
 本书旨在敉平入门到进阶之间的台阶，与你一道进入这片开源世界。
+
+## 意见反馈
+
+由于编写者水平所限，书中缺点和谬误之处自不可免。
+
+如遇本站直接相关问题：如错别字、过时、网站配色、错误、投稿、翻译等问题，请直接发送邮件至 `yklaxds@gmail.com`（优先）或联系 QQ 群群主。如果可以的话，欢迎 PR。在桌面端网页右侧有当前页面的 GitHub 编辑地址。
 
 ## 贡献指南
 
@@ -81,11 +87,7 @@ Telegram：[https://t.me/oh_my_BSD](https://t.me/oh_my_BSD)（需要代理）
 
 </pre> </details>
 
-### 意见反馈
 
-由于编写者水平所限，书中缺点和谬误之处自不可免。
-
-如遇本站直接相关问题：如错别字、过时、网站配色、错误、投稿、翻译等问题，请直接发送邮件至 `yklaxds@gmail.com`（优先）或联系 QQ 群群主。如果可以的话，欢迎 PR。在桌面端网页右侧有当前页面的 GitHub 编辑地址。
 
 
 ## ToDo
@@ -335,7 +337,7 @@ Telegram：[https://t.me/oh_my_BSD](https://t.me/oh_my_BSD)（需要代理）
 </pre> </details>
 
 
-## PDF 文档导出流程
+## PDF 文档导出
 
 可使用由 [safreya](https://github.com/safreya) 编写的脚本：<https://github.com/FreeBSD-Ask/gitbook-pdf-export> 来导出本书的 PDF 文档。
 
