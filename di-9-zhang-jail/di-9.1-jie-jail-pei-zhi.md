@@ -112,6 +112,7 @@ allow.sysvipc=1;
 
 ### 网络
 
+创建 `/etc/resolv.conf`，并编辑。
 
 ```sh
 search lan
