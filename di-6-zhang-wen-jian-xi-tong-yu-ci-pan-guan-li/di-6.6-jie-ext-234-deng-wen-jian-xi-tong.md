@@ -83,7 +83,7 @@ lost+found	my.txt		test		test.pdf
 # make install clean
 ```
 
-### 加载内核模块：
+### 加载内核模块
 
 ```sh
 # sysrc kld_list+=fusefs
@@ -106,3 +106,8 @@ test1	test2	test3	test4
 # ls /home/ykla/xfs # 看看挂载情况
 cfc	test1	test2
 ```
+
+## 参考文献
+
+- [mount linux ext4 drives on Freebsd](https://forums.freebsd.org/threads/mount-linux-ext4-drives-on-freebsd.74414/)
+- [XFS support](https://forums.freebsd.org/threads/xfs-support.61449/)
