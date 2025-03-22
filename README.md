@@ -74,7 +74,7 @@ Telegram：[https://t.me/oh_my_BSD](https://t.me/oh_my_BSD)（需要代理）
 
 ### 本季度任务
 
-- [ ] 重写“第 1.4 节 Linux 用户迁移指南”
+- [X] 重写“第 1.4 节 Linux 用户迁移指南”
 - [ ] 重写“第 3.2 节 FreeBSD 换源方式”
 - [ ] 重写“第 4.1 节 Xorg & 显卡驱动”
 - [ ] 重写“第 5.7 节 更换字体”
