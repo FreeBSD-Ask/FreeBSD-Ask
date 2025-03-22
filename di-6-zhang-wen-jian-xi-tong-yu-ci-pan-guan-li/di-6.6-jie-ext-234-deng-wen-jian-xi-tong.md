@@ -2,7 +2,7 @@
 
 本文示例环境：
 
-```
+```sh
 # gpart show -p nda1
 =>      34  41942973    nda1  GPT  (20G)
         34      2014          - free -  (1.0M)
@@ -91,7 +91,7 @@ lost+found	my.txt		test		test.pdf
 
 ### 测试挂载 btrfs
 
-```
+```sh
 # mkdir -p /home/ykla/btrfs # 创建挂载目录
 # lklfuse -o type=btrfs /dev/nda1p2 /home/ykla/btrfs # 挂载磁盘分区
 # ls /home/ykla/btrfs # 看看挂载情况
