@@ -1,6 +1,5 @@
 # 第 6.4 节 NTFS & Fat32
 
-
 ## NTFS
 
 ### 安裝 ntfs-3g
@@ -99,17 +98,29 @@
 
 然后重新挂载。
 
----
+### 参考文献
 
-详细参数见 [ntfs-3g manpage](https://www.freebsd.org/cgi/man.cgi?query=ntfs-3g&format=html)。
+- [ntfs-3g manpage](https://www.freebsd.org/cgi/man.cgi?query=ntfs-3g&format=html)。各种参数。
 
 ## FAT32 文件系统
+
+FAT32 一般在 `gpart show` 命令中被显示为 `ms-basic-data`：
+
+```sh
+# gpart show -p nda1 # 已忽略无用信息
+=>      34  41942973    nda1  GPT  (20G)
+  29360128   4194304  nda1p3  ms-basic-data  (2.0G) # 即为 fat32
+```
 
 >**注意**
 >
 >必须显式声明文件系统类型才能挂载
 
 ```sh
-# mount -v -t msdosfs  /dev/mmcsd0s1  /mnt
+# mount -v -t msdosfs  /dev/nda1p3  /mnt # 测试挂载。-v 参数，即 Verbose 显示详细信息；- t 参数即 type（类型），指定文件系统。
+/dev/nda1p3 on /mnt (msdosfs, local, writes: sync 1 async 0, reads: sync 512 async 0, fsid 7d00000032000000, vnodes: count 1 )
+# ls /mnt/ # 检查挂载情况
+me	test1	test2
+# umount /mnt # 卸载文件系统
 ```
 
