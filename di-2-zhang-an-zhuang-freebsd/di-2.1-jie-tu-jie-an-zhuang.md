@@ -502,11 +502,10 @@ FreeBSD 14.2 RELEASE 的 `/` 分区支持 UFS 和 ZFS 两种文件系统。旧�
 
 ![](../.gitbook/assets/ins14.png)
 
-![](../.gitbook/assets/ins15.png)
 
 ## 设置 root 密码
 
-![](../.gitbook/assets/ins16.png)
+![](../.gitbook/assets/ins15.png)
 
 `请选择系统管理账户（root）的密码：输入的字符不可见。正在更改要安装的系统的 root 密码。`
 
