@@ -105,7 +105,7 @@ Telegram：[https://t.me/oh_my_BSD](https://t.me/oh_my_BSD)（需要代理）
 - [ ] 格式化“第 16.8 节 NFS 服务器”
 - [ ] 格式化“第 21.12 节 高级教程：Linux 兼容层与 Jail”
 - [ ] 测试“第 6.7 节 ZFS 磁盘加解密”
-- [ ] 测试“第 16.2 节 MinIO 对象存储服务”
+- [X] 测试“第 16.2 节 MinIO 对象存储服务”
 - [ ] 测试“第 17.7 节 Telegraf+InfluxDB+Grafana 监控平台”（仅测试）
 - [ ] 整理第 18 章
   - [ ] 将“第 18.4 节 USB 网卡与 WiFi”删除或合并
