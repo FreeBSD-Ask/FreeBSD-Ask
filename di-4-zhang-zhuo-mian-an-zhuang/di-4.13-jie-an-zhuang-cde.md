@@ -77,7 +77,7 @@ To start the Common Desktop Enviroment Login Manager:
 # echo "allowed_users=anybody" > /usr/local/etc/X11/Xwrapper.config
 # ln -s /usr/local/dt/bin/Xsession ~/.xinitrc # 为了 startx
 ```
-	
+
 将以下内容添加到 `/etc/inetd.conf`：
 
 ```sh

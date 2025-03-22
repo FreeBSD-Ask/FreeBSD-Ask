@@ -16,7 +16,7 @@
 >
 >FreeBSD 的 ***stable*** 的真实意思是该分支的 ABI（Application Binary Interface，应用程序二进制接口）是稳定的。
 >
->    ——参见 [FreeBSD Glossary STABLE](https://wiki.freebsd.org/Glossary#STABLE)
+> ——参见 [FreeBSD Glossary STABLE](https://wiki.freebsd.org/Glossary#STABLE)
 
 alpha 是 current 进入 release 的第一步。具体过程是 current --> alpha（进入 stable 分支）--> beta --> rc --> release。
 
@@ -28,7 +28,7 @@ current 相对稳定后（即 MFC 最短三天，MFC 即 `Merge From Head`，类
 >
 >FreeBSD 开发计划准备删除命令 `freebsd-update`，一律改用 pkgbase。
 >
->    ——参见 [FreeBSD Manual Pages freebsd-update](https://man.freebsd.org/cgi/man.cgi?freebsd-update)
+> ——参见 [FreeBSD Manual Pages freebsd-update](https://man.freebsd.org/cgi/man.cgi?freebsd-update)
 
 ### FreeBSD 镜像说明
 
@@ -86,12 +86,12 @@ FreeBSD-14.2-RELEASE-amd64-mini-memstick.img.xz	107445036	   2024-Nov-29 13:04
 |CHECKSUM.SHA512-FreeBSD-14.2-RELEASE-amd64   |  本页所有镜像的 SHA512 校验值 |
 |FreeBSD-14.2-RELEASE-amd64-bootonly.iso	      | 网络安装镜像，安装时需联网 |
 |FreeBSD-14.2-RELEASE-amd64-bootonly.iso.xz	    | 压缩的网络安装镜像，安装时需联网|
-|FreeBSD-14.2-RELEASE-amd64-disc1.iso	 | cd 镜像    |     
-|FreeBSD-14.2-RELEASE-amd64-disc1.iso.xz	|  压缩的 cd 镜像 |    
-|FreeBSD-14.2-RELEASE-amd64-dvd1.iso	 | dvd 镜像，相比 cd 镜像多了一些没用的 pkg 包    |      
-|FreeBSD-14.2-RELEASE-amd64-dvd1.iso.xz	  | 压缩的 dvd 镜像，相比 cd 镜像多了一些没用的 pkg 包  |     
-|FreeBSD-14.2-RELEASE-amd64-memstick.img	| U 盘用的镜像（可以使用 Rufus 制作 U 盘启动盘）   |     
-|FreeBSD-14.2-RELEASE-amd64-memstick.img.xz	 | 压缩的 U 盘用的镜像（无需解压缩，可以使用 Rufus 制作 U 盘启动盘）   | 
+|FreeBSD-14.2-RELEASE-amd64-disc1.iso	 | cd 镜像    |
+|FreeBSD-14.2-RELEASE-amd64-disc1.iso.xz	|  压缩的 cd 镜像 |
+|FreeBSD-14.2-RELEASE-amd64-dvd1.iso	 | dvd 镜像，相比 cd 镜像多了一些没用的 pkg 包    |
+|FreeBSD-14.2-RELEASE-amd64-dvd1.iso.xz	  | 压缩的 dvd 镜像，相比 cd 镜像多了一些没用的 pkg 包  |
+|FreeBSD-14.2-RELEASE-amd64-memstick.img	| U 盘用的镜像（可以使用 Rufus 制作 U 盘启动盘）   |
+|FreeBSD-14.2-RELEASE-amd64-memstick.img.xz	 | 压缩的 U 盘用的镜像（无需解压缩，可以使用 Rufus 制作 U 盘启动盘）   |
 |FreeBSD-14.2-RELEASE-amd64-mini-memstick.img	 | U 盘用的网络安装镜像，安装时需联网 |
 |FreeBSD-14.2-RELEASE-amd64-mini-memstick.img.xz|压缩的 U 盘用的网络安装镜像，安装时需联网 |
 
@@ -171,17 +171,20 @@ rufus 下载地址：[https://rufus.ie/zh](https://rufus.ie/zh)
 
 > 如果你也想上传你的数据到该网站上，请：
 >安装：
+>
 > ```sh
 > # pkg install hw-probe
 > ```
+>
 >或者
 >
 > ```sh
 > # cd /usr/ports/sysutils/hw-probe/
 > # make install clean
 > ```
-> 
+>
 > 然后：
+>
 > ```
 ># hw-probe -all -upload
 >Probe for hardware ... Ok
@@ -190,8 +193,9 @@ rufus 下载地址：[https://rufus.ie/zh](https://rufus.ie/zh)
 >
 >Probe URL: https://bsd-hardware.info/?probe=f64606c4b1
 >```
+>
 >打开上面的链接，即可看到你的设备。
-> 
+>
 > 其他系统见 [INSTALL HOWTO FOR BSD](https://github.com/linuxhw/hw-probe/blob/master/INSTALL.BSD.md)
 
 ---
@@ -269,7 +273,7 @@ rufus 下载地址：[https://rufus.ie/zh](https://rufus.ie/zh)
 
 ![](../.gitbook/assets/ins4.png)
 
-`FreeBSD 系统控制台驱动程序默认使用标准 `US`（美式）键盘布局。可以在下面选择别的键盘布局。`
+`FreeBSD 系统控制台驱动程序默认使用标准`US`（美式）键盘布局。可以在下面选择别的键盘布局。`
 
 这里是键盘布局菜单，直接按 **回车键** 使用默认键盘布局即可（因目前中国使用美式键盘布局）。
 
@@ -314,7 +318,7 @@ rufus 下载地址：[https://rufus.ie/zh](https://rufus.ie/zh)
 |    `src`     |                              系统源代码                               |
 |   `tests`    |                               测试工具                                |
 
-## 磁盘分区 
+## 磁盘分区
 
 FreeBSD 14.2 RELEASE 的 `/` 分区支持 UFS 和 ZFS 两种文件系统。旧版 FreeBSD 系统 root 分区仅支持 UFS 一种文件系统。
 
@@ -335,7 +339,7 @@ FreeBSD 14.2 RELEASE 的 `/` 分区支持 UFS 和 ZFS 两种文件系统。旧�
 手动分区和 Shell 分区参见手动安装 FreeBSD 相关章节。
 
 
-### Auto (ZFS)（使用 ZFS 作为 `	/` 文件系统）
+### Auto (ZFS)（使用 ZFS 作为 `/` 文件系统）
 
 >**技巧**
 >
@@ -350,7 +354,7 @@ FreeBSD 14.2 RELEASE 的 `/` 分区支持 UFS 和 ZFS 两种文件系统。旧�
 > ```
 >
 > 你在手动安装的时候可以判断是哪块硬盘，以确定 `ada0` 这个参数是多少。
-> 
+>
 >如果不确定自己的硬盘是哪块（比如分不清是 `da0` 还是 `nv0` 之类的）：可使用图片中的命令查看。
 >
 >![](../.gitbook/assets/ins11.png)
@@ -443,7 +447,7 @@ FreeBSD 14.2 RELEASE 的 `/` 分区支持 UFS 和 ZFS 两种文件系统。旧�
 >
 >这是全盘安装，会丢失所有数据！非全盘安装请参考本书其他文章。
 
-### Auto (UFS)（使用 UFS 作为 `	/` 文件系统）
+### Auto (UFS)（使用 UFS 作为 `/` 文件系统）
 
 ![](../.gitbook/assets/ufs1.png)
 
@@ -816,7 +820,7 @@ Add another user? (yes/no) [no]: # 是否还要再添加一位用户
 
 
 
-## 欢迎来到 FreeBSD 世界！
+## 欢迎来到 FreeBSD 世界
 
 安装后重启到 FreeBSD 新系统：
 
@@ -851,17 +855,17 @@ Add another user? (yes/no) [no]: # 是否还要再添加一位用户
 >请依次检查如下列表：
 >
 >- 你是普通家用电脑吗？
->  - 处理器是 intel 或 amd？
+> - 处理器是 intel 或 amd？
 >- 是否关闭了 BIOS 里的安全启动（（Secure Boot）？
 >- 是否从 <https://freebsd.org> 下载的镜像？
->  - 是否下载了最新版本的 RELEASE 镜像？
->  - 你下载的镜像后缀名是不是 `img`？
->  - 镜像校验（sha256）是否通过？
->  - 你下载的镜像带有 `amd64`（普通家用电脑）字样吗？
->    - 看清楚是 `amd64` **不是** `arm64`（开发板用）！
+> - 是否下载了最新版本的 RELEASE 镜像？
+> - 你下载的镜像后缀名是不是 `img`？
+> - 镜像校验（sha256）是否通过？
+> - 你下载的镜像带有 `amd64`（普通家用电脑）字样吗？
+>   - 看清楚是 `amd64` **不是** `arm64`（开发板用）！
 >- 你的 U 盘是扩容的吗？
->  - 你是否使用了 Ventoy？
->    - 刻录软件请使用 [Rufus](https://rufus.ie/zh/)，不要用 [Ventoy](https://www.ventoy.net/cn/index.html)
+> - 你是否使用了 Ventoy？
+>   - 刻录软件请使用 [Rufus](https://rufus.ie/zh/)，不要用 [Ventoy](https://www.ventoy.net/cn/index.html)
 
 
 若仍出现问题，请先在[官方论坛](https://forums.freebsd.org/)使用英语询问；若无果，可按其他章节指引提交 bug。

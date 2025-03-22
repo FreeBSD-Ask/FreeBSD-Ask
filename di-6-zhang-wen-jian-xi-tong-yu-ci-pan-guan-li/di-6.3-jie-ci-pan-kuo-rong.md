@@ -108,7 +108,7 @@ root@freebsd:~ # gpart show
 
 
 
-> **警告** 
+> **警告**
 >
 >如果你使用的是 GPT 分区表，上边的扩容操作（**在虚拟机或云服务器上的**）会破坏 GPT 分区表，所以需要先恢复之：
 >
@@ -260,6 +260,7 @@ Consumers:
 - [如何轻松改变分区类型 ID？试试这 2 种方法！](https://www.disktool.cn/content-center/change-partition-type-id-2111.html)，分不清分区类型 ID 和分区 UUID 的可以参考此文。~~旧时，安装过黑苹果的人应该都设置过分区类型 ID~~
 
 ### 关于 UFS
+
 UFS 全称是 Unix File System，即 UNIX 文件系统，基于 UNIX v7。过去，macOS 也使用该文件系统作为 root 文件系统。目前 FreeBSD 在使用的是 UFS2。Linux 对 UFS 的读写支持也不完整。这个文件系统只能扩大不能被缩小。
 
 > **注意**

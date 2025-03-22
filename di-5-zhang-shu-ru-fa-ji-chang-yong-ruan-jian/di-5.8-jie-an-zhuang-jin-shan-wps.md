@@ -32,7 +32,7 @@
 官方地址：[WPS Office for Linux](https://linux.wps.cn/)
 
 
-<https://wps-linux-personal.wpscdn.cn/wps/download/ep/Linux2023/17900/wps-office-12.1.0.17900-1.x86_64.rpm?t=1731150867&k=8e9446b92a6e5b727047ec256307be78> 
+<https://wps-linux-personal.wpscdn.cn/wps/download/ep/Linux2023/17900/wps-office-12.1.0.17900-1.x86_64.rpm?t=1731150867&k=8e9446b92a6e5b727047ec256307be78>
 
 请自行获取有效链接，我使用浏览器下载。
 

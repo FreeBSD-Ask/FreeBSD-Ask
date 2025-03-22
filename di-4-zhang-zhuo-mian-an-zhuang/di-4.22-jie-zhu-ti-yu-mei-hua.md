@@ -34,7 +34,7 @@
 
 ## 终端模式安装
 
-_提示：新接触 Unix 的用户可略过本节_
+*提示：新接触 Unix 的用户可略过本节*
 
 - [ ] 高阶任务：为 KDE 或 Gnome 安装一款仿 MacOS 系统样式的主题和图标。
 - [x] 提前任务 1 安装 bash：`# pkg install bash`
@@ -111,7 +111,7 @@ cd papirus-icon-theme
 
 ### 配置 `freebsd-update-notify`
 
-配置文件位于 ` /usr/local/etc/freebsd-update-notify/freebsd-update-notify.conf`：
+配置文件位于 `/usr/local/etc/freebsd-update-notify/freebsd-update-notify.conf`：
 
 默认配置更新间隔太久，可以改成：
 
@@ -128,9 +128,9 @@ hours-between-reminders     8   # 提醒间隔（小时）
 >截图为手动执行示例，实际上程序可以在后台自动运行，无需手动运行验证。若无法再现，可以尝试将 `freebsd-update-notify.conf` 中两个值都改为 `0`，再手动以 `root` 权限执行 `usr/local/libexec/freebsd-update-notify`，日志位于 `/var/log/freebsd-update-cron`、`/var/log/freebsd-update-notify`。若要反馈故障，请使用英文提交 [issue](https://github.com/outpaddling/freebsd-update-notify/issues)。
 
 
-![freebsd-update-notify on FreeBSD](../.gitbook/assets/notify1.png) 
+![freebsd-update-notify on FreeBSD](../.gitbook/assets/notify1.png)
 
-![freebsd-update-notify on FreeBSD](../.gitbook/assets/notify1.png) 
+![freebsd-update-notify on FreeBSD](../.gitbook/assets/notify1.png)
 
-![freebsd-update-notify on FreeBSD](../.gitbook/assets/notify3.png) 
+![freebsd-update-notify on FreeBSD](../.gitbook/assets/notify3.png)
 

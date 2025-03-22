@@ -109,7 +109,7 @@ exec command &  #此处不能照抄！
 
 注意：上述 `command` 须进行替换，**请注意保留 `&`**，在不同桌面下需要替换，Gnome 用 `gnome-session`，KDE 用 `startplasma-x11`，MATE 用 `mate-session`，Xfce 用 `xfce4-session`。
 
-保存后执行命令 
+保存后执行命令
 
 ```sh
 # chmod 755 ~/.vnc/xstartup
@@ -221,7 +221,7 @@ your environment.
 >
 > 如果看到一个背景是蓝色的菜单。请保持 xrdp 默认设置，第一行 Xorg，第二行 输入 FreeBSD 系统中的用户名，第三行输入其密码。点击 `OK`，即可进入桌面。
 
-### 中文化 (该用户使用 sh 作为 shell）：
+### 中文化 (该用户使用 sh 作为 shell）
 
 
 ```sh
@@ -263,6 +263,7 @@ root     syslogd     1021 7   udp4   *:514                 *:*
 >![SDDM VNC](../.gitbook/assets/vnc1.png)
 >
 >示例：
+>
 >```sh
 >192.168.31.187:5901
 >```

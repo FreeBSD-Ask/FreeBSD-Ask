@@ -72,6 +72,7 @@ lost+found	my.txt		test		test.pdf
 ## Brtfs/XFS/Ext4 文件系统
 
 ### 安装 fusefs-lkl
+
 ```sh
 # pkg install fusefs-lkl
 ```
@@ -115,7 +116,7 @@ cfc	test1	test2
 
 - 如何持久化挂载——如何写入 `/etc/fstab`？
 
-待解决。 
+待解决。
 
 
 ## 参考文献

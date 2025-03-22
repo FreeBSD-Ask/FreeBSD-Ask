@@ -21,10 +21,12 @@
 >- 如果使用的是 `sh`, `bash`, `zsh`：
 >
 >设置：
+>
 >```sh
 ># git config --global http.proxy http://192.168.X.X:7890
 ># git config --global https.proxy http://192.168.X.X:7890
 >```
+>
 >取消：
 >
 >```sh
@@ -35,7 +37,7 @@
 ### Git
 
 
-#### 安装 Git：
+#### 安装 Git
 
 ```sh
 # pkg install git
@@ -58,6 +60,7 @@
 ```
 # git clone --depth 1 https://github.com/freebsd/freebsd-src /usr/src
 ```
+
 #### 参考文献
 
 - [Submitting GitHub Pull Requests to FreeBSD](https://freebsdfoundation.org/our-work/journal/browser-based-edition/configuration-management-2/submitting-github-pull-requests-to-freebsd/)
@@ -66,7 +69,7 @@
 #### 故障排除
 
 
-* Git：`fatal: unable to update url base from redirection`
+- Git：`fatal: unable to update url base from redirection`
 
 使用 FreeBSD 源却没加 `.git`
 
@@ -89,7 +92,7 @@
 
 #### 故障排除
 
-* Git：`fatal: unable to access 'https://git.FreeBSD.org/src.git/': SSL certificate problem: certificate is not yet valid`
+- Git：`fatal: unable to access 'https://git.FreeBSD.org/src.git/': SSL certificate problem: certificate is not yet valid`
 
 可能是时间不对造成的，同步时间：
 
@@ -130,9 +133,9 @@
 # reboot               # 重启以完成更新流程
 ```
 
-### 故障排除：
+### 故障排除
 
-* `Conflicts remain from previous update, aborting.`
+- `Conflicts remain from previous update, aborting.`
 
 需要 **解决冲突**
 
@@ -163,5 +166,5 @@ Select: (p) postpone, (df) diff-full, (e) edit,
 
 ## 参考资料
 
-* [FreeBSD 手册](https://handbook.bsdcn.org/)。
-* [etcupdate -- manage updates to system files not updated by installworld](https://man.freebsd.org/cgi/man.cgi?etcupdate(8))
+- [FreeBSD 手册](https://handbook.bsdcn.org/)。
+- [etcupdate -- manage updates to system files not updated by installworld](https://man.freebsd.org/cgi/man.cgi?etcupdate(8))

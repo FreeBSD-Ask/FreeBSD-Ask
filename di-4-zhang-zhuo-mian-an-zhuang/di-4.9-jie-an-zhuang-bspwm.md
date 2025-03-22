@@ -30,6 +30,7 @@ xdg-user-dirs 可自动管理家目录子目录（可选安装）
 # cd /usr/ports/x11/lightdm-gtk-greeter/ && make install clean
 # cd /usr/ports/devel/xdg-user-dirs/ && make install clean # 自动管理家目录子目录
 ```
+
 解释：
 
 
@@ -172,4 +173,4 @@ $HOME/.fehbg &
 
 ## 参考文献
 
-* [从零开始的 Bspwm 安装与配置教程](https://zhuanlan.zhihu.com/p/568211941)
+- [从零开始的 Bspwm 安装与配置教程](https://zhuanlan.zhihu.com/p/568211941)

@@ -4,7 +4,7 @@
 
 - FreeBSD 仍然使用古老的 BSD init 而非 systemd；BSD init 与传统的 SysVinit 也不大相同——BSD 没有运行级别（runlevel），也没有 `/etc/inittab`，均由 rc 控制。
 
-当以用户进程身份运行 init 时，可模拟 AT&T System V UNIX 的行为——即超级用户可以在命令行中指定所需的运行级别：init 会向原始的（PID 为 1 的）init 进程发送特定信号，以执行相应的操作，实现类似的功能。参见 [init ](https://man.freebsd.org/cgi/man.cgi?query=init&sektion=8&manpath=freebsd-release-ports)。例如在 FreeBSD 中执行 `init 0` 仍然是关机。
+当以用户进程身份运行 init 时，可模拟 AT&T System V UNIX 的行为——即超级用户可以在命令行中指定所需的运行级别：init 会向原始的（PID 为 1 的）init 进程发送特定信号，以执行相应的操作，实现类似的功能。参见 [init](https://man.freebsd.org/cgi/man.cgi?query=init&sektion=8&manpath=freebsd-release-ports)。例如在 FreeBSD 中执行 `init 0` 仍然是关机。
 
 | 运行级别 | 信号       | 操作说明                             |
 |:----------:|:------------|:--------------------------------------|
@@ -22,6 +22,7 @@
 - FreeBSD 基本系统几乎不包含任何与 BSD 协议不兼容的软件（你可以自己安装）。
 
 >**思考题**
+>>
 >>- FreeBSD 致力于去 GNU 化，这意味着基本系统不使用 glibc、GCC 等软件。
 >
 >你认为是 BSD 一直在去 GNU 化，还是 Linux 一直在 GNU 化？
@@ -51,6 +52,7 @@
 - 由于 FreeBSD 项目的基本目标和设计问题，FreeBSD 基本系统不包含一般 Linux 中常用的一些软件和命令，比如没有 `lspci`、`free`。有些可以自己安装，有些则不行；
 - FreeBSD 的两个文件系统 ZFS 与 UFS 都只能扩大不能缩小，一个奇怪的设计；
 - FreeBSD 缺乏上层应用软件设计，即使底层有类似 docker 的技术 jail 也没能发展起来；FreeBSD 的虚拟化技术 Byhve 也很难用：没有一个前端的 GUI 来控制，设定参数也缺乏一个统一的教程。
+
 > 我们现在称为容器技术的概念最初出现在 2000 年，当时称为 FreeBSD jail，这种技术可将 FreeBSD 系统分区为多个子系统（也称为 Jail）。Jail 是作为安全环境而开发的，系统管理员可与企业内部或外部的多个用户共享这些 Jail。2001 年，通过 Jacques Gélinas 的 VServer 项目，隔离环境的实施进入了 Linux 领域。在完成了这项针对 Linux 中多个受控制用户空间的基础性工作后，Linux 容器开始逐渐成形并最终发展成了现在的模样。2008 年，Docker 公司凭借与公司同名的容器技术通过 dotCloud 登上了舞台。—— [什么是 Linux 容器？](https://www.redhat.com/zh/topics/containers/shenmeshi-linux-rongqi)
 
 ## 基本对比
