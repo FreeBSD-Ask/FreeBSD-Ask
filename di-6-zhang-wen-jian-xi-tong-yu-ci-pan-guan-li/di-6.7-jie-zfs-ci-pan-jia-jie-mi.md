@@ -49,7 +49,7 @@ zroot/test           262M  83.7G    56K  -
 4096 bytes transferred in 0.000083 secs (49072111 bytes/sec)
 ```
 
--  初始化并加载加密磁盘
+- 初始化并加载加密磁盘
 
 ```sh
 # geli init -K /tmp/test.key /dev/zvol/zroot/test
@@ -62,7 +62,7 @@ and can be restored with the following command:
 	# geli restore /var/backups/zvol_zroot_test.eli /dev/zvol/zroot/test
 ```
 
--使用指定的密钥文件解锁、挂载 GELI 加密的 zvol 设备
+- 使用指定的密钥文件解锁、挂载 GELI 加密的 zvol 设备
 
 ```sh
 # geli attach -k /tmp/test.key /dev/zvol/zroot/test
