@@ -91,17 +91,14 @@ remote size / mtime: 195363380 / 1652346155
 
 `-n` 指定使用 lo1 作为网络接口，`-4` 指定 ipv4 地址。
 
-生成 jail1 后，`/usr/jails/` 目录下对应生成 `jail1` 目录 ( `/usr/jails/jail1/`),保存相应文件。
 
 可以在上面提到的 `flavors` 目录中建立自己的配置文件以便在部署 jail 时复制到新的 jail 中。
 
-如，新建 `/usr/jails/flavors/default/usr/local/etc/pkg/repos/FreeBSD.conf` ,那么之后再新建 jail 时，会自动把这个文件复制到对应的 jail 中，即
 
 ```sh
 # qjail create -n lo1 -4 192.168.1.2 jail2
 ```
 
-建立 jail2 后，自动建立 `/usr/jails/jail2/usr/local/etc/pkg/repos/FreeBSD.conf` ,既修改了之后所有 jail 的默认 pkg 镜像。但对应 jail1 并没有生成这个文件，因为生成 jail1 时，还没有在 flavors 目录中写入相应文件。
 
 ## qjail 基本使用
 
@@ -174,7 +171,7 @@ remote size / mtime: 195363380 / 1652346155
 
 ### 更新 ports
 
-这里有`-p`（小写） 、 `-P`（大写）两个选项，`-p`（小写）使用 portsnap 更新 jail 的 ports tree，`-P`（大写）使用宿主机的 ports tree 更新 jail 的 ports。如果主机已有 ports，则建议使用 `-P`（大写），避免两次下载 ports。
+这里有 `-p`（小写） 、 `-P`（大写）两个选项，`-p`（小写）使用 portsnap 更新 jail 的 ports tree，`-P`（大写）使用宿主机的 ports tree 更新 jail 的 ports。如果主机已有 ports，则建议使用 `-P`（大写），避免两次下载 ports。
 
 ```sh
 # qjail update -P  # 这里注意大写

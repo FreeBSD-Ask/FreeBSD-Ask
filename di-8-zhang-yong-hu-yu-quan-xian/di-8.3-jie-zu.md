@@ -123,8 +123,8 @@
 示例：
 
 ```sh
-# pw groupadd test -g 1200 # 创建组 test，gid 为 1200，注意，gid 与 uid 不是一回事
-# pw groupadd test5 -M test1,test2 # 创建组 test5，成员有 test1 和 test2
+# pw groupadd test -g 1200 # 创建组 test。gid 为 1200；注意：gid 与 uid 不是一回事
+# pw groupadd test5 -M test1, test2 # 创建组 test5。成员有 test1 和 test2
 ```
 
 ## `groupmod` 命令
