@@ -107,9 +107,9 @@ Telegram：[https://t.me/oh_my_BSD](https://t.me/oh_my_BSD)（需要代理）
 - [ ] 测试“第 6.7 节 ZFS 磁盘加解密”
 - [X] 测试“第 16.2 节 MinIO 对象存储服务”
 - [ ] 测试“第 17.7 节 Telegraf+InfluxDB+Grafana 监控平台”（仅测试）
-- [ ] 整理第 18 章
-  - [ ] 将“第 18.4 节 USB 网卡与 WiFi”删除或合并
-  - [ ] 精简章节
+- [X] 整理第 18 章
+  - [X] 将“第 18.4 节 USB 网卡与 WiFi”删除或合并
+  - [X] 精简章节
 - [ ] 整理“第 22.12 节 安装 code-server 和 clangd”
 - [ ] 更新“第 16.1 节 FTP 服务器”（可能性不大，我不懂）
 
