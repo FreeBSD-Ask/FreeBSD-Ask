@@ -42,7 +42,7 @@ zroot/test           262M  83.7G    56K  -
 
 - 创建一个随机生成的、4K 大小的 key:
 
-````sh
+```sh
 # dd if=/dev/random of=/tmp/test.key bs=4k count=1
 1+0 records in
 1+0 records out
@@ -64,7 +64,7 @@ and can be restored with the following command:
 
 -使用指定的密钥文件解锁、挂载 GELI 加密的 zvol 设备
 
-```
+```sh
 # geli attach -k /tmp/test.key /dev/zvol/zroot/test
 Enter passphrase: # 输入刚才设置的密码
 ```
