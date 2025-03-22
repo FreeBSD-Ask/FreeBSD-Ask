@@ -78,7 +78,7 @@ Telegram：[https://t.me/oh_my_BSD](https://t.me/oh_my_BSD)（需要代理）
 - [ ] 重写“第 3.2 节 FreeBSD 换源方式”
 - [ ] 重写“第 4.1 节 Xorg & 显卡驱动”
 - [ ] 重写“第 5.7 节 更换字体”
-- [ ] 重写“第 6.6 节 Linux 文件系统”
+- [X] 重写“第 6.6 节 Linux 文件系统”
 - [X] 重写“第 17.7 节 Telegraf+InfluxDB+Grafana 监控平台”（仅测试）
 - [ ] 格式化“第 5.1 节 输入法与环境变量”
 - [X] 格式化“第 5.4 节 五笔输入法”
