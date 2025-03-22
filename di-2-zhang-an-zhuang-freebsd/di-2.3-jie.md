@@ -26,7 +26,7 @@ Windows 家庭版不支持 Hyper-V。
 |    Gen 2     |     14.0     |                                支持                                |  支持  | 参见[源代码](https://cgit.FreeBSD.org/src/commit/?id=21f4e817fde79d5de79bfbdf180d358ca5f48bf9) |
 
 
-## 测试环境：
+## 测试环境
 
 - Windows 11 23H2 专业版
 - FreeBSD 14.1-RELEASE（`FreeBSD-14.1-RELEASE-amd64-disc1.iso`）

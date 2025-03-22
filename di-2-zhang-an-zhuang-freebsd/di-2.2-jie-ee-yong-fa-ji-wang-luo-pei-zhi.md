@@ -13,6 +13,7 @@ login:
 我们将这个屏幕上呈现的界面称为 TTY（teletypewriter，电传打字机）或物理终端。
 
 解释：
+
 - `FreeBSD` 是操作系统名称；
 - `amd64` 是体系架构，一般英特尔和 AMD 处理器都是 amd64，即 x86-64；
 - `ykla` 是主机名，是在安装系统时你自己设置的；
@@ -119,7 +120,7 @@ drwxrwxrwt  2 root    wheel  2 Mar 18 17:10 .font-unix
 
 现在，大部分命令均应遵从上面的方式（有所省略）。这是 [POSIX.1-2024](https://pubs.opengroup.org/onlinepubs/9799919799/) 规范所规定的。
 
-我们需要注意英文和中文是不同的，中文行文间不使用空格进行分割，而英文单词必须使用空格以示分别。故，命令行的每个部分中间应该有空格，即 ` `。空格的数量一般不受限制，但最少应该为一个，即 ` `。
+我们需要注意英文和中文是不同的，中文行文间不使用空格进行分割，而英文单词必须使用空格以示分别。故，命令行的每个部分中间应该有空格，即 ``。空格的数量一般不受限制，但最少应该为一个，即 ``。
 
 >**思考题**
 >
@@ -314,6 +315,7 @@ Linux 中常见的 shell 一般是 bash（Bourne Again SHell，即“又一个 B
 使用 **Scroll Lock** 键（滚动键）：按下 **Scroll Lock** 键后，你可以使用上 ↑/下 ↓ 方向键、**Page Up**/**Page Down** 键来对屏幕进行操作。
 
 不同点：
+
 - 上 ↑/下 ↓ 方向键：使 TTY 界面上下滚动一行
 - **Page Up**/**Page Down** 键：使 TTY 界面上下滚动一页
 
@@ -338,7 +340,7 @@ Linux 中常见的 shell 一般是 bash（Bourne Again SHell，即“又一个 B
 
 - 补全命令
   
-```sh 
+```sh
 root@ykla:~ # lo # 若此时按 TAB 键，输出如下。可以再输一个字母再按一次 TAB 键看看
 local                    localedef                login
 local-unbound            locate                   logins
@@ -362,6 +364,7 @@ $ cp /home/ykla/test/1.txt
 ```
 
 #### 终止命令
+
 若想终止命令，可以用 **ctrl**+**c**：
 
 ```sh
@@ -530,7 +533,7 @@ cd is a shell builtin
 如果缺少了哪个命令，一般可以通过安装相应的软件包来获取，比如 `lspci` 命令，来自软件包 `sysutils/pciutil`。但是也有很多命令存在 Linux 主义问题，不兼容其他操作系统，比如 ip 命令，来自 GNU 软件包 iproute2。
 
 
- ## 我是谁？
+## 我是谁？
 
 - 查看当前登录系统的用户名：
 
@@ -808,6 +811,7 @@ $ rm -rf /home/ykla/test/
 >**警告**
 >
 >网上经常有人说使用 `sudo rm -rf /*` 是某某命令可以 xxx，误导他人对系统造成不可挽回的灾难性破坏。该命令实质上是以 root 权限（~~还好 FreeBSD 默认没有 sudo~~），删除 `/` 及其子目录下的一切存在。让我来展示一下：
+>
 >```sh
 >root@ykla:/ # rm -rf /*
 >rm: /boot/efi: Device busy
@@ -818,6 +822,7 @@ $ rm -rf /home/ykla/test/
 >……省略一部分……
 >root@ykla:/ # 
 >```
+>
 >![](../.gitbook/assets/noefi.png)
 >
 >重启后你会发现连引导都没了。
@@ -924,7 +929,7 @@ $ cp -vr /usr/ports/editors/vscode /home/ykla
 
 有时操作需要全选，可以使用正则 `*`。
 
-- 删除所有文件名以 `test` 打头的文件： 
+- 删除所有文件名以 `test` 打头的文件：
 
 ```sh
 $ rm test*
@@ -934,14 +939,14 @@ rm: test4: is a directory
 
 可以看到，不会处理目录。
 
-- 删除所有文件名以 `test` 打头的文件和**目录**： 
+- 删除所有文件名以 `test` 打头的文件和**目录**：
 
 ```sh
 $ ls test*  # 确认匹配的文件
 $ rm -rf test*
 ```
 
-- 删除所有文件和**目录**： 
+- 删除所有文件和**目录**：
 
 ```sh
 $ ls *  # 确认匹配的文件

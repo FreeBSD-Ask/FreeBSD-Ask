@@ -9,6 +9,7 @@ rime 输入法引擎仅是输入法，还需要输入法面板"ibus/fcitx" 才�
 ```sh
 # pkg install zh-fcitx5-rime
 ```
+
 ```
 # pkg install zh-ibus-rime
 ```
@@ -74,7 +75,7 @@ $ cd ~/.config/ibus/rime
 $ cd ~/.local/share/fcitx5/rime
 ```
 
-###  启用五笔 86 输入法
+### 启用五笔 86 输入法
 
 ```sh
 $ rime_deployer --add-schema wubi86

@@ -6,7 +6,7 @@ Qemu 是一款纯软件模拟的开源虚拟机，支持模拟不同的体系结
 
 本文基于 Windows 11 24H2（物理机）X86-64，FreeBSD 14.2 RELEASE RISC-V（虚拟机），qemu 20241220。
 
-### Qemu 
+### Qemu
 
 Qemu 下载地址：
 

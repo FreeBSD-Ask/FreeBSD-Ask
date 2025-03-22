@@ -217,6 +217,7 @@ $ yay -S linuxqq # 此时位于 Arch 兼容层！此时用户为 test
 # apt install libgbm-dev libasound2-dev #此时位于 Ubuntu 兼容层
 # ldconfig #此时位于 Ubuntu 兼容层
 ```
+
 安装中文字体：用包管理器查找中文字体，例如 wqy
 
 启动 QQ：
@@ -230,9 +231,9 @@ $ yay -S linuxqq # 此时位于 Arch 兼容层！此时用户为 test
 > **注意**
 >
 > 如果你双网卡，例如一个有线一个无线，打开 QQ 以后可能会遇到网络错误的提示，需要给你的空闲网卡随便指派一个 IP。
-> 
+>
 > 参见《Linux 兼容层故障排除》
-> 
+>
 > **如果退出后进不去，请加参数 `--in-process-gpu` 执行之即可，即 `/bin/qq  --no-sandbox --in-process-gpu`**。
 
 ![FreeBSD QQ](../.gitbook/assets/qq3.0.png)

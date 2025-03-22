@@ -230,7 +230,7 @@ backlight 自 FreeBSD 13 引入。
 >
 >笔记本电脑一般不能单独用 nvidia 打开 xorg。**除非** 你的笔记本电脑支持 **显卡直通**。否则请先按照上部分对核显进行配置。
 
-  - 550 驱动驱动支持的显卡参考 [FreeBSD Display Driver – X64](https://www.nvidia.cn/Download/driverResults.aspx/220794/cn/)
+- 550 驱动驱动支持的显卡参考 [FreeBSD Display Driver – X64](https://www.nvidia.cn/Download/driverResults.aspx/220794/cn/)
 
 安装：
 
@@ -291,9 +291,9 @@ EndSection
 ![](../.gitbook/assets/418810292836709.png)
 
  运行 `nvrun-vgl bounce` 用 `nvidia-smi -l 1` 观察使用 nvidia 驱动时使用了 13M 显存。
- 
+
 ![](../.gitbook/assets/380531501625801.png)
- 
+
 ### 开启 vlc 硬解
 
 安装：
@@ -301,6 +301,7 @@ EndSection
 ```sh
 pkg install libva-vdpau-driver libvdpau libvdpau-va-gl
 ```
+
 或者
 
 ```sh
@@ -330,6 +331,7 @@ pkg install libva-vdpau-driver libvdpau libvdpau-va-gl
 ```sh
 # pkg install nvidia-drm-kmod nvidia-settings nvidia-xconfig
 ```
+
 >**技巧**
 >
 >`nvidia-drm-kmod` 目前依赖安装的 `nvidia-driver` 默认为 550。

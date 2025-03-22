@@ -5,6 +5,7 @@
 ```sh
 # pkg install windowmaker wmakerconf xorg lightdm lightdm-gtk-greeter wqy-fonts xdg-user-dirs
 ```
+
 xdg-user-dirs 可自动管理家目录子目录（可选安装）
 
 或者：

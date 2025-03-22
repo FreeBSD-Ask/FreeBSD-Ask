@@ -87,7 +87,7 @@ fcitx 5 相比前一代，增加了对 Wayland 的支持，据说更加流畅。
 > **可选**
 >
 > 你还可以选择安装 rime：
-> 
+>
 >```
 ># pkg install zh-fcitx5-rime zh-rime-essay
 >```

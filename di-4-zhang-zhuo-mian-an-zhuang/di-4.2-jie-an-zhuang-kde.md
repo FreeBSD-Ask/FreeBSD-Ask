@@ -11,12 +11,15 @@
 >```
 ># pkg remove -f kde5 && pkg autoremove
 >```
+>
 >或
+>
 >```
 ># pkg remove -f kde6 && pkg autoremove
 >```
 
 然后按下文操作即可。
+
 ## 安装
 
 ```sh
@@ -59,7 +62,7 @@ xdg-user-dirs 可自动管理家目录子目录（可选安装）
 > 如果你在 root 下已经执行过了，那么新用户仍要再执行一次才能正常使用（无需 root 权限或 sudo 等）`startx`。
 
 
-##  基于 Wayland
+## 基于 Wayland
 
 在前文的基础上，把 `/usr/local/share/xsessions/plasmax11.desktop` 中的 `/usr/local/bin/startplasma-x11` 都改成 `/usr/local/bin/startplasma-wayland`。重启即可。
 
@@ -154,9 +157,11 @@ Current=sddm-freebsd-black-theme
 ```sh
 # cap_mkdb /etc/login.conf
 ```
+
 ![SDDM](../.gitbook/assets/sddmcn.png)
 
 ![KDE 6](../.gitbook/assets/kde6-2.png)
+
 ### 系统中文化方法②系统设置
 
 点击开始-> System Settings ->  `Language & Time` 在 `Region & Language` 项的 `Language` 栏点击右侧 `Modify` 中找到“简体中文”（一般是倒数第二，如果都是`□□□□`，检查你的中文字体安装否）单击之。然后单击 `Apply` 按钮；logout（注销）后重新登录，此时系统语言将变为中文。
@@ -236,4 +241,4 @@ proc            /proc           procfs  rw      0       0
 >
 > ↓↓↓ 这就是后果 ↓↓↓
 >
->  ![KDE 5](../.gitbook/assets/witekde.png)
+> ![KDE 5](../.gitbook/assets/witekde.png)

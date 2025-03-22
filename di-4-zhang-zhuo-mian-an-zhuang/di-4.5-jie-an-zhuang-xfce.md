@@ -49,7 +49,7 @@ xdg-user-dirs 可自动管理家目录子目录（可选安装）
 
 ## 设置中文显示
 
-在 `~/.xinitrc` 或者 `~/.profile` 中添加以下内容（但要在最前面才正常启用） 
+在 `~/.xinitrc` 或者 `~/.profile` 中添加以下内容（但要在最前面才正常启用）
 
 ```sh
 export LANG=zh_CN.UTF-8
@@ -72,7 +72,7 @@ export LANG=zh_CN.UTF-8
 lightdm_env="LC_MESSAGES=zh_CN.UTF-8" 
 ```
 
-####  方法②
+#### 方法②
 
 修改 `slick-greeter.desktop`：
 
@@ -122,11 +122,11 @@ FreeBSD 的 xfce 邮箱客户端推荐用 evolution，搭配 xfce4-mailwatch-plu
 ### FreeBSD 的 xfce 终端动态标题不显示问题
 
 
- - sh: `~/.profile` 写入配置
- - bash: `~/.bash_profile` 或 `~/.profile` 写入配置
- - zsh: `~/.zprofile` 写入配置
- - csh: `~/.cshrc` 写入配置
- - tcsh: `~/.tcshrc` 写入配置
+- sh: `~/.profile` 写入配置
+- bash: `~/.bash_profile` 或 `~/.profile` 写入配置
+- zsh: `~/.zprofile` 写入配置
+- csh: `~/.cshrc` 写入配置
+- tcsh: `~/.tcshrc` 写入配置
 
 zsh:
 
@@ -153,6 +153,7 @@ cwdcmd ()   a function which is executed whenever the directory is changed
 ```
 
 bash:
+
 ```sh
 \u          expands to $USERNAME
 \h          expands to hostname up to first '.'
@@ -162,6 +163,7 @@ bash:
 ```
 
 csh
+
 ```sh
 switch ($TERM)
     case "xterm*":
@@ -174,9 +176,9 @@ switch ($TERM)
 endsw
 ```
 
-参考文献： 
+参考文献：
 
- - [Xterm-Title](http://www.faqs.org/docs/Linux-mini/Xterm-Title.html#ss4.1)
+- [Xterm-Title](http://www.faqs.org/docs/Linux-mini/Xterm-Title.html#ss4.1)
 
 
 

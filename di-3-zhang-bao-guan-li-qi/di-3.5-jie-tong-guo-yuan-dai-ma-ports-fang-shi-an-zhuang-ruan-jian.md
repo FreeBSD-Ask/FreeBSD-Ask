@@ -47,6 +47,7 @@ NJU:
 ## 使用 Git 获取 Ports
 
 ### 安装 Git
+
 ```sh
 # pkg install git
 ```
@@ -162,13 +163,13 @@ Sat Oct  5 08:39:21 UTC 2024
 
 ### 使用 `whereis` 查询软件路径
 
-如 
+如
 
 ```sh
 # whereis python
 ```
 
-将输出 
+将输出
 
 ```sh
 python: /usr/ports/lang/python
@@ -235,7 +236,7 @@ root@ykla:/usr/ports/sysutils/htop # make all-depends-list
 # python: /usr/ports/lang/python
 ```
 
-### 安装 python3：
+### 安装 python3
 
 ```sh
 # cd /usr/ports/lang/python
@@ -288,7 +289,7 @@ Proceed with this action? [y/N]:
 # make rmconfig-recursive
 ```
 
-### 如何一次性下载所有需要的软件包：
+### 如何一次性下载所有需要的软件包
 
 ```sh
 # make BATCH=yes fetch-recursive
@@ -357,7 +358,7 @@ w3m-0.5.3.20230718_1               <
 # portmaster -a -G --no-confirm
 ```
 
-#### 查看依赖关系：
+#### 查看依赖关系
 
 ```sh
 root@ykla:/usr/ports/ports-mgmt/portmaster # portmaster sysutils/htop  --show-work
@@ -399,7 +400,9 @@ root@ykla:/usr/ports/ports-mgmt/portmaster # portmaster sysutils/htop  --show-wo
 ```sh
 # echo "DEFAULT_VERSIONS+= python=3.11  python3=3.11" >> /etc/make.conf
 ```
+
 >如果只设置了单个参数，那么出现警告是正常的，见 [Bug](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=243034)
+>
 >```sh
 >/!\ WARNING /!\
 >
@@ -430,6 +433,7 @@ root@ykla:/usr/ports/ports-mgmt/portmaster # portmaster sysutils/htop  --show-wo
 FORCE_MAKE_JOBS=yes
 MAKE_JOBS_NUMBER=4
 ```
+
 Linux 如 Gentoo 上一般是直接 `-jx` 或者 `jx+1`, `x` 为核心数。
 
 `4` 是处理器核心数（还是线程数？）。
@@ -457,6 +461,7 @@ hw.ncpu: 16
 ```sh
 # alias ninja='ninja -j4'
 ```
+
 ### 参考资料
 
 - [Easy way to get cpu features](https://forums.freebsd.org/threads/easy-way-to-get-cpu-features.10553/)，获取 CPU 线程数量的命令来自此处。
@@ -742,6 +747,7 @@ root@ykla:~ # ccache -p
 ```
 
 或者
+
 ```sh
 # cd /usr/ports/ftp/axel/
 # make install clean
@@ -777,7 +783,7 @@ DISABLE_SIZE=yes
 
 - `-c` 断点续传；
 - `-t 3` 重试次数 3；
-- ` -o 10` 启用 10 个线程进行下载。
+- `-o 10` 启用 10 个线程进行下载。
 
 >**技巧**
 >

@@ -29,6 +29,7 @@ FreeBSD 提供了实用工具 `freebsd-update` 来安装系统更新，包括升
 ## 环境准备
 
 - 如果是 csh（14 以下 root 默认为 csh）：
+
 ```
 # setenv EDITOR /usr/bin/ee # 切换 vi 为 ee，vi 不会用
 # setenv VISUAL /usr/bin/ee # 切换 vi 为 ee，vi 不会用
@@ -50,7 +51,7 @@ root@ykla:/home/ykla # echo $VISUAL
 /usr/bin/ee
 ```
 
-### 常规的安全更新：
+### 常规的安全更新
 
 ```sh
 # freebsd-update fetch
@@ -457,7 +458,7 @@ FreeBSD 13.1-RELEASE amd64
 # freebsd-update rollback
 ```
 
-### pkg 找不到 `.so`：
+### pkg 找不到 `.so`
 
 终端执行命令
 

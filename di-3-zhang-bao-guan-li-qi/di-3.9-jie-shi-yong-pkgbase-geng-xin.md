@@ -50,7 +50,7 @@ FreeBSD-base: {
 }
 ```
 
-### 中国科学技术大学开源镜像站 USTC 
+### 中国科学技术大学开源镜像站 USTC
 
 ```sh
 FreeBSD-base: {
@@ -96,6 +96,7 @@ Processing entries: 100%
 FreeBSD-base repository update completed. 527 packages processed.
 All repositories are up to date.
 ```
+
 - 安装 pkgbase：
   
 ```sh
@@ -144,6 +145,7 @@ Proceed with this action? [y/N]:
 ```sh
 # find / -name "*.pkgsave" -type f -exec sh -c "f='{}'; echo '==== OLD ===='; ls -l \${f}; md5sum \${f}; echo '==== NEW ===='; ls -l \${f%.pkgsave}; md5sum \${f%.pkgsave}; cp -vi \${f} \${f%.pkgsave}" \;
 ```
+
 这是不可行的。
 
 故，经过实际测试，按照 WIKI，直接删掉旧系统的文件就行：
