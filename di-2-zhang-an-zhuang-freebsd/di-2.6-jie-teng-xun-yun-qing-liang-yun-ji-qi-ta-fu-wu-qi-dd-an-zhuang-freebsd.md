@@ -5,7 +5,7 @@
 
 > **注意：以下内容仅供参考，有待测试。如果你测试通过，请告知我们！**
 
-根据反馈，在 VMware EXSI 等半虚拟化平台上安装或升级 FreeBSD 会遇到故障（如阿里云 virtio-blk 驱动会出问题），需要在开机时按 **ESC**键，然后输入 `set kern.maxphys=65536` 回车，再输入 `boot` 即可正常启动。安装好后需要在 `/boot/loader.conf` 加入 `kern.maxphys=65536` 即可避免每次开机重复操作。阿里云升级完成后可能会因为此类问题卡在引导界面，此时需要重启并进 VNC 再进行上述操作。
+根据反馈，在 VMware EXSI 等半虚拟化平台上安装或升级 FreeBSD 会遇到故障（如阿里云 virtio-blk 驱动会出问题），需要在开机时按 **ESC** 键，然后输入 `set kern.maxphys=65536` 回车，再输入 `boot` 即可正常启动。安装好后需要在 `/boot/loader.conf` 加入 `kern.maxphys=65536` 即可避免每次开机重复操作。阿里云升级完成后可能会因为此类问题卡在引导界面，此时需要重启并进 VNC 再进行上述操作。
 
 > **注意**
 >
@@ -29,7 +29,7 @@
 
 ## 文字教程
 
-[腾讯云轻量应用服务器（即腾讯云轻量云）](https://cloud.tencent.com/product/lighthouse)以及[阿里云轻量应用服务器](https://www.aliyun.com/product/swas)等机器都没有 FreeBSD 系统的支持，只能通过特殊的的方法自己暴力安装。**请注意数据安全，以下教程有一定危险性和要求你有一定的动手能力。**
+[腾讯云轻量应用服务器（即腾讯云轻量云）](https://cloud.tencent.com/product/lighthouse) 以及 [阿里云轻量应用服务器](https://www.aliyun.com/product/swas) 等机器都没有 FreeBSD 系统的支持，只能通过特殊的的方法自己暴力安装。**请注意数据安全，以下教程有一定危险性和要求你有一定的动手能力。**
 
 他是一个服务器面板里没有 FreeBSD 镜像 IDC，所以要用奇怪的方法来安装了。因为 FreeBSD 和 Linux 的内核不通用，可执行文件也不通用，所以无法通过 chroot 再删掉源系统的方法安装。安装的方法是先在内存盘中启动 FreeBSD 系统，也就是 [mfsBSD](https://mfsbsd.vx.sk)，再格式化硬盘安装新系统。mfsBSD 是一个完全载入内存的 FreeBSD 系统，类似于 Windows 的 PE。
 

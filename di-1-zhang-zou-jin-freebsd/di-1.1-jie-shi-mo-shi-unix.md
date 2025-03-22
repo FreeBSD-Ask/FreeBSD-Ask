@@ -120,7 +120,7 @@ Linux 全称为 GNU/Linux；[GNU 项目](https://www.gnu.org/) 1984；
 
 > **注意**
 >
-> 如果你还是不明白，建议亲自安装试试 [Gentoo](https://www.gentoo.org/downloads/)（stage3）或 [Slackware](http://www.slackware.com/)，再不明白可以试试 [Gentoo（stage1）](https://wiki.gentoo.org/wiki/Stage_file)或 [LFS](https://www.linuxfromscratch.org/lfs/)。
+> 如果你还是不明白，建议亲自安装试试 [Gentoo](https://www.gentoo.org/downloads/)（stage3）或 [Slackware](http://www.slackware.com/)，再不明白可以试试 [Gentoo（stage1）](https://wiki.gentoo.org/wiki/Stage_file) 或 [LFS](https://www.linuxfromscratch.org/lfs/)。
 >
 > 上述操作较为复杂，需要一定的经验与基础知识。
 
@@ -147,7 +147,7 @@ BSD 操作系统并非克隆产物，而是 AT&T 研究 UNIX（Research Unix）�
 
 ![FreeBSD 不是 Linux](../.gitbook/assets/nolinux.png)
 
-UNIX -> Networking Release 1->Networking Release 2 ->386BSD -> FreeBSD 1.0
+UNIX -> Networking Release 1-> Networking Release 2 -> 386BSD -> FreeBSD 1.0
 
 386BSD -> 诉讼（1991-1994） -> 4.4 BSD-Lite -> FreeBSD 2.0
 
@@ -354,7 +354,7 @@ ZFS 开源项目衍生于 OpenSolaris 项目。在 2013 年 9 月 17 日，ZFS �
 
 于 2016 年 10 月 10 日宣布发布 FreeBSD 11.0-RELEASE。该版本包含了对无线网络的多项改进以及集成 UDP-lite。最重要的是，FreeBSD 11 还涉及对 aarch64（arm64）的支持，aarch64 最初被分类为二级架构。
 
-#### 2017 年 6 月 19 日 首个"FreeBSD Day"
+#### 2017 年 6 月 19 日 首个 "FreeBSD Day"
 
 国际 FreeBSD 日是每年一度的庆祝活动，旨在赞扬 FreeBSD 对技术的开创性和持续影响，并纪念其传承的价值。
 

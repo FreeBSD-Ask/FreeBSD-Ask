@@ -64,7 +64,7 @@ export LANG=zh_CN.UTF-8
 
 ### lightdm 登陆管理器本地化语言
 
-#### 方法①
+#### 方法 ①
 
 `/etc/rc.conf` 里写入：
 
@@ -72,7 +72,7 @@ export LANG=zh_CN.UTF-8
 lightdm_env="LC_MESSAGES=zh_CN.UTF-8" 
 ```
 
-#### 方法②
+#### 方法 ②
 
 修改 `slick-greeter.desktop`：
 

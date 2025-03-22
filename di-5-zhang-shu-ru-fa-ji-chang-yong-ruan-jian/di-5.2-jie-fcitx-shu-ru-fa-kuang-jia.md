@@ -128,7 +128,7 @@ SLIM 窗口下会提示 IBUS 找不到……疑似 bug。
 # echo $0
 ```
 
-如果输出`csh`，代表配置成功。然后其余环境变量配置方法同上所述。
+如果输出 `csh`，代表配置成功。然后其余环境变量配置方法同上所述。
 
 #### 设置环境变量
 
@@ -147,7 +147,7 @@ SLIM 窗口下会提示 IBUS 找不到……疑似 bug。
 
 A 组：
 
-sh/bash/zsh:fcitx5
+sh/bash/zsh: fcitx5
 
 ```sh
 export LANG=zh_CN.UTF-8
@@ -161,7 +161,7 @@ export QT_IM_MODULE=fcitx
 
 B 组：
 
-csh:fcitx5
+csh: fcitx5
 
 ```sh
 setenv LANG zh_CN.UTF-8
@@ -174,7 +174,7 @@ setenv QT_IM_MODULE fcitx
 
 ## 故障排除
 
-遇到问题，请先运行 `fcitx` 故障诊断，但是该输出仅对 `bash` 做了环境变量的配置。也就是说他输出的环境变量仅适用于 `bash`、`sh`和`zsh` 等 SHELL，而不适用于 `csh`。于 `csh` 的环境变量配置需要参考上文。
+遇到问题，请先运行 `fcitx` 故障诊断，但是该输出仅对 `bash` 做了环境变量的配置。也就是说他输出的环境变量仅适用于 `bash`、`sh` 和 `zsh` 等 SHELL，而不适用于 `csh`。于 `csh` 的环境变量配置需要参考上文。
 
 如果提示 `bash` 字样且无法输出诊断信息，则需要先安装 `bash`：`# pkg install bash`
 

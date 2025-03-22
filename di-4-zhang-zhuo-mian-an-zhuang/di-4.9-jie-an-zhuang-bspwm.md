@@ -159,7 +159,7 @@ $ feh --bg-center "$HOME/.local/share/wallpapers/wallpaper.jpg"
 
 执行一次后自动设置：
 
-在 `~/.config/bspwm/bspwmrc` 中的 polybar 启动脚本**之前**添加
+在 `~/.config/bspwm/bspwmrc` 中的 polybar 启动脚本 **之前** 添加
 
 ```sh
 $HOME/.fehbg &

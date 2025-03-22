@@ -70,7 +70,7 @@ usr/lib/clang/11.0.1/include
 :
 ```
 
-你只需要输入`q`回车即可。然后：
+你只需要输入 `q` 回车即可。然后：
 
 ```sh
 # freebsd-update install

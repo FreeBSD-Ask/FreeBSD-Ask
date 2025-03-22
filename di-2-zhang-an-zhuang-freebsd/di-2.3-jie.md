@@ -17,13 +17,13 @@ Windows 家庭版不支持 Hyper-V。
 
 >**注意：**
 >
->使用 Gen 2 时请关闭安全启动，否则系统无法启动！点击设置：点击“安全”——>取消勾选“启用安全启动。截至 2025.2.1，FreeBSD 尚不支持安全启动。
+>使用 Gen 2 时请关闭安全启动，否则系统无法启动！点击设置：点击“安全”——> 取消勾选“启用安全启动。截至 2025.2.1，FreeBSD 尚不支持安全启动。
 
 | Hyper-V 代数 | FreeBSD 版本 |                                鼠标                                |  键盘  |                                              备注                                              |
 | :----------: | :----------: | :----------------------------------------------------------------: | :----: | :--------------------------------------------------------------------------------------------: |
 |    Gen 1     |     13.0     |                                支持                                | 不支持 |                                               /                                                |
-|    Gen 2     |     13.0     | [不支持](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=221074) |  支持  |                          需要修改参数`sysctl kern.evdev.rcpt_mask=6`                           |
-|    Gen 2     |     14.0     |                                支持                                |  支持  | 参见[源代码](https://cgit.FreeBSD.org/src/commit/?id=21f4e817fde79d5de79bfbdf180d358ca5f48bf9) |
+|    Gen 2     |     13.0     | [不支持](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=221074) |  支持  |                          需要修改参数 `sysctl kern.evdev.rcpt_mask=6`                           |
+|    Gen 2     |     14.0     |                                支持                                |  支持  | 参见 [源代码](https://cgit.FreeBSD.org/src/commit/?id=21f4e817fde79d5de79bfbdf180d358ca5f48bf9) |
 
 
 ## 测试环境
@@ -139,4 +139,4 @@ PS C:\Users\ykla> Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-H
 - [Hyper-V 集成服务](https://learn.microsoft.com/zh-cn/virtualization/hyper-v-on-windows/reference/integration-services)，对各种 Hyper-V 服务进行了详细说明
 - [使用检查点将虚拟机恢复到以前的状态](https://learn.microsoft.com/zh-cn/virtualization/hyper-v-on-windows/user-guide/checkpoints?source=recommendations&tabs=hyper-v-manager%2Cpowershell)
 - [在 Hyper-V 中在标准检查点与生产检查点之间进行选择](https://learn.microsoft.com/zh-cn/windows-server/virtualization/hyper-v/manage/choose-between-standard-or-production-checkpoints-in-hyper-v)
-- [FreeBSD13 を Hyper-V 環境にインストールしてみた所感](https://qiita.com/nanorkyo/items/d33e1befd4eb9c004fcd)，值得看看
+- [FreeBSD13 を Hyper-V 環境 にインストールしてみた 所感](https://qiita.com/nanorkyo/items/d33e1befd4eb9c004fcd)，值得看看
