@@ -575,7 +575,7 @@ $ pwd
 
 `ee` 是 FreeBSD 基本系统内置的编辑器。还有一款内置的编辑器是 `vi`（实际上是 `nvi`，即新 vi，4.4BSD 再实现），用法较为复杂，读者可自行研究。
 
-`ee` 的用法比 `[nano](https://www.redhat.com/zh/blog/getting-started-nano)`（一款 GNU 编辑器） 还要简单上许多，你从其名字“easy editor”（简单的编辑器）就能看出来。
+`ee` 的用法比 [nano](https://www.redhat.com/zh/blog/getting-started-nano)（一款 GNU 编辑器） 还要简单上许多，你从其名字“easy editor”（简单的编辑器）就能看出来。
 
 比如
 

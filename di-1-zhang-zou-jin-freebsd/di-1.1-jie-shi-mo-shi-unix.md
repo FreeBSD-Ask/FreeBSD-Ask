@@ -44,11 +44,11 @@ UNIX 认证查询网址：[The Open Group official register of UNIX Certified Pr
 
 >**思考题**
 >
-> _**Those who do not understand Unix are condemned to reinvent it, poorly.**_ （那些不懂 Unix 的人注定要再造一个四不像式 Unix）
+>> Those who do not understand Unix are condemned to reinvent it, poorly. （那些不懂 Unix 的人注定要再造一个四不像式 Unix）
+>>
+>>——[Henry Spencer](https://www.nasa.gov/history/alsj/henry.html)
 >
->——[Henry Spencer](https://www.nasa.gov/history/alsj/henry.html)
->
->>作者 Henry Spencer 并未明确批评哪个操作系统，那么你认为，现在这句话更适合哪个常见的操作系统？为什么？
+>作者 Henry Spencer 并未明确批评哪个操作系统，那么你认为，现在这句话更适合哪个常见的操作系统？为什么？
 
 Unix 哲学源于 UNIX 操作系统的开发，作者是 Ken Thompson。Unix 哲学一言以蔽之即大道至简（“keep it simple, stupid”）：
 
@@ -122,7 +122,7 @@ Linux 全称为 GNU/Linux；[GNU 项目](https://www.gnu.org/) 1984；
 >
 > 如果你还是不明白，建议亲自安装试试 [Gentoo](https://www.gentoo.org/downloads/)（stage3）或 [Slackware](http://www.slackware.com/)，再不明白可以试试 [Gentoo（stage1）](https://wiki.gentoo.org/wiki/Stage_file)或 [LFS](https://www.linuxfromscratch.org/lfs/)。
 >
-> **上述操作较为复杂，需要一定的经验与基础知识。**
+> 上述操作较为复杂，需要一定的经验与基础知识。
 
 
 
