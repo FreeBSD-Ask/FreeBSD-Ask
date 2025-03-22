@@ -107,6 +107,12 @@ test1	test2	test3	test4
 cfc	test1	test2
 ```
 
+## 故障排除
+
+- 怎么卸载？
+
+待解决。
+
 ## 参考文献
 
 - [mount linux ext4 drives on Freebsd](https://forums.freebsd.org/threads/mount-linux-ext4-drives-on-freebsd.74414/)
