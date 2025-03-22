@@ -66,7 +66,9 @@ FreeBSD 已从 Linux 移植了显卡驱动，理论上，绝大部分英特尔�
 
 ## 显卡支持情况
 
+对于 FreeBSD 13，编译使用`drm-510-kmod`，支持情况同 Linux 5.10。AMD 可支持 R7 4750U。
 
+FreeBSD 14.1-RELEASE、14-STABLE（OSVERSION >1400508）、编译使用 `drm-61-kmod`，支持情况同 Linux 6.1。经过实际测试，可支持第十二代 Alder Lake-N（如 N100）。十三代等后续版本暂无条件测试。
 
 FreeBSD 15 CUEERNT，编译使用 `drm-66-kmod`，支持情况同 Linux 6.6。
 
@@ -308,6 +310,7 @@ pkg install libva-vdpau-driver libvdpau libvdpau-va-gl
 # cd /usr/ports/multimedia/libvdpau-va-gl/ && make install clean
 ```
 
+工具->偏好设置->输入/编解码器->硬件加速解码：选择 VDPAU  视频解码器
 
 ![](../.gitbook/assets/121233788899956.png)
 
@@ -386,6 +389,7 @@ $ nvidia-smi
 $ kldstat
 ```
 
+会发现系统自动加载了 `linux.ko` 模块。如果觉得太臃肿，不需要 Linux 兼容层，可以自己通过 ports 编译 `nvidia-driver`，去掉 `linux compatibility support`。
 
 ## xorg
 
