@@ -28,7 +28,7 @@ jobs:
           run: yarn autocorrect --fix **/*.md
 
         - name: Markdown add spaces
-          uses: peter-evans/create-pull-request@v6
+          uses: peter-evans/create-pull-request@v7
           with:
              commit-message: "Markdown add spaces"
              labels: "Markdown"

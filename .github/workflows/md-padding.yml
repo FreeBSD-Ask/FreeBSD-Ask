@@ -25,7 +25,7 @@ jobs:
           run: find "$(pwd)" -type f -name "*.md" | xargs -I {} npx mdp -i {}
 
         - name: Markdown add spaces
-          uses: peter-evans/create-pull-request@v6
+          uses: peter-evans/create-pull-request@v7
           with:
              commit-message: "Markdown add spaces"
              labels: "Markdown"
