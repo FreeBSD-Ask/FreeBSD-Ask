@@ -2,18 +2,16 @@
 
 * [FreeBSD 从入门到跑路](README.md)
 * [编辑日志](CHANGELOG.md)
-* [献词](xian-ci.md)
 * [致谢](zhi-xie.md)
 * [序言](xu-yan.md)
 * [凡例](fan-li.md)
 
 ## 第 1 章 FreeBSD 初见
 
-* [第 1.1 节 操作系统的历程：UNIX、Unix-like、Linux 和 FreeBSD](di-1-zhang-zou-jin-freebsd/di-1.1-jie-shi-mo-shi-unix.md)
+* [第 1.1 节 操作系统的历程：UNIX、Unix-like、Linux & FreeBSD](di-1-zhang-zou-jin-freebsd/di-1.1-jie-shi-mo-shi-unix.md)
 * [第 1.2 节 谁在使用 FreeBSD？](di-1-zhang-zou-jin-freebsd/di-1.2.md)
 * [第 1.3 节 为什么要使用 FreeBSD？](di-1-zhang-zou-jin-freebsd/di-1.3-jie-wei-shi-mo-yao-shi-yong-freebsd.md)
 * [第 1.4 节 Linux 用户迁移指南](di-1-zhang-zou-jin-freebsd/di-1.4-jie-linux-yong-hu-qian-yi-zhi-bei.md)
-* [第 1.5 节 FreeBSD 开发计划](di-1-zhang-zou-jin-freebsd/di-1.5-jie-freebsd-kai-fa-ji-hua.md)
 
 ## 第 2 章 安装 FreeBSD
 
@@ -83,14 +81,13 @@
 
 ## 第 6 章 文件系统与磁盘管理
 
-* [第 6.1 节 UFS](di-6-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-6.1-jie-ufs.md)
+* [第 6.1 节 自动挂载文件系统](di-6-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-6.1-zi-dong-gua-zai.md)
 * [第 6.2 节 ZFS](di-6-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-6.2-jie-zfs.md)
 * [第 6.3 节 磁盘扩容](di-6-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-6.3-jie-ci-pan-kuo-rong.md)
-* [第 6.4 节 NTFS](di-6-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-6.4-jie-ntfs-de-gua-zai.md)
+* [第 6.4 节 NTFS & Fat32](di-6-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-6.4-jie-ntfs-de-gua-zai.md)
 * [第 6.5 节 Swap 交换分区的设置](di-6-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-6.5-jie-swap-jiao-huan-fen-qu-de-she-zhi.md)
-* [第 6.6 节 Ext 2/3/4 等文件系统](di-6-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-6.6-jie-ext-234-deng-wen-jian-xi-tong.md)
+* [第 6.6 节 Linux 文件系统](di-6-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-6.6-jie-ext-234-deng-wen-jian-xi-tong.md)
 * [第 6.7 节 ZFS 磁盘加解密](di-6-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-6.7-jie-zfs-ci-pan-jia-jie-mi.md)
-* [第 6.8 节 自动挂载文件系统](di-6-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-6.8-zi-dong-gua-zai.md)
 
 ## 第 7 章 代理服务器
 
@@ -128,7 +125,7 @@
 
 ## 第 12 章 引导、恢复与 TTY 配置
 
-* [第 12.1 节 恢复模式与密码重置](di-12-zhang-yin-dao-yu-hui-fu/di-12.1-jie-hui-fu-mo-shi-yu-mi-ma-zhong-zhi.md)
+* [第 12.1 节 单用户模式与密码重置](di-12-zhang-yin-dao-yu-hui-fu/di-12.1-jie-hui-fu-mo-shi-yu-mi-ma-zhong-zhi.md)
 * [第 12.2 节 FreeBSD EFI 引导管理](di-12-zhang-yin-dao-yu-hui-fu/di-12.2-jie-freebsd-duo-ying-pan-efi-yin-dao-tong-yi.md)
 * [第 12.3 节 FreeBSD 中文 TTY 控制台](di-12-zhang-yin-dao-yu-hui-fu/di-12.3-jie-freebsd-zhong-wen-tty-kong-zhi-tai.md)
 * [第 12.4 节 引导界面与控制台界面](di-12-zhang-yin-dao-yu-hui-fu/di-12.4-jie-yin-dao-jie-mian.md)
@@ -253,8 +250,8 @@
 
 ## 第 24 章 DragonFlyBSD
 
-* [第 24.1 节 DragonFlyBSD 概述](di-28-zhang-dragonflybsd/di-24.1-jie-gai-shu.md)
-* [第 24.2 节 DragonFlyBSD 安装与配置](di-28-zhang-dragonflybsd/di-24.2-jie-an-zhuang-yu-pei-zhi.md)
+* [第 24.1 节 DragonFlyBSD 概述](di-24-zhang-dragonflybsd/di-24.1-jie-gai-shu.md)
+* [第 24.2 节 DragonFlyBSD 安装与配置](di-24-zhang-dragonflybsd/di-24.2-jie-an-zhuang-yu-pei-zhi.md)
 
 ## 第 25 章 TwinCAT/BSD
 
