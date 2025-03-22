@@ -114,7 +114,7 @@ SLIM 窗口下会提示 IBUS 找不到……疑似 bug。
 
 #### 如何查看修改当前 shell
 
-先看看现在的 shell 是什么: `# echo $0`。
+先看看现在的 shell 是什么：`# echo $0`。
 
 例：尝试将当前 shell 修改成 `csh`：
 
@@ -174,7 +174,7 @@ setenv QT_IM_MODULE fcitx
 
 ## 故障排除
 
-遇到问题，请先运行 `fcitx` 故障诊断，但是该输出仅对 `bash` 做了环境变量的配置。 也就是说他输出的环境变量仅适用于 `bash`、`sh`和`zsh` 等 SHELL，而不适用于 `csh`。于 `csh` 的环境变量配置需要参考上文。
+遇到问题，请先运行 `fcitx` 故障诊断，但是该输出仅对 `bash` 做了环境变量的配置。也就是说他输出的环境变量仅适用于 `bash`、`sh`和`zsh` 等 SHELL，而不适用于 `csh`。于 `csh` 的环境变量配置需要参考上文。
 
 如果提示 `bash` 字样且无法输出诊断信息，则需要先安装 `bash`：`# pkg install bash`
 

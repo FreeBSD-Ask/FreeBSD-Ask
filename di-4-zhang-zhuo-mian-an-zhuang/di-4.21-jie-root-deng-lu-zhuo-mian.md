@@ -76,7 +76,7 @@
 # service sddm enable
 ```
 
-更改 `/usr/local/etc/pam.d/sddm` 文件:
+更改 `/usr/local/etc/pam.d/sddm` 文件：
 
 把 `include` 之后的 `login`，替换成 `system`，一共 4 个。
 

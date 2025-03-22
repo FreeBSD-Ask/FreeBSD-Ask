@@ -18,7 +18,7 @@ xdg-user-dirs 可自动管理家目录子目录（可选安装）
 # cd /usr/ports/devel/xdg-user-dirs/ && make install clean # 自动管理家目录子目录
 ``` 
 
-解释:
+解释：
 
 |     软件      |            用途            |
 | :-----------: | :------------------------: |
@@ -54,7 +54,7 @@ xdg-user-dirs 可自动管理家目录子目录（可选安装）
 # ee /etc/fstab
 ```
 
-添加内容如下:
+添加内容如下：
 
 ```sh
 proc /proc procfs rw 0 0
@@ -148,7 +148,7 @@ gnome 捆绑的输入法面板是 `ibus`。
 # cd /usr/ports/chinese/fcitx5-chinese-addons/ && make install clean
 ```
 
-打开或新建文件 `~/.xprofile`，写入:
+打开或新建文件 `~/.xprofile`，写入：
 
 ```sh
 export GTK_IM_MODULE=fcitx

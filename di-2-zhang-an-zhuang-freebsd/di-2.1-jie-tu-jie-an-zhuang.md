@@ -6,7 +6,7 @@
 
 ## FreeBSD 版本概述
 
-已知 FreeBSD 有如下版本（或阶段）： alpha、rc、beta、release、current、stable。
+已知 FreeBSD 有如下版本（或阶段）：alpha、rc、beta、release、current、stable。
 
 **release** 是可以日常/服务器使用的，即一般意义上的 **稳定版** 或者说 LTS。而 ***stable*** 和 ***current*** 都是开发分支，都是 **不稳定的**（稳定与不稳定是相对的，[Netflix 几乎所有节点都运行着 **current**](https://freebsdfoundation.org/netflix-case-study/)）。
 
@@ -46,8 +46,8 @@ current 相对稳定后（即 MFC 最短三天，MFC 即 `Merge From Head`，类
 
 |Installer|VM|SD Card|Documentation|
 |:---:|:---:|:---:|:---:|
-|安装镜像|虚拟机预安装镜像|存储卡镜像|文档|
-|一般安装使用|需要自己扩容|单板机/嵌入式用|就是文档|
+|安装镜像 | 虚拟机预安装镜像 | 存储卡镜像 | 文档|
+|一般安装使用 | 需要自己扩容 | 单板机/嵌入式用 | 就是文档|
 
 >**技巧**
 >
@@ -79,7 +79,7 @@ FreeBSD-14.2-RELEASE-amd64-mini-memstick.img.xz	107445036	   2024-Nov-29 13:04
 
 以上：第一列代表文件名，第二列是文件大小，第三列是发布日期。
 
-|第一列|说明|
+|第一列 | 说明|
 |:---|:---|
 |Parent directory/	-	-|点击后返回上级目录|
 |CHECKSUM.SHA256-FreeBSD-14.2-RELEASE-amd64	  | 本页所有镜像的 SHA256 校验值 |
@@ -152,7 +152,7 @@ rufus 下载地址：[https://rufus.ie/zh](https://rufus.ie/zh)
   - 虚拟机用：[https://download.freebsd.org/snapshots/amd64/amd64/ISO-IMAGES/15.0/](https://download.freebsd.org/snapshots/amd64/amd64/ISO-IMAGES/15.0/)
   - 物理机下载 `-amd64-memstick.img` 或 `-amd64-memstick.img.xz` 结尾的文件
 
-旧版本 FreeBSD 下载地址: 
+旧版本 FreeBSD 下载地址：
 
 - 5.1-9.2 <http://ftp-archive.freebsd.org/pub/FreeBSD-Archive/old-releases/amd64/ISO-IMAGES>
 - 9.3-最新 <http://ftp-archive.freebsd.org/pub/FreeBSD-Archive/old-releases/ISO-IMAGES/>
@@ -322,7 +322,7 @@ FreeBSD 14.2 RELEASE 的 `/` 分区支持 UFS 和 ZFS 两种文件系统。旧�
 
 分区菜单。`您希望如何分区您的磁盘？`
 
-|配置选项|中文说明|
+|配置选项 | 中文说明|
 |---|---|
 |`Auto (ZFS) – Guided Root-on-ZFS`|自动 (ZFS) – 引导式 ZFS root 分区|
 |`Auto (UFS) – Guided UFS Disk Setup`|自动 (UFS) – 引导式 UFS 磁盘设置|
@@ -370,19 +370,19 @@ FreeBSD 14.2 RELEASE 的 `/` 分区支持 UFS 和 ZFS 两种文件系统。旧�
 
 ![](../.gitbook/assets/ins8.2.png)
 
-|配置选项|中文|说明|
+|配置选项 | 中文 | 说明|
 |---|---|---|
 |`>> Install Proceed with Installation`| >> 安装 继续安装||
-|`T Pool Type/Disks: stripe: 0 disks` |存储池类型/磁盘： 条带化：0 块磁盘|详细说明见下|
+|`T Pool Type/Disks: stripe: 0 disks` |存储池类型/磁盘：条带化：0 块磁盘 | 详细说明见下|
 |`- Rescan Devices *` |- 重新扫描设备 *||
 |`- Disk Info *` |- 磁盘信息 *||
 |`N Pool Name zroot` |存储池名称 `zroot`|默认池名 `zroot`|
-|`4 Force 4K Sectors? YES` |强制 4K 扇区？ 是|4K 对齐|
-|`E Encrypt Disks? NO` |加密磁盘？ 否|加密后的登录系统方案请参照本书其他文章|
+|`4 Force 4K Sectors? YES` |强制 4K 扇区？是|4K 对齐|
+|`E Encrypt Disks? NO` |加密磁盘？否 | 加密后的登录系统方案请参照本书其他文章|
 |`P Partition Scheme` |GPT (UEFI) 分区方案 GPT (UEFI)|只有老电脑才需要 `GPT (BIOS+UEFI)` 等选项|
 |`S Swap Size 2g` |交换分区大小 2g|如果你的确不需要 Swap，`Swap Size` 输入 `0` 或 `0G` 即可不设置交换分区。|
-|`M Mirror Swap? NO`| 交换分区镜像？ 否|是否在多个磁盘之间镜像交换分区，若选否，则每个磁盘的交换分区是独立的|
-|`W Encrypt Swap? NO` |加密交换分区？ 否|  |
+|`M Mirror Swap? NO`| 交换分区镜像？否 | 是否在多个磁盘之间镜像交换分区，若选否，则每个磁盘的交换分区是独立的|
+|`W Encrypt Swap? NO` |加密交换分区？否 |  |
 
 
 >**技巧**
@@ -409,10 +409,10 @@ FreeBSD 14.2 RELEASE 的 `/` 分区支持 UFS 和 ZFS 两种文件系统。旧�
 
 `选择虚拟设备类型：`
 
-|配置选项|中文|特点|
+|配置选项 | 中文 | 特点|
 |---|---|---|
 |`Stripe` |条带化 |无冗余，一块硬盘即可|
-|`mirror` |镜像| n 路镜像，最少需要 2 块硬盘|
+|`mirror` |镜像 | n 路镜像，最少需要 2 块硬盘|
 |`raid10` |RAID 1+0 | n 组 2 路镜像，最少需要 2 块硬盘（要求偶数块硬盘）|
 |`raidz1`| RAID-Z1 | 单冗余 RAID，最少需要 3 块硬盘|
 |`raidz2` |RAID-Z2 | 双冗余 RAID，最少需要 4 块硬盘|
@@ -462,18 +462,18 @@ FreeBSD 14.2 RELEASE 的 `/` 分区支持 UFS 和 ZFS 两种文件系统。旧�
 
 `为该卷选择分区方案`
 
-|英文|中文|注释|
+|英文 | 中文 | 注释|
 |---|---|---|
-|`APM Apple Partition Map`|苹果分区表|苹果 `PowerPC` 用（2006 以前）|
-|`BSD BSD Labels`|BSD 磁盘标签|仅 BSD 可识别|
-|`GPT GUID Partition Table`|GPT 全局唯一标识分区表|现代计算机使用（2013+）|
-|`MBR DOS Partitions`|MBR 主引导记录分区表|老式计算机使用（XP、Win7 年代）|
+|`APM Apple Partition Map`|苹果分区表 | 苹果 `PowerPC` 用（2006 以前）|
+|`BSD BSD Labels`|BSD 磁盘标签 | 仅 BSD 可识别|
+|`GPT GUID Partition Table`|GPT 全局唯一标识分区表 | 现代计算机使用（2013+）|
+|`MBR DOS Partitions`|MBR 主引导记录分区表 | 老式计算机使用（XP、Win7 年代）|
 
 ![](../.gitbook/assets/ufs4.png)
 
 `请审查磁盘设置。若无问题，可点击 “Finish”（完成）按钮`
 
-|英文|中文|
+|英文 | 中文|
 |---|---|
 |`Create`|创建|
 |`Delete`|删除|
@@ -486,7 +486,7 @@ FreeBSD 14.2 RELEASE 的 `/` 分区支持 UFS 和 ZFS 两种文件系统。旧�
 
 `您的更改不会被保存到磁盘。如果您选择了覆盖现有数据。它将被删除。您确定要提交您的更改吗？`
 
-|英文|中文|
+|英文 | 中文|
 |---|---|
 |`Commit`|提交|
 |`Revert & Exit`|还原并退出|
@@ -621,7 +621,7 @@ FreeBSD 14.2 RELEASE 的 `/` 分区支持 UFS 和 ZFS 两种文件系统。旧�
 
 - [Regulatory Domain Support](https://wiki.freebsd.org/WiFi/RegulatoryDomainSupport)
 - [regdomain.xml --	802.11 wireless	regulatory definitions](https://man.freebsd.org/cgi/man.cgi?query=regdomain&sektion=5)，对应编码请参考系统中的 `/etc/regdomain.xml` 文件。
-- [阿里公共DNS](https://www.alidns.com/)
+- [阿里公共 DNS](https://www.alidns.com/)
 
 
 ## 时区设置
@@ -695,7 +695,7 @@ FreeBSD 14.2 RELEASE 的 `/` 分区支持 UFS 和 ZFS 两种文件系统。旧�
 >
 >在 FreeBSD 14 以前版本的安装中，在这一步会出现 `disable_sendmail`，请选定之，如果不禁止这个服务会使你在每次开机的时候卡上几分钟，而且这个服务本身没什么用，发邮件用的。
 
-|选项|解释|
+|选项 | 解释|
 | :-----------: | :------------------------ |
 |`0 hild_uids`|隐藏其他用户的进程|
 |`1 hide_gids`|隐藏其他组的进程|
@@ -845,9 +845,9 @@ Add another user? (yes/no) [no]: # 是否还要再添加一位用户
 
 - 无法进入安装界面
 
-　　若是虚拟机，请检查自己的配置；
+  若是虚拟机，请检查自己的配置；
 
-　　若是物理机：
+  若是物理机：
 
 >请依次检查如下列表：
 >
@@ -869,17 +869,17 @@ Add another user? (yes/no) [no]: # 是否还要再添加一位用户
 
 - 重启后又进入了安装界面
 
-　　若是虚拟机，请主动弹出/断开 DVD 开机自动连接，然后重启；若是物理机，请拔出 U 盘或弹出安装光盘，然后重启。
+  若是虚拟机，请主动弹出/断开 DVD 开机自动连接，然后重启；若是物理机，请拔出 U 盘或弹出安装光盘，然后重启。
 
 - 卡在某项服务
 
-　　在以前的版本安装中，可能在启动时长期卡在 sendmail 等服务，或者需要配置静态 IP 地址，但是系统一直在尝试 DHCP。
+  在以前的版本安装中，可能在启动时长期卡在 sendmail 等服务，或者需要配置静态 IP 地址，但是系统一直在尝试 DHCP。
 
-　　可以尝试输入 **ctrl** + **c** 中断该服务，以启动系统。
+  可以尝试输入 **ctrl** + **c** 中断该服务，以启动系统。
 
 - 联想笔记本无电池如何升级 BIOS？
 
-　　如果找不到电池，请解压缩`78cn25ww.exe`文件（BIOS 文件请自行去联想美国官网获取），用记事本打开`platform.ini`，查找：
+  如果找不到电池，请解压缩`78cn25ww.exe`文件（BIOS 文件请自行去联想美国官网获取），用记事本打开`platform.ini`，查找：
 
 ```sh
 [AC_Adapter]

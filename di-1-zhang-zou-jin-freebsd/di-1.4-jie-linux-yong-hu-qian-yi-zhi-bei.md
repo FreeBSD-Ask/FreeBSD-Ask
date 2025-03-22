@@ -33,7 +33,7 @@
 
 ### 参考文献
 
-- [浅析 Linux 初始化 init 系统，第 1 部分: sysvinit 第 2 部分: UpStart 第 3 部分: Systemd](https://www.cnblogs.com/MYSQLZOUQI/p/5250336.html)，为存档，原文已佚
+- [浅析 Linux 初始化 init 系统，第 1 部分：sysvinit 第 2 部分：UpStart 第 3 部分：Systemd](https://www.cnblogs.com/MYSQLZOUQI/p/5250336.html)，为存档，原文已佚
 - [init -- process control initialization](https://man.freebsd.org/cgi/man.cgi?query=init)
 - [Comparison of init systems](https://wiki.gentoo.org/wiki/Comparison_of_init_systems)，各大 init 对比图
 - [GPL Software in FreeBSD Base](https://wiki.freebsd.org/GPLinBase)，FreeBSD 基本系统中的 GPL 软件

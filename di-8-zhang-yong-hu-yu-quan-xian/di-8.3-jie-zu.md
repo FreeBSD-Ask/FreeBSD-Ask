@@ -201,7 +201,7 @@
 
 ```sh
 # chpass -s sh test1 # 更换用户 test1 的登陆环境为 /bin/sh
-# chpass # 以 vi（nvi） 方式打开当前用户信息进行修改
+# chpass # 以 vi（nvi）方式打开当前用户信息进行修改
 # passwd # 修改用户密码，如不指定用户则默认为当前用户。
 ```
 

@@ -26,7 +26,7 @@ xdg-user-dirs 可自动管理家目录子目录（可选安装）
 
 - sddm：LXQt 首选的显示管理器
 
-- gvfs：GNOME 虚拟文件系统，LXQt 依赖此打开 Computer 和 Network ，否则会提示 `Operation not supported`
+- gvfs：GNOME 虚拟文件系统，LXQt 依赖此打开 Computer 和 Network，否则会提示 `Operation not supported`
 
 ## 准备
 

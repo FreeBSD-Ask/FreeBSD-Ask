@@ -20,7 +20,7 @@ Wayland 是 xorg 的替代品，但是目前 BSD 上的 Wayland 支持欠佳。
 
 其中，Gnome 可省略第四步，因为其显示管理器 gdm 早就在第二步就进行了自动安装。
 
-显示管理器推荐搭配是 ：
+显示管理器推荐搭配是：
 
 - KDE5 + sddm
 - Xfce/Mate + lightdm
@@ -275,7 +275,7 @@ vgapci0@pci0:1:0:0:	class=0x030000 rev=0xa1 hdr=0x00 vendor=0x10de device=0x0df4
     subclass   = VGA
 ```
 
-在 `/usr/local/etc/X11/xorg-nvidia-headless.conf` 找到 `Device` 一节，并对应修改 `BusID` ,上面为 ”pci0:1:0:0“：
+在 `/usr/local/etc/X11/xorg-nvidia-headless.conf` 找到 `Device` 一节，并对应修改 `BusID` ,上面为”pci0:1:0:0“：
 
 ```sh
 Section "Device"
@@ -285,7 +285,7 @@ Section "Device"
 EndSection
 ```
 
-检验是否成功启用独显，可以用 mesa-demos 中的程序测试，运行 `bounce`，用 `nvidia-smi -l 1` 观察(每隔一秒刷新一次)。在未使用 nvidia 驱动时会使用 7M 显存，在启用程序时显存并没有变化。
+检验是否成功启用独显，可以用 mesa-demos 中的程序测试，运行 `bounce`，用 `nvidia-smi -l 1` 观察 (每隔一秒刷新一次)。在未使用 nvidia 驱动时会使用 7M 显存，在启用程序时显存并没有变化。
 
 
 ![](../.gitbook/assets/418810292836709.png)
@@ -325,7 +325,7 @@ pkg install libva-vdpau-driver libvdpau libvdpau-va-gl
 
 ### 安装驱动
 
-安装几个 nvidia 相关的包:
+安装几个 nvidia 相关的包：
 
 ```sh
 # pkg install nvidia-drm-kmod nvidia-settings nvidia-xconfig
@@ -358,7 +358,7 @@ pkg install libva-vdpau-driver libvdpau libvdpau-va-gl
 
 这时候应该已经可以驱动显卡了。
 
-查看驱动信息:
+查看驱动信息：
 
 ```sh
 $ nvidia-smi
@@ -375,7 +375,7 @@ $ nvidia-smi
 
 >**技巧**
 >
->在默认情况下，通过 pkg 安装的 nvidia-driver 是包含 Linux 兼容层支持的, 如果要使用 Linux 兼容层，需要执行以下命令；如果不需要，则无需执行：
+>在默认情况下，通过 pkg 安装的 nvidia-driver 是包含 Linux 兼容层支持的，如果要使用 Linux 兼容层，需要执行以下命令；如果不需要，则无需执行：
 >
 >```sh
 ># sysrc linux_enable="YES"
@@ -393,9 +393,9 @@ $ kldstat
 
 可选软件包：
 
-xorg 完整包: xorg
+xorg 完整包：xorg
 
-xorg 最小化包: xorg-minimal（不建议）
+xorg 最小化包：xorg-minimal（不建议）
 
 ### 安装
 

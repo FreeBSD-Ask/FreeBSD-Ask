@@ -60,14 +60,14 @@ $ libime_tabledict 98wbx.txt 98wbx.main.dict
 
 ### 配置文件目录
 
-五笔输入法已经安装好，在开始之前记住两个目录,第一个对应 ibus，第二个对应 fcitx5，都是 rime 的配置文件位置：
+五笔输入法已经安装好，在开始之前记住两个目录，第一个对应 ibus，第二个对应 fcitx5，都是 rime 的配置文件位置：
 
 ```sh
 ~/.config/ibus/rime             # ${XDG_CONFIG_HOME}/ibus/rime
 ~/.local/share/fcitx5/rime      # ${XDG_DATA_HOME}/fcitx5/rime
 ```
 
-其实两者都尊循 XDG 基本目录规范,但 FreeBSD 中没有定义这两个环境变量，写在这里只是作个介绍。开始设置前**先进入正确的配置目录**
+其实两者都尊循 XDG 基本目录规范，但 FreeBSD 中没有定义这两个环境变量，写在这里只是作个介绍。开始设置前**先进入正确的配置目录**
 
 ```sh
 $ cd ~/.config/ibus/rime

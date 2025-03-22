@@ -133,7 +133,7 @@ Current=sddm-freebsd-black-theme
 
 ### 参考文献
 
-- [デスクトップ環境の構築 - 4-7. LXQTのインストールと設定(LXQT 2.0.0)](http://silversack.my.coocan.jp/bsd/fbsd11x_bde-4-7_lxqt.htm)
+- [デスクトップ環境の構築 - 4-7. LXQT のインストールと設定 (LXQT 2.0.0)](http://silversack.my.coocan.jp/bsd/fbsd11x_bde-4-7_lxqt.htm)
 
 ## 中文化
 
@@ -159,7 +159,7 @@ Current=sddm-freebsd-black-theme
 ![KDE 6](../.gitbook/assets/kde6-2.png)
 ### 系统中文化方法②系统设置
 
-点击开始-> System Settings ->  `Language & Time` 在 `Region & Language` 项的 `Language` 栏点击右侧 `Modify` 中找到 “简体中文”（一般是倒数第二，如果都是`□□□□`，检查你的中文字体安装否） 单击之。然后单击 `Apply` 按钮；logout（注销）后重新登录，此时系统语言将变为中文。
+点击开始-> System Settings ->  `Language & Time` 在 `Region & Language` 项的 `Language` 栏点击右侧 `Modify` 中找到“简体中文”（一般是倒数第二，如果都是`□□□□`，检查你的中文字体安装否）单击之。然后单击 `Apply` 按钮；logout（注销）后重新登录，此时系统语言将变为中文。
 
 ![KDE 6](../.gitbook/assets/kde6-4.png)
 
@@ -222,7 +222,7 @@ Current=sddm-freebsd-black-theme
 # ee /etc/fstab
 ```
 
-添加内容如下:
+添加内容如下：
 
 ```sh
 proc            /proc           procfs  rw      0       0

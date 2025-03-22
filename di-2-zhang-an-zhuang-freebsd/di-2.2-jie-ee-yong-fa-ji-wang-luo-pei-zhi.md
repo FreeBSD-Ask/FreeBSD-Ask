@@ -90,7 +90,7 @@ login:
 大部分命令行命令都应是有意义的，例如 `ls` 即 `list`（列出来）、`wget` 即通过 web（网络）来 `get`（下载）；罕有一些见名不知意的命令，比如 `fuck` 命令（可自动纠正拼写错误的命令）。
 
 ```sh
-# 命令 选项  参数1       参数2
+# 命令 选项  参数 1       参数 2
 # ls   -l   /home/ykla /tmp
 /home/ykla:
 total 317
@@ -192,7 +192,7 @@ Seems like fuck alias isn't configured!
 More details - https://github.com/nvbn/thefuck#manual-installation
 ```
 
-我们打开网页浏览。发现要把 `eval $(thefuck --alias)` 加入到 `~/.bash_profile`（bash shell）、`~/.bashrc`（bash shell） 或 `~/.zshrc`（zsh shell）。
+我们打开网页浏览。发现要把 `eval $(thefuck --alias)` 加入到 `~/.bash_profile`（bash shell）、`~/.bashrc`（bash shell）或 `~/.zshrc`（zsh shell）。
 
 我们 FreeBSD 默认使用的是 sh，故将：
 
@@ -298,7 +298,7 @@ Linux 中常见的 shell 一般是 bash（Bourne Again SHell，即“又一个 B
 >
 >```bash
 >$ ls -l /bin/sh
->lrwxrwxrwx 1 root root 4  2月 25 23:19 /bin/sh -> dash
+>lrwxrwxrwx 1 root root 4  2 月 25 23:19 /bin/sh -> dash
 >```
 
 ### 快捷键
@@ -400,7 +400,7 @@ round-trip min/avg/max/stddev = 27.465/27.596/27.701/0.085 ms
 #### 其他
 
 - **ctrl**+**l**（L 的小写）：清空屏幕
-- **ctrl**+**a**： 移动光标到命令行首
+- **ctrl**+**a**：移动光标到命令行首
 - **ctrl**+**a**: 移动光标到命令行尾
 
 
@@ -575,7 +575,7 @@ $ pwd
 
 `ee` 是 FreeBSD 基本系统内置的编辑器。还有一款内置的编辑器是 `vi`（实际上是 `nvi`，即新 vi，4.4BSD 再实现），用法较为复杂，读者可自行研究。
 
-`ee` 的用法比 [nano](https://www.redhat.com/zh/blog/getting-started-nano)（一款 GNU 编辑器） 还要简单上许多，你从其名字“easy editor”（简单的编辑器）就能看出来。
+`ee` 的用法比 [nano](https://www.redhat.com/zh/blog/getting-started-nano)（一款 GNU 编辑器）还要简单上许多，你从其名字“easy editor”（简单的编辑器）就能看出来。
 
 比如
 
@@ -657,7 +657,7 @@ ykla@ykla:~ $ ls -a
 >
 >根据上面的输出，思考：上面的 `.`、`..` 分别代表什么？
 
-试试不加选项 `-a` 呢?
+试试不加选项 `-a` 呢？
 
 ```sh
 ykla@ykla:~ $ ls
@@ -807,7 +807,7 @@ $ rm -rf /home/ykla/test/
 
 >**警告**
 >
->网上经常有人说使用 `sudo rm -rf /*` 是某某命令可以xxx，误导他人对系统造成不可挽回的灾难性破坏。该命令实质上是以 root 权限（~~还好 FreeBSD 默认没有 sudo~~），删除 `/` 及其子目录下的一切存在。让我来展示一下：
+>网上经常有人说使用 `sudo rm -rf /*` 是某某命令可以 xxx，误导他人对系统造成不可挽回的灾难性破坏。该命令实质上是以 root 权限（~~还好 FreeBSD 默认没有 sudo~~），删除 `/` 及其子目录下的一切存在。让我来展示一下：
 >```sh
 >root@ykla:/ # rm -rf /*
 >rm: /boot/efi: Device busy

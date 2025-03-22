@@ -66,7 +66,7 @@
 # gpart add -a 4k -l swap -s 4G -t freebsd-swap da0  # 添加 swap 分区（-t），卷标为 swap（-l），大小为 4G（-s），对齐（-a），注意替换 da0
 # gpart add -a 4k -l zroot -t freebsd-zfs da0  # 添加 ZFS 分区，卷标为 zroot，使用全部空余大小，注意替换 da0
 # mount -t tmpfs tmpfs /mnt  # 挂载一个空文件系统准备安装
-# zpool create -f -o altroot=/mnt -O compress=lz4 -O atime=off -m none zroot /dev/gpt/zroot  # 创建 ZFS 池，暂时挂载至 /mnt（-o altroot=/mnt），使用 lz4 压缩（-O compress=lz4，可以换成zstd等），关闭时间标签（-O atime=off），/dev/gpt/zroot 是我们刚建立的卷标
+# zpool create -f -o altroot=/mnt -O compress=lz4 -O atime=off -m none zroot /dev/gpt/zroot  # 创建 ZFS 池，暂时挂载至 /mnt（-o altroot=/mnt），使用 lz4 压缩（-O compress=lz4，可以换成 zstd 等），关闭时间标签（-O atime=off），/dev/gpt/zroot 是我们刚建立的卷标
 #创建数据集
 # zfs create -o mountpoint=none zroot/ROOT
 # zfs create -o mountpoint=/ zroot/ROOT/default

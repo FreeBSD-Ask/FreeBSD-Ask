@@ -258,7 +258,7 @@ root@ykla:/usr/ports/sysutils/htop # make all-depends-list
 # make install-missing-packages
 ```
 
-　　以 `chinese/fcitx` 为示例：
+  以 `chinese/fcitx` 为示例：
 
 ```sh
 root@ykla:~ # cd /usr/ports/chinese/fcitx
@@ -339,9 +339,9 @@ vlc-3.0.21_4,4                     <
 w3m-0.5.3.20230718_1               <
 ```
 
-下边分别列出 2 种 FreeBSD 手册中提及的升级工具:
+下边分别列出 2 种 FreeBSD 手册中提及的升级工具：
 
-### ① portmaster （推荐）
+### ① portmaster（推荐）
 
 - 更新：
 

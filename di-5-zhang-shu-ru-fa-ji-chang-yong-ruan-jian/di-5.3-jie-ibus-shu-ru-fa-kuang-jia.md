@@ -37,7 +37,7 @@ ibus 即“Intelligent Input Bus”（智能输入总线）。
 - zsh: `~/.zprofile` 写入 A 组配置
 - csh: `~/.cshrc` 写入 B 组配置
 
-注销后登录，直接点击 ibus 图标加入自己的输入法后，即可使用,不需配置,不须中文化设置（测试环境 sddm/xfce/freebsd 13.2/sh）。但是 ibus 提示应当在相应的 shell 文件(具体文件另述）中加入以下内容
+注销后登录，直接点击 ibus 图标加入自己的输入法后，即可使用，不需配置，不须中文化设置（测试环境 sddm/xfce/freebsd 13.2/sh）。但是 ibus 提示应当在相应的 shell 文件 (具体文件另述）中加入以下内容
 
 A 组：
 
@@ -54,7 +54,7 @@ export XIM_ARGS="--daemonize --xim"
 或 B 组：
 
 ```sh
-#B组 在 csh 中
+#B 组 在 csh 中
 setenv XIM ibus
 setenv GTK_IM_MODULE ibus
 setenv QT_IM_MODULE ibus
