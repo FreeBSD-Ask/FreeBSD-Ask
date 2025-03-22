@@ -1,6 +1,6 @@
 # 第 4.23 节 远程桌面管理
 
-## VNC 与 RPD（XRDP） 对比
+## VNC 与 RPD（XRDP）对比
 
 XRDP 是 Microsoft RDP 的开源实现。XRDP 不支持屏幕镜像外。
 
@@ -221,7 +221,7 @@ your environment.
 >
 > 如果看到一个背景是蓝色的菜单。请保持 xrdp 默认设置，第一行 Xorg，第二行 输入 FreeBSD 系统中的用户名，第三行输入其密码。点击 `OK`，即可进入桌面。
 
-### 中文化(该用户使用 sh 作为 shell）：
+### 中文化 (该用户使用 sh 作为 shell）：
 
 
 ```sh
@@ -401,9 +401,9 @@ root@ykla:~ # /usr/local/bin/hbbr
 ^C[2024-08-10 23:10:04.393365 +08:00] INFO [src/common.rs:176] signal interrupt
 ```
 
-在其他设备上打开 rustdesk 客户端，两边都要填入相同的 “ID 服务器（FreeBSD 的 IP 地址或域名）”和“Key”，其他空着不填，在控制端输入被控端显示的 ID 即可连接。
+在其他设备上打开 rustdesk 客户端，两边都要填入相同的“ID 服务器（FreeBSD 的 IP 地址或域名）”和“Key”，其他空着不填，在控制端输入被控端显示的 ID 即可连接。
 
 ### 参考文献
 
 - [rustdesk-server Self hosted RustDesk server](https://www.freshports.org/net/rustdesk-server/)
-- [远程控制软件RustDesk自建服务器全平台部署及使用教程](https://www.cnblogs.com/safe-rabbit/p/18020812)
+- [远程控制软件 RustDesk 自建服务器全平台部署及使用教程](https://www.cnblogs.com/safe-rabbit/p/18020812)

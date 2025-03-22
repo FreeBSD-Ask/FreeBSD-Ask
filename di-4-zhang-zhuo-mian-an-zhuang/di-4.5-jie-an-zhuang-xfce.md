@@ -78,7 +78,7 @@ lightdm_env="LC_MESSAGES=zh_CN.UTF-8"
 
 编辑 `/usr/local/share/xgreeters/slick-greeter.desktop`：
 
-`Exec=slick-greeter` 改成 `Exec=env LANGUAGE=zh_CN slick-greeter` 保存，重启 `lightdm` 服务就生效:
+`Exec=slick-greeter` 改成 `Exec=env LANGUAGE=zh_CN slick-greeter` 保存，重启 `lightdm` 服务就生效：
 
 
 ```sh
@@ -115,7 +115,7 @@ $ xfconf-query -c xsettings -p /Gtk/Modules -n -t string -s "appmenu-gtk-module"
 
 FreeBSD 的 xfce 邮箱客户端推荐用 evolution，搭配 xfce4-mailwatch-plugin gnome-keyring 使用。
 
-还有推荐 xfce 的一个桌面插件。叫 verve。配合设置智能书签，可以查网页内容。 我这里设置了 FreeBSD 的 man 手册，就可以通过搜索框搜索需要的内容。
+还有推荐 xfce 的一个桌面插件。叫 verve。配合设置智能书签，可以查网页内容。我这里设置了 FreeBSD 的 man 手册，就可以通过搜索框搜索需要的内容。
 
 ## 故障排除
 

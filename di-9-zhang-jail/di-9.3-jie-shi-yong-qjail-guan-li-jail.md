@@ -1,6 +1,6 @@
 # 第 9.3 节 使用 qjail 管理 jail
 
-qjail 是 jail 环境的部署工具，复刻自 ezjail 3.1。jail 管理工具有 ezjail、 qjail、 iocage 等。ezjail 在 2015 年更新到 3.4.2 后一直没有更新，2018 年做过一次错误更新，不过好像也不是作者写的。ezjail 的 ports 更新依赖 portsnap，这个现在已经废弃了。iocage 依赖于 zfs 文件系统，使用 ufs 文件系统的用户无法使用。qjail 则在这些方面不存在问题。ezjail 不支持 jail 的 vnet 功能，iocage 和 qjail 则支持。ezjail 和 qjail 使用 sh 编写，iocage 使用 python 编写。
+qjail 是 jail 环境的部署工具，复刻自 ezjail 3.1。jail 管理工具有 ezjail、qjail、iocage 等。ezjail 在 2015 年更新到 3.4.2 后一直没有更新，2018 年做过一次错误更新，不过好像也不是作者写的。ezjail 的 ports 更新依赖 portsnap，这个现在已经废弃了。iocage 依赖于 zfs 文件系统，使用 ufs 文件系统的用户无法使用。qjail 则在这些方面不存在问题。ezjail 不支持 jail 的 vnet 功能，iocage 和 qjail 则支持。ezjail 和 qjail 使用 sh 编写，iocage 使用 python 编写。
 
 下文中部署的 jail 在概念上结构如下图：
 
@@ -13,7 +13,7 @@ qjail 是 jail 环境的部署工具，复刻自 ezjail 3.1。jail 管理工具�
 在 `/etc/rc.conf` 文件中写入
 
 ```sh
-cloned_interfaces="lo1"  # 克隆出 lo1 ，尽量和宿主机网络配置分开。注意，如果要生成多个端口，也应该在同一行中描述，以空格隔开，而不是另外创建一行，如 cloned_interfaces="lo1 lo2" 。分成多行写，只会有一行生效。
+cloned_interfaces="lo1"  # 克隆出 lo1，尽量和宿主机网络配置分开。注意，如果要生成多个端口，也应该在同一行中描述，以空格隔开，而不是另外创建一行，如 cloned_interfaces="lo1 lo2" 。分成多行写，只会有一行生效。
 ifconfig_lo1_alias0="inet 192.168.1.0-9" # 宿主机 ip 为 10.0.2.15, 选择该网段是为了和宿主机网段分开，可自行斟酌
 ```
 
@@ -75,13 +75,13 @@ remote size / mtime: 195363380 / 1652346155
 
 部署好 qjail 的目录结构后 `/usr/jails` 目录下会自动生成 `sharedfs` `template` `archive` `flavors` 四个目录：
 
-- **sharedfs** 包含一份只读的操作系统可执行库文件，挂载为 nullfs ，在各 jail 之间共享，以节省存储空间的使用。
+- **sharedfs** 包含一份只读的操作系统可执行库文件，挂载为 nullfs，在各 jail 之间共享，以节省存储空间的使用。
 
 - **template** 包含操作系统的配置文件，将被复制到每个 jail 的基本文件系统中
 
 - **archive** 保存 jail archive 命令产生的存档文件
 
-- **flavors** 包含系统风格（ flavors ）和用户创建的自定义风格，其实就是自己定义的配置文件等
+- **flavors** 包含系统风格（flavors）和用户创建的自定义风格，其实就是自己定义的配置文件等
 
 ## 部署 jail
 
@@ -91,7 +91,7 @@ remote size / mtime: 195363380 / 1652346155
 
 `-n` 指定使用 lo1 作为网络接口，`-4` 指定 ipv4 地址。
 
-生成 jail1 后，`/usr/jails/` 目录下对应生成 `jail1` 目录( `/usr/jails/jail1/`),保存相应文件。
+生成 jail1 后，`/usr/jails/` 目录下对应生成 `jail1` 目录 ( `/usr/jails/jail1/`),保存相应文件。
 
 可以在上面提到的 `flavors` 目录中建立自己的配置文件以便在部署 jail 时复制到新的 jail 中。
 
@@ -162,7 +162,7 @@ remote size / mtime: 195363380 / 1652346155
 
 ## 更新 jail
 
-下面更新 jail 的部分不针对单个 jail ，而是针对每个 jail ，因为这些文件利用 nullfs 共享一份。
+下面更新 jail 的部分不针对单个 jail，而是针对每个 jail，因为这些文件利用 nullfs 共享一份。
 
 ### 更新 jail 中的基本系统
 
@@ -226,7 +226,7 @@ qjail 可以用 `qjail config` 命令对每个 jail 另作设置，运行 `qjail
 # qjail config -h jail1
 ```
 
-快速开启 jail1 的 ssh 服务,新建一个 wheel 组用户，用户名和密码同 jail 名，首次用这个用户登录要求修改密码。也可以在登录 jail 控制台后，自行配置 sshd 服务。
+快速开启 jail1 的 ssh 服务，新建一个 wheel 组用户，用户名和密码同 jail 名，首次用这个用户登录要求修改密码。也可以在登录 jail 控制台后，自行配置 sshd 服务。
 
 ### `-m` `-M`
 
@@ -234,7 +234,7 @@ qjail 可以用 `qjail config` 命令对每个 jail 另作设置，运行 `qjail
 # qjail config -m jail1
 ```
 
-设置 jail1 需手动启动（manual 状态），`qjail_enable="YES"` 写入 `/etc/rc.conf` 后在系统启动时会自动启动各个 jail ，设为手动启动后则不会在系统启动时自动启动相应的 jail ，须用 `qjail start jailname` 启动。
+设置 jail1 需手动启动（manual 状态），`qjail_enable="YES"` 写入 `/etc/rc.conf` 后在系统启动时会自动启动各个 jail，设为手动启动后则不会在系统启动时自动启动相应的 jail，须用 `qjail start jailname` 启动。
 
 对应小写的 `-m` 选项，有大写的 `-M` 选项，作用为关闭手动启动状态，即清除 manual 状态，可以在系统启动时自动启用 jail。qjail 中有大量类似的选项，小写字母的选项启用某个功能，大写字母的选项关闭对应功能。如果下文中同时出现小写和大写的选项就不在过多作出说明。
 
@@ -252,19 +252,19 @@ qjail 可以用 `qjail config` 命令对每个 jail 另作设置，运行 `qjail
 # qjail config -y jail1
 ```
 
-启用该 jail 的 SysV IPC,在 jail 中安装 postgresql 时，需要打开这个选项，postgresql 运行基于这个功能。
+启用该 jail 的 SysV IPC，在 jail 中安装 postgresql 时，需要打开这个选项，postgresql 运行基于这个功能。
 
 ## 网络设定
 
-这里作个提示，有的教程里会教你用 `qjail config -k jailname` 打开 raw_sockets 功能来打开外网访问的能力，其实这里是个误解，raw_sockets 只是像 ping 一类的工具需要使用而已，并不是说网络访问一定要打开 raw_sockets 。而且在 jail 中打开 raw_sockets 本身有安全风险，这是 jail 环境默认的一种安全设计。所以除非是你一定要在 jail 中用 ping 一类的工具，不管是用什么方式构建的 jail 都是不建议打开 raw_sockets 功能的。
+这里作个提示，有的教程里会教你用 `qjail config -k jailname` 打开 raw_sockets 功能来打开外网访问的能力，其实这里是个误解，raw_sockets 只是像 ping 一类的工具需要使用而已，并不是说网络访问一定要打开 raw_sockets。而且在 jail 中打开 raw_sockets 本身有安全风险，这是 jail 环境默认的一种安全设计。所以除非是你一定要在 jail 中用 ping 一类的工具，不管是用什么方式构建的 jail 都是不建议打开 raw_sockets 功能的。
 
-此时的 jail 还不能连接网络，因为 jail 绑定在 lo1 网络接口上，lo1 并不能直接访问外网，接下来通过 pf 设定网络, 其中 `em0` 为外网接口
+此时的 jail 还不能连接网络，因为 jail 绑定在 lo1 网络接口上，lo1 并不能直接访问外网，接下来通过 pf 设定网络，其中 `em0` 为外网接口
 
 在 `/etc/pf.conf` 中写入
 
 ```sh
 nat pass on em0 inet from lo1 to any -> em0  # 使 jail 可以访问网络，从 lo1 接口发出的连接通过 nat 转发到 em0
-rdr pass on em0 inet proto tcp from any to em0 port 22 -> 192.168.1.1 port 22  # 使宿方机外可以访问指定 jail，端口重定向，把连接到 em0 上22端口上的 tcp 连接重定向到 192.168.1.1 地址（即 jail1 ）的22端口上
+rdr pass on em0 inet proto tcp from any to em0 port 22 -> 192.168.1.1 port 22  # 使宿方机外可以访问指定 jail，端口重定向，把连接到 em0 上 22 端口上的 tcp 连接重定向到 192.168.1.1 地址（即 jail1）的 22 端口上
 ```
 
 ```sh
@@ -335,7 +335,7 @@ $ exit   #  回到 jail root 用户，注意提示符变化
 # service postgresql start
 ```
 
-这里使用 initdb 而不是使用安装时提示的 `/usr/local/etc/rc.d/postgresql initdb` 是为了避免之后设置数据库密码时，来回修改 `pg_hba.conf` 文件，现对选项作简要说明:
+这里使用 initdb 而不是使用安装时提示的 `/usr/local/etc/rc.d/postgresql initdb` 是为了避免之后设置数据库密码时，来回修改 `pg_hba.conf` 文件，现对选项作简要说明：
 
 - **`-A`** 为本地用户指定在 pg_hba.conf 中使用的默认认证方法
 

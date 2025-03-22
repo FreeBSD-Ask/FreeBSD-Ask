@@ -28,7 +28,7 @@
 
 ### 参考文献
 
-- [[经验] 上直链！！ VMWare Workstation Pro 免费给个人用了](https://hostloc.com/thread-1306968-1-1.html)
+- [[经验] 上直链！！VMWare Workstation Pro 免费给个人用了](https://hostloc.com/thread-1306968-1-1.html)
 
 ### 参考文献
 
@@ -124,7 +124,7 @@
 
 ## 网络设置
 
-请使用 NAT 模式（默认），如果不能与宿主机（物理机）互通，请打开 VMware 编辑-虚拟网络管理器，“还原默认设置”，直至出现类似下图的配置：
+请使用 NAT 模式（默认），如果不能与宿主机（物理机）互通，请打开 VMware 编辑 - 虚拟网络管理器，“还原默认设置”，直至出现类似下图的配置：
 
 >**注意**
 >
@@ -143,7 +143,7 @@
 
 ![vmware network on freebsd](../.gitbook/assets/net1.png)
 
-以上请不要手动设置，如果虚拟机内部一直提示 `no link`，请重启物理机，再打开虚拟机：VMware 编辑-虚拟网络管理器，“还原默认设置”，直至出现上述配置。（请不要尝试手动配置，那是无效的）
+以上请不要手动设置，如果虚拟机内部一直提示 `no link`，请重启物理机，再打开虚拟机：VMware 编辑 - 虚拟网络管理器，“还原默认设置”，直至出现上述配置。（请不要尝试手动配置，那是无效的）
 
 如果没有网络请设置 DNS 为`223.5.5.5`。请看本章其余章节。
 
@@ -290,7 +290,7 @@ root@ykla:/home/ykla # ls /mnt/hgfs/Downloads/
 
 #### 参考文献
 
-- [解决vmware上Ubuntu共享文件夹（2022年7月）](https://www.cnblogs.com/MaRcOGO/p/16463460.html)，整体方法参考此处
+- [解决 vmware 上 Ubuntu 共享文件夹（2022 年 7 月）](https://www.cnblogs.com/MaRcOGO/p/16463460.html)，整体方法参考此处
 - [fuse: failed to open fuse device](https://forums.freebsd.org/threads/fuse-failed-to-open-fuse-device.44544/)，解决 `fuse: failed to open fuse device: No such file or directory` 的问题
 - [VMware shared folders](https://forums.freebsd.org/threads/vmware-shared-folders.10318/)，挂载方法参考此处
 
@@ -307,7 +307,7 @@ root@ykla:/home/ykla # ls /mnt/hgfs/Downloads/
 
 ![VMware 安装 FreeBSD](../.gitbook/assets/vm16.png)
 
-硬件——显示——监视器——任意监视器的最大分辨率(M)，将其由默认最大的 `2560 x 1600`（2K） 改成其他较小值即可，亦可自定义数值。
+硬件——显示——监视器——任意监视器的最大分辨率 (M)，将其由默认最大的 `2560 x 1600`（2K）改成其他较小值即可，亦可自定义数值。
 
 - 没有声音
 
@@ -336,11 +336,11 @@ VMware 已被博通收购。**故目前下载任何博通产品均须先注册�
 >>在页面“Enter text from image”（输入图片上的文本）处输入图片上的文本信息（实际上是验证码）。如果看不清或者不认识，可以点 `Enter text from image` 右侧的🔁
 >>点击“Next”（继续）
 >>
->>如果你使用的是 QQ号生成的邮箱，请打开 <https://wx.mail.qq.com/>。其他邮箱请在各自网站打开，如果不知道，请使用 QQ 邮箱。
+>>如果你使用的是 QQ 号生成的邮箱，请打开 <https://wx.mail.qq.com/>。其他邮箱请在各自网站打开，如果不知道，请使用 QQ 邮箱。
 >
 >![注册](../.gitbook/assets/Register2.png)
 >
->- 把第五步得到的“Verification Code: 972980”，中的 972980（你的和我不一样，找你自己的）填到“Enter text from image” 里面。
+>- 把第五步得到的“Verification Code: 972980”，中的 972980（你的和我不一样，找你自己的）填到“Enter text from image”里面。
 >
 >![邮箱验证码](../.gitbook/assets/mail.png)
 >

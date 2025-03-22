@@ -146,7 +146,7 @@ root@ykla:/home/ykla # rm /usr/ports/
 
 - 还原快照
 
-还原时不能递归还原快照，必须挨个还原（如果你有更好的方案请告诉我们,网络上有一些脚本可用）：
+还原时不能递归还原快照，必须挨个还原（如果你有更好的方案请告诉我们，网络上有一些脚本可用）：
 
 与虚拟机快照有所不同，在缺省情况下，`zfs rollback` 命令无法回滚到除最新快照以外的快照（[参考手册](https://docs.oracle.com/cd/E19253-01/819-7065/gbcxk/index.html)），除非使用 `r`，但这会删除该快照创建后的所有快照。
 
@@ -178,7 +178,7 @@ root@ykla:/home/ykla #
 
 ## 启动环境
 
-什么是启动环境？用 snapshot 和 rollback 结合，相当于在一条时间上线进行跳转。启动环境相当于一条时间线，复制一个启动环境相当于再造一条时间线(复制之后两个启动环境互相独立)，两个启动环境间的切换是两条时间线的穿越（或者说平行空间的穿越）。默认安装中 `zroot/ROOT/default` 是默认的启动环境。
+什么是启动环境？用 snapshot 和 rollback 结合，相当于在一条时间上线进行跳转。启动环境相当于一条时间线，复制一个启动环境相当于再造一条时间线 (复制之后两个启动环境互相独立)，两个启动环境间的切换是两条时间线的穿越（或者说平行空间的穿越）。默认安装中 `zroot/ROOT/default` 是默认的启动环境。
 
 ```sh
 # zfs snap zroot/ROOT/default@new                         # 建一个 zfs 快照
@@ -214,7 +214,7 @@ new                               R      /          2.84M 2023-09-20 15:17
 default                           N      -          40.8G 2023-04-10 10:06
 ```
 
-重启 FreeBSD （启动菜单里选择 `new` 启动环境，或如上用 `bectl activate new` 切换到 new 启动环境），用 `df` 观察，挂载的根目录的文件系统已经是 `zroot/ROOT/new`
+重启 FreeBSD（启动菜单里选择 `new` 启动环境，或如上用 `bectl activate new` 切换到 new 启动环境），用 `df` 观察，挂载的根目录的文件系统已经是 `zroot/ROOT/new`
 
 ```sh
 # df
@@ -239,7 +239,7 @@ fdescfs                     1        1         0   100%    /dev/fd
 
 ## FreeBSD zfs 的 zpool 升级
 
-13.2 到 14.0 ，zpool 版本有所升级。
+13.2 到 14.0，zpool 版本有所升级。
 
 此处假定已经用 `freebsd-update` 从 13.2 升级到了 14.0。
 

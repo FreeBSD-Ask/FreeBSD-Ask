@@ -18,13 +18,13 @@ FreeBSD 传统上有四类源：FreeBSD 之所以有这么多源是因为其既�
 
 ### FreeBSD 传统上有四类源：pkg、ports、~~portsnap~~、update、kernel modules 源
 
-|源|说明|备注|
+|源 | 说明 | 备注|
 |:---:|:---|:---|
-|pkg|类似于传统 Linux 的包管理器，用于安装二进制软件包|不需要二进制方式安装软件可以不配置，默认未安装 `pkg`，输入 `pkg` 回车会提示安装|
+|pkg|类似于传统 Linux 的包管理器，用于安装二进制软件包 | 不需要二进制方式安装软件可以不配置，默认未安装 `pkg`，输入 `pkg` 回车会提示安装|
 |~~portsnap~~|拉取 Ports 的源代码模板（本身不含源代码，只是一些描述文件和补丁集）。换言之，这个源类似 Gentoo 的 [ebuild 数据库](https://mirrors.ustc.edu.cn/help/gentoo.html)|**已在 FreeBSD 14 中废弃，无需配置，后续版本亦不再使用，** 改用 `git`、`gitup` 和压缩包 `ports.tar.gz` 等方式获取。|
 |ports|Gentoo 的包管理器 Portage（命令为 `emerge`）即是源于此。用于帮助用户从源代码编译安装软件。换言之，等同于 Gentoo 的 [Distfiles 源](https://mirrors.ustc.edu.cn/help/gentoo.html)|不需要源代码方式编译软件可以不配置。|
-|update|用于更新系统工具和系统本身|预计在 FreeBSD 15或 16 中废弃，转而使用 [pkgbase](https://wiki.freebsd.org/PkgBase) 代替之|
-|kernel modules（kmods）|内核模块源，为解决小版本间可能存在的 ABI 不兼容问题|参见 [Possible solution to the drm-kmod kernel mismatch after upgrade from Bapt](https://forums.freebsd.org/threads/possible-solution-to-the-drm-kmod-kernel-mismatch-after-upgrade-from-bapt.96058/#post-682984)、[CFT: repository for kernel modules](https://lists.freebsd.org/archives/freebsd-ports/2024-December/006997.html)|
+|update|用于更新系统工具和系统本身 | 预计在 FreeBSD 15 或 16 中废弃，转而使用 [pkgbase](https://wiki.freebsd.org/PkgBase) 代替之|
+|kernel modules（kmods）| 内核模块源，为解决小版本间可能存在的 ABI 不兼容问题 | 参见 [Possible solution to the drm-kmod kernel mismatch after upgrade from Bapt](https://forums.freebsd.org/threads/possible-solution-to-the-drm-kmod-kernel-mismatch-after-upgrade-from-bapt.96058/#post-682984)、[CFT: repository for kernel modules](https://lists.freebsd.org/archives/freebsd-ports/2024-December/006997.html)|
 > 注意：
 >
 > `portsnap` 在 FreeBSD 14 中已经弃用，改为使用 `gitup`（请参考第 3.3 节）：
@@ -52,7 +52,7 @@ FreeBSD 中 pkg 源分为系统级和用户级两个配置文件。**不建议**
 
 > **并非所有源都有 `quarterly` 和 `latest`，具体请看 <https://pkg.freebsd.org/> 。**
 >
-> **若要获取滚动更新的包，请将 `quarterly` 修改为 `latest`。二者区别见 FreeBSD 手册。请注意, `CURRENT` 版本只有 `latest`：**
+> **若要获取滚动更新的包，请将 `quarterly` 修改为 `latest`。二者区别见 FreeBSD 手册。请注意，`CURRENT` 版本只有 `latest`：**
 >
 >>使用命令修改系统级 pkg 源使用 latest：
 >>
@@ -72,14 +72,14 @@ FreeBSD 中 pkg 源分为系统级和用户级两个配置文件。**不建议**
 >
 >视频教程见 [005-FreeBSD14.2 更换 pkg 源为 USTC 镜像站](https://www.bilibili.com/video/BV13ji2YLEkV)
 
-创建用户级源目录和文件:
+创建用户级源目录和文件：
 
 ```sh
 # mkdir -p /usr/local/etc/pkg/repos
 # ee /usr/local/etc/pkg/repos/ustc.conf
 ```
 
-写入以下内容:
+写入以下内容：
 
 ```sh
 ustc: {
@@ -90,14 +90,14 @@ FreeBSD: { enabled: no }
 
 ### 南京大学开源镜像站
 
-创建用户级源目录和文件:
+创建用户级源目录和文件：
 
 ```sh
 # mkdir -p /usr/local/etc/pkg/repos
 # ee /usr/local/etc/pkg/repos/nju.conf
 ```
 
-写入以下内容:
+写入以下内容：
 
 ```sh
 nju: {
@@ -108,14 +108,14 @@ FreeBSD: { enabled: no }
 
 ### 网易开源镜像站
 
-创建用户级源目录和文件:
+创建用户级源目录和文件：
 
 ```sh
 # mkdir -p /usr/local/etc/pkg/repos
 # ee /usr/local/etc/pkg/repos/163.conf
 ```
 
-写入以下内容:
+写入以下内容：
 
 ```sh
 163: {
@@ -125,7 +125,7 @@ FreeBSD: { enabled: no }
 ```
 
 
-## ports 源:以源代码方式编译安装软件的包管理器
+## ports 源：以源代码方式编译安装软件的包管理器
 
 ### 下载 ports
 
@@ -227,7 +227,7 @@ MASTER_SITE_OVERRIDE?=http://mirrors.163.com/freebsd-ports/distfiles/${DIST_SUBD
 # ee /etc/make.conf
 ```
 
-写入以下内容:
+写入以下内容：
 
 ```sh
 MASTER_SITE_OVERRIDE?=http://mirrors.ustc.edu.cn/freebsd-ports/distfiles/${DIST_SUBDIR}/
@@ -271,7 +271,7 @@ ntpdate ntp.api.bz
 
 [Supported Platforms](https://www.freebsd.org/platforms)
 
-**例:从 FreeBSD 12 升级到 13.0**
+**例：从 FreeBSD 12 升级到 13.0**
 
 ```sh
 # freebsd-update -r 13.0-RELEASE upgrade
@@ -351,7 +351,7 @@ FreeBSD-kmods {
 # setenv PACKAGESITE http://ftp-archive.freebsd.org/pub/FreeBSD-Archive/ports/amd64/packages-9.2-release/Latest
 ```
 
-如果 shell 不是 csh，那么:
+如果 shell 不是 csh，那么：
 
 ```sh
 # export PACKAGESITE=http://ftp-archive.freebsd.org/pub/FreeBSD-Archive/ports/amd64/packages-9.2-release/Latest

@@ -43,7 +43,7 @@ xdg-user-dirs 可自动管理家目录子目录（可选安装）
 
 ## `startx` 配置文件
 
-在 `~/.xinitrc` 文件内加入下面一行:
+在 `~/.xinitrc` 文件内加入下面一行：
 
 ```sh
 exec mate-session

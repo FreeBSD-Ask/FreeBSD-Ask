@@ -14,7 +14,7 @@ xdg-user-dirs 可自动管理家目录子目录（可选安装）
 # cd /usr/ports/x11-wm/wmakerconf/ && make install clean # windowmaker 配置工具，未作为依赖包安装，包含语言包，但是没中文
 # cd /usr/ports/x11/xorg/ && make install clean # X11
 # cd /usr/ports/x11/lightdm/ && make install clean # 窗口管理器
-# cd /usr/ports/x11/lightdm-gtk-greeter/ && make install clean # lightdm的用户界面，没有这个无法启动 lightdm
+# cd /usr/ports/x11/lightdm-gtk-greeter/ && make install clean # lightdm 的用户界面，没有这个无法启动 lightdm
 # cd /usr/ports/x11-fonts/wqy/ && make install clean # 文泉驿字体
 # cd /usr/ports/devel/xdg-user-dirs/ && make install clean # 自动管理家目录子目录
 ```

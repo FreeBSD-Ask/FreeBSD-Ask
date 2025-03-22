@@ -26,7 +26,7 @@
 
 下载 QQ：
 
-官方链接：[QQ Linux 版-轻松做自己](https://im.qq.com/linuxqq/index.shtml)
+官方链接：[QQ Linux 版 - 轻松做自己](https://im.qq.com/linuxqq/index.shtml)
 
 ```sh
 root@ykla:/ # fetch https://dldir1.qq.com/qqfile/qq/QQNT/Linux/QQ_3.2.12_240919_x86_64_01.rpm # 写作本文时链接如此，请自行获取最新链接
@@ -229,7 +229,7 @@ $ yay -S linuxqq # 此时位于 Arch 兼容层！此时用户为 test
 
 > **注意**
 >
-> 如果你双网卡，例如一个有线一个无线，打开QQ以后可能会遇到网络错误的提示，需要给你的空闲网卡随便指派一个IP。
+> 如果你双网卡，例如一个有线一个无线，打开 QQ 以后可能会遇到网络错误的提示，需要给你的空闲网卡随便指派一个 IP。
 > 
 > 参见《Linux 兼容层故障排除》
 > 

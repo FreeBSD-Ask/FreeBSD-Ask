@@ -122,15 +122,15 @@ hostname = "$name.domain.local";
 # jail 位置，也可以用变量
 path = "/jail/$name";
 
-## ip地址
+## ip 地址
 ip4.addr = 192.168.1.$ip;
 
-## fstab位置
+## fstab 位置
 mount.fstab = /jail/$name.fstab;
 
 www {
 $ip=2
-#                  # 如不使用 fstab,使用
+#                  # 如不使用 fstab，使用
 # mount.fstab =""; # 替换全局
 }
 ```

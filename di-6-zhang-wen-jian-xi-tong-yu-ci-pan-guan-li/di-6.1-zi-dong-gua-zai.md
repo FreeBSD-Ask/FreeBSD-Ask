@@ -129,7 +129,7 @@ Options:
   - `-e` 弹出
   - `-m` 挂载
   - `u` 卸载
-- 可以在 shell 启动文件，或 `.xinitrc`、`.xprofile` 等桌面相关的文件中写入下面的命令以便在后台自动挂载(当然，无界面提示)
+- 可以在 shell 启动文件，或 `.xinitrc`、`.xprofile` 等桌面相关的文件中写入下面的命令以便在后台自动挂载 (当然，无界面提示)
 
 ```sh
 dsbmc-cli -a&
@@ -148,7 +148,7 @@ dsbmc-cli -a&
 usermount = true
 ```
 
-配置文件中，已经默认打开 `usermount`，但要启动还要设置 `vfs.usermount` 系统变量,在 `/etc/sysctl.conf` 中写入
+配置文件中，已经默认打开 `usermount`，但要启动还要设置 `vfs.usermount` 系统变量，在 `/etc/sysctl.conf` 中写入
 
 ```sh
 vfs.usermount=1
