@@ -109,13 +109,13 @@ exclude_path = [".github"]
 exclude_all_private = true
 
 # Exclude private IP address ranges from checking.
-#exclude_private = true
+exclude_private = true
 
 # Exclude link-local IP address range from checking.
-#exclude_link_local = true
+exclude_link_local = true
 
 # Exclude loopback IP address range and localhost from checking.
-#exclude_loopback = true
+exclude_loopback = true
 
 # Check mail addresses
-include_mail = true
+# include_mail = true
