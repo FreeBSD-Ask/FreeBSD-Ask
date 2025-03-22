@@ -500,7 +500,7 @@ Permissions Size User    Date Modified Name
 .rw-r--r--    25 safreya 19 Sep 20:26  abc.txt
 ```
 
- 
+
 >**注意**
 >
 >无论数据集是否挂载，子命令 `destroy` 都可以成功销毁数据集，因为 `destroy` 权限是默认就授予的，所以如果非用户本人操作系统的话，可能出现“我得不到的，就毁灭”的情况。
@@ -572,6 +572,7 @@ Local+Descendent permissions:
 ```
 
 卸载：
+
 ```sh
 root safreya # zfs unmount zroot/home/test
 root safreya # zfs unload-key  zroot/home/test

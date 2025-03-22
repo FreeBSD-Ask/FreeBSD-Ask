@@ -16,7 +16,7 @@
 >
 >`ada` 即 SATA 硬盘。
 
-很简单，也不需要密钥。执行命令 
+很简单，也不需要密钥。执行命令
 
 ```sh
 # geli attach /dev/ada0p3
@@ -83,6 +83,7 @@ Enter passphrase: # 输入刚才设置的密码
 ```
 
 - 查看设备
+
 ```
 # geli list
 Geom name: zvol/zroot/test.eli

@@ -3,6 +3,7 @@
 示例：V2ray 或 clash 开启允许局域网连接。然后按照具体配置可能如下：
 
 首先查看使用的 shell
+
 ```sh
 $ echo $SHELL
 ```
@@ -18,11 +19,13 @@ $ echo $SHELL
 **环境变量 HTTP_PROXY 一定要是大写！小写不生效！**
   
 设置：
+
 ```sh
 # export HTTP_PROXY=http://192.168.X.X:7890
 ```
 
 取消：
+
 ```sh
 # unset HTTP_PROXY
 ```
@@ -31,14 +34,17 @@ $ echo $SHELL
 - 如果使用的是 `csh`
 
 设置：
+
 ```sh
 # setenv http_proxy http://192.168.X.X:7890
 ```
 
 取消：
+
 ```sh
 # unsetenv http_proxy
 ```
+
 ## Git 代理
 
 见《通过源代码更新》一节。

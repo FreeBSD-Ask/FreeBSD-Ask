@@ -196,6 +196,7 @@ Proceed with deinstalling packages? [y/N]:
 # cd /usr/ports/ports-mgmt/pkg-provides/ 
 # make install clean
 ```
+
 ### 配置 pkg-provides
 
 - 查看配置说明：
@@ -244,7 +245,7 @@ Fetching provides database: 100%   19 MiB   6.6MB/s    00:03
 Extracting database....success
 ```
 
-### 示例：查找 `libxcb-icccm.so.4`：
+### 示例：查找 `libxcb-icccm.so.4`
 
 ```sh
 root@ykla:/home/ykla # pkg provides libxcb-icccm.so.4
@@ -259,7 +260,7 @@ Filename: usr/local/lib/libxcb-icccm.so.4.0.0
 
 ## 故障排除
 
-###  `ld-elf.so.1: Shared object "libmd.so.6" not found, required by "pkg"`
+### `ld-elf.so.1: Shared object "libmd.so.6" not found, required by "pkg"`
 
 该问题一般是由于软件源未及时同步基本系统 ABI 的变更。
 
@@ -322,6 +323,7 @@ pkg: PRE-INSTALL script failed
 ```sh
 # pkg install bsdadminscripts2
 ```
+
 或者
 
 ```sh

@@ -57,7 +57,7 @@ exec cinnamon-session
 proc /proc procfs rw 0 0
 ```
 
-### 添加启动项：
+### 添加启动项
 
 ```sh
 # service dbus enable 
@@ -77,12 +77,12 @@ proc /proc procfs rw 0 0
 ```
 
 
-![cinnamon on FreeBSD](../.gitbook/assets/cinnamon1.png) 
+![cinnamon on FreeBSD](../.gitbook/assets/cinnamon1.png)
 
-![cinnamon on FreeBSD](../.gitbook/assets/cinnamon2.png) 
+![cinnamon on FreeBSD](../.gitbook/assets/cinnamon2.png)
 
 壁纸就是黑色的，不是哪儿出了问题。
 
-![cinnamon on FreeBSD](../.gitbook/assets/cinnamon3.png) 
+![cinnamon on FreeBSD](../.gitbook/assets/cinnamon3.png)
 
 自定义壁纸。

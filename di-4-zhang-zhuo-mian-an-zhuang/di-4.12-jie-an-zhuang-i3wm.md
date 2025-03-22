@@ -36,6 +36,7 @@ $ chown 你的用户名 ~/.xinitrc
 
 
 # 虚拟机扩展
+
 如果使用 virtualbox，则下面启用 virtualbox 扩展：
 
 ```sh

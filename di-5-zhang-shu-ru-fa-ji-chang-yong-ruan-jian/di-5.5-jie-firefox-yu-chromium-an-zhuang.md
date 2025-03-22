@@ -193,7 +193,7 @@ export GOOGLE_DEFAULT_CLIENT_SECRET=GoCSPX-iKHEKZmP4w_zdq0Z8nwOqz6SF2_M # 这里
 ### 参考文献
 
 - [Chromium Sync - Learning to Pi](https://www.learningtopi.com/sbc/chromium-sync)
-- [为 Chromium 恢复登录功能 ](https://nyac.at/posts/google-sync-in-chromium)
+- [为 Chromium 恢复登录功能](https://nyac.at/posts/google-sync-in-chromium)
 
 
 ## 故障排除

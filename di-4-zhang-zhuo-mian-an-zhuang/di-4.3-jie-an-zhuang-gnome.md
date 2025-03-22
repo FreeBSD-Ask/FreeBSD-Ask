@@ -16,7 +16,7 @@ xdg-user-dirs 可自动管理家目录子目录（可选安装）
 # cd /usr/ports/x11/gnome/ && make install clean
 # cd /usr/ports/x11-fonts/noto-serif-sc/ && make install clean
 # cd /usr/ports/devel/xdg-user-dirs/ && make install clean # 自动管理家目录子目录
-``` 
+```
 
 解释：
 
@@ -32,6 +32,7 @@ xdg-user-dirs 可自动管理家目录子目录（可选安装）
 > ```sh
 > # pkg install xorg-minimal gnome-lite wqy-fonts xdg-user-dirs
 > ```
+>
 >或者
 >
 >```sh
@@ -40,6 +41,7 @@ xdg-user-dirs 可自动管理家目录子目录（可选安装）
 ># cd /usr/ports/x11-fonts/wqy/ && make install clean
 ># cd /usr/ports/devel/xdg-user-dirs/ && make install clean
 >```
+>
 > 如果安装了完整版本也可以使用 pkg 包管理器卸载自带的游戏软件：
 >
 > ```sh
@@ -219,6 +221,7 @@ setenv LC_ALL zh_CN.UTF-8
 ```sh
 # pkg install gnome-tweaks
 ```
+
 或者：
 
 ```sh
@@ -254,7 +257,7 @@ GNOME 一直以反人类著称：桌面不让放图标、右上角没托盘等�
 
 扩展 [gnome-shell-extension-desktop-icons](https://extensions.gnome.org/extension/1465/desktop-icons/)已经长期未更新，项目地址：[Desktop Icons](https://gitlab.gnome.org/World/ShellExtensions/desktop-icons)。
 
-可以用 [Desktop Icons NG (DING) ](https://extensions.gnome.org/extension/2087/desktop-icons-ng-ding/)解决。安装方式同上。
+可以用 [Desktop Icons NG (DING)](https://extensions.gnome.org/extension/2087/desktop-icons-ng-ding/)解决。安装方式同上。
 
 ![Gnome 在桌面放图标](../.gitbook/assets/gnome9.png)
 

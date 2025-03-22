@@ -19,6 +19,7 @@
 需要安装 `cpdup`
 
 - 使用 pkg 安装
+
 ```sh
 # pkg install cpdup
 ```
@@ -29,6 +30,7 @@
 # cd /usr/ports/sysutils/cpdup/ 
 # make install clean
 ```
+
 ## 创建模板目录
 
 ```sh

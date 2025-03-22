@@ -20,6 +20,7 @@
 ```sh
 # make BATCH=yes install clean
 ```
+
 ### 配置 ntfs-3g
 
 把你的 ntfs 格式的硬盘/U 盘插入计算机。这时候你会看到它的设备名，例如 `da0`（见 `/dev/da0`）。

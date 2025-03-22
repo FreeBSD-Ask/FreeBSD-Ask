@@ -90,7 +90,7 @@ permit nolog david as root cmd id # 允许 David 以 root 身份运行 `id` 命�
 ```
 
 
-对于一般人只需要创建文件 `/usr/local/etc/doas.conf`，写入 
+对于一般人只需要创建文件 `/usr/local/etc/doas.conf`，写入
 
 ```sh
 permit :wheel
@@ -98,7 +98,7 @@ permit :wheel
 
 即可满足日常需求（你的用户须加入 `wheel` 组）。
 
-## sudo 
+## sudo
 
 ### 安装
 
@@ -145,6 +145,7 @@ FreeBSD 基本系统默认不自带 `sudo` 命令，需要使用 `root` 权限�
 ```sh
 # ee /usr/local/etc/sudoers
 ```
+
 找到 `root ALL=(ALL:ALL) ALL` 这行，一般是在第 94 行。在这行下面加一句：
 
 ```sh
