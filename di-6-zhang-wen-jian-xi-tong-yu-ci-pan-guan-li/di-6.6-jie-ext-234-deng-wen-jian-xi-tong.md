@@ -113,6 +113,11 @@ cfc	test1	test2
 
 待解决。
 
+- 如何持久化挂载——如何写入 `/etc/fstab`？
+
+待解决。 
+
+
 ## 参考文献
 
 - [mount linux ext4 drives on Freebsd](https://forums.freebsd.org/threads/mount-linux-ext4-drives-on-freebsd.74414/)
