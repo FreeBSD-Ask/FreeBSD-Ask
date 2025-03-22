@@ -76,7 +76,7 @@ DSBMD 是 FreeBSD 的介质/文件系统类型检测守护进程，它允许客�
 
 ![systray](../.gitbook/assets/dsbmd_dsbmc_systray.png)
 
-打开主窗口，`preferences`->`general settings`,勾选 `automatically mount devices` 以使用自动挂载
+打开主窗口，`preferences`-> `general settings`, 勾选 `automatically mount devices` 以使用自动挂载
 
 ![图形界面](../.gitbook/assets/dsbmd_dsbmc_gui.png)
 
@@ -183,7 +183,7 @@ ntfs_mount_cmd_usr = "/sbin/mount_fusefs auto \"${DSBMD_MNTPT}\" ntfs-3g ${DSBMD
 ...
 ```
 
-有关 NTFS 的配置有两条，开启 `usermount` 则使用 `ntfs_mount_cmd_usr`,否则使用 `ntfs_mount_cmd`。修改如下：
+有关 NTFS 的配置有两条，开启 `usermount` 则使用 `ntfs_mount_cmd_usr`，否则使用 `ntfs_mount_cmd`。修改如下：
 
 ```sh
 ...

@@ -171,9 +171,10 @@ root@ykla:/home/ykla # zfs destroy -r zroot@test
 root@ykla:/home/ykla # zfs list -t snap
 no datasets available
 root@ykla:/home/ykla #
+
 ```
 
-> `snapshot`在命令中可以缩写为`snap`。
+> `snapshot` 在命令中可以缩写为 `snap`。
 
 
 ## 启动环境

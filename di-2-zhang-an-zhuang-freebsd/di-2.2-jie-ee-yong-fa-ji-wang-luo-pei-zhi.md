@@ -25,7 +25,7 @@ login:
 ```sh
 FreeBSD/amd64 (ykla) (ttyv0)
 
-login: root # 此处输入用户名，然后按回车键①
+login: root # 此处输入用户名，然后按回车键 ①
 Password: # 此处输入密码，然后按回车键
 Last login: Tue Mar 18 17:24:48 2025 from 3413e8b6b43f
 FreeBSD 15.0-CURRENT (GENERIC) main-n275981-b0375f78e32a
@@ -50,6 +50,7 @@ FreeBSD directory layout:      man hier
 
 To change this login announcement, see motd(5).
 root@ykla:~ #
+
 ```
 
 祝贺你！你已经成功地登录到了 FreeBSD 操作系统。
@@ -126,7 +127,7 @@ drwxrwxrwt  2 root    wheel  2 Mar 18 17:10 .font-unix
 >
 >如果不使用空格或某种方式（例如其他符号）对命令行进行分隔，那么软件该如何理解整个句子？
 >
->如果不加空格，从自然语言角度，从人类视角看这句话`Whatwelovedeclarespubliclywhoexactlyweare.` 会是怎样的体验？
+>如果不加空格，从自然语言角度，从人类视角看这句话 `Whatwelovedeclarespubliclywhoexactlyweare.` 会是怎样的体验？
 >
 >换成：`ls-l/home/ykla/tmp`、`ls/` 呢？
 >
@@ -272,6 +273,7 @@ The following 36 package(s) will be affected (of 0 checked):
 ```sh
 root@ykla:~ # cp test /root/mydir/
 root@ykla:~ #
+
 ```
 
 - 执行中断：
@@ -625,7 +627,7 @@ drwxr-xr-x  2 ykla ykla    2B Mar  9 20:45 下载
 ……省略一部分……
 ```
 
-在 UNIX 系统中，以 `.` 开头的文件或目录（如上面的 `.XIM-unix`）都是隐藏的。你的安卓手机也是一样的——你可以通过 [MT 文件管理器](https://mt2.cn/)自行查看一下。
+在 UNIX 系统中，以 `.` 开头的文件或目录（如上面的 `.XIM-unix`）都是隐藏的。你的安卓手机也是一样的——你可以通过 [MT 文件管理器](https://mt2.cn/) 自行查看一下。
 
 而选项 `-a` 可以显示出来隐藏的目录或文件：
 
@@ -939,14 +941,14 @@ rm: test4: is a directory
 
 可以看到，不会处理目录。
 
-- 删除所有文件名以 `test` 打头的文件和**目录**：
+- 删除所有文件名以 `test` 打头的文件和 **目录**：
 
 ```sh
 $ ls test*  # 确认匹配的文件
 $ rm -rf test*
 ```
 
-- 删除所有文件和**目录**：
+- 删除所有文件和 **目录**：
 
 ```sh
 $ ls *  # 确认匹配的文件

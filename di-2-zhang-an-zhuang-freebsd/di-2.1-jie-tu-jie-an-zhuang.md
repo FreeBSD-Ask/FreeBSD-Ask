@@ -97,7 +97,7 @@ FreeBSD-14.2-RELEASE-amd64-mini-memstick.img.xz	107445036	   2024-Nov-29 13:04
 
 >**技巧**
 >
->网络是随时波动的，因此下载的文件时而会与源文件有差异，产生错误。~~百度网盘就经常这样~~。因此我们需要一种机制确保你获取的文件与 FreeBSD 项目发布的镜像是完全一致的。就需要用到 **校验值**。Windows 10、11 均自带命令行工具 `CertUtil`，无需额外的软件。你还可以参考[如何确定用于安全应用程序的文件 SHA-256 哈希](https://www.dell.com/support/kbdoc/en-bs/000130826/%E5%A6%82%E4%BD%95-%E7%A1%AE%E5%AE%9A-%E7%94%A8%E4%BA%8E-%E9%98%B2-%E7%97%85%E6%AF%92-%E5%92%8C-%E6%81%B6%E6%84%8F%E8%BD%AF%E4%BB%B6-%E9%98%B2%E6%8A%A4-%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F-%E7%9A%84-%E6%96%87%E4%BB%B6-sha-256-%E5%93%88%E5%B8%8C?lang=zh)这篇文章。
+>网络是随时波动的，因此下载的文件时而会与源文件有差异，产生错误。~~百度网盘就经常这样~~。因此我们需要一种机制确保你获取的文件与 FreeBSD 项目发布的镜像是完全一致的。就需要用到 **校验值**。Windows 10、11 均自带命令行工具 `CertUtil`，无需额外的软件。你还可以参考 [如何确定用于安全应用程序的文件 SHA-256 哈希](https://www.dell.com/support/kbdoc/en-bs/000130826/%E5%A6%82%E4%BD%95-%E7%A1%AE%E5%AE%9A-%E7%94%A8%E4%BA%8E-%E9%98%B2-%E7%97%85%E6%AF%92-%E5%92%8C-%E6%81%B6%E6%84%8F%E8%BD%AF%E4%BB%B6-%E9%98%B2%E6%8A%A4-%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F-%E7%9A%84-%E6%96%87%E4%BB%B6-sha-256-%E5%93%88%E5%B8%8C?lang=zh) 这篇文章。
 
 
 > **注意**
@@ -123,7 +123,7 @@ FreeBSD-14.2-RELEASE-amd64-mini-memstick.img.xz	107445036	   2024-Nov-29 13:04
 
 - 我该如何刻录 FreeBSD 镜像到 U 盘？
 
-Windows 上的刻录工具应首选 **Rufus**，Linux 直接使用 `dd`命令即可。
+Windows 上的刻录工具应首选 **Rufus**，Linux 直接使用 `dd` 命令即可。
 
 rufus 下载地址：[https://rufus.ie/zh](https://rufus.ie/zh)
 
@@ -200,7 +200,7 @@ rufus 下载地址：[https://rufus.ie/zh](https://rufus.ie/zh)
 
 ---
 
-以下安装说明基于 `FreeBSD-14.2-RELEASE-amd64-disc1.iso`。`-dvd1.iso` 和 `-memstick.img`大同小异。
+以下安装说明基于 `FreeBSD-14.2-RELEASE-amd64-disc1.iso`。`-dvd1.iso` 和 `-memstick.img` 大同小异。
 
 >**警告**
 >
@@ -273,7 +273,7 @@ rufus 下载地址：[https://rufus.ie/zh](https://rufus.ie/zh)
 
 ![](../.gitbook/assets/ins4.png)
 
-`FreeBSD 系统控制台驱动程序默认使用标准`US`（美式）键盘布局。可以在下面选择别的键盘布局。`
+`FreeBSD 系统控制台驱动程序默认使用标准` US `（美式）键盘布局。可以在下面选择别的键盘布局。`
 
 这里是键盘布局菜单，直接按 **回车键** 使用默认键盘布局即可（因目前中国使用美式键盘布局）。
 
@@ -673,7 +673,7 @@ FreeBSD 14.2 RELEASE 的 `/` 分区支持 UFS 和 ZFS 两种文件系统。旧�
 >
 >**不要全选！**
 >
->**不要** 选 `local_unbound`，会影响 DNS，见 [https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=262290](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=262290)。除非你知道这是什么。
+>**不要** 选 `local_unbound`，会影响 DNS，见 [https://bugs.freebsd.org/bugzilla/show_bug.cgi?id = 262290](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=262290)。除非你知道这是什么。
 
 
 |     选项      |                                                                                  解释                                                                                   |
@@ -868,7 +868,7 @@ Add another user? (yes/no) [no]: # 是否还要再添加一位用户
 >   - 刻录软件请使用 [Rufus](https://rufus.ie/zh/)，不要用 [Ventoy](https://www.ventoy.net/cn/index.html)
 
 
-若仍出现问题，请先在[官方论坛](https://forums.freebsd.org/)使用英语询问；若无果，可按其他章节指引提交 bug。
+若仍出现问题，请先在 [官方论坛](https://forums.freebsd.org/) 使用英语询问；若无果，可按其他章节指引提交 bug。
 
 - 重启后又进入了安装界面
 
@@ -882,7 +882,7 @@ Add another user? (yes/no) [no]: # 是否还要再添加一位用户
 
 - 联想笔记本无电池如何升级 BIOS？
 
-  如果找不到电池，请解压缩`78cn25ww.exe`文件（BIOS 文件请自行去联想美国官网获取），用记事本打开`platform.ini`，查找：
+  如果找不到电池，请解压缩 `78cn25ww.exe` 文件（BIOS 文件请自行去联想美国官网获取），用记事本打开 `platform.ini`，查找：
 
 ```sh
 [AC_Adapter]
@@ -891,7 +891,7 @@ BatteryCheck=1
 BatteryBound=30
 ```
 
-将以上所有数值都修改为`0`：
+将以上所有数值都修改为 `0`：
 
 ```sh
 [AC_Adapter]
@@ -900,6 +900,6 @@ BatteryCheck=0
 BatteryBound=0
 ```
 
-保存后，双击`InsydeFlash.exe`即可。
+保存后，双击 `InsydeFlash.exe` 即可。
 
 **如果断电，后果自负**
