@@ -251,7 +251,7 @@ GNOME 一直以反人类著称：桌面不让放图标、右上角没托盘等�
 
 #### 参考文献
 
-- [恢复 GNOME 顶栏的托盘图标](https://linux.cn/article-13785-1.html)
+- [恢复 GNOME 顶栏的托盘图标](https://linuxstory.org/restore-tray-icon-for-gnome-top-bar/)
 
 ### 在桌面放图标
 
