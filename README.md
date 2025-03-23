@@ -34,7 +34,7 @@ Telegram：[https://t.me/oh_my_BSD](https://t.me/oh_my_BSD)（需要代理）
 
 ### 本季度任务
 
-- [ ] 修正 <https://github.com/FreeBSD-Ask/FreeBSD-Ask/actions/runs/14010608603>
+- [X] 修正失效外链和图片引用
 - [X] 重写“第 1.4 节 Linux 用户迁移指南”
 - [ ] 重写“第 3.2 节 FreeBSD 换源方式”
 - [ ] 重写“第 4.1 节 Xorg & 显卡驱动”
