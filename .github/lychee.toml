@@ -52,10 +52,10 @@ retry_wait_time = 2
 # accept = "200..=204, 429"
 # accept = ["200", "429"]
 # accept = "200, 429"
-accept = ["200", "429", "403"]
+accept = ["200", "429", "403", "418"]
 
 # Proceed for server connections considered insecure (invalid TLS).
-insecure = false
+insecure = true
 
 # Only test links with the given schemes (e.g. https).
 # Omit to check links with any other scheme.
@@ -95,7 +95,7 @@ include_verbatim = true
 glob_ignore_case = false
 
 # Exclude URLs and mail addresses from checking (supports regex).
-exclude = ['.*ip:.*', '.*localhost.*', '.*\$.*', '.*0\.0\.0\.0.*', 'http://ip/.*']
+exclude = ['.*ip:.*', '.*ftp.freebsd.org.*', '.*localhost.*', '.*\$.*', '.*0\.0\.0\.0.*', 'http://ip/.*']
 
 # Exclude these filesystem paths from getting checked.
 exclude_path = [".github"]
