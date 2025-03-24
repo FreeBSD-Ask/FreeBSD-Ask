@@ -231,7 +231,7 @@ export LANG=zh_CN.UTF-8
 
 ## Windows 远程访问 FreeBSD
 
-### TigerVNC
+### 通过 Windows 以 TigerVNC 远程访问 FreeBSD
 
 下载 TigerVNC 查看器：
 
@@ -266,7 +266,7 @@ root     syslogd     1021 7   udp4   *:514                 *:*
 
 ![SDDM VNC](../.gitbook/assets/vnc2.png)
 
-### Windows 自带的桌面远程连接（RDP）
+### 使用 Windows 自带的桌面远程连接（RDP）远程访问 FreeBSD
 
 ![xrdp FreeBSD](../.gitbook/assets/xrdp1.png)
 
