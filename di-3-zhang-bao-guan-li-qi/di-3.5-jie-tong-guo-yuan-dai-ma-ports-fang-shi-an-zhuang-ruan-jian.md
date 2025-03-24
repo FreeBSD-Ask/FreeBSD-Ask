@@ -39,10 +39,14 @@ NJU:
 
 ### 解压 ports 压缩包
 
+- FreeBSD 官方
+
 ```sh
 # tar -zxvf ports.tar.gz -C /usr # 解压至路径
 # rm ports.tar.gz # 删除存档
 ```
+
+- ustc 需要 `-C /usr/ports`
 
 ## 使用 Git 获取 Ports
 
