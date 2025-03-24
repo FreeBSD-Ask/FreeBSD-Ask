@@ -12,7 +12,7 @@
 - [柳离枝](https://github.com/liulitchi)
 - [魔王酱](https://github.com/maou-sama-desu)
 - 清热解毒口服液
-- 星不萌
+- 🎀🌸星不萌🌸🎀（贴吧账户）
 - [Alex6357](https://github.com/Alex6357)
 - [bsdwiki](https://github.com/bsdwiki)
 - [bduath](https://github.com/bduath)
@@ -31,22 +31,21 @@
 - [safreya](https://github.com/safreya)
 - [tomblackwhite](https://github.com/tomblackwhite)
 - [ykla](https://github.com/ykla)
-- 201724
+- [number201724](https://github.com/number201724)
 - 地铁卡
 - 兜率
-- 杭永聪
+- hangyongcong
 - 极品盗号
-- 李大鹏
+- [李大鹏](https://dapeng.li/)
 - 墨子
 - 奇点
 - 施主
 - 心即理物即心
-- 星不萌
 - 艳阳天
 - 仰望天空
 - 雨天
 - April Simone🍥
-- fjh1997
+- [fjh1997](https://github.com/fjh1997)
 - freyr
 - isNijikawa
 - Jack
@@ -54,11 +53,11 @@
 - liguangsheng
 - livrth
 - ruur
-- Shengyun
-- tergel93
-- Voosk
+- [Roberta Wheeler](https://github.com/rowheel)
+- [tergel93](https://github.com/tergel93)
+- [Voosk](https://github.com/MilkGolium)
 - X-Ray
-- Zomby7e
+- [Zomby7e](https://github.com/Zomby7e)
 
 ## 致歉
 
