@@ -307,33 +307,18 @@ root     syslogd     1021 7   udp4   *:514                 *:*
 
 ## 使用 FreeBSD 远程其他机器
 
-### remotedesk
+### freerdp
 
 使用 pkg 安装：
 
-```
-# pkg install remotedesk
+```sh
+# pkg ins freerdp
 ```
 
 或者用 Ports：
 
-```
-# cd /usr/ports/net/remotedesk/ 
-# make install clean
-```
-
-### xrdesktop2
-
-使用 pkg 安装：
-
-```
-# pkg install xrdesktop2
-```
-
-或者用 Ports：
-
-```
-# cd /usr/ports/net/xrdesktop2/ 
+```sh
+# cd /usr/ports/net/freerdp/ 
 # make install clean
 ```
 
@@ -360,11 +345,106 @@ rdesktop 无前端 GUI，故要在终端输入命令：
 
 如果没有特意更改 Windows 配置，无须加 `:端口`。
 
+对于我测试的 Windows 11 24H2 会报错：
+
+```sh
+ykla@ykla:~ $ rdesktop 192.168.31.213
+Failed to connect, CredSSP required by server (check if server has disabled old TLS versions, if yes use -V option).
+```
+
+根据 [CredSSP does not work](https://github.com/rdesktop/rdesktop/issues/71)，是个老问题了。
+
+影响安全的解决方案是禁用网络级身份验证（NLA），在要远程连接的 Windows 上操作：
+
+```batch
+PS C:\Users\ykla> reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp" /v UserAuthentication /t REG_DWORD /d 0 /f
+操作成功完成。
+PS C:\Users\ykla> gpupdate /force
+正在更新策略...
+
+计算机策略更新成功完成。
+用户策略更新成功完成。
+```
+
+再测试链接：
+
+```sh
+ykla@ykla:~ $ rdesktop 192.168.31.213
+
+ATTENTION! The server uses and invalid security certificate which can not be trusted for
+the following identified reasons(s);
+
+ 1. Certificate issuer is not trusted by this system.
+
+     Issuer: CN=DESKTOP-U72I6SS
+
+
+Review the following certificate info before you trust it to be added as an exception.
+If you do not trust the certificate the connection atempt will be aborted:
+
+    Subject: CN=DESKTOP-U72I6SS
+     Issuer: CN=DESKTOP-U72I6SS
+ Valid From: Tue Mar  4 20:39:28 2025
+         To: Wed Sep  3 20:39:28 2025
+
+  Certificate fingerprints:
+
+       sha1: 599c0e8bbc57c5ee8de8993d5241fb0f0d70e98d
+     sha256: 36b9be66ab2b54322846b698688d6f20a5d1588c09decc3d30e1066f4f6254de
+
+
+Do you trust this certificate (yes/no)? # 输入 yes，按回车键
+```
+
+![rdesktop](../.gitbook/assets/rdesktop.png)
+
+![rdesktop](../.gitbook/assets/rdesktop.png)
+
+#### 故障排除
+
+- 看视频没声音
+
+待解决
+
+#### 参考文献
+
+- [使用 RDP 连接到 Azure VM 时排查身份验证错误](https://learn.microsoft.com/zh-cn/troubleshoot/azure/virtual-machines/windows/cannot-connect-rdp-azure-vm)，打开和关闭 NLA 的方法在此。经过测试关闭后 rdesktop 果然又连不上了。
+
+### remotedesk（基于 rdesktop）
+
+使用 pkg 安装：
+
+```sh
+# pkg install remotedesk
+```
+
+或者用 Ports：
+
+```sh
+# cd /usr/ports/net/remotedesk/ 
+# make install clean
+```
+
+### xrdesktop2（基于 rdesktop）
+
+使用 pkg 安装：
+
+```sh
+# pkg install xrdesktop2
+```
+
+或者用 Ports：
+
+```sh
+# cd /usr/ports/net/xrdesktop2/ 
+# make install clean
+```
+
 ### anydesk
 
 使用 anydesk 可进行远程访问，FreeBSD 上仅支持 x86 架构：
 
-由于版权问题（**私有软件未经许可默认禁止分发**），必须用户使用 Ports 自行编译：
+由于版权问题（私有软件未经许可默认禁止分发），必须用户使用 Ports 自行编译：
 
 ```sh
 # cd /usr/ports/deskutils/anydesk/
