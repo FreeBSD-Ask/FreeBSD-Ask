@@ -516,11 +516,13 @@ $ ykla@ykla:~ $ anydesk
 ……省略一部分……
 ```
 
+执行命令后弹出来这个界面：
+
+![Windows 通过 anydesk 远程 FreeBSD](../.gitbook/assets/anydesk2.png)
+
 注意，被连接方“接受”（Accept）了才能继续链接。
 
 ### Windows 通过 anydesk 远程 FreeBSD
-
-![Windows 通过 anydesk 远程 FreeBSD](../.gitbook/assets/anydesk2.png)
 
 ![Windows 通过 anydesk 远程 FreeBSD](../.gitbook/assets/anydesk3.png)
 
