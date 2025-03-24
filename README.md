@@ -68,6 +68,7 @@ Telegram：[https://t.me/oh_my_BSD](https://t.me/oh_my_BSD)（需要代理）
 
 该脚本使用 Python3 编写，仅在 Windows 10、FreeBSD 14.2 上测试过。具体使用方法见该项目的 README。
 
+此外，还会不定期地通过 GitBook 导出 PDF 于 [releases](https://github.com/FreeBSD-Ask/FreeBSD-Ask/releases)（也许需要代理）。
 
 ## 捐赠
 
