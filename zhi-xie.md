@@ -88,5 +88,7 @@
 
 ---
 
-本项目还受到了 [GitBook 开源计划](https://www.gitbook.com/solutions/open-source)的赞助。网站由其提供。再次一并表示谢意。
+本项目主要托管在 GitHub。
+
+本项目还受到了 [GitBook 开源计划](https://www.gitbook.com/solutions/open-source)的赞助。本项目的网站由其提供。
 
