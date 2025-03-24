@@ -18,7 +18,7 @@ Telegram：[https://t.me/oh_my_BSD](https://t.me/oh_my_BSD)（需要代理）
 
 ### 历史
 
-《FreeBSD 从入门到跑路》诞生于 2021 年 12 月 19 日，由 FreeBSD 中文社区（CFC）ykla 发起。
+《FreeBSD 从入门到跑路》诞生于 2021 年 3 月 14 日（依据 [clean-master/freebsdcn](https://github.com/clean-master/freebsdcn/graphs/contributors)），由 FreeBSD 中文社区（CFC）ykla 发起。
 
 ### 意见反馈
 
