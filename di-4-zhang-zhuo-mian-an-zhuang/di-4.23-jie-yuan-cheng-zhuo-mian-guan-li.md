@@ -10,7 +10,7 @@ XRDP 是 Microsoft RDP 的开源实现。XRDP 不支持屏幕镜像。
 - [VNC 还是 RDP? 云上的远程桌面究竟该如何选](https://aws.amazon.com/cn/blogs/china/vnc-or-rdp-how-to-choose-a-remote-desktop-on-the-cloud/)
 - [UOS_远程桌面_xrdp_Xorg_x11vnc](https://www.cnblogs.com/osnosn/p/16690589.html)
 
-## VNC（被连接端）
+## VNC（被控端）
 
 ### x11vnc（镜像屏幕）
 
@@ -150,7 +150,7 @@ exec command &  #此处不能照抄！
 
 - [Xfce4 is not displayed correctly when I connect vncviewer (in Linux) to tightvnc-server (on FreeBSD)](https://forums.freebsd.org/threads/xfce4-is-not-displayed-correctly-when-i-connect-vncviewer-in-linux-to-tightvnc-server-on-freebsd.85709/)
 
-## XRDP（被连接端）
+## XRDP（被控端）
 
 ### 安装软件包（基于 kde6）
 
