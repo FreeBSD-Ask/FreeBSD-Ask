@@ -68,23 +68,17 @@
 
 ### 开源项目
 
-本项目还使用了以下相关的 Github Action 自动化工具，我们对其作者表示感谢：
+本项目还使用了以下相关的 Github Action 自动化工具或项目，我们对其作者表示感谢：
 
-- actions/checkout
-- actions/setup-node
-- peter-evans/create-pull-request
-- actions/checkout
-- lycheeverse/lychee-action
-- peter-evans/create-issue-from-file
-- actions/checkout
-- DavidAnson/markdownlint-cli2-action
-- tj-actions/changed-files
-- actions/checkout
-- DavidAnson/markdownlint-cli2-action
-- peter-evans/create-pull-request
-- actions/checkout
-- actions/setup-node
-- peter-evans/create-pull-request
+- [actions/checkout](https://github.com/actions/checkout)，用于 Git 检出项目
+- [actions/setup-node](https://github.com/actions/setup-node)，用于配置 Node.js 环境
+- [peter-evans/create-pull-request](https://github.com/peter-evans/create-pull-request)，用于创建 PR
+- [lycheeverse/lychee-action](https://github.com/lycheeverse/lychee-action)，用于检查失效链接及文件
+- [peter-evans/create-issue-from-file](https://github.com/peter-evans/create-issue-from-file)，用于创建 Issue
+- [DavidAnson/markdownlint-cli2-action](https://github.com/DavidAnson/markdownlint-cli2-action)，用于 Markdown 规范化
+- [tj-actions/changed-files](https://github.com/tj-actions/changed-files)，用于检查文件变动
+- [autocorrect](https://github.com/huacnlee/autocorrect)，用于 Markdown 规范化，主要是加空格
+- [md-padding](https://github.com/harttle/md-padding)，用于 Markdown 规范化，主要是加空格
 
 ---
 
