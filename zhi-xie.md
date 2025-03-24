@@ -1,6 +1,6 @@
 # 致谢
 
-本文初版架构基于[《操作系统笔记》分享](https://tieba.baidu.com/p/8351273539)，作者是贴吧用户“Smile_Zheng”。
+本文初版架构基于[《操作系统笔记》分享](https://tieba.baidu.com/p/8351273539)的早期版本，作者是贴吧用户“Smile_Zheng”。
 
 ## 致歉
 
