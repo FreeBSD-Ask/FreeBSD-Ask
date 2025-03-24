@@ -462,7 +462,7 @@ Do you trust this certificate (yes/no)? # 输入 yes，按回车键
 - [使用 RDP 连接到 Azure VM 时排查身份验证错误](https://learn.microsoft.com/zh-cn/troubleshoot/azure/virtual-machines/windows/cannot-connect-rdp-azure-vm)，打开和关闭 NLA 的方法在此。经过测试关闭后 rdesktop 果然又连不上了。
 
 
-### anydesk
+## anydesk
 
 使用 anydesk 可进行远程访问，FreeBSD 上仅支持 x86 架构：
 
@@ -472,6 +472,67 @@ Do you trust this certificate (yes/no)? # 输入 yes，按回车键
 # cd /usr/ports/deskutils/anydesk/
 # make install clean
 ```
+
+不可使用 `BATCH=yes`参数，因为需要接受许可协议才能使用：
+
+![anydesk](../.gitbook/assets/anydesk1.png)
+
+查看安装后说明：
+
+```sh
+root@ykla:/ # pkg info -D anydesk
+anydesk-6.1.1_2:
+On install:
+1. Minimum OS version.
+======================
+Anydesk is a binary package for FreeBSD.
+Minimal recommended is 1 GiB system memory
+installed but performence will be reduced.
+For good performance is recommended and 2 GiB
+system memory.
+
+2. Important settings
+=====================
+Since Version 2.9.1 the following prerequisites have to be met:
+
+You need a mounted /proc directory. Either mount it manually or add it to your /etc/fstab file:
+ fstab: proc /proc procfs rw 0 0
+ manually: # mount -t procfs proc /proc 
+```
+
+提示需要 `/proc`，经过测试没有的话的执行程序确没反应。
+
+```# 
+# mount -t procfs proc /proc # 临时用一下。持久化可以参照上面的说明做
+```
+
+root 用户无法运行 anydesk。需要普通用户：
+
+```
+$ ykla@ykla:~ $ anydesk
+
+(<unknown>:18311): Gtk-WARNING **: 21:07:13.540: 无法在模块路径中找到主题引擎：“adwaita”，
+
+……省略一部分……
+```
+
+注意，被连接方“接受”（Accept）了才能继续链接。
+
+### Windows 通过 anydesk 远程 FreeBSD
+
+![Windows 通过 anydesk 远程 FreeBSD](../.gitbook/assets/anydesk2.png)
+
+![Windows 通过 anydesk 远程 FreeBSD](../.gitbook/assets/anydesk3.png)
+
+### FreeBSD 通过 anydesk 远程 Windows
+
+![Windows 通过 anydesk 远程 FreeBSD](../.gitbook/assets/anydesk4.png)
+
+#### 故障排除
+
+- FreeBSD 通过 anydesk 远程 Windows，似乎无法在 Windows 中移动鼠标
+
+待解决。
 
 ## RustDesk 中继服务器
 
