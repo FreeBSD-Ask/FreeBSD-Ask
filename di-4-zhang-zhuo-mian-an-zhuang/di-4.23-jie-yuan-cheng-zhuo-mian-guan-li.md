@@ -322,9 +322,13 @@ root     syslogd     1021 7   udp4   *:514                 *:*
 # make install clean
 ```
 
-### rdesktop（需要命令行执行）
+### rdesktop（需要命令行执行且不安全）
 
-使用 pkg 安装：
+xrdesktop2（基于 rdesktop）是个图形化前端，但我打开里面的键盘设置就卡死了。
+
+---
+
+使用 pkg 安装 rdesktop：
 
 ```sh
 # pkg install rdesktop
@@ -410,35 +414,6 @@ Do you trust this certificate (yes/no)? # 输入 yes，按回车键
 
 - [使用 RDP 连接到 Azure VM 时排查身份验证错误](https://learn.microsoft.com/zh-cn/troubleshoot/azure/virtual-machines/windows/cannot-connect-rdp-azure-vm)，打开和关闭 NLA 的方法在此。经过测试关闭后 rdesktop 果然又连不上了。
 
-### remotedesk（基于 rdesktop）
-
-使用 pkg 安装：
-
-```sh
-# pkg install remotedesk
-```
-
-或者用 Ports：
-
-```sh
-# cd /usr/ports/net/remotedesk/ 
-# make install clean
-```
-
-### xrdesktop2（基于 rdesktop）
-
-使用 pkg 安装：
-
-```sh
-# pkg install xrdesktop2
-```
-
-或者用 Ports：
-
-```sh
-# cd /usr/ports/net/xrdesktop2/ 
-# make install clean
-```
 
 ### anydesk
 
