@@ -39,7 +39,6 @@
 - [puffinjiang](https://github.com/puffinjiang)
 - [qinghecyn](https://github.com/qinghecyn)
 - [Rintim](https://github.com/Rintim)
-- [safreya](https://github.com/safreya)
 - [tomblackwhite](https://github.com/tomblackwhite)
 - [number201724](https://github.com/number201724)
 - 地铁卡
@@ -94,8 +93,10 @@
 
 [Roberta Wheeler](https://github.com/rowheel) 自费部署维护过《FreeBSD 从入门到跑路》项目使用的服务器（目前已切换至免费的 GitBook），并撰写了部分文章。
 
+[safreya](https://github.com/safreya) 曾撰写过 2 款用于导出本项目 PDF 的开源工具（目前仍在使用），并撰写了大量文章。
+
 Ubuntu 吧前吧主 Simple 曾建议修改项目的章节文件名与许可协议，这提高了本项目的可维护性。
 
-目前《FreeBSD 从入门到跑路》项目的主要非技术维护者为 [Voosk](https://github.com/MilkGolium)，他也曾撰写过部分文章。
+目前《FreeBSD 从入门到跑路》项目的主要非技术维护者为 [Voosk](https://github.com/MilkGolium)，他也撰写了部分文章。
 
 目前《FreeBSD 从入门到跑路》项目的主要技术维护者为  [ykla](https://github.com/ykla)。
