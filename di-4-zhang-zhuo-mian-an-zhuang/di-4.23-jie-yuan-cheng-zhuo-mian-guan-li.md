@@ -396,9 +396,9 @@ If you do not trust the certificate the connection atempt will be aborted:
 Do you trust this certificate (yes/no)? # 输入 yes，按回车键
 ```
 
-![rdesktop](../.gitbook/assets/rdesktop.png)
+![rdesktop](../.gitbook/assets/rdesktop1.png)
 
-![rdesktop](../.gitbook/assets/rdesktop.png)
+![rdesktop](../.gitbook/assets/rdesktop2.png)
 
 #### 故障排除
 
