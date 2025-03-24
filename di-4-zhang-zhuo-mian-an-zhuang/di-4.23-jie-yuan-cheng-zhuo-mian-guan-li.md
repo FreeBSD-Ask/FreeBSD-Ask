@@ -2,7 +2,7 @@
 
 ## VNC 与 RPD（XRDP）对比
 
-XRDP 是 Microsoft RDP 的开源实现。XRDP 不支持屏幕镜像外。
+XRDP 是 Microsoft RDP 的开源实现。XRDP 不支持屏幕镜像。
 
 ### 参考文献
 
@@ -10,7 +10,7 @@ XRDP 是 Microsoft RDP 的开源实现。XRDP 不支持屏幕镜像外。
 - [VNC 还是 RDP? 云上的远程桌面究竟该如何选](https://aws.amazon.com/cn/blogs/china/vnc-or-rdp-how-to-choose-a-remote-desktop-on-the-cloud/)
 - [UOS_远程桌面_xrdp_Xorg_x11vnc](https://www.cnblogs.com/osnosn/p/16690589.html)
 
-## VNC
+## VNC（被连接端）
 
 ### x11vnc（镜像屏幕）
 
@@ -68,7 +68,7 @@ $ x11vnc -display :0 -rfbauth ~/.vnc/passwd -auth /var/lib/gdm/:0.Xauth #或 /ru
 - [x11vnc -allow VNC connections to real X11 displays](https://man.freebsd.org/cgi/man.cgi?query=x11vnc&sektion=&manpath=freebsd-release-ports)
 - [X11vnc](https://wiki.archlinux.org/title/X11vnc)
   
-### TigerVNC
+### TigerVNC（被连接端）
 
 启用 VNC 服务（目前 Ports 就只剩下这个 [TigerVNC](https://www.freshports.org/net/tigervnc-server/) 了）
 
@@ -150,7 +150,7 @@ exec command &  #此处不能照抄！
 
 - [Xfce4 is not displayed correctly when I connect vncviewer (in Linux) to tightvnc-server (on FreeBSD)](https://forums.freebsd.org/threads/xfce4-is-not-displayed-correctly-when-i-connect-vncviewer-in-linux-to-tightvnc-server-on-freebsd.85709/)
 
-## XRDP
+## XRDP（被连接端）
 
 ### 安装软件包（基于 kde6）
 
