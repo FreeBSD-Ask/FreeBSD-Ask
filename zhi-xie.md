@@ -1,10 +1,5 @@
 # 致谢
 
-旁观者的姓名永远爬不到比赛的计分板上。
-
-不必“坐观垂钓者，徒有羡鱼情。”，就在今天，实践文中的每个项目，帮助更新与同步！
-
-
 ## 贡献者名单
 
 >**注意**
@@ -64,4 +59,34 @@
 - Voosk
 - X-Ray
 - Zomby7e
+
+## 致歉
+
+在本项目中某些章节还引用了或完全就是（比如防火墙章节）网络上其他作者的教程。由于历史问题和对许可证的非标准引用，没能按要求作者的要求注明来源及作者。再此表示歉意。如果您对此有不同看法或要求，请联系 `yklaxds@gmail.com`。
+
+作为项目目标的一部分，我们会尽快重写全部相关部分内容及对作者和项目进行规范化标注。
+
+### 开源项目
+
+本项目还使用了以下相关的 Github Action 自动化工具，我们对其作者表示感谢：
+
+- actions/checkout
+- actions/setup-node
+- peter-evans/create-pull-request
+- actions/checkout
+- lycheeverse/lychee-action
+- peter-evans/create-issue-from-file
+- actions/checkout
+- DavidAnson/markdownlint-cli2-action
+- tj-actions/changed-files
+- actions/checkout
+- DavidAnson/markdownlint-cli2-action
+- peter-evans/create-pull-request
+- actions/checkout
+- actions/setup-node
+- peter-evans/create-pull-request
+
+---
+
+本项目还受到了 [GitBook 开源计划](https://www.gitbook.com/solutions/open-source)的赞助。网站由其提供。再次一并表示谢意。
 
