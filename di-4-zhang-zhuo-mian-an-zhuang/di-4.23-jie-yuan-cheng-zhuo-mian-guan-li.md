@@ -304,7 +304,7 @@ root     syslogd     1021 7   udp4   *:514                 *:*
 
 ![Remote Desktop FreeBSD](../.gitbook/assets/wrdp4.png)
 
-## 使用 FreeBSD 远程其他机器
+## 通过 FreeBSD 以 XDRP 远程访问 Windows
 
 ### freerdp（支持 NLA）
 
