@@ -18,7 +18,7 @@ Telegram：[https://t.me/oh_my_BSD](https://t.me/oh_my_BSD)（需要代理）
 
 ### 历史
 
-《FreeBSD 从入门到跑路》诞生于 2021 年 3 月 14 日（依据 [clean-master/freebsdcn](https://github.com/clean-master/freebsdcn/graphs/contributors) 项目的创建时间，其同天产生了此书原型），由 FreeBSD 中文社区（CFC）[clean-master 清理大师](https://github.com/clean-master)发起，ykla 在翌日夜间完成了教程的初步整理与发布。
+《FreeBSD 从入门到跑路》诞生于 2021 年 3 月 14 日（依据 [clean-master/freebsdcn](https://github.com/clean-master/freebsdcn/graphs/contributors) 项目的创建时间，其同天产生了此书原型），由 FreeBSD 中文社区（CFC）[clean-master 清理大师](https://github.com/clean-master)发起，[ykla](https://github.com/ykla) 在翌日夜间完成了教程的初步整理与发布。
 
 ### 意见反馈
 
