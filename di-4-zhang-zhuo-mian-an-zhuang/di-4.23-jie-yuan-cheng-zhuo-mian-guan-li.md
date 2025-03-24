@@ -307,7 +307,7 @@ root     syslogd     1021 7   udp4   *:514                 *:*
 
 ## 使用 FreeBSD 远程其他机器
 
-### freerdp
+### freerdp（支持 NLA）
 
 使用 pkg 安装：
 
@@ -322,9 +322,56 @@ root     syslogd     1021 7   udp4   *:514                 *:*
 # make install clean
 ```
 
-### rdesktop（需要命令行执行且不安全）
+使用 FreeBSD 远程链接到 Windows 11 24H2：
 
-xrdesktop2（基于 rdesktop）是个图形化前端，但我打开里面的键盘设置就卡死了。
+```sh
+ykla@ykla:~ $ xfreerdp 192.168.31.213 # 注意是 xfreerdp。若使用 wayland 可能是 wfreerdp（未测试）
+[20:35:20:041] [1105:7c412000] [WARN][com.freerdp.client.common.cmdline] - ----------------------------------------
+[20:35:20:043] [1105:7c412000] [WARN][com.freerdp.client.common.cmdline] - Using deprecated command-line interface!
+[20:35:20:043] [1105:7c412000] [WARN][com.freerdp.client.common.cmdline] - This will be removed with FreeRDP 3!
+[20:35:20:043] [1105:7c412000] [WARN][com.freerdp.client.common.cmdline] - ----------------------------------------
+[20:35:20:043] [1105:7c412000] [WARN][com.freerdp.client.common.compatibility] - 192.168.31.213 -> /v:192.168.31.213
+[20:35:20:043] [1105:7c412000] [WARN][com.freerdp.client.common.compatibility] - 
+[20:35:20:045] [1105:7c412700] [INFO][com.freerdp.client.x11] - No user name set. - Using login name: ykla
+[20:35:21:445] [1105:7c412700] [INFO][com.freerdp.crypto] - creating directory /home/ykla/.config/freerdp
+[20:35:21:445] [1105:7c412700] [INFO][com.freerdp.crypto] - creating directory [/home/ykla/.config/freerdp/certs]
+[20:35:21:445] [1105:7c412700] [INFO][com.freerdp.crypto] - created directory [/home/ykla/.config/freerdp/server]
+[20:35:21:485] [1105:7c412700] [WARN][com.freerdp.crypto] - Certificate verification failure 'self-signed certificate (18)' at stack position 0
+[20:35:21:485] [1105:7c412700] [WARN][com.freerdp.crypto] - CN = DESKTOP-U72I6SS
+[20:35:21:485] [1105:7c412700] [ERROR][com.freerdp.crypto] - @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+[20:35:21:485] [1105:7c412700] [ERROR][com.freerdp.crypto] - @           WARNING: CERTIFICATE NAME MISMATCH!           @
+[20:35:21:485] [1105:7c412700] [ERROR][com.freerdp.crypto] - @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+[20:35:21:485] [1105:7c412700] [ERROR][com.freerdp.crypto] - The hostname used for this connection (192.168.31.213:3389) 
+[20:35:21:485] [1105:7c412700] [ERROR][com.freerdp.crypto] - does not match the name given in the certificate:
+[20:35:21:485] [1105:7c412700] [ERROR][com.freerdp.crypto] - Common Name (CN):
+[20:35:21:485] [1105:7c412700] [ERROR][com.freerdp.crypto] -    DESKTOP-U72I6SS
+[20:35:21:485] [1105:7c412700] [ERROR][com.freerdp.crypto] - A valid certificate for the wrong name should NOT be trusted!
+Certificate details for 192.168.31.213:3389 (RDP-Server):
+        Common Name: DESKTOP-U72I6SS
+        Subject:     CN = DESKTOP-U72I6SS
+        Issuer:      CN = DESKTOP-U72I6SS
+        Thumbprint:  36:b9:be:66:ab:2b:54:32:28:46:b6:98:68:8d:6f:20:a5:d1:58:8c:09:de:cc:3d:30:e1:06:6f:4f:62:54:de
+The above X.509 certificate could not be verified, possibly because you do not have
+the CA certificate in your certificate store, or the certificate has expired.
+Please look at the OpenSSL documentation on how to add a private CA to the store.
+Do you trust the above certificate? (Y/T/N) y # 输入 y 回车
+Domain:   # 留空
+Password: # 输入密码，密码不会显示出来 ***。
+……省略一部分……
+```
+
+
+![freerdp](../.gitbook/assets/freerdp.png)
+
+#### 故障排除
+
+- 但是我没有输入用户名就连上了？
+
+不知道。难道是因为我的 FreeBSD 用户名和 Windows 是一样的？
+
+### rdesktop（不支持 NLA）
+
+`net/xrdesktop2` 是 rdesktop 的图形化前端，但我打开里面的键盘设置就卡死了。
 
 ---
 
