@@ -306,7 +306,56 @@ root     syslogd     1021 7   udp4   *:514                 *:*
 
 ## 通过 FreeBSD 以 XDRP 远程访问 Windows
 
-### freerdp（支持 NLA）
+### freerdp3（新稳定版，支持 NLA）
+
+使用 pkg 安装：
+
+```
+# pkg ins freerdp3
+```
+
+或者用 Ports：
+
+```sh
+# cd /usr/ports/net/freerdp3/ 
+# make install clean
+```
+
+使用 FreeBSD 通过 freerdp3 远程链接到 Windows 11 24H2：
+
+```
+ykla@ykla:~ $ xfreerdp3 /u:ykla /p:z  /v:192.168.31.213
+
+……省略一部分……
+441] [19244:dca12700] [ERROR][com.freerdp.crypto] - [tls_print_new_certificate_warn]: Host key verification failed.
+Certificate details for 192.168.31.213:3389 (RDP-Server):
+        Common Name: DESKTOP-U72I6SS
+        Subject:     CN = DESKTOP-U72I6SS
+        Issuer:      CN = DESKTOP-U72I6SS
+        Valid from:  Mar  4 12:39:28 2025 GMT
+        Valid to:    Sep  3 12:39:28 2025 GMT
+        Thumbprint:  36:b9:be:66:ab:2b:54:32:28:46:b6:98:68:8d:6f:20:a5:d1:58:8c:09:de:cc:3d:30:e1:06:6f:4f:62:54:de
+The above X.509 certificate could not be verified, possibly because you do not have
+the CA certificate in your certificate store, or the certificate has expired.
+Please look at the OpenSSL documentation on how to add a private CA to the store.
+Do you trust the above certificate? (Y/T/N) y # 输入 y 按回车键以确认链接
+
+```
+
+`xfreerdp3 /u:ykla /p:z  /v:192.168.31.213`：
+- `xfreerdp3`，注意前面有个 `x`。
+- `/u:ykla`，`/u:` 即 Username 用户名。`ykla` 是我 Windows 的登录名
+- `/p`，即 Password 密码。`z` 是我 Windows 用户 `ykla` 的登录密码
+- `/v:`，即 Server 服务器。
+
+![freerdp](../.gitbook/assets/freerdp3.png)
+
+#### 参考文献
+
+- [FreeRDP User Manual ](https://github.com/awakecoding/FreeRDP-Manuals/blob/master/User/FreeRDP-User-Manual.markdown)，里面命令说明和一些用法示例
+
+
+### freerdp2（旧稳定版，支持 NLA）
 
 使用 pkg 安装：
 
@@ -324,7 +373,7 @@ root     syslogd     1021 7   udp4   *:514                 *:*
 使用 FreeBSD 远程链接到 Windows 11 24H2：
 
 ```sh
-ykla@ykla:~ $ xfreerdp 192.168.31.213 # 注意是 xfreerdp。若使用 wayland 可能是 wfreerdp（未测试）
+ykla@ykla:~ $ xfreerdp 192.168.31.213 # 注意是 xfreerdp。
 [20:35:20:041] [1105:7c412000] [WARN][com.freerdp.client.common.cmdline] - ----------------------------------------
 [20:35:20:043] [1105:7c412000] [WARN][com.freerdp.client.common.cmdline] - Using deprecated command-line interface!
 [20:35:20:043] [1105:7c412000] [WARN][com.freerdp.client.common.cmdline] - This will be removed with FreeRDP 3!
