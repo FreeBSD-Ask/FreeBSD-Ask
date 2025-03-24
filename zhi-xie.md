@@ -16,64 +16,63 @@
 >
 >如果缺少了你的信息或者不想被列出，请发起 Issue。
 
-以下，按 A-Z 排序
+按 A-Z 排序：
 
-- [凌莞](https://clansty.com)
-- [柳离枝](https://github.com/liulitchi)
-- [魔王酱](https://github.com/maou-sama-desu)
-- 清热解毒口服液
-- 🎀🌸星不萌🌸🎀（贴吧账户）
-- [Alex6357](https://github.com/Alex6357)
-- [bsdwiki](https://github.com/bsdwiki)
-- [bduath](https://github.com/bduath)
-- [blu10ph](https://github.com/blu10ph)
-- [dongdigua](https://github.com/dongdigua)
-- DogeW
-- [Dedicatus5457](https://github.com/Dedicatus5457)
-- [fanyang1997](https://github.com/fanyang1997)
-- [gua-leopard](https://github.com/gua-leopard)
-- heguru5
-- matatabi-wang
-- [mxdyeah / mxdabc](https://mxdyeah.top/)
-- [orzyyyy](https://github.com/orzyyyy)
-- [peiyafei](https://github.com/peiyafei)
-- [pengxingwei](https://github.com/pengxingwei)
-- [puffinjiang](https://github.com/puffinjiang)
-- [清和](https://github.com/qinghecyn)
-- [Rintim](https://github.com/Rintim)
-- [Suyun114](https://github.com/Suyun114)
-- [tomblackwhite](https://github.com/tomblackwhite)
-- [number201724](https://github.com/number201724)
-- 地铁卡
-- 兜率
-- hangyongcong
-- 极品盗号
-- [李大鹏](https://dapeng.li/)
-- 墨子
-- 奇点
-- 施主
-- 心即理物即心
-- 艳阳天
-- 仰望天空
+- [5gura](https://github.com/5gura)  
+- Alex6357 [(GitHub)](https://github.com/Alex6357)  
+- April Simone🍥  
+- [bduath](https://github.com/bduath)  
+- [blu10ph](https://github.com/blu10ph)  
+- [bsdwiki](https://github.com/bsdwiki)  
+- [Dedicatus5457](https://github.com/Dedicatus5457)  
+- DogeW  
+- [dongdigua](https://github.com/dongdigua)  
+- [fanyang1997](https://github.com/fanyang1997)  
+- [fjh1997](https://github.com/fjh1997)  
+- freyr  
+- gua-leopard [(GitHub)](https://github.com/gua-leopard)  
+- hangyongcong  
+- heguru5  
+- isNijikawa  
+- Jack  
+- kuntop  
+- [李大鹏](https://dapeng.li/)  
+- liguangsheng [(GitHub)](https://github.com/liguangsheng)  
+- livrth  
+- [凌莞](https://clansty.com)  
+- [柳离枝](https://github.com/liulitchi)  
+- matatabi-wang  
+- 墨子  
+- [mxdyeah / mxdabc](https://mxdyeah.top/)  
+- [nerdroychan](https://github.com/nerdroychan)  
+- [number201724](https://github.com/number201724)  
+- [orzyyyy](https://github.com/orzyyyy)  
+- [peiyafei](https://github.com/peiyafei)  
+- [pengxingwei](https://github.com/pengxingwei)  
+- [puffinjiang](https://github.com/puffinjiang)  
+- 清和 [(GitHub)](https://github.com/qinghecyn)  
+- 清热解毒口服液  
+- 奇点  
+- [Rintim](https://github.com/Rintim)  
+- [ruur](https://github.com/ruur)  
+- [Sayunosyjou](https://github.com/Sayunosyjou)  
+- 施主  
+- [Suyun114](https://github.com/Suyun114)  
+- [tergel93](https://github.com/tergel93)  
+- [tomblackwhite](https://github.com/tomblackwhite)  
+- 艳阳天  
+- [wyathou](https://github.com/wyathou)  
+- X-Ray  
+- 心即理物即心  
+- 仰望天空  
+- [Zomby7e](https://github.com/Zomby7e)  
+- 地铁卡  
+- 兜率  
+- 极品盗号  
+- [魔王酱](https://github.com/maou-sama-desu)  
+- 🎀🌸星不萌🌸🎀（贴吧账户）  
 - 雨天
-- April Simone🍥
-- [nerdroychan](https://github.com/nerdroychan)
-- [fjh1997](https://github.com/fjh1997)
-- freyr
-- isNijikawa
-- Jack
-- [Sayunosyjou](https://github.com/Sayunosyjou)
-- kuntop
-- [liguangsheng](https://github.com/liguangsheng)
-- livrth
-- [ruur](https://github.com/ruur)
-- [tergel93](https://github.com/tergel93)
-- [wyathou](https://github.com/wyathou)
-- X-Ray
-- [Zomby7e](https://github.com/Zomby7e)
-- [只捱宅](https://github.com/orzyyyy)
-- [5gura](https://github.com/5gura)
-
+  
 ## 开源项目
 
 本项目还使用了以下相关的 Github Action 自动化工具或项目，我们对其作者表示感谢：
