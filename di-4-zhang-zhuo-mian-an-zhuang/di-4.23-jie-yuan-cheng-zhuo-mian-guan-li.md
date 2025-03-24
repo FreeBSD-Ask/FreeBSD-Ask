@@ -311,26 +311,60 @@ root     syslogd     1021 7   udp4   *:514                 *:*
 
 ## 使用 FreeBSD 远程其他机器
 
-安装：
+### remotedesk
+
+使用 pkg 安装：
+
+```
+# pkg install remotedesk
+```
+
+或者用 Ports：
+
+```
+# cd /usr/ports/net/remotedesk/ 
+# make install clean
+```
+
+### xrdesktop2
+
+使用 pkg 安装：
+
+```
+# pkg install xrdesktop2
+```
+
+或者用 Ports：
+
+```
+# cd /usr/ports/net/xrdesktop2/ 
+# make install clean
+```
+
+### rdesktop（需要命令行执行）
+
+使用 pkg 安装：
 
 ```sh
 # pkg install rdesktop
 ```
 
-或者：
+或者用 Ports：
 
 ```sh
 # cd /usr/ports/net/rdesktop/
 # make install clean
 ```
 
-但 rdesktop 安装后不会在系统中生成菜单，因此要在终端输入命令：
+rdesktop 无前端 GUI，故要在终端输入命令：
 
 ```sh
-# rdesktop ip:端口
+# rdesktop ip:端口 # 比如 192.168.31.155:3389
 ```
 
-## anydesk
+如果没有特意更改 Windows 配置，无须加 `:端口`。
+
+### anydesk
 
 使用 anydesk 可进行远程访问，FreeBSD 上仅支持 x86 架构：
 
