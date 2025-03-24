@@ -90,3 +90,6 @@
 
 本项目还受到了 [GitBook 开源计划](https://www.gitbook.com/solutions/open-source)的赞助。本项目的网站由其提供。
 
+## 特别感谢
+
+本项目（《FreeBSD 从入门到跑路》）早期项目发起人为 [clean-master 清理大师](https://github.com/clean-master)。他自费创建了域名 `freebsdcn.org`（已不再使用）以及目前仍在使用的 <https://bsdcn.org> 主页。
