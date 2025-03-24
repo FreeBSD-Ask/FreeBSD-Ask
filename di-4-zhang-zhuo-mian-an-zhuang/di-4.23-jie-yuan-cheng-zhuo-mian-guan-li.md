@@ -307,39 +307,75 @@ root     syslogd     1021 7   udp4   *:514                 *:*
 
 ## 使用 FreeBSD 远程其他机器
 
-### remotedesk
+### freerdp（支持 NLA）
 
 使用 pkg 安装：
 
-```
-# pkg install remotedesk
+```sh
+# pkg ins freerdp
 ```
 
 或者用 Ports：
 
-```
-# cd /usr/ports/net/remotedesk/ 
+```sh
+# cd /usr/ports/net/freerdp/ 
 # make install clean
 ```
 
-### xrdesktop2
+使用 FreeBSD 远程链接到 Windows 11 24H2：
 
-使用 pkg 安装：
-
+```sh
+ykla@ykla:~ $ xfreerdp 192.168.31.213 # 注意是 xfreerdp。若使用 wayland 可能是 wfreerdp（未测试）
+[20:35:20:041] [1105:7c412000] [WARN][com.freerdp.client.common.cmdline] - ----------------------------------------
+[20:35:20:043] [1105:7c412000] [WARN][com.freerdp.client.common.cmdline] - Using deprecated command-line interface!
+[20:35:20:043] [1105:7c412000] [WARN][com.freerdp.client.common.cmdline] - This will be removed with FreeRDP 3!
+[20:35:20:043] [1105:7c412000] [WARN][com.freerdp.client.common.cmdline] - ----------------------------------------
+[20:35:20:043] [1105:7c412000] [WARN][com.freerdp.client.common.compatibility] - 192.168.31.213 -> /v:192.168.31.213
+[20:35:20:043] [1105:7c412000] [WARN][com.freerdp.client.common.compatibility] - 
+[20:35:20:045] [1105:7c412700] [INFO][com.freerdp.client.x11] - No user name set. - Using login name: ykla
+[20:35:21:445] [1105:7c412700] [INFO][com.freerdp.crypto] - creating directory /home/ykla/.config/freerdp
+[20:35:21:445] [1105:7c412700] [INFO][com.freerdp.crypto] - creating directory [/home/ykla/.config/freerdp/certs]
+[20:35:21:445] [1105:7c412700] [INFO][com.freerdp.crypto] - created directory [/home/ykla/.config/freerdp/server]
+[20:35:21:485] [1105:7c412700] [WARN][com.freerdp.crypto] - Certificate verification failure 'self-signed certificate (18)' at stack position 0
+[20:35:21:485] [1105:7c412700] [WARN][com.freerdp.crypto] - CN = DESKTOP-U72I6SS
+[20:35:21:485] [1105:7c412700] [ERROR][com.freerdp.crypto] - @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+[20:35:21:485] [1105:7c412700] [ERROR][com.freerdp.crypto] - @           WARNING: CERTIFICATE NAME MISMATCH!           @
+[20:35:21:485] [1105:7c412700] [ERROR][com.freerdp.crypto] - @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+[20:35:21:485] [1105:7c412700] [ERROR][com.freerdp.crypto] - The hostname used for this connection (192.168.31.213:3389) 
+[20:35:21:485] [1105:7c412700] [ERROR][com.freerdp.crypto] - does not match the name given in the certificate:
+[20:35:21:485] [1105:7c412700] [ERROR][com.freerdp.crypto] - Common Name (CN):
+[20:35:21:485] [1105:7c412700] [ERROR][com.freerdp.crypto] -    DESKTOP-U72I6SS
+[20:35:21:485] [1105:7c412700] [ERROR][com.freerdp.crypto] - A valid certificate for the wrong name should NOT be trusted!
+Certificate details for 192.168.31.213:3389 (RDP-Server):
+        Common Name: DESKTOP-U72I6SS
+        Subject:     CN = DESKTOP-U72I6SS
+        Issuer:      CN = DESKTOP-U72I6SS
+        Thumbprint:  36:b9:be:66:ab:2b:54:32:28:46:b6:98:68:8d:6f:20:a5:d1:58:8c:09:de:cc:3d:30:e1:06:6f:4f:62:54:de
+The above X.509 certificate could not be verified, possibly because you do not have
+the CA certificate in your certificate store, or the certificate has expired.
+Please look at the OpenSSL documentation on how to add a private CA to the store.
+Do you trust the above certificate? (Y/T/N) y # 输入 y 回车
+Domain:   # 留空
+Password: # 输入密码，密码不会显示出来 ***。
+……省略一部分……
 ```
-# pkg install xrdesktop2
-```
 
-或者用 Ports：
 
-```
-# cd /usr/ports/net/xrdesktop2/ 
-# make install clean
-```
+![freerdp](../.gitbook/assets/freerdp.png)
 
-### rdesktop（需要命令行执行）
+#### 故障排除
 
-使用 pkg 安装：
+- 但是我没有输入用户名就连上了？
+
+不知道。难道是因为我的 FreeBSD 用户名和 Windows 是一样的？
+
+### rdesktop（不支持 NLA）
+
+`net/xrdesktop2` 是 rdesktop 的图形化前端，但我打开里面的键盘设置就卡死了。
+
+---
+
+使用 pkg 安装 rdesktop：
 
 ```sh
 # pkg install rdesktop
@@ -360,16 +396,143 @@ rdesktop 无前端 GUI，故要在终端输入命令：
 
 如果没有特意更改 Windows 配置，无须加 `:端口`。
 
-### anydesk
+对于我测试的 Windows 11 24H2 会报错：
+
+```sh
+ykla@ykla:~ $ rdesktop 192.168.31.213
+Failed to connect, CredSSP required by server (check if server has disabled old TLS versions, if yes use -V option).
+```
+
+根据 [CredSSP does not work](https://github.com/rdesktop/rdesktop/issues/71)，是个老问题了。
+
+影响安全的解决方案是禁用网络级身份验证（NLA），在要远程连接的 Windows 上操作：
+
+```batch
+PS C:\Users\ykla> reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp" /v UserAuthentication /t REG_DWORD /d 0 /f
+操作成功完成。
+PS C:\Users\ykla> gpupdate /force
+正在更新策略...
+
+计算机策略更新成功完成。
+用户策略更新成功完成。
+```
+
+再测试链接：
+
+```sh
+ykla@ykla:~ $ rdesktop 192.168.31.213
+
+ATTENTION! The server uses and invalid security certificate which can not be trusted for
+the following identified reasons(s);
+
+ 1. Certificate issuer is not trusted by this system.
+
+     Issuer: CN=DESKTOP-U72I6SS
+
+
+Review the following certificate info before you trust it to be added as an exception.
+If you do not trust the certificate the connection atempt will be aborted:
+
+    Subject: CN=DESKTOP-U72I6SS
+     Issuer: CN=DESKTOP-U72I6SS
+ Valid From: Tue Mar  4 20:39:28 2025
+         To: Wed Sep  3 20:39:28 2025
+
+  Certificate fingerprints:
+
+       sha1: 599c0e8bbc57c5ee8de8993d5241fb0f0d70e98d
+     sha256: 36b9be66ab2b54322846b698688d6f20a5d1588c09decc3d30e1066f4f6254de
+
+
+Do you trust this certificate (yes/no)? # 输入 yes，按回车键
+```
+
+![rdesktop](../.gitbook/assets/rdesktop1.png)
+
+![rdesktop](../.gitbook/assets/rdesktop2.png)
+
+#### 故障排除
+
+- 看视频没声音
+
+待解决
+
+#### 参考文献
+
+- [使用 RDP 连接到 Azure VM 时排查身份验证错误](https://learn.microsoft.com/zh-cn/troubleshoot/azure/virtual-machines/windows/cannot-connect-rdp-azure-vm)，打开和关闭 NLA 的方法在此。经过测试关闭后 rdesktop 果然又连不上了。
+
+
+## anydesk
 
 使用 anydesk 可进行远程访问，FreeBSD 上仅支持 x86 架构：
 
-由于版权问题（**私有软件未经许可默认禁止分发**），必须用户使用 Ports 自行编译：
+由于版权问题（私有软件未经许可默认禁止分发），必须用户使用 Ports 自行编译：
 
 ```sh
 # cd /usr/ports/deskutils/anydesk/
 # make install clean
 ```
+
+不可使用 `BATCH=yes`参数，因为需要接受许可协议才能使用：
+
+![anydesk](../.gitbook/assets/anydesk1.png)
+
+查看安装后说明：
+
+```sh
+root@ykla:/ # pkg info -D anydesk
+anydesk-6.1.1_2:
+On install:
+1. Minimum OS version.
+======================
+Anydesk is a binary package for FreeBSD.
+Minimal recommended is 1 GiB system memory
+installed but performence will be reduced.
+For good performance is recommended and 2 GiB
+system memory.
+
+2. Important settings
+=====================
+Since Version 2.9.1 the following prerequisites have to be met:
+
+You need a mounted /proc directory. Either mount it manually or add it to your /etc/fstab file:
+ fstab: proc /proc procfs rw 0 0
+ manually: # mount -t procfs proc /proc 
+```
+
+提示需要 `/proc`，经过测试没有的话的执行程序确没反应。
+
+```# 
+# mount -t procfs proc /proc # 临时用一下。持久化可以参照上面的说明做
+```
+
+root 用户无法运行 anydesk。需要普通用户：
+
+```
+$ ykla@ykla:~ $ anydesk
+
+(<unknown>:18311): Gtk-WARNING **: 21:07:13.540: 无法在模块路径中找到主题引擎：“adwaita”，
+
+……省略一部分……
+```
+
+注意，被连接方“接受”（Accept）了才能继续链接。
+
+### Windows 通过 anydesk 远程 FreeBSD
+
+![Windows 通过 anydesk 远程 FreeBSD](../.gitbook/assets/anydesk2.png)
+
+![Windows 通过 anydesk 远程 FreeBSD](../.gitbook/assets/anydesk3.png)
+
+### FreeBSD 通过 anydesk 远程 Windows
+
+![Windows 通过 anydesk 远程 FreeBSD](../.gitbook/assets/anydesk4.png)
+
+#### 故障排除
+
+- FreeBSD 通过 anydesk 远程 Windows，似乎无法在 Windows 中移动鼠标
+
+待解决。
 
 ## RustDesk 中继服务器
 

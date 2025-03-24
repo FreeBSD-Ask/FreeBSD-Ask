@@ -42,7 +42,7 @@ NJU:
 - FreeBSD 官方
 
 ```sh
-# tar -zxvf ports.tar.gz -C /usr # 解压至路径
+# tar -zxvf ports.tar.gz -C /usr/ports # 解压至路径
 # rm ports.tar.gz # 删除存档
 ```
 

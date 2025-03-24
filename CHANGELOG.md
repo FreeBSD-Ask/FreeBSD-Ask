@@ -8,6 +8,7 @@
   - 测试“第 4.2 节 安装 KDE6”，同 VMware 的虚拟显卡无兼容性问题。缩放、鼠标无缝切换均正常。注：USTC 的源可能有问题。
   - 重写“致谢”
   - 根据 [clean-master/freebsdcn](https://github.com/clean-master/freebsdcn/graphs/contributors)，将本项目的开始时间改正至 2021 年 3 月 14 日。同时明确 clean-master 清理大师的历史贡献。
+  - 重写“第 4.23 节 远程桌面管理”中的“使用 FreeBSD 远程其他机器”
 - 2025.3.23
   - 格式化全书。
   - 测试“第 21.4 Linux 兼容层——基于 ArchLinux bootstrap”，在 14.2 通过
