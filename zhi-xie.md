@@ -29,7 +29,9 @@
 - [blu10ph](https://github.com/blu10ph)
 - [dongdigua](https://github.com/dongdigua)
 - DogeW
+- [Dedicatus5457](https://github.com/Dedicatus5457)
 - [fanyang1997](https://github.com/fanyang1997)
+- [gua-leopard](https://github.com/gua-leopard)
 - heguru5
 - matatabi-wang
 - [mxdyeah / mxdabc](https://mxdyeah.top/)
@@ -37,8 +39,9 @@
 - [peiyafei](https://github.com/peiyafei)
 - [pengxingwei](https://github.com/pengxingwei)
 - [puffinjiang](https://github.com/puffinjiang)
-- [qinghecyn](https://github.com/qinghecyn)
+- [清和](https://github.com/qinghecyn)
 - [Rintim](https://github.com/Rintim)
+- [Suyun114](https://github.com/Suyun114)
 - [tomblackwhite](https://github.com/tomblackwhite)
 - [number201724](https://github.com/number201724)
 - 地铁卡
@@ -54,18 +57,22 @@
 - 仰望天空
 - 雨天
 - April Simone🍥
+- [nerdroychan](https://github.com/nerdroychan)
 - [fjh1997](https://github.com/fjh1997)
 - freyr
 - isNijikawa
 - Jack
+- [Sayunosyjou](https://github.com/Sayunosyjou)
 - kuntop
-- liguangsheng
+- [liguangsheng](https://github.com/liguangsheng)
 - livrth
-- ruur
+- [ruur](https://github.com/ruur)
 - [tergel93](https://github.com/tergel93)
+- [wyathou](https://github.com/wyathou)
 - X-Ray
 - [Zomby7e](https://github.com/Zomby7e)
-
+- [只捱宅](https://github.com/orzyyyy)
+- [5gura](https://github.com/5gura)
 
 ## 开源项目
 
