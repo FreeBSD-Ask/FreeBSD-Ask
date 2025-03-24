@@ -89,7 +89,7 @@
 
 ## 项目部署与维护
 
-本项目（《FreeBSD 从入门到跑路》）早期项目发起人为 [clean-master 清理大师](https://github.com/clean-master)。他自费创建了域名 `freebsdcn.org`（已不再使用）以及目前仍在使用的 <https://bsdcn.org> 主页。他鼓励 ykla 创建一个项目来维护相关的 FreeBSD 教程。
+《FreeBSD 从入门到跑路》项目早期发起人为 [clean-master 清理大师](https://github.com/clean-master)。他自费创建了域名 `freebsdcn.org`（已不再使用）以及目前仍在使用的 <https://bsdcn.org> 主页。他鼓励 ykla 创建一个项目来维护相关的 FreeBSD 教程。
 
 [Roberta Wheeler](https://github.com/rowheel) 自费部署维护过《FreeBSD 从入门到跑路》项目使用的服务器（目前已切换至免费的 GitBook），并撰写了部分文章。
 
