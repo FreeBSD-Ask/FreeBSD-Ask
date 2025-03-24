@@ -62,29 +62,23 @@
 
 ## 致歉
 
-在本项目中某些章节还引用了或完全就是（比如防火墙章节）网络上其他作者的教程。由于历史问题和对许可证的非标准引用，没能按要求作者的要求注明来源及作者。再此表示歉意。如果您对此有不同看法或要求，请联系 `yklaxds@gmail.com`。
+在本项目中某些章节还引用了或完全就是（比如防火墙章节）网络上其他作者的教程。由于历史问题和对许可证的非标准引用（主要是认识不足），没能按要求作者的要求注明来源及作者。再此表示歉意。如果您对此有不同看法或要求，请联系 `yklaxds@gmail.com`。
 
-作为项目目标的一部分，我们会尽快重写全部相关部分内容及对作者和项目进行规范化标注。
+作为项目目标的一部分，我们会尽快重写所有相关部分内容及对作者和项目进行规范化标注。
 
 ### 开源项目
 
-本项目还使用了以下相关的 Github Action 自动化工具，我们对其作者表示感谢：
+本项目还使用了以下相关的 Github Action 自动化工具或项目，我们对其作者表示感谢：
 
-- actions/checkout
-- actions/setup-node
-- peter-evans/create-pull-request
-- actions/checkout
-- lycheeverse/lychee-action
-- peter-evans/create-issue-from-file
-- actions/checkout
-- DavidAnson/markdownlint-cli2-action
-- tj-actions/changed-files
-- actions/checkout
-- DavidAnson/markdownlint-cli2-action
-- peter-evans/create-pull-request
-- actions/checkout
-- actions/setup-node
-- peter-evans/create-pull-request
+- [actions/checkout](https://github.com/actions/checkout)，用于 Git 检出项目
+- [actions/setup-node](https://github.com/actions/setup-node)，用于配置 Node.js 环境
+- [peter-evans/create-pull-request](https://github.com/peter-evans/create-pull-request)，用于创建 PR
+- [lycheeverse/lychee-action](https://github.com/lycheeverse/lychee-action)，用于检查失效链接及文件
+- [peter-evans/create-issue-from-file](https://github.com/peter-evans/create-issue-from-file)，用于创建 Issue
+- [DavidAnson/markdownlint-cli2-action](https://github.com/DavidAnson/markdownlint-cli2-action)，用于 Markdown 规范化
+- [tj-actions/changed-files](https://github.com/tj-actions/changed-files)，用于检查文件变动
+- [autocorrect](https://github.com/huacnlee/autocorrect)，用于 Markdown 规范化，主要是加空格
+- [md-padding](https://github.com/harttle/md-padding)，用于 Markdown 规范化，主要是加空格
 
 ---
 
