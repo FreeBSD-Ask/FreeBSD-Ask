@@ -8,10 +8,23 @@
 
 ## 传统的 dd 单个文件
 
-dd 一个 大小为 1GB 的 swap 文件（1G=1024MB，要更多就做个计算题）：
+dd 一个 大小为 8GB 的 swap 文件（1G=1024MB，要更多就做个计算题）：
 
 ```sh
-# dd if=/dev/zero of=/usr/swap0 bs=1M count=1024
+# dd if=/dev/zero of=/usr/swap0 bs=1M count=8192
+8192+0 records in
+8192+0 records out
+8589934592 bytes transferred in 3.959893 secs (2169234270 bytes/sec)
+```
+
+要显示命令进度可以使用选项 `status=progress`
+
+```sh
+# dd if=/dev/zero of=/usr/swap0 bs=1M count=8192 status=progress
+  8416919552 bytes (8417 MB, 8027 MiB) transferred 4.011s, 2098 MB/s # 此处是实时刷新的
+8192+0 records in
+8192+0 records out
+8589934592 bytes transferred in 4.071005 secs (2110028088 bytes/sec)
 ```
 
 设置权限为 600，即只有拥有者有读写权限。
