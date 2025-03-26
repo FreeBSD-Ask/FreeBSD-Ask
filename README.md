@@ -32,7 +32,7 @@ Telegram：[https://t.me/oh_my_BSD](https://t.me/oh_my_BSD)（需要代理）
 
 参见 [贡献指南与开放任务](https://freebsd.gitbook.io/cfc/she-qu-jian-she/renwu)
 
-### 本季度任务
+### 2025 年第一季度任务清单
 
 - [ ] 解释全书所有命令和选项的含义、历史（如必要）
 - [X] 修正失效外链和图片引用
