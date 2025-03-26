@@ -6,6 +6,7 @@
 
 - 2025.3.26
   - 重写“Pure-FTPd（基于 MySQL）”
+  - 重写“ProFTPD（基于 MySQL）”
 - 2025.3.25
   - 新增“第 15.5 节 Fail2Ban（基于 IPFW、PF、IPF）”
   - “第 12.2 节 FreeBSD EFI 引导管理”合并入“第 12.5 节 Grub & UEFI 与 efibootmgr”
