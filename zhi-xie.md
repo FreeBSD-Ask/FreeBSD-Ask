@@ -52,7 +52,6 @@
 - [puffinjiang](https://github.com/puffinjiang)  
 - 清和 [(GitHub)](https://github.com/qinghecyn)  
 - 清热解毒口服液  
-- 奇点  
 - [Rintim](https://github.com/Rintim)  
 - [ruur](https://github.com/ruur)  
 - [Sayunosyjou](https://github.com/Sayunosyjou)  
