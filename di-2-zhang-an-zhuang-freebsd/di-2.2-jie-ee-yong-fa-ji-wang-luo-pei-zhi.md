@@ -978,3 +978,8 @@ sed -i '' 's/quarterly/latest/g' /etc/pkg/FreeBSD.conf
 
 更多要求，参见微软官方文档[命名文件、路径和命名空间](https://learn.microsoft.com/zh-cn/windows/win32/fileio/naming-a-file)。
 
+>**技巧**
+>
+>你可以使用 git 拉取 [freebsd-doc](https://github.com/freebsd/freebsd-doc) 项目试试看。我已经报告过 Bug。
+>
+>[The colon in the file name of the security report of the FreeBSD doc is not compatible with Microsoft Windows](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=267636)
