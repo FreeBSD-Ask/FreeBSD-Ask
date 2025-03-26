@@ -16,8 +16,7 @@ Windows 测试环境为 Windows 10、11，并尽量使用最新版本的 Windows
 >
 > ports 一般是 HEAD 分支，你的 pkg 最好与 ports 保持在同一主线上，即都选择 `latest`。
 
-
-示例：
+---
 
 要安装软件 `yyy`，`yyy` 在 ports 里是 `xxx/yyy`，即路径是 `/usr/ports/xxx/yyy`。
 
