@@ -4,7 +4,7 @@
 * [编辑日志](CHANGELOG.md)
 * [致谢](zhi-xie.md)
 * [序言](xu-yan.md)
-* [凡例](fan-li.md)
+* [前言](fan-li.md)
 
 ## 第 1 章 FreeBSD 初见
 
