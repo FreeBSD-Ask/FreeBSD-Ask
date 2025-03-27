@@ -10,13 +10,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-
       - name: Checkout ttf-mswin11-zh-deb
         uses: actions/checkout@v4
         with:
           repository: ykla/ttf-mswin11-zh-deb
           
-      - name: Install dependencies
+      - name: Install font dependencies
         run: |
           sudo apt update
           sudo apt install -y xfonts-encodings xfonts-utils 
@@ -38,7 +37,7 @@ jobs:
         with:
           python-version: '3.13'
 
-      - name: Install dependencies
+      - name: Install PDF generation dependencies
         run: |
           sudo apt-get update
           sudo apt-get install -y libpango-1.0-0 libpangoft2-1.0-0 libpangocairo-1.0-0
@@ -51,6 +50,16 @@ jobs:
         env:
           PYTHONPATH: ${{ github.workspace }}/gitbook-pdf-export
 
+      - name: Install Changelog Generator
+        run: gem install github_changelog_generator
+
+      - name: Generate Changelog
+        run: |
+          github_changelog_generator -u FreeBSD-Ask -p FreeBSD-Ask --token ${{ secrets.GITHUB_TOKEN }} \
+            --pull-requests --contributors --issues=false --no-unreleased
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Set release tag
         id: set_tag
         run: echo "RELEASE_TAG=$(date +'%Y.%m.%d')" >> $GITHUB_ENV
@@ -61,4 +70,5 @@ jobs:
           tag: ${{ env.RELEASE_TAG }}
           name: ${{ env.RELEASE_TAG }}
           artifacts: gitbook-pdf-export/build/final.pdf
+          body_file: CHANGELOG.md
           token: ${{ secrets.GITHUB_TOKEN }}
