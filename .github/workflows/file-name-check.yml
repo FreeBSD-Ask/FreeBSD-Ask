@@ -1,0 +1,62 @@
+name: 🔗 验证 SUMMARY.md 目录
+
+on:
+  push:
+    # 只要有任意 .md 文件发生变动就触发
+    paths:
+      - '**/*.md'
+
+jobs:
+  check-summary:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Validate SUMMARY.md entries and create issue if mismatch
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const fs = require('fs');
+            const summaryPath = 'SUMMARY.md';
+            if (!fs.existsSync(summaryPath)) {
+              core.setFailed("SUMMARY.md not found in the repository.");
+            }
+            const content = fs.readFileSync(summaryPath, 'utf8');
+            // 正则提取 SUMMARY.md 中形如 (...\.md) 的文件路径
+            const regex = /\(([^)]+\.md)\)/g;
+            let match;
+            const missingEntries = [];
+            while ((match = regex.exec(content)) !== null) {
+              const filePath = match[1];
+              if (!fs.existsSync(filePath)) {
+                missingEntries.push(filePath);
+              }
+            }
+            if (missingEntries.length > 0) {
+              const body = `The following entries in SUMMARY.md do not have corresponding files:\n\n` +
+                           missingEntries.map(e => `- ${e}`).join('\n');
+              const issueTitle = 'SUMMARY.md mismatch: Missing files';
+              // 避免重复创建 issue：检查是否已有同标题的开放 issue（使用了 summary-check 标签）
+              const { data: issues } = await github.issues.listForRepo({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                state: 'open',
+                labels: 'summary-check'
+              });
+              const exists = issues.some(issue => issue.title === issueTitle);
+              if (exists) {
+                console.log("An open issue already exists for SUMMARY.md mismatch.");
+              } else {
+                await github.issues.create({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  title: issueTitle,
+                  body: body,
+                  labels: ['summary-check']
+                });
+                console.log("Issue created for SUMMARY.md mismatch.");
+              }
+            } else {
+              console.log("All SUMMARY.md entries are valid.");
+            }
