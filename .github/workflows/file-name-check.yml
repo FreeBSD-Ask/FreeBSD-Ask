@@ -1,10 +1,10 @@
-name: 🔗 验证 SUMMARY.md 目录
+name: Validate SUMMARY.md
 
 on:
   push:
-    # 只要有任意 .md 文件发生变动就触发
     paths:
       - '**/*.md'
+  workflow_dispatch:
 
 jobs:
   check-summary:
@@ -23,7 +23,7 @@ jobs:
               core.setFailed("SUMMARY.md not found in the repository.");
             }
             const content = fs.readFileSync(summaryPath, 'utf8');
-            // 正则提取 SUMMARY.md 中形如 (...\.md) 的文件路径
+            // 正则提取 SUMMARY.md 中括号里的 .md 文件路径
             const regex = /\(([^)]+\.md)\)/g;
             let match;
             const missingEntries = [];
@@ -34,11 +34,11 @@ jobs:
               }
             }
             if (missingEntries.length > 0) {
-              const body = `The following entries in SUMMARY.md do not have corresponding files:\n\n` +
+              const body = `以下在 SUMMARY.md 中的条目找不到对应的文件：\n\n` +
                            missingEntries.map(e => `- ${e}`).join('\n');
               const issueTitle = 'SUMMARY.md mismatch: Missing files';
-              // 避免重复创建 issue：检查是否已有同标题的开放 issue（使用了 summary-check 标签）
-              const { data: issues } = await github.issues.listForRepo({
+              // 检查是否已存在同标题且带有 summary-check 标签的开放 issue
+              const { data: issues } = await github.rest.issues.listForRepo({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
                 state: 'open',
@@ -46,17 +46,17 @@ jobs:
               });
               const exists = issues.some(issue => issue.title === issueTitle);
               if (exists) {
-                console.log("An open issue already exists for SUMMARY.md mismatch.");
+                console.log("已存在关于 SUMMARY.md mismatch 的开放 issue。");
               } else {
-                await github.issues.create({
+                await github.rest.issues.create({
                   owner: context.repo.owner,
                   repo: context.repo.repo,
                   title: issueTitle,
                   body: body,
                   labels: ['summary-check']
                 });
-                console.log("Issue created for SUMMARY.md mismatch.");
+                console.log("已创建关于 SUMMARY.md mismatch 的 issue。");
               }
             } else {
-              console.log("All SUMMARY.md entries are valid.");
+              console.log("所有 SUMMARY.md 条目均有效。");
             }
