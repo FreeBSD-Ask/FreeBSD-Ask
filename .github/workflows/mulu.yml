@@ -1,4 +1,4 @@
-name: Update mu-lu.md when SUMMARY.md changes
+name: 从 SUMMARY.md 更新目录
 
 on:
   push:
@@ -34,5 +34,5 @@ jobs:
       - name: Commit and push changes
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: "Update mu-lu.md from SUMMARY.md [skip ci]"
+          commit_message: "从 SUMMARY.md 更新 mu-lu.md [skip ci]"
           file_pattern: "mu-lu.md"
