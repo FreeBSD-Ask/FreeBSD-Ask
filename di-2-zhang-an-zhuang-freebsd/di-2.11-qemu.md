@@ -83,7 +83,7 @@ root@ykla:/home/ykla # locate u-boot.bin
 
 写入
 
-```batch
+```powershell
 cd /d "C:\Program Files\qemu"
 .\qemu-system-riscv64.exe ^
     -machine virt ^
@@ -176,7 +176,7 @@ Starting sshd.
 
 然后就可以在 Windows 上通过 ssh 连接了（IP 就是 `localhost`）：
 
-```batch
+```powershell
 ssh ykla@localhost:8022
 ```
 

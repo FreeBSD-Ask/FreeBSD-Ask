@@ -455,7 +455,7 @@ Failed to connect, CredSSP required by server (check if server has disabled old 
 
 影响安全的解决方案是禁用网络级身份验证（NLA），在要远程连接的 Windows 上操作：
 
-```batch
+```powershell
 PS C:\Users\ykla> reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp" /v UserAuthentication /t REG_DWORD /d 0 /f
 操作成功完成。
 PS C:\Users\ykla> gpupdate /force
