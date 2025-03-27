@@ -96,7 +96,7 @@ jobs:
         uses: janheinrichmerker/action-github-changelog-generator@v2.4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          sinceTag: ${{ env.RELEASE_TAG }}
+          sinceTag: ${{ env.PREVIOUS_TAG }}
           user: FreeBSD-Ask
           repo: FreeBSD-Ask
 
