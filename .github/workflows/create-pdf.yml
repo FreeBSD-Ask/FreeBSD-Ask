@@ -15,6 +15,15 @@ jobs:
         with:
           path: FreeBSD-Ask
 
+      - name: Checkout ttf-mswin11-zh-deb
+        uses: actions/checkout@v4
+        with:
+          repository: ykla/ttf-mswin11-zh-deb
+          
+      - name: Install dependencies
+        run: |
+          dpkg -i ttf-ms-win11-*.deb
+         
       - name: Checkout gitbook-pdf-export repository
         uses: actions/checkout@v4
         with:
