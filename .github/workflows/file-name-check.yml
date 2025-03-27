@@ -1,4 +1,4 @@
-name: Validate SUMMARY.md
+name: 🔗 检查 SUMMARY.md 目录
 
 on:
   push:
