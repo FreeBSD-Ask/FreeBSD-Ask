@@ -14,8 +14,9 @@ jobs:
         with:
           repository: ykla/ttf-mswin11-zh-deb
           path: gitbook-pdf-export
+
      - name: Install Fonts dependencies
-        run: |
+       run: |
           sudo apt-get update
           sudo apt-get install -y xfonts-encodings xfonts-utils
           sudo dpkg -i ttf-ms-win11-*.deb
