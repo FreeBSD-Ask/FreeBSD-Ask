@@ -20,7 +20,8 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y xfonts-encodings xfonts-utils
           sudo dpkg -i ttf-ms-win11-*.deb
-          pwd
+          cd ..
+          rm -rf ttf-mswin11-zh-deb/
 
       - name: Checkout FreeBSD-Ask repository
         uses: actions/checkout@v4
