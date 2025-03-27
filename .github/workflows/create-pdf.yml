@@ -56,7 +56,7 @@ jobs:
       - name: Generate Changelog
         run: |
           github_changelog_generator -u FreeBSD-Ask -p FreeBSD-Ask --token ${{ secrets.GITHUB_TOKEN }} \
-            --pull-requests --contributors --issues=false --no-unreleased
+            --pull-requests --issues=false --no-unreleased
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
