@@ -61,15 +61,13 @@ Telegram：[https://t.me/oh_my_BSD](https://t.me/oh_my_BSD)（需要代理）
   - [X] vsftpd
 
 
-
-
 ## PDF 文档导出
 
 可使用由 [safreya](https://github.com/safreya) 编写的脚本：<https://github.com/FreeBSD-Ask/gitbook-pdf-export> 来导出本书的 PDF 文档。
 
 该脚本使用 Python3 编写，仅在 Windows 10、FreeBSD 14.2 上测试过。具体使用方法见该项目的 README。
 
-此外，还会不定期地通过 GitBook 导出 PDF 于 [releases](https://github.com/FreeBSD-Ask/FreeBSD-Ask/releases)（也许需要代理）。
+此外，还会每 5 天通过 GitBook 导出 PDF 于 [releases](https://github.com/FreeBSD-Ask/FreeBSD-Ask/releases)（也许需要代理）。
 
 ## 捐赠
 
@@ -82,7 +80,6 @@ Telegram：[https://t.me/oh_my_BSD](https://t.me/oh_my_BSD)（需要代理）
 [点此捐赠 FreeBSD 基金会](https://freebsdfoundation.org/donate)
 
 需要你有 Visa 信用卡：若直接提交无法支付，请使用捐赠页面的 `Amazon Pay` 或 `Google Pay`，经测试均可以顺利支付。
-
 
 ## 授权许可
 

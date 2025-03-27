@@ -1,0 +1,100 @@
+name: 🔗 创建并发布 PDF
+
+on:
+  schedule:
+    - cron: '0 0 */5 * *'  # 每隔5天运行一次
+  workflow_dispatch:  # 允许手动触发
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout ttf-mswin11-zh-deb
+        uses: actions/checkout@v4
+        with:
+          repository: ykla/ttf-mswin11-zh-deb
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y xfonts-encodings xfonts-utils
+          sudo dpkg -i ttf-ms-win11-*.deb
+
+      - name: Checkout FreeBSD-Ask repository
+        uses: actions/checkout@v4
+        with:
+          path: FreeBSD-Ask
+
+      - name: Checkout gitbook-pdf-export repository
+        uses: actions/checkout@v4
+        with:
+          repository: FreeBSD-Ask/gitbook-pdf-export
+          path: gitbook-pdf-export
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+
+      - name: Install Python dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libpango-1.0-0 libpangoft2-1.0-0 libpangocairo-1.0-0
+          pip install weasyprint mistune pygments
+
+      - name: Install Ruby and github_changelog_generator
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ruby-full
+
+      - name: Generate PDF
+        run: |
+          cd gitbook-pdf-export
+          python mdconv.py ../FreeBSD-Ask
+        env:
+          PYTHONPATH: ${{ github.workspace }}/gitbook-pdf-export
+
+      - name: "✏️ Generate release changelog"
+        uses: janheinrichmerker/action-github-changelog-generator@v2.4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }} 
+
+      - name: Set release tag
+        id: set_tag
+        run: echo "RELEASE_TAG=$(date +'%Y.%m.%d')" >> $GITHUB_ENV
+
+      - name: Read CHANGELOG.md content
+        id: read_changelog
+        run: |
+          CHANGES=$(cat CHANGELOG.md)
+          echo "CHANGES_CONTENT<<EOF" >> $GITHUB_ENV
+          echo "$CHANGES" >> $GITHUB_ENV
+          echo "EOF" >> $GITHUB_ENV
+
+      - name: Create Release
+        uses: ncipollo/release-action@v1
+        with:
+          tag: ${{ env.RELEASE_TAG }}
+          name: ${{ env.RELEASE_TAG }}
+          artifacts: |
+            gitbook-pdf-export/build/final.pdf
+            CHANGELOG.md
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Update Release with changelog content
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const release = await github.rest.repos.getReleaseByTag({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              tag: process.env.RELEASE_TAG
+            });
+            
+            await github.rest.repos.updateRelease({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              release_id: release.data.id,
+              body: process.env.CHANGES_CONTENT
+            });

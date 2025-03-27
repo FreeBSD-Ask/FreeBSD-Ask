@@ -5,7 +5,6 @@ on:
     # 当根目录下的 SUMMARY.md 被修改时触发工作流
     paths:
       - 'SUMMARY.md'
-  workflow_dispatch:
 
 jobs:
   update-mu-lu:
@@ -13,7 +12,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           # 获取完整历史记录，便于后续提交操作
           fetch-depth: 0
