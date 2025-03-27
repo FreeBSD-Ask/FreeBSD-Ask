@@ -1,4 +1,4 @@
-name: 从 SUMMARY.md 更新目录
+name: 🔗 从 SUMMARY.md 更新目录
 
 on:
   push:
