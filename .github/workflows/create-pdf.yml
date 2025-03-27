@@ -9,19 +9,15 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout ttf-mswin11-zh-deb
+     - name: Install fonts 
         uses: actions/checkout@v4
         with:
           repository: ykla/ttf-mswin11-zh-deb
-
-      - name: Install dependencies
+          path: gitbook-pdf-export
         run: |
           sudo apt-get update
           sudo apt-get install -y xfonts-encodings xfonts-utils
           sudo dpkg -i ttf-ms-win11-*.deb
-          cd ..
-          rm -rf ttf-mswin11-zh-deb/
 
       - name: Checkout FreeBSD-Ask repository
         uses: actions/checkout@v4
