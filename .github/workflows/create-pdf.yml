@@ -88,7 +88,6 @@ jobs:
       - name: 生成变更日志
         uses: janheinrichmerker/action-github-changelog-generator@v2.4
         with:
-          onlyLastTag: true
           token: ${{ secrets.GITHUB_TOKEN }}
           future_release: ${{ env.RELEASE_TAG }}
           user: FreeBSD-Ask
