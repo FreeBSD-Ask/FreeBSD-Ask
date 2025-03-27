@@ -8,6 +8,7 @@
   - “第 16.1 节 FTP 服务器”新增“vsftpd”
   - 引入 Github Action：🔗 从 SUMMARY.md 更新目录
   - 引入 Github Action：🔗 检查 SUMMARY.md 目录
+  - 引入 Github Action：🔗 创建并发布 PDF 文档，从现在起每 5 天在 Github release 生成一个 PDF 文档
 - 2025.3.26
   - 重写“Pure-FTPd（基于 MySQL）”
   - 重写“ProFTPD（基于 MySQL）”
