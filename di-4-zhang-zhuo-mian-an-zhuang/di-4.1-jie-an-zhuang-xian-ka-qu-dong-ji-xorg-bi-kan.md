@@ -115,6 +115,10 @@ FreeBSD 15 CUEERNT，编译使用 `drm-66-kmod`，支持情况同 Linux 6.6。
 
 - FreeBSD 14.X
 
+>**技巧**
+>
+>若要使用 pkg 安装，请参照本书其他章节配置 kernel modules（kmods）内核模块源。
+
 ```sh
 # cd /usr/ports/graphics/drm-61-kmod
 # make BATCH=yes install clean
