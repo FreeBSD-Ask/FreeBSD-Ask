@@ -47,6 +47,6 @@ jobs:
         uses: ncipollo/release-action@v1
         with:
           tag: ${{ env.RELEASE_TAG }}
-          name: Release ${{ env.RELEASE_TAG }}
-          artifacts: gitbook-pdf-export/Handbook.pdf
+          name: ${{ env.RELEASE_TAG }}
+          artifacts: gitbook-pdf-export/final.pdf
           token: ${{ secrets.GITHUB_TOKEN }}
