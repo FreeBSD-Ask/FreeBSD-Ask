@@ -51,7 +51,7 @@ jobs:
           PYTHONPATH: ${{ github.workspace }}/gitbook-pdf-export
 
       - name: Install Changelog Generator
-        run: gem install github_changelog_generator
+        run: sudo gem install github_changelog_generator
 
       - name: Generate Changelog
         run: |
