@@ -1,0 +1,62 @@
+name: 🔗 检查 SUMMARY.md 目录
+
+on:
+  push:
+    paths:
+      - '**/*.md'
+  workflow_dispatch:
+
+jobs:
+  check-summary:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Validate SUMMARY.md entries and create issue if mismatch
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const fs = require('fs');
+            const summaryPath = 'SUMMARY.md';
+            if (!fs.existsSync(summaryPath)) {
+              core.setFailed("SUMMARY.md not found in the repository.");
+            }
+            const content = fs.readFileSync(summaryPath, 'utf8');
+            // 正则提取 SUMMARY.md 中括号里的 .md 文件路径
+            const regex = /\(([^)]+\.md)\)/g;
+            let match;
+            const missingEntries = [];
+            while ((match = regex.exec(content)) !== null) {
+              const filePath = match[1];
+              if (!fs.existsSync(filePath)) {
+                missingEntries.push(filePath);
+              }
+            }
+            if (missingEntries.length > 0) {
+              const body = `以下在 SUMMARY.md 中的条目找不到对应的文件：\n\n` +
+                           missingEntries.map(e => `- ${e}`).join('\n');
+              const issueTitle = 'SUMMARY.md mismatch: Missing files';
+              // 检查是否已存在同标题且带有 summary-check 标签的开放 issue
+              const { data: issues } = await github.rest.issues.listForRepo({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                state: 'open',
+                labels: 'summary-check'
+              });
+              const exists = issues.some(issue => issue.title === issueTitle);
+              if (exists) {
+                console.log("已存在关于 SUMMARY.md mismatch 的开放 issue。");
+              } else {
+                await github.rest.issues.create({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  title: issueTitle,
+                  body: body,
+                  labels: ['summary-check']
+                });
+                console.log("已创建关于 SUMMARY.md mismatch 的 issue。");
+              }
+            } else {
+              console.log("所有 SUMMARY.md 条目均有效。");
+            }
