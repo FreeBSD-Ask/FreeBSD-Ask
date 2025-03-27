@@ -8,75 +8,92 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    steps:  # 必须添加 steps 键（原配置缺失）
-      # 修复点 1：添加 steps 键并修复缩进层级
-      - name: Checkout fonts repository
+
+    steps:
+      # ================= 字体安装部分 =================
+      - name: Checkout 字体仓库
         uses: actions/checkout@v4
         with:
           repository: ykla/ttf-mswin11-zh-deb
-          path: fonts  # 修复点 2：使用独立路径避免冲突
+          path: fonts-repo  # 独立路径存放字体仓库
 
-      - name: Install Fonts dependencies
+      - name: 安装字体依赖
         run: |
-          cd fonts  # 修复点 3：切换到字体仓库目录
+          cd fonts-repo
           sudo apt-get update
           sudo apt-get install -y xfonts-encodings xfonts-utils
           sudo dpkg -i ttf-ms-win11-*.deb
 
-      - name: Checkout FreeBSD-Ask repository
+      # ================= 仓库检出部分 =================
+      - name: 检出 FreeBSD-Ask 主仓库
         uses: actions/checkout@v4
         with:
           path: FreeBSD-Ask
-          token: ${{ secrets.GITHUB_TOKEN }}  # 修复点 4：确保写权限
+          token: ${{ secrets.GITHUB_TOKEN }}  # 关键权限配置
+          fetch-depth: 0  # 获取完整提交历史
 
-      - name: Checkout gitbook-pdf-export repository
+      - name: 检出 gitbook-pdf-export 工具
         uses: actions/checkout@v4
         with:
           repository: FreeBSD-Ask/gitbook-pdf-export
-          path: gitbook-pdf-export
+          path: pdf-generator  # 独立工具目录
 
-      # 其他步骤保持不变...
-      - name: Set up Python
+      # ================= 初始化标签检查 =================
+      - name: 检查或创建初始标签
+        working-directory: FreeBSD-Ask
+        run: |
+          if ! git describe --tags --abbrev=0 2>/dev/null; then
+            echo "创建初始标签 v0.0.0"
+            git config --global user.email "actions@github.com"
+            git config --global user.name "GitHub Actions"
+            git tag v0.0.0
+            git push origin v0.0.0
+          fi
+
+      # ================= 环境配置部分 =================
+      - name: 设置 Python 环境
         uses: actions/setup-python@v5
         with:
           python-version: '3.13'
 
-      - name: Install Python dependencies
+      - name: 安装 Python 依赖
         run: |
-          sudo apt-get update
-          sudo apt-get install -y libpango-1.0-0 libpangoft2-1.0-0 libpangocairo-1.0-0
+          sudo apt-get install -y \
+            libpango-1.0-0 \
+            libpangoft2-1.0-0 \
+            libpangocairo-1.0-0
           pip install weasyprint mistune pygments
 
-      - name: Install Ruby and github_changelog_generator
+      # ================= PDF 生成部分 =================
+      - name: 生成 PDF 文档
         run: |
-          sudo apt-get update
-          sudo apt-get install -y ruby-full
-
-      - name: Generate PDF
-        run: |
-          cd gitbook-pdf-export
+          cd pdf-generator
           python mdconv.py ../FreeBSD-Ask
         env:
-          PYTHONPATH: ${{ github.workspace }}/gitbook-pdf-export
+          PYTHONPATH: ${{ github.workspace }}/pdf-generator
 
-      - name: Set release tag
+      # ================= 发布流程部分 =================
+      - name: 设置发布日期标签
         id: set_tag
         run: echo "RELEASE_TAG=$(date +'%Y.%m.%d')" >> $GITHUB_ENV
 
-      - name: Create Git tag
+      - name: 创建 Git 标签
+        working-directory: FreeBSD-Ask  # 关键目录指定
         run: |
           git config --global user.email "action@github.com"
           git config --global user.name "GitHub Action"
           git tag ${{ env.RELEASE_TAG }}
           git push origin ${{ env.RELEASE_TAG }}
 
-      - name: Generate release changelog
+      - name: 生成变更日志
         uses: janheinrichmerker/action-github-changelog-generator@v2.4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           future_release: ${{ env.RELEASE_TAG }}
+          user: FreeBSD-Ask
+          repo: FreeBSD-Ask
 
-      - name: Read CHANGELOG.md content
+      - name: 读取变更日志内容
         id: read_changelog
         run: |
           CHANGES=$(cat CHANGELOG.md)
@@ -84,17 +101,17 @@ jobs:
           echo "$CHANGES" >> $GITHUB_ENV
           echo "EOF" >> $GITHUB_ENV
 
-      - name: Create Release
+      - name: 创建 GitHub Release
         uses: ncipollo/release-action@v1
         with:
           tag: ${{ env.RELEASE_TAG }}
           name: ${{ env.RELEASE_TAG }}
           artifacts: |
-            gitbook-pdf-export/build/final.pdf
+            pdf-generator/build/final.pdf
             CHANGELOG.md
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Update Release with changelog content
+      - name: 更新 Release 说明
         uses: actions/github-script@v7
         with:
           script: |
