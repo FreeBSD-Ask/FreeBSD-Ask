@@ -6,6 +6,7 @@
 
 - 2025.3.27
   - “第 16.1 节 FTP 服务器”新增“vsftpd”
+  - 引入 Github Action：🔗 从 SUMMARY.md 更新目录
 - 2025.3.26
   - 重写“Pure-FTPd（基于 MySQL）”
   - 重写“ProFTPD（基于 MySQL）”
