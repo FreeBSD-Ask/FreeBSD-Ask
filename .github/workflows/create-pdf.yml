@@ -22,7 +22,7 @@ jobs:
           
       - name: Install dependencies
         run: |
-          dpkg -i ttf-ms-win11-*.deb
+          sudo dpkg -i ttf-ms-win11-*.deb
          
       - name: Checkout gitbook-pdf-export repository
         uses: actions/checkout@v4
