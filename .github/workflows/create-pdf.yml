@@ -47,7 +47,6 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y ruby-full
-          sudo gem install github_changelog_generator
 
       - name: Generate PDF
         run: |
@@ -56,9 +55,10 @@ jobs:
         env:
           PYTHONPATH: ${{ github.workspace }}/gitbook-pdf-export
 
-      - name: Generate CHANGELOG
-        run: |
-          github_changelog_generator -u ykla -p FreeBSD-Ask --token ${{ secrets.GITHUB_TOKEN }} --no-issues
+      - name: "✏️ Generate release changelog"
+        uses: janheinrichmerker/action-github-changelog-generator@v2.3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }} 
       - name: Set release tag
         id: set_tag
         run: echo "RELEASE_TAG=$(date +'%Y.%m.%d')" >> $GITHUB_ENV
