@@ -48,5 +48,5 @@ jobs:
         with:
           tag: ${{ env.RELEASE_TAG }}
           name: ${{ env.RELEASE_TAG }}
-          artifacts: gitbook-pdf-export/final.pdf
+          artifacts: gitbook-pdf-export/build/final.pdf
           token: ${{ secrets.GITHUB_TOKEN }}
