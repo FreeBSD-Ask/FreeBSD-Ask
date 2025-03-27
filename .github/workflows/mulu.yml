@@ -1,0 +1,38 @@
+name: 🔗 从 SUMMARY.md 更新目录
+
+on:
+  push:
+    # 当根目录下的 SUMMARY.md 被修改时触发工作流
+    paths:
+      - 'SUMMARY.md'
+
+jobs:
+  update-mu-lu:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          # 获取完整历史记录，便于后续提交操作
+          fetch-depth: 0
+
+      - name: Delete existing mu-lu.md if exists
+        run: |
+          if [ -f mu-lu.md ]; then
+            echo "Deleting existing mu-lu.md..."
+            rm mu-lu.md
+          else
+            echo "mu-lu.md not found, skipping deletion."
+          fi
+
+      - name: Copy SUMMARY.md to mu-lu.md
+        run: |
+          cp SUMMARY.md mu-lu.md
+          echo "Copied SUMMARY.md to mu-lu.md"
+
+      - name: Commit and push changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "从 SUMMARY.md 更新 mu-lu.md [skip ci]"
+          file_pattern: "mu-lu.md"

@@ -90,7 +90,7 @@ Ubuntu 吧前吧主 Simple 曾建议修改项目的章节文件名与许可协�
   
 ## 开源项目
 
-本项目还使用了以下相关的 Github Action 自动化工具或项目，我们对其作者表示感谢：
+本项目部署过程中还使用了以下开源项目，我们对其作者表示感谢：
 
 - [actions/checkout](https://github.com/actions/checkout)，用于 Git 检出项目
 - [actions/setup-node](https://github.com/actions/setup-node)，用于配置 Node.js 环境
@@ -101,7 +101,7 @@ Ubuntu 吧前吧主 Simple 曾建议修改项目的章节文件名与许可协�
 - [tj-actions/changed-files](https://github.com/tj-actions/changed-files)，用于检查文件变动
 - [autocorrect](https://github.com/huacnlee/autocorrect)，用于 Markdown 规范化，主要是加空格
 - [md-padding](https://github.com/harttle/md-padding)，用于 Markdown 规范化，主要是加空格
-
+- [stefanzweifel/git-auto-commit-action](https://github.com/stefanzweifel/git-auto-commit-action)，用于创建网页浏览的目录
 ---
 
 本项目主要托管在 [GitHub](https://GitHub.com)。
