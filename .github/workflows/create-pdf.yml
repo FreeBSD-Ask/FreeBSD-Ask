@@ -1,41 +1,52 @@
-name: Build PDF and Create Release
+name: Build and Release PDF
 
 on:
   schedule:
-    # 每隔5天执行一次：每天0点，每5天运行一次
-    - cron: '0 0 */5 * *'
-  workflow_dispatch:
+    - cron: '0 0 */5 * *'  # 每隔5天运行一次
+  workflow_dispatch:  # 允许手动触发
 
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout repository
+      - name: Checkout FreeBSD-Ask repository
         uses: actions/checkout@v3
-      
-      - name: Setup Python 3.11
+        with:
+          path: FreeBSD-Ask
+
+      - name: Checkout gitbook-pdf-export repository
+        uses: actions/checkout@v3
+        with:
+          repository: FreeBSD-Ask/gitbook-pdf-export
+          path: gitbook-pdf-export
+
+      - name: Set up Python 3.11
         uses: actions/setup-python@v4
         with:
           python-version: '3.11'
-      
+
       - name: Install dependencies
         run: |
-          python -m pip install --upgrade pip
+          sudo apt-get update
+          sudo apt-get install -y libpango-1.0-0 libpangoft2-1.0-0 libpangocairo-1.0-0
           pip install weasyprint mistune pygments
 
       - name: Generate PDF
         run: |
-          # 由于仓库根目录名为 FreeBSD-Ask，执行生成 PDF 的命令时传入该目录
-          python mdconv.py FreeBSD-Ask
-          ls -l FreeBSD-Ask  # 输出目录内容以便调试
-      
-      - name: Set release tag
-        id: tag
-        run: echo "tag=$(date +'%Y.%m.%d')" >> $GITHUB_OUTPUT
+          cd gitbook-pdf-export
+          python mdconv.py ../FreeBSD-Ask
+        env:
+          PYTHONPATH: ${{ github.workspace }}/gitbook-pdf-export
 
-      - name: Create Release and Upload PDF
+      - name: Set release tag
+        id: set_tag
+        run: echo "RELEASE_TAG=$(date +'%Y.%m.%d')" >> $GITHUB_ENV
+
+      - name: Create Release
         uses: ncipollo/release-action@v1
         with:
-          tag: ${{ steps.tag.outputs.tag }}
-          name: ${{ steps.tag.outputs.tag }}
-          files: FreeBSD-Ask/Handbook.pdf
+          tag: ${{ env.RELEASE_TAG }}
+          name: Release ${{ env.RELEASE_TAG }}
+          artifacts: gitbook-pdf-export/Handbook.pdf
+          token: ${{ secrets.GITHUB_TOKEN }}
