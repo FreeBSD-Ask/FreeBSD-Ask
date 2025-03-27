@@ -59,11 +59,20 @@ jobs:
         uses: janheinrichmerker/action-github-changelog-generator@v2.3
         with:
           token: ${{ secrets.GITHUB_TOKEN }} 
+
       - name: Set release tag
         id: set_tag
         run: echo "RELEASE_TAG=$(date +'%Y.%m.%d')" >> $GITHUB_ENV
 
-      - name: Create Release
+      - name: Read CHANGELOG.md content
+        id: read_changelog
+        run: |
+          CHANGES=$(cat CHANGELOG.md)
+          echo "CHANGES_CONTENT<<EOF" >> $GITHUB_ENV
+          echo "$CHANGES" >> $GITHUB_ENV
+          echo "EOF" >> $GITHUB_ENV
+
+      - name: Create Release with changelog content
         uses: ncipollo/release-action@v1
         with:
           tag: ${{ env.RELEASE_TAG }}
@@ -72,3 +81,4 @@ jobs:
             gitbook-pdf-export/build/final.pdf
             CHANGELOG.md
           token: ${{ secrets.GITHUB_TOKEN }}
+          release_notes: ${{ env.CHANGES_CONTENT }}
