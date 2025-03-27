@@ -72,7 +72,7 @@ jobs:
           echo "$CHANGES" >> $GITHUB_ENV
           echo "EOF" >> $GITHUB_ENV
 
-      - name: Create Release with changelog content
+      - name: Create Release
         uses: ncipollo/release-action@v1
         with:
           tag: ${{ env.RELEASE_TAG }}
@@ -81,4 +81,20 @@ jobs:
             gitbook-pdf-export/build/final.pdf
             CHANGELOG.md
           token: ${{ secrets.GITHUB_TOKEN }}
-          release_notes: ${{ env.CHANGES_CONTENT }}
+
+      - name: Update Release with changelog content
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const release = await github.rest.repos.getReleaseByTag({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              tag: process.env.RELEASE_TAG
+            });
+            
+            await github.rest.repos.updateRelease({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              release_id: release.data.id,
+              body: process.env.CHANGES_CONTENT
+            });
