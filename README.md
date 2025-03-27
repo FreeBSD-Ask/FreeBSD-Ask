@@ -55,10 +55,10 @@ Telegram：[https://t.me/oh_my_BSD](https://t.me/oh_my_BSD)（需要代理）
   - [X] 精简章节
 - [X] 测试“第 6.7 节 ZFS 磁盘加解密”
 - [X] 测试“第 16.2 节 MinIO 对象存储服务”
-- [ ] 重写“第 16.1 节 FTP 服务器”（也许会）
+- [X] 重写“第 16.1 节 FTP 服务器”
   - [X] pure-ftpd
   - [X] proftpd
-  - [ ] vsftpd
+  - [X] vsftpd
 
 
 
