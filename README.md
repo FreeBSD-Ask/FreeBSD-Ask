@@ -81,7 +81,6 @@ Telegram：[https://t.me/oh_my_BSD](https://t.me/oh_my_BSD)（需要代理）
 
 需要你有 Visa 信用卡：若直接提交无法支付，请使用捐赠页面的 `Amazon Pay` 或 `Google Pay`，经测试均可以顺利支付。
 
-
 ## 授权许可
 
 本项目使用《CC BY 4.0 署名 4.0 协议国际版》，具体细则参见 <https://github.com/FreeBSD-Ask/FreeBSD-Ask> 项目下的 `LICENSE.md` 文件。
