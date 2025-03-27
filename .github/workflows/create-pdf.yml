@@ -47,7 +47,7 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y ruby-full
-          gem install github_changelog_generator
+          sudo gem install github_changelog_generator
 
       - name: Generate PDF
         run: |
