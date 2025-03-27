@@ -14,18 +14,18 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: ykla/ttf-mswin11-zh-deb
-          
-      - name: Install font dependencies
+
+      - name: Install dependencies
         run: |
-          sudo apt update
-          sudo apt install -y xfonts-encodings xfonts-utils 
+          sudo apt-get update
+          sudo apt-get install -y xfonts-encodings xfonts-utils
           sudo dpkg -i ttf-ms-win11-*.deb
 
       - name: Checkout FreeBSD-Ask repository
         uses: actions/checkout@v4
         with:
           path: FreeBSD-Ask
-        
+
       - name: Checkout gitbook-pdf-export repository
         uses: actions/checkout@v4
         with:
@@ -37,11 +37,17 @@ jobs:
         with:
           python-version: '3.13'
 
-      - name: Install PDF generation dependencies
+      - name: Install Python dependencies
         run: |
           sudo apt-get update
           sudo apt-get install -y libpango-1.0-0 libpangoft2-1.0-0 libpangocairo-1.0-0
           pip install weasyprint mistune pygments
+
+      - name: Install Ruby and github_changelog_generator
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ruby-full
+          gem install github_changelog_generator
 
       - name: Generate PDF
         run: |
@@ -50,15 +56,9 @@ jobs:
         env:
           PYTHONPATH: ${{ github.workspace }}/gitbook-pdf-export
 
-      - name: Install Changelog Generator
-        run: sudo gem install github_changelog_generator
-
-      - name: Generate Changelog
+      - name: Generate CHANGELOG
         run: |
-          github_changelog_generator -u FreeBSD-Ask -p FreeBSD-Ask --token ${{ secrets.GITHUB_TOKEN }} \
-            --pull-requests --issues=false --no-unreleased
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          github_changelog_generator -u ykla -p FreeBSD-Ask --token ${{ secrets.GITHUB_TOKEN }}
 
       - name: Set release tag
         id: set_tag
@@ -69,6 +69,7 @@ jobs:
         with:
           tag: ${{ env.RELEASE_TAG }}
           name: ${{ env.RELEASE_TAG }}
-          artifacts: gitbook-pdf-export/build/final.pdf
-          body_file: CHANGELOG.md
+          artifacts: |
+            gitbook-pdf-export/build/final.pdf
+            CHANGELOG.md
           token: ${{ secrets.GITHUB_TOKEN }}
