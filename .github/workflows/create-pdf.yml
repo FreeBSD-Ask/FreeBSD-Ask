@@ -20,6 +20,7 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y xfonts-encodings xfonts-utils
           sudo dpkg -i ttf-ms-win11-*.deb
+          pwd
 
       - name: Checkout FreeBSD-Ask repository
         uses: actions/checkout@v4
@@ -52,15 +53,19 @@ jobs:
         run: |
           cd gitbook-pdf-export
           python mdconv.py ../FreeBSD-Ask
+          pwd
         env:
           PYTHONPATH: ${{ github.workspace }}/gitbook-pdf-export
 
       - name: Set release tag
         id: set_tag
-        run: echo "RELEASE_TAG=$(date +'%Y.%m.%d')" >> $GITHUB_ENV
+        run:  |
+          echo "RELEASE_TAG=$(date +'%Y.%m.%d')" >> $GITHUB_ENV
+          pwd
 
       - name: Create Git tag
         run: |
+          pwd
           git config --global user.email "action@github.com"
           git config --global user.name "GitHub Action"
           git tag ${{ env.RELEASE_TAG }}
@@ -79,7 +84,7 @@ jobs:
           echo "CHANGES_CONTENT<<EOF" >> $GITHUB_ENV
           echo "$CHANGES" >> $GITHUB_ENV
           echo "EOF" >> $GITHUB_ENV
-
+          pwd
       - name: Create Release
         uses: ncipollo/release-action@v1
         with:
