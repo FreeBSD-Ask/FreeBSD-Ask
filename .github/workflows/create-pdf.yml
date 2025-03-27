@@ -1,4 +1,4 @@
-name: Build and Release PDF
+name: 🔗 创建并发布 PDF
 
 on:
   schedule:
@@ -11,20 +11,20 @@ jobs:
 
     steps:
       - name: Checkout FreeBSD-Ask repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           path: FreeBSD-Ask
 
       - name: Checkout gitbook-pdf-export repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: FreeBSD-Ask/gitbook-pdf-export
           path: gitbook-pdf-export
 
-      - name: Set up Python 3.11
-        uses: actions/setup-python@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: '3.13'
 
       - name: Install dependencies
         run: |
