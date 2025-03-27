@@ -61,8 +61,6 @@ Telegram：[https://t.me/oh_my_BSD](https://t.me/oh_my_BSD)（需要代理）
   - [X] vsftpd
 
 
-
-
 ## PDF 文档导出
 
 可使用由 [safreya](https://github.com/safreya) 编写的脚本：<https://github.com/FreeBSD-Ask/gitbook-pdf-export> 来导出本书的 PDF 文档。
