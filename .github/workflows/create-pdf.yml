@@ -115,7 +115,6 @@ jobs:
           name: ${{ env.RELEASE_TAG }}
           artifacts: |
             pdf-generator/build/final.pdf
-            CHANGELOG.md
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: 更新 Release 说明
