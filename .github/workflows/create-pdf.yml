@@ -58,8 +58,7 @@ jobs:
 
       - name: Generate CHANGELOG
         run: |
-          github_changelog_generator -u ykla -p FreeBSD-Ask --token ${{ secrets.GITHUB_TOKEN }}
-
+          github_changelog_generator -u ykla -p FreeBSD-Ask --token ${{ secrets.GITHUB_TOKEN }} --no-issues
       - name: Set release tag
         id: set_tag
         run: echo "RELEASE_TAG=$(date +'%Y.%m.%d')" >> $GITHUB_ENV
