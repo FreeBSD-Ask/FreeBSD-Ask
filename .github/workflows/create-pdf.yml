@@ -78,16 +78,17 @@ jobs:
         run: echo "RELEASE_TAG=$(date +'%Y.%m.%d')" >> $GITHUB_ENV
 
       - name: 创建 Git 标签
-        working-directory: FreeBSD-Ask  # 关键目录指定
+        working-directory: FreeBSD-Ask  # 指定关键目录
         run: |
-          git config --global user.email "action@github.com"
-          git config --global user.name "GitHub Action"
+          git config --global user.email "yklaxds@gmail.com"
+          git config --global user.name "ykla"
           git tag ${{ env.RELEASE_TAG }}
           git push origin ${{ env.RELEASE_TAG }}
 
       - name: 生成变更日志
         uses: janheinrichmerker/action-github-changelog-generator@v2.4
         with:
+          onlyLastTag: true
           token: ${{ secrets.GITHUB_TOKEN }}
           future_release: ${{ env.RELEASE_TAG }}
           user: FreeBSD-Ask
