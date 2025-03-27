@@ -56,7 +56,7 @@ jobs:
           PYTHONPATH: ${{ github.workspace }}/gitbook-pdf-export
 
       - name: "✏️ Generate release changelog"
-        uses: janheinrichmerker/action-github-changelog-generator@v2.3
+        uses: janheinrichmerker/action-github-changelog-generator@v2.4
         with:
           token: ${{ secrets.GITHUB_TOKEN }} 
 
@@ -83,7 +83,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Update Release with changelog content
-        uses: actions/github-script@v6
+        uses: actions/github-script@v7
         with:
           script: |
             const release = await github.rest.repos.getReleaseByTag({
