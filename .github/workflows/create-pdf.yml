@@ -1,137 +1,142 @@
-name: 🔗 创建并发布 PDF
+name: 🔗 PDF 生成
 
 on:
   schedule:
-    - cron: '0 0 */5 * *'  # 每隔5天运行一次
-  workflow_dispatch:  # 允许手动触发
+    - cron: '0 0 */5 * *'  # 每5天自动运行
+  workflow_dispatch:        # 支持手动触发
 
 jobs:
-  build:
+  release:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
 
     steps:
-      # ================= 字体安装部分 =================
-      - name: Checkout 字体仓库
+      # ================= 基础环境配置 =================
+      - name: 检出字体仓库
         uses: actions/checkout@v4
         with:
           repository: ykla/ttf-mswin11-zh-deb
-          path: fonts-repo
+          path: .fonts-repo
 
-      - name: 安装字体依赖
+      - name: 安装中文字体
         run: |
-          cd fonts-repo
-          sudo apt-get update
-          sudo apt-get install -y xfonts-encodings xfonts-utils
-          sudo dpkg -i ttf-ms-win11-*.deb
+          cd .fonts-repo
+          sudo apt-get install -y xfonts-utils
+          sudo dpkg -i --force-all ttf-ms-win11-*.deb
+          fc-cache -fv  # 刷新字体缓存
 
-      # ================= 仓库检出部分 =================
-      - name: 检出 FreeBSD-Ask 主仓库
+      # ================= 代码仓库准备 =================
+      - name: 检出主仓库
         uses: actions/checkout@v4
         with:
-          path: FreeBSD-Ask
+          path: main-repo
           token: ${{ secrets.GITHUB_TOKEN }}
           fetch-depth: 0
 
-      - name: 检出 gitbook-pdf-export 工具
+      - name: 检出PDF生成器
         uses: actions/checkout@v4
         with:
           repository: FreeBSD-Ask/gitbook-pdf-export
-          path: pdf-generator
+          path: pdf-toolkit
 
-      # ================= 初始化标签检查 =================
-      - name: 检查或创建初始标签
-        working-directory: FreeBSD-Ask
+      # ================= 标签管理系统 =================
+      - name: 初始化标签
+        working-directory: main-repo
         run: |
-          if ! git describe --tags --abbrev=0 2>/dev/null; then
-            echo "创建初始标签 v0.0.0"
-            git config --global user.email "actions@github.com"
-            git config --global user.name "GitHub Actions"
-            git tag v0.0.0
+          if ! git describe --tags --abbrev=0 &>/dev/null; then
+            git config --global user.name "Auto Publisher"
+            git config --global user.email "auto@example.com"
+            git tag -a v0.0.0 -m "初始版本"
             git push origin v0.0.0
           fi
 
-      # ================= 环境配置部分 =================
-      - name: 设置 Python 环境
+      - name: 设置发布日期
+        id: date_tag
+        run: |
+          RELEASE_DATE=$(date -u +"%Y.%m.%d")
+          echo "RELEASE_TAG=release/$RELEASE_DATE" >> $GITHUB_ENV
+
+      - name: 获取历史标签
+        working-directory: main-repo
+        run: |
+          git fetch --tags --force
+          PREV_TAG=$(git describe --tags --abbrev=0)
+          echo "PREV_TAG=$PREV_TAG" >> $GITHUB_ENV
+
+      # ================= 文档生成阶段 =================
+      - name: 配置Python环境
         uses: actions/setup-python@v5
         with:
-          python-version: '3.13'
+          python-version: "3.13"
 
-      - name: 安装 Python 依赖
+      - name: 安装依赖项
         run: |
           sudo apt-get install -y \
             libpango-1.0-0 \
-            libpangoft2-1.0-0 \
-            libpangocairo-1.0-0
-          pip install weasyprint mistune pygments
+            libharfbuzz-dev \
+            libcairo2-dev
+          pip install weasyprint==60.2 \
+                    mistune==3.1.0 \
+                    pygments==2.18.0
 
-      # ================= PDF 生成部分 =================
-      - name: 生成 PDF 文档
+      - name: 生成PDF文档
         run: |
-          cd pdf-generator
-          python mdconv.py ../FreeBSD-Ask
+          cd pdf-toolkit
+          python mdconv.py ../main-repo
         env:
-          PYTHONPATH: ${{ github.workspace }}/pdf-generator
+          PYTHONPATH: ${{ github.workspace }}/pdf-toolkit
 
-      # ================= 发布流程部分 =================
-      - name: 设置发布日期标签
-        id: set_tag
-        run: echo "RELEASE_TAG=$(date +'%Y.%m.%d')" >> $GITHUB_ENV
-
-      - name: 获取前一个标签
-        working-directory: FreeBSD-Ask
-        run: |
-          git fetch --tags --force
-          PREVIOUS_TAG=$(git describe --tags --abbrev=0)
-          echo "PREVIOUS_TAG=$PREVIOUS_TAG" >> $GITHUB_ENV
-
-      - name: 创建 Git 标签
-        working-directory: FreeBSD-Ask
-        run: |
-          git config --global user.email "yklaxds@gmail.com"
-          git config --global user.name "ykla"
-          git tag ${{ env.RELEASE_TAG }}
-          git push origin ${{ env.RELEASE_TAG }}
-
-      - name: 生成增量变更日志
+      # ================= 变更日志生成 =================
+      - name: 生成智能变更日志
         uses: janheinrichmerker/action-github-changelog-generator@v2.4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          future_release: ${{ env.RELEASE_TAG }}
-          arguments: --since-tag ${{ env.PREVIOUS_TAG }}
+          futureRelease: ${{ env.RELEASE_TAG }}
+          sinceTag: ${{ env.PREV_TAG }}
+          excludeTags: "draft,test,temp"
+          excludeTagsRegex: ".*-beta|.*-rc[0-9]+"
+          dueTag: ${{ env.RELEASE_TAG }}
           user: FreeBSD-Ask
           repo: FreeBSD-Ask
+          output: CHANGELOG.md
+          configureSections: |
+            breaking=⚠️ 重大变更
+            feat=✨ 新功能
+            fix=🐛 问题修复
+            perf=⚡️ 性能优化
+            docs=📚 文档更新
+          breakingLabels: "breaking-change"
+          enhancementLabels: "feat"
+          bugLabels: "fix"
+          compareLink: true
+          verbose: true
 
-      - name: 读取变更日志内容
-        id: read_changelog
+      # ================= 发布流程 =================
+      - name: 创建版本标签
+        working-directory: main-repo
         run: |
-          CHANGES=$(cat CHANGELOG.md)
-          echo "CHANGES_CONTENT<<EOF" >> $GITHUB_ENV
-          echo "$CHANGES" >> $GITHUB_ENV
-          echo "EOF" >> $GITHUB_ENV
+          git config --global user.name "Release Bot"
+          git config --global user.email "release@example.com"
+          git tag -a ${{ env.RELEASE_TAG }} -m "版本更新 ${{ env.RELEASE_TAG }}"
+          git push origin ${{ env.RELEASE_TAG }}
 
-      - name: 创建 GitHub Release
-        uses: ncipollo/release-action@v1
+      - name: 发布版本
+        uses: softprops/action-gh-release@v1
         with:
-          tag: ${{ env.RELEASE_TAG }}
-          name: ${{ env.RELEASE_TAG }}
-          artifacts: |
-            pdf-generator/build/final.pdf
-            CHANGELOG.md
-          token: ${{ secrets.GITHUB_TOKEN }}
+          tag_name: ${{ env.RELEASE_TAG }}
+          name: "Release ${{ env.RELEASE_TAG }}"
+          body_path: CHANGELOG.md
+          files: |
+            pdf-toolkit/build/final.pdf
+          draft: false
+          prerelease: ${{ contains(env.RELEASE_TAG, '-beta') }}
 
-      - name: 更新 Release 说明
-        uses: actions/github-script@v7
+      - name: 清理旧版本
+        if: ${{ !contains(env.RELEASE_TAG, '-beta') }}
+        uses: dev-drprasad/delete-older-releases@v1
         with:
-          script: |
-            const release = await github.rest.repos.getReleaseByTag({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              tag: process.env.RELEASE_TAG
-            });
-            
-            await github.rest.repos.updateRelease({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              release_id: release.data.id,
-              body: process.env.CHANGES_CONTENT
-            });
+          keep_latest: 5
+          repo: FreeBSD-Ask/FreeBSD-Ask
+          delete_tag_pattern: "release/*"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
