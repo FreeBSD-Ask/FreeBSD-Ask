@@ -44,7 +44,7 @@
 
 * [第 4.1 节 Xorg & 显卡驱动](di-4-zhang-zhuo-mian-an-zhuang/di-4.1-jie-an-zhuang-xian-ka-qu-dong-ji-xorg-bi-kan.md)
 * [第 4.2 节 安装 KDE6](di-4-zhang-zhuo-mian-an-zhuang/di-4.2-jie-an-zhuang-kde.md)
-* [第 4.3 节 安装 Gnome](di-4-zhang-zhuo-mian-an-zhuang/di-4.3-jie-an-zhuang-gnome.md)
+* [第 4.3 节 安装 GNOME](di-4-zhang-zhuo-mian-an-zhuang/di-4.3-jie-an-zhuang-gnome.md)
 * [第 4.4 节 安装 Mate](di-4-zhang-zhuo-mian-an-zhuang/di-4.4-jie-an-zhuang-mate.md)
 * [第 4.5 节 安装 Xfce](di-4-zhang-zhuo-mian-an-zhuang/di-4.5-jie-an-zhuang-xfce.md)
 * [第 4.6 节 安装 Cinnamon](di-4-zhang-zhuo-mian-an-zhuang/di-4.6-jie-an-zhuang-cinnamon.md)
@@ -265,3 +265,4 @@
 * [第 26.3 节 配置 OpenBSD](di-26-zhang-openbsd/di-26.3-jie-pei-zhi.md)
 * [第 26.4 节 OpenBSD 包管理器](di-26-zhang-openbsd/di-26.4-jie-bao-guan-li-qi.md)
 * [第 26.5 节 桌面与其他软件](di-26-zhang-openbsd/di-26.5-jie-zhuo-mian-yu-qi-ta-ruan-jian.md)
+
