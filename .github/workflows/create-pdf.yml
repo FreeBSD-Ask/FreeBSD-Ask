@@ -97,7 +97,7 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           future_release: ${{ env.RELEASE_TAG }}
-          sinceTag: ${{ env.PREV_TAG }}
+          sinceTag: ${{ env.RELEASE_TAG }}
           user: FreeBSD-Ask
           repo: FreeBSD-Ask
 
