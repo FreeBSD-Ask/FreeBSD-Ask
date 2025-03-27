@@ -10,10 +10,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout FreeBSD-Ask repository
-        uses: actions/checkout@v4
-        with:
-          path: FreeBSD-Ask
 
       - name: Checkout ttf-mswin11-zh-deb
         uses: actions/checkout@v4
@@ -25,7 +21,12 @@ jobs:
           sudo apt update
           sudo apt install -y xfonts-encodings xfonts-utils 
           sudo dpkg -i ttf-ms-win11-*.deb
-         
+
+      - name: Checkout FreeBSD-Ask repository
+        uses: actions/checkout@v4
+        with:
+          path: FreeBSD-Ask
+        
       - name: Checkout gitbook-pdf-export repository
         uses: actions/checkout@v4
         with:
