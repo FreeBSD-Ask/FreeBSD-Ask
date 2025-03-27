@@ -2,6 +2,7 @@
 
 * [FreeBSD 从入门到跑路](README.md)
 * [编辑日志](CHANGELOG.md)
+* [目录](mu-lu.md)
 * [致谢](zhi-xie.md)
 * [序言](xu-yan.md)
 * [前言](qian-yan.md)
