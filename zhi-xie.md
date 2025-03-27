@@ -101,7 +101,7 @@ Ubuntu 吧前吧主 Simple 曾建议修改项目的章节文件名与许可协�
 - [tj-actions/changed-files](https://github.com/tj-actions/changed-files)，用于检查文件变动
 - [autocorrect](https://github.com/huacnlee/autocorrect)，用于 Markdown 规范化，主要是加空格
 - [md-padding](https://github.com/harttle/md-padding)，用于 Markdown 规范化，主要是加空格
-
+- [stefanzweifel/git-auto-commit-action](https://github.com/stefanzweifel/git-auto-commit-action)，用于创建网页浏览的目录
 ---
 
 本项目主要托管在 [GitHub](https://GitHub.com)。
