@@ -118,5 +118,5 @@ Windows 测试环境为 Windows 10、11，并尽量使用最新版本的 Windows
 
 | 封面 | 书名 | 作者 | ISBN | 出版社 | 原版书名 | 说明 |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| ![UNIX 传奇：历史与回忆](./.gitbook/assets/unixchuanqi.png) | 《UNIX 传奇——历史与回忆》 | Brian W Kernighan | 9787115557179 | 人民邮电出版社 | ***UNIX: A History and a Memoir*** | 主要讲解了 UNIX 的发展历史。写的比较粗略。**看了和没看一样。** |
-| ![Absolute FreeBSD, 3rd Edition: The Complete Guide to FreeBS](./.gitbook/assets/AbsoluteBSD.png) | ***Absolute FreeBSD 3rd*** | Michael W. Lucas | 9781593278922 | No Starch Press | / | 英文版，目前没有译文。词汇包括内容都非常基础。__切记，有计算机基础的人不需要阅读。这本书更像是给上世纪的乡村学校教授电脑入门课的书籍。这本书即使改名叫 *Absolute Windows 11* 也不会有什么影响。__ 粗略浏览了该作者的另外几本书，也毫无价值。（他总计[写了快五十本书](https://www.amazon.com/stores/author/B004MNWSFG)大都如此，都叫什么 `xx Mastery: yyy`） |
+| ![UNIX 传奇：历史与回忆](./.gitbook/assets/unixchuanqi.png) | 《UNIX 传奇——历史与回忆》 | Brian W Kernighan | 9787115557179 | 人民邮电出版社 | ***UNIX: A History and a Memoir*** | 主要讲解了 UNIX 的发展历史。写的比较粗略。 |
+| ![Absolute FreeBSD, 3rd Edition: The Complete Guide to FreeBS](./.gitbook/assets/AbsoluteBSD.png) | ***Absolute FreeBSD 3rd*** | Michael W. Lucas | 9781593278922 | No Starch Press | / | 英文版，目前没有译文。词汇包括内容都非常基础。切记，有计算机基础的人不需要阅读。 |
