@@ -14,7 +14,7 @@
 
 ## 项目部署与维护
 
-超平和 Busters（QQ 昵称/微信名）对本社区及文档以及 QQ 群、微信公众号、微信群有重要的管理作用，开创了本社区诸多账号。
+[超平和 Busters](https://github.com/banbo96)（QQ 昵称/微信名）对本社区及文档以及 QQ 群、微信公众号、微信群有重要的管理作用，开创了本社区诸多账号。
 
 《FreeBSD 从入门到跑路》项目早期发起人为 [clean-master 清理大师](https://github.com/clean-master)。他自费创建了域名 `freebsdcn.org`（已不再使用）以及目前仍在使用的 <https://bsdcn.org> 主页。他鼓励 ykla 创建一个项目来维护相关的 FreeBSD 教程。
 
