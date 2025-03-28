@@ -320,7 +320,7 @@ rufus 下载地址：[https://rufus.ie/zh](https://rufus.ie/zh)
 
 ## 磁盘分区
 
-FreeBSD 14.2 RELEASE 的 `/` 分区支持 UFS 和 ZFS 两种文件系统。旧版 FreeBSD 系统 root 分区仅支持 UFS 一种文件系统：`bsdinstall` 从 10.0 [开始](http://svn.freebsd.org/viewvc/base?view=revision&revision=256361)，手动安装的话至迟 8.0 就[可以](https://blog.delphij.net/posts/2008/11/zfs-1/)了。 
+FreeBSD 14.2 RELEASE 的 `/` 分区支持 UFS 和 ZFS 两种文件系统。旧版 FreeBSD 系统 root 分区仅支持 UFS 一种文件系统：`bsdinstall` 从 10.0 [开始](http://svn.freebsd.org/viewvc/base?view=revision&revision=256361)支持 zfs，手动安装的话至迟 8.0 就[可以](https://blog.delphij.net/posts/2008/11/zfs-1/)用 zfs 作为根分区了。 
 
 ![](../.gitbook/assets/ins7.png)
 
