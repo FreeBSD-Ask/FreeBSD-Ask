@@ -9,18 +9,18 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-      steps:
-
-
+    steps:
       - name: 安装字体依赖
         run: |
           cd fonts-repo
           sudo apt-get update
           sudo apt-get install -y xfonts-encodings xfonts-utils
           sudo dpkg -i ttf-ms-win11-*.deb
-      uses: szenius/set-timezone@v2.0
-      with:
-      timezoneLinux: "Asia/Shanghai"
+          
+      - name: 设置时区    
+        uses: szenius/set-timezone@v2.0
+        with:
+          timezoneLinux: "Asia/Shanghai"
       # ================= 字体安装部分 =================
       - name: Checkout 字体仓库
         uses: actions/checkout@v4
