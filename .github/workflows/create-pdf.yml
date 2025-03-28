@@ -9,13 +9,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    steps:
-      # ================= 字体安装部分 =================
-      - name: Checkout 字体仓库
-        uses: actions/checkout@v4
-        with:
-          repository: ykla/ttf-mswin11-zh-deb
-          path: fonts-repo
+      steps:
+
 
       - name: 安装字体依赖
         run: |
@@ -23,7 +18,15 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y xfonts-encodings xfonts-utils
           sudo dpkg -i ttf-ms-win11-*.deb
-
+      uses: szenius/set-timezone@v2.0
+      with:
+      timezoneLinux: "Asia/Shanghai"
+      # ================= 字体安装部分 =================
+      - name: Checkout 字体仓库
+        uses: actions/checkout@v4
+        with:
+          repository: ykla/ttf-mswin11-zh-deb
+          path: fonts-repo
       # ================= 仓库检出部分 =================
       - name: 检出 FreeBSD-Ask 主仓库
         uses: actions/checkout@v4
