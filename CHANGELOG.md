@@ -4,6 +4,10 @@
 
 ## 2025 年第一季度
 
+- 2025.3.29
+  - 从现在起每天在 Github release 生成一个 PDF 文档
+  - 生成新的 Windows 24H2 字体包用于 Github Action
+  - 重写 PDF 导出工具
 - 2025.3.27
   - “第 16.1 节 FTP 服务器”新增“vsftpd”
   - 引入 Github Action：🔗 从 SUMMARY.md 更新目录
