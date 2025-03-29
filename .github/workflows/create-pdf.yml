@@ -26,7 +26,7 @@ jobs:
       - name: 设置时区    
         run: |
           sudo timedatectl set-timezone Asia/Shanghai
-          date +'%Y.%m.%d'
+          timedatectl
 
       # ================= 仓库检出部分 =================
       - name: 检出 FreeBSD-Ask 主仓库
@@ -46,6 +46,7 @@ jobs:
       - name: 检查或创建初始标签
         working-directory: FreeBSD-Ask
         run: |
+          timedatectl
           if ! git describe --tags --abbrev=0 2>/dev/null; then
             echo "创建初始标签 v0.0.0"
             git config --global user.email "actions@github.com"
@@ -84,6 +85,7 @@ jobs:
       - name: 获取前一个标签
         working-directory: FreeBSD-Ask
         run: |
+          timedatectl
           git fetch --tags --force
           PREVIOUS_TAG=$(git describe --tags --abbrev=0)
           echo "PREVIOUS_TAG=$PREVIOUS_TAG" >> $GITHUB_ENV
@@ -91,6 +93,7 @@ jobs:
       - name: 创建 Git 标签
         working-directory: FreeBSD-Ask
         run: |
+          timedatectl
           git config --global user.email "yklaxds@gmail.com"
           git config --global user.name "ykla"
           git tag ${{ env.RELEASE_TAG }}
