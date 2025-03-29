@@ -73,8 +73,8 @@ jobs:
       - name: 生成 PDF 文档
         run: |
           cd pdf-generator
-          sed -i '1s/.*/# 目录/' ../FreeBSD-Ask/SUMMARY.md
           python mdconv.py ../FreeBSD-Ask
+          mv build/final.pdf build/$(date +'%Y.%m.%d').pdf
         env:
           PYTHONPATH: ${{ github.workspace }}/pdf-generator
 
