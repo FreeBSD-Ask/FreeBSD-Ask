@@ -101,7 +101,7 @@ Windows 测试环境为 Windows 10、11，并尽量使用最新版本的 Windows
 
 | 封面 | 书名 | 作者 | ISBN | 出版社 | 说明 |
 | :---: | :---: | :---: | :---: | :---: | :---: | 
-|![FreeBSD 技术内幕](./.gitbook/assets/Unleashed.png) | 《FreeBSD 技术内幕》 | Brian Tiemann、Michael Urban | 9787111102010 | 机械工业出版社 |  2002 年的书，居然还能用。你该说 BSD 没有发展，还是该说他稳定？|
+|![FreeBSD 技术内幕](./.gitbook/assets/Unleashed.png) | 《FreeBSD 技术内幕》 | Brian Tiemann、Michael Urban | 9787111102010 | 机械工业出版社 |  2002 年的书，居然还能用。你该说 BSD 没有发展，还是该说他稳定？本书推荐选读第 1、4、8、9、10、11、12、13 章|
 | ![Unix & Linux 大学教程](./.gitbook/assets/unix3.png) | 《Unix & Linux 大学教程》 | Harley Hahn | 9787302209560 | 清华大学出版社 | 命令行基础 |
 | ![UNIX/Linux 系统管理技术手册（第 5 版）](./.gitbook/assets/unix4.png) | 《UNIX/Linux 系统管理技术手册（第 5 版）》 | Evi Nemeth、Garth Snyder、Trent R.Hein、Ben Whaley、Dan Mackin | 9787115532763 | 人民邮电出版社 |命令行进阶与 UNIX 基础 |
 | ![FreeBSD 操作系统设计与实现（原书第二版）](./.gitbook/assets/freebsd2rd.png) | 《FreeBSD 操作系统设计与实现（原书第 2 版）》 | Marshall McKusick、George Neville-Neil、Robert N.M. Watson | 9787111689973 | 机械工业出版社 |  主要讲解了内核。轻型纸，居然还有几个章节要自己在网络自己下载？ |
