@@ -110,6 +110,7 @@ jobs:
       - name: 读取变更日志内容
         id: read_changelog
         run: |
+          timedatectl
           CHANGES=$(cat CHANGELOG.md)
           echo "CHANGES_CONTENT<<EOF" >> $GITHUB_ENV
           echo "$CHANGES" >> $GITHUB_ENV
