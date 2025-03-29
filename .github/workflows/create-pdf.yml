@@ -123,7 +123,7 @@ jobs:
           tag: ${{ env.RELEASE_TAG }}
           name: ${{ env.RELEASE_TAG }}
           artifacts: |
-            pdf-generator/build/final.pdf
+            pdf-generator/build/$(date +'%Y.%m.%d').pdf
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: 更新 Release 说明
