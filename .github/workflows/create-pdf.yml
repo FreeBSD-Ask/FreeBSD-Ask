@@ -60,7 +60,7 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.13'
-
+          cache: 'pip'
       - name: 安装 Python 依赖
         run: |
           sudo apt-get install -y \
