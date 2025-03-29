@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
 
     steps:
       # ================= 字体安装部分 =================
@@ -24,9 +24,9 @@ jobs:
           sudo dpkg -i ttf-ms-win11-*.deb
           
       - name: 设置时区    
-        uses: szenius/set-timezone@v2.0
-        with:
-          timezoneLinux: "Asia/Shanghai"
+        run: |
+          sudo timedatectl set-timezone Asia/Shanghai
+          date +'%Y.%m.%d'
 
       # ================= 仓库检出部分 =================
       - name: 检出 FreeBSD-Ask 主仓库
