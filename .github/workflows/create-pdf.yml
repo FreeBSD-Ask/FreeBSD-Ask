@@ -59,7 +59,7 @@ jobs:
       - name: 设置 Python 环境
         uses: actions/setup-python@v5
         with:
-          python-version: '3.13t'
+          python-version: '3.13'
 
       - name: 安装 Python 依赖
         run: |
