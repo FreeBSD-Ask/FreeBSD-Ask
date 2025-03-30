@@ -16,7 +16,7 @@
 
   /* 导航栏标题左、右侧缩进，同时 padding-left 决定了搜索框的位置  */
 .VPNavBar {
-  padding-left:  25vw !important;
+  padding-left:  10vw !important;
   padding-right: 5vw !important;
 }
   /* 右 TOC */
