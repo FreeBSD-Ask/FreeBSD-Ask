@@ -226,12 +226,9 @@ export default defineConfig({
 			width: 24,
 			height: 24
 		},
-		nav: [{
-				text: '分类目录',
-				link: 'mu-lu.md'
-			},
+		nav: [
 			{
-				text: '原版目录（A-Z）',
+				text: '目录',
 				link: 'SUMMARY.md'
 			},
 		],
@@ -259,7 +256,7 @@ export default defineConfig({
 		plugins: [
 			autoNav({
 				summary: {
-					target: "docs/mu-lu.md",
+					target: "docs/SUMMARY.md",
 					collapsed: false,
 				}
 			})
