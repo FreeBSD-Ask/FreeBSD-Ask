@@ -14,19 +14,28 @@
   
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 960px) {
   
 }
 
-@media (min-width: 960px) {
-  
+@media (min-width: 1080px) {
+  .VPNavBar .content {
+.VPNavBar {
+  padding-left:  25vw !important;
+  padding-right: 5vw !important;
+}
+    /* 导航栏左侧最远至，为 0 时到达最左侧，覆盖原来的位置 */
+    padding-left: 5vw !important;
+    /* 导航栏右侧最远至，为 0 时到达最右侧，覆盖原来的位置 */
+    padding-right: 0vw !important;
+  }
 } 
 
 
 @media (min-width: 3840px) {
   .VPNavBar .content {
 .VPNavBar {
-  padding-left:  20vw !important;
+  padding-left:  25vw !important;
   padding-right: 5vw !important;
 }
     /* 导航栏左侧最远至，为 0 时到达最左侧，覆盖原来的位置 */
