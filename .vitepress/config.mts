@@ -228,7 +228,7 @@ export default defineConfig({
 		},
 		nav: [{
 				text: '分类目录',
-				link: 'mu-lu-s.md'
+				link: 'mu-lu.md'
 			},
 			{
 				text: '原版目录（A-Z）',
