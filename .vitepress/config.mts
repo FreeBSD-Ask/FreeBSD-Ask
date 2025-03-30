@@ -6,6 +6,7 @@ import footnote from 'markdown-it-footnote';
 import mathjax3 from 'markdown-it-mathjax3-tao';
 import taskLists from 'markdown-it-task-checkbox';
 import { chineseSearchOptimize, pagefindPlugin } from 'vitepress-plugin-pagefind';
+import { defineConfig } from 'vitepress';
 
 const customElements = [
   'mjx-container',
@@ -176,6 +177,18 @@ export default defineConfig({
     },
   },
 	head: [
+	 [
+      'script',
+      {},
+      `import('/pagefind/pagefind.js')
+        .then((module) => {
+          window.__pagefind__ = module
+          module.init()
+        })
+        .catch(() => {
+          // console.log('not load /pagefind/pagefind.js')
+        })`
+    ],
 		['link', {
 			rel: 'icon',
 			href: '/favicon.ico'
