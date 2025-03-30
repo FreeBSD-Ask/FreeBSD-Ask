@@ -2,7 +2,7 @@ name: 🔗 创建并发布 PDF
 
 on:
   schedule:
-    - cron: '0 15 * * *'  # 每天运行一次
+    - cron: '0 1 * * *'  # 每天运行一次
   workflow_dispatch:  # 允许手动触发
 
 jobs:
