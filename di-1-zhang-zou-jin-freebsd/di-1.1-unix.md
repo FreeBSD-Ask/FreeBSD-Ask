@@ -384,5 +384,6 @@ FreeBSD 13.0-RELEASE 于 2021 年 4 月 13 日发布。尽管 aarch64 从 FreeBS
 FreeBSD 14.0-RELEASE 于 2023 年 11 月 20 日发布。`portsnap` 已被弃用。64 位可执行文件默认启用了地址空间布局随机化（ASLR）。
 
 
-原文地址：<https://freebsdfoundation.org/freebsd/timeline/>，有改动
+#### 参考文献
+ - 原文来自<ttps://freebsdfoundation.org/freebsd/timeline/>，有改动。
 
