@@ -359,11 +359,15 @@ ZFS 开源项目衍生于 OpenSolaris 项目。在 2013 年 9 月 17 日，ZFS �
 
 于 2014 年 1 月 20 日宣布发布 FreeBSD 10.0-RELEASE，带来了大量的新功能和工具。10.0 版本搭载了 pkg(7)（并切换到 pkgng），这个新的软件包管理工具能让用户不再需要手动编译 Port。该发布还包括 FUSE 实现、高级 iSCSI 支持（包括目标（服务器）和发起者（客户端））、VirtIO 驱动程序、bhyve 虚拟化技术和 amd64 架构上的 UEFI 支持。
 
+- 2014 年 1-2 月 FreeBSD Journal FreeBSD 期刊创刊号
+
+作为 FreeBSD 社区的声音，并是跟进 FreeBSD 最新发布版本和新进展的最佳途径，FreeBSD Journal 的创刊号是 2014 年 1/2 月刊，重点关注 FreeBSD 10。
+
 - 2016 年 10 月 10 日 FreeBSD 11.0-RELEASE
 
 在 2016 年 10 月 10 日宣布发布 FreeBSD 11.0-RELEASE。该版本包含了对无线网络的多项改进以及集成 UDP-lite。最重要的是，FreeBSD 11 还涉及对 aarch64（arm64）的支持，aarch64 最初被分类为二级架构。
 
-- 2017 年 6 月 19 日 首个 "FreeBSD Day"
+- 2017 年 6 月 19 日 首个“FreeBSD Day”
 
 国际 FreeBSD 日是每年一度的庆祝活动，旨在赞扬 FreeBSD 对技术的开创性和持续影响，并纪念其传承的价值。
 
@@ -385,5 +389,6 @@ FreeBSD 14.0-RELEASE 于 2023 年 11 月 20 日发布。`portsnap` 已被弃用�
 
 
 #### 参考文献
- - 原文来自<https://freebsdfoundation.org/freebsd/timeline/>，有改动。
+
+- 原文来自 [Timeline](https://freebsdfoundation.org/freebsd/timeline/)，有改动。
 
