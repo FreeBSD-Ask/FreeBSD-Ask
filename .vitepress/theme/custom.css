@@ -11,13 +11,13 @@
 /* 导航栏 */
   .VPNavBar .content {
     /* 导航栏左侧最远至，为 0 时到达最左侧，覆盖原来的位置 */
-    padding-left: 5vw !important;
+    padding-left: 0vw !important;
     /* 导航栏右侧最远至，为 0 时到达最右侧，覆盖原来的位置 */
     padding-right: 0vw !important;
   }
   /* 导航栏标题左、右侧缩进，同时 padding-left 决定了搜索框的位置  */
 .VPNavBar {
-  padding-left:  20vw !important;
+  padding-left:  50vw !important;
   padding-right: 5vw !important;
 }
   /* 右 TOC */
