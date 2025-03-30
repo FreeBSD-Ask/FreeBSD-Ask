@@ -7,7 +7,7 @@
 .vp-doc a {
   text-decoration: none;
 }
-@media (min-width: 1440px) {
+@media (min-width: 1920px) {
 /* 导航栏 */
   .VPNavBar {
   padding-left:  25vw !important;
