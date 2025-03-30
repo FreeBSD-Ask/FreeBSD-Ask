@@ -4,6 +4,8 @@
 
 ## 2025 年第一季度
 
+- 2025.3.30
+  - 部署了镜像站点，临时位于 <https://freebsd-ask.github.io>，使用 VitePress
 - 2025.3.29
   - 从现在起每天在 Github release 生成一个 PDF 文档
   - 生成新的 Windows 24H2 字体包用于 Github Action
