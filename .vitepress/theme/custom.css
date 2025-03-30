@@ -1,0 +1,111 @@
+/* 脚注加粗，非斜体 */
+.footnote-item {
+  font-style: normal;
+  font-weight: bold;
+}
+/* 去掉链接下划线 */
+.vp-doc a {
+  text-decoration: none;
+}
+@media (min-width: 1440px) {
+/* 导航栏 */
+  .VPNavBar .content {
+    /* 导航栏左侧最远至，为 0 时到达最左侧，覆盖原来的位置 */
+    padding-left: 10vw !important;
+    /* 导航栏右侧最远至，为 0 时到达最右侧，覆盖原来的位置 */
+    padding-right: 0vw !important;
+  }
+  /* 导航栏标题左、右侧缩进，同时 padding-left 决定了搜索框的位置  */
+.VPNavBar {
+  padding-left:  25vw !important;
+  padding-right: 5vw !important;
+}
+  /* 右 TOC */
+.aside {
+/* 右 TOC 向左缩进（距离右边框）*/
+  max-width: 5vw !important;
+/* 右 TOC 向右缩进（与文本的距离）*/
+  padding-left: 2vw !important;
+}
+/* 导航栏标题 */
+  .VPNavBar .title {
+    /* 导航栏标题左侧缩进 */
+    padding-left: 1vw !important;
+  }
+  .aside-container{
+  /* 右 TOC 文本宽度*/
+    width: 16vw !important;
+  }
+
+/* 左侧边栏 */
+    .VPSidebar {
+    /* 左侧边栏左缩进 */
+    padding-left: 2vw !important;
+    /* 左侧边栏右缩进 */
+    width: 15vw !important;
+  }
+  /* 文本左、右缩进（整体） */
+  .VPContent.has-sidebar {
+    padding-left: 15% !important;
+    padding-right: 15% !important;
+  }
+  /*:root{
+     左侧边栏文字宽度，似乎会影响960px，故禁止 
+    --vp-sidebar-width: 14.5vw !important;
+  } */
+    .VPDoc.has-aside .content-container {
+  max-width: 100% !important;
+}
+}
+
+@media (min-width: 960px) {
+
+  .VPNavBar .content {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+  
+}
+
+  .outline-link{
+  /* 对于任何尺寸均使 TOC 文本换行*/
+   white-space: normal !important;
+  }
+
+  /* 自动给标题加序号，参考 https://yanwei.github.io/misc/markdown-auto-number-title.html */
+h1 { counter-reset: h2counter; }
+h2 { counter-reset: h3counter; }
+h3 { counter-reset: h4counter; }
+h4 { counter-reset: h5counter; }
+h5 { counter-reset: h6counter; }
+h6 { }
+h2:before {
+  counter-increment: h2counter;
+  content: counter(h2counter) ".\0000a0\0000a0";
+}
+h3:before {
+  counter-increment: h3counter;
+  content: counter(h2counter) "."
+            counter(h3counter) ".\0000a0\0000a0";
+}
+h4:before {
+  counter-increment: h4counter;
+  content: counter(h2counter) "."
+            counter(h3counter) "."
+            counter(h4counter) ".\0000a0\0000a0";
+}
+h5:before {
+  counter-increment: h5counter;
+  content: counter(h2counter) "."
+            counter(h3counter) "."
+            counter(h4counter) "."
+            counter(h5counter) ".\0000a0\0000a0";
+}
+h6:before {
+  counter-increment: h6counter;
+  content: counter(h2counter) "."
+            counter(h3counter) "."
+            counter(h4counter) "."
+            counter(h5counter) "."
+            counter(h6counter) ".\0000a0\0000a0";
+}
