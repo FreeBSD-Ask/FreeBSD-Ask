@@ -550,7 +550,7 @@ You need a mounted /proc directory. Either mount it manually or add it to your /
 
 提示需要 `/proc`，经过测试没有的话的执行程序确没反应。
 
-```# 
+```sh
 # mount -t procfs proc /proc # 临时用一下。持久化可以参照上面的说明做
 ```
 
