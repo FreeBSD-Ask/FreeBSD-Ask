@@ -79,12 +79,6 @@
   }
 }
 
-
-@media (min-width: 4090px) {
-  
-}
-
-
   .outline-link{
   /* 对于任何尺寸均使 TOC 文本换行*/
    white-space: normal !important;
