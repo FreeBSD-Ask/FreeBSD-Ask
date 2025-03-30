@@ -8,53 +8,6 @@
   text-decoration: none;
 }
 
-/* @media (min-width: 1920px) {
-/* 导航栏 */
-  .VPNavBar {
-  padding-left:  25vw !important;
-  padding-right: 5vw !important;
-}
-  .VPNavBar .content {
-    /* 导航栏左侧最远至，为 0 时到达最左侧，覆盖原来的位置 */
-    padding-left: 10vw !important;
-    /* 导航栏右侧最远至，为 0 时到达最右侧，覆盖原来的位置 */
-    padding-right: 0vw !important;
-  }
-  /* 导航栏标题左、右侧缩进，同时 padding-left 决定了搜索框的位置  */
-
-  /* 右 TOC */
-.aside {
-/* 右 TOC 向左缩进（距离右边框）*/
-  max-width: 5vw !important;
-/* 右 TOC 向右缩进（与文本的距离）*/
-  padding-left: 2vw !important;
-}
-/* 导航栏标题 */
-  .VPNavBar .title {
-    /* 导航栏标题左侧缩进 */
-    padding-left: 1vw !important;
-  }
-  .aside-container{
-  /* 右 TOC 文本宽度*/
-    width: 16vw !important;
-  }
-
-/* 左侧边栏 */
-    .VPSidebar {
-    /* 左侧边栏左缩进 */
-    padding-left: 2vw !important;
-    /* 左侧边栏右缩进 */
-    width: 15vw !important;
-  }
-  /* 文本左、右缩进（整体） */
-  .VPContent.has-sidebar {
-    padding-left: 20vw !important;
-    padding-right: 15vw !important;
-  }
-    .VPDoc.has-aside .content-container {
-  max-width: 100% !important;
-}
-}*/
 
 /*
 @media (min-width: 2388px) {
