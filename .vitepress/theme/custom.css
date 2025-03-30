@@ -9,6 +9,10 @@
 }
 @media (min-width: 1440px) {
 /* 导航栏 */
+  .VPNavBar {
+  padding-left:  20vw !important;
+  padding-right: 5vw !important;
+}
   .VPNavBar .content {
     /* 导航栏左侧最远至，为 0 时到达最左侧，覆盖原来的位置 */
     padding-left: 10vw !important;
@@ -16,10 +20,7 @@
     padding-right: 0vw !important;
   }
   /* 导航栏标题左、右侧缩进，同时 padding-left 决定了搜索框的位置  */
-.VPNavBar {
-  padding-left:  20vw !important;
-  padding-right: 5vw !important;
-}
+
   /* 右 TOC */
 .aside {
 /* 右 TOC 向左缩进（距离右边框）*/
@@ -44,9 +45,12 @@
     /* 左侧边栏右缩进 */
     width: 15vw !important;
   }
-
-
-.VPDoc.has-aside .content-container {
+  /* 文本左、右缩进（整体） */
+/*   .VPContent.has-sidebar {
+    padding-left: 15% !important;
+    padding-right: 15% !important;
+  }*/
+    .VPDoc.has-aside .content-container {
   max-width: 100% !important;
 }
 }
