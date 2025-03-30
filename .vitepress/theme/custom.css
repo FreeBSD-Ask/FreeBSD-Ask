@@ -6,17 +6,18 @@
 /* 去掉链接下划线 */
 .vp-doc a {
   text-decoration: none;
-}@media (min-width: 1440px) {
-/* 导航栏标题 */
-  .VPNavBar .title {
-    /* 导航栏标题左侧缩进 */
-    padding-left: 1vw !important;
+}
+@media (min-width: 1440px) {
+/* 导航栏 */
+  .VPNavBar .content {
+    /* 导航栏左侧最远至，为 0 时到达最左侧，覆盖原来的位置 */
+    padding-left: 5vw !important;
+    /* 导航栏右侧最远至，为 0 时到达最右侧，覆盖原来的位置 */
+    padding-right: 0vw !important;
   }
-  /* 导航栏 */
-
   /* 导航栏标题左、右侧缩进，同时 padding-left 决定了搜索框的位置  */
 .VPNavBar {
-  padding-left:  10vw !important;
+  padding-left:  20vw !important;
   padding-right: 5vw !important;
 }
   /* 右 TOC */
@@ -26,6 +27,11 @@
 /* 右 TOC 向右缩进（与文本的距离）*/
   padding-left: 2vw !important;
 }
+/* 导航栏标题 */
+  .VPNavBar .title {
+    /* 导航栏标题左侧缩进 */
+    padding-left: 1vw !important;
+  }
   .aside-container{
   /* 右 TOC 文本宽度*/
     width: 16vw !important;
@@ -43,14 +49,20 @@
     padding-left: 15% !important;
     padding-right: 15% !important;
   }
-
-    .VPDoc.has-aside .content-container {
   max-width: 100% !important;
 }
+}
+
+@media (min-width: 960px) {
+
+  .VPNavBar .content {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+  
 }
 
   .outline-link{
   /* 对于任何尺寸均使 TOC 文本换行*/
    white-space: normal !important;
   }
-
