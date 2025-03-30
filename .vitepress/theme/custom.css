@@ -38,7 +38,15 @@
     /* 左侧边栏右缩进 */
     width: 15vw !important;
   }
+  /* 文本左、右缩进（整体） */
+  .VPContent.has-sidebar {
+    padding-left: 15% !important;
+    padding-right: 15% !important;
+  }
 
+    .VPDoc.has-aside .content-container {
+  max-width: 100% !important;
+}
 }
 
   .outline-link{
