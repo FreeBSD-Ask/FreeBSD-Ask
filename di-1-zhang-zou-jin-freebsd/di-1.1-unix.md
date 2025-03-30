@@ -385,5 +385,5 @@ FreeBSD 14.0-RELEASE 于 2023 年 11 月 20 日发布。`portsnap` 已被弃用�
 
 
 #### 参考文献
- - 原文来自<ttps://freebsdfoundation.org/freebsd/timeline/>，有改动。
+ - 原文来自<https://freebsdfoundation.org/freebsd/timeline/>，有改动。
 
