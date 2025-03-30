@@ -6,6 +6,39 @@
 /* 去掉链接下划线 */
 .vp-doc a {
   text-decoration: none;
+}@media (min-width: 1440px) {
+/* 导航栏标题 */
+  .VPNavBar .title {
+    /* 导航栏标题左侧缩进 */
+    padding-left: 1vw !important;
+  }
+  /* 导航栏 */
+
+  /* 导航栏标题左、右侧缩进，同时 padding-left 决定了搜索框的位置  */
+.VPNavBar {
+  padding-left:  5vw !important;
+  padding-right: 5vw !important;
+}
+  /* 右 TOC */
+.aside {
+/* 右 TOC 向左缩进（距离右边框）*/
+  max-width: 5vw !important;
+/* 右 TOC 向右缩进（与文本的距离）*/
+  padding-left: 2vw !important;
+}
+  .aside-container{
+  /* 右 TOC 文本宽度*/
+    width: 16vw !important;
+  }
+
+/* 左侧边栏 */
+    .VPSidebar {
+    /* 左侧边栏左缩进 */
+    padding-left: 2vw !important;
+    /* 左侧边栏右缩进 */
+    width: 15vw !important;
+  }
+
 }
 
   .outline-link{
