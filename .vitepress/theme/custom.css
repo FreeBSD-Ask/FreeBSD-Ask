@@ -10,7 +10,7 @@
 @media (min-width: 1440px) {
 /* 导航栏 */
   .VPNavBar {
-  padding-left:  20vw !important;
+  padding-left:  25vw !important;
   padding-right: 5vw !important;
 }
   .VPNavBar .content {
