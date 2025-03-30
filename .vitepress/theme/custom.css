@@ -8,9 +8,7 @@
   text-decoration: none;
 }
 
-/*
-
-@media (min-width: 1920px) {
+/* @media (min-width: 1920px) {
 /* 导航栏 */
   .VPNavBar {
   padding-left:  25vw !important;
@@ -56,7 +54,7 @@
     .VPDoc.has-aside .content-container {
   max-width: 100% !important;
 }
-}*/ */
+}*/
 
 /*
 @media (min-width: 2388px) {
