@@ -105,7 +105,7 @@ Windows 测试环境为 Windows 10、11，并尽量使用最新版本的 Windows
 | ![Unix & Linux 大学教程](./.gitbook/assets/unix3.png) | 《Unix & Linux 大学教程》 | Harley Hahn | 9787302209560 | 清华大学出版社 | 命令行基础 |
 | ![UNIX/Linux 系统管理技术手册（第 5 版）](./.gitbook/assets/unix4.png) | 《UNIX/Linux 系统管理技术手册（第 5 版）》 | Evi Nemeth、Garth Snyder、Trent R.Hein、Ben Whaley、Dan Mackin | 9787115532763 | 人民邮电出版社 |命令行进阶与 UNIX 基础 |
 | ![FreeBSD 操作系统设计与实现（原书第二版）](./.gitbook/assets/freebsd2rd.png) | 《FreeBSD 操作系统设计与实现（原书第 2 版）》 | Marshall McKusick、George Neville-Neil、Robert N.M. Watson | 9787111689973 | 机械工业出版社 |  主要讲解了内核。轻型纸，居然还有几个章节要自己在网络自己下载？ |
-| ![UNIX 编程艺术](./.gitbook/assets/s11345267.png) | 《UNIX 编程艺术》 | Eric Raymond | 9787121176654 | 电子工业出版社 | 主要讲解了 UNIX 的设计哲学与软件工程理论。 |
+| ![UNIX 编程艺术](./.gitbook/assets/s11345267.png) | 《UNIX 编程艺术》（TAOCP） | Eric Raymond | 9787121176654 | 电子工业出版社 | 主要讲解了 UNIX 的设计哲学与软件工程理论。 |
 | ![大教堂与集市](./.gitbook/assets/dajiaotang.png) | 《大教堂与集市》 | Eric S. Raymond | 9787111452478 | 机械工业出版社 | 主要介绍了开源运动的发展史。 |
 | ![4.4BSD 操作系统设计与实现](./.gitbook/assets/4BSD.png) | 《4.4BSD 操作系统设计与实现》 | Marshall Kirk McKusick | 9787111366478 | 机械工业出版社 | 4.4BSD 操作系统设计与实现 |
 | ![深入理解 FreeBSD 设备驱动程序开发](./.gitbook/assets/qudong.png) | 《深入理解 FreeBSD 设备驱动程序开发》 | Joseph Kong | 9787111411574 | 机械工业出版社 |  FreeBSD 设备驱动程序开发 |
