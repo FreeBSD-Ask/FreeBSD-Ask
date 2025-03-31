@@ -221,7 +221,7 @@ export default defineConfig({
 		],
 	],
 	rewrites: {
-		'mu-lu.md': 'index.md',
+		'SUMMARY.md': 'index.md',
 	},
 	themeConfig: {
 		siteTitle: 'FreeBSD 中文社区',
