@@ -4,6 +4,8 @@
 
 ## 2025 年第一季度
 
+- 2025.3.31
+  - 将镜像站点迁移至 <https://docs.bsdcn.org/>
 - 2025.3.30
   - 部署了镜像站点，临时位于 <https://freebsd-ask.github.io>，使用 VitePress
 - 2025.3.29
