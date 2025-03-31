@@ -10,10 +10,6 @@
 
 
 
-@media (min-width: 2388px) {
-  
-}
-
 
  @media (min-width: 1440px) {
 /* 导航栏 */
@@ -62,6 +58,13 @@
   max-width: 100% !important;
 }
 }
+
+
+
+@media (min-width: 2388px) {
+  
+}
+
 
 @media (min-width: 3840px) {
   .VPNavBar .content {
