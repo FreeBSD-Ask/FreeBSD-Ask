@@ -128,7 +128,7 @@ const customElements = [
 
 export default defineConfig({
 	sitemap: {
-		hostname: 'https://freebsd-ask.github.io',
+		hostname: 'https://docs.bsdcn.org',
 	},
 	lang: 'zh-CN',
 	lastUpdated: true,
