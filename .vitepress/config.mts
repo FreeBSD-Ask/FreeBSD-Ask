@@ -251,7 +251,7 @@ export default defineConfig({
 		},
 		nav: [
    {
-    test: 'QQ 群 787969044',
+    text: 'QQ 群 787969044',
     link: 'https://qm.qq.com/q/cX5mpJ36gg'
    },
 			{
