@@ -250,6 +250,10 @@ export default defineConfig({
 			height: 24
 		},
 		nav: [
+   {
+    test: '加入 QQ 群 787969044',
+    link: 'https://qm.qq.com/q/cX5mpJ36gg'
+   }
 			{
 				text: 'FreeBSD 中文社区',
 				link: 'https://bsdcn.org'
