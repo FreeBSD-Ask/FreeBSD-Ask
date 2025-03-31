@@ -5,125 +5,130 @@ import autoNav from "vite-plugin-vitepress-auto-nav";
 import footnote from 'markdown-it-footnote';
 import mathjax3 from 'markdown-it-mathjax3-tao';
 import taskLists from 'markdown-it-task-checkbox';
-import { chineseSearchOptimize, pagefindPlugin } from 'vitepress-plugin-pagefind';
-import { defineConfig } from 'vitepress';
+import {
+	chineseSearchOptimize,
+	pagefindPlugin
+} from 'vitepress-plugin-pagefind';
+import {
+	defineConfig
+} from 'vitepress';
 
 const customElements = [
-  'mjx-container',
-  'mjx-assistive-mml',
-  'math',
-  'maction',
-  'maligngroup',
-  'malignmark',
-  'menclose',
-  'merror',
-  'mfenced',
-  'mfrac',
-  'mi',
-  'mlongdiv',
-  'mmultiscripts',
-  'mn',
-  'mo',
-  'mover',
-  'mpadded',
-  'mphantom',
-  'mroot',
-  'mrow',
-  'ms',
-  'mscarries',
-  'mscarry',
-  'mscarries',
-  'msgroup',
-  'mstack',
-  'mlongdiv',
-  'msline',
-  'mstack',
-  'mspace',
-  'msqrt',
-  'msrow',
-  'mstack',
-  'mstack',
-  'mstyle',
-  'msub',
-  'msup',
-  'msubsup',
-  'mtable',
-  'mtd',
-  'mtext',
-  'mtr',
-  'munder',
-  'munderover',
-  'semantics',
-  'math',
-  'mi',
-  'mn',
-  'mo',
-  'ms',
-  'mspace',
-  'mtext',
-  'menclose',
-  'merror',
-  'mfenced',
-  'mfrac',
-  'mpadded',
-  'mphantom',
-  'mroot',
-  'mrow',
-  'msqrt',
-  'mstyle',
-  'mmultiscripts',
-  'mover',
-  'mprescripts',
-  'msub',
-  'msubsup',
-  'msup',
-  'munder',
-  'munderover',
-  'none',
-  'maligngroup',
-  'malignmark',
-  'mtable',
-  'mtd',
-  'mtr',
-  'mlongdiv',
-  'mscarries',
-  'mscarry',
-  'msgroup',
-  'msline',
-  'msrow',
-  'mstack',
-  'maction',
-  'semantics',
-  'annotation',
-  'annotation-xml',
-  'mjx-c',
-  'mjx-mstyle',
-  'mjx-mspace',
-  'mjx-mover',
-  'mjx-base',
-  'mjx-over',
-  'mjx-texatom',
-  'mjx-mfrac',
-  'mjx-frac',
-  'mjx-dbox',
-  'mjx-dtable',
-  'mjx-row',
-  'mjx-den',
-  'mjx-dstrut',
-  'mjx-line',
-  'mjx-num',
-  'mjx-mrow',
-  'mjx-msqrt',
-  'mjx-sqrt',
-  'mjx-box',
-  'mjx-surd',
-  'mjx-nstrut',
-  'mjx-msup',
-  'mjx-script',
-  'mjx-math',
-  'mjx-mn',
-  'mjx-mo',
-  'mjx-mi',
+	'mjx-container',
+	'mjx-assistive-mml',
+	'math',
+	'maction',
+	'maligngroup',
+	'malignmark',
+	'menclose',
+	'merror',
+	'mfenced',
+	'mfrac',
+	'mi',
+	'mlongdiv',
+	'mmultiscripts',
+	'mn',
+	'mo',
+	'mover',
+	'mpadded',
+	'mphantom',
+	'mroot',
+	'mrow',
+	'ms',
+	'mscarries',
+	'mscarry',
+	'mscarries',
+	'msgroup',
+	'mstack',
+	'mlongdiv',
+	'msline',
+	'mstack',
+	'mspace',
+	'msqrt',
+	'msrow',
+	'mstack',
+	'mstack',
+	'mstyle',
+	'msub',
+	'msup',
+	'msubsup',
+	'mtable',
+	'mtd',
+	'mtext',
+	'mtr',
+	'munder',
+	'munderover',
+	'semantics',
+	'math',
+	'mi',
+	'mn',
+	'mo',
+	'ms',
+	'mspace',
+	'mtext',
+	'menclose',
+	'merror',
+	'mfenced',
+	'mfrac',
+	'mpadded',
+	'mphantom',
+	'mroot',
+	'mrow',
+	'msqrt',
+	'mstyle',
+	'mmultiscripts',
+	'mover',
+	'mprescripts',
+	'msub',
+	'msubsup',
+	'msup',
+	'munder',
+	'munderover',
+	'none',
+	'maligngroup',
+	'malignmark',
+	'mtable',
+	'mtd',
+	'mtr',
+	'mlongdiv',
+	'mscarries',
+	'mscarry',
+	'msgroup',
+	'msline',
+	'msrow',
+	'mstack',
+	'maction',
+	'semantics',
+	'annotation',
+	'annotation-xml',
+	'mjx-c',
+	'mjx-mstyle',
+	'mjx-mspace',
+	'mjx-mover',
+	'mjx-base',
+	'mjx-over',
+	'mjx-texatom',
+	'mjx-mfrac',
+	'mjx-frac',
+	'mjx-dbox',
+	'mjx-dtable',
+	'mjx-row',
+	'mjx-den',
+	'mjx-dstrut',
+	'mjx-line',
+	'mjx-num',
+	'mjx-mrow',
+	'mjx-msqrt',
+	'mjx-sqrt',
+	'mjx-box',
+	'mjx-surd',
+	'mjx-nstrut',
+	'mjx-msup',
+	'mjx-script',
+	'mjx-math',
+	'mjx-mn',
+	'mjx-mo',
+	'mjx-mi',
 ];
 
 export default defineConfig({
@@ -142,8 +147,12 @@ export default defineConfig({
 		config(md) {
 			md.use(footnote);
 			md.use(mathjax3, {
-               tex: {tags: 'ams'},
-               loader: {load: ["input/tex", "output/chtml"]},
+				tex: {
+					tags: 'ams'
+				},
+				loader: {
+					load: ["input/tex", "output/chtml"]
+				},
 			});
 			md.use(taskLists, {
 				disabled: true,
@@ -169,18 +178,18 @@ export default defineConfig({
 		}
 
 	},
-   vue: {
-    template: {
-      compilerOptions: {
-        isCustomElement: (tag) => customElements.includes(tag),
-      },
-    },
-  },
+	vue: {
+		template: {
+			compilerOptions: {
+				isCustomElement: (tag) => customElements.includes(tag),
+			},
+		},
+	},
 	head: [
-	 [
-      'script',
-      {},
-      `import('/pagefind/pagefind.js')
+		[
+			'script',
+			{},
+			`import('/pagefind/pagefind.js')
         .then((module) => {
           window.__pagefind__ = module
           module.init()
@@ -188,7 +197,7 @@ export default defineConfig({
         .catch(() => {
           // console.log('not load /pagefind/pagefind.js')
         })`
-    ],
+		],
 		['link', {
 			rel: 'icon',
 			href: '/favicon.ico'
@@ -197,7 +206,7 @@ export default defineConfig({
 			name: 'keywords',
 			content: ''
 		}],
-				[
+		[
 			'script',
 			{
 				async: '',
@@ -240,11 +249,18 @@ export default defineConfig({
 			width: 24,
 			height: 24
 		},
-		nav: [
-			{
+		nav: [{
 				text: '目录',
 				link: 'mu-lu.md'
 			},
+			{
+				text: '视频教程Ⅰ',
+				link: 'https://www.bilibili.com/video/BV1Qji2YLEgS/'
+			},
+			{
+				text: '视频教程Ⅱ',
+				link: 'https://www.bilibili.com/video/BV12m4y1w7FS/'
+			}
 		],
 		base: '/',
 		editLink: {
@@ -274,7 +290,7 @@ export default defineConfig({
 				emptyText: '空空如也',
 				heading: '共: {{searchResult}} 条结果',
 				excludeSelector: ['img', 'a.header-anchor'],
-			} ),
+			}),
 			autoNav({
 				summary: {
 					target: "docs/SUMMARY.md",
