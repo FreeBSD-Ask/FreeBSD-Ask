@@ -115,3 +115,4 @@ Ubuntu 吧前吧主 Simple 曾建议修改项目的章节文件名与许可协�
 
 本项目的镜像网站 `docs.bsdcn.org` 由 [VitePress](https://vitejs.cn/vitepress/) 驱动。
 
+本项目的域名 `bsdcn.org` 由 FreeBSD 中文社区（CFC）及 ykla 赞助。
