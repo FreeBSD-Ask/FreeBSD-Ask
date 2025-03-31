@@ -243,7 +243,7 @@ export default defineConfig({
 		nav: [
 			{
 				text: '目录',
-				link: 'SUMMARY.md'
+				link: 'mu-lu.md'
 			},
 		],
 		base: '/',
