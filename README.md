@@ -8,6 +8,11 @@ FreeBSD 是真正自由（Liberty）的**操作系统**，在这波谲云诡的�
 
 ## 关于
 
+本书官方部署站点：
+
+- <https://book.bsdcn.org/>，使用 GitBook，并集成了其他相关页面
+- <https://docs.bsdcn.org/>，使用 VitePress，仅本书
+
 **首要**联系方式为 **QQ 群**：787969044
 
 微信群：出于微信的封闭性，你须先加入 QQ 群，再联系 QQ 群主方可加入
