@@ -249,7 +249,16 @@ export default defineConfig({
 			width: 24,
 			height: 24
 		},
-		nav: [{
+		nav: [
+			{
+				text: 'FreeBSD 中文社区',
+				link: 'https://bsdcn.org'
+			},
+			{
+				text: '回到主站',
+				link: 'https://book.bsdcn.org'
+			},
+			{
 				text: '目录',
 				link: 'mu-lu.md'
 			},
@@ -260,7 +269,8 @@ export default defineConfig({
 			{
 				text: '视频教程Ⅱ',
 				link: 'https://www.bilibili.com/video/BV12m4y1w7FS/'
-			}
+			},
+
 		],
 		base: '/',
 		editLink: {
