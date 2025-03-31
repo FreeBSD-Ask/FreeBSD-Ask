@@ -3,3 +3,6 @@
 仅列出当下季度的编辑日志。其他存档在项目的 `CHANGELOG-ARCHIVE.md` 文件中。
 
 ## 2025 年第二季度
+
+- 2025.4.1
+  - <https://mirrors.aliyun.com/freebsd-pkg/> 看起来早就失去同步。还是 2 月我提交 kmod 源以前的内容，故不写入
