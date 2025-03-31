@@ -111,6 +111,7 @@ Ubuntu 吧前吧主 Simple 曾建议修改项目的章节文件名与许可协�
 
 本项目主要托管在 [GitHub](https://GitHub.com)。
 
-本项目还受到了 [GitBook 开源计划](https://www.gitbook.com/solutions/open-source)的赞助。本项目的网站由其提供。
+本项目还受到了 [GitBook 开源计划](https://www.gitbook.com/solutions/open-source)的赞助。本项目的网站 `book.bsdcn.org`由其提供。
 
+本项目的镜像网站 `docs.bsdcn.org` 由 [VitePress](https://vitejs.cn/vitepress/) 驱动。
 
