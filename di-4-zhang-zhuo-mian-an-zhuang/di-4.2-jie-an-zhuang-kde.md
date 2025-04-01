@@ -40,7 +40,7 @@ xdg-user-dirs 可自动管理家目录子目录（可选安装）
 ```
 
 
-> **故障排除**
+> **故障排除与未竟事宜**
 >
 > 如果有时候提示 `pkg` 找不到或者没有 kde6，请点击 [x11/kde](https://www.freshports.org/x11/kde) 看看是不是二进制包没有被构建出来。有时候需要切换 quarterly（待上游构建出来了再换到 latest 源，`pkg upgrade` 更新即可）或者 latest 源。类似方法适用于所有软件，故后边不再赘述。如果没有，需要自己使用上述的 Port 进行编译。
 
@@ -175,7 +175,7 @@ Current=sddm-freebsd-black-theme
 - [SDDM login screen with KDE: change language?](https://forums.freebsd.org/threads/sddm-login-screen-with-kde-change-language.80535/)
 
 
-## 故障排除
+## 故障排除与未竟事宜
 
 ### sddm 登录闪退
 

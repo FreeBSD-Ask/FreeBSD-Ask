@@ -76,7 +76,7 @@ exec mate-session
 
 ibus 测试成功。请参见输入法相关章节。
 
-## 故障排除
+## 故障排除与未竟事宜
 
 ### 配置 slick-greeter
 

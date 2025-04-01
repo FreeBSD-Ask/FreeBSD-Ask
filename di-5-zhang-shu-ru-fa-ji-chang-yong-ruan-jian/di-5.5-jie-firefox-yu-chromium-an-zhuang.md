@@ -196,7 +196,7 @@ export GOOGLE_DEFAULT_CLIENT_SECRET=GoCSPX-iKHEKZmP4w_zdq0Z8nwOqz6SF2_M # 这里
 - [为 Chromium 恢复登录功能](https://nyac.at/posts/google-sync-in-chromium)
 
 
-## 故障排除
+## 故障排除与未竟事宜
 
 ### 解决 chromium 出现未知错误时占用大量性能（加到图标的启动参数中，图标是文本文件）
 

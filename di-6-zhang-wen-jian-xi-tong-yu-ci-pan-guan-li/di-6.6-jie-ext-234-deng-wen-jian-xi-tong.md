@@ -108,7 +108,7 @@ test1	test2	test3	test4
 cfc	test1	test2
 ```
 
-## 故障排除
+## 故障排除与未竟事宜
 
 - 怎么卸载？
 

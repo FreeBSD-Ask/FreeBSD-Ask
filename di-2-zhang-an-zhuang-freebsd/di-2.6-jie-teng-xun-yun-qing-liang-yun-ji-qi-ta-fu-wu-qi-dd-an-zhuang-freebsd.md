@@ -92,7 +92,7 @@ ssh 链接后，`kldload zfs` 加载 zfs 模块，然后运行 `bsdinstall`，�
 # fetch http://ftp.freebsd.org/pub/FreeBSD/releases/amd64/13.1-RELEASE/MANIFEST
 ```
 
-### 故障排除
+### 故障排除与未竟事宜
 
 - 为什么不能直接 dd？（错误示范，仅供说明，请勿执行）
 

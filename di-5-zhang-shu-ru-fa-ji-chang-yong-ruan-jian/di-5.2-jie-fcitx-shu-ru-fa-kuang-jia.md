@@ -172,7 +172,7 @@ setenv GTK_IM_MODULE fcitx
 setenv QT_IM_MODULE fcitx
 ```
 
-## 故障排除
+## 故障排除与未竟事宜
 
 遇到问题，请先运行 `fcitx` 故障诊断，但是该输出仅对 `bash` 做了环境变量的配置。也就是说他输出的环境变量仅适用于 `bash`、`sh` 和 `zsh` 等 SHELL，而不适用于 `csh`。于 `csh` 的环境变量配置需要参考上文。
 

@@ -258,7 +258,7 @@ Filename: usr/local/lib/libxcb-icccm.so.4.0.0
 
 
 
-## 故障排除
+## 故障排除与未竟事宜
 
 ### `ld-elf.so.1: Shared object "libmd.so.6" not found, required by "pkg"`
 

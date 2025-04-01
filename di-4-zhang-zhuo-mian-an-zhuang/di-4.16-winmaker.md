@@ -75,7 +75,7 @@ lightdm_env="LC_MESSAGES=zh_CN.UTF-8"
 
 
 
-## 故障排除
+## 故障排除与未竟事宜
 
 - `Could not execute command: exec WPrefs`
 

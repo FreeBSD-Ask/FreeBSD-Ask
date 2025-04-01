@@ -38,7 +38,7 @@ md0
 COPYRIGHT	etc		mnt		rescue		usr
 ```
 
-### 故障排除
+### 故障排除与未竟事宜
 
 **/dist** 目录若改为其他则使用环境变量方法无效，因为 `packages/repos/FreeBSD_install_cdrom.conf` 写死了路径无法修改。
 

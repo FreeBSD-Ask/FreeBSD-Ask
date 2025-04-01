@@ -232,7 +232,7 @@ $ yay -S linuxqq # 此时位于 Arch 兼容层！此时用户为 test
 >
 > 如果你双网卡，例如一个有线一个无线，打开 QQ 以后可能会遇到网络错误的提示，需要给你的空闲网卡随便指派一个 IP。
 >
-> 参见《Linux 兼容层故障排除》
+> 参见《Linux 兼容层故障排除与未竟事宜》
 >
 > **如果退出后进不去，请加参数 `--in-process-gpu` 执行之即可，即 `/bin/qq  --no-sandbox --in-process-gpu`**。
 

@@ -175,7 +175,7 @@ xorg 可以自动识别驱动，**不需要** 手动配置 `/usr/local/etc/X11/x
 # pw groupmod wheel -m ykla # 管理员权限
 ```
 
-## 故障排除
+## 故障排除与未竟事宜
 
 ### EFI 下无法正常关机
 

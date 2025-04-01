@@ -62,7 +62,7 @@ proc           /proc       procfs  rw  0   0
 
 ![FreeBSD 安装 fluxbox](../.gitbook/assets/fluxbox2.png)
 
-## 故障排除
+## 故障排除与未竟事宜
 
 - light、xdm 均不可用，无法启动 fluxbox
 

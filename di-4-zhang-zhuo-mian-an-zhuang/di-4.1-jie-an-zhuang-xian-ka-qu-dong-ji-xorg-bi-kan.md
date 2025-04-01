@@ -42,7 +42,7 @@ Wayland 是 xorg 的替代品，但是目前 BSD 上的 Wayland 支持欠佳。
 >
 >对于不同的 SHELL，环境变量的配置方法是不一样的，FreeBSD 14 前默认使用 `csh`，14 及以后默认使用 `sh`。而且不同桌面加载环境变量的方法也是不一样的，所以针对不同桌面，不同 SHELL 的配置方法是不一样的，具体方法请看具体桌面。
 
-## 故障排除
+## 故障排除与未竟事宜
 
 ![没安装驱动](../.gitbook/assets/noqudong.png)
 
@@ -151,7 +151,7 @@ FreeBSD 15 CUEERNT，编译使用 `drm-66-kmod`，支持情况同 Linux 6.6。
   - 如果是 HD7000 以后的 AMD 显卡，添加 `kld_list="amdgpu"`（大部分人应该使用这个，如果没用再换 `radeonkms`）
   - 如果是 HD7000 以前的 AMD 显卡，添加 `kld_list="radeonkms"`（这是十多年前的显卡了）
 
-### 故障排除
+### 故障排除与未竟事宜
 
 >**注意**
 >
@@ -418,7 +418,7 @@ xorg 最小化包：xorg-minimal（不建议）
 # make install clean
 ```
 
-### 故障排除
+### 故障排除与未竟事宜
 
 - 如果显卡使用驱动有问题请直接联系作者：[https://github.com/freebsd/drm-kmod/issues](https://github.com/freebsd/drm-kmod/issues)
 - 如果笔记本出现了唤醒时屏幕点不亮的问题，可以在 `/boot/loader.conf` 中添加 `hw.acpi.reset_video="1"` 以在唤醒时重置显示适配器。
