@@ -180,7 +180,7 @@ Starting sshd.
 ssh ykla@localhost:8022
 ```
 
-## 故障排除
+## 故障排除与未竟事宜
 
 - 图形化无法显示
 

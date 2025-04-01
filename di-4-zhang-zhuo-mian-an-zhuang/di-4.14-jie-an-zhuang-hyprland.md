@@ -814,7 +814,7 @@ bs-hl-color=ee2e24FF
 text-caps-lock-color=000000FF
 ```
 
-## 故障排除
+## 故障排除与未竟事宜
 
 如果启动失败，或者黑屏，请检查有没有把自己用户加入到 `video` 组，有没有安装显卡驱动，有没有正确设置环境变量 `XDG_RUNTIME_DIR`，生效否。
 

@@ -66,7 +66,7 @@
 - [Submitting GitHub Pull Requests to FreeBSD](https://freebsdfoundation.org/our-work/journal/browser-based-edition/configuration-management-2/submitting-github-pull-requests-to-freebsd/)
 
 
-#### 故障排除
+#### 故障排除与未竟事宜
 
 
 - Git：`fatal: unable to update url base from redirection`
@@ -90,7 +90,7 @@
 # gitup current # 获取 current 源代码
 ```
 
-#### 故障排除
+#### 故障排除与未竟事宜
 
 - Git：`fatal: unable to access 'https://git.FreeBSD.org/src.git/': SSL certificate problem: certificate is not yet valid`
 
@@ -133,7 +133,7 @@
 # reboot               # 重启以完成更新流程
 ```
 
-### 故障排除
+### 故障排除与未竟事宜
 
 - `Conflicts remain from previous update, aborting.`
 

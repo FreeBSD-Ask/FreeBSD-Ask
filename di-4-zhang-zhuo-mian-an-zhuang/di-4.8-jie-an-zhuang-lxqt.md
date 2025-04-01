@@ -78,7 +78,7 @@ $ echo "exec ck-launch-session startlxqt" > ~/.xinitrc
 
 ![FreeBSD 安装 LXQt](../.gitbook/assets/lxqt5.png)
 
-## 故障排除
+## 故障排除与未竟事宜
 
 - 桌面图标不显示
 

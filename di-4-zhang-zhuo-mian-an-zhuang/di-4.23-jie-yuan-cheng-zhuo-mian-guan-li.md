@@ -251,7 +251,7 @@ ntpd     ntpd        1127 26  udp4   192.168.31.187:123    *:*
 root     syslogd     1021 7   udp4   *:514                 *:*
 ```
 
->**故障排除：由于目标服务器积极拒绝，无法连接**
+>**故障排除与未竟事宜：由于目标服务器积极拒绝，无法连接**
 >
 >非镜像 vnc 在连接时必须指定端口，否则按默认端口 5900 进行连接，但是你不是镜像的屏幕（你用的不是 x11vnc），所以必定连不上。
 >
@@ -411,7 +411,7 @@ Password: # 输入密码，密码不会显示出来 ***。
 
 ![freerdp](../.gitbook/assets/freerdp.png)
 
-#### 故障排除
+#### 故障排除与未竟事宜
 
 - 但是我没有输入用户名就连上了？
 
@@ -499,7 +499,7 @@ Do you trust this certificate (yes/no)? # 输入 yes，按回车键
 
 ![rdesktop](../.gitbook/assets/rdesktop2.png)
 
-#### 故障排除
+#### 故障排除与未竟事宜
 
 - 看视频没声音
 
@@ -578,7 +578,7 @@ $ ykla@ykla:~ $ anydesk
 
 ![Windows 通过 anydesk 远程 FreeBSD](../.gitbook/assets/anydesk4.png)
 
-#### 故障排除
+#### 故障排除与未竟事宜
 
 - FreeBSD 通过 anydesk 远程 Windows，似乎无法在 Windows 中移动鼠标
 

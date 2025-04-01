@@ -450,7 +450,7 @@ ykla@ykla:~ % uname -mrs
 FreeBSD 13.1-RELEASE amd64
 ```
 
-## 故障排除
+## 故障排除与未竟事宜
 
 ### 回滚更新
 

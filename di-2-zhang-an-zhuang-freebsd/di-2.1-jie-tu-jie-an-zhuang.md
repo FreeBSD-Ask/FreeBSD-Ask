@@ -844,7 +844,7 @@ Add another user? (yes/no) [no]: # 是否还要再添加一位用户
 
 ![](../.gitbook/assets/ins37.png)
 
-## 故障排除
+## 故障排除与未竟事宜
 
 - 无法进入安装界面
 

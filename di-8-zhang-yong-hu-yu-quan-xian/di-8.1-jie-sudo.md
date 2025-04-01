@@ -134,7 +134,7 @@ FreeBSD 基本系统默认不自带 `sudo` 命令，需要使用 `root` 权限�
 %wheel ALL=(ALL) NOPASSWD:ALL
 ```
 
-### 故障排除
+### 故障排除与未竟事宜
 
 - `xxx Is Not in the Sudoers File. This Incident Will Be Reported`
 

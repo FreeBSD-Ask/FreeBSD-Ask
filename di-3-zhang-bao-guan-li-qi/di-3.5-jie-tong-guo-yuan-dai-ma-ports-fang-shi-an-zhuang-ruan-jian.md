@@ -130,7 +130,7 @@ root@ykla:/usr/ports # git checkout . # 放弃本地修改
 root@ykla:/usr/ports # git pull
 ```
 
-### 故障排除
+### 故障排除与未竟事宜
 
 
 ```sh

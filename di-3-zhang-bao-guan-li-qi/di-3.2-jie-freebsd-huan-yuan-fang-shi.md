@@ -48,7 +48,7 @@ FreeBSD 传统上有四类源：FreeBSD 之所以有这么多源是因为其既�
 
 FreeBSD 中 pkg 源分为系统级和用户级两个配置文件。**不建议**直接修改 `/etc/pkg/FreeBSD.conf` ~~但是太麻烦啦，一般我都是直接改这个文件的~~，因为该文件会随着基本系统的更新而发生改变。
 
-**故障排除**
+**故障排除与未竟事宜**
 
 > **并非所有源都有 `quarterly` 和 `latest`，具体请看 <https://pkg.freebsd.org/> 。**
 >
@@ -251,7 +251,7 @@ MASTER_SITE_OVERRIDE?=http://mirrors.ustc.edu.cn/freebsd-ports/distfiles/${DIST_
 # portsnap fetch extract
 ```
 
-**故障排除**
+**故障排除与未竟事宜**
 
 ```sh
 Snapshot appears to have been created more than one day into the future!
