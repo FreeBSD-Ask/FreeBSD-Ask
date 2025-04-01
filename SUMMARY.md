@@ -224,7 +224,7 @@
 * [第 21.10 节 RockyLinux 兼容层（FreeBSD Port）](di-21-zhang-linux-jian-rong-ceng/di-21.10-jie-rocky9-jian-rong-ceng.md)
 * [第 21.11 节 Linux 兼容层——基于 Deepin](di-21-zhang-linux-jian-rong-ceng/di-21.11-jie-linux-jian-rong-ceng-ji-yu-deepin.md)
 * [第 21.12 节 高级教程：Linux 兼容层与 Jail](di-21-zhang-linux-jian-rong-ceng/di-21.12-jie-gao-ji-jiao-cheng-linux-jian-rong-ceng-yu-jail.md)
-* [第 21.13 节 Linux 兼容层故障排除与配置](di-21-zhang-linux-jian-rong-ceng/di-21.13-jie-linux-jian-rong-ceng-gu-zhang-pai-chu-yu-pei-zhi.md)
+* [第 21.13 节 Linux 兼容层故障排除与未竟事宜](di-21-zhang-linux-jian-rong-ceng/di-21.13-jie-linux-jian-rong-ceng-gu-zhang-pai-chu-yu-pei-zhi.md)
 
 ## 第 22 章 编程环境与软件开发
 
