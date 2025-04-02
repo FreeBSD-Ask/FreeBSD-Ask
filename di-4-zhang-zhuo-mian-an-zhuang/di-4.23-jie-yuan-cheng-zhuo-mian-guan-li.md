@@ -49,6 +49,11 @@ Password written to: /root/.vnc/passwd
 $ x11vnc -display :0 -rfbauth ~/.vnc/passwd -auth $(find /var/run/sddm/ -type f)
 ```
 
+>**警告**
+>
+> SDDM 左下角选 `Wayland` 是进不去的！因为 x11vnc 尚不支持 Wayland。
+
+
 - LightDM
 
 ```sh
