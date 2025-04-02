@@ -43,7 +43,9 @@ Write password to /root/.vnc/passwd?  [y]/n y #此处键入 y 回车
 Password written to: /root/.vnc/passwd
 ```
 
-启动服务器（KDE 6 SDDM 为例）：
+启动服务器：
+
+- KDE 6 SDDM
 
 ```sh
 $ x11vnc -display :0 -rfbauth ~/.vnc/passwd -auth $(find /var/run/sddm/ -type f)
