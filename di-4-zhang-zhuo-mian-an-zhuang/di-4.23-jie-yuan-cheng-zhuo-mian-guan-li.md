@@ -228,7 +228,9 @@ your environment.
 #### set environment variables here if you want
 export LANG=zh_CN.UTF-8
 ```
+### 故障排除与未竟事宜
 
+- XRDP 没声音，pulseaudio-module-xrdp 不知道怎么配置。
 
 ## 通过 Windows 以 TigerVNC 远程访问 FreeBSD
 
