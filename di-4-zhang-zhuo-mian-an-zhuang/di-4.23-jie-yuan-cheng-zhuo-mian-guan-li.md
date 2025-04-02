@@ -272,6 +272,10 @@ root     syslogd     1021 7   udp4   *:514                 *:*
 
 ![SDDM VNC](../.gitbook/assets/vnc2.png)
 
+### 故障排除与未竟事宜
+
+- 通过 VNC 远程 FreeBSD  没声音，不知道怎么配置。
+
 ## 通过 Windows 自带的桌面远程连接（RDP）远程访问 FreeBSD
 
 ![xrdp FreeBSD](../.gitbook/assets/xrdp1.png)
@@ -658,3 +662,4 @@ root@ykla:~ # /usr/local/bin/hbbr
 
 - [rustdesk-server Self hosted RustDesk server](https://www.freshports.org/net/rustdesk-server/)
 - [远程控制软件 RustDesk 自建服务器全平台部署及使用教程](https://www.cnblogs.com/safe-rabbit/p/18020812)
+
