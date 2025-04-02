@@ -207,8 +207,9 @@
 ## 第 20 章 娱乐、教育与科学
 
 * [第 20.1 节 游戏](di-20-zhang-yu-le-yu-jiao-yu/di-20.1-jie-you-xi.md)
-* [第 20.2 节 音视频播放器与剪辑](di-20-zhang-yu-le-yu-jiao-yu/di-20.2-jie-yin-shi-pin-bo-fang-qi.md)
-* [第 20.3 节 科研与专业工具](di-20-zhang-yu-le-yu-jiao-yu/di-20.3-jie-ke-yan-yu-zhuan-ye-gong-ju.md)
+* [第 20.2 节 音频播放器](di-20-zhang-yu-le-yu-jiao-yu/di-20.2-jie-yin-pin-bo-fang-qi.md)
+* [第 20.3 节 视频播放器 & 剪辑](di-20-zhang-yu-le-yu-jiao-yu/di-20.3-shi-pin-bo-fang.md)
+* [第 20.4 节 科研与专业工具](di-20-zhang-yu-le-yu-jiao-yu/di-20.4-jie-ke-yan-yu-zhuan-ye-gong-ju.md)
 
 ## 第 21 章 Linux 兼容层
 
