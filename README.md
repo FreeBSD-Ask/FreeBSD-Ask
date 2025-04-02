@@ -10,8 +10,8 @@ FreeBSD 是真正自由（Liberty）的**操作系统**，在这波谲云诡的�
 
 本书官方部署站点：
 
-- <https://book.bsdcn.org/>，使用 GitBook，并集成了其他相关页面
-- <https://docs.bsdcn.org/>，使用 VitePress，仅本书
+- <https://book.bsdcn.org>，使用 GitBook，并集成了其他相关页面
+- <https://docs.bsdcn.org>，使用 VitePress，仅本书
 
 ### 加入 FreeBSD 中文社区（CFC）
 
