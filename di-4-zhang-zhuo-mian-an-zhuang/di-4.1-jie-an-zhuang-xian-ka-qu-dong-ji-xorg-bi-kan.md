@@ -8,9 +8,7 @@
 >
 >请勿使用 `sysutils/desktop-installer`，会引发不必要的错误和问题。
 
-执着于一定要让 FreeBSD 表现出如 Linux 甚至是 Windows 一般的桌面力是一种可望而不可即的奢求，FreeBSD 官方的口号是 `The power to serve`。但 FreeBSD 基金会在 2024 年收到了一笔赞助，并成立了笔记本和台式机小组。
-
-GhostBSD 适合对 BSD 好奇的人体验。本质上还是 FreeBSD 的预配置版本。如果是使用三个月以上的 FreeBSD 用户，不推荐这个发行版。它的软件仓库和 FreeBSD 一样，但是自己的独立服务器在国内速度感人（虽然也可以替换成 FreeBSD 的源）。
+执着于一定要让 FreeBSD 表现出如 Linux 甚至是 Windows 一般的桌面力是一种可望而不可即的奢求，FreeBSD 官方的口号是 `The power to serve`。但 FreeBSD 基金会在 2024 年收到了一笔赞助，成立了笔记本和台式机小组。
 
 本章内容并非是让大家把所有的桌面都安装一遍，而是尽可能多地提供选择。
 
@@ -18,21 +16,11 @@ GhostBSD 适合对 BSD 好奇的人体验。本质上还是 FreeBSD 的预配置
 
 Wayland 是 xorg 的替代品，但是目前 BSD 上的 Wayland 支持欠佳。
 
-其中，Gnome 可省略第四步，因为其显示管理器 gdm 早就在第二步就进行了自动安装。
-
-显示管理器推荐搭配是：
-
-- KDE5 + sddm
-- Xfce/Mate + lightdm
+其中，Gnome 可省略第四步，因为其显示管理器 gdm 早就在第二步就自动安装了。
 
 >**警告**
 >
 >由于 slim 的作者早在 2013 年就停止了开发，不推荐使用，会产生一些奇怪的 bug——比如 fcitx5 用不了，加载不了 dbus。
-
-输入法框架目前推荐使用：
-
-- fcitx（对于 KDE 5 桌面）
-- ibus（对于其他基于 GTK 的桌面，如 gnome、xfce、mate 等等）。
 
 >**警告**
 >
@@ -40,13 +28,13 @@ Wayland 是 xorg 的替代品，但是目前 BSD 上的 Wayland 支持欠佳。
 
 >**技巧**
 >
->对于不同的 SHELL，环境变量的配置方法是不一样的，FreeBSD 14 前默认使用 `csh`，14 及以后默认使用 `sh`。而且不同桌面加载环境变量的方法也是不一样的，所以针对不同桌面，不同 SHELL 的配置方法是不一样的，具体方法请看具体桌面。
+>FreeBSD 14 之前默认使用 `csh`（即 `tsch`），14 及以后默认使用 `sh`。不同 SHELL 的环境变量配置方法是不一样，因桌面而异。
 
 ## 故障排除与未竟事宜
 
 ![没安装驱动](../.gitbook/assets/noqudong.png)
 
-没有安装显卡驱动。
+未安装显卡驱动。
 
 ---
 
@@ -434,24 +422,8 @@ xorg 最小化包：xorg-minimal（不建议）
 
 >**警告**
 >
->应该尽量避免试图手动生成 `xorg.conf` 这个文件。你打不开桌面很大概率不是因为这个文件的配置有问题！你应该去检查显卡驱动或者桌面本身的问题。Xorg 几乎是不会出问题的！
+>应该尽量避免试图手动生成 `xorg.conf` 这个文件。你打不开桌面很大概率不是因为这个文件的配置有问题！你应该去检查显卡驱动或者桌面本身的问题。Xorg 是几乎不会出问题的！
 
 ## 参考文献
 
 - 详细情况可以看 [wiki/Graphics](https://wiki.freebsd.org/Graphics)
-
----
-
-> **小故事**
->
-> sddm gdm lightdm slim 在系统里乱战：
->
-> sddm：我背后是 kde
->
-> gdm：我背后是 gnome
->
-> lightdm：我背后可以是任何一个
->
-> slim：怎么办？好慌，潜水太久，管理员要踢我了。
->
-> FreeBSD：合着你们在我地盘上养蛊呢？
