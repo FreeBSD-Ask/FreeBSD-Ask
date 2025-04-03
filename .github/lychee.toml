@@ -40,10 +40,10 @@ max_concurrency = 30
 user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36"
 
 # Website timeout from connect to response finished.
-timeout = 20
+timeout = 30
 
 # Minimum wait time in seconds between retries of failed requests.
-retry_wait_time = 2
+retry_wait_time = 3
 
 # Comma-separated list of accepted status codes for valid links.
 # Supported values are:
