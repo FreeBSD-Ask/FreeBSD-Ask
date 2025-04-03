@@ -24,11 +24,7 @@ Wayland 是 xorg 的替代品，但是目前 BSD 上的 Wayland 支持欠佳。
 
 >**警告**
 >
->一般地，请勿使用 scim，作者早就跑路（大概已经距今 18 年了）。
-
->**技巧**
->
->FreeBSD 14 之前默认使用 `csh`（即 `tsch`），14 及以后默认使用 `sh`。不同 SHELL 的环境变量配置方法是不一样，因桌面而异。
+>请勿使用 scim，作者早就跑路（大概已经距今 18 年了）。
 
 ## 故障排除与未竟事宜
 
@@ -139,7 +135,7 @@ FreeBSD 15 CUEERNT，编译使用 `drm-66-kmod`，支持情况同 Linux 6.6。
   # sysrc -f /etc/rc.conf kld_list+=i915kms
   ```
 - AMD
-  - 如果是 HD7000 以后的 AMD 显卡，添加 `kld_list="amdgpu"`（大部分人应该使用这个，如果没用再换 `radeonkms`）
+  - 如果是 HD7000 以后的 AMD 显卡，添加 `amdgpu`（大部分人应该使用这个，如果没用再换 `radeonkms`）
     ```sh
     # sysrc -f /etc/rc.conf kld_list+=amdgpu
     ```
@@ -166,7 +162,7 @@ FreeBSD 15 CUEERNT，编译使用 `drm-66-kmod`，支持情况同 Linux 6.6。
 
 #### 视频硬解（重要）
 
-如果不配置此节，blender 等软件将无法运行！直接段错误。
+如果不配置此节，blender 等软件将无法运行！直接“段错误”。
 
 ```sh
 # pkg install xf86-video-intel libva-intel-media-driver
@@ -179,19 +175,17 @@ FreeBSD 15 CUEERNT，编译使用 `drm-66-kmod`，支持情况同 Linux 6.6。
 # cd /usr/ports/multimedia/libva-intel-media-driver/ && make install clean
 ```
 
-
-
 ### 亮度调节
 
 #### 通用
 
-对于一般计算机：
+- 对于一般计算机：
 
 ```sh
 # sysrc -f /boot/loader.conf  acpi_video="YES"
 ```
 
-对于 Thinkpad：
+- 对于 Thinkpad：
 
 ```sh
 # sysrc -f /boot/loader.conf  acpi_ibm_load="YES"
@@ -200,7 +194,7 @@ FreeBSD 15 CUEERNT，编译使用 `drm-66-kmod`，支持情况同 Linux 6.6。
 
 #### 英特尔/AMD
 
-backlight 自 FreeBSD 13 引入。
+`backlight` 自 FreeBSD 13 引入。
 
 ```sh
 # backlight          #打印当前亮度
@@ -218,7 +212,7 @@ backlight 自 FreeBSD 13 引入。
 # backlight -f /dev/backlight/backlight0 - 10  
 ```
 
-##### 参考文献
+#### 参考文献
 
 - [backlight -- configure backlight	hardware](https://man.freebsd.org/cgi/man.cgi?backlight)
 - 经过测试，此部分教程适用于 renoir 显卡：
