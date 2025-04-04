@@ -78,13 +78,14 @@
 
 ## 第 6 章 多媒体与外设
 
-* [第 6.1 节 打印机](di-6-duo-mei-ti/di-6.1-jie-da-yin-ji-de-an-zhuang.md)
-* [第 6.2 节 触摸板](di-6-duo-mei-ti/di-6.2-jie-chu-mo-ban-de-she-zhi.md)
-* [第 6.3 节 声卡](di-6-duo-mei-ti/di-6.3-jie-sheng-ka-yu-wang-ka-she-zhi.md)
-* [第 6.4 节 音频播放器](di-6-duo-mei-ti/di-6.4-jie-yin-pin-bo-fang-qi.md)
-* [第 6.5 节 视频播放器](di-6-duo-mei-ti/di-6.5-shi-pin-bo-fang.md)
-* [第 6.6 节 音频图形图像处理](di-6-duo-mei-ti/di-6.6-jian-ji.md)
-* [第 6.7 节 蓝牙](di-6-duo-mei-ti/di-6.7-jie-lan-ya.md)
+* [第 6.1 节 声卡](di-6-duo-mei-ti/di-6.1-jie-sheng-ka-yu-wang-ka-she-zhi.md)
+* [第 6.2 节 蓝牙](di-6-duo-mei-ti/di-6.2-jie-lan-ya.md)
+* [第 6.3 节 打印机](di-6-duo-mei-ti/di-6.3-jie-da-yin-ji-de-an-zhuang.md)
+* [第 6.4 节 触摸板](di-6-duo-mei-ti/di-6.4-jie-chu-mo-ban-de-she-zhi.md)
+* [第 6.5 节 音频播放器](di-6-duo-mei-ti/di-6.5-jie-yin-pin-bo-fang-qi.md)
+* [第 6.6 节 视频播放器](di-6-duo-mei-ti/di-6.6-shi-pin-bo-fang.md)
+* [第 6.7 节 音频图形图像处理](di-6-duo-mei-ti/di-6.7-jian-ji.md)
+
 
 ## 第 7 章 代理服务器
 
