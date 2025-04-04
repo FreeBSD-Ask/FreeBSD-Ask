@@ -97,7 +97,7 @@ FreeBSD 是真正自由（Liberty）的**操作系统**，在这波谲云诡的�
 
 ## 授权许可
 
-本项目使用《CC BY 4.0 署名 4.0 协议国际版》，具体细则参见 <https://github.com/FreeBSD-Ask/FreeBSD-Ask> 项目下的 `LICENSE.md` 文件。
+本项目使用《CC BY 4.0 署名 4.0 协议国际版》，具体细则参见[本项目](https://github.com/FreeBSD-Ask)下的 `LICENSE.md` 文件。
 
 ![CC BY](.gitbook/assets/by.png)
 
