@@ -66,7 +66,11 @@ FreeBSD 是真正自由（Liberty）的**操作系统**，在这波谲云诡的�
 - [X] 格式化“第 5.1 节 输入法与环境变量”
 - [X] 格式化“第 21.12 节 高级教程：Linux 兼容层与 Jail”
 - [ ] 撰写一篇文章，主题为“UNIX 哲学”
-- [ ] 测评各种桌面版本 FreeBSD 
+- [ ] 测评各种尚存的桌面版本 FreeBSD，也许没必要？已有 [FreeBSD 桌面发行版](https://freebsd-journal-cn.bsdcn.org/20200506-wang-luo-xing-neng/desktop)
+  - [ ] [GhostBSD](https://www.ghostbsd.org/)
+  - [ ] [NomadBSD](https://nomadbsd.org/)
+  - [ ] [helloSystem](https://hellosystem.github.io/docs/)
+  - [ ] [MidnightBSD](https://www.midnightbsd.org/)
 - [ ] 基础知识
   - [ ] 登出账号
   - [ ] 命令行关机
