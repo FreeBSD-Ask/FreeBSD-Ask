@@ -33,7 +33,7 @@ FreeBSD 是真正自由（Liberty）的**操作系统**，在这波谲云诡的�
 
 由于编写者水平所限，书中缺点和谬误之处自不可免。
 
-如遇本站直接相关问题：如错别字、过时、网站配色、错误、投稿、翻译等问题，请直接发送邮件至 `yklaxds@gmail.com`（优先）或联系 QQ 群群主。如果可以的话，欢迎 PR。在桌面端网页右侧有当前页面的 GitHub 编辑地址。
+如遇本站直接相关问题：请直接发送邮件至 `yklaxds@gmail.com`（优先）或联系 QQ 群群主。如果可以的话，欢迎 PR。在桌面端网页右侧有当前页面的 GitHub 编辑地址。
 
 ## ToDo 待办事项
 
@@ -79,7 +79,7 @@ FreeBSD 是真正自由（Liberty）的**操作系统**，在这波谲云诡的�
 
 ## PDF 文档导出
 
-可使用由 [safreya](https://github.com/safreya) 编写的脚本：<https://github.com/FreeBSD-Ask/gitbook-pdf-export> 来导出本书的 PDF 文档。
+可使用由 [safreya](https://github.com/safreya) 编写的[脚本](https://github.com/FreeBSD-Ask/gitbook-pdf-export)来导出本书的 PDF 文档。
 
 此外，还会每天通过 GitHub Action 导出 PDF 于 [releases](https://github.com/FreeBSD-Ask/FreeBSD-Ask/releases)（也许需要代理）。
 
@@ -93,7 +93,7 @@ FreeBSD 是真正自由（Liberty）的**操作系统**，在这波谲云诡的�
 
 [点此捐赠 FreeBSD 基金会](https://freebsdfoundation.org/donate)
 
-需要你有 Visa 信用卡：若直接提交无法支付，请使用捐赠页面的 `Amazon Pay` 或 `Google Pay`，经测试均可以顺利支付。
+需要你有 VISA 信用卡：请使用捐赠页面的 `Amazon Pay` 或 `Google Pay`，经测试均可以顺利支付。
 
 ## 授权许可
 
