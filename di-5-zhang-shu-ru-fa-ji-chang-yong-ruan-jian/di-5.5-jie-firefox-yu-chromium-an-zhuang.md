@@ -1,4 +1,4 @@
-# 第 5.5 节 安装 Firefox 与 Chromium
+# 第 5.5 节 Firefox 与 Chromium
 
 ## 火狐浏览器
 
