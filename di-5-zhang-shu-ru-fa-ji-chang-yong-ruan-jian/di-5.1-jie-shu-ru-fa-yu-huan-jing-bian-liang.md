@@ -1,15 +1,11 @@
 # 第 5.1 节 输入法与环境变量
 
 
-方法：在 **可生效配置文件** 中写入配置内容
+在 **可生效配置文件** 中写入配置内容即可。配置内容分 A、B 组两组。
 
-## 配置内容
+## A 组
 
-配置内容分 A、B 组两组
-
-先 A 组
-
-sh/bash/zsh：fcitx5
+### sh/bash/zsh：fcitx/fcitx5
 
 ```sh
 export LANG=zh_CN.UTF-8
@@ -21,7 +17,7 @@ export GTK_IM_MODULE=fcitx/xim
 export QT_IM_MODULE=fcitx
 ```
 
-sh/bash/zsh：ibus
+### sh/bash/zsh：ibus
 
 ```sh
 export LANG=zh_CN.UTF-8
@@ -36,9 +32,9 @@ export XIM_PROGRAM="ibus-daemon"
 export XIM_ARGS="--daemonize --xim"
 ```
 
-B 组
+## B 组
 
-csh：fcitx5
+### csh：fcitx5
 
 ```sh
 setenv LANG zh_CN.UTF-8
@@ -49,7 +45,7 @@ setenv GTK_IM_MODULE fcitx/xim
 setenv QT_IM_MODULE fcitx
 ```
 
-csh：ibus
+### csh：ibus
 
 ```sh
 setenv LANG zh_CN.UTF-8
@@ -63,11 +59,11 @@ setenv XIM_PROGRAM ibus-daemon
 setenv XIM_ARGS "--daemonize --xim"
 ```
 
-## 可生效配置文件
+## 配置文件路径
 
 根据自己使用的桌面管理器择一使用：
 
-1. sddm lightdm gdm 都可以在 `~/.xprofile` 中写入 A 组配置
+1. sddm lightdm gdm 可以在 `~/.xprofile` 中写入 A 组配置
 2. lightdm gdm 可以在 `~/.profile` 中写入 A 组配置
 3. sddm 可以在用户登录 shell 配置文件中写入配置
 
@@ -78,7 +74,7 @@ setenv XIM_ARGS "--daemonize --xim"
 
 ## 本地化相关的变量
 
-下面的变量用于控制环境本地化
+下面的变量用于控制环境本地化，这些变量大都是由 POSIX 规范定义的。
 
 `LC_*` 系列变量是 `Linux` 和 `Unix` 操作系统中用于本地化（即国际化和本地化）的环境变量。这些变量控制了文本字符编码、日期和时间格式、货币符号、语言等方面的设置。其中一些常见的变量包括：
 
@@ -95,7 +91,7 @@ setenv XIM_ARGS "--daemonize --xim"
 - `LC_MEASUREMENT`: 定义度量单位的格式。
 - `LC_IDENTIFICATION`: 定义文件特征的格式。
 
-特殊的：
+特别的：
 
 - `LC_ALL`: 通过设置该变量，可以同时覆盖所有其他 `LC_*` 变量的值。
 - `LANG`: 用于设置默认的语言和字符集。它通常用于在没有其他 `LC_*` 变量设置时提供区域设置信息。如果同时设置了 `LANG` 和 `LC_*` 变量，`LC_*` 变量将覆盖 `LANG` 变量中相应的设置。
@@ -103,7 +99,7 @@ setenv XIM_ARGS "--daemonize --xim"
 
 使用这些变量，用户可以轻松地调整操作系统的语言和本地化设置以适应不同的地域和语言环境。
 
-可以使用 `locale` 命令确定以上变量的当前值，如：
+- 可以使用 `locale` 命令确定以上变量的当前值，如：
 
 ```sh
 jk@freebsd:~ $ locale
@@ -117,13 +113,17 @@ LC_MESSAGES="C.UTF-8"
 LC_ALL=
 ```
 
-所以中文化其实也可以不同。
+- 所以中文化其实也可以不同。
 
 1. 单纯的界面中文化只要设置 `LC_MESSAGES` 为 `"zh_CN.UTF-8"`（在 sddm/xfce 下验证）。
 2. 较常见的将 `LANG`、`LC_ALL`、`LANGUAGE` 三个环境变量都设为 `"zh_CN.UTF-8"`。
 3. 纯英文环境，加上中文输入。
 
-为什么要将 `LANG`、`LC_ALL`、`LANGUAGE` 三个环境变量都设为 `"zh_CN.UTF-8"`，主要是开发人员在写程序的时候各自用了不同的变量，为了更大的适应性，就全进行设置
+---
+
+为什么要将 `LANG`、`LC_ALL`、`LANGUAGE` 三个环境变量都设为 `"zh_CN.UTF-8"`？主要是开发人员在写程序的时候各自用了不同的变量，为了更大的适应性，就全部进行设置。
+
+---
 
 第一种设置只影响界面、提示等，但对其他的格式输出等没有响影（参考 `LC_*` 系列变量概述）如（sh）。
 
@@ -148,21 +148,25 @@ jk@freebsd:~ $ date
 
 ## 时区设置
 
-每个用户可以设置自己的时区，在用户的 shell 配置文件中设置 `TZ` 变量即可
+每个用户可以设置自己的时区，在用户的 shell 配置文件中设置 `TZ` 变量即可。
+
+- sh、bash、zsh
 
 ```sh
-export TZ=CST-8  # sh、bash、zsh
+export TZ=CST-8 
 # 或
 export TZ=Asia/Shanghai
 ```
 
+- csh
+
 ```sh
-setenv TZ CST-8  # csh
+setenv TZ CST-8
 # 或
 setenv TZ "Asia/Shanghai"
 ```
 
-在 crontab 配置文件中，设置 `CRON_TZ` 变量即可
+- 在 crontab 配置文件中，设置 `CRON_TZ` 变量即可：
 
 ```sh
 CRON_TZ=CST-8
@@ -171,14 +175,7 @@ CRON_TZ=CST-8
 
 ## 安装输入法的 Shell 脚本
 
-用户可以通过脚本快速安装：
-
-```sh
-# fetch http://book.bsdcn.org/input.sh
-# sh input.sh
-```
-
-shell 脚本内容如下：
+用户可以通过脚本快速安装，shell 脚本内容如下。
 
 ```sh
 #/bin/sh
