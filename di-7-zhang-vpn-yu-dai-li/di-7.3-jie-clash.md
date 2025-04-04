@@ -1,17 +1,17 @@
-# 第 7.3 节 Clash
+# 第 7.3 节 mihomo（原 Clash）
 
-Clash 在 [ports](https://www.freshports.org/net/clash) 中就有提供。
+mihomo 在 [ports](https://www.freshports.org/net/mihomo) 中就有提供。
 
 使用软件包安装：
 
 ```sh
-# pkg install net/clash
+# pkg install net/mihomo
 ```
 
 或者
 
 ```
-# cd /usr/ports/net/clash/ 
+# cd /usr/ports/net/mihomo/ 
 # make install clean
 ```
 
