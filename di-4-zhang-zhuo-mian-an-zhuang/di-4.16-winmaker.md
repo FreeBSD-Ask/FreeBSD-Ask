@@ -1,4 +1,4 @@
-# 第 4.16 节 安装 Window Maker
+# 第 4.16 节 Window Maker
 
 ## 安装
 

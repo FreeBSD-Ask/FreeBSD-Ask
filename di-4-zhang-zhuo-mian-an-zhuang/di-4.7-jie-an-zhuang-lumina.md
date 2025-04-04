@@ -1,4 +1,4 @@
-# 第 4.7 节 安装 Lumina
+# 第 4.7 节 Lumina
 
 2025.1.8 测试在 VMware 中无法进入桌面，进入后闪退。参见 [Some problem Under FreeBSD 13.2 with Xorg and Lumina Desktop...How to solve?](https://forums.freebsd.org/threads/some-problem-under-freebsd-13-2-with-xorg-and-lumina-desktop-how-to-solve.88882/)
 但是在 VirtualBox 中显示正常。

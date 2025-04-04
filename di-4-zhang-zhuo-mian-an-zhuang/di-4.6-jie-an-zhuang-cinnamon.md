@@ -1,4 +1,4 @@
-# 第 4.6 节 安装 Cinnamon
+# 第 4.6 节 Cinnamon
 
 >**注意**
 >
