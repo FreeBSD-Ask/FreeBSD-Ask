@@ -84,7 +84,7 @@
 * [第 6.4 节 音频播放器](di-6-duo-mei-ti/di-6.4-jie-yin-pin-bo-fang-qi.md)
 * [第 6.5 节 视频播放器](di-6-duo-mei-ti/di-6.5-shi-pin-bo-fang.md)
 * [第 6.6 节 音频图形图像处理](di-6-duo-mei-ti/di-6.6-jian-ji.md)
-* [第 6.7 节 蓝牙](di-6-duo-mei-ti/di-14.4-jie-lan-ya.md)
+* [第 6.7 节 蓝牙](di-6-duo-mei-ti/di-6.7-jie-lan-ya.md)
 
 ## 第 7 章 代理服务器
 
