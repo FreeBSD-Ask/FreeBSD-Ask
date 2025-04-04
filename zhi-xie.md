@@ -22,7 +22,7 @@ Ubuntu 吧前吧主 Simple 曾建议修改项目的章节文件名与许可协�
 
 本项目的域名 `bsdcn.org` 由 FreeBSD 中文社区（CFC）及 ykla 赞助。
 
-目前《FreeBSD 从入门到跑路》项目的主要非技术维护者为 [Voosk](https://github.com/MilkGolium)，他也撰写了部分文章。
+目前《FreeBSD 从入门到跑路》项目的主要管理者为 [Voosk](https://github.com/MilkGolium)，他也撰写了部分文章。
 
 目前《FreeBSD 从入门到跑路》项目的主要技术维护者为  [ykla](https://github.com/ykla)。
 
