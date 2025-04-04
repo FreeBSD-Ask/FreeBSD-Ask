@@ -4,7 +4,6 @@
 
 ## 安装软件包
 
-- [ ] 新手任务：从以下软件包中，各选一款主题和图标来安装。
 
 >**注意**
 >
@@ -34,14 +33,6 @@
 - Yaru 图标：`# pkg install yaru-icon-theme`
 - Canta 图标：`# pkg install canta-icon-theme`
 
-## 终端模式安装
-
-*提示：新接触 Unix 的用户可略过本节*
-
-- [ ] 高阶任务：为 KDE 或 Gnome 安装一款仿 MacOS 系统样式的主题和图标。
-- [x] 提前任务 1 安装 bash：`# pkg install bash`
-- [x] 提前任务 2 安装 plank：`# pkg install plank`
-- [x] 提前任务 3 安装 git： `# pkg install git`
 
 ### KDE 主题美化
 
@@ -79,7 +70,7 @@
 
 [下载地址](https://github.com/vinceliuice/WhiteSur-kde/tree/master/wallpaper)
 
-### 课后练习
+### 思考题
 
 试着按照下面的步骤，在终端安装 [Papirus 图标](https://www.gnome-look.org/p/1166289/):
 
