@@ -1,4 +1,4 @@
-# 第 4.9 节 安装 bspwm
+# 第 4.9 节 bspwm
 
 bspwm，据说更符合 UNIX 哲学。
 

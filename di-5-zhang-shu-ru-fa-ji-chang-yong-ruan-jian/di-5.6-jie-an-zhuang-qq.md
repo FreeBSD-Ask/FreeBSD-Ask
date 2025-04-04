@@ -1,4 +1,4 @@
-# 第 5.6 节 FreeBSD 安装 QQ（Linux 版）
+# 第 5.6 节 QQ（Linux 版）
 
 
 ## Linux QQ 3.x（electron）【可选：基于 RockyLinux 兼容层（FreeBSD Port）】
