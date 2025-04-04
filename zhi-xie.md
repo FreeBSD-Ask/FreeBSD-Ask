@@ -1,6 +1,6 @@
 # 致谢
 
-本书初版架构基于《FreeBSD 技术内幕》（*[FreeBSD Unleashed](https://www.amazon.com/FreeBSD-Unleashed-2nd-Brian-Tiemann/dp/0672324563)*），ISBN 9787111102010，机械工业出版社，2002，作者是 Brian Tiemann、Michael Urban，真实译者不详（智慧东方工作室）。
+本书初版架构基于《FreeBSD 技术内幕》（*[FreeBSD Unleashed](https://www.amazon.com/FreeBSD-Unleashed-2nd-Brian-Tiemann/dp/0672324563)*），ISBN 9787111102010，机械工业出版社，2002，作者是 Brian Tiemann、Michael Urban，真实译者不详（智慧东方工作室）以及🎀🌸星不萌🌸🎀的博客文章（已佚）。
 
 ## 致歉
 
