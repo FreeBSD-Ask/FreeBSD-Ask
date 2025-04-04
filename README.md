@@ -93,7 +93,7 @@ FreeBSD 是真正自由（Liberty）的**操作系统**，在这波谲云诡的�
 
 [点此捐赠 FreeBSD 基金会](https://freebsdfoundation.org/donate)
 
-需要你有 VISA 信用卡：请使用捐赠页面的 `Amazon Pay` 或 `Google Pay`，经测试均可以顺利支付。
+需要你有 VISA 信用卡：请使用捐赠页面“Click & Pledge”下的 `Amazon Pay` 或 `Google Pay`，经测试均可以顺利支付。
 
 ## 授权许可
 
