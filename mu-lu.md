@@ -63,7 +63,7 @@
 * [第 4.19 节 主题美化](di-4-zhang-zhuo-mian-an-zhuang/di-4.19-jie-zhu-ti-yu-mei-hua.md)
 * [第 4.20 节 远程桌面](di-4-zhang-zhuo-mian-an-zhuang/di-4.20-jie-yuan-cheng-zhuo-mian-guan-li.md)
 
-## 第 5 章 输入法及中文环境常用软件
+## 第 5 章 中文环境配置
 
 * [第 5.1 节 输入法与环境变量](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.1-jie-shu-ru-fa-yu-huan-jing-bian-liang.md)
 * [第 5.2 节 Fcitx 输入法框架](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.2-jie-fcitx-shu-ru-fa-kuang-jia.md)
@@ -76,7 +76,7 @@
 * [第 5.9 节 压缩与解压](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.9-jie-ya-suo-yu-jie-ya.md)
 * [第 5.10 节 微信（Linux 版）](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/5.10-wechat.md)
 
-## 第 6 章 多媒体与外设
+## 第 6 章 多媒体 & 外设
 
 * [第 6.1 节 声卡](di-6-duo-mei-ti/di-6.1-jie-sheng-ka-yu-wang-ka-she-zhi.md)
 * [第 6.2 节 蓝牙](di-6-duo-mei-ti/di-6.2-jie-lan-ya.md)
@@ -94,7 +94,7 @@
 * [第 7.3 节 Clash](di-7-zhang-vpn-yu-dai-li/di-7.3-jie-clash.md)
 * [第 7.4 节 OpenVPN](di-7-zhang-vpn-yu-dai-li/di-7.4-jie-openvpn.md)
 
-## 第 8 章 账户与权限
+## 第 8 章 账户 & 权限
 
 * [第 8.1 节 sudo 与 doas](di-8-zhang-yong-hu-yu-quan-xian/di-8.1-jie-sudo.md)
 * [第 8.2 节 添加用户](di-8-zhang-yong-hu-yu-quan-xian/di-8.2-jie-tian-jia-yong-hu.md)
@@ -121,7 +121,7 @@
 * [第 11.5 节 MySQL 数据库](di-11-zhang-ji-suan-ji-gai-lun/11.5-shu-jv-ku.md)
 * [第 11.6 节 网络基础](di-11-zhang-ji-suan-ji-gai-lun/11.6-wang-luo-ji-chu.md)
 
-## 第 12 章 引导、恢复与 TTY 配置
+## 第 12 章 引导恢复 & TTY 配置
 
 * [第 12.1 节 单用户模式与密码重置](di-12-zhang-yin-dao-yu-hui-fu/di-12.1-jie-hui-fu-mo-shi-yu-mi-ma-zhong-zhi.md)
 * [第 12.2 节 配置 rEFInd（双系统用）](di-12-zhang-yin-dao-yu-hui-fu/12.2-refind.md)
@@ -198,7 +198,7 @@
 * [第 19.1 节 BSD 与哲学家 George Berkeley（乔治·贝克莱）](di-19-zhang-wen-xue-gu-shi/di-19.1-jie-freebsd-jian-shi.md)
 * [第 19.2 节 加州大学伯克利分校与“Fiat Lux”（要有光）](di-19-zhang-wen-xue-gu-shi/di-19.2.md)
 
-## 第 20 章 游戏与科学
+## 第 20 章 游戏 & 科学
 
 * [第 20.1 节 游戏](di-20-zhang-yu-le-yu-jiao-yu/di-20.1-jie-you-xi.md)
 * [第 20.5 节 科研与专业工具](di-20-zhang-yu-le-yu-jiao-yu/di-20.5-jie-ke-yan-yu-zhuan-ye-gong-ju.md)
@@ -220,7 +220,7 @@
 * [第 21.12 节 高级教程：Linux 兼容层与 Jail](di-21-zhang-linux-jian-rong-ceng/di-21.12-jie-gao-ji-jiao-cheng-linux-jian-rong-ceng-yu-jail.md)
 * [第 21.13 节 Linux 兼容层故障排除与未竟事宜](di-21-zhang-linux-jian-rong-ceng/di-21.13-jie-linux-jian-rong-ceng-gu-zhang-pai-chu-yu-pei-zhi.md)
 
-## 第 22 章 编程环境与软件开发
+## 第 22 章 编程环境 & 软件开发
 
 * [第 22.1 节 如何报告 Bug](di-22-zhang-bian-cheng-yu-kai-fa/di-22.1-jie-ru-he-bao-gao-bug.md)
 * [第 22.2 节 如何开发一个 Port](di-22-zhang-bian-cheng-yu-kai-fa/di-22.2-jie-ru-he-ti-jiao-yi-ge-ruan-jian-bao.md)
@@ -236,7 +236,7 @@
 * [第 22.12 节 code-server 和 clangd](di-22-zhang-bian-cheng-yu-kai-fa/di-22.12-jie-an-zhuang-code-server-he-clangd.md)
 * [第 22.13 节 Nodejs](di-22-zhang-bian-cheng-yu-kai-fa/di-22.13-jie-nodejs-xiang-guan.md)
 
-## 第 23 章 文件系统与磁盘管理
+## 第 23 章 文件系统 & 磁盘管理
 
 * [第 23.1 节 自动挂载文件系统](di-23-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-23.1-zi-dong-gua-zai.md)
 * [第 23.2 节 ZFS](di-23-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-23.2-jie-zfs.md)
