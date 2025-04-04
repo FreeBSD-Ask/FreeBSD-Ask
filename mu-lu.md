@@ -91,7 +91,7 @@
 
 * [第 7.1 节 HTTP 代理](di-7-zhang-vpn-yu-dai-li/di-7.1-jie-http-dai-li.md)
 * [第 7.2 节 V2ray](di-7-zhang-vpn-yu-dai-li/di-7.2-jie-v2ray.md)
-* [第 7.3 节 Clash](di-7-zhang-vpn-yu-dai-li/di-7.3-jie-clash.md)
+* [第 7.3 节 Mihomo（原 Clash）](di-7-zhang-vpn-yu-dai-li/di-7.3-jie-clash.md)
 * [第 7.4 节 OpenVPN](di-7-zhang-vpn-yu-dai-li/di-7.4-jie-openvpn.md)
 
 ## 第 8 章 账户 & 权限
