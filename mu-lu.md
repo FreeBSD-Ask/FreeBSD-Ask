@@ -59,12 +59,9 @@
 * [第 4.15 节 安装 LXDE](di-4-zhang-zhuo-mian-an-zhuang/di-4.15-lxde.md)
 * [第 4.16 节 安装 Window Maker](di-4-zhang-zhuo-mian-an-zhuang/di-4.16-winmaker.md)
 * [第 4.17 节 安装 Fluxbox](di-4-zhang-zhuo-mian-an-zhuang/di-4.17-fluxbox.md)
-* [第 4.18 节 打印机](di-4-zhang-zhuo-mian-an-zhuang/di-4.18-jie-da-yin-ji-de-an-zhuang.md)
-* [第 4.19 节 触摸板](di-4-zhang-zhuo-mian-an-zhuang/di-4.19-jie-chu-mo-ban-de-she-zhi.md)
-* [第 4.20 节 声卡](di-4-zhang-zhuo-mian-an-zhuang/di-4.20-jie-sheng-ka-yu-wang-ka-she-zhi.md)
-* [第 4.21 节 root 登录桌面](di-4-zhang-zhuo-mian-an-zhuang/di-4.21-jie-root-deng-lu-zhuo-mian.md)
-* [第 4.22 节 主题美化](di-4-zhang-zhuo-mian-an-zhuang/di-4.22-jie-zhu-ti-yu-mei-hua.md)
-* [第 4.23 节 远程桌面](di-4-zhang-zhuo-mian-an-zhuang/di-4.23-jie-yuan-cheng-zhuo-mian-guan-li.md)
+* [第 4.18 节 root 登录桌面](di-4-zhang-zhuo-mian-an-zhuang/di-4.18-jie-root-deng-lu-zhuo-mian.md)
+* [第 4.19 节 主题美化](di-4-zhang-zhuo-mian-an-zhuang/di-4.19-jie-zhu-ti-yu-mei-hua.md)
+* [第 4.20 节 远程桌面](di-4-zhang-zhuo-mian-an-zhuang/di-4.20-jie-yuan-cheng-zhuo-mian-guan-li.md)
 
 ## 第 5 章 输入法及中文环境常用软件
 
@@ -79,16 +76,15 @@
 * [第 5.9 节 压缩与解压](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.9-jie-ya-suo-yu-jie-ya.md)
 * [第 5.10 节 FreeBSD 安装微信（Linux 版）](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/5.10-wechat.md)
 
+## 第 6 章 多媒体与外设
 
-## 第 6 章 文件系统与磁盘管理
-
-* [第 6.1 节 自动挂载文件系统](di-6-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-6.1-zi-dong-gua-zai.md)
-* [第 6.2 节 ZFS](di-6-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-6.2-jie-zfs.md)
-* [第 6.3 节 磁盘扩容](di-6-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-6.3-jie-ci-pan-kuo-rong.md)
-* [第 6.4 节 NTFS & Fat32](di-6-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-6.4-jie-ntfs-de-gua-zai.md)
-* [第 6.5 节 Swap 交换分区的设置](di-6-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-6.5-jie-swap-jiao-huan-fen-qu-de-she-zhi.md)
-* [第 6.6 节 Linux 文件系统](di-6-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-6.6-jie-ext-234-deng-wen-jian-xi-tong.md)
-* [第 6.7 节 ZFS 磁盘加解密](di-6-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-6.7-jie-zfs-ci-pan-jia-jie-mi.md)
+* [第 6.1 节 打印机](di-6-duo-mei-ti/di-6.1-jie-da-yin-ji-de-an-zhuang.md)
+* [第 6.2 节 触摸板](di-6-duo-mei-ti/di-6.2-jie-chu-mo-ban-de-she-zhi.md)
+* [第 6.3 节 声卡](di-6-duo-mei-ti/di-6.3-jie-sheng-ka-yu-wang-ka-she-zhi.md)
+* [第 6.4 节 音频播放器](di-6-duo-mei-ti/di-6.4-jie-yin-pin-bo-fang-qi.md)
+* [第 6.5 节 视频播放器](di-6-duo-mei-ti/di-6.5-shi-pin-bo-fang.md)
+* [第 6.6 节 音频图形图像处理](di-6-duo-mei-ti/di-6.6-jian-ji.md)
+* [第 6.7 节 蓝牙](di-6-duo-mei-ti/di-14.4-jie-lan-ya.md)
 
 ## 第 7 章 代理服务器
 
@@ -132,7 +128,6 @@
 * [第 12.4 节 引导界面与控制台界面](di-12-zhang-yin-dao-yu-hui-fu/di-12.4-jie-yin-dao-jie-mian.md)
 * [第 12.5 节 Grub & UEFI 与 efibootmgr](di-12-zhang-yin-dao-yu-hui-fu/di-12.5-jie-grub-ji-qi-ta-yin-dao.md)
 
-
 ## 第 13 章 FreeBSD 系统管理
 
 * [第 13.1 节 FreeBSD src 源码概览](di-13-zhang-freebsd-te-se/13.1.md)
@@ -147,8 +142,7 @@
 * [第 14.1 节 TCP BBR](di-14-zhang-wang-luo-guan-li/di-14.1-jie-tcp-bbr.md)
 * [第 14.2 节 WiFi](di-14-zhang-wang-luo-guan-li/di-14.2-jie-wifi.md)
 * [第 14.3 节 USB 网络共享（USB tethering）](di-14-zhang-wang-luo-guan-li/di-14.3-jie-usb-rndis-usb-wang-luo-gong-xiang.md)
-* [第 14.4 节 蓝牙](di-14-zhang-wang-luo-guan-li/di-14.4-jie-lan-ya.md)
-* [第 14.5 节 USB 网卡 & 以太网卡](di-14-zhang-wang-luo-guan-li/di-14.5-yi-tai-wang-ka.md)
+* [第 14.4 节 USB 网卡 & 以太网卡](di-14-zhang-wang-luo-guan-li/di-14.4-yi-tai-wang-ka.md)
 
 ## 第 15 章 FreeBSD 防火墙
 
@@ -162,14 +156,13 @@
 
 * [第 16.1 节 FTP 服务器](di-16-zhang-fu-wu-qi/di-16.1-jie-ftp-fu-wu-qi.md)
 * [第 16.2 节 MinIO 对象存储服务](di-16-zhang-fu-wu-qi/di-16.2-jie-minio-dui-xiang-cun-chu-fu-wu.md)
-* [第 16.3 节 Nodejs 相关](di-16-zhang-fu-wu-qi/di-16.3-jie-nodejs-xiang-guan.md)
+* [第 16.3 节 Gitlab-EE](di-16-zhang-fu-wu-qi/16.3-gitlab-ee.md)
 * [第 16.4 节 时间服务](di-16-zhang-fu-wu-qi/di-16.4-jie-shi-jian-fu-wu.md)
 * [第 16.5 节 Wildfly](di-16-zhang-fu-wu-qi/di-16.5-jie-wildfly.md)
 * [第 16.6 节 rsync 同步服务](di-16-zhang-fu-wu-qi/di-16.6-jie-rsync-tong-bu-fu-wu.md)
 * [第 16.7 节 Samba 服务器](di-16-zhang-fu-wu-qi/di-16.7-jie-samba-fu-wu-qi.md)
 * [第 16.8 节 NFS 服务器](di-16-zhang-fu-wu-qi/di-16.8-jie-nfs-fu-wu-qi.md)
 * [第 16.9 节 Webmin](di-16-zhang-fu-wu-qi/di-16.9-jie-webmin.md)
-* [第 16.10 节 Gitlab-EE](di-16-zhang-fu-wu-qi/16.10.md)
 
 ## 第 17 章 网络服务器
 
@@ -204,12 +197,9 @@
 * [第 19.1 节 BSD 与哲学家 George Berkeley（乔治·贝克莱）](di-19-zhang-wen-xue-gu-shi/di-19.1-jie-freebsd-jian-shi.md)
 * [第 19.2 节 加州大学伯克利分校与“Fiat Lux”（要有光）](di-19-zhang-wen-xue-gu-shi/di-19.2.md)
 
-## 第 20 章 多媒体、游戏与科学
+## 第 20 章 游戏与科学
 
 * [第 20.1 节 游戏](di-20-zhang-yu-le-yu-jiao-yu/di-20.1-jie-you-xi.md)
-* [第 20.2 节 音频播放器](di-20-zhang-yu-le-yu-jiao-yu/di-20.2-jie-yin-pin-bo-fang-qi.md)
-* [第 20.3 节 视频播放器](di-20-zhang-yu-le-yu-jiao-yu/di-20.3-shi-pin-bo-fang.md)
-* [第 20.4 节 音频图形图像处理](di-20-zhang-yu-le-yu-jiao-yu/di-20.4-jian-ji.md)
 * [第 20.5 节 科研与专业工具](di-20-zhang-yu-le-yu-jiao-yu/di-20.5-jie-ke-yan-yu-zhuan-ye-gong-ju.md)
 * [第 20.6 节 我的世界（Minecraft）](di-20-zhang-yu-le-yu-jiao-yu/20.6-minecraft.md)
 
@@ -243,13 +233,17 @@
 * [第 22.10 节 通过 IDA 7 调试 FreeBSD](di-22-zhang-bian-cheng-yu-kai-fa/di-22.10-jie-tong-guo-ida-7-tiao-shi-freebsd.md)
 * [第 22.11 节 如何订阅 FreeBSD 的邮件列表](di-22-zhang-bian-cheng-yu-kai-fa/di-22.11-jie-ru-he-ding-yue-freebsd-de-you-jian-lie-biao.md)
 * [第 22.12 节 安装 code-server 和 clangd](di-22-zhang-bian-cheng-yu-kai-fa/di-22.12-jie-an-zhuang-code-server-he-clangd.md)
+* [第 22.13 节 Nodejs](di-22-zhang-bian-cheng-yu-kai-fa/di-22.13-jie-nodejs-xiang-guan.md)
 
-## 第 23 章 NetBSD
+## 第 23 章 文件系统与磁盘管理
 
-* [第 23.1 节 NetBSD 概述](di-23-zhang-netbsd/di-23.1-jie-gai-shu.md)
-* [第 23.2 节 NetBSD 安装图解](di-23-zhang-netbsd/di-23.2-jie-an-zhuang-yu-pei-zhi.md)
-* [第 23.3 节 NetBSD 换源与包管理器](di-23-zhang-netbsd/di-23.3-jie-huan-yuan-yu-bao-guan-li-qi.md)
-* [第 23.4 节 桌面与其他软件](di-23-zhang-netbsd/di-23.4-jie-zhuo-mian-yu-qi-ta-ruan-jian.md)
+* [第 23.1 节 自动挂载文件系统](di-23-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-23.1-zi-dong-gua-zai.md)
+* [第 23.2 节 ZFS](di-23-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-23.2-jie-zfs.md)
+* [第 23.3 节 磁盘扩容](di-23-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-23.3-jie-ci-pan-kuo-rong.md)
+* [第 23.4 节 NTFS & Fat32](di-23-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-23.4-jie-ntfs-de-gua-zai.md)
+* [第 23.5 节 Swap 交换分区的设置](di-23-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-23.5-jie-swap-jiao-huan-fen-qu-de-she-zhi.md)
+* [第 23.6 节 Linux 文件系统](di-23-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-23.6-jie-ext-234-deng-wen-jian-xi-tong.md)
+* [第 23.7 节 ZFS 磁盘加解密](di-23-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-23.7-jie-zfs-ci-pan-jia-jie-mi.md)
 
 ## 第 24 章 DragonFlyBSD
 
@@ -269,3 +263,9 @@
 * [第 26.4 节 OpenBSD 包管理器](di-26-zhang-openbsd/di-26.4-jie-bao-guan-li-qi.md)
 * [第 26.5 节 桌面与其他软件](di-26-zhang-openbsd/di-26.5-jie-zhuo-mian-yu-qi-ta-ruan-jian.md)
 
+## 第 27 章 NetBSD
+
+* [第 27.1 节 NetBSD 概述](di-27-zhang-netbsd/di-27.1-jie-gai-shu.md)
+* [第 27.2 节 NetBSD 安装图解](di-27-zhang-netbsd/di-27.2-jie-an-zhuang-yu-pei-zhi.md)
+* [第 27.3 节 NetBSD 换源与包管理器](di-27-zhang-netbsd/di-27.3-jie-huan-yuan-yu-bao-guan-li-qi.md)
+* [第 27.4 节 桌面与其他软件](di-27-zhang-netbsd/di-27.4-jie-zhuo-mian-yu-qi-ta-ruan-jian.md)
