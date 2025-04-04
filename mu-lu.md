@@ -63,7 +63,7 @@
 * [第 4.19 节 触摸板](di-4-zhang-zhuo-mian-an-zhuang/di-4.19-jie-chu-mo-ban-de-she-zhi.md)
 * [第 4.20 节 声卡](di-4-zhang-zhuo-mian-an-zhuang/di-4.20-jie-sheng-ka-yu-wang-ka-she-zhi.md)
 * [第 4.21 节 root 登录桌面](di-4-zhang-zhuo-mian-an-zhuang/di-4.21-jie-root-deng-lu-zhuo-mian.md)
-* [第 4.22 节 主题与美化](di-4-zhang-zhuo-mian-an-zhuang/di-4.22-jie-zhu-ti-yu-mei-hua.md)
+* [第 4.22 节 主题美化](di-4-zhang-zhuo-mian-an-zhuang/di-4.22-jie-zhu-ti-yu-mei-hua.md)
 * [第 4.23 节 远程桌面](di-4-zhang-zhuo-mian-an-zhuang/di-4.23-jie-yuan-cheng-zhuo-mian-guan-li.md)
 
 ## 第 5 章 输入法及中文环境常用软件
