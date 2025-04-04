@@ -6,7 +6,9 @@
 
 - [ ] 新手任务：从以下软件包中，各选一款主题和图标来安装。
 
-**注：本节仅涉及了 `GTK` 库的桌面主题，囊括了 `Gnome`、`XFCE`、`MATE`、`Cinnamon` 和 `LXDE` 等桌面环境。**
+>**注意**
+>
+>本节仅涉及了 `GTK` 库的桌面主题，囊括了 `Gnome`、`XFCE`、`MATE`、`Cinnamon` 和 `LXDE` 等桌面环境。
 
 以下仅收录了部分图标和主题，想要获取更多资源，可访问 [FreshPorts](https://www.freshports.org)。
 
@@ -125,7 +127,9 @@ hours-between-reminders     8   # 提醒间隔（小时）
 
 >**注意**
 >
->截图为手动执行示例，实际上程序可以在后台自动运行，无需手动运行验证。若无法再现，可以尝试将 `freebsd-update-notify.conf` 中两个值都改为 `0`，再手动以 `root` 权限执行 `usr/local/libexec/freebsd-update-notify`，日志位于 `/var/log/freebsd-update-cron`、`/var/log/freebsd-update-notify`。若要反馈故障，请使用英文提交 [issue](https://github.com/outpaddling/freebsd-update-notify/issues)。
+>截图为手动执行示例，实际上程序可以在后台自动运行，无需手动运行验证。若无法再现，可以尝试将 `freebsd-update-notify.conf` 中两个值都改为 `0`，再手动以 `root` 权限执行 `usr/local/libexec/freebsd-update-notify`。
+
+日志位于 `/var/log/freebsd-update-cron`、`/var/log/freebsd-update-notify`。若要反馈故障，请使用英文提交 [issue](https://github.com/outpaddling/freebsd-update-notify/issues)。
 
 
 ![freebsd-update-notify on FreeBSD](../.gitbook/assets/notify1.png)
