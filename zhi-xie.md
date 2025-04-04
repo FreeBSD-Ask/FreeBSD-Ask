@@ -14,11 +14,13 @@
 
 《FreeBSD 从入门到跑路》项目早期发起人为 [clean-master 清理大师](https://github.com/clean-master)。他自费创建了域名 `freebsdcn.org`（已不再使用）以及目前仍在使用的 <https://bsdcn.org> 主页。他鼓励 ykla 创建一个项目来维护相关的 FreeBSD 教程。
 
-[Roberta Wheeler](https://github.com/rowheel) 自费部署维护过《FreeBSD 从入门到跑路》项目使用的服务器（目前已切换至免费的 GitBook），并撰写了部分文章。
+[Roberta Wheeler](https://github.com/rowheel) 自费部署维护过《FreeBSD 从入门到跑路》项目使用的服务器（目前已切换至免费的 GitBook 及 GitHub Pages），并撰写了部分文章。
 
 [safreya](https://github.com/safreya) 曾撰写过 2 款用于导出本项目 PDF 的开源工具（目前仍在使用），并撰写了大量文章。
 
 Ubuntu 吧前吧主 Simple 曾建议修改项目的章节文件名与许可协议，这提高了本项目的可维护性。
+
+本项目的域名 `bsdcn.org` 由 FreeBSD 中文社区（CFC）及 ykla 赞助。
 
 目前《FreeBSD 从入门到跑路》项目的主要非技术维护者为 [Voosk](https://github.com/MilkGolium)，他也撰写了部分文章。
 
@@ -104,5 +106,3 @@ Ubuntu 吧前吧主 Simple 曾建议修改项目的章节文件名与许可协�
 本项目还受到了 [GitBook 开源计划](https://www.gitbook.com/solutions/open-source)的赞助。本项目的网站 `book.bsdcn.org`受其驱动。
 
 本项目的镜像网站 `docs.bsdcn.org` 由 [VitePress](https://vitejs.cn/vitepress/) 驱动。
-
-本项目的域名 `bsdcn.org` 由 FreeBSD 中文社区（CFC）及 ykla 赞助。
