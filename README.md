@@ -81,8 +81,6 @@ FreeBSD 是真正自由（Liberty）的**操作系统**，在这波谲云诡的�
 
 可使用由 [safreya](https://github.com/safreya) 编写的脚本：<https://github.com/FreeBSD-Ask/gitbook-pdf-export> 来导出本书的 PDF 文档。
 
-该脚本使用 Python3 编写，具体使用方法见该项目的 README。
-
 此外，还会每天通过 GitHub Action 导出 PDF 于 [releases](https://github.com/FreeBSD-Ask/FreeBSD-Ask/releases)（也许需要代理）。
 
 ## 捐赠
