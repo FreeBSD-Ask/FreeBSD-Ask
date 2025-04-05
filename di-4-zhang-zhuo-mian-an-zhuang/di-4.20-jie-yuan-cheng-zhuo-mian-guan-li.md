@@ -100,8 +100,8 @@ $ x11vnc -display :0 -rfbauth ~/.vnc/passwd -auth /var/lib/gdm/:0.Xauth #或 /ru
 
 
 ```sh
-root@ykla:~ # mkdir -p ~/.vnc/
-root@ykla:~ # ee ~/.vnc/xstartup
+$ mkdir -p ~/.vnc/
+$ ee ~/.vnc/xstartup
 ```
 
 内容如下：
@@ -113,25 +113,55 @@ unset DBUS_SESSION_BUS_ADDRESS
 [ -x /etc/X11/xinit/xinitrc ] && exec /etc/X11/xinit/xinitrc
 [ -f /etc/X11/xinit/xinitrc ] && exec sh /etc/X11/xinit/xinitrc
 xsetroot -solid grey
-exec command &  #此处不能照抄！
+#exec startplasma-x11 & 
+#exec mate-session &
+#exec xfce4-session &
+#exec gnome-session & 
 ```
 
-注意：上述 `command` 须进行替换，**请注意保留 `&`**，在不同桌面下需要替换，Gnome 用 `gnome-session`，KDE 用 `startplasma-x11`，MATE 用 `mate-session`，Xfce 用 `xfce4-session`。
+你用哪个桌面就把那个桌面前面的注释 `#` 删掉即可。
 
-保存后执行命令
+>**警告**
+>
+>请注意保留 `&`**。
+
+保存后执行命令授予权限。
 
 ```sh
-# chmod 755 ~/.vnc/xstartup
+$ chmod 755 ~/.vnc/xstartup
 ```
 
-- 接下来在终端执行命令 `vncserver` 或 `vncserver :1`。
+- 接下来在终端执行命令
+-
+```sh
+$ vncserver
+```
 
-其中“`:1`”意味着 `DISPLAY=:1`，即指定桌面显示的通信端口为 `1`，对应 VNC 服务的端口为 `5901`。桌面显示通信端口从 0 开始，但该端口已被当前桌面占用（除非是镜像 VNC），因此 VNC 服务默认端口虽为 5900，但实际执行须却是从 5901 端口开始的。
->
+或 
+
+```sh
+$ vncserver :1
+
+You will require a password to access your desktops.
+
+Password: # 注意，密码最少六位数！
+Verify:
+Would you like to enter a view-only password (y/n)? n
+A view-only password is not used
+
+New 'ykla:1 (ykla)' desktop is ykla:1
+
+Creating default config /home/ykla/.vnc/config
+Starting applications specified in /home/ykla/.vnc/xstartup
+Log file is /home/ykla/.vnc/ykla:1.log
+```
+
+其中“`:1`”意味着 `DISPLAY=:1`，即指定桌面显示的通信端口为 `1`，对应 VNC 服务的端口为 `5901`。桌面显示通信端口从 0 开始，但该端口已被当前桌面占用（除非是镜像 VNC），因此 VNC 服务默认端口虽为 5900，但实际执行须却是从 `5901` 端口开始的。故，你要链接的话，必须指定端口为 `5901`。
+
 >测试：
 >
 >```sh
->root@ykla:~ # vncserver :0
+>$ vncserver :0
 >
 >
 >Warning: ykla:0 is taken because of /tmp/.X11-unix/X0
@@ -141,9 +171,16 @@ exec command &  #此处不能照抄！
 
 如果启动服务时未通信端口，则系统根据使用情况自动指定。
 
+可以查看进程：
 
+```
+$ ps
+ PID TT  STAT    TIME COMMAND
+……省略无用内容……
+4769  0  S    0:02.72 /usr/local/bin/Xvnc :1 -auth /home/ykla/.Xauthority -desktop ykla:1 (ykla)
+```
 
-关闭服务请用命令 `# vncserver -kill :1`，这里必须指定通信端口。
+关闭服务请用命令 `vncserver -kill :1`，这里必须指定通信端口。
 
 - 如果启用了防火墙，以 ipfw 为例，在终端输入命令：
 
