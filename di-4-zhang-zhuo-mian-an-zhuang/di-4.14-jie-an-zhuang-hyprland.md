@@ -51,7 +51,7 @@ Hyprland 是 Wayland 的一个合成器，支持窗口透明、模糊、圆角�
 > export XDG_RUNTIME_DIR=/var/run/user/`id -u`
 > ```
 >
-> 启用 dbus：`sysrc=dbus_enable="YES"`
+> 启用 dbus：`service dbus enable`
 >
 > 重启： `reboot`
 >
@@ -83,7 +83,7 @@ exec-once=swaybg -i "$HOME/Pictures/Wallpapers/2769378.jpg"
 
 5.任务栏：`exec-once=waybar`
 
-hyprland.conf 示例：
+`hyprland.conf` 示例：
 
 ```sh
 
