@@ -83,7 +83,7 @@
 |         GCC         |     LLVM + Clang      |            /             | 编译器、编译链工具 |                                                                              非要用也可以安装 `devel/gcc`                                                                               |
 |         `vim`         |          `vim`          |     `editors/vim/`    |     文本编辑器     |                                                                  FreeBSD 默认的 `vi` 并不被软连接到 `vim`，而是真正的 `nvi`                                                                   |
 |        `wget`         |         `wget`          |     `ftp/wget`    |       下载器       |                                                                               系统默认的下载工具是 `fetch`                                                                                |
-|        bash         |         bash          |     `shells/bash`   |       shell        |                                              系统默认的 `root shell` 是 `csh`, 修改会导致配置输入法环境变量时遇到困难以及可能会无法进入恢复模式                                              |
+|        bash         |         bash          |     `shells/bash`   |       shell        |                                              系统默认的 shell 是 `sh`。你可以自己改。                                             |
 |   NetworkManager    |      networkmgr       |  `net-mgmt/networkmgr`  |    网络连接工具    |                                                                        NetworkManager 依赖 `systemd` 无法直接移植                                                                        |
 |`lsmod`|	`kldstat`|/|列出已加载的内核模块|/|
 |`strace`|	`truss`|/|跟踪系统调用|/|
