@@ -9,13 +9,12 @@ Hyprland 是 Wayland 的一个合成器，支持窗口透明、模糊、圆角�
 - 使用 pkg 安装：
 
 ```sh
-# pkg ins wayland hyprland waybar wofi qt6-base qt5-wayland qt6-wayland xdg-desktop-portal-hyprland hyprpicker swaybg mako dbus nerd-fonts slurp grim swaylock
+# pkg ins hyprland waybar wofi qt6-base qt5-wayland qt6-wayland xdg-desktop-portal-hyprland hyprpicker swaybg mako nerd-fonts slurp grim swaylock
 ```
 
 - 或者使用 Ports 安装：
 
 ```sh
-# cd /usr/ports/graphics/wayland/ && make install clean
 # cd /usr/ports/x11-wm/hyprland/ && make install clean
 # cd /usr/ports/x11/waybar/ && make install clean
 # cd /usr/ports/x11/wofi/ && make install clean
@@ -26,13 +25,13 @@ Hyprland 是 Wayland 的一个合成器，支持窗口透明、模糊、圆角�
 # cd /usr/ports/x11/hyprpicker/ && make install clean
 # cd /usr/ports/x11/swaybg/ && make install clean
 # cd /usr/ports/x11/mako/ && make install clean
-# cd /usr/ports/devel/dbus/ && make install clean
 # cd /usr/ports/x11-fonts/nerd-fonts/ && make install clean
 # cd /usr/ports/x11/slurp/ && make install clean
 # cd /usr/ports/x11/grim/ && make install clean
 # cd /usr/ports/x11/swaylock/ && make install clean
 ```
 
+作为依赖会自动安装 dbus 及  wayland。
 
 * waybar 为 hyprland 的菜单栏。
 * wofi 是程序启动器（rofi 也很常用，可以了解一下）
