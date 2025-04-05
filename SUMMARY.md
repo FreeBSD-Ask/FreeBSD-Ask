@@ -62,6 +62,7 @@
 * [第 4.18 节 root 登录桌面](di-4-zhang-zhuo-mian-an-zhuang/di-4.18-jie-root-deng-lu-zhuo-mian.md)
 * [第 4.19 节 主题美化](di-4-zhang-zhuo-mian-an-zhuang/di-4.19-jie-zhu-ti-yu-mei-hua.md)
 * [第 4.20 节 远程桌面](di-4-zhang-zhuo-mian-an-zhuang/di-4.20-jie-yuan-cheng-zhuo-mian-guan-li.md)
+* [第 4.21 节 FreeBSD 桌面发行版](di-4-zhang-zhuo-mian-an-zhuang/4.21-others-bsd.md)
 
 ## 第 5 章 中文环境配置
 
