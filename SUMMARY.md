@@ -148,7 +148,7 @@
 ## 第 15 章 FreeBSD 防火墙
 
 * [第 15.1 节 网络参数配置命令](di-15-zhang-freebsd-fang-huo-qiang/di-15.1-jie-wang-luo-can-shu-pei-zhi-ming-ling.md)
-* [第 15.2 节 PF](di-15-zhang-freebsd-fang-huo-qiang/di-15.2-jie-pf.md)
+* [第 15.2 节 Packet Filter（PF）](di-15-zhang-freebsd-fang-huo-qiang/di-15.2-jie-pf.md)
 * [第 15.3 节 IPFilter（IPF）](di-15-zhang-freebsd-fang-huo-qiang/di-15.3-jie-ipfilter-ipf.md)
 * [第 15.4 节 ipfirewall（IPFW）](di-15-zhang-freebsd-fang-huo-qiang/di-15.4-jie-ipfw.md)
 * [第 15.5 节 Fail2Ban（基于 IPFW、PF、IPF）](di-15-zhang-freebsd-fang-huo-qiang/di-15.5-fail2ban.md)
