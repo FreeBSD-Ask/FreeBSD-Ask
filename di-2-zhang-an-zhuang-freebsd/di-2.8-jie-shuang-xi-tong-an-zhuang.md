@@ -20,6 +20,10 @@
 
 此处选择 `Manual`
 
+>**技巧**
+>
+>其实这里调用的是软件 `sade`（sysadmins disk editor，系统管理员磁盘编辑器），`bsdconfig` 亦同。
+
 ![](../.gitbook/assets/shuangxitong2.png)
 
 这里可以看到硬盘分区。仅有一块硬盘，有 300M 的 EFI 系统分区，16M 的 MSR 分区，64G 的 Windows 系统分区。未显示空闲空间。直接选择 `Create`
