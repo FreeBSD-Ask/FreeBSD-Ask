@@ -12,13 +12,7 @@ jobs:
     steps:
       # ================= 字体安装部分 =================
       - name: Checkout 字体仓库
-        uses: actions/checkout@v4
-        with:
-          repository: ykla/ttf-mswin11-zh-deb
-          path: fonts-repo
-      - name: 安装字体依赖
         run: |
-          cd fonts-repo
           sudo apt-get update
           sudo apt-get install -y fonts-noto
           
