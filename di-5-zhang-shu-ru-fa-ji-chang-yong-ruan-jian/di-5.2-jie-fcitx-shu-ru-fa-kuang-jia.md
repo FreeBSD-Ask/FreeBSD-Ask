@@ -1,5 +1,7 @@
 # 第 5.2 节 Fcitx 输入法框架
 
+输入法框架和输入法本身是两码事，切不可混为一谈，输入法依赖输入法框架。即使在 Windows 上亦如此：目前其使用 [TSF 管理器](https://learn.microsoft.com/zh-cn/windows/win32/tsf/text-services-framework)。
+
 fcitx 即“A flexible input method framework（一款灵活的输入法框架）”小企鹅输入法。关于其英文命名来源参见[历史](https://fcitx-im.org/wiki/History/zh-cn)。
 
 >**技巧**
@@ -9,7 +11,7 @@ fcitx 即“A flexible input method framework（一款灵活的输入法框架�
 
 > **注意**
 >
-> 在 FreeBSD-CURRENT 中可能会出现许多不可预料的怪异 bug：fcitx5 诊断信息英文乱码，输入法显示出奇怪的汉字，fcitx5-qt5 环境不能正常加载……如果条件允许，应该在 FreeBSD-RELEASE 中参考使用本文。
+> 在 FreeBSD-CURRENT 中可能会出现许多不可预料的怪异 bug：fcitx5 诊断信息英文乱码，输入法显示出奇怪的汉字，fcitx5-qt5 环境不能正常加载……
 
 ## Fcitx 4.X
 
@@ -20,7 +22,7 @@ fcitx 即“A flexible input method framework（一款灵活的输入法框架�
 安装：
 
 
-```
+```sh
 # pkg install zh-fcitx zh-fcitx-configtool fcitx-qt5 fcitx-m17n zh-fcitx-libpinyin
 ```
 
