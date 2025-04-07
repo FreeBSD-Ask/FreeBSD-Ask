@@ -6,12 +6,14 @@
 
 - 2025.4.7
   - 全译现有所有安装后说明
+- 2025.4.6
+  - “第 17.8 节 PostgreSQL 与 pgAdmin4”新增“深入 PostgreSQL 服务管理”
+  - “第 4.21 节 FreeBSD 桌面发行版”补图
 - 2025.4.5
   - 初步重写第 15.4 节 ipfirewall（IPFW）
   - 格式化第 15.2 节 PF
   - 格式化第 15.3 节 IPFilter（IPF）
   - 新增“第 4.21 节 FreeBSD 桌面发行版”
-  - “第 17.8 节 PostgreSQL 与 pgAdmin4”新增“深入 PostgreSQL 服务管理”
 - 2025.4.4
   - 从各个章节拆分出“第 6 章 多媒体与外设”
   - 格式化“第 5.1 节 输入法与环境变量”
