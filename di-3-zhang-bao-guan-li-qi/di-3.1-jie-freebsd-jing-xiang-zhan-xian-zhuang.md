@@ -101,11 +101,4 @@ FreeBSD 官方联系方式：
 
 [mirror-admin@FreeBSD.org](mailto:mirror-admin@FreeBSD.org)
 
-[freebsd-hubs@freebsd.org](mailto:freebsd-hubs@freebsd.org)，这个邮件列表似乎已经死亡，没有任何人回复和收发邮件
-
-> 附
->
-> [FreeBSD 个人主页](https://people.freebsd.org/homepage.html)
->
-> [FreeBSD committer 名单](https://github.com/freebsd/freebsd-src/blob/main/usr.bin/calendar/calendars/calendar.freebsd)
-
+[freebsd-hubs@freebsd.org](mailto:freebsd-hubs@freebsd.org)，这个邮件列表似乎已经死亡，没有任何人回复和收发邮件。
