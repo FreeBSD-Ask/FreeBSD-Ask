@@ -124,36 +124,47 @@ root@ykla:/home/ykla # pkg info -D virtualbox-ose-additions
 virtualbox-ose-additions-6.1.50.1401000:
 On install:
 VirtualBox Guest Additions are installed.
+# VirtualBox 客户端增强功能已安装。
 
 To enable and start the required services:
 
 # sysrc vboxguest_enable="YES"
 # sysrc vboxservice_enable="YES"
+# 启用所需服务，使用 sysrc 添加开机启动项。
 
 To start the services, restart the system.
+# 要启动服务，请重启系统。
 
 In some situations, a panic will occur when the kernel module loads.
 Having no more than one virtual CPU might mitigate the issue.
+# 某些情况下，加载内核模块时可能发生 panic。限制为单核虚拟 CPU 有可能缓解该问题。
 
 For features such as window scaling and clipboard sharing, membership of
 the wheel group is required. With username "jerry" as an example:
 
 # pw groupmod wheel -m jerry
+# 要启用窗口缩放、剪贴板共享等功能，用户需加入 wheel 组。
+# 示例命令将用户 jerry 添加到 wheel 组。
 
 The settings dialogue for FreeBSD guests encourages use of the VMSVGA
 graphics controller. Whilst this might suit installations of FreeBSD
 without a desktop environment (a common use case), it is not appropriate
 where Guest Additions are installed.
+# VirtualBox 会建议 FreeBSD 使用 VMSVGA 显卡控制器。
+# 这对不含桌面的 FreeBSD 系统较为合适，但在已安装 Guest Additions 的环境下并不推荐。
 
 Where Guest Additions are installed:
 
 1. prefer VBoxSVGA
+# 如果已安装 Guest Additions，应优先选择 VBoxSVGA 作为显卡控制器。
 
 2. do not enable 3D acceleration (doing so will invisibly
    lose the preference for VBoxSVGA)
+# 不要启用 3D 加速，否则 VBoxSVGA 的设置会被悄悄忽略。
 
 You may ignore the yellow alert that encourages use of VMSVGA.
 
+# 可以忽略提示使用 VMSVGA 的黄色警告信息。
 ```
 
 xorg 可以自动识别驱动，**不需要** 手动配置 `/usr/local/etc/X11/xorg.conf`（经过测试手动配置反而更卡，点一下要用 5 秒钟……）。

@@ -64,7 +64,9 @@ xdg-user-dirs 可自动管理家目录子目录（可选安装）
 
 ## 基于 Wayland
 
-在前文的基础上，把 `/usr/local/share/xsessions/plasmax11.desktop` 中的 `/usr/local/bin/startplasma-x11` 都改成 `/usr/local/bin/startplasma-wayland`。重启即可。
+- 在前文的基础上，把 `/usr/local/share/xsessions/plasmax11.desktop` 中的 `/usr/local/bin/startplasma-x11` 都改成 `/usr/local/bin/startplasma-wayland`。重启即可。
+
+- 或者在 SDDM 左下角选择 Wayland，物理机默认应该就是。
 
 ![KDE 6 wayland FreeBSD](../.gitbook/assets/kde6-3.png)
 
@@ -101,24 +103,31 @@ On install:
 To enable this theme edit:
 
  /usr/local/etc/sddm.conf
+# 若要启用此主题，请编辑 /usr/local/etc/sddm.conf 文件。
 
  This theme use the x11-fonts/montserrat font by default. However, it
  can be changed to any desired font editing:
 
  /usr/local/share/sddm/themes/sddm-freebsd-black-theme/theme.conf
+# 此主题默认使用 montserrat 字体（需安装 x11-fonts/montserrat），
+# 你可以通过编辑 theme.conf 文件更改为任意你想要的字体。
 
 Always:
 ===>   NOTICE:
+# 注意事项：
 
 The sddm-freebsd-black-theme port currently does not have a maintainer. As a result, it is
 more likely to have unresolved issues, not be up-to-date, or even be removed in
 the future. To volunteer to maintain this port, please create an issue at:
 
 https://bugs.freebsd.org/bugzilla
+# 此 port 目前没有维护者，因此可能存在未解决的问题、不够及时的更新，甚至未来可能被移除。
+# 若你愿意接手维护，请到上述链接创建一个问题（issue）。
 
 More information about port maintainership is available at:
 
 https://docs.freebsd.org/en/articles/contributing/#ports-contributing
+# 有关 port 维护的更多信息，请参考 FreeBSD 官方文档中关于贡献 port 的章节。
 ```
 
 编辑 `/usr/local/etc/sddm.conf`：
@@ -180,7 +189,6 @@ Current=sddm-freebsd-black-theme
 ### sddm 登录闪退
 
 
-
 如果你使用 VMware 虚拟机时，压根看不见 sddm 最下边的选项，请按照配置虚拟机章节的教程配置屏幕自动缩放。
 
 
@@ -214,31 +222,3 @@ Current=sddm-freebsd-black-theme
 ### 状态栏不显示时钟和时间
 
 点击时区设置，输入 `beijing`，设置上海即可。若无效，请先更新软件包。
-
-### Procfs 设置（FreeBSD 13.2 前必须如此）
-
-> **提示**
->
-> 以下 proc 设置在 FreeBSD 13.2 及以后版本中将 **[不再需要](https://reviews.freebsd.org/R9:60af3bb18c6a0b7c3082e69d0bfb1d5f809e342b)**，无需配置。但是旧版本 **必须** 如此做。
->
-> 但是[其中给出的说法](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=269621)是不正确的，起码在 2023.4.11 之前，还是需要进行该配置的。
-
-```sh
-# ee /etc/fstab
-```
-
-添加内容如下：
-
-```sh
-proc            /proc           procfs  rw      0       0
-```
-
-> 在 13.2 以前，无论虚拟机还是物理机，添加 proc 挂载这一步都是非常必要的，如果不添加会导致桌面服务无法正常运行，部分组件无法加载！
-
-> > **警告**
-> >
-> > 在 13.2 以前，如果你不配置 proc，在普通用户下，你的所有图标都将变成无法点击的白色方块，任何软件都打不开，桌面陷入异常。且后续再进行配置也是无效的，必须重装系统。
->
-> ↓↓↓ 这就是后果 ↓↓↓
->
-> ![KDE 5](../.gitbook/assets/witekde.png)

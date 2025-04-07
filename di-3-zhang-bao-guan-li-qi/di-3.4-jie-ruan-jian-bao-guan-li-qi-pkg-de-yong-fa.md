@@ -206,17 +206,25 @@ root@ykla:/home/ykla # pkg info -D pkg-provides
 pkg-provides-0.7.4:
 On install:
 In order to use the pkg-provides plugin you need to enable plugins in pkg.
+# 要使用 pkg-provides 插件，必须先在 pkg 中启用插件功能。
+
 To do this, uncomment the following lines in /usr/local/etc/pkg.conf file
 and add pkg-provides to the supported plugin list:
+# 方法是在 /usr/local/etc/pkg.conf 文件中取消以下行的注释，并将 pkg-provides 添加到支持的插件列表中：
 
 PKG_PLUGINS_DIR = "/usr/local/lib/pkg/";
 PKG_ENABLE_PLUGINS = true;
 PLUGINS [ provides ];
+# 插件配置示例，其中 provides 表示启用 pkg-provides 插件。
 
 After that run `pkg plugins' to see the plugins handled by pkg.
+# 设置完成后，运行 `pkg plugins` 查看已启用的插件。
 
 On upgrade:
+# 升级说明：
+
 To update the provides database run `pkg provides -u`.
+# 要更新 provides 数据库，运行 `pkg provides -u`。
 ```
 
 - 编辑 `/usr/local/etc/pkg.conf`，找到空行，写入：
