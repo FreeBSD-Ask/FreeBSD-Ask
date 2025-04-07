@@ -34,7 +34,7 @@
 
 即可。
 
-## sddm
+## SDDM
 
 更改 `/usr/local/etc/pam.d/sddm` 文件：把 `include` 之后的 `login`，替换成 `system`。一共有 4 处需要替换。
 
