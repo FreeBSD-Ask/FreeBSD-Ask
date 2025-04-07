@@ -50,7 +50,7 @@ Windows 测试环境为 Windows 10、11，并尽量使用最新版本的 Windows
 
 >**请注意**
 >
-> ports 一般是 HEAD 分支，你的 pkg 最好与 ports 保持在同一主线上，即都选择 `latest`。
+> ports 一般是 HEAD 分支，你的 pkg 最好与 ports 保持在同一主线上，即都选择 `latest`。但是你亦可以自行拉取 pkg 对应的 Ports 季度分支，如 `2025Q1`。
 
 ---
 
