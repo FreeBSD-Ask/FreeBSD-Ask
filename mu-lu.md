@@ -117,10 +117,10 @@
 
 * [第 11.1 节 存储卡参数简介与测试](di-11-zhang-ji-suan-ji-gai-lun/11.1-sd-card-can-shu-jian-shu.md)
 * [第 11.2 节 总线接口与协议](di-11-zhang-ji-suan-ji-gai-lun/11.2-zong-xian.md)
-* [第 11.3 节 散热器、风扇、鼓风机](di-11-zhang-ji-suan-ji-gai-lun/11.3-san-re-qi.md)
+* [第 11.3 节 网络基础](di-11-zhang-ji-suan-ji-gai-lun/11.3-wang-luo-ji-chu.md)
 * [第 11.4 节 操作系统](di-11-zhang-ji-suan-ji-gai-lun/11.4-cao-zuo-xi-tong.md)
 * [第 11.5 节 MySQL 数据库](di-11-zhang-ji-suan-ji-gai-lun/11.5-shu-jv-ku.md)
-* [第 11.6 节 网络基础](di-11-zhang-ji-suan-ji-gai-lun/11.6-wang-luo-ji-chu.md)
+
 
 ## 第 12 章 引导恢复 & TTY 配置
 
