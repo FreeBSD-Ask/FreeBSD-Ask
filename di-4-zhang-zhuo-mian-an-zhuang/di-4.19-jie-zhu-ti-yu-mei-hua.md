@@ -1,6 +1,6 @@
 # 第 4.19 节 主题美化
 
-**FreeBSD** 安装桌面环境后，很多时候扑面而来的，是简单朴素的色调。这种未加修饰的设定，可能一时会让新用户无法接受。为了系统的美观，我们将在这一节学习添加 **主题** 和 **图标**。
+FreeBSD 安装桌面环境后，很多时候扑面而来的，是简单朴素的色调。这种未加修饰的设定，可能一时会让新用户无法接受。为了系统的美观，我们将在本节尝试添加 **主题** 和 **图标**。
 
 ## 安装软件包
 
@@ -84,7 +84,7 @@ cd papirus-icon-theme
 
 >**技巧**
 >
->FreeBSD 上的 KDE5 自带类似功能，无需安装 `freebsd-update-notify`，本教程仅做示例。
+>FreeBSD 上的 KDE6 自带类似功能，无需安装 `freebsd-update-notify`，本教程仅做示例。
 
 
 `freebsd-update-notify` 可以自动检测更新 FreeBSD 系统和 pkg 包。
@@ -98,7 +98,7 @@ cd papirus-icon-theme
 或
 
 ```sh
-# cd /usr/ports/deskutils/freebsd-update-notify/ \
+# cd /usr/ports/deskutils/freebsd-update-notify/
 # make install clean
 ```
 
