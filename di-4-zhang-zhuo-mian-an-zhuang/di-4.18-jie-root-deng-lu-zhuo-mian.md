@@ -14,7 +14,7 @@
 # service gdm restart
 ```
 
-## lightdm
+## LightDM
 
 然后修改配置文件：
 
