@@ -20,8 +20,6 @@ jobs:
         run: |
           cd fonts-repo
           sudo apt-get update
-          sudo apt-get install -y xfonts-encodings xfonts-utils
-          sudo dpkg -i ttf-ms-win11-*.deb
           sudo apt-get install -y fonts-noto
           
       - name: 设置时区    
@@ -65,9 +63,9 @@ jobs:
       - name: 安装 Python 依赖
         run: |
           sudo apt-get install -y \
-            libpango-1.0-0 \
-            libpangoft2-1.0-0 \
-            libpangocairo-1.0-0
+            libpango \
+            libpangoft \
+            libpangocairo
           pip install weasyprint mistune pygments
 
       # ================= PDF 生成部分 =================
