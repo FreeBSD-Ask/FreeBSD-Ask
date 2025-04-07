@@ -63,9 +63,9 @@ jobs:
       - name: 安装 Python 依赖
         run: |
           sudo apt-get install -y \
-            libpango \
+            libpango-1.0-0 \
             libpangoft2 \
-            libpangocairo
+            libpangocairo-1.0-0
           pip install weasyprint mistune pygments
 
       # ================= PDF 生成部分 =================
