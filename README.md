@@ -66,11 +66,7 @@ FreeBSD 是真正自由（Liberty）的**操作系统**，在这波谲云诡的�
 - [X] 格式化“第 5.1 节 输入法与环境变量”
 - [X] 格式化“第 21.12 节 高级教程：Linux 兼容层与 Jail”
 - [ ] 撰写一篇文章，主题为“UNIX 哲学”
-- [X] 测评各种尚存的桌面版本 FreeBSD ~~也许没必要？已有 [FreeBSD 桌面发行版](https://freebsd-journal-cn.bsdcn.org/20200506-wang-luo-xing-neng/desktop)~~ 这篇文章实在无诚意和实质性内容
-  - [X] [GhostBSD](https://www.ghostbsd.org/)
-  - [X] [NomadBSD](https://nomadbsd.org/)
-  - [X] [helloSystem](https://hellosystem.github.io/docs/)
-  - [X] [MidnightBSD](https://www.midnightbsd.org/)
+- [X] 测评各种尚存的桌面版本 FreeBSD
 - [ ] 基础知识
   - [ ] 登出账号
   - [ ] 命令行关机
@@ -93,7 +89,7 @@ FreeBSD 是真正自由（Liberty）的**操作系统**，在这波谲云诡的�
 
 [点此捐赠 FreeBSD 基金会](https://freebsdfoundation.org/donate)
 
-需要你有 VISA 信用卡：请使用捐赠页面“Click & Pledge”下的 `Amazon Pay` 或 `Google Pay`，经测试均可以顺利支付。
+需要你有 VISA 信用卡：请使用捐赠页面“Click & Pledge”下的 `Amazon Pay`，经测试可以顺利支付。
 
 ## 授权许可
 
