@@ -8,7 +8,7 @@
 >
 >请勿使用 `sysutils/desktop-installer`，会引发不必要的错误和问题。
 
-执着于一定要让 FreeBSD 表现出如 Linux 甚至是 Windows 一般的桌面力是一种可望而不可即的奢求，FreeBSD 官方的口号是 `The power to serve`。但 FreeBSD 基金会在 2024 年收到了一笔赞助，成立了笔记本和台式机小组。
+FreeBSD 官方的口号是 `The Power To Serve`（服务的力量）
 
 本章内容并非是让大家把所有的桌面都安装一遍，而是尽可能多地提供选择。
 
@@ -16,7 +16,7 @@
 
 Wayland 是 xorg 的替代品，但是目前 BSD 上的 Wayland 支持欠佳。
 
-其中，Gnome 可省略第四步，因为其显示管理器 gdm 早就在第二步就自动安装了。
+其中，Gnome 可省略第四步，因为其显示管理器 gdm 早就在第二步就自动作为依赖安装了。
 
 >**警告**
 >
@@ -24,7 +24,7 @@ Wayland 是 xorg 的替代品，但是目前 BSD 上的 Wayland 支持欠佳。
 
 >**警告**
 >
->请勿使用 scim，作者早就跑路（大概已经距今 18 年了）。
+>请勿使用 scim，作者早就跑路（大概已经距今 21 年了）。
 
 ## 故障排除与未竟事宜
 
@@ -36,7 +36,7 @@ Wayland 是 xorg 的替代品，但是目前 BSD 上的 Wayland 支持欠佳。
 
 >**警告**
 >
->当前页面的 N 卡驱动部分仍存在问题。无法使用。
+>当前页面的 N 卡驱动部分仍存在问题。可能无法使用。
 
 >**警告**
 >
@@ -217,7 +217,7 @@ FreeBSD 15 CUEERNT，编译使用 `drm-66-kmod`，支持情况同 Linux 6.6。
 - [backlight -- configure backlight	hardware](https://man.freebsd.org/cgi/man.cgi?backlight)
 - 经过测试，此部分教程适用于 renoir 显卡：
 
-## 笔记本核显 + Nvidia 独显（仍存在问题！不要用）
+## 笔记本核显 + Nvidia 独显（此节仍存在问题！需要你 PR 帮助改进或报告测试情况！）
 
 
 >**警告**
