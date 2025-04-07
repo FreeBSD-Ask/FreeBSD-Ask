@@ -103,24 +103,31 @@ On install:
 To enable this theme edit:
 
  /usr/local/etc/sddm.conf
+# 若要启用此主题，请编辑 /usr/local/etc/sddm.conf 文件。
 
  This theme use the x11-fonts/montserrat font by default. However, it
  can be changed to any desired font editing:
 
  /usr/local/share/sddm/themes/sddm-freebsd-black-theme/theme.conf
+# 此主题默认使用 montserrat 字体（需安装 x11-fonts/montserrat），
+# 你可以通过编辑 theme.conf 文件更改为任意你想要的字体。
 
 Always:
 ===>   NOTICE:
+# 注意事项：
 
 The sddm-freebsd-black-theme port currently does not have a maintainer. As a result, it is
 more likely to have unresolved issues, not be up-to-date, or even be removed in
 the future. To volunteer to maintain this port, please create an issue at:
 
 https://bugs.freebsd.org/bugzilla
+# 此 port 目前没有维护者，因此可能存在未解决的问题、不够及时的更新，甚至未来可能被移除。
+# 若你愿意接手维护，请到上述链接创建一个问题（issue）。
 
 More information about port maintainership is available at:
 
 https://docs.freebsd.org/en/articles/contributing/#ports-contributing
+# 有关 port 维护的更多信息，请参考 FreeBSD 官方文档中关于贡献 port 的章节。
 ```
 
 编辑 `/usr/local/etc/sddm.conf`：

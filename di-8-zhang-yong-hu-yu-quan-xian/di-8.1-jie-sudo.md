@@ -31,24 +31,33 @@ To use doas,
 
 must be created. Refer to doas.conf(5) for further details and/or follow
 /usr/local/etc/doas.conf.sample as an example.
+# 要使用 doas，必须创建配置文件 /usr/local/etc/doas.conf。
+# 可参考 doas.conf(5) 的联机文档，或查看 /usr/local/etc/doas.conf.sample 示例配置。
 
 Note: In order to be able to run most desktop (GUI) applications, the user
 needs to have the keepenv keyword specified. If keepenv is not specified then
 key elements, like the user's $HOME variable, will be reset and cause the GUI
 application to crash.
+# 注意：如果需要运行图形界面（GUI）程序，配置中必须添加 keepenv 关键词。
+# 否则像 $HOME 这样的环境变量将会被清空，导致 GUI 程序崩溃。
 
 Users who only need to run command line applications can usually get away
 without keepenv.
+# 如果只需要运行命令行程序，通常不需要 keepenv。
 
 When in doubt, try to avoid using keepenv as it is less secure to have
 environment variables passed to privileged users.
+# 如果不确定是否需要，建议尽量避免使用 keepenv，因为它可能降低系统安全性，
+# 会将原用户的环境变量传递给拥有权限的目标用户。
 
 On upgrade from doas<6.1:
 With the 6.1 release the transfer of most environment variables (e.g. USER,
 HOME and PATH) from the original user to the target user has changed.
+# 从 doas 6.1 版本起，环境变量（如 USER、HOME、PATH）传递方式已发生变化。
 
 Please refer to doas.conf(5) for further details.
 
+# 请查看 doas.conf(5) 联机文档以了解更多详情。
 ```
 
 ### 配置
