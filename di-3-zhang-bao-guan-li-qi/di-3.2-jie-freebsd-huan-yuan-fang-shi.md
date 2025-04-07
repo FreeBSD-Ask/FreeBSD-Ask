@@ -233,38 +233,6 @@ MASTER_SITE_OVERRIDE?=http://mirrors.163.com/freebsd-ports/distfiles/${DIST_SUBD
 MASTER_SITE_OVERRIDE?=http://mirrors.ustc.edu.cn/freebsd-ports/distfiles/${DIST_SUBDIR}/
 ```
 
-## portsnap 源：打包的 ports 文件（FreeBSD 14.0 及以后不可用）
-
-> **警告**
->
-> FreeBSD 关于弃用 portsnap 的说明：[[HEADS UP] Planned deprecation of portsnap](https://marc.info/?l=freebsd-ports&m=159656662608767&w=2)。
-
-**获取 portsnap 更新**
-
-```sh
-# portsnap auto #同时支持命令行和 cron
-```
-
-或
-
-```sh
-# portsnap fetch extract
-```
-
-**故障排除与未竟事宜**
-
-```sh
-Snapshot appears to have been created more than one day into the future!
-(Is the system clock correct?)
-Cowardly refusing to proceed any further.
-```
-
-需要同步时间。
-
-```sh
-ntpdate ntp.api.bz
-```
-
 ## freebsd-update 源：提供基本系统更新
 
 注意：只有一级架构的 release 版本才提供该源。也就是说 current 和 stable 是没有的（可选择使用后续文章中的 pkgbase 进行更新）。关于架构的支持等级说明请看：
