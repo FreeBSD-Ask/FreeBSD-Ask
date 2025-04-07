@@ -64,7 +64,7 @@ jobs:
         run: |
           sudo apt-get install -y \
             libpango \
-            libpangoft \
+            libpangoft2 \
             libpangocairo
           pip install weasyprint mistune pygments
 
