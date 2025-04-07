@@ -360,8 +360,6 @@ VMware 已被博通收购。**故目前下载任何博通产品均须先注册�
 >
 >![登录后界面](../.gitbook/assets/afterlogin.png)
 
-## 博通（broadcom）产品下载
-
 ### VMware Workstation Pro 下载（推荐）
 
 >**VMware Workstation Pro 下载流程**
@@ -411,6 +409,6 @@ VMware Workstation Pro 目前对于个人用户来说是 **免费下载、免费
 
 访问地址：<https://community.broadcom.com/flings/home>。目前任何非此域名教程（`community.broadcom.com`）均无效。
 
-## VMware Workstation Player（已弃用，不要用）
+### VMware Workstation Player（已弃用，不要用）
 
 VMware Workstation Player 目前已弃用。且功能相对 VMware Workstation Pro 非常有缺失。不建议使用，非要下载，请点击 <https://support.broadcom.com/group/ecx/productdownloads?subfamily=VMware%20Workstation%20Player>。目前所有包含该软件的教程均为旧教程。
