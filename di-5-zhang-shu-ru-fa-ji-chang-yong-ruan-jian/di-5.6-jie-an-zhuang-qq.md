@@ -245,4 +245,4 @@ rm ~/.config/QQ/crash_files/*
 chmod a-wx ~/.config/QQ/crash_files/
 ```
 
-> 参考(https://zhuanlan.zhihu.com/p/645895811)
+> 参考 https://zhuanlan.zhihu.com/p/645895811
