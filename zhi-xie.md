@@ -45,6 +45,7 @@ Ubuntu 吧前吧主 Simple 曾建议修改项目的章节文件名与许可协�
 - heguru5  
 - isNijikawa  
 - Jack  
+- Jiacong Fang（[zldrobit](https://github.com/zldrobit)）
 - kuntop  
 - [李大鹏](https://dapeng.li/)  
 - liguangsheng [(GitHub)](https://github.com/liguangsheng)  
