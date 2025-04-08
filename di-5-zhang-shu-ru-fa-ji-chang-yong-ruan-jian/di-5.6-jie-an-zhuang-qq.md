@@ -237,3 +237,12 @@ $ yay -S linuxqq # 此时位于 Arch 兼容层！此时用户为 test
 > **如果退出后进不去，请加参数 `--in-process-gpu` 执行之即可，即 `/bin/qq  --no-sandbox --in-process-gpu`**。
 
 ![FreeBSD QQ](../.gitbook/assets/qq3.0.png)
+
+### 解决QQ闪退:
+
+```sh
+rm ~/.config/QQ/crash_files/*
+chmod a-wx ~/.config/QQ/crash_files/
+```
+
+> 参考(https://zhuanlan.zhihu.com/p/645895811)
