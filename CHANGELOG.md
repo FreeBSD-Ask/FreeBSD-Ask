@@ -10,6 +10,7 @@
   - “桌面与中文环境常用软件”新增输入法
   - “桌面与中文环境常用软件”新增中文环境
   - NetBSD KDE 4 UEFI 下测试失败，还是黑屏，报错见 <https://gnats.netbsd.org/57554>
+  - “第 16.5 节 Wildfly”测试失败，见 [Bug 285956 - java/wildfly: service start fail, illegal group name](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=285956)
 - 2025.4.7
   - 全译现有所有安装后说明
   - 从 2024.8 开始，目前对全书已重写 94%（按 Commit 数）
