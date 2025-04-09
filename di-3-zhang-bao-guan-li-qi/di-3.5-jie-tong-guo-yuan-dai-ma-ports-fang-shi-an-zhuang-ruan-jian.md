@@ -283,33 +283,9 @@ Proceed with this action? [y/N]:
 
 ```sh
 root@ykla:/usr/ports # pkg version -l '<'
-aom-3.10.0                         <
 chromium-127.0.6533.99             <
 curl-8.9.1_1                       <
-expat-2.6.2                        <
 ffmpeg-6.1.2,1                     <
-firefox-esr-115.15.0,1             <
-gdal-3.9.2                         <
-geos-3.12.2                        <
-imlib2-1.12.3,2                    <
-kf5-kimageformats-5.116.0          <                   
-libjxl-0.10.3                      <                    
-libphonenumber-8.13.45             <                    
-librsvg2-rust-2.58.3_2             <                    
-libxml2-2.11.8                     <                    
-liveMedia-2022.06.16,2             <                    
-llvm18-18.1.8_1                    <
-marble-23.08.5_2                   <
-mosh-1.4.0_3                       <
-protobuf-27.3_1,1                  <
-py311-build-1.2.1                  <
-py311-libxml2-2.11.8_1             <
-py311-mdit-py-plugins-0.4.1        <
-py311-pbr-6.0.0                    <
-ruby-3.2.4,1                       <
-rust-bindgen-cli-0.70.1_1          <
-sdl2_image-2.8.2_1                 <
-texlive-texmf-20240312             <
 vlc-3.0.21_4,4                     <
 w3m-0.5.3.20230718_1               <
 ```
@@ -468,56 +444,20 @@ tmpfs /tmp tmpfs rw 0 0
 
 ### ccache3
 
+使用 pkg 安装：
 
 ```sh
 root@ykla:~ # pkg install ccache
-Updating FreeBSD repository catalogue...
-Fetching meta.conf:   0%
-FreeBSD repository is up to date.
-All repositories are up to date.
-The following 1 package(s) will be affected (of 0 checked):
-
-New packages to be INSTALLED:
-	ccache: 3.7.12_7
-
-Number of packages to be installed: 1
-
-133 KiB to be downloaded.
-
-Proceed with this action? [y/N]: y
-[1/1] Fetching ccache-3.7.12_7.pkg: 100%  133 KiB 136.2kB/s    00:01    
-Checking integrity... done (0 conflicting)
-[1/1] Installing ccache-3.7.12_7...
-[1/1] Extracting ccache-3.7.12_7: 100%
-Create compiler links...
-create symlink for cc
-create symlink for cc (world)
-create symlink for c++
-create symlink for c++ (world)
-create symlink for CC
-create symlink for CC (world)
-create symlink for gcc13
-create symlink for gcc13 (world)
-create symlink for g++13
-create symlink for g++13 (world)
-create symlink for cpp13
-create symlink for cpp13 (world)
-create symlink for clang
-create symlink for clang (world)
-create symlink for clang++
-create symlink for clang++ (world)
-create symlink for clang15
-create symlink for clang15 (world)
-create symlink for clang++15
-create symlink for clang++15 (world)
-=====
-Message from ccache-3.7.12_7:
-
---
-NOTE:
-Please read /usr/local/share/doc/ccache/ccache-howto-freebsd.txt for
-information on using ccache with FreeBSD ports and src.
 ```
+
+- 使用 Ports 安装：
+
+```
+# cd /usr/ports/devel/ccache/ 
+# make install clean
+```
+
+- 查看软链接情况：
 
 ```sh
 root@ykla: # ls -al  /usr/local/libexec/ccache
@@ -538,15 +478,15 @@ lrwxr-xr-x   1 root wheel 21 Sep 20 00:29 g++13 -> /usr/local/bin/ccache
 lrwxr-xr-x   1 root wheel 21 Sep 20 00:29 gcc13 -> /usr/local/bin/ccache
 drwxr-xr-x   2 root wheel 15 Sep 20 02:02 world
 ```
+---
 
-修改 `/etc/make.conf`：
+- 修改 `/etc/make.conf`，加入下面一行：
 
 ```sh
-# ee /etc/make.conf #加入下面一行
 WITH_CCACHE_BUILD=yes
 ```
 
-设置编译缓存最大为 10GB：
+- 设置编译缓存最大为 10GB：
 
 ```sh
 root@ykla:/usr/ports/devel/ccache4 # ccache -M 10G  
@@ -565,7 +505,7 @@ cache size                           0.0 kB
 max cache size                      10.0 GB
 ```
 
-在 Ports 编译一段时间后：
+- 在 Ports 编译一段时间后：
 
 ```sh
 root@ykla:~ # ccache -s
@@ -594,18 +534,20 @@ max cache size                      10.0 GB
 
 目前最新版本是 ccache4：
 
+使用 pkg 安装：
+
 ```sh
 # pkg install ccache4
 ```
 
-或
+或使用 Ports 安装：
 
 ```sh
 # cd /usr/ports/devel/ccache4/
 # make install clean
 ```
 
-配置：
+- 查看软链接情况：
 
 ```sh
 root@ykla:~ # ls -al  /usr/local/libexec/ccache    total 55
@@ -624,21 +566,22 @@ lrwxr-xr-x   1 root wheel 21  9月 20 02:29 gcc13 -> /usr/local/bin/ccache
 drwxr-xr-x   2 root wheel 13  9月 20 02:29 world
 ```
 
-修改 `/etc/make.conf`：
+---
+
+- 修改 `/etc/make.conf`，加入下面一行：
 
 ```sh
-# ee /etc/make.conf #加入下面一行
 WITH_CCACHE_BUILD=yes
 ```
 
-设置编译缓存最大为 20GB：
+- 设置编译缓存最大为 20GB：
 
 ```sh
 root@ykla: # ccache -M 20G  
 Set cache size limit to 20.0 GB
 ```
 
-在 Ports 编译一段时间后，查看编译缓存：
+- 在 Ports 编译一段时间后，查看编译缓存：
 
 ```sh
 root@ykla:/ # ccache -s
@@ -665,43 +608,7 @@ root@ykla:~ # ccache -p
 (default) compiler_check = mtime
 (default) compiler_type = auto
 (default) compression = true
-(default) compression_level = 0
-(default) cpp_extension =
-(default) debug = false
-(default) debug_dir =
-(default) debug_level = 2
-(default) depend_mode = false
-(default) direct_mode = true
-(default) disable = false
-(default) extra_files_to_hash =
-(default) file_clone = false
-(default) hard_link = false
-(default) hash_dir = true
-(default) ignore_headers_in_manifest =
-(default) ignore_options =
-(default) inode_cache = true
-(default) keep_comments_cpp = false
-(default) log_file =
-(default) max_files = 0
-(/root/.config/ccache/ccache.conf) max_size = 20.0 GB #配置文件路径
-(default) msvc_dep_prefix = Note: including file:
-(default) namespace =
-(default) path =
-(default) pch_external_checksum = false
-(default) prefix_command =
-(default) prefix_command_cpp =
-(default) read_only = false
-(default) read_only_direct = false
-(default) recache = false
-(default) remote_only = false
-(default) remote_storage =
-(default) reshare = false
-(default) run_second_cpp = true
-(default) sloppiness =
-(default) stats = true
-(default) stats_log =
-(default) temporary_dir = /root/.cache/ccache/tmp
-(default) umask =
+……省略一部分……
 ```
 
 
