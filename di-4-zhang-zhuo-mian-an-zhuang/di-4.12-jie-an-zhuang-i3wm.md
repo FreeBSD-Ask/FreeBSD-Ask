@@ -24,8 +24,9 @@
 
 ```sh
 $ echo "/usr/local/bin/i3" >> ~/.xinitrc
-$ chown 你的用户名 ~/.xinitrc
 ```
+
+用哪个用户登录 GUI 就使用哪个用户进行编辑。
 
 ## 启动
 
@@ -51,4 +52,3 @@ $ chown 你的用户名 ~/.xinitrc
 - [How to setup FreeBSD with a riced desktop - part 3 - i3](https://unixsheikh.com/tutorials/how-to-setup-freebsd-with-a-riced-desktop-part-3-i3.html#xterm)
 - [How to install i3?](https://forums.freebsd.org/threads/how-to-install-i3.62305/)
 - [i3 - an improved	dynamic, tiling	window manager](https://www.freebsd.org/cgi/man.cgi?query=i3&apropos=0&sektion=1&manpath=freebsd-ports&format=html)
-
