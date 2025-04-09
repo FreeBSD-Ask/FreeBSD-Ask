@@ -52,7 +52,7 @@ initrd (hd0,msdos1)/initramfs.igz
 boot #输入 boot 后回车即可继续启动
 ```
 
-**不一定是 **(hd0,msdos1)**，以实际为准，不要一下都删掉了看不出来了。**
+不一定是 **(hd0,msdos1)**，以实际为准，不要一下都删掉了看不出来了。
 
 ![](../.gitbook/assets/2.png)
 
