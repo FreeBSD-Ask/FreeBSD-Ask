@@ -133,24 +133,7 @@ nameserver 223.6.6.6 #不要写路由器地址
 
 经检查，时间正常。一般发生在 FreeBSD 14.1、14.2 RELEASE 中。
 
-```sh
-# pkg
-The package management tool is not yet installed on your system.
-Do you want to fetch and install it now? [y/N]: y
-Bootstrapping pkg from pkg+https://pkg.FreeBSD.org/FreeBSD:14:amd64/latest, please wait...
-Certificate verification failed for /C=US/O=Let's Encrypt/CN=E6
-          ……省略一部分……
-0020C1CD593C0000:error:16000069:STORE routines:ossl_store_get0_loader_int:unregistered scheme:/usr/src/crypto/openssl/crypto/store/store_register.c:237:scheme=file
-0020C1CD593C0000:error:80000002:system library:file_open:No such file or directory:/usr/src/crypto/openssl/providers/implementations/storemgmt/file_store.c:267:calling stat(/etc/ssl/certs/4042bcee.0)
-0020C1CD593C0000:error:0A000086:SSL routines:tls_post_process_server_certificate:certificate verify failed:/usr/src/crypto/openssl/ssl/statem/statem_clnt.c:1890:
-pkg: Attempted to fetch https://pkg.FreeBSD.org/FreeBSD:14:amd64/latest/Latest/pkg.pkg
-pkg: Attempted to fetch https://pkg.FreeBSD.org/FreeBSD:14:amd64/latest/Latest/pkg.txz
-pkg: Error: Authentication error
-A pre-built version of pkg could not be found for your system.
-Consider changing PACKAGESITE or installing it from ports: 'ports-mgmt/pkg'
-```
-
-解决：
+解决方法：
 
 ```sh
 # certctl rehash
