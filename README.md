@@ -33,11 +33,9 @@ FreeBSD 是真正自由（Liberty）的**操作系统**，在这波谲云诡的�
 
 由于编写者水平所限，书中缺点和谬误之处自不可免。
 
-如遇本站直接相关问题：请直接发送邮件至 `yklaxds@gmail.com`（优先）或联系 QQ 群群主。如果可以的话，欢迎 PR。在桌面端网页右下方或底部左下方有当前页面的 GitHub 编辑地址。
+如遇本站直接相关问题：请直接发送邮件至 `yklaxds@gmail.com`（优先）或联系 QQ 群群主。如果可以的话，欢迎 PR。在桌面端网页右下方或底部左下方有当前页面的 GitHub 编辑地址
 
-## ToDo 待办事项
-
-### 贡献指南与开放任务
+## 贡献指南与开放任务
 
 参见 [贡献指南与开放任务](https://freebsd.gitbook.io/cfc/she-qu-jian-she/renwu)
 
@@ -51,8 +49,6 @@ FreeBSD 是真正自由（Liberty）的**操作系统**，在这波谲云诡的�
 
 资金有余力者请捐给 FreeBSD 基金会吧！如果你觉得有帮助，可以给 [GitHub 项目](https://github.com/FreeBSD-Ask)加颗 ⭐。
 
----
-
 ![](.gitbook/assets/proud_donor.png)
 
 [点此捐赠 FreeBSD 基金会](https://freebsdfoundation.org/donate)
@@ -65,8 +61,3 @@ FreeBSD 是真正自由（Liberty）的**操作系统**，在这波谲云诡的�
 
 ![CC BY](.gitbook/assets/by.png)
 
----
-
-![](.gitbook/assets/ai.png)
-
-[Not By AI](https://notbyai.fyi/cn/)
