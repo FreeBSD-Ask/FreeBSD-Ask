@@ -39,7 +39,7 @@ $ echo "/usr/local/bin/i3" >> ~/.xinitrc
 
 ## 虚拟机扩展
 
-如果使用 virtualbox，则下面启用 virtualbox 扩展：
+如果使用 VirtualBox，下面可启用 VirtualBox 扩展：
 
 ```sh
 & echo "exec VBoxClient-all" >> ~/.config/i3/config
