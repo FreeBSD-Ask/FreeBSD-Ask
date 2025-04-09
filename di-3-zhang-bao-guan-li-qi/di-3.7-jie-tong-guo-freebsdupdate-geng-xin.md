@@ -121,11 +121,11 @@ Inspecting system... done. # 这里在检查系统，从上面的回车到这里
 Fetching files from 14.1-RELEASE for merging... done.
 Preparing to download files...   # 这里在准备要下载的文件，需要等待约 15 分钟。
 # 下面需要等待约 30 分钟。注意，当跨大版本更新时，有时候需要等待 5 小时会更长时间，这都是正常的。
-Fetching 4070 patches.....10....20....30....40....50....60....70....80....90....100....110....120....130....140....150....160....170....180....190....200....210....220....230....240....250....260....270....280....290....300....310....320....330....340....350....360....370....380....390....400....410....420....430....440....450....460....470....480....490....500....510....520....530....540....550....560....570....580....590
+Fetching 4070 patches.....10....20....30....40...
 
 …………中间省略………………
 
-3810....3820....3830....3840....3850....3860....3870....3880....3890....3900....3910....3920....3930....3940....3950....3960....3970....3980....3990....4000....4010....4020....4030....4040....4050....4060....4070 done.
+....4000....4010....4020....4030....4040....4050....4060....4070 done.
 Fetching 35 files... ....10....20....30.. done. # 打补丁，需要等待约 5 分钟
 Attempting to automatically merge changes in files... done.
 
@@ -165,25 +165,7 @@ The following files will be added as part of updating to
 /boot/kernel/gpioaei.ko
 /boot/kernel/if_rtw89.ko
 /boot/kernel/linuxkpi_video.ko
-/boot/kernel/mac_do.ko
-/boot/kernel/snd_dummy.ko
-/etc/devd/autofs.conf
-/usr/bin/mdo
-/usr/bin/mididump
-/usr/include/sys/splash.h
-/usr/lib/debug/boot/kernel/bnxt_re.ko.debug
-/usr/lib/debug/boot/kernel/gpioaei.ko.debug
-/usr/lib/debug/boot/kernel/if_rtw89.ko.debug
-/usr/lib/debug/boot/kernel/linuxkpi_video.ko.debug
-/usr/lib/debug/boot/kernel/mac_do.ko.debug
-/usr/lib/debug/boot/kernel/snd_dummy.ko.debug
-/usr/libexec/bsdinstall/firmware
-/usr/libexec/fwget/pci_network_intel
-/usr/share/examples/oci
-/usr/share/examples/oci/Containerfile.pkg
-/usr/share/examples/oci/README
-/usr/share/examples/sound/oss/README
-/usr/share/examples/sound/oss/audio.c
+…………中间省略………………
 /usr/share/examples/sound/sndstat_nv.c
 : # 这里输入 q，确认变动，直至没有新内容出现
 
@@ -194,24 +176,9 @@ The following files will be updated as part of updating to
 /bin/[
 /bin/cat
 /bin/chflags
-/bin/chio
-/bin/chmod
-/bin/cp
-/bin/cpuset
-/bin/csh
-/bin/date
-/bin/dd
-/bin/df
-/bin/domainname
-/bin/echo
-/bin/ed
-/bin/expr
-/bin/freebsd-version
-/bin/getfacl
-/bin/hostname
-/bin/kenv
-/bin/kill
-/bin/link
+
+…………中间省略………………
+
 /bin/ln
 /bin/ls
 /bin/mkdir
@@ -238,7 +205,7 @@ root@ykla:/home/ykla # reboot
 运行 `freebsd-update install` 安装用户空间的更新部分：
 
 ```sh
-root@ykla:/home/ykla # freebsd-update install
+# freebsd-update install
 src component not installed, skipped
 Creating snapshot of existing boot environment... done.
 Installing updates...
@@ -287,13 +254,6 @@ The following 223 package(s) will be affected (of 0 checked):
 New packages to be INSTALLED:
 	ceres-solver: 2.2.0_10
 	glib-networking: 2.80.0
-	libsoup3: 3.2.2
-	openjph: 0.18.0
-	py311-pygobject: 3.50.0
-	py311-truststore: 0.10.0
-	pygobject-common: 3.50.0
-	suitesparse-cxsparse: 4.4.0
-	suitesparse-spqr: 4.3.3_1
 	webrtc-audio-processing: 1.3
 
 Installed packages to be UPGRADED:
