@@ -2,12 +2,13 @@
 
 ## 安装 i3wm
 
+使用 pkg 安装：
 
 ```sh
 # pkg install xorg i3 i3status dmenu i3lock
 ```
 
-或者：
+或者使用 Ports：
 
 ```
 # cd /usr/ports/x11/xorg/
@@ -30,12 +31,12 @@ $ chown 你的用户名 ~/.xinitrc
 
 可以用 `startx` 启动 i3 了。
 
-**下图为纯 i3，无插件！**
+下图为纯 i3，无插件！
 
 ![i3 on freebsd](../.gitbook/assets/i3wm_preview.png)
 
 
-# 虚拟机扩展
+## 虚拟机扩展
 
 如果使用 virtualbox，则下面启用 virtualbox 扩展：
 
@@ -43,7 +44,7 @@ $ chown 你的用户名 ~/.xinitrc
 & echo "exec VBoxClient-all" >> ~/.config/i3/config
 ```
 
-## 参考
+## 参考文献
 
 - [i3 使用手册](https://www.freebsd.org/cgi/man.cgi?query=i3&apropos=0&sektion=1&manpath=freebsd-ports&format=html)
 - [Installing i3wm on FreeBSD](http://bottlenix.wikidot.com/installing-i3wm)
