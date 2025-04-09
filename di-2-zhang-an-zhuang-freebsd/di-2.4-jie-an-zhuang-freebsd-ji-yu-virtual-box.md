@@ -3,13 +3,11 @@
 
 ## 下载 VirtualBox
 
-进入网页点击 `Download` 即可下载：
+进入网页点击右侧 `Download` 即可下载：
 
 [https://www.virtualbox.org](https://www.virtualbox.org)
 
 ## 安装设置
-
-
 
 以下演示基于 VirtualBox 7.1.4 和 Windows11 24H2。
 
@@ -29,19 +27,7 @@
 >**技巧**
 >
 >UEFI 下显卡也可以正常驱动。——2023.1.14 测试
->
-> ```sh
-> # efibootmgr # 无需安装，自带
-> Boot to FW : false
-> BootCurrent: 0004
-> Timeout    : 0 seconds
-> BootOrder  : 0004, 0000, 0001, 0002, 0003
-> +Boot0004* FreeBSD
-> Boot0000* UiApp
-> Boot0001* UEFI VBOX CD-ROM VB2-01700376
-> Boot0002* UEFI VBOX HARDDISK VB7aff22ad-deb533d3
-> Boot0003* EFI Internal Shell
-> ```
+
 
 ![](../.gitbook/assets/vb4.png)
 
@@ -78,8 +64,6 @@
 ![](../.gitbook/assets/vb9.png)
 
 
-
-
 ## 网络设置
 
 ### 方法 ① 桥接
@@ -106,18 +90,22 @@
 
 ## 显卡驱动与增强工具
 
+- 使用 pkg 安装：
+
 ```sh
 # pkg install virtualbox-ose-additions
 ```
 
-或者
+或者使用 Ports：
 
 ```sh
 # cd /usr/ports/emulators/virtualbox-ose-additions/
 # make install clean
 ```
 
-查看安装说明：
+---
+
+- 查看安装说明：
 
 ```sh
 root@ykla:/home/ykla # pkg info -D virtualbox-ose-additions
@@ -169,16 +157,14 @@ You may ignore the yellow alert that encourages use of VMSVGA.
 
 xorg 可以自动识别驱动，**不需要** 手动配置 `/usr/local/etc/X11/xorg.conf`（经过测试手动配置反而更卡，点一下要用 5 秒钟……）。
 
-
-
-启动服务：
+- 启动服务：
 
 ```sh
 # sysrc vboxguest_enable="YES"
 # sysrc vboxservice_enable="YES"
 ```
 
-启动服务，调整权限（以普通用户 ykla 为例）：
+- 启动服务，调整权限（以普通用户 ykla 为例）：
 
 ```sh
 # service vboxguest restart # 可能会提示找不到模块，但是不影响使用
@@ -190,13 +176,13 @@ xorg 可以自动识别驱动，**不需要** 手动配置 `/usr/local/etc/X11/x
 
 ### EFI 下无法正常关机
 
-添加
+编辑 `/etc/sysctl.conf`，添加
 
 ```sh
 hw.efi.poweroff=0
 ```
 
-到 `/etc/sysctl.conf`，然后再重启，再关机就正常了。
+然后再重启，再关机就正常了。即使用 ACPI 而不使用 UEFI 接口进行关机操作。
 
 #### 参考文献
 
