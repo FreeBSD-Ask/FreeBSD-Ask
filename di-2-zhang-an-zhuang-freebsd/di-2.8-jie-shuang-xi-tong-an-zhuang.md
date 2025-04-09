@@ -96,7 +96,7 @@
 - 创建 ZFS 池
 
 ```sh
-# 创建 ZFS 池，暂时挂载至 /mnt，使用 lz4 压缩，关闭 atime，设置挂载路径为 none
+# 创建 ZFS 池，暂时挂载至 /mnt（-o altroot=/mnt），使用 lz4 压缩（-O compress=lz4。可换成 zstd 等），关闭时间标签（-O atime=off），/dev/gpt/zroot 是我们刚建立的卷标
 # zpool create -f -o altroot=/mnt -O compress=lz4 -O atime=off -m none zroot /dev/gpt/zroot
 ```
 
