@@ -14,7 +14,7 @@ jobs:
       - name: 安装字体
         run: |
           sudo apt-get update
-          sudo apt-get install -y fonts-noto
+          sudo apt-get install -y ttf-wqy-microhei ttf-wqy-zenhei fonts-noto-core fonts-noto-cjk
           
       - name: 设置时区    
         run: |
