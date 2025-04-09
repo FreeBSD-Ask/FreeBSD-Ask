@@ -80,7 +80,7 @@
 - 创建分区
 
 ```sh
-# 创建 swap 分区，卷标为 swap，大小为 4G，使用 4K 对齐
+# 创建 swap 分区，卷标为 swap，大小为 4G，使用 4K 对齐，注意替换 da0
 # gpart add -a 4k -l swap -s 4G -t freebsd-swap da0
 
 # 创建 ZFS 分区，卷标为 zroot，使用全部空余空间，注意替换 da0
