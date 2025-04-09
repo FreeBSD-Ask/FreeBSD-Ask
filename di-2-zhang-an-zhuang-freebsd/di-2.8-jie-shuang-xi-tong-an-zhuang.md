@@ -64,39 +64,136 @@
 
 之后会进入终端，执行以下命令：
 
+- 加载 ZFS 内核模块
+
 ```sh
-# kldload zfs  # 加载 ZFS 内核模块
-# sysctl vfs.zfs.min_auto_ashift=12  # 强制 4K 对齐
-# gpart add -a 4k -l swap -s 4G -t freebsd-swap da0  # 添加 swap 分区（-t），卷标为 swap（-l），大小为 4G（-s），对齐（-a），注意替换 da0
-# gpart add -a 4k -l zroot -t freebsd-zfs da0  # 添加 ZFS 分区，卷标为 zroot，使用全部空余大小，注意替换 da0
-# mount -t tmpfs tmpfs /mnt  # 挂载一个空文件系统准备安装
-# zpool create -f -o altroot=/mnt -O compress=lz4 -O atime=off -m none zroot /dev/gpt/zroot  # 创建 ZFS 池，暂时挂载至 /mnt（-o altroot=/mnt），使用 lz4 压缩（-O compress=lz4，可以换成 zstd 等），关闭时间标签（-O atime=off），/dev/gpt/zroot 是我们刚建立的卷标
-#创建数据集
-# zfs create -o mountpoint=none zroot/ROOT
-# zfs create -o mountpoint=/ zroot/ROOT/default
-# zfs create -o mountpoint=/home zroot/home
-# zfs create -o mountpoint=/tmp -o exec=on -o setuid=off zroot/tmp
-# zfs create -o mountpoint=/usr -o canmount=off zroot/usr
-# zfs create -o setuid=off zroot/usr/ports
-# zfs create zroot/usr/src
-# zfs create -o mountpoint=/var -o canmount=off zroot/var
-# zfs create -o exec=off -o setuid=off zroot/var/audit
-# zfs create -o exec=off -o setuid=off zroot/var/crash
-# zfs create -o exec=off -o setuid=off zroot/var/log
-# zfs create -o atime=on zroot/var/mail
-# zfs create -o setuid=off zroot/var/tmp
-# chmod 1777 /mnt/tmp
-# chmod 1777 /mnt/var/tmp  # 修改 tmp 文件夹权限
-# zpool set bootfs=zroot/ROOT/default zroot  # 设置启动路径
-# printf 'zfs_enable="YES"\n' >> /tmp/bsdinstall_etc/rc.conf  # 设置 FreeBSD 启动时加载 ZFS
-# printf "/dev/gpt/swap\tnone\tswap\tsw\n" >> /tmp/bsdinstall_etc/fstab  # 添加 swap 分区挂载，同理 /dev/gpt/swap 是我们刚建立的卷标
-# mount -t msdosfs /dev/da0p1 /media  # 挂载现有 EFI 系统分区，注意替换 /dev/da0p1
-# mkdir -p /media/efi/freebsd  # 在 EFI 系统分区创建启动目录
-# cp /boot/loader.efi /media/efi/freebsd/loader.efi  # 复制 EFI 文件
-# efibootmgr --create --activate --label "FreeBSD" --loader "/media/efi/freebsd/loader.efi"  # 添加 UEFI 启动项
-# umount /media  # 卸载 EFI 系统分区
-# exit  # 退出 shell，FreeBSD 会继续安装流程
+# kldload zfs
 ```
+
+- 配置 ZFS 对齐方式
+
+```sh
+# 强制 4K 对齐
+# sysctl vfs.zfs.min_auto_ashift=12
+```
+
+- 创建分区
+
+```sh
+# 创建 swap 分区，卷标为 swap，大小为 4G，使用 4K 对齐
+# gpart add -a 4k -l swap -s 4G -t freebsd-swap da0
+
+# 创建 ZFS 分区，卷标为 zroot，使用全部空余空间，注意替换 da0
+# gpart add -a 4k -l zroot -t freebsd-zfs da0
+```
+
+- 挂载临时文件系统准备安装：
+  
+```sh
+# mount -t tmpfs tmpfs /mnt
+```
+
+- 创建 ZFS 池
+
+```sh
+# 创建 ZFS 池，暂时挂载至 /mnt，使用 lz4 压缩，关闭 atime，设置挂载路径为 none
+# zpool create -f -o altroot=/mnt -O compress=lz4 -O atime=off -m none zroot /dev/gpt/zroot
+```
+
+- 创建 ZFS 数据集
+
+```
+# 创建根数据集
+# zfs create -o mountpoint=none zroot/ROOT
+# 创建一个名为 `zroot/ROOT` 的数据集，不设置挂载点（`mountpoint=none`），通常用于作为系统底层的根数据集，可以用于创建下面的子数据集。
+
+# 创建默认根数据集
+# zfs create -o mountpoint=/ zroot/ROOT/default
+# 创建一个名为 `zroot/ROOT/default` 的数据集，并将其挂载到根目录 `/`，用于系统的默认根文件系统。
+
+# 创建 /home 数据集
+# zfs create -o mountpoint=/home zroot/home
+# 创建一个名为 `zroot/home` 的数据集，并挂载到 `/home`，通常用于存储用户主目录。
+
+# 创建 /tmp 数据集，设置 exec 为 on，setuid 为 off
+# zfs create -o mountpoint=/tmp -o exec=on -o setuid=off zroot/tmp
+# 创建 `zroot/tmp` 数据集并挂载到 `/tmp`，允许执行文件（`exec=on`），但禁用 setuid（`setuid=off`）防止该目录中的文件使用 setuid 提升权限。
+
+# 创建 /usr 数据集，并设置 canmount 为 off
+# zfs create -o mountpoint=/usr -o canmount=off zroot/usr
+# 创建 `zroot/usr` 数据集并挂载到 `/usr`，但由于设置 `canmount=off`，该数据集不会被自动挂载，通常用于特定的系统配置。
+
+# 创建 /usr/ports 数据集，设置 setuid 为 off
+# zfs create -o setuid=off zroot/usr/ports
+
+# 创建 /usr/src 数据集
+# zfs create zroot/usr/src
+
+# 创建 /var 数据集，设置 canmount 为 off
+# zfs create -o mountpoint=/var -o canmount=off zroot/var
+
+# 创建 /var/audit 数据集，设置 exec 和 setuid 为 off
+# zfs create -o exec=off -o setuid=off zroot/var/audit
+
+# 创建 /var/crash 数据集，设置 exec 和 setuid 为 off
+# zfs create -o exec=off -o setuid=off zroot/var/crash
+
+# 创建 /var/log 数据集，设置 exec 和 setuid 为 off
+# zfs create -o exec=off -o setuid=off zroot/var/log
+
+# 创建 /var/mail 数据集，设置 atime 为 on
+# zfs create -o atime=on zroot/var/mail
+# 创建 `zroot/var/mail` 数据集并设置 `atime=on`，意味着每次读取文件时都会更新访问时间，通常用于存放邮件数据。
+
+# 创建 /var/tmp 数据集，设置 setuid 为 off
+# zfs create -o setuid=off zroot/var/tmp
+```
+
+- 修改文件夹权限
+
+```sh
+# 修改 /mnt/tmp 和 /mnt/var/tmp 权限为 1777，保证临时目录权限正确
+# chmod 1777 /mnt/tmp
+# chmod 1777 /mnt/var/tmp
+```
+
+- 设置交换分区到 `fstab`
+
+```
+# 配置 swap 分区挂载，注意替换 /dev/nad0p3
+# printf "/dev/nad0p3\tnone\tswap\tsw\t0\t0\n" >> /tmp/bsdinstall_etc/fstab
+```
+>**技巧**
+>
+>`\t` 是一个转义字符，表示按了一次 Tab 键，此处用于对齐分割，换成空格也是一样的效果。
+
+- 设置启动项与 UEFI
+
+```
+# 设置 ZFS 启动路径为 zroot/ROOT/default
+# zpool set bootfs=zroot/ROOT/default zroot
+
+# 配置 FreeBSD 启动时加载 ZFS①
+# printf 'zfs_enable="YES"\n' >> /tmp/bsdinstall_etc/rc.conf
+
+# 挂载 EFI 系统分区
+# 挂载现有 EFI 系统分区，注意替换 /dev/da0p1
+# mount -t msdosfs /dev/da0p1 /media
+
+# 在 EFI 系统分区创建启动目录
+# mkdir -p /media/efi/freebsd
+
+# 复制 EFI 启动文件到 EFI 系统分区
+# cp /boot/loader.efi /media/efi/freebsd/loader.efi
+
+# 使用 efibootmgr 添加 UEFI 启动项
+# efibootmgr --create --activate --label "FreeBSD" --loader "/media/efi/freebsd/loader.efi"
+
+# 卸载 EFI 系统分区
+# umount /media
+```
+
+- ①：`\n` 代表 Unix 换行。Windows 中每段结尾实际是 `\r\n`——即先回车再换行。
 
 这样我们就手动创建了一套与自动安装相同的结构
 
