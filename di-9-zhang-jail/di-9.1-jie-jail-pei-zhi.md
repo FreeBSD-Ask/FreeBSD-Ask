@@ -139,38 +139,7 @@ The package management tool is not yet installed on your system.
 Do you want to fetch and install it now? [y/N]: y
 Bootstrapping pkg from pkg+https://pkg.FreeBSD.org/FreeBSD:14:amd64/latest, please wait...
 Certificate verification failed for /C=US/O=Let's Encrypt/CN=E6
-0020C1CD593C0000:error:16000069:STORE routines:ossl_store_get0_loader_int:unregistered scheme:/usr/src/crypto/openssl/crypto/store/store_register.c:237:scheme=file
-0020C1CD593C0000:error:80000002:system library:file_open:No such file or directory:/usr/src/crypto/openssl/providers/implementations/storemgmt/file_store.c:267:calling stat(/etc/ssl/certs/4042bcee.0)
-0020C1CD593C0000:error:16000069:STORE routines:ossl_store_get0_loader_int:unregistered scheme:/usr/src/crypto/openssl/crypto/store/store_register.c:237:scheme=file
-0020C1CD593C0000:error:80000002:system library:file_open:No such file or directory:/usr/src/crypto/openssl/providers/implementations/storemgmt/file_store.c:267:calling stat(/etc/ssl/certs/4042bcee.0)
-0020C1CD593C0000:error:0A000086:SSL routines:tls_post_process_server_certificate:certificate verify failed:/usr/src/crypto/openssl/ssl/statem/statem_clnt.c:1890:
-Certificate verification failed for /C=US/O=Let's Encrypt/CN=E6
-0020C1CD593C0000:error:16000069:STORE routines:ossl_store_get0_loader_int:unregistered scheme:/usr/src/crypto/openssl/crypto/store/store_register.c:237:scheme=file
-0020C1CD593C0000:error:80000002:system library:file_open:No such file or directory:/usr/src/crypto/openssl/providers/implementations/storemgmt/file_store.c:267:calling stat(/etc/ssl/certs/4042bcee.0)
-0020C1CD593C0000:error:16000069:STORE routines:ossl_store_get0_loader_int:unregistered scheme:/usr/src/crypto/openssl/crypto/store/store_register.c:237:scheme=file
-0020C1CD593C0000:error:80000002:system library:file_open:No such file or directory:/usr/src/crypto/openssl/providers/implementations/storemgmt/file_store.c:267:calling stat(/etc/ssl/certs/4042bcee.0)
-0020C1CD593C0000:error:0A000086:SSL routines:tls_post_process_server_certificate:certificate verify failed:/usr/src/crypto/openssl/ssl/statem/statem_clnt.c:1890:
-Certificate verification failed for /C=US/O=Let's Encrypt/CN=E6
-0020C1CD593C0000:error:16000069:STORE routines:ossl_store_get0_loader_int:unregistered scheme:/usr/src/crypto/openssl/crypto/store/store_register.c:237:scheme=file
-0020C1CD593C0000:error:80000002:system library:file_open:No such file or directory:/usr/src/crypto/openssl/providers/implementations/storemgmt/file_store.c:267:calling stat(/etc/ssl/certs/4042bcee.0)
-0020C1CD593C0000:error:16000069:STORE routines:ossl_store_get0_loader_int:unregistered scheme:/usr/src/crypto/openssl/crypto/store/store_register.c:237:scheme=file
-0020C1CD593C0000:error:80000002:system library:file_open:No such file or directory:/usr/src/crypto/openssl/providers/implementations/storemgmt/file_store.c:267:calling stat(/etc/ssl/certs/4042bcee.0)
-0020C1CD593C0000:error:0A000086:SSL routines:tls_post_process_server_certificate:certificate verify failed:/usr/src/crypto/openssl/ssl/statem/statem_clnt.c:1890:
-Certificate verification failed for /C=US/O=Let's Encrypt/CN=E6
-0020C1CD593C0000:error:16000069:STORE routines:ossl_store_get0_loader_int:unregistered scheme:/usr/src/crypto/openssl/crypto/store/store_register.c:237:scheme=file
-0020C1CD593C0000:error:80000002:system library:file_open:No such file or directory:/usr/src/crypto/openssl/providers/implementations/storemgmt/file_store.c:267:calling stat(/etc/ssl/certs/4042bcee.0)
-0020C1CD593C0000:error:16000069:STORE routines:ossl_store_get0_loader_int:unregistered scheme:/usr/src/crypto/openssl/crypto/store/store_register.c:237:scheme=file
-0020C1CD593C0000:error:80000002:system library:file_open:No such file or directory:/usr/src/crypto/openssl/providers/implementations/storemgmt/file_store.c:267:calling stat(/etc/ssl/certs/4042bcee.0)
-0020C1CD593C0000:error:0A000086:SSL routines:tls_post_process_server_certificate:certificate verify failed:/usr/src/crypto/openssl/ssl/statem/statem_clnt.c:1890:
-Certificate verification failed for /C=US/O=Let's Encrypt/CN=E6
-0020C1CD593C0000:error:16000069:STORE routines:ossl_store_get0_loader_int:unregistered scheme:/usr/src/crypto/openssl/crypto/store/store_register.c:237:scheme=file
-0020C1CD593C0000:error:80000002:system library:file_open:No such file or directory:/usr/src/crypto/openssl/providers/implementations/storemgmt/file_store.c:267:calling stat(/etc/ssl/certs/4042bcee.0)
-0020C1CD593C0000:error:16000069:STORE routines:ossl_store_get0_loader_int:unregistered scheme:/usr/src/crypto/openssl/crypto/store/store_register.c:237:scheme=file
-0020C1CD593C0000:error:80000002:system library:file_open:No such file or directory:/usr/src/crypto/openssl/providers/implementations/storemgmt/file_store.c:267:calling stat(/etc/ssl/certs/4042bcee.0)
-0020C1CD593C0000:error:0A000086:SSL routines:tls_post_process_server_certificate:certificate verify failed:/usr/src/crypto/openssl/ssl/statem/statem_clnt.c:1890:
-Certificate verification failed for /C=US/O=Let's Encrypt/CN=E6
-0020C1CD593C0000:error:16000069:STORE routines:ossl_store_get0_loader_int:unregistered scheme:/usr/src/crypto/openssl/crypto/store/store_register.c:237:scheme=file
-0020C1CD593C0000:error:80000002:system library:file_open:No such file or directory:/usr/src/crypto/openssl/providers/implementations/storemgmt/file_store.c:267:calling stat(/etc/ssl/certs/4042bcee.0)
+          ……省略一部分……
 0020C1CD593C0000:error:16000069:STORE routines:ossl_store_get0_loader_int:unregistered scheme:/usr/src/crypto/openssl/crypto/store/store_register.c:237:scheme=file
 0020C1CD593C0000:error:80000002:system library:file_open:No such file or directory:/usr/src/crypto/openssl/providers/implementations/storemgmt/file_store.c:267:calling stat(/etc/ssl/certs/4042bcee.0)
 0020C1CD593C0000:error:0A000086:SSL routines:tls_post_process_server_certificate:certificate verify failed:/usr/src/crypto/openssl/ssl/statem/statem_clnt.c:1890:
