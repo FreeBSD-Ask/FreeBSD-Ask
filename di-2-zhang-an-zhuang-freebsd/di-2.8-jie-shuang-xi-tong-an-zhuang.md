@@ -160,8 +160,8 @@
 - 设置交换分区到 `fstab`
 
 ```
-# 配置 swap 分区挂载，注意替换 /dev/nad0p3
-# printf "/dev/nad0p3\tnone\tswap\tsw\t0\t0\n" >> /tmp/bsdinstall_etc/fstab
+# 配置 swap 分区挂载，注意替换 /dev/da0p3
+# printf "/dev/da0p3\tnone\tswap\tsw\t0\t0\n" >> /tmp/bsdinstall_etc/fstab
 ```
 >**技巧**
 >
