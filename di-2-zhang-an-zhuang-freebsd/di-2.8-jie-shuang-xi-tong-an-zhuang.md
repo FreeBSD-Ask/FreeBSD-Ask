@@ -191,6 +191,8 @@
 
 # 卸载 EFI 系统分区
 # umount /media
+# 退出 shell，FreeBSD 会继续安装流程
+# exit  
 ```
 
 - ①：`\n` 代表 Unix 换行。Windows 中每段结尾实际是 `\r\n`——即先回车再换行。
