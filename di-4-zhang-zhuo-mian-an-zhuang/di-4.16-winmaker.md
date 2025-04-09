@@ -2,13 +2,13 @@
 
 ## 安装
 
+使用 pkg 安装：
+
 ```sh
 # pkg install windowmaker wmakerconf xorg lightdm lightdm-gtk-greeter wqy-fonts xdg-user-dirs
 ```
 
-xdg-user-dirs 可自动管理家目录子目录（可选安装）
-
-或者：
+或者使用 Ports：
 
 ```sh
 # cd /usr/ports/x11/windowmaker/ && make install clean # windowmaker
@@ -19,8 +19,6 @@ xdg-user-dirs 可自动管理家目录子目录（可选安装）
 # cd /usr/ports/x11-fonts/wqy/ && make install clean # 文泉驿字体
 # cd /usr/ports/devel/xdg-user-dirs/ && make install clean # 自动管理家目录子目录
 ```
-
-## 配置
 
 ## `startx`
 
@@ -57,9 +55,7 @@ proc           /proc       procfs  rw  0   0
 lightdm_env="LC_MESSAGES=zh_CN.UTF-8" 
 ```
 
-编辑 `/etc/login.conf`：
-
-找到 `default:\` 这一段，把 `:lang=C.UTF-8` 修改为 `:lang=zh_CN.UTF-8`。
+编辑 `/etc/login.conf`，找到 `default:\` 这一段，把 `:lang=C.UTF-8` 修改为 `:lang=zh_CN.UTF-8`。
 
 刷新数据库：
 
@@ -72,8 +68,6 @@ lightdm_env="LC_MESSAGES=zh_CN.UTF-8"
 ![FreeBSD 安装 Window Maker](../.gitbook/assets/WindowMaker1.png)
 
 ![FreeBSD 安装 Window Maker](../.gitbook/assets/WindowMaker2.png)
-
-
 
 ## 故障排除与未竟事宜
 
