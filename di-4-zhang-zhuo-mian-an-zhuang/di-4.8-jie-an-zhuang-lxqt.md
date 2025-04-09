@@ -8,10 +8,7 @@
 # pkg install xorg sddm lxqt gvfs wqy-fonts xdg-user-dirs
 ```
 
-xdg-user-dirs 可自动管理家目录子目录（可选安装）
-
-
-或者：
+或者使用 Ports 安装：
 
 ```sh
 # cd /usr/ports/x11/xorg/ && make install clean
@@ -25,7 +22,6 @@ xdg-user-dirs 可自动管理家目录子目录（可选安装）
 解释：
 
 - sddm：LXQt 首选的显示管理器
-
 - gvfs：GNOME 虚拟文件系统，LXQt 依赖此打开 Computer 和 Network，否则会提示 `Operation not supported`
 
 ## 准备
@@ -44,15 +40,13 @@ xdg-user-dirs 可自动管理家目录子目录（可选安装）
 proc	/proc	procfs	rw	0	0
 ```
 
-## 启动 LXQt
-
-### 通过 startx
+## 通过 startx 启动 LXQt
 
 ```sh
 $ echo "exec ck-launch-session startlxqt" > ~/.xinitrc
 ```
 
-### 通过 sddm
+## 通过 sddm 启动 LXQt
 
 ```sh
 # service sddm enable
@@ -82,9 +76,5 @@ $ echo "exec ck-launch-session startlxqt" > ~/.xinitrc
 
 - 桌面图标不显示
 
-请事先安装自己喜欢的其他图标。
-
-菜单 -> "Preferences" -> "LXQt Settings" -> "Appearance" -> "Icons Theme" 选择你安装的图标 -> "Apply"
-
-之后重新登陆。
+请事先安装自己喜欢的其他图标。然后：菜单 -> "Preferences" -> "LXQt Settings" -> "Appearance" -> "Icons Theme" 选择你安装的图标 -> "Apply" 之后重新登陆。
 

@@ -159,10 +159,6 @@ Fri May 31 12:09:26 UTC 2024
 Sat Oct  5 08:39:21 UTC 2024
 ```
 
-
-
-
-
 ### 使用 `whereis` 查询软件路径
 
 如
@@ -604,13 +600,8 @@ root@ykla:~ # ccache -p
 (default) absolute_paths_in_stderr = false
 (default) base_dir =
 (default) cache_dir = /root/.cache/ccache
-(default) compiler =
-(default) compiler_check = mtime
-(default) compiler_type = auto
-(default) compression = true
 ……省略一部分……
 ```
-
 
 ### 参考文献
 
@@ -645,10 +636,6 @@ DISABLE_SIZE=yes
 
 ### wget2
   
->**警告**
->
->wget2 正在进行测试！先不要用
-  
 ```sh
 # cd /usr/ports/www/wget2/ && make install clean
 ```
@@ -668,10 +655,9 @@ DISABLE_SIZE=yes
 
 >**技巧**
 >
->`10` 这个参数可能过于保守，我一般直接用 `50` 或 `100`。但是要注意很多服务器不支持这么多线程同时下载。因为可能会给服务器带来较大压力。
-
+>`10` 这个参数可能过于保守。但是要注意很多服务器不支持较多线程同时下载。同时会给服务器带来较大压力。
 
 ### 参考文献
 
-- [ports --	contributed applications](https://man.freebsd.org/cgi/man.cgi?query=ports&sektion=7)，`FETCH_CMD` 的出处，同时也是参数 `BATCH` 的出处。
+- [ports --contributed applications](https://man.freebsd.org/cgi/man.cgi?query=ports&sektion=7)，`FETCH_CMD` 的出处，同时也是参数 `BATCH` 的出处。
 

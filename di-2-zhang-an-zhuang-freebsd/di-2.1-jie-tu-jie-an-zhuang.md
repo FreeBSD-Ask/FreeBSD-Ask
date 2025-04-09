@@ -879,27 +879,3 @@ Add another user? (yes/no) [no]: # 是否还要再添加一位用户
   在以前的版本安装中，可能在启动时长期卡在 sendmail 等服务，或者需要配置静态 IP 地址，但是系统一直在尝试 DHCP。
 
   可以尝试输入 **ctrl** + **c** 中断该服务，以启动系统。
-
-- 联想笔记本无电池如何升级 BIOS？
-
-  如果找不到电池，请解压缩 `78cn25ww.exe` 文件（BIOS 文件请自行去联想美国官网获取），用记事本打开 `platform.ini`，查找：
-
-```sh
-[AC_Adapter]
-Flag=1
-BatteryCheck=1
-BatteryBound=30
-```
-
-将以上所有数值都修改为 `0`：
-
-```sh
-[AC_Adapter]
-Flag=0
-BatteryCheck=0
-BatteryBound=0
-```
-
-保存后，双击 `InsydeFlash.exe` 即可。
-
-**如果断电，后果自负**

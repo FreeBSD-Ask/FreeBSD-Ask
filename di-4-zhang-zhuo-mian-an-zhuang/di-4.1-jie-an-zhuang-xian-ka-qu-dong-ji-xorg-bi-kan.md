@@ -421,3 +421,17 @@ xorg 最小化包：xorg-minimal（不建议）
 ## 参考文献
 
 - 详细情况可以看 [wiki/Graphics](https://wiki.freebsd.org/Graphics)
+
+## 小故事
+
+sddm gdm lightdm slim 在系统里乱战：
+
+sddm：我背后是 kde
+
+gdm：我背后是 gnome
+
+lightdm：我背后可以是任何一个
+
+slim：怎么办？好慌，潜水太久，管理员要踢我了。
+
+FreeBSD：合着你们在我地盘上养蛊呢？
