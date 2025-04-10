@@ -48,9 +48,13 @@
 
 选择 `Commit`
 
-之后会进入正常安装的流程。
+之后会进入正常安装的流程。安装完成后：
 
-![](../.gitbook/assets/shuangxitong8.png)
+```sh
+# zfs list
+NAME  USED   AVAIL  REFER  MOUNTPOINT
+root  534M    130G   534M  nont
+```
 
 进入系统后可以看到，仅有一个 `root` 数据集。可以逐渐将数据集改为自动安装的样子，也可以参照下文在安装时进入 shell 进行分区。
 
