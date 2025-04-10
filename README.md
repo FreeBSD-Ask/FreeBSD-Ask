@@ -47,7 +47,7 @@ FreeBSD 是真正自由（Liberty）的**操作系统**，在这波谲云诡的�
 
 ## 捐赠
 
-资金有余力者请捐给 FreeBSD 基金会吧！如果你觉得有帮助，可以给 [GitHub 项目](https://github.com/FreeBSD-Ask)加颗 ⭐。
+资金有余力者请捐给 FreeBSD 基金会吧！如果你觉得有帮助，可以给本书所在 [GitHub 项目](https://github.com/FreeBSD-Ask)加颗 ⭐。
 
 ![](.gitbook/assets/proud_donor.png)
 
