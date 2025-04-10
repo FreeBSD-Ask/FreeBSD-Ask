@@ -70,21 +70,29 @@
 # kldload zfs
 ```
 
-- 配置 ZFS 对齐方式
+- 配置 ZFS 对齐方式（只影响新创建的硬盘分区）
 
 ```sh
 # 强制 4K 对齐
-# sysctl vfs.zfs.min_auto_ashift=12
+# sysctl vfs.zfs.vdev.min_auto_ashift=12
 ```
+
+>**技巧**
+>
+> `12` 即 2^12 = 4096 字节（4KB）的扇区大小。默认参数（命令 `sysctl vfs.zfs.vdev.min_auto_ashift` 可看到默认参数）是 `9`，即 2^9 = 512 字节。
+
+>**思考题**
+>
+>若你使用 NVMe，则新装系统（UEFI+GPT，不带 freebsd-boot 分区）默认参数应是 `12`。但是 4K 对齐究竟对齐的是什么？因为SSD 固态硬盘并没有所谓扇区。
 
 - 创建分区
 
 ```sh
-# 创建 swap 分区（-t），卷标为 swap（-l），大小为 4G（-s），对齐（-a），注意替换 da0
-# gpart add -a 4k -l swap -s 4G -t freebsd-swap da0
+# 创建 swap 分区（-t），卷标为 swap（-l），大小为 4G（-s），对齐（-a），注意替换 nda0
+# gpart add -a 4k -l swap -s 4G -t freebsd-swap nda0
 
-# 创建 ZFS 分区，卷标为 zroot，使用全部空余空间，注意替换 da0
-# gpart add -a 4k -l zroot -t freebsd-zfs da0
+# 创建 ZFS 分区，卷标为 zroot，使用全部空余空间，注意替换 nda0
+# gpart add -a 4k -l zroot -t freebsd-zfs nda0
 ```
 
 - 挂载临时文件系统准备安装：
@@ -141,13 +149,17 @@
 # 创建 /var/log 数据集，设置 exec 和 setuid 为 off
 # zfs create -o exec=off -o setuid=off zroot/var/log
 
+# 创建 /var/tmp 数据集，设置 setuid 为 off
+# zfs create -o setuid=off zroot/var/tmp
+
 # 创建 /var/mail 数据集，设置 atime 为 on
 # zfs create -o atime=on zroot/var/mail
 # 创建 `zroot/var/mail` 数据集并设置 `atime=on`，意味着每次读取文件时都会更新访问时间，通常用于存放邮件数据。
-
-# 创建 /var/tmp 数据集，设置 setuid 为 off
-# zfs create -o setuid=off zroot/var/tmp
 ```
+
+>**技巧**
+>
+>上述参数来着 `[bsdinstall(8)](https://man.freebsd.org/cgi/man.cgi?bsdinstall(8))`。你也可以在安装好的系统里用命令 `zfs get exec,setuid,mountpoint` 进行查看。代码位于 src `/usr.sbin/bsdinstall/scripts/zfsboot`。
 
 - 修改文件夹权限
 
@@ -160,8 +172,8 @@
 - 设置交换分区到 `fstab`
 
 ```
-# 配置 swap 分区挂载，注意替换 /dev/da0p3
-# printf "/dev/da0p3\tnone\tswap\tsw\t0\t0\n" >> /tmp/bsdinstall_etc/fstab
+# 配置 swap 分区挂载，注意替换 /dev/nda0p1，可以用命令 gpart show nda0 看一下
+# printf "/dev/nda0p1\tnone\tswap\tsw\t0\t0\n" >> /tmp/bsdinstall_etc/fstab
 ```
 >**技巧**
 >
@@ -177,14 +189,14 @@
 # printf 'zfs_enable="YES"\n' >> /tmp/bsdinstall_etc/rc.conf
 
 # 挂载 EFI 系统分区
-# 挂载现有 EFI 系统分区，注意替换 /dev/da0p1
-# mount -t msdosfs /dev/da0p1 /media
+# 挂载现有 EFI 系统分区，注意替换 /dev/nda0p1
+# mount -t msdosfs /dev/nda0p1 /media
 
 # 在 EFI 系统分区创建启动目录
 # mkdir -p /media/efi/freebsd
 
 # 复制 EFI 启动文件到 EFI 系统分区
-# cp /boot/loader.efi /media/efi/freebsd/loader.efi
+# cp /boot/loader.efi /media/efi/freebsd/
 
 # 使用 efibootmgr 添加 UEFI 启动项
 # efibootmgr --create --activate --label "FreeBSD" --loader "/media/efi/freebsd/loader.efi"
