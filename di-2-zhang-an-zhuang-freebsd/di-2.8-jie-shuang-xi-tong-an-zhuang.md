@@ -1,6 +1,6 @@
 # 第 2.8 节 手动安装双系统（后安装 FreeBSD）
 
-本节以“FreeBSD-14.0-RELEASE-amd64-disc1.iso”为例，在 `Hyper-V` 中演示 FreeBSD 14.0 RELEASE 与 Windows 11 在 UEFI 环境下的双系统安装。
+本节以“FreeBSD-14.0-RELEASE-amd64-disc1.iso”为例，演示在 UEFI 环境下，FreeBSD 14.2 RELEASE 与 Windows 11 24H2 的双系统安装。
 
 >**技巧**
 >
@@ -12,9 +12,20 @@
 >
 > 以本文所述方法，在使用 ZFS 时，只会创建一个名为 `root` 的 zpool，并且直接挂载到 `/`，并不是像自动安装那样创建 `zroot/ROOT/default` 以及众多的数据集。你可以以后再创建数据集进行替换操作，但如果你想在安装开始就使用与自动安装相同的布局，请跳转到本节 Shell 分区部分。
 
-首先需要为 FreeBSD 在硬盘末尾处留出空间，并且关闭安全启动和快速启动。
+首先需要为 FreeBSD 在硬盘留出空间：不一定要求是硬盘末尾，硬盘中间也可以，因为正常的 Windows 安装最后一个分区（本例中为 `nda0p4`，我们从 C 盘压缩出来了 100G）是恢复分区。分区完成后在 FreeBSD 下，看起来就是这样的：
 
-然后正常引导 FreeBSD 进行安装流程，直到分区选择。
+```sh
+# gpart show
+=>       34  419430333  nda0  GPT  (200G)
+         34       2014        - free -  (1.0M)
+       2048     204800     1  efi  (100M)
+     206848      32768     2  ms-reserved  (16M)
+     239616  207992832     3  ms-basic-data  (99G)
+  417947648    1478656     4  ms-recovery  (722M)
+  419426304       4063        - free -  (100G)
+```
+
+你应关闭安全启动和快速启动——或者你还可以从 Windows 设置——> Windows 更新——> 高级选项——> 恢复——> 高级启动选择从 U 盘设备启动。然后正常引导 FreeBSD 进行安装流程，直至分区选择。
 
 ![](../.gitbook/assets/shuangxitong1.png)
 
