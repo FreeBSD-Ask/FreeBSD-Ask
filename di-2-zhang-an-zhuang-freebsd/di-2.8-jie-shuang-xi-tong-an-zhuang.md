@@ -1,6 +1,6 @@
 # 第 2.8 节 手动安装双系统（后安装 FreeBSD）
 
-本节以“FreeBSD-14.0-RELEASE-amd64-disc1.iso”为例，演示在 UEFI 环境下，FreeBSD 14.2 RELEASE 与 Windows 11 24H2 的双系统安装。
+本节以“FreeBSD-14.2-RELEASE-amd64-disc1.iso”为例，演示在 UEFI 环境下，FreeBSD 14.2 RELEASE 与 Windows 11 24H2 的双系统安装。
 
 >**技巧**
 >
