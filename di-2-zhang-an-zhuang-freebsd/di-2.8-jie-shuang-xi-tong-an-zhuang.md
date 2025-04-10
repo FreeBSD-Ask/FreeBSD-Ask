@@ -79,6 +79,7 @@ root  534M    130G   534M  nont
 ```sh
 # 强制 4K 对齐
 # sysctl vfs.zfs.vdev.min_auto_ashift=12
+vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 ```
 
 >**技巧**
@@ -99,6 +100,21 @@ root  534M    130G   534M  nont
 # gpart add -a 4k -l zroot -t freebsd-zfs nda0
 ```
 
+- 查看分区情况
+
+```sh
+# gpart show
+=>       34  419430333  nda0  GPT  (200G)
+         34       2014        - free -  (1.0M)
+       2048     204800     1  efi  (100M)
+     206848      32768     2  ms-reserved  (16M)
+     239616  207992832     3  ms-basic-data  (99G)
+  208232448    8388608     5  freebsd-swap  (4.0G)
+  216621056  201326592     6  freebsd-zfs  (96G)
+  417947648    1478656     4  ms-recovery  (722M)
+  419426304       4063        - free -  (2.0M)
+```
+
 - 挂载临时文件系统准备安装：
   
 ```sh
@@ -114,7 +130,7 @@ root  534M    130G   534M  nont
 
 - 创建 ZFS 数据集
 
-```
+```sh
 # 创建根数据集
 # zfs create -o mountpoint=none zroot/ROOT
 # 创建一个名为 `zroot/ROOT` 的数据集，不设置挂载点（`mountpoint=none`），通常用于作为系统底层的根数据集，可以用于创建下面的子数据集。
@@ -176,12 +192,18 @@ root  534M    130G   534M  nont
 - 设置交换分区到 `fstab`
 
 ```
-# 配置 swap 分区挂载，注意替换 /dev/nda0p3，可以用命令 gpart show nda0 看一下
-# printf "/dev/nda0p3\tnone\tswap\tsw\t0\t0\n" >> /tmp/bsdinstall_etc/fstab
+# 配置 swap 分区挂载，注意替换 /dev/nda0p5，可以用命令 gpart show nda0 看一下
+# printf "/dev/nda0p5\tnone\tswap\tsw\t0\t0\n" >> /tmp/bsdinstall_etc/fstab
 ```
 >**技巧**
 >
->`\t` 是一个转义字符，表示按了一次 Tab 键，此处用于对齐分割，换成空格也是一样的效果。
+>`\t` 是一个转义字符，表示按了一次 Tab 键，此处用于对齐分割，换成空格也是一样的效果。你也可以使用 ee 编辑器手动写入对应条目：
+>
+>```sh
+>/dev/nda0p5  none  swap  sw  0  0
+>```
+>
+>下同。
 
 - 设置启动项与 UEFI
 
@@ -213,9 +235,27 @@ root  534M    130G   534M  nont
 
 - ①：`\n` 代表 Unix 换行。Windows 中每段结尾实际是 `\r\n`——即先回车再换行。
 
-这样我们就手动创建了一套与自动安装相同的结构
+这样我们就手动创建了一套与自动安装相同的结构（`/home/用户名` 分区除外）
 
-![](../.gitbook/assets/shuangxitong11.png)
+```sh
+root@ykla:/home/ykla # zfs list
+NAME                 USED  AVAIL  REFER  MOUNTPOINT
+zroot                921M  91.6G    96K  none
+zroot/ROOT           919M  91.6G    96K  none
+zroot/ROOT/default   919M  91.6G   919M  /
+zroot/home           128K  91.6G   128K  /home
+zroot/tmp            104K  91.6G   104K  /tmp
+zroot/usr            288K  91.6G    96K  /usr
+zroot/usr/ports       96K  91.6G    96K  /usr/ports
+zroot/usr/src         96K  91.6G    96K  /usr/src
+zroot/var            636K  91.6G    96K  /var
+zroot/var/audit       96K  91.6G    96K  /var/audit
+zroot/var/crash       96K  91.6G    96K  /var/crash
+zroot/var/log        156K  91.6G   156K  /var/log
+zroot/var/mail        96K  91.6G    96K  /var/mail
+zroot/var/tmp         96K  91.6G    96K  /var/tmp
+```
+
 
 ## 参考文献
 
