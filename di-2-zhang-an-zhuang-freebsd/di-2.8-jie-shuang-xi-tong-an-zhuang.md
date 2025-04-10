@@ -12,7 +12,7 @@
 >
 > 以本文所述方法，在使用 ZFS 时，只会创建一个名为 `root` 的 zpool，并且直接挂载到 `/`，并不是像自动安装那样创建 `zroot/ROOT/default` 以及众多的数据集。你可以以后再创建数据集进行替换操作，但如果你想在安装开始就使用与自动安装相同的布局，请跳转到本节 Shell 分区部分。
 
-首先需要为 FreeBSD 在硬盘留出空间：不一定要求是硬盘末尾，硬盘中间也可以，因为正常的 Windows 安装最后一个分区（本例中为 `nda0p4`，我们从 C 盘压缩出来了 100G）是恢复分区。分区完成后在 FreeBSD 下，看起来就是这样的：
+首先需要为 FreeBSD 在硬盘留出空间：不一定要求是硬盘末尾，硬盘中间也可以，因为正常的 Windows 安装最后一个分区（本例中为 `nda0p4`）是恢复分区。分区完成后在 FreeBSD 下，看起来就是这样的：
 
 ```sh
 # gpart show
@@ -190,7 +190,7 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 
 >**技巧**
 >
->上述参数来着 `[bsdinstall(8)](https://man.freebsd.org/cgi/man.cgi?bsdinstall(8))`。你也可以在安装好的系统里用命令 `zfs get exec,setuid,mountpoint` 进行查看。代码位于 src `/usr.sbin/bsdinstall/scripts/zfsboot`。
+>上述参数来着 `[bsdinstall(8)](https://man.freebsd.org/cgi/man.cgi?bsdinstall)`。你也可以在安装好的系统里用命令 `zfs get exec,setuid,mountpoint` 进行查看。代码位于 src `/usr.sbin/bsdinstall/scripts/zfsboot`。
 
 - 修改文件夹权限
 
