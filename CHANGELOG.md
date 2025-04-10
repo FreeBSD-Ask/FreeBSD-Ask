@@ -6,7 +6,7 @@
 
 - 2025.4.10
   - 测试、改写“第 2.8 节 手动安装双系统（后安装 FreeBSD）”
-  - NetBSD 在 VMware 虚拟机中无论 UEFI 与否，进入 kde 4  都会黑屏。
+  - NetBSD 10.1 在 VMware 虚拟机中无论 UEFI 与否，进入 kde 4  都会黑屏。
 - 2025.4.9
   - 使用 <https://gist.github.com/ykla/adf011fea43f5f4b91aa6f065ac09da2> 对全书过长（> 30 行）的代码块进行整理。
   - 孤行控制，删除冗余。
