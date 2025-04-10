@@ -176,8 +176,8 @@ root  534M    130G   534M  nont
 - 设置交换分区到 `fstab`
 
 ```
-# 配置 swap 分区挂载，注意替换 /dev/nda0p1，可以用命令 gpart show nda0 看一下
-# printf "/dev/nda0p1\tnone\tswap\tsw\t0\t0\n" >> /tmp/bsdinstall_etc/fstab
+# 配置 swap 分区挂载，注意替换 /dev/nda0p3，可以用命令 gpart show nda0 看一下
+# printf "/dev/nda0p3\tnone\tswap\tsw\t0\t0\n" >> /tmp/bsdinstall_etc/fstab
 ```
 >**技巧**
 >
