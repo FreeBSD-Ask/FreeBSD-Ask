@@ -1,6 +1,6 @@
 # 第 2.8 节 手动安装双系统（后安装 FreeBSD）
 
-本节以“FreeBSD-14.0-RELEASE-amd64-disc1.iso”为例，在 `Hyper-V` 中演示 FreeBSD 14.0 RELEASE 与 Windows 11 在 UEFI 环境下的双系统安装。
+本节以“FreeBSD-14.2-RELEASE-amd64-disc1.iso”为例，演示在 UEFI 环境下，FreeBSD 14.2 RELEASE 与 Windows 11 24H2 的双系统安装。
 
 >**技巧**
 >
@@ -12,9 +12,20 @@
 >
 > 以本文所述方法，在使用 ZFS 时，只会创建一个名为 `root` 的 zpool，并且直接挂载到 `/`，并不是像自动安装那样创建 `zroot/ROOT/default` 以及众多的数据集。你可以以后再创建数据集进行替换操作，但如果你想在安装开始就使用与自动安装相同的布局，请跳转到本节 Shell 分区部分。
 
-首先需要为 FreeBSD 在硬盘末尾处留出空间，并且关闭安全启动和快速启动。
+首先需要为 FreeBSD 在硬盘留出空间：不一定要求是硬盘末尾，硬盘中间也可以，因为正常的 Windows 安装最后一个分区（本例中为 `nda0p4`，我们从 C 盘压缩出来了 100G）是恢复分区。分区完成后在 FreeBSD 下，看起来就是这样的：
 
-然后正常引导 FreeBSD 进行安装流程，直到分区选择。
+```sh
+# gpart show
+=>       34  419430333  nda0  GPT  (200G)
+         34       2014        - free -  (1.0M)
+       2048     204800     1  efi  (100M) # EFI 分区
+     206848      32768     2  ms-reserved  (16M) # MSR 分区
+     239616  207992832     3  ms-basic-data  (99G) # 这个是 C 盘，原先有 200G 这么大。现在 C 盘和恢复分区之间空余了 100G
+  417947648    1478656     4  ms-recovery  (722M) # 恢复分区
+  419426304       4063        - free -  (100G)
+```
+
+你应关闭安全启动和快速启动——或者你还可以从 Windows 设置——> Windows 更新——> 高级选项——> 恢复——> 高级启动选择从 U 盘设备启动。然后正常引导 FreeBSD 进行安装流程，直至分区选择。
 
 ![](../.gitbook/assets/shuangxitong1.png)
 
@@ -48,9 +59,13 @@
 
 选择 `Commit`
 
-之后会进入正常安装的流程。
+之后会进入正常安装的流程。安装完成后：
 
-![](../.gitbook/assets/shuangxitong8.png)
+```sh
+# zfs list
+NAME  USED   AVAIL  REFER  MOUNTPOINT
+root  534M    130G   534M  nont
+```
 
 进入系统后可以看到，仅有一个 `root` 数据集。可以逐渐将数据集改为自动安装的样子，也可以参照下文在安装时进入 shell 进行分区。
 
@@ -70,21 +85,45 @@
 # kldload zfs
 ```
 
-- 配置 ZFS 对齐方式
+- 配置 ZFS 对齐方式（只影响新创建的硬盘分区）
 
 ```sh
 # 强制 4K 对齐
-# sysctl vfs.zfs.min_auto_ashift=12
+# sysctl vfs.zfs.vdev.min_auto_ashift=12
+vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 ```
+
+>**技巧**
+>
+> `12` 即 2^12 = 4096 字节（4KB）的扇区大小。默认参数（命令 `sysctl vfs.zfs.vdev.min_auto_ashift` 可看到 ISO 的默认参数）是 `9`，即 2^9 = 512 字节。
+
+>**思考题**
+>
+>若你使用 NVMe，则正常新装系统（UEFI+GPT，不带 freebsd-boot 分区）默认参数应是 `12`。但是 4K 对齐究竟对齐的是什么？因为SSD 固态硬盘并没有所谓扇区。
 
 - 创建分区
 
 ```sh
-# 创建 swap 分区（-t），卷标为 swap（-l），大小为 4G（-s），对齐（-a），注意替换 da0
-# gpart add -a 4k -l swap -s 4G -t freebsd-swap da0
+# 创建 swap 分区（-t），卷标为 swap（-l），大小为 4G（-s），对齐（-a），注意替换 nda0
+# gpart add -a 4k -l swap -s 4G -t freebsd-swap nda0
 
-# 创建 ZFS 分区，卷标为 zroot，使用全部空余空间，注意替换 da0
-# gpart add -a 4k -l zroot -t freebsd-zfs da0
+# 创建 ZFS 分区，卷标为 zroot，使用全部空余空间，注意替换 nda0
+# gpart add -a 4k -l zroot -t freebsd-zfs nda0
+```
+
+- 查看分区情况
+
+```sh
+# gpart show
+=>       34  419430333  nda0  GPT  (200G)
+         34       2014        - free -  (1.0M)
+       2048     204800     1  efi  (100M)
+     206848      32768     2  ms-reserved  (16M)
+     239616  207992832     3  ms-basic-data  (99G)
+  208232448    8388608     5  freebsd-swap  (4.0G)
+  216621056  201326592     6  freebsd-zfs  (96G)
+  417947648    1478656     4  ms-recovery  (722M)
+  419426304       4063        - free -  (2.0M)
 ```
 
 - 挂载临时文件系统准备安装：
@@ -102,7 +141,7 @@
 
 - 创建 ZFS 数据集
 
-```
+```sh
 # 创建根数据集
 # zfs create -o mountpoint=none zroot/ROOT
 # 创建一个名为 `zroot/ROOT` 的数据集，不设置挂载点（`mountpoint=none`），通常用于作为系统底层的根数据集，可以用于创建下面的子数据集。
@@ -141,13 +180,17 @@
 # 创建 /var/log 数据集，设置 exec 和 setuid 为 off
 # zfs create -o exec=off -o setuid=off zroot/var/log
 
+# 创建 /var/tmp 数据集，设置 setuid 为 off
+# zfs create -o setuid=off zroot/var/tmp
+
 # 创建 /var/mail 数据集，设置 atime 为 on
 # zfs create -o atime=on zroot/var/mail
 # 创建 `zroot/var/mail` 数据集并设置 `atime=on`，意味着每次读取文件时都会更新访问时间，通常用于存放邮件数据。
-
-# 创建 /var/tmp 数据集，设置 setuid 为 off
-# zfs create -o setuid=off zroot/var/tmp
 ```
+
+>**技巧**
+>
+>上述参数来着 `[bsdinstall(8)](https://man.freebsd.org/cgi/man.cgi?bsdinstall(8))`。你也可以在安装好的系统里用命令 `zfs get exec,setuid,mountpoint` 进行查看。代码位于 src `/usr.sbin/bsdinstall/scripts/zfsboot`。
 
 - 修改文件夹权限
 
@@ -160,12 +203,18 @@
 - 设置交换分区到 `fstab`
 
 ```
-# 配置 swap 分区挂载，注意替换 /dev/da0p3
-# printf "/dev/da0p3\tnone\tswap\tsw\t0\t0\n" >> /tmp/bsdinstall_etc/fstab
+# 配置 swap 分区挂载，注意替换 /dev/nda0p5，可以用命令 gpart show nda0 看一下
+# printf "/dev/nda0p5\tnone\tswap\tsw\t0\t0\n" >> /tmp/bsdinstall_etc/fstab
 ```
 >**技巧**
 >
->`\t` 是一个转义字符，表示按了一次 Tab 键，此处用于对齐分割，换成空格也是一样的效果。
+>`\t` 是一个转义字符，表示按了一次 Tab 键，此处用于对齐分割，换成空格也是一样的效果。你也可以使用 ee 编辑器手动写入对应条目：
+>
+>```sh
+>/dev/nda0p5  none  swap  sw  0  0
+>```
+>
+>下同。
 
 - 设置启动项与 UEFI
 
@@ -177,14 +226,14 @@
 # printf 'zfs_enable="YES"\n' >> /tmp/bsdinstall_etc/rc.conf
 
 # 挂载 EFI 系统分区
-# 挂载现有 EFI 系统分区，注意替换 /dev/da0p1
-# mount -t msdosfs /dev/da0p1 /media
+# 挂载现有 EFI 系统分区，注意替换 /dev/nda0p1
+# mount -t msdosfs /dev/nda0p1 /media
 
 # 在 EFI 系统分区创建启动目录
 # mkdir -p /media/efi/freebsd
 
 # 复制 EFI 启动文件到 EFI 系统分区
-# cp /boot/loader.efi /media/efi/freebsd/loader.efi
+# cp /boot/loader.efi /media/efi/freebsd/
 
 # 使用 efibootmgr 添加 UEFI 启动项
 # efibootmgr --create --activate --label "FreeBSD" --loader "/media/efi/freebsd/loader.efi"
@@ -197,9 +246,27 @@
 
 - ①：`\n` 代表 Unix 换行。Windows 中每段结尾实际是 `\r\n`——即先回车再换行。
 
-这样我们就手动创建了一套与自动安装相同的结构
+这样我们就手动创建了一套与自动安装相同的结构（`/home/用户名` 分区除外）
 
-![](../.gitbook/assets/shuangxitong11.png)
+```sh
+root@ykla:/home/ykla # zfs list
+NAME                 USED  AVAIL  REFER  MOUNTPOINT
+zroot                921M  91.6G    96K  none
+zroot/ROOT           919M  91.6G    96K  none
+zroot/ROOT/default   919M  91.6G   919M  /
+zroot/home           128K  91.6G   128K  /home
+zroot/tmp            104K  91.6G   104K  /tmp
+zroot/usr            288K  91.6G    96K  /usr
+zroot/usr/ports       96K  91.6G    96K  /usr/ports
+zroot/usr/src         96K  91.6G    96K  /usr/src
+zroot/var            636K  91.6G    96K  /var
+zroot/var/audit       96K  91.6G    96K  /var/audit
+zroot/var/crash       96K  91.6G    96K  /var/crash
+zroot/var/log        156K  91.6G   156K  /var/log
+zroot/var/mail        96K  91.6G    96K  /var/mail
+zroot/var/tmp         96K  91.6G    96K  /var/tmp
+```
+
 
 ## 参考文献
 
