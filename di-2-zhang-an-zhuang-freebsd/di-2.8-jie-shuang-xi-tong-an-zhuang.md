@@ -190,7 +190,7 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 
 >**技巧**
 >
->上述参数来着 [bsdinstall(8)](https://man.freebsd.org/cgi/man.cgi?bsdinstall(8))。你也可以在安装好的系统里用命令 `zfs get exec,setuid,mountpoint` 进行查看。代码位于 src `/usr.sbin/bsdinstall/scripts/zfsboot`。
+>上述参数来着自 [bsdinstall(8)](https://man.freebsd.org/cgi/man.cgi?bsdinstall(8))。你也可以在安装好的系统里用命令 `zfs get exec,setuid,mountpoint` 进行查看。代码位于 src `/usr.sbin/bsdinstall/scripts/zfsboot`。
 
 - 修改文件夹权限
 
