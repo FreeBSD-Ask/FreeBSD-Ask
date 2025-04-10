@@ -208,7 +208,7 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 ```
 >**技巧**
 >
->`\t` 是一个转义字符，表示按了一次 Tab 键，此处用于对齐分割，换成空格也是一样的效果。你也可以使用 ee 编辑器手动写入对应条目：
+>`\t` 是一个转义字符，表示按了一次 Tab 键，此处用于对齐分割，换成空格也是一样的效果。你也可以使用 ee 编辑器手动写入（`ee /tmp/bsdinstall_etc/fstab`）对应条目：
 >
 >```sh
 >/dev/nda0p5  none  swap  sw  0  0
@@ -244,7 +244,7 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 # exit  
 ```
 
-- ①：`\n` 代表 Unix 换行。Windows 中每段结尾实际是 `\r\n`——即先回车再换行。
+- ①：`\n` 代表 Unix 换行。Windows 中每段结尾实际是 `\r\n`——即先回车再换行。此处等同于 `ee /tmp/bsdinstall_etc/rc.conf`，然后加入 `zfs_enable="YES"`。
 
 这样我们就手动创建了一套与自动安装相同的结构（`/home/用户名` 分区除外）
 
