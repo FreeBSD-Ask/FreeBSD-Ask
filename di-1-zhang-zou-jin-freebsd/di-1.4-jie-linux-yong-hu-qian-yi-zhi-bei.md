@@ -72,19 +72,19 @@
 
 因为 Linux 广泛使用的也是 GNU 工具，因此只要理论上不是依赖于特定的 Linux 函数库，该工具都可以在 FreeBSD 上运行。
 
-| Linux 命令/GNU 软件 | FreeBSD 命令/BSD 软件 | Port 包 |      作用说明      |                                                                                  备注                                                                                   |
-| :-----------------: | :-------------------: | :---------------------- | :---------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|        `lsusb`        |         `lsusb`         |   `sysutils/usbutils`  |   显示 USB 信息    |                                                                            粗略地可以用 `cat /var/run/dmesg`                                                                             |
-|        `lspci`        |        `pciconf`        |   `sysutils/pciutils` |    显示 PCI 信息    |                                                                            粗略地可以用 `cat /var/run/dmesg`                                                                             |
-|        `lsblk`        |         `lsblk`         |    `sysutils/lsblk`    |  显示磁盘使用情况  |                                                                                            /                                                                                             |
-|        `free`        |       `freecolor`       |  `sysutils/freecolor` |  显示内存使用情况  | FreeBSD 未提供 `free` 命令，因为其依赖 Linux 特性，由包 `procps` 提供。如确需要 `free`，可用 `https://github.com/j-keck/free` 其他替代命令是 `vmstat` |
-|        `lscpu`        |         `lscpu`         |    `sysutils/lscpu`    |   显示处理器信息   |                                                                                            /                                                                                             |
-|        glibc        |        bsdlibc        |            /             |        C 库        |                                                                                            /                                                                                             |
-|         GCC         |     LLVM + Clang      |            /             | 编译器、编译链工具 |                                                                              非要用也可以安装 `devel/gcc`                                                                               |
-|         `vim`         |          `vim`          |     `editors/vim/`    |     文本编辑器     |                                                                  FreeBSD 的 `vi` 不是软连接到 `vim`，而是早期的 `nvi`                                                                   |
-|        `wget`         |         `wget`          |     `ftp/wget`    |       下载器       |                                                                               系统默认的下载工具是 `fetch`                                                                                |
-|        bash         |         bash          |     `shells/bash`   |       shell        |                                              系统默认的 shell 是 `sh`（非软连接）。你可以自己改。                                             |
-|   NetworkManager    |      networkmgr       |  `net-mgmt/networkmgr`  |    网络连接工具    |                                                                        NetworkManager 依赖 `systemd` 无法直接移植                                                                        |
-|`lsmod`|	`kldstat`|/|列出已加载的内核模块|/|
-|`strace`|	`truss`|/|跟踪系统调用|/|
-|`modprobe`|	加载内核模块：`kldload`；卸载内核模块：`kldunload` |/|加载内核模块、卸载内核模块|/|
+| Linux 命令/GNU 软件 | BSD Port/命令 |      作用说明      |                                                                                  备注                                                                                   |
+| :-----------------: | :-------------------: |  :---------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|        `lsusb`        |          `sysutils/usbutils`  |   显示 USB 信息    |                                                                            粗略地可以用 `cat /var/run/dmesg`                                                                             |
+|        `lspci`        |        `sysutils/pciutils` |    显示 PCI 信息    |                                                                            粗略地可以用 `cat /var/run/dmesg`                                                                             |
+|        `lsblk`        |         `sysutils/lsblk`    |  显示磁盘使用情况  |                                                                                            /                                                                                             |
+|        `free`        |     `sysutils/freecolor` |  显示内存使用情况  | FreeBSD 未提供 `free` 命令，因为其依赖 Linux 特性，由包 `procps` 提供。如确需要 `free`，可用 `https://github.com/j-keck/free` 其他替代命令是 `vmstat` |
+|        `lscpu`        |        `sysutils/lscpu`    |   显示处理器信息   |                                                                                            /                                                                                             |
+|        glibc        |        bsdlibc        |                   C 库        |                                                                                            /                                                                                             |
+|         GCC         |     LLVM + Clang      |            编译器、编译链工具 |                                                                              非要用也可以安装 `devel/gcc`                                                                               |
+|         `vim`         |            `editors/vim/`    |     文本编辑器     |                                                                  FreeBSD 的 `vi` 不是软连接到 `vim`，而是早期的 `nvi`                                                                   |
+|        `wget`         |          `ftp/wget`    |       下载器       |                                                                               系统默认的下载工具是 `fetch`                                                                                |
+|        bash         |           `shells/bash`   |       shell        |                                              系统默认的 shell 是 `sh`（非软连接）。你可以自己改。                                             |
+|   NetworkManager    |      `net-mgmt/networkmgr`  |    网络连接工具    |                                                                        NetworkManager 依赖 `systemd` 无法直接移植                                                                        |
+|`lsmod`|	`kldstat`|列出已加载的内核模块|/|
+|`strace`|	`truss`|跟踪系统调用|/|
+|`modprobe`|	加载内核模块：`kldload`；卸载内核模块：`kldunload` |加载内核模块、卸载内核模块|/|
