@@ -21,7 +21,7 @@ FreeBSD 是真正自由（Liberty）的**操作系统**，在这波谲云诡的�
 
 ---
 
-- Discord：<https://discord.gg/n5wu65Z6tw>（需要代理。可直接通过网页使用，无需安装任何软件）
+- Discord：<https://discord.gg/j7VhWrhp3e>（需要代理。可直接通过网页使用，无需安装任何软件）
 
 - Telegram：[https://t.me/oh_my_BSD](https://t.me/oh_my_BSD)（需要代理）
 
