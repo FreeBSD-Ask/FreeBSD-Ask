@@ -38,6 +38,37 @@ FreeBSD 是真正自由（Liberty）的**操作系统**，在这波谲云诡的�
 
 详见 [贡献指南与开放任务](https://freebsd.gitbook.io/cfc/she-qu-jian-she/renwu)
 
+### 2025 年第二季度 ToDo List
+
+- [ ] 没有疑问的书籍不是好菜谱，在每节最后嵌入“故障排除与未竟事宜”，将谜团留置其中
+- [ ] DragonFlyBSD 安装图解
+- [X] 更新 NetBSD 安装图解
+- [ ] 更新第 16.5 节 Wildfly
+- [ ] 解释全书所有命令和选项
+  - [ ] 含义
+  - [ ] 历史（如必要）
+  - [ ] 艺术（如必要）
+  - [ ] 哲学（如必要）
+- [ ] 重写“第 3.2 节 FreeBSD 换源方式”
+- [ ] 重写第 22.7 节 Python 与 VScode
+- [ ] 重写“第 4.1 节 Xorg & 显卡驱动”
+- [ ] 重写“第 5.7 节 更换字体”
+- [X] 重写第 20 章
+- [ ] 重写防火墙相关章节（尽力而为，我不熟）
+  - [ ] PF
+  - [ ] IPF
+  - [ ] IPFW
+- [X] 格式化“第 5.1 节 输入法与环境变量”
+- [X] 格式化“第 21.12 节 高级教程：Linux 兼容层与 Jail”
+- [ ] 撰写一篇主题为“UNIX 哲学”的文章
+- [X] 测评各种尚存的桌面版本 FreeBSD
+- [ ] 基础知识
+  - [ ] 登出账号
+  - [ ] 命令行关机
+  - [ ] 命令行重启
+- [ ] 给出更多参考文献，不局限于计算机科学
+
+
 ## PDF 文档导出
 
 可使用 [safreya](https://github.com/safreya) 编写的 [Python 脚本](https://github.com/FreeBSD-Ask/gitbook-pdf-export)来导出 PDF。
