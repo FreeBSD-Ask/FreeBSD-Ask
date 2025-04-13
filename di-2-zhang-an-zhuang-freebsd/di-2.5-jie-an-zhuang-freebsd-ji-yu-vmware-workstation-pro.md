@@ -29,9 +29,6 @@
 ### 参考文献
 
 - [[经验] 上直链！！VMWare Workstation Pro 免费给个人用了](https://hostloc.com/thread-1306968-1-1.html)
-
-### 参考文献
-
 - 中文：[Workstation 和 Fusion 对个人使用完全免费，企业许可转向订阅](https://blogs.vmware.com/china/2024/05/16/workstation-%E5%92%8C-fusion-%E5%AF%B9%E4%B8%AA%E4%BA%BA%E4%BD%BF%E7%94%A8%E5%AE%8C%E5%85%A8%E5%85%8D%E8%B4%B9%EF%BC%8C%E4%BC%81%E4%B8%9A%E8%AE%B8%E5%8F%AF%E8%BD%AC%E5%90%91%E8%AE%A2%E9%98%85/)
 
 ## 配置虚拟机
