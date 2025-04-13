@@ -6,6 +6,8 @@
 
 - 2025.4.13
   - “第 16.5 节 WildFly”测试基本成功，但是注意补丁仍未合并到主线，详见 [Bug 285956 - java/wildfly: service start fail, illegal group name](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=285956)。
+  - 新增“第 24.3 节 配置 DragonFly BSD”
+  - 重写“第 24.2 节 安装 DragonFly BSD”
 - 2025.4.11
   - 通过段落间距调整，PDF 页数从 1209 到 1084，减少了 10.34% 的页面占用。
 - 2025.4.10
