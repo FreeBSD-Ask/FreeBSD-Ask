@@ -250,7 +250,8 @@
 ## 第 24 章 DragonFlyBSD
 
 * [第 24.1 节 DragonFlyBSD 概述](di-24-zhang-dragonflybsd/di-24.1-jie-gai-shu.md)
-* [第 24.2 节 DragonFlyBSD 安装与配置](di-24-zhang-dragonflybsd/di-24.2-jie-an-zhuang-yu-pei-zhi.md)
+* [第 24.2 节 安装 DragonFlyBSD](di-24-zhang-dragonflybsd/di-24.2-jie-an-zhuang-yu-pei-zhi.md)
+* [第 24.3 节 配置 DragonFlyBSD](di-24-zhang-dragonflybsd/24.3-pei-zhi.md)
 
 ## 第 25 章 TwinCAT/BSD
 
