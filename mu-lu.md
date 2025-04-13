@@ -247,11 +247,11 @@
 * [第 23.6 节 Linux 文件系统](di-23-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-23.6-jie-ext-234-deng-wen-jian-xi-tong.md)
 * [第 23.7 节 ZFS 磁盘加解密](di-23-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-23.7-jie-zfs-ci-pan-jia-jie-mi.md)
 
-## 第 24 章 DragonFlyBSD
+## 第 24 章 DragonFly BSD
 
-* [第 24.1 节 DragonFlyBSD 概述](di-24-zhang-dragonflybsd/di-24.1-jie-gai-shu.md)
-* [第 24.2 节 安装 DragonFlyBSD](di-24-zhang-dragonflybsd/di-24.2-jie-an-zhuang-yu-pei-zhi.md)
-* [第 24.3 节 配置 DragonFlyBSD](di-24-zhang-dragonflybsd/24.3-pei-zhi.md)
+* [第 24.1 节 DragonFly BSD 概述](di-24-zhang-dragonflybsd/di-24.1-jie-gai-shu.md)
+* [第 24.2 节 安装 DragonFly BSD](di-24-zhang-dragonflybsd/di-24.2-jie-an-zhuang-yu-pei-zhi.md)
+* [第 24.3 节 配置 DragonFly BSD](di-24-zhang-dragonflybsd/24.3-pei-zhi.md)
 
 ## 第 25 章 TwinCAT/BSD
 
