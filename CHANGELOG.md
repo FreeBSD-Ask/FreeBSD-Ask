@@ -26,7 +26,7 @@
   - “第 16.5 节 Wildfly”测试失败，见 [Bug 285956 - java/wildfly: service start fail, illegal group name](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=285956)
 - 2025.4.7
   - 全译现有所有安装后说明
-  - 从 2024.8 开始，目前对全书已重写 94%（按 Commit 数）
+  - 从 [2024.8](https://github.com/FreeBSD-Ask/FreeBSD-Ask/commit/c4d657fb586f91e9f8664ee1181a2711f7350d17) 开始，目前对全书已重写 94%（按 Commit 数）
   - 删除“第 11.3 节 散热器、风扇、鼓风机”，可能包含错误内容
 - 2025.4.6
   - “第 17.8 节 PostgreSQL 与 pgAdmin4”新增“深入 PostgreSQL 服务管理”
