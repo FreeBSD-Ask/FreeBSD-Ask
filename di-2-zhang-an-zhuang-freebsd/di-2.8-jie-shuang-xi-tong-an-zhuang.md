@@ -129,7 +129,7 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
   419426304       4063        - free -  (2.0M)
 ```
 
-### 挂载临时文件系统准备安装：
+### 挂载临时文件系统准备安装
   
 ```sh
 # mount -t tmpfs tmpfs /mnt
