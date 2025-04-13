@@ -8,6 +8,7 @@
   - “第 16.5 节 WildFly”测试基本成功，但是注意补丁仍未合并到主线，详见 [Bug 285956 - java/wildfly: service start fail, illegal group name](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=285956)。
   - 新增“第 24.3 节 配置 DragonFly BSD”
   - 重写“第 24.2 节 安装 DragonFly BSD”
+  - 目前对全书已重写 96.57%（按 Commit 数）
 - 2025.4.11
   - 通过段落间距调整，PDF 页数从 1209 到 1084，减少了 10.34% 的页面占用。
 - 2025.4.10
@@ -26,7 +27,7 @@
   - “第 16.5 节 Wildfly”测试失败，见 [Bug 285956 - java/wildfly: service start fail, illegal group name](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=285956)
 - 2025.4.7
   - 全译现有所有安装后说明
-  - 从 [2024.8](https://github.com/FreeBSD-Ask/FreeBSD-Ask/commit/c4d657fb586f91e9f8664ee1181a2711f7350d17) 开始，目前对全书已重写 94%（按 Commit 数）
+  - 从 [2024.8-3533 次](https://github.com/FreeBSD-Ask/FreeBSD-Ask/commit/c4d657fb586f91e9f8664ee1181a2711f7350d17) 开始，目前对全书已重写 94%（按 Commit 数），下同
   - 删除“第 11.3 节 散热器、风扇、鼓风机”，可能包含错误内容
 - 2025.4.6
   - “第 17.8 节 PostgreSQL 与 pgAdmin4”新增“深入 PostgreSQL 服务管理”
