@@ -348,12 +348,6 @@ root     syslogd     1021 7   udp4   *:514                 *:*
 
 该软件操作便捷。
 
-以下为几个配置要点：
-
-<img style="width:20%;"  src="../.gitbook/assets/wrdp1.png" />
-
-<img style="width:20%;"  src="../.gitbook/assets/wrdp2.png" />
-
 请注意，须将左上 🖱️ 改为 👆。默认的鼠标操作很不方便：或者你也可以选择手机 OTG 一个鼠标和键盘。
 
 ![Remote Desktop FreeBSD](../.gitbook/assets/wrdp3.png)
