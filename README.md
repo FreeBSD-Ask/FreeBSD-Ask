@@ -15,7 +15,7 @@ FreeBSD 是真正自由（Liberty）的**操作系统**，在这波谲云诡的�
 
 ### 加入 FreeBSD 中文社区（CFC）
 
-- **首要**联系方式为 **QQ 群**：787969044
+- **首要**联系方式为 **QQ 群**：[787969044](https://qm.qq.com/q/cX5mpJ36gg)（点击加群）
   - 微信群：因微信封闭性，须先加 QQ 群再联系 QQ 群主
 
 - Discord：<https://discord.gg/j7VhWrhp3e>（需要代理。可通过网页使用，无需安装软件）
