@@ -434,25 +434,7 @@ Do you trust the above certificate? (Y/T/N) y # 输入 y 按回车键以确认�
 ```sh
 ykla@ykla:~ $ xfreerdp 192.168.31.213 # 注意是 xfreerdp。
 [20:35:20:041] [1105:7c412000] [WARN][com.freerdp.client.common.cmdline] - ----------------------------------------
-[20:35:20:043] [1105:7c412000] [WARN][com.freerdp.client.common.cmdline] - Using deprecated command-line interface!
-[20:35:20:043] [1105:7c412000] [WARN][com.freerdp.client.common.cmdline] - This will be removed with FreeRDP 3!
-[20:35:20:043] [1105:7c412000] [WARN][com.freerdp.client.common.cmdline] - ----------------------------------------
-[20:35:20:043] [1105:7c412000] [WARN][com.freerdp.client.common.compatibility] - 192.168.31.213 -> /v:192.168.31.213
-[20:35:20:043] [1105:7c412000] [WARN][com.freerdp.client.common.compatibility] - 
-[20:35:20:045] [1105:7c412700] [INFO][com.freerdp.client.x11] - No user name set. - Using login name: ykla
-[20:35:21:445] [1105:7c412700] [INFO][com.freerdp.crypto] - creating directory /home/ykla/.config/freerdp
-[20:35:21:445] [1105:7c412700] [INFO][com.freerdp.crypto] - creating directory [/home/ykla/.config/freerdp/certs]
-[20:35:21:445] [1105:7c412700] [INFO][com.freerdp.crypto] - created directory [/home/ykla/.config/freerdp/server]
-[20:35:21:485] [1105:7c412700] [WARN][com.freerdp.crypto] - Certificate verification failure 'self-signed certificate (18)' at stack position 0
-[20:35:21:485] [1105:7c412700] [WARN][com.freerdp.crypto] - CN = DESKTOP-U72I6SS
-[20:35:21:485] [1105:7c412700] [ERROR][com.freerdp.crypto] - @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-[20:35:21:485] [1105:7c412700] [ERROR][com.freerdp.crypto] - @           WARNING: CERTIFICATE NAME MISMATCH!           @
-[20:35:21:485] [1105:7c412700] [ERROR][com.freerdp.crypto] - @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-[20:35:21:485] [1105:7c412700] [ERROR][com.freerdp.crypto] - The hostname used for this connection (192.168.31.213:3389) 
-[20:35:21:485] [1105:7c412700] [ERROR][com.freerdp.crypto] - does not match the name given in the certificate:
-[20:35:21:485] [1105:7c412700] [ERROR][com.freerdp.crypto] - Common Name (CN):
-[20:35:21:485] [1105:7c412700] [ERROR][com.freerdp.crypto] -    DESKTOP-U72I6SS
-[20:35:21:485] [1105:7c412700] [ERROR][com.freerdp.crypto] - A valid certificate for the wrong name should NOT be trusted!
+……省略一部分……
 Certificate details for 192.168.31.213:3389 (RDP-Server):
         Common Name: DESKTOP-U72I6SS
         Subject:     CN = DESKTOP-U72I6SS
