@@ -78,7 +78,7 @@ v2ray 也事先给了 `geosite.dat`、`geoip.dat` 两个资源文件，`geosite.
 
 比如直连规则下面配置可设置 geosite 中 cn 网址直连：
 
-```jsin
+```json
       {
         "domain": [
           "geosite:cn"
