@@ -20,8 +20,6 @@ FreeBSD 是真正自由（Liberty）的**操作系统**，在这波谲云诡的�
 
 - Discord：<https://discord.gg/j7VhWrhp3e>（需要代理。可通过网页使用，无需安装软件）
 
-- Telegram：[https://t.me/oh_my_BSD](https://t.me/oh_my_BSD)（需要代理）
-
 ### 历史
 
 《FreeBSD 从入门到跑路》诞生于 2021 年 3 月 14，由 FreeBSD 中文社区（CFC）[clean-master 清理大师](https://github.com/clean-master)发起，[ykla](https://github.com/ykla) 于翌日凌晨完成了教程的整理与发布。
