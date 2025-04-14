@@ -113,7 +113,7 @@
 
 >**为何要解压到 `/`？**
 >
->**因为 `/` 会将源代码解压到 `/usr/src`。如果把上面的路径改成 `/usr/src`，会把源代码解压到 `/usr/src/usr/src`。因为他这个压缩包是带路径压缩的。**
+>因为 `/` 会将源代码解压到 `/usr/src`。如果把上面的路径改成 `/usr/src`，会把源代码解压到 `/usr/src/usr/src`。因为他这个压缩包是带路径压缩的。
 
 >**技巧**
 >
@@ -141,7 +141,7 @@
 
 >**技巧**
 >
->**与绝大多数现代 Linux 不同，[FreeBSD](https://github.com/freebsd/freebsd-src/tree/main/contrib/nvi)（OpenBSD）上的 `vi` 是 ***[nvi](https://sites.google.com/a/bostic.com/keithbostic/keith-bostic?authuser=0)***（原版 **ex/vi** 的再实现），并不是指向任何 ***vim*** 的链接符号。基本上没人会用，一般亦无学习的必要，故有必要换成别的文本编辑器。**
+>与绝大多数现代 Linux 不同，[FreeBSD](https://github.com/freebsd/freebsd-src/tree/main/contrib/nvi)（OpenBSD）上的 `vi` 是 *[nvi](https://sites.google.com/a/bostic.com/keithbostic/keith-bostic?authuser=0)*（原版 **ex/vi** 的再实现），并不是指向任何 *vim* 的链接符号。基本上没人会用，一般亦无学习的必要，故有必要换成别的文本编辑器。
 >
 >```sh
 ># export  EDITOR=/usr/bin/ee # 切换 vi 为 ee。针对 FreeBSD 14 之前的版本或 csh 使用：setenv EDITOR /usr/bin/ee
