@@ -375,7 +375,7 @@ root@ykla:/usr/ports/ports-mgmt/portmaster # portmaster sysutils/htop  --show-wo
 
 将以下内容写入 `/etc/make.conf`，没有就 `touch` 新建一个。
 
-```json
+```ini
 FORCE_MAKE_JOBS=yes
 MAKE_JOBS_NUMBER=4
 ```
