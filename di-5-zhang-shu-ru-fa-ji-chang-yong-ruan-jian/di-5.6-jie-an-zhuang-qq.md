@@ -1,13 +1,11 @@
 # 第 5.6 节 QQ（Linux 版）
 
 
-## Linux QQ 3.x（electron）【可选：基于 RockyLinux 兼容层（FreeBSD Port）】
+## 基于 RockyLinux FreeBSD Port
 
 >**注意**
 >
 >请先参照本书其他章节先行安装 RockyLinux 兼容层（FreeBSD Port）
-
-
 
 ### 安装 rpm 工具
 
@@ -17,22 +15,20 @@
 
 或者：
 
-```
+```sh
 # cd /usr/ports/archivers/rpm4/ 
 # make install clean
 ```
 
 ### 下载安装 QQ
 
-下载 QQ：
-
-官方链接：[QQ Linux 版 - 轻松做自己](https://im.qq.com/linuxqq/index.shtml)
+- 下载 QQ，官方链接：[QQ Linux 版 - 轻松做自己](https://im.qq.com/linuxqq/index.shtml)
 
 ```sh
 root@ykla:/ # fetch https://dldir1.qq.com/qqfile/qq/QQNT/Linux/QQ_3.2.12_240919_x86_64_01.rpm # 写作本文时链接如此，请自行获取最新链接
 ```
 
-安装 QQ：
+- 安装 QQ：
 
 ```sh
 root@ykla:/ # cd /compat/linux/
@@ -50,18 +46,12 @@ root@ykla:/compat/linux #  /compat/linux/usr/bin/bash # 切换到兼容层的 sh
 bash-5.1# ldd /opt/QQ/qq 
 	linux-vdso.so.1 (0x00007fffffffe000)
 	libffmpeg.so => /opt/QQ/libffmpeg.so (0x000000080c000000)
-	libdl.so.2 => /lib64/libdl.so.2 (0x000000080105c000)
-	libpthread.so.0 => /lib64/libpthread.so.0 (0x0000000801061000)
 	....省略一部分...
-	libpangoft2-1.0.so.0 => /lib64/libpangoft2-1.0.so.0 (0x000000080d9d8000)
-	libfontconfig.so.1 => /lib64/libfontconfig.so.1 (0x000000080ddfd000)
-	libfribidi.so.0 => /lib64/libfribidi.so.0 (
-	libbrotlicommon.so.1 => /lib64/libbrotlicommon.so.1 (0x000000080f906000)
 ```
 
 可以看到 `ldd` 正常。
 
-## 启动 QQ
+### 启动 QQ
 
 ```sh
 root@ykla:/home/ykla # /compat/linux/opt/QQ/qq --no-sandbox  --in-process-gpu
@@ -70,9 +60,9 @@ root@ykla:/home/ykla # /compat/linux/opt/QQ/qq --no-sandbox  --in-process-gpu
 ![FreeBSD QQ](../.gitbook/assets/rlqq.png)
 
 
-## Linux QQ 3.x（electron）【可选：基于 ArchLinux 兼容层】
+## 基于 ArchLinux 兼容层
 
-请看第 30 章 Linux 兼容层的 ArchLinux 兼容层部分。  
+请看 Linux 兼容层的 ArchLinux 兼容层部分。  
 
 ```sh
 # 自行将脚本创建为 arch.sh，请参看兼容层相关章节。
@@ -98,9 +88,9 @@ $ yay -S linuxqq # 此时位于 Arch 兼容层！此时用户为 test
 # /opt/QQ/qq --no-sandbox --in-process-gpu  # 此时位于 Arch 兼容层！
 ```
 
-## Linux QQ 3.x（Electron）【可选：基于 Ubuntu 兼容层】
+## 基于 Ubuntu 兼容层
 
-> 请先安装 Ubuntu 兼容层，具体请看第 30 章。
+请先安装 Ubuntu 兼容层。
 
 ```sh
 # chroot /compat/ubuntu/ /bin/bash #进入 Ubuntu 兼容层
@@ -134,19 +124,21 @@ $ yay -S linuxqq # 此时位于 Arch 兼容层！此时用户为 test
 >
 > 参见《Linux 兼容层故障排除与未竟事宜》
 >
-> **如果退出后进不去，请加参数 `--in-process-gpu` 执行之即可，即 `/bin/qq  --no-sandbox --in-process-gpu`**。
+> 如果退出后进不去，请加参数 `--in-process-gpu` 执行之即可，即 `/bin/qq  --no-sandbox --in-process-gpu`。
 
 ![FreeBSD QQ](../.gitbook/assets/qq3.0.png)
 
-## QQ 闪退
+## 故障排除
+
+### QQ 闪退
 
 在兼容层内部：
 
-```bash
+```sh
 $ rm ~/.config/QQ/crash_files/*
 $ chmod a-wx ~/.config/QQ/crash_files/
 ```
 
-### 参考文献
+#### 参考文献
 
-- [Linux下新QQ Bug＆Fix一记（闪退相关）](https://zhuanlan.zhihu.com/p/645895811)
+- [Linux 下新 QQ Bug＆Fix 一记（闪退相关）](https://zhuanlan.zhihu.com/p/645895811)
