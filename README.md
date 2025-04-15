@@ -28,7 +28,7 @@ FreeBSD 是真正自由（Liberty）的**操作系统**，在这波谲云诡的�
 
 由于编写者水平所限，书中缺点和谬误之处自不可免。
 
-如遇问题：请发送邮件至 `yklaxds@gmail.com`（优先）或联系 QQ 群群主。欢迎通过在桌面端网页右下方或底部左下方有当前页面的 GitHub 提交 PR。
+如遇问题：请发送邮件至 [yklaxds@gmail.com](mailto:yklaxds@gmail.com)（优先）或联系 QQ 群群主。欢迎通过在桌面端网页右下方或底部左下方有当前页面的 GitHub 提交 PR。
 
 ## 贡献指南与开放任务
 
