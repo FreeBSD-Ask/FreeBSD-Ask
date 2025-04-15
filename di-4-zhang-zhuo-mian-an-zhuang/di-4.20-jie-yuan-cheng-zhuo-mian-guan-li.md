@@ -1,15 +1,5 @@
 # 第 4.20 节 远程桌面
 
-## VNC 与 RPD（XRDP）对比
-
-XRDP 是 Microsoft RDP 的开源实现。XRDP 不支持屏幕镜像。
-
-### 参考文献
-
-- [xrdp: an open source RDP server](https://github.com/neutrinolabs/xrdp)
-- [VNC 还是 RDP? 云上的远程桌面究竟该如何选](https://aws.amazon.com/cn/blogs/china/vnc-or-rdp-how-to-choose-a-remote-desktop-on-the-cloud/)
-- [UOS_远程桌面_xrdp_Xorg_x11vnc](https://www.cnblogs.com/osnosn/p/16690589.html)
-
 ## VNC（被控端）
 
 ### x11vnc（镜像屏幕）
