@@ -1,6 +1,6 @@
 # 致谢
 
-本书初版架构基于贴吧用户“Smile_Zheng”《操作系统笔记》分享的[早期版本](https://tieba.baidu.com/p/7424071955)。主要引用了防火墙章节、用户与权限。【其引用了《FreeBSD 技术内幕》（*[FreeBSD Unleashed](https://www.amazon.com/FreeBSD-Unleashed-2nd-Brian-Tiemann/dp/0672324563)*），ISBN 9787111102010，机械工业出版社，2002，作者是 Brian Tiemann、Michael Urban，真实译者不详（智慧东方工作室）】以及🎀🌸星不萌🌸🎀的博客文章（已佚）。
+本书初版架构基于贴吧用户“Smile_Zheng”《操作系统笔记》分享的[早期版本](https://tieba.baidu.com/p/7424071955)。主要引用了防火墙章节、用户与权限。【其引用了《FreeBSD 技术内幕》（*[FreeBSD Unleashed](https://www.amazon.com/FreeBSD-Unleashed-2nd-Brian-Tiemann/dp/0672324563)*），ISBN 9787111102010，机械工业出版社，2002，作者是 Brian Tiemann、Michael Urban，译者智慧东方工作室】以及🎀🌸星不萌🌸🎀的博客文章（已佚）。
 
 ## 致歉
 
@@ -29,7 +29,7 @@ Ubuntu 吧前吧主 Simple 曾建议修改项目的章节文件名与许可协�
 ## 文档贡献者名单（A-Z）
 
 - [5gura](https://github.com/5gura)  
-- Alex6357 [(GitHub)](https://github.com/Alex6357)  
+- [Alex6357](https://github.com/Alex6357)
 - April Simone🍥  
 - [bduath](https://github.com/bduath)  
 - [blu10ph](https://github.com/blu10ph)  
@@ -40,7 +40,7 @@ Ubuntu 吧前吧主 Simple 曾建议修改项目的章节文件名与许可协�
 - [fanyang1997](https://github.com/fanyang1997)  
 - [fjh1997](https://github.com/fjh1997)  
 - freyr  
-- gua-leopard [(GitHub)](https://github.com/gua-leopard)  
+- [gua-leopard](https://github.com/gua-leopard)
 - hangyongcong  
 - heguru5  
 - isNijikawa  
@@ -48,7 +48,7 @@ Ubuntu 吧前吧主 Simple 曾建议修改项目的章节文件名与许可协�
 - Jiacong Fang（[zldrobit](https://github.com/zldrobit)）
 - kuntop  
 - [李大鹏](https://dapeng.li/)  
-- liguangsheng [(GitHub)](https://github.com/liguangsheng)  
+- [liguangsheng](https://github.com/liguangsheng)
 - livrth  
 - [凌莞](https://clansty.com)  
 - [柳离枝](https://github.com/liulitchi)  
