@@ -123,11 +123,12 @@ $ chmod 755 ~/.vnc/xstartup
 
 - 接下来在终端执行命令
 -
+
 ```sh
 $ vncserver
 ```
 
-或 
+或
 
 ```sh
 $ vncserver :1
@@ -269,6 +270,7 @@ your environment.
 #### set environment variables here if you want
 export LANG=zh_CN.UTF-8
 ```
+
 ### 故障排除与未竟事宜
 
 - XRDP 没声音
@@ -386,6 +388,7 @@ Do you trust the above certificate? (Y/T/N) y # 输入 y 按回车键以确认�
 ```
 
 `xfreerdp3 /u:ykla /p:z  /v:192.168.31.213`：
+
 - `xfreerdp3`，注意前面有个 `x`。
 - `/u:ykla`，`/u:` 即 Username 用户名。`ykla` 是我 Windows 的登录名
 - `/p`，即 Password 密码。`z` 是我 Windows 用户 `ykla` 的登录密码
@@ -395,7 +398,7 @@ Do you trust the above certificate? (Y/T/N) y # 输入 y 按回车键以确认�
 
 #### 参考文献
 
-- [FreeRDP User Manual ](https://github.com/awakecoding/FreeRDP-Manuals/blob/master/User/FreeRDP-User-Manual.markdown)，里面命令说明和一些用法示例
+- [FreeRDP User Manual](https://github.com/awakecoding/FreeRDP-Manuals/blob/master/User/FreeRDP-User-Manual.markdown)，里面命令说明和一些用法示例
 
 
 ### freerdp2（旧稳定版，支持 NLA）

@@ -131,18 +131,24 @@ FreeBSD 15 CUEERNT，编译使用 `drm-66-kmod`，支持情况同 Linux 6.6。
 请按如下进行操作：
 
 - 如果为 intel 核芯显卡：
+
   ```sh
   # sysrc -f /etc/rc.conf kld_list+=i915kms
   ```
+
 - AMD
   - 如果是 HD7000 以后的 AMD 显卡，添加 `amdgpu`（大部分人应该使用这个，如果没用再换 `radeonkms`）
+
     ```sh
     # sysrc -f /etc/rc.conf kld_list+=amdgpu
     ```
+
   - 如果是 HD7000 以前的 AMD 显卡，添加 `kld_list="radeonkms"`（这是十多年前的显卡了）
+
     ```sh
     # sysrc -f /etc/rc.conf kld_list+=radeonkms
     ```
+
 ### 故障排除与未竟事宜
 
 >**注意**

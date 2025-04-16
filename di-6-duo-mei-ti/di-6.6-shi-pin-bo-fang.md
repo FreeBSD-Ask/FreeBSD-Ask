@@ -58,7 +58,7 @@ SMPlayer 是 MPlayer（纯命令行）的 QT 前端。推荐使用。
 
 Kodi 曾用名为 XBMC。
 
-### 安装 Kodi 
+### 安装 Kodi
 
 - 使用 pkg 安装：
   

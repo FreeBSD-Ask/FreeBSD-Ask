@@ -102,7 +102,7 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 
 >**思考题**
 >
->若你使用 NVMe，则正常新装系统（UEFI+GPT，不带 freebsd-boot 分区）默认参数应是 `12`。但是 4K 对齐究竟对齐的是什么？因为SSD 固态硬盘并没有所谓扇区。
+>若你使用 NVMe，则正常新装系统（UEFI+GPT，不带 freebsd-boot 分区）默认参数应是 `12`。但是 4K 对齐究竟对齐的是什么？因为 SSD 固态硬盘并没有所谓扇区。
 
 ### 创建分区
 
@@ -209,6 +209,7 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 # 配置 swap 分区挂载，注意替换 /dev/nda0p5，可以用命令 gpart show nda0 看一下
 # printf "/dev/nda0p5\tnone\tswap\tsw\t0\t0\n" >> /tmp/bsdinstall_etc/fstab
 ```
+
 >**技巧**
 >
 >`\t` 是一个转义字符，表示按了一次 Tab 键，此处用于对齐分割，换成空格也是一样的效果。你也可以使用 ee 编辑器手动写入（`ee /tmp/bsdinstall_etc/fstab`）对应条目：
