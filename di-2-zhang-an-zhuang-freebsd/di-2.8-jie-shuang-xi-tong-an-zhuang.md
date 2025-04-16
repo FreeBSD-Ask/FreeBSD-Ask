@@ -102,7 +102,7 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 
 >**思考题**
 >
->若你使用 NVMe，则正常新装系统（UEFI+GPT，不带 freebsd-boot 分区）默认参数应是 `12`。但是 4K 对齐究竟对齐的是什么？因为SSD 固态硬盘并没有所谓扇区。
+>若你使用 NVMe，则正常新装系统（UEFI+GPT，不带 freebsd-boot 分区）默认参数应是 `12`。但是 4K 对齐究竟对齐的是什么？因为 SSD 固态硬盘并没有所谓扇区。
 
 ### 创建分区
 
