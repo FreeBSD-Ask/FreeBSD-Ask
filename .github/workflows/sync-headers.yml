@@ -1,0 +1,61 @@
+name: 🔗 从 SUMMARY.md 更新一级标题
+
+on:
+  push:
+    paths:
+      - 'SUMMARY.md'
+  workflow_dispatch:
+
+jobs:
+  verify-and-sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Sync headers
+        id: sync
+        run: |
+          # 设置修改标志
+          CHANGED="false"
+
+          # 使用进程替换，避免管道导致子 Shell 中修改变量
+          while IFS= read -r line; do
+            # 提取标题和文件路径
+            title=$(sed -n 's/.*\[\([^]]*\)\].*/\1/p' <<< "$line")
+            path=$(sed -n 's/.*](\([^)]*\)).*/\1/p' <<< "$line")
+
+            # 跳过无效条目
+            [ -z "$title" ] || [ ! -f "$path" ] && continue
+
+            # 获取文件第一行并清理格式
+            first_line=$(head -n 1 "$path" | sed 's/^#*//; s/^[[:space:]]*//; s/[[:space:]]*$//')
+            clean_title=$(sed 's/^[[:space:]]*//; s/[[:space:]]*$//' <<< "$title")
+
+            # 比较标题并更新文件
+            if [ "$first_line" != "$clean_title" ]; then
+              echo "Updating $path: '$first_line' -> '$clean_title'"
+              
+              # 使用临时文件进行安全替换
+              temp_file=$(mktemp)
+              echo "# $clean_title" > "$temp_file"
+              tail -n +2 "$path" >> "$temp_file"
+              mv -f "$temp_file" "$path"
+
+              git add "$path"
+              CHANGED="true"
+            fi
+          done < <(grep -E '^\* \[' SUMMARY.md)
+
+          # 输出修改状态
+          echo "changed=$CHANGED" >> $GITHUB_OUTPUT
+
+      - name: Commit changes
+        if: steps.sync.outputs.changed == 'true'
+        run: |
+          git config --global user.name "ykla"
+          git config --global user.email "yklaxds@gmail.com"
+          git commit -m "chore: sync headers with SUMMARY.md"
+          git push
