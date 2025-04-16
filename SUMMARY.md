@@ -4,7 +4,8 @@
 * [编辑日志](CHANGELOG.md)
 * [目录](mu-lu.md)
 * [致谢](zhi-xie.md)
-* [序言](xu-yan.md)
+* [序言一：（初版代序）](xu-yan-1.md)
+* [序言二：回到复制粘贴，面向教程本身（2025 代序）](xu-ya-2.md)
 * [前言](qian-yan.md)
 
 ## 第 1 章 FreeBSD 初见
