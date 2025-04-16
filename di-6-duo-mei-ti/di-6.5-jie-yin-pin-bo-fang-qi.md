@@ -3,6 +3,7 @@
 ## Audacious
 
 ### 安装 Audacious
+
 - 使用 pkg 安装：
 
 ```sh
@@ -19,6 +20,7 @@
 # cd /usr/ports/multimedia/audacious/ && make install clean
 # cd /usr/ports/multimedia/audacious-plugins/ && make install clean
 ```
+
 ### 使用
 
 - 测试 `.m4a`（杜比 AC-4 编码）、`.flac`、`.av3a`（AVS2/AVS3 编码 ）音乐：

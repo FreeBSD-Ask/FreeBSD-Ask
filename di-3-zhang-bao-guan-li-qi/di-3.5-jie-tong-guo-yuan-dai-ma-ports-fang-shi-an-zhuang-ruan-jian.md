@@ -474,6 +474,7 @@ lrwxr-xr-x   1 root wheel 21 Sep 20 00:29 g++13 -> /usr/local/bin/ccache
 lrwxr-xr-x   1 root wheel 21 Sep 20 00:29 gcc13 -> /usr/local/bin/ccache
 drwxr-xr-x   2 root wheel 15 Sep 20 02:02 world
 ```
+
 ---
 
 - 修改 `/etc/make.conf`，加入下面一行：
