@@ -10,6 +10,7 @@
   - 从“第 1.1 节 操作系统的历程：UNIX、Unix-like、Linux & FreeBSD”拆分出“第 1.2 节 FreeBSD 简史”
   - 重写：第 2.6 节 云服务器安装 FreeBSD（基于腾讯云轻量云）
   - 拆分序言
+  - 引入 GitHub Action：🔗 从 SUMMARY.md 更新一级标题。用于检查 SUMMARY 标题和对应文件的一级标题的符合情况
 - 2025.4.15
   - 格式化：第 5.6 节 QQ（Linux 版）
   - 第 4.20 节 远程桌面：删除剩余的“VNC 与 RPD（XRDP）对比”部分
