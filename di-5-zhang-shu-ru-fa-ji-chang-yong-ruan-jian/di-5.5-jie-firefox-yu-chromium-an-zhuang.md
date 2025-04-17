@@ -4,11 +4,13 @@
 
 ### 安装普通版本（更新频繁）
 
+- 使用 pkg 安装
+
 ```sh
 # pkg install firefox
 ```
 
-或者
+- 或者使用 Ports
 
 ```sh
 # cd /usr/ports/www/firefox
@@ -17,11 +19,13 @@
 
 ### 安装长期支持版本
 
+- 使用 pkg 安装
+
 ```sh
 pkg install firefox-esr
 ```
 
-或者
+- 或者使用 Ports
 
 ```sh
 #cd /usr/ports/www/firefox-esr/
@@ -32,11 +36,15 @@ pkg install firefox-esr
 
 Chromium 不是 chrome，但在 FreeBSD 中启动命令是 `chrome`。
 
+---
+
+- 使用 pkg 安装
+
 ```sh
 # pkg install chromium
 ```
 
-或者
+- 或者使用 Ports
 
 ```sh
 # cd /usr/ports/www/chromium
@@ -49,7 +57,7 @@ Chromium 不是 chrome，但在 FreeBSD 中启动命令是 `chrome`。
 
 
 
-## Chromium 使用 Google 账号同步
+## 附录：Chromium 使用 Google 账号同步
 
 >**技巧**
 >
