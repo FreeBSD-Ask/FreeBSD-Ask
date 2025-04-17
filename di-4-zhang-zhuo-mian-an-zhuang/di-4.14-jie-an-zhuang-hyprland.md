@@ -40,6 +40,12 @@ Hyprland 是 Wayland 的一个合成器，支持窗口透明、模糊、圆角�
 - slurp 用来在屏幕上选区
 - grim 用来捕获屏幕截图
 
+- 启动服务：
+
+```sh
+# service seatd enable
+```
+
 ## 首次启动 Hyprland
 
 > **重要**：
