@@ -5,7 +5,7 @@ on:
     # 当根目录下的 SUMMARY.md 被修改时触发工作流
     paths:
       - 'SUMMARY.md'
-
+  workflow_dispatch:
 jobs:
   update-mu-lu:
     runs-on: ubuntu-latest

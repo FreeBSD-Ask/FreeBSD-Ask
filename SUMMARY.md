@@ -163,7 +163,7 @@
 * [第 16.3 节 Gitlab-EE](di-16-zhang-fu-wu-qi/16.3-gitlab-ee.md)
 * [第 16.4 节 时间服务](di-16-zhang-fu-wu-qi/di-16.4-jie-shi-jian-fu-wu.md)
 * [第 16.5 节 WildFly](di-16-zhang-fu-wu-qi/di-16.5-jie-wildfly.md)
-* [第 16.6 节 rsync 同步服务](di-16-zhang-fu-wu-qi/di-16.6-jie-rsync-tong-bu-fu-wu.md)
+* [第 16.6 节 Rsync 同步服务](di-16-zhang-fu-wu-qi/di-16.6-jie-rsync-tong-bu-fu-wu.md)
 * [第 16.7 节 Samba 服务器](di-16-zhang-fu-wu-qi/di-16.7-jie-samba-fu-wu-qi.md)
 * [第 16.8 节 NFS 服务器](di-16-zhang-fu-wu-qi/di-16.8-jie-nfs-fu-wu-qi.md)
 * [第 16.9 节 Webmin](di-16-zhang-fu-wu-qi/di-16.9-jie-webmin.md)
