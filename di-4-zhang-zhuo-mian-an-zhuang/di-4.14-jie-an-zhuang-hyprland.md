@@ -42,10 +42,13 @@ Hyprland 是 Wayland 的一个合成器，支持窗口透明、模糊、圆角�
 - grim 用来捕获屏幕截图
 - kitty 终端
 
+---
+
 - 启动服务：
 
 ```sh
 # service seatd enable
+# service dbus enable
 ```
 
 ## 首次启动 Hyprland
@@ -59,9 +62,6 @@ Hyprland 是 Wayland 的一个合成器，支持窗口透明、模糊、圆角�
 > ```sh
 > export XDG_RUNTIME_DIR=/var/run/user/`id -u`
 > ```
->
-> 启用 dbus：`service dbus enable`
->
 > 重启： `reboot`
 >
 > Ctrl+Alt+F2 进入 tty，执行 `ck-launch-session Hyprland`，这会在 `~/.config/hypr` 生成一个默认配置文件。
