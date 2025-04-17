@@ -51,6 +51,10 @@ Chromium 不是 chrome，但在 FreeBSD 中启动命令是 `chrome`。
 
 ## Chromium 使用 Google 账号同步
 
+>**技巧**
+>
+>有项目甚至认为目前移除的组件还不够干净彻底，即 Port `www/ungoogled-chromium`。该软件移除了更多不透明以及和谷歌有关的部分。
+
 - 首先，`Chromium` 并非 `Google Chrome`，前者是 The Chromium Project 在 [BSD 3-Clause "New" or "Revised" License](https://github.com/chromium/chromium/blob/main/LICENSE)下发布的开源与自由软件，后者是 Google LLC 的专有软件。
 - 由于是开源产物，Chromium 与 Google Chrome 的关系约等于 AOSP 之于 Pixel UI。Chromium 没有直接从 Google Chrome 的在线插件商店开箱即用的下载安装插件的功能，只能手动从本地安装 crx（加入同步后可自动同步浏览器插件）。亦没有自带的 Google 翻译插件等等，更多两者的不同之处可以[查看这个网页](https://chromium.googlesource.com/chromium/src/+/master/docs/chromium_browser_vs_google_chrome.md)
 
