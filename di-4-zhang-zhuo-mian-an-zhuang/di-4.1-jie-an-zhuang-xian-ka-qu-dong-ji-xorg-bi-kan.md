@@ -40,7 +40,7 @@ Wayland 是 xorg 的替代品，但是目前 BSD 上的 Wayland 支持欠佳。
 
 >**警告**
 >
->对于没有显卡直通的笔记本，必须安装英特尔 drm！
+>对于没有显卡直通的笔记本，必须安装 drm！
 
 >**注意**
 >
@@ -149,7 +149,7 @@ FreeBSD 15 CUEERNT，编译使用 `drm-66-kmod`，支持情况同 Linux 6.6。
     # sysrc -f /etc/rc.conf kld_list+=radeonkms
     ```
 
-### 故障排除与未竟事宜
+#### 故障排除与未竟事宜
 
 >**注意**
 >
@@ -165,8 +165,7 @@ FreeBSD 15 CUEERNT，编译使用 `drm-66-kmod`，支持情况同 Linux 6.6。
   
 即找不到路径，请先获取 ports，请看前文。
 
-
-#### 视频硬解（重要）
+### 视频硬解（重要）
 
 如果不配置此节，blender 等软件将无法运行！直接“段错误”。
 
@@ -180,6 +179,7 @@ FreeBSD 15 CUEERNT，编译使用 `drm-66-kmod`，支持情况同 Linux 6.6。
 # cd /usr/ports/x11-drivers/xf86-video-intel/ && make install clean
 # cd /usr/ports/multimedia/libva-intel-media-driver/ && make install clean
 ```
+
 
 ### 亮度调节
 
