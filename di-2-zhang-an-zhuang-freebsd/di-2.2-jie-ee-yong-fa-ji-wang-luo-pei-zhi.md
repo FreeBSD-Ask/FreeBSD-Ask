@@ -61,6 +61,11 @@ root@ykla:~ #
 
 ①：root 是 UNIX 中的最高权限。我们常说的安卓 root，苹果越狱，Kindle 越狱等等都是为了获取这个 root 权限权限。
 
+### 参考文献
+
+- [What is TTY in Linux?](https://itsfoss.com/what-is-tty-in-linux/)，翻译在 [Linux 黑话解释：TTY 是什么？](https://linuxstory.org/linux-blackmail-explained-what-is-tty/)。
+
+
 ### 故障排除与未竟事宜
 
 - 若用户名正确，但密码不正确：
@@ -82,6 +87,8 @@ login:
 ```
 
 如果你连用户名都不知道，建议你找回 root 密码后看看系统中有哪些用户账户或者重装系统比较快。
+
+
 
 ## 账户切换与退出登录
 
@@ -117,9 +124,6 @@ login:
 
 
 
-### 参考文献
-
-- [What is TTY in Linux?](https://itsfoss.com/what-is-tty-in-linux/)，翻译在 [Linux 黑话解释：TTY 是什么？](https://linuxstory.org/linux-blackmail-explained-what-is-tty/)。
 
 ## 命令行格式
 
