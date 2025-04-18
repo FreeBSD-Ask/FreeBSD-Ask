@@ -995,7 +995,7 @@ FreeBSD 的设计更接近传统 UNIX 的行为。
 关机：
 - 使用 `shutdown now` 将不会关机，而是切换到“单用户模式”，将提示：`Enter full pathname of shell or RETURN for /bin/sh :` 回车后进入单用户模式；
 - 使用 `shutdown -h now` 将不会彻底断电，只会停止系统的运行，将提示：`The operating system has halted. Please press any key to reboot.` 此处按任意键可重启系统；
-- 正确的关机并断电命令是 `poweroff`，等同于命令 `shutdown -p now​`。
+- 正确的关机并断电命令是 `poweroff`，等同于命令 `shutdown -p now`。
 
 重启：
 - 重启命令和 Linux 一致，都是 `reboot`，但是参数不通用。
