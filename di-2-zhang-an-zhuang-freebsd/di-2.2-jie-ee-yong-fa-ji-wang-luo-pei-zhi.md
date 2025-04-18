@@ -948,19 +948,7 @@ $ ls *  # 确认匹配的文件
 $ rm -rf *
 ```
 
-## BSD 风格的 make/grep/sed/awk
-
-FreeBSD 的 [make](https://www.freebsd.org/cgi/man.cgi?query=make&apropos=0&sektion=0&manpath=FreeBSD+13.1-RELEASE+and+Ports&arch=default&format=html)/[grep](https://www.freebsd.org/cgi/man.cgi?query=grep&sektion=&n=1)/[sed](https://www.freebsd.org/cgi/man.cgi?query=sed&apropos=0&sektion=0&manpath=FreeBSD+13.1-RELEASE+and+Ports&arch=default&format=html)/[awk](https://www.freebsd.org/cgi/man.cgi?query=awk&apropos=0&sektion=0&manpath=FreeBSD+13.1-RELEASE+and+Ports&arch=default&format=html) 与 GNU 那套有所不同。详见 man 手册。
-
-示例：
-
-```sh
-sed -i '' 's/quarterly/latest/g' /etc/pkg/FreeBSD.conf
-```
-
-必须加一个空的参数''，不能省略。
-
-## 逻辑运算符 `&&`
+### 逻辑运算符 `&&`
 
 `&&`（逻辑与，AND）：只有之前的命令执行成功了，后边的命令才会执行，否则中断
 
@@ -968,7 +956,7 @@ sed -i '' 's/quarterly/latest/g' /etc/pkg/FreeBSD.conf
 
 使用场景：执行一连串有依赖关系的命令。比如你得先刷新软件源才能更新系统，然后才能重启。以 Ubuntu 为例：`sudo apt update -y && sudo apt upgrade -y && sudo reboot`。只有前面的命令执行成功，方才会执行后面的命令
 
-## 逻辑运算符 `||` 
+### 逻辑运算符 `||` 
 
 `||`（逻辑或，OR）：只有之前的命令执行错误了，后边的命令才会执行，否则中断
 
@@ -985,6 +973,20 @@ sed -i '' 's/quarterly/latest/g' /etc/pkg/FreeBSD.conf
 >`touch a.txt && touch b.txt || touch c.txt || reboot` 是什么意思？
 >
 >如果 `touch a.txt` 失败了会执行后面的哪个操作？
+
+## BSD 风格的 make/grep/sed/awk
+
+FreeBSD 的 [make](https://www.freebsd.org/cgi/man.cgi?query=make&apropos=0&sektion=0&manpath=FreeBSD+13.1-RELEASE+and+Ports&arch=default&format=html)/[grep](https://www.freebsd.org/cgi/man.cgi?query=grep&sektion=&n=1)/[sed](https://www.freebsd.org/cgi/man.cgi?query=sed&apropos=0&sektion=0&manpath=FreeBSD+13.1-RELEASE+and+Ports&arch=default&format=html)/[awk](https://www.freebsd.org/cgi/man.cgi?query=awk&apropos=0&sektion=0&manpath=FreeBSD+13.1-RELEASE+and+Ports&arch=default&format=html) 与 GNU 那套有所不同。详见 man 手册。
+
+示例：
+
+```sh
+sed -i '' 's/quarterly/latest/g' /etc/pkg/FreeBSD.conf
+```
+
+必须加一个空的参数''，不能省略。
+
+
 
 ## 关机与重启
 
