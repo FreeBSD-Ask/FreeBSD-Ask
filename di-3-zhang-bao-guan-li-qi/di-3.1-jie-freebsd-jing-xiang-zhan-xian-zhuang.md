@@ -4,7 +4,6 @@
 
 主要问题在于官方无论如何也不开放 rsync 且不接受镜像站的官方二级镜像申请。
 
-
 根据目前可查信息，FreeBSD 项目至迟在 2015 年 5 月就停止了公开 rsync。参见 [Add small section explaining we are not allowing public mirrors of packages and possible workarounds.](https://reviews.freebsd.org/R9:3418e47d2f6cd8dd04ac934f38d136ba9101a5a8)。给出的说明理由是：
 
 >Due to very high requirements of bandwidth, storage and adminstration the FreeBSD; Project has decided not to allow public mirrors of packages.
@@ -35,9 +34,11 @@
 
 ---
 
-多次联系均无二次联系，如邮件列表，大概五次，其中三次回应，两次无回应。其主要回复内容为“深表歉意，但台湾地区已有镜像”。并未直接说明如何镜像，此外特别向中国科学技术大学 Linux 用户协会（其中其他镜像站并未理会，如清华大学 TUNA 协会）申请镜像，对方提到，FreeBSD 也是无人回应。中国大陆目前没有 FreeBSD 官方镜像站。
+目前中国大陆没有 FreeBSD 官方镜像站。
 
-如有朋友们能够联系 FreeBSD 官方，还望早日开放镜像，非官方镜像站不能解决问题。此外，Kernel 或者 Base system 源码 SVN 速度更加感人，除非安装系统的时候安装源码，否则……国内网络环境如此，提升速度采取代理方式也是基本功，但是，不能够要求每个人都一样，提供便捷的网络服务，方便更多人的使用，才是发展 FreeBSD 的核心要义。请朋友们注意这一点，镜像站是基础设施，就像那句话，“要想富，先修路”，如果通往 FreeBSD 的康庄大道不通，则全是荆棘的小道。在此号召能够联系到 FreeBSD 官方的朋友们，首先解决这一基本问题。
+多次联系均无二次联系，如邮件列表，大概五次，其中三次回应，两次无回应。其主要回复内容为“深表歉意，但台湾地区已有镜像”。并未直接说明如何镜像，此外特别向中国科学技术大学 Linux 用户协会（其中其他镜像站并未理会，如清华大学 TUNA 协会）申请镜像，对方提到，FreeBSD 也是无人回应。
+
+国内网络环境如此，提升速度采取代理方式也是基本功，但是，不能够要求每个人水平都一样，提供便捷的网络服务，方便更多人的使用，才是发展 FreeBSD 的核心要义。请朋友们注意这一点，镜像站是基础设施，就像那句话，“要想富，先修路”，如果通往 FreeBSD 的康庄大道不通，则全是荆棘的小道。在此号召能够联系到 FreeBSD 官方的朋友们，首先解决这一基本问题。
 
 目前开放的非官方 issue 镜像申请：
 
