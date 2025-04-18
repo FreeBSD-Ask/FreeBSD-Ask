@@ -962,6 +962,41 @@ sed -i '' 's/quarterly/latest/g' /etc/pkg/FreeBSD.conf
 
 必须加一个空的参数''，不能省略。
 
+## 逻辑运算符 `&&`
+
+`&&`（逻辑与，AND）：只有之前的命令执行成功了，后边的命令才会执行，否则中断
+
+简单理解：你得先做饭才能吃饭，然后才能刷锅——> 做饭 `&&` 吃饭 `&&` 刷锅。如果你没有做饭，自然谈不上怎么刷锅。
+
+使用场景：执行一连串有依赖关系的命令。比如你得先刷新软件源才能更新系统，然后才能重启。以 Ubuntu 为例：`sudo apt update -y && sudo apt upgrade -y && sudo reboot`。只有前面的命令执行成功，方才会执行后面的命令
+
+## 逻辑运算符 `||` 
+
+`||`（逻辑或，OR）：只有之前的命令执行错误了，后边的命令才会执行，否则中断
+
+简单理解：你要么做饭，要么点外卖，要么出去吃——> 做饭 `||` 点外卖 `||` 出去吃。如果你不会做饭，你就只能点外卖了，如果外卖没有好吃的，你就只能出去吃了。
+
+使用场景：如果一个命令一直执行失败，但是你偏要他一直执行。你就写很多的 `||`，比如 `make BATCH=yes install || make BATCH=yes install || make BATCH=yes install || make BATCH=yes install`……当一次 `make BATCH=yes install` 失败后仍然会执行下一个 `make BATCH=yes install`。即之前的命令执行失败了，转而执行后面的命令
+
+## 关机与重启
+
+​FreeBSD 和 Linux 的 shutdown 命令在语法和行为上有一些重大差异，如果你有使用 Linux 的经验，那么是不能照抄的。
+
+FreeBSD 的设计更接近传统 UNIX 的行为。
+
+关机：
+- 使用 `shutdown now` 将不会关机，而是切换到“单用户模式”，将提示：`Enter full pathname of shell or RETURN for /bin/sh :` 回车后进入单用户模式；
+- 使用 `shutdown -h now` 将不会彻底断电，只会停止系统的运行，将提示：`The operating system has halted. Please press any key to reboot.` 此处按任意键可重启系统；
+- 正确的关机并断电命令是 `poweroff`，等同于命令 `shutdown -p now​`。
+
+重启：
+- 重启命令和 Linux 一致，都是 `reboot`，但是参数不通用。
+- 在 FreeBSD 下 `roboot` 等同于 `shutdown -r now`
+
+>**注意**
+>
+>关机与重启都需要 root 权限才能执行。
+
 ## UNIX 与 Windows 文件名规范之差异
 
 许多在 FreeBSD 中可用的文件或文件名在 Windows 中都是不被允许的（即非法字符）。这些你经常会碰到——如果你使用 Git 在 Windows 上拉取项目。
