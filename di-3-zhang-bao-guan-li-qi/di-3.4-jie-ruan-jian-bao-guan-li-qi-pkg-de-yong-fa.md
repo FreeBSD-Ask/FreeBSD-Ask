@@ -15,6 +15,11 @@ FreeBSD 二进制包管理器目前是 pkg，即“Package”，软件包的意�
 >
 > 偏好图形化的用户可以安装使用 `ports-mgmt/octopkg`，该工具是 pkg 的图形化前端，由 ghostbsd 开发。
 
+
+>**技巧**
+>
+> 如果需要查询一个软件包在 FreeBSD 中的具体情况可以这样用：谷歌或者必应（必应很多时候搜索不出来）搜索“freebsd ports 包名”。如果无法使用，可以直接在网站里搜索包名 [https://www.freshports.org/](https://www.freshports.org/)。
+
 ## 安装 pkg
 
 >**技巧**
