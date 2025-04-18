@@ -962,7 +962,13 @@ $ rm -rf *
 
 简单理解：你要么做饭，要么点外卖，要么出去吃——> 做饭 `||` 点外卖 `||` 出去吃。如果你不会做饭，你就只能点外卖了，如果外卖没有好吃的，你就只能出去吃了。
 
-使用场景：如果一个命令一直执行失败，但是你偏要他一直执行。你就写很多的 `||`，比如 `make BATCH=yes install || make BATCH=yes install || make BATCH=yes install || make BATCH=yes install`……当一次 `make BATCH=yes install` 失败后仍然会执行下一个 `make BATCH=yes install`。即之前的命令执行失败了，转而执行后面的命令
+使用场景：如果一个命令一直执行失败，但是你偏要他一直执行。你就可以写很多的 `||`，防止一次失败后反复手动再次执行该命令，比如：
+
+```sh
+make BATCH=yes install || make BATCH=yes install || make BATCH=yes install || make BATCH=yes install
+```
+
+当一次 `make BATCH=yes install` 失败后仍然会执行下一个 `make BATCH=yes install`。即之前的命令执行失败了，转而执行后面的命令……
 
 >**技巧**
 >
