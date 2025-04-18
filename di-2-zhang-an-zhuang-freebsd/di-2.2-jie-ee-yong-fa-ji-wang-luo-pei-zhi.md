@@ -61,6 +61,11 @@ root@ykla:~ #
 
 ①：root 是 UNIX 中的最高权限。我们常说的安卓 root，苹果越狱，Kindle 越狱等等都是为了获取这个 root 权限权限。
 
+### 参考文献
+
+- [What is TTY in Linux?](https://itsfoss.com/what-is-tty-in-linux/)，翻译在 [Linux 黑话解释：TTY 是什么？](https://linuxstory.org/linux-blackmail-explained-what-is-tty/)。
+
+
 ### 故障排除与未竟事宜
 
 - 若用户名正确，但密码不正确：
@@ -83,9 +88,82 @@ login:
 
 如果你连用户名都不知道，建议你找回 root 密码后看看系统中有哪些用户账户或者重装系统比较快。
 
-### 参考文献
+## 我是谁？
 
-- [What is TTY in Linux?](https://itsfoss.com/what-is-tty-in-linux/)，翻译在 [Linux 黑话解释：TTY 是什么？](https://linuxstory.org/linux-blackmail-explained-what-is-tty/)。
+- 查看当前登录系统的用户名：
+
+```sh
+$ whoami
+ykla
+```
+
+- 查看当前登录用户用户组相关
+
+```sh
+$ id
+uid=1001(ykla) gid=1001(ykla) groups=1001(ykla),0(wheel)
+```
+
+- 查看当前用户登录的中断及本次登录时间
+
+```sh
+$ who
+root             pts/0        Mar 19 15:00 (3413e8b6b43f)
+```
+
+- 展示当前有哪些用户已登录，并且他们在干什么
+
+```sh
+$ w
+ 3:02PM  up 21:52, 1 user, load averages: 0.01, 0.01, 0.00
+USER       TTY      FROM           LOGIN@  IDLE WHAT
+root       pts/0    3413e8b6b43f   3:00PM     - w
+```
+
+- 查看当前所在路径
+
+`pwd` 即 `print work directory`，打印工作目录
+
+```sh
+$ pwd
+/usr/ports/editors/vscode
+```
+
+
+## 账户切换与退出登录
+
+```sh
+root@ykla:/ # su ykla ①
+ykla@ykla:/ $ ②
+ykla@ykla:/ $ su ③
+Password: ④
+root@ykla:/ #
+root@ykla:/ # exit ⑤
+ykla@ykla:/ $ exit ⑥
+root@ykla:/ # exit ⑦
+
+FreeBSD/amd64 (ykla) (ttyv0)
+
+login:
+```
+
+- ① 使用  `su空格用户名` 可以切换到用户 ykla，从 root 切换的话，不需要输入 ykla 的密码：
+  - `root@ykla:/`：
+    - `root`：当前用户是 root
+    - `@` “谁” `在` “xx”主机上
+    - `ykla`：这里是主机名，和用户 ykla 无涉。你可以随便起不一样的主机名
+    - `:/`：代表当前在 `/` 路径下
+- ② 注意到提示符号的变化没有？root 是 `#`，普通用户是 `$`（Linux 上可能是 `%`）
+- ③ 如果只是单纯 `su` 回车，命令的意思是从当前用户切换到 root 账户（如果已经是 root，则不会有任何反应）。但是你必须是 wheel 组的成员才能进行此操作，否则会报错 `sorry`。、
+- ④ 从普通用户切换到 root，要输入的密码是 root 账户的登录密码。
+- ⑤ 输入 `exit` 可退出当前用户，如果是唯一登录的用户，将退出登录到 TTY
+
+>**思考题**
+>
+>⑥、⑦ 分别切换到了哪些用户或执行了哪些操作？
+
+
+
 
 ## 命令行格式
 
@@ -408,9 +486,6 @@ round-trip min/avg/max/stddev = 27.465/27.596/27.701/0.085 ms
 - **ctrl**+**a**：移动光标到命令行首
 - **ctrl**+**a**: 移动光标到命令行尾
 
-
-
-
 ## 命令的来源
 
 ### Linux
@@ -492,46 +567,7 @@ cd is a shell builtin
 如果缺少了哪个命令，一般可以通过安装相应的软件包来获取，比如 `lspci` 命令，来自软件包 `sysutils/pciutil`。但是也有很多命令存在 Linux 主义问题，不兼容其他操作系统，比如 ip 命令，来自 GNU 软件包 iproute2。
 
 
-## 我是谁？
 
-- 查看当前登录系统的用户名：
-
-```sh
-$ whoami
-ykla
-```
-
-- 查看当前登录用户用户组相关
-
-```sh
-$ id
-uid=1001(ykla) gid=1001(ykla) groups=1001(ykla),0(wheel)
-```
-
-- 查看当前用户登录的中断及本次登录时间
-
-```sh
-$ who
-root             pts/0        Mar 19 15:00 (3413e8b6b43f)
-```
-
-- 展示当前有哪些用户已登录，并且他们在干什么
-
-```sh
-$ w
- 3:02PM  up 21:52, 1 user, load averages: 0.01, 0.01, 0.00
-USER       TTY      FROM           LOGIN@  IDLE WHAT
-root       pts/0    3413e8b6b43f   3:00PM     - w
-```
-
-- 查看当前所在路径
-
-`pwd` 即 `print work directory`，打印工作目录
-
-```sh
-$ pwd
-/usr/ports/editors/vscode
-```
 
 ## `ee` 编辑器基本用法
 
@@ -923,6 +959,51 @@ sed -i '' 's/quarterly/latest/g' /etc/pkg/FreeBSD.conf
 ```
 
 必须加一个空的参数''，不能省略。
+
+## 逻辑运算符 `&&`
+
+`&&`（逻辑与，AND）：只有之前的命令执行成功了，后边的命令才会执行，否则中断
+
+简单理解：你得先做饭才能吃饭，然后才能刷锅——> 做饭 `&&` 吃饭 `&&` 刷锅。如果你没有做饭，自然谈不上怎么刷锅。
+
+使用场景：执行一连串有依赖关系的命令。比如你得先刷新软件源才能更新系统，然后才能重启。以 Ubuntu 为例：`sudo apt update -y && sudo apt upgrade -y && sudo reboot`。只有前面的命令执行成功，方才会执行后面的命令
+
+## 逻辑运算符 `||` 
+
+`||`（逻辑或，OR）：只有之前的命令执行错误了，后边的命令才会执行，否则中断
+
+简单理解：你要么做饭，要么点外卖，要么出去吃——> 做饭 `||` 点外卖 `||` 出去吃。如果你不会做饭，你就只能点外卖了，如果外卖没有好吃的，你就只能出去吃了。
+
+使用场景：如果一个命令一直执行失败，但是你偏要他一直执行。你就写很多的 `||`，比如 `make BATCH=yes install || make BATCH=yes install || make BATCH=yes install || make BATCH=yes install`……当一次 `make BATCH=yes install` 失败后仍然会执行下一个 `make BATCH=yes install`。即之前的命令执行失败了，转而执行后面的命令
+
+>**技巧**
+>
+>`&&` 和 `||` 的优先级相同，并且从左到又执行。
+
+>**思考题**
+>
+>`touch a.txt && touch b.txt || touch c.txt || reboot` 是什么意思？
+>
+>如果 `touch a.txt` 失败了会执行后面的哪个操作？
+
+## 关机与重启
+
+​FreeBSD 和 Linux 的 shutdown 命令在语法和行为上有一些重大差异，如果你有使用 Linux 的经验，那么是不能照抄的。
+
+FreeBSD 的设计更接近传统 UNIX 的行为。
+
+关机：
+- 使用 `shutdown now` 将不会关机，而是切换到“单用户模式”，将提示：`Enter full pathname of shell or RETURN for /bin/sh :` 回车后进入单用户模式；
+- 使用 `shutdown -h now` 将不会彻底断电，只会停止系统的运行，将提示：`The operating system has halted. Please press any key to reboot.` 此处按任意键可重启系统；
+- 正确的关机并断电命令是 `poweroff`，等同于命令 `shutdown -p now`。
+
+重启：
+- 重启命令和 Linux 一致，都是 `reboot`，但是参数不通用。
+- 在 FreeBSD 下 `roboot` 等同于 `shutdown -r now`
+
+>**注意**
+>
+>关机与重启都需要 root 权限才能执行。
 
 ## UNIX 与 Windows 文件名规范之差异
 
