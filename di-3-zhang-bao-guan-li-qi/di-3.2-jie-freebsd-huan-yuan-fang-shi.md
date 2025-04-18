@@ -4,17 +4,16 @@
 
 熟悉 Linux 的人也许会发现，FreeBSD 的包管理方案实际上大约等于以下两大 Linux 发行版包管理器的完美合体：
 
-Arch Linux: Pacman，对应 pkg（同样秉持 KISS 的理念）
+- Arch Linux：Pacman，对应 pkg（同样秉持 KISS 的理念）
+- Gentoo Linux：Portage，对应 Ports（Portage 本身就是 Ports 的仿制品）
 
-Gentoo Linux: Portage，对应 Ports（Portage 本身就是 Ports 的仿制品）
-
-FreeBSD 传统上有四类源：FreeBSD 之所以有这么多源是因为其既可以使用 pkg 通过二进制包安装软件，亦可通过 Ports 使用源代码编译安装软件。pkg 自然需要一类源；索引源代码模板 Ports 也需要一类源，而通过 Ports 下载指定的源代码压缩包也需要一类源；由于基本系统的设计，系统更新也需要一类源。
+FreeBSD 传统上有四类源（pkg、ports、~~portsnap~~、update）：FreeBSD 之所以有这么多源是因为其既可以使用 pkg 通过二进制包安装软件，亦可通过 Ports 使用源代码编译安装软件。pkg 自然需要一类源；索引源代码模板 Ports 也需要一类源，而通过 Ports 下载指定的源代码压缩包也需要一类源；由于基本系统的设计，系统更新也需要一类源。
 
 >**技巧**
 >
 > 如果需要查询一个软件包在 FreeBSD 中的具体情况可以这样用：谷歌或者必应（必应很多时候搜索不出来）搜索“freebsd ports 包名”。如果无法使用，可以直接在网站里搜索包名 [https://www.freshports.org/](https://www.freshports.org/)。
 
-### FreeBSD 传统上有四类源：pkg、ports、~~portsnap~~、update、kernel modules 源
+### FreeBSD 源说明
 
 |源 | 说明 | 备注|
 |:---:|:---|:---|
