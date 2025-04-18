@@ -88,6 +88,46 @@ login:
 
 如果你连用户名都不知道，建议你找回 root 密码后看看系统中有哪些用户账户或者重装系统比较快。
 
+## 我是谁？
+
+- 查看当前登录系统的用户名：
+
+```sh
+$ whoami
+ykla
+```
+
+- 查看当前登录用户用户组相关
+
+```sh
+$ id
+uid=1001(ykla) gid=1001(ykla) groups=1001(ykla),0(wheel)
+```
+
+- 查看当前用户登录的中断及本次登录时间
+
+```sh
+$ who
+root             pts/0        Mar 19 15:00 (3413e8b6b43f)
+```
+
+- 展示当前有哪些用户已登录，并且他们在干什么
+
+```sh
+$ w
+ 3:02PM  up 21:52, 1 user, load averages: 0.01, 0.01, 0.00
+USER       TTY      FROM           LOGIN@  IDLE WHAT
+root       pts/0    3413e8b6b43f   3:00PM     - w
+```
+
+- 查看当前所在路径
+
+`pwd` 即 `print work directory`，打印工作目录
+
+```sh
+$ pwd
+/usr/ports/editors/vscode
+```
 
 
 ## 账户切换与退出登录
@@ -530,46 +570,7 @@ cd is a shell builtin
 如果缺少了哪个命令，一般可以通过安装相应的软件包来获取，比如 `lspci` 命令，来自软件包 `sysutils/pciutil`。但是也有很多命令存在 Linux 主义问题，不兼容其他操作系统，比如 ip 命令，来自 GNU 软件包 iproute2。
 
 
-## 我是谁？
 
-- 查看当前登录系统的用户名：
-
-```sh
-$ whoami
-ykla
-```
-
-- 查看当前登录用户用户组相关
-
-```sh
-$ id
-uid=1001(ykla) gid=1001(ykla) groups=1001(ykla),0(wheel)
-```
-
-- 查看当前用户登录的中断及本次登录时间
-
-```sh
-$ who
-root             pts/0        Mar 19 15:00 (3413e8b6b43f)
-```
-
-- 展示当前有哪些用户已登录，并且他们在干什么
-
-```sh
-$ w
- 3:02PM  up 21:52, 1 user, load averages: 0.01, 0.01, 0.00
-USER       TTY      FROM           LOGIN@  IDLE WHAT
-root       pts/0    3413e8b6b43f   3:00PM     - w
-```
-
-- 查看当前所在路径
-
-`pwd` 即 `print work directory`，打印工作目录
-
-```sh
-$ pwd
-/usr/ports/editors/vscode
-```
 
 ## `ee` 编辑器基本用法
 
