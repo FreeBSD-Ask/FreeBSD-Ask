@@ -22,9 +22,8 @@ xdg-user-dirs 可自动管理家目录子目录（可选安装）
 # cd /usr/ports/devel/xdg-user-dirs/ && make install clean # 自动管理家目录子目录
 ```
 
-## 开启各项服务
 
-查看安装后信息：
+## 查看安装后信息
 
 ```sh
 root@ykla:/home/ykla # pkg info -D cde
@@ -77,24 +76,37 @@ To start the Common Desktop Enviroment Login Manager:
 # 使用 dtlogin -daemon 命令启动 CDE 登录管理器（守护进程模式）。
 ```
 
-在 shell 中执行：
+## 配置服务与文件
+
+
+- 配置服务
 
 ```sh
-# sysrc rpcbind_enable="YES"
-# sysrc dtcms_enable="YES"
-# sysrc inetd_enable=yes
-# sysrc dtlogin_enable=yes
-# echo "allowed_users=anybody" > /usr/local/etc/X11/Xwrapper.config
-# ln -s /usr/local/dt/bin/Xsession ~/.xinitrc # 为了 startx
+# service rpcbind enable
+# service dtcms enable
+# service inetd enable
+# service dtlogin enable
 ```
 
-将以下内容添加到 `/etc/inetd.conf`：
+- 配置可登录桌面的用户
+
+```sh
+# echo "allowed_users=anybody" > /usr/local/etc/X11/Xwrapper.config
+```
+
+- 为了 `startx`
+
+```sh
+# ln -s /usr/local/dt/bin/Xsession ~/.xinitrc
+```
+
+- 将以下内容添加到 `/etc/inetd.conf`：
 
 ```sh
 dtspc	stream	tcp	nowait	root	 /usr/local/dt/bin/dtspcd	/usr/local/dt/bin/dtspcd
 ```
 
-将以下内容添加到 `/etc/services`：
+- 将以下内容添加到 `/etc/services`：
 
 ```sh
 dtspc		6112/tcp
