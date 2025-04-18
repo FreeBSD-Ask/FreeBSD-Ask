@@ -171,24 +171,15 @@ login:
 # ls   -l   /home/ykla /tmp
 /home/ykla:
 total 317
-……省略一部分……
+  ……有所省略……
 drwxr-xr-x  2 ykla ykla        2 Mar  9 20:45 下载
-drwxr-xr-x  2 ykla ykla        2 Mar  9 20:45 公共
-drwxr-xr-x  2 ykla ykla        2 Mar  9 20:45 图片
-drwxr-xr-x  2 ykla ykla        2 Mar  9 20:45 文档
-drwxr-xr-x  2 ykla ykla        2 Mar  9 20:45 桌面
-drwxr-xr-x  2 ykla ykla        2 Mar  9 20:45 模板
-drwxr-xr-x  2 ykla ykla        2 Mar  9 20:45 视频
-drwxr-xr-x  2 ykla ykla        2 Mar  9 20:45 音乐
+drwxr-xr-x  2 ykla ykla        2 Mar  9 20:45 
+桌面
 
 /tmp:
 total 6
 drwxrwxrwt  2 root    wheel  3 Mar 18 17:23 .ICE-unix
 -r--r--r--  1 root    wheel 11 Mar 18 17:10 .X0-lock
--r--r--r--  1 ykla    wheel 11 Mar 18 17:23 .X10-lock
-drwxrwxrwt  2 root    wheel  4 Mar 18 17:23 .X11-unix
-drwxrwxrwt  2 root    wheel  2 Mar 18 17:10 .XIM-unix
-drwxrwxrwt  2 root    wheel  2 Mar 18 17:10 .font-unix
 ```
 
 
@@ -312,13 +303,7 @@ root@ykla:~ # fuck
 total 317
 ……省略一部分……
 drwxr-xr-x  2 ykla ykla        2 Mar  9 20:45 下载
-drwxr-xr-x  2 ykla ykla        2 Mar  9 20:45 公共
-drwxr-xr-x  2 ykla ykla        2 Mar  9 20:45 图片
-drwxr-xr-x  2 ykla ykla        2 Mar  9 20:45 文档
 drwxr-xr-x  2 ykla ykla        2 Mar  9 20:45 桌面
-drwxr-xr-x  2 ykla ykla        2 Mar  9 20:45 模板
-drwxr-xr-x  2 ykla ykla        2 Mar  9 20:45 视频
-drwxr-xr-x  2 ykla ykla        2 Mar  9 20:45 音乐
 ```
 
 再试试：
@@ -330,12 +315,6 @@ root@ykla:~ # fuck
 ​​​​​​​​​​pkg install gimp [enter/↑/↓/ctrl+c]​​​​​​​​​​
 Updating FreeBSD repository catalogue...
 FreeBSD repository is up to date.
-Updating FreeBSD-base repository catalogue...
-Fetching data.pkg: 100%   50 KiB  51.7kB/s    00:01
-Processing entries: 100%
-FreeBSD-base repository update completed. 537 packages processed.
-All repositories are up to date.
-The following 36 package(s) will be affected (of 0 checked):
 ……省略一部分……
 ```
 
@@ -464,7 +443,6 @@ root@ykla:~ # ping 163.com
 PING 163.com (59.111.160.244): 56 data bytes
 64 bytes from 59.111.160.244: icmp_seq=0 ttl=52 time=27.611 ms
 64 bytes from 59.111.160.244: icmp_seq=1 ttl=52 time=27.691 ms
-64 bytes from 59.111.160.244: icmp_seq=2 ttl=52 time=27.701 ms
 ^Z[1] + Suspended               ping 163.com # 注意此处，按下了 ctrl + z
 root@ykla:~ # fg # 返回前台
 ping 163.com
