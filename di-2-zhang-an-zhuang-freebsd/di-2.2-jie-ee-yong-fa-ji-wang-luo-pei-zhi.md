@@ -280,6 +280,16 @@ More details - https://github.com/nvbn/thefuck#manual-installation
 eval $(thefuck --alias) 
 ```
 
+写入 `~/.shrc`，请勿使用 `>>` 重定向，请手动编辑加入。
+
+刷新环境变量：
+
+```sh
+root@ykla:~ # . ~/.shrc
+root@ykla:~ # fuck
+No fucks given
+```
+
 >**技巧**
 >
 >根据作者信息，若不喜欢输入 `fuck`，还可以使用其他别名：若更改为 `eval $(thefuck --alias abc)`，则下方所有 `fuck` 命令都会被换成 `abc`。
@@ -293,16 +303,6 @@ eval $(thefuck --alias)
 >​​​​​​​​​​pkg install gimp [enter/↑/↓/ctrl+c]​​​​​​​​​​
 >……省略一部分……
 >```
-
-写入 `~/.shrc`，请勿使用 `>>` 重定向，请手动编辑加入。
-
-刷新环境变量：
-
-```sh
-root@ykla:~ # . ~/.shrc
-root@ykla:~ # fuck
-No fucks given
-```
 
 
 #### 测试使用 thefuck
