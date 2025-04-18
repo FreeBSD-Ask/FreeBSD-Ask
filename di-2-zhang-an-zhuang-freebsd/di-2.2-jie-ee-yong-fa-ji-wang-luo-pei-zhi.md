@@ -61,16 +61,29 @@ root@ykla:~ #
 
 ①：root 是 UNIX 中的最高权限。我们常说的安卓 root，苹果越狱，Kindle 越狱等等都是为了获取这个 root 权限权限。
 
+### 故障排除与未竟事宜
 
----
-
-- 如果使用完毕该怎么退出系统呢？
-
+- 若用户名正确，但密码不正确：
+  
 ```sh
-# exit # 退出当前账号
+login: root
+Password:
+Login: incorrect # 即不正确的意思
+login: 
 ```
 
-- 如何从 root 切换到安装系统时自己创建的普通用户（我创建的用户名叫 `ykla`）呢？
+- 若用户名和密码都不正确：
+
+```sh
+login: test # 当前系统中不存在该用户
+Password:
+Login: incorrect
+login: 
+```
+
+如果你连用户名都不知道，建议你找回 root 密码后看看系统中有哪些用户账户或者重装系统比较快。
+
+## 账户切换与退出登录
 
 ```sh
 root@ykla:/ # su ykla ①
@@ -102,27 +115,7 @@ login:
 >
 >⑥、⑦ 分别切换到了哪些用户或执行了哪些操作？
 
-### 故障排除与未竟事宜
 
-- 若用户名正确，但密码不正确：
-  
-```sh
-login: root
-Password:
-Login: incorrect # 即不正确的意思
-login: 
-```
-
-- 若用户名和密码都不正确：
-
-```sh
-login: test # 当前系统中不存在该用户
-Password:
-Login: incorrect
-login: 
-```
-
-如果你连用户名都不知道，建议你找回 root 密码后看看系统中有哪些用户账户或者重装系统比较快。
 
 ### 参考文献
 
