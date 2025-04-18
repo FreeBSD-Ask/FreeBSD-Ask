@@ -1,7 +1,5 @@
 # 第 3.2 节 FreeBSD 换源方式
 
-
-
 ## FreeBSD 包管理器设计理念
 
 熟悉 Linux 的人也许会发现，FreeBSD 的包管理方案实际上大约等于以下两大 Linux 发行版包管理器的完美合体：
@@ -40,7 +38,9 @@ FreeBSD 传统上有四类源：FreeBSD 之所以有这么多源是因为其既�
 
 对于失去安全支持的版本，请参考最后本文一节。
 
-**本文对于一个源列出了多个镜像站，无须全部配置，只需选择其一即可。**
+>**技巧**
+>
+>本文对于一个源列出了多个镜像站，无须全部配置，只需选择其一即可。
 
 目前境内没有官方镜像站，以下均为非官方镜像站。
 
@@ -48,19 +48,19 @@ FreeBSD 传统上有四类源：FreeBSD 之所以有这么多源是因为其既�
 
 FreeBSD 中 pkg 源分为系统级和用户级两个配置文件。**不建议**直接修改 `/etc/pkg/FreeBSD.conf` ~~但是太麻烦啦，一般我都是直接改这个文件的~~，因为该文件会随着基本系统的更新而发生改变。
 
-**故障排除与未竟事宜**
+### 故障排除与未竟事宜
 
-> **并非所有源都有 `quarterly` 和 `latest`，具体请看 <https://pkg.freebsd.org/> 。**
->
-> **若要获取滚动更新的包，请将 `quarterly` 修改为 `latest`。二者区别见 FreeBSD 手册。请注意，`CURRENT` 版本只有 `latest`：**
->
->>使用命令修改系统级 pkg 源使用 latest：
->>
-> > ```sh
-> > # sed -i '' 's/quarterly/latest/g' /etc/pkg/FreeBSD.conf
-> > ```
->
-> **若要使用 https，请先安装 `security/ca_root_nss`（FreeBSD 14.1 及以后不需要），并将 `http` 修改为 `https`，最后使用命令 `# pkg update -f` 刷新缓存即可，下同。**
+并非所有源都有 `quarterly` 和 `latest`，具体请看 <https://pkg.freebsd.org/> 。
+
+若要获取滚动更新的包，请将 `quarterly` 修改为 `latest`。二者区别见 FreeBSD 手册。请注意，`CURRENT` 版本只有 `latest`。
+
+使用命令修改系统级 pkg 源使用 latest：
+
+```sh
+# sed -i '' 's/quarterly/latest/g' /etc/pkg/FreeBSD.conf
+```
+
+若要使用 https，请先安装 `security/ca_root_nss`（FreeBSD 14.1 及以后不需要），并将 `http` 修改为 `https`，最后使用命令 `# pkg update -f` 刷新缓存即可，下同。
 
 >**注意**
 >
@@ -257,7 +257,7 @@ MASTER_SITE_OVERRIDE?=http://mirrors.ustc.edu.cn/freebsd-ports/distfiles/${DIST_
 
 ```sh
 FreeBSD-kmods {
-	url: pkg+https://pkg.freebsd.org/${ABI}/kmods_quarterly_${VERSION_VERSION}
+	url: pkg+https://pkg.freebsd.org/${ABI}/kmods_quarterly_2
 	signature_type: "fingerprints"
 	fingerprints: "/usr/share/keys/pkg"
 	mirror_type: "srv"
@@ -269,7 +269,7 @@ FreeBSD-kmods {
 
 ```sh
 FreeBSD-kmods {
-	url: pkg+https://pkg.freebsd.org/${ABI}/kmods_latest_${VERSION_VERSION}
+	url: pkg+https://pkg.freebsd.org/${ABI}/kmods_latest_2
 	signature_type: "fingerprints"
 	fingerprints: "/usr/share/keys/pkg"
 	mirror_type: "srv"
@@ -287,7 +287,7 @@ FreeBSD-kmods {
 
 ```sh
 FreeBSD-kmods {
-	url: https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/kmods_quarterly_${VERSION_VERSION}
+	url: https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/kmods_quarterly_2
 	enabled: yes
 }
 ```
@@ -296,7 +296,7 @@ FreeBSD-kmods {
 
 ```sh
 FreeBSD-kmods {
-	url: https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/kmods_latest_${VERSION_VERSION}
+	url: https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/kmods_latest_2
 	enabled: yes
 }
 ```
@@ -332,7 +332,9 @@ root@ykla:~ # pkg_add -r bsdinfo
 Fetching http://ftp-archive.freebsd.org/pub/FreeBSD-Archive/ports/amd64/packages-9.2-release/Latest/bsdinfo.tbz... Done.
 ```
 
-**pkg 是不可用的，会提示找不到 `digests.txz` 和 `repo.txz`，因为当时 pkgng 还没有被官方所支持，仍然仅支持使用 `pkg_*` 命令。**
+>**注意**
+>
+>pkg 是不可用的，会提示找不到 `digests.txz` 和 `repo.txz`，因为当时 pkgng 还没有被官方所支持，仍然仅支持使用 `pkg_*` 命令。
 
 ## 参考文献
 
