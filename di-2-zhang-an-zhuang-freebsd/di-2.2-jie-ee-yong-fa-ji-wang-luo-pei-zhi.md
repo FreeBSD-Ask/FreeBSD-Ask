@@ -486,9 +486,6 @@ round-trip min/avg/max/stddev = 27.465/27.596/27.701/0.085 ms
 - **ctrl**+**a**：移动光标到命令行首
 - **ctrl**+**a**: 移动光标到命令行尾
 
-
-
-
 ## 命令的来源
 
 ### Linux
@@ -978,6 +975,16 @@ sed -i '' 's/quarterly/latest/g' /etc/pkg/FreeBSD.conf
 简单理解：你要么做饭，要么点外卖，要么出去吃——> 做饭 `||` 点外卖 `||` 出去吃。如果你不会做饭，你就只能点外卖了，如果外卖没有好吃的，你就只能出去吃了。
 
 使用场景：如果一个命令一直执行失败，但是你偏要他一直执行。你就写很多的 `||`，比如 `make BATCH=yes install || make BATCH=yes install || make BATCH=yes install || make BATCH=yes install`……当一次 `make BATCH=yes install` 失败后仍然会执行下一个 `make BATCH=yes install`。即之前的命令执行失败了，转而执行后面的命令
+
+>**技巧**
+>
+>`&&` 和 `||` 的优先级相同，并且从左到又执行。
+
+>**思考题**
+>
+>`touch a.txt && touch b.txt || touch c.txt || reboot` 是什么意思？
+>
+>如果 `touch a.txt` 失败了会执行后面的哪个操作？
 
 ## 关机与重启
 
