@@ -23,19 +23,6 @@ FreeBSD 传统上有四类源（pkg、ports、~~portsnap~~、update）：FreeBSD
 |update|用于更新系统工具和系统本身 | 预计在 FreeBSD 15 或 16 中废弃，转而使用 [pkgbase](https://wiki.freebsd.org/PkgBase) 代替之|
 |kernel modules（kmods）| 内核模块源，为解决小版本间可能存在的 ABI 不兼容问题 | 参见 [Possible solution to the drm-kmod kernel mismatch after upgrade from Bapt](https://forums.freebsd.org/threads/possible-solution-to-the-drm-kmod-kernel-mismatch-after-upgrade-from-bapt.96058/#post-682984)、[CFT: repository for kernel modules](https://lists.freebsd.org/archives/freebsd-ports/2024-December/006997.html)|
 
-> 注意：
->
-> `portsnap` 在 FreeBSD 14 中已经弃用，改为使用 `gitup`（请参考第 3.3 节）：
->
-> ````sh
-> 20230422:
-> 	Remove portsnap(8).  Users are encouraged to obtain the ports tree
-> 	using git instead.
-> ````
-
-
-
-对于失去安全支持的版本，请参考最后本文一节。
 
 >**技巧**
 >
