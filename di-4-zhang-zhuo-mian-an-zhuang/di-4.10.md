@@ -2,22 +2,32 @@
 
 ## 安装
 
+- 使用 pkg 安装：
+
 ```sh
 # pkg install xorg icewm slim wqy-fonts xdg-user-dirs
 ```
 
-xdg-user-dirs 可自动管理家目录子目录（可选安装）
-
-或者：
+- 或者使用 Ports 安装：
 
 ```sh
 # cd /usr/ports/x11-wm/icewm/ && make install clean # fluxbox
-# cd /usr/ports/x11-themes/icewm-extra-themes/ && make install clean # 主题
-# cd /usr/ports/x11/xorg/ && make install clean # X11
-# cd /usr/ports/x11/slim/ && make install clean # slim 窗口管理器
-# cd /usr/ports/x11-fonts/wqy/ && make install clean # 文泉驿字体
-# cd /usr/ports/devel/xdg-user-dirs/ && make install clean # 自动管理家目录子目录
+# cd /usr/ports/x11-themes/icewm-extra-themes/ && make install clean 
+# cd /usr/ports/x11/xorg/ && make install clean 
+# cd /usr/ports/x11/slim/ && make install clean
+# cd /usr/ports/x11-fonts/wqy/ && make install clean
+# cd /usr/ports/devel/xdg-user-dirs/ && make install clean
 ```
+
+- 解释
+  
+| 包名               | 作用说明                                                                 |
+|:------------------|:-----------------------------------------------------------------------|
+| `xorg`           |X Window 系统                                           |
+| `icewm`          | 轻量级窗口管理器                    |
+| `slim`           | 轻量级图形登录管理器                            |
+| `wqy-fonts`      | 文泉驿中文字体                                              |
+| `xdg-user-dirs`  | 管理用户目录，如“桌面”、“下载”……                                          |
 
 
 ## `startx`
