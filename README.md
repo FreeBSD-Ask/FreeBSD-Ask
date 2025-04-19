@@ -1,4 +1,4 @@
-# FreeBSD 从入门到跑路
+# FreeBSD 从入门到跑路（第三版）
 
 ~~[为了拯救即将归档（Archived）的 FreeBSD······我们决定写一本书。](https://mzh.moegirl.org.cn/为了保护我们心爱的ooo……成为偶像！)~~
 
