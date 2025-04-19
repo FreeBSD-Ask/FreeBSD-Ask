@@ -26,7 +26,7 @@
 >
 >[NJU](https://github.com/nju-lug/NJU-Mirror-Issue/issues/54) 和 163 均同步自 USTC 而非 FreeBSD 直接上游。
 
-## pkg 源：pkg 源提供了二进制软件包、
+## pkg 源：pkg 源提供了二进制软件包
 
 境内的源一般只支持 aarch64（arm64） 和 amd64 两个架构。
 
