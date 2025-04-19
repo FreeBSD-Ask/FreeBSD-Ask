@@ -60,7 +60,7 @@ Hyprland 是 Wayland 的一个合成器，支持窗口透明、模糊、圆角�
 |`dolphin`|文件管理器|
 
 
-## 启动服务：
+## 启动服务
 
 ```sh
 # service seatd enable
@@ -78,6 +78,7 @@ Hyprland 是 Wayland 的一个合成器，支持窗口透明、模糊、圆角�
 > ```sh
 > export XDG_RUNTIME_DIR=/var/run/user/`id -u`
 > ```
+>
 > 重启： `reboot`
 >
 > Ctrl+Alt+F2 进入 tty，执行 `ck-launch-session Hyprland`，这会在 `~/.config/hypr` 生成一个默认配置文件。
