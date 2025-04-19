@@ -32,19 +32,34 @@ Hyprland 是 Wayland 的一个合成器，支持窗口透明、模糊、圆角�
 # cd /usr/ports/x11/kitty/ && make install clean
 ```
 
-作为依赖会自动安装 dbus 及  wayland。
 
-- waybar 为 hyprland 的菜单栏。
-- wofi 是程序启动器（rofi 也很常用，可以了解一下）
-- mako 用于显示通知
-- nerd-fonts 为图标字体，可以用来在配置文件中插入图案，显示在 waybar 等地方
-- slurp 用来在屏幕上选区
-- grim 用来捕获屏幕截图
-- kitty 终端
+>**注意**
+>
+>作为依赖会自动安装 dbus 及  wayland。
 
----
+- 解释：
 
-- 启动服务：
+| 包名                        | 作用说明                                                                 |
+|:-----------------------------|:--------------------------------------------------------------------------|
+| `hyprland`                  | 动态平铺式 Wayland 合成器 |
+| `waybar`                    | 为 wlroots 合成器（如 Hyprland）设计的 GTK 状态栏 |
+| `wofi`                      | 程序启动器（rofi 也很常用，可以了解一下） |
+| `qt6-base`                  | Qt 6 的基础模块 |
+| `qt5-wayland`               | Qt 5 的 Wayland 支持模块，能让 Qt 5 应用程序在 Wayland 环境中运行。 |
+| `qt6-wayland`               | Qt 6 的 Wayland 支持模块，能让 Qt 6 应用程序在 Wayland 环境中运行。 |
+| `xdg-desktop-portal-hyprland` | Hyprland 的 XDG Desktop Portal 实现，提供与其他应用程序的通信接口|
+| `hyprpicker`                | 颜色选择器 |
+| `swaybg`                    | 壁纸工具 |
+| `mako`                      | 显示通知 |
+| `nerd-fonts`                | 图标字体，可以用来在配置文件中插入图案，显示在 waybar 等地方 |
+| `slurp`                     | 屏幕选择工具，用来在屏幕上选区 |
+| `grim`                      | 屏幕截图工具 |
+| `swaylock`                  | 锁屏工具 |
+| `kitty`                     | 终端|
+
+
+
+## 启动服务：
 
 ```sh
 # service seatd enable
