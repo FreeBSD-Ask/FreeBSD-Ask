@@ -17,22 +17,13 @@
 
 ## 安装
 
+- 使用 pkg 安装：
+
 ```sh
 # pkg install mate xorg wqy-fonts lightdm slick-greeter xdg-user-dirs
 ```
 
-
-
-| 包名               | 作用说明                             |
-|:--------------------|--------------------------------------|
-| `mate`             | MATE 桌面环境|
-| `xorg`             | X Window 系统        |
-| `wqy-fonts`        | 文泉驿中文字体             |
-| `lightdm`          | 显示管理器，提供图形登录界面               |
-| `slick-greeter`    | LightDM 的美观登录界面插件，缺少将无法启动 LightDM|
-| `xdg-user-dirs`    | 可自动管理家目录子目录（可选安装）         |
-
-或者：
+- 或者使用 Ports 安装：
 
 ```sh
 # cd /usr/ports/x11/mate/ && make install clean
@@ -42,6 +33,18 @@
 # cd /usr/ports/x11/slick-greeter/ && make install clean 
 # cd /usr/ports/devel/xdg-user-dirs/ && make install clean 
 ```
+
+- 解释
+
+
+| 包名               | 作用说明                             |
+|:--------------------|:--------------------------------------|
+| `mate`             | MATE 桌面环境|
+| `xorg`             | X Window 系统        |
+| `wqy-fonts`        | 文泉驿中文字体             |
+| `lightdm`          | 显示管理器，提供图形登录界面               |
+| `slick-greeter`    | LightDM 的美观登录界面插件，缺少将无法启动 LightDM|
+| `xdg-user-dirs`    | 可自动管理家目录子目录（可选安装）         |
 
 ## 安装后启动服务
 
@@ -61,9 +64,7 @@ exec mate-session
 ## 显示中文桌面环境
 
 
-编辑 `/etc/login.conf`：
-
-找到 `default:\` 这一段，把 `:lang=C.UTF-8` 修改为 `:lang=zh_CN.UTF-8`。
+编辑 `/etc/login.conf`：找到 `default:\` 这一段，把 `:lang=C.UTF-8` 修改为 `:lang=zh_CN.UTF-8`。
 
 刷新数据库：
 
@@ -71,13 +72,7 @@ exec mate-session
 # cap_mkdb /etc/login.conf
 ```
 
-## 图片
 
-![FreeBSD 安装 MATE](../.gitbook/assets/cinnamon1.png)
-
-![FreeBSD 安装 MATE](../.gitbook/assets/mate2.png)
-
-![FreeBSD 安装 MATE](../.gitbook/assets/mate3.png)
 
 ## 输入法
 
@@ -85,17 +80,20 @@ exec mate-session
 
 ibus 测试成功。请参见输入法相关章节。
 
+
+## 桌面欣赏
+
+![FreeBSD 安装 MATE](../.gitbook/assets/cinnamon1.png)
+
+![FreeBSD 安装 MATE](../.gitbook/assets/mate2.png)
+
+![FreeBSD 安装 MATE](../.gitbook/assets/mate3.png)
+
 ## 故障排除与未竟事宜
 
 ### 配置 slick-greeter
 
-创建：
-
-```sh
-/usr/local/etc/lightdm/slick-greeter.conf
-```
-
-写入
+创建 `/usr/local/etc/lightdm/slick-greeter.conf`，写入
 
 ```ini
 [Greeter]
