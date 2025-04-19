@@ -1,4 +1,4 @@
-# 目录
+# Table of contents
 
 * [FreeBSD 从入门到跑路](README.md)
 * [编辑日志](CHANGELOG.md)
