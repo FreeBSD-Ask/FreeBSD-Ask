@@ -30,7 +30,7 @@
 * [第 2.10 节 安装 FreeBSD——基于 Apple M1 & VMware Fusion Pro](di-2-zhang-an-zhuang-freebsd/di-2.10-jie-apple.md)
 * [第 2.11 节 Qemu 安装 RISC-V FreeBSD（基于 x86 Windows）](di-2-zhang-an-zhuang-freebsd/di-2.11-qemu.md)
 
-## 第 3 章 包管理器 & FreeBSD 更新
+## 第 3 章 包管理器与 FreeBSD 更新
 
 * [第 3.1 节 FreeBSD 镜像站现状](di-3-zhang-bao-guan-li-qi/di-3.1-jie-freebsd-jing-xiang-zhan-xian-zhuang.md)
 * [第 3.2 节 FreeBSD 换源方式](di-3-zhang-bao-guan-li-qi/di-3.2-jie-freebsd-huan-yuan-fang-shi.md)
@@ -79,7 +79,7 @@
 * [第 5.9 节 压缩与解压](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.9-jie-ya-suo-yu-jie-ya.md)
 * [第 5.10 节 微信（Linux 版）](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/5.10-wechat.md)
 
-## 第 6 章 多媒体 & 外设
+## 第 6 章 多媒体与外设
 
 * [第 6.1 节 声卡](di-6-duo-mei-ti/di-6.1-jie-sheng-ka-yu-wang-ka-she-zhi.md)
 * [第 6.2 节 蓝牙](di-6-duo-mei-ti/di-6.2-jie-lan-ya.md)
@@ -97,7 +97,7 @@
 * [第 7.3 节 Mihomo（原 Clash）](di-7-zhang-vpn-yu-dai-li/di-7.3-jie-clash.md)
 * [第 7.4 节 OpenVPN](di-7-zhang-vpn-yu-dai-li/di-7.4-jie-openvpn.md)
 
-## 第 8 章 账户 & 权限
+## 第 8 章 账户与权限
 
 * [第 8.1 节 sudo 与 doas](di-8-zhang-yong-hu-yu-quan-xian/di-8.1-jie-sudo.md)
 * [第 8.2 节 添加用户](di-8-zhang-yong-hu-yu-quan-xian/di-8.2-jie-tian-jia-yong-hu.md)
@@ -124,7 +124,7 @@
 * [第 11.5 节 MySQL 数据库](di-11-zhang-ji-suan-ji-gai-lun/11.5-shu-jv-ku.md)
 
 
-## 第 12 章 引导恢复 & TTY 配置
+## 第 12 章 引导恢复与 TTY 配置
 
 * [第 12.1 节 单用户模式与密码重置](di-12-zhang-yin-dao-yu-hui-fu/di-12.1-jie-hui-fu-mo-shi-yu-mi-ma-zhong-zhi.md)
 * [第 12.2 节 配置 rEFInd（双系统用）](di-12-zhang-yin-dao-yu-hui-fu/12.2-refind.md)
@@ -186,7 +186,7 @@
 * [第 17.14 节 OnlyOffice（基于 PostgreSQL）](di-17-zhang-wang-luo-fu-wu-qi/17.14.md)
 * [第 17.15 节 Zabbix 监控（基于 PostgreSQL）](di-17-zhang-wang-luo-fu-wu-qi/17.15-Zabbix.md)
 
-## 第 18 章 嵌入式（树莓派 & RISCV）
+## 第 18 章 嵌入式（树莓派、RISCV）
 
 * [第 18.1 节 树莓派简介与配件选用](di-18-zhang-shu-mei-pai-yu-riscv/di-18.1-jie-shu-mei-pai-de-jian-jie.md)
 * [第 18.2 节 树莓派安装 FreeBSD](di-18-zhang-shu-mei-pai-yu-riscv/di-18.2-jie-xi-tong-an-zhuang.md)
@@ -201,7 +201,7 @@
 * [第 19.1 节 BSD 与哲学家 George Berkeley（乔治·贝克莱）](di-19-zhang-wen-xue-gu-shi/di-19.1-jie-freebsd-jian-shi.md)
 * [第 19.2 节 加州大学伯克利分校与“Fiat Lux”（要有光）](di-19-zhang-wen-xue-gu-shi/di-19.2.md)
 
-## 第 20 章 游戏 & 科学
+## 第 20 章 游戏与科学
 
 * [第 20.1 节 游戏](di-20-zhang-yu-le-yu-jiao-yu/di-20.1-jie-you-xi.md)
 * [第 20.5 节 科研与专业工具](di-20-zhang-yu-le-yu-jiao-yu/di-20.5-jie-ke-yan-yu-zhuan-ye-gong-ju.md)
@@ -223,7 +223,7 @@
 * [第 21.12 节 Linux 兼容层与 Jail](di-21-zhang-linux-jian-rong-ceng/di-21.12-jie-gao-ji-jiao-cheng-linux-jian-rong-ceng-yu-jail.md)
 * [第 21.13 节 Linux 兼容层故障排除与未竟事宜](di-21-zhang-linux-jian-rong-ceng/di-21.13-jie-linux-jian-rong-ceng-gu-zhang-pai-chu-yu-pei-zhi.md)
 
-## 第 22 章 编程环境 & 软件开发
+## 第 22 章 编程环境与软件开发
 
 * [第 22.1 节 如何报告 Bug](di-22-zhang-bian-cheng-yu-kai-fa/di-22.1-jie-ru-he-bao-gao-bug.md)
 * [第 22.2 节 如何开发一个 Port](di-22-zhang-bian-cheng-yu-kai-fa/di-22.2-jie-ru-he-ti-jiao-yi-ge-ruan-jian-bao.md)
@@ -239,7 +239,7 @@
 * [第 22.12 节 code-server 和 clangd](di-22-zhang-bian-cheng-yu-kai-fa/di-22.12-jie-an-zhuang-code-server-he-clangd.md)
 * [第 22.13 节 Nodejs](di-22-zhang-bian-cheng-yu-kai-fa/di-22.13-jie-nodejs-xiang-guan.md)
 
-## 第 23 章 文件系统 & 磁盘管理
+## 第 23 章 文件系统与磁盘管理
 
 * [第 23.1 节 自动挂载文件系统](di-23-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-23.1-zi-dong-gua-zai.md)
 * [第 23.2 节 ZFS](di-23-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-23.2-jie-zfs.md)
