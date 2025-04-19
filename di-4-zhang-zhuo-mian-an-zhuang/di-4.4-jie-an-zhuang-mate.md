@@ -43,7 +43,7 @@
 | `xorg`             | X Window 系统        |
 | `wqy-fonts`        | 文泉驿中文字体             |
 | `lightdm`          | 显示管理器，提供图形登录界面               |
-| `slick-greeter`    | LightDM 的美观登录界面插件，缺少将无法启动 LightDM|
+| `slick-greeter`    | LightDM 的美观登录界面插件，缺少 将无法启动 LightDM|
 | `xdg-user-dirs`    | 可自动管理家目录子目录（可选安装）         |
 
 ## 安装后启动服务
