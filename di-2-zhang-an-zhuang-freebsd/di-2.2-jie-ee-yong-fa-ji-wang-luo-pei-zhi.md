@@ -931,7 +931,7 @@ $ rm -rf *
 
 使用场景：执行一连串有依赖关系的命令。比如你得先刷新软件源才能更新系统，然后才能重启。以 Ubuntu 为例：`sudo apt update -y && sudo apt upgrade -y && sudo reboot`。只有前面的命令执行成功，方才会执行后面的命令
 
-### 逻辑运算符 `||` 
+### 逻辑运算符 `||`
 
 `||`（逻辑或，OR）：只有 `||` 之前的命令执行错误了，后边的命令才会执行；否则如果 `||` 之前的命令执行成功了，后面的命令就不会执行。
 
@@ -976,11 +976,13 @@ sed -i '' 's/quarterly/latest/g' /etc/pkg/FreeBSD.conf
 FreeBSD 的设计更接近传统 UNIX 的行为。
 
 关机：
+
 - 使用 `shutdown now` 将不会关机，而是切换到“单用户模式”，将提示：`Enter full pathname of shell or RETURN for /bin/sh :` 回车后进入单用户模式；
 - 使用 `shutdown -h now` 将不会彻底断电，只会停止系统的运行，将提示：`The operating system has halted. Please press any key to reboot.` 此处按任意键可重启系统；
 - 正确的关机并断电命令是 `poweroff`，等同于命令 `shutdown -p now`。
 
 重启：
+
 - 重启命令和 Linux 一致，都是 `reboot`，但是参数不通用。
 - 在 FreeBSD 下 `roboot` 等同于 `shutdown -r now`
 
