@@ -147,21 +147,17 @@ Windows + 回车：启动终端（即 kitty）
 
 更多快捷键可以参考 `~/.config/sxhkd/sxhkdrc`
 
-生成桌面文件夹（Downloads，Documents 等）
+---
 
-```sh
-$ xdg-user-dirs-update
-```
-
-设置桌面背景：
+- 设置桌面背景：
 
 ```sh
 $ feh --bg-center "$HOME/.local/share/wallpapers/wallpaper.jpg"
 ```
 
-执行一次后自动设置：
+- 执行一次后自动设置：
 
-在 `~/.config/bspwm/bspwmrc` 中的 polybar 启动脚本 **之前** 添加
+在 `~/.config/bspwm/bspwmrc` 中的 polybar 启动脚本 **前** 添加
 
 ```sh
 $HOME/.fehbg &
@@ -171,7 +167,7 @@ $HOME/.fehbg &
 
 ![](../.gitbook/assets/bspwm.png)
 
-注：图片中的 Chrome 浏览器，Thunar 文件管理器均需要自己安装。
+图片中的 Chrome 浏览器，Thunar 文件管理器均需要自己安装。
 
 ## 参考文献
 
