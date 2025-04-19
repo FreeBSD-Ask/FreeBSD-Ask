@@ -167,10 +167,10 @@
   - “第 4.8 节 安装 LXQt”补图
   - “第 4.4 节 安装 Mate”补图，删除冗余
   - 新增“第 4.14 节 安装 Budgie”
-  - "第 4.7 节 安装 Lumina" 补图
-  - 新增 "第 4.21 节 安装 LXDE"
+  - “第 4.7 节 安装 Lumina”补图
+  - 新增“第 4.21 节 安装 LXDE”
   - 新增“第 4.22 节 安装 Window Maker”
-  - "第 19.2 节 Linux 败局与 FreeBSD 败局" 新增“为何不能选择 Linux 桌面操作系统？”
+  - “第 19.2 节 Linux 败局与 FreeBSD 败局”新增“为何不能选择 Linux 桌面操作系统？”
 - 2025.1.6  
   - 新增“第 2.9 节 安装 FreeBSD——基于 Apple M1&Parallels Desktop 20”  
   - 新增“第 2.10 节 手动安装双系统（先安装 FreeBSD）”  
