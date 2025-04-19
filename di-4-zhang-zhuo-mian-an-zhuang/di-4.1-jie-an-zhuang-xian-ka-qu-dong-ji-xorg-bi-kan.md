@@ -59,8 +59,9 @@ FreeBSD 15 CUEERNT，编译使用 `drm-66-kmod`，支持情况同 Linux 6.6。
 >
 >每次点版本或大版本升级时，可能需要重新获取新系统源代码，重新编译安装显卡驱动模块方可顺利完成升级，而不是卡在黑屏的地方：或者你使用“模块源”。
 
-## 安装英特尔核显/AMD 显卡驱动
+## 英特尔核显/AMD 显卡
 
+### 安装英特尔核显/AMD 显卡驱动
 
 >**注意**
 >
@@ -84,7 +85,6 @@ FreeBSD 15 CUEERNT，编译使用 `drm-66-kmod`，支持情况同 Linux 6.6。
 # pkg install drm-510-kmod
 ```
 
-
 - FreeBSD 14.X
 
 >**技巧**
@@ -102,7 +102,6 @@ FreeBSD 15 CUEERNT，编译使用 `drm-66-kmod`，支持情况同 Linux 6.6。
 # pkg install drm-61-kmod
 ```
 
-
 - FreeBSD 15.0
 
 ```sh
@@ -114,7 +113,7 @@ FreeBSD 15 CUEERNT，编译使用 `drm-66-kmod`，支持情况同 Linux 6.6。
 >
 > 像英特尔三代处理器的 HD 4000 这种比较古老的显卡，他在传统的 BIOS 模式下无需额外安装显卡驱动，但是 UEFI 下有可能会花屏（FreeBSD 13.0 及以后无此问题），且需要安装此 DRM 显卡驱动。
 
-### 配置英特尔核显/AMD 显卡驱动
+### 配置英特尔核显/AMD 显卡
 
 请按如下进行操作：
 
@@ -168,7 +167,6 @@ FreeBSD 15 CUEERNT，编译使用 `drm-66-kmod`，支持情况同 Linux 6.6。
 # cd /usr/ports/multimedia/libva-intel-media-driver/ && make install clean
 ```
 
-
 ### 亮度调节
 
 #### 通用
@@ -212,7 +210,6 @@ FreeBSD 15 CUEERNT，编译使用 `drm-66-kmod`，支持情况同 Linux 6.6。
 - 经过测试，此部分教程适用于 renoir 显卡：
 
 ## 笔记本核显 + Nvidia 独显（此节仍存在问题！需要你 PR 帮助改进或报告测试情况！）
-
 
 >**警告**
 >
