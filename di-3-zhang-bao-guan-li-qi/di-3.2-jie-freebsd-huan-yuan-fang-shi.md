@@ -26,13 +26,18 @@
 >
 >[NJU](https://github.com/nju-lug/NJU-Mirror-Issue/issues/54) 和 163 均同步自 USTC 而非 FreeBSD 直接上游。
 
-## pkg 源：pkg 源提供了二进制软件包
+## pkg 源：pkg 源提供了二进制软件包、
+
+境内的源一般只支持 aarch64（arm64） 和 amd64 两个架构。
 
 FreeBSD 中 pkg 源分为系统级和用户级两个配置文件。**不建议**直接修改 `/etc/pkg/FreeBSD.conf` ~~但是太麻烦啦，一般我都是直接改这个文件的~~，因为该文件会随着基本系统的更新而发生改变。
 
-### 故障排除与未竟事宜
+---
 
 并非所有源都有 `quarterly` 和 `latest`，具体请看 <https://pkg.freebsd.org/> 。
+
+
+### pkg 换源
 
 若要获取滚动更新的包，请将 `quarterly` 修改为 `latest`。二者区别见 FreeBSD 手册。请注意，`CURRENT` 版本只有 `latest`。
 
@@ -42,72 +47,59 @@ FreeBSD 中 pkg 源分为系统级和用户级两个配置文件。**不建议**
 # sed -i '' 's/quarterly/latest/g' /etc/pkg/FreeBSD.conf
 ```
 
-### 中国科学技术大学开源软件镜像站（USTC）
+---
+
+- 创建用户级源目录和文件：
+
+```sh
+# mkdir -p /usr/local/etc/pkg/repos
+# ee /usr/local/etc/pkg/repos/mirrors.conf
+```
+
+---
+
+- 中国科学技术大学开源软件镜像站（USTC）
 
 >**技巧**
 >
 >视频教程见 [005-FreeBSD14.2 更换 pkg 源为 USTC 镜像站](https://www.bilibili.com/video/BV13ji2YLEkV)
 
-创建用户级源目录和文件：
-
-```sh
-# mkdir -p /usr/local/etc/pkg/repos
-# ee /usr/local/etc/pkg/repos/ustc.conf
-```
-
 写入以下内容：
 
 ```sh
 ustc: {
-url: "http://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/quarterly",
+url: "http://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/latest",
 }
 FreeBSD: { enabled: no }
 ```
 
-### 南京大学开源镜像站
-
-创建用户级源目录和文件：
-
-```sh
-# mkdir -p /usr/local/etc/pkg/repos
-# ee /usr/local/etc/pkg/repos/nju.conf
-```
+- 南京大学开源镜像站
 
 写入以下内容：
 
 ```sh
 nju: {
-url: "http://mirrors.nju.edu.cn/freebsd-pkg/${ABI}/quarterly",
+url: "http://mirrors.nju.edu.cn/freebsd-pkg/${ABI}/latest",
 }
 FreeBSD: { enabled: no }
 ```
 
-### 网易开源镜像站
-
-创建用户级源目录和文件：
-
-```sh
-# mkdir -p /usr/local/etc/pkg/repos
-# ee /usr/local/etc/pkg/repos/163.conf
-```
+- 网易开源镜像站
 
 写入以下内容：
 
 ```sh
 163: {
-url: "http://mirrors.163.com/freebsd-pkg/${ABI}/quarterly",
+url: "http://mirrors.163.com/freebsd-pkg/${ABI}/latest",
 }
 FreeBSD: { enabled: no }
 ```
-
 
 ## ports 源：以源代码方式编译安装软件的包管理器
 
 ### 下载 ports
 
 这个源是下载 ports 本身的源。等同于以前的 `portsnap`。
-
-
 
 #### Git 方法
 
@@ -123,6 +115,8 @@ FreeBSD: { enabled: no }
 # cd /usr/ports/devel/git
 # make install clean
 ```
+
+---
 
 然后：
 
@@ -154,8 +148,8 @@ FreeBSD: { enabled: no }
 然后
 
 ```sh
-# tar -zxvf ports.tar.gz -C /usr/ #解压至路径
-# rm ports.tar.gz #删除存档
+# tar -zxvf ports.tar.gz -C /usr/ # 解压至路径
+# rm ports.tar.gz # 删除存档
 ```
 
 ### ports 源
@@ -167,13 +161,16 @@ FreeBSD: { enabled: no }
 >
 > ports 源可能并不完整。其余的大概只镜像了不到十分之一。见 <https://github.com/ustclug/discussions/issues/408>。
 
-#### 南京大学开源镜像站
-
 创建或修改文件 :
 
 ```sh
 # ee /etc/make.conf
 ```
+
+---
+
+- 南京大学开源镜像站
+
 
 写入以下内容：
 
@@ -181,13 +178,7 @@ FreeBSD: { enabled: no }
 MASTER_SITE_OVERRIDE?=http://mirrors.nju.edu.cn/freebsd-ports/distfiles/${DIST_SUBDIR}/
 ```
 
-#### 网易开源镜像站
-
-创建或修改文件：
-
-```sh
-# ee /etc/make.conf
-```
+- 网易开源镜像站
 
 写入以下内容：
 
@@ -195,13 +186,8 @@ MASTER_SITE_OVERRIDE?=http://mirrors.nju.edu.cn/freebsd-ports/distfiles/${DIST_S
 MASTER_SITE_OVERRIDE?=http://mirrors.163.com/freebsd-ports/distfiles/${DIST_SUBDIR}/
 ```
 
-#### 中国科学技术大学开源软件镜像站
+- 中国科学技术大学开源软件镜像站
 
-创建或修改文件：
-
-```sh
-# ee /etc/make.conf
-```
 
 写入以下内容：
 
@@ -209,23 +195,12 @@ MASTER_SITE_OVERRIDE?=http://mirrors.163.com/freebsd-ports/distfiles/${DIST_SUBD
 MASTER_SITE_OVERRIDE?=http://mirrors.ustc.edu.cn/freebsd-ports/distfiles/${DIST_SUBDIR}/
 ```
 
-## freebsd-update 源：提供基本系统更新
-
-注意：只有一级架构的 release 版本才提供该源。也就是说 current 和 stable 是没有的（可选择使用后续文章中的 pkgbase 进行更新）。关于架构的支持等级说明请看：
-
-[Supported Platforms](https://www.freebsd.org/platforms)
-
-**例：从 FreeBSD 12 升级到 13.0**
-
-```sh
-# freebsd-update -r 13.0-RELEASE upgrade
-```
-
 ## kernel modules（kmods）内核模块源：面向 FreeBSD 14.2 及更高版本（不含 15.0-CURRENT）
 
-### FreeBSD 官方源
-
 新建文件夹 `/usr/local/etc/pkg/repos`（即 `mkdir -p /usr/local/etc/pkg/repos`），再新建文件 `/usr/local/etc/pkg/repos/FreeBSD-kmods.conf`：
+
+
+### FreeBSD 官方源
 
 写入：
 
@@ -255,7 +230,6 @@ FreeBSD-kmods {
 
 ### 中国科学技术大学开源软件镜像站
 
-新建文件夹 `/usr/local/etc/pkg/repos`（即 `mkdir -p /usr/local/etc/pkg/repos`），再新建文件 `/usr/local/etc/pkg/repos/FreeBSD-kmods.conf`：
 
 写入：
 
@@ -276,7 +250,6 @@ FreeBSD-kmods {
 	enabled: yes
 }
 ```
-
 
 
 ## 不受安全支持的版本（请酌情使用）
