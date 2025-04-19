@@ -1,11 +1,11 @@
-# 目录
+# Table of contents
 
 * [FreeBSD 从入门到跑路（第三版）](README.md)
 * [编辑日志](CHANGELOG.md)
 * [目录](mu-lu.md)
 * [致谢](zhi-xie.md)
-* [序言一：好望角与塔吊（初版代序）](xu-yan-1.md)
-* [序言二：回到复制粘贴，面向教程本身（2025 代序）](xu-ya-2.md)
+* [初版序言：好望角与塔吊](xu-yan-1.md)
+* [第二版序言：回到复制粘贴，面向教程本身](xu-ya-2.md)
 * [前言](qian-yan.md)
 
 ## 第 1 章 FreeBSD 初见
