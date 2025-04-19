@@ -26,7 +26,7 @@ bspwm，据说更符合 UNIX 哲学（参见 [bspwm 入门](https://zerovip.verc
 # cd /usr/ports/x11-fonts/wqy/ && make install clean
 # cd /usr/ports/x11/lightdm/ && make install clean
 # cd /usr/ports/x11/lightdm-gtk-greeter/ && make install clean
-# cd /usr/ports/devel/xdg-user-dirs/ && make install clean # 自动管理家目录子目录
+# cd /usr/ports/devel/xdg-user-dirs/ && make install clean
 ```
 
 解释：
