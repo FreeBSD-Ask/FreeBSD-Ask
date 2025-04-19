@@ -9,16 +9,6 @@
 # pkg install xorg gnome noto-sc xdg-user-dirs
 ```
 
-解释：
-
-|     软件      |            用途            |
-| :-----------: | :------------------------: |
-|     xorg      |            X11             |
-|     gnome     |        Gnome 主程序        |
-|    noto-sc    |     思源黑体——简体中文     |
-| xdg-user-dirs | 自动管理家目录子目录 |
-
-
 - 或者使用 Ports 安装：
 
 ```
@@ -28,6 +18,14 @@
 # cd /usr/ports/devel/xdg-user-dirs/ && make install clean # 自动管理家目录子目录
 ```
 
+- 解释：
+
+|     软件      |            用途            |
+| :-----------: | :------------------------: |
+|     xorg      |            X11             |
+|     gnome     |        Gnome 主程序        |
+|    noto-sc    |     思源黑体——简体中文     |
+| xdg-user-dirs | 自动管理家目录子目录 |
 
 ### 附录：精简安装
 
@@ -37,10 +35,6 @@
 # pkg install xorg-minimal gnome-lite wqy-fonts xdg-user-dirs
 ```
 
-| 包名             | 作用             |
-|:------------------|:------------------|
-| `xorg-minimal`   | 精简版 X 图形环境 |
-| `gnome-lite`     | 精简版 GNOME 桌面 |
 
 - 或者使用 Ports 安装：
 
@@ -50,6 +44,14 @@
 # cd /usr/ports/x11-fonts/wqy/ && make install clean
 # cd /usr/ports/devel/xdg-user-dirs/ && make install clean
 ```
+
+- 解释
+
+
+| 包名             | 作用             |
+|:------------------|:------------------|
+| `xorg-minimal`   | 精简版 X 图形环境 |
+| `gnome-lite`     | 精简版 GNOME 桌面 |
 
 如果安装了完整版本也可以使用 pkg 包管理器卸载自带的游戏软件：
 
