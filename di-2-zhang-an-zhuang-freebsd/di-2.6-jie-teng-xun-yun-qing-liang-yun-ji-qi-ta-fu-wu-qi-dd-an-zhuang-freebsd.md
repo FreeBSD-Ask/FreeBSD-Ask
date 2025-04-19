@@ -82,7 +82,7 @@ mfsBSD 和 mfsLinux 镜像的 `root` 密码默认均是 `mfsroot`
 
 ssh 连接服务器后，使用 `kldload zfs` 加载 zfs 模块，然后运行 `bsdinstall`，在出现以下图片时，点 `Other` 输入图中的指定镜像版本（地址里有即可，你可以自己改哦）：
 
-示例：如 <https://mirrors.ustc.edu.cn/freebsd/releases/amd64/14.2-RELEASE/> 或 <https://mirrors.nju.edu.cn/freebsd/snapshots/arm64/15.0-CURRENT/>
+示例：如 <https://mirrors.ustc.edu.cn/freebsd/releases/amd64/14.2-RELEASE/> 或 <https://mirrors.nju.edu.cn/freebsd/snapshots/amd64/15.0-CURRENT/>
 
 ![腾讯云轻量云及其他服务器安装 FreeBSD](../.gitbook/assets/installBSD1.png)
 
