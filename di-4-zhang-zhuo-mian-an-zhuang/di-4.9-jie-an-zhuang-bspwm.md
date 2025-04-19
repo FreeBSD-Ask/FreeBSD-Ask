@@ -1,6 +1,6 @@
 # 第 4.9 节 bspwm
 
-bspwm，据说更符合 UNIX 哲学。
+bspwm，据说更符合 UNIX 哲学（参见 [bspwm 入门](https://zerovip.vercel.app/zh/63233/)，7.2 Unix 哲学）。
 
 ## 安装 bspwm
 
