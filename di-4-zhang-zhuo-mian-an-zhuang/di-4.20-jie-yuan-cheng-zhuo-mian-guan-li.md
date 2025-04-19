@@ -549,7 +549,7 @@ Do you trust this certificate (yes/no)? # 输入 yes，按回车键
 # make install clean
 ```
 
-不可使用 `BATCH=yes`参数，因为需要接受许可协议才能使用：
+不可使用 `BATCH=yes` 参数，因为需要接受许可协议才能使用：
 
 ![anydesk](../.gitbook/assets/anydesk1.png)
 

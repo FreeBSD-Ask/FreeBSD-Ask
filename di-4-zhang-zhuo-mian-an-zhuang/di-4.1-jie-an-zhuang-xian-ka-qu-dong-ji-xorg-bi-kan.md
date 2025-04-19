@@ -38,9 +38,9 @@ FreeBSD 已从 Linux 移植了显卡驱动，理论上，绝大部分英特尔�
 
 ## 显卡支持情况
 
-对于 FreeBSD 13，编译使用`drm-510-kmod`，支持情况同 Linux 5.10。AMD 可支持 R7 4750U。
+对于 FreeBSD 13，编译使用 `drm-510-kmod`，支持情况同 Linux 5.10。AMD 可支持 R7 4750U。
 
-FreeBSD 14.1-RELEASE、14-STABLE（OSVERSION >1400508）、编译使用 `drm-61-kmod`，支持情况同 Linux 6.1。经过实际测试，可支持第十二代 Alder Lake-N（如 N100）。十三代等后续版本暂无条件测试。
+FreeBSD 14.1-RELEASE、14-STABLE（OSVERSION > 1400508）、编译使用 `drm-61-kmod`，支持情况同 Linux 6.1。经过实际测试，可支持第十二代 Alder Lake-N（如 N100）。十三代等后续版本暂无条件测试。
 
 FreeBSD 15 CURRENT，编译使用 `drm-66-kmod`，支持情况同 Linux 6.6。
 

@@ -48,7 +48,7 @@ COPYRIGHT	etc		mnt		rescue		usr
 # bsdconfig
 ```
 
-`3 Packages`——>`1 CD/DVD Install from a FreeBSD CD/DVD`
+`3 Packages`——> `1 CD/DVD Install from a FreeBSD CD/DVD`
 
 有 bug，会报错 `No pkg(8) database found!`。
 

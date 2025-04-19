@@ -174,7 +174,7 @@ remote size / mtime: 195363380 / 1652346155
 
 ### 更新 ports
 
-这里有`-p`（小写）、`-P`（大写）两个选项，`-p`（小写）使用 portsnap 更新 jail 的 ports tree。`-P`（大写）使用宿主机的 ports tree 更新 jail 的 ports。如果主机已有 ports，则建议使用 `-P`（大写），避免两次下载 ports。
+这里有 `-p`（小写）、`-P`（大写）两个选项，`-p`（小写）使用 portsnap 更新 jail 的 ports tree。`-P`（大写）使用宿主机的 ports tree 更新 jail 的 ports。如果主机已有 ports，则建议使用 `-P`（大写），避免两次下载 ports。
 
 ```sh
 # qjail update -P  # 这里注意大写

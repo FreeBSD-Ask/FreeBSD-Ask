@@ -137,13 +137,13 @@ gnome 捆绑的输入法面板是 `ibus`。
 
 #### fcitx 5
 
-首先看看现在自己的 shell 是不是 `sh`,`bash`,`zsh`：
+首先看看现在自己的 shell 是不是 `sh`、`bash`、`zsh`：
 
 ```sh
 # echo $0
 ```
 
-如果是 `sh`,`bash`,`zsh` 其中之一，请继续；如果不是，请参考输入法相关章节。
+如若，请继续；若不是，请参考输入法相关章节。
 
 安装 `fcitx5`:
 
@@ -266,9 +266,9 @@ GNOME 一直以反人类著称：桌面不让放图标、右上角没托盘等�
 
 ### 在桌面放图标
 
-扩展 [gnome-shell-extension-desktop-icons](https://extensions.gnome.org/extension/1465/desktop-icons/)已经长期未更新，项目地址：[Desktop Icons](https://gitlab.gnome.org/World/ShellExtensions/desktop-icons)。
+扩展 [gnome-shell-extension-desktop-icons](https://extensions.gnome.org/extension/1465/desktop-icons/) 已经长期未更新，项目地址：[Desktop Icons](https://gitlab.gnome.org/World/ShellExtensions/desktop-icons)。
 
-可以用 [Desktop Icons NG (DING)](https://extensions.gnome.org/extension/2087/desktop-icons-ng-ding/)解决。安装方式同上。
+可以用 [Desktop Icons NG (DING)](https://extensions.gnome.org/extension/2087/desktop-icons-ng-ding/) 解决。安装方式同上。
 
 ![Gnome 在桌面放图标](../.gitbook/assets/gnome9.png)
 
