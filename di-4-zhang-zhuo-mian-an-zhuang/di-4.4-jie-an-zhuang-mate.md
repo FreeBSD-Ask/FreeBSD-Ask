@@ -21,17 +21,26 @@
 # pkg install mate xorg wqy-fonts lightdm slick-greeter xdg-user-dirs
 ```
 
-xdg-user-dirs 可自动管理家目录子目录（可选安装）
+
+
+| 包名               | 作用说明                             |
+|:--------------------|--------------------------------------|
+| `mate`             | MATE 桌面环境|
+| `xorg`             | X Window 系统        |
+| `wqy-fonts`        | 文泉驿中文字体             |
+| `lightdm`          | 显示管理器，提供图形登录界面               |
+| `slick-greeter`    | LightDM 的美观登录界面插件，缺少将无法启动 LightDM|
+| `xdg-user-dirs`    | 可自动管理家目录子目录（可选安装）         |
 
 或者：
 
 ```sh
-# cd /usr/ports/x11/mate/ && make install clean # 主程序
-# cd /usr/ports/x11/xorg/ && make install clean # X11
-# cd /usr/ports/x11-fonts/wqy/ && make install clean # 文泉驿字体
-# cd /usr/ports/x11/lightdm/ && make install clean # lightdm
-# cd /usr/ports/x11/slick-greeter/ && make install clean # lightdm 需要
-# cd /usr/ports/devel/xdg-user-dirs/ && make install clean # 自动管理家目录子目录
+# cd /usr/ports/x11/mate/ && make install clean
+# cd /usr/ports/x11/xorg/ && make install clean
+# cd /usr/ports/x11-fonts/wqy/ && make install clean
+# cd /usr/ports/x11/lightdm/ && make install clean 
+# cd /usr/ports/x11/slick-greeter/ && make install clean 
+# cd /usr/ports/devel/xdg-user-dirs/ && make install clean 
 ```
 
 ## 安装后启动服务
