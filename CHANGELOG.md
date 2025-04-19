@@ -6,6 +6,7 @@
 
 - 2025.4.20
   - 格式化全书
+  - 对全书初版重写达 100%
 - 2025.4.19
   - 第 4 章 桌面环境：新增软件解释
   - 对全书删除冗余，重新排版
@@ -25,7 +26,7 @@
   - 格式化：第 5.6 节 QQ（Linux 版）
   - 第 4.20 节 远程桌面：删除剩余的“VNC 与 RPD（XRDP）对比”部分
 - 2025.4.14
-  - 目前对全书已重写 96.57%（按 Commit 数）
+  - 目前对全书初版已重写 96.57%（按 Commit 数）
   - 格式化“第 11.5 章 MySQL 数据库”
   - 删减占用篇幅较大的无用图片
 - 2025.4.13
@@ -50,7 +51,7 @@
   - “第 16.5 节 Wildfly”测试失败，见 [Bug 285956 - java/wildfly: service start fail, illegal group name](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=285956)
 - 2025.4.7
   - 全译现有所有安装后说明
-  - 从 [2024.8-3533 次](https://github.com/FreeBSD-Ask/FreeBSD-Ask/commit/c4d657fb586f91e9f8664ee1181a2711f7350d17) 开始，目前对全书已重写 94%（按 Commit 数），下同
+  - 从 [2024.8-3533 次](https://github.com/FreeBSD-Ask/FreeBSD-Ask/commit/c4d657fb586f91e9f8664ee1181a2711f7350d17) 开始，目前对全书初版已重写 94%（按 Commit 数），下同
   - 删除“第 11.3 节 散热器、风扇、鼓风机”，可能包含错误内容
 - 2025.4.6
   - “第 17.8 节 PostgreSQL 与 pgAdmin4”新增“深入 PostgreSQL 服务管理”
