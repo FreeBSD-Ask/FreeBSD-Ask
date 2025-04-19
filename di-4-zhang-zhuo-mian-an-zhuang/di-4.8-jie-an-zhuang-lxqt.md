@@ -2,13 +2,13 @@
 
 ## 安装 LXQt
 
-通过 pkg 安装
+- 通过 pkg 安装
 
 ```sh
 # pkg install xorg sddm lxqt gvfs wqy-fonts xdg-user-dirs
 ```
 
-或者使用 Ports 安装：
+- 或者使用 Ports 安装：
 
 ```sh
 # cd /usr/ports/x11/xorg/ && make install clean
@@ -16,27 +16,34 @@
 # cd /usr/ports/x11-fonts/wqy/ && make install clean
 # cd /usr/ports/x11/sddm/ && make install clean
 # cd /usr/ports/devel/gvfs/ && make install clean
-# cd /usr/ports/devel/xdg-user-dirs/ && make install clean # 自动管理家目录子目录
+# cd /usr/ports/devel/xdg-user-dirs/ && make install clean 
 ```
 
 解释：
 
-- sddm：LXQt 首选的显示管理器
-- gvfs：GNOME 虚拟文件系统，LXQt 依赖此打开 Computer 和 Network，否则会提示 `Operation not supported`
+| 包名               | 作用说明                                                                 |
+|:--------------------|:--------------------------------------------------------------------------|
+| `xorg`             |  X Window 系统 |
+| `sddm`             | 登录管理器 |
+| `lxqt`             | LXQt 首选的显示管理器 |
+| `gvfs`             | GNOME 虚拟文件系统，LXQt 依赖此打开 Computer 和 Network，否则会提示 `Operation not supported`|
+| `wqy-fonts`        | 文泉驿中文字体|
+| `xdg-user-dirs`    | 管理用户目录，如“桌面”、“下载”等，并处理目录名称的本地化|
 
-## 准备
 
-启用 dbus 服务
+## 服务管理
+
 
 ```sh
 # service dbus enable
+# service sddm enable
 ```
 
-修改 fstab
+## `fstab`
+
+编辑 `/etc/fstab`，加入：
 
 ```sh
-# ee /etc/fstab
-添加如下内容
 proc	/proc	procfs	rw	0	0
 ```
 
@@ -46,13 +53,11 @@ proc	/proc	procfs	rw	0	0
 $ echo "exec ck-launch-session startlxqt" > ~/.xinitrc
 ```
 
-## 通过 sddm 启动 LXQt
+用谁登录就用哪个账户写。
 
-```sh
-# service sddm enable
-```
+## 设置中文显示
 
-中文化：
+### 中文化 SDDM
 
 ```sh
 # sysrc sddm_lang="zh_CN"
@@ -64,7 +69,7 @@ $ echo "exec ck-launch-session startlxqt" > ~/.xinitrc
 
 ![FreeBSD 安装 LXQt](../.gitbook/assets/lxqt3.png)
 
-## 设置中文显示
+### 中文化桌面
 
 进入 LXQt 后 菜单 -> "Preferences" -> "LXQt Settings" -> "Locale" -> "Region" 下拉菜单选择中文
 
