@@ -4,22 +4,31 @@ Budgie 是 Solus Linux 的默认桌面。
 
 ## 安装
 
+- 使用 pkg 安装：
+
 ```sh
 # pkg install budgie wqy-fonts
 ```
 
-或者
+- 或者使用 Ports 安装：
 
 ```sh
 # cd /usr/ports/x11/budgie && make install clean
 # cd /usr/ports/x11-fonts/wqy/ && make install clean
 ```
 
-会自动安装 lightdm。
+>**技巧**
+>
+>会自动安装 lightdm。
 
-## 配置
+- 解释：
 
-查看默认提示：
+| 包名             | 作用说明                                                  |
+|:------------------|:--------------------------|
+| `budgie`         | 桌面环境 |
+| `wqy-fonts`      | 文泉驿中文字体                                          | 
+
+## 查看安装提示
 
 ```sh
 root@ykla:/home/ykla # pkg info -D budgie
@@ -37,12 +46,14 @@ If you want to launch new session from a console (without login manager)
 # 如果你想直接从控制台启动会话（不使用登录管理器），请复制示例 xinitrc 到主目录。
 ```
 
-按需操作：
+## 配置 `startx`
 
 ```sh
 $ cp /usr/local/share/examples/budgie/xprofile ~/.xprofile
 $ cp /usr/local/share/examples/budgie/xinitrc ~/.xinitrc
 ```
+
+## 配置 `fstab`
 
 编辑 `/etc/fstab`，加入：
 
@@ -50,18 +61,12 @@ $ cp /usr/local/share/examples/budgie/xinitrc ~/.xinitrc
 proc           /proc       procfs  rw  0   0
 ```
 
-添加启动项：
+## 服务管理
 
 ```sh
 # service dbus enable
 # service lightdm enable
 ```
-
-![FreeBSD 安装 Budgie](../.gitbook/assets/budgie1.png)
-
-![FreeBSD 安装 Budgie](../.gitbook/assets/budgie2.png)
-
-图中壁纸为默认。拍摄地为新加坡滨海湾区。
 
 ## 中文环境
 
@@ -71,15 +76,23 @@ proc           /proc       procfs  rw  0   0
 lightdm_env="LC_MESSAGES=zh_CN.UTF-8" 
 ```
 
-编辑 `/etc/login.conf`：
+---
 
-找到 `default:\` 这一段，把 `:lang=C.UTF-8` 修改为 `:lang=zh_CN.UTF-8`。
+编辑 `/etc/login.conf`：找到 `default:\` 这一段，把 `:lang=C.UTF-8` 修改为 `:lang=zh_CN.UTF-8`。
 
 刷新数据库：
 
 ```sh
 # cap_mkdb /etc/login.conf
 ```
+
+## 桌面欣赏
+
+![FreeBSD 安装 Budgie](../.gitbook/assets/budgie1.png)
+
+![FreeBSD 安装 Budgie](../.gitbook/assets/budgie2.png)
+
+图中壁纸为默认。拍摄地为新加坡滨海湾区。
 
 ![FreeBSD 安装 Budgie](../.gitbook/assets/budgie3.png)
 
