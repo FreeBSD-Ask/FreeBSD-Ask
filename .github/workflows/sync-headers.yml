@@ -2,8 +2,10 @@ name: 🔗 从 SUMMARY.md 更新一级标题
 
 on:
   push:
-    paths:
-      - 'SUMMARY.md'
+  workflow_run:
+    workflows: [🔗 从 SUMMARY.md 更新目录]   # 这里要写 mulu.yml 中定义的 workflow 名字，而不是文件名
+    types:
+      - completed
   workflow_dispatch:
 
 jobs:
