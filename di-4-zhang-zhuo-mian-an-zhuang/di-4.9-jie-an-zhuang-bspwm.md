@@ -10,8 +10,6 @@ bspwm，据说更符合 UNIX 哲学（参见 [bspwm 入门](https://zerovip.verc
 # pkg install xorg bspwm sxhkd rofi kitty feh picom polybar dunst lightdm lightdm-gtk-greeter wqy-fonts xdg-user-dirs
 ```
 
-xdg-user-dirs 可自动管理家目录子目录（可选安装）
-
 - 通过 Ports 安装：
 
 
