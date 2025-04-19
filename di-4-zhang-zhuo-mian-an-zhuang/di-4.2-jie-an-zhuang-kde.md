@@ -26,17 +26,26 @@
 # pkg install xorg sddm kde plasma6-sddm-kcm wqy-fonts xdg-user-dirs
 ```
 
-xdg-user-dirs 可自动管理家目录子目录（可选安装）
+
+| 包名                   | 作用                     |
+|:----------------------|:------------------------|
+| `xorg`               | 图形界面基础，提供 X Window 系统              |
+| `sddm`               | 登录管理器                |
+| `kde`    | KDE 桌面环境              |
+| `plasma6-sddm-kcm`   | 配置 SDDM 的 KDE 模块，可在系统设置中配置登录界面外观等参数。     |
+| `wqy-fonts`          |  文泉驿中文字体              |
+| `xdg-user-dirs`      | 可自动管理家目录子目录（可选安装）          |
+
 
 或者：
 
 ```sh
-# cd /usr/ports/x11/xorg/ && make install clean # X11
-# cd /usr/ports/x11/kde/ && make install clean # KDE5
-# cd /usr/ports/x11/sddm/ && make install clean # 窗口管理器
-# cd /usr/ports/deskutils/plasma6-sddm-kcm/ && make install clean # KDE 管理 SDDM 的模块
-# cd /usr/ports/x11-fonts/wqy/ && make install clean # 文泉驿字体
-# cd /usr/ports/devel/xdg-user-dirs/ && make install clean # 自动管理家目录子目录
+# cd /usr/ports/x11/xorg/ && make install clean 
+# cd /usr/ports/x11/kde/ && make install clean 
+# cd /usr/ports/x11/sddm/ && make install clean 
+# cd /usr/ports/deskutils/plasma6-sddm-kcm/ && make install clean 
+# cd /usr/ports/x11-fonts/wqy/ && make install clean 
+# cd /usr/ports/devel/xdg-user-dirs/ && make install clean 
 ```
 
 
