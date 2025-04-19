@@ -9,7 +9,7 @@ Hyprland 是 Wayland 的一个合成器，支持窗口透明、模糊、圆角�
 - 使用 pkg 安装：
 
 ```sh
-# pkg ins hyprland waybar wofi qt6-base qt5-wayland qt6-wayland xdg-desktop-portal-hyprland hyprpicker swaybg mako nerd-fonts slurp grim swaylock kitty
+# pkg ins hyprland waybar wofi qt6-base qt5-wayland qt6-wayland xdg-desktop-portal-hyprland hyprpicker swaybg mako nerd-fonts slurp grim swaylock kitty dolphin
 ```
 
 - 或者使用 Ports 安装：
@@ -29,6 +29,7 @@ Hyprland 是 Wayland 的一个合成器，支持窗口透明、模糊、圆角�
 # cd /usr/ports/x11/slurp/ && make install clean
 # cd /usr/ports/x11/grim/ && make install clean
 # cd /usr/ports/x11/swaylock/ && make install clean
+# cd /usr/ports/x11-fm/dolphin/ && make install clean
 # cd /usr/ports/x11/kitty/ && make install clean
 ```
 
@@ -56,7 +57,7 @@ Hyprland 是 Wayland 的一个合成器，支持窗口透明、模糊、圆角�
 | `grim`                      | 屏幕截图工具 |
 | `swaylock`                  | 锁屏工具 |
 | `kitty`                     | 终端|
-
+|`dolphin`|文件管理器|
 
 
 ## 启动服务：
