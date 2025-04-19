@@ -147,6 +147,8 @@ BSD 最初是由加州大学伯克利分校（University of California, Berkeley
 
 BSD 操作系统并非克隆产物，而是 AT&T 研究 UNIX（Research Unix）操作系统的开源衍生版本，也是现代 UNIX® System V 的祖先。
 
+FreeBSD 官方的口号是 `The Power To Serve`（服务的力量）。
+
 FreeBSD 日为 6 月 19 日。FreeBSD 基金会和社区在这天庆祝 FreeBSD 的生日。——[Join us to celebrate FreeBSD Day!](https://freebsdfoundation.org/freebsd-day/)
 
 ### UNIX 与忒修斯之船
