@@ -9,31 +9,12 @@ root@ykla:~ # ls -al /home/ykla
 total 74
 drwxr-xr-x  17 ykla ykla    27 Mar 19 17:57 .
 drwxr-xr-x   3 root wheel    4 Mar 19 16:05 ..
--rw-------   1 ykla ykla    50 Mar 18 17:23 .Xauthority
-drwx------   6 ykla ykla     6 Mar 10 16:21 .cache
-drwx------   9 ykla ykla    12 Mar 19 15:01 .config
--rw-r--r--   1 ykla ykla   950 Feb 24 12:18 .cshrc
-drwx------   3 ykla ykla     3 Mar  9 20:44 .dbus
--rw-r--r--   1 ykla ykla  6858 Mar  9 23:46 .face
-drwxr-xr-x   2 ykla ykla     2 Mar  9 23:48 .icons
-drwxr-xr-x   3 ykla ykla     3 Mar  9 20:44 .local
--rw-r--r--   1 ykla ykla   311 Feb 24 12:18 .login
--rw-r--r--   1 ykla ykla    79 Feb 24 12:18 .login_conf
--rw-------   1 ykla ykla   289 Feb 24 12:18 .mail_aliases
--rw-r--r--   1 ykla ykla   255 Feb 24 12:18 .mailrc
 drwx------   4 ykla ykla     4 Mar 10 16:21 .mozilla
 -rw-r--r--   1 ykla ykla   966 Feb 24 12:18 .profile
 -rw-------   1 ykla ykla   200 Mar 19 17:57 .sh_history
 -rw-r--r--   1 ykla ykla  1003 Feb 24 12:18 .shrc
 drwxr-xr-x   2 ykla ykla     2 Mar  9 23:48 .themes
-drwxr-xr-x   2 ykla ykla     2 Mar  9 20:45 下载
-drwxr-xr-x   2 ykla ykla     2 Mar  9 20:45 公共
-drwxr-xr-x   2 ykla ykla     2 Mar  9 20:45 图片
-drwxr-xr-x   2 ykla ykla     2 Mar  9 20:45 文档
 drwxr-xr-x   2 ykla ykla     2 Mar  9 20:45 桌面
-drwxr-xr-x   2 ykla ykla     2 Mar  9 20:45 模板
-drwxr-xr-x   2 ykla ykla     2 Mar  9 20:45 视频
-drwxr-xr-x   2 ykla ykla     2 Mar  9 20:45 音乐
 ```
 
 再观察：

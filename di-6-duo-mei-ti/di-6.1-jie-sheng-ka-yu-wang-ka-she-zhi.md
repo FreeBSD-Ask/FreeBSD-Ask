@@ -37,7 +37,7 @@ $ sysctl hw.snd.default_unit=5
 |   gtk    | audio/gtk-mixer |
 | 非图形化 | audio/mixertui  |
 
-## 提示
+## 故障排除与未竟事项
 
 部分声卡需要自行编译内核，请参考 [Open Sound System for FreeBSD](http://www.opensound.com/freebsd.html)。
 

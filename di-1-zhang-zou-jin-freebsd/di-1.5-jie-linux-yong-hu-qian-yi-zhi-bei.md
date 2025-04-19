@@ -17,9 +17,9 @@
 | q        | SIGHUP     | 重新扫描终端设备文件（ttys(5)）。   |
 
 
-- FreeBSD 所有用户 shell 默认均是 sh（14 之前 root 为 csh，普通用户为 sh），而非 bash（如果你喜欢，亦可切换为 bash 或 zsh）；
+- FreeBSD 所有用户 shell 默认均是 sh（14 之前 root 为 csh，普通用户为 sh），而非 bash（若你喜欢，亦可切换为 bash 或 zsh）；
 
-- FreeBSD 基本系统几乎不包含任何与 BSD 协议不兼容的软件（你可以自己安装）。
+- FreeBSD 基本系统几乎不包含任何与 BSD 协议不兼容的软件。
 
 >**思考题**
 >>
@@ -28,7 +28,7 @@
 >你认为是 BSD 一直在去 GNU 化，还是 Linux 一直在 GNU 化？
 
 - FreeBSD 的用户配置文件和系统配置文件严格分离，即内核和基本系统与第三方应用程序是完全分离的；
-- FreeBSD 项目是作为一个完整的操作系统维护的，而非内核与 userland 单独维护；也就是说如果你要使用 FreeBSD，那么就只有一个 FreeBSD 可选；
+- FreeBSD 项目是作为一个完整的操作系统维护的，而非内核与用户空间单独维护；也就是说如果你要使用 FreeBSD，那么就只有一款 FreeBSD 可选；
 - FreeBSD 没有 free 命令也不支持安装这个包（FreeBSD 已不使用 procfs），FreeBSD 基本系统自带的文本编辑器有 `ee` 和 `vi`（不是软链接到 vim 的 vi，是真实的 nvi）；没有预装 `wget`，而是 `etch`。
 
 
@@ -43,17 +43,23 @@
 ## FreeBSD 的缺陷
 
 - FreeBSD 无论社区还是开发者都秉持着“慢就是快，快就是慢”的哲学思想。正因为秉持这一思想，让很多事物不被匆忙对待，有更多的时间来审视一切。但这是一个后工业化的时代，很多人认为“欲速则不达”只是一种落伍的软件工程理论，而更偏好于敏捷开发。~~我们的确需要花些时间慢下来，审视自己的一切，无论知识还是自我。花些时间在路旁的花朵石子上面，也许并不是浪费时间，无所事事。~~
-- FreeBSD 系统总体上不够现代化，缺乏现代操作系统应有的实现。与其他系统相比，在嵌入式方面差距非常大。
+- FreeBSD 系统总体上不够现代化，缺乏现代操作系统应有的实现。在嵌入式方面比较差。
 - FreeBSD 没有为用户提供带桌面的基本系统；
 - FreeBSD 的驱动水平较差；
-- FreeBSD 的开发者非常少，这意味着你的 Bug 可能很久都无法得到解决，不是所有软件包都能时刻保持最新版；
+- FreeBSD 的开发者非常少：这意味着你的 Bug 可能很久都无法得到解决，不是所有软件包都能时刻保持最新版；
 - FreeBSD 的资料相对较少；
 - 由于 Systemd 不兼容 Linux 以外的操作系统，导致很多软件比如 NetworkManager 无法移植，桌面环境的组件也无法完善；
 - 由于 FreeBSD 项目的基本目标和设计问题，FreeBSD 基本系统不包含一般 Linux 中常用的一些软件和命令，比如没有 `lspci`、`free`。有些可以自己安装，有些则不行；
-- FreeBSD 的两个文件系统 ZFS 与 UFS 都只能扩大不能缩小，一个奇怪的设计；
-- FreeBSD 缺乏上层应用软件设计，即使底层有类似 docker 的技术 jail 也没能发展起来；FreeBSD 的虚拟化技术 Byhve 也很难用：没有一个前端的 GUI 来控制，设定参数也缺乏一个统一的教程。
+- FreeBSD 的两个文件系统 ZFS 与 UFS 都只能扩大不能缩小，真是个奇怪的设计；
+- FreeBSD 缺乏上层应用软件设计，即使底层有类似 docker 的技术 jail 也没能发展起来；FreeBSD 的虚拟化技术 Byhve 也很难用。
 
-> 我们现在称为容器技术的概念最初出现在 2000 年，当时称为 FreeBSD jail，这种技术可将 FreeBSD 系统分区为多个子系统（也称为 Jail）。Jail 是作为安全环境而开发的，系统管理员可与企业内部或外部的多个用户共享这些 Jail。2001 年，通过 Jacques Gélinas 的 VServer 项目，隔离环境的实施进入了 Linux 领域。在完成了这项针对 Linux 中多个受控制用户空间的基础性工作后，Linux 容器开始逐渐成形并最终发展成了现在的模样。2008 年，Docker 公司凭借与公司同名的容器技术通过 dotCloud 登上了舞台。—— [什么是 Linux 容器？](https://www.redhat.com/zh/topics/containers/shenmeshi-linux-rongqi)
+---
+
+许多 Linux 的常用概念其实最初源于 BSD，比如容器、发行版的概念。
+
+—— [什么是 Linux 容器？](https://www.redhat.com/zh/topics/containers/shenmeshi-linux-rongqi)
+
+我们现在称为容器技术的概念最初出现在 2000 年，当时称为 FreeBSD jail，这种技术可将 FreeBSD 系统分区为多个子系统（也称为 Jail）。Jail 是作为安全环境而开发的，系统管理员可与企业内部或外部的多个用户共享这些 Jail。2001 年，通过 Jacques Gélinas 的 VServer 项目，隔离环境的实施进入了 Linux 领域。在完成了这项针对 Linux 中多个受控制用户空间的基础性工作后，Linux 容器开始逐渐成形并最终发展成了现在的模样。2008 年，Docker 公司凭借与公司同名的容器技术通过 dotCloud 登上了舞台。
 
 ## 基本对比
 

@@ -14,5 +14,3 @@
 # chmod -R 755 /usr/local/share/fonts/WindowsFonts #刷新权限
 # fc-cache
 ```
-
-即可。

@@ -2,11 +2,11 @@
 
 Qemu 是一款纯软件模拟的开源虚拟机，支持模拟不同的体系结构。
 
-## 下载软件与镜像
+
 
 本文基于 Windows 11 24H2（物理机）X86-64，FreeBSD 14.2 RELEASE RISC-V（虚拟机），qemu 20241220。
 
-### Qemu
+## Qemu
 
 Qemu 下载地址：
 
@@ -14,7 +14,7 @@ Qemu 下载地址：
 
 下载后在 Windows 上安装 Qemu。
 
-### RISC-V FreeBSD 磁盘镜像
+## RISC-V FreeBSD 磁盘镜像
 
 RISC-V FreeBSD 磁盘镜像（以 FreeBSD 14.2 RELEASE 为例）：
 
@@ -22,9 +22,11 @@ RISC-V FreeBSD 磁盘镜像（以 FreeBSD 14.2 RELEASE 为例）：
 
 下载后解压缩备用。
 
-### OpenSBI
+## OpenSBI
 
-获取 OpenSBI（RISC-V Open Source Supervisor Binary Interface），类似于 BIOS：
+获取 OpenSBI（RISC-V Open Source Supervisor Binary Interface），功能上类似于 BIOS。
+
+---
 
 安装 OpenSBI：
 
@@ -49,9 +51,11 @@ RISC-V FreeBSD 磁盘镜像（以 FreeBSD 14.2 RELEASE 为例）：
 
 提取 `fw_jump.elf` 到 Windows 下备用。
 
-### U-Boot
+## U-Boot
 
-获取 U-Boot，类似于 Grub2：
+获取 U-Boot，功能上类似于 Grub2。
+
+---
 
 安装：
 
@@ -120,7 +124,9 @@ cd /d "C:\Program Files\qemu"
 
 但是该镜像默认未配置 ssh 与普通用户，直接 ssh 是无法连接的。
 
-先创建一个普通用户（注意加入 wheel 组）：
+---
+
+- 先创建一个普通用户（注意加入 wheel 组）：
 
 ```sh
 root@freebsd:~ # adduser 
@@ -158,7 +164,7 @@ Add another user? (yes/no) [no]:
 Goodbye!
 ```
 
-配置 sshd：
+- 配置 sshd：
 
 ```sh
 root@freebsd:~ # service sshd enable # 添加启动项
@@ -174,7 +180,7 @@ Performing sanity check on sshd configuration.
 Starting sshd.
 ```
 
-然后就可以在 Windows 上通过 ssh 连接了（IP 就是 `localhost`）：
+- 然后就可以在 Windows 上通过 ssh 连接了（IP 就是 `localhost`）：
 
 ```powershell
 ssh ykla@localhost:8022

@@ -2,16 +2,13 @@
 
 FreeBSD 安装桌面环境后，很多时候扑面而来的，是简单朴素的色调。这种未加修饰的设定，可能一时会让新用户无法接受。为了系统的美观，我们将在本节尝试添加 **主题** 和 **图标**。
 
-## 安装软件包
-
-
 >**注意**
 >
 >本节仅涉及了 `GTK` 库的桌面主题，囊括了 `Gnome`、`XFCE`、`MATE`、`Cinnamon` 和 `LXDE` 等桌面环境。
 
 以下仅收录了部分图标和主题，想要获取更多资源，可访问 [FreshPorts](https://www.freshports.org)。
 
-### 主题
+## 主题
 
 - matcha 主题： `# pkg install matcha-gtk-themes`
 - Qogir 主题： `# pkg install qogir-gtk-themes`
@@ -22,7 +19,7 @@ FreeBSD 安装桌面环境后，很多时候扑面而来的，是简单朴素的
 - Yaru 主题： `# pkg install yaru-gtk-themes`
 - Canta 主题：`# pkg install canta-gtk-themes`
 
-### 图标
+## 图标
 
 - papirus 图标： `# pkg install papirus-icon-theme`
 - Qogir 图标： `# pkg install qogir-icon-themes`
@@ -34,7 +31,7 @@ FreeBSD 安装桌面环境后，很多时候扑面而来的，是简单朴素的
 - Canta 图标：`# pkg install canta-icon-theme`
 
 
-### KDE 主题美化
+## KDE 主题美化
 
 我们要安装的是 [WhiteSur](https://www.pling.com/p/1398840/) 主题。
 
@@ -43,7 +40,7 @@ FreeBSD 安装桌面环境后，很多时候扑面而来的，是简单朴素的
 3. 修改 shebang： `ee install.sh`，修改第一行为 `#!/usr/local/bin/bash`，然后保存。
 4. 执行安装： `bash install.sh`
 
-### Gnome 主题美化
+## Gnome 主题美化
 
 同样我们要安装的是 [WhiteSur](https://www.pling.com/p/1403328/) 主题。
 
@@ -52,25 +49,25 @@ FreeBSD 安装桌面环境后，很多时候扑面而来的，是简单朴素的
 3. 修改 shebang： `ee install.sh`，修改第一行为 `#!/usr/local/bin/bash`，然后保存。
 4. 执行安装： `bash install.sh`
 
-### [图标](https://www.pling.com/p/1405756/)
+## [图标](https://www.pling.com/p/1405756/)
 
 1. 下载图标： `git clone https://github.com/vinceliuice/WhiteSur-icon-theme`
 2. 进入软件目录： `cd WhiteSur-icon-theme`
 3. 修改 shebang： `ee install.sh`，修改第一行为 `#!/usr/local/bin/bash`，然后保存。
 4. 执行安装： `bash install.sh`
 
-### [光标](https://www.pling.com/p/1355701/)
+## [光标](https://www.pling.com/p/1355701/)
 
 1. 下载光标： `git clone https://github.com/vinceliuice/McMojave-cursors`
 2. 进入软件目录： `cd McMojave-cursors`
 3. 修改 shebang： `ee install.sh`，修改第一行为 `#!/usr/local/bin/bash`，然后保存。
 4. 执行安装： `bash install.sh`
 
-### 背景图片
+## 背景图片
 
 [下载地址](https://github.com/vinceliuice/WhiteSur-kde/tree/master/wallpaper)
 
-### 思考题
+## 思考题
 
 试着按照下面的步骤，在终端安装 [Papirus 图标](https://www.gnome-look.org/p/1166289/):
 

@@ -15,6 +15,8 @@
 # make install clean
 ```
 
+---
+
 蓝牙走 USB 总线，使用 `usbconfig` 可查看所有设备，包括蓝牙，如 `ugen1.5` 是蓝牙，则： `iwmbtfw -d ugen1.5`。
 
 ## 无线蓝牙鼠标的设置

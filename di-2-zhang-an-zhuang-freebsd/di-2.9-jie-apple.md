@@ -11,8 +11,6 @@
 
 ## 安装
 
-
-
 ![Parallels Desktop 20 安装 FreeBSD 15.0](../.gitbook/assets/pd1.png)
 
 选择“通过映像文件安装 Windows、Linux 或 macOS”，然后继续。
@@ -91,6 +89,8 @@ ums_load="YES"
 >**注意**
 >
 >若使用 Ports 编译安装，需要有一份当前系统的源码位于 `usr/src`。
+
+### 未竟事项
 
 疑问：这个虚拟机工具看起来长期未更新，也并未起到什么肉眼可见的实质性作用？所以到底是干什么用的？
 

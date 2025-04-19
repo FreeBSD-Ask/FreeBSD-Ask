@@ -15,23 +15,23 @@ NetBSD 和 OpenBSD 也使用 Ports（不通用）。
 
 ## 使用 ports 压缩包
 
-使用压缩包成功地规避了先有鸡还是先有蛋的哲学问题。
+使用压缩包成功地规避了先有鸡还是先有蛋的哲学问题（要安装 Git 但是没有 Ports 也不想用 pkg 的话）。
 
 ### 下载 ports 压缩包
 
-NJU:
+- NJU:
 
 ```sh
 # fetch https://mirrors.nju.edu.cn/freebsd-ports/ports.tar.gz
 ```
 
-或 USTC
+- 或 USTC
 
 ```sh
 # fetch https://mirrors.ustc.edu.cn/freebsd-ports/ports.tar.gz
 ```
 
-又或 FreeBSD 官方
+- 又或 FreeBSD 官方
 
 ```sh
 # fetch https://download.freebsd.org/ftp/ports/ports/ports.tar.gz
@@ -50,15 +50,10 @@ NJU:
 
 ### 安装 Git
 
+- 使用 pkg 安装：
+
 ```sh
 # pkg install git
-```
-
-或者：
-
-```sh
-# cd /usr/ports/devel/git
-# make install clean
 ```
 
 ### 拉取 Ports 存储库（USTC）浅克隆
@@ -159,7 +154,7 @@ Fri May 31 12:09:26 UTC 2024
 Sat Oct  5 08:39:21 UTC 2024
 ```
 
-### 使用 `whereis` 查询软件路径
+## 使用 `whereis` 查询软件路径
 
 如
 
@@ -195,18 +190,15 @@ root@ykla:/usr/ports/sysutils/htop # make all-depends-list
 ……省略一部分……
 ```
 
-## 扩展用法
 
-如果不选择 `BATCH=yes` 的方法手动配置：
-
-### 看看 python 的 ports 在哪
+## 看看 python 的 ports 在哪
 
 ```sh
 # whereis python
 # python: /usr/ports/lang/python
 ```
 
-### 安装 python3
+## 安装 python3
 
 ```sh
 # cd /usr/ports/lang/python
@@ -215,13 +207,13 @@ root@ykla:/usr/ports/sysutils/htop # make all-depends-list
 
 其中 `BATCH=yes` 意味着使用默认参数进行编译。
 
-### 如何设置全部所需的依赖
+## 如何设置全部所需的依赖
 
 ```sh
 # make config-recursive
 ```
 
-### 如何使用 pkg 安装依赖
+## 如何使用 pkg 安装依赖
 
 不使用 Ports 来编译依赖，仅使用 Ports 来编译软件包本体：
 
@@ -253,19 +245,19 @@ Number of packages to be installed: 2
 Proceed with this action? [y/N]: 
 ```
 
-### 如何删除当前 port 及其依赖的配置文件
+## 如何删除当前 port 及其依赖的配置文件
 
 ```sh
 # make rmconfig-recursive
 ```
 
-### 如何一次性下载所有需要的软件包
+## 如何一次性下载所有需要的软件包
 
 ```sh
 # make BATCH=yes fetch-recursive
 ```
 
-### ports 编译的软件也可以转换为 pkg 包
+## ports 编译的软件也可以转换为 pkg 包
 
 ```sh
 # pkg create nginx
@@ -609,7 +601,7 @@ root@ykla:~ # ccache -p
 - [ccache-howto-freebsd.txt.in](https://github.com/freebsd/freebsd-ports/blob/main/devel/ccache/files/ccache-howto-freebsd.txt.in)
 - [ccache -a fast C/C++ compiler cache](https://man.freebsd.org/cgi/man.cgi?query=ccache&sektion=1&n=1)
 
-## 如何使用多线程下载
+## 多线程下载
 
 ### axel
 

@@ -6,12 +6,6 @@
 >
 >如果你使用 macOS 14，则可能存在键盘无法移动的故障。
 
-## 下载 VMware Fusion Pro
-
-博通直链：<https://softwareupdate.vmware.com/cds/vmw-desktop/fusion/>
-
-可以在 [fusion-arm64.xml](https://softwareupdate.vmware.com/cds/vmw-desktop/#:~:text=Files-,fusion%2Darm64.xml,-fusion%2Duniversal.xml) 找到 arm 架构的 VMware Fusion Pro。若没有最新版本，则下载后更新即可。
-
 ## 下载 FreeBSD
 
 由于苹果 M1 是 arm 架构，请下载带有 `aarch64` 字样的镜像。**不要** 下成 `amd64`。

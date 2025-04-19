@@ -14,30 +14,8 @@
 
 ## 从 Git 获取源代码
 
->**Git 代理设置方法**
->
->
->
->- 如果使用的是 `sh`, `bash`, `zsh`：
->
->设置：
->
->```sh
-># git config --global http.proxy http://192.168.X.X:7890
-># git config --global https.proxy http://192.168.X.X:7890
->```
->
->取消：
->
->```sh
-># git config --global --unset http.proxy
-># git config --global --unset https.proxy
->```
 
-### Git
-
-
-#### 安装 Git
+### 安装 Git
 
 ```sh
 # pkg install git
@@ -49,7 +27,27 @@
 # cd /usr/ports/devel/git/ && make install clean
 ```
 
-#### Git 拉取源代码
+
+### Git 代理设置方法
+
+
+- 如果使用的是 `sh`, `bash`, `zsh`：
+
+设置：
+
+```sh
+# git config --global http.proxy http://192.168.X.X:7890
+# git config --global https.proxy http://192.168.X.X:7890
+```
+
+取消：
+
+```sh
+# git config --global --unset http.proxy
+# git config --global --unset https.proxy
+```
+
+### Git 拉取源代码
 
 ```
 # git clone --depth 1 https://git.FreeBSD.org/src.git /usr/src 
@@ -61,19 +59,19 @@
 # git clone --depth 1 https://github.com/freebsd/freebsd-src /usr/src
 ```
 
-#### 参考文献
+### 参考文献
 
 - [Submitting GitHub Pull Requests to FreeBSD](https://freebsdfoundation.org/our-work/journal/browser-based-edition/configuration-management-2/submitting-github-pull-requests-to-freebsd/)
 
 
-#### 故障排除与未竟事宜
+### 故障排除与未竟事宜
 
 
 - Git：`fatal: unable to update url base from redirection`
 
 使用 FreeBSD 源却没加 `.git`
 
-### Gitup
+## Gitup
 
 ```sh
 # pkg install gitup
@@ -90,7 +88,7 @@
 # gitup current # 获取 current 源代码
 ```
 
-#### 故障排除与未竟事宜
+### 故障排除与未竟事宜
 
 - Git：`fatal: unable to access 'https://git.FreeBSD.org/src.git/': SSL certificate problem: certificate is not yet valid`
 
@@ -162,7 +160,7 @@ Select: (p) postpone, (df) diff-full, (e) edit,
 # etcupdate -B 
 ```
 
-## ZFS 相关升级请参见第 6.2 节 ZFS
+## ZFS 相关升级请参见 ZFS 一节
 
 ## 参考资料
 

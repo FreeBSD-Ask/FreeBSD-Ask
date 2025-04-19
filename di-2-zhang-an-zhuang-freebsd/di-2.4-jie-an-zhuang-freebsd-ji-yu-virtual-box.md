@@ -148,7 +148,7 @@ Where Guest Additions are installed:
 
 2. do not enable 3D acceleration (doing so will invisibly
    lose the preference for VBoxSVGA)
-# 不要启用 3D 加速，否则 VBoxSVGA 的设置会被悄悄忽略。
+# 不要启用 3D 加速，否则 VBoxSVGA 的设置会被暗中忽略。
 
 You may ignore the yellow alert that encourages use of VMSVGA.
 

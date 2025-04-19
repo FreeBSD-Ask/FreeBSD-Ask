@@ -23,11 +23,7 @@
 # make install clean
 ```
 
-### 下载安装金山 WPS
-
-
-
-#### 下载金山 WPS
+### 下载金山 WPS
 
 官方地址：[WPS Office for Linux](https://linux.wps.cn/)
 
@@ -40,7 +36,7 @@
 >
 >这个链接有问题，我不知道怎么使用 fetch 下载，wget 也不行。如果你知道怎么解决，请提交 PR 或 issue。
 
-#### 安装金山 WPS
+### 安装金山 WPS
 
 ```sh
 root@ykla:/ # cd /compat/linux/

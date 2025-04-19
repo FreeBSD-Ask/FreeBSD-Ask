@@ -2,9 +2,9 @@
 
 ## 什么是 UNIX？
 
-UNIX 从前是一款操作系统。最后由 C 语言改写产生。——源自 `AT&T`（美国电话电报公司）的贝尔实验室。
+从前，UNIX 是一款操作系统。最后由 C 语言改写产生。——源自 `AT&T`（美国电话电报公司）的贝尔实验室。
 
-现在是一种**标准规范、法律上的商标**。更是一种**哲学思想**，一项**软件工程原则。**
+现在是一种**标准规范**、一款**法律上的商标**。更是一种**哲学思想**，一项**软件工程原则。**
 
 UNIX 认证查询网址：[The Open Group official register of UNIX Certified Products](http://www.opengroup.org/openbrand/register)
 
@@ -21,7 +21,7 @@ UNIX 认证查询网址：[The Open Group official register of UNIX Certified Pr
 >
 >macOS/iOS 等与 BSD 的关系
 >
->从历史与现实来看，macOS/iOS 等基于 BSD 是确凿无疑，但并非全然基于某款 BSD：macOS/iOS 等应该被理解为一款独立的 BSD 操作系统——同 OpenBSD、NetBSD 和 FreeBSD 一样。参见[《苹果的开源基石：macOS 和 iOS 背后的 BSD 传统》](https://book.bsdcn.org/fan-yi-wen-zhang-cun-dang/2024-nian-11-yue/apple)
+>从历史与现实来看，macOS/iOS 等基于 BSD 确凿无疑，但并非全然基于某款 BSD：macOS/iOS 等应该被理解为一款独立的 BSD 操作系统——同 OpenBSD、NetBSD 和 FreeBSD 一样。参见[《苹果的开源基石：macOS 和 iOS 背后的 BSD 传统》](https://book.bsdcn.org/fan-yi-wen-zhang-cun-dang/2024-nian-11-yue/apple)
 >
 >所以看似是安卓和苹果之争，其实是 Linux 与 BSD 之争。~~也许也是大教堂与市集之争。~~
 
@@ -119,7 +119,9 @@ GNU/Linux = Linux kernel + GNU 等软件 + 包管理器
 
 >**[Chimera Linux](https://chimera-linux.org/) 除外。**
 
-Linux 全称为 GNU/Linux；[GNU 项目](https://www.gnu.org/) 1984；
+Linux 全称为 GNU/Linux；
+
+[GNU 项目](https://www.gnu.org/) 1984——GNU's Not Unix，从 GNU 这个名字你也能看出来 Linux 与 UNIX 并无直接关联。
 
 具体地：
 

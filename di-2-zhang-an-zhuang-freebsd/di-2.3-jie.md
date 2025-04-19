@@ -2,9 +2,7 @@
 
 ## Hyper-V 简介
 
-Hyper-V 是微软为 Windows 开发的虚拟机，分为 `Gen 1` 和 `Gen 2`。
-
-Windows 家庭版不支持 Hyper-V。
+Hyper-V 是微软为 Windows 开发的虚拟机，分为 `Gen 1` 和 `Gen 2`。Windows 家庭版不支持 Hyper-V。
 
 `Gen 1` 和 `Gen 2` 区别如下：
 
@@ -42,12 +40,12 @@ Windows 家庭版不支持 Hyper-V。
 ```powershell
 PS C:\Users\ykla> Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All 
 是否立即重启计算机以完成此操作?
-[Y] Yes  [N] No  [?] 帮助 (默认值为“Y”): #此处按回车键确定重启完成 Hyper-V 的安装
+[Y] Yes  [N] No  [?] 帮助 (默认值为“Y”): 
+# 此处按回车键确定重启完成 Hyper-V 的安装
 ```
 
-## 准备 Hyper-V 虚拟机
 
-### 创建虚拟机
+## 创建虚拟机
 
 ![Hyper-V](../.gitbook/assets/hp2.png)
 
@@ -91,7 +89,7 @@ PS C:\Users\ykla> Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-H
 
 点击“完成”。
 
-### 调整虚拟机
+## 调整虚拟机
 
 ![Hyper-V](../.gitbook/assets/hp10.png)
 

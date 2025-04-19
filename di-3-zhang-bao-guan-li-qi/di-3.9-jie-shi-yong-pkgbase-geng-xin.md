@@ -21,6 +21,7 @@
 | stable/14 | 每周一次：星期日 20:00 | <https://pkg.freebsd.org/${ABI}/base_weekly> |
 | releng/14.0（RELEASE） | 每天两次：08:00、20:00 | <https://pkg.freebsd.org/${ABI}/base_release_0> |
 | releng/14.1（RELEASE） | 每天两次：08:00、20:00 | <https://pkg.freebsd.org/${ABI}/base_release_1> |
+| releng/14.2（RELEASE） | 每天两次：08:00、20:00 | <https://pkg.freebsd.org/${ABI}/base_release_2> |
 
 **以上表格的时间已转换为北京时间，即东八区时间。为 FreeBSD 官方镜像站时间。**
 
@@ -32,13 +33,7 @@
 # mkdir -p /usr/local/etc/pkg/repos/
 ```
 
-编辑配置文件：
-
-```sh
-# ee /usr/local/etc/pkg/repos/FreeBSD-base.conf 
-```
-
-写入以下内容，保存退出：
+编辑配置文件 `/usr/local/etc/pkg/repos/FreeBSD-base.conf`，写入以下内容，保存退出：
 
 
 ### 南京大学开源镜像站 NJU
@@ -109,13 +104,8 @@ The following 527 package(s) will be affected (of 0 checked):
 
 New packages to be INSTALLED:
 	FreeBSD-acct: 15.snap20240806043323 [FreeBSD-base]
-	FreeBSD-acct-dbg: 15.snap20240806043323 [FreeBSD-base]
-	FreeBSD-acct-man: 15.snap20240806043323 [FreeBSD-base]
 
             ……省略一部分……
-	FreeBSD-zfs-dev-lib32: 15.snap20240806043323 [FreeBSD-base]
-	FreeBSD-zfs-lib32: 15.snap20240806043323 [FreeBSD-base]
-	FreeBSD-zfs-man: 15.snap20240806043323 [FreeBSD-base]
 	FreeBSD-zoneinfo: 15.snap20240806043323 [FreeBSD-base]
 
 Number of packages to be installed: 527
@@ -131,7 +121,7 @@ Proceed with this action? [y/N]:
 
 还原配置文件（**如果不做这一步，你的密码都会被清零**）：
 
-```
+```sh
 # cp /etc/ssh/sshd_config.pkgsave /etc/ssh/sshd_config
 # cp /etc/master.passwd.pkgsave /etc/master.passwd
 # cp /etc/group.pkgsave /etc/group
@@ -140,21 +130,13 @@ Proceed with this action? [y/N]:
 # cp /etc/sysctl.conf.pkgsave /etc/sysctl.conf
 ```
 
-- 比对旧系统文件（这谁比的完？）：
-
-```sh
-# find / -name "*.pkgsave" -type f -exec sh -c "f='{}'; echo '==== OLD ===='; ls -l \${f}; md5sum \${f}; echo '==== NEW ===='; ls -l \${f%.pkgsave}; md5sum \${f%.pkgsave}; cp -vi \${f} \${f%.pkgsave}" \;
-```
-
-这是不可行的。
-
-故，经过实际测试，按照 WIKI，直接删掉旧系统的文件就行：
+按照 WIKI，直接删掉旧系统的文件就行：
 
 >**注意**
 >
 >我测试的是纯净系统，没有任何多余配置及第三方程序（除了 pkg），仅开了 SSH 服务。
 
-```
+```sh
 # find / -name \*.pkgsave -delete
 # rm /boot/kernel/linker.hints
 ```
