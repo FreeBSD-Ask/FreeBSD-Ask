@@ -16,17 +16,6 @@
 # pkg install lumina xorg lightdm lightdm-gtk-greeter wqy-fonts xdg-user-dirs
 ```
 
-
-| 包名                   | 作用说明                                                                 |
-|:------------------------|:--------------------------------------------------------------------------|
-| `lumina`               | Lumina 桌面环境 |
-| `xorg`                 | X Window 系统 |
-| `lightdm`              | 轻量级显示管理器 LightDM，提供图形登录界面|
-| `lightdm-gtk-greeter`  | LightDM 的 GTK+ 登录界面插件。缺少将无法启动 LightDM |
-| `wqy-fonts`            | 文泉驿中文字体|
-| `xdg-user-dirs`        | 管理用户目录，如“桌面”、“下载”等 |
-
-
 - 或者使用 Ports 安装：
 
 ```sh
@@ -37,6 +26,18 @@
 # cd /usr/ports/x11/lightdm-gtk-greeter/ && make install clean
 # cd /usr/ports/devel/xdg-user-dirs/ && make install clean 
 ```
+
+- 解释
+
+| 包名                   | 作用说明                                                                 |
+|:------------------------|:--------------------------------------------------------------------------|
+| `lumina`               | Lumina 桌面环境 |
+| `xorg`                 | X Window 系统 |
+| `lightdm`              | 轻量级显示管理器 LightDM|
+| `lightdm-gtk-greeter`  | LightDM 的 GTK+ 登录界面插件。缺少将无法启动 LightDM |
+| `wqy-fonts`            | 文泉驿中文字体|
+| `xdg-user-dirs`        | 管理用户目录，如“桌面”、“下载”等 |
+
 
 ## 配置服务
 
@@ -62,9 +63,9 @@ exec lumina-desktop
 lightdm_env="LC_MESSAGES=zh_CN.UTF-8" 
 ```
 
-编辑 `/etc/login.conf`：
+---
 
-找到 `default:\` 这一段，把 `:lang=C.UTF-8` 修改为 `:lang=zh_CN.UTF-8`。
+编辑 `/etc/login.conf`：找到 `default:\` 这一段，把 `:lang=C.UTF-8` 修改为 `:lang=zh_CN.UTF-8`。
 
 刷新数据库：
 
