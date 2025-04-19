@@ -19,15 +19,6 @@
 # pkg install xorg lightdm slick-greeter cinnamon wqy-fonts xdg-user-dirs
 ```
 
-| 包名               | 作用说明                   |
-|:--------------------|:----------------------------------|
-| `xorg`             |  X Window 系统 |
-| `lightdm`          | 轻量级显示管理器 LightDM，提供图形登录界面 |
-| `slick-greeter`    | LightDM 的美观登录界面插件，缺少将无法启动 LightDM|
-| `cinnamon`         | 基于 GNOME 3 的现代桌面环境|
-| `wqy-fonts`        | 文泉驿中文字体 |
-| `xdg-user-dirs`    | 管理用户目录，如“桌面”、“下载”等  |
-
 - 或者使用 Ports 安装：
 
 ```sh
@@ -39,6 +30,16 @@
 # cd /usr/ports/devel/xdg-user-dirs/ && make install clean 
 ```
 
+- 解释
+
+| 包名               | 作用说明                   |
+|:--------------------|:----------------------------------|
+| `xorg`             |  X Window 系统 |
+| `lightdm`          | 轻量级显示管理器 LightDM|
+| `slick-greeter`    | LightDM 的美观登录界面插件，缺少将无法启动 LightDM|
+| `cinnamon`         | 基于 GNOME 3 的现代桌面环境|
+| `wqy-fonts`        | 文泉驿中文字体 |
+| `xdg-user-dirs`    | 管理用户目录，如“桌面”、“下载”等  |
 
 ## 配置 `startx`
 
