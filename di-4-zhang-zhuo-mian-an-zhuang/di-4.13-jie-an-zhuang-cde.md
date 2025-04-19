@@ -5,22 +5,31 @@ CDE 是 Common Desktop Environment（通用桌面环境）的缩写。是一款�
 
 ## 安装软件
 
-执行：
+- 使用 pkg 安装：
 
 ```sh
 # pkg install xorg cde wqy-fonts xdg-user-dirs
 ```
 
-xdg-user-dirs 可自动管理家目录子目录（可选安装）
-
-或者：
+- 或者使用 Ports 安装：
 
 ```sh
 # cd /usr/ports/x11/xorg/ && make install clean
 # cd /usr/ports/x11/cde/ && make install clean
-# cd /usr/ports/x11-fonts/wqy/ && make install clean # 文泉驿字体
-# cd /usr/ports/devel/xdg-user-dirs/ && make install clean # 自动管理家目录子目录
+# cd /usr/ports/x11-fonts/wqy/ && make install clean
+# cd /usr/ports/devel/xdg-user-dirs/ && make install clean 
 ```
+
+
+- 解释：
+
+| 包名             | 作用说明                                                                 |
+|:------------------|:--------------------------------------------------------------------------|
+| `xorg`           |X Window 系统                                          |
+| `cde`            | CDE 提供传统的桌面环境                            |
+| `wqy-fonts`      | 文泉驿中文字体                                          |
+| `xdg-user-dirs`  | 管理用户目录，如“桌面”、“下载”等。                                           |
+
 
 
 ## 查看安装后信息
@@ -115,9 +124,7 @@ dtspc		6112/tcp
 
 ### 中文配置
 
-编辑 `/etc/login.conf`：
-
-找到 `default:\` 这一段，把 `:lang=C.UTF-8` 修改为 `:lang=zh_CN.UTF-8`。
+编辑 `/etc/login.conf`：找到 `default:\` 这一段，把 `:lang=C.UTF-8` 修改为 `:lang=zh_CN.UTF-8`。
 
 刷新数据库：
 
@@ -125,7 +132,7 @@ dtspc		6112/tcp
 # cap_mkdb /etc/login.conf
 ```
 
-## 图片
+## 桌面欣赏
 
 
 ![dtlogin](../.gitbook/assets/cde2.png)

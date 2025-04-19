@@ -2,15 +2,13 @@
 
 ## 安装 xfce4
 
-通过 pkg 安装
+- 通过 pkg 安装
 
 ```sh
 # pkg install xorg lightdm lightdm-gtk-greeter xfce wqy-fonts xdg-user-dirs xfce4-goodies lightdm-gtk-greeter-settings
 ```
 
-xdg-user-dirs 可自动管理家目录子目录（可选安装）
-
-或通过 ports 安装
+- 或通过 ports 安装
 
 ```sh
 # cd /usr/ports/x11/xorg/ && make install clean
@@ -20,25 +18,36 @@ xdg-user-dirs 可自动管理家目录子目录（可选安装）
 # cd /usr/ports/x11/lightdm/ && make install clean
 # cd /usr/ports/x11/lightdm-gtk-greeter/ && make install clean
 # cd /usr/ports/x11/lightdm-gtk-greeter-settings/ && make install clean
-# cd /usr/ports/devel/xdg-user-dirs/ && make install clean # 自动管理家目录子目录
+# cd /usr/ports/devel/xdg-user-dirs/ && make install clean 
 # cd /usr/ports/x11/xfce4-goodies/ && make install clean
 ```
+
+- 解释
+
+| 包名                          | 作用说明                               |
+|:-------------------------------|:------------------------------------|
+| `xorg`                        |  X Window 系统|
+| `lightdm`                     | 轻量级显示管理器 LightDM |
+| `lightdm-gtk-greeter`         | LightDM 的 GTK+ 登录界面插件|
+| `xfce`                        | Xfce 桌面环境 |
+| `wqy-fonts`                   | 文泉驿中文字体
+| `xdg-user-dirs`               | 管理用户主目录 |
+| `xfce4-goodies`               | XFCE 的附加组件和插件集合 |
+| `lightdm-gtk-greeter-settings`| 配置 LightDM GTK+ 登录界面的图形工具，缺少将无法启动 |
+
 
 ## 启用 xfce
 
 ```sh
-# echo "/usr/local/etc/xdg/xfce4/xinitrc" > ~/.xinitrc
+$ echo "/usr/local/etc/xdg/xfce4/xinitrc" > ~/.xinitrc
 ```
 
 或者
 
 ```sh
-# echo "/usr/local/etc/xdg/xfce4/xinitrc" > ~/.xsession
+$ echo "/usr/local/etc/xdg/xfce4/xinitrc" > ~/.xsession
 ```
 
-> 此处为 root 用户，普通用户需要再在自己的环境下操作一次。下同。
-
-根据条件使用
 
 ## 启动服务
 
@@ -84,8 +93,6 @@ lightdm_env="LC_MESSAGES=zh_CN.UTF-8"
 ```sh
 # service lightdm restart
 ```
-
-
 
 ## 全局菜单（可选）
 

@@ -4,7 +4,7 @@ bspwm，据说更符合 UNIX 哲学。
 
 ## 安装 bspwm
 
-通过 pkg 安装
+- 通过 pkg 安装
 
 ```sh
 # pkg install xorg bspwm sxhkd rofi kitty feh picom polybar dunst lightdm lightdm-gtk-greeter wqy-fonts xdg-user-dirs
@@ -12,7 +12,7 @@ bspwm，据说更符合 UNIX 哲学。
 
 xdg-user-dirs 可自动管理家目录子目录（可选安装）
 
-通过 Ports 安装：
+- 通过 Ports 安装：
 
 
 ```sh
@@ -34,29 +34,36 @@ xdg-user-dirs 可自动管理家目录子目录（可选安装）
 解释：
 
 
-- bspwm, sxhkd: bspwm 组件
-- rofi: 程序启动器
-- kitty: 终端模拟器
-- feh: 桌面背景修改
-- picom: 窗口合成器，添加窗口透明，阴影，动效等
-- polybar: 面板
-- dunst: 通知管理器
+| 包名                  | 作用说明                                                                 |
+|:---------------------|:--------------------------------------------------------------------------|
+| `xorg`              |  X Window 系统                                            |
+| `bspwm`             | 轻量级的平铺式窗口管理器                                 |
+| `sxhkd`             | 用于绑定快捷键的工具                                     |
+| `rofi`              | 程序启动器，支持应用启动、窗口切换等功能                                        |
+| `kitty`             | 终端模拟器                             |
+| `feh`               | 桌面背景修改                                       |
+| `picom`             | 窗口合成器，添加窗口透明，阴影，动效等                                     |
+| `polybar`           | 面板，显示系统信息、应用图标等                                          |
+| `dunst`             | 通知管理器                                                |
+| `lightdm`           | LightDM 显示管理器，提供图形登录界面                                                 |
+| `lightdm-gtk-greeter`| LightDM 的 GTK+ 登录界面插件，缺少将无法启动 LightDM                     |
+| `wqy-fonts`         | 文泉驿中文字体                                             |
+| `xdg-user-dirs`     | 管理用户目录，如“桌面”、“下载”等                                          |
+
 
 
 >**提示**
 >
 >polybar 建议换成别的，因为 polybar 在 freebsd 上功能不全。建议换成 `chinese/tintin++`，可显示 systray 图标
 
-## 配置工作
 
-### 启用 dbus 服务
+## 启用服务
 
 ```sh
 # service dbus enable
-# service dbus start
 ```
 
-### 创建配置文件
+## 创建配置文件
 
 ```sh
 $ mkdir ~/.config
@@ -77,7 +84,7 @@ super + @space
     rofi -show drun
 ```
 
-### 设置 polybar 启动脚本和配置文件
+## 设置 polybar 启动脚本和配置文件
 
 ```sh
 $ mkdir ~/.config/polybar 
@@ -98,7 +105,7 @@ polybar example 2>&1 | tee -a /tmp/polybar.log
 $ chmod +x ~/.config/polybar/launch.sh
 ```
 
-### 设置 picom, polybar, dunst 启动
+## 设置 picom、polybar、dunst 启动
 
 ```sh
 $ echo "picom &" >> ~/.config/bspwm/bspwmrc
@@ -106,18 +113,16 @@ $ echo "\$HOME/.config/polybar/launch.sh" >> ~/.config/bspwm/bspwmrc
 $ echo "dunst &" >> ~/.config/bspwm/bspwmrc
 ```
 
-## 启动 bspwm
 
-### 通过 startx
+## 通过 startx 启动 bspwm
 
 ```sh
 $ echo "exec bspwm" >> ~/.xinitrc
-$ startx
 ```
 
-### 通过 lightdm
+## 通过 lightdm 启动 bspwm
 
-创建 `/usr/local/share/xsessions/bspwm.desktop`
+- 创建 `/usr/local/share/xsessions/bspwm.desktop`
 
 ```sh
 # mkdir /usr/local/share/xsessions
@@ -130,11 +135,10 @@ Exec=/usr/local/bin/bspwm
 Type=Application
 ```
 
-启动 lightdm 服务
+- lightdm 服务
 
 ```sh
 # service lightdm enable
-# service lightdm start
 ```
 
 ## 一些操作和设置

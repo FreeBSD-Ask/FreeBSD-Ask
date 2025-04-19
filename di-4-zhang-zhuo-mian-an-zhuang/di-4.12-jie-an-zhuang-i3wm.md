@@ -2,33 +2,39 @@
 
 ## 安装 i3wm
 
-使用 pkg 安装：
+- 使用 pkg 安装：
 
 ```sh
 # pkg install xorg i3 i3status dmenu i3lock
 ```
 
-或者使用 Ports：
+- 或者使用 Ports：
 
 ```
 # cd /usr/ports/x11/xorg/
 # make install clean
 ```
 
-- i3status 为状态栏，
-- dmenu 为菜单
-- 默认配置需要以上两个组件（估且称之为组件），i3lock 是锁屏可选
+- 解释：
+
+| 包名       | 作用说明                                                  |
+|:------------|:--------------------------------------------------|
+| `xorg`     |  X Window                                             |
+| `i3`       | 轻量级平铺式窗口管理器                  |
+| `i3status` | 状态栏 |
+| `dmenu`    | 动态菜单生成器|
+| `i3lock`   | 锁屏工具 |
 
 
-## 配置
+## 配置 `startx`
 
 ```sh
-$ echo "/usr/local/bin/i3" >> ~/.xinitrc
+$ echo "/usr/local/bin/i3" > ~/.xinitrc
 ```
 
 用哪个用户登录 GUI 就使用哪个用户进行编辑。
 
-## 启动
+## 启动 i3
 
 可以用 `startx` 启动 i3 了。
 

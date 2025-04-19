@@ -22,27 +22,39 @@
 
 ## 安装
 
+- 使用 pkg 安装：
+
 ```sh
 # pkg install xorg sddm kde plasma6-sddm-kcm wqy-fonts xdg-user-dirs
 ```
 
-xdg-user-dirs 可自动管理家目录子目录（可选安装）
-
-或者：
-
-```sh
-# cd /usr/ports/x11/xorg/ && make install clean # X11
-# cd /usr/ports/x11/kde/ && make install clean # KDE5
-# cd /usr/ports/x11/sddm/ && make install clean # 窗口管理器
-# cd /usr/ports/deskutils/plasma6-sddm-kcm/ && make install clean # KDE 管理 SDDM 的模块
-# cd /usr/ports/x11-fonts/wqy/ && make install clean # 文泉驿字体
-# cd /usr/ports/devel/xdg-user-dirs/ && make install clean # 自动管理家目录子目录
-```
-
-
 > **故障排除与未竟事宜**
 >
 > 如果有时候提示 `pkg` 找不到或者没有 kde6，请点击 [x11/kde](https://www.freshports.org/x11/kde) 看看是不是二进制包没有被构建出来。有时候需要切换 quarterly（待上游构建出来了再换到 latest 源，`pkg upgrade` 更新即可）或者 latest 源。类似方法适用于所有软件，故后边不再赘述。如果没有，需要自己使用上述的 Port 进行编译。
+
+
+- 或者使用 Ports 安装：
+
+```sh
+# cd /usr/ports/x11/xorg/ && make install clean 
+# cd /usr/ports/x11/kde/ && make install clean 
+# cd /usr/ports/x11/sddm/ && make install clean 
+# cd /usr/ports/deskutils/plasma6-sddm-kcm/ && make install clean 
+# cd /usr/ports/x11-fonts/wqy/ && make install clean 
+# cd /usr/ports/devel/xdg-user-dirs/ && make install clean 
+```
+
+- 解释
+
+| 包名                   | 作用                     |
+|:----------------------|:------------------------|
+| `xorg`               | 图形界面基础，提供 X Window 系统              |
+| `sddm`               | 登录管理器                |
+| `kde`    | KDE 桌面环境              |
+| `plasma6-sddm-kcm`   | 配置 SDDM 的 KDE 模块，可在配置登录界面外观等参数。     |
+| `wqy-fonts`          |  文泉驿中文字体              |
+| `xdg-user-dirs`      | 可自动管理家目录子目录（可选安装）          |
+
 
 ## 启动项设置
 
@@ -80,13 +92,13 @@ xdg-user-dirs 可自动管理家目录子目录（可选安装）
 
 ## 登录界面主题
 
-安装：
+- 使用 pkg 安装：
 
 ```sh
 # pkg install sddm-freebsd-black-theme
 ```
 
-或：
+- 或使用 Ports 安装：
 
 ```sh
 # cd /usr/ports/x11-themes/sddm-freebsd-black-theme/ 
@@ -94,7 +106,7 @@ xdg-user-dirs 可自动管理家目录子目录（可选安装）
 ```
 
 
-查看安装后配置：
+- 查看安装后配置：
 
 ```sh
 root@ykla:/home/ykla # pkg info -D sddm-freebsd-black-theme
@@ -130,9 +142,7 @@ https://docs.freebsd.org/en/articles/contributing/#ports-contributing
 # 有关 port 维护的更多信息，请参考 FreeBSD 官方文档中关于贡献 port 的章节。
 ```
 
-编辑 `/usr/local/etc/sddm.conf`：
-
-写入：
+- 编辑 `/usr/local/etc/sddm.conf`，写入：
 
 ```sh
 [Theme]
@@ -157,9 +167,7 @@ Current=sddm-freebsd-black-theme
 
 ### 系统中文化方法 ① 用户分级
 
-编辑 `/etc/login.conf`：
-
-找到 `default:\` 这一段，把 `:lang=C.UTF-8` 修改为 `:lang=zh_CN.UTF-8`。
+编辑 `/etc/login.conf`：找到 `default:\` 这一段，把 `:lang=C.UTF-8` 修改为 `:lang=zh_CN.UTF-8`。
 
 刷新数据库：
 

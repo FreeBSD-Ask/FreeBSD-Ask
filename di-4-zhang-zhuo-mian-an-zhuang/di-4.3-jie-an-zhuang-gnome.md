@@ -3,13 +3,13 @@
 
 ## 安装
 
+- 使用 pkg 安装：
+
 ```sh
 # pkg install xorg gnome noto-sc xdg-user-dirs
 ```
 
-xdg-user-dirs 可自动管理家目录子目录（可选安装）
-
-或者
+- 或者使用 Ports 安装：
 
 ```
 # cd /usr/ports/x11/xorg/ && make install clean
@@ -18,37 +18,48 @@ xdg-user-dirs 可自动管理家目录子目录（可选安装）
 # cd /usr/ports/devel/xdg-user-dirs/ && make install clean # 自动管理家目录子目录
 ```
 
-解释：
+- 解释：
 
 |     软件      |            用途            |
 | :-----------: | :------------------------: |
 |     xorg      |            X11             |
 |     gnome     |        Gnome 主程序        |
 |    noto-sc    |     思源黑体——简体中文     |
-| xdg-user-dirs | 用于创建用户家目录的子目录 |
+| xdg-user-dirs | 自动管理家目录子目录 |
 
-> **精简安装**
->
-> ```sh
-> # pkg install xorg-minimal gnome-lite wqy-fonts xdg-user-dirs
-> ```
->
->或者
->
->```sh
-># cd /usr/ports/x11/xorg-minimal/ && make install clean
-># cd /usr/ports/x11/gnome/ && make install clean
-># cd /usr/ports/x11-fonts/wqy/ && make install clean
-># cd /usr/ports/devel/xdg-user-dirs/ && make install clean
->```
->
-> 如果安装了完整版本也可以使用 pkg 包管理器卸载自带的游戏软件：
->
-> ```sh
-> # pkg delete gnome-2048 gnome-klotski gnome-tetravex gnome-mines gnome-taquin gnome-sudoku gnome-robots gnome-nibbles lightsoff tali quadrapassel swell-foop gnome-mahjongg five-or-more iagno aisleriot four-in-a-row
-> ```
->
->![Gnome 精简安装](../.gitbook/assets/gnome-lite.png)
+### 附录：精简安装
+
+- 使用 pkg 安装：
+
+```sh
+# pkg install xorg-minimal gnome-lite wqy-fonts xdg-user-dirs
+```
+
+
+- 或者使用 Ports 安装：
+
+```sh
+# cd /usr/ports/x11/xorg-minimal/ && make install clean
+# cd /usr/ports/x11/gnome/ && make install clean
+# cd /usr/ports/x11-fonts/wqy/ && make install clean
+# cd /usr/ports/devel/xdg-user-dirs/ && make install clean
+```
+
+- 解释
+
+
+| 包名             | 作用             |
+|:------------------|:------------------|
+| `xorg-minimal`   | 精简版 X 图形环境 |
+| `gnome-lite`     | 精简版 GNOME 桌面 |
+
+如果安装了完整版本也可以使用 pkg 包管理器卸载自带的游戏软件：
+
+```sh
+# pkg delete gnome-2048 gnome-klotski gnome-tetravex gnome-mines gnome-taquin gnome-sudoku gnome-robots gnome-nibbles lightsoff tali quadrapassel swell-foop gnome-mahjongg five-or-more iagno aisleriot four-in-a-row
+```
+
+![Gnome 精简安装](../.gitbook/assets/gnome-lite.png)
 
 ## 配置
 
