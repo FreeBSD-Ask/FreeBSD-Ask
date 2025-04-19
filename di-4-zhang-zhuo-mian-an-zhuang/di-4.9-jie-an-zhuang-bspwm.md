@@ -120,7 +120,7 @@ $ echo "dunst &" >> ~/.config/bspwm/bspwmrc
 $ echo "exec bspwm" >> ~/.xinitrc
 ```
 
-### 通过 lightdm 启动 bspwm
+## 通过 lightdm 启动 bspwm
 
 - 创建 `/usr/local/share/xsessions/bspwm.desktop`
 
