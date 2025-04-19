@@ -8,13 +8,13 @@
 
 ## 安装 gitup
 
-使用 pkg
+- 使用 pkg 安装：
 
 ```sh
 # pkg install gitup 
 ```
 
-或者
+- 或者使用 Ports 安装：
 
 ```sh
 # cd /usr/ports/net/gitup/
@@ -24,7 +24,7 @@
 ## 使用 gitup
 
 ```sh
-# gitup ports # 获取 latest 的 ports
+# gitup ports 	# 获取 latest 的 ports
 # gitup release # 获取 release 版本的源代码
 ```
 
@@ -34,13 +34,9 @@
 # cp /usr/local/etc/gitup.conf.sample /usr/local/etc/gitup.conf
 ```
 
-```sh
-# ee /usr/local/etc/gitup.conf
-```
+编辑，`/usr/local/etc/gitup.conf`，修改内容如下（有 ①②③ 共计三处需要修改）：
 
-内容如下（有 ①②③ 共计三个需要修改的地方）：
-
-```sh
+```ini
 # $FreeBSD$
 #
 # Default configuration options for gitup.conf.

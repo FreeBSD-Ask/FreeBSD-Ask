@@ -8,22 +8,24 @@ x11vnc 会和远程软件 todesk 一样直接镜像屏幕，简言之，你的�
 
 ---
 
-如果没有显示器则不能使用 x11vnc。
+如果没有显示器则不能使用 x11vnc。安装 x11vnc：
 
-安装 x11vnc：
+- 使用 pkg 安装：
 
 ```
 # pkg install x11vnc
 ```
 
-或者：
+- 或者使用 Ports 安装：
 
 ```sh
 # cd /usr/ports/net/x11vnc/
 # make install clean
 ```
 
-创建密码：
+---
+
+- 创建密码：
 
 ```sh
 $ x11vnc -storepasswd
@@ -33,9 +35,7 @@ Write password to /root/.vnc/passwd?  [y]/n y #此处键入 y 回车
 Password written to: /root/.vnc/passwd
 ```
 
-启动服务器：
-
-- KDE 6 SDDM
+- 启动服务器（KDE 6 SDDM）
 
 ```sh
 $ x11vnc -display :0 -rfbauth ~/.vnc/passwd -auth $(find /var/run/sddm/ -type f)

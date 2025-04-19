@@ -4,11 +4,13 @@
 
 ## 安装 CUPS（通用 Unix 打印系统）
 
+- 使用 pkg 安装：
+
 ```sh
 # pkg install cups
 ```
 
-或
+- 或者使用 Ports 安装：
 
 ```sh
 # cd /usr/ports/print/cups
@@ -31,11 +33,13 @@
 
 ## 安装打印机驱动
 
+- 使用 pkg 安装：
+
 ```sh
 # pkg install hplip
 ```
 
-或者：
+- 或者使用 Ports 安装：
 
 ```
 # cd /usr/ports/print/hplip/
@@ -46,6 +50,4 @@
 
 在浏览器中输入 `http://localhost:631`，该地址为该打印机的管理页面。
 
-点击顶部菜单的 `Administration` 进行添加打印机
-
-或者在 kde 的系统设置-> 打印机中添加。
+点击顶部菜单的 `Administration` 进行添加打印机，或者在 kde 的系统设置-> 打印机中添加。

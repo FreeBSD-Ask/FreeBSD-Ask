@@ -114,9 +114,7 @@ root@ykla:/home/ykla # gpart show
 
 ```
 
-可以看到，nda0p5（分区 5）是我们新的 swap。
-
-测试一下：
+可以看到，nda0p5（分区 5）是我们新的 swap。测试一下：
 
 ```sh
 root@ykla:/home/ykla # swapon /dev/nda0p5

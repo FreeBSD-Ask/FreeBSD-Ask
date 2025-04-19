@@ -57,15 +57,13 @@ root@ykla:/home/ykla # echo $VISUAL
 # freebsd-update fetch
 ```
 
-当出现类似于下列信息时：
+当出现类似于如下信息时：
 
 ```sh
 usrlinclude/c++/vl/trllvector usrlinclude/c++/vl/trllversion usrlinclude/c++/v1/trl/wchar.h usr/include/c++/v1/tr1/wctype.h usrlinclude/c++/vllunwind-armh
 usrlinclude/c++/v1/unwind-itaniumh usrlinclude/c++/vllunwindh
 usr/include/crypto/ cryptodevh usrlinclude/crypto/cbcmac.h usr/include/crypto/deflate.h usrlinclude/crypto/gfmult.h usr/include/crypto/gmac.h
 usr/include/crypto/rijndael.h usrlinclude/crypto/rmd160.h usr/include/crypto/xform.h
-usr/include/crypto/xformauth.h usr/includecrypto/xformcomp.h usrlincludelcryptolxformenc.h
-usr/include/crypto/xformpoly1305.h usrlincludelsys/ cscanatomic.h usrlincludelsys/ cscanbus.h usr/lib/clang/11.0.1
 usr/lib/clang/11.0.1/include
 :
 ```
@@ -253,26 +251,8 @@ The following 223 package(s) will be affected (of 0 checked):
 
 New packages to be INSTALLED:
 	ceres-solver: 2.2.0_10
-	glib-networking: 2.80.0
-	webrtc-audio-processing: 1.3
-
-Installed packages to be UPGRADED:
-	AppStream: 1.0.1 -> 1.0.3_1
-	AppStreamQt5: 1.0.1 -> 1.0.3
 
 …………中间省略………………
-
-	zh-fcitx5-chinese-addons: 5.1.6 -> 5.1.7_1
-	zh-libime: 1.1.8 -> 1.1.9_1
-
-Installed packages to be REINSTALLED:
-	gcc13-13.3.0 (provided shared library changed)
-	kig-23.08.5_2 (required shared library changed)
-	py311-httpx-0.27.2 (option added: ZSTD)
-
-Number of packages to be installed: 10
-Number of packages to be upgraded: 210
-Number of packages to be reinstalled: 3
 
 The process will require 45 MiB more space.
 687 MiB to be downloaded.

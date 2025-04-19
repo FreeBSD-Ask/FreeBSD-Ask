@@ -6,20 +6,22 @@
 
 OpenBSD 认为 sudo 软件配置复杂，代码质量差，漏洞太多，故自行开发了 [doas](https://man.openbsd.org/doas)。自然，FreeBSD 也可以用。
 
-### 安装
+### 安装 doas
+
+- 使用 pkg 安装：
 
 ```sh
 # pkg install doas
 ```
 
-或者
+- 或者使用 Ports 安装：
 
 ```sh
 # cd /usr/ports/security/doas/
 # make install clean
 ```
 
-### 查看安装后信息
+### 查看 doas 安装后信息
 
 ```sh
 root@ykla:~ # pkg info -D doas
@@ -60,7 +62,7 @@ Please refer to doas.conf(5) for further details.
 # 请查看 doas.conf(5) 联机文档以了解更多详情。
 ```
 
-### 配置
+### 配置 doas
 
 由上可知，示例样板在 `/usr/local/etc/doas.conf.sample`。
 
@@ -109,15 +111,15 @@ permit :wheel
 
 ## sudo
 
-### 安装
+### 安装 sudo
 
-FreeBSD 基本系统默认不自带 `sudo` 命令，需要使用 `root` 权限自行安装：
+- 使用 pkg 安装：
 
 ```sh
 # pkg install sudo
 ```
 
-或者：
+- 或者使用 Ports 安装：
 
 
 ```sh
@@ -149,16 +151,11 @@ FreeBSD 基本系统默认不自带 `sudo` 命令，需要使用 `root` 权限�
 
 应当在 sudoers 中加入一句话来解决这个问题：
 
-使用 ee 打开 sudoers：
+
+编辑 `/usr/local/etc/sudoers`，找到 `root ALL=(ALL:ALL) ALL` 这行，一般是在第 94 行。在这行下面加一句：
 
 ```sh
-# ee /usr/local/etc/sudoers
-```
-
-找到 `root ALL=(ALL:ALL) ALL` 这行，一般是在第 94 行。在这行下面加一句：
-
-```sh
-你的用户名 ALL=(ALL:ALL) ALL
+你的普通用户名 ALL=(ALL:ALL) ALL
 ```
 
 然后保存退出即可。

@@ -4,13 +4,13 @@ ibus 即“Intelligent Input Bus”（智能输入总线）。
 
 ## ibus
 
-基本安装
+- 使用 pkg 安装：
 
 ```sh
 # pkg install ibus zh-ibus-pinyin
 ```
 
-或者：
+- 或者使用 Ports 安装：
 
 ```
 # cd /usr/ports/textproc/ibus/ && make install clean

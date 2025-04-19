@@ -10,7 +10,7 @@
 >
 >由于对带宽、存储和管理的要求极高，FreeBSD 项目决定不允许公共镜像软件包。
 
-这个理由实在是让人摸不到头脑。
+这个理由着实让人摸不到头脑。
 
 ---
 
@@ -70,7 +70,7 @@ TUNA:<https://github.com/tuna/issues/issues/16>
 
 FreeBSD 在中国大陆境内没有官方镜像站；在中国台湾地区有官方镜像站。
 
-FreeBSD 目前在大陆非官方镜像站有若干个（详见第二节。）：
+FreeBSD 目前在大陆非官方镜像站有若干个：
 
 - USTC（仅 pkg ports） <https://mirrors.ustc.edu.cn>
 - <https://mirror.bjtu.edu.cn> 联系方式： <https://t.me/bjtumirror>

@@ -52,9 +52,6 @@ SDDM 即 Simple Desktop Display Manager，简单的桌面显示管理器。
 
 之后就可以 root 登录 sddm 了！
 
-### 故障排除与未竟事宜
-
-sddm 左下角选项不能为 `Wayland`，否则可能进不去，你可以试试 `Plasma-x11`
 
 > **警告**
 >

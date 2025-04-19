@@ -4,7 +4,7 @@ FreeBSD 二进制包管理器目前是 pkg，即“Package”，软件包的意�
 
 `pkg install` 可以缩写成 `pkg ins`，其他类似。
 
-> **请注意**
+> **注意**
 >
 > pkg 只能管理第三方软件包，并不能起到升级系统，获取安全更新的作用。这是因为 FreeBSD 项目是把内核与用户空间作为一个整体来进行维护的，而不是像 Linux 那样 linus torvalds 负责维护内核，各个发行版的人负责维护 GNU 工具（他们这些软件实际上被设计为单个软件包，因此可以用包管理器更新与升级系统）。
 >
@@ -62,30 +62,7 @@ For more information on available commands and options see 'pkg help'.
 >pkg 的下载路径是 `/var/cache/pkg/`。
 
 
-FreeBSD pkg 使用 https，可能还需要先安装 ssl 证书（FreeBSD 14.1 及以上无需）：
-
-```sh
-# pkg install ca_root_nss
-```
-
-或者
-
-```sh
-# cd /usr/ports/security/ca_root_nss/
-# make install clean
-```
-
-然后把 `repo.conf` 里的 `pkg+http` 改成 `pkg+https` 即可。
-
-最后刷新 pkg 数据库：
-
-```sh
-# pkg update -f
-```
-
-## pkg 简单使用示例
-
-### 列出 pkg 包安装的文件
+## 列出 pkg 包安装的文件
 
 >**注意**
 >
@@ -106,7 +83,7 @@ xrdp-0.10.2_2,1:
 ```
 
 
-### 安装 python 3
+## 安装 python 3
 
 
 ```sh
@@ -120,7 +97,7 @@ xrdp-0.10.2_2,1:
 # make install clean
 ```
 
-### pkg 升级软件
+## pkg 升级软件
 
 ```sh
 # pkg upgrade
@@ -135,7 +112,7 @@ xrdp-0.10.2_2,1:
 # make deinstall reinstall
 ```
 
-### 查看已经安装的所有软件
+## 查看已经安装的所有软件
 
 ```sh
 # pkg info
@@ -349,14 +326,6 @@ pkg: PRE-INSTALL script failed
 doxygen-1.9.6_1,2: /usr/local/bin/doxygen misses libmd.so.6
 jbig2dec-0.20_1: /usr/local/bin/jbig2dec misses libmd.so.6
 jbig2dec-0.20_1: /usr/local/lib/libjbig2dec.so misses libmd.so.6
-jbig2dec-0.20_1: /usr/local/lib/libjbig2dec.so.0 misses libmd.so.6
-jbig2dec-0.20_1: /usr/local/lib/libjbig2dec.so.0.0.0 misses libmd.so.6
-x265-3.5_3: /usr/local/bin/x265 misses libmd.so.6
-x265-3.5_3: /usr/local/lib/libx265.so misses libmd.so.6
-x265-3.5_3: /usr/local/lib/libx265.so.200 misses libmd.so.6
-xorg-server-21.1.13,1: /usr/local/libexec/Xorg misses libmd.so.6
-xwayland-24.1.2,1: /usr/local/bin/Xwayland misses libmd.so.6
-root@ykla:/usr/ports/chinese/fcitx # 
 ```
 
 按照上述软件列表，使用 Ports 逐个重新编译即可（RELEASE 可以直接 `pkg` 更新。）。
@@ -375,10 +344,6 @@ root@ykla:/ # pkg_validate
 FreeBSD-pkg-bootstrap-15.snap20241004232339: checksum mismatch for /etc/pkg/FreeBSD.conf
 FreeBSD-runtime-15.snap20241004232339: checksum mismatch for /etc/group
 FreeBSD-runtime-15.snap20241004232339: checksum mismatch for /etc/master.passwd
-FreeBSD-runtime-15.snap20241004232339: checksum mismatch for /etc/shells
-FreeBSD-runtime-15.snap20241004232339: checksum mismatch for /etc/sysctl.conf
-FreeBSD-ssh-15.snap20241004232339: checksum mismatch for /etc/ssh/sshd_config
-PackageKit-1.2.8: checksum mismatch for /var/lib/PackageKit/transactions.db
 ```
 
 - `bsdadminscripts2` 亦可查找当前系统的过时软件：

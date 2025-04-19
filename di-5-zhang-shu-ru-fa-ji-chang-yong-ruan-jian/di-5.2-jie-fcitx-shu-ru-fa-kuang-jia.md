@@ -19,14 +19,14 @@ fcitx 即“A flexible input method framework（一款灵活的输入法框架�
 >
 > 该教程仅在 KDE 5/csh 下测试通过。
 
-安装：
+- 使用 pkg 安装：
 
 
 ```sh
 # pkg install zh-fcitx zh-fcitx-configtool fcitx-qt5 fcitx-m17n zh-fcitx-libpinyin
 ```
 
-或者
+- 或者使用 Ports 安装：
 
 ```
 # cd /usr/ports/chinese/fcitx/ && make install clean #输入法框架
@@ -35,6 +35,8 @@ fcitx 即“A flexible input method framework（一款灵活的输入法框架�
 # cd /usr/ports/textproc/fcitx-m17n/ && make install clean #多语种支持
 # cd /usr/ports/chinese/fcitx-libpinyin/ && make install clean #拼音输入法
 ```
+
+---
 
 在 `.cshrc` 和 `/etc/csh.cshrc` 中添加如下配置，此配置可以解决部分窗口 fcitx 无效的问题。
 
@@ -66,18 +68,20 @@ setenv LC_ALL zh_CN.UTF-8
 
 fcitx 5 相比前一代，增加了对 Wayland 的支持，据说更加流畅。
 
-安装：
+---
+
+- 使用 pkg 安装：
 
 ```sh
 # pkg install fcitx5 fcitx5-qt5 fcitx5-qt6 fcitx5-gtk2 fcitx5-gtk3 fcitx5-gtk4 fcitx5-configtool zh-fcitx5-chinese-addons
 ```
 
-或者：
+- 或者使用 Ports 安装：
 
 ```
 # cd /usr/ports/textproc/fcitx5/ && make install clean
-# cd /usr/ports/textproc/fcitx5-qt/ && make install clean #同时包含 QT 5 和 QT 6
-# cd /usr/ports/textproc/fcitx5-gtk/ && make install clean #同时包含 gtk 2、3、4
+# cd /usr/ports/textproc/fcitx5-qt/ && make install clean  # 同时包含 QT 5 和 QT 6
+# cd /usr/ports/textproc/fcitx5-gtk/ && make install clean # 同时包含 gtk 2、3、4
 # cd /usr/ports/textproc/fcitx5-configtool/ && make install clean
 # cd /usr/ports/chinese/fcitx5-chinese-addons/ && make install clean
 ```
@@ -86,7 +90,7 @@ fcitx 5 相比前一代，增加了对 Wayland 的支持，据说更加流畅。
 
 也可通过 ports 安装。环境变量取决于你的窗口管理器和桌面以及 shell。经测试不支持 slim，可能是配置问题。sddm 可用。
 
-> **可选**
+> **技巧**
 >
 > 你还可以选择安装 rime：
 >
@@ -103,7 +107,7 @@ fcitx 5 相比前一代，增加了对 Wayland 的支持，据说更加流畅。
 >
 > rime 不会自动被添加到输入法，需要手动添加完成初始化（程序里找到 fcitx 配置工具，添加 rime 输入法即可），这个输入法我不知道配置文件在哪，有意者可以自行安装。而且经常切换到繁体，即使你选择了简体，BUG 比较多，原因未知。对于普通用户如果未生效，请检查自己的 shell 是否选择了对应教程进行设置。另外请将该用户加入 wheel 组。
 
-SLIM 窗口下会提示 IBUS 找不到……疑似 bug。
+SLIM 窗口下会提示 IBus 找不到……疑似 bug。
 
 自动启动：
 

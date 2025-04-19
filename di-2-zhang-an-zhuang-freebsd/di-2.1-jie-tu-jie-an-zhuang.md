@@ -8,7 +8,7 @@
 
 已知 FreeBSD 有如下版本（或阶段）：alpha、rc、beta、release、current、stable。
 
-**release** 是可以日常/服务器使用的，即一般意义上的 **稳定版** 或者说 LTS。而 ***stable*** 和 ***current*** 都是开发分支，都是 **不稳定的**（稳定与不稳定是相对的，[Netflix 几乎所有节点都运行着 **current**](https://freebsdfoundation.org/netflix-case-study/)）。
+**release** 版本是可以日常/服务器使用的，即一般意义上的 **稳定版** 或者说 LTS。而 ***stable*** 和 ***current*** 都是 **开发分支**，都是 **不稳定的**（稳定与不稳定是相对的，[Netflix 几乎所有节点都运行着 **current**](https://freebsdfoundation.org/netflix-case-study/)）。
 
 >**注意**
 >
@@ -30,7 +30,7 @@ current 相对稳定后（即 MFC 最短三天，MFC 即 `Merge From Head`，类
 >
 > ——参见 [FreeBSD Manual Pages freebsd-update](https://man.freebsd.org/cgi/man.cgi?freebsd-update)
 
-### FreeBSD 镜像说明
+## FreeBSD 镜像说明
 
 首先我们打开 FreeBSD 项目官网：<https://www.freebsd.org/>：
 
@@ -67,13 +67,13 @@ CHECKSUM.SHA256-FreeBSD-14.2-RELEASE-amd64	    1171	       2024-Nov-29 14:11
 CHECKSUM.SHA512-FreeBSD-14.2-RELEASE-amd64    	1811	       2024-Nov-29 14:09
 FreeBSD-14.2-RELEASE-amd64-bootonly.iso	        459491328	   2024-Nov-29 13:04
 FreeBSD-14.2-RELEASE-amd64-bootonly.iso.xz	    100595956	   2024-Nov-29 13:04
-FreeBSD-14.2-RELEASE-amd64-disc1.iso	          1310040064   2024-Nov-29 13:05
+FreeBSD-14.2-RELEASE-amd64-disc1.iso	        1310040064     2024-Nov-29 13:05
 FreeBSD-14.2-RELEASE-amd64-disc1.iso.xz	        855850608	   2024-Nov-29 13:05
-FreeBSD-14.2-RELEASE-amd64-dvd1.iso	            4826406912	 2024-Nov-29 13:05
-FreeBSD-14.2-RELEASE-amd64-dvd1.iso.xz	        3812250832	 2024-Nov-29 13:05
-FreeBSD-14.2-RELEASE-amd64-memstick.img	        1559351808	 2024-Nov-29 13:05
+FreeBSD-14.2-RELEASE-amd64-dvd1.iso	            4826406912	   2024-Nov-29 13:05
+FreeBSD-14.2-RELEASE-amd64-dvd1.iso.xz	        3812250832	   2024-Nov-29 13:05
+FreeBSD-14.2-RELEASE-amd64-memstick.img	        1559351808	   2024-Nov-29 13:05
 FreeBSD-14.2-RELEASE-amd64-memstick.img.xz	    867177260	   2024-Nov-29 13:05
-FreeBSD-14.2-RELEASE-amd64-mini-memstick.img	  564220416	   2024-Nov-29 13:04
+FreeBSD-14.2-RELEASE-amd64-mini-memstick.img	564220416	   2024-Nov-29 13:04
 FreeBSD-14.2-RELEASE-amd64-mini-memstick.img.xz	107445036	   2024-Nov-29 13:04
 ```
 
@@ -105,11 +105,9 @@ FreeBSD-14.2-RELEASE-amd64-mini-memstick.img.xz	107445036	   2024-Nov-29 13:04
 >FreeBSD 所有安装介质包括不限于虚拟机文件都没有提供图形界面（DVD 有 pkg 包，但是会出问题），均需要自行安装。
 
 
-
 >**技巧**
 >
 >FreeBSD 14.1 RELEASE 两个 ISO 均在 Ventoy 下测试通过（英特尔三代处理器下的 UEFI）。但是仍不排除出现问题的可能性。如果出现问题，请首先考虑下载 `img` 正常刻录。
-
 
 
 >**技巧**
@@ -123,9 +121,7 @@ FreeBSD-14.2-RELEASE-amd64-mini-memstick.img.xz	107445036	   2024-Nov-29 13:04
 
 - 我该如何刻录 FreeBSD 镜像到 U 盘？
 
-Windows 上的刻录工具应首选 **Rufus**，Linux 直接使用 `dd` 命令即可。
-
-rufus 下载地址：[https://rufus.ie/zh](https://rufus.ie/zh)
+Windows 上的刻录工具应首选 **Rufus**，Linux 直接使用 `dd` 命令即可。rufus 下载地址：[https://rufus.ie/zh](https://rufus.ie/zh)
 
 > **警告**
 >
@@ -134,7 +130,7 @@ rufus 下载地址：[https://rufus.ie/zh](https://rufus.ie/zh)
 
 >**技巧**
 >
->无需解压缩，rufus 刻录镜像时，直接选择 `-img.xz` 亦可进行启动盘制作的过程。
+>rufus 刻录镜像时，无需解压缩，直接选择 `-img.xz` 亦可进行启动盘制作的过程。
 >
 >![rufus](../.gitbook/assets/rufus.png)
 

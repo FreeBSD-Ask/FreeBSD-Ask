@@ -26,7 +26,7 @@ login:
 FreeBSD/amd64 (ykla) (ttyv0)
 
 login: root # 此处输入用户名，然后按回车键 ①
-Password: # 此处输入密码，然后按回车键
+Password: 	# 此处输入密码，然后按回车键
 Last login: Tue Mar 18 17:24:48 2025 from 3413e8b6b43f
 FreeBSD 15.0-CURRENT (GENERIC) main-n275981-b0375f78e32a
 
@@ -59,7 +59,7 @@ root@ykla:~ #
 >
 >密码并不会被回显打印到屏幕上：一般我们输入密码时，屏幕上会显示 `******`。但是在 FreeBSD 中，凡是涉及密码的地方大都不会有任何显示，即使输入了密码屏幕上也是空白的，和没有任何输入是一个状态，就是什么也没有，输入后回车即可。
 
-①：root 是 UNIX 中的最高权限。我们常说的安卓 root，苹果越狱，Kindle 越狱等等都是为了获取这个 root 权限权限。
+- ①：root 是 UNIX 中的最高权限。我们常说的安卓 root，苹果越狱，Kindle 越狱等等都是为了获取这个 root 权限权限。
 
 ### 参考文献
 

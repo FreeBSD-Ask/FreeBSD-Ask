@@ -2,21 +2,20 @@
 
 mihomo 在 [ports](https://www.freshports.org/net/mihomo) 中就有提供。
 
-使用软件包安装：
+## 安装 mihomo
+
+- 使用 pkg 安装：
 
 ```sh
 # pkg install net/mihomo
 ```
 
-或者
+- 或者使用 Ports 安装：
 
 ```
 # cd /usr/ports/net/mihomo/ 
 # make install clean
 ```
-
-即可完成安装。
-
 
 如果觉得麻烦可以在 Linux 兼容层中使用，FreeBSD 网络一样可受其控制。
 
