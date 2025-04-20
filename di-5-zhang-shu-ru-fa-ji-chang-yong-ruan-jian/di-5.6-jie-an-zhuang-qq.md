@@ -9,11 +9,13 @@
 
 ### 安装 rpm 工具
 
+- 使用 pkg 安装
+
 ```sh
 # pkg install rpm4
 ```
 
-或者：
+- 或者使用 Ports 安装：
 
 ```sh
 # cd /usr/ports/archivers/rpm4/ 
@@ -25,40 +27,62 @@
 - 下载 QQ，官方链接：[QQ Linux 版 - 轻松做自己](https://im.qq.com/linuxqq/index.shtml)
 
 ```sh
-root@ykla:/ # fetch https://dldir1.qq.com/qqfile/qq/QQNT/Linux/QQ_3.2.12_240919_x86_64_01.rpm # 写作本文时链接如此，请自行获取最新链接
+# fetch https://dldir1.qq.com/qqfile/qq/QQNT/Linux/QQ_3.2.16_250401_x86_64_01.rpm # 写作本文时链接如此，请自行获取最新链接
 ```
 
 - 安装 QQ：
 
 ```sh
 root@ykla:/ # cd /compat/linux/
-root@ykla:/compat/linux # rpm2cpio < /QQ_3.2.12_240919_x86_64_01.rpm  | cpio -id
+root@ykla:/compat/linux # rpm2cpio < /home/ykla/QQ_3.2.16_250401_x86_64_01.rpm | cpio -id # 注意把 QQ 所在路径改成你自己的
 ./usr/share/icons/hicolor/512x512/apps/qq.png: Cannot extract through symlink usr/share/icons/hicolor/512x512/apps/qq.png
-1040641 blocks
+1055863 blocks
 ```
 
 ### 解决依赖库
 
-查看依赖：
+- 查看依赖：
 
 ```sh
-root@ykla:/compat/linux #  /compat/linux/usr/bin/bash # 切换到兼容层的 shell
+# /compat/linux/usr/bin/bash # 切换到兼容层的 shell
 bash-5.1# ldd /opt/QQ/qq 
 	linux-vdso.so.1 (0x00007fffffffe000)
 	libffmpeg.so => /opt/QQ/libffmpeg.so (0x000000080c000000)
 	....省略一部分...
 ```
 
-可以看到 `ldd` 正常。
+可以看到 `ldd` 正常，无需解决依赖问题。
+
+### 解决 fcitx 中文输入法在 QQ 中不能使用的问题
+
+在兼容层中安装 `ibus-gtk3` 和 `ibus-libs`，下载后执行：
+
+```
+# fetch https://dl.rockylinux.org/pub/rocky/9/AppStream/x86_64/os/Packages/i/ibus-gtk3-1.5.25-6.el9.x86_64.rpm
+# fetch https://dl.rockylinux.org/pub/rocky/9/AppStream/x86_64/os/Packages/i/ibus-libs-1.5.25-6.el9.x86_64.rpm
+# cd /compat/linux 
+# rpm2cpio < /home/ykla/ibus-gtk3-1.5.25-6.el9.x86_64.rpm | cpio -id
+# rpm2cpio < /home/ykla/ibus-libs-1.5.25-6.el9.x86_64.rpm | cpio -id
+```
+
+接下来：
+
+```sh
+root@ykla:/compat/linux #  /compat/linux/usr/bin/bash # 切换到 Rockylinux 的 bash
+bash-5.1# gtk-query-immodules-3.0-64 --update-cache # 刷新缓存
+```
+
 
 ### 启动 QQ
 
 ```sh
-root@ykla:/home/ykla # /compat/linux/opt/QQ/qq --no-sandbox  --in-process-gpu
+$ /compat/linux/opt/QQ/qq --no-sandbox  --in-process-gpu
 ```
 
 ![FreeBSD QQ](../.gitbook/assets/rlqq.png)
 
+
+![FreeBSD QQ](../.gitbook/assets/rlqq2.png)
 
 ## 基于 ArchLinux 兼容层
 
@@ -138,15 +162,6 @@ $ yay -S linuxqq # 此时位于 Arch 兼容层！此时用户为 test
 $ rm ~/.config/QQ/crash_files/*
 $ chmod a-wx ~/.config/QQ/crash_files/
 ```
-
-### 解决fcitx中文输入法在QQ中不能使用的问题（RockyLinux）
-在兼容层中安装`ibus-gtk3`和`ibus-libs`(可以从[pkgs.org](https://pkgs.org/)下载),下载后执行：
-```
-# cd /compat/linux 
-# rpm2cpio < /path/to/ibus-gtk3-xxx-.rpm | cpio -id
-# rpm2cpio < /path/to/ibus-libs-xxx.rpm | cpio -id
-```
-，然后执行`gtk-query-immodules-3.0-64 --update-cache`。
 
 #### 参考文献
 
