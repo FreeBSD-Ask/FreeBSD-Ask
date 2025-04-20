@@ -55,7 +55,7 @@ bash-5.1# ldd /opt/QQ/qq
 
 ### 解决 fcitx 中文输入法在 QQ 中不能使用的问题
 
-在兼容层中安装 `ibus-gtk3` 和 `ibus-libs`，下载后执行：
+- 在兼容层中安装 `ibus-gtk3` 和 `ibus-libs`，下载后执行：
 
 ```
 # fetch https://dl.rockylinux.org/pub/rocky/9/AppStream/x86_64/os/Packages/i/ibus-gtk3-1.5.25-6.el9.x86_64.rpm
@@ -65,11 +65,11 @@ bash-5.1# ldd /opt/QQ/qq
 # rpm2cpio < /home/ykla/ibus-libs-1.5.25-6.el9.x86_64.rpm | cpio -id
 ```
 
-接下来：
+- 接下来：
 
 ```sh
 root@ykla:/compat/linux #  /compat/linux/usr/bin/bash # 切换到 Rockylinux 的 bash
-bash-5.1# gtk-query-immodules-3.0-64 --update-cache # 刷新缓存
+bash-5.1# gtk-query-immodules-3.0-64 --update-cache   # 刷新缓存
 ```
 
 
@@ -81,6 +81,7 @@ $ /compat/linux/opt/QQ/qq --no-sandbox  --in-process-gpu
 
 ![FreeBSD QQ](../.gitbook/assets/rlqq.png)
 
+fcitx5 输入法正常：
 
 ![FreeBSD QQ](../.gitbook/assets/rlqq2.png)
 
