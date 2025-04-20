@@ -139,6 +139,15 @@ $ rm ~/.config/QQ/crash_files/*
 $ chmod a-wx ~/.config/QQ/crash_files/
 ```
 
+### 解决fcitx中文输入法在QQ中不能使用的问题（RockyLinux）
+在兼容层中安装`ibus-gtk3`和`ibus-libs`(可以从[pkgs.org](https://pkgs.org/)下载),下载后执行：
+```
+# cd /compat/linux 
+# rpm2cpio < /path/to/ibus-gtk3-xxx-.rpm | cpio -id
+# rpm2cpio < /path/to/ibus-libs-xxx.rpm | cpio -id
+```
+，然后执行`gtk-query-immodules-3.0-64 --update-cache`。
+
 #### 参考文献
 
 - [Linux 下新 QQ Bug＆Fix 一记（闪退相关）](https://zhuanlan.zhihu.com/p/645895811)
