@@ -81,7 +81,7 @@ Chromium 不是 chrome，但在 FreeBSD 中启动命令是 `chrome`。
 
 ![](../.gitbook/assets/join-chromium-dev-for-api3.png)
 
-加入 Google browser sign-in test account 群组后，你可能会看到：“你无权访问此内容”之类的提示，这很正常，不用管。
+加入 Google browser sign-in test account 群组后，你可能会看到：“您无权访问此内容”之类的提示，这很正常，不用管。
 
 ![join-mail-list-for-google-api-error2](../.gitbook/assets/join-chromium--list-2error.png)
 
