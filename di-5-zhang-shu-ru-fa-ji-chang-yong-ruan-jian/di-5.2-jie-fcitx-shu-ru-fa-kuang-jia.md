@@ -1,6 +1,6 @@
 # 第 5.2 节 Fcitx 输入法框架
 
-输入法框架和输入法本身是两码事，切不可混为一谈，输入法依赖输入法框架。即使在 Windows 上亦如此：目前其使用 [TSF 管理器](https://learn.microsoft.com/zh-cn/windows/win32/tsf/text-services-framework)。
+输入法框架和输入法本身是两码事，切不可混为一谈，输入法依赖输入法框架。即使在 Windows 上亦如此：Windows 目前其使用 [TSF 管理器](https://learn.microsoft.com/zh-cn/windows/win32/tsf/text-services-framework)。
 
 fcitx 即“A flexible input method framework（一款灵活的输入法框架）”小企鹅输入法。关于其英文命名来源参见[历史](https://fcitx-im.org/wiki/History/zh-cn)。
 
@@ -13,7 +13,7 @@ fcitx 即“A flexible input method framework（一款灵活的输入法框架�
 >
 > 在 FreeBSD-CURRENT 中可能会出现许多不可预料的怪异 bug：fcitx5 诊断信息英文乱码，输入法显示出奇怪的汉字，fcitx5-qt5 环境不能正常加载……
 
-## Fcitx 4.X
+## 安装 Fcitx 4.X
 
 > **注意**
 >
@@ -29,42 +29,22 @@ fcitx 即“A flexible input method framework（一款灵活的输入法框架�
 - 或者使用 Ports 安装：
 
 ```
-# cd /usr/ports/chinese/fcitx/ && make install clean #输入法框架
-# cd /usr/ports/chinese/fcitx-configtool/ && make install clean #输入法图形化配置工具
-# cd /usr/ports/textproc/fcitx-qt5/ && make install clean #支持 qt5 软件
-# cd /usr/ports/textproc/fcitx-m17n/ && make install clean #多语种支持
-# cd /usr/ports/chinese/fcitx-libpinyin/ && make install clean #拼音输入法
+# cd /usr/ports/chinese/fcitx/ && make install clean # 输入法框架
+# cd /usr/ports/chinese/fcitx-configtool/ && make install clean # 输入法图形化配置工具
+# cd /usr/ports/textproc/fcitx-qt5/ && make install clean # 支持 qt5 软件
+# cd /usr/ports/textproc/fcitx-m17n/ && make install clean # 多语种支持
+# cd /usr/ports/chinese/fcitx-libpinyin/ && make install clean # 拼音输入法
 ```
 
----
 
-在 `.cshrc` 和 `/etc/csh.cshrc` 中添加如下配置，此配置可以解决部分窗口 fcitx 无效的问题。
+### 开机自启 Fcitx 4.X
 
 ```sh
-setenv QT4_IM_MODULE fcitx
-setenv GTK_IM_MODULE fcitx
-setenv QT_IM_MODULE fcitx
-setenv GTK2_IM_MODULE fcitx
-setenv GTK3_IM_MODULE fcitx
-setenv XMODIFIERS @im=fcitx
+$ mkdir -p ~/.config/autostart/ # 若使用其他用户则需要在其命令行下再执行之
+$ cp /usr/local/share/applications/fcitx.desktop ~/.config/autostart/
 ```
 
-在 `.cshrc` 和 `/etc/csh.cshrc` 中添加下面几行配置可以解决终端无法输入中文和无法显示中文的问题。
-
-```sh
-setenv LANG zh_CN.UTF-8
-setenv MM_CHARSET zh_CN.UTF-8
-setenv LC_CTYPE zh_CN.UTF-8
-setenv LC_ALL zh_CN.UTF-8
-```
-
-开机自启：
-
-```
-# cp /usr/local/share/applications/fcitx.desktop ~/.config/autostart/
-```
-
-## Fcitx 5.X
+## 安装 Fcitx 5.X
 
 fcitx 5 相比前一代，增加了对 Wayland 的支持，据说更加流畅。
 
@@ -79,18 +59,15 @@ fcitx 5 相比前一代，增加了对 Wayland 的支持，据说更加流畅。
 - 或者使用 Ports 安装：
 
 ```
-# cd /usr/ports/textproc/fcitx5/ && make install clean
+# cd /usr/ports/textproc/fcitx5/ && make install clean # 主程序
 # cd /usr/ports/textproc/fcitx5-qt/ && make install clean  # 同时包含 QT 5 和 QT 6
 # cd /usr/ports/textproc/fcitx5-gtk/ && make install clean # 同时包含 gtk 2、3、4
-# cd /usr/ports/textproc/fcitx5-configtool/ && make install clean # 同时包含 QT 5 和 QT 6
-# cd /usr/ports/chinese/fcitx5-chinese-addons/ && make install clean
+# cd /usr/ports/textproc/fcitx5-configtool/ && make install clean # fcitx5 的图形配置工具。同时包含 QT 5 和 QT 6
+# cd /usr/ports/chinese/fcitx5-chinese-addons/ && make install clean # 输入法
 ```
 
-解释：
 
-- `textproc/fcitx5-configtool` 是 fcitx5 的图形配置工具。
-
-环境变量取决于你的窗口管理器和桌面以及 shell。经测试 SLIM 窗口下会提示 IBus 找不到……疑似 bug。也可能是配置问题。
+经测试 SLIM 窗口下会提示 IBus 找不到……疑似 bug。也可能是配置问题。
 
 > **技巧**
 >
@@ -107,40 +84,20 @@ fcitx 5 相比前一代，增加了对 Wayland 的支持，据说更加流畅。
 ># cd /usr/ports/chinese/rime-essay/ && make install clean
 >```
 >
-> rime 不会自动被添加到输入法，需要手动添加完成初始化（程序里找到 fcitx 配置工具，添加 rime 输入法即可），这个输入法我不知道配置文件在哪，有意者可以自行安装。而且经常切换到繁体，即使你选择了简体，BUG 比较多，原因未知。对于普通用户如果未生效，请检查自己的 shell 是否选择了对应教程进行设置。另外请将该用户加入 wheel 组。
+> rime 不会自动添加到输入法，需要手动添加完成初始化（程序里找到 fcitx 配置工具，添加 rime 输入法即可），这个输入法我不知道配置文件在哪，有意者可以自行安装。而且经常切换到繁体，即使你选择了简体，BUG 比较多，原因未知。对于普通用户如果未生效，请检查自己的 shell 是否选择了对应教程进行设置。另外请将该用户加入 wheel 组。
 
----
 
-- 自动启动：
+### 开启自启 Fcitx 5.X
 
 ```sh
 $ mkdir -p ~/.config/autostart/ # 若使用其他用户则需要在其命令行下再执行之
 $ cp /usr/local/share/applications/org.fcitx.Fcitx5.desktop ~/.config/autostart/
 ```
 
-### 根据 Shell 设置环境变量
 
-#### 如何查看修改当前 shell
+## 设置环境变量
 
-先看看现在的 shell 是什么：`# echo $0`。
-
-例：尝试将当前 shell 修改成 `csh`：
-
-```sh
-# chsh -s /bin/csh
-```
-
-退出当前账号，重新登录，查看 shell 是否变为 `csh`：
-
-```sh
-# echo $0
-```
-
-如果输出 `csh`，代表配置成功。然后其余环境变量配置方法同上所述。
-
-#### 设置环境变量
-
-根据自己使用的桌面管理器择一使用：
+根据自己使用的桌面管理器及 shell 择一使用：
 
 1. sddm lightdm gdm 都可以在 `~/.xprofile` 中写入 A 组配置
 2. lightdm gdm 可以在 `~/.profile` 中写入 A 组配置
@@ -151,7 +108,9 @@ $ cp /usr/local/share/applications/org.fcitx.Fcitx5.desktop ~/.config/autostart/
 - zsh: `~/.zprofile` 写入 A 组配置
 - csh: `~/.cshrc` 写入 B 组配置
 
-**注意：如果登录桌面的用户账户不是 root，就不能使用 root 身份进行设置，必须切换到当前用户且在不使用 sudo 的情况下进行配置。**
+>**注意**
+>
+>如果登录桌面的用户账户不是 root，就不能使用 root 身份进行设置：必须切换到该用户且在不使用 sudo 的情况下进行配置。
 
 A 组：
 
@@ -161,7 +120,6 @@ sh/bash/zsh: fcitx5
 export LANG=zh_CN.UTF-8
 export LANGUAGE=zh_CN.UTF-8
 export LC_ALL=zh_CN.UTF-8
-
 export XMODIFIERS='@im=fcitx'
 export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
@@ -179,6 +137,7 @@ setenv XMODIFIERS @im=fcitx
 setenv GTK_IM_MODULE fcitx
 setenv QT_IM_MODULE fcitx
 ```
+
 
 ## 故障排除与未竟事宜
 
