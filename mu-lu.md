@@ -1,4 +1,4 @@
-# 目录
+# Table of contents
 
 * [FreeBSD 从入门到跑路（第三版：草稿）](README.md)
 * [编辑日志](CHANGELOG.md)
@@ -107,9 +107,9 @@
 
 ## 第 9 章 Jail
 
-* [第 9.1 节 jail 配置](di-9-zhang-jail/di-9.1-jie-jail-pei-zhi.md)
-* [第 9.2 节 jail 更新](di-9-zhang-jail/di-9.2-jie-jail-geng-xin.md)
-* [第 9.3 节 使用 qjail 管理 jail](di-9-zhang-jail/di-9.3-jie-shi-yong-qjail-guan-li-jail.md)
+* [第 9.1 节 Jail 配置](di-9-zhang-jail/di-9.1-jie-jail-pei-zhi.md)
+* [第 9.2 节 Jail 更新](di-9-zhang-jail/di-9.2-jie-jail-geng-xin.md)
+* [第 9.3 节 使用 Qjail 管理 Jail](di-9-zhang-jail/di-9.3-jie-shi-yong-qjail-guan-li-jail.md)
 
 ## 第 10 章 虚拟化
 
