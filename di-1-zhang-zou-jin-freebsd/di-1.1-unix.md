@@ -94,8 +94,7 @@ Multics 意图创造强悍的新软件和比肩 IBM 7094 功能更丰富的新�
 
 他需要写三个程序，每周写一个：创建代码的编辑器，将代码转换为 PDP-7 能运行的机器语言汇编器，再加“内核的外层——操作系统就完成了”。
 
-新的 PDP-7 操作系统编写没多时，Thompson 和几个同事讨论，当时新系统还没有名字，当时它被命名为“UNICS”，UNICS 最后改名为 **UNIX**，这个名字更加方便记忆。
-
+新的 PDP-7 操作系统编写没多时，Thompson 和几个同事讨论，当时新系统还没有名字，当时它被命名为“UnICS”（Uniplexed Information and Computing Service，非复用信息和计算机服务），UnICS 最后改名为 **UNIX**，这个名字更加方便记忆。
 
 
 ## 什么是 Unix-like？
@@ -108,6 +107,7 @@ Unix-like 即类 Unix，亦即一切基于 UNIX 的操作系统，基本遵守 P
 
 UNIX 标准 SUS 包含了 POSIX 标准，是其超集。Linux 实现了 POSIX 标准，但是未进行 [POSIX 认证](http://get.posixcertified.ieee.org/)。本质上说 Linux 最初是 UNIX 的一款仿制品。
 
+Linux 之名来自 Linux 之父 Linus Torvalds。
 
 ### 狭义 Linux 是内核
 
@@ -121,7 +121,7 @@ GNU/Linux = Linux kernel + GNU 等软件 + 包管理器
 
 Linux 全称为 GNU/Linux；
 
-[GNU 项目](https://www.gnu.org/) 1984——GNU's Not Unix，从 GNU 这个名字你也能看出来 Linux 与 UNIX 并无直接关联。
+[GNU 项目](https://www.gnu.org/) 1984——GNU's Not Unix，从 GNU 这个名字（GNU 不是 UNIX）你也能看出来 Linux 与 UNIX 并无直接关联。
 
 具体地：
 
@@ -134,7 +134,6 @@ Linux 全称为 GNU/Linux；
 > 如果你还是不明白，建议亲自安装试试 [Gentoo](https://www.gentoo.org/downloads/)（stage3）或 [Slackware](http://www.slackware.com/)，再不明白可以试试 [Gentoo（stage1）](https://wiki.gentoo.org/wiki/Stage_file) 或 [LFS](https://www.linuxfromscratch.org/lfs/)。
 >
 > 上述操作较为复杂，需要一定的经验与基础知识。
-
 
 
 ## 什么是 FreeBSD？
@@ -163,6 +162,3 @@ FreeBSD 日为 6 月 19 日。FreeBSD 基金会和社区在这天庆祝 FreeBSD 
 最初，Unix 是 `AT&T` 开发的操作系统，可以获取源代码，但并非开源。在 20 世纪 70 年代末，伯克利大学的计算机系统研究小组（Computer Systems Research Group，CSRG）开始对 Unix 进行深入研究，并为其开发了大量用户空间的程序，形成了名为 BSD（Berkeley Software Distribution，伯克利软件套件）的新系统。随着时间推移，BSD 系统逐渐发展，加入了许多创新，比如实现了 TCP/IP 协议栈。尽管 Unix 内核经历了多个版本的演变，但到了 90 年代，Net/2 版本发布后，Unix 内核中的 AT&T 代码已经被完全替换，成为了一款没有专利代码的系统。BSD 系统逐渐演化成为 4.2BSD，BSD 4.4-lite……进而成为了 386BSD。
 
 在此过程中，BSD 和 AT&T 之间的关系发生了变化，最终引发了法律争议，导致 BSD 系统的分裂。1993 年，BSD 的核心代码分裂为两个主要的项目：NetBSD 和 FreeBSD。1996 年，OpenBSD 从 NetBSD 中复刻出来；2003 年，DragonFlyBSD 从 FreeBSD 中复刻出来。
-
-
-
