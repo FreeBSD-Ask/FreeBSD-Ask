@@ -13,7 +13,9 @@ fcitx 即“A flexible input method framework（一款灵活的输入法框架�
 >
 > 在 FreeBSD-CURRENT 中可能会出现许多不可预料的怪异 bug：fcitx5 诊断信息英文乱码，输入法显示出奇怪的汉字，fcitx5-qt5 环境不能正常加载……
 
-## 安装 Fcitx 4.X
+## 安装 Fcitx
+
+### 安装 Fcitx 4.X
 
 > **注意**
 >
@@ -37,14 +39,14 @@ fcitx 即“A flexible input method framework（一款灵活的输入法框架�
 ```
 
 
-### 开机自启 Fcitx 4.X
+#### 开机自启 Fcitx 4.X
 
 ```sh
 $ mkdir -p ~/.config/autostart/ # 若使用其他用户则需要在其命令行下再执行之
 $ cp /usr/local/share/applications/fcitx.desktop ~/.config/autostart/
 ```
 
-## 安装 Fcitx 5.X
+### 安装 Fcitx 5.X
 
 fcitx 5 相比前一代，增加了对 Wayland 的支持，据说更加流畅。
 
@@ -87,7 +89,7 @@ fcitx 5 相比前一代，增加了对 Wayland 的支持，据说更加流畅。
 > rime 不会自动添加到输入法，需要手动添加完成初始化（程序里找到 fcitx 配置工具，添加 rime 输入法即可），这个输入法我不知道配置文件在哪，有意者可以自行安装。而且经常切换到繁体，即使你选择了简体，BUG 比较多，原因未知。对于普通用户如果未生效，请检查自己的 shell 是否选择了对应教程进行设置。另外请将该用户加入 wheel 组。
 
 
-### 开启自启 Fcitx 5.X
+#### 开启自启 Fcitx 5.X
 
 ```sh
 $ mkdir -p ~/.config/autostart/ # 若使用其他用户则需要在其命令行下再执行之
@@ -95,7 +97,7 @@ $ cp /usr/local/share/applications/org.fcitx.Fcitx5.desktop ~/.config/autostart/
 ```
 
 
-## 设置环境变量
+## 配置 Fcitx 环境变量
 
 根据自己使用的桌面管理器及 shell 择一使用：
 
