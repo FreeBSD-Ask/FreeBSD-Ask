@@ -138,7 +138,7 @@ remote size / mtime: 195363380 / 1652346155
 # qjail console jail1  # 进入 jail1 控制台
 ```
 
-进入 jail 控制台后，此时是 jail 中的 root 帐号（进入 jail 控制台，无需输入密码），因 jail 可能开启对外服务，为安全考虑建议设置帐号密码
+进入 jail 控制台后，此时是 jail 中的 root 账户（进入 jail 控制台，无需输入密码），因 jail 可能开启对外服务，为安全考虑建议设置账户密码
 
 - 备份 jail
 

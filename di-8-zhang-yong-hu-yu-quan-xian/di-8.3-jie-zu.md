@@ -45,8 +45,8 @@
 示例：
 
 ```sh
-# pw useradd test1 # 创建用户 test1，uid 系统默认，test1 组，登陆环境 /bin/sh，主目录未创建
-# pw useradd test2 -u 1200 -m -d /tmp/test -g test1 -G wheel -s sh -c test2 # 创建用户 test2，uid 为 1200，创建主目录，主目录为 /tmp/test，test1 组，有管理员权限，登陆环境 /bin/sh，全名 test2
+# pw useradd test1 # 创建用户 test1，uid 系统默认，test1 组，登录环境 /bin/sh，主目录未创建
+# pw useradd test2 -u 1200 -m -d /tmp/test -g test1 -G wheel -s sh -c test2 # 创建用户 test2，uid 为 1200，创建主目录，主目录为 /tmp/test，test1 组，有管理员权限，登录环境 /bin/sh，全名 test2
 # echo password | pw useradd test3 -h 0 # 创建用户 test3，同时设置密码为 password
 ```
 
@@ -200,7 +200,7 @@
 示例：
 
 ```sh
-# chpass -s sh test1 # 更换用户 test1 的登陆环境为 /bin/sh
+# chpass -s sh test1 # 更换用户 test1 的登录环境为 /bin/sh
 # chpass # 以 vi（nvi）方式打开当前用户信息进行修改
 # passwd # 修改用户密码，如不指定用户则默认为当前用户。
 ```
