@@ -1,4 +1,4 @@
-# 目录
+# Table of contents
 
 * [FreeBSD 从入门到跑路（第三版：草稿）](README.md)
 * [编辑日志](CHANGELOG.md)
@@ -232,7 +232,7 @@
 * [第 22.4 节 C/C++ 环境的配置](di-22-zhang-bian-cheng-yu-kai-fa/di-22.4-jie-cc++-huan-jing-de-pei-zhi.md)
 * [第 22.5 节 Java 环境的配置](di-22-zhang-bian-cheng-yu-kai-fa/di-22.5-jie-java-huan-jing-de-pei-zhi.md)
 * [第 22.6 节 QT 环境的配置](di-22-zhang-bian-cheng-yu-kai-fa/di-22.6-jie-qt-huan-jing-de-pei-zhi.md)
-* [第 22.7 节 Python 与 VScode](di-22-zhang-bian-cheng-yu-kai-fa/di-22.7-jie-python-yu-vscode.md)
+* [第 22.7 节 Python 与 VS Code](di-22-zhang-bian-cheng-yu-kai-fa/di-22.7-jie-python-yu-vscode.md)
 * [第 22.8 节 Rust/Go 环境的配置](di-22-zhang-bian-cheng-yu-kai-fa/di-22.8-jie-rustgo-huan-jing-de-pei-zhi.md)
 * [第 22.9 节 Shell](di-22-zhang-bian-cheng-yu-kai-fa/di-22.9-jie-csh-yu-qi-ta-shell.md)
 * [第 22.10 节 通过 IDA 7 调试 FreeBSD](di-22-zhang-bian-cheng-yu-kai-fa/di-22.10-jie-tong-guo-ida-7-tiao-shi-freebsd.md)
