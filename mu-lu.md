@@ -1,4 +1,4 @@
-# 目录
+# Table of contents
 
 * [FreeBSD 从入门到跑路（第三版：草稿）](README.md)
 * [编辑日志](CHANGELOG.md)
@@ -29,6 +29,7 @@
 * [第 2.9 节 安装 FreeBSD——基于 Apple M1 & Parallels Desktop 20](di-2-zhang-an-zhuang-freebsd/di-2.9-jie-apple.md)
 * [第 2.10 节 安装 FreeBSD——基于 Apple M1 & VMware Fusion Pro](di-2-zhang-an-zhuang-freebsd/di-2.10-jie-apple.md)
 * [第 2.11 节 Qemu 安装 RISC-V FreeBSD（基于 x86 Windows）](di-2-zhang-an-zhuang-freebsd/di-2.11-qemu.md)
+* [第 2.12 节 FreeBSD 桌面发行版](di-2-zhang-an-zhuang-freebsd/2.12-others-bsd.md)
 
 ## 第 3 章 包管理器与 FreeBSD 系统更新
 
@@ -44,8 +45,8 @@
 
 ## 第 4 章 桌面环境
 
-* [第 4.1 节 显卡驱动](di-4-zhang-zhuo-mian-an-zhuang/di-4.1-jie-an-zhuang-xian-ka-qu-dong-ji-xorg-bi-kan.md)
-* [第 4.2 节 KDE6](di-4-zhang-zhuo-mian-an-zhuang/di-4.2-jie-an-zhuang-kde.md)
+* [第 4.1 节 显卡驱动（英特尔、AMD）](di-4-zhang-zhuo-mian-an-zhuang/di-4.1-jie-an-zhuang-xian-ka-qu-dong-ji-xorg-bi-kan.md)
+* [第 4.2 节 显卡驱动（NVIDIA）](di-4-zhang-zhuo-mian-an-zhuang/di-4.2-NVIDIA.md)
 * [第 4.3 节 GNOME](di-4-zhang-zhuo-mian-an-zhuang/di-4.3-jie-an-zhuang-gnome.md)
 * [第 4.4 节 Mate](di-4-zhang-zhuo-mian-an-zhuang/di-4.4-jie-an-zhuang-mate.md)
 * [第 4.5 节 Xfce](di-4-zhang-zhuo-mian-an-zhuang/di-4.5-jie-an-zhuang-xfce.md)
@@ -61,10 +62,10 @@
 * [第 4.15 节 LXDE](di-4-zhang-zhuo-mian-an-zhuang/di-4.15-lxde.md)
 * [第 4.16 节 Window Maker](di-4-zhang-zhuo-mian-an-zhuang/di-4.16-winmaker.md)
 * [第 4.17 节 Fluxbox](di-4-zhang-zhuo-mian-an-zhuang/di-4.17-fluxbox.md)
-* [第 4.18 节 root 登录桌面](di-4-zhang-zhuo-mian-an-zhuang/di-4.18-jie-root-deng-lu-zhuo-mian.md)
+* [第 4.18 节 KDE6](di-4-zhang-zhuo-mian-an-zhuang/di-4.18-jie-an-zhuang-kde.md)
 * [第 4.19 节 主题美化](di-4-zhang-zhuo-mian-an-zhuang/di-4.19-jie-zhu-ti-yu-mei-hua.md)
 * [第 4.20 节 远程桌面](di-4-zhang-zhuo-mian-an-zhuang/di-4.20-jie-yuan-cheng-zhuo-mian-guan-li.md)
-* [第 4.21 节 FreeBSD 桌面发行版](di-4-zhang-zhuo-mian-an-zhuang/4.21-others-bsd.md)
+* [第 4.21 节 root 登录桌面](di-4-zhang-zhuo-mian-an-zhuang/di-4.21-jie-root-deng-lu-zhuo-mian.md)
 
 ## 第 5 章 中文环境配置
 
