@@ -43,9 +43,8 @@ FreeBSD 15 CURRENT，编译使用 `drm-66-kmod`，支持情况同 Linux 6.6。
 >
 >每次点版本或大版本升级时，可能需要重新获取新系统源代码，重新编译安装显卡驱动模块方可顺利完成升级，而不是卡在黑屏的地方：或者你使用“模块源”。
 
-## 英特尔核显/AMD 显卡
 
-### 安装英特尔核显/AMD 显卡驱动
+## 安装英特尔核显/AMD 显卡驱动
 
 >**注意**
 >
@@ -56,7 +55,7 @@ FreeBSD 15 CURRENT，编译使用 `drm-66-kmod`，支持情况同 Linux 6.6。
 >在使用 Ports 时，drm 需要在 `/usr/src` 中有一份当前版本系统源代码，可参考系统更新章节。如果你是参考的本书其他章节进行的安装，那么你的系统中很可能已经有一份源码了，无需再获取源码。
 
 
-- FreeBSD 13.X
+### FreeBSD 13.X
 
 ```sh
 # cd /usr/ports/graphics/drm-510-kmod
@@ -69,7 +68,7 @@ FreeBSD 15 CURRENT，编译使用 `drm-66-kmod`，支持情况同 Linux 6.6。
 # pkg install drm-510-kmod
 ```
 
-- FreeBSD 14.X
+### FreeBSD 14.X
 
 >**技巧**
 >
@@ -86,7 +85,7 @@ FreeBSD 15 CURRENT，编译使用 `drm-66-kmod`，支持情况同 Linux 6.6。
 # pkg install drm-61-kmod
 ```
 
-- FreeBSD 15.0
+### FreeBSD 15.0
 
 ```sh
 # cd /usr/ports/graphics/drm-66-kmod
@@ -97,17 +96,18 @@ FreeBSD 15 CURRENT，编译使用 `drm-66-kmod`，支持情况同 Linux 6.6。
 >
 > 像英特尔三代处理器的 HD 4000 这种比较古老的显卡，他在传统的 BIOS 模式下无需额外安装显卡驱动，但是 UEFI 下有可能会花屏（FreeBSD 13.0 及以后无此问题），且需要安装此 DRM 显卡驱动。
 
-### 配置英特尔核显/AMD 显卡
+## 配置英特尔核显/AMD 显卡
 
 请按如下进行操作：
 
-- 如果为 intel 核芯显卡：
+### intel 核芯显卡
 
   ```sh
   # sysrc -f /etc/rc.conf kld_list+=i915kms
   ```
 
-- AMD
+### AMD
+
   - 如果是 HD7000 以后的 AMD 显卡，添加 `amdgpu`（大部分人应该使用这个，如果没用再换 `radeonkms`）
 
     ```sh
@@ -120,7 +120,7 @@ FreeBSD 15 CURRENT，编译使用 `drm-66-kmod`，支持情况同 Linux 6.6。
     # sysrc -f /etc/rc.conf kld_list+=radeonkms
     ```
 
-#### 故障排除与未竟事宜
+### 故障排除与未竟事宜
 
 >**注意**
 >
@@ -132,11 +132,7 @@ FreeBSD 15 CURRENT，编译使用 `drm-66-kmod`，支持情况同 Linux 6.6。
 
 ![](../.gitbook/assets/amd_error.png)
 
-- `/usr/ports/xxx no such xxx`
-  
-即找不到路径，请先获取 ports，请看前文。
-
-### 视频硬解（重要）
+## 视频硬解（重要）
 
 如果不配置此节，blender 等软件将无法运行！直接“段错误”。
 
@@ -151,9 +147,9 @@ FreeBSD 15 CURRENT，编译使用 `drm-66-kmod`，支持情况同 Linux 6.6。
 # cd /usr/ports/multimedia/libva-intel-media-driver/ && make install clean
 ```
 
-### 亮度调节
+## 亮度调节
 
-#### 通用
+### 通用
 
 - 对于一般计算机：
 
@@ -168,15 +164,15 @@ FreeBSD 15 CURRENT，编译使用 `drm-66-kmod`，支持情况同 Linux 6.6。
 # sysrc -f /boot/loader.conf  acpi_video="YES"
 ```
 
-#### 英特尔/AMD
+### 英特尔/AMD
 
 `backlight` 自 FreeBSD 13 引入。
 
 ```sh
-# backlight          #打印当前亮度
-# backlight decr 20  #降低 20% 亮度
-# backlight +        #默认调整亮度增加 10%
-# backlight -        #默认调整亮度减少 10%
+# backlight          # 打印当前亮度
+# backlight decr 20  # 降低 20% 亮度
+# backlight +        # 默认调整亮度增加 10%
+# backlight -        # 默认调整亮度减少 10%
 ```
 
 如果上述操作不起作用，请检查路径 `/dev/backlight` 下都有哪些设备。
@@ -188,12 +184,12 @@ FreeBSD 15 CURRENT，编译使用 `drm-66-kmod`，支持情况同 Linux 6.6。
 # backlight -f /dev/backlight/backlight0 - 10  
 ```
 
-#### 参考文献
+### 参考文献
 
 - [backlight -- configure backlight	hardware](https://man.freebsd.org/cgi/man.cgi?backlight)
 - 经过测试，此部分教程适用于 renoir 显卡：
 
-### 故障排除与未竟事宜
+## 故障排除与未竟事宜
 
 - 如果显卡使用驱动有问题请直接联系作者：[https://github.com/freebsd/drm-kmod/issues](https://github.com/freebsd/drm-kmod/issues)
 - 如果笔记本出现了唤醒时屏幕点不亮的问题，可以在 `/boot/loader.conf` 中添加 `hw.acpi.reset_video="1"` 以在唤醒时重置显示适配器。
@@ -202,17 +198,3 @@ FreeBSD 15 CURRENT，编译使用 `drm-66-kmod`，支持情况同 Linux 6.6。
 ## 参考文献
 
 - 显卡详细支持情况可以看 [wiki/Graphics](https://wiki.freebsd.org/Graphics)
-
-## 附录：小故事
-
-sddm gdm lightdm slim 在系统里乱战：
-
-sddm：我背后是 kde
-
-gdm：我背后是 gnome
-
-lightdm：我背后可以是任何一个
-
-slim：怎么办？好慌，潜水太久，管理员要踢我了。
-
-FreeBSD：合着你们在我地盘上养蛊呢？
