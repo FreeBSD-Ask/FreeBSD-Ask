@@ -45,8 +45,8 @@ FreeBSD 是真正自由（Liberty）的**操作系统**，在这波谲云诡的�
   - [ ] 艺术（如必要）
   - [ ] 哲学（如必要）
 - [X] 重写“FreeBSD 换源方式”
-- [ ] 重写“Python 与 VScode”
-- [ ] 重写“显卡驱动”
+- [ ] 重写“Python 与 VS Code”
+- [X] 重写“显卡驱动”
 - [X] 重写“fcitx 输入法”
 - [X] 更新“WildFly”
 - [X] 重写第 20 章
