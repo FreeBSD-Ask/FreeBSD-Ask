@@ -1,6 +1,6 @@
-# 目录
+# Table of contents
 
-* [FreeBSD 从入门到跑路（第三版：草稿）](README.md)
+* [FreeBSD 艺术科学哲学导论（第三版：草稿）](README.md)
 * [编辑日志](CHANGELOG.md)
 * [目录](mu-lu.md)
 * [致谢](zhi-xie.md)
