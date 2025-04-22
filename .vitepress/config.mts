@@ -137,8 +137,8 @@ export default defineConfig({
 	},
 	lang: 'zh-CN',
 	lastUpdated: true,
-	title: "FreeBSD 从入门到跑路",
-	description: "FreeBSD 从入门到跑路",
+	title: "FreeBSD 艺术科学哲学导论",
+	description: "FreeBSD 艺术科学哲学导论",
 	metaChunk: true,
 	markdown: {
 		image: {
