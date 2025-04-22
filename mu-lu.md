@@ -1,4 +1,4 @@
-# Table of contents
+# 目录
 
 * [FreeBSD 艺术科学哲学导论（第三版：草稿）](README.md)
 * [编辑日志](CHANGELOG.md)
