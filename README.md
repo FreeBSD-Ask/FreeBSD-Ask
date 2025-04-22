@@ -23,7 +23,7 @@ FreeBSD 是真正自由（Liberty）的**操作系统**，在这波谲云诡的�
 
 ### 历史
 
-《FreeBSD 从入门到跑路》诞生于 2021 年 3 月 14 日，由 FreeBSD 中文社区（CFC）[clean-master 清理大师](https://github.com/clean-master)发起，[ykla](https://github.com/ykla) 于翌日凌晨完成了教程的整理与发布。
+《FreeBSD 艺术科学哲学导论》诞生于 2021 年 3 月 14 日，由 FreeBSD 中文社区（CFC）[clean-master 清理大师](https://github.com/clean-master)发起，[ykla](https://github.com/ykla) 于翌日凌晨完成了教程的整理与发布。
 
 ### 意见反馈
 
