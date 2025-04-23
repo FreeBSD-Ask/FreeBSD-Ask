@@ -24,7 +24,7 @@ FreeBSD 是真正自由（Liberty）的**操作系统**，在这波谲云诡的�
 
 >**警告**
 >
->`https://t.me/freebsdba` 曾是本社区 Telegram 群组的邀请链接，已经解散。现此群组与本社区（CFC）无涉，不受本社区管理。
+>`https://t.me/freebsdba` 曾是本社区 Telegram 群组的邀请链接，原群组已经解散。现此群组与本社区（CFC）无涉，不受本社区管理。
 
 
 ### 历史
