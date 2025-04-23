@@ -33,47 +33,6 @@
 # echo 'hw.nvidiadrm.modeset="1"' >> /boot/loader.conf
 ```
 
-### 查看显卡驱动状态
-
-开机后在 kde 设置里查看显卡，默认用的是 intel 核显，终端里 `nvidia-smi` 仅有 `nvidia-xorg-service 8MB`。
-
-然后在终端用这个命令调用 N 卡：
-
-```sh
-$ nvrun 程序名 # 默认无 GUI 运行
-$ nvrun-vgl 程序名 # GUI 运行程序
-```
-
-`mesa-demos` 包含一些 opengl 示例，可用于测试驱动是否可用，非必要安装。
-
-安装包后，若 xorg 启动成功则无需额外配置；若失败，再用 `pciconf -lv` 查找显卡的 busid，例如
-
-```sh
-vgapci0@pci0:1:0:0:	class=0x030000 rev=0xa1 hdr=0x00 vendor=0x10de device=0x0df4 subvendor=0x1043 subdevice=0x15f2
-    vendor     = 'NVIDIA Corporation'
-    device     = 'GF108M [GeForce GT 540M]'
-    class      = display
-    subclass   = VGA
-```
-
-在 `/usr/local/etc/X11/xorg-nvidia-headless.conf` 找到 `Device` 一节，并对应修改 `BusID` ,上面为”pci0:1:0:0“：
-
-```sh
-Section "Device"
-    Identifier     "Device0"
-    Driver         "nvidia"
-    BusID          "PCI:1:0:0"
-EndSection
-```
-
-检验是否成功启用独显，可以用 mesa-demos 中的程序测试，运行 `bounce`，用 `nvidia-smi -l 1` 观察 (每隔一秒刷新一次)。在未使用 nvidia 驱动时会使用 7M 显存，在启用程序时显存并没有变化。
-
-
-![](../.gitbook/assets/418810292836709.png)
-
- 运行 `nvrun-vgl bounce` 用 `nvidia-smi -l 1` 观察使用 nvidia 驱动时使用了 13M 显存。
-
-![](../.gitbook/assets/380531501625801.png)
 
 ### 开启 vlc 硬解
 
