@@ -4,19 +4,6 @@ Mate 由 GNOME 2 复刻发展而来。
 
 你也许不认识 mate，即巴拉圭冬青（Ilex paraguariensis），但是你可能听说“马黛茶”。许多南美球员（如梅西）非常热衷于这种植物制成的茶饮。
 
----
-
->**注意**
->
-> 本文适用于 shell 为 bash/sh/zsh 的用户。
->
-> 首先看看现在自己的 shell 是不是 `sh`（FreeBSD 默认 shell）、`bash` 或 `zsh`：
->
->```sh
-># echo $0
->```
-
-
 ## 安装
 
 - 使用 pkg 安装：
