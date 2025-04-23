@@ -1,5 +1,7 @@
 # 第 4.5 节 Xfce
 
+Xfce 旨在开发一款轻量级但功能齐全的桌面。Xfce 的 Logo 是只[老鼠](https://docs.xfce.org/faq#what_does_it_mean)，曾有人反馈 bug 称因 Xfce 屏幕壁纸是只老鼠导致自己的电脑屏幕被猫咬坏了（[\[joke\] The default desktop startup screen causes damage to monitor!](https://bugzilla.xfce.org/show_bug.cgi?id=12117)）。
+
 ## 安装 xfce4
 
 - 通过 pkg 安装
