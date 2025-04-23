@@ -32,7 +32,7 @@ Xfce 旨在开发一款轻量级但功能齐全的桌面。Xfce 的 Logo 是只[
 | `lightdm`                     | 轻量级显示管理器 LightDM |
 | `lightdm-gtk-greeter`         | LightDM 的 GTK+ 登录界面插件|
 | `xfce`                        | Xfce 桌面环境 |
-| `wqy-fonts`                   | 文泉驿中文字体
+| `wqy-fonts`                   | 文泉驿中文字体|
 | `xdg-user-dirs`               | 管理用户主目录 |
 | `xfce4-goodies`               | XFCE 的附加组件和插件集合 |
 | `lightdm-gtk-greeter-settings`| 配置 LightDM GTK+ 登录界面的图形工具，缺少将无法启动 |
