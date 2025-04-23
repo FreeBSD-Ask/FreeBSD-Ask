@@ -344,4 +344,4 @@
 
 - 2021.3.14-2024.7.31：《FreeBSD 从入门到跑路》初版
 - 2021.12.19：《FreeBSD 从入门到跑路》项目重建
-- 《FreeBSD 从入门到跑路》诞生于 2021 年 3 月 14 日（依据 [clean-master/freebsdcn](https://github.com/clean-master/freebsdcn/graphs/contributors) 项目的创建时间，其同天产生了此书原型），由 FreeBSD 中文社区（CFC）[clean-master 清理大师](https://github.com/clean-master)发起，ykla 在翌日夜间（2021 年 3 月 15 日）完成了教程的初步整理与发布。其原型最早可追溯至 2020 年 12 月 31 日 ykla 发布的同名帖子。
+- 《FreeBSD 从入门到跑路》肇始于 2021 年 3 月 14 日（依据 [clean-master/freebsdcn](https://github.com/clean-master/freebsdcn/graphs/contributors) 项目的创建时间，其同天产生了此书原型），由 FreeBSD 中文社区（CFC）[clean-master 清理大师](https://github.com/clean-master)发起，ykla 在翌日夜间（2021 年 3 月 15 日）完成了教程的初步整理与发布。其原型最早可追溯至 2020 年 12 月 31 日 ykla 发布的同名帖子。

@@ -24,12 +24,12 @@ FreeBSD 是真正自由（Liberty）的**操作系统**，在这波谲云诡的�
 
 >**警告**
 >
->Telegram 群组 `https://t.me/freebsdba` 目前与本社区（CFC）无关，不受本社区管理。
+>`https://t.me/freebsdba` 曾是本社区 Telegram 群组的邀请链接，已经解散。现此群组与本社区（CFC）无涉，不受本社区管理。
 
 
 ### 历史
 
-《FreeBSD 艺术科学哲学导论》诞生于 2021 年 3 月 14 日，由 FreeBSD 中文社区（CFC）[clean-master 清理大师](https://github.com/clean-master)发起，[ykla](https://github.com/ykla) 于翌日凌晨完成了教程的整理与发布。其原型最早可追溯至 2020 年 12 月 31 日 ykla 发布的同名帖子。
+《FreeBSD 艺术科学哲学导论》肇始于 2021 年 3 月 14 日，由 FreeBSD 中文社区（CFC）[clean-master 清理大师](https://github.com/clean-master)发起，[ykla](https://github.com/ykla) 于翌日凌晨完成了教程的整理与发布。其原型最早可追溯至 2020 年 12 月 31 日 ykla 发布的同名帖子。
 
 ### 意见反馈
 
