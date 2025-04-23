@@ -20,6 +20,12 @@ FreeBSD 是真正自由（Liberty）的**操作系统**，在这波谲云诡的�
 - 微信群：因微信封闭性，须先加 QQ 群再联系 QQ 群主
 
 - Discord：<https://discord.gg/j7VhWrhp3e>（需要代理。可通过网页使用，无需安装软件）
+- Telegram 群组：[https://t.me/oh_my_BSD](https://t.me/oh_my_BSD)（需要代理）
+
+>**警告**
+>
+>Telegram 群组 `https://t.me/freebsdba` 目前与本社区（CFC）无关，不受本社区管理。
+
 
 ### 历史
 
