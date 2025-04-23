@@ -1,5 +1,7 @@
 # 第 4.16 节 Window Maker
 
+Window Maker 是一款窗口管理器。设计目标旨在重现 NeXTSTEP（macOS 基于此）用户界面与用户体验。
+
 ## 安装
 
 - 使用 pkg 安装：
