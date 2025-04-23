@@ -1,5 +1,7 @@
 # 第 4.18 节 KDE6
 
+KDE 旨在开发一套现代桌面系统，如果你觉得 KDE 界面很像 Windows，那么从时间线上看，应该说是“Windows 很像 KDE”。
+
 >**技巧**
 >
 >视频教程见 [003-FreeBSD14.2 安装 KDE6](https://www.bilibili.com/video/BV12zAYeKEej)
