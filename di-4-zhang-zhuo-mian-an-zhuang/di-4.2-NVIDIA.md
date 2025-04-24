@@ -11,22 +11,21 @@
 
 ## 笔记本核显 + Nvidia 独显（此节仍存在问题！需要你 PR 帮助改进或报告测试情况！）
 
-现在的问题是不知道笔记本（无显卡直通）怎么调用 N 卡？
 
-- 550 驱动驱动支持的显卡参考 [FreeBSD Display Driver – X64](https://www.nvidia.cn/Download/driverResults.aspx/220794/cn/)
-
-安装：
+使用 pkg 安装：
 
 ```sh
 # pkg install nvidia-drm-kmod
 ```
 
-或者
+或者使用 Ports 安装；
 
 ```sh
 # cd /usr/ports/graphics/nvidia-drm-kmod/ 
 # make install clean
 ```
+
+---
 
 配置：
 
@@ -35,7 +34,7 @@
 ```
 
 
-### 开启 vlc 硬解
+### 使用 VLC 硬解
 
 安装：
 
@@ -56,8 +55,7 @@ pkg install libva-vdpau-driver libvdpau libvdpau-va-gl
 ![](../.gitbook/assets/121233788899956.png)
 
 
-## N 卡独显直连/台式机（仍存在问题！不要用）
-
+## N 卡独显直连/台式机
 
 ### 安装驱动
 
@@ -77,15 +75,12 @@ pkg install libva-vdpau-driver libvdpau libvdpau-va-gl
 
 ```sh
 # echo 'hw.nvidiadrm.modeset="1"' >> /boot/loader.conf
-# reboot #重启
 ```
 
 
 ### 查看驱动状态
 
-这时候应该已经可以驱动显卡了。
-
-查看驱动信息：
+重启后，应该可以驱动显卡了。要查看驱动信息：
 
 ```sh
 $ nvidia-smi
