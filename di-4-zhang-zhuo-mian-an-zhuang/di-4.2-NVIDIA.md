@@ -73,7 +73,7 @@ $ nvidia-smi -L -1
 
 - 查看 KDE 系统参数：
 
-![](../.gitbook/assets/nvi1.png)
+![](../.gitbook/assets/nvi1.jpg)
 
 - 打开一部 1.5G 左右的电影，可以看到显存明显上升（我是从 3M 上升到了数百兆）
 
