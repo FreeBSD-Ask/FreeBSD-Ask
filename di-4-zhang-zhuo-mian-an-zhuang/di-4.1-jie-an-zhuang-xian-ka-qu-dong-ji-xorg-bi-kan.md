@@ -130,14 +130,14 @@ FreeBSD 15 CURRENT，编译使用 `drm-66-kmod`，支持情况同 Linux 6.6。
 如果不配置此节，blender 等软件将无法运行！直接“段错误”。
 
 ```sh
-# pkg install xf86-video-intel libva-intel-media-driver
+# pkg install  libva-intel-media-driver
 ```
 
 或者
 
 ```sh
-# cd /usr/ports/x11-drivers/xf86-video-intel/ && make install clean
-# cd /usr/ports/multimedia/libva-intel-media-driver/ && make install clean
+# cd /usr/ports/multimedia/libva-intel-media-driver/ 
+# make install clean
 ```
 
 ## 亮度调节
