@@ -45,17 +45,17 @@
 >
 >不要试图安装和使用 Port `x11/nvidia-xconfig`。没有用且会卡死。
 
-然后重新启动就可以发现正常使用 NVIDIA 驱动了。
 
-## 使用硬解
 
-- 使用 pkg 安装 VLC：
+## 安装解码器
+
+- 使用 pkg 安装：
 
 ```sh
 pkg install libva-vdpau-driver libvdpau libvdpau-va-gl
 ```
 
-- 或者使用 Ports 安装
+- 或者使用 Ports 安装：
 
 ```sh
 # cd /usr/ports/multimedia/libva-vdpau-driver/ && make install clean
@@ -63,6 +63,7 @@ pkg install libva-vdpau-driver libvdpau libvdpau-va-gl
 # cd /usr/ports/multimedia/libvdpau-va-gl/ && make install clean
 ```
 
+然后重新启动就可正常使用 NVIDIA 驱动了。
 
 ## 查看驱动状态
 
@@ -79,7 +80,7 @@ $ nvidia-smi -L -1
 ![](../.gitbook/assets/nvi2.png)
 
 
-- 用 mpv 打开一部 1.5G 左右的电影，可以看到显存明显上升（我是从 3M 上升到了数百兆），smplayer 也可以用。
+- 用 MPV 打开一部电影，可以看到显存使用量明显上升（我是从 3M 上升到了数百兆），也可以用 SMPlayer 观看。
 
 ![](../.gitbook/assets/nvi1.jpg)
 
