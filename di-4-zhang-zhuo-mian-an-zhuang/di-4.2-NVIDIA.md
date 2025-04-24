@@ -47,7 +47,7 @@
 
 然后重新启动就可以发现正常使用 NVIDIA 驱动了。
 
-## 使用 VLC 硬解
+## 使用硬解
 
 - 使用 pkg 安装 VLC：
 
@@ -62,12 +62,6 @@ pkg install libva-vdpau-driver libvdpau libvdpau-va-gl
 # cd /usr/ports/multimedia/libvdpau/ && make install clean
 # cd /usr/ports/multimedia/libvdpau-va-gl/ && make install clean
 ```
-
----
-
-工具->偏好设置->输入/编解码器->硬件加速解码：选择 VDPAU  视频解码器
-
-![](../.gitbook/assets/121233788899956.png)
 
 
 ## 查看驱动状态
@@ -85,7 +79,7 @@ $ nvidia-smi -L -1
 ![](../.gitbook/assets/nvi2.png)
 
 
-- 打开一部 1.5G 左右的电影，可以看到显存明显上升（我是从 3M 上升到了数百兆）
+- 用 mpv 打开一部 1.5G 左右的电影，可以看到显存明显上升（我是从 3M 上升到了数百兆），smplayer 也可以用。
 
 ![](../.gitbook/assets/nvi1.jpg)
 
