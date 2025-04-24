@@ -31,7 +31,6 @@
 配置：
 
 ```sh
-# sysrc kld_list+="nvidia-drm.ko"
 # echo 'hw.nvidiadrm.modeset="1"' >> /boot/loader.conf
 ```
 
@@ -56,12 +55,6 @@ pkg install libva-vdpau-driver libvdpau libvdpau-va-gl
 
 ![](../.gitbook/assets/121233788899956.png)
 
-用 `nvrun-vgl vlc` 启动 vlc，并播放视频
-
-
-![](../.gitbook/assets/59022617586598.png)
-
-显存使用上升，标志着正在使用硬解。
 
 ## N 卡独显直连/台式机（仍存在问题！不要用）
 
@@ -74,16 +67,7 @@ pkg install libva-vdpau-driver libvdpau libvdpau-va-gl
 # pkg install nvidia-drm-kmod nvidia-settings nvidia-xconfig
 ```
 
->**技巧**
->
->`nvidia-drm-kmod` 目前依赖安装的 `nvidia-driver` 默认为 550。
-
->**注意**
->
->如果 pkg 找不到 `graphics/nvidia-drm-kmod` 就编译安装，该包提供了 PRIME 等支持。
-
-
-或者：
+或者用 Ports 安装：
 
 ```sh
 # cd /usr/ports/graphics/nvidia-drm-kmod/ && make install clean
@@ -92,7 +76,6 @@ pkg install libva-vdpau-driver libvdpau libvdpau-va-gl
 ```
 
 ```sh
-# sysrc kld_list+="nvidia-drm.ko" #配置驱动
 # echo 'hw.nvidiadrm.modeset="1"' >> /boot/loader.conf
 # reboot #重启
 ```
@@ -115,27 +98,4 @@ $ nvidia-smi
 # cp /root/xorg.conf.new /etc/X11/xorg.conf
 ```
 
-然后重新启动就可以发现正常使用 nvidia 驱动了
-
->**技巧**
->
->在默认情况下，通过 pkg 安装的 nvidia-driver 是包含 Linux 兼容层支持的，如果要使用 Linux 兼容层，需要执行以下命令；如果不需要，则无需执行：
->
->```sh
-># sysrc linux_enable="YES"
->```
-
-当然，如果使用官方的 pkg 软件包，安装好驱动重启后：
-
-```sh
-$ kldstat
-```
-
-会发现系统自动加载了 `linux.ko` 模块。如果觉得太臃肿，不需要 Linux 兼容层，可以自己通过 ports 编译 `nvidia-driver`，去掉 `linux compatibility support`。
-
-
-
-
->**警告**
->
->除 N 卡外，应该尽量避免试图手动生成 `xorg.conf` 这个文件。你打不开桌面很大概率不是因为这个文件的配置有问题！你应该去检查显卡驱动或者桌面本身的问题。Xorg 是几乎不会出问题的！
+然后重新启动就可以发现正常使用 nvidia 驱动了。
