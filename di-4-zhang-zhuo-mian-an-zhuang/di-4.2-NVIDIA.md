@@ -29,12 +29,21 @@
 # echo 'hw.nvidiadrm.modeset="1"' >> /boot/loader.conf
 # sysrc -f /etc/rc.conf kld_list+=nvidia-modeset
 ```
+
+>**警告**
+>
+>不要试图加载 `nvidia-drm.ko`。没有用且会卡死。
+
 - 生成 X11 配置文件。注意，若正常显示无需这步及下步！
 
 ```sh
 # Xorg -configure 
 # cp /root/xorg.conf.new /etc/X11/xorg.conf
 ```
+
+>**警告**
+>
+>不要试图安装和使用 Port `x11/nvidia-xconfig`。没有用且会卡死。
 
 然后重新启动就可以发现正常使用 NVIDIA 驱动了。
 
