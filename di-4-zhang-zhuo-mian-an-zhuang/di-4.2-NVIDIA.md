@@ -31,6 +31,7 @@
 
 ```sh
 # echo 'hw.nvidiadrm.modeset="1"' >> /boot/loader.conf
+# sysrc -f /etc/rc.conf kld_list+=nvidia-modeset
 ```
 
 
@@ -75,10 +76,11 @@ pkg install libva-vdpau-driver libvdpau libvdpau-va-gl
 
 ```sh
 # echo 'hw.nvidiadrm.modeset="1"' >> /boot/loader.conf
+# sysrc -f /etc/rc.conf kld_list+=nvidia-modeset
 ```
 
 
-### 查看驱动状态
+## 查看驱动状态
 
 重启后，应该可以驱动显卡了。要查看驱动信息：
 
