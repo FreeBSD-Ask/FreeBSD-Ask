@@ -11,6 +11,8 @@
 
 ## 笔记本核显 + Nvidia 独显（此节仍存在问题！需要你 PR 帮助改进或报告测试情况！）
 
+现在的问题是不知道笔记本（无显卡直通）怎么调用 N 卡？
+
 - 550 驱动驱动支持的显卡参考 [FreeBSD Display Driver – X64](https://www.nvidia.cn/Download/driverResults.aspx/220794/cn/)
 
 安装：
