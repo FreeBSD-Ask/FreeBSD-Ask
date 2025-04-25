@@ -166,5 +166,5 @@ Listen IP:631
 
 ![](../.gitbook/assets/cup9.png)
 
-惠普 Hp 打印机使用安装 Port `print/hplip` 即可。
+惠普 Hp 打印机安装 Port `print/hplip` 即可。
 
