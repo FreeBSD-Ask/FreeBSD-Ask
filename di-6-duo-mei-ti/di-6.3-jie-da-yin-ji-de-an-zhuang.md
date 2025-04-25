@@ -2,6 +2,10 @@
 
 CUPS 全称 Common Unix Printing System（通用 Unix 打印系统），支持各种打印协议与打印机设备，并且能将打印机以 IPP 或 SMB 协议共享到网络上。
 
+打印机通过 USB 链接到打印服务器上（即 FreeBSD）。打印服务器将打印机共享到内网里，供内网里的其他电脑使用。内网里面的其他电脑发送广播包，可自动地查询内网里有哪些打印机。无需任何额外操作，需要打印的设备一般可自动发现该打印服务器，并自动将其加入打印机列表，在打印文件的时候即可选择。
+
+本文于 Android、苹果、Debian 测试通过，均可正常发现这台打印服务器
+
 
 ## 安装 CUPS（通用 Unix 打印系统）
 
@@ -31,7 +35,7 @@ CUPS 全称 Common Unix Printing System（通用 Unix 打印系统），支持�
 | `avahi-app`    | Avahi 守护进程，用于内网中的打印机自动发现 |
 | `cups`         | 用于提供 CUPS 服务                        |
 | `cups-filters` | 用于支持免驱动打印机（即 IPP Everywhere 协议） |
-|`dbus`|avahi 需要|
+|`dbus`|Avahi 需要|
 
 需要我继续补充其他相关组件吗？
 
@@ -53,7 +57,7 @@ CUPS 全称 Common Unix Printing System（通用 Unix 打印系统），支持�
 
 启动服务后，此时，其他设备应该能够自动发现内网中的共享打印机了。尝试打印测试页，测试能否正常打印。
 
-## 局域网访问打印机
+## 向局域网共享打印服务
 
 若不设置该允许局域网访问，则除了 `localhost` 外的机器无法使用。
 
