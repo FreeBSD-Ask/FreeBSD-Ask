@@ -12,7 +12,7 @@ CUPS 全称 Common Unix Printing System（通用 Unix 打印系统），支持�
 - 使用 pkg 安装：
 
 ```sh
-# pkg install cups cups-filters avahi-app dbus
+# pkg install cups cups-filters
 ```
 
 - 或者使用 Ports 安装：
@@ -20,24 +20,22 @@ CUPS 全称 Common Unix Printing System（通用 Unix 打印系统），支持�
 ```sh
 # cd /usr/ports/print/cups/ && make install clean
 # cd /usr/ports/print/cups-filters/ && make install clean
-# cd /usr/ports/net/avahi-app/ && make install clean
-# cd /usr/ports/devel/dbus/ && make install clean
 ```
 
 >**技巧**
 >
->若使用 KDE，请在 Ports 选项界面中选中 `x11`，可在 KDE 桌面系统中生成添加和配置打印机的应用。
+>若使用桌面环境，请在 Ports 选项界面中选中 `x11`，可在系统中生成添加和配置打印机的应用图标。
 
 解释：
 
-| 软件包         | 作用描述                                 |
+| 软件包         | 作用说明                                |
 |:----------------|:------------------------------------------|
-| `avahi-app`    | Avahi 守护进程，用于内网中的打印机自动发现 |
+
 | `cups`         | 用于提供 CUPS 服务                        |
 | `cups-filters` | 用于支持免驱动打印机（即 IPP Everywhere 协议） |
-|`dbus`|Avahi 需要|
+|`dbus`|Avahi 需要，作为 CUPS 依赖自动安装|
+| `avahi-app`    | 作为 CUPS 依赖自动安装，Avahi 守护进程，用于内网中的打印机自动发现|
 
-需要我继续补充其他相关组件吗？
 
 >**技巧**
 >
