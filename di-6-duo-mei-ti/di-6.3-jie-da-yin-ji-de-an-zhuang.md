@@ -1,13 +1,14 @@
 # 第 6.3 节 打印机
 
-CUPS 全称 Common Unix Printing System（通用 Unix 打印系统），支持各种打印协议与打印机设备，并且能将打印机以 IPP 或 SMB 协议共享到网络上。本文将 FreeBSD 变成了打印服务器。
+CUPS 全称 Common Unix Printing System（通用 Unix 打印系统），支持各种打印协议与打印机设备，并且能将打印机以 IPP 或 SMB 协议共享到网络上。
+
 
 ## 安装 CUPS（通用 Unix 打印系统）
 
 - 使用 pkg 安装：
 
 ```sh
-# pkg install cups cups-filters avahi-app
+# pkg install cups cups-filters avahi-app dbus
 ```
 
 - 或者使用 Ports 安装：
@@ -16,6 +17,7 @@ CUPS 全称 Common Unix Printing System（通用 Unix 打印系统），支持�
 # cd /usr/ports/print/cups/ && make install clean
 # cd /usr/ports/print/cups-filters/ && make install clean
 # cd /usr/ports/net/avahi-app/ && make install clean
+# cd /usr/ports/devel/dbus/ && make install clean
 ```
 
 >**技巧**
@@ -24,9 +26,18 @@ CUPS 全称 Common Unix Printing System（通用 Unix 打印系统），支持�
 
 解释：
 
-- `avahi-app`：Avahi 守护进程，用于内网中的打印机自动发现。
-- `cups`：用于提供 CUPS 服务
-- `cups-filters`：用于支持免驱动打印机（即 IPP Everywhere 协议）
+| 软件包         | 作用描述                                 |
+|:----------------|:------------------------------------------|
+| `avahi-app`    | Avahi 守护进程，用于内网中的打印机自动发现 |
+| `cups`         | 用于提供 CUPS 服务                        |
+| `cups-filters` | 用于支持免驱动打印机（即 IPP Everywhere 协议） |
+|`dbus`|avahi 需要|
+
+需要我继续补充其他相关组件吗？
+
+>**技巧**
+>
+>本文将 FreeBSD 变成了打印服务器。若 FreeBSD 只是想作为打印客户端、用 USB 连接打印机进行打印，而不需要共享，那么 avahi-app 和 dbus 就不是必需的
 
 >**注意**
 >
@@ -48,7 +59,9 @@ CUPS 全称 Common Unix Printing System（通用 Unix 打印系统），支持�
 
 ---
 
-- 编辑 `/usr/local/etc/cups/cupsd.conf`。在现有的
+编辑 `/usr/local/etc/cups/cupsd.conf`：
+
+- 在现有的
 
 ```ini
 Listen localhost:631
@@ -61,7 +74,7 @@ Listen /var/run/cups/cups.sock
 Listen IP:631
 ```
 
-再把
+- 再把
 
 ```ini
 # Restrict access to the server...
