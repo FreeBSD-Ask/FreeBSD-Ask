@@ -51,7 +51,8 @@ Ubuntu 吧前吧主 Simple 曾建议修改项目的章节文件名与许可协�
 - [liguangsheng](https://github.com/liguangsheng)
 - livrth  
 - [凌莞](https://clansty.com)  
-- [柳离枝](https://github.com/liulitchi)  
+- [柳离枝](https://github.com/liulitchi)
+- 刘昕宇  
 - matatabi-wang  
 - 墨子  
 - [mxdyeah / mxdabc](https://mxdyeah.top/)  
