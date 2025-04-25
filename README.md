@@ -1,4 +1,4 @@
-# FreeBSD 艺术科学哲学导论（第三版：草稿）
+# FreeBSD 从入门到追忆（第三版：草稿）
 
 ~~[为了拯救即将归档（Archived）的 FreeBSD······我们决定写一本书。](https://mzh.moegirl.org.cn/为了保护我们心爱的ooo……成为偶像！)~~
 
@@ -29,7 +29,7 @@ FreeBSD 是真正自由（Liberty）的**操作系统**，在这波谲云诡的�
 
 ### 历史
 
-《FreeBSD 艺术科学哲学导论》肇始于 2021 年 3 月 14 日，由 FreeBSD 中文社区（CFC）[clean-master 清理大师](https://github.com/clean-master)发起，[ykla](https://github.com/ykla) 于翌日凌晨完成了教程的整理与发布。其原型最早可追溯至 2020 年 12 月 31 日 ykla 发布的同名帖子。
+《FreeBSD 从入门到追忆》肇始于 2021 年 3 月 14 日，由 FreeBSD 中文社区（CFC）[clean-master 清理大师](https://github.com/clean-master)发起，[ykla](https://github.com/ykla) 于翌日凌晨完成了教程的整理与发布。其原型最早可追溯至 2020 年 12 月 31 日 ykla 发布的文章《FreeBSD 艺术科学哲学导论》。
 
 ### 意见反馈
 
