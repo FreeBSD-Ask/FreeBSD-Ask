@@ -162,7 +162,7 @@ Listen IP:631
 
 从内网的 Debian 机器打印测试页：
 
-![](../.gitbook/assets/cup12.png)
+![](../.gitbook/assets/cup12.jpg)
 
 ## 故障排除与未竟事项
 
