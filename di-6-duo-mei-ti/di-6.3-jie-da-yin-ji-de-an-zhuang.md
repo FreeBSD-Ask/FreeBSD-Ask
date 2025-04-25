@@ -130,7 +130,7 @@ Listen IP:631
 
 ![](../.gitbook/assets/cup4.png)
 
-在创建时，请务必勾选 `Shar This Printer`。
+在创建时，请务必勾选 `Share This Printer`。
 
 ![](../.gitbook/assets/cup5.png)
 
