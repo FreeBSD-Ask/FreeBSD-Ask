@@ -30,11 +30,10 @@ CUPS 全称 Common Unix Printing System（通用 Unix 打印系统），支持�
 
 | 软件包         | 作用说明                                |
 |:----------------|:------------------------------------------|
-
 | `cups`         | 用于提供 CUPS 服务                        |
 | `cups-filters` | 用于支持免驱动打印机（即 IPP Everywhere 协议） |
 |`dbus`|Avahi 需要，作为 CUPS 依赖自动安装|
-| `avahi-app`    | 作为 CUPS 依赖自动安装，Avahi 守护进程，用于内网中的打印机自动发现|
+ |`avahi-app`    | 作为 CUPS 依赖自动安装，Avahi 守护进程，用于内网中的打印机自动发现|
 
 
 >**技巧**
