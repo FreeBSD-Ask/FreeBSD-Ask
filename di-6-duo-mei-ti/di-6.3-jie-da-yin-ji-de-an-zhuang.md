@@ -118,7 +118,7 @@ Listen IP:631
 
 点击 `Administration-Add Printer`，根据提示创建打印机。
 
-中途会提示输入账号密码，以 `root` 或者 `wheel` 组内的用户登录就行了。
+中途会提示输入账号密码，使用 `root` 或者 `wheel` 组内的用户登录（输入他们在 FreeBSD 系统中的账户密码）即可。
 
 ![](../.gitbook/assets/cup2.png)
 
