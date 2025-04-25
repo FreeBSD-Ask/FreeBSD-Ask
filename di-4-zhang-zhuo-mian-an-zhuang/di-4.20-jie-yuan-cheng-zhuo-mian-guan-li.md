@@ -1,14 +1,14 @@
 # 第 4.20 节 远程桌面
 
-## VNC（被控端）
-
-### x11vnc（镜像屏幕）
+## x11vnc（FreeBSD 为被控端，镜像屏幕）
 
 x11vnc 会和远程软件 todesk 一样直接镜像屏幕，简言之，你的所有操作都会被同步到显示器上面，反过来在显示器上的操作，你在 VNC 上也可以看到。
 
 ---
 
-如果没有显示器则不能使用 x11vnc。安装 x11vnc：
+如果没有显示器则不能使用 x11vnc。
+
+### 安装 x11vnc
 
 - 使用 pkg 安装：
 
@@ -23,9 +23,7 @@ x11vnc 会和远程软件 todesk 一样直接镜像屏幕，简言之，你的�
 # make install clean
 ```
 
----
-
-- 创建密码：
+### 创建密码
 
 ```sh
 $ x11vnc -storepasswd
@@ -35,7 +33,7 @@ Write password to /root/.vnc/passwd?  [y]/n y #此处键入 y 回车
 Password written to: /root/.vnc/passwd
 ```
 
-- 启动服务器（KDE 6 SDDM）
+### 启动服务器（KDE 6 SDDM）
 
 ```sh
 $ x11vnc -display :0 -rfbauth ~/.vnc/passwd -auth $(find /var/run/sddm/ -type f)
@@ -60,16 +58,16 @@ $ x11vnc -display :0 -rfbauth ~/.vnc/passwd -auth /var/lib/gdm/:0.Xauth #或 /ru
 
 ![SDDM X11VNC](../.gitbook/assets/x11vnc1.png)
 
-#### 参考文献
+### 参考文献
 
 - [x11vnc -allow VNC connections to real X11 displays](https://man.freebsd.org/cgi/man.cgi?query=x11vnc&sektion=&manpath=freebsd-release-ports)
 - [X11vnc](https://wiki.archlinux.org/title/X11vnc)
   
-### TigerVNC
+## TigerVNC（FreeBSD 为被控端）
 
 启用 VNC 服务（目前 Ports 就只剩下这个 [TigerVNC](https://www.freshports.org/net/tigervnc-server/) 了）
 
-安装 TigerVNC Server：
+### 安装 TigerVNC Server
 
 ```sh
 # pkg install tigervnc-server
@@ -82,7 +80,7 @@ $ x11vnc -display :0 -rfbauth ~/.vnc/passwd -auth /var/lib/gdm/:0.Xauth #或 /ru
 # make install clean
 ```
 
-安装之后，还要做一些设置：
+### 做一些设置
 
 在终端执行命令 `vncpasswd`，设置访问密码。
 
@@ -181,13 +179,13 @@ $ ps
 
 上行命令表示放通端口 5900-5910，即 DISPLAY 0-10。
 
-#### 参考文献
+### 参考文献
 
 - [Xfce4 is not displayed correctly when I connect vncviewer (in Linux) to tightvnc-server (on FreeBSD)](https://forums.freebsd.org/threads/xfce4-is-not-displayed-correctly-when-i-connect-vncviewer-in-linux-to-tightvnc-server-on-freebsd.85709/)
 
-## XRDP（被控端）
+## XRDP（FreeBSD 为被控端）
 
-### 安装软件包（基于 kde6）
+### 安装 XRDP（基于 kde6）
 
 ```sh
 # pkg install xorg kde xrdp wqy-fonts xdg-user-dirs pulseaudio-module-xrdp
@@ -329,6 +327,14 @@ root     syslogd     1021 7   udp4   *:514                 *:*
 ![xrdp FreeBSD](../.gitbook/assets/xrdp4.png)
 
 ![xrdp FreeBSD](../.gitbook/assets/xrdp5.png)
+
+### 故障排除与未竟事宜
+
+- Windows 的远程桌面窗口若不在左上角或全屏显示，则会模糊
+
+请 **取消** 勾选“智能调整大小”。
+
+![](../.gitbook/assets/xrdp6.png)
 
 ## 使用 Android 通过 XRDP 远程访问 FreeBSD
 
@@ -538,9 +544,9 @@ Do you trust this certificate (yes/no)? # 输入 yes，按回车键
 - [使用 RDP 连接到 Azure VM 时排查身份验证错误](https://learn.microsoft.com/zh-cn/troubleshoot/azure/virtual-machines/windows/cannot-connect-rdp-azure-vm)，打开和关闭 NLA 的方法在此。经过测试关闭后 rdesktop 果然又连不上了。
 
 
-## anydesk
+## AnyDesk
 
-使用 anydesk 可进行远程访问，FreeBSD 上仅支持 x86 架构：
+使用 AnyDesk 可进行远程访问，FreeBSD 上仅支持 x86 架构：
 
 由于版权问题（私有软件未经许可默认禁止分发），必须用户使用 Ports 自行编译：
 
@@ -553,7 +559,7 @@ Do you trust this certificate (yes/no)? # 输入 yes，按回车键
 
 ![anydesk](../.gitbook/assets/anydesk1.png)
 
-查看安装后说明：
+查看 AnyDesk 安装后说明：
 
 ```sh
 root@ykla:/ # pkg info -D anydesk
@@ -591,7 +597,7 @@ You need a mounted /proc directory. Either mount it manually or add it to your /
 # mount -t procfs proc /proc # 临时用一下。持久化可以参照上面的说明做
 ```
 
-root 用户无法运行 anydesk。需要普通用户：
+root 用户无法运行 AnyDesk。需要普通用户：
 
 ```
 $ ykla@ykla:~ $ anydesk
@@ -607,23 +613,25 @@ $ ykla@ykla:~ $ anydesk
 
 注意，被连接方“接受”（Accept）了才能继续链接。
 
-### Windows 通过 anydesk 远程 FreeBSD
+### Windows 通过 AnyDesk 远程 FreeBSD
 
-![Windows 通过 anydesk 远程 FreeBSD](../.gitbook/assets/anydesk3.png)
+![Windows 通过 AnyDesk 远程 FreeBSD](../.gitbook/assets/anydesk3.png)
 
-### FreeBSD 通过 anydesk 远程 Windows
+### FreeBSD 通过 AnyDesk 远程 Windows
 
-![Windows 通过 anydesk 远程 FreeBSD](../.gitbook/assets/anydesk4.png)
+![Windows 通过 AnyDesk 远程 FreeBSD](../.gitbook/assets/anydesk4.png)
 
-#### 故障排除与未竟事宜
+### 故障排除与未竟事宜
 
-- FreeBSD 通过 anydesk 远程 Windows，似乎无法在 Windows 中移动鼠标
+- FreeBSD 通过 AnyDesk 远程 Windows，似乎无法在 Windows 中移动鼠标。
 
 待解决。
 
 ## RustDesk 中继服务器
 
-**这个是中继的 ID 服务器，本身不能被远程控制。**
+>**注意**
+>
+>这个是中继的 ID 服务器，本身不能被远程控制。
 
 换言之，你没法用 RustDesk 控制 FreeBSD。
 
