@@ -1,4 +1,4 @@
-# FreeBSD 艺术科学哲学导论（第三版：草稿）
+# FreeBSD 从入门到追忆（第三版：草稿）
 
 ~~[为了拯救即将归档（Archived）的 FreeBSD······我们决定写一本书。](https://mzh.moegirl.org.cn/为了保护我们心爱的ooo……成为偶像！)~~
 
