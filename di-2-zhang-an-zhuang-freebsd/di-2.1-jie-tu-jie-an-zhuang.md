@@ -851,7 +851,7 @@ Add another user? (yes/no) [no]: # 是否还要再添加一位用户
 >
 >- 你是普通家用电脑吗？
 > - 处理器是 intel 或 amd？
->- 是否关闭了 BIOS 里的安全启动（（Secure Boot）？
+>- 是否关闭了 BIOS 里的安全启动（Secure Boot）？
 >- 是否从 <https://freebsd.org> 下载的镜像？
 > - 是否下载了最新版本的 RELEASE 镜像？
 > - 你下载的镜像后缀名是不是 `img`？
