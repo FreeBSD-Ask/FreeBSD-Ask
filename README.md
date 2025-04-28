@@ -37,28 +37,6 @@ FreeBSD 是真正自由（Liberty）的**操作系统**，在这波谲云诡的�
 
 详见 [贡献指南与开放任务](https://freebsd.gitbook.io/cfc/she-qu-jian-she/renwu)
 
-### 2025 年第二季度 ToDo List
-
-- [X] 没有疑问的书籍不是好菜谱，在每节最后嵌入“故障排除与未竟事宜”
-- [X] DragonFlyBSD 安装图解
-- [X] 更新 NetBSD 安装图解
-- [ ] 解释全书所有命令和选项的含义
-  - [ ] 历史（如必要）
-  - [ ] 艺术（如必要）
-  - [ ] 哲学（如必要）
-- [X] 重写“FreeBSD 换源方式”
-- [X] 重写“显卡驱动”：现在的问题是不知道不支持显卡直通的笔记本如何驱动 N 卡
-- [X] 重写“Fcitx 输入法”
-- [X] 更新“WildFly”
-- [X] 重写第 20 章
-- [X] 格式化防火墙相关章节
-- [X] 格式化“输入法与环境变量”
-- [X] 格式化“Linux 兼容层与 Jail”
-- [ ] 撰写一篇主题为“UNIX 哲学”的文章
-- [X] 测评各种尚存的桌面版本 FreeBSD
-- [X] 增加命令行知识
-- [ ] 给出更多参考文献，不局限于计算机科学
-
 ## 导出本书的 PDF 文档
 
 可使用 [safreya](https://github.com/safreya) 编写的 [Python 脚本](https://github.com/FreeBSD-Ask/gitbook-pdf-export)来导出 PDF。
