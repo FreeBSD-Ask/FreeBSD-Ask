@@ -21,9 +21,13 @@
 
 ---
 
-然后在终端运行初始化命令 `ibus-setup`，将 98 五笔码表（`free-bsd-98wubi-tables-master/wubi86.dict.yaml`、`free-bsd-98wubi-tables-master/wubi86.schema.yaml`）复制到 `/usr/local/share/rime-date` 目录下。下载地址：[FreeBSD-98wubi-tables](https://github.com/FreeBSD-Ask/98-input/)
+然后在终端运行初始化命令 `ibus-setup` 添加 `rime` 输入法：
 
-修改 `/usr/local/share/rime-date` 目录下 `default.yaml` 文件：打开 `default.yaml` 找到 `schema_lis`，下面第一行添加 `- schema: wubi98` 保存退出重新加载 ibus 输入法即可。
+![](../.gitbook/assets/wubi3.png)
+
+再将 98 五笔码表（`free-bsd-98wubi-tables-master/wubi86.dict.yaml`、`free-bsd-98wubi-tables-master/wubi86.schema.yaml`）复制到 `/usr/local/share/rime-date` 目录下。下载地址：[FreeBSD-98wubi-tables](https://github.com/FreeBSD-Ask/98-input/)
+
+修改 `/usr/local/share/rime-date` 目录下 `default.yaml` 文件：打开 `default.yaml` 找到 `schema_lis`，下面第一行添加 `- schema: wubi98`（注意保持缩进）保存退出重新加载 ibus 输入法即可。
 
 
 
@@ -82,7 +86,7 @@ $ cd ~/.local/share/fcitx5/rime # 对应 fcitx5
 $ rime_deployer --add-schema wubi86
 ```
 
-当前已安装的输入法可以用 `ls /usr/local/share/rime-data` 查看，上面命令中 `"wubi86"`, 即对应其中的 `wubi86.schema.yaml` 文件。比如目录下有 `terra_pinyin.schema.yaml` 则可以添加地球拼音
+当前已安装的输入法可以用 `ls /usr/local/share/rime-data` 查看，上面命令中 `"wubi86"`，即对应其中的 `wubi86.schema.yaml` 文件。比如目录下有 `terra_pinyin.schema.yaml` 则可以添加地球拼音
 
 ```sh
 $ rime_deployer --add-schema terra_pinyin
@@ -91,7 +95,7 @@ $ rime_deployer --add-schema terra_pinyin
 这时配置目录下生成 `default.custom.yaml`，这是 rime 的主要配置文件，示例如下
 
 ```sh
-kamixp% cat default.custom.yaml
+% cat default.custom.yaml
 patch:
   schema_list:
     - {schema: wubi86}%
