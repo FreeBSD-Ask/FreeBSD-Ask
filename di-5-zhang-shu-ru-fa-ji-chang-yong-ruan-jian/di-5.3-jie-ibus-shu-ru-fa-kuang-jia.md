@@ -39,12 +39,11 @@ IBus 即“Intelligent Input Bus”（智能输入总线）。
 - zsh: `~/.zprofile` 写入 A 组配置
 - csh: `~/.cshrc` 写入 B 组配置
 
-注销后登录，直接点击 ibus 图标加入自己的输入法后，即可使用，不需配置，不须中文化设置（测试环境 sddm/xfce/freebsd 13.2/sh）。但是 ibus 提示应当在相应的 shell 文件 (具体文件另述）中加入以下内容
+注销后登录，直接点击 ibus 图标加入自己的输入法后，即可使用，无需包括中文化设置（测试环境 sddm/xfce/freebsd 13.2/sh）在内的任何配置。但 IBus 提示应当在相应的 shell 文件中加入以下内容：
 
-A 组：
+- A 组（在 sh、bash、zsh 中）：
 
 ```sh
-#A 组 在 sh、bash、zsh 中
 export XIM=ibus
 export GTK_IM_MODULE=ibus
 export QT_IM_MODULE=ibus
@@ -53,10 +52,9 @@ export XIM_PROGRAM="ibus-daemon"
 export XIM_ARGS="--daemonize --xim"
 ```
 
-或 B 组：
+- B 组（在 csh 中）：
 
 ```sh
-#B 组 在 csh 中
 setenv XIM ibus
 setenv GTK_IM_MODULE ibus
 setenv QT_IM_MODULE ibus
@@ -65,9 +63,15 @@ setenv XIM_PROGRAM ibus-daemon
 setenv XIM_ARGS "--daemonize --xim"
 ```
 
+## IBus 设置
+
+```sh
+$ ibus-setup
+```
+
 --- 
 
-IBus 对编码设置有要求，但对区域设置并无要求。
+IBus 对编码（须 `UTF-8`）有要求，但对区域（如 `C.UTF-8` 还是 `zh_CN.UTF-8`）并无要求。
 
 ![ibus](../.gitbook/assets/ibus-fr-ch-ok.png)
 
