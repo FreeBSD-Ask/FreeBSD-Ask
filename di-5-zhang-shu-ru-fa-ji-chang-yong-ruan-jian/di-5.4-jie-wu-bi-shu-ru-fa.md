@@ -51,6 +51,10 @@ Fcitx 5 配置从略。
 - 把 `98五笔/98/wbx.main.dict` 词库放到 `/usr/local/share/libime/` 下面。
 - 重启 `fcitx5`，在设置中起用 98 五笔即可。
 
+![](../.gitbook/assets/wubi1.png)
+
+![](../.gitbook/assets/wubi2.png)
+
 ---
 
 附录：王码 98 五笔生成 `.dict` 库方法，可用下面命令生成：
@@ -61,7 +65,7 @@ $ libime_tabledict 98wbx.txt 98wbx.main.dict
 
 ## 配置文件目录
 
-五笔输入法已经安装好，rime 的配置文件位置如下，先进入正确的配置目录：
+五笔输入法已经安装好，rime 的配置文件位置如下：
 
 ```sh
 $ cd ~/.config/ibus/rime # 对应 ibus
