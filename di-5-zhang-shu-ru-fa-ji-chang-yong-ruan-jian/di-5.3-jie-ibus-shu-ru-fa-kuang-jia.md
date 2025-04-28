@@ -26,11 +26,13 @@ IBus 即“Intelligent Input Bus”（智能输入总线）。
 - `chinese/ibus-rime` rime 输入法引擎（另述）
 - `chinese/ibus-table-chinese` 包含五笔、仓颉等多种输入法
 
-## 环境变量配置
+## 配置环境变量
 
 1. sddm lightdm gdm 都可以在 `~/.xprofile` 中写入 A 组配置
 2. lightdm gdm 可以在 `~/.profile` 中写入 A 组配置
 3. sddm 可以在用户登录 shell 配置文件中写入配置
+
+---
 
 - sh: `~/.profile` 写入 A 组配置
 - bash: `~/.bash_profile` 或 `~/.profile` 写入 A 组配置
@@ -63,21 +65,9 @@ setenv XIM_PROGRAM ibus-daemon
 setenv XIM_ARGS "--daemonize --xim"
 ```
 
-这里，建议按 ibus 的建议加入相应内容，以确保在更多的程序中使用时的兼容性。
+--- 
 
-ibus 设置：
-
-```sh
-$ ibus-setup
-```
-
-以前是要配置的，但现在是默认的，故可以不配置。
-
-这里我注意到 FreeBSD 13 中 `LC_*` 及 `LANG` 环境变量的默认值为 `"C.UTF-8"`，原来这些环境变量的默认值是 `"C"`。该变化从 FreeBSD 12.2 开始（[Switch C.UTF-8 as the default locales](https://reviews.freebsd.org/D26973)）。
-
-所以现在的情况下默认已指定字符编码为 `UTF-8`, 这可能是 ibus 不需要设置的原因。之前没注意到，或是因为不作汉化使用输入法的情况是很少见的，或是因为来自于 FreeBSD 12 之前的习惯做了环境变量设置而未意识到，或者是之前 ibus 对环境变量的要求比与现在有区别。
-
-这里以 lightdm/mate/ibus/rime 环境，`LANG`、`LANGUAGE`、`LC_ALL` 设置为 `"fr_Fr.UTF-8"`，维持字符编码为 `UTF-8`，仍可以正常输入中文，可见 ibus 对编码设置有要求，但对区域设置并无要求。
+IBus 对编码设置有要求，但对区域设置并无要求。
 
 ![ibus](../.gitbook/assets/ibus-fr-ch-ok.png)
 
