@@ -46,9 +46,14 @@ Fcitx 5 配置从略。
 
 首先下载所需文件：<https://github.com/FreeBSD-Ask/98-input>。
 
-把 `98wbx.conf` 文件复制到 `/usr/local/share/fcitx5/inputmethod/` 下面。把 `fcitx-98wubi.png` 和 `org.fcitx.Fcitx5.fcitx-98wubi.png` 图标复制到 `/usr/local/share/icons/hicolor/48x48/apps/` 下面 把 `98wbx.main.dict` 词库放到 `/usr/local/share/libime/` 下面 重启 `fcitx5`，在 `fcitx5-configtool` 起用 98 五笔即可。
+- 把 `98五笔/98wbx.conf` 文件复制到 `/usr/local/share/fcitx5/inputmethod/` 下面；
+- 把 `98五笔/fcitx-98wubi.png` 和 `org.fcitx.Fcitx5.fcitx-98wubi.png` 图标复制到 `/usr/local/share/icons/hicolor/48x48/apps/` 下面；
+- 把 `98五笔/98/wbx.main.dict` 词库放到 `/usr/local/share/libime/` 下面。
+- 重启 `fcitx5`，在 `fcitx5-configtool` 起用 98 五笔即可。
 
-王码 98 五笔生成 `.dict` 库方法，直接用下面命令生成：
+---
+
+附录：王码 98 五笔生成 `.dict` 库方法，可用下面命令生成：
 
 ```sh
 $ libime_tabledict 98wbx.txt 98wbx.main.dict
