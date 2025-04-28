@@ -4,32 +4,22 @@
 
 FreeBSD 是真正自由（Liberty）的**操作系统**，在这波谲云诡的世界中仍然坚守 BSD UNIX 哲学——恪守古老的法则，追寻真正的自由。
 
-**内容提要**：本书旨在深入剖析 FreeBSD 操作系统，敉平从初学者到研究者之间的鸿沟。
-
 ## 关于
 
-官方部署站点：
+### 内容提要
 
-- <https://book.bsdcn.org>，GitBook，含其他相关页面
-- <https://docs.bsdcn.org>，VitePress，仅本书
+本书旨在深入剖析 FreeBSD 操作系统，敉平从初学者到研究者之间的鸿沟。
 
 ### 加入 FreeBSD 中文社区（CFC）
 
 - **首要**联系方式为 **QQ 群**：[787969044](https://qm.qq.com/q/cX5mpJ36gg)（点击加群）
-
 - 微信群：因微信封闭性，须先加 QQ 群再联系 QQ 群主
-
 - Discord：<https://discord.gg/j7VhWrhp3e>（需要代理。可通过网页使用，无需安装软件）
 - Telegram 群组：[https://t.me/oh_my_BSD](https://t.me/oh_my_BSD)（需要代理）
 
->**警告**
->
->`https://t.me/freebsdba` 曾是本社区 Telegram 群组的邀请链接，原群组已经解散。现此群组与本社区（CFC）无涉，不受本社区管理。
-
-
 ### 历史
 
-《FreeBSD 从入门到追忆》肇始于 2021 年 3 月 14 日，由 FreeBSD 中文社区（CFC）[clean-master 清理大师](https://github.com/clean-master)发起，[ykla](https://github.com/ykla) 于翌日凌晨完成了教程的整理与发布。其原型最早可追溯至 2020 年 12 月 31 日 ykla 发布的文章《FreeBSD 艺术科学哲学导论》。
+《FreeBSD 从入门到追忆》肇始于 2021 年 3 月 14 日，其原型最早可追溯至 2020 年 12 月 31 日 ykla 发布的文章《FreeBSD 艺术科学哲学导论》。
 
 ### 意见反馈
 
@@ -52,7 +42,7 @@ FreeBSD 是真正自由（Liberty）的**操作系统**，在这波谲云诡的�
   - [ ] 哲学（如必要）
 - [X] 重写“FreeBSD 换源方式”
 - [X] 重写“显卡驱动”：现在的问题是不知道不支持显卡直通的笔记本如何驱动 N 卡
-- [X] 重写“fcitx 输入法”
+- [X] 重写“Fcitx 输入法”
 - [X] 更新“WildFly”
 - [X] 重写第 20 章
 - [X] 格式化防火墙相关章节
@@ -63,7 +53,7 @@ FreeBSD 是真正自由（Liberty）的**操作系统**，在这波谲云诡的�
 - [X] 增加命令行知识
 - [ ] 给出更多参考文献，不局限于计算机科学
 
-## PDF 文档导出
+## 导出本书的 PDF 文档
 
 可使用 [safreya](https://github.com/safreya) 编写的 [Python 脚本](https://github.com/FreeBSD-Ask/gitbook-pdf-export)来导出 PDF。
 
@@ -86,5 +76,3 @@ FreeBSD 是真正自由（Liberty）的**操作系统**，在这波谲云诡的�
 本项目采用《CC BY 4.0 署名 4.0 协议国际版》，详见[署名 4.0 协议国际版法律文本](https://creativecommons.org/licenses/by/4.0/legalcode.zh-hans)。
 
 ![CC BY](.gitbook/assets/by.png)
-
-
