@@ -27,10 +27,10 @@
 
 首先安装并配置好 Fcitx 5。
 
-### 安装 Rime 输入法
+### 安装 Fcitx 5 及 Rime 输入法
 
 ```sh
-# pkg install zh-rime-wubi
+# pkg install fcitx5 fcitx5-qt5 fcitx5-qt6 fcitx5-gtk2 fcitx5-gtk3 fcitx5-gtk4 fcitx5-configtool-qt5 fcitx5-configtool-qt6 zh-rime-wubi
 ```
 
 或者：
@@ -39,6 +39,8 @@
 # cd /usr/ports/chinese/rime-wubi/
 # make install clean
 ```
+
+Fcitx 5 配置从略。
 
 ### 下载配置所需文件
 
