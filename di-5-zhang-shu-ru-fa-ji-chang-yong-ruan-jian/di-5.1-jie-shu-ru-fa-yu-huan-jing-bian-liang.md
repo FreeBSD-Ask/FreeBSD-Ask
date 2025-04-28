@@ -78,10 +78,10 @@ LC_NUMERIC="C.UTF-8"
 LC_MONETARY="C.UTF-8"
 LC_MESSAGES=zh_CN.UTF-8
 LC_ALL=
-jk@freebsd:~ $ date
+$ date
 Fri Apr 21 21:14:43 UTC 2023
-jk@freebsd:~ $ export LC_TIME=zh_CN.UTF-8
-jk@freebsd:~ $ date
+$ export LC_TIME=zh_CN.UTF-8
+$ date
 2023年 4月21日 星期五 21时15分07秒 UTC
 ```
 
@@ -94,4 +94,4 @@ jk@freebsd:~ $ date
 
 >**注意**
 >
->维持 `date` 命令的英文输出对一些脚本有时很重要（这只是其中一种情况，还有其它特殊的需求等）。这样的情况亦存在于其它同样由 `LC_*` 变量控制的信息中。
+>维持 `date` 命令的英文输出对一些脚本有时很重要（这仅是其中一种情况，还有其它特殊的需求等）。这样的情况亦同样存在于其它由 `LC_*` 变量控制的信息中。
