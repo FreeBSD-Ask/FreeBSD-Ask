@@ -1,5 +1,6 @@
 # 第 8.2 节 用户与组
 
+
 ## `adduser` 创建用户
 
 - 创建一个普通用户（用户名为 `ykla`），并将其添加到 `video` 分组：
@@ -22,6 +23,7 @@ Login class [default]: # 登录分类，可留空
 Shell (sh csh tcsh git-shell bash rbash nologin) [sh]: sh  # 除非手动设置默认 shell，否则 shell 为 sh
 Home directory [/home/test]: #指定家目录
 Home directory permissions (Leave empty for default): # 指定家目录权限
+Enable ZFS encryption? (yes/no) [no]: # 是否使用 zfs 加密
 Use password-based authentication? [yes]:  # 是否使用密码
 Use an empty password? (yes/no) [no]:   # 是否空密码
 Use a random password? (yes/no) [no]:   # 是否随机密码
@@ -32,6 +34,7 @@ Username   : test
 Password   : *****
 Full Name  :
 Uid        : 1002
+ZFS dataset : zroot/home/test
 Class      :
 Groups     : test video
 Home       : /home/test
@@ -39,16 +42,53 @@ Home Mode  :
 Shell      : /bin/sh
 Locked     : no
 OK? (yes/no): yes # 检查有错误否
+adduser: INFO: Successfully created ZFS dataset (zroot/home/test).
 adduser: INFO: Successfully added (test) to the user database.
 Add another user? (yes/no): no # 还需要创建另一个账号吗？
 Goodbye!
 ```
 
+
+## `rmuser` 删除用户与 `passwd` 密码修改
+
+- ，用于删除用户。与 `adduser` 命令一样，也是交互式的。该命令带参数 `-y`，且能列出用户列表，
+
+示例：
+
+```sh
+# rmuser -y test1 test2 # 同时删除用户 test1 和 test2
+Removing user (test1): mailspool home passwd.
+Removing user (test2): home passwd.
+
+```
+
+参数 `-y` 用于跳过确认步骤。
+
+- `chpass` 命令，以 `vi` 编辑器方式打开并修改指定用户信息，如不指定用户则默认为当前用户。
+
+>**技巧**
+>
+>`export EDITOR=/usr/bin/ee` 可将编辑器换成更简单的 `ee`。
+
+常用参数：`-s`，用于登录环境
+
+示例：
+
+```sh
+# chpass -s sh test1 # 修改用户 test1 的登录环境为 /bin/sh
+chpass: user information updated
+# export EDITOR=/usr/bin/ee 
+# chpass # 以 ee 方式打开当前用户信息进行修改
+# passwd # 修改用户密码，如不指定用户则默认为当前用户。
+```
+
+root 用户可修改所有用户的密码。
+
 ## `pw` 命令
 
 在 FreeBSD 中，可以用 `pw` 命令管理用户和组：
 
-- 创建 `admin` 分组，并添加 `ykla` 和 `root` 两位用户：
+- 创建 `admin` 分组，并将用户 `ykla` 同时添加到 `admin` 和 `wheel` 分组：
 
 ```sh
 # pw groupadd admin
@@ -89,7 +129,7 @@ uid=1001(ykla) gid=1001(ykla) groups=1001(ykla),0(wheel),1002(admin)
 - `wheel`，超级管理员权限（该名称来源于俚语 big wheel，即大人物）。
 
 
-## `useradd` 命令
+### `pw useradd` 命令
 
 用于新建用户
 
@@ -102,7 +142,7 @@ uid=1001(ykla) gid=1001(ykla) groups=1001(ykla),0(wheel),1002(admin)
 # echo password | pw useradd test3 -h 0 # 创建用户 test3，同时设置密码为 password
 ```
 
-## `usermod` 命令
+### `pw usermod` 命令
 
 用于修改用户信息，常用参数：
 
@@ -114,7 +154,7 @@ uid=1001(ykla) gid=1001(ykla) groups=1001(ykla),0(wheel),1002(admin)
 # pw usermod test1 -l test2 # 把用户 test1 重命名为 test2
 ```
 
-## `userdel` 命令
+### `pw userdel` 命令
 
 用于删除用户，常用参数：
 
@@ -126,29 +166,25 @@ uid=1001(ykla) gid=1001(ykla) groups=1001(ykla),0(wheel),1002(admin)
 # pw userdel test2 -r
 ```
 
-## `usershow` 命令
+### `pw usershow` 命令
 
-用于显示用户信息。
-
-示例：
+用于显示用户信息，示例：
 
 ```sh
 # pw usershow test2
 test2:$6$FkxPcs2y.Y8cxyuj$kVDoV1LC.IWKGlSitll3oLArF18aHQYID0JYE.TUuD0YFgba.c7MbGs3xLnmpCZyu1nVKHhNqW2X7a57qN0xg/:1201:1201::0:0:User &:/home/test1:/bin/sh
 ```
 
-## `usernext` 命令
+### `pw usernext` 命令
 
-可返回下一个可用的 uid，
-
-示例：
+可返回下一个可用的 UID 和 GID，示例：
 
 ```sh
 # pw usernext
 1202:1202
 ```
 
-## `lock` 命令
+### `pw lock` 命令
 
 锁定账号，锁定后账号无法登录使用，
 
@@ -158,7 +194,7 @@ test2:$6$FkxPcs2y.Y8cxyuj$kVDoV1LC.IWKGlSitll3oLArF18aHQYID0JYE.TUuD0YFgba.c7MbG
 # pw lock test2
 ```
 
-## `unlock` 命令
+### `pw unlock` 命令
 
 解锁账号，解锁后账号可以正常使用，
 
@@ -168,7 +204,7 @@ test2:$6$FkxPcs2y.Y8cxyuj$kVDoV1LC.IWKGlSitll3oLArF18aHQYID0JYE.TUuD0YFgba.c7MbG
 # pw unlock test2
 ```
 
-## `groupadd` 命令
+### `pw groupadd` 命令
 
 用于新建组。
 
@@ -179,7 +215,7 @@ test2:$6$FkxPcs2y.Y8cxyuj$kVDoV1LC.IWKGlSitll3oLArF18aHQYID0JYE.TUuD0YFgba.c7MbG
 # pw groupadd test5 -M test1,test2 # 创建组 test5。成员有 test1 和 test2
 ```
 
-## `groupmod` 命令
+### `pw groupmod` 命令
 
 用于修改组信息，常用参数：
 
@@ -202,7 +238,7 @@ test2:$6$FkxPcs2y.Y8cxyuj$kVDoV1LC.IWKGlSitll3oLArF18aHQYID0JYE.TUuD0YFgba.c7MbG
 # pw groupmod test5 -m test3 # 为组 test5 新增成员 test3
 ```
 
-## `groupdel` 命令
+### `pw groupdel` 命令
 
 用于删除组，
 
@@ -212,7 +248,7 @@ test2:$6$FkxPcs2y.Y8cxyuj$kVDoV1LC.IWKGlSitll3oLArF18aHQYID0JYE.TUuD0YFgba.c7MbG
 # pw groupdel test5
 ```
 
-## `groupshow` 命令
+### `pw groupshow` 命令
 
 用于显示组信息，
 
@@ -223,52 +259,16 @@ test2:$6$FkxPcs2y.Y8cxyuj$kVDoV1LC.IWKGlSitll3oLArF18aHQYID0JYE.TUuD0YFgba.c7MbG
 test5:*:1202:test1
 ```
 
-## `groupnext` 命令
+### `pw groupnext` 命令
 
 可返回下一个可用的 `gid`，
 
 示例：
 
 ```sh
-#  pw groupnext
+# pw groupnext
 1301
 ```
-
-## 其他用户管理命令
-
-- `adduser` 命令，用于新建用户，与 `pw` 相比，`useradd` 的区别在于该命令是交互式的，安装操作系统时自建的用户，就是基于该命令创建的。
-- `rmuser` 命令，用于删除用户，与 `adduser` 命令一样，也是交互式的。该命令带参数 `-y`，且能列出用户列表，
-
-示例：
-
-```sh
-# rmuser -y test1 test2 # 同时删除用户 test1 和 test2
-Removing user (test1): mailspool home passwd.
-Removing user (test2): home passwd.
-
-```
-
-参数 `-y` 用于跳过确认步骤。
-
-- `chpass` 命令，以 `vi` 编辑器方式打开并修改指定用户信息，如不指定用户则默认为当前用户。
-
->**技巧**
->
->`export EDITOR=/usr/bin/ee` 可将编辑器换成更简单的 `ee`。
-
-常用参数：`-s`，用于登录环境
-
-示例：
-
-```sh
-# chpass -s sh test1 # 修改用户 test1 的登录环境为 /bin/sh
-chpass: user information updated
-# export EDITOR=/usr/bin/ee 
-# chpass # 以 ee 方式打开当前用户信息进行修改
-# passwd # 修改用户密码，如不指定用户则默认为当前用户。
-```
-
-root 用户可修改所有用户的密码。
 
 ## 参考文献
 
