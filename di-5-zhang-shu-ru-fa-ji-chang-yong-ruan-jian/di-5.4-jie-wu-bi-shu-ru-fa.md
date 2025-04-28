@@ -30,7 +30,7 @@
 ### 安装 Fcitx 5 及 Rime 输入法
 
 ```sh
-# pkg install fcitx5 fcitx5-qt5 fcitx5-qt6 fcitx5-gtk2 fcitx5-gtk3 fcitx5-gtk4 fcitx5-configtool-qt5 fcitx5-configtool-qt6 zh-rime-wubi
+# pkg install fcitx5 fcitx5-qt5 fcitx5-qt6 fcitx5-gtk2 fcitx5-gtk3 fcitx5-gtk4 fcitx5-configtool-qt5 fcitx5-configtool-qt6 zh-fcitx5-chinese-addons zh-rime-wubi
 ```
 
 或者：
@@ -49,7 +49,7 @@ Fcitx 5 配置从略。
 - 把 `98五笔/98wbx.conf` 文件复制到 `/usr/local/share/fcitx5/inputmethod/` 下面；
 - 把 `98五笔/fcitx-98wubi.png` 和 `org.fcitx.Fcitx5.fcitx-98wubi.png` 图标复制到 `/usr/local/share/icons/hicolor/48x48/apps/` 下面；
 - 把 `98五笔/98/wbx.main.dict` 词库放到 `/usr/local/share/libime/` 下面。
-- 重启 `fcitx5`，在 `fcitx5-configtool` 起用 98 五笔即可。
+- 重启 `fcitx5`，在设置中起用 98 五笔即可。
 
 ---
 
