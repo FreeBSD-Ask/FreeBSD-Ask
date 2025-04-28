@@ -86,31 +86,3 @@ jk@freebsd:~ $ date
 ```
 
 默认情况 `LC_TIME` 环境变量值为 `C.UTF-8`。`date` 命令输出 `Fri Apr 21 21:14:43 UTC 2023`。`LC_TIME` 环境变量值设置为 `zh_CN.UTF-8`。`date` 命令输出 `2023年 4月21日 星期五 21时15分07秒 UTC`。维持 `date` 命令的英文输出对一些脚本编写者有时很重要（这只是一种情况，还有其它特殊的需求等）。这样的情况也存在于其它一样 `LC_*` 变量控制的信息中。
-
-## 时区设置
-
-每个用户可以设置自己的时区，在用户的 shell 配置文件中设置 `TZ` 变量即可。
-
-- sh、bash、zsh
-
-```sh
-export TZ=CST-8 
-# 或
-export TZ=Asia/Shanghai
-```
-
-- csh
-
-```sh
-setenv TZ CST-8
-# 或
-setenv TZ "Asia/Shanghai"
-```
-
-- 在 crontab 配置文件中，设置 `CRON_TZ` 变量即可：
-
-```sh
-CRON_TZ=CST-8
-0 8 * * * date >> ~/date.log
-```
-
