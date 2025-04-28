@@ -1,12 +1,12 @@
 # FreeBSD 从入门到追忆（第三版：草稿）
 
-~~[为了拯救即将归档（Archived）的 FreeBSD······我们决定写一本书。](https://mzh.moegirl.org.cn/为了保护我们心爱的ooo……成为偶像！)~~
-
 FreeBSD 是真正自由（Liberty）的**操作系统**，在这波谲云诡的世界中仍然坚守 BSD UNIX 哲学——恪守古老的法则，追寻真正的自由。
 
 ## 关于
 
 ### 内容提要
+
+~~[为了拯救即将归档（Archived）的 FreeBSD······我们决定写一本书。](https://mzh.moegirl.org.cn/为了保护我们心爱的ooo……成为偶像！)~~
 
 本书旨在深入剖析 FreeBSD 操作系统，敉平从初学者到研究者之间的鸿沟。
 
