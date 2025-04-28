@@ -2,7 +2,7 @@
 
 ## IBus
 
-首先安装配置好 IBus。
+安装配置 IBus 从略。
 
 然后在终端运行初始化命令 `ibus-setup`，将 98 五笔码表（`wubi86.dict.yaml`、`wubi86.schema.yaml`）复制到 `/usr/local/share/rime-date` 目录下。下载地址：[FreeBSD-98wubi-tables](https://github.com/FreeBSD-Ask/98-input/)
 
@@ -72,7 +72,7 @@ $ cd ~/.config/ibus/rime # 对应 ibus
 $ cd ~/.local/share/fcitx5/rime # 对应 fcitx5
 ```
 
-### 启用五笔 86 输入法
+## 五笔 86 输入法
 
 ```sh
 $ rime_deployer --add-schema wubi86
