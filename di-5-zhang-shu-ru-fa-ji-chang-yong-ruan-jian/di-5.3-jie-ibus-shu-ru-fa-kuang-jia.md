@@ -1,4 +1,4 @@
-# 第 5.3 节 Ibus 输入法框架
+# 第 5.3 节 IBus 输入法框架
 
 ibus 即“Intelligent Input Bus”（智能输入总线）。
 
