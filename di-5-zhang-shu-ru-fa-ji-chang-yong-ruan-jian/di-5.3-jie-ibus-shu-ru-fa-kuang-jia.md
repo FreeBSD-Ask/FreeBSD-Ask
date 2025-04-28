@@ -1,8 +1,8 @@
 # 第 5.3 节 IBus 输入法框架
 
-ibus 即“Intelligent Input Bus”（智能输入总线）。
+IBus 即“Intelligent Input Bus”（智能输入总线）。
 
-## ibus
+## IBus
 
 - 使用 pkg 安装：
 
