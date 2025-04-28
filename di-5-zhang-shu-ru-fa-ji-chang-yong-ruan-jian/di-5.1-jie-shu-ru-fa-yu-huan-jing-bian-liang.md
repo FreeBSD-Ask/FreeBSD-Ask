@@ -1,76 +1,17 @@
 # 第 5.1 节 输入法与环境变量
 
+## 可生效的配置文件路径
 
-在“可生效配置文件”中写入配置内容即可。配置内容分 A、B 组两组。
+1. sddm lightdm gdm 可以在 `~/.xprofile` 中写入；
+2. lightdm gdm 可以在 `~/.profile` 中写入；
+3. sddm 可以在用户登录 shell 配置文件中写入；
 
-## A 组
+--- 
 
-### sh/bash/zsh：fcitx/fcitx5
-
-```sh
-export LANG=zh_CN.UTF-8
-export LANGUAGE=zh_CN.UTF-8
-export LC_ALL=zh_CN.UTF-8
-
-export XMODIFIERS='@im=fcitx'
-export GTK_IM_MODULE=fcitx/xim
-export QT_IM_MODULE=fcitx
-```
-
-### sh/bash/zsh：ibus
-
-```sh
-export LANG=zh_CN.UTF-8
-export LANGUAGE=zh_CN.UTF-8
-export LC_ALL=zh_CN.UTF-8
-
-export XIM=ibus
-export GTK_IM_MODULE=ibus
-export QT_IM_MODULE=ibus
-export XMODIFIERS=@im=ibus
-export XIM_PROGRAM="ibus-daemon"
-export XIM_ARGS="--daemonize --xim"
-```
-
-## B 组
-
-### csh：fcitx5
-
-```sh
-setenv LANG zh_CN.UTF-8
-setenv LC_ALL zh_CN.UTF-8
-setenv LANGUAGE zh_CN.UTF-8
-setenv XMODIFIERS @im=fcitx
-setenv GTK_IM_MODULE fcitx/xim
-setenv QT_IM_MODULE fcitx
-```
-
-### csh：ibus
-
-```sh
-setenv LANG zh_CN.UTF-8
-setenv LC_ALL zh_CN.UTF-8
-setenv LANGUAGE zh_CN.UTF-8
-setenv XIM ibus
-setenv GTK_IM_MODULE ibus
-setenv QT_IM_MODULE ibus
-setenv XMODIFIERS @im=ibus
-setenv XIM_PROGRAM ibus-daemon
-setenv XIM_ARGS "--daemonize --xim"
-```
-
-## 配置文件路径
-
-根据自己使用的桌面管理器择一使用：
-
-1. sddm lightdm gdm 可以在 `~/.xprofile` 中写入 A 组配置
-2. lightdm gdm 可以在 `~/.profile` 中写入 A 组配置
-3. sddm 可以在用户登录 shell 配置文件中写入配置
-
-- sh: `~/.profile` 写入 A 组配置
-- bash: `~/.bash_profile` 或 `~/.profile` 写入 A 组配置
-- zsh: `~/.zprofile` 写入 A 组配置
-- csh: `~/.cshrc` 写入 B 组配置
+- sh: `~/.profile` 
+- bash: `~/.bash_profile` 或 `~/.profile`
+- zsh: `~/.zprofile`
+- csh: `~/.cshrc`
 
 ## 本地化相关的变量
 
@@ -173,8 +114,3 @@ CRON_TZ=CST-8
 0 8 * * * date >> ~/date.log
 ```
 
-## 安装输入法的 Shell 脚本
-
-用户可以通过脚本快速安装，shell 脚本内容如下。可能已经过时不再能使用了。
-
-<https://gist.github.com/ykla/b10c7da5382543e288f79f9f446bcc9e>
