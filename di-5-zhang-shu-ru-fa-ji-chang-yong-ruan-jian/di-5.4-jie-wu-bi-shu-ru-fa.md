@@ -4,12 +4,8 @@
 
 安装配置 IBus 从略。
 
-然后在终端运行初始化命令 `ibus-setup`，将 98 五笔码表（`wubi86.dict.yaml`、`wubi86.schema.yaml`）复制到 `/usr/local/share/rime-date` 目录下。下载地址：[FreeBSD-98wubi-tables](https://github.com/FreeBSD-Ask/98-input/)
 
-修改 `rime-date` 目录下 `default.yaml` 文件：打开 `default.yaml` 找到 `schema_lis`，下面第一行添加 `- schema: wubi98` 保存退出重新加载 ibus 输入法即可。
-
-
-### 安装 Rime 输入法
+### 安装配置 Rime 输入法
 
 
 ```sh
@@ -22,6 +18,14 @@
 # cd /usr/ports/chinese/ibus-rime/ 
 # make install clean
 ```
+
+---
+
+然后在终端运行初始化命令 `ibus-setup`，将 98 五笔码表（`wubi86.dict.yaml`、`wubi86.schema.yaml`）复制到 `/usr/local/share/rime-date` 目录下。下载地址：[FreeBSD-98wubi-tables](https://github.com/FreeBSD-Ask/98-input/)
+
+修改 `rime-date` 目录下 `default.yaml` 文件：打开 `default.yaml` 找到 `schema_lis`，下面第一行添加 `- schema: wubi98` 保存退出重新加载 ibus 输入法即可。
+
+
 
 ## Fcitx 5
 
