@@ -10,7 +10,7 @@
 # Username: ykla
 ```
 
-示例：创建一个名为 test 的用户，并添加其到 video 组，设置其默认 shell 是 csh：
+示例：创建一个名为 test 的用户，并添加其到 wheel 组，设置其默认 shell 是 sh：
 
 ```sh
 root@ykla:/ #  adduser
@@ -18,7 +18,7 @@ Username: test # 用户名
 Full name:  # 全名，可留空
 Uid (Leave empty for default): # UID 设置，可留空
 Login group [test]: # 登录组
-Login group is test. Invite test into other groups? []: video # 设置要加入的组，多个用空格隔开，可留空
+Login group is test. Invite test into other groups? []: wheel # 设置要加入的组，多个用空格隔开，可留空
 Login class [default]: # 登录分类，可留空
 Shell (sh csh tcsh git-shell bash rbash nologin) [sh]: sh  # 除非手动设置默认 shell，否则 shell 为 sh
 Home directory [/home/test]: #指定家目录
@@ -36,7 +36,7 @@ Full Name  :
 Uid        : 1002
 ZFS dataset : zroot/home/test
 Class      :
-Groups     : test video
+Groups     : test wheel
 Home       : /home/test
 Home Mode  :
 Shell      : /bin/sh
