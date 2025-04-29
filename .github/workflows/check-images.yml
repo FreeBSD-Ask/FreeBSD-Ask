@@ -8,82 +8,31 @@ on:
 jobs:
   check-images:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      - name: Find and check images
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Run image check script
         id: image-check
-        shell: bash
         run: |
-          # Strict mode, but we'll guard known non-fatal commands
-          set -euo pipefail
-
-          REPO="$PWD"
-          ASSETS=".gitbook/assets"
-          REPORT="image-report.md"
-
-          # Ensure assets directory exists so `find` won't fail with exit code 1
-          mkdir -p "$ASSETS"                             # :contentReference[oaicite:3]{index=3}
-
-          used=$(mktemp)
-          exist=$(mktemp)
-
-          # Gather all local image references in Markdown
-          find "$REPO" -type f -iname '*.md' | while read md; do
-            # Extract markdown ![alt](path) targets, skip URLs
-            grep -Po '!\[.*?\]\(\s*\K[^\)\s]+' "$md" \
-              | grep -vE '^(https?:)?//' || true          # avoid failing if grep finds nothing :contentReference[oaicite:4]{index=4}
-            | while read img; do
-                # Resolve to absolute, then to repo-relative
-                dir=$(dirname "$md")
-                abs=$(realpath -m "$dir/$img")
-                rel=$(realpath --relative-to="$REPO" "$abs" 2>/dev/null || true)
-                [[ -n "$rel" ]] && echo "$rel" >>"$used"
-              done
-          done
-
-          # List all actual asset files
-          find "$ASSETS" -type f \
-            \( -iname '*.png' -o -iname '*.jpg' -o -iname '*.jpeg' -o -iname '*.gif' -o -iname '*.svg' \) \
-            | sed "s|^$REPO/||" >>"$exist"
-
-          # Sort & dedupe
-          sort -u "$used" -o "$used"
-          sort -u "$exist" -o "$exist"
-
-          # Compute missing vs. unused
-          missing=$(comm -23 "$used" "$exist")
-          unused=$(comm -13 "$used" "$exist")
-
-          {
-            echo "# Image Reference Check Report"
-            if [[ -n "$missing" ]]; then
-              echo "## ❌ Missing Images"
-              printf '%s\n' "$missing" | sed 's/^/- `/' | sed 's/$/`/'
-            fi
-            if [[ -n "$unused" ]]; then
-              echo "## ⚠️ Unused Images"
-              printf '%s\n' "$unused" | sed 's/^/- `/' | sed 's/$/`/'
-            fi
-          } >"$REPORT"
-
-          # Decide whether to create an issue
-          if grep -qE '❌|⚠️' "$REPORT"; then
-            echo "report_exists=1" >>"$GITHUB_OUTPUT"
+          pip install regex
+          python .github/scripts/check_images.py
+          if [ -s image-report.md ]; then
+            echo "report_exists=1" >> $GITHUB_OUTPUT
           else
-            echo "report_exists=0" >>"$GITHUB_OUTPUT"
+            echo "report_exists=0" >> $GITHUB_OUTPUT
           fi
 
-      - name: Create Issue if needed
+      - name: Create Issue
         if: steps.image-check.outputs.report_exists == '1'
-        uses: peter-evans/create-issue-from-file@v5   # exits silently if REPORT missing :contentReference[oaicite:5]{index=5}
+        uses: peter-evans/create-issue-from-file@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          title: Image Reference Report: Missing or Unused Images
-          content-filepath: image-report.md
-          labels: |
-            report
-            automation
-
+          title: "Image Reference Report: Missing or Unused Images"
+          content-filepath: ./image-report.md
+          labels: report, automation
