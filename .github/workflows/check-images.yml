@@ -5,6 +5,7 @@ on:
       - '.gitbook/assets/**'
   workflow_dispatch:
 
+
 jobs:
   check-images:
     runs-on: ubuntu-latest
@@ -15,97 +16,66 @@ jobs:
       - name: Find and check images
         id: image-check
         run: |
-          #!/bin/bash
-          set -euxo pipefail  # 添加详细日志
+          #!/usr/bin/env bash
+          set -euo pipefail
 
-          # 配置参数
           REPO_ROOT="$PWD"
-          ASSETS_DIR="${REPO_ROOT}/.gitbook/assets"
+          ASSETS_DIR=".gitbook/assets"
           REPORT_FILE="image-report.md"
 
-          # 确保目录存在
-          mkdir -p "$ASSETS_DIR"
+          used=$(mktemp)
+          exist=$(mktemp)
 
-          # 初始化临时文件
-          used_images=$(mktemp)
-          existing_images=$(mktemp)
-
-          # 增强版路径处理
-          find "$REPO_ROOT" -type f -iname "*.md" -print0 | while IFS= read -r -d '' md_file; do
-            # 使用更兼容的正则表达式
-            grep -Eo '!\[.*\]\([^\)\s]*' "$md_file" | sed 's/!\[.*\](//' | while IFS= read -r img_path; do
-              # 清理路径中的引号和空格
-              img_path=$(echo "$img_path" | tr -d '"'"'" | sed 's/%20/ /g')
-
-              # 跳过网络图片
-              [[ "$img_path" =~ ^(http://|https://|//) ]] && continue
-              
-              # 标准化路径（兼容 macOS/Linux）
-              if [[ "$img_path" =~ ^/ ]]; then
-                abs_path="${REPO_ROOT}${img_path}"
-              else
-                md_dir=$(dirname "$md_file")
-                abs_path=$(realpath -m "${md_dir}/${img_path}" 2>/dev/null || echo "")
-              fi
-
-              # 转换为仓库相对路径
-              if [ -n "$abs_path" ]; then
-                rel_path=$(realpath --relative-to="$REPO_ROOT" "$abs_path" 2>/dev/null || echo "")
-                [ -n "$rel_path" ] && echo "$rel_path" >> "$used_images"
-              fi
-            done
+          # collect used images
+          find "$REPO_ROOT" -type f -iname "*.md" | while read md; do
+            grep -Po '!\[.*?\]\(\s*\K[^\)\s]+' "$md" \
+              | grep -vE '^(https?:)?//' \
+              | while read img; do
+                  # resolve relative/absolute
+                  dir=$(dirname "$md")
+                  abs=$(realpath -m "$dir/$img")
+                  rel=$(realpath --relative-to="$REPO_ROOT" "$abs" 2>/dev/null || true)
+                  [[ -n "$rel" ]] && echo "$rel" >>"$used"
+              done
           done
 
-          # 收集存在的图片文件（支持带空格的文件名）
-          find "$ASSETS_DIR" -type f \( -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.gif" -o -iname "*.svg" \) -print0 |
-            while IFS= read -r -d '' file; do
-              rel_path=$(realpath --relative-to="$REPO_ROOT" "$file")
-              echo "$rel_path" >> "$existing_images"
-            done
-
-          # 排序并去重
-          sort -u "$used_images" -o "$used_images"
-          sort -u "$existing_images" -o "$existing_images"
-
-          # 计算差异（处理空文件情况）
-          missing_images=$(comm -23 "$used_images" "$existing_images" 2>/dev/null || true)
-          unused_images=$(comm -13 "$used_images" "$existing_images" 2>/dev/null || true)
-
-          # 生成报告（处理空值情况）
-          report=""
-          if [ -n "$missing_images" ]; then
-            report+="## ❌ Missing Images\n\n"
-            report+=$(echo "$missing_images" | sed '/^$/d' | sed 's/^/- ` /;s/$/`/')
-            report+="\n\n"
+          # only if assets dir exists
+          if [ -d "$ASSETS_DIR" ]; then
+            find "$ASSETS_DIR" -type f \( -iname "*.png" -o -iname "*.jpg" -o -iname "*.svg" \) \
+              | sed "s|^$REPO_ROOT/||" >>"$exist"
           fi
 
-          if [ -n "$unused_images" ]; then
-            report+="## ⚠️ Unused Images\n\n"
-            report+=$(echo "$unused_images" | sed '/^$/d' | sed 's/^/- ` /;s/$/`/')
-            report+="\n\n"
-          fi
+          sort -u "$used" -o "$used"
+          sort -u "$exist" -o "$exist"
 
-          if [ -n "$report" ]; then
-            echo -e "# Image Reference Check Report\n\n$report" > "$REPORT_FILE"
-          else
-            echo "✅ All images are properly referenced!" > "$REPORT_FILE"
-          fi
+          miss=$(comm -23 "$used" "$exist")
+          unused=$(comm -13 "$used" "$exist")
 
-          # 清理临时文件
-          rm -f "$used_images" "$existing_images"
+          {
+            echo "# Image Reference Check Report"
+            [[ -n "$miss" ]] && {
+              echo "## ❌ Missing Images"; printf '%s\n' "$miss" | sed 's/^/- `/' | sed 's/$/`/'
+            }
+            [[ -n "$unused" ]] && {
+              echo "## ⚠️ Unused Images"; printf '%s\n' "$unused" | sed 's/^/- `/' | sed 's/$/`/'
+            }
+          } > "$REPORT_FILE"
 
-          # 设置输出标记
+          # emit output flag
           if grep -qE '❌|⚠️' "$REPORT_FILE"; then
             echo "report_exists=1" >> $GITHUB_OUTPUT
           else
             echo "report_exists=0" >> $GITHUB_OUTPUT
           fi
 
-      - name: Create Issue
+      - name: Create Issue if needed
         if: steps.image-check.outputs.report_exists == '1'
-        uses: peter-evans/create-issue-from-file@v3
+        uses: peter-evans/create-issue-from-file@v5
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           title: "Image Reference Report: Missing or Unused Images"
-          content-filepath: ./image-report.md
-          labels: report, automation
+          content-filepath: image-report.md
+          labels: |
+            report
+            automation
+
