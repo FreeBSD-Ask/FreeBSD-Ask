@@ -95,7 +95,7 @@ Device              Size     Used    Avail Capacity
 
 ![](../.gitbook/assets/shuang10.png)
 
-![](../.gitbook/assets/shuang11.png)
+![](../.gitbook/assets/shaung11.png)
 
 回到 FreeBSD，查看磁盘：
 
