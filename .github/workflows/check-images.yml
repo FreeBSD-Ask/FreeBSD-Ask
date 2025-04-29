@@ -1,4 +1,4 @@
-name: "检查 Markdown 图片引用"
+name: "🔗 检查 Markdown 图片引用"
 on:
   push:
     paths:
