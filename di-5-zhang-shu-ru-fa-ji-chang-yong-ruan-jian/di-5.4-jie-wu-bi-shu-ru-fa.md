@@ -27,9 +27,24 @@
 
 再将 98 五笔码表（`free-bsd-98wubi-tables-master/wubi86.dict.yaml`、`free-bsd-98wubi-tables-master/wubi86.schema.yaml`）复制到 `/usr/local/share/rime-date` 目录下。下载地址：[FreeBSD-98wubi-tables](https://github.com/FreeBSD-Ask/98-input/)
 
-修改 `/usr/local/share/rime-date` 目录下 `default.yaml` 文件：打开 `default.yaml` 找到 `schema_lis`，下面第一行添加 `- schema: wubi98`（注意保持缩进）保存退出重新加载 ibus 输入法即可。
+修改 `/usr/local/share/rime-date` 目录下 `default.yaml` 文件：打开 `default.yaml` 找到 `schema_lis`，下面第一行添加 `- schema: wubi98`（注意保持缩进），并删除其他方案，如下所示：
 
+```ini
+# Rime default settings
+# encoding: utf-8
 
+config_version: '0.40'
+
+schema_list:
+  - schema: wubi98
+
+……其余省略……
+
+```
+
+保存退出重新部署 Rime 输入法即可。
+
+![](../.gitbook/assets/wubi3.png)
 
 ## Fcitx 5
 
@@ -144,4 +159,3 @@ patch applied.
 
 - [LEOYoon-Tsaw/Rime_collections/](https://github.com/LEOYoon-Tsaw/Rime_collections/blob/master/Rime_description.md)
 - [rime/CustomizationGuide](https://github.com/rime/home/wiki/CustomizationGuide)
-
