@@ -1,0 +1,81 @@
+# 使用 GitHub Actions 工作流语法（必须存放于 .github/workflows）&#8203;:contentReference[oaicite:0]{index=0}
+name: "检查 Markdown 图片引用"
+
+on:
+  # 当推送 .md 或 assets 下文件时触发
+  push:
+    paths:
+      - '.gitbook/assets/**'
+  workflow_dispatch:
+jobs:
+  scan-images:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 检出仓库代码 :contentReference[oaicite:1]{index=1}
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # 设置 Node.js 环境
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.x'
+
+      # 主脚本：扫描 .md 和 .gitbook/assets，并在发现问题时创建 Issue :contentReference[oaicite:2]{index=2}
+      - name: Scan images and create issue
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const fs = require('fs');
+            const path = require('path');
+            const glob = require('glob');
+
+            // 所有 Markdown 文件
+            const mdFiles = glob.sync('**/*.md');
+            // 所有 assets 下的图片（包括子目录）
+            const assetFiles = glob.sync('.gitbook/assets/**/*.*', { nodir: true });
+
+            // 提取 Markdown 中所有被引用的图片路径
+            const referenced = new Set();
+            const imgRegex = /!\[[^\]]*?\]\((\.gitbook\/assets\/[^\)]+)\)/g;
+            for (const file of mdFiles) {
+              const content = fs.readFileSync(file, 'utf8');
+              let m;
+              while ((m = imgRegex.exec(content)) !== null) {
+                referenced.add(m[1]);
+              }
+            }
+
+            // 计算“引用了但不存在”的图片
+            const missing = [...referenced].filter(p => !fs.existsSync(p));
+            // 计算“存在但未被引用”的图片（相对路径）
+            const unused = assetFiles
+              .map(f => f.replace(/\\/g,'/'))
+              .filter(p => !referenced.has(p));
+
+            if (missing.length === 0 && unused.length === 0) {
+              console.log('All images are consistent.');
+              return;
+            }
+
+            // 构造 Issue 正文
+            const lines = [];
+            if (missing.length) {
+              lines.push('### ❌ 引用但不存在的图片：');
+              missing.forEach(p => lines.push(`- \`${p}\``));
+            }
+            if (unused.length) {
+              lines.push('### 🆕 未被引用的图片：');
+              unused.forEach(p => lines.push(`- \`${p}\``));
+            }
+            const body = lines.join('\n');
+
+            // 创建 Issue :contentReference[oaicite:3]{index=3}
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `🖼️ 图片引用检查：发现 ${missing.length} 个缺失，${unused.length} 个未使用`,
+              body,
+            });
