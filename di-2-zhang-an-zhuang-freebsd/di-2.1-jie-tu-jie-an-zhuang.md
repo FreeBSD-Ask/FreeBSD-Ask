@@ -586,11 +586,15 @@ FreeBSD 14.2 RELEASE 的 `/` 分区支持 UFS 和 ZFS 两种文件系统。旧�
 >
 >只要能识别出来网卡，肯定就是能用的，但是在安装系统的时候不一定能够正确搜索出 WiFi。请你置空，安装完成后重启到新系统，再参照 WiFi 章节进行处理。
 
+在列表中找寻你的 WiFi，找不到的话请你换下路由器的信道。
+
 ![](../.gitbook/assets/ins-w6.png)
 
 `选择你要链接的无线网络`
 
-在列表中找寻你的 WiFi，找不到的话请你换下路由器的信道。
+输入 WiFi 密码即可链接：
+
+![](../.gitbook/assets/ins-w7.png)
 
 ![](../.gitbook/assets/ins18.png)
 
