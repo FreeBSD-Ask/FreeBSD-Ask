@@ -58,14 +58,14 @@ unused_images = sorted(existing_images - used_images)
 # 生成报告
 report = []
 if missing_images:
-    report.append("## ❌ Missing Images\n")
+    report.append("## ❌ 缺失图片\n")
     report.extend(f"- `{img}`" for img in missing_images)
 if unused_images:
-    report.append("\n## ⚠️ Unused Images\n")
+    report.append("\n## ⚠️ 未使用的图片\n")
     report.extend(f"- `{img}`" for img in unused_images)
 
 if report:
     report_content = "# Image Reference Check Report\n\n" + "\n".join(report)
     Path('image-report.md').write_text(report_content, encoding='utf-8')
 else:
-    Path('image-report.md').write_text("✅ All images are properly referenced!")
+    Path('image-report.md').write_text("✅ 所有图片状态均正常！")
