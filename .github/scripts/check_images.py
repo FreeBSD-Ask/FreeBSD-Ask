@@ -65,7 +65,7 @@ if unused_images:
     report.extend(f"- `{img}`" for img in unused_images)
 
 if report:
-    report_content = "# Image Reference Check Report\n\n" + "\n".join(report)
+    report_content = "# 图片引用检查报告\n\n" + "\n".join(report)
     Path('image-report.md').write_text(report_content, encoding='utf-8')
 else:
     Path('image-report.md').write_text("✅ 所有图片状态均正常！")
