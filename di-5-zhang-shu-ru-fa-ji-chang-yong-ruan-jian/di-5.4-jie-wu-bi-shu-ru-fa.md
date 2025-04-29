@@ -45,6 +45,8 @@ schema_list:
 
 ![](../.gitbook/assets/wubi4.png)
 
+![](../.gitbook/assets/wubi5.png)
+
 ## Fcitx 5
 
 首先安装并配置好 Fcitx 5。
