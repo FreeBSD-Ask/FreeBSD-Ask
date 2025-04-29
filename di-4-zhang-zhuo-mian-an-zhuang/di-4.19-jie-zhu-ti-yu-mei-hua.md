@@ -124,5 +124,8 @@ hours-between-reminders     8   # 提醒间隔（小时）
 
 ![freebsd-update-notify on FreeBSD](../.gitbook/assets/notify1.png)
 
+
+![freebsd-update-notify on FreeBSD](../.gitbook/assets/notify2.png)
+
 ![freebsd-update-notify on FreeBSD](../.gitbook/assets/notify3.png)
 
