@@ -79,10 +79,9 @@ Fcitx 5 配置从略。
 $ libime_tabledict 98wbx.txt 98wbx.main.dict
 ```
 
-### 配置 Rime 使用 86 五笔
+## 配置 Rime 使用 86 五笔
 
-
-首先安装并配置好 Fcitx 5。
+首先安装并配置好 Fcitx 5。配置从略。
 
 ```sh
 # pkg ins zh-fcitx5-rime zh-rime-essay zh-rime-wubi 
@@ -112,7 +111,7 @@ schema_list:
 ……其他省略……
 ```
 
-## 配置文件目录
+## 配置文件
 
 五笔输入法已经安装好，rime 的配置文件位置如下：
 
