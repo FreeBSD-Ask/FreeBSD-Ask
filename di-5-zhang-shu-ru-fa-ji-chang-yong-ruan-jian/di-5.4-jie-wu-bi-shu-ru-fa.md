@@ -58,7 +58,7 @@ schema_list:
 
 Fcitx 5 配置从略。
 
-### Fcitx 5 配置 98 五笔（可选）
+### Fcitx 5 配置 98 五笔
 
 首先下载所需文件：<https://github.com/FreeBSD-Ask/98-input>。
 
@@ -79,7 +79,7 @@ Fcitx 5 配置从略。
 $ libime_tabledict 98wbx.txt 98wbx.main.dict
 ```
 
-### Fcitx 5 配置 Rime（可选）
+### 配置 Rime 使用 86 五笔
 
 
 首先安装并配置好 Fcitx 5。
@@ -180,6 +180,11 @@ patch applied.
 
 ![](../.gitbook/assets/wubi6.png)
 
+## 故障排除
+
+- 这个已经动到公用文件了一般只改用户配置，不然会影响全局，碰上更新容易复原。
+
+待解决。
 
 ## 参考文献
 
