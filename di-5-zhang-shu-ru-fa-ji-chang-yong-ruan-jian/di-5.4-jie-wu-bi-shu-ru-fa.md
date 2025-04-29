@@ -49,24 +49,16 @@ schema_list:
 
 ## Fcitx 5
 
-首先安装并配置好 Fcitx 5。
 
 ### 安装 Fcitx 5 及 Rime 输入法
 
 ```sh
-# pkg install fcitx5 fcitx5-qt5 fcitx5-qt6 fcitx5-gtk2 fcitx5-gtk3 fcitx5-gtk4 fcitx5-configtool-qt5 fcitx5-configtool-qt6 zh-fcitx5-chinese-addons zh-rime-wubi
-```
-
-或者：
-
-```sh
-# cd /usr/ports/chinese/rime-wubi/
-# make install clean
+# pkg install fcitx5 fcitx5-qt5 fcitx5-qt6 fcitx5-gtk2 fcitx5-gtk3 fcitx5-gtk4 fcitx5-configtool-qt5 fcitx5-configtool-qt6 zh-fcitx5-chinese-addons 
 ```
 
 Fcitx 5 配置从略。
 
-### 下载配置所需文件
+### Fcitx 5 配置 98 五笔（可选）
 
 首先下载所需文件：<https://github.com/FreeBSD-Ask/98-input>。
 
@@ -85,6 +77,39 @@ Fcitx 5 配置从略。
 
 ```sh
 $ libime_tabledict 98wbx.txt 98wbx.main.dict
+```
+
+### Fcitx 5 配置 Rime（可选）
+
+
+首先安装并配置好 Fcitx 5。
+
+```sh
+# pkg ins zh-fcitx5-rime zh-rime-essay zh-rime-wubi 
+```
+
+或者：
+
+```sh
+# cd /usr/ports/chinese/rime-wubi/
+# cd /usr/ports/chinese/fcitx5-rime/ && make install clean
+# cd /usr/ports/chinese/rime-essay/ && make install clean
+```
+
+加入 Rime 的方法同上（Rime 输入法叫 `中州韵`），从略。
+
+修改 `/usr/local/share/rime-data/default.yaml`，如下：
+
+```
+# Rime default settings
+# encoding: utf-8
+
+config_version: '0.40'
+
+schema_list:
+  - schema: wubi86
+
+……其他省略……
 ```
 
 ## 配置文件目录
