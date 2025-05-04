@@ -38,7 +38,7 @@ Xfce 旨在开发一款轻量级但功能齐全的桌面。Xfce 的 Logo 是只[
 | `lightdm-gtk-greeter-settings`| 配置 LightDM GTK+ 登录界面的图形工具，缺少将无法启动 |
 
 
-## 启用 xfce
+## `startx`
 
 ```sh
 $ echo "/usr/local/etc/xdg/xfce4/xinitrc" > ~/.xinitrc
@@ -58,14 +58,15 @@ $ echo "/usr/local/etc/xdg/xfce4/xinitrc" > ~/.xsession
 # service lightdm enable
 ```
 
-## 设置中文显示
+## 设置中文界面
 
-在 `~/.xinitrc` 或者 `~/.profile` 中添加以下内容（但要在最前面才正常启用）
+编辑 `/etc/login.conf`：找到 `default:\` 这一段，把 `:lang=C.UTF-8` 修改为 `:lang=zh_CN.UTF-8`。
+
+刷新数据库：
 
 ```sh
-export LANG=zh_CN.UTF-8
+# cap_mkdb /etc/login.conf
 ```
-
 
 ![FreeBSD 安装 Xfce](../.gitbook/assets/xfce1.png)
 
