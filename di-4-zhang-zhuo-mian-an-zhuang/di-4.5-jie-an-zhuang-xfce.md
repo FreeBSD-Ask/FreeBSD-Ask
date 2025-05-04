@@ -109,13 +109,12 @@ FreeBSD 的 xfce 邮箱客户端推荐用 `mail/evolution`，可搭配 `xfce4-ma
 
 ## XTerm 终端动态标题
 
+配置路径：
 
-- sh: `~/.shrc` 写入配置
-- bash: `~/.bash_profile` 或 `~/.profile` 写入配置
-- zsh: `~/.zprofile` 写入配置
-- tcsh: `~/.tcshrc` 写入配置
-
-
+- sh: `~/.shrc` 
+- tcsh: `~/.tcshrc` 
+- bash：`~/.bashrc`
+  
 ### sh
 
 ```sh
@@ -133,30 +132,6 @@ if [ -t 1 ]; then
 fi
 ```
 
-
-### zsh
-
-```sh
-precmd ()   a function which is executed just before each prompt
-chpwd ()    a function which is executed whenever the directory is changed
-\e          escape sequence for escape (ESC)
-\a          escape sequence for bell (BEL)
-%n          expands to $USERNAME
-%m          expands to hostname up to first '.'
-%~          expands to directory, replacing $HOME with '~'
-```
-
-
-### bash
-
-```sh
-\u          expands to $USERNAME
-\h          expands to hostname up to first '.'
-\w          expands to directory, replacing $HOME with '~'
-\$          expands to '$' for normal users, '#' for root
-\[...\]     embeds a sequence of non-printing characters
-```
-
 ### tcsh
 
 ```sh
@@ -170,16 +145,47 @@ default:
 endsw 
 ```
 
+### bash
+
+```sh
+case $TERM in
+         xterm*)
+             PS1="\[\033]0;\u@\h: \w\007\]bash\\$ "
+             ;;
+         *)
+             PS1="bash\\$ "
+             ;;
+     esac
+```
+
+### zsh
+
+```sh
+autoload -Uz add-zsh-hook
+
+function xterm_title_precmd () {
+	print -Pn -- '\e]2;%n@%m %~\a'
+	[[ "$TERM" == 'screen'* ]] && print -Pn -- '\e_\005{2}%n\005{-}@\005{5}%m\005{-} \005{+b 4}%~\005{-}\e\\'
+}
+
+function xterm_title_preexec () {
+	print -Pn -- '\e]2;%n@%m %~ %# ' && print -n -- "${(q)1}\a"
+	[[ "$TERM" == 'screen'* ]] && { print -Pn -- '\e_\005{2}%n\005{-}@\005{5}%m\005{-} \005{+b 4}%~\005{-} %# ' && print -n -- "${(q)1}\e\\"; }
+}
+
+if [[ "$TERM" == (Eterm*|alacritty*|aterm*|foot*|gnome*|konsole*|kterm*|putty*|rxvt*|screen*|wezterm*|tmux*|xterm*) ]]; then
+	add-zsh-hook -Uz precmd xterm_title_precmd
+	add-zsh-hook -Uz preexec xterm_title_preexec
+fi
+```
+
 ### 参考文献
 
-- [Xterm-Title](http://www.faqs.org/docs/Linux-mini/Xterm-Title.html#ss4.1)
-
-## 配置集参考
-
-- [Wamphyre/BSD-XFCE](https://github.com/Wamphyre/BSD-XFCE)
-
+- [6.1 动态设置标题不起作用](https://docs.oracle.com/cd/E19683-01/817-1951/6mhl8aiii/index.html)，bash 配置来自此处
+- [Wamphyre/BSD-XFCE](https://github.com/Wamphyre/BSD-XFCE)，配置参考集合
+- [Zsh - Arch Linux 中文维基](https://wiki.archlinuxcn.org/wiki/Zsh)，Zsh 配置来自此处
 
 ## 故障排除与未竟事宜
 
-zsh、bash 待测试。csh 不知道。
+csh 不知道。
 
