@@ -68,12 +68,6 @@ $ echo "/usr/local/etc/xdg/xfce4/xinitrc" > ~/.xsession
 # cap_mkdb /etc/login.conf
 ```
 
-![FreeBSD 安装 Xfce](../.gitbook/assets/xfce1.png)
-
-![FreeBSD 安装 Xfce](../.gitbook/assets/xfce2.png)
-
-![FreeBSD 安装 Xfce](../.gitbook/assets/xfce3.png)
-
 ### lightdm 登录管理器本地化语言
 
 #### 方法 ①
@@ -96,6 +90,14 @@ lightdm_env="LC_MESSAGES=zh_CN.UTF-8"
 ```sh
 # service lightdm restart
 ```
+
+## 图片欣赏
+
+![FreeBSD 安装 Xfce](../.gitbook/assets/xfce1.png)
+
+![FreeBSD 安装 Xfce](../.gitbook/assets/xfce2.png)
+
+![FreeBSD 安装 Xfce](../.gitbook/assets/xfce3.png)
 
 ## 全局菜单（可选）
 
