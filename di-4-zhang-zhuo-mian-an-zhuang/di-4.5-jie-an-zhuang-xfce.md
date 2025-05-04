@@ -111,7 +111,8 @@ FreeBSD 的 xfce 邮箱客户端推荐用 `mail/evolution`，可搭配 `xfce4-ma
 
 配置路径：
 
-- sh: `~/.shrc` 
+- sh: `~/.shrc`
+- csh `~/.cshrc`
 - tcsh: `~/.tcshrc` 
 - bash：`~/.bashrc`
   
@@ -130,6 +131,15 @@ if [ -t 1 ]; then
   done
   exit
 fi
+```
+
+### csh
+
+```sh
+if ( $?TERM && $TERM =~ xterm* ) then
+    set host = `hostname`      
+    alias postcmd 'rehash; printf -- "\033]2\;%s\007" "${user}@${host}: ${cwd}"
+endif
 ```
 
 ### tcsh
