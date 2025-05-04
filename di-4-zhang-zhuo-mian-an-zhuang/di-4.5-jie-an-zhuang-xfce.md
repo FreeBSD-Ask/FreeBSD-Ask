@@ -68,29 +68,6 @@ $ echo "/usr/local/etc/xdg/xfce4/xinitrc" > ~/.xsession
 # cap_mkdb /etc/login.conf
 ```
 
-### lightdm 登录管理器本地化语言
-
-#### 方法 ①
-
-`/etc/rc.conf` 里写入：
-
-```sh
-lightdm_env="LC_MESSAGES=zh_CN.UTF-8" 
-```
-
-#### 方法 ②
-
-修改 `slick-greeter.desktop`：
-
-编辑 `/usr/local/share/xgreeters/slick-greeter.desktop`：
-
-`Exec=slick-greeter` 改成 `Exec=env LANGUAGE=zh_CN slick-greeter` 保存，重启 `lightdm` 服务就生效：
-
-
-```sh
-# service lightdm restart
-```
-
 ## 图片欣赏
 
 ![FreeBSD 安装 Xfce](../.gitbook/assets/xfce1.png)
@@ -115,7 +92,7 @@ lightdm_env="LC_MESSAGES=zh_CN.UTF-8"
 # cd /usr/ports/x11/appmenu-registrar/ && make install clean
 ```
 
-配置：
+查看安装后说明，安装说明配置：
 
 ```sh
 $ xfconf-query -c xsettings -p /Gtk/ShellShowsMenubar -n -t bool -s true
@@ -129,18 +106,41 @@ FreeBSD 的 xfce 邮箱客户端推荐用 `mail/evolution`，可搭配 `xfce4-ma
 
 还有一款桌面插件，叫 `x11/xfce4-verve-plugin`。配合设置智能书签，可以查网页内容。可通过设置 FreeBSD 的 man 手册，就可以搜索需要的内容。
 
-## 故障排除与未竟事宜
 
-### FreeBSD 的 xfce 终端动态标题不显示问题
+## XTerm 终端动态标题
 
 
-- sh: `~/.profile` 写入配置
+- sh: `~/.shrc` 写入配置
 - bash: `~/.bash_profile` 或 `~/.profile` 写入配置
 - zsh: `~/.zprofile` 写入配置
 - csh: `~/.cshrc` 写入配置
 - tcsh: `~/.tcshrc` 写入配置
 
-zsh:
+
+### sh
+
+```sh
+if [ -t 1 ]; then            # 确保是交互式
+  while :; do
+    # 1) 命令空闲时：标题显示当前路径
+    printf '\033]0;%s\007' "$PWD"    # ESC ]0;… BEL  设置 xterm 标题:contentReference[oaicite:4]{index=4}
+    # 显示提示
+    printf '\n$ '
+    # 2) 读取用户输入
+    if ! IFS= read -r cmd; then
+      break
+    fi
+    # 3) 命令执行前：标题显示将要执行的命令
+    printf '\033]0;%s\007' "$cmd"
+    # 4) 执行命令
+    eval "$cmd"
+  done
+  exit
+fi
+```
+
+
+### zsh
 
 ```sh
 precmd ()   a function which is executed just before each prompt
@@ -152,7 +152,7 @@ chpwd ()    a function which is executed whenever the directory is changed
 %~          expands to directory, replacing $HOME with '~'
 ```
 
-tcsh:
+### tcsh
 
 ```sh
 precmd ()   a function which is executed just before each prompt
@@ -164,7 +164,7 @@ cwdcmd ()   a function which is executed whenever the directory is changed
 %{...%}     includes a string as a literal escape sequence
 ```
 
-bash:
+### bash
 
 ```sh
 \u          expands to $USERNAME
@@ -174,7 +174,7 @@ bash:
 \[...\]     embeds a sequence of non-printing characters
 ```
 
-csh
+### csh
 
 ```sh
 switch ($TERM)
@@ -188,16 +188,16 @@ switch ($TERM)
 endsw
 ```
 
-参考文献：
+### 参考文献
 
 - [Xterm-Title](http://www.faqs.org/docs/Linux-mini/Xterm-Title.html#ss4.1)
 
-
-
-### 配置集参考
+## 配置集参考
 
 - [Wamphyre/BSD-XFCE](https://github.com/Wamphyre/BSD-XFCE)
 
 
+## 故障排除与未竟事宜
 
+动态标题 csh 和 tcsh 应该是一样的，故应该只需要保留一个，待测试。
 
