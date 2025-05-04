@@ -120,19 +120,14 @@ FreeBSD 的 xfce 邮箱客户端推荐用 `mail/evolution`，可搭配 `xfce4-ma
 ### sh
 
 ```sh
-if [ -t 1 ]; then            # 确保是交互式
+if [ -t 1 ]; then       
   while :; do
-    # 1) 命令空闲时：标题显示当前路径
-    printf '\033]0;%s\007' "$PWD"    # ESC ]0;… BEL  设置 xterm 标题:contentReference[oaicite:4]{index=4}
-    # 显示提示
+    printf '\033]0;%s\007' "$PWD"   
     printf '\n$ '
-    # 2) 读取用户输入
     if ! IFS= read -r cmd; then
       break
     fi
-    # 3) 命令执行前：标题显示将要执行的命令
     printf '\033]0;%s\007' "$cmd"
-    # 4) 执行命令
     eval "$cmd"
   done
   exit
@@ -152,17 +147,6 @@ chpwd ()    a function which is executed whenever the directory is changed
 %~          expands to directory, replacing $HOME with '~'
 ```
 
-### tcsh
-
-```sh
-precmd ()   a function which is executed just before each prompt
-cwdcmd ()   a function which is executed whenever the directory is changed
-%n          expands to username
-%m          expands to hostname
-%~          expands to directory, replacing $HOME with '~'
-%#          expands to '>' for normal users, '#' for root users
-%{...%}     includes a string as a literal escape sequence
-```
 
 ### bash
 
@@ -174,18 +158,17 @@ cwdcmd ()   a function which is executed whenever the directory is changed
 \[...\]     embeds a sequence of non-printing characters
 ```
 
-### csh
+### tcsh
 
 ```sh
 switch ($TERM)
-    case "xterm*":
-        set host=`hostname`
-        alias cd 'cd \!*; echo -n "^[]0;${user}@${host}: ${cwd}^Gcsh% "'
-        breaksw
-    default:
-        set prompt='csh% '
-        breaksw
-endsw
+case xterm*:
+    set prompt="%{\033]0;%n@%m: %~\007%}%# "
+    breaksw
+default:
+    set prompt="%# "
+    breaksw
+endsw 
 ```
 
 ### 参考文献
@@ -199,5 +182,5 @@ endsw
 
 ## 故障排除与未竟事宜
 
-动态标题 csh 和 tcsh 应该是一样的，故应该只需要保留一个，待测试。
+zsh、bash 待测试。csh 不知道。
 
