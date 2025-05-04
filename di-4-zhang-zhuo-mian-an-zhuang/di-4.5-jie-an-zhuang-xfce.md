@@ -113,7 +113,6 @@ FreeBSD 的 xfce 邮箱客户端推荐用 `mail/evolution`，可搭配 `xfce4-ma
 - sh: `~/.shrc` 写入配置
 - bash: `~/.bash_profile` 或 `~/.profile` 写入配置
 - zsh: `~/.zprofile` 写入配置
-- csh: `~/.cshrc` 写入配置
 - tcsh: `~/.tcshrc` 写入配置
 
 
