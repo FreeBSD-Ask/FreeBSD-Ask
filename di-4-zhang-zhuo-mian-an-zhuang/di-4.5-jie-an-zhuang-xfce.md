@@ -109,14 +109,9 @@ FreeBSD 的 xfce 邮箱客户端推荐用 `mail/evolution`，可搭配 `xfce4-ma
 
 ## XTerm 终端动态标题
 
-配置路径：
-
-- sh: `~/.shrc`
-- csh `~/.cshrc`
-- tcsh: `~/.tcshrc` 
-- bash：`~/.bashrc`
-  
 ### sh
+
+编辑 `~/.shrc`，写入：
 
 ```sh
 if [ -t 1 ]; then       
@@ -135,6 +130,8 @@ fi
 
 ### csh
 
+编辑 `~/.cshrc`，写入：
+
 ```sh
 if ( $?TERM && $TERM =~ xterm* ) then
     set host = `hostname`      
@@ -143,6 +140,8 @@ endif
 ```
 
 ### tcsh
+
+编辑 `~/.tcshrc`，写入：
 
 ```sh
 switch ($TERM)
@@ -157,6 +156,8 @@ endsw
 
 ### bash
 
+编辑 `~/.bashrc`，写入：
+
 ```sh
 case $TERM in
          xterm*)
@@ -169,6 +170,8 @@ case $TERM in
 ```
 
 ### zsh
+
+编辑 `~/.zshrc`，写入：
 
 ```sh
 autoload -Uz add-zsh-hook
