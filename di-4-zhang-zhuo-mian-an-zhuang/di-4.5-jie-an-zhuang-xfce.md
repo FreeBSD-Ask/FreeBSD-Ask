@@ -110,7 +110,7 @@ FreeBSD 的 xfce 邮箱客户端推荐用 `mail/evolution`，可搭配 `xfce4-ma
 ## XTerm 终端动态标题
 
 
-- sh: `~/.profile` 写入配置
+- sh: `~/.shrc` 写入配置
 - bash: `~/.bash_profile` 或 `~/.profile` 写入配置
 - zsh: `~/.zprofile` 写入配置
 - csh: `~/.cshrc` 写入配置
