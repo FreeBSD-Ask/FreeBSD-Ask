@@ -15,6 +15,7 @@
 * [第 1.3 节 谁在使用 FreeBSD？](di-1-zhang-zou-jin-freebsd/di-1.3-who-using-bsd.md)
 * [第 1.4 节 为什么要使用 FreeBSD？](di-1-zhang-zou-jin-freebsd/di-1.4-jie-wei-shi-mo-yao-shi-yong-freebsd.md)
 * [第 1.5 节 Linux 用户迁移指南](di-1-zhang-zou-jin-freebsd/di-1.5-jie-linux-yong-hu-qian-yi-zhi-bei.md)
+* [第 1.6 节 FreeBSD 桌面发行版](di-2-zhang-an-zhuang-freebsd/1.6-others-bsd.md)
 
 ## 第 2 章 安装 FreeBSD
 
@@ -29,9 +30,8 @@
 * [第 2.9 节 安装 FreeBSD——基于 Apple M1 & Parallels Desktop 20](di-2-zhang-an-zhuang-freebsd/di-2.9-jie-apple.md)
 * [第 2.10 节 安装 FreeBSD——基于 Apple M1 & VMware Fusion Pro](di-2-zhang-an-zhuang-freebsd/di-2.10-jie-apple.md)
 * [第 2.11 节 Qemu 安装 RISC-V FreeBSD（基于 x86 Windows）](di-2-zhang-an-zhuang-freebsd/di-2.11-qemu.md)
-* [第 2.12 节 FreeBSD 桌面发行版](di-2-zhang-an-zhuang-freebsd/2.12-others-bsd.md)
+* [第 2.12 节 云服务器安装 FreeBSD（基于腾讯云轻量云）](di-2-zhang-an-zhuang-freebsd/di-2.12-jie-teng-xun-yun-qing-liang-yun-ji-qi-ta-fu-wu-qi-dd-an-zhuang-freebsd.md)
 * [第 2.13 节 安装 FreeBSD——基于 Hyper-V](di-2-zhang-an-zhuang-freebsd/di-2.13-hyper-v-jie.md)
-* [第 2.14 节 云服务器安装 FreeBSD（基于腾讯云轻量云）](di-2-zhang-an-zhuang-freebsd/di-2.14-jie-teng-xun-yun-qing-liang-yun-ji-qi-ta-fu-wu-qi-dd-an-zhuang-freebsd.md)
 
 ## 第 3 章 包管理器与 FreeBSD 系统更新
 
