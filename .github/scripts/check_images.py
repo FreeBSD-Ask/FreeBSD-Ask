@@ -25,7 +25,7 @@ used_images = set()
 for md_file in md_files:
     md_path = Path(md_file)
     content = md_path.read_text(encoding='utf-8')
-    
+
     for match in image_pattern.findall(content):
         img_path = match.strip().replace('\\', '/')
         if any(img_path.startswith(p) for p in ('http://', 'https://', '//')):
@@ -36,7 +36,7 @@ for md_file in md_files:
             abs_path = Path(repo_root) / img_path[1:]
         else:
             abs_path = (md_path.parent / img_path).resolve()
-        
+
         try:
             rel_path = abs_path.relative_to(repo_root).as_posix()
             used_images.add(rel_path)
@@ -55,17 +55,18 @@ for root, _, files in os.walk(assets_dir):
 missing_images = sorted(used_images - existing_images)
 unused_images = sorted(existing_images - used_images)
 
-# 生成报告
-report = []
-if missing_images:
-    report.append("## ❌ 缺失图片\n")
-    report.extend(f"- `{img}`" for img in missing_images)
-if unused_images:
-    report.append("\n## ⚠️ 未使用的图片\n")
-    report.extend(f"- `{img}`" for img in unused_images)
-
-if report:
-    report_content = "# 图片引用检查报告\n\n" + "\n".join(report)
-    Path('image-report.md').write_text(report_content, encoding='utf-8')
+# 生成报告（仅在有问题时）
+if missing_images or unused_images:
+    report = ["# 图片引用检查报告\n"]
+    if missing_images:
+        report.append("## ❌ 缺失图片\n")
+        report.extend(f"- `{img}`" for img in missing_images)
+    if unused_images:
+        report.append("\n## ⚠️ 未使用的图片\n")
+        report.extend(f"- `{img}`" for img in unused_images)
+    Path('image-report.md').write_text("\n".join(report), encoding='utf-8')
 else:
-    Path('image-report.md').write_text("✅ 所有图片状态均正常！")
+    # 如果正常，确保之前生成的报告不会误留
+    report_path = Path('image-report.md')
+    if report_path.exists():
+        report_path.unlink()
