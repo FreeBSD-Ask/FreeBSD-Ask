@@ -572,8 +572,8 @@ Add Users
 Username: ykla # 此处输入用户名
 Full name: # 此处输入用户全名
 Uid (Leave empty for default):  # 用户 UID
-Login group [ykla]: # 用户组
-Login group is ykla. Invite ykla into other groups? []: wheel # 此处输入“wheel”，邀请用户“ykla”加入“wheel”以便于使用
+Login group [ykla]: # 用户主组
+Login group is ykla. Invite ykla into other groups? []: wheel # 此处输入“wheel”，邀请用户“ykla”加入附加组“wheel”以便于使用命令 su
 Login class [default]: # 用户分级
 Shell (sh csh tcsh nologin) [sh]: # 用户默认 shell
 Home directory [/home/ykla]: # 用户家目录
