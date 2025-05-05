@@ -990,19 +990,3 @@ FreeBSD 的设计更接近传统 UNIX 的行为。
 >
 >关机与重启都需要 root 权限才能执行。
 
-## UNIX 与 Windows 文件名规范之差异
-
-许多在 FreeBSD 中可用的文件或文件名在 Windows 中都是不被允许的（即非法字符）。这些你经常会碰到——如果你使用 Git 在 Windows 上拉取项目。
-
-在这里仅列出一些笔者遇到过的：
-
-- 不能出现英文冒号 `:`
-- 不能叫 `con`
-
-更多要求，参见微软官方文档[命名文件、路径和命名空间](https://learn.microsoft.com/zh-cn/windows/win32/fileio/naming-a-file)。
-
->**技巧**
->
->你可以在 Windows 下使用 git 工具拉取 [freebsd-doc](https://github.com/freebsd/freebsd-doc) 项目试试看能否成功。我已经报告过 Bug。
->
->[The colon in the file name of the security report of the FreeBSD doc is not compatible with Microsoft Windows](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=267636)
