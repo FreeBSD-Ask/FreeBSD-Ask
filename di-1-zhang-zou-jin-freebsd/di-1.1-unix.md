@@ -170,7 +170,7 @@ Free 则代表 Liberty 式自由和免费两种含义。
 
 FreeBSD 未进行过 UNIX 认证，从版权角度来看，FreeBSD 的确不是 UNIX。但从历史来看 FreeBSD 可以被视为 UNIX 的直系后裔。
 
-BSD 操作系统并非克隆产物，而是 AT&T 研究 UNIX（Research Unix）操作系统的开源衍生版本，也是现代 UNIX® System V 的祖先。在 4.4BSD 以前，BSD 全称为 BSD UNIX。
+BSD 操作系统并非复制品，而是 AT&T 研究 UNIX（Research Unix）操作系统的开源衍生版本，也是现代 UNIX® System V 的祖先。在 4.4BSD 以前，BSD 全称为 BSD UNIX。
 
 FreeBSD 官方的口号是 `The Power To Serve`（服务的力量）。
 
