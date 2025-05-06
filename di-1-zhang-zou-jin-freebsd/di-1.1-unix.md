@@ -105,13 +105,23 @@ Multics 意图创造强悍的新软件和比肩 IBM 7094 功能更丰富的新�
 
 ## 什么是 Unix-like？
 
-Unix-like 即类 Unix，亦即一切基于 UNIX 的操作系统，基本遵守 POSIX 规范，而没有获得第一节中所说的 UNIX 的认证。
+Unix-like 即类 Unix，亦即一切符合 UNIX 标准的操作系统，基本遵守 POSIX 规范，而没有获得第一节中所说的 UNIX 的认证。
 
 也就是说，除了 Windows，基本上世界上大多数操作系统都被叫做 Unix-like，其中就包括 Linux 和 FreeBSD。
 
 ## 什么是 Linux？
 
-UNIX 标准 SUS 包含了 POSIX 标准，是其超集。Linux 实现了 POSIX 标准，但是未进行 [POSIX 认证](http://get.posixcertified.ieee.org/)。本质上说 Linux 最初是 UNIX 的一款仿制品。
+Linux 受启发于 Minix（UNIX 版权限制下的产物），一款设计用于教学的微内核操作系统。
+
+>**技巧**
+>
+>现在，几乎每颗英特尔处理器上都运行着 Minix。
+>
+>~~或许 Minix 才是世界上最流行的操作系统~~
+
+UNIX 标准 SUS 包含了 POSIX 标准，是其超集。Linux 实现了 POSIX 标准，但是未进行 [POSIX 认证](http://get.posixcertified.ieee.org/)。
+
+本质上说 Linux 是 UNIX 的一种仿制品或者说克隆产物（类似于人与机器人的关系）。
 
 Linux 之名来自 Linux 之父 Linus Torvalds。
 
@@ -144,7 +154,7 @@ Linux 全称为 GNU/Linux；
 
 ## 什么是 FreeBSD？
 
-FreeBSD 不是 Linux。
+FreeBSD 不是 Linux。FreeBSD 也不是 UNIX 的克隆产物。
 
 ![](../.gitbook/assets/nolinux.png)
 
@@ -152,7 +162,7 @@ FreeBSD 不是 Linux。
 
 BSD 最初是由加州大学伯克利分校（University of California, Berkeley）所开发的，意为 `Berkeley Software Distribution`（伯克利软件套件）。FreeBSD 未进行过 UNIX 认证，从版权角度来看，FreeBSD 的确不是 UNIX。但从历史来看 FreeBSD 可以被视为 UNIX 的直系后裔。
 
-BSD 操作系统并非克隆产物，而是 AT&T 研究 UNIX（Research Unix）操作系统的开源衍生版本，也是现代 UNIX® System V 的祖先。
+BSD 操作系统并非克隆产物，而是 AT&T 研究 UNIX（Research Unix）操作系统的开源衍生版本，也是现代 UNIX® System V 的祖先。在 4.4BSD 以前，BSD 全称为 BSD UNIX。
 
 FreeBSD 官方的口号是 `The Power To Serve`（服务的力量）。
 
