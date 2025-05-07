@@ -62,7 +62,7 @@ Ubuntu 吧前吧主 Simple 曾建议修改项目的章节文件名与许可协�
 - [peiyafei](https://github.com/peiyafei)  
 - [pengxingwei](https://github.com/pengxingwei)  
 - [puffinjiang](https://github.com/puffinjiang)  
-- 清和 [(GitHub)](https://github.com/qinghecyn)  
+- 清和 [qinghecyn](https://github.com/qinghecyn)  
 - 清热解毒口服液  
 - [Rintim](https://github.com/Rintim)  
 - [ruur](https://github.com/ruur)  
