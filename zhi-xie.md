@@ -41,7 +41,6 @@ Ubuntu 吧前吧主 Simple 曾建议修改项目的章节文件名与许可协�
 - [fjh1997](https://github.com/fjh1997)  
 - freyr  
 - [gua-leopard](https://github.com/gua-leopard)
-- hangyongcong  
 - heguru5  
 - isNijikawa  
 - Jack  
