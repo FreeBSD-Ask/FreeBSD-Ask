@@ -29,7 +29,7 @@
 
 修改 `/usr/local/share/rime-date` 目录下 `default.yaml` 文件：打开 `default.yaml` 找到 `schema_lis`，下面第一行添加 `- schema: wubi98`（注意保持缩进），并删除其他方案，如下所示：
 
-```ymal
+```sh
 # Rime default settings
 # encoding: utf-8
 
