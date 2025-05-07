@@ -220,6 +220,29 @@ ls: invalid option -- z
 usage: ls [-ABCFGHILPRSTUWZabcdfghiklmnopqrstuvwxy1,] [--color=when] [-D format] [--group-directories=] [file ...]
 ```
 
+>**技巧**
+>
+>Windows 不仅文件大小写不敏感，命令的大小写也不敏感。
+>
+>```powershell
+>PS C:\Users\ykla> cd C:\ # 这里 cd 是小写
+>PS C:\> CD D:\ # 这里 CD 是大写
+>PS D:\> CD c:\ # 这里 C 盘是小写
+>PS C:\> dir # 小写 dir，列出目录，等于 ls
+>
+>    目录: C:\
+>
+> ……省略一部分……
+>
+>PS C:\Users\ykla> TREE # 大写 tree，显示路径关系
+>文件夹 PATH 列表
+>卷序列号为 2A90-E989
+>C:.
+>├─.android
+>├─.cache
+>│  ├─selenium
+>……省略一部分……
+>```
 
 > **技巧**
 >
@@ -345,13 +368,15 @@ cp: test9: No such file or directory
 
 我们的命令是运行在 shell 中的，通过 shell 与系统进行交互。
 
-FreeBSD 默认的 shell 是 sh（Bourne shell，作者名为 Stephen R. Bourne）。基本符合 [POSIX.1-2024](https://pubs.opengroup.org/onlinepubs/9799919799/utilities/V3_chap02.html) 中对 shell 的规范。
+FreeBSD 默认的 shell 是 sh（Bourne shell，原作者名为 Stephen R. Bourne）。目前已经重写过了，现基本符合 [POSIX.1-2024](https://pubs.opengroup.org/onlinepubs/9799919799/utilities/V3_chap02.html) 中对 shell 的规范。
 
 Linux 中常见的 shell 一般是 bash（Bourne Again SHell，即“又一个 Bourne shell”）。而 macOS 中的默认 shell 通常是 zsh（Z shell）。
 
 >**注意**
 >
 >Linux 中也存在 sh，但是一般都是被软链接到了 bash 或其他 shell，她们都不是真正的 sh。
+>
+>- Ubuntu 24.04 LTS 的默认 shell：
 >
 >```bash
 >$ ls -l /bin/sh
