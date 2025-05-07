@@ -2,7 +2,7 @@ name: 🔗 创建并发布 PDF
 
 on:
   schedule:
-    - cron: '30 15 * * *'  # 每天 UTC 时间 15:30 运行一次
+    - cron: '30 15 */7 * *'  # 每 7 天在 UTC 时间 15:30 运行一次
   workflow_dispatch:  # 允许手动触发
 
 jobs:
