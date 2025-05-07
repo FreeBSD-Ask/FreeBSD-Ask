@@ -220,6 +220,29 @@ ls: invalid option -- z
 usage: ls [-ABCFGHILPRSTUWZabcdfghiklmnopqrstuvwxy1,] [--color=when] [-D format] [--group-directories=] [file ...]
 ```
 
+>**技巧**
+>
+>Windows 不仅文件大小写不敏感，命令的大小写也不敏感。
+>
+>```powershell
+>PS C:\Users\ykla> cd C:\ # 这里 cd 是小写
+>PS C:\> CD D:\ # 这里 CD 是大写
+>PS D:\> CD c:\ # 这里 C 盘是小写
+>PS C:\> dir # 小写 dir，列出目录，等于 ls
+>
+>    目录: C:\
+>
+> ……省略一部分……
+>
+>PS C:\Users\ykla> TREE # 大写 tree，显示路径关系
+>文件夹 PATH 列表
+>卷序列号为 2A90-E989
+>C:.
+>├─.android
+>├─.cache
+>│  ├─selenium
+>……省略一部分……
+>```
 
 > **技巧**
 >
