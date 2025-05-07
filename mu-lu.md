@@ -1,4 +1,4 @@
-# 目录
+# Table of contents
 
 * [FreeBSD 从入门到追忆（第三版：草稿）](README.md)
 * [编辑日志](CHANGELOG.md)
@@ -6,6 +6,7 @@
 * [致谢](zhi-xie.md)
 * [初版序言：好望角与塔吊](xu-yan-1.md)
 * [再版序言：回到复制粘贴，面向教程本身](xu-ya-2.md)
+* [三版序言：且有大觉而后知此其大梦也（草稿）](xu-yan-3.md)
 * [前言](qian-yan.md)
 
 ## 第 1 章 FreeBSD 初见
