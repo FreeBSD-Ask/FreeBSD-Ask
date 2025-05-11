@@ -75,15 +75,6 @@ KDE 旨在开发一套现代桌面系统，如果你觉得 KDE 界面很像 Wind
 
 > 如果你在 root 下已经执行过了，那么新用户仍要再执行一次才能正常使用（无需 root 权限或 sudo 等）`startx`。
 
-
-## 基于 Wayland
-
-- 在前文的基础上，把 `/usr/local/share/xsessions/plasmax11.desktop` 中的 `/usr/local/bin/startplasma-x11` 都改成 `/usr/local/bin/startplasma-wayland`。重启即可。
-
-- 或者在 SDDM 左下角选择 Wayland，物理机默认应该就是。
-
-![KDE 6 wayland FreeBSD](../.gitbook/assets/kde6-3.png)
-
 ## 权限设置
 
 普通用户还需要将用户加入 wheel 组（或 `video` 组）：
