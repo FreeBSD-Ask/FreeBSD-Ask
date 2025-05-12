@@ -60,7 +60,7 @@ jobs:
             libpango-1.0-0 \
             libpangoft2-1.0-0 \
             libpangocairo-1.0-0
-          pip install weasyprint mistune pygments
+          pip install weasyprint mistune pygments EbookLib beautifulsoup4
 
       # ================= PDF 生成部分 =================
       - name: 生成 PDF 文档
@@ -68,6 +68,7 @@ jobs:
           cd pdf-generator
           python mdconv.py ../FreeBSD-Ask
           mv build/final.pdf build/$(date +'%Y.%m.%d').pdf
+          mv build/final.epub build/$(date +'%Y.%m.%d').epub
         env:
           PYTHONPATH: ${{ github.workspace }}/pdf-generator
 
@@ -117,6 +118,7 @@ jobs:
           name: ${{ env.RELEASE_TAG }}
           artifacts: |
             pdf-generator/build/${{ env.RELEASE_TAG }}.pdf
+            pdf-generator/build/${{ env.RELEASE_TAG }}.epub
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: 更新 Release 说明
