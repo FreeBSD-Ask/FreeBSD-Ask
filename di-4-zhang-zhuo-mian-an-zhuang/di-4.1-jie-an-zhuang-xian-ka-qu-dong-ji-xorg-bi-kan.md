@@ -101,13 +101,13 @@ FreeBSD 15 CURRENT，编译使用 `drm-66-kmod`，支持情况同 Linux 6.6。
 
 ### AMD
 
-  - 如果是 HD7000 以后的 AMD 显卡，添加 `amdgpu`（大部分人应该使用这个，如果没用再换 `radeonkms`）
+- 如果是 HD7000 以后的 AMD 显卡，添加 `amdgpu`（大部分人应该使用这个，如果没用再换 `radeonkms`）
 
     ```sh
     # sysrc -f /etc/rc.conf kld_list+=amdgpu
     ```
 
-  - 如果是 HD7000 以前的 AMD 显卡，添加 `kld_list="radeonkms"`（这是十多年前的显卡了）
+- 如果是 HD7000 以前的 AMD 显卡，添加 `kld_list="radeonkms"`（这是十多年前的显卡了）
 
     ```sh
     # sysrc -f /etc/rc.conf kld_list+=radeonkms

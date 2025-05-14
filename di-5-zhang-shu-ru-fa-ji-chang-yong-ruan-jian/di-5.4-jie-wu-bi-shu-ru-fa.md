@@ -50,7 +50,7 @@ schema_list:
 ## Fcitx 5
 
 
-### 安装 Fcitx 5 
+### 安装 Fcitx 5
 
 ```sh
 # pkg install fcitx5 fcitx5-qt5 fcitx5-qt6 fcitx5-gtk2 fcitx5-gtk3 fcitx5-gtk4 fcitx5-configtool-qt5 fcitx5-configtool-qt6 zh-fcitx5-chinese-addons 
