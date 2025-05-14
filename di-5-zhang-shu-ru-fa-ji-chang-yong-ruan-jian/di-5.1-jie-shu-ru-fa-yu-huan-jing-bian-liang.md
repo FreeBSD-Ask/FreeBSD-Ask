@@ -6,9 +6,9 @@
 2. lightdm gdm 可以在 `~/.profile` 中写入；
 3. sddm 可以在用户登录 shell 配置文件中写入；
 
---- 
+---
 
-- sh: `~/.profile` 
+- sh: `~/.profile`
 - bash: `~/.bash_profile` 或 `~/.profile`
 - zsh: `~/.zprofile`
 - csh: `~/.cshrc`

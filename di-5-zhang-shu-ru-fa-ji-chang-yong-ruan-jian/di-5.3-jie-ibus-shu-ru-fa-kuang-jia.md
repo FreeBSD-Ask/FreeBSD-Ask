@@ -69,7 +69,7 @@ setenv XIM_ARGS "--daemonize --xim"
 $ ibus-setup
 ```
 
---- 
+---
 
 IBus 对编码（须 `UTF-8`）有要求，但对区域（如 `C.UTF-8` 还是 `zh_CN.UTF-8`）并无要求。
 
