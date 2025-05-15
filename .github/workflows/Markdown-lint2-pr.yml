@@ -13,7 +13,7 @@ jobs:
       with:
         files: '**/*.md'
         separator: ","
-    - uses: DavidAnson/markdownlint-cli2-action@v19
+    - uses: DavidAnson/markdownlint-cli2-action@v20
       continue-on-error: true
       if: steps.changed-files.outputs.any_changed == 'true'
       with:
