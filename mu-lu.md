@@ -73,7 +73,7 @@
 * [第 5.2 节 Fcitx 输入法框架](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.2-jie-fcitx-shu-ru-fa-kuang-jia.md)
 * [第 5.3 节 IBus 输入法框架](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.3-jie-ibus-shu-ru-fa-kuang-jia.md)
 * [第 5.4 节 五笔输入法](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.4-jie-wu-bi-shu-ru-fa.md)
-* [第 5.5 节 Firefox 与 Chromium](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.5-jie-firefox-yu-chromium-an-zhuang.md)
+* [第 5.5 节 网络浏览器](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.5-jie-firefox-yu-chromium-an-zhuang.md)
 * [第 5.6 节 QQ（Linux 版）](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.6-jie-an-zhuang-qq.md)
 * [第 5.7 节 更换字体](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.7-jie-geng-huan-zi-ti.md)
 * [第 5.8 节 金山 WPS（Linux 版）](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.8-jie-an-zhuang-jin-shan-wps.md)
