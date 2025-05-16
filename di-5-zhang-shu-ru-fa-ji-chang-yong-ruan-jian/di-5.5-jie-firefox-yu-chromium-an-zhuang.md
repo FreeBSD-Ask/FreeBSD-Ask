@@ -55,6 +55,21 @@ Chromium 不是 chrome，但在 FreeBSD 中启动命令是 `chrome`。
 >
 > 要编译 Chromium，你必须拥有至少 12G 内存，或等量的交换分区 + 内存。
 
+## Chrome（Linux 兼容层）
+
+- 使用 pkg 安装
+
+```sh
+# pkg install linux-chrome
+```
+
+- 或者使用 Ports
+
+```sh
+# cd /usr/ports/www/linux-chrome/ 
+# make install clean
+```
+
 
 
 ## 附录：Chromium 使用 Google 账号同步
