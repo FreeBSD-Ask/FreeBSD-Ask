@@ -4,6 +4,8 @@
 
 ## 2025 年第二季度
 
+- 2025.5.17
+  - 删除“第 21.2 节 Linux 兼容层——基于 CentOS（FreeBSD Port）”，过时
 - 2025.5.16
   - 录制视频[FreeBSD 14.2 基础安装配置教程](https://www.bilibili.com/video/BV1STExzEEhh)
 - 2025.5.12
