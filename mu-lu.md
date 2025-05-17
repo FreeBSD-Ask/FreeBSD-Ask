@@ -1,4 +1,4 @@
-# 目录
+# Table of contents
 
 * [FreeBSD 从入门到追忆（第一版：草稿）](README.md)
 * [编辑日志](CHANGELOG.md)
@@ -211,14 +211,14 @@
 
 * [第 21.1 节 Linux 兼容层实现](di-21-zhang-linux-jian-rong-ceng/di-21.1-jie-linux-jian-rong-ceng-shi-xian.md)
 * [第 21.2 节 RockyLinux 兼容层（FreeBSD Port）](di-21-zhang-linux-jian-rong-ceng/di-21.2-jie-rocky9-jian-rong-ceng.md)
-* [第 21.3 节 Linux 兼容层——基于 Ubuntu/Debian](di-21-zhang-linux-jian-rong-ceng/di-21.3-jie-linux-jian-rong-ceng-ji-yu-ubuntudebian.md)
-* [第 21.4 节 Linux 兼容层——基于 ArchLinux bootstrap](di-21-zhang-linux-jian-rong-ceng/di-21.4-jie-linux-jian-rong-ceng-ji-yu-archlinux-bootstrap.md)
-* [第 21.5 节 Linux 兼容层——基于 archlinux-pacman](di-21-zhang-linux-jian-rong-ceng/di-21.5-jie-linux-jian-rong-ceng-ji-yu-archlinuxpacman.md)
-* [第 21.6 节 Linux 兼容层——基于 OpenSUSE](di-21-zhang-linux-jian-rong-ceng/di-21.6-jie-linux-jian-rong-ceng-ji-yu-opensuse.md)
-* [第 21.7 节 Linux 兼容层——基于 Gentoo Linux](di-21-zhang-linux-jian-rong-ceng/di-21.7-jie-linux-jian-rong-ceng-ji-yu-gentoo-linux.md)
-* [第 21.8 节 Linux 兼容层——基于 Rocky Linux](di-21-zhang-linux-jian-rong-ceng/di-21.8-jie-linux-jian-rong-ceng-ji-yu-rocky-linux.md)
-* [第 21.9 节 Linux 兼容层——基于 Slackware Linux](di-21-zhang-linux-jian-rong-ceng/di-21.9-jie-linux-jian-rong-ceng-ji-yu-slackware-linux.md)
-* [第 21.10 节 Linux 兼容层——基于 Deepin](di-21-zhang-linux-jian-rong-ceng/di-21.10-jie-linux-jian-rong-ceng-ji-yu-deepin.md)
+* [第 21.3 节 Ubuntu/Debian 兼容层](di-21-zhang-linux-jian-rong-ceng/di-21.3-jie-linux-jian-rong-ceng-ji-yu-ubuntudebian.md)
+* [第 21.4 节 ArchLinux 兼容层（基于 ArchLinux bootstrap）](di-21-zhang-linux-jian-rong-ceng/di-21.4-jie-linux-jian-rong-ceng-ji-yu-archlinux-bootstrap.md)
+* [第 21.5 节 ArchLinux 兼容层（基于 archlinux-pacman）](di-21-zhang-linux-jian-rong-ceng/di-21.5-jie-linux-jian-rong-ceng-ji-yu-archlinuxpacman.md)
+* [第 21.6 节 OpenSUSE 兼容层](di-21-zhang-linux-jian-rong-ceng/di-21.6-jie-linux-jian-rong-ceng-ji-yu-opensuse.md)
+* [第 21.7 节 Gentoo Linux 兼容层](di-21-zhang-linux-jian-rong-ceng/di-21.7-jie-linux-jian-rong-ceng-ji-yu-gentoo-linux.md)
+* [第 21.8 节 Rocky Linux 兼容层](di-21-zhang-linux-jian-rong-ceng/di-21.8-jie-linux-jian-rong-ceng-ji-yu-rocky-linux.md)
+* [第 21.9 节 Slackware Linux 兼容层](di-21-zhang-linux-jian-rong-ceng/di-21.9-jie-linux-jian-rong-ceng-ji-yu-slackware-linux.md)
+* [第 21.10 节 Deepin 兼容层](di-21-zhang-linux-jian-rong-ceng/di-21.10-jie-linux-jian-rong-ceng-ji-yu-deepin.md)
 * [第 21.11 节 Linux 兼容层与 Jail](di-21-zhang-linux-jian-rong-ceng/di-21.11-jie-gao-ji-jiao-cheng-linux-jian-rong-ceng-yu-jail.md)
 * [第 21.12 节 Linux 兼容层故障排除与未竟事宜](di-21-zhang-linux-jian-rong-ceng/di-21.12-jie-linux-jian-rong-ceng-gu-zhang-pai-chu-yu-pei-zhi.md)
 
