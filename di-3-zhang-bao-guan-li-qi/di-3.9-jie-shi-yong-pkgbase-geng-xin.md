@@ -48,7 +48,20 @@ FreeBSD-base: {
 end
 ```
 
-将软件源信息替换为下列镜像站中的任何一个：
+将软件源信息替换为下列镜像站中的任何一个，例如：
+
+```lua
+function create_base_repo_conf(path)
+	assert(os.execute("mkdir -p " .. path:match(".*/")))
+	local f <close> = assert(io.open(path, "w"))
+	assert(f:write([[
+FreeBSD-base: {
+  url: "https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/base_latest",
+  enabled: yes
+}
+]]))
+end
+```
 
 
 ### 南京大学开源镜像站 NJU
