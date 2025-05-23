@@ -4,8 +4,6 @@ FreeBSD 是真正自由（Liberty）的**操作系统**，在这波谲云诡的�
 
 请参与 [FreeBSD 中文社区 2025 年第二季度问卷调查](https://www.wjx.cn/vm/ebuJRkf.aspx# )
 
-**此分支为社区版本，更多跑路的内容可参见 <https://book.bsdasia.org>**
-
 ## 关于
 
 ### 内容提要
