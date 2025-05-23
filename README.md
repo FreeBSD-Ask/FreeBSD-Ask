@@ -1,10 +1,8 @@
-# FreeBSD 从入门到追忆（第一版：草稿）
+# FreeBSD 从入门到追忆（第三版：草稿）
 
 FreeBSD 是真正自由（Liberty）的**操作系统**，在这波谲云诡的世界中仍然坚守 BSD UNIX 哲学——恪守古老的法则，追寻真正的自由。
 
 请参与 [FreeBSD 中文社区 2025 年第二季度问卷调查](https://www.wjx.cn/vm/ebuJRkf.aspx# )
-
-**此分支为社区版本，去除 ykla 个人观点，保留中立内容。该分支转为社区维护，欢迎 PR。**
 
 ## 关于
 
@@ -37,7 +35,7 @@ FreeBSD 是真正自由（Liberty）的**操作系统**，在这波谲云诡的�
 
 可使用 [safreya](https://github.com/safreya) 编写的 [Python 脚本](https://github.com/FreeBSD-Ask/gitbook-pdf-export)来导出 PDF。
 
-此外，每日都会通过 GitHub Action 导出 PDF 于 [releases](https://github.com/FreeBSD-Ask/FreeBSD-Ask/releases)（也许需要代理）。
+此外，每周都会通过 GitHub Action 导出 PDF 于 [releases](https://github.com/FreeBSD-Ask/FreeBSD-Ask/releases)（也许需要代理）。
 
 ## 捐赠
 
