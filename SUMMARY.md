@@ -110,7 +110,7 @@
 * [第 9.2 节 Jail 更新](di-9-zhang-jail/di-9.2-jie-jail-geng-xin.md)
 * [第 9.3 节 使用 Qjail 管理 Jail](di-9-zhang-jail/di-9.3-jie-shi-yong-qjail-guan-li-jail.md)
 
-## 第 10 章 虚拟化
+## 第 10 章 虚拟化与容器
 
 * [第 10.1 节 通过 BVCP 以网页管理 BHyve](di-10-zhang-xu-ni-hua/di-10.1.md)
 * [第 10.2 节 使用 bhyve 安装 Windows 11（vm-bhyve）](di-10-zhang-xu-ni-hua/di-10.2-jie-shi-yong-bhyve-an-zhuang-windows-10.md)
