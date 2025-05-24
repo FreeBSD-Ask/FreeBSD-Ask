@@ -6,16 +6,26 @@
 
 现在是一种 **标准规范**、一款 **法律上的商标**。更是一种 **哲学思想**，一项 **软件工程原则。**
 
+---
+
+查询美国专利商标局 UNIX 商标注册情况：
+
+![法律上的商标](../.gitbook/assets/usshangbiao.png)
+
+---
+
 UNIX 认证查询网址：[The Open Group official register of UNIX Certified Products](http://www.opengroup.org/openbrand/register)
+
+![The Open Group official register of UNIX Certified Products](../.gitbook/assets/unixrenzheng.png)
+
 
 现在，我们可以知道认证 UNIX 需要：
 
 1. [符合单一 UNIX 规范](https://www.opengroup.org/openbrand/register/xym0.htm)
 2. 交钱认证
 
-![The Open Group official register of UNIX Certified Products](../.gitbook/assets/unixrenzheng.png)
 
-可以看到，常见的，经过认证的 UNIX 操作系统有 Apple  macOS。即从商标的角度上讲，macOS 可以称得上是标准的 UNIX 操作系统。~~故，要安装 UNIX 的人可以去黑苹果了~~
+可以看到，常见的，经过认证的 UNIX 操作系统有 Apple macOS。即从商标的角度上讲，macOS 可以称得上是标准的 UNIX 操作系统。~~故，要安装 UNIX 的人可以去黑苹果了~~
 
 >**技巧**
 >
