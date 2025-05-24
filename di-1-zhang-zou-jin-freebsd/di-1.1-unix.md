@@ -6,6 +6,14 @@
 
 现在是一种 **标准规范**、一款 **法律上的商标**。更是一种 **哲学思想**，一项 **软件工程原则。**
 
+---
+
+查询美国专利商标局 UNIX 商标注册情况：
+
+![法律上的商标](../.gitbook/assets/usshangbiao.png)
+
+---
+
 UNIX 认证查询网址：[The Open Group official register of UNIX Certified Products](http://www.opengroup.org/openbrand/register)
 
 现在，我们可以知道认证 UNIX 需要：
