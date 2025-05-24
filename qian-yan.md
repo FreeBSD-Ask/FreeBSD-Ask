@@ -130,7 +130,7 @@ Windows 测试环境为 Windows 10、11，并尽量使用最新版本的 Windows
 | ![UNIX 网络编程 卷 1：套接字联网 API（第 3 版）](./.gitbook/assets/unix1.png) | 《UNIX 网络编程 卷 1：套接字联网 API（第 3 版）》 | W. Richard Stevens、Bill Fenner、Andrew M. Rudoff | 9787115367198 | 人民邮电出版社 | 如何使用套接字 API 进行网络编程 |
 | ![UNIX 网络编程 卷 2：进程间通信（第 2 版）](./.gitbook/assets/unix2.png) | 《UNIX 网络编程 卷 2：进程间通信（第 2 版）》 | W. Richard Stevens | 9787115367204 | 人民邮电出版社 | 深入了解各种进程间通信形式。**这书原作者没出第 3 版，不用再找了** |
 | ![深入理解 UNIX 系统内核](./.gitbook/assets/unixinternals.png) | 《深入理解 UNIX 系统内核》 | Uresh Vahalia | 9787111491453 | 机械工业出版社 | UNIX 内核基础 |
-| ![UNIX 二十五年](./.gitbook/assets/unix25.png.png) | A Quarter Century of UNIX |  Peter H. Salus | 9780201547771| Addison-Wesley Professional | 历史书，中译本在[此](https://zhangyangjing.gitbooks.io/a-quarter-century-of-unix-zh/content/) |
+| ![UNIX 二十五年](./.gitbook/assets/unix25.png) | A Quarter Century of UNIX |  Peter H. Salus | 9780201547771| Addison-Wesley Professional | 历史书，中译本在[此](https://zhangyangjing.gitbooks.io/a-quarter-century-of-unix-zh/content/) |
 
 ### 选读书目
 
