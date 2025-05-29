@@ -17,6 +17,7 @@
 * [第 1.4 节 为什么要使用 FreeBSD？](di-1-zhang-zou-jin-freebsd/di-1.4-jie-wei-shi-mo-yao-shi-yong-freebsd.md)
 * [第 1.5 节 Linux 用户迁移指南](di-1-zhang-zou-jin-freebsd/di-1.5-jie-linux-yong-hu-qian-yi-zhi-bei.md)
 * [第 1.6 节 FreeBSD 桌面发行版](di-1-zhang-zou-jin-freebsd/1.6-others-bsd.md)
+* [第 1.7 节 BSD 许可证概览](di-1-zhang-zou-jin-freebsd/1.7-xukez.md)
 
 ## 第 2 章 安装 FreeBSD
 
