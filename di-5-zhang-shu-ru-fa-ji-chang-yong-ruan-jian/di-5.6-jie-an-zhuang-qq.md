@@ -27,14 +27,14 @@
 - 下载 QQ，官方链接：[QQ Linux 版 - 轻松做自己](https://im.qq.com/linuxqq/index.shtml)
 
 ```sh
-# fetch https://dldir1.qq.com/qqfile/qq/QQNT/Linux/QQ_3.2.16_250401_x86_64_01.rpm # 写作本文时链接如此，请自行获取最新链接
+# fetch https://dldir1.qq.com/qqfile/qq/QQNT/Linux/QQ_3.2.17_250521_x86_64_01.rpm # 写作本文时链接如此，请自行获取最新链接
 ```
 
 - 安装 QQ：
 
 ```sh
 root@ykla:/ # cd /compat/linux/
-root@ykla:/compat/linux # rpm2cpio < /home/ykla/QQ_3.2.16_250401_x86_64_01.rpm | cpio -id # 注意把 QQ 所在路径改成你自己的
+root@ykla:/compat/linux # rpm2cpio < /home/ykla/QQ_3.2.17_250521_x86_64_01.rpm | cpio -id # 注意把 QQ 所在路径改成你自己的
 ./usr/share/icons/hicolor/512x512/apps/qq.png: Cannot extract through symlink usr/share/icons/hicolor/512x512/apps/qq.png
 1055863 blocks
 ```
