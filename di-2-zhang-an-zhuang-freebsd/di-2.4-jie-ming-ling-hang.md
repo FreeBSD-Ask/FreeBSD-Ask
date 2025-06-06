@@ -18,12 +18,12 @@
 
 只要人们觉得用的快乐与开心，有什么不好呢？人们总是强调，这些是知识，应该背过。真正的问题在于，什么是知识？知识和学位是挂钩的吗？那你如何解释大多数本科毕业生分不清显示器与主机？
 
-美国哲学家 B.F. Skinner 说过“教育就是当一个人把在学校所学全部忘光之后剩下的东西。”同样，如果你看完本文之后全部都忘了，只知道用 Ai 看命令怎么用的话，你已经成功地掌握了本文。
+美国哲学家 B.F. Skinner 说过“教育就是当一个人把在学校所学全部忘光之后剩下的东西。”同样，如果你看完本文之后全部都忘了，只知道用 AI 看命令怎么用的话，你已经成功地掌握了本文。
 
 ### 参考文献
 
 - [【文汇报】何积丰：以“积”累迎来“丰”收](https://www.cas.cn/xw/cmsm/201404/t20140402_4084616.shtml)，和年轻人一样，71 岁的何院士现在也在使用智能手机
-- [New methods and new aims in teaching](https://www.bfskinner.org/wp-content/uploads/2014/02/New-Methods-aims-in-Teach.pdf)，这句话并非爱因斯坦所述。现在以讹传讹，我们获取的知识，真是的正确无误的吗？
+- [New methods and new aims in teaching](https://www.bfskinner.org/wp-content/uploads/2014/02/New-Methods-aims-in-Teach.pdf)，这句话并非爱因斯坦所述。现在以讹传讹，我们获取的知识，真的是那么正确无误吗？
 
 ## 登录到 FreeBSD
 
