@@ -1,4 +1,4 @@
-# 目录
+# Table of contents
 
 * [FreeBSD 从入门到追忆（第三版：草稿）](README.md)
 * [编辑日志](CHANGELOG.md)
@@ -205,6 +205,13 @@
 
 * [第 19.1 节 BSD 与哲学家 George Berkeley（乔治·贝克莱）](di-19-zhang-wen-xue-gu-shi/di-19.1-jie-freebsd-jian-shi.md)
 * [第 19.2 节 加州大学伯克利分校与“Fiat Lux”（要有光）](di-19-zhang-wen-xue-gu-shi/di-19.2.md)
+* [第 19.3 节 小说：你与暗](di-19-zhang-wen-xue-gu-shi/19.3-ni-yu-an.md)
+* [第 19.4 节 我与 FreeBSD 的故事](di-19-zhang-wen-xue-gu-shi/19.4-freebsd.md)
+* [第 19.5 节 小说：大教堂与集市](di-19-zhang-wen-xue-gu-shi/di-19.5-jie-xiao-shuo-freebsd-cong-ru-men-dao-pao-lu.md)
+* [第 19.6 节 小说：吾乡何处](di-19-zhang-wen-xue-gu-shi/19.6-wu-xiang-he-chu.md)
+* [第 19.7 节 杂记](di-19-zhang-wen-xue-gu-shi/di-19.7-jie-za-ji.md)
+* [第 19.8 节 诗歌选](di-19-zhang-wen-xue-gu-shi/di-19.8-jie-shi-ge-xuan.md)
+* [第 19.9 节 两次退出](di-19-zhang-wen-xue-gu-shi/19.9-exit.md)
 
 ## 第 20 章 游戏与科学
 
