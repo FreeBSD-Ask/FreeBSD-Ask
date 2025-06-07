@@ -4,6 +4,9 @@
 
 ## 2025 年第二季度
 
+- 2025.6.8
+  - 第 1.1 节 操作系统的历程：UNIX、Unix-like、Linux & FreeBSD 新增：草稿：二十一世纪的 Unix 哲学观
+  - 第 1.1 节 操作系统的历程：UNIX、Unix-like、Linux & FreeBSD 增补：UNIX 之船：FreeBSD 是不是 UNIX？
 - 2025.6.7
   - 根据调查问卷恢复一部分文学故事
 - 2025.6.6
