@@ -8,10 +8,7 @@
 
 ---
 
-查询美国专利商标局 UNIX 商标注册情况：![image](https://github.com/user-attachments/assets/487c397b-5eed-4de6-8d3c-a1c1dfb3d489)
-![image](https://github.com/user-attachments/assets/f463c9ef-7779-46d8-ac11-62d475dcb278)
-![image](https://github.com/user-attachments/assets/1227dbb1-ef23-40df-a125-b3e18d820f5a)
-
+查询美国专利商标局 UNIX 商标注册情况：
 
 ![法律上的商标](../.gitbook/assets/usshangbiao.png)
 
