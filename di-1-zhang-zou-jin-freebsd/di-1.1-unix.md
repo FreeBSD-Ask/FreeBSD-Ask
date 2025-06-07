@@ -38,6 +38,7 @@ UNIX 认证查询网址：[The Open Group official register of UNIX Certified Pr
 
 ### UNIX 哲学与软件工程原则简介
 
+#### 传统的 Unix 哲学观（以《UNIX 编程艺术》为核心）
 
 >**思考题**
 >
@@ -55,14 +56,22 @@ Unix 哲学源于 UNIX 操作系统的开发，作者是 Ken Thompson。Unix 哲
 - 原型先行
 - 可移植性先于高效率性
 - 不使用二进制
-- 沉默是金（无报错就沉默）
-- 避免仅用户界面（无命令行，仅 GUI）
+- 沉默是金（无报错就沉默，成功则无输出，不显示操作进度等）
+- 避免仅用户界面（避免无命令行，仅 GUI）
 
-### 参考文献
+##### 参考文献
 
 - 《UNIX 编程艺术》，Eric Raymond 著，ISBN: 9787121176654，电子工业出版社。
 - 《Linux/Unix 设计思想》，Mike Gancarz 著，9787115266927，人民邮电出版社。（已绝版）
 - [The Open Group Standards Process](https://www.opengroup.org/standardsprocess/certification.html)
+
+### 二十一世纪的 Unix 哲学观
+
+真正的 Unix 哲学绝不是上面那些陈旧古板的祖宗之法，Unix 哲学的精髓在于以人为本，真正的 Unix 哲学是一种人道主义。
+
+大道至简在西方哲学中表现为奥卡姆的剃刀，即“如无必要，勿增实体。”这在某种程度上也启发了现象学的观念，我们应该把一些自行设定的观念从我们的脑子里排除出去，只留下我们能够直接感受到的东西——即回到事物本身。
+
+我们现在回到操作系统本身，回到计算机本身，计算机不应成为一种额外的负担，而应为人所服务——正如 FreeBSD 的口号“The Power To Serve`（服务的力量）”那样。
 
 ### 详细说明
 
@@ -159,8 +168,6 @@ Free 则代表 Liberty 式自由和免费两种含义。
 FreeBSD 未进行过 UNIX 认证，从版权角度来看，FreeBSD 的确不是 UNIX。但从历史来看 FreeBSD 可以被视为 UNIX 的直系后裔。
 
 BSD 操作系统并非复制品，而是 AT&T 研究 UNIX（Research Unix）操作系统的开源衍生版本，也是现代 UNIX® System V 的祖先。在 4.4BSD 以前，BSD 全称为 BSD UNIX。
-
-FreeBSD 官方的口号是 `The Power To Serve`（服务的力量）。
 
 FreeBSD 日为 6 月 19 日。FreeBSD 基金会和社区在这天庆祝 FreeBSD 的生日。——[Join us to celebrate FreeBSD Day!](https://freebsdfoundation.org/freebsd-day/)
 
