@@ -73,7 +73,7 @@ Unix 哲学源于 UNIX 操作系统的开发，作者是 Ken Thompson。Unix 哲
 
 我们现在回到操作系统本身，回到计算机本身，计算机不应成为一种额外的负担，而应为人所服务——正如 FreeBSD 的口号“The Power To Serve（服务的力量）”那样。
 
-### 详细说明
+### 一段历史
 
 #### Mutlics
 
