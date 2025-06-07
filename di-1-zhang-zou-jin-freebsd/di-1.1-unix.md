@@ -150,7 +150,7 @@ FreeBSD 不是 Linux。FreeBSD 也不是 UNIX 的克隆产物。
 
 FreeBSD 这个词语由两部分构成，即“Free”和“BSD”。
 
-BSD 最初是由加州大学伯克利分校（University of California, Berkeley）所开发的，意为 `Berkeley Software Distribution`（伯克利软件套件）。
+BSD 最初是由加州大学伯克利分校（University of California, Berkeley）所开发的，意为 `Berkeley Software Distribution`（伯克利软件发行版）。
 
 Free 则代表 Liberty 式自由和免费两种含义。
 
