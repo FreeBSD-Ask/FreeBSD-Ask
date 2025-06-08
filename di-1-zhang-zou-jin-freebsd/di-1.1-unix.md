@@ -65,7 +65,7 @@ Unix 哲学源于 UNIX 操作系统的开发，作者是 Ken Thompson。Unix 哲
 - 《Linux/Unix 设计思想》，Mike Gancarz 著，9787115266927，人民邮电出版社。（已绝版）
 - [The Open Group Standards Process](https://www.opengroup.org/standardsprocess/certification.html)
 
-### 二十一世纪的 Unix 哲学观
+### 二十一世纪四分之一处的 Unix 哲学观
 
 真正的 Unix 哲学绝不是上面那些陈旧古板的祖宗之法，Unix 哲学的精髓在于以人为本，真正的 Unix 哲学是一种人道主义。
 
@@ -73,7 +73,7 @@ Unix 哲学源于 UNIX 操作系统的开发，作者是 Ken Thompson。Unix 哲
 
 我们现在回到操作系统本身，回到计算机本身，计算机不应成为一种额外的负担，而应为人所服务——正如 FreeBSD 的口号“The Power To Serve（服务的力量）”那样。
 
-### 一段历史
+### Unix 的一段历史
 
 #### Mutlics
 
