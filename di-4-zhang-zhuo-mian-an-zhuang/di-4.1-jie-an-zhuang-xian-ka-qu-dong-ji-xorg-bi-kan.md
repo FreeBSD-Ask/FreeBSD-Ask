@@ -125,19 +125,38 @@ FreeBSD 15 CURRENT，编译使用 `drm-66-kmod`，支持情况同 Linux 6.6。
 
 ![](../.gitbook/assets/amd_error.png)
 
-## 视频硬解（重要）
+## 视频硬解
+
+### intel 视频硬解
 
 如果不配置此节，blender 等软件将无法运行！直接“段错误”。
 
+- 使用 pkg 安装：
+
 ```sh
-# pkg install  libva-intel-media-driver
+# pkg install libva-intel-media-driver
 ```
 
-或者
+- 或者使用 Ports 安装：
 
 ```sh
 # cd /usr/ports/multimedia/libva-intel-media-driver/ 
 # make install clean
+```
+
+### AMD 视频硬解
+
+- 使用 pkg 安装
+
+```sh
+# pkg ins mesa-gallium-va mesa-gallium-vdpau
+```
+
+- 或者使用 Ports 安装：
+
+```sh
+# cd /usr/ports/graphics/mesa-gallium-va/ && make install clean
+# cd /usr/ports/graphics/mesa-gallium-vdpau/ && make install clean
 ```
 
 ## 亮度调节
