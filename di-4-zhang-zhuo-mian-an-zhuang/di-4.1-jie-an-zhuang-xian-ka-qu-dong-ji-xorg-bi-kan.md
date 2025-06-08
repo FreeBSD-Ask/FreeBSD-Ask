@@ -37,7 +37,7 @@ FreeBSD 15 CURRENT，编译使用 `drm-66-kmod`，支持情况同 Linux 6.6。
 >每次点版本或大版本升级时，可能需要重新获取新系统源代码，重新编译安装显卡驱动模块方可顺利完成升级，而不是卡在黑屏的地方：或者你使用“模块源”。
 
 
-## 安装英特尔核显/AMD 显卡驱动
+## 安装 Intel 核显/AMD 显卡驱动
 
 >**注意**
 >
@@ -89,11 +89,11 @@ FreeBSD 15 CURRENT，编译使用 `drm-66-kmod`，支持情况同 Linux 6.6。
 >
 > 像英特尔三代处理器的 HD 4000 这种比较古老的显卡，他在传统的 BIOS 模式下无需额外安装显卡驱动，但是 UEFI 下有可能会花屏（FreeBSD 13.0 及以后无此问题），且需要安装此 DRM 显卡驱动。
 
-## 配置英特尔核显/AMD 显卡
+## 配置 Intel 核显/AMD 显卡
 
 请按如下进行操作：
 
-### intel 核芯显卡
+### Intel 核芯显卡
 
   ```sh
   # sysrc -f /etc/rc.conf kld_list+=i915kms
@@ -127,7 +127,7 @@ FreeBSD 15 CURRENT，编译使用 `drm-66-kmod`，支持情况同 Linux 6.6。
 
 ## 视频硬解
 
-### intel 视频硬解
+### Intel 视频硬解
 
 如果不配置此节，blender 等软件将无法运行！直接“段错误”。
 
@@ -158,6 +158,22 @@ FreeBSD 15 CURRENT，编译使用 `drm-66-kmod`，支持情况同 Linux 6.6。
 # cd /usr/ports/graphics/mesa-gallium-va/ && make install clean
 # cd /usr/ports/graphics/mesa-gallium-vdpau/ && make install clean
 ```
+
+---
+
+可能还需要这么做：
+
+将以下内容写入 `/usr/local/etc/X11/xorg.conf.d/20-amdgpu-tearfree.conf`（请自行创建）
+
+```ini
+Section "Device"
+  Identifier "AMDgpu"
+  Driver "amdgpu"
+  Option "TearFree" "on"
+EndSection
+```
+
+然后就可以用 `mpv --hwdec xxx.mp4` 来测试了。请自行安装 mpv。
 
 ## 亮度调节
 
