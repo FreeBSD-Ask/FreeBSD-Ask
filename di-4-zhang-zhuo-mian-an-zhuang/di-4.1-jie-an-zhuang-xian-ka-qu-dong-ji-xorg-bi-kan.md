@@ -159,6 +159,22 @@ FreeBSD 15 CURRENT，编译使用 `drm-66-kmod`，支持情况同 Linux 6.6。
 # cd /usr/ports/graphics/mesa-gallium-vdpau/ && make install clean
 ```
 
+---
+
+可能还需要这么做：
+
+将以下内容写入 `/usr/local/etc/X11/xorg.conf.d/20-amdgpu-tearfree.conf`（请自行创建）
+
+```ini
+Section "Device"
+  Identifier "AMDgpu"
+  Driver "amdgpu"
+  Option "TearFree" "on"
+EndSection
+```
+
+然后就可以用 `mpv --hwdec xxx.mp4` 来测试了。请自行安装 mpv。
+
 ## 亮度调节
 
 ### 通用
