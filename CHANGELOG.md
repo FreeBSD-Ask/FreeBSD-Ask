@@ -4,6 +4,8 @@
 
 ## 2025 年第二季度
 
+- 2025.6.9
+  - 第 26.1 节 OpenBSD 概述新增：机遇与挑战
 - 2025.6.8
   - 第 1.1 节 操作系统的历程：UNIX、Unix-like、Linux & FreeBSD 新增：草稿：二十一世纪的 Unix 哲学观
   - 第 1.1 节 操作系统的历程：UNIX、Unix-like、Linux & FreeBSD 增补：UNIX 之船：FreeBSD 是不是 UNIX？
