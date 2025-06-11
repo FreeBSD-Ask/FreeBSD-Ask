@@ -22,6 +22,22 @@ ykla@ykla-mi:~ $ xinput list
 ykla@ykla-mi:~ $ xinput set-prop 6 "Device Enabled" 0
 ```
 
+## Apple Magic Trackpad
+
+Apple Magic Trackpad 是一个触摸板系列，因压感带来的舒适操作体验而闻名。FreeBSD 支持苹果妙控板，但需要加载 `bcm5974` 内核模块。
+
+```sh
+kldload bcm5974
+```
+
+可以在 `rc.conf` 中永久化这一配置：
+
+```
+sysrc kld_list+="bcm5974"
+```
+
+该触摸板需要配合 `libinput` 使用，在加载内核模块之后，通常 Wayland 桌面环境可以开箱即用。目前暂不支持蓝牙功能。
+
 ### 参考文献
 
 - [FreeBSD タッチパッドを off にする](https://qiita.com/fygar256/items/35100d43b096470631d6)
