@@ -32,7 +32,7 @@ jobs:
           echo "Copied SUMMARY.md to mu-lu.md"
 
       - name: Commit and push changes
-        uses: stefanzweifel/git-auto-commit-action@v5
+        uses: stefanzweifel/git-auto-commit-action@v6
         with:
           commit_message: "从 SUMMARY.md 更新 mu-lu.md [skip ci]"
           file_pattern: "mu-lu.md"
