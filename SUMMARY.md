@@ -21,10 +21,10 @@
 
 ## 第 2 章 安装 FreeBSD
 
-* [第 2.1 节 安装前准备（面向新手）](di-2-zhang-an-zhuang-freebsd/2.1-install-pre.md)
+* [第 2.1 节 安装前准备](di-2-zhang-an-zhuang-freebsd/2.1-install-pre.md)
 * [第 2.2 节 FreeBSD 安装图解](di-2-zhang-an-zhuang-freebsd/di-2.2-jie-tu-jie-an-zhuang.md)
 * [第 2.3 节 UNIX 基础（面向 Windows 用户）](di-2-zhang-an-zhuang-freebsd/2.3-unix.md)
-* [第 2.4 节 命令行基础（面向新手）](di-2-zhang-an-zhuang-freebsd/di-2.4-jie-ming-ling-hang.md)
+* [第 2.4 节 命令行基础](di-2-zhang-an-zhuang-freebsd/di-2.4-jie-ming-ling-hang.md)
 * [第 2.5 节 安装 FreeBSD——基于 VMware Workstation Pro](di-2-zhang-an-zhuang-freebsd/di-2.5-jie-an-zhuang-freebsd-ji-yu-vmware-workstation-pro.md)
 * [第 2.6 节 安装 FreeBSD——基于 Virtual Box](di-2-zhang-an-zhuang-freebsd/di-2.6-jie-an-zhuang-freebsd-ji-yu-virtual-box.md)
 * [第 2.7 节 手动安装双系统（先安装 FreeBSD）](di-2-zhang-an-zhuang-freebsd/di-2.7.md)
@@ -49,7 +49,7 @@
 
 ## 第 4 章 桌面环境
 
-* [第 4.1 节 显卡驱动（英特尔、AMD）](di-4-zhang-zhuo-mian-an-zhuang/di-4.1-jie-an-zhuang-xian-ka-qu-dong-ji-xorg-bi-kan.md)
+* [第 4.1 节 显卡驱动（Intel、AMD）](di-4-zhang-zhuo-mian-an-zhuang/di-4.1-jie-an-zhuang-xian-ka-qu-dong-ji-xorg-bi-kan.md)
 * [第 4.2 节 显卡驱动（NVIDIA）](di-4-zhang-zhuo-mian-an-zhuang/di-4.2-NVIDIA.md)
 * [第 4.3 节 GNOME](di-4-zhang-zhuo-mian-an-zhuang/di-4.3-jie-an-zhuang-gnome.md)
 * [第 4.4 节 Mate](di-4-zhang-zhuo-mian-an-zhuang/di-4.4-jie-an-zhuang-mate.md)
