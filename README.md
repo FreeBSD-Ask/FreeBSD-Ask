@@ -51,7 +51,7 @@ FreeBSD 是真正自由（Liberty）的**操作系统**，在这波谲云诡的�
 
 ## 贡献者
 
-![Contributors](https://contrib.nn.ci/api?repo=FreeBSD-Ask/FreeBSD-Ask)
+![贡献者](https://contrib.nn.ci/api?repo=FreeBSD-Ask/FreeBSD-Ask)
 
 ## 授权协议
 
