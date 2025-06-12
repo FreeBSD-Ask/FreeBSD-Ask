@@ -16,7 +16,6 @@ GNOME 过去曾是 GNU 项目，旨在开发一套功能齐全的桌面环境。
 # cd /usr/ports/x11/xorg/ && make install clean
 # cd /usr/ports/x11/gnome/ && make install clean
 # cd /usr/ports/x11-fonts/noto-serif-sc/ && make install clean
-# cd /usr/ports/devel/xdg-user-dirs/ && make install clean # 自动管理家目录子目录
 ```
 
 - 解释：
@@ -26,7 +25,7 @@ GNOME 过去曾是 GNU 项目，旨在开发一套功能齐全的桌面环境。
 |     xorg      |            X11             |
 |     gnome     |        Gnome 主程序        |
 |    noto-sc    |     思源黑体——简体中文     |
-| xdg-user-dirs | 自动管理家目录子目录 |
+
 
 ### 附录：精简安装
 
