@@ -49,6 +49,10 @@ FreeBSD 是真正自由（Liberty）的**操作系统**，在这波谲云诡的�
 
 需要 VISA 信用卡：请在捐赠页面“Click & Pledge”下使用 `Amazon Pay`，测试可用。
 
+## 贡献者
+
+[![Contributors](https://contrib.nn.ci/api?repo=FreeBSD-Ask/FreeBSD-Ask)](https://github.com/FreeBSD-Ask/FreeBSD-Ask/graphs/contributors)
+
 ## 授权许可
 
 本项目采用《CC BY 4.0 署名 4.0 协议国际版》，详见[署名 4.0 协议国际版法律文本](https://creativecommons.org/licenses/by/4.0/legalcode.zh-hans)。
