@@ -140,7 +140,7 @@ gnome 捆绑的输入法面板是 `ibus`。
 
 #### fcitx 5
 
-参见输入法相关章节。需要注意 ibus 是 gnome 的依赖，不能卸载。
+参见输入法相关章节。需要注意 IBus 是 gnome 的依赖，不能卸载。也就是说你可以不用 IBus，但是不能卸载。
 
 ![FreeBSD Gnome](../.gitbook/assets/gnome4-1.png)
 
