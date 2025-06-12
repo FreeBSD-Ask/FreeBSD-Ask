@@ -610,7 +610,7 @@ adduser: INFO: Successfully added (ykla) to the user database. # 已成功将 yk
 Add another user? (yes/no) [no]: # 是否还要再添加一位用户
 ```
 
-- ① 如果用户全名为空（即不设置），系统会分配一个默认值 `User &`。这是早期 Unix 的行为。由 [freebsd-src/blob/main/usr.sbin/pw/pw_user.c](https://github.com/freebsd/freebsd-src/blob/main/usr.sbin/pw/pw_user.c)，文件中的 `static struct passwd fakeuser` 这部分代码实现。
+- ① 如果用户全名为空（即不设置），系统会分配一个默认值 `User &`。这是早期 Unix 的行为（Gecos 字段）。由 [freebsd-src/blob/main/usr.sbin/pw/pw_user.c](https://github.com/freebsd/freebsd-src/blob/main/usr.sbin/pw/pw_user.c)，文件中的 `static struct passwd fakeuser` 这部分代码实现。
 
 其他参数可以保持默认设置不变。在 FreeBSD 14 及以后，所有用户的默认 shell 都被统一为了 `sh`。
 
