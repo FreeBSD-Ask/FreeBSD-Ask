@@ -22,7 +22,7 @@
 ## 第 2 章 安装 FreeBSD
 
 * [第 2.1 节 安装前准备（面向新手）](di-2-zhang-an-zhuang-freebsd/2.1-install-pre.md)
-* [第 2.2 节 FreeBSD 安装图解（面向新手）](di-2-zhang-an-zhuang-freebsd/di-2.2-jie-tu-jie-an-zhuang.md)
+* [第 2.2 节 FreeBSD 安装图解](di-2-zhang-an-zhuang-freebsd/di-2.2-jie-tu-jie-an-zhuang.md)
 * [第 2.3 节 UNIX 基础（面向 Windows 用户）](di-2-zhang-an-zhuang-freebsd/2.3-unix.md)
 * [第 2.4 节 命令行基础（面向新手）](di-2-zhang-an-zhuang-freebsd/di-2.4-jie-ming-ling-hang.md)
 * [第 2.5 节 安装 FreeBSD——基于 VMware Workstation Pro](di-2-zhang-an-zhuang-freebsd/di-2.5-jie-an-zhuang-freebsd-ji-yu-vmware-workstation-pro.md)
