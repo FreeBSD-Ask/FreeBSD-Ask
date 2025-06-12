@@ -247,6 +247,8 @@ GNOME 一直以反人类著称：桌面不让放图标、右上角没托盘等�
 
 ### 恢复 GNOME 顶栏的托盘图标
 
+需要安装火狐浏览器 `www/firefox` 及 Port `x11-chrome-gnome-shell`。
+
 由于 [TopIcons Plus](https://extensions.gnome.org/extension/1031/topicons/) 已经长期不更新了，所以只能用 [AppIndicator and KStatusNotifierItem Support](https://extensions.gnome.org/extension/615/appindicator-support/) 了。
 
 ![Gnome 恢复 GNOME 顶栏的托盘图标](../.gitbook/assets/gnome3.png)
