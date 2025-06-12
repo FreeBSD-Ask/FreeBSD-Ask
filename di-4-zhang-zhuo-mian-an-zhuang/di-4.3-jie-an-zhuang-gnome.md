@@ -78,7 +78,7 @@ proc /proc procfs rw 0 0
 
 ```sh
 # service dbus enable
-# sysrc gdm_enable="YES"
+# service gdm enable
 ```
 
 输入以下命令：
