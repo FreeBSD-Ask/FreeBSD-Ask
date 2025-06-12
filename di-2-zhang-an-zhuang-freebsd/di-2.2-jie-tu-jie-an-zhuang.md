@@ -95,6 +95,17 @@
 >
 >**不要** 在这一步直接按 **回车键**！这样会导致主机名为空！登录管理器 sddm 会无法启动。
 
+>**警告**
+>
+>官方手册上说的是错的（`Amnesiac`），如果你不设置主机名，那么你的主机名不会被赋予任何值（不会给你分配 `Amnesiac`！），因为 FreeBSD 源码已经假设你会通过 DHCP 分配该值了。根据目前的源代码逻辑，只要你使用了 DHCP，也不会有任何报错提示主机名为空，当且仅当你没有网络时，才会在登录时将 login 信息打印为 `Amnesiac`，并打印一条报错信息。
+
+### 参考信息
+
+- [If the hostname is not set for the host, the value "Amnesiac" should be written to rc.conf. ](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=286847)，笔者发现的 bug
+- [libexec/getty/main.c](https://github.com/freebsd/freebsd-src/blob/80c12959679ab203459dc20eb9ece3a7328b7de5/libexec/getty/main.c#L178)，`Amnesiac` 源码
+- [bsdinstall: Warn if hostname is empty](https://github.com/freebsd/freebsd-src/pull/1700)，笔者的 PR
+
+
 ## 选择要安装的组件
 
 ![](../.gitbook/assets/ins6.png)
@@ -570,7 +581,7 @@ FreeBSD Installer
 Add Users
 
 Username: ykla # 此处输入用户名
-Full name: # 此处输入用户全名
+Full name: # 此处输入用户全名 ①
 Uid (Leave empty for default):  # 用户 UID
 Login group [ykla]: # 用户主组
 Login group is ykla. Invite ykla into other groups? []: wheel # 此处输入“wheel”，邀请用户“ykla”加入附加组“wheel”以便于使用命令 su
@@ -599,7 +610,7 @@ adduser: INFO: Successfully added (ykla) to the user database. # 已成功将 yk
 Add another user? (yes/no) [no]: # 是否还要再添加一位用户
 ```
 
-
+- ① 如果用户全名为空（即不设置），系统会分配一个默认值 `User &`。这是早期 Unix 的行为（Gecos 字段）。由 [freebsd-src/blob/main/usr.sbin/pw/pw_user.c](https://github.com/freebsd/freebsd-src/blob/main/usr.sbin/pw/pw_user.c)，文件中的 `static struct passwd fakeuser` 这部分代码实现。
 
 其他参数可以保持默认设置不变。在 FreeBSD 14 及以后，所有用户的默认 shell 都被统一为了 `sh`。
 
