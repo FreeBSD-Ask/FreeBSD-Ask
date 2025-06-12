@@ -134,99 +134,13 @@ gnome 捆绑的输入法面板是 `ibus`。
 # make install clean
 ```
 
-安装后运行初始化命令 `ibus-setup`.
+安装后运行初始化命令 `ibus-setup`。
+
+然后：设置——>键盘——>输入源，“添加输入源”。加入“中文（智能拼音）”
 
 #### fcitx 5
 
-首先看看现在自己的 shell 是不是 `sh`、`bash`、`zsh`：
-
-```sh
-# echo $0
-```
-
-如若，请继续；若不是，请参考输入法相关章节。
-
-安装 `fcitx5`:
-
-```sh
-# pkg install fcitx5 fcitx5-qt5 fcitx5-qt6 fcitx5-gtk2 fcitx5-gtk3 fcitx5-gtk4 fcitx5-configtool zh-fcitx5-chinese-addons
-```
-
-或者：
-
-```sh
-# cd /usr/ports/textproc/fcitx5/ && make install clean
-# cd /usr/ports/textproc/fcitx5-qt/ && make install clean #同时包含 QT 5 和 QT 6
-# cd /usr/ports/textproc/fcitx5-gtk/ && make install clean #同时包含 gtk 2、3、4
-# cd /usr/ports/textproc/fcitx5-configtool/ && make install clean
-# cd /usr/ports/chinese/fcitx5-chinese-addons/ && make install clean
-```
-
-打开或新建文件 `~/.xprofile`，写入：
-
-```sh
-export GTK_IM_MODULE=fcitx
-export QT_IM_MODULE=fcitx
-export XMODIFIERS=@im=fcitx
-```
-
-参考：以下是该文件的一个示例：
-
-```sh
-# $FreeBSD$
-#
-# .profile - Bourne Shell startup script for login shells
-#
-# see also sh(1), environ(7).
-#
-
-# These are normally set through /etc/login.conf.  You may override them here
-# if wanted.
-# PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin:$HOME/bin; export PATH
-
-# Setting TERM is normally done through /etc/ttys.  Do only override
-# if you're sure that you'll never log in via telnet or xterm or a
-# serial line.
-# TERM=xterm; 	export TERM
-
-EDITOR=vi;   	export EDITOR
-PAGER=less;  	export PAGER
-
-# set ENV to a file invoked each time sh is started for interactive use.
-ENV=$HOME/.shrc; export ENV
-
-# Let sh(1) know it's at home, despite /home being a symlink.
-if [ "$PWD" != "$HOME" ] && [ "$PWD" -ef "$HOME" ] ; then cd ; fi
-
-# Query terminal size; useful for serial lines.
-if [ -x /usr/bin/resizewin ] ; then /usr/bin/resizewin -z ; fi
-
-# Display a random cookie on each login.
-if [ -x /usr/bin/fortune ] ; then /usr/bin/fortune freebsd-tips ; fi
-
-export GTK_IM_MODULE=fcitx
-export QT_IM_MODULE=fcitx
-export XMODIFIERS=@im=fcitx
-```
-
-
-### 终端显示中文（文件用户根目录）
-
->**注意**
->
->此处内容对 FreeBSD 14 以下有效。
-
-```sh
-# ee ~/.cshrc
-```
-
-添加以下内容
-
-```sh
-setenv LANG zh_CN.UTF-8
-setenv LC_CTYPE zh_CN.UTF-8
-setenv LC_ALL zh_CN.UTF-8
-```
+参见输入法相关章节。需要注意 ibus 是 gnome 的依赖，不能卸载。
 
 ## 优化系统
 
