@@ -95,6 +95,7 @@ $ echo "/usr/local/bin/gnome-session" > ~/.xinitrc
 
 默认壁纸就是这样。
 
+![FreeBSD Gnome](../.gitbook/assets/gnome3-1.png)
 
 ## 中文化
 
@@ -141,6 +142,8 @@ gnome 捆绑的输入法面板是 `ibus`。
 #### fcitx 5
 
 参见输入法相关章节。需要注意 ibus 是 gnome 的依赖，不能卸载。
+
+![FreeBSD Gnome](../.gitbook/assets/gnome4-1.png)
 
 ## 优化系统
 
