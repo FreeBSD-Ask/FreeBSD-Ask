@@ -145,7 +145,7 @@
 - [X] NextCloud（最好基于 PostgreSQL）
 - [ ] KDE6
   - [X] 基于 Xorg
-  - [] 基于 Wayland
+  - [ ] 基于 Wayland
 - [ ] Wayland
   - [ ] 远程软件
   - [ ] KDE6
