@@ -2,6 +2,7 @@
 
 * [FreeBSD 从入门到追忆（第三版：草稿）](README.md)
 * [编辑日志](CHANGELOG.md)
+* [贡献指南与开放任务](CONTRIBUTING.md)
 * [目录](mu-lu.md)
 * [致谢](zhi-xie.md)
 * [初版序言：好望角与塔吊](xu-yan-1.md)
