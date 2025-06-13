@@ -4,6 +4,9 @@
 
 ## 2025 年第二季度
 
+- 2025.6.13
+  - 第 1.1 节 操作系统的历程：UNIX、Unix-like、Linux & FreeBSD 重写：什么是 Linux？
+  - 第 1.1 节 操作系统的历程：UNIX、Unix-like、Linux & FreeBSD 新增：GNU 与自由软件运动
 - 2025.6.12
   - 第 4.3 节 GNOME：欢迎来到 Gnome 47
 - 2025.6.10
