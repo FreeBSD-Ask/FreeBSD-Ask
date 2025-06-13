@@ -32,7 +32,7 @@ FreeBSD 15 CURRENT，编译使用 `drm-66-kmod`，支持情况同 Linux 6.6。
 >每次点版本或大版本升级时，可能需要重新获取新系统源代码，重新编译安装显卡驱动模块方可顺利完成升级，而不是卡在黑屏的地方：或者你使用“模块源”。
 
 
-DRM 即“Direct Rendering Manager”（直接渲染管理器），DRM 是 Linux 内核的子系统，负责与现代显卡的 GPU 进行交互。
+DRM 即“Direct Rendering Manager”（直接渲染管理器），DRM 是 Linux 内核的子系统，负责与现代显卡的 GPU 进行交互。FreeBSD 在内核实现了 Linux 内核编程接口（LinuxKPI），并移植了 Linux DRM，类似的还有一些无线网卡驱动。
 
 ## 安装 Intel 核显/AMD 显卡驱动
 
