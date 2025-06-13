@@ -110,9 +110,55 @@ Unix-like 即类 Unix，亦即一切符合 UNIX 标准的操作系统，基本�
 
 也就是说，除了 Windows，基本上世界上大多数操作系统都被叫做 Unix-like，其中就包括 Linux 和 FreeBSD。
 
+## GNU 与自由软件运动
+
+由于 Unix 在后期愈发封闭，许可证昂贵、受限制于商业公司等原因，RMS 就想创造一款自由且兼容 Unix 的操作系统。
+
+- 1983 年，RMS 发表[《GNU 宣言》](https://www.gnu.org/gnu/manifesto.html)，其中 GNU 即 GNU is Not Unix（GNU 不是 Unix）。GNU 是一款操作系统——旨在完全替代 Unix。
+- 1984 年，创建 [GNU 项目](https://www.gnu.org/)
+- 1985 年，RMS 创建自由软件基金会（FSF）
+
+一开始他为 Unix 写了很多实用程序（用户空间），但是始终——哪怕到今天 2025 也没能完成自己的内核（[GNU Hurd](https://hurd.gnu.org/)）。于是在 Linux 内核诞生后，作为一款由 Linux 内核和 GNU 软件拼凑起来的操作系统，Linux 不断地的 GNU 化，成为了一款操作系统——这就是 GNU/Linux 其中 GNU 的来历。
+
+Linux 内核由创始人 Linus Torvalds 一人裁决。所以显而易见的，Linux 的理念与自由软件运动的理念、乃至于通真正开源的理念（Linux 内核里存在大量非开源非自由的存在，参见 [Linux-libr](https://www.fsfla.org/ikiwiki/selibre/linux-libre/)）都存在明显的张力。并且 Linux 内核使用 GPLv2，而非 GNU 推荐的 GPLv3。
+
+我们将 Linux 之前这段时间称作“自由软件运动”（代表人物 RMS）。Linux 的流行促成了另一种理念的兴起，即“开源运动”——代表人物有 Eric S. Raymond，OSI 创始人；Bruce Perens Debian 项目前领导人——想想上面有关开源的定义为什么是自 [Debian 的开源定义 DFSG](https://www.debian.org/social_contract#guidelines)衍生而来？
+
+### 自由软件运动与开源运动之间的张力
+
+需要注意的是，根据笔者与 RMS 的通讯，其强调的 GNU 与自由软件运动并不强调“开源”（甚至是反对开源），而是强调“Free” 式自由。有些人可能认为现在的“开源”仅仅是由 [OSI 定义](https://opensource.org/osd)的那样，这是一种极其片面的观点。
+
+>致所有阅读我邮件的 NSA（美国国家安全局）和 FBI 特工：请考虑一下，捍卫美国宪法以抵御一切敌人，无论是外国的还是本国的，是否需要你效仿斯诺登的做法。
+>
+>>但是我有点困惑：GNU 项目是否强制要求开发必须开源？因为 GNU 通用公共许可证（GPL）强制开源。
+>
+>GNU 项目并不倡导“开源”。我们从不用这个词，除非是为了表达与它的分歧。我们代表的是自由软件（Free Software）——自由如同自由的言论。我们致力于在计算中为用户争取自由。
+>
+>请参见：<https://gnu.org/philosophy/free-software-even-more-important.html>
+>
+>“开源”这个词是一些反对自由软件运动的人发明的——他们与我们意见相左。他们想谈论同样的软件，却又掩盖自由的理念。
+>
+>关于自由软件与开源的区别，请参见：<https://gnu.org/philosophy/open-source-misses-the-point.html>
+>
+>另请阅读 Evgeny Morozov 的文章：<https://thebaffler.com/salvos/the-meme-hustler>，他在文中也探讨了这一点。
+>
+>所以请不要问我们关于“开源”或“开放”某些东西的问题。我们不是那样思考的。你真正应该问我们的是：我们如何以自由软件的方式做事情。
+>
+>>它属于 GNU 项目，那么 GNU 项目是否也会强制他人……
+>
+>我不太确定你所说的“强制”是什么意思，这里可能存在误解。通常我们会告诉人们我们认为什么是对的，什么是错的，但我们无法命令他们做什么。
+>
+>唯一的例外是他们使用了 GPL 许可的软件代码。在这种情况下，GNU GPL 本身是一种法律上的约束，规定了他们如何使用这些代码。它要求他们在再发布代码时，尊重其他用户的自由。
+>
+>这正是 copyleft（著佐权）的意义所在。
+>
+>如果你还有更多问题，请写信至 licensing@gnu.org。
+
+此为私人通信引用，不涉及隐私话题。
+
 ## 什么是 Linux？
 
-Linux 受启发于 Minix（UNIX 版权限制下的产物），一款设计用于教学的微内核操作系统。
+Linux 受启发于 Minix（UNIX 版权限制下的产物），一款设计用于教学的微内核操作系统。当时 22 岁的 Linus 是芬兰赫尔辛基大学计算机科学系的研究生。
 
 >**技巧**
 >
@@ -128,7 +174,7 @@ Linux 之名来自 Linux 之父 Linus Torvalds。
 
 ### 狭义 Linux 是内核
 
-[Linux kernel](https://www.kernel.org/) 项目 1990；
+[Linux kernel](https://www.kernel.org/) 项目 1991；
 
 ### 广义 Linux 是 GNU/Linux
 
@@ -138,7 +184,7 @@ GNU/Linux = Linux kernel + GNU 等软件 + 包管理器
 
 Linux 全称为 GNU/Linux；
 
-[GNU 项目](https://www.gnu.org/) 1984——GNU's Not Unix，从 GNU 这个名字（GNU 不是 UNIX）你也能看出来 Linux 与 UNIX 并无直接关联。
+GNU's Not Unix，从 GNU 这个名字（GNU 不是 UNIX）你也能看出来 Linux 与 UNIX 并无直接关联。
 
 具体地：
 
