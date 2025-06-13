@@ -43,12 +43,17 @@
 
 ## 开放任务
 
+所有任务的排序都是随机的并无优先级之分，你可以选你喜欢的去做。
+
 ### 总体目标
 
 使之成为“一本书”，确保每个部分都是经过实际验证的：如果是原理性内容，要找出最原始的出处；如果是可操作内容，必须自己试一试。
 
 ### FreeBSD ToDo
 
+- [ ] 规范用户配置文件与系统文件
+  - [ ] sysctl：不应直接修改 `/etc/sysctl.conf`，而应改为 `/etc/sysctl.conf.local`，后者会覆盖全局的 `/etc/sysctl.conf` 参数。参见 [sysctl.conf(5)](https://man.freebsd.org/cgi/man.cgi?sysctl.conf(5))
+  - [ ] 启动引导参数：不应直接修改 `/boot/loader.conf`，建议改为 `/boot/loader.conf.local`，后者会覆盖全局的 `/boot/loader.conf` 参数。参见 [loader.conf(5)](https://man.freebsd.org/cgi/man.cgi?loader.conf(5))
 - [ ] Vagrant FreeBSD
   - [ ] ZFS
   - [ ] 预置 GUI
@@ -69,7 +74,7 @@
 - [X] gitlab-ee
 - [ ] 为所有需要额外配置的文件，使用命令 `pkg info -D` 列出正文如此配置之原因
   - [ ] 翻译 `pkg info -D` 重要输出
-- [ ] 重写“第 4.1 节 安装显卡驱动及 Xorg（必看）”，尤其是 N 卡驱动部分，目前是无效的，必须重写
+- [X] 重写“第 4.1 节 安装显卡驱动及 Xorg（必看）”，尤其是 N 卡驱动部分，目前是无效的，必须重写
 - [X] `pkg autoremove`（会把整个系统都带走）及 `pkg delete`（破坏依赖）都不是正经的卸载软件及孤包依赖的方法，`pkg-rmleaf` 亦已过时无法使用。需要找到正常合理的卸载软件包的方法。`pkg_rmleaves` 似乎可以
 - [X] 补充一些 WinSCP、XShell 的替代工具，避免单一来源
   - [ ] 找到一款我认为能替代二者的工具
@@ -140,7 +145,7 @@
 - [X] NextCloud（最好基于 PostgreSQL）
 - [ ] KDE6
   - [X] 基于 Xorg
-  - [X] 基于 Wayland（部分完成）
+  - [ ] 基于 Wayland
 - [ ] Wayland
   - [ ] 远程软件
   - [ ] KDE6
@@ -169,7 +174,10 @@
   - [ ] 测试 [V2raya](https://github.com/v2rayA/v2rayA) 能否在 FreeBSD 上正常运行
 - [ ] 浏览器
   - [X] Google Chrome / Chromium Google 账号同步
-
+- [ ] Port 移植
+  - [X] QQ（上游没人管，放在了[这里](https://github.com/FreeBSD-Ask/QQ-Port/tree/main/net-im/qq)， ）
+  - [ ] 微信
+  - [ ] WPS
 
 
 ### OpenBSD ToDo
@@ -177,6 +185,7 @@
 - [ ] OpenBSD
   - [X] KDE5
   - [ ] QQ？原生可能吗
+  - [ ] 规范用户配置文件与系统文件
   - [ ] 微信？原生可能吗
   - [ ] Wine
   - [ ] OpenBSD 调优
@@ -187,6 +196,7 @@
     - [ ] NTP
     - [ ] DHCP
     - [ ] 各式代理
+    - [ ] HTTPD
     - [ ] 邮件服务器
     - [ ] PF 等防火墙
     - [ ] IPv6
