@@ -10,12 +10,7 @@
 
 未安装显卡驱动。
 
----
-
-
 ## 显卡支持情况
-
-对于 FreeBSD 13，编译使用 `drm-510-kmod`，支持情况同 Linux 5.10。AMD 可支持 R7 4750U。
 
 FreeBSD 14.1-RELEASE、14-STABLE（OSVERSION > 1400508）、编译使用 `drm-61-kmod`，支持情况同 Linux 6.1。经过实际测试，可支持第十二代 Alder Lake-N（如 N100）。十三代等后续版本暂无条件测试。
 
@@ -37,6 +32,8 @@ FreeBSD 15 CURRENT，编译使用 `drm-66-kmod`，支持情况同 Linux 6.6。
 >每次点版本或大版本升级时，可能需要重新获取新系统源代码，重新编译安装显卡驱动模块方可顺利完成升级，而不是卡在黑屏的地方：或者你使用“模块源”。
 
 
+DRM 即“Direct Rendering Manager”（直接渲染管理器），DRM 是 Linux 内核的子系统，负责与现代显卡的 GPU 进行交互。
+
 ## 安装 Intel 核显/AMD 显卡驱动
 
 >**注意**
@@ -47,19 +44,6 @@ FreeBSD 15 CURRENT，编译使用 `drm-66-kmod`，支持情况同 Linux 6.6。
 >
 >在使用 Ports 时，drm 需要在 `/usr/src` 中有一份当前版本系统源代码，可参考系统更新章节。如果你是参考的本书其他章节进行的安装，那么你的系统中很可能已经有一份源码了，无需再获取源码。
 
-
-### FreeBSD 13.X
-
-```sh
-# cd /usr/ports/graphics/drm-510-kmod
-# make BATCH=yes install clean
-```
-
-或者（如有问题请使用 Ports）
-
-```sh
-# pkg install drm-510-kmod
-```
 
 ### FreeBSD 14.X
 
