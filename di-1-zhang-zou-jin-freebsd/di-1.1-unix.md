@@ -112,9 +112,9 @@ Unix-like 即类 Unix，亦即一切符合 UNIX 标准的操作系统，基本�
 
 ## GNU 与自由软件运动
 
-由于 Unix 在后期愈发封闭，许可证昂贵、受限制于商业公司等原因，RMS 就想创造一款自由且兼容 Unix 的操作系统。
+由于 Unix 在后期愈发封闭，许可证昂贵、受限制于商业公司等原因，RMS（Richard Matthew Stallman）就想创造一款自由且兼容 Unix 的操作系统。
 
-- 1983 年，RMS（Richard Matthew Stallman）发表[《GNU 宣言》](https://www.gnu.org/gnu/manifesto.html)，其中 GNU 即 GNU is Not Unix（GNU 不是 Unix）。GNU 是一款操作系统——旨在完全替代 Unix。
+- 1983 年，RMS 发表[《GNU 宣言》](https://www.gnu.org/gnu/manifesto.html)，其中 GNU 即 GNU is Not Unix（GNU 不是 Unix）。GNU 是一款操作系统——旨在完全替代 Unix。
 - 1984 年，创建 [GNU 项目](https://www.gnu.org/)
 - 1985 年，RMS 创建自由软件基金会（Free Software Foundation，FSF）
 
