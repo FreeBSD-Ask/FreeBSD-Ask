@@ -114,11 +114,11 @@ Unix-like 即类 Unix，亦即一切符合 UNIX 标准的操作系统，基本�
 
 由于 Unix 在后期愈发封闭，许可证昂贵、受限制于商业公司等原因，RMS 就想创造一款自由且兼容 Unix 的操作系统。
 
-- 1983 年，RMS 发表[《GNU 宣言》](https://www.gnu.org/gnu/manifesto.html)，其中 GNU 即 GNU is Not Unix（GNU 不是 Unix）。GNU 是一款操作系统——旨在完全替代 Unix。
+- 1983 年，RMS（Richard Matthew Stallman）发表[《GNU 宣言》](https://www.gnu.org/gnu/manifesto.html)，其中 GNU 即 GNU is Not Unix（GNU 不是 Unix）。GNU 是一款操作系统——旨在完全替代 Unix。
 - 1984 年，创建 [GNU 项目](https://www.gnu.org/)
-- 1985 年，RMS 创建自由软件基金会（FSF）
+- 1985 年，RMS 创建自由软件基金会（Free Software Foundation，FSF）
 
-一开始他为 Unix 写了很多实用程序（用户空间），但是始终——哪怕到今天 2025 也没能完成自己的内核（[GNU Hurd](https://hurd.gnu.org/)）。于是在 Linux 内核诞生后，作为一款由 Linux 内核和 GNU 软件拼凑起来的操作系统，Linux 不断地的 GNU 化，成为了一款操作系统——这就是 GNU/Linux 其中 GNU 的来历。
+一开始他为 Unix 写了很多实用程序（用户空间），然而 GNU 的目标操作系统始终缺乏稳定的内核（即使到了 2025 年，[GNU Hurd](https://hurd.gnu.org/) 仍未完成）。Linux 内核的诞生为这一困境带来了突破。作为一款由 Linux 内核和 GNU 软件拼凑起来的操作系统，Linux 不断地的 GNU 化，成为了一款操作系统——这就是 GNU/Linux 其中 GNU 的来历，然而很多人无视这一事实，掩盖了 GNU 软件的贡献。
 
 Linux 内核由创始人 Linus Torvalds 一人裁决。所以显而易见的，Linux 的理念与自由软件运动的理念、乃至于通真正开源的理念（Linux 内核里存在大量非开源非自由的存在，参见 [Linux-libr](https://www.fsfla.org/ikiwiki/selibre/linux-libre/)）都存在明显的张力。并且 Linux 内核使用 GPLv2，而非 GNU 推荐的 GPLv3。
 
