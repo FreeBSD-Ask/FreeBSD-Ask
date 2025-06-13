@@ -29,7 +29,7 @@ FreeBSD 是真正自由（Liberty）的**操作系统**，在这波谲云诡的�
 
 ## 贡献指南与开放任务
 
-详见 [贡献指南与开放任务](https://freebsd.gitbook.io/cfc/she-qu-jian-she/renwu)
+详见 [贡献指南与开放任务](CONTRIBUTING.md)
 
 ## 导出本书的 PDF 文档
 
