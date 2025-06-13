@@ -120,7 +120,7 @@ Unix-like 即类 Unix，亦即一切符合 UNIX 标准的操作系统，基本�
 
 一开始他为 Unix 写了很多实用程序（用户空间），然而 GNU 的目标操作系统始终缺乏稳定的内核（即使到了 2025 年，[GNU Hurd](https://hurd.gnu.org/) 仍未完成）。Linux 内核的诞生为这一困境带来了突破。作为一款由 Linux 内核和 GNU 软件拼凑起来的操作系统，Linux 不断地的 GNU 化，成为了一款操作系统——这就是 GNU/Linux 其中 GNU 的来历，然而很多人无视这一事实，掩盖了 GNU 软件的贡献。
 
-Linux 内核由创始人 Linus Torvalds 一人裁决。所以显而易见的，Linux 的理念与自由软件运动的理念、乃至于通真正开源的理念（Linux 内核里存在大量非开源非自由的存在，参见 [Linux-libr](https://www.fsfla.org/ikiwiki/selibre/linux-libre/)）都存在明显的张力。并且 Linux 内核使用 GPLv2，而非 GNU 推荐的 GPLv3。
+Linux 内核由创始人 Linus Torvalds 一人裁决。所以显而易见的，Linux 的理念与自由软件运动的理念、乃至于同真正开源的理念（Linux 内核里存在大量非开源非自由的存在，参见 [Linux-libr](https://www.fsfla.org/ikiwiki/selibre/linux-libre/)）都存在明显的张力。并且 Linux 内核使用 GPLv2，而非 GNU 推荐的 GPLv3。
 
 我们将 Linux 之前这段时间称作“自由软件运动”（代表人物 RMS）。Linux 的流行促成了另一种理念的兴起，即“开源运动”——代表人物有 Eric S. Raymond，OSI 创始人；Bruce Perens Debian 项目前领导人——想想上面有关开源的定义为什么是自 [Debian 的开源定义 DFSG](https://www.debian.org/social_contract#guidelines)衍生而来？
 
