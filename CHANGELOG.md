@@ -7,6 +7,7 @@
 - 2025.6.13
   - 第 1.1 节 操作系统的历程：UNIX、Unix-like、Linux & FreeBSD 重写：什么是 Linux？
   - 第 1.1 节 操作系统的历程：UNIX、Unix-like、Linux & FreeBSD 新增：GNU 与自由软件运动
+  - 第 6.6 节 视频播放器新增：附录：直接在 TTY 播放视频（mpv）
 - 2025.6.12
   - 第 4.3 节 GNOME：欢迎来到 Gnome 47
 - 2025.6.10
