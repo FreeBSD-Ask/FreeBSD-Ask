@@ -43,12 +43,17 @@
 
 ## 开放任务
 
+所有任务的排序都是随机的并无优先级之分，你可以选你喜欢的去做。
+
 ### 总体目标
 
 使之成为“一本书”，确保每个部分都是经过实际验证的：如果是原理性内容，要找出最原始的出处；如果是可操作内容，必须自己试一试。
 
 ### FreeBSD ToDo
 
+- [ ] 规范用户配置文件与系统文件
+  - [ ] sysctl：不应直接修改 `/etc/sysctl.conf`，而应改为 `/etc/sysctl.conf.local`，后者会覆盖全局的 `/etc/sysctl.conf` 参数。参见 [sysctl.conf(5)](https://man.freebsd.org/cgi/man.cgi?sysctl.conf(5))
+  - [ ] 启动引导参数：不应直接修改 `/boot/loader.conf`，建议改为 `/boot/loader.conf.local`，后者会覆盖全局的 `/boot/loader.conf` 参数。参见 [loader.conf(5)](https://man.freebsd.org/cgi/man.cgi?loader.conf(5))
 - [ ] Vagrant FreeBSD
   - [ ] ZFS
   - [ ] 预置 GUI
@@ -180,6 +185,7 @@
 - [ ] OpenBSD
   - [X] KDE5
   - [ ] QQ？原生可能吗
+  - [ ] 规范用户配置文件与系统文件
   - [ ] 微信？原生可能吗
   - [ ] Wine
   - [ ] OpenBSD 调优
