@@ -158,7 +158,15 @@ Linux 内核由创始人 Linus Torvalds 一人裁决。所以显而易见的，L
 
 ## 什么是 Linux？
 
-Linux 受启发于 Minix（UNIX 版权限制下的产物），一款设计用于教学的微内核操作系统。当时 22 岁的 Linus 是芬兰赫尔辛基大学计算机科学系的研究生。
+Linux 之名来自 Linux 之父 Linus Torvalds。
+
+Linux 受启发于 Minix（UNIX 版权限制下的产物），一款设计用于教学的微内核操作系统。当时 22 岁的 Linus Torvalds 是芬兰赫尔辛基大学计算机科学系的研究生。
+
+Linus Torvalds 的硕士毕业论文是[《Linux: A Portable Operating System》](https://www.cs.helsinki.fi/u/kutvonen/index_files/linus.pdf)（Linux：一款可移植的操作系统），他在 1997 年（28 岁）获得理学硕士学位。为什么花了这么长时间都没被学校清退呢？芬兰是典型的学分制国家。根据芬兰赫尔辛基大学官网说明，并无[最长学习期限](https://studies.helsinki.fi/instructions/article/expiry-studies?) 限制，仅规定某课程成绩有效时间为十年。“你的课程到期不会影响你在大学继续学习的权利”。
+
+>我们探讨了在将 Linux 操作系统移植到多种 CPU 和总线架构时所暴露出的硬件可移植性问题。我们还讨论了软件接口的可移植性问题，尤其是与能够共享同一硬件平台的其他操作系统之间的二进制兼容性问题。文中描述了 Linux 所采取的方法，并对其中几个架构进行了更为详细的介绍。
+>
+>《Linux：一款可移植的操作系统》论文概述
 
 >**技巧**
 >
@@ -170,7 +178,6 @@ UNIX 标准 SUS 包含了 POSIX 标准，是其超集。Linux 实现了 POSIX �
 
 本质上说 Linux 是 UNIX 的一种仿制品或者说克隆产物（类似于人与机器人的关系）。
 
-Linux 之名来自 Linux 之父 Linus Torvalds。
 
 ### 狭义 Linux 是内核
 
