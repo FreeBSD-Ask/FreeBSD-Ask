@@ -97,3 +97,8 @@ Kodi 曾用名为 XBMC。
 
 ![](../.gitbook/assets/kodi4.png)
 
+## 附录：直接使用 mpv 在 TTY 播放视频
+
+可以直接在 TTY 使用 mpv 命令播放视频。
+
+请你自己试一试。
