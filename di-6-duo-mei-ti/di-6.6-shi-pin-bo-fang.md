@@ -97,8 +97,41 @@ Kodi 曾用名为 XBMC。
 
 ![](../.gitbook/assets/kodi4.png)
 
-## 附录：直接使用 mpv 在 TTY 播放视频
+## 附录：直接在 TTY 播放视频（mpv）
 
 可以直接在 TTY 使用 mpv 命令播放视频。
 
+- 使用 pkg 安装：
+
+```sh
+# pkg ins mpv
+```
+
+- 还可以通过 Ports 安装
+
+```sh
+# cd /usr/ports/multimedia/mpv/ 
+# make install clean
+```
+
+切换到 TTY，然后使用以下命令播放视频：
+
+```sh
+$ mpv 1.mp4
+```
+
 请你自己试一试。
+
+>**注意**
+>
+>此功能依赖 drm，虚拟机可能并不能正常操作。
+
+>**技巧**
+>
+>可以使用命令行命令 `mixer` 调整音量。如下列命令将把音量调高 5%。
+>
+>```sh
+>$ mixer vol=+5%
+>```
+
+
