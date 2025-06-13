@@ -4,6 +4,8 @@
 
 ## 2025 年第二季度
 
+- 2025.6.14
+  - 重新引入：贡献指南与开放任务
 - 2025.6.13
   - 第 1.1 节 操作系统的历程：UNIX、Unix-like、Linux & FreeBSD 重写：什么是 Linux？
   - 第 1.1 节 操作系统的历程：UNIX、Unix-like、Linux & FreeBSD 新增：GNU 与自由软件运动
