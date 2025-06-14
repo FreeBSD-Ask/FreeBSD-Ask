@@ -111,7 +111,7 @@
   - [ ] 16.4.入侵检测系统（IDS）
   - [ ] 16.5.安全等级
   - [ ] 16.6.文件标志位
-  - [ ] 16.9.Kerberos
+  - [ ] 16.9.Kerberos（谁在用？）
   - [ ] 16.11.访问控制列表（ACL）
   - [ ] 16.12.Capsicum
   - [ ] 16.13.进程记账
@@ -266,6 +266,7 @@
     - [ ] 以太网
   - [ ] 更新：第 17.8 节 PostgreSQL 与 pgAdmin4
   - [ ] NTP
+  - [ ] WireGuard
   - [ ] Redis
   - [ ] Postfix
   - [ ] LDAP（OpenLDAP，也许可以参考 [WiKi LDAP/Setup](https://wiki.freebsd.org/LDAP/Setup)）
