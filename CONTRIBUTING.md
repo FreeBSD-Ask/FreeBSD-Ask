@@ -2,9 +2,10 @@
 
 细节参见 <https://github.com/FreeBSD-Ask/FreeBSD-Ask/wiki>。
 
-## 贡献指南
-如果你想让你的教程出现在本书中，你可以这样做：
 
+## 贡献指南
+
+如果你想让你的教程出现在本书中，你可以这样做：
 
 - 如果你熟悉 GitHub，可以点击电脑端右侧的“编辑此页”，进入项目进行操作。整个项目使用 Markdown 语法 +  Gitbook，简单易上手（具体详见项目 WiKi）；
 - 如果以上有困难，你还可以发 PDF、Word 或者 TXT 给我。请将文件发送至电子邮件 `yklaxds@gmail.com`（我将在 3 天内回复。若我没有回复，请换个邮件再发一次，或者提交 issue）；如果有视频教程，以各大云盘链接为宜。
@@ -44,10 +45,6 @@
 ## 开放任务
 
 所有任务的排序都是随机的并无优先级之分，你可以选你喜欢的去做。
-
-### 总体目标
-
-使之成为“一本书”，确保每个部分都是经过实际验证的：如果是原理性内容，要找出最原始的出处；如果是可操作内容，必须自己试一试。
 
 ### FreeBSD ToDo
 
@@ -182,94 +179,96 @@
 
 ### OpenBSD ToDo
 
-  - [X] KDE5
-  - [ ] QQ？可能吗？
-  - [ ] 微信？可能吗？
-  - [ ] 规范用户配置文件与系统文件
-  - [ ] Wine 可能吗？
-  - [ ] OpenBSD 调优
-  - [ ] OpenBSD 安全加固
-  - [ ] 网络
-    - [ ] DNS
-    - [ ] FTP
-    - [ ] NTP
-    - [ ] DHCP
-    - [ ] 各式代理
-    - [ ] HTTPD
-    - [ ] 邮件服务器
-    - [ ] PF 等防火墙
-    - [ ] IPv6
-    - [ ] 常用网络命令
-  - [ ] OpenBSD 路由器（可参考 [OpenBSD 路由器指南](https://translated-articles.bsdcn.org/2023-nian-9-yue/openbsd-router-guide)）
-    - [ ] WiFi
-    - [ ] 链路聚合
-    - [ ] 路由表
-    - [ ] 默认路由
-  - [ ] OpenBSD 基础知识
-    - [ ] 版本概况
-    - [ ] 开发宗旨与项目目标
-    - [ ] 性能参数
-    - [ ] 注意事项
-    - [ ] 跟踪新版本
-    - [ ] pkgsrc
-  - [ ] 嵌入式
+- [x] KDE5
+- [ ] QQ？可能吗？
+- [ ] 微信？可能吗？
+- [ ] 规范用户配置文件与系统文件
+- [ ] Wine 可能吗？
+- [ ] OpenBSD 调优
+- [ ] OpenBSD 安全加固
+- [ ] 网络
+  - [ ] DNS
+  - [ ] FTP
+  - [ ] NTP
+  - [ ] DHCP
+  - [ ] 各式代理
+  - [ ] HTTPD
+  - [ ] 邮件服务器
+  - [ ] PF 等防火墙
+  - [ ] IPv6
+  - [ ] 常用网络命令
+- [ ] OpenBSD 路由器（可参考 [OpenBSD 路由器指南](https://translated-articles.bsdcn.org/2023-nian-9-yue/openbsd-router-guide)）
+  - [ ] WiFi
+  - [ ] 链路聚合
+  - [ ] 路由表
+  - [ ] 默认路由
+- [ ] OpenBSD 基础知识
+  - [ ] 版本概况
+  - [ ] 开发宗旨与项目目标
+  - [ ] 性能参数
+  - [ ] 注意事项
+  - [ ] 跟踪新版本
+  - [ ] pkgsrc
+- [ ] 嵌入式
+
 
 ### NetBSD ToDo
-  
-  - [ ] NetBSD 调优
-  - [ ] 桌面
-    - [ ] 火狐浏览器
-    - [ ] Chromium
-    - [X] KDE 4
-    - [ ] QQ
-    - [ ] 微信
-    - [ ] Wine
-  - [ ] 树莓派 4 & 5
-  - [ ] NetBSD 安全加固
-  - [ ] NetBSD 基础知识
-    - [ ] 版本概况
-    - [ ] 开发宗旨与项目目标
-    - [ ] 注意事项
-    - [ ] 跟踪新版本
-    - [ ] pkgsrc
-  - [ ] 嵌入式  
-  - [ ] 网络
-    - [ ] DNS
-    - [ ] FTP
-    - [ ] NTP
-    - [ ] DHCP
-    - [ ] 各式代理
-    - [ ] 邮件服务器
-    - [ ] PF 等防火墙
-    - [ ] IPv6
-    - [ ] 常用网络命令
-  - [ ] NetBSD 路由器
-    - [ ] WiFi
-    - [ ] 链路聚合
-    - [ ] 路由表
-    - [ ] 默认路由
+
+- [ ] NetBSD 调优
+- [ ] 桌面
+  - [ ] 火狐浏览器
+  - [ ] Chromium
+  - [x] KDE 4
+  - [ ] QQ
+  - [ ] 微信
+  - [ ] Wine
+- [ ] 树莓派 4 & 5
+- [ ] NetBSD 安全加固
+- [ ] NetBSD 基础知识
+  - [ ] 版本概况
+  - [ ] 开发宗旨与项目目标
+  - [ ] 注意事项
+  - [ ] 跟踪新版本
+  - [ ] pkgsrc
+- [ ] 嵌入式
+- [ ] 网络
+  - [ ] DNS
+  - [ ] FTP
+  - [ ] NTP
+  - [ ] DHCP
+  - [ ] 各式代理
+  - [ ] 邮件服务器
+  - [ ] PF 等防火墙
+  - [ ] IPv6
+  - [ ] 常用网络命令
+- [ ] NetBSD 路由器
+  - [ ] WiFi
+  - [ ] 链路聚合
+  - [ ] 路由表
+  - [ ] 默认路由
 
 
 
 ### DragonFlyBSD ToDo
   
 
-  - [ ] DragonFlyBSD 调优
-  - [ ] 桌面
-    - [ ] KDE5
-    - [ ] Gnome
-    - [ ] QQ
-    - [ ] 微信
-    - [ ] Wine
-    - [ ] XFCE
-    - [ ] 火狐浏览器
-    - [ ] Chromium
-  - [ ] DragonFlyBSD 安全加固
-  - [ ] DragonFlyBSD 基础知识
-    - [ ] 版本概况
-    - [ ] 开发宗旨与项目目标
-    - [ ] 注意事项
-    - [ ] 跟踪新版本
-    - [ ] pkgsrc
-    - [ ] FreeBSD Ports
-  - [ ] 换源与包管理器
+- [ ] DragonFlyBSD 调优
+- [ ] 桌面
+  - [ ] KDE5
+  - [ ] Gnome
+  - [ ] QQ
+  - [ ] 微信
+  - [ ] Wine
+  - [ ] XFCE
+  - [ ] 火狐浏览器
+  - [ ] Chromium
+- [ ] DragonFlyBSD 安全加固
+- [ ] DragonFlyBSD 基础知识
+  - [ ] 版本概况
+  - [ ] 开发宗旨与项目目标
+  - [ ] 注意事项
+  - [ ] 跟踪新版本
+  - [ ] pkgsrc
+  - [ ] FreeBSD Ports
+- [ ] 换源与包管理器
+
