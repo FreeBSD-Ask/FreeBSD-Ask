@@ -43,7 +43,7 @@ FreeBSD 是真正自由（Liberty）的**操作系统**，在这波谲云诡的�
 
 ### 现阶段总体目标
 
-- 使 BSD 中文文档现代化
+- 使 BSD 中文文档现代化（工具链自动化、使用最简单的 Markdown 语法等）
 - 在各个方面全面地、彻底地取代 FreeBSD 上游的 *[FreeBSD 手册](https://docs.freebsd.org/en/books/handbook/)*。尽量在不引用其原文的条件下对其章节内容进行重写。
 - 在一定程度上（人们会优先选择此书）取代本书其他 BSD 的官方上游社区的手册
 
