@@ -157,11 +157,11 @@ You may ignore the yellow alert that encourages use of VMSVGA.
 
 xorg 可以自动识别驱动，**不需要** 手动配置 `/usr/local/etc/X11/xorg.conf`（经过测试手动配置反而更卡，点一下要用 5 秒钟……）。
 
-- 启动服务：
+- 服务自启动：
 
 ```sh
-# sysrc vboxguest_enable="YES"
-# sysrc vboxservice_enable="YES"
+# service vboxguest enable
+# service vboxservice enable
 ```
 
 - 启动服务，调整权限（以普通用户 ykla 为例）：
@@ -169,7 +169,7 @@ xorg 可以自动识别驱动，**不需要** 手动配置 `/usr/local/etc/X11/x
 ```sh
 # service vboxguest restart # 可能会提示找不到模块，但是不影响使用
 # service vboxservice restart
-# pw groupmod wheel -m ykla # 管理员权限
+# pw groupmod wheel -m ykla # 将笔者的普通用户 ykla 加入 wheel 组以获得权限，你需要改成你自己的普通用户
 ```
 
 ## 故障排除与未竟事宜
@@ -178,7 +178,7 @@ xorg 可以自动识别驱动，**不需要** 手动配置 `/usr/local/etc/X11/x
 
 编辑 `/etc/sysctl.conf`，添加
 
-```sh
+```ini
 hw.efi.poweroff=0
 ```
 
