@@ -182,12 +182,11 @@
 
 ### OpenBSD ToDo
 
-- [ ] OpenBSD
   - [X] KDE5
-  - [ ] QQ？原生可能吗
+  - [ ] QQ？可能吗？
+  - [ ] 微信？可能吗？
   - [ ] 规范用户配置文件与系统文件
-  - [ ] 微信？原生可能吗
-  - [ ] Wine
+  - [ ] Wine 可能吗？
   - [ ] OpenBSD 调优
   - [ ] OpenBSD 安全加固
   - [ ] 网络
@@ -217,7 +216,6 @@
 
 ### NetBSD ToDo
   
-- [ ] NetBSD
   - [ ] NetBSD 调优
   - [ ] 桌面
     - [ ] 火狐浏览器
@@ -255,8 +253,8 @@
 
 ### DragonFlyBSD ToDo
   
-- [ ] DragonFlyBSD
-  - [ ] DragonFlyBSD调优
+
+  - [ ] DragonFlyBSD 调优
   - [ ] 桌面
     - [ ] KDE5
     - [ ] Gnome
