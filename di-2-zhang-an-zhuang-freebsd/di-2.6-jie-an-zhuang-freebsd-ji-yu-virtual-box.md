@@ -155,7 +155,7 @@ You may ignore the yellow alert that encourages use of VMSVGA.
 # 可以忽略提示使用 VMSVGA 的黄色警告信息。
 ```
 
-xorg 可以自动识别驱动，**不需要** 手动配置 `/usr/local/etc/X11/xorg.conf`（经过测试手动配置反而更卡，点一下要用 5 秒钟……）。
+请使用 UEFI，Xorg 可以自动识别驱动，**不需要** 手动配置 `/usr/local/etc/X11/xorg.conf`（经过测试手动配置反而更卡，点一下要用 5 秒钟……）。
 
 - 服务自启动：
 
