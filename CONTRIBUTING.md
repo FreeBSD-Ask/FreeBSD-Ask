@@ -48,6 +48,8 @@
 
 ### 重写 FreeBSD 手册
 
+参见 <https://github.com/FreeBSD-Ask/FreeBSD-Ask/projects>
+
 **不再需要** 的内容（请 **不要** 撰写下列条目）：
 
 - [ ] 9.6.图像扫描仪（谁有？而且谁支持 FreeBSD？）
