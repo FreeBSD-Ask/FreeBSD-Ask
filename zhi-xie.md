@@ -70,7 +70,8 @@ Ubuntu 吧前吧主 Simple 曾建议修改项目的章节文件名与许可协�
 - [Suyun114](https://github.com/Suyun114)  
 - [tergel93](https://github.com/tergel93)  
 - [tomblackwhite](https://github.com/tomblackwhite)  
-- 艳阳天  
+- 艳阳天
+- [Wang Yan Hao](https://github.com/Wang-Yan-Hao)
 - [wyathou](https://github.com/wyathou)  
 - X-Ray  
 - 心即理物即心  
