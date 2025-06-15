@@ -211,7 +211,7 @@ GNU's Not Unix，从 GNU 这个名字（GNU 不是 UNIX）你也能看出来 Lin
 
 ## 什么是 FreeBSD？
 
-FreeBSD 不是 Linux。FreeBSD 也不是 UNIX 的克隆产物。
+FreeBSD 不是 Linux。FreeBSD 也不是 UNIX 的克隆产物。FreeBSD 是一款自由软件。
 
 ![](../.gitbook/assets/nolinux.png)
 
