@@ -161,6 +161,8 @@ Unix-like 即类 Unix，亦即一切符合 UNIX 标准的操作系统，基本�
 
 ## 什么是 Linux？
 
+Linux 是一款开源软件。
+
 Linux 之名来自 Linux 之父 Linus Torvalds。
 
 Linux 受启发于 Minix（UNIX 版权限制下的产物），一款设计用于教学的微内核操作系统。当时 22 岁的 Linus Torvalds 是芬兰赫尔辛基大学计算机科学系的研究生。
