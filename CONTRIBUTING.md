@@ -76,10 +76,10 @@
                           
 **需要重写** 的内容（请撰写这些内容）：
 
-- [ ] 第 1 章 简介（以下三节可以整合为一小节“FreeBSD 项目简介”）
-  - [ ] FreeBSD 项目宗旨
-  - [ ] FreeBSD 哲学理念
-  - [ ] FreeBSD 开发模式（组织结构）
+- [X] 第 1 章 简介（以下三节可以整合为一小节“FreeBSD 项目简介”）
+  - [X] FreeBSD 项目宗旨
+  - [X] FreeBSD 哲学理念
+  - [X] FreeBSD 开发模式（组织结构）
 - [ ] 第 2 章 安装 FreeBSD
   - [ ] FreeBSD Live CD 用法（USB img 无法挂载以进行重置密码登操作，因为文件系统是只读的，需要解决）
   - [ ] PXE 安装 FreeBSD
