@@ -308,9 +308,7 @@ Net/2 (完全替换 AT&T 代码)
        ▼                     
     NetBSD (1993)
        │
-       ├───   ────┐
-       ▼               ▼
-   OpenBSD      其他 BSD 变种
-   (1996)      (NetBSD, FreeBSD
-               OpenBSD 的后代)
+       ├───────┐
+       ▼            ▼
+               OpenBSD (1995) 
 ```
