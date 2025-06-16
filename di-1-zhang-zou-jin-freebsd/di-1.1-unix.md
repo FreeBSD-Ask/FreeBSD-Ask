@@ -278,3 +278,9 @@ BSD 操作系统并非复制品，而是 AT&T 研究 UNIX（Research Unix）操�
 
 在此过程中，BSD 和 AT&T 之间的关系发生了变化，最终引发了法律争议，导致 BSD 系统的分裂。1993 年，BSD 的核心代码分裂为两个主要的项目：NetBSD 和 FreeBSD。1996 年，OpenBSD 从 NetBSD 中复刻出来；2003 年，DragonFlyBSD 从 FreeBSD 中复刻出来。
 
+如果你现在去查阅 FreeBSD 的源代码，你极有可能还会看到以前的开发者在 1982 年留下的注释和版权声明。
+
+>**思考题**
+>
+>你如何理解 FreeBSD 与 Unix 的关系？
+
