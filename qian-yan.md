@@ -12,69 +12,11 @@ Windows 测试环境为 Windows 10、11，并尽量使用最新版本的 Windows
 
 因为 FreeBSD 有两种安装软件的方式（但个别软件不支持 pkg 安装）：因此为了方便，在本教程中已经尽可能地列出了两种方式的安装说明。但希望大家明白，只是为了方便，而并非不能使用 ports 或者 pkg 进行安装或必须使用二者其一进行安装。
 
->**请注意**
->
-> ports 一般是 HEAD 分支，你的 pkg 最好与 ports 保持在同一主线上，即都选择 `latest`。但是你亦可以自行拉取 pkg 对应的 Ports 季度分支，如 `2025Q1`。
-
----
-
-要安装软件 `yyy`，`yyy` 在 ports 里是 `xxx/yyy`，即路径是 `/usr/ports/xxx/yyy`。
-
-- 那么首先可以通过 pkg 安装二进制软件包，和绝大多数 Linux 用法一样，下同：
-
-```sh
-# pkg install yyy
-```
-
-还可以这样：
-
-```sh
-# pkg install xxx/yyy
-```
-
-或者这样简写：
-
-```sh
-# pkg ins yyy
-```
-
-- 那么还可以通过 Ports 编译安装：
-
-```sh
-# cd /usr/ports/xxx/yyy
-# make install clean
-```
-
-将会不断地弹出来窗口询问你怎么选。如果是使用默认选项，请这样做，则：
-
-```sh
-# cd /usr/ports/xxx/yyy
-# make BATCH=yes install clean
-```
-
-如果你想一次性完成所有配置：
-
-```sh
-# cd /usr/ports/xxx/yyy
-# make config-recursive # 会一直问你，直到结束依赖
-# make install clean
-```
-
-
-### 本书中命令及符号含义
+## 本书中命令及符号含义
 
 `#` 代表 `root` 下的操作，基本等同 `su`、`sudo` 和 `doas`。
 
 `$`、`%` 代表普通用户账户权限。
-
-```sh
-┌---------------┐        ┌--------------┐
-│ 普通用户       │--su-→▶│   root 用户   │
-│ ($ 或 % 提示符)│←------ │   (# 提示符)  │
-└---------------┘  exit  └---------------┘
-```
-
----
 
 >**注意**
 >
@@ -104,7 +46,7 @@ Windows 测试环境为 Windows 10、11，并尽量使用最新版本的 Windows
 
 ## 本书定位
 
-本书旨在深入剖析 FreeBSD 操作系统，敉平从初学者到研究者之间的鸿沟。
+本书涉及了 FreeBSD 14.3-RELEASE 和 13.5-RELEASE 的安装和日常使用，还包含一些 15.0-CURRENT 的内容。
 
 ## 参考书目
 
@@ -139,3 +81,117 @@ Windows 测试环境为 Windows 10、11，并尽量使用最新版本的 Windows
 | :---: | :---: | :---: | :---: | :---: | :---: |
 | ![UNIX 传奇：历史与回忆](./.gitbook/assets/unixchuanqi.png) | 《UNIX 传奇——历史与回忆》 | Brian W Kernighan | 9787115557179 | 人民邮电出版社 | 主要讲解了 UNIX 的发展历史。写的比较粗略。 |
 | ![Absolute FreeBSD, 3rd Edition: The Complete Guide to FreeBS](./.gitbook/assets/AbsoluteBSD.png) | ***Absolute FreeBSD 3rd*** | Michael W. Lucas | 9781593278922 | No Starch Press |英文版，目前没有译文。词汇包括内容都非常基础。切记，有计算机基础的人不需要阅读。 |
+
+
+## 本书的组织结构
+
+**第 1 章 FreeBSD 初见**
+
+围绕自由软件运动与开源运动，为读者介绍 BSD UNIX 的历史与哲学。
+
+**第 2 章 安装 FreeBSD**
+
+指导用户在物理机、虚拟机、云平台以 `bsdinstall` 或手动方式安装 FreeBSD。
+
+**第 3 章 FreeBSD 基础**
+
+涉及一些 Unix 基础知识和 FreeBSD 特色功能。主要面向 Windows 用户和 Linux 用户。即使你认为自己掌握了一些，也应该阅读一下。
+
+**第 4 章 包管理器与系统更新**
+
+本章涵盖：使用 pkg 命令安装二进制包，使用 Ports 编译安装软件；系统更新。
+
+**第 5 章 桌面环境**
+
+尽可能地罗列了所有可在 FreeBSD 上运行的桌面环境和窗口管理器。
+
+**第 6 章 中文环境配置**
+
+包括中文输入法和中文世界常用软件，如 QQ、微信和 WPS。
+
+**第 7 章 多媒体与外设**
+
+如何使用 FreeBSD 进行音视频播放功能。还讲解了蓝牙、打印机等常用设备。
+
+**第 8 章 代理服务器**
+
+中文世界不可或缺的一类软件。
+
+**第 9 章 Jail**
+
+FreeBSD 的特色功能。
+
+**第 10 章 虚拟化与容器**
+
+主要讲解了 FreeBSD 上的虚拟机以及容器。
+
+**第 11 章 计算机概论**
+
+考虑拆分此章节。
+
+**第 12 章 引导恢复与 TTY 配置**
+
+考虑拆分此章节。
+
+**第 13 章 FreeBSD 系统管理**
+
+考虑拆分此章节。
+
+**第 14 章 网络管理**
+
+IPv4、IPv6 及常用网络命令。
+
+**第 15 章 FreeBSD 防火墙**
+
+FreeBSD 防火墙
+
+**第 16 章 服务器**
+
+一些非 web 服务器。
+
+**第 17 章 网络服务器**
+
+常用的网络服务器和监控平台。
+
+**第 18 章 嵌入式（树莓派、RISCV）**
+
+主要介绍了如何在树莓派、RISCV 等设备上运行 BSD。
+
+**第 19 章 文学故事**
+
+一些往事。
+
+**第 20 章 游戏与科学**
+
+游戏和科研教育工具。
+
+**第 21 章 Linux 兼容层**
+
+如何在 FreeBSD 上运行各式 Linux。
+
+**第 22 章 编程环境与软件开发**
+
+如何在 FreeBSD 上搭建各种常用开发环境。
+
+**第 23 章 文件系统与磁盘管理**
+
+主要介绍了 ZFS、UFS 以及常见的 Windows、Linux 文件系统的使用方法。
+
+**第 24 章 DragonFly BSD**
+
+面向桌面用户和 X86 平台的蜻蜓 BSD。
+
+**第 25 章 TwinCAT/BSD**
+
+倍福自动化。
+
+**第 26 章 OpenBSD**
+
+一款安全至上的操作系统，OpenBSD。
+
+**第 27 章 NetBSD**
+
+NetBSD。
+
+
+
