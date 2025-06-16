@@ -1,4 +1,4 @@
-# 目录
+# Table of contents
 
 * [FreeBSD 从入门到追忆（第三版：草稿）](README.md)
 * [编辑日志](CHANGELOG.md)
@@ -36,7 +36,7 @@
 
 ## 第 3 章 FreeBSD 基础
 
-* [第 3.1 节 UNIX 基础（面向 Windows 用户）](di-3-zhang-freebsd-base/di-2.3-unix.md)
+* [第 3.1 节 UNIX 基础（面向 Windows 用户）](di-3-zhang-freebsd-base/di-3.1-unix.md)
 * [第 3.2 节 命令行基础](di-3-zhang-freebsd-base/di-3.2-jie-ming-ling-hang.md)
 * [第 3.3 节 sudo 与 doas](di-3-zhang-freebsd-base/di-3.3-jie-sudo.md)
 * [第 3.4 节 用户和基本账户管理](di-3-zhang-freebsd-base/di-3.4-jie-zu.md)
@@ -56,27 +56,27 @@
 
 ## 第 5 章 桌面环境
 
-* [第 7.1 节 显卡驱动（Intel、AMD）](di-5-zhang-zhuo-mian-an-zhuang/di-7.1-jie-an-zhuang-xian-ka-qu-dong-ji-xorg-bi-kan.md)
-* [第 7.2 节 显卡驱动（NVIDIA）](di-5-zhang-zhuo-mian-an-zhuang/di-7.2-NVIDIA.md)
-* [第 7.3 节 GNOME](di-5-zhang-zhuo-mian-an-zhuang/di-7.3-jie-an-zhuang-gnome.md)
-* [第 7.4 节 Mate](di-5-zhang-zhuo-mian-an-zhuang/di-7.4-jie-an-zhuang-mate.md)
-* [第 7.5 节 Xfce](di-5-zhang-zhuo-mian-an-zhuang/di-7.5-jie-an-zhuang-xfce.md)
-* [第 7.6 节 Cinnamon](di-5-zhang-zhuo-mian-an-zhuang/di-7.6-jie-an-zhuang-cinnamon.md)
-* [第 7.7 节 Lumina](di-5-zhang-zhuo-mian-an-zhuang/di-7.7-jie-an-zhuang-lumina.md)
-* [第 7.8 节 LXQt](di-5-zhang-zhuo-mian-an-zhuang/di-7.8-jie-an-zhuang-lxqt.md)
-* [第 7.9 节 bspwm](di-5-zhang-zhuo-mian-an-zhuang/di-7.9-jie-an-zhuang-bspwm.md)
-* [第 7.10 节 IceWM](di-5-zhang-zhuo-mian-an-zhuang/di-7.10.md)
-* [第 7.11 节 Budgie](di-5-zhang-zhuo-mian-an-zhuang/di-7.11-jie-an-zhuang-budgie.md)
-* [第 7.12 节 i3wm](di-5-zhang-zhuo-mian-an-zhuang/di-7.12-jie-an-zhuang-i3wm.md)
-* [第 7.13 节 CDE](di-5-zhang-zhuo-mian-an-zhuang/di-7.13-jie-an-zhuang-cde.md)
-* [第 7.14 节 Hyprland](di-5-zhang-zhuo-mian-an-zhuang/di-7.14-jie-an-zhuang-hyprland.md)
-* [第 7.15 节 LXDE](di-5-zhang-zhuo-mian-an-zhuang/di-7.15-lxde.md)
-* [第 7.16 节 Window Maker](di-5-zhang-zhuo-mian-an-zhuang/di-7.16-winmaker.md)
-* [第 7.17 节 Fluxbox](di-5-zhang-zhuo-mian-an-zhuang/di-7.17-fluxbox.md)
-* [第 7.18 节 KDE6](di-5-zhang-zhuo-mian-an-zhuang/di-7.18-jie-an-zhuang-kde.md)
-* [第 7.19 节 主题美化](di-5-zhang-zhuo-mian-an-zhuang/di-7.19-jie-zhu-ti-yu-mei-hua.md)
-* [第 7.20 节 远程桌面](di-5-zhang-zhuo-mian-an-zhuang/di-7.20-jie-yuan-cheng-zhuo-mian-guan-li.md)
-* [第 7.21 节 root 登录桌面](di-5-zhang-zhuo-mian-an-zhuang/di-7.21-jie-root-deng-lu-zhuo-mian.md)
+* [第 5.1 节 显卡驱动（Intel、AMD）](di-5-zhang-zhuo-mian-an-zhuang/di-5.1-jie-an-zhuang-xian-ka-qu-dong-ji-xorg-bi-kan.md)
+* [第 5.2 节 显卡驱动（NVIDIA）](di-5-zhang-zhuo-mian-an-zhuang/di-5.2-NVIDIA.md)
+* [第 5.3 节 GNOME](di-5-zhang-zhuo-mian-an-zhuang/di-5.3-jie-an-zhuang-gnome.md)
+* [第 5.4 节 Mate](di-5-zhang-zhuo-mian-an-zhuang/di-5.4-jie-an-zhuang-mate.md)
+* [第 5.5 节 Xfce](di-5-zhang-zhuo-mian-an-zhuang/di-5.5-jie-an-zhuang-xfce.md)
+* [第 5.6 节 Cinnamon](di-5-zhang-zhuo-mian-an-zhuang/di-5.6-jie-an-zhuang-cinnamon.md)
+* [第 5.7 节 Lumina](di-5-zhang-zhuo-mian-an-zhuang/di-5.7-jie-an-zhuang-lumina.md)
+* [第 5.8 节 LXQt](di-5-zhang-zhuo-mian-an-zhuang/di-5.8-jie-an-zhuang-lxqt.md)
+* [第 5.9 节 bspwm](di-5-zhang-zhuo-mian-an-zhuang/di-5.9-jie-an-zhuang-bspwm.md)
+* [第 5.10 节 IceWM](di-5-zhang-zhuo-mian-an-zhuang/di-5.10.md)
+* [第 5.11 节 Budgie](di-5-zhang-zhuo-mian-an-zhuang/di-5.11-jie-an-zhuang-budgie.md)
+* [第 5.12 节 i3wm](di-5-zhang-zhuo-mian-an-zhuang/di-5.12-jie-an-zhuang-i3wm.md)
+* [第 5.13 节 CDE](di-5-zhang-zhuo-mian-an-zhuang/di-5.13-jie-an-zhuang-cde.md)
+* [第 5.14 节 Hyprland](di-5-zhang-zhuo-mian-an-zhuang/di-5.14-jie-an-zhuang-hyprland.md)
+* [第 5.15 节 LXDE](di-5-zhang-zhuo-mian-an-zhuang/di-5.15-lxde.md)
+* [第 5.16 节 Window Maker](di-5-zhang-zhuo-mian-an-zhuang/di-5.16-winmaker.md)
+* [第 5.17 节 Fluxbox](di-5-zhang-zhuo-mian-an-zhuang/di-5.17-fluxbox.md)
+* [第 5.18 节 KDE6](di-5-zhang-zhuo-mian-an-zhuang/di-5.18-jie-an-zhuang-kde.md)
+* [第 5.19 节 主题美化](di-5-zhang-zhuo-mian-an-zhuang/di-5.19-jie-zhu-ti-yu-mei-hua.md)
+* [第 5.20 节 远程桌面](di-5-zhang-zhuo-mian-an-zhuang/di-5.20-jie-yuan-cheng-zhuo-mian-guan-li.md)
+* [第 5.21 节 root 登录桌面](di-5-zhang-zhuo-mian-an-zhuang/di-5.21-jie-root-deng-lu-zhuo-mian.md)
 
 ## 第 6 章 中文环境配置
 
