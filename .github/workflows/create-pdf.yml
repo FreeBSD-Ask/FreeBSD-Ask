@@ -1,9 +1,9 @@
-name: 🔗 创建并发布 PDF
+name: 🔗 创建并发布 PDF & ePBU
 
 on:
   schedule:
-    - cron: '30 15 */7 * *'  # 每 7 天在 UTC 时间 15:30 运行一次
-  workflow_dispatch:  # 允许手动触发
+    - cron: '30 15 * * 0'  # 每周日 UTC 时间 15:30 运行
+  workflow_dispatch:  # 可手动触发
 
 jobs:
   build:
