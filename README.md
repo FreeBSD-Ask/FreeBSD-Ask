@@ -63,7 +63,7 @@ FreeBSD 是真正自由（Liberty）的**操作系统**，在这波谲云诡的�
 
 ### 现阶段总体目标
 
-在各个方面全面地、彻底地取代 FreeBSD 上游的 [《FreeBSD 手册》](https://docs.freebsd.org/en/books/handbook/)的地位。
+在各个方面全面地、彻底地取代 FreeBSD 上游社区[《FreeBSD 手册》](https://docs.freebsd.org/en/books/handbook/)的地位。
 
 ### 方法
 
