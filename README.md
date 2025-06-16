@@ -1,6 +1,6 @@
 # FreeBSD 从入门到追忆（第三版：草稿）
 
-欢迎你来到 FreeBSD！
+欢迎你来到 FreeBSD 的世界！
 
 FreeBSD 是真正自由（Liberty）的**操作系统**，在这波谲云诡的世界中仍然坚守 BSD UNIX 哲学——恪守古老的法则，追寻真正的自由。
 
