@@ -24,8 +24,8 @@
 
 * [第 2.1 节 安装前准备](di-2-zhang-an-zhuang-freebsd/2.1-install-pre.md)
 * [第 2.2 节 FreeBSD 安装图解](di-2-zhang-an-zhuang-freebsd/di-2.2-jie-tu-jie-an-zhuang.md)
-* [第 2.3 节 UNIX 基础（面向 Windows 用户）](di-2-zhang-an-zhuang-freebsd/2.3-unix.md)
-* [第 2.4 节 命令行基础](di-2-zhang-an-zhuang-freebsd/di-2.4-jie-ming-ling-hang.md)
+* [第 2.3 节 安装 FreeBSD——基于 Hyper-V](di-2-zhang-an-zhuang-freebsd/di-2.3-hyper-v-jie.md)
+* [第 2.4 节 云服务器安装 FreeBSD（基于腾讯云轻量云）](di-2-zhang-an-zhuang-freebsd/di-2.4-jie-teng-xun-yun-qing-liang-yun-ji-qi-ta-fu-wu-qi-dd-an-zhuang-freebsd.md)
 * [第 2.5 节 安装 FreeBSD——基于 VMware Workstation Pro](di-2-zhang-an-zhuang-freebsd/di-2.5-jie-an-zhuang-freebsd-ji-yu-vmware-workstation-pro.md)
 * [第 2.6 节 安装 FreeBSD——基于 Virtual Box](di-2-zhang-an-zhuang-freebsd/di-2.6-jie-an-zhuang-freebsd-ji-yu-virtual-box.md)
 * [第 2.7 节 手动安装双系统（先安装 FreeBSD）](di-2-zhang-an-zhuang-freebsd/di-2.7.md)
@@ -33,81 +33,81 @@
 * [第 2.9 节 安装 FreeBSD——基于 Apple M1 & Parallels Desktop 20](di-2-zhang-an-zhuang-freebsd/di-2.9-jie-apple.md)
 * [第 2.10 节 安装 FreeBSD——基于 Apple M1 & VMware Fusion Pro](di-2-zhang-an-zhuang-freebsd/di-2.10-jie-apple.md)
 * [第 2.11 节 Qemu 安装 RISC-V FreeBSD（基于 x86 Windows）](di-2-zhang-an-zhuang-freebsd/di-2.11-qemu.md)
-* [第 2.12 节 云服务器安装 FreeBSD（基于腾讯云轻量云）](di-2-zhang-an-zhuang-freebsd/di-2.12-jie-teng-xun-yun-qing-liang-yun-ji-qi-ta-fu-wu-qi-dd-an-zhuang-freebsd.md)
-* [第 2.13 节 安装 FreeBSD——基于 Hyper-V](di-2-zhang-an-zhuang-freebsd/di-2.13-hyper-v-jie.md)
 
-## 第 3 章 包管理器与 FreeBSD 系统更新
+## 第 3 章 FreeBSD 基础
 
-* [第 3.1 节 FreeBSD 镜像站现状](di-3-zhang-bao-guan-li-qi/di-3.1-jie-freebsd-jing-xiang-zhan-xian-zhuang.md)
-* [第 3.2 节 FreeBSD 换源方式](di-3-zhang-bao-guan-li-qi/di-3.2-jie-freebsd-huan-yuan-fang-shi.md)
-* [第 3.3 节 gitup 的用法](di-3-zhang-bao-guan-li-qi/di-3.3-jie-gitup-de-yong-fa.md)
-* [第 3.4 节 通过 pkg 包管理器安装二进制包](di-3-zhang-bao-guan-li-qi/di-3.4-jie-ruan-jian-bao-guan-li-qi-pkg-de-yong-fa.md)
-* [第 3.5 节 通过 Ports 以源代码方式安装软件](di-3-zhang-bao-guan-li-qi/di-3.5-jie-tong-guo-yuan-dai-ma-ports-fang-shi-an-zhuang-ruan-jian.md)
-* [第 3.6 节 通过 DVD 安装软件](di-3-zhang-bao-guan-li-qi/di-3.6-jie-tong-guo-dvd-an-zhuang-ruan-jian.md)
-* [第 3.7 节 通过 freebsd-update 更新 FreeBSD](di-3-zhang-bao-guan-li-qi/di-3.7-jie-tong-guo-freebsdupdate-geng-xin.md)
-* [第 3.8 节 通过源代码更新 FreeBSD](di-3-zhang-bao-guan-li-qi/di-3.8-jie-tong-guo-yuan-dai-ma-geng-xin.md)
-* [第 3.9 节 使用 pkgbase 更新 FreeBSD](di-3-zhang-bao-guan-li-qi/di-3.9-jie-shi-yong-pkgbase-geng-xin.md)
+* [第 3.1 节 UNIX 基础（面向 Windows 用户）](di-3-zhang-freebsd-base/di-2.3-unix.md)
+* [第 3.2 节 命令行基础](di-3-zhang-freebsd-base/di-3.2-jie-ming-ling-hang.md)
+* [第 3.3 节 sudo 与 doas](di-3-zhang-freebsd-base/di-3.3-jie-sudo.md)
+* [第 3.4 节 用户和基本账户管理](di-3-zhang-freebsd-base/di-3.4-jie-zu.md)
+* [第 3.5 节 权限](di-3-zhang-freebsd-base/di-3.5-jie-yong-hu-quan-xian.md)
 
-## 第 4 章 桌面环境
+## 第 4 章 包管理器与 FreeBSD 系统更新
 
-* [第 4.1 节 显卡驱动（Intel、AMD）](di-4-zhang-zhuo-mian-an-zhuang/di-4.1-jie-an-zhuang-xian-ka-qu-dong-ji-xorg-bi-kan.md)
-* [第 4.2 节 显卡驱动（NVIDIA）](di-4-zhang-zhuo-mian-an-zhuang/di-4.2-NVIDIA.md)
-* [第 4.3 节 GNOME](di-4-zhang-zhuo-mian-an-zhuang/di-4.3-jie-an-zhuang-gnome.md)
-* [第 4.4 节 Mate](di-4-zhang-zhuo-mian-an-zhuang/di-4.4-jie-an-zhuang-mate.md)
-* [第 4.5 节 Xfce](di-4-zhang-zhuo-mian-an-zhuang/di-4.5-jie-an-zhuang-xfce.md)
-* [第 4.6 节 Cinnamon](di-4-zhang-zhuo-mian-an-zhuang/di-4.6-jie-an-zhuang-cinnamon.md)
-* [第 4.7 节 Lumina](di-4-zhang-zhuo-mian-an-zhuang/di-4.7-jie-an-zhuang-lumina.md)
-* [第 4.8 节 LXQt](di-4-zhang-zhuo-mian-an-zhuang/di-4.8-jie-an-zhuang-lxqt.md)
-* [第 4.9 节 bspwm](di-4-zhang-zhuo-mian-an-zhuang/di-4.9-jie-an-zhuang-bspwm.md)
-* [第 4.10 节 IceWM](di-4-zhang-zhuo-mian-an-zhuang/di-4.10.md)
-* [第 4.11 节 Budgie](di-4-zhang-zhuo-mian-an-zhuang/di-4.11-jie-an-zhuang-budgie.md)
-* [第 4.12 节 i3wm](di-4-zhang-zhuo-mian-an-zhuang/di-4.12-jie-an-zhuang-i3wm.md)
-* [第 4.13 节 CDE](di-4-zhang-zhuo-mian-an-zhuang/di-4.13-jie-an-zhuang-cde.md)
-* [第 4.14 节 Hyprland](di-4-zhang-zhuo-mian-an-zhuang/di-4.14-jie-an-zhuang-hyprland.md)
-* [第 4.15 节 LXDE](di-4-zhang-zhuo-mian-an-zhuang/di-4.15-lxde.md)
-* [第 4.16 节 Window Maker](di-4-zhang-zhuo-mian-an-zhuang/di-4.16-winmaker.md)
-* [第 4.17 节 Fluxbox](di-4-zhang-zhuo-mian-an-zhuang/di-4.17-fluxbox.md)
-* [第 4.18 节 KDE6](di-4-zhang-zhuo-mian-an-zhuang/di-4.18-jie-an-zhuang-kde.md)
-* [第 4.19 节 主题美化](di-4-zhang-zhuo-mian-an-zhuang/di-4.19-jie-zhu-ti-yu-mei-hua.md)
-* [第 4.20 节 远程桌面](di-4-zhang-zhuo-mian-an-zhuang/di-4.20-jie-yuan-cheng-zhuo-mian-guan-li.md)
-* [第 4.21 节 root 登录桌面](di-4-zhang-zhuo-mian-an-zhuang/di-4.21-jie-root-deng-lu-zhuo-mian.md)
+* [第 4.1 节 FreeBSD 镜像站现状](di-4-zhang-bao-guan-li-qi/di-4.1-jie-freebsd-jing-xiang-zhan-xian-zhuang.md)
+* [第 4.2 节 FreeBSD 换源方式](di-4-zhang-bao-guan-li-qi/di-4.2-jie-freebsd-huan-yuan-fang-shi.md)
+* [第 4.3 节 gitup 的用法](di-4-zhang-bao-guan-li-qi/di-4.3-jie-gitup-de-yong-fa.md)
+* [第 4.4 节 通过 pkg 包管理器安装二进制包](di-4-zhang-bao-guan-li-qi/di-4.4-jie-ruan-jian-bao-guan-li-qi-pkg-de-yong-fa.md)
+* [第 4.5 节 通过 Ports 以源代码方式安装软件](di-4-zhang-bao-guan-li-qi/di-4.5-jie-tong-guo-yuan-dai-ma-ports-fang-shi-an-zhuang-ruan-jian.md)
+* [第 4.6 节 通过 DVD 安装软件](di-4-zhang-bao-guan-li-qi/di-4.6-jie-tong-guo-dvd-an-zhuang-ruan-jian.md)
+* [第 4.7 节 通过 freebsd-update 更新 FreeBSD](di-4-zhang-bao-guan-li-qi/di-4.7-jie-tong-guo-freebsdupdate-geng-xin.md)
+* [第 4.8 节 通过源代码更新 FreeBSD](di-4-zhang-bao-guan-li-qi/di-4.8-jie-tong-guo-yuan-dai-ma-geng-xin.md)
+* [第 4.9 节 使用 pkgbase 更新 FreeBSD](di-4-zhang-bao-guan-li-qi/di-4.9-jie-shi-yong-pkgbase-geng-xin.md)
 
-## 第 5 章 中文环境配置
+## 第 5 章 桌面环境
 
-* [第 5.1 节 本地化环境变量](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.1-jie-shu-ru-fa-yu-huan-jing-bian-liang.md)
-* [第 5.2 节 Fcitx 输入法框架](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.2-jie-fcitx-shu-ru-fa-kuang-jia.md)
-* [第 5.3 节 IBus 输入法框架](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.3-jie-ibus-shu-ru-fa-kuang-jia.md)
-* [第 5.4 节 五笔输入法](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.4-jie-wu-bi-shu-ru-fa.md)
-* [第 5.5 节 网络浏览器](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.5-jie-firefox-yu-chromium-an-zhuang.md)
-* [第 5.6 节 QQ（Linux 版）](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.6-jie-an-zhuang-qq.md)
-* [第 5.7 节 更换字体](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.7-jie-geng-huan-zi-ti.md)
-* [第 5.8 节 金山 WPS（Linux 版）](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.8-jie-an-zhuang-jin-shan-wps.md)
-* [第 5.9 节 压缩与解压](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-5.9-jie-ya-suo-yu-jie-ya.md)
-* [第 5.10 节 微信（Linux 版）](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/5.10-wechat.md)
+* [第 7.1 节 显卡驱动（Intel、AMD）](di-5-zhang-zhuo-mian-an-zhuang/di-7.1-jie-an-zhuang-xian-ka-qu-dong-ji-xorg-bi-kan.md)
+* [第 7.2 节 显卡驱动（NVIDIA）](di-5-zhang-zhuo-mian-an-zhuang/di-7.2-NVIDIA.md)
+* [第 7.3 节 GNOME](di-5-zhang-zhuo-mian-an-zhuang/di-7.3-jie-an-zhuang-gnome.md)
+* [第 7.4 节 Mate](di-5-zhang-zhuo-mian-an-zhuang/di-7.4-jie-an-zhuang-mate.md)
+* [第 7.5 节 Xfce](di-5-zhang-zhuo-mian-an-zhuang/di-7.5-jie-an-zhuang-xfce.md)
+* [第 7.6 节 Cinnamon](di-5-zhang-zhuo-mian-an-zhuang/di-7.6-jie-an-zhuang-cinnamon.md)
+* [第 7.7 节 Lumina](di-5-zhang-zhuo-mian-an-zhuang/di-7.7-jie-an-zhuang-lumina.md)
+* [第 7.8 节 LXQt](di-5-zhang-zhuo-mian-an-zhuang/di-7.8-jie-an-zhuang-lxqt.md)
+* [第 7.9 节 bspwm](di-5-zhang-zhuo-mian-an-zhuang/di-7.9-jie-an-zhuang-bspwm.md)
+* [第 7.10 节 IceWM](di-5-zhang-zhuo-mian-an-zhuang/di-7.10.md)
+* [第 7.11 节 Budgie](di-5-zhang-zhuo-mian-an-zhuang/di-7.11-jie-an-zhuang-budgie.md)
+* [第 7.12 节 i3wm](di-5-zhang-zhuo-mian-an-zhuang/di-7.12-jie-an-zhuang-i3wm.md)
+* [第 7.13 节 CDE](di-5-zhang-zhuo-mian-an-zhuang/di-7.13-jie-an-zhuang-cde.md)
+* [第 7.14 节 Hyprland](di-5-zhang-zhuo-mian-an-zhuang/di-7.14-jie-an-zhuang-hyprland.md)
+* [第 7.15 节 LXDE](di-5-zhang-zhuo-mian-an-zhuang/di-7.15-lxde.md)
+* [第 7.16 节 Window Maker](di-5-zhang-zhuo-mian-an-zhuang/di-7.16-winmaker.md)
+* [第 7.17 节 Fluxbox](di-5-zhang-zhuo-mian-an-zhuang/di-7.17-fluxbox.md)
+* [第 7.18 节 KDE6](di-5-zhang-zhuo-mian-an-zhuang/di-7.18-jie-an-zhuang-kde.md)
+* [第 7.19 节 主题美化](di-5-zhang-zhuo-mian-an-zhuang/di-7.19-jie-zhu-ti-yu-mei-hua.md)
+* [第 7.20 节 远程桌面](di-5-zhang-zhuo-mian-an-zhuang/di-7.20-jie-yuan-cheng-zhuo-mian-guan-li.md)
+* [第 7.21 节 root 登录桌面](di-5-zhang-zhuo-mian-an-zhuang/di-7.21-jie-root-deng-lu-zhuo-mian.md)
+
+## 第 6 章 中文环境配置
+
+* [第 7.1 节 本地化环境变量](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-7.1-jie-shu-ru-fa-yu-huan-jing-bian-liang.md)
+* [第 7.2 节 Fcitx 输入法框架](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-7.2-jie-fcitx-shu-ru-fa-kuang-jia.md)
+* [第 7.3 节 IBus 输入法框架](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-7.3-jie-ibus-shu-ru-fa-kuang-jia.md)
+* [第 7.4 节 五笔输入法](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-7.4-jie-wu-bi-shu-ru-fa.md)
+* [第 7.5 节 网络浏览器](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-7.5-jie-firefox-yu-chromium-an-zhuang.md)
+* [第 7.6 节 QQ（Linux 版）](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-7.6-jie-an-zhuang-qq.md)
+* [第 7.7 节 更换字体](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-7.7-jie-geng-huan-zi-ti.md)
+* [第 7.8 节 金山 WPS（Linux 版）](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-7.8-jie-an-zhuang-jin-shan-wps.md)
+* [第 7.9 节 压缩与解压](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-7.9-jie-ya-suo-yu-jie-ya.md)
+* [第 7.10 节 微信（Linux 版）](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-7.10-wechat.md)
 
 ## 第 6 章 多媒体与外设
 
-* [第 6.1 节 声卡](di-6-duo-mei-ti/di-6.1-jie-sheng-ka-yu-wang-ka-she-zhi.md)
-* [第 6.2 节 蓝牙](di-6-duo-mei-ti/di-6.2-jie-lan-ya.md)
-* [第 6.3 节 打印机](di-6-duo-mei-ti/di-6.3-jie-da-yin-ji-de-an-zhuang.md)
-* [第 6.4 节 触摸板](di-6-duo-mei-ti/di-6.4-jie-chu-mo-ban-de-she-zhi.md)
-* [第 6.5 节 音频播放器](di-6-duo-mei-ti/di-6.5-jie-yin-pin-bo-fang-qi.md)
-* [第 6.6 节 视频播放器](di-6-duo-mei-ti/di-6.6-shi-pin-bo-fang.md)
-* [第 6.7 节 音频图形图像处理](di-6-duo-mei-ti/di-6.7-tu-xing-tu-xiang.md)
+* [第 7.1 节 声卡](di-7-duo-mei-ti/di-7.1-jie-sheng-ka-yu-wang-ka-she-zhi.md)
+* [第 7.2 节 蓝牙](di-7-duo-mei-ti/di-7.2-jie-lan-ya.md)
+* [第 7.3 节 打印机](di-7-duo-mei-ti/di-7.3-jie-da-yin-ji-de-an-zhuang.md)
+* [第 7.4 节 触摸板](di-7-duo-mei-ti/di-7.4-jie-chu-mo-ban-de-she-zhi.md)
+* [第 7.5 节 音频播放器](di-7-duo-mei-ti/di-7.5-jie-yin-pin-bo-fang-qi.md)
+* [第 7.6 节 视频播放器](di-7-duo-mei-ti/di-7.6-shi-pin-bo-fang.md)
+* [第 7.7 节 音频图形图像处理](di-7-duo-mei-ti/di-7.7-tu-xing-tu-xiang.md)
 
 
-## 第 7 章 代理服务器
+## 第 8 章 代理服务器
 
-* [第 7.1 节 HTTP 代理](di-7-zhang-vpn-yu-dai-li/di-7.1-jie-http-dai-li.md)
-* [第 7.2 节 V2ray](di-7-zhang-vpn-yu-dai-li/di-7.2-jie-v2ray.md)
-* [第 7.3 节 Mihomo（原 Clash）](di-7-zhang-vpn-yu-dai-li/di-7.3-jie-clash.md)
-* [第 7.4 节 OpenVPN](di-7-zhang-vpn-yu-dai-li/di-7.4-jie-openvpn.md)
-
-## 第 8 章 账户与权限
-
-* [第 8.1 节 sudo 与 doas](di-8-zhang-yong-hu-yu-quan-xian/di-8.1-jie-sudo.md)
-* [第 8.2 节 用户和基本账户管理](di-8-zhang-yong-hu-yu-quan-xian/di-8.2-jie-zu.md)
-* [第 8.3 节 权限](di-8-zhang-yong-hu-yu-quan-xian/di-8.3-jie-yong-hu-quan-xian.md)
+* [第 8.1 节 HTTP 代理](di-8-zhang-vpn-yu-dai-li/di-8.1-jie-http-dai-li.md)
+* [第 8.2 节 V2ray](di-8-zhang-vpn-yu-dai-li/di-8.2-jie-v2ray.md)
+* [第 8.3 节 Mihomo（原 Clash）](di-8-zhang-vpn-yu-dai-li/di-8.3-jie-clash.md)
+* [第 8.4 节 OpenVPN](di-8-zhang-vpn-yu-dai-li/di-8.4-jie-openvpn.md)
 
 ## 第 9 章 Jail
 
