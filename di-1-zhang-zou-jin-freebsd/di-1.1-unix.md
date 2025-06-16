@@ -281,15 +281,15 @@ AT&T UNIX (1969)
  │
  │ (衍生出早期版本)
  ▼
-Research UNIX (AT&T专有)
+Research UNIX (AT&T 专有)
  │
- │ (1977年: 伯克利CSRG开始开发)
+ │ (1977年: 伯克利 CSRG 开始开发)
  ▼
 BSD UNIX (1BSD, 2BSD...4.3BSD) 
  │
- │ (1991年: Net/2发布)
+ │ (1991年: Net/2 发布)
  ▼
-Net/2 (完全替换AT&T代码)
+Net/2 (完全替换 AT&T 代码)
  │
  ├───────────────┐
  │               │
@@ -308,9 +308,9 @@ Net/2 (完全替换AT&T代码)
        ▼                     
     NetBSD (1993)
        │
-       ├───────────────┐
+       ├───   ────┐
        ▼               ▼
-   OpenBSD      其他BSD变种
+   OpenBSD      其他 BSD 变种
    (1996)      (NetBSD, FreeBSD
-               OpenBSD的后代)
+               OpenBSD 的后代)
 ```
