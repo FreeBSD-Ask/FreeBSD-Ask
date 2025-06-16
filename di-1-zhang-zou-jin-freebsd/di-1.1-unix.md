@@ -303,7 +303,7 @@ Net/2 (完全替换 AT&T 代码)
 │ (AT&T vs. BSDi)   │         │
 └───────────────────┘         ├───────────────┐
        │                     ▼               ▼
-       │                 FreeBSD         DragonFlyBSD
+       │                 FreeBSD     DragonFlyBSD
        │                分支版本          (2003)
        ▼                     
     NetBSD (1993)
