@@ -59,9 +59,9 @@ FreeBSD 是真正自由（Liberty）的**操作系统**，在这波谲云诡的�
 
 笔者的多个 PR 均在 1-2 年后才被接受，提交者严重缺乏时间感，如此，何谈改进？
 
-故，提出以下目标与方法用于改善社区现状，以期促进 FreeBSD 开源社区及 FreeBSD 项目发展。
-
 ### 现阶段总体目标
+
+故，提出以下目标与方法用于改善社区现状，以期促进 FreeBSD 开源社区及 FreeBSD 项目发展：
 
 在各个方面全面地、彻底地取代 FreeBSD 上游社区[《FreeBSD 手册》](https://docs.freebsd.org/en/books/handbook/)的地位。
 
