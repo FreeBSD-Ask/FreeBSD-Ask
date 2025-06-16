@@ -1,4 +1,4 @@
-# 第 1.1 节 操作系统的历程：UNIX、Unix-like、Linux & FreeBSD
+# 第 1.1 节 操作系统的历程：从 UNIX、Linux 到 FreeBSD
 
 ## 什么是 UNIX？
 
