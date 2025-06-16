@@ -1,4 +1,4 @@
-# 第 5.6 节 QQ（Linux 版）
+# 第 6.6 节 QQ（Linux 版）
 
 
 ## 基于 RockyLinux（FreeBSD Port）
