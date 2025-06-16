@@ -1,4 +1,4 @@
-# 第 1.5 节 Linux 用户迁移指南
+# 第 3.1 节 Linux 用户迁移指南
 
 ## FreeBSD 与 Linux 不同之处
 
