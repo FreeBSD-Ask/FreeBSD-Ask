@@ -30,17 +30,17 @@ Port `sysutils/htop` 命令能够清晰地显示这一点（注意“USER”）�
  1018 ykla        20   0  676M  262M S    0.0  3.2  0:30.96 │              ├─ /usr/local/bin/kwin_x11
 ```
 
-可以看到上面有 `ykla`、`root`、`_dhcp`、`messagebus`、`ntpd` 这几位用户存在。
+可以看到系统中存在 `ykla`、`root`、`_dhcp`、`messagebus`、`ntpd` 这几个用户账户。
 
 FreeBSD 中主要有三类账户：系统账户、用户账户，以及超级用户账户。
 
 超级用户账户拥有系统中的最高权限，即 root 账户。
 
-系统账户由源代码中的 [main/etc/master.passwd](https://github.com/freebsd/freebsd-src/blob/main/etc/master.passwd) 所定义，故，`_dhcp`、`messagebus`、`ntpd` 都属于系统账户。系统账户是被限制了权力的超级用户账户，主要是为了安全隔离。
+系统账户由源代码中的 [main/etc/master.passwd](https://github.com/freebsd/freebsd-src/blob/main/etc/master.passwd) 所定义，故，`_dhcp`、`messagebus`、`ntpd` 都属于系统账户。系统账户是具有受限权限的专用账户，通常用于运行系统服务和守护进程。
 
-`ykla` 即是笔者在安装系统时自行创建的普通用户账户，如果你想使用命令 `su` 将其提升到 `root`，你就必须将其分配到 `wheel` 组。
+`ykla` 是笔者在安装系统时创建的普通用户账户。如果希望通过 `su` 命令切换为 `root` 用户，必须将该用户加入 `wheel` 用户组。
 
-需要注意一点，即使是没有任何权限的普通账户，随着其运行的软件越多，其权限也在稳步提升。
+需要注意的是，虽然普通用户权限受限，但其运行的软件越多，系统暴露的攻击面也会增加，从而带来潜在的提权风险。这并不意味着账户“自动”变得更危险——用户的权限是固定的，不会因为运行进程增加而发生权限提升。相反，只有在程序存在漏洞或配置不当的情况下，攻击者才可能尝试利用这些进程实现权限提升。
 
 ## `adduser` 创建用户
 
