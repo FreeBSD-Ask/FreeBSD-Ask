@@ -1,4 +1,4 @@
-# 目录
+# Table of contents
 
 * [FreeBSD 从入门到追忆（第三版：草稿）](README.md)
 * [编辑日志](CHANGELOG.md)
@@ -36,7 +36,7 @@
 ## 第 3 章 FreeBSD 基础
 
 * [第 3.1 节 Linux 用户迁移指南](di-3-zhang-freebsd-base/di-3.1-jie-linux-yong-hu-qian-yi-zhi-bei.md)
-* [第 3.2 节 UNIX 基础（面向 Windows 用户）](di-3-zhang-freebsd-base/di-3.2-unix.md)
+* [第 3.2 节 Windows 用户迁移指南](di-3-zhang-freebsd-base/di-3.2-unix.md)
 * [第 3.3 节 命令行基础](di-3-zhang-freebsd-base/di-3.3-jie-ming-ling-hang.md)
 * [第 3.4 节 用户和基本账户管理](di-3-zhang-freebsd-base/di-3.4-jie-zu.md)
 * [第 3.5 节 权限](di-3-zhang-freebsd-base/di-3.5-jie-yong-hu-quan-xian.md)
