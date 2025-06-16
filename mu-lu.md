@@ -1,4 +1,4 @@
-# 目录
+# Table of contents
 
 * [FreeBSD 从入门到追忆（第三版：草稿）](README.md)
 * [编辑日志](CHANGELOG.md)
@@ -91,7 +91,7 @@
 * [第 7.9 节 压缩与解压](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-7.9-jie-ya-suo-yu-jie-ya.md)
 * [第 7.10 节 微信（Linux 版）](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-7.10-wechat.md)
 
-## 第 6 章 多媒体与外设
+## 第 7 章 多媒体与外设
 
 * [第 7.1 节 声卡](di-7-duo-mei-ti/di-7.1-jie-sheng-ka-yu-wang-ka-she-zhi.md)
 * [第 7.2 节 蓝牙](di-7-duo-mei-ti/di-7.2-jie-lan-ya.md)
