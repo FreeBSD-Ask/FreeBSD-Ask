@@ -2,11 +2,7 @@
 
 ## 本书定位
 
-本书涉及了 FreeBSD 14.3-RELEASE 和 13.5-RELEASE 的安装和日常使用，还包含一些 15.0-CURRENT 的内容。
-
-## 目标平台
-
-目前版本兼容 FreeBSD 14.2-RELEASE 及 FreeBSD 15.0-CURRENT，并尽量向下兼容。
+本书涉及了 FreeBSD 14.3-RELEASE 和 13.5-RELEASE 的安装和日常使用（并尽量向下兼容），还包含一些 15.0-CURRENT 的内容。
 
 主要面向 x86-64（amd64）、AArch64（arm64），并尽可能多的支持其他体系平台。
 
