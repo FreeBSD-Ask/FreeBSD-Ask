@@ -1,4 +1,4 @@
-name: 🔗 创建并发布 PDF & ePBU
+name: 🔗 创建并发布 PDF & EPUB
 
 on:
   schedule:
