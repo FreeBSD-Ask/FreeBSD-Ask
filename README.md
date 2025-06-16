@@ -68,11 +68,11 @@ FreeBSD 是真正自由（Liberty）的**操作系统**，在这波谲云诡的�
 - 指出上游社区官方手册的错误或过时内容
 - 在编写完成后将之翻译为英文呈现
 
-## 导出 PDF/ePub 文档
+## 导出电子文档
 
 可使用 [safreya](https://github.com/safreya) 编写的 [Python 脚本](https://github.com/FreeBSD-Ask/gitbook-pdf-export)来导出 PDF/ePub。
 
-此外，每周都会通过 GitHub Action 导出 PDF/ePub 于 [releases](https://github.com/FreeBSD-Ask/FreeBSD-Ask/releases)（也许需要代理）。
+此外，每周都会通过 GitHub Action 导出 PDF/EPUB 于 [releases](https://github.com/FreeBSD-Ask/FreeBSD-Ask/releases)（也许需要代理）。
 
 ## 捐赠
 
