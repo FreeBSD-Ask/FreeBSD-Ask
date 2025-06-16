@@ -80,16 +80,16 @@
 
 ## 第 6 章 中文环境配置
 
-* [第 7.1 节 本地化环境变量](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-7.1-jie-shu-ru-fa-yu-huan-jing-bian-liang.md)
-* [第 7.2 节 Fcitx 输入法框架](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-7.2-jie-fcitx-shu-ru-fa-kuang-jia.md)
-* [第 7.3 节 IBus 输入法框架](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-7.3-jie-ibus-shu-ru-fa-kuang-jia.md)
-* [第 7.4 节 五笔输入法](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-7.4-jie-wu-bi-shu-ru-fa.md)
-* [第 7.5 节 网络浏览器](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-7.5-jie-firefox-yu-chromium-an-zhuang.md)
-* [第 7.6 节 QQ（Linux 版）](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-7.6-jie-an-zhuang-qq.md)
-* [第 7.7 节 更换字体](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-7.7-jie-geng-huan-zi-ti.md)
-* [第 7.8 节 金山 WPS（Linux 版）](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-7.8-jie-an-zhuang-jin-shan-wps.md)
-* [第 7.9 节 压缩与解压](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-7.9-jie-ya-suo-yu-jie-ya.md)
-* [第 7.10 节 微信（Linux 版）](di-5-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-7.10-wechat.md)
+* [第 6.1 节 本地化环境变量](di-6-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-6.1-jie-shu-ru-fa-yu-huan-jing-bian-liang.md)
+* [第 6.2 节 Fcitx 输入法框架](di-6-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-6.2-jie-fcitx-shu-ru-fa-kuang-jia.md)
+* [第 6.3 节 IBus 输入法框架](di-6-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-6.3-jie-ibus-shu-ru-fa-kuang-jia.md)
+* [第 6.4 节 五笔输入法](di-6-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-6.4-jie-wu-bi-shu-ru-fa.md)
+* [第 6.5 节 网络浏览器](di-6-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-6.5-jie-firefox-yu-chromium-an-zhuang.md)
+* [第 6.6 节 QQ（Linux 版）](di-6-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-6.6-jie-an-zhuang-qq.md)
+* [第 6.7 节 更换字体](di-6-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-6.7-jie-geng-huan-zi-ti.md)
+* [第 6.8 节 金山 WPS（Linux 版）](di-6-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-6.8-jie-an-zhuang-jin-shan-wps.md)
+* [第 6.9 节 压缩与解压](di-6-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-6.9-jie-ya-suo-yu-jie-ya.md)
+* [第 6.10 节 微信（Linux 版）](di-6-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-6.10-wechat.md)
 
 ## 第 7 章 多媒体与外设
 
