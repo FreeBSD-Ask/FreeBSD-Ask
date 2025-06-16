@@ -1,4 +1,4 @@
-# 第 3.7 节 通过 freebsd-update 更新 FreeBSD
+# 第 4.7 节 通过 freebsd-update 更新 FreeBSD
 
 
 > **前排提示**

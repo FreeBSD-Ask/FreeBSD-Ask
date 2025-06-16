@@ -1,4 +1,4 @@
-# 第 7.3 节 Mihomo（原 Clash）
+# 第 8.3 节 Mihomo（原 Clash）
 
 mihomo 在 [ports](https://www.freshports.org/net/mihomo) 中就有提供。
 

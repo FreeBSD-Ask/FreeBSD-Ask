@@ -1,4 +1,4 @@
-# 第 8.1 节 sudo 与 doas
+# 第 3.3 节 sudo 与 doas
 
 ## doas
 
