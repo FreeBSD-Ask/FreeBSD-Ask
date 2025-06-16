@@ -1,4 +1,4 @@
-# 第 2.3 节 UNIX 基础（面向 Windows 用户）
+# 第 3.1 节 UNIX 基础（面向 Windows 用户）
 
 ## UNIX 目录与 Windows 目录的区别
 

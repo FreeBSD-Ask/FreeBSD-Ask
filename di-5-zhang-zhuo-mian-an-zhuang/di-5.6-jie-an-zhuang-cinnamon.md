@@ -1,4 +1,4 @@
-# 第 4.6 节 Cinnamon
+# 第 5.6 节 Cinnamon
 
 Cinnamon 基于 GNOME Shell，来自 Linux Mint 项目。
 
