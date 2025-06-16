@@ -283,7 +283,7 @@ AT&T UNIX (1969)
  ▼
 Research UNIX (AT&T 专有)
  │
- │ (1977年: 伯克利 CSRG 开始开发)
+ │ (1977 年: 伯克利 CSRG 开始开发)
  ▼
 BSD UNIX (1BSD, 2BSD...4.3BSD) 
  │
