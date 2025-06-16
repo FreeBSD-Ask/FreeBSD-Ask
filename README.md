@@ -1,14 +1,24 @@
 # FreeBSD 从入门到追忆（第三版：草稿）
 
+欢迎你来到 FreeBSD！
+
 FreeBSD 是真正自由（Liberty）的**操作系统**，在这波谲云诡的世界中仍然坚守 BSD UNIX 哲学——恪守古老的法则，追寻真正的自由。
 
 请参与 [FreeBSD 中文社区 2025 年第二季度问卷调查](https://www.wjx.cn/vm/ebuJRkf.aspx#)（将于 2025.6.26 停止收集）
 
+## 导出电子文档
+
+可使用 [safreya](https://github.com/safreya) 编写的 [Python 脚本](https://github.com/FreeBSD-Ask/gitbook-pdf-export)来导出 PDF/EPUB。
+
+此外，每周都会通过 GitHub Action 导出 PDF/EPUB 于 [releases](https://github.com/FreeBSD-Ask/FreeBSD-Ask/releases)（也许需要代理）。
+
 ## 关于
+
+本书是中文世界许多人不懈努力的成果。
 
 ### 内容提要
 
-本书旨在深入剖析 FreeBSD 操作系统，敉平从陌生人到研究者之间的鸿沟。
+本书涉及了 FreeBSD 14.3-RELEASE 和 13.5-RELEASE 的安装和日常使用，还包含一些 15.0-CURRENT 的内容。
 
 ### 加入 FreeBSD 中文社区（CFC）
 
@@ -67,12 +77,6 @@ FreeBSD 是真正自由（Liberty）的**操作系统**，在这波谲云诡的�
 - 审视原有开发者的开发哲学与理念，是否合理，并进行评价并初步参与其项目。
 - 指出上游社区官方手册的错误或过时内容
 - 在编写完成后将之翻译为英文呈现
-
-## 导出电子文档
-
-可使用 [safreya](https://github.com/safreya) 编写的 [Python 脚本](https://github.com/FreeBSD-Ask/gitbook-pdf-export)来导出 PDF/EPUB。
-
-此外，每周都会通过 GitHub Action 导出 PDF/EPUB 于 [releases](https://github.com/FreeBSD-Ask/FreeBSD-Ask/releases)（也许需要代理）。
 
 ## 捐赠
 
