@@ -36,6 +36,10 @@ FreeBSD 中主要有三类账户：系统账户、用户账户，以及超级用
 
 超级用户账户拥有系统中的最高权限，即 root 账户。
 
+>**技巧**
+>
+>实际上是内核根据账户的 EUID（有效用户 ID）是否为 `0` 来判定其是否拥有 root 权限。参见 [main/sys/kern/kern_priv.c](https://github.com/freebsd/freebsd-src/blob/main/sys/kern/kern_priv.c) 中的 `if (suser_enabled(cred))` 代码块部分。
+
 系统账户由源代码中的 [main/etc/master.passwd](https://github.com/freebsd/freebsd-src/blob/main/etc/master.passwd) 所定义，总共 27 个。故，`_dhcp`、`ntpd` 都属于系统账户。系统账户是具有受限权限的专用账户，通常用于运行系统服务和守护进程。
 
 `ykla` 是笔者在安装系统时创建的普通用户账户。如果希望通过 `su` 命令切换为 `root` 用户，必须将该用户加入 `wheel` 用户组。而 `messagebus` 是 Port `devel/dbus`自动创建的普通用户。
