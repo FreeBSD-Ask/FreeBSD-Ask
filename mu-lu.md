@@ -16,9 +16,8 @@
 * [第 1.2 节 关于 FreeBSD 项目](di-1-zhang-zou-jin-freebsd/1.2-about-bsd.md)
 * [第 1.3 节 谁在使用 FreeBSD？](di-1-zhang-zou-jin-freebsd/di-1.3-who-using-bsd.md)
 * [第 1.4 节 为什么要使用 FreeBSD？](di-1-zhang-zou-jin-freebsd/di-1.4-jie-wei-shi-mo-yao-shi-yong-freebsd.md)
-* [第 1.5 节 Linux 用户迁移指南](di-1-zhang-zou-jin-freebsd/di-1.5-jie-linux-yong-hu-qian-yi-zhi-bei.md)
+* [第 1.5 节 BSD 许可证概览](di-1-zhang-zou-jin-freebsd/1.5-xukez.md)
 * [第 1.6 节 FreeBSD 桌面发行版](di-1-zhang-zou-jin-freebsd/1.6-others-bsd.md)
-* [第 1.7 节 BSD 许可证概览](di-1-zhang-zou-jin-freebsd/1.7-xukez.md)
 
 ## 第 2 章 安装 FreeBSD
 
@@ -36,11 +35,12 @@
 
 ## 第 3 章 FreeBSD 基础
 
-* [第 3.1 节 UNIX 基础（面向 Windows 用户）](di-3-zhang-freebsd-base/di-3.1-unix.md)
-* [第 3.2 节 命令行基础](di-3-zhang-freebsd-base/di-3.2-jie-ming-ling-hang.md)
-* [第 3.3 节 sudo 与 doas](di-3-zhang-freebsd-base/di-3.3-jie-sudo.md)
+* [第 3.1 节 Linux 用户迁移指南](di-3-zhang-freebsd-base/di-3.1-jie-linux-yong-hu-qian-yi-zhi-bei.md)
+* [第 3.2 节 Windows 用户迁移指南](di-3-zhang-freebsd-base/di-3.2-unix.md)
+* [第 3.3 节 命令行基础](di-3-zhang-freebsd-base/di-3.3-jie-ming-ling-hang.md)
 * [第 3.4 节 用户和基本账户管理](di-3-zhang-freebsd-base/di-3.4-jie-zu.md)
 * [第 3.5 节 权限](di-3-zhang-freebsd-base/di-3.5-jie-yong-hu-quan-xian.md)
+* [第 3.6 节 sudo 与 doas](di-3-zhang-freebsd-base/di-3.6-jie-sudo.md)
 
 ## 第 4 章 包管理器与系统更新
 
