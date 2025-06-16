@@ -1,4 +1,4 @@
-# 第 3.2 节 UNIX 基础（面向 Windows 用户）
+# 第 3.2 节 Windows 用户迁移指南
 
 ## UNIX 目录与 Windows 目录的区别
 
