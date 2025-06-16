@@ -36,9 +36,9 @@ FreeBSD 中主要有三类账户：系统账户、用户账户，以及超级用
 
 超级用户账户拥有系统中的最高权限，即 root 账户。
 
-系统账户由源代码中的 [main/etc/master.passwd](https://github.com/freebsd/freebsd-src/blob/main/etc/master.passwd) 所定义，故，`_dhcp`、`messagebus`、`ntpd` 都属于系统账户。系统账户是具有受限权限的专用账户，通常用于运行系统服务和守护进程。
+系统账户由源代码中的 [main/etc/master.passwd](https://github.com/freebsd/freebsd-src/blob/main/etc/master.passwd) 所定义，总共 27 个。故，`_dhcp`、`ntpd` 都属于系统账户。系统账户是具有受限权限的专用账户，通常用于运行系统服务和守护进程。
 
-`ykla` 是笔者在安装系统时创建的普通用户账户。如果希望通过 `su` 命令切换为 `root` 用户，必须将该用户加入 `wheel` 用户组。
+`ykla` 是笔者在安装系统时创建的普通用户账户。如果希望通过 `su` 命令切换为 `root` 用户，必须将该用户加入 `wheel` 用户组。而 `messagebus` 是 Port `devel/dbus`自动创建的普通用户。
 
 需要注意的是，虽然普通用户权限受限，但其运行的软件越多，系统暴露的攻击面也会增加，从而带来潜在的提权风险。这并不意味着账户“自动”变得更危险——用户的权限是固定的，不会因为运行进程增加而发生权限提升。相反，只有在程序存在漏洞或配置不当的情况下，攻击者才可能尝试利用这些进程实现权限提升。
 
