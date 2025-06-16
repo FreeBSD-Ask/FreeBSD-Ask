@@ -1,4 +1,4 @@
-# 目录
+# Table of contents
 
 * [FreeBSD 从入门到追忆（第三版：草稿）](README.md)
 * [编辑日志](CHANGELOG.md)
@@ -106,8 +106,8 @@
 ## 第 8 章 账户与权限
 
 * [第 8.1 节 sudo 与 doas](di-8-zhang-yong-hu-yu-quan-xian/di-8.1-jie-sudo.md)
-* [第 8.2 节 用户与组](di-8-zhang-yong-hu-yu-quan-xian/di-8.2-jie-zu.md)
-* [第 8.3 节 用户权限](di-8-zhang-yong-hu-yu-quan-xian/di-8.3-jie-yong-hu-quan-xian.md)
+* [第 8.2 节 用户和基本账户管理](di-8-zhang-yong-hu-yu-quan-xian/di-8.2-jie-zu.md)
+* [第 8.3 节 权限](di-8-zhang-yong-hu-yu-quan-xian/di-8.3-jie-yong-hu-quan-xian.md)
 
 ## 第 9 章 Jail
 
