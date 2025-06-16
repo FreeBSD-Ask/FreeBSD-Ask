@@ -19,7 +19,6 @@
 * [第 1.5 节 BSD 许可证概览](di-1-zhang-zou-jin-freebsd/1.5-xukez.md)
 * [第 1.6 节 FreeBSD 桌面发行版](di-1-zhang-zou-jin-freebsd/1.6-others-bsd.md)
 
-
 ## 第 2 章 安装 FreeBSD
 
 * [第 2.1 节 安装前准备](di-2-zhang-an-zhuang-freebsd/2.1-install-pre.md)
