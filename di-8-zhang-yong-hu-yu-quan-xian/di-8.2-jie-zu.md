@@ -1,7 +1,46 @@
 # 第 8.2 节 用户和基本账户管理
 
-要想访问 FreeBSD，你必须有一个账户，而且所有进程都是以不同账户的名义启动的
+## 账户类型
 
+要想访问 FreeBSD，你必须有一个账户，而且所有进程都是以不同账户的名义启动的。
+
+Port `sysutils/htop` 命令能够清晰地显示这一点（注意“USER”）：
+
+```sh
+  PID△USER       PRI  NI  VIRT   RES S   CPU% MEM%   TIME+  Command
+    1 root        20   0 12724  1324 S    0.0  0.0  0:00.08 /sbin/init
+  216 root        20   0 36172  7308 S    0.0  0.1  0:00.77 ├─ /usr/local/bin/vmtoolsd -c /usr/local/share/vmware-tools/to
+  400 root        48   0 14188  2684 S    0.0  0.0  0:00.00 ├─ dhclient: system.syslog
+  403 root         4   0 14188  2760 S    0.0  0.0  0:00.00 ├─ dhclient: em0 [priv]
+  481 _dhcp       20   0 14192  2808 S    0.0  0.0  0:00.01 ├─ dhclient: em0
+  596 root        20   0 15444  4204 S    0.0  0.1  0:00.05 ├─ /sbin/devd
+  800 root        20   0 13904  2792 S    0.0  0.0  0:00.02 ├─ /usr/sbin/syslogd -s
+  867 messagebus  20   0 15188  4492 S    0.0  0.1  0:00.29 ├─ /usr/local/bin/dbus-daemon --system
+  870 root        20   0 14120  2456 S    0.0  0.0  0:00.06 ├─ /usr/sbin/moused -p /dev/psm0 -t auto
+  898 ntpd        20   0 24564  5848 S    0.0  0.1  0:00.06 ├─ /usr/sbin/ntpd -p /var/db/ntp/ntpd.pid -c /etc/ntp.conf -f
+  944 root        68   0 23508  9560 S    0.0  0.1  0:00.00 ├─ sshd: /usr/sbin/sshd [listener] 0 of 10-100 startups
+  947 root        20   0 13944  2576 S    0.0  0.0  0:00.02 ├─ /usr/sbin/cron -s
+  952 root        20   0 56736 23700 S    0.0  0.3  0:00.04 ├─ /usr/local/bin/sddm
+  980 root        20   0  257M  124M S    1.0  1.5  0:04.83 │  ├─ /usr/local/libexec/Xorg -nolisten tcp -background none -
+  993 root        23   0 50208 27572 S    0.0  0.3  0:00.02 │  └─ /usr/local/libexec/sddm-helper --socket /tmp/sddm-auth-4
+  994 ykla        68   0 19992  4620 S    0.0  0.1  0:00.01 │     └─ /usr/local/bin/ck-launch-session /usr/local/bin/start
+ 1005 ykla        68   0  128M 67736 S    0.0  0.8  0:00.13 │        └─ /usr/local/bin/startplasma-x11
+ 1010 ykla        68   0  128M 68184 S    0.0  0.8  0:00.25 │           └─ /usr/local/bin/plasma_session
+ 1017 ykla        20   0  773M  190M S    0.0  2.3  0:01.33 │              ├─ /usr/local/bin/kded6
+ 1018 ykla        20   0  676M  262M S    0.0  3.2  0:30.96 │              ├─ /usr/local/bin/kwin_x11
+```
+
+可以看到上面有 `ykla`、`root`、`_dhcp`、`messagebus`、`ntpd` 这几位用户存在。
+
+FreeBSD 中主要有三类账户：系统账户、用户账户，以及超级用户账户。
+
+超级用户账户拥有系统中的最高权限，即 root 账户。
+
+系统账户由源代码中的 [main/etc/master.passwd](https://github.com/freebsd/freebsd-src/blob/main/etc/master.passwd) 所定义，故，`_dhcp`、`messagebus`、`ntpd` 都属于系统账户。系统账户是被限制了权力的超级用户账户，主要是为了安全隔离。
+
+`ykla` 即是笔者在安装系统时自行创建的普通用户账户，如果你想使用命令 `su` 将其提升到 `root`，你就必须将其分配到 `wheel` 组。
+
+需要注意一点，即使是没有任何权限的普通账户，随着其运行的软件越多，其权限也在稳步提升。
 
 ## `adduser` 创建用户
 
