@@ -1,4 +1,4 @@
-# 第 12.3 节 FreeBSD 中文 TTY 控制台
+# 第 3.7 节 FreeBSD 中文 TTY 控制台
 
 FreeBSD 新型终端 VT，原生支持 CJK，所以放入字体，即可显示中文。
 
