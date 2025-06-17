@@ -147,7 +147,7 @@
 
 ## 第 14 章 网络管理
 
-* [第 15.1 节 设置网络](di-15-zhang-freebsd-fang-huo-qiang/di-14.1-jie-wang-luo-can-shu-pei-zhi-ming-ling.md)
+* [第 14.1 节 设置网络](di-14-zhang-wang-luo-guan-li/di-14.1-jie-wang-luo-can-shu-pei-zhi-ming-ling.md)
 * [第 14.2 节 无线网络](di-14-zhang-wang-luo-guan-li/di-14.2-jie-wifi.md)
 * [第 14.3 节 USB 网络共享（USB tethering）](di-14-zhang-wang-luo-guan-li/di-14.3-jie-usb-rndis-usb-wang-luo-gong-xiang.md)
 * [第 14.4 节 网卡](di-14-zhang-wang-luo-guan-li/di-14.4-yi-tai-wang-ka.md)
