@@ -213,7 +213,7 @@
 * [第 19.8 节 诗歌选](di-19-zhang-wen-xue-gu-shi/di-19.8-jie-shi-ge-xuan.md)
 * [第 19.9 节 两次退出](di-19-zhang-wen-xue-gu-shi/19.9-exit.md)
 
-## 第 20 章 游戏与科学
+## 第 20 章 游戏、科学计算与专业工具
 
 * [第 20.1 节 游戏](di-20-zhang-yu-le-yu-jiao-yu/di-20.1-jie-you-xi.md)
 * [第 20.2 节 我的世界（Minecraft）](di-20-zhang-yu-le-yu-jiao-yu/20.2-minecraft.md)
