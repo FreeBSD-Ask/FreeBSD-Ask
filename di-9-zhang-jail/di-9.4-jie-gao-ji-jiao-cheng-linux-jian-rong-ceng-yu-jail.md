@@ -1,4 +1,4 @@
-# 第 21.11 节 Linux 兼容层与 Jail
+# 第 9.4 节 Linux Jail
 
 ## 准备工作
 

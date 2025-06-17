@@ -114,6 +114,7 @@
 * [第 9.1 节 Jail 配置](di-9-zhang-jail/di-9.1-jie-jail-pei-zhi.md)
 * [第 9.2 节 Jail 更新](di-9-zhang-jail/di-9.2-jie-jail-geng-xin.md)
 * [第 9.3 节 使用 Qjail 管理 Jail](di-9-zhang-jail/di-9.3-jie-shi-yong-qjail-guan-li-jail.md)
+* [第 9.4 节 Linux Jail](di-9-zhang-jail/di-9.4-jie-gao-ji-jiao-cheng-linux-jian-rong-ceng-yu-jail.md)
 
 ## 第 10 章 虚拟化与容器
 
@@ -232,8 +233,7 @@
 * [第 21.8 节 Rocky Linux 兼容层](di-21-zhang-linux-jian-rong-ceng/di-21.8-jie-linux-jian-rong-ceng-ji-yu-rocky-linux.md)
 * [第 21.9 节 Slackware Linux 兼容层](di-21-zhang-linux-jian-rong-ceng/di-21.9-jie-linux-jian-rong-ceng-ji-yu-slackware-linux.md)
 * [第 21.10 节 Deepin 兼容层](di-21-zhang-linux-jian-rong-ceng/di-21.10-jie-linux-jian-rong-ceng-ji-yu-deepin.md)
-* [第 21.11 节 Linux 兼容层与 Jail](di-21-zhang-linux-jian-rong-ceng/di-21.11-jie-gao-ji-jiao-cheng-linux-jian-rong-ceng-yu-jail.md)
-* [第 21.12 节 Linux 兼容层故障排除与未竟事宜](di-21-zhang-linux-jian-rong-ceng/di-21.12-jie-linux-jian-rong-ceng-gu-zhang-pai-chu-yu-pei-zhi.md)
+* [第 21.11 节 Linux 兼容层故障排除与未竟事宜](di-21-zhang-linux-jian-rong-ceng/di-21.11-jie-linux-jian-rong-ceng-gu-zhang-pai-chu-yu-pei-zhi.md)
 
 ## 第 22 章 编程环境与软件开发
 
