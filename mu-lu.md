@@ -1,4 +1,4 @@
-# 目录
+# Table of contents
 
 * [FreeBSD 从入门到追忆（第三版：草稿）](README.md)
 * [编辑日志](CHANGELOG.md)
@@ -218,8 +218,8 @@
 ## 第 20 章 游戏与科学
 
 * [第 20.1 节 游戏](di-20-zhang-yu-le-yu-jiao-yu/di-20.1-jie-you-xi.md)
-* [第 20.5 节 科研与专业工具](di-20-zhang-yu-le-yu-jiao-yu/di-20.5-jie-ke-yan-yu-zhuan-ye-gong-ju.md)
-* [第 20.6 节 我的世界（Minecraft）](di-20-zhang-yu-le-yu-jiao-yu/20.6-minecraft.md)
+* [第 20.2 节 我的世界（Minecraft）](di-20-zhang-yu-le-yu-jiao-yu/20.2-minecraft.md)
+* [第 20.3 节 科研与专业工具](di-20-zhang-yu-le-yu-jiao-yu/di-20.3-jie-ke-yan-yu-zhuan-ye-gong-ju.md)
 
 ## 第 21 章 Linux 兼容层
 
