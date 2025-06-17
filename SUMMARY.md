@@ -32,6 +32,7 @@
 * [第 2.9 节 安装 FreeBSD——基于 Apple M1 & Parallels Desktop 20](di-2-zhang-an-zhuang-freebsd/di-2.9-jie-apple.md)
 * [第 2.10 节 安装 FreeBSD——基于 Apple M1 & VMware Fusion Pro](di-2-zhang-an-zhuang-freebsd/di-2.10-jie-apple.md)
 * [第 2.11 节 Qemu 安装 RISC-V FreeBSD（基于 x86 Windows）](di-2-zhang-an-zhuang-freebsd/di-2.11-qemu.md)
+* [第 2.12 节 配置 rEFInd（双系统用）](di-2-zhang-an-zhuang-freebsd/2.12-refind.md)
 
 ## 第 3 章 FreeBSD 基础
 
@@ -41,6 +42,7 @@
 * [第 3.4 节 用户和基本账户管理](di-3-zhang-freebsd-base/di-3.4-jie-zu.md)
 * [第 3.5 节 权限](di-3-zhang-freebsd-base/di-3.5-jie-yong-hu-quan-xian.md)
 * [第 3.6 节 sudo 与 doas](di-3-zhang-freebsd-base/di-3.6-jie-sudo.md)
+* [第 3.7 节 引导界面与控制台界面](di-3-zhang-freebsd-base/di-3.7-jie-yin-dao-jie-mian.md)
 
 ## 第 4 章 包管理器与系统更新
 
@@ -130,14 +132,10 @@
 * [第 11.4 节 操作系统](di-11-zhang-ji-suan-ji-gai-lun/11.4-cao-zuo-xi-tong.md)
 * [第 11.5 节 MySQL 数据库](di-11-zhang-ji-suan-ji-gai-lun/11.5-shu-jv-ku.md)
 
-
-## 第 12 章 引导恢复与 TTY 配置
+## 第 12 章 引导与故障恢复
 
 * [第 12.1 节 单用户模式与密码重置](di-12-zhang-yin-dao-yu-hui-fu/di-12.1-jie-hui-fu-mo-shi-yu-mi-ma-zhong-zhi.md)
-* [第 12.2 节 配置 rEFInd（双系统用）](di-12-zhang-yin-dao-yu-hui-fu/12.2-refind.md)
-* [第 12.3 节 FreeBSD 中文 TTY 控制台](di-12-zhang-yin-dao-yu-hui-fu/di-12.3-jie-freebsd-zhong-wen-tty-kong-zhi-tai.md)
-* [第 12.4 节 引导界面与控制台界面](di-12-zhang-yin-dao-yu-hui-fu/di-12.4-jie-yin-dao-jie-mian.md)
-* [第 12.5 节 Grub & UEFI 与 efibootmgr](di-12-zhang-yin-dao-yu-hui-fu/di-12.5-jie-grub-ji-qi-ta-yin-dao.md)
+* [第 12.2 节 Grub & UEFI 与 efibootmgr](di-12-zhang-yin-dao-yu-hui-fu/di-12.2-jie-grub-ji-qi-ta-yin-dao.md)
 
 ## 第 13 章 FreeBSD 系统管理
 
@@ -199,9 +197,7 @@
 * [第 18.2 节 树莓派安装 FreeBSD](di-18-zhang-shu-mei-pai-yu-riscv/di-18.2-jie-xi-tong-an-zhuang.md)
 * [第 18.3 节 树莓派 FreeBSD 配置](di-18-zhang-shu-mei-pai-yu-riscv/di-18.3-jie-shi-yong-pei-zhi.md)
 * [第 18.4 节 树莓派与 Linux 兼容层](di-18-zhang-shu-mei-pai-yu-riscv/di-18.4-jie-shu-mei-pai-yu-linux-jian-rong-ceng.md)
-* [第 18.5 节 树莓派与 OpenBSD](di-18-zhang-shu-mei-pai-yu-riscv/di-18.5-jie-shu-mei-pai-yu-openbsd.md)
-* [第 18.6 节 在 RISCV 开发板上安装 OpenBSD](di-18-zhang-shu-mei-pai-yu-riscv/di-18.6-jie-zai-riscv-kai-fa-ban-shang-an-zhuang-openbsd.md)
-* [第 18.7 节 Radxa X4（x86）](di-18-zhang-shu-mei-pai-yu-riscv/18.7-radxax4.md)
+* [第 18.5 节 Radxa X4（x86）](di-18-zhang-shu-mei-pai-yu-riscv/18.5-radxax4.md)
 
 ## 第 19 章 文学故事
 
@@ -215,7 +211,7 @@
 * [第 19.8 节 诗歌选](di-19-zhang-wen-xue-gu-shi/di-19.8-jie-shi-ge-xuan.md)
 * [第 19.9 节 两次退出](di-19-zhang-wen-xue-gu-shi/19.9-exit.md)
 
-## 第 20 章 游戏与科学
+## 第 20 章 游戏、科学计算与专业工具
 
 * [第 20.1 节 游戏](di-20-zhang-yu-le-yu-jiao-yu/di-20.1-jie-you-xi.md)
 * [第 20.2 节 我的世界（Minecraft）](di-20-zhang-yu-le-yu-jiao-yu/20.2-minecraft.md)
@@ -251,7 +247,7 @@
 * [第 22.12 节 code-server 和 clangd](di-22-zhang-bian-cheng-yu-kai-fa/di-22.12-jie-an-zhuang-code-server-he-clangd.md)
 * [第 22.13 节 Node.js](di-22-zhang-bian-cheng-yu-kai-fa/di-22.13-jie-nodejs-xiang-guan.md)
 
-## 第 23 章 文件系统与磁盘管理
+## 第 23 章 存储管理与文件系统
 
 * [第 23.1 节 自动挂载文件系统](di-23-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-23.1-zi-dong-gua-zai.md)
 * [第 23.2 节 ZFS](di-23-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-23.2-jie-zfs.md)
@@ -279,6 +275,8 @@
 * [第 26.3 节 配置 OpenBSD](di-26-zhang-openbsd/di-26.3-jie-pei-zhi.md)
 * [第 26.4 节 OpenBSD 包管理器](di-26-zhang-openbsd/di-26.4-jie-bao-guan-li-qi.md)
 * [第 26.5 节 桌面与其他软件](di-26-zhang-openbsd/di-26.5-jie-zhuo-mian-yu-qi-ta-ruan-jian.md)
+* [第 26.6 节 在 RISC-V 开发板上安装 OpenBSD](di-26-zhang-openbsd/di-26.6-jie-zai-riscv-kai-fa-ban-shang-an-zhuang-openbsd.md)
+* [第 26.7 节 树莓派与 OpenBSD](di-26-zhang-openbsd/di-26.7-jie-shu-mei-pai-yu-openbsd.md)
 
 ## 第 27 章 NetBSD
 
