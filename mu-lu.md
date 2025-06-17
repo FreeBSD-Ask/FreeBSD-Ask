@@ -199,9 +199,7 @@
 * [第 18.2 节 树莓派安装 FreeBSD](di-18-zhang-shu-mei-pai-yu-riscv/di-18.2-jie-xi-tong-an-zhuang.md)
 * [第 18.3 节 树莓派 FreeBSD 配置](di-18-zhang-shu-mei-pai-yu-riscv/di-18.3-jie-shi-yong-pei-zhi.md)
 * [第 18.4 节 树莓派与 Linux 兼容层](di-18-zhang-shu-mei-pai-yu-riscv/di-18.4-jie-shu-mei-pai-yu-linux-jian-rong-ceng.md)
-* [第 18.5 节 树莓派与 OpenBSD](di-18-zhang-shu-mei-pai-yu-riscv/di-18.5-jie-shu-mei-pai-yu-openbsd.md)
-* [第 18.6 节 在 RISCV 开发板上安装 OpenBSD](di-18-zhang-shu-mei-pai-yu-riscv/di-18.6-jie-zai-riscv-kai-fa-ban-shang-an-zhuang-openbsd.md)
-* [第 18.7 节 Radxa X4（x86）](di-18-zhang-shu-mei-pai-yu-riscv/18.7-radxax4.md)
+* [第 18.5 节 Radxa X4（x86）](di-18-zhang-shu-mei-pai-yu-riscv/18.5-radxax4.md)
 
 ## 第 19 章 文学故事
 
@@ -215,7 +213,7 @@
 * [第 19.8 节 诗歌选](di-19-zhang-wen-xue-gu-shi/di-19.8-jie-shi-ge-xuan.md)
 * [第 19.9 节 两次退出](di-19-zhang-wen-xue-gu-shi/19.9-exit.md)
 
-## 第 20 章 游戏与科学
+## 第 20 章 游戏、科学计算与专业工具
 
 * [第 20.1 节 游戏](di-20-zhang-yu-le-yu-jiao-yu/di-20.1-jie-you-xi.md)
 * [第 20.2 节 我的世界（Minecraft）](di-20-zhang-yu-le-yu-jiao-yu/20.2-minecraft.md)
@@ -279,6 +277,8 @@
 * [第 26.3 节 配置 OpenBSD](di-26-zhang-openbsd/di-26.3-jie-pei-zhi.md)
 * [第 26.4 节 OpenBSD 包管理器](di-26-zhang-openbsd/di-26.4-jie-bao-guan-li-qi.md)
 * [第 26.5 节 桌面与其他软件](di-26-zhang-openbsd/di-26.5-jie-zhuo-mian-yu-qi-ta-ruan-jian.md)
+* [第 26.6 节 在 RISC-V 开发板上安装 OpenBSD](di-18-zhang-shu-mei-pai-yu-riscv/di-25.6-jie-zai-riscv-kai-fa-ban-shang-an-zhuang-openbsd.md)
+* [第 26.7 节 树莓派与 OpenBSD](di-18-zhang-shu-mei-pai-yu-riscv/di-26.7-jie-shu-mei-pai-yu-openbsd.md)
 
 ## 第 27 章 NetBSD
 
