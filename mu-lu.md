@@ -1,4 +1,4 @@
-# 目录
+# Table of contents
 
 * [FreeBSD 从入门到追忆（第三版：草稿）](README.md)
 * [编辑日志](CHANGELOG.md)
@@ -32,6 +32,7 @@
 * [第 2.9 节 安装 FreeBSD——基于 Apple M1 & Parallels Desktop 20](di-2-zhang-an-zhuang-freebsd/di-2.9-jie-apple.md)
 * [第 2.10 节 安装 FreeBSD——基于 Apple M1 & VMware Fusion Pro](di-2-zhang-an-zhuang-freebsd/di-2.10-jie-apple.md)
 * [第 2.11 节 Qemu 安装 RISC-V FreeBSD（基于 x86 Windows）](di-2-zhang-an-zhuang-freebsd/di-2.11-qemu.md)
+* [第 2.12 节 配置 rEFInd（双系统用）](di-2-zhang-an-zhuang-freebsd/2.12-refind.md)
 
 ## 第 3 章 FreeBSD 基础
 
@@ -41,6 +42,8 @@
 * [第 3.4 节 用户和基本账户管理](di-3-zhang-freebsd-base/di-3.4-jie-zu.md)
 * [第 3.5 节 权限](di-3-zhang-freebsd-base/di-3.5-jie-yong-hu-quan-xian.md)
 * [第 3.6 节 sudo 与 doas](di-3-zhang-freebsd-base/di-3.6-jie-sudo.md)
+* [第 3.7 节 FreeBSD 中文 TTY 控制台](di-3-zhang-freebsd-base/di-3.7-jie-freebsd-zhong-wen-tty-kong-zhi-tai.md)
+* [第 3.8 节 引导界面与控制台界面](di-3-zhang-freebsd-base/di-3.8-jie-yin-dao-jie-mian.md)
 
 ## 第 4 章 包管理器与系统更新
 
@@ -130,14 +133,10 @@
 * [第 11.4 节 操作系统](di-11-zhang-ji-suan-ji-gai-lun/11.4-cao-zuo-xi-tong.md)
 * [第 11.5 节 MySQL 数据库](di-11-zhang-ji-suan-ji-gai-lun/11.5-shu-jv-ku.md)
 
-
-## 第 12 章 引导恢复与 TTY 配置
+## 第 12 章 引导与故障恢复
 
 * [第 12.1 节 单用户模式与密码重置](di-12-zhang-yin-dao-yu-hui-fu/di-12.1-jie-hui-fu-mo-shi-yu-mi-ma-zhong-zhi.md)
-* [第 12.2 节 配置 rEFInd（双系统用）](di-12-zhang-yin-dao-yu-hui-fu/12.2-refind.md)
-* [第 12.3 节 FreeBSD 中文 TTY 控制台](di-12-zhang-yin-dao-yu-hui-fu/di-12.3-jie-freebsd-zhong-wen-tty-kong-zhi-tai.md)
-* [第 12.4 节 引导界面与控制台界面](di-12-zhang-yin-dao-yu-hui-fu/di-12.4-jie-yin-dao-jie-mian.md)
-* [第 12.5 节 Grub & UEFI 与 efibootmgr](di-12-zhang-yin-dao-yu-hui-fu/di-12.5-jie-grub-ji-qi-ta-yin-dao.md)
+* [第 12.2 节 Grub & UEFI 与 efibootmgr](di-12-zhang-yin-dao-yu-hui-fu/di-12.2-jie-grub-ji-qi-ta-yin-dao.md)
 
 ## 第 13 章 FreeBSD 系统管理
 
