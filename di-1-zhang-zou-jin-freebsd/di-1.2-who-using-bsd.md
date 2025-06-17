@@ -1,4 +1,4 @@
-# 第 1.3 节 谁在使用 FreeBSD？
+# 第 1.2 节 欢迎来到 FreeBSD
 
 ## 为什么选择 FreeBSD
 
