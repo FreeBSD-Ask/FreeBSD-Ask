@@ -1,4 +1,4 @@
-# 目录
+# Table of contents
 
 * [FreeBSD 从入门到追忆（第三版：草稿）](README.md)
 * [编辑日志](CHANGELOG.md)
@@ -42,8 +42,7 @@
 * [第 3.4 节 用户和基本账户管理](di-3-zhang-freebsd-base/di-3.4-jie-zu.md)
 * [第 3.5 节 权限](di-3-zhang-freebsd-base/di-3.5-jie-yong-hu-quan-xian.md)
 * [第 3.6 节 sudo 与 doas](di-3-zhang-freebsd-base/di-3.6-jie-sudo.md)
-* [第 3.7 节 FreeBSD 中文 TTY 控制台](di-3-zhang-freebsd-base/di-3.7-jie-freebsd-zhong-wen-tty-kong-zhi-tai.md)
-* [第 3.8 节 引导界面与控制台界面](di-3-zhang-freebsd-base/di-3.8-jie-yin-dao-jie-mian.md)
+* [第 3.7 节 引导界面与控制台界面](di-3-zhang-freebsd-base/di-3.7-jie-yin-dao-jie-mian.md)
 
 ## 第 4 章 包管理器与系统更新
 
