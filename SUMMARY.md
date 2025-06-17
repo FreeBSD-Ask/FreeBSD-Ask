@@ -122,6 +122,7 @@
 * [第 10.1 节 通过 BVCP 以网页管理 BHyve](di-10-zhang-xu-ni-hua/di-10.1.md)
 * [第 10.2 节 使用 bhyve 安装 Windows 11（vm-bhyve）](di-10-zhang-xu-ni-hua/di-10.2-jie-shi-yong-bhyve-an-zhuang-windows-10.md)
 * [第 10.3 节 Podman](di-10-zhang-xu-ni-hua/di-10.3-Podman.md)
+* [第 10.4 节 在 FreeBSD 上安装 VirtualBox](di-10-zhang-xu-ni-hua/di-10.4-vitrualbox.md)
 
 ## 第 11 章 计算机概论
 
