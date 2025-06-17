@@ -1,4 +1,4 @@
-# 目录
+# Table of contents
 
 * [FreeBSD 从入门到追忆（第三版：草稿）](README.md)
 * [编辑日志](CHANGELOG.md)
@@ -13,11 +13,10 @@
 ## 第 1 章 FreeBSD 初见
 
 * [第 1.1 节 操作系统的历程：UNIX、BSD、Linux 与 FreeBSD 的起源](di-1-zhang-zou-jin-freebsd/di-1.1-unix.md)
-* [第 1.2 节 关于 FreeBSD 项目](di-1-zhang-zou-jin-freebsd/1.2-about-bsd.md)
-* [第 1.3 节 谁在使用 FreeBSD？](di-1-zhang-zou-jin-freebsd/di-1.3-who-using-bsd.md)
-* [第 1.4 节 为什么要使用 FreeBSD？](di-1-zhang-zou-jin-freebsd/di-1.4-jie-wei-shi-mo-yao-shi-yong-freebsd.md)
-* [第 1.5 节 BSD 许可证概览](di-1-zhang-zou-jin-freebsd/1.5-xukez.md)
-* [第 1.6 节 FreeBSD 桌面发行版](di-1-zhang-zou-jin-freebsd/1.6-others-bsd.md)
+* [第 1.2 节 欢迎来到 FreeBSD](di-1-zhang-zou-jin-freebsd/di-1.2-who-using-bsd.md)
+* [第 1.3 节 关于 FreeBSD 项目](di-1-zhang-zou-jin-freebsd/1.3-about-bsd.md)
+* [第 1.4 节 BSD 许可证概览](di-1-zhang-zou-jin-freebsd/1.4-xukez.md)
+* [第 1.5 节 FreeBSD 桌面发行版](di-1-zhang-zou-jin-freebsd/1.5-others-bsd.md)
 
 ## 第 2 章 安装 FreeBSD
 
