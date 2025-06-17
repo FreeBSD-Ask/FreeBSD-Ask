@@ -288,3 +288,4 @@
 ## 附录
 
 * [参考书目](fu-lu/cankaoshu.md)
+* [术语表](fu-lu/shu-yu-biao.md)
