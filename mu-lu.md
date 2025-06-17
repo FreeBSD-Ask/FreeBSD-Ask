@@ -1,4 +1,4 @@
-# 目录
+# Table of contents
 
 * [FreeBSD 从入门到追忆（第三版：草稿）](README.md)
 * [编辑日志](CHANGELOG.md)
@@ -275,8 +275,8 @@
 * [第 26.3 节 配置 OpenBSD](di-26-zhang-openbsd/di-26.3-jie-pei-zhi.md)
 * [第 26.4 节 OpenBSD 包管理器](di-26-zhang-openbsd/di-26.4-jie-bao-guan-li-qi.md)
 * [第 26.5 节 桌面与其他软件](di-26-zhang-openbsd/di-26.5-jie-zhuo-mian-yu-qi-ta-ruan-jian.md)
-* [第 26.6 节 在 RISC-V 开发板上安装 OpenBSD](di-18-zhang-shu-mei-pai-yu-riscv/di-25.6-jie-zai-riscv-kai-fa-ban-shang-an-zhuang-openbsd.md)
-* [第 26.7 节 树莓派与 OpenBSD](di-18-zhang-shu-mei-pai-yu-riscv/di-26.7-jie-shu-mei-pai-yu-openbsd.md)
+* [第 26.6 节 在 RISC-V 开发板上安装 OpenBSD](di-26-zhang-openbsd/di-25.6-jie-zai-riscv-kai-fa-ban-shang-an-zhuang-openbsd.md)
+* [第 26.7 节 树莓派与 OpenBSD](di-26-zhang-openbsd/di-26.7-jie-shu-mei-pai-yu-openbsd.md)
 
 ## 第 27 章 NetBSD
 
