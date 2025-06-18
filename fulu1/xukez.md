@@ -1,4 +1,4 @@
-# 第 1.4 节 BSD 许可证概览
+# BSD 许可证概览
 
 本文仅列出主要的，受 OSI 认可的 BSD 许可证（BSD-4-Clause 除外）。更多 BSD 许可证参见 [OSI Approved Licenses](https://opensource.org/licenses?ls=BSD) 和 [SPDX License List](https://spdx.org/licenses/)。
 
