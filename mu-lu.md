@@ -1,4 +1,4 @@
-# 目录
+# Table of contents
 
 * [FreeBSD 从入门到追忆（第三版：草稿）](README.md)
 * [编辑日志](CHANGELOG.md)
@@ -191,7 +191,7 @@
 * [第 17.5 节 NextCloud——基于 PostgreSQL](di-17-zhang-wang-luo-fu-wu-qi/di-17.5-jie-NextCloud.md)
 * [第 17.6 节 Telegraf+InfluxDB+Grafana 监控平台](di-17-zhang-wang-luo-fu-wu-qi/di-17.6-jie-telegraf+influxdb+grafana-jian-kong-ping-tai.md)
 * [第 17.7 节 AList](di-17-zhang-wang-luo-fu-wu-qi/di-17.7-alist.md)
-* [第 17.8 节 prometheus 监控部署](di-17-zhang-wang-luo-fu-wu-qi/17.8.prometheus.md)
+* [第 17.8 节 Prometheus 监控部署](di-17-zhang-wang-luo-fu-wu-qi/17.8.prometheus.md)
 * [第 17.9 节 Tomcat](di-17-zhang-wang-luo-fu-wu-qi/17.9-Tomcat.md)
 * [第 17.10 节 Caddy](di-17-zhang-wang-luo-fu-wu-qi/17.10-caddy.md)
 * [第 17.11 节 OnlyOffice（基于 PostgreSQL）](di-17-zhang-wang-luo-fu-wu-qi/17.11-onlyoffice.md)
