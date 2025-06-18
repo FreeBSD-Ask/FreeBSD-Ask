@@ -1,4 +1,4 @@
-# 目录
+# Table of contents
 
 * [FreeBSD 从入门到追忆（第三版：草稿）](README.md)
 * [编辑日志](CHANGELOG.md)
@@ -296,7 +296,7 @@
 * [操作系统](fulu1/cao-zuo-xi-tong.md)
 * [MySQL 数据库](fulu1/shu-jv-ku.md)
 
-## 附录 Ⅱ 实用资源
+## 附录 Ⅱ 工具与资源
 
 * [BSD 许可证概览](fu-lu2/xukez.md)
 * [适用于 FreeBSD 的以太网卡、USB 以太网卡和 USB 无线网卡](fu-lu2/yi-tai-wang-ka.md)
