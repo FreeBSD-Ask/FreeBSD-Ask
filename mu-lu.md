@@ -1,4 +1,4 @@
-# 目录
+# Table of contents
 
 * [FreeBSD 从入门到追忆（第三版：草稿）](README.md)
 * [编辑日志](CHANGELOG.md)
@@ -35,19 +35,20 @@
 
 * [第 3.1 节 Windows 用户迁移指南](di-3-zhang-freebsd-base/di-3.1-windows.md)
 * [第 3.2 节 Linux 用户迁移指南](di-3-zhang-freebsd-base/di-3.2-jie-linux-yong-hu-qian-yi-zhi-bei.md)
-* [第 3.3 节 命令行基础](di-3-zhang-freebsd-base/di-3.3-jie-ming-ling-hang.md)
-* [第 3.4 节 文本编辑器](di-3-zhang-freebsd-base/di-3.4-jie-bian-ji-qi.md)
-* [第 3.5 节 用户和基本账户管理](di-3-zhang-freebsd-base/di-3.5-jie-zu.md)
-* [第 3.6 节 权限](di-3-zhang-freebsd-base/di-3.6-jie-quan-xian.md)
-* [第 3.7 节 sudo 与 doas](di-3-zhang-freebsd-base/di-3.7-jie-sudo.md)
-* [第 3.8 节 文件系统的挂载与卸载](di-3-zhang-freebsd-base/di-3.8-mount.md)
-* [第 3.9 节 磁盘结构](di-3-zhang-freebsd-base/di-3.9-disk.md)
-* [第 3.10 节 目录结构](di-3-zhang-freebsd-base/di-13.10-mu-lu.md)
+* [第 3.3 节 虚拟控制台和终端](di-3-zhang-freebsd-base/di-3.3-jie-console.md)
+* [第 3.4 节 命令行基础](di-3-zhang-freebsd-base/di-3.4-jie-ming-ling-hang.md)
+* [第 3.5 节 文本编辑器](di-3-zhang-freebsd-base/di-3.5-jie-bian-ji-qi.md)
+* [第 3.6 节 用户和基本账户管理](di-3-zhang-freebsd-base/di-3.6-jie-zu.md)
+* [第 3.7 节 权限](di-3-zhang-freebsd-base/di-3.7-jie-quan-xian.md)
+* [第 3.8 节 sudo 与 doas](di-3-zhang-freebsd-base/di-3.8-jie-sudo.md)
+* [第 3.9 节 文件系统的挂载与卸载](di-3-zhang-freebsd-base/di-3.9-mount.md)
+* [第 3.10 节 磁盘结构](di-3-zhang-freebsd-base/di-3.10-disk.md)
+* [第 3.11 节 目录结构](di-3-zhang-freebsd-base/di-3.11-mu-lu.md)
 
 ## 第 4 章 包管理器与系统更新
 
 * [第 4.1 节 FreeBSD 镜像站现状](di-4-zhang-bao-guan-li-qi/di-4.1-jie-freebsd-jing-xiang-zhan-xian-zhuang.md)
-* [第 4.2 节 FreeBSD 换源方式](di-4-zhang-bao-guan-li-qi/di-4.2-jie-freebsd-huan-yuan-fang-shi.md)
+* [第 4.2 节 更换 FreeBSD 软件源](di-4-zhang-bao-guan-li-qi/di-4.2-jie-freebsd-huan-yuan-fang-shi.md)
 * [第 4.3 节 gitup 的用法](di-4-zhang-bao-guan-li-qi/di-4.3-jie-gitup-de-yong-fa.md)
 * [第 4.4 节 使用 pkg 管理二进制包](di-4-zhang-bao-guan-li-qi/di-4.4-jie-ruan-jian-bao-guan-li-qi-pkg-de-yong-fa.md)
 * [第 4.5 节 使用 Ports 以源代码方式安装软件](di-4-zhang-bao-guan-li-qi/di-4.5-jie-tong-guo-yuan-dai-ma-ports-fang-shi-an-zhuang-ruan-jian.md)
