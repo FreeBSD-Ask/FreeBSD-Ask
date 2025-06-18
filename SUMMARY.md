@@ -303,7 +303,7 @@
 * [我与 FreeBSD 的故事](fu-lu2/freebsd.md)
 * [小说：大教堂与集市](fu-lu2/xiao-shuo-freebsd-cong-ru-men-dao-pao-lu.md)
 * [小说：吾乡何处](fu-lu2/wu-xiang-he-chu.md)
-* [杂记](fu-lu2/jie-za-ji.md)
+* [杂记](fu-lu2/za-ji.md)
 * [诗歌选](fu-lu2/shi-ge-xuan.md)
 * [两次告别](fu-lu2/exit.md)
 
