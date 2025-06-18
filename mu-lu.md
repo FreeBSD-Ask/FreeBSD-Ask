@@ -1,4 +1,4 @@
-# 目录
+# Table of contents
 
 * [FreeBSD 从入门到追忆（第三版：草稿）](README.md)
 * [编辑日志](CHANGELOG.md)
@@ -181,11 +181,12 @@
 * [第 16.8 节 NFS 服务器](di-16-zhang-fu-wu-qi/di-16.8-jie-nfs-fu-wu-qi.md)
 * [第 16.9 节 Webmin](di-16-zhang-fu-wu-qi/di-16.9-jie-webmin.md)
 
-## 第 17 章 Web 服务器
+## 第 17 章 Web 服务器与监控平台
 
 * [第 17.1 节 Apache](di-17-zhang-wang-luo-fu-wu-qi/di-17.1-jie-apache.md)
 * [第 17.2 节 Nginx](di-17-zhang-wang-luo-fu-wu-qi/di-17.2-jie-nginx.md)
 * [第 17.3 节 PHP 8.X](di-17-zhang-wang-luo-fu-wu-qi/di-17.3-jie-php-8.x.md)
+* [第 17.4 节 Zabbix 监控（基于 PostgreSQL）](di-17-zhang-wang-luo-fu-wu-qi/17.4-Zabbix.md)
 * [第 17.5 节 NextCloud——基于 PostgreSQL](di-17-zhang-wang-luo-fu-wu-qi/di-17.5-jie-NextCloud.md)
 * [第 17.6 节 Telegraf+InfluxDB+Grafana 监控平台](di-17-zhang-wang-luo-fu-wu-qi/di-17.6-jie-telegraf+influxdb+grafana-jian-kong-ping-tai.md)
 * [第 17.7 节 AList](di-17-zhang-wang-luo-fu-wu-qi/di-17.7-alist.md)
@@ -193,9 +194,8 @@
 * [第 17.9 节 Tomcat](di-17-zhang-wang-luo-fu-wu-qi/17.9-Tomcat.md)
 * [第 17.10 节 Caddy](di-17-zhang-wang-luo-fu-wu-qi/17.10-caddy.md)
 * [第 17.11 节 OnlyOffice（基于 PostgreSQL）](di-17-zhang-wang-luo-fu-wu-qi/17.11-onlyoffice.md)
-* [第 17.12 节 Zabbix 监控（基于 PostgreSQL）](di-17-zhang-wang-luo-fu-wu-qi/17.12-Zabbix.md)
 
-## 第 18 章 嵌入式
+## 第 18 章 嵌入式平台
 
 * [第 18.1 节 树莓派简介与配件选用](di-18-zhang-shu-mei-pai-yu-riscv/di-18.1-jie-shu-mei-pai-de-jian-jie.md)
 * [第 18.2 节 树莓派安装 FreeBSD](di-18-zhang-shu-mei-pai-yu-riscv/di-18.2-jie-xi-tong-an-zhuang.md)
@@ -295,8 +295,8 @@
 
 ## 附录 Ⅱ 工具与资源
 
-* [BSD 许可证概览](fu-lu2/xukez.md)
 * [适用于 FreeBSD 的以太网卡、USB 以太网卡和 USB 无线网卡](fu-lu2/yi-tai-wang-ka.md)
+* [BSD 许可证概览](fu-lu2/xukez.md)
 * [FreeBSD 桌面发行版评述](fu-lu2/others-bsd.md)
 
 ## 附录 Ⅲ 文学故事
