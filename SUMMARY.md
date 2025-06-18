@@ -12,7 +12,7 @@
 
 ## 第 1 章 FreeBSD 初见
 
-* [第 1.1 节 操作系统的历程：UNIX、BSD、Linux 与 FreeBSD 的起源](di-1-zhang-zou-jin-freebsd/di-1.1-unix.md)
+* [第 1.1 节 操作系统的历程：UNIX、BSD、Linux](di-1-zhang-zou-jin-freebsd/di-1.1-unix.md)
 * [第 1.2 节 欢迎来到 FreeBSD](di-1-zhang-zou-jin-freebsd/di-1.2-who-using-bsd.md)
 * [第 1.3 节 关于 FreeBSD 项目](di-1-zhang-zou-jin-freebsd/1.3-about-bsd.md)
 * [第 1.4 节 BSD 许可证概览](di-1-zhang-zou-jin-freebsd/1.4-xukez.md)
