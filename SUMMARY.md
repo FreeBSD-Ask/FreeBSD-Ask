@@ -181,19 +181,18 @@
 * [第 16.8 节 NFS 服务器](di-16-zhang-fu-wu-qi/di-16.8-jie-nfs-fu-wu-qi.md)
 * [第 16.9 节 Webmin](di-16-zhang-fu-wu-qi/di-16.9-jie-webmin.md)
 
-## 第 17 章 Web 与数据库服务器
+## 第 17 章 Web 服务器
 
 * [第 17.1 节 Apache](di-17-zhang-wang-luo-fu-wu-qi/di-17.1-jie-apache.md)
 * [第 17.2 节 Nginx](di-17-zhang-wang-luo-fu-wu-qi/di-17.2-jie-nginx.md)
 * [第 17.3 节 PHP 8.X](di-17-zhang-wang-luo-fu-wu-qi/di-17.3-jie-php-8.x.md)
-* [第 17.4 节 MySQL 5.X](di-17-zhang-wang-luo-fu-wu-qi/di-17.4-jie-mysql-5.x.md)
-* [第 17.5 节 MySQL 8.X](di-17-zhang-wang-luo-fu-wu-qi/di-17.5-jie-mysql-8.x.md)
+
 * [第 17.6 节 NextCloud——基于 PostgreSQL](di-17-zhang-wang-luo-fu-wu-qi/di-17.6-jie-NextCloud.md)
 * [第 17.7 节 Telegraf+InfluxDB+Grafana 监控平台](di-17-zhang-wang-luo-fu-wu-qi/di-17.7-jie-telegraf+influxdb+grafana-jian-kong-ping-tai.md)
-* [第 17.8 节 PostgreSQL 与 pgAdmin4](di-17-zhang-wang-luo-fu-wu-qi/di-17.8-jie-postgresql-yu-pgadmin4.md)
+
 * [第 17.9 节 AList](di-17-zhang-wang-luo-fu-wu-qi/di-17.9-alist.md)
 * [第 17.10 节 prometheus 监控部署](di-17-zhang-wang-luo-fu-wu-qi/17.10.prometheus.md)
-* [第 17.11 节 MongoDB 80](di-17-zhang-wang-luo-fu-wu-qi/17.11-mongodb.md)
+
 * [第 17.12 节 Tomcat](di-17-zhang-wang-luo-fu-wu-qi/17.12-Tomcat.md)
 * [第 17.13 节 Caddy](di-17-zhang-wang-luo-fu-wu-qi/17.13-caddy.md)
 * [第 17.14 节 OnlyOffice（基于 PostgreSQL）](di-17-zhang-wang-luo-fu-wu-qi/17.14.md)
@@ -207,15 +206,12 @@
 * [第 18.4 节 树莓派与 Linux 兼容层](di-18-zhang-shu-mei-pai-yu-riscv/di-18.4-jie-shu-mei-pai-yu-linux-jian-rong-ceng.md)
 * [第 18.5 节 Radxa X4（x86）](di-18-zhang-shu-mei-pai-yu-riscv/18.5-radxax4.md)
 
-## 第 19 章 文学故事
+## 第 19 章 数据库
 
-* [第 19.3 节 小说：你与暗](di-19-zhang-wen-xue-gu-shi/19.3-ni-yu-an.md)
-* [第 19.4 节 我与 FreeBSD 的故事](di-19-zhang-wen-xue-gu-shi/19.4-freebsd.md)
-* [第 19.5 节 小说：大教堂与集市](di-19-zhang-wen-xue-gu-shi/di-19.5-jie-xiao-shuo-freebsd-cong-ru-men-dao-pao-lu.md)
-* [第 19.6 节 小说：吾乡何处](di-19-zhang-wen-xue-gu-shi/19.6-wu-xiang-he-chu.md)
-* [第 19.7 节 杂记](di-19-zhang-wen-xue-gu-shi/di-19.7-jie-za-ji.md)
-* [第 19.8 节 诗歌选](di-19-zhang-wen-xue-gu-shi/di-19.8-jie-shi-ge-xuan.md)
-* [第 19.9 节 两次退出](di-19-zhang-wen-xue-gu-shi/19.9-exit.md)
+* [第 19.1 节 PostgreSQL 与 pgAdmin4](di-19-zhang-database/di-19.1-jie-postgresql-yu-pgadmin4.md)
+* [第 19.2 节 MySQL 5.X](di-19-zhang-database/di-19.2-jie-mysql-5.x.md)
+* [第 19.3 节 MySQL 8.X](di-19-zhang-database/di-19.3-jie-mysql-8.x.md)
+* [第 19.4 节 MongoDB 80](di-19-zhang-database/di-19.4-mongodb)
 
 ## 第 20 章 游戏、科学计算与专业工具
 
@@ -301,9 +297,19 @@
 * [MySQL 数据库](fulu1/shu-jv-ku.md)
 * [BSD 许可证概览](fulu1/xukez.md)
 
-## 附录二 参考资料与术语表
+## 附录二 文学故事
 
-* [适用于 FreeBSD 的以太网卡、USB 以太网卡和 USB 无线网卡](fu-lu2/yi-tai-wang-ka.md)
-* [FreeBSD 桌面发行版评述](fu-lu2/others-bsd.md)
-* [参考书目](fu-lu2/cankaoshu.md)
-* [术语表](fu-lu2/shu-yu-biao.md)
+* [小说：你与暗](fu-lu2/ni-yu-an.md)
+* [我与 FreeBSD 的故事](fu-lu2/freebsd.md)
+* [小说：大教堂与集市](fu-lu2/xiao-shuo-freebsd-cong-ru-men-dao-pao-lu.md)
+* [小说：吾乡何处](fu-lu2/wu-xiang-he-chu.md)
+* [杂记](fu-lu2/jie-za-ji.md)
+* [诗歌选](fu-lu2/shi-ge-xuan.md)
+* [两次告别](fu-lu2/exit.md)
+
+## 附录三 参考资料与术语表
+
+* [适用于 FreeBSD 的以太网卡、USB 以太网卡和 USB 无线网卡](fu-lu3/yi-tai-wang-ka.md)
+* [FreeBSD 桌面发行版评述](fu-lu3/others-bsd.md)
+* [参考书目](fu-lu3/cankaoshu.md)
+* [术语表](fu-lu3/shu-yu-biao.md)
