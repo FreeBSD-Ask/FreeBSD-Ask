@@ -301,9 +301,9 @@
 * [MySQL 数据库](fulu1/shu-jv-ku.md)
 * [BSD 许可证概览](fulu1/xukez.md)
 
-## 附录二 参考资料
+## 附录二 参考资料与术语表
 
 * [适用于 FreeBSD 的以太网卡、USB 以太网卡和USB 无线网卡](fu-lu2/yi-tai-wang-ka.md)
-* [FreeBSD 桌面发行版](fu-lu2/others-bsd.md)
+* [FreeBSD 桌面发行版评述](fu-lu2/others-bsd.md)
 * [参考书目](fu-lu2/cankaoshu.md)
 * [术语表](fu-lu2/shu-yu-biao.md)
