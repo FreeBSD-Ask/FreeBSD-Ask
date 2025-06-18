@@ -1,4 +1,4 @@
-
+# 第 2.4 节 选择安装组件
 
 
 ![](../.gitbook/assets/ins6.png)
