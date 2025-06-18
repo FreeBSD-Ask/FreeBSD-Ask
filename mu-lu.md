@@ -1,4 +1,4 @@
-# 目录
+# Table of contents
 
 * [FreeBSD 从入门到追忆（第三版：草稿）](README.md)
 * [编辑日志](CHANGELOG.md)
@@ -312,7 +312,7 @@
 * [诗歌选](fu-lu3/shi-ge-xuan.md)
 * [杂记](fu-lu3/za-ji.md)
   
-## 附录 Ⅳ 参考资料与术语表
+## 附录 Ⅳ 参考文献与术语
 
 * [参考书目](fu-lu4/cankaoshu.md)
 * [术语表](fu-lu4/shu-yu-biao.md)
