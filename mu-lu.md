@@ -1,4 +1,4 @@
-# 目录
+# Table of contents
 
 * [FreeBSD 从入门到追忆（第三版：草稿）](README.md)
 * [编辑日志](CHANGELOG.md)
@@ -290,7 +290,7 @@
 * [第 27.3 节 NetBSD 换源与包管理器](di-27-zhang-netbsd/di-27.3-jie-huan-yuan-yu-bao-guan-li-qi.md)
 * [第 27.4 节 桌面与中文环境常用软件](di-27-zhang-netbsd/di-27.4-jie-zhuo-mian-yu-qi-ta-ruan-jian.md)
 
-## 附录一
+## 附录一 计算机概论
 
 * [存储卡参数简介与测试](fulu1/sd-card-can-shu-jian-shu.md)
 * [总线接口与协议](fulu1/zong-xian.md)
@@ -298,7 +298,7 @@
 * [操作系统](fulu1/cao-zuo-xi-tong.md)
 * [MySQL 数据库](fulu1/shu-jv-ku.md)
 
-## 附录二
+## 附录二 参考资料
 
 * [参考书目](fu-lu2/cankaoshu.md)
 * [术语表](fu-lu2/shu-yu-biao.md)
