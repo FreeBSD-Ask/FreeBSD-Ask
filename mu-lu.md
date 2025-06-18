@@ -1,4 +1,4 @@
-# 目录
+# Table of contents
 
 * [FreeBSD 从入门到追忆（第三版：草稿）](README.md)
 * [编辑日志](CHANGELOG.md)
@@ -41,14 +41,15 @@
 * [第 3.1 节 Windows 用户迁移指南](di-3-zhang-freebsd-base/di-3.1-windows.md)
 * [第 3.2 节 Linux 用户迁移指南](di-3-zhang-freebsd-base/di-3.2-jie-linux-yong-hu-qian-yi-zhi-bei.md)
 * [第 3.3 节 虚拟控制台和终端](di-3-zhang-freebsd-base/di-3.3-jie-console.md)
-* [第 3.4 节 命令行基础](di-3-zhang-freebsd-base/di-3.4-jie-ming-ling-hang.md)
-* [第 3.5 节 文本编辑器](di-3-zhang-freebsd-base/di-3.5-jie-bian-ji-qi.md)
-* [第 3.6 节 用户和基本账户管理](di-3-zhang-freebsd-base/di-3.6-jie-zu.md)
-* [第 3.7 节 权限](di-3-zhang-freebsd-base/di-3.7-jie-quan-xian.md)
-* [第 3.8 节 sudo 与 doas](di-3-zhang-freebsd-base/di-3.8-jie-sudo.md)
-* [第 3.9 节 文件系统的挂载与卸载](di-3-zhang-freebsd-base/di-3.9-mount.md)
-* [第 3.10 节 磁盘结构](di-3-zhang-freebsd-base/di-3.10-disk.md)
-* [第 3.11 节 目录结构](di-3-zhang-freebsd-base/di-3.11-mu-lu.md)
+* [第 3.4 节 认识 shell](di-3-zhang-freebsd-base/di-3.4-jie-shell.md)
+* [第 3.5 节 命令行基础](di-3-zhang-freebsd-base/di-3.5-jie-ming-ling-hang.md)
+* [第 3.6 节 文本编辑器](di-3-zhang-freebsd-base/di-3.6-jie-bian-ji-qi.md)
+* [第 3.7 节 用户和基本账户管理](di-3-zhang-freebsd-base/di-3.7-jie-zu.md)
+* [第 3.8 节 权限](di-3-zhang-freebsd-base/di-3.8-jie-quan-xian.md)
+* [第 3.9 节 sudo 与 doas](di-3-zhang-freebsd-base/di-3.9-jie-sudo.md)
+* [第 3.10 节 文件系统的挂载与卸载](di-3-zhang-freebsd-base/di-3.10-mount.md)
+* [第 3.11 节 磁盘结构](di-3-zhang-freebsd-base/di-3.11-disk.md)
+* [第 3.12 节 目录结构](di-3-zhang-freebsd-base/di-3.12-mu-lu.md)
 
 ## 第 4 章 软件管理与系统升级
 
@@ -240,7 +241,7 @@
 * [第 22.6 节 QT 环境的配置](di-22-zhang-bian-cheng-yu-kai-fa/di-22.6-jie-qt-huan-jing-de-pei-zhi.md)
 * [第 22.7 节 Python 与 VS Code](di-22-zhang-bian-cheng-yu-kai-fa/di-22.7-jie-python-yu-vscode.md)
 * [第 22.8 节 Rust/Go 环境的配置](di-22-zhang-bian-cheng-yu-kai-fa/di-22.8-jie-rustgo-huan-jing-de-pei-zhi.md)
-* [第 22.9 节 Shell](di-22-zhang-bian-cheng-yu-kai-fa/di-22.9-jie-csh-yu-qi-ta-shell.md)
+* [第 22.9 节 配置 Shell](di-22-zhang-bian-cheng-yu-kai-fa/di-22.9-jie-csh-yu-qi-ta-shell.md)
 * [第 22.10 节 通过 IDA 7 调试 FreeBSD](di-22-zhang-bian-cheng-yu-kai-fa/di-22.10-jie-tong-guo-ida-7-tiao-shi-freebsd.md)
 * [第 22.11 节 如何订阅 FreeBSD 的邮件列表](di-22-zhang-bian-cheng-yu-kai-fa/di-22.11-jie-ru-he-ding-yue-freebsd-de-you-jian-lie-biao.md)
 * [第 22.12 节 code-server 和 clangd](di-22-zhang-bian-cheng-yu-kai-fa/di-22.12-jie-an-zhuang-code-server-he-clangd.md)
