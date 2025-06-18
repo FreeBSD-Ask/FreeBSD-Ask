@@ -1,4 +1,4 @@
-# 目录
+# Table of contents
 
 * [FreeBSD 从入门到追忆（第三版：草稿）](README.md)
 * [编辑日志](CHANGELOG.md)
@@ -78,7 +78,7 @@
 * [第 5.12 节 LXDE](di-5-zhang-zhuo-mian-an-zhuang/di-5.12-lxde.md)
 * [第 5.13 节 主题美化](di-5-zhang-zhuo-mian-an-zhuang/di-5.13-jie-zhu-ti-yu-mei-hua.md)
 * [第 5.14 节 远程桌面](di-5-zhang-zhuo-mian-an-zhuang/di-5.14-jie-yuan-cheng-zhuo-mian-guan-li.md)
-* [第 5.15 节 解除 root 登录限制](di-5-zhang-zhuo-mian-an-zhuang/di-5.15-jie-root-deng-lu-zhuo-mian.md)
+* [第 5.15 节 启用 root 桌面登录](di-5-zhang-zhuo-mian-an-zhuang/di-5.15-jie-root-deng-lu-zhuo-mian.md)
 
 ## 第 6 章 本地化——i18n/L10n
 
@@ -251,7 +251,7 @@
 
 * [第 23.1 节 自动挂载文件系统](di-23-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-23.1-zi-dong-gua-zai.md)
 * [第 23.2 节 ZFS](di-23-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-23.2-jie-zfs.md)
-* [第 23.3 节 调整和增加磁盘大小](di-23-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-23.3-jie-ci-pan-kuo-rong.md)
+* [第 23.3 节 磁盘扩容与分区调整](di-23-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-23.3-jie-ci-pan-kuo-rong.md)
 * [第 23.4 节 Windows 文件系统](di-23-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-23.4-jie-ntfs-de-gua-zai.md)
 * [第 23.5 节 Swap 交换分区的设置](di-23-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-23.5-jie-swap-jiao-huan-fen-qu-de-she-zhi.md)
 * [第 23.6 节 Linux 文件系统](di-23-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-23.6-jie-ext-234-deng-wen-jian-xi-tong.md)
