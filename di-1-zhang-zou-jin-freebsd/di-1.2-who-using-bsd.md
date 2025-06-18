@@ -1,5 +1,13 @@
 # 第 1.2 节 欢迎来到 FreeBSD
 
+## FreeBSD 怎么读
+
+目前社区共识和普遍的读法是：/ˌfriːˌbiːɛsˈdiː/，即读作“Free（/friː/）+ B（/biː/）+ S（/ɛs/）+ D（/diː/）”，即类似于“福瑞必哎司地”。
+
+Free 和三个字母 B、S、D 分别分开读——先说 Free 这个完整的词，再 B、S、D 逐字母拼读。
+
+一般不会把 BSD 或 FreeBSD 视作一个词语连读。不会将其读做“百思得”或“福瑞百思得”。
+
 ## 什么是 FreeBSD？
 
 FreeBSD 不是 Linux。FreeBSD 也不是 UNIX 的克隆产物。FreeBSD 是一款自由软件。
@@ -51,15 +59,6 @@ BSD 操作系统并非复制品，而是 AT&T 研究 UNIX（Research Unix）操�
 >
 >你如何理解 FreeBSD 与 Unix 的关系？
 
-
-
-## FreeBSD 怎么读
-
-目前社区共识和普遍的读法是：/ˌfriːˌbiːɛsˈdiː/，即读作“Free（/friː/）+ B（/biː/）+ S（/ɛs/）+ D（/diː/）”，即类似于“福瑞必哎司地”。
-
-Free 和三个字母 B、S、D 分别分开读——先说 Free 这个完整的词，再 B、S、D 逐字母拼读。
-
-一般不会把 BSD 或 FreeBSD 视作一个词语连读。不会将其读做“百思得”或“福瑞百思得”。
 
 ## 为什么选择 FreeBSD
 
