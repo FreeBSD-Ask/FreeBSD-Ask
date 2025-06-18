@@ -16,7 +16,7 @@
 * [第 1.2 节 欢迎来到 FreeBSD](di-1-zhang-zou-jin-freebsd/di-1.2-who-using-bsd.md)
 * [第 1.3 节 关于 FreeBSD 项目](di-1-zhang-zou-jin-freebsd/1.3-about-bsd.md)
 * [第 1.4 节 BSD 与哲学家 George Berkeley（乔治·贝克莱）](di-1-zhang-zou-jin-freebsd/di-1.4-jie-freebsd-jian-shi.md)
-* [第 1.5 节 加州大学伯克利分校与“Fiat Lux”（要有光）](di-1-zhang-zou-jin-freebsd/di-1.5.md)
+* [第 1.5 节 加州大学伯克利分校和“Fiat Lux”（要有光）](di-1-zhang-zou-jin-freebsd/di-1.5.md)
 
 ## 第 2 章 安装 FreeBSD
 
