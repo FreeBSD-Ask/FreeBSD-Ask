@@ -1,4 +1,4 @@
-# 目录
+# Table of contents
 
 * [FreeBSD 从入门到追忆（第三版：草稿）](README.md)
 * [编辑日志](CHANGELOG.md)
@@ -204,12 +204,13 @@
 * [第 18.4 节 树莓派与 Linux 兼容层](di-18-zhang-shu-mei-pai-yu-riscv/di-18.4-jie-shu-mei-pai-yu-linux-jian-rong-ceng.md)
 * [第 18.5 节 Radxa X4（x86）](di-18-zhang-shu-mei-pai-yu-riscv/18.5-radxax4.md)
 
-## 第 19 章 数据库
+## 第 19 章 数据库管理
 
-* [第 19.1 节 PostgreSQL 与 pgAdmin4](di-19-zhang-database/di-19.1-jie-postgresql-yu-pgadmin4.md)
-* [第 19.2 节 MySQL 5.X](di-19-zhang-database/di-19.2-jie-mysql-5.x.md)
-* [第 19.3 节 MySQL 8.X](di-19-zhang-database/di-19.3-jie-mysql-8.x.md)
-* [第 19.4 节 MongoDB 80](di-19-zhang-database/di-19.4-mongodb)
+* [第 19.1 节 PostgreSQL](di-19-zhang-database/di-19.1-jie-postgresql.md)
+* [第 19.2 节 pgAdmin4](di-19-zhang-database/di-19.2-pgadmin4)
+* [第 19.3 节 MySQL 5.X](di-19-zhang-database/di-19.3-jie-mysql-5.x.md)
+* [第 19.4 节 MySQL 8.X](di-19-zhang-database/di-19.4-jie-mysql-8.x.md)
+* [第 19.5 节 MongoDB 80](di-19-zhang-database/di-19.5-mongodb)
 
 ## 第 20 章 游戏、科学计算与专业工具
 
