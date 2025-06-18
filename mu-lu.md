@@ -1,4 +1,4 @@
-# 目录
+# Table of contents
 
 * [FreeBSD 从入门到追忆（第三版：草稿）](README.md)
 * [编辑日志](CHANGELOG.md)
@@ -22,7 +22,7 @@
 
 * [第 2.1 节 安装前的准备工作](di-2-zhang-an-zhuang-freebsd/di-2.1-install-pre.md)
 * [第 2.2 节 开始安装](di-2-zhang-an-zhuang-freebsd/di-2.2-jie-start-install.md)
-* [第 2.3 节 使用 bsdinstall](di-2-zhang-an-zhuang-freebsd/di-2.3-jie-use-bsdinstall.md)
+* [第 2.3 节 键盘布局和主机名](di-2-zhang-an-zhuang-freebsd/di-2.3-jie-use-bsdinstall.md)
 * [第 2.4 节 选择安装组件](di-2-zhang-an-zhuang-freebsd/di-2.4-jie-select.md)
 * [第 2.5 节 分配磁盘空间](di-2-zhang-an-zhuang-freebsd/di-2.5-jie-fen-pei-disk.md)
 * [第 2.6 节 设置 root 密码](di-2-zhang-an-zhuang-freebsd/di-2.6-root-jie.md)
