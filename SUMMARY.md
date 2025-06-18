@@ -12,10 +12,10 @@
 
 ## 第 1 章 FreeBSD 初见
 
-* [第 1.1 节 操作系统的历程：UNIX、BSD、Linux](di-1-zhang-zou-jin-freebsd/di-1.1-unix.md)
+* [第 1.1 节 操作系统的历程：UNIX、BSD、Linux 的演化](di-1-zhang-zou-jin-freebsd/di-1.1-unix.md)
 * [第 1.2 节 欢迎来到 FreeBSD](di-1-zhang-zou-jin-freebsd/di-1.2-who-using-bsd.md)
 * [第 1.3 节 关于 FreeBSD 项目](di-1-zhang-zou-jin-freebsd/1.3-about-bsd.md)
-* [第 1.4 节 BSD 与哲学家 George Berkeley（乔治·贝克莱）](di-1-zhang-zou-jin-freebsd/di-1.4-jie-freebsd-jian-shi.md)
+* [第 1.4 节 George Berkeley（乔治·贝克莱）与 BSD 命名的文化背景](di-1-zhang-zou-jin-freebsd/di-1.4-jie-freebsd-jian-shi.md)
 * [第 1.5 节 加州大学伯克利分校与“Fiat Lux”（要有光）](di-1-zhang-zou-jin-freebsd/di-1.5-Fiat-Lux.md)
 
 ## 第 2 章 安装 FreeBSD
@@ -45,7 +45,7 @@
 * [第 3.10 节 磁盘结构](di-3-zhang-freebsd-base/di-3.10-disk.md)
 * [第 3.11 节 目录结构](di-3-zhang-freebsd-base/di-3.11-mu-lu.md)
 
-## 第 4 章 包管理器与系统更新
+## 第 4 章 软件管理与系统升级
 
 * [第 4.1 节 FreeBSD 镜像站现状](di-4-zhang-bao-guan-li-qi/di-4.1-jie-freebsd-jing-xiang-zhan-xian-zhuang.md)
 * [第 4.2 节 更换 FreeBSD 软件源](di-4-zhang-bao-guan-li-qi/di-4.2-jie-freebsd-huan-yuan-fang-shi.md)
@@ -75,7 +75,7 @@
 * [第 5.14 节 远程桌面](di-5-zhang-zhuo-mian-an-zhuang/di-5.14-jie-yuan-cheng-zhuo-mian-guan-li.md)
 * [第 5.15 节 解除 root 登录限制](di-5-zhang-zhuo-mian-an-zhuang/di-5.15-jie-root-deng-lu-zhuo-mian.md)
 
-## 第 6 章 中文环境配置
+## 第 6 章 中文本地化——i18n/L10n
 
 * [第 6.1 节 本地化环境变量](di-6-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-6.1-jie-shu-ru-fa-yu-huan-jing-bian-liang.md)
 * [第 6.2 节 Fcitx 输入法框架](di-6-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-6.2-jie-fcitx-shu-ru-fa-kuang-jia.md)
@@ -88,15 +88,15 @@
 * [第 6.9 节 压缩与解压](di-6-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-6.9-jie-ya-suo-yu-jie-ya.md)
 * [第 6.10 节 微信（Linux 版）](di-6-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-6.10-wechat.md)
 
-## 第 7 章 多媒体与外设
+## 第 7 章 多媒体与外部设备
 
-* [第 7.1 节 声卡](di-7-duo-mei-ti/di-7.1-jie-sheng-ka-yu-wang-ka-she-zhi.md)
+* [第 7.1 节 音频设备配置](di-7-duo-mei-ti/di-7.1-jie-sheng-ka-yu-wang-ka-she-zhi.md)
 * [第 7.2 节 蓝牙](di-7-duo-mei-ti/di-7.2-jie-lan-ya.md)
 * [第 7.3 节 打印机](di-7-duo-mei-ti/di-7.3-jie-da-yin-ji-de-an-zhuang.md)
 * [第 7.4 节 触摸板](di-7-duo-mei-ti/di-7.4-jie-chu-mo-ban-de-she-zhi.md)
 * [第 7.5 节 音频播放器](di-7-duo-mei-ti/di-7.5-jie-yin-pin-bo-fang-qi.md)
 * [第 7.6 节 视频播放器](di-7-duo-mei-ti/di-7.6-shi-pin-bo-fang.md)
-* [第 7.7 节 音频图形图像处理](di-7-duo-mei-ti/di-7.7-tu-xing-tu-xiang.md)
+* [第 7.7 节 多媒体处理工具](di-7-duo-mei-ti/di-7.7-tu-xing-tu-xiang.md)
 
 ## 第 8 章 代理服务器
 
@@ -121,14 +121,14 @@
 
 ## 第 11 章 FreeBSD 安装实践
 
-* [第 11.1 节 安装 FreeBSD——基于 Hyper-V](di-11-zhang-freebsd-install-more/di-11.1-hyper-v-jie.md)
-* [第 11.2 节 安装 FreeBSD——基于 VMware Workstation Pro](di-11-zhang-freebsd-install-more/di-11.2-jie-an-zhuang-freebsd-ji-yu-vmware-workstation-pro.md)
-* [第 11.3 节 安装 FreeBSD——基于 Virtual Box](di-11-zhang-freebsd-install-more/di-11.3-jie-an-zhuang-freebsd-ji-yu-virtual-box.md)
+* [第 11.1 节 使用 Hyper-V 安装 FreeBSD](di-11-zhang-freebsd-install-more/di-11.1-hyper-v-jie.md)
+* [第 11.2 节 使用 VMware Workstation Pro 安装 FreeBSD](di-11-zhang-freebsd-install-more/di-11.2-jie-an-zhuang-freebsd-ji-yu-vmware-workstation-pro.md)
+* [第 11.3 节 使用 Virtual Box 安装 FreeBSD](di-11-zhang-freebsd-install-more/di-11.3-jie-an-zhuang-freebsd-ji-yu-virtual-box.md)
 * [第 11.4 节 手动安装双系统（先安装 FreeBSD）](di-11-zhang-freebsd-install-more/di-11.4.md)
 * [第 11.5 节 手动安装双系统（后安装 FreeBSD）](di-11-zhang-freebsd-install-more/di-11.5-jie-shuang-xi-tong-an-zhuang.md)
-* [第 11.6 节 安装 FreeBSD——基于 Apple M1 & Parallels Desktop 20](di-11-zhang-freebsd-install-more/di-11.6-jie-apple.md)
-* [第 11.7 节 安装 FreeBSD——基于 Apple M1 & VMware Fusion Pro](di-11-zhang-freebsd-install-more/di-11.7-jie-apple.md)
-* [第 11.8 节 Qemu 安装 RISC-V FreeBSD（基于 x86 Windows）](di-11-zhang-freebsd-install-more/di-11.8-qemu.md)
+* [第 11.6 节 基于 Apple M1 & Parallels Desktop 20 安装 FreeBSD](di-11-zhang-freebsd-install-more/di-11.6-jie-apple.md)
+* [第 11.7 节 基于 Apple M1 & VMware Fusion Pro 安装 FreeBSD](di-11-zhang-freebsd-install-more/di-11.7-jie-apple.md)
+* [第 11.8 节 使用 Qemu 安装 RISC-V FreeBSD（基于 x86 Windows）](di-11-zhang-freebsd-install-more/di-11.8-qemu.md)
 * [第 11.9 节 云服务器安装 FreeBSD（基于腾讯云轻量云）](di-11-zhang-freebsd-install-more/di-11.9-jie-teng-xun-yun-qing-liang-yun-ji-qi-ta-fu-wu-qi-dd-an-zhuang-freebsd.md)
 * [第 11.10 节 配置 rEFInd（双系统用）](di-11-zhang-freebsd-install-more/di-11.10-refind.md)
 
@@ -177,7 +177,7 @@
 * [第 16.8 节 NFS 服务器](di-16-zhang-fu-wu-qi/di-16.8-jie-nfs-fu-wu-qi.md)
 * [第 16.9 节 Webmin](di-16-zhang-fu-wu-qi/di-16.9-jie-webmin.md)
 
-## 第 17 章 网络服务器
+## 第 17 章 Web 与数据库服务器
 
 * [第 17.1 节 Apache](di-17-zhang-wang-luo-fu-wu-qi/di-17.1-jie-apache.md)
 * [第 17.2 节 Nginx](di-17-zhang-wang-luo-fu-wu-qi/di-17.2-jie-nginx.md)
@@ -233,7 +233,7 @@
 * [第 21.10 节 Deepin 兼容层](di-21-zhang-linux-jian-rong-ceng/di-21.10-jie-linux-jian-rong-ceng-ji-yu-deepin.md)
 * [第 21.11 节 故障排除与未竟事宜](di-21-zhang-linux-jian-rong-ceng/di-21.11-jie-linux-jian-rong-ceng-gu-zhang-pai-chu-yu-pei-zhi.md)
 
-## 第 22 章 编程环境与软件开发
+## 第 22 章 开发环境与贡献社区
 
 * [第 22.1 节 如何报告 Bug](di-22-zhang-bian-cheng-yu-kai-fa/di-22.1-jie-ru-he-bao-gao-bug.md)
 * [第 22.2 节 如何开发一个 Port](di-22-zhang-bian-cheng-yu-kai-fa/di-22.2-jie-ru-he-ti-jiao-yi-ge-ruan-jian-bao.md)
