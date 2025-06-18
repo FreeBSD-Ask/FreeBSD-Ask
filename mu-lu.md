@@ -1,4 +1,4 @@
-# 目录
+# Table of contents
 
 * [FreeBSD 从入门到追忆（第三版：草稿）](README.md)
 * [编辑日志](CHANGELOG.md)
@@ -233,7 +233,7 @@
 * [第 21.10 节 Deepin 兼容层](di-21-zhang-linux-jian-rong-ceng/di-21.10-jie-linux-jian-rong-ceng-ji-yu-deepin.md)
 * [第 21.11 节 故障排除与未竟事宜](di-21-zhang-linux-jian-rong-ceng/di-21.11-jie-linux-jian-rong-ceng-gu-zhang-pai-chu-yu-pei-zhi.md)
 
-## 第 22 章 开发环境与贡献社区
+## 第 22 章 开发生态与贡献社区
 
 * [第 22.1 节 如何报告 Bug](di-22-zhang-bian-cheng-yu-kai-fa/di-22.1-jie-ru-he-bao-gao-bug.md)
 * [第 22.2 节 如何开发一个 Port](di-22-zhang-bian-cheng-yu-kai-fa/di-22.2-jie-ru-he-ti-jiao-yi-ge-ruan-jian-bao.md)
@@ -260,18 +260,18 @@
 * [第 23.6 节 Linux 文件系统](di-23-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-23.6-jie-ext-234-deng-wen-jian-xi-tong.md)
 * [第 23.7 节 ZFS 磁盘加解密](di-23-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-23.7-jie-zfs-ci-pan-jia-jie-mi.md)
 
-## 第 24 章 DragonFly BSD
+## 第 24 章 DragonFly BSD 入门
 
 * [第 24.1 节 DragonFly BSD 概述](di-24-zhang-dragonflybsd/di-24.1-jie-gai-shu.md)
 * [第 24.2 节 安装 DragonFly BSD](di-24-zhang-dragonflybsd/di-24.2-jie-an-zhuang-yu-pei-zhi.md)
 * [第 24.3 节 配置 DragonFly BSD](di-24-zhang-dragonflybsd/24.3-pei-zhi.md)
 
-## 第 25 章 TwinCAT/BSD
+## 第 25 章 TwinCAT/BSD 入门
 
 * [第 25.1 节 TwinCAT/BSD 系统安装与基本配置](di-25-zhang-twincatbsd/di-25.1-jie-xi-tong-an-zhuang-yu-ji-ben-pei-zhi.md)
 * [第 25.2 节 TwinCAT/BSD 开发环境配置](di-25-zhang-twincatbsd/di-25.2-jie-kai-fa-huan-jing-pei-zhi.md)
 
-## 第 26 章 OpenBSD
+## 第 26 章 OpenBSD 入门
 
 * [第 26.1 节 OpenBSD 概述](di-26-zhang-openbsd/di-26.1-jie-gai-shu.md)
 * [第 26.2 节 安装 OpenBSD](di-26-zhang-openbsd/di-26.2-jie-an-zhuang.md)
@@ -281,7 +281,7 @@
 * [第 26.6 节 在 RISC-V 开发板上安装 OpenBSD](di-26-zhang-openbsd/di-26.6-jie-zai-riscv-kai-fa-ban-shang-an-zhuang-openbsd.md)
 * [第 26.7 节 树莓派与 OpenBSD](di-26-zhang-openbsd/di-26.7-jie-shu-mei-pai-yu-openbsd.md)
 
-## 第 27 章 NetBSD
+## 第 27 章 NetBSD 入门
 
 * [第 27.1 节 NetBSD 概述](di-27-zhang-netbsd/di-27.1-jie-gai-shu.md)
 * [第 27.2 节 NetBSD 安装图解](di-27-zhang-netbsd/di-27.2-jie-an-zhuang-yu-pei-zhi.md)
