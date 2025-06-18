@@ -27,7 +27,7 @@
 * [第 2.5 节 分配磁盘空间](di-2-zhang-an-zhuang-freebsd/di-2.5-jie-fen-pei-disk.md)
 * [第 2.6 节 设置 root 密码](di-2-zhang-an-zhuang-freebsd/di-2.6-root-jie.md)
 * [第 2.7 节 网络设置](di-2-zhang-an-zhuang-freebsd/di-2.7-jie-net.md)
-* [第 2.8 节 时区、账户、服务和安全](di-2-zhang-an-zhuang-freebsd/di-2.8-jie-more.md)
+* [第 2.8 节 时区、服务、安全、固件和账户](di-2-zhang-an-zhuang-freebsd/di-2.8-jie-more.md)
 * [第 2.9 节 完成安装](di-2-zhang-an-zhuang-freebsd/di-2.9-end-jie.md)
 * [第 2.10 节 故障排除](di-2-zhang-an-zhuang-freebsd/di-2.10-jie-eol.md)
 
