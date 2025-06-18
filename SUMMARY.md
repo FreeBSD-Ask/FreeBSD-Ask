@@ -207,7 +207,7 @@
 ## 第 19 章 数据库管理
 
 * [第 19.1 节 PostgreSQL](di-19-zhang-database/di-19.1-jie-postgresql.md)
-* [第 19.2 节 pgAdmin4](di-19-zhang-database/di-19.2-pgadmin4)
+* [第 19.2 节 pgAdmin4](di-19-zhang-database/di-19.2-pgadmin4.md)
 * [第 19.3 节 MySQL 5.X](di-19-zhang-database/di-19.3-jie-mysql-5.x.md)
 * [第 19.4 节 MySQL 8.X](di-19-zhang-database/di-19.4-jie-mysql-8.x.md)
 * [第 19.5 节 MongoDB 80](di-19-zhang-database/di-19.5-mongodb)
