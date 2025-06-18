@@ -49,7 +49,7 @@
 * [第 3.9 节 sudo 与 doas](di-3-zhang-freebsd-base/di-3.9-jie-sudo.md)
 * [第 3.10 节 文件系统的挂载与卸载](di-3-zhang-freebsd-base/di-3.10-mount.md)
 * [第 3.11 节 磁盘结构](di-3-zhang-freebsd-base/di-3.11-disk.md)
-* [第 3.12 节 目录结构](di-3-zhang-freebsd-base/di-3.11-mu-lu.md)
+* [第 3.12 节 目录结构](di-3-zhang-freebsd-base/di-3.12-mu-lu.md)
 
 ## 第 4 章 软件管理与系统升级
 
