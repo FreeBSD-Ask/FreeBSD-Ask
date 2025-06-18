@@ -12,20 +12,20 @@ FreeBSD 是真正自由（Liberty）的**操作系统**，在这波谲云诡的�
 
 此外，每周都会通过 GitHub Action 导出 PDF/EPUB 于 [releases](https://github.com/FreeBSD-Ask/FreeBSD-Ask/releases)（也许需要代理）。
 
-## 关于
-
-本书是 FreeBSD 开源社区许多人不懈努力的成果。
-
-### 内容提要
-
-本书涉及了 FreeBSD 14.3-RELEASE 和 13.5-RELEASE 的安装和日常使用，还包含一些 15.0-CURRENT 的内容。
-
-### 加入 FreeBSD 中文社区（CFC）
+## 加入 FreeBSD 中文社区（CFC）
 
 - **首要**联系方式为 **QQ 群**：[787969044](https://qm.qq.com/q/cX5mpJ36gg)（点击加群）
 - 微信群：因微信封闭性，须先加 QQ 群再联系 QQ 群主
 - Discord：<https://discord.gg/j7VhWrhp3e>（需要代理。可通过网页使用）
 - Telegram 群组：[https://t.me/oh_my_BSD](https://t.me/oh_my_BSD)（需要代理）
+
+## 关于
+
+本书是 FreeBSD 中文社区许多人不懈努力的成果。
+
+### 内容提要
+
+本书涉及了 FreeBSD 14.3-RELEASE 和 13.5-RELEASE 的安装和日常使用，还包含一些 15.0-CURRENT 的内容。
 
 ### 历史
 
