@@ -35,19 +35,20 @@
 
 * [第 3.1 节 Windows 用户迁移指南](di-3-zhang-freebsd-base/di-3.1-windows.md)
 * [第 3.2 节 Linux 用户迁移指南](di-3-zhang-freebsd-base/di-3.2-jie-linux-yong-hu-qian-yi-zhi-bei.md)
-* [第 3.3 节 命令行基础](di-3-zhang-freebsd-base/di-3.3-jie-ming-ling-hang.md)
-* [第 3.4 节 文本编辑器](di-3-zhang-freebsd-base/di-3.4-jie-bian-ji-qi.md)
-* [第 3.5 节 用户和基本账户管理](di-3-zhang-freebsd-base/di-3.5-jie-zu.md)
-* [第 3.6 节 权限](di-3-zhang-freebsd-base/di-3.6-jie-quan-xian.md)
-* [第 3.7 节 sudo 与 doas](di-3-zhang-freebsd-base/di-3.7-jie-sudo.md)
-* [第 3.8 节 文件系统的挂载与卸载](di-3-zhang-freebsd-base/di-3.8-mount.md)
-* [第 3.9 节 磁盘结构](di-3-zhang-freebsd-base/di-3.9-disk.md)
-* [第 3.10 节 目录结构](di-3-zhang-freebsd-base/di-13.10-mu-lu.md)
+* [第 3.3 节 虚拟控制台和终端](di-3-zhang-freebsd-base/di-3.3-jie-console.md)
+* [第 3.4 节 命令行基础](di-3-zhang-freebsd-base/di-3.4-jie-ming-ling-hang.md)
+* [第 3.5 节 文本编辑器](di-3-zhang-freebsd-base/di-3.5-jie-bian-ji-qi.md)
+* [第 3.6 节 用户和基本账户管理](di-3-zhang-freebsd-base/di-3.6-jie-zu.md)
+* [第 3.7 节 权限](di-3-zhang-freebsd-base/di-3.7-jie-quan-xian.md)
+* [第 3.8 节 sudo 与 doas](di-3-zhang-freebsd-base/di-3.8-jie-sudo.md)
+* [第 3.9 节 文件系统的挂载与卸载](di-3-zhang-freebsd-base/di-3.9-mount.md)
+* [第 3.10 节 磁盘结构](di-3-zhang-freebsd-base/di-3.10-disk.md)
+* [第 3.11 节 目录结构](di-3-zhang-freebsd-base/di-3.11-mu-lu.md)
 
 ## 第 4 章 包管理器与系统更新
 
 * [第 4.1 节 FreeBSD 镜像站现状](di-4-zhang-bao-guan-li-qi/di-4.1-jie-freebsd-jing-xiang-zhan-xian-zhuang.md)
-* [第 4.2 节 FreeBSD 换源方式](di-4-zhang-bao-guan-li-qi/di-4.2-jie-freebsd-huan-yuan-fang-shi.md)
+* [第 4.2 节 更换 FreeBSD 软件源](di-4-zhang-bao-guan-li-qi/di-4.2-jie-freebsd-huan-yuan-fang-shi.md)
 * [第 4.3 节 gitup 的用法](di-4-zhang-bao-guan-li-qi/di-4.3-jie-gitup-de-yong-fa.md)
 * [第 4.4 节 使用 pkg 管理二进制包](di-4-zhang-bao-guan-li-qi/di-4.4-jie-ruan-jian-bao-guan-li-qi-pkg-de-yong-fa.md)
 * [第 4.5 节 使用 Ports 以源代码方式安装软件](di-4-zhang-bao-guan-li-qi/di-4.5-jie-tong-guo-yuan-dai-ma-ports-fang-shi-an-zhuang-ruan-jian.md)
@@ -60,25 +61,19 @@
 
 * [第 5.1 节 显卡驱动（Intel、AMD）](di-5-zhang-zhuo-mian-an-zhuang/di-5.1-jie-an-zhuang-xian-ka-qu-dong-ji-xorg-bi-kan.md)
 * [第 5.2 节 显卡驱动（NVIDIA）](di-5-zhang-zhuo-mian-an-zhuang/di-5.2-NVIDIA.md)
-* [第 5.3 节 GNOME](di-5-zhang-zhuo-mian-an-zhuang/di-5.3-jie-an-zhuang-gnome.md)
-* [第 5.4 节 Mate](di-5-zhang-zhuo-mian-an-zhuang/di-5.4-jie-an-zhuang-mate.md)
-* [第 5.5 节 Xfce](di-5-zhang-zhuo-mian-an-zhuang/di-5.5-jie-an-zhuang-xfce.md)
-* [第 5.6 节 Cinnamon](di-5-zhang-zhuo-mian-an-zhuang/di-5.6-jie-an-zhuang-cinnamon.md)
-* [第 5.7 节 Lumina](di-5-zhang-zhuo-mian-an-zhuang/di-5.7-jie-an-zhuang-lumina.md)
-* [第 5.8 节 LXQt](di-5-zhang-zhuo-mian-an-zhuang/di-5.8-jie-an-zhuang-lxqt.md)
-* [第 5.9 节 bspwm](di-5-zhang-zhuo-mian-an-zhuang/di-5.9-jie-an-zhuang-bspwm.md)
-* [第 5.10 节 IceWM](di-5-zhang-zhuo-mian-an-zhuang/di-5.10.md)
-* [第 5.11 节 Budgie](di-5-zhang-zhuo-mian-an-zhuang/di-5.11-jie-an-zhuang-budgie.md)
-* [第 5.12 节 i3wm](di-5-zhang-zhuo-mian-an-zhuang/di-5.12-jie-an-zhuang-i3wm.md)
-* [第 5.13 节 CDE](di-5-zhang-zhuo-mian-an-zhuang/di-5.13-jie-an-zhuang-cde.md)
-* [第 5.14 节 Hyprland](di-5-zhang-zhuo-mian-an-zhuang/di-5.14-jie-an-zhuang-hyprland.md)
-* [第 5.15 节 LXDE](di-5-zhang-zhuo-mian-an-zhuang/di-5.15-lxde.md)
-* [第 5.16 节 Window Maker](di-5-zhang-zhuo-mian-an-zhuang/di-5.16-winmaker.md)
-* [第 5.17 节 Fluxbox](di-5-zhang-zhuo-mian-an-zhuang/di-5.17-fluxbox.md)
-* [第 5.18 节 KDE6](di-5-zhang-zhuo-mian-an-zhuang/di-5.18-jie-an-zhuang-kde.md)
-* [第 5.19 节 主题美化](di-5-zhang-zhuo-mian-an-zhuang/di-5.19-jie-zhu-ti-yu-mei-hua.md)
-* [第 5.20 节 远程桌面](di-5-zhang-zhuo-mian-an-zhuang/di-5.20-jie-yuan-cheng-zhuo-mian-guan-li.md)
-* [第 5.21 节 root 登录桌面](di-5-zhang-zhuo-mian-an-zhuang/di-5.21-jie-root-deng-lu-zhuo-mian.md)
+* [第 5.3 节 KDE6](di-5-zhang-zhuo-mian-an-zhuang/di-5.3-jie-an-zhuang-kde.md)
+* [第 5.4 节 GNOME](di-5-zhang-zhuo-mian-an-zhuang/di-5.4-jie-an-zhuang-gnome.md)
+* [第 5.5 节 Mate](di-5-zhang-zhuo-mian-an-zhuang/di-5.5-jie-an-zhuang-mate.md)
+* [第 5.6 节 Xfce](di-5-zhang-zhuo-mian-an-zhuang/di-5.6-jie-an-zhuang-xfce.md)
+* [第 5.7 节 Cinnamon](di-5-zhang-zhuo-mian-an-zhuang/di-5.7-jie-an-zhuang-cinnamon.md)
+* [第 5.8 节 Lumina](di-5-zhang-zhuo-mian-an-zhuang/di-5.8-jie-an-zhuang-lumina.md)
+* [第 5.9 节 LXQt](di-5-zhang-zhuo-mian-an-zhuang/di-5.9-jie-an-zhuang-lxqt.md)
+* [第 5.10 节 Budgie](di-5-zhang-zhuo-mian-an-zhuang/di-5.10-jie-an-zhuang-budgie.md)
+* [第 5.11 节 CDE](di-5-zhang-zhuo-mian-an-zhuang/di-5.11-jie-an-zhuang-cde.md)
+* [第 5.12 节 LXDE](di-5-zhang-zhuo-mian-an-zhuang/di-5.12-lxde.md)
+* [第 5.13 节 主题美化](di-5-zhang-zhuo-mian-an-zhuang/di-5.13-jie-zhu-ti-yu-mei-hua.md)
+* [第 5.14 节 远程桌面](di-5-zhang-zhuo-mian-an-zhuang/di-5.14-jie-yuan-cheng-zhuo-mian-guan-li.md)
+* [第 5.15 节 解除 root 登录限制](di-5-zhang-zhuo-mian-an-zhuang/di-5.15-jie-root-deng-lu-zhuo-mian.md)
 
 ## 第 6 章 中文环境配置
 
@@ -102,7 +97,6 @@
 * [第 7.5 节 音频播放器](di-7-duo-mei-ti/di-7.5-jie-yin-pin-bo-fang-qi.md)
 * [第 7.6 节 视频播放器](di-7-duo-mei-ti/di-7.6-shi-pin-bo-fang.md)
 * [第 7.7 节 音频图形图像处理](di-7-duo-mei-ti/di-7.7-tu-xing-tu-xiang.md)
-
 
 ## 第 8 章 代理服务器
 
@@ -138,10 +132,14 @@
 * [第 11.9 节 云服务器安装 FreeBSD（基于腾讯云轻量云）](di-11-zhang-freebsd-install-more/di-11.9-jie-teng-xun-yun-qing-liang-yun-ji-qi-ta-fu-wu-qi-dd-an-zhuang-freebsd.md)
 * [第 11.10 节 配置 rEFInd（双系统用）](di-11-zhang-freebsd-install-more/di-11.10-refind.md)
 
-## 第 12 章 引导与故障恢复
+## 第 12 章 窗口管理器
 
-* [第 12.1 节 单用户模式与密码重置](di-12-zhang-yin-dao-yu-hui-fu/di-12.1-jie-hui-fu-mo-shi-yu-mi-ma-zhong-zhi.md)
-* [第 12.2 节 Grub & UEFI 与 efibootmgr](di-12-zhang-yin-dao-yu-hui-fu/di-12.2-jie-grub-ji-qi-ta-yin-dao.md)
+* [第 12.1 节 bspwm](di-12-zhang-chuang-kou/di-12.1-jie-an-zhuang-bspwm.md)
+* [第 12.2 节 IceWM](di-12-zhang-chuang-kou/di-12.2-icewm.md)
+* [第 12.3 节 i3wm](di-12-zhang-chuang-kou/di-12.3-jie-an-zhuang-i3wm.md)
+* [第 12.4 节 Hyprland](di-12-zhang-chuang-kou/di-12.4-jie-an-zhuang-hyprland.md)
+* [第 12.5 节 Window Maker](di-12-zhang-chuang-kou/di-12.5-winmaker.md)
+* [第 12.6 节 Fluxbox](di-12-zhang-chuang-kou/di-12.6-fluxbox.md)
 
 ## 第 13 章 FreeBSD 系统管理
 
@@ -149,6 +147,8 @@
 * [第 13.2 节 管理 FreeBSD 中的服务](di-13-zhang-freebsd-te-se/di-13.2-jie-bsd-init-guan-li-fu-wu.md)
 * [第 13.3 节 bsdconfig 系统配置工具](di-13-zhang-freebsd-te-se/di-13.3-jie-bsdinstall-yu-bsdconfig.md)
 * [第 13.4 节 SSH 配置与相关工具](di-13-zhang-freebsd-te-se/di-13.4-jie-chang-yong-ruan-jian-yu-ssh-pei-zhi.md)
+* [第 13.5 节 单用户模式与密码重置](di-13-zhang-freebsd-te-se/di-13.5-jie-hui-fu-mo-shi-yu-mi-ma-zhong-zhi.md)
+* [第 13.6 节 Grub & UEFI 与 efibootmgr](di-13-zhang-freebsd-te-se/di-13.6-jie-grub-ji-qi-ta-yin-dao.md)
 
 ## 第 14 章 网络管理
 
@@ -290,7 +290,7 @@
 * [第 27.3 节 NetBSD 换源与包管理器](di-27-zhang-netbsd/di-27.3-jie-huan-yuan-yu-bao-guan-li-qi.md)
 * [第 27.4 节 桌面与中文环境常用软件](di-27-zhang-netbsd/di-27.4-jie-zhuo-mian-yu-qi-ta-ruan-jian.md)
 
-## 附录一
+## 附录一 计算机概论
 
 * [存储卡参数简介与测试](fulu1/sd-card-can-shu-jian-shu.md)
 * [总线接口与协议](fulu1/zong-xian.md)
@@ -298,7 +298,7 @@
 * [操作系统](fulu1/cao-zuo-xi-tong.md)
 * [MySQL 数据库](fulu1/shu-jv-ku.md)
 
-## 附录二
+## 附录二 参考资料
 
 * [参考书目](fu-lu2/cankaoshu.md)
 * [术语表](fu-lu2/shu-yu-biao.md)
