@@ -1,4 +1,4 @@
-# 第 1.5 节 FreeBSD 桌面发行版
+# FreeBSD 桌面发行版
 
 
 ## GhostBSD
