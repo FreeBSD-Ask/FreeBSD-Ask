@@ -8,12 +8,12 @@
 ## 前言
 
 * [致读者](qian-yan/zhi-du-zhe.md)
+* [致谢](qian-yan/zhi-xie.md)
 * [初版序言：好望角与塔吊](qian-yan/xu-yan-1.md)
 * [再版序言：回到复制粘贴，面向教程本身](qian-yan/xu-yan-2.md)
 * [三版序言：且有大觉而后知此其大梦也（草稿）](qian-yan/xu-yan-3.md)
 * [本书的组织结构](qian-yan/zu-zhi-jie-gou.md)
 * [本书中使用的一些约定](qian-yan/yue-ding.md)
-* [致谢](qian-yan/zhi-xie.md)
 
 ## 第 1 章 FreeBSD 初见
 
@@ -26,7 +26,7 @@
 ## 第 2 章 安装 FreeBSD
 
 * [第 2.1 节 安装前的准备工作](di-2-zhang-an-zhuang-freebsd/di-2.1-install-pre.md)
-* [第 2.2 节 开始安装](di-2-zhang-an-zhuang-freebsd/di-2.2-jie-start-install.md)
+* [第 2.2 节 使用 bsdinstall 开始安装](di-2-zhang-an-zhuang-freebsd/di-2.2-jie-start-install.md)
 * [第 2.3 节 键盘布局和主机名](di-2-zhang-an-zhuang-freebsd/di-2.3-jie-use-bsdinstall.md)
 * [第 2.4 节 选择安装组件](di-2-zhang-an-zhuang-freebsd/di-2.4-jie-select.md)
 * [第 2.5 节 分配磁盘空间](di-2-zhang-an-zhuang-freebsd/di-2.5-jie-fen-pei-disk.md)
@@ -64,8 +64,8 @@
 
 ## 第 5 章 桌面环境
 
-* [第 5.1 节 显卡驱动（Intel、AMD）](di-5-zhang-zhuo-mian-an-zhuang/di-5.1-jie-an-zhuang-xian-ka-qu-dong-ji-xorg-bi-kan.md)
-* [第 5.2 节 显卡驱动（NVIDIA）](di-5-zhang-zhuo-mian-an-zhuang/di-5.2-NVIDIA.md)
+* [第 5.1 节 Intel 与 AMD 显卡驱动](di-5-zhang-zhuo-mian-an-zhuang/di-5.1-jie-an-zhuang-xian-ka-qu-dong-ji-xorg-bi-kan.md)
+* [第 5.2 节 NVIDIA 显卡驱动](di-5-zhang-zhuo-mian-an-zhuang/di-5.2-NVIDIA.md)
 * [第 5.3 节 KDE6](di-5-zhang-zhuo-mian-an-zhuang/di-5.3-jie-an-zhuang-kde.md)
 * [第 5.4 节 GNOME](di-5-zhang-zhuo-mian-an-zhuang/di-5.4-jie-an-zhuang-gnome.md)
 * [第 5.5 节 Mate](di-5-zhang-zhuo-mian-an-zhuang/di-5.5-jie-an-zhuang-mate.md)
@@ -78,9 +78,9 @@
 * [第 5.12 节 LXDE](di-5-zhang-zhuo-mian-an-zhuang/di-5.12-lxde.md)
 * [第 5.13 节 主题美化](di-5-zhang-zhuo-mian-an-zhuang/di-5.13-jie-zhu-ti-yu-mei-hua.md)
 * [第 5.14 节 远程桌面](di-5-zhang-zhuo-mian-an-zhuang/di-5.14-jie-yuan-cheng-zhuo-mian-guan-li.md)
-* [第 5.15 节 解除 root 登录限制](di-5-zhang-zhuo-mian-an-zhuang/di-5.15-jie-root-deng-lu-zhuo-mian.md)
+* [第 5.15 节 启用 root 桌面登录](di-5-zhang-zhuo-mian-an-zhuang/di-5.15-jie-root-deng-lu-zhuo-mian.md)
 
-## 第 6 章 中文本地化——i18n/L10n
+## 第 6 章 本地化——i18n/L10n
 
 * [第 6.1 节 本地化环境变量](di-6-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-6.1-jie-shu-ru-fa-yu-huan-jing-bian-liang.md)
 * [第 6.2 节 Fcitx 输入法框架](di-6-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-6.2-jie-fcitx-shu-ru-fa-kuang-jia.md)
@@ -160,8 +160,7 @@
 * [第 14.1 节 设置网络](di-14-zhang-wang-luo-guan-li/di-14.1-jie-wang-luo-can-shu-pei-zhi-ming-ling.md)
 * [第 14.2 节 无线网络](di-14-zhang-wang-luo-guan-li/di-14.2-jie-wifi.md)
 * [第 14.3 节 USB 网络共享（USB tethering）](di-14-zhang-wang-luo-guan-li/di-14.3-jie-usb-rndis-usb-wang-luo-gong-xiang.md)
-* [第 14.4 节 网卡](di-14-zhang-wang-luo-guan-li/di-14.4-yi-tai-wang-ka.md)
-* [第 14.5 节 TCP 堆栈](di-14-zhang-wang-luo-guan-li/di-14.5-jie-tcp-bbr.md)
+* [第 14.4 节 TCP 堆栈](di-14-zhang-wang-luo-guan-li/di-14.4-jie-tcp-bbr.md)
 
 ## 第 15 章 FreeBSD 防火墙
 
@@ -182,25 +181,21 @@
 * [第 16.8 节 NFS 服务器](di-16-zhang-fu-wu-qi/di-16.8-jie-nfs-fu-wu-qi.md)
 * [第 16.9 节 Webmin](di-16-zhang-fu-wu-qi/di-16.9-jie-webmin.md)
 
-## 第 17 章 Web 与数据库服务器
+## 第 17 章 Web 服务器与监控平台
 
 * [第 17.1 节 Apache](di-17-zhang-wang-luo-fu-wu-qi/di-17.1-jie-apache.md)
 * [第 17.2 节 Nginx](di-17-zhang-wang-luo-fu-wu-qi/di-17.2-jie-nginx.md)
 * [第 17.3 节 PHP 8.X](di-17-zhang-wang-luo-fu-wu-qi/di-17.3-jie-php-8.x.md)
-* [第 17.4 节 MySQL 5.X](di-17-zhang-wang-luo-fu-wu-qi/di-17.4-jie-mysql-5.x.md)
-* [第 17.5 节 MySQL 8.X](di-17-zhang-wang-luo-fu-wu-qi/di-17.5-jie-mysql-8.x.md)
-* [第 17.6 节 NextCloud——基于 PostgreSQL](di-17-zhang-wang-luo-fu-wu-qi/di-17.6-jie-NextCloud.md)
-* [第 17.7 节 Telegraf+InfluxDB+Grafana 监控平台](di-17-zhang-wang-luo-fu-wu-qi/di-17.7-jie-telegraf+influxdb+grafana-jian-kong-ping-tai.md)
-* [第 17.8 节 PostgreSQL 与 pgAdmin4](di-17-zhang-wang-luo-fu-wu-qi/di-17.8-jie-postgresql-yu-pgadmin4.md)
-* [第 17.9 节 AList](di-17-zhang-wang-luo-fu-wu-qi/di-17.9-alist.md)
-* [第 17.10 节 prometheus 监控部署](di-17-zhang-wang-luo-fu-wu-qi/17.10.prometheus.md)
-* [第 17.11 节 MongoDB 80](di-17-zhang-wang-luo-fu-wu-qi/17.11-mongodb.md)
-* [第 17.12 节 Tomcat](di-17-zhang-wang-luo-fu-wu-qi/17.12-Tomcat.md)
-* [第 17.13 节 Caddy](di-17-zhang-wang-luo-fu-wu-qi/17.13-caddy.md)
-* [第 17.14 节 OnlyOffice（基于 PostgreSQL）](di-17-zhang-wang-luo-fu-wu-qi/17.14.md)
-* [第 17.15 节 Zabbix 监控（基于 PostgreSQL）](di-17-zhang-wang-luo-fu-wu-qi/17.15-Zabbix.md)
+* [第 17.4 节 Zabbix 监控（基于 PostgreSQL）](di-17-zhang-wang-luo-fu-wu-qi/17.4-Zabbix.md)
+* [第 17.5 节 NextCloud——基于 PostgreSQL](di-17-zhang-wang-luo-fu-wu-qi/di-17.5-jie-NextCloud.md)
+* [第 17.6 节 Telegraf+InfluxDB+Grafana 监控平台](di-17-zhang-wang-luo-fu-wu-qi/di-17.6-jie-telegraf+influxdb+grafana-jian-kong-ping-tai.md)
+* [第 17.7 节 AList](di-17-zhang-wang-luo-fu-wu-qi/di-17.7-alist.md)
+* [第 17.8 节 prometheus 监控部署](di-17-zhang-wang-luo-fu-wu-qi/17.8.prometheus.md)
+* [第 17.9 节 Tomcat](di-17-zhang-wang-luo-fu-wu-qi/17.9-Tomcat.md)
+* [第 17.10 节 Caddy](di-17-zhang-wang-luo-fu-wu-qi/17.10-caddy.md)
+* [第 17.11 节 OnlyOffice（基于 PostgreSQL）](di-17-zhang-wang-luo-fu-wu-qi/17.11-onlyoffice.md)
 
-## 第 18 章 嵌入式
+## 第 18 章 嵌入式平台
 
 * [第 18.1 节 树莓派简介与配件选用](di-18-zhang-shu-mei-pai-yu-riscv/di-18.1-jie-shu-mei-pai-de-jian-jie.md)
 * [第 18.2 节 树莓派安装 FreeBSD](di-18-zhang-shu-mei-pai-yu-riscv/di-18.2-jie-xi-tong-an-zhuang.md)
@@ -208,15 +203,12 @@
 * [第 18.4 节 树莓派与 Linux 兼容层](di-18-zhang-shu-mei-pai-yu-riscv/di-18.4-jie-shu-mei-pai-yu-linux-jian-rong-ceng.md)
 * [第 18.5 节 Radxa X4（x86）](di-18-zhang-shu-mei-pai-yu-riscv/18.5-radxax4.md)
 
-## 第 19 章 文学故事
+## 第 19 章 数据库
 
-* [第 19.3 节 小说：你与暗](di-19-zhang-wen-xue-gu-shi/19.3-ni-yu-an.md)
-* [第 19.4 节 我与 FreeBSD 的故事](di-19-zhang-wen-xue-gu-shi/19.4-freebsd.md)
-* [第 19.5 节 小说：大教堂与集市](di-19-zhang-wen-xue-gu-shi/di-19.5-jie-xiao-shuo-freebsd-cong-ru-men-dao-pao-lu.md)
-* [第 19.6 节 小说：吾乡何处](di-19-zhang-wen-xue-gu-shi/19.6-wu-xiang-he-chu.md)
-* [第 19.7 节 杂记](di-19-zhang-wen-xue-gu-shi/di-19.7-jie-za-ji.md)
-* [第 19.8 节 诗歌选](di-19-zhang-wen-xue-gu-shi/di-19.8-jie-shi-ge-xuan.md)
-* [第 19.9 节 两次退出](di-19-zhang-wen-xue-gu-shi/19.9-exit.md)
+* [第 19.1 节 PostgreSQL 与 pgAdmin4](di-19-zhang-database/di-19.1-jie-postgresql-yu-pgadmin4.md)
+* [第 19.2 节 MySQL 5.X](di-19-zhang-database/di-19.2-jie-mysql-5.x.md)
+* [第 19.3 节 MySQL 8.X](di-19-zhang-database/di-19.3-jie-mysql-8.x.md)
+* [第 19.4 节 MongoDB 80](di-19-zhang-database/di-19.4-mongodb)
 
 ## 第 20 章 游戏、科学计算与专业工具
 
@@ -224,7 +216,7 @@
 * [第 20.2 节 我的世界（Minecraft）](di-20-zhang-yu-le-yu-jiao-yu/20.2-minecraft.md)
 * [第 20.3 节 科研与专业工具](di-20-zhang-yu-le-yu-jiao-yu/di-20.3-jie-ke-yan-yu-zhuan-ye-gong-ju.md)
 
-## 第 21 章 Linux 兼容层
+## 第 21 章 Linux 二进制兼容层
 
 * [第 21.1 节 Linux 兼容层实现](di-21-zhang-linux-jian-rong-ceng/di-21.1-jie-linux-jian-rong-ceng-shi-xian.md)
 * [第 21.2 节 RockyLinux 兼容层（FreeBSD Port）](di-21-zhang-linux-jian-rong-ceng/di-21.2-jie-rocky9-jian-rong-ceng.md)
@@ -238,7 +230,7 @@
 * [第 21.10 节 Deepin 兼容层](di-21-zhang-linux-jian-rong-ceng/di-21.10-jie-linux-jian-rong-ceng-ji-yu-deepin.md)
 * [第 21.11 节 故障排除与未竟事宜](di-21-zhang-linux-jian-rong-ceng/di-21.11-jie-linux-jian-rong-ceng-gu-zhang-pai-chu-yu-pei-zhi.md)
 
-## 第 22 章 开发环境与贡献社区
+## 第 22 章 开发生态与贡献社区
 
 * [第 22.1 节 如何报告 Bug](di-22-zhang-bian-cheng-yu-kai-fa/di-22.1-jie-ru-he-bao-gao-bug.md)
 * [第 22.2 节 如何开发一个 Port](di-22-zhang-bian-cheng-yu-kai-fa/di-22.2-jie-ru-he-ti-jiao-yi-ge-ruan-jian-bao.md)
@@ -259,24 +251,24 @@
 
 * [第 23.1 节 自动挂载文件系统](di-23-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-23.1-zi-dong-gua-zai.md)
 * [第 23.2 节 ZFS](di-23-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-23.2-jie-zfs.md)
-* [第 23.3 节 调整和增加磁盘大小](di-23-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-23.3-jie-ci-pan-kuo-rong.md)
+* [第 23.3 节 磁盘扩容与分区调整](di-23-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-23.3-jie-ci-pan-kuo-rong.md)
 * [第 23.4 节 Windows 文件系统](di-23-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-23.4-jie-ntfs-de-gua-zai.md)
 * [第 23.5 节 Swap 交换分区的设置](di-23-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-23.5-jie-swap-jiao-huan-fen-qu-de-she-zhi.md)
 * [第 23.6 节 Linux 文件系统](di-23-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-23.6-jie-ext-234-deng-wen-jian-xi-tong.md)
 * [第 23.7 节 ZFS 磁盘加解密](di-23-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-23.7-jie-zfs-ci-pan-jia-jie-mi.md)
 
-## 第 24 章 DragonFly BSD
+## 第 24 章 DragonFly BSD 入门
 
 * [第 24.1 节 DragonFly BSD 概述](di-24-zhang-dragonflybsd/di-24.1-jie-gai-shu.md)
 * [第 24.2 节 安装 DragonFly BSD](di-24-zhang-dragonflybsd/di-24.2-jie-an-zhuang-yu-pei-zhi.md)
 * [第 24.3 节 配置 DragonFly BSD](di-24-zhang-dragonflybsd/24.3-pei-zhi.md)
 
-## 第 25 章 TwinCAT/BSD
+## 第 25 章 TwinCAT/BSD 入门
 
 * [第 25.1 节 TwinCAT/BSD 系统安装与基本配置](di-25-zhang-twincatbsd/di-25.1-jie-xi-tong-an-zhuang-yu-ji-ben-pei-zhi.md)
 * [第 25.2 节 TwinCAT/BSD 开发环境配置](di-25-zhang-twincatbsd/di-25.2-jie-kai-fa-huan-jing-pei-zhi.md)
 
-## 第 26 章 OpenBSD
+## 第 26 章 OpenBSD 入门
 
 * [第 26.1 节 OpenBSD 概述](di-26-zhang-openbsd/di-26.1-jie-gai-shu.md)
 * [第 26.2 节 安装 OpenBSD](di-26-zhang-openbsd/di-26.2-jie-an-zhuang.md)
@@ -286,24 +278,38 @@
 * [第 26.6 节 在 RISC-V 开发板上安装 OpenBSD](di-26-zhang-openbsd/di-26.6-jie-zai-riscv-kai-fa-ban-shang-an-zhuang-openbsd.md)
 * [第 26.7 节 树莓派与 OpenBSD](di-26-zhang-openbsd/di-26.7-jie-shu-mei-pai-yu-openbsd.md)
 
-## 第 27 章 NetBSD
+## 第 27 章 NetBSD 入门
 
 * [第 27.1 节 NetBSD 概述](di-27-zhang-netbsd/di-27.1-jie-gai-shu.md)
 * [第 27.2 节 NetBSD 安装图解](di-27-zhang-netbsd/di-27.2-jie-an-zhuang-yu-pei-zhi.md)
 * [第 27.3 节 NetBSD 换源与包管理器](di-27-zhang-netbsd/di-27.3-jie-huan-yuan-yu-bao-guan-li-qi.md)
 * [第 27.4 节 桌面与中文环境常用软件](di-27-zhang-netbsd/di-27.4-jie-zhuo-mian-yu-qi-ta-ruan-jian.md)
 
-## 附录一 计算机概论
+## 附录 Ⅰ 计算机概论
 
 * [存储卡参数简介与测试](fulu1/sd-card-can-shu-jian-shu.md)
 * [总线接口与协议](fulu1/zong-xian.md)
 * [网络基础](fulu1/wang-luo-ji-chu.md)
 * [操作系统](fulu1/cao-zuo-xi-tong.md)
 * [MySQL 数据库](fulu1/shu-jv-ku.md)
-* [BSD 许可证概览](fulu1/xukez.md)
 
-## 附录二 参考资料
+## 附录 Ⅱ 工具与资源
 
-* [FreeBSD 桌面发行版](fu-lu2/others-bsd.md)
-* [参考书目](fu-lu2/cankaoshu.md)
-* [术语表](fu-lu2/shu-yu-biao.md)
+* [适用于 FreeBSD 的以太网卡、USB 以太网卡和 USB 无线网卡](fu-lu2/yi-tai-wang-ka.md)
+* [BSD 许可证概览](fu-lu2/xukez.md)
+* [FreeBSD 桌面发行版评述](fu-lu2/others-bsd.md)
+
+## 附录 Ⅲ 文学故事
+ 
+* [我与 FreeBSD 的故事](fu-lu3/freebsd.md)
+* [两次告别](fu-lu3/exit.md)
+* [小说：大教堂与集市](fu-lu3/xiao-shuo-freebsd-cong-ru-men-dao-pao-lu.md)
+* [小说：吾乡何处](fu-lu3/wu-xiang-he-chu.md)
+* [小说：你与暗](fu-lu3/ni-yu-an.md)
+* [诗歌选](fu-lu3/shi-ge-xuan.md)
+* [杂记](fu-lu3/za-ji.md)
+  
+## 附录 Ⅳ 参考文献与术语
+
+* [参考书目](fu-lu4/cankaoshu.md)
+* [术语表](fu-lu4/shu-yu-biao.md)
