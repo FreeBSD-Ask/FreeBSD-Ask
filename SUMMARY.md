@@ -20,28 +20,29 @@
 
 ## 第 2 章 安装 FreeBSD
 
-* [第 2.1 节 安装前的准备工作](di-2-zhang-an-zhuang-freebsd/2.1-install-pre.md)
-* [第 2.2 节 FreeBSD 安装图解](di-2-zhang-an-zhuang-freebsd/di-2.2-jie-tu-jie-an-zhuang.md)
-* [第 2.3 节 安装 FreeBSD——基于 Hyper-V](di-2-zhang-an-zhuang-freebsd/di-2.3-hyper-v-jie.md)
-* [第 2.4 节 云服务器安装 FreeBSD（基于腾讯云轻量云）](di-2-zhang-an-zhuang-freebsd/di-2.4-jie-teng-xun-yun-qing-liang-yun-ji-qi-ta-fu-wu-qi-dd-an-zhuang-freebsd.md)
-* [第 2.5 节 安装 FreeBSD——基于 VMware Workstation Pro](di-2-zhang-an-zhuang-freebsd/di-2.5-jie-an-zhuang-freebsd-ji-yu-vmware-workstation-pro.md)
-* [第 2.6 节 安装 FreeBSD——基于 Virtual Box](di-2-zhang-an-zhuang-freebsd/di-2.6-jie-an-zhuang-freebsd-ji-yu-virtual-box.md)
-* [第 2.7 节 手动安装双系统（先安装 FreeBSD）](di-2-zhang-an-zhuang-freebsd/di-2.7.md)
-* [第 2.8 节 手动安装双系统（后安装 FreeBSD）](di-2-zhang-an-zhuang-freebsd/di-2.8-jie-shuang-xi-tong-an-zhuang.md)
-* [第 2.9 节 安装 FreeBSD——基于 Apple M1 & Parallels Desktop 20](di-2-zhang-an-zhuang-freebsd/di-2.9-jie-apple.md)
-* [第 2.10 节 安装 FreeBSD——基于 Apple M1 & VMware Fusion Pro](di-2-zhang-an-zhuang-freebsd/di-2.10-jie-apple.md)
-* [第 2.11 节 Qemu 安装 RISC-V FreeBSD（基于 x86 Windows）](di-2-zhang-an-zhuang-freebsd/di-2.11-qemu.md)
-* [第 2.12 节 配置 rEFInd（双系统用）](di-2-zhang-an-zhuang-freebsd/2.12-refind.md)
+* [第 2.1 节 安装前的准备工作](di-2-zhang-an-zhuang-freebsd/di-2.1-install-pre.md)
+* [第 2.2 节 开始安装](di-2-zhang-an-zhuang-freebsd/di-2.2-jie-start-install.md)
+* [第 2.3 节 键盘布局和主机名](di-2-zhang-an-zhuang-freebsd/di-2.3-jie-use-bsdinstall.md)
+* [第 2.4 节 选择安装组件](di-2-zhang-an-zhuang-freebsd/di-2.4-jie-select.md)
+* [第 2.5 节 分配磁盘空间](di-2-zhang-an-zhuang-freebsd/di-2.5-jie-fen-pei-disk.md)
+* [第 2.6 节 设置 root 密码](di-2-zhang-an-zhuang-freebsd/di-2.6-root-jie.md)
+* [第 2.7 节 网络设置](di-2-zhang-an-zhuang-freebsd/di-2.7-jie-net.md)
+* [第 2.8 节 时区、服务、安全、固件和账户](di-2-zhang-an-zhuang-freebsd/di-2.8-jie-more.md)
+* [第 2.9 节 完成安装](di-2-zhang-an-zhuang-freebsd/di-2.9-end-jie.md)
+* [第 2.10 节 故障排除](di-2-zhang-an-zhuang-freebsd/di-2.10-jie-eol.md)
 
 ## 第 3 章 FreeBSD 基础
 
-* [第 3.1 节 Linux 用户迁移指南](di-3-zhang-freebsd-base/di-3.1-jie-linux-yong-hu-qian-yi-zhi-bei.md)
-* [第 3.2 节 Windows 用户迁移指南](di-3-zhang-freebsd-base/di-3.2-unix.md)
+* [第 3.1 节 Windows 用户迁移指南](di-3-zhang-freebsd-base/di-3.1-windows.md)
+* [第 3.2 节 Linux 用户迁移指南](di-3-zhang-freebsd-base/di-3.2-jie-linux-yong-hu-qian-yi-zhi-bei.md)
 * [第 3.3 节 命令行基础](di-3-zhang-freebsd-base/di-3.3-jie-ming-ling-hang.md)
-* [第 3.4 节 用户和基本账户管理](di-3-zhang-freebsd-base/di-3.4-jie-zu.md)
-* [第 3.5 节 权限](di-3-zhang-freebsd-base/di-3.5-jie-yong-hu-quan-xian.md)
-* [第 3.6 节 sudo 与 doas](di-3-zhang-freebsd-base/di-3.6-jie-sudo.md)
-* [第 3.7 节 引导界面与虚拟控制台](di-3-zhang-freebsd-base/di-3.7-jie-yin-dao-jie-mian.md)
+* [第 3.4 节 文本编辑器](di-3-zhang-freebsd-base/di-3.4-jie-bian-ji-qi.md)
+* [第 3.5 节 用户和基本账户管理](di-3-zhang-freebsd-base/di-3.5-jie-zu.md)
+* [第 3.6 节 权限](di-3-zhang-freebsd-base/di-3.6-jie-quan-xian.md)
+* [第 3.7 节 sudo 与 doas](di-3-zhang-freebsd-base/di-3.7-jie-sudo.md)
+* [第 3.8 节 文件系统的挂载与卸载](di-3-zhang-freebsd-base/di-3.8-mount.md)
+* [第 3.9 节 磁盘结构](di-3-zhang-freebsd-base/di-3.9-disk.md)
+* [第 3.10 节 目录结构](di-3-zhang-freebsd-base/di-13.10-mu-lu.md)
 
 ## 第 4 章 包管理器与系统更新
 
@@ -124,13 +125,18 @@
 * [第 10.3 节 Podman](di-10-zhang-xu-ni-hua/di-10.3-Podman.md)
 * [第 10.4 节 在 FreeBSD 上安装 VirtualBox](di-10-zhang-xu-ni-hua/di-10.4-vitrualbox.md)
 
-## 第 11 章 计算机概论
+## 第 11 章 FreeBSD 安装实践
 
-* [第 11.1 节 存储卡参数简介与测试](di-11-zhang-ji-suan-ji-gai-lun/11.1-sd-card-can-shu-jian-shu.md)
-* [第 11.2 节 总线接口与协议](di-11-zhang-ji-suan-ji-gai-lun/11.2-zong-xian.md)
-* [第 11.3 节 网络基础](di-11-zhang-ji-suan-ji-gai-lun/11.3-wang-luo-ji-chu.md)
-* [第 11.4 节 操作系统](di-11-zhang-ji-suan-ji-gai-lun/11.4-cao-zuo-xi-tong.md)
-* [第 11.5 节 MySQL 数据库](di-11-zhang-ji-suan-ji-gai-lun/11.5-shu-jv-ku.md)
+* [第 11.1 节 安装 FreeBSD——基于 Hyper-V](di-11-zhang-freebsd-install-more/di-11.1-hyper-v-jie.md)
+* [第 11.2 节 安装 FreeBSD——基于 VMware Workstation Pro](di-11-zhang-freebsd-install-more/di-11.2-jie-an-zhuang-freebsd-ji-yu-vmware-workstation-pro.md)
+* [第 11.3 节 安装 FreeBSD——基于 Virtual Box](di-11-zhang-freebsd-install-more/di-11.3-jie-an-zhuang-freebsd-ji-yu-virtual-box.md)
+* [第 11.4 节 手动安装双系统（先安装 FreeBSD）](di-11-zhang-freebsd-install-more/di-11.4.md)
+* [第 11.5 节 手动安装双系统（后安装 FreeBSD）](di-11-zhang-freebsd-install-more/di-11.5-jie-shuang-xi-tong-an-zhuang.md)
+* [第 11.6 节 安装 FreeBSD——基于 Apple M1 & Parallels Desktop 20](di-11-zhang-freebsd-install-more/di-11.6-jie-apple.md)
+* [第 11.7 节 安装 FreeBSD——基于 Apple M1 & VMware Fusion Pro](di-11-zhang-freebsd-install-more/di-11.7-jie-apple.md)
+* [第 11.8 节 Qemu 安装 RISC-V FreeBSD（基于 x86 Windows）](di-11-zhang-freebsd-install-more/di-11.8-qemu.md)
+* [第 11.9 节 云服务器安装 FreeBSD（基于腾讯云轻量云）](di-11-zhang-freebsd-install-more/di-11.9-jie-teng-xun-yun-qing-liang-yun-ji-qi-ta-fu-wu-qi-dd-an-zhuang-freebsd.md)
+* [第 11.10 节 配置 rEFInd（双系统用）](di-11-zhang-freebsd-install-more/di-11.10-refind.md)
 
 ## 第 12 章 引导与故障恢复
 
@@ -139,12 +145,10 @@
 
 ## 第 13 章 FreeBSD 系统管理
 
-* [第 13.1 节 FreeBSD src 源码概览](di-13-zhang-freebsd-te-se/13.1.md)
-* [第 13.2 节 FreeBSD 系统概览](di-13-zhang-freebsd-te-se/13.2.md)
+* [第 13.1 节 引导界面与虚拟控制台](di-13-zhang-freebsd-te-se/di-13.1-jie-yin-dao-jie-mian.md)
+* [第 13.2 节 管理 FreeBSD 中的服务](di-13-zhang-freebsd-te-se/di-13.2-jie-bsd-init-guan-li-fu-wu.md)
 * [第 13.3 节 bsdconfig 系统配置工具](di-13-zhang-freebsd-te-se/di-13.3-jie-bsdinstall-yu-bsdconfig.md)
 * [第 13.4 节 SSH 配置与相关工具](di-13-zhang-freebsd-te-se/di-13.4-jie-chang-yong-ruan-jian-yu-ssh-pei-zhi.md)
-* [第 13.5 节 管理 FreeBSD 中的服务](di-13-zhang-freebsd-te-se/di-13.5-jie-bsd-init-guan-li-fu-wu.md)
-* [第 13.6 节 利用脚本自动生成 BSDlibc 库文本](di-13-zhang-freebsd-te-se/di-13.6-jie-li-yong-jiao-ben-zi-dong-sheng-cheng-bsdlibc-ku-wen-ben.md)
 
 ## 第 14 章 网络管理
 
@@ -246,6 +250,7 @@
 * [第 22.11 节 如何订阅 FreeBSD 的邮件列表](di-22-zhang-bian-cheng-yu-kai-fa/di-22.11-jie-ru-he-ding-yue-freebsd-de-you-jian-lie-biao.md)
 * [第 22.12 节 code-server 和 clangd](di-22-zhang-bian-cheng-yu-kai-fa/di-22.12-jie-an-zhuang-code-server-he-clangd.md)
 * [第 22.13 节 Node.js](di-22-zhang-bian-cheng-yu-kai-fa/di-22.13-jie-nodejs-xiang-guan.md)
+* [第 22.14 节 利用脚本自动生成 BSDlibc 库文本](di-22-zhang-bian-cheng-yu-kai-fa/di-22.14-jie-li-yong-jiao-ben-zi-dong-sheng-cheng-bsdlibc-ku-wen-ben.md)
 
 ## 第 23 章 存储管理与文件系统
 
@@ -285,7 +290,15 @@
 * [第 27.3 节 NetBSD 换源与包管理器](di-27-zhang-netbsd/di-27.3-jie-huan-yuan-yu-bao-guan-li-qi.md)
 * [第 27.4 节 桌面与中文环境常用软件](di-27-zhang-netbsd/di-27.4-jie-zhuo-mian-yu-qi-ta-ruan-jian.md)
 
-## 附录
+## 附录一
 
-* [参考书目](fu-lu/cankaoshu.md)
-* [术语表](fu-lu/shu-yu-biao.md)
+* [存储卡参数简介与测试](fulu1/sd-card-can-shu-jian-shu.md)
+* [总线接口与协议](fulu1/zong-xian.md)
+* [网络基础](fulu1/wang-luo-ji-chu.md)
+* [操作系统](fulu1/cao-zuo-xi-tong.md)
+* [MySQL 数据库](fulu1/shu-jv-ku.md)
+
+## 附录二
+
+* [参考书目](fu-lu2/cankaoshu.md)
+* [术语表](fu-lu2/shu-yu-biao.md)
