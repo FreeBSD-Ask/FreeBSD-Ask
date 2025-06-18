@@ -1,4 +1,4 @@
-# 适用于 FreeBSD 的以太网卡、USB 以太网卡和USB 无线网卡
+# 适用于 FreeBSD 的以太网卡、USB 以太网卡和 USB 无线网卡
 
 ## 以太网卡
 

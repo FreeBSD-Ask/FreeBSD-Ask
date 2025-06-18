@@ -1,4 +1,4 @@
-# FreeBSD 桌面发行版
+# FreeBSD 桌面发行版评述
 
 
 ## GhostBSD
