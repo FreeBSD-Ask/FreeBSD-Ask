@@ -1,7 +1,7 @@
 # 第 3.1 节 Windows 用户迁移指南
 
 
-## UNIX 与 Windows 文件名规范之差异
+## 文件名规范之差异
 
 ### 非法字符
 
@@ -57,7 +57,7 @@ abc	ABC
 
 - [调整区分大小写](https://learn.microsoft.com/zh-cn/windows/wsl/case-sensitivity)，Windows 文件系统支持使用属性标志按目录设置区分大小写
 
-## Windows 与 Unix 换行符/回车之差异
+## 换行符/回车之差异
 
 回车（Carriage Return，CR）和“换行”（Line Feed，LF）是不同的概念，均产生于电传打字机（真 TTY）时代。
 
@@ -88,7 +88,7 @@ $ file b.txt
 b.txt: Unicode text, UTF-8 text, with very long lines (314), with CRLF line terminators
 ```
 
-## Windows 与 Unix 字符编码的差异
+## 字符编码的差异
 
 由于计算机只识别 `0` 和 `1`，故字符编码是一种用于将字符转换为数字表示的规则体系。字符可以是屏幕上可见的文字，也可以是不可见的控制标记，如换行符（LF）、回车符（CR）等，涵盖文本中常见的元素，如数字、Emoji 表情符号、汉字、拉丁字母等。编码方式则是为这些字符分配唯一数字标识（通常是整数），即代码点（code point）的过程。
 
@@ -123,7 +123,7 @@ UTF-8
 
 - [Code pages](https://learn.microsoft.com/en-us/globalization/encoding/code-pages)，微软官方称，936 即是 GBK。
 
-## Windows 与 Unix 时间设置的差异
+## 时间与时区的差异
 
 中国统一使用一个时区，东八区，即 UTC+8，UTC（Coordinated Universal Time，协调世界时）时间几乎等同于 GMT（Greenwich Mean Time，格林尼治时间）。UTC 以国际原子时（temps atomique international，TAI）的秒长为基础（并不完全一致）：当铯（Cs）频率 ΔνCs，也就是铯 133 原子不受干扰的基态超精细跃迁频率，以单位 Hz 即 s-1 表示时，取其固定数值为 9 192 631 770 来定义秒——后续又对国际原子时进行了各种修正。
 
