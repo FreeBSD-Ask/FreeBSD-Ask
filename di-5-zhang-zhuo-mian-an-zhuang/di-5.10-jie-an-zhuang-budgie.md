@@ -1,4 +1,4 @@
-# 第 5.11 节 Budgie
+# 第 5.10 节 Budgie
 
 Budgie 是 Solus Linux 的默认桌面。
 

@@ -1,4 +1,4 @@
-# 第 5.13 节 CDE
+# 第 5.11 节 CDE
 
 CDE 是 Common Desktop Environment（通用桌面环境）的缩写。是一款历史悠久的桌面环境，常被用于 Unix 商业发行版。
 
