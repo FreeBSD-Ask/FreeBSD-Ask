@@ -304,14 +304,14 @@
 
 ## 附录 Ⅲ 文学故事
  
-* [小说：你与暗](fu-lu3/ni-yu-an.md)
 * [我与 FreeBSD 的故事](fu-lu3/freebsd.md)
+* [两次告别](fu-lu3/exit.md)
 * [小说：大教堂与集市](fu-lu3/xiao-shuo-freebsd-cong-ru-men-dao-pao-lu.md)
 * [小说：吾乡何处](fu-lu3/wu-xiang-he-chu.md)
-* [杂记](fu-lu3/za-ji.md)
+* [小说：你与暗](fu-lu3/ni-yu-an.md)
 * [诗歌选](fu-lu3/shi-ge-xuan.md)
-* [两次告别](fu-lu3/exit.md)
-
+* [杂记](fu-lu3/za-ji.md)
+  
 ## 附录 Ⅳ 参考资料与术语表
 
 * [参考书目](fu-lu4/cankaoshu.md)
