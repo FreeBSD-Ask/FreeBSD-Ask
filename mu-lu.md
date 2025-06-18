@@ -1,14 +1,19 @@
-# 目录
+# Table of contents
 
 * [FreeBSD 从入门到追忆（第三版：草稿）](README.md)
 * [编辑日志](CHANGELOG.md)
 * [贡献指南与开放任务](CONTRIBUTING.md)
 * [目录](mu-lu.md)
-* [初版序言：好望角与塔吊](xu-yan-1.md)
-* [再版序言：回到复制粘贴，面向教程本身](xu-ya-2.md)
-* [三版序言：且有大觉而后知此其大梦也（草稿）](xu-yan-3.md)
-* [致谢](zhi-xie.md)
-* [前言](qian-yan.md)
+
+## 前言
+
+* [致读者](qian-yan/zhi-du-zhe.md)
+* [初版序言：好望角与塔吊](qian-yan/xu-yan-1.md)
+* [再版序言：回到复制粘贴，面向教程本身](qian-yan/xu-yan-2.md)
+* [三版序言：且有大觉而后知此其大梦也（草稿）](qian-yan/xu-yan-3.md)
+* [本书的组织结构](qian-yan/zu-zhi-jie-gou.md)
+* [本书中使用的一些约定](qian-yan/yue-ding.md)
+* [致谢](qian-yan/zhi-xie.md)
 
 ## 第 1 章 FreeBSD 初见
 
