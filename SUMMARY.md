@@ -8,12 +8,12 @@
 ## 前言
 
 * [致读者](qian-yan/zhi-du-zhe.md)
+* [致谢](qian-yan/zhi-xie.md)
 * [初版序言：好望角与塔吊](qian-yan/xu-yan-1.md)
 * [再版序言：回到复制粘贴，面向教程本身](qian-yan/xu-yan-2.md)
 * [三版序言：且有大觉而后知此其大梦也（草稿）](qian-yan/xu-yan-3.md)
 * [本书的组织结构](qian-yan/zu-zhi-jie-gou.md)
 * [本书中使用的一些约定](qian-yan/yue-ding.md)
-* [致谢](qian-yan/zhi-xie.md)
 
 ## 第 1 章 FreeBSD 初见
 
