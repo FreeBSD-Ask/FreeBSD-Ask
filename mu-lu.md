@@ -186,17 +186,14 @@
 * [第 17.1 节 Apache](di-17-zhang-wang-luo-fu-wu-qi/di-17.1-jie-apache.md)
 * [第 17.2 节 Nginx](di-17-zhang-wang-luo-fu-wu-qi/di-17.2-jie-nginx.md)
 * [第 17.3 节 PHP 8.X](di-17-zhang-wang-luo-fu-wu-qi/di-17.3-jie-php-8.x.md)
-
-* [第 17.6 节 NextCloud——基于 PostgreSQL](di-17-zhang-wang-luo-fu-wu-qi/di-17.6-jie-NextCloud.md)
-* [第 17.7 节 Telegraf+InfluxDB+Grafana 监控平台](di-17-zhang-wang-luo-fu-wu-qi/di-17.7-jie-telegraf+influxdb+grafana-jian-kong-ping-tai.md)
-
-* [第 17.9 节 AList](di-17-zhang-wang-luo-fu-wu-qi/di-17.9-alist.md)
-* [第 17.10 节 prometheus 监控部署](di-17-zhang-wang-luo-fu-wu-qi/17.10.prometheus.md)
-
-* [第 17.12 节 Tomcat](di-17-zhang-wang-luo-fu-wu-qi/17.12-Tomcat.md)
-* [第 17.13 节 Caddy](di-17-zhang-wang-luo-fu-wu-qi/17.13-caddy.md)
-* [第 17.14 节 OnlyOffice（基于 PostgreSQL）](di-17-zhang-wang-luo-fu-wu-qi/17.14.md)
-* [第 17.15 节 Zabbix 监控（基于 PostgreSQL）](di-17-zhang-wang-luo-fu-wu-qi/17.15-Zabbix.md)
+* [第 17.5 节 NextCloud——基于 PostgreSQL](di-17-zhang-wang-luo-fu-wu-qi/di-17.5-jie-NextCloud.md)
+* [第 17.6 节 Telegraf+InfluxDB+Grafana 监控平台](di-17-zhang-wang-luo-fu-wu-qi/di-17.6-jie-telegraf+influxdb+grafana-jian-kong-ping-tai.md)
+* [第 17.7 节 AList](di-17-zhang-wang-luo-fu-wu-qi/di-17.7-alist.md)
+* [第 17.8 节 prometheus 监控部署](di-17-zhang-wang-luo-fu-wu-qi/17.8.prometheus.md)
+* [第 17.9 节 Tomcat](di-17-zhang-wang-luo-fu-wu-qi/17.9-Tomcat.md)
+* [第 17.10 节 Caddy](di-17-zhang-wang-luo-fu-wu-qi/17.10-caddy.md)
+* [第 17.11 节 OnlyOffice（基于 PostgreSQL）](di-17-zhang-wang-luo-fu-wu-qi/17.11-onlyoffice.md)
+* [第 17.12 节 Zabbix 监控（基于 PostgreSQL）](di-17-zhang-wang-luo-fu-wu-qi/17.12-Zabbix.md)
 
 ## 第 18 章 嵌入式
 
