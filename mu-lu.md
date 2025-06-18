@@ -1,4 +1,4 @@
-# 目录
+# Table of contents
 
 * [FreeBSD 从入门到追忆（第三版：草稿）](README.md)
 * [编辑日志](CHANGELOG.md)
@@ -64,8 +64,8 @@
 
 ## 第 5 章 桌面环境
 
-* [第 5.1 节 显卡驱动（Intel、AMD）](di-5-zhang-zhuo-mian-an-zhuang/di-5.1-jie-an-zhuang-xian-ka-qu-dong-ji-xorg-bi-kan.md)
-* [第 5.2 节 显卡驱动（NVIDIA）](di-5-zhang-zhuo-mian-an-zhuang/di-5.2-NVIDIA.md)
+* [第 5.1 节 Intel 与 AMD 显卡驱动](di-5-zhang-zhuo-mian-an-zhuang/di-5.1-jie-an-zhuang-xian-ka-qu-dong-ji-xorg-bi-kan.md)
+* [第 5.2 节 NVIDIA 显卡驱动](di-5-zhang-zhuo-mian-an-zhuang/di-5.2-NVIDIA.md)
 * [第 5.3 节 KDE6](di-5-zhang-zhuo-mian-an-zhuang/di-5.3-jie-an-zhuang-kde.md)
 * [第 5.4 节 GNOME](di-5-zhang-zhuo-mian-an-zhuang/di-5.4-jie-an-zhuang-gnome.md)
 * [第 5.5 节 Mate](di-5-zhang-zhuo-mian-an-zhuang/di-5.5-jie-an-zhuang-mate.md)
