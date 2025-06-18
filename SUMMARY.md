@@ -26,7 +26,7 @@
 ## 第 2 章 安装 FreeBSD
 
 * [第 2.1 节 安装前的准备工作](di-2-zhang-an-zhuang-freebsd/di-2.1-install-pre.md)
-* [第 2.2 节 开始安装](di-2-zhang-an-zhuang-freebsd/di-2.2-jie-start-install.md)
+* [第 2.2 节 使用 bsdinstall 开始安装](di-2-zhang-an-zhuang-freebsd/di-2.2-jie-start-install.md)
 * [第 2.3 节 键盘布局和主机名](di-2-zhang-an-zhuang-freebsd/di-2.3-jie-use-bsdinstall.md)
 * [第 2.4 节 选择安装组件](di-2-zhang-an-zhuang-freebsd/di-2.4-jie-select.md)
 * [第 2.5 节 分配磁盘空间](di-2-zhang-an-zhuang-freebsd/di-2.5-jie-fen-pei-disk.md)
@@ -160,8 +160,7 @@
 * [第 14.1 节 设置网络](di-14-zhang-wang-luo-guan-li/di-14.1-jie-wang-luo-can-shu-pei-zhi-ming-ling.md)
 * [第 14.2 节 无线网络](di-14-zhang-wang-luo-guan-li/di-14.2-jie-wifi.md)
 * [第 14.3 节 USB 网络共享（USB tethering）](di-14-zhang-wang-luo-guan-li/di-14.3-jie-usb-rndis-usb-wang-luo-gong-xiang.md)
-* [第 14.4 节 网卡](di-14-zhang-wang-luo-guan-li/di-14.4-yi-tai-wang-ka.md)
-* [第 14.5 节 TCP 堆栈](di-14-zhang-wang-luo-guan-li/di-14.5-jie-tcp-bbr.md)
+* [第 14.4 节 TCP 堆栈](di-14-zhang-wang-luo-guan-li/di-14.4-jie-tcp-bbr.md)
 
 ## 第 15 章 FreeBSD 防火墙
 
@@ -304,6 +303,7 @@
 
 ## 附录二 参考资料
 
+* [适用于 FreeBSD 的以太网卡、USB 以太网卡和USB 无线网卡](fu-lu2/yi-tai-wang-ka.md)
 * [FreeBSD 桌面发行版](fu-lu2/others-bsd.md)
 * [参考书目](fu-lu2/cankaoshu.md)
 * [术语表](fu-lu2/shu-yu-biao.md)
