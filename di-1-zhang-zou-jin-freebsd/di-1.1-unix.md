@@ -103,13 +103,6 @@ Multics 意图创造强悍的新软件和比肩 IBM 7094 功能更丰富的新�
 
 新的 PDP-7 操作系统编写没多时，Thompson 和几个同事讨论，当时新系统还没有名字，当时它被命名为“UnICS”（Uniplexed Information and Computing Service，非复用信息和计算机服务），UnICS 最后改名为 **UNIX**，这个名字更加方便记忆。
 
-
-## 什么是 Unix-like？
-
-Unix-like 即类 Unix，亦即一切符合 UNIX 标准的操作系统，基本遵守 POSIX 规范，而没有获得第一节中所说的 UNIX 的认证。
-
-也就是说，除了 Windows，基本上世界上大多数操作系统都被叫做 Unix-like，其中就包括 Linux 和 FreeBSD。
-
 ## GNU 与自由软件运动
 
 由于 Unix 在后期愈发封闭，许可证昂贵、受限制于商业公司等原因，RMS（Richard Matthew Stallman）就想创造一款自由且兼容 Unix 的操作系统。
@@ -232,4 +225,8 @@ GNU's Not Unix，从 GNU 这个名字（GNU 不是 UNIX）你也能看出来 Lin
 >
 > 上述操作较为复杂，需要一定的经验与基础知识。
 
+## 什么是 Unix-like？
 
+Unix-like 即类 Unix，亦即一切符合 UNIX 标准的操作系统，基本遵守 POSIX 规范，而未获得第一节中所说的 UNIX 的认证。
+
+也就是说，除了 Windows，基本上世界上大多数操作系统都被叫做 Unix-like，其中就包括 Linux 和 FreeBSD。
