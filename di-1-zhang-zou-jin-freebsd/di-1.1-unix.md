@@ -1,4 +1,4 @@
-# 第 1.1 节 操作系统的历程：UNIX、BSD、Linux 与 FreeBSD 的起源
+# 第 1.1 节 操作系统的历程：UNIX、BSD、Linux
 
 ## 什么是 UNIX？
 
