@@ -15,8 +15,8 @@
 * [第 1.1 节 操作系统的历程：UNIX、BSD、Linux](di-1-zhang-zou-jin-freebsd/di-1.1-unix.md)
 * [第 1.2 节 欢迎来到 FreeBSD](di-1-zhang-zou-jin-freebsd/di-1.2-who-using-bsd.md)
 * [第 1.3 节 关于 FreeBSD 项目](di-1-zhang-zou-jin-freebsd/1.3-about-bsd.md)
-* [第 1.4 节 BSD 许可证概览](di-1-zhang-zou-jin-freebsd/1.4-xukez.md)
-* [第 1.5 节 FreeBSD 桌面发行版](di-1-zhang-zou-jin-freebsd/1.5-others-bsd.md)
+* [第 1.4 节 BSD 与哲学家 George Berkeley（乔治·贝克莱）](di-1-zhang-zou-jin-freebsd/di-1.4-jie-freebsd-jian-shi.md)
+* [第 1.5 节 加州大学伯克利分校与“Fiat Lux”（要有光）](di-1-zhang-zou-jin-freebsd/di-1.5.md)
 
 ## 第 2 章 安装 FreeBSD
 
@@ -205,8 +205,6 @@
 
 ## 第 19 章 文学故事
 
-* [第 19.1 节 BSD 与哲学家 George Berkeley（乔治·贝克莱）](di-19-zhang-wen-xue-gu-shi/di-19.1-jie-freebsd-jian-shi.md)
-* [第 19.2 节 加州大学伯克利分校与“Fiat Lux”（要有光）](di-19-zhang-wen-xue-gu-shi/di-19.2.md)
 * [第 19.3 节 小说：你与暗](di-19-zhang-wen-xue-gu-shi/19.3-ni-yu-an.md)
 * [第 19.4 节 我与 FreeBSD 的故事](di-19-zhang-wen-xue-gu-shi/19.4-freebsd.md)
 * [第 19.5 节 小说：大教堂与集市](di-19-zhang-wen-xue-gu-shi/di-19.5-jie-xiao-shuo-freebsd-cong-ru-men-dao-pao-lu.md)
@@ -297,8 +295,10 @@
 * [网络基础](fulu1/wang-luo-ji-chu.md)
 * [操作系统](fulu1/cao-zuo-xi-tong.md)
 * [MySQL 数据库](fulu1/shu-jv-ku.md)
+* [BSD 许可证概览](fulu1/xukez.md)
 
 ## 附录二 参考资料
 
+* [FreeBSD 桌面发行版](fu-lu2/others-bsd.md)
 * [参考书目](fu-lu2/cankaoshu.md)
 * [术语表](fu-lu2/shu-yu-biao.md)
