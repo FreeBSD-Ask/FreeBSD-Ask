@@ -216,7 +216,7 @@
 * [第 20.2 节 我的世界（Minecraft）](di-20-zhang-yu-le-yu-jiao-yu/20.2-minecraft.md)
 * [第 20.3 节 科研与专业工具](di-20-zhang-yu-le-yu-jiao-yu/di-20.3-jie-ke-yan-yu-zhuan-ye-gong-ju.md)
 
-## 第 21 章 Linux 兼容层
+## 第 21 章 Linux 二进制兼容层
 
 * [第 21.1 节 Linux 兼容层实现](di-21-zhang-linux-jian-rong-ceng/di-21.1-jie-linux-jian-rong-ceng-shi-xian.md)
 * [第 21.2 节 RockyLinux 兼容层（FreeBSD Port）](di-21-zhang-linux-jian-rong-ceng/di-21.2-jie-rocky9-jian-rong-ceng.md)
