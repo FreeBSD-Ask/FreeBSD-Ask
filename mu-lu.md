@@ -1,4 +1,4 @@
-# 目录
+# Table of contents
 
 * [FreeBSD 从入门到追忆（第三版：草稿）](README.md)
 * [编辑日志](CHANGELOG.md)
@@ -288,28 +288,31 @@
 * [第 27.3 节 NetBSD 换源与包管理器](di-27-zhang-netbsd/di-27.3-jie-huan-yuan-yu-bao-guan-li-qi.md)
 * [第 27.4 节 桌面与中文环境常用软件](di-27-zhang-netbsd/di-27.4-jie-zhuo-mian-yu-qi-ta-ruan-jian.md)
 
-## 附录一 计算机概论
+## 附录 Ⅰ 计算机概论
 
 * [存储卡参数简介与测试](fulu1/sd-card-can-shu-jian-shu.md)
 * [总线接口与协议](fulu1/zong-xian.md)
 * [网络基础](fulu1/wang-luo-ji-chu.md)
 * [操作系统](fulu1/cao-zuo-xi-tong.md)
 * [MySQL 数据库](fulu1/shu-jv-ku.md)
-* [BSD 许可证概览](fulu1/xukez.md)
 
-## 附录二 文学故事
+## 附录 Ⅱ 实用资源
 
-* [小说：你与暗](fu-lu2/ni-yu-an.md)
-* [我与 FreeBSD 的故事](fu-lu2/freebsd.md)
-* [小说：大教堂与集市](fu-lu2/xiao-shuo-freebsd-cong-ru-men-dao-pao-lu.md)
-* [小说：吾乡何处](fu-lu2/wu-xiang-he-chu.md)
-* [杂记](fu-lu2/jie-za-ji.md)
-* [诗歌选](fu-lu2/shi-ge-xuan.md)
-* [两次告别](fu-lu2/exit.md)
-
-## 附录三 参考资料与术语表
-
+* [BSD 许可证概览](fulu2/xukez.md)
 * [适用于 FreeBSD 的以太网卡、USB 以太网卡和 USB 无线网卡](fu-lu3/yi-tai-wang-ka.md)
 * [FreeBSD 桌面发行版评述](fu-lu3/others-bsd.md)
-* [参考书目](fu-lu3/cankaoshu.md)
-* [术语表](fu-lu3/shu-yu-biao.md)
+
+## 附录 Ⅲ 文学故事
+ 
+* [小说：你与暗](fu-lu3/ni-yu-an.md)
+* [我与 FreeBSD 的故事](fu-lu3/freebsd.md)
+* [小说：大教堂与集市](fu-lu3/xiao-shuo-freebsd-cong-ru-men-dao-pao-lu.md)
+* [小说：吾乡何处](fu-lu3/wu-xiang-he-chu.md)
+* [杂记](fu-lu3/za-ji.md)
+* [诗歌选](fu-lu3/shi-ge-xuan.md)
+* [两次告别](fu-lu3/exit.md)
+
+## 附录 Ⅳ 参考资料与术语表
+
+* [参考书目](fu-lu4/cankaoshu.md)
+* [术语表](fu-lu4/shu-yu-biao.md)
