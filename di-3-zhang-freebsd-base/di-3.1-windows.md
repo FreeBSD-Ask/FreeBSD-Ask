@@ -1,4 +1,4 @@
-# 第 3.2 节 Windows 用户迁移指南
+# 第 3.1 节 Windows 用户迁移指南
 
 
 ## UNIX 与 Windows 文件名规范之差异
