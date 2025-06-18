@@ -35,7 +35,7 @@
 
 ## 第 3 章 FreeBSD 基础
 
-* [第 3.1 节 Windows 用户迁移指南](di-3-zhang-freebsd-base/di-3.1-unix.md)
+* [第 3.1 节 Windows 用户迁移指南](di-3-zhang-freebsd-base/di-3.1-windows.md)
 * [第 3.2 节 Linux 用户迁移指南](di-3-zhang-freebsd-base/di-3.2-jie-linux-yong-hu-qian-yi-zhi-bei.md)
 * [第 3.3 节 命令行基础](di-3-zhang-freebsd-base/di-3.3-jie-ming-ling-hang.md)
 * [第 3.4 节 文本编辑器](di-3-zhang-freebsd-base/di-3.4-jie-bian-ji-qi.md)
@@ -44,7 +44,7 @@
 * [第 3.7 节 sudo 与 doas](di-3-zhang-freebsd-base/di-3.7-jie-sudo.md)
 * [第 3.8 节 文件系统的挂载与卸载](di-3-zhang-freebsd-base/di-3.8-mount.md)
 * [第 3.9 节 磁盘结构](di-3-zhang-freebsd-base/di-3.9-disk.md)
-* [第 3.10 节 目录结构](di-3-zhang-freebsd-base/13.10-mu-lu.md)
+* [第 3.10 节 目录结构](di-3-zhang-freebsd-base/di-13.10-mu-lu.md)
 
 ## 第 4 章 包管理器与系统更新
 
