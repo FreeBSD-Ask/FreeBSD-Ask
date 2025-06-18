@@ -80,7 +80,7 @@
 * [第 5.14 节 远程桌面](di-5-zhang-zhuo-mian-an-zhuang/di-5.14-jie-yuan-cheng-zhuo-mian-guan-li.md)
 * [第 5.15 节 解除 root 登录限制](di-5-zhang-zhuo-mian-an-zhuang/di-5.15-jie-root-deng-lu-zhuo-mian.md)
 
-## 第 6 章 中文本地化——i18n/L10n
+## 第 6 章 本地化——i18n/L10n
 
 * [第 6.1 节 本地化环境变量](di-6-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-6.1-jie-shu-ru-fa-yu-huan-jing-bian-liang.md)
 * [第 6.2 节 Fcitx 输入法框架](di-6-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-6.2-jie-fcitx-shu-ru-fa-kuang-jia.md)
