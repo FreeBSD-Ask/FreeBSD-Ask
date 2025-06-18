@@ -35,13 +35,16 @@
 
 ## 第 3 章 FreeBSD 基础
 
-* [第 3.1 节 Linux 用户迁移指南](di-3-zhang-freebsd-base/di-3.1-jie-linux-yong-hu-qian-yi-zhi-bei.md)
-* [第 3.2 节 Windows 用户迁移指南](di-3-zhang-freebsd-base/di-3.2-unix.md)
+* [第 3.1 节 Windows 用户迁移指南](di-3-zhang-freebsd-base/di-3.1-unix.md)
+* [第 3.2 节 Linux 用户迁移指南](di-3-zhang-freebsd-base/di-3.2-jie-linux-yong-hu-qian-yi-zhi-bei.md)
 * [第 3.3 节 命令行基础](di-3-zhang-freebsd-base/di-3.3-jie-ming-ling-hang.md)
-* [第 3.4 节 用户和基本账户管理](di-3-zhang-freebsd-base/di-3.4-jie-zu.md)
-* [第 3.5 节 权限](di-3-zhang-freebsd-base/di-3.5-jie-yong-hu-quan-xian.md)
-* [第 3.6 节 sudo 与 doas](di-3-zhang-freebsd-base/di-3.6-jie-sudo.md)
-* [第 3.7 节 引导界面与虚拟控制台](di-3-zhang-freebsd-base/di-3.7-jie-yin-dao-jie-mian.md)
+* [第 3.4 节 文本编辑器](di-3-zhang-freebsd-base/di-3.4-jie-bian-ji-qi.md)
+* [第 3.5 节 用户和基本账户管理](di-3-zhang-freebsd-base/di-3.5-jie-zu.md)
+* [第 3.6 节 权限](di-3-zhang-freebsd-base/di-3.6-jie-quan-xian.md)
+* [第 3.7 节 sudo 与 doas](di-3-zhang-freebsd-base/di-3.7-jie-sudo.md)
+* [第 3.8 节 文件系统的挂载与卸载](di-3-zhang-freebsd-base/di-3.8-mount.md)
+* [第 3.9 节 磁盘结构](di-3-zhang-freebsd-base/di-3.9-disk.md)
+* [第 3.10 节 目录结构](di-3-zhang-freebsd-base/13.10-mu-lu.md)
 
 ## 第 4 章 包管理器与系统更新
 
@@ -139,12 +142,10 @@
 
 ## 第 13 章 FreeBSD 系统管理
 
-* [第 13.1 节 FreeBSD src 源码概览](di-13-zhang-freebsd-te-se/13.1.md)
-* [第 13.2 节 FreeBSD 系统概览](di-13-zhang-freebsd-te-se/13.2.md)
+* [第 13.1 节 引导界面与虚拟控制台](di-13-zhang-freebsd-te-se/di-13.1-jie-yin-dao-jie-mian.md)
+* [第 13.2 节 管理 FreeBSD 中的服务](di-13-zhang-freebsd-te-se/di-13.2-jie-bsd-init-guan-li-fu-wu.md)
 * [第 13.3 节 bsdconfig 系统配置工具](di-13-zhang-freebsd-te-se/di-13.3-jie-bsdinstall-yu-bsdconfig.md)
 * [第 13.4 节 SSH 配置与相关工具](di-13-zhang-freebsd-te-se/di-13.4-jie-chang-yong-ruan-jian-yu-ssh-pei-zhi.md)
-* [第 13.5 节 管理 FreeBSD 中的服务](di-13-zhang-freebsd-te-se/di-13.5-jie-bsd-init-guan-li-fu-wu.md)
-* [第 13.6 节 利用脚本自动生成 BSDlibc 库文本](di-13-zhang-freebsd-te-se/di-13.6-jie-li-yong-jiao-ben-zi-dong-sheng-cheng-bsdlibc-ku-wen-ben.md)
 
 ## 第 14 章 网络管理
 
@@ -246,6 +247,7 @@
 * [第 22.11 节 如何订阅 FreeBSD 的邮件列表](di-22-zhang-bian-cheng-yu-kai-fa/di-22.11-jie-ru-he-ding-yue-freebsd-de-you-jian-lie-biao.md)
 * [第 22.12 节 code-server 和 clangd](di-22-zhang-bian-cheng-yu-kai-fa/di-22.12-jie-an-zhuang-code-server-he-clangd.md)
 * [第 22.13 节 Node.js](di-22-zhang-bian-cheng-yu-kai-fa/di-22.13-jie-nodejs-xiang-guan.md)
+* [第 22.14 节 利用脚本自动生成 BSDlibc 库文本](di-22-zhang-bian-cheng-yu-kai-fa/di-22.14-jie-li-yong-jiao-ben-zi-dong-sheng-cheng-bsdlibc-ku-wen-ben.md)
 
 ## 第 23 章 存储管理与文件系统
 
