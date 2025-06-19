@@ -252,7 +252,7 @@
 ## 第 23 章 存储管理与文件系统
 
 * [第 23.1 节 自动挂载文件系统](di-23-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-23.1-zi-dong-gua-zai.md)
-* [第 23.2 节 ZFS](di-23-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-23.2-jie-zfs.md)
+* [第 23.2 节 ZFS 文件系统](di-23-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-23.2-jie-zfs.md)
 * [第 23.3 节 磁盘扩容与分区调整](di-23-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-23.3-jie-ci-pan-kuo-rong.md)
 * [第 23.4 节 Windows 文件系统](di-23-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-23.4-jie-ntfs-de-gua-zai.md)
 * [第 23.5 节 Swap 交换分区的设置](di-23-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-23.5-jie-swap-jiao-huan-fen-qu-de-she-zhi.md)
