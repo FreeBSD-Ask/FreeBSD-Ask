@@ -82,14 +82,14 @@ CentOS、Debian 只是 **在生命周期内不变** 罢了，但是大版本更�
 
 ### 选择 FreeBSD 的一般原因
 
-- **从道家来讲，你爱用不用，不用拉倒。太长不看？那就此止步，其他条目都不必看了。**
+- 从道家来讲，你爱用不用，不用也无妨。
 - 从佛法来说，因为缘分。万物缘起性空，我们有缘相聚，又会者定离。万般诸相皆如此。
 - 从基督教来讲，这是主的指引。上帝在永恒的现在中创世。就像出埃及记一样，你看上去是自己的选择，实际上都是主的安排。
 - 从黑格尔来讲，是因为辩证否定。FreeBSD 是 UNIX 直接后裔，而 Linux 仅仅是款仿制品，而很多协议又脱胎于 UNIX，所以你注定了要来到这里。
-- 按照我个人观点而言，追求软件的稳定和新，既要有二进制源，又要能编译安装。除了 FreeBSD 之外我找不到 Linux 系统。（~~VoidLinux？~~）
-- BSD 授权协议：允许自由分发。GPL 与 BSD 协议，究竟何者是真正的自由？GPL 最多只是通过限制自由来确保他所谓的自由罢了。
+- 追求软件的稳定和新，既要有二进制源，又要能编译安装。除了 FreeBSD 之外难以找到这样的 Linux 系统。（~~VoidLinux 还是算了吧~~）
+- 在 GPL 与 BSD 许可的抉择中，BSD 赋予你更纯粹的自由：不以限制自由来保障自由，而是以信任与开放成就自由。
 - FreeBSD 是学院派的工程实践成果，更是 UNIX 哲学的现代延续者。
-- 远离碎片化的 Linux 发行版，使得选择困难症用户免受痛苦。
+- 当 Linux 生态愈发碎片化，FreeBSD 的一体化设计避免了无休止的选择困难——但这并非限制，如果你喜欢，很轻松就能对其进行修改。
 - BSD 是一款完整的操作系统，而不是内核。内核和基本系统作为一个项目来整体维护。而 Linux 世界没有基本系统的概念，这带来无尽的混乱与违反直觉的行为。
 - 就连 Linus 也曾感叹，Linux 社区早已陷入纷争与泥淖之中。内核开发之路，从未真正纯净。
 - 教育与研究：FreeBSD 项目将内核与用户空间融入一个存储库之中，极大地便利了各种人群对其进行研究和学习，并且注释清晰丰富。你可以轻易地找到某某功能究竟是如何实现的。
@@ -97,20 +97,20 @@ CentOS、Debian 只是 **在生命周期内不变** 罢了，但是大版本更�
 ### 选择 FreeBSD 的技术性原因
 
 - 基本系统的配置文件与第三方软件配置文件相分离。你不会遇到像在 RHEL 中使用 rpm 命令卸载 glibc 导致系统毁灭这种奇葩的事情（无独有偶，有时候 yum 的错误操作会卸载包括使用中的所有内核），FreeBSD 的包管理器不干涉基本系统。
-- 不会锁死软件版本，比如 Python GCC 等 Linux 中系统依赖的软件。所有软件都会滚动更新。这些非滚动版本的 linux 的软件版本基本上在该版本上锁死的，不会得到任何功能版本更新。滚动版本的又有一堆稳定性问题。BSD 所有版本共用一个 ports，只有极小一部分软件和系统版本硬捆绑，其他都是可以滚动更新的。而且由于基本系统的存在，第三方的软件几乎不影响系统的稳定性。Linux 则无法在软件更新和系统稳定之间找到平衡点。
-- 在 FreeBSD，文档不再是附属品。FreeBSD doc 与 src 是同等地位的，不分高下。
+- 不会锁定软件版本，比如 Python GCC 等 Linux 中系统依赖的软件。所有软件都会滚动更新。这些非滚动版本的 linux 的软件版本基本上在该版本上锁死的，不会得到任何功能版本更新。滚动版本的又有一堆稳定性问题。BSD 所有版本共用一个 ports，只有极小一部分软件和系统版本硬捆绑，其他都是可以滚动更新的。而且由于基本系统的存在，第三方的软件几乎不影响系统的稳定性。GNU/Linux 则无法在软件更新和系统稳定之间找到平衡点。
+- 在 FreeBSD，文档不再是附属品。FreeBSD doc 项目与 src 项目是同等地位的，不分高下。
 - 安全漏洞相比于 Linux 较少。
 - 可以避免在产品和架构中出现共同故障点。
 - 接近 2 年的版本发布周期，4 年的维护周期赋予了 FreeBSD 稳定性。
 - 通过 BSD 的 Ports 可以编译安装软件，进行自由配置。
 - ZFS 文件系统可以被配置为 `\` 分区。ZFS 被誉为最强大的文件系统。
-- Jail 与 byhve 虚拟化，不必配置底层虚拟化，节约系统资源。
-- 传统的 BSD INIT 引导，使你免受 systemd 迫害。
+- Jail 与 byhve 虚拟化，不需要额外安装和维护底层虚拟化堆栈。也不需要为每个实例启动完整的操作系统内核和用户空间，节约系统资源。
+- 传统的 BSD INIT 引导，回归简单，回归文本。
 - DTrace 框架与 GEOM 存储框架。
 - Linux 二进制兼容层，可运行 Linux 软件，只要其支持 CentOS 或 Ubuntu/Debian。且软件运行速度快于 Linux。
 - 安全事件审计。
 - 不同于 Linux 驱动捆绑内核的做法，FreeBSD 的驱动在大致上与内核解耦合。
-- Linux 内核开发是一个[相当封闭的过程](https://www.kernel.org/doc/html/latest/process/submitting-patches.html)，只有少数人能够参与直接提交代码。而 FreeBSD 秉持人人自由开发的理念，目前[你可以直接在 Github 上提交你的代码](https://github.com/freebsd/freebsd-src/pulls)，或者注册个账号在 <https://reviews.freebsd.org/> 进行大规模变更。
+- Linux 内核开发是个[相当封闭的过程](https://www.kernel.org/doc/html/latest/process/submitting-patches.html)，只有少数人能够参与直接提交代码。而 FreeBSD 秉持人人自由开发的理念，目前[你可以直接在 Github 上提交你的代码](https://github.com/freebsd/freebsd-src/pulls)，或者注册个账号在 <https://reviews.freebsd.org/> 进行大规模变更。
 - 另请参见 [Linux 内核编码风格](https://www.kernel.org/doc/html/latest/process/coding-style.html)。而 FreeBSD 的代码风格是 Kernighan & Ritchie 的《C 程序设计语言》中使用的风格。
 - 由于 Ports 的存在，FreeBSD 的老系统的软件源仍然可以正常使用，而不像 Linux 那样一旦 EoL 就没有软件源可用了。
 
@@ -124,7 +124,7 @@ CentOS、Debian 只是 **在生命周期内不变** 罢了，但是大版本更�
 
 #### GNU 与自由软件运动已走到了尽头
 
-Linux 用户空间已经完全由商业公司控制，仔细查查，就不难发现 GNOME、Systemd、PulseAudio、Wayland、PipeWire 其实都是由红帽公司（Red Hat）实际控制和施加影响的。这就是 Linux 引以为豪的商业策略。这也是为什么 RHEL 拼命排挤 KDE 的原因。
+Linux 用户空间乃至内核开发都已经完全由商业公司控制，仔细查查，就不难发现 GNOME、Systemd、PulseAudio、Wayland、PipeWire 这些目前主流的 Linux 项目其实都是由红帽公司（Red Hat）实际控制和施加影响的。这就是 Linux 引以为豪的商业策略。这也是为什么 RHEL 拼命排挤 KDE 的原因。
 
 - Linux Kernel 由 Linus 一人裁决：“[Linus Torvalds 是决定改动能否进入 Linux 内核的最终裁决者。](https://www.kernel.org/doc/html/latest/translations/zh_CN/process/submitting-patches.html)”而 FreeBSD 最终由两年一届的核心团队集体决策。
 
