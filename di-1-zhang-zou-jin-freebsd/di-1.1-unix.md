@@ -110,7 +110,7 @@ Multics 意图创造强悍的新软件和比肩 IBM 7094 功能更丰富的新�
 - 1983 年，RMS 发表[《GNU 宣言》](https://www.gnu.org/gnu/manifesto.html)，其中 GNU 即 GNU is Not Unix（GNU 不是 Unix）。GNU 是一款操作系统——旨在完全替代 Unix。
 - 1984 年，创建 [GNU 项目](https://www.gnu.org/)
 - 1985 年，RMS 创建自由软件基金会（Free Software Foundation，FSF）
-- 1989 年，FSF 发布 GPLv1 
+- 1989 年，FSF 发布 GPLv1
 - 1991 年，FSF 发布 GPLv2
 - 2007 年，FSF 发布 GPLv3
 

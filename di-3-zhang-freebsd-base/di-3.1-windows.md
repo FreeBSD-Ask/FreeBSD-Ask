@@ -100,7 +100,7 @@ b.txt: Unicode text, UTF-8 text, with very long lines (314), with CRLF line term
 
  Windows 默认使用 GBK（如系统语言是简体中文，是 GB2312 的超集），而 Linux 或 UNIX 则使用 UTF-8。
 
- - Windows 11 24H2
+- Windows 11 24H2
 
 ```powershell
 PS C:\Users\ykla> chcp

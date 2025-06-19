@@ -301,7 +301,7 @@
 * [FreeBSD 桌面发行版评述](fu-lu2/others-bsd.md)
 
 ## 附录 Ⅲ 文学故事
- 
+
 * [我与 FreeBSD 的故事](fu-lu3/freebsd.md)
 * [两次告别](fu-lu3/exit.md)
 * [小说：大教堂与集市](fu-lu3/xiao-shuo-freebsd-cong-ru-men-dao-pao-lu.md)
