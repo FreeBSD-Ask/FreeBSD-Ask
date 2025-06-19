@@ -57,62 +57,52 @@ BSD 操作系统并非复制品，而是 AT&T 研究 UNIX（Research Unix）操�
 >
 >你如何理解 FreeBSD 与 Unix 的关系？
 
-
 ## 为什么选择 FreeBSD
 
 ### 一句话原因——FreeBSD 能在这流变的世界中寻求理想的中道
 
-背景：Linux Kernel API/ABI 的从不稳定，Linus 本人也反对将其稳定，为此商业发行版如 RHEL 做了大量工作使其稳定。
+背景：相较于 OpenBSD 和 Linux 等操作系统，FreeBSD 的 Kernel API/ABI 比较地稳定。
 
-如果你想选择一款同 Windows、Android 一样的，在大版本更新后也不怎么影响日常工作的系统，而不是每天都在和操作系统斗智斗勇，FreeBSD 值得信赖。
+如果你想选择一款在大版本更新后也不怎么影响日常工作的系统，而不是每天都在和操作系统斗智斗勇，那么 FreeBSD 值得信赖。
 
-绝大部分或者说几乎所有的 Linux 的配置文件和系统组件都是 **变来变去的**，这在大版本变动时尤为突出。而且 Linux 始终是在进行着 **破坏性变化**（Breaking change）。
+FreeBSD 配置文件和系统组件不会 **变来变去的**，这在大版本变动时尤为突出。FreeBSD 也谨慎对待 **破坏性变化**（Breaking change），FreeBSD 要求在大版本内保持 ABI 的稳定。
 
-CentOS、Debian 只是 **在生命周期内不变** 罢了，但是大版本更新也不具有任何的连贯性和稳定性。且由于 **长期不变**，大版本的 **变动**，只会更加离谱，更加无法迁移。而且由于 Linux 设计上从未区分基本系统与第三方用户软件，故此类系统 **在生命周期内不变** 的代价是，任何软件的版本也不会变，也变不了，更不能变。
-
-这意味着：
-
-1、如果你需要不断地更新你工作所需的软件版本或者开发工作。那么你几乎总是在处理和操作系统有关的故障，不能专注于自己的开发或服务或者解决其本身的实际问题。
-
-你几乎就是每天都在和系统打架，修理这个难用的锤子，因为他总是会脱把。而不是真正在用它来钉钉子。——单是 Systemd 造成的 Bug 几辈子也修不完，你每天基本上不用干活，都在和这些东西斗智斗勇。
-
-2、除非你的 Linux 环境从未升级过也从未打过补丁更新，因为生产工具和环境已经固定且不再变动，也不想或没有意义花钱更新，即直接放弃了更新与升级。事实上，之前大部分 Linux 就是这么被使用的。所以看起来没有一点问题。但是这存在着巨大的安全隐患和共同故障点。并且你迟早是要升级的，除非你破产倒闭了。这只是时间问题。但是因为你选择了 Linux，升级将是不可能的，几乎所有的配置文件和依赖项目都在变，甚至不存在了，变没了也是常有的事，只能从头再来。你原来的稳定性将不复存在。
-
-即使你 **不想变**，那些非技术人员和整个市场也会迫使你去更新换代，**让你不得不变**。比如，你现在还能继续使用你的 Flash 吗？
+FreeBSD 不仅仅是 **在生命周期内不变**，但是大版本更新也具有连贯性和稳定性，轻而易举地就可以实现大版本之间的迁移。 FreeBSD 上软件的版本都是可以滚动变化的，不会锁定如 Python 版本等。
 
 ### 选择 FreeBSD 的一般原因
 
-- 从道家来讲，你爱用不用，不用也无妨。
+- 从道家来讲，你爱用不用，不用也无妨：人间一游，开心快乐才是最重要的事情。
 - 从佛法来说，因为缘分。万物缘起性空，我们有缘相聚，又会者定离。万般诸相皆如此。
 - 从基督教来讲，这是主的指引。上帝在永恒的现在中创世。就像出埃及记一样，你看上去是自己的选择，实际上都是主的安排。
-- 从黑格尔来讲，是因为辩证否定。FreeBSD 是 UNIX 直接后裔，而 Linux 仅仅是款仿制品，而很多协议又脱胎于 UNIX，所以你注定了要来到这里。
-- 追求软件的稳定和新，既要有二进制源，又要能编译安装。除了 FreeBSD 之外难以找到这样的 Linux 系统。（~~VoidLinux 还是算了吧~~）
-- 在 GPL 与 BSD 许可的抉择中，BSD 赋予你更纯粹的自由：不以限制自由来保障自由，而是以信任与开放成就自由。
+- 从黑格尔来讲，是因为辩证否定。FreeBSD 是 UNIX 直接后裔，而很多协议又脱胎于 UNIX，所以你注定了要来到这里。
+- 追求软件的稳定和新，既要有二进制源，又要能编译安装。除了 FreeBSD 之外难以找到这样的开源系统（~~VoidLinux 还是算了吧~~）。
+- BSD 赋予了你更纯粹的自由：不以限制自由来保障自由，而是以信任与开放成就真正的自由。
 - FreeBSD 是学院派的工程实践成果，更是 UNIX 哲学的现代延续者。
-- 当 Linux 生态愈发碎片化，FreeBSD 的一体化设计避免了无休止的选择困难——但这并非限制，如果你喜欢，很轻松就能对其进行修改。
-- BSD 是一款完整的操作系统，而不是内核。内核和基本系统作为一个项目来整体维护。而 Linux 世界没有基本系统的概念，这带来无尽的混乱与违反直觉的行为。
-- 就连 Linus 也曾感叹，Linux 社区早已陷入纷争与泥淖之中。内核开发之路，从未真正纯净。
+- 当其他操作系统生态愈发碎片化的同时，FreeBSD 的一体化设计避免了无休止的选择困难——但这并非限制，如果你喜欢，很轻松就能对其进行修改。
+- BSD 是一款完整的操作系统，而不是内核。内核和基本系统作为一个项目来整体维护。缺乏基本系统的概念，将带来无尽的混乱与违反直觉的行为。
+- FreeBSD 社区是由核心小组集体领导的。而 Linux Kernel 由 Linus 一人裁决：“[Linus Torvalds 是决定改动能否进入 Linux 内核的最终裁决者。](https://www.kernel.org/doc/html/latest/translations/zh_CN/process/submitting-patches.html)”
 - 教育与研究：FreeBSD 项目将内核与用户空间融入一个存储库之中，极大地便利了各种人群对其进行研究和学习，并且注释清晰丰富。你可以轻易地找到某某功能究竟是如何实现的。
 
 ### 选择 FreeBSD 的技术性原因
 
-- 基本系统的配置文件与第三方软件配置文件相分离。你不会遇到像在 RHEL 中使用 rpm 命令卸载 glibc 导致系统毁灭这种奇葩的事情（无独有偶，有时候 yum 的错误操作会卸载包括使用中的所有内核），FreeBSD 的包管理器不干涉基本系统。
-- 不会锁定软件版本，比如 Python GCC 等 Linux 中系统依赖的软件。所有软件都会滚动更新。这些非滚动版本的 linux 的软件版本基本上在该版本上锁死的，不会得到任何功能版本更新。滚动版本的又有一堆稳定性问题。BSD 所有版本共用一个 ports，只有极小一部分软件和系统版本硬捆绑，其他都是可以滚动更新的。而且由于基本系统的存在，第三方的软件几乎不影响系统的稳定性。GNU/Linux 则无法在软件更新和系统稳定之间找到平衡点。
-- 在 FreeBSD，文档不再是附属品。FreeBSD doc 项目与 src 项目是同等地位的，不分高下。
-- 安全漏洞相比于 Linux 较少。
+- 基本系统的配置文件与第三方软件配置文件相分离。再也不用到处用 find 命令查找某个 `.conf` 文件到底安装在哪了。
+- 由于基本系统的存在，第三方的软件几乎不影响系统的稳定性。FreeBSD 可在软件更新和系统稳定之间找到平衡点。
+- 不会锁定软件版本。比如 Python GCC 等常见的系统依赖软件。但所有版本的 FreeBSD 都共用一个 ports，只有极个别软件和系统版本硬捆绑，其余所有软件都可滚动更新。
+- 在 FreeBSD 项目中，文档不再是附属品。FreeBSD doc 项目与 src 项目是同等地位的，不分高下。
+- 披露的安全漏洞少于其他主流操作系统。
 - 可以避免在产品和架构中出现共同故障点。
 - 接近 2 年的版本发布周期，4 年的维护周期赋予了 FreeBSD 稳定性。
 - 通过 BSD 的 Ports 可以编译安装软件，进行自由配置。
 - ZFS 文件系统可以被配置为 `\` 分区。ZFS 被誉为最强大的文件系统。
 - Jail 与 byhve 虚拟化，不需要额外安装和维护底层虚拟化堆栈。也不需要为每个实例启动完整的操作系统内核和用户空间，节约系统资源。
-- 传统的 BSD INIT 引导，回归简单，回归文本。
+- 传统的 BSD INIT 引导，回归简单，回归真实可见的文本。
 - DTrace 框架与 GEOM 存储框架。
-- Linux 二进制兼容层，可运行 Linux 软件，只要其支持 CentOS 或 Ubuntu/Debian。且软件运行速度快于 Linux。
+- Linux 二进制兼容层，可运行 Linux 软件。且软件运行速度并不逊色于 Linux。
 - 安全事件审计。
-- 不同于 Linux 驱动捆绑内核的做法，FreeBSD 的驱动在大致上与内核解耦合。
-- Linux 内核开发是个[相当封闭的过程](https://www.kernel.org/doc/html/latest/process/submitting-patches.html)，只有少数人能够参与直接提交代码。而 FreeBSD 秉持人人自由开发的理念，目前[你可以直接在 Github 上提交你的代码](https://github.com/freebsd/freebsd-src/pulls)，或者注册个账号在 <https://reviews.freebsd.org/> 进行大规模变更。
-- 另请参见 [Linux 内核编码风格](https://www.kernel.org/doc/html/latest/process/coding-style.html)。而 FreeBSD 的代码风格是 Kernighan & Ritchie 的《C 程序设计语言》中使用的风格。
-- 由于 Ports 的存在，FreeBSD 的老系统的软件源仍然可以正常使用，而不像 Linux 那样一旦 EoL 就没有软件源可用了。
+- FreeBSD 的驱动在大致上与内核解耦合。
+- Linux 内核开发是个[较为封闭的过程](https://www.kernel.org/doc/html/latest/process/submitting-patches.html)，只有少数人能够参与直接提交代码。而 FreeBSD 秉持人人自由开发的理念，目前[你可以直接在 Github 上提交你的代码](https://github.com/freebsd/freebsd-src/pulls)，或者注册个账号在 <https://reviews.freebsd.org/> 进行大规模变更。
+- FreeBSD 的代码风格是 Kernighan & Ritchie 的《C 程序设计语言》中使用的风格。，另请参见 [Linux 内核编码风格](https://www.kernel.org/doc/html/latest/process/coding-style.html)。
+- 由于 Ports 的存在，FreeBSD 的老系统的软件源仍然可以正常使用，而不像其他操作系统那样一旦 EoL 就没有软件源可用了。
 
 #### 参考文献
 
@@ -126,23 +116,19 @@ CentOS、Debian 只是 **在生命周期内不变** 罢了，但是大版本更�
 
 Linux 用户空间乃至内核开发都已经完全由商业公司控制，仔细查查，就不难发现 GNOME、Systemd、PulseAudio、Wayland、PipeWire 这些目前主流的 Linux 项目其实都是由红帽公司（Red Hat）实际控制和施加影响的。这就是 Linux 引以为豪的商业策略。这也是为什么 RHEL 拼命排挤 KDE 的原因。
 
-- Linux Kernel 由 Linus 一人裁决：“[Linus Torvalds 是决定改动能否进入 Linux 内核的最终裁决者。](https://www.kernel.org/doc/html/latest/translations/zh_CN/process/submitting-patches.html)”而 FreeBSD 最终由两年一届的核心团队集体决策。
-
-
 >**思考题**
 >>
->> 显而易见：目前 FreeBSD 上的桌面部件的缺失很大程度上是因为他们过分依赖了 Linux 特有函数库，比如包含 `ip` 命令的 `iproute2` 软件包。更多的原因则是因为这些桌面或部件和 systemd 做了深度捆绑或者根本就是强制依赖，比如 `NetworkManager` 。而 Samba 开发者则会说“We use Linux, we develop for Linux, all others please submit patches”。FreeBSD 社区的人把这种行为叫做“Linuxism”（Linux 主义/Linux 歧视），你会在文学故事章节里引用的链接中再次见到这个词，且某些人以此为豪。
+>> 显而易见：目前 FreeBSD 上的桌面部件的缺失很大程度上是因为他们过分依赖了 Linux 特有函数库，比如包含 `ip` 命令的 `iproute2` 软件包。更多的原因则是因为这些桌面或部件和 systemd 做了深度捆绑或者根本就是强制依赖，比如 `NetworkManager` 。而 Samba 开发者则会说“We use Linux, we develop for Linux, all others please submit patches”。FreeBSD 社区的人把这种行为叫做“Linuxism”（Linux 主义/Linux 歧视）。
 >>
 >> 这种行为会导致何种后果我们不得而知，但是这种程序愈来愈多了，而且有成为主流的趋势，甚至就连大部分开发者在开发程序时也不再考虑兼容 init，比如 `todesk`。甚至 Java 程序都丧失掉了他的可移植性，为什么 FreeBSD 上的 Eclipse 将近两年没有更新？就是因为这类[捆绑问题](https://git.eclipse.org/r/c/platform/eclipse.platform.swt/+/163641/)。最近甚至还有了 `systemd-boot` 来取代 `grub2`，在可预见的未来，Linux 将被 systemd 统一。而其程序（预计所有可运行在 Linux 上的程序）也不再具有任何的可移植性。
 >>
->>或许 Linux 的开源到了尽头。“你可以继续造你的轮子，但是你不兼容我的 systemd 你就运行不了任何程序。”现在 FreeBSD 所面临的这种困境，将是所有人要面对的。
+>>现在 FreeBSD 所面临的这种困境，将是未来所有人要面对的。
 >>
->>Linux 已经完完全全背弃了他所出发的哲学与思想这件事是确凿无疑的。
 >
->真的是这样吗？又为什么会这样，你怎么看？
+>你怎么看？
 
-- 选择 FreeBSD，就是选择在 Linux 被的商业公司控制以后，还能够保留一份火种。纵观各大操作系统，有能力替代的，开源的操作系统只有 FreeBSD。
-- 选择 FreeBSD，就是选择保留下一份真正开源的、自由的操作系统。能够使开源事业继续坚持下去，并践行真正的 UNIX 哲学，不走改旗易帜的邪路，封闭之路。
+- 选择 FreeBSD，就是选择保留一份自由软件的火种。
+- 选择 FreeBSD，就是选择保留下一份真正开源的、自由的操作系统。能够使开源事业继续坚持下去，并践行真正的 UNIX 哲学。
 
 #### 旧闻：《[FreeBSD 基金会收到史上最大一笔捐款](https://freebsdfoundation.blogspot.com/2014/11/freebsd-foundation-announces-generous.html)》
 
