@@ -1,4 +1,4 @@
-# 目录
+# Table of contents
 
 * [FreeBSD 从入门到追忆（第三版：草稿）](README.md)
 * [编辑日志](CHANGELOG.md)
@@ -257,7 +257,6 @@
 * [第 23.4 节 Windows 文件系统](di-23-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-23.4-jie-ntfs-de-gua-zai.md)
 * [第 23.5 节 Swap 交换分区的设置](di-23-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-23.5-jie-swap-jiao-huan-fen-qu-de-she-zhi.md)
 * [第 23.6 节 Linux 文件系统](di-23-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-23.6-jie-ext-234-deng-wen-jian-xi-tong.md)
-* [第 23.7 节 ZFS 磁盘加解密](di-23-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-23.7-jie-zfs-ci-pan-jia-jie-mi.md)
 
 ## 第 24 章 DragonFly BSD 入门
 
