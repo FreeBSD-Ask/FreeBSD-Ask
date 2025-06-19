@@ -84,7 +84,8 @@ FreeBSD 不仅仅是 **在生命周期内不变**，大版本更新也具有连�
 - BSD 是一款完整的操作系统，而不是内核。内核和基本系统作为一个项目来整体维护。缺乏基本系统的概念，将带来无尽的混乱与违反直觉的行为。
 - FreeBSD 社区是由核心小组集体领导的。
 - 教育与研究：FreeBSD 项目将内核与用户空间融入一个存储库之中，极大地便利了各种人群对其进行研究和学习，并且注释清晰丰富。你可以轻易地找到某某功能究竟是如何实现的。
-
+- FreeBSD 无论社区还是开发者都秉持着“慢就是快，快就是慢”的哲学思想。~~我们的确需要花些时间慢下来，审视自己的一切，无论知识还是自我。花些时间在路旁的花朵石子上面，也许并不是浪费时间，无所事事。~~
+  
 ### 选择 FreeBSD 的技术性原因
 
 - FreeBSD 基本系统的配置文件与第三方软件配置文件相分离，系统级配置文件与用户配置文件相分离。~~再也不用到处用 find 命令查找某个 `.conf` 文件到底安装在哪了。~~
@@ -154,15 +155,20 @@ Linux 用户空间乃至内核开发都已经完全由商业公司控制，不�
 
 王波《FreeBSD 在中国的未来》。引自《FreeBSD 使用大全》第二版，机械工业出版社，2002，ISBN 9787111102861
 
-### 进一步了解
+## FreeBSD 当前困境
 
-- 有基金会的官方版本，参见[《为什么你应该使用 FreeBSD》](https://book.bsdcn.org/fan-yi-wen-zhang-cun-dang/2024-nian-11-yue/why)。
-- [systemd 背后的真正动机](https://freebsd.gitbook.io/translated-articles/the-real-motivation-behind-systemd)
-- [systemd 在任何地方都不安全](https://freebsd.gitbook.io/translated-articles/systemd-isnt-safe-to-run-anywhere)
-- [GPL 之殇](https://freebsd.gitbook.io/translated-articles/the-problems-with-the-gpl)
-- [为什么你应该将所有东西从 Linux 迁移到 BSD](https://freebsd.gitbook.io/translated-articles/why-you-should-migrate-everything-from-linux-to-bsd)
-- [新的 Ports 提交者：oel Bodenmann (jbo@freebsd.org)](https://book.bsdcn.org/freebsd-za-zhi-jian-ti-zhong-wen-ban/2023-1112/xin-de-port-ti-jiao-zhe-oel-bodenmann-jbofreebsd.org)
-
+- FreeBSD 基金会缺乏对欧洲以外地区的关注与投入；
+- FreeBSD 项目整体过于保守，新技术的引入往往需要数年跨越多个大版本。
+- FreeBSD 系统总体上不够现代化，缺乏现代操作系统应有的实现。尤其是在嵌入式方面比较差。
+- FreeBSD 没有为用户提供带桌面的基本系统；
+- FreeBSD 的驱动支持较差；
+- FreeBSD 的资料相对较少；
+- FreeBSD 的开发者非常少，且对外部贡献者缺乏时间感；
+- FreeBSD 文档项目严重停滞；
+- 由于 Linuxism，导致很多软件比如 NetworkManager 无法移植，桌面环境的组件也无法完善；
+- 由于 FreeBSD 项目的基本目标和设计问题，FreeBSD 基本系统不包含 Linux 发行版中常用的一些软件和命令；
+- FreeBSD 两款原生的文件系统 ZFS 与 UFS 都只能扩大不能缩小；
+- FreeBSD 缺乏上层应用软件设计，即使底层有类似 docker 的技术 jail 也没能发展起来；FreeBSD 的虚拟化技术 Bhyve 也需要改进。
 
 ## 谁在使用 FreeBSD
 
