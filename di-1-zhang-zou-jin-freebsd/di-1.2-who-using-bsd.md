@@ -14,8 +14,6 @@ FreeBSD 不是 Linux。FreeBSD 也不是 UNIX 的克隆产物。FreeBSD 是一�
 
 ![](../.gitbook/assets/nolinux.png)
 
----
-
 FreeBSD 这个词语由两部分构成，即“Free”和“BSD”。
 
 BSD 最初是由加州大学伯克利分校（University of California, Berkeley）所开发的，意为 `Berkeley Software Distribution`（伯克利软件发行版）。
@@ -60,9 +58,11 @@ BSD 操作系统并非复制品，而是 AT&T 研究 UNIX（Research Unix）操�
 >你如何理解 FreeBSD 与 Unix 的关系？
 
 
-## 为什么选择 FreeBSD
+## 为什么选择 FreeBSD 
 
-### 选择 FreeBSD 的一句话原因——FreeBSD 能在这流变的世界中寻求理想的中道
+### 一句话原因——FreeBSD 能在这流变的世界中寻求理想的中道
+
+背景：Linux Kernel API/ABI 的从不稳定，Linus 本人也反对将其稳定，为此商业发行版如 RHEL 做了大量工作使其稳定。
 
 如果你想选择一款同 Windows、Android 一样的，在大版本更新后也不怎么影响日常工作的系统，而不是每天都在和操作系统斗智斗勇，FreeBSD 值得信赖。
 
@@ -74,7 +74,7 @@ CentOS、Debian 只是 **在生命周期内不变** 罢了，但是大版本更�
 
 1、如果你需要不断地更新你工作所需的软件版本或者开发工作。那么你几乎总是在处理和操作系统有关的故障，不能专注于自己的开发或服务或者解决其本身的实际问题。
 
-你几乎就是每天都在和系统打架，修理这个难用的锤子，因为他总是会脱把。而不是真正在用它来钉钉子。——单单仅是 Systemd 造成的 Bug 几辈子也修不完，你每天基本上不用干活，都在和这些东西斗智斗勇。
+你几乎就是每天都在和系统打架，修理这个难用的锤子，因为他总是会脱把。而不是真正在用它来钉钉子。——单是 Systemd 造成的 Bug 几辈子也修不完，你每天基本上不用干活，都在和这些东西斗智斗勇。
 
 2、除非你的 Linux 环境从未升级过也从未打过补丁更新，因为生产工具和环境已经固定且不再变动，也不想或没有意义花钱更新，即直接放弃了更新与升级。事实上，之前大部分 Linux 就是这么被使用的。所以看起来没有一点问题。但是这存在着巨大的安全隐患和共同故障点。并且你迟早是要升级的，除非你破产倒闭了。这只是时间问题。但是因为你选择了 Linux，升级将是不可能的，几乎所有的配置文件和依赖项目都在变，甚至不存在了，变没了也是常有的事，只能从头再来。你原来的稳定性将不复存在。
 
@@ -82,23 +82,23 @@ CentOS、Debian 只是 **在生命周期内不变** 罢了，但是大版本更�
 
 ### 选择 FreeBSD 的一般原因
 
-- **从道家来讲，你爱用不用，不用拉倒。太长不看，不用？对其他的原因有意见？请重复看此条目**
-- 从佛学来说，因为缘分。万物缘起性空，我们有缘相聚，又会者定离。万般诸相皆如此。
+- **从道家来讲，你爱用不用，不用拉倒。太长不看？那就此止步，其他条目都不必看了。**
+- 从佛法来说，因为缘分。万物缘起性空，我们有缘相聚，又会者定离。万般诸相皆如此。
 - 从基督教来讲，这是主的指引。上帝在永恒的现在中创世。就像出埃及记一样，你看上去是自己的选择，实际上都是主的安排。
 - 从黑格尔来讲，是因为辩证否定。FreeBSD 是 UNIX 直接后裔，而 Linux 仅仅是款仿制品，而很多协议又脱胎于 UNIX，所以你注定了要来到这里。
 - 按照我个人观点而言，追求软件的稳定和新，既要有二进制源，又要能编译安装。除了 FreeBSD 之外我找不到 Linux 系统。（~~VoidLinux？~~）
-- BSD 三则授权协议：允许自由分发。GPL 与 BSD 协议，究竟何者是真正的自由？GPL 最多只是通过限制自由来确保他所谓的自由罢了。学习 BSD 就和学习哲学一样，本身并不是为了某种确切的知识而去学习，而是为了自由而去学习（因为在大多数人眼中 BSD 已然不具有所谓的实用价值了）。那么在这一点上，可以说，按照他们的想法，BSD 与其他操作系统有根本上的不同——即 BSD 是真正的自由。
-- FreeBSD 是学院派的开源实践产物，也是 UNIX 哲学的忠实践行者。
+- BSD 授权协议：允许自由分发。GPL 与 BSD 协议，究竟何者是真正的自由？GPL 最多只是通过限制自由来确保他所谓的自由罢了。
+- FreeBSD 是学院派的工程实践成果，更是 UNIX 哲学的现代延续者。
 - 远离碎片化的 Linux 发行版，使得选择困难症用户免受痛苦。
-- BSD 是一个完整的 OS，而不是内核。内核和基本系统作为一个项目来整体维护。——请注意，这是所有 Linux 系统的缺陷所在。没有事实上的基本系统的概念和区分会造成一系列违反直觉的事情。
-- Linux 社区已经成为一个肮脏的泥潭，无论是内核开发还是用户群组。——见文学故事。
+- BSD 是一款完整的操作系统，而不是内核。内核和基本系统作为一个项目来整体维护。而 Linux 世界没有基本系统的概念，这带来无尽的混乱与违反直觉的行为。
+- 就连 Linus 也曾感叹，Linux 社区早已陷入纷争与泥淖之中。内核开发之路，从未真正纯净。
 - 教育与研究：FreeBSD 项目将内核与用户空间融入一个存储库之中，极大地便利了各种人群对其进行研究和学习，并且注释清晰丰富。你可以轻易地找到某某功能究竟是如何实现的。
 
 ### 选择 FreeBSD 的技术性原因
 
 - 基本系统的配置文件与第三方软件配置文件相分离。你不会遇到像在 RHEL 中使用 rpm 命令卸载 glibc 导致系统毁灭这种奇葩的事情（无独有偶，有时候 yum 的错误操作会卸载包括使用中的所有内核），FreeBSD 的包管理器不干涉基本系统。
 - 不会锁死软件版本，比如 Python GCC 等 Linux 中系统依赖的软件。所有软件都会滚动更新。这些非滚动版本的 linux 的软件版本基本上在该版本上锁死的，不会得到任何功能版本更新。滚动版本的又有一堆稳定性问题。BSD 所有版本共用一个 ports，只有极小一部分软件和系统版本硬捆绑，其他都是可以滚动更新的。而且由于基本系统的存在，第三方的软件几乎不影响系统的稳定性。Linux 则无法在软件更新和系统稳定之间找到平衡点。
-- 文档齐全，FreeBSD doc 与 src 是同等地位的，不分高下。
+- 在 FreeBSD，文档不再是附属品。FreeBSD doc 与 src 是同等地位的，不分高下。
 - 安全漏洞相比于 Linux 较少。
 - 可以避免在产品和架构中出现共同故障点。
 - 接近 2 年的版本发布周期，4 年的维护周期赋予了 FreeBSD 稳定性。
@@ -124,6 +124,8 @@ CentOS、Debian 只是 **在生命周期内不变** 罢了，但是大版本更�
 
 #### GNU 与自由软件运动已走到了尽头
 
+Linux 用户空间已经完全由商业公司控制，仔细查查，就不难发现 GNOME、Systemd、PulseAudio、Wayland、PipeWire 其实都是由红帽公司（Red Hat）实际控制和施加影响的。这就是 Linux 引以为豪的商业策略。这也是为什么 RHEL 拼命排挤 KDE 的原因。
+
 - Linux Kernel 由 Linus 一人裁决：“[Linus Torvalds 是决定改动能否进入 Linux 内核的最终裁决者。](https://www.kernel.org/doc/html/latest/translations/zh_CN/process/submitting-patches.html)”而 FreeBSD 最终由两年一届的核心团队集体决策。
 
 
@@ -139,7 +141,7 @@ CentOS、Debian 只是 **在生命周期内不变** 罢了，但是大版本更�
 >
 >真的是这样吗？又为什么会这样，你怎么看？
 
-- 选择 FreeBSD，就是选择在 Linux 被 systemd 及其背后的商业公司控制以后，还能够保留一份火种。纵观各大操作系统，有能力替代的，开源的操作系统只有 FreeBSD。
+- 选择 FreeBSD，就是选择在 Linux 被的商业公司控制以后，还能够保留一份火种。纵观各大操作系统，有能力替代的，开源的操作系统只有 FreeBSD。
 - 选择 FreeBSD，就是选择保留下一份真正开源的、自由的操作系统。能够使开源事业继续坚持下去，并践行真正的 UNIX 哲学，不走改旗易帜的邪路，封闭之路。
 
 #### 旧闻：《[FreeBSD 基金会收到史上最大一笔捐款](https://freebsdfoundation.blogspot.com/2014/11/freebsd-foundation-announces-generous.html)》
@@ -153,13 +155,13 @@ CentOS、Debian 只是 **在生命周期内不变** 罢了，但是大版本更�
 
 实际上，这并非一锤子买卖，在查阅 FreeBSD 基金会捐款名单（可查 [2018](https://freebsdfoundation.org/our-donors/donors/?donationYear=2018)、[2019](https://freebsdfoundation.org/our-donors/donors/?donationYear=2019)、[2020](https://freebsdfoundation.org/our-donors/donors/?donationYear=2020)、[2021](https://freebsdfoundation.org/our-donors/donors/?donationYear=2021)、[2022](https://freebsdfoundation.org/our-donors/donors/?donationYear=2022)）后就会发现，Jan Koum 仍在继续以 [Koum Family Foundation](https://philanthropynewsdigest.org/news/other-sources/article/?id=15306123&title=Tech-Philanthropy-Watch:-WhatsApp-Founder-Jan-Koum-Has-a-New-$1.5-Billion-Fund) 的名义在持续地为 FreeBSD 捐款。每年都捐款 25 万美元以上。
 
-### 诚实与可信
+#### 诚实与可信
 
 像 FreeBSD 这样默默地在后台工作以至于快被用户遗忘的系统，可能真算得上是个老古董了，如果每日时不时地出现一些蓝屏报错，Kernel Panic 亦或者“内部错误”、`You are in emergency mode`、`BusyBox （initramfs）`、`grub  rescue>` 等等，反而能提醒用户自己的存在。不是吗？那些弹窗软件、3Q 大战、摇一摇的恶俗广告、百度的莆田系和国产操作系统、从绿坝娘再到现在安卓手机预装的反诈软件不也挺成功的吗？
 
 目前大部分使用 Linux 作为专用设备操作系统，或是基于其他 GPL 软件构建自己商业产品的公司，都没有严格遵守 GPL 协议发布他们的代码。而对于国内公司来说，他们甚至不知 GPL 为何物，只认为免费就可以了，那些为了逃避 GPL 强制开源规定的企业之产品是不值得我们去使用的。抢注开源软件商标的事情亦时有发生。比较起来，那些使用 FreeBSD 的公司至少更为诚实、可靠和值得信赖。也真正使得 BSD 的代码为众人所用——哪怕有人认为 FreeBSD 已经日落西山——尽管在这些人的确一直生活在 FreeBSD 的光芒的照耀之下。
 
-#### 参考文献
+##### 参考文献
 
 王波《FreeBSD 在中国的未来》。引自《FreeBSD 使用大全》第二版，机械工业出版社，2002，ISBN 9787111102861
 
