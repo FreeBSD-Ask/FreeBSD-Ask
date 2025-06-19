@@ -191,7 +191,7 @@
 * [第 17.5 节 NextCloud——基于 PostgreSQL](di-17-zhang-wang-luo-fu-wu-qi/di-17.5-jie-NextCloud.md)
 * [第 17.6 节 Telegraf+InfluxDB+Grafana 监控平台](di-17-zhang-wang-luo-fu-wu-qi/di-17.6-jie-telegraf+influxdb+grafana-jian-kong-ping-tai.md)
 * [第 17.7 节 AList](di-17-zhang-wang-luo-fu-wu-qi/di-17.7-alist.md)
-* [第 17.8 节 prometheus 监控部署](di-17-zhang-wang-luo-fu-wu-qi/17.8.prometheus.md)
+* [第 17.8 节 Prometheus 监控部署](di-17-zhang-wang-luo-fu-wu-qi/17.8.prometheus.md)
 * [第 17.9 节 Tomcat](di-17-zhang-wang-luo-fu-wu-qi/17.9-Tomcat.md)
 * [第 17.10 节 Caddy](di-17-zhang-wang-luo-fu-wu-qi/17.10-caddy.md)
 * [第 17.11 节 OnlyOffice（基于 PostgreSQL）](di-17-zhang-wang-luo-fu-wu-qi/17.11-onlyoffice.md)
@@ -204,12 +204,13 @@
 * [第 18.4 节 树莓派与 Linux 兼容层](di-18-zhang-shu-mei-pai-yu-riscv/di-18.4-jie-shu-mei-pai-yu-linux-jian-rong-ceng.md)
 * [第 18.5 节 Radxa X4（x86）](di-18-zhang-shu-mei-pai-yu-riscv/18.5-radxax4.md)
 
-## 第 19 章 数据库
+## 第 19 章 数据库管理
 
-* [第 19.1 节 PostgreSQL 与 pgAdmin4](di-19-zhang-database/di-19.1-jie-postgresql-yu-pgadmin4.md)
-* [第 19.2 节 MySQL 5.X](di-19-zhang-database/di-19.2-jie-mysql-5.x.md)
-* [第 19.3 节 MySQL 8.X](di-19-zhang-database/di-19.3-jie-mysql-8.x.md)
-* [第 19.4 节 MongoDB 80](di-19-zhang-database/di-19.4-mongodb)
+* [第 19.1 节 PostgreSQL](di-19-zhang-database/di-19.1-jie-postgresql.md)
+* [第 19.2 节 pgAdmin4](di-19-zhang-database/di-19.2-pgadmin4.md)
+* [第 19.3 节 MySQL 5.X](di-19-zhang-database/di-19.3-jie-mysql-5.x.md)
+* [第 19.4 节 MySQL 8.X](di-19-zhang-database/di-19.4-jie-mysql-8.x.md)
+* [第 19.5 节 MongoDB 8.0](di-19-zhang-database/di-19.5-mongodb)
 
 ## 第 20 章 游戏、科学计算与专业工具
 
@@ -256,7 +257,6 @@
 * [第 23.4 节 Windows 文件系统](di-23-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-23.4-jie-ntfs-de-gua-zai.md)
 * [第 23.5 节 Swap 交换分区的设置](di-23-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-23.5-jie-swap-jiao-huan-fen-qu-de-she-zhi.md)
 * [第 23.6 节 Linux 文件系统](di-23-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-23.6-jie-ext-234-deng-wen-jian-xi-tong.md)
-* [第 23.7 节 ZFS 磁盘加解密](di-23-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-23.7-jie-zfs-ci-pan-jia-jie-mi.md)
 
 ## 第 24 章 DragonFly BSD 入门
 
