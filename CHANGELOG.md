@@ -7,7 +7,7 @@
 - 2025.6.19
   - 调整目录结构
   - 第 19.1 节 PostgreSQL：将 PostgreSQL 更新到 17
-  - 第 19.2 节 pgAdmin4 更新到 pgadmin4-9.0（失败，参见 [issue](https://github.com/pgadmin-org/pgadmin4/issues/8869)）
+  - 第 19.2 节 pgAdmin4 更新到 pgadmin4-9.0
 - 2025.6.17
   - 增加一个术语表放在附录
   - 调整目录结构
