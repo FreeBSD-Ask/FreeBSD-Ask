@@ -34,7 +34,7 @@
 
 - [【文汇报】何积丰：以“积”累迎来“丰”收](https://www.cas.cn/xw/cmsm/201404/t20140402_4084616.shtml)，和年轻人一样，71 岁的何院士现在也在使用智能手机
 - [New methods and new aims in teaching](https://www.bfskinner.org/wp-content/uploads/2014/02/New-Methods-aims-in-Teach.pdf)，这句话并非爱因斯坦所述。现在以讹传讹，我们获取的知识，真的是那么正确无误吗？
-- 谢延龙。庄子“忘”的教育图景阐释[J].大学教育科学，2022,(01):105-112.
+- 谢延龙.庄子“忘”的教育图景阐释[J].大学教育科学,2022,(01):105-112.
 
 ## 我是谁？
 
