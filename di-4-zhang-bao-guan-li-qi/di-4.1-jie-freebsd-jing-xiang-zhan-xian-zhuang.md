@@ -49,7 +49,7 @@ USTC：
 
 目前已经关闭的非官方 issue 镜像申请：
 
-TUNA：<https://github.com/tuna/issues/issues/16>
+TUNA:<https://github.com/tuna/issues/issues/16>
 
 ## 官方给出的镜像站基本要求
 
