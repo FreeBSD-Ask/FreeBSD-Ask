@@ -2,6 +2,8 @@
 
 ## 什么是 shell
 
+![](../.gitbook/assets/you-shell.svg)
+
 我们的命令是运行在 shell 中的，通过 shell 与系统进行交互。
 
 FreeBSD 默认的 shell 是 sh（Bourne shell，原作者名为 Stephen R. Bourne）。目前已经重写过了，现基本符合 [POSIX.1-2024](https://pubs.opengroup.org/onlinepubs/9799919799/utilities/V3_chap02.html) 中对 shell 的规范。

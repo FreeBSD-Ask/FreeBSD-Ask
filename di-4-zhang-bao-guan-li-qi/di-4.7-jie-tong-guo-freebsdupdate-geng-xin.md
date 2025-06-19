@@ -1,10 +1,6 @@
 # 第 4.7 节 使用 freebsd-update 更新 FreeBSD
 
 
-> **前排提示**
->
-> 阿里云服务器用户升级到 13.x 请看第 2.1 节“使用 virtio 技术半虚拟化的虚拟机”部分。
-
 > **注意：**
 >
 > 只有一级架构的 release 版本才提供该源。也就是说 current 和 stable 是没有的。关于架构的支持等级说明请看： [https://www.freebsd.org/platforms](https://www.freebsd.org/platforms)
