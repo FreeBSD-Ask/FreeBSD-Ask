@@ -41,7 +41,10 @@
 	postBuffer = 1048576000 # 扩大缓冲区，约 1 GB
 	maxRequestBuffer = 1048576000 # 扩大缓冲区，约 1 GB
 ```
-
+#### 名词与参数解释
+* autocrlf：https://docs.github.com/zh/get-started/git-basics/configuring-git-to-handle-line-endings
+* signingkey; https://docs.github.com/en/authentication/managing-commit-signature-verification/about-commit-signature-verification
+* signingkey 可指 GPG Keys 亦可指 SSH Keys ，因为自 Git 2.34 起，Git支持了SSH签名验证功能。
 ## 开放任务
 
 所有任务的排序都是随机的并无优先级之分，你可以选你喜欢的去做。
