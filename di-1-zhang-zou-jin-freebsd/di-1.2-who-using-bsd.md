@@ -101,7 +101,7 @@ FreeBSD 不仅仅是 **在生命周期内不变**，但是大版本更新也具�
 - 安全事件审计。
 - FreeBSD 的驱动在大致上与内核解耦合。
 - Linux 内核开发是个[较为封闭的过程](https://www.kernel.org/doc/html/latest/process/submitting-patches.html)，只有少数人能够参与直接提交代码。而 FreeBSD 秉持人人自由开发的理念，目前[你可以直接在 Github 上提交你的代码](https://github.com/freebsd/freebsd-src/pulls)，或者注册个账号在 <https://reviews.freebsd.org/> 进行大规模变更。
-- FreeBSD 的代码风格是 Kernighan & Ritchie 的《C 程序设计语言》中使用的风格。，另请参见 [Linux 内核编码风格](https://www.kernel.org/doc/html/latest/process/coding-style.html)。
+- FreeBSD 的代码风格是 Kernighan & Ritchie 的《C 程序设计语言》中使用的风格。另请参见 [Linux 内核编码风格](https://www.kernel.org/doc/html/latest/process/coding-style.html)。
 - 由于 Ports 的存在，FreeBSD 的老系统的软件源仍然可以正常使用，而不像其他操作系统那样一旦 EoL 就没有软件源可用了。
 
 #### 参考文献
@@ -112,9 +112,9 @@ FreeBSD 不仅仅是 **在生命周期内不变**，但是大版本更新也具�
 
 ### 选择 FreeBSD 的社会意义
 
-#### GNU 与自由软件运动已走到了尽头
+#### 保留一份希望
 
-Linux 用户空间乃至内核开发都已经完全由商业公司控制，仔细查查，就不难发现 GNOME、Systemd、PulseAudio、Wayland、PipeWire 这些目前主流的 Linux 项目其实都是由红帽公司（Red Hat）实际控制和施加影响的。这就是 Linux 引以为豪的商业策略。这也是为什么 RHEL 拼命排挤 KDE 的原因。
+Linux 用户空间乃至内核开发都已经完全由商业公司控制，仔细查查，就不难发现 GNOME、Systemd、PulseAudio、Wayland、PipeWire 这些目前主流的 Linux 项目其实都是由红帽公司（Red Hat）实际控制和施加影响的。这就是 Linux 引以为豪的商业策略。这也正是 RHEL 拼命排挤 KDE 的原因所在。
 
 >**思考题**
 >>
@@ -122,13 +122,13 @@ Linux 用户空间乃至内核开发都已经完全由商业公司控制，仔�
 >>
 >> 这种行为会导致何种后果我们不得而知，但是这种程序愈来愈多了，而且有成为主流的趋势，甚至就连大部分开发者在开发程序时也不再考虑兼容 init，比如 `todesk`。甚至 Java 程序都丧失掉了他的可移植性，为什么 FreeBSD 上的 Eclipse 将近两年没有更新？就是因为这类[捆绑问题](https://git.eclipse.org/r/c/platform/eclipse.platform.swt/+/163641/)。最近甚至还有了 `systemd-boot` 来取代 `grub2`，在可预见的未来，Linux 将被 systemd 统一。而其程序（预计所有可运行在 Linux 上的程序）也不再具有任何的可移植性。
 >>
->>现在 FreeBSD 所面临的这种困境，将是未来所有人要面对的。
+>>现在 FreeBSD 所面临的这种困境，将是未来所有人都要面对的。
 >>
 >
 >你怎么看？
 
 - 选择 FreeBSD，就是选择保留一份自由软件的火种。
-- 选择 FreeBSD，就是选择保留下一份真正开源的、自由的操作系统。能够使开源事业继续坚持下去，并践行真正的 UNIX 哲学。
+- 选择 FreeBSD，就是选择保留下一份真正自由的操作系统。能够使开源事业继续坚持下去，并践行真正的 UNIX 哲学。
 
 #### 旧闻：《[FreeBSD 基金会收到史上最大一笔捐款](https://freebsdfoundation.blogspot.com/2014/11/freebsd-foundation-announces-generous.html)》
 
