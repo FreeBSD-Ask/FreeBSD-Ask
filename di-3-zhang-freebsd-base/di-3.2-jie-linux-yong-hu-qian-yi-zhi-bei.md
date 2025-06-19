@@ -39,22 +39,6 @@
 - [Comparison of init systems](https://wiki.gentoo.org/wiki/Comparison_of_init_systems)，各大 init 对比图
 - [GPL Software in FreeBSD Base](https://wiki.freebsd.org/GPLinBase)，FreeBSD 基本系统中的 GPL 软件
 
-
-## FreeBSD 的缺陷
-
-- FreeBSD 无论社区还是开发者都秉持着“慢就是快，快就是慢”的哲学思想。正因为秉持这一思想，让很多事物不被匆忙对待，有更多的时间来审视一切。但这是一个后工业化的时代，很多人认为“欲速则不达”只是一种落伍的软件工程理论，而更偏好于敏捷开发。~~我们的确需要花些时间慢下来，审视自己的一切，无论知识还是自我。花些时间在路旁的花朵石子上面，也许并不是浪费时间，无所事事。~~
-- FreeBSD 系统总体上不够现代化，缺乏现代操作系统应有的实现。在嵌入式方面比较差。
-- FreeBSD 没有为用户提供带桌面的基本系统；
-- FreeBSD 的驱动水平较差；
-- FreeBSD 的开发者非常少：这意味着你的 Bug 可能很久都无法得到解决，不是所有软件包都能时刻保持最新版；
-- FreeBSD 的资料相对较少；
-- 由于 Systemd 不兼容 Linux 以外的操作系统，导致很多软件比如 NetworkManager 无法移植，桌面环境的组件也无法完善；
-- 由于 FreeBSD 项目的基本目标和设计问题，FreeBSD 基本系统不包含一般 Linux 中常用的一些软件和命令，比如没有 `lspci`、`free`。有些可以自己安装，有些则不行；
-- FreeBSD 的两个文件系统 ZFS 与 UFS 都只能扩大不能缩小，真是个奇怪的设计；
-- FreeBSD 缺乏上层应用软件设计，即使底层有类似 docker 的技术 jail 也没能发展起来；FreeBSD 的虚拟化技术 Byhve 也很难用。
-
----
-
 许多 Linux 的常用概念其实最初源于 BSD，比如容器、发行版的概念。
 
 —— [什么是 Linux 容器？](https://www.redhat.com/zh/topics/containers/shenmeshi-linux-rongqi)
