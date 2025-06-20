@@ -139,12 +139,19 @@ export default defineConfig({
 	description: "FreeBSD 从入门到追忆",
 	metaChunk: true,
 markdown: {
-  image: { lazyLoading: true },
+  image: {
+    lazyLoading: true
+  },
   config: (md: MarkdownIt) => {
+    // 引入 Token 构造器，用于创建新的 text 节点
+    const Token = require('markdown-it/lib/token')
+
+    // —— 自动编号状态变量 —— 
     let h1Prefix = ''
     let h2 = 0, h3 = 0, h4 = 0, h5 = 0, h6 = 0
 
     md.core.ruler.push('auto_heading_number', (state) => {
+      // 每次渲染前重置计数
       h2 = h3 = h4 = h5 = h6 = 0
       h1Prefix = ''
 
@@ -158,21 +165,23 @@ markdown: {
 
         // 找到第一个文本子节点
         const textNode = inline.children.find(t => t.type === 'text')
-        if (!textNode) continue
 
-        // H1：提取前缀
-        if (level === 1) {
+        // —— 处理 H1：提取手写前缀，如 “1.2 标题” —— 
+        if (level === 1 && textNode) {
           const m = textNode.content.match(/^(\d+\.\d+)\s+(.*)$/)
           if (m) {
             h1Prefix = m[1]
+            // 更新文本节点内容
             textNode.content = `${h1Prefix} ${m[2]}`
+            // 更新 inline.content 以保持兼容
+            inline.content = `${h1Prefix} ${m[2]}`
           } else {
             h1Prefix = ''
           }
           continue
         }
 
-        // 2~6 级标题自增并构造编号
+        // —— 计算 2~6 级标题的编号前缀 —— 
         let prefix = ''
         if (level === 2)      { h2++; h3 = h4 = h5 = h6 = 0; prefix = h1Prefix ? `${h1Prefix}.${h2}` : `${h2}` }
         else if (level === 3) { h3++; h4 = h5 = h6 = 0; prefix = h1Prefix ? `${h1Prefix}.${h2}.${h3}` : `${h2}.${h3}` }
@@ -181,15 +190,18 @@ markdown: {
         else if (level === 6) { h6++;                 prefix = h1Prefix ? `${h1Prefix}.${h2}.${h3}.${h4}.${h5}.${h6}` : `${h2}.${h3}.${h4}.${h5}.${h6}` }
 
         if (prefix) {
-          // 更新 inline.content（为了 API 兼容）
+          // 1) 更新 inline.content，保持和 children 一致
           inline.content = `${prefix} ${inline.content}`
-          // 更新第一个 text 子节点
-          textNode.content = `${prefix} ${textNode.content}`
+
+          // 2) 在 children 开头插入一个新的 text 节点，用于显示编号
+          const prefixToken = new Token('text', '', 0)
+          prefixToken.content = `${prefix} `
+          inline.children.unshift(prefixToken)
         }
       }
     })
 
-    // —— 插件加载 —— 
+    // —— 加载其他插件 —— 
     md.use(footnote)
     md.use(mathjax3, {
       tex: { tags: 'ams' },
@@ -204,18 +216,20 @@ markdown: {
       liClass: 'task-list-item'
     })
 
-    // —— 自定义渲染规则 —— 
+    // —— 自定义脚注返回链接渲染 —— 
     md.renderer.rules.footnote_anchor = (tokens, idx, options, env, slf) => {
       let id = slf.rules.footnote_anchor_name?.(tokens, idx, options, env, slf) || ''
-      if (tokens[idx].meta.subId > 0) id += ':' + tokens[idx].meta.subId
+      if (tokens[idx].meta.subId > 0) {
+        id += ':' + tokens[idx].meta.subId
+      }
       return ` <a href="#fnref${id}" class="footnote-backref">🔼</a>`
     }
 
-    // 为行内 code 添加 v-pre
-    const defaultInline = md.renderer.rules.code_inline
+    // —— 为行内 code 添加 v-pre 属性 —— 
+    const defaultCodeInline = md.renderer.rules.code_inline
     md.renderer.rules.code_inline = (tokens, idx, options, env, self) => {
       tokens[idx].attrSet('v-pre', '')
-      return defaultInline(tokens, idx, options, env, self)
+      return defaultCodeInline(tokens, idx, options, env, self)
     }
   }
 },
