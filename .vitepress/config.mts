@@ -139,11 +139,8 @@ export default defineConfig({
 	description: "FreeBSD 从入门到追忆",
 	metaChunk: true,
 markdown: {
-  image: {
-    lazyLoading: true
-  },
+  image: { lazyLoading: true },
   config: (md: MarkdownIt) => {
-    // —— 自动编号插件 —— 
     let h1Prefix = ''
     let h2 = 0, h3 = 0, h4 = 0, h5 = 0, h6 = 0
 
@@ -159,39 +156,35 @@ markdown: {
         const inline = state.tokens[i + 1]
         if (!inline || inline.type !== 'inline') continue
 
-        // H1：提取手写前缀
+        // 找到第一个文本子节点
+        const textNode = inline.children.find(t => t.type === 'text')
+        if (!textNode) continue
+
+        // H1：提取前缀
         if (level === 1) {
-          const m = inline.content.match(/^(\d+\.\d+)\s+(.*)$/)
+          const m = textNode.content.match(/^(\d+\.\d+)\s+(.*)$/)
           if (m) {
             h1Prefix = m[1]
-            inline.content = `${h1Prefix} ${m[2]}`
+            textNode.content = `${h1Prefix} ${m[2]}`
           } else {
             h1Prefix = ''
           }
           continue
         }
 
-        // 2~6 级标题自增
+        // 2~6 级标题自增并构造编号
         let prefix = ''
-        if (level === 2) {
-          h2++; h3 = h4 = h5 = h6 = 0
-          prefix = h1Prefix ? `${h1Prefix}.${h2}` : `${h2}`
-        } else if (level === 3) {
-          h3++; h4 = h5 = h6 = 0
-          prefix = h1Prefix ? `${h1Prefix}.${h2}.${h3}` : `${h2}.${h3}`
-        } else if (level === 4) {
-          h4++; h5 = h6 = 0
-          prefix = h1Prefix ? `${h1Prefix}.${h2}.${h3}.${h4}` : `${h2}.${h3}.${h4}`
-        } else if (level === 5) {
-          h5++; h6 = 0
-          prefix = h1Prefix ? `${h1Prefix}.${h2}.${h3}.${h4}.${h5}` : `${h2}.${h3}.${h4}.${h5}`
-        } else if (level === 6) {
-          h6++
-          prefix = h1Prefix ? `${h1Prefix}.${h2}.${h3}.${h4}.${h5}.${h6}` : `${h2}.${h3}.${h4}.${h5}.${h6}`
-        }
+        if (level === 2)      { h2++; h3 = h4 = h5 = h6 = 0; prefix = h1Prefix ? `${h1Prefix}.${h2}` : `${h2}` }
+        else if (level === 3) { h3++; h4 = h5 = h6 = 0; prefix = h1Prefix ? `${h1Prefix}.${h2}.${h3}` : `${h2}.${h3}` }
+        else if (level === 4) { h4++; h5 = h6 = 0; prefix = h1Prefix ? `${h1Prefix}.${h2}.${h3}.${h4}` : `${h2}.${h3}.${h4}` }
+        else if (level === 5) { h5++; h6 = 0; prefix = h1Prefix ? `${h1Prefix}.${h2}.${h3}.${h4}.${h5}` : `${h2}.${h3}.${h4}.${h5}` }
+        else if (level === 6) { h6++;                 prefix = h1Prefix ? `${h1Prefix}.${h2}.${h3}.${h4}.${h5}.${h6}` : `${h2}.${h3}.${h4}.${h5}.${h6}` }
 
         if (prefix) {
+          // 更新 inline.content（为了 API 兼容）
           inline.content = `${prefix} ${inline.content}`
+          // 更新第一个 text 子节点
+          textNode.content = `${prefix} ${textNode.content}`
         }
       }
     })
@@ -214,9 +207,7 @@ markdown: {
     // —— 自定义渲染规则 —— 
     md.renderer.rules.footnote_anchor = (tokens, idx, options, env, slf) => {
       let id = slf.rules.footnote_anchor_name?.(tokens, idx, options, env, slf) || ''
-      if (tokens[idx].meta.subId > 0) {
-        id += ':' + tokens[idx].meta.subId
-      }
+      if (tokens[idx].meta.subId > 0) id += ':' + tokens[idx].meta.subId
       return ` <a href="#fnref${id}" class="footnote-backref">🔼</a>`
     }
 
