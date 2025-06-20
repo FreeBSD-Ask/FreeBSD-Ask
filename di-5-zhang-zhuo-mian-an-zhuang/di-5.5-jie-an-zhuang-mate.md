@@ -1,4 +1,4 @@
-# 第 5.5 节 Mate
+# 5.5 Mate
 
 Mate 由 GNOME 2 复刻发展而来。
 

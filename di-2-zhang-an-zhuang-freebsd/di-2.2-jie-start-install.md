@@ -1,4 +1,4 @@
-# 第 2.2 节 使用 bsdinstall 开始安装
+# 2.2 使用 bsdinstall 开始安装
 
 >**技巧**
 >

@@ -1,4 +1,4 @@
-# 第 5.8 节 Lumina
+# 5.8 Lumina
 
 Lumina 使用 BSD 许可证。Lumina 技术栈为 QT5，不使用任何基于 Linux 的桌面框架，主张轻量化。
 

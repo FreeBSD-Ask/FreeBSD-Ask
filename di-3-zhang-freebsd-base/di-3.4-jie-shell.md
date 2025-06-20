@@ -1,4 +1,4 @@
-# 第 3.4 节 认识 shell
+# 3.4 认识 shell
 
 ## 什么是 shell
 

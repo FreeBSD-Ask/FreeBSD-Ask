@@ -1,4 +1,4 @@
-# 第 9.4 节 Linux Jail
+# 9.4 Linux Jail
 
 ## 准备工作
 

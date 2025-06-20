@@ -1,4 +1,4 @@
-# 第 6.10 节 微信（Linux 版）
+# 6.10 微信（Linux 版）
 
 ## 基于 RockyLinux 兼容层（FreeBSD Port）
 

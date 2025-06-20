@@ -1,4 +1,4 @@
-# 第 4.7 节 使用 freebsd-update 更新 FreeBSD
+# 4.7 使用 freebsd-update 更新 FreeBSD
 
 
 > **注意：**

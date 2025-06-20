@@ -1,4 +1,4 @@
-# 第 1.2 节 欢迎来到 FreeBSD
+# 1.2 欢迎来到 FreeBSD
 
 ## FreeBSD 怎么读
 
