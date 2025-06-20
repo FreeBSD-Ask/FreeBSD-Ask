@@ -138,97 +138,94 @@ export default defineConfig({
 	title: "FreeBSD 从入门到追忆",
 	description: "FreeBSD 从入门到追忆",
 	metaChunk: true,
-	markdown: {
-		image: {
-			lazyLoading: true
-		},
-	config: (md: MarkdownIt) => {
-      let h1Prefix = ''
-      let h2 = 0
-      let h3 = 0
-      let h4 = 0
-      let h5 = 0
-      let h6 = 0
+markdown: {
+  image: {
+    lazyLoading: true
+  },
+  config: (md: MarkdownIt) => {
+    // —— 自动编号插件 —— 
+    let h1Prefix = ''
+    let h2 = 0
+    let h3 = 0
+    let h4 = 0
+    let h5 = 0
+    let h6 = 0
 
-      md.core.ruler.push('auto_heading_number', (state) => {
-        h2 = h3 = h4 = h5 = h6 = 0
-        h1Prefix = ''
+    md.core.ruler.push('auto_heading_number', (state) => {
+      h2 = h3 = h4 = h5 = h6 = 0
+      h1Prefix = ''
 
-        for (let i = 0; i < state.tokens.length; i++) {
-          const token = state.tokens[i]
-          if (token.type === 'heading_open') {
-            const level = parseInt(token.tag.slice(1))
-            const inline = state.tokens[i + 1]
-            if (!inline || inline.type !== 'inline') continue
+      for (let i = 0; i < state.tokens.length; i++) {
+        const token = state.tokens[i]
+        if (token.type === 'heading_open') {
+          const level = parseInt(token.tag.slice(1), 10)
+          const inline = state.tokens[i + 1]
+          if (!inline || inline.type !== 'inline') continue
 
-            // 处理 H1：提取手动写的编号作为前缀，如 1.2
-            if (level === 1) {
-              const match = inline.content.match(/^(\d+\.\d+)\s+(.*)$/)
-              if (match) {
-                h1Prefix = match[1]
-                inline.content = match[1] + ' ' + match[2] // 保持原样
-              } else {
-                h1Prefix = ''
-              }
+          // 处理 H1：提取手动写的编号作为前缀，如 1.2
+          if (level === 1) {
+            const match = inline.content.match(/^(\d+\.\d+)\s+(.*)$/)
+            if (match) {
+              h1Prefix = match[1]
+              inline.content = match[1] + ' ' + match[2]
+            } else {
+              h1Prefix = ''
             }
+          }
 
-            // 处理 H2+
-            if (level === 2) {
-              h2++
-              h3 = h4 = h5 = h6 = 0
-              inline.content = `${h1Prefix}.${h2} ${inline.content}`
-            } else if (level === 3) {
-              h3++
-              h4 = h5 = h6 = 0
-              inline.content = `${h1Prefix}.${h2}.${h3} ${inline.content}`
-            } else if (level === 4) {
-              h4++
-              h5 = h6 = 0
-              inline.content = `${h1Prefix}.${h2}.${h3}.${h4} ${inline.content}`
-            } else if (level === 5) {
-              h5++
-              h6 = 0
-              inline.content = `${h1Prefix}.${h2}.${h3}.${h4}.${h5} ${inline.content}`
-            } else if (level === 6) {
-              h6++
-              inline.content = `${h1Prefix}.${h2}.${h3}.${h4}.${h5}.${h6} ${inline.content}`
-            }
-			}
-			}})},
-		config(md) {
-			md.use(footnote);
-			md.use(mathjax3, {
-				tex: {
-					tags: 'ams'
-				},
-				loader: {
-					load: ["input/tex", "output/chtml"]
-				},
-			});
-			md.use(taskLists, {
-				disabled: true,
-				divWrap: false,
-				divClass: 'checkbox',
-				idPrefix: 'cbx_',
-				ulClass: 'task-list',
-				liClass: 'task-list-item',
-			});
-			md.renderer.rules.footnote_anchor = function render_footnote_anchor(tokens, idx, options, env, slf) {
-				let id = slf.rules.footnote_anchor_name?.(tokens, idx, options, env, slf)
-				if (tokens[idx].meta.subId > 0) {
-					id += ':' + tokens[idx].meta.subId
-				}
-				return ' <a href="#fnref' + id + '" class="footnote-backref">🔼</a>'
-			};
-			const defaultCodeInline = md.renderer.rules.code_inline;
+          // 处理 H2+
+          if (level === 2) {
+            h2++; h3 = h4 = h5 = h6 = 0
+            inline.content = `${h1Prefix}.${h2} ${inline.content}`
+          } else if (level === 3) {
+            h3++; h4 = h5 = h6 = 0
+            inline.content = `${h1Prefix}.${h2}.${h3} ${inline.content}`
+          } else if (level === 4) {
+            h4++; h5 = h6 = 0
+            inline.content = `${h1Prefix}.${h2}.${h3}.${h4} ${inline.content}`
+          } else if (level === 5) {
+            h5++; h6 = 0
+            inline.content = `${h1Prefix}.${h2}.${h3}.${h4}.${h5} ${inline.content}`
+          } else if (level === 6) {
+            h6++
+            inline.content = `${h1Prefix}.${h2}.${h3}.${h4}.${h5}.${h6} ${inline.content}`
+          }
+        }
+      }
+    })
 
-			md.renderer.rules.code_inline = (tokens, idx, options, env, self) => {
-				tokens[idx].attrSet('v-pre', '');
-				return defaultCodeInline(tokens, idx, options, env, self);
-			};
-		}
+    // —— 插件加载 —— 
+    md.use(footnote)
+    md.use(mathjax3, {
+      tex: { tags: 'ams' },
+      loader: { load: ['input/tex', 'output/chtml'] }
+    })
+    md.use(taskLists, {
+      disabled: true,
+      divWrap: false,
+      divClass: 'checkbox',
+      idPrefix: 'cbx_',
+      ulClass: 'task-list',
+      liClass: 'task-list-item'
+    })
 
-	},
+    // —— 自定义渲染规则 —— 
+    md.renderer.rules.footnote_anchor = (tokens, idx, options, env, slf) => {
+      let id = slf.rules.footnote_anchor_name?.(tokens, idx, options, env, slf)
+      if (tokens[idx].meta.subId > 0) {
+        id += ':' + tokens[idx].meta.subId
+      }
+      return ' <a href="#fnref' + id + '" class="footnote-backref">🔼</a>'
+    }
+
+    // 保留 code_inline 原始行为并加 v-pre 属性
+    const defaultCodeInline = md.renderer.rules.code_inline
+    md.renderer.rules.code_inline = (tokens, idx, options, env, self) => {
+      tokens[idx].attrSet('v-pre', '')
+      return defaultCodeInline(tokens, idx, options, env, self)
+    }
+  }
+},
 	vue: {
 		template: {
 			compilerOptions: {
