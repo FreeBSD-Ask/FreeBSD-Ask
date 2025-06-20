@@ -104,7 +104,7 @@ FreeBSD 不仅仅是 **在生命周期内不变**，大版本更新也具有连�
 - Linux 二进制兼容层，可运行 Linux 软件。且软件运行速度并不逊色于 Linux。
 - 安全事件审计。
 - FreeBSD 的驱动在大致上与内核解耦合。
-- Linux 内核开发是个[较为封闭的过程](https://www.kernel.org/doc/html/latest/process/submitting-patches.html)，只有少数人能够参与直接提交代码。而 FreeBSD 秉持人人自由开发的理念，目前[你可以直接在 Github 上提交你的代码](https://github.com/freebsd/freebsd-src/pulls)，或者注册个账号在 <https://reviews.freebsd.org/> 进行大规模变更。
+- FreeBSD 秉持人人自由开发的理念，目前[你可以直接在 Github 上提交你的代码](https://github.com/freebsd/freebsd-src/pulls)，或者注册个账号在 <https://reviews.freebsd.org/> 进行大规模变更。
 - FreeBSD 的代码风格是 Kernighan & Ritchie 经典著作《C 程序设计语言》（*The C Programming Language*）中使用的风格。
 
 #### 参考文献
@@ -113,6 +113,7 @@ FreeBSD 不仅仅是 **在生命周期内不变**，大版本更新也具有连�
 - [Contribution Guidelines for GitHub](https://github.com/freebsd/freebsd-src/blob/main/CONTRIBUTING.md)，应该以此为准
 - Linux Kernel 由 Linus 一人裁决：“[Linus Torvalds 是决定改动能否进入 Linux 内核的最终裁决者。](https://www.kernel.org/doc/html/latest/translations/zh_CN/process/submitting-patches.html)”
 - [Linux 内核编码风格](https://www.kernel.org/doc/html/latest/process/coding-style.html)。
+- Linux 内核开发是个[较为封闭的过程](https://www.kernel.org/doc/html/latest/process/submitting-patches.html)，只有少数人能够参与直接提交代码。
   
 ### 选择 FreeBSD 的社会意义
 
