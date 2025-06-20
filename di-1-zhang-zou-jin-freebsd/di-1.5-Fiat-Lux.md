@@ -1,4 +1,4 @@
-# 第 1.5 节 加州大学伯克利分校与“Fiat Lux”（要有光）
+# 1.5 加州大学伯克利分校与“Fiat Lux”（要有光）
 
 >Westward the course of empire takes its way; 帝国一路向西；
 >

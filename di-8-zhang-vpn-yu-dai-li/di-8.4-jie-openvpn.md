@@ -1,4 +1,4 @@
-# 第 8.4 节 OpenVPN
+# 8.4 OpenVPN
 
 OpenVPN 在软件包中就有提供。
 

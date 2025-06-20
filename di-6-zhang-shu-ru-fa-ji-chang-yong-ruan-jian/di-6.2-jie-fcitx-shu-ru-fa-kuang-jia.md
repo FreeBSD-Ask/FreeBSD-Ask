@@ -1,4 +1,4 @@
-# 第 6.2 节 Fcitx 输入法框架
+# 6.2 Fcitx 输入法框架
 
 输入法框架和输入法本身是两码事，切不可混为一谈，输入法依赖输入法框架。即使在 Windows 上亦如此：Windows 目前其使用 [TSF 管理器](https://learn.microsoft.com/zh-cn/windows/win32/tsf/text-services-framework)。
 
