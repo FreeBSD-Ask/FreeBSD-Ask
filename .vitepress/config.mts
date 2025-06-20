@@ -2,6 +2,7 @@ import {
 	defineConfig
 } from 'vitepress';
 import autoNav from "vite-plugin-vitepress-auto-nav";
+import type MarkdownIt from 'markdown-it';
 import footnote from 'markdown-it-footnote';
 import mathjax3 from 'markdown-it-mathjax3-tao';
 import taskLists from 'markdown-it-task-checkbox';
@@ -9,9 +10,6 @@ import {
 	chineseSearchOptimize,
 	pagefindPlugin
 } from 'vitepress-plugin-pagefind';
-import {
-	defineConfig
-} from 'vitepress';
 
 const customElements = [
 	'mjx-container',
@@ -144,6 +142,59 @@ export default defineConfig({
 		image: {
 			lazyLoading: true
 		},
+	config: (md: MarkdownIt) => {
+      let h1Prefix = ''
+      let h2 = 0
+      let h3 = 0
+      let h4 = 0
+      let h5 = 0
+      let h6 = 0
+
+      md.core.ruler.push('auto_heading_number', (state) => {
+        h2 = h3 = h4 = h5 = h6 = 0
+        h1Prefix = ''
+
+        for (let i = 0; i < state.tokens.length; i++) {
+          const token = state.tokens[i]
+          if (token.type === 'heading_open') {
+            const level = parseInt(token.tag.slice(1))
+            const inline = state.tokens[i + 1]
+            if (!inline || inline.type !== 'inline') continue
+
+            // 处理 H1：提取手动写的编号作为前缀，如 1.2
+            if (level === 1) {
+              const match = inline.content.match(/^(\d+\.\d+)\s+(.*)$/)
+              if (match) {
+                h1Prefix = match[1]
+                inline.content = match[1] + ' ' + match[2] // 保持原样
+              } else {
+                h1Prefix = ''
+              }
+            }
+
+            // 处理 H2+
+            if (level === 2) {
+              h2++
+              h3 = h4 = h5 = h6 = 0
+              inline.content = `${h1Prefix}.${h2} ${inline.content}`
+            } else if (level === 3) {
+              h3++
+              h4 = h5 = h6 = 0
+              inline.content = `${h1Prefix}.${h2}.${h3} ${inline.content}`
+            } else if (level === 4) {
+              h4++
+              h5 = h6 = 0
+              inline.content = `${h1Prefix}.${h2}.${h3}.${h4} ${inline.content}`
+            } else if (level === 5) {
+              h5++
+              h6 = 0
+              inline.content = `${h1Prefix}.${h2}.${h3}.${h4}.${h5} ${inline.content}`
+            } else if (level === 6) {
+              h6++
+              inline.content = `${h1Prefix}.${h2}.${h3}.${h4}.${h5}.${h6} ${inline.content}`
+            }
+			}
+			}})},
 		config(md) {
 			md.use(footnote);
 			md.use(mathjax3, {
