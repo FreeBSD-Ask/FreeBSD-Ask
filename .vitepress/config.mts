@@ -143,10 +143,12 @@ markdown: {
   config: (md: MarkdownIt) => {
     let h1Prefix = ''
     let h2 = 0, h3 = 0, h4 = 0, h5 = 0, h6 = 0
+    let skipNumbering = false // 新增：是否跳过编号的标志
 
     md.core.ruler.push('auto_heading_number', (state) => {
       h2 = h3 = h4 = h5 = h6 = 0
       h1Prefix = ''
+      skipNumbering = false // 重置标志
 
       for (let i = 0; i < state.tokens.length; i++) {
         const tok = state.tokens[i]
@@ -156,20 +158,28 @@ markdown: {
         const inline = state.tokens[i + 1]
         if (!inline || inline.type !== 'inline') continue
 
-        // H1：提取前缀
+        // H1 处理
         if (level === 1) {
           const textNode = inline.children.find(t => t.type === 'text')
           if (textNode) {
             const m = textNode.content.match(/^(\d+\.\d+)\s+(.*)$/)
             if (m) {
+              // 包含数字前缀的 H1
               h1Prefix = m[1]
               textNode.content = `${h1Prefix} ${m[2]}`
+              skipNumbering = false // 重置跳过标志
+              h2 = h3 = h4 = h5 = h6 = 0 // 重置子标题计数器
             } else {
+              // 不包含数字前缀的 H1（如"前言"）
               h1Prefix = ''
+              skipNumbering = true // 设置跳过标志
             }
           }
           continue
         }
+
+        // 如果处于跳过编号状态，直接跳过处理
+        if (skipNumbering) continue
 
         // 2~6 级标题自增并构造编号
         let prefix = ''
