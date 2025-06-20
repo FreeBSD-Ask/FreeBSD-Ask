@@ -145,51 +145,53 @@ markdown: {
   config: (md: MarkdownIt) => {
     // —— 自动编号插件 —— 
     let h1Prefix = ''
-    let h2 = 0
-    let h3 = 0
-    let h4 = 0
-    let h5 = 0
-    let h6 = 0
+    let h2 = 0, h3 = 0, h4 = 0, h5 = 0, h6 = 0
 
     md.core.ruler.push('auto_heading_number', (state) => {
       h2 = h3 = h4 = h5 = h6 = 0
       h1Prefix = ''
 
       for (let i = 0; i < state.tokens.length; i++) {
-        const token = state.tokens[i]
-        if (token.type === 'heading_open') {
-          const level = parseInt(token.tag.slice(1), 10)
-          const inline = state.tokens[i + 1]
-          if (!inline || inline.type !== 'inline') continue
+        const tok = state.tokens[i]
+        if (tok.type !== 'heading_open') continue
 
-          // 处理 H1：提取手动写的编号作为前缀，如 1.2
-          if (level === 1) {
-            const match = inline.content.match(/^(\d+\.\d+)\s+(.*)$/)
-            if (match) {
-              h1Prefix = match[1]
-              inline.content = match[1] + ' ' + match[2]
-            } else {
-              h1Prefix = ''
-            }
-          }
+        const level = +tok.tag.slice(1)
+        const inline = state.tokens[i + 1]
+        if (!inline || inline.type !== 'inline') continue
 
-          // 处理 H2+
-          if (level === 2) {
-            h2++; h3 = h4 = h5 = h6 = 0
-            inline.content = `${h1Prefix}.${h2} ${inline.content}`
-          } else if (level === 3) {
-            h3++; h4 = h5 = h6 = 0
-            inline.content = `${h1Prefix}.${h2}.${h3} ${inline.content}`
-          } else if (level === 4) {
-            h4++; h5 = h6 = 0
-            inline.content = `${h1Prefix}.${h2}.${h3}.${h4} ${inline.content}`
-          } else if (level === 5) {
-            h5++; h6 = 0
-            inline.content = `${h1Prefix}.${h2}.${h3}.${h4}.${h5} ${inline.content}`
-          } else if (level === 6) {
-            h6++
-            inline.content = `${h1Prefix}.${h2}.${h3}.${h4}.${h5}.${h6} ${inline.content}`
+        // H1：提取手写前缀
+        if (level === 1) {
+          const m = inline.content.match(/^(\d+\.\d+)\s+(.*)$/)
+          if (m) {
+            h1Prefix = m[1]
+            inline.content = `${h1Prefix} ${m[2]}`
+          } else {
+            h1Prefix = ''
           }
+          continue
+        }
+
+        // 2~6 级标题自增
+        let prefix = ''
+        if (level === 2) {
+          h2++; h3 = h4 = h5 = h6 = 0
+          prefix = h1Prefix ? `${h1Prefix}.${h2}` : `${h2}`
+        } else if (level === 3) {
+          h3++; h4 = h5 = h6 = 0
+          prefix = h1Prefix ? `${h1Prefix}.${h2}.${h3}` : `${h2}.${h3}`
+        } else if (level === 4) {
+          h4++; h5 = h6 = 0
+          prefix = h1Prefix ? `${h1Prefix}.${h2}.${h3}.${h4}` : `${h2}.${h3}.${h4}`
+        } else if (level === 5) {
+          h5++; h6 = 0
+          prefix = h1Prefix ? `${h1Prefix}.${h2}.${h3}.${h4}.${h5}` : `${h2}.${h3}.${h4}.${h5}`
+        } else if (level === 6) {
+          h6++
+          prefix = h1Prefix ? `${h1Prefix}.${h2}.${h3}.${h4}.${h5}.${h6}` : `${h2}.${h3}.${h4}.${h5}.${h6}`
+        }
+
+        if (prefix) {
+          inline.content = `${prefix} ${inline.content}`
         }
       }
     })
@@ -211,18 +213,18 @@ markdown: {
 
     // —— 自定义渲染规则 —— 
     md.renderer.rules.footnote_anchor = (tokens, idx, options, env, slf) => {
-      let id = slf.rules.footnote_anchor_name?.(tokens, idx, options, env, slf)
+      let id = slf.rules.footnote_anchor_name?.(tokens, idx, options, env, slf) || ''
       if (tokens[idx].meta.subId > 0) {
         id += ':' + tokens[idx].meta.subId
       }
-      return ' <a href="#fnref' + id + '" class="footnote-backref">🔼</a>'
+      return ` <a href="#fnref${id}" class="footnote-backref">🔼</a>`
     }
 
-    // 保留 code_inline 原始行为并加 v-pre 属性
-    const defaultCodeInline = md.renderer.rules.code_inline
+    // 为行内 code 添加 v-pre
+    const defaultInline = md.renderer.rules.code_inline
     md.renderer.rules.code_inline = (tokens, idx, options, env, self) => {
       tokens[idx].attrSet('v-pre', '')
-      return defaultCodeInline(tokens, idx, options, env, self)
+      return defaultInline(tokens, idx, options, env, self)
     }
   }
 },
