@@ -82,3 +82,52 @@
   /* 对于任何尺寸均使 TOC 文本换行*/
 	white-space: normal !important;
 }
+
+/* 自动为标题加序号（不显示 H1，但 H1 重置计数器） */
+.content h1 {
+  counter-reset: h2counter;
+}
+
+/* 每级标题重置下一级计数器 */
+.content h2 {
+  counter-reset: h3counter;
+}
+.content h3 {
+  counter-reset: h4counter;
+}
+.content h4 {
+  counter-reset: h5counter;
+}
+.content h5 {
+  counter-reset: h6counter;
+}
+
+/* H2 添加一级编号：1. */
+.content h2::before {
+  counter-increment: h2counter;
+  content: counter(h2counter) ".\00a0\00a0"; /* \00a0 是不间断空格 */
+}
+
+/* H3 添加二级编号：1.1 */
+.content h3::before {
+  counter-increment: h3counter;
+  content: counter(h2counter) "." counter(h3counter) ".\00a0\00a0";
+}
+
+/* H4 添加三级编号：1.1.1 */
+.content h4::before {
+  counter-increment: h4counter;
+  content: counter(h2counter) "." counter(h3counter) "." counter(h4counter) ".\00a0\00a0";
+}
+
+/* H5 添加四级编号：1.1.1.1 */
+.content h5::before {
+  counter-increment: h5counter;
+  content: counter(h2counter) "." counter(h3counter) "." counter(h4counter) "." counter(h5counter) ".\00a0\00a0";
+}
+
+/* H6 添加五级编号：1.1.1.1.1 */
+.content h6::before {
+  counter-increment: h6counter;
+  content: counter(h2counter) "." counter(h3counter) "." counter(h4counter) "." counter(h5counter) "." counter(h6counter) ".\00a0\00a0";
+}
