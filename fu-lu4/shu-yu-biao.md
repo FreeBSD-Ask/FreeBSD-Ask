@@ -10,4 +10,4 @@
 |Base System|基本系统|内核+用户空间（FreeBSD 叫 world），即所有来自 src 的东西|
 |CURRENT|/|实际上就是一般项目中 head 或 main 分支的意思|
 |MFC（Merge From Head）|合并自 main|向后移植|
-|14.0-Stable|/|仅代表 ABI 稳定，仍是不稳定的开发分支|
+|XX.0-STABLE|/|仅代表 ABI 稳定，仍是不稳定的开发分支|
