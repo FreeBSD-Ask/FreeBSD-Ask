@@ -105,7 +105,7 @@ FreeBSD 不仅仅是 **在生命周期内不变**，大版本更新也具有连�
 - 安全事件审计。
 - FreeBSD 的驱动在大致上与内核解耦合。
 - Linux 内核开发是个[较为封闭的过程](https://www.kernel.org/doc/html/latest/process/submitting-patches.html)，只有少数人能够参与直接提交代码。而 FreeBSD 秉持人人自由开发的理念，目前[你可以直接在 Github 上提交你的代码](https://github.com/freebsd/freebsd-src/pulls)，或者注册个账号在 <https://reviews.freebsd.org/> 进行大规模变更。
-- FreeBSD 的代码风格是 Kernighan & Ritchie 的《C 程序设计语言》中使用的风格。
+- FreeBSD 的代码风格是 Kernighan & Ritchie 经典著作《C 程序设计语言》（*The C Programming Language*）中使用的风格。
 
 #### 参考文献
 
@@ -118,18 +118,14 @@ FreeBSD 不仅仅是 **在生命周期内不变**，大版本更新也具有连�
 
 #### 保留一份希望
 
-不难发现 GNOME、Systemd、PulseAudio、Wayland、PipeWire 目前这些主流的 Linux 项目其实都是由红帽公司（Red Hat）实际控制和施加影响的。
+不难发现 GNOME、Systemd、PulseAudio、Wayland、PipeWire 目前这些主流的 Linux 项目其实都是由红帽公司（Red Hat）实际控制和施加影响的，而且关键在于他们大都难以完全适配其他类 Unix 操作系统。
 
->**思考题**
->>
->> 显而易见：目前 FreeBSD 上的桌面部件的缺失很大程度上是因为他们过分依赖了 Linux 特有函数库，比如包含 `ip` 命令的 `iproute2` 软件包。更多的原因则是因为这些桌面或部件和 systemd 做了深度捆绑或者根本就是强制依赖，比如 `NetworkManager`。而 Samba 开发者则会说“We use Linux, we develop for Linux, all others please submit patches”（我们使用 Linux，我们为 Linux 开发，其余系统的用户请提交补丁）FreeBSD 社区的人把这种行为叫做“Linuxism”（Linux 主义/Linux 歧视）。
->>
->> 这种行为会导致何种后果我们不得而知，但是这种程序愈来愈多了，而且有成为主流的趋势，甚至就连大部分开发者在开发程序时也不再考虑兼容 init，比如 `todesk`。甚至 Java 程序都丧失掉了他的可移植性，为什么 FreeBSD 上的 Eclipse 将近两年没有更新？就是因为这类[捆绑问题](https://git.eclipse.org/r/c/platform/eclipse.platform.swt/+/163641/)。预计在将来所有可运行在 Linux 上的程序也将失去任何的可移植性。
->>
->>现在 FreeBSD 所面临的这种困境，将是未来所有人都要面对的。
->>
->
->你怎么看？
+
+显而易见：目前 FreeBSD 上的桌面部件的缺失很大程度上是因为他们过分依赖了 Linux 特有函数库，比如包含 `ip` 命令的 `iproute2` 软件包。更多的原因则是因为这些桌面或部件和 systemd 做了深度捆绑或者根本就是强制依赖，比如 `NetworkManager`。而 Samba 开发者则说“We use Linux, we develop for Linux, all others please submit patches”（我们使用 Linux，我们为 Linux 开发，其余系统的用户请提交补丁）FreeBSD 社区的人把这种行为叫做“Linuxism”（Linux 主义/Linux 歧视）。
+
+这种行为会导致何种后果我们不得而知，但是这种程序愈来愈多了，而且有成为主流的趋势，甚至就连大部分开发者在开发程序（如 `todesk`）时也不再考虑兼容 init。甚至 Java 程序都丧失掉了他的可移植性，为什么 FreeBSD 上的 Eclipse 将近两年没有更新？就是因为这类[捆绑问题](https://git.eclipse.org/r/c/platform/eclipse.platform.swt/+/163641/)。预计在将来所有可运行在 Linux 上的程序也将失去任何的可移植性。
+
+现在 FreeBSD 所面临的这种困境，将是未来所有人都要面对的。
 
 - 选择 FreeBSD，就是选择保留一份自由软件的火种。
 - 选择 FreeBSD，就是选择保留下一份真正自由的操作系统。能够使开源事业继续坚持下去，并践行真正的 UNIX 哲学。
