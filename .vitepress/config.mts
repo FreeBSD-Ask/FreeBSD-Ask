@@ -3,7 +3,6 @@ import {
 } from 'vitepress';
 import autoNav from "vite-plugin-vitepress-auto-nav";
 import type MarkdownIt from 'markdown-it';
-import Token from 'markdown-it/lib/token.js';
 import footnote from 'markdown-it-footnote';
 import mathjax3 from 'markdown-it-mathjax3-tao';
 import taskLists from 'markdown-it-task-checkbox';
