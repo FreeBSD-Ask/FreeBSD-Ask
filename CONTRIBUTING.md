@@ -42,6 +42,11 @@
 	maxRequestBuffer = 1048576000 # 扩大缓冲区，约 1 GB
 ```
 
+名词解释：
+
+- `autocrlf`：配置 Git 自动处理(转换)行结束符的默认行为。参见[配置 Git 处理行结束符 - Github Docs](https://docs.github.com/zh/get-started/git-basics/configuring-git-to-handle-line-endings)
+- `signingkey`：指设置带签名提交时默认使用的签名密钥。signingkey 既可指 GPG Key，亦可指 SSH Key。因为自 Git 2.34 起，Git 支持了 SSH 签名验证功能。参见[关于提交签名验证 - Github Docs](https://docs.github.com/zh/authentication/managing-commit-signature-verification/about-commit-signature-verification)
+
 ## 开放任务
 
 所有任务的排序都是随机的并无优先级之分，你可以选你喜欢的去做。
