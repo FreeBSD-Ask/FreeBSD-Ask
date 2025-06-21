@@ -197,8 +197,8 @@ MASTER_SITE_OVERRIDE?=http://mirrors.ustc.edu.cn/freebsd-ports/distfiles/${DIST_
 
 ## kernel modules（kmods）内核模块源：面向 FreeBSD 14.2 及更高版本（不含 15.0-CURRENT）
 
-新建文件夹 `/usr/local/etc/pkg/repos`（即 `mkdir -p /usr/local/etc/pkg/repos`），再新建文件 `/usr/local/etc/pkg/repos/FreeBSD-kmods.conf`：
-
+- 对于 14.2-RELEASE：新建文件夹 `/usr/local/etc/pkg/repos`（即 `mkdir -p /usr/local/etc/pkg/repos`），再新建文件 `/usr/local/etc/pkg/repos/FreeBSD-kmods.conf`。
+- > 14.2-RELEASE：编辑 `/etc/pkg/FreeBSD.conf`。
 
 ### FreeBSD 官方源
 
@@ -208,7 +208,7 @@ MASTER_SITE_OVERRIDE?=http://mirrors.ustc.edu.cn/freebsd-ports/distfiles/${DIST_
 
 ```sh
 FreeBSD-kmods {
-	url: pkg+https://pkg.freebsd.org/${ABI}/kmods_quarterly_2
+	url: pkg+https://pkg.freebsd.org/${ABI}/kmods_quarterly_${VERSION_MINOR}
 	signature_type: "fingerprints"
 	fingerprints: "/usr/share/keys/pkg"
 	mirror_type: "srv"
@@ -220,7 +220,7 @@ FreeBSD-kmods {
 
 ```sh
 FreeBSD-kmods {
-	url: pkg+https://pkg.freebsd.org/${ABI}/kmods_latest_2
+	url: pkg+https://pkg.freebsd.org/${ABI}/kmods_latest_${VERSION_MINOR}
 	signature_type: "fingerprints"
 	fingerprints: "/usr/share/keys/pkg"
 	mirror_type: "srv"
@@ -237,7 +237,7 @@ FreeBSD-kmods {
 
 ```sh
 FreeBSD-kmods {
-	url: https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/kmods_quarterly_2
+	url: https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/kmods_quarterly_${VERSION_MINOR}
 	enabled: yes
 }
 ```
@@ -246,7 +246,7 @@ FreeBSD-kmods {
 
 ```sh
 FreeBSD-kmods {
-	url: https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/kmods_latest_2
+	url: https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/kmods_latest_${VERSION_MINOR}
 	enabled: yes
 }
 ```
