@@ -1,4 +1,4 @@
-# 1.1 操作系统的历程：UNIX、BSD、Linux 的演化
+# 1.1 操作系统的历程：UNIX、BSD 和 Linux
 
 ## 什么是 UNIX？
 

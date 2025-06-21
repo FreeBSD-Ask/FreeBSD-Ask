@@ -1,4 +1,4 @@
-# 3.9 sudo 与 doas
+# 3.9 sudo 和 doas
 
 
 ![权限示意图](../.gitbook/assets/qie-su.svg)
