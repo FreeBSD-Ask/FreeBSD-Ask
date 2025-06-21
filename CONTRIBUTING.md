@@ -66,6 +66,7 @@
 - [ ] 32.4.网络信息系统（NIS）（过时，用 SSSD-LADP 代替）
 - [ ] 30.5.使用 ATM 上的 PPP (PPPoA)（过时）
 - [ ] 29.4.拨入服务（过时）
+- [ ] gbde 相关加密（已从[源代码](https://github.com/freebsd/freebsd-src/commit/8d2d1d651678178aa7f24f0530347f860423fd9e)移除）
 - [ ] 29.5.拨出服务（过时）
 - [ ] 30.2.配置 PPP（过时）
 - [ ] 31.3.DragonFly 邮件代理（DMA）（过时，用 Postfix 等代替）
