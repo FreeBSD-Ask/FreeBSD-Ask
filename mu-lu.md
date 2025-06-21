@@ -1,4 +1,4 @@
-# 目录
+# Table of contents
 
 * [FreeBSD 操作系统研究导论（第三版：草稿）](README.md)
 * [编辑日志](CHANGELOG.md)
@@ -255,7 +255,7 @@
 * [23.2 ZFS 文件系统](di-23-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-23.2-jie-zfs.md)
 * [23.3 磁盘扩容和分区调整](di-23-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-23.3-jie-ci-pan-kuo-rong.md)
 * [23.4 Windows 文件系统](di-23-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-23.4-jie-ntfs-de-gua-zai.md)
-* [23.5 Swap 交换分区的设置](di-23-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-23.5-jie-swap-jiao-huan-fen-qu-de-she-zhi.md)
+* [23.5 Swap 交换分区](di-23-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-23.5-jie-swap-jiao-huan-fen-qu-de-she-zhi.md)
 * [23.6 Linux 文件系统](di-23-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-23.6-jie-ext-234-deng-wen-jian-xi-tong.md)
 
 ## 第 24 章 DragonFly BSD 入门
