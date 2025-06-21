@@ -135,8 +135,8 @@ export default defineConfig({
 	},
 	lang: 'zh-CN',
 	lastUpdated: true,
-	title: "FreeBSD 从入门到追忆",
-	description: "FreeBSD 从入门到追忆",
+	title: "FreeBSD 操作系统研究导论",
+	description: "FreeBSD 操作系统研究导论",
 	metaChunk: true,
 markdown: {
   image: { lazyLoading: true },
