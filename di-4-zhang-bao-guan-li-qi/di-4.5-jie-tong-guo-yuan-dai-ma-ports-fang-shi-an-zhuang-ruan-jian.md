@@ -331,37 +331,14 @@ root@ykla:/usr/ports/ports-mgmt/portmaster # portmaster sysutils/htop  --show-wo
 
 ## FreeBSD USE
 
-- 如何指定 Ports 编译的版本？
-
-如 Python 现在的默认编译版本是 3.9，要改为 3.11，：
-
-```sh
-# echo "DEFAULT_VERSIONS+= python=3.11  python3=3.11" >> /etc/make.conf
-```
-
->如果只设置了单个参数，那么出现警告是正常的，见 [Bug](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=243034)
->
->```sh
->/!\ WARNING /!\
->
->PYTHON_DEFAULT must be a version present in PYTHON2_DEFAULT or PYTHON3_DEFAULT,
->if you want more Python flavors, set BUILD_ALL_PYTHON_FLAVORS in your make.conf
->```
-
-
-完整的列表见 <https://cgit.freebsd.org/ports/tree/Mk/bsd.default-versions.mk>
-
-### 参考资料
-
-- [Ports/DEFAULT_VERSIONS](https://wiki.freebsd.org/Ports/DEFAULT_VERSIONS)
-- [Python](https://wiki.freebsd.org/Python)
-
 
 - 如何全局屏蔽 mysql
 
 ```sh
 # echo "OPTION_UNSET+= MYSQL" >> /etc/make.conf
 ```
+
+完整的列表见 <https://cgit.freebsd.org/ports/tree/Mk/bsd.default-versions.mk>
 
 ## FreeBSD ports 多线程编译
 
