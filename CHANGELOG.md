@@ -8,6 +8,7 @@
   - 格式化：第 21.5 节 ArchLinux 兼容层（基于 archlinux-pacman）
   - 为镜像站 <https://docs.bsdcn.org/> 添加了自动序号
   - 重写：22.7 Python 和 VS Code：Python
+  - 本书更名为《FreeBSD 操作系统研究入门》
 - 2025.6.20
   - 第 1.2 节 欢迎来到 FreeBSD：完全重写“为什么选择 FreeBSD”，去除有关 Linux 的描述
 - 2025.6.19
