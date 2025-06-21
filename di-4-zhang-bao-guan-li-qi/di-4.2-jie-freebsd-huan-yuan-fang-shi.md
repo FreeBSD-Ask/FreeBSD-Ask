@@ -198,7 +198,7 @@ MASTER_SITE_OVERRIDE?=http://mirrors.ustc.edu.cn/freebsd-ports/distfiles/${DIST_
 ## kernel modules（kmods）内核模块源：面向 FreeBSD 14.2 及更高版本（不含 15.0-CURRENT）
 
 - 对于 14.2-RELEASE：新建文件夹 `/usr/local/etc/pkg/repos`（即 `mkdir -p /usr/local/etc/pkg/repos`），再新建文件 `/usr/local/etc/pkg/repos/FreeBSD-kmods.conf`。
-- > 14.2-RELEASE：编辑 `/etc/pkg/FreeBSD.conf`。
+- \> 14.2-RELEASE：编辑 `/etc/pkg/FreeBSD.conf`。
 
 ### FreeBSD 官方源
 
