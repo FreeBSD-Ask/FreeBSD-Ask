@@ -83,9 +83,14 @@ FreeBSD 是真正自由（Liberty）的**操作系统**，在这波谲云诡的�
 ## 贡献者
 
 ![贡献者](https://contrib.nn.ci/api?repo=FreeBSD-Ask/FreeBSD-Ask)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FFreeBSD-Ask%2FFreeBSD-Ask.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FFreeBSD-Ask%2FFreeBSD-Ask?ref=badge_shield)
 
 ## 授权协议
 
 本项目采用《CC BY 4.0 署名 4.0 协议国际版》，详见[署名 4.0 协议国际版法律文本](https://creativecommons.org/licenses/by/4.0/legalcode.zh-hans)。
 
 ![CC BY](.gitbook/assets/by.png)
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FFreeBSD-Ask%2FFreeBSD-Ask.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FFreeBSD-Ask%2FFreeBSD-Ask?ref=badge_large)
