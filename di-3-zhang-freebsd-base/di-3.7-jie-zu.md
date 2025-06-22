@@ -59,7 +59,7 @@ FreeBSD 中主要有三类账户：系统账户、用户账户，以及超级用
 
 ```sh
 root@ykla:/ #  adduser
-Username: test # 用户名
+Username: test # 用户名①
 Full name:  # 全名，可留空
 Uid (Leave empty for default): # UID 设置，可留空
 Login group [test]: # 登录组
@@ -93,6 +93,7 @@ Add another user? (yes/no): no # 还需要创建另一个账号吗？
 Goodbye!
 ```
 
+- ①：登录名命名有一些限制，参见 [passwd(5)](https://man.freebsd.org/cgi/man.cgi?query=passwd&sektion=5&format=html)。但是注意，不支持八位编码字符集，如不支持中文（即仅支持特定 ASCII 字符）。
 
 ## `rmuser` 删除用户与 `passwd` 密码修改
 
