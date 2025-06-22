@@ -117,7 +117,7 @@ FreeBSD 不仅仅是 **在生命周期内不变**，大版本更新也具有连�
   
 ### 选择 FreeBSD 的社会意义
 
-#### 保留一份希望
+#### 红帽公司控制下的 Linux 歧视
 
 不难发现 GNOME、Xorg（X11）、DBus、Systemd、PulseAudio、Wayland、PipeWire 目前这些主流的 Linux 项目其实都是由红帽公司（Red Hat）实际控制和施加影响的，而且关键在于他们大都难以完全适配其他类 Unix 操作系统。
 
