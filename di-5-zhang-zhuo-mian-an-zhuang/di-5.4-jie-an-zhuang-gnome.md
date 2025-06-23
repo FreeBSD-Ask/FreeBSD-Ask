@@ -106,7 +106,7 @@ $ echo "/usr/local/bin/gnome-session" > ~/.xinitrc
 # ee /usr/local/etc/gdm/locale.conf
 ```
 
-添加以下内容：
+将原有内容替换如下：
 
 ```sh
 LANG="zh_CN.UTF-8"
