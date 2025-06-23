@@ -42,8 +42,6 @@
 
 `请选择网络接口进行配置`
 
-
-
 ![](../.gitbook/assets/ins-w2.png)
 
 `更改地区/国家（FCC/US）？`
@@ -110,5 +108,6 @@
 ### 参考文献
 
 - [Regulatory Domain Support](https://wiki.freebsd.org/WiFi/RegulatoryDomainSupport)
-- [regdomain.xml --	802.11 wireless	regulatory definitions](https://man.freebsd.org/cgi/man.cgi?query=regdomain&sektion=5)，对应编码请参考系统中的 `/etc/regdomain.xml` 文件。
+- [main/lib/lib80211/regdomain.xml](https://github.com/freebsd/freebsd-src/blob/main/lib/lib80211/regdomain.xml)，regdomain.xml 在源代码的位置
+- [regdomain.xml --	802.11 wireless	regulatory definitions](https://man.freebsd.org/cgi/man.cgi?query=regdomain&sektion=5)，对应编码请参考系统中的 `/etc/regdomain.xml` 文件
 - [阿里公共 DNS](https://www.alidns.com/)
