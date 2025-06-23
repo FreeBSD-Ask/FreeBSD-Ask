@@ -51,3 +51,34 @@ ABC
 ~
 :wq
 ```
+
+## microsoft-edit 
+
+microsoft-edit 是微软开源的文本编辑器，原生支持中文、交互界面简单、可使用鼠标操作。
+
+- 使用 pkg 安装：
+
+```sh
+# pkg ins microsoft-edit
+```
+
+- 还可以使用 Ports 安装：
+
+```sh
+# cd /usr/ports/editors/microsoft-edit/ 
+# make install clean
+```
+
+使用方式：
+
+
+```sh
+$ msedit abc.txt
+```
+
+![](../.gitbook/assets/msedit1.png)
+
+![](../.gitbook/assets/msedit2.png)
+
+操作非常简单，不再赘述。
+

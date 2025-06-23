@@ -4,6 +4,8 @@
 
 ## 2025 年第二季度
 
+- 2025.6.23
+  - 3.6 文本编辑器新增：microsoft-edit
 - 2025.6.21
   - 格式化：第 21.5 节 ArchLinux 兼容层（基于 archlinux-pacman）
   - 为镜像站 <https://docs.bsdcn.org/> 添加了自动序号
