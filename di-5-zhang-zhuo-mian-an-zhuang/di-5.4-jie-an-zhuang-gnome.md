@@ -112,7 +112,6 @@ $ echo "/usr/local/bin/gnome-session" > ~/.xinitrc
 LANG="zh_CN.UTF-8"
 LC_CTYPE="zh_CN.UTF-8"
 LC_MESSAGES="zh_CN.UTF-8"
-LC_ALL="zh_CN.UTF-8"
 ```
 
 ### 中文输入法
