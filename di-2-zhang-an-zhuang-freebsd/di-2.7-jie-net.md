@@ -36,11 +36,20 @@
 
 >**注意**
 >
->博通网卡请安装后再参照 WiFi 章节进行处理。
+>建议跳过此部分，重启进入系统后再参照无线网络相关内容进行设置（尤其是博通网卡用户）。否则可能会无限卡住或直接 Panic。
 
 ![](../.gitbook/assets/ins-w1.png)
 
 `请选择网络接口进行配置`
+
+>**警告**
+>
+>由于 [Bug 287538 - Installer error on setting regdomain](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=287538)，目前选择任何无线电区域，都会报错如下：
+>
+>```sh
+>Error while applying chosen settings  
+>(unknown regdomain Expected  eval: Use: not found)
+>```
 
 ![](../.gitbook/assets/ins-w2.png)
 
