@@ -7,7 +7,7 @@ GNOME 过去曾是 GNU 项目，旨在开发一套功能齐全的桌面环境。
 - 使用 pkg 安装：
 
 ```sh
-# pkg install xorg gnome noto-sc xdg-user-dirs
+# pkg install xorg gnome noto-sc
 ```
 
 - 或者使用 Ports 安装：
