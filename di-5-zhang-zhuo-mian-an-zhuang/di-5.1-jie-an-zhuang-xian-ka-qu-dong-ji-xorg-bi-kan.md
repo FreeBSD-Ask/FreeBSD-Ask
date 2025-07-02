@@ -201,6 +201,17 @@ EndSection
 - [backlight -- configure backlight	hardware](https://man.freebsd.org/cgi/man.cgi?backlight)
 - 经过测试，此部分教程适用于 renoir 显卡：
 
+## 检查状态
+
+如何判断是否成功驱动显卡：
+
+```sh
+$ ls -al /dev/dri/card0
+lrwxr-xr-x  1 root wheel 8 Jul  2 19:39 /dev/dri/card0 -> ../drm/0
+```
+
+你会发现你多了一块  `card0`（一般是数字是 `0`）。
+
 ## 故障排除与未竟事宜
 
 - 如果显卡使用驱动有问题请直接联系作者：[https://github.com/freebsd/drm-kmod/issues](https://github.com/freebsd/drm-kmod/issues)
