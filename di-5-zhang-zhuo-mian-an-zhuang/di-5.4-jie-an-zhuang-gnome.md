@@ -1,5 +1,11 @@
 # 5.4 GNOME
 
+>**警告**
+>
+>目前因为 [Bug 287955 - x11/gdm: The user cannot log in; the system hangs at the login screen in gdm 47](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=287955)，目前 gdm 无法正常使用，会卡在登录界面，`startx` 正常。
+>
+>虚拟机正常。
+
 GNOME 过去曾是 GNU 项目，旨在开发一套功能齐全的桌面环境。值得注意的是，在英语单词中，GNOME 中的 `G` 并不发音（/ˈnoʊm/）。
 
 ## 安装
