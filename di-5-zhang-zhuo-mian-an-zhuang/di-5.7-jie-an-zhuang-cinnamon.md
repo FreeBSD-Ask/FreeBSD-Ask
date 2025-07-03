@@ -40,6 +40,10 @@ Cinnamon 基于 GNOME Shell，来自 Linux Mint 项目。
 exec cinnamon-session
 ```
 
+## 配置 LightDM
+
+编辑 `/usr/local/etc/lightdm/lightdm.conf`，找到 `greeter-session=lightdm-gtk-greete` 改成 `greeter-session=slick-greeter`。
+
 ## 配置 `fstab`
 
 编辑 `/etc/fstab`，添加：
