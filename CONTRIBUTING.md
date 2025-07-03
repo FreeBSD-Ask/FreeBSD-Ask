@@ -88,7 +88,6 @@
   - [X] FreeBSD 开发模式（组织结构）
 - [ ] 第 2 章 安装 FreeBSD
   - [ ] FreeBSD Live CD 用法（USB img 无法挂载以进行重置密码登操作，因为文件系统是只读的，需要解决）
-  - [ ] PXE 安装 FreeBSD
 - [ ] 第 3 章 FreeBSD 基础
   - [ ] 3.2.虚拟控制台和终端
   - [ ] 3.3.用户和基本账户管理
@@ -96,7 +95,6 @@
   - [ ] 3.5.目录结构
   - [ ] 3.6.磁盘结构
   - [ ] 3.8.进程和守护进程
-  - [ ] Emacs 编辑器基础用法（合并入命令行基础）
 - [ ] 第 4 章 安装应用程序：软件包和 Ports
   - [ ] 4.6.使用 Poudriere 构建软件包（考虑结合 FreeBSD 期刊）
 - [ ] 第 5 章 X Window 系统
@@ -286,7 +284,7 @@
   - [ ] IPv6 配置
     - [ ] WiFi
     - [ ] 以太网
-  - [ ] 更新：第 17.8 节 PostgreSQL 与 pgAdmin4
+  - [X] 更新：PostgreSQL 与 pgAdmin4
   - [ ] NTP
   - [ ] WireGuard
   - [ ] Redis
