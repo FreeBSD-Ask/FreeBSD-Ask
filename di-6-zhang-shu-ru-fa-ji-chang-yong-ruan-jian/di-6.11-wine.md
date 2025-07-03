@@ -11,6 +11,13 @@
 # pkg ins wine wine-gecko wine-mono
 ```
 
+解释：
+
+|程序|说明|
+|wine|Wine 主程序|
+|wine-gecko|Wine 项目实现的 IE，基于火狐的 Gecko 浏览器内核 |
+|wine-mono|mono 是基于 .NET 框架，提供了对 .NET 4.8 及更低版本的支持|
+
 >**注意**
 >
 >必须安装 wine-gecko，否则 `winecfg` 会报错找不到 IE。
@@ -27,7 +34,7 @@ $ /usr/local/share/wine/pkg32.sh install wine mesa-dri
 
 >**注意**
 >
->这一步不做，不支持 32 位 Windows 程序。
+>这一步不做，不支持 32 位 Windows 程序。其中 mesa-dri 提供了显卡硬解。
 
 ## 配置显卡硬解
 
