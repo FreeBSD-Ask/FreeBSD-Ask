@@ -42,6 +42,10 @@ Mate 由 GNOME 2 复刻发展而来。
 # service lightdm enable 
 ```
 
+## 配置 LightDM
+
+编辑 `/usr/local/etc/lightdm/lightdm.conf`，找到 `greeter-session=lightdm-gtk-greete` 改成 `greeter-session=slick-greeter`。
+
 ## `startx` 配置文件
 
 在 `~/.xinitrc` 文件内加入下面一行：
@@ -60,8 +64,6 @@ exec mate-session
 ```sh
 # cap_mkdb /etc/login.conf
 ```
-
-
 
 ## 输入法
 
