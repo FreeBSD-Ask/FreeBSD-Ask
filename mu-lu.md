@@ -1,4 +1,4 @@
-# 目录
+# Table of contents
 
 * [FreeBSD 操作系统研究导论（第三版：草稿）](README.md)
 * [编辑日志](CHANGELOG.md)
@@ -93,6 +93,7 @@
 * [6.8 金山 WPS（Linux 版）](di-6-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-6.8-jie-an-zhuang-jin-shan-wps.md)
 * [6.9 压缩和解压](di-6-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-6.9-jie-ya-suo-yu-jie-ya.md)
 * [6.10 微信（Linux 版）](di-6-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-6.10-wechat.md)
+* [6.11 Wine](di-6-zhang-shu-ru-fa-ji-chang-yong-ruan-jian/di-6.11-wine.md)
 
 ## 第 7 章 多媒体和外部设备
 
