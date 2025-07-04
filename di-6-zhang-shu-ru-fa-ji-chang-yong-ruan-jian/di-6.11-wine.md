@@ -70,6 +70,7 @@ $ wine winecfg
 ```sh
 $ rm -rf $HOME/test
 $ WINEPREFIX=$HOME/test wine winecfg
+```
 
 ## 测试运行 WinSCP（32 位 Windows 程序）
 
