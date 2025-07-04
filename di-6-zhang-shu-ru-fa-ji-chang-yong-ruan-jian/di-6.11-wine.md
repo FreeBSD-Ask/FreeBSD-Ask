@@ -18,8 +18,8 @@ Wine 是一款能在 Unix 上运行 Microsoft Windows 程序的软件。
 |程序|说明|
 |:---|:---|
 |wine|Wine 主程序|
-|wine-gecko|Wine 项目实现的 IE，基于火狐的 Gecko 浏览器内核 |
-|wine-mono|mono 基于 .NET 框架，提供了对 .NET 4.8 及更低版本的支持|
+|wine-gecko|Wine 项目基于火狐的 Gecko 浏览器内核实现的 IE |
+|wine-mono|mono 提供了对 .NET 4.8 及更低版本框架的支持|
 
 >**注意**
 >
