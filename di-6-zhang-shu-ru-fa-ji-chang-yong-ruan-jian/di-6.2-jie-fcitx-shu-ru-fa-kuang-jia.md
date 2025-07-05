@@ -97,7 +97,7 @@ $ cp /usr/local/share/applications/org.fcitx.Fcitx5.desktop ~/.config/autostart/
 ```
 
 
-## 配置 Fcitx4/5 环境变量
+## 配置 Fcitx 环境变量
 
 根据自己使用的桌面管理器及 shell 择一使用：
 
