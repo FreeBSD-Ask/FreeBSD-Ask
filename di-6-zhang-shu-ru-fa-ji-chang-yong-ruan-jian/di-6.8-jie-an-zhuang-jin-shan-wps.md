@@ -68,11 +68,11 @@ bash-5.1# ldd /opt/kingsoft/wps-office/office6/wps
 
 ### 运行金山 WPS
 
+使用普通用户权限：
 
 ```bash
-ykla@ykla:~ $ /compat/linux//opt/kingsoft/wps-office/office6/wps
+$ /compat/linux/opt/kingsoft/wps-office/office6/wps
 ```
-
 
 ![FreeBSD WPS](../.gitbook/assets/wps1.png)
 
@@ -83,8 +83,6 @@ ykla@ykla:~ $ /compat/linux//opt/kingsoft/wps-office/office6/wps
 ## 基于 ArchLinux 兼容层
 
 ```sh
-# fetch http://book.bsdcn.org/arch.sh #下载脚本构建兼容层
-# sh arch.sh #运行脚本
 # chroot /compat/arch/ /bin/bash #进入 Arch 兼容层
 # passwd #为 Arch 的 root 设置一个密码
 # passwd test #为 Arch 的 test 设置一个密码，脚本已经创建过该用户了！
@@ -181,8 +179,6 @@ Fcitx5 输入法没反应。待测试。如你知道怎么做，请告诉我们�
 ## 基于 Ubuntu 兼容层
 
 ```sh
-# fetch http://book.bsdcn.org/ubuntu.sh #下载脚本构建兼容层
-# sh ubuntu.sh #运行脚本
 # chroot /compat/ubuntu/ /bin/bash #进入 Ubuntu 兼容层
 ```
 
