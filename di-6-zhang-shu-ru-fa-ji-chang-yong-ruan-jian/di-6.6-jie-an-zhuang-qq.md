@@ -100,8 +100,6 @@ fcitx5 输入法正常：
 请看 Linux 兼容层的 ArchLinux 兼容层部分。  
 
 ```sh
-# 自行将脚本创建为 arch.sh，请参看兼容层相关章节。
-# sh arch.sh #运行脚本
 # chroot /compat/arch/ /bin/bash #进入 Arch 兼容层
 # passwd #为 Arch 的 root 设置一个密码
 # passwd test #为 Arch 的 test 设置一个密码，上述脚本已经创建过该用户了！不设置密码无法正常使用 aur。
