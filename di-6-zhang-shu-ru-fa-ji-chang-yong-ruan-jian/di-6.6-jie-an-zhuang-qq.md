@@ -152,14 +152,12 @@ $ exit # 此时位于 Arch 兼容层！退回到 root 用户
 启动 QQ：
 
 ```sh
-# export LANG=zh_CN.UTF-8 #此时位于 Ubuntu 兼容层。设定环境变量
-# export LC_ALL=zh_CN.UTF-8 #此时位于 Ubuntu 兼容层。设定环境变量
-# /bin/qq --no-sandbox --in-process-gpu #此时位于 Ubuntu 兼容层
+# /bin/qq --no-sandbox --in-process-gpu # 此时位于 Ubuntu 兼容层
 ```
 
 >**注意**
 >
->设定环境变量是必要的，否则输入法无法正常使用。而且你必须以 root 用户运行 QQ。
+>你必须以 root 用户运行 QQ。而且记得按照 Ubuntu 兼容层构建教程设置中文字符集（如果你使用脚本，一切都是自动的，无需在意）。
 
 ![FreeBSD QQ](../.gitbook/assets/rlqq5.png)
 
