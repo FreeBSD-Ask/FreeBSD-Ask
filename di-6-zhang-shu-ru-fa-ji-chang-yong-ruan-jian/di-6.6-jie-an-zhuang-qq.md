@@ -85,7 +85,7 @@ $ /compat/linux/opt/QQ/qq --no-sandbox  --in-process-gpu
 
 >**技巧**
 >
->`--no-sandbox` 选项是关闭沙盒以允许 root 用户运行 QQ。
+>`--no-sandbox` 选项是关闭沙盒。否则无法运行 QQ。
 >
 >`--in-process-gpu` 选项也是必要的，否则你退出 QQ 后就打不开了，除非重启。
 
