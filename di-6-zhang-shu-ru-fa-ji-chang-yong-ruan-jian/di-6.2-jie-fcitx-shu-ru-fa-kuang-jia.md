@@ -15,11 +15,9 @@ fcitx 即“A flexible input method framework（一款灵活的输入法框架�
 
 ## 安装 Fcitx
 
-### 安装 Fcitx 4.X
+fcitx 5 相比前一代，增加了对 Wayland 的支持，据说更加流畅。
 
-> **注意**
->
-> 该教程仅在 KDE 5/csh 下测试通过。
+### 安装 Fcitx 4.X
 
 - 使用 pkg 安装：
 
@@ -48,9 +46,6 @@ $ cp /usr/local/share/applications/fcitx.desktop ~/.config/autostart/
 
 ### 安装 Fcitx 5.X
 
-fcitx 5 相比前一代，增加了对 Wayland 的支持，据说更加流畅。
-
----
 
 - 使用 pkg 安装：
 
