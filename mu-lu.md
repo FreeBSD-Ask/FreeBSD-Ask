@@ -215,7 +215,7 @@
 
 ## 第 20 章 游戏、科学计算和专业工具
 
-* [20.1 游戏](di-20-zhang-yu-le-yu-jiao-yu/di-20.1-jie-you-xi.md)
+* [20.1 Renpy 和 Godot 游戏](di-20-zhang-yu-le-yu-jiao-yu/di-20.1-jie-you-xi.md)
 * [20.2 我的世界（Minecraft）](di-20-zhang-yu-le-yu-jiao-yu/20.2-minecraft.md)
 * [20.3 科研和专业工具](di-20-zhang-yu-le-yu-jiao-yu/di-20.3-jie-ke-yan-yu-zhuan-ye-gong-ju.md)
 
