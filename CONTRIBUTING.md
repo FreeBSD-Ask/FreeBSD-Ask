@@ -131,7 +131,7 @@
   - [ ] 用户与权限
   - [ ] GEOM
   - [ ] DTrace
-- [X] 完全面向新手介绍 FreeBSD
+- [ ] 完全面向新手介绍 FreeBSD
   - [ ] 对比 Linux
   - [ ] 对比 Windows
   - [X] 客观化论证
