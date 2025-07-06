@@ -117,7 +117,7 @@
   - [ ] 找到一款我认为能替代二者的工具
 - [X] 将全书主观性文字转换为思考题供读者自行思考与判断
 - [X] 更新“第 16.7 节 Samba 服务器”
-- [ ] steam
+- [X] steam
 - [ ] Wayland 化桌面
 - [ ] Bhyve
   - [ ] `sysutils/bhyvemgr` GUI
