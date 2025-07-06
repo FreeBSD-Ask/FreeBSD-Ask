@@ -39,7 +39,7 @@ fcitx 即“A flexible input method framework（一款灵活的输入法框架�
 ```
 
 
-#### 开机自启 Fcitx 4.X
+#### Fcitx 4.X 开机自启 
 
 ```sh
 $ mkdir -p ~/.config/autostart/ # 若使用其他用户则需要在其命令行下再执行之
@@ -71,31 +71,35 @@ fcitx 5 相比前一代，增加了对 Wayland 的支持，据说更加流畅。
 
 经测试 SLIM 窗口下会提示 IBus 找不到……疑似 bug。也可能是配置问题。
 
-> **技巧**
->
-> 你还可以选择安装 rime：
->
->```
-># pkg install zh-fcitx5-rime zh-rime-essay
->```
->
->或者：
->
->```
-># cd /usr/ports/chinese/fcitx5-rime/ && make install clean
-># cd /usr/ports/chinese/rime-essay/ && make install clean
->```
->
-> rime 不会自动添加到输入法，需要手动添加完成初始化（程序里找到 fcitx 配置工具，添加 rime 输入法即可），这个输入法我不知道配置文件在哪，有意者可以自行安装。而且经常切换到繁体，即使你选择了简体，BUG 比较多，原因未知。对于普通用户如果未生效，请检查自己的 shell 是否选择了对应教程进行设置。另外请将该用户加入 wheel 组。
+#### 安装 RIME 中州韵输入法（可选）
 
+- 使用 pkg 安装：
 
-#### 开启自启 Fcitx 5.X
+```sh
+# pkg install zh-fcitx5-rime zh-rime-essay
+```
+
+- 或者使用 Ports 安装：
+
+```sh
+# cd /usr/ports/chinese/fcitx5-rime/ && make install clean
+# cd /usr/ports/chinese/rime-essay/ && make install clean
+```
+
+>**注意**
+>
+>`chinese/rime-essay` 是必要的，是 Rime 的共享词汇与语言模型，没有这个 Port，你的 RIME 输入法只会显示一团乱码。
+
+如果 rime 未被自动添加到输入法，请手动添加完成初始化（程序里找到 fcitx 配置工具，添加 rime 输入法即可）。
+
+对于普通用户如未生效，请检查自己的 shell 是否选择了对应教程进行设置。另外请将该用户加入 wheel 组。
+
+#### Fcitx 5.X 开启自启 
 
 ```sh
 $ mkdir -p ~/.config/autostart/ # 若使用其他用户则需要在其命令行下再执行之
 $ cp /usr/local/share/applications/org.fcitx.Fcitx5.desktop ~/.config/autostart/
 ```
-
 
 ## 配置 Fcitx 环境变量
 
