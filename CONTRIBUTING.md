@@ -86,6 +86,7 @@
 
 ### FreeBSD ToDo
 
+- [ ] 测试 `sysctl security.bsd.unprivileged_chroot=1`，这样普通用户就能 chroot 了
 - [X] 拆分第 11 章 计算机概论
 - [ ] 规范用户配置文件与系统文件
   - [ ] sysctl：不应直接修改 `/etc/sysctl.conf`，而应改为 `/etc/sysctl.conf.local`，后者会覆盖全局的 `/etc/sysctl.conf` 参数。参见 [sysctl.conf(5)](https://man.freebsd.org/cgi/man.cgi?sysctl.conf(5))
