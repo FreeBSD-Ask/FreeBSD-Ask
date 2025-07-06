@@ -2,7 +2,7 @@
 
 ## 什么是 shell
 
-![](../.gitbook/assets/you-shell.svg)
+![](../.gitbook/assets/you-shell.png)
 
 我们的命令是运行在 shell 中的，通过 shell 与系统进行交互。
 
