@@ -191,7 +191,7 @@
 * [17.4 Zabbix 监控（基于 PostgreSQL）](di-17-zhang-wang-luo-fu-wu-qi/17.4-Zabbix.md)
 * [17.5 NextCloud——基于 PostgreSQL](di-17-zhang-wang-luo-fu-wu-qi/di-17.5-jie-NextCloud.md)
 * [17.6 Telegraf+InfluxDB+Grafana 监控平台](di-17-zhang-wang-luo-fu-wu-qi/di-17.6-jie-telegraf+influxdb+grafana-jian-kong-ping-tai.md)
-* [17.7 AList](di-17-zhang-wang-luo-fu-wu-qi/di-17.7-alist.md)
+* [17.7 OpenList](di-17-zhang-wang-luo-fu-wu-qi/di-17.7-alist.md)
 * [17.8 Prometheus 监控部署](di-17-zhang-wang-luo-fu-wu-qi/17.8.prometheus.md)
 * [17.9 Tomcat](di-17-zhang-wang-luo-fu-wu-qi/17.9-Tomcat.md)
 * [17.10 Caddy](di-17-zhang-wang-luo-fu-wu-qi/17.10-caddy.md)
