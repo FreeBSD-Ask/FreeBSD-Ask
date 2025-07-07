@@ -83,13 +83,13 @@ FreeBSD 在中国大陆境内的唯一几个能正常同步的镜像站，都不
 
 FreeBSD 目前在大陆非官方镜像站有若干个：
 
-- 中国科学技术大学镜像站 (pkg、ports、pub) <https://mirrors.ustc.edu.cn/> 
+- 中国科学技术大学镜像站 (pkg、ports、pub) <https://mirrors.ustc.edu.cn/>
   - FreeBSD Pub <https://mirrors.ustc.edu.cn/freebsd/>
   - FreeBSD Packages <https://mirrors.ustc.edu.cn/freebsd-pkg/>
   - FreeBSD Ports [首先看使用文档](https://mirrors.ustc.edu.cn/help/freebsd-ports.html)  <https://mirrors.ustc.edu.cn/freebsd-ports/>
   - 联系方式: [lug@ustc.edu.cn](mailto:lug@ustc.edu.cn)
 
-- BJTU (更新断断续续，仅pub) <https://mirror.bjtu.edu.cn/> 
+- BJTU (更新断断续续，仅pub) <https://mirror.bjtu.edu.cn/>
   - FreeBSD Pub <https://mirror.bjtu.edu.cn/freebsd/>
   - 联系方式：<https://t.me/bjtumirror>
 
@@ -98,13 +98,13 @@ FreeBSD 目前在大陆非官方镜像站有若干个：
 - 南京大学开源镜像站 (pkg和ports上游均为中科大) <https://mirrors.nju.edu.cn/>
   - FreeBSD Pub <https://mirrors.nju.edu.cn/freebsd/>
   - FreeBSD Packages <https://mirrors.nju.edu.cn/freebsd-pkg/>
-  - FreeBSD Ports <https://mirrors.nju.edu.cn/freebsd-ports/> 
+  - FreeBSD Ports <https://mirrors.nju.edu.cn/freebsd-ports/>
   - 联系方式：[Github Issue](https://github.com/nju-lug/NJU-Mirror-Issue/issues)
 
 - 中国科学院镜像站 <https://mirrors.iscas.ac.cn/>
   - FreeBSD Pub <https://mirror.iscas.ac.cn/FreeBSD/>
-  - FreeBSD Packages <https://fast-mirror.isrc.ac.cn/FreeBSD-pkgs/> 
-  - 注意事项：**是 `pkgs` 而不是 `pkg`，两个域名，各自提供服务，不通用，注意大小写。** 
+  - FreeBSD Packages <https://fast-mirror.isrc.ac.cn/FreeBSD-pkgs/>
+  - 注意事项：**是 `pkgs` 而不是 `pkg`，两个域名，各自提供服务，不通用，注意大小写。**
 
 
 FreeBSD 官方联系方式：
