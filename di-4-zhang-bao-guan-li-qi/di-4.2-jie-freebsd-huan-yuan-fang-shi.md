@@ -14,7 +14,7 @@
 |ports|Gentoo 的包管理器 Portage（命令为 `emerge`）即是源于此。用于帮助用户从源代码编译安装软件。换言之，等同于 Gentoo 的 [Distfiles 源](https://mirrors.ustc.edu.cn/help/gentoo.html)|不需要源代码方式编译软件可以不配置。|
 |update|用于更新基本系统（内核 + 用户空间） | 预计在 FreeBSD 15 或 16 中废弃，转而使用 [pkgbase](https://wiki.freebsd.org/PkgBase) 代替之|
 |kernel modules（kmods）| 内核模块源，为解决小版本间可能存在的 ABI 不兼容问题 | 参见 [Possible solution to the drm-kmod kernel mismatch after upgrade from Bapt](https://forums.freebsd.org/threads/possible-solution-to-the-drm-kmod-kernel-mismatch-after-upgrade-from-bapt.96058/#post-682984)、[CFT: repository for kernel modules](https://lists.freebsd.org/archives/freebsd-ports/2024-December/006997.html)|
-|pub | 提供ISO安装镜像、文档、开发资料、`snapshot`，在安装、系统救援、开发参考时有很大帮助。 | 参考 [FreeBSD.org ftp server](http://ftp.freebsd.org/pub/FreeBSD/) 目录结构。也许Pub这个名字是非官方叫法？ |
+|FreeBSD（pub） | 提供 ISO 安装镜像、文档、开发资料、`snapshot`，在安装系统、系统救援、开发参考时有很大帮助。 | 参考 [FreeBSD.org ftp server](http://ftp.freebsd.org/pub/FreeBSD/) 目录结构。 |
 
 
 > **技巧**
@@ -27,7 +27,7 @@
 >
 > [NJU](https://github.com/nju-lug/NJU-Mirror-Issue/issues/54) 和 163 均同步自 USTC 而非 FreeBSD 直接上游。
 > 
-> **请不要官方镜像站和国内非官方镜像站混用。**[案例，混用导致KDE桌面被删除。](https://blog.mxdyeah.top/mxdyeah_blog_post/freebsd_exp_kde6.html)
+> 请不要官方镜像站和国内非官方镜像站混用。[案例，混用导致 KDE 桌面被删除](https://blog.mxdyeah.top/mxdyeah_blog_post/freebsd_exp_kde6.html)。
 
 ## pkg 源：pkg 源提供了二进制软件包
 
@@ -286,11 +286,11 @@ Fetching http://ftp-archive.freebsd.org/pub/FreeBSD-Archive/ports/amd64/packages
 >
 > pkg 是不可用的，会提示找不到 `digests.txz` 和 `repo.txz`，因为当时 pkgng 还没有被官方所支持，仍然仅支持使用 `pkg_*` 命令。
 
-## Pub源：提供ISO安装镜像、文档、开发资料以及各种架构的`snapshot`
+## FreeBSD（Pub）源：提供 ISO 安装镜像、文档、开发资料以及各种架构的 `snapshot`
 
-此处的Pub，指的是官方的`http://ftp.freebsd.org/pub/FreeBSD/`。类似于普通的镜像分发仓库。和 debian-cd、ubuntu-releases 等应属同一性质。
+此处的 Pub，指的是官方的 <http://ftp.freebsd.org/pub/FreeBSD/>。类似于普通的镜像分发仓库。和 debian-cd、ubuntu-releases 等应属同一性质。
 
-注意，以 USTC 为首的国内非官方镜像站均不提供 `development/` 、 `snapshots/` 等目录，有需要的请直接到官方站点获取。
+注意，以 USTC 为首的国内非官方镜像站均不提供（或实质上未进行同步更新） `development/`、`snapshots/` 等目录，若有需要的请直接到官方站点获取。
 
 ## 参考文献
 
