@@ -298,7 +298,7 @@ Fetching http://ftp-archive.freebsd.org/pub/FreeBSD-Archive/ports/amd64/packages
 
 ![mirrors-selection](../.gitbook/assets/mirror-selection.png)
 
-在安装环节修改参考 [附加：`bootonly` 和 `PXE` 安装时，让下载更快的方法。](../di-2-zhang-an-zhuang-freebsd/di-2.5-jie-fen-pei-disk.md)
+在安装环节修改参考 [附加：`bootonly` 和 `PXE` 安装时，让下载更快的方法。](../di-2-zhang-an-zhuang-freebsd/di-2.5-jie-fen-pei-disk.md#fu-jia-bootonly-he-pxe-an-zhuang-shi-rang-xia-zai-geng-kuai-de-fang-fa)
 
 可以参考官方镜像站点的目录结构和 [FreeBSD Docs 2.8. 选择您要使用的安装介质](https://docs.freebsd.org/zh-cn/books/handbook/install/#install-media) 来更好了解此处的Pub源作用。
 
