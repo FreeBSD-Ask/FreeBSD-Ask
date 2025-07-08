@@ -288,44 +288,9 @@ Fetching http://ftp-archive.freebsd.org/pub/FreeBSD-Archive/ports/amd64/packages
 
 ## Pub源：提供ISO安装镜像、文档、开发资料以及各种架构的`snapshot`
 
-此处的Pub，指的是官方的`http://ftp.freebsd.org/pub/FreeBSD/`。
+此处的Pub，指的是官方的`http://ftp.freebsd.org/pub/FreeBSD/`。类似于普通的镜像分发仓库。和 debian-cd、ubuntu-releases 等应属同一性质。
 
 注意，以 USTC 为首的国内非官方镜像站均不提供 `development/` 、 `snapshots/` 等目录，有需要的请直接到官方站点获取。
-
-安装过程中，会弹出的这个页面，就是需要用到该源。
-
-修改该源的目的就是在安装中，下载相关组件能够更快一点。完整镜像可能无需下载。`bootonly`、`PXE` 网络启动则需要从该镜像 fetch。
-
-![mirrors-selection](../.gitbook/assets/mirror-selection.png)
-
-在安装环节修改参考 [附加：`bootonly` 和 `PXE` 安装时，让下载更快的方法。](../di-2-zhang-an-zhuang-freebsd/di-2.5-jie-fen-pei-disk.md#fu-jia-bootonly-he-pxe-an-zhuang-shi-rang-xia-zai-geng-kuai-de-fang-fa)
-
-可以参考官方镜像站点的目录结构和 [FreeBSD Docs 2.8. 选择您要使用的安装介质](https://docs.freebsd.org/zh-cn/books/handbook/install/#install-media) 来更好了解此处的Pub源作用。
-
-## 国内非官方镜像站汇总
-
-- 中国科学技术大学镜像站 (pkg、ports、pub) <https://mirrors.ustc.edu.cn/>
-  - FreeBSD Pub <https://mirrors.ustc.edu.cn/freebsd/>
-  - FreeBSD Packages <https://mirrors.ustc.edu.cn/freebsd-pkg/>
-  - FreeBSD Ports [首先看使用文档](https://mirrors.ustc.edu.cn/help/freebsd-ports.html)  <https://mirrors.ustc.edu.cn/freebsd-ports/>
-  - 联系方式: [lug@ustc.edu.cn](mailto:lug@ustc.edu.cn)
-
-- BJTU (更新断断续续，仅pub) <https://mirror.bjtu.edu.cn/>
-  - FreeBSD Pub <https://mirror.bjtu.edu.cn/freebsd/>
-  - 联系方式：<https://t.me/bjtumirror>
-
-- 网易 163 镜像站 (很久没更新,带宽较低) <https://mirrors.163.com/>
-
-- 南京大学开源镜像站 (pkg和ports上游均为中科大) <https://mirrors.nju.edu.cn/>
-  - FreeBSD Pub <https://mirrors.nju.edu.cn/freebsd/>
-  - FreeBSD Packages <https://mirrors.nju.edu.cn/freebsd-pkg/>
-  - FreeBSD Ports <https://mirrors.nju.edu.cn/freebsd-ports/>
-  - 联系方式：[Github Issue](https://github.com/nju-lug/NJU-Mirror-Issue/issues)
-
-- 中国科学院镜像站 <https://mirrors.iscas.ac.cn/>
-  - FreeBSD Pub <https://mirror.iscas.ac.cn/FreeBSD/>
-  - FreeBSD Packages 最后一次更新还是两个月前，且只有 riscv64。不推荐
-
 
 ## 参考文献
 
