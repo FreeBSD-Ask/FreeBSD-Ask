@@ -290,7 +290,7 @@ Fetching http://ftp-archive.freebsd.org/pub/FreeBSD-Archive/ports/amd64/packages
 
 此处的 Pub，指的是官方的 <http://ftp.freebsd.org/pub/FreeBSD/>。类似于普通的镜像分发仓库。和 debian-cd、ubuntu-releases 等应属同一性质。
 
-注意，以 USTC 为首的国内非官方镜像站均不提供（或实质上未进行同步更新） `development/`、`snapshots/` 等目录，若有需要的请直接到官方站点获取。
+目前可见的 FreeBSD（Pub）源全量同步的镜像站有南京大学开源镜像站：<https://mirrors.nju.edu.cn/freebsd>。其提供了完整的目录结构（如 `snapshots`、`development`），且更新及时。 
 
 ## 参考文献
 
