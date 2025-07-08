@@ -203,7 +203,10 @@ NVMe 硬盘 ZFS 加密后的磁盘结构：
 
 ---
 
+校验相关分发文件包：
+
 ![](../.gitbook/assets/ins13.png)
 
-![](../.gitbook/assets/ins14.png)
+解压并安装相关分发文件包：
 
+![](../.gitbook/assets/ins14.png)
