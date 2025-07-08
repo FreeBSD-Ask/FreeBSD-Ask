@@ -203,7 +203,26 @@ NVMe 硬盘 ZFS 加密后的磁盘结构：
 
 ---
 
+解压相关软件包并安装。
+
 ![](../.gitbook/assets/ins13.png)
 
 ![](../.gitbook/assets/ins14.png)
 
+## 附加：`bootonly` 和 `PXE` 安装时，让下载更快的方法。
+
+如果你和我一样，需要在工控机等场景通过实体刻录光盘(因为容量有限，不得不使用 `bootonly` 镜像)或者使用 PXE 网络启动形式安装 FreeBSD 的话，则需要配置 Pub 镜像。
+
+1. 在 `mirror-selection` 处选择 `other`
+
+![mirror-selection](../.gitbook/assets/click-other.png)
+
+2. 在 `enter URL` 处，修改原来的镜像至 USTC 的 Pub 镜像。
+
+![modify-mirror](../.gitbook/assets/modify-mirror.png)
+
+![modify-to-ustc](../.gitbook/assets/modify-to-ustc.png)
+
+3. 点击OK，开始Fetch
+
+![fetch](../.gitbook/assets/fetch.png)

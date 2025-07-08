@@ -14,17 +14,20 @@
 |ports|Gentoo 的包管理器 Portage（命令为 `emerge`）即是源于此。用于帮助用户从源代码编译安装软件。换言之，等同于 Gentoo 的 [Distfiles 源](https://mirrors.ustc.edu.cn/help/gentoo.html)|不需要源代码方式编译软件可以不配置。|
 |update|用于更新基本系统（内核 + 用户空间） | 预计在 FreeBSD 15 或 16 中废弃，转而使用 [pkgbase](https://wiki.freebsd.org/PkgBase) 代替之|
 |kernel modules（kmods）| 内核模块源，为解决小版本间可能存在的 ABI 不兼容问题 | 参见 [Possible solution to the drm-kmod kernel mismatch after upgrade from Bapt](https://forums.freebsd.org/threads/possible-solution-to-the-drm-kmod-kernel-mismatch-after-upgrade-from-bapt.96058/#post-682984)、[CFT: repository for kernel modules](https://lists.freebsd.org/archives/freebsd-ports/2024-December/006997.html)|
+|pub | 提供ISO安装镜像、文档、开发资料、`snapshot`，在安装、系统救援、开发参考时有很大帮助。 | 参考 [FreeBSD.org ftp server](http://ftp.freebsd.org/pub/FreeBSD/) 目录结构。也许时是非官方叫法？ |
 
 
->**技巧**
+> **技巧**
 >
->本文对于一个源列出了多个镜像站，无须全部配置，只需选择其一即可。
+> 本文对于一个源列出了多个镜像站，无须全部配置，只需选择其一即可。
 
 目前境内没有官方镜像站，以下均为非官方镜像站。
 
->**注意**
+> **注意**
 >
->[NJU](https://github.com/nju-lug/NJU-Mirror-Issue/issues/54) 和 163 均同步自 USTC 而非 FreeBSD 直接上游。
+> [NJU](https://github.com/nju-lug/NJU-Mirror-Issue/issues/54) 和 163 均同步自 USTC 而非 FreeBSD 直接上游。
+> 
+> **请不要官方镜像站和国内非官方镜像站混用。**[案例，混用导致KDE桌面被删除。](https://blog.mxdyeah.top/mxdyeah_blog_post/freebsd_exp_kde6.html)
 
 ## pkg 源：pkg 源提供了二进制软件包
 
@@ -60,9 +63,9 @@ FreeBSD 中 pkg 源分为系统级和用户级两个配置文件。**不建议**
 
 - 中国科学技术大学开源软件镜像站（USTC）
 
->**技巧**
+> **技巧**
 >
->视频教程见 [005-FreeBSD14.2 更换 pkg 源为 USTC 镜像站](https://www.bilibili.com/video/BV13ji2YLEkV)
+> 视频教程见 [005-FreeBSD14.2 更换 pkg 源为 USTC 镜像站](https://www.bilibili.com/video/BV13ji2YLEkV)
 
 写入以下内容：
 
@@ -124,15 +127,15 @@ FreeBSD: { enabled: no }
 # git clone  --filter=tree:0 https://mirrors.ustc.edu.cn/freebsd-ports/ports.git /usr/ports
 ```
 
->**注意**
+> **注意**
 >
->`--depth 1` 会给服务器带来较大计算压力，请尽量使用参数  `--filter=tree:0`。
+> `--depth 1` 会给服务器带来较大计算压力，请尽量使用参数 `--filter=tree:0`。
 
 #### 下载压缩文件的方法
 
->**警告**
+> **警告**
 >
->通过下载 Port 的压缩文件来使用 Ports，是一次性的：Ports 后续无法更新，建议你优先采用 Git 方法。
+> 通过下载 Port 的压缩文件来使用 Ports，是一次性的：Ports 后续无法更新，建议你优先采用 Git 方法。
 
 
 ```sh
@@ -195,7 +198,7 @@ MASTER_SITE_OVERRIDE?=http://mirrors.163.com/freebsd-ports/distfiles/${DIST_SUBD
 MASTER_SITE_OVERRIDE?=http://mirrors.ustc.edu.cn/freebsd-ports/distfiles/${DIST_SUBDIR}/
 ```
 
-## kernel modules（kmods）内核模块源：面向 FreeBSD 14.2 及更高版本（不含 15.0-CURRENT）
+## Kernel modules（kmods）内核模块源：面向 FreeBSD 14.2 及更高版本（不含 15.0-CURRENT）
 
 - 对于 14.2-RELEASE：新建文件夹 `/usr/local/etc/pkg/repos`（即 `mkdir -p /usr/local/etc/pkg/repos`），再新建文件 `/usr/local/etc/pkg/repos/FreeBSD-kmods.conf`。
 - \> 14.2-RELEASE：编辑 `/etc/pkg/FreeBSD.conf`。
@@ -254,9 +257,9 @@ FreeBSD-kmods {
 
 ## 不受安全支持的版本（请酌情使用）
 
->**技巧**
+> **技巧**
 >
->网易开源镜像站还提供了 FreeBSD 11、12 等过期版本的 pkg 二进制源。可自行配置使用。
+> 网易开源镜像站还提供了 FreeBSD 11、12 等过期版本的 pkg 二进制源。可自行配置使用。
 
 不受安全支持的版本也是可以使用二进制源的。以下，以 `FreeBSD 9.2` 为例：
 
@@ -279,9 +282,50 @@ root@ykla:~ # pkg_add -r bsdinfo
 Fetching http://ftp-archive.freebsd.org/pub/FreeBSD-Archive/ports/amd64/packages-9.2-release/Latest/bsdinfo.tbz... Done.
 ```
 
->**注意**
+> **注意**
 >
->pkg 是不可用的，会提示找不到 `digests.txz` 和 `repo.txz`，因为当时 pkgng 还没有被官方所支持，仍然仅支持使用 `pkg_*` 命令。
+> pkg 是不可用的，会提示找不到 `digests.txz` 和 `repo.txz`，因为当时 pkgng 还没有被官方所支持，仍然仅支持使用 `pkg_*` 命令。
+
+## Pub源：提供ISO安装镜像、文档、开发资料以及各种架构的`snapshot`
+
+此处的Pub，指的是官方的`http://ftp.freebsd.org/pub/FreeBSD/`。
+
+注意，以 USTC 为首的国内非官方镜像站均不提供 `development/` 、 `snapshots/` 等目录，有需要的请直接到官方站点获取。
+
+安装过程中，会弹出的这个页面，就是需要用到该源。
+
+修改该源的目的就是在安装中，下载相关组件能够更快一点。完整镜像可能无需下载。`bootonly`、`PXE` 网络启动则需要从该镜像 fetch。
+
+![mirrors-selection](../.gitbook/assets/mirror-selection.png)
+
+在安装环节修改参考 [附加：`bootonly` 和 `PXE` 安装时，让下载更快的方法。](../di-2-zhang-an-zhuang-freebsd/di-2.5-jie-fen-pei-disk.md)
+
+可以参考官方镜像站点的目录结构和 [FreeBSD Docs 2.8. 选择您要使用的安装介质](https://docs.freebsd.org/zh-cn/books/handbook/install/#install-media) 来更好了解此处的Pub源作用。
+
+## 国内非官方镜像站汇总
+
+- 中国科学技术大学镜像站 (pkg、ports、pub) <https://mirrors.ustc.edu.cn/>
+  - FreeBSD Pub <https://mirrors.ustc.edu.cn/freebsd/>
+  - FreeBSD Packages <https://mirrors.ustc.edu.cn/freebsd-pkg/>
+  - FreeBSD Ports [首先看使用文档](https://mirrors.ustc.edu.cn/help/freebsd-ports.html)  <https://mirrors.ustc.edu.cn/freebsd-ports/>
+  - 联系方式: [lug@ustc.edu.cn](mailto:lug@ustc.edu.cn)
+
+- BJTU (更新断断续续，仅pub) <https://mirror.bjtu.edu.cn/>
+  - FreeBSD Pub <https://mirror.bjtu.edu.cn/freebsd/>
+  - 联系方式：<https://t.me/bjtumirror>
+
+- 网易 163 镜像站 (很久没更新,带宽较低) <https://mirrors.163.com/>
+
+- 南京大学开源镜像站 (pkg和ports上游均为中科大) <https://mirrors.nju.edu.cn/>
+  - FreeBSD Pub <https://mirrors.nju.edu.cn/freebsd/>
+  - FreeBSD Packages <https://mirrors.nju.edu.cn/freebsd-pkg/>
+  - FreeBSD Ports <https://mirrors.nju.edu.cn/freebsd-ports/>
+  - 联系方式：[Github Issue](https://github.com/nju-lug/NJU-Mirror-Issue/issues)
+
+- 中国科学院镜像站 <https://mirrors.iscas.ac.cn/>
+  - FreeBSD Pub <https://mirror.iscas.ac.cn/FreeBSD/>
+  - FreeBSD Packages 最后一次更新还是两个月前，且只有 riscv64。不推荐
+
 
 ## 参考文献
 
