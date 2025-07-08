@@ -2,6 +2,8 @@
 
 ## 现状
 
+### 官方拒不开放 rsync
+
 主要问题在于官方无论如何也不开放 rsync 且不接受镜像站的官方二级镜像申请。
 
 根据目前可查信息，FreeBSD 项目至迟在 2015 年 5 月就停止了公开 rsync。参见 [Add small section explaining we are not allowing public mirrors of packages and possible workarounds.](https://reviews.freebsd.org/R9:3418e47d2f6cd8dd04ac934f38d136ba9101a5a8)。给出的说明理由是：
@@ -34,7 +36,7 @@
 
 ---
 
-目前中国大陆没有 FreeBSD 官方镜像站。
+### 中国大陆没有 FreeBSD 官方镜像站
 
 多次联系均无二次联系，如邮件列表，大概五次，其中三次回应，两次无回应。其主要回复内容为“深表歉意，但台湾地区已有镜像”。并未直接说明如何镜像，此外特别向中国科学技术大学 Linux 用户协会（其中其他镜像站并未理会，如清华大学 TUNA 协会）申请镜像，对方提到，FreeBSD 也是无人回应。
 
@@ -74,19 +76,27 @@ TUNA: <https://github.com/tuna/issues/issues/16>
 
 FreeBSD 在中国大陆境内没有官方镜像站；在中国台湾地区有官方镜像站。
 
-FreeBSD 在中国大陆境内的唯一几个能正常同步的镜像站，都不是使用 `rsync` 等方式进行同步，采取的都是一些"手段"，见USTCLUG所提供的同步脚本：[FreeBSD-pkg Script](https://github.com/ustclug/ustcmirror-images/blob/master/freebsd-pkg/sync.sh) [FreeBSD-ports Script](https://github.com/ustclug/ustcmirror-images/blob/master/freebsd-ports/sync-ports.sh)
+FreeBSD 在中国大陆境内的唯一几个能正常同步的镜像站，均未使用 `rsync` 等方式进行同步，都是采取的一些特殊"手段"，参见 USTCLUG 所提供的同步脚本：
+
+- [FreeBSD-pkg 脚本](https://github.com/ustclug/ustcmirror-images/blob/master/freebsd-pkg/sync.sh)
+- [FreeBSD-ports 脚本](https://github.com/ustclug/ustcmirror-images/blob/master/freebsd-ports/sync-ports.sh)
 
 FreeBSD 目前在大陆非官方镜像站有若干个：
 
-- 中国科学技术大学镜像站 (pkg、ports、pub) <https://mirrors.ustc.edu.cn/>
+- 中国科学技术大学镜像站（USTC）（pkg、ports、pub）<https://mirrors.ustc.edu.cn/>
   - FreeBSD Pub <https://mirrors.ustc.edu.cn/freebsd/>
   - FreeBSD Packages <https://mirrors.ustc.edu.cn/freebsd-pkg/>
-  - FreeBSD Ports [首先看使用文档](https://mirrors.ustc.edu.cn/help/freebsd-ports.html)  <https://mirrors.ustc.edu.cn/freebsd-ports/>
+  - FreeBSD Ports
+    - [使用文档](https://mirrors.ustc.edu.cn/help/freebsd-ports.html)
+    - <https://mirrors.ustc.edu.cn/freebsd-ports/>
   - 联系方式: [lug@ustc.edu.cn](mailto:lug@ustc.edu.cn)
 
-- 网易 163 镜像站 (更新频率较低) <https://mirrors.163.com/>
+- 网易 163 镜像站（pkg 和 ports 上游均为中科大）<https://mirrors.163.com/>
+  - FreeBSD Pub <https://mirrors.163.com/freebsd/>
+  - FreeBSD Packages <https://mirrors.163.com/freebsd-pkg/>
+  - FreeBSD Ports <https://mirrors.163.com/freebsd-pkg/>
 
-- 南京大学开源镜像站 (pkg和ports上游均为中科大) <https://mirrors.nju.edu.cn/>
+- 南京大学开源镜像站（pkg 和 ports 上游均为中科大）<https://mirrors.nju.edu.cn/>
   - FreeBSD Pub <https://mirrors.nju.edu.cn/freebsd/>
   - FreeBSD Packages <https://mirrors.nju.edu.cn/freebsd-pkg/>
   - FreeBSD Ports <https://mirrors.nju.edu.cn/freebsd-ports/>
