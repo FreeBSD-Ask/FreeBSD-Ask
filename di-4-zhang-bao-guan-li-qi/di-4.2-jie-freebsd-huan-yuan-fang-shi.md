@@ -14,7 +14,7 @@
 |ports|Gentoo 的包管理器 Portage（命令为 `emerge`）即是源于此。用于帮助用户从源代码编译安装软件。换言之，等同于 Gentoo 的 [Distfiles 源](https://mirrors.ustc.edu.cn/help/gentoo.html)|不需要源代码方式编译软件可以不配置。|
 |update|用于更新基本系统（内核 + 用户空间） | 预计在 FreeBSD 15 或 16 中废弃，转而使用 [pkgbase](https://wiki.freebsd.org/PkgBase) 代替之|
 |kernel modules（kmods）| 内核模块源，为解决小版本间可能存在的 ABI 不兼容问题 | 参见 [Possible solution to the drm-kmod kernel mismatch after upgrade from Bapt](https://forums.freebsd.org/threads/possible-solution-to-the-drm-kmod-kernel-mismatch-after-upgrade-from-bapt.96058/#post-682984)、[CFT: repository for kernel modules](https://lists.freebsd.org/archives/freebsd-ports/2024-December/006997.html)|
-|pub | 提供ISO安装镜像、文档、开发资料、`snapshot`，在安装、系统救援、开发参考时有很大帮助。 | 参考 [FreeBSD.org ftp server](http://ftp.freebsd.org/pub/FreeBSD/) 目录结构。也许时是非官方叫法？ |
+|pub | 提供ISO安装镜像、文档、开发资料、`snapshot`，在安装、系统救援、开发参考时有很大帮助。 | 参考 [FreeBSD.org ftp server](http://ftp.freebsd.org/pub/FreeBSD/) 目录结构。也许Pub这个名字是非官方叫法？ |
 
 
 > **技巧**
