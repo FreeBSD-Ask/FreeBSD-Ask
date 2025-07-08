@@ -94,7 +94,7 @@ FreeBSD 目前在大陆非官方镜像站有若干个：
 - 网易 163 镜像站（pkg 和 ports 上游均为中科大）<https://mirrors.163.com/>
   - FreeBSD Pub <https://mirrors.163.com/freebsd/>
   - FreeBSD Packages <https://mirrors.163.com/freebsd-pkg/>
-  - FreeBSD Ports <https://mirrors.163.com/freebsd-pkg/>
+  - FreeBSD Ports <https://mirrors.163.com/freebsd-ports/>
 
 - 南京大学开源镜像站（pkg 和 ports 上游均为中科大）<https://mirrors.nju.edu.cn/>
   - FreeBSD Pub <https://mirrors.nju.edu.cn/freebsd/>
