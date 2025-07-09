@@ -4,20 +4,14 @@
 
 FreeBSD 是真正自由（Liberty）的**操作系统**，在这波谲云诡的世界中仍然坚守 BSD UNIX 哲学——恪守古老的法则，追寻真正的自由。
 
-## 电子书
-
-可使用 [safreya](https://github.com/safreya) 编写的 [Python 脚本](https://github.com/FreeBSD-Ask/gitbook-pdf-export)来导出 PDF/EPUB。
-
-此外，每周都会通过 GitHub Action 导出 PDF/EPUB 于 [releases](https://github.com/FreeBSD-Ask/FreeBSD-Ask/releases)（也许需要代理）。
-
 ## 加入 FreeBSD 中文社区（CFC）
 
 本书是 FreeBSD 中文社区许多人不懈努力的成果。
 
 - **首要**联系方式为 **QQ 群**：[787969044](https://qm.qq.com/q/cX5mpJ36gg)（点击加群）
-- 微信群：因微信封闭性，须先加 QQ 群再联系 QQ 群主
-- Discord：<https://discord.gg/j7VhWrhp3e>（需要代理。可通过网页使用）
-- Telegram 群组：[https://t.me/oh_my_BSD](https://t.me/oh_my_BSD)（需要代理）
+- 微信群：因微信封闭性，须先加 QQ 群，再联系 QQ 群主获取新鲜二维码
+- Discord：<https://discord.gg/j7VhWrhp3e>（需代理，可通过网页使用）
+- Telegram 群组：[https://t.me/oh_my_BSD](https://t.me/oh_my_BSD)（需代理）
 
 ## 内容提要
 
@@ -82,6 +76,13 @@ FreeBSD 是真正自由（Liberty）的**操作系统**，在这波谲云诡的�
 ## 贡献者
 
 ![贡献者](https://contrib.nn.ci/api?repo=FreeBSD-Ask/FreeBSD-Ask)
+
+
+## 电子书
+
+可使用 [safreya](https://github.com/safreya) 编写的 [Python 脚本](https://github.com/FreeBSD-Ask/gitbook-pdf-export)来导出 PDF/EPUB。
+
+此外，每周都会通过 GitHub Action 导出 PDF/EPUB 于 [releases](https://github.com/FreeBSD-Ask/FreeBSD-Ask/releases)（也许需要代理）。
 
 ## 授权协议
 
