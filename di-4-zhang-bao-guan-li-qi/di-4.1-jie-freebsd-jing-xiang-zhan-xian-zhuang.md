@@ -42,7 +42,7 @@
 
 国内网络环境如此，提升速度采取代理方式也是基本功，但是，不能够要求每个人水平都一样，提供便捷的网络服务，方便更多人的使用，才是发展 FreeBSD 的核心要义。请朋友们注意这一点，镜像站是基础设施，就像那句话，“要想富，先修路”，如果通往 FreeBSD 的康庄大道不通，则全是荆棘的小道。在此号召能够联系到 FreeBSD 官方的朋友们，首先解决这一基本问题。
 
-如果您有办法或者能够有条件搭建非官方镜像，也可以使用 USTCLUG 所提供的同步脚本：[FreeBSD-pkg Script](https://github.com/ustclug/ustcmirror-images/blob/master/freebsd-pkg/sync.sh) [FreeBSD-ports Script](https://github.com/ustclug/ustcmirror-images/blob/master/freebsd-ports/sync-ports.sh) 来搭建非官方镜像站。赠人玫瑰，手留余香。
+如果你有办法或者能够有条件搭建非官方镜像，也可以使用 USTCLUG 所提供的同步脚本：[FreeBSD-pkg Script](https://github.com/ustclug/ustcmirror-images/blob/master/freebsd-pkg/sync.sh) [FreeBSD-ports Script](https://github.com/ustclug/ustcmirror-images/blob/master/freebsd-ports/sync-ports.sh) 来搭建非官方镜像站。赠人玫瑰，手留余香。
 
 优先建议高校学生使用校内资源搭建，或者直接从 USTC 的 `rsync` 服务来同步。建议同步前先咨询 USTCLUG，以免带来不必要的麻烦，联系方式： [lug@ustc.edu.cn](mailto:lug@ustc.edu.cn)。参考[科大源同步方法与注意事项](https://mirrors.ustc.edu.cn/help/rsync-guide.html)来进行同步。
 
