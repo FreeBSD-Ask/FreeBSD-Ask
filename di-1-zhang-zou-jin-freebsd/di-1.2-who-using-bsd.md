@@ -63,7 +63,7 @@ BSD 操作系统并非复制品，而是 AT&T 研究 UNIX（Research Unix）操�
 
 背景：相较于 OpenBSD 和 Linux 等操作系统，FreeBSD 的 Kernel API/ABI 比较地稳定。
 
-你也可以说 FreeBSD 项目相对保守。
+你也可以说 FreeBSD 项目相对保守。FreeBSD 项目奉行最小惊讶原则（Principle of Least Astonishment，POLA），简而言之就是你的设计必须符合用户的习惯、期望和心智能力。
 
 如果你想选择一款在大版本更新后也不怎么影响日常工作的系统，而不是每天都在和操作系统斗智斗勇，那么 FreeBSD 值得信赖。
 
