@@ -42,7 +42,7 @@ exec cinnamon-session
 
 ## 配置 LightDM
 
-编辑 `/usr/local/etc/lightdm/lightdm.conf`，找到 `greeter-session=lightdm-gtk-greete` 改成 `greeter-session=slick-greeter`。
+编辑 `/usr/local/etc/lightdm/lightdm.conf`，找到 `greeter-session=lightdm-gtk-greete` 或 `#greeter-session=example-gtk-gnome` 等改成 `greeter-session=slick-greeter`。
 
 ## 配置 `fstab`
 
