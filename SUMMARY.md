@@ -160,7 +160,7 @@
 ## 第 14 章 网络管理
 
 * [14.1 设置网络](di-14-zhang-wang-luo-guan-li/di-14.1-jie-wang-luo-can-shu-pei-zhi-ming-ling.md)
-* [14.2 无线网络](di-14-zhang-wang-luo-guan-li/di-14.2-jie-wifi.md)
+* [14.2 无线网络（WiFi）](di-14-zhang-wang-luo-guan-li/di-14.2-jie-wifi.md)
 * [14.3 USB 网络共享（USB tethering）](di-14-zhang-wang-luo-guan-li/di-14.3-jie-usb-rndis-usb-wang-luo-gong-xiang.md)
 * [14.4 TCP 堆栈](di-14-zhang-wang-luo-guan-li/di-14.4-jie-tcp-bbr.md)
 
