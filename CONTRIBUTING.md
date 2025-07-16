@@ -51,6 +51,11 @@
 
 所有任务的排序都是随机的并无优先级之分，你可以选你喜欢的去做。
 
+### 帮助修订 UTSC 镜像脚本
+
+- <https://github.com/ustclug/ustcmirror-images/blob/master/freebsd-pkg/sync.sh>
+- <https://github.com/ustclug/ustcmirror-images/blob/master/freebsd-ports/sync-ports.sh>
+
 ### 重写 FreeBSD 手册
 
 参见 <https://github.com/FreeBSD-Ask/FreeBSD-Ask/projects>
