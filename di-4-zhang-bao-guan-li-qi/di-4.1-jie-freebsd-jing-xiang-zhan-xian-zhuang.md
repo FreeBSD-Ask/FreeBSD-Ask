@@ -88,6 +88,10 @@ FreeBSD 在中国大陆境内的唯一几个能正常同步的镜像站，均未
 - [FreeBSD-pkg 脚本](https://github.com/ustclug/ustcmirror-images/blob/master/freebsd-pkg/sync.sh)
 - [FreeBSD-ports 脚本](https://github.com/ustclug/ustcmirror-images/blob/master/freebsd-ports/sync-ports.sh)
 
+>**注意**
+>
+>我们呼吁有余力者对上述两个脚本进行维护修订以减轻 USTC 镜像站的压力，同时为境内提供更好的 FreeBSD 镜像服务。
+
 FreeBSD 目前在大陆非官方镜像站有若干个：
 
 - 中国科学技术大学镜像站（USTC）（pkg、ports、pub）<https://mirrors.ustc.edu.cn/>
