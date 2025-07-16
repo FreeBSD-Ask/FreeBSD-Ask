@@ -250,6 +250,19 @@ Filename: usr/local/lib/libxcb-icccm.so.4.0.0
 
 ## 故障排除与未竟事宜
 
+### 书里明确写有某个包，但是 pkg 安装的时候却提示没有
+
+这个问题一般来说有两个回答：
+
+- ① 在 Ports 中的确没有这个 Port：书里写错了、从 Ports 中移除了/改名了等
+- ② Ports 中的确有这个 Port：FreeBSD 的 pkg 包是周期性构建的（因为 Ports 本身在更新），会经常存在没有特定 pkg 包存在的情况
+
+具体是哪个问题造成的，建议查询 <https://www.freshports.org>，上面会显示软件包的依赖情况和 pkg 包的构建情况。
+
+本书中一般会同时列出 Ports 安装方式，比如要查 Port `x11/budgie`，你可以这么做：直接访问 <https://www.freshports.org/x11/budgie/>。
+
+一般来说，如果 Ports 中有这个 Port，但是 pkg 安装没有，等待 7-14 天一般就可以了（构建不出来的包系统会自动发报错给维护者的）。如要立刻安装使用，请使用 Ports。
+
 ### `ld-elf.so.1: Shared object "libmd.so.6" not found, required by "pkg"`
 
 该问题一般是由于软件源未及时同步基本系统 ABI 的变更。
