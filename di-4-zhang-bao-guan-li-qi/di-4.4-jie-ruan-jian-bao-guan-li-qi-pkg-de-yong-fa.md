@@ -26,8 +26,6 @@ FreeBSD 二进制包管理器目前是 pkg，即“Package”，软件包的意�
 
 ### 书里明确写有某个包，但是 pkg 安装的时候却提示没有
 
-![Port to pkg](../.gitbook/assets/portstopkg.png)
-
 这个问题一般来说有两个回答：
 
 - ① 在 Ports 中的确没有这个 Port：书里写错了、从 Ports 中移除了/改名了等
