@@ -7,12 +7,13 @@ Budgie 是 Solus Linux 的默认桌面。
 - 使用 pkg 安装：
 
 ```sh
-# pkg install budgie wqy-fonts
+# pkg install budgie wqy-fonts xorg
 ```
 
 - 或者使用 Ports 安装：
 
 ```sh
+# cd /usr/ports/x11/xorg && make install clean
 # cd /usr/ports/x11/budgie && make install clean
 # cd /usr/ports/x11-fonts/wqy/ && make install clean
 ```
@@ -27,6 +28,7 @@ Budgie 是 Solus Linux 的默认桌面。
 |:------------------|:--------------------------|
 | `budgie`         | 桌面环境 |
 | `wqy-fonts`      | 文泉驿中文字体                                          |
+|`xorg`|X11|
 
 ## 查看安装提示
 
