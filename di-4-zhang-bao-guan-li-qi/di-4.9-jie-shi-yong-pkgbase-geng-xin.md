@@ -10,7 +10,11 @@
 
 ## 下载 `pkgbasify` 脚本
 
-在 [Github 仓库](https://github.com/FreeBSDFoundation/pkgbasify)下载 `pkgbasify.lua` 脚本文件。
+在 [Github 仓库](https://github.com/FreeBSDFoundation/pkgbasify)下载 `pkgbasify.lua` 脚本文件：
+
+```sh
+$ fetch https://github.com/FreeBSDFoundation/pkgbasify/raw/refs/heads/main/pkgbasify.lua
+```
 
 ## （可选）配置软件源
 
@@ -94,8 +98,8 @@ FreeBSD-base: {
 ## 运行 `pkgbasify.lua`
 
 ```sh
-chmod +x pkgbasify.lua
-./pkgbasify.lua
+# chmod +x pkgbasify.lua
+# ./pkgbasify.lua
 ```
 
 >**注意**
