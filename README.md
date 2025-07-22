@@ -65,8 +65,6 @@ FreeBSD 是真正自由（Liberty）的**操作系统**，在这波谲云诡的�
 
 请优先捐赠 FreeBSD 基金会！
 
-若本书对你有帮助，也欢迎给此 [GitHub 项目](https://github.com/FreeBSD-Ask/FreeBSD-Ask)加颗 ⭐。
-
 ![](.gitbook/assets/proud_donor.png)
 
 [点此捐赠 FreeBSD 基金会](https://freebsdfoundation.org/donate)
@@ -91,5 +89,7 @@ FreeBSD 是真正自由（Liberty）的**操作系统**，在这波谲云诡的�
 ![CC BY](.gitbook/assets/by.png)
 
 ## Star 历史
+
+若本书对你有帮助，也欢迎给此 [GitHub 项目](https://github.com/FreeBSD-Ask/FreeBSD-Ask)加颗 ⭐。
 
 [![Star History Chart](https://api.star-history.com/svg?repos=FreeBSD-Ask/FreeBSD-Ask&type=Date)](https://www.star-history.com/#FreeBSD-Ask/FreeBSD-Ask&Date)
