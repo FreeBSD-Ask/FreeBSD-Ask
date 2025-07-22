@@ -89,3 +89,7 @@ FreeBSD 是真正自由（Liberty）的**操作系统**，在这波谲云诡的�
 本项目采用《CC BY 4.0 署名 4.0 协议国际版》，详见[署名 4.0 协议国际版法律文本](https://creativecommons.org/licenses/by/4.0/legalcode.zh-hans)。
 
 ![CC BY](.gitbook/assets/by.png)
+
+## Star 历史
+
+[![Star History Chart](https://api.star-history.com/svg?repos=FreeBSD-Ask/FreeBSD-Ask&type=Date)](https://www.star-history.com/#FreeBSD-Ask/FreeBSD-Ask&Date)
