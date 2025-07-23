@@ -1,4 +1,4 @@
-# FreeBSD 从入门到放弃（第三版：草稿）
+# FreeBSD 从入门到跑路（第三版：草稿）
 
 欢迎你来到 FreeBSD 的世界！
 
@@ -19,7 +19,7 @@ FreeBSD 是真正自由（Liberty）的**操作系统**，在这波谲云诡的�
 
 ## 历史
 
-《FreeBSD 从入门到放弃》肇始于 2021 年 3 月 14 日，其原型最早可追溯至 2020 年 12 月 31 日 ykla 发布的文章《FreeBSD 艺术科学哲学导论》。
+《FreeBSD 从入门到跑路》肇始于 2021 年 3 月 14 日，其原型最早可追溯至 2020 年 12 月 31 日 ykla 发布的文章《FreeBSD 艺术科学哲学导论》。
 
 ## 意见反馈
 
@@ -74,7 +74,6 @@ FreeBSD 是真正自由（Liberty）的**操作系统**，在这波谲云诡的�
 ## 贡献者
 
 ![贡献者](https://contrib.nn.ci/api?repo=FreeBSD-Ask/FreeBSD-Ask)
-
 
 ## 电子书
 

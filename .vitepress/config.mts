@@ -135,8 +135,8 @@ export default defineConfig({
 	},
 	lang: 'zh-CN',
 	lastUpdated: true,
-	title: "FreeBSD 从入门到放弃",
-	description: "FreeBSD 从入门到放弃",
+	title: "FreeBSD 从入门到跑路",
+	description: "FreeBSD 从入门到跑路",
 	metaChunk: true,
 markdown: {
   image: { lazyLoading: true },
