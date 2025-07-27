@@ -113,6 +113,23 @@ setenv QT_IM_MODULE fcitx
 
 运行在 XWayland 下的程序，输入法由环境变量 `XMODIFIERS='@im=fcitx'` 配置。
 
+- A 组（sh/bash/zsh）：
+
+```sh
+export LANG=zh_CN.UTF-8
+export LANGUAGE=zh_CN.UTF-8
+export LC_ALL=zh_CN.UTF-8
+export XMODIFIERS='@im=fcitx'
+```
+
+- B 组（csh）
+
+```sh
+setenv LANG zh_CN.UTF-8
+setenv LC_ALL zh_CN.UTF-8
+setenv LANGUAGE zh_CN.UTF-8
+setenv XMODIFIERS @im=fcitx
+```
 
 ## 故障排除与未竟事宜
 
