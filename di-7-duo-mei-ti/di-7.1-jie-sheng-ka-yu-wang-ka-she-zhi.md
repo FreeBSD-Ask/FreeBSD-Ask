@@ -51,3 +51,13 @@ $ sysctl hw.snd.default_unit=5
 
 官方打包好的多媒体软件有些是支持 pulseaudio 但是这些软件中的大部分对应的编译选项没有打开。如果需要录制软件的音频输出，可以自行打开 ports 的编译选项自己编译。在软件中设置 pulseaudio 作为音频驱动输出就可以了。
 
+
+## AMD CPU mode 2 reset
+
+但是已知 APU 上使用 drm-kmod，打开空播放器可能会触发 mode 2 reset 报错即 driver reset，进而触发 Kernel Panic。
+
+不要打开空的播放器窗口，或者打开空的音频播放器窗口。
+
+音频文件要在终端里用命令行播放。
+
+由于样本量不足，尚未进行 Bug 报告。
