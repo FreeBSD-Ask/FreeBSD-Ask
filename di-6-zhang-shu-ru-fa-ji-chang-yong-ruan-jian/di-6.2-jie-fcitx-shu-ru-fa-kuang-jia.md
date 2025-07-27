@@ -13,39 +13,7 @@ fcitx 即“A flexible input method framework（一款灵活的输入法框架�
 >
 > 在 FreeBSD-CURRENT 中可能会出现许多不可预料的怪异 bug：fcitx5 诊断信息英文乱码，输入法显示出奇怪的汉字，fcitx5-qt5 环境不能正常加载……
 
-## 安装 Fcitx
-
-fcitx 5 相比前一代，增加了对 Wayland 的支持，据说更加流畅。
-
-### 安装 Fcitx 4.X
-
-- 使用 pkg 安装：
-
-
-```sh
-# pkg install zh-fcitx zh-fcitx-configtool fcitx-qt5 fcitx-m17n zh-fcitx-libpinyin
-```
-
-- 或者使用 Ports 安装：
-
-```
-# cd /usr/ports/chinese/fcitx/ && make install clean # 输入法框架
-# cd /usr/ports/chinese/fcitx-configtool/ && make install clean # 输入法图形化配置工具
-# cd /usr/ports/textproc/fcitx-qt5/ && make install clean # 支持 qt5 软件
-# cd /usr/ports/textproc/fcitx-m17n/ && make install clean # 多语种支持
-# cd /usr/ports/chinese/fcitx-libpinyin/ && make install clean # 拼音输入法
-```
-
-
-#### Fcitx 4.X 开机自启 
-
-```sh
-$ mkdir -p ~/.config/autostart/ # 若使用其他用户则需要在其命令行下再执行之
-$ cp /usr/local/share/applications/fcitx.desktop ~/.config/autostart/
-```
-
-### 安装 Fcitx 5.X
-
+## 安装 Fcitx5
 
 - 使用 pkg 安装：
 
@@ -98,6 +66,8 @@ $ cp /usr/local/share/applications/org.fcitx.Fcitx5.desktop ~/.config/autostart/
 
 ## 配置 Fcitx 环境变量
 
+### X11
+
 根据自己使用的桌面管理器及 shell 择一使用：
 
 1. sddm lightdm gdm 都可以在 `~/.xprofile` 中写入 A 组配置
@@ -137,22 +107,18 @@ setenv GTK_IM_MODULE fcitx
 setenv QT_IM_MODULE fcitx
 ```
 
+### Wayland
+
+在 Wayland 下，不应该设置 `GTK_IM_MODULE` 与 `QT_IM_MODULE`。Wayland 有输入法相关的协议（`text-input` 和 `input-method`）且这些协议得到了广泛支持，不需要依赖 Gtk 与 Qt 自己的输入法模块即可正常使用输入法。设置 `GTK_IM_MODULE` 或 `QT_IM_MODULE` 可能会起到反效果，例如输入候选框与光标位置之间离得很远。
+
+运行在 XWayland 下的程序，输入法由环境变量 `XMODIFIERS='@im=fcitx'` 配置。
+
 
 ## 故障排除与未竟事宜
 
 遇到问题，请先运行 `fcitx` 故障诊断，但是该输出仅对 `bash` 做了环境变量的配置。也就是说他输出的环境变量仅适用于 `bash`、`sh` 和 `zsh` 等 SHELL，而不适用于 `csh`。于 `csh` 的环境变量配置需要参考上文。
 
 如果提示 `bash` 字样且无法输出诊断信息，则需要先安装 `bash`：`# pkg install bash`
-
-### fcitx 4.x
-
-```sh
-# fcitx-diagnose
-```
-
-对于 fcitx 4.x 来说，找不到 `GTK 4` 的支持是正常的。
-
-### fcitx 5.x
 
 ```sh
 # fcitx5-diagnose
