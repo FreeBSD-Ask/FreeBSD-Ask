@@ -54,7 +54,7 @@ $ sysctl hw.snd.default_unit=5
 
 ## AMD CPU mode 2 reset
 
-但是已知 APU 上使用 drm-kmod，打开空播放器可能会触发 mode 2 reset 报错即 driver reset，进而触发 Kernel Panic。
+已知 APU 上使用 drm-kmod，打开空播放器可能会触发 mode 2 reset 报错即 driver reset，进而触发 Kernel Panic。
 
 不要打开空的播放器窗口，或者打开空的音频播放器窗口。
 
