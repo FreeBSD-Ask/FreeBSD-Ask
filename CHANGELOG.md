@@ -4,6 +4,8 @@
 
 ## 2025 年第三季度
 
+- 2025.7.30
+  - 之前 KDE 在 Wayland 下，启动后桌面右键单击黑屏的问题已得到解决。参见 <https://old.reddit.com/r/freebsd/comments/1m9popo/kde_mini_review/n5dv1uk/> 和 <https://github.com/freebsd/freebsd-ports/pull/431>。目前已安装的只需要 `make reinstall` Port `graphics/qt6-wayland` 和 `/x11/plasma6-layer-shell-qt` 即可。或者等几天通过 `pkg upgrade`、安装的也应该不会有黑屏问题了。
 - 2025.7.23
   - 恢复书名《FreeBSD 从入门到跑路》
 - 2025.7.7
