@@ -2,7 +2,7 @@
 
 ## 警告与免责声明
 
-默认值通常提供可最佳性能，可在一般情况下确保系统稳定性。除非你熟悉 BIOS 设置，否则请务必使用默认值，以避免系统损坏或启动失败。
+默认值通常提供了最佳性能，可在一般情况下确保系统稳定性。除非你熟悉 BIOS 设置，否则请务必使用默认值，以避免系统损坏或启动失败。
 
 BIOS 界面、选项和设置可能因系统不同而有所差异。
 
@@ -16,7 +16,7 @@ BIOS 界面、选项和设置可能因系统不同而有所差异。
 
 市场上大部分英特尔迷你主机的 BIOS 都是 AMI BIOS。
 
-因此对 AMI BIOS 进行注解是有广泛意义的。
+因此对 AMI BIOS 进行注解是有普遍意义的。
 
 - 此注解主要面向 Intel 英特尔 x86 平台。对 AMD 平台仅具有一定的参考价值。
 - 此注解主要基于 AMI BIOS 5.27。
@@ -56,10 +56,7 @@ BIOS 厂商：American Megatrends 安迈科技
 - Core Version（核心版本）: 5.27
 - Compliancy（兼容性）: UEFI 2.8; PI 1.7
 - Project Version（项目版本）: X4-V004
-- Build Date and Time: 03/05/2025 21:22:06
-
-构建日期和时间：2025 年 03 月 05 日 21:22:06
-
+- Build Date and Time（构建日期和时间）: 03/05/2025 21:22:06（2025 年 03 月 05 日 21:22:06）
 - M/B Name（主板名称）: RAXDA X4
 - Access Level（访问级别）: Administrator（管理员）
 
@@ -79,13 +76,9 @@ BIOS 厂商：American Megatrends 安迈科技
 
 #### Language and Time（语言与时间）
 
-- System Language: [English]
+- System Language（系统语言）: [English]（[英语]）
 
-系统语言：[英语]
-
-- System Date: [Sat 07/19/2025]
-
-系统日期：[星期六 2025 年 07 月 19 日]
+- System Date（系统日期）: [Sat 07/19/2025]（[2025 年 07 月 19 日 星期六]）
 
 - System Time（系统时间）: [04:49:48]
 
@@ -134,7 +127,7 @@ Choose the system default language 选择系统默认语言
 
 Version 2.22.1289 Copyright (C) 2025 AMI
 
-版本 2.22.1289 版权所有 (C) 2025 AMI
+版本 2.22.1289 版权所有 (C) AMI 2025 
 
 ## Advanced（高级）
 
@@ -146,7 +139,7 @@ Version 2.22.1289 Copyright (C) 2025 AMI
 
 ​![](../.gitbook/assets/image-20250719125953-pgpr1kb.png)​
 
-​![7T7KWLPH_VVLE4YDRECFK44](../.gitbook/assets/7T7KWLPH_VVLE4YDRECFK44-20250719130033-1v0vcln.png)​
+​![](../.gitbook/assets/7T7KWLPH_VVLE4YDRECFK44-20250719130033-1v0vcln.png)​
 
 #### Efficient-core Information（能效核心信息）
 
@@ -245,6 +238,7 @@ Disable（禁用）
 Enable（启用）
 
 说明：
+
 可针对需要顺序内存访问高利用率的应用程序优化系统，能加快读取速度。如果该功能设置为 Disabled（禁用），CPU 将预取一个缓存行（64 字节）。如果设置为 Enabled（启用），CPU 将预取两个缓存行（共 128 字节）。
 
 因为此选项在某些情况下会对性能造成负面影响（涉及 False Sharing，假共享），可对需要随机内存访问高利用率的应用程序（如数据库，科学计算等）禁用此选项。
@@ -258,6 +252,7 @@ Disable（禁用）
 Enable（启用）
 
 说明：
+
 该技术能使单个系统显示为软件中的多个独立系统。这能让多个独立的操作系统在单个系统上同时运行。
 
 启用后，VMM 系统（虚拟机监控器）可以使用处理器对虚拟化的支持（虚拟机扩展 VMX），并利用 Vanderpool 技术（VT）硬件所提供的附加功能。
@@ -529,6 +524,7 @@ Disable（禁用）
 Enable（启用）
 
 说明：
+
 此选项依赖“HwP Autonomous Per Core P State（硬件自动控制的每核心性能状态）”，HwP Autonomous Per Core P State 开启时设置本选项才有意义。
 
 启用 EPP 分组自主功能后，所有具有 EPP 的核心将请求相同的性能偏好值。
@@ -576,6 +572,7 @@ Enable（启用）
 Disable（禁用）
 
 Enable（启用）
+
 说明：
 
 HDC，Hardware Duty Cycling，英特尔硬件占空比调节技术。
@@ -704,6 +701,7 @@ Disable（禁用）
 Enable（启用）
 
 说明：
+
 此选项依赖 Platform PL2 Enable（启用平台 PL2）。
 
 如果此选项被禁用，BIOS 将会使用默认值来配置功耗限制 2（Power Limit 2）。该选项可用于解锁功耗墙。
@@ -748,10 +746,7 @@ PSYS 平台电源变化率以 1/100 为单位定义，范围为 0 到 200。
 
 ###### PSYS Offset（PSYS 平台电源偏移量）
 
-PSYS 平台电源偏移量以 1/1000 为单位定义，范围为 0 到 63999。
-
-- 例如，要设置偏移量为 25.348，输入 25348。
-- 该设置通过 BIOS VR mainbox 命令 0x9 进行控制。
+PSYS 平台电源偏移量以 1/1000 为单位定义，范围为 0 到 63999。例如，要设置偏移量为 25.348，输入 25348。该设置通过 BIOS VR mainbox 命令 0x9 进行控制。
 
 ###### PSYS Prefix（PSYS 平台电源前缀）
 
@@ -844,6 +839,7 @@ Psys Critical（平台功耗临界）
 Vsys Critical（系统电压临界）
 
 说明：
+
 该功能用于启用 Vsys/Psys Critical（临界）监控功能。当启用此功能时，系统会根据设定的阈值监控平台电源状态，以便在电压或功耗超过安全范围时采取保护措施（例如限制性能、触发告警、避免过载等）。
 
 ###### 详细说明
@@ -1158,6 +1154,7 @@ Disable（禁用）
 C1
 
 说明：
+
 使用此功能可以防止 CPU 频繁进入 C 状态，从而改善延迟表现。意味着当 CPU 处于深度 C 状态（如 C6 或更深）时，如果系统认为需要更快地响应，CPU 会自动降级到 C1 状态。
 
 ###### C-State Un-demotion（C 状态取消降级）
@@ -1286,13 +1283,13 @@ Intel CPU 热量监控程序/过温防护功能。当温度过高时会对 CPU �
 
 选项：
 
-Fixed Priority
+Fixed Priority（固定优先级）
 
-Round robin
+Round robin（轮询）
 
-Hash Vector
+Hash Vector（哈希向量）
 
-No Change
+No Change（不改变）
 
 说明：
 
@@ -1577,6 +1574,7 @@ dTPM 1.2 在 SkuMgr 中禁用 PTT。
 警告！如果要禁用 PTT/dTPM，那么存储在其中的所有数据都将丢失（如 BitLocker 恢复密钥）。
 
 SkuMgr 是 BIOS 中的一个模块，用于管理系统的硬件配置和功能启用。
+
 TPM 或受信任的平台模块是一种驻留在计算机主板或其处理器中的物理或嵌入式安全技术（微控制器）。TPM 使用加密技术来帮助在电脑上安全地存储基本和关键信息，以启用平台身份验证。
 
 #### FIPS Configuration（联邦信息处理标准配置）
@@ -1601,7 +1599,7 @@ Enable（启用）
 
 ##### HECI Timeous（HECI 超时）
 
-HECI，Host Embedded Controller Interface，增强型主机控制器接口。EHCI 控制 USB 2.0。
+
 选项：
 
 Disable（禁用）
@@ -1609,6 +1607,8 @@ Disable（禁用）
 Enable（启用）
 
 说明：
+
+HECI，Host Embedded Controller Interface，增强型主机控制器接口。EHCI 控制 USB 2.0。
 
 控制 HECI 发送/接收超时。
 
@@ -1737,6 +1737,7 @@ Disable（禁用）
 Enable（启用）
 
 说明：
+
 管理组件传输协议广播周期及设置 PMT 为总线所有者。用于配置管理组件传输协议（MCTP）的周期性广播。
 
 MCTP（Management Component Transport Protocol，管理组件传输协议）是一种独立于物理介质的协议，用于计算机系统中各部件之间的信息交互。此协议独立于底层物理总线，是一种独立于总线的“数据链路层”协议。
@@ -2422,6 +2423,7 @@ Disable（禁用）
 Enable（启用）
 
 说明：
+
 EHCI 用于支持 USB 2.0，xHCI 用于支持 USB 3.0。
 
 xHCI Hand Off：USB 控制器接口手动传递
@@ -3374,7 +3376,7 @@ Disabled（禁用）
 
 #### GPIO Configurations（GPIO 配置）
 
-GPIO，General Purpose Input Output 通用输入/输出。一般嵌入式设备才有。
+GPIO，General Purpose Input Output：通用输入/输出。一般嵌入式设备才有。
 
 ##### GPIOx（GPIO x）
 
@@ -4882,6 +4884,8 @@ High（高）
 
 0-255
 
+说明：
+
 为 LPDDR4 / LPDDR5 设置初始 RttWr（写终端电阻）ODT（片上终端）覆盖值，单位为欧姆。取值范围 0x01 到 0xFF，默认值 0 表示自动。
 
 调试用。
@@ -4891,6 +4895,8 @@ High（高）
 值：
 
 0-255
+
+说明：
 
 用于 LPDDR4/LPDDR5 的初始 RttCa 片上终端电阻（ODT）覆盖值，单位为欧姆。范围为  0x01 至 0xFF，默认值 0 表示自动（AUTO）。
 
@@ -4966,8 +4972,7 @@ Disabled（禁用）
 
 选项：
 
-BIT6, BIT7, BIT8, BIT9, BIT10, BIT11,  
-BIT12, BIT13
+BIT6, BIT7, BIT8, BIT9, BIT10, BIT11, BIT12, BIT13
 
 说明：
 
@@ -5024,6 +5029,8 @@ Disabled（禁用）
 值：
 
 1-7
+
+说明：
 
 用于设定内存泄漏检测机制的灵敏度
 
@@ -5309,7 +5316,7 @@ Disabled（禁用）
 
 Periodic DCC 能在运行一段时间后自动重新校准，确保输出时钟占空比保持正确，从而提升稳定性和信号完整性
 
-##### LPMode（未知）
+##### LPMode（功能未知）
 
 选项：
 
@@ -5322,6 +5329,8 @@ Disabled（禁用）
 说明：
 
 控制 LPMode
+
+功能未知
 
 ##### PPR Enable（启用 PPR）
 
@@ -5689,7 +5698,7 @@ Disabled（禁用）
 
 说明：
 
-是否启用专用按钮。
+启用专用按钮。
 
 作用未知。
 
@@ -5710,6 +5719,8 @@ EFP3
 EFP2
 
 EFP4
+
+说明：
 
 选择将在 POST 期间激活的视频设备。如果存在外置显卡，则此设置无效。根据您的选择，将出现辅助启动显示设备选项。VGA 模式仅支持主显示设备。
 
@@ -6340,6 +6351,8 @@ Disabled（禁用）
 
 说明：
 
+功能未知。
+
 ##### Control Logic 2（控制逻辑 2）
 
 同上。
@@ -6406,6 +6419,7 @@ Control Logic 3（控制逻辑 3）
 Control Logic 4（控制逻辑 4）
 
 说明：
+
 选择 GPIO 控制逻辑
 
 ###### Camera position（摄像头机位）
@@ -6447,11 +6461,12 @@ ILEDB 2mA：设置 ILEDB 引脚的电流为 2 毫安。
 ILEDB 4mA：设置 ILEDB 引脚的电流为 4 毫安。
 
 ILEDB 8mA：设置 ILEDB 引脚的电流为 8 毫安。
+
 ILEDB 16mA：设置 ILEDB 引脚的电流为 16 毫安
 
 说明：
 
-设置隐私指示灯的电流
+设置隐私指示灯的电流。
 
 ###### Rotation（旋转）
 
@@ -7597,9 +7612,9 @@ Disabled（禁用）
 
 在默认情况下，过流功能应保持启用，仅在 OBS 调试使用时禁用。
 
-1：将在相应的 xHCI 控制器寄存器中编程 USB 过流引脚映射
+启用：将在相应的 xHCI 控制器寄存器中编程 USB 过流引脚映射
 
-0：清除过流引脚映射，允许 OBS 使用过流引脚
+禁用：清除过流引脚映射，允许 OBS 使用过流引脚
 
 ##### USB Audio Offload（USB 音频卸载）
 
@@ -8393,6 +8408,7 @@ Enabled（启用）
 Disabled（禁用）
 
 说明：
+
 引脚配置说明
 
 Enabled（启用）：表示该引脚被配置为 ISH 的原生功能。
@@ -8971,6 +8987,7 @@ Enable in S4-S5（在 S4–S5 状态下启用）
 Enable in S5（在 S5 状态下启用）
 
 说明：
+
 配置深度睡眠模式，若启用设备会自动切换到空闲状态，这是一种功耗最低的模式。
 
 某些功能（例如 Wake on LAN）由于需要设备某些部分保持活动，因此在此状态下将不再可用。
