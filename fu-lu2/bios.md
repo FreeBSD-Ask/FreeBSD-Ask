@@ -5089,7 +5089,7 @@ Disabled（禁用）
 
 内存扰频可提高内存测试的覆盖率和有效性。需要提供地址映射信息来确保测试的准确性和完整性。
 
-参见 [study and implementation of bist for 65nm high speed memory](study%20and%20implementation%20of%20bist%20for%2065nm%20high%20speed%20memory)
+参见 [study and implementation of bist for 65nm high speed memory](https://repository.nirmauni.ac.in/jspui/bitstream/123456789/150/1/04MEC005.pdf)
 
 ##### Force ColdReset（强制冷重置）
 
