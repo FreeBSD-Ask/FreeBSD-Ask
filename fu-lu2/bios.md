@@ -51,14 +51,19 @@ Aptio 设置 - AMI
 #### BIOS Information（BIOS 信息）
 
 -BIOS Vendor: American Megatrends 安迈科技  
+
  BIOS 厂商：American Megatrends 安迈科技
+ 
 -Core Version（核心版本）: 5.27
 -Compliancy（兼容性）: UEFI 2.8; PI 1.7
 -Project Version（项目版本）: X4-V004
 -Build Date and Time: 03/05/2025 21:22:06  
+
  构建日期和时间：2025 年 03 月 05 日 21:22:06
+ 
 -M/B Name（主板名称）: RAXDA X4
 -Access Level: Administrator  
+
  访问级别：管理员
 
 #### Processor Information（处理器信息）
@@ -78,40 +83,60 @@ Aptio 设置 - AMI
 #### Language and Time（语言与时间）
 
 -System Language: [English]  
+
  系统语言：[英语]
+ 
 -System Date: [Sat 07/19/2025]  
+
  系统日期：[星期六 2025 年 07 月 19 日]
+ 
 -System Time（系统时间）: [04:49:48]
 
 ### 右侧帮助信息
 
-Choose the system default language
-选择系统默认语言
+Choose the system default language 选择系统默认语言
 
 ### 键盘帮助（底部右侧）
 
 - →↑↓←: Select Screen / Item  
+
   →↑↓←：选择页面 / 项目
+
 - Enter: Select  
+
   Enter：选择
+
 - +/-: Change Opt.  
+
   +/-：更改选项
+
 - F1: General Help  
+
   F1：常规帮助
+
 - F2: Previous Values  
+
   F2：上一次的值
+
 - F3: Optimized Defaults  
+
   F3：加载优化默认值
-- F4: Save & Exit  
+  
+- F4: Save & Exit
+  
   F4：保存并退出
-- ESC: Exit  
+  
+- ESC: Exit
+  
   ESC：退出
+
 - K/k 对右上角的提示内容向上翻页
 - M/m：对右上角的提示内容向下翻页
 
 ### 底部版本信息
 
 Version 2.22.1289 Copyright (C) 2025 AMI
+
 版本 2.22.1289 版权所有 (C) 2025 AMI
 
 ## Advanced（高级）
