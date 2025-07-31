@@ -9330,6 +9330,32 @@ Disabled（禁用）
 
 作用未知。
 
+#### ACPI L6D PME Handling（ACPI 中 L6D（_L6D）PME 事件处理）
+
+选项：
+
+Enabled（启用）
+
+Disabled（禁用）
+
+说明：
+
+BIOS 可以通过 ACPI 代码将特定方法关联到某个特定的 GPE。在本例中，\_L6D 是一个电平触发事件的方法。BIOS-ACPI 可以检查每个需要通过 GPE 唤醒的设备的 PMEENABLE 和 PMESTATUS。
+
+作用未知。
+
+#### Beep On（蜂鸣器）
+
+选项：
+
+Enabled（启用）
+
+Disabled（禁用）
+
+说明：
+
+开关蜂鸣器。
+
 #### PSE Configuration（可编程服务引擎配置）
 
 PSE：Programmable Service Engine，可编程服务引擎
