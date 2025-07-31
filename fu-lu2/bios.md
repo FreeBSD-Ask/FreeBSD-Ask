@@ -54,44 +54,45 @@ Aptio 设置 - AMI
 -BIOS Vendor: American Megatrends 安迈科技  
 
  BIOS 厂商：American Megatrends 安迈科技
- 
--Core Version（核心版本）: 5.27
--Compliancy（兼容性）: UEFI 2.8; PI 1.7
--Project Version（项目版本）: X4-V004
--Build Date and Time: 03/05/2025 21:22:06  
+
+
+- Core Version（核心版本）: 5.27
+- Compliancy（兼容性）: UEFI 2.8; PI 1.7
+- Project Version（项目版本）: X4-V004
+- Build Date and Time: 03/05/2025 21:22:06  
 
  构建日期和时间：2025 年 03 月 05 日 21:22:06
  
--M/B Name（主板名称）: RAXDA X4
--Access Level: Administrator  
+- M/B Name（主板名称）: RAXDA X4
+- Access Level: Administrator  
 
  访问级别：管理员
 
 #### Processor Information（处理器信息）
 
--Name（名称）: AlderLake ULX
--Type（类型）: Intel(R) N100
--Speed（频率）: 800 MHz
--ID: 0xB06E0
--Stepping（步进）: A0
+- Name（名称）: AlderLake ULX
+- Type（类型）: Intel(R) N100
+- Speed（频率）: 800 MHz
+- ID: 0xB06E0
+- Stepping（步进）: A0
 
 #### Memory Information（内存信息）
 
--Memory RC Version（内存 RC 版本）: 0.0.4.73
--Total Memory（总内存）: 16384 MB
--Memory Frequency（内存频率）: 4800 MHz
+- Memory RC Version（内存 RC 版本）: 0.0.4.73
+- Total Memory（总内存）: 16384 MB
+- Memory Frequency（内存频率）: 4800 MHz
 
 #### Language and Time（语言与时间）
 
--System Language: [English]  
+- System Language: [English]  
 
  系统语言：[英语]
  
--System Date: [Sat 07/19/2025]  
+- System Date: [Sat 07/19/2025]  
 
  系统日期：[星期六 2025 年 07 月 19 日]
  
--System Time（系统时间）: [04:49:48]
+- System Time（系统时间）: [04:49:48]
 
 ### 右侧帮助信息
 
