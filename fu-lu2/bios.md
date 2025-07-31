@@ -648,8 +648,8 @@ Enable（启用）
 - 将开启对 ENERGY_PERFORMANCE_BIAS MSR 的访问，允许系统设置和读取能源性能偏好值。
   简单来说：
 
--0 → 禁用能源效率策略相关接口，不支持节能偏好设置。
--1 → 启用 ENERGY_PERFORMANCE_BIAS 接口，可以调整节能与性能之间的偏好。
+- 0 → 禁用能源效率策略相关接口，不支持节能偏好设置。
+- 1 → 启用 ENERGY_PERFORMANCE_BIAS 接口，可以调整节能与性能之间的偏好。
 
 ###### Package Power Limit MSR Lock（封装功耗限制寄存器锁定）
 
