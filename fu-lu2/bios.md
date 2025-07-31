@@ -1017,9 +1017,10 @@ RFI Current Frequency（当前 RFI 频率）：139.200MHz
 
 - RFI Frequency（RFI 频率）：设置目标 RFI 频率（Set desired RFI Frequency）
 
-  -调节单位：以 100 千赫兹（100KHz）为步进 -频率范围：130 MHz 至 160 MHz -默认硬件频率：139.6 MHz
-
-  -输入值=目标频率（MHz） × 10
+  - 调节单位：以 100 千赫兹（100KHz）为步进
+  - 频率范围：130 MHz 至 160 MHz
+  - 默认硬件频率：139.6 MHz
+  - 输入值 = 目标频率（MHz） × 10
   （例如：需设置 139.6 MHz 时 → 输入 1396）
 
 - RIVR Spread Spectrum（Fully Integrated Voltage Regulator，全集成电压调节器）：启用/禁用。全集成电压调节器展频。可降低峰值辐射强度，减少对特定频率的干扰。
@@ -1038,7 +1039,9 @@ Enable（启用）
 
 这是是否允许修改 PL1 的总开关。是启用/禁用平台功耗限制  1（Platform Power Limit 1，PL1）的编程设置。
 
--启用（Enabled）：BIOS 会激活并写入 PL1 值，处理器会在指定时间窗口内以该值限制平均功耗。 -禁用（Disabled）：BIOS 不编程 PL1，此时处理器将使用默认或平台固件设定的限制值。
+启用（Enabled）：BIOS 会激活并写入 PL1 值，处理器会在指定时间窗口内以该值限制平均功耗。 
+
+禁用（Disabled）：BIOS 不编程 PL1，此时处理器将使用默认或平台固件设定的限制值。
 
 ##### Platform PL1 Power（平台 PL1 功耗）
 
