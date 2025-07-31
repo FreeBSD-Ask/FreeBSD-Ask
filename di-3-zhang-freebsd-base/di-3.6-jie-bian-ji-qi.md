@@ -52,7 +52,7 @@ ABC
 :wq
 ```
 
-## microsoft-edit 
+## microsoft-edit
 
 microsoft-edit 是微软开源的文本编辑器，原生支持中文、交互界面简单、可使用鼠标操作。
 

@@ -301,6 +301,7 @@
 * [适用于 FreeBSD 的以太网卡、USB 以太网卡和 USB 无线网卡](fu-lu2/yi-tai-wang-ka.md)
 * [FreeBSD 桌面发行版评述](fu-lu2/others-bsd.md)
 * [BSD 许可证概览](fu-lu2/xukez.md)
+* [UEFI/BIOS 注解（基于 AMI BIOS）](fu-lu2/bios.md)
 
 ## 附录 Ⅲ 文学故事
 

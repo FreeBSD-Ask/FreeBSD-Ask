@@ -20,7 +20,7 @@ FreeBSD 二进制包管理器目前是 pkg，即“Package”，软件包的意�
 >
 > 如果需要查询一个软件包在 FreeBSD 中的具体情况可以这样用：谷歌或者必应（必应很多时候搜索不出来）搜索“freebsd ports 包名”。如果无法使用，可以直接在网站里搜索包名 [https://www.freshports.org/](https://www.freshports.org/)。
 
-## 如何从 Port 构建出 pkg 
+## 如何从 Port 构建出 pkg
 
 ![pkg 构建流程图](../.gitbook/assets/portstopkg.png)
 
