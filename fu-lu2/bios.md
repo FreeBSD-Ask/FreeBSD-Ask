@@ -166,7 +166,7 @@ Enable（启用）
 
 选择“启用”以在 CPU 进入 C6 状态时将 DRAM 内容移动到 PRM 内存中。
 
-_C6_ 是最深级别的休眠，此时 CPU 的供电减少为 0，通常会降低 80%-90% 的功耗。
+*C6* 是最深级别的休眠，此时 CPU 的供电减少为 0，通常会降低 80%-90% 的功耗。
 
 #### CPU Flex Ratio Override（CPU 可变倍频覆盖）
 
@@ -192,7 +192,7 @@ CPU Flex Ratio Override 即 CPU 倍频设置，仅当此选项为 Enable 时，�
 
 该数值必须介于最大能效比（LFM，即最低主频）和硬件设定的最大非睿频比率（HFM，即默频）之间（最低主频 ≤ 你设置的值 ≤ 默频）。
 
-CPU 主频 \= 基准时钟（Base Clock，即外频，BIOS 中是 100 MHz _）_ × 倍频（Multiplier）
+CPU 主频 \= 基准时钟（Base Clock，即外频，BIOS 中是 100 MHz *）* × 倍频（Multiplier）
 
 例如，CPU 倍频为 46x，基本时钟速度为 100 MHz，则时钟速度为 4.6GHz。
 
@@ -389,6 +389,7 @@ Split Lock 指跨越两个 cache line 的原子操作（如 lock add，xchg 等�
 ​![](../.gitbook/assets/XV6F5EV9_O8NSCPXCCJ-20250719151649-01nqtsy.png)​
 
 ‍
+
 | 英文术语 | 中文翻译 |
 | ------------------------------ | ----------------------------------- |
 | CPU - Power Management Control | CPU 电源管理控制 |
@@ -821,7 +822,7 @@ VCCIN Aux IMON 偏移量，以 1/1000 为增量单位。范围为 0-63999。例�
 说明：
 该功能用于启用 Vsys/Psys Critical（临界）监控功能。当启用此功能时，系统会根据设定的阈值监控平台电源状态，以便在电压或功耗超过安全范围时采取保护措施（例如限制性能、触发告警、避免过载等）。
 
-###### 详细说明：
+###### 详细说明
 
 ##### Vsys/Psys Full Scale（Vsys/Psys 满量程值）
 
@@ -843,7 +844,7 @@ Vsys/Psys 临界比值 \= 临界阈值 ÷ 满量程值。
 
 Vsys 的输入单位为毫伏（mV），Psys 的输入单位为毫瓦（mW），或在 ATX12VO 架构下为百分比（%）。
 
-######Assertion Deglitch Mantissa（断言消隐尾数）
+###### Assertion Deglitch Mantissa（断言消隐尾数）
 
 主要用于控制信号“断言”（assertion）过程中的消隐（deglitch）行为。用以设置断言信号消隐时间，作用是平衡电路中的噪声抑制与信号响应速度。
 
@@ -1438,7 +1439,7 @@ Enable（启用）
 ME：Intel Management Engine，Intel 管理引擎状态。英特尔 ® 管理引擎是一个嵌入式微控制器（集成在某些英特尔芯片组上），运行一个轻量级微内核操作系统，为基于英特尔 ® 处理器的计算机系统提供各种功能和服务。
 
 参见 [什么是英特尔 ® 管理引擎？](https://www.intel.cn/content/www/cn/zh/support/articles/000008927/software/chipset-software.html)
-####ME Unconfig on RTC Clear（当重置 RTC 时不会重置 ME）
+#### ME Unconfig on RTC Clear（当重置 RTC 时不会重置 ME）
 
 选项：
 
@@ -4939,7 +4940,7 @@ BIT12, BIT13
 
 选择用于通道交织模式的位。注意：BIT7 对应以 2 个缓存行粒度进行通道交错，BIT8 对应 4 个缓存行，BIT9 对应 8 个缓存行。
 
-#####Extended Bank Hashing（扩展存储单元哈希）
+##### Extended Bank Hashing（扩展存储单元哈希）
 
 选项：
 
@@ -8010,7 +8011,7 @@ Disabled（禁用）
 
 控制 SPI1 总线开关。用于连接高速外围设备。
 
-#####SPI2 Controller（SPI2 控制器）
+##### SPI2 Controller（SPI2 控制器）
 
 选项：
 

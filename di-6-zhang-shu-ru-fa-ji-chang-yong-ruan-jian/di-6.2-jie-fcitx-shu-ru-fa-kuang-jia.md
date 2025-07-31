@@ -57,7 +57,7 @@ fcitx 即“A flexible input method framework（一款灵活的输入法框架�
 
 对于普通用户如未生效，请检查自己的 shell 是否选择了对应教程进行设置。另外请将该用户加入 wheel 组。
 
-#### Fcitx 5.X 开启自启 
+#### Fcitx 5.X 开启自启
 
 ```sh
 $ mkdir -p ~/.config/autostart/ # 若使用其他用户则需要在其命令行下再执行之

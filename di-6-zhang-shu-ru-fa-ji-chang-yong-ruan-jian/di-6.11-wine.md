@@ -105,7 +105,7 @@ $ wine /home/ykla/winscp.exe
 >
 >安装成功后，会在系统生成对应的图标，经过测试，双击即可正常运行。
 
-## Winetricks 
+## Winetricks
 
 Winetricks 是个脚本（近两万行的脚本），封装了许多有关 Wine 的实用功能。比如安装卸载软件，安装字体等。可以规避许多常见的 Wine 问题。
 
