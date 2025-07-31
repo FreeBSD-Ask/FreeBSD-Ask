@@ -51,22 +51,21 @@ Aptio 设置 - AMI
 
 #### BIOS Information（BIOS 信息）
 
-- BIOS Vendor: American Megatrends 安迈科技  
+- BIOS Vendor: American Megatrends 安迈科技
 
- BIOS 厂商：American Megatrends 安迈科技
-
+BIOS 厂商：American Megatrends 安迈科技
 
 - Core Version（核心版本）: 5.27
 - Compliancy（兼容性）: UEFI 2.8; PI 1.7
 - Project Version（项目版本）: X4-V004
-- Build Date and Time: 03/05/2025 21:22:06  
+- Build Date and Time: 03/05/2025 21:22:06
 
- 构建日期和时间：2025 年 03 月 05 日 21:22:06
- 
+构建日期和时间：2025 年 03 月 05 日 21:22:06
+
 - M/B Name（主板名称）: RAXDA X4
-- Access Level: Administrator  
+- Access Level: Administrator
 
- 访问级别：管理员
+访问级别：管理员
 
 #### Processor Information（处理器信息）
 
@@ -84,14 +83,14 @@ Aptio 设置 - AMI
 
 #### Language and Time（语言与时间）
 
-- System Language: [English]  
+- System Language: [English]
 
- 系统语言：[英语]
- 
-- System Date: [Sat 07/19/2025]  
+系统语言：[英语]
 
- 系统日期：[星期六 2025 年 07 月 19 日]
- 
+- System Date: [Sat 07/19/2025]
+
+系统日期：[星期六 2025 年 07 月 19 日]
+
 - System Time（系统时间）: [04:49:48]
 
 ### 右侧帮助信息
@@ -100,36 +99,36 @@ Choose the system default language 选择系统默认语言
 
 ### 键盘帮助（底部右侧）
 
-- →↑↓←: Select Screen / Item  
+- →↑↓←: Select Screen / Item
 
   →↑↓←：选择页面 / 项目
 
-- Enter: Select  
+- Enter: Select
 
   Enter：选择
 
-- +/-: Change Opt.  
+- +/-: Change Opt.
 
   +/-：更改选项
 
-- F1: General Help  
+- F1: General Help
 
   F1：常规帮助
 
-- F2: Previous Values  
+- F2: Previous Values
 
   F2：上一次的值
 
-- F3: Optimized Defaults  
+- F3: Optimized Defaults
 
   F3：加载优化默认值
-  
+
 - F4: Save & Exit
-  
+
   F4：保存并退出
-  
+
 - ESC: Exit
-  
+
   ESC：退出
 
 - K/k 对右上角的提示内容向上翻页
@@ -193,7 +192,7 @@ Enable（启用）
 
 选择“启用”以在 CPU 进入 C6 状态时将 DRAM 内容移动到 PRM 内存中。
 
-*C6* 是最深级别的休眠，此时 CPU 的供电减少为 0，通常会降低 80%-90% 的功耗。
+_C6_ 是最深级别的休眠，此时 CPU 的供电减少为 0，通常会降低 80%-90% 的功耗。
 
 #### CPU Flex Ratio Override（CPU 可变倍频覆盖）
 
@@ -219,7 +218,7 @@ CPU Flex Ratio Override 即 CPU 倍频设置，仅当此选项为 Enable 时，�
 
 该数值必须介于最大能效比（LFM，即最低主频）和硬件设定的最大非睿频比率（HFM，即默频）之间（最低主频 ≤ 你设置的值 ≤ 默频）。
 
-CPU 主频 \= 基准时钟（Base Clock，即外频，BIOS 中是 100 MHz *）* × 倍频（Multiplier）
+CPU 主频 \= 基准时钟（Base Clock，即外频，BIOS 中是 100 MHz _）_ × 倍频（Multiplier）
 
 例如，CPU 倍频为 46x，基本时钟速度为 100 MHz，则时钟速度为 4.6GHz。
 
@@ -417,10 +416,10 @@ Split Lock 指跨越两个 cache line 的原子操作（如 lock add，xchg 等�
 
 ‍
 
-| 英文术语 | 中文翻译 |
+| 英文术语                       | 中文翻译                            |
 | ------------------------------ | ----------------------------------- |
-| CPU - Power Management Control | CPU 电源管理控制 |
-| GT - Power Management Control | 核显电源管理控制（GT 电源管理控制） |
+| CPU - Power Management Control | CPU 电源管理控制                    |
+| GT - Power Management Control  | 核显电源管理控制（GT 电源管理控制） |
 
 #### CPU - Power Management Control（CPU 电源控制管理）
 
@@ -897,7 +896,8 @@ Assertion Deglitch Mantissa（断言消隐指数）
 
 选项：
 
-AUTO (0)：使用主板 ID 自动确定主板设计。  
+AUTO (0)：使用主板 ID 自动确定主板设计。
+
 其他值：将覆盖主板 ID 逻辑，强制指定设计配置。
 
 说明：
@@ -1466,6 +1466,7 @@ Enable（启用）
 ME：Intel Management Engine，Intel 管理引擎状态。英特尔 ® 管理引擎是一个嵌入式微控制器（集成在某些英特尔芯片组上），运行一个轻量级微内核操作系统，为基于英特尔 ® 处理器的计算机系统提供各种功能和服务。
 
 参见 [什么是英特尔 ® 管理引擎？](https://www.intel.cn/content/www/cn/zh/support/articles/000008927/software/chipset-software.html)
+
 #### ME Unconfig on RTC Clear（当重置 RTC 时不会重置 ME）
 
 选项：
@@ -2207,12 +2208,15 @@ ANSI：扩展 ASCII 字符集。
 
 选项：
 
-- None：无
+None：无
 
--Even（偶校验）：如果数据位中 1 的个数是偶数，则奇偶位为 0。
--Odd（奇校验）：如果数据位中 1 的个数是奇数，则奇偶位为 0。
--Mark（奇偶校验）：奇偶位始终为 1。
--Space（存储器奇偶校验）：奇偶位始终为 0。
+Even（偶校验）：如果数据位中 1 的个数是偶数，则奇偶位为 0。
+
+Odd（奇校验）：如果数据位中 1 的个数是奇数，则奇偶位为 0。
+
+Mark（奇偶校验）：奇偶位始终为 1。
+
+Space（存储器奇偶校验）：奇偶位始终为 0。
 
 ###### Stop Bits（停止位）
 
@@ -2425,7 +2429,7 @@ xHCI Hand Off：USB 控制器接口手动传递
 
 XHCI Hand-off 选项的作用是在操作系统不支持 xHCI 的情况下，是否让 BIOS 控制 USB 3.0 控制器。
 
--禁用 XHCI Hand-off：启动时由 BIOS 接管 USB 控制器，可能会将 USB 3.0 降为 USB 2.0，适用于原生不支持 USB 3.0 的旧系统（如 XP）。因此当系统不支持 xHCI 时，USB 3.0 装置在启动阶段或进入系统前可能无法正常使用。 -启用 XHCI Hand-off：启动后由操作系统接管 USB 3.0 控制器，适用于原生支持 xHCI 的系统；如果系统对 xHCI 的支持损坏，可能导致 USB 设备无法使用。
+禁用 XHCI Hand-off：启动时由 BIOS 接管 USB 控制器，可能会将 USB 3.0 降为 USB 2.0，适用于原生不支持 USB 3.0 的旧系统（如 XP）。因此当系统不支持 xHCI 时，USB 3.0 装置在启动阶段或进入系统前可能无法正常使用。 -启用 XHCI Hand-off：启动后由操作系统接管 USB 3.0 控制器，适用于原生支持 xHCI 的系统；如果系统对 xHCI 的支持损坏，可能导致 USB 设备无法使用。
 
 #### USB Mass Storage Driver Support（USB 大容量存储驱动支持）
 
@@ -2496,6 +2500,7 @@ Manual（手动）
 即：
 
 - 在系统启动或设备初始化时，设置等待设备完成上电准备的时间。
+
 - 确保设备有足够时间完成内部启动过程，避免因为过早访问导致识别失败或异常。
 
 ##### Device power-up delay in seconds（设备上电延迟的秒数）
