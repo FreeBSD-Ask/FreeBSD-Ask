@@ -20,9 +20,11 @@ BIOS 界面、选项和设置可能因系统不同而有所差异。
 
 因此对 AMI BIOS 进行注解是有普遍意义的。
 
+### 技术信息
+
 - 此注解主要面向 Intel 英特尔 x86 平台。对 AMD 平台仅具有一定的参考价值。
 - 此注解主要基于 AMI BIOS 5.27。
-- 文中 (R) 等标志是 ®，代表注册商标；tm 是 ™，表明该图形或文字是作为商标使用的，并不是已注册的商标，一般指已向商标局发出注册申请但尚未正式注册的商标。
+- 文中 (R) 标志是 ®，代表注册商标；tm 是 ™，表明该图形或文字是作为商标使用的，并不是已注册的商标，一般指已向商标局发出注册申请但尚未正式注册的商标。
 - 置灰的选项表示在当前状态下不可被选中。
 - 带有“▶”符号的项目，表示该选项包含子菜单。
 
@@ -59,10 +61,7 @@ Aptio 设置 - AMI
 
 #### BIOS Information（BIOS 信息）
 
-- BIOS Vendor: American Megatrends 安迈科技
-
-BIOS 厂商：American Megatrends 安迈科技
-
+- BIOS Vendor（BIOS 厂商）: American Megatrends（安迈科技）
 - Core Version（核心版本）: 5.27
 - Compliancy（兼容性）: UEFI 2.8; PI 1.7
 - Project Version（项目版本）: X4-V004
