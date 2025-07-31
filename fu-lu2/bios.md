@@ -839,9 +839,11 @@ VCCIN Aux IMON 偏移量，以 1/1000 为增量单位。范围为 0-63999。例�
 
 选项：
 
--Disabled（禁用）
--Psys Critical（平台功耗临界）
--Vsys Critical（系统电压临界）
+Disabled（禁用）
+
+Psys Critical（平台功耗临界）
+
+Vsys Critical（系统电压临界）
 
 说明：
 该功能用于启用 Vsys/Psys Critical（临界）监控功能。当启用此功能时，系统会根据设定的阈值监控平台电源状态，以便在电压或功耗超过安全范围时采取保护措施（例如限制性能、触发告警、避免过载等）。
