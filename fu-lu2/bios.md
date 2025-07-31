@@ -6141,7 +6141,9 @@ Manual（手动）
 
 当 CPU 检测到 系统空闲（如操作系统空闲线程运行），它可以通过硬件机制进入该模式以降低功耗。
 
-#### VT-d（英特尔 ® 定向 I/O 架构虚拟化技术）
+#### VT-d（英特尔 ® 定向 I/O 架构虚拟化技术/IOMMU）
+
+VT-d 即 Intel IOMMU 技术。
 
 VT-d，Intel® Virtualization Technology for Directed I/O，英特尔 ® 定向 I/O 架构虚拟化技术。虚拟机会用到。用于提高系统的安全性和可靠性，并改善 I/O 设备在虚拟化环境中的性能。
 
@@ -6149,7 +6151,7 @@ VT-d 是一个位于 CPU、内存和 I/O 设备之间的硬件设备，VT-d 的�
 
 参见 [Intel VT-d（1）- 简介](https://zhuanlan.zhihu.com/p/50640466)、[定向 I/O 架构规范英特尔 ® 虚拟化技术](https://www.intel.cn/content/www/cn/zh/content-details/774206/intel-virtualization-technology-for-directed-i-o-architecture-specification.html)
 
-虚拟机监控器（VMM）系统可以使用 VT-d 来管理多个虚拟机对同一物理 I/O 设备的访问。
+虚拟机监控器（VMM）系统可以使用 VT-d 来管理多个虚拟机对同一物理 I/O 设备的访问（即硬件直通）。
 
 #### Control Iommu Pre-boot Behavior（控制 IOMMU 预启动行为）
 
