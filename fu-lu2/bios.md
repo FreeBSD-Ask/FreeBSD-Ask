@@ -5332,7 +5332,7 @@ Enabled（启用）
 Hard PPR（hPPR，硬 PPR）
 
 说明：
-PPR，Post Pacakge Repair，封装后修复。
+PPR，Post Package Repair，封装后修复。
 
 参见 [FQXSFMA0026I：DIMM [arg1] 自我修复，尝试进行封装后修复（PPR）成功。[arg2]](https://pubs.lenovo.com/sr635-v3/zh-CN/FQXSFMA0026I)
 
@@ -7555,7 +7555,7 @@ Disabled（禁用）
 
 PDO，Power Data Objects，供电数据对象
 
-USD PD 2.0 通过 USB PDO 来提供标准功能（电源协议功率等）。
+USB PD 2.0 通过 USB PDO 来提供标准功能（电源协议功率等）。
 
 此策略选项设置后，BIOS 会在 PEI 阶段配置端口禁用覆盖（Port Disable Override，PDO）寄存器。
 
@@ -8599,7 +8599,7 @@ SATA 控制器的热节流配置，包括控制器 1-3。
 
 ​![](../.gitbook/assets/image-20250730151557-d03kgwl.png)​
 
-###### T1 Multipler（T1 端口复用器）
+###### T1 Multiplier（T1 端口复用器）
 
 选项：
 
@@ -9739,7 +9739,7 @@ SSC：Spread Spectrum Clocking，扩频时钟
 
 PLL：Phase Locked Loop，锁相环
 
-#### Flash Potection Range Registers (FPRR)（闪存保护范围寄存器）
+#### Flash Protection Range Registers (FPRR)（闪存保护范围寄存器）
 
 关闭后可使用 FPT 工具直接修改 BIOS，无需编程器。
 
