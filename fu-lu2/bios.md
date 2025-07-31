@@ -51,7 +51,7 @@ Aptio 设置 - AMI
 
 #### BIOS Information（BIOS 信息）
 
--BIOS Vendor: American Megatrends 安迈科技  
+- BIOS Vendor: American Megatrends 安迈科技  
 
  BIOS 厂商：American Megatrends 安迈科技
 
