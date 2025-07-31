@@ -63,16 +63,14 @@ BIOS 厂商：American Megatrends 安迈科技
 构建日期和时间：2025 年 03 月 05 日 21:22:06
 
 - M/B Name（主板名称）: RAXDA X4
-- Access Level: Administrator
-
-访问级别：管理员
+- Access Level（访问级别）: Administrator（管理员）
 
 #### Processor Information（处理器信息）
 
 - Name（名称）: AlderLake ULX
 - Type（类型）: Intel(R) N100
 - Speed（频率）: 800 MHz
-- ID: 0xB06E0
+- ID（编号）: 0xB06E0
 - Stepping（步进）: A0
 
 #### Memory Information（内存信息）
