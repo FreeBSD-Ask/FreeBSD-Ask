@@ -10,6 +10,8 @@ BIOS 界面、选项和设置可能因系统不同而有所差异。
 
 ## 说明
 
+### 为什么选择 AMI BIOS
+
 根据 [The World Runs on AMI](https://www.ami.com/about-us/) 官网介绍，全球 70% 的服务器平台都采用 AMI 软件。
 
 根据 [安迈信息科技（昆山）有限公司](https://www.ami.com.cn/) 官网介绍，AMI 为 BIOS 业界的公认领导者之一，市场占有率超过 65％。
@@ -23,6 +25,14 @@ BIOS 界面、选项和设置可能因系统不同而有所差异。
 - 文中 (R) 等标志是 ®，代表注册商标；tm 是 ™，表明该图形或文字是作为商标使用的，并不是已注册的商标，一般指已向商标局发出注册申请但尚未正式注册的商标。
 - 置灰的选项表示在当前状态下不可被选中。
 - 带有“▶”符号的项目，表示该选项包含子菜单。
+
+### BIOS 与 UEFI 简介
+
+BIOS：Basic Input/Output System，基本输入输出系统，多采用汇编语言编写。BIOS 最早出现于 20 世纪 70 年代。
+
+UEFI：Unified Extensible Firmware Interface，统一可扩展固件接口，多采用 C/C++ 编写。UEFI 的原型 EFI 最早出现在 20 世纪末。
+
+目前主流电脑（大概从 2013 年起）配备的都是 UEFI，而不是传统的 BIOS。也就是说，现在很多人可能根本没见过真正的 BIOS，但是出于习惯（界面和操作逻辑都类似），我们仍将 UEFI 统称作 BIOS 或 UEFI BIOS。
 
 ## Main（主菜单）
 
