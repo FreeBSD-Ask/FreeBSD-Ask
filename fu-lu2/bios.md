@@ -372,7 +372,7 @@ Enable（启用）
 
 MCE，Machine Check Exception，机器检查
 
-MCE 是用来报告内部错误的一种硬件方式 。提供能够检测和报告硬件（机器）的错误机制，如系统总线错误、ECC 错误、奇偶校验错误、缓存错误、TLB 错误等。当发现错误时，拒绝机器重启以收集相关信息进行排错。参见 [https://ilinuxkernel.com/?p=303](https://ilinuxkernel.com/?p=303)
+MCE 是用来报告内部错误的一种硬件方式 。提供能够检测和报告硬件（机器）的错误机制，如系统总线错误、ECC 错误、奇偶校验错误、缓存错误、TLB 错误等。当发现错误时，拒绝机器重启以收集相关信息进行排错。参见 [x86 服务器 MCE（Machine Check Exception）问题](https://ilinuxkernel.com/?p=303)
 
 #### MonitorMwait（Monitor/Mwait 指令）
 
