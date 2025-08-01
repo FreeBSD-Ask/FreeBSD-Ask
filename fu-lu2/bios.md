@@ -6331,17 +6331,17 @@ Disabled（禁用）
 
 说明：
 
+启用／禁用 4GB 以上的内存映射 I/O（Memory Mapped I/O） BIOS 分配。
+
+当 Aperture Size（显存孔径）设置为 2048MB 时，该功能会自动启用。
+
 在 32 位模式下，PCIe 设备在进行内存映射 I/O（MMIO）时最多只能使用到 4GB 的内存地址空间，因为大于 4GB 的地址空间属于 64 位系统才能使用的范围。
 
 在 BIOS 中启用此选项，可以让 64 位 PCIe 设备使用大于 4GB 的地址空间，但操作系统也必须是 64 位系统才能完全支持。
 
-目前该功能通常用于同时使用多张显卡的情况；该功能对于游戏和加密货币挖矿等高性能应用特别有用。如果使用核显，则不必开启此功能。
+目前该功能通常用于同时使用多张显卡的情况；该功能对于游戏和加密货币挖矿等高性能应用特别有用。参见 [BIOS Above 4GB MMIO BIOS Assignment / Above 4G Decoding](https://432hz.myqnapcloud.com:81/WordPress/above-4gb-mmio-bios-assignment-and-above-4g-decoding/)
 
-参见 [BIOS Above 4GB MMIO BIOS Assignment / Above 4G Decoding](https://432hz.myqnapcloud.com:81/WordPress/above-4gb-mmio-bios-assignment-and-above-4g-decoding/)
-
-启用／禁用 4GB 以上的内存映射 I/O（Memory Mapped I/O） BIOS 分配。
-
-当 Aperture Size（显存孔径）设置为 2048MB 时，该功能会自动启用。
+禁用状态下双 CPU 显卡及雷电接口设备使用受限。参见[为什么使用类似 RocketRAID 840A 的 Legacy 设备，在其自带的 Raid Option 接口下识别不到硬盘，无法组建 RAID?](https://www.asus.com.cn/support/faq/1043356/)
 
 #### IPU Device (B0:D5:F0) (IPU 设备)
 
