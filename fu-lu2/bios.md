@@ -5505,18 +5505,13 @@ GTT：Graphics Translation Table，图形转换表，又称 GART（Graphics Addr
 
 说明：
 
-Proxmox VE 或其他虚拟化平台可能会用到此选项。
+作用：应用程序（如虚拟机的显卡）可能需要直接访问集成显卡专用的系统内存，该项是设置其值的大小，Proxmox VE 或其他虚拟化平台可能会用到此选项。
 
 选择显示内存占用大小。在系统内存中为 GPU 分配的地址空间。使用此选项设置必须留给图形引擎（GFX Engine）的内存总大小。主内存区域中为图形保留的最大大小，操作系统可将其用作显存。
 
 参见 [What is IGD Aperture Size?](https://www.intel.com/content/www/us/en/support/articles/000028294/graphics.html)
 
 用于指定分配给集成显卡的 PCIe 基址寄存器 (BAR) 或访问窗口的大小。
-
-对于集成显卡的 PCIe BAR/访问窗口，有以下两种使用场景：
-
-1. 应用程序需要直接访问专用于集成显卡的系统内存。
-2. 应用程序需要对图形数据进行 de‑swizzle 或 linearize 视图（仅适用于 Windows® 7 及更早版本，不适用于 Windows® 10）。
 
 应用程序通过访问 BAR，与专用于集成显卡的系统内存或用于 de‑swizzle 的常规系统内存交互。较大的 IGD Aperture Size 并不总是最佳选择，因为它会增加系统地址空间中 BAR 的占用。
 
