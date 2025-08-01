@@ -1,4 +1,4 @@
-# 目录
+# Table of contents
 
 * [FreeBSD 从入门到跑路（第三版：草稿）](README.md)
 * [编辑日志](CHANGELOG.md)
@@ -126,7 +126,7 @@
 * [10.3 Podman](di-10-zhang-xu-ni-hua/di-10.3-Podman.md)
 * [10.4 在 FreeBSD 上安装 VirtualBox](di-10-zhang-xu-ni-hua/di-10.4-vitrualbox.md)
 
-## 第 11 章 FreeBSD 安装实践
+## 第 11 章 FreeBSD 高级安装
 
 * [11.1 使用 Hyper-V 安装 FreeBSD](di-11-zhang-freebsd-install-more/di-11.1-hyper-v-jie.md)
 * [11.2 使用 VMware Workstation Pro 安装 FreeBSD](di-11-zhang-freebsd-install-more/di-11.2-jie-an-zhuang-freebsd-ji-yu-vmware-workstation-pro.md)
