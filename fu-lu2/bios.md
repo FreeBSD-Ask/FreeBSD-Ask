@@ -38,7 +38,7 @@ UEFI：Unified Extensible Firmware Interface，统一可扩展固件接口。UEF
 
 目前主流电脑（大概从 2013 年起）配备的都是 UEFI，而不是传统的 BIOS。也就是说，现在很多人可能根本没见过真正的 BIOS，但是出于习惯（界面和操作逻辑都类似），我们仍将 UEFI 统称作 BIOS 或 UEFI BIOS。
 
-### CMOS 简介
+### CMOS 简介/设置 BIOS 后无法开机怎么办
 
 CMOS（Complementary Metal-Oxide-Semiconductor，互补金属氧化物半导体）是计算机内部的一种电池供电芯片，用于存储信息（时间信息和 BIOS 密码 BIOS 设置等）。它也被称为实时时钟（RTC）或非易失性 RAM（NVRAM）。清空 CMOS 可清除上述参数。清空方法参见 [主板如何Clear CMOS](https://www.asus.com.cn/support/faq/1040820/)。
 
