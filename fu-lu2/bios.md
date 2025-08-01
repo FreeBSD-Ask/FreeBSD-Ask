@@ -6153,9 +6153,9 @@ Manual（手动）
 
 #### VT-d（英特尔 ® 定向 I/O 架构虚拟化技术/IOMMU）
 
-VT-d 即 Intel IOMMU 技术。
+VT-d 即 Intel IOMMU 技术，虚拟化 I/O 技术。
 
-VT-d，Intel® Virtualization Technology for Directed I/O，英特尔 ® 定向 I/O 架构虚拟化技术。虚拟机会用到。用于提高系统的安全性和可靠性，并改善 I/O 设备在虚拟化环境中的性能。
+VT-d，Intel® Virtualization Technology for Directed I/O，英特尔 ® 定向 I/O 架构虚拟化技术。用于提高系统的安全性和可靠性，并改善 I/O 设备在虚拟化环境中的性能。
 
 VT-d 是一个位于 CPU、内存和 I/O 设备之间的硬件设备，VT-d 的主要功能就是将 I/O 设备的 DMA 访问请求和中断请求重定向到 VMM 设定好的 VM 中。
 
