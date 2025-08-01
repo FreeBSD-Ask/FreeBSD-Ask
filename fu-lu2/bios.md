@@ -2621,6 +2621,8 @@ Enable（启用）
 
 CSM：Compatibility Support Module，兼容性支持模块。
 
+Intel 在 500 及更新系列的芯片组（11 代及后续处理器）不支持 VBIOS 的显示适配器，导致内置核显不支持 legacy boot，因此其 CSM 选项是灰色的。必须使用有支持 VBIOS 的外置独显才能进行配置。参见 [Intel 500 系列开始，在 BIOS 中的 CSM 选项无法选用问题?](https://www.asus.com.cn/support/faq/1045467/)。
+
 ​![](../.gitbook/assets/image-20250721170014-1xxoskv.png)​
 
 #### CSM Support（CSM 支持）
