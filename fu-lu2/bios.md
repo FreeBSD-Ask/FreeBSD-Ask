@@ -3812,6 +3812,13 @@ Disabled（禁用）
 
 内存训练是平台对你或 XMP 配置文件设置的时序和速度进行测试的过程。
 
+如果在 POST 期间检测到以下任何一种情况，则可能会进行内存重新训练：
+
+- UEFI BIOS 中的总内存加密设置发生更改
+- UEFI BIOS 更新时内存参考代码（MRC）发生更改
+
+参见 [检测内存重新训练](https://download.lenovo.com/manual/thinkpad_x1_carbon_gen13/user_guide/zh-cn/Detect_memory_retraining.html)
+
 ​![](../.gitbook/assets/image-20250726153543-6lin7v1.png)​
 
 ​![](../.gitbook/assets/image-20250726153628-bi5new2.png)​
