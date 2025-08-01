@@ -10,6 +10,8 @@ BIOS 界面、选项和设置可能因系统不同而有所差异。
 
 ## 说明
 
+参见 [[NUC] NUC BIOS 概述](https://www.asus.com.cn/support/faq/1052524/)。
+
 ### 为什么选择 AMI BIOS
 
 根据 [The World Runs on AMI](https://www.ami.com/about-us/) 官网介绍，全球 70% 的服务器平台都采用 AMI 软件。
@@ -30,11 +32,17 @@ BIOS 界面、选项和设置可能因系统不同而有所差异。
 
 ### BIOS 与 UEFI 简介
 
-BIOS：Basic Input/Output System，基本输入输出系统，多采用汇编语言编写。BIOS 最早出现于 20 世纪 70 年代。
+BIOS：Basic Input/Output System，基本输入输出系统，多采用汇编语言编写。BIOS 最早出现于 20 世纪 70 年代。 BIOS 的目的是识别和初始化处理器，内存，硬盘驱动器，光驱以及其他硬件。
 
-UEFI：Unified Extensible Firmware Interface，统一可扩展固件接口，多采用 C/C++ 编写。UEFI 的原型 EFI 最早出现在 20 世纪末。
+UEFI：Unified Extensible Firmware Interface，统一可扩展固件接口。UEFI 是一种规范，定义了操作系统和平台固件之间的软件接口，多采用 C/C++ 编写。UEFI 的原型 EFI 最早出现在 20 世纪末。UEFI 取代了基本输入/输出系统（BIOS）固件接口，大多数 UEFI 固件实现提供了对 BIOS 服务的遗留支持。
 
 目前主流电脑（大概从 2013 年起）配备的都是 UEFI，而不是传统的 BIOS。也就是说，现在很多人可能根本没见过真正的 BIOS，但是出于习惯（界面和操作逻辑都类似），我们仍将 UEFI 统称作 BIOS 或 UEFI BIOS。
+
+### CMOS 简介
+
+CMOS（Complementary Metal-Oxide-Semiconductor，互补金属氧化物半导体）是计算机内部的一种电池供电芯片，用于存储信息（时间信息和 BIOS 密码 BIOS 设置等）。它也被称为实时时钟（RTC）或非易失性 RAM（NVRAM）。清空 CMOS 可清除上述参数。清空方法参见 [主板如何Clear CMOS](https://www.asus.com.cn/support/faq/1040820/)。
+
+CMOS 一般是由纽扣电池供电的，部分嵌入式设备的 CMOS 电池是可充电式纽扣电池。
 
 ## Main（主菜单）
 
