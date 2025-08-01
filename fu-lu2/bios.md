@@ -44,6 +44,8 @@ CMOS（Complementary Metal-Oxide-Semiconductor，互补金属氧化物半导体�
 
 CMOS 一般是由纽扣电池供电的，部分嵌入式设备的 CMOS 电池是可充电式纽扣电池。
 
+参见 [BIOS 和 CMOS 有什么不同？](https://iknow.lenovo.com.cn/detail/043962?type=undefined&keyword=BIOS&keyWordId=)
+
 ## Main（主菜单）
 
 ​![](../.gitbook/assets/R7HQ2ZAJNW76VA29V7AM-20250719125219-xv8j22t.png)​
