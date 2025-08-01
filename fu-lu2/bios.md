@@ -2,13 +2,17 @@
 
 ## 警告与免责声明
 
-默认值通常提供了最佳性能，可在一般情况下确保系统稳定性。除非你熟悉 BIOS 设置，否则请务必使用默认值，以避免系统损坏或启动失败。
+默认值通常提供了最佳性能，可在一般情况下确保系统稳定性。除非你熟悉 BIOS 设置，否则请务必使用默认值，以避免系统损坏或启动失败。应仅在必要时更新或降级 BIOS。
 
 BIOS 界面、选项和设置可能因系统不同而有所差异。
 
-本注解基于公开资料及作者个人理解整理，可能存在技术误差或表达不当或致命错误。BIOS 作为计算机硬件的关键底层固件，其设置直接影响系统稳定性和硬件安全。错误或不当配置可能导致系统崩溃、硬件损坏、数据丢失甚至设备无法启动等严重后果。本文件所述产品/系统仅限经过专门培训、具备相关资质的专业人员按照相关文档中的要求，尤其是其中的警告信息和安全指示进行操作。“具备资质的专业人员”是指那些基于其培训和经验，能够识别作业中存在的风险并避免潜在危害的人员。作者及发布单位对因依赖本注解内容而引发的任何形式或直接或间接的损失或损害不承担责任。使用前请务必做好数据备份，确保相关设置与设备兼容，并在受控环境中谨慎测试。
+本注解基于公开资料及作者个人理解整理，可能存在技术误差或表达不当或致命错误。BIOS 作为计算机硬件的关键底层固件，其设置直接影响系统稳定性和硬件安全。错误或不当配置可能导致系统崩溃、硬件损坏、数据丢失甚至设备无法启动等严重后果。本文件所述产品/系统仅限经过专门培训、具备相关资质的专业人员按照相关文档中的要求，尤其是其中的警告信息和安全指示进行操作。“具备资质的专业人员”是指那些基于其培训和经验，能够识别作业中存在的风险并避免潜在危害的人员。
+
+作者及发布单位对本文档包含的技术性或编辑性错误或遗漏之处不承担任何责任。本信息以“不附任何保证”的方式提供，没有任何种类的担保。在法律允许的范围内，在任何情况下，作者及发布单位都不对偶然、特殊或继发损坏负责，包括停机成本；利润损失；与获取替代产品或服务相关的损坏；或数据丢失或软件恢复损坏。本文档包含的信息可能随时更改，恕不另行通知。本文中所涉及的其他产品和公司名称可能是其相应所有者的商标。使用前请务必做好数据备份，确保相关设置与设备兼容，并在受控环境中谨慎测试。
 
 ## 说明
+
+参见 [[NUC] NUC BIOS 概述](https://www.asus.com.cn/support/faq/1052524/)。
 
 ### 为什么选择 AMI BIOS
 
@@ -30,11 +34,19 @@ BIOS 界面、选项和设置可能因系统不同而有所差异。
 
 ### BIOS 与 UEFI 简介
 
-BIOS：Basic Input/Output System，基本输入输出系统，多采用汇编语言编写。BIOS 最早出现于 20 世纪 70 年代。
+BIOS：Basic Input/Output System，基本输入输出系统，多采用汇编语言编写。BIOS 最早出现于 20 世纪 70 年代。 BIOS 的目的是识别和初始化处理器，内存，硬盘驱动器，光驱以及其他硬件。
 
-UEFI：Unified Extensible Firmware Interface，统一可扩展固件接口，多采用 C/C++ 编写。UEFI 的原型 EFI 最早出现在 20 世纪末。
+UEFI：Unified Extensible Firmware Interface，统一可扩展固件接口。UEFI 是一种规范，定义了操作系统和平台固件之间的软件接口，多采用 C/C++ 编写。UEFI 的原型 EFI 最早出现在 20 世纪末。UEFI 取代了基本输入/输出系统（BIOS）固件接口，大多数 UEFI 固件实现提供了对 BIOS 服务的遗留支持。
 
 目前主流电脑（大概从 2013 年起）配备的都是 UEFI，而不是传统的 BIOS。也就是说，现在很多人可能根本没见过真正的 BIOS，但是出于习惯（界面和操作逻辑都类似），我们仍将 UEFI 统称作 BIOS 或 UEFI BIOS。
+
+### CMOS 简介/设置 BIOS 后无法开机怎么办
+
+CMOS（Complementary Metal-Oxide-Semiconductor，互补金属氧化物半导体）是计算机内部的一种电池供电芯片，用于存储信息（时间信息和 BIOS 密码 BIOS 设置等）。它也被称为实时时钟（RTC）或非易失性 RAM（NVRAM）。清空 CMOS 可清除上述参数。清空方法参见 [主板如何Clear CMOS](https://www.asus.com.cn/support/faq/1040820/)。
+
+CMOS 一般是由纽扣电池供电的，部分嵌入式设备的 CMOS 电池是可充电式纽扣电池。
+
+参见 [BIOS 和 CMOS 有什么不同？](https://iknow.lenovo.com.cn/detail/043962?type=undefined&keyword=BIOS&keyWordId=)
 
 ## Main（主菜单）
 
@@ -2612,6 +2624,8 @@ Enable（启用）
 ### CSM Configuration（CSM 配置）
 
 CSM：Compatibility Support Module，兼容性支持模块。
+
+Intel 在 500 及更新系列的芯片组（11 代及后续处理器）不支持 VBIOS 的显示适配器，导致内置核显不支持 legacy boot，因此其 CSM 选项是灰色的。必须使用有支持 VBIOS 的外置独显才能进行配置。参见 [Intel 500 系列开始，在 BIOS 中的 CSM 选项无法选用问题?](https://www.asus.com.cn/support/faq/1045467/)。
 
 ​![](../.gitbook/assets/image-20250721170014-1xxoskv.png)​
 
@@ -6321,17 +6335,17 @@ Disabled（禁用）
 
 说明：
 
+启用／禁用 4GB 以上的内存映射 I/O（Memory Mapped I/O） BIOS 分配。
+
+当 Aperture Size（显存孔径）设置为 2048MB 时，该功能会自动启用。
+
 在 32 位模式下，PCIe 设备在进行内存映射 I/O（MMIO）时最多只能使用到 4GB 的内存地址空间，因为大于 4GB 的地址空间属于 64 位系统才能使用的范围。
 
 在 BIOS 中启用此选项，可以让 64 位 PCIe 设备使用大于 4GB 的地址空间，但操作系统也必须是 64 位系统才能完全支持。
 
-目前该功能通常用于同时使用多张显卡的情况；该功能对于游戏和加密货币挖矿等高性能应用特别有用。如果使用核显，则不必开启此功能。
+目前该功能通常用于同时使用多张显卡的情况；该功能对于游戏和加密货币挖矿等高性能应用特别有用。参见 [BIOS Above 4GB MMIO BIOS Assignment / Above 4G Decoding](https://432hz.myqnapcloud.com:81/WordPress/above-4gb-mmio-bios-assignment-and-above-4g-decoding/)
 
-参见 [BIOS Above 4GB MMIO BIOS Assignment / Above 4G Decoding](https://432hz.myqnapcloud.com:81/WordPress/above-4gb-mmio-bios-assignment-and-above-4g-decoding/)
-
-启用／禁用 4GB 以上的内存映射 I/O（Memory Mapped I/O） BIOS 分配。
-
-当 Aperture Size（显存孔径）设置为 2048MB 时，该功能会自动启用。
+禁用状态下双 CPU 显卡及雷电接口设备使用受限。参见[为什么使用类似 RocketRAID 840A 的 Legacy 设备，在其自带的 Raid Option 接口下识别不到硬盘，无法组建 RAID?](https://www.asus.com.cn/support/faq/1043356/)
 
 #### IPU Device (B0:D5:F0) (IPU 设备)
 
@@ -10139,13 +10153,13 @@ Partial Initial（部分初始化）
 
 说明：
 
-如果禁用，所有 USB 设备（含鼠标键盘等）在操作系统启动前都不可用。
+如果禁用，所有 USB 设备（含鼠标键盘等）在操作系统启动前都不可用。（警告：对于部分机器，此项若关闭就是真的永远关闭了，具体参看 BIOS 右上角提示信息，而现在的机器一般都没有 PS/2 接口，会导致机器无法正常使用！）
 
 如果部分初始化，USB 大容量存储设备（U 盘等）和特定的 USB 端口/设备在操作系统启动前不可用。
 
 如果启用，所有 USB 设备在操作系统和启动自检（POST）过程中均可用。
 
-### PS2 Devices Support（PS2 设备支持）
+### PS2 Devices Support（PS/2 设备支持）
 
 选项：
 
@@ -10155,7 +10169,7 @@ Disabled（禁用）
 
 说明：
 
-若禁用，PS2 设备将被跳过。很老（大概 2009 年左右就被淘汰了）的鼠标键盘摇杆使用此协议。
+若禁用，PS/2 设备将被跳过。很老（大概 2009 年左右就被淘汰了）的鼠标键盘摇杆使用此协议。现在的机器一般都没有 PS/2 接口，此项一般无意义。
 
 ### Network Stack Driver Support（网络协议栈驱动支持）
 
