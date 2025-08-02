@@ -974,8 +974,8 @@ Acoustic Noise Mitigation（噪声抑制功能）：启用此选项可减轻特�
 | 英文参数                  | 中文参数           |    数值 |
 | :------------------------ | :----------------- | ------: |
 | VR Config Enable          | 启用电压调节配置   | Enabled |
-| Current AC line       | 当前 AC 负载线     |     500 |
-| Current DC line       | 当前 DC 负载线     |     500 |
+| Current AC Loadline       | 当前 AC 负载线     |     500 |
+| Current DC Loadline       | 当前 DC 负载线     |     500 |
 | Current Psi1 Threshold    | 当前 PSI1 阈值     |       0 |
 | Current Psi2 Threshold    | 当前 PSI2 阈值     |      20 |
 | Current Psi3 Threshold    | 当前 PSI3 阈值     |       4 |
