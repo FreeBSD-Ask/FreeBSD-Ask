@@ -974,8 +974,8 @@ Acoustic Noise Mitigation（噪声抑制功能）：启用此选项可减轻特�
 | 英文参数                  | 中文参数           |    数值 |
 | :------------------------ | :----------------- | ------: |
 | VR Config Enable          | 启用电压调节配置   | Enabled |
-| Current AC line       | 当前 AC 负载线     |     500 |
-| Current DC line       | 当前 DC 负载线     |     500 |
+| Current AC Loadline       | 当前 AC 负载线     |     500 |
+| Current DC Loadline       | 当前 DC 负载线     |     500 |
 | Current Psi1 Threshold    | 当前 PSI1 阈值     |       0 |
 | Current Psi2 Threshold    | 当前 PSI2 阈值     |      20 |
 | Current Psi3 Threshold    | 当前 PSI3 阈值     |       4 |
@@ -995,7 +995,7 @@ Enable（启用）
 
 是以下选项存在的先决条件。
 
-- AC Loadline（AC 负载线）：交流负载线以 0.01 毫欧（1/100 mOhms）为单位定义（取值范围：0–6249（对应 0–62.49 毫欧）。该配置通过 BIOS mailbox 命令 0x2 实现。数值换算关系：
+- AC Loadline（AC 负载线）：AC 负载线以 0.01 毫欧（1/100 mOhms）为单位定义（取值范围：0–6249（对应 0–62.49 毫欧）。该配置通过 BIOS mailbox 命令 0x2 实现。数值换算关系：
 
   - ​`100`​ \= 1.00 毫欧（mOhm）
   - ​`1255`​ \= 12.55 毫欧（mOhm）
@@ -1007,7 +1007,7 @@ Enable（启用）
 
 Intel 建议 AC=DC（Same as DC LL）。警告：一般不建议修改 AC/DC Loadline。
 
-- DC Loadline（DC 负载线）：直流负载线以 0.01 毫欧（1/100 mOhms）为单位定义（取值范围：0–6249（对应 0–62.49 毫欧）。该配置通过 BIOS mailbox 命令 0x2 实现。数值换算关系：
+- DC Loadline（DC 负载线）：DC 负载线以 0.01 毫欧（1/100 mOhms）为单位定义（取值范围：0–6249（对应 0–62.49 毫欧）。该配置通过 BIOS mailbox 命令 0x2 实现。数值换算关系：
 
   - ​`100`​ \= 1.00 毫欧（mOhm）
   - ​`1255`​ \= 12.55 毫欧（mOhm）
