@@ -707,6 +707,10 @@ Enable（启用）
 
 当超出限制时，CPU 的倍频会在经过一段时间后降低。下限可保护 CPU 并节省功耗，而上限则有助于提升性能。
 
+PL1 是平均功耗的限制阈值，不会被超过 —— 英特尔推荐设置为等于处理器的基础功耗（即 TDP）。PL1 不应高于散热方案的散热能力上限。参见 [12th Generation Intel® Core™ Processors](https://edc.intel.com/content/www/us/en/design/ipla/software-development-platforms/client/platforms/alder-lake-desktop/12th-generation-intel-core-processors-datasheet-volume-1-of-2/011/package-power-control/)。
+
+实现 Intel® Turbo Boost 技术 2.0 只需配置 PL1、PL2 和 Tau。
+
 ###### Power Limit 1 Time Window（功耗限制 1 时间窗口）
 
 选项
@@ -739,13 +743,13 @@ Enable（启用）
 
 选项
 
-请注意单位：1W \= 1000mW。如 5W 应设置此选项为 5000。如果设置为 `0`​，表示不启用自定义功耗限制，BIOS 将保留默认值。Platform Power Limit 2（平台功耗限制 2），单位为毫瓦（mW）。BIOS 在设置时会四舍五入到最接近的 1/8 瓦（0.125W）。
+请注意单位：1W \= 1000mW。如 5W 应设置此选项为 5000。如果设置为 `0`​，表示不启用自定义功耗限制，BIOS 将保留默认值。 2（平台功耗限制 2），单位为毫瓦（mW）。BIOS 在设置时会四舍五入到最接近的 1/8 瓦（0.125W）。
 
 说明：
 
 该选项依赖于 Power Limit 2 Override（功耗限制 2 覆盖）。
 
-Power Limit 2（PL2）是短时功耗限制，允许 CPU 在短时间内突破 PL1，提供更高性能。
+Power Limit 2（PL2）是短时功耗限制，让 CPU 在短时间内突破 PL1，提供更高性能。一旦超过该阈值，PL2 快速功耗限制算法将尝试限制超过 PL2 的功耗峰值。
 
 设定在超过长时间功率限制时，降低 CPU 倍频之前的时间长度。
 
@@ -1060,7 +1064,7 @@ RFI Current Frequency（当前 RFI 频率）：139.200MHz
 
 - RFI Spread Spectrum（RFI 射频展频）。0.5%-6%。用于缓解电磁干扰（EMI）。
 
-##### Platform PL1 Enable（启用平台 PL1）
+##### Platform PL1 Enable（启用平台 PL1 / PsysPL1）
 
 选项
 
@@ -1076,6 +1080,8 @@ Enable（启用）
 
 禁用（Disabled）：BIOS 不编程 PL1，此时处理器将使用默认或平台固件设定的限制值。
 
+处理器引入了 Psys（平台功耗）机制，以增强对处理器功耗的管理。Psys 信号需要来自兼容的充电电路，并接入 IMVP9（电压调节器）。该信号将通过 SVID 向处理器提供整个平台的热相关总功耗信息（包括处理器及平台其余部分）。
+
 ##### Platform PL1 Power（平台 PL1 功耗）
 
 说明：
@@ -1083,6 +1089,8 @@ Enable（启用）
 此选项依赖 Platform PL1 Enable（启用平台 PL1），这是 BIOS 存储的待生效 PL1 值（可能执行）。实际执行的是 Power Limit 1（如已设置）。
 
 平台功耗限制  1”（Platform Power Limit 1，简称 PL1）以毫瓦（mW）为单位设置。BIOS 在编程时会将其四舍五入到最接近的  1/8 瓦。你可以在由 `PACKAGE_POWER_SKU_MSR`​ 指定的最小功耗限制和最大功耗限制之间设置任意值。例如，如果你想设置为  12.50  瓦，就输入  `12500`​。该设置会成为处理器 RAPL 算法（用于监控功耗并控制频率和电压的闭环控制算法）中的新 PL1 值。
+
+此值是平台平均功耗不会被超过的阈值 —— 英特尔推荐设置为等于平台的散热能力。参见 [Platform Power Control](https://edc.intel.com/content/www/us/en/design/ipla/software-development-platforms/client/platforms/alder-lake-desktop/12th-generation-intel-core-processors-datasheet-volume-1-of-2/011/platform-power-control/)
 
 ##### Platform PL1 Time Window（平台 PL1 窗口时间）
 
@@ -1092,7 +1100,7 @@ Enable（启用）
 
 平台功耗限制 1 时间窗口，单位为秒。该值的范围为 0 到 128。0 表示使用默认值。该选项用于指定平台 TDP（热设计功耗）应当维持的时间窗口。
 
-##### Platform PL2 Enable（启用平台 PL2）
+##### Platform PL2 Enable（启用平台 PL2 / PsysPL2）
 
 选项
 
@@ -1102,7 +1110,8 @@ Enable（启用）
 
 说明：
 
-这是是否允许修改 PL2 的总开关。是启用/禁用平台功耗限制  2（Platform Power Limit 2，PL2）的编程设置。
+这是是否允许修改 PL2 的总开关。是启用/禁用平台功耗限制  2（Platform Power Limit 2，PL2）的编程设置。一旦功耗超过该阈值，PsysPL2 快速功耗限制算法将尝试限制超出 PsysPL2 的功耗峰值。
+
 
 启用（Enabled）：BIOS 会激活并写入 PL2 值，处理器会在指定时间窗口内以该值限制平均功耗。
 
@@ -1122,6 +1131,8 @@ Power Limit 4（功耗限制 4），单位为毫瓦（mW）。BIOS 在编程时�
 ##### Power Limit 4（PL4，功耗限制 4）
 
 Power Limit 4（功耗限制 4），单位为毫瓦（mW）。BIOS 在编程时会四舍五入到最接近的 1/8 瓦。例如：如果要设置为 12.50W，应输入 12500。如果该数值设置为 0，BIOS 将保留默认值。
+
+PL4 是一个绝对不会被超过的限制，PL4 功耗限制算法会提前限制频率，以防止功耗峰值超过 PL4。
 
 ##### Power Limit 4 Lock（PL4，锁定功耗限制 4）
 
@@ -1434,7 +1445,7 @@ Enable（启用）
 
 覆盖电源限制 3，PL 3
 
-选项参数均同 PL1。
+选项参数均同 PL1。一旦超过该阈值，PL3 快速功耗限制算法将尝试通过动态限制频率来限制超过 PL3 的功耗峰值的占空比。PL3 默认是禁用的。这是一个可选设置。
 
 ##### CPU Lock Configuration（CPU 锁定设置）
 
