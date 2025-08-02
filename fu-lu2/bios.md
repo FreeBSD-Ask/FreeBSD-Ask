@@ -974,8 +974,8 @@ Acoustic Noise Mitigation（噪声抑制功能）：启用此选项可减轻特�
 | 英文参数                  | 中文参数           |    数值 |
 | :------------------------ | :----------------- | ------: |
 | VR Config Enable          | 启用电压调节配置   | Enabled |
-| Current AC Loadline       | 当前交流负载线     |     500 |
-| Current DC Loadline       | 当前直流负载线     |     500 |
+| Current AC line       | 当前 AC 负载线     |     500 |
+| Current DC line       | 当前 DC 负载线     |     500 |
 | Current Psi1 Threshold    | 当前 PSI1 阈值     |       0 |
 | Current Psi2 Threshold    | 当前 PSI2 阈值     |      20 |
 | Current Psi3 Threshold    | 当前 PSI3 阈值     |       4 |
@@ -995,13 +995,19 @@ Enable（启用）
 
 是以下选项存在的先决条件。
 
-- AC Loadline（交流负载线）：交流负载线以 0.01 毫欧（1/100 mOhms）为单位定义（取值范围：0–6249（对应 0–62.49 毫欧）。该配置通过 BIOS mailbox 命令 0x2 实现。数值换算关系：
+- AC Loadline（AC 负载线）：交流负载线以 0.01 毫欧（1/100 mOhms）为单位定义（取值范围：0–6249（对应 0–62.49 毫欧）。该配置通过 BIOS mailbox 命令 0x2 实现。数值换算关系：
 
   - ​`100`​ \= 1.00 毫欧（mOhm）
   - ​`1255`​ \= 12.55 毫欧（mOhm）
-    -​`0`​​ 表示自动/硬件默认值（AUTO/HW default）
+  -​`0`​​ 表示自动/硬件默认值（AUTO/HW default）
 
-- DC Loadline（直流负载线）：直流负载线以 0.01 毫欧（1/100 mOhms）为单位定义（取值范围：0–6249（对应 0–62.49 毫欧）。该配置通过 BIOS mailbox 命令 0x2 实现。数值换算关系：
+因为直流电压降（电路长度愈增加，其电压会愈下降，导致其两端电压不同）问题，英特尔将主板到 CPU 之间的物理电阻抽象为虚拟电阻（即 AC/DC Loadline），即不考虑实际物理电阻的实现究竟是多少（每块主板都不同），来拟合 CPU 倍频所需的电压功率，这样不同的主板的主板供电模块的掉压行为就是一致的。AC Loadline 是升压负载线，DC 是降压负载线。
+
+负载线（AC/DC）应通过 VRTT 工具进行测量，并通过 BIOS 的负载线覆盖设置选项进行相应编程。AC 负载线会直接影响工作电压（AC），DC 负载线则会影响功率测量（DC）。与按 POR 阻抗设计的主板相比，采用较低 AC 负载线的优秀主板设计能够在功耗、性能和散热方面实现改进。参见 [VCCCORE DC Specifications](https://edc.intel.com/content/www/de/de/design/products/platforms/details/raptor-lake-s/13th-generation-core-processors-datasheet-volume-1-of-2/vcccore-dc-specifications/)、[Intel CPU AC / DC Loadline、防掉壓 CEP 觀念原理 一次講完](https://forum.gamer.com.tw/C.php?bsn=60030&snA=644011)、[从头开始讲 Loadline](https://tieba.baidu.com/p/8328546013)。
+
+Intel 建议 AC=DC（Same as DC LL）。警告：一般不建议修改 AC/DC Loadline。
+
+- DC Loadline（DC 负载线）：直流负载线以 0.01 毫欧（1/100 mOhms）为单位定义（取值范围：0–6249（对应 0–62.49 毫欧）。该配置通过 BIOS mailbox 命令 0x2 实现。数值换算关系：
 
   - ​`100`​ \= 1.00 毫欧（mOhm）
   - ​`1255`​ \= 12.55 毫欧（mOhm）
