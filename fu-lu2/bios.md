@@ -235,11 +235,9 @@ BT Audio Offload，A2DP，英特尔蓝牙音频分发技术，参见 [示范影�
 
 此功能仅支持 Intel® Wireless-AX 22560 网卡。
 
-
 ##### BT RF-Kill Delay Time（蓝牙射频关闭延迟时间）
 
 作用未知。
-
 
 #### RFI Mitigation（射频干扰缓解）
 
@@ -266,7 +264,6 @@ Enable（启用）
 说明：
 
 共存管理器可缓解英特尔 WWAN（无线广域网，如手机的 2/3/4/5G 信号）与英特尔 WLAN（WiFi/蓝牙）之间的无线电共存问题。
-
 
 #### Preboot BLE
 
@@ -318,7 +315,7 @@ Enable（启用）
 
 说明：
 
-控制高级设置开关。
+配置无线设备的 ACPI 对象。
 
 #### WWAN Configuration（WWAN 配置）
 
