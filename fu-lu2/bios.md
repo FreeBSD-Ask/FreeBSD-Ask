@@ -7589,9 +7589,9 @@ IDE (Integrated Drive Electronics，集成磁盘电子接口)
 
 一般只有非常老旧的计算机才会使用 IDE 接口。
 
-正常的计算机一般都是 AHCI。大部分非 Windows 操作系统（本身也需要驱动才能支持）都与 RAID 模式不兼容。
+正常的计算机一般都是 AHCI。大部分非 Windows 操作系统（本身也需要驱动才能支持）都与 RAID 模式不兼容（但是英特尔快速存储技术需要 RAID 模式）。
 
-并且这个 RAID，一般叫做 Fake-RAID/hardware-assisted software RAID，伪 RAID，不是真正的硬 RAID。
+并且这个 RAID，一般叫做 Fake-RAID/hardware-assisted software RAID，伪 RAID，不是真正的硬 RAID。这种情况下可能需要英特尔快速存储技术（RST）驱动才能正常使用。
 
 参见 [Install Arch Linux with Fake RAID](https://wiki.archlinuxcn.org/wiki/Install_Arch_Linux_with_Fake_RAID)
 
