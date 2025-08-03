@@ -193,6 +193,19 @@ Disable Integrated（禁用集成）则会禁用集成方案。
 
 注意：当 CNVi 存在时，用于比率的 GPIO 引脚会被占用。
 
+##### MfUart1 type（）
+
+选项：
+
+* ISH Uart0：ISH UART0（集成传感器中心的 UART0）
+* SerialIO Uart2：SerialIO UART2（串行输入输出控制器的 UART2）
+* Uart over external pads：通过外部引脚的 UART
+* Not connected：未连接
+
+说明：
+
+这是一个测试选项，用于配置用于 WiFi 辅助带外通信的 UART 类型。
+
 ##### Wi-Fi Core（无线核心）
 
 选项：
