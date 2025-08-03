@@ -204,6 +204,29 @@ Enable（启用）
 
 _C6_ 是最深级别的休眠，此时 CPU 的供电减少为 0，通常会降低 80%-90% 的功耗。
 
+#### SW Guard Extension（英特尔 SGX 技术）
+
+选项：
+
+Disable（禁用）
+
+Enable（启用）
+
+说明：
+
+SW Guard Extension，SGX。英特尔软件防护扩展功能，一种新型（2013、2015）可信计算技术。英特尔基于 TXT 提出了 SGX。
+
+SGX 能够在计算平台上提供一个可信的隔离空间，保障用户关键代码和数据的机密性和完整性。
+
+要启用英特尔 SGX 选项，处理器必须支持 SGX，内存条必须兼容（每个 CPU 插槽最少 8 个完全相同的内存条，在永久性内存配置上不受支持），必须在优化程序模式下设置内存操作模式，必须启用内存加密，并且必须禁用节点交叉存取。
+
+参见：
+
+- [英特尔® Software Guard Extensions（英特尔® SGX）](https://www.intel.cn/content/www/cn/zh/products/docs/accelerator-engines/software-guard-extensions.html)
+- 王鹃, 樊成阳, 程越强, 赵波, 韦韬, 严飞, 张焕国, 马婧. SGX 技术的分析和研究. 软件学报, 2018, 29(9): 2778-2798.<http://www.jos.org.cn/1000-9825/5594.htm>
+- Wei ZHENG, Ying WU, Xiaoxue WU, Chen FENG, Yulei SUI, Xiapu LUO, Yajin ZHOU. A survey of Intel SGX and its applications. Front. Comput. Sci., 2021, 15(3): 153808 <https://doi.org/10.1007/s11704-019-9096-y>
+- トラストを確⽴する技術の概要 <https://www.jnsa.org/seminar/pki-day/2021/data/0415miyazawa.pdf>
+
 #### CPU Flex Ratio Override（CPU 可变倍频覆盖）
 
 选项：
@@ -248,6 +271,8 @@ Enable（启用）
 
 说明：
 
+需要处理器支持才有此选项。
+
 硬件预先访存技术。用于开启或关闭 MLC 流式预取器。在 CPU 处理指令或数据之前，它将这些指令或数据从内存预取到 L2 缓存中，借此减少内存读取的时间，帮助消除潜在的瓶颈。
 
 #### Adjacent Cache Line Prefetch（相邻的高速缓存行预先访存）
@@ -259,6 +284,8 @@ Disable（禁用）
 Enable（启用）
 
 说明：
+
+需要处理器支持才有此选项。
 
 可针对需要顺序内存访问高利用率的应用程序优化系统，能加快读取速度。如果该功能设置为 Disabled（禁用），CPU 将预取一个缓存行（64 字节）。如果设置为 Enabled（启用），CPU 将预取两个缓存行（共 128 字节）。
 
@@ -273,6 +300,8 @@ Disable（禁用）
 Enable（启用）
 
 说明：
+
+需要处理器支持才有此选项。
 
 该技术能使单个系统显示为软件中的多个独立系统。这能让多个独立的操作系统在单个系统上同时运行。
 
@@ -304,11 +333,21 @@ Enable（启用）
 
 Intel 高级矢量扩展（Intel's Advanced Vector Extensions，AVX），是一组指令集。可以加速工作负载和用例的性能，如科学模拟、金融分析、人工智能 (AI) /深度学习、3D 建模和分析、图像和音频/视频处理、密码学和数据压缩等。
 
-#### Active Efficient-cores（启用能效核心）
+#### Active Performance-cores（激活的性能核心）
 
 选项
 
-ALL
+ALL（全部）
+
+说明：
+
+每个处理器封装中要启用的 P-core（性能核心）数量。注意：会同时考虑 P 核心和 E 核心的数量。当两者都设置为 0 时，BIOS 会启用所有核心。
+
+#### Active Efficient-cores（激活的能效核心）
+
+选项
+
+ALL（全部）
 
 3
 
@@ -320,7 +359,25 @@ ALL
 
 说明：
 
-即开启多少个能效核心（小核）。可完全关闭（即不使用小核）——如果你有大核的话。有的处理器是纯小核。
+每个处理器封装中要启用的 E-core（能效核心）数量。如果你有大核的话，可完全关闭（即不使用小核）。
+
+但是有的处理器是纯小核。
+
+注意：会同时考虑 P 核心和 E 核心的数量。当两者都设置为 0 时，BIOS 会启用所有核心。
+
+#### Hyper-Threading（英特尔® 超线程技术/英特尔® HT 技术）
+
+选项
+
+Disable（禁用）
+
+Enable（启用）
+
+说明：
+
+英特尔® 超线程技术是一项硬件创新，能在每个内核上都运行多个线程。可使一个物理内核表现的如同两个“逻辑内核”一样。
+
+参见 [什么是超线程？](https://www.intel.cn/content/www/cn/zh/gaming/resources/hyper-threading.html)
 
 #### BIST（内置的自检程序）
 
@@ -404,6 +461,61 @@ Monitor 指令用于监控某个内存区域的写入操作，而 MWait 指令�
 
 这个是配合上面的 AP threads Idle Manner（AP 线程空闲模式）一起使用的。增强型 vSphere 计算（Enhanced vMotion Compatibility，EVC）也需要开启该选项。
 
+#### Intel® Trusted Executed Technology（英特尔可信执行技术/TXT）
+
+选项
+
+Disable（禁用）
+
+Enable（启用）
+
+说明：
+
+要启用此英特尔 TXT 选项，必须启用虚拟化技术以及进行预启动测量的 TPM 安全保护。
+
+Intel® Trusted Executed Technology，英特尔® TXT。一种非常老（2007）的可信计算计算，参见 SW Guard Extension（英特尔 SGX 技术）。
+
+参见 [英特尔® Trusted Execution Technology （英特尔® TXT） 概述](https://www.intel.cn/content/www/cn/zh/support/articles/000025873/processors.html)
+
+#### Alias Check Request（别名检查请求）
+
+选项
+
+Disable（禁用）
+
+Enable（启用）
+
+说明：
+
+此项可以启用英特尔® TXT Alias 测试。如果系统没有启用 TXT，这些更改将不会起作用。
+
+#### DPR Memory Size (MB) （DMA 内存受保护范围）
+
+值：
+
+0-255，步进 1
+
+说明：
+
+DPR：DMA Protected Range：内核直接内存访问受保护范围。
+
+DMA 受保护范围（DPR）是一段连续的物理内存区域，其最后一个字节位于 TXT 段（TSEG）起始地址之前一个字节的位置，并且该区域受到所有 DMA 访问的保护。
+
+
+参见 [Where to read about DMA Protected Range (DPR)?](https://community.intel.com/t5/Software-Archive/Where-to-read-about-DMA-Protected-Range-DPR/td-p/922654)
+
+#### Reset AUX Content（重置 AUX 内容）
+
+选项
+
+Yes（是）
+
+No（否）
+
+说明：
+
+使用此功能来重置 TPM 辅助内容。重置 AUX 内容后，英特尔® TXT 可能无法正常工作。
+
 #### CPU SMM Enhancement（CPU SMM 增强）
 
 SMM 代码访问是一种特殊的操作模式，由 BIOS 用于处理电源和硬件管理功能。
@@ -464,11 +576,23 @@ Split Lock 指跨越两个 cache line 的原子操作（如 lock add，xchg 等�
 
 启用后，当检测到 split‑lock 操作时，会触发对齐异常，而不是锁总线。这对对实时性能或云平台尤为重要。
 
+#### Total Memory Encryption（英特尔总内存加密技术）
+
+选项：
+
+Disable（禁用）
+
+Enable（启用）
+
+说明：
+
+配置英特尔总内存加密（TME），以防止物理攻击对 DRAM 数据的侵害。
+
+启用或禁用英特尔总内存加密 (TME) 和多租户（英特尔® TME-MT）。当选项设置为已禁用时，BIOS 将同时禁用 TME 和 TME-MT 技术。
+
 ### Power & Performance（电源与性能）
 
 ​![](../.gitbook/assets/XV6F5EV9_O8NSCPXCCJ-20250719151649-01nqtsy.png)​
-
-‍
 
 | 英文术语                       | 中文翻译                            |
 | ------------------------------ | ----------------------------------- |
