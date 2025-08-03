@@ -156,6 +156,236 @@ Version 2.22.1289 Copyright (C) 2025 AMI
 
 ​![](../.gitbook/assets/image-20250719125817-t7s1ru6.png)​
 
+### Connectivity Configuration（连接性配置）
+
+主要是面向英特尔无线网卡、蓝牙和 WWAN 模块（如 GPRS/3/4/5G 模块）的相关配置。
+
+#### CNVi CRF Present（显示是否存在 CNVi 模块）
+
+CNVi，Connectivity Integration，英特尔® 集成连接技术。
+
+CRF，Companion RF，辅助 RF，实际上指无线网卡（现代的无线网卡和蓝牙一般是二合一的）。
+
+显示是否存在 CNVi 模块。
+
+英特尔® 集成连接将 Wi-Fi 和 Bluetooth® 技术的关键元件转移到英特尔® 处理器上。该解决方案由以下部分组成：
+
+- CNVi，英特尔处理器的集成无线 IP 部分
+- M.2 外形配套的 RF (CRF) 模块（2230 和 1216 焊接）。事实上，尽管这些无线网卡的物理规格是 M.2，但是他们只能被特定的英特尔处理器所支持，AMD 是无法使用的。
+
+参见 [什么是英特尔® 集成连接 (CNVi) 和配套 RF (CRF) 模块？](https://www.intel.cn/content/www/cn/zh/support/articles/000026155/wireless.html)。
+
+#### CNVi Configuration（CNVi 配置）
+
+##### CNVi Mode（CNVi 模式）
+
+选项：
+
+Auto Detection（自动检测）
+
+Disable Integrated（禁用集成）
+
+说明：
+
+Auto Detection（自动检测）意味着如果发现独立方案，将默认启用该方案。否则将启用集成方案（CNVi）；
+
+Disable Integrated（禁用集成）则会禁用集成方案。
+
+注意：当 CNVi 存在时，用于比率的 GPIO 引脚会被占用。
+
+##### MfUart1 type（带外通信的 UART 类型）
+
+选项：
+
+* ISH Uart0：ISH UART0（集成传感器中心的 UART0）
+* SerialIO Uart2：SerialIO UART2（串行输入输出控制器的 UART2）
+* Uart over external pads：通过外部引脚的 UART
+* Not connected：未连接
+
+说明：
+
+这是一个测试选项，用于配置用于 WiFi 辅助带外通信的 UART 类型。
+
+##### Wi-Fi Core（无线核心）
+
+选项：
+
+Disable（禁用）
+
+Enable（启用）
+
+说明：
+
+此选项用于启用或禁用 CNVi 中的 Wi-Fi。
+
+##### BT Core（蓝牙核心）
+
+选项：
+
+Disable（禁用）
+
+Enable（启用）
+
+说明：
+
+BT，Bluetooth，蓝牙。
+
+此选项用于启用或禁用 CNVi 中的蓝牙。
+
+##### BT Audio Offload（蓝牙音频分发/A2DP）
+
+选项：
+
+Disable（禁用）
+
+Enable（启用）
+
+说明：
+
+BT Audio Offload，A2DP，英特尔蓝牙音频分发技术，参见 [示范影片：以 Intel® Bluetooth® 音频卸除省电 （A2DP） （MP4）](https://www.intel.cn/content/www/cn/zh/content-details/751466/demo-video-power-saving-with-intel-bluetooth-audio-offload-a2dp-mp4.html)。硬件卸载的音频处理允许在计算机的主 CPU 之外执行主要音频处理任务：即把蓝牙传输音频的解码放到 DSP 进行处理，可降低处理器的负载并省电。参见 [Hardware-Offloaded 音频处理](https://learn.microsoft.com/zh-cn/windows-hardware/drivers/audio/hardware-offloaded-audio-processing)。
+
+该功能可将来自蓝牙设备的 HFP 格式音频输入传送至音频 DSP，同时通过 A2DP 格式实现高能效的音频输出至蓝牙设备。
+
+此功能仅支持 Intel® Wireless-AX 22560 网卡。
+
+##### BT RF-Kill Delay Time（蓝牙射频关闭延迟时间）
+
+作用未知。
+
+#### RFI Mitigation（射频干扰缓解）
+
+选项：
+
+Disable（禁用）
+
+Enable（启用）
+
+说明：
+
+启用或禁用 DDR 射频干扰抑制功能，用于控制内存模块的抗射频干扰功能。
+
+该无线电频率干扰缓解功能可能会导致 DDR 速度暂时降低。
+
+#### CoExistence Manager（共存管理）
+
+选项：
+
+Disable（禁用）
+
+Enable（启用）
+
+说明：
+
+共存管理器可缓解英特尔 WWAN（无线广域网，如手机的 2/3/4/5G 信号）与英特尔 WLAN（WiFi/蓝牙）之间的无线电共存问题。
+
+#### Preboot BLE（预启动蓝牙）
+
+选项：
+
+Disable（禁用）
+
+Enable（启用）
+
+说明：
+
+此选项用于启用预启动蓝牙功能。
+
+作用未知。
+
+#### Discrete Bluetooth Interface（独立蓝牙接口）
+
+选项：
+
+Disable（禁用）
+
+USB
+
+说明：
+
+要选择蓝牙接口，必须启用 SerialIo UART0。
+
+#### BT Tile Mode（蓝牙 Tile 模式）
+
+选项：
+
+Disable（禁用）
+
+Enable（启用）
+
+说明：
+
+Tile 是由 Tile 公司所开发的一款小巧的蓝牙跟踪器，可用于查找丢失物品。
+
+如果启用，此项能让您通过智能手机上的 Tile APP 定位您的电脑。 
+
+#### Advanced settings（高级设置）
+
+选项：
+
+Disable（禁用）
+
+Enable（启用）
+
+说明：
+
+配置无线设备的 ACPI 对象。
+
+#### WWAN Configuration（WWAN 配置）
+
+#### WWAN Device（WWAN 设备）
+
+选择 M.2 WWAN 设备选项以启用 4G - 7360/7560（英特尔）和 5G - M80（联发科）调制解调器。
+
+##### Firmware Flash Device（固件闪存设备）
+
+选项：
+
+Disable（禁用）
+
+Enable（启用）
+
+说明：
+
+控制 WWAN 固件闪存设备开关。
+
+功能未知。
+
+##### Wireless CNV Config Device（无线 CNV 配置设备）
+
+选项：
+
+Disable（禁用）
+
+Enable（启用）
+
+说明：
+
+WCCD ACPI 设备节点设置。
+
+作用未知。
+
+##### WWAN Reset Workaround（WWAN 重置变通方案）
+
+选项：
+
+Disable（禁用）
+
+Enable（启用）
+
+说明：
+
+启用此变通方案将使 BIOS 在执行 WWAN 设备加电序列之前，拉高 FULL\_CARD\_POWER\_OFF#、PERST# 和 RESET#WWAN 信号。禁用此选项不会产生任何影响。
+
+作用未知。
+
+##### WA - WWAN OEM SVID（WWAN 模块所使用的 OEM 子厂商 ID）
+
+显示 WWAN 模块所使用的 OEM 子厂商 ID。
+
+##### WA - WWAN SVID Detect Timeout（检测 WWAN OEM 子厂商信息的超时时间）
+
+用于检测 WWAN OEM 子厂商 ID（SVID）的超时数值（以毫秒为单位）。请注意，这只是针对 OEM 的变通方案。
+
 ### CPU Configuration（CPU 配置）
 
 ​![](../.gitbook/assets/image-20250719125953-pgpr1kb.png)​
