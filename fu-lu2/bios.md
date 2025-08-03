@@ -193,7 +193,7 @@ Disable Integrated（禁用集成）则会禁用集成方案。
 
 注意：当 CNVi 存在时，用于比率的 GPIO 引脚会被占用。
 
-##### MfUart1 type（）
+##### MfUart1 type（带外通信的 UART 类型）
 
 选项：
 
