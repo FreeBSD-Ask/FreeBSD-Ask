@@ -8,8 +8,7 @@ BIOS 界面、选项和设置可能因系统不同而有所差异。
 
 本注解基于公开资料及作者个人理解整理，可能存在技术误差或表达不当或致命错误。BIOS 作为计算机硬件的关键底层固件，其设置直接影响系统稳定性和硬件安全。错误或不当配置可能导致系统崩溃、硬件损坏、数据丢失甚至设备无法启动等严重后果。本文件所述产品/系统仅限经过专门培训、具备相关资质的专业人员按照相关文档中的要求，尤其是其中的警告信息和安全指示进行操作。“具备资质的专业人员”是指那些基于其培训和经验，能够识别作业中存在的风险并避免潜在危害的人员。
 
-作者及发布单位对本文档包含的技术性或编辑性错误或遗漏之处不承担任何责任。本信息以“不附任何<img width="454" height="229" alt="image" src="https://github.com/user-attachments/assets/357f16c4-cf29-43bc-9236-68a8279badb6" />
-保证”的方式提供，没有任何种类的担保。在法律允许的范围内，在任何情况下，作者及发布单位都不对偶然、特殊或继发损坏负责，包括停机成本；利润损失；与获取替代产品或服务相关的损坏；或数据丢失或软件恢复损坏。本文档包含的信息可能随时更改，恕不另行通知。本文中所涉及的其他产品和公司名称可能是其相应所有者的商标。使用前请务必做好数据备份，确保相关设置与设备兼容，并在受控环境中谨慎测试。
+作者及发布单位对本文档包含的技术性或编辑性错误或遗漏之处不承担任何责任。本信息以“不附加任何保证”的方式提供，没有任何种类的担保。在法律允许的范围内，在任何情况下，作者及发布单位都不对偶然、特殊或继发损坏负责，包括停机成本；利润损失；与获取替代产品或服务相关的损坏；或数据丢失或软件恢复损坏。本文档包含的信息可能随时更改，恕不另行通知。本文中所涉及的其他产品和公司名称可能是其相应所有者的商标。使用前请务必做好数据备份，确保相关设置与设备兼容，并在受控环境中谨慎测试。
 
 ## 说明
 
@@ -205,6 +204,29 @@ Enable（启用）
 
 _C6_ 是最深级别的休眠，此时 CPU 的供电减少为 0，通常会降低 80%-90% 的功耗。
 
+#### SW Guard Extension（英特尔 SGX 技术）
+
+选项：
+
+Disable（禁用）
+
+Enable（启用）
+
+说明：
+
+SW Guard Extension，SGX。英特尔软件防护扩展功能，一种新型（2013、2015）可信计算技术。英特尔基于 TXT 提出了 SGX。
+
+SGX 能够在计算平台上提供一个可信的隔离空间，保障用户关键代码和数据的机密性和完整性。
+
+要启用英特尔 SGX 选项，处理器必须支持 SGX，内存条必须兼容（每个 CPU 插槽最少 8 个完全相同的内存条，在永久性内存配置上不受支持），必须在优化程序模式下设置内存操作模式，必须启用内存加密，并且必须禁用节点交叉存取。
+
+参见：
+
+- [英特尔® Software Guard Extensions（英特尔® SGX）](https://www.intel.cn/content/www/cn/zh/products/docs/accelerator-engines/software-guard-extensions.html)
+- 王鹃, 樊成阳, 程越强, 赵波, 韦韬, 严飞, 张焕国, 马婧. SGX 技术的分析和研究. 软件学报, 2018, 29(9): 2778-2798.<http://www.jos.org.cn/1000-9825/5594.htm>
+- Wei ZHENG, Ying WU, Xiaoxue WU, Chen FENG, Yulei SUI, Xiapu LUO, Yajin ZHOU. A survey of Intel SGX and its applications. Front. Comput. Sci., 2021, 15(3): 153808 <https://doi.org/10.1007/s11704-019-9096-y>
+- トラストを確⽴する技術の概要 <https://www.jnsa.org/seminar/pki-day/2021/data/0415miyazawa.pdf>
+
 #### CPU Flex Ratio Override（CPU 可变倍频覆盖）
 
 选项：
@@ -249,6 +271,8 @@ Enable（启用）
 
 说明：
 
+需要处理器支持才有此选项。
+
 硬件预先访存技术。用于开启或关闭 MLC 流式预取器。在 CPU 处理指令或数据之前，它将这些指令或数据从内存预取到 L2 缓存中，借此减少内存读取的时间，帮助消除潜在的瓶颈。
 
 #### Adjacent Cache Line Prefetch（相邻的高速缓存行预先访存）
@@ -260,6 +284,8 @@ Disable（禁用）
 Enable（启用）
 
 说明：
+
+需要处理器支持才有此选项。
 
 可针对需要顺序内存访问高利用率的应用程序优化系统，能加快读取速度。如果该功能设置为 Disabled（禁用），CPU 将预取一个缓存行（64 字节）。如果设置为 Enabled（启用），CPU 将预取两个缓存行（共 128 字节）。
 
@@ -274,6 +300,8 @@ Disable（禁用）
 Enable（启用）
 
 说明：
+
+需要处理器支持才有此选项。
 
 该技术能使单个系统显示为软件中的多个独立系统。这能让多个独立的操作系统在单个系统上同时运行。
 
@@ -305,11 +333,21 @@ Enable（启用）
 
 Intel 高级矢量扩展（Intel's Advanced Vector Extensions，AVX），是一组指令集。可以加速工作负载和用例的性能，如科学模拟、金融分析、人工智能 (AI) /深度学习、3D 建模和分析、图像和音频/视频处理、密码学和数据压缩等。
 
-#### Active Efficient-cores（启用能效核心）
+#### Active Performance-cores（激活的性能核心）
 
 选项
 
-ALL
+ALL（全部）
+
+说明：
+
+每个处理器封装中要启用的 P-core（性能核心）数量。注意：会同时考虑 P 核心和 E 核心的数量。当两者都设置为 0 时，BIOS 会启用所有核心。
+
+#### Active Efficient-cores（激活的能效核心）
+
+选项
+
+ALL（全部）
 
 3
 
@@ -321,7 +359,25 @@ ALL
 
 说明：
 
-即开启多少个能效核心（小核）。可完全关闭（即不使用小核）——如果你有大核的话。有的处理器是纯小核。
+每个处理器封装中要启用的 E-core（能效核心）数量。如果你有大核的话，可完全关闭（即不使用小核）。
+
+但是有的处理器是纯小核。
+
+注意：会同时考虑 P 核心和 E 核心的数量。当两者都设置为 0 时，BIOS 会启用所有核心。
+
+#### Hyper-Threading（英特尔® 超线程技术/英特尔® HT 技术）
+
+选项
+
+Disable（禁用）
+
+Enable（启用）
+
+说明：
+
+英特尔® 超线程技术是一项硬件创新，能在每个内核上都运行多个线程。可使一个物理内核表现的如同两个“逻辑内核”一样。
+
+参见 [什么是超线程？](https://www.intel.cn/content/www/cn/zh/gaming/resources/hyper-threading.html)
 
 #### BIST（内置的自检程序）
 
@@ -405,9 +461,106 @@ Monitor 指令用于监控某个内存区域的写入操作，而 MWait 指令�
 
 这个是配合上面的 AP threads Idle Manner（AP 线程空闲模式）一起使用的。增强型 vSphere 计算（Enhanced vMotion Compatibility，EVC）也需要开启该选项。
 
+#### Intel® Trusted Executed Technology（英特尔可信执行技术/TXT）
+
+选项
+
+Disable（禁用）
+
+Enable（启用）
+
+说明：
+
+要启用此英特尔 TXT 选项，必须启用虚拟化技术以及进行预启动测量的 TPM 安全保护。
+
+Intel® Trusted Executed Technology，英特尔® TXT。一种非常老（2007）的可信计算计算，参见 SW Guard Extension（英特尔 SGX 技术）。
+
+参见 [英特尔® Trusted Execution Technology （英特尔® TXT） 概述](https://www.intel.cn/content/www/cn/zh/support/articles/000025873/processors.html)
+
+#### Alias Check Request（别名检查请求）
+
+选项
+
+Disable（禁用）
+
+Enable（启用）
+
+说明：
+
+此项可以启用英特尔® TXT Alias 测试。如果系统没有启用 TXT，这些更改将不会起作用。
+
+#### DPR Memory Size (MB) （DMA 内存受保护范围）
+
+值：
+
+0-255，步进 1
+
+说明：
+
+DPR：DMA Protected Range：内核直接内存访问受保护范围。
+
+DMA 受保护范围（DPR）是一段连续的物理内存区域，其最后一个字节位于 TXT 段（TSEG）起始地址之前一个字节的位置，并且该区域受到所有 DMA 访问的保护。
+
+
+参见 [Where to read about DMA Protected Range (DPR)?](https://community.intel.com/t5/Software-Archive/Where-to-read-about-DMA-Protected-Range-DPR/td-p/922654)
+
+#### Reset AUX Content（重置 AUX 内容）
+
+选项
+
+Yes（是）
+
+No（否）
+
+说明：
+
+使用此功能来重置 TPM 辅助内容。重置 AUX 内容后，英特尔® TXT 可能无法正常工作。
+
 #### CPU SMM Enhancement（CPU SMM 增强）
 
-SMM，即 System Management Mode 系统管理模式，SMM 模式具有比内核模式更高的特权级别，是 CPU 的最高运行权限，运行在内核模式下的内核驱动程序只能通过 SMI 中断来访问运行在 SMM 模式下的 UEFI 固件运行时服务。参见 [以 Protocol 为中心的 UEFI 固件 SMM 提权漏洞静态检测](https://www.secrss.com/articles/53078)
+SMM 代码访问是一种特殊的操作模式，由 BIOS 用于处理电源和硬件管理功能。
+
+SMM，即 System Management Mode 系统管理模式，SMM 模式具有比内核模式更高的特权级别，是 CPU 的最高运行权限，运行在内核模式下的内核驱动程序只能通过 SMI 中断来访问运行在 SMM 模式下的 UEFI 固件运行时服务。参见 [以 Protocol 为中心的 UEFI 固件 SMM 提权漏洞静态检测](https://www.secrss.com/articles/53078)。
+
+​![](../.gitbook/assets/CPU-SMM.png)
+
+##### SMM Use Delay Indication（SMM 使用延迟指示）
+
+选项：
+
+Disable（禁用）
+
+Enable（启用）
+
+说明：
+
+启用 SMM 使用延迟指示，以检查线程在进入 SMM 时是否会被延迟。
+
+进入系统管理模式（SMM）会发生在指令边界处。当一个逻辑处理器正在执行包含大量内部操作流程的指令时，该处理器对 SMI（系统管理中断）的响应将会被延迟。参见 [34.17.2  SMI Delivery Delay Reporting](https://xem.github.io/minix86/manual/intel-x86-and-64-manual-vol3/o_fe12b1e2a880e0ce-1280.html)。
+
+##### SMM Use Block Indication（SMM 使用阻塞指示）
+
+选项：
+
+Disable（禁用）
+
+Enable（启用）
+
+说明：
+
+检查某个线程是否被阻止进入 SMM。
+
+##### SMM Use SMM en-US Indication（使用美式英语显示 SMM 指示）
+
+选项：
+
+Disable（禁用）
+
+Enable（启用）
+
+说明：
+
+用美式英语表达或说明 SMM 指示的用法。
 
 #### AC Split Lock（AC 对 Split‑Lock 的处理）
 
@@ -423,11 +576,23 @@ Split Lock 指跨越两个 cache line 的原子操作（如 lock add，xchg 等�
 
 启用后，当检测到 split‑lock 操作时，会触发对齐异常，而不是锁总线。这对对实时性能或云平台尤为重要。
 
+#### Total Memory Encryption（英特尔总内存加密技术）
+
+选项：
+
+Disable（禁用）
+
+Enable（启用）
+
+说明：
+
+配置英特尔总内存加密（TME），以防止物理攻击对 DRAM 数据的侵害。
+
+启用或禁用英特尔总内存加密 (TME) 和多租户（英特尔® TME-MT）。当选项设置为已禁用时，BIOS 将同时禁用 TME 和 TME-MT 技术。
+
 ### Power & Performance（电源与性能）
 
 ​![](../.gitbook/assets/XV6F5EV9_O8NSCPXCCJ-20250719151649-01nqtsy.png)​
-
-‍
 
 | 英文术语                       | 中文翻译                            |
 | ------------------------------ | ----------------------------------- |
@@ -1083,7 +1248,7 @@ Enable（启用）
 
 处理器引入了 Psys（平台功耗）机制，以增强对处理器功耗的管理。Psys 信号需要来自兼容的充电电路，并接入 IMVP9（电压调节器）。该信号将通过 SVID 向处理器提供整个平台的热相关总功耗信息（包括处理器及平台其余部分）。
 
-##### Platform PL1 Power（平台 PL1 功耗）
+##### Platform PL1 Power（平台 PL1 / PsysPL1 功耗）
 
 说明：
 
@@ -1093,7 +1258,7 @@ Enable（启用）
 
 此值是平台平均功耗不会被超过的阈值 —— 英特尔推荐设置为等于平台的散热能力。参见 [Platform Power Control](https://edc.intel.com/content/www/us/en/design/ipla/software-development-platforms/client/platforms/alder-lake-desktop/12th-generation-intel-core-processors-datasheet-volume-1-of-2/011/platform-power-control/)
 
-##### Platform PL1 Time Window（平台 PL1 窗口时间）
+##### Platform PL1 Time Window（平台 PL1 / PsysPL1 窗口时间）
 
 说明：
 
@@ -1118,7 +1283,7 @@ Enable（启用）
 
 禁用（Disabled）：BIOS 不编程 PL2，此时处理器将使用默认或平台固件设定的限制值。
 
-##### Platform PL2 Power（平台 PL2 功耗）
+##### Platform PL2 Power（平台 PL2 / PsysPL2 功耗）
 
 说明：
 
@@ -1160,23 +1325,20 @@ Enable（启用）
 
 说明：
 
+英特尔开发的处理器电源管理平台——C 状态架构，可以在基本的 C1（停止状态，阻断 CPU 时钟周期）基础上进一步降低功耗。
+
 当启用时，所有 CPU 核心进入 C 状态（空闲状态）时，CPU 会自动切换到最低运行频率以降低功耗。
 
 该选项允许在 CPU 并未 100% 利用时，让其进入 C 状态（低功耗空闲状态），以降低整体功耗。
 
-注：CPU/封装睡眠状态：
+注：代表 CPU/封装睡眠状态。
 
-C0 - 活动： CPU 打开并运行。
-
-C1 - 自动停止： 内核时钟已关闭。处理器没有执行指令，但几乎可以立即返回到执行状态。某些处理器还支持增强型 C1 状态 （C1E），以降低功耗。
-
-C2 - 停止时钟： 内核时钟和总线时钟已关闭。该处理器保持所有软件可见状态，但可能需要更长的时间才能唤醒。
-
-C3 - 深度睡眠： 时钟生成器已关闭。处理器无需保持其高速缓存一致性，但能保持其他状态。某些处理器具有 C3 状态（深度睡眠、深度睡眠）的变体，与唤醒处理器所需的时间不同。
-
-C4 - 更深度的睡眠： 降低 VCC
-
-DC4 - 更深度的 C4 睡眠： 进一步减少 VCC
+- C0 - 活动： CPU 打开并运行。
+- C1 - 自动停止： 内核时钟已关闭。处理器没有执行指令，但几乎可以立即返回到执行状态。某些处理器还支持增强型 C1 状态 （C1E），以降低功耗。
+- C2 - 停止时钟： 内核时钟和总线时钟已关闭。该处理器保持所有软件可见状态，但可能需要更长的时间才能唤醒。
+- C3 - 深度睡眠： 时钟生成器已关闭。处理器无需保持其高速缓存一致性，但能保持其他状态。某些处理器具有 C3 状态（深度睡眠、深度睡眠）的变体，与唤醒处理器所需的时间不同。
+- C4 - 更深度的睡眠： 降低 VCC
+- DC4 - 更深度的 C4 睡眠： 进一步减少 VCC
 
 参见 [处理器深度和深度睡眠状态之间的差异](https://www.intel.cn/content/www/cn/zh/support/articles/000006619/processors/intel-core-processors.html)
 
@@ -1192,7 +1354,7 @@ Enable（启用）
 
 说明：
 
-启用/禁用 C1E 功能。
+开启增强型 C1 电源状态，可提升系统性能。
 
 当启用时，所有 CPU 核心进入 C 状态（空闲状态）时，CPU 会自动切换到最低运行频率以降低功耗。
 
@@ -1205,6 +1367,8 @@ Disable（禁用）
 C1
 
 说明：
+
+当本项启用时，CPU 将根据非处理器核心（Uncore）自动降级信息有条件地降低 C 状态。
 
 使用此功能可以防止 CPU 频繁进入 C 状态，从而改善延迟表现。意味着当 CPU 处于深度 C 状态（如 C6 或更深）时，如果系统认为需要更快地响应，CPU 会自动降级到 C1 状态。
 
@@ -1229,6 +1393,8 @@ Disable（禁用）
 Enable（启用）
 
 说明：
+
+当启用此项时，CPU 将有条件地从已降级的 C3 或 C1 状态提升到更高的 C 状态。
 
 当一颗 CPU 的所有核心进入深度 C 状态时，那么整个 CPU 的 package（CPU 封装，指整块 CPU）就可以进入这些状态。
 
@@ -1277,7 +1443,7 @@ Enable（启用）
 
 选项：
 
-C0 / C1 / C2 / C3 / C6 / C7 / C7S / C8 / C9 / C10 / Cpu Default / Auto
+C0 / C1 / C2 / C3 / C6 / C7 / C7S / C8 / C9 / C10 / Cpu Default（处理器默认） / Auto（自动）
 
 说明：
 
@@ -1289,7 +1455,19 @@ C0 / C1 / C2 / C3 / C6 / C7 / C7S / C8 / C9 / C10 / Cpu Default / Auto
 
 CPU 默认：保持出厂默认值；
 
-自动：初始化为可用的最深封装 C 状态限制。
+自动：AMI BIOS 将自动设置 C 状态封装寄存器的限制。初始化为可用的最深封装 C 状态限制。
+
+##### Package C State Workaround（封装 C 状态变通解决方案）
+
+选项：
+
+Disable（禁用）
+
+Enable（启用）
+
+说明：
+
+启用此功能可修复旧的机械硬盘在进入封装 C 状态时出现的问题。
 
 ##### C6/C7 Short Latency Control (MSR 0x60B)（C6/C7 短时延迟控制）
 
@@ -7411,9 +7589,9 @@ IDE (Integrated Drive Electronics，集成磁盘电子接口)
 
 一般只有非常老旧的计算机才会使用 IDE 接口。
 
-正常的计算机一般都是 AHCI。大部分非 Windows 操作系统（本身也需要驱动才能支持）都与 RAID 模式不兼容。
+正常的计算机一般都是 AHCI。大部分非 Windows 操作系统（本身也需要驱动才能支持）都与 RAID 模式不兼容（但是英特尔快速存储技术需要 RAID 模式）。
 
-并且这个 RAID，一般叫做 Fake-RAID/hardware-assisted software RAID，伪 RAID，不是真正的硬 RAID。
+并且这个 RAID，一般叫做 Fake-RAID/hardware-assisted software RAID，伪 RAID，不是真正的硬 RAID。这种情况下可能需要英特尔快速存储技术（RST）驱动才能正常使用。
 
 参见 [Install Arch Linux with Fake RAID](https://wiki.archlinuxcn.org/wiki/Install_Arch_Linux_with_Fake_RAID)
 
