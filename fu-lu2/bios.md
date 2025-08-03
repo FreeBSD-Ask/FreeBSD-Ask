@@ -3790,6 +3790,8 @@ GUID 是一种由算法生成的唯一标识。
 
 ### System Agent (SA) Configuration（系统代理配置）
 
+以下选项可能与 PCH-IO Configuration（平台控制总线配置）这个南桥的选项有重叠之处。因为 System Agent (SA) Configuration（系统代理配置）是控制由 CPU 引出的 PCIE 接口的。
+
 在 Intel CPU 架构中（第二代 Sandy Bridge 及以后），System Agent 是一个集成在 CPU 芯片内部的模块，它包含了：
 
 - 内存控制器 (IMC - Integrated Memory Controller)
