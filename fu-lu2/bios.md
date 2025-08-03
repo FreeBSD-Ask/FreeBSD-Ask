@@ -158,7 +158,7 @@ Version 2.22.1289 Copyright (C) 2025 AMI
 
 ### Connectivity Configuration（连接性配置）
 
-主要是面向英特尔无线网卡的相关配置。
+主要是面向英特尔无线网卡、蓝牙和 WWAN 模块（如 GPRS/3/4/5G 模块）的相关配置。
 
 #### CNVi CRF Present（显示是否存在 CNVi 模块）
 
