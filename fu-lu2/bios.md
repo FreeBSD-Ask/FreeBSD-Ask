@@ -1124,7 +1124,7 @@ Enable（启用）
 
 处理器引入了 Psys（平台功耗）机制，以增强对处理器功耗的管理。Psys 信号需要来自兼容的充电电路，并接入 IMVP9（电压调节器）。该信号将通过 SVID 向处理器提供整个平台的热相关总功耗信息（包括处理器及平台其余部分）。
 
-##### Platform PL1 Power（平台 PL1 功耗）
+##### Platform PL1 Power（平台 PL1 / PsysPL1 功耗）
 
 说明：
 
@@ -1134,7 +1134,7 @@ Enable（启用）
 
 此值是平台平均功耗不会被超过的阈值 —— 英特尔推荐设置为等于平台的散热能力。参见 [Platform Power Control](https://edc.intel.com/content/www/us/en/design/ipla/software-development-platforms/client/platforms/alder-lake-desktop/12th-generation-intel-core-processors-datasheet-volume-1-of-2/011/platform-power-control/)
 
-##### Platform PL1 Time Window（平台 PL1 窗口时间）
+##### Platform PL1 Time Window（平台 PL1 / PsysPL1 窗口时间）
 
 说明：
 
@@ -1159,7 +1159,7 @@ Enable（启用）
 
 禁用（Disabled）：BIOS 不编程 PL2，此时处理器将使用默认或平台固件设定的限制值。
 
-##### Platform PL2 Power（平台 PL2 功耗）
+##### Platform PL2 Power（平台 PL2 / PsysPL2 功耗）
 
 说明：
 
