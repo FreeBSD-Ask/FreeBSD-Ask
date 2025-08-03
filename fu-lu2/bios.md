@@ -6897,7 +6897,7 @@ L0s
 
 L1
 
-LosL1
+L0sL1
 
 Auto（自动）
 
