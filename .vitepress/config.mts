@@ -276,7 +276,7 @@ markdown: {
 			`window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-GKTJ5MJJ58');`
+      gtag('config', 'G-31WQ8W3FF6');`
 		],
 	],
 	rewrites: {
