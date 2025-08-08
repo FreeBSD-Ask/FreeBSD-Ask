@@ -123,16 +123,16 @@ George Berkeley（1685.3.12—1753.1.14），2023 年是他逝世 270 周年。2
 
 ## 参考文献
 
-- [英] 乔治·贝克莱。人类知识原理和三篇对话[M]. 译者：张桂权，人民出版社，2022-11.（ISBN 9787010236841）
-- 阎吉达。贝克莱思想新探[M]. 复旦大学出版社，1987-10.（附录部分有《论运动》的翻译）
+- [英] 乔治·贝克莱. 人类知识原理和三篇对话[M]. 译者：张桂权，人民出版社，2022-11.（ISBN 9787010236841）
+- 阎吉达. 贝克莱思想新探[M]. 复旦大学出版社，1987-10.（附录部分有《论运动》的翻译）
 - Downing, Lisa, "George Berkeley", The Stanford Encyclopedia of Philosophy (Fall 2021 Edition), Edward N. Zalta (ed.), URL = <https://plato.stanford.edu/archives/fall2021/entries/berkeley/>. SEP 贝克莱条目
 - Easwaran, Kenny, Alan Hájek, Paolo Mancosu, and Graham Oppy, "Infinity", The Stanford Encyclopedia of Philosophy (Summer 2024 Edition), Edward N. Zalta & Uri Nodelman (eds.), URL = <https://plato.stanford.edu/archives/sum2024/entries/infinity/>. SEP 无穷条目
-- [美] 布鲁斯·乌姆鲍。贝克莱[M]. 译者：孟令朋，清华大学出版社，2019-5.（ISBN 9787302525554）
-- 汪芳庭。数学基础 (修订版)[M]. 高等教育出版社，2018-10.（ISBN 9787040502428）
+- [美] 布鲁斯·乌姆鲍. 贝克莱[M]. 译者：孟令朋，清华大学出版社，2019-5.（ISBN 9787302525554）
+- 汪芳庭. 数学基础 (修订版)[M]. 高等教育出版社，2018-10.（ISBN 9787040502428）
 - [美] Abraham Robinson. 非标准分析[M]. 译者：申又根 / 王世强 / 张锦文，科学出版社，1980-9.（已绝版，统一书号：13031-1267）
-- [澳] 陶哲轩。陶哲轩实分析[M]. 译者：李馨，第 3 版。人民邮电出版社，2018-5.（ISBN 9787115480255）
+- [澳] 陶哲轩. 陶哲轩实分析[M]. 译者：李馨，第 3 版. 人民邮电出版社，2018-5.（ISBN 9787115480255）
 - George Berkeley. *The Querist, containing several queries proposed to the consideration of the public*[M]. Gale ECCO, Print Editions, April 23, 2018（ISBN 9781385411018）
 - Schabas, Margaret, "Economics in Early Modern Philosophy", The Stanford Encyclopedia of Philosophy (Summer 2022 Edition), Edward N. Zalta (ed.), URL = <https://plato.stanford.edu/archives/sum2022/entries/economics-early-modern/>. SEP 早期现代经济哲学条目
 - [George Berkeley, Bishop of Cloyne/Philosopher](http://cloyne.ie/about/george-berkeley-bishop-of-cloyne/)，Cloyne District Community Council
 - [George Berkeley](https://www.britannica.com/biography/George-Berkeley)，大英百科全书贝克莱条目
-- 胡化凯。20 世纪 50-70 年代中国科学批判资料选（上下）[M]. 2009 年 10 月第 9 版第 1 次印刷。山东教育出版社，2009-10 :472.（已绝版，ISBN 7532853861）整本下册都在批判爱因斯坦
+- 胡化凯. 20 世纪 50-70 年代中国科学批判资料选（上下）[M]. 2009 年 10 月第 9 版第 1 次印刷. 山东教育出版社，2009-10 :472.（已绝版，ISBN 7532853861）整本下册都在批判爱因斯坦
