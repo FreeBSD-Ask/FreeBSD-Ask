@@ -22,7 +22,7 @@ BIOS 界面、选项和设置可能因系统不同而有所差异。
 
 市场上大部分英特尔迷你主机的 BIOS 都是 AMI BIOS。
 
-因此对 AMI BIOS 进行注解是有普遍意义的。
+因此对 AMI BIOS 进行注解是具有普遍意义的。
 
 ### 技术信息
 
@@ -40,11 +40,11 @@ UEFI：Unified Extensible Firmware Interface，统一可扩展固件接口。UEF
 
 目前主流电脑（大概从 2013 年起）配备的都是 UEFI，而不是传统的 BIOS。也就是说，现在很多人可能根本没见过真正的 BIOS，但是出于习惯（界面和操作逻辑都类似），我们仍将 UEFI 统称作 BIOS 或 UEFI BIOS。
 
-### CMOS 简介/设置 BIOS 后无法开机怎么办
+### 设置 BIOS 后无法开机怎么办（CMOS 简介）
 
-CMOS（Complementary Metal-Oxide-Semiconductor，互补金属氧化物半导体）是计算机内部的一种电池供电芯片，用于存储信息（时间信息和 BIOS 密码 BIOS 设置等）。它也被称为实时时钟（RTC）或非易失性 RAM（NVRAM）。清空 CMOS 可清除上述参数。清空方法参见 [主板如何Clear CMOS](https://www.asus.com.cn/support/faq/1040820/)。
+CMOS（Complementary Metal-Oxide-Semiconductor，互补金属氧化物半导体）是计算机内部的一种电池供电芯片，用于存储信息（时间信息和 BIOS 密码 BIOS 设置等）。它也被称为实时时钟（RTC）或非易失性 RAM（NVRAM）。CMOS 一般是由纽扣电池供电的，部分嵌入式设备的 CMOS 电池是可充电式纽扣电池。
 
-CMOS 一般是由纽扣电池供电的，部分嵌入式设备的 CMOS 电池是可充电式纽扣电池。
+清空 CMOS 可清除上述参数。清空方法参见 [主板如何Clear CMOS](https://www.asus.com.cn/support/faq/1040820/)。
 
 参见 [BIOS 和 CMOS 有什么不同？](https://iknow.lenovo.com.cn/detail/043962?type=undefined&keyword=BIOS&keyWordId=)
 
@@ -89,6 +89,13 @@ Aptio 设置 - AMI
 - ID（编号）: 0xB06E0
 - Stepping（步进）: A0
 
+步进（Stepping）：当制造过程有所改进或者功能被修复/删除时，将为英特尔®处理器创建步进代码。现在常见的 Intel 处理器的步进值都是由“一位字母+一位数字”组成的，比如根据[英特尔® 处理器 N100](https://www.intel.cn/content/www/cn/zh/products/sku/231803/intel-processor-n100-6m-cache-up-to-3-40-ghz/ordering.html)，可知 N100 处理器的当前步进为“N0”（一般消费者得到的都是这个步进的处理器）。字母越靠近 z，数字越大，表明步进越高，处理器越新。但是上图 BIOS 显示此 n100 处理器步进为“A0”，很明显这是一颗工程样片。
+
+参见 
+
+- [英特尔®处理器步进意味着什么？](https://www.intel.cn/content/www/cn/zh/support/articles/000057218/processors.html)
+- [CPU“步进”介绍](https://iknow.lenovo.com.cn/detail/320528)
+
 #### Memory Information（内存信息）
 
 - Memory RC Version（内存 RC 版本）: 0.0.4.73
@@ -98,14 +105,12 @@ Aptio 设置 - AMI
 #### Language and Time（语言与时间）
 
 - System Language（系统语言）: [English]（[英语]）
-
 - System Date（系统日期）: [Sat 07/19/2025]（[2025 年 07 月 19 日 星期六]）
-
 - System Time（系统时间）: [04:49:48]
 
 ### 右侧帮助信息
 
-Choose the system default language 选择系统默认语言
+Choose the system default language（选择系统默认语言）
 
 ### 键盘帮助（底部右侧）
 
@@ -146,9 +151,7 @@ Choose the system default language 选择系统默认语言
 
 ### 底部版本信息
 
-Version 2.22.1289 Copyright (C) 2025 AMI
-
-版本 2.22.1289 版权所有 (C) AMI 2025 
+Version 2.22.1289 Copyright (C) 2025 AMI（版本 2.22.1289 版权所有 (C) AMI 2025）
 
 ## Advanced（高级）
 
@@ -374,7 +377,7 @@ Enable（启用）
 
 说明：
 
-启用此变通方案将使 BIOS 在执行 WWAN 设备加电序列之前，拉高 FULL\_CARD\_POWER\_OFF#、PERST# 和 RESET#WWAN 信号。禁用此选项不会产生任何影响。
+启用此变通方案将使 BIOS 在执行 WWAN 设备加电序列之前，拉高 FULL\_CARD\_POWER\_OFF#、PERST# 和 RESET#WWAN 信号，禁用此选项则不会对其施加任何影响。
 
 作用未知。
 
@@ -404,6 +407,17 @@ Enable（启用）
 | L2 Cache                   | L2 缓存      | 2048 KB                |
 | L3 Cache                   | L3 缓存      | 6 MB                   |
 
+效率内核（E 内核/小核）：
+
+- 物理尺寸更小，多个小核封装只占用一个大核的物理空间。
+- 旨在最大限度地提高 CPU 效率（以每瓦性能为衡量标准）。
+- 小核与大核协同工作，以加速消耗核心的任务（例如，渲染视频时）。
+- 经过优化，可高效运行后台任务。简单的任务可以分载到小核上，例如，处理 Discord 或杀毒软件，从而使大核能够自由发挥游戏性能。
+- 只能运行单个软件线程。
+
+参见 [什么是性能混合架构？](https://www.intel.cn/content/www/cn/zh/support/articles/000091896/processors.html)
+
+
 #### Performance-core Information（性能核心信息）
 
 | 英文原文                     | 中文翻译                    |
@@ -417,6 +431,15 @@ Enable（启用）
 | Boot Guard Status            | 启动保护状态                |
 | Boot Guard ACM Policy Status | 启动保护 ACM 策略状态       |
 | Boot Guard SACM Information  | 启动保护 SACM 信息          |
+
+性能内核（P 内核/大核）：
+
+- 物理尺寸上更大的高性能内核，专为保持效率的同时实现原始速度而设计。
+- 针对高睿频频率和高 IPC（每周期指令数）进行了调整。
+- 非常适合处理许多游戏引擎需要的繁重单线程工作。
+- 支持超线程，这意味着大核同时可运行两个软件线程（英特尔® Core™ Ultra 处理器（系列 2）除外）
+
+参见 [什么是性能混合架构？](https://www.intel.cn/content/www/cn/zh/support/articles/000091896/processors.html)
 
 #### C6DRAM（C6 节能状态下的 DRAM 控制）
 
@@ -589,7 +612,7 @@ ALL（全部）
 
 说明：
 
-每个处理器封装中要启用的 E-core（能效核心）数量。如果你有大核的话，可完全关闭（即不使用小核）。
+每个处理器封装中要启用的 E-core（能效核心/小核）数量。如果你有大核的话，可完全关闭（即不使用小核）。
 
 但是有的处理器是纯小核。
 
