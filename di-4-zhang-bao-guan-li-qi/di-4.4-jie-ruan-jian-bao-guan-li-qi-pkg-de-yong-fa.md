@@ -391,6 +391,12 @@ Ignore the mismatch and continue? [y/N]:
 
 如果只是不想看到这个提示：只需要按照提示将 `IGNORE_OSVERSION=yes` 写到 `/etc/make.conf` 里面（没有就新建）就行。
 
+### `pkg: An error occurred while fetching package: No error`
+
+以 root 权限执行 `certctl rehash` 刷新证书即可。
+
+参见 [pkg(8): "An error occured while fetching package: No error"](https://forums.freebsd.org/threads/pkg-8-an-error-occured-while-fetching-package-no-error.96761/)
+
 ## 参考文献
 
 - [pkg delete -- deletes packages from the database	and the	system](https://man.freebsd.org/cgi/man.cgi?query=pkg-delete&sektion=8&n=1)
