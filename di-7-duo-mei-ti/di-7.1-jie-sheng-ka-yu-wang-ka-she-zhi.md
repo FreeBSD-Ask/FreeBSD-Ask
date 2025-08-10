@@ -21,23 +21,23 @@ No devices installed from userspace.
 
 后面带有 default 是 oss 默认设备。如果软件的音频使用的 oss 且输出是默认的，音频就会从这个设备输出。
 
-可以通过调整内核参数,使上面命令输出更为详细的声卡信息
-
-```
-sysctl hw.snd.verbose=4
-```
-
-FreeBSD 大部分软件的音频输出驱动为 oss。有些默认是 pulseaudio(比如 firefox)，这些软件的设置看最后的提示。firefox 可以通过 "about:support" 页查看使用的音频后端。firefox支持各种音频后端，会根据系统安装的后端自动按顺序选择，也可以手动选择。
-
-下列命令可以修改输出的设备。最后的数字是对应的 pcm 后面的数字。
+可以通过调整内核参数,使上面命令输出更为详细的声卡信息：
 
 ```sh
-$ sysctl hw.snd.default_unit=5
+# sysctl hw.snd.verbose=4
 ```
 
-上面 pcm6 是数字输出接口，一般集成声卡的模拟接口采样率最高48kHz,数字接口最高采样率可以达到192kHz。如果有数字输出，但面板上没有接口的话，主板上应该有spdif接口的插针，加个spdif的挡板（相当便宜,一般是spdif口和同轴口,两个输出口），线接上就可以使用。
+FreeBSD 大部分软件的音频输出驱动为 oss。有些默认是 pulseaudio（如 firefox），这些软件的设置看最后的提示。firefox 可以通过 `about:support` 页查看使用的音频后端。firefox 支持各种音频后端，能根据系统安装的后端自动按顺序选择，亦可手动选择。
 
-此处推荐几个 oss mixer：
+下列命令可以修改输出的设备。最后的数字是对应 pcm 后面的数字。
+
+```sh
+# sysctl hw.snd.default_unit=5
+```
+
+上面 pcm6（“pcm6: <Realtek ALC892 (Rear Digital)> (play)”）是数字输出接口。一般集成声卡的模拟接口采样率最高 48kHz，数字接口最高采样率可以达到 192kHz。如果有数字输出，但面板上没有接口，而主板上有 S/PDIF 接口的插针，加个 S/PDIF 的挡板（十分便宜，一般是 S/PDIF 口和同轴口，两个输出口），接上线即可使用。
+
+此处推荐几款 oss mixer：
 
 | GUI 环境 |      名称       |
 | :------: | :-------------: |
@@ -49,9 +49,9 @@ $ sysctl hw.snd.default_unit=5
 
 部分声卡需要自行编译内核，请参考 [Open Sound System for FreeBSD](http://www.opensound.com/freebsd.html)。
 
-但是 oss 有些缺点，使用 `obs-studio` 无法录制 oss 输出。只能录制 oss 输入。看官方论坛里，可以 `virtual_oss` 模拟一个设备实现(使用 `virtual_oss` 的 `-M` 参数进行声道路由，即把oss输出重定向到oss输入)。
+但是 oss 有些缺点，使用 `obs-studio` 无法录制 oss 输出。只能录制 oss 输入。看官方论坛里，可以用 `virtual_oss` 模拟一个设备实现（使用 `virtual_oss` 的参数 `-M` 进行声道路由，即把 oss 输出重定向到 oss 输入）。
 
-但是 `obs-studio` 可以录制 pulseaudio 输出的音频。(默认的 “桌面音频” 这个输入源,没有说明，应该是 pulseaudio输出，所以 oss 输出不能通过这个录音）
+但是 `obs-studio` 可以录制 pulseaudio 输出的音频。(默认的“桌面音频”这个输入源，没有说明应该是 pulseaudio 输出，故 oss 输出无法通过此录音）
 
 所以有些软件可以使用 pulseaudio 作为输出。使用 pulseaudio 的软件的音频输出，不受上面的命令控制音频输出设备。pulseaudio 会根据自己的设置把音频送到对应设备，所以需要使用 pulseaudio 混音器控制。
 
