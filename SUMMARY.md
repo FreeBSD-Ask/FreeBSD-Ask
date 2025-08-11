@@ -154,7 +154,7 @@
 * [13.2 管理 FreeBSD 中的服务](di-13-zhang-freebsd-te-se/di-13.2-jie-bsd-init-guan-li-fu-wu.md)
 * [13.3 bsdconfig 系统配置工具](di-13-zhang-freebsd-te-se/di-13.3-jie-bsdinstall-yu-bsdconfig.md)
 * [13.4 SSH 配置和相关工具](di-13-zhang-freebsd-te-se/di-13.4-jie-chang-yong-ruan-jian-yu-ssh-pei-zhi.md)
-* [13.5 单用户模式和密码重置](di-13-zhang-freebsd-te-se/di-13.5-jie-hui-fu-mo-shi-yu-mi-ma-zhong-zhi.md)
+* [13.5 Live CD 与系统急救](di-13-zhang-freebsd-te-se/di-13.5-jie-hui-fu-mo-shi-yu-mi-ma-zhong-zhi.md)
 * [13.6 Grub、UEFI 和 efibootmgr](di-13-zhang-freebsd-te-se/di-13.6-jie-grub-ji-qi-ta-yin-dao.md)
 
 ## 第 14 章 网络管理
