@@ -229,10 +229,11 @@ dr-xr-xr-x   2 root    wheel   schg,uarch  2 Feb 21 10:26 empty
 ├── cddl CDDL 许可证下的源代码，如 DTrace
 ├── compat Linux 兼容层、FreeBSD 32 位兼容性
 ├── conf 内核构建粘合层
-├── contrib 第三方软件，如 OpenZFS
+├── contrib 第三方软件，如 OpenZFS、zstd(1)
+│   └── dev 包含一些无线网卡驱动，如 iwlwifi(4)、rtw89(4)、athk(4)
 ├── crypto 加密驱动程序
 ├── ddb ​交互式内核调试器 ddb(4)
-├── dev 设备驱动程序和其他架构无关代码
+├── dev 设备驱动程序和其他架构无关代码，如 iscsi(4)、iwx(4)、iwm(4)、xz(1)
 ├── dts Device Tree Source 设备树源码
 ├── fs 除了 UFS、NFS、ZFS 以外的文件系统
 ├── gdb 内核远程 GDB 存根 gdb(4)
