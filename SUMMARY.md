@@ -290,7 +290,7 @@
 
 ## 附录 Ⅰ 计算机概论
 
-* [存储卡简介](fulu1/sd-card-can-shu-jian-shu.md)
+* [存储卡与固态硬盘基础](fulu1/sd-card-can-shu-jian-shu.md)
 * [总线接口与协议](fulu1/zong-xian.md)
 * [网络基础](fulu1/wang-luo-ji-chu.md)
 * [操作系统](fulu1/cao-zuo-xi-tong.md)
