@@ -11,6 +11,51 @@
   - UEFI 下，最小内存为 128M
   - BIOS 下，最小内存为 64M
 
+## 硬件支持情况查询
+
+更多硬件请参考：
+
+[Hardware for BSD](https://bsd-hardware.info/?view=search)
+
+
+![](../.gitbook/assets/h1.png)
+
+![](../.gitbook/assets/h2.png)
+
+---
+
+如果你也想上传你的数据到该网站上，请：
+
+- 使用 pkg 安装：
+
+ ```sh
+ # pkg install hw-probe
+```
+
+- 或者使用 Ports 安装：
+
+```sh
+# cd /usr/ports/sysutils/hw-probe/
+# make install clean
+```
+
+---
+
+然后：
+
+```sh
+# hw-probe -all -upload
+Probe for hardware ... Ok
+Reading logs ... Ok
+Uploaded to DB, Thank you!
+
+Probe URL: https://bsd-hardware.info/?probe=f64606c4b1
+```
+
+打开上面的链接，即可看到你的设备。
+
+其他系统见 [INSTALL HOWTO FOR BSD](https://github.com/linuxhw/hw-probe/blob/master/INSTALL.BSD.md)
+
 
 ## 下载 FreeBSD 镜像
 
@@ -137,47 +182,3 @@ Windows 上的刻录工具应首选 **Rufus**，Linux 直接使用 `dd` 命令�
 >![rufus](../.gitbook/assets/rufus.png)
 
 
-## 硬件支持情况查询
-
-更多硬件请参考：
-
-[Hardware for BSD](https://bsd-hardware.info/?view=search)
-
-
-![](../.gitbook/assets/h1.png)
-
-![](../.gitbook/assets/h2.png)
-
----
-
-如果你也想上传你的数据到该网站上，请：
-
-- 使用 pkg 安装：
-
- ```sh
- # pkg install hw-probe
-```
-
-- 或者使用 Ports 安装：
-
-```sh
-# cd /usr/ports/sysutils/hw-probe/
-# make install clean
-```
-
----
-
-然后：
-
-```sh
-# hw-probe -all -upload
-Probe for hardware ... Ok
-Reading logs ... Ok
-Uploaded to DB, Thank you!
-
-Probe URL: https://bsd-hardware.info/?probe=f64606c4b1
-```
-
-打开上面的链接，即可看到你的设备。
-
-其他系统见 [INSTALL HOWTO FOR BSD](https://github.com/linuxhw/hw-probe/blob/master/INSTALL.BSD.md)
