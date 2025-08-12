@@ -1,6 +1,6 @@
 # FreeBSD 从入门到跑路（第三版：草稿）
 
-欢迎你来到 FreeBSD 的世界！~~[为了拯救即将归档（Archived）的 FreeBSD······我们决定写一本书。](https://mzh.moegirl.org.cn/为了保护我们心爱的ooo……成为偶像！)~~
+欢迎你来到 FreeBSD 的世界！
 
 FreeBSD 是真正自由（Liberty）的**操作系统**，在这波谲云诡的世界中仍然坚守 BSD UNIX 哲学——恪守古老的法则，追寻真正的自由。
 
@@ -15,17 +15,19 @@ FreeBSD 是真正自由（Liberty）的**操作系统**，在这波谲云诡的�
 
 ## 内容提要
 
-本书涉及了 FreeBSD 14.3-RELEASE 和 13.5-RELEASE 的安装和日常使用，还包含一些 15.0-CURRENT 的内容。
+~~[为了拯救即将归档（Archived）的 FreeBSD······我们决定写一本书。](https://mzh.moegirl.org.cn/为了保护我们心爱的ooo……成为偶像！)~~
 
 ## 历史
 
-《FreeBSD 从入门到跑路》肇始于 2021 年 3 月 14 日，其原型最早可追溯至 2020 年 12 月 31 日 ykla 发布的文章《FreeBSD 艺术科学哲学导论》。
+《FreeBSD 从入门到跑路》肇始于 2021 年 3 月 14 日，其原型最早可追溯至 ykla 于 2020 年 12 月 31 日发布的文章《FreeBSD 艺术科学哲学导论》。
 
 ## 意见反馈
 
 由于编写者水平所限，书中缺点和谬误之处自不可免。
 
-如遇问题：请发送邮件至 [yklaxds@gmail.com](mailto:yklaxds@gmail.com)（优先）或联系 QQ 群群主。欢迎通过在桌面端网页右下方或底部左下方有当前页面的 GitHub 提交 PR。
+如遇本书及网站等相关问题：请发送邮件至 [yklaxds@gmail.com](mailto:yklaxds@gmail.com)。欢迎通过在桌面端网页右下方或底部左下方有当前页面的 GitHub 提交 PR。
+
+除此外有关中文社区的问题请联系 QQ 群主。
 
 ## 目标与方向
 
