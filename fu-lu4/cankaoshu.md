@@ -41,6 +41,8 @@
 
 打开美国亚马逊官网作者 Michael W. Lucas 的[页面](https://www.amazon.com/stores/Michael-W.-Lucas/author/B004MNWSFG?language=zh_TW&ref=ap_rdr&isDramIntegrated=true&shoppingPortalEnabled=true)，你会惊讶地发现竟有人如此著作等身，博闻强识。从 ZFS 到 FreeBSD，从 OpenBSD 到 GPG，居然有近五十本之多。
 
-事实是什么？笔者随机抽取了几本进行泛读，对 *Absolute FreeBSD, 3rd Edition* 进行了精读。可以看到，该作者撰写的所有内容都毫无价值，内容和我国上世纪夜校和农村培训计算机的课程高度相似。其在难度上甚至不能和大学公共计算机课程 windows + office 相媲美。里面经常性的花大量的笔墨去描述一些对大众而言都是常识性的内容，诸如“电脑应该安装杀毒软件”，“我们应该打开电脑的防火墙”等等。看似有很多代码和指令，但是几乎都是没用的。
+事实是什么？笔者随机抽取了几本进行泛读，对 *Absolute FreeBSD, 3rd Edition* 进行了精读。可以看到，该作者撰写的所有内容都毫无价值，内容和我国上世纪夜校和农村培训计算机的课程高度相似。其在难度上甚至不能和大学公共计算机课程 Windows + Office 相媲美。*Absolute FreeBSD, 3rd Edition* 里面经常性的花大量的笔墨去描述一些对大众而言都是常识性的内容，诸如“电脑应该安装杀毒软件”，“我们应该打开电脑的防火墙”等等。看似有很多代码和指令，但是几乎都是没用的。
 
-同时笔者自认为完全有资格对这本书做出评价，因为笔者曾在中亚购买过此书的正版印刷版，价格不菲，却得到了如此劣质的书籍。
+同时笔者自认为完全有资格对 *Absolute FreeBSD, 3rd Edition* 这本书做出评价，因为笔者曾在中亚购买过此书的正版印刷版，价格不菲，却得到了如此劣质的书籍。
+
+该作者的其他书籍也大抵如此。
