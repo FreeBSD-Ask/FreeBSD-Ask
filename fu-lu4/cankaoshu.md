@@ -31,4 +31,19 @@
 | 封面 | 书名 | 作者 | ISBN | 出版社 |说明 |
 | :---: | :---: | :---: | :---: | :---: | :---: |
 | ![UNIX 传奇：历史与回忆](../.gitbook/assets/unixchuanqi.png) | 《UNIX 传奇——历史与回忆》 | Brian W Kernighan | 9787115557179 | 人民邮电出版社 | 主要讲解了 UNIX 的发展历史。写的比较粗略。 |
-| ![Absolute FreeBSD, 3rd Edition: The Complete Guide to FreeBS](../.gitbook/assets/AbsoluteBSD.png) | ***Absolute FreeBSD 3rd*** | Michael W. Lucas | 9781593278922 | No Starch Press |英文版，目前没有译文。词汇包括内容都非常基础。切记，有计算机基础的人不需要阅读。 |
+
+
+## 不建议阅读
+
+|封面 | 书名 | 作者 | ISBN | 出版社 |说明 |
+| :---: | :---: | :---: | :---: | :---: | :---: |
+| ![Absolute FreeBSD, 3rd Edition: The Complete Guide to FreeBS](../.gitbook/assets/AbsoluteBSD.png) | ***Absolute FreeBSD 3rd*** | Michael W. Lucas | 9781593278922 | No Starch Press |见下 |
+
+打开美国亚马逊官网作者 Michael W. Lucas 的[页面](https://www.amazon.com/stores/Michael-W.-Lucas/author/B004MNWSFG?language=zh_TW&ref=ap_rdr&isDramIntegrated=true&shoppingPortalEnabled=true)，你会惊讶地发现竟有人如此著作等身，博闻强识。从 ZFS 到 FreeBSD，从 OpenBSD 到 GPG，居然出版了近五十本。
+
+笔者随机抽取了几本进行泛读，并对 *Absolute FreeBSD, 3rd Edition* 进行了深入阅读。观察到，作者撰写的内容整体较为基础，许多章节都花费较多篇幅介绍对多数人来说较为常识性的内容，例如“电脑应安装杀毒软件”、“应开启电脑防火墙”等等。虽然书中包含大量代码示例和指令，但在难度和深度上，甚至难以与大学公共计算机课程中 Windows 和 Office 的内容相提并论，整体上更适合我国在本世纪初于夜校和农村举办的计算机培训。
+
+基于本人曾在中亚购买过该书正版印刷版且价格不菲的经验，认为其内容质量与售价之间存在一定差距。该作者的其他书籍总体情况大致相同。
+
+以上为笔者的个人阅读感受，仅供参考。
+
