@@ -2,7 +2,7 @@
 
 ## 最低硬件要求
 
-针对 AMD64 架构，14.2-RELEASE 在物理机上测得：
+针对 AMD64 架构，14.2-RELEASE 在虚拟机上测得：
 
 - 硬盘：
   - 仅基本系统（安装后）：550MB
@@ -154,7 +154,7 @@ FreeBSD-14.2-RELEASE-amd64-mini-memstick.img.xz    107445036      2024-Nov-29 13
 
 >**技巧**
 >
->FreeBSD 14.1 RELEASE 两个 ISO 均在 Ventoy 下测试通过（英特尔三代处理器下的 UEFI）。但是仍不排除出现问题的可能性。如果出现问题，请首先考虑下载 `img` 正常刻录。
+>FreeBSD 14.1 RELEASE 两个 ISO 均在 Ventoy 下测试通过（英特尔三代处理器下的 UEFI）。但是仍不排除出现问题的可能性。如果出现问题，请首先考虑下载 `img` 正常刻录。15.0 实测无法引导。
 
 
 >**技巧**
@@ -172,7 +172,7 @@ Windows 上的刻录工具应首选 **Rufus**，Linux 直接使用 `dd` 命令�
 
 > **警告**
 >
-> **不建议** 使用 FreeBSD 手册推荐的 win32diskimager，有时会出现校验码错误的情况（实际上文件校验码正常）。**应仅在 rufus 无效的情况下才应使用 win32diskimager。** win32diskimager 下载地址 <https://sourceforge.net/projects/win32diskimager/files/Archive/>，点击 `win32diskimager-1.0.0-install.exe` 即可下载。
+> **不建议** 使用 FreeBSD 手册推荐的 win32diskimager，有时会出现校验码错误的情况（实际上文件校验码正常）。**应仅在 rufus 无效的情况下才使用 win32diskimager。** win32diskimager 下载地址 <https://sourceforge.net/projects/win32diskimager/files/Archive/>，点击 `win32diskimager-1.0.0-install.exe` 即可下载。
 
 
 >**技巧**
