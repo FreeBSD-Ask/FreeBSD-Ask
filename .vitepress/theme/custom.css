@@ -1,10 +1,6 @@
 /* 引用格式缩进 */
-blockquote > p {
-  display: block;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
+.vp-doc blockquote > p + p {
+  margin-block-start: 1em; /* 只给相邻段落之间加 1em 间距 */
 }
 
 /* 脚注加粗，非斜体 */
