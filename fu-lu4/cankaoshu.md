@@ -46,3 +46,6 @@
 鉴于其较高价格与相对有限的技术深度，笔者认为其内容质量亟待改进。该作者的其他书籍总体情况大致相同。
 
 综上所述，以上评述基于个人阅读体会，供读者参考。
+
+购买凭证（中亚已经关闭历史订单，只能通过这种方式获取数据）："亚马逊","C03-7970199-0880003","2018-11-20T02:45:08Z","Not Applicable","CNY","261.56","0","0","'-2.31'","259.25","261.56","0","1593278926","New","1","Gift Certificate/Card","Closed","Shipped","2018-11-20T09:28:35Z","std-cn-d2d","此处地址、邮编、联系人已隐去 China","Not Available","HEBKD(221461786692)","Absolute FreeBSD, 3rd Edition","Not Available","Not Available","Not Available","Not Available"。可以看到当时这本书最后售价为 259.25 元。
+
