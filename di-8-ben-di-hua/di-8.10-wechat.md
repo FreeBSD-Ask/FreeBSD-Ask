@@ -146,6 +146,8 @@ Categories=Network
 
 ![FreeBSD 微信](../.gitbook/assets/wechat3.png)
 
-如果普通用户以 root 权限运行兼容层应用，则输入法会有问题。请以普通用户权限运行之。
+### 中文输入法
+
+如果以 root 权限运行 RockyLinux 中的兼容层应用，则输入法会有问题。请以普通用户权限运行之。
 
 ![FreeBSD 微信](../.gitbook/assets/wechat4.png)
