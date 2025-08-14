@@ -66,3 +66,12 @@ FreeBSD 是真正自由（Liberty）的**操作系统**，在这波谲云诡的�
 若本书对你有帮助，也欢迎给此 [GitHub 项目](https://github.com/FreeBSD-Ask/FreeBSD-Ask)加颗 ⭐。
 
 ![⭐ 图](https://api.star-history.com/svg?repos=FreeBSD-Ask/FreeBSD-Ask&type=Date)
+
+## 部署地址
+
+本书目前部署了两个域名以供访问，分别使用不同的网站架构：
+
+- <https://book.bsdcn.org>
+- <https://docs.bsdcn.org>
+
+除此外 FreeBSD 中文社区（CFC）未对本书进行任何部署。我们唯一的域名只有 “bsdcn.org”
