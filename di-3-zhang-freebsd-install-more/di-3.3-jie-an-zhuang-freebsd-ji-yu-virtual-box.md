@@ -1,4 +1,4 @@
-# 11.3 使用 Virtual Box 安装 FreeBSD
+# 3.3 使用 Virtual Box 安装 FreeBSD
 
 
 ## 下载 VirtualBox

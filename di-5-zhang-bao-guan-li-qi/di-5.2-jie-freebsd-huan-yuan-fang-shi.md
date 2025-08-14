@@ -1,4 +1,4 @@
-# 4.2 更换 FreeBSD 软件源
+# 5.2 更换 FreeBSD 软件源
 
 ## FreeBSD 包管理器设计理念
 

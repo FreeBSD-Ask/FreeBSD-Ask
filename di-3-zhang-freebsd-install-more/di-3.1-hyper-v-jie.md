@@ -1,4 +1,4 @@
-# 11.1 使用 Hyper-V 安装 FreeBSD
+# 3.1 使用 Hyper-V 安装 FreeBSD
 
 ## Hyper-V 简介
 

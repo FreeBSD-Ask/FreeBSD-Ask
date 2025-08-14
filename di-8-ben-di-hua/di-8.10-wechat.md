@@ -1,4 +1,4 @@
-# 6.10 微信（Linux 版）
+# 8.10 微信（Linux 版）
 
 ## 基于 RockyLinux 兼容层（FreeBSD Port）
 

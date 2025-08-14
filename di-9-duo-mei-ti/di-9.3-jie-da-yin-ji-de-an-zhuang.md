@@ -1,4 +1,4 @@
-# 7.3 打印机
+# 9.3 打印机
 
 CUPS 全称 Common Unix Printing System（通用 Unix 打印系统），支持各种打印协议与打印机设备，并且能将打印机以 IPP 或 SMB 协议共享到网络上。
 

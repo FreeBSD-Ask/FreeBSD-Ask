@@ -1,4 +1,4 @@
-# 12.6 Fluxbox
+# 7.6 Fluxbox
 
 ## 安装
 

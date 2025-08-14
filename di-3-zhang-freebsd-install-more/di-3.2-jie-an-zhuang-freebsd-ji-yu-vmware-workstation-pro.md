@@ -1,4 +1,4 @@
-# 11.2 使用 VMware Workstation Pro 安装 FreeBSD
+# 3.2 使用 VMware Workstation Pro 安装 FreeBSD
 
 
 ## 视频教程

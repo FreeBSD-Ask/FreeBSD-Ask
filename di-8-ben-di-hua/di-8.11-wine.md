@@ -1,4 +1,4 @@
-# 6.11 Wine
+# 8.11 Wine
 
 Wine 是一款能在 Unix 上运行 Microsoft Windows 程序的软件。
 
