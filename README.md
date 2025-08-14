@@ -76,4 +76,4 @@ FreeBSD 是真正自由（Liberty）的**操作系统**，在这波谲云诡的�
 
 除此外 FreeBSD 中文社区（CFC）未对本书进行任何部署。我们唯一的域名只有 “bsdcn.org”。
 
-如遇网站技术性问题，请联络 ykla  [yklaxds@gmail.com](mailto:yklaxds@gmail.com)。
+如遇网站技术性问题，请联络 ykla [yklaxds@gmail.com](mailto:yklaxds@gmail.com)。
