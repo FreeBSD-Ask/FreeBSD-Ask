@@ -1,4 +1,4 @@
-# 1.2 欢迎来到 FreeBSD
+# 1.2 FreeBSD 导论
 
 ## FreeBSD 怎么读
 
