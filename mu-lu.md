@@ -1,4 +1,4 @@
-# 目录
+# Table of contents
 
 * [FreeBSD 从入门到跑路（第三版：草稿）](README.md)
 * [编辑日志](CHANGELOG.md)
@@ -15,10 +15,9 @@
 ## 第 1 章 FreeBSD 初见
 
 * [1.1 操作系统的历程：UNIX、BSD 和 Linux](di-1-zhang-zou-jin-freebsd/di-1.1-unix.md)
-* [1.2 欢迎来到 FreeBSD](di-1-zhang-zou-jin-freebsd/di-1.2-who-using-bsd.md)
-* [1.3 关于 FreeBSD 项目](di-1-zhang-zou-jin-freebsd/1.3-about-bsd.md)
-* [1.4 George Berkeley（乔治·贝克莱）与 BSD 命名的文化背景](di-1-zhang-zou-jin-freebsd/di-1.4-jie-freebsd-jian-shi.md)
-* [1.5 加州大学伯克利分校和“Fiat Lux”（要有光）](di-1-zhang-zou-jin-freebsd/di-1.5-Fiat-Lux.md)
+* [1.2 FreeBSD 导论](di-1-zhang-zou-jin-freebsd/di-1.2-dao-lun.md)
+* [1.3 George Berkeley（乔治·贝克莱）与 BSD 命名的文化背景](di-1-zhang-zou-jin-freebsd/di-1.3-jie-freebsd-jian-shi.md)
+* [1.4 加州大学伯克利分校和“Fiat Lux”（要有光）](di-1-zhang-zou-jin-freebsd/di-1.4-Fiat-Lux.md)
 
 ## 第 2 章 安装 FreeBSD
 
