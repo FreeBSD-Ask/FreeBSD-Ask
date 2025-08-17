@@ -82,7 +82,7 @@ $ git clone https://github.com/FreeBSD-Ask/FreeBSD-Ask
 
 #### 故障排除
 
-- 致命错误:无法访问 'https://github.com/FreeBSD-Ask/FreeBSD-Ask/': Recv failure: 连接被对方重置
+- `致命错误:无法访问 'https://github.com/FreeBSD-Ask/FreeBSD-Ask/': Recv failure: 连接被对方重置`
 
 请尝试拉取这个项目 `https://github.com/FreeBSD-Ask/LDWG`。
 
