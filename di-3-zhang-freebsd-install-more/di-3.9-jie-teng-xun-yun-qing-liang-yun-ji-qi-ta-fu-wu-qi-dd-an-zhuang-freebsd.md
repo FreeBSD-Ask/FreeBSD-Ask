@@ -191,4 +191,5 @@ boot # 输入 boot 后回车即可继续启动
 ## 参考资料
 
 - [Remote Installation of the FreeBSD Operating System Without a Remote Console](https://docs.freebsd.org/en/articles/remote-install/)
-
+- [GRUB2 配置文件“grub.cfg”详解（GRUB2 实战手册）](https://www.jinbuguo.com/linux/grub.cfg.html)，作者：金步国。参数解释参见此处，有需要的读者请自行阅读。下同。
+- [关于启动时不显示 grub 界面的问题](https://phorum.vbird.org/viewtopic.php?f=2&t=40587)
