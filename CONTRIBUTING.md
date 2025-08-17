@@ -118,6 +118,7 @@
 
 ### FreeBSD ToDo
 
+- [ ] 重写“云服务器安装 FreeBSD（基于腾讯云轻量云）”——要支持 UEFI、GPT
 - [ ] 测试 `sysctl security.bsd.unprivileged_chroot=1`，这样普通用户就能 chroot 了
 - [X] 拆分第 11 章 计算机概论
 - [ ] 规范用户配置文件与系统文件
