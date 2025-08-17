@@ -1,5 +1,6 @@
 # 3.9 云服务器安装 FreeBSD（基于腾讯云轻量云）
 
+其实就是本地硬盘安装 FreeBSD。在不依赖额外介质的前提下借助已有的操作系统（Linux）完成 FreeBSD 的安装。
 
 ## 使用 virtio 技术半虚拟化的虚拟机
 
@@ -39,6 +40,13 @@
 我们需要下载 [img 格式的 mfsBSD 镜像](https://mfsbsd.vx.sk/files/images/14/amd64/mfsbsd-se-14.2-RELEASE-amd64.img)，可以提前下好，再使用 WinSCP 传入服务器，服务器直接下载可能需要两个小时。
 
 
+## 取消隐藏的 GRUB 菜单
+
+现在大多数发行版的 grub 菜单都是默认隐藏的，需要在开机时按 **Esc** 才能进入，但是有时候会直接进入 BIOS。故，直接取消隐藏比较方便。
+
+```sh
+# grub2-editenv - unset menu_auto_hide
+```
 ## 使用 mfsLinux 写入 mfsBSD
 
 如前所述，且因 FreeBSD 和一般的 Linux 是不同的生态，我们需要先进入 Linux 的内存盘，再在运行于内存中 Linux 里把 mfsBSD 写入硬盘，然后通过 `bsdinstall` 工具安装系统。
@@ -47,7 +55,7 @@
 
 在一般的 Linux 系统中，initrd 是打包成内存盘的小而全的 Linux 根目录，里面可加载驱动，可挂载硬盘，并包含启动初始化程序的必要数据。开机时 Bootloader 加载内核与 initrd，由 initrd 中的脚本进行启动的准备工作，随后运行硬盘里的初始化程序。
 
-我们先把从那个 ISO 提取出来的内核和 initrd 文件放在根目录下，然后重启机器进入 GRUB 的命令行界面（可在倒计时的时候按 `e` 进入编辑模式，删掉 `linux`、`initrd` 行原有内容，写完后按 `Ctrl X` 即可加载），手动启动指定的内核和 initrd（可以用 `Tab` 键补全路径）。然后输入 `boot` 后回车即可继续启动操作系统。
+我们先把从那个 ISO 提取出来的内核和 initrd 文件放在根目录下，然后重启机器进入 GRUB 的命令行界面（可在倒计时的时候按 `e` 进入编辑模式，删掉 `linux`、`initrd` 行原有内容，写完后按 `Ctrl X` 即可加载），手动启动指定的内核和 initrd（可以用 `Tab` 键补全路径）。然后输入 `boot` 后回车即可继续启动操作系统。或者按 `c`进入编辑模式“。
 
 ```sh
 linux (hd0,msdos1)/vmlinuz
@@ -101,7 +109,7 @@ ssh 连接服务器后，使用 `kldload zfs` 加载 zfs 模块，然后运行 `
 
 ## 故障排除与未竟事宜
 
-- 为何不能直接 dd？（错误示范，仅供说明，请勿执行）
+### 为何不能直接 dd？（错误示范，仅供说明，请勿执行）
 
   在正常的 Linux 系统内直接把 mfsBSD 的 img dd 到硬盘里，重启之后虽然正常加载 bootloader，但是可能是因为系统又对硬盘进行了写入而无法正常挂载内存盘。
 
@@ -119,9 +127,70 @@ ssh 连接服务器后，使用 `kldload zfs` 加载 zfs 模块，然后运行 `
 ![](../.gitbook/assets/1.png)
 
 
-- 如果有云服务器用 lvm 的话，需要把东西全都放到 `/boot` 里面，要不然 grub 和 mfslinux 都打不开。
+### LVM 逻辑卷
+
+如果有云服务器用 lvm 的话，需要把东西全都放到 `/boot` 里面，要不然无法识别。
+
+### 失败的方案
+
+#### 方案一
+
+UEFI 下：
+
+```sh
+set iso=(hd0,gpt2)/bsd.iso
+loopback loop $iso
+set root=(loop)
+chainloader /boot/loader.efi
+boot # 输入 boot 后回车即可继续启动
+```
+
+失败，该挂载并非将镜像挂载为内存盘，可以引导，但是 FreeBSD 在启动过程中会报错找不到启动文件。
+
+并且在 UEFI 下，grub2 不存在 linux16、kfreebsd 等命令。
+
+#### 方案二
+
+传统引导下。
+
+- 安装 syslinux
+
+- 需要安装 syslinux 以获得 memdisk 支持。
+
+```bash
+# dnf install syslinux
+```
+
+>**警告**
+>
+>GRUB2 的 `memdisk.mod` 模块不是 MEMDISK。你必须安装此包才有 memdisk。
+
+- 复制到 `/boot`
+
+```sh
+# cp /usr/share/syslinux/memdisk /boot/
+```
+
+```sh
+ls # 显示磁盘
+ls (hd0,gpt2)/ # 显示磁盘 (hd0,gpt2) 下的内容，MBR 分区表可能为 (hd0,msdosx)。不一定是 (hd0,gpt2)，以实际为准
+linux16 memdisk iso
+initrd (hd0,gpt2)/bsd.iso
+boot # 输入 boot 后回车即可继续启动
+```
+
+上面的方法可能适用于 BIOS + MBR，但是 GPT 分区表下测试失败。
+
+#### 方案三
+
+缩小 / 分区直接 dd img 到新分区中。不可行，因为 XFS 不支持在线缩小操作（红帽系列一般都是 XFS + 逻辑卷）。
+
+#### 方案四
+
+直接写入 EFI 分区。不可行，EFI 分区的大小可能受限。
 
 ## 参考资料
 
 - [Remote Installation of the FreeBSD Operating System Without a Remote Console](https://docs.freebsd.org/en/articles/remote-install/)
-
+- [GRUB2 配置文件“grub.cfg”详解（GRUB2 实战手册）](https://www.jinbuguo.com/linux/grub.cfg.html)，作者：金步国。参数解释参见此处，有需要的读者请自行阅读。下同。
+- [关于启动时不显示 grub 界面的问题](https://phorum.vbird.org/viewtopic.php?f=2&t=40587)
