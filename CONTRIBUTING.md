@@ -47,7 +47,7 @@
 
 本项目太大，拉取时可能会导致缓冲区溢出，可改变 git 配置文件，以实现对缓冲区的扩大：
 
-以下是一个可用的 `.gitconfig` 的文件示例：
+以下是一个可用的 `~/.gitconfig`（Windows 位置为 `C:\Users\你的用户名\.gitconfig`） 的文件示例：
 
 ```ini
 [filter "lfs"]
@@ -73,6 +73,20 @@
 
 - `autocrlf`：配置 Git 自动处理(转换)行结束符的默认行为。参见[配置 Git 处理行结束符 - Github Docs](https://docs.github.com/zh/get-started/git-basics/configuring-git-to-handle-line-endings)
 - `signingkey`：指设置带签名提交时默认使用的签名密钥。signingkey 既可指 GPG Key，亦可指 SSH Key。因为自 Git 2.34 起，Git 支持了 SSH 签名验证功能。参见[关于提交签名验证 - Github Docs](https://docs.github.com/zh/authentication/managing-commit-signature-verification/about-commit-signature-verification)
+
+拉取命令：
+
+```sh
+$ git clone https://github.com/FreeBSD-Ask/FreeBSD-Ask
+```
+
+#### 故障排除
+
+- `致命错误:无法访问 'https://github.com/FreeBSD-Ask/FreeBSD-Ask/': Recv failure: 连接被对方重置`
+
+请尝试拉取这个项目 `https://github.com/FreeBSD-Ask/LDWG`。
+
+如果报错类似，说明你的网络有问题。请使用代理。
 
 ## 开放任务
 
