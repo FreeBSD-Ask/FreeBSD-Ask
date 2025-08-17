@@ -47,7 +47,7 @@
 
 本项目太大，拉取时可能会导致缓冲区溢出，可改变 git 配置文件，以实现对缓冲区的扩大：
 
-以下是一个可用的 `~/.gitconfig` 的文件示例：
+以下是一个可用的 `~/.gitconfig`（Windows 位置为 `C:\Users\你的用户名\.gitconfig`） 的文件示例：
 
 ```ini
 [filter "lfs"]
@@ -79,6 +79,14 @@
 ```sh
 $ git clone https://github.com/FreeBSD-Ask/FreeBSD-Ask
 ```
+
+#### 故障排除
+
+- 致命错误:无法访问 'https://github.com/FreeBSD-Ask/FreeBSD-Ask/': Recv failure: 连接被对方重置
+
+请尝试拉取这个项目 `https://github.com/FreeBSD-Ask/LDWG`。
+
+如果报错类似，说明你的网络有问题。请使用代理。
 
 ## 开放任务
 
