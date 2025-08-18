@@ -21,7 +21,7 @@
 | --------- | ------------ | -------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
 | CPU       | Intel 大小核    | i7-1260P、N100                                | 实测可支持，但无法合理调度，睿频上限受限                                                                                               |
 | NVMe 固态硬盘 | M.2 接口       | 英睿达 P310，Intel 600P，梵想 S530Q、S500Pro、S542PRO | 正常工作                                                                                                        |
-| 无线网卡      | Intel AX 系列  | AX200                                        | 速率与 Windows 11 IoT Enterprise 24H2 相当                                                                       |
+| 无线网卡      | Intel AX 系列  | AX200                                        | WiFi 5 速率与 Windows 11 IoT Enterprise 24H2 相当（使用 iperf2 测得）                                                                     |
 | 有线网卡      | Realtek 2.5G | RTL8125B                                     | 需要额外安装驱动，参见全书附录                                                                                             |
 | 有线网卡      | Intel 2.5G   | i226-V                                       | 正常工作                                                                                                        |
 | 英特尔/AMD 显卡        | 英特尔、AMD 近十多年的显卡        |   英特尔锐炬® Xe 显卡、Intel HD Graphics 4000       | 支持水平与 drm 移植进度相关；写作本文时相当于 Linux 内核 6.6，最新状态参见 [freebsd/drm-kmod](https://github.com/freebsd/drm-kmod/pulls) |
