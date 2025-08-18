@@ -2,7 +2,7 @@
 
 >**警告**
 >
->由于 Port `sysutils/budgie-control-cente` [被标记为](https://www.freshports.org/sysutils/budgie-control-center/) `broken`（破损），本文暂不可用，待维护者修复。
+>由于 Port `sysutils/budgie-control-center` [被标记为](https://www.freshports.org/sysutils/budgie-control-center/) `broken`（破损），本文暂不可用，待维护者修复。
 
 
 Budgie 是 Solus Linux 的默认桌面。
