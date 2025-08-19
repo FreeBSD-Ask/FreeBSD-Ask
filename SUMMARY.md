@@ -43,7 +43,8 @@
 * [3.7 基于 Apple M1 & VMware Fusion Pro 安装 FreeBSD](di-3-zhang-freebsd-install-more/di-3.7-jie-apple.md)
 * [3.8 使用 Qemu 安装 RISC-V FreeBSD（基于 x86 Windows）](di-3-zhang-freebsd-install-more/di-3.8-qemu.md)
 * [3.9 云服务器安装 FreeBSD（基于腾讯云轻量云）](di-3-zhang-freebsd-install-more/di-3.9-jie-teng-xun-yun-qing-liang-yun-ji-qi-ta-fu-wu-qi-dd-an-zhuang-freebsd.md)
-* [3.10 配置 rEFInd（双系统用）](di-3-zhang-freebsd-install-more/di-3.10-refind.md)
+* [3.10 云服务器安装 FreeBSD （基于KVM、Qemu 等架构）](di-3-zhang-freebsd-install-more/di-3.10-kvm-qemu.md)
+* [3.11 配置 rEFInd（双系统用）](di-3-zhang-freebsd-install-more/di-3.11-refind.md)
 
 ## 第 4 章 FreeBSD 基础
 
