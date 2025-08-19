@@ -1,4 +1,4 @@
-# 3.8 使用 Qemu 安装 RISC-V FreeBSD（基于 x86 Windows）
+# 3.8 使用 QEMU 安装 RISC-V FreeBSD（基于 x86 Windows）
 
 Qemu 是一款纯软件模拟的开源虚拟机，支持模拟不同的体系结构。
 
