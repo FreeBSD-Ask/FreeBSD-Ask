@@ -99,8 +99,6 @@ $ git clone https://github.com/FreeBSD-Ask/FreeBSD-Ask
 
 ### FreeBSD ToDo
 
-参见 <https://github.com/FreeBSD-Ask/FreeBSD-Ask/projects>
-
 **不再需要** 的内容（请 **不要** 撰写下列条目）：
 
 - [ ] 9.6.图像扫描仪（谁有？而且谁支持 FreeBSD？）
@@ -130,97 +128,10 @@ $ git clone https://github.com/FreeBSD-Ask/FreeBSD-Ask
 
 参见 [Projects](https://github.com/FreeBSD-Ask/FreeBSD-Ask/projects)。
 
-### OpenBSD ToDo
-
-- [x] KDE5
-- [ ] QQ？可能吗？
-- [ ] 微信？可能吗？
-- [ ] 规范用户配置文件与系统文件
-- [ ] Wine 可能吗？
-- [ ] OpenBSD 调优
-- [ ] OpenBSD 安全加固
-- [ ] 网络
-  - [ ] DNS
-  - [ ] FTP
-  - [ ] NTP
-  - [ ] DHCP
-  - [ ] 各式代理
-  - [ ] HTTPD
-  - [ ] 邮件服务器
-  - [ ] PF 等防火墙
-  - [ ] IPv6
-  - [ ] 常用网络命令
-- [ ] OpenBSD 路由器（可参考 [OpenBSD 路由器指南](https://translated-articles.bsdcn.org/2023-nian-9-yue/openbsd-router-guide)）
-  - [ ] WiFi
-  - [ ] 链路聚合
-  - [ ] 路由表
-  - [ ] 默认路由
-- [ ] OpenBSD 基础知识
-  - [ ] 版本概况
-  - [ ] 开发宗旨与项目目标
-  - [ ] 性能参数
-  - [ ] 注意事项
-  - [ ] 跟踪新版本
-  - [ ] pkgsrc
-- [ ] 嵌入式
-
-
 ### NetBSD ToDo
 
-- [ ] NetBSD 调优
-- [ ] 桌面
-  - [ ] 火狐浏览器
-  - [ ] Chromium
-  - [x] KDE 4
-  - [ ] QQ
-  - [ ] 微信
-  - [ ] Wine
-- [ ] 树莓派 4 & 5
-- [ ] NetBSD 安全加固
-- [ ] NetBSD 基础知识
-  - [ ] 版本概况
-  - [ ] 开发宗旨与项目目标
-  - [ ] 注意事项
-  - [ ] 跟踪新版本
-  - [ ] pkgsrc
-- [ ] 嵌入式
-- [ ] 网络
-  - [ ] DNS
-  - [ ] FTP
-  - [ ] NTP
-  - [ ] DHCP
-  - [ ] 各式代理
-  - [ ] 邮件服务器
-  - [ ] PF 等防火墙
-  - [ ] IPv6
-  - [ ] 常用网络命令
-- [ ] NetBSD 路由器
-  - [ ] WiFi
-  - [ ] 链路聚合
-  - [ ] 路由表
-  - [ ] 默认路由
-
-
+参见 [Projects](https://github.com/FreeBSD-Ask/FreeBSD-Ask/projects)。
 
 ### DragonFlyBSD ToDo
-  
-- [ ] DragonFlyBSD 调优
-- [ ] 桌面
-  - [ ] KDE5
-  - [ ] Gnome
-  - [ ] QQ
-  - [ ] 微信
-  - [ ] Wine
-  - [ ] XFCE
-  - [ ] 火狐浏览器
-  - [ ] Chromium
-- [ ] DragonFlyBSD 安全加固
-- [ ] DragonFlyBSD 基础知识
-  - [ ] 版本概况
-  - [ ] 开发宗旨与项目目标
-  - [ ] 注意事项
-  - [ ] 跟踪新版本
-  - [ ] pkgsrc
-  - [ ] FreeBSD Ports
-- [ ] 换源与包管理器
 
+参见 [Projects](https://github.com/FreeBSD-Ask/FreeBSD-Ask/projects)。
