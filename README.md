@@ -31,9 +31,7 @@ FreeBSD 是真正自由（Liberty）的**操作系统**，在这波谲云诡的�
 
 ## 目标与方向
 
-构建能够在实践中逐步替代上游[《FreeBSD 手册》](https://docs.freebsd.org/en/books/handbook/)的现代化文档体系。
-
-详见 [贡献指南与开放任务](CONTRIBUTING.md)
+详见 [贡献指南与开放任务](CONTRIBUTING.md)。
 
 ## 捐赠
 
@@ -43,7 +41,7 @@ FreeBSD 是真正自由（Liberty）的**操作系统**，在这波谲云诡的�
 
 [点此捐赠 FreeBSD 基金会](https://freebsdfoundation.org/donate)
 
-需要持有 VISA 信用卡：请在捐赠页面“Click & Pledge”下使用 `Amazon Pay`，测试可用。
+需要你持有 VISA 信用卡：请在捐赠页面“Click & Pledge”下使用 `Amazon Pay`，测试可用。
 
 ## 贡献者
 
