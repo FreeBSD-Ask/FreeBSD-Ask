@@ -1,4 +1,4 @@
-# 目录
+# Table of contents
 
 * [FreeBSD 从入门到跑路（第三版：草稿）](README.md)
 * [编辑日志](CHANGELOG.md)
@@ -42,7 +42,7 @@
 * [3.6 基于 Apple M1 & Parallels Desktop 20 安装 FreeBSD](di-3-zhang-freebsd-install-more/di-3.6-jie-apple.md)
 * [3.7 基于 Apple M1 & VMware Fusion Pro 安装 FreeBSD](di-3-zhang-freebsd-install-more/di-3.7-jie-apple.md)
 * [3.8 使用 QEMU 安装 RISC-V FreeBSD（基于 x86 Windows）](di-3-zhang-freebsd-install-more/di-3.8-qemu.md)
-* [3.9 云服务器安装 FreeBSD（基于腾讯云轻量云）](di-3-zhang-freebsd-install-more/di-3.9-jie-teng-xun-yun-qing-liang-yun-ji-qi-ta-fu-wu-qi-dd-an-zhuang-freebsd.md)
+* [3.9 云服务器安装 FreeBSD（基于腾讯云轻量云、阿里云轻量应用服务器）](di-3-zhang-freebsd-install-more/di-3.9-jie-teng-xun-yun-qing-liang-yun-ji-qi-ta-fu-wu-qi-dd-an-zhuang-freebsd.md)
 * [3.10 云服务器安装 FreeBSD（基于 KVM、QEMU 等平台）](di-3-zhang-freebsd-install-more/di-3.10-kvm-qemu.md)
 * [3.11 配置 rEFInd（双系统用）](di-3-zhang-freebsd-install-more/di-3.11-refind.md)
 
