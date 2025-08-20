@@ -179,7 +179,7 @@ mfsBSD 的 `root` 密码默认是 `mfsroot`。你可以使用 ssh 工具进行�
 
 ![能进入 BootLoader，但启动失败](../.gitbook/assets/qemu-dd-mfsbsd.png)
 
-思路: 这个页面可以继续使用 `?` 查看磁盘信息，也许可以接着引导。
+思路: 这个页面可以继续使用命令 `?` 查看磁盘信息，也许可以接着引导。
 
 - 通过 mfsLinux `dd` mfsBSD
 
