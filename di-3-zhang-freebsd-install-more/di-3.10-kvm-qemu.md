@@ -14,21 +14,25 @@
 
 在各种以 KVM、QEMU 为虚拟架构的服务器厂商中，大部分都没有 FreeBSD 系统的支持，只能通过特殊的方法自己暴力安装。
 
-最常见的用 KVM 虚拟化的厂商就是搬瓦工、Linode。它们虽说在部分机型上有提供 FreeBSD 系统镜像支持，但是这部分机型即使有镜像，支持都不完善，比如自带镜像默认都不支持 `BBR`，部分机型更是没有 FreeBSD 系统支持。
-
-本文直接通过 Grub 加载 Memdisk 模块，随后从 mfsBSD 启动。即直接将 mfsBSD 加载到内存，然后再通过 mfsBSD 中的 `bsdinstall` 命令安装 FreeBSD。
+最常见的用 KVM 虚拟化的厂商就是搬瓦工、Linode。它们虽说在部分机型上有提供 FreeBSD 系统镜像支持，但是支持都不完善，比如自带镜像默认都不支持 `BBR`，部分机型更是没有 FreeBSD 系统支持。
 
 本操作不需要 mfsLinux 作为介质通过 `dd` 的方式安装。
 
+mfsBSD 是一款完全载入内存的 FreeBSD 系统，类似于 Windows 的 PE 系统。
+
+本文通过 Grub2 借助 Memdisk 模块将 mfsBSD 载入为内存盘，并从中启动。然后再通过 mfsBSD 中的 `bsdinstall` 命令安装 FreeBSD。
+
 ## 获取现有网络配置
 
-安装前请在原有的 Linux 系统上看看自己的 IP 及 netmask，可以用命令 `ip addr` 及 `ip route show` 查看网关信息。因为有的服务器也许并不使用 DHCP 服务，而需要手动指定 IP——多见于小厂服务器。
+有的服务器也许并不使用 DHCP 服务，而需要手动指定 IP——多见于小厂服务器。
+
+安装前请在原有的 Linux 系统上看看自己的 IP 及 netmask。
+
+可以用命令 `ip addr` 及 `ip route show` 查看网关信息。
 
 ## 准备 mfsBSD
 
-mfsBSD 是一款完全载入内存的 FreeBSD 系统，类似于 Windows 的 PE 系统。
-
-我们需要先下载下来，然后用 SCP、SFTP 等你熟悉的东西传入服务器。当然你也可以直接在服务器 wget/axel 下载。
+我们需要下载 mfsBSD：既可以下载到本地计算机，然后使用 SCP、SFTP、WinSCP 等你熟悉的东西传入服务器；亦可直接在服务器使用命令行进行下载。
 
 > **注意**
 >
@@ -38,23 +42,25 @@ mfsBSD 是一款完全载入内存的 FreeBSD 系统，类似于 Windows 的 PE 
 
 ### 内存 <= 512 MB
 
-下载：mfsBSD Mini
+下载 mfsBSD Mini：
 
 ```sh
 # wget https://mfsbsd.vx.sk/files/iso/14/amd64/mfsbsd-mini-14.1-RELEASE-amd64.iso
 ```
 
-检验码（官网的链接指向错误）：[checksums](https://mfsbsd.vx.sk/files/iso/14/amd64/mfsbsd-mini-14.1-RELEASE-amd64.iso.sums.txt)
+检验码（官网的链接指向错误，已反馈但无回复）：[checksums](https://mfsbsd.vx.sk/files/iso/14/amd64/mfsbsd-mini-14.1-RELEASE-amd64.iso.sums.txt)
 
 >**技巧**
 >
->内存 <= 4G 建议不要使用 `zfs` 作为文件系统。
+>内存不大于 4G 的机器不建议使用 `zfs` 作为文件系统。
 >
->同时 mfsBSD Mini 可能也无法正常使用 `zfs` 作为文件系统。这种情况下你需要使用 `ufs` 。
+>同时 mfsBSD Mini 可能也无法正常加载 `zfs` 内核模块。
+>
+>这种情况下你只能使用 `ufs` 文件系统。
 
 ### 内存 > 512 MB
 
-下载 mfsBSD 完整版
+下载 mfsBSD 完整版：
 
 ```sh
 # wget https://mfsbsd.vx.sk/files/iso/14/amd64/mfsbsd-14.2-RELEASE-amd64.iso
@@ -68,8 +74,6 @@ mfsBSD 是一款完全载入内存的 FreeBSD 系统，类似于 Windows 的 PE 
 
 ## 获取 memdisk
 
-以下过程基于 Ubuntu/Debian。
-
 > **警告**
 > 
 > GRUB2 的 `memdisk.mod` 模块不是 MEMDISK。
@@ -78,8 +82,16 @@ mfsBSD 是一款完全载入内存的 FreeBSD 系统，类似于 Windows 的 PE 
 
 ### 安装 syslinux
 
-```sh
-# apt-get install syslinux
+- Debian/Ubuntu
+
+```bash
+# apt install syslinux
+```
+
+- Rocky Linux
+
+```bash
+# dnf install syslinux
 ```
 
 ### 提取 memdisk
