@@ -185,7 +185,7 @@ mfsBSD 的 `root` 密码默认是 `mfsroot`。你可以使用 ssh 工具进行�
 
 鉴于 VirtualBox 可以选择虚拟化，选择为 `kvm` 可再次尝试。（笔者的机器无法引导，也许你能成功）
 
-![VirtualBox 选择虚拟化](../.gitbook/assets/xtermjs-page.png)
+![VirtualBox 选择虚拟化](../.gitbook/assets/virtualbox-choose-vm.png)
 
 ### 待尝试的方案
 
