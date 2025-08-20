@@ -1,16 +1,14 @@
 # 3.10 云服务器安装 FreeBSD（基于 KVM、QEMU 等平台）
 
-> **警告**
-> 
-> 请注意数据安全，以下教程有一定危险性和要求你有一定的动手能力。
-> 
-> **安装前请在原有的 Linux 系统上看看自己的 IP 及 netmask，可以用命令 `ip addr` 及 `ip route show` 查看网关信息。因为有的服务器并不使用 DHCP 服务，而需要手动指定 IP。特别是小厂服务器。**
-
 > **注意**
 > 
 > 不支持 OpenVZ、LXC 虚拟机，因为他们本质上不属于虚拟机，宿主机与客户机共享内核。内核都是 Linux 了，哪里还有 FreeBSD ？
 > 
-> 不支持 UEFI 引导模式，仅支持传统 MBR + BIOS (Legacy/CSM) 方式引导。MBR + GPT 分区表形式亦不支持。
+> 不支持 UEFI 引导模式（MBR + GPT 分区表亦不支持），仅支持传统 MBR + BIOS (Legacy/CSM) 方式引导。
+
+> **警告**
+> 
+> 请注意数据安全，以下教程有一定危险性和要求你有一定的动手能力。
 
 ## 概述
 
@@ -18,17 +16,15 @@
 
 最常见的用 KVM 虚拟化的厂商就是搬瓦工、Linode。它们虽说在部分机型上有提供 FreeBSD 系统镜像支持，但是这部分机型即使有镜像，支持都不完善，比如自带镜像默认都不支持 `BBR`，部分机型更是没有 FreeBSD 系统支持。
 
-## 原理
+本文直接通过 Grub 加载 Memdisk 模块，随后从 mfsBSD 启动。即直接将 mfsBSD 加载到内存，然后再通过 mfsBSD 中的 `bsdinstall` 命令安装 FreeBSD。
 
-通过 Grub 的 Memdisk 模式，直接从 mfsBSD 启动。
+本操作不需要 mfsLinux 作为介质通过 `dd` 的方式安装。
 
-即直接将 mfsBSD 写入内存，然后再安装 FreeBSD。
+## 获取现有网络配置
 
-内存不充裕可以使用 mfsBSD 的 mini 模式，请看下文。
+安装前请在原有的 Linux 系统上看看自己的 IP 及 netmask，可以用命令 `ip addr` 及 `ip route show` 查看网关信息。因为有的服务器也许并不使用 DHCP 服务，而需要手动指定 IP——多见于小厂服务器。
 
-本操作不同于 3.9 节操作，不需要 mfsLinux 作为介质通过 DD 方式安装。类似的，3.9 节的方法行不通也可以参考本文。
-
-## 准备mfsBSD
+## 准备 mfsBSD
 
 mfsBSD 是一款完全载入内存的 FreeBSD 系统，类似于 Windows 的 PE 系统。
 
@@ -36,126 +32,157 @@ mfsBSD 是一款完全载入内存的 FreeBSD 系统，类似于 Windows 的 PE 
 
 > **注意**
 >
-> IPv6-Only 服务器不能直接 wget，因为下载地址不支持 IPv6 网络，注意踩坑。
+> 仅支持 IPv6 地址的服务器不能在服务器使用命令行进行下载，因为 mfsBSD 的下载地址不支持 IPv6 网络。
 >
-> *此问题已给作者邮件沟通，但暂未得到回应。*
+> 此问题笔者已与作者发邮件沟通，但截止发文时尚未得到回应。
 
-- 运行内存 <= 512 MB
+### 内存 <= 512 MB
 
-    mfsBSD Mini 可能无法正常使用 `zfs` 作为文件系统。这种情况下你需要使用 `ufs` 。
+下载：mfsBSD Mini
 
-    内存 <= 4G 建议不要使用 `zfs` 作为文件系统。
+```sh
+# wget https://mfsbsd.vx.sk/files/iso/14/amd64/mfsbsd-mini-14.1-RELEASE-amd64.iso
+```
 
-    下载：[mfsBSD Mini](https://mfsbsd.vx.sk/files/iso/14/amd64/mfsbsd-mini-14.1-RELEASE-amd64.iso)
+检验码（官网的链接指向错误）：[checksums](https://mfsbsd.vx.sk/files/iso/14/amd64/mfsbsd-mini-14.1-RELEASE-amd64.iso.sums.txt)
 
-    校验(官网的链接指向错误)：[checksums](https://mfsbsd.vx.sk/files/iso/14/amd64/mfsbsd-mini-14.1-RELEASE-amd64.iso.sums.txt)
+>**技巧**
+>
+>内存 <= 4G 建议不要使用 `zfs` 作为文件系统。
+>
+>同时 mfsBSD Mini 可能也无法正常使用 `zfs` 作为文件系统。这种情况下你需要使用 `ufs` 。
 
-- 运行内存 > 512 MB
+### 内存 > 512 MB
 
-    下载：[mfsBSD 完整版](https://mfsbsd.vx.sk/files/iso/14/amd64/mfsbsd-14.2-RELEASE-amd64.iso)
+下载 mfsBSD 完整版
 
-    校验：[checksums](https://mfsbsd.vx.sk/files/iso/14/amd64/mfsbsd-14.2-RELEASE-amd64.iso.sums.txt)
+```sh
+# wget https://mfsbsd.vx.sk/files/iso/14/amd64/mfsbsd-14.2-RELEASE-amd64.iso
+```
 
-## 修改 Grub
+检验码：[checksums](https://mfsbsd.vx.sk/files/iso/14/amd64/mfsbsd-14.2-RELEASE-amd64.iso.sums.txt)
+
+### 准备 mfsBSD.iso
+
+将下载的 mfsBSD 重命名为 `mfsbsd.iso`，并放在 `/boot` 下面（否则可能会因为 LVM 造成硬盘分区无法识别）。
+
+## 获取 memdisk
+
+以下过程基于 Ubuntu/Debian。
 
 > **警告**
 > 
 > GRUB2 的 `memdisk.mod` 模块不是 MEMDISK。
 > 
-> memdisk 需要由包管理器安装的 syslinux 提供。
+> memdisk 需要由包管理器安装的软件 syslinux 提供。
 
-我将会以 Debian 作为例子，在 Debian 中使用 memdisk 引导 mfsBSD.img ：
-
-1. 安装 syslinux：
-   ```sh
-   # apt-get install syslinux
-   ```
-2. 准备 mfsBSD.img：将 mfsBSD.img 放在可访问路径，如 `/boot/mfsbsd.img`。
-3. 复制 memdisk：从 syslinux 包中复制 memdisk 文件到 `/boot`：
-   ```sh
-   # cp /usr/lib/syslinux/memdisk /boot/
-   ```
-4. 取消隐藏的 GRUB 菜单
-    现在大多数发行版的 grub 菜单都是默认隐藏的，需要在开机时按 **Esc** 才能进入，但是有时候会直接进入 BIOS。故，直接取消隐藏比较方便。
-    ```sh
-    # grub2-editenv - unset menu_auto_hide
-    ```
-5. 重启到 grub，进入命令行操作：
-    ```sh
-    ls # 显示磁盘
-    ls (hd0,gpt2)/ # 显示磁盘 (hd0,gpt2) 下的内容，MBR 分区表可能为 (hd0,msdosx)。不一定是 (hd0,gpt2)，以实际为准
-    linux16 (hd0,gpt2)/memdisk iso
-    initrd (hd0,gpt2)/bsd.iso
-    boot # 输入 boot 后回车即可继续启动
-    ```
-
-> **注意**：
-> - 如果遇到问题，可尝试切换到串口控制台（`console=comconsole`）或检查镜像完整性。
-
-在 Proxmox 中，可以直接按下菜单里的`xterm.js`按钮进入串口控制台进行问题排查
-
-![选择xterm.js按钮](../.gitbook/assets/proxmox-choose-xtermjs.png)
-
-![进入xterm.js排查](../.gitbook/assets/xtermjs-page.png)
-
-## 重启进入mfsBSD，并配置网络
-
-mfsBSD 的 `root` 密码默认是 `mfsroot`。
-
-重启进入到 mfsBSD 后，按照以下方法配置网络，当然你也可以直接在支持 DHCP 的网络下直接运行 `bsdinstall` 配置。
-
-以接口 `vtnet0` 举例，逐行配置 IPv4，下面的请换成你的 IP 地址和路由情况：
+### 安装 syslinux
 
 ```sh
-# ifconfig vtnet0 inet 192.0.2.123/24
-# route add -inet default 192.0.2.1
+# apt-get install syslinux
+```
+
+### 提取 memdisk
+
+从已安装的 syslinux 包中提取 memdisk 文件到 `/boot`
+
+```sh
+# cp /usr/lib/syslinux/memdisk /boot/
+```
+
+## 取消隐藏的 GRUB 菜单
+
+现在大多数发行版的 grub 菜单都是默认隐藏的，需要在开机时按 **Esc** 才能进入，但是有时候会直接进入 BIOS。故，直接取消隐藏比较方便。
+    
+```sh
+# grub2-editenv - unset menu_auto_hide
+```
+
+## 启动 mfsBSD
+
+重启到 grub，按 `c` 键进入命令行操作：
+
+```sh
+ls # 显示磁盘。如果你显示磁盘为 (hd0,gptxxx)，说明你的平台不支持此教程
+ls (hd0,msdos2)/
+linux16 (hd0,msdos2)/memdisk iso
+initrd (hd0,msdos2)/bsd.iso
+boot # 输入 boot 后回车即可从 mfsBSD 继续启动
+```
+
+> **注意**：
+>
+> 如果遇到问题，可尝试切换到串口控制台（`console=comconsole`）或检查镜像完整性。
+
+在 Proxmox 中，可以直接按下菜单里的 `xterm.js` 按钮进入串口控制台进行问题排查
+
+![选择 xterm.js 按钮](../.gitbook/assets/proxmox-choose-xtermjs.png)
+
+![进入 xterm.js 排查](../.gitbook/assets/xtermjs-page.png)
+
+## 为 mfsBSD 配置网络
+
+mfsBSD 的 `root` 密码默认是 `mfsroot`。你可以使用 ssh 工具进行链接以进行安装。
+
+>**技巧**
+>
+>如果平台支持 DHCP，你可以跳过此小节。
+
+重启进入到 mfsBSD 后，配置网络。
+
+以接口 `vtnet0` 举例，配置 IPv4：
+
+>**警告**
+>
+>下面的请换成你的 IP 地址和路由情况：
+
+```sh
+# ifconfig vtnet0 inet 192.0.2.123/24 # 为网卡 vtnet0 设置 IPv4
+# route add -inet default 192.0.2.1 # 设置默认网关/路由
 ```
 
 检查：
 
 ```sh
-# ifconfig vtnet0
-# route -n show -inet6
+# ifconfig vtnet0 # 显示网卡接口 vtnet0 的网络信息
+# route -n show -inet6 # 显示 IPv6 的路由表
 ```
 
 ## 开始安装
 
 使用 `kldload zfs` 加载 zfs 模块，然后运行 `bsdinstall`。
 
-这部分你可以参照 3.9 节的方法安装，重复的环节在这里省略。
+这部分你可以参照其他章节的方法安装。
 
 ## 故障排除与未尽事宜
 
-- GPT 分区表下如何安装？
+### GPT 分区表下如何安装？
 
-    也许可以参考：<https://unix.stackexchange.com/questions/563053/booting-mfsbsd-via-pxe-with-uefi>与<https://forums.freebsd.org/threads/booting-mfsbsd-via-ipxe-on-efi.66169/>采用 PXE 方式引导。
+也许可以参考：
 
-    [FreeBSD 下搭建 PXE 服务器](https://book.bsdcn.org/freebsd-shou-ce/di-34-zhang-gao-ji-wang-luo/34.10.-shi-yong-pxe-jin-hang-wu-pan-cao-zuo)
+- [Booting mfsBSD via PXE with UEFI](https://unix.stackexchange.com/questions/563053/booting-mfsbsd-via-pxe-with-uefi) 与 [Booting mfsBSD via iPXE on EFI](https://forums.freebsd.org/threads/booting-mfsbsd-via-ipxe-on-efi.66169/) 采用 PXE 方式引导。
+- [FreeBSD 下搭建 PXE 服务器](https://book.bsdcn.org/freebsd-shou-ce/di-34-zhang-gao-ji-wang-luo/34.10.-shi-yong-pxe-jin-hang-wu-pan-cao-zuo)
 
-    待解决、待尝试。
+待解决、待尝试。
 
-- VMWare、VirtualBox 无法按照此方法安装
+### VMWare、VirtualBox 无法按照此方法安装
 
-    鉴于 VirtualBox 可以选择虚拟化，选择为 `kvm` 可再次尝试。（笔者的机器无法引导，也许你能成功）
+鉴于 VirtualBox 可以选择虚拟化，选择为 `kvm` 可再次尝试。（笔者的机器无法引导，也许你能成功）
 
-    ![VirtualBox 选择虚拟化](../.gitbook/assets/xtermjs-page.png)
+![VirtualBox 选择虚拟化](../.gitbook/assets/xtermjs-page.png)
 
-    VMWare 上，可以参照 3.9 节的方式再次尝试。
+### 待尝试的方案
 
-- 待尝试的方案
+- DD 写入 [VM-IMAGES 列表下的镜像](https://download.freebsd.org/releases/VM-IMAGES/14.3-RELEASE/amd64/Latest/)
+- DD 写入 [FreeBSD-14.3-RELEASE-amd64-memstick](https://download.freebsd.org/releases/ISO-IMAGES/14.3/FreeBSD-14.3-RELEASE-amd64-memstick.img)
+- 在 QEMU 平台上，尝试直接 `dd`
 
-    1. DD 写入 [VM-IMAGES 列表下的镜像](https://download.freebsd.org/releases/VM-IMAGES/14.3-RELEASE/amd64/Latest/)
+![能进入 BootLoader，但启动失败](../.gitbook/assets/qemu-dd-mfsbsd.png)
 
-    2. DD 写入 [FreeBSD-14.3-RELEASE-amd64-memstick](https://download.freebsd.org/releases/ISO-IMAGES/14.3/FreeBSD-14.3-RELEASE-amd64-memstick.img)
+思路: 这个页面可以继续使用 `?` 查看磁盘信息，也许可以接着引导。
 
-- QEMU平台上，尝试直接DD
+- 通过 mfsLinux `dd` mfsBSD
 
-    ![能进入 BootLoader，但启动失败](../.gitbook/assets/qemu-dd-mfsbsd.png)
+![无法进入 BootLoader](../.gitbook/assets/mfslinux-dd-mfsbsd.png)
 
-    思路: 这个页面可以继续使用 `?` 查看磁盘信息，也许可以接着引导。
-
-- 通过mfsLinux DD mfsBSD
-
-    ![无法进入 BootLoader](../.gitbook/assets/mfslinux-dd-mfsbsd.png)
-
-    待解决。
+待解决。
