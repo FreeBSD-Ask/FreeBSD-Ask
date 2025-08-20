@@ -114,6 +114,8 @@ mfsBSD 是一款完全载入内存的 FreeBSD 系统，类似于 Windows 的 PE 
 
 重启到 grub，按 `c` 键进入命令行操作：
 
+![在此界面按 C](../.gitbook/assets/grub21.png)
+
 ![Grub 命令行界面](../.gitbook/assets/grub22.png)
 
 ```sh
