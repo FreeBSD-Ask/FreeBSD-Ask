@@ -208,9 +208,12 @@ EndSection
 ```sh
 $ ls -al /dev/dri/card0
 lrwxr-xr-x  1 root wheel 8 Jul  2 19:39 /dev/dri/card0 -> ../drm/0
+
+$ ls -al /dev/backlight/backlight0 
+crw-rw---- 1 root video 1, 177 2025年 8月22日 /dev/backlight/backlight0
 ```
 
-你会发现你多了一块  `card0`（一般是数字是 `0`）。
+你会发现你多了一个设备，名字是  `card0`（一般是数字是 `0`，如果有第二块显卡，名字会是  `card1` ），同时多出一个名为 `backlight0` 的设备。
 
 ## 故障排除与未竟事宜
 
