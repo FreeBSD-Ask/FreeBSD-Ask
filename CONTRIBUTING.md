@@ -92,7 +92,13 @@ $ git clone https://github.com/FreeBSD-Ask/FreeBSD-Ask
 
 所有任务的排序都是随机的并无优先级之分，你可以选你喜欢的去做。
 
-### 帮助修订 UTSC 镜像脚本
+### 开源社区
+
+#### 维护百度百科、维基百科相关条目
+
+如增补修订各大 BSD 中文条目。
+
+#### 帮助修订 UTSC 镜像脚本
 
 - <https://github.com/ustclug/ustcmirror-images/blob/master/freebsd-pkg/sync.sh>
 - <https://github.com/ustclug/ustcmirror-images/blob/master/freebsd-ports/sync-ports.sh>
