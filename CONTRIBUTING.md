@@ -98,7 +98,7 @@ $ git clone https://github.com/FreeBSD-Ask/FreeBSD-Ask
 
 如增补修订各大 BSD 中文条目。
 
-#### 帮助修订 UTSC 镜像脚本
+#### 帮助修订 USTC 镜像脚本
 
 - <https://github.com/ustclug/ustcmirror-images/blob/master/freebsd-pkg/sync.sh>
 - <https://github.com/ustclug/ustcmirror-images/blob/master/freebsd-ports/sync-ports.sh>
