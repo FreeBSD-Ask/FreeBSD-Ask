@@ -144,7 +144,7 @@
 * [12.2 使用 bhyve 安装 Windows 11（vm-bhyve）](di-12-zhang-xu-ni-hua/di-12.2-jie-shi-yong-bhyve-an-zhuang-windows.md)
 * [12.3 Podman](di-12-zhang-xu-ni-hua/di-12.3-Podman.md)
 * [12.4 在 FreeBSD 上安装 VirtualBox](di-12-zhang-xu-ni-hua/di-12.4-vitrualbox.md)
-* [12.5 虚拟机使用 NAT 上网](di-12-zhang-xu-ni-hua/di-12.5-nat.md)
+* [12.5 无线网络环境下使用 bhyve](di-12-zhang-xu-ni-hua/di-12.5-nat.md)
 
 ## 第 13 章 系统管理
 
