@@ -1,5 +1,14 @@
 # 4.2 Linux 用户迁移指南
 
+## 历史
+
+许多流行于 Linux 中的常见概念，其真正的提出者其实是 BSD：
+
+- 比如“容器”的概念（可参考[什么是 Linux 容器？](https://www.redhat.com/zh/topics/containers/whats-a-linux-container)）；
+- “发行版”的概念（参见[《FreeBSD：原始操作系统发行版的火炬传承者》](https://book.bsdcn.org/fan-yi-wen-zhang-cun-dang/2025-nian-1-yue/bsd)；
+- Gentoo Ports 的方法；
+- 乃至于开源的理念，也是 BSD 首先提出的，世界上第一款开源许可证就是 BSD 许可证。在这个意义上，BSD 是世界上第一款真正自由开源的操作系统。
+
 ## FreeBSD 与 Linux 不同之处
 
 - FreeBSD 仍然使用古老的 BSD init 而非 systemd；BSD init 与传统的 SysVinit 也不大相同——BSD 没有运行级别（runlevel），也没有 `/etc/inittab`，均由 rc 控制。
