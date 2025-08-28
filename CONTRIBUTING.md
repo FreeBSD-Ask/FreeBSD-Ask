@@ -91,7 +91,7 @@
 
 >**重要：**
 >
->新建章节建议发邮件联系 ykla 来操作。自己操作时参见操作实例 [Commit 6023cc8](https://github.com/FreeBSD-Ask/FreeBSD-Ask/commit/6023cc8d58f3a1b9849ff11fa63bf3980177c370)。
+>新建章节等章节修改建议发邮件联系 ykla 来操作。自己操作时参见操作实例 [Commit 6023cc8](https://github.com/FreeBSD-Ask/FreeBSD-Ask/commit/6023cc8d58f3a1b9849ff11fa63bf3980177c370)。
 
 ### 如何使用 git 拉取本项目
 
