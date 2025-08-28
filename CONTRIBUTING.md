@@ -1,6 +1,5 @@
 # 贡献指南与开放任务
 
-细节参见 <https://github.com/FreeBSD-Ask/FreeBSD-Ask/wiki>。
 
 ## 为什么不去建设《FreeBSD 手册》
 
