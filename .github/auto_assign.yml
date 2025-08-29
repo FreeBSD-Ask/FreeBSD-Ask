@@ -1,0 +1,10 @@
+numberOfReviewers: 1
+numberOfAssignees: 1
+useReviewGroups: false
+assignees:
+  - ykla
+addReviewers: true
+addAssignees: true
+skipKeywords:
+  - wip
+  - draft
