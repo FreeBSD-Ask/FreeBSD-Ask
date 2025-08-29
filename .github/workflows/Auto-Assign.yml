@@ -28,7 +28,7 @@ jobs:
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           configuration: |
-            numberOfReviewers: 0
+            numberOfReviewers: 1
             numberOfAssignees: 1
             useReviewGroups: false
             assignees:
