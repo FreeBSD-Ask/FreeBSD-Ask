@@ -1,9 +1,12 @@
-name: Auto Assign
+name: 🔗 自动分配 issue & PR
+
 on:
   issues:
     types: [opened]
   pull_request:
     types: [opened]
+  repository_dispatch:
+  workflow_dispatch:
 
 jobs:
   assign-issue:
@@ -17,11 +20,21 @@ jobs:
           numOfAssignee: 1
 
   assign-pr:
-    runs-on: ubuntu-latest
-    if: github.event_name == 'pull_request'
-    steps:
-      - uses: kentaro-m/auto-assign-action@v2.0.0
+      runs-on: ubuntu-latest
+      steps:
+      - uses: actions/checkout@v5
+      - name: Auto Assign
+        uses: kentaro-m/auto-assign-action@v2.0.0
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          add-assignees: author
-          add-reviewers: true
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          configuration: |
+            numberOfReviewers: 1
+            numberOfAssignees: 1
+            useReviewGroups: false
+            assignees:
+              - ykla
+            addReviewers: true
+            addAssignees: true
+            skipKeywords:
+              - wip
+              - draft
