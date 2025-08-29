@@ -20,21 +20,13 @@ jobs:
           numOfAssignee: 1
 
   assign-pr:
-      runs-on: ubuntu-latest
-      steps:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
+    steps:
       - uses: actions/checkout@v5
-      - name: Auto Assign
+
+      - name: Auto Assign PR
         uses: kentaro-m/auto-assign-action@v2.0.0
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
-          configuration: |
-            numberOfReviewers: 1
-            numberOfAssignees: 1
-            useReviewGroups: false
-            assignees:
-              - ykla
-            addReviewers: true
-            addAssignees: true
-            skipKeywords:
-              - wip
-              - draft
+          configuration-path: .github/auto_assign.yml
