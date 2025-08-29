@@ -21,6 +21,18 @@ FreeBSD 是真正自由（Liberty）的**操作系统**，在这波谲云诡的�
 
 《FreeBSD 从入门到跑路》肇始于 2021 年 3 月 14 日，其原型最早可追溯至 ykla 于 2020 年 12 月 31 日发布的文章《FreeBSD 艺术科学哲学导论》。
 
+
+## 部署地址
+
+本书目前部署了两个域名以供访问，分别使用不同的网站架构：
+
+- <https://book.bsdcn.org>
+- <https://docs.bsdcn.org>
+
+除此外 FreeBSD 中文社区（CFC）未对本书进行任何部署。我们唯一的域名只有 “bsdcn.org”。
+
+如遇网站技术性问题，请联络 ykla [yklaxds@gmail.com](mailto:yklaxds@gmail.com)。
+
 ## 意见反馈
 
 由于编写者水平所限，书中缺点和谬误之处自不可免。
@@ -65,13 +77,3 @@ FreeBSD 是真正自由（Liberty）的**操作系统**，在这波谲云诡的�
 
 ![⭐ 图](https://api.star-history.com/svg?repos=FreeBSD-Ask/FreeBSD-Ask&type=Date)
 
-## 部署地址
-
-本书目前部署了两个域名以供访问，分别使用不同的网站架构：
-
-- <https://book.bsdcn.org>
-- <https://docs.bsdcn.org>
-
-除此外 FreeBSD 中文社区（CFC）未对本书进行任何部署。我们唯一的域名只有 “bsdcn.org”。
-
-如遇网站技术性问题，请联络 ykla [yklaxds@gmail.com](mailto:yklaxds@gmail.com)。
