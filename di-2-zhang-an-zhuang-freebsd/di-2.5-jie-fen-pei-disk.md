@@ -50,7 +50,9 @@ FreeBSD 14.2 RELEASE 的 `/` 分区支持 UFS 和 ZFS 两种文件系统。旧�
 
 ![](../.gitbook/assets/ins8.png)
 
-现代计算机应该选择 `GPT+UEFI`。较老的计算机（比如 2013 年以前的）应该选择选项 `GPT(BIOS)`——此默认选项同时兼容二者。
+现代（近十几年内的）计算机应该选择 `GPT+UEFI`。请勿使用默认选项！这样会影响 4K 对齐，并产生一个 512KB 的 `freebsd-boot` 分区。
+
+较老的计算机（如 2013 年以前的）才应该选择选项 `GPT(BIOS)`——此默认选项同时兼容二者。
 
 ![](../.gitbook/assets/ins8.2.png)
 
@@ -131,7 +133,7 @@ FreeBSD 14.2 RELEASE 的 `/` 分区支持 UFS 和 ZFS 两种文件系统。旧�
 
 如果在安装 FreeBSD 的时候选择了 ZFS 磁盘加密，那么如何挂载该磁盘呢？
 
-NVMe 硬盘 ZFS 加密后的磁盘结构：
+NVMe 硬盘 ZFS 加密后的磁盘结构（同时加密了交换空间）：
 
 |     分区类型      | 挂载点 |             设备              |
 | :---------------: | :----: | :---------------------------: |
@@ -139,14 +141,15 @@ NVMe 硬盘 ZFS 加密后的磁盘结构：
 |    freebsd-zfs    |   /    | /dev/nda0p2/、/dev/nda0p2.eli |
 |   freebsd-swap    |        | /dev/nda0p3、/dev/nda0p3.eli  |
 
+浏览 EFI 分区会发现并无特殊之处，同正常安装一样。启动时会提示输入密码以挂载根分区。
 
-很简单，也不需要密钥。执行命令
+如果是在 LiveCD 挂载，也很简单，也不需要密钥。执行命令：
 
 ```sh
 # geli attach /dev/nda0p3
 ```
 
-然后输入正确的密码即可通过命令 `# zfs mount zroot/ROOT/default` 导入磁盘。
+然后输入正确的密码即可通过命令 `# zfs mount zroot/ROOT/default` 导入磁盘即可。
 
 ## Auto (UFS)（使用 UFS 作为 `/` 文件系统）
 
