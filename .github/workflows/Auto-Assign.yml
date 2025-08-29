@@ -1,0 +1,27 @@
+name: Auto Assign
+on:
+  issues:
+    types: [opened]
+  pull_request:
+    types: [opened]
+
+jobs:
+  assign-issue:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'issues'
+    steps:
+      - uses: pozil/auto-assign-issue@v2.2.0
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          assignees: ykla
+          numOfAssignee: 1
+
+  assign-pr:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
+    steps:
+      - uses: kentaro-m/auto-assign-action@v2.0.0
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          add-assignees: author
+          add-reviewers: true
