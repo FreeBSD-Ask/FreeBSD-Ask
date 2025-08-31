@@ -34,6 +34,10 @@
 
 ## 无线网卡/ WiFi 设置
 
+>**警告**
+>
+>由于 [Missing CN regulatory domain and 11ac/DFS support in regdomain.xml ](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=289202)，故此部分存在问题，请跳过。
+
 >**注意**
 >
 >建议跳过此部分，重启进入系统后再参照无线网络相关内容进行设置（尤其是博通网卡用户）。否则可能会无限卡住或直接 Panic。
