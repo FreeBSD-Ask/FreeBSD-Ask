@@ -4,6 +4,8 @@
 
 ## 2025 年第三季度
 
+- 2025.8.31
+  - 因 budgie 主要维护者 Olivier Duchateau 称已对此项目不感兴趣，放弃维护。且无人主动维护，目前核心组件 Port `sysutils/budgie-control-center` [被标记为](https://www.freshports.org/sysutils/budgie-control-center/) `broken`（破损）。考虑在日后删除 6.10 Budgie。如果 6 个月内仍未得到修复将建议上游删除此项目，并从本书中移除此节。
 - 2025.8.24
   - 新增：“12.5 无线网络环境下使用 bhyve”
   - “4.2 Linux 用户迁移指南”新增“历史”
