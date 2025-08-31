@@ -5,6 +5,7 @@
 ## 2025 年第三季度
 
 - 2025.8.31
+  - 目前将无线电（WiFi）区域码设置为 `CN NONE`（`create_args_wlan0="country CN regdomain NONE"`）是不正确的，因为 FreeBSD 的文件没有得到维护，实际上会导致无法协商到 WiFi5（FreeBSD 为 VHT40），速率始终是 11a，不是应有的 11ac；并且对于 DFS，配置写的也不正确。已经报告 Bug 至 [Missing CN regulatory domain and 11ac/DFS support in regdomain.xml ](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=289202)。临时解决方案：如果你的信道 > 48，需要专门在 `/etc/rc.conf` 中修改或写入 `create_args_wlan0="country HR regdomain ETSI"`；如果你的信道 <= 48，且存在 `create_args_wlan0="country CN regdomain NONE"`，请将其删除，因为默认的 FCC US 配置可支持其 WiFi5 协议。经过测试，即使是 WiFi 6 路由器，开启 WPA3、160MHz，也是受支持的。按照以上临时方案进行配置，Intel AX200 网卡在 FreeBSD 14.3-RELEASE 上可成功协商至 11ac。
   - 因 budgie 主要维护者 Olivier Duchateau 称已对此项目不感兴趣，放弃维护。且无人主动维护，目前核心组件 Port `sysutils/budgie-control-center` [被标记为](https://www.freshports.org/sysutils/budgie-control-center/) `broken`（破损）。考虑在日后删除 6.10 Budgie。如果 6 个月内仍未得到修复将建议上游删除此项目，并从本书中移除此节。
 - 2025.8.24
   - 新增：“12.5 无线网络环境下使用 bhyve”
