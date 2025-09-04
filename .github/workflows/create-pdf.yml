@@ -50,7 +50,7 @@ jobs:
 
       # ================= 环境配置部分 =================
       - name: 设置 Python 环境
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: '3.13'
 
