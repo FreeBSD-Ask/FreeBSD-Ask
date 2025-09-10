@@ -142,7 +142,7 @@ export XMODIFIERS='@im=fcitx' # Fcitx 需要
 
 ### 通过 SDDM 的 Wayland 会话启动 KDE
 
-有反馈称 APU 核显可直接通过 SSDM 的 Wayland 会话启动 KDE，不需要上述 Shell 文件。需更多反馈。
+有反馈称 APU 核显可直接通过 SDDM 的 Wayland 会话启动 KDE，不需要上述 Shell 文件。需更多反馈。
 
 ### 使用 root 登录图形界面
 
