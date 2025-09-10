@@ -81,11 +81,11 @@ export XMODIFIERS='@im=fcitx' # Fcitx 需要
 
 - 检查是否是 Wayland：
 
-![检查当前是否位于 Wayland](../.gitbook/assets/kde-Wayland2.png)
-
 ```sh
 # echo $XDG_SESSION_TYPE
 ```
+
+![检查当前是否位于 Wayland](../.gitbook/assets/kde-Wayland2.png)
 
 ## 配置 Fcitx 5
 
