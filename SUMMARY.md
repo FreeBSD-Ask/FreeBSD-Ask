@@ -77,7 +77,7 @@
 
 * [6.1 Intel 和 AMD 显卡驱动](di-6-zhang-zhuo-mian-an-zhuang/di-6.1-jie-an-zhuang-xian-ka-qu-dong-ji-xorg-bi-kan.md)
 * [6.2 NVIDIA 显卡驱动](di-6-zhang-zhuo-mian-an-zhuang/di-6.2-NVIDIA.md)
-* [6.3 KDE6](di-6-zhang-zhuo-mian-an-zhuang/di-6.3-jie-an-zhuang-kde.md)
+* [6.3 KDE6（X11）](di-6-zhang-zhuo-mian-an-zhuang/di-6.3-jie-an-zhuang-kde.md)
 * [6.4 GNOME](di-6-zhang-zhuo-mian-an-zhuang/di-6.4-jie-an-zhuang-gnome.md)
 * [6.5 Mate](di-6-zhang-zhuo-mian-an-zhuang/di-6.5-jie-an-zhuang-mate.md)
 * [6.6 Xfce](di-6-zhang-zhuo-mian-an-zhuang/di-6.6-jie-an-zhuang-xfce.md)
@@ -90,6 +90,7 @@
 * [6.13 主题美化](di-6-zhang-zhuo-mian-an-zhuang/di-6.13-jie-zhu-ti-yu-mei-hua.md)
 * [6.14 远程桌面](di-6-zhang-zhuo-mian-an-zhuang/di-6.14-jie-yuan-cheng-zhuo-mian-guan-li.md)
 * [6.15 启用 root 桌面登录](di-6-zhang-zhuo-mian-an-zhuang/di-6.15-jie-root-deng-lu-zhuo-mian.md)
+* [6.16 KDE6（Wayland）](di-6-zhang-zhuo-mian-an-zhuang/di-6.16-kde-wayland.md)
 
 ## 第 7 章 窗口管理器
 
