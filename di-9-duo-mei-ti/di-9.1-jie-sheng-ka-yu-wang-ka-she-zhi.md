@@ -1,8 +1,12 @@
 # 9.1 音频设备配置
 
+>**警告**
+>
+>Port KDE 6 默认通过 PulseAudio 在全局占用音频，请勿手动切换到其他音频后端（如 PipeWire），以免造成不必要的麻烦。
+
 ## 声音设置
 
-声卡驱动 snd_hda 默认即加载。默认内核没有包含时要手动加载对应内核模块。
+声卡驱动 `snd_hda` 可默认加载，当默认内核未包含时需手动加载对应内核模块。
 
 用以下命令查看当前声卡设备：
 
@@ -19,7 +23,7 @@ pcm6: <Realtek ALC892 (Rear Digital)> (play)
 No devices installed from userspace.
 ```
 
-后面带有 default 是 oss 默认设备。如果软件的音频使用的 oss 且输出是默认的，音频就会从这个设备输出。
+后面带有 `default` 是 oss 默认设备。如果软件的音频使用的 oss 且输出是默认的，音频就会从这个设备输出。
 
 可以通过调整内核参数,使上面命令输出更为详细的声卡信息：
 
@@ -37,7 +41,111 @@ FreeBSD 大部分软件的音频输出驱动为 oss。有些默认是 pulseaudio
 
 上面 pcm6（“pcm6: <Realtek ALC892 (Rear Digital)> (play)”）是数字输出接口。一般集成声卡的模拟接口采样率最高 48kHz，数字接口最高采样率可以达到 192kHz。如果有数字输出，但面板上没有接口，而主板上有 S/PDIF 接口的插针，加个 S/PDIF 的挡板（十分便宜，一般是 S/PDIF 口和同轴口，两个输出口），接上线即可使用。
 
-此处推荐几款 oss mixer：
+
+## man 示例
+
+以下节选自 [man snd_hda](https://man.freebsd.org/cgi/man.cgi?snd_hda)。
+
+均将相关行写入 `/boot/device.hints`。
+
+>**注意**
+>
+>`cad0` 应以 `cat /dev/sndstat` 实际输出为准。
+
+### 示例 1
+
+```ini
+hint.hdac.0.cad0.nid20.config="as=1"
+hint.hdac.0.cad0.nid21.config="as=2"
+```
+
+这会交换 line-out（线路输出）和扬声器的功能。因此 **pcm0** 设备会把声音输出到线路输出和耳机插孔。当耳机插入时，线路输出会自动静音。
+
+- **pcm0** 的录音输入来自两个外置麦克风和线路输入插孔。
+- **pcm1** 的播放则会输出到内置扬声器。
+
+### 示例 2
+
+```ini
+hint.hdac.0.cad0.nid20.config="as=1 seq=15 device=Headphones"
+hint.hdac.0.cad0.nid27.config="as=2 seq=0"
+hint.hdac.0.cad0.nid25.config="as=4 seq=0"
+```
+
+这样会把耳机和其中一个麦克风分离到独立的设备。
+
+- **pcm0** 会把声音播放到内置扬声器和线路输出插孔，并且在耳机插入时自动静音扬声器。
+- **pcm0** 的录音输入来自一个外部麦克风和线路输入插孔。
+- **pcm1** 设备则完全用于前面板的耳机（耳机 + 麦克风）。
+
+
+### 示例 3
+
+```ini
+hint.hdac.0.cad0.nid20.config="as=1 seq=0"
+hint.hdac.0.cad0.nid26.config="as=2 seq=0"
+hint.hdac.0.cad0.nid27.config="as=3 seq=0"
+hint.hdac.0.cad0.nid25.config="as=4 seq=0"
+hint.hdac.0.cad0.nid24.config="as=5 seq=0 device=Line-out"
+hint.hdac.0.cad0.nid21.config="as=6 seq=0"
+```
+
+这样会得到 4 个独立设备：
+
+* **pcm0**（线路输出和线路输入）
+* **pcm1**（耳机和麦克风）
+* **pcm2**（通过重新定义后置麦克风插孔作为额外线路输出）
+* **pcm3**（内置扬声器）
+
+
+### 示例 4
+
+
+```ini
+hint.hdac.0.cad0.nid20.config="as=1 seq=0"
+hint.hdac.0.cad0.nid24.config="as=1 seq=1 device=Line-out"
+hint.hdac.0.cad0.nid26.config="as=1 seq=2 device=Line-out"
+hint.hdac.0.cad0.nid21.config="as=2 seq=0"
+```
+
+这样会得到 2 个设备：
+
+* **pcm0** → 用于 5.1 声道播放，通过 3 个后置接口（线路输出 + 重新定义的麦克风和线路输入），以及前面板的耳机（耳机 + 麦克风）。
+* **pcm1** → 用于内置扬声器播放。
+
+当耳机插入时，后置接口会自动静音。
+
+
+## 实例
+
+```sh
+# cat /dev/sndstat # 省略无用信息
+pcm1: <Realtek ALC897 (Rear Analog Line-in)> at nid 26 on hdaa0
+pcm0: <Realtek ALC897 (Analog)> at nid 27 and 26 on hdaa0
+```
+
+此设备不是 AUX 口（不是扬声器 + 麦克风二合一）。当前仅插入了一台音响。在默认情况下无声音。
+
+
+可通过命令实时调试音频（均立刻生效，但重启失效）：
+
+```sh
+# sysctl dev.hdaa.0.nid26_config="as=1 seq=0"
+# sysctl dev.hdaa.0.nid27_config="as=1 seq=15"
+```
+
+- `as=1`：把两者放到同一个关联里。
+- `seq=0`：主输出（扬声器）。
+- `seq=15`：耳机，插入耳机时会自动静音扬声器。
+
+此时发现已经有声音了，编辑 `/boot/device.hints`，加入以下若干行，将其固化为永久设置:
+
+```ini
+hint.hdaa.0.nid26.config="as=1 seq=0"
+hint.hdaa.0.nid27.config="as=1 seq=15"
+```
+
+## oss mixer
 
 | GUI 环境 |      名称       |
 | :------: | :-------------: |
