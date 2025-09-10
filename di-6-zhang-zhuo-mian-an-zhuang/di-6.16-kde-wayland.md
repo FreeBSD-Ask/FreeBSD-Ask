@@ -6,9 +6,9 @@
 
 NVIDIA 卡未经测试。本文使用 12 代处理器（i7-1260P）的核显进行测试。
 
-请参照其他章节内容自行安装 drm、KDE 6、Fcitx 5、火狐浏览器等软件包。
+目前，右键正常，在任意位置按快捷键 Crtl C 亦不会退回到 TTY。
 
-并配置 drm。其余软件包暂不需进行任何配置，仅安装即可。
+请参照其他章节内容自行 **安装** drm、KDE 6、Fcitx 5、火狐浏览器等软件包。**并配置 drm 显卡驱动。** 其余软件包暂 **无需** 进行任何配置，**仅安装** 即可。
 
 ## seatd 相关
 
@@ -97,9 +97,11 @@ export XMODIFIERS='@im=fcitx' # Fcitx 需要
 
 打开 KDE 系统设置：找到“键盘”——>虚拟键盘
 
+![](../.gitbook/assets/kde-Wayland3-1.png)
+
 ![](../.gitbook/assets/kde-Wayland3.png)
 
-请选择“Fcitx 6 Wayland 启动器（实验）”
+请选择“Fcitx 6 Wayland 启动器（实验性）”
 
 ![](../.gitbook/assets/kde-Wayland5.png)
 
@@ -122,6 +124,15 @@ export XMODIFIERS='@im=fcitx' # Fcitx 需要
 ![](../.gitbook/assets/kde-Wayland8.png)
 
 ![](../.gitbook/assets/kde-Wayland6.png)
+
+设置可执行权限：
+
+![](../.gitbook/assets/kde-Wayland7-1.png)
+
+视频播放测试：
+
+![](../.gitbook/assets/kde-Wayland9.png)
+
 
 ## 参考文献
 
