@@ -2,7 +2,7 @@
 
 ## 环境准备
 
-由于 issue [Request to restore support for vboxvideo and vmwgfx DRM drivers #356](https://github.com/freebsd/drm-kmod/issues/356) 始终未能得到解决，故在 VMware、VirtualBox 或任何基于 Virtio 的虚拟机上均无法复现此教程。你需要在真实的物理机上进行参照。
+由于 issue [Request to restore support for vboxvideo and vmwgfx DRM drivers #356](https://github.com/freebsd/drm-kmod/issues/356) 始终未能得到解决（FreeBSD drm 驱动的移植只覆盖了 Intel、AMD 和 NVIDIA 等 GPU），故在 VMware、VirtualBox 或任何基于 Virtio 的虚拟机上均无法复现此教程。你需要在真实的物理机上进行参照。
 
 NVIDIA 卡未经测试。本文使用 Intel 12 代处理器（i7-1260P）的核显进行测试。
 
