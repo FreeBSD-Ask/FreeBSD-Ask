@@ -133,6 +133,19 @@ export XMODIFIERS='@im=fcitx' # Fcitx 需要
 
 ![](../.gitbook/assets/kde-Wayland9.png)
 
+## 故障排除与未竟事宜
+
+### 通过 SDDM 的 Wayland 会话启动 KDE
+
+有反馈称 APU 核显可直接通过 SSDM 的 Wayland 会话启动 KDE，不需要上述 Shell 文件。需更多反馈。
+
+### 使用 root 登录图形界面
+
+这是不建议也是不安全的做法，但是普通用户似乎无法调用。待解决。
+
+### 切换到 PipeWire
+
+待解决。
 
 ## 参考文献
 
