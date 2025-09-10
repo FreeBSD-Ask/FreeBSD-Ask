@@ -27,7 +27,7 @@ seatd 是一种会话管理器。~~我也不知道它是干什么用的，但是
 ```sh
 # cd /usr/ports/sysutils/seatd/ 
 # make install clean
-```
+``
 
 ### 配置 seatd 服务
 
@@ -38,7 +38,7 @@ seatd 是一种会话管理器。~~我也不知道它是干什么用的，但是
 # service seatd enable
 ```
 
-## 启动桌面
+## 启动 KDE 6
 
 经测试，无法通过 SDDM 的 Wayland 选项启动 KDE6，按回车键登录后会自动回退到 SDDM 界面。
 
@@ -67,7 +67,58 @@ export XMODIFIERS='@im=fcitx' # Fcitx 需要
 
 - 进入 KDE
 
+此时，你应位于 TTY 界面，并登录到了 root，并且不存在任何 X11 会话（如有，请禁用相关服务并重启再来）。
+
 ```sh
 # sh /root/kde.sh
 ```
 
+![在 FreeBSD 上通过 Wayland 运行 KDE6](../.gitbook/assets/kde-Wayland1.png)
+
+- 检查是否是 Wayland：
+
+![检查当前是否位于 Wayland](../.gitbook/assets/kde-Wayland2.png)
+
+```sh
+# echo $XDG_SESSION_TYPE
+```
+
+## 配置 Fcitx 5
+
+>**技巧**
+>
+>经测试 IBus 亦可用，且无需配置。
+
+当你初次进入 KDE Wayland 桌面时，KDE 会在右下角提示你要在设置的虚拟键盘中进行配置才能启用输入法。请留意该提示。若未设置，将无法切换输入法且无法输入中文。方法：
+
+打开 KDE 系统设置：找到“键盘”——>虚拟键盘
+
+![](../.gitbook/assets/kde-Wayland3.png)
+
+请选择“Fcitx 6 Wayland 启动器（实验）”
+
+![](../.gitbook/assets/kde-Wayland5.png)
+
+经测试，在终端 Konsole、火狐浏览器和 Chromium（启动命令为 `chrome --no-sandbox`）中均可输入中文。
+
+![](../.gitbook/assets/kde-Wayland4.png)
+
+## 声音
+
+>**注意**
+>
+>在 root 下，PulseAudio 不会自动加载。经测试写入其他位置（如脚本中）无效。
+
+打开 KDE 设置，找到“自动启动”，点击右上角“+ 添加”，点击“应用程序”。
+
+在弹出窗口中输入 `pulseaudio`，并打开底部的选项“终端选项”，勾选“在终端中运行”和“命令退出时不关闭终端”两项重启系统即可。
+
+![](../.gitbook/assets/kde-Wayland7.png)
+
+![](../.gitbook/assets/kde-Wayland8.png)
+
+![](../.gitbook/assets/kde-Wayland6.png)
+
+## 参考文献
+
+- [KDE Plasma 6 Wayland on FreeBSD](https://euroquis.nl/kde/2025/09/07/wayland.html)，此处提示需要 `seatd`。
