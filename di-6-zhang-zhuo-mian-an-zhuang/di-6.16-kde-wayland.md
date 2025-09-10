@@ -93,6 +93,13 @@ export XMODIFIERS='@im=fcitx' # Fcitx 需要
 >
 >经测试 IBus 亦可用，且无需配置。
 
+配置 Fcitx 自动启动：
+
+```sh
+# mkdir -p /root/.config/autostart/ # 创建自启动目录
+# cp /usr/local/share/applications/org.fcitx.Fcitx5.desktop /root/.config/autostart/ # 自动启动 fcitx
+```
+
 当你初次进入 KDE Wayland 桌面时，KDE 会在右下角提示你要在设置的虚拟键盘中进行配置才能启用输入法。请留意该提示。若未设置，将无法切换输入法且无法输入中文。方法：
 
 打开 KDE 系统设置：找到“键盘”——>虚拟键盘
