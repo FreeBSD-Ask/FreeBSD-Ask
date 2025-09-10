@@ -99,8 +99,6 @@ export XMODIFIERS='@im=fcitx' # Fcitx 需要
 
 ![](../.gitbook/assets/kde-Wayland3-1.png)
 
-![](../.gitbook/assets/kde-Wayland3.png)
-
 请选择“Fcitx 6 Wayland 启动器（实验性）”
 
 ![](../.gitbook/assets/kde-Wayland5.png)
