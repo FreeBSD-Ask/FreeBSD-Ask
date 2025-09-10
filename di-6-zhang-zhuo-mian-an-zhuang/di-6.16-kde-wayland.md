@@ -75,6 +75,10 @@ export XMODIFIERS='@im=fcitx' # Fcitx 需要
 
 ![在 FreeBSD 上通过 Wayland 运行 KDE6](../.gitbook/assets/kde-Wayland1.png)
 
+>**技巧**
+>
+>上图之所以显示为 UHD 显卡而非 Xe，是因为我买不起第二根 DDR5 内存条。
+
 - 检查是否是 Wayland：
 
 ![检查当前是否位于 Wayland](../.gitbook/assets/kde-Wayland2.png)
