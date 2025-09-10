@@ -1,0 +1,1 @@
+# KDE6（Wayland）
