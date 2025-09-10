@@ -77,7 +77,7 @@ export XMODIFIERS='@im=fcitx' # Fcitx 需要
 
 >**技巧**
 >
->上图之所以显示为“Intel UHD Graphics”显卡而非“Iris Xe Graphics”，是因为笔者无力购买第二根 DDR5 内存条。
+>上图之所以显示为“Intel UHD Graphics”显卡而非“Iris Xe Graphics”，是因为笔者无力购买第二根 DDR5 内存条。参见 [Intel® Iris® Xe Graphics Shows As Intel® UHD Graphics in the Intel® Graphics Command Center and Device Manager](https://www.intel.com/content/www/us/en/support/articles/000059744/graphics.html)（网站对应页面的中文翻译不正确）。
 
 - 检查是否是 Wayland：
 
