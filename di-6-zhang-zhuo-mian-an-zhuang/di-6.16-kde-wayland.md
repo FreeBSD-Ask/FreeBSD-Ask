@@ -27,7 +27,7 @@ seatd 是一种会话管理器。~~我也不知道它是干什么用的，但是
 ```sh
 # cd /usr/ports/sysutils/seatd/ 
 # make install clean
-``
+```
 
 ### 配置 seatd 服务
 
