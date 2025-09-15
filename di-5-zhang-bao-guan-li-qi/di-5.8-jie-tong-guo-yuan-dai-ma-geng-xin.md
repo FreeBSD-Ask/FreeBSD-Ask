@@ -23,8 +23,9 @@
 
 或者：
 
-```
-# cd /usr/ports/devel/git/ && make install clean
+```sh
+# cd /usr/ports/devel/git/
+# make install clean
 ```
 
 
@@ -49,14 +50,37 @@
 
 ### Git 拉取源代码
 
-```
-# git clone --depth 1 https://git.FreeBSD.org/src.git /usr/src 
+#### 拉取 CURRENT
+
+通过 FreeBSD 官方存储库拉取：
+
+```sh
+$ git clone --depth 1 https://git.FreeBSD.org/src.git /usr/src 
 ```
 
-或者（GitHub 是 FreeBSD.org 上 src 的镜像，每 10 分钟同步一次）
+- `--depth 1`：浅克隆，仅拉取最新的提交，不拉取日志及历史记录
 
+或者通过 Github 拉取（GitHub 是 FreeBSD.org 上 src 的镜像，每 10 分钟同步一次）
+
+```sh
+$ git clone --depth 1 https://github.com/freebsd/freebsd-src /usr/src
 ```
-# git clone --depth 1 https://github.com/freebsd/freebsd-src /usr/src
+
+#### 拉取某 RELEASE
+
+通过 FreeBSD 官方存储库拉取：
+
+```sh
+$ git clone --branch releng/14.3 --single-branch --depth 1 https://github.com/freebsd/freebsd-src.git freebsd-src-14.3 /usr/src
+```
+
+- `--branch releng/14.3`：指定拉取分支（FreeBSD RELEASE 的版本）
+- `--single-branch`：仅克隆一个分支，除该已克隆的单一分支外不含任何其他引用（refs）。
+
+或者通过 Github 拉取：
+
+```sh
+$ git clone --branch releng/14.3 --single-branch --depth 1 https://github.com/freebsd/freebsd-src /usr/src
 ```
 
 ### 参考文献
