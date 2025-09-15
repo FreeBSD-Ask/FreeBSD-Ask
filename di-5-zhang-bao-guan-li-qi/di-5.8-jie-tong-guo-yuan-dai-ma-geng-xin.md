@@ -71,7 +71,7 @@ $ git clone --depth 1 https://github.com/freebsd/freebsd-src /usr/src
 通过 FreeBSD 官方存储库拉取：
 
 ```sh
-$ git clone --branch releng/14.3 --single-branch --depth 1 https://github.com/freebsd/freebsd-src.git /usr/src
+$ git clone --branch releng/14.3 --single-branch --depth 1 https://git.FreeBSD.org/src.git /usr/src
 ```
 
 - `--branch releng/14.3`：指定拉取分支（FreeBSD RELEASE 的版本）
