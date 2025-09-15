@@ -60,7 +60,7 @@ $ git clone --depth 1 https://git.FreeBSD.org/src.git /usr/src
 
 - `--depth 1`：浅克隆，仅拉取最新的提交，不拉取日志及历史记录
 
-或者通过 Github 拉取（GitHub 是 FreeBSD.org 上 src 的镜像，每 10 分钟同步一次）
+或者通过 GitHub 拉取（GitHub 是 FreeBSD.org 上 src 的镜像，每 10 分钟同步一次）
 
 ```sh
 $ git clone --depth 1 https://github.com/freebsd/freebsd-src /usr/src
