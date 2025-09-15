@@ -77,7 +77,7 @@ $ git clone --branch releng/14.3 --single-branch --depth 1 https://github.com/fr
 - `--branch releng/14.3`：指定拉取分支（FreeBSD RELEASE 的版本）
 - `--single-branch`：仅克隆一个分支，除该已克隆的单一分支外不含任何其他引用（refs）。
 
-或者通过 Github 拉取：
+或者通过 GitHub 拉取：
 
 ```sh
 $ git clone --branch releng/14.3 --single-branch --depth 1 https://github.com/freebsd/freebsd-src /usr/src
