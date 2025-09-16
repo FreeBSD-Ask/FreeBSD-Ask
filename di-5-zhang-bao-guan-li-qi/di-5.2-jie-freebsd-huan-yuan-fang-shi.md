@@ -35,9 +35,9 @@
 
 FreeBSD 中 pkg 源分为系统级和用户级两个配置文件。**不建议**直接修改 `/etc/pkg/FreeBSD.conf` ~~但是太麻烦啦，一般我都是直接改这个文件的~~，因为该文件会随着基本系统的更新而发生改变。
 
----
-
-并非所有源都有 `quarterly` 和 `latest`，具体请看 <https://pkg.freebsd.org/> 。
+>**注意**
+>
+>并非所有源都有 `quarterly` 和 `latest`，具体请看 <https://pkg.freebsd.org/> 。也并非为所有架构都提供了 pkg 源，与平台支持等级挂钩。
 
 
 ### pkg 换源
@@ -50,18 +50,15 @@ FreeBSD 中 pkg 源分为系统级和用户级两个配置文件。**不建议**
 # sed -i '' 's/quarterly/latest/g' /etc/pkg/FreeBSD.conf
 ```
 
----
 
-- 创建用户级源目录和文件：
+#### 创建用户级源目录和文件
 
 ```sh
 # mkdir -p /usr/local/etc/pkg/repos
 # ee /usr/local/etc/pkg/repos/mirrors.conf
 ```
 
----
-
-- 中国科学技术大学开源软件镜像站（USTC）
+#### 中国科学技术大学开源软件镜像站（USTC）
 
 > **技巧**
 >
@@ -71,29 +68,29 @@ FreeBSD 中 pkg 源分为系统级和用户级两个配置文件。**不建议**
 
 ```sh
 ustc: {
-url: "http://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/latest",
+url: "https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/latest",
 }
 FreeBSD: { enabled: no }
 ```
 
-- 南京大学开源镜像站
+#### 南京大学开源镜像站
 
 写入以下内容：
 
 ```sh
 nju: {
-url: "http://mirrors.nju.edu.cn/freebsd-pkg/${ABI}/latest",
+url: "https://mirrors.nju.edu.cn/freebsd-pkg/${ABI}/latest",
 }
 FreeBSD: { enabled: no }
 ```
 
-- 网易开源镜像站
+#### 网易开源镜像站
 
 写入以下内容：
 
 ```sh
 163: {
-url: "http://mirrors.163.com/freebsd-pkg/${ABI}/latest",
+url: "https://mirrors.163.com/freebsd-pkg/${ABI}/latest",
 }
 FreeBSD: { enabled: no }
 ```
@@ -170,32 +167,31 @@ FreeBSD: { enabled: no }
 # ee /etc/make.conf
 ```
 
----
 
-- 南京大学开源镜像站
+#### 南京大学开源镜像站
 
 
 写入以下内容：
 
 ```sh
-MASTER_SITE_OVERRIDE?=http://mirrors.nju.edu.cn/freebsd-ports/distfiles/${DIST_SUBDIR}/
+MASTER_SITE_OVERRIDE?=https://mirrors.nju.edu.cn/freebsd-ports/distfiles/${DIST_SUBDIR}/
 ```
 
-- 网易开源镜像站
+#### 网易开源镜像站
 
 写入以下内容：
 
 ```sh
-MASTER_SITE_OVERRIDE?=http://mirrors.163.com/freebsd-ports/distfiles/${DIST_SUBDIR}/
+MASTER_SITE_OVERRIDE?=https://mirrors.163.com/freebsd-ports/distfiles/${DIST_SUBDIR}/
 ```
 
-- 中国科学技术大学开源软件镜像站
+#### 中国科学技术大学开源软件镜像站
 
 
 写入以下内容：
 
 ```sh
-MASTER_SITE_OVERRIDE?=http://mirrors.ustc.edu.cn/freebsd-ports/distfiles/${DIST_SUBDIR}/
+MASTER_SITE_OVERRIDE?=https://mirrors.ustc.edu.cn/freebsd-ports/distfiles/${DIST_SUBDIR}/
 ```
 
 ## Kernel modules（kmods）内核模块源：面向 FreeBSD 14.2 及更高版本（不含 15.0-CURRENT）
@@ -278,7 +274,7 @@ FreeBSD-kmods {
 安装示例：现在安装 `bsdinfo`。
 
 ```sh
-root@ykla:~ # pkg_add -r bsdinfo
+# pkg_add -r bsdinfo
 Fetching http://ftp-archive.freebsd.org/pub/FreeBSD-Archive/ports/amd64/packages-9.2-release/Latest/bsdinfo.tbz... Done.
 ```
 
