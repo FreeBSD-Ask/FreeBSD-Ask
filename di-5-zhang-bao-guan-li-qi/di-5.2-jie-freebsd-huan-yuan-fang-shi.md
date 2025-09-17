@@ -68,7 +68,7 @@ FreeBSD 中 pkg 源分为系统级和用户级两个配置文件。**不建议**
 
 ```sh
 ustc: {
-url: "https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/latest",
+url: "https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/latest"
 }
 FreeBSD: { enabled: no }
 ```
@@ -79,7 +79,7 @@ FreeBSD: { enabled: no }
 
 ```sh
 nju: {
-url: "https://mirrors.nju.edu.cn/freebsd-pkg/${ABI}/latest",
+url: "https://mirrors.nju.edu.cn/freebsd-pkg/${ABI}/latest"
 }
 FreeBSD: { enabled: no }
 ```
@@ -90,7 +90,7 @@ FreeBSD: { enabled: no }
 
 ```sh
 163: {
-url: "https://mirrors.163.com/freebsd-pkg/${ABI}/latest",
+url: "https://mirrors.163.com/freebsd-pkg/${ABI}/latest"
 }
 FreeBSD: { enabled: no }
 ```
