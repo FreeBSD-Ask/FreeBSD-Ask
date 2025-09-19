@@ -269,6 +269,8 @@ FreeBSD 核心小组成员并不直接从中获取任何利益，同样也都是
 - FreeBSD 的开发者非常少，且对外部贡献者严重缺乏时间感；
 - FreeBSD 基金会、期刊、Bug 报告等对外部贡献者严重缺乏时间感；
 - FreeBSD 文档项目严重停滞；
+- 尚未完全支持安全启动（Secure boot）
+- 对 TPM 的支持有限
 - 由于 Linuxism，导致很多软件比如 NetworkManager 无法移植，桌面环境的组件也无法完善；
 - 由于 FreeBSD 项目的基本目标和设计问题，FreeBSD 基本系统不包含 Linux 发行版中常用的一些软件和命令；
 - FreeBSD 两款原生的文件系统 ZFS 与 UFS 都只能扩大不能缩小；
