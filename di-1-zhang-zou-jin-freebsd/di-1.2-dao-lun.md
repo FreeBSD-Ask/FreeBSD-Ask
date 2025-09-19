@@ -128,7 +128,7 @@ FreeBSD 不仅仅是 **在生命周期内不变**，大版本更新也具有连�
 #### 安全原因
 
 - 对部分 Ports 进行了加固，参见 [FreeBSD security hardening with compiler options](https://www.leidinger.net/blog/2025/05/24/freebsd-security-hardening-with-compiler-options/)、[Add new features fortify, stack_autoinit and zeroregs](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=284270)
-- 披露的安全漏洞少于其他主流操作系统（尽管可能存在样本数量较少的客观因素）。截至 2015 年 9 月，FreeBSD 基本系统（用户空间 + 内核）CVE 漏洞仅为 Linux 内核的约二十分之一（根据 <https://www.cvedetails.com/> 统计 CVE）。其中 OpenBSD 的 CVE 漏洞数量约为 FreeBSD 的 40%。
+- 披露的安全漏洞少于其他主流操作系统（尽管可能存在样本数量较少的客观因素）。截至 2015 年 9 月，FreeBSD 基本系统（用户空间 + 内核）CVE 漏洞仅为 Linux 内核的约二十分之一（根据 <https://www.cvedetails.com/> 统计 CVE），后者与 Windows CVE 数量大致持平。其中 OpenBSD 的 CVE 漏洞数量约为 FreeBSD 的 40%。
 - 可以避免在产品和架构中出现共同故障点。
 - 安全事件审计。
 - 集成了标准 Unix DAC、ALC、TrustedBSD MAC 安全框架（基于 POSIX®.1e 草案的安全扩展），参见 [wiki TrustedBSD](https://wiki.freebsd.org/TrustedBSD/)
