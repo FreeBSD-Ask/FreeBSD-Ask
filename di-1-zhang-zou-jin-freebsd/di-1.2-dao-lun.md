@@ -131,7 +131,7 @@ FreeBSD 不仅仅是 **在生命周期内不变**，大版本更新也具有连�
 - 披露的安全漏洞少于其他主流操作系统（尽管可能存在样本数量较少的客观因素）。截至 2025 年 9 月，FreeBSD 基本系统（用户空间 + 内核）CVE 漏洞仅为 Linux 内核的约二十分之一（根据 <https://www.cvedetails.com/> 统计 CVE），后者与 Windows CVE 数量大致持平。其中 OpenBSD 的 CVE 漏洞数量约为 FreeBSD 的 40%。
 - 可以避免在产品和架构中出现共同故障点。
 - 安全事件审计。
-- 集成了标准 Unix DAC、ALC、TrustedBSD MAC 安全框架（基于 POSIX®.1e 草案的安全扩展），参见 [wiki TrustedBSD](https://wiki.freebsd.org/TrustedBSD/)
+- 集成了标准 Unix DAC、ACL、TrustedBSD MAC 安全框架（基于 POSIX®.1e 草案的安全扩展），参见 [wiki TrustedBSD](https://wiki.freebsd.org/TrustedBSD/)
 - 集成 W^X 策略，参见 [Implement enforcing write XOR execute mapping policy.](https://reviews.freebsd.org/D28050)
 - 默认启用了内核和用户空间的 ASLR，参见 [Enable ASLR by default for 64-bit executables.](https://reviews.freebsd.org/D27666)
 - FreeBSD 通过了 National Institutes of Standards and Technology（NIST，美国国家标准及技术研究所）安全软件开发框架（SSDF）认证，参见 [FreeBSD Foundation Announces SSDF Attestation](https://freebsdfoundation.org/news-and-events/latest-news/freebsd-foundation-announces-ssdf-attestation/)
