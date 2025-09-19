@@ -107,32 +107,47 @@ FreeBSD 不仅仅是 **在生命周期内不变**，大版本更新也具有连�
   
 ### 选择 FreeBSD 的技术性原因
 
+#### 一般技术原因
+
 - FreeBSD 基本系统的配置文件与第三方软件配置文件相分离，系统级配置文件与用户配置文件相分离。~~再也不用到处用 find 命令查找某个 `.conf` 文件到底安装在哪了。~~
 - 由于基本系统的存在，第三方的软件几乎不影响系统的稳定性。FreeBSD 在软件更新和系统稳定之间找到了平衡点。
 - 通过 BSD 的 Ports 可以编译安装软件，自由配置。
 - 不会锁定软件版本。比如 Python GCC 等常见的系统依赖软件。但所有的 FreeBSD 都共用相同的 Ports，无论新旧系统，其第三方软件的版本都是相同的；仅极个别软件和系统版本硬捆绑，其余所有软件都可滚动更新。
 - 由于 Ports 的存在，旧版 FreeBSD 系统的软件源仍可正常使用，而不像其他操作系统那样一旦 EoL 就没有软件源可用了。
 - 在 FreeBSD 项目中，文档不再是附属品。FreeBSD doc 项目与 src 项目是同等地位的，不分高下。
-- 披露的安全漏洞少于其他主流操作系统。
-- 可以避免在产品和架构中出现共同故障点。
 - 接近 2 年的版本发布周期，4 年的维护周期赋予了 FreeBSD 稳定性。
 - 可以轻松地为你的根分区（`/`）配置使用 ZFS 文件系统。ZFS 被誉为最强大的文件系统。
 - Jail 与 bhyve 虚拟化，不需要额外安装和维护底层虚拟化堆栈。也不需要为每个实例启动完整的操作系统内核和用户空间，节约系统资源。
 - 传统的 BSD INIT 引导，回归简单，回归真实可见的纯文本。
 - DTrace 框架与 GEOM 存储框架。
 - Linux 二进制兼容层，可运行 Linux 软件。且软件运行速度并不逊色于 Linux。
-- 安全事件审计。
 - FreeBSD 的驱动在大致上与内核解耦合。
 - FreeBSD 秉持人人自由开发的理念，目前[你可以直接在 Github 上提交你的代码](https://github.com/freebsd/freebsd-src/pulls)，或者注册个账号在 <https://reviews.freebsd.org/> 进行大规模变更。
 - FreeBSD 的代码风格是 Kernighan & Ritchie 经典著作《C 程序设计语言》（*The C Programming Language*）中使用的风格。
 
+#### 安全原因
+
+- 对部分 Ports 进行了加固，参见 [FreeBSD security hardening with compiler options](https://www.leidinger.net/blog/2025/05/24/freebsd-security-hardening-with-compiler-options/)、[Add new features fortify, stack_autoinit and zeroregs](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=284270)
+- 披露的安全漏洞少于其他主流操作系统（尽管可能存在样本数量较少的客观因素）。
+- 可以避免在产品和架构中出现共同故障点。
+- 安全事件审计。
+- 集成 标准 Unix DAC、ALC、TrustedBSD MAC 安全框架（基于 POSIX®.1e 草案的安全扩展），参见 [wiki TrustedBSD](https://wiki.freebsd.org/TrustedBSD/)
+- 集成 W^X 策略，参见 [Implement enforcing write XOR execute mapping policy.](https://reviews.freebsd.org/D28050)
+- 默认启用了内核和用户空间的 ASLR，参见 [Enable ASLR by default for 64-bit executables.](https://reviews.freebsd.org/D27666)
+- FreeBSD 通过了 National Institutes of Standards and Technology（NIST，美国国家标准及技术研究所）安全软件开发框架（SSDF）认证，参见 [FreeBSD Foundation Announces SSDF Attestation](https://freebsdfoundation.org/news-and-events/latest-news/freebsd-foundation-announces-ssdf-attestation/)
+- 实现了 FreeBSD 14 CIS 基准。参见 [New CIS® FreeBSD 14 Benchmark: Secure Your Systems with Expert-Guided Best Practices](https://freebsdfoundation.org/blog/new-cis-freebsd-14-benchmark-secure-your-systems-with-expert-guided-best-practices/)
+- 正在实现 FreeBSD 的零信任构建，参见 Sovereign Tech Agency 相关赞助
+- 正在改进软件物料清单（Software Bill of Materials，SBOM），参见 Sovereign Tech Agency 相关赞助
+- Capsicum 框架，并且已经对基本系统中大量工具进行了能力化加固。参见 [wiki Capsicum](https://wiki.freebsd.org/Capsicum)
+  
 #### 参考文献
 
 - [Submitting GitHub Pull Requests to FreeBSD](https://freebsdfoundation.org/our-work/journal/browser-based-edition/configuration-management-2/submitting-github-pull-requests-to-freebsd/)，翻译在[在 GitHub 上向 FreeBSD 提交 PR](https://github.com/taophilosophy/freebsd-journal-cn/blob/main/2024-0506/zai-github-shang-xiang-freebsd-ti-jiao-pr.md)
 - [Contribution Guidelines for GitHub](https://github.com/freebsd/freebsd-src/blob/main/CONTRIBUTING.md)，应该以此为准
 - Linux Kernel 由 Linus 一人裁决：“[Linus Torvalds 是决定改动能否进入 Linux 内核的最终裁决者。](https://www.kernel.org/doc/html/latest/translations/zh_CN/process/submitting-patches.html)”
-- [Linux 内核编码风格](https://www.kernel.org/doc/html/latest/process/coding-style.html)。
-- Linux 内核开发是个[较为封闭的过程](https://www.kernel.org/doc/html/latest/process/submitting-patches.html)，只有少数人能够参与直接提交代码。
+- [Linux 内核编码风格](https://www.kernel.org/doc/html/latest/process/coding-style.html)
+- Linux 内核开发是个[较为封闭的过程](https://www.kernel.org/doc/html/latest/process/submitting-patches.html)，只有少数人能够参与直接提交代码
+- [Sandbox Your Program Using FreeBSD's Capsicum](https://cdaemon.com/posts/capsicum)，翻译在 [利用 FreeBSD Capsicum 框架实现程序沙箱化](https://book.bsdcn.org/fan-yi-wen-zhang-cun-dang/2025-nian/capsicum)。这是篇有关 Capsicum 框架的简介
   
 ### 选择 FreeBSD 的社会意义
 
