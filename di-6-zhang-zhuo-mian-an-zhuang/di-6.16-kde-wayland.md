@@ -142,6 +142,10 @@ $ sh ~/kde.sh
 
 待解决。
 
+### root 下没声音
+
+表现为右下角声音选项卡提示“未连接到音频服务”：设置 PulseAudio 自启即可，可在 KDE 设置中自行添加，注意加入可执行权限。
+
 ## 参考文献
 
 - [KDE Plasma 6 Wayland on FreeBSD](https://euroquis.nl/kde/2025/09/07/wayland.html)，此处提示需要 `seatd`。
