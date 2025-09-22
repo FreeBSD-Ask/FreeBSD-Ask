@@ -41,6 +41,10 @@ DRM 即“Direct Rendering Manager”（直接渲染管理器），DRM 是 Linux
 # pw groupmod video -m 你的用户名
 ```
 
+>**警告**
+>
+>即使加入了 `wheel` 组，也应再加入 `video` 组，否则：硬解显示会出问题、Wayland 下普通用户将无权限调用显卡。
+
 ## 安装 Intel 核显/AMD 显卡驱动
 
 >**注意**
