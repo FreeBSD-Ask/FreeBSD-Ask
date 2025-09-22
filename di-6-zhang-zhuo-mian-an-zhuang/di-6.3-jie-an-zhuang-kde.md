@@ -4,23 +4,8 @@ KDE 旨在开发一套现代桌面系统，如果你觉得 KDE 界面很像 Wind
 
 >**技巧**
 >
->视频教程见 [003-FreeBSD14.2 安装 KDE6](https://www.bilibili.com/video/BV12zAYeKEej)
+>视频教程参见 [003-FreeBSD14.2 安装 KDE6](https://www.bilibili.com/video/BV12zAYeKEej)
 
->**注意**
->
->旧版本升级说明：即卸载后安装新的 KDE。
->
->```
-># pkg remove -f kde5 && pkg autoremove
->```
->
->或
->
->```
-># pkg remove -f kde6 && pkg autoremove
->```
-
-然后按下文操作即可。
 
 ## 安装
 
@@ -83,7 +68,42 @@ KDE 旨在开发一套现代桌面系统，如果你觉得 KDE 界面很像 Wind
 # pw groupmod wheel -m 用户名
 ```
 
-## 登录界面主题
+
+## 中文化
+
+### SDDM 中文化
+
+```sh
+# sysrc sddm_lang="zh_CN"
+```
+
+### 系统中文化方法 ① 用户分级
+
+编辑 `/etc/login.conf`：找到 `default:\` 这一段，把 `:lang=C.UTF-8` 修改为 `:lang=zh_CN.UTF-8`。
+
+刷新数据库：
+
+```sh
+# cap_mkdb /etc/login.conf
+```
+
+![SDDM](../.gitbook/assets/sddmcn.png)
+
+![KDE 6](../.gitbook/assets/kde6-2.png)
+
+### 系统中文化方法 ② 系统设置
+
+点击开始-> System Settings ->  `Language & Time` 在 `Region & Language` 项的 `Language` 栏点击右侧 `Modify` 中找到“简体中文”（一般是倒数第二，如果都是 `□□□□`，检查你的中文字体安装否）单击之。然后单击 `Apply` 按钮；logout（注销）后重新登录，此时系统语言将变为中文。
+
+![KDE 6](../.gitbook/assets/kde6-4.png)
+
+![KDE 6](../.gitbook/assets/kde6-5.png)
+
+#### 参考文献
+
+- [SDDM login screen with KDE: change language?](https://forums.freebsd.org/threads/sddm-login-screen-with-kde-change-language.80535/)
+
+## 附录：登录界面主题
 
 - 使用 pkg 安装：
 
@@ -150,40 +170,19 @@ Current=sddm-freebsd-black-theme
 
 - [デスクトップ 環境 の 構築 - 4-7. LXQT のインストールと 設定 (LXQT 2.0.0)](http://silversack.my.coocan.jp/bsd/fbsd11x_bde-4-7_lxqt.htm)
 
-## 中文化
+## 附录：展开任务栏图标
 
-### SDDM 中文化
+右键单击桌面空白部分，点击“进入编辑模式”。
 
-```sh
-# sysrc sddm_lang="zh_CN"
-```
+![](../.gitbook/assets/kde-win1.png)
 
-### 系统中文化方法 ① 用户分级
+点击任务栏中间的空白部分，点击“显示替代部件”
 
-编辑 `/etc/login.conf`：找到 `default:\` 这一段，把 `:lang=C.UTF-8` 修改为 `:lang=zh_CN.UTF-8`。
+![](../.gitbook/assets/kde-win2.png)
 
-刷新数据库：
+在弹出窗口中，选择“图标和文本任务管理器”即可。
 
-```sh
-# cap_mkdb /etc/login.conf
-```
-
-![SDDM](../.gitbook/assets/sddmcn.png)
-
-![KDE 6](../.gitbook/assets/kde6-2.png)
-
-### 系统中文化方法 ② 系统设置
-
-点击开始-> System Settings ->  `Language & Time` 在 `Region & Language` 项的 `Language` 栏点击右侧 `Modify` 中找到“简体中文”（一般是倒数第二，如果都是 `□□□□`，检查你的中文字体安装否）单击之。然后单击 `Apply` 按钮；logout（注销）后重新登录，此时系统语言将变为中文。
-
-![KDE 6](../.gitbook/assets/kde6-4.png)
-
-![KDE 6](../.gitbook/assets/kde6-5.png)
-
-#### 参考文献
-
-- [SDDM login screen with KDE: change language?](https://forums.freebsd.org/threads/sddm-login-screen-with-kde-change-language.80535/)
-
+![](../.gitbook/assets/kde-win3.png)
 
 ## 故障排除与未竟事宜
 
