@@ -6,9 +6,13 @@
 
 NVIDIA 卡未经测试。本文使用 Intel 12 代处理器（i7-1260P）的核显进行测试。
 
-目前，右键正常，在任意位置按快捷键 Crtl + C 亦不会退回到 TTY。
+请参照其他章节内容自行 **安装** drm、KDE 6、Fcitx 5、火狐浏览器等软件包。**并配置 drm 显卡驱动。** 其余软件包暂且 **不要** 进行任何配置，**仅安装** 即可。请加入 video 组。
 
-请参照其他章节内容自行 **安装** drm、KDE 6、Fcitx 5、火狐浏览器等软件包。**并配置 drm 显卡驱动。** 其余软件包暂且 **不要** 进行任何配置，**仅安装** 即可。
+## 加入 video 组
+
+```sh
+# pw groupmod video -m 你的用户名
+```
 
 ## seatd 相关
 
@@ -40,11 +44,13 @@ seatd 是一种会话管理器。~~我也不知道它是干什么用的，但是
 
 ## 启动 KDE 6
 
-经测试，无法通过 SDDM 的 Wayland 选项启动 KDE6，按回车键登录后会自动回退到 SDDM 界面。
+### 方法① SDDM
 
-经测试，需要 root 账户权限才能启动，普通用户报错类似虚拟机（找不到 xxx）。
+直接通过 SDDM 启动即可，在左下角选择“Wayland”会话，但是存在 Bug，按 **Ctrl** + **C** 快捷键会直接退出图形会话。
 
-- 在 `/root` 下新建一脚本 `kde.sh`：
+### 方法②：通过脚本启动
+
+- 在 `~/` 下新建一脚本 `kde.sh`：
 
 ```sh
 #! /bin/sh
@@ -58,7 +64,7 @@ export XMODIFIERS='@im=fcitx' # Fcitx 需要
 - 赋予可执行权限：
 
 ```sh
-# chmod 755 /root/kde.sh
+$ chmod 755 ~/kde.sh
 ```
 
 >**注意**
@@ -70,8 +76,10 @@ export XMODIFIERS='@im=fcitx' # Fcitx 需要
 此时，你应位于 TTY 界面，并登录到了 root，并且不存在任何 X11 会话（如有，请禁用相关服务并重启再来）。
 
 ```sh
-# sh /root/kde.sh
+$ sh ~/kde.sh
 ```
+
+## 图示
 
 ![在 FreeBSD 上通过 Wayland 运行 KDE6](../.gitbook/assets/kde-Wayland1.png)
 
@@ -100,7 +108,9 @@ export XMODIFIERS='@im=fcitx' # Fcitx 需要
 # cp /usr/local/share/applications/org.fcitx.Fcitx5.desktop /root/.config/autostart/ # 自动启动 fcitx
 ```
 
-当你初次进入 KDE Wayland 桌面时，KDE 会在右下角提示你要在设置的虚拟键盘中进行配置才能启用输入法。请留意该提示。若未设置，将无法切换输入法且无法输入中文。方法：
+当你初次进入 KDE Wayland 桌面时，KDE 会在右下角提示你要在设置的虚拟键盘中进行配置才能启用输入法。请留意该提示。若未设置，将无法切换输入法且无法输入中文。
+
+![](../.gitbook/assets/kde-Wayland-fcitx.png)
 
 打开 KDE 系统设置：找到“键盘”——>虚拟键盘
 
@@ -114,39 +124,15 @@ export XMODIFIERS='@im=fcitx' # Fcitx 需要
 
 ![](../.gitbook/assets/kde-Wayland4.png)
 
-## 声音
-
->**注意**
->
->在 root 下，PulseAudio 不会自动加载。经测试写入其他位置（如脚本中）无效。
-
-打开 KDE 设置，找到“自动启动”，点击右上角“+ 添加”，点击“应用程序”。
-
-在弹出窗口中输入 `pulseaudio`，并打开底部的选项“终端选项”，勾选“在终端中运行”和“命令退出时不关闭终端”两项重启系统即可。
-
-![](../.gitbook/assets/kde-Wayland7.png)
-
-![](../.gitbook/assets/kde-Wayland8.png)
-
-![](../.gitbook/assets/kde-Wayland6.png)
-
-设置可执行权限：
-
-![](../.gitbook/assets/kde-Wayland7-1.png)
-
-视频播放测试：
+## 视频播放测试
 
 ![](../.gitbook/assets/kde-Wayland9.png)
 
 ## 故障排除与未竟事宜
 
-### 通过 SDDM 的 Wayland 会话启动 KDE
+### 无法通过 SDDM 的 Wayland 会话启动 KDE
 
-有反馈称 APU 核显可直接通过 SDDM 的 Wayland 会话启动 KDE，不需要上述 Shell 文件。需更多反馈。
-
-### 使用 root 登录图形界面
-
-这是不建议也是不安全的做法，但是普通用户似乎无法调用。待解决。
+你的用户可能未加入 video 组。
 
 ### 切换到 PipeWire
 
