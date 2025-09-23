@@ -152,7 +152,7 @@ Password    : ***** # 设定的用户密码
 Full Name   : # 设定的用户全名
 Uid         : 1001 # 设定的 UID
 Class       :  # 设定的用户分级
-Groups      : ykla wheel video # 设定的用户组
+Groups      : ykla wheel video # 设定所在的用户组
 Home        : /home/ykla # 设定的用户主（家）目录
 Home Mode   :  # 设定的用户主（家）目录权限
 Shell       : /bin/sh # 设定的用户默认的 shell
