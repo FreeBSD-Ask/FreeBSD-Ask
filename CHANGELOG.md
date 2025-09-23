@@ -6,6 +6,7 @@
 
 - 2025.9.23
   - 在安装过程中直接引入 video 组。
+  - 切勿使用 freebsd-update 升级至 15.0-ALPHA3 版本。该操作会在安装 libsys 之前先安装新版 libc，从而导致系统损坏。我们将修复 freebsd-update 以确保按正确顺序安装库文件，但在相关补丁（及相应的勘误通知）发布之前，此升级方式暂不可用。—— Colin Percival FreeBSD 发布工程负责人& EC2 平台维护者。参见 <https://lists.freebsd.org/archives/freebsd-stable/2025-September/003244.html>
 - 2025.9.22
   - 如果普通用户没有被加入到 video 组（wheel 还不够），那么在 KDE 的设置中，“关于此系统”中的“显卡驱动”将永远显示为“llvmpipe”。且 Wayland 下普通用户将无权调用 GPU。
   - “6.3 KDE6（X11）”新增“附录：展开任务栏图标”
