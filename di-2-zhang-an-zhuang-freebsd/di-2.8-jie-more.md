@@ -132,41 +132,47 @@ FreeBSD Installer # FreeBSD 安装程序
 ========================
 Add Users # 添加用户
 
-Username: ykla # 此处输入用户名
-Full name: # 此处输入用户全名 ①
-Uid (Leave empty for default):  # 用户 UID
+Username: ykla # 此处输入用户名。只能使用小写字母（不支持非拉丁字符，如中日韩俄）或数字，且不能以连字符 - 开头。，最大长度为 16 个字符（历史原因）
+Full name: # 此处输入用户全名 ① 可留空。不能使用英文冒号 : 字符。
+Uid (Leave empty for default):  # 用户 UID，留空将使用默认值。手动设置时必须小于 32000。
 Login group [ykla]: # 用户主组
 Login group is ykla. Invite ykla into other groups? []: wheel video # 此处输入“wheel video”（两个单词之间有个空格），邀请用户“ykla”加入附加组“wheel”和“video”
 Login class [default]: # 用户分级
 Shell (sh csh tcsh nologin) [sh]: # 用户默认 shell，默认是 sh
 Home directory [/home/ykla]: # 用户主（家）目录，普通用户默认在 /home 下面
-Home directory permissions (Leave empty for default): # 用户主（家）目录权限，默认留空
+Home directory permissions (Leave empty for default): # 用户主（家）目录权限，留空将使用默认值
 Use password-based authentication? [yes]:  # 是否启用密码验证
-Use an empty password? (yes/no) [no]:  # 是否使用空密码
-Use a random password? (yes/no) [no]:  # 是否使用随机密码
+Use an empty password? (yes/no) [no]:  # 是否使用空密码，即密码为空
+Use a random password? (yes/no) [no]:  # 是否使用随机密码。若设置 yes 将生成随机字符串用作密码。该密码会回显到标准输出。②
 Enter password:  # 输入密码，密码不显示在屏幕上，也不会是 ****，就是什么也没有
 Enter password again:  # 重复输入密码，密码不显示在屏幕上，也不会是 ****，就是什么也没有
-Lock out the account after creation? [no]: # 创建账户后锁定账户
+Lock out the account after creation? [no]: # 创建账户后锁定账户（禁用该账户）
 Username    : ykla # 设定的用户名
 Password    : ***** # 设定的用户密码
 Full Name   : # 设定的用户全名
-Uid         : 1001 # 设定的 UID
+Uid         : 1001 # 设定的用户 UID
 ZFS dataset : zroot/home/ykla # 主（家）目录所在的 zfs 数据集，自 15.0 引入
 Class       :  # 设定的用户分级
 Groups      : ykla wheel video # 设定所在的用户组
 Home        : /home/ykla # 设定的用户主（家）目录
 Home Mode   :  # 设定的用户主（家）目录权限
 Shell       : /bin/sh # 设定的用户默认的 shell
-Locked      : no # 是否锁定用户
+Locked      : no # 是否锁定（禁用）用户
 OK? (yes/no) [yes]: # 上述设置有无问题
 adduser: INFO: Successfully added (ykla) to the user database. # 已成功将 ykla 添加到用户数据库
-Add another user? (yes/no) [no]: # 是否还要再添加其他的用户
+Add another user? (yes/no) [no]: # 是否还要再添加其他用户
 ```
 
 - ① 如果用户全名为空（即不设置），系统会分配一个默认值 `User &`。这是早期 Unix 的行为（Gecos 字段）。由 [freebsd-src/blob/main/usr.sbin/pw/pw_user.c](https://github.com/freebsd/freebsd-src/blob/main/usr.sbin/pw/pw_user.c)，文件中的 `static struct passwd fakeuser` 这部分代码实现。
+
+- ② 如果设置使用随机密码，在最后的部分会输出：`adduser: INFO: Password for (ykla) is: D1MnujkWMv/m`（adduser：信息：用户 (ykla) 的密码是：D1MnujkWMv/m）。
 
 其他参数可以保持默认设置不变。在 FreeBSD 14 及以后，所有用户的默认 shell 都被统一为了 `sh`。
 
 最后会询问 `Add another user？ (yes/no) [no]`，按 **回车键** 即可完成创建；
 
 若输入 `yes`，按 **回车键** 可创建第二个普通用户。
+
+### 参考文献
+
+- [man adduser(8)](https://man.freebsd.org/cgi/man.cgi?adduser(8))
