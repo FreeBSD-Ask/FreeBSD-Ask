@@ -122,44 +122,45 @@
 ![](../.gitbook/assets/ins31.png)
 
 
->**注意**
+>**警告**
 >
->如果你要创建普通用户，请务必将其加入到 `wheel` 组中（请参见箭头位置）。
+>如果你要创建普通用户，请务必将其加入到 `wheel` 组和 `video` 组（仅 wheel 不足以使用）中（参见箭头处）。否则将可能无法正常使用命令 su，无法调用 GPU。
 
 
 ```sh
-FreeBSD Installer
+FreeBSD Installer # FreeBSD 安装程序
 ========================
-Add Users
+Add Users # 添加用户
 
 Username: ykla # 此处输入用户名
 Full name: # 此处输入用户全名 ①
 Uid (Leave empty for default):  # 用户 UID
 Login group [ykla]: # 用户主组
-Login group is ykla. Invite ykla into other groups? []: wheel # 此处输入“wheel”，邀请用户“ykla”加入附加组“wheel”以便于使用命令 su
+Login group is ykla. Invite ykla into other groups? []: wheel video # 此处输入“wheel video”（两个单词之间有个空格），邀请用户“ykla”加入附加组“wheel”和“video”
 Login class [default]: # 用户分级
-Shell (sh csh tcsh nologin) [sh]: # 用户默认 shell
-Home directory [/home/ykla]: # 用户家目录
-Home directory permissions (Leave empty for default): # 用户家目录权限
+Shell (sh csh tcsh nologin) [sh]: # 用户默认 shell，默认是 sh
+Home directory [/home/ykla]: # 用户主（家）目录，普通用户默认在 /home 下面
+Home directory permissions (Leave empty for default): # 用户主（家）目录权限，默认留空
 Use password-based authentication? [yes]:  # 是否启用密码验证
 Use an empty password? (yes/no) [no]:  # 是否使用空密码
 Use a random password? (yes/no) [no]:  # 是否使用随机密码
 Enter password:  # 输入密码，密码不显示在屏幕上，也不会是 ****，就是什么也没有
 Enter password again:  # 重复输入密码，密码不显示在屏幕上，也不会是 ****，就是什么也没有
 Lock out the account after creation? [no]: # 创建账户后锁定账户
-Username    : ykla
-Password    : *****
-Full Name   : 
-Uid         : 1001
-Class       : 
-Groups      : ykla wheel
-Home        : /home/ykla
-Home Mode   : 
-Shell       : /bin/sh
-Locked      : no
-OK? (yes/no) [yes]: # 看起来正常吗
+Username    : ykla # 设定的用户名
+Password    : ***** # 设定的用户密码
+Full Name   : # 设定的用户全名
+Uid         : 1001 # 设定的 UID
+ZFS dataset : zroot/home/ykla # 主（家）目录所在的 zfs 数据集，自 15.0 引入
+Class       :  # 设定的用户分级
+Groups      : ykla wheel video # 设定所在的用户组
+Home        : /home/ykla # 设定的用户主（家）目录
+Home Mode   :  # 设定的用户主（家）目录权限
+Shell       : /bin/sh # 设定的用户默认的 shell
+Locked      : no # 是否锁定用户
+OK? (yes/no) [yes]: # 上述设置有无问题
 adduser: INFO: Successfully added (ykla) to the user database. # 已成功将 ykla 添加到用户数据库
-Add another user? (yes/no) [no]: # 是否还要再添加一位用户
+Add another user? (yes/no) [no]: # 是否还要再添加其他的用户
 ```
 
 - ① 如果用户全名为空（即不设置），系统会分配一个默认值 `User &`。这是早期 Unix 的行为（Gecos 字段）。由 [freebsd-src/blob/main/usr.sbin/pw/pw_user.c](https://github.com/freebsd/freebsd-src/blob/main/usr.sbin/pw/pw_user.c)，文件中的 `static struct passwd fakeuser` 这部分代码实现。
