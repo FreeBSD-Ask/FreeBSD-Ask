@@ -136,7 +136,7 @@ Username: ykla # 此处输入用户名
 Full name: # 此处输入用户全名 ①
 Uid (Leave empty for default):  # 用户 UID
 Login group [ykla]: # 用户主组
-Login group is ykla. Invite ykla into other groups? []: wheel video # 此处输入“wheel video”（两个单词键有个空格），邀请用户“ykla”加入附加组“wheel”和“video”
+Login group is ykla. Invite ykla into other groups? []: wheel video # 此处输入“wheel video”（两个单词之间有个空格），邀请用户“ykla”加入附加组“wheel”和“video”
 Login class [default]: # 用户分级
 Shell (sh csh tcsh nologin) [sh]: # 用户默认 shell
 Home directory [/home/ykla]: # 用户家目录
