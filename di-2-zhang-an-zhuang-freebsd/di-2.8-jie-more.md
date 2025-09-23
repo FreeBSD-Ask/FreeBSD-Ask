@@ -122,9 +122,9 @@
 ![](../.gitbook/assets/ins31.png)
 
 
->**注意**
+>**警告**
 >
->如果你要创建普通用户，请务必将其加入到 `wheel` 组中（请参见箭头位置）。
+>如果你要创建普通用户，请务必将其加入到 `wheel` 组和 `video` 组（仅 wheel 不足以使用）中（参见箭头处）。否则将可能无法正常使用命令 su，无法调用 GPU。
 
 
 ```sh
@@ -136,7 +136,7 @@ Username: ykla # 此处输入用户名
 Full name: # 此处输入用户全名 ①
 Uid (Leave empty for default):  # 用户 UID
 Login group [ykla]: # 用户主组
-Login group is ykla. Invite ykla into other groups? []: wheel # 此处输入“wheel”，邀请用户“ykla”加入附加组“wheel”以便于使用命令 su
+Login group is ykla. Invite ykla into other groups? []: wheel video # 此处输入“wheel video”（两个单词键有个空格），邀请用户“ykla”加入附加组“wheel”和“video”
 Login class [default]: # 用户分级
 Shell (sh csh tcsh nologin) [sh]: # 用户默认 shell
 Home directory [/home/ykla]: # 用户家目录
