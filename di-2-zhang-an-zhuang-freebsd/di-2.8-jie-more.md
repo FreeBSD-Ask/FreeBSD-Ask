@@ -143,7 +143,7 @@ Home directory [/home/ykla]: # 用户主（家）目录，普通用户默认在 
 Home directory permissions (Leave empty for default): # 用户主（家）目录权限，留空将使用默认值
 Use password-based authentication? [yes]:  # 是否启用密码验证
 Use an empty password? (yes/no) [no]:  # 是否使用空密码，即密码为空
-Use a random password? (yes/no) [no]:  # 是否使用随机密码。若设置 yes 将生成随机字符串用作密码。该密码会回显到标准输出。
+Use a random password? (yes/no) [no]:  # 是否使用随机密码。若设置 yes 将生成随机字符串用作密码。该密码会回显到标准输出。②
 Enter password:  # 输入密码，密码不显示在屏幕上，也不会是 ****，就是什么也没有
 Enter password again:  # 重复输入密码，密码不显示在屏幕上，也不会是 ****，就是什么也没有
 Lock out the account after creation? [no]: # 创建账户后锁定账户（禁用该账户）
@@ -164,6 +164,8 @@ Add another user? (yes/no) [no]: # 是否还要再添加其他用户
 ```
 
 - ① 如果用户全名为空（即不设置），系统会分配一个默认值 `User &`。这是早期 Unix 的行为（Gecos 字段）。由 [freebsd-src/blob/main/usr.sbin/pw/pw_user.c](https://github.com/freebsd/freebsd-src/blob/main/usr.sbin/pw/pw_user.c)，文件中的 `static struct passwd fakeuser` 这部分代码实现。
+
+- ② 如果设置使用随机密码，在最后的部分会输出：`adduser: INFO: Password for (ykla) is: D1MnujkWMv/m`（adduser：信息：用户 (ykla) 的密码是：D1MnujkWMv/m）。
 
 其他参数可以保持默认设置不变。在 FreeBSD 14 及以后，所有用户的默认 shell 都被统一为了 `sh`。
 
