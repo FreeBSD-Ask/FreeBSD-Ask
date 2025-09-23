@@ -151,6 +151,7 @@ Username    : ykla # 设定的用户名
 Password    : ***** # 设定的用户密码
 Full Name   : # 设定的用户全名
 Uid         : 1001 # 设定的 UID
+ZFS dataset : zroot/home/ykla # 主（家）目录所在的 zfs 数据集，自 15.0 引入
 Class       :  # 设定的用户分级
 Groups      : ykla wheel video # 设定所在的用户组
 Home        : /home/ykla # 设定的用户主（家）目录
