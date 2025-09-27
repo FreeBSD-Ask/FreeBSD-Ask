@@ -4,6 +4,8 @@
 
 ## 2025 年第三季度
 
+- 2025.9.27
+  - 针对 fwget 工具无法为 RTL8125 2.5GbE 以太网卡安装驱动的问题提交：[Bug 289862 - fwget(8) does not support Realtek Ethernet (RTL8125 2.5GbE, realtek-re-kmod) despite packages being available](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=289862)。
 - 2025.9.23
   - 在安装过程中直接引入 video 组。
   - 切勿使用 freebsd-update 升级至 15.0-ALPHA3 版本。该操作会在安装 libsys 之前先安装新版 libc，从而导致系统损坏。我们将修复 freebsd-update 以确保按正确顺序安装库文件，但在相关补丁（及相应的勘误通知）发布之前，此升级方式暂不可用。—— Colin Percival FreeBSD 发布工程负责人& EC2 平台维护者。参见 <https://lists.freebsd.org/archives/freebsd-stable/2025-September/003244.html>
