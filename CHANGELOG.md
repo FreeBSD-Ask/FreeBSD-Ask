@@ -4,6 +4,9 @@
 
 ## 2025 年第三季度
 
+- 2025.9.28
+  - 2025 FreeBSD 社区调查报告.pdf https://www.alipan.com/s/6vUR7W6xfpC 提取码: nq19 点击链接保存，或者复制本段内容，打开「阿里云盘」APP ，无需下载极速在线查看，视频原画倍速播放。
+  - 上面是中文版本，原文在[这](https://freebsdfoundation.org/wp-content/uploads/2025/09/FreeBSD-2025-Community-Survey-Report-Final.pdf)。
 - 2025.9.27
   - 针对 fwget 工具无法为 RTL8125 2.5GbE 以太网卡安装驱动的问题提交：[Bug 289862 - fwget(8) does not support Realtek Ethernet (RTL8125 2.5GbE, realtek-re-kmod) despite packages being available](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=289862)。
 - 2025.9.23
