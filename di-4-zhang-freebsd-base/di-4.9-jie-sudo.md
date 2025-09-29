@@ -209,7 +209,7 @@ default coexist
 
 提供了命令 `sudo-rs`、`visudo-rs` 和 `sudoedit-rs`。
 
-## 配置
+### 配置 sudo-rs
 
 配置文件位于：`/usr/local/etc/sudoers`。
 
