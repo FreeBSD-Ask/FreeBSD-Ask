@@ -5,7 +5,7 @@
 
 ## doas
 
-实际上对于大部分人来说只需要 `sudo su` 这一行命令，其他都是多余的。
+实际上对于大部分人来说只需要 `sudo su` 这一行命令，其他都是多余的。在使用时将 `sudo` 直接替换为 `doas` 即可。
 
 OpenBSD 认为 sudo 软件配置复杂，代码质量差，漏洞太多，故自行开发了 [doas](https://man.openbsd.org/doas)。自然，FreeBSD 也可以用。
 
@@ -162,3 +162,214 @@ permit :wheel
 ```
 
 然后保存退出即可。
+
+## sudo-rs
+
+sudo-rs 是一款采用 Rust 编写的、以安全为导向并具备内存安全性的 **sudo** 与 **su** 的实现。
+
+### 与 sudo 不共存的安装方案
+
+即安装 sudo-rs 必须先卸载 sudo，此安装方式下二者不共存。
+
+
+- 使用 pkg 安装：
+
+```sh
+# pkg install sudo-rs
+```
+
+- 或者使用 Ports 安装：
+
+
+```sh
+# cd /usr/ports/security/sudo-rs/ 
+# make install clean
+```
+
+提供了命令 `sudo`、`visudo` 和 `sudoedit`。
+
+### 与 sudo 共存的安装方案
+
+即系统中同时存在 sudo 与 sudo-rs。
+
+- 使用 pkg 安装
+
+```sh
+# pkg ins sudo-rs-coexist
+```
+
+- 还可以通过 Ports 来安装：
+
+```sh
+# cd /usr/ports/security/sudo-rs/ 
+# make -V FLAVORS # 查看有哪些 FLAVORS
+default coexist
+# make FLAVOR=coexist install clean # 指定安装共存版本的 sudo-rs
+```
+
+提供了命令 `sudo-rs`、`visudo-rs` 和 `sudoedit-rs`。
+
+## 配置
+
+配置文件位于：`/usr/local/etc/sudoers`。
+
+```ini
+## sudoers file.
+## sudoers 文件。
+
+##
+## This file MUST be edited with the 'visudo' command as root.
+## 此文件必须通过 root 身份使用 `visudo` 命令编辑。
+
+## Failure to use 'visudo' may result in syntax or file permission errors
+## that prevent sudo from running.
+## 不使用 `visudo` 可能导致语法或权限错误，从而使 sudo 无法运行。
+
+##
+## See the sudoers man page for the details on how to write a sudoers file.
+## 如何编写 sudoers 文件的详细说明请参阅 sudoers 的手册页（man sudoers）。
+
+## Defaults specification
+## 默认设置规范
+
+##
+## Preserve editor environment variables for visudo.
+## 为 visudo 保留编辑器相关的环境变量。
+
+## To preserve these for all commands, remove the "!visudo" qualifier.
+## 若希望对所有命令都保留这些变量，请移除 “!visudo” 限定。
+
+Defaults!/usr/local/sbin/visudo env_keep += "SUDO_EDITOR EDITOR VISUAL"
+## 仅对 `/usr/local/sbin/visudo` 命令保留环境变量 SUDO_EDITOR、EDITOR、VISUAL。
+
+##
+## Use a hard-coded PATH instead of the user's to find commands.
+## 使用硬编码的 PATH 查找命令，而不是使用用户自己的 PATH。
+
+## This also helps prevent poorly written scripts from running
+## arbitrary commands under sudo.
+## 这也有助于防止写得不好的脚本在 sudo 下执行任意命令。
+
+Defaults secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+## 为 sudo 指定固定的安全 PATH 路径。
+
+##
+## Uncomment if needed to preserve environmental variables related to the
+## FreeBSD pkg utility and fetch.
+## 若需要保留与 FreeBSD pkg 工具和 fetch 相关的环境变量，请取消注释。
+
+# Defaults     env_keep += "PKG_CACHEDIR PKG_DBDIR FTP_PASSIVE_MODE"
+## 示例：保留 pkg 缓存/数据库路径与 FTP 被动模式变量。
+
+##
+## Additionally uncomment if needed to preserve environmental variables
+## related to portupgrade
+## 另外，如需保留与 portupgrade 相关的环境变量，请取消注释。
+
+# Defaults     env_keep += "PORTSDIR PORTS_INDEX PORTS_DBDIR PACKAGES PKGTOOLS_CONF"
+## 示例：保留 ports 树、索引、数据库、二进制包与工具配置等变量。
+
+##
+## You may wish to keep some of the following environment variables
+## when running commands via sudo.
+## 通过 sudo 运行命令时，你可能希望保留以下某些环境变量。
+
+##
+## Locale settings
+## 本地化设置（语言/地区）
+
+# Defaults env_keep += "LANG LANGUAGE LINGUAS LC_* _XKB_CHARSET"
+## 示例：保留语言与 LC_* 等本地化相关变量。
+
+##
+## X11 resource path settings
+## X11 资源路径设置
+
+# Defaults env_keep += "XAPPLRESDIR XFILESEARCHPATH XUSERFILESEARCHPATH"
+## 示例：保留与 X 应用资源搜索路径相关变量。
+
+##
+## Desktop path settings
+## 桌面相关路径设置
+
+# Defaults env_keep += "QTDIR KDEDIR"
+## 示例：保留 Qt/KDE 的安装路径变量。
+
+##
+## Allow sudo-run commands to inherit the callers' ConsoleKit session
+## 允许 sudo 运行的命令继承调用者的 ConsoleKit 会话。
+
+# Defaults env_keep += "XDG_SESSION_COOKIE"
+## 示例：保留 XDG 会话 cookie（ConsoleKit 时代的变量）。
+
+##
+## Uncomment to enable special input methods.  Care should be taken as
+## this may allow users to subvert the command being run via sudo.
+## 取消注释可启用特殊输入法。但需谨慎，这可能允许用户绕过 sudo 所运行的命令。
+
+# Defaults env_keep += "XMODIFIERS GTK_IM_MODULE QT_IM_MODULE QT_IM_SWITCHER"
+## 示例：保留输入法相关环境变量。
+
+##
+## Uncomment to disable "use_pty" when running commands as root.
+## 取消注释可在以 root 运行命令时禁用 “use_pty”。
+
+## Commands run as non-root users will run in a pseudo-terminal,
+## not the user's own terminal, to prevent command injection.
+## 以非 root 用户运行的命令将使用伪终端，而非用户的原始终端，以防止命令注入。
+
+# Defaults>root !use_pty
+## 对 root 目标用户禁用 use_pty（示例，默认注释）。
+
+##
+
+##
+## User privilege specification
+## 用户权限规范
+
+##
+root ALL=(ALL:ALL) ALL
+## root 可在所有主机上，以任意（用户:组）身份运行任意命令（需要认证）。
+
+## Uncomment to allow members of group wheel to execute any command
+## 取消注释以允许 wheel 组成员执行任意命令。
+
+# %wheel ALL=(ALL:ALL) ALL
+## 示例：授予 wheel 组与 root 类似的 sudo 权限（需密码）。
+
+## Same thing without a password
+## 同上，但无需输入密码。
+
+# %wheel ALL=(ALL:ALL) NOPASSWD: ALL
+## 示例：wheel 组成员可无密码执行任意命令。
+
+## Uncomment to allow members of group sudo to execute any command
+## 取消注释以允许 sudo 组成员执行任意命令。
+
+# %sudo	ALL=(ALL:ALL) ALL
+## 示例：授予 sudo 组以任意（用户:组）身份执行任意命令的权限（需密码）。
+
+## Uncomment to allow any user to run sudo if they know the password
+## of the user they are running the command as (root by default).
+## 取消注释可允许任意用户在知道目标用户（默认为 root）密码的情况下运行 sudo。
+
+# Defaults targetpw  # Ask for the password of the target user
+## 使用目标用户密码进行认证（而非调用者自己的密码）。
+
+# ALL ALL=(ALL:ALL) ALL  # WARNING: only use this together with 'Defaults targetpw'
+## 所有用户均可以任意身份运行任意命令（危险！仅与 `Defaults targetpw` 搭配使用）。
+
+## Read drop-in files from /usr/local/etc/sudoers.d
+## 从 /usr/local/etc/sudoers.d 读取附加配置片段（drop-in）。
+
+@includedir sudoers.d
+## 包含相对目录 `sudoers.d`（相对于 /usr/local/etc），读取其中的配置文件。
+```
+
+### 测试
+
+```sh
+ykla@ykla:~ $ sudo su
+[sudo: authenticate] Password: # 这里同样什么也没有，*** 也没有
+# 
+```
