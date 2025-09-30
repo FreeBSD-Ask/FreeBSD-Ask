@@ -1,13 +1,8 @@
 # 6.10 Budgie
 
->**警告**
->
->由于 Port `sysutils/budgie-control-center` [被标记为](https://www.freshports.org/sysutils/budgie-control-center/) `broken`（破损），本文暂不可用，待维护者修复。
->
->主要维护者 Olivier Duchateau 称已对此项目不感兴趣，放弃维护。因无人主动维护，考虑在日后删除此节。
+>目前 Budgie 但无法正常登录桌面。Bug 289898 x11/budgie: After logging in with LightDM, it crashes and then shows a black screen.。若在六个月内（2025-04-01 日前）未得到解决将删除“6.10 Budgie”。
 
-
-Budgie 是 Solus Linux 的默认桌面。
+Budgie 是 [Solus Linux](https://getsol.us/) 的默认桌面。
 
 ## 安装
 
@@ -40,34 +35,62 @@ Budgie 是 Solus Linux 的默认桌面。
 ## 查看安装提示
 
 ```sh
-root@ykla:/home/ykla # pkg info -D budgie
-budgie-10.8:
-On install:
-Copy 'xprofile' into your home directory:
+In order to launch your session. Copy 'xprofile' into your home directory:
+# 为了启动你的会话，把 'xprofile' 文件复制到你的主目录：
+
   cp /usr/local/share/examples/budgie/xprofile ~/.xprofile
-# 将示例配置文件 xprofile 复制到你的主目录，用于设置桌面环境启动时的用户环境变量。
+# 执行以上命令，将示例配置文件复制到主目录下的 .xprofile
 
-More information, https://codeberg.org/olivierd/freebsd-ports-budgie/wiki
-# 更多信息可参考官方维基页面。
+Create or edit /var/db/AccountsService/users/YOURLOGIN file:
+# 创建或编辑 /var/db/AccountsService/users/YOURLOGIN 文件：
 
-If you want to launch new session from a console (without login manager)
-  cp /usr/local/share/examples/budgie/xinitrc ~/.xinitrc
-# 如果你想直接从控制台启动会话（不使用登录管理器），请复制示例 xinitrc 到主目录。
+  [User]
+  # 用户配置部分
+
+  Language=fr_FR.UTF-8 # e.g. for French users
+  # 语言设置，例如这里是法语用户
+
+  Session=budgie-desktop
+  # 会话设置为 budgie-desktop
+
+  SystemAccount=false
+  # 设置为 false，表示这是普通用户而不是系统账户
+
+Replace YOURLOGIN by your login.
+# 将 YOURLOGIN 替换为你的实际用户名。
 ```
 
 ## 配置 `startx`
 
 ```sh
 $ cp /usr/local/share/examples/budgie/xprofile ~/.xprofile
-$ cp /usr/local/share/examples/budgie/xinitrc ~/.xinitrc
 ```
 
-## 配置 `fstab`
+## 创建账户服务
 
-编辑 `/etc/fstab`，加入：
+- 创建所需路径
 
 ```sh
-proc           /proc       procfs  rw  0   0
+# mkdir -p /var/db/AccountsService/users/
+```
+
+- 创建并写入文件：
+
+```
+# ee /var/db/AccountsService/users/ykla
+```
+
+>**注意**
+>
+>根据安装后提示，`ykla` 应改为你自己的用户名。
+
+写入：
+
+```sh
+[User]
+Language=zh_CN.UTF-8
+Session=budgie-desktop
+SystemAccount=false
 ```
 
 ## 服务管理
@@ -79,15 +102,9 @@ proc           /proc       procfs  rw  0   0
 
 ## 中文环境
 
-在 `/etc/rc.conf` 下加入：
-
-```sh
-lightdm_env="LC_MESSAGES=zh_CN.UTF-8" 
-```
-
----
 
 编辑 `/etc/login.conf`：找到 `default:\` 这一段，把 `:lang=C.UTF-8` 修改为 `:lang=zh_CN.UTF-8`。
+
 
 刷新数据库：
 
