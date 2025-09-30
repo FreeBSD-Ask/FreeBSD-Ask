@@ -6,6 +6,8 @@
 
 - 2025.9.30
   - “4.9 sudo 和 doas”新增“sudo-rs”
+  - 由于 Bug 287690 [sysutils/pacman: The archlinux flavor cannot be built or installed.](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=287690)，本文暂不可用，若在六个月内（2025-04-01 日前）未得到解决将删除“21.5 ArchLinux 兼容层（基于 archlinux-pacman）”。
+  - budgie 主要维护者 Olivier Duchateau 继续更新了，但无法正常登录桌面。Bug 289898 [x11/budgie: After logging in with LightDM, it crashes and then shows a black screen.](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=289898)。若在六个月内（2025-04-01 日前）未得到解决将删除“6.10 Budgie”。
 - 2025.9.28
   - 2025 FreeBSD 社区调查报告.pdf https://www.alipan.com/s/6vUR7W6xfpC 提取码: nq19 点击链接保存，或者复制本段内容，打开「阿里云盘」APP ，无需下载极速在线查看，视频原画倍速播放。
   - 上面是中文版本，原文在[这](https://freebsdfoundation.org/wp-content/uploads/2025/09/FreeBSD-2025-Community-Survey-Report-Final.pdf)。
