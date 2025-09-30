@@ -1,4 +1,4 @@
-# 6.10 Budgie
+# 6.10 Budgie（预备删除）
 
 >目前 Budgie 但无法正常登录桌面。Bug 289898 x11/budgie: After logging in with LightDM, it crashes and then shows a black screen.。若在六个月内（2025-04-01 日前）未得到解决将删除“6.10 Budgie”。
 
