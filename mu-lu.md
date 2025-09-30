@@ -1,4 +1,4 @@
-# 目录
+# Table of contents
 
 * [FreeBSD 从入门到跑路（第三版：草稿）](README.md)
 * [编辑日志](CHANGELOG.md)
@@ -84,7 +84,7 @@
 * [6.7 Cinnamon](di-6-zhang-zhuo-mian-an-zhuang/di-6.7-jie-an-zhuang-cinnamon.md)
 * [6.8 Lumina](di-6-zhang-zhuo-mian-an-zhuang/di-6.8-jie-an-zhuang-lumina.md)
 * [6.9 LXQt](di-6-zhang-zhuo-mian-an-zhuang/di-6.9-jie-an-zhuang-lxqt.md)
-* [6.10 Budgie](di-6-zhang-zhuo-mian-an-zhuang/di-6.10-jie-an-zhuang-budgie.md)
+* [6.10 Budgie（预备删除）](di-6-zhang-zhuo-mian-an-zhuang/di-6.10-jie-an-zhuang-budgie.md)
 * [6.11 CDE](di-6-zhang-zhuo-mian-an-zhuang/di-6.11-jie-an-zhuang-cde.md)
 * [6.12 LXDE](di-6-zhang-zhuo-mian-an-zhuang/di-6.12-lxde.md)
 * [6.13 主题美化](di-6-zhang-zhuo-mian-an-zhuang/di-6.13-jie-zhu-ti-yu-mei-hua.md)
@@ -225,7 +225,7 @@
 * [21.2 RockyLinux 兼容层（FreeBSD Port）](di-21-zhang-linux-jian-rong-ceng/di-21.2-jie-rocky9-jian-rong-ceng.md)
 * [21.3 Ubuntu/Debian 兼容层](di-21-zhang-linux-jian-rong-ceng/di-21.3-jie-linux-jian-rong-ceng-ji-yu-ubuntudebian.md)
 * [21.4 ArchLinux 兼容层（基于 ArchLinux bootstrap）](di-21-zhang-linux-jian-rong-ceng/di-21.4-jie-linux-jian-rong-ceng-ji-yu-archlinux-bootstrap.md)
-* [21.5 ArchLinux 兼容层（基于 archlinux-pacman）](di-21-zhang-linux-jian-rong-ceng/di-21.5-jie-linux-jian-rong-ceng-ji-yu-archlinuxpacman.md)
+* [21.5 ArchLinux 兼容层（基于 archlinux-pacman）（预备删除）](di-21-zhang-linux-jian-rong-ceng/di-21.5-jie-linux-jian-rong-ceng-ji-yu-archlinuxpacman.md)
 * [21.6 OpenSUSE 兼容层](di-21-zhang-linux-jian-rong-ceng/di-21.6-jie-linux-jian-rong-ceng-ji-yu-opensuse.md)
 * [21.7 Gentoo Linux 兼容层](di-21-zhang-linux-jian-rong-ceng/di-21.7-jie-linux-jian-rong-ceng-ji-yu-gentoo-linux.md)
 * [21.8 Rocky Linux 兼容层](di-21-zhang-linux-jian-rong-ceng/di-21.8-jie-linux-jian-rong-ceng-ji-yu-rocky-linux.md)
