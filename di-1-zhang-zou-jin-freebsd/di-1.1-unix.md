@@ -344,7 +344,7 @@ OSI（Open Source Initiative，开源促进会）基于开放软件定义（OSD�
 
 ### 部分 CC 协议既不自由也不开源
 
-根据 [各类许可证及其评论](https://www.gnu.org/philosophy/categories.zh-cn.html)，结合 OSI 列表，CC-BY-NC（所有版本）、CC-BY-ND（所有版本）等均不属于开源软件许可证或自由软件许可证，因此在该许可证授权下的项目既非传统意义上的自由软件亦非开源软件。
+根据 [各类许可证及其评论](https://www.gnu.org/philosophy/categories.zh-cn.html)，结合[OSI Approved Licenses](https://opensource.org/licenses)，CC-BY-NC（所有版本）、CC-BY-ND（所有版本）等均不属于开源软件许可证或自由软件许可证，因此在该许可证授权下的项目既非传统意义上的自由软件亦非开源软件。
 
 原因很简单，上述协议都歧视商业用户，剥夺了商业用户的“自由”。
 
