@@ -231,7 +231,7 @@ Unix-like 即类 Unix，亦即一切符合 UNIX 标准的操作系统，基本�
 
 也就是说，除了 Windows，基本上世界上大多数操作系统都被叫做 Unix-like，其中就包括 Linux 和 FreeBSD。
 
-## 附录：自由软件与开源软件语境下的的典型误解与思想偏差探析
+## 附录：自由软件与开源软件语境下的典型误解与思想偏差探析
 
 我们必须先给自由软件和开源协议分别下个定义，我们引用 [GNU 网站](https://www.gnu.org/philosophy/free-sw.zh-cn.html)的相关内容来定义什么是自由软件的自由：
 
