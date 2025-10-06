@@ -354,7 +354,7 @@ OSI（Open Source Initiative，开源促进会）基于开放软件定义（OSD�
 
 ### 可以获取源代码≠开源≠自由
 
-根据微软的 Enterprise Source Licensing Program: ESLP 协议（或者 Microsoft Reference Source License,Ms-RSL)），商业用户只要购买了一定量的产品副本，就可以获取其对应的源代码。
+根据微软的 Enterprise Source Licensing Program: ESLP 协议（或者 Microsoft Reference Source License, Ms-RSL），商业用户只要购买了一定量的产品副本（并不要求多么离谱的数量或额度），即可获取其对应的源代码。
 
 你可以获取源代码，并且微软的限制条件仍然在表面上看似符合“自由度1”（自由修改参见[神州网信](https://www.cmgos.com/)的 Windows 10 神州网信政府版）。
 
