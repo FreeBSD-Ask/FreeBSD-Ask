@@ -314,11 +314,11 @@ OSI（Open Source Initiative，开源促进会）基于开放软件定义（OSD�
 
 根据 [自由与非自由软件的分类](https://www.gnu.org/philosophy/categories.zh-cn.html)，我们定义如下：
 
-- 自由软件：符合上述四项基本自由定义的软件即称为自由软件。推论：商业软件可以是自由软件，商业≠非自由。引证1：[自由软件可以是商业软件](https://www.gnu.org/philosophy/free-sw.zh-cn.html#four-freedoms)；引证2;[Words to Avoid (or Use with Care) Because They Are Loaded or Confusing](https://www.gnu.org/philosophy/words-to-avoid.html),“Commercial”部分
-- 开源软件：使用上述开源协议授权的软件。理论上和自由软件基本上同义，但可能存在例外。
+- 自由软件：符合上述四项基本自由定义的软件即称为自由软件。推论：商业软件可以是自由软件，商业≠非自由。引证 1：[自由软件可以是商业软件](https://www.gnu.org/philosophy/free-sw.zh-cn.html#four-freedoms)；引证 2;[Words to Avoid (or Use with Care) Because They Are Loaded or Confusing](https://www.gnu.org/philosophy/words-to-avoid.html),“Commercial”部分
+- 开源软件：使用上述开源协议授权的软件。理论上和自由软件基本上同义，但可能存在例外
 - 专有软件/私有软件（proprietary software）：即真正意义上的“非自由软件”，大部分商业软件属此类型。这是 GNU 宣言一开始真正的目标
-- 免费软件：定义模糊
-- 商业软件：商业软件是由企业作为其业务的一部分所开发的软件。
+- 免费软件：定义模糊。其他类别的软件均可能是“免费”的，但并不一定
+- 商业软件：商业软件是由企业作为其业务的一部分所开发的软件
 
 #### 推论
 
