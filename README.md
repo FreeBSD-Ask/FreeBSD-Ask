@@ -1,6 +1,6 @@
 # FreeBSD 从入门到跑路（第三版：草稿）
 
-🎉 欢迎你来到 FreeBSD 的世界！这是一本由 CC BY 许可授权的 FreeBSD 操作系统书籍。
+🎉 欢迎你来到 BSD 的世界！这是一本由 CC BY 许可授权的 FreeBSD 操作系统书籍，还包含一些 OpenBSD、NetBSD 的快速入门章节。
 
 FreeBSD 是真正自由（Liberty）的**操作系统**，在这波谲云诡的世界中仍然坚守 BSD UNIX 哲学——恪守古老的法则，追寻真正的自由。
 
