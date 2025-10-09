@@ -224,13 +224,13 @@ $ ls -al /dev/backlight/backlight0
 crw-rw---- 1 root video 1, 177 2025年 8月22日 /dev/backlight/backlight0 # 台式机 HDMI 等输出可能没有
 ```
 
-你会发现你多了一个设备，名字是  `card0`（一般是数字是 `0`，如果有第二块显卡，名字会是  `card1` ），同时多出一个名为 `backlight0` 的设备。
+你会发现你多了一个设备，名字是  `card0`（一般是数字是 `0`，如果有第二块显卡，名字会是  `card1` ），同时多出一个名为 `backlight0` 的设备（HDMI 下不会存在该设备）。
 
 ## 故障排除与未竟事宜
 
 - 如果显卡使用驱动有问题请直接联系作者：[https://github.com/freebsd/drm-kmod/issues](https://github.com/freebsd/drm-kmod/issues)
 - 如果笔记本出现了唤醒时屏幕点不亮的问题，可以在 `/boot/loader.conf` 中添加 `hw.acpi.reset_video="1"` 以在唤醒时重置显示适配器。
-- 普通用户若非 `wheel` 组成员，那么请加入 `video` 组。如果普通用户没有被加入到 video 组（wheel 还不够），那么 KDE 的设置，关于此系统中的显卡驱动将永远显示为 llvmpipe 。不过不清楚是否影响实际的显示或硬解。
+- 普通用户若非 `wheel` 组成员，那么请加入 `video` 组。如果普通用户没有被加入到 video 组（wheel 还不够），那么 KDE 的设置，关于此系统中的显卡驱动将永远显示为 llvmpipe 。会影响 Wayland 下普通用户的显示或硬解调用。
 
 ## 参考文献
 
