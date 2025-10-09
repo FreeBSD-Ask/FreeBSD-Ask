@@ -116,7 +116,7 @@ DRM 即“Direct Rendering Manager”（直接渲染管理器），DRM 是 Linux
 
 - `KLD XXX.ko depends on kernel - not available or version mismatch.`
 
-提示内核版本不符，请先升级系统或使用 ports 编译安装。
+提示内核版本不符，请先升级系统或使用 ports 编译安装。14.3-RELEASE 及以上版本可以用内置的内核模块源（参见其他章节），应该不会出现类似问题。
 
 ![](../.gitbook/assets/amd_error.png)
 
