@@ -4,7 +4,7 @@
 
 ## 2025 年第四季度
 
-- 2025.1010
+- 2025.10.10
   - “6.1 Intel 和 AMD 显卡驱动”重写“显卡支持情况”
   - 提交 [Bug 290122 - graphics/drm-latest-kmod：and related DRM ports missing CONFLICTS_INSTALL entries](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=290122)
 - 2025.10.8
