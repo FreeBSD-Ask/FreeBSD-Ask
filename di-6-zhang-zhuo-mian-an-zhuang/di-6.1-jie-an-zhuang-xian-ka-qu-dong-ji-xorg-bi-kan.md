@@ -17,7 +17,7 @@ FreeBSD 的 i915、AMD 显卡驱动和与基本系统是分离的。目前是移
 
 >**警告**
 >
->这种移植并不覆盖 Linux 现有的全部 drm GPU 驱动，目前仅有 i915 amd 和 radeon，其他 vmwgfx、xe、virtio 都是未进行移植的！
+>这种移植并不覆盖 Linux 现有的全部 drm GPU 驱动，目前仅有 i915 amd 和 radeon，其他 vmwgfx、xe、virtio 等等都是未进行移植的！
 
 
 | **FreeBSD 版本**         | **对应 DRM 驱动版本**                   | **GPU 支持范围（AMD / Intel）**    | **备注**             |
