@@ -15,6 +15,11 @@
 FreeBSD 的 i915、AMD 显卡驱动和与基本系统是分离的。目前是移植的 LTS 版本 Linux kernel 的 drm 驱动，作为 Port 来提供的。面向不同的系统版本，能支持的 Linux 内核版本也是不同的。
 
 
+>**警告**
+>
+>这种移植并不覆盖 Linux 现有的全部 drm GPU 驱动，目前仅有 i915 amd 和 radeon，其他 vmwgfx、xe、virtio 等等都是未进行移植的！
+
+
 | **FreeBSD 版本**         | **对应 DRM 驱动版本**                   | **GPU 支持范围（AMD / Intel）**    | **备注**             |
 | :--------------------------: | :--------------------------------- | :---------------------------- | :------------------- |
 | **FreeBSD 14.3-RELEASE**<br> | **drm-61-kmod（基于 Linux 6.1 DRM）** | - **AMD：** <br>**GCN 1（Southern Islands）** <br>**GCN 5（Polaris / Vega）** <br> **RDNA 1 / RDNA 2 / RDNA 3（Radeon RX 7000 系列）**<br>- **Intel：** <br>**Gen 4（GMA X3000 / 965）**<br>**Gen 5（Iron Lake）**<br>**Gen 6（Sandy Bridge）**<br>**Gen 7（Ivy / Haswell）**<br>**Gen 8（Broadwell）**<br>**Gen 9（Skylake / Kaby Lake / Coffee Lake）**<br>**Gen 10（Cannon Lake – 已废弃）**<br>**Gen 11（Ice Lake / Jasper Lake）**<br>**Gen 12（Tiger Lake / Alder Lake / Arc DG2 实验性）**                                         | <br>理论支持 Intel 3 ～ 12 代 GPU。|
