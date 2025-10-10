@@ -12,9 +12,21 @@
 
 ## 显卡支持情况
 
-FreeBSD 14.1-RELEASE、14-STABLE（OSVERSION > 1400508）、编译使用 `drm-61-kmod`，支持情况同 Linux 6.1。经过实际测试，可支持第十二代 Alder Lake-N（如 N100）。十三代等后续版本暂无条件测试。
+FreeBSD 的 i915、AMD 显卡驱动和与基本系统是分离的。目前是移植的 LTS 版本 Linux kernel 的 drm 驱动，作为 Port 来提供的。面向不同的系统版本，能支持的 Linux 内核版本也是不同的。
 
-FreeBSD 15 CURRENT，编译使用 `drm-66-kmod`，支持情况同 Linux 6.6。
+
+| **FreeBSD 版本**         | **对应 DRM 驱动版本**                   | **GPU 支持范围（AMD / Intel）**    | **备注**             |
+| :--------------------------: | :--------------------------------- | :---------------------------- | :------------------- |
+| **FreeBSD 14.3-RELEASE**<br> | **drm-61-kmod（基于 Linux 6.1 DRM）** | - **AMD：** <br>**GCN 1（Southern Islands）** <br>**GCN 5（Polaris / Vega）** <br> **RDNA 1 / RDNA 2 / RDNA 3（Radeon RX 7000 系列）**<br>- **Intel：** <br>**Gen 4（GMA X3000 / 965）**<br>**Gen 5（Iron Lake）**<br>**Gen 6（Sandy Bridge）**<br>**Gen 7（Ivy / Haswell）**<br>**Gen 8（Broadwell）**<br>**Gen 9（Skylake / Kaby Lake / Coffee Lake）**<br>**Gen 10（Cannon Lake – 已废弃）**<br>**Gen 11（Ice Lake / Jasper Lake）**<br>**Gen 12（Tiger Lake / Alder Lake / Arc DG2 实验性）**                                         | <br>理论支持 Intel 3 ～ 12 代 GPU。|
+| **FreeBSD 15.0/16.0-CURRENT**                                        | **drm-66-kmod（基于 Linux 6.6 DRM）** | - **AMD：** 自 **GCN 1** 起至 **RDNA 3（Radeon RX 7000 系列）**，并包含 **Instinct MI300 加速卡** 支持。<br>- **Intel：** <br> • **Gen 4–8：** 旧核显（GMA、HD Graphics 4000 等）<br> • **Gen 9：** Skylake / Kaby Lake / Coffee Lake<br> • **Gen 10：** Cannon Lake （已废弃）<br> • **Gen 11：** Ice Lake / Jasper Lake<br> • **Gen 12：** Tiger Lake / Alder Lake / Arc DG2<br> • **Gen 13：** Raptor Lake （基本兼容 Alder Lake 驱动）<br> • **Gen 14：** Meteor Lake （实验性，已合入 drm-66） | 实测 **Intel Alder Lake-N (N100)、i7-i260p** 显卡驱动加载正常，显示与视频加速功能稳定；<br><br>理论支持 **Intel 3 ～ 14 代 GPU**（含 Meteor Lake），但 13 代及以后缺乏充分实测；       |
+
+- 非 LTS 版本（Port graphics/drm-latest-kmod/，仅 15.0/16.0，目前 6.9）：
+  - Intel：Meteor Lake 图形在 6.7 后默认启用；6.9 包含实验性 Xe 驱动 ，用于 Gen 12+ GPU （Arc、Meteor Lake 等），为后续 Xe2 / Lunar Lake 做准备。i915 仍为默认。
+  - AMD：引入对 **RDNA 3+ / RDNA 4** 的初步支持 。覆盖 GCN 到 RDNA 3 全部架构，并预置 RDNA 4 驱动。
+
+- 后续目标版本（待移植）：6.12（LTS）：
+  - Intel：Xe 驱动成熟，新增 Xe2 (Lunar Lake 核显) 与 Battlemage 独显支持 。加入 Arrow Lake (15 代) 代码。Meteor Lake 完全支持。i915 仍默认，Xe 面向 Gen12+ 新平台。
+  - AMD：RDNA 4 官方支持 ，面向 RX 8000 系列。延续 GCN 至 RDNA 3 所有架构。
 
 >**技巧**
 >
