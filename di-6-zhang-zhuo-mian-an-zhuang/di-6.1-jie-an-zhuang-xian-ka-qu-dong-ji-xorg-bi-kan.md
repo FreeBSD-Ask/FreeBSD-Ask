@@ -16,7 +16,7 @@ FreeBSD 的 i915、AMD 显卡驱动和与基本系统是分离的。目前是移
 
 >**技巧**
 >
->这种移植并不覆盖 Linux 现有的全部 drm GPU 驱动，目前仅有 i915 amd 和 radeon，其他 vmwgfx、xe、virtio 等等都是未进行移植的！
+>这种移植并不覆盖 Linux 现有的全部 drm GPU 驱动，目前仅有 i915 amd 和 radeon，其他 vmwgfx、xe、virtio 等等都是未进行移植的！因此一般情况下，也无法在 Wayland 下运行上述未移植的 GPU，他们目前只能使用 X11。
 
 >**注意**
 >
