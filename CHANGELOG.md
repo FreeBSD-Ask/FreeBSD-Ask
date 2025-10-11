@@ -6,7 +6,7 @@
 
 - 2025.10.11
   - “6.1 Intel 和 AMD 显卡驱动”：明确目前 AMD 显卡驱动存在故障，预计在 15.0 RELEASE 发布前修复；
-  - “6.1 Intel 和 AMD 显卡驱动”：明确目前 FreeBSD 移植的 drm 尚不支持 Intel DG2 Arc 显卡（如 Arc 770），预计在 15.1 RELEASE 前得到支持。
+  - “6.1 Intel 和 AMD 显卡驱动”：明确目前 FreeBSD 移植的 drm 尚不支持 Intel DG2 Arc 显卡（如 Arc A770），预计在 15.1 RELEASE 前得到支持。
 - 2025.10.10
   - “6.1 Intel 和 AMD 显卡驱动”重写“显卡支持情况”
   - 提交 [Bug 290122 - graphics/drm-latest-kmod：and related DRM ports missing CONFLICTS_INSTALL entries](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=290122)
