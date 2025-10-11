@@ -21,7 +21,9 @@ FreeBSD 的 i915、AMD 显卡驱动和与基本系统是分离的。目前是移
 
 >**注意**
 >
->DG2 Arc 显卡尚不受支持（截止 drm 6.10 版本），参见 [Intel Arc A770: Kernel panic on kldload i915kms.ko #315](https://github.com/freebsd/drm-kmod/issues/315)。
+>DG2 Arc 显卡尚不受支持（截止 drm 6.10 版本），参见 [Intel Arc A770: Kernel panic on kldload i915kms.ko #315](https://github.com/freebsd/drm-kmod/issues/315)。可能需要等到 6.12 的移植才能受支持。
+
+>根据笔记本和桌面项目反馈，“在使用 drm-kmod 6.1 及更高版本的桌面系统（搭载 RX 570、580 等 AMD GPU）在运行数分钟或数小时后会逐渐出现严重卡顿，最终会导致桌面完全不可用。”该问题预计会在今年 12 月初前得到解决。参见 <https://github.com/FreeBSDFoundation/proj-laptop/issues/89>
 
 | **FreeBSD 版本**         | **对应 DRM 驱动版本**                   | **GPU 支持范围（AMD / Intel）**    | **备注**             |
 | :--------------------------: | :--------------------------------- | :---------------------------- | :------------------- |
