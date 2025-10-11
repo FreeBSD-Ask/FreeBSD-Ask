@@ -4,7 +4,7 @@
 >
 >请勿使用 `sysutils/desktop-installer`，会引发不必要的错误和问题。
 
-## 故障排除与未竟事宜
+## 未安装显卡驱动的设备图片实例
 
 ![没安装驱动](../.gitbook/assets/noqudong.png)
 
@@ -14,8 +14,7 @@
 
 FreeBSD 的 i915、AMD 显卡驱动和与基本系统是分离的。目前是移植的 LTS 版本 Linux kernel 的 drm 驱动，作为 Port 来提供的。面向不同的系统版本，能支持的 Linux 内核版本也是不同的。
 
-
->**警告**
+>**技巧**
 >
 >这种移植并不覆盖 Linux 现有的全部 drm GPU 驱动，目前仅有 i915 amd 和 radeon，其他 vmwgfx、xe、virtio 等等都是未进行移植的！
 
@@ -23,6 +22,8 @@ FreeBSD 的 i915、AMD 显卡驱动和与基本系统是分离的。目前是移
 >
 >DG2 Arc 显卡尚不受支持（截止 drm 6.10 版本），参见 [Intel Arc A770: Kernel panic on kldload i915kms.ko #315](https://github.com/freebsd/drm-kmod/issues/315)。可能需要等到 6.12 的移植才能受支持。
 
+>**注意**
+>
 >根据笔记本和桌面项目反馈，“在使用 drm-kmod 6.1 及更高版本的桌面系统（搭载 RX 570、580 等 AMD GPU）在运行数分钟或数小时后会逐渐出现严重卡顿，最终会导致桌面完全不可用。”该问题预计会在今年 12 月初前得到解决。参见 <https://github.com/FreeBSDFoundation/proj-laptop/issues/89>
 
 | **FreeBSD 版本**         | **对应 DRM 驱动版本**                   | **GPU 支持范围（AMD / Intel）**    | **备注**             |
