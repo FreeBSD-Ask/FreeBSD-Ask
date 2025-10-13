@@ -42,7 +42,7 @@ KDE 旨在开发一套现代桌面系统，如果你觉得 KDE 界面很像 Wind
 | `plasma6-sddm-kcm`   | 配置 SDDM 的 KDE 模块，可在配置登录界面外观等参数。     |
 | `wqy-fonts`          |  文泉驿中文字体              |
 
-### 精简安装的 KDE 桌面
+### 最小化 KDE 桌面安装方案
 
 直接安装 `x11/kde` 会作为依赖安装 `x11/plasma6-plasma` 和 `x11/kde-baseapps`，其中捆绑了大量的工具软件，在某些情况下可能不方便部署与使用。
 
