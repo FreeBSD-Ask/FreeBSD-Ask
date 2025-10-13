@@ -14,7 +14,7 @@ KDE 旨在开发一套现代桌面系统，如果你觉得 KDE 界面很像 Wind
 - 使用 pkg 安装：
 
 ```sh
-# pkg install xorg sddm kde plasma6-sddm-kcm wqy-fonts
+# pkg install xorg sddm kde wqy-fonts
 ```
 
 > **技巧**
@@ -28,7 +28,6 @@ KDE 旨在开发一套现代桌面系统，如果你觉得 KDE 界面很像 Wind
 # cd /usr/ports/x11/xorg/ && make install clean 
 # cd /usr/ports/x11/kde/ && make install clean 
 # cd /usr/ports/x11/sddm/ && make install clean 
-# cd /usr/ports/deskutils/plasma6-sddm-kcm/ && make install clean 
 # cd /usr/ports/x11-fonts/wqy/ && make install clean 
 ```
 
@@ -39,7 +38,6 @@ KDE 旨在开发一套现代桌面系统，如果你觉得 KDE 界面很像 Wind
 | `xorg`               | 图形界面基础，提供 X Window 系统              |
 | `sddm`               | 登录管理器                |
 | `kde`    | KDE 桌面环境              |
-| `plasma6-sddm-kcm`   | 配置 SDDM 的 KDE 模块，可在配置登录界面外观等参数。     |
 | `wqy-fonts`          |  文泉驿中文字体              |
 
 ### 最小化 KDE 桌面安装方案
@@ -51,7 +49,7 @@ KDE 旨在开发一套现代桌面系统，如果你觉得 KDE 界面很像 Wind
 基础桌面
 
 ```sh
-# pkg ins xorg sddm plasma6-plasma-desktop plasma6-sddm-kcm wqy-fonts 
+# pkg ins xorg sddm plasma6-plasma-desktop wqy-fonts 
 ```
 
 与上面重复的包不再赘述。
