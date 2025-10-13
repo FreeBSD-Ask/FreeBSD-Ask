@@ -1,4 +1,4 @@
-# 目录
+# Table of contents
 
 * [FreeBSD 从入门到跑路（第三版：草稿）](README.md)
 * [编辑日志](CHANGELOG.md)
@@ -210,7 +210,7 @@
 * [19.2 pgAdmin4](di-19-zhang-database/di-19.2-pgadmin4.md)
 * [19.3 MySQL 5.X](di-19-zhang-database/di-19.3-jie-mysql-5.x.md)
 * [19.4 MySQL 8.X](di-19-zhang-database/di-19.4-jie-mysql-8.x.md)
-* [19.5 MongoDB 8.0](di-19-zhang-database/di-19.5-mongodb)
+* [19.5 MongoDB 8.0](di-19-zhang-database/di-19.5-mongodb.md)
 
 ## 第 20 章 游戏、科学计算和专业工具
 
