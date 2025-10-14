@@ -49,15 +49,22 @@ KDE 旨在开发一套现代桌面系统，如果你觉得 KDE 界面很像 Wind
 基础桌面
 
 ```sh
-# pkg ins xorg sddm plasma6-plasma-desktop wqy-fonts 
+# pkg ins xorg sddm plasma6-plasma-desktop wqy-fonts plasma6-kactivitymanagerd plasma6-kscreen plasma6-systemsettings
 ```
+
+| 软件包                           |作用 |
+| :---------------------------------------: | :-------: |
+| **plasma6-kactivitymanagerd**   |用于管理用户活动、跟踪使用模式等的系统服务。**没有该软件 KDE 将会黑屏且只有一个鼠标** |
+| **plasma6-kscreen**                             | KDE 屏幕管理器。**没有该软件将无法调整分辨率**   |
+|**plasma6-systemsettings**|系统设置|
+
 
 与上面重复的包不再赘述。
 
 可选软件包：
 
 ```sh
-# pkg ins konsole dolphin kate plasma6-plasma-systemmonitor plasma6-plasma-pa plasma6-discover kdeconnect-kde plasma6-plasma-workspace-wallpapers plasma6-plasma-disks
+# pkg ins konsole dolphin kate plasma6-plasma-systemmonitor plasma6-plasma-pa plasma6-discover kdeconnect-kde plasma6-plasma-workspace-wallpapers plasma6-plasma-disks ark
 ```
 
 | 软件包                           |作用 |
@@ -71,6 +78,7 @@ KDE 旨在开发一套现代桌面系统，如果你觉得 KDE 界面很像 Wind
 | **kdeconnect-kde**                      | 手机电脑互联  |
 | **plasma6-plasma-workspace-wallpapers** | 桌面壁纸  |
 | **plasma6-plasma-disks**                | 磁盘健康（S.M.A.R.T.）监测  |
+|**ark**|解压缩软件|
 
 
 #### 使用 Ports 安装
@@ -83,6 +91,9 @@ KDE 旨在开发一套现代桌面系统，如果你觉得 KDE 界面很像 Wind
 # cd /usr/ports/deskutils/plasma6-sddm-kcm/ && make install clean 
 # cd /usr/ports/x11/sddm/ && make install clean
 # cd /usr/ports/x11-fonts/wqy/ && make install clean
+# cd /usr/ports/x11/plasma6-kscreen/ && make install clean
+# cd /usr/ports/x11/plasma6-kactivitymanagerd/ && make install clean
+# cd /usr/ports/sysutils/plasma6-systemsettings/ && make install clean
 ```
 
 可选 Port：
@@ -97,7 +108,18 @@ KDE 旨在开发一套现代桌面系统，如果你觉得 KDE 界面很像 Wind
 # cd /usr/ports/deskutils/kdeconnect-kde/ && make install clean # 手机电脑互联
 # cd /usr/ports/x11-themes/plasma6-plasma-workspace-wallpapers/ && make install clean # 桌面壁纸
 # cd /usr/ports/sysutils/plasma6-plasma-disks/ && make install clean # 磁盘健康（S.M.A.R.T.）监测 
+# cd /usr/ports/archivers/ark/ && make install clean # 解压缩软件 
 ```
+
+#### 最小化安装 KDE 图示
+
+>**技巧**
+>
+>使用此方案安装的 KDE 桌面缺少了很多功能，可以参照 [x11/plasma6-plasma](https://www.freshports.org/x11/plasma6-plasma/) 的“Runtime dependencies”（运行时依赖）和“Library dependencies”（库依赖）进行功能补全。
+
+未安装可选包：
+
+![最小化安装的 KDE 界面](../.gitbook/assets/kde6-mini.png)
 
 ## 启动项设置
 
