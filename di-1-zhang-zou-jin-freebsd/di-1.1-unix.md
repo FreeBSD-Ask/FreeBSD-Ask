@@ -79,7 +79,7 @@ Unix 哲学源于 UNIX 操作系统的开发，作者是 Ken Thompson。Unix 哲
 
 ### Unix 的一段历史
 
-#### Mutlics
+#### Multics
 
 1964 年麻省理工学院推出的 CTSS（兼容分时系统），是当时最有创造性的操作系统，有了 CTSS 这种高效的操作系统，麻省理工学院的研究人员决定做一个更好的版本。他们开始设计 Multics 系统。Mutlics 意思是多路复用信息和计算服务。
 
