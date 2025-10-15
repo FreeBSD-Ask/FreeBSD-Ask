@@ -30,7 +30,8 @@ Ubuntu 吧前吧主 Simple 曾建议修改项目的章节文件名与许可协�
 
 - [5gura](https://github.com/5gura)  
 - [Alex6357](https://github.com/Alex6357)
-- April Simone🍥  
+- April Simone🍥
+- [VZstless](https://github.com/atlarator)
 - [bduath](https://github.com/bduath)  
 - [blu10ph](https://github.com/blu10ph)  
 - [bsdwiki](https://github.com/bsdwiki)
