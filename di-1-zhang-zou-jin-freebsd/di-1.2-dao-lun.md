@@ -216,6 +216,9 @@ current 相对稳定后（即 MFC 最短三天，MFC 即 `Merge From Head`，类
 
 ![FreeBSD 版本更迭](../.gitbook/assets/bsd-release.png)
 
+>**警告**
+>
+>上图并不严谨，X.0-RELEASE 其实来自 X-STABLE；X-STABLE 直接由 X-1.CURRENT 转化而来。暂无力修改。待定。
 
 >**注意**
 >
