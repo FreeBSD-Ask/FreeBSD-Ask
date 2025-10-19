@@ -211,9 +211,9 @@ DISKPART> sel disk 1 # 选中磁盘 1
 
 磁盘 1 现在是所选磁盘。
 
-DISKPART> clean
+DISKPART> clean # 清除磁盘 1 所有分区
 
-DiskPart 成功地清除了磁盘。 # 清除磁盘 1 所有分区
+DiskPart 成功地清除了磁盘。 
 
 DISKPART> cre part pri # 在磁盘 1 创建主分区
 
