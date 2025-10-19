@@ -1,4 +1,4 @@
-# 目录
+# Table of contents
 
 * [FreeBSD 从入门到跑路（第三版：草稿）](README.md)
 * [编辑日志](CHANGELOG.md)
@@ -31,7 +31,7 @@
 * [2.8 时区、服务、安全、固件和账户](di-2-zhang-an-zhuang-freebsd/di-2.8-jie-more.md)
 * [2.9 完成安装](di-2-zhang-an-zhuang-freebsd/di-2.9-end-jie.md)
 * [2.10 故障排除](di-2-zhang-an-zhuang-freebsd/di-2.10-jie-eol.md)
-* [2.11 将 U 盘启动盘恢复为普通 U 盘](di-2-zhang-an-zhuang-freebsd/di-2.11-jie-usb.md)
+* [2.11 将 U 盘启动盘恢复为普通 U 盘（基于 Windows）](di-2-zhang-an-zhuang-freebsd/di-2.11-jie-usb.md)
 
 ## 第 3 章 FreeBSD 高级安装
 
