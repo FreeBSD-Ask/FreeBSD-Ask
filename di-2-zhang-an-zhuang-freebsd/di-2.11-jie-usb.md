@@ -34,7 +34,7 @@ DiskGenius 官网：<https://www.diskgenius.cn/>，该软件有收费功能，�
 
 ### 启动 DiskGenius
 
-启动 DiskGenius，需要点击 `DiskGenius.exe`（即 `C:\Users\ykla\Desktop\1\DiskGenius\DiskGenius.exe`）才能启动。
+启动 DiskGenius，需要点击 `DiskGenius.exe`（即 `C:\Users\ykla\Desktop\1\DiskGenius\DiskGenius.exe`，你那里可能是 `DiskGenius`）才能启动。
 
 ![DiskGenius](../.gitbook/assets/usb-diskgenius4.png)
 
