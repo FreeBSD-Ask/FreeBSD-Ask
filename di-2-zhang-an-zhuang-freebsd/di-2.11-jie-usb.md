@@ -186,11 +186,11 @@ DiskGenius 官网：<https://www.diskgenius.cn/>，该软件有收费功能，�
 
 ![傲梅分区助手](../.gitbook/assets/aomei16.png)
 
-### 通过命令 diskpart 恢复
+## 通过命令 diskpart 恢复
 
 打开 powershell：右键单击 Windows 图标，选中 Windows PowerShell（管理员）。
 
-#### MBR 分区表
+### MBR 分区表
 
 ```powershell
 PS C:\WINDOWS\system32> diskpart # 进入 diskpart
@@ -244,7 +244,7 @@ DISKPART> ass letter=E # 挂载到 E 盘，你也可以拔出来再插进去
 DiskPart 成功地分配了驱动器号或装载点。
 ```
 
-#### GPT 分区表
+### GPT 分区表
 
 
 ```powershell
