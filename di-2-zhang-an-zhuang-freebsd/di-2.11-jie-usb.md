@@ -98,4 +98,90 @@ DiskGenius 官网：<https://www.diskgenius.cn/>，该软件有收费功能，�
 恢复完成。
 
 
+## 使用傲梅分区助手恢复 U 盘启动盘
 
+使用思路基本同上。
+
+### 下载安装傲梅分区助手
+
+傲梅分区助手官网：<https://www.disktool.cn/>
+
+我们[下载](https://www.disktool.cn/download.html)“绿色版”（免安装，可直接运行）。我们需要花点时间找到“PartAssist.exe”（你那里可能是 `PartAssist`）。右键单击，点击打开。
+
+![傲梅分区助手](../.gitbook/assets/aomei1.png)
+
+>**技巧**
+>
+>专业版会提示需要使用码，但是 **无需** 关注其微信公众号，在使用码框中填入数字“1122”即可。参见 [傲梅分区助手常见问题解答](https://www.disktool.cn/faq/partition-assistant.html)，“分区助手使用码：1122”。
+>
+>![傲梅分区助手专业版使用码](../.gitbook/assets/aomei2.png)
+
+### 判断 U 盘设备
+
+你可以通过以下信息判断是否是 U 盘（看不见的话，用鼠标往下滑）：
+
+![傲梅分区助手](../.gitbook/assets/aomei3.png)
+
+打开“属性与健康”：
+
+![傲梅分区助手](../.gitbook/assets/aomei4.png)
+
+观察接口：
+
+![傲梅分区助手](../.gitbook/assets/aomei5.png)
+
+### 还原 U 盘启动盘
+
+#### 删除所有分区
+
+选中 U 盘设备，右键单击“删除所有分区”
+
+![傲梅分区助手](../.gitbook/assets/aomei6.png)
+
+“删除所有分区”，在确认后点击“确定”
+
+![傲梅分区助手](../.gitbook/assets/aomei7.png)
+
+然后显示如下，点击左上角“提交”，确认上述修改。
+
+![傲梅分区助手](../.gitbook/assets/aomei8.png)
+
+点击“执行”
+
+![傲梅分区助手](../.gitbook/assets/aomei9.png)
+
+确认。
+
+![傲梅分区助手](../.gitbook/assets/aomei9-1.png)
+
+分区删除完毕。
+
+![傲梅分区助手](../.gitbook/assets/aomei10.png)
+
+
+#### 创建新分区
+
+点击底部的 U 盘，右键单击，选择“创建分区”
+
+![傲梅分区助手](../.gitbook/assets/aomei11.png)
+
+将文件系统改为“exFAT”，确定，
+
+![傲梅分区助手](../.gitbook/assets/aomei12.png)
+
+然后点击左上角的提交。
+
+![傲梅分区助手](../.gitbook/assets/aomei13.png)
+
+进一步确认：
+
+![傲梅分区助手](../.gitbook/assets/aomei14.png)
+
+执行：
+
+![傲梅分区助手](../.gitbook/assets/aomei15.png)
+
+
+可以看到，已经自动分配了盘符“E”，现在 U 盘是 E 盘。
+
+![傲梅分区助手](../.gitbook/assets/aomei16.png)
