@@ -48,7 +48,7 @@ DiskGenius 官网：<https://www.diskgenius.cn/>，该软件有收费功能，�
 
 - 通过容量判断：64G U 盘一般在 Windows/Linux 中显示为 58G（macOS 中为 64G）。
 - 通过盘符判断：在下图中，你也可以通过“EFISYS(E:)”来判断（E 盘），这就是使用 Rufus 制作的 U 盘启动盘。
-- 通过 DiskGenius 显示的接口判断：在下图中，你从顶部的“硬盘 1 接口 USB”中的“USB”也可以看出这是 USB 设备，即可能是 U 盘。
+- 通过 DiskGenius 显示的接口判断：在下图中，你从顶部的“硬盘 1 接口:USB”中的“USB”也可以看出这是 USB 设备，即可能是 U 盘。
 
 ![DiskGenius](../.gitbook/assets/usb-diskgenius6.png)
 
@@ -91,7 +91,11 @@ DiskGenius 官网：<https://www.diskgenius.cn/>，该软件有收费功能，�
 
 ![DiskGenius](../.gitbook/assets/usb-diskgenius15.png)
 
+打开资源管理器：
+
 ![DiskGenius](../.gitbook/assets/usb-diskgenius16.png)
 
-
 恢复完成。
+
+
+
