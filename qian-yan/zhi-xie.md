@@ -85,7 +85,8 @@ Ubuntu 吧前吧主 Simple 曾建议修改项目的章节文件名与许可协�
 - [魔王酱](https://github.com/maou-sama-desu)  
 - 🎀🌸星不萌🌸🎀（贴吧账户）  
 - 雨天
-  
+- [玟茵开源社区](https://www.wenyinos.com/)
+
 ## 开源项目
 
 本项目部署过程中还使用了若干开源项目，我们对其作者表示感谢。
