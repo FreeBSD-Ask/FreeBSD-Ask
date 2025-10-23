@@ -5,13 +5,12 @@ on:
     types: [opened, reopened]
   pull_request:
     types: [opened, ready_for_review, reopened, synchronize]
-  repository_dispatch:
   workflow_dispatch:
 
 jobs:
   assign-issue:
     runs-on: ubuntu-latest
-    if: github.event_name == 'issues'
+    if: github.event_name == 'issues' || github.event_name == 'workflow_dispatch'
     steps:
       - uses: pozil/auto-assign-issue@v2.2.0
         with:
@@ -21,7 +20,7 @@ jobs:
 
   assign-pr:
     runs-on: ubuntu-latest
-    if: github.event_name == 'pull_request'
+    if: github.event_name == 'pull_request' || github.event_name == 'workflow_dispatch'
     steps:
       - name: Auto Assign PR
         uses: kentaro-m/auto-assign-action@v2.0.0
