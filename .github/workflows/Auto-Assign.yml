@@ -2,9 +2,9 @@ name: 🔗 自动分配 issue & PR
 
 on:
   issues:
-    types: [opened]
+    types: [opened, reopened]
   pull_request:
-    types: [opened, ready_for_review]
+    types: [opened, ready_for_review, reopened, synchronize]
   repository_dispatch:
   workflow_dispatch:
 
