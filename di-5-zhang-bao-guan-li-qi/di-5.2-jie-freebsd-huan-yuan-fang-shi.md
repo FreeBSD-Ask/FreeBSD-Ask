@@ -35,6 +35,93 @@
 
 FreeBSD 中 pkg 源分为系统级和用户级两个配置文件。**不建议**直接修改 `/etc/pkg/FreeBSD.conf` ~~但是太麻烦啦，一般我都是直接改这个文件的~~，因为该文件会随着基本系统的更新而发生改变。
 
+### 理解 quarterly 季度分支
+
+FreeBSD 的 pkg 分为 quarterly（季度，由 Ports 的 XXXX.QY 分支构建而来）分支与 latest （实时更新，由 Ports 的 main 分支构建而来）分支两个源。quarterly 现在是 FreeBSD 默认的 pkg 软件分支。
+
+```sh
+root@ykla:/home/ykla # git clone https://git.FreeBSD.org/ports.git /usr/ports # 拉取 Ports
+正克隆到 '/usr/ports'...
+remote: Enumerating objects: 6715646, done.
+remote: Counting objects: 100% (936/936), done.
+remote: Compressing objects: 100% (120/120), done.
+remote: Total 6715646 (delta 923), reused 816 (delta 816), pack-reused 6714710 (from 1)
+接收对象中: 100% (6715646/6715646), 1.50 GiB | 10.26 MiB/s, 完成.
+处理 delta 中: 100% (4065984/4065984), 完成.
+正在更新文件: 100% (168004/168004), 完成.
+root@ykla:/home/ykla # cd /usr/ports/ # 切换到 git 的 Ports 路径
+root@ykla:/usr/ports # git branch -a # 列出本地所有分支
+* main
+  remotes/origin/2014Q1
+  remotes/origin/2014Q2
+  remotes/origin/2014Q3
+  remotes/origin/2014Q4
+
+     ……省略一部分……
+
+  remotes/origin/2025Q2
+  remotes/origin/2025Q3
+  remotes/origin/2025Q4
+  remotes/origin/HEAD -> origin/main # 可以看到 main 是默认分支
+  remotes/origin/main
+root@ykla:/usr/ports # git for-each-ref --sort=-committerdate --format='%(committerdate:short) %(authorname) %(refname:short) %(objectname:short)' refs/remotes/ # 列出所有分支及最后提交者与时间 ①
+2025-10-24 Hiroki Tagato origin be5283280c16
+2025-10-24 Hiroki Tagato origin/main be5283280c16
+2025-10-23 Colin Percival origin/2025Q4 060d3d65fcbb
+2025-10-14 Bryan Drewery origin/2025Q3 9f09f84b2dd5
+2025-07-01 FiLiS origin/2025Q2 c339266c40e5
+
+  ……省略一部分……
+
+2015-07-23 Palle Girgensohn origin/2015Q2 7d7c2271f6c9
+2015-04-09 Alonso Schaich origin/2015Q1 5bd325869bde
+2014-10-01 Bryan Drewery origin/2014Q3 a0ccd6f83108
+2014-06-28 Thomas Zander origin/2014Q2 a3377806e58e
+2014-03-29 Lars Engels origin/2014Q1 5f4d6e1d6b07
+root@ykla:/usr/ports # git merge-base origin/main origin/2025Q4 # 查找两个分支的最近共同祖先 commit
+6c256c6adb790f0588b920d41a5fe4dfa550079f
+root@ykla:/usr/ports # git branch -r --contains 6c256c6adb790f0588b920d41a5fe4dfa550079f # 出哪些远程分支历史中包含此 commit ②
+  origin/2025Q4
+  origin/HEAD -> origin/main
+  origin/main
+root@ykla:/usr/ports # for branch in $(git branch -r | grep -v HEAD); do # 查看分支创建的时间 ③
+>   mb=$(git merge-base origin/main $branch)
+>   date=$(git show -s --format='%ci' $mb)
+>   echo "$branch created around $date"
+> done
+
+origin/2014Q1 created around 2013-12-16 08:00:15 +0000
+origin/2014Q2 created around 2014-04-01 12:02:40 +0000
+origin/2014Q3 created around 2014-07-01 10:13:26 +0000
+origin/2014Q4 created around 2014-10-01 06:43:32 +0000
+origin/2015Q1 created around 2015-01-01 14:35:03 +0000
+origin/2015Q2 created around 2015-04-01 12:19:37 +0000
+origin/2015Q3 created around 2015-07-01 12:12:08 +0000
+origin/2015Q4 created around 2015-10-01 19:24:12 +0000
+
+……省略一部分……
+
+origin/2024Q4 created around 2024-10-07 20:46:12 +0200
+origin/2025Q1 created around 2025-01-05 11:22:53 +0100
+origin/2025Q2 created around 2025-04-01 12:58:51 +0200
+origin/2025Q3 created around 2025-07-01 22:32:34 +0300
+origin/2025Q4 created around 2025-10-01 21:27:17 +0200
+origin/main created around 2025-10-24 12:43:02 +0900
+```
+
+
+其中，quarterly 的内容是由 main 分支（latest）的提交回溯而来，每年的 1 月、4 月、7 月、10 月③会发布新的分支（从特定时间的 main 分支切出来①），形如 `2014Q3`、`2025Q1`，这是为了便于通过 git 直接拉取所需的分支，但 Ports 管理团队（portmgr）只会维护最新分支，旧分支也不会允许任何合并。②
+
+quarterly 实际上类似于 Debian 的 Stable 版本，此处的 Stable 不仅仅代表“稳定”，而是“固定”。我们有必要区分“稳定”和“固定”两个词语：
+
+根据 [Merriam‑Webster](https://www.merriam-webster.com/dictionary/stable) 和 [Cambridge Dictionary](https://dictionary.cambridge.org/us/dictionary/english/stable)，Stable 有“fixed”（固定）的意思。我们来看一下《现代汉语词典（第7版）》第 1374 页，就会发现“稳定”第一个释义被解释为“形容词，稳定安固，没有变动”；第 470 页载“固定”为“动词，不变动或不移动（跟‘流动’相对）”。所以“固定”是“稳定”的一种手段，“稳定”是一种结果。
+
+>**技巧**
+>
+>Debian 是通过 **固定** 软件包的版本，仅接受安全更新不接受功能更新来实现的 **稳定**，手段是其软件源是 **固定**，Stable 系统的软件源也是 Stable 分支的——Debian 还有 testing 等分支。我们可以看到常见发行版是通过 **固定** 软件来实现的 **Stable** 版本。由于这些软件包已经历经了从 unstable（即 sid，Ubuntu 即基于此）testing 等多个分支的测试和发展，软件包自然比较 **稳定**。而且在 **Stable** 版本的系统生命周期内，任何软件基本上都不会得到大版本更新和功能更新。参见 [DebianStability](https://wiki.debian.org/DebianStability)（看起来是稳定的意思）、[Chapter 3. Choosing a Debian distribution](https://www.debian.org/doc/manuals/debian-faq/choosing.en.html#s3.1.1)（实际上是固定的意思），中文版在 [第 3 章 选择一个 Debian 发布版本](https://www.debian.org/doc/manuals/debian-faq/choosing.zh-cn.html)、[2.2. Are there package upgrades in "stable"?](https://www.debian.org/doc/manuals/debian-faq/getting-debian.en.html#updatestable) 指出软件不会有功能性更新。
+
+FreeBSD pkg 的 quarterly 分支也试图实现相同的目的（提供可预测和稳定的用户体验），也是通过 **非功能性更新** 来实现的——除非涉及 Ports 框架、安全更新（故并非完全禁止版本更替）、简单错误修复（构建、编译、打包）等。任何功能性更新都不会被回溯到 quarterly 分支。可以看出 FreeBSD 的 quarterly 也同时兼有稳定和固定的双重含义。
+
 >**注意**
 >
 >并非所有源都有 `quarterly` 和 `latest`，具体请看 <https://pkg.freebsd.org/> 。也并非为所有架构都提供了 pkg 源，与平台支持等级挂钩。
