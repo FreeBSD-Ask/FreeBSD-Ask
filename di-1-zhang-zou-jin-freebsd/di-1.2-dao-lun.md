@@ -1,5 +1,106 @@
 # 1.2 FreeBSD 导论
 
+
+## FreeBSD 项目宗旨
+
+FreeBSD 项目致力于提供一款真正的自由软件，实践自由软件的使命：使 FreeBSD 的代码得到最大程度的利用，让所有人——无论其目的为何——都能从中受益。简而言之，“只求我为人人，不求人人为我”，这正是我们热情拥护的宗旨。
+
+在 FreeBSD 项目的源代码中包含部分以 GNU 通用公共许可证（GPL）和 GNU 宽通用公共许可证（LGPL）授权的软件，FreeBSD 项目持续努力减少其比重。尽管这些许可证要求开源，而非闭源，但它们仍带来一定的法律挑战和额外的复杂性。为了更好地实现 FreeBSD 的宗旨，尽可能提供无附加条件的软件，从而减少在商业使用中的复杂性，FreeBSD 项目在可能的情况下，更倾向于采用限制更少的 BSD 许可证。
+
+## FreeBSD 版本介绍
+
+已知 FreeBSD 有如下版本（或阶段）：alpha、rc、beta、release、current、stable。
+
+**release** 版本是适用于生产环境的，即一般意义上的 **稳定版** 或者说 LTS。而 ***stable*** 和 ***current*** 都是 **开发分支**，都是 **不稳定的**（稳定与不稳定是相对的，[Netflix 几乎所有节点都运行着 **current**](https://freebsdfoundation.org/netflix-case-study/)），一般情况下不建议将其用于生产环境。
+
+>**注意**
+>
+>FreeBSD 的 ***stable*** 与一般 Linux 发行版的“稳定版”之概念并不一致，反而是一种 **不稳定** 的“开发版”。
+>
+>FreeBSD 的 ***stable*** 的真实意思是该分支的 ABI（Application Binary Interface，应用程序二进制接口）是稳定的。
+>
+> ——参见 [FreeBSD Glossary STABLE](https://wiki.freebsd.org/Glossary#STABLE)
+
+alpha 是 current 进入 release 的第一步。具体过程是 current --> alpha（进入 stable 分支）--> beta --> rc --> release。
+
+current 相对稳定后（即 MFC 最短三天，MFC 即 `Merge From Head`，类似向后移植 `backporting`）会推送到 stable，但是不保证二者没有大的 bug。参见 [FreeBSD Release Engineering](https://docs.freebsd.org/en/articles/freebsd-releng/)。
+
+
+>**警告**
+>
+>使用非生产版本（如 CURRENT、STABLE、Alpha、BETA、RC 等非 RELEASE 版本）的 FreeBSD 的用户会被社区推定为需要具有一定的探索精神，关注开发进展和邮件列表的意愿以及动手去做的潜能，并且拥有可以积极反馈 Bug 的乐观心态。这对大多数读者来说都是困难的且无必要的。请你始终使用 RELEASE！
+
+![FreeBSD 版本更迭](../.gitbook/assets/bsd-release.png)
+
+>**警告**
+>
+>上图并不严谨，X.0-RELEASE 其实来自 X-STABLE；X-STABLE 直接由 X-1.CURRENT 转化而来。暂无力修改。待定。
+
+>**注意**
+>
+>只有 alpha、rc、beta 和 release（[且是一级架构](https://www.freebsd.org/platforms/)）才能使用命令 `freebsd-update` 更新系统，其余版本系统均需要通过源代码编译的方式（或使用二进制的 pkgbase）更新系统。
+>
+>FreeBSD 开发计划准备删除命令 `freebsd-update`，一律改用 pkgbase。
+>
+> ——参见 [FreeBSD Manual Pages freebsd-update](https://man.freebsd.org/cgi/man.cgi?freebsd-update)
+
+
+## FreeBSD 开发模型
+
+![](../.gitbook/assets/model.png)
+
+### 存储库
+
+FreeBSD 项目历史悠久，其使用的版本控制工具历经了 CVS、SVN、Git。目前使用 Git 进行协作开发。
+
+FreeBSD 项目的存储库分为三个：freebsd src（源代码）、freebsd ports（Port 软件移植）、freebsd doc（文档）。三个项目地位相等。
+
+### FreeBSD 基金会
+
+FreeBSD 基金会是美国科罗拉多州博尔德县的一家 501(c)3 非营利机构，负责接收捐赠，支持项目开发，充当 FreeBSD 项目法律实体，会议赞助，宣传和推广 FreeBSD 项目。基金会的所有权力集中在董事会，董事由现有董事会成员选举产生（新董事仅限现任董事提名），每位董事任期 1 年，可连选连任。
+
+在大部分国家，FreeBSD 商标都由 FreeBSD 基金会持有。
+
+### FreeBSD 社区
+
+FreeBSD 项目通过网络远程开发。
+
+FreeBSD 社区由来自全世界各地的开发者和用户构成。FreeBSD 社区并不是一个法律实体，也无固定办事处。FreeBSD 社区不仅仅是英文世界的声音，我们还有中文社区、俄语社区、韩语社区、日语社区等。
+
+### 提交者
+
+提交者是那些有权力直接写入 FreeBSD 存储库的人。要想成为提交者，须经过导师机制，必须由已有提交者推荐。为了防范潜在的安全风险，提交者并非终身制：对于 freebsd src 和 freebsd doc，提交者在 18 个月应有一次提交；对于 freebsd ports 则是 12 个月。非活跃提交者的权限将被暂停，但可以申请恢复。
+
+### FreeBSD 核心小组
+
+FreeBSD 核心小组是 FreeBSD 项目的最高领导机关，共计 9 人，FreeBSD 核心小组采取集体领导制度，每位成员分管不同的子项目。FreeBSD 核心小组负责授予或撤销提交者权限及账户、执行冲突守则（CoC）、管理项目子团队等。
+
+FreeBSD 核心小组选举每两年举行一次，可以连选连任。只有在过去 12 个月内有过提交的提交者（视为活跃提交者）才拥有选举权和被选举权。活跃开发者可以表决罢免 FreeBSD 核心小组成员。此外，核心团队还负责招募新的核心团队成员，以替代离任的成员。
+
+在历史上并不会出现每两年所有核心小组所有成员都被完全轮替的情形（即所有人都是新手），一位核心小组成员在实践上会连任两届或更多届。核心小组成员和 FreeBSD 董事会成员往往是交叉接替任职。
+
+FreeBSD 核心小组成员并不直接从中获取任何利益，同样也都是志愿者。有些成员可能会接受 FreeBSD 基金会的雇佣或赞助来参与专门开发某项目。
+
+## FreeBSD 当前困境
+
+- 大型技术企业对 FreeBSD 支持不足，如长久以来都未提供 GitHub actions 的支持，Nvidia CUDA 的忽视，在 AI 与 LLM 时代的全面溃败；
+- FreeBSD 项目缺乏对欧洲和北美以外地区的关注与投入；
+- 相比其他开源项目中仁慈的终身独裁者，集体领导在 FreeBSD 项目中并未显出任何特色，反而造成了“三个和尚没水喝”的局面。分管 FreeBSD 子项目的核心成员对项目本身也缺乏应有的了解和关注。面对一些小问题都无法承担责任；
+- FreeBSD 项目整体过于保守，新技术的引入往往需要数年跨越多个大版本。往往要等待已有技术轮替一到两代后才会引入；但这并不显得多么有远见，引入后也往往无人问津并且没有相关后续维护与开发；
+- FreeBSD 系统总体上不够现代化，缺乏现代操作系统应有的实现。尤其是在嵌入式方面比较差。
+- FreeBSD 没有为用户提供带桌面的基本系统；
+- FreeBSD 的驱动支持较差；
+- FreeBSD 的资料相对较少；
+- FreeBSD 的开发者非常少，且对外部贡献者严重缺乏时间感；
+- FreeBSD 基金会、期刊、Bug 报告等对外部贡献者严重缺乏时间感；
+- FreeBSD 文档项目严重停滞十年之久，个人贡献者除季度报告外的任何提交在事实上都不会被接纳；src ports 也一样难以接纳新的个人贡献者。
+- 尚未完全支持安全启动（Secure boot）
+- 对 TPM 的支持有限
+- 由于 Linuxism，导致很多软件比如 NetworkManager 无法移植，桌面环境的组件也无法完善；
+- 由于 FreeBSD 项目的基本目标和设计问题，FreeBSD 基本系统不包含 Linux 发行版中常用的一些软件和命令；
+- FreeBSD 两款原生的文件系统 ZFS 与 UFS 都只能扩大不能缩小；
+- FreeBSD 缺乏上层应用软件设计，即使底层有类似 docker 的技术 jail 也没能发展起来；FreeBSD 的虚拟化技术 Bhyve 也需要改进。
+
 ## FreeBSD 怎么读
 
 目前社区共识和普遍的读法是：/ˌfriːˌbiːɛsˈdiː/，即读作“Free（/friː/）+ B（/biː/）+ S（/ɛs/）+ D（/diː/）”，即类似于“福瑞/必/哎司/地”。
@@ -189,101 +290,7 @@ FreeBSD 不仅仅是 **在生命周期内不变**，大版本更新也具有连�
 
 王波《FreeBSD 在中国的未来》。引自《FreeBSD 使用大全》第二版，机械工业出版社，2002，ISBN 9787111102861
 
-## FreeBSD 项目宗旨
 
-FreeBSD 项目致力于提供一款真正的自由软件，实践自由软件的使命：使 FreeBSD 的代码得到最大程度的利用，让所有人——无论其目的为何——都能从中受益。简而言之，“只求我为人人，不求人人为我”，这正是我们热情拥护的宗旨。
-
-在 FreeBSD 项目的源代码中包含部分以 GNU 通用公共许可证（GPL）和 GNU 宽通用公共许可证（LGPL）授权的软件，FreeBSD 项目持续努力减少其比重。尽管这些许可证要求开源，而非闭源，但它们仍带来一定的法律挑战和额外的复杂性。为了更好地实现 FreeBSD 的宗旨，尽可能提供无附加条件的软件，从而减少在商业使用中的复杂性，FreeBSD 项目在可能的情况下，更倾向于采用限制更少的 BSD 许可证。
-
-## FreeBSD 版本介绍
-
-已知 FreeBSD 有如下版本（或阶段）：alpha、rc、beta、release、current、stable。
-
-**release** 版本是适用于生产环境的，即一般意义上的 **稳定版** 或者说 LTS。而 ***stable*** 和 ***current*** 都是 **开发分支**，都是 **不稳定的**（稳定与不稳定是相对的，[Netflix 几乎所有节点都运行着 **current**](https://freebsdfoundation.org/netflix-case-study/)），一般情况下不建议将其用于生产环境。
-
->**注意**
->
->FreeBSD 的 ***stable*** 与一般 Linux 发行版的“稳定版”之概念并不一致，反而是一种 **不稳定** 的“开发版”。
->
->FreeBSD 的 ***stable*** 的真实意思是该分支的 ABI（Application Binary Interface，应用程序二进制接口）是稳定的。
->
-> ——参见 [FreeBSD Glossary STABLE](https://wiki.freebsd.org/Glossary#STABLE)
-
-alpha 是 current 进入 release 的第一步。具体过程是 current --> alpha（进入 stable 分支）--> beta --> rc --> release。
-
-current 相对稳定后（即 MFC 最短三天，MFC 即 `Merge From Head`，类似向后移植 `backporting`）会推送到 stable，但是不保证二者没有大的 bug。参见 [FreeBSD Release Engineering](https://docs.freebsd.org/en/articles/freebsd-releng/)。
-
-
-![FreeBSD 版本更迭](../.gitbook/assets/bsd-release.png)
-
->**警告**
->
->上图并不严谨，X.0-RELEASE 其实来自 X-STABLE；X-STABLE 直接由 X-1.CURRENT 转化而来。暂无力修改。待定。
-
->**注意**
->
->只有 alpha、rc、beta 和 release（[且是一级架构](https://www.freebsd.org/platforms/)）才能使用命令 `freebsd-update` 更新系统，其余版本系统均需要通过源代码编译的方式（或使用二进制的 pkgbase）更新系统。
->
->FreeBSD 开发计划准备删除命令 `freebsd-update`，一律改用 pkgbase。
->
-> ——参见 [FreeBSD Manual Pages freebsd-update](https://man.freebsd.org/cgi/man.cgi?freebsd-update)
-
-
-## FreeBSD 开发模型
-
-![](../.gitbook/assets/model.png)
-
-### 存储库
-
-FreeBSD 项目历史悠久，其使用的版本控制工具历经了 CVS、SVN、Git。目前使用 Git 进行协作开发。
-
-FreeBSD 项目的存储库分为三个：freebsd src（源代码）、freebsd ports（Port 软件移植）、freebsd doc（文档）。三个项目地位相等。
-
-### FreeBSD 基金会
-
-FreeBSD 基金会是美国科罗拉多州博尔德县的一家 501(c)3 非营利机构，负责接收捐赠，支持项目开发，充当 FreeBSD 项目法律实体，会议赞助，宣传和推广 FreeBSD 项目。基金会的所有权力集中在董事会，董事由现有董事会成员选举产生（新董事仅限现任董事提名），每位董事任期 1 年，可连选连任。
-
-在大部分国家，FreeBSD 商标都由 FreeBSD 基金会持有。
-
-### FreeBSD 社区
-
-FreeBSD 项目通过网络远程开发。
-
-FreeBSD 社区由来自全世界各地的开发者和用户构成。FreeBSD 社区并不是一个法律实体，也无固定办事处。FreeBSD 社区不仅仅是英文世界的声音，我们还有中文社区、俄语社区、韩语社区、日语社区等。
-
-### 提交者
-
-提交者是那些有权力直接写入 FreeBSD 存储库的人。要想成为提交者，须经过导师机制，必须由已有提交者推荐。为了防范潜在的安全风险，提交者并非终身制：对于 freebsd src 和 freebsd doc，提交者在 18 个月应有一次提交；对于 freebsd ports 则是 12 个月。非活跃提交者的权限将被暂停，但可以申请恢复。
-
-### FreeBSD 核心小组
-
-FreeBSD 核心小组是 FreeBSD 项目的最高领导机关，共计 9 人，FreeBSD 核心小组采取集体领导制度，每位成员分管不同的子项目。FreeBSD 核心小组负责授予或撤销提交者权限及账户、执行冲突守则（CoC）、管理项目子团队等。
-
-FreeBSD 核心小组选举每两年举行一次，可以连选连任。只有在过去 12 个月内有过提交的提交者（视为活跃提交者）才拥有选举权和被选举权。活跃开发者可以表决罢免 FreeBSD 核心小组成员。此外，核心团队还负责招募新的核心团队成员，以替代离任的成员。
-
-在历史上并不会出现每两年所有核心小组所有成员都被完全轮替的情形（即所有人都是新手），一位核心小组成员在实践上会连任两届或更多届。核心小组成员和 FreeBSD 董事会成员往往是交叉接替任职。
-
-FreeBSD 核心小组成员并不直接从中获取任何利益，同样也都是志愿者。有些成员可能会接受 FreeBSD 基金会的雇佣或赞助来参与专门开发某项目。
-
-## FreeBSD 当前困境
-
-- 大型技术企业对 FreeBSD 支持不足，如长久以来都未提供 GitHub actions 的支持，Nvidia CUDA 的忽视，在 AI 与 LLM 时代的全面溃败；
-- FreeBSD 项目缺乏对欧洲和北美以外地区的关注与投入；
-- 相比其他开源项目中仁慈的终身独裁者，集体领导在 FreeBSD 项目中并未显出任何特色，反而造成了“三个和尚没水喝”的局面。分管 FreeBSD 子项目的核心成员对项目本身也缺乏应有的了解和关注。面对一些小问题都无法承担责任；
-- FreeBSD 项目整体过于保守，新技术的引入往往需要数年跨越多个大版本。往往要等待已有技术轮替一到两代后才会引入；但这并不显得多么有远见，引入后也往往无人问津并且没有相关后续维护与开发；
-- FreeBSD 系统总体上不够现代化，缺乏现代操作系统应有的实现。尤其是在嵌入式方面比较差。
-- FreeBSD 没有为用户提供带桌面的基本系统；
-- FreeBSD 的驱动支持较差；
-- FreeBSD 的资料相对较少；
-- FreeBSD 的开发者非常少，且对外部贡献者严重缺乏时间感；
-- FreeBSD 基金会、期刊、Bug 报告等对外部贡献者严重缺乏时间感；
-- FreeBSD 文档项目严重停滞十年之久，个人贡献者除季度报告外的任何提交在事实上都不会被接纳；src ports 也一样难以接纳新的个人贡献者。
-- 尚未完全支持安全启动（Secure boot）
-- 对 TPM 的支持有限
-- 由于 Linuxism，导致很多软件比如 NetworkManager 无法移植，桌面环境的组件也无法完善；
-- 由于 FreeBSD 项目的基本目标和设计问题，FreeBSD 基本系统不包含 Linux 发行版中常用的一些软件和命令；
-- FreeBSD 两款原生的文件系统 ZFS 与 UFS 都只能扩大不能缩小；
-- FreeBSD 缺乏上层应用软件设计，即使底层有类似 docker 的技术 jail 也没能发展起来；FreeBSD 的虚拟化技术 Bhyve 也需要改进。
 
 ## FreeBSD 简史
 
