@@ -132,7 +132,7 @@ root@ykla:/usr/ports # git checkout . # 放弃本地修改
 root@ykla:/usr/ports # git pull
 ```
 
-### 故障排除与未竟事宜
+### 附录：时间错误导致的证书无效
 
 
 ```sh
@@ -637,4 +637,41 @@ DISABLE_SIZE=yes
 ### 参考文献
 
 - [ports --contributed applications](https://man.freebsd.org/cgi/man.cgi?query=ports&sektion=7)，`FETCH_CMD` 的出处，同时也是参数 `BATCH` 的出处。
+
+
+## 故障排除与未竟事宜
+
+### `autoconf-2.72 Invalid perl5 version 5.42.`
+
+也可以理解为“xxx-yy Invalid zz version aa”式报错。
+
+实例，在使用 Ports 安装 openjdk21 时报错如下：
+
+```sh
+[root@Server /usr/ports/java/openjdk21]# make install clean
+===> openjdk21-21.0.4+7.1 depends on executable: zip - found
+===> openjdk21-21.0.4+7.1 depends on package: autoconf>0 - not found ①
+===> autoconf-2.72 Invalid perl5 version 5.42. ②
+*** Error code 1
+
+Stop.
+make[1]: stopped in /usr/ports/devel/autoconf
+*** Error code 1
+
+Stop.
+make: stopped in /usr/ports/java/openjdk21
+```
+
+观察整个流程可以发现，openjdk21 依赖 autoconf，但系统中没有。于是递归查找 autoconf 的依赖，发现 autoconf 依赖 perl5；结合 ② 可以发现系统中已有 perl5，但是报错“Invalid version”，即 perl5 的版本不对。
+
+此问题，一般需要先更新 Ports，然后再通过 `pkg install -f perl5` 或 `pkg upgrade` 来更新一下 perl5 的版本即可解决。
+
+
+#### 参考文献
+
+- [Invalid perl5 version 5.32](https://forums.freebsd.org/threads/invalid-perl5-version-5-32.77628/)，同样的问题
+
+
+
+
 
