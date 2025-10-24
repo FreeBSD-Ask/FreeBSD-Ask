@@ -114,7 +114,7 @@ origin/main created around 2025-10-24 12:43:02 +0900
 
 quarterly 实际上类似于 Debian 的 Stable 版本，此处的 Stable 不仅仅代表“稳定”，而是“固定”。我们有必要区分“稳定”和“固定”两个词语：
 
-根据 [Merriam‑Webster](https://www.merriam-webster.com/dictionary/stable) 和 [Cambridge Dictionary](https://dictionary.cambridge.org/us/dictionary/english/stable)，Stable 有“fixed”（固定）的意思。我们来看一下《现代汉语词典（第7版）》第 1374 页，就会发现“稳定”第一个释义被解释为“形容词，稳定安固，没有变动”；第 470 页载“固定”为“动词，不变动或不移动（跟‘流动’相对）”。所以“固定”是“稳定”的一种手段，“稳定”是一种结果。
+根据 [Merriam‑Webster](https://www.merriam-webster.com/dictionary/stable) 和 [Cambridge Dictionary](https://dictionary.cambridge.org/us/dictionary/english/stable)，Stable 有“fixed”（固定）的意思。我们来看一下《现代汉语词典（第7版）》第 1374 页，就会发现“稳定”第一个释义被解释为“形容词，稳定安固，没有变动”；第 470 页载“固定”为“动词，不变动或不移动（跟‘流动’相对）”。所以“固定”是“稳定”的一种手段，“稳定”是一种目的。
 
 >**技巧**
 >
