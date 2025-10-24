@@ -117,3 +117,7 @@ FreeBSD 官方联系方式：
 
 - [mirror-admin@freebsd.org](mailto:mirror-admin@freebsd.org)
 - [freebsd-hubs@freebsd.org](mailto:freebsd-hubs@freebsd.org)，这个邮件列表似乎已经死亡，没有任何人回复和收发邮件。
+
+## 其他思路或解决方案
+
+自行使用 Poudriere 进行构建并分发。如 [RISC-V FreeBSD-pkg软件源上线！11619+ 预编译包助力快速构建FreeBSD环境](https://mp.weixin.qq.com/s/ngv3eZh1TEVgk3Pn3XfRBg)（已跑路）
