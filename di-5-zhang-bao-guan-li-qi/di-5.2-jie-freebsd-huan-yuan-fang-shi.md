@@ -26,14 +26,17 @@
 > **注意**
 >
 > [NJU](https://github.com/nju-lug/NJU-Mirror-Issue/issues/54) 和 163 均同步自 USTC 而非 FreeBSD 直接上游。
->
-> 请不要官方镜像站和国内非官方镜像站混用。[案例，混用导致 KDE 桌面被删除](https://blog.mxdyeah.top/mxdyeah_blog_post/freebsd_exp_kde6.html)。
+
 
 ## pkg 源：pkg 源提供了二进制软件包
 
 境内的源一般只支持 aarch64（arm64）和 amd64 两个架构。
 
 FreeBSD 中 pkg 源分为系统级和用户级两个配置文件。**不建议**直接修改 `/etc/pkg/FreeBSD.conf` ~~但是太麻烦啦，一般我都是直接改这个文件的~~，因为该文件会随着基本系统的更新而发生改变。
+
+>**警告**
+>
+> 请勿同时启用多个 pkg 镜像站，无论是官方镜像站（如 `pkg.freebsd.org` 与 USTC 混用），还是境内非官方镜像站（如 USTC 和 NJU 混用）都不要混合使用！后果类似于 FreeBSD 季度分支的 Ports 和 latest 分支的 pkg 混用，可能会破坏软件的依赖关系。案例：[混用导致 KDE 桌面被删除](https://blog.mxdyeah.top/mxdyeah_blog_post/freebsd_exp_kde6.html)。
 
 ### 理解 quarterly 季度分支
 
