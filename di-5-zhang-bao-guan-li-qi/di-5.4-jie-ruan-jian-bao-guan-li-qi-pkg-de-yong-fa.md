@@ -267,7 +267,7 @@ Filename: usr/local/lib/libxcb-icccm.so.4.0.0
 
 ## 故障排除与未竟事宜
 
-### `pkg: cached package xxxx.yy: missing or size mismatch, cannot continue Consider running pkg update -f'
+### `pkg: cached package xxxx.yy: missing or size mismatch, cannot continue Consider running 'pkg update -f'`
 
 提示下载软件包校验和不符。此问题一般发生在国内镜像站。
 
