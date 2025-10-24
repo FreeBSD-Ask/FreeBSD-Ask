@@ -20,7 +20,7 @@ chinese		french		lang		polish		UIDs		x11-wm
 comms		ftp		mail		ports-mgmt	ukrainian
 CONTRIBUTING.md	games		Makefile	portuguese	UPDATING
 converters	german		math		print		vietnamese
-ykla@ykla:/usr/ports $ ls databases/ # ② 切换到 databases 数据库分类目录下
+ykla@ykla:/usr/ports $ ls databases/ # 切换到 databases 数据库分类目录下
 adminer						php-xapian
 adodb5						php81-dba
 
