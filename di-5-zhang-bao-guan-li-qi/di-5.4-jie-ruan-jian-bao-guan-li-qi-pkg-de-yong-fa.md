@@ -37,6 +37,19 @@ FreeBSD 二进制包管理器目前是 pkg，即“Package”，软件包的意�
 
 一般来说，如果 Ports 中有这个 Port，但是 pkg 安装没有，等待 7-14 天一般就可以了（构建不出来的包系统会自动发报错给维护者的）。如要立刻安装使用，请使用 Ports。
 
+#### 附录：原子更新的困难与现状
+
+你会经常观察到 FreeBSD 的镜像站（无论是官方的还是非官方的）源存在这样几种情况：
+
+- 一旦 Port 发生更新，就会立刻从软件源撤销该 Port 衍生的 pkg 软件包，直到下次构建出新的 pkg 软件包，而不是保留旧的软件包；
+- 只要开始一次新的构建，旧的软件包不是被临时保留，而是被立刻从 pkg 软件包软件源中删除，直到构建出新版本的 pkg 软件包。
+ 
+理论上的解决方案：如果你保持一个特定阶段的软件包不更新，是固定版本（季度分支），然后直接轮替即可。
+
+问题在于 Port 更新是不定时的。复杂的依赖会破坏一切。有力者可尝试提出新的看法和建议反馈至下方或 [FreeBSD 论坛](https://forums.freebsd.org/)。
+
+参见讨论 [the disappearing pkg issue](https://www.reddit.com/r/freebsd/comments/1nlnwtd/the_disappearing_pkg_issue/)。
+
 ## 安装 pkg
 
 >**技巧**
