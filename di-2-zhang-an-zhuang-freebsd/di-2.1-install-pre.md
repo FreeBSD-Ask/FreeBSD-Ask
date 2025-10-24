@@ -61,7 +61,7 @@
 >
 >随着岁月的流逝，在你下载的时候就不一定要下，也不一定就有 14.2。你只需要选择最顶部的一个 `FreeBSD-X-RELEASE`（这是推荐的适用于生产环境的版本） 即可。`X` 是比 `14.2` 大的值。
 
-**警告**
+>**警告**
 >
 >使用非 RELEASE 的用户应有意愿有时间关注实时的开发动态，浏览邮件列表与 Bug 列表，如：[freebsd-src/UPDATING](https://github.com/freebsd/freebsd-src/blob/main/UPDATING) 及 [freebsd-src/RELNOTES](https://github.com/freebsd/freebsd-src/blob/main/RELNOTES) 等等信息。并且要求用户具备一定的探索能力和动手意愿，否则建议读者使用 RELEASE 版本。
 
