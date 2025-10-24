@@ -267,6 +267,16 @@ Filename: usr/local/lib/libxcb-icccm.so.4.0.0
 
 ## 故障排除与未竟事宜
 
+### `pkg: cached package xxxx.yy: missing or size mismatch, cannot continue Consider running pkg update -f'
+
+提示下载软件包校验和不符。此问题一般发生在国内镜像站。
+
+先 `pkg update -f` 刷新软件源。再试。
+
+若仍然无效，请等待 12 到 24 小时后重试。此问题多见于镜像站正在与上游进行同步。
+
+若 7 天内仍存在问题，请主动联系镜像站进行报告。
+
 
 ### `ld-elf.so.1: Shared object "libmd.so.6" not found, required by "pkg"`
 
