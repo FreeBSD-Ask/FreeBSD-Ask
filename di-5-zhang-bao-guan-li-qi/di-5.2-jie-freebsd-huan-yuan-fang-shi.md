@@ -26,8 +26,10 @@
 > **注意**
 >
 > [NJU](https://github.com/nju-lug/NJU-Mirror-Issue/issues/54) 和 163 均同步自 USTC 而非 FreeBSD 直接上游。
+
+>**警告**
 >
-> 请不要官方镜像站和国内非官方镜像站混用。[案例，混用导致 KDE 桌面被删除](https://blog.mxdyeah.top/mxdyeah_blog_post/freebsd_exp_kde6.html)。
+> 请勿同时启用多个 pkg 镜像站，无论是官方镜像站（如 `pkg.freebsd.org` 与 USTC 混用）和境内非官方镜像站（如 USTC 和 NJU 混用）。案例：[混用导致 KDE 桌面被删除](https://blog.mxdyeah.top/mxdyeah_blog_post/freebsd_exp_kde6.html)。
 
 ## pkg 源：pkg 源提供了二进制软件包
 
