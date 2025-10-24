@@ -24,7 +24,7 @@ current 相对稳定后（即 MFC 最短三天，MFC 即 `Merge From Head`，类
 
 >**警告**
 >
->使用非生产版本（如 CURRENT、STABLE、Alpha、BETA、RC 等非 RELEASE 版本）的 FreeBSD 的用户会被社区推定为需要具有一定的探索精神，关注开发进展和邮件列表的意愿以及动手去做的潜能，并且拥有可以积极反馈 Bug 的乐观心态。这对大多数读者来说都是困难的且无必要的。请你始终使用 RELEASE！
+>使用非生产版本（如 CURRENT、STABLE、Alpha、BETA、RC 等非 RELEASE 版本）的 FreeBSD 的用户会被社区推定为需要具有一定的探索精神，关注开发进展和邮件列表的意愿以及动手去做的潜能，并且拥有可以积极反馈 Bug 的乐观心态。这对大多数读者来说都是困难的且无必要的。如果并不满足上述条件，请你始终使用 RELEASE！
 
 ![FreeBSD 版本更迭](../.gitbook/assets/bsd-release.png)
 
