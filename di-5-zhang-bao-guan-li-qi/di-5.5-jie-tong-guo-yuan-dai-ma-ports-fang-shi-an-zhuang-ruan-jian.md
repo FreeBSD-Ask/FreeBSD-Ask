@@ -1,8 +1,37 @@
 # 5.5 使用 Ports 以源代码方式安装软件
 
-## Ports 与 Port
+## Ports 与 Port 概述
 
-一款软件的相关文件或文件夹的（补丁文件、校验码、Makefile 等）集合（表现为一个文件夹）为一个 Port，所有 Port（移植软件）的集合即 Ports Collection，即 Ports。NetBSD 和 OpenBSD 也使用 Ports（不通用）。
+### Ports 历史
+
+Ports 是一种简单的从源代码（也支持闭源的二进制包）构建软件的框架。由 Jordan K. Hubbard（jkh@FreeBSD.org）创建，最初在公众面前出现于 1994 年 8 月。
+
+```sh
+root@ykla:/usr/ports # git log --reverse --max-parents=0 --pretty=format:"commit: %h%nAuthor: %an%nDate: %ci%n%n%B" # 打印第一次提交
+commit: d27f048e966a
+Author: Jordan K. Hubbard
+Date: 1994-08-21 13:12:57 +0000
+
+Commit my new ports make macros.  Still not 100% complete yet by any means
+but fairly usable at this stage.
+Submitted by:   jkh
+```
+
+“提交了我为 ports 编写的新 Make 宏。虽然还远未完全完善，但目前已经可以较为正常的使用了。”
+
+>**技巧**
+>
+>我们可以看到：对于一个开源项目，无论使用的何种版本控制系统，保留完整的提交记录，是多么地重要。读者慢慢就会发现，这不仅仅是考古上的意义。
+
+NetBSD 和 OpenBSD 也使用 Ports（不通用）。
+
+#### 参考文献
+
+- [\[FreeBSD-Ports-Announce\] Happy 20th birthday FreeBSD ports tree!](https://lists.freebsd.org/pipermail/freebsd-ports-announce/2014-August/000088.html)，2014 庆祝 Ports 20 年，文中还有个庆祝视频。
+
+### Ports 与 Port 释义
+
+一款软件的相关文件或文件夹的（补丁文件、校验码、Makefile 等）集合（表现为一个文件夹）为一个 Port，所有 Port（移植软件）的集合即 Ports Collection 或 Ports Tree，即 Ports。
 
 ```sh
 ykla@ykla: $ cd /usr/ports # 切换到 /usr/ports
@@ -710,8 +739,3 @@ make: stopped in /usr/ports/java/openjdk21
 #### 参考文献
 
 - [Invalid perl5 version 5.32](https://forums.freebsd.org/threads/invalid-perl5-version-5-32.77628/)，同样的问题
-
-
-
-
-
