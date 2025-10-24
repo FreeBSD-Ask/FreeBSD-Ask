@@ -1,12 +1,52 @@
 # 5.5 使用 Ports 以源代码方式安装软件
 
-一款软件的相关文件或文件夹的（补丁文件、校验码、Makefile 等）集合（表现为一个文件夹）为一个 Port，所有 Port（移植软件）的集合即 Ports Collection，即 Ports。
+## Ports 与 Port
 
-NetBSD 和 OpenBSD 也使用 Ports（不通用）。
+一款软件的相关文件或文件夹的（补丁文件、校验码、Makefile 等）集合（表现为一个文件夹）为一个 Port，所有 Port（移植软件）的集合即 Ports Collection，即 Ports。NetBSD 和 OpenBSD 也使用 Ports（不通用）。
+
+```sh
+ykla@ykla: $ cd /usr/ports # 切换到 /usr/ports
+ykla@ykla:/usr/ports $ ls # 列出此目录下所有文件  ①
+accessibility	COPYRIGHT	GIDs		misc		README		www
+arabic		databases	graphics	Mk		russian		x11
+archivers	deskutils	hebrew		MOVED		science		x11-clocks
+astro		devel		hungarian	multimedia	security	x11-drivers
+audio		dns		irc		net		shells		x11-fm
+benchmarks	editors		japanese	net-im		sysutils	x11-fonts
+biology		emulators	java		net-mgmt	Templates	x11-servers
+cad		filesystems	Keywords	net-p2p		textproc	x11-themes
+CHANGES		finance		korean		news		Tools		x11-toolkits
+chinese		french		lang		polish		UIDs		x11-wm
+comms		ftp		mail		ports-mgmt	ukrainian
+CONTRIBUTING.md	games		Makefile	portuguese	UPDATING
+converters	german		math		print		vietnamese
+ykla@ykla:/usr/ports $ ls databases/ # ② 切换到 databases 数据库分类目录下
+adminer						php-xapian
+adodb5						php81-dba
+
+    ……省略一部分……
+
+mongodb60					py-apache-arrow
+mongodb70					py-apsw
+mongodb80					py-asyncmy
+mongosh						py-asyncpg
+ykla@ykla:/usr/ports/databases $ cd databases/postgresql18-server/ # 切换到 postgresql18-server 目录
+ykla@ykla:/usr/ports/databases/postgresql18-server $ ls ②
+distinfo		pkg-descr		pkg-plist-contrib	pkg-plist-pltcl
+files			pkg-install-server	pkg-plist-plperl	pkg-plist-server
+Makefile		pkg-plist-client	pkg-plist-plpython
+```
+
+- ① `/usr/ports` 这个文件夹整体称作 Ports，包括几十种不同的分类目录，每个目录下有若干 Port。
+- ② `/usr/ports/databases/postgresql18-server` 这个文件夹整体称作一个 Port，由 `distinfo`（校验和文件）、`pkg-descr`（软件描述文件）、`Makefile`（主文件，里面有构建方法和版本号及下载方式等）`pkg-plist`（安装的每个文件的列表清单文件及文件权限属组等）`files`（一般是补丁，该 Port 下为安装后的说明文件 `pkg-message`）等文件构成。
+
+之所以叫做“Ports Collection”，移植集合（不应理解为端口集合，参见 [What does 'port' mean in 'develop a port of BSD'?](https://www.reddit.com/r/linuxquestions/comments/ll2q6j/what_does_port_mean_in_develop_a_port_of_bsd)，注：此来源不可信，请求其他来源）是因为这些软件绝大部分都不由 FreeBSD 控制、管理、和维护，Port 提交者主要做的事情是将 FreeBSD 上 Port 更新到上游开发者提供的最新版本，删除上游不再维护的软件 Port。在上游不接受 BSD 特有的 PR 补丁或难以直接通过既有 Ports 框架实现构建的情况下，Port 维护者也需要自行复刻一个分支出来维护（如 editors/vscode）。
+
+## Ports 构建 pkg 软件包的流程
 
 > **注意**
 >
-> ports 和 pkg 可以同时使用，而且大部分人也是这么用的。但是要注意 pkg 的源必须是 latest，否则会存在一些依赖上的问题（比如 ssl）。latest 的源也比主线上的 ports 要出来的晚（是从中编译出来的），因此即使是 latset 源也可能会出现上述问题，总之有问题出现时就卸载那个 pkg 安装的包，重新使用 ports 编译即可。
+> ports 和 pkg 可以同时使用，而且大部分人也是这么用的。但是要注意 pkg 的源必须是 latest，否则会存在一些依赖上的问题（比如 ssl）。latest 的源也比 main 上的 ports 要出来的晚（是从 main 编译出来的），因此即使是 latset 源也可能会出现上述问题，总之有问题出现时就卸载那个 pkg 安装的包，重新使用 ports 编译即可。
 
 >**警告**
 >
