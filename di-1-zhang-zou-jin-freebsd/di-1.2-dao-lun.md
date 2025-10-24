@@ -7,7 +7,7 @@ FreeBSD 项目致力于提供一款真正的自由软件，实践自由软件的
 
 在 FreeBSD 项目的源代码中包含部分以 GNU 通用公共许可证（GPL）和 GNU 宽通用公共许可证（LGPL）授权的软件，FreeBSD 项目持续努力减少其比重。尽管这些许可证要求开源，而非闭源，但它们仍带来一定的法律挑战和额外的复杂性。为了更好地实现 FreeBSD 的宗旨，尽可能提供无附加条件的软件，从而减少在商业使用中的复杂性，FreeBSD 项目在可能的情况下，更倾向于采用限制更少的 BSD 许可证。
 
-## FreeBSD 版本介绍
+## FreeBSD 版本概述
 
 已知 FreeBSD 有如下版本（或阶段）：alpha、rc、beta、release、current、stable。
 
