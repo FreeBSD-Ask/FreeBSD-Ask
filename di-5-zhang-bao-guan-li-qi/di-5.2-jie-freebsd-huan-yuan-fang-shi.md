@@ -126,6 +126,9 @@ FreeBSD pkg 的 quarterly 分支也试图实现相同的目的（提供可预测
 >
 >并非所有源都有 `quarterly` 和 `latest`，具体请看 <https://pkg.freebsd.org/> 。也并非为所有架构都提供了 pkg 源，与平台支持等级挂钩。
 
+#### 参考文献
+
+- [Wiki QuarterlyBranch](https://wiki.freebsd.org/Ports/QuarterlyBranch)
 
 ### pkg 换源
 
