@@ -38,7 +38,7 @@ Makefile		pkg-plist-client	pkg-plist-plpython
 ```
 
 - ① `/usr/ports` 这个文件夹整体称作 Ports，包括几十种不同的分类目录，每个目录下有若干 Port。
-- ② `/usr/ports/databases/postgresql18-server` 这个文件夹整体称作一个 Port，由 `distinfo`（校验和文件）、`pkg-descr`（软件描述文件）、`Makefile`（主文件，里面有构建方法和版本号及下载方式等）`pkg-plist`（安装的每个文件的列表清单文件）`files`（一般是补丁，该 Port 下为安装后的说明文件 `pkg-message`）等文件构成。
+- ② `/usr/ports/databases/postgresql18-server` 这个文件夹整体称作一个 Port，由 `distinfo`（校验和文件）、`pkg-descr`（软件描述文件）、`Makefile`（主文件，里面有构建方法和版本号及下载方式等）`pkg-plist`（安装的每个文件的列表清单文件及文件权限属组等）`files`（一般是补丁，该 Port 下为安装后的说明文件 `pkg-message`）等文件构成。
 
 ## Ports 构建 pkg 软件包的流程
 
