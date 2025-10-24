@@ -39,7 +39,7 @@ FreeBSD 中 pkg 源分为系统级和用户级两个配置文件。**不建议**
 
 FreeBSD 的 pkg 分为 quarterly（季度，由 Ports 的 XXXX.QY 分支构建而来）分支与 latest （实时更新，由 Ports 的 main 分支构建而来）分支两个源。quarterly 现在是 FreeBSD 默认的 pkg 软件分支。
 
-```
+```sh
 root@ykla:/home/ykla # git clone https://git.FreeBSD.org/ports.git /usr/ports # 拉取 Ports
 正克隆到 '/usr/ports'...
 remote: Enumerating objects: 6715646, done.
