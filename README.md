@@ -27,8 +27,12 @@ FreeBSD 是真正自由（Liberty）的**操作系统**，在这波谲云诡的�
 
 目前提供了 PDF 和 EPUB 格式的电子文档：
 
-- PDF 下载地址：<https://book.bsdcn.org/bsdbook.pdf>
-- EPUB 下载地址：<https://book.bsdcn.org/bsdbook.epub>
+- PDF 下载地址：<https://docs.bsdcn.org/bsdbook.pdf>
+- EPUB 下载地址：<https://docs.bsdcn.org/bsdbook.epub>
+
+>**注意**
+>
+>上面的网址是 ***docs*** 开头的而不是 ***book*** ！
 
 EPUB 在手机上可以使用[微信读书](https://play.google.com/store/apps/details?id=com.tencent.weread&hl=zh)打开，其格式显示比较完整；在电脑上可用 [CAJViewer 9](https://cajviewer.cnki.net/download.html) 打开。
 
