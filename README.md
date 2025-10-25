@@ -23,6 +23,16 @@ FreeBSD 是真正自由（Liberty）的**操作系统**，在这波谲云诡的�
 
 《FreeBSD 从入门到跑路》肇始于 2021 年 3 月 14 日，其原型最早可追溯至 ykla 于 2020 年 12 月 31 日发布的文章《FreeBSD 艺术科学哲学导论》。
 
+## 电子书
+
+目前提供了 PDF 和 EPUB 格式的电子文档：
+
+- PDF 下载地址：<https://book.bsdcn.org/bsdbook.pdf>
+- EPUB 下载地址：<https://book.bsdcn.org/bsdbook.epub>
+
+EPUB 在手机上可以使用[微信读书](https://play.google.com/store/apps/details?id=com.tencent.weread&hl=zh)打开，其格式显示比较完整；在电脑上可用 [CAJViewer 9](https://cajviewer.cnki.net/download.html) 打开。
+
+上述电子文档永远反映实时的网页，随 Git 提交而实时更新（但其文件名不会发生变化）。
 
 ## 部署地址
 
@@ -62,12 +72,6 @@ FreeBSD 是真正自由（Liberty）的**操作系统**，在这波谲云诡的�
 ## 贡献者
 
 ![贡献者](https://contrib.nn.ci/api?repo=FreeBSD-Ask/FreeBSD-Ask)
-
-## 电子书
-
-可使用 [safreya](https://github.com/safreya) 编写的 [Python 脚本](https://github.com/FreeBSD-Ask/gitbook-pdf-export)来导出 PDF/EPUB。
-
-此外，每周都会通过 GitHub Action 导出 PDF/EPUB 于 [releases](https://github.com/FreeBSD-Ask/FreeBSD-Ask/releases)（也许需要代理）。
 
 ## 授权协议
 
