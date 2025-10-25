@@ -175,7 +175,7 @@ NetBSD。~~这个应该真的没人用~~
 >>
 >>Talk is cheap. Show me the code.
 >>
->>		Linus
+>>Linus
 >>
 >>——引自 <https://lkml.org/lkml/2000/8/25/132>
 >
