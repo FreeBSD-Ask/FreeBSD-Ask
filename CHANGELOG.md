@@ -4,6 +4,21 @@
 
 ## 2025 年第四季度
 
+- 2025.10.25
+
+---
+
+提供本书的电子文档，有 PDF 和 EPUB 格式：
+
+- PDF 下载地址：<https://book.bsdcn.org/bsdbook.pdf>
+- EPUB 下载地址：<https://book.bsdcn.org/bsdbook.epub>
+
+EPUB 在手机上可以使用[微信读书](https://play.google.com/store/apps/details?id=com.tencent.weread&hl=zh)打开，其格式显示比较完整；在电脑上可用 [CAJViewer 9](https://cajviewer.cnki.net/download.html) 打开。
+
+上述电子文档永远反映实时的网页，随 Git 提交而实时更新（但其文件名不会发生变化）。
+
+---
+
 - 2025.10.24
   - “5.2 更换 FreeBSD 软件源”新增“理解 quarterly 季度分支”
   - “5.5 使用 Ports 以源代码方式安装软件”新增“Ports 与 Port 概述”
