@@ -35,6 +35,8 @@ EPUB 在手机上可以使用[微信读书](https://play.google.com/store/apps/d
 
 上述电子文档永远反映实时的网页，随 Git 提交而实时更新（但其文件名不会发生变化）。
 
+由 [safreya](https://github.com/safreya) 编写的 [GitBook PDF/EPUB 导出工具](https://github.com/FreeBSD-Ask/gitbook-pdf-export) 提供支持。
+
 ## 部署地址
 
 本书目前部署了两个域名以供访问，分别使用不同的网站架构：
