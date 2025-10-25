@@ -77,7 +77,7 @@ FreeBSD 是真正自由（Liberty）的**操作系统**，在这波谲云诡的�
 
 ## Star 历史
 
-若本书对你有帮助，欢迎给此 [GitHub 项目](https://github.com/FreeBSD-Ask/FreeBSD-Ask)加颗 ⭐。~~本书得到的 ⭐ 真是太少啦！~~
+若本书对你有帮助，欢迎给本书所在的 [GitHub 项目](https://github.com/FreeBSD-Ask/FreeBSD-Ask)加颗 ⭐。~~本书得到的 ⭐ 真是太少啦！~~
 
 ![⭐ 图](https://api.star-history.com/svg?repos=FreeBSD-Ask/FreeBSD-Ask&type=Date)
 
