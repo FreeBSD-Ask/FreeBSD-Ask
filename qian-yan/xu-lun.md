@@ -164,7 +164,7 @@ NetBSD。~~这个应该真的没人用~~
 >
 >>Date	Fri, 25 Aug 2000 11:09:12 -0700 (PDT)
 >>
->>From	Linus Torvalds <>
+>>From	Linus Torvalds < >
 >> 
 >>Subject	Re: SCO: "thread creation is about a thousand times faster than onnative
 >>
@@ -183,7 +183,7 @@ NetBSD。~~这个应该真的没人用~~
 >
 >>请读者自行查阅 Jamie Lokier 对 Linux Kernel 线程性能的影响。
 >
->>“提出一个问题往往比解决一个问题更重要——[美]阿尔伯特·爱因斯坦 / [波]利奥波德·英费尔德. 物理学的进化[M]. 北京: 中信出版集团, 2019: 88. ISBN 9787521701418.
+>>“提出一个问题往往比解决一个问题更重要。”——[美]阿尔伯特·爱因斯坦 / [波]利奥波德·英费尔德. 物理学的进化[M]. 北京: 中信出版集团, 2019: 88. ISBN 9787521701418.
 >
 >>“Code is cheap. Show me the talk. AI 可以快速地将任何想法付诸实践，即使现在难以实现，日后也可以轻易完成。”
 >
