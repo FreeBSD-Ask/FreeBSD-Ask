@@ -15,8 +15,6 @@ fi
 # 获取总提交数
 commits=$(git rev-list --count HEAD)
 
-# 获取上次 progress_commits（如果有）
-
 # 获取上次提交作者
 last_author=$(git log -1 --pretty=format:'%an' -- "$README")
 
