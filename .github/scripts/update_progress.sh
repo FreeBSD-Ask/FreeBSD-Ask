@@ -39,7 +39,7 @@ to_next=$(( PER - progress_commits ))
 ORIG_WIDTH=400
 WIDTH=$(awk "BEGIN {printf \"%d\", $ORIG_WIDTH*0.7}")  # 减少 30%
 HEIGHT=30
-FILLED_WIDTH=$(awk "BEGIN {printf \"%d\", $WIDTH*$percent_rounded/100}")
+FILLED_WIDTH=$(awk "BEGIN {w=$WIDTH*$percent_rounded/100; print (w>0 && w<1) ? 1 : int((w+0.999999))}")
 UNFILLED_WIDTH=$((WIDTH - FILLED_WIDTH))
 bg_color="#CCCCCC"
 
