@@ -12,11 +12,11 @@ FreeBSD 是真正自由（Liberty）的**操作系统**，在这波谲云诡的�
 
 
 <!-- commit-progress-start -->
-**第三版进度:** v3  （草稿提交数: 802）  
+**第三版进度:** v3  （草稿提交数: 792）  
 
-![进度徽章](https://img.shields.io/badge/进度-22.70%25-%23FF7300?style=for-the-badge) 
+![进度徽章](https://img.shields.io/badge/进度-22.40%25-%23FF7200?style=for-the-badge) 
 
-距离第三版还需提交: 2731 次
+距离第三版还需提交: 2741 次
 <!-- commit-progress-end -->
 
 ## 加入 FreeBSD 中文社区（CFC）
