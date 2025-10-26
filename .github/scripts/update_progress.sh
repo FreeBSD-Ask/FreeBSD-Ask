@@ -24,8 +24,8 @@ last_author=$(git log -1 --pretty=format:'%an' -- "$README")
 
 # 如果进度只增加 1 且上次提交者是 github-actions[bot] 则跳过
 progress_commits=$(( commits % PER ))
-if [[ $((progress_commits - last_progress)) -eq 1 && "$last_author" == "github-actions[bot]" ]]; then
-  echo "进度仅增加 1 且上次提交者为 github-actions[bot]，跳过更新。"
+if [[ "$last_author" == "github-actions[bot]" ]]; then
+  echo "上次提交者是 github-actions[bot]，无变化，跳过更新。"
   exit 0
 fi
 
