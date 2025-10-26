@@ -1,10 +1,9 @@
 name: 更新提交进度
 
 on:
-  push:
-    branches:
-      - main
-  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * *'   # 每天 0:00 UTC 执行（北京时间 8:00）
+  workflow_dispatch:       # 仍然保留手动触发
 
 jobs:
   update_progress:
@@ -16,4 +15,4 @@ jobs:
           fetch-depth: 0
 
       - name: 更新提交进度
-        run: .github/scripts/update_progress.sh
+        run: bash .github/scripts/update_progress.sh
