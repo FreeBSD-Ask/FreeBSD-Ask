@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="30">
+  <rect x="0" y="0" width="400" height="30" fill="#CCCCCC" rx="5" ry="5"/>
+  <rect x="0" y="0" width="90" height="30" fill="#FF7300" rx="5" ry="5"/>
+  <text x="200" y="20" font-size="16" text-anchor="middle" fill="#000000">
+    22.55%
+  </text>
+</svg>
