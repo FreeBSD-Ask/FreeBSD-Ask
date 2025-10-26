@@ -6,6 +6,7 @@ SVG_FILE="progress.svg"
 MARKER_START="<!-- commit-progress-start -->"
 MARKER_END="<!-- commit-progress-end -->"
 PER=3533
+VERSION=3  # 目标版本
 
 # 如果不存在标记则初始化
 if ! grep -qF "$MARKER_START" "$README"; then
@@ -18,28 +19,31 @@ commits=$(git rev-list --count HEAD)
 # 获取上次提交作者
 last_author=$(git log -1 --pretty=format:'%an' -- "$README")
 
-# 如果进度只增加 1 且上次提交者是 github-actions[bot] 则跳过
-progress_commits=$(( commits % PER ))
+# 如果上次提交者是 github-actions[bot] 则跳过
 if [[ "$last_author" == "github-actions[bot]" ]]; then
   echo "上次提交者是 github-actions[bot]，无变化，跳过更新。"
   exit 0
 fi
 
-# 计算版本号和百分比
-version=3
-percent=$(awk "BEGIN {printf \"%.4f\", ($progress_commits*100)/$PER}")
+# 当前草稿提交量
+current_progress=$(( commits - PER*(VERSION-1) +1 ))
+# 距离目标版本还需提交
+to_next=$(( PER*VERSION - commits -1 ))
+
+# 计算百分比和进度条
+percent=$(awk "BEGIN {printf \"%.4f\", ($current_progress*100)/$PER}")
+# 四舍五入到 0.05%
 percent_rounded=$(awk "BEGIN {printf \"%.2f\", (int(($percent+0.025)/0.05)*0.05)}")
-to_next=$(( PER - progress_commits ))
 
 # SVG 进度条参数
 ORIG_WIDTH=400
-WIDTH=$(awk "BEGIN {printf \"%d\", $ORIG_WIDTH*0.7}")  # 减少 30%
+WIDTH=$(awk "BEGIN {printf \"%d\", $ORIG_WIDTH*0.65}")  # 减少 35%
 HEIGHT=30
 FILLED_WIDTH=$(awk "BEGIN {w=$WIDTH*$percent_rounded/100; print (w>0 && w<1) ? 1 : int((w+0.999999))}")
 UNFILLED_WIDTH=$((WIDTH - FILLED_WIDTH))
 bg_color="#CCCCCC"
 
-# 生成渐变颜色（红→黄→绿）
+# 生成渐变颜色（红→黄→绿）SVG
 get_color() {
   local p=$1
   local r g b
@@ -95,7 +99,7 @@ EOF
 # 构造替换内容
 replacement=$(cat <<EOF
 $MARKER_START
-**第三版进度:** v$version  （草稿提交数: $progress_commits）  
+**第 $VERSION 版进度:**   （草稿提交数: $current_progress）  
 
 ![进度徽章]($SVG_FILE) 
 
@@ -121,7 +125,7 @@ if cmp -s "$README" "${README}.tmp"; then
 fi
 
 mv "${README}.tmp" "$README"
-echo "README 已更新：版本 ${version}，进度 ${percent_rounded}%"
+echo "README 已更新：版本 ${VERSION}，进度 ${percent_rounded}%"
 
 # 自动提交并推送
 if [ -n "$(git status --porcelain)" ]; then
@@ -130,4 +134,4 @@ if [ -n "$(git status --porcelain)" ]; then
   git add "$README" "$SVG_FILE"
   git commit -m "CI: 更新提交进度徽章"
   git push
-fi
+fi  
