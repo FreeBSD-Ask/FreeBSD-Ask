@@ -4,7 +4,7 @@
 
 FreeBSD 是真正自由（Liberty）的**操作系统**，在这波谲云诡的世界中仍然坚守 BSD UNIX 哲学——恪守古老的法则，追寻真正的自由。
 
-## 内容提要
+## 📄 内容提要
 
 这是一本由 CC BY 许可授权的 FreeBSD 操作系统书籍，还包含一些 OpenBSD、NetBSD、DragonFly BSD、TwinCAT/BSD 等 BSD 家族操作系统的快速入门章节。
 
@@ -19,7 +19,7 @@ FreeBSD 是真正自由（Liberty）的**操作系统**，在这波谲云诡的�
 距离第三版还需提交: 2738 次
 <!-- commit-progress-end -->
 
-## 加入 FreeBSD 中文社区（CFC）
+## 👥 加入 FreeBSD 中文社区（CFC）
 
 本书是 FreeBSD 中文社区许多人不懈努力的成果。
 
@@ -32,7 +32,7 @@ FreeBSD 是真正自由（Liberty）的**操作系统**，在这波谲云诡的�
 - Telegram 群组：[https://t.me/oh_my_BSD](https://t.me/oh_my_BSD)（需代理）
 
 
-## 电子书
+## 📚 电子书
 
 目前提供了 PDF 和 EPUB 格式的电子文档：
 
@@ -45,11 +45,11 @@ FreeBSD 是真正自由（Liberty）的**操作系统**，在这波谲云诡的�
 
 EPUB 在手机上可以使用[微信读书](https://play.google.com/store/apps/details?id=com.tencent.weread&hl=zh)打开，其格式显示比较完整；在电脑上可用 [CAJViewer 9](https://cajviewer.cnki.net/download.html) 打开。
 
-上述电子文档永远反映实时的网页，随 Git 提交而实时更新（但其文件名不会发生变化）。
+上述电子文档永远反映实时的网页，随 Git 提交而 **实时更新**（但其文件名不会发生变化）。
 
 由 [safreya](https://github.com/safreya) 编写的 [GitBook PDF/EPUB 导出工具](https://github.com/FreeBSD-Ask/gitbook-pdf-export) 提供支持。
 
-## 部署地址
+## 🌐 部署地址
 
 本书目前部署了两个域名以供访问，分别使用不同的网站架构：
 
@@ -60,7 +60,7 @@ EPUB 在手机上可以使用[微信读书](https://play.google.com/store/apps/d
 
 如遇网站技术性问题，请联络 ykla [yklaxds@gmail.com](mailto:yklaxds@gmail.com)。
 
-## 意见反馈
+## 💬 意见反馈
 
 由于编者水平所限，书中缺点和谬误之处自不可免。
 
@@ -70,11 +70,11 @@ EPUB 在手机上可以使用[微信读书](https://play.google.com/store/apps/d
 
 **非技术性问题及与社区无关话题、纯粹私人聊天及情感讨论等等事宜恕不回复，如有这方面需求请咨询专业人士，其他需求欢迎加群讨论。**
 
-## 目标与方向
+## 🧭 目标与方向
 
 详见 [贡献指南与开放任务](CONTRIBUTING.md)。
 
-## 捐赠
+## ☕ 捐赠
 
 请优先捐赠 FreeBSD 基金会！
 
@@ -84,11 +84,11 @@ EPUB 在手机上可以使用[微信读书](https://play.google.com/store/apps/d
 
 需要你持有 VISA 信用卡：请在捐赠页面“Click & Pledge”下使用 `Amazon Pay`，测试可用。
 
-## 贡献者
+## 🏗️ 贡献者
 
 ![贡献者](https://contrib.nn.ci/api?repo=FreeBSD-Ask/FreeBSD-Ask)
 
-## 授权协议与法律声明
+## ⚖️ 授权协议与法律声明
 
 本项目采用《CC BY 4.0 署名 4.0 协议国际版》，详见[署名 4.0 协议国际版法律文本](https://creativecommons.org/licenses/by/4.0/legalcode.zh-hans)。
 
@@ -102,11 +102,11 @@ EPUB 在手机上可以使用[微信读书](https://play.google.com/store/apps/d
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-orange.svg)](https://creativecommons.org/licenses/by/4.0/)
 
-## 项目历史
+## 📜 项目历史
 
 《FreeBSD 从入门到跑路》肇始于 2021 年 3 月 14 日，其原型最早可追溯至 ykla 于 2020 年 12 月 31 日发布的文章《FreeBSD 艺术科学哲学导论》。
 
-## 统计信息
+## 📈 统计信息
 
 自 2022 年 6 月 1 日以降，本书的访问量如下：
 
