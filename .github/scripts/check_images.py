@@ -50,6 +50,10 @@ for root, _, files in os.walk(assets_dir):
         path = Path(root) / file
         rel_path = path.relative_to(repo_root).as_posix()
         existing_images.add(rel_path)
+        
+# 排除指定图片（如 CI 自动生成的 progress.svg）
+used_images = {img for img in used_images if not img.endswith('progress.svg')}
+existing_images = {img for img in existing_images if not img.endswith('progress.svg')}
 
 # 计算差异
 missing_images = sorted(used_images - existing_images)
