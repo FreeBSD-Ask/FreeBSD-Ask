@@ -36,12 +36,14 @@ percent_rounded=$(awk "BEGIN {printf \"%.2f\", (int(($percent+0.025)/0.05)*0.05)
 to_next=$(( PER - progress_commits ))
 
 # SVG 进度条参数
-WIDTH=400
+ORIG_WIDTH=400
+WIDTH=$(awk "BEGIN {printf \"%d\", $ORIG_WIDTH*0.8}")  # 减少 20%
 HEIGHT=30
 FILLED_WIDTH=$(awk "BEGIN {printf \"%d\", $WIDTH*$percent_rounded/100}")
 UNFILLED_WIDTH=$((WIDTH - FILLED_WIDTH))
+bg_color="#CCCCCC"
 
-# 生成渐变颜色函数（红黄绿）
+# 生成渐变颜色（红→黄→绿）
 get_color() {
   local p=$1
   local r g b
@@ -59,15 +61,36 @@ get_color() {
   printf "#%02X%02X%02X" "$r" "$g" "$b"
 }
 
-fill_color=$(get_color $percent_rounded)
-bg_color="#CCCCCC"
-
-# 生成 SVG
+# 构造渐变 SVG
+GRADIENT_ID="grad1"
 cat > "$SVG_FILE" <<EOF
 <svg xmlns="http://www.w3.org/2000/svg" width="$WIDTH" height="$HEIGHT">
+  <defs>
+    <linearGradient id="$GRADIENT_ID" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF0000"/>
+      <stop offset="50%" stop-color="#FFFF00"/>
+      <stop offset="100%" stop-color="#00FF00"/>
+    </linearGradient>
+  </defs>
+  <!-- 背景灰色 -->
   <rect x="0" y="0" width="$WIDTH" height="$HEIGHT" fill="$bg_color" rx="5" ry="5"/>
-  <rect x="0" y="0" width="$FILLED_WIDTH" height="$HEIGHT" fill="$fill_color" rx="5" ry="5"/>
-  <text x="$((WIDTH/2))" y="$((HEIGHT/2 + 5))" font-size="16" text-anchor="middle" fill="#000000">
+  <!-- 已完成彩色渐变部分 -->
+  <rect x="0" y="0" width="$FILLED_WIDTH" height="$HEIGHT" fill="url(#$GRADIENT_ID)" rx="5" ry="5"/>
+EOF
+
+# 文字位置计算
+MIN_TEXT_X=15
+TEXT_X=$((FILLED_WIDTH/2))
+if ((FILLED_WIDTH < 50)); then
+  TEXT_X=$((FILLED_WIDTH - 5))
+fi
+if ((TEXT_X < MIN_TEXT_X)); then
+  TEXT_X=$MIN_TEXT_X
+fi
+
+# 文字添加
+cat >> "$SVG_FILE" <<EOF
+  <text x="$TEXT_X" y="$((HEIGHT/2 + 5))" font-size="16" text-anchor="middle" fill="#000000">
     $percent_rounded%
   </text>
 </svg>
