@@ -16,8 +16,6 @@ fi
 commits=$(git rev-list --count HEAD)
 
 # 获取上次 progress_commits（如果有）
-last_progress=$(awk -F '草稿提交数: ' '/草稿提交数:/ {gsub(/[）]/,"",$2); print $2}' "$README" | tail -n1)
-last_progress=${last_progress:-0}
 
 # 获取上次提交作者
 last_author=$(git log -1 --pretty=format:'%an' -- "$README")
