@@ -37,7 +37,7 @@ to_next=$(( PER - progress_commits ))
 
 # SVG 进度条参数
 ORIG_WIDTH=400
-WIDTH=$(awk "BEGIN {printf \"%d\", $ORIG_WIDTH*0.8}")  # 减少 20%
+WIDTH=$(awk "BEGIN {printf \"%d\", $ORIG_WIDTH*0.7}")  # 减少 30%
 HEIGHT=30
 FILLED_WIDTH=$(awk "BEGIN {printf \"%d\", $WIDTH*$percent_rounded/100}")
 UNFILLED_WIDTH=$((WIDTH - FILLED_WIDTH))
