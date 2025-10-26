@@ -10,6 +10,15 @@ FreeBSD 是真正自由（Liberty）的**操作系统**，在这波谲云诡的�
 
 ~~[为了拯救即将归档（Archived）的 FreeBSD······我们决定写一本书。](https://mzh.moegirl.org.cn/为了保护我们心爱的ooo……成为偶像！)~~
 
+
+<!-- commit-progress-start -->
+**第三版进度:** v3  （草稿提交数: 802）  
+
+![进度徽章](https://img.shields.io/badge/进度-22.70%25-%23FF7300?style=for-the-badge) 
+
+距离第三版还需提交: 2731 次
+<!-- commit-progress-end -->
+
 ## 加入 FreeBSD 中文社区（CFC）
 
 本书是 FreeBSD 中文社区许多人不懈努力的成果。

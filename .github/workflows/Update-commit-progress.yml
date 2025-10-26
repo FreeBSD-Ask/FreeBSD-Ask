@@ -1,0 +1,18 @@
+name: 🔗 更新提交进度
+
+on:
+  schedule:
+    - cron: '0 0 * * *'   # 每天 0:00 UTC 执行（北京时间 8:00）
+  workflow_dispatch:       # 仍然保留手动触发
+
+jobs:
+  update_progress:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出仓库
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: 更新提交进度
+        run: bash .github/scripts/update_progress.sh
