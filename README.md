@@ -94,9 +94,19 @@ EPUB 在手机上可以使用[微信读书](https://play.google.com/store/apps/d
 
 《FreeBSD 从入门到跑路》肇始于 2021 年 3 月 14 日，其原型最早可追溯至 ykla 于 2020 年 12 月 31 日发布的文章《FreeBSD 艺术科学哲学导论》。
 
-## ⭐
+## 统计信息
 
-若本书对你有帮助，欢迎给本书所在的 [GitHub 项目](https://github.com/FreeBSD-Ask/FreeBSD-Ask)加颗 ⭐。~~本书得到的 ⭐ 真是太少啦！~~
+自 2022 年 6 月 1 日以降，本书的访问量如下：
+
+- 用户总数 4.1 万
+- 会话数 8.4 万
+- 每次会话的平均互动时长 3 分 06 秒
+- 浏览次数 59 万
+
+以上统计信息由 [Google Analytics](https://analytics.google.com/) 提供。
+
+~~本书得到的 ⭐ 真是太少啦！~~ 若本书对你有帮助，欢迎给本书所在的 [GitHub 项目存储库](https://github.com/FreeBSD-Ask/FreeBSD-Ask)加颗 ⭐。
 
 ![⭐ 图](https://api.star-history.com/svg?repos=FreeBSD-Ask/FreeBSD-Ask&type=Date)
 
+以上图表由 [GitHub Star History](https://www.star-history.com/) 提供。
