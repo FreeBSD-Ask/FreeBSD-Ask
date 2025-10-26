@@ -2,6 +2,7 @@
 set -euo pipefail
 
 README="README.md"
+SVG_FILE="progress.svg"
 MARKER_START="<!-- commit-progress-start -->"
 MARKER_END="<!-- commit-progress-end -->"
 PER=3533
@@ -14,36 +15,89 @@ fi
 # 获取总提交数
 commits=$(git rev-list --count HEAD)
 
-# 计算版本号和进度
-version=3
+# 获取上次提交作者
+last_author=$(git log -1 --pretty=format:'%an' -- "$README")
+
+# 如果进度只增加 1 且上次提交者是 github-actions[bot] 则跳过
 progress_commits=$(( commits % PER ))
-# 计算百分比并四舍五入到最接近的 0.05%
-percent=$(awk "BEGIN {printf \"%.4f\", ($progress_commits*100)/$PER}")  # 精度保留 4 位
+if [[ "$last_author" == "github-actions[bot]" ]]; then
+  echo "上次提交者是 github-actions[bot]，无变化，跳过更新。"
+  exit 0
+fi
+
+# 计算版本号和百分比
+version=3
+percent=$(awk "BEGIN {printf \"%.4f\", ($progress_commits*100)/$PER}")
 percent_rounded=$(awk "BEGIN {printf \"%.2f\", (int(($percent+0.025)/0.05)*0.05)}")
 to_next=$(( PER - progress_commits ))
 
-# 红黄绿渐变颜色
-if awk "BEGIN{exit !($percent_rounded < 50)}"; then
-  ratio=$(awk "BEGIN {printf \"%.4f\", $percent_rounded/50}")
-  r=255
-  g=$(awk "BEGIN {printf \"%d\", 255 * $ratio}")
-  b=0
-else
-  ratio=$(awk "BEGIN {printf \"%.4f\", ($percent_rounded-50)/50}")
-  r=$(awk "BEGIN {printf \"%d\", 255 - 255 * $ratio}")
-  g=255
-  b=0
+# SVG 进度条参数
+ORIG_WIDTH=400
+WIDTH=$(awk "BEGIN {printf \"%d\", $ORIG_WIDTH*0.7}")  # 减少 30%
+HEIGHT=30
+FILLED_WIDTH=$(awk "BEGIN {w=$WIDTH*$percent_rounded/100; print (w>0 && w<1) ? 1 : int((w+0.999999))}")
+UNFILLED_WIDTH=$((WIDTH - FILLED_WIDTH))
+bg_color="#CCCCCC"
+
+# 生成渐变颜色（红→黄→绿）
+get_color() {
+  local p=$1
+  local r g b
+  if (( $(awk "BEGIN{print ($p<50)}") )); then
+    ratio=$(awk "BEGIN {printf \"%.4f\", $p/50}")
+    r=255
+    g=$(awk "BEGIN {printf \"%d\", 255*$ratio}")
+    b=0
+  else
+    ratio=$(awk "BEGIN {printf \"%.4f\", ($p-50)/50}")
+    r=$(awk "BEGIN {printf \"%d\", 255 - 255*$ratio}")
+    g=255
+    b=0
+  fi
+  printf "#%02X%02X%02X" "$r" "$g" "$b"
+}
+
+# 构造渐变 SVG
+GRADIENT_ID="grad1"
+cat > "$SVG_FILE" <<EOF
+<svg xmlns="http://www.w3.org/2000/svg" width="$WIDTH" height="$HEIGHT">
+  <defs>
+    <linearGradient id="$GRADIENT_ID" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF0000"/>
+      <stop offset="50%" stop-color="#FFFF00"/>
+      <stop offset="100%" stop-color="#00FF00"/>
+    </linearGradient>
+  </defs>
+  <!-- 背景灰色 -->
+  <rect x="0" y="0" width="$WIDTH" height="$HEIGHT" fill="$bg_color" rx="5" ry="5"/>
+  <!-- 已完成彩色渐变部分 -->
+  <rect x="0" y="0" width="$FILLED_WIDTH" height="$HEIGHT" fill="url(#$GRADIENT_ID)" rx="5" ry="5"/>
+EOF
+
+# 文字位置计算
+MIN_TEXT_X=15
+TEXT_X=$((FILLED_WIDTH/2))
+if ((FILLED_WIDTH < 50)); then
+  TEXT_X=$((FILLED_WIDTH - 5))
+fi
+if ((TEXT_X < MIN_TEXT_X)); then
+  TEXT_X=$MIN_TEXT_X
 fi
 
-hex=$(printf "%02X%02X%02X" "$r" "$g" "$b")
-badge_url="https://img.shields.io/badge/进度-${percent_rounded}%25-%23${hex}?style=for-the-badge"
+# 文字添加
+cat >> "$SVG_FILE" <<EOF
+  <text x="$TEXT_X" y="$((HEIGHT/2 + 5))" font-size="16" text-anchor="middle" fill="#000000">
+    $percent_rounded%
+  </text>
+</svg>
+EOF
 
 # 构造替换内容
 replacement=$(cat <<EOF
 $MARKER_START
 **第三版进度:** v$version  （草稿提交数: $progress_commits）  
 
-![进度徽章]($badge_url) 
+![进度徽章]($SVG_FILE) 
 
 距离第三版还需提交: $to_next 次
 $MARKER_END
@@ -73,7 +127,7 @@ echo "README 已更新：版本 ${version}，进度 ${percent_rounded}%"
 if [ -n "$(git status --porcelain)" ]; then
   git config user.name "github-actions[bot]"
   git config user.email "github-actions[bot]@users.noreply.github.com"
-  git add "$README"
+  git add "$README" "$SVG_FILE"
   git commit -m "CI: 更新提交进度徽章"
   git push
 fi
