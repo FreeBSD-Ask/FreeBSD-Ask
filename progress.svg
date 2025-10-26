@@ -1,7 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="400" height="30">
-  <rect x="0" y="0" width="400" height="30" fill="#CCCCCC" rx="5" ry="5"/>
-  <rect x="0" y="0" width="90" height="30" fill="#FF7300" rx="5" ry="5"/>
-  <text x="200" y="20" font-size="16" text-anchor="middle" fill="#000000">
-    22.55%
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="30">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF0000"/>
+      <stop offset="50%" stop-color="#FFFF00"/>
+      <stop offset="100%" stop-color="#00FF00"/>
+    </linearGradient>
+  </defs>
+  <!-- 背景灰色 -->
+  <rect x="0" y="0" width="320" height="30" fill="#CCCCCC" rx="5" ry="5"/>
+  <!-- 已完成彩色渐变部分 -->
+  <rect x="0" y="0" width="72" height="30" fill="url(#grad1)" rx="5" ry="5"/>
+  <text x="36" y="20" font-size="16" text-anchor="middle" fill="#000000">
+    22.60%
   </text>
 </svg>
