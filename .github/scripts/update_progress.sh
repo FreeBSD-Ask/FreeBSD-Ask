@@ -17,8 +17,9 @@ commits=$(git rev-list --count HEAD)
 # 计算版本号和进度
 version=$(( commits / PER ))
 progress_commits=$(( commits % PER ))
-percent=$(awk "BEGIN {printf \"%.2f\", ($progress_commits*100)/$PER}")
-percent_rounded=$(printf "%.1f" "$percent")
+# 计算百分比并四舍五入到最接近的 0.05%
+percent=$(awk "BEGIN {printf \"%.4f\", ($progress_commits*100)/$PER}")  # 精度保留 4 位
+percent_rounded=$(awk "BEGIN {printf \"%.2f\", (int(($percent+0.025)/0.05)*0.05)}")
 to_next=$(( PER - progress_commits ))
 
 # 红黄绿渐变颜色
@@ -40,9 +41,11 @@ badge_url="https://img.shields.io/badge/进度-${percent_rounded}%25-%23${hex}?s
 # 构造替换内容
 replacement=$(cat <<EOF
 $MARKER_START
-**版本:** v$version  （草稿提交数: $progress_commits）  
-![进度徽章]($badge_url)  
-距离下一版还需提交: $to_next 次
+**第三版进度:** v$version  （草稿提交数: $progress_commits）  
+
+![进度徽章]($badge_url) 
+
+距离第三版还需提交: $to_next 次
 $MARKER_END
 EOF
 )
