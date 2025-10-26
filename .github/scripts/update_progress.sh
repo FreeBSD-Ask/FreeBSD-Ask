@@ -14,29 +14,56 @@ fi
 # 获取总提交数
 commits=$(git rev-list --count HEAD)
 
-# 计算版本号和进度
-version=3
+# 获取上次 progress_commits（如果有）
+last_progress=$(awk -F '草稿提交数: ' '/草稿提交数:/ {gsub(/[）]/,"",$2); print $2}' "$README" | tail -n1)
+last_progress=${last_progress:-0}
+
+# 获取上次提交作者
+last_author=$(git log -1 --pretty=format:'%an' -- "$README")
+
+# 如果进度只增加 1 且上次提交者是 github-actions[bot] 则跳过
 progress_commits=$(( commits % PER ))
-# 计算百分比并四舍五入到最接近的 0.05%
-percent=$(awk "BEGIN {printf \"%.4f\", ($progress_commits*100)/$PER}")  # 精度保留 4 位
+if [[ $((progress_commits - last_progress)) -eq 1 && "$last_author" == "github-actions[bot]" ]]; then
+  echo "进度仅增加 1 且上次提交者为 github-actions[bot]，跳过更新。"
+  exit 0
+fi
+
+# 计算版本号和百分比
+version=3
+percent=$(awk "BEGIN {printf \"%.4f\", ($progress_commits*100)/$PER}")  # 精度 4 位
 percent_rounded=$(awk "BEGIN {printf \"%.2f\", (int(($percent+0.025)/0.05)*0.05)}")
 to_next=$(( PER - progress_commits ))
 
-# 红黄绿渐变颜色
-if awk "BEGIN{exit !($percent_rounded < 50)}"; then
-  ratio=$(awk "BEGIN {printf \"%.4f\", $percent_rounded/50}")
-  r=255
-  g=$(awk "BEGIN {printf \"%d\", 255 * $ratio}")
-  b=0
-else
-  ratio=$(awk "BEGIN {printf \"%.4f\", ($percent_rounded-50)/50}")
-  r=$(awk "BEGIN {printf \"%d\", 255 - 255 * $ratio}")
-  g=255
-  b=0
-fi
+# 红黄绿渐变颜色函数
+get_color() {
+  local p=$1
+  local r g b
+  if (( $(awk "BEGIN{print ($p<50)}") )); then
+    ratio=$(awk "BEGIN {printf \"%.4f\", $p/50}")
+    r=255
+    g=$(awk "BEGIN {printf \"%d\", 255*$ratio}")
+    b=0
+  else
+    ratio=$(awk "BEGIN {printf \"%.4f\", ($p-50)/50}")
+    r=$(awk "BEGIN {printf \"%d\", 255 - 255*$ratio}")
+    g=255
+    b=0
+  fi
+  printf "%02X%02X%02X" "$r" "$g" "$b"
+}
 
-hex=$(printf "%02X%02X%02X" "$r" "$g" "$b")
-badge_url="https://img.shields.io/badge/进度-${percent_rounded}%25-%23${hex}?style=for-the-badge"
+# 构造进度条（每 5% 一个格）
+bar=""
+filled=$(awk "BEGIN{printf \"%d\", $percent_rounded/5}")
+for ((i=0;i<20;i++)); do
+  if (( i < filled )); then
+    color=$(get_color $((i*5 + 2)))  # 简单渐变
+    bar+="%23${color}%%20█"  # URL 编码的彩色方块
+  else
+    bar+="%23CCCCCC%%20█"  # 灰色填充
+  fi
+done
+badge_url="https://img.shields.io/badge/进度-${percent_rounded}%25-${bar}?style=for-the-badge"
 
 # 构造替换内容
 replacement=$(cat <<EOF
