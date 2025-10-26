@@ -15,7 +15,7 @@ fi
 commits=$(git rev-list --count HEAD)
 
 # 计算版本号和进度
-version=$(( commits / PER ))
+version=3
 progress_commits=$(( commits % PER ))
 # 计算百分比并四舍五入到最接近的 0.05%
 percent=$(awk "BEGIN {printf \"%.4f\", ($progress_commits*100)/$PER}")  # 精度保留 4 位
