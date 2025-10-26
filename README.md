@@ -7,11 +7,11 @@ FreeBSD 是真正自由（Liberty）的**操作系统**，在这波谲云诡的�
 ## 内容提要
 
 <!-- commit-progress-start -->
-**第三版进度:** v2  （草稿提交数: 800）  
+**第三版进度:** v3  （草稿提交数: 802）  
 
-![进度徽章](https://img.shields.io/badge/进度-22.65%25-%23FF7300?style=for-the-badge) 
+![进度徽章](https://img.shields.io/badge/进度-22.70%25-%23FF7300?style=for-the-badge) 
 
-距离第三版还需提交: 2733 次
+距离第三版还需提交: 2731 次
 <!-- commit-progress-end -->
 
 这是一本由 CC BY 许可授权的 FreeBSD 操作系统书籍，还包含一些 OpenBSD、NetBSD、DragonFly BSD、TwinCAT/BSD 等 BSD 家族操作系统的快速入门章节。
