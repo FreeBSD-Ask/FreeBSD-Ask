@@ -16,4 +16,4 @@ jobs:
           fetch-depth: 0
 
       - name: 更新提交进度
-        run: scripts/update_progress.sh
+        run: .github/scripts/update_progress.sh
