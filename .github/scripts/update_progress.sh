@@ -2,6 +2,7 @@
 set -euo pipefail
 
 README="README.md"
+SVG_FILE="progress.svg"
 MARKER_START="<!-- commit-progress-start -->"
 MARKER_END="<!-- commit-progress-end -->"
 PER=3533
@@ -30,11 +31,17 @@ fi
 
 # 计算版本号和百分比
 version=3
-percent=$(awk "BEGIN {printf \"%.4f\", ($progress_commits*100)/$PER}")  # 精度 4 位
+percent=$(awk "BEGIN {printf \"%.4f\", ($progress_commits*100)/$PER}")
 percent_rounded=$(awk "BEGIN {printf \"%.2f\", (int(($percent+0.025)/0.05)*0.05)}")
 to_next=$(( PER - progress_commits ))
 
-# 红黄绿渐变颜色函数
+# SVG 进度条参数
+WIDTH=400
+HEIGHT=30
+FILLED_WIDTH=$(awk "BEGIN {printf \"%d\", $WIDTH*$percent_rounded/100}")
+UNFILLED_WIDTH=$((WIDTH - FILLED_WIDTH))
+
+# 生成渐变颜色函数（红黄绿）
 get_color() {
   local p=$1
   local r g b
@@ -49,28 +56,29 @@ get_color() {
     g=255
     b=0
   fi
-  printf "%02X%02X%02X" "$r" "$g" "$b"
+  printf "#%02X%02X%02X" "$r" "$g" "$b"
 }
 
-# 构造进度条（每 5% 一个格）
-bar=""
-filled=$(awk "BEGIN{printf \"%d\", $percent_rounded/5}")
-for ((i=0;i<20;i++)); do
-  if (( i < filled )); then
-    color=$(get_color $((i*5 + 2)))  # 简单渐变
-    bar+="%23${color}%%20█"  # URL 编码的彩色方块
-  else
-    bar+="%23CCCCCC%%20█"  # 灰色填充
-  fi
-done
-badge_url="https://img.shields.io/badge/进度-${percent_rounded}%25-${bar}?style=for-the-badge"
+fill_color=$(get_color $percent_rounded)
+bg_color="#CCCCCC"
+
+# 生成 SVG
+cat > "$SVG_FILE" <<EOF
+<svg xmlns="http://www.w3.org/2000/svg" width="$WIDTH" height="$HEIGHT">
+  <rect x="0" y="0" width="$WIDTH" height="$HEIGHT" fill="$bg_color" rx="5" ry="5"/>
+  <rect x="0" y="0" width="$FILLED_WIDTH" height="$HEIGHT" fill="$fill_color" rx="5" ry="5"/>
+  <text x="$((WIDTH/2))" y="$((HEIGHT/2 + 5))" font-size="16" text-anchor="middle" fill="#000000">
+    $percent_rounded%
+  </text>
+</svg>
+EOF
 
 # 构造替换内容
 replacement=$(cat <<EOF
 $MARKER_START
 **第三版进度:** v$version  （草稿提交数: $progress_commits）  
 
-![进度徽章]($badge_url) 
+![进度徽章]($SVG_FILE) 
 
 距离第三版还需提交: $to_next 次
 $MARKER_END
@@ -100,7 +108,7 @@ echo "README 已更新：版本 ${version}，进度 ${percent_rounded}%"
 if [ -n "$(git status --porcelain)" ]; then
   git config user.name "github-actions[bot]"
   git config user.email "github-actions[bot]@users.noreply.github.com"
-  git add "$README"
+  git add "$README" "$SVG_FILE"
   git commit -m "CI: 更新提交进度徽章"
   git push
 fi
