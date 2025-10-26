@@ -97,7 +97,7 @@ EPUB 在手机上可以使用[微信读书](https://play.google.com/store/apps/d
 
 本声明不影响本作品依知识共享署名（CC BY）许可协议所授予公众的合法使用权利。
 
-![CC BY](.gitbook/assets/by.png)
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-orange.svg)](https://creativecommons.org/licenses/by/4.0/)
 
 ## 项目历史
 
