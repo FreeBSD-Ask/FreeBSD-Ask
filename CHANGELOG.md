@@ -4,10 +4,12 @@
 
 ## 2025 年第四季度
 
+- 2025.10.28
+  - 必须为子模块指定一个分支 `git submodule add -b main --force https://github.com/FreeBSD-Ask/FreeBSD-Ask docs`，否则会出现很多奇怪的问题
 - 2025.10.27
   - 修复 <https://docs.bsdcn.org/> 镜像站首页显示为目录的问题
 - 2025.10.26
-  - 本书第三版进度达 22.2%（以 commit 数每 3533 次计为一个版本）
+  - 添加进度徽章
 - 2025.10.25
 
 ---
