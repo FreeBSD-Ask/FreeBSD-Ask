@@ -279,9 +279,6 @@ markdown: {
       gtag('config', 'G-31WQ8W3FF6');`
 		],
 	],
-	rewrites: {
-		'SUMMARY.md': 'index.md',
-	},
 	themeConfig: {
 		siteTitle: 'FreeBSD 中文社区',
 		langMenuLabel: '多语言',
