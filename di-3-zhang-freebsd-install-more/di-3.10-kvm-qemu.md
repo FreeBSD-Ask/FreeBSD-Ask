@@ -1,13 +1,13 @@
 # 3.10 云服务器安装 FreeBSD（基于 KVM、QEMU 等平台）
 
 > **注意**
-> 
+>
 > 不支持 OpenVZ、LXC 虚拟机，因为他们本质上不属于虚拟机，宿主机与客户机共享内核。内核都是 Linux 了，哪里还有 FreeBSD？
-> 
+>
 > 不支持 UEFI 引导模式（BIOS + GPT 分区表亦不支持），仅支持传统 BIOS + MBR 方式引导。
 
 > **警告**
-> 
+>
 > 请注意数据安全，以下教程有一定危险性和要求你有一定的动手能力。
 
 ## 概述
@@ -75,9 +75,9 @@ mfsBSD 是一款完全载入内存的 FreeBSD 系统，类似于 Windows 的 PE 
 ## 获取 memdisk
 
 > **警告**
-> 
+>
 > GRUB2 的 `memdisk.mod` 模块不是 MEMDISK。
-> 
+>
 > memdisk 需要由包管理器安装的软件 syslinux 提供。
 
 ### 安装 syslinux
@@ -105,7 +105,7 @@ mfsBSD 是一款完全载入内存的 FreeBSD 系统，类似于 Windows 的 PE 
 ## 取消隐藏的 GRUB 菜单
 
 现在大多数发行版的 grub 菜单都是默认隐藏的，需要在开机时按 **Esc** 才能进入，但是有时候会直接进入 BIOS。故，直接取消隐藏比较方便。
-    
+
 ```sh
 # grub2-editenv - unset menu_auto_hide
 ```

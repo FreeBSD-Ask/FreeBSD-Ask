@@ -36,7 +36,7 @@
 
 >**警告**
 >
->由于 [Missing CN regulatory domain and 11ac/DFS support in regdomain.xml ](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=289202)，故此部分存在问题，请跳过。
+>由于 [Missing CN regulatory domain and 11ac/DFS support in regdomain.xml](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=289202)，故此部分存在问题，请跳过。
 
 >**注意**
 >
