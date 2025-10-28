@@ -10,6 +10,11 @@ FreeBSD 是真正自由（Liberty）的**操作系统**，在这波谲云诡的�
 
 ~~[为了拯救即将归档（Archived）的 FreeBSD······我们决定写一本书。](https://mzh.moegirl.org.cn/为了保护我们心爱的ooo……成为偶像！)~~
 
+<!-- GA_STATS:START -->
+<!-- GA_STATS:END -->
+
+<!-- GA_BADGES:START -->
+<!-- GA_BADGES:END -->
 
 ---
 
