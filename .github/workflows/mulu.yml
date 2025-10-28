@@ -6,14 +6,16 @@ on:
     paths:
       - 'SUMMARY.md'
   workflow_dispatch:
+
 jobs:
   update-mu-lu:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout repository with Deploy Key
         uses: actions/checkout@v5
         with:
+          ssh-key: ${{ secrets.DEPLOY_KEY }}
           # 获取完整历史记录，便于后续提交操作
           fetch-depth: 0
 
