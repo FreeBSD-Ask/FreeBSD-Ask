@@ -135,7 +135,7 @@ EPUB 在手机上可以使用[微信读书](https://play.google.com/store/apps/d
 
 ---
 
-![状态图](https://repobeats.axiom.co/api/embed/354819e6b6505318e9c3ca2a0b1b8c9f8369dd7f.svg "Repobeats analytics image")
+![状态图](https://repobeats.axiom.co/api/embed/0268f0741b1257dd58a7489442bd7829d2670313.svg "Repobeats analytics image")
 
 以上图表由 [Repobeats analytics image](https://repobeats.axiom.co/) 提供。
 
