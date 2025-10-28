@@ -130,7 +130,26 @@ echo "README 已更新：版本 ${VERSION}，进度 ${percent_rounded}%"
 if [ -n "$(git status --porcelain)" ]; then
   git config user.name "github-actions[bot]"
   git config user.email "github-actions[bot]@users.noreply.github.com"
+  
   git add "$README" "$SVG_FILE"
   git commit -m "CI: 更新提交进度徽章"
-  git push
+
+  # 强制使用 SSH + Deploy Key 推送
+  git remote set-url origin git@github.com:${GITHUB_REPOSITORY}.git
+  # 验证 GitHub 主机密钥指纹并添加到 known_hosts
+  GITHUB_HOST="github.com"
+  GITHUB_FINGERPRINT="SHA256:nThbg6PZzQzVjIMrCqkp7xyF/Fp6uFv5fE6FvF2Y0f4" # 官方文档 https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/githubs-ssh-key-fingerprints
+
+  # 获取 github.com 的主机密钥指纹
+  ssh-keyscan $GITHUB_HOST 2>/dev/null | tee -a ~/.ssh/known_hosts > /tmp/github_ssh_key
+  ACTUAL_FINGERPRINT=$(ssh-keygen -lf /tmp/github_ssh_key | awk '{print $2}')
+
+  if [ "$ACTUAL_FINGERPRINT" != "$GITHUB_FINGERPRINT" ]; then
+    echo "Error: GitHub host key fingerprint does not match. Aborting push for security."
+    exit 1
+  fi
+
+  # 使用 SSH 推送（不禁用 StrictHostKeyChecking）
+  GIT_SSH_COMMAND="ssh -i ~/.ssh/id_rsa" git push origin main
 fi
+
