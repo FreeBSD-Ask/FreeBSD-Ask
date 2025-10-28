@@ -10,27 +10,7 @@ FreeBSD 是真正自由（Liberty）的**操作系统**，在这波谲云诡的�
 
 ~~[为了拯救即将归档（Archived）的 FreeBSD······我们决定写一本书。](https://mzh.moegirl.org.cn/为了保护我们心爱的ooo……成为偶像！)~~
 
-<!-- GA_STATS:START -->
 
-## 📊 GA4 数据（自 2022-06-01 以降）
-
-| 指标               | 数值       |
-|--------------------|------------|
-| 总用户数           | 40,639 |
-| 会话数             | 83,958   |
-| 浏览次数           | 592,239 |
-| 平均互动时长       | 8分55秒 |
-
-<!-- GA_STATS:END -->
-
-<!-- GA_BADGES:START -->
-
-![总用户数](https://img.shields.io/badge/总用户数-40,639-blue)
-![会话数](https://img.shields.io/badge/会话数-83,958-blue)
-![浏览次数](https://img.shields.io/badge/浏览次数-592,239-blue)
-![平均互动时长](https://img.shields.io/badge/平均互动时长-8分55秒-blue)
-
-<!-- GA_BADGES:END -->
 
 ---
 
@@ -127,14 +107,27 @@ EPUB 在手机上可以使用[微信读书](https://play.google.com/store/apps/d
 
 《FreeBSD 从入门到跑路》肇始于 2021 年 3 月 14 日，其原型最早可追溯至 ykla 于 2020 年 12 月 31 日发布的文章《FreeBSD 艺术科学哲学导论》。
 
-## 📈 统计信息
+<!-- GA_STATS:START -->
 
-自 2022 年 6 月 1 日以降，本书的访问量如下：
+## 📊 GA4 数据（自 2022-06-01 以降）
 
-- 用户总数 4.1 万
-- 会话数 8.4 万
-- 每次会话的平均互动时长 3 分 06 秒
-- 浏览次数 59 万
+| 指标               | 数值       |
+|--------------------|------------|
+| 总用户数           | 40,639 |
+| 会话数             | 83,958   |
+| 浏览次数           | 592,239 |
+| 平均互动时长       | 8分55秒 |
+
+<!-- GA_STATS:END -->
+
+<!-- GA_BADGES:START -->
+
+![总用户数](https://img.shields.io/badge/总用户数-40,639-blue)
+![会话数](https://img.shields.io/badge/会话数-83,958-blue)
+![浏览次数](https://img.shields.io/badge/浏览次数-592,239-blue)
+![平均互动时长](https://img.shields.io/badge/平均互动时长-8分55秒-blue)
+
+<!-- GA_BADGES:END -->
 
 以上统计信息由 [Google Analytics](https://analytics.google.com/) 提供。
 
