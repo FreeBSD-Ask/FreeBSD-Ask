@@ -2,7 +2,7 @@ name: 🔗 更新谷歌分析
 
 on:
   schedule:
-    - cron: '0 0 * * *'  # 每天午夜
+    - cron: '0 8 * * *'  # UTC 8
   workflow_dispatch:
 
 jobs:
