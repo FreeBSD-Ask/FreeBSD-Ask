@@ -1,0 +1,27 @@
+name: Update GA4 Stats
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # 每天午夜
+  workflow_dispatch:
+
+jobs:
+  update-ga4:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.14'
+
+      - name: Install dependencies
+        run: pip install google-analytics-data requests
+
+      - name: Update README with GA4 data
+        env:
+          GA4_SERVICE_KEY: ${{ secrets.GA4_SERVICE_KEY }}
+        run: python scripts/update_ga4_readme.py
