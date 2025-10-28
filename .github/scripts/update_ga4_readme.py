@@ -38,7 +38,7 @@ avg_session_duration_sec = float(row[3].value)
 # 将平均互动时长转换为 分:秒
 minutes = int(avg_session_duration_sec // 60)
 seconds = int(avg_session_duration_sec % 60)
-avg_session_duration_str = f"{minutes}分{seconds}秒"
+avg_session_duration_str = f"{minutes} 分 {seconds} 秒"
 
 # 更新 ga-stats.json（保留秒数）
 stats = {
@@ -64,7 +64,9 @@ def replace_section(content, start, end, new_text):
 
 # Markdown 表格（显示为分:秒）
 stats_table = f"""
-## 📊 GA4 数据（自 2022-06-01 以降）
+## 📈 统计信息
+
+自 2022 年 6 月 1 日以降，本书的访问量如下：
 
 | 指标               | 数值       |
 |--------------------|------------|
