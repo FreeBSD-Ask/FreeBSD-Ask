@@ -36,7 +36,7 @@ FreeBSD 是真正自由（Liberty）的**操作系统**，在这波谲云诡的�
 
 ## 📚 电子书
 
-目前提供了 PDF 和 EPUB 格式的电子文档：
+目前网站提供了 PDF 和 EPUB 格式的电子文档：
 
 - PDF 下载地址：<https://docs.bsdcn.org/bsdbook.pdf>
 - EPUB 下载地址：<https://docs.bsdcn.org/bsdbook.epub>
