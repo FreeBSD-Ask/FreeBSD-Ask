@@ -165,7 +165,7 @@ NetBSD。~~这个应该真的没人用~~
 >>Date	Fri, 25 Aug 2000 11:09:12 -0700 (PDT)
 >>
 >>From	Linus Torvalds < >
->> 
+>>
 >>Subject	Re: SCO: "thread creation is about a thousand times faster than onnative
 >>
 >>

@@ -98,9 +98,9 @@ EOF
 # 构造替换内容
 replacement=$(cat <<EOF
 $MARKER_START
-**第 $VERSION 版进度:**   （草稿提交数: $current_progress）  
+**第 $VERSION 版进度:**   （草稿提交数: $current_progress）
 
-![进度徽章]($SVG_FILE) 
+![进度徽章]($SVG_FILE)
 
 $msg
 $MARKER_END

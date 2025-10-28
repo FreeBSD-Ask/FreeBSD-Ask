@@ -47,6 +47,7 @@
 ```sh
 # grub2-editenv - unset menu_auto_hide
 ```
+
 ## 使用 mfsLinux 写入 mfsBSD
 
 如前所述，且因 FreeBSD 和一般的 Linux 是不同的生态，我们需要先进入 Linux 的内存盘，再在运行于内存中 Linux 里把 mfsBSD 写入硬盘，然后通过 `bsdinstall` 工具安装系统。

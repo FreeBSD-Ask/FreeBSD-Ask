@@ -91,7 +91,7 @@ Aptio 设置 - AMI
 
 步进（Stepping）：当制造过程有所改进或者功能被修复/删除时，将为英特尔®处理器创建步进代码。现在常见的 Intel 处理器的步进值都是由“一位字母+一位数字”组成的，比如根据[英特尔® 处理器 N100](https://www.intel.cn/content/www/cn/zh/products/sku/231803/intel-processor-n100-6m-cache-up-to-3-40-ghz/ordering.html)，可知 N100 处理器的当前步进为“N0”（一般消费者得到的都是这个步进的处理器）。字母越靠近 z，数字越大，表明步进越高，处理器越新。但是上图 BIOS 显示此 n100 处理器步进为“A0”，很明显这是一颗工程样片。
 
-参见 
+参见
 
 - [英特尔®处理器步进意味着什么？](https://www.intel.cn/content/www/cn/zh/support/articles/000057218/processors.html)
 - [CPU“步进”介绍](https://iknow.lenovo.com.cn/detail/320528)
@@ -200,10 +200,10 @@ Disable Integrated（禁用集成）则会禁用集成方案。
 
 选项：
 
-* ISH Uart0：ISH UART0（集成传感器中心的 UART0）
-* SerialIO Uart2：SerialIO UART2（串行输入输出控制器的 UART2）
-* Uart over external pads：通过外部引脚的 UART
-* Not connected：未连接
+- ISH Uart0：ISH UART0（集成传感器中心的 UART0）
+- SerialIO Uart2：SerialIO UART2（串行输入输出控制器的 UART2）
+- Uart over external pads：通过外部引脚的 UART
+- Not connected：未连接
 
 说明：
 
@@ -319,7 +319,7 @@ Enable（启用）
 
 Tile 是由 Tile 公司所开发的一款小巧的蓝牙跟踪器，可用于查找丢失物品。
 
-如果启用，此项能让您通过智能手机上的 Tile APP 定位您的电脑。 
+如果启用，此项能让您通过智能手机上的 Tile APP 定位您的电脑。
 
 #### Advanced settings（高级设置）
 
@@ -455,7 +455,7 @@ Enable（启用）
 
 选择“启用”以在 CPU 进入 C6 状态时将 DRAM 内容移动到 PRM 内存中。
 
-_C6_ 是最深级别的休眠，此时 CPU 的供电减少为 0，通常会降低 80%-90% 的功耗。
+*C6* 是最深级别的休眠，此时 CPU 的供电减少为 0，通常会降低 80%-90% 的功耗。
 
 #### SW Guard Extension（英特尔 SGX 技术）
 
@@ -504,7 +504,7 @@ CPU Flex Ratio Override 即 CPU 倍频设置，仅当此选项为 Enable 时，�
 
 该数值必须介于最大能效比（LFM，即最低主频）和硬件设定的最大非睿频比率（HFM，即默频）之间（最低主频 ≤ 你设置的值 ≤ 默频）。
 
-CPU 主频 \= 基准时钟（Base Clock，即外频，BIOS 中是 100 MHz _）_ × 倍频（Multiplier）
+CPU 主频 \= 基准时钟（Base Clock，即外频，BIOS 中是 100 MHz × 倍频（Multiplier）
 
 例如，CPU 倍频为 46x，基本时钟速度为 100 MHz，则时钟速度为 4.6GHz。
 
@@ -1495,7 +1495,7 @@ Enable（启用）
 
 这是是否允许修改 PL1 的总开关。是启用/禁用平台功耗限制  1（Platform Power Limit 1，PL1）的编程设置。
 
-启用（Enabled）：BIOS 会激活并写入 PL1 值，处理器会在指定时间窗口内以该值限制平均功耗。 
+启用（Enabled）：BIOS 会激活并写入 PL1 值，处理器会在指定时间窗口内以该值限制平均功耗。
 
 禁用（Disabled）：BIOS 不编程 PL1，此时处理器将使用默认或平台固件设定的限制值。
 
@@ -2916,7 +2916,7 @@ xHCI Hand Off：USB 控制器接口手动传递
 
 XHCI Hand-off 选项的作用是在操作系统不支持 xHCI 的情况下，是否让 BIOS 控制 USB 3.0 控制器。
 
-禁用 XHCI Hand-off：启动时由 BIOS 接管 USB 控制器，可能会将 USB 3.0 降为 USB 2.0，适用于原生不支持 USB 3.0 的旧系统（如 XP）。因此当系统不支持 xHCI 时，USB 3.0 装置在启动阶段或进入系统前可能无法正常使用。 
+禁用 XHCI Hand-off：启动时由 BIOS 接管 USB 控制器，可能会将 USB 3.0 降为 USB 2.0，适用于原生不支持 USB 3.0 的旧系统（如 XP）。因此当系统不支持 xHCI 时，USB 3.0 装置在启动阶段或进入系统前可能无法正常使用。
 
 启用 XHCI Hand-off：启动后由操作系统接管 USB 3.0 控制器，适用于原生支持 xHCI 的系统；如果系统对 xHCI 的支持损坏，可能导致 USB 设备无法使用。
 
