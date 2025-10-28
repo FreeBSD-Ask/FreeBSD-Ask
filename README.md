@@ -12,23 +12,23 @@ FreeBSD 是真正自由（Liberty）的**操作系统**，在这波谲云诡的�
 
 <!-- GA_STATS:START -->
 
-## 📊 GA4 数据（自 2022-06-01 起）
+## 📊 GA4 数据（自 2022-06-01 以降）
 
 | 指标               | 数值       |
 |--------------------|------------|
 | 总用户数           | 40,639 |
 | 会话数             | 83,958   |
 | 浏览次数           | 592,239 |
-| 平均互动时长（秒） | 535.01 |
+| 平均互动时长       | 8分55秒 |
 
 <!-- GA_STATS:END -->
 
 <!-- GA_BADGES:START -->
 
-![总用户数](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/FreeBSD-Ask/FreeBSD-Ask/main/ga-stats.json&label=总用户数&value=totalUsers)
-![会话数](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/FreeBSD-Ask/FreeBSD-Ask/main/ga-stats.json&label=会话数&value=sessions)
-![浏览次数](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/FreeBSD-Ask/FreeBSD-Ask/main/ga-stats.json&label=浏览次数&value=pageViews)
-![平均互动时长](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/FreeBSD-Ask/FreeBSD-Ask/main/ga-stats.json&label=平均互动时长&value=avgSessionDuration)
+![总用户数](https://img.shields.io/badge/总用户数-40,639-blue)
+![会话数](https://img.shields.io/badge/会话数-83,958-blue)
+![浏览次数](https://img.shields.io/badge/浏览次数-592,239-blue)
+![平均互动时长](https://img.shields.io/badge/平均互动时长-8分55秒-blue)
 
 <!-- GA_BADGES:END -->
 
