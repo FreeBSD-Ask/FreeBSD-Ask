@@ -25,16 +25,21 @@ if [[ "$last_author" == "github-actions[bot]" ]]; then
   exit 0
 fi
 
-# 当前版本起点（前一个版本的结束点）
+# 计算当前版本的草稿提交数与剩余提交数
 base=$(( PER * (VERSION - 2) ))
 
-# 当前版本的草稿提交数（已完成数）
-current_progress=$(( commits - base +1 ))
-if (( current_progress < 0 )); then current_progress=0; fi
-if (( current_progress > PER )); then current_progress=$PER; fi
+# 当前版本已完成的提交数（草稿提交数）
+current_progress=$(( commits - base ))
+# 限定在 0 .. PER 之间
+if (( current_progress < 0 )); then
+  current_progress=0
+fi
+if (( current_progress > PER )); then
+  current_progress=$PER
+fi
 
-# 距离目标版本还需提交数
-to_next=$(( PER - current_progress -1))
+# 距离本版本还需提交
+to_next=$(( PER - current_progress ))
 
 # 百分比计算（四舍五入到 0.05%）
 percent=$(awk "BEGIN {printf \"%.4f\", ($current_progress*100)/$PER}")
