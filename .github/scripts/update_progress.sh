@@ -130,7 +130,12 @@ echo "README 已更新：版本 ${VERSION}，进度 ${percent_rounded}%"
 if [ -n "$(git status --porcelain)" ]; then
   git config user.name "github-actions[bot]"
   git config user.email "github-actions[bot]@users.noreply.github.com"
+  
   git add "$README" "$SVG_FILE"
   git commit -m "CI: 更新提交进度徽章"
-  git push
+
+  # 强制使用 SSH + Deploy Key 推送
+  git remote set-url origin git@github.com:${GITHUB_REPOSITORY}.git
+  GIT_SSH_COMMAND="ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no" git push origin main
 fi
+
