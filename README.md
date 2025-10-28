@@ -118,7 +118,7 @@ EPUB 在手机上可以使用[微信读书](https://play.google.com/store/apps/d
 | 总用户数           | 40,639 |
 | 会话数             | 83,958   |
 | 浏览次数           | 592,239 |
-| 平均互动时长       | 8 分 55 秒 |
+| 每次会话的平均互动时长      | 8min55s |
 
 <!-- GA_STATS:END -->
 
@@ -127,7 +127,7 @@ EPUB 在手机上可以使用[微信读书](https://play.google.com/store/apps/d
 ![总用户数](https://img.shields.io/badge/总用户数-40,639-blue)
 ![会话数](https://img.shields.io/badge/会话数-83,958-blue)
 ![浏览次数](https://img.shields.io/badge/浏览次数-592,239-blue)
-![平均互动时长](https://img.shields.io/badge/平均互动时长-8 分 55 秒-blue)
+![平均互动时长](https://img.shields.io/badge/每次会话的平均互动时长-8min55s-blue)
 
 <!-- GA_BADGES:END -->
 
