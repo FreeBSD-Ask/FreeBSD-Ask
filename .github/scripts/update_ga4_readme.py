@@ -74,7 +74,7 @@ stats_table = f"""
 | 用户总数           | {total_users:,}  |
 | 会话数             | {sessions:,}  |
 | 浏览次数           | {page_views:,}  |
-| 每次会话的平均互动时长      | {avg_session_duration_str} |
+| 平均会话时长     | {avg_session_duration_str} |
 """
 
 # 徽章 Markdown（保持原 JSON 秒数）
