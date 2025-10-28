@@ -25,14 +25,19 @@ if [[ "$last_author" == "github-actions[bot]" ]]; then
   exit 0
 fi
 
-# 当前草稿提交量
-current_progress=$(( commits - PER*(VERSION-1) +1 ))
-# 距离目标版本还需提交
-to_next=$(( PER*VERSION - commits -1 ))
+# 当前版本起点（前一个版本的结束点）
+base=$(( PER * (VERSION - 2) ))
 
-# 计算百分比和进度条
+# 当前版本的草稿提交数（已完成数）
+current_progress=$(( commits - base +1 ))
+if (( current_progress < 0 )); then current_progress=0; fi
+if (( current_progress > PER )); then current_progress=$PER; fi
+
+# 距离目标版本还需提交数
+to_next=$(( PER - current_progress -1))
+
+# 百分比计算（四舍五入到 0.05%）
 percent=$(awk "BEGIN {printf \"%.4f\", ($current_progress*100)/$PER}")
-# 四舍五入到 0.05%
 percent_rounded=$(awk "BEGIN {printf \"%.2f\", (int(($percent+0.025)/0.05)*0.05)}")
 
 # SVG 进度条参数
@@ -103,7 +108,7 @@ $MARKER_START
 
 ![进度徽章]($SVG_FILE) 
 
-距离第三版还需提交: $to_next 次
+距离第 $VERSION 版还需提交: $to_next 次
 $MARKER_END
 EOF
 )
@@ -134,4 +139,4 @@ if [ -n "$(git status --porcelain)" ]; then
   git add "$README" "$SVG_FILE"
   git commit -m "CI: 更新提交进度徽章"
   git push
-fi  
+fi
