@@ -1,4 +1,4 @@
-name: Update GA4 Stats
+name: 🔗 更新谷歌分析
 
 on:
   schedule:
