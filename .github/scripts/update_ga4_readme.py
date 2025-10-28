@@ -39,6 +39,7 @@ avg_session_duration_sec = float(row[3].value)
 minutes = int(avg_session_duration_sec // 60)
 seconds = int(avg_session_duration_sec % 60)
 avg_session_duration_str = f"{minutes} 分 {seconds} 秒"
+avg_session_duration_str2 = f"{minutes}min{seconds}s"
 
 # 更新 ga-stats.json（保留秒数）
 stats = {
@@ -66,11 +67,11 @@ def replace_section(content, start, end, new_text):
 stats_table = f"""
 ## 📈 统计信息
 
-自 2022 年 6 月 1 日以降，本书的访问量如下：
+自 2022 年 6 月 1 日以降，本书的访问情况如下：
 
 | 指标               | 统计       |
 |:--------------------:|:------------:|
-| 总用户数           | {total_users:,}  |
+| 用户总数           | {total_users:,}  |
 | 会话数             | {sessions:,}  |
 | 浏览次数           | {page_views:,}  |
 | 每次会话的平均互动时长      | {avg_session_duration_str} |
@@ -78,9 +79,10 @@ stats_table = f"""
 
 # 徽章 Markdown（保持原 JSON 秒数）
 badges_md = f"""
-![总用户数](https://img.shields.io/badge/总用户数-{total_users:,}-blue)
-![会话数](https://img.shields.io/badge/会话数-{sessions:,}-blue)
+![总用户数](https://img.shields.io/badge/总用户数-{total_users:,}-green)
+![会话数](https://img.shields.io/badge/会话数-{sessions:,}-orange)
 ![浏览次数](https://img.shields.io/badge/浏览次数-{page_views:,}-blue)
+![平均互动时长](https://img.shields.io/badge/每次会话的平均互动时长-{avg_session_duration_str2}-purple)
 """
 
 # 替换 README 中的区块
