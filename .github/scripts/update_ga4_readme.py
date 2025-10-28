@@ -1,7 +1,12 @@
+#!/usr/bin/env python3
 import os
 import json
 from google.analytics.data_v1beta import BetaAnalyticsDataClient
-from google.analytics.data_v1beta.types import DateRange, Metric, Dimension, RunReportRequest
+from google.analytics.data_v1beta.types import (
+    DateRange,
+    Metric,
+    RunReportRequest,
+)
 
 # GA4 Property ID
 PROPERTY_ID = "317797940"
@@ -11,19 +16,19 @@ key_json = os.environ["GA4_SERVICE_KEY"]
 with open("ga4_key.json", "w", encoding="utf-8") as f:
     f.write(key_json)
 
-# 初始化 GA4 客户端（google-cloud-python 体系）
-client = analytics_data_v1beta.BetaAnalyticsDataClient.from_service_account_file("ga4_key.json")
+# 初始化 GA4 客户端（google-analytics-data）
+client = BetaAnalyticsDataClient.from_service_account_file("ga4_key.json")
 
 # 请求自 2022-06-01 起累计数据
-request = analytics_data_v1beta.RunReportRequest(
+request = RunReportRequest(
     property=f"properties/{PROPERTY_ID}",
     metrics=[
-        analytics_data_v1beta.Metric(name="totalUsers"),
-        analytics_data_v1beta.Metric(name="sessions"),
-        analytics_data_v1beta.Metric(name="screenPageViews"),
-        analytics_data_v1beta.Metric(name="averageSessionDuration"),
+        Metric(name="totalUsers"),
+        Metric(name="sessions"),
+        Metric(name="screenPageViews"),
+        Metric(name="averageSessionDuration"),
     ],
-    date_ranges=[analytics_data_v1beta.DateRange(start_date="2022-06-01", end_date="today")],
+    date_ranges=[DateRange(start_date="2022-06-01", end_date="today")],
 )
 
 response = client.run_report(request)
@@ -46,7 +51,7 @@ stats = {
     "totalUsers": total_users,
     "sessions": sessions,
     "pageViews": page_views,
-    "avgSessionDuration": avg_session_duration_sec
+    "avgSessionDuration": avg_session_duration_sec,
 }
 with open("ga-stats.json", "w", encoding="utf-8") as f:
     json.dump(stats, f, ensure_ascii=False, indent=2)
@@ -56,12 +61,14 @@ readme_path = "README.md"
 with open(readme_path, "r", encoding="utf-8") as f:
     content = f.read()
 
+
 def replace_section(content, start, end, new_text):
     if start in content and end in content:
         before = content.split(start)[0]
         after = content.split(end)[1]
         return before + start + "\n" + new_text + "\n" + end + after
     return content
+
 
 # Markdown 表格
 stats_table = f"""
