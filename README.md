@@ -133,6 +133,15 @@ EPUB 在手机上可以使用[微信读书](https://play.google.com/store/apps/d
 
 以上统计信息由 [Google Analytics](https://analytics.google.com/) 提供。
 
+---
+
+![状态图](https://repobeats.axiom.co/api/embed/354819e6b6505318e9c3ca2a0b1b8c9f8369dd7f.svg "Repobeats analytics image")
+
+以上图表由 [Repobeats analytics image](https://repobeats.axiom.co/) 提供。
+
+---
+
+
 ~~本书得到的 ⭐ 真是太少啦！~~ 若本书对你有帮助，欢迎给本书所在的 [GitHub 项目存储库](https://github.com/FreeBSD-Ask/FreeBSD-Ask)加颗 ⭐。
 
 ![⭐ 图](https://api.star-history.com/svg?repos=FreeBSD-Ask/FreeBSD-Ask&type=Date)
