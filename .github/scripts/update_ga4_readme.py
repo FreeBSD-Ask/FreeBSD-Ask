@@ -21,7 +21,7 @@ request = RunReportRequest(
         Metric(name="totalUsers"),
         Metric(name="sessions"),
         Metric(name="screenPageViews"),
-        Metric(name="averageEngagementTimePerSession"),
+        Metric(name="averageSessionDuration"),
     ],
     date_ranges=[DateRange(start_date="2022-06-01", end_date="today")],
 )
