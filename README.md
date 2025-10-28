@@ -11,9 +11,25 @@ FreeBSD 是真正自由（Liberty）的**操作系统**，在这波谲云诡的�
 ~~[为了拯救即将归档（Archived）的 FreeBSD······我们决定写一本书。](https://mzh.moegirl.org.cn/为了保护我们心爱的ooo……成为偶像！)~~
 
 <!-- GA_STATS:START -->
+
+## 📊 GA4 数据（自 2022-06-01 起）
+
+| 指标               | 数值       |
+|--------------------|------------|
+| 总用户数           | 40,639 |
+| 会话数             | 83,958   |
+| 浏览次数           | 592,239 |
+| 平均互动时长（秒） | 535.01 |
+
 <!-- GA_STATS:END -->
 
 <!-- GA_BADGES:START -->
+
+![总用户数](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/FreeBSD-Ask/FreeBSD-Ask/main/ga-stats.json&label=总用户数&value=totalUsers)
+![会话数](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/FreeBSD-Ask/FreeBSD-Ask/main/ga-stats.json&label=会话数&value=sessions)
+![浏览次数](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/FreeBSD-Ask/FreeBSD-Ask/main/ga-stats.json&label=浏览次数&value=pageViews)
+![平均互动时长](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/FreeBSD-Ask/FreeBSD-Ask/main/ga-stats.json&label=平均互动时长&value=avgSessionDuration)
+
 <!-- GA_BADGES:END -->
 
 ---
