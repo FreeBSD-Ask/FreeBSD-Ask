@@ -504,7 +504,7 @@ CPU Flex Ratio Override 即 CPU 倍频设置，仅当此选项为 Enable 时，�
 
 该数值必须介于最大能效比（LFM，即最低主频）和硬件设定的最大非睿频比率（HFM，即默频）之间（最低主频 ≤ 你设置的值 ≤ 默频）。
 
-CPU 主频 \= 基准时钟（Base Clock，即外频，BIOS 中是 100 MHz *）* × 倍频（Multiplier）
+CPU 主频 \= 基准时钟（Base Clock，即外频，BIOS 中是 100 MHz × 倍频（Multiplier）
 
 例如，CPU 倍频为 46x，基本时钟速度为 100 MHz，则时钟速度为 4.6GHz。
 
