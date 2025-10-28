@@ -9,14 +9,7 @@ jobs:
   update_progress:
     runs-on: ubuntu-latest
     steps:
-      - name: 配置 Deploy Key
-        run: |
-          mkdir -p ~/.ssh
-          echo "${{ secrets.DEPLOY_KEY }}" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan github.com >> ~/.ssh/known_hosts
-        shell: bash
-
+    
       - name: 检出仓库
         uses: actions/checkout@v5
         with:
@@ -25,7 +18,4 @@ jobs:
 
       - name: 更新提交进度
         run: |
-          git remote set-url origin git@github.com:${{ github.repository }}.git
           bash .github/scripts/update_progress.sh
-        env:
-          GIT_SSH_COMMAND: "ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no"
