@@ -8,6 +8,8 @@
   - 注意：必须为子模块指定一个分支 `git submodule add -b main --force https://github.com/FreeBSD-Ask/FreeBSD-Ask docs`，否则会出现很多奇怪的问题。
   - 使“从 SUMMARY.md 更新目录”绕过必须 PR 的规则
   - 使“🔗 更新提交进度”绕过必须 PR 的规则
+  - 引入“🔗 更新谷歌分析”，用于在首页实时（每日更新）显示“📈 统计信息”
+  - 引入“🔗 更新提交进度”，用于在首页显示项目进度
 - 2025.10.27
   - 修复 <https://docs.bsdcn.org> 镜像站首页显示为目录的问题
 - 2025.10.26
