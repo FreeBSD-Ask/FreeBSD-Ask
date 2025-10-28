@@ -6,7 +6,7 @@ SVG_FILE="progress.svg"
 MARKER_START="<!-- commit-progress-start -->"
 MARKER_END="<!-- commit-progress-end -->"
 PER=3533
-VERSION=3  # 目标版本
+VERSION=3  # 当前目标版本
 
 # 如果不存在标记则初始化
 if ! grep -qF "$MARKER_START" "$README"; then
@@ -19,7 +19,6 @@ commits=$(git rev-list --count HEAD)
 # 获取最后一次提交者名称（去除多余空格和换行）
 last_author=$(git log -1 --pretty=format:'%an' | tr -d '\r\n' | xargs)
 
-# 调试输出
 echo "最近提交者: [$last_author]"
 
 # 如果上次提交者是 github-actions[bot] 则跳过
@@ -29,9 +28,22 @@ if [[ "$last_author" == "github-actions[bot]" ]]; then
 fi
 
 # 当前草稿提交量
-current_progress=$(( commits - PER*(VERSION-1) +1 ))
+current_progress=$(( commits - PER*(VERSION-1) + 1 ))
 # 距离目标版本还需提交
-to_next=$(( PER*VERSION - commits -1 ))
+to_next=$(( PER*VERSION - commits - 1 ))
+
+# 自动调整版本与提示文本
+if (( to_next < 0 )); then
+  VERSION=$((VERSION + 1))
+  to_next=$(( PER*VERSION - commits - 1 ))
+  msg="距离第 ${VERSION} 版还需提交: $to_next 次"
+elif (( to_next == 0 )); then
+  msg="第 ${VERSION} 版已完成"
+elif (( to_next <= 100 )); then
+  msg="第 ${VERSION} 版已近完成，还需提交"
+else
+  msg="距离第 ${VERSION} 版还需提交: $to_next 次"
+fi
 
 # 计算百分比和进度条
 percent=$(awk "BEGIN {printf \"%.4f\", ($current_progress*100)/$PER}")
@@ -75,27 +87,10 @@ cat > "$SVG_FILE" <<EOF
       <stop offset="100%" stop-color="#00FF00"/>
     </linearGradient>
   </defs>
-  <!-- 背景灰色 -->
+    <!-- 背景灰色 -->
   <rect x="0" y="0" width="$WIDTH" height="$HEIGHT" fill="$bg_color" rx="5" ry="5"/>
-  <!-- 已完成彩色渐变部分 -->
   <rect x="0" y="0" width="$FILLED_WIDTH" height="$HEIGHT" fill="url(#$GRADIENT_ID)" rx="5" ry="5"/>
-EOF
-
-# 文字位置计算
-MIN_TEXT_X=15
-TEXT_X=$((FILLED_WIDTH/2))
-if ((FILLED_WIDTH < 50)); then
-  TEXT_X=$((FILLED_WIDTH - 5))
-fi
-if ((TEXT_X < MIN_TEXT_X)); then
-  TEXT_X=$MIN_TEXT_X
-fi
-
-# 文字添加
-cat >> "$SVG_FILE" <<EOF
-  <text x="$TEXT_X" y="$((HEIGHT/2 + 5))" font-size="16" text-anchor="middle" fill="#000000">
-    $percent_rounded%
-  </text>
+  <text x="$(($FILLED_WIDTH/2<15?15:$FILLED_WIDTH/2))" y="$(($HEIGHT/2 + 5))" font-size="16" text-anchor="middle" fill="#000000">$percent_rounded%</text>
 </svg>
 EOF
 
@@ -106,12 +101,12 @@ $MARKER_START
 
 ![进度徽章]($SVG_FILE) 
 
-距离第三版还需提交: $to_next 次
+$msg
 $MARKER_END
 EOF
 )
 
-# 替换 README 中标记内容
+# 替换 README
 awk -v start="$MARKER_START" -v end="$MARKER_END" -v repl="$replacement" '
 BEGIN {inside=0}
 {
@@ -137,4 +132,4 @@ if [ -n "$(git status --porcelain)" ]; then
   git add "$README" "$SVG_FILE"
   git commit -m "CI: 更新提交进度徽章"
   git push
-fi  
+fi
