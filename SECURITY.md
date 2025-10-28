@@ -12,4 +12,4 @@
 
 ## 漏洞报告
 
-一般安全事件请提交 issue，关键安全事件请联系 ykla <yklaxds@gmail.com>。
+一般安全事件请提交 issue 或 PR，关键安全事件请联系 ykla <yklaxds@gmail.com>。
