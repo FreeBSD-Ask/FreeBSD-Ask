@@ -2,7 +2,6 @@ name: 🔗 从 SUMMARY.md 更新目录
 
 on:
   push:
-    # 当根目录下的 SUMMARY.md 被修改时触发工作流
     paths:
       - 'SUMMARY.md'
   workflow_dispatch:
@@ -16,24 +15,35 @@ jobs:
         uses: actions/checkout@v5
         with:
           ssh-key: ${{ secrets.DEPLOY_KEY }}
-          # 获取完整历史记录，便于后续提交操作
           fetch-depth: 0
 
-      - name: Delete existing mu-lu.md if exists
+      - name: Copy and modify SUMMARY.md to mu-lu.md
         run: |
+          # 删除旧文件
           if [ -f mu-lu.md ]; then
-            echo "Deleting existing mu-lu.md..."
             rm mu-lu.md
+          fi
+          # 复制 SUMMARY.md
+          cp SUMMARY.md mu-lu.md
+          # 替换第一行
+          sed -i '1s/^# Table of contents$/# 目录/' mu-lu.md
+          echo "mu-lu.md updated with first line replaced"
+
+      - name: Check if mu-lu.md changed (excluding first line)
+        id: check_diff
+        run: |
+          # 生成临时文件去掉第一行
+          tail -n +2 SUMMARY.md > /tmp/summary_tail.txt
+          tail -n +2 mu-lu.md > /tmp/mulu_tail.txt
+          # 比较内容
+          if ! diff -q /tmp/summary_tail.txt /tmp/mulu_tail.txt >/dev/null; then
+            echo "changed=true" >> $GITHUB_OUTPUT
           else
-            echo "mu-lu.md not found, skipping deletion."
+            echo "changed=false" >> $GITHUB_OUTPUT
           fi
 
-      - name: Copy SUMMARY.md to mu-lu.md
-        run: |
-          cp SUMMARY.md mu-lu.md
-          echo "Copied SUMMARY.md to mu-lu.md"
-
       - name: Commit and push changes
+        if: steps.check_diff.outputs.changed == 'true'
         uses: stefanzweifel/git-auto-commit-action@v7
         with:
           commit_message: "从 SUMMARY.md 更新 mu-lu.md [skip ci]"
