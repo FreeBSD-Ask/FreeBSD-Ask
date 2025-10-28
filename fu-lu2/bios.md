@@ -44,7 +44,7 @@ UEFI：Unified Extensible Firmware Interface，统一可扩展固件接口。UEF
 
 CMOS（Complementary Metal-Oxide-Semiconductor，互补金属氧化物半导体）是计算机内部的一种电池供电芯片，用于存储信息（时间信息和 BIOS 密码 BIOS 设置等）。它也被称为实时时钟（RTC）或非易失性 RAM（NVRAM）。CMOS 一般是由纽扣电池供电的，部分嵌入式设备的 CMOS 电池是可充电式纽扣电池。
 
-清空 CMOS 可清除上述参数。清空方法参见 [主板如何Clear CMOS](https://www.asus.com.cn/support/faq/1040820/)。
+清空 CMOS 可清除上述参数。清空方法参见 [主板如何 Clear CMOS](https://www.asus.com.cn/support/faq/1040820/)。
 
 参见 [BIOS 和 CMOS 有什么不同？](https://iknow.lenovo.com.cn/detail/043962?type=undefined&keyword=BIOS&keyWordId=)
 
@@ -921,7 +921,7 @@ Enable（启用）
 
 若要支持 Intel Turbo Boost Max（ITBMT，英特尔睿频加速 Max）3.0 技术，则必须开启此项。若处理器不支持 ITBMT 3.0，此项将呈现灰色，不可设定状态。
 
-ITBMT 3.0 能识别处理器上性能最佳的内核，同时通过提高利用电源和散热器空间时所必需的频率，提高这些内核的性能。由于生产差异，处理器内核的最大潜在频率各不相同。ITBMT 3.0 可识别 CPU 上最多两个速度最快的内核，称为“青睐的内核”。然后，它会对这些内核（或该内核）应用频率提升，并将关键工作负载分配到它们。ITBMT 3.0 旨在充分利用每个内核的最高频率，参见 [英特尔® 睿频加速 Max 技术 3.0技术常见问题解答](https://www.intel.cn/content/www/cn/zh/support/articles/000021587/processors.html)。
+ITBMT 3.0 能识别处理器上性能最佳的内核，同时通过提高利用电源和散热器空间时所必需的频率，提高这些内核的性能。由于生产差异，处理器内核的最大潜在频率各不相同。ITBMT 3.0 可识别 CPU 上最多两个速度最快的内核，称为“青睐的内核”。然后，它会对这些内核（或该内核）应用频率提升，并将关键工作负载分配到它们。ITBMT 3.0 旨在充分利用每个内核的最高频率，参见 [英特尔® 睿频加速 Max 技术 3.0 技术常见问题解答](https://www.intel.cn/content/www/cn/zh/support/articles/000021587/processors.html)。
 
 关闭有助于改善实时性，CPU 频率和电压不会被动态调整。
 
