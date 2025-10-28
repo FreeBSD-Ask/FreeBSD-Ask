@@ -21,7 +21,7 @@ request = RunReportRequest(
         Metric(name="totalUsers"),
         Metric(name="sessions"),
         Metric(name="screenPageViews"),
-        Metric(name="averageSessionDuration"),
+        Metric(name="averageEngagementTime"),
     ],
     date_ranges=[DateRange(start_date="2022-06-01", end_date="today")],
 )
@@ -38,7 +38,7 @@ avg_session_duration_sec = float(row[3].value)
 # 将平均互动时长转换为 分:秒
 minutes = int(avg_session_duration_sec // 60)
 seconds = int(avg_session_duration_sec % 60)
-avg_session_duration_str = f"{minutes} 分 {seconds} 秒"
+avg_session_duration_str = f"{minutes}min{seconds}s"
 
 # 更新 ga-stats.json（保留秒数）
 stats = {
@@ -73,7 +73,7 @@ stats_table = f"""
 | 总用户数           | {total_users:,} |
 | 会话数             | {sessions:,}   |
 | 浏览次数           | {page_views:,} |
-| 平均互动时长       | {avg_session_duration_str} |
+| 每次会话的平均互动时长      | {avg_session_duration_str} |
 """
 
 # 徽章 Markdown（保持原 JSON 秒数）
@@ -81,7 +81,7 @@ badges_md = f"""
 ![总用户数](https://img.shields.io/badge/总用户数-{total_users:,}-blue)
 ![会话数](https://img.shields.io/badge/会话数-{sessions:,}-blue)
 ![浏览次数](https://img.shields.io/badge/浏览次数-{page_views:,}-blue)
-![平均互动时长](https://img.shields.io/badge/平均互动时长-{avg_session_duration_str}-blue)
+![平均互动时长](https://img.shields.io/badge/每次会话的平均互动时长-{avg_session_duration_str}-blue)
 """
 
 # 替换 README 中的区块
