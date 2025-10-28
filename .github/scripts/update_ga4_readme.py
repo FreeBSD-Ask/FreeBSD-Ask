@@ -33,14 +33,19 @@ row = response.rows[0].metric_values
 total_users = int(row[0].value)
 sessions = int(row[1].value)
 page_views = int(row[2].value)
-avg_session_duration = float(row[3].value)
+avg_session_duration_sec = float(row[3].value)
 
-# 更新 ga-stats.json
+# 将平均互动时长转换为 分:秒
+minutes = int(avg_session_duration_sec // 60)
+seconds = int(avg_session_duration_sec % 60)
+avg_session_duration_str = f"{minutes}分{seconds}秒"
+
+# 更新 ga-stats.json（保留秒数）
 stats = {
     "totalUsers": total_users,
     "sessions": sessions,
     "pageViews": page_views,
-    "avgSessionDuration": avg_session_duration
+    "avgSessionDuration": avg_session_duration_sec
 }
 with open("ga-stats.json", "w", encoding="utf-8") as f:
     json.dump(stats, f, ensure_ascii=False, indent=2)
@@ -57,28 +62,30 @@ def replace_section(content, start, end, new_text):
         return before + start + "\n" + new_text + "\n" + end + after
     return content
 
-# Markdown 表格
+# Markdown 表格（显示为分:秒）
 stats_table = f"""
-## 📊 GA4 数据（自 2022-06-01 起）
+## 📊 GA4 数据（自 2022-06-01 以降）
 
 | 指标               | 数值       |
 |--------------------|------------|
 | 总用户数           | {total_users:,} |
 | 会话数             | {sessions:,}   |
 | 浏览次数           | {page_views:,} |
-| 平均互动时长（秒） | {avg_session_duration:.2f} |
+| 平均互动时长       | {avg_session_duration_str} |
 """
 
-# 徽章 Markdown（使用 Shields.io JSON endpoint 示例）
+# 徽章 Markdown（保持原 JSON 秒数）
 badges_md = f"""
-![总用户数](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/FreeBSD-Ask/FreeBSD-Ask/main/ga-stats.json&label=总用户数&value=totalUsers)
-![会话数](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/FreeBSD-Ask/FreeBSD-Ask/main/ga-stats.json&label=会话数&value=sessions)
-![浏览次数](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/FreeBSD-Ask/FreeBSD-Ask/main/ga-stats.json&label=浏览次数&value=pageViews)
-![平均互动时长](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/FreeBSD-Ask/FreeBSD-Ask/main/ga-stats.json&label=平均互动时长&value=avgSessionDuration)
+![总用户数](https://img.shields.io/badge/总用户数-{total_users:,}-blue)
+![会话数](https://img.shields.io/badge/会话数-{sessions:,}-blue)
+![浏览次数](https://img.shields.io/badge/浏览次数-{page_views:,}-blue)
+![平均互动时长](https://img.shields.io/badge/平均互动时长-{avg_session_duration_str}-blue)
 """
 
+# 替换 README 中的区块
 content = replace_section(content, "<!-- GA_STATS:START -->", "<!-- GA_STATS:END -->", stats_table)
 content = replace_section(content, "<!-- GA_BADGES:START -->", "<!-- GA_BADGES:END -->", badges_md)
 
+# 写回 README.md
 with open(readme_path, "w", encoding="utf-8") as f:
     f.write(content)
