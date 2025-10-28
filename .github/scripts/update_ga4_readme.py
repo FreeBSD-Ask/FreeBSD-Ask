@@ -82,7 +82,7 @@ badges_md = f"""
 ![总用户数](https://img.shields.io/badge/总用户数-{total_users:,}-green)
 ![会话数](https://img.shields.io/badge/会话数-{sessions:,}-orange)
 ![浏览次数](https://img.shields.io/badge/浏览次数-{page_views:,}-blue)
-![平均互动时长](https://img.shields.io/badge/每次会话的平均互动时长-{avg_session_duration_str2}-purple)
+![平均会话时长](https://img.shields.io/badge/平均会话时长-{avg_session_duration_str2}-purple)
 """
 
 # 替换 README 中的区块
