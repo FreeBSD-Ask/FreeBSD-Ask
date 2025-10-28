@@ -1,6 +1,7 @@
 import os
 import json
-from google.cloud import analytics_data_v1beta
+from google.analytics.data_v1beta import BetaAnalyticsDataClient
+from google.analytics.data_v1beta.types import DateRange, Metric, RunReportRequest
 
 # GA4 Property ID
 PROPERTY_ID = "317797940"
