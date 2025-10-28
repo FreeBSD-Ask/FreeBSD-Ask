@@ -100,7 +100,7 @@ FreeBSD 目前在大陆非官方镜像站有若干个：
   - FreeBSD Ports
     - [使用文档](https://mirrors.ustc.edu.cn/help/freebsd-ports.html)
     - <https://mirrors.ustc.edu.cn/freebsd-ports/>
-  - 联系方式: [lug@ustc.edu.cn](mailto:lug@ustc.edu.cn)
+  - 联系方式：[lug@ustc.edu.cn](mailto:lug@ustc.edu.cn)
 
 - 网易 163 镜像站（pkg 和 ports 上游均为中科大）<https://mirrors.163.com/>
   - FreeBSD Pub <https://mirrors.163.com/freebsd/>
@@ -120,4 +120,4 @@ FreeBSD 官方联系方式：
 
 ## 其他思路或解决方案
 
-自行使用 Poudriere 进行构建并分发。如 [RISC-V FreeBSD-pkg软件源上线！11619+ 预编译包助力快速构建FreeBSD环境](https://mp.weixin.qq.com/s/ngv3eZh1TEVgk3Pn3XfRBg)（已跑路）
+自行使用 Poudriere 进行构建并分发。如 [RISC-V FreeBSD-pkg 软件源上线！11619+ 预编译包助力快速构建 FreeBSD 环境](https://mp.weixin.qq.com/s/ngv3eZh1TEVgk3Pn3XfRBg)（已跑路）

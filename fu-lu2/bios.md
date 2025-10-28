@@ -6420,7 +6420,7 @@ DMI Gen3 链路的主动状态电源管理。
 
 参见 DMI Link ASPM Control（DMI 链路 ASPM 控制）
 
-##### DMI ASPM（DMI ASPM）
+##### DMI ASPM (DMI ASPM)
 
 参见 DMI Link ASPM Control（DMI 链路 ASPM 控制）
 
@@ -6620,7 +6620,7 @@ Manual（手动）
 
 说明：
 
-“Stop Grant mode” 是一种低功耗状态（即“停止授予（指令）”模式。），为大多数现代 x86 微处理器所支持。进入该模式的切换是由硬件控制的。
+“Stop Grant mode”是一种低功耗状态（即“停止授予（指令）”模式。），为大多数现代 x86 微处理器所支持。进入该模式的切换是由硬件控制的。
 
 当 CPU 检测到 系统空闲（如操作系统空闲线程运行），它可以通过硬件机制进入该模式以降低功耗。
 
@@ -6785,7 +6785,7 @@ Disabled（禁用）
 
 说明：
 
-启用／禁用 4GB 以上的内存映射 I/O（Memory Mapped I/O） BIOS 分配。
+启用／禁用 4GB 以上的内存映射 I/O（Memory Mapped I/O）BIOS 分配。
 
 当 Aperture Size（显存孔径）设置为 2048MB 时，该功能会自动启用。
 
@@ -7170,7 +7170,7 @@ PCI Express 2.0 规范规定了两种低功耗模式：L0s 和 L1 模式。
 
 对于 英特尔 ® Arc™ 显卡，所有大于 G2 的电源状态都需要 ASPM L1。这意味着必须启用 ASPM L1 和全局作系统设置才能支持英特尔 Arc 显卡低功耗模式。
 
-参考文献：[英特尔 ® 处理器的直接媒体接口 （DMI） 是什么？](https://www.intel.cn/content/www/cn/zh/support/articles/000094185/processors.html)
+参考文献：[英特尔 ® 处理器的直接媒体接口（DMI）是什么？](https://www.intel.cn/content/www/cn/zh/support/articles/000094185/processors.html)
 
 ##### Port8xh Decode（PCIE 8xh 端口解码）
 
@@ -7454,7 +7454,7 @@ Disabled（禁用）
 
 DPC，Downstream Port Containment，下行端口控制
 
-DPC 是 PCIe 标准的建议扩展，设计用于自动禁止发生非致命(或致命)错误后的链路以便防止可能扩散的数据损坏以及在软件支持时启动错误恢复。
+DPC 是 PCIe 标准的建议扩展，设计用于自动禁止发生非致命 (或致命) 错误后的链路以便防止可能扩散的数据损坏以及在软件支持时启动错误恢复。
 
 ###### EPDC（增强型下行端口控制）
 
@@ -7484,7 +7484,7 @@ Disabled（禁用）
 
 说明：
 
-参见 [为什么使用适用于 PCI Express* 的 英特尔 ® FPGA P-Tile/H-Tile 、Avalon® 流传输和 Avalon® 内存映射 IP 时，在高级错误报告 （AER） 中记录非严重 PCIe* 错误？](https://www.intel.cn/content/www/cn/zh/support/programmable/articles/000080831.html)
+参见 [为什么使用适用于 PCI Express* 的 英特尔 ® FPGA P-Tile/H-Tile、Avalon® 流传输和 Avalon® 内存映射 IP 时，在高级错误报告（AER）中记录非严重 PCIe* 错误？](https://www.intel.cn/content/www/cn/zh/support/programmable/articles/000080831.html)
 
 - FER（PCIe 设备致命错误报告）
 
@@ -7624,11 +7624,11 @@ Advanced Error Reporting 即 AER，
 
 Auto（自动）
 
-Gen1：PCIe 1.0（2.5 GT/s）
+Gen1: PCIe 1.0 (2.5 GT/s)
 
-Gen2：PCIe 2.0（5.0 GT/s）
+Gen2: PCIe 2.0 (5.0 GT/s)
 
-Gen3：PCIe 3.0（8.0 GT/s）。
+Gen3: PCIe 3.0 (8.0 GT/s)
 
 说明：
 
@@ -7726,7 +7726,7 @@ Manual（手动）
 
 Auto（自动）
 
-在多核 CPU 和缓存一致性系统中，“Snoop” 指的是一个核心的缓存监视其他核心或外部代理（如 PCIe 设备通过 DMA）对共享内存的访问，以维护所有缓存数据的一致性。Snoop 操作需要时间，会引入延迟。 这个延迟就是 Snoop Latency。
+在多核 CPU 和缓存一致性系统中，“Snoop”指的是一个核心的缓存监视其他核心或外部代理（如 PCIe 设备通过 DMA）对共享内存的访问，以维护所有缓存数据的一致性。Snoop 操作需要时间，会引入延迟。这个延迟就是 Snoop Latency。
 
 这个 BIOS 设置项不是 PCIe 设备报告的 LTR 值本身。它是系统 (具体是 SA 内的 PCIe 控制器/电源管理逻辑) 在评估 PCIe 设备 LTR 要求时，需要额外考虑的一个内部延迟补偿值。
 
@@ -7874,7 +7874,7 @@ Disabled（禁用）
 
 说明：
 
-Aggressive LPM Support，ALPM
+Aggressive LPM Support, ALPM
 
 使 PCH 主动让 SATA 总线进入链路低功耗状态。此功能仅在 AHCI 模式下受支持。
 
@@ -7962,7 +7962,7 @@ Flex-灵活模式
 
 Direct connect：直连
 
-M2：M.2
+M2: M.2
 
 说明：
 
@@ -8136,7 +8136,7 @@ Disabled（禁用）
 
 说明：
 
-HSII，HS Interrupt IN Alarm
+HSII, HS Interrupt IN Alarm
 
 启用/禁用 HSII 功能。启用该功能可能会导致功耗增加。
 
@@ -8312,7 +8312,7 @@ Advanced Link Config：高级链路配置
 
 3）SNDW[1-4]
 
-4）“Advanced” 模式可分别启用每个接口
+4）“Advanced”模式可分别启用每个接口
 
 DMIC，Digital Microphone，数字麦克风
 
@@ -8326,7 +8326,7 @@ SSP #0 (串行音频接口 0 号)
 
 同上。
 
-SNDW #0 （SoundWire 0 号）
+SNDW #0（SoundWire 0 号）
 
 同上。
 
@@ -8505,7 +8505,7 @@ No Dmic to codec（不配置数字麦克风）
 
 THC，Touch Host Controller，触控主机控制器
 
-触控主机控制器（Touch Host Controller） 是芯片组（PCH）中的一个 IP 模块，用于与触控设备（例如：触控屏、触控板等）进行通信。
+触控主机控制器（Touch Host Controller）是芯片组（PCH）中的一个 IP 模块，用于与触控设备（例如：触控屏、触控板等）进行通信。
 
 参见 [Intel Touch Host Controller (THC)](https://docs.kernel.org/hid/intel-thc-hid.html)
 
@@ -8748,7 +8748,7 @@ Disabled（禁用）
 
 启用后，ACPI 将报告连接到串行 IO 的附加设备。
 
-启用该设置后，BIOS 会在操作系统启动之前将 LPSS（Serial IO）总线上的控制器（如 I²C、SPI、UART、GPIO 等）通过 ACPI 表（如 DSDT、SSDT）枚举并报告。这样操作系统在启动时能识别并管理这些设备。参见 [ACPI Specification 概述(基于 ACPI_Spec_6_4_Jan22)](https://blog.csdn.net/anqi8955/article/details/120162679)
+启用该设置后，BIOS 会在操作系统启动之前将 LPSS（Serial IO）总线上的控制器（如 I²C、SPI、UART、GPIO 等）通过 ACPI 表（如 DSDT、SSDT）枚举并报告。这样操作系统在启动时能识别并管理这些设备。参见 [ACPI Specification 概述 (基于 ACPI_Spec_6_4_Jan22)](https://blog.csdn.net/anqi8955/article/details/120162679)
 
 ##### SerilaIO timing parameters（串行 IO 时序参数）
 
@@ -8792,7 +8792,7 @@ Disabled（禁用）
 
 控制 eMMC 5.1 HS400 模式（总线速度）开关。
 
-HS400，是一种 eMMC 的 HS400 数据传输模式，为 eMMC 数据总线工作于双边采样(DDR)模式下的数据传输模式，带宽可达 400MB/s。
+HS400，是一种 eMMC 的 HS400 数据传输模式，为 eMMC 数据总线工作于双边采样 (DDR) 模式下的数据传输模式，带宽可达 400MB/s。
 
 ##### Enable HS400 software tuning（启用 HS400 软件调优）
 
@@ -9463,11 +9463,11 @@ USB
 
 说明：
 
-选择 “None” 将隐藏 “I2C Sensor Hub” 设置选项；
+选择“None”将隐藏“I2C Sensor Hub”设置选项；
 
-选择 “I2C” 将隐藏 “ALS” 设置选项；
+选择“I2C”将隐藏“ALS”设置选项；
 
-选择 “USB” 将同时隐藏 “I2C” 和 “ALS” 两个设置选项。
+选择“USB”将同时隐藏“I2C”和“ALS”两个设置选项。
 
 #### DeepSx Power Policies（深度睡眠电源策略）
 
@@ -9763,7 +9763,7 @@ Disabled（禁用）
 
 eSPI，Enhanced Serial Peripheral Interface，增强型串行外设接口
 
-参见 [增强型串行外设接口 （eSPI） 接口基本规格（适用于客户端和服务器平台）](https://www.intel.cn/content/www/cn/zh/content-details/841685/enhanced-serial-peripheral-interface-espi-interface-base-specification-for-client-and-server-platforms.html)
+参见 [增强型串行外设接口（eSPI）接口基本规格（适用于客户端和服务器平台）](https://www.intel.cn/content/www/cn/zh/content-details/841685/enhanced-serial-peripheral-interface-espi-interface-base-specification-for-client-and-server-platforms.html)
 
 #### OS IDLE Mode（系统待机状态）
 
@@ -9871,7 +9871,7 @@ Disabled（禁用）
 
 确定内存中 PSE 日志输出区域的大小限制
 
-###### Shell（PSE Shell）
+###### Shell (PSE Shell)
 
 选项：
 
@@ -10108,7 +10108,7 @@ TGPIO：Time-Aware GPIO，时间感知 GPIO。
 
 Lower：TGPIO(0-19),GPIO(20-29)
 
-Mid：TGPIO(0-9,20-29),GPIO(10-19)
+Mid: TGPIO(0-9,20-29),GPIO(10-19)
 
 Top：TGPIO(10-29) GPIO(0-9)
 
@@ -10228,7 +10228,7 @@ SGMII：Serial Gigabit Media Independent Interface，串行千兆媒体独立接
 
 38.4MHz 1bps
 
-说明:
+说明：
 
 PCH TSN 链路速度配置
 
@@ -10296,7 +10296,7 @@ BIOS (基本输入/输出系统) 密码是一种安全功能，用来阻止计�
 
 密码说明（Password Description）：
 
-若仅设置了管理员密码，则仅限定进入设置程序(BIOS 或 UEFI)。您必须输入管理员密码才能读取和修改 BIOS 设置。
+若仅设置了管理员密码，则仅限定进入设置程序 (BIOS 或 UEFI)。您必须输入管理员密码才能读取和修改 BIOS 设置。
 
 若仅设置了用户密码，则此为开机密码，并且需在开机进入 Windows 或进入 BIOS 时输入此密码。在 BIOS 设置中，使用者将拥有管理员权限。
 
@@ -10310,7 +10310,7 @@ BIOS (基本输入/输出系统) 密码是一种安全功能，用来阻止计�
 
 最长长度：20
 
-如果确认不再使用密码，请在 New Password (新密码)的字段中保留空白（直接回车即可）。清除密码时，将会出现是否确定要清除密码的确认，请点击 Ok。
+如果确认不再使用密码，请在 New Password (新密码) 的字段中保留空白（直接回车即可）。清除密码时，将会出现是否确定要清除密码的确认，请点击 Ok。
 
 ### Administrator Password（管理员密码）
 
@@ -10424,7 +10424,7 @@ No（否）
 
 #### Key management（密钥管理）
 
-对安全启动的密钥进行管理,包括密钥的查看，添加，删除，授权和恢复出厂设置等操作
+对安全启动的密钥进行管理，包括密钥的查看，添加，删除，授权和恢复出厂设置等操作
 
 ​![](../.gitbook/assets/image-20250726132101-9ohwdmq.png)​
 

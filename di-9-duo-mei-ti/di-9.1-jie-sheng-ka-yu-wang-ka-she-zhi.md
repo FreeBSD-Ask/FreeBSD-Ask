@@ -25,7 +25,7 @@ No devices installed from userspace.
 
 后面带有 `default` 是 oss 默认设备。如果软件的音频使用的 oss 且输出是默认的，音频就会从这个设备输出。
 
-可以通过调整内核参数,使上面命令输出更为详细的声卡信息：
+可以通过调整内核参数，使上面命令输出更为详细的声卡信息：
 
 ```sh
 # sysctl hw.snd.verbose=4
@@ -138,7 +138,7 @@ pcm0: <Realtek ALC897 (Analog)> at nid 27 and 26 on hdaa0
 - `seq=0`：主输出（扬声器）。
 - `seq=15`：耳机，插入耳机时会自动静音扬声器。
 
-此时发现已经有声音了，编辑 `/boot/device.hints`，加入以下若干行，将其固化为永久设置:
+此时发现已经有声音了，编辑 `/boot/device.hints`，加入以下若干行，将其固化为永久设置：
 
 ```ini
 hint.hdaa.0.nid26.config="as=1 seq=0"

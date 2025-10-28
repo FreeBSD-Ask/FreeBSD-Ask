@@ -2,7 +2,7 @@
 
 > **注意**
 > 
-> 不支持 OpenVZ、LXC 虚拟机，因为他们本质上不属于虚拟机，宿主机与客户机共享内核。内核都是 Linux 了，哪里还有 FreeBSD ？
+> 不支持 OpenVZ、LXC 虚拟机，因为他们本质上不属于虚拟机，宿主机与客户机共享内核。内核都是 Linux 了，哪里还有 FreeBSD？
 > 
 > 不支持 UEFI 引导模式（BIOS + GPT 分区表亦不支持），仅支持传统 BIOS + MBR 方式引导。
 
@@ -195,7 +195,7 @@ mfsBSD 的 `root` 密码默认是 `mfsroot`。你可以使用 ssh 工具进行�
 
 ![能进入 BootLoader，但启动失败](../.gitbook/assets/qemu-dd-mfsbsd.png)
 
-思路: 这个页面可以继续使用命令 `?` 查看磁盘信息，也许可以接着引导。
+思路：这个页面可以继续使用命令 `?` 查看磁盘信息，也许可以接着引导。
 
 - 通过 mfsLinux `dd` mfsBSD
 
