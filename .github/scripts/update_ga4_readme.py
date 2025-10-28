@@ -1,7 +1,12 @@
+#!/usr/bin/env python3
 import os
 import json
 from google.analytics.data_v1beta import BetaAnalyticsDataClient
-from google.analytics.data_v1beta.types import DateRange, Metric, RunReportRequest
+from google.analytics.data_v1beta.types import (
+    DateRange,
+    Metric,
+    RunReportRequest,
+)
 
 # GA4 Property ID
 PROPERTY_ID = "317797940"
@@ -11,10 +16,10 @@ key_json = os.environ["GA4_SERVICE_KEY"]
 with open("ga4_key.json", "w", encoding="utf-8") as f:
     f.write(key_json)
 
-# 初始化 GA4 客户端
+# 初始化 GA4 客户端（google-analytics-data）
 client = BetaAnalyticsDataClient.from_service_account_file("ga4_key.json")
 
-# 请求自 2022-06-01 起累计数据（之前没有）
+# 请求自 2022-06-01 起累计数据
 request = RunReportRequest(
     property=f"properties/{PROPERTY_ID}",
     metrics=[
@@ -46,7 +51,7 @@ stats = {
     "totalUsers": total_users,
     "sessions": sessions,
     "pageViews": page_views,
-    "avgSessionDuration": avg_session_duration_sec
+    "avgSessionDuration": avg_session_duration_sec,
 }
 with open("ga-stats.json", "w", encoding="utf-8") as f:
     json.dump(stats, f, ensure_ascii=False, indent=2)
@@ -56,6 +61,7 @@ readme_path = "README.md"
 with open(readme_path, "r", encoding="utf-8") as f:
     content = f.read()
 
+
 def replace_section(content, start, end, new_text):
     if start in content and end in content:
         before = content.split(start)[0]
@@ -63,21 +69,22 @@ def replace_section(content, start, end, new_text):
         return before + start + "\n" + new_text + "\n" + end + after
     return content
 
-# Markdown 表格（显示为分:秒）
+
+# Markdown 表格
 stats_table = f"""
 ## 📈 统计信息
 
 自 2022 年 6 月 1 日以降，本书的访问情况如下：
 
-| 指标               | 统计       |
-|:--------------------:|:------------:|
-| 用户总数           | {total_users:,} 位  |
-| 会话数             | {sessions:,} 次 |
-| 浏览次数           | {page_views:,} 次 |
-| 平均会话时长     | {avg_session_duration_str} |
+| 指标           | 统计数据     |
+|:---------------:|:-------------:|
+| 用户总数       | {total_users:,} 位  |
+| 会话数         | {sessions:,} 次 |
+| 浏览次数       | {page_views:,} 次 |
+| 平均会话时长   | {avg_session_duration_str} |
 """
 
-# 徽章 Markdown（保持原 JSON 秒数）
+# 徽章
 badges_md = f"""
 ![总用户数](https://img.shields.io/badge/总用户数-{total_users:,}-green)
 ![会话数](https://img.shields.io/badge/会话数-{sessions:,}-orange)
@@ -85,10 +92,8 @@ badges_md = f"""
 ![平均会话时长](https://img.shields.io/badge/平均会话时长-{avg_session_duration_str2}-purple)
 """
 
-# 替换 README 中的区块
 content = replace_section(content, "<!-- GA_STATS:START -->", "<!-- GA_STATS:END -->", stats_table)
 content = replace_section(content, "<!-- GA_BADGES:START -->", "<!-- GA_BADGES:END -->", badges_md)
 
-# 写回 README.md
 with open(readme_path, "w", encoding="utf-8") as f:
     f.write(content)
