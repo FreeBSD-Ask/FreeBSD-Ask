@@ -11,6 +11,8 @@ FreeBSD 是真正自由（Liberty）的**操作系统**，在这波谲云诡的�
 ~~[为了拯救即将归档（Archived）的 FreeBSD······我们决定写一本书。](https://mzh.moegirl.org.cn/为了保护我们心爱的ooo……成为偶像！)~~
 
 
+---
+
 <!-- commit-progress-start -->
 **第 3 版进度:**   （草稿提交数: 832）  
 
@@ -58,15 +60,13 @@ EPUB 在手机上可以使用[微信读书](https://play.google.com/store/apps/d
 
 除此外 FreeBSD 中文社区（CFC）未对本书进行任何部署。我们唯一的域名只有 “bsdcn.org”。
 
-如遇网站技术性问题，请联络 ykla [yklaxds@gmail.com](mailto:yklaxds@gmail.com)。
-
 ## 💬 意见反馈
 
 由于编者水平所限，书中缺点和谬误之处自不可免。
 
-如遇本书相关问题：请发送邮件至 ykla [yklaxds@gmail.com](mailto:yklaxds@gmail.com)。关于本书内容问题，欢迎通过在桌面端网页右下方（或底部左下方）当前页面的 GitHub 直接提交 PR。
+如遇本书相关问题或网站技术问题：请发送邮件至 ykla [yklaxds@gmail.com](mailto:yklaxds@gmail.com)。关于本书内容问题，欢迎通过在桌面端网页右下方（或底部左下方）当前页面的 GitHub 直接提交 PR。
 
-除此外有关中文社区的问题请联系 QQ 群主。
+除此外有关中文社区的问题烦请加入 QQ 群后再联系 QQ 群主。
 
 **非技术性问题及与社区无关话题、纯粹私人聊天及情感讨论等等事宜恕不回复，如有这方面需求请咨询专业人士，其他需求欢迎加群讨论。**
 
