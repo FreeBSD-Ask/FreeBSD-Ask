@@ -16,8 +16,11 @@ fi
 # 获取总提交数
 commits=$(git rev-list --count HEAD)
 
-# 获取上次提交作者
-last_author=$(git log -1 --pretty=format:'%an' -- "$README")
+# 获取最后一次提交者名称（去除多余空格和换行）
+last_author=$(git log -1 --pretty=format:'%an' | tr -d '\r\n' | xargs)
+
+# 调试输出
+echo "最近提交者: [$last_author]"
 
 # 如果上次提交者是 github-actions[bot] 则跳过
 if [[ "$last_author" == "github-actions[bot]" ]]; then
