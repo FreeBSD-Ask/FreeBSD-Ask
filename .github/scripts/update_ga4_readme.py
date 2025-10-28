@@ -14,7 +14,7 @@ with open("ga4_key.json", "w", encoding="utf-8") as f:
 # 初始化 GA4 客户端
 client = BetaAnalyticsDataClient.from_service_account_file("ga4_key.json")
 
-# 请求自 2022-06-01 起累计数据
+# 请求自 2022-06-01 起累计数据（之前没有）
 request = RunReportRequest(
     property=f"properties/{PROPERTY_ID}",
     metrics=[
@@ -71,9 +71,9 @@ stats_table = f"""
 
 | 指标               | 统计       |
 |:--------------------:|:------------:|
-| 用户总数           | {total_users:,}  |
-| 会话数             | {sessions:,}  |
-| 浏览次数           | {page_views:,}  |
+| 用户总数           | {total_users:,} 位  |
+| 会话数             | {sessions:,} 次 |
+| 浏览次数           | {page_views:,} 次 |
 | 平均会话时长     | {avg_session_duration_str} |
 """
 
