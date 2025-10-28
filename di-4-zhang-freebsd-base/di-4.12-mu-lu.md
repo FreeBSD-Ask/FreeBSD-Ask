@@ -190,7 +190,7 @@ dr-xr-xr-x   2 root    wheel   schg,uarch  2 Feb 21 10:26 empty
 ├── bin 系统命令和用户命令
 ├── cddl 各种在通用开发与发行许可（CDDL）下的命令和库，比如 ZFS
 ├── contrib 第三方软件
-├── crypto 用于存放加密相关的源代码。crypto 和 contrib目录的分离源于美国早期的出口管制法律，这些法律将加密源代码视为受限技术，因此需要将其与其他源代码分开存放。
+├── crypto 用于存放加密相关的源代码。crypto 和 contrib 目录的分离源于美国早期的出口管制法律，这些法律将加密源代码视为受限技术，因此需要将其与其他源代码分开存放。
 ├── etc /etc 模板
 ├── gnu GPL 和 LGPL 授权的软件
 ├── include 系统 include 文件

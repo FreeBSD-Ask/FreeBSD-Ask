@@ -60,7 +60,7 @@ default character set UTF-8;
 ## SQL 数据类型
 
 - `tinyint` (1B), `smallint` (2B), `mediumint` (3B), `int` (4B), `bigint` (8B)  
-- `float` (4B), `double` (8B), `decimal(整体位数, 小数点后位数)`  
+- `float` (4B), `double` (8B), `decimal(整体位数，小数点后位数)`  
 - `char` 是字符类型，想存字符串用 `char(字符数)`  
 - `unsigned + 数据类型` 可以设置为无符号的数据类型。
 
