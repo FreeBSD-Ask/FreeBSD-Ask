@@ -34,17 +34,16 @@ to_next=$(( PER*VERSION - commits - 1 ))
 
 # 自动调整版本与提示文本
 if (( to_next < 0 )); then
-  # 先显示完成消息
-  msg="第三版已完成"
-  # 然后递增版本并重新计算剩余提交数
+  msg="第 ${VERSION} 版已完成"
   VERSION=$((VERSION + 1))
   to_next=$(( PER*VERSION - commits - 1 ))
+  msg="距离第 ${VERSION} 版还需提交: $to_next 次"
 elif (( to_next == 0 )); then
-  msg="第三版已完成"
+  msg="第 ${VERSION} 版已完成"
 elif (( to_next <= 100 )); then
-  msg="第三版已近完成，还需提交"
+  msg="第 ${VERSION} 版已近完成，还需提交"
 else
-  msg="距离第三版还需提交: $to_next 次"
+  msg="距离第 ${VERSION} 版还需提交: $to_next 次"
 fi
 
 # 计算百分比和进度条
