@@ -24,4 +24,4 @@ jobs:
       - name: Update README with GA4 data
         env:
           GA4_SERVICE_KEY: ${{ secrets.GA4_SERVICE_KEY }}
-        run: python .scripts/update_ga4_readme.py
+        run: python .github/scripts/update_ga4_readme.py
