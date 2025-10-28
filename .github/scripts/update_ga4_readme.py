@@ -82,13 +82,3 @@ content = replace_section(content, "<!-- GA_BADGES:START -->", "<!-- GA_BADGES:E
 
 with open(readme_path, "w", encoding="utf-8") as f:
     f.write(content)
-
-# 自动提交并推送（只提交 README.md）
-if [ -n "$(git status --porcelain "$README")" ]; then
-  git config user.name "github-actions[bot]"
-  git config user.email "github-actions[bot]@users.noreply.github.com"
-  
-  git add "$README"
-  git commit -m "CI: 更新谷歌分析"
-  git push origin main
-fi
