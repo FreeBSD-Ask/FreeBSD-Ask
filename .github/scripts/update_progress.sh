@@ -39,7 +39,7 @@ if (( current_progress > PER )); then
 fi
 
 # 距离本版本还需提交
-to_next=$(( PER - current_progress ))
+to_next=$(( PER - current_progress -1))
 
 # 百分比计算（四舍五入到 0.05%）
 percent=$(awk "BEGIN {printf \"%.4f\", ($current_progress*100)/$PER}")
