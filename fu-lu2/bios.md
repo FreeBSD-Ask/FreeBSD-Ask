@@ -7628,7 +7628,7 @@ Gen1: PCIe 1.0 (2.5 GT/s)
 
 Gen2: PCIe 2.0 (5.0 GT/s)
 
-Gen3: PCIe 3.0 (8.0 GT/s).
+Gen3: PCIe 3.0 (8.0 GT/s)
 
 说明：
 
