@@ -1,6 +1,5 @@
 /* 引入霞鹜文楷字体 */
 
-@import url('https://cdn.jsdelivr.net/npm/lxgw-wenkai-gb-web@latest/style.css');
 /* 引用格式缩进 */
 .vp-doc blockquote > p + p {
   margin-block-start: 1em; /* 只给相邻段落之间加 1em 间距 */
@@ -91,9 +90,23 @@
 	white-space: normal !important;
 }
 
-
-
+/* 导入 LXGW WenKai Screen*/
 :root {
-        --vp-font-family-base: 'LXGW WenKai Screen';
-        --vp-font-family-mono: 'LXGW WenKai Screen';
-} 
+  --vp-font-family-base: 'LXGW WenKai Screen';
+  --vp-font-family-default: sans-serif;
+  --vp-font-family-mono: 'LXGW WenKai Mono Screen';
+}
+
+/* normal 字重文字使用 LXGW WenKai Screen */
+body,
+p,
+span {
+  font-family: var(--vp-font-family-base);
+  font-weight: normal;
+}
+
+/* 当需要粗体（bold）时，回退到系统默认字体 */
+strong, b {
+  font-family: var(--vp-font-family-default);
+  font-weight: bold;
+}
