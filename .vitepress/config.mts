@@ -107,13 +107,6 @@ markdown: {
     }
   }
 },
-	vue: {
-		template: {
-			compilerOptions: {
-				isCustomElement: (tag) => customElements.includes(tag),
-			},
-		},
-	},
 	head: [
 		[
 			'script',
