@@ -91,7 +91,7 @@
 /* 导入 LXGW WenKai Screen*/
 :root {
   --vp-font-family-base: 'LXGW WenKai Screen';
-  --vp-font-family-default: sans-serif;
+  --vp-font-family-default: 'Inter var experimental', 'Inter var', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', "Noto Sans", 'Droid Sans', 'Helvetica Neue', sans-serif;
   --vp-font-family-mono: 'LXGW WenKai Mono Screen';
 }
 
