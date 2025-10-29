@@ -6,10 +6,12 @@ FreeBSD 是真正自由（Liberty）的**操作系统**，在这波谲云诡的�
 
 ## 📄 内容提要
 
-这是一本由 CC BY 许可协议授权的 FreeBSD 操作系统研究书籍，还包含一些 OpenBSD、NetBSD、DragonFly BSD 等 BSD 家族的快速入门章节。
+这是一本由 CC BY 许可协议授权的 FreeBSD 操作系统研究书籍，还包含一些 OpenBSD、NetBSD 等 BSD 家族的快速入门章节。
 
 ~~[为了拯救即将归档（Archived）的 FreeBSD······我们决定写一本书。](https://mzh.moegirl.org.cn/为了保护我们心爱的ooo……成为偶像！)~~
 
+[![FreeBSD](https://img.shields.io/badge/FreeBSD-EB0028?logo=freebsd&logoColor=fff)](https://www.freebsd.org/) [![OpenBSD](https://img.shields.io/badge/OpenBSD-#F2CA30?logo=openbsd&logoColor=black)](https://www.openbsd.org/)
+[![NetBSD](https://img.shields.io/badge/NetBSD-016EE9?logo=netbsd&logoColor=white)](https://www.netbsd.org/)
 
 
 ---
