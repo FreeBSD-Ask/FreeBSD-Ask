@@ -91,9 +91,9 @@
 
 /* 引入霞鹜文楷字体 */
 
+@import url('https://cdn.jsdelivr.net/npm/lxgw-wenkai-gb-web@latest/style.css');
 
 :root {
-        --vp-font-family-base: 'LXGW WenKai Screen';
-        --vp-font-family-mono: 'LXGW WenKai Mono Screen';
+        --vp-font-family-base: 'LXGW Wenkai GB';
+        --vp-font-family-mono: 'LXGW WenKai Mono GB';
 } 
-
