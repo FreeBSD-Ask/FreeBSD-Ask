@@ -4,6 +4,10 @@
 
 ## 2025 年第四季度
 
+- 2025.10.29
+  - 将 <https://docs.bsdcn.org> 整体字体切换到“霞鹜文楷”
+  - 将 <https://book.bsdcn.org> 整体字体切换到“霞鹜文楷”
+  - <https://docs.bsdcn.org> 现在可以用鼠标点开图片浏览大图了
 - 2025.10.28
   - 注意：必须为子模块指定一个分支 `git submodule add -b main --force https://github.com/FreeBSD-Ask/FreeBSD-Ask docs`，否则会出现很多奇怪的问题。
   - 使“从 SUMMARY.md 更新目录”绕过必须 PR 的规则
