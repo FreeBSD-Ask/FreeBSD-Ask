@@ -93,8 +93,7 @@
 
 
 :root {
-        --vp-font-family-base: 'LXGW WenKai Screen', 'Inter var experimental', 'Inter var', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans',
-                'Droid Sans', 'Helvetica Neue', sans-serif;
-        --vp-font-family-mono: 'LXGW WenKai Mono Screen', ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+        --vp-font-family-base: 'LXGW WenKai Screen';
+        --vp-font-family-mono: 'LXGW WenKai Mono Screen';
 } 
 
