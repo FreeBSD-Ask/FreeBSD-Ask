@@ -137,6 +137,7 @@ export default defineConfig({
 	title: "FreeBSD 从入门到跑路",
 	description: "FreeBSD 从入门到跑路",
 	metaChunk: true,
+cleanUrls:true, // 在 URL 中去掉 .html 后缀
 markdown: {
   image: { lazyLoading: true },
   config: (md) => {
