@@ -2,131 +2,12 @@ import { defineConfig } from 'vitepress';
 import autoNav from 'vite-plugin-vitepress-auto-nav';
 import type MarkdownIt from 'markdown-it';
 import footnote from 'markdown-it-footnote';
-import mathjax3 from 'markdown-it-mathjax3-tao';
 import taskLists from 'markdown-it-task-checkbox';
 import {
 	chineseSearchOptimize,
 	pagefindPlugin
 } from 'vitepress-plugin-pagefind';
 import lightbox from 'vitepress-plugin-lightbox';
-
-const customElements = [
-	'mjx-container',
-	'mjx-assistive-mml',
-	'math',
-	'maction',
-	'maligngroup',
-	'malignmark',
-	'menclose',
-	'merror',
-	'mfenced',
-	'mfrac',
-	'mi',
-	'mlongdiv',
-	'mmultiscripts',
-	'mn',
-	'mo',
-	'mover',
-	'mpadded',
-	'mphantom',
-	'mroot',
-	'mrow',
-	'ms',
-	'mscarries',
-	'mscarry',
-	'mscarries',
-	'msgroup',
-	'mstack',
-	'mlongdiv',
-	'msline',
-	'mstack',
-	'mspace',
-	'msqrt',
-	'msrow',
-	'mstack',
-	'mstack',
-	'mstyle',
-	'msub',
-	'msup',
-	'msubsup',
-	'mtable',
-	'mtd',
-	'mtext',
-	'mtr',
-	'munder',
-	'munderover',
-	'semantics',
-	'math',
-	'mi',
-	'mn',
-	'mo',
-	'ms',
-	'mspace',
-	'mtext',
-	'menclose',
-	'merror',
-	'mfenced',
-	'mfrac',
-	'mpadded',
-	'mphantom',
-	'mroot',
-	'mrow',
-	'msqrt',
-	'mstyle',
-	'mmultiscripts',
-	'mover',
-	'mprescripts',
-	'msub',
-	'msubsup',
-	'msup',
-	'munder',
-	'munderover',
-	'none',
-	'maligngroup',
-	'malignmark',
-	'mtable',
-	'mtd',
-	'mtr',
-	'mlongdiv',
-	'mscarries',
-	'mscarry',
-	'msgroup',
-	'msline',
-	'msrow',
-	'mstack',
-	'maction',
-	'semantics',
-	'annotation',
-	'annotation-xml',
-	'mjx-c',
-	'mjx-mstyle',
-	'mjx-mspace',
-	'mjx-mover',
-	'mjx-base',
-	'mjx-over',
-	'mjx-texatom',
-	'mjx-mfrac',
-	'mjx-frac',
-	'mjx-dbox',
-	'mjx-dtable',
-	'mjx-row',
-	'mjx-den',
-	'mjx-dstrut',
-	'mjx-line',
-	'mjx-num',
-	'mjx-mrow',
-	'mjx-msqrt',
-	'mjx-sqrt',
-	'mjx-box',
-	'mjx-surd',
-	'mjx-nstrut',
-	'mjx-msup',
-	'mjx-script',
-	'mjx-math',
-	'mjx-mn',
-	'mjx-mo',
-	'mjx-mi',
-];
 
 export default defineConfig({
 	sitemap: {
@@ -137,11 +18,11 @@ export default defineConfig({
 	title: "FreeBSD 从入门到跑路",
 	description: "FreeBSD 从入门到跑路",
 	metaChunk: true,
-cleanUrls:true, // 在 URL 中去掉 .html 后缀
+	cleanUrls:true, // 在 URL 中去掉 .html 后缀
 markdown: {
   image: { lazyLoading: true },
   config: (md) => {
-      // Use lightbox plugin
+      // 使用 lightbox plugin
       md.use(lightbox, {});
     let h1Prefix = ''
     let h2 = 0, h3 = 0, h4 = 0, h5 = 0, h6 = 0
@@ -202,10 +83,6 @@ markdown: {
 
     // —— 插件加载 —— 
     md.use(footnote)
-    md.use(mathjax3, {
-      tex: { tags: 'ams' },
-      loader: { load: ['input/tex', 'output/chtml'] }
-    })
     md.use(taskLists, {
       disabled: true,
       divWrap: false,
@@ -215,7 +92,7 @@ markdown: {
       liClass: 'task-list-item'
     })
 
-    // —— 自定义渲染规则 —— 
+    // 修改脚注样式
     md.renderer.rules.footnote_anchor = (tokens, idx, options, env, slf) => {
       let id = slf.rules.footnote_anchor_name?.(tokens, idx, options, env, slf) || ''
       if (tokens[idx].meta.subId > 0) id += ':' + tokens[idx].meta.subId
