@@ -11,6 +11,15 @@ import {
 	pagefindPlugin
 } from 'vitepress-plugin-pagefind';
 
+import { RSSOptions, RssPlugin } from 'vitepress-plugin-rss'
+
+const baseUrl = 'https://docs.bsdcn.org'
+const RSS: RSSOptions = {
+  title: 'FreeBSD 从入门到跑路',
+  baseUrl,
+  copyright: 'CC BY FreeBSD 中文社区（CFC）',
+}
+
 const customElements = [
 	'mjx-container',
 	'mjx-assistive-mml',
@@ -352,6 +361,7 @@ markdown: {
 				heading: '共: {{searchResult}} 条结果',
 				excludeSelector: ['img', 'a.header-anchor'],
 			}),
+			RssPlugin(RSS),
 			autoNav({
 				summary: {
 					target: "docs/SUMMARY.md",
