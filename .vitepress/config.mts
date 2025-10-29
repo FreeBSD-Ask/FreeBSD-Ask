@@ -142,8 +142,6 @@ markdown: {
   config: (md) => {
       // Use lightbox plugin
       md.use(lightbox, {});
-      },
-  config: (md: MarkdownIt) => {
     let h1Prefix = ''
     let h2 = 0, h3 = 0, h4 = 0, h5 = 0, h6 = 0
     let skipNumbering = false // 新增：是否跳过编号的标志
