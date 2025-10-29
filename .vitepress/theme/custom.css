@@ -92,9 +92,6 @@
 /* 引入霞鹜文楷字体 */
 
 
-@import url('https://cdn.jsdelivr.net/npm/lxgw-wenkai-gb-web@latest/style.css');
-@import url('https://cdn.jsdelivr.net/npm/lxgwwenkaimonogb-regular@latest/style.css');
-
 :root {
         --vp-font-family-base: 'LXGW Wenkai GB', 'Inter var experimental', 'Inter var', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans',
                 'Droid Sans', 'Helvetica Neue', sans-serif;
