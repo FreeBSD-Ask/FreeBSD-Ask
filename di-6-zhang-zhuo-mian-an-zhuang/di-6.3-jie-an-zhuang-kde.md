@@ -136,7 +136,13 @@ KDE 旨在开发一套现代桌面系统，如果你觉得 KDE 界面很像 Wind
 # echo "exec ck-launch-session startplasma-x11" > ~/.xinitrc
 ```
 
-> 如果你在 root 下已经执行过了，那么新用户仍要再执行一次才能正常使用（无需 root 权限或 sudo 等）`startx`。
+> **注意**
+>
+>如果你在 root 下已经执行过了，那么新用户仍要再执行一次才能正常使用（无需 root 权限或 sudo 等）`startx`。
+
+>**注意**
+>
+>若采用最小化安装 KDE 方法，必须配置 `.xinitrc`！
 
 ## 权限设置
 
