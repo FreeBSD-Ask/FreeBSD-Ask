@@ -110,7 +110,7 @@ span {
 /* 当需要粗体（bold）时，加粗 */
 strong, b {
   font-family: var(--vp-font-family-default);
-  font-weight: bold; /* 通常对应 800 */
+  font-weight: 800; /* 通常对应 800 */
 }
 
 /* 为 semibold 定义样式 */
