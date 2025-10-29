@@ -1,3 +1,6 @@
+/* 引入霞鹜文楷字体 */
+
+@import url('https://cdn.jsdelivr.net/npm/lxgw-wenkai-gb-web@latest/style.css');
 /* 引用格式缩进 */
 .vp-doc blockquote > p + p {
   margin-block-start: 1em; /* 只给相邻段落之间加 1em 间距 */
@@ -88,9 +91,7 @@
 	white-space: normal !important;
 }
 
-/* 引入霞鹜文楷字体 */
 
-@import url('https://cdn.jsdelivr.net/npm/lxgw-wenkai-gb-web@latest/style.css');
 
 :root {
         --vp-font-family-base: 'LXGW WenKai Screen';
