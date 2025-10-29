@@ -1,7 +1,5 @@
-import {
-	defineConfig
-} from 'vitepress';
-import autoNav from "vite-plugin-vitepress-auto-nav";
+import { defineConfig } from 'vitepress';
+import autoNav from 'vite-plugin-vitepress-auto-nav';
 import type MarkdownIt from 'markdown-it';
 import footnote from 'markdown-it-footnote';
 import mathjax3 from 'markdown-it-mathjax3-tao';
@@ -10,15 +8,7 @@ import {
 	chineseSearchOptimize,
 	pagefindPlugin
 } from 'vitepress-plugin-pagefind';
-
-import { RSSOptions, RssPlugin } from 'vitepress-plugin-rss'
-
-const baseUrl = 'https://docs.bsdcn.org'
-const RSS: RSSOptions = {
-  title: 'FreeBSD 从入门到跑路',
-  baseUrl,
-  copyright: 'CC BY FreeBSD 中文社区（CFC）',
-}
+import lightbox from 'vitepress-plugin-lightbox';
 
 const customElements = [
 	'mjx-container',
@@ -149,6 +139,10 @@ export default defineConfig({
 	metaChunk: true,
 markdown: {
   image: { lazyLoading: true },
+  config: (md) => {
+      // Use lightbox plugin
+      md.use(lightbox, {});
+      },
   config: (md: MarkdownIt) => {
     let h1Prefix = ''
     let h2 = 0, h3 = 0, h4 = 0, h5 = 0, h6 = 0
@@ -361,7 +355,6 @@ markdown: {
 				heading: '共: {{searchResult}} 条结果',
 				excludeSelector: ['img', 'a.header-anchor'],
 			}),
-			RssPlugin(RSS),
 			autoNav({
 				summary: {
 					target: "docs/SUMMARY.md",
