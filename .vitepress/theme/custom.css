@@ -87,3 +87,16 @@
   /* 对于任何尺寸均使 TOC 文本换行*/
 	white-space: normal !important;
 }
+
+
+/* 引入霞鹜文楷字体 */
+
+
+@import url('https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.min.css');
+
+:root {
+        --vp-font-family-base: 'LXGW WenKai Screen', 'Inter var experimental', 'Inter var', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans',
+                'Droid Sans', 'Helvetica Neue', sans-serif;
+        --vp-font-family-mono: 'LXGW WenKai Screen', ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+} 
+
