@@ -293,11 +293,6 @@ markdown: {
 			next: '下一页'
 		},
 
-footer: { 
-      message: '恪守古老的法则，追寻真正的自由。', 
-      copyright: `Copyright © 2021-${new Date().getFullYear()} FreeBSD 中文社区`, 
-    }, 
-
 		logo: {
 			src: '/logo.svg',
 			width: 24,
