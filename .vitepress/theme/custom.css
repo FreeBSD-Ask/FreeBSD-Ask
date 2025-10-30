@@ -91,7 +91,7 @@
 /* 导入 LXGW WenKai Screen*/
 :root {
   --vp-font-family-base: 'LXGW WenKai Screen';
-  --vp-font-family-default: 'Source Han Serif SC VF';
+  --vp-font-family-default: 'Noto Sans SC';
   --vp-font-family-mono: 'LXGW WenKai Mono Screen';
   /* 定义一个 semibold 使用的字体栈，与 strong 相同 */
   --vp-font-family-semibold: var(--vp-font-family-default);
