@@ -25,7 +25,7 @@ FreeBSD 是真正自由（Liberty）的**操作系统**，在这波谲云诡的�
 距离第 3 版还需提交: 2670 次
 <!-- commit-progress-end -->
 
-## 👥 加入 FreeBSD 中文社区（CFC）
+## 👥 加入 FreeBSD 中文社区
 
 本书是 FreeBSD 中文社区许多人不懈努力的成果。
 
@@ -62,7 +62,7 @@ EPUB 在手机上可以使用[微信读书](https://play.google.com/store/apps/d
 - <https://book.bsdcn.org>
 - <https://docs.bsdcn.org>
 
-除此外 FreeBSD 中文社区（CFC）未对本书进行任何部署。我们唯一的域名只有 “bsdcn.org”。
+除此外 FreeBSD 中文社区未对本书进行任何部署。我们唯一的域名只有 “bsdcn.org”。
 
 ## 💬 意见反馈
 
