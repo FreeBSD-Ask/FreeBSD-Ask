@@ -90,9 +90,9 @@
 
 /* 导入 LXGW WenKai Screen*/
 :root {
-  --vp-font-family-base: 'LXGW WenKai Screen';
+  --vp-font-family-base: 'LXGW WenKai GB Screen';
   --vp-font-family-default: 'Noto Sans SC';
-  --vp-font-family-mono: 'LXGW WenKai Mono Screen';
+  --vp-font-family-mono: 'LXGW WenKai Mono GB Screen';
   /* 定义一个 semibold 使用的字体栈，与 strong 相同 */
   --vp-font-family-semibold: var(--vp-font-family-default);
   /* 定义 semibold 的字重，通常对应 600 */
