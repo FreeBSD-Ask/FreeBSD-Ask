@@ -14,7 +14,7 @@ FreeBSD 是真正自由（Liberty）的 **操作系统**，在这波谲云诡的
 [![OpenBSD](https://img.shields.io/badge/OpenBSD-F2CA30?logo=openbsd&logoColor=black)](https://www.openbsd.org/)
 [![NetBSD](https://img.shields.io/badge/NetBSD-016EE9?logo=netbsd&logoColor=white)](https://www.netbsd.org/)
 
-## 👥 作者
+## 🖋️ 作者
 
 本书是 **FreeBSD 中文社区** 许多人不懈努力的成果。
 
