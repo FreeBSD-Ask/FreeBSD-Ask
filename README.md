@@ -2,11 +2,11 @@
 
 🎉 欢迎来到 BSD 的世界！
 
-FreeBSD 是真正自由（Liberty）的**操作系统**，在这波谲云诡的世界中仍然坚守 BSD UNIX 哲学——恪守古老的法则，追寻真正的自由。
+FreeBSD 是真正自由（Liberty）的 **操作系统**，在这波谲云诡的世界中仍然坚守 BSD UNIX 哲学——恪守古老的法则，追寻真正的自由。
 
 ## 📄 内容提要
 
-这是一本由 CC BY 许可协议授权的 FreeBSD 操作系统研究书籍，还包含一些 OpenBSD、NetBSD 等 BSD 家族的快速入门章节。
+这是一本开源的 FreeBSD 操作系统研究书籍，还包含一些 OpenBSD、NetBSD 等 BSD 家族的导论章节。
 
 ~~[为了拯救即将归档（Archived）的 FreeBSD······我们决定写一本书。](https://mzh.moegirl.org.cn/为了保护我们心爱的ooo……成为偶像！)~~
 
@@ -14,22 +14,11 @@ FreeBSD 是真正自由（Liberty）的**操作系统**，在这波谲云诡的�
 [![OpenBSD](https://img.shields.io/badge/OpenBSD-F2CA30?logo=openbsd&logoColor=black)](https://www.openbsd.org/)
 [![NetBSD](https://img.shields.io/badge/NetBSD-016EE9?logo=netbsd&logoColor=white)](https://www.netbsd.org/)
 
+## 👥 作者
 
----
+本书是 **FreeBSD 中文社区** 许多人不懈努力的成果。
 
-<!-- commit-progress-start -->
-**第 3 版进度:**   （草稿提交数: 863）
-
-![进度徽章](progress.svg)
-
-距离第 3 版还需提交: 2670 次
-<!-- commit-progress-end -->
-
-## 👥 加入 FreeBSD 中文社区
-
-本书是 FreeBSD 中文社区许多人不懈努力的成果。
-
-- **首要**联系方式为 **QQ 群**：[787969044](https://qm.qq.com/q/cX5mpJ36gg)（点击加群）
+- FreeBSD 中文社区 **首要** 联系方式为 **QQ 群**：[787969044](https://qm.qq.com/q/cX5mpJ36gg)（点击加群）
 
 ![FreeBSD 中文社区 QQ 群](.gitbook/assets/2025-qq.png)
 
@@ -138,12 +127,21 @@ EPUB 在手机上可以使用[微信读书](https://play.google.com/store/apps/d
 
 ---
 
-![状态图](https://repobeats.axiom.co/api/embed/0268f0741b1257dd58a7489442bd7829d2670313.svg "Repobeats analytics image")
+![GitHub 存储库状态图](https://repobeats.axiom.co/api/embed/0268f0741b1257dd58a7489442bd7829d2670313.svg "Repobeats analytics image")
 
 以上图表由 [Repobeats analytics image](https://repobeats.axiom.co/) 提供。
 
 ---
 
+<!-- commit-progress-start -->
+**第 3 版进度:**   （草稿提交数: 863）
+
+![进度徽章](progress.svg)
+
+距离第 3 版还需提交: 2670 次
+<!-- commit-progress-end -->
+
+---
 
 ~~本书得到的 ⭐ 真是太少啦！~~ 若本书对你有帮助，欢迎给本书所在的 [GitHub 项目存储库](https://github.com/FreeBSD-Ask/FreeBSD-Ask)加颗 ⭐。
 
