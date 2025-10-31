@@ -2,7 +2,7 @@
 
 🎉 欢迎来到 BSD 的世界！
 
-FreeBSD 是真正自由（Liberty）的**操作系统**，在这波谲云诡的世界中仍然坚守 BSD UNIX 哲学——恪守古老的法则，追寻真正的自由。
+FreeBSD 是真正自由（Liberty）的 **操作系统**，在这波谲云诡的世界中仍然坚守 BSD UNIX 哲学——恪守古老的法则，追寻真正的自由。
 
 ## 📄 内容提要
 
@@ -18,7 +18,7 @@ FreeBSD 是真正自由（Liberty）的**操作系统**，在这波谲云诡的�
 
 本书是 **FreeBSD 中文社区** 许多人不懈努力的成果。
 
-- FreeBSD 中文社区 **首要**联系方式为 **QQ 群**：[787969044](https://qm.qq.com/q/cX5mpJ36gg)（点击加群）
+- FreeBSD 中文社区 **首要** 联系方式为 **QQ 群**：[787969044](https://qm.qq.com/q/cX5mpJ36gg)（点击加群）
 
 ![FreeBSD 中文社区 QQ 群](.gitbook/assets/2025-qq.png)
 
