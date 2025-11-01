@@ -22,7 +22,7 @@ router.onAfterRouteChange = setupMediumZoom;
 </script>
 
 <template>
-  <Layout />
+    <Layout />
 </template>
 
 <style>
