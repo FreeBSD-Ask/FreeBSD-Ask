@@ -134,11 +134,11 @@ EPUB 在手机上可以使用[微信读书](https://play.google.com/store/apps/d
 ---
 
 <!-- commit-progress-start -->
-**第 3 版进度:**   （草稿提交数: 863）
+**第 3 版进度:**   （草稿提交数: 876）
 
 ![进度徽章](progress.svg)
 
-距离第 3 版还需提交: 2670 次
+距离第 3 版还需提交: 2657 次
 <!-- commit-progress-end -->
 
 ---
