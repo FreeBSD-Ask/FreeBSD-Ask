@@ -8,6 +8,7 @@ import {
     pagefindPlugin,
 } from "vitepress-plugin-pagefind";
 import lightbox from "vitepress-plugin-lightbox";
+import sri from "vite-plugin-sri3";
 
 export default defineConfig({
     sitemap: {
@@ -287,6 +288,7 @@ export default defineConfig({
                     collapsed: false,
                 },
             }),
+sri(),
         ],
     },
 });
