@@ -2,7 +2,7 @@
 set -euo pipefail
 
 README="README.md"
-SVG_FILE="progress.svg"
+SVG_FILE=".gitbook/assets/progress.svg"
 MARKER_START="<!-- commit-progress-start -->"
 MARKER_END="<!-- commit-progress-end -->"
 PER=3533
