@@ -6,6 +6,8 @@
 
 - 2025.11.1
   - 将 docs 的配色调整接近 book
+  - 将 SRI 引入 docs
+  - 将 CSP 引入 docs
 - 2025.10.30
   - 将 book 的代码块也调整使用“霞鹜文楷”
   - 将 docs 和 book 的 bold 字重的字体调整为 noto sc
