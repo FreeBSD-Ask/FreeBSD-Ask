@@ -9,6 +9,7 @@ import {
 } from "vitepress-plugin-pagefind";
 import lightbox from "vitepress-plugin-lightbox";
 import { sri } from "vite-plugin-sri3";
+import { csp } from "vite-plugin-csp-guard";
 
 export default defineConfig({
     sitemap: {
@@ -288,6 +289,16 @@ export default defineConfig({
                     collapsed: false,
                 },
             }),
+csp({
+      algorithm: "sha256", // 算法
+      dev: {
+        run: true, // 允许 vite dev
+      },
+      policy: {
+        // 特殊规则
+        "script-src": ["'self'", "https://www.google-analytics.com"], //放行 Google Analytics
+      },
+    }),
 sri(),
         ],
     },
