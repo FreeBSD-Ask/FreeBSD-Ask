@@ -288,7 +288,8 @@ export default defineConfig({
                     target: "docs/SUMMARY.md",
                     collapsed: false,
                 },
-            }),csp({
+            }),
+csp({
       algorithm: "sha256", // 算法
       dev: {
         run: true, // 允许 vite dev
