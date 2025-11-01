@@ -1,29 +1,37 @@
 /* 引用格式缩进 */
-.vp-doc blockquote > p + p {
-  margin-block-start: 1em; /* 只给相邻段落之间加 1em 间距 */
+.vp-doc blockquote > p + p
+{
+	margin-block-start: 1em;
+ /* 只给相邻段落之间加 1em 间距 */
 }
 
 /* 脚注加粗，非斜体 */
-.footnote-item {
+.footnote-item
+{
 	font-style: normal;
 	font-weight: bold;
 }
 /* 去掉链接下划线 */
-.vp-doc a {
+.vp-doc a
+{
 	text-decoration: none;
 }
 
-@media (min-width: 960px) {
+@media (min-width: 960px)
+{
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 1920px)
+{
 /* 导航栏 */
-	.VPNavBar {
+	.VPNavBar
+	{
 		padding-left: 10vw !important;
 		padding-right: 5vw !important;
 	}
 
-	.VPNavBar .content {
+	.VPNavBar .content
+	{
     /* 导航栏左侧最远至，为 0 时到达最左侧，覆盖原来的位置 */
 		padding-left: 10vw !important;
     /* 导航栏右侧最远至，为 0 时到达最右侧，覆盖原来的位置 */
@@ -32,46 +40,55 @@
   /* 导航栏标题左、右侧缩进，同时 padding-left 决定了搜索框的位置  */
 
   /* 右 TOC */
-	.aside {
+	.aside
+	{
 /* 右 TOC 向左缩进（距离右边框）*/
 		max-width: 5vw !important;
 /* 右 TOC 向右缩进（与文本的距离）*/
 		padding-left: 2vw !important;
 	}
 /* 导航栏标题 */
-	.VPNavBar .title {
+	.VPNavBar .title
+	{
     /* 导航栏标题左侧缩进 */
 		padding-left: 1vw !important;
 	}
 
-	.aside-container {
+	.aside-container
+	{
   /* 右 TOC 文本宽度*/
 		width: 16vw !important;
 	}
 
 /* 左侧边栏 */
-	.VPSidebar {
+	.VPSidebar
+	{
     /* 左侧边栏左缩进 */
 		padding-left: 2vw !important;
     /* 左侧边栏右缩进 */
 		width: 15vw !important;
 	}
   /* 文本左、右缩进（整体） */
-	.VPContent.has-sidebar {
+	.VPContent.has-sidebar
+	{
 		padding-left: 20vw !important;
 		padding-right: 15vw !important;
 	}
 
-	.VPDoc.has-aside .content-container {
+	.VPDoc.has-aside .content-container
+	{
 		max-width: 100% !important;
 	}
 }
 
-@media (min-width: 2388px) {
+@media (min-width: 2388px)
+{
 }
 
-@media (min-width: 3840px) {
-	.VPNavBar .content {
+@media (min-width: 3840px)
+{
+	.VPNavBar .content
+	{
 		.VPNavBar {
   padding-left: 25vw !important;
 		padding-right: 5vw !important;
@@ -83,38 +100,43 @@
 }
 }
 
-.outline-link {
+.outline-link
+{
   /* 对于任何尺寸均使 TOC 文本换行*/
 	white-space: normal !important;
 }
 
 /* 导入 LXGW WenKai Screen*/
-:root {
-  --vp-font-family-base: 'LXGW WenKai GB Screen';
-  --vp-font-family-default: 'Noto Sans SC';
-  --vp-font-family-mono: 'LXGW WenKai Mono GB Screen';
+:root
+{
+	--vp-font-family-base: 'LXGW WenKai GB Screen';
+	--vp-font-family-default: 'Noto Sans SC';
+	--vp-font-family-mono: 'LXGW WenKai Mono GB Screen';
   /* 定义一个 semibold 使用的字体栈，与 strong 相同 */
-  --vp-font-family-semibold: var(--vp-font-family-default);
+	--vp-font-family-semibold: var(--vp-font-family-default);
   /* 定义 semibold 的字重，通常对应 600 */
-  --vp-font-weight-semibold: 500;
+	--vp-font-weight-semibold: 500;
 }
 
 /* normal 字重文字使用 LXGW WenKai Screen */
 body,
 p,
-span {
-  font-family: var(--vp-font-family-base);
-  font-weight: normal;
+span
+{
+	font-family: var(--vp-font-family-base);
+	font-weight: normal;
 }
 
 /* 当需要粗体（bold）时，加粗 */
-strong, b {
-  font-family: var(--vp-font-family-default);
-  font-weight: 700;
+strong, b
+{
+	font-family: var(--vp-font-family-default);
+	font-weight: 700;
 }
 
 /* 为 semibold 定义样式 */
-.semibold {
-  font-family: var(--vp-font-family-semibold);
-  font-weight: var(--vp-font-weight-semibold);
+.semibold
+{
+	font-family: var(--vp-font-family-semibold);
+	font-weight: var(--vp-font-weight-semibold);
 }
