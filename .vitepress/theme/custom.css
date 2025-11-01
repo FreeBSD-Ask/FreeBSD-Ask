@@ -11,10 +11,11 @@
 	font-style: normal;
 	font-weight: bold;
 }
-/* 去掉链接下划线 */
+/* 链接样式 */
 .vp-doc a
 {
-	text-decoration: none;
+	text-decoration: none; /* 去掉链接下划线 */
+	color: #FF0072; /* 链接使用秋冬季配色 */
 }
 
 @media (min-width: 960px)
@@ -140,3 +141,31 @@ strong, b
 	font-family: var(--vp-font-family-semibold);
 	font-weight: var(--vp-font-weight-semibold);
 }
+
+/* 标题渐变配色 */
+.vp-doc h1,
+.vp-doc h2,
+.vp-doc h3,
+.vp-doc h4,
+.vp-doc h5,
+.vp-doc h6,
+.vp-doc .header-anchor:before {
+	background: linear-gradient(90deg, #f3714b 0%, #f5a67a 50%, #f8c27b 100%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	width: max-content;
+}
+/* brand 配色 */
+:root {
+	--vp-c-brand-1: #FF0072;
+	--vp-c-brand-2: #3dd68c;
+	--vp-c-brand-3: #30a46c;
+}
+/* 夜间配色 */
+.dark {
+	--vp-c-brand-1: #3dd68c;
+	--vp-c-brand-2: #30a46c;
+	--vp-c-brand-3: #298459;
+}
+
