@@ -9,7 +9,7 @@ import {
 } from "vitepress-plugin-pagefind";
 import lightbox from "vitepress-plugin-lightbox";
 import { sri } from "vite-plugin-sri3";
-import { csp } from "vite-plugin-csp-guard";
+import csp from "vite-plugin-csp-guard";
 
 export default defineConfig({
     sitemap: {
