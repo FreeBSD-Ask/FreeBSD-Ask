@@ -19,7 +19,6 @@ export default defineConfig({
     lastUpdated: true,
     title: "FreeBSD 从入门到跑路",
     description: "FreeBSD 从入门到跑路",
-    metaChunk: true,
     cleanUrls: true, // 在 URL 中去掉 .html 后缀
     markdown: {
         image: { lazyLoading: true },
@@ -289,17 +288,53 @@ export default defineConfig({
                     collapsed: false,
                 },
             }),
-csp({
-      algorithm: "sha256", // 算法
-      dev: {
-        run: true, // 允许 vite dev
-      },
-      policy: {
-        // 特殊规则
-        "script-src": ["'self'", "https://www.google-analytics.com"], //放行 Google Analytics
-      },
-    }),
-sri(),
+            csp({
+                algorithm: "sha256", // 算法
+                dev: {
+                    run: true, // 允许 vite dev
+                },
+                policy: {
+                    "default-src": ["'self'"],
+                    "script-src": [
+                        "'self'",
+                        "'unsafe-inline'",
+                        "https://www.google-analytics.com",
+                        "https://analytics.google.com",
+                        "https://www.googletagmanager.com",
+                    ],
+                    "script-src-elem": [
+                        "'self'",
+                        "'unsafe-inline'",
+                        "https://www.google-analytics.com",
+                        "https://analytics.google.com",
+                        "https://www.googletagmanager.com",
+                    ],
+                    "style-src": ["'self'", "'unsafe-inline'"],
+                    "style-src-elem": ["'self'", "'unsafe-inline'"],
+                    "img-src": [
+                        "'self'",
+                        "data:",
+                        "https://img.shields.io",
+                        "https://repobeats.axiom.co",
+                        "https://contrib.nn.ci",
+                        "https://api.star-history.com",
+                    ],
+                    // 新增连接源指令
+                    "connect-src": [
+                        "'self'",
+                        "https://www.google-analytics.com",
+                        "https://analytics.google.com",
+                        "https://www.googletagmanager.com",
+                    ],
+                    // 新增模块源指令（用于 ES6 模块）
+                    "script-src-attr": ["'self'", "'unsafe-inline'"], // 可选：处理内联事件处理程序
+                    "font-src": ["'self'"],
+                    "object-src": ["'none'"],
+                    "base-uri": ["'self'"],
+                    "form-action": ["'self'"],
+                },
+            }),
+            sri(),
         ],
     },
 });
