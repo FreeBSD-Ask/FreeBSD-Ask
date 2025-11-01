@@ -154,7 +154,6 @@ strong, b
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
-	width: max-content;
 }
 /* brand 配色 */
 :root {
