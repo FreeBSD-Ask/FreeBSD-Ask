@@ -189,13 +189,6 @@ export default defineConfig({
             "script",
             {
                 async: "",
-                src: "https://cdn.bootcdn.net/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js",
-            },
-        ],
-        [
-            "script",
-            {
-                async: "",
                 src: "https://www.googletagmanager.com/gtag/js?id=G-GKTJ5MJJ58",
             },
         ],
