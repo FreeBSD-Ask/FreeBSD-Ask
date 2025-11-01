@@ -293,6 +293,7 @@ export default defineConfig({
                 dev: {
                     run: true, // 允许 vite dev
                 },
+build: {sri: false, outlierSupport: []},
                 policy: {
                     "default-src": ["'self'"],
                     "script-src": [
