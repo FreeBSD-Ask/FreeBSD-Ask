@@ -2,7 +2,7 @@
 set -euo pipefail
 
 README="README.md"
-SVG_FILE="progress.svg"
+SVG_FILE=".gitbook/assets/progress.svg"
 MARKER_START="<!-- commit-progress-start -->"
 MARKER_END="<!-- commit-progress-end -->"
 PER=3533
@@ -98,7 +98,7 @@ EOF
 # 构造替换内容
 replacement=$(cat <<EOF
 $MARKER_START
-**第 $VERSION 版进度:**   （草稿提交数: $current_progress）
+**第 $VERSION 版编纂进度:**   （草稿提交数: $current_progress）
 
 ![进度徽章]($SVG_FILE)
 
