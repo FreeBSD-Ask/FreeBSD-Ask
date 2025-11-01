@@ -296,7 +296,7 @@ csp({
       },
       policy: {
         // 特殊规则
-        "script-src": ["'self'", "https://www.google-analytics.com"], 放行 Google Analytics
+        "script-src": ["'self'", "https://www.google-analytics.com"], //放行 Google Analytics
       },
     }),
 sri(),
