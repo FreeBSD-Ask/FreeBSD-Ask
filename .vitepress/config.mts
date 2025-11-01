@@ -163,7 +163,8 @@ markdown: {
 			prev: '上一页',
 			next: '下一页'
 		},
-
+//自定义 404 页面
+  notFound: '/404', 
 		logo: {
 			src: '/logo.svg',
 			width: 24,
