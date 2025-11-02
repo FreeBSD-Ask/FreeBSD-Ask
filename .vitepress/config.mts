@@ -21,7 +21,6 @@ export default defineConfig({
     description: "FreeBSD 从入门到跑路",
     cleanUrls: true, // 在 URL 中去掉 .html 后缀
     markdown: {
-        image: { lazyLoading: true },
         lineNumbers: true, // 启用行号于代码块
         config: (md) => {
             // 使用 lightbox plugin
