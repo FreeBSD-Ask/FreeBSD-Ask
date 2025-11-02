@@ -41,7 +41,7 @@
 .aside {
   position: fixed !important;
   right: 7.5% !important;
-  max-width: 10% !important; /* 右栏宽度占页面 12% */
+  max-width: 10% !important; /* 右栏宽度占页面 10% */
   padding-left: 0 !important;
 }
 
