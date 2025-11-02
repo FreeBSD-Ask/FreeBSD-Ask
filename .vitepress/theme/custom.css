@@ -18,13 +18,7 @@
 	color: #FF0072; /* 链接使用秋冬季配色 */
 }
 
-@media (min-width: 3840px)
-{
-}
 
-@media (min-width: 2388px)
-{
-}
 
 @media (min-width: 1920px)
 {
@@ -88,6 +82,14 @@
 		padding-left: 3.25% !important;
 	}
 
+
+@media (min-width: 2388px)
+{
+}
+
+@media (min-width: 3840px)
+{
+}
 
 }
 .outline-link
