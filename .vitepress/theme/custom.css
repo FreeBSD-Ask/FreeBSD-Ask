@@ -84,6 +84,138 @@
 
 
 }
+
+@media (min-width: 2560px)
+{
+/* 左侧边栏 */
+.VPSidebar {
+  position: fixed !important;
+  left: 0% !important;
+  width: 17.5% !important;         /* 用 width 代替 max-width */
+  max-width: none !important;    /* 禁用最大宽度限制 */
+  padding-left: 2.5% !important;
+}
+
+/* 选中分组中的项目 */
+.VPSidebarItem {
+  padding: 0.25% 0;
+  word-break: break-word;
+}
+
+/* 右侧边栏 */
+.aside {
+  position: fixed !important;
+  right: 7.5% !important;
+  max-width: 10% !important; /* 右栏宽度占页面 10% */
+  padding-left: 0 !important;
+}
+
+	.aside-container
+	{
+  /* 右 TOC 文本宽度*/
+		max-width: 15% !important;
+	}
+
+/* 主体内容居中 */
+.VPContent.has-sidebar {
+  padding: 0 0% !important;
+}
+
+/* 文档正文不被遮挡 */
+.VPDoc.has-aside .content-container {
+  max-width: 100% !important;
+}
+
+/* 主体部分 */
+.VPDoc {
+  max-width: 65% !important; /* 主体部分限制宽度 */
+  margin: 2.5% auto !important; /* 主体部分距离导航栏的高度 */
+}
+
+	.VPNavBar .content
+	{
+    /* 导航栏左侧最远至，为 0 时到达最左侧，覆盖原来的位置 */
+		padding-left: 21.5% !important;
+    /* 导航栏右侧最远至，为 0 时到达最右侧，覆盖原来的位置 */
+		padding-right: 0 !important;
+	}
+  /* 导航栏标题左、右侧缩进，同时 padding-left 决定了搜索框的位置  */
+/* 导航栏标题 */
+	.VPNavBar .title
+	{
+    /* 导航栏标题左侧缩进 */
+		padding-left: 3.25% !important;
+	}
+
+}
+
+@media (min-width: 3840px)
+{
+/* 左侧边栏 */
+.VPSidebar {
+  position: fixed !important;
+  left: 0% !important;
+  width: 17.5% !important;         /* 用 width 代替 max-width */
+  max-width: none !important;    /* 禁用最大宽度限制 */
+  padding-left: 2.5% !important;
+}
+
+/* 选中分组中的项目 */
+.VPSidebarItem {
+  padding: 0.25% 0;
+  word-break: break-word;
+}
+
+/* 右侧边栏 */
+.aside {
+  position: fixed !important;
+  right: 7.5% !important;
+  max-width: 10% !important; /* 右栏宽度占页面 10% */
+  padding-left: 0 !important;
+}
+
+	.aside-container
+	{
+  /* 右 TOC 文本宽度*/
+		max-width: 15% !important;
+	}
+
+/* 主体内容居中 */
+.VPContent.has-sidebar {
+  padding: 0 0% !important;
+}
+
+/* 文档正文不被遮挡 */
+.VPDoc.has-aside .content-container {
+  max-width: 100% !important;
+}
+
+/* 主体部分 */
+.VPDoc {
+  max-width: 65% !important; /* 主体部分限制宽度 */
+  margin: 2.5% auto !important; /* 主体部分距离导航栏的高度 */
+}
+
+	.VPNavBar .content
+	{
+    /* 导航栏左侧最远至，为 0 时到达最左侧，覆盖原来的位置 */
+		padding-left: 22.5% !important;
+    /* 导航栏右侧最远至，为 0 时到达最右侧，覆盖原来的位置 */
+		padding-right: 0 !important;
+	}
+  /* 导航栏标题左、右侧缩进，同时 padding-left 决定了搜索框的位置  */
+/* 导航栏标题 */
+	.VPNavBar .title
+	{
+    /* 导航栏标题左侧缩进 */
+		padding-left: 3.25% !important;
+	}
+
+
+}
+
+
+
 .outline-link
 {
   /* 对于任何尺寸均使 TOC 文本换行*/
