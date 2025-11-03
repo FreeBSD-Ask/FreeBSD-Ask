@@ -147,6 +147,8 @@
 		padding-left: 3.25% !important;
 	}
 
+}
+
 @media (min-width: 3840px)
 {
 /* 左侧边栏 */
@@ -213,7 +215,7 @@
 }
 
 
-}
+
 .outline-link
 {
   /* 对于任何尺寸均使 TOC 文本换行*/
