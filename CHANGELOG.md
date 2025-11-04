@@ -4,6 +4,8 @@
 
 ## 2025 年第四季度
 
+- 2025.11.4
+  - “10.3 Mihomo（Clash）”新增“Clash for FreeBSD”
 - 2025.11.1
   - 将 docs 的配色调整接近 book
   - 将 SRI 引入 docs
