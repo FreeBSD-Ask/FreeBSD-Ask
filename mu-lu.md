@@ -130,7 +130,7 @@
 
 * [10.1 HTTP 代理](di-10-zhang-vpn-yu-dai-li/di-10.1-jie-http-dai-li.md)
 * [10.2 V2ray](di-10-zhang-vpn-yu-dai-li/di-10.2-jie-v2ray.md)
-* [10.3 Mihomo（原 Clash）](di-10-zhang-vpn-yu-dai-li/di-10.3-jie-clash.md)
+* [10.3 Mihomo（Clash）](di-10-zhang-vpn-yu-dai-li/di-10.3-jie-clash.md)
 * [10.4 OpenVPN](di-10-zhang-vpn-yu-dai-li/di-10.4-jie-openvpn.md)
 
 ## 第 11 章 Jail
