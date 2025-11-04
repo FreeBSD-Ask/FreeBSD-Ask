@@ -1,5 +1,9 @@
 name: 🔗 自动分配 issue & PR
 
+permissions:
+  contents: read    # 读取仓库内容（包括配置文件）
+  issues: write     # 写入 issues
+  pull-requests: write  # 写入 pull requests
 on:
   issues:
     types: [opened, reopened]
