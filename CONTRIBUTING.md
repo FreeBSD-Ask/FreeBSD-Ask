@@ -6,8 +6,8 @@ FreeBSD 项目拒绝（表现为长期搁置）任何实质上的 PR，除了季
 
 使用 [统计分析 git 项目](https://gist.github.com/ykla/6c3df44c371d37fc3196ddf5fa87ce5f) 对 freebsd-doc 进行分析的结果参见 [freebsd-doc-2025 分析报告](https://gist.github.com/ykla/363bf922d0785d0b02dd43f8289368db)。
 
-- 2005-2006年：第一次显著下滑
-- 2015-2016年：第二次大幅下滑
+- 2005-2006 年：第一次显著下滑
+- 2015-2016 年：第二次大幅下滑
 
 项目结构复杂且混乱。维护者自己都看不懂。比如在翻译时的某些数据引用是否可复用。
 
@@ -22,7 +22,7 @@ remote: Compressing objects: 100% (120/120), done.
 remote: Total 617155 (delta 217), reused 219 (delta 174), pack-reused 616861 (from 4)
 Receiving objects: 100% (617155/617155), 483.71 MiB | 786.00 KiB/s, done.
 Resolving deltas: 100% (358420/358420), done.
-error: invalid path 'website/static/security/advisories/FreeBSD-EN-04:01.twe.asc' # 观察 FreeBSD-EN-04:01.twe.asc，该文件名，在 Windows 下是非法的
+error: invalid path 'website/static/security/advisories/FreeBSD-EN-04:01.twe.asc' # 观察 FreeBSD-EN-04:01.twe.asc，该文件名在 Windows 下是非法的
 fatal: unable to checkout working tree
 warning: Clone succeeded, but checkout failed.
 You can inspect what was checked out with 'git status'
