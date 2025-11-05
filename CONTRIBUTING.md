@@ -6,6 +6,9 @@ FreeBSD 项目拒绝（表现为长期搁置）任何实质上的 PR，除了季
 
 使用 [统计分析 git 项目](https://gist.github.com/ykla/6c3df44c371d37fc3196ddf5fa87ce5f) 对 freebsd-doc 进行分析的结果参见 [freebsd-doc-2025 分析报告](https://gist.github.com/ykla/363bf922d0785d0b02dd43f8289368db)。
 
+- 2005-2006年：第一次显著下滑
+- 2015-2016年：第二次大幅下滑
+
 项目结构复杂且混乱。维护者自己都看不懂。比如在翻译时的某些数据引用是否可复用。
 
 由于其安全报告的文件名在 Windows 下是非法字符（有英文冒号 `:`），因此导致整个项目无法在 Windows 被正常拉取：
