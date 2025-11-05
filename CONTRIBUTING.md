@@ -276,11 +276,19 @@ $ git clone https://github.com/FreeBSD-Ask/FreeBSD-Ask
 
 ### 预览页面
 
-当你提交 PR 时，会自动生成一个预览的网站。实际上，所有提交都有对应版本的网站。且每次 push 都会自动更新。
+当你提交 PR 时，会自动生成一个预览的网站。
+
+实际上，所有提交都有对应版本的网站。
+
+![](.gitbook/assets/yu-lan1.png)
 
 你可以通过该链接获取你当前 PR 的实际显示样式。
 
+![](.gitbook/assets/yu-lan2.png)
 
+![](.gitbook/assets/yu-lan3.png)
+
+且每次 push 都会自动更新。
 
 ## 开放任务
 
