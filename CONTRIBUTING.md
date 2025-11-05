@@ -29,7 +29,7 @@
 - 指出并修正上游官方手册中的错误或已过时内容。
 - 生成英文版本
 
-## 贡献指南
+## 贡献指南概述
 
 如果你想让你的教程出现在本书中，你可以这样做：
 
@@ -41,18 +41,6 @@
 - 一切与 BSD 相关（包括不限于 FreeBSD，OpenBSD，NetBSD）以及各种体系结构的教程。你既可以扩充当前教程，也可以新建一节；
 - 下方的 ToDo 列表；
 - 你亦可在文学故事章节分享你与 BSD 的故事，你的个人心得体会。
-
-你为什么要这样做？
-
-- **可访问性**：随处可见，无需再到处寻找；
-- **可复现性**：任何人都能轻松复现成果，显著提高工作和学习效率；
-- **规模化测试**：可以对教程进行系统化测试，找出最优解；
-- **社区支持**：社区将持续维护教程的可用性，并定期更新软件和教程版本；
-- **节省时间**：当本教程内容愈加丰富，你花在网络索引上的无效时间就会越少；
-- **互惠互利**：合并教程践行了开源哲学，惠及着无穷的远方，无数的人们；
-- **增强协作**：促进 FreeBSD 在中国乃至亚洲、全世界的发展；
-- **便于反馈**：快速迭代教程，并验证每一步骤的正确性与合理性；
-- **易于分享**：本项目既支持在线浏览亦支持 PDF 文档导出，宽松的许可证、简单的项目结构允许自由部署。
 
 唯一要注意的是，你的教程会以本项目的开源许可证（CC-BY）进行发布。
 
@@ -94,9 +82,15 @@
 >
 >新建章节等章节修改建议发邮件联系 ykla 来操作。自己操作时参见操作实例 [Commit 6023cc8](https://github.com/FreeBSD-Ask/FreeBSD-Ask/commit/6023cc8d58f3a1b9849ff11fa63bf3980177c370)。
 
+## 实用附录
+
 ### 如何使用 git 拉取本项目
 
-本项目太大，拉取时可能会导致缓冲区溢出，可改变 git 配置文件，以实现对缓冲区的扩大：
+>**技巧**
+>
+>理论上你完全可以通过 GitHub 在线完成所有提交。
+
+本项目太大，使用 git 拉取时可能会导致缓冲区溢出，可改变 git 配置文件，以实现对缓冲区的扩大：
 
 以下是一个可用的 `~/.gitconfig`（Windows 位置为 `C:\Users\你的用户名\.gitconfig`） 的文件示例：
 
@@ -138,6 +132,147 @@ $ git clone https://github.com/FreeBSD-Ask/FreeBSD-Ask
 请尝试拉取这个项目 `https://github.com/FreeBSD-Ask/LDWG`。
 
 如果报错类似，说明你的网络有问题。请使用代理。
+
+### 项目简介
+
+本项目是主项目（即 `https://book.bsdcn.org`）托管在 Gitbook；
+
+`https://docs.bsdcn.org` 是社区自行构建的，docs 网站本身的贡献指南参见 [FreeBSD 从入门到跑路 VitePress 镜像项目](https://github.com/FreeBSD-Ask/FreeBSD-Ask.github.io/blob/main/README.md)。
+
+>**技巧**
+>
+>如果你仅想贡献内容本身，尚无改进网站 docs 的浏览体验与构建优化等等意向，则仅需阅读本文即可。
+
+#### 项目结构概览
+
+```sh
+>FreeBSD-Ask-main
+│  .gitattributes  # 用于让 github 正确识别 markdown，用于在 github 正确高亮，正确显示编程语言（Languages）的统计信息
+│  .gitignore # 一些规则，用于阻止 git 上传特定类型的文件或目录，如 node_modules
+│  CHANGELOG-ARCHIVE.md # 普通文件，记录既往所有重要变动
+│  CHANGELOG.md # 普通文件，记录当前季度的重要变动。当你有新的子章节提交或彻底重写时，请将其记录到此处
+│  CODE_OF_CONDUCT.md # 用于合规，行为准则
+│  CONTRIBUTING.md # 本贡献指南
+│  LICENSE # 许可证
+│  mu-lu.md # 由 Github Action mulu.yml 自动同步
+│  README.md # 主页
+│  SECURITY.md # 用于合规，安全报告策略
+│  SUMMARY.md # 目录文件，同时用于生成 vitepress 左侧边栏
+│
+├─.gitbook # 图片目录
+│  └─assets # 图片
+│          1-install.png
+│          1.png
+│          1011.png
+│          其他图片从略
+│
+├─.github  # Github Action 相关
+│  │  .autocorrectrc # 由 AutoCorrect.yml 调用
+│  │  .markdownlint.json # 由 markdown-lint2.yml 调用
+│  │  auto_assign.yml # 由 Auto-Assign.yml 调用
+│  │  dependabot.yml # 检查 GitHub Action 调用的 Action 有无更新，并提交 PR
+│  │  lychee.toml # 由 links.yml 调用
+│  │
+│  ├─ISSUE_TEMPLATE  # Github issue、PR 模板
+│  │      bug_report.md  # Github issue 模板
+│  │      feature_request.md  # Github PR 模板
+│  │
+│  ├─scripts # Github Action 相关，由相关 yml 脚本调用
+│  │      check_images.py # 由 check-images.yml 调用
+│  │      update_ga4_readme.py # 由 update-ga4.yml 调用
+│  │      update_progress.sh # 由 Update-commit-progress.yml 调用
+│  │
+│  └─workflows # Github Action，用于自动化处理一些简单任务
+│          Auto-Assign.yml # 自动为 issue PR 分配人员进行处理
+│          AutoCorrect.yml # markdown 格式修正，会自动提交 PR
+│          check-images.yml # 检查图片的调用情况，有无正确引用图片，不正确会生成 issue
+│          create-pdf.yml # 用于在 GitHub release 生成电子书 PDF、EPUB 
+│          file-name-check.yml # 检查 SUMMARY.md 目录中的文件引用是否正确，不正确会生成 issue
+│          links.yml # 链接检查，检查文中调用的 URL 是否能正常访问
+│          markdown-lint2.yml # markdown 格式检查
+│          md-padding.yml # markdown 空格检查与修复
+│          mulu.yml # 从 SUMMARY.md 生成的镜像文件
+│          sync-headers.yml # 从 SUMMARY.md 更新所有 markdown 文件的一级标题。如果你要修改 `#` 标题，必须在此处进行修改，否则会被其覆盖
+│          Update-commit-progress.yml # 进度检查工具，每 3533 次提交为一个版本，用于插入到 README.md
+│          update-ga4.yml # 谷歌统计数据，用于插入到 README.md
+│
+├─.vitepress # vitepress 相关，详见 FreeBSD-Ask/FreeBSD-Ask.github.io
+│  │  config.mts
+│  │
+│  └─theme # vitepress 相关，详见 FreeBSD-Ask/FreeBSD-Ask.github.io
+│          custom.css
+│          index.js
+│          Layout.vue
+│
+├─di-1-zhang-zou-jin-freebsd # 第 1 章的章节目录
+│      di-1.1-unix.md # 第 1 章的文件
+│      di-1.2-dao-lun.md
+│      di-1.3-jie-freebsd-jian-shi.md
+│      di-1.4-Fiat-Lux.md
+│
+├─di-10-zhang-vpn-yu-dai-li # 第 10 章的章节目录
+│      di-10.1-jie-http-dai-li.md # 第 10 章的文件
+│      di-10.2-jie-v2ray.md
+│      di-10.3-jie-clash.md
+│      di-10.4-jie-openvpn.md
+│
+└─其他目录和文件从略
+│
+├─public # vitepress 相关，参见 FreeBSD-Ask/FreeBSD-Ask.github.io
+│      favicon.ico
+│      logo.svg
+│
+└─其他目录和文件从略
+```
+
+#### `SUMMARY.md` 目录结构
+
+```md
+# Table of contents
+
+* [FreeBSD 从入门到跑路](README.md)
+* [编辑日志](CHANGELOG.md)
+* [贡献指南与开放任务](CONTRIBUTING.md)
+* [目录](mu-lu.md)
+
+## 前言
+
+* [前言](qian-yan/qian-yan.md)
+* [致读者](qian-yan/zhi-du-zhe.md)
+* [致谢](qian-yan/zhi-xie.md)
+* [绪论](qian-yan/xu-lun.md)
+
+## 第 1 章 FreeBSD 初见
+
+* [1.1 操作系统的历程：UNIX、BSD 和 Linux](di-1-zhang-zou-jin-freebsd/di-1.1-unix.md)
+* [1.2 FreeBSD 导论](di-1-zhang-zou-jin-freebsd/di-1.2-dao-lun.md)
+* [1.3 George Berkeley（乔治·贝克莱）与 BSD 命名的文化背景](di-1-zhang-zou-jin-freebsd/di-1.3-jie-freebsd-jian-shi.md)
+* [1.4 加州大学伯克利分校和“Fiat Lux”（要有光）](di-1-zhang-zou-jin-freebsd/di-1.4-Fiat-Lux.md)
+
+## 第 2 章 安装 FreeBSD
+
+* [2.1 安装前的准备工作](di-2-zhang-an-zhuang-freebsd/di-2.1-install-pre.md)
+* [2.2 使用 bsdinstall 开始安装](di-2-zhang-an-zhuang-freebsd/di-2.2-jie-start-install.md)
+* [2.3 键盘布局和主机名](di-2-zhang-an-zhuang-freebsd/di-2.3-jie-use-bsdinstall.md)
+* [2.4 选择安装组件](di-2-zhang-an-zhuang-freebsd/di-2.4-jie-select.md)
+* [2.5 分配磁盘空间](di-2-zhang-an-zhuang-freebsd/di-2.5-jie-fen-pei-disk.md)
+* [2.6 设置 root 密码](di-2-zhang-an-zhuang-freebsd/di-2.6-root-jie.md)
+* [2.7 网络设置](di-2-zhang-an-zhuang-freebsd/di-2.7-jie-net.md)
+* [2.8 时区、服务、安全、固件和账户](di-2-zhang-an-zhuang-freebsd/di-2.8-jie-more.md)
+* [2.9 完成安装](di-2-zhang-an-zhuang-freebsd/di-2.9-end-jie.md)
+* [2.10 故障排除](di-2-zhang-an-zhuang-freebsd/di-2.10-jie-eol.md)
+* [2.11 将 U 盘启动盘恢复为普通 U 盘（基于 Windows）](di-2-zhang-an-zhuang-freebsd/di-2.11-jie-usb.md)
+
+其他从略
+```
+
+可以看到，`SUMMARY.md` 在形式上就是普通的 markdown 文档，并无特殊支持。
+
+但是也有一些注意事项：
+
+- 第一行 `# Table of contents` 是绝对不允许变动的，否则 Gitbook 将无法识别，造成失去同步。
+- 我们要求应该形如 `* [2.2 使用 bsdinstall 开始安装](di-2-zhang-an-zhuang-freebsd/di-2.2-jie-start-install.md)`，不允许 `* [2.2 使用 bsdinstall 开始安装](di-3-zhang-ni-hao/di-2.2-jie-start-install.md)`，即你的目录结构和放置的文件位置必须一致。（不一致并不会出错，但是本项目要求你一致）
+- 通过 `sync-headers.yml`，将自动同步 `SUMMARY.md` 中的章节标题到具体的 markdown 文件中。因此若你要修改 `di-2.2-jie-start-install.md` 的一级标题 `# 2.2 使用 bsdinstall 开始安装`，必须只能修改 `SUMMARY.md` 中的 `2.2 使用 bsdinstall 开始安装`，否则会被 `sync-headers.yml` 覆盖。
 
 ## 开放任务
 
