@@ -143,7 +143,7 @@ $ git clone https://github.com/FreeBSD-Ask/FreeBSD-Ask
 >
 >如果你仅想贡献内容本身，尚无改进网站 docs 的浏览体验与构建优化等等意向，则仅需阅读本文即可。
 
-#### 项目结构概览
+### 项目结构概览
 
 ```sh
 >FreeBSD-Ask-main
@@ -225,7 +225,7 @@ $ git clone https://github.com/FreeBSD-Ask/FreeBSD-Ask
 └─其他目录和文件从略
 ```
 
-#### `SUMMARY.md` 目录结构
+### `SUMMARY.md` 目录结构
 
 ```md
 # Table of contents
@@ -272,7 +272,15 @@ $ git clone https://github.com/FreeBSD-Ask/FreeBSD-Ask
 
 - 第一行 `# Table of contents` 是绝对不允许变动的，否则 Gitbook 将无法识别，造成失去同步。
 - 我们要求应该形如 `* [2.2 使用 bsdinstall 开始安装](di-2-zhang-an-zhuang-freebsd/di-2.2-jie-start-install.md)`，不允许 `* [2.2 使用 bsdinstall 开始安装](di-3-zhang-ni-hao/di-2.2-jie-start-install.md)`，即你的目录结构和放置的文件位置必须一致。（不一致并不会出错，但是本项目要求你一致）
-- 通过 `sync-headers.yml`，将自动同步 `SUMMARY.md` 中的章节标题到具体的 markdown 文件中。因此若你要修改 `di-2.2-jie-start-install.md` 的一级标题 `# 2.2 使用 bsdinstall 开始安装`，必须只能修改 `SUMMARY.md` 中的 `2.2 使用 bsdinstall 开始安装`，否则会被 `sync-headers.yml` 覆盖。
+- 通过 `sync-headers.yml`，将自动同步 `SUMMARY.md` 中的章节标题到具体的 markdown 文件中。因此若你要修改 `di-2.2-jie-start-install.md` 的一级标题 `# 2.2 使用 bsdinstall 开始安装`，必须只能修改 `SUMMARY.md` 中的 `2.2 使用 bsdinstall 开始安装`，否则会被 `sync-headers.yml` 覆盖。当二者不同时，若正好在提交时未触发脚本即构建，那么 Gitbook 将以 `SUMMARY.md` 中的目录为准。
+
+### 预览页面
+
+当你提交 PR 时，会自动生成一个预览的网站。实际上，所有提交都有对应版本的网站。且每次 push 都会自动更新。
+
+你可以通过该链接获取你当前 PR 的实际显示样式。
+
+
 
 ## 开放任务
 
