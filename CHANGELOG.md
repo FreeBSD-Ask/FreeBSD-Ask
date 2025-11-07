@@ -4,6 +4,8 @@
 
 ## 2025 年第四季度
 
+- 2025.11.8
+  - 由于 FreeBSD 的默认 ESP 不符合 UEFI 规范，提交 [Bug 290857 - bsdinstall: The ESP on FreeBSD Should Be FAT32 Instead of FAT16: D28897 Is Actually Ineffective ](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=290857)
 - 2025.11.5
   - “26.5 桌面和其他软件”新增故障排除，解决“KDE 无声音”
   - 增补贡献指南
