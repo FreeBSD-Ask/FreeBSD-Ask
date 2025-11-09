@@ -95,7 +95,7 @@ EPUB 在手机上可以使用[微信读书](https://play.google.com/store/apps/d
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-orange.svg)](https://creativecommons.org/licenses/by/4.0/)
 
-除特别注明外，本书的文字、图表等内容依据 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) 协议发布。书中所有代码示例依据 [BSD 二条款许可](https://opensource.org/license/bsd-2-clause)发布。
+除特别注明外，本书的文字、图表等内容依据 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) 协议发布。书中所有代码示例依据 [BSD 2 条款许可](https://opensource.org/license/bsd-2-clause)发布。
 
 [![Licens：BSD 2 Clause](https://img.shields.io/badge/License-BSD--2--Clause-EB0028.svg)](https://opensource.org/license/bsd-2-clause)
 
