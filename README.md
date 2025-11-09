@@ -61,7 +61,7 @@ EPUB 在手机上可以使用[微信读书](https://play.google.com/store/apps/d
 
 除此外有关中文社区的问题烦请加入 QQ 群后再联系 QQ 群主。
 
-**非技术性问题及与社区无关话题、纯粹私人聊天及情感讨论等等事宜恕不回复，如有这方面需求请咨询专业人士，其他需求欢迎加群讨论。**
+**非技术性问题及与社区无关话题、纯粹私人聊天及情感讨论等等事宜不在回复范围内，如有类似需求建议咨询专业人士，其他问题欢迎加群讨论。**
 
 ## 🧭 目标与方向
 
@@ -91,9 +91,13 @@ EPUB 在手机上可以使用[微信读书](https://play.google.com/store/apps/d
 
 作品中演示或提及的任何第三方软件、源代码及文档，其全部知识产权（包括但不限于著作权、专利、商标与商业秘密）均由原权利人完整保留。如果您相信您的作品以侵犯版权的方式被复制或粘贴在我们的项目中，请通过电子邮件地址 ykla [yklaxds@gmail.com](mailto:yklaxds@gmail.com) 进行联系。我们将妥善处理。
 
-本声明不影响本作品依知识共享署名（CC BY）许可协议所授予公众的合法使用权利。
+本声明不影响本作品依知识共享署名（[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)）许可协议所授予公众的合法使用权利。除特别注明外，本书中的文字、图表等内容依据 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) 协议发布。
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-orange.svg)](https://creativecommons.org/licenses/by/4.0/)
+
+书中所有代码示例依据 [BSD 2 条款许可](https://opensource.org/license/bsd-2-clause)发布。
+
+[![License: BSD 2 Clause](https://img.shields.io/badge/License-BSD--2--Clause-EB0028.svg)](https://opensource.org/license/bsd-2-clause)
 
 ## 📜 项目历史
 
