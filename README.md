@@ -95,6 +95,10 @@ EPUB 在手机上可以使用[微信读书](https://play.google.com/store/apps/d
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-orange.svg)](https://creativecommons.org/licenses/by/4.0/)
 
+除特别注明外，本书的文字、图表等内容依据 CC BY 4.0 协议发布。书中所有代码示例依据 BSD 二条款许可发布。
+
+![Licens：BSD 2 Clause](https://img.shields.io/badge/License-BSD--2--Clause-orange.svg)
+
 ## 📜 项目历史
 
 《FreeBSD 从入门到跑路》肇始于 2021 年 3 月 14 日，其原型最早可追溯至 ykla 于 2020 年 12 月 31 日发布的文章《FreeBSD 艺术科学哲学导论》。
