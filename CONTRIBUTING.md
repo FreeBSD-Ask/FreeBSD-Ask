@@ -42,8 +42,6 @@ and retry with 'git restore --source=HEAD :/'
 - 下方的 ToDo 列表或 GitHub Project；
 - 你亦可在文学故事章节分享你与 BSD 的故事，你的个人心得体会。
 
-唯一要注意的是，你的教程会以本项目的开源许可证（CC-BY）进行发布。
-
 ### 基本原则与方法论
 
 #### 基本原则
