@@ -7,6 +7,7 @@
 - 2025.11.9
   - 除特别注明外，本书的文字、图表等内容依据 CC BY 4.0 协议发布。书中所有代码示例依据 BSD 二条款许可发布。
   - 移除“12.5 无线网络环境下使用 bhyve”与“12.2 使用 bhyve 安装 Windows 11（vm-bhyve）的可选配置部分”。引用不符合规范
+  - 将上面移除的内容涉及的 wiki 全部翻译，并放在 [vm-bhyve Wiki](https://book.bsdcn.org/wen-zhang/wen-zhang/vm-bhyve)
 - 2025.11.8
   - 由于 FreeBSD 的默认 ESP 不符合 UEFI 规范，提交 [Bug 290857 - bsdinstall: The ESP on FreeBSD Should Be FAT32 Instead of FAT16: D28897 Is Actually Ineffective ](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=290857)
 - 2025.11.5
