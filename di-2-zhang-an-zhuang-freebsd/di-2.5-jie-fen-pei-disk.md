@@ -50,7 +50,7 @@ FreeBSD 14.2 RELEASE 的 `/` 分区支持 UFS 和 ZFS 两种文件系统。旧�
 
 ![](../.gitbook/assets/ins8.png)
 
-现代（近十几年内的）计算机应该选择 `GPT+UEFI`。请勿使用默认选项！这样会影响 4K 对齐，并产生一个 512KB 的 `freebsd-boot` 分区。
+现代（近十几年内的）计算机应该选择 `GPT+UEFI`。请勿使用默认选项！这样会产生一个 512KB 的 `freebsd-boot` 多余分区。
 
 较老的计算机（如 2013 年以前的）才应该选择选项 `GPT(BIOS)`——此默认选项同时兼容二者。
 
