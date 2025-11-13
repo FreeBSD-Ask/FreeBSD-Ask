@@ -63,7 +63,7 @@ EPUB 在手机上可以使用[微信读书](https://play.google.com/store/apps/d
 
 为了创建一个包容性的世界，请确保您在 FreeBSD 中文社区的行为符合 [FreeBSD 中文社区行为规范](https://docs.bsdcn.org/CODE_OF_CONDUCT)。
 
-由于架构设计问题，您必须使用 GitHub 账户进行登录方可留言，并且您在 docs 上的评论将会公开到 GitHub 存储库 [/Handbook-giscus-discussions](https://github.com/FreeBSD-Ask/Handbook-giscus-discussions) 的 Discussions 中，您可以前往上述位置管理您的历史留言。
+由于架构设计问题，您必须使用 GitHub 账户进行登录方可留言，并且您在 docs 上的评论将会公开到 GitHub 存储库 [/Handbook-giscus-discussions](https://github.com/FreeBSD-Ask/Handbook-giscus-discussions) 的 Discussions 中，您可自行前往上述位置管理您的历史留言。
 
 ## 🧭 目标与方向
 
