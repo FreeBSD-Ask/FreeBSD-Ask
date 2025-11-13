@@ -97,7 +97,6 @@ and retry with 'git restore --source=HEAD :/'
 
 ![](https://img.shields.io/github/repo-size/FreeBSD-Ask/FreeBSD-Ask?style=social&label=%E6%9C%AC%E5%AD%98%E5%82%A8%E5%BA%93%E4%BD%93%E7%A7%AF)
 
-
 本项目太大，使用 git 拉取时可能会导致缓冲区溢出，可改变 git 配置文件，以实现对缓冲区的扩大：
 
 以下是一个可用的 `~/.gitconfig`（Windows 上的位置为 `C:\Users\你的用户名\.gitconfig`） 的文件示例：
