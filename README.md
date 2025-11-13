@@ -29,10 +29,10 @@ FreeBSD 是真正自由（Liberty）的 **操作系统**，在这波谲云诡的
 
 ## 📚 电子书
 
-目前网站提供了 PDF（适用于印刷及电脑端离线阅读）和 EPUB（适用于移动端离线阅读）格式的电子文档：
+目前网站提供了 PDF和 EPUB 格式的电子文档：
 
-- PDF 下载地址：<https://docs.bsdcn.org/bsdbook.pdf>
-- EPUB 下载地址：<https://docs.bsdcn.org/bsdbook.epub>
+- PDF（适用于印刷及电脑端离线阅读）下载地址：<https://docs.bsdcn.org/bsdbook.pdf>
+- EPUB（适用于移动端离线阅读）下载地址：<https://docs.bsdcn.org/bsdbook.epub>
 
 >**注意**
 >
@@ -63,7 +63,7 @@ EPUB 在手机上可以使用[微信读书](https://play.google.com/store/apps/d
 
 为了创建一个包容性的世界，请确保您在 FreeBSD 中文社区的行为符合 [FreeBSD 中文社区行为规范](https://docs.bsdcn.org/CODE_OF_CONDUCT)。
 
-由于架构设计问题，您必须使用 GitHub 账户进行登录方可留言，并且您在 docs 上的评论将会公开到 GitHub 存储库 [/Handbook-giscus-discussions](https://github.com/FreeBSD-Ask/Handbook-giscus-discussions) 的 Discussions 中，您可自行前往上述位置管理您的历史留言。
+由于架构设计问题，您必须使用 GitHub 账户进行登录方可留言，并且您在 docs 上的评论将会公开到 GitHub 存储库 [Handbook-giscus-discussions](https://github.com/FreeBSD-Ask/Handbook-giscus-discussions) 的 Discussions 中，您可自行前往上述位置管理您的历史留言。
 
 ## 🧭 目标与方向
 
