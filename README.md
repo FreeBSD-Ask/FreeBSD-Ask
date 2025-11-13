@@ -61,7 +61,9 @@ EPUB 在手机上可以使用[微信读书](https://play.google.com/store/apps/d
 
 除此外有关中文社区的问题烦请加入 QQ 群后再联系 QQ 群主。
 
-在反馈前请确保您遵守了 [FreeBSD 中文社区行为规范](https://docs.bsdcn.org/CODE_OF_CONDUCT)
+为了创建一个包容性的世界，请确保您在 FreeBSD 中文社区的行为符合 [FreeBSD 中文社区行为规范](https://docs.bsdcn.org/CODE_OF_CONDUCT)。
+
+由于架构设计问题，您在 docs 上的评论将会公开到 GitHub 存储库 [/Handbook-giscus-discussions](https://github.com/FreeBSD-Ask/Handbook-giscus-discussions) 的 Discussions 中，您可以前往上述位置管理您的历史留言。
 
 ## 🧭 目标与方向
 
