@@ -6,7 +6,7 @@ import 'lxgw-wenkai-screen-web/lxgwwenkaimonogbscreen/result.css'; // 导入霞�
 import 'noto-sans-sc/all.css'; // 导入 noto，思源宋体加粗后辨识度不高
 import './custom.css';
 import Layout from './Layout.vue';
-
+import { h } from 'vue'
 
 export default {
   ...DefaultTheme,
