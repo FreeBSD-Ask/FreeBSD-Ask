@@ -52,7 +52,7 @@ and retry with 'git restore --source=HEAD :/'
 - 在引用其他网站内容时，请查证其引用的内容是否真实可信，并且不要直接网站内容之，而是要直接一手来源
 - 请提交到 main 分支
 - 请避免学术不端行为，参见[高等学校预防与处理学术不端行为办法](https://www.gov.cn/zhengce/2016-07/19/content_5713390.htm)
-- 遵守 FreeBSD 中文社区行为规范(https://docs.bsdcn.org/CODE_OF_CONDUCT)
+- 遵守 [FreeBSD 中文社区行为规范](https://docs.bsdcn.org/CODE_OF_CONDUCT)
 
 #### 使之成为“一本书”，而不仅仅是本字典或手册
 
