@@ -9,7 +9,6 @@ import {
 } from "vitepress-plugin-pagefind";
 import lightbox from "vitepress-plugin-lightbox";
 import { sri } from "vite-plugin-sri3";
-import csp from "vite-plugin-csp-guard";
 
 export default defineConfig({
     sitemap: {
@@ -285,53 +284,6 @@ export default defineConfig({
                 summary: {
                     target: "docs/SUMMARY.md",
                     collapsed: false,
-                },
-            }),
-            csp({
-                algorithm: "sha256", // 算法
-                dev: {
-                    run: true, // 允许 vite dev
-                },
-build: {sri: false, outlierSupport: []},
-                policy: {
-                    "default-src": ["'self'"],
-                    "script-src": [
-                        "'self'",
-                        "'unsafe-inline'",
-                        "https://www.google-analytics.com",
-                        "https://analytics.google.com",
-                        "https://www.googletagmanager.com",
-                    ],
-                    "script-src-elem": [
-                        "'self'",
-                        "'unsafe-inline'",
-                        "https://www.google-analytics.com",
-                        "https://analytics.google.com",
-                        "https://www.googletagmanager.com",
-                    ],
-                    "style-src": ["'self'", "'unsafe-inline'"],
-                    "style-src-elem": ["'self'", "'unsafe-inline'"],
-                    "img-src": [
-                        "'self'",
-                        "data:",
-                        "https://img.shields.io",
-                        "https://repobeats.axiom.co",
-                        "https://contrib.nn.ci",
-                        "https://api.star-history.com",
-                    ],
-                    // 新增连接源指令
-                    "connect-src": [
-                        "'self'",
-                        "https://www.google-analytics.com",
-                        "https://analytics.google.com",
-                        "https://www.googletagmanager.com",
-                    ],
-                    // 新增模块源指令（用于 ES6 模块）
-                    "script-src-attr": ["'self'", "'unsafe-inline'"], // 可选：处理内联事件处理程序
-                    "font-src": ["'self'"],
-                    "object-src": ["'none'"],
-                    "base-uri": ["'self'"],
-                    "form-action": ["'self'"],
                 },
             }),
             sri(),
