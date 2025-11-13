@@ -79,7 +79,7 @@ EPUB 在手机上可以使用[微信读书](https://play.google.com/store/apps/d
 
 ## 🏗️ 贡献者
 
-![贡献者](https://contrib.nn.ci/api?repo=FreeBSD-Ask/FreeBSD-Ask)
+![贡献者](https://contrib.nn.ci/api?no_bot=true&repo=FreeBSD-Ask/FreeBSD-Ask)
 
 ## ⚖️ 授权协议与法律声明
 
