@@ -7,6 +7,7 @@
 - 2025.11.14
   - “3.3 使用 Virtual Box 安装 FreeBSD”增补“网络设置”
   - Port [net/wutil](https://www.freshports.org/net/wutil) 测试失败，提交 issue [wutil: no wpa ctrl interface on default path, provide --ctrl-interface: No error: 0](https://github.com/MainKt/wutil/issues/2)
+  - “6.3 KDE6（X11）”新增“附录：解决开机时总是自动打开特定程序”
 - 2025.11.13
   - CSP 配置错误，已经移除
   - docs 新增 giscus 评论功能
