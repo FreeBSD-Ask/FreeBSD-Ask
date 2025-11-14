@@ -1,6 +1,5 @@
 # 3.3 使用 Virtual Box 安装 FreeBSD
 
-
 ## 下载 VirtualBox
 
 进入网页点击右侧 `Download` 即可下载：
@@ -26,7 +25,7 @@
 
 >**技巧**
 >
->UEFI 下显卡也可以正常驱动。——2023.1.14 测试
+>UEFI 下显卡也可以正常驱动。Wayland 下由于缺少对应的 drm 驱动移植，暂时无法使用。
 
 
 ![](../.gitbook/assets/vb4.png)
@@ -62,7 +61,6 @@
 安装后的系统：
 
 ![](../.gitbook/assets/vb9.png)
-
 
 ## 网络设置
 
@@ -102,6 +100,8 @@
 
 ## 显卡驱动与增强工具
 
+### 安装工具
+
 - 使用 pkg 安装：
 
 ```sh
@@ -115,9 +115,7 @@
 # make install clean
 ```
 
----
-
-- 查看安装说明：
+## 查看安装说明：
 
 ```sh
 root@ykla:/home/ykla # pkg info -D virtualbox-ose-additions
@@ -167,9 +165,13 @@ You may ignore the yellow alert that encourages use of VMSVGA.
 # 可以忽略提示使用 VMSVGA 的黄色警告信息。
 ```
 
-请使用 UEFI，Xorg 可以自动识别驱动，**不需要** 手动配置 `/usr/local/etc/X11/xorg.conf`（经过测试手动配置反而更卡，点一下要用 5 秒钟……）。
+>**技巧**
+>
+>请使用 UEFI，Xorg 可以自动识别驱动，**不需要** 手动配置 `/usr/local/etc/X11/xorg.conf`（经过测试手动配置反而更卡，点一下要用 5 秒钟……）。
 
-- 服务自启动：
+## 服务管理
+
+- 启用服务并开机自启：
 
 ```sh
 # service vboxguest enable
