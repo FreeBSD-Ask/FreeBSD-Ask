@@ -1,6 +1,5 @@
 # 3.3 使用 Virtual Box 安装 FreeBSD
 
-
 ## 下载 VirtualBox
 
 进入网页点击右侧 `Download` 即可下载：
@@ -26,7 +25,7 @@
 
 >**技巧**
 >
->UEFI 下显卡也可以正常驱动。——2023.1.14 测试
+>UEFI 下显卡也可以正常驱动。Wayland 下由于缺少对应的 drm 驱动移植，暂时无法使用。
 
 
 ![](../.gitbook/assets/vb4.png)
@@ -63,10 +62,13 @@
 
 ![](../.gitbook/assets/vb9.png)
 
-
 ## 网络设置
 
 ### 方法 ① 桥接
+
+>**技巧**
+>
+>VirtualBox 中的桥接可以使各个方向的网络均互通无阻。
 
 桥接是最简单的互通主机与虚拟机的方法，并且可以获取一个和宿主机在同一个 IP 段的 IP 地址，如主机是 192.168.31.123，则虚拟机的地址为 192.168.31.x。
 
@@ -76,19 +78,29 @@
 
 如果没有网络（互联网）请设置 DNS 为 `223.5.5.5`。如果不会，请看本章其他章节。
 
-### 方法 ② NAT
+### 方法 ② NAT + 仅主机模式
+
+>**注意**
+>
+>与 VMware 不同，VirtualBox 在纯粹 NAT 模式下，主机和虚拟机是无法互通的，虚拟机可以访问主机的回环接口 `10.0.2.2` 及其上运行的网络服务，但是主机无法访问虚拟机的端口，且虚拟机与虚拟机之间也是相互隔离的。这是因为 VirtualBox 的 NAT 并不是由主机充当交换机，而是在主机与虚拟机中构造了一个交换机来进行隔离。参见 [Network Address Translation (NAT)](https://www.virtualbox.org/manual/topics/networkingdetails.html#network_nat)。你也可以按照手册中的端口转发来联通网络。
 
 网络设置比较复杂，有时桥接不一定可以生效。为了达到使用宿主机（如 Windows10）控制虚拟机里的 FreeBSD 系统的目的，需要设置两块网卡——一块是 NAT 网络模式的网卡用来上网、另一块是仅主机模式的网卡用来互通宿主机。如图所示：
 
 ![](../.gitbook/assets/vbnat1.png)
 
+>**技巧**
+>
+>在上面的选项里有“网络地址转换(NAT)”和“NAT 网络”这两个类似的选项，根据 [Introduction to Networking Modes](https://www.virtualbox.org/manual/topics/networkingdetails.html#network_nat)，他们的区别仅在于“NAT 网络”下虚拟机之间是互通的，而“网络地址转换(NAT)”下的虚拟机之间的网络是隔离不互通的。而选项“内部网络”即仅虚拟机之间互通。
+
 ![](../.gitbook/assets/vbnat2.png)
 
 使用命令 `# ifconfig` 看一下，如果第二块网卡 `em1` 没有获取到 ip 地址，请手动 DHCP 获取一下：`# dhclient em1` 即可（为了长期生效可在 `/etc/rc.conf` 中加入 `ifconfig_em1="DHCP"`）。
 
-如果没有网络（互联网）请设置 DNS 为 `223.5.5.5`。如果不会，请看本章其他章节。
+按这种方式设定的网络，其虚拟机和主机所在局域网无法互通。如果没有网络（互联网）请设置 DNS 为 `223.5.5.5`。如果不会，请看本章其他章节。
 
 ## 显卡驱动与增强工具
+
+### 安装工具
 
 - 使用 pkg 安装：
 
@@ -103,9 +115,7 @@
 # make install clean
 ```
 
----
-
-- 查看安装说明：
+## 查看安装说明：
 
 ```sh
 root@ykla:/home/ykla # pkg info -D virtualbox-ose-additions
@@ -155,9 +165,13 @@ You may ignore the yellow alert that encourages use of VMSVGA.
 # 可以忽略提示使用 VMSVGA 的黄色警告信息。
 ```
 
-请使用 UEFI，Xorg 可以自动识别驱动，**不需要** 手动配置 `/usr/local/etc/X11/xorg.conf`（经过测试手动配置反而更卡，点一下要用 5 秒钟……）。
+>**技巧**
+>
+>请使用 UEFI，Xorg 可以自动识别驱动，**不需要** 手动配置 `/usr/local/etc/X11/xorg.conf`（经过测试手动配置反而更卡，点一下要用 5 秒钟……）。
 
-- 服务自启动：
+## 服务管理
+
+- 启用服务并开机自启：
 
 ```sh
 # service vboxguest enable
