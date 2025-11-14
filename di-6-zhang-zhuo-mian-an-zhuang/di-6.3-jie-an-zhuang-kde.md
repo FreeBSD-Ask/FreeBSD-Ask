@@ -270,6 +270,12 @@ Current=sddm-freebsd-black-theme
 
 ![](../.gitbook/assets/kde-win3.png)
 
+## 附录：解决开机时总是自动打开特定程序
+
+打开设置，选择“会话”——>“桌面会话”，在右侧的“会话恢复”，修改为“启动为空会话”。
+
+![](../.gitbook/assets/kde-no-auto.png)
+
 ## 故障排除与未竟事宜
 
 ### sddm 登录闪退
