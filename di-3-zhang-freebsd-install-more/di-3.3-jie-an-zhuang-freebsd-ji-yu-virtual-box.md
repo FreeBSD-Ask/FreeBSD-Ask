@@ -90,6 +90,10 @@
 
 ![](../.gitbook/assets/vbnat1.png)
 
+>**技巧**
+>
+>在上面的选项里有“网络地址转换(NAT)”和“NAT 网络”这两个类似的选项，根据 [Introduction to Networking Modes](https://www.virtualbox.org/manual/topics/networkingdetails.html#network_nat)，他们的区别仅在于“NAT 网络”下虚拟机之间是互通的，而“网络地址转换(NAT)”下的虚拟机之间的网络是隔离不互通的。而选项“内部网络”即仅虚拟机之间互通。
+
 ![](../.gitbook/assets/vbnat2.png)
 
 使用命令 `# ifconfig` 看一下，如果第二块网卡 `em1` 没有获取到 ip 地址，请手动 DHCP 获取一下：`# dhclient em1` 即可（为了长期生效可在 `/etc/rc.conf` 中加入 `ifconfig_em1="DHCP"`）。
