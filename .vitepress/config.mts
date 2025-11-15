@@ -9,6 +9,14 @@ import {
 } from "vitepress-plugin-pagefind";
 import lightbox from "vitepress-plugin-lightbox";
 import { sri } from "vite-plugin-sri3";
+import { RSSOptions, RssPlugin } from "vitepress-plugin-rss";
+
+const baseUrl = 'https://docs.bsdcn.org'
+const RSS: RSSOptions = {
+  title: 'FreeBSD 从入门到跑路',
+  baseUrl,
+  copyright: 'Copyright (c) 2021-present, FreeBSD 中文社区',
+}
 
 export default defineConfig({
     sitemap: {
@@ -201,6 +209,7 @@ export default defineConfig({
         ],
     ],
     themeConfig: {
+        socialLinks: [],
         siteTitle: "FreeBSD 中文社区",
         langMenuLabel: "多语言",
         returnToTopLabel: "回到顶部",
@@ -280,6 +289,7 @@ export default defineConfig({
                 heading: "共: {{searchResult}} 条结果",
                 excludeSelector: ["img", "a.header-anchor"],
             }),
+            RssPlugin(RSS),
             autoNav({
                 summary: {
                     target: "docs/SUMMARY.md",
