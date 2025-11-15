@@ -8,7 +8,6 @@ import {
     pagefindPlugin,
 } from "vitepress-plugin-pagefind";
 import lightbox from "vitepress-plugin-lightbox";
-import { sri } from "vite-plugin-sri3";
 import { RSSOptions, RssPlugin } from "vitepress-plugin-rss";
 
 const baseUrl = 'https://docs.bsdcn.org'
@@ -298,7 +297,6 @@ export default defineConfig({
                     collapsed: false,
                 },
             }),
-            sri(),
         ],
     },
 });
