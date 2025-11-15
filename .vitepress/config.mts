@@ -16,6 +16,8 @@ const RSS: RSSOptions = {
   title: 'FreeBSD 从入门到跑路',
   baseUrl,
   copyright: 'Copyright (c) 2021-present, FreeBSD 中文社区',
+  language: 'zh-cn',
+  favicon: 'https://docs.bsdcn.org/favicon.ico',
 }
 
 export default defineConfig({
