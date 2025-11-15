@@ -126,7 +126,7 @@ KDE 旨在开发一套现代桌面系统，如果你觉得 KDE 界面很像 Wind
 ## 启动项设置
 
 ```sh
-# service dbus enable # 用于桌面环境的进程间通信
+# service dbus enable # 用于桌面环境的进程间通信，作为依赖自动安装的
 # service sddm enable # SDDM 登录管理器
 ```
 
