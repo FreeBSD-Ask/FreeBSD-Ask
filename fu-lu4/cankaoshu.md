@@ -30,7 +30,7 @@
 | :---: | :---: | :---: | :---: | :---: | :---: |
 | ![UNIX 传奇：历史与回忆](../.gitbook/assets/unixchuanqi.png) | 《UNIX 传奇——历史与回忆》 | Brian W Kernighan | 9787115557179 | 人民邮电出版社 | 主要讲解了 UNIX 的发展历史。写的比较粗略。 |
 | ![UNIX 编程艺术](../.gitbook/assets/s11345267.png) | 《UNIX 编程艺术》（TAOUP） | Eric Raymond | 9787121176654 | 电子工业出版社 | 主要讲解了 UNIX 的设计思路与软件工程理论。需要说明的是，本书不涉及任何哲学思想。大多数都是在具体历史背景下的无奈行为，反而被视为了金规银律，有过度解读的嫌疑。本书作者虽然是 OSI 创始人，深度参与了开源事业，但其对开源和 UNIX 哲学理解与自由软件基金会等传统观点存在明显的张力|
-| ![FreeBSD 操作系统设计与实现（原书第二版）](../.gitbook/assets/freebsd2rd.png) | 《FreeBSD 操作系统设计与实现（原书第 2 版）》 | Marshall McKusick、George Neville-Neil、Robert N.M. Watson | 9787111689973 | 机械工业出版社 |  主要讲解了内核。轻型纸，居然还有几个章节要自己在网络自己下载？ 该书阅读难度相当大，据本书作者之一的博士生毕业生反映（出自韩国 FreeBSD 社区），他自己也看不懂。主要作者在其网站上有提供多款录制课程，但是价格也许有些偏离市场。目前正在撰写推出第三版，见 2025 年 6 月 BSDCan 大会|
+| ![FreeBSD 操作系统设计与实现（原书第二版）](../.gitbook/assets/freebsd2rd.png) | 《FreeBSD 操作系统设计与实现（原书第 2 版）》 | Marshall McKusick、George Neville-Neil、Robert N.M. Watson | 9787111689973 | 机械工业出版社 |  主要讲解了内核。轻型纸，居然还有几个章节要自己在网络自己下载？ 该书阅读难度相当大，据本书作者之一的博士生毕业生反映（出自韩国 FreeBSD 社区），他自己也看不懂。主要作者: Marshall Kirk McKusick 在其网站上有提供多款[录制课程](https://www.mckusick.com/buylist.html)，但是价格也许有些偏离市场（1945 美元）。目前正在撰写推出第三版，见 2025 年 6 月 BSDCan 大会[相关视频](https://www.youtube.com/watch?v=SGC0191nDp0)|
 
 ## 不建议阅读
 
