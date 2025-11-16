@@ -50,7 +50,7 @@
 
 |封面 | 书名 | 作者 | ISBN | 出版社 |
 | :---: | :---: | :---: | :---: | :---: |
-| ![Absolute FreeBSD, 3rd Edition: The Complete Guide to FreeBSD](../.gitbook/assets/AbsoluteBSD.png) | ***Absolute FreeBSD 3rd*** | Michael W. Lucas | 9781593278922 | No Starch Press |见下 |
+| ![Absolute FreeBSD, 3rd Edition: The Complete Guide to FreeBSD](../.gitbook/assets/AbsoluteBSD.png) | ***Absolute FreeBSD 3rd*** | Michael W. Lucas | 9781593278922 | No Starch Press |
 
 说明：
 
