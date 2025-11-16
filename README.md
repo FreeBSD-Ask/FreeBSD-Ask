@@ -81,7 +81,7 @@ EPUB 在手机上可以使用[微信读书](https://play.google.com/store/apps/d
 
 需要你持有 VISA 信用卡：请在捐赠页面“Click & Pledge”下使用 `Amazon Pay`，测试可用。
 
-你还可以通过必应搜索的 Rewards 积分[对 FreeBSD 基金会进行捐赠](https://rewards.bing.com/redeem/000999036000?causeId=840-841545163&&PC=EMMX01)。~~也可以通过该方式[捐赠 NetBSD 基金会](https://rewards.bing.com/redeem/000999036000?causeId=840-134134071&PC=EMMX01)~~
+你还可以通过必应搜索的 Rewards 积分[对 FreeBSD 基金会进行捐赠](https://rewards.bing.com/redeem/000999036000?causeId=840-841545163&&PC=EMMX01)。也可以用该方式[捐赠 NetBSD 基金会](https://rewards.bing.com/redeem/000999036000?causeId=840-134134071&PC=EMMX01)。
 
 ## 🏗️ 贡献者
 
