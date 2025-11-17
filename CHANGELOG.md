@@ -6,6 +6,7 @@
 
 - 2025.11.17
   - “4.1 Windows 用户迁移指南”新增“深入阅读”
+  - FreeBSD 安装镜像缺乏 kmod 的离线包，提交 [Bug 291052 - Request to offline-distribute kernel modules and pkg(8) repositories in iso and img images. ](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=291052)
 - 2025.11.14
   - “3.3 使用 Virtual Box 安装 FreeBSD”增补“网络设置”
   - Port [net/wutil](https://www.freshports.org/net/wutil) 测试失败，提交 issue [wutil: no wpa ctrl interface on default path, provide --ctrl-interface: No error: 0](https://github.com/MainKt/wutil/issues/2)
