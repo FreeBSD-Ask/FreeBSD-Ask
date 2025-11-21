@@ -86,11 +86,17 @@ For more information on available commands and options see 'pkg help'.
 
 >**技巧**
 >
->如果提示 `00206176BC680000:error:0A000086:SSL routines:tls_post_process_server_certificate:certificate verify failed:/usr/src/crypto/openssl/ssl/statem/statem_clnt.c:1890:`，请先校准时间。
+>如果提示 `00206176BC680000:error:0A000086:SSL routines:tls_post_process_server_certificate:certificate verify failed:/usr/src/crypto/openssl/ssl/statem/statem_clnt.c:1890:`（SSL 证书验证失败），请先校准时间。
 >
 >```sh
 ># ntpdate -u pool.ntp.org
 >```
+>
+>>**思考题**
+>>
+>>在 SSL 大行其是的年代人，任何网络问题总是要看看自己机器的时间是否正确。而一般人总会忽略这一点（有时候甚至是 CPU 中负责加密的模块损坏导致的），并确保大多数情况下报错也极不明确。你认为应该如何解决这个问题？
+
+
 
 ## 使用 pkg 安装软件 
 
