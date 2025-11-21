@@ -12,7 +12,7 @@ jobs:
 
     steps:
       - name: Checkout repository with Deploy Key
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           ssh-key: ${{ secrets.DEPLOY_KEY }}
           fetch-depth: 0
