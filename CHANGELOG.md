@@ -4,6 +4,8 @@
 
 ## 2025 年第四季度
 
+- 2025.11.21
+  - “5.4 使用 pkg 管理二进制包”重写“使用 pkg 安装软件”
 - 2025.11.17
   - “4.1 Windows 用户迁移指南”新增“深入阅读”
   - FreeBSD 安装镜像缺乏 kmod 的离线包，提交 [Bug 291052 - Request to offline-distribute kernel modules and pkg(8) repositories in iso and img images. ](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=291052)
