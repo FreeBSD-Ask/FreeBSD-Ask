@@ -110,8 +110,8 @@ pkg: Insufficient privileges to install packages
 
 再来试试：
 
-```
-$ su # 提升权限到 root，要求此用户在 wheel 组中
+```sh
+$ su # 提升权限到 root，要求此普通用户在 wheel 组中
 Password: # 这里输入的是 root 账户密码！
 # pkg ins chromium # 再安装试试看！
 Updating FreeBSD repository catalogue...
