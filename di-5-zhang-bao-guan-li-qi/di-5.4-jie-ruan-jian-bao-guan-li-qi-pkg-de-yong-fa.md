@@ -1,6 +1,6 @@
 # 5.4 使用 pkg 管理二进制包
 
-FreeBSD 二进制包管理器目前是 pkg，即“Package”，软件包的意思。
+FreeBSD 二进制包管理器目前是 pkg（旧称 pkgng），即“Package”，软件包的意思。
 
 `pkg install` 可以缩写成 `pkg ins`，其他类似。
 
@@ -37,7 +37,7 @@ FreeBSD 二进制包管理器目前是 pkg，即“Package”，软件包的意�
 
 一般来说，如果 Ports 中有这个 Port，但是 pkg 安装没有，等待 7-14 天一般就可以了（构建不出来的包系统会自动发报错给维护者的）。如要立刻安装使用，请使用 Ports。
 
-#### 附录：原子更新的困难与现状
+### 附录：FreeBSD 软件包原子更新的困难与现状
 
 你会经常观察到 FreeBSD 的镜像站（无论是官方的还是非官方的）源存在这样几种情况：
 
@@ -48,9 +48,15 @@ FreeBSD 二进制包管理器目前是 pkg，即“Package”，软件包的意�
 
 问题在于 Port 更新是不定时的。复杂的依赖会破坏一切。有力者可尝试提出新的看法和建议反馈至下方或 [FreeBSD 论坛](https://forums.freebsd.org/)。
 
-参见讨论 [the disappearing pkg issue](https://www.reddit.com/r/freebsd/comments/1nlnwtd/the_disappearing_pkg_issue/)。
+>**思考题**
+>- 相关讨论 [the disappearing pkg issue](https://www.reddit.com/r/freebsd/comments/1nlnwtd/the_disappearing_pkg_issue/)
+>- pkg 项目位于 [freebsd/pkg](https://github.com/freebsd/pkg)
+>- pkg 软件包的构建系统位于 [Poudriere](https://github.com/freebsd/poudriere)。
+>
+>试一试：帮助 FreeBSD 项目实现 pkg 二进制软件包的原子更新？
 
-## 安装 pkg
+
+## 安装 pkg 包管理器本体
 
 >**技巧**
 >
@@ -62,18 +68,17 @@ FreeBSD 二进制包管理器目前是 pkg，即“Package”，软件包的意�
 
 ```sh
 root@ykla:/home/ykla # pkg # 输入 pkg  回车
-The package management tool is not yet installed on your system.
-Do you want to fetch and install it now? [y/N]: y # 请在这里输入 y 或 直接回车
-Bootstrapping pkg from pkg+https://pkg.FreeBSD.org/FreeBSD:14:amd64/quarterly, please wait...
+The package management tool is not yet installed on your system. # pkg 尚未安装
+Do you want to fetch and install it now? [y/N]: y # “你想下载安装吗？”请在这里输入 y 再按回车键即可安装
+Bootstrapping pkg from pkg+https://pkg.FreeBSD.org/FreeBSD:14:amd64/quarterly, please wait... # 观察此处，可发现默认调用的是 quarterly 分支的源
 Verifying signature with trusted certificate pkg.freebsd.org.2013102301... done
 Installing pkg-1.21.3...
 Extracting pkg-1.21.3: 100%
-pkg: not enough arguments
+pkg: not enough arguments # 这里报错提示没有参数，但是我们只是为了安装 pkg 本体，可以安心忽略
 Usage: pkg [-v] [-d] [-l] [-N] [-j <jail name or id>|-c <chroot path>|-r <rootdir>] [-C <configuration file>] [-R <repo config dir>] [-o var=value] [-4|-6] <command> [<args>]
 
 For more information on available commands and options see 'pkg help'.
 ```
-
 
 >**技巧**
 >
@@ -87,53 +92,95 @@ For more information on available commands and options see 'pkg help'.
 ># ntpdate -u pool.ntp.org
 >```
 
->**技巧**
+## 使用 pkg 安装软件 
+
+以安装 chromium 为例：
+
+```sh
+$ pkg ins chromium # 在普通用户权限下安装个浏览器看看
+pkg: Insufficient privileges to install packages
+```
+
+“Insufficient privileges to install packages”即“没有足够的权限来安装包”。
+
+再来试试：
+
+```
+$ su # 提升权限到 root，要求此用户在 wheel 组中
+Password: # 这里输入的是 root 账户密码！
+# pkg ins chromium # 再安装试试看！
+Updating FreeBSD repository catalogue...
+Fetching data.pkg: 100%   10 MiB 768.6kB/s    00:14    
+Processing entries: 100%
+FreeBSD repository update completed. 36822 packages processed.
+Updating FreeBSD-kmods repository catalogue...
+Fetching data.pkg: 100%   31 KiB  32.3kB/s    00:01    
+Processing entries: 100%
+FreeBSD-kmods repository update completed. 213 packages processed.
+All repositories are up to date.
+The following 6 package(s) will be affected (of 0 checked): # 有 6 个软件包将会受影响
+
+New packages to be INSTALLED:
+        chromium: 142.0.7444.162 [FreeBSD]
+        dconf: 0.49.0 [FreeBSD]
+        harfbuzz-icu: 10.3.0 [FreeBSD]
+        jsoncpp: 1.9.6_1 [FreeBSD]
+        sndio: 1.10.0_1 [FreeBSD]
+        speex: 1.2.1_1,1 [FreeBSD]
+
+Number of packages to be installed: 6
+
+The process will require 463 MiB more space.
+127 MiB to be downloaded.
+
+Proceed with this action? [y/N]: # 此处输入 y 再按回车键即可安装
+```
+
+>**思考题**
 >
->pkg 的下载路径是 `/var/cache/pkg/`。
-
-
-## 列出 pkg 包安装的文件
-
->**注意**
+>>[Add Concurrent Downloads of Multiple Packages](https://github.com/freebsd/pkg/issues/1628)
 >
->只能列出已安装的包的文件，未安装的不能用这个命令。
+>你会发现 pkg 既不支持并行下载也不支持并行安装，阅读源代码，尝试解决提交 PR 这个问题。
+
+你极有可能会遇到这种情况：
 
 ```sh
-root@ykla:~ # pkg info -l xrdp
-xrdp-0.10.2_2,1:
-	/usr/local/bin/xrdp-dis
-	/usr/local/bin/xrdp-dumpfv1
-	/usr/local/bin/xrdp-genkeymap
-	/usr/local/bin/xrdp-keygen
-	/usr/local/bin/xrdp-sesadmin
-	/usr/local/bin/xrdp-sesrun
-	/usr/local/etc/pam.d/xrdp-sesman
-	/usr/local/etc/rc.d/xrdp
-	……省略一部分……
+# pkg ins chromium
+Updating FreeBSD repository catalogue.
+Fetching meta.conf: 100%    179 B   0.2kB/s    00:01    
+Fetching data.pkg: 100%   10 MiB   2.7MB/s    00:04    
+Processing entries: 100%
+FreeBSD repository update completed. 36804 packages processed.
+Updating FreeBSD-kmods repository catalogue...
+FreeBSD-kmods repository is up to date.
+All repositories are up to date.
+pkg: No packages available to install matching 'chromium' have been found in the repositories
 ```
 
+“pkg: No packages available to install matching 'chromium' have been found in the repositories”即“pkg：在仓库中找不到 与 “chromium” 匹配、可供安装的软件包”。
 
-## 安装 python 3
+如果你前面显示了“FreeBSD repository update completed. 36804 packages processed.”（FreeBSD 仓库更新完成。处理了 36804 个包），说明当前软件源是可用的，只是找不到 `chromium` 这个软件包而已。
+
+这就是上面所述的缺乏“原子更新”的表现。
+
+我们还会发现即使设定了 i18n，我们的 pkg 仍然是英语。
+
+>**思考题**
+>
+>>[Is it possible to add i18n multilingual support using po files?](https://github.com/freebsd/pkg/issues/2421)
+>>
+>>FreeBSD 基本系统里没有 gettext ，所以没有计划这样做，如果后续在 pkg 中出现可用的 libintl 套件，则可能会重新考虑。
+>
+>阅读 pkg 源代码，定位问题所在源头，尝试解决这个问题，提交 PR 让 pkg 支持 i18n。
 
 
-```sh
-# pkg install python
-```
-
-或
-
-```sh
-# cd /usr/ports/lang/python/
-# make install clean
-```
-
-## pkg 升级软件
+## pkg 更新软件
 
 ```sh
 # pkg upgrade
 ```
 
-错误：`You must upgrade the ports-mgmt/pkg port first`
+错误：`You must upgrade the ports-mgmt/pkg port first`（你必须先更新 pkg 本体）
 
 解决：
 
@@ -187,10 +234,39 @@ Number of packages to be removed: 87
 
 The operation will free 825 MiB.
 
-Proceed with deinstalling packages? [y/N]: 
+Proceed with deinstalling packages? [y/N]: # 输入 y 按回车键就卸载了
 ```
 
-## 如何查找缺少的 `.so`（适用于 Linux 兼容层）
+#### 参考文献
+
+- [pkg delete -- deletes packages from the database	and the	system](https://man.freebsd.org/cgi/man.cgi?query=pkg-delete&sektion=8&n=1)
+
+## 列出 pkg 包安装的文件
+
+>**技巧**
+>
+>pkg 的下载路径是 `/var/cache/pkg/`。
+
+>**注意**
+>
+>只能列出已安装的包的文件，未安装的不能用这个命令。
+
+```sh
+root@ykla:~ # pkg info -l xrdp
+xrdp-0.10.2_2,1:
+	/usr/local/bin/xrdp-dis
+	/usr/local/bin/xrdp-dumpfv1
+	/usr/local/bin/xrdp-genkeymap
+	/usr/local/bin/xrdp-keygen
+	/usr/local/bin/xrdp-sesadmin
+	/usr/local/bin/xrdp-sesrun
+	/usr/local/etc/pam.d/xrdp-sesman
+	/usr/local/etc/rc.d/xrdp
+	……省略一部分……
+```
+
+
+## 查找缺少的 `.so`（适用于 Linux 兼容层）
 
 >**警告**
 >
@@ -209,7 +285,7 @@ Proceed with deinstalling packages? [y/N]:
 # make install clean
 ```
 
-### 配置 pkg-provides
+### 配置使用 pkg-provides
 
 - 查看配置说明：
 
@@ -276,20 +352,7 @@ Filename: usr/local/lib/libxcb-icccm.so.4.0.0
           usr/local/lib/libxcb-icccm.so.4
 ```
 
-
-
 ## 故障排除与未竟事宜
-
-### `pkg: cached package xxxx.yy: missing or size mismatch, cannot continue Consider running 'pkg update -f'`
-
-提示下载软件包校验和不符。此问题一般发生在国内镜像站。
-
-先 `pkg update -f` 刷新软件源。再试。
-
-若仍然无效，请等待 12 到 24 小时后重试。此问题多见于镜像站正在与上游进行同步。
-
-若 7 天内仍存在问题，请主动联系镜像站进行报告。
-
 
 ### `ld-elf.so.1: Shared object "libmd.so.6" not found, required by "pkg"`
 
@@ -298,7 +361,7 @@ Filename: usr/local/lib/libxcb-icccm.so.4.0.0
 对于一般 RELEASE，更新系统即可。对于 CURRENT/STABLE 系统，重新编译 `pkg` 即可。
 
 
-- RELEASE
+#### RELEASE
 
 请先切换到 latest 源，再使用软件源里的 pkg 包重装 pkg：
 
@@ -315,12 +378,12 @@ Filename: usr/local/lib/libxcb-icccm.so.4.0.0
 # pkg-static upgrade -f pkg
 ```
 
-- CURRENT/STABLE
+#### CURRENT/STABLE
 
 ```sh
-# pkg-static delete -f pkg #强制卸载当前的 pkg
-# cd /usr/ports/ports-mgmt/pkg #切换目录
-# make BATCH=yes install clean #使用 Ports 重新安装 pkg
+# pkg-static delete -f pkg # 强制卸载当前的 pkg
+# cd /usr/ports/ports-mgmt/pkg # 切换目录
+# make BATCH=yes install clean # 使用 Ports 重新安装 pkg
 ```
 
 ### `pw: user ‘package’ disappeared during update`
@@ -372,8 +435,7 @@ jbig2dec-0.20_1: /usr/local/lib/libjbig2dec.so misses libmd.so.6
 按照上述软件列表，使用 Ports 逐个重新编译即可（RELEASE 可以直接 `pkg` 更新。）。
 
 
-
-#### `bsdadminscripts2` 扩展用法及参考文献
+#### 附录：`bsdadminscripts2` 扩展用法及参考文献
 
 
 - [BSD Administration Scripts II](https://github.com/lonkamikaze/bsda2)，项目地址，含详细使用说明
@@ -420,6 +482,5 @@ Ignore the mismatch and continue? [y/N]:
 
 参见 [pkg(8): "An error occured while fetching package: No error"](https://forums.freebsd.org/threads/pkg-8-an-error-occured-while-fetching-package-no-error.96761/)
 
-## 参考文献
 
-- [pkg delete -- deletes packages from the database	and the	system](https://man.freebsd.org/cgi/man.cgi?query=pkg-delete&sektion=8&n=1)
+
