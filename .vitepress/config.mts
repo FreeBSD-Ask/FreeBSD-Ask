@@ -200,7 +200,6 @@ export default defineConfig({
         ],
     ],
     themeConfig: {
-        socialLinks: [],
         siteTitle: "FreeBSD 中文社区",
         langMenuLabel: "多语言",
         returnToTopLabel: "回到顶部",
