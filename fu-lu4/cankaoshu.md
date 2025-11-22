@@ -22,7 +22,7 @@
 | ![深入理解 UNIX 系统内核](../.gitbook/assets/unixinternals.png) | 《深入理解 UNIX 系统内核》 | Uresh Vahalia | 9787111491453 | 机械工业出版社 | UNIX 内核基础 |
 | ![Unix 四分之一世纪](../.gitbook/assets/unix25.png) | 《Unix 四分之一世纪》|  Peter H. Salus | 9780201547771| Addison-Wesley Professional | 历史书，中译本在[此](https://freebsd.gitbook.io/unix-er-shi-wu-nian) |
 | ![Unix 痛恨者手册](../.gitbook/assets/unixno.png) | 《Unix 痛恨者手册》 | Simson Garfinkel、Daniel Weise、Steven Strassmann | 9781568842035 |  IDG Books Worldwide, Inc. |  历史书，中译本在[此](https://book.bsdcn.org/unix-tong-hen-zhe-shou-ce) |
-
+|![Solaris 性能与工具](../.gitbook/assets/Solaris.png)| 《Solaris 性能与工具》 | Richard McDougall、Jim Mauro、Brendan Gregg| 9787111214038| 机械工业出版社 | 常用性能监测软件和 DTrace 教程。基于 Solaris 10，同时适用于 FreeBSD |
 
 ## 选读书目
 
