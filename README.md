@@ -144,11 +144,11 @@ EPUB 在手机上可以使用[微信读书](https://play.google.com/store/apps/d
 ---
 
 <!-- commit-progress-start -->
-**第 3 版编纂进度:**   （草稿提交数: 984）
+**第 3 版编纂进度:**   （草稿提交数: 1007）
 
 ![进度徽章](.gitbook/assets/progress.svg)
 
-距离第 3 版还需提交: 2549 次
+距离第 3 版还需提交: 2526 次
 <!-- commit-progress-end -->
 
 ---
