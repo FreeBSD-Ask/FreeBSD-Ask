@@ -22,7 +22,7 @@ jobs:
           run: npm i -g md-padding@latest
         
         - name: Run md-padding lint
-          run: find "$(pwd)" -type f -name "*.md" | npx md-padding -r -i -I "-" "=" ":" ">" "<"
+          run: find "$(pwd)" -type f -name "*.md" | npx md-padding -r -i -I '-' '=' ':' '>' '<'
 
         - name: Markdown add spaces
           uses: peter-evans/create-pull-request@v7
