@@ -40,7 +40,7 @@ FreeBSD 是真正自由（Liberty）的 **操作系统**，在这波谲云诡的
 >
 >上面的网址是 ***docs*** 开头的而不是 ***book*** ！
 
-EPUB 在手机上可以使用[微信读书](https://play.google.com/store/apps/details?id=com.tencent.weread&hl=zh)打开，其格式显示比较完整；在电脑上可用 [CAJViewer 9](https://cajviewer.cnki.net/download.html) 打开。
+EPUB 在手机上可以使用 [微信读书](https://play.google.com/store/apps/details?id=com.tencent.weread&hl=zh) 打开，其格式显示比较完整；在电脑上可用 [CAJViewer 9](https://cajviewer.cnki.net/download.html) 打开。
 
 上述电子文档永远反映实时的网页，随 Git 提交而 **实时更新**（但其文件名不会发生变化）。
 
@@ -63,7 +63,7 @@ EPUB 在手机上可以使用[微信读书](https://play.google.com/store/apps/d
 
 除此外有关中文社区的问题烦请加入 QQ 群后再联系 QQ 群主。
 
-为了建设一个爱，希望与和平的世界，请务必确保您的各项行为符合 [FreeBSD 中文社区行为规范（CoC）](https://docs.bsdcn.org/CODE_OF_CONDUCT)及其意指。
+为了建设一个爱，希望与和平的世界，请务必确保您的各项行为符合 [FreeBSD 中文社区行为规范（CoC）](https://docs.bsdcn.org/CODE_OF_CONDUCT) 及其意指。
 
 由于架构设计问题，您必须使用 GitHub 账户进行登录方可留言，并且您在 docs 上的评论将会公开到 GitHub 存储库 [Handbook-giscus-discussions](https://github.com/FreeBSD-Ask/Handbook-giscus-discussions) 的 Discussions 中，您可自行前往上述位置管理您的历史留言。
 
@@ -81,7 +81,7 @@ EPUB 在手机上可以使用[微信读书](https://play.google.com/store/apps/d
 
 需要你持有 VISA 信用卡：请在捐赠页面“Click & Pledge”下使用 `Amazon Pay`，测试可用。
 
-你还可以通过必应搜索的 Rewards 积分[对 FreeBSD 基金会进行捐赠](https://rewards.bing.com/redeem/000999036000?causeId=840-841545163&&PC=EMMX01)。也可以用该方式[捐赠 NetBSD 基金会](https://rewards.bing.com/redeem/000999036000?causeId=840-134134071&PC=EMMX01)。
+你还可以通过必应搜索的 Rewards 积分 [对 FreeBSD 基金会进行捐赠](https://rewards.bing.com/redeem/000999036000?causeId=840-841545163&&PC=EMMX01)。也可以用该方式 [捐赠 NetBSD 基金会](https://rewards.bing.com/redeem/000999036000?causeId=840-134134071&PC=EMMX01)。
 
 ## 🏗️ 贡献者
 
@@ -89,9 +89,9 @@ EPUB 在手机上可以使用[微信读书](https://play.google.com/store/apps/d
 
 ## ⚖️ 授权协议与法律声明
 
-本项目采用《CC BY 4.0 署名 4.0 协议国际版》，详见[署名 4.0 协议国际版法律文本](https://creativecommons.org/licenses/by/4.0/legalcode.zh-hans)。
+本项目采用《CC BY 4.0 署名 4.0 协议国际版》，详见 [署名 4.0 协议国际版法律文本](https://creativecommons.org/licenses/by/4.0/legalcode.zh-hans)。
 
-本作品为识别目的所援引的第三方商标（如®）、商号、服务标志（如™）、商品外观及版权材料（如©）等一切商业标识与知识产权标的，其相关权利均由其合法权利人独立持有并受法律保护。前述引用仅为说明与指称之目的，不构成任何商业性使用、关联背书或法律授权，亦不视为对相关权利的限制或影响。
+本作品为识别目的所援引的第三方商标（如 ®）、商号、服务标志（如 ™）、商品外观及版权材料（如 ©）等一切商业标识与知识产权标的，其相关权利均由其合法权利人独立持有并受法律保护。前述引用仅为说明与指称之目的，不构成任何商业性使用、关联背书或法律授权，亦不视为对相关权利的限制或影响。
 
 本作品出于说明、评论或教学目的，可能合理引用（包括但不限于文字、图像、数据等）了来源于第三方的内容（例如官方网站及其他公开网站、出版物等）。此类引用的知识产权仍归属原始权利人所有。相关引用均出于善意，符合合理使用原则，并非意在侵犯原作者或权利人的合法权益。
 
@@ -101,7 +101,7 @@ EPUB 在手机上可以使用[微信读书](https://play.google.com/store/apps/d
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-orange.svg)](https://creativecommons.org/licenses/by/4.0/)
 
-书中所有代码示例依据 [BSD 2 条款许可](https://opensource.org/license/bsd-2-clause)发布。
+书中所有代码示例依据 [BSD 2 条款许可](https://opensource.org/license/bsd-2-clause) 发布。
 
 [![License: BSD 2 Clause](https://img.shields.io/badge/License-BSD--2--Clause-EB0028.svg)](https://opensource.org/license/bsd-2-clause)
 
@@ -153,7 +153,7 @@ EPUB 在手机上可以使用[微信读书](https://play.google.com/store/apps/d
 
 ---
 
-~~本书得到的 ⭐ 真是太少啦！~~ 若本书对你有帮助，欢迎给本书所在的 [GitHub 项目存储库](https://github.com/FreeBSD-Ask/FreeBSD-Ask)加颗 ⭐。
+~~本书得到的 ⭐ 真是太少啦！~~ 若本书对你有帮助，欢迎给本书所在的 [GitHub 项目存储库](https://github.com/FreeBSD-Ask/FreeBSD-Ask) 加颗 ⭐。
 
 ![⭐ 图](https://api.star-history.com/svg?repos=FreeBSD-Ask/FreeBSD-Ask&type=Date)
 

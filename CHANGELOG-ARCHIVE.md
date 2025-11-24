@@ -9,7 +9,7 @@
   - “19.1 PostgreSQL”更新至“PostgreSQL 18”
 - 2025.9.28
   - 2025 FreeBSD 社区调查报告.pdf https://www.alipan.com/s/6vUR7W6xfpC 提取码: nq19 点击链接保存，或者复制本段内容，打开「阿里云盘」APP ，无需下载极速在线查看，视频原画倍速播放。
-  - 上面是中文版本，原文在[这](https://freebsdfoundation.org/wp-content/uploads/2025/09/FreeBSD-2025-Community-Survey-Report-Final.pdf)。
+  - 上面是中文版本，原文在 [这](https://freebsdfoundation.org/wp-content/uploads/2025/09/FreeBSD-2025-Community-Survey-Report-Final.pdf)。
 - 2025.9.27
   - 针对 fwget 工具无法为 RTL8125 2.5GbE 以太网卡安装驱动的问题提交：[Bug 289862 - fwget(8) does not support Realtek Ethernet (RTL8125 2.5GbE, realtek-re-kmod) despite packages being available](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=289862)。
 - 2025.9.23
@@ -364,7 +364,7 @@
 - 2025.2.21
   - 新增“第 2.12 节 安装 FreeBSD——基于 Apple M1&VMware Fusion Pro”
 - 2025.2.19
-  - 制作了视频教程[《003-FreeBSD14.2 安装 KDE6》](https://www.bilibili.com/video/BV12zAYeKEej)
+  - 制作了视频教程 [《003-FreeBSD14.2 安装 KDE6》](https://www.bilibili.com/video/BV12zAYeKEej)
 - 2025.2.16
   - 拆分“Git&Linux 败局与 FreeBSD 败局”到 19.5、19.6、19.7
 - 2025.2.15
@@ -596,4 +596,4 @@
 
 - 2021.3.14-2024.7.31：《FreeBSD 从入门到追忆》初版
 - 2021.12.19：《FreeBSD 从入门到追忆》项目重建
-- 《FreeBSD 从入门到追忆》肇始于 2021 年 3 月 14 日（依据 [clean-master/freebsdcn](https://github.com/clean-master/freebsdcn/graphs/contributors) 项目的创建时间，其同天产生了此书原型），由 FreeBSD 中文社区（CFC）[clean-master 清理大师](https://github.com/clean-master)发起，ykla 在翌日夜间（2021 年 3 月 15 日）完成了教程的初步整理与发布。其原型最早可追溯至 2020 年 12 月 31 日 ykla 发布的帖子《FreeBSD 艺术科学哲学导论》。本书曾用名《FreeBSD 从入门到跑路》、《FreeBSD 艺术科学哲学导论》。
+- 《FreeBSD 从入门到追忆》肇始于 2021 年 3 月 14 日（依据 [clean-master/freebsdcn](https://github.com/clean-master/freebsdcn/graphs/contributors) 项目的创建时间，其同天产生了此书原型），由 FreeBSD 中文社区（CFC）[clean-master 清理大师](https://github.com/clean-master) 发起，ykla 在翌日夜间（2021 年 3 月 15 日）完成了教程的初步整理与发布。其原型最早可追溯至 2020 年 12 月 31 日 ykla 发布的帖子《FreeBSD 艺术科学哲学导论》。本书曾用名《FreeBSD 从入门到跑路》、《FreeBSD 艺术科学哲学导论》。

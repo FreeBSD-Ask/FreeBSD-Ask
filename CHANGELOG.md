@@ -69,7 +69,7 @@
 - PDF 下载地址：<https://docs.bsdcn.org/bsdbook.pdf>
 - EPUB 下载地址：<https://docs.bsdcn.org/bsdbook.epub>
 
-EPUB 在手机上可以使用[微信读书](https://play.google.com/store/apps/details?id=com.tencent.weread&hl=zh)打开，其格式显示比较完整；在电脑上可用 [CAJViewer 9](https://cajviewer.cnki.net/download.html) 打开。
+EPUB 在手机上可以使用 [微信读书](https://play.google.com/store/apps/details?id=com.tencent.weread&hl=zh) 打开，其格式显示比较完整；在电脑上可用 [CAJViewer 9](https://cajviewer.cnki.net/download.html) 打开。
 
 上述电子文档永远反映实时的网页，随 Git 提交而实时更新（但其文件名不会发生变化）。
 

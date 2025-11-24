@@ -49,7 +49,7 @@ Introduction to manual pages:  man man
 FreeBSD directory layout:      man hier
 
 To change this login announcement, see motd(5).
-root@ykla:~ #
+
 
 ```
 

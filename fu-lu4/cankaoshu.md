@@ -20,8 +20,8 @@
 | ![UNIX 网络编程 卷 1：套接字联网 API（第 3 版）](../.gitbook/assets/unix1.png) | 《UNIX 网络编程 卷 1：套接字联网 API（第 3 版）》 | W. Richard Stevens、Bill Fenner、Andrew M. Rudoff | 9787115367198 | 人民邮电出版社 | 如何使用套接字 API 进行网络编程 |
 | ![UNIX 网络编程 卷 2：进程间通信（第 2 版）](../.gitbook/assets/unix2.png) | 《UNIX 网络编程 卷 2：进程间通信（第 2 版）》 | W. Richard Stevens | 9787115367204 | 人民邮电出版社 | 深入了解各种进程间通信形式。**这书原作者没出第 3 版，不用再找了** |
 | ![深入理解 UNIX 系统内核](../.gitbook/assets/unixinternals.png) | 《深入理解 UNIX 系统内核》 | Uresh Vahalia | 9787111491453 | 机械工业出版社 | UNIX 内核基础 |
-| ![Unix 四分之一世纪](../.gitbook/assets/unix25.png) | 《Unix 四分之一世纪》|  Peter H. Salus | 9780201547771| Addison-Wesley Professional | 历史书，中译本在[此](https://freebsd.gitbook.io/unix-er-shi-wu-nian) |
-| ![Unix 痛恨者手册](../.gitbook/assets/unixno.png) | 《Unix 痛恨者手册》 | Simson Garfinkel、Daniel Weise、Steven Strassmann | 9781568842035 |  IDG Books Worldwide, Inc. |  历史书，中译本在[此](https://book.bsdcn.org/unix-tong-hen-zhe-shou-ce) |
+| ![Unix 四分之一世纪](../.gitbook/assets/unix25.png) | 《Unix 四分之一世纪》|  Peter H. Salus | 9780201547771| Addison-Wesley Professional | 历史书，中译本在 [此](https://freebsd.gitbook.io/unix-er-shi-wu-nian) |
+| ![Unix 痛恨者手册](../.gitbook/assets/unixno.png) | 《Unix 痛恨者手册》 | Simson Garfinkel、Daniel Weise、Steven Strassmann | 9781568842035 |  IDG Books Worldwide, Inc. |  历史书，中译本在 [此](https://book.bsdcn.org/unix-tong-hen-zhe-shou-ce) |
 |![Solaris 性能与工具](../.gitbook/assets/Solaris.png)| 《Solaris 性能与工具》 | Richard McDougall、Jim Mauro、Brendan Gregg| 9787111214038| 机械工业出版社 | 常用性能监测软件和 DTrace 教程。基于 Solaris 10，同时适用于 FreeBSD |
 
 ## 选读书目
@@ -43,7 +43,7 @@
 | :---: | :---: | :---: | :---: | :---: |
 | ![FreeBSD 操作系统设计与实现（原书第二版）](../.gitbook/assets/freebsd2rd.png) | 《FreeBSD 操作系统设计与实现（原书第 2 版）》 | Marshall McKusick、George Neville-Neil、Robert N.M. Watson | 9787111689973 | 机械工业出版社 |  
 
-《FreeBSD 操作系统设计与实现（原书第 2 版）》主要讲解了内核。轻型纸，居然还有几个章节要自己在网络自己下载？ 该书阅读难度可能较大，据本书作者之一的博士生毕业生反映（出自韩国 FreeBSD 社区），他自己也看不懂。主要作者: Marshall Kirk McKusick 在其网站上有提供多款[录制课程](https://www.mckusick.com/buylist.html)，大致价格为 1945 美元。目前正在撰写推出第三版，见 2025 年 6 月 BSDCan 大会[相关视频](https://www.youtube.com/watch?v=SGC0191nDp0)。
+《FreeBSD 操作系统设计与实现（原书第 2 版）》主要讲解了内核。轻型纸，居然还有几个章节要自己在网络自己下载？ 该书阅读难度可能较大，据本书作者之一的博士生毕业生反映（出自韩国 FreeBSD 社区），他自己也看不懂。主要作者: Marshall Kirk McKusick 在其网站上有提供多款 [录制课程](https://www.mckusick.com/buylist.html)，大致价格为 1945 美元。目前正在撰写推出第三版，见 2025 年 6 月 BSDCan 大会 [相关视频](https://www.youtube.com/watch?v=SGC0191nDp0)。
 
 
 ## 不建议阅读
@@ -54,7 +54,7 @@
 
 说明：
 
-打开美国亚马逊官网作者 Michael W. Lucas 的[页面](https://www.amazon.com/stores/Michael-W.-Lucas/author/B004MNWSFG?language=zh_TW&ref=ap_rdr&isDramIntegrated=true&shoppingPortalEnabled=true)，你会惊讶地发现竟有人如此著作等身，博闻强识。从 ZFS 到 FreeBSD，从 OpenBSD 到 GPG，居然出版了近五十本。
+打开美国亚马逊官网作者 Michael W. Lucas 的 [页面](https://www.amazon.com/stores/Michael-W.-Lucas/author/B004MNWSFG?language=zh_TW&ref=ap_rdr&isDramIntegrated=true&shoppingPortalEnabled=true)，你会惊讶地发现竟有人如此著作等身，博闻强识。从 ZFS 到 FreeBSD，从 OpenBSD 到 GPG，居然出版了近五十本。
 
 笔者随机抽取了几本进行泛读，并对 *Absolute FreeBSD, 3rd Edition*（本人曾在中亚购买过正版印刷版）进行了深入阅读。观察到，作者撰写的内容整体较为基础，许多章节都花费较多篇幅介绍对多数人来说较为常识性的内容，例如“电脑应安装杀毒软件”、“应开启电脑防火墙”等等（这在一定程度上和美国教科书的风格相吻合）。虽然书中包含大量代码示例和指令，但在难度和深度上，甚至难以与大学公共计算机课程中 Windows 和 Office 的内容相提并论，整体上更适合我国在本世纪初于夜校和农村举办的计算机培训需求——这也不稀奇，笔者观察到该作者的 *Absolute BSD* 就是 2002 年出版的。
 
@@ -62,5 +62,5 @@
 
 综上所述，以上评述基于笔者个人阅读体会，供读者参考。
 
-购买凭证（中亚已经关闭历史订单，只能通过这种方式获取数据）："亚马逊","C03-7970199-0880003","2018-11-20T02:45:08Z","Not Applicable","CNY","261.56","0","0","'-2.31'","259.25","261.56","0","1593278926","New","1","Gift Certificate/Card","Closed","Shipped","2018-11-20T09:28:35Z","std-cn-d2d","此处地址、邮编、联系人已隐去 China","Not Available","HEBKD(221461786692)","Absolute FreeBSD, 3rd Edition","Not Available","Not Available","Not Available","Not Available"。可以看到当时这本书最后售价为 261.56 元，实收 259.25 元。
+购买凭证（中亚已经关闭历史订单，只能通过这种方式获取数据）："亚马逊", "C03-7970199-0880003", "2018-11-20T02:45:08Z", "Not Applicable", "CNY", "261.56", "0", "0", "'-2.31'", "259.25", "261.56", "0", "1593278926", "New", "1", "Gift Certificate/Card", "Closed", "Shipped", "2018-11-20T09:28:35Z", "std-cn-d2d", "此处地址、邮编、联系人已隐去 China", "Not Available", "HEBKD(221461786692)", "Absolute FreeBSD, 3rd Edition", "Not Available", "Not Available", "Not Available", "Not Available"。可以看到当时这本书最后售价为 261.56 元，实收 259.25 元。
 

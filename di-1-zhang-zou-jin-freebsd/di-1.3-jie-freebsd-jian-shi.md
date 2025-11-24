@@ -4,9 +4,9 @@
 
 无论是 FreeBSD 及各种 BSD，还是伯克利市（Berkeley）和加州大学伯克利分校（University of California, Berkeley），其名字均源于他。
 
-Berkeley 在中文音译上存在不同写法，美音和英音发音亦不同（英 /ˈbɑ:kli,ˈbə:kli/ 美 /ˈbɚkli/），仅“Berkeley”的拼写在英文中是统一的。
+Berkeley 在中文音译上存在不同写法，美音和英音发音亦不同（英 /ˈbɑ:kli, ˈbə:kli/ 美 /ˈbɚkli/），仅“Berkeley”的拼写在英文中是统一的。
 
-[由于政治正确（黑奴问题）](https://www.lib.berkeley.edu/about/news/george-berkeley-portrait)和翻译习惯（曾译为巴克莱等等）的影响，这一关联不仅在汉语世界中鲜有人知，恐怕在英语世界当中亦如此。
+[由于政治正确（黑奴问题）](https://www.lib.berkeley.edu/about/news/george-berkeley-portrait) 和翻译习惯（曾译为巴克莱等等）的影响，这一关联不仅在汉语世界中鲜有人知，恐怕在英语世界当中亦如此。
 
 ## 乔治·贝克莱生平简介
 
@@ -46,7 +46,7 @@ George Berkeley（1685.3.12—1753.1.14），2023 年是他逝世 270 周年。2
 
 贝克莱大主教的著作还引发了数学史上关于无穷小量的数学哲学讨论（即贝克莱悖论，参见 1734，《分析学家；或一篇致一位不信神数学家的论文，其中审查一下近代分析学的对象、原则及论断是不是比宗教的神秘、信仰的要点有更清晰的表达，或更明显的推理》）。
 
-贝克莱悖论从未被解决，其哲学悖论仍是开放的问题。ε‑δ 定义只是让实分析在 ZFC 公理体系下变得形式自洽。许多人往往会用上述定义去解决[芝诺（Zeno of Elea）悖论](https://plato.stanford.edu/entries/paradox-zeno/)，进而否定其哲学价值。
+贝克莱悖论从未被解决，其哲学悖论仍是开放的问题。ε‑δ 定义只是让实分析在 ZFC 公理体系下变得形式自洽。许多人往往会用上述定义去解决 [芝诺（Zeno of Elea）悖论](https://plato.stanford.edu/entries/paradox-zeno/)，进而否定其哲学价值。
 
 更多相关资源请参看非标准分析和超实数以及数学哲学等相关书籍。
 
@@ -65,7 +65,7 @@ George Berkeley（1685.3.12—1753.1.14），2023 年是他逝世 270 周年。2
 >
 >爱因斯坦将这一逻辑推向了极致，证明了即便是空间与时间，也只是直觉的形式，无法与意识分离，正如我们关于颜色、形状或大小的概念一样。空间除了作为我们感知中物体的排列和次序外，没有客观实在性；而时间也无法脱离我们用以衡量事件顺序的体系独立存在。  
 >
->**意识到**我们对宇宙的全部认知不过是被我们不完美的感官所蒙蔽的印象残余，这让对现实的追求显得无望。如果一切的存在都必须以被感知为前提，那么世界似乎会分崩离析，沦为个体感知的无序状态。  
+>**意识到** 我们对宇宙的全部认知不过是被我们不完美的感官所蒙蔽的印象残余，这让对现实的追求显得无望。如果一切的存在都必须以被感知为前提，那么世界似乎会分崩离析，沦为个体感知的无序状态。  
 >
 >然而，我们的感知中却存在一种奇特的秩序，仿佛确实存在某种客观现实的底层，而我们的感官将其翻译了出来。尽管没有人能够确定自己对红色或中央 C 的感受是否与他人相同，但我们仍然可以基于这样的假设行动：每个人对颜色和音调的感知大致相似。
 >
@@ -114,24 +114,24 @@ George Berkeley（1685.3.12—1753.1.14），2023 年是他逝世 270 周年。2
 
 虽然在贝克莱有生之年，他的思想并未被广泛认同，但在几百年后，大放异彩。
 
-几乎在每一本合格的哲学史著作中[旧版人教版思想政治必修四（生活与哲学）第 13 页就有（ISBN  9787107327100）。]
+几乎在每一本合格的哲学史著作中 [旧版人教版思想政治必修四（生活与哲学）第 13 页就有（ISBN  9787107327100）。]
 
 
 ![教材教科书 高中思想政治 必修 4 生活与哲学 人教版 第 13 页](../.gitbook/assets/George.png)
 
-~~虽然写的是错的，部编版思想政治必修四[《哲学与文化》](https://v4.cecdn.yun300.cn/100001_2201115008/%E6%99%AE%E9%80%9A%E9%AB%98%E4%B8%AD%E6%95%99%E7%A7%91%E4%B9%A6%C2%B7%E6%80%9D%E6%83%B3%E6%94%BF%E6%B2%BB%E5%BF%85%E4%BF%AE4%20%E5%93%B2%E5%AD%A6%E4%B8%8E%E6%96%87%E5%8C%96.pdf) ISBN 9787107341953 已经删掉了~~，你都能找到有关他的身影，有关他的哲学实验也是哲学考试中经久不衰的论述大题。
+~~虽然写的是错的，部编版思想政治必修四 [《哲学与文化》](https://v4.cecdn.yun300.cn/100001_2201115008/%E6%99%AE%E9%80%9A%E9%AB%98%E4%B8%AD%E6%95%99%E7%A7%91%E4%B9%A6%C2%B7%E6%80%9D%E6%83%B3%E6%94%BF%E6%B2%BB%E5%BF%85%E4%BF%AE4%20%E5%93%B2%E5%AD%A6%E4%B8%8E%E6%96%87%E5%8C%96.pdf) ISBN 9787107341953 已经删掉了~~，你都能找到有关他的身影，有关他的哲学实验也是哲学考试中经久不衰的论述大题。
 
 ## 参考文献
 
-- [英] 乔治·贝克莱. 人类知识原理和三篇对话[M]. 译者：张桂权，人民出版社，2022-11.（ISBN 9787010236841）
-- 阎吉达. 贝克莱思想新探[M]. 复旦大学出版社，1987-10.（附录部分有《论运动》的翻译）
+- [英] 乔治·贝克莱. 人类知识原理和三篇对话 [M]. 译者：张桂权，人民出版社，2022-11.（ISBN 9787010236841）
+- 阎吉达. 贝克莱思想新探 [M]. 复旦大学出版社，1987-10.（附录部分有《论运动》的翻译）
 - Downing, Lisa, "George Berkeley", The Stanford Encyclopedia of Philosophy (Fall 2021 Edition), Edward N. Zalta (ed.), URL = <https://plato.stanford.edu/archives/fall2021/entries/berkeley/>. SEP 贝克莱条目
 - Easwaran, Kenny, Alan Hájek, Paolo Mancosu, and Graham Oppy, "Infinity", The Stanford Encyclopedia of Philosophy (Summer 2024 Edition), Edward N. Zalta & Uri Nodelman (eds.), URL = <https://plato.stanford.edu/archives/sum2024/entries/infinity/>. SEP 无穷条目
-- [美] 布鲁斯·乌姆鲍. 贝克莱[M]. 译者：孟令朋，清华大学出版社，2019-5.（ISBN 9787302525554）
+- [美] 布鲁斯·乌姆鲍. 贝克莱 [M]. 译者：孟令朋，清华大学出版社，2019-5.（ISBN 9787302525554）
 - 汪芳庭. 数学基础 (修订版)[M]. 高等教育出版社，2018-10.（ISBN 9787040502428）
-- [美] Abraham Robinson. 非标准分析[M]. 译者：申又根 / 王世强 / 张锦文，科学出版社，1980-9.（已绝版，统一书号：13031-1267）
-- [澳] 陶哲轩. 陶哲轩实分析[M]. 译者：李馨，第 4 版. 人民邮电出版社，2025-06.（ISBN 9787115665546）
-- George Berkeley. *The Querist, containing several queries proposed to the consideration of the public*[M]. Gale ECCO, Print Editions, April 23, 2018（ISBN 9781385411018）
+- [美] Abraham Robinson. 非标准分析 [M]. 译者：申又根 / 王世强 / 张锦文，科学出版社，1980-9.（已绝版，统一书号：13031-1267）
+- [澳] 陶哲轩. 陶哲轩实分析 [M]. 译者：李馨，第 4 版. 人民邮电出版社，2025-06.（ISBN 9787115665546）
+- George Berkeley. *The Querist, containing several queries proposed to the consideration of the public* [M]. Gale ECCO, Print Editions, April 23, 2018（ISBN 9781385411018）
 - Schabas, Margaret, "Economics in Early Modern Philosophy", The Stanford Encyclopedia of Philosophy (Summer 2022 Edition), Edward N. Zalta (ed.), URL = <https://plato.stanford.edu/archives/sum2022/entries/economics-early-modern/>. SEP 早期现代经济哲学条目
 - [George Berkeley, Bishop of Cloyne/Philosopher](http://cloyne.ie/about/george-berkeley-bishop-of-cloyne/)，Cloyne District Community Council
 - [George Berkeley](https://www.britannica.com/biography/George-Berkeley)，大英百科全书贝克莱条目

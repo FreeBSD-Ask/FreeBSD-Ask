@@ -1,6 +1,6 @@
 # 致谢
 
-本书初版架构基于贴吧用户“Smile_Zheng”《操作系统笔记》分享的[早期版本](https://tieba.baidu.com/p/7424071955)。主要引用了防火墙章节、用户与权限。【其引用了《FreeBSD 技术内幕》（*[FreeBSD Unleashed](https://www.amazon.com/FreeBSD-Unleashed-2nd-Brian-Tiemann/dp/0672324563)*），ISBN 9787111102010，机械工业出版社，2002，作者是 Brian Tiemann、Michael Urban，译者智慧东方工作室】以及🎀🌸星不萌🌸🎀的博客文章（已佚）。
+本书初版架构基于贴吧用户“Smile_Zheng”《操作系统笔记》分享的 [早期版本](https://tieba.baidu.com/p/7424071955)。主要引用了防火墙章节、用户与权限。【其引用了《FreeBSD 技术内幕》（*[FreeBSD Unleashed](https://www.amazon.com/FreeBSD-Unleashed-2nd-Brian-Tiemann/dp/0672324563)*），ISBN 9787111102010，机械工业出版社，2002，作者是 Brian Tiemann、Michael Urban，译者智慧东方工作室】以及 🎀🌸 星不萌 🌸🎀 的博客文章（已佚）。
 
 ## 致歉
 
@@ -83,7 +83,7 @@ Ubuntu 吧前吧主 Simple 曾建议修改项目的章节文件名与许可协�
 - 兜率  
 - 极品盗号  
 - [魔王酱](https://github.com/maou-sama-desu)  
-- 🎀🌸星不萌🌸🎀（贴吧账户）  
+- 🎀🌸 星不萌 🌸🎀（贴吧账户）  
 - 雨天
 - [玟茵开源社区](https://www.wenyinos.com/)
 

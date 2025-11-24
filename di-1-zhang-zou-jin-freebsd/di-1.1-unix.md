@@ -31,7 +31,7 @@ UNIX 认证查询网址：[The Open Group official register of UNIX Certified Pr
 >
 >macOS/iOS 等与 BSD 的关系
 >
->从历史与现实来看，macOS/iOS 等基于 BSD 确凿无疑，但并非全然基于某款 BSD：macOS/iOS 等应该被理解为一款独立的 BSD 操作系统——同 OpenBSD、NetBSD 和 FreeBSD 一样。参见[《苹果的开源基石：macOS 和 iOS 背后的 BSD 传统》](https://book.bsdcn.org/fan-yi-wen-zhang-cun-dang/2024-nian-11-yue/apple)
+>从历史与现实来看，macOS/iOS 等基于 BSD 确凿无疑，但并非全然基于某款 BSD：macOS/iOS 等应该被理解为一款独立的 BSD 操作系统——同 OpenBSD、NetBSD 和 FreeBSD 一样。参见 [《苹果的开源基石：macOS 和 iOS 背后的 BSD 传统》](https://book.bsdcn.org/fan-yi-wen-zhang-cun-dang/2024-nian-11-yue/apple)
 >
 >所以看似是安卓和苹果之争，其实是 Linux 与 BSD 之争。~~也许也是大教堂与市集之争。~~
 
@@ -107,7 +107,7 @@ Multics 意图创造强悍的新软件和比肩 IBM 7094 功能更丰富的新�
 
 由于 Unix 在后期愈发封闭，许可证昂贵、受限制于商业公司等原因，RMS（Richard Matthew Stallman）就想创造一款自由且兼容 Unix 的操作系统。
 
-- 1983 年，RMS 发表[《GNU 宣言》](https://www.gnu.org/gnu/manifesto.html)，其中 GNU 即 GNU is Not Unix（GNU 不是 Unix）。GNU 是一款操作系统——旨在完全替代 Unix。
+- 1983 年，RMS 发表 [《GNU 宣言》](https://www.gnu.org/gnu/manifesto.html)，其中 GNU 即 GNU is Not Unix（GNU 不是 Unix）。GNU 是一款操作系统——旨在完全替代 Unix。
 - 1984 年，创建 [GNU 项目](https://www.gnu.org/)
 - 1985 年，RMS 创建自由软件基金会（Free Software Foundation，FSF）
 - 1989 年，FSF 发布 GPLv1
@@ -122,7 +122,7 @@ Multics 意图创造强悍的新软件和比肩 IBM 7094 功能更丰富的新�
 
 ### 自由软件运动与开源运动之间的张力
 
-需要注意的是，根据笔者与 RMS 的通讯，其强调的 GNU 与自由软件运动并不强调“开源”（甚至是反对开源），而是强调“Free”式自由。有些人可能认为现在的“开源”仅仅是由 [OSI 定义](https://opensource.org/osd)的那样，这是一种极其片面的观点。
+需要注意的是，根据笔者与 RMS 的通讯，其强调的 GNU 与自由软件运动并不强调“开源”（甚至是反对开源），而是强调“Free”式自由。有些人可能认为现在的“开源”仅仅是由 [OSI 定义](https://opensource.org/osd) 的那样，这是一种极其片面的观点。
 
 >致所有阅读我邮件的 NSA（美国国家安全局）和 FBI 特工：请考虑一下，捍卫美国宪法以抵御一切敌人，无论是外国的还是本国的，是否需要你效仿斯诺登的做法。
 >
@@ -182,7 +182,7 @@ Linux 之名来自 Linux 之父 Linus Torvalds。
 
 Linux 受启发于 Minix（UNIX 版权限制下的产物），一款设计用于教学的微内核操作系统。当时 22 岁的 Linus Torvalds 是芬兰赫尔辛基大学计算机科学系的研究生。
 
-Linus Torvalds 的硕士毕业论文是[《Linux: A Portable Operating System》](https://www.cs.helsinki.fi/u/kutvonen/index_files/linus.pdf)（Linux：一款可移植的操作系统），他在 1997 年（28 岁）获得理学硕士学位。为什么花了这么长时间都没被学校清退呢？芬兰是典型的学分制国家。根据芬兰赫尔辛基大学官网说明，并无[最长学习期限](https://studies.helsinki.fi/instructions/article/expiry-studies?) 限制，仅规定某课程成绩有效时间为十年。“你的课程到期不会影响你在大学继续学习的权利”。
+Linus Torvalds 的硕士毕业论文是 [《Linux: A Portable Operating System》](https://www.cs.helsinki.fi/u/kutvonen/index_files/linus.pdf)（Linux：一款可移植的操作系统），他在 1997 年（28 岁）获得理学硕士学位。为什么花了这么长时间都没被学校清退呢？芬兰是典型的学分制国家。根据芬兰赫尔辛基大学官网说明，并无 [最长学习期限](https://studies.helsinki.fi/instructions/article/expiry-studies?) 限制，仅规定某课程成绩有效时间为十年。“你的课程到期不会影响你在大学继续学习的权利”。
 
 >我们探讨了在将 Linux 操作系统移植到多种 CPU 和总线架构时所暴露出的硬件可移植性问题。我们还讨论了软件接口的可移植性问题，尤其是与能够共享同一硬件平台的其他操作系统之间的二进制兼容性问题。文中描述了 Linux 所采取的方法，并对其中几个架构进行了更为详细的介绍。
 >
@@ -233,7 +233,7 @@ Unix-like 即类 Unix，亦即一切符合 UNIX 标准的操作系统，基本�
 
 ## 附录：自由软件与开源软件语境下的典型误解与思想偏差探析
 
-我们必须先给自由软件和开源协议分别下个定义，我们引用 [GNU 网站](https://www.gnu.org/philosophy/free-sw.zh-cn.html)的相关内容来定义什么是自由软件的自由。
+我们必须先给自由软件和开源协议分别下个定义，我们引用 [GNU 网站](https://www.gnu.org/philosophy/free-sw.zh-cn.html) 的相关内容来定义什么是自由软件的自由。
 
 ### 厘清“营利”和“盈利”
 
@@ -260,7 +260,7 @@ Unix-like 即类 Unix，亦即一切符合 UNIX 标准的操作系统，基本�
 
 ### 开源协议定义与开源软件定义
 
-为了坚持开源定义 (OSD)，并防范开源运动原则的滥用而成立的开源促进会（OSI）对开源协议是这么定义的（基于 [Debian Free Software Guidelines](https://www.debian.org/social_contract#guidelines), DFSG），为了避免歧义，我们[全文引用](https://opensource.org/osd)如下：
+为了坚持开源定义 (OSD)，并防范开源运动原则的滥用而成立的开源促进会（OSI）对开源协议是这么定义的（基于 [Debian Free Software Guidelines](https://www.debian.org/social_contract#guidelines), DFSG），为了避免歧义，我们 [全文引用](https://opensource.org/osd) 如下：
 
 >导言
 >
@@ -314,7 +314,7 @@ OSI（Open Source Initiative，开源促进会）基于开放软件定义（OSD�
 
 根据 [自由与非自由软件的分类](https://www.gnu.org/philosophy/categories.zh-cn.html)，我们定义如下：
 
-- 自由软件：符合上述四项基本自由定义的软件即称为自由软件。推论：商业软件可以是自由软件，商业≠非自由。引证 1：[自由软件可以是商业软件](https://www.gnu.org/philosophy/free-sw.zh-cn.html#four-freedoms)；引证 2;[Words to Avoid (or Use with Care) Because They Are Loaded or Confusing](https://www.gnu.org/philosophy/words-to-avoid.html),“Commercial”部分
+- 自由软件：符合上述四项基本自由定义的软件即称为自由软件。推论：商业软件可以是自由软件，商业 ≠ 非自由。引证 1：[自由软件可以是商业软件](https://www.gnu.org/philosophy/free-sw.zh-cn.html#four-freedoms)；引证 2; [Words to Avoid (or Use with Care) Because They Are Loaded or Confusing](https://www.gnu.org/philosophy/words-to-avoid.html),“Commercial”部分
 - 开源软件：使用上述开源协议授权的软件。理论上和自由软件基本上同义，但可能存在例外
 - 专有软件/私有软件（proprietary software）：即真正意义上的“非自由软件”，大部分商业软件属此类型。这是 GNU 宣言一开始真正的目标
 - 免费软件：定义模糊。其他类别的软件均可能是“免费”的，但并不一定
@@ -330,9 +330,9 @@ OSI（Open Source Initiative，开源促进会）基于开放软件定义（OSD�
 
 根据“自由度 2：用户可以自由地分发该软件的拷贝”，事实上只要阅读过 GPL 2/3 等相关开源协议，就会知道协议并未限制开源软件的营利行为。从现实出发的红帽公司就是一个典型例子。
 
-开源软件/自由软件≠免费。
+开源软件/自由软件 ≠ 免费。
 
-### 开源≠无版权？协议不可撤销？
+### 开源 ≠ 无版权？协议不可撤销？
 
 很多人会混淆开源与无版权，认为开源=无版权。这种想法在实际上存在逻辑问题：如果你没有持有版权，那么你凭什么要求别人按照你的开源协议做事？（部分人会将版权转给 GNU 协会，但仍在事实上存在版权）
 
@@ -344,7 +344,7 @@ OSI（Open Source Initiative，开源促进会）基于开放软件定义（OSD�
 
 ### CC-BY-NC（所有版本）、CC-BY-ND（所有版本）既不自由也不开源
 
-根据 [各类许可证及其评论](https://www.gnu.org/philosophy/categories.zh-cn.html)，结合[OSI Approved Licenses](https://opensource.org/licenses)，CC-BY-NC（所有版本）、CC-BY-ND（所有版本）等均不属于开源软件许可证或自由软件许可证，因此在该许可证授权下的项目既非传统意义上的自由软件亦非开源软件。
+根据 [各类许可证及其评论](https://www.gnu.org/philosophy/categories.zh-cn.html)，结合 [OSI Approved Licenses](https://opensource.org/licenses)，CC-BY-NC（所有版本）、CC-BY-ND（所有版本）等均不属于开源软件许可证或自由软件许可证，因此在该许可证授权下的项目既非传统意义上的自由软件亦非开源软件。
 
 原因很简单，上述协议都歧视商业用户，剥夺了商业用户的“自由”。
 
@@ -352,11 +352,11 @@ OSI（Open Source Initiative，开源促进会）基于开放软件定义（OSD�
 
 笔者注意到，不少项目虽然采用了前项 CC 协议进行授权，却依然自诩支持开源软件，拥护自由软件运动，甚至标榜自己是忠实拥趸。这一现象表明，尽管“自由软件”和“开源软件”的名号已广为人知，但其背后的理念却未必真正得到了理解与践行。
 
-### 可以获取源代码≠开源≠自由
+### 可以获取源代码 ≠ 开源 ≠ 自由
 
 根据微软的 Enterprise Source Licensing Program: ESLP 协议（或者 Microsoft Reference Source License, Ms-RSL），商业用户只要购买了一定量的产品副本（并不要求多么离谱的数量或额度），即可获取其对应的源代码。
 
-你可以获取源代码，并且微软的限制条件仍然在表面上看似符合“自由度 1”（自由修改参见[神州网信](https://www.cmgos.com/)的 Windows 10 神州网信政府版）。
+你可以获取源代码，并且微软的限制条件仍然在表面上看似符合“自由度 1”（自由修改参见 [神州网信](https://www.cmgos.com/) 的 Windows 10 神州网信政府版）。
 
 但是你很难说这种协议是一种开源协议，在某种意义上 CC-BY-NC（所有版本）、CC-BY-ND（所有版本）其实和这种许可协议没有什么本质区别。
 
