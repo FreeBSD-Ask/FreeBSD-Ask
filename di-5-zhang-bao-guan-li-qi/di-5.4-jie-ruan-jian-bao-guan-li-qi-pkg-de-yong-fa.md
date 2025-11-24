@@ -49,6 +49,7 @@ FreeBSD 二进制包管理器目前是 pkg（旧称 pkgng），即“Package”�
 问题在于 Port 更新是不定时的。复杂的依赖会破坏一切。有力者可尝试提出新的看法和建议反馈至下方或 [FreeBSD 论坛](https://forums.freebsd.org/)。
 
 >**思考题**
+>
 >- 相关讨论 [the disappearing pkg issue](https://www.reddit.com/r/freebsd/comments/1nlnwtd/the_disappearing_pkg_issue/)
 >- pkg 项目位于 [freebsd/pkg](https://github.com/freebsd/pkg)
 >- pkg 软件包的构建系统位于 [Poudriere](https://github.com/freebsd/poudriere)。
@@ -97,7 +98,7 @@ For more information on available commands and options see 'pkg help'.
 >>在 SSL 大行其是的年代里，任何网络问题总是要看看自己机器的时间是否正确。而一般人总会忽略这一点（有时候甚至是 CPU 中负责加密的模块损坏导致的），并且大多数情况下报错也极不明确。你认为应该如何解决这个问题？
 
 
-## 使用 pkg 安装软件 
+## 使用 pkg 安装软件
 
 以安装 chromium 为例：
 
