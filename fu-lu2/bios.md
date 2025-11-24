@@ -726,7 +726,7 @@ Enable（启用）
 
 要启用此英特尔 TXT 选项，必须启用虚拟化技术以及进行预启动测量的 TPM 安全保护。
 
-Intel® Trusted Executed Technology，英特尔 ® TXT。一种非常老（2007）的可信计算计算，参见 SW Guard Extension（英特尔 SGX 技术）。
+Intel® Trusted Execution Technology，英特尔 ® TXT。一种非常老（2007）的可信计算技术，参见 SW Guard Extension（英特尔 SGX 技术）。
 
 参见 [英特尔 ® Trusted Execution Technology （英特尔 ® TXT） 概述](https://www.intel.cn/content/www/cn/zh/support/articles/000025873/processors.html)
 
