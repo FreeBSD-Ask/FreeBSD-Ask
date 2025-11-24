@@ -478,7 +478,7 @@ SGX 能够在计算平台上提供一个可信的隔离空间，保障用户关�
 - [英特尔 ® Software Guard Extensions（英特尔 ® SGX）](https://www.intel.cn/content/www/cn/zh/products/docs/accelerator-engines/software-guard-extensions.html)
 - 王鹃, 樊成阳, 程越强, 赵波, 韦韬, 严飞, 张焕国, 马婧. SGX 技术的分析和研究. 软件学报, 2018, 29(9): 2778-2798.<http://www.jos.org.cn/1000-9825/5594.htm>
 - Wei ZHENG, Ying WU, Xiaoxue WU, Chen FENG, Yulei SUI, Xiapu LUO, Yajin ZHOU. A survey of Intel SGX and its applications. Front. Comput. Sci., 2021, 15(3): 153808 <https://doi.org/10.1007/s11704-019-9096-y>
-- トラストを 確 ⽴する 技術 の 概要 <https://www.jnsa.org/seminar/pki-day/2021/data/0415miyazawa.pdf>
+- トラストを確立する技術の概要 <https://www.jnsa.org/seminar/pki-day/2021/data/0415miyazawa.pdf>
 
 #### CPU Flex Ratio Override（CPU 可变倍频覆盖）
 
