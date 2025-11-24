@@ -17,7 +17,7 @@
 | ![4.4BSD 操作系统设计与实现](../.gitbook/assets/4BSD.png) | 《4.4BSD 操作系统设计与实现》 | [美] Marshall Kirk McKusick 等著 <br><br>李善平、刘文峰、马天驰 等译| 9787111366478 | 机械工业出版社 | 4.4BSD 操作系统设计与实现 |
 | ![深入理解 FreeBSD 设备驱动程序开发](../.gitbook/assets/qudong.png) | 《深入理解 FreeBSD 设备驱动程序开发》 | [加] Joseph Kong 著 <br><br> 陈毅东 译| 9787111411574 | 机械工业出版社 |  FreeBSD 设备驱动程序开发 |
 | ![UNIX 环境高级编程（第 3 版）](../.gitbook/assets/unix.png) | 《UNIX 环境高级编程（第 3 版）》 | [美] W. Richard Stevens、Stephen A. Rago 等著<br><br>张毅峰、马树超 等译| 9787121478338 | 电子工业出版社 |  深入了解驱动 UNIX 内核的编程接口的实用知识 |
-| ![UNIX 网络编程 卷 1：套接字联网 API（第 3 版）](../.gitbook/assets/unix1.png) | 《UNIX 网络编程 卷 1：套接字联网 API（第 3 版）》 | [美] W. Richard Stevens、Bill Fenner、Andrew M. Rudoff 著| 9787115517791 | 人民邮电出版社 | 如何使用套接字 API 进行网络编程 |
+| ![UNIX 网络编程 卷 1：套接字联网 API（第 3 版）](../.gitbook/assets/unix1.png) | 《UNIX 网络编程 卷 1：套接字联网 API（第 3 版）》 | [美] W. Richard Stevens、Bill Fenner、Andrew M. Rudoff 等著| 9787115517791 | 人民邮电出版社 | 如何使用套接字 API 进行网络编程 |
 | ![UNIX 网络编程 卷 2：进程间通信（第 2 版）](../.gitbook/assets/unix2.png) | 《UNIX 网络编程 卷 2：进程间通信（第 2 版）》 | [美] W. Richard Stevens 著 | 9787115517807 | 人民邮电出版社 | 深入了解各种进程间通信形式。**这书原作者没出第 3 版，不用再找了** |
 | ![深入理解 UNIX 系统内核](../.gitbook/assets/unixinternals.png) | 《深入理解 UNIX 系统内核》 | [美] Uresh Vahalia 著<br><br>薛磊、黄庆新、李雨 等译| 9787111491453 | 机械工业出版社 | UNIX 内核基础 |
 | ![Unix 四分之一世纪](../.gitbook/assets/unix25.png) | 《Unix 四分之一世纪》|  Peter H. Salus | 9780201547771| Addison-Wesley Professional | 历史书，中译本在 [此](https://freebsd.gitbook.io/unix-er-shi-wu-nian) |
