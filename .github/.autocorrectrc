@@ -2,7 +2,7 @@
 rules:
   # 自动在中日朝（CJK）与英文之间添加空格
   # 0 - 关闭, 1 - 错误, 2 - 警告
-  space-word: 0
+  space-word: 1
   # 在某些标点符号之间添加空格
   space-punctuation: 1
   # 当括号 ()、[] 邻近 CJK 时添加空格
