@@ -9,7 +9,7 @@
 
 
 | 封面 | 书名 | 作者/译者 | ISBN | 出版社 | 说明 |
-| :---: | :---: | :---: | :---: | :---: | :---: |
+| :---: | :--- | :--- | :---: | :--- | :--- |
 |![FreeBSD 技术内幕](../.gitbook/assets/Unleashed.png) | 《FreeBSD 技术内幕》 | [美] Michael Urban、Brian Tiemann 等著 <br><br> 智慧东方工作室 译| 9787111102010 | 机械工业出版社 |  2002 年的书，居然还能用。足以看出 FreeBSD 是在稳中求进。本书推荐选读第 1、4、8、9、10、11、12、13 章|
 | ![Unix & Linux 大学教程](../.gitbook/assets/unix3.png) | 《Unix & Linux 大学教程》 | [美] Harley Hahn 著 <br><br> 张杰良 译| 9787302209560 | 清华大学出版社 | 命令行基础 |
 | ![UNIX/Linux 系统管理技术手册（第 5 版）](../.gitbook/assets/unix4.png) | 《UNIX/Linux 系统管理技术手册（第 5 版）》 | [美] Evi Nemeth、Garth Snyder、Trent R.Hein、Ben Whaley、Dan Mackin 等著 <br><br> 门佳 译 | 9787115532763 | 人民邮电出版社 |命令行进阶与 UNIX 基础 |
@@ -27,20 +27,20 @@
 ## 选读书目
 
 | 封面 | 书名 | 作者 | ISBN | 出版社 |
-| :---: | :---: | :---: | :---: | :---: |
+| :---: | :--- | :--- | :---: | :--- |
 | ![UNIX 传奇：历史与回忆](../.gitbook/assets/unixchuanqi.png) | 《UNIX 传奇——历史与回忆》 | [美] Brian W Kernighan 著 <br><br>韩磊 译| 9787115557179 | 人民邮电出版社 |  
 
 《UNIX 传奇——历史与回忆》主要讲解了 UNIX 的发展历史。写的比较粗略。
 
-| 封面 | 书名 | 作者 | ISBN | 出版社 |
-| :---: | :---: | :---: | :---: | :---: |
+| 封面 | 书名 | 作者/译者 | ISBN | 出版社 |
+| :---: | :---: | :--- | :---: | :---: |
 | ![UNIX 编程艺术](../.gitbook/assets/s11345267.png) | 《UNIX 编程艺术》（TAOUP） | [美] Eric Raymond 著 <br><br>姜宏、何源、蔡晓骏 等译| 9787121176654 | 电子工业出版社 |
 
 《UNIX 传奇——历史与回忆》 主要讲解了 UNIX 的设计思路与软件工程理论。需要说明的是，本书不涉及任何哲学思想。大多数都是在具体历史背景下的无奈行为，反而被视为了金规银律，有过度解读的嫌疑。本书作者虽然是 OSI 创始人，深度参与了开源事业，但其对开源和 UNIX 哲学理解与自由软件基金会等传统观点存在明显的张力。
 
 
-| 封面 | 书名 | 作者 | ISBN | 出版社 |
-| :---: | :---: | :---: | :---: | :---: |
+| 封面 | 书名 | 作者/译者 | ISBN | 出版社 |
+| :---: | :---: | :--- | :---: | :---: |
 | ![FreeBSD 操作系统设计与实现（原书第二版）](../.gitbook/assets/freebsd2rd.png) | 《FreeBSD 操作系统设计与实现（原书第 2 版）》 |[美] Marshall McKusick、George Neville-Neil、Robert N.M. Watson 等著 <br><br>陈向群 郭立峰 叶顺平 等译| 9787111689973 | 机械工业出版社 |  
 
 《FreeBSD 操作系统设计与实现（原书第 2 版）》主要讲解了内核。轻型纸，居然还有几个章节要自己在网络自己下载？ 该书阅读难度可能较大，据本书作者之一的博士生毕业生反映（出自韩国 FreeBSD 社区），他自己也看不懂。主要作者: Marshall Kirk McKusick 在其网站上有提供多款 [录制课程](https://www.mckusick.com/buylist.html)，大致价格为 1945 美元。目前正在撰写推出第三版，见 2025 年 6 月 BSDCan 大会 [相关视频](https://www.youtube.com/watch?v=SGC0191nDp0)。
