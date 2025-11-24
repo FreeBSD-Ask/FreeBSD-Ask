@@ -89,11 +89,11 @@ Aptio 设置 - AMI
 - ID（编号）: 0xB06E0
 - Stepping（步进）: A0
 
-步进（Stepping）：当制造过程有所改进或者功能被修复/删除时，将为英特尔®处理器创建步进代码。现在常见的 Intel 处理器的步进值都是由“一位字母+一位数字”组成的，比如根据[英特尔® 处理器 N100](https://www.intel.cn/content/www/cn/zh/products/sku/231803/intel-processor-n100-6m-cache-up-to-3-40-ghz/ordering.html)，可知 N100 处理器的当前步进为“N0”（一般消费者得到的都是这个步进的处理器）。字母越靠近 z，数字越大，表明步进越高，处理器越新。但是上图 BIOS 显示此 n100 处理器步进为“A0”，很明显这是一颗工程样片。
+步进（Stepping）：当制造过程有所改进或者功能被修复/删除时，将为英特尔 ® 处理器创建步进代码。现在常见的 Intel 处理器的步进值都是由“一位字母+一位数字”组成的，比如根据 [英特尔 ® 处理器 N100](https://www.intel.cn/content/www/cn/zh/products/sku/231803/intel-processor-n100-6m-cache-up-to-3-40-ghz/ordering.html)，可知 N100 处理器的当前步进为“N0”（一般消费者得到的都是这个步进的处理器）。字母越靠近 z，数字越大，表明步进越高，处理器越新。但是上图 BIOS 显示此 n100 处理器步进为“A0”，很明显这是一颗工程样片。
 
 参见
 
-- [英特尔®处理器步进意味着什么？](https://www.intel.cn/content/www/cn/zh/support/articles/000057218/processors.html)
+- [英特尔 ® 处理器步进意味着什么？](https://www.intel.cn/content/www/cn/zh/support/articles/000057218/processors.html)
 - [CPU“步进”介绍](https://iknow.lenovo.com.cn/detail/320528)
 
 #### Memory Information（内存信息）
@@ -165,18 +165,18 @@ Version 2.22.1289 Copyright (C) 2025 AMI（版本 2.22.1289 版权所有 (C) AMI
 
 #### CNVi CRF Present（显示是否存在 CNVi 模块）
 
-CNVi，Connectivity Integration，英特尔® 集成连接技术。
+CNVi，Connectivity Integration，英特尔 ® 集成连接技术。
 
 CRF，Companion RF，辅助 RF，实际上指无线网卡（现代的无线网卡和蓝牙一般是二合一的）。
 
 显示是否存在 CNVi 模块。
 
-英特尔® 集成连接将 Wi-Fi 和 Bluetooth® 技术的关键元件转移到英特尔® 处理器上。该解决方案由以下部分组成：
+英特尔 ® 集成连接将 Wi-Fi 和 Bluetooth® 技术的关键元件转移到英特尔 ® 处理器上。该解决方案由以下部分组成：
 
 - CNVi，英特尔处理器的集成无线 IP 部分
 - M.2 外形配套的 RF (CRF) 模块（2230 和 1216 焊接）。事实上，尽管这些无线网卡的物理规格是 M.2，但是他们只能被特定的英特尔处理器所支持，AMD 是无法使用的。
 
-参见 [什么是英特尔® 集成连接 (CNVi) 和配套 RF (CRF) 模块？](https://www.intel.cn/content/www/cn/zh/support/articles/000026155/wireless.html)。
+参见 [什么是英特尔 ® 集成连接 (CNVi) 和配套 RF (CRF) 模块？](https://www.intel.cn/content/www/cn/zh/support/articles/000026155/wireless.html)。
 
 #### CNVi Configuration（CNVi 配置）
 
@@ -437,7 +437,7 @@ Enable（启用）
 - 物理尺寸上更大的高性能内核，专为保持效率的同时实现原始速度而设计。
 - 针对高睿频频率和高 IPC（每周期指令数）进行了调整。
 - 非常适合处理许多游戏引擎需要的繁重单线程工作。
-- 支持超线程，这意味着大核同时可运行两个软件线程（英特尔® Core™ Ultra 处理器（系列 2）除外）
+- 支持超线程，这意味着大核同时可运行两个软件线程（英特尔 ® Core™ Ultra 处理器（系列 2）除外）
 
 参见 [什么是性能混合架构？](https://www.intel.cn/content/www/cn/zh/support/articles/000091896/processors.html)
 
@@ -475,10 +475,10 @@ SGX 能够在计算平台上提供一个可信的隔离空间，保障用户关�
 
 参见：
 
-- [英特尔® Software Guard Extensions（英特尔® SGX）](https://www.intel.cn/content/www/cn/zh/products/docs/accelerator-engines/software-guard-extensions.html)
+- [英特尔 ® Software Guard Extensions（英特尔 ® SGX）](https://www.intel.cn/content/www/cn/zh/products/docs/accelerator-engines/software-guard-extensions.html)
 - 王鹃, 樊成阳, 程越强, 赵波, 韦韬, 严飞, 张焕国, 马婧. SGX 技术的分析和研究. 软件学报, 2018, 29(9): 2778-2798.<http://www.jos.org.cn/1000-9825/5594.htm>
 - Wei ZHENG, Ying WU, Xiaoxue WU, Chen FENG, Yulei SUI, Xiapu LUO, Yajin ZHOU. A survey of Intel SGX and its applications. Front. Comput. Sci., 2021, 15(3): 153808 <https://doi.org/10.1007/s11704-019-9096-y>
-- トラストを確⽴する技術の概要 <https://www.jnsa.org/seminar/pki-day/2021/data/0415miyazawa.pdf>
+- トラストを確立する技術の概要 <https://www.jnsa.org/seminar/pki-day/2021/data/0415miyazawa.pdf>
 
 #### CPU Flex Ratio Override（CPU 可变倍频覆盖）
 
@@ -618,7 +618,7 @@ ALL（全部）
 
 注意：会同时考虑 P 核心和 E 核心的数量。当两者都设置为 0 时，BIOS 会启用所有核心。
 
-#### Hyper-Threading（英特尔® 超线程技术/英特尔® HT 技术）
+#### Hyper-Threading（英特尔 ® 超线程技术/英特尔 ® HT 技术）
 
 选项
 
@@ -628,7 +628,7 @@ Enable（启用）
 
 说明：
 
-英特尔® 超线程技术是一项硬件创新，能在每个内核上都运行多个线程。可使一个物理内核表现的如同两个“逻辑内核”一样。
+英特尔 ® 超线程技术是一项硬件创新，能在每个内核上都运行多个线程。可使一个物理内核表现的如同两个“逻辑内核”一样。
 
 参见 [什么是超线程？](https://www.intel.cn/content/www/cn/zh/gaming/resources/hyper-threading.html)
 
@@ -726,9 +726,9 @@ Enable（启用）
 
 要启用此英特尔 TXT 选项，必须启用虚拟化技术以及进行预启动测量的 TPM 安全保护。
 
-Intel® Trusted Executed Technology，英特尔® TXT。一种非常老（2007）的可信计算计算，参见 SW Guard Extension（英特尔 SGX 技术）。
+Intel® Trusted Execution Technology，英特尔 ® TXT。一种非常老（2007）的可信计算技术，参见 SW Guard Extension（英特尔 SGX 技术）。
 
-参见 [英特尔® Trusted Execution Technology （英特尔® TXT） 概述](https://www.intel.cn/content/www/cn/zh/support/articles/000025873/processors.html)
+参见 [英特尔 ® Trusted Execution Technology （英特尔 ® TXT） 概述](https://www.intel.cn/content/www/cn/zh/support/articles/000025873/processors.html)
 
 #### Alias Check Request（别名检查请求）
 
@@ -740,7 +740,7 @@ Enable（启用）
 
 说明：
 
-此项可以启用英特尔® TXT Alias 测试。如果系统没有启用 TXT，这些更改将不会起作用。
+此项可以启用英特尔 ® TXT Alias 测试。如果系统没有启用 TXT，这些更改将不会起作用。
 
 #### DPR Memory Size (MB) （DMA 内存受保护范围）
 
@@ -767,7 +767,7 @@ No（否）
 
 说明：
 
-使用此功能来重置 TPM 辅助内容。重置 AUX 内容后，英特尔® TXT 可能无法正常工作。
+使用此功能来重置 TPM 辅助内容。重置 AUX 内容后，英特尔 ® TXT 可能无法正常工作。
 
 #### CPU SMM Enhancement（CPU SMM 增强）
 
@@ -841,7 +841,7 @@ Enable（启用）
 
 配置英特尔总内存加密（TME），以防止物理攻击对 DRAM 数据的侵害。
 
-启用或禁用英特尔总内存加密 (TME) 和多租户（英特尔® TME-MT）。当选项设置为已禁用时，BIOS 将同时禁用 TME 和 TME-MT 技术。
+启用或禁用英特尔总内存加密 (TME) 和多租户（英特尔 ® TME-MT）。当选项设置为已禁用时，BIOS 将同时禁用 TME 和 TME-MT 技术。
 
 ### Power & Performance（电源与性能）
 
@@ -921,7 +921,7 @@ Enable（启用）
 
 若要支持 Intel Turbo Boost Max（ITBMT，英特尔睿频加速 Max）3.0 技术，则必须开启此项。若处理器不支持 ITBMT 3.0，此项将呈现灰色，不可设定状态。
 
-ITBMT 3.0 能识别处理器上性能最佳的内核，同时通过提高利用电源和散热器空间时所必需的频率，提高这些内核的性能。由于生产差异，处理器内核的最大潜在频率各不相同。ITBMT 3.0 可识别 CPU 上最多两个速度最快的内核，称为“青睐的内核”。然后，它会对这些内核（或该内核）应用频率提升，并将关键工作负载分配到它们。ITBMT 3.0 旨在充分利用每个内核的最高频率，参见 [英特尔® 睿频加速 Max 技术 3.0 技术常见问题解答](https://www.intel.cn/content/www/cn/zh/support/articles/000021587/processors.html)。
+ITBMT 3.0 能识别处理器上性能最佳的内核，同时通过提高利用电源和散热器空间时所必需的频率，提高这些内核的性能。由于生产差异，处理器内核的最大潜在频率各不相同。ITBMT 3.0 可识别 CPU 上最多两个速度最快的内核，称为“青睐的内核”。然后，它会对这些内核（或该内核）应用频率提升，并将关键工作负载分配到它们。ITBMT 3.0 旨在充分利用每个内核的最高频率，参见 [英特尔 ® 睿频加速 Max 技术 3.0 技术常见问题解答](https://www.intel.cn/content/www/cn/zh/support/articles/000021587/processors.html)。
 
 关闭有助于改善实时性，CPU 频率和电压不会被动态调整。
 
@@ -1449,7 +1449,7 @@ Intel 建议 AC=DC（Same as DC LL）。警告：一般不建议修改 AC/DC Loa
 
 - VR Current Limit（电压调节器当前限制）：电压调节器电流限制（Icc Max）代表允许 CPU 在任意时刻瞬间拉取的最大电流。该值以 1/4 安培（A）为单位定义，例如输入 `400`​ 表示 100 A（400 × 0.25A）。取值范围为 0–512，对应实际电流 0–128 A；输入 `0`​ 表示启用自动模式。该设置通过 BIOS VR mailbox 命令 ​`0x6`​​ 进行控制。
 - VR Voltage Limit（电压调节器电压限制）：Voltage Limit (VMAX)这是用于设置电压调节器（VR）允许的最大瞬时输出电压，单位为毫伏（mV）。其取值范围为 0–7999 mV。此设置通过 BIOS VR mailbox 命令 0x8 进行控制。
-- TDC Enable（Thermal Design Current，热设计电流）：CPU 平均*电流*不能超过此值。选项：Disable（禁用）/Enable（启用）。此选项决定了：
+- TDC Enable（Thermal Design Current，热设计电流）：CPU 平均 *电流* 不能超过此值。选项：Disable（禁用）/Enable（启用）。此选项决定了：
 
   - TDC Current Limit（热设计电流当前限制）：以 1/8 安培（A）为递增单位定义，取值范围为 0–32767。例如，如果要设置最大瞬时电流为 125 A，应输入 1000（1000 × 0.125 A \= 125 A）。输入 `0`​ 表示设置为自动模式（0 A）。该参数通过 BIOS 的 VR mailbox 命令 ​`0x1A`​​ 进行配置。
   - TDC Time Window（热设计电流时间窗口）：值：1-448。电压调节器热设计电流时间窗口限制。是指在特定时间内，CPU 可承受的最大电流（TDC Current Limit）所允许的持续时间。其单位为毫秒（ms），用于控制 CPU 在高负载下的电流限制响应时间。
@@ -1893,7 +1893,7 @@ Enable（启用）
 
 说明：
 
-关闭或者开启 MSR 0xe2 寄存器，电源管理相关。控制 MSR 0xE2 的低 16 位（bits[15:0]）开关。
+关闭或者开启 MSR 0xe2 寄存器，电源管理相关。控制 MSR 0xE2 的低 16 位（bits [15:0]）开关。
 
 MSR 0xE2 是 Model Specific Register 的一个寄存器位数锁定，属于非标准寄存器，是用来控制 CPU 的工作环境和读取工作状态，例如电压、温度、功耗等非程序性指标。如果 CFG Lock 是开启状态（即 MSR 0xE2 是被锁定的），那么 MSR 0xE2 就是只读的。
 
@@ -2585,7 +2585,7 @@ Last State：若系统电源中断后再次连接电源，计算机会恢复到�
 
 选项设定的情境要求主板完全断电（建议等待 30 秒），在主板完全断电后再重新连接电源，以确保该功能生效。也就是说断电后立即上电也许不会生效
 
-参考文献：[[主板]BIOS 选项-Restore AC Power Loss 功能介绍](https://www.asus.com.cn/support/faq/1049855/)
+参考文献：[[主板] BIOS 选项-Restore AC Power Loss 功能介绍](https://www.asus.com.cn/support/faq/1049855/)
 
 ##### Resume On RTC Alarm（RTC 定时唤醒）
 
@@ -3486,7 +3486,7 @@ No Spreading（无扩频）
 
 设置 LVDS（低压差分信号）接口的差分输出摆幅
 
-输出摆幅分为正向和负向摆幅，也就是 VP+ ,VP-。输出摆幅指的是信号从最低电压到最高电压之间的电压差，也就是输出信号的电压幅度范围。
+输出摆幅分为正向和负向摆幅，也就是 VP+、VP-。输出摆幅指的是信号从最低电压到最高电压之间的电压差，也就是输出信号的电压幅度范围。
 
 用于改善传输质量与信号完整性，调节得当可提升图像或数据传输稳定性。
 
@@ -3703,7 +3703,7 @@ None（无）
 
 说明：
 
-在 BIOS 中，"OUT 80h"通常指的是将数据写入 I/O 端口 0x80，这是一个用于调试的标准端口。通过向该端口写入特定的值，系统可以在启动过程中输出调试信息，帮助开发人员定位问题。
+在 BIOS 中，`OUT 80h` 通常指的是将数据写入 I/O 端口 0x80，这是一个用于调试的标准端口。通过向该端口写入特定的值，系统可以在启动过程中输出调试信息，帮助开发人员定位问题。
 调试用。选择将 OUT 80（POST 代码）重定向到哪个 E.C. UART（串口）。
 
 #### Hardware Monitor（硬件监控）
@@ -3794,7 +3794,7 @@ Not Happened（未发生）：嵌入式控制器软未重置过
 
 参见 [什么是 IRQ？](https://www.kernel.org/doc/html/v6.9/translations/zh_CN/core-api/irq/concepts.html)
 
-#### External FAN/PWM Settings（外部风扇／PWM 设置）
+#### External FAN/PWM Settings（外部风扇 ／PWM 设置）
 
 当 SMARC（Smart Mobility ARChitecture，智能移动架构）相关配置中的 PWM／风扇管理启用时可见。
 
@@ -3938,7 +3938,7 @@ Disabled（禁用）
 
 说明：
 
-禁用／启用载板上每个 USB 端口的 VBUS 电源（USB 供电线 +5V）
+禁用 ／ 启用载板上每个 USB 端口的 VBUS 电源（USB 供电线 +5V）
 
 ### RAM Disk Configuration（内存盘配置）
 
@@ -4686,7 +4686,7 @@ Disabled（禁用）
 
 优化时钟到数据总线传播延迟
 
-###### TxDqsTCO Comp Training*（TxDqsTCO Comp 训练*）
+###### TxDqsTCO Comp Training *（TxDqsTCO Comp 训练*）
 
 选项：
 
@@ -4732,7 +4732,7 @@ Disabled（禁用）
 
 优化命令/地址总线的 ODT 特性
 
-###### PanicVttDnLp Training*（PanicVttDnLp 训练*）
+###### PanicVttDnLp Training *（PanicVttDnLp 训练*）
 
 选项：
 
@@ -5053,7 +5053,7 @@ LP5 BG Mode
 
 0-65535
 
-0\=Auto（自动）
+0 \= Auto（自动）
 
 说明：
 
@@ -5069,7 +5069,7 @@ Mixed：插入两个不同品牌或频率/容量的内存条
 
 0-65535
 
-0\=Auto（自动）
+0 \= Auto（自动）
 
 说明：
 
@@ -5081,7 +5081,7 @@ Mixed：插入两个不同品牌或频率/容量的内存条
 
 0-65535
 
-0\=Auto（自动）
+0 \= Auto（自动）
 
 说明：
 
@@ -5093,7 +5093,7 @@ Mixed：插入两个不同品牌或频率/容量的内存条
 
 0-65535
 
-0\=Auto（自动）
+0 \= Auto（自动）
 
 说明：
 
@@ -5105,7 +5105,7 @@ Mixed：插入两个不同品牌或频率/容量的内存条
 
 0-65535
 
-0\=Auto（自动）
+0 \= Auto（自动）
 
 说明：
 
@@ -5119,7 +5119,7 @@ Mixed 2DPC：指每个内存通道插入两根不同规格（如品牌、容量�
 
 0-65535
 
-0\=Auto（自动）
+0 \= Auto（自动）
 
 说明：
 
@@ -6695,7 +6695,7 @@ Disabled（禁用）
 
 说明：
 
-启用／禁用 SA 热管理设备。
+启用 ／ 禁用 SA 热管理设备。
 
 SA Thermal Device 是处理器内部的一个关键组件，用于监测系统代理（System Agent）的温度。
 
@@ -6753,7 +6753,7 @@ Disabled（禁用）
 
 系统报告最初发布的芯片组版本标识和 CPU 兼容版本标识
 
-启用／禁用 SA CRID 和 TCSS CRID 控制，以支持 Intel SIPP。
+启用 ／ 禁用 SA CRID 和 TCSS CRID 控制，以支持 Intel SIPP。
 
 Intel SIPP，The Intel Stable IT Platform Program，英特尔 ® 稳定 IT 平台计划，是 vPro® platform 的一部分。参见 [借助英特尔 ® 稳定 IT 平台计划实现可靠的稳定性](https://www.intel.cn/content/www/cn/zh/architecture-and-technology/vpro/stable-it-platform-program/overview.html)、[什么是英特尔 ® vPro®？](https://www.intel.cn/content/www/cn/zh/architecture-and-technology/vpro/what-is-vpro.html)
 
@@ -6769,7 +6769,7 @@ Disabled（禁用）
 
 说明：
 
-启用／禁用 IOP 的 SA HRC（写缓存）功能。启用后，支持最多 10 个设备分配到环路并进入 LLC（最后一级缓存）。
+启用 ／ 禁用 IOP 的 SA HRC（写缓存）功能。启用后，支持最多 10 个设备分配到环路并进入 LLC（最后一级缓存）。
 
 WRC，write cache，写缓存。WRC 功能启用 Intel® 数据直通 I/O 技术（Intel® DDIO），使 I/O 设备能够利用最后一级缓存（LLC）作为中间缓冲区。此功能不对每个 CPU 的最后一级缓存进行分区。
 
@@ -6785,7 +6785,7 @@ Disabled（禁用）
 
 说明：
 
-启用／禁用 4GB 以上的内存映射 I/O（Memory Mapped I/O）BIOS 分配。
+启用 ／ 禁用 4GB 以上的内存映射 I/O（Memory Mapped I/O）BIOS 分配。
 
 当 Aperture Size（显存孔径）设置为 2048MB 时，该功能会自动启用。
 
@@ -6795,7 +6795,7 @@ Disabled（禁用）
 
 目前该功能通常用于同时使用多张显卡的情况；该功能对于游戏和加密货币挖矿等高性能应用特别有用。参见 [BIOS Above 4GB MMIO BIOS Assignment / Above 4G Decoding](https://432hz.myqnapcloud.com:81/WordPress/above-4gb-mmio-bios-assignment-and-above-4g-decoding/)
 
-禁用状态下双 CPU 显卡及雷电接口设备使用受限。参见[为什么使用类似 RocketRAID 840A 的 Legacy 设备，在其自带的 Raid Option 接口下识别不到硬盘，无法组建 RAID?](https://www.asus.com.cn/support/faq/1043356/)
+禁用状态下双 CPU 显卡及雷电接口设备使用受限。参见 [为什么使用类似 RocketRAID 840A 的 Legacy 设备，在其自带的 Raid Option 接口下识别不到硬盘，无法组建 RAID?](https://www.asus.com.cn/support/faq/1043356/)
 
 #### IPU Device (B0:D5:F0) (IPU 设备)
 
@@ -6833,7 +6833,7 @@ Disabled（禁用）
 
 说明：
 
-启用／禁用通过本地 I/O 或 USB I/O 扩展方式的 CVF 功能。
+启用 ／ 禁用通过本地 I/O 或 USB I/O 扩展方式的 CVF 功能。
 
 CVF：Intel Clover Falls，英特尔推出的 AI 协处理器。是一种英特尔集成传感器解决方案。参见 [Dell Laptop Camera Not Working in Teams, Zoom, and Windows Camera Application](https://www.dell.com/support/kbdoc/en-hk/000248760/laptop-mipi-camera-may-not-work-under-windows?lwp=rt)
 
@@ -6883,7 +6883,7 @@ Camera 1（摄像头 1）启用后才有此项。用于设置摄像头 1 的链�
 
 选项：
 
-IMX135, OV5693, IMX179, OV8858, OV2740-IVCAM,OV9728, IMX188, IMX208, OV5670, OV8865, HM2051, OV2742,OV9234, OV8856, OV16860, IMX362, IMX488,OVTI01AS, OV13858, OVTI5678, OVTI9738, HIMAX11B1, User Custom（用户自定义）
+IMX135, OV5693, IMX179, OV8858, OV2740-IVCAM, OV9728, IMX188, IMX208, OV5670, OV8865, HM2051, OV2742, OV9234, OV8856, OV16860, IMX362, IMX488, OVTI01AS, OV13858, OVTI5678, OVTI9738, HIMAX11B1, User Custom（用户自定义）
 
 说明：
 选择摄像头的传感器模型。
@@ -7042,7 +7042,7 @@ ROM_NONE, ROM_OTP, ROM_EEPROM_16K_64, ROM_EEPROM_16K_16, ROM_OTP_ACPI_ACPI, ROM_
 
 VCM，Voice Coil Motor，音圈电机。摄像头的自动对焦功能会用到 VCM
 
-VCM_NONE , VCM_AD5823, VCM_DW9714, VCM_AD5816, VCM_DW9719, VCM_DW9718, VCM_DW98068, VCM_WV517S, VCM_LC898122XA, VCM_LC898212AXB, VCM_RESERVED1,VCM_RESERVED2, VCM_AK7371, VCM_BU64297GWZ
+VCM_NONE , VCM_AD5823, VCM_DW9714, VCM_AD5816, VCM_DW9719, VCM_DW9718, VCM_DW98068, VCM_WV517S, VCM_LC898122XA, VCM_LC898212AXB, VCM_RESERVED1, VCM_RESERVED2, VCM_AK7371, VCM_BU64297GWZ
 
 选项 VCM 类型
 
@@ -7064,7 +7064,7 @@ I²C0, I²C1, I²C2, I²C3, I²C4, I²C5
 
 ###### Device Type（I²C 设备类型）
 
-Sensor（传感器）, VCM, EEPROM, EEPROM_EXT1, EEPROM_EX2, EEPROM_EXT3, EEPROM_EXT4, EEPROM_EXT5,EEPROM_EXT6, EEPROM_EXT7, IO Expander, Flash
+Sensor（传感器）, VCM, EEPROM, EEPROM_EXT1, EEPROM_EX2, EEPROM_EXT3, EEPROM_EXT4, EEPROM_EXT5, EEPROM_EXT6, EEPROM_EXT7, IO Expander, Flash
 
 ###### Flash Driver Selection（闪光灯驱动选择）
 
@@ -7484,7 +7484,7 @@ Disabled（禁用）
 
 说明：
 
-参见 [为什么使用适用于 PCI Express* 的 英特尔 ® FPGA P-Tile/H-Tile、Avalon® 流传输和 Avalon® 内存映射 IP 时，在高级错误报告（AER）中记录非严重 PCIe* 错误？](https://www.intel.cn/content/www/cn/zh/support/programmable/articles/000080831.html)
+参见 [为什么使用适用于 PCI Express * 的 英特尔 ® FPGA P-Tile/H-Tile、Avalon® 流传输和 Avalon® 内存映射 IP 时，在高级错误报告（AER）中记录非严重 PCIe* 错误？](https://www.intel.cn/content/www/cn/zh/support/programmable/articles/000080831.html)
 
 - FER（PCIe 设备致命错误报告）
 
@@ -7914,7 +7914,7 @@ Disabled（禁用）
 
 Hot Plug support。支持热插拔
 
-eSATA 的全称是 External Serial ATA（外部串行 ATA），它是 SATA 接口的外部扩展规范。换言之，eSATA 就是"外置"版的 SATA，它是用来连接外部而非内部 SATA 设备。
+eSATA 的全称是 External Serial ATA（外部串行 ATA），它是 SATA 接口的外部扩展规范。换言之，eSATA 就是 "外置" 版的 SATA，它是用来连接外部而非内部 SATA 设备。
 
 参见 [eSATA 接口的介绍和使用](https://www.dell.com/support/kbdoc/zh-cn/000127522/esata-%E6%8E%A5%E5%8F%A3%E7%9A%84%E4%BB%8B%E7%BB%8D%E5%92%8C%E4%BD%BF%E7%94%A8)
 
@@ -8306,11 +8306,11 @@ Advanced Link Config：高级链路配置
 
 选择链接模式：
 
-1）HDA-Link（SDIO-1），DMIC[0-1]
+1）HDA-Link(SDIO-1)，DMIC[0-1]
 
 2）SSP[0-5]，DMIC[0-1]
 
-3）SNDW[1-4]
+3）SNDW [1-4]
 
 4）“Advanced”模式可分别启用每个接口
 
@@ -9687,7 +9687,7 @@ Disabled（禁用）
 
 说明：
 
-在早期阶段启用／禁用 8254 时钟门控。启用 8254CGE（CGE，Clock Gating Enable，启用时钟门控）是支持 SLP_SO 所必需的。平台也可以在后期阶段禁用该策略并设置 8254CGE。
+在早期阶段启用 ／ 禁用 8254 时钟门控。启用 8254CGE（CGE，Clock Gating Enable，启用时钟门控）是支持 SLP_SO 所必需的。平台也可以在后期阶段禁用该策略并设置 8254CGE。
 
 8254 是一种 PIT（Programmable Interval Timer，可编程定时器），它利用若干个寄存器来进行定时和计时的操作。GATE 门控信号实现定时控制与事件计数功能。
 

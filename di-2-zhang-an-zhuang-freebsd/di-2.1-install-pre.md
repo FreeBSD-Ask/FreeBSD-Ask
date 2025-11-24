@@ -24,12 +24,12 @@
 | 无线网卡      | Intel AX 系列  | AX200                                        | WiFi 5 速率与 Windows 11 IoT Enterprise 24H2 相当（使用 iperf2 测得）                                                                     |
 | 有线网卡      | Realtek 2.5G | RTL8125B                                     | 需要额外安装驱动，参见全书附录                                                                                             |
 | 有线网卡      | Intel 2.5G   | i226-V                                       | 正常工作                                                                                                        |
-| 英特尔/AMD 显卡        | 英特尔、AMD 近十多年的显卡        |   英特尔锐炬® Xe 显卡、Intel HD Graphics 4000       | 支持水平与 drm 移植进度相关；写作本文时相当于 Linux 内核 6.6，最新状态参见 [freebsd/drm-kmod](https://github.com/freebsd/drm-kmod/pulls) |
+| 英特尔/AMD 显卡        | 英特尔、AMD 近十多年的显卡        |   英特尔锐炬 ® Xe 显卡、Intel HD Graphics 4000       | 支持水平与 drm 移植进度相关；写作本文时相当于 Linux 内核 6.6，最新状态参见 [freebsd/drm-kmod](https://github.com/freebsd/drm-kmod/pulls) |
 | NVIDIA 显卡 | 近十多年的显卡   | GTX 850M  | 受 NVIDIA 官方显卡驱动支持     |
 
 >**注意**
 >
->FreeBSD 不支持[安全启动](https://wiki.freebsd.org/SecureBoot)，在安装 FreeBSD 前请务必关闭安全启动（SecureBoot）；FreeBSD 也不支持 Fake RAID（伪 RAID），请将其控制器修改为 AHCI。
+>FreeBSD 不支持 [安全启动](https://wiki.freebsd.org/SecureBoot)，在安装 FreeBSD 前请务必关闭安全启动（SecureBoot）；FreeBSD 也不支持 Fake RAID（伪 RAID），请将其控制器修改为 AHCI。
 >
 >操作方法请咨询购机厂商技术售后。
 

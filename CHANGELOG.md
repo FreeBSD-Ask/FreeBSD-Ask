@@ -4,8 +4,10 @@
 
 ## 2025 年第四季度
 
+- 2025.11.24
+  - “22.16 FreeBSD 内核配置选项”引入 51% 的机器无关的内核选项（按行数计）
 - 2025.11.23
-  - “22.16 FreeBSD 内核配置选项”引入 40% 的机器无关的内核选项
+  - “22.16 FreeBSD 内核配置选项”引入 40% 的机器无关的内核选项（按行数计）
   - 引入 RSS 订阅源 <https://docs.bsdcn.org/feed.rss>
 - 2025.11.22
   - 新增“22.16 FreeBSD 内核配置选项”，引入 i386/amd64 机器相关的内核选项
@@ -14,7 +16,7 @@
   - “5.4 使用 pkg 管理二进制包”重写“使用 pkg 安装软件”
 - 2025.11.17
   - “4.1 Windows 用户迁移指南”新增“深入阅读”
-  - FreeBSD 安装镜像缺乏 kmod 的离线包，提交 [Bug 291052 - Request to offline-distribute kernel modules and pkg(8) repositories in iso and img images. ](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=291052)
+  - FreeBSD 安装镜像缺乏 kmod 的离线包，提交 [Bug 291052 - Request to offline-distribute kernel modules and pkg(8) repositories in iso and img images.](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=291052)
 - 2025.11.14
   - “3.3 使用 Virtual Box 安装 FreeBSD”增补“网络设置”
   - Port [net/wutil](https://www.freshports.org/net/wutil) 测试失败，提交 issue [wutil: no wpa ctrl interface on default path, provide --ctrl-interface: No error: 0](https://github.com/MainKt/wutil/issues/2)
@@ -67,7 +69,7 @@
 - PDF 下载地址：<https://docs.bsdcn.org/bsdbook.pdf>
 - EPUB 下载地址：<https://docs.bsdcn.org/bsdbook.epub>
 
-EPUB 在手机上可以使用[微信读书](https://play.google.com/store/apps/details?id=com.tencent.weread&hl=zh)打开，其格式显示比较完整；在电脑上可用 [CAJViewer 9](https://cajviewer.cnki.net/download.html) 打开。
+EPUB 在手机上可以使用 [微信读书](https://play.google.com/store/apps/details?id=com.tencent.weread&hl=zh) 打开，其格式显示比较完整；在电脑上可用 [CAJViewer 9](https://cajviewer.cnki.net/download.html) 打开。
 
 上述电子文档永远反映实时的网页，随 Git 提交而实时更新（但其文件名不会发生变化）。
 

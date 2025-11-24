@@ -62,7 +62,7 @@ TUNA: <https://github.com/tuna/issues/issues/16>
 
 来搭建非官方镜像站。赠人玫瑰，手留余香。
 
-优先建议高校学生使用校内资源搭建，或者直接从 USTC 的 `rsync` 服务来同步。建议同步前先咨询 USTCLUG，以免带来不必要的麻烦，联系方式： [lug@ustc.edu.cn](mailto:lug@ustc.edu.cn)。参考[科大源同步方法与注意事项](https://mirrors.ustc.edu.cn/help/rsync-guide.html)来进行同步。
+优先建议高校学生使用校内资源搭建，或者直接从 USTC 的 `rsync` 服务来同步。建议同步前先咨询 USTCLUG，以免带来不必要的麻烦，联系方式： [lug@ustc.edu.cn](mailto:lug@ustc.edu.cn)。参考 [科大源同步方法与注意事项](https://mirrors.ustc.edu.cn/help/rsync-guide.html) 来进行同步。
 
 ## 官方给出的镜像站基本要求
 
@@ -83,7 +83,7 @@ TUNA: <https://github.com/tuna/issues/issues/16>
 
 FreeBSD 在中国大陆境内没有官方镜像站；在中国台湾地区有官方镜像站。
 
-FreeBSD 在中国大陆境内的唯一几个能正常同步的镜像站，均未使用 `rsync` 等方式进行同步，都是采取的一些特殊"手段"，参见 USTCLUG 所提供的同步脚本：
+FreeBSD 在中国大陆境内的唯一几个能正常同步的镜像站，均未使用 `rsync` 等方式进行同步，都是采取的一些特殊 "手段"，参见 USTCLUG 所提供的同步脚本：
 
 - [FreeBSD-pkg 脚本](https://github.com/ustclug/ustcmirror-images/blob/master/freebsd-pkg/sync.sh)
 - [FreeBSD-ports 脚本](https://github.com/ustclug/ustcmirror-images/blob/master/freebsd-ports/sync-ports.sh)

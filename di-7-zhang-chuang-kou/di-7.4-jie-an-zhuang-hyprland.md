@@ -288,7 +288,7 @@ scrollback_lines -1
 copy_on_select yes    # 选中文本时复制
 mouse_hide_wait 2.0   # 定时隐藏鼠标
 
-## 提示🔔
+## 提示 🔔
 enable_audio_bell no
 visual_bell_duration 0.3
 bell_on_tab yes

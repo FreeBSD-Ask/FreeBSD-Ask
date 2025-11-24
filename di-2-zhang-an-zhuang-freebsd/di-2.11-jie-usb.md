@@ -18,7 +18,7 @@ DiskGenius 官网：<https://www.diskgenius.cn/>，该软件有收费功能，�
 
 ### 下载 DiskGenius
 
-在下载时，大部分人应该[下载](https://www.diskgenius.cn/download.php) 64 位。
+在下载时，大部分人应该 [下载](https://www.diskgenius.cn/download.php) 64 位。
 
 下载后，发现是个 zip 压缩包。
 
@@ -106,7 +106,7 @@ DiskGenius 官网：<https://www.diskgenius.cn/>，该软件有收费功能，�
 
 傲梅分区助手官网：<https://www.disktool.cn/>
 
-我们[下载](https://www.disktool.cn/download.html)“绿色版”（免安装，可直接运行）。我们需要花点时间找到“PartAssist.exe”（你那里可能是 `PartAssist`）。右键单击，点击打开。
+我们 [下载](https://www.disktool.cn/download.html)“绿色版”（免安装，可直接运行）。我们需要花点时间找到“PartAssist.exe”（你那里可能是 `PartAssist`）。右键单击，点击打开。
 
 ![傲梅分区助手](../.gitbook/assets/aomei1.png)
 

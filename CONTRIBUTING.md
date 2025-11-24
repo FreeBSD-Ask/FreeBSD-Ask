@@ -51,7 +51,7 @@ and retry with 'git restore --source=HEAD :/'
 - **应注意引用的权威性、时效性和准确性。尽量采用原始文献，次选二手文献，避免三手文献**
 - 在引用其他网站内容时，请查证其引用的内容是否真实可信，并且不要直接网站内容之，而是要直接一手来源
 - 请提交到 main 分支
-- 请避免学术不端行为，参见[高等学校预防与处理学术不端行为办法](https://www.gov.cn/zhengce/2016-07/19/content_5713390.htm)
+- 请避免学术不端行为，参见 [高等学校预防与处理学术不端行为办法](https://www.gov.cn/zhengce/2016-07/19/content_5713390.htm)
 - 遵守 [FreeBSD 中文社区行为规范](https://docs.bsdcn.org/CODE_OF_CONDUCT)
 
 #### 使之成为“一本书”，而不仅仅是本字典或手册
@@ -124,8 +124,8 @@ and retry with 'git restore --source=HEAD :/'
 
 名词解释：
 
-- `autocrlf`：配置 Git 自动处理(转换)行结束符的默认行为。参见[配置 Git 处理行结束符 - Github Docs](https://docs.github.com/zh/get-started/git-basics/configuring-git-to-handle-line-endings)
-- `signingkey`：指设置带签名提交时默认使用的签名密钥。signingkey 既可指 GPG Key，亦可指 SSH Key。因为自 Git 2.34 起，Git 支持了 SSH 签名验证功能。参见[关于提交签名验证 - Github Docs](https://docs.github.com/zh/authentication/managing-commit-signature-verification/about-commit-signature-verification)
+- `autocrlf`：配置 Git 自动处理(转换)行结束符的默认行为。参见 [配置 Git 处理行结束符 - Github Docs](https://docs.github.com/zh/get-started/git-basics/configuring-git-to-handle-line-endings)
+- `signingkey`：指设置带签名提交时默认使用的签名密钥。signingkey 既可指 GPG Key，亦可指 SSH Key。因为自 Git 2.34 起，Git 支持了 SSH 签名验证功能。参见 [关于提交签名验证 - Github Docs](https://docs.github.com/zh/authentication/managing-commit-signature-verification/about-commit-signature-verification)
 
 拉取命令：
 
@@ -334,7 +334,7 @@ $ git clone https://github.com/FreeBSD-Ask/FreeBSD-Ask
 - [ ] 32.4.网络信息系统（NIS）（过时，用 SSSD-LADP 代替）
 - [ ] 30.5.使用 ATM 上的 PPP (PPPoA)（过时）
 - [ ] 29.4.拨入服务（过时）
-- [ ] gbde 相关加密（已从[源代码](https://github.com/freebsd/freebsd-src/commit/8d2d1d651678178aa7f24f0530347f860423fd9e)移除）
+- [ ] gbde 相关加密（已从 [源代码](https://github.com/freebsd/freebsd-src/commit/8d2d1d651678178aa7f24f0530347f860423fd9e) 移除）
 - [ ] 29.5.拨出服务（过时）
 - [ ] 30.2.配置 PPP（过时）
 - [ ] 31.3.DragonFly 邮件代理（DMA）（过时，用 Postfix 等代替）

@@ -25,7 +25,7 @@ jobs:
           run: yarn autocorrect --config .github/.autocorrectrc --lint --no-diff-bg-color **/*.md  || true 
           
         - name: Run autocorrect fix
-          run: yarn autocorrect --fix **/*.md
+          run: yarn autocorrect --config .github/.autocorrectrc --fix **/*.md
 
         - name: Markdown add spaces
           uses: peter-evans/create-pull-request@v7

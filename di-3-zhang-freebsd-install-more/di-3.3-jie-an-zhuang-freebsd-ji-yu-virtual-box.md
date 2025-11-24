@@ -115,7 +115,7 @@
 # make install clean
 ```
 
-## 查看安装说明：
+## 查看安装说明
 
 ```sh
 root@ykla:/home/ykla # pkg info -D virtualbox-ose-additions

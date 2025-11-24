@@ -51,6 +51,7 @@ ykla@ykla:/ $ ②
 ykla@ykla:/ $ su ③
 Password: ④
 root@ykla:/ #
+
 root@ykla:/ # exit ⑤
 ykla@ykla:/ $ exit ⑥
 root@ykla:/ # exit ⑦
@@ -256,7 +257,7 @@ FreeBSD repository is up to date.
 
 ```sh
 root@ykla:~ # cp test /root/mydir/
-root@ykla:~ #
+
 
 ```
 
@@ -716,7 +717,7 @@ $ rm -rf *
 
 ### 逻辑运算符 `&&`
 
-`&&`（逻辑与，AND）：只有 `&&`之前的命令执行成功了，后边的命令才会执行；否则如果 `&&` 之前的命令执行失败了，后面的命令就不会执行。
+`&&`（逻辑与，AND）：只有 `&&` 之前的命令执行成功了，后边的命令才会执行；否则如果 `&&` 之前的命令执行失败了，后面的命令就不会执行。
 
 简单理解：你得先做饭才能吃饭，然后才能刷锅——> 做饭 `&&` 吃饭 `&&` 刷锅。如果你没有做饭，自然谈不上怎么吃饭，更遑论刷锅了。
 

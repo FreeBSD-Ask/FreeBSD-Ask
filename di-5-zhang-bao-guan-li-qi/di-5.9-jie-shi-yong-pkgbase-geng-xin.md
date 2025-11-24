@@ -10,7 +10,7 @@
 
 ## 下载 `pkgbasify` 脚本
 
-在 [Github 仓库](https://github.com/FreeBSDFoundation/pkgbasify)下载 `pkgbasify.lua` 脚本文件：
+在 [Github 仓库](https://github.com/FreeBSDFoundation/pkgbasify) 下载 `pkgbasify.lua` 脚本文件：
 
 ```sh
 $ fetch https://github.com/FreeBSDFoundation/pkgbasify/raw/refs/heads/main/pkgbasify.lua

@@ -2,7 +2,7 @@
 
 ## microSD 卡（存储卡/TF 卡/SD 卡/内存卡）参数简介
 
-存储卡规范是由 [SD 协会](https://www.sdcard.org/)制定的。
+存储卡规范是由 [SD 协会](https://www.sdcard.org/) 制定的。
 
 SD 卡的标准十分混乱，甚至与 USB-IF 协会制定的 USB 标准相比，其混乱程度亦难分伯仲——SD 卡协会难辞其咎。
 
@@ -74,7 +74,7 @@ microSD 也即我们所说的 TF 卡（类似于 EFI 和 UEFI 的关系）、手
 
 我们可以用 `CrystalDiskInfo` 查看硬盘的 S.M.A.R.T. 信息及基本参数。还可以用 `CrystalDiskMark` 测试硬盘和存储卡的读写（请使用 USB 3.0 的读卡器！）
 
-上述两款软件是同开发者开发的，但是其[官方网站](https://crystalmark.info/en/)不知道为什么，插了很多虚假广告，诱导下载错误的文件。
+上述两款软件是同开发者开发的，但是其 [官方网站](https://crystalmark.info/en/) 不知道为什么，插了很多虚假广告，诱导下载错误的文件。
 
 请从 **[这里](https://sourceforge.net/projects/crystaldiskinfo)** 下载 CrystalDiskInfo；请从 **[这里](https://sourceforge.net/projects/crystaldiskmark/files/)** 下载 CrystalDiskMark；
 
@@ -135,7 +135,7 @@ microSD 也即我们所说的 TF 卡（类似于 EFI 和 UEFI 的关系）、手
 - [移速这个卡虚标了，速度只有标注的二分之一](https://post.m.smzdm.com/talk/p/az6o8zkr/)
 - [Mvespeed 移速 400G 内存卡简单测评](https://post.m.smzdm.com/p/arq759g7/)
 - [移速 TF 卡翻不翻车？看来没翻（附游戏测试）](https://post.m.smzdm.com/p/awzqn9z4/)
-- [闪迪至尊超极速移动™ microSDXC™ UHS-I 存储卡 - 128GB](https://www.westerndigital.com/zh-cn/products/memory-cards/sandisk-extreme-pro-uhs-i-microsd?sku=SDSQXCY-128G-ZN6MA)（参见注释 8：“采用专利技术”）
+- [闪迪至尊超极速移动 ™ microSDXC™ UHS-I 存储卡 - 128GB](https://www.westerndigital.com/zh-cn/products/memory-cards/sandisk-extreme-pro-uhs-i-microsd?sku=SDSQXCY-128G-ZN6MA)（参见注释 8：“采用专利技术”）
 - [存储卡也超频？实测结果非常意外](https://mp.weixin.qq.com/s/CMioVrUx0YJbF_v7zvQMRA)
 - [BAR 升级版 + USB3.1 闪存盘](https://www.samsung.com.cn/memory-storage/usb-flash-drive/usb-3-1-flash-drive-bar-plus-64gb-titanium-gray-muf-64be4-cn/)
 
