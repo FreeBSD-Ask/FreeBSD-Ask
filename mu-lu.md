@@ -249,7 +249,7 @@
 * [22.12 code-server 和 clangd](di-22-zhang-bian-cheng-yu-kai-fa/di-22.12-jie-an-zhuang-code-server-he-clangd.md)
 * [22.13 Node.js](di-22-zhang-bian-cheng-yu-kai-fa/di-22.13-jie-nodejs-xiang-guan.md)
 * [22.14 利用脚本自动生成 BSDlibc 库文本](di-22-zhang-bian-cheng-yu-kai-fa/di-22.14-jie-li-yong-jiao-ben-zi-dong-sheng-cheng-bsdlibc-ku-wen-ben.md)
-* [22.15 在 Ubuntu 上构建 FreeBSD](di-22-zhang-bian-cheng-yu-kai-fa/di-22.15-jie-build-freebsd-on-linux.md)
+* [22.15 在 Linux 上构建 FreeBSD](di-22-zhang-bian-cheng-yu-kai-fa/di-22.15-jie-build-freebsd-on-linux.md)
 
 ## 第 23 章 存储管理和文件系统
 
@@ -260,11 +260,11 @@
 * [23.5 Swap 交换分区](di-23-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-23.5-jie-swap-jiao-huan-fen-qu-de-she-zhi.md)
 * [23.6 Linux 文件系统](di-23-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-23.6-jie-ext-234-deng-wen-jian-xi-tong.md)
 
-## 第 24 章 DragonFly BSD 入门
+## 第 24 章 FreeBSD 内核
 
-* [24.1 DragonFly BSD 概述](di-24-zhang-dragonflybsd/di-24.1-jie-gai-shu.md)
-* [24.2 安装 DragonFly BSD](di-24-zhang-dragonflybsd/di-24.2-jie-an-zhuang-yu-pei-zhi.md)
-* [24.3 配置 DragonFly BSD](di-24-zhang-dragonflybsd/24.3-pei-zhi.md)
+* [24.1 FreeBSD 内核选项概述](di-24-zhang-kernel/di-24.1-kernel-conf.md)
+* [24.2 机器相关的内核选项（amd64）](di-24-zhang-kernel/di-24.2-kernel-md.md)
+* [24.3 机器无关的内核选项](di-24-zhang-kernel/di-24.3-kernel-mi.md)
 
 ## 第 25 章 TwinCAT/BSD 入门
 
@@ -298,6 +298,7 @@
 
 ## 附录 Ⅱ 工具与资源
 
+* [DragonFly BSD 导论](fu-lu2/di-DragonFlyBSD.md)
 * [适用于 FreeBSD 的以太网卡、USB 以太网卡和 USB 无线网卡](fu-lu2/yi-tai-wang-ka.md)
 * [FreeBSD 桌面发行版评述](fu-lu2/others-bsd.md)
 * [BSD 许可证概览](fu-lu2/xukez.md)
