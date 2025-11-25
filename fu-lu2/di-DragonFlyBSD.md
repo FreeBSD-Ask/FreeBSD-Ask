@@ -255,7 +255,7 @@ export LC_CTYPE="zh_CN.UTF-8"
 持久化，将：
 
 ```
-drm_load=”YES”
+drm_load="YES"
 ```
 
 放在 `/etc/rc.conf`。
