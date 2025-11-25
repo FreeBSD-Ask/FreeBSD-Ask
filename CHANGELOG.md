@@ -4,6 +4,9 @@
 
 ## 2025 年第四季度
 
+- 2025.11.25
+  - “22.16 FreeBSD 内核配置选项”引入 69% 的机器无关的内核选项（按行数计）
+    - 根据编纂发现，提交 [NOTES: Fix a typo in a comments](https://github.com/freebsd/freebsd-src/pull/1899)
 - 2025.11.24
   - “22.16 FreeBSD 内核配置选项”引入 56% 的机器无关的内核选项（按行数计）
 - 2025.11.23
