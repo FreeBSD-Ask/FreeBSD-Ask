@@ -7,7 +7,7 @@
 - 2025.11.25
   - “24.3 机器无关的内核选项”引入 69% 的机器无关的内核选项（按行数计）
     - 根据编纂发现，提交 [NOTES: Fix a typo in a comments](https://github.com/freebsd/freebsd-src/pull/1899)
-    - 根据编纂发现，[NOTES: Remove duplicate options KCSAN entries](https://github.com/freebsd/freebsd-src/pull/1900)
+    - 根据编纂发现，提交 [NOTES: Remove duplicate options KCSAN entries](https://github.com/freebsd/freebsd-src/pull/1900)
   - 由于内容不足以构成一章，将“第 24 章 DragonFly BSD 入门”压缩到附录 Ⅱ“DragonFly BSD 导论”
   - 新增“第 24 章 FreeBSD 内核”，将“22.16 FreeBSD 内核配置选项”分别拆分为：
     - 24.1 FreeBSD 内核选项概述
