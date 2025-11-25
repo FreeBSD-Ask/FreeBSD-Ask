@@ -34,7 +34,7 @@
 
 ## talk 与 code & 知与行
 
->Date	Fri, 25 Aug 2000 11:09:12 -0700 (PDT)
+>Date Fri, 25 Aug 2000 11:09:12 -0700 (PDT)
 >
 >From	Linus Torvalds < >
 >
