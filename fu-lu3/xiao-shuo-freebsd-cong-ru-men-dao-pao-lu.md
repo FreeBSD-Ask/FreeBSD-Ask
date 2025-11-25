@@ -50,7 +50,7 @@ Eric S. Raymond 写过一本书叫做《大教堂与集市》，论述了开源�
 
 UbuntuKylin 即“优麒麟”，是由国防科技大学和 Ubuntu 基金会合作的 Ubuntu 本地化产物。
 
-“反正官网是这么写的”，本来张才哲打算安个 Linux 来着，在百毒上搜索 Linux 就出来了 Ubuntu，而一搜 Ubuntu 直接跳转到了 UbuntuKylin 网站 https://www.ubuntukylin.com/。
+“反正官网是这么写的”，本来张才哲打算安个 Linux 来着，在百毒上搜索 Linux 就出来了 Ubuntu，而一搜 Ubuntu 直接跳转到了 UbuntuKylin 网站 <https://www.ubuntukylin.com/<。
 
 至于为什么要安装 Linux，很简单，一是为了看看那本书里写的系统怎么样子，二是看看 Linux 是不是只能用 WPS。
 
