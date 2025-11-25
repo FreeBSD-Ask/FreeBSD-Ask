@@ -104,7 +104,7 @@ FreeBSD 无法使 G400 正常工作，我开始安装虚拟机。在虚拟机中
 
 我百思不得其解的是没有 free 命令，也没有 ls pci 命令。按理说这种命令不是 bash 内置的，就是缩写变量，或者哪个软件包提供的。ls pci 属于 pciutils 这个包，用这个看设备信息不比 dmesg 方便？这不是自己折磨自己的苦难哲学吗？我是极其反对的。类似的包还有 usbutils(ls usb 命令)。
 
-free 命令更加让我疑惑，因为我个人查不到他属于哪种类型的命令，后贴吧有人告知这个命令属于一个包：procps (https://gitlab.com/procps-ng/procps) 这个包，授权 GPL v2。free 命令读取 procfs 信息，但是 FreeBSD 早就弃用了这个伪文件系统，因此推论无法使用 free 是这个原因。我以后还会关注这个问题。因为 FreeBSD 原生的 vmstat 太难用了。远不如 free 直观。
+free 命令更加让我疑惑，因为我个人查不到他属于哪种类型的命令，后贴吧有人告知这个命令属于一个包：procps (<https://gitlab.com/procps-ng/procps>) 这个包，授权 GPL v2。free 命令读取 procfs 信息，但是 FreeBSD 早就弃用了这个伪文件系统，因此推论无法使用 free 是这个原因。我以后还会关注这个问题。因为 FreeBSD 原生的 vmstat 太难用了。远不如 free 直观。
 
 坚决反对苦难哲学。
 
