@@ -6,7 +6,7 @@ DragonFly BSD（蜻蜓 BSD）是一款从 FreeBSD 4.8 复刻诞生的类 Unix �
 
 Dillon 启动 DragonFly BSD 项目是因为他觉得 FreeBSD 5 开发人员选择了一种开发并行计算的方式（例如 SMP 对称多处理），这会降低系统性能。Dillon 试图影响 FreeBSD 项目的设计原则，并与 FreeBSD 开发人员发生争执，他被剥夺了直接编辑源代码的权力。尽管如此，DragonFly BSD 和 FreeBSD 项目仍在合作修复一些错误和更新驱动程序。
 
-DrogonFly BSD 因继续 FreeBSD 4 开始的道路而受到阻碍，DragonFly BSD 的开发在几个方面与 FreeBSD 基本系统有很大不同，包括轻量级内核线程实现和 HAMMER 文件系统。DragonFly BSD 的许多设计概念借鉴了 AmigaOS 的解决方案。
+DragonFly BSD 因继续 FreeBSD 4 开始的道路而受到阻碍，DragonFly BSD 的开发在几个方面与 FreeBSD 基本系统有很大不同，包括轻量级内核线程实现和 HAMMER 文件系统。DragonFly BSD 的许多设计概念借鉴了 AmigaOS 的解决方案。
 
 DragonFly BSD 自带 i915 显卡驱动，架构仅支持 x86-64。DragonFly BSD 无 Linux 兼容层。DPorts 可与 FreeBSD Ports 兼容。需要注意地是，DragonFly BSD 的驱动支持相当落后，显卡驱动平均落后 10 年左右。
 
