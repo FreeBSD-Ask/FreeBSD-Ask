@@ -10,6 +10,7 @@ FreeBSD 是真正自由（Liberty）的 **操作系统**，在这波谲云诡的
 
 [~~FreeBSD 项目归档（Archived）~~，为了保护我们心爱的操作系统……我们能做的事情就是，写一本书！](https://www.bilibili.com/bangumi/media/md3068)
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/987a93d50abb4e9696a522834e0ec20c)](https://app.codacy.com/gh/FreeBSD-Ask/FreeBSD-Ask?utm_source=github.com&utm_medium=referral&utm_content=FreeBSD-Ask/FreeBSD-Ask&utm_campaign=Badge_Grade)
 [![FreeBSD](https://img.shields.io/badge/FreeBSD-EB0028?logo=freebsd&logoColor=fff)](https://www.freebsd.org/)
 [![OpenBSD](https://img.shields.io/badge/OpenBSD-F2CA30?logo=openbsd&logoColor=black)](https://www.openbsd.org/)
 [![NetBSD](https://img.shields.io/badge/NetBSD-016EE9?logo=netbsd&logoColor=white)](https://www.netbsd.org/)
