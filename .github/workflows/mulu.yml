@@ -12,10 +12,10 @@ jobs:
 
     steps:
       - name: Checkout repository with Deploy Key
-        uses: actions/checkout@v6
+        uses: actions/checkout@v5
         with:
           ssh-key: ${{ secrets.DEPLOY_KEY }}
-          fetch-depth: 0
+          fetch-depth: 0  # 获取完整历史，不依赖远程
 
       - name: Copy and modify SUMMARY.md to mu-lu.md
         run: |
@@ -32,12 +32,15 @@ jobs:
       - name: Check if mu-lu.md changed (excluding first line)
         id: check_diff
         run: |
-          # 去掉第一行并统一换行符，避免 diff 误判
-          tail -n +2 SUMMARY.md | sed 's/\r$//' > /tmp/summary_tail.txt
-          tail -n +2 mu-lu.md   | sed 's/\r$//' > /tmp/mulu_tail.txt
-          # 输出 diff 结果方便调试
-          diff /tmp/summary_tail.txt /tmp/mulu_tail.txt || true
-          # 判断是否有变化
+          # 如果 mu-lu.md 之前不存在，则算作 changed
+          if [ ! -f mu-lu.md ]; then
+            echo "changed=true" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+          # 生成临时文件去掉第一行
+          tail -n +2 SUMMARY.md > /tmp/summary_tail.txt
+          tail -n +2 mu-lu.md > /tmp/mulu_tail.txt
+          # 比较内容
           if ! diff -q /tmp/summary_tail.txt /tmp/mulu_tail.txt >/dev/null; then
             echo "changed=true" >> $GITHUB_OUTPUT
           else
