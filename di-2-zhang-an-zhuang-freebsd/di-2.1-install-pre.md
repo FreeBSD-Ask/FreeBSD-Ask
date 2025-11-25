@@ -177,7 +177,7 @@ Windows 上的刻录工具应首选 **Rufus**，Linux 直接使用 `dd` 命令�
 
 ## 附录：上传自己的硬件数据
 
-如果你也想上传你的数据到 https://bsd-hardware.info，请：
+如果你也想上传你的数据到 <https://bsd-hardware.info>，请：
 
 ### 安装 hw-probe
 
