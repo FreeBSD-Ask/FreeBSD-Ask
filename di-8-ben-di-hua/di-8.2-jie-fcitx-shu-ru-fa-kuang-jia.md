@@ -34,30 +34,8 @@ fcitx 即“A flexible input method framework（一款灵活的输入法框架�
 
 经测试 SLIM 窗口下会提示 IBus 找不到……疑似 bug。也可能是配置问题。
 
-#### 安装 RIME 中州韵输入法（可选）
 
-- 使用 pkg 安装：
-
-```sh
-# pkg install zh-fcitx5-rime zh-rime-essay
-```
-
-- 或者使用 Ports 安装：
-
-```sh
-# cd /usr/ports/chinese/fcitx5-rime/ && make install clean
-# cd /usr/ports/chinese/rime-essay/ && make install clean
-```
-
->**注意**
->
->`chinese/rime-essay` 是必要的，是 Rime 的共享词汇与语言模型，没有这个 Port，你的 RIME 输入法只会显示一团乱码。
-
-如果 rime 未被自动添加到输入法，请手动添加完成初始化（程序里找到 fcitx 配置工具，添加 rime 输入法即可）。
-
-对于普通用户如未生效，请检查自己的 shell 是否选择了对应教程进行设置。另外请将该用户加入 wheel 组。
-
-#### Fcitx 5.X 开启自启
+### Fcitx 5.X 开启自启
 
 ```sh
 $ mkdir -p ~/.config/autostart/ # 若使用其他用户则需要在其命令行下再执行之
@@ -130,6 +108,29 @@ setenv LC_ALL zh_CN.UTF-8
 setenv LANGUAGE zh_CN.UTF-8
 setenv XMODIFIERS @im=fcitx
 ```
+
+## 附录：安装 RIME 中州韵输入法
+
+- 使用 pkg 安装：
+
+```sh
+# pkg install zh-fcitx5-rime zh-rime-essay
+```
+
+- 或者使用 Ports 安装：
+
+```sh
+# cd /usr/ports/chinese/fcitx5-rime/ && make install clean
+# cd /usr/ports/chinese/rime-essay/ && make install clean
+```
+
+>**注意**
+>
+>`chinese/rime-essay` 是必要的，是 Rime 的共享词汇与语言模型，没有这个 Port，你的 RIME 输入法只会显示一团乱码。
+
+如果 rime 未被自动添加到输入法，请手动添加完成初始化（程序里找到 fcitx 配置工具，添加 rime 输入法即可）。
+
+对于普通用户如未生效，请检查自己的 shell 是否选择了对应教程进行设置。另外请将该用户加入 wheel 组。
 
 ## 故障排除与未竟事宜
 
