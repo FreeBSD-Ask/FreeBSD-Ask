@@ -32,10 +32,12 @@ jobs:
       - name: Check if mu-lu.md changed (excluding first line)
         id: check_diff
         run: |
-          # 生成临时文件去掉第一行
-          tail -n +2 SUMMARY.md > /tmp/summary_tail.txt
-          tail -n +2 mu-lu.md > /tmp/mulu_tail.txt
-          # 比较内容
+          # 去掉第一行并统一换行符，避免 diff 误判
+          tail -n +2 SUMMARY.md | sed 's/\r$//' > /tmp/summary_tail.txt
+          tail -n +2 mu-lu.md   | sed 's/\r$//' > /tmp/mulu_tail.txt
+          # 输出 diff 结果方便调试
+          diff /tmp/summary_tail.txt /tmp/mulu_tail.txt || true
+          # 判断是否有变化
           if ! diff -q /tmp/summary_tail.txt /tmp/mulu_tail.txt >/dev/null; then
             echo "changed=true" >> $GITHUB_OUTPUT
           else
