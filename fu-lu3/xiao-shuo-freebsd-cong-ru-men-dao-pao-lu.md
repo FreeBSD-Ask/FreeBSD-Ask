@@ -54,7 +54,7 @@ UbuntuKylin 即“优麒麟”，是由国防科技大学和 Ubuntu 基金会合
 
 至于为什么要安装 Linux，很简单，一是为了看看那本书里写的系统怎么样子，二是看看 Linux 是不是只能用 WPS。
 
-“哦，要用软碟通，有个好人叫王涛，还有人祝王涛新年快乐”，软碟通的官网是 https://cn.ultraiso.net/，这是张才哲找了很久才找到的。
+“哦，要用软碟通，有个好人叫王涛，还有人祝王涛新年快乐”，软碟通的官网是 <https://cn.ultraiso.net/>，这是张才哲找了很久才找到的。
 
 首先第一步，什么要买个 U 盘，等会，张才哲发现好像硬盘安装也是可以的，要先下载一个 easybcd，他找了一个绿色版然后设置一下 grub 参数，硬盘是 HD0，分区是 X。
 
@@ -180,7 +180,7 @@ G400 很快就重启了，自动进入了一个叫做 Unity 的桌面。
 
 “但是该怎么下载原版的 Ubuntu 呢？一打开 Ubuntu 官方就自己跳转到了 Ubuntukylin，没有办法啊”
 
-最后经过一番百毒，他又知道了有个东西叫做镜像站。似乎可以从 USTC 镜像站里面下载 Ubuntu 镜像，就在那个 https://mirrors.ustc.edu.cn/ 右边的“获取发行版映像”里面选 Ubuntu 14.04 就可以了。
+最后经过一番百毒，他又知道了有个东西叫做镜像站。似乎可以从 USTC 镜像站里面下载 Ubuntu 镜像，就在那个 <https://mirrors.ustc.edu.cn/> 右边的“获取发行版映像”里面选 Ubuntu 14.04 就可以了。
 
 接下来的方法和安装 kylin 版本是一模一样的，没有一分区别。为此不再赘述。
 
@@ -420,31 +420,31 @@ Fedora 的发布周期太短了，一年更新好几次，这让人没法用…�
 
 然后，张才哲输入了
 
-yum install php php-mysql php-gd php-imap php-ldap php-odbc php-pear php-xml php-xmlrpc
+`yum install php php-mysql php-gd php-imap php-ldap php-odbc php-pear php-xml php-xmlrpc`
 
-nano /var/www/html/info.php
+`nano /var/www/html/info.php`
 
 添加了
 
-```sh
+```php
 <?php
 
 phpinfo();?>
 ```
 
-然后重启了 httpd 服务。service httpd restart
+然后重启了 httpd 服务。`service httpd restart`
 
-张才哲打开 guomao2013/ info.php 后，看到了标题为 PHP Version 5.3.2 的网页。
+张才哲打开 `guomao2013/info.php` 后，看到了标题为 PHP Version 5.3.2 的网页。
 
 “最后安装数据库”
 
 张才哲输入了 yum install mysql mysql-server
 
-然后启动了 mysql 服务：service mysqld start
+然后启动了 mysql 服务：`service mysqld start`
 
-然后说要设置 root 密码：mysql_secure_installation 密码设置后按了 5 个回车。
+然后说要设置 root 密码：`mysql_secure_installation` 密码设置后按了 5 个回车。
 
-“这不也挺简单的吗！哦，还有开机自启 chkconfig mysqld on、chkconfig httpd on”
+“这不也挺简单的吗！哦，还有开机自启 `chkconfig mysqld on`、`chkconfig httpd on`”
 
 然后是下载 emlo 的压缩包用 wget（yum install wget）下载解压安装到 CentOS 上吗？“”
 
