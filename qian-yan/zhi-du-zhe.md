@@ -58,7 +58,7 @@
 >
 >请读者自行查阅 Jamie Lokier 对 Linux Kernel 线程性能的影响。
 
->A：换行符是不是骗局，回车在 windows 是 `/r/n`，换行在 Unix 是 `/n`，word 的换行符是不是 word 自己定义的？其他文本编辑器不识别。
+>A：换行符是不是骗局，回车在 windows 是 `\r\n`，换行在 Unix 是 `\n`，word 的换行符是不是 word 自己定义的？其他文本编辑器不识别。
 >
 >B：word 我用 gpt 生成的都是换行符，不是回车符，整得我没个都要删除再按回车。
 >
