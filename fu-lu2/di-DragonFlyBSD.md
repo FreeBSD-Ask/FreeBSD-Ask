@@ -236,14 +236,12 @@ root 密码设置完成。
 setenv LANG "zh_CN.UTF-8"
 ```
 
-在 `/etc/profile` 文件中添加：
+在 `/etc/profile` 文件中找到相关条目修改如下（**待测试**）：
 
 ```sh
-export LANG=zh_CN.UTF-8
-export LC_ALL="en_US.ISO8859-1"
-export LANG="en_US.ISO8859-1"
-export LC_CTYPE="en_US.ISO8859-1"
-export LANG=zh_CN.eucCN
+export LANG="zh_CN.UTF-8"
+export LC_ALL="zh_CN.UTF-8"
+export LC_CTYPE="zh_CN.UTF-8"
 ```
 
 ### intel i915kms 显卡
