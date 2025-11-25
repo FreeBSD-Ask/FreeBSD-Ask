@@ -11,39 +11,48 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository with Deploy Key
+      - name: Checkout repository
         uses: actions/checkout@v6
         with:
           ssh-key: ${{ secrets.DEPLOY_KEY }}
           fetch-depth: 0
 
-      - name: Copy and modify SUMMARY.md to mu-lu.md
+      - name: Process mu-lu.md
+        id: process
         run: |
-          # 删除旧文件
-          if [ -f mu-lu.md ]; then
-            rm mu-lu.md
-          fi
-          # 复制 SUMMARY.md
-          cp SUMMARY.md mu-lu.md
-          # 替换第一行
-          sed -i '1s/^# Table of contents$/# 目录/' mu-lu.md
-          echo "mu-lu.md updated with first line replaced"
+          set -e
 
-      - name: Check if mu-lu.md changed (excluding first line)
-        id: check_diff
-        run: |
-          # 生成临时文件去掉第一行
-          tail -n +2 SUMMARY.md > /tmp/summary_tail.txt
-          tail -n +2 mu-lu.md > /tmp/mulu_tail.txt
-          # 比较内容
-          if ! diff -q /tmp/summary_tail.txt /tmp/mulu_tail.txt >/dev/null; then
+          # 如果 mu-lu.md 不存在，直接生成
+          if [ ! -f mu-lu.md ]; then
+            cp SUMMARY.md mu-lu.md
+            sed -i '1s/^# Table of contents$/# 目录/' mu-lu.md
+            echo "mu-lu.md created from SUMMARY.md"
             echo "changed=true" >> $GITHUB_OUTPUT
-          else
+            exit 0
+          fi
+
+          # mu-lu.md 存在时，先生成 mu-lu-2.md
+          cp mu-lu.md mu-lu-2.md
+          sed -i '1s/^# 目录$/# Table of contents/' mu-lu-2.md
+
+          # 去掉第一行比较内容
+          tail -n +2 SUMMARY.md > /tmp/summary_tail.txt
+          tail -n +2 mu-lu-2.md > /tmp/mulu2_tail.txt
+
+          if diff -q /tmp/summary_tail.txt /tmp/mulu2_tail.txt >/dev/null; then
+            echo "No changes detected, mu-lu.md is up-to-date."
+            rm mu-lu-2.md
             echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            echo "Changes detected, updating mu-lu.md..."
+            rm mu-lu.md mu-lu-2.md
+            cp SUMMARY.md mu-lu.md
+            sed -i '1s/^# Table of contents$/# 目录/' mu-lu.md
+            echo "changed=true" >> $GITHUB_OUTPUT
           fi
 
       - name: Commit and push changes
-        if: steps.check_diff.outputs.changed == 'true'
+        if: steps.process.outputs.changed == 'true'
         uses: stefanzweifel/git-auto-commit-action@v7
         with:
           commit_message: "从 SUMMARY.md 更新 mu-lu.md [skip ci]"
