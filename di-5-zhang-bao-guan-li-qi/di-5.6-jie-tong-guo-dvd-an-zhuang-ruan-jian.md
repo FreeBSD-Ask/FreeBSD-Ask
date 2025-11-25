@@ -52,6 +52,10 @@ COPYRIGHT	etc		mnt		rescue		usr
 
 有 bug，会报错 `No pkg(8) database found!`。
 
+>**思考题**
+>
+>请读者自行阅读源代码，分析如何解决，使之生效。
+
 ## 使用环境变量直接安装 DVD 软件
 
 测试安装：
