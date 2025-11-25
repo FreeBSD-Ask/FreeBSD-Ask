@@ -8,7 +8,7 @@ FreeBSD 是真正自由（Liberty）的 **操作系统**，在这波谲云诡的
 
 这是一本开源的 FreeBSD 操作系统研究书籍，还包含一些 OpenBSD、NetBSD 等 BSD 家族的导论章节。
 
-[~~FreeBSD 项目归档（Archived）~~，为了保护我们心爱的操作系统……我们能做的事情就是，写一本书！](https://mzh.moegirl.org.cn/为了保护我们心爱的ooo……成为偶像！)
+[~~FreeBSD 项目归档（Archived）~~，为了保护我们心爱的操作系统……我们能做的事情就是，写一本书！](https://www.bilibili.com/bangumi/media/md3068)
 
 [![FreeBSD](https://img.shields.io/badge/FreeBSD-EB0028?logo=freebsd&logoColor=fff)](https://www.freebsd.org/)
 [![OpenBSD](https://img.shields.io/badge/OpenBSD-F2CA30?logo=openbsd&logoColor=black)](https://www.openbsd.org/)
