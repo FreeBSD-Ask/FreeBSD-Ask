@@ -1,12 +1,12 @@
 # 参考书目
 
-相关书籍：新的变化也不是很大。不像 Linux 有这么多入门书籍。出于历史上的原因，看 UNIX 相关书籍即可。
+以下有一到多本书籍可通过[微信读书](https://weread.qq.com/)/[番茄免费小说](https://fanqienovel.com/)/[QQ 阅读](https://book.qq.com/)/[京东读书](https://cread.jd.com/custom/custom_pcDownload.action)等软件免费阅读。
 
+部分书籍可能已经绝版，可尝试在社交媒体或致电联络出版社或译者再版，或通过[多抓鱼](https://www.duozhuayu.com/)，[孔夫子旧书网](https://www.kongfz.com/)等专业二手书平台进行购买。
 
-> **技巧**
->
-> 以下有多本书籍可通过微信读书免费阅读。
+如需无 DRM 电子书，请读者自行探索。
 
+## 主要参考书目
 
 | 封面 | 书名 | 作者/译者 | ISBN | 出版社 | 说明 |
 | :---: | :--- | :--- | :---: | :--- | :--- |
@@ -46,7 +46,7 @@
 《FreeBSD 操作系统设计与实现（原书第 2 版）》主要讲解了内核。轻型纸，居然还有几个章节需要自行在[网上](https://course.cmpreading.com/web/refbook/detail/9661/215)下载？该书阅读难度较大，据本书作者之一的博士生毕业生反映（出自韩国 FreeBSD 社区），他自己也看不懂。主要作者: Marshall Kirk McKusick 在其网站上有提供多款 [录制课程](https://www.mckusick.com/buylist.html)，大致价格为 1945 美元。目前正在撰写推出第三版，见 2025 年 6 月 BSDCan 大会 [相关视频](https://www.youtube.com/watch?v=SGC0191nDp0)。
 
 
-## 不建议阅读
+## 不建议阅读书目
 
 |封面 | 书名 | 作者 | ISBN | 出版社 |
 | :---: | :--- | :--- | :---: | :--- |
