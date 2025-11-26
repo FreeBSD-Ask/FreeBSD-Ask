@@ -2,7 +2,7 @@
 
 以下有一到多本书籍可通过[微信读书](https://weread.qq.com/)/[番茄免费小说](https://fanqienovel.com/)/[QQ 阅读](https://book.qq.com/)/[京东读书](https://cread.jd.com/custom/custom_pcDownload.action)等软件免费阅读。
 
-部分书籍可能已经绝版，可尝试在社交媒体或致电联络出版社或译者再版，或通过[多抓鱼](https://www.duozhuayu.com/)，[孔夫子旧书网](https://www.kongfz.com/)等专业二手书平台进行购买。
+部分书籍可能已经绝版，可尝试在社交媒体或致电联络出版社或译者再版，或通过[多抓鱼](https://www.duozhuayu.com/)、[孔夫子旧书网](https://www.kongfz.com/)等专业二手书平台进行购买。
 
 如需无 DRM 电子书，请读者自行探索。
 
