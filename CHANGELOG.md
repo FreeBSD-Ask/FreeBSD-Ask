@@ -4,6 +4,8 @@
 
 ## 2025 年第四季度
 
+- 2025.11.26
+  - 全面重写“致读者”
 - 2025.11.25
   - “24.3 机器无关的内核选项”引入 69% 的机器无关的内核选项（按行数计）
     - 根据编纂发现，提交 [NOTES: Fix a typo in a comments](https://github.com/freebsd/freebsd-src/pull/1899)
