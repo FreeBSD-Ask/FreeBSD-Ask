@@ -6,8 +6,9 @@
 
 - 2025.11.26
   - 全面重写“致读者”
+  - “24.3 机器无关的内核选项”引入 75%（按行数计）
 - 2025.11.25
-  - “24.3 机器无关的内核选项”引入 69% 的机器无关的内核选项（按行数计）
+  - “24.3 机器无关的内核选项”引入 69%（按行数计）
     - 根据编纂发现，提交 [NOTES: Fix a typo in a comments](https://github.com/freebsd/freebsd-src/pull/1899)
     - 根据编纂发现，提交 [NOTES: Remove duplicate options KCSAN entries](https://github.com/freebsd/freebsd-src/pull/1900)
   - 由于内容不足以构成一章，将“第 24 章 DragonFly BSD 入门”压缩到附录 Ⅱ“DragonFly BSD 导论”
@@ -17,9 +18,9 @@
 	- 24.3 机器无关的内核选项
   - 修复 mu-lu CI
 - 2025.11.24
-  - “22.16 FreeBSD 内核配置选项”引入 56% 的机器无关的内核选项（按行数计）
+  - “22.16 FreeBSD 内核配置选项”引入 56%（按行数计）
 - 2025.11.23
-  - “22.16 FreeBSD 内核配置选项”引入 40% 的机器无关的内核选项（按行数计）
+  - “22.16 FreeBSD 内核配置选项”引入 40%（按行数计）
   - 引入 RSS 订阅源 <https://docs.bsdcn.org/feed.rss>
 - 2025.11.22
   - 新增“22.16 FreeBSD 内核配置选项”，引入 i386/amd64 机器相关的内核选项
