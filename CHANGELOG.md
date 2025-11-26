@@ -7,6 +7,7 @@
 - 2025.11.26
   - 全面重写“致读者”
   - “24.3 机器无关的内核选项”引入 75%（按行数计）
+    - 根据编纂发现，提交 [Fix typos and unify Realtek terminology](https://github.com/freebsd/freebsd-src/pull/1901)
 - 2025.11.25
   - “24.3 机器无关的内核选项”引入 69%（按行数计）
     - 根据编纂发现，提交 [NOTES: Fix a typo in a comments](https://github.com/freebsd/freebsd-src/pull/1899)
