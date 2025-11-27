@@ -18,7 +18,10 @@
 	color: #FF0072; /* 链接使用秋冬季配色 */
 }
 
-
+/* 对正文段落设置首行缩进 2 个字符 */
+.content p {
+  text-indent: 2ch;
+}
 
 @media (min-width: 1920px)
 {
