@@ -20,7 +20,7 @@
 
 /* 对正文段落设置首行缩进 2 个字符 */
 .content p {
-  text-indent: 2ch;
+  text-indent: 2em;
 }
 
 @media (min-width: 1920px)
