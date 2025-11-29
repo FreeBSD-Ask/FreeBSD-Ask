@@ -270,7 +270,7 @@
 * [25.1 ZFS 概述](di-25-zhang-zfs/.md)
 * [25.2 ZFS 磁盘扩容](di-25-zhang-zfs/.md)
 * [25.3 ZFS 快照与还原](di-25-zhang-zfs/.md)
-* [25.4 启动环境](di-25-zhang-zfs/.md)
+* [25.4 zfs 启动环境](di-25-zhang-zfs/.md)
 * [25.5 zfs 的 zpool 升级](di-25-zhang-zfs/.md)
 * [25.6 zfs 委托管理](di-25-zhang-zfs/.md)
 
