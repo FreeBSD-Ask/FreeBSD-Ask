@@ -267,12 +267,13 @@
 
 ## 第 25 章 ZFS 文件系统
 
-* [25.1 ZFS 概述](di-25-zhang-zfs/.md)
-* [25.2 ZFS 磁盘扩容](di-25-zhang-zfs/.md)
-* [25.3 ZFS 快照与还原](di-25-zhang-zfs/.md)
-* [25.4 zfs 启动环境](di-25-zhang-zfs/.md)
-* [25.5 zfs 的 zpool 升级](di-25-zhang-zfs/.md)
-* [25.6 zfs 委托管理](di-25-zhang-zfs/.md)
+* [25.1 ZFS 概述](di-25-zhang-zfs/di-25.1-zfs-gaishu.md)
+* [25.2 ZFS 磁盘扩容](di-25-zhang-zfs/di-25.2-zfs-kuorong.md)
+* [25.3 ZFS 快照与还原](di-25-zhang-zfs/di-25.3-zfs-snap.md)
+* [25.4 zfs 启动环境](di-25-zhang-zfs/di-25.4-zfs-boot.md)
+* [25.5 zfs 的 zpool 升级](di-25-zhang-zfs/di-25.5-zfs-update.md)
+* [25.6 zfs 委托管理](di-25-zhang-zfs/di-25.6-zfs-weituo.md)
+* [25.7 ZFS 压缩](di-25-zhang-zfs/di-25.7-zfs-yasuo.md)
 
 ## 第 26 章 OpenBSD 入门
 
