@@ -1,6 +1,6 @@
-# 25.1 TwinCAT/BSD 系统安装和基本配置
+# TwinCAT/BSD 导论
 
-## 简介
+## TwinCAT/BSD 简介
 
 TwinCAT/BSD 是一款由倍福公司开发的基于 FreeBSD 的 PLC 控制的操作系统。个人不使用他们的功能则是完全免费的，倍福支持第三方硬件安装，只不过 license 费按照顶配 PLC 收费：倍福的 license 是根据硬件性能收费，一般的 PLC 是 P40/P50 这个标准，假如一个基本 license1500 元，第三方硬件按照 P90 收费，同样的功能 6000 元左右。
 
@@ -10,7 +10,7 @@ TwinCAT/BSD 是一款由倍福公司开发的基于 FreeBSD 的 PLC 控制的操
 - [TwinCAT/BSD for Industrial PCs](https://www.beckhoff.com/en-en/products/ipc/software-and-tools/twincat-bsd/)
 
 
-## 下载
+## 下载 TwinCAT/BSD
 
 <https://www.beckhoff.com/en-us/search-results/?q=bsd>
 
@@ -62,7 +62,7 @@ TCBSD 官方的镜像其实是用 `dd` 做成的，对应的是 FreeBSD 的 img 
 
 ![TCBSD](../.gitbook/assets/t10.png)
 
-## VMware VMware Workstation Pro 安装 TCBSD
+## 通过 VMware Workstation 安装 TwinCAT/BSD
 
 我们先以正常方法创建一个空白的虚拟机模板，然后点击“虚拟机设置”--“添加”--“硬盘”。点击下一步：
 
@@ -129,7 +129,7 @@ TCBSD 官方的镜像其实是用 `dd` 做成的，对应的是 FreeBSD 的 img 
 ![TCBSD](../.gitbook/assets/t26.png)
 
 
-## root
+## 用户账户
 
 默认用户名是 `Administrator`，他的密码是你在安装时设置的。倍福其他 PLC 默认密码都是 `1`。
 
@@ -145,7 +145,7 @@ doas passwd root
 doas su
 ```
 
-## 登录 Web 界面
+## Web 界面登录
 
 网络链接方式使用 NAT，经过测试桥接无法访问。
 
@@ -176,3 +176,35 @@ dhcpcd_flags="--denyinterfaces igb0"
 
 即将 `dhcpcd_flags` 的值由 `--waitip` 改为 `--denyinterfaces igb0` 。`igb0` 为需要配置静态 IP 的网卡名，请根据实际情况更改。
 
+
+## 换源
+
+切换到中国境内的 pkg 服务器
+
+```sh
+doas sh /usr/local/share/examples/bhf/pkgrepo-set.sh china
+```
+
+更新：
+
+```sh
+doas pkg update && doas pkg upgrade
+```
+
+## 安装 Beckhoff 提供开发工具包
+
+将安装：Beckhoff 维护的 llvm、C/C++ 头文件、C/C++ 库以及 TwinCATSDK。
+
+```sh
+doas pkg install os-generic-userland-devtools
+```
+
+## 启用 FreeBSD 源
+
+在默认情况下 pkg 只能安装 Beckhoff 维护的包，若要安装 FreeBSD 维护的包需要手动开启。
+
+```sh
+doas ee /usr/local/etc/pkg/repos/FreeBSD.conf
+```
+
+把 `FreeBSD: {enabled: no}` 中的 `no` 改为 `yes` 即可。

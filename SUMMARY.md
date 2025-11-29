@@ -251,14 +251,13 @@
 * [22.14 利用脚本自动生成 BSDlibc 库文本](di-22-zhang-bian-cheng-yu-kai-fa/di-22.14-jie-li-yong-jiao-ben-zi-dong-sheng-cheng-bsdlibc-ku-wen-ben.md)
 * [22.15 在 Linux 上构建 FreeBSD](di-22-zhang-bian-cheng-yu-kai-fa/di-22.15-jie-build-freebsd-on-linux.md)
 
-## 第 23 章 存储管理和文件系统
+## 第 23 章 存储管理
 
 * [23.1 自动挂载文件系统](di-23-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-23.1-zi-dong-gua-zai.md)
-* [23.2 ZFS 文件系统](di-23-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-23.2-jie-zfs.md)
-* [23.3 磁盘扩容和分区调整](di-23-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-23.3-jie-ci-pan-kuo-rong.md)
+* [23.2 Linux 文件系统](di-23-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-23.2-jie-ext-234-deng-wen-jian-xi-tong.md)
+* [23.3 UFS 文件系统](di-23-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-23.3-jie-ci-pan-kuo-rong.md)
 * [23.4 Windows 文件系统](di-23-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-23.4-jie-ntfs-de-gua-zai.md)
 * [23.5 Swap 交换分区](di-23-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-23.5-jie-swap-jiao-huan-fen-qu-de-she-zhi.md)
-* [23.6 Linux 文件系统](di-23-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-23.6-jie-ext-234-deng-wen-jian-xi-tong.md)
 
 ## 第 24 章 FreeBSD 内核
 
@@ -266,10 +265,15 @@
 * [24.2 机器相关的内核选项](di-24-zhang-kernel/di-24.2-kernel-md.md)
 * [24.3 机器无关的内核选项](di-24-zhang-kernel/di-24.3-kernel-mi.md)
 
-## 第 25 章 TwinCAT/BSD 入门
+## 第 25 章 ZFS 文件系统
 
-* [25.1 TwinCAT/BSD 系统安装和基本配置](di-25-zhang-twincatbsd/di-25.1-jie-xi-tong-an-zhuang-yu-ji-ben-pei-zhi.md)
-* [25.2 TwinCAT/BSD 开发环境配置](di-25-zhang-twincatbsd/di-25.2-jie-kai-fa-huan-jing-pei-zhi.md)
+* [25.1 ZFS 概述](di-25-zhang-zfs/di-25.1-zfs-gaishu.md)
+* [25.2 ZFS 磁盘扩容](di-25-zhang-zfs/di-25.2-zfs-kuorong.md)
+* [25.3 ZFS 快照与还原](di-25-zhang-zfs/di-25.3-zfs-snap.md)
+* [25.4 ZFS 启动环境](di-25-zhang-zfs/di-25.4-zfs-boot.md)
+* [25.5 ZFS 的 zpool 升级](di-25-zhang-zfs/di-25.5-zfs-update.md)
+* [25.6 ZFS 委托管理](di-25-zhang-zfs/di-25.6-zfs-weituo.md)
+* [25.7 ZFS 压缩](di-25-zhang-zfs/di-25.7-zfs-yasuo.md)
 
 ## 第 26 章 OpenBSD 入门
 
@@ -299,6 +303,7 @@
 ## 附录 Ⅱ 工具与资源
 
 * [DragonFly BSD 导论](fu-lu2/di-DragonFlyBSD.md)
+* [TwinCAT/BSD 导论](fu-lu2/TwinCAT.md)
 * [适用于 FreeBSD 的以太网卡、USB 以太网卡和 USB 无线网卡](fu-lu2/yi-tai-wang-ka.md)
 * [FreeBSD 桌面发行版评述](fu-lu2/others-bsd.md)
 * [BSD 许可证概览](fu-lu2/xukez.md)
