@@ -2,11 +2,11 @@
 
 ## 本书定位
 
-本书涉及了 FreeBSD 15.0-RELEASE（将来的）、14.3-RELEASE 和 13.5-RELEASE 的安装和日常使用（并尽量向下兼容），还包含一些 16.0-CURRENT 的内容。
+本书涉及了 FreeBSD 15.0-RELEASE、14.3-RELEASE 和 13.5-RELEASE 的安装和日常使用（并尽量向下兼容），还包含一些 16.0-CURRENT 的内容。
 
 主要面向 x86-64（amd64）、AArch64（arm64），并尽可能多的支持其他体系平台。
 
-Windows 测试环境为 Windows 11，并尽量使用最新更新通道的 Windows update。
+Windows 测试环境则为 Windows 11，并尽量使用较新更新通道的 Windows update。
 
 ## 对读者的要求
 
