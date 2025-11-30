@@ -22,7 +22,7 @@
 ## 第 2 章 安装 FreeBSD
 
 * [2.1 安装前的准备工作](di-2-zhang-an-zhuang-freebsd/di-2.1-install-pre.md)
-* [2.2 安装 FreeBSD 15](di-2-zhang-an-zhuang-freebsd/di-2.2-15ins.md)
+* [2.2 FreeBSD 15 安装指南](di-2-zhang-an-zhuang-freebsd/di-2.2-15ins.md)
 * [2.3 故障排除](di-2-zhang-an-zhuang-freebsd/di-2.3-jie-eol.md)
 * [2.4 将 U 盘启动盘恢复为普通 U 盘（基于 Windows）](di-2-zhang-an-zhuang-freebsd/di-2.4-jie-usb.md)
 
