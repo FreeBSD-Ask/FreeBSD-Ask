@@ -88,9 +88,9 @@
 
 ![](../.gitbook/assets/ins-w6.png)
 
-`选择你要链接的无线网络`
+`选择你要连接的无线网络`
 
-输入 WiFi 密码即可链接：
+输入 WiFi 密码即可连接：
 
 ![](../.gitbook/assets/ins-w7.png)
 
