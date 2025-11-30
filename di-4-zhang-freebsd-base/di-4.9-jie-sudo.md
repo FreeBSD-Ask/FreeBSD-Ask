@@ -373,3 +373,12 @@ ykla@ykla:~ $ sudo su
 [sudo: authenticate] Password: # 这里同样什么也没有，*** 也没有
 # 
 ```
+
+## 附录：通过 mac_do 提权
+
+参考文献：
+
+- [FreeBSD MAC 簡單介紹](https://sandb0x.tw/a/FreeBSD_MAC_%E7%B0%A1%E5%96%AE%E4%BB%8B%E7%B4%B9)
+- [man mac_do(4)](https://man.freebsd.org/cgi/man.cgi?mac_do(4))
+
+此部分比较简单，读者可自行了解或直接提交 PR 到本书。

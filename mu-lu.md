@@ -249,7 +249,6 @@
 * [22.12 code-server 和 clangd](di-22-zhang-bian-cheng-yu-kai-fa/di-22.12-jie-an-zhuang-code-server-he-clangd.md)
 * [22.13 Node.js](di-22-zhang-bian-cheng-yu-kai-fa/di-22.13-jie-nodejs-xiang-guan.md)
 * [22.14 利用脚本自动生成 BSDlibc 库文本](di-22-zhang-bian-cheng-yu-kai-fa/di-22.14-jie-li-yong-jiao-ben-zi-dong-sheng-cheng-bsdlibc-ku-wen-ben.md)
-* [22.15 在 Linux 上构建 FreeBSD](di-22-zhang-bian-cheng-yu-kai-fa/di-22.15-jie-build-freebsd-on-linux.md)
 
 ## 第 23 章 存储管理
 
@@ -265,6 +264,7 @@
 * [24.2 机器相关的内核选项](di-24-zhang-kernel/di-24.2-kernel-md.md)
 * [24.3 机器无关的内核选项](di-24-zhang-kernel/di-24.3-kernel-mi.md)
 * [24.4 GENERIC 内核选项（amd64）](di-24-zhang-kernel/di-24.4-GENERIC-kernel-mi.md)
+* [24.5 在 Linux 上构建 FreeBSD](di-24-zhang-kernel/di-24.5-jie-build-freebsd-on-linux.md)
 
 ## 第 25 章 ZFS 文件系统
 
