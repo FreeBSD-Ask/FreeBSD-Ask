@@ -264,6 +264,7 @@
 * [24.1 FreeBSD 内核选项概述](di-24-zhang-kernel/di-24.1-kernel-conf.md)
 * [24.2 机器相关的内核选项](di-24-zhang-kernel/di-24.2-kernel-md.md)
 * [24.3 机器无关的内核选项](di-24-zhang-kernel/di-24.3-kernel-mi.md)
+* [24.4 GENERIC 内核选项（amd64）](di-24-zhang-kernel/di-24.4-GENERIC-kernel-mi.md)
 
 ## 第 25 章 ZFS 文件系统
 
