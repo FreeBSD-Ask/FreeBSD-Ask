@@ -6,7 +6,7 @@
 
 ---
 
-以下安装说明基于 `FreeBSD-14.3-RELEASE-amd64-disc1.iso`。`-dvd1.iso` 和 `-memstick.img` 大同小异。
+以下安装说明基于 `FreeBSD-15.0-RELEASE-amd64-disc1.iso`。`-dvd1.iso` 和 `-memstick.img` 大同小异。
 
 >**警告**
 >
@@ -14,44 +14,42 @@
 >
 >若是物理机，请考虑使用 [rufus](https://rufus.ie/zh/) + [img 镜像](https://download.freebsd.org/ftp/releases/ISO-IMAGES/14.3/FreeBSD-14.3-RELEASE-amd64-memstick.img)。
 
-
-> **警告**
->
-> 如果要在 VMware 虚拟机使用 UEFI，必须使用 FreeBSD 13.0-RELEASE 及以上，否则启动会花屏。
-
 ## 启动安装盘
 
-![](../.gitbook/assets/ins1.png)
+![](../.gitbook/assets/15-0-1.png)
 
 此界面无需任何操作，等待十秒，可自动进入 `1. Boot Installer [Enter]`；亦可以直接按 **回车键** 进入。
 
-按 **空格键** 可暂停，可选定以下选项。
+### 启动界面参数
 
->**技巧**
->
->如果按其他任意键会进入提示符 `OK`，可输入 `menu` 再按 **回车键** 返回菜单。
+如果按其他任意键会暂停，然后可按数字键继续，或者按 **ESC** 进入 **OK 提示符**。
+
+![](../.gitbook/assets/ins111.png)
+
+在此界面可输入 `menu` 再按 **回车键** 返回菜单。输入 `?` 可查看可用命令。
 
 以下操作：按最开头的数字可进行选定。`on` 代表已开启，`off` 代表已关闭。
 
 |     选项     |                                   解释                                    |
-| :----------: | :----------------------------------------------------------------------- |
+| :---------- | :----------------------------------------------------------------------- |
 |`1. Boot Installer [Enter]`|用于安装系统|
 | `2. Boot Single user` |  单用户模式，找回 root 密码和修复磁盘时会用到 |
 |  `3.Escape to loader prompt`   |           离开菜单，进入命令模式，进入后输入 `reboot` 回车可重启                                |
 | `4.Reboot`  |        重启                      |
 |  `5. Cons: Video`    |    选择输出模式：视频（`Video`）、串口（`Serial`）、同时输出，但串口优先（`Dual (Serial primary)`）、同时输出，但视频优先（`Dual (Video primary)` 可选）                         |
-|`6. Kernel: default/kernel (1 of 1)`|选择要启动的内核|
+|`6. kernel (1 of 1)`|选择要启动的内核|
+|`7. Boot Options`|启动选项|
 
 ![](../.gitbook/assets/ins2.png)
 
-|**`7. Boot Options`**|启动参数|
-| :----------: | :----------------------------------------------------------------------- |
-|`1. Back to main menu [Backspace]`|按 **删除键** 可返回上级菜单 |
-|`2. Load System Defaults`|恢复默认配置|
-|`3. ACPI`|Advanced Configuration and Power Management Interface，高级配置和电源接口|
-|`4. Safe Mode`|安全模式|
-|`5. Single user`|单用户模式|
-|`6. Verbose`|啰嗦模式，增加更多调试信息输出|
+|**`7. Boot Options`**|默认值|启动参数|
+| :----------: | :-----:|:----------------------------------------------------------------------- |
+|`1. Back to main menu [Backspace]`| On（开）  |按 **删除键** 可返回上级菜单 |
+|`2. Load System Defaults`| off（关）  |恢复默认配置|
+|`3. ACPI`| off（关）  |Advanced Configuration and Power Management Interface，高级配置和电源接口|
+|`4. Safe Mode`|  off（关） |安全模式|
+|`5. Single user`|  off（关） |单用户模式|
+|`6. Verbose`|  off（关） |啰嗦模式，增加更多调试信息输出|
 
 
 >**警告**
