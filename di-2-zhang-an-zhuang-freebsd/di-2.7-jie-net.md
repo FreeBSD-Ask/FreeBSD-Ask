@@ -2,11 +2,23 @@
 
 ## 以太网卡设置
 
-![](../.gitbook/assets/ins17.png)
+![](../.gitbook/assets/ins17-15.png)
 
-`请选择一个网络接口进行配置`
+`请选择网络接口和配置模式进行配置`
+
+- `Auto`：自动
+- `Manual`：手动
+- `Cancel`：取消
 
 即选择网卡。按 **方向键** 可切换，按 **回车键** 可选定。
+
+### 自动（`Auto`）
+
+![](../.gitbook/assets/ins18-15.png)
+
+`发送路由器请求`，将会自动检测网络并设定网络环境。
+
+### 手动（`Manual`）
 
 ![](../.gitbook/assets/ins18.png)
 
@@ -118,7 +130,7 @@
 
 一般保持 DHCP 获取的 DNS 即可，也可以使用其他 DNS。此处使用了阿里 DNS `223.5.5.5`。按 **方向键** 可切换，按 **回车键** 可选定。
 
-### 参考文献
+#### 参考文献
 
 - [Regulatory Domain Support](https://wiki.freebsd.org/WiFi/RegulatoryDomainSupport)
 - [main/lib/lib80211/regdomain.xml](https://github.com/freebsd/freebsd-src/blob/main/lib/lib80211/regdomain.xml)，regdomain.xml 在源代码的位置
