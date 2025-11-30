@@ -230,7 +230,7 @@ Current=sddm-freebsd-black-theme
 # cd /usr/ports/sysutils/plasma6-systemsettings/ && make install clean
 ```
 
-可选 Port：
+可选 Ports：
 
 ```
 # cd /usr/ports/x11/konsole/ && make install clean # 终端 
