@@ -2,7 +2,7 @@
 
 ## 设定键盘布局
 
-![](../.gitbook/assets/ins4.png)
+![](../.gitbook/assets/ins4-15.png)
 
 `FreeBSD 系统控制台驱动程序默认使用标准` US `（美式）键盘布局。可以在下面选择别的键盘布局。`
 
