@@ -12,6 +12,7 @@
   - 新增“24.4 GENERIC 内核选项（amd64）”
   - “24.1 FreeBSD 内核选项概述”新增“附录：man config(5) 中文”“附录：man [device.hints(5)](https://man.freebsd.org/cgi/man.cgi?query=device.hints) 中文”
   - 将“22.15 在 Linux 上构建 FreeBSD”移动到“第 24 章 FreeBSD 内核”
+  - 将“2.1-2.9”压缩归档至附录 Ⅱ“FreeBSD 13/14 安装指南”
 - 2025.11.29
   - “24.3 机器无关的内核选项”引入 100%
   - 修复“21.7 Gentoo Linux 兼容层”。15.0-RELEASE 测试通过。
