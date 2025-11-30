@@ -138,7 +138,7 @@ NVMe 硬盘 ZFS 加密后的磁盘结构（同时加密了交换空间）：
 |     分区类型      | 挂载点 |             设备              |
 | :---------------: | :----: | :---------------------------: |
 | freebsd-boot /EFI |        |          /dev/nda0p1          |
-|    freebsd-zfs    |   /    | /dev/nda0p2/、/dev/nda0p2.eli |
+|    freebsd-zfs    |   /    | /dev/nda0p2、/dev/nda0p2.eli |
 |   freebsd-swap    |        | /dev/nda0p3、/dev/nda0p3.eli  |
 
 浏览 EFI 分区会发现并无特殊之处，同正常安装一样。启动时会提示输入密码以挂载根分区。
