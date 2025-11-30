@@ -2,7 +2,7 @@
 
 FreeBSD 14.2 RELEASE 的 `/` 分区支持 UFS 和 ZFS 两种文件系统。旧版 FreeBSD 系统 root 分区仅支持 UFS 一种文件系统：`bsdinstall` 从 10.0 [开始](http://svn.freebsd.org/viewvc/base?view=revision&revision=256361) 支持 zfs，手动安装的话至迟 8.0 就 [可以](https://blog.delphij.net/posts/2008/11/zfs-1/) 用 zfs 作为根分区了。
 
-![](../.gitbook/assets/ins7.png)
+![](../.gitbook/assets/ins7-15.png)
 
 分区菜单。`你希望如何分区你的磁盘？`
 
@@ -48,13 +48,11 @@ FreeBSD 14.2 RELEASE 的 `/` 分区支持 UFS 和 ZFS 两种文件系统。旧�
 
 `正在探测设备，请稍候（这可能需要一些时间）……`
 
-![](../.gitbook/assets/ins8.png)
+![](../.gitbook/assets/ins8-15.png)
 
 现代（近十几年内的）计算机应该选择 `GPT+UEFI`。请勿使用默认选项！这样会产生一个 512KB 的 `freebsd-boot` 多余分区。
 
 较老的计算机（如 2013 年以前的）才应该选择选项 `GPT(BIOS)`——此默认选项同时兼容二者。
-
-![](../.gitbook/assets/ins8.2.png)
 
 |配置选项 | 中文 | 说明|
 |---|---|---|
@@ -91,7 +89,7 @@ FreeBSD 14.2 RELEASE 的 `/` 分区支持 UFS 和 ZFS 两种文件系统。旧�
 >
 >此界面按 **上下方向键** 可浏览。按 **回车键** 可返回到上一菜单。
 
-![](../.gitbook/assets/ins9.png)
+![](../.gitbook/assets/ins9-15.png)
 
 `选择虚拟设备类型：`
 
@@ -106,7 +104,7 @@ FreeBSD 14.2 RELEASE 的 `/` 分区支持 UFS 和 ZFS 两种文件系统。旧�
 
 我们直接按 **回车键** 使用默认的 `Stripe` 即可。
 
-![](../.gitbook/assets/ins10.png)
+![](../.gitbook/assets/ins10-15.png)
 
 选中你的硬盘，直接按 **回车键** 即可。
 
@@ -119,7 +117,7 @@ FreeBSD 14.2 RELEASE 的 `/` 分区支持 UFS 和 ZFS 两种文件系统。旧�
 >如果你的硬盘是 eMMC，可能会出现三个选项，类似于 `mmcsd0`、`mmcsd0boot0` 和 `mmcboot1`。请选择 `mmcsd0`。另外如果多硬盘与 eMMC 共存，若另一块硬盘分区量大于 5 个，eMMC 中的 FreeBSD 会卡在 `Mounting from zfs:zroot/ROOT/default failed with error 22: retrying for 3 more seconds`。且若手动指定，会直接 Panic。疑似 Bug，但我不知道如何报告，无法获取进一步的细节。
 
 
-![](../.gitbook/assets/ins12.png)
+![](../.gitbook/assets/ins12-15.png)
 
 `最后机会！你确定要销毁以下磁盘的当下内容吗：`
 
@@ -205,6 +203,9 @@ NVMe 硬盘 ZFS 加密后的磁盘结构（同时加密了交换空间）：
 初始化磁盘——此界面一闪而过
 
 ---
+pkgbase（若选择）：
+
+![](../.gitbook/assets/ins13-15.png)
 
 校验相关分发文件包：
 
