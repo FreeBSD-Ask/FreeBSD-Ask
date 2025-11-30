@@ -48,7 +48,7 @@ KDE 旨在开发一套现代桌面系统，如果你觉得 KDE 界面很像 Wind
 
 ![KDE 6 界面](../.gitbook/assets/kde6-1.png)
 
-### `startx`
+## `startx`
 
 ```sh
 # echo "exec ck-launch-session startplasma-x11" > ~/.xinitrc
