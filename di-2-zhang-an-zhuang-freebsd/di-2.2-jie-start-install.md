@@ -29,7 +29,7 @@
 
 >**技巧**
 >
->如果按其他任意键盘会进入提示符 `OK`，可输入 `menu` 再按 **回车键** 返回菜单。
+>如果按其他任意键会进入提示符 `OK`，可输入 `menu` 再按 **回车键** 返回菜单。
 
 以下操作：按最开头的数字可进行选定。`on` 代表已开启，`off` 代表已关闭。
 
@@ -39,8 +39,8 @@
 | `2. Boot Single user` |  单用户模式，找回 root 密码和修复磁盘时会用到 |
 |  `3.Escape to loader prompt`   |           离开菜单，进入命令模式，进入后输入 `reboot` 回车可重启                                |
 | `4.Reboot`  |        重启                      |
-|  `5. Cons: Video`    |    选择输出模式：视频（`Video`）、串口（`Serial`）、同时输出，但串口优先（`Dual (Serial primary)`、同时输出，但视频优先（`Dual (Video primary)` 可选）                         |
-|`6. Lernel: default/kernal (1 of 1)`|选择要启动的内核|
+|  `5. Cons: Video`    |    选择输出模式：视频（`Video`）、串口（`Serial`）、同时输出，但串口优先（`Dual (Serial primary)`）、同时输出，但视频优先（`Dual (Video primary)` 可选）                         |
+|`6. Kernel: default/kernel (1 of 1)`|选择要启动的内核|
 
 ![](../.gitbook/assets/ins2.png)
 

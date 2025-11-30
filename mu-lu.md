@@ -303,6 +303,7 @@
 
 ## 附录 Ⅱ 工具与资源
 
+* [FreeBSD 13/14 安装指南](fu-lu2/14.0-ins.md)
 * [DragonFly BSD 导论](fu-lu2/di-DragonFlyBSD.md)
 * [TwinCAT/BSD 导论](fu-lu2/TwinCAT.md)
 * [适用于 FreeBSD 的以太网卡、USB 以太网卡和 USB 无线网卡](fu-lu2/yi-tai-wang-ka.md)

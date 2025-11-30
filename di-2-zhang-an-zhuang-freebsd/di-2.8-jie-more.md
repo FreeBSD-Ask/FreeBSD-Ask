@@ -46,7 +46,7 @@
 >
 >**不要全选！**
 >
->**不要** 选 `local_unbound`，会影响 DNS，见 [https://bugs.freebsd.org/bugzilla/show_bug.cgi?id = 262290](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=262290)。除非你知道这是什么。
+>**不要** 选 `local_unbound`，会影响 DNS，见 [Bug  262290 - After a normal FreeBSD installation and reboot, /etc/resolv.conf will be changed](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=262290)。除非你知道这是什么。
 
 
 |     选项      |                                                                                  解释                                                                                   |
@@ -79,10 +79,10 @@
 |`3 read_msgbuf`|禁止非特权用户读取内核消息缓冲区（一般用 `dmesg` 查看）|
 |`4 proc_debug`|禁用非特权用户的进程调试功能|
 |`5 random_pid`|进程的 PID 随机化|
-|`6 clear_tmp`|在开机时清除 `/tpm`|
+|`6 clear_tmp`|在开机时清除 `/tmp`|
 |`7 disable_syslogd`|禁用 Syslogd 网络套接字（禁用远程日志记录）|
 |`8 secure_console`|启用控制台密码（单用户模式下也需要 root 密码）|
-|`9 disable_ddttrace`|禁止 DTrace 破坏性（destructive）模式|
+|`9 disable_ddtrace`|禁止 DTrace 破坏性（destructive）模式|
 
 
 ## 安装固件

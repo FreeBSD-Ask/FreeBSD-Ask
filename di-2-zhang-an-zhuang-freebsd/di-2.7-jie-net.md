@@ -88,15 +88,15 @@
 
 ![](../.gitbook/assets/ins-w6.png)
 
-`选择你要链接的无线网络`
+`选择你要连接的无线网络`
 
-输入 WiFi 密码即可链接：
+输入 WiFi 密码即可连接：
 
 ![](../.gitbook/assets/ins-w7.png)
 
 ![](../.gitbook/assets/ins18.png)
 
-`你想要为此接口配置 IPv4 吗`
+`你想要为此接口配置 IPv4 吗？`
 
 配置 IPv4。按 **回车键** 可选定。
 
