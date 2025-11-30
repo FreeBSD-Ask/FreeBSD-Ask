@@ -38,7 +38,7 @@
 
 ## 启动服务设置
 
-![](../.gitbook/assets/ins28.png)
+![](../.gitbook/assets/ins28-15.png)
 
 `选择你希望在开机时启动的服务`
 
@@ -51,12 +51,12 @@
 
 |     选项      |                                                                                  解释                                                                                   |
 | :-----------: | :------------------------ |
-| `local_unbound` | 启用 Unbound。这是基本系统预置的 unbound，仅用于本地缓存转发解析器使用。注意：如果开启，你的系统将不会正确联网，需要手动配置 DNS。如果你不知道这是什么不建议开启 |
 |     `sshd`      |                                                                              开启 ssh 服务                                                                              |
-|    `moused`     |                                                                           在 tty 界面显示鼠标                                                                           |
 |     `ntpd`      |                                                              用于自动时钟同步的网络时间协议（NTP）守护程序                                                              |
 |`ntpd_sync_on_start`|开机同步时间|
+| `local_unbound` | 启用 Unbound。这是基本系统预置的 unbound，仅用于本地缓存转发解析器使用。注意：如果开启，你的系统将不会正确联网，需要手动配置 DNS。如果你不知道这是什么不建议开启 |
 |    `powerd`     |                                                                                电源管理，CPU 频率动态调整                                                                                 |
+|    `moused`     |                                                                           在 tty 界面显示鼠标                                                                           |
 |    `dumpdev`    |                                                                       启用崩溃转储，用于调试系统                                                                        |
 
 ## 安全加固
@@ -66,10 +66,6 @@
 `选择系统安全加固选项`
 
 这里是安全加固部分，可根据需要自行选定。
-
->**技巧**
->
->在 FreeBSD 14 以前版本的安装中，在这一步会出现 `disable_sendmail`，请选定之，如果不禁止这个服务会使你在每次开机的时候卡上几分钟，而且这个服务本身没什么用，发邮件用的。
 
 |选项 | 解释|
 | :-----------: | :------------------------ |
@@ -119,7 +115,7 @@
 >
 >绝大多数登录管理器都是默认禁止 root 用户登录。换言之，如果不进行一定的修改（参见其他章节），在默认状态下，你可能无法用 root 登录桌面。~~虽然在默认状态下 FreeBSD 不带桌面，或者还可以直接 `startx`~~。
 
-![](../.gitbook/assets/ins31.png)
+![](../.gitbook/assets/ins31-15.png)
 
 
 >**警告**
@@ -141,7 +137,8 @@ Login class [default]: # 用户分级
 Shell (sh csh tcsh nologin) [sh]: # 用户默认 shell，默认是 sh
 Home directory [/home/ykla]: # 用户主（家）目录，普通用户默认在 /home 下面
 Home directory permissions (Leave empty for default): # 用户主（家）目录权限，留空将使用默认值
-Use password-based authentication? [yes]:  # 是否启用密码验证
+Enable ZFS encryption? (yes/no) [no]: # 是否启用 ZFS 加密
+Use password-based authentication? [yes]:  # 是否启用用户密码验证
 Use an empty password? (yes/no) [no]:  # 是否使用空密码，即密码为空
 Use a random password? (yes/no) [no]:  # 是否使用随机密码。若设置 yes 将生成随机字符串用作密码。该密码会回显到标准输出。②
 Enter password:  # 输入密码，密码不显示在屏幕上，也不会是 ****，就是什么也没有
