@@ -146,7 +146,7 @@ NVMe 硬盘 ZFS 加密后的磁盘结构（同时加密了交换空间）：
 如果是在 LiveCD 挂载，也很简单，也不需要密钥。执行命令：
 
 ```sh
-# geli attach /dev/nda0p3
+# geli attach /dev/nda0p2
 ```
 
 然后输入正确的密码即可通过命令 `# zfs mount zroot/ROOT/default` 导入磁盘即可。
