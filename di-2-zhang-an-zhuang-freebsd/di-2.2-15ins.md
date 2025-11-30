@@ -3,17 +3,17 @@
 
 >**技巧**
 >
->视频教程见 [FreeBSD 14.2 基础安装配置教程](https://www.bilibili.com/video/BV1STExzEEhh)（物理机）、[002-VMware17 安装 FreeBSD14.2](https://www.bilibili.com/video/BV1gji2YLEoC)（虚拟机）。
+>视频教程见 [FreeBSD 14.2 基础安装配置教程](https://www.bilibili.com/video/BV1STExzEEhh)（物理机）、[002-VMware17 安装 FreeBSD 14.2](https://www.bilibili.com/video/BV1gji2YLEoC)（虚拟机）。
 
 ---
 
 以下安装说明基于 `FreeBSD-15.0-RELEASE-amd64-disc1.iso`。`-dvd1.iso` 和 `-memstick.img` 大同小异。
 
->**警告**
+>**注意**
 >
 >本文基于 VMware 17 进行演示（使用 UEFI）。
 >
->若是物理机，请考虑使用 [rufus](https://rufus.ie/zh/) + [img 镜像](https://download.freebsd.org/ftp/releases/ISO-IMAGES/14.3/FreeBSD-14.3-RELEASE-amd64-memstick.img)。
+>若是物理机，请考虑使用 [rufus](https://rufus.ie/zh/) + [img 镜像](https://download.freebsd.org/ftp/releases/ISO-IMAGES/15.0/FreeBSD-15.0-RELEASE-amd64-memstick.img)。
 
 ## 启动安装盘
 
