@@ -48,7 +48,7 @@ KDE 旨在开发一套现代桌面系统，如果你觉得 KDE 界面很像 Wind
 
 ![KDE 6 界面](../.gitbook/assets/kde6-1.png)
 
-## `startx`
+## startx
 
 ```sh
 # echo "exec ck-launch-session startplasma-x11" > ~/.xinitrc
@@ -57,10 +57,6 @@ KDE 旨在开发一套现代桌面系统，如果你觉得 KDE 界面很像 Wind
 > **注意**
 >
 >如果你在 root 下已经执行过了，那么新用户仍要再执行一次才能正常使用（无需 root 权限或 sudo 等）`startx`。
-
->**注意**
->
->若采用最小化安装 KDE 方法，必须配置 `.xinitrc`！
 
 ## 权限设置
 
@@ -244,6 +240,12 @@ Current=sddm-freebsd-black-theme
 # cd /usr/ports/sysutils/plasma6-plasma-disks/ && make install clean # 磁盘健康（S.M.A.R.T.）监测 
 # cd /usr/ports/archivers/ark/ && make install clean # 解压缩软件 
 ```
+
+### xinitrc
+
+>**注意**
+>
+>若采用最小化安装 KDE 方法，必须配置 `.xinitrc`！
 
 ### 最小化安装 KDE 图示
 
