@@ -130,7 +130,7 @@
 
 一般保持 DHCP 获取的 DNS 即可，也可以使用其他 DNS。此处使用了阿里 DNS `223.5.5.5`。按 **方向键** 可切换，按 **回车键** 可选定。
 
-#### 参考文献
+### 参考文献
 
 - [Regulatory Domain Support](https://wiki.freebsd.org/WiFi/RegulatoryDomainSupport)
 - [main/lib/lib80211/regdomain.xml](https://github.com/freebsd/freebsd-src/blob/main/lib/lib80211/regdomain.xml)，regdomain.xml 在源代码的位置
