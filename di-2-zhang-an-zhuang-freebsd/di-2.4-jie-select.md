@@ -1,7 +1,13 @@
 # 2.4 选择安装组件
 
 
-![](../.gitbook/assets/ins6.png)
+![](../.gitbook/assets/isn6-15.png)
+
+`你想使用传统的 Distribution sets（发行组件）还是使用 Packages（软件包，技术预览）来安装基本系统？`
+
+## 发行组件（Distribution Sets）
+
+![](../.gitbook/assets/ins6-15-2.png)
 
 `选择要安装的可选系统组件`
 
