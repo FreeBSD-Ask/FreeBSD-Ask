@@ -46,7 +46,7 @@
 >
 >**不要全选！**
 >
->**不要** 选 `local_unbound`，会影响 DNS，见 [https://bugs.freebsd.org/bugzilla/show_bug.cgi?id = 262290](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=262290)。除非你知道这是什么。
+>**不要** 选 `local_unbound`，会影响 DNS，见 [Bug  262290 - After a normal FreeBSD installation and reboot, /etc/resolv.conf will be changed](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=262290)。除非你知道这是什么。
 
 
 |     选项      |                                                                                  解释                                                                                   |
