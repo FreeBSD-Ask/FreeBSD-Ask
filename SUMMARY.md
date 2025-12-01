@@ -312,7 +312,7 @@
 * [小说：吾乡何处](fu-lu3/wu-xiang-he-chu.md)
 * [小说：你与暗](fu-lu3/ni-yu-an.md)
 * [诗歌选](fu-lu3/shi-ge-xuan.md)
-* [杂记](fu-lu3/za-ji.md)
+* [手记](fu-lu3/za-ji.md)
   
 ## 附录 Ⅳ 参考文献和术语
 
