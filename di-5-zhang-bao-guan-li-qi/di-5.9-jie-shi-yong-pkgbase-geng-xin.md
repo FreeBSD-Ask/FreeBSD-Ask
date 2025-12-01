@@ -29,7 +29,7 @@ FreeBSD 官方源的 pkgbase 信息如下：
 | releng/14.2（RELEASE） | 每天两次：08:00、20:00 | <https://pkg.freebsd.org/${ABI}/base_release_2> |
 | releng/14.3（RELEASE） | 每天两次：08:00、20:00 | <https://pkg.freebsd.org/${ABI}/base_release_3> |
 
-**以上表格的时间已转换为北京时间，即东八区时间。为 FreeBSD 官方镜像站时间。**
+**以上表格的时间已转换为北京时间，即东八区时间，均为 FreeBSD 官方镜像站的时间。**
 
 若官方源下载速度慢，可以考虑换成国内镜像。
 
