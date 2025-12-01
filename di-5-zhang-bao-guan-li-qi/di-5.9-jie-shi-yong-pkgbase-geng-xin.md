@@ -1,8 +1,6 @@
 # 5.9 使用 pkgbase 更新 FreeBSD
 
-现在 FreeBSD 的系统更新是与第三方软件更新的分离的（现在使用 `freebsd-update`），pkgbase 是目的就是将其合并起来统一使用 `pkg` 命令进行管理（学习 Linux？）。因为现在只有一级架构的 RELEASE 才有 `freebsd-update` 可用。pkgbase 早在 2016 年就有了，原计划在 FreeBSD 14 就进入系统替代 `freebsd-update`，但是现在推迟到了 15。另外个人感觉 `freebsd-update` 体验非常差，非常慢（网络无关）。
-
-**pkgbase 的设计初衷是为了让 stable、current 和 release（BETA、RC 等）都能使用一种二进制工具进行更新。当下，stable、current 只能通过完全编译源代码的方式来更新。**
+pkgbase 的设计初衷是为了让 stable、current 和 release（BETA、RC 等）都能使用一种二进制工具进行更新。当下，stable、current 只能通过完全编译源代码的方式来更新。
 
 >**警告**
 >
@@ -22,15 +20,16 @@ FreeBSD 官方源的 pkgbase 信息如下：
 
 | **分支** | **更新频率** | **URL 地址** |
 | :---: | :---: | :--- |
-| main（15.0-CURRENT） | 每天两次：08:00、20:00 | <https://pkg.freebsd.org/${ABI}/base_latest> |
-| main（15.0-CURRENT） | 每周一次：星期日 20:00 | <https://pkg.freebsd.org/${ABI}/base_weekly> |
+| main（16.0-CURRENT） | 每天两次：08:00、20:00 | <https://pkg.freebsd.org/${ABI}/base_latest> |
+| main（16.0-CURRENT） | 每周一次：星期日 20:00 | <https://pkg.freebsd.org/${ABI}/base_weekly> |
 | stable/14 | 每天两次：08:00、20:00  | <https://pkg.freebsd.org/${ABI}/base_latest> |
 | stable/14 | 每周一次：星期日 20:00 | <https://pkg.freebsd.org/${ABI}/base_weekly> |
 | releng/14.0（RELEASE） | 每天两次：08:00、20:00 | <https://pkg.freebsd.org/${ABI}/base_release_0> |
 | releng/14.1（RELEASE） | 每天两次：08:00、20:00 | <https://pkg.freebsd.org/${ABI}/base_release_1> |
 | releng/14.2（RELEASE） | 每天两次：08:00、20:00 | <https://pkg.freebsd.org/${ABI}/base_release_2> |
+| releng/14.3（RELEASE） | 每天两次：08:00、20:00 | <https://pkg.freebsd.org/${ABI}/base_release_3> |
 
-**以上表格的时间已转换为北京时间，即东八区时间。为 FreeBSD 官方镜像站时间。**
+**以上表格的时间已转换为北京时间，即东八区时间，均为 FreeBSD 官方镜像站的时间。**
 
 若官方源下载速度慢，可以考虑换成国内镜像。
 
