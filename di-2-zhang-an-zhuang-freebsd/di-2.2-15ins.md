@@ -185,6 +185,8 @@ pkgbase 是 TrueOS 留给 FreeBSD 项目的技术遗产，旨在以软件包的�
 
 ### 发行组件（Distribution Sets）
 
+这是传统的安装方式。
+
 ![](../.gitbook/assets/ins6-15-2.png)
 
 `选择要安装的可选系统组件`
