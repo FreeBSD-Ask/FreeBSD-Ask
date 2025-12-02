@@ -17,7 +17,7 @@ Hyprland 是 Wayland 的一款合成器，支持窗口透明、模糊、圆角�
 ### 使用 pkg 安装：
 
 ```sh
-# pkg ins hyprland waybar wofi qt6-base qt5-wayland qt6-wayland xdg-desktop-portal-hyprland hyprpicker swaybg mako nerd-fonts slurp grim swaylock kitty dolphin
+# pkg ins hyprland waybar wofi qt6-base qt5-wayland qt6-wayland xdg-desktop-portal-hyprland hyprpicker swaybg mako nerd-fonts slurp grim swaylock kitty dolphin hyprpolkitagent
 ```
 
 ### 或者使用 Ports 安装：
@@ -39,6 +39,7 @@ Hyprland 是 Wayland 的一款合成器，支持窗口透明、模糊、圆角�
 # cd /usr/ports/x11/swaylock/ && make install clean
 # cd /usr/ports/x11-fm/dolphin/ && make install clean
 # cd /usr/ports/x11/kitty/ && make install clean
+# cd /usr/ports/sysutils/hyprpolkitagent/ && make install clean
 ```
 
 ### 解释软件包
@@ -65,7 +66,7 @@ Hyprland 是 Wayland 的一款合成器，支持窗口透明、模糊、圆角�
 | `swaylock`                  | 锁屏工具 |
 | `kitty`                     | 终端|
 |`dolphin`|文件管理器|
-
+|`hyprpolkitagent`|polkit 验证代理|
 
 ## 启动服务
 
@@ -80,7 +81,7 @@ Hyprland 是 Wayland 的一款合成器，支持窗口透明、模糊、圆角�
 
 先设置 `XDG_RUNTIME_DIR` 避免启动报错。
 
-如果是默认 shell sh，将以下写入 `~/.profile`（`echo $0` 能显示当前默认 shell）：
+如果是默认 shell sh，将以下写入 `~/.profile`（对于 zsh，放入 `~/.zprofile`，下同）：
 
 ```sh
 export XDG_RUNTIME_DIR=/var/run/user/`id -u`
@@ -100,9 +101,9 @@ dbus-run-session Hyprland
 
 也可以通过 `Hyprland -c 配置文件路径` 来指定配置文件。  
 
-## 配置 hyprland.conf
+## 配置默认配置文件 `hyprland.conf`
 
-文件位置：`~/.config/hypr/hyprland.conf`。
+Hyprland 默认配置文件的位置是 `~/.config/hypr/hyprland.conf`。
 
 注意：
 
