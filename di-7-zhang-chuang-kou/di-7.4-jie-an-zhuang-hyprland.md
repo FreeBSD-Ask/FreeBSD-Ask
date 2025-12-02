@@ -369,7 +369,7 @@ map ctrl+0                change_font_size current 0
 
 ## 配置 waybar（任务栏）
 
-waybar 的配置文件目录在主目录的 `.config/waybar` 文件夹里面，包含一个 `config.jsonc` 文件，和一个 `style.css`. 可以参考使用示例配置文件的 waybar 文件夹。示例配置文件中需要安装 noto-enoji 字体才能正常显示，也可以改成自己想要的图标。
+waybar 的配置文件目录在主目录的 `.config/waybar` 文件夹里面，包含一个 `config.jsonc` 文件，和一个 `style.css`. 可以参考使用示例配置文件的 waybar 文件夹。示例配置文件中需要安装软件包 `noto-emoji` 才能正常显示，也可以改成自己想要的图标。
 
 `config.jsonc` 示例：
 
@@ -817,4 +817,4 @@ text-caps-lock-color=000000FF
 - [ArchLinux 下 Hyprland 配置指北](https://www.bilibili.com/read/cv22707313/)
 - [Hyprland 的配置](https://nth233.top/posts/2023-02-26-Hyprland%E9%85%8D%E7%BD%AE)
 - [Gentoo Wiki Hyprland](https://wiki.gentoo.org/wiki/Hyprland)指出启动命令应为 `dbus-run-session Hyprland`
-- [Arch Wiki  Hyprland](https://wiki.archlinux.org/title/Hyprland)指出虚拟机需要 3D 加速，因此依赖 drm GPU，而 FreeBSD 目前未进行移植，故不支持。其同时支持 Nvidia 亦无法得到支持。
+- [Arch Wiki Hyprland](https://wiki.archlinux.org/title/Hyprland)指出虚拟机需要 3D 加速，因此依赖 drm GPU，而 FreeBSD 目前未进行移植，故在 FreeBSD 上不支持。同时在所有平台上 Nvidia 均无法得到支持。
