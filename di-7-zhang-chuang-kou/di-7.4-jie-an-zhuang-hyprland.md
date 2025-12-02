@@ -78,21 +78,17 @@ Hyprland 是 Wayland 的一个合成器，支持窗口透明、模糊、圆角�
 
 ### 设置 XDG_RUNTIME_DIR
 
-先设置 `XDG_RUNTIME_DIR` 避免启动报错，**这里以 zsh 为默认 shell 作为示例：**
+先设置 `XDG_RUNTIME_DIR` 避免启动报错。
 
-在 `~/.zprofile` 里面写入：
+如果默认 shell 是 sh，将同样写入 `~/.profile` 即可（`echo $0` 可以显示默认 shell）：
 
 ```sh
 export XDG_RUNTIME_DIR=/var/run/user/`id -u`
 ```
 
->**技巧**
->
->如果默认 shell 是 sh，将同样写入 `~/.profile` 即可，`echo $0` 可以显示默认 shell。
-
 随后重启：`reboot`。
 
-按 Ctrl+Alt+F2 进入 tty，执行 `ck-launch-session Hyprland`，这会在 `~/.config/hypr` 生成一个默认配置文件。
+按 Ctrl+Alt+F2 进入 tty，执行 `dbus-run-session Hyprland`，这会在 `~/.config/hypr` 生成一个默认配置文件。
 
 ## 配置自动启动
 
