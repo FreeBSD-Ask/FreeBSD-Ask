@@ -8,7 +8,7 @@
 >
 >除软件包安装、重启外，本文任何命令应在非 root 账户权限下执行！
 
-Hyprland 是 Wayland 的一个合成器，支持窗口透明、模糊、圆角等等，动画效果做得不错。Hyprland 窗口焦点切换和传统桌面有所区别，它是鼠标光标放在哪个窗口上（没错是“放在”，不需要点击），窗口焦点就在哪里，通常没有 Alt+Tab 这种快捷键去切换。
+Hyprland 是 Wayland 的一款合成器，支持窗口透明、模糊、圆角等等，动画效果做得不错。Hyprland 窗口焦点切换和传统桌面有所区别，它是鼠标光标放在哪个窗口上（没错是“放在”，不需要点击），窗口焦点就在哪里，通常没有 Alt+Tab 这种快捷键去切换。
 
 ![hyprland on freebsd](../.gitbook/assets/hyprland.png)
 
@@ -80,7 +80,7 @@ Hyprland 是 Wayland 的一个合成器，支持窗口透明、模糊、圆角�
 
 先设置 `XDG_RUNTIME_DIR` 避免启动报错。
 
-如果默认 shell 是 sh，将以下写入 `~/.profile`（`echo $0` 能显示当前默认 shell）：
+如果是默认 shell sh，将以下写入 `~/.profile`（`echo $0` 能显示当前默认 shell）：
 
 ```sh
 export XDG_RUNTIME_DIR=/var/run/user/`id -u`
@@ -118,9 +118,9 @@ dbus-run-session Hyprland
 示例：
 
 ```sh
-# 进入 Hyprland 后自动启动 fcitx5（已经注释掉，读者在按照其他章节在安装 fcitx 5 后自行取消下行注释即可）
+# 进入 Hyprland 后自动启动 fcitx 5。已经注释掉，读者在安装 fcitx5 后可自行取消掉注释
 #exec-once=fcitx5
-# 设置壁纸，别忘了修改成你自己壁纸文件的所在路径！！！
+# 设置壁纸，别忘了修改成你自己壁纸文件的所在路径！！
 #exec-once=swaybg -i "$HOME/Pictures/Wallpapers/壁纸.jpg"
 # 任务栏
 exec-once=waybar
