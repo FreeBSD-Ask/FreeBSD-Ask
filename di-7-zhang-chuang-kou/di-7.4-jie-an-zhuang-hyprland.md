@@ -1,18 +1,26 @@
 # 7.4 Hyprland
 
+>**警告**
+>
+>由于 DRM GPU 驱动未移植，目前在常见虚拟机中均不可用。
+>
+>在 Nvidia 下不可用！
+>
+>除软件包安装，重启外，本文任何命令应在非 root 账户权限下执行！
+
 Hyprland 是 Wayland 的一个合成器，支持窗口透明、模糊、圆角等等，动画效果做的不错。
 
 ![hyprland on freebsd](../.gitbook/assets/hyprland.png)
 
 ## 安装 Hyprland
 
-- 使用 pkg 安装：
+### 使用 pkg 安装：
 
 ```sh
 # pkg ins hyprland waybar wofi qt6-base qt5-wayland qt6-wayland xdg-desktop-portal-hyprland hyprpicker swaybg mako nerd-fonts slurp grim swaylock kitty dolphin
 ```
 
-- 或者使用 Ports 安装：
+### 或者使用 Ports 安装：
 
 ```sh
 # cd /usr/ports/x11-wm/hyprland/ && make install clean
@@ -33,12 +41,11 @@ Hyprland 是 Wayland 的一个合成器，支持窗口透明、模糊、圆角�
 # cd /usr/ports/x11/kitty/ && make install clean
 ```
 
+### 解释软件包
 
 >**注意**
 >
 >作为依赖会自动安装 dbus 及  wayland。
-
-- 解释：
 
 | 包名                        | 作用说明                                                                 |
 |:-----------------------------|:--------------------------------------------------------------------------|
@@ -67,36 +74,39 @@ Hyprland 是 Wayland 的一个合成器，支持窗口透明、模糊、圆角�
 # service dbus enable
 ```
 
-## 首次启动 Hyprland
+## 启动 Hyprland
 
-> **重要**：
->
-> 如果启动报错提示未设置 XDG_RUNTIME_DIR，可以使用下面方法进行设置。**这里以 zsh 为默认 shell 作为示例：**
->
-> 在 `~/.zprofile` 里面写入：（如果默认 shell 是 sh，写入~/.profile，echo $0 可以显示默认 shell）
->
-> ```sh
-> export XDG_RUNTIME_DIR=/var/run/user/`id -u`
-> ```
->
-> 随后重启： `reboot`
->
->
-> Ctrl+Alt+F2 进入 tty，执行 `ck-launch-session Hyprland`，这会在 `~/.config/hypr` 生成一个默认配置文件。
+### 设置 XDG_RUNTIME_DIR
 
-## 配置
+先设置 `XDG_RUNTIME_DIR` 避免启动报错，**这里以 zsh 为默认 shell 作为示例：**
 
-
-如果需要自动启动，请将下行写入 `~/.zprofile`：
+在 `~/.zprofile` 里面写入：
 
 ```sh
-ck-launch-session Hyprland
+export XDG_RUNTIME_DIR=/var/run/user/`id -u`
+```
+
+>**技巧**
+>
+>如果默认 shell 是 sh，将同样写入 `~/.profile` 即可，`echo $0` 可以显示默认 shell。
+
+随后重启：`reboot`。
+
+按 Ctrl+Alt+F2 进入 tty，执行 `ck-launch-session Hyprland`，这会在 `~/.config/hypr` 生成一个默认配置文件。
+
+## 配置自动启动
+
+
+如果需要自动启动（不使用登录管理器），请将下行写入 `~/.zprofile`：
+
+```sh
+dbus-run-session Hyprland
 ```
 
 如果默认 shell 是 sh，应写入 `~/.profile` 也可以指定配置文件 `Hyprland -c 配置文件路径`  
-Hyprland 窗口焦点切换和传统桌面有所区别，它是鼠标光标放在哪个窗口上（没错是“放在”，不需要点击一下），窗口焦点就在哪里，没有 Alt+Tab 这种快捷键去切换。
+Hyprland 窗口焦点切换和传统桌面有所区别，它是鼠标光标放在哪个窗口上（没错是“放在”，不需要点击），窗口焦点就在哪里，没有 Alt+Tab 这种快捷键去切换。
 
-### 配置 hyprland.conf
+## 配置 hyprland.conf
 
 文件位置：`~/.config/hypr/hyprland.conf`
 
@@ -105,9 +115,11 @@ Hyprland 窗口焦点切换和传统桌面有所区别，它是鼠标光标放�
 - 悬浮窗口和传统桌面环境中的行为类似，可以随意拖动到屏幕上的任何位置，可以用鼠标调节窗口大小。默认的配置文件中是按住 mod 键，然后鼠标左键按住悬浮窗口可以拖动窗口进行移动，而按住右键拖动窗口可以调节窗口的大小。设置默认悬浮的窗口：`windowrulev2 = float, title:QQ`
 - 建议阅读一下下面的配置文件 hyprland.conf，swaybg 用于设置壁纸，别忘了修改成你自己的图片文件的路径。
 
-5.任务栏：`exec-once=waybar`
+## 任务栏：`exec-once=waybar`
 
-`hyprland.conf` 示例：
+- `hyprland.conf` 
+
+示例：
 
 ```sh
 # 进入 Hyprland 后自动启动 fcitx5（已经注释掉，按照 5.2 章安装后自行取消注释即可）
@@ -262,9 +274,11 @@ bindm = $mainMod, mouse:273, resizewindow
 
 ```
 
-### 配置 kitty.conf
+## 配置 kitty.conf
 
-文件位置：`~/.config/kitty/kitty.conf` 示例：
+- 文件位置：`~/.config/kitty/kitty.conf` 
+
+示例：
 
 ```sh
 # Look and feel
@@ -357,7 +371,7 @@ map ctrl+0                change_font_size current 0
 
 ```
 
-### 配置 waybar（任务栏）
+## 配置 waybar（任务栏）
 
 waybar 的配置文件目录在主目录的 `.config/waybar` 文件夹里面，包含一个 `config.jsonc` 文件，和一个 `style.css`. 可以参考使用示例配置文件的 waybar 文件夹。示例配置文件中需要安装 noto-enoji 字体才能正常显示，也可以改成自己想要的图标。
 
@@ -735,9 +749,11 @@ window#waybar {
 
 ```
 
-### 配置 swaylock
+## 配置 swaylock
 
-swaylock 的配置文件在 `~/.config/swaylock/config` 中，以下是示例配置文件：
+swaylock 的配置文件在 `~/.config/swaylock/config`
+
+- 示例配置文件：
 
 ```sh
 ignore-empty-password
@@ -796,9 +812,13 @@ text-caps-lock-color=000000FF
 
 ## 故障排除与未竟事宜
 
-如果启动失败，或者黑屏，请检查有没有把自己用户加入到 `video` 组，有没有安装显卡驱动，有没有正确设置环境变量 `XDG_RUNTIME_DIR`，生效否。
+### 启动失败/黑屏
+
+请检查有没有把自己用户加入到 `video` 组，有没有安装显卡驱动，有没有正确设置环境变量 `XDG_RUNTIME_DIR`，生效否。
 
 ## 参考文献
 
 - [ArchLinux 下 Hyprland 配置指北](https://www.bilibili.com/read/cv22707313/)
 - [Hyprland 的配置](https://nth233.top/posts/2023-02-26-Hyprland%E9%85%8D%E7%BD%AE)
+- [Gentoo Wiki Hyprland](https://wiki.gentoo.org/wiki/Hyprland)指出启动命令应为 `dbus-run-session Hyprland`
+- [Arch Wiki  Hyprland](https://wiki.archlinux.org/title/Hyprland)指出虚拟机需要 3D 加速，因此依赖 drm GPU，而 FreeBSD 目前未进行移植，故不支持。其同时支持 Nvidia 亦无法得到支持。
