@@ -103,7 +103,7 @@ export XDG_RUNTIME_DIR=/var/run/user/`id -u`
 dbus-run-session Hyprland
 ```
 
-如果默认 shell 是 sh，应写入 `~/.profile` 也可以指定配置文件 `Hyprland -c 配置文件路径`  
+如果默认 shell 是 sh，应写入 `~/.profile`，也可以通过 `Hyprland -c 配置文件路径` 指定配置文件。  
 Hyprland 窗口焦点切换和传统桌面有所区别，它是鼠标光标放在哪个窗口上（没错是“放在”，不需要点击），窗口焦点就在哪里，没有 Alt+Tab 这种快捷键去切换。
 
 ## 配置 hyprland.conf
