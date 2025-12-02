@@ -118,7 +118,7 @@ dbus-run-session Hyprland
 示例：
 
 ```sh
-# 进入 Hyprland 后自动启动 fcitx 5。已经注释掉，读者在安装 fcitx5 后可自行取消掉注释
+# 进入 Hyprland 后自动启动 fcitx5。已经注释掉，读者在安装 fcitx5 后可自行取消掉注释
 #exec-once=fcitx5
 # 设置壁纸，别忘了修改成你自己壁纸文件的所在路径！！
 #exec-once=swaybg -i "$HOME/Pictures/Wallpapers/壁纸.jpg"
