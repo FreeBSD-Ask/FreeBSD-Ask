@@ -747,7 +747,7 @@ window#waybar {
 
 ## 配置 swaylock
 
-swaylock 的配置文件在 `~/.config/swaylock/config`
+swaylock 的配置文件在 `~/.config/swaylock/config` 中。
 
 - 示例配置文件：
 
