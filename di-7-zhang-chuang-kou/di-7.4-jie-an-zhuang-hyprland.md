@@ -8,7 +8,7 @@
 >
 >除软件包安装，重启外，本文任何命令应在非 root 账户权限下执行！
 
-Hyprland 是 Wayland 的一个合成器，支持窗口透明、模糊、圆角等等，动画效果做的不错。
+Hyprland 是 Wayland 的一个合成器，支持窗口透明、模糊、圆角等等，动画效果做得不错。
 
 ![hyprland on freebsd](../.gitbook/assets/hyprland.png)
 
