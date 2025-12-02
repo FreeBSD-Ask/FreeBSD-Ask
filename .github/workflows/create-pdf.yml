@@ -121,7 +121,8 @@ jobs:
             pdf-generator/build/${{ env.RELEASE_TAG }}.pdf
             pdf-generator/build/${{ env.RELEASE_TAG }}.epub
           token: ${{ secrets.GITHUB_TOKEN }}
-
+          makeLatest: true
+  
       - name: 更新 Release 说明
         uses: actions/github-script@v8
         with:
