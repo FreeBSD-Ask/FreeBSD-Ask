@@ -4,6 +4,8 @@
 
 ## 2025 年第四季度
 
+- 2025.12.3
+  - 改进“7.4 Hyprland”格式，修正启动命令为 `dbus-run-session Hyprland`，声明其不支持在任何虚拟机及 Nvidia GPU 上运行
 - 2025.11.30
   - 将不具有实质性内容的“第 25 章 TwinCAT/BSD 入门”压缩到附录 Ⅱ“TwinCAT/BSD 导论”
   - 将“23.2 ZFS 文件系统”拆分为“第 25 章 ZFS 文件系统”
