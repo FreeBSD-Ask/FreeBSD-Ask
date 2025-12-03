@@ -372,14 +372,13 @@ VMware 已被博通收购。**故目前下载任何博通产品均须先注册�
 >  
 >![补充信息](../.gitbook/assets/downbcm5.png)
 >
->- 勾选“I agree to Terms and Conditions”（我同意条款及条件）左侧的方框 ⬜，让他变成 🟦。
+>- 勾选“I agree to Terms and Conditions”（我同意条款及条件）左侧的方框 ⬜，让他变成 🟦。（必须先点击“Terms and Conditions”弹窗新页面，再回来就能勾选了）
 >  
 >![同意许可协议](../.gitbook/assets/downbcm6.png)
 >
 >- 点击右侧箭头的云朵图片 ☁️ 即可下载
 >  
 >![下载](../.gitbook/assets/downbcm7.png)
-
 
 
 VMware Workstation Pro 目前对于个人用户来说是 **免费下载、免费使用、免费授权的。** **请勿从任何第三方站点下载。** 否则会造成一些未知的后果——90% 的问题都是由此产生的。
