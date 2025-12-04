@@ -114,7 +114,7 @@
 * [9.1 音频设备配置](di-9-duo-mei-ti/di-9.1-jie-sheng-ka-yu-wang-ka-she-zhi.md)
 * [9.2 蓝牙](di-9-duo-mei-ti/di-9.2-jie-lan-ya.md)
 * [9.3 打印机](di-9-duo-mei-ti/di-9.3-jie-da-yin-ji-de-an-zhuang.md)
-* [9.4 触摸板](di-9-duo-mei-ti/di-9.4-jie-chu-mo-ban-de-she-zhi.md)
+* [9.4 触摸板与键鼠](di-9-duo-mei-ti/di-9.4-jie-chu-mo-ban-de-she-zhi.md)
 * [9.5 音频播放器](di-9-duo-mei-ti/di-9.5-jie-yin-pin-bo-fang-qi.md)
 * [9.6 视频播放器](di-9-duo-mei-ti/di-9.6-shi-pin-bo-fang.md)
 * [9.7 多媒体处理工具](di-9-duo-mei-ti/di-9.7-tu-xing-tu-xiang.md)
