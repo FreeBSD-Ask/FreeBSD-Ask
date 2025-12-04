@@ -8,7 +8,7 @@
 ## 前言
 
 * [前言](qian-yan/qian-yan.md)
-* [致读者](qian-yan/zhi-du-zhe.md)
+* [致读者：拒斥苦难哲学，高扬人道主义，回到生活本身](qian-yan/zhi-du-zhe.md)
 * [致谢](qian-yan/zhi-xie.md)
 * [绪论](qian-yan/xu-lun.md)
 
