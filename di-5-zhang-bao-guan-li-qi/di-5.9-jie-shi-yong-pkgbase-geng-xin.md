@@ -95,7 +95,7 @@ zroot/ROOT/15.0-RELEASE  99036272 11132688 87903584    11%    /mnt/upgrade
 - `-u`：打印已安装用户态的版本和补丁级别。这些信息在构建过程中会被写入程序 `freebsd-version` 中。
 
 
-### 将启动环境 15.0-RELEASE 中的 14.3-RELEASE 转换到 pkgbase
+### 使用 pkgbase 将启动环境 15.0-RELEASE（启动环境名称）中的 14.3-RELEASE（系统版本）转换到 pkgbase
 
 pkgbase 的设计初衷是为了让 stable、current 和 release（BETA、RC 等）都能使用一种二进制工具进行更新。当下，stable、current 只能通过完全编译源代码的方式来更新。
 
@@ -168,7 +168,7 @@ After verifying those files, restart the system.
 
 注意到 pkgbasify 把我们更新到了最新的点版本，并且已经把我们更新到了 pkgbase
 
-### 使用 pkgbase 进行更新启动环境 15.0-RELEASE 中到 15.0-RELEASE
+### 使用 pkgbase 将启动环境中的系统版本更新到 15.0-RELEASE
 
 - 创建 pkgbase 软件源目录
 
