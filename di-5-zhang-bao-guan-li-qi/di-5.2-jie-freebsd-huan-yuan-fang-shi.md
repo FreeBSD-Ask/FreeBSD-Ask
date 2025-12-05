@@ -27,6 +27,10 @@
 >
 > [NJU](https://github.com/nju-lug/NJU-Mirror-Issue/issues/54) 和 163 均同步自 USTC 而非 FreeBSD 直接上游。
 
+>**警告**
+>
+>对于那些以安全性为较高优先级的用户来说，应该使用默认的官方镜像 `pkg.freebsd.org`！其由官方构建，分发和维护，且不受境内网络监管。
+
 
 ## pkg 源：pkg 源提供了二进制软件包
 
