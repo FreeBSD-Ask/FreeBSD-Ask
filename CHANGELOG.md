@@ -4,6 +4,8 @@
 
 ## 2025 年第四季度
 
+- 2025.12.6
+  - 将“5.9 使用 pkgbase 更新 FreeBSD”完全重写为“5.9 使用 ZFS 启动环境更新 FreeBSD 并实现多版本共存”
 - 2025.12.5
   - 新增 ZFS 脚本，可用于查看、创建、删除、恢复 ZFS 快照。[FreeBSD-Ask/zfs-snap 项目地址](https://github.com/FreeBSD-Ask/zfs-snap)
   - 同时将 ZFS 脚本部署到了 <https://docs.bsdcn.org/zfs.sh>，方便直接 `fetch` 下载使用
