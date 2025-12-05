@@ -23,6 +23,51 @@ FreeBSD 官方源的 pkgbase 信息如下：
 找到 Lua 脚本中的 `create_base_repo_conf` 函数：
 
 ```lua
+local function base_repo_url()
+	local major, minor, branch = freebsd_version()
+	if math.tointeger(major) < 14 then
+		fatal("Unsupported FreeBSD version: " .. raw)
+	end
+	if branch == "RELEASE" or branch:match("^BETA") or branch:match("^RC") then
+		return "pkg+https://pkg.FreeBSD.org/${ABI}/base_release_" .. minor
+	elseif branch == "CURRENT" or
+		branch == "STABLE" or
+		branch == "PRERELEASE" or
+		branch:match("^ALPHA")
+	then
+		return "pkg+https://pkg.FreeBSD.org/${ABI}/base_latest"
+	else
+		fatal("Unsupported FreeBSD version: " .. raw)
+	end
+end
+```
+
+将这部分函数中修改如下，其中 `url` 指定了镜像站：
+
+```lua
+local function base_repo_url()
+	local major, minor, branch = freebsd_version()
+	if math.tointeger(major) < 14 then
+		fatal("Unsupported FreeBSD version: " .. raw)
+	end
+	if branch == "RELEASE" or branch:match("^BETA") or branch:match("^RC") then
+		return "https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/base_release_" .. minor
+	elseif branch == "CURRENT" or
+		branch == "STABLE" or
+		branch == "PRERELEASE" or
+		branch:match("^ALPHA")
+	then
+		return "https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/base_latest"
+	else
+		fatal("Unsupported FreeBSD version: " .. raw)
+	end
+end
+```
+
+
+再找到下面的函数 `create_base_repo_conf`
+
+```lua
 local function create_base_repo_conf(path)
 	assert(os.execute("mkdir -p " .. path:match(".*/")))
 	local f <close> = assert(io.open(path, "w"))
@@ -46,24 +91,28 @@ local function create_base_repo_conf(path)
 end
 ```
 
-将这部分函数中修改如下，其中 `url` 指定了镜像站：
+修改如下（删除了 srv 相关数行）：
 
 ```lua
 local function create_base_repo_conf(path)
-    assert(os.execute("mkdir -p " .. path:match(".*/")))
-    local f <close> = assert(io.open(path, "w"))
-    assert(f:write(string.format([[
+	assert(os.execute("mkdir -p " .. path:match(".*/")))
+	local f <close> = assert(io.open(path, "w"))
+	if math.tointeger(freebsd_version()) >= 15 then
+		assert(f:write(string.format([[
 %s: {
-  url: "https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/base_latest",
-  mirror_type: "srv",
-  signature_type: "fingerprints",
-  fingerprints: "/usr/share/keys/pkg",
   enabled: yes
 }
 ]], options.repo_name)))
+	else
+		assert(f:write(string.format([[
+%s: {
+  url: "%s",
+  enabled: yes
+}
+]], options.repo_name, base_repo_url())))
+	end
 end
 ```
-
 
 ### 南京大学开源镜像站 NJU
 
