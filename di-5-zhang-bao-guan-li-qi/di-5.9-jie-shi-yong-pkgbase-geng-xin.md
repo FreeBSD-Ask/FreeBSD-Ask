@@ -1,4 +1,4 @@
-# 使用 ZFS 启动环境更新 FreeBSD 并实现多版本共存
+# 5.9 使用 pkgbase 更新 FreeBSD
 
 ## 从 FreeBSD 14 更新到 FreeBSD 15
 
