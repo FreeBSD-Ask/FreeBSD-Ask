@@ -292,7 +292,7 @@ BE                             Active Mountpoint   Space Created
 default                        NR     /            10.9G 2025-01-14 20:36
 ```
 
-注意，这是一次性的（`T`），我们只是为了看看他是否正常。我们还需要回到目前的主系统 14.3-RELEASE 来更新 ZFS。
+注意，这是一次性的（`T`），我们只是为了看看它是否正常。我们还需要回到目前的主系统 14.3-RELEASE 来更新 ZFS。
 
 - 重启以进入启动环境 15.0-RELEASE
 
