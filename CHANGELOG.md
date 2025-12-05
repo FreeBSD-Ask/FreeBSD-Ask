@@ -7,6 +7,7 @@
 - 2025.12.5
   - 新增 ZFS 脚本，可用于查看、创建、删除、恢复 ZFS 快照。[FreeBSD-Ask/zfs-snap 项目地址](https://github.com/FreeBSD-Ask/zfs-snap)
   - 同时将 ZFS 脚本部署到了 <https://docs.bsdcn.org/zfs.sh>，方便直接 `fetch` 下载使用
+  - “25.4 ZFS 启动环境”新增“附录：多版本/系统共存的 ZFS 版本问题”
 - 2025.12.4
   - “9.4 触摸板与键鼠”新增“附录：解决 15.0 及更高版本键鼠无法驱动”
 - 2025.12.3
