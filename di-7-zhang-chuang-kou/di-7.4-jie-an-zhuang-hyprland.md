@@ -14,13 +14,13 @@ Hyprland 是 Wayland 的一款合成器，支持窗口透明、模糊、圆角�
 
 ## 安装 Hyprland
 
-### 使用 pkg 安装：
+### 使用 pkg 安装
 
 ```sh
 # pkg ins hyprland waybar wofi qt6-base qt5-wayland qt6-wayland xdg-desktop-portal-hyprland hyprpicker swaybg mako nerd-fonts slurp grim swaylock kitty dolphin hyprpolkitagent
 ```
 
-### 或者使用 Ports 安装：
+### 或者使用 Ports 安装
 
 ```sh
 # cd /usr/ports/x11-wm/hyprland/ && make install clean
@@ -114,7 +114,7 @@ Hyprland 默认配置文件的位置是 `~/.config/hypr/hyprland.conf`。
 
 ## 任务栏：`exec-once=waybar`
 
-- `hyprland.conf` 
+- `hyprland.conf`
 
 示例：
 
