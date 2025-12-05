@@ -1,18 +1,5 @@
 # 5.9 使用 pkgbase 更新 FreeBSD
 
-pkgbase 的设计初衷是为了让 stable、current 和 release（BETA、RC 等）都能使用一种二进制工具进行更新。当下，stable、current 只能通过完全编译源代码的方式来更新。
-
->**警告**
->
->**存在风险，可能会丢失所有数据！建议在操作之前做好备份。**
-
-## 下载 `pkgbasify` 脚本
-
-在 [Github 仓库](https://github.com/FreeBSDFoundation/pkgbasify) 下载 `pkgbasify.lua` 脚本文件：
-
-```sh
-$ fetch https://github.com/FreeBSDFoundation/pkgbasify/raw/refs/heads/main/pkgbasify.lua
-```
 
 ## （可选）配置软件源
 
@@ -36,19 +23,24 @@ FreeBSD 官方源的 pkgbase 信息如下：
 修改 Lua 脚本中的 `create_base_repo_conf` 函数：
 
 ```lua
-function create_base_repo_conf(path)
+local function create_base_repo_conf(path)
 	assert(os.execute("mkdir -p " .. path:match(".*/")))
 	local f <close> = assert(io.open(path, "w"))
-	assert(f:write(string.format([[
-FreeBSD-base: {
+	if math.tointeger(freebsd_version()) >= 15 then
+		assert(f:write(string.format([[
+%s: {
+  enabled: yes
+}
+]], options.repo_name)))
+	else
+		assert(f:write(string.format([[
+%s: {
   url: "%s",
   mirror_type: "srv",
   signature_type: "fingerprints",
   fingerprints: "/usr/share/keys/pkg",
   enabled: yes
 }
-]], base_repo_url())))
-end
 ```
 
 将软件源信息替换为下列镜像站中的任何一个，例如：
