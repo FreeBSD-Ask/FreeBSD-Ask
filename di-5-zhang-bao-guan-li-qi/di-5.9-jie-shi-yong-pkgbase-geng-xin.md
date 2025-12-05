@@ -16,7 +16,7 @@
 - 使用 bectl 检查：
 
 ```
-# bectl list # 显示所有启动环境
+$ bectl list # 显示所有启动环境
 BE           Active Mountpoint Space Created
 15.0-RELEASE -      -          176K  2025-12-05 22:27
 default      NR     /          10.6G 2025-01-14 20:36
@@ -271,11 +271,107 @@ Unlocking pkg-2.4.2_1
 # chroot /mnt/upgrade pkg upgrade
 ```
 
+需要反复确认多次才能完成更新。
+
+### 启动到启动环境 15.0-RELEASE
+
+- 在下次启动时进入启动环境 15.0-RELEASE
+
+```sh
+# bectl activate -t 15.0-RELEASE
+Successfully activated boot environment 15.0-RELEASE
+for next boot
+```
+
+- 验证设置是否成功：
+
+```sh
+$ bectl list
+BE                             Active Mountpoint   Space Created
+15.0-RELEASE                   T      /mnt/upgrade 8.75G 2025-12-05 23:22
+default                        NR     /            10.9G 2025-01-14 20:36
+```
+
+注意，这是一次性的（`T`），我们只是为了看看他是否正常。我们还需要回到目前的主系统 14.3-RELEASE 来更新 ZFS。
+
+- 重启以进入启动环境 15.0-RELEASE
+
+```sh
+# reboot
+```
+
+- 验证版本：
+
+```sh
+$ freebsd-version -kru
+15.0-RELEASE
+15.0-RELEASE
+15.0-RELEASE
+$ bectl list
+BE                             Active Mountpoint Space Created
+15.0-RELEASE                   N      /          8.75G 2025-12-05 23:22
+default                        R      -          10.9G 2025-01-14 20:36
+```
+
+可以看到，我们已经成功地把启动环境 15.0-RELEASE 中的 FreeBSD 版本升级到了 15.0-RELEASE，现在名副其实了。
+
+并且 `R` 意味着我们再次重启就会回到启动环境 `default`（14.3-RELEASE）。
+
+#### 附录：永久性使用 15.0-RELEASE 
+
+如果读者不需要多版本共存，并且验证过目前的环境满足需要，也可以将启动环境 15.0-RELEASE 设置为永久的：
+
+```sh
+# bectl activate 15.0-RELEASE
+```
+
+然后读者也可以销毁不再需要的启动环境：
+
+```sh
+# bectl destroy 启动环境
+```
+
+将参数 `启动环境` 替换为命令 `bectl list` 的 `BE` 列中的对应启动环境即可。
+
+## 更新旧系统中的 ZFS 
+
+通常，在 FreeBSD 大版本间的 ZFS （池）版本/特性都会变动，如从 14.3 到 15.0 的 zpool 版本就有所升级。
+
+可通过 ZFS 实现 13、14、15 等多版本共存。
+
+>**警告**
+>
+>如不按照下方进行设置就强行升级 ZFS 池，将无法访问旧版系统。
+
+那些有意愿实现多版本共存的读者可以直接重启，进入启动环境 `default`（14.3-RELEASE）。
+
+### 验证当前系统版本
+
+我们需要确定我们的确在启动环境 `default`（14.3-RELEASE）中。
+
+```sh
+$ bectl list
+BE                             Active Mountpoint Space Created
+15.0-RELEASE                   -      -          8.75G 2025-12-05 23:22
+default                        NR     /          10.9G 2025-01-14 20:36
+$ freebsd-version -kru
+14.3-RELEASE
+14.3-RELEASE
+14.3-RELEASE
+```
+
+可以看到，我们已经回来了。
 
 
-## 附录：多版本/系统共存的 ZFS 版本问题
+### 查看内置的 OpenZFS 版本
 
-可以把一个启动环境升级为 FreeBSD 14，实现 13、14 多版本共存。需要在共存后安装 Port filesystems/openzfs，否则永远无法升级 zfs 池。
+```sh
+root@ykla:/home/ykla # zfs --version
+zfs-2.2.7-FreeBSD_ge269af1b3
+zfs-kmod-2.2.7-FreeBSD_ge269af1b3
+```
+
+目前 FreeBSD 基本系统内置的是 OpenZFS 2.2.7（即来自 <https://github.com/openzfs/zfs/commit/e269af1b3>）
 
 ### 安装 filesystems/openzfs
 
@@ -307,10 +403,23 @@ Unlocking pkg-2.4.2_1
 ```ini
 zfs_load=NO
 openzfs_load=YES
-kern.geom.label.disk_ident.enable=0 # 为磁盘禁用 /dev/diskid/*，目的待考察
 ```
 
-即可。然后检查存储池版本，再行更新其他存储池。
+即可。
+
+### 检查存储池版本
+
+```sh
+# zfs --version
+zfs-2.2.7-FreeBSD_ge269af1b3
+zfs-kmod-2.3.5-1
+```
+
+再行更新其他存储池或特性即可。
+
+>**警告**
+>
+>考虑到基本系统中的 OpenZFS 版本不一定是最新的，所以你最好对所有版本都使用 Ports 中的版本以期达到统一。换言之，建议读者将 15.0-RELEASE 中的 ZFS 也参照此方法进行替换。
 
 ## 附录：给 pkgbasify 脚本换源
 
