@@ -1,24 +1,292 @@
-# 5.9 使用 pkgbase 更新 FreeBSD
+# 使用 ZFS 启动环境更新 FreeBSD 并实现多版本共存
+
+## 从 FreeBSD 14 更新到 FreeBSD 15
+
+### 创建启动环境 15.0-RELEASE
+
+- 使用工具 bectl 创建启动环境 `15.0-RELEASE`
+
+>**注意**
+>
+>我们只是将其命名为 15.0，实际上系统仍然是 14.3。
+
+```sh
+# bectl create 15.0-RELEASE
+```
+
+- 使用 bectl 检查：
+
+```
+# bectl list # 显示所有启动环境
+BE           Active Mountpoint Space Created
+15.0-RELEASE -      -          176K  2025-12-05 22:27
+default      NR     /          10.6G 2025-01-14 20:36
+```
+
+Active 字段解释（来自 [bectl(8) 手册页](https://man.freebsd.org/cgi/man.cgi?bectl)）:
+
+- “N”：表示该启动环境当前是否处于活动状态（现在是否正位于此环境中）
+- “R”：在重启时是否处于活动状态（下次是否选中，用于固定选项）
+- “T”：是否会在下次启动时生效（且仅下次，用于一次性选项）
+- “NRT”：这些标识（N / R / T）可以组合出现（实际上不会出现，该选项存在矛盾）
+
+- 使用 zfs 命令检查：
+
+```sh
+# zfs list
+NAME                      USED  AVAIL  REFER  MOUNTPOINT
+
+……其他省略……
+
+zroot/ROOT/15.0-RELEASE     8K  83.8G  10.6G  /
+
+……其他省略……
+```
+
+注意 `zroot/ROOT/15.0-RELEASE     8K  83.8G  10.6G  /` 这行是刚刚创建的。
+
+### 将启动环境 15.0-RELEASE 更新到 15.0-RELEASE
+
+#### 挂载启动环境 15.0-RELEASE
+
+- 创建一个临时目录用于更新启动环境 15.0-RELEASE 中的 FreeBSD 系统
+
+```sh
+# mkdir /mnt/upgrade
+```
+
+- 将启动环境（实际上是个快照）15.0-RELEASE 挂载到上面的路径里
+
+```sh
+# bectl mount 15.0-RELEASE /mnt/upgrade
+/mnt/upgrade
+```
+
+- 检查：
+
+```sh
+root@ykla:/home/ykla # df
+Filesystem              1K-blocks     Used    Avail Capacity  Mounted on
+
+……其他省略……
+
+zroot/ROOT/15.0-RELEASE  99036272 11132688 87903584    11%    /mnt/upgrade
+
+……其他省略……
+```
+
+注意到，已经成功地将启动环境 15.0-RELEASE 挂载到了我们设置的路径里。
 
 
-## （可选）配置软件源
+#### 验证当前 FreeBSD 版本
 
-FreeBSD 官方源的 pkgbase 信息如下：
+目前 15.0-RELEASE 实际上是 14.3-RELEASE。虽然是明知的，但还是让我们来用命令 `freebsd-version` 验证这一点：
 
-| **分支** | **更新频率** | **URL 地址** |
-| :---: | :---: | :--- |
-| main（16.0-CURRENT） | 每天两次：08:00、20:00 | <https://pkg.freebsd.org/${ABI}/base_latest> |
-| main（16.0-CURRENT） | 每周一次：星期日 20:00 | <https://pkg.freebsd.org/${ABI}/base_weekly> |
-| stable/14 | 每天两次：08:00、20:00  | <https://pkg.freebsd.org/${ABI}/base_latest> |
-| stable/14 | 每周一次：星期日 20:00 | <https://pkg.freebsd.org/${ABI}/base_weekly> |
-| releng/14.0（RELEASE） | 每天两次：08:00、20:00 | <https://pkg.freebsd.org/${ABI}/base_release_0> |
-| releng/14.1（RELEASE） | 每天两次：08:00、20:00 | <https://pkg.freebsd.org/${ABI}/base_release_1> |
-| releng/14.2（RELEASE） | 每天两次：08:00、20:00 | <https://pkg.freebsd.org/${ABI}/base_release_2> |
-| releng/14.3（RELEASE） | 每天两次：08:00、20:00 | <https://pkg.freebsd.org/${ABI}/base_release_3> |
+```sh
+# chroot /mnt/upgrade freebsd-version -kru
+14.3-RELEASE
+14.3-RELEASE
+14.3-RELEASE
+```
 
-**以上表格的时间已转换为北京时间，即东八区时间，均为 FreeBSD 官方镜像站的时间。**
+`freebsd-version` 参数解释（摘自手册页 [freebsd-version(1)](https://man.freebsd.org/cgi/man.cgi?freebsd-version)）：
 
-若官方源下载速度慢，可以考虑换成国内镜像。
+- `-k`：打印已安装内核的版本和补丁级别。与 [uname(1)](https://man.freebsd.org/uname(1)) 不同的是，如果新的内核已经安装但系统尚未重启，`freebsd-version` 会打印新内核的版本和补丁级别。
+- `-r`：打印正在运行中的内核的版本和补丁级别。与 [uname(1)](https://man.freebsd.org/uname(1)) 不同的是，`freebsd-version` 不受环境变量影响。
+- `-u`：打印已安装用户态的版本和补丁级别。这些信息在构建过程中会被写入程序 `freebsd-version` 中。
+
+
+#### 将启动环境 15.0-RELEASE 中的 14.3-RELEASE 转换到 pkgbase
+
+pkgbase 的设计初衷是为了让 stable、current 和 release（BETA、RC 等）都能使用一种二进制工具进行更新。当下，stable、current 只能通过完全编译源代码的方式来更新。
+
+>**注意**
+>
+>仅 FreeBSD 14.0-RELEASE 及更高版本才能直接被转换为 pkgbase。旧版仍需要通过 `freebsd-update` 进行更新（运行时 pkgbasify 会提示 `Unsupported FreeBSD version`，即 FreeBSD 版本不受支持）。
+
+>**警告**
+>
+>**存在风险，可能会丢失所有数据！建议在操作之前做好备份。**
+
+- 锁定 pkg 防止 pkg 故障
+
+```sh
+# pkg -c /mnt/upgrade lock pkg
+pkg-2.4.2_1: lock this package? [y/N]: y # 输入 y 按回车键确认锁定 pkg
+Locking pkg-2.4.2_1
+```
+
+- 下载 pkgbase 转换脚本
+
+```sh
+# fetch -o /mnt/upgrade https://raw.githubusercontent.com/FreeBSDFoundation/pkgbasify/main/pkgbasify.lua
+```
+
+- 使用 pkgbasify 进行转换
+
+>**警告**
+>
+>在接受 `Do you accept this risk and wish to continue? (y/n)` 这个风险提示后就没有其他二次确认了！
+
+```sh
+# chroot /mnt/upgrade /usr/libexec/flua pkgbasify.lua
+Running this tool will irreversibly modify your system to use pkgbase.
+This tool and pkgbase are experimental and may result in a broken system.
+It is highly recommended to backup your system before proceeding.
+Do you accept this risk and wish to continue? (y/n) y # 这里是风险提示，确认
+Updating FreeBSD repository catalogue...
+
+……此处省略……
+
+The following 370 package(s) will be affected (of 0 checked):
+
+New packages to be INSTALLED:
+        FreeBSD-acct: 14.3p6 [FreeBSD-base]
+        FreeBSD-acct-man: 14.3p6 [FreeBSD-base]
+        FreeBSD-acpi: 14.3p6 [FreeBSD-base]
+        FreeBSD-acpi-man: 14.3p6 [FreeBSD-base]
+
+……此处省略……
+
+Conversion finished.
+
+Please verify that the contents of the following critical files are as expected:
+/etc/master.passwd
+/etc/group
+/etc/ssh/sshd_config
+
+After verifying those files, restart the system.
+```
+
+- 检查启动环境 15.0-RELEASE 中的系统版本
+  
+```sh
+#  chroot /mnt/upgrade freebsd-version -kru
+14.3-RELEASE-p6
+14.3-RELEASE
+14.3-RELEASE-p6
+```
+
+注意到 pkgbasify 把我们更新到了最新的点版本，并且已经把我们更新到了 pkgbase
+
+#### 使用 pkgbase 进行更新启动环境 15.0-RELEASE 中到 15.0-RELEASE
+
+- 创建 pkgbase 软件源目录
+
+```sh
+# mkdir -p /mnt/upgrade/usr/local/etc/pkg/repos/
+```
+
+- 编辑 `/mnt/upgrade/usr/local/etc/pkg/repos/FreeBSD-base.conf`，添加 pkgbase 源
+
+```sh
+FreeBSD-base {
+    url = "https://pkg.freebsd.org/${ABI}/base_release_${VERSION_MINOR}";
+    enabled = yes;
+}
+```
+
+>**警告**
+>
+>请检查 `FreeBSD-base.conf` 的内容，尤其是 **不应该** 在里面手动硬编码写入指定任何具体的版本（如 `base_release_3`）。
+
+>**技巧**
+>
+>需要换源的用户需要将 `url` 这行改成 `url = "https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/base_release_${VERSION_MINOR}";`
+
+- 刷新软件源
+
+```sh
+# pkg -c /mnt/upgrade update -r FreeBSD-base
+```
+
+- 使用 pkgbase 将 14.3-RELEASE 更新到 15.0-RELEASE
+
+```sh
+root@ykla:/home/ykla # env ABI=FreeBSD:15:amd64 pkg-static -c /mnt/upgrade upgrade -r FreeBSD-base
+pkg-static: Setting ABI requires setting OSVERSION, guessing the OSVERSION as: 1500000
+pkg-static: Warning: Major OS version upgrade detected.  Running "pkg bootstrap -f" recommended
+Updating FreeBSD-base repository catalogue...
+pkg-static: Repository FreeBSD-base has a wrong packagesite, need to re-create database
+Fetching meta.conf: 100%    179 B   0.2kB/s    00:01    
+Fetching data.pkg: 100%   80 KiB  81.6kB/s    00:01    
+Processing entries:   0%
+Newer FreeBSD version for package FreeBSD-zlib-dbg:
+To ignore this error set IGNORE_OSVERSION=yes
+- package: 1500068
+- running userland: 1500000
+Ignore the mismatch and continue? [y/N]: y # 此处输入 y 后继续
+Processing entries: 100%
+FreeBSD-base repository update completed. 496 packages processed.
+FreeBSD-base is up to date.
+Checking for upgrades (230 candidates): 100%
+Processing candidates (230 candidates): 100%
+The following 290 package(s) will be affected (of 0 checked):
+
+New packages to be INSTALLED:
+        FreeBSD-atf: 15.0 [FreeBSD-base]
+        FreeBSD-atf-dev: 15.0 [FreeBSD-base]
+        FreeBSD-atf-lib: 15.0 [FreeBSD-base]
+
+        ……此处省略一部分…
+
+        FreeBSD-zoneinfo: 14.3p6 -> 15.0 [FreeBSD-base]
+
+Number of packages to be installed: 61
+Number of packages to be upgraded: 229
+
+The operation will free 100 MiB.
+473 MiB to be downloaded.
+
+Proceed with this action? [y/N]: y # 此处输入 y 后继续
+```
+
+>**技巧**
+>
+>如果检查不到任何更新，请检查你当前是否被转换为了 pkgbase。如果确认转换成功。
+
+## 附录：多版本/系统共存的 ZFS 版本问题
+
+可以把一个启动环境升级为 FreeBSD 14，实现 13、14 多版本共存。需要在共存后安装 Port filesystems/openzfs，否则永远无法升级 zfs 池。
+
+### 安装 filesystems/openzfs
+
+- 使用 pkg 安装
+
+```sh
+# pkg ins openzfs
+```
+
+- 使用 ports 安装：
+
+```sh
+# cd /usr/ports/filesystems/openzfs/ 
+# make install clean
+```
+
+### 编辑 `/boot/loader.conf`
+
+为了让系统不要加载基本系统内的 zfs 版本。需要在 `zfs_load=YES` 前加上注释 `#`，取消其开机自动加载。
+
+形如：
+
+```ini
+# zfs_load=YES
+```
+
+再新增下列数行：
+
+```ini
+zfs_load=NO
+openzfs_load=YES
+kern.geom.label.disk_ident.enable=0 # 为磁盘禁用 /dev/diskid/*，目的待考察
+```
+
+即可。然后检查存储池版本，再行更新其他存储池。
+
+## 附录：给 pkgbasify 脚本换源
+
+### 修改示例（使用 USTC）
 
 找到 Lua 脚本中的 `create_base_repo_conf` 函数：
 
@@ -42,7 +310,7 @@ local function base_repo_url()
 end
 ```
 
-将这部分函数中修改如下，其中 `url` 指定了镜像站：
+将这个函数中修改如下，其中在 `return` 部分指定了镜像站：
 
 ```lua
 local function base_repo_url()
@@ -64,6 +332,9 @@ local function base_repo_url()
 end
 ```
 
+>**警告**
+>
+>请删除 `return "pkg+https://"` 这行里面的 `pkg+`，否则会报错。
 
 再找到下面的函数 `create_base_repo_conf`
 
@@ -117,47 +388,37 @@ end
 ### 南京大学开源镜像站 NJU
 
 ```sh
-FreeBSD-base: {
-  url: "https://mirrors.nju.edu.cn/freebsd-pkg/${ABI}/base_latest",
-  enabled: yes
-}
+https://mirrors.nju.edu.cn/freebsd-pkg/
 ```
 
-### 中国科学技术大学开源镜像站 USTC
-
-```sh
-FreeBSD-base: {
-  url: "https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/base_latest",
-  enabled: yes
-}
-```
 
 ### 网易开源镜像站 163
 
 ```sh
-FreeBSD-base: {
-  url: "https://mirrors.163.com/freebsd-pkg/${ABI}/base_latest",
-  enabled: yes
-}
+https://mirrors.163.com/freebsd-pkg/
 ```
 
-## 运行 `pkgbasify.lua`
+## 附录：配置软件源
 
-```sh
-# chmod +x pkgbasify.lua
-# ./pkgbasify.lua
-```
+FreeBSD 官方源的 pkgbase 信息如下：
 
->**注意**
->
->我测试的是纯净系统，没有任何多余配置及第三方程序（除了 pkg），仅开了 SSH 服务。
+| **分支** | **更新频率** | **URL 地址** |
+| :---: | :---: | :--- |
+| main（16.0-CURRENT） | 每天两次：08:00、20:00 | <https://pkg.freebsd.org/${ABI}/base_latest> |
+| main（16.0-CURRENT） | 每周一次：星期日 20:00 | <https://pkg.freebsd.org/${ABI}/base_weekly> |
+| stable/14 | 每天两次：08:00、20:00  | <https://pkg.freebsd.org/${ABI}/base_latest> |
+| stable/14 | 每周一次：星期日 20:00 | <https://pkg.freebsd.org/${ABI}/base_weekly> |
+| releng/14.0（RELEASE） | 每天两次：08:00、20:00 | <https://pkg.freebsd.org/${ABI}/base_release_0> |
+| releng/14.1（RELEASE） | 每天两次：08:00、20:00 | <https://pkg.freebsd.org/${ABI}/base_release_1> |
+| releng/14.2（RELEASE） | 每天两次：08:00、20:00 | <https://pkg.freebsd.org/${ABI}/base_release_2> |
+| releng/14.3（RELEASE） | 每天两次：08:00、20:00 | <https://pkg.freebsd.org/${ABI}/base_release_3> |
 
+**以上表格的时间已转换为北京时间，即东八区时间，均为 FreeBSD 官方镜像站的时间。**
 
->**警告**
->
->**存在风险，可能会丢失所有数据！**
+若官方源下载速度慢，可以考虑换成国内镜像。
 
 ## 参考文献
 
-- [wiki/PkgBase](https://wiki.freebsd.org/PkgBase)
-
+- [ZFS Boot Environments Explained](https://vermaden.wordpress.com/2025/11/25/zfs-boot-environments-explained/)，指出可以手动安装 openzfs 来达到旧系统使用新 zfs 池的目的
+- [wiki/BootEnvironments](https://wiki.freebsd.org/BootEnvironments)，维基
+- man [bectl(8)](https://man.freebsd.org/cgi/man.cgi?bectl)
