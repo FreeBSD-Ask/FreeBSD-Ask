@@ -64,7 +64,7 @@ zroot/ROOT/15.0-RELEASE     8K  83.8G  10.6G  /
 - 检查：
 
 ```sh
-root@ykla:/home/ykla # df
+# df
 Filesystem              1K-blocks     Used    Avail Capacity  Mounted on
 
 ……其他省略……
@@ -160,7 +160,7 @@ After verifying those files, restart the system.
 - 检查启动环境 15.0-RELEASE 中的系统版本
   
 ```sh
-#  chroot /mnt/upgrade freebsd-version -kru
+# chroot /mnt/upgrade freebsd-version -kru
 14.3-RELEASE-p6
 14.3-RELEASE
 14.3-RELEASE-p6
@@ -199,10 +199,10 @@ FreeBSD-base {
 # pkg -c /mnt/upgrade update -r FreeBSD-base
 ```
 
-- 使用 pkgbase 将 14.3-RELEASE 更新到 15.0-RELEASE
+- 使用 pkgbase 将 14.3-RELEASE 更新到 15.0-RELEASE（即指定 ABI 到 15）
 
 ```sh
-root@ykla:/home/ykla # env ABI=FreeBSD:15:amd64 pkg-static -c /mnt/upgrade upgrade -r FreeBSD-base
+# env ABI=FreeBSD:15:amd64 pkg-static -c /mnt/upgrade upgrade -r FreeBSD-base
 pkg-static: Setting ABI requires setting OSVERSION, guessing the OSVERSION as: 1500000
 pkg-static: Warning: Major OS version upgrade detected.  Running "pkg bootstrap -f" recommended
 Updating FreeBSD-base repository catalogue...
@@ -248,7 +248,7 @@ Proceed with this action? [y/N]: y # 此处输入 y 后继续
 - 检查启动环境 15.0-RELEASE 中的系统版本
   
 ```sh
-root@ykla:/home/ykla # chroot /mnt/upgrade freebsd-version -kru
+# chroot /mnt/upgrade freebsd-version -kru
 15.0-RELEASE
 14.3-RELEASE
 15.0-RELEASE
@@ -366,7 +366,7 @@ $ freebsd-version -kru
 ### 查看内置的 OpenZFS 版本
 
 ```sh
-root@ykla:/home/ykla # zfs --version
+# zfs --version
 zfs-2.2.7-FreeBSD_ge269af1b3
 zfs-kmod-2.2.7-FreeBSD_ge269af1b3
 ```
