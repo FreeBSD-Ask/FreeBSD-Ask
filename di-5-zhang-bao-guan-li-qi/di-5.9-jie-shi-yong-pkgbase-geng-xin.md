@@ -20,7 +20,7 @@ FreeBSD 官方源的 pkgbase 信息如下：
 
 若官方源下载速度慢，可以考虑换成国内镜像。
 
-修改 Lua 脚本中的 `create_base_repo_conf` 函数：
+找到 Lua 脚本中的 `create_base_repo_conf` 函数：
 
 ```lua
 local function create_base_repo_conf(path)
@@ -41,20 +41,26 @@ local function create_base_repo_conf(path)
   fingerprints: "/usr/share/keys/pkg",
   enabled: yes
 }
+]], options.repo_name, base_repo_url())))
+	end
+end
 ```
 
-将软件源信息替换为下列镜像站中的任何一个，例如：
+将这部分函数中修改如下，其中 `url` 指定了镜像站：
 
 ```lua
-function create_base_repo_conf(path)
-	assert(os.execute("mkdir -p " .. path:match(".*/")))
-	local f <close> = assert(io.open(path, "w"))
-	assert(f:write([[
-FreeBSD-base: {
+local function create_base_repo_conf(path)
+    assert(os.execute("mkdir -p " .. path:match(".*/")))
+    local f <close> = assert(io.open(path, "w"))
+    assert(f:write(string.format([[
+%s: {
   url: "https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/base_latest",
+  mirror_type: "srv",
+  signature_type: "fingerprints",
+  fingerprints: "/usr/share/keys/pkg",
   enabled: yes
 }
-]]))
+]], options.repo_name)))
 end
 ```
 
