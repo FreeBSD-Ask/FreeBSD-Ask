@@ -15,7 +15,7 @@
 
 - 使用 bectl 检查：
 
-```
+```sh
 $ bectl list # 显示所有启动环境
 BE           Active Mountpoint Space Created
 15.0-RELEASE -      -          176K  2025-12-05 22:27
@@ -178,7 +178,7 @@ After verifying those files, restart the system.
 
 - 编辑 `/mnt/upgrade/usr/local/etc/pkg/repos/FreeBSD-base.conf`，添加 pkgbase 源
 
-```sh
+```ini
 FreeBSD-base {
     url = "https://pkg.freebsd.org/${ABI}/base_release_${VERSION_MINOR}";
     enabled = yes;
@@ -258,7 +258,7 @@ Proceed with this action? [y/N]: y # 此处输入 y 后继续
 
 - 解锁 pkg
 
-```
+```sh
 # chroot /mnt/upgrade pkg unlock pkg
 pkg: Warning: Major OS version upgrade detected.  Running "pkg bootstrap -f" recommended
 pkg-2.4.2_1: unlock this package? [y/N]: y
@@ -331,7 +331,7 @@ default                        R      -          10.9G 2025-01-14 20:36
 # bectl destroy 启动环境
 ```
 
-将参数 `启动环境` 替换为命令 `bectl list` 的 `BE` 列中的对应启动环境即可。
+将参数 `启动环境` 替换为命令 `bectl list` 的 `BE` 列中的对应启动环境即可将其销毁之。
 
 ## 将基本系统中的 ZFS 替换为 Ports 版本
 
@@ -530,14 +530,14 @@ end
 
 ### 南京大学开源镜像站 NJU
 
-```sh
+```ini
 https://mirrors.nju.edu.cn/freebsd-pkg/
 ```
 
 
 ### 网易开源镜像站 163
 
-```sh
+```ini
 https://mirrors.163.com/freebsd-pkg/
 ```
 
