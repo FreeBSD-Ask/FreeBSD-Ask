@@ -1,4 +1,4 @@
-# 5.9 使用 ZFS 启动环境更新 FreeBSD 并实现多版本共存
+# 5.9 使用 pkgbase 更新 FreeBSD
 
 ## 从 FreeBSD 14 更新到 FreeBSD 15
 
@@ -245,6 +245,34 @@ Proceed with this action? [y/N]: y # 此处输入 y 后继续
 >
 >如果检查不到任何更新，请检查你当前是否被转换为了 pkgbase。如果确认转换成功。
 
+
+- 检查启动环境 15.0-RELEASE 中的系统版本
+  
+```sh
+root@ykla:/home/ykla # chroot /mnt/upgrade freebsd-version -kru
+15.0-RELEASE
+14.3-RELEASE
+15.0-RELEASE
+```
+
+这里 `r` 显示 14.3-RELEASE 并无不妥，说明目前运行的是 14.3。结合其他参数，可知重启后才会变成 15.0-RELEASE。
+
+- 解锁 pkg
+
+```
+# chroot /mnt/upgrade pkg unlock pkg
+pkg: Warning: Major OS version upgrade detected.  Running "pkg bootstrap -f" recommended
+pkg-2.4.2_1: unlock this package? [y/N]: y
+Unlocking pkg-2.4.2_1
+```
+
+- 将所有第三方软件包的 ABI 更新到 FreeBSD 15.0
+
+```sh
+# chroot /mnt/upgrade pkg upgrade
+```
+
+
 ## 附录：多版本/系统共存的 ZFS 版本问题
 
 可以把一个启动环境升级为 FreeBSD 14，实现 13、14 多版本共存。需要在共存后安装 Port filesystems/openzfs，否则永远无法升级 zfs 池。
@@ -413,9 +441,9 @@ FreeBSD 官方源的 pkgbase 信息如下：
 | releng/14.2（RELEASE） | 每天两次：08:00、20:00 | <https://pkg.freebsd.org/${ABI}/base_release_2> |
 | releng/14.3（RELEASE） | 每天两次：08:00、20:00 | <https://pkg.freebsd.org/${ABI}/base_release_3> |
 
-**以上表格的时间已转换为北京时间，即东八区时间，均为 FreeBSD 官方镜像站的时间。**
+以上表格的时间已转换为北京时间，即东八区时间，均为 FreeBSD 官方镜像站的时间。
 
-若官方源下载速度慢，可以考虑换成国内镜像。
+若官方源下载速度慢，可以考虑换成国内镜像。只需要替换 `https://pkg.freebsd.org` 这部分。
 
 ## 参考文献
 
