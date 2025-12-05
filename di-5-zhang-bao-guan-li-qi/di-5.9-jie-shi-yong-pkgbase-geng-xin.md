@@ -191,7 +191,7 @@ FreeBSD-base {
 
 >**技巧**
 >
->需要换源的用户需要将 `url` 这行改成 `url = "https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/base_release_${VERSION_MINOR}";`
+>需要换源的用户可以将 `url` 这行改成 `url = "https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/base_release_${VERSION_MINOR}";`
 
 - 刷新软件源
 
