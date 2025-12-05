@@ -166,7 +166,7 @@ After verifying those files, restart the system.
 14.3-RELEASE-p6
 ```
 
-注意到 pkgbasify 把我们更新到了最新的点版本，并且已经把我们更新到了 pkgbase
+注意到 pkgbasify 把我们更新到了最新的点版本，并且已经把我们更新到了 pkgbase。
 
 ### 使用 pkgbase 将启动环境中的系统版本更新到 15.0-RELEASE
 
