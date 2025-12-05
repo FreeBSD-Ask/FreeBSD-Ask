@@ -447,7 +447,7 @@ local function base_repo_url()
 end
 ```
 
-将这个函数中修改如下，其中在 `return` 部分指定了镜像站：
+将这个函数修改如下，其中在 `return` 部分指定了镜像站：
 
 ```lua
 local function base_repo_url()
