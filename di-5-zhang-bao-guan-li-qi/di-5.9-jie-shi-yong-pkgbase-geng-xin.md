@@ -1,8 +1,7 @@
 # 5.9 使用 ZFS 启动环境更新 FreeBSD 并实现多版本共存
 
-## 从 FreeBSD 14 更新到 FreeBSD 15
 
-### 创建启动环境 15.0-RELEASE
+## 创建启动环境 15.0-RELEASE
 
 - 使用工具 bectl 创建启动环境 `15.0-RELEASE`
 
@@ -45,9 +44,9 @@ zroot/ROOT/15.0-RELEASE     8K  83.8G  10.6G  /
 
 注意 `zroot/ROOT/15.0-RELEASE     8K  83.8G  10.6G  /` 这行是刚刚创建的。
 
-### 将启动环境 15.0-RELEASE 更新到 15.0-RELEASE
+## 将启动环境中的系统版本更新到 15.0-RELEASE
 
-#### 挂载启动环境 15.0-RELEASE
+### 挂载启动环境 15.0-RELEASE
 
 - 创建一个临时目录用于更新启动环境 15.0-RELEASE 中的 FreeBSD 系统
 
@@ -78,7 +77,7 @@ zroot/ROOT/15.0-RELEASE  99036272 11132688 87903584    11%    /mnt/upgrade
 注意到，已经成功地将启动环境 15.0-RELEASE 挂载到了我们设置的路径里。
 
 
-#### 验证当前 FreeBSD 版本
+### 验证当前 FreeBSD 版本
 
 目前 15.0-RELEASE 实际上是 14.3-RELEASE。虽然是明知的，但还是让我们来用命令 `freebsd-version` 验证这一点：
 
@@ -96,7 +95,7 @@ zroot/ROOT/15.0-RELEASE  99036272 11132688 87903584    11%    /mnt/upgrade
 - `-u`：打印已安装用户态的版本和补丁级别。这些信息在构建过程中会被写入程序 `freebsd-version` 中。
 
 
-#### 将启动环境 15.0-RELEASE 中的 14.3-RELEASE 转换到 pkgbase
+### 将启动环境 15.0-RELEASE 中的 14.3-RELEASE 转换到 pkgbase
 
 pkgbase 的设计初衷是为了让 stable、current 和 release（BETA、RC 等）都能使用一种二进制工具进行更新。当下，stable、current 只能通过完全编译源代码的方式来更新。
 
@@ -169,7 +168,7 @@ After verifying those files, restart the system.
 
 注意到 pkgbasify 把我们更新到了最新的点版本，并且已经把我们更新到了 pkgbase
 
-#### 使用 pkgbase 进行更新启动环境 15.0-RELEASE 中到 15.0-RELEASE
+### 使用 pkgbase 进行更新启动环境 15.0-RELEASE 中到 15.0-RELEASE
 
 - 创建 pkgbase 软件源目录
 
@@ -271,6 +270,7 @@ Unlocking pkg-2.4.2_1
 ```sh
 # chroot /mnt/upgrade pkg upgrade
 ```
+
 
 
 ## 附录：多版本/系统共存的 ZFS 版本问题
