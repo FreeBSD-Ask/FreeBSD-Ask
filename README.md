@@ -10,7 +10,7 @@ FreeBSD 是真正自由（Liberty）的 **操作系统**，在这波谲云诡的
 
 这是一本开源的 FreeBSD 操作系统研究书籍，还包含一些 OpenBSD、NetBSD 等 Berkeley Unix 家族的导论章节。
 
-[~~FreeBSD 项目即将归档（Archived）~~，为了保护我们心爱的操作系统……我们能做的事情就是，写一本书！](https://www.bilibili.com/bangumi/media/md3068)[^2]
+[~~FreeBSD 项目即将归档（Archived）~~，为了保护我们心爱的操作系统……我们能做的事情就是，写一本书！](https://www.bilibili.com/bangumi/media/md3068) [^2]
 
 ## 🖋️ 作者
 
