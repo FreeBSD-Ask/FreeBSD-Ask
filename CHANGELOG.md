@@ -6,6 +6,7 @@
 
 - 2025.12.7
   - 完全重写：“25.5 更新 ZFS 的 zpool”
+  - 完全重写：“5.7 使用 freebsd-update 更新 FreeBSD”。注：在使用 freebsd-update 从 14.3 或更低版本进行更新时，必须先更新到最新的补丁版本再进行大版本间的更迭。否则会挂。方法：`freebsd-update fetch && freebsd-update install` 参见 <https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=289769> 和 <https://www.freebsd.org/releases/15.0R/installation/#upgrade-binary>
 - 2025.12.6
   - 将“5.9 使用 pkgbase 更新 FreeBSD”完全重写为“5.9 使用 ZFS 启动环境更新 FreeBSD 并实现多版本共存”
 - 2025.12.5
