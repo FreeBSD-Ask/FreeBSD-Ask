@@ -167,7 +167,7 @@ world/base-dbg world/lib32-dbg
 
 Does this look reasonable (y/n)? y # 在这里输入 y，然后回车即可，在检查基本组件的安装情况。
 
-etching metadata signature for 15.0-RELEASE from update1.freebsd.org... done.
+Fetching metadata signature for 15.0-RELEASE from update1.freebsd.org... done.
 Fetching metadata index... done.
 Fetching 1 metadata patches. done.
 Applying metadata patches... done.
