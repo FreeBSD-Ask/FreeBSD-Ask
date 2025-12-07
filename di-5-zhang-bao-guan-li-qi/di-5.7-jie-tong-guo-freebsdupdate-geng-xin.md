@@ -1,19 +1,14 @@
 # 5.7 使用 freebsd-update 更新 FreeBSD
 
-
 > **注意：**
 >
 > 只有一级架构的 release 版本才提供该源。也就是说 current 和 stable 是没有的。关于架构的支持等级说明请看： [Supported Platforms](https://www.freebsd.org/platforms)
->
-> 在 FreeBSD 15 的开发计划中，预计将使用 `pkgbase` 替代 `freebsd-update`。
-
-
 
 >**注意**
 >
->ZFS 相关升级请参见 ZFS 章节
+>ZFS 相关升级参见 ZFS 章节。
 
-## 更新系统
+## 历史
 
 FreeBSD 提供了实用工具 `freebsd-update` 来安装系统更新，包括升级到大版本。`freebsd-update` 在 FreeBSD 7.0-RELEASE 中得到了正式支持。
 
@@ -21,21 +16,20 @@ FreeBSD 提供了实用工具 `freebsd-update` 来安装系统更新，包括升
 
 - [FreeBSD 7.0-RELEASE Announcement](https://www.freebsd.org/releases/7.0R/announce/)，`freebsd-update(8) provides officially supported binary upgrades to new releases in addition to security fixes and errata patches.`
 
+## 替换默认的文本编辑器为更简单的
 
-## 环境准备
-
-- 如果是 csh（14 以下 root 默认为 csh）：
-
-```
-# setenv EDITOR /usr/bin/ee # 切换 vi 为 ee，vi 不会用
-# setenv VISUAL /usr/bin/ee # 切换 vi 为 ee，vi 不会用
-```
-
-- 如果是 bash、zsh 或 sh（14 及以上 root 默认为 sh）：
+- 如果是 bash、zsh 或 sh（14.0 及以上）：
 
 ```sh
-# export  EDITOR=/usr/bin/ee # 切换 vi 为 ee，vi 不会用
-# export  VISUAL=/usr/bin/ee # 切换 vi 为 ee，vi 不会用
+# export EDITOR=/usr/bin/ee # 切换 vi 为 ee，默认为 nvi 
+# export VISUAL=/usr/bin/ee # 切换 vi 为 ee
+```
+
+- 如果是 csh（14.0 以下）：
+
+```sh
+# setenv EDITOR /usr/bin/ee # 切换 vi 为 ee，默认为 nvi 
+# setenv VISUAL /usr/bin/ee # 切换 vi 为 ee
 ```
 
 检查验证：
@@ -47,53 +41,35 @@ root@ykla:/home/ykla # echo $VISUAL
 /usr/bin/ee
 ```
 
-### 常规的安全更新
-
-```sh
-# freebsd-update fetch
-```
-
-当出现类似于如下信息时：
-
-```sh
-usrlinclude/c++/vl/trllvector usrlinclude/c++/vl/trllversion usrlinclude/c++/v1/trl/wchar.h usr/include/c++/v1/tr1/wctype.h usrlinclude/c++/vllunwind-armh
-usrlinclude/c++/v1/unwind-itaniumh usrlinclude/c++/vllunwindh
-usr/include/crypto/ cryptodevh usrlinclude/crypto/cbcmac.h usr/include/crypto/deflate.h usrlinclude/crypto/gfmult.h usr/include/crypto/gmac.h
-usr/include/crypto/rijndael.h usrlinclude/crypto/rmd160.h usr/include/crypto/xform.h
-usr/lib/clang/11.0.1/include
-:
-```
-
-你只需要输入 `q` 回车即可。然后：
-
-```sh
-# freebsd-update install
-```
-
-### 大小版本更新
+## 版本间更迭
 
 >**注意**
 >
->`freebsd-update` 下载慢不是因为其更新源在境外（你使用境外服务器更新一样慢；并且在 freebsdcn 境内源还生效的那些日子里，亦如此）。可能因其设计缺陷。[这是一个始终普遍存在的问题](https://freebsd-questions.freebsd.narkive.com/xjVoetUM/why-is-freebsd-update-so-horrible-slow)。
+>`freebsd-update` 下载慢不是因为其更新源在境外（你使用境外服务器更新一样慢；并且在 freebsdcn 境内源还生效的那些日子里，亦如此）。可能因其设计缺陷，`freebsd-update` 是个数千行的纯粹 shell 脚本。[这是一个始终普遍存在的问题](https://freebsd-questions.freebsd.narkive.com/xjVoetUM/why-is-freebsd-update-so-horrible-slow)。
 
-**以 FreeBSD 14.1-RELEASE 升级 14.2-RELEASE 为例**
+**以 FreeBSD 14.3-RELEASE 升级 15.0-RELEASE 为例**
 
-则，现在要更新到 `14.2-RELEASE`：
+### 检查版本：
 
 ```sh
-# freebsd-update upgrade -r 14.2-RELEASE
+# freebsd-version -kru
+14.3-RELEASE
+14.3-RELEASE
+14.3-RELEASE
 ```
 
-
-当出现类似于下列信息时，按照下方提示操作：
+### 更新到 15.0-RELEASE
 
 ```sh
-root@ykla:/home/ykla # freebsd-update upgrade -r 14.2-RELEASE
+root@ykla:/home/ykla # freebsd-update upgrade -r 15.0-RELEASE
+
+……当出现类似于下列信息时，按照下方提示操作……
+
 src component not installed, skipped
 Looking up update.FreeBSD.org mirrors... 3 mirrors found.
-Fetching metadata signature for 14.1-RELEASE from update2.freebsd.org... done.
+Fetching metadata signature for 14.3-RELEASE from update1.freebsd.org... done.
 Fetching metadata index... done.
-Fetching 1 metadata patches. done.
+Fetching 2 metadata patches.. done.
 Applying metadata patches... done.
 Fetching 1 metadata files... done.
 Inspecting system... done.
@@ -104,23 +80,41 @@ kernel/generic kernel/generic-dbg world/base world/lib32
 The following components of FreeBSD do not seem to be installed:
 world/base-dbg world/lib32-dbg
 
-Does this look reasonable (y/n)? # 在这里输入 y，然后回车即可，在检查基本组件的安装情况。
+Does this look reasonable (y/n)? y # 在这里输入 y，然后回车即可，在检查基本组件的安装情况。
 
-Fetching metadata signature for 14.2-RELEASE from update2.freebsd.org... done.
+etching metadata signature for 15.0-RELEASE from update1.freebsd.org... done.
 Fetching metadata index... done.
 Fetching 1 metadata patches. done.
 Applying metadata patches... done.
 Fetching 1 metadata files... done.
-Inspecting system... done. # 这里在检查系统，从上面的回车到这里需要等待约 10 分钟。
-Fetching files from 14.1-RELEASE for merging... done.
-Preparing to download files...   # 这里在准备要下载的文件，需要等待约 15 分钟。
+Inspecting system...
+
+…………这里在检查系统，从上面的回车到这里需要等待约 10 分钟…………
+
+Fetching metadata signature for 15.0-RELEASE from update1.freebsd.org... done.
+Fetching metadata index... done.
+Fetching 1 metadata patches. done.
+Applying metadata patches... done.
+Fetching 1 metadata files... done.
+Inspecting system... done.
+Fetching files from 14.3-RELEASE for merging... done.
+Preparing to download files... done.
+
+…………这里在准备要下载的文件，需要等待约 15 分钟…………
+
+Fetching 6735 patches.....10....20....30....40....50....60....70....80....90.
+ 
 # 下面需要等待约 30 分钟。注意，当跨大版本更新时，有时候需要等待 5 小时会更长时间，这都是正常的。
-Fetching 4070 patches.....10....20....30....40...
+
+....100....110....120....130....140....150....160....170....180....190....200
 
 …………中间省略………………
 
-....4000....4010....4020....4030....4040....4050....4060....4070 done.
-Fetching 35 files... ....10....20....30.. done. # 打补丁，需要等待约 5 分钟
+20....6630....6640....6650....6660....6670....6680....6690....6700....6710....6720....6730.. done.
+Applying patches... 
+
+………………打补丁，需要等待约 5 分钟………………
+
 Attempting to automatically merge changes in files... done.
 
 The following changes, which occurred between FreeBSD 14.1-RELEASE and
@@ -270,7 +264,7 @@ root@ykla:/home/ykla # freebsd-version -u
 14.2-RELEASE
 ```
 
-### 更新 EFI 引导
+## 更新 EFI 引导
 
 >**警告**
 >
@@ -348,8 +342,28 @@ DFreeBSD/amd64 EFI loader, Revision 3.0
 >
 >非 EFI、bootcode、ZFS 等相关更新请自行查看相关部分章节！
 
+## 常规的安全更新
 
-### 可选更新
+```sh
+# freebsd-update fetch
+```
+
+当出现类似于如下信息时：
+
+```sh
+usrlinclude/c++/vl/trllvector usrlinclude/c++/vl/trllversion usrlinclude/c++/v1/trl/wchar.h usr/include/c++/v1/tr1/wctype.h usrlinclude/c++/vllunwind-armh
+usrlinclude/c++/v1/unwind-itaniumh usrlinclude/c++/vllunwindh
+usr/include/crypto/ cryptodevh usrlinclude/crypto/cbcmac.h usr/include/crypto/deflate.h usrlinclude/crypto/gfmult.h usr/include/crypto/gmac.h
+usr/include/crypto/rijndael.h usrlinclude/crypto/rmd160.h usr/include/crypto/xform.h
+usr/lib/clang/11.0.1/include
+:
+```
+
+你只需要输入 `q` 回车即可。然后：
+
+```sh
+# freebsd-update install
+```
 
 
 ## 查看 FreeBSD 版本
