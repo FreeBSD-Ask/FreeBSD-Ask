@@ -269,7 +269,7 @@ The following files will be removed as part of updating to
 
 …………中间省略………………
 
-he following files will be added as part of updating to
+The following files will be added as part of updating to
 15.0-RELEASE-p0:
 /boot/firmware/iwm3160fw
 /boot/firmware/iwm3168fw
