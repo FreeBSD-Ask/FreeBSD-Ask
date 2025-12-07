@@ -35,9 +35,9 @@ FreeBSD 提供了实用工具 `freebsd-update` 来安装系统更新，包括升
 ### 检查验证
 
 ```sh
-root@ykla:/home/ykla # echo $EDITOR
+# echo $EDITOR
 /usr/bin/ee
-root@ykla:/home/ykla # echo $VISUAL
+# echo $VISUAL
 /usr/bin/ee
 ```
 
