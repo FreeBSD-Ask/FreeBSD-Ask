@@ -18,21 +18,21 @@ FreeBSD 提供了实用工具 `freebsd-update` 来安装系统更新，包括升
 
 ## 替换默认的文本编辑器为更简单的
 
-- 如果是 bash、zsh 或 sh（14.0 及以上）：
+### bash、zsh 或 sh（14.0 及以上）
 
 ```sh
 # export EDITOR=/usr/bin/ee # 切换 vi 为 ee，默认为 nvi 
 # export VISUAL=/usr/bin/ee # 切换 vi 为 ee
 ```
 
-- 如果是 csh（14.0 以下）：
+### csh（14.0 以下）
 
 ```sh
 # setenv EDITOR /usr/bin/ee # 切换 vi 为 ee，默认为 nvi 
 # setenv VISUAL /usr/bin/ee # 切换 vi 为 ee
 ```
 
-检查验证：
+### 检查验证
 
 ```sh
 root@ykla:/home/ykla # echo $EDITOR
@@ -41,15 +41,13 @@ root@ykla:/home/ykla # echo $VISUAL
 /usr/bin/ee
 ```
 
-## 版本间更迭
+## 常规补丁/安全更新（`X.Y-RELEASE`——>`X.Y-RELEASE-pN`）
 
->**注意**
+>**警告**
 >
->`freebsd-update` 下载慢不是因为其更新源在境外（你使用境外服务器更新一样慢；并且在 freebsdcn 境内源还生效的那些日子里，亦如此）。可能因其设计缺陷，`freebsd-update` 是个数千行的纯粹 shell 脚本。[这是一个始终普遍存在的问题](https://freebsd-questions.freebsd.narkive.com/xjVoetUM/why-is-freebsd-update-so-horrible-slow)。
+>无论你是大版本还是点版本还是常规更新，都应该先走一遍这个流程。不可绕过，否则会出现不可预料的后果。
 
-**以 FreeBSD 14.3-RELEASE 升级 15.0-RELEASE 为例**
-
-### 检查版本：
+### 版本检查
 
 ```sh
 # freebsd-version -kru
@@ -58,10 +56,97 @@ root@ykla:/home/ykla # echo $VISUAL
 14.3-RELEASE
 ```
 
+### 进行更新
+
+- 获取更新
+
+```sh
+# freebsd-update fetch
+```
+
+当出现类似于如下信息时：
+
+```sh
+usrlinclude/c++/vl/trllvector usrlinclude/c++/vl/trllversion usrlinclude/c++/v1/trl/wchar.h usr/include/c++/v1/tr1/wctype.h usrlinclude/c++/vllunwind-armh
+usrlinclude/c++/v1/unwind-itaniumh usrlinclude/c++/vllunwindh
+usr/include/crypto/ cryptodevh usrlinclude/crypto/cbcmac.h usr/include/crypto/deflate.h usrlinclude/crypto/gfmult.h usr/include/crypto/gmac.h
+usr/include/crypto/rijndael.h usrlinclude/crypto/rmd160.h usr/include/crypto/xform.h
+usr/lib/clang/11.0.1/include
+: q # 这里输入 q 再按回车键
+```
+
+这里是发生变动的文件，你只需要在确认后输入字母 `q`（代表“quit”，退出）再按回车键即可。
+
+然后安装更新：
+
+```sh
+# freebsd-update install
+```
+
+### 版本检查
+
+- 查看更新后的版本：
+
+```sh
+# freebsd-version -kru
+14.3-RELEASE-p5
+14.3-RELEASE
+14.3-RELEASE-p6
+```
+
+> **注意：**
+>
+> 有时候补丁不涉及内核，内核版本就不会变，用 `uname -r` 完全看不出来，但是用户空间版本会变。所以你可能会看到两个版本，以较高者为准。
+
+
+重启：
+
+```sh
+# reboot
+```
+
+再查看版本：
+
+```sh
+# freebsd-version -kru
+14.3-RELEASE-p5
+14.3-RELEASE-p5
+14.3-RELEASE-p6
+```
+
+## 大版本间更迭（`X.Z-RELEASE-pN`——>`A.0-RELEASE`）
+
+>**注意**
+>
+>`freebsd-update` 下载慢不是因为其更新源在境外（你使用境外服务器更新一样慢；并且在 freebsdcn 境内源还生效的那些日子里，亦如此）。可能因其设计缺陷，`freebsd-update` 是个数千行的纯粹 shell 脚本。[这是一个始终普遍存在的问题](https://freebsd-questions.freebsd.narkive.com/xjVoetUM/why-is-freebsd-update-so-horrible-slow)。
+
+**以 FreeBSD 14.3-RELEASE 升级 15.0-RELEASE 为例**
+
+### 检查版本
+
+```sh
+# freebsd-version -kru
+14.3-RELEASE-p5
+14.3-RELEASE-p5
+14.3-RELEASE-p6
+```
+
+>**警告**
+>
+>由于大版本间的变动，可能影响 `freebsd-update` 更新工具本身，所以一定要：
+>
+>先更新到当前版本最新的补丁版本（如 `X.Y-RELEASE-pN`），然后再更新到最新的点版本（如 `X.Z-RELEASE`）.
+>
+>接下来：更新到最新的点版本及该点版本上最新的补丁版本（如 `X.Z-RELEASE-pN`）
+>
+>最后：进行大版本（`X.Z-RELEASE-pN`——>`A.0-RELEASE`）的更迭。
+>
+>参见 [libsys.so.7 not found when upgrading userland with legacy freebsd-update](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=289769)。
+
 ### 更新到 15.0-RELEASE
 
 ```sh
-root@ykla:/home/ykla # freebsd-update upgrade -r 15.0-RELEASE
+# freebsd-update upgrade -r 15.0-RELEASE
 
 ……当出现类似于下列信息时，按照下方提示操作……
 
@@ -104,7 +189,7 @@ Preparing to download files... done.
 
 Fetching 6735 patches.....10....20....30....40....50....60....70....80....90.
  
-# 下面需要等待约 30 分钟。注意，当跨大版本更新时，有时候需要等待 5 小时会更长时间，这都是正常的。
+………………下面需要等待约 30 分钟。注意，当跨大版本更新时，有时候需要等待 5 小时会更长时间，这都是正常的。………………
 
 ....100....110....120....130....140....150....160....170....180....190....200
 
@@ -115,68 +200,112 @@ Applying patches...
 
 ………………打补丁，需要等待约 5 分钟………………
 
+Applying patches... done.
+Fetching 880 files... ....10....20....30....4
+
+………………省略一部分进度条………………
+
+0....880 done.
 Attempting to automatically merge changes in files... done.
 
-The following changes, which occurred between FreeBSD 14.1-RELEASE and
-FreeBSD 14.2-RELEASE have been merged into /etc/ssh/sshd_config:
+The following file could not be merged automatically: /etc/pkg/FreeBSD.conf
+Press Enter to edit this file in /usr/bin/ee and resolve the conflicts
+manually...
+
+……这里提示我们按回车键编辑一些无法自动合并需要手动编辑的文件……
+
+The following changes, which occurred between FreeBSD 14.3-RELEASE and
+FreeBSD 15.0-RELEASE have been merged into /etc/login.conf:
 --- current version
 +++ new version
-@@ -103,11 +103,11 @@
- #PidFile /var/run/sshd.pid
- #MaxStartups 10:30:100
- #PermitTunnel no
- #ChrootDirectory none
- #UseBlacklist no
--#VersionAddendum FreeBSD-20240318
-+#VersionAddendum FreeBSD-20240806
- 
- # no default banner path
- #Banner none
- 
+
+……此处列出的是发生变动的文件，省略一部分输出……
+
+ #site:\
+-#      :ignoretime:\
+ #      :passwordtime@:\
+ #      :refreshtime@:\
+ #      :refreshperiod@:\
+ #      :sessionlimit@:\
+ #      :autodelete@:\
+Does this look reasonable (y/n)? # 输入 y 回车，这里在确认系统文件的变动
+
+The following changes, which occurred between FreeBSD 14.3-RELEASE and
+FreeBSD 15.0-RELEASE have been merged into /etc/pkg/FreeBSD.conf:
+--- current version
++++ new version
+
+……此处列出的是发生变动的文件，省略一部分输出……
+
+Does this look reasonable (y/n)?  # 输入 y 回车，这里在确认系统文件的变动
+
+The following changes, which occurred between FreeBSD 14.3-RELEASE and
+FreeBSD 15.0-RELEASE have been merged into /etc/ssh/sshd_config:
+--- current version
++++ new version
+
+……此处列出的是发生变动的文件，省略一部分输出……
+
  # override default of no subsystems
-Does this look reasonable (y/n)? # 输入 y 回车，这里在确认系统文件的变动。
+Does this look reasonable (y/n)? # 输入 y 回车，这里在确认系统文件的变动
+
+The following files are affected by updates. No changes have
+been downloaded, however, because the files have been modified
+locally:
+/etc/ssl/cert.pem
+(END) # 这里输入 q，确认变动，这里是发生变动的文件
 The following files will be removed as part of updating to
-14.2-RELEASE-p0:
-/usr/lib/ossl-modules/fips.so
-/usr/lib32/ossl-modules/fips.so
-/usr/share/examples/sound/README
-/usr/share/examples/sound/basic.c
-/usr/share/examples/sound/ossinit.h
-/usr/share/examples/sound/ossmidi.h
-/usr/share/man/man9/ifaddr_byindex.9.gz
-/var/db/etcupdate/log
-/var/db/locate.database
-(END)  # 这里输入 q，确认变动
-The following files will be added as part of updating to
-14.2-RELEASE-p0:
-/boot/kernel/bnxt_re.ko
-/boot/kernel/gpioaei.ko
-/boot/kernel/if_rtw89.ko
-/boot/kernel/linuxkpi_video.ko
-…………中间省略………………
+15.0-RELEASE-p0:
+/.cshrc
+/.profile
+/boot/kernel/callout_test.ko
+/boot/kernel/geom_bde.ko
+/boot/kernel/geom_vinum.ko
+
+…………中间省略，这些是将被删除的文件………………
+
 /usr/share/examples/sound/sndstat_nv.c
 : # 这里输入 q，确认变动，直至没有新内容出现
 
 …………中间省略………………
 
+he following files will be added as part of updating to
+15.0-RELEASE-p0:
+/boot/firmware/iwm3160fw
+/boot/firmware/iwm3168fw
+/boot/firmware/iwm7260f
+
+…………中间省略这些是新增的文件………………
+
+/boot/kernel/nvmf_tcp.ko
+/boot/kernel/nvmf_transport.ko
+/boot/kernel/nvmft.ko
+/boot/kernel/p9fs.ko
+: # 这里输入 q，确认变动，直至没有新内容出现
+
 The following files will be updated as part of updating to
-14.2-RELEASE-p0:
+15.0-RELEASE-p0:
+/COPYRIGHT
 /bin/[
 /bin/cat
-/bin/chflags
 
-…………中间省略………………
+…………中间省略这些是新增的文件………………
 
+/bin/kenv
+/bin/kill
+/bin/link
 /bin/ln
 /bin/ls
 /bin/mkdir
+/bin/mv
+/bin/nproc
 To install the downloaded upgrades, run 'freebsd-update [options] install'.
 ```
 
 运行 `freebsd-update install` 以安装更新：
 
 ```sh
-root@ykla:/home/ykla # freebsd-update install
+# freebsd-update install
 src component not installed, skipped
 Creating snapshot of existing boot environment... done.
 Installing updates...
@@ -184,10 +313,20 @@ Kernel updates have been installed.  Please reboot and run
 'freebsd-update [options] install' again to finish installing updates.
 ```
 
-内核更新已经安装，系统要求重启：
+内核更新已经安装：
 
 ```sh
-root@ykla:/home/ykla # reboot
+# freebsd-version -kru
+15.0-RELEASE
+14.3-RELEASE-p5
+14.3-RELEASE-p6
+```
+
+可以看到，当前已安装内核的版本和补丁级别是 15.0-RELEASE。但是用户空间和当前运行的都是 14.3-RELEASE，因此我们要按照 `freebsd-update` 的提示来重启：
+
+
+```sh
+# reboot
 ```
 
 运行 `freebsd-update install` 安装用户空间的更新部分：
@@ -200,34 +339,34 @@ Installing updates...
 Restarting sshd after upgrade
 Performing sanity check on sshd configuration.
 Stopping sshd.
-Waiting for PIDS: 868.
+Waiting for PIDS: 906.
 Performing sanity check on sshd configuration.
 Starting sshd.
-Scanning /usr/share/certs/untrusted for certificates...
-Scanning /usr/share/certs/trusted for certificates...
-Scanning /usr/local/share/certs for certificates...
- done.
+
+Completing this upgrade requires removing old shared object files.
+Please rebuild all installed 3rd party software (e.g., programs
+installed from the ports tree) and then run
+'freebsd-update [options] install' again to finish installing updates.
 ```
 
 
-重装 `pkg`：
-
+重装 `pkg` 本身，将其 ABI 更新到 15.0-RELEASE：
 
 ```sh
-root@ykla:/home/ykla # pkg bootstrap -f
+# pkg bootstrap -f
 The package management tool is not yet installed on your system.
 Do you want to fetch and install it now? [y/N]: y # 此处输入 y 后回车
-Bootstrapping pkg from https://mirrors.nju.edu.cn/freebsd-pkg/FreeBSD:14:amd64/latest, please wait... # 我换过 pkg 源，你可能和我不一样，没有问题
-Installing pkg-1.21.3...
+Bootstrapping pkg from pkg+https://pkg.FreeBSD.org/FreeBSD:15:amd64/quarterly, please wait...
+Verifying signature with trusted certificate pkg.freebsd.org.2013102301... done
+Installing pkg-2.4.2...
 package pkg is already installed, forced install
-Extracting pkg-1.21.3: 100%
+Extracting pkg-2.4.2: 100%
 ```
 
-检查第三方软件 ABI 变化（FreeBSD ABI 非常稳定，一般不会出错）：
+将第三方软件的 ABI 更新到 15.0-RELEASE：
 
 ```sh
-root@ykla:/home/ykla # pkg upgrade
-root@ykla:/home/ykla # pkg upgrade
+# pkg upgrade
 Updating nju repository catalogue...
 Fetching meta.conf:   0%
 Fetching data.pkg: 100%    7 MiB   7.6MB/s    00:01    
@@ -249,31 +388,45 @@ The process will require 45 MiB more space.
 
 Proceed with this action? [y/N]:  # 此处输入 y 再回车即可
 
-…………以下省略………………
+…………中间省略………………
+
+Proceed with this action? [y/N]:  # 此处输入 y 再回车即可，可能会出现多次，下同
 ```
 
+对第三方程序的更新就完成了。
 
-以上，更新完毕。
-
-验证更新：
+再次执行 `freebsd-update` 结束更新流程。
 
 ```sh
-root@ykla:/home/ykla # freebsd-version -k
-14.2-RELEASE
-root@ykla:/home/ykla # freebsd-version -u
-14.2-RELEASE
+# freebsd-update install
+src component not installed, skipped
+Creating snapshot of existing boot environment... done.
+Installing updates... done.
 ```
+
+验证操作系统版本：
+
+```sh
+# freebsd-version -kru
+15.0-RELEASE
+15.0-RELEASE
+15.0-RELEASE
+```
+
+更新完成。
 
 ## 更新 EFI 引导
 
+### 背景介绍
+
 >**警告**
 >
->使用 EFI 引导的系统，EFI 系统分区（ESP）上有引导加载程序的副本，用于固件引导内核。如果根文件系统是 ZFS，则引导加载程序必须得能读取 ZFS 引导文件系统。在系统升级后，且执行 `zpool upgrade` 前，必须更新 ESP 上的引导加载程序，否则系统可能无法引导。虽然不是强制性的，但在 UFS 作为根文件系统时亦应如此。
+>对于使用 EFI 引导的系统，EFI 系统分区（ESP）上有引导加载程序的副本，用于固件引导内核。如果根文件系统是 ZFS，则引导加载程序必须得能读取 ZFS 引导文件系统。在系统升级后，且执行 `zpool upgrade` 前，必须先更新 ESP 上的引导加载程序，否则系统可能无法引导。虽然不是强制性的，但在 UFS 作为根文件系统时亦应如此。
 
 可以使用命令 `efibootmgr -v` 来确定当前引导加载程序的位置。`BootCurrent` 显示的值是用于引导系统的当下引导配置的编号。输出的相应条目以 `+` 开头，如
 
 ```sh
-root@ykla:~ # efibootmgr -v
+# efibootmgr -v
 Boot to FW : false
 BootCurrent: 0004
 BootOrder  : 0004, 0000, 0001, 0002, 0003
@@ -292,9 +445,7 @@ ESP 应该已经挂载到了 **/boot/efi**。如果没有，可手动挂载之�
 
 在 `efibootmgr -v` 输出的 `File` 字段中的值，如 `\efi\freebsd\loader.efi`，是 EFI 上正在使用的引导加载程序的位置。若挂载点是 **/boot/efi**，则此文件为 `/boot/efi/efi/freebsd/loader.efi`。（在 FAT32 文件系统上大小写不敏感；FreeBSD 使用小写）`File` 的另一个常见值可能是 `\EFI\boot\bootXXX.efi`，其中 `XXX` 是 amd64（即 `x64`）、aarch64（即 `aa64`）或 riscv64（即 `riscv64`）；如未配置，则为默认引导加载程序。应把 **/boot/loader.efi** 复制到 **/boot/efi** 中的正确路径来更新已配置及默认的引导加载程序。
 
----
-
-~~上面是废话，不用看~~
+### 更新方法
 
 
 在版本更新后，在启动菜单出现之前，可能出现下面的画面
@@ -342,63 +493,6 @@ DFreeBSD/amd64 EFI loader, Revision 3.0
 >
 >非 EFI、bootcode、ZFS 等相关更新请自行查看相关部分章节！
 
-## 常规的安全更新
-
-```sh
-# freebsd-update fetch
-```
-
-当出现类似于如下信息时：
-
-```sh
-usrlinclude/c++/vl/trllvector usrlinclude/c++/vl/trllversion usrlinclude/c++/v1/trl/wchar.h usr/include/c++/v1/tr1/wctype.h usrlinclude/c++/vllunwind-armh
-usrlinclude/c++/v1/unwind-itaniumh usrlinclude/c++/vllunwindh
-usr/include/crypto/ cryptodevh usrlinclude/crypto/cbcmac.h usr/include/crypto/deflate.h usrlinclude/crypto/gfmult.h usr/include/crypto/gmac.h
-usr/include/crypto/rijndael.h usrlinclude/crypto/rmd160.h usr/include/crypto/xform.h
-usr/lib/clang/11.0.1/include
-:
-```
-
-你只需要输入 `q` 回车即可。然后：
-
-```sh
-# freebsd-update install
-```
-
-
-## 查看 FreeBSD 版本
-
-> **注意：**
->
-> 有时候补丁不涉及内核，内核版本就不会变，用 `uname -r` 看不出来，但是用户空间版本会变。所以你可能会看到两个版本，以较高者为准。
-
-### freebsd-version 命令
-
-查看 FreeBSD 内核版本和补丁号：
-
-```sh
-ykla@ykla:~ % freebsd-version -k
-13.1-RELEASE-p3
-```
-
-查看已安装的用户空间的版本和补丁程序级别：
-
-```sh
-ykla@ykla:~ % freebsd-version -u
-13.1-RELEASE-p5
-```
-
-### uname 命令
-
-```sh
-ykla@ykla:~ % uname -a
-FreeBSD ykla 13.1-RELEASE FreeBSD 13.1-RELEASE releng/13.1-n250148-fc952ac2212 GENERIC amd64
-```
-
-```sh
-ykla@ykla:~ % uname -mrs
-FreeBSD 13.1-RELEASE amd64
-```
 
 ## 故障排除与未竟事宜
 
