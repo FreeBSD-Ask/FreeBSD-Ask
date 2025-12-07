@@ -14,7 +14,7 @@ FreeBSD 提供了实用工具 `freebsd-update` 来安装系统更新，包括升
 
 ### 参考文献
 
-- [FreeBSD 7.0-RELEASE Announcement](https://www.freebsd.org/releases/7.0R/announce/)，`freebsd-update(8) provides officially supported binary upgrades to new releases in addition to security fixes and errata patches.`
+- [FreeBSD 7.0-RELEASE Announcement](https://www.freebsd.org/releases/7.0R/announce/) 指出 freebsd-update(8) 是由官方支持的二进制更新方式，不仅可用于更新到新版本，还可用于安全修复和勘误补丁的更新。
 
 ## 替换默认的文本编辑器为更简单的编辑器
 
