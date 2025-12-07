@@ -265,7 +265,7 @@
 * [25.2 ZFS 磁盘扩容](di-25-zhang-zfs/di-25.2-zfs-kuorong.md)
 * [25.3 ZFS 快照与还原](di-25-zhang-zfs/di-25.3-zfs-snap.md)
 * [25.4 ZFS 启动环境](di-25-zhang-zfs/di-25.4-zfs-boot.md)
-* [25.5 ZFS 的 zpool 升级](di-25-zhang-zfs/di-25.5-zfs-update.md)
+* [25.5 更新 ZFS 的 zpool](di-25-zhang-zfs/di-25.5-zfs-update.md)
 * [25.6 ZFS 委托管理](di-25-zhang-zfs/di-25.6-zfs-weituo.md)
 * [25.7 ZFS 压缩](di-25-zhang-zfs/di-25.7-zfs-yasuo.md)
 
