@@ -12,6 +12,11 @@ FreeBSD 是真正自由（Liberty）的 **操作系统**，在这波谲云诡的
 
 [~~FreeBSD 项目即将归档（Archived）~~，为了保护我们心爱的操作系统……我们能做的事情就是，写一本书！](https://www.bilibili.com/bangumi/media/md3068) [^2]
 
+[^1]: 转写自房玄龄.晋书·王羲之传附王徽之传 [M].中华书局，1974
+
+[^2]: 转写自《Love Live! School Idol Project》口号
+
+
 [![FreeBSD](https://img.shields.io/badge/FreeBSD-EB0028?logo=freebsd&logoColor=fff)](https://www.freebsd.org/)
 [![OpenBSD](https://img.shields.io/badge/OpenBSD-F2CA30?logo=openbsd&logoColor=black)](https://www.openbsd.org/)
 [![NetBSD](https://img.shields.io/badge/NetBSD-016EE9?logo=netbsd&logoColor=white)](https://www.netbsd.org/)
@@ -161,6 +166,3 @@ EPUB 在手机上可以使用 [微信读书](https://play.google.com/store/apps/
 
 以上图表由 [GitHub Star History](https://www.star-history.com/) 提供。
 
-[^1]: 转写自房玄龄.晋书·王羲之传附王徽之传 [M].中华书局，1974
-
-[^2]: 转写自《Love Live! School Idol Project》口号
