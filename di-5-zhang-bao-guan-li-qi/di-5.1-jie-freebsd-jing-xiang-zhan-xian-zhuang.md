@@ -34,7 +34,47 @@
 >
 >此前有人曾提议提供南京的一台机器，但后续方案变更为虚拟机形式后讨论便陷入停滞。我们无法使用虚拟机方案，需要真实的硬件设备（**注：对方指裸金属**）、实体存储介质和物理网络传输链路。
 
----
+### 拒绝开放的可能性原因分析
+
+#### 安全性问题
+
+FreeBSD 集群过去曾被入侵过，在全面转向 pkg 后，就不允许镜像了。
+
+- [FreeBSD.org 这次的入侵事件](https://blog.delphij.net/posts/2012/12/freebsdorg-2/)，中文说明
+- [FreeBSD.org intrusion announced November 17th 2012](http://www.freebsd.org/news/2012-compromise.html)，官方说明
+
+#### 传输问题
+
+目前的集群似乎是通过 ZFS 文件系统（zfs send/zfs receive）直接传输的，不是传统意义上的 rsync 镜像站模式。
+
+#### 带宽不足
+
+根据 [[NEW MIRROR] New full mirror in Belgium](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=288631)，集群管理员 bofh 的回复：
+
+>There are couple of reasons:
+>
+>1. Bandwidth from our central servers. Increasing number of community mirrors require more bandwidth in case everyone starts pulling altogether like just after a new quarterly branch
+>2. While many sites are excited to create mirrors as they think they have real bandwidth in reality they lose their moral bandwidth in couple of days and our mirrors are no longer in sync. We are often communicated regarding the problems of other community mirrors. We already operate in a tight schedule and often overseeing other mirrors is just another nail in the wall.
+>3. We still accept mirrors but on a different way. If people can sponsor bare metal we would be happy to deploy a new mirror. However our mirror requirements are pretty high. You can have a look at the following to understand our requirements:
+>
+>- https://wiki.freebsd.org/Teams/clusteradm/generic-mirror-layout
+>
+>- https://wiki.freebsd.org/Teams/clusteradm/tiny-mirror
+
+译文：
+
+> 有几个原因：
+>
+> 1. 来自我们中心服务器的带宽。社区镜像数量增加时，如果大家都同时开始拉取，比如在一个新的 quarterly 分支刚发布之后，就会需要更多带宽。
+>
+> 2. 许多站点在创建镜像时非常兴奋，确信自己拥有真实的带宽，但实际上，他们的“道义带宽”往往在几天后就耗尽了，也不再同步我们的镜像。我们经常收到关于其他社区镜像问题的沟通。我们本来日程就很紧，再去监督其他镜像就像给墙上再钉一颗钉子一样。
+>
+> 3. 我们仍然接受镜像，但方式有所不同。如果有人能够赞助裸金属服务器，我们会很乐意部署新的镜像。不过，我们对镜像的要求相当高。你可以查看以下内容来了解我们的要求：
+>
+> * [https://wiki.freebsd.org/Teams/clusteradm/generic-mirror-layout](https://wiki.freebsd.org/Teams/clusteradm/generic-mirror-layout)
+>
+> * [https://wiki.freebsd.org/Teams/clusteradm/tiny-mirror](https://wiki.freebsd.org/Teams/clusteradm/tiny-mirror)
+
 
 ### 中国大陆没有 FreeBSD 官方镜像站
 
