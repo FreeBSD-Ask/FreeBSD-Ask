@@ -499,7 +499,7 @@ pkg 首次出现在 9.1-RELEASE 中。在 10.0-RELEASE 中成为默认的软件�
 
 - 2024-2025 Alpha-Omega 审计
 
-Alpha-Omega 项目先后审计了 FreeBSD 的 bhyve 虚拟机管理程序和 Capsicum 沙箱框架。以及 FreeBSD 基本系统的第三方程序。旨在增强 FreeBSD 项目的安全性与合规性。
+Alpha-Omega 项目先后审计了 FreeBSD 的 bhyve 虚拟机管理程序和 Capsicum 沙箱框架，以及 FreeBSD 基本系统的第三方程序，旨在增强 FreeBSD 项目的安全性与合规性。
 
 - 2025 年 12 月 2 日 引入 pkgbase
 
