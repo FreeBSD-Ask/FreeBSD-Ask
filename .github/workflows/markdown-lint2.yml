@@ -16,7 +16,7 @@ jobs:
 
       - name: markdownlint cli2 RP
         if: failure()
-        uses: peter-evans/create-pull-request@v7
+        uses: peter-evans/create-pull-request@v8
         with:
           commit-message: "Markdown 格式化"
           labels: "Markdown"
