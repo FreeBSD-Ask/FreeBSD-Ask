@@ -457,14 +457,21 @@ Poudriere 是一款通过 jail 测试 port，并继而构建 FreeBSD 镜像的�
 
 LLVM 项目是一组模块化和可重用的编译器和工具链技术。Clang 项目为 LLVM 项目提供了 C 语言前端和工具基础设施。这些程序目前是 FreeBSD 的编译基础设施。
 
+- 2012 年 11 月 11 日 黑客入侵
+
+FreeBSD 项目集群检测遭到黑客入侵，但未发现任何明显破坏。
+
 - 2013 年 2 月 28 日 从 CVS 迁移到 Subversion
 
 由于大多数 port 已经在 Subversion 中进行开发，于 2013 年 2 月 28 日正式完成了从 CVS 到 Subversion 的迁移。此后，FreeBSD Ports 不再使用 CVS。
 
-- 2013 年 9 月 17 日 开源 ZFS 项目启动
+- 2013 年 9 月 17 日 OpenZFS 项目启动
 
-ZFS 开源项目衍生于 OpenSolaris 项目。在 2013 年 9 月 17 日，ZFS 开源项目宣布 OpenZFS 成为 ZFS 的继任者，并创建了一家正式的社区来维持开发和支持。
+OpenZFS 项目衍生于 OpenSolaris。在 2013 年 9 月 17 日，ZFS 开源项目宣布 OpenZFS 成为 ZFS 的继任者，并创建了一家正式的社区来维持开发和支持。
 
+- 2014 年 1 月 20 日 pkg 成为 10.0-RELEASE 默认的软件包管理器
+
+pkg 首次出现在 FreeBSD-9.1-RELEASE 中。在 10.0-RELEASE 中成为默认的软件包管理器，取代了命令 `pkg_*`。
 
 - 2014 年 1-2 月 FreeBSD 期刊创刊号
 
@@ -474,6 +481,9 @@ ZFS 开源项目衍生于 OpenSolaris 项目。在 2013 年 9 月 17 日，ZFS �
 
 国际 FreeBSD 日是每年一度的庆祝活动，旨在赞扬 FreeBSD 对技术的开创性和持续影响，并纪念其传承的价值。
 
+- 2018 年 FreeBSD 中文社区（CFC）成立
+
+在千禧年代曾存在多个中文社区，但后无人问津，其核心成员虽然仍部分活跃在 FreeBSD 项目中，但已经不再关注中文世界，专注于自己的家庭和事业。FreeBSD 中文社区（CFC）最早由百度贴吧 FreeBSD 吧发展而来。
 
 - 2021 年 4 月 6 日 Git 迁移完成
 
