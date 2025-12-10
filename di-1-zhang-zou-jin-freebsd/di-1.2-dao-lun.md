@@ -306,9 +306,7 @@ FreeBSD 不仅仅是 **在生命周期内不变**，大版本更新也具有连�
 
 王波《FreeBSD 在中国的未来》。引自《FreeBSD 使用大全》第二版，机械工业出版社，2002，ISBN 9787111102861
 
-
-
-## FreeBSD 简史
+## FreeBSD 重要历史节点
 
 - 1962 年 分时操作系统（Timesharing OS）
 
@@ -326,7 +324,7 @@ Multics 最初的规划和开发始于 1964 年的马萨诸塞州的剑桥市。
 
 Dennis Ritchie 决定为 UNIX 开发一种高级汇编语言，其中的语句可以翻译成两到三条指令。这促使他开发了 C 编程语言。第四版研究 UNIX（Research Unix）使用 C 语言重写。这使得 UNIX 具备了可移植性，从而改写了操作系统的历史。
 
-- 1974 年 UNIX 被引入加州大学伯克利分校
+- 1974 年 加州大学伯克利分校引入 UNIX
 
 1974 年，加州大学伯克利分校的 Bob Fabry 教授从 AT&T 获得了 UNIX 的源代码许可。Bob Fabry 此前在 1973 年的 ACM 操作系统原理研讨会（Association for Computing Machinery）上见过 UNIX 4，并有意将其引入伯克利大学。计算机系统研究小组（CSRG）开始修改和改进 AT&T Research Unix。他们将这个修改后的版本称为“BSD Unix”/“BSD”。
 
@@ -398,7 +396,6 @@ kqueue(2) 是取代 select/poll 的创新解决方案，于 2000 年 7 月 27 �
 
 EuroBSDCon 2001 于 2001 年末在英国布莱顿举行。随着全球社区的不断扩大，EuroBSDCon 的目标是聚集在 BSD 操作系统家族及相关项目上工作的用户和开发者。
 
-
 - 2004 年 1 月 9 日 AMD64 磁盘镜像
 
 在版本 5.1 实验性地支持 amd64 后，5.2-RELEASE 正式支持了 amd64。amd64 成为了首个 64 位的一级平台。
@@ -427,11 +424,9 @@ Deb Goodkin 于 2005 年加入基金会，成为首位执行董事。她之前�
 
 举行了一项 Logo 设计大赛，由 Anton K. Gural 设计的 Logo 获胜（当前仍在使用）。
 
-
 - 2007 年 JEMALLOC
 
 Jason Evans 于 2005 年开发了 jemalloc，这是一款内存分配器。与此同时，FreeBSD 需要一款可扩展的多处理器内存分配器，因此 Evans 将 jemalloc 集成到了 FreeBSD 的 libc 中，这改进了其可扩展性和碎片化行为。
-
 
 - 2008 年 3 月 ZFS
 
@@ -485,9 +480,9 @@ pkg 首次出现在 9.1-RELEASE 中。在 10.0-RELEASE 中成为默认的软件�
 
 在千禧年代曾存在多个中文社区，但后无人问津，其核心成员虽然仍部分活跃在 FreeBSD 项目中，但已经不再关注中文世界，专注于自己的家庭和事业。FreeBSD 中文社区（CFC）最早由百度贴吧 FreeBSD 吧发展而来。
 
-- 2021 年 4 月 6 日 Git 迁移完成
+- 2021 年 4 月 6 日 从 Subversion 迁移到 Git
 
-在今天，FreeBSD 项目完成了从 Subversion 到 Git 的迁移。此过程始于 2019 年 5 月的 DevSummit，当时成立了一个 Git 工作小组。
+在今天，FreeBSD 项目终于完成了从 Subversion 到 Git 的迁移。此过程始于 2019 年 5 月的 DevSummit，当时成立了一个 Git 工作小组。
 
 - 2021 年 4 月 13 日 由 OpenSolaris ZFS 切换到 OpenZFS
 
