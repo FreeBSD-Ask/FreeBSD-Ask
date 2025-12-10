@@ -435,7 +435,7 @@ Jason Evans 于 2005 年开发了 jemalloc，这是一款内存分配器。与�
 
 - 2008 年 3 月 ZFS
 
-在 2005 年，Sun Microsystems 开发了一种新型文件系统，最终产物是 ZFS。ZFS 是一款集成了文件系统和逻辑卷管理器的系统。该系统具有可扩展性，并提供了广泛的数据完整性保护和高效的数据压缩功能。ZFS 于 2008 年初进入到 FreeBSD 系统中。
+在 2005 年，Sun Microsystems 开发了一种新型文件系统，最终产物是 ZFS。ZFS 是一款集成了文件系统和逻辑卷管理器的系统。该系统具有可扩展性，并提供了广泛的数据完整性保护和高效的数据压缩功能。OpenSolaris 版本的 ZFS 于 2008 年初进入到 FreeBSD 系统中。
 
 - 2009 年 1 月 6 日 DTrace
 
@@ -467,7 +467,7 @@ FreeBSD 项目集群检测到黑客入侵，但未发现任何明显破坏。但
 
 - 2013 年 9 月 17 日 OpenZFS 项目启动
 
-OpenZFS 项目衍生于 OpenSolaris。在 2013 年 9 月 17 日，ZFS 开源项目宣布 OpenZFS 成为 ZFS 的继任者，并创建了一家正式的社区来维持开发和支持。
+OpenZFS 项目衍生于 OpenSolaris。在 2013 年 9 月 17 日，ZFS 开源项目宣布 OpenZFS 成为 ZFS 的继任者，并创建了一家正式的社区来维持开发和支持。但此时 FreeBSD 依旧使用的是最早的 OpenSolaris ZFS。
 
 - 2014 年 1 月 20 日 pkg 成为默认的软件包管理器
 
@@ -475,7 +475,7 @@ pkg 首次出现在 9.1-RELEASE 中。在 10.0-RELEASE 中成为默认的软件�
 
 - 2014 年 1-2 月 FreeBSD 期刊创刊号
 
-作为 FreeBSD 社区的声音，并是跟进 FreeBSD 最新发布版本和新进展的最佳途径，FreeBSD 期刊的创刊号是 2014 年 1/2 月刊，重点关注 FreeBSD 10。
+作为 FreeBSD 社区的声音，并是跟进 FreeBSD 最新发布版本和新进展的最佳途径，FreeBSD 期刊的创刊号是 2014 年 1/2 月刊，重点关注 FreeBSD 10。最初是以付费订阅模式进行发行，直至 2019 年 1 月才将 FreeBSD 期刊转为免费出版物，后同时在基金会网站上进行刊载（同时提供了 HTML 和 PDF）。
 
 - 2017 年 6 月 19 日 首个“FreeBSD 日”
 
@@ -487,7 +487,11 @@ pkg 首次出现在 9.1-RELEASE 中。在 10.0-RELEASE 中成为默认的软件�
 
 - 2021 年 4 月 6 日 Git 迁移完成
 
-于 2021 年 4 月 6 日 完成了从 Subversion 到 Git 的迁移。此过程始于 2019 年 5 月的 DevSummit，当时成立了一个 Git 工作小组。
+在今天，FreeBSD 项目完成了从 Subversion 到 Git 的迁移。此过程始于 2019 年 5 月的 DevSummit，当时成立了一个 Git 工作小组。
+
+- 2021 年 4 月 13 日 由 OpenSolaris ZFS 切换到 OpenZFS
+
+在 13.0-RELEASE 中，由于 OpenSolaris 继任者 illumos 开发基本停滞，切换到 OpenZFS 实现。该迁移计划最早出现在 2018 年。
 
 - 2024 年 9 月 笔记本和桌面工作组 LDWG 成立
 
