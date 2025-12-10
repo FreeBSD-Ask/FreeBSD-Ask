@@ -503,7 +503,7 @@ Alpha-Omega 项目先后审计了 FreeBSD 的 bhyve 虚拟机管理程序和 Cap
 
 - 2025 年 12 月 2 日 引入 pkgbase
 
-在 15.0-RELEASE 中，新增了 pkgbase 安装方式，旨在通过软件包管理基本系统。该方式最早出现在 TureOS 中，是其遗产之一。
+在 15.0-RELEASE 中，新增了 pkgbase 安装方式，旨在通过软件包管理基本系统。该方式最早出现在 TrueOS 中，是其遗产之一。
 
 ### 参考文献
 
