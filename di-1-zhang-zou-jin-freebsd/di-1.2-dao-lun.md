@@ -462,7 +462,7 @@ FreeBSD 项目集群检测到黑客入侵，虽然未发现任何明显破坏，
 
 - 2013 年 9 月 17 日 OpenZFS 项目启动
 
-OpenZFS 项目衍生于 OpenSolaris。在 2013 年 9 月 17 日，ZFS 开源项目宣布 OpenZFS 成为 ZFS 的继任者，并创建了一家正式的社区来维持开发和支持。但此时 FreeBSD 依旧使用的是最早的 OpenSolaris ZFS。
+OpenZFS 项目衍生于 OpenSolaris。在 2013 年 9 月 17 日，ZFS 开源项目宣布 OpenZFS 成为 ZFS 的继任者，并创建了一个正式的社区来维持开发和支持。但此时 FreeBSD 依旧使用的是最早的 OpenSolaris ZFS。
 
 - 2014 年 1 月 20 日 pkg 成为默认的软件包管理器
 
