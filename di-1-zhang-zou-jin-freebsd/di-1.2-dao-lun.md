@@ -306,9 +306,7 @@ FreeBSD 不仅仅是 **在生命周期内不变**，大版本更新也具有连�
 
 王波《FreeBSD 在中国的未来》。引自《FreeBSD 使用大全》第二版，机械工业出版社，2002，ISBN 9787111102861
 
-
-
-## FreeBSD 简史
+## FreeBSD 重要历史节点
 
 - 1962 年 分时操作系统（Timesharing OS）
 
@@ -326,7 +324,7 @@ Multics 最初的规划和开发始于 1964 年的马萨诸塞州的剑桥市。
 
 Dennis Ritchie 决定为 UNIX 开发一种高级汇编语言，其中的语句可以翻译成两到三条指令。这促使他开发了 C 编程语言。第四版研究 UNIX（Research Unix）使用 C 语言重写。这使得 UNIX 具备了可移植性，从而改写了操作系统的历史。
 
-- 1974 年 UNIX 被引入加州大学伯克利分校
+- 1974 年 加州大学伯克利分校引入 UNIX
 
 1974 年，加州大学伯克利分校的 Bob Fabry 教授从 AT&T 获得了 UNIX 的源代码许可。Bob Fabry 此前在 1973 年的 ACM 操作系统原理研讨会（Association for Computing Machinery）上见过 UNIX 4，并有意将其引入伯克利大学。计算机系统研究小组（CSRG）开始修改和改进 AT&T Research Unix。他们将这个修改后的版本称为“BSD Unix”/“BSD”。
 
@@ -398,7 +396,6 @@ kqueue(2) 是取代 select/poll 的创新解决方案，于 2000 年 7 月 27 �
 
 EuroBSDCon 2001 于 2001 年末在英国布莱顿举行。随着全球社区的不断扩大，EuroBSDCon 的目标是聚集在 BSD 操作系统家族及相关项目上工作的用户和开发者。
 
-
 - 2004 年 1 月 9 日 AMD64 磁盘镜像
 
 在版本 5.1 实验性地支持 amd64 后，5.2-RELEASE 正式支持了 amd64。amd64 成为了首个 64 位的一级平台。
@@ -427,15 +424,13 @@ Deb Goodkin 于 2005 年加入基金会，成为首位执行董事。她之前�
 
 举行了一项 Logo 设计大赛，由 Anton K. Gural 设计的 Logo 获胜（当前仍在使用）。
 
-
 - 2007 年 JEMALLOC
 
 Jason Evans 于 2005 年开发了 jemalloc，这是一款内存分配器。与此同时，FreeBSD 需要一款可扩展的多处理器内存分配器，因此 Evans 将 jemalloc 集成到了 FreeBSD 的 libc 中，这改进了其可扩展性和碎片化行为。
 
-
 - 2008 年 3 月 ZFS
 
-在 2005 年，Sun Microsystems 开发了一种新型文件系统，最终产物是 ZFS。ZFS 是一款集成了文件系统和逻辑卷管理器的系统。该系统具有可扩展性，并提供了广泛的数据完整性保护和高效的数据压缩功能。ZFS 于 2008 年初进入到 FreeBSD 系统中。
+在 2005 年，Sun Microsystems 开发了一种新型文件系统，最终产物是 ZFS。ZFS 是一款集成了文件系统和逻辑卷管理器的系统。该系统具有可扩展性，并提供了广泛的数据完整性保护和高效的数据压缩功能。OpenSolaris 版本的 ZFS 于 2008 年初进入到 FreeBSD 系统中。
 
 - 2009 年 1 月 6 日 DTrace
 
@@ -457,28 +452,57 @@ Poudriere 是一款通过 jail 测试 port，并继而构建 FreeBSD 镜像的�
 
 LLVM 项目是一组模块化和可重用的编译器和工具链技术。Clang 项目为 LLVM 项目提供了 C 语言前端和工具基础设施。这些程序目前是 FreeBSD 的编译基础设施。
 
+- 2012 年 11 月 11 日 黑客入侵
+
+FreeBSD 项目集群检测到黑客入侵，虽然未发现任何明显破坏，但仍然花费数月进行审计与还原。
+
 - 2013 年 2 月 28 日 从 CVS 迁移到 Subversion
 
 由于大多数 port 已经在 Subversion 中进行开发，于 2013 年 2 月 28 日正式完成了从 CVS 到 Subversion 的迁移。此后，FreeBSD Ports 不再使用 CVS。
 
-- 2013 年 9 月 17 日 开源 ZFS 项目启动
+- 2013 年 9 月 17 日 OpenZFS 项目启动
 
-ZFS 开源项目衍生于 OpenSolaris 项目。在 2013 年 9 月 17 日，ZFS 开源项目宣布 OpenZFS 成为 ZFS 的继任者，并创建了一家正式的社区来维持开发和支持。
+OpenZFS 项目衍生于 OpenSolaris。在 2013 年 9 月 17 日，ZFS 开源项目宣布 OpenZFS 成为 ZFS 的继任者，并创建了一个正式的社区来维持开发和支持。但此时 FreeBSD 依旧使用的是最早的 OpenSolaris ZFS。
 
+- 2014 年 1 月 20 日 pkg 成为默认的软件包管理器
+
+pkg 首次出现在 9.1-RELEASE 中。在 10.0-RELEASE 中成为默认的软件包管理器，取代了 `pkg_*` 等一系列命令。
 
 - 2014 年 1-2 月 FreeBSD 期刊创刊号
 
-作为 FreeBSD 社区的声音，并是跟进 FreeBSD 最新发布版本和新进展的最佳途径，FreeBSD 期刊的创刊号是 2014 年 1/2 月刊，重点关注 FreeBSD 10。
+作为 FreeBSD 社区的声音，也是跟进 FreeBSD 最新发布版本和新进展的最佳途径，FreeBSD 期刊的创刊号是 2014 年 1/2 月刊，重点关注 FreeBSD 10。最初是以付费订阅模式进行发行，直至 2019 年 1 月才将 FreeBSD 期刊转为免费出版物，后同时在基金会网站上进行刊载（同时提供了 HTML 和 PDF）。
 
 - 2017 年 6 月 19 日 首个“FreeBSD 日”
 
 国际 FreeBSD 日是每年一度的庆祝活动，旨在赞扬 FreeBSD 对技术的开创性和持续影响，并纪念其传承的价值。
 
+- 2018 年 FreeBSD 中文社区（CFC）成立
 
-- 2021 年 4 月 6 日 Git 迁移完成
+在千禧年代曾存在多个中文社区，但后来无人问津。这些早期社区的部分核心成员仍活跃在 FreeBSD 项目中，但他们已经不再关注中文世界，而是专注于自己的家庭和事业。FreeBSD 中文社区（CFC）最早由百度贴吧 FreeBSD 吧发展而来。
 
-于 2021 年 4 月 6 日 完成了从 Subversion 到 Git 的迁移。此过程始于 2019 年 5 月的 DevSummit，当时成立了一个 Git 工作小组。
+- 2021 年 4 月 6 日 从 Subversion 迁移到 Git
 
+在今天，FreeBSD 项目终于完成了从 Subversion 到 Git 的迁移。此过程始于 2019 年 5 月的 DevSummit，当时成立了一个 Git 工作小组。
+
+- 2021 年 4 月 13 日 由 OpenSolaris ZFS 切换到 OpenZFS
+
+在 13.0-RELEASE 中，由于 OpenSolaris 继任者 illumos 开发基本停滞，切换到 OpenZFS 实现。该迁移计划最早出现在 2018 年。
+
+- 2024 年 9 月 笔记本和桌面工作组 LDWG 成立
+
+笔记本和桌面工作组 LDWG 如字面所述，旨在提供一系列改进和新增的 FreeBSD 功能，使 FreeBSD 能够在个人设备上“开箱即用”。计划为期 1-2 年。
+
+- 2024 年 9 月 德国主权技术基金赞助 FreeBSD 项目实施基础设施现代化
+
+该项目主要目标是改进基本系统、Ports 和软件包的安全工具，更新项目基础设施以加快开发速度，增强构建安全性，并让新开发者更容易上手。预计于 2025 年底结束。
+
+- 2024-2025 Alpha-Omega 审计
+
+Alpha-Omega 项目先后审计了 FreeBSD 的 bhyve 虚拟机管理程序和 Capsicum 沙箱框架，以及 FreeBSD 基本系统的第三方程序，旨在增强 FreeBSD 项目的安全性与合规性。
+
+- 2025 年 12 月 2 日 引入 pkgbase
+
+在 15.0-RELEASE 中，新增了 pkgbase 安装方式，旨在通过软件包管理基本系统。该方式最早出现在 TrueOS 中，是其遗产之一。
 
 ### 参考文献
 
