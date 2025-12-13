@@ -84,7 +84,7 @@ proc           /proc       procfs  rw  0   0
 
 ### 中文环境不完整
 
-待 PR。
+已经反馈至 [Many UI Strings Are Missing from .po Files](https://github.com/bbidulock/icewm/issues/821)。
 
 ## 参考文献
 
