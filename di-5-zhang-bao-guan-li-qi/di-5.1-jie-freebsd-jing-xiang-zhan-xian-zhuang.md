@@ -71,9 +71,9 @@ FreeBSD 集群过去曾被入侵过，在全面转向 pkg 后，就不允许镜�
 >
 > 3. 我们仍然接受镜像，但方式有所不同。如果有人能够赞助裸金属服务器，我们会很乐意部署新的镜像。不过，我们对镜像的要求相当高。你可以查看以下内容来了解我们的要求：
 >
-> * [https://wiki.freebsd.org/Teams/clusteradm/generic-mirror-layout](https://wiki.freebsd.org/Teams/clusteradm/generic-mirror-layout)
+> - [https://wiki.freebsd.org/Teams/clusteradm/generic-mirror-layout](https://wiki.freebsd.org/Teams/clusteradm/generic-mirror-layout)
 >
-> * [https://wiki.freebsd.org/Teams/clusteradm/tiny-mirror](https://wiki.freebsd.org/Teams/clusteradm/tiny-mirror)
+> - [https://wiki.freebsd.org/Teams/clusteradm/tiny-mirror](https://wiki.freebsd.org/Teams/clusteradm/tiny-mirror)
 
 
 >**思考题**

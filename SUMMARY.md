@@ -51,9 +51,8 @@
 * [4.7 用户和基本账户管理](di-4-zhang-freebsd-base/di-4.7-jie-zu.md)
 * [4.8 权限](di-4-zhang-freebsd-base/di-4.8-jie-quan-xian.md)
 * [4.9 sudo 和 doas](di-4-zhang-freebsd-base/di-4.9-jie-sudo.md)
-* [4.10 文件系统的挂载和卸载](di-4-zhang-freebsd-base/di-4.10-mount.md)
-* [4.11 磁盘结构](di-4-zhang-freebsd-base/di-4.11-disk.md)
-* [4.12 目录结构](di-4-zhang-freebsd-base/di-4.12-mu-lu.md)
+* [4.10 文件系统基础](di-4-zhang-freebsd-base/di-4.10-mount.md)
+* [4.11 系统目录结构](di-4-zhang-freebsd-base/di-4.11-mu-lu.md)
 
 ## 第 5 章 软件管理和系统升级
 
@@ -258,6 +257,7 @@
 * [24.3 机器无关的内核选项](di-24-zhang-kernel/di-24.3-kernel-mi.md)
 * [24.4 GENERIC 内核选项（amd64）](di-24-zhang-kernel/di-24.4-GENERIC-kernel-mi.md)
 * [24.5 在 Linux 上构建 FreeBSD](di-24-zhang-kernel/di-24.5-jie-build-freebsd-on-linux.md)
+* [24.6 FreeBSD 源代码目录结构](di-24-zhang-kernel/di-24.6-mulu.md)
 
 ## 第 25 章 ZFS 文件系统
 
