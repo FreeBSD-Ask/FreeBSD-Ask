@@ -147,13 +147,15 @@ dtspc		6112/tcp
 
 ## 故障排除与未竟事宜
 
-- 无法中文化（似乎日历是中文）
+### 无法设置中文环境
 
-待解决
+（似乎日历是中文）
+
+根据源码 <https://sourceforge.net/p/cdesktopenv/code/ci/master/tree/cde/imports/motif/localized/>，不存在中文支持。但是根据 [简体中文 Solaris 用户指南](https://docs.oracle.com/cd/E19683-01/816-0668/6m7500nqp/index.html)，其明显存在简体中文支持，疑似在开源中弄丢了，或者 Solaris 是个分支未合并。已经反馈至 [Missing Simplified Chinese locale support under cde/imports/motif/localized](https://sourceforge.net/p/cdesktopenv/discussion/general/thread/c51abcd846/)。
 
 
 ## 参考文献
 
-- [cde Common Desktop Environment](https://www.freshports.org/x11/cde)
+- [cde Common Desktop Environment](https://www.freshports.org/x11/cde)，Ports 详情
 - [Setting up Common Desktop Environment for modern use](https://forums.freebsd.org/threads/setting-up-common-desktop-environment-for-modern-use.69475/)，详细配置可参考此处
 - [CDE - Common Desktop Environment Wiki](https://sourceforge.net/p/cdesktopenv/wiki/FreeBSDBuild/)，CDE 项目官方 WiKi
