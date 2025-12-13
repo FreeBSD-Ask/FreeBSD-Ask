@@ -67,14 +67,6 @@ proc           /proc       procfs  rw  0   0
 
 ### 中文配置
 
-在 `/etc/rc.conf` 下加入：
-
-```sh
-lightdm_env="LC_MESSAGES=zh_CN.UTF-8" 
-```
-
----
-
 编辑 `/etc/login.conf`，找到 `default:\` 这一段，把 `:lang=C.UTF-8` 修改为 `:lang=zh_CN.UTF-8`。
 
 刷新数据库：
@@ -91,7 +83,7 @@ lightdm_env="LC_MESSAGES=zh_CN.UTF-8"
 
 ## 故障排除与未竟事宜
 
-- `Could not execute command: exec WPrefs`
+### `Could not execute command: exec WPrefs`
 
 可以在终端输入
 
@@ -101,9 +93,13 @@ lightdm_env="LC_MESSAGES=zh_CN.UTF-8"
 
 ![FreeBSD 安装 Window Maker](../.gitbook/assets/WindowMaker3.png)
 
-- 无法中文化
+### 无法使用中文环境
 
-待解决。
+Window Maker 本身应该是有些字符串没有被处理到 `.po` 文件中 <https://repo.or.cz/wmaker-crm.git/blob/refs/heads/master:/po/zh_CN.po>，因此是中英文混合显示输出的。
+
+<https://sourceforge.net/p/wmakerconf/code/HEAD/tree/wmakerconf/trunk/po/> wmakerconf 在 07 年后就停止开发了。翻译了有极大也有可能性无法被合并。
+
+综上，中文环境处理难度较大，感兴趣的读者可以尝试推进。
 
 ### 参考文献
 
