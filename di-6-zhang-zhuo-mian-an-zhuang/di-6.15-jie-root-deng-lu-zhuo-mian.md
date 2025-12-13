@@ -20,17 +20,11 @@ GDM，即 GNOME Display Manager，GNOME 显示管理器。
 
 LightDM，即 Light Display Manager，轻量级显示管理器。
 
-然后修改配置文件：
-
-- 编辑 `/usr/local/etc/lightdm/lightdm.conf`：
-
-往下拉，找到 `greeter-show-manual-login=true` 移除前面的 `#`。该行会多次出现，第一次出现是为你介绍用法，请勿修改！而应该继续往下拉。
-
-- 编辑 `/usr/local/etc/pam.d/lightdm`：
+编辑 `/usr/local/etc/pam.d/lightdm`：
 
 注释掉 `account requisite pam_securetty.so` 这一行（即往最前面加 `#`）
 
-重启服务
+然后重启服务：
 
 ```sh
 # service lightdm restart
