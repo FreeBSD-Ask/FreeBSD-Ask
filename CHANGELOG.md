@@ -6,6 +6,7 @@
 
 - 2025.12.13
   - 重写“7.2 IceWM”
+  - “10.3 Mihomo（Clash）”新增“RC 脚本”。已向 Ports 维护者发出请求合并（[Bug 291295 - net/mihomo: Add rc.conf and some Post-installation](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=291295)），但未予回应。
 - 2025.12.8
   - “5.1 FreeBSD 镜像站现状”新增“拒绝开放的可能性原因分析”
 - 2025.12.7
