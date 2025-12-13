@@ -1,11 +1,6 @@
 # 4.11 系统目录结构
 
-
-## 系统目录结构
-
 为了方便说明，仅列出三级目录和重要文件：
-
-参见 [hier(7)](https://man.freebsd.org/cgi/man.cgi?query=hier&sektion=7&manpath=freebsd-release-ports)
 
 ```sh
 \
@@ -153,5 +148,6 @@ dr-xr-xr-x   2 root    wheel   schg,uarch  2 Feb 21 10:26 empty
 ```
 
 
+## 参考文献
 
-
+- 手册页 [hier(7)](https://man.freebsd.org/cgi/man.cgi?query=hier&sektion=7&manpath=freebsd-release-ports)
