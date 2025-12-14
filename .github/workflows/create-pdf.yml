@@ -81,47 +81,49 @@ jobs:
           RELEASE_TAG=$(date +'%Y.%m.%d')
           echo "RELEASE_TAG=$RELEASE_TAG" >> $GITHUB_ENV
 
-      - name: 获取前一个标签（按创建时间）
+      - name: 获取前一个 tag
         working-directory: FreeBSD-Ask
         run: |
           git fetch --tags --force
-          PREVIOUS_TAG=$(git tag --sort=-creatordate | sed -n '2p')
-          echo "PREVIOUS_TAG=$PREVIOUS_TAG" >> $GITHUB_ENV
-          echo "Previous tag: $PREVIOUS_TAG"
 
-      - name: 创建 Git 标签
+          TAG_COUNT=$(git tag | wc -l)
+          if [ "$TAG_COUNT" -lt 2 ]; then
+            echo "PREVIOUS_TAG=" >> $GITHUB_ENV
+          else
+            PREVIOUS_TAG=$(git tag --sort=-creatordate | sed -n '2p')
+            echo "PREVIOUS_TAG=$PREVIOUS_TAG" >> $GITHUB_ENV
+          fi
+
+      - name: 创建 & Push 新 tag
         working-directory: FreeBSD-Ask
         run: |
           git config --global user.email "yklaxds@gmail.com"
           git config --global user.name "ykla"
-          git tag "$RELEASE_TAG"
-          git push origin "$RELEASE_TAG"
 
-      - name: 生成增量变更日志
-        uses: janheinrichmerker/action-github-changelog-generator@v2.4
+          git tag "${RELEASE_TAG}"
+          git push origin "${RELEASE_TAG}"
+
+      - name: 生成 Changelog
+        id: build_changelog
+        uses: mikepenz/release-changelog-builder-action@v6
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          sinceTag: ${{ env.PREVIOUS_TAG }}
-          user: FreeBSD-Ask
-          repo: FreeBSD-Ask
+          # 如果你需要指定 fromTag/toTag 也可以加上 fromTag: ${{ env.PREVIOUS_TAG }}
+          # toTag 会自动解析成最新的 tag
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: 读取变更日志内容
-        id: read_changelog
-        run: |
-          CHANGES=$(cat CHANGELOG.md)
-          echo "CHANGES_CONTENT<<EOF" >> $GITHUB_ENV
-          echo "$CHANGES" >> $GITHUB_ENV
-          echo "EOF" >> $GITHUB_ENV
-
-      - name: 创建 GitHub Release
-        uses: ncipollo/release-action@v1
+      - name: 创建/更新 Release
+        uses: softprops/action-gh-release@v1
         with:
-          tag: ${{ env.RELEASE_TAG }}
+          tag_name: ${{ env.RELEASE_TAG }}
           name: ${{ env.RELEASE_TAG }}
-          artifacts: |
+          make_latest: true
+          overwrite: true
+          body: ${{ steps.build_changelog.outputs.changelog }}
+          files: |
             pdf-generator/build/${{ env.RELEASE_TAG }}.pdf
             pdf-generator/build/${{ env.RELEASE_TAG }}.epub
           token: ${{ secrets.GITHUB_TOKEN }}
-          makeLatest: true
-          body: ${{ env.CHANGES_CONTENT }}
+
 
