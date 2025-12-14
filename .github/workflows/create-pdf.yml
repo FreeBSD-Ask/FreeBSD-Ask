@@ -116,8 +116,7 @@ jobs:
         id: build_changelog
         uses: mikepenz/release-changelog-builder-action@v6.0.1
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          # 可选: fromTag: ${{ env.PREVIOUS_TAG }}
+          fromTag: ${{ env.PREVIOUS_TAG }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
