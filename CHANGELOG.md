@@ -5,7 +5,7 @@
 
 - 2025.12.14
   - 新增“13.7 用户分级与资源配额（login.conf）”。
-    - 根据编纂发现，提交 [Bug 291649 Submitted – COPYRIGHT in login classes/login.conf(5) does not work](https://bugs.freebsd.org/bugzilla/post_bug.cgi?id=291649)
+    - 根据编纂发现，提交 [Bug 291649 Submitted – COPYRIGHT in login classes/login.conf(5) does not work](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=291649)
 - 2025.12.13
   - 重写“7.2 IceWM”
   - “10.3 Mihomo（Clash）”新增“RC 脚本”。已向 Ports 维护者发出请求合并（[Bug 291295 - net/mihomo: Add rc.conf and some Post-installation](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=291295)），但未予回应。
