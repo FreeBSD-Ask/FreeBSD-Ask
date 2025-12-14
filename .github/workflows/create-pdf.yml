@@ -74,56 +74,62 @@ jobs:
           PYTHONPATH: ${{ github.workspace }}/pdf-generator
 
 # ================= 发布流程 =================
-
       - name: 设置发布日期标签
         id: set_tag
         run: |
-          RELEASE_TAG=$(date +'%Y.%m.%d')
-          echo "RELEASE_TAG=$RELEASE_TAG" >> $GITHUB_ENV
+          # 使用 workflow env，避免 shell 变量和 env 混用
+          echo "RELEASE_TAG=$(date +'%Y.%m.%d')" >> $GITHUB_ENV
 
-      - name: 获取前一个 tag
+      - name: 获取前一个标签（安全处理）
         working-directory: FreeBSD-Ask
         run: |
           git fetch --tags --force
-
           TAG_COUNT=$(git tag | wc -l)
           if [ "$TAG_COUNT" -lt 2 ]; then
             echo "PREVIOUS_TAG=" >> $GITHUB_ENV
           else
+            # 注意：轻量标签或创建时间与语义版本可能不一致
             PREVIOUS_TAG=$(git tag --sort=-creatordate | sed -n '2p')
             echo "PREVIOUS_TAG=$PREVIOUS_TAG" >> $GITHUB_ENV
           fi
 
-      - name: 创建 & Push 新 tag
+      - name: 检查标签是否已存在
+        working-directory: FreeBSD-Ask
+        id: check_tag
+        run: |
+          if git rev-parse "refs/tags/${{ env.RELEASE_TAG }}" >/dev/null 2>&1; then
+            echo "TAG_EXISTS=true" >> $GITHUB_ENV
+          else
+            echo "TAG_EXISTS=false" >> $GITHUB_ENV
+          fi
+
+      - name: 创建 & Push 新标签（仅当不存在时）
+        if: env.TAG_EXISTS == 'false'
         working-directory: FreeBSD-Ask
         run: |
           git config --global user.email "yklaxds@gmail.com"
           git config --global user.name "ykla"
-
-          git tag "${RELEASE_TAG}"
-          git push origin "${RELEASE_TAG}"
+          git tag "${{ env.RELEASE_TAG }}"
+          git push origin "${{ env.RELEASE_TAG }}"
 
       - name: 生成 Changelog
         id: build_changelog
-        uses: mikepenz/release-changelog-builder-action@v6
+        uses: mikepenz/release-changelog-builder-action@v6.0.1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          # 如果你需要指定 fromTag/toTag 也可以加上 fromTag: ${{ env.PREVIOUS_TAG }}
-          # toTag 会自动解析成最新的 tag
+          # 可选: fromTag: ${{ env.PREVIOUS_TAG }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: 创建/更新 Release
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2.0.5
         with:
           tag_name: ${{ env.RELEASE_TAG }}
           name: ${{ env.RELEASE_TAG }}
+          body: ${{ steps.build_changelog.outputs.changelog }}
           make_latest: true
           overwrite: true
-          body: ${{ steps.build_changelog.outputs.changelog }}
           files: |
             pdf-generator/build/${{ env.RELEASE_TAG }}.pdf
             pdf-generator/build/${{ env.RELEASE_TAG }}.epub
           token: ${{ secrets.GITHUB_TOKEN }}
-
-
