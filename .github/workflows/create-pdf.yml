@@ -127,9 +127,9 @@ jobs:
         run: |
           PREV_TAG=${{ steps.prev_tag.outputs.PREVIOUS_TAG }}
           if [ -z "$PREV_TAG" ]; then
-            # 无前一个标签，使用初始 commit
+            # 无前一个标签，使用初始 commit（包含初始提交本身）
             INITIAL_COMMIT=$(git rev-list --max-parents=0 HEAD)
-            git log $INITIAL_COMMIT..HEAD --pretty=format:'* %s (%h)' > changelog.txt
+            git log "$INITIAL_COMMIT"^..HEAD --pretty=format:'* %s (%h)' > changelog.txt
           else
             git log $PREV_TAG..HEAD --pretty=format:'* %s (%h)' > changelog.txt
           fi
