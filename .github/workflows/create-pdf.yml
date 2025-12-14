@@ -73,27 +73,29 @@ jobs:
         env:
           PYTHONPATH: ${{ github.workspace }}/pdf-generator
 
-      # ================= 发布流程部分 =================
+# ================= 发布流程 =================
+
       - name: 设置发布日期标签
         id: set_tag
-        run: echo "RELEASE_TAG=$(date +'%Y.%m.%d')" >> $GITHUB_ENV
+        run: |
+          RELEASE_TAG=$(date +'%Y.%m.%d')
+          echo "RELEASE_TAG=$RELEASE_TAG" >> $GITHUB_ENV
 
-      - name: 获取前一个标签
+      - name: 获取前一个标签（按创建时间）
         working-directory: FreeBSD-Ask
         run: |
-          timedatectl
           git fetch --tags --force
-          PREVIOUS_TAG=$(git describe --tags --abbrev=0)
+          PREVIOUS_TAG=$(git tag --sort=-creatordate | sed -n '2p')
           echo "PREVIOUS_TAG=$PREVIOUS_TAG" >> $GITHUB_ENV
+          echo "Previous tag: $PREVIOUS_TAG"
 
       - name: 创建 Git 标签
         working-directory: FreeBSD-Ask
         run: |
-          timedatectl
           git config --global user.email "yklaxds@gmail.com"
           git config --global user.name "ykla"
-          git tag ${{ env.RELEASE_TAG }}
-          git push origin ${{ env.RELEASE_TAG }}
+          git tag "$RELEASE_TAG"
+          git push origin "$RELEASE_TAG"
 
       - name: 生成增量变更日志
         uses: janheinrichmerker/action-github-changelog-generator@v2.4
@@ -106,7 +108,6 @@ jobs:
       - name: 读取变更日志内容
         id: read_changelog
         run: |
-          timedatectl
           CHANGES=$(cat CHANGELOG.md)
           echo "CHANGES_CONTENT<<EOF" >> $GITHUB_ENV
           echo "$CHANGES" >> $GITHUB_ENV
@@ -122,20 +123,5 @@ jobs:
             pdf-generator/build/${{ env.RELEASE_TAG }}.epub
           token: ${{ secrets.GITHUB_TOKEN }}
           makeLatest: true
-  
-      - name: 更新 Release 说明
-        uses: actions/github-script@v8
-        with:
-          script: |
-            const release = await github.rest.repos.getReleaseByTag({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              tag: process.env.RELEASE_TAG
-            });
-            
-            await github.rest.repos.updateRelease({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              release_id: release.data.id,
-              body: process.env.CHANGES_CONTENT
-            });
+          body: ${{ env.CHANGES_CONTENT }}
+
