@@ -11,6 +11,7 @@
   - “10.3 Mihomo（Clash）”新增“RC 脚本”。已向 Ports 维护者发出请求合并（[Bug 291295 - net/mihomo: Add rc.conf and some Post-installation](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=291295)），但未予回应。
   - 将“4.10 文件系统的挂载和卸载”、“4.11 磁盘结构”合并到“4.10 文件系统基础”
   - 将“4.12 目录结构”拆分到“4.11 系统目录结构”和“24.6 FreeBSD 源代码目录结构”
+  - 根据编纂发现，增补 [Bug 236786 FreeBSD -.iso files not support written to USB drive](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=236786)
 - 2025.12.8
   - “5.1 FreeBSD 镜像站现状”新增“拒绝开放的可能性原因分析”
 - 2025.12.7
