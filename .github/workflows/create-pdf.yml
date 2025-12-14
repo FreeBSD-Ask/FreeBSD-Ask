@@ -73,13 +73,13 @@ jobs:
         env:
           PYTHONPATH: ${{ github.workspace }}/pdf-generator
 
-# ================= 发布流程 =================
+      # ---------------- 设置发布日期标签 ----------------
       - name: 设置发布日期标签
         id: set_tag
         run: |
-          # 使用 workflow env，避免 shell 变量和 env 混用
           echo "RELEASE_TAG=$(date +'%Y.%m.%d')" >> $GITHUB_ENV
 
+      # ---------------- 获取前一个标签 ----------------
       - name: 获取前一个标签（安全处理）
         working-directory: FreeBSD-Ask
         run: |
@@ -93,6 +93,7 @@ jobs:
             echo "PREVIOUS_TAG=$PREVIOUS_TAG" >> $GITHUB_ENV
           fi
 
+      # ---------------- 检查标签是否已存在 ----------------
       - name: 检查标签是否已存在
         working-directory: FreeBSD-Ask
         id: check_tag
@@ -103,6 +104,7 @@ jobs:
             echo "TAG_EXISTS=false" >> $GITHUB_ENV
           fi
 
+      # ---------------- 创建 & Push 新标签 ----------------
       - name: 创建 & Push 新标签（仅当不存在时）
         if: env.TAG_EXISTS == 'false'
         working-directory: FreeBSD-Ask
@@ -112,20 +114,30 @@ jobs:
           git tag "${{ env.RELEASE_TAG }}"
           git push origin "${{ env.RELEASE_TAG }}"
 
-      - name: 生成 Changelog
+      # ---------------- 生成增量 Changelog ----------------
+      - name: 生成增量 Changelog
         id: build_changelog
-        uses: mikepenz/release-changelog-builder-action@v6.0.1
-        with:
-          fromTag: ${{ env.PREVIOUS_TAG }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        working-directory: FreeBSD-Ask
+        run: |
+          if [ -z "${{ env.PREVIOUS_TAG }}" ]; then
+            echo "* No previous tag found; nothing to show." > changelog.txt
+          else
+            git log ${{ env.PREVIOUS_TAG }}..HEAD --pretty=format:'* %s (%h)' > changelog.txt
+            if [ ! -s changelog.txt ]; then
+              echo "* No changes since previous release" > changelog.txt
+            fi
+          fi
+          echo "CHANGES_CONTENT<<EOF" >> $GITHUB_ENV
+          cat changelog.txt >> $GITHUB_ENV
+          echo "EOF" >> $GITHUB_ENV
 
+      # ---------------- 创建/更新 Release ----------------
       - name: 创建/更新 Release
         uses: softprops/action-gh-release@v2.0.5
         with:
           tag_name: ${{ env.RELEASE_TAG }}
           name: ${{ env.RELEASE_TAG }}
-          body: ${{ steps.build_changelog.outputs.changelog }}
+          body: ${{ env.CHANGES_CONTENT }}
           make_latest: true
           overwrite: true
           files: |
