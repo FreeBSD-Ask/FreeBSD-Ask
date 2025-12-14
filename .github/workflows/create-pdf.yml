@@ -3,7 +3,7 @@ name: 🔗 创建并发布 PDF & EPUB
 on:
   schedule:
     - cron: '30 15 * * 0'  # 每周日 UTC 时间 15:30 运行
-  workflow_dispatch:  # 可手动触发
+  workflow_dispatch:       # 可手动触发
 
 jobs:
   build:
@@ -15,8 +15,8 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y ttf-wqy-microhei ttf-wqy-zenhei fonts-noto-core fonts-noto-cjk
-          
-      - name: 设置时区    
+
+      - name: 设置时区
         run: |
           sudo timedatectl set-timezone Asia/Shanghai
           timedatectl
@@ -63,96 +63,82 @@ jobs:
             libpangocairo-1.0-0
           pip install weasyprint mistune pygments EbookLib beautifulsoup4
 
-      # ================= PDF 生成部分 =================
-      - name: 生成 PDF 文档
-        run: |
-          cd pdf-generator
-          python mdconv.py ../FreeBSD-Ask
-          mv build/final.pdf build/$(date +'%Y.%m.%d').pdf
-          mv build/final.epub build/$(date +'%Y.%m.%d').epub
-        env:
-          PYTHONPATH: ${{ github.workspace }}/pdf-generator
-
-      # ---------------- 设置发布日期标签 ----------------
-      - name: 设置发布日期标签
+      # ================= 发布流程部分 =================
+      - name: 🚀 设置发布日期标签
         id: set_tag
-        run: |
-          echo "RELEASE_TAG=$(date +'%Y.%m.%d')" >> $GITHUB_ENV
+        run: echo "RELEASE_TAG=$(date +'%Y.%m.%d')" >> $GITHUB_ENV
 
-      # ---------------- 检查标签是否已存在 ----------------
-      - name: 检查标签是否已存在
+      - name: 🔍 获取前一个标签 (优化版本)
         working-directory: FreeBSD-Ask
-        id: check_tag
         run: |
           git fetch --tags --force
-          if git rev-parse "refs/tags/${{ env.RELEASE_TAG }}" >/dev/null 2>&1; then
-            echo "TAG_EXISTS=true" >> $GITHUB_OUTPUT
-          else
-            echo "TAG_EXISTS=false" >> $GITHUB_OUTPUT
+          TAG_PATTERN="[0-9][0-9][0-9][0-9].[0-9][0-9].[0-9][0-9]"
+          PREVIOUS_TAG=$(git describe --tags --abbrev=0 --match "$TAG_PATTERN" --exclude "${{ env.RELEASE_TAG }}" 2>/dev/null)
+          if [ -z "$PREVIOUS_TAG" ]; then
+            echo "警告：未找到匹配的先前标签，将使用默认基准标签 'v0.0.0'"
+            PREVIOUS_TAG="v0.0.0"
           fi
+          echo "PREVIOUS_TAG=$PREVIOUS_TAG" >> $GITHUB_ENV
 
-      # ---------------- 获取前一个标签 ----------------
-      - name: 获取前一个标签（安全处理）
-        working-directory: FreeBSD-Ask
-        id: prev_tag
+      - name: 调试 - 检查提取到的标签值
         run: |
-          git fetch --tags --force
-          TAG_COUNT=$(git tag | wc -l)
-          if [ "$TAG_COUNT" -eq 0 ]; then
-            # 无已有标签
-            echo "PREVIOUS_TAG=" >> $GITHUB_OUTPUT
-          elif [ "$TAG_COUNT" -eq 1 ]; then
-            # 只有一个标签，用它作为下界
-            SINGLE_TAG=$(git tag --sort=-creatordate | tail -n1)
-            echo "PREVIOUS_TAG=$SINGLE_TAG" >> $GITHUB_OUTPUT
-          else
-            # 多标签，取第二个最新 tag
-            PREVIOUS_TAG=$(git tag --sort=-creatordate | sed -n '2p')
-            echo "PREVIOUS_TAG=$PREVIOUS_TAG" >> $GITHUB_OUTPUT
-          fi
+          echo "本次发布标签 (RELEASE_TAG): ${{ env.RELEASE_TAG }}"
+          echo "上次发布标签 (PREVIOUS_TAG): ${{ env.PREVIOUS_TAG }}"
+          echo "------------------------------------------------------"
 
-      # ---------------- 创建 & Push 新标签（仅当不存在时） ----------------
-      - name: 创建 & Push 新标签
-        if: steps.check_tag.outputs.TAG_EXISTS == 'false'
+      - name: 🏷️ 创建 Git 标签并推送
         working-directory: FreeBSD-Ask
         run: |
+          timedatectl
           git config --global user.email "yklaxds@gmail.com"
           git config --global user.name "ykla"
-          git tag "${{ env.RELEASE_TAG }}"
-          git push origin "${{ env.RELEASE_TAG }}"
+          git tag ${{ env.RELEASE_TAG }}
+          git push origin ${{ env.RELEASE_TAG }}
 
-      # ---------------- 生成增量 Changelog ----------------
-      - name: 生成增量 Changelog
-        id: build_changelog
-        working-directory: FreeBSD-Ask
+      - name: 📜 生成增量变更日志
+        uses: janheinrichmerker/action-github-changelog-generator@v2.4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          sinceTag: ${{ env.PREVIOUS_TAG }}
+          user: FreeBSD-Ask
+          repo: FreeBSD-Ask
+
+      - name: 📥 读取变更日志内容
+        id: read_changelog
         run: |
-          PREV_TAG=${{ steps.prev_tag.outputs.PREVIOUS_TAG }}
-          if [ -z "$PREV_TAG" ]; then
-            # 无前一个标签，使用初始 commit（包含初始提交本身）
-            INITIAL_COMMIT=$(git rev-list --max-parents=0 HEAD)
-            git log "$INITIAL_COMMIT"^..HEAD --pretty=format:'* %s (%h)' > changelog.txt
-          else
-            git log $PREV_TAG..HEAD --pretty=format:'* %s (%h)' > changelog.txt
-          fi
-
-          if [ ! -s changelog.txt ]; then
-            echo "* No changes since previous release" > changelog.txt
-          fi
-
+          timedatectl
+          CHANGES=$(cat CHANGELOG.md | sed 's/\"/\\"/g')
           echo "CHANGES_CONTENT<<EOF" >> $GITHUB_ENV
-          cat changelog.txt >> $GITHUB_ENV
+          echo "$CHANGES" >> $GITHUB_ENV
           echo "EOF" >> $GITHUB_ENV
 
-      # ---------------- 创建/更新 Release ----------------
-      - name: 创建/更新 Release
-        uses: softprops/action-gh-release@v2.0.5
+      - name: ✨ 创建 GitHub Release
+        uses: ncipollo/release-action@v1
+        id: create_release
         with:
-          tag_name: ${{ env.RELEASE_TAG }}
+          tag: ${{ env.RELEASE_TAG }}
           name: ${{ env.RELEASE_TAG }}
-          body: ${{ env.CHANGES_CONTENT }}
-          make_latest: true
-          overwrite: true
-          files: |
+          artifacts: |
             pdf-generator/build/${{ env.RELEASE_TAG }}.pdf
             pdf-generator/build/${{ env.RELEASE_TAG }}.epub
           token: ${{ secrets.GITHUB_TOKEN }}
+          makeLatest: true
+
+      - name: 📝 更新 Release 说明 (包含变更日志)
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const { data: release } = await github.rest.repos.getReleaseByTag({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              tag: process.env.RELEASE_TAG
+            });
+            console.log(`找到 Release ID: ${release.id}`);
+            await github.rest.repos.updateRelease({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              release_id: release.id,
+              body: process.env.CHANGES_CONTENT
+            });
+            console.log('Release body 更新完成。');
