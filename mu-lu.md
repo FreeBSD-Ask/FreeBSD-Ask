@@ -147,6 +147,7 @@
 * [13.4 SSH 配置和相关工具](di-13-zhang-freebsd-te-se/di-13.4-jie-chang-yong-ruan-jian-yu-ssh-pei-zhi.md)
 * [13.5 Live CD 与系统急救](di-13-zhang-freebsd-te-se/di-13.5-jie-hui-fu-mo-shi-yu-mi-ma-zhong-zhi.md)
 * [13.6 Grub、UEFI 和 efibootmgr](di-13-zhang-freebsd-te-se/di-13.6-jie-grub-ji-qi-ta-yin-dao.md)
+* [13.7 配置文件](di-13-zhang-freebsd-te-se/di-13.7-jie-conf.md)
 
 ## 第 14 章 网络管理
 
