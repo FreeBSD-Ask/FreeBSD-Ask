@@ -2,7 +2,11 @@
 
 ## Hyper-V 简介
 
-Hyper-V 是微软为 Windows 开发的虚拟机，分为 `Gen 1` 和 `Gen 2`。Windows 家庭版不支持 Hyper-V。
+Hyper-V 是微软为 Windows/Windows Server 开发的企业级虚拟机管理程序技术（系统内置），分为 `Gen 1`（第一代）和 `Gen 2`（第二代）。
+
+>**注意**
+>
+>Windows 家庭版/家庭中文版并不支持 Hyper-V。
 
 `Gen 1` 和 `Gen 2` 区别如下：
 
@@ -23,6 +27,9 @@ Hyper-V 是微软为 Windows 开发的虚拟机，分为 `Gen 1` 和 `Gen 2`。W
 |    Gen 2     |     13.0     | [不支持](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=221074) |  支持  |                          需要修改参数 `sysctl kern.evdev.rcpt_mask=6`                           |
 |    Gen 2     |     14.0     |                                支持                                |  支持  | 参见 [源代码](https://cgit.FreeBSD.org/src/commit/?id=21f4e817fde79d5de79bfbdf180d358ca5f48bf9) |
 
+### 参考文献
+
+- [Windows Server 和 Windows 中的 Hyper-V 虚拟化](https://learn.microsoft.com/zh-cn/windows-server/virtualization/hyper-v/overview)，微软官方对 Hyper-V 的说明。
 
 ## 测试环境
 
