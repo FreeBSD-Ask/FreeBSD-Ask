@@ -79,34 +79,40 @@ jobs:
         run: |
           echo "RELEASE_TAG=$(date +'%Y.%m.%d')" >> $GITHUB_ENV
 
-      # ---------------- 获取前一个标签 ----------------
-      - name: 获取前一个标签（安全处理）
-        working-directory: FreeBSD-Ask
-        run: |
-          git fetch --tags --force
-          TAG_COUNT=$(git tag | wc -l)
-          if [ "$TAG_COUNT" -lt 2 ]; then
-            echo "PREVIOUS_TAG=" >> $GITHUB_ENV
-          else
-            # 注意：轻量标签或创建时间与语义版本可能不一致
-            PREVIOUS_TAG=$(git tag --sort=-creatordate | sed -n '2p')
-            echo "PREVIOUS_TAG=$PREVIOUS_TAG" >> $GITHUB_ENV
-          fi
-
       # ---------------- 检查标签是否已存在 ----------------
       - name: 检查标签是否已存在
         working-directory: FreeBSD-Ask
         id: check_tag
         run: |
           if git rev-parse "refs/tags/${{ env.RELEASE_TAG }}" >/dev/null 2>&1; then
-            echo "TAG_EXISTS=true" >> $GITHUB_ENV
+            echo "TAG_EXISTS=true" >> $GITHUB_OUTPUT
           else
-            echo "TAG_EXISTS=false" >> $GITHUB_ENV
+            echo "TAG_EXISTS=false" >> $GITHUB_OUTPUT
           fi
 
-      # ---------------- 创建 & Push 新标签 ----------------
-      - name: 创建 & Push 新标签（仅当不存在时）
-        if: env.TAG_EXISTS == 'false'
+      # ---------------- 获取前一个标签 ----------------
+      - name: 获取前一个标签（安全处理）
+        working-directory: FreeBSD-Ask
+        id: prev_tag
+        run: |
+          git fetch --tags --force
+          TAG_COUNT=$(git tag | wc -l)
+          if [ "$TAG_COUNT" -eq 0 ]; then
+            # 无已有标签
+            echo "PREVIOUS_TAG=" >> $GITHUB_OUTPUT
+          elif [ "$TAG_COUNT" -eq 1 ]; then
+            # 只有一个标签，用它作为下界
+            SINGLE_TAG=$(git tag --sort=-creatordate | tail -n1)
+            echo "PREVIOUS_TAG=$SINGLE_TAG" >> $GITHUB_OUTPUT
+          else
+            # 多标签，取第二个最新 tag
+            PREVIOUS_TAG=$(git tag --sort=-creatordate | sed -n '2p')
+            echo "PREVIOUS_TAG=$PREVIOUS_TAG" >> $GITHUB_OUTPUT
+          fi
+
+      # ---------------- 创建 & Push 新标签（仅当不存在时） ----------------
+      - name: 创建 & Push 新标签
+        if: steps.check_tag.outputs.TAG_EXISTS == 'false'
         working-directory: FreeBSD-Ask
         run: |
           git config --global user.email "yklaxds@gmail.com"
@@ -119,14 +125,19 @@ jobs:
         id: build_changelog
         working-directory: FreeBSD-Ask
         run: |
-          if [ -z "${{ env.PREVIOUS_TAG }}" ]; then
-            echo "* No previous tag found; nothing to show." > changelog.txt
+          PREV_TAG=${{ steps.prev_tag.outputs.PREVIOUS_TAG }}
+          if [ -z "$PREV_TAG" ]; then
+            # 无前一个标签，使用初始 commit
+            INITIAL_COMMIT=$(git rev-list --max-parents=0 HEAD)
+            git log $INITIAL_COMMIT..HEAD --pretty=format:'* %s (%h)' > changelog.txt
           else
-            git log ${{ env.PREVIOUS_TAG }}..HEAD --pretty=format:'* %s (%h)' > changelog.txt
-            if [ ! -s changelog.txt ]; then
-              echo "* No changes since previous release" > changelog.txt
-            fi
+            git log $PREV_TAG..HEAD --pretty=format:'* %s (%h)' > changelog.txt
           fi
+
+          if [ ! -s changelog.txt ]; then
+            echo "* No changes since previous release" > changelog.txt
+          fi
+
           echo "CHANGES_CONTENT<<EOF" >> $GITHUB_ENV
           cat changelog.txt >> $GITHUB_ENV
           echo "EOF" >> $GITHUB_ENV
