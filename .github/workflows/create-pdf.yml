@@ -84,7 +84,7 @@ jobs:
         working-directory: FreeBSD-Ask
         id: check_tag
         run: |
-          git fetch --tags
+          git fetch --tags --force
           if git rev-parse "refs/tags/${{ env.RELEASE_TAG }}" >/dev/null 2>&1; then
             echo "TAG_EXISTS=true" >> $GITHUB_OUTPUT
           else
