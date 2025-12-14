@@ -2,13 +2,13 @@
 
 ## 安装
 
-- 使用 pkg 安装：
+### 使用 pkg 安装
 
 ```sh
 # pkg install xorg fluxbox fluxbox-tenr-styles-pack slim wqy-fonts xdg-user-dirs
 ```
 
-- 或者使用 Ports 安装：
+### 使用 Ports 安装
 
 ```sh
 # cd /usr/ports/x11-wm/fluxbox/ && make install clean # fluxbox
@@ -19,7 +19,7 @@
 # cd /usr/ports/devel/xdg-user-dirs/ && make install clean 
 ```
 
-- 解释
+### 解释软件包
 
 
 | 包名                        | 作用说明                                                                 |
@@ -45,7 +45,7 @@ exec startfluxbox
 
 ```sh
 # service dbus enable
-# sysrc slim_enable="YES"
+# service slim enable
 ```
 
 ## fstab
@@ -75,7 +75,7 @@ proc           /proc       procfs  rw  0   0
 
 ## 故障排除与未竟事宜
 
-- light、xdm 均不可用，无法启动 fluxbox
+- lightdm、xdm 均不可用，无法启动 fluxbox
 
 待解决
 
