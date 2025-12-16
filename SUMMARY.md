@@ -8,7 +8,7 @@
 ## 前言
 
 * [前言](qian-yan/qian-yan.md)
-* [致读者：解放思想，高扬人道主义，回归生活本真，不走苦难哲学的邪路](qian-yan/zhi-du-zhe.md)
+* [致读者：解放思想，回归本真，高扬人道主义，不走苦难哲学的邪路](qian-yan/zhi-du-zhe.md)
 * [致谢](qian-yan/zhi-xie.md)
 * [绪论](qian-yan/xu-lun.md)
 
