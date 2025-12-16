@@ -5,7 +5,7 @@
 
 
 - 2025.12.16
-  - 增补“致读者：解放思想，高扬人道主义，回归生活本真，不走苦难哲学的邪路”
+  - 增补“致读者：解放思想，回归本真，高扬人道主义，不走苦难哲学的邪路”
 - 2025.12.14
   - 新增“13.7 用户分级与资源配额（login.conf）”。
     - 根据编纂发现，提交 [Bug 291649 Submitted – COPYRIGHT in login classes/login.conf(5) does not work](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=291649)
