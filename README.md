@@ -124,18 +124,18 @@ EPUB 在手机上可以使用 [微信读书](https://play.google.com/store/apps/
 
 | 指标           | 统计数据     |
 |:---------------:|:-------------:|
-| 用户总数       | 41,867 位  |
-| 会话数         | 87,432 次 |
-| 浏览次数       | 609,650 次 |
+| 用户总数       | 41,908 位  |
+| 会话数         | 87,617 次 |
+| 浏览次数       | 610,267 次 |
 | 平均会话时长   | 8 分 53 秒 |
 
 <!-- GA_STATS:END -->
 
 <!-- GA_BADGES:START -->
 
-![总用户数](https://img.shields.io/badge/总用户数-41,867-green)
-![会话数](https://img.shields.io/badge/会话数-87,432-orange)
-![浏览次数](https://img.shields.io/badge/浏览次数-609,650-blue)
+![总用户数](https://img.shields.io/badge/总用户数-41,908-green)
+![会话数](https://img.shields.io/badge/会话数-87,617-orange)
+![浏览次数](https://img.shields.io/badge/浏览次数-610,267-blue)
 ![平均会话时长](https://img.shields.io/badge/平均会话时长-8min53s-purple)
 
 <!-- GA_BADGES:END -->
