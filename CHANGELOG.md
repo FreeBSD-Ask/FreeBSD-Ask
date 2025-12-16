@@ -3,6 +3,9 @@
 
 ## 2025 年第四季度
 
+
+- 2025.12.16
+  - 增补“致读者：拒斥苦难哲学，高扬人道主义，回到生活本身”
 - 2025.12.14
   - 新增“13.7 用户分级与资源配额（login.conf）”。
     - 根据编纂发现，提交 [Bug 291649 Submitted – COPYRIGHT in login classes/login.conf(5) does not work](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=291649)
