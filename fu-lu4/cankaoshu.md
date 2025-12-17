@@ -8,43 +8,43 @@
 
 ## 主要参考书目
 
-| 封面 | 书名 | 作者/译者 | ISBN | 出版社 | 说明 |
-| :---: | :--- | :--- | :---: | :--- | :--- |
-|![FreeBSD 技术内幕](../.gitbook/assets/Unleashed.png) | 《FreeBSD 技术内幕》 | [美] Michael Urban、Brian Tiemann 等著 <br><br> 智慧东方工作室 译| 9787111102010 | 机械工业出版社 |  2002 年的书，居然还能用。足以看出 FreeBSD 是在稳中求进。本书推荐选读第 1、4、8、9、10、11、12、13 章|
-| ![Unix & Linux 大学教程](../.gitbook/assets/unix3.png) | 《Unix & Linux 大学教程》 | [美] Harley Hahn 著 <br><br> 张杰良 译| 9787302209560 | 清华大学出版社 | 命令行基础 |
-| ![UNIX/Linux 系统管理技术手册（第 5 版）](../.gitbook/assets/unix4.png) | 《UNIX/Linux 系统管理技术手册（第 5 版）》 | [美] Evi Nemeth、Garth Snyder、Trent R. Hein、Ben Whaley、Dan Mackin 等著 <br><br> 门佳 译 | 9787115532763 | 人民邮电出版社 |命令行进阶与 UNIX 基础 |
-| ![大教堂与集市](../.gitbook/assets/dajiaotang.png) | 《大教堂与集市》 |[美] Eric S. Raymond <br><br> 卫剑钒 译| 9787111452478 | 机械工业出版社 | 主要介绍了开源运动的发展史。 |
-| ![4.4BSD 操作系统设计与实现](../.gitbook/assets/4BSD.png) | 《4.4BSD 操作系统设计与实现》 | [美] Marshall Kirk McKusick 等著 <br><br>李善平、刘文峰、马天驰 等译| 9787111366478 | 机械工业出版社 | 4.4BSD 操作系统设计与实现 |
-| ![深入理解 FreeBSD 设备驱动程序开发](../.gitbook/assets/qudong.png) | 《深入理解 FreeBSD 设备驱动程序开发》 | [加] Joseph Kong 著 <br><br> 陈毅东 译| 9787111411574 | 机械工业出版社 |  FreeBSD 设备驱动程序开发 |
-| ![UNIX 环境高级编程（第 3 版）](../.gitbook/assets/unix.png) | 《UNIX 环境高级编程（第 3 版）》 | [美] W. Richard Stevens、Stephen A. Rago 等著<br><br>张毅峰、马树超 等译| 9787121478338 | 电子工业出版社 |  深入了解驱动 UNIX 内核的编程接口的实用知识 |
-| ![UNIX 网络编程 卷 1：套接字联网 API（第 3 版）](../.gitbook/assets/unix1.png) | 《UNIX 网络编程 卷 1：套接字联网 API（第 3 版）》 | [美] W. Richard Stevens、Bill Fenner、Andrew M. Rudoff 等著| 9787115517791 | 人民邮电出版社 | 如何使用套接字 API 进行网络编程 |
-| ![UNIX 网络编程 卷 2：进程间通信（第 2 版）](../.gitbook/assets/unix2.png) | 《UNIX 网络编程 卷 2：进程间通信（第 2 版）》 | [美] W. Richard Stevens 著 | 9787115517807 | 人民邮电出版社 | 深入了解各种进程间通信形式。**这书原作者没出第 3 版，不用再找了** |
-| ![深入理解 UNIX 系统内核](../.gitbook/assets/unixinternals.png) | 《深入理解 UNIX 系统内核》 | [美] Uresh Vahalia 著<br><br>薛磊、黄庆新、李雨 等译| 9787111491453 | 机械工业出版社 | UNIX 内核基础 |
-| ![Unix 四分之一世纪](../.gitbook/assets/unix25.png) | 《Unix 四分之一世纪》|  Peter H. Salus | 9780201547771| Addison-Wesley Professional | 历史书，中译本在 [此](https://freebsd.gitbook.io/unix-er-shi-wu-nian) |
-| ![Unix 痛恨者手册](../.gitbook/assets/unixno.png) | 《Unix 痛恨者手册》 | Simson Garfinkel、Daniel Weise、Steven Strassmann | 9781568842035 |  IDG Books Worldwide, Inc. |  历史书，中译本在 [此](https://book.bsdcn.org/unix-tong-hen-zhe-shou-ce) |
-|![Solaris 性能与工具](../.gitbook/assets/Solaris.png)| 《Solaris 性能与工具》 | [美] Richard McDougall、Jim Mauro、Brendan Gregg 等著 <br><br> Sun 中国工程研究院 译| 9787111214038| 机械工业出版社 | 常用性能监测软件和 DTrace 教程。基于 Solaris 10，同时适用于 FreeBSD |
-|/ |  《Oracle® Solaris ZFS 管理指南》  | Oracle |  文件号码 819–7065–17（版本 [Oracle Solaris 10 8/11](https://docs.oracle.com/cd/E24847_01/)）  | /| [在线阅读地址](https://docs.oracle.com/cd/E24847_01/html/819-7065/index.html)、[PDF](https://docs.oracle.com/cd/E24847_01/pdf/819-7065.pdf)；注意 ZFS pool 版本不应高于 28（因此通常搜索引擎提供的版本是不正确的，下同），ZFS 闭源开发自 28 开始分支，任何 Oracle 后续文档不一定与当前及以前的 FreeBSD ZFS 兼容。  |
-| / | 《DTrace 用户指南》  | Oracle | 文件号码 E22192（版本 [Oracle Solaris 10 8/11](https://docs.oracle.com/cd/E24847_01/)）   |/ |  [在线阅读地址](https://docs.oracle.com/cd/E24847_01/html/E22192/index.html)、[PDF](https://docs.oracle.com/cd/E24847_01/pdf/E22192.pdf)；很短的小册子。任何 Oracle 后续文档不一定与当前及以前的 FreeBSD DTrace 兼容。|
-| / | 《Solaris 动态跟踪指南》  | Oracle | 文件号码 819-6959-10（版本 [Oracle Solaris 10 8/11](https://docs.oracle.com/cd/E24847_01/)）   |/ | [在线阅读地址](http://download.oracle.com/docs/cd/E19253-01/819-6959/index.html)、[PDF](http://download.oracle.com/docs/cd/E19253-01/819-6959/819-6959.pdf)；《DTrace 用户指南》的增强版本。任何 Oracle 后续文档不一定与当前及以前的 FreeBSD DTrace 兼容。 |
+| 封面 | 书名 | 作者/译者 | ISBN/出版社 | 说明 |
+| :---: | :--- | :--- | :---: | :--- | 
+|![FreeBSD 技术内幕](../.gitbook/assets/Unleashed.png) | 《FreeBSD 技术内幕》 | [美] Michael Urban、Brian Tiemann 等著 <br><br> 智慧东方工作室 译| 9787111102010 <br><br> 机械工业出版社 |  2002 年的书，居然还能用。足以看出 FreeBSD 是在稳中求进。本书推荐选读第 1、4、8、9、10、11、12、13 章|
+| ![Unix & Linux 大学教程](../.gitbook/assets/unix3.png) | 《Unix & Linux 大学教程》 | [美] Harley Hahn 著 <br><br> 张杰良 译| 9787302209560 <br><br> 清华大学出版社 | 命令行基础 |
+| ![UNIX/Linux 系统管理技术手册（第 5 版）](../.gitbook/assets/unix4.png) | 《UNIX/Linux 系统管理技术手册（第 5 版）》 | [美] Evi Nemeth、Garth Snyder、Trent R. Hein、Ben Whaley、Dan Mackin 等著 <br><br> 门佳 译 | 9787115532763 <br><br> 人民邮电出版社 |命令行进阶与 UNIX 基础 |
+| ![大教堂与集市](../.gitbook/assets/dajiaotang.png) | 《大教堂与集市》 |[美] Eric S. Raymond <br><br> 卫剑钒 译| 9787111452478 <br><br> 机械工业出版社 | 主要介绍了开源运动的发展史。 |
+| ![4.4BSD 操作系统设计与实现](../.gitbook/assets/4BSD.png) | 《4.4BSD 操作系统设计与实现》 | [美] Marshall Kirk McKusick 等著 <br><br>李善平、刘文峰、马天驰 等译| 9787111366478 <br><br> 机械工业出版社 | 4.4BSD 操作系统设计与实现 |
+| ![深入理解 FreeBSD 设备驱动程序开发](../.gitbook/assets/qudong.png) | 《深入理解 FreeBSD 设备驱动程序开发》 | [加] Joseph Kong 著 <br><br> 陈毅东 译| 9787111411574 <br><br> 机械工业出版社 |  FreeBSD 设备驱动程序开发 |
+| ![UNIX 环境高级编程（第 3 版）](../.gitbook/assets/unix.png) | 《UNIX 环境高级编程（第 3 版）》 | [美] W. Richard Stevens、Stephen A. Rago 等著<br><br>张毅峰、马树超 等译| 9787121478338 <br><br> 电子工业出版社 |  深入了解驱动 UNIX 内核的编程接口的实用知识 |
+| ![UNIX 网络编程 卷 1：套接字联网 API（第 3 版）](../.gitbook/assets/unix1.png) | 《UNIX 网络编程 卷 1：套接字联网 API（第 3 版）》 | [美] W. Richard Stevens、Bill Fenner、Andrew M. Rudoff 等著| 9787115517791 <br><br> 人民邮电出版社 | 如何使用套接字 API 进行网络编程 |
+| ![UNIX 网络编程 卷 2：进程间通信（第 2 版）](../.gitbook/assets/unix2.png) | 《UNIX 网络编程 卷 2：进程间通信（第 2 版）》 | [美] W. Richard Stevens 著 | 9787115517807 <br><br> 人民邮电出版社 | 深入了解各种进程间通信形式。**这书原作者没出第 3 版，不用再找了** |
+| ![深入理解 UNIX 系统内核](../.gitbook/assets/unixinternals.png) | 《深入理解 UNIX 系统内核》 | [美] Uresh Vahalia 著<br><br>薛磊、黄庆新、李雨 等译| 9787111491453 <br><br>机械工业出版社 | UNIX 内核基础 |
+| ![Unix 四分之一世纪](../.gitbook/assets/unix25.png) | 《Unix 四分之一世纪》|  Peter H. Salus | 9780201547771 <br><br> Addison-Wesley Professional | 历史书，中译本在 [此](https://freebsd.gitbook.io/unix-er-shi-wu-nian) |
+| ![Unix 痛恨者手册](../.gitbook/assets/unixno.png) | 《Unix 痛恨者手册》 | Simson Garfinkel、Daniel Weise、Steven Strassmann | 9781568842035 <br><br>  IDG Books Worldwide, Inc. |  历史书，中译本在 [此](https://book.bsdcn.org/unix-tong-hen-zhe-shou-ce) |
+|![Solaris 性能与工具](../.gitbook/assets/Solaris.png)| 《Solaris 性能与工具》 | [美] Richard McDougall、Jim Mauro、Brendan Gregg 等著 <br><br> Sun 中国工程研究院 译| 9787111214038 <br><br> 机械工业出版社 | 常用性能监测软件和 DTrace 教程。基于 Solaris 10，同时适用于 FreeBSD |
+|/ |  《Oracle® Solaris ZFS 管理指南》  | Oracle |  文件号码 819–7065–17（版本 [Oracle Solaris 10 8/11](https://docs.oracle.com/cd/E24847_01/)）  | [在线阅读地址](https://docs.oracle.com/cd/E24847_01/html/819-7065/index.html)、[PDF](https://docs.oracle.com/cd/E24847_01/pdf/819-7065.pdf)；注意 ZFS pool 版本不应高于 28（因此通常搜索引擎提供的版本是不正确的，下同），ZFS 闭源开发自 28 开始分支，任何 Oracle 后续文档不一定与当前及以前的 FreeBSD ZFS 兼容。  |
+| / | 《DTrace 用户指南》  | Oracle | 文件号码 E22192（版本 [Oracle Solaris 10 8/11](https://docs.oracle.com/cd/E24847_01/)）    |  [在线阅读地址](https://docs.oracle.com/cd/E24847_01/html/E22192/index.html)、[PDF](https://docs.oracle.com/cd/E24847_01/pdf/E22192.pdf)；很短的小册子。任何 Oracle 后续文档不一定与当前及以前的 FreeBSD DTrace 兼容。|
+| / | 《Solaris 动态跟踪指南》  | Oracle | 文件号码 819-6959-10（版本 [Oracle Solaris 10 8/11](https://docs.oracle.com/cd/E24847_01/)）   | [在线阅读地址](http://download.oracle.com/docs/cd/E19253-01/819-6959/index.html)、[PDF](http://download.oracle.com/docs/cd/E19253-01/819-6959/819-6959.pdf)；《DTrace 用户指南》的增强版本。任何 Oracle 后续文档不一定与当前及以前的 FreeBSD DTrace 兼容。 |
 
 ## 选读书目
 
-| 封面 | 书名 | 作者/译者 | ISBN | 出版社 |
-| :---: | :--- | :--- | :---: | :--- |
-| ![UNIX 传奇：历史与回忆](../.gitbook/assets/unixchuanqi.png) | 《UNIX 传奇——历史与回忆》 | [美] Brian W Kernighan 著 <br><br>韩磊 译| 9787115557179 | 人民邮电出版社 |  
+| 封面 | 书名 | 作者/译者 | ISBN/出版社 |
+| :---: | :--- | :--- | :---: | 
+| ![UNIX 传奇：历史与回忆](../.gitbook/assets/unixchuanqi.png) | 《UNIX 传奇——历史与回忆》 | [美] Brian W Kernighan 著 <br><br>韩磊 译| 9787115557179 <br><br> 人民邮电出版社 |  
 
 《UNIX 传奇——历史与回忆》主要讲解了 UNIX 的发展历史。写得比较粗略。
 
-| 封面 | 书名 | 作者/译者 | ISBN | 出版社 |
-| :---: | :--- | :--- | :---: | :--- |
-| ![UNIX 编程艺术](../.gitbook/assets/s11345267.png) | 《UNIX 编程艺术》（TAOUP） | [美] Eric Raymond 著 <br><br>姜宏、何源、蔡晓骏 等译| 9787121176654 | 电子工业出版社 |
+| 封面 | 书名 | 作者/译者 | ISBN/出版社 |
+| :----: | :---- | :---- | :----: | 
+| ![UNIX 编程艺术](../.gitbook/assets/s11345267.png) | 《UNIX 编程艺术》（TAOUP） | [美] Eric Raymond 著 <br><br> 姜宏、何源、蔡晓骏 等译| 9787121176654 <br><br> 电子工业出版社 |
 
 《UNIX 编程艺术》主要讲解了 UNIX 的设计思路与软件工程理论。需要说明的是，本书不涉及任何哲学思想。大多数都是在具体历史背景下的无奈行为，反而被视为了金科玉律，有过度解读的嫌疑。本书作者虽然是 OSI 创始人，深度参与了开源事业，但其对开源和 UNIX 哲学理解与自由软件基金会等传统观点存在明显的张力。
 
 
-| 封面 | 书名 | 作者/译者 | ISBN | 出版社 |
-| :---: | :--- | :--- | :---: | :--- |
-| ![FreeBSD 操作系统设计与实现（原书第二版）](../.gitbook/assets/freebsd2rd.png) | 《FreeBSD 操作系统设计与实现（原书第 2 版）》 |[美] Marshall McKusick、George Neville-Neil、Robert N.M. Watson 等著 <br><br>陈向群、郭立峰、叶顺平 等译| 9787111689973 | 机械工业出版社 |  
+| 封面 | 书名 | 作者/译者 | ISBN/出版社 |
+| :---: | :--- | :--- | :---: |
+| ![FreeBSD 操作系统设计与实现（原书第二版）](../.gitbook/assets/freebsd2rd.png) | 《FreeBSD 操作系统设计与实现（原书第 2 版）》 |[美] Marshall McKusick、George Neville-Neil、Robert N.M. Watson 等著 | 陈向群、郭立峰、叶顺平 等译| 9787111689973 <br><br> 机械工业出版社 |  
 
 《FreeBSD 操作系统设计与实现（原书第 2 版）》主要讲解了内核。轻型纸，居然还有几个章节需要自行在[网上](https://course.cmpreading.com/web/refbook/detail/9661/215)下载？该书阅读难度较大，据本书作者之一的博士生毕业生反映（出自韩国 FreeBSD 社区），他自己也看不懂。主要作者: Marshall Kirk McKusick 在其网站上有提供多款 BSD 相关的 [录制课程](https://www.mckusick.com/buylist.html)，大致价格为 1945 美元。目前正在撰写推出第三版，见 2025 年 6 月 BSDCan 大会 [A History of the BSD Daemon by Marshall Kirk McKusick](https://www.youtube.com/watch?v=SGC0191nDp0)（BSD 守护进程史，作者 Marshall Kirk McKusick。见 42:35-50:23）。
 
@@ -57,9 +57,9 @@
 - *FreeBSD Mastery: ZFS*（可译为《FreeBSD 精通：ZFS》）
 - *FreeBSD Mastery：Advanced ZFS*。（可译为《FreeBSD 精通：ZFS 高级教程》）
 
-|封面 | 书名 | 作者 | ISBN | 出版社 |
-| :---: | :--- | :--- | :---: | :--- |
-| ![Absolute FreeBSD, 3rd Edition: The Complete Guide to FreeBSD](../.gitbook/assets/AbsoluteBSD.png) | ***Absolute FreeBSD, 3rd Edition: The Complete Guide to FreeBSD***（可译为《FreeBSD 完全指南》第三版） | Michael W. Lucas | 9781593278922 | No Starch Press |
+|封面 | 书名 | 作者 | ISBN/出版社 |
+| :---: | :--- | :--- | :---: | 
+| ![Absolute FreeBSD, 3rd Edition: The Complete Guide to FreeBSD](../.gitbook/assets/AbsoluteBSD.png) | ***Absolute FreeBSD, 3rd Edition: The Complete Guide to FreeBSD***（可译为《FreeBSD 完全指南》第三版） | Michael W. Lucas | 9781593278922 <br><br> No Starch Press |
 
 说明：
 
