@@ -31,20 +31,20 @@
 
 | 封面 | 书名 | 作者/译者 | ISBN/出版社 |
 | :---: | :--- | :--- | :---: | 
-| ![UNIX 传奇：历史与回忆](../.gitbook/assets/unixchuanqi.png) | 《UNIX 传奇——历史与回忆》 | [美] Brian W Kernighan 著 <br><br>韩磊 译| 9787115557179 <br><br> 人民邮电出版社 |  
+| ![UNIX 传奇：历史与回忆](../.gitbook/assets/unixchuanqi.png) | 《UNIX 传奇——历史与回忆》 | [美] Brian W Kernighan 著 <br><br> 韩磊 译| 9787115557179 <br><br> 人民邮电出版社 |  
 
 《UNIX 传奇——历史与回忆》主要讲解了 UNIX 的发展历史。写得比较粗略。
 
 | 封面 | 书名 | 作者/译者 | ISBN/出版社 |
 | :----: | :---- | :---- | :----: | 
-| ![UNIX 编程艺术](../.gitbook/assets/s11345267.png) | 《UNIX 编程艺术》（TAOUP） | [美] Eric Raymond 著 <br><br> 姜宏、何源、蔡晓骏 等译| 9787121176654 <br><br> 电子工业出版社 |
+| ![UNIX 编程艺术](../.gitbook/assets/s11345267.png) | 《UNIX 编程艺术》（TAOUP） | [美] Eric Raymond 著 <br><br> 姜宏、何源、蔡晓骏 等译 | 9787121176654 <br><br> 电子工业出版社 |
 
 《UNIX 编程艺术》主要讲解了 UNIX 的设计思路与软件工程理论。需要说明的是，本书不涉及任何哲学思想。大多数都是在具体历史背景下的无奈行为，反而被视为了金科玉律，有过度解读的嫌疑。本书作者虽然是 OSI 创始人，深度参与了开源事业，但其对开源和 UNIX 哲学理解与自由软件基金会等传统观点存在明显的张力。
 
 
 | 封面 | 书名 | 作者/译者 | ISBN/出版社 |
 | :---: | :--- | :--- | :---: |
-| ![FreeBSD 操作系统设计与实现（原书第二版）](../.gitbook/assets/freebsd2rd.png) | 《FreeBSD 操作系统设计与实现（原书第 2 版）》 |[美] Marshall McKusick、George Neville-Neil、Robert N.M. Watson 等著 | 陈向群、郭立峰、叶顺平 等译| 9787111689973 <br><br> 机械工业出版社 |  
+| ![FreeBSD 操作系统设计与实现（原书第二版）](../.gitbook/assets/freebsd2rd.png) | 《FreeBSD 操作系统设计与实现（原书第 2 版）》 |[美] Marshall McKusick、George Neville-Neil、Robert N.M. Watson 等著 <br><br> 陈向群、郭立峰、叶顺平 等译| 9787111689973 <br><br> 机械工业出版社 |  
 
 《FreeBSD 操作系统设计与实现（原书第 2 版）》主要讲解了内核。轻型纸，居然还有几个章节需要自行在[网上](https://course.cmpreading.com/web/refbook/detail/9661/215)下载？该书阅读难度较大，据本书作者之一的博士生毕业生反映（出自韩国 FreeBSD 社区），他自己也看不懂。主要作者: Marshall Kirk McKusick 在其网站上有提供多款 BSD 相关的 [录制课程](https://www.mckusick.com/buylist.html)，大致价格为 1945 美元。目前正在撰写推出第三版，见 2025 年 6 月 BSDCan 大会 [A History of the BSD Daemon by Marshall Kirk McKusick](https://www.youtube.com/watch?v=SGC0191nDp0)（BSD 守护进程史，作者 Marshall Kirk McKusick。见 42:35-50:23）。
 
