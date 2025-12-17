@@ -1,6 +1,6 @@
 # 参考书目
 
-部分书籍可通过[微信读书](https://weread.qq.com/)/[番茄免费小说](https://fanqienovel.com/)/[QQ 阅读](https://book.qq.com/)/[京东读书](https://cread.jd.com/custom/custom_pcDownload.action)等软件免费阅读。
+部分书籍可通过[微信读书](https://weread.qq.com/)、[番茄免费小说](https://fanqienovel.com/)、[QQ 阅读](https://book.qq.com/)、[京东读书](https://cread.jd.com/custom/custom_pcDownload.action)等软件免费阅读。
 
 部分书籍可能已经绝版，可尝试在社交媒体或致电联络出版社或译者再版，或通过[多抓鱼](https://www.duozhuayu.com/)、[孔夫子旧书网](https://www.kongfz.com/)等专业二手书平台进行购买。
 
@@ -13,7 +13,7 @@
 |![FreeBSD 技术内幕](../.gitbook/assets/Unleashed.png) | 《FreeBSD 技术内幕》 | [美] Michael Urban、Brian Tiemann 等著 <br><br> 智慧东方工作室 译| 9787111102010 | 机械工业出版社 |  2002 年的书，居然还能用。足以看出 FreeBSD 是在稳中求进。本书推荐选读第 1、4、8、9、10、11、12、13 章|
 | ![Unix & Linux 大学教程](../.gitbook/assets/unix3.png) | 《Unix & Linux 大学教程》 | [美] Harley Hahn 著 <br><br> 张杰良 译| 9787302209560 | 清华大学出版社 | 命令行基础 |
 | ![UNIX/Linux 系统管理技术手册（第 5 版）](../.gitbook/assets/unix4.png) | 《UNIX/Linux 系统管理技术手册（第 5 版）》 | [美] Evi Nemeth、Garth Snyder、Trent R. Hein、Ben Whaley、Dan Mackin 等著 <br><br> 门佳 译 | 9787115532763 | 人民邮电出版社 |命令行进阶与 UNIX 基础 |
-| ![大教堂与集市](../.gitbook/assets/dajiaotang.png) | 《大教堂与集市》 |[美] Eric S. Raymond <br> 卫剑钒 译| 9787111452478 | 机械工业出版社 | 主要介绍了开源运动的发展史。 |
+| ![大教堂与集市](../.gitbook/assets/dajiaotang.png) | 《大教堂与集市》 |[美] Eric S. Raymond <br><br> 卫剑钒 译| 9787111452478 | 机械工业出版社 | 主要介绍了开源运动的发展史。 |
 | ![4.4BSD 操作系统设计与实现](../.gitbook/assets/4BSD.png) | 《4.4BSD 操作系统设计与实现》 | [美] Marshall Kirk McKusick 等著 <br><br>李善平、刘文峰、马天驰 等译| 9787111366478 | 机械工业出版社 | 4.4BSD 操作系统设计与实现 |
 | ![深入理解 FreeBSD 设备驱动程序开发](../.gitbook/assets/qudong.png) | 《深入理解 FreeBSD 设备驱动程序开发》 | [加] Joseph Kong 著 <br><br> 陈毅东 译| 9787111411574 | 机械工业出版社 |  FreeBSD 设备驱动程序开发 |
 | ![UNIX 环境高级编程（第 3 版）](../.gitbook/assets/unix.png) | 《UNIX 环境高级编程（第 3 版）》 | [美] W. Richard Stevens、Stephen A. Rago 等著<br><br>张毅峰、马树超 等译| 9787121478338 | 电子工业出版社 |  深入了解驱动 UNIX 内核的编程接口的实用知识 |
@@ -23,6 +23,9 @@
 | ![Unix 四分之一世纪](../.gitbook/assets/unix25.png) | 《Unix 四分之一世纪》|  Peter H. Salus | 9780201547771| Addison-Wesley Professional | 历史书，中译本在 [此](https://freebsd.gitbook.io/unix-er-shi-wu-nian) |
 | ![Unix 痛恨者手册](../.gitbook/assets/unixno.png) | 《Unix 痛恨者手册》 | Simson Garfinkel、Daniel Weise、Steven Strassmann | 9781568842035 |  IDG Books Worldwide, Inc. |  历史书，中译本在 [此](https://book.bsdcn.org/unix-tong-hen-zhe-shou-ce) |
 |![Solaris 性能与工具](../.gitbook/assets/Solaris.png)| 《Solaris 性能与工具》 | [美] Richard McDougall、Jim Mauro、Brendan Gregg 等著 <br><br> Sun 中国工程研究院 译| 9787111214038| 机械工业出版社 | 常用性能监测软件和 DTrace 教程。基于 Solaris 10，同时适用于 FreeBSD |
+|/ |  《Oracle® Solaris ZFS 管理指南》  | Oracle |  文件号码 819–7065–17（版本 [Oracle Solaris 10 8/11](https://docs.oracle.com/cd/E24847_01/)）  | /| [在线阅读地址](https://docs.oracle.com/cd/E24847_01/html/819-7065/index.html)、[PDF](https://docs.oracle.com/cd/E24847_01/pdf/819-7065.pdf)；注意 ZFS pool 版本不应高于 28（因此通常搜索引擎提供的版本是不正确的，下同），ZFS 闭源开发自 28 开始分支，任何 Oracle 后续文档不一定与当前及以前的 FreeBSD ZFS 兼容。  |
+| / | 《DTrace 用户指南》  | Oracle | 文件号码 E22192（版本 [Oracle Solaris 10 8/11](https://docs.oracle.com/cd/E24847_01/)）   |/ |  [在线阅读地址](https://docs.oracle.com/cd/E24847_01/html/E22192/index.html)、[PDF](https://docs.oracle.com/cd/E24847_01/pdf/E22192.pdf)；很短的小册子。任何 Oracle 后续文档不一定与当前及以前的 FreeBSD DTrace 兼容。|
+| / | 《Solaris 动态跟踪指南》  | Oracle | 文件号码 819-6959-10（版本 [Oracle Solaris 10 8/11](https://docs.oracle.com/cd/E24847_01/)）   |/ | [在线阅读地址](http://download.oracle.com/docs/cd/E19253-01/819-6959/index.html)、[PDF](http://download.oracle.com/docs/cd/E19253-01/819-6959/819-6959.pdf)；《DTrace 用户指南》的增强版本。任何 Oracle 后续文档不一定与当前及以前的 FreeBSD DTrace 兼容。 |
 
 ## 选读书目
 
@@ -48,9 +51,15 @@
 
 ## 不建议阅读书目
 
+### Michael W. Lucas 系列丛书
+
+- ***Absolute FreeBSD, 3rd Edition: The Complete Guide to FreeBSD***（可译为《FreeBSD 完全指南》第三版）
+- *FreeBSD Mastery: ZFS*（可译为《FreeBSD 精通：ZFS》）
+- *FreeBSD Mastery：Advanced ZFS*。（可译为《FreeBSD 精通：ZFS 高级教程》）
+
 |封面 | 书名 | 作者 | ISBN | 出版社 |
 | :---: | :--- | :--- | :---: | :--- |
-| ![Absolute FreeBSD, 3rd Edition: The Complete Guide to FreeBSD](../.gitbook/assets/AbsoluteBSD.png) | ***Absolute FreeBSD 3rd*** | Michael W. Lucas | 9781593278922 | No Starch Press |
+| ![Absolute FreeBSD, 3rd Edition: The Complete Guide to FreeBSD](../.gitbook/assets/AbsoluteBSD.png) | ***Absolute FreeBSD, 3rd Edition: The Complete Guide to FreeBSD***（可译为《FreeBSD 完全指南》第三版） | Michael W. Lucas | 9781593278922 | No Starch Press |
 
 说明：
 
@@ -58,14 +67,14 @@
 
 笔者随机抽取了几本进行泛读，并对 *Absolute FreeBSD, 3rd Edition*（本人曾在中亚购买过正版印刷版）进行了深入阅读。观察到，作者撰写的内容整体较为基础，许多章节都花费较多篇幅介绍对多数人来说较为常识性的内容，例如“电脑应安装杀毒软件”、“应开启电脑防火墙”等等（这在一定程度上和美国教科书的风格相吻合）。虽然书中包含大量代码示例和指令，但在难度和深度上，甚至难以与大学公共计算机课程中 Windows 和 Office 的内容相提并论，整体上更适合我国在本世纪初于夜校和农村举办的计算机培训需求——这也不稀奇，笔者观察到该作者的 *Absolute BSD* 就是 2002 年出版的。
 
-鉴于其较高价格与相对有限的技术深度，笔者认为其内容质量亟待改进。该作者的其他书籍总体情况大致相同，如 *FreeBSD Mastery: ZFS*，*FreeBSD Mastery：Advanced ZFS*。
+鉴于其较高价格与相对有限的技术深度，笔者认为其内容质量亟待改进。经过随机选读，该作者的其他书籍总体情况大致相同（同样不建议阅读）。
 
 综上所述，以上评述基于笔者个人阅读体会，供读者参考。
 
 购买凭证（中亚已经关闭历史订单，只能通过这种方式获取数据）："亚马逊", "C03-7970199-0880003", "2018-11-20T02:45:08Z", "Not Applicable", "CNY", "261.56", "0", "0", "'-2.31'", "259.25", "261.56", "0", "1593278926", "New", "1", "Gift Certificate/Card", "Closed", "Shipped", "2018-11-20T09:28:35Z", "std-cn-d2d", "此处地址、邮编、联系人已隐去 China", "Not Available", "HEBKD(221461786692)", "Absolute FreeBSD, 3rd Edition", "Not Available", "Not Available", "Not Available", "Not Available"。可以看到当时这本书最后售价为 261.56 元，实收 259.25 元。
 
 
----
+### 二十一世纪初中国人对 FreeBSD 的探索
 
 - 王波. FreeBSD 使用大全[M]. 北京: 机械工业出版社, 1999. ISBN 9787111074823.
 - 王波. FreeBSD 使用大全（第 2 版）[M]. 北京: 机械工业出版社, 2002. ISBN 9787111102861.
