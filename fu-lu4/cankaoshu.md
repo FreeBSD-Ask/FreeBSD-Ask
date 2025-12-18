@@ -51,11 +51,17 @@
 
 ## 需谨慎对待的书目
 
-### Michael W. Lucas 系列丛书
+### FreeBSD Mastery（FreeBSD 精通）系列丛书
 
-- ***Absolute FreeBSD, 3rd Edition: The Complete Guide to FreeBSD***（可译为《FreeBSD 完全指南》第三版）
+- *FreeBSD Mastery: Storage Essentials*（可译为《FreeBSD 精通：存储基础》）
+- *FreeBSD Mastery: Specialty Filesystems*（可译为《FreeBSD 精通：特殊文件系统》）
 - *FreeBSD Mastery: ZFS*（可译为《FreeBSD 精通：ZFS》）
-- *FreeBSD Mastery：Advanced ZFS*。（可译为《FreeBSD 精通：ZFS 高级教程》）
+- *FreeBSD Mastery: Advanced ZFS*（可译为《FreeBSD 精通：ZFS 高级教程》）
+- *FreeBSD Mastery: Jails*（可译为《FreeBSD 精通：Jail》）
+
+说明见下。
+
+### *Absolute FreeBSD, 3rd Edition: The Complete Guide to FreeBSD*（可译为《FreeBSD 完全指南》第三版）
 
 |封面/书名 | 作者 | ISBN/出版社 |
 | :---: | :---: | :---: | 
@@ -85,8 +91,8 @@
 
 站在当初的时间节点上，有这样一本书，或许就能够帮助很多人入门，享受 FreeBSD 世界带来的快乐！但是不可否认的是其作为第一本中国有关 FreeBSD 书籍的历史地位。作者王波是早期 FreeBSD 中文社区的推动者和深入参与者。
 
-对于现在的读者来说，完全没有必要阅读本书。
+对于现在的读者来说，完全没有必要阅读这些书（除历史研究等目的外）。
 
 - 冯宝坤, 陈子鸿. 《FreeBSD》完全攻略[M]. 北京: 中国物资出版社; 北京希望电子出版社, 2004. ISBN 9787504721600.
 
-基本完全过时。对于现在的读者来说，没有必要阅读本书。
+基本完全过时。对于现在的读者来说，没有必要阅读本书（除历史研究等目的外）。
