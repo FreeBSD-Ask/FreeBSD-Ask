@@ -30,6 +30,10 @@ jobs:
           from pathlib import Path
           from datetime import datetime, timezone, timedelta
 
+          # ─────────────────────────────────────────────
+          # 统计规则
+          # ─────────────────────────────────────────────
+
           COUNT_PATTERN = re.compile(
               r'[\u4e00-\u9fff'
               r'\u3400-\u4dbf'
@@ -38,15 +42,30 @@ jobs:
               r'A-Za-z0-9]'
           )
 
-          CODE_BLOCK_PATTERN = re.compile(r'```[\s\S]*?```', re.MULTILINE)
+          CODE_BLOCK_PATTERN = re.compile(
+              r'```[\s\S]*?```',
+              re.MULTILINE
+          )
 
           COMMIT_TOTAL_PATTERN = re.compile(
               r'^CI: 更新文档字数统计.*total=(\d+)$'
           )
 
+          # ─────────────────────────────────────────────
+          # 工具函数
+          # ─────────────────────────────────────────────
+
           def count_publish_chars(text: str) -> int:
               text = CODE_BLOCK_PATTERN.sub('', text)
               return len(COUNT_PATTERN.findall(text))
+
+          def format_total(count: int) -> str:
+              if count < 10_000:
+                  return f"{count} 字"
+              wan = count / 10_000
+              if wan.is_integer():
+                  return f"{int(wan)} 万字"
+              return f"{wan:.2f} 万字"
 
           def diff_info(current, past):
               if past is None or past == 0:
@@ -54,7 +73,7 @@ jobs:
               delta = current - past
               percent = delta / past * 100
               sign = "+" if delta >= 0 else "−"
-              return f"{sign}{abs(delta)} 字（{sign}{abs(percent):.2f}%）"
+              return f"{sign}{format_total(abs(delta))}（{sign}{abs(percent):.2f}%）"
 
           def get_ci_totals():
               log = subprocess.check_output(
@@ -81,12 +100,18 @@ jobs:
                       return total
               return None
 
+          # ─────────────────────────────────────────────
+          # 主逻辑
+          # ─────────────────────────────────────────────
+
           total = 0
           for md in Path(".").rglob("*.md"):
               if md.name == "README.md":
                   continue
               try:
-                  total += count_publish_chars(md.read_text(encoding="utf-8"))
+                  total += count_publish_chars(
+                      md.read_text(encoding="utf-8")
+                  )
               except Exception:
                   pass
 
@@ -107,10 +132,10 @@ jobs:
 
           block = (
               "<!-- CHINESE_CHAR_COUNT_START -->\n"
-              f"文档总字数：{total} 字\n"
+              f"文档总字数：{format_total(total)}；\n"
               f"统计时间：{now}（UTC+8，北京时间）\n\n"
-              f"与上周相比：{diff_info(total, week_total)}\n"
-              f"与上月相比：{diff_info(total, month_total)}\n"
+              f"与上周相比：{diff_info(total, week_total)}\n\n"
+              f"与上月相比：{diff_info(total, month_total)}\n\n"
               "<!-- CHINESE_CHAR_COUNT_END -->"
           )
 
