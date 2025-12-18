@@ -49,7 +49,12 @@ jobs:
               re.MULTILINE
           )
 
-          COMMIT_TOTAL_PATTERN = re.compile(r'total=(\d+)')
+          # 仅匹配 CI 统计提交的 commit subject：
+          # 例如：CI: 更新文档字数统计 ... total=12345
+          # 如需调整格式，请同步更新此正则。
+          COMMIT_TOTAL_PATTERN = re.compile(
+              r'^CI: 更新文档字数统计.*total=(\d+)$'
+          )
 
           def count_publish_chars(text: str) -> int:
               text = CODE_BLOCK_PATTERN.sub('', text)
