@@ -107,8 +107,8 @@ jobs:
                   total += count_publish_chars(
                       md.read_text(encoding="utf-8")
                   )
-              except Exception:
-                  pass
+              except (UnicodeDecodeError, OSError) as e:
+                  print(f"Skipping {md} due to read error: {e}")
 
           week_total = get_historical_total(7)
           month_total = get_historical_total(30)
