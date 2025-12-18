@@ -132,7 +132,7 @@ EPUB 在手机上可以使用 [微信读书](https://play.google.com/store/apps/
 <!-- GA_STATS:END -->
 
 <!-- CHINESE_CHAR_COUNT_START -->
-文档总字数: 正在统计中...
+文档总字数: 38.13万字 (统计时间: 2025-12-18 08:48:25)
 <!-- CHINESE_CHAR_COUNT_END -->
 
 <!-- GA_BADGES:START -->
