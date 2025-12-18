@@ -9,7 +9,7 @@ permissions:
   contents: write
 
 jobs:
-  update-chinese-count:
+  update-doc-stats:
     runs-on: ubuntu-latest
 
     steps:
@@ -22,41 +22,34 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v6
         with:
-          python-version: '3.14'
+          python-version: '3.13'
 
       - name: 统计字数并更新 README
         run: |
           python << 'EOF'
           import re
+          import subprocess
           from pathlib import Path
           from datetime import datetime, timezone, timedelta
 
           # ─────────────────────────────────────────────
-          # 出版物常用字数统计口径：
-          #   ✔ 汉字
-          #   ✔ 中文全角标点
-          #   ✔ 英文字母（逐字符）
-          #   ✔ 数字
-          #   ✘ 空格 / 换行 / 制表符
-          #   ✘ Markdown 代码块
-          #
-          # 万字折算规则（保持不变）：
-          #   < 10000  → xxx 字
-          #   ≥ 10000  → x.xx 万字 / x 万字
+          # 统计规则（普通出版物口径）
           # ─────────────────────────────────────────────
 
           COUNT_PATTERN = re.compile(
-              r'[\u4e00-\u9fff'          # 汉字
+              r'[\u4e00-\u9fff'
               r'\u3400-\u4dbf'
               r'\U00020000-\U0002a6df'
-              r'，。！？；：、“”‘’（）《》【】—…·'  # 中文标点
-              r'A-Za-z0-9]'              # 英文与数字
+              r'，。！？；：、“”‘’（）《》【】—…·'
+              r'A-Za-z0-9]'
           )
 
           CODE_BLOCK_PATTERN = re.compile(
               r'```[\s\S]*?```',
               re.MULTILINE
           )
+
+          COMMIT_TOTAL_PATTERN = re.compile(r'total=(\d+)')
 
           def count_publish_chars(text: str) -> int:
               text = CODE_BLOCK_PATTERN.sub('', text)
@@ -68,63 +61,100 @@ jobs:
               wan = count / 10_000
               return f"{int(wan)} 万字" if wan.is_integer() else f"{wan:.2f} 万字"
 
-          def update_readme() -> None:
-              readme = Path("README.md")
-              if not readme.exists():
-                  print("❌ README.md 不存在")
-                  return
-
-              total = 0
-              for md in Path(".").rglob("*.md"):
-                  if md.name == "README.md":
-                      continue
-                  try:
-                      total += count_publish_chars(
-                          md.read_text(encoding="utf-8")
-                      )
-                  except Exception:
-                      pass
-
-              formatted = format_count(total)
-
-              # UTC+8（北京时间）
-              now = datetime.now(
-                  timezone(timedelta(hours=8))
-              ).strftime("%Y-%m-%d %H:%M:%S")
-
-              block = (
-                  "<!-- CHINESE_CHAR_COUNT_START -->\n"
-                  f"文档总字数：{formatted}（统计时间：{now}，北京时间）\n"
-                  "<!-- CHINESE_CHAR_COUNT_END -->"
-              )
-
-              content = readme.read_text(encoding="utf-8")
-              start = "<!-- CHINESE_CHAR_COUNT_START -->"
-              end = "<!-- CHINESE_CHAR_COUNT_END -->"
-
-              if start in content and end in content:
-                  content = re.sub(
-                      f"{re.escape(start)}.*?{re.escape(end)}",
-                      block,
-                      content,
-                      flags=re.DOTALL
+          def get_historical_total(days_ago: int):
+              since = f"--since={days_ago} days ago"
+              try:
+                  log = subprocess.check_output(
+                      ["git", "log", since, "--pretty=%s"],
+                      text=True
                   )
-              else:
-                  content = content.rstrip() + "\n\n" + block + "\n"
+              except subprocess.CalledProcessError:
+                  return None
 
-              readme.write_text(content, encoding="utf-8")
-              print(f"✅ 统计完成：{total} 字 → {formatted}")
+              for line in log.splitlines():
+                  m = COMMIT_TOTAL_PATTERN.search(line)
+                  if m:
+                      return int(m.group(1))
+              return None
 
-          update_readme()
+          def diff_info(current, past):
+              if past is None or past == 0:
+                  return "暂无可对比数据"
+              delta = current - past
+              percent = (delta / past) * 100
+              sign = "+" if delta >= 0 else "−"
+              return f"{sign}{abs(delta)} 字（{sign}{abs(percent):.2f}%）"
+
+          # ─────────────────────────────────────────────
+          # 主逻辑
+          # ─────────────────────────────────────────────
+
+          readme = Path("README.md")
+          if not readme.exists():
+              print("❌ README.md 不存在")
+              raise SystemExit(1)
+
+          total = 0
+          for md in Path(".").rglob("*.md"):
+              if md.name == "README.md":
+                  continue
+              try:
+                  total += count_publish_chars(
+                      md.read_text(encoding="utf-8")
+                  )
+              except Exception:
+                  pass
+
+          week_total = get_historical_total(7)
+          month_total = get_historical_total(30)
+
+          week_diff = diff_info(total, week_total)
+          month_diff = diff_info(total, month_total)
+
+          now = datetime.now(
+              timezone(timedelta(hours=8))
+          ).strftime("%Y-%m-%d %H:%M:%S")
+
+          block = (
+              "<!-- CHINESE_CHAR_COUNT_START -->\n"
+              f"文档总字数：{format_count(total)}\n"
+              f"统计时间：{now}（UTC+8，北京时间）\n\n"
+              f"与上周相比：{week_diff}\n"
+              f"与上月相比：{month_diff}\n"
+              "<!-- CHINESE_CHAR_COUNT_END -->"
+          )
+
+          content = readme.read_text(encoding="utf-8")
+          start = "<!-- CHINESE_CHAR_COUNT_START -->"
+          end = "<!-- CHINESE_CHAR_COUNT_END -->"
+
+          if start in content and end in content:
+              content = re.sub(
+                  f"{re.escape(start)}.*?{re.escape(end)}",
+                  block,
+                  content,
+                  flags=re.DOTALL
+              )
+          else:
+              content = content.rstrip() + "\n\n" + block + "\n"
+
+          readme.write_text(content, encoding="utf-8")
+
+          # 将 total 写入环境变量，供后续 commit 使用
+          with open("/tmp/total.txt", "w") as f:
+              f.write(str(total))
+
+          print(f"✅ 统计完成：{total} 字")
           EOF
 
       - name: Commit and push changes
         run: |
           if ! git diff --quiet README.md; then
+            TOTAL=$(cat /tmp/total.txt)
             git config user.name "github-actions[bot]"
             git config user.email "github-actions[bot]@users.noreply.github.com"
             git add README.md
-            git commit -m "CI: 更新文档字数统计 [$(date +%Y-%m-%d)]"
+            git commit -m "CI: 更新文档字数统计 | total=${TOTAL}"
             git push
             echo "✅ 已提交并推送更改"
           else
