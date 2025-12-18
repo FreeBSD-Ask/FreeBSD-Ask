@@ -69,7 +69,7 @@ jobs:
 
           def diff_info(current, past):
               if past is None or past == 0:
-                  return "暂无可对比数据"
+                  return "数据暂缺"
               delta = current - past
               percent = delta / past * 100
               sign = "+" if delta >= 0 else "−"
@@ -132,7 +132,7 @@ jobs:
 
           block = (
               "<!-- CHINESE_CHAR_COUNT_START -->\n"
-              f"文档总字数：{format_total(total)}；\n"
+              f"文档总字数：{format_total(total)}；\n\n"
               f"统计时间：{now}（UTC+8，北京时间）\n\n"
               f"与上周相比：{diff_info(total, week_total)}\n\n"
               f"与上月相比：{diff_info(total, month_total)}\n\n"
