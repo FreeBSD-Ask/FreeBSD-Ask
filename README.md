@@ -131,6 +131,10 @@ EPUB 在手机上可以使用 [微信读书](https://play.google.com/store/apps/
 
 <!-- GA_STATS:END -->
 
+<!-- CHINESE_CHAR_COUNT_START -->
+文档总字数: 正在统计中...
+<!-- CHINESE_CHAR_COUNT_END -->
+
 <!-- GA_BADGES:START -->
 
 ![总用户数](https://img.shields.io/badge/总用户数-41,944-green)
