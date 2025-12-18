@@ -51,14 +51,17 @@
 
 ## 需谨慎对待的书目
 
-### Michael W. Lucas & FreeBSD Mastery 系列丛书
+### FreeBSD Mastery（FreeBSD 精通）系列丛书
 
 - *FreeBSD Mastery: Storage Essentials*（可译为《FreeBSD 精通：存储基础》）
 - *FreeBSD Mastery: Specialty Filesystems*（可译为《FreeBSD 精通：特殊文件系统》）
 - *FreeBSD Mastery: ZFS*（可译为《FreeBSD 精通：ZFS》）
-- *FreeBSD Mastery：Advanced ZFS*（可译为《FreeBSD 精通：ZFS 高级教程》）
-- *FreeBSD Mastery：Jails*（可译为《FreeBSD 精通：Jail》）
-- *Absolute FreeBSD, 3rd Edition: The Complete Guide to FreeBSD*（可译为《FreeBSD 完全指南》第三版）
+- *FreeBSD Mastery: Advanced ZFS*（可译为《FreeBSD 精通：ZFS 高级教程》）
+- *FreeBSD Mastery: Jails*（可译为《FreeBSD 精通：Jail》）
+
+说明见下。
+
+### *Absolute FreeBSD, 3rd Edition: The Complete Guide to FreeBSD*（可译为《FreeBSD 完全指南》第三版）
 
 |封面/书名 | 作者 | ISBN/出版社 |
 | :---: | :---: | :---: | 
