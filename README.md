@@ -154,7 +154,9 @@ EPUB 在手机上可以使用 [微信读书](https://play.google.com/store/apps/
 
 与上周相比：暂无可对比数据
 
-与上月相比：暂无可对比数据
+与上月相比：暂无可对比数
+
+---
 
 <!-- CHINESE_CHAR_COUNT_END -->
 
