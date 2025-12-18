@@ -32,10 +32,6 @@ jobs:
           from pathlib import Path
           from datetime import datetime, timezone, timedelta
 
-          # ─────────────────────────────────────────────
-          # 统计规则（普通出版物口径）
-          # ─────────────────────────────────────────────
-
           COUNT_PATTERN = re.compile(
               r'[\u4e00-\u9fff'
               r'\u3400-\u4dbf'
@@ -49,7 +45,6 @@ jobs:
               re.MULTILINE
           )
 
-          # 仅匹配 CI 统计提交的 commit subject
           COMMIT_TOTAL_PATTERN = re.compile(
               r'^CI: 更新文档字数统计.*total=(\d+)$'
           )
@@ -64,34 +59,19 @@ jobs:
               wan = count / 10_000
               return f"{int(wan)} 万字" if wan.is_integer() else f"{wan:.2f} 万字"
 
-          def get_historical_total(days_ago: int):
-              since = f"--since={days_ago} days ago"
+          def get_last_committed_total():
               try:
                   log = subprocess.check_output(
-                      ["git", "log", since, "--pretty=%s"],
+                      ["git", "log", "--pretty=%s"],
                       text=True
                   )
               except subprocess.CalledProcessError:
                   return None
 
               for line in log.splitlines():
-                  m = COMMIT_TOTAL_PATTERN.search(line)
+                  m = COMMIT_TOTAL_PATTERN.search(line.strip())
                   if m:
                       return int(m.group(1))
-              return None
-
-          def get_last_committed_total():
-              try:
-                  log = subprocess.check_output(
-                      ["git", "log", "-1", "--pretty=%s"],
-                      text=True
-                  )
-              except subprocess.CalledProcessError:
-                  return None
-
-              m = COMMIT_TOTAL_PATTERN.search(log.strip())
-              if m:
-                  return int(m.group(1))
               return None
 
           def diff_info(current, past):
@@ -102,32 +82,20 @@ jobs:
               sign = "+" if delta >= 0 else "−"
               return f"{sign}{abs(delta)} 字（{sign}{abs(percent):.2f}%）"
 
-          # ─────────────────────────────────────────────
-          # 主逻辑
-          # ─────────────────────────────────────────────
-
           readme = Path("README.md")
           if not readme.exists():
-              print("❌ README.md 不存在")
-              raise SystemExit(1)
+              raise SystemExit("README.md 不存在")
 
           total = 0
           for md in Path(".").rglob("*.md"):
               if md.name == "README.md":
                   continue
               try:
-                  total += count_publish_chars(
-                      md.read_text(encoding="utf-8")
-                  )
-              except (UnicodeDecodeError, OSError) as e:
-                  print(f"Skipping {md} due to read error: {e}")
+                  total += count_publish_chars(md.read_text(encoding="utf-8"))
+              except Exception:
+                  pass
 
           last_total = get_last_committed_total()
-          week_total = get_historical_total(7)
-          month_total = get_historical_total(30)
-
-          week_diff = diff_info(total, week_total)
-          month_diff = diff_info(total, month_total)
 
           now = datetime.now(
               timezone(timedelta(hours=8))
@@ -136,25 +104,17 @@ jobs:
           block = (
               "<!-- CHINESE_CHAR_COUNT_START -->\n"
               f"文档总字数：{format_count(total)}\n"
-              f"统计时间：{now}（UTC+8，北京时间）\n\n"
-              f"与上周相比：{week_diff}\n"
-              f"与上月相比：{month_diff}\n"
+              f"统计时间：{now}（UTC+8，北京时间）\n"
               "<!-- CHINESE_CHAR_COUNT_END -->"
           )
 
           content = readme.read_text(encoding="utf-8")
-          start = "<!-- CHINESE_CHAR_COUNT_START -->"
-          end = "<!-- CHINESE_CHAR_COUNT_END -->"
-
-          if start in content and end in content:
-              content = re.sub(
-                  f"{re.escape(start)}.*?{re.escape(end)}",
-                  block,
-                  content,
-                  flags=re.DOTALL
-              )
-          else:
-              content = content.rstrip() + "\n\n" + block + "\n"
+          content = re.sub(
+              r"<!-- CHINESE_CHAR_COUNT_START -->[\s\S]*?<!-- CHINESE_CHAR_COUNT_END -->",
+              block,
+              content,
+              flags=re.DOTALL
+          )
 
           readme.write_text(content, encoding="utf-8")
 
@@ -162,7 +122,7 @@ jobs:
 
           if last_total == total:
               Path("/tmp/skip_commit").write_text("1")
-              print("📝 字数与上次统计一致，跳过提交")
+              print("📝 字数未变化，跳过提交")
           else:
               Path("/tmp/skip_commit").write_text("0")
               print(f"✅ 字数变化：{last_total} → {total}")
@@ -171,9 +131,7 @@ jobs:
 
       - name: Commit and push changes
         run: |
-          SKIP=$(cat /tmp/skip_commit)
-
-          if [ "$SKIP" = "1" ]; then
+          if [ "$(cat /tmp/skip_commit)" = "1" ]; then
             echo "📝 字数未变化，不提交"
             exit 0
           fi
@@ -185,5 +143,3 @@ jobs:
           git add README.md
           git commit -m "CI: 更新文档字数统计 | total=${TOTAL}"
           git push
-
-          echo "✅ 已提交并推送更改"
