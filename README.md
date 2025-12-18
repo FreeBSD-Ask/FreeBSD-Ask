@@ -131,10 +131,6 @@ EPUB 在手机上可以使用 [微信读书](https://play.google.com/store/apps/
 
 <!-- GA_STATS:END -->
 
-<!-- CHINESE_CHAR_COUNT_START -->
-文档总字数: 38.13万字 (统计时间: 2025-12-18 08:48:25)
-<!-- CHINESE_CHAR_COUNT_END -->
-
 <!-- GA_BADGES:START -->
 
 ![总用户数](https://img.shields.io/badge/总用户数-41,944-green)
@@ -153,6 +149,11 @@ EPUB 在手机上可以使用 [微信读书](https://play.google.com/store/apps/
 以上图表由 [Repobeats analytics image](https://repobeats.axiom.co/) 提供。
 
 ---
+
+<!-- CHINESE_CHAR_COUNT_START -->
+文档总字数: 38.13万字 (统计时间: 2025-12-18 08:48:25)
+<!-- CHINESE_CHAR_COUNT_END -->
+
 
 <!-- commit-progress-start -->
 **第 3 版编纂进度:**   （草稿提交数: 1229）
