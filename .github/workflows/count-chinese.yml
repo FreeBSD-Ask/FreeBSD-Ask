@@ -49,9 +49,7 @@ jobs:
               re.MULTILINE
           )
 
-          # 仅匹配 CI 统计提交的 commit subject：
-          # 例如：CI: 更新文档字数统计 ... total=12345
-          # 如需调整格式，请同步更新此正则。
+          # 仅匹配 CI 统计提交的 commit subject
           COMMIT_TOTAL_PATTERN = re.compile(
               r'^CI: 更新文档字数统计.*total=(\d+)$'
           )
@@ -82,6 +80,20 @@ jobs:
                       return int(m.group(1))
               return None
 
+          def get_last_committed_total():
+              try:
+                  log = subprocess.check_output(
+                      ["git", "log", "-1", "--pretty=%s"],
+                      text=True
+                  )
+              except subprocess.CalledProcessError:
+                  return None
+
+              m = COMMIT_TOTAL_PATTERN.search(log.strip())
+              if m:
+                  return int(m.group(1))
+              return None
+
           def diff_info(current, past):
               if past is None or past == 0:
                   return "暂无可对比数据"
@@ -110,6 +122,7 @@ jobs:
               except (UnicodeDecodeError, OSError) as e:
                   print(f"Skipping {md} due to read error: {e}")
 
+          last_total = get_last_committed_total()
           week_total = get_historical_total(7)
           month_total = get_historical_total(30)
 
@@ -145,23 +158,32 @@ jobs:
 
           readme.write_text(content, encoding="utf-8")
 
-          # 将 total 写入环境变量，供后续 commit 使用
-          with open("/tmp/total.txt", "w") as f:
-              f.write(str(total))
+          Path("/tmp/total.txt").write_text(str(total))
 
-          print(f"✅ 统计完成：{total} 字")
+          if last_total == total:
+              Path("/tmp/skip_commit").write_text("1")
+              print("📝 字数与上次统计一致，跳过提交")
+          else:
+              Path("/tmp/skip_commit").write_text("0")
+              print(f"✅ 字数变化：{last_total} → {total}")
+
           EOF
 
       - name: Commit and push changes
         run: |
-          if ! git diff --quiet README.md; then
-            TOTAL=$(cat /tmp/total.txt)
-            git config user.name "github-actions[bot]"
-            git config user.email "github-actions[bot]@users.noreply.github.com"
-            git add README.md
-            git commit -m "CI: 更新文档字数统计 | total=${TOTAL}"
-            git push
-            echo "✅ 已提交并推送更改"
-          else
-            echo "📝 文档字数未发生变动"
+          SKIP=$(cat /tmp/skip_commit)
+
+          if [ "$SKIP" = "1" ]; then
+            echo "📝 字数未变化，不提交"
+            exit 0
           fi
+
+          TOTAL=$(cat /tmp/total.txt)
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git commit -m "CI: 更新文档字数统计 | total=${TOTAL}"
+          git push
+
+          echo "✅ 已提交并推送更改"
