@@ -22,7 +22,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v6
         with:
-          python-version: '3.13'
+          python-version: '3.14'
 
       - name: 统计字数并更新 README
         run: |
@@ -94,7 +94,7 @@ jobs:
 
               block = (
                   "<!-- CHINESE_CHAR_COUNT_START -->\n"
-                  f"文档总字数：{formatted}（统计时间：{now}，UTC+8）\n"
+                  f"文档总字数：{formatted}（统计时间：{now}，北京时间）\n"
                   "<!-- CHINESE_CHAR_COUNT_END -->"
               )
 
@@ -128,5 +128,5 @@ jobs:
             git push
             echo "✅ 已提交并推送更改"
           else
-            echo "📝 没有需要提交的更改"
+            echo "📝 文档字数未发生变动"
           fi
