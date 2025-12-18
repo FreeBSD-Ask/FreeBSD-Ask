@@ -1,0 +1,141 @@
+name: 📊 更新文档字数统计
+
+on:
+  schedule:
+    - cron: '0 1 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-doc-stats:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
+
+      - name: 统计字数并更新 README
+        run: |
+          python << 'EOF'
+          import re
+          import subprocess
+          from pathlib import Path
+          from datetime import datetime, timezone, timedelta
+
+          COUNT_PATTERN = re.compile(
+              r'[\u4e00-\u9fff'
+              r'\u3400-\u4dbf'
+              r'\U00020000-\U0002a6df'
+              r'，。！？；：、“”‘’（）《》【】—…·'
+              r'A-Za-z0-9]'
+          )
+
+          CODE_BLOCK_PATTERN = re.compile(r'```[\s\S]*?```', re.MULTILINE)
+
+          COMMIT_TOTAL_PATTERN = re.compile(
+              r'^CI: 更新文档字数统计.*total=(\d+)$'
+          )
+
+          def count_publish_chars(text: str) -> int:
+              text = CODE_BLOCK_PATTERN.sub('', text)
+              return len(COUNT_PATTERN.findall(text))
+
+          def diff_info(current, past):
+              if past is None or past == 0:
+                  return "暂无可对比数据"
+              delta = current - past
+              percent = delta / past * 100
+              sign = "+" if delta >= 0 else "−"
+              return f"{sign}{abs(delta)} 字（{sign}{abs(percent):.2f}%）"
+
+          def get_ci_totals():
+              log = subprocess.check_output(
+                  ["git", "log", "--pretty=%ct %s"],
+                  text=True
+              )
+              results = []
+              for line in log.splitlines():
+                  try:
+                      ts_str, subject = line.split(" ", 1)
+                      ts = int(ts_str)
+                  except ValueError:
+                      continue
+                  m = COMMIT_TOTAL_PATTERN.search(subject)
+                  if m:
+                      results.append((ts, int(m.group(1))))
+              return results
+
+          def find_total_before(ci_totals, seconds_ago):
+              now_ts = int(datetime.now(timezone.utc).timestamp())
+              target = now_ts - seconds_ago
+              for ts, total in ci_totals:
+                  if ts <= target:
+                      return total
+              return None
+
+          total = 0
+          for md in Path(".").rglob("*.md"):
+              if md.name == "README.md":
+                  continue
+              try:
+                  total += count_publish_chars(md.read_text(encoding="utf-8"))
+              except Exception:
+                  pass
+
+          ci_totals = get_ci_totals()
+          last_total = ci_totals[0][1] if ci_totals else None
+
+          week_total = find_total_before(ci_totals, 7 * 86400)
+          month_total = find_total_before(ci_totals, 30 * 86400)
+
+          if last_total == total:
+              Path("/tmp/skip_commit").write_text("1")
+          else:
+              Path("/tmp/skip_commit").write_text("0")
+
+          now = datetime.now(
+              timezone(timedelta(hours=8))
+          ).strftime("%Y-%m-%d %H:%M:%S")
+
+          block = (
+              "<!-- CHINESE_CHAR_COUNT_START -->\n"
+              f"文档总字数：{total} 字\n"
+              f"统计时间：{now}（UTC+8，北京时间）\n\n"
+              f"与上周相比：{diff_info(total, week_total)}\n"
+              f"与上月相比：{diff_info(total, month_total)}\n"
+              "<!-- CHINESE_CHAR_COUNT_END -->"
+          )
+
+          readme = Path("README.md")
+          content = readme.read_text(encoding="utf-8")
+          content = re.sub(
+              r"<!-- CHINESE_CHAR_COUNT_START -->[\s\S]*?<!-- CHINESE_CHAR_COUNT_END -->",
+              block,
+              content,
+              flags=re.DOTALL
+          )
+          readme.write_text(content, encoding="utf-8")
+
+          Path("/tmp/total.txt").write_text(str(total))
+          EOF
+
+      - name: Commit and push changes
+        run: |
+          if [ "$(cat /tmp/skip_commit)" = "1" ]; then
+            echo "📝 字数未变化，跳过提交"
+            exit 0
+          fi
+
+          TOTAL=$(cat /tmp/total.txt)
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git commit -m "CI: 更新文档字数统计 | total=${TOTAL}"
+          git push
