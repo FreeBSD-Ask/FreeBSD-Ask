@@ -2,8 +2,11 @@ name: 📊 更新文档字数统计
 
 on:
   schedule:
-    - cron: '0 1 * * *'  # 每天UTC 0点运行（北京时间8点）
+    - cron: '0 1 * * *'  # 每天
   workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   update-chinese-count:
@@ -11,97 +14,94 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@v5
         with:
           ssh-key: ${{ secrets.DEPLOY_KEY }}
           fetch-depth: 0
-          
+
       - name: Set up Python
         uses: actions/setup-python@v6
         with:
-          python-version: '3.14'
-          
-      - name: 统计中文字数并更新README
+          python-version: '3.13'
+
+      - name: 统计中文字数并更新 README
         run: |
-          # 直接内联 Python 脚本
-          python3 << 'EOF'
-          import os
+          python << 'EOF'
           import re
           from pathlib import Path
           from datetime import datetime
-          
+
           def count_chinese_outside_code_blocks(text):
-              # 移除代码块
+              # 移除 Markdown 代码块
               text = re.sub(r'```[\s\S]*?```', '', text)
               # 统计中文汉字
-              chinese_chars = re.findall(r'[\u4e00-\u9fff\u3400-\u4dbf\U00020000-\U0002a6df]', text)
-              return len(chinese_chars)
-          
+              chars = re.findall(
+                  r'[\u4e00-\u9fff\u3400-\u4dbf\U00020000-\U0002a6df]',
+                  text
+              )
+              return len(chars)
+
           def format_count(count):
-              if count < 10000:
+              if count < 10_000:
                   return f"{count}字"
-              else:
-                  wan = count / 10000
-                  if abs(wan - int(wan)) < 0.001:
-                      return f"{int(wan)}万字"
-                  else:
-                      return f"{wan:.2f}万字"
-          
+              wan = count / 10_000
+              return f"{int(wan)}万字" if wan.is_integer() else f"{wan:.2f}万字"
+
           def update_readme():
-              readme_path = Path("README.md")
-              if not readme_path.exists():
+              readme = Path("README.md")
+              if not readme.exists():
                   print("❌ README.md 不存在")
                   return False
-              
-              # 统计所有 .md 文件
-              total_count = 0
-              for md_file in Path('.').rglob('*.md'):
-                  if md_file.name == 'README.md':
+
+              total = 0
+              for md in Path(".").rglob("*.md"):
+                  if md.name == "README.md":
                       continue
                   try:
-                      with open(md_file, 'r', encoding='utf-8') as f:
-                          total_count += count_chinese_outside_code_blocks(f.read())
-                  except:
-                      continue
-              
-              formatted = format_count(total_count)
-              current_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-              
-              # 构建新的统计区块
-              new_block = f"""<!-- CHINESE_CHAR_COUNT_START -->
-文档总字数: {formatted} (统计时间: {current_time})
-<!-- CHINESE_CHAR_COUNT_END -->"""
-              
-              # 读取并更新 README
-              with open(readme_path, 'r', encoding='utf-8') as f:
-                  content = f.read()
-              
-              start_marker = "<!-- CHINESE_CHAR_COUNT_START -->"
-              end_marker = "<!-- CHINESE_CHAR_COUNT_END -->"
-              
-              if start_marker in content and end_marker in content:
-                  pattern = re.compile(f"{re.escape(start_marker)}.*?{re.escape(end_marker)}", re.DOTALL)
-                  new_content = pattern.sub(new_block, content)
+                      total += count_chinese_outside_code_blocks(
+                          md.read_text(encoding="utf-8")
+                      )
+                  except Exception:
+                      pass
+
+              formatted = format_count(total)
+              now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+              block = (
+                  "<!-- CHINESE_CHAR_COUNT_START -->\n"
+                  f"文档总字数: {formatted} (统计时间: {now})\n"
+                  "<!-- CHINESE_CHAR_COUNT_END -->"
+              )
+
+              content = readme.read_text(encoding="utf-8")
+              start = "<!-- CHINESE_CHAR_COUNT_START -->"
+              end = "<!-- CHINESE_CHAR_COUNT_END -->"
+
+              if start in content and end in content:
+                  content = re.sub(
+                      f"{re.escape(start)}.*?{re.escape(end)}",
+                      block,
+                      content,
+                      flags=re.DOTALL
+                  )
               else:
-                  new_content = content.rstrip() + "\\n\\n" + new_block + "\\n"
-              
-              with open(readme_path, 'w', encoding='utf-8') as f:
-                  f.write(new_content)
-              
-              print(f"✅ 统计完成: {total_count} 汉字 -> {formatted}")
+                  content = content.rstrip() + "\n\n" + block + "\n"
+
+              readme.write_text(content, encoding="utf-8")
+              print(f"✅ 统计完成: {total} 汉字 → {formatted}")
               return True
-          
+
           update_readme()
           EOF
-          
+
       - name: 提交并推送更改
         run: |
-          if [ -n "$(git status --porcelain "README.md")" ]; then
+          if ! git diff --quiet README.md; then
             git config user.name "github-actions[bot]"
             git config user.email "github-actions[bot]@users.noreply.github.com"
-            git add "README.md"
+            git add README.md
             git commit -m "CI: 更新文档字数统计 [$(date +%Y-%m-%d)]"
-            git push origin main
+            git push
             echo "✅ 已提交并推送更改"
           else
             echo "📝 没有需要提交的更改"
