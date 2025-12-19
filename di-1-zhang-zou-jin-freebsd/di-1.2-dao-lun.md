@@ -14,7 +14,7 @@
 >
 > ——参见 [FreeBSD Glossary STABLE](https://wiki.freebsd.org/Glossary#STABLE)
 
-alpha 是 Current 进入 Release 的第一步。具体流程是：current -> alpha（进入 stable 分支）-> beta -> rc -> release。
+alpha 是 current 进入 release 的第一步。具体流程是：current -> alpha（进入 stable 分支）-> beta -> rc -> release。
 
 current 相对稳定后（即满足 MFC 最短三天的要求，MFC 指 `Merge From Current`，类似于 `backporting` 即向后移植）会推送到 stable，但不保证两者没有重大缺陷。参见 [FreeBSD Release Engineering](https://docs.freebsd.org/en/articles/freebsd-releng/)。
 
