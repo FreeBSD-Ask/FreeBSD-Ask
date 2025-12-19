@@ -2,9 +2,10 @@
 
 ## 什么是 UNIX？
 
-从前，UNIX 是一款操作系统。最后由 C 语言改写产生。——源自 `AT&T`（American Telephone & Telegraph，美国电话电报公司）的贝尔实验室。
+从前，UNIX 是一款操作系统。它最初使用汇编语言编写，后主要由 C 语言重写。UNIX 起源于 AT&T（American Telephone & Telegraph，美国电话电报公司）的贝尔实验室。
 
-现在是一种 **标准规范**、一款 **法律上的商标**。更是一种 **哲学思想**，一项 **软件工程原则。**
+
+现在，它是一种 **标准规范**、一款 **法律上的商标**。更是一种 **哲学思想**，一项 **软件工程原则。**
 
 ---
 
@@ -22,16 +23,16 @@ UNIX 认证查询网址：[The Open Group official register of UNIX Certified Pr
 现在，我们可以知道认证 UNIX 需要：
 
 1. [符合单一 UNIX 规范](https://www.opengroup.org/openbrand/register/xym0.htm)
-2. 交钱认证
+2. 缴纳相应的[认证费用](https://www.opengroup.org/openbrand/Brandfees.htm)
 
 
-可以看到，常见的，经过认证的 UNIX 操作系统有 Apple macOS。即从商标的角度上讲，macOS 可以称得上是标准的 UNIX 操作系统。~~故，要安装 UNIX 的人可以去黑苹果了~~
+可以看到，常见的经过认证的 UNIX 操作系统有 Apple macOS。即从商标角度讲，macOS 可以称得上是标准的 UNIX 操作系统。~~故，要安装 UNIX 的人可以去黑苹果了~~
 
 >**技巧**
 >
 >macOS/iOS 等与 BSD 的关系
 >
->从历史与现实来看，macOS/iOS 等基于 BSD 确凿无疑，但并非全然基于某款 BSD：macOS/iOS 等应该被理解为一款独立的 BSD 操作系统——同 OpenBSD、NetBSD 和 FreeBSD 一样。参见 [《苹果的开源基石：macOS 和 iOS 背后的 BSD 传统》](https://book.bsdcn.org/fan-yi-wen-zhang-cun-dang/2024-nian-11-yue/apple)
+>从历史来看，macOS（以及由此衍生的 iOS、iPadOS 等）的核心层（Darwin）确实基于 BSD 代码，并融合了其他技术。它可以被理解为一款独立的、类 BSD 的操作系统分支——同 OpenBSD、NetBSD 和 FreeBSD 一样。参见 [《苹果的开源基石：macOS 和 iOS 背后的 BSD 传统》](https://book.bsdcn.org/fan-yi-wen-zhang-cun-dang/2024-nian-11-yue/apple)
 >
 >所以看似是安卓和苹果之争，其实是 Linux 与 BSD 之争。~~也许也是大教堂与市集之争。~~
 
@@ -48,14 +49,14 @@ UNIX 认证查询网址：[The Open Group official register of UNIX Certified Pr
 >
 >作者 Henry Spencer 并未明确批评哪个操作系统，那么你认为，现在这句话更适合哪个常见的操作系统？为什么？
 
-Unix 哲学源于 UNIX 操作系统的开发，作者是 Ken Thompson。Unix 哲学一言以蔽之即大道至简（“keep it simple, stupid”）：
+Unix 哲学源于 UNIX 操作系统的开发实践，并由 Ken Thompson、Dennis Ritchie 等早期开发者共同塑造。Unix 哲学一言以蔽之，即大道至简（“keep it simple, stupid”）：
 
 
 - 小即美
 - 一个程序只做一件事
 - 原型先行
 - 可移植性先于高效率性
-- 不使用二进制
+- 避免使用不必要的二进制格式或复杂表示
 - 沉默是金（无报错就沉默，成功则无输出，不显示操作进度等）
 - 避免仅用户界面（避免无命令行，仅 GUI）
 
@@ -81,7 +82,7 @@ Unix 哲学源于 UNIX 操作系统的开发，作者是 Ken Thompson。Unix 哲
 
 #### Multics
 
-1964 年麻省理工学院推出的 CTSS（兼容分时系统），是当时最有创造性的操作系统，有了 CTSS 这种高效的操作系统，麻省理工学院的研究人员决定做一个更好的版本。他们开始设计 Multics 系统。Multics 意思是多路复用信息和计算服务。
+1964 年，麻省理工学院推出了 CTSS（兼容分时系统），是当时最具创新性的操作系统。有了 CTSS 这种高效的操作系统，研究人员决定设计一个更好的版本——Multics 系统。Multics 意思是多路复用信息和计算服务。
 
 Multics 意图创造强悍的新软件和比肩 IBM 7094 功能更丰富的新硬件，麻省理工学院邀请了两家公司来帮忙。美国通用电气公司负责设计及生产有全新硬件特性、能更好地支撑分时及多用户体系的计算机，贝尔实验室在计算机发展早期就开发了自己的操作系统，因此麻省理工邀请了贝尔实验室与美国通用电气公司共同开发 Multics。
 
@@ -89,7 +90,7 @@ Multics 意图创造强悍的新软件和比肩 IBM 7094 功能更丰富的新�
 
 #### UNICS
 
-贝尔实验室退出 Multics 开发项目后，项目组成员 Kenneth Lane Thompson 找到一台 DEC PDP-7 型计算机，这台计算机性能不算强大，只有 4KB 内存，但是图形界面比较美观，Thompson 用他写了个游戏 *Space Travel*（《星际旅行》），PDP-7 有个问题就是磁盘转速远远低于计算机的读写速度，为了解决这个问题，Thompson 写了磁盘调度算法来提高磁盘总吞吐量。
+贝尔实验室退出 Multics 开发项目后，项目组成员 Kenneth Lane Thompson 找到一台 DEC PDP-7 型计算机，该计算机性能有限，只有 4KB 内存，但图形界面较为美观。Thompson 在其上开发了游戏 Space Travel（《星际旅行》）。PDP-7 的磁盘转速远低于计算机的读写速度，为解决这一问题，Thompson 编写了磁盘调度算法以提高磁盘总吞吐量。
 
 >**技巧**
 >
@@ -101,7 +102,7 @@ Multics 意图创造强悍的新软件和比肩 IBM 7094 功能更丰富的新�
 
 他需要写三个程序，每周写一个：创建代码的编辑器，将代码转换为 PDP-7 能运行的机器语言汇编器，再加“内核的外层——操作系统就完成了”。
 
-新的 PDP-7 操作系统编写没多时，Thompson 和几个同事讨论，当时新系统还没有名字，当时它被命名为“UnICS”（Uniplexed Information and Computing Service，非复用信息和计算机服务），UnICS 最后改名为 **UNIX**，这个名字更加方便记忆。
+新的 PDP-7 操作系统开发不久后，Thompson 和几位同事讨论，当时系统尚未命名，最初称为“UnICS”（Uniplexed Information and Computing Service，非复用信息和计算机服务），后来改名为 UNIX，更易于记忆。
 
 ## GNU 与自由软件运动
 
@@ -114,7 +115,7 @@ Multics 意图创造强悍的新软件和比肩 IBM 7094 功能更丰富的新�
 - 1991 年，FSF 发布 GPLv2
 - 2007 年，FSF 发布 GPLv3
 
-一开始他为 Unix 写了很多实用程序（用户空间），然而 GNU 的目标操作系统始终缺乏稳定的内核（即使到了 2025 年，[GNU Hurd](https://hurd.gnu.org/) 仍未完成）。Linux 内核的诞生为这一困境带来了突破。作为一款由 Linux 内核和 GNU 软件拼凑起来的操作系统，Linux 不断地的 GNU 化，成为了一款操作系统——这就是 GNU/Linux 其中 GNU 的来历，然而很多人无视这一事实，掩盖了 GNU 软件的贡献。这是因为：Linux 内核由创始人 Linus Torvalds 一人裁决。Linus 本人对 FSF 和 RMS 并不认可。所以显而易见的，Linux 项目的理念与自由软件运动的理念、乃至于同真正开源的理念（Linux 内核里存在大量非开源非自由的存在，参见 [Linux-libre](https://www.fsfla.org/ikiwiki/selibre/linux-libre/)）都存在明显的张力。并且 Linux 内核使用 GPLv2，而非 GNU 推荐的 GPLv3。事实是，Linus Torvalds 随意移除 Linux 项目的参与者，却未同时移除他们贡献的代码。——这同自由还是开源理念都是冲突的。
+一开始，RMS 为 Unix 编写了许多实用程序（用户空间），然而 GNU 的目标操作系统始终缺乏稳定内核（即使到 2025 年，[GNU Hurd](https://hurd.gnu.org/) 仍未完成）。Linux 内核的诞生打破了这一困境。作为由 Linux 内核和 GNU 软件组合而成的操作系统，Linux 不断地 GNU 化，形成了 GNU/Linux，其中 GNU 的贡献不可忽视，但很多人常忽略这一事实。这是因为：Linux 内核的开发由 Linus Torvalds 主导。Linus 本人对 FSF 和 RMS 的理念并不完全认同。因此，Linux 内核项目的理念与自由软件运动，甚至与严格的开源理念之间，存在一定的张力（例如，Linux 内核包含了不符合自由软件定义或严格开源定义的二进制固件模块，参见 [Linux-libre](https://www.fsfla.org/ikiwiki/selibre/linux-libre/)）。并且 Linux 内核使用 GPLv2，而非 GNU 推荐的 GPLv3。事实是，Linus Torvalds 随意移除 Linux 项目的参与者，却未同时移除他们贡献的代码。——这同自由还是开源理念都是冲突的。
 
 我们将 Linux 之前这段时间称作“自由软件运动”（代表人物 RMS）。Linux 的流行促成了另一种理念的兴起，即“开源运动”——代表人物有 Eric S. Raymond，OSI（Open Source Initiative，开放源代码促进会）的创始人，《UNIX 编程艺术》、《大教堂与集市》的作者；Bruce Perens，Debian 项目前领导人——想想下面有关开源的定义为什么是自 [Debian 的开源定义 DFSG](https://www.debian.org/social_contract#guidelines) 衍生而来？
 
@@ -194,9 +195,9 @@ Linus Torvalds 的硕士毕业论文是 [《Linux: A Portable Operating System�
 >
 >~~或许 Minix 才是世界上最流行的操作系统~~
 
-UNIX 标准 SUS 包含了 POSIX 标准，是其超集。Linux 实现了 POSIX 标准，但是未进行 [POSIX 认证](http://get.posixcertified.ieee.org/)。
+UNIX 标准 SUS 包含 POSIX 标准，是其超集。Linux 实现了 POSIX 标准，但未获得 [POSIX 认证](http://get.posixcertified.ieee.org/)。
 
-本质上说 Linux 是 UNIX 的一种仿制品或者说克隆产物（类似于人与机器人的关系）。
+从本质上说，Linux 是 UNIX 的一种仿制或克隆产物（类似于人与机器人的关系）。
 
 
 ### 狭义 Linux 是内核
@@ -216,8 +217,8 @@ GNU's Not Unix，从 GNU 这个名字（GNU 不是 UNIX）你也能看出来 Lin
 具体地：
 
 - GNU/Linux 发行版 = Ubuntu、RHEL、Deepin、OpenSUSE……
-  - Ubuntu = Linux kernel + apt/dpkg + Gnome
-  - OpenSUSE = Linux kernel + libzypp/rpm + KDE
+  - Ubuntu = Linux kernel + apt/dpkg + Gnome（默认桌面环境）
+  - OpenSUSE = Linux kernel + libzypp/rpm（包管理器后端，支持 RPM 格式）+ KDE（默认的桌面环境之一）
 
 > **注意**
 >
@@ -227,9 +228,9 @@ GNU's Not Unix，从 GNU 这个名字（GNU 不是 UNIX）你也能看出来 Lin
 
 ## 什么是 Unix-like？
 
-Unix-like 即类 Unix，亦即一切符合 UNIX 标准的操作系统，基本遵守 POSIX 规范，而未获得第一节中所说的 UNIX 的认证。
+Unix-like 即类 Unix，指一切符合 UNIX 标准、基本遵守 POSIX 规范但未获得第一节中所述 UNIX 认证的操作系统。
 
-也就是说，除了 Windows，基本上世界上大多数操作系统都被叫做 Unix-like，其中就包括 Linux 和 FreeBSD。
+也就是说，除 Windows 外，世界上绝大多数操作系统都可称为 Unix-like，包括 Linux 和 FreeBSD。
 
 ## 附录：自由软件与开源软件语境下的典型误解与思想偏差探析
 
@@ -237,7 +238,7 @@ Unix-like 即类 Unix，亦即一切符合 UNIX 标准的操作系统，基本�
 
 ### 厘清“营利”和“盈利”
 
-这两个词语代表的意义是不同的，用法也不同。
+这两个词语的含义不同，用法也不同。
 
 - “盈利”：名词，扣除成本后获得的利润，也作赢利。《现代汉语词典》（ISBN：9787100124508，中国社会科学院语言研究所词典编辑室编，商务印书馆，第 7 版，第 1572 页）
 - “营利”：动词，谋求利润。《现代汉语词典》（ISBN：9787100124508，中国社会科学院语言研究所词典编辑室编，商务印书馆，第 7 版，第 1572 页）
@@ -254,9 +255,9 @@ Unix-like 即类 Unix，亦即一切符合 UNIX 标准的操作系统，基本�
 >
 >自由度 3：用户可以自由地分发该软件修改后的拷贝。借此，用户可以把改进后的软件分享给整个社区令他人也从中受益。作为前提，用户必须可以访问到该软件的源代码。
 
-即：“用户可以自由地运行，拷贝，分发，学习，修改并改进该软件。”
+即：“用户可以自由地运行、拷贝、分发、学习、修改并改进该软件。”
 
-推论 1：如果商业用户为了营利（自由度 0）而修改（自由度 1）再分发（自由度 2）只要修改后仍然开源（自由度 3）那么，商业用户的行为是完全合规的，且这说明商业用户完全有权自由使用、修改、分发、通过此软件营利。任何自由度均未限制 **营利** 行为。引证 1：[自由软件可以是商业软件](https://www.gnu.org/philosophy/free-sw.zh-cn.html#four-freedoms)；
+推论 1：如果商业用户为了营利（自由度 0）而修改（自由度 1）再分发（自由度 2），只要修改后仍然开源（自由度 3），商业用户的行为是完全合规的，并说明他们完全有权自由使用、修改、分发及通过该软件营利。任何自由度均未限制 **营利** 行为。引证 1：[自由软件可以是商业软件](https://www.gnu.org/philosophy/free-sw.zh-cn.html#four-freedoms)；
 
 ### 开源协议定义与开源软件定义
 
@@ -314,7 +315,7 @@ OSI（Open Source Initiative，开源促进会）基于开放软件定义（OSD�
 
 根据 [自由与非自由软件的分类](https://www.gnu.org/philosophy/categories.zh-cn.html)，我们定义如下：
 
-- 自由软件：符合上述四项基本自由定义的软件即称为自由软件。推论：商业软件可以是自由软件，商业 ≠ 非自由。引证 1：[自由软件可以是商业软件](https://www.gnu.org/philosophy/free-sw.zh-cn.html#four-freedoms)；引证 2; [Words to Avoid (or Use with Care) Because They Are Loaded or Confusing](https://www.gnu.org/philosophy/words-to-avoid.html),“Commercial”部分
+- 自由软件：符合上述四项基本自由定义的软件即称为自由软件。推论：商业软件可以是自由软件，商业 ≠ 非自由。引证 1：[自由软件可以是商业软件](https://www.gnu.org/philosophy/free-sw.zh-cn.html#four-freedoms)；引证 2：[Words to Avoid (or Use with Care) Because They Are Loaded or Confusing](https://www.gnu.org/philosophy/words-to-avoid.html),“Commercial”部分
 - 开源软件：使用上述开源协议授权的软件。理论上和自由软件基本上同义，但可能存在例外
 - 专有软件/私有软件（proprietary software）：即真正意义上的“非自由软件”，大部分商业软件属此类型。这是 GNU 宣言一开始真正的目标
 - 免费软件：定义模糊。其他类别的软件均可能是“免费”的，但并不一定
@@ -334,13 +335,13 @@ OSI（Open Source Initiative，开源促进会）基于开放软件定义（OSD�
 
 ### 开源 ≠ 无版权？协议不可撤销？
 
-很多人会混淆开源与无版权，认为开源=无版权。这种想法在实际上存在逻辑问题：如果你没有持有版权，那么你凭什么要求别人按照你的开源协议做事？（部分人会将版权转给 GNU 协会，但仍在事实上存在版权）
+很多人会混淆开源与无版权，认为开源=无版权。这种想法在实际中存在逻辑问题：如果你不持有版权，凭什么要求他人遵守你的开源协议？（部分人会将版权转给 GNU 协会，但仍在事实上存在版权）
 
 在司法实践中也存在矛盾，许多开源软件项目作者仍然被追究了法律责任，如果是无版权，那么应该追究谁的责任？
 
-在各国版权法中，版权是不可转让所有权利的，只能让渡一部分，让渡全部权利（包括人身权）是荒谬且存在逻辑问题的。以《中华人民共和国著作权法》为例，只有“第（五）项至第（十七）项”是可以让渡的，发表权、署名权、修改权、保护作品完整权都是无法让渡的。
+在各国版权法中，版权不可转让所有权利，只能让渡部分权利。让渡全部权利（包括人身权）既荒谬又存在逻辑问题。以《中华人民共和国著作权法》为例，只有“第（五）项至第（十七）项”是可以让渡的，发表权、署名权、修改权、保护作品完整权都是无法让渡的。
 
-在实例中，作者永远不会受到开源协议本身的限制（除非他也引用了别人的项目），那是用来限制别人的，即使是协议的不可撤销性，在司法实践中也是无效的，并且存在过相应的判例。
+在实例中，作者永远不会受到开源协议本身的限制（除非他也引用了别人的项目），那是用来限制他人的，即使协议声称不可撤销，在司法实践中通常无效，并已有相关判例。
 
 ### CC-BY-NC（所有版本）、CC-BY-ND（所有版本）既不自由也不开源
 
@@ -359,4 +360,3 @@ OSI（Open Source Initiative，开源促进会）基于开放软件定义（OSD�
 你可以获取源代码，并且微软的限制条件仍然在表面上看似符合“自由度 1”（自由修改参见 [神州网信](https://www.cmgos.com/) 的 Windows 10 神州网信政府版）。
 
 但是你很难说这种协议是一种开源协议，在某种意义上 CC-BY-NC（所有版本）、CC-BY-ND（所有版本）其实和这种许可协议没有什么本质区别。
-
