@@ -259,7 +259,7 @@ FreeBSD 15.0-RELEASE 支持选择 UFS 或 ZFS 作为根文件系统。旧版本�
 >
 > 刷新后，执行 `bsdinstall` 命令可重新进入安装程序界面。
 >
-> 此问题可能与分区表调整有关（参见 [FreeBSD 手册](https://handbook.bsdcn.org/di-18-zhang-cun-chu/18.3.-tiao-zheng-he-zeng-jia-ci-pan-da-xiao.html)），疑似一个程序缺陷。
+> 此问题可能与分区表调整有关（参见 [FreeBSD 手册](https://handbook.bsdcn.org/di-18-zhang-cun-chu/18.3.-tiao-zheng-he-zeng-jia-ci-pan-da-xiao.html)），疑为程序缺陷。
 
 ![](../.gitbook/assets/zfs1.png)
 
