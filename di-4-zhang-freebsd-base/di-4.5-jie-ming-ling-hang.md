@@ -10,14 +10,14 @@ $ whoami
 ykla
 ```
 
-- 查看当前登录用户用户组相关
+- 查看当前登录用户所属用户组信息
 
 ```sh
 $ id
 uid=1001(ykla) gid=1001(ykla) groups=1001(ykla),0(wheel)
 ```
 
-- 查看当前用户登录的中断及本次登录时间
+- 查看当前用户登录的终端及本次登录时间
 
 ```sh
 $ who
@@ -35,7 +35,7 @@ root       pts/0    3413e8b6b43f   3:00PM     - w
 
 - 查看当前所在路径
 
-`pwd` 即 `print work directory`，打印工作目录
+`pwd` 即 `print working directory`，打印工作目录
 
 ```sh
 $ pwd
@@ -350,7 +350,7 @@ cd is a shell builtin
 ```
 
 
-如果缺少了哪个命令，一般可以通过安装相应的软件包来获取，比如 `lspci` 命令，来自软件包 `sysutils/pciutil`。但是也有很多命令存在 Linux 主义问题，不兼容其他操作系统，比如 ip 命令，来自 GNU 软件包 iproute2。
+如果缺少了哪个命令，一般可以通过安装相应的软件包来获取，比如 `lspci` 命令，来自软件包 `sysutils/pciutils`。但是也有很多命令存在 Linux 主义问题，不兼容其他操作系统，比如 ip 命令，来自 GNU 软件包 iproute2。
 
 ## 常用命令
 
@@ -431,7 +431,7 @@ ykla@ykla:~ $ ls
 
 则不会显示隐藏文件。
 
->**技巧**、
+>**技巧**
 >
 >请以普通用户进行测试，因为 FreeBSD 的 root shell 总是显示隐藏文件的。
 
@@ -729,7 +729,7 @@ $ rm -rf *
 
 简单理解：你要么做饭，要么点外卖，要么出去吃——> 做饭 `||` 点外卖 `||` 出去吃。如果你不会做饭，你就只能点外卖了，如果外卖没有好吃的，你就只能出去吃了。
 
-使用场景：如果一个命令一直执行失败，但是你偏要他一直执行。你就可以写很多的 `||`，防止一次失败后反复手动再次执行该命令，比如：
+使用场景：如果一个命令一直执行失败，但是你偏要它一直执行。你就可以写很多的 `||`，防止一次失败后反复手动再次执行该命令，比如：
 
 ```sh
 make BATCH=yes install || make BATCH=yes install || make BATCH=yes install || make BATCH=yes install
@@ -776,7 +776,7 @@ FreeBSD 的设计更接近传统 UNIX 的行为。
 重启：
 
 - 重启命令和 Linux 一致，都是 `reboot`，但是参数不通用。
-- 在 FreeBSD 下 `roboot` 等同于 `shutdown -r now`
+- 在 FreeBSD 下 `reboot` 等同于 `shutdown -r now`
 
 >**注意**
 >
