@@ -58,7 +58,7 @@ FreeBSD 中主要有三类账户：系统账户、用户账户，以及超级用
 示例：创建一个名为 test 的用户，并将其添加到 wheel 组，设置其默认 shell 是 sh：
 
 ```sh
-root@ykla:/ #  adduser
+#  adduser
 Username: test # 用户名 ①
 Full name:  # 全名，可留空
 Uid (Leave empty for default): # UID 设置，可留空
