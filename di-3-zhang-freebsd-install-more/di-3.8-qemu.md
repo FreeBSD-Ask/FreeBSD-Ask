@@ -10,7 +10,7 @@ Qemu 是一款纯软件模拟的开源虚拟机，支持模拟不同的体系结
 
 Qemu 下载地址：
 
-[QEMU Binaries for Windows (64 bit)](https://qemu.weilnetz.de/w64/)，点击最下方倒数第二个文件即可。写作文本时，为 `qemu-w64-setup-20241220.exe`。大小为 174M。
+[QEMU Binaries for Windows (64 bit)](https://qemu.weilnetz.de/w64/)，点击最下方倒数第二个文件即可。写作本文时，为 `qemu-w64-setup-20241220.exe`。大小为 174M。
 
 下载后在 Windows 上安装 Qemu。
 
@@ -100,13 +100,13 @@ cd /d "C:\Program Files\qemu"
     -netdev user,id=net,hostfwd=tcp::8022-:22 ^
     -bios "C:\Users\ykla\Desktop\fw_jump.elf" ^
     -kernel "C:\Users\ykla\Desktop\u-boot.bin" ^
-    -append “root=LABEL=rootfs” ^
+    -append "root=LABEL=rootfs" ^
     -nographic
 ```
 
 概述：
 
-- `^` 相当于 Windows 下的反斜杠。
+- `^` 在 Windows 批处理脚本中用作续行符，可将一条长命令拆成多行书写。
 - `smp` 为 CPU 数量
 - `cpu` 指定 CPU 架构
 - `m` 指定内存大小

@@ -36,7 +36,7 @@ mfsBSD 是一款完全载入内存的 FreeBSD 系统，类似于 Windows 的 PE 
 
 > **注意**
 >
-> 仅支持 IPv6 地址的服务器不能在服务器使用命令行进行下载，因为 mfsBSD 的下载地址不支持 IPv6 网络。
+> 仅支持 IPv6 的服务器无法使用命令行进行下载，因为 mfsBSD 的下载地址不支持 IPv6 网络。
 >
 > 此问题笔者已与作者发邮件沟通，但截止发文时尚未得到回应。
 
@@ -122,7 +122,7 @@ mfsBSD 是一款完全载入内存的 FreeBSD 系统，类似于 Windows 的 PE 
 ls # 显示磁盘。如果你显示磁盘为 (hd0,gptxxx)，说明你的平台不支持此教程
 ls (hd0,msdos2)/
 linux16 (hd0,msdos2)/memdisk iso
-initrd (hd0,msdos2)/bsd.iso
+initrd (hd0,msdos2)/mfsbsd.iso
 boot # 输入 boot 后回车即可从 mfsBSD 继续启动
 ```
 
@@ -181,7 +181,7 @@ mfsBSD 的 `root` 密码默认是 `mfsroot`。你可以使用 ssh 工具进行�
 
 待解决、待尝试。
 
-### VMWare、VirtualBox 无法按照此方法安装
+### VMware、VirtualBox 无法按照此方法安装
 
 鉴于 VirtualBox 可以选择虚拟化，选择为 `kvm` 可再次尝试。（笔者的机器无法引导，也许你能成功）
 

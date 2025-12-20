@@ -4,7 +4,7 @@
 
 `rEFInd` 复刻自 `rEFIt`，源自对“refind”（改进、完美）和“EFI”（Extensible Firmware Interface，可扩展固件接口）两个词的组合，即修改 UEFI。
 
-打开下载页面 [Getting rEFInd from Sourceforge](https://www.rodsbooks.com/refind/getting.html)，点击 `A binary zip file` 即可自动转跳下载。写作本文使用到了 `refind-bin-0.14.2.zip`。
+打开下载页面 [Getting rEFInd from Sourceforge](https://www.rodsbooks.com/refind/getting.html)，点击 `A binary zip file` 即可自动开始下载。写作本文使用到了 `refind-bin-0.14.2.zip`。
 
 该文件中只有一部分是有用的启动文件。我们只需要其中的 `refind` 文件夹，其他的不需要。
 

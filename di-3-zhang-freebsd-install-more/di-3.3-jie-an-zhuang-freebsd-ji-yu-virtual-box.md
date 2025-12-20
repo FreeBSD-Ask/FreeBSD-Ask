@@ -8,7 +8,7 @@
 
 ## 安装设置
 
-以下演示基于 VirtualBox 7.1.4 和 Windows11 24H2。
+以下演示基于 VirtualBox 7.1.4 和 Windows 11 24H2。
 
 ![](../.gitbook/assets/vb1.png)
 
@@ -82,9 +82,9 @@
 
 >**注意**
 >
->与 VMware 不同，VirtualBox 在纯粹 NAT 模式下，主机和虚拟机是无法互通的，虚拟机可以访问主机的回环接口 `10.0.2.2` 及其上运行的网络服务，但是主机无法访问虚拟机的端口，且虚拟机与虚拟机之间也是相互隔离的。这是因为 VirtualBox 的 NAT 并不是由主机充当交换机，而是在主机与虚拟机中构造了一个交换机来进行隔离。参见 [Network Address Translation (NAT)](https://www.virtualbox.org/manual/topics/networkingdetails.html#network_nat)。你也可以按照手册中的端口转发来联通网络。
+>与 VMware 不同，VirtualBox 在纯粹 NAT 模式下，主机和虚拟机是无法互通的，虚拟机可以访问主机的回环接口 `10.0.2.2` 及其上运行的网络服务，但是主机无法访问虚拟机的端口，且虚拟机与虚拟机之间也是相互隔离的。这是因为 VirtualBox 的 NAT 并不是由主机充当交换机，而是在主机与虚拟机中构造了一个交换机来进行隔离。参见 [Network Address Translation (NAT)](https://www.virtualbox.org/manual/topics/networkingdetails.html#network_nat)。你也可以按照手册中的端口转发来连通网络。
 
-网络设置比较复杂，有时桥接不一定可以生效。为了达到使用宿主机（如 Windows10）控制虚拟机里的 FreeBSD 系统的目的，需要设置两块网卡——一块是 NAT 网络模式的网卡用来上网、另一块是仅主机模式的网卡用来互通宿主机。如图所示：
+网络设置比较复杂，有时桥接不一定可以生效。为了达到使用宿主机（如 Windows 10）控制虚拟机里的 FreeBSD 系统的目的，需要设置两块网卡——一块是 NAT 网络模式的网卡用来上网、另一块是仅主机模式的网卡用来互通宿主机。如图所示：
 
 ![](../.gitbook/assets/vbnat1.png)
 
@@ -186,7 +186,7 @@ You may ignore the yellow alert that encourages use of VMSVGA.
 # pw groupmod wheel -m ykla # 将笔者的普通用户 ykla 加入 wheel 组以获得权限，你需要改成你自己的普通用户
 ```
 
-## 故障排除与未竟事宜
+## 故障排除与未尽事宜
 
 ### EFI 下无法正常关机
 

@@ -3,7 +3,7 @@
 
 ## 视频教程
 
-- [001-WIndows11 安装 VMware17](https://www.bilibili.com/video/BV1Qji2YLEgS)
+- [001-Windows 11 安装 VMware 17](https://www.bilibili.com/video/BV1Qji2YLEgS)
 
 ## 镜像下载
 
@@ -94,7 +94,7 @@
 
 >**警告**
 >
->NAT 模式“名称”是与你主机的 `控制面板\网络和 Internet\网络连接` 中的 `VMware Network Adapter VMnet8` 绑定的，默认绑定的是 `8`：换言之，`NAT 模式` “名称”默认必须指定为下图的 `VMnat8`，指定为其他名称虚拟机不会有网络！
+>NAT 模式“名称”是与你主机的 `控制面板\网络和 Internet\网络连接` 中的 `VMware Network Adapter VMnet8` 绑定的，默认绑定的是 `8`：换言之，`NAT 模式` “名称”默认必须指定为下图的 `VMnet8`，指定为其他名称虚拟机不会有网络！
 >
 >![vmware network on freebsd](../.gitbook/assets/VMnat8.png)
 
@@ -119,7 +119,7 @@
 
 或者
 
-```
+```sh
 # cd /usr/ports/x11-drivers/xf86-video-vmware/  && make install clean
 # cd /usr/ports/emulators/open-vm-tools/ && make install clean
 # cd /usr/ports/x11-drivers/xf86-input-vmmouse/  && make install clean
@@ -138,7 +138,7 @@
 
 >**注意**
 >
->wayland 下也需要安装该驱动。
+>Wayland 下也需要安装该驱动。
 
 >**技巧**
 >
@@ -157,7 +157,7 @@
 
 编辑 `/usr/local/share/X11/xorg.conf.d/xorg.conf` 修改以下段落为（其他部分不需要动，保留原样即可）：
 
-```sh
+```ini
 Section "ServerLayout"
         Identifier     "X.org Configured"
         Screen          0  "Screen0" 0 0
@@ -189,12 +189,12 @@ EndSection
 
 >**注意**
 >
->不必疑惑虚拟机的名字是 Windows 11，因为这是 Windows11 和 BSD 双系统虚拟机。
+>不必疑惑虚拟机的名字是 Windows 11，因为这是 Windows 11 和 BSD 双系统虚拟机。
 
 在 FreeBSD 虚拟机中查看设置的文件夹：
 
 ```sh
-root@ykla:/home/ykla # vmware-hgfsclient
+# vmware-hgfsclient
 123pan
 ```
 
@@ -220,14 +220,14 @@ fusefs_load="YES"
 
 ##### 自动挂载
 
-编辑 `/etc/fstab/`：写入：
+编辑 `/etc/fstab`：写入：
 
 >**注意**
 >
 >请将 `123pan` 换成你自己的路径。
 
 ```sh
-.host:/123pan      /mnt/hgfs    fusefs  rw,mountprog=/usr/local/bin/vmhgfs-fuse,allow_other,failok 0
+.host:/123pan      /mnt/hgfs    fusefs  rw,mountprog=/usr/local/bin/vmhgfs-fuse,allow_other,failok 0 0
 ```
 
 检查（请务必执行，否则若写错了会卡在开机处）：
@@ -239,15 +239,15 @@ fusefs_load="YES"
 #### 查看共享文件夹
 
 ```sh
-root@ykla:/home/ykla # ls /mnt/hgfs/
+# ls /mnt/hgfs/
 Downloads
-root@ykla:/home/ykla # ls /mnt/hgfs/Downloads/
+# ls /mnt/hgfs/Downloads/
 零跑
 ```
 
 ![FreeBSD VMware 共享文件夹](../.gitbook/assets/hgfs2.png)
 
-文件符合。
+文件内容一致。
 
 #### 参考文献
 
@@ -256,7 +256,7 @@ root@ykla:/home/ykla # ls /mnt/hgfs/Downloads/
 - [VMware shared folders](https://forums.freebsd.org/threads/vmware-shared-folders.10318/)，挂载方法参考此处
 
 
-## 故障排除与未竟事宜
+## 故障排除与未尽事宜
 
 > **注意**
 >
@@ -274,11 +274,11 @@ root@ykla:/home/ykla # ls /mnt/hgfs/Downloads/
 
 加载声卡后若仍然没有声音，请将音量拉满到 100% 再看一下。因为默认声音几乎微不可闻。
 
-## 附录：博通（broadcom）账号相关
+## 附录：博通（Broadcom）账号相关
 
 >**警告**
 >
->博通官网频繁变动，无法始终提供一致的解决方案，请读者领会大意，自行操作，如实不会，请加入中文社区聊天群。
+>博通官网频繁变动，无法始终提供一致的解决方案，请读者领会大意，自行操作，实在不会，请加入中文社区聊天群。
 
 ### 博通（broadcom）账号注册
 

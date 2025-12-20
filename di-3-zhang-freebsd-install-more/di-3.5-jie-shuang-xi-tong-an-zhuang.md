@@ -69,7 +69,7 @@
 ```sh
 # zfs list
 NAME  USED   AVAIL  REFER  MOUNTPOINT
-root  534M    130G   534M  nont
+root  534M    130G   534M  none
 ```
 
 进入系统后可以看到，仅有一个 `root` 数据集。可以手动将数据集改为自动安装的样子，亦可参照下文在安装时进入 shell 进行分区。
@@ -197,7 +197,7 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 
 >**技巧**
 >
->上述参数来着自 [bsdinstall(8)](https://man.freebsd.org/cgi/man.cgi?bsdinstall(8))。你也可以在安装好的系统里用命令 `zfs get exec,setuid,mountpoint` 进行查看。代码位于 src `/usr.sbin/bsdinstall/scripts/zfsboot`。
+>上述参数来自 [bsdinstall(8)](https://man.freebsd.org/cgi/man.cgi?bsdinstall(8))。你也可以在安装好的系统里用命令 `zfs get exec,setuid,mountpoint` 进行查看。代码位于 src `/usr.sbin/bsdinstall/scripts/zfsboot`。
 
 ### 修改文件夹权限
 
