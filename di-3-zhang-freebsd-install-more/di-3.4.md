@@ -83,7 +83,7 @@ Device              Size     Used    Avail Capacity
 
 ## 还原交换分区（Swap）
 
-我们分配了 208 GB 空间，其中有 8 GB 是为交换分区预留的。现在需要将其还原。需要用到工具 [Diskgenius](https://www.diskgenius.com/)。
+我们分配了 208 GB 空间，其中有 8 GB 是为交换分区预留的。现在需要将其还原。需要用到工具 [DiskGenius](https://www.diskgenius.com/)。
 
 ![](../.gitbook/assets/shuang8.png)
 
