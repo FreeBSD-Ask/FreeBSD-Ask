@@ -11,11 +11,11 @@
 >
 >虚拟机也可以使用 FreeBSD 官方构建的 [虚拟机镜像](https://download.freebsd.org/releases/VM-IMAGES/14.2-RELEASE/amd64/Latest/)，需要手动扩容，文件系统可选 UFS 与 ZFS。
 >
->虚拟机一般使用 `FreeBSD-14.2-RELEASE-amd64-disc1.iso` 等类似文件名和后缀的镜像，但是，`FreeBSD-14.2-RELEASE-amd64-memstick.img` 也并非只能用于 U 盘刻录，虚拟机也是可以用的，使用方法参考第 31.2 节。
+>虚拟机一般使用 `FreeBSD-14.2-RELEASE-amd64-disc1.iso` 等类似文件名和后缀的镜像，但是 `FreeBSD-14.2-RELEASE-amd64-memstick.img` 也并非只能用于 U 盘刻录，虚拟机同样可以使用，使用方法参考其他章节。
+
 
 
 ## 配置虚拟机
-
 
 
 ![VMware 安装 FreeBSD](../.gitbook/assets/vm1.png)
@@ -25,7 +25,7 @@
 
 ![VMware 安装 FreeBSD](../.gitbook/assets/vm3.png)
 
-请务必选择“稍后安装操作系统”，否则启动会出问题。
+请务必选择“稍后安装操作系统”，否则可能导致启动问题。
 
 ![VMware 安装 FreeBSD](../.gitbook/assets/vm4.png)
 
@@ -33,15 +33,15 @@
 
 >**技巧**
 >
->这一步其实无意义。甚至选择 Windows 也能顺利启动。但是对于低版本的 FreeBSD，虚拟机增强工具没有开源，可能会出问题。
+>这一步实际上并无实质影响，甚至选择 Windows 也可以顺利启动。但是对于低版本的 FreeBSD，虚拟机增强工具没有开源，可能会出问题。
 
 ![VMware 安装 FreeBSD](../.gitbook/assets/vm5.png)
 
-虚拟机占用磁盘空间极大。若你不想 C 盘被占满，请自行调整存储位置。
+虚拟机通常会占用较大的磁盘空间。若您不希望系统盘（如 C 盘）空间被占满，请自行调整虚拟机的存储位置。
 
 ![VMware 安装 FreeBSD](../.gitbook/assets/vm6.png)
 
-请调整最大磁盘大小。默认值不合理。若要安装桌面，最小要大于 20 G。
+请根据实际需要调整虚拟磁盘的最大大小。默认值可能偏小。若要安装图形化桌面环境，建议分配至少 20 GB 的磁盘空间。
 
 ![VMware 安装 FreeBSD](../.gitbook/assets/vm7.png)
 
@@ -49,15 +49,15 @@
 
 ![VMware 安装 FreeBSD](../.gitbook/assets/vm9.png)
 
-默认值 256 M 能够启动。但是不建议这么做。实在不行给 512 M 也行。
+默认的 256 MB 内存可以启动系统，但不建议用于实际使用。最低建议配置为 512 MB。
 
 ![VMware 安装 FreeBSD](../.gitbook/assets/vm10.png)
 
-默认值 1 CPU 能够启动。但是不合理。
+默认的 1 个 CPU 核心可以启动，但为了获得更好的性能，建议根据主机资源情况进行调整。
 
 ![VMware 安装 FreeBSD](../.gitbook/assets/vm11.png)
 
-在“使用 ISO 映像文件”中，点击浏览找到，并选中你下载的 `-RELEASE-amd64-disc1.iso` 文件。
+在“使用 ISO 映像文件”处，点击“浏览”，找到并选中您下载的 `FreeBSD-14.2-RELEASE-amd64-disc1.iso` 文件。
 
 ![VMware 安装 FreeBSD](../.gitbook/assets/vm12.png)
 
@@ -69,8 +69,7 @@
 
 > **警告**
 >
-> 由于 [Bug 250580 - VMware UEFI guests crash in virtual hardware after r366691](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=250580)，FreeBSD 11/12 在 VMware 的 UEFI 环境下可能无法启动。经测试 13.0 正常启动。
-
+> 由于 [Bug 250580 - VMware UEFI guests crash in virtual hardware after r366691](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=250580) 的存在，FreeBSD 11/12 在 VMware 的 UEFI 环境下可能无法启动。经测试，FreeBSD 13.0 可正常启动。
 
 
 ![VMware 安装 FreeBSD](../.gitbook/assets/vm13.png)
@@ -82,63 +81,62 @@
 
 ## 网络设置
 
-请使用 NAT 模式（默认），如果不能与宿主机（物理机）互通，请打开 VMware 编辑 - 虚拟网络管理器，“还原默认设置”，直至出现类似下图的配置：
+请使用 NAT 模式（默认设置）。如果虚拟机无法与宿主机（物理机）通信，请打开 VMware 的“编辑”菜单，选择“虚拟网络编辑器”，点击“还原默认设置”，直至配置恢复正常。
 
 >**注意**
 >
->经过测试，桥接的虚拟机在与主机传递文件时，网速极慢。
+>经过测试，桥接模式的虚拟机在与主机传递文件时，网速较慢。
 
 >**技巧**
 >
->如果“还原默认设置”不起作用，始终只有单个某模式，请按照下图手动配置。
+>如果“还原默认设置”无效，且网络适配器列表异常（例如始终只有单个模式），可尝试根据下图所示手动配置网络。
 
 >**警告**
 >
->NAT 模式“名称”是与你主机的 `控制面板\网络和 Internet\网络连接` 中的 `VMware Network Adapter VMnet8` 绑定的，默认绑定的是 `8`：换言之，`NAT 模式` “名称”默认必须指定为下图的 `VMnet8`，指定为其他名称虚拟机不会有网络！
+>NAT 模式的“名称”与你主机的 `控制面板\网络和 Internet\网络连接` 中的 `VMware Network Adapter VMnet8` 绑定，默认绑定的是 `8`。换言之，NAT 模式的“名称”默认必须指定为下图所示的 `VMnet8`，否则虚拟机将无法联网。
 >
 >![vmware network on freebsd](../.gitbook/assets/VMnat8.png)
 
 
 ![vmware network on freebsd](../.gitbook/assets/net1.png)
 
-以上请不要手动设置，如果虚拟机内部一直提示 `no link`，请重启物理机，再打开虚拟机：VMware 编辑 - 虚拟网络管理器，“还原默认设置”，直至出现上述配置。（请不要尝试手动配置，那是无效的）
+通常情况下无需进行手动设置。如果虚拟机内网络接口一直提示 `no link`，请尝试重启宿主机，然后打开 VMware 的虚拟网络编辑器，再次执行“还原默认设置”操作（不推荐手动配置，可能无效）。
 
-如果没有网络请设置 DNS 为 `223.5.5.5`。请看本章其余章节。
+如果无法连接网络，可尝试在虚拟机内将 DNS 服务器设置为 `223.5.5.5`。其他网络配置方法请参阅本章后续章节。
 
-如果配置桥接后始终无法 DHCP 到 IP，可尝试手动将“已桥接至 自动”改为你当前使用的网卡。
+如果配置为桥接模式后始终无法通过 DHCP 获取 IP 地址，可尝试将网络适配器的“桥接到”选项从“自动”改为您主机当前正在使用的物理网卡。
 
 ![vmware network on freebsd](../.gitbook/assets/net2.png)
 
 ## 虚拟机增强工具与显卡驱动
 
-安装显卡驱动和虚拟机增强工具，即：
+安装 VMware 显卡驱动和虚拟机增强工具（Open VM Tools），使用 pkg 的命令如下：
 
 ```sh
-# pkg install xf86-video-vmware open-vm-tools xf86-input-vmmouse open-vm-kmod
+# pkg install xf86-video-vmware open-vm-tools xf86-input-vmmouse
 ```
 
-或者
+或者使用 Ports 系统编译安装：
 
 ```sh
 # cd /usr/ports/x11-drivers/xf86-video-vmware/  && make install clean
 # cd /usr/ports/emulators/open-vm-tools/ && make install clean
 # cd /usr/ports/x11-drivers/xf86-input-vmmouse/  && make install clean
-# cd /usr/ports/emulators/open-vm-kmod/ && make install clean
 ```
 
 >**注意**
 >
->若你不使用桌面还可以这样（仍然是 Port `emulators/open-vm-tools`）：
+>如果不需要图形界面支持，可以安装无 X11 依赖的版本（仍然是 Port `emulators/open-vm-tools`）：
 >
 >```sh
 ># pkg install open-vm-tools-nox11
 >```
 
-安装完毕后无需任何多余配置即可实现屏幕自动缩放。
+安装完成后，通常无需额外配置即可实现虚拟机屏幕的自动缩放功能。
 
 >**注意**
 >
->Wayland 下也需要安装该驱动。
+>即使在 Wayland 环境下，也需要安装该驱动。
 
 >**技巧**
 >
@@ -155,7 +153,7 @@
 # mv /root/xorg.conf.new /usr/local/share/X11/xorg.conf.d/xorg.conf
 ```
 
-编辑 `/usr/local/share/X11/xorg.conf.d/xorg.conf` 修改以下段落为（其他部分不需要动，保留原样即可）：
+编辑 `/usr/local/share/X11/xorg.conf.d/xorg.conf` 文件，修改以下段落（其他部分保持不变）：
 
 ```ini
 Section "ServerLayout"
@@ -181,7 +179,7 @@ EndSection
 
 ### 共享文件夹
 
-请先安装虚拟机增强工具。
+请先安装虚拟机增强工具（Open VM Tools）。
 
 #### 在物理机设置共享文件夹
 
@@ -189,7 +187,7 @@ EndSection
 
 >**注意**
 >
->不必疑惑虚拟机的名字是 Windows 11，因为这是 Windows 11 和 BSD 双系统虚拟机。
+>此示例中虚拟机名称显示为“Windows 11”，这是因为该虚拟机被配置为 Windows 11 与 FreeBSD 双系统，属正常情况。
 
 在 FreeBSD 虚拟机中查看设置的文件夹：
 
@@ -200,7 +198,7 @@ EndSection
 
 #### 加载 fuse 模块
 
-加载 fuse，将下文写入 `/boot/loader.conf`：
+加载 FUSE 内核模块。将以下内容添加到 `/boot/loader.conf` 文件中：
 
 ```sh
 fusefs_load="YES"
@@ -212,7 +210,7 @@ fusefs_load="YES"
 
 >**注意**
 >
->请将 `123pan` 换成你自己的路径。
+>请将以下命令中的 `123pan` 替换为您在 VMware 中设置的共享文件夹名称。
 
 ```sh
 # vmhgfs-fuse .host:/123pan /mnt/hgfs
@@ -220,20 +218,16 @@ fusefs_load="YES"
 
 ##### 自动挂载
 
-编辑 `/etc/fstab`：写入：
-
->**注意**
->
->请将 `123pan` 换成你自己的路径。
+编辑 `/etc/fstab` 文件。添加以下挂载条目（请将 `123pan` 替换为您的共享文件夹名称）：
 
 ```sh
 .host:/123pan      /mnt/hgfs    fusefs  rw,mountprog=/usr/local/bin/vmhgfs-fuse,allow_other,failok 0 0
 ```
 
-检查（请务必执行，否则若写错了会卡在开机处）：
+添加后，请务必执行以下命令检查配置是否正确（若无错误输出则正常），错误的配置可能导致系统无法正常启动：
 
 ```sh
-# mount -al # 若无输出则正常
+# mount -al
 ```
 
 #### 查看共享文件夹
@@ -264,7 +258,7 @@ Downloads
 
 - 每次进入图形界面，窗口都会异常扩大。
 
-调整虚拟机的最大分辨率即可。
+调整虚拟机的最大分辨率即可解决该问题。
 
 ![VMware 安装 FreeBSD](../.gitbook/assets/vm16.png)
 
@@ -272,17 +266,17 @@ Downloads
 
 - 没有声音
 
-加载声卡后若仍然没有声音，请将音量拉满到 100% 再看一下。因为默认声音几乎微不可闻。
+加载声卡后若仍然没有声音，请将音量调至 100% 后再进行确认，因为默认音量几乎微不可闻。
 
 ## 附录：博通（Broadcom）账号相关
 
 >**警告**
 >
->博通官网频繁变动，无法始终提供一致的解决方案，请读者领会大意，自行操作，实在不会，请加入中文社区聊天群。
+>博通官网频繁变动，无法始终提供一致的解决方案，请读者自行理解并操作；如仍无法完成，可加入中文社区聊天群寻求帮助。
 
 ### 博通（broadcom）账号注册
 
-VMware 已被博通收购。**故目前下载任何博通产品均须先注册、登录博通账号。** 目前任何非此域名（`broadcom.com`）教程均无效。
+VMware 已被博通（Broadcom）收购。**因此，目前从官方下载任何相关产品均需先注册并登录博通账号。** 请注意，任何非博通官方域名（`broadcom.com`）的下载教程可能已失效。
 
 >**博通（broadcom）账号的注册流程**
 >
@@ -392,6 +386,6 @@ VMware Workstation Pro 目前对于个人用户来说是 **免费下载、免费
 
 访问地址：<https://community.broadcom.com/flings/home>。目前任何非此域名教程（`community.broadcom.com`）均无效。
 
-### VMware Workstation Player（已弃用，不要用）
+### VMware Workstation Player（已不再维护）
 
-VMware Workstation Player 目前已弃用。且功能相对 VMware Workstation Pro 非常有缺失。不建议使用，非要下载，请点击 <https://support.broadcom.com/group/ecx/productdownloads?subfamily=VMware%20Workstation%20Player>。目前所有包含该软件的教程均为旧教程。
+VMware Workstation Player 目前已弃用，且相较于 VMware Workstation Pro 功能存在较多缺失。不建议使用，非要下载，请点击 <https://support.broadcom.com/group/ecx/productdownloads?subfamily=VMware%20Workstation%20Player>。目前所有包含该软件的教程均为旧教程。

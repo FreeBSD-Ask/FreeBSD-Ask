@@ -2,43 +2,43 @@
 
 > **注意**
 >
-> 不支持 OpenVZ、LXC 虚拟机，因为他们本质上不属于虚拟机，宿主机与客户机共享内核。内核都是 Linux 了，哪里还有 FreeBSD？
->
-> 不支持 UEFI 引导模式（BIOS + GPT 分区表亦不支持），仅支持传统 BIOS + MBR 方式引导。
+> 不支持 OpenVZ、LXC 虚拟机，因为它们本质上不属于虚拟机，宿主机与客户机共享内核。内核已经是 Linux，自然无法运行 FreeBSD。
+> 
+> 不支持 UEFI 引导模式（BIOS + GPT 分区表同样不支持），仅支持传统 BIOS + MBR 引导方式。
 
 > **警告**
 >
-> 请注意数据安全，以下教程有一定危险性和要求你有一定的动手能力。
+> 请注意数据安全，以下教程具有一定风险，并且要求具备一定的动手能力。
 
 ## 概述
 
-在各种以 KVM、QEMU 为虚拟架构的服务器厂商中，大部分都没有 FreeBSD 系统的支持，只能通过特殊的方法自己暴力安装。
+在各种采用 KVM、QEMU 虚拟化架构的服务商中，大部分不直接提供 FreeBSD 系统支持，只能通过特殊方法手动安装。
 
-最常见的用 KVM 虚拟化的厂商就是搬瓦工、Linode。它们虽说在部分机型上有提供 FreeBSD 系统镜像支持，但是支持都不完善，比如自带镜像默认都不支持 `BBR`，部分机型更是没有 FreeBSD 系统支持。
+它们虽然在部分机型上提供 FreeBSD 系统镜像，但支持并不完善，例如自带镜像默认未启用 `BBR`，而部分机型则完全不提供 FreeBSD 支持。
 
-本操作不需要 mfsLinux 作为介质通过 `dd` 的方式安装。
+本方法无需使用 mfsLinux 作为介质并通过 `dd` 命令进行安装。
 
 mfsBSD 是一款完全载入内存的 FreeBSD 系统，类似于 Windows 的 PE 系统。
 
-本文通过 Grub2 借助 Memdisk 模块将 mfsBSD 载入为内存盘，并从中启动。然后再通过 mfsBSD 中的 `bsdinstall` 命令安装 FreeBSD。
+本文通过 GRUB2 借助 MEMDISK 模块将 mfsBSD 载入为内存盘，并从中启动。然后再通过 mfsBSD 中的 `bsdinstall` 命令安装 FreeBSD。
 
 ## 获取现有网络配置
 
-有的服务器也许并不使用 DHCP 服务，而需要手动指定 IP——多见于小厂服务器。
+有的服务器可能不使用 DHCP 服务，而需要手动指定 IP，这种情况多见于小厂服务器。
 
-安装前请在原有的 Linux 系统上看看自己的 IP 及 netmask。
+安装前，请在原 Linux 系统中确认 IP 地址及子网掩码。
 
 可以用命令 `ip addr` 及 `ip route show` 查看网关信息。
 
 ## 准备 mfsBSD
 
-我们需要下载 mfsBSD：既可以下载到本地计算机，然后使用 SCP、SFTP、WinSCP 等你熟悉的东西传入服务器；亦可直接在服务器使用命令行进行下载。
+我们需要下载 mfsBSD。你可以下载到本地计算机，再通过 SCP、SFTP 或 WinSCP 等工具上传至服务器；也可以直接在服务器上使用命令行下载。
 
 > **注意**
 >
-> 仅支持 IPv6 的服务器无法使用命令行进行下载，因为 mfsBSD 的下载地址不支持 IPv6 网络。
+> 仅支持 IPv6 的服务器无法通过命令行下载，因为 mfsBSD 的下载地址不支持 IPv6 网络。
 >
-> 此问题笔者已与作者发邮件沟通，但截止发文时尚未得到回应。
+> 针对该问题，笔者已通过邮件与作者沟通，但截至发文时尚未收到回应。
 
 ### 内存 <= 512 MB
 
@@ -48,13 +48,13 @@ mfsBSD 是一款完全载入内存的 FreeBSD 系统，类似于 Windows 的 PE 
 # wget https://mfsbsd.vx.sk/files/iso/14/amd64/mfsbsd-mini-14.1-RELEASE-amd64.iso
 ```
 
-检验码（官网的链接指向错误，已反馈但无回复）：[checksums](https://mfsbsd.vx.sk/files/iso/14/amd64/mfsbsd-mini-14.1-RELEASE-amd64.iso.sums.txt)
+校验码（官网链接指向错误，已反馈但未收到回复）：[checksums](https://mfsbsd.vx.sk/files/iso/14/amd64/mfsbsd-mini-14.1-RELEASE-amd64.iso.sums.txt)
 
 >**技巧**
 >
->内存不大于 4G 的机器不建议使用 `zfs` 作为文件系统。
+>内存小于或等于 4 GB 的机器不建议使用 ZFS 文件系统。
 >
->同时 mfsBSD Mini 可能也无法正常加载 `zfs` 内核模块。
+>同时，mfsBSD Mini 可能无法正常加载 `zfs` 内核模块。
 >
 >这种情况下你只能使用 `ufs` 文件系统。
 
@@ -70,15 +70,15 @@ mfsBSD 是一款完全载入内存的 FreeBSD 系统，类似于 Windows 的 PE 
 
 ### 准备 mfsBSD.iso
 
-将下载的 mfsBSD 重命名为 `mfsbsd.iso`，并放在 `/boot` 下面（否则可能会因为 LVM 造成硬盘分区无法识别）。
+将下载的 mfsBSD 重命名为 `mfsbsd.iso`，并放置在 `/boot` 目录下（否则可能因 LVM 导致硬盘分区无法识别）。
 
 ## 获取 memdisk
 
 > **警告**
 >
-> GRUB2 的 `memdisk.mod` 模块不是 MEMDISK。
+> 请注意，GRUB2 自带的 `memdisk.mod` 模块并非此处所需的 MEMDISK。
 >
-> memdisk 需要由包管理器安装的软件 syslinux 提供。
+> memdisk 需要由通过包管理器安装的 syslinux 软件提供。
 
 ### 安装 syslinux
 
@@ -104,7 +104,7 @@ mfsBSD 是一款完全载入内存的 FreeBSD 系统，类似于 Windows 的 PE 
 
 ## 取消隐藏的 GRUB 菜单
 
-现在大多数发行版的 grub 菜单都是默认隐藏的，需要在开机时按 **Esc** 才能进入，但是有时候会直接进入 BIOS。故，直接取消隐藏比较方便。
+目前大多数发行版的 GRUB 菜单默认处于隐藏状态，需要在开机时按 **Esc** 才能进入，但有时会直接进入 BIOS，因此直接取消隐藏会更为方便。
 
 ```sh
 # grub2-editenv - unset menu_auto_hide
@@ -112,14 +112,14 @@ mfsBSD 是一款完全载入内存的 FreeBSD 系统，类似于 Windows 的 PE 
 
 ## 启动 mfsBSD
 
-重启到 grub，按 `c` 键进入命令行操作：
+重启并进入 GRUB 菜单后，按 `c` 键进入命令行模式：
 
 ![在此界面按 C](../.gitbook/assets/grub21.png)
 
 ![Grub 命令行界面](../.gitbook/assets/grub22.png)
 
 ```sh
-ls # 显示磁盘。如果你显示磁盘为 (hd0,gptxxx)，说明你的平台不支持此教程
+ls # 显示磁盘。如果显示的磁盘为 (hd0,gptxxx)，说明该平台不支持本教程。
 ls (hd0,msdos2)/
 linux16 (hd0,msdos2)/memdisk iso
 initrd (hd0,msdos2)/mfsbsd.iso
@@ -128,9 +128,9 @@ boot # 输入 boot 后回车即可从 mfsBSD 继续启动
 
 > **注意**：
 >
-> 如果遇到问题，可尝试切换到串口控制台（`console=comconsole`）或检查镜像完整性。
+> 如果遇到问题，可尝试切换到串口控制台（`console=comconsole`），或检查镜像完整性。
 
-在 Proxmox 中，可以直接按下菜单里的 `xterm.js` 按钮进入串口控制台进行问题排查
+在 Proxmox 中，可直接点击界面上的 `xterm.js` 按钮进入串口控制台排查问题。
 
 ![选择 xterm.js 按钮](../.gitbook/assets/proxmox-choose-xtermjs.png)
 
@@ -138,11 +138,11 @@ boot # 输入 boot 后回车即可从 mfsBSD 继续启动
 
 ## 为 mfsBSD 配置网络
 
-mfsBSD 的 `root` 密码默认是 `mfsroot`。你可以使用 ssh 工具进行连接以进行安装。
+mfsBSD 的 `root` 默认密码为 `mfsroot`。你可以使用 SSH 工具连接后进行安装。
 
 >**技巧**
 >
->如果平台支持 DHCP，你可以跳过此小节。
+>如果平台支持 DHCP 自动获取网络配置，可跳过本节。
 
 重启进入到 mfsBSD 后，配置网络。
 
@@ -150,14 +150,14 @@ mfsBSD 的 `root` 密码默认是 `mfsroot`。你可以使用 ssh 工具进行�
 
 >**警告**
 >
->下面的请换成你的 IP 地址和路由情况：
+>请将下面的示例替换为你的实际 IP 地址和路由信息。
 
 ```sh
 # ifconfig vtnet0 inet 192.0.2.123/24 # 为网卡 vtnet0 设置 IPv4
 # route add -inet default 192.0.2.1 # 设置默认网关/路由
 ```
 
-检查：
+检查网络配置：
 
 ```sh
 # ifconfig vtnet0 # 显示网卡接口 vtnet0 的网络信息
@@ -183,7 +183,7 @@ mfsBSD 的 `root` 密码默认是 `mfsroot`。你可以使用 ssh 工具进行�
 
 ### VMware、VirtualBox 无法按照此方法安装
 
-鉴于 VirtualBox 可以选择虚拟化，选择为 `kvm` 可再次尝试。（笔者的机器无法引导，也许你能成功）
+对于 VirtualBox，可尝试将虚拟化引擎选择为“KVM”后再次引导（笔者的机器未能成功引导，结果可能因环境而异）。
 
 ![VirtualBox 选择虚拟化](../.gitbook/assets/virtualbox-choose-vm.png)
 
@@ -195,10 +195,10 @@ mfsBSD 的 `root` 密码默认是 `mfsroot`。你可以使用 ssh 工具进行�
 
 ![能进入 BootLoader，但启动失败](../.gitbook/assets/qemu-dd-mfsbsd.png)
 
-思路：这个页面可以继续使用命令 `?` 查看磁盘信息，也许可以接着引导。
+思路：在该界面可使用 `?` 命令查看磁盘信息，或许可以继续完成引导。
 
 - 通过 mfsLinux `dd` mfsBSD
 
 ![无法进入 BootLoader](../.gitbook/assets/mfslinux-dd-mfsbsd.png)
 
-待解决。
+（此问题）尚待解决与验证。

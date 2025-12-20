@@ -2,7 +2,8 @@
 
 ## 下载 VirtualBox
 
-进入网页点击右侧 `Download` 即可下载：
+访问该网站，点击页面右侧的 `Download` 按钮即可下载。
+
 
 [https://www.virtualbox.org](https://www.virtualbox.org)
 
@@ -16,16 +17,15 @@
 
 ![](../.gitbook/assets/vb2.png)
 
-
-名称输入“FreeBSD”，最下面几个选项会自动补全。
+名称输入“FreeBSD”，下方的相关选项会自动补全。
 
 ![](../.gitbook/assets/vb3.png)
 
-设置内存大小，CPU 数量，并开启 EFI。
+设置内存大小与 CPU 数量，并开启 EFI 支持选项。
 
 >**技巧**
 >
->UEFI 下显卡也可以正常驱动。Wayland 下由于缺少对应的 drm 驱动移植，暂时无法使用。
+>在 UEFI 模式下显卡可以正常驱动；而在 Wayland 下，由于缺少对应的 DRM/KMS 驱动支持，暂时无法使用。
 
 
 ![](../.gitbook/assets/vb4.png)
@@ -38,11 +38,11 @@
 
 ![](../.gitbook/assets/vb5.png)
 
-显卡控制器用 `VBoxSVGA` 即可。
+显卡控制器使用 `VBoxSVGA` 即可。
 
 >**警告**
 >
->不要试图勾选下方的 3D，这会在实际上放弃选定 `VBoxSVGA`。
+>不要勾选下方的“启用3D加速”选项，否则将导致无法使用 `VBoxSVGA` 控制器。
 
 ![](../.gitbook/assets/vb5.5.png)
 
@@ -56,7 +56,7 @@
 
 >**注意**
 >
->较低版本的 VirtualBox 安装 FreeBSD 完成后请手动关机，卸载/删除安装光盘，否则还会再次进入安装界面。
+>在较低版本的 VirtualBox 中，FreeBSD 安装完成后请手动关机并卸载或删除安装光盘，否则会再次进入安装界面。
 
 安装后的系统：
 
@@ -68,21 +68,21 @@
 
 >**技巧**
 >
->VirtualBox 中的桥接可以使各个方向的网络均互通无阻。
+>VirtualBox 中的桥接模式可以使各方向的网络互通。
 
-桥接是最简单的互通主机与虚拟机的方法，并且可以获取一个和宿主机在同一个 IP 段的 IP 地址，如主机是 192.168.31.123，则虚拟机的地址为 192.168.31.x。
+桥接是最简单的实现主机与虚拟机互通的方法，虚拟机可以获得一个与宿主机在同一网段的 IP 地址。例如，若主机 IP 为 192.168.31.123，则虚拟机 IP 可能为 192.168.31.x。
 
 ![](../.gitbook/assets/VBbridge.png)
 
 设置后 `# dhclient em0` 即可（为了长期生效可在 `/etc/rc.conf` 中加入 `ifconfig_em0="DHCP"`）。
 
-如果没有网络（互联网）请设置 DNS 为 `223.5.5.5`。如果不会，请看本章其他章节。
+如果无法访问互联网，请将 DNS 设置为 `223.5.5.5`。如不清楚具体操作，请参阅本章其他章节。
 
 ### 方法 ② NAT + 仅主机模式
 
 >**注意**
 >
->与 VMware 不同，VirtualBox 在纯粹 NAT 模式下，主机和虚拟机是无法互通的，虚拟机可以访问主机的回环接口 `10.0.2.2` 及其上运行的网络服务，但是主机无法访问虚拟机的端口，且虚拟机与虚拟机之间也是相互隔离的。这是因为 VirtualBox 的 NAT 并不是由主机充当交换机，而是在主机与虚拟机中构造了一个交换机来进行隔离。参见 [Network Address Translation (NAT)](https://www.virtualbox.org/manual/topics/networkingdetails.html#network_nat)。你也可以按照手册中的端口转发来连通网络。
+>与 VMware 不同，VirtualBox 的默认 NAT 模式下，主机和虚拟机无法直接互通。虚拟机可以访问主机的特殊地址 `10.0.2.2` 及其上运行的服务，但主机无法访问虚拟机的端口，各虚拟机之间网络也相互隔离。参见 [Network Address Translation (NAT)](https://www.virtualbox.org/manual/topics/networkingdetails.html#network_nat)。你也可以按照手册中的端口转发来连通网络。
 
 网络设置比较复杂，有时桥接不一定可以生效。为了达到使用宿主机（如 Windows 10）控制虚拟机里的 FreeBSD 系统的目的，需要设置两块网卡——一块是 NAT 网络模式的网卡用来上网、另一块是仅主机模式的网卡用来互通宿主机。如图所示：
 
@@ -90,13 +90,13 @@
 
 >**技巧**
 >
->在上面的选项里有“网络地址转换(NAT)”和“NAT 网络”这两个类似的选项，根据 [Introduction to Networking Modes](https://www.virtualbox.org/manual/topics/networkingdetails.html#network_nat)，他们的区别仅在于“NAT 网络”下虚拟机之间是互通的，而“网络地址转换(NAT)”下的虚拟机之间的网络是隔离不互通的。而选项“内部网络”即仅虚拟机之间互通。
+>在网卡类型下拉列表中，“网络地址转换(NAT)”与“NAT网络”选项类似。根据官方手册 [Introduction to Networking Modes](https://www.virtualbox.org/manual/topics/networkingdetails.html#network_nat)，主要区别在于：“NAT 网络”模式下的虚拟机之间可以互通，而“网络地址转换(NAT)”模式下的虚拟机网络则是相互隔离的。
 
 ![](../.gitbook/assets/vbnat2.png)
 
-使用命令 `# ifconfig` 看一下，如果第二块网卡 `em1` 没有获取到 ip 地址，请手动 DHCP 获取一下：`# dhclient em1` 即可（为了长期生效可在 `/etc/rc.conf` 中加入 `ifconfig_em1="DHCP"`）。
+使用命令 `# ifconfig` 查看状态，如果第二块网卡 `em1` 没有获取到 IP 地址，请手动通过 DHCP 获取：`# dhclient em1`（为了长期生效，可在 `/etc/rc.conf` 中加入 `ifconfig_em1="DHCP"`）。
 
-按这种方式设定的网络，其虚拟机和主机所在局域网无法互通。如果没有网络（互联网）请设置 DNS 为 `223.5.5.5`。如果不会，请看本章其他章节。
+按这种方式设定的网络，虚拟机与主机所在的局域网无法互通。如果没有网络（互联网）请设置 DNS 为 `223.5.5.5`。如果不会，请看本章其他章节。
 
 ## 显卡驱动与增强工具
 
@@ -167,7 +167,7 @@ You may ignore the yellow alert that encourages use of VMSVGA.
 
 >**技巧**
 >
->请使用 UEFI，Xorg 可以自动识别驱动，**不需要** 手动配置 `/usr/local/etc/X11/xorg.conf`（经过测试手动配置反而更卡，点一下要用 5 秒钟……）。
+>请使用 UEFI，Xorg 可以自动识别驱动，**无需** 手动配置 `/usr/local/etc/X11/xorg.conf`（经测试，手动配置反而更卡）。
 
 ## 服务管理
 
@@ -181,7 +181,7 @@ You may ignore the yellow alert that encourages use of VMSVGA.
 - 启动服务，调整权限（以普通用户 ykla 为例）：
 
 ```sh
-# service vboxguest restart # 可能会提示找不到模块，但是不影响使用
+# service vboxguest restart # 可能会提示找不到模块，但不影响使用
 # service vboxservice restart
 # pw groupmod wheel -m ykla # 将笔者的普通用户 ykla 加入 wheel 组以获得权限，你需要改成你自己的普通用户
 ```
@@ -196,22 +196,24 @@ You may ignore the yellow alert that encourages use of VMSVGA.
 hw.efi.poweroff=0
 ```
 
-然后再重启，再关机就正常了。即使用 ACPI 而不使用 UEFI 接口进行关机操作。
+然后重启系统，再执行关机即可恢复正常，即使用 ACPI 而非 UEFI 接口进行关机操作。
 
 #### 参考文献
 
 - [12.0-U8.1 -> 13.0-U2 poweroff problem & solution](https://www.truenas.com/community/threads/12-0-u8-1-13-0-u2-poweroff-problem-solution.104813/)
 - [EFI: VirtualBox computer non-stop after successful shutdown of FreeBSD](https://forums.freebsd.org/threads/efi-virtualbox-computer-non-stop-after-successful-shutdown-of-freebsd.84856/)
 
-### 鼠标进去了出不来
+### 鼠标被捕获在虚拟机窗口内无法移出
 
-请先按一下右边的 `ctrl`（正常键盘左右各有一个 `ctrl`，为默认设置）；如果自动缩放屏幕需要还原或者找不到菜单栏了请按 `home`+ 右 `ctrl`。
+请先按右侧的 `Ctrl` 键（默认设置下键盘左右各有一个 `Ctrl`）；如果因自动缩放需要还原屏幕或找不到菜单栏，请按 `Home` + 右侧 `Ctrl`。
+
 
 >**技巧**
 >
->在 108 键盘上，`Home` 键位于 `Scroll Lock` 的下方。
+>在标准 108 键键盘上，`Home` 键位于 `Scroll Lock` 键的下方。
+
 
 ### UEFI 固件设置
 
-开机反复按 `Esc` 即可进入 VB 虚拟机的 UEFI 固件设置。
+开机时反复按 `Esc` 键即可进入 VirtualBox 虚拟机的 UEFI 固件设置。
 

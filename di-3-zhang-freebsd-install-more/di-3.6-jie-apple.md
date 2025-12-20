@@ -1,19 +1,19 @@
 # 3.6 基于 Apple M1 & Parallels Desktop 20 安装 FreeBSD
 
 
-本文基于 Apple M1（macOS 14.7）、Parallels Desktop 20.1.3-55743。
+本文基于 Apple M1（macOS 14.7）及 Parallels Desktop 20.1.3-55743 环境。
 
-在 Parallels Desktop 20 中，FreeBSD 15.0 CURRENT 图形界面（不可自动缩放）、键盘、鼠标均正常。
+在 Parallels Desktop 20 中，FreeBSD 15.0-CURRENT 的图形界面（不支持自动缩放）、键盘和鼠标均可正常工作。
 
 >**注意**
 >
->由于 [acpi_ged: Handle events directly](https://reviews.freebsd.org/D42158) 未被合并入 FreeBSD 14。故 14 无法安装，会在安装界面报错，参见 [Virtualizing FreeBSD 14 CURRENT on macOS M2 via Parallels 19](https://forums.freebsd.org/threads/virtualizing-freebsd-14-current-on-macos-m2-via-parallels-19.93266/)。所以只能安装 15 及以上。
+>由于补丁 [acpi_ged: Handle events directly](https://reviews.freebsd.org/D42158) 未合入 FreeBSD 14，因此版本 14 无法安装，会在安装界面报错（参见 [Virtualizing FreeBSD 14 CURRENT on macOS M2 via Parallels 19](https://forums.freebsd.org/threads/virtualizing-freebsd-14-current-on-macos-m2-via-parallels-19.93266/)），故只能安装 15 及以上版本。
 
 ## 安装
 
 ![Parallels Desktop 20 安装 FreeBSD 15.0](../.gitbook/assets/pd1.png)
 
-选择“通过映像文件安装 Windows、Linux 或 macOS”，然后继续。
+选择“通过映像文件安装 Windows、Linux 或 macOS”，然后点击“继续”。
 
 ![Parallels Desktop 20 安装 FreeBSD 15.0](../.gitbook/assets/pd2.png)
 
@@ -33,33 +33,35 @@
 
 ![Parallels Desktop 20 安装 FreeBSD 15.0](../.gitbook/assets/pd5.png)
 
-会提示“无法检测操作系统”，不用管，点击“继续”即可。
+界面会提示“未能检测操作系统”，可忽略此提示，直接点击“继续”。
 
 ![Parallels Desktop 20 安装 FreeBSD 15.0](../.gitbook/assets/pd6.png)
 
-操作系统选择“其他”即可。
+在操作系统类型中选择“其他”。
 
 ![Parallels Desktop 20 安装 FreeBSD 15.0](../.gitbook/assets/pd7.png)
 
 >**技巧**
 >
->Parallels Desktop 20 默认设置足矣，一般来说无需调整硬件配置，且是 UEFI。有需要的可以在这一步自行设置。
+>Parallels Desktop 20 的默认设置通常已足够，且默认使用 UEFI 引导，一般无需调整硬件配置。
 
 ![Parallels Desktop 20 安装 FreeBSD 15.0](../.gitbook/assets/pd8.png)
 
-开始安装 FreeBSD。
+开始安装 FreeBSD 系统。
 
 ![Parallels Desktop 20 安装 FreeBSD 15.0](../.gitbook/assets/pd9.png)
 
-开机进入 FreeBSD。
+开机后进入 FreeBSD。
 
 ![Parallels Desktop 20 安装 FreeBSD 15.0](../.gitbook/assets/pd10.png)
 
-在手动安装桌面后，桌面正常。
+手动安装桌面环境后，桌面显示正常运行。
 
-## 解决鼠标不能移动之问题
+## 故障排除与未竟事项
 
-- 解决 Parallels Desktop 中 FreeBSD 鼠标不能移动的问题，在 `/boot/loader.conf` 中加入：
+### 鼠标不能移动的问题
+
+若在 Parallels Desktop 中遇到 FreeBSD 鼠标无法移动的问题，可在 `/boot/loader.conf` 中添加如下配置：
 
 
 ```sh
@@ -79,7 +81,7 @@ ums_load="YES"
 # pkg install parallels-tools
 ```
 
-如果提示找不到包：
+若提示找不到软件包，可通过 Ports 编译安装：
 
 ```sh
 # cd /usr/ports/emulators/parallels-tools/ 
@@ -88,11 +90,12 @@ ums_load="YES"
 
 >**注意**
 >
->若使用 Ports 编译安装，需要有一份当前系统的源码位于 `usr/src`。
+>若通过 Ports 编译安装，需确保当前系统的源代码位于 `/usr/src` 目录下。
+
 
 ### 故障排除与未尽事宜
 
-疑问：这个虚拟机工具看起来长期未更新，也并未起到什么肉眼可见的实质性作用？所以到底是干什么用的？
+备注：该虚拟机工具似乎长期未更新，且其提供的功能效果不甚明显。其主要用途是增强虚拟机与宿主机之间的集成体验，例如改善剪贴板共享、文件拖放以及屏幕分辨率自适应等。
 
 ### 参考文献
 

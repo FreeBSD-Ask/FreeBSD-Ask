@@ -6,7 +6,7 @@
 
 ## 安装 FreeBSD 14.2 RELEASE
 
-本文未特别说明的，皆为正常设置与参数。
+本文未特别说明之处，均采用默认设置与参数。
 
 ![](../.gitbook/assets/shuang1.png)
 
@@ -19,9 +19,10 @@
 
 ![](../.gitbook/assets/shuang3.png)
 
-在这一步修改 `S Swap Size` 的大小（计算方法为 swap 大小 + Windows 大小）。
+在这一步修改 `S Swap Size` 的大小（该数值表示计划中的交换分区与 Windows 系统分区容量之和）。
 
-本文中，交换分区（Swap）占 8G，其他的 200G 留给 Windows。
+
+本文中，交换分区（Swap）大小为 8 GB，其余 200 GB 空间预留给 Windows。
 
 ![](../.gitbook/assets/shuang4.png)
 
@@ -29,7 +30,7 @@
 查看磁盘分区：
 
 ```sh
-root@ykla:/home/ykla # gpart show
+# gpart show
 =>     9  639659  cd0  MBR  (1.2G)
        9  639659       - free -  (1.2G)
 
@@ -49,14 +50,14 @@ root@ykla:/home/ykla # gpart show
 查看交换分区：
 
 ```sh
-root@ykla:/home/ykla # swapinfo -mh
+# swapinfo -mh
 Device              Size     Used    Avail Capacity
 /dev/nda0p3          208G       0B     208G     0%
 ```
 
 可以看到交换分区的大小是我们所设定的 208GB。
 
-编辑 `/etc/fstab`，在 swap 一行最前面加上 `#`，在本例中如下第三行：
+编辑 `/etc/fstab`，在 swap 对应行的行首添加 `#` 字符将其注释，本例中该行是第三行：
 
 ```sh
 # Device                Mountpoint      FStype  Options         Dump    Pass#
@@ -66,15 +67,15 @@ Device              Size     Used    Avail Capacity
 
 ## 安装 Windows 11
 
-插入 Windows 启动盘，设置 BIOS 从中启动，开始安装 Windows。
+插入 Windows 启动盘，设置 BIOS 从该启动盘启动，开始安装 Windows。
 
 ![](../.gitbook/assets/shuang5.png)
 
-在分区时，删除（Delete Partition）整个 208G 的交换分区（本例中为“磁盘 0 分区 3”）。
+在分区时，删除（Delete Partition）整个 208 GB 的交换分区（本例中为“磁盘 0 分区 3”）。
 
 ![](../.gitbook/assets/shuang6.png)
 
-然后点击创建分区（Create Partition），如果提示出错，请点击刷新（Refresh）即可。
+然后点击创建分区（Create Partition），如果提示出错，点击刷新（Refresh）即可。
 
 然后选中 208G 的“磁盘 0 未分配空间”，点击“下一步”进行安装。
 
@@ -82,16 +83,15 @@ Device              Size     Used    Avail Capacity
 
 ## 还原交换分区（Swap）
 
-我们设置了 208G，很明显有 8G 是为 swap 创设的。现在需要将其还原。需要用到 [diskgenius](https://www.diskgenius.com/)。
+我们分配了 208 GB 空间，其中有 8 GB 是为交换分区预留的。现在需要将其还原。需要用到工具 [Diskgenius](https://www.diskgenius.com/)。
 
 ![](../.gitbook/assets/shuang8.png)
 
-打开 diskgenius，压缩 C 盘，空出 8G 剩余空间。
+打开 Diskgenius，压缩 C 盘，腾出 8 GB 的未分配空间。
 
 ![](../.gitbook/assets/shuang9.png)
 
-
-将这 8G 剩余空间格式化为 `FreeBSD Swap partition`，然后点击“保存更改”。
+将这 8 GB 空间格式化为 `FreeBSD Swap partition` 类型，然后点击“保存更改”。
 
 ![](../.gitbook/assets/shuang10.png)
 
@@ -100,7 +100,7 @@ Device              Size     Used    Avail Capacity
 回到 FreeBSD，查看磁盘：
 
 ```sh
-root@ykla:/home/ykla # gpart show
+# gpart show
 =>       34  629145533  nda0  GPT  (300G)
          34          6        - free -  (3.0K)
          40     532480     1  efi  (260M)
@@ -116,15 +116,15 @@ root@ykla:/home/ykla # gpart show
 
 ```
 
-可以看到，nda0p5（分区 5）是我们新的 swap。测试一下：
+可以看到，`nda0p5`（分区 5）即是我们新建的交换分区。测试一下：
 
 ```sh
-root@ykla:/home/ykla # swapon /dev/nda0p5
+# swapon /dev/nda0p5
 ```
 
 没有报错，也没有任何提示，说明正常。
 
-编辑 `/etc/fstab`，在 swap 一行最前面去掉 `#`，并将分区改为正确的，在本例中如下第三行：
+编辑 `/etc/fstab`，在 swap 一行最前面去掉 `#`，并将分区改为正确的值，在本例中如下第三行：
 
 ```sh
 # Device                Mountpoint      FStype  Options         Dump    Pass#
@@ -135,7 +135,7 @@ root@ykla:/home/ykla # swapon /dev/nda0p5
 重启测试一下：
 
 ```sh
-root@ykla:/home/ykla # swapinfo -mh
+# swapinfo -mh
 Device              Size     Used    Avail Capacity
 /dev/nda0p5         8.0G       0B     8.0G     0%
 ```
@@ -143,10 +143,10 @@ Device              Size     Used    Avail Capacity
 查看 ZFS 卷：
 
 ```sh
-root@ykla:/home/ykla # zpool list
+# zpool list
 NAME    SIZE  ALLOC   FREE  CKPOINT  EXPANDSZ   FRAG    CAP  DEDUP    HEALTH  ALTROOT
 zroot  91.5G   922M  90.6G        -         -     0%     0%  1.00x    ONLINE  -
-root@ykla:/home/ykla # zfs list
+# zfs list
 NAME                 USED  AVAIL  REFER  MOUNTPOINT
 zroot                922M  87.8G    96K  /zroot
 zroot/ROOT           919M  87.8G    96K  none
