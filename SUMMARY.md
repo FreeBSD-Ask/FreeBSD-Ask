@@ -30,7 +30,7 @@
 
 * [3.1 使用 Hyper-V 安装 FreeBSD](di-3-zhang-freebsd-install-more/di-3.1-hyper-v-jie.md)
 * [3.2 使用 VMware Workstation Pro 安装 FreeBSD](di-3-zhang-freebsd-install-more/di-3.2-jie-an-zhuang-freebsd-ji-yu-vmware-workstation-pro.md)
-* [3.3 使用 Virtual Box 安装 FreeBSD](di-3-zhang-freebsd-install-more/di-3.3-jie-an-zhuang-freebsd-ji-yu-virtual-box.md)
+* [3.3 使用 VirtualBox 安装 FreeBSD](di-3-zhang-freebsd-install-more/di-3.3-jie-an-zhuang-freebsd-ji-yu-virtual-box.md)
 * [3.4 手动安装双系统（先安装 FreeBSD）](di-3-zhang-freebsd-install-more/di-3.4.md)
 * [3.5 手动安装双系统（后安装 FreeBSD）](di-3-zhang-freebsd-install-more/di-3.5-jie-shuang-xi-tong-an-zhuang.md)
 * [3.6 基于 Apple M1 & Parallels Desktop 20 安装 FreeBSD](di-3-zhang-freebsd-install-more/di-3.6-jie-apple.md)
