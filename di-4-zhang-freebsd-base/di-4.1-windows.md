@@ -116,7 +116,7 @@ UTF-8
 
 其中，FreeBSD 的编码是在 [main/usr.bin/login/login.conf](https://github.com/freebsd/freebsd-src/blob/main/usr.bin/login/login.conf) 这个源文件中设置的，编译出来路径即 `/etc/login.conf`。
 
-自然，也可以把 Windows 10 及后续版本的字符编码设置为 UTF-8。当然，这除了造成更多的编码问题外并不能有效地解决问题。
+自然，也可以把 Windows 10 及后续版本的字符编码设置为 UTF-8。当然，把 Windows 10 及后续版本的字符编码设置为 UTF-8，除了造成更多的编码问题外，并不能有效地解决问题。
 
 
 ### 参考文献
