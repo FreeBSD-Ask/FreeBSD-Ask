@@ -87,7 +87,7 @@ Device              Size     Used    Avail Capacity
 
 ![](../.gitbook/assets/shuang8.png)
 
-打开 Diskgenius，压缩 C 盘，腾出 8 GB 的未分配空间。
+打开 DiskGenius，压缩 C 盘，腾出 8 GB 的未分配空间。
 
 ![](../.gitbook/assets/shuang9.png)
 
