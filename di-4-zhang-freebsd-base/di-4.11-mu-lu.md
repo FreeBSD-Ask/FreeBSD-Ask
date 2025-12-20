@@ -17,8 +17,8 @@
 │   ├── images 启动时显示的 FreeBSD Logo 等
 │   ├── modules 旧时 pkg kmod 会安装至此，如 drm-kmod
 │   ├── efi EFI 挂载至此
-│   ├── dtb 非 ARM 应为空，设备树 DTB 文件
-│   └── defaults 存放默认内核的默认引导配置文件，是个详细地示例说明文件，参见 loader.conf(5)  
+│   ├── dtb 设备树 DTB 文件，x86 架构下应为空
+│   └── defaults 存放默认内核的默认引导配置文件，是个详细的示例说明文件，参见 loader.conf(5)  
 ├── media 媒体文件挂载点，如 U 盘，光盘
 ├── mnt 用作临时挂载点的空目录
 ├── tmp 临时文件
@@ -30,8 +30,8 @@
 │   ├── games 存放与游戏相关的数据文件，默认为空
 │   ├── yp NIS 的配置等文件
 │   ├── mail 存放系统邮件
-│   ├── empty 默认为空，提供一个始终保持空白的目录供特定程序使用①
-│   ├── preserve 于存放编辑器（如 vi）在异常关闭后保存的文件，已不再使用，默认为空
+│   ├── empty 默认为空，旨在提供一个始终保持空白的目录供特定程序使用①
+│   ├── preserve 用于存放编辑器（如 vi）在异常关闭后保存的文件，已不再使用，默认为空
 │   ├── heimdal Kerberos 5 用，默认为空
 │   ├── run 用来存放 PID 文件和运行时数据
 │   ├── authpf 用于认证网关用户的 shell，参见 authpf(8)，默认为空
@@ -60,7 +60,7 @@
 │   ├── fd 用于访问当前进程的文件描述符。目录下 0、1、2 对应标准输入、标准输出和标准错误，参见 fdescfs(5)
 │   ├── usb USB 设备相关的设备节点
 │   ├── gpt GPT 硬盘的设备节点，参见 gpt(8)
-│   ├── iso9660  ISO 9660 文件系统的设备节点，如光盘
+│   ├── iso9660 ISO 9660 文件系统的设备节点，如光盘
 │   └── pts 伪终端设备，参见 pts(4)
 ├── etc 基本系统配置文件和脚本
 │   ├── auto_master autofs 配置文件，参见 automount(8)
@@ -68,19 +68,19 @@
 │   ├── devfs.conf 启动时的设备参数
 │   ├── freebsd-update.conf 基本系统更新工具 freebsd-update 的配置文件，参见 freebsd-update(8)
 │   ├── fstab 文件分区表，参见 fstab(5)
-│   ├── hosts hosts 文件，优先与 DNS 的本地 IP 域名映射表
+│   ├── hosts hosts 文件，优先于 DNS 的本地 IP 域名映射表
 │   ├── inetd.conf 配置 BSD inetd，参见 inetd(8)
-│   ├── localtime 本地时区文件，参见 ctime(3)。在我的系统中，localtime 链接到了 /usr/share/zoneinfo/Asia/Shangha
+│   ├── localtime 本地时区文件，参见 ctime(3)。在笔者的系统中，localtime 被链接到了 /usr/share/zoneinfo/Asia/Shanghai
 │   ├── login.conf ​登录类功能数据库，参见 login.conf(5)
 │   ├── machine-id 系统的 UUID，dbus 用
-│   ├── motd.template tty 登录后显示的信息，参见 motd(5)
+│   ├── motd.template TTY 登录后显示的信息，参见 motd(5)
 │   ├── ntp.conf NTP 客户端配置文件，参见 ntpd(8)
 │   ├── pf.conf PF 防火墙配置文件，参见 pf(4)
 │   ├── rc.conf 系统 RC，参见 rc.conf(5)
 │   ├── resolv.conf DNS 解析，参见 resolv.conf(5)
 │   ├── sysctl.conf 内核状态默认值，参见 sysctl.conf(5)
 │   ├── syslog.conf 系统日志配置文件
-│   ├── ttys 创建 tty 的规则文件，参见 getty(8)
+│   ├── ttys 创建 TTY 的规则文件，参见 getty(8)
 │   ├── wpa_supplicant.conf 连接 WiFi 的配置文件，参见 wpa_supplicant.conf(5)
 │   ├── dma DMA 邮件代理相关，参见 dma(8)
 │   ├── pam.d 可插拔认证模块（PAM）相关的配置文件，参见 pam.d(5)
@@ -117,7 +117,7 @@
 │   └── resolvconf 管理 DNS 解析配置的程序，参见 resolvconf.conf(5)
 ├── net NFS 共享挂载点，参见 auto_master(5)
 ├── home 普通用户家目录
-│   └── ykla 普通用户 ykla
+│   └── ykla 普通用户 ykla 的家目录
 ├── bin 基本的 BSD 用户工具，参见 intro(1)
 ├── sys 链接到 /usr/src/sys
 ├── usr 用户工具与程序
@@ -141,7 +141,7 @@
 └── sbin 基本的 BSD 系统管理工具
 ```
 
-①：目录 `/var/empt` 加注了 schg 权限，即系统不可变标志：
+①：目录 `/var/empty` 加注了 schg 权限，即系统不可变标志：
 
 ```sh
 dr-xr-xr-x   2 root    wheel   schg,uarch  2 Feb 21 10:26 empty

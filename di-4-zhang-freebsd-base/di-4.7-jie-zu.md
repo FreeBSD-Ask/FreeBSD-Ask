@@ -4,7 +4,7 @@
 
 要想访问 FreeBSD，你必须有一个账户，而且所有进程都是以不同账户的名义启动的。
 
-Port `sysutils/htop` 命令能够清晰地显示这一点（注意“USER”）：
+Ports 中的 `sysutils/htop` 提供的 `htop` 命令能够清晰地显示这一点（注意“USER”）：
 
 ```sh
   PID△USER       PRI  NI  VIRT   RES S   CPU% MEM%   TIME+  Command
@@ -55,10 +55,10 @@ FreeBSD 中主要有三类账户：系统账户、用户账户，以及超级用
 # Username: ykla
 ```
 
-示例：创建一个名为 test 的用户，并添加其到 wheel 组，设置其默认 shell 是 sh：
+示例：创建一个名为 test 的用户，并将其添加到 wheel 组，设置其默认 shell 是 sh：
 
 ```sh
-root@ykla:/ #  adduser
+#  adduser
 Username: test # 用户名 ①
 Full name:  # 全名，可留空
 Uid (Leave empty for default): # UID 设置，可留空
@@ -97,7 +97,7 @@ Goodbye!
 
 ## `rmuser` 删除用户与 `passwd` 密码修改
 
-- ，用于删除用户。与 `adduser` 命令一样，也是交互式的。该命令带参数 `-y`，且能列出用户列表，
+- `rmuser` 用于删除用户。与 `adduser` 命令一样，也是交互式的。
 
 示例：
 
@@ -116,7 +116,7 @@ Removing user (test2): home passwd.
 >
 >`export EDITOR=/usr/bin/ee` 可将编辑器换成更简单的 `ee`。
 
-常用参数：`-s`，用于登录环境
+常用参数：`-s`，用于修改登录 shell
 
 示例：
 
@@ -143,8 +143,8 @@ root 用户可修改所有用户的密码。
 
 验证一下：
 
-```
-root@ykla:~ # id ykla
+```sh
+# id ykla
 uid=1001(ykla) gid=1001(ykla) groups=1001(ykla),0(wheel),1002(admin)
 ```
 
@@ -218,7 +218,7 @@ uid=1001(ykla) gid=1001(ykla) groups=1001(ykla),0(wheel),1002(admin)
 
 ```sh
 # pw usershow test2
-test2:$6$FkxPcs2y.Y8cxyuj$kVDoV1LC.IWKGlSitll3oLArF18aHQYID0JYE.TUuD0YFgba.c7MbGs3xLnmpCZyu1nVKHhNqW2X7a57qN0xg/:1201:1201::0:0:User &:/home/test1:/bin/sh
+test2:$6$FkxPcs2y.Y8cxyuj$kVDoV1LC.IWKGlSitll3oLArF18aHQYID0JYE.TUuD0YFgba.c7MbGs3xLnmpCZyu1nVKHhNqW2X7a57qN0xg/:1201:1201::0:0:User &:/home/test2:/bin/sh
 ```
 
 ### `pw usernext` 命令
@@ -286,7 +286,7 @@ test2:$6$FkxPcs2y.Y8cxyuj$kVDoV1LC.IWKGlSitll3oLArF18aHQYID0JYE.TUuD0YFgba.c7MbG
 
 ### `pw groupdel` 命令
 
-用于删除组，
+用于删除组。
 
 示例：
 
