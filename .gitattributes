@@ -1,4 +1,15 @@
+# 在 GitHub 页面正确显示统计信息
 *.md linguist-vendored=false
 *.md linguist-generated=false
 *.md linguist-documentation=false
 *.md linguist-detectable=true
+# 默认启用文本自动规范化
+* text=auto
+# 明确指定 Markdown / 文本使用 LF
+*.md  text eol=lf
+*.txt text eol=lf
+*.py  text eol=lf
+*.sh  text eol=lf
+*.yml text eol=lf
+*.css text eol=lf
+*.json text eol=lf
