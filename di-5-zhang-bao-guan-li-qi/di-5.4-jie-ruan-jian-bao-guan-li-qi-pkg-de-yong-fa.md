@@ -1,24 +1,24 @@
 # 5.4 使用 pkg 管理二进制包
 
-FreeBSD 二进制包管理器目前是 pkg（旧称 pkgng），即“Package”，软件包的意思。
+FreeBSD 的二进制包管理器目前是 pkg（旧称 pkgng），即 “Package”，意为软件包。
 
-`pkg install` 可以缩写成 `pkg ins`，其他类似。
+`pkg install` 可以缩写成 `pkg ins`，其他命令亦类似。
 
 > **注意**
 >
-> pkg 只能管理第三方软件包，并不能起到升级系统，获取安全更新的作用。这是因为 FreeBSD 项目是把内核与用户空间作为一个整体来进行维护的，而不是像 Linux 那样 linus torvalds 负责维护内核，各个发行版的人负责维护 GNU 工具（他们这些软件实际上被设计为单个软件包，因此可以用包管理器更新与升级系统）。
+> pkg 只能管理第三方软件包，并不能起到升级系统，获取安全更新的作用。这是因为 FreeBSD 项目是把内核与用户空间作为一个整体来进行维护的，而不是像 Linux 那样 Linus Torvalds 负责维护内核，各个发行版的人负责维护 GNU 工具（他们这些软件实际上被设计为单个软件包，因此可以用包管理器更新与升级系统）。
 >
->FreeBSD 现在也正 [试图使用 pkg 来实现用户空间和内核的更新](https://wiki.freebsd.org/PkgBase)。解决上述问题。
+>FreeBSD 现在也正 [试图使用 pkg 来实现用户空间和内核的更新](https://wiki.freebsd.org/PkgBase) ，以期解决上述问题。
 >
 > FreeBSD 使用 `freebsd-update` 来升级系统，获取安全补丁。<https://pkg-status.freebsd.org/> 可以查看当前的 pkg 编译状态。
 >
 >
-> 偏好图形化的用户可以安装使用 `ports-mgmt/octopkg`，该工具是 pkg 的图形化前端，由 ghostbsd 开发。
+> 偏好图形化的用户可以安装并使用 `ports-mgmt/octopkg`，该工具是 pkg 的图形化前端，由 GhostBSD 开发。
 
 
 >**技巧**
 >
-> 如果需要查询一个软件包在 FreeBSD 中的具体情况可以这样用：谷歌或者必应（必应很多时候搜索不出来）搜索“freebsd ports 包名”。如果无法使用，可以直接在网站里搜索包名 [https://www.freshports.org/](https://www.freshports.org/)。
+>如果需要查询某个软件包在 FreeBSD 中的具体情况，可以这样做：使用 Google 或 Bing（Bing 很多时候搜索不出来）搜索 “freebsd ports 包名”。如果无法使用，可以直接在网站里搜索包名 [https://www.freshports.org/](https://www.freshports.org/)。
 
 ## 如何从 Port 构建出 pkg
 
@@ -26,16 +26,16 @@ FreeBSD 二进制包管理器目前是 pkg（旧称 pkgng），即“Package”�
 
 ### 书里明确写有某个包，但是 pkg 安装的时候却提示没有
 
-这个问题一般来说有两个回答：
+这个问题一般来说有两种情况：
 
 - ① 在 Ports 中的确没有这个 Port：书里写错了、从 Ports 中移除了/改名了等
-- ② Ports 中的确有这个 Port：FreeBSD 的 pkg 包是周期性构建的（因为 Ports 本身在更新），会经常存在没有特定 pkg 包存在的情况
+- ② Ports 中的确有这个 Port：FreeBSD 的 pkg 包是周期性构建的（因为 Ports 本身在更新），因此经常会出现暂时没有对应 pkg 包的情况
 
 具体是哪个问题造成的，建议查询 <https://www.freshports.org>，上面会显示软件包的依赖情况和 pkg 包的构建情况。
 
 本书中一般会同时列出 Ports 安装方式，比如要查 Port `x11/budgie`，你可以这么做：直接访问 <https://www.freshports.org/x11/budgie/>。
 
-一般来说，如果 Ports 中有这个 Port，但是 pkg 安装没有，等待 7-14 天一般就可以了（构建不出来的包系统会自动发报错给维护者的）。如要立刻安装使用，请使用 Ports。
+一般来说，如果 Ports 中有该 Port，但 pkg 中暂时没有，等待 7–14 天通常即可（构建失败的包系统会自动向维护者报告错误）。如要立刻安装使用，请使用 Ports。
 
 ### 附录：FreeBSD 软件包原子更新的困难与现状
 
@@ -44,9 +44,9 @@ FreeBSD 二进制包管理器目前是 pkg（旧称 pkgng），即“Package”�
 - 一旦 Port 发生更新，就会立刻从软件源撤销该 Port 衍生的 pkg 软件包，直到下次构建出新的 pkg 软件包，而不是保留旧的软件包；
 - 只要开始一次新的构建，旧的软件包不是被临时保留，而是被立刻从 pkg 软件包软件源中删除，直到构建出新版本的 pkg 软件包。
 
-理论上的解决方案：如果你保持一个特定阶段的软件包不更新，是固定版本（季度分支），然后直接轮替即可。
+理论上的解决方案是：保持软件包处于某一固定版本阶段（季度分支），不进行更新，然后直接轮替。
 
-问题在于 Port 更新是不定时的。复杂的依赖会破坏一切。有力者可尝试提出新的看法和建议反馈至下方或 [FreeBSD 论坛](https://forums.freebsd.org/)。
+问题在于 Port 更新是不定时的。复杂的依赖会破坏一切。有能力者可尝试提出新的看法和建议，并反馈至下方或 [FreeBSD 论坛](https://forums.freebsd.org/)。
 
 >**思考题**
 >
@@ -65,17 +65,17 @@ FreeBSD 二进制包管理器目前是 pkg（旧称 pkgng），即“Package”�
 >
 >>为了避免出现向后兼容问题，实际的 `pkg(8)` 工具不会预装在基本系统中。
 
-基本系统默认没有 pkg，需要先下载一下 pkg：
+基本系统默认不包含 pkg，需要先下载并安装 pkg：
 
 ```sh
-root@ykla:/home/ykla # pkg # 输入 pkg  回车
+root@ykla:/home/ykla # pkg # 输入 pkg 后按回车
 The package management tool is not yet installed on your system. # pkg 尚未安装
 Do you want to fetch and install it now? [y/N]: y # “你想下载安装吗？”请在这里输入 y 再按回车键即可安装
 Bootstrapping pkg from pkg+https://pkg.FreeBSD.org/FreeBSD:14:amd64/quarterly, please wait... # 观察此处，可发现默认调用的是 quarterly 分支的源
 Verifying signature with trusted certificate pkg.freebsd.org.2013102301... done
 Installing pkg-1.21.3...
 Extracting pkg-1.21.3: 100%
-pkg: not enough arguments # 这里报错提示没有参数，但是我们只是为了安装 pkg 本体，可以安心忽略
+pkg: not enough arguments # 这里的报错提示缺少参数，但只是为了安装 pkg 本体，可以忽略
 Usage: pkg [-v] [-d] [-l] [-N] [-j <jail name or id>|-c <chroot path>|-r <rootdir>] [-C <configuration file>] [-R <repo config dir>] [-o var=value] [-4|-6] <command> [<args>]
 
 For more information on available commands and options see 'pkg help'.
@@ -107,9 +107,9 @@ $ pkg ins chromium # 在普通用户权限下安装个浏览器看看
 pkg: Insufficient privileges to install packages
 ```
 
-“Insufficient privileges to install packages”即“没有足够的权限来安装包”。
+“Insufficient privileges to install packages”即 “没有足够的权限来安装软件包”。
 
-再来试试：
+再试一次：
 
 ```sh
 $ su # 提升权限到 root，要求此普通用户在 wheel 组中
@@ -169,7 +169,7 @@ pkg: No packages available to install matching 'chromium' have been found in the
 
 这就是上面所述的缺乏“原子更新”的表现。
 
-我们还会发现即使设定了 i18n，我们的 pkg 仍然是英语。
+还会发现，即使系统已设置 i18n，pkg 的输出仍然是英文。
 
 >**思考题**
 >
@@ -186,13 +186,14 @@ pkg: No packages available to install matching 'chromium' have been found in the
 # pkg upgrade
 ```
 
-错误：`You must upgrade the ports-mgmt/pkg port first`（你必须先更新 pkg 本体）
+错误：`You must upgrade the ports-mgmt/pkg port first`（必须先更新 pkg 本体）
 
 解决：
 
 ```sh
 # cd /usr/ports/ports-mgmt/pkg
-# make deinstall reinstall
+# make deinstall
+# make install
 ```
 
 ## 查看已经安装的所有软件
@@ -203,7 +204,8 @@ pkg: No packages available to install matching 'chromium' have been found in the
 
 ## 卸载软件
 
-直接使用 `pkg delete` 会破坏正常的依赖关系，应该尽量避免使用（ports 的 `make deinstall` 也一样），转而使用 `pkg_rmleaves` 命令，该命令属于的软件需要自行安装。
+直接使用 `pkg delete` 可能破坏依赖关系，应尽量避免使用（Ports 的 `make deinstall` 亦然），建议改用 `pkg_rmleaves` 命令，该命令所属的软件需要自行安装。
+
 
 ```sh
 # pkg install pkg_rmleaves
@@ -213,13 +215,13 @@ pkg: No packages available to install matching 'chromium' have been found in the
 
 ```sh
 # cd /usr/ports/ports-mgmt/pkg_rmleaves/
-# make deinstall
+# make install
 ```
 
 ### 如何卸载所有自行安装的第三方软件？
 
 ```sh
-root@ykla:~ # pkg delete -fa # 如果带上参数 f，会把 pkg 自己也删掉，因为 pkg 也是用户一开始自行安装的软件。
+# pkg delete -fa # 如果带上参数 f，会把 pkg 自己也删掉，因为 pkg 也是用户一开始自行安装的软件。
 Checking integrity... done (0 conflicting)
 Deinstallation has been requested for the following 87 packages (of 0 packages in the universe):
 
@@ -230,7 +232,7 @@ Installed packages to be REMOVED:
 ……省略一部分……
 	pcre2: 10.43
 	perl5: 5.36.3_1
-	pkg: 1.21.3   # 如果带上参数 f，就会把 pkg 自己也删掉，因为这个 pkg 也是用户一开始自行安装的软件。
+	pkg: 1.21.3   # 如果带上参数 `-f`，会把 pkg 本身也删除，因为 pkg 也是用户最初自行安装的软件
 	png: 1.6.43
 	xorg-fonts-truetype: 7.7_1
 	xorgproto: 2024.1
@@ -258,7 +260,7 @@ Proceed with deinstalling packages? [y/N]: # 输入 y 按回车键就卸载了
 >只能列出已安装的包的文件，未安装的不能用这个命令。
 
 ```sh
-root@ykla:~ # pkg info -l xrdp
+# pkg info -l xrdp
 xrdp-0.10.2_2,1:
 	/usr/local/bin/xrdp-dis
 	/usr/local/bin/xrdp-dumpfv1
@@ -276,7 +278,7 @@ xrdp-0.10.2_2,1:
 
 >**警告**
 >
->本部分仅针对 Linux 兼容层缺少 `.so` 的问题。如果你是在 FreeBSD 中遇到了此类问题，应首先更新系统。然后再更新软件源和软件。
+>本节仅针对 Linux 兼容层缺少 `.so` 文件的问题。如果你是在 FreeBSD 中遇到了此类问题，应首先更新系统。然后再更新软件源和软件。
 
 ### 安装 pkg-provides
 
@@ -296,7 +298,7 @@ xrdp-0.10.2_2,1:
 - 查看配置说明：
 
 ```sh
-root@ykla:/home/ykla # pkg info -D pkg-provides
+# pkg info -D pkg-provides
 pkg-provides-0.7.4:
 On install:
 In order to use the pkg-provides plugin you need to enable plugins in pkg.
@@ -333,7 +335,7 @@ PLUGINS [ provides ];
 - 运行：`pkg plugins`：
 
 ```sh
-root@ykla:/home/ykla # pkg plugins
+# pkg plugins
 NAME       DESC                                          VERSION   
 provides   A plugin for querying which package provides a particular file 0.7.4     
 root@ykla:/home/ykla # 
@@ -342,7 +344,7 @@ root@ykla:/home/ykla #
 - 刷新数据库：
 
 ```sh
-root@ykla:/home/ykla # pkg provides -u
+# pkg provides -u
 Fetching provides database: 100%   19 MiB   6.6MB/s    00:03    
 Extracting database....success
 ```
@@ -350,7 +352,7 @@ Extracting database....success
 ### 示例：查找 `libxcb-icccm.so.4`
 
 ```sh
-root@ykla:/home/ykla # pkg provides libxcb-icccm.so.4
+# pkg provides libxcb-icccm.so.4
 Name    : xcb-util-wm-0.4.2
 Comment : Framework for window manager implementation
 Repo    : FreeBSD
@@ -362,7 +364,7 @@ Filename: usr/local/lib/libxcb-icccm.so.4.0.0
 
 ### `ld-elf.so.1: Shared object "libmd.so.6" not found, required by "pkg"`
 
-该问题一般是由于软件源未及时同步基本系统 ABI 的变更。
+该问题通常是由于软件源未及时同步基本系统 ABI 的变更所致。
 
 对于一般 RELEASE，更新系统即可。对于 CURRENT/STABLE 系统，重新编译 `pkg` 即可。
 
@@ -406,7 +408,7 @@ pw: user ‘package’ disappeared during update
 pkg: PRE-INSTALL script failed
 ```
 
-问题在于数据库未同步。
+问题原因在于用户数据库未同步。
 
 刷新数据库：
 
@@ -416,7 +418,7 @@ pkg: PRE-INSTALL script failed
 
 ### `Shared object "x.so.x" not found, required by "xxx"`
 
-出现该问题一般是由于 ABI 破坏，更新即可。
+出现该问题通常是由于 ABI 发生破坏，更新即可解决。
 
 安装 `bsdadminscripts2`：
 
@@ -449,7 +451,7 @@ jbig2dec-0.20_1: /usr/local/lib/libjbig2dec.so misses libmd.so.6
 - 若使用了 pkgbase，`bsdadminscripts2` 可 **检查系统的完整性**，找出哪些系统文件是被窜改过的：
 
 ```sh
-root@ykla:/ # pkg_validate
+# pkg_validate
 FreeBSD-pkg-bootstrap-15.snap20241004232339: checksum mismatch for /etc/pkg/FreeBSD.conf
 FreeBSD-runtime-15.snap20241004232339: checksum mismatch for /etc/group
 FreeBSD-runtime-15.snap20241004232339: checksum mismatch for /etc/master.passwd
@@ -458,7 +460,7 @@ FreeBSD-runtime-15.snap20241004232339: checksum mismatch for /etc/master.passwd
 - `bsdadminscripts2` 亦可查找当前系统的过时软件：
 
 ```sh
-@ykla:/usr/ports # pkg_version -ql\<
+# pkg_version -ql\<
 akonadi-23.08.5_1
 build2-0.17.0
 chromium-128.0.6613.137
@@ -476,7 +478,7 @@ To ignore this error set IGNORE_OSVERSION=yes
 Ignore the mismatch and continue? [y/N]:
 ```
 
-这通常发生在失去安全支持的或者在 CURRENT/STABLE 版本的系统上，不影响使用，输入 `y` 即可。
+这通常发生在已失去安全支持的系统，或 CURRENT/STABLE 分支系统上，不影响使用，输入 `y` 即可。
 
 如果想要从根源上解决，需要自己卸载 pkg，从 ports 安装 `ports-mgmt/pkg`；或者从源代码更新整个系统。
 
@@ -487,6 +489,5 @@ Ignore the mismatch and continue? [y/N]:
 以 root 权限执行 `certctl rehash` 刷新证书即可。
 
 参见 [pkg(8): "An error occured while fetching package: No error"](https://forums.freebsd.org/threads/pkg-8-an-error-occured-while-fetching-package-no-error.96761/)
-
 
 

@@ -4,10 +4,10 @@
 
 ### Ports 历史
 
-Ports 是一种简单的从源代码（也支持闭源的二进制包）构建软件的框架。由 Jordan K. Hubbard（jkh@FreeBSD.org）创建，最初在公众面前出现于 1994 年 8 月。
+Ports 是一种从源代码（也支持闭源二进制包）构建软件的框架。由 Jordan K. Hubbard（jkh@FreeBSD.org）创建，最初于 1994 年 8 月公开发布。
 
 ```sh
-root@ykla:/usr/ports # git log --reverse --max-parents=0 --pretty=format:"commit: %h%nAuthor: %an%nDate: %ci%n%n%B" # 打印第一次提交
+# git log --reverse --max-parents=0 --pretty=format:"commit: %h%nAuthor: %an%nDate: %ci%n%n%B" # 打印第一次提交
 commit: d27f048e966a
 Author: Jordan K. Hubbard
 Date: 1994-08-21 13:12:57 +0000
@@ -17,13 +17,13 @@ but fairly usable at this stage.
 Submitted by:   jkh
 ```
 
-“提交了我为 ports 编写的新 Make 宏。虽然还远未完全完善，但目前已经可以较为正常的使用了。”
+“提交了我为 ports 编写的新 Make 宏。虽然还远未完全完善，但目前已经可以较为正常地使用了。”
 
 >**技巧**
 >
 >我们可以看到：对于一个开源项目，无论使用的何种版本控制系统，保留完整的提交记录，是多么地重要。读者慢慢就会发现，这不仅仅是考古上的意义。
 
-NetBSD 和 OpenBSD 也使用 Ports（不通用）。
+NetBSD 和 OpenBSD 也使用 Ports，但实现并不通用。
 
 #### 参考文献
 
@@ -31,11 +31,11 @@ NetBSD 和 OpenBSD 也使用 Ports（不通用）。
 
 ### Ports 与 Port 释义
 
-一款软件的相关文件或文件夹的（补丁文件、校验码、Makefile 等）集合（表现为一个文件夹）为一个 Port，所有 Port（移植软件）的集合即 Ports Collection 或 Ports Tree，即 Ports。
+一款软件的相关文件或文件夹（补丁文件、校验码、Makefile 等）的集合（表现为一个文件夹）称为一个 Port，所有 Port（移植软件）的集合即 Ports Collection 或 Ports Tree，简称 Ports。
 
 ```sh
-ykla@ykla: $ cd /usr/ports # 切换到 /usr/ports
-ykla@ykla:/usr/ports $ ls # 列出此目录下所有文件  ①
+$ cd /usr/ports # 切换到 /usr/ports
+$ ls # 列出此目录下所有文件  ①
 accessibility	COPYRIGHT	GIDs		misc		README		www
 arabic		databases	graphics	Mk		russian		x11
 archivers	deskutils	hebrew		MOVED		science		x11-clocks
@@ -49,7 +49,7 @@ chinese		french		lang		polish		UIDs		x11-wm
 comms		ftp		mail		ports-mgmt	ukrainian
 CONTRIBUTING.md	games		Makefile	portuguese	UPDATING
 converters	german		math		print		vietnamese
-ykla@ykla:/usr/ports $ ls databases/ # 切换到 databases 数据库分类目录下
+$ ls databases/ # 切换到 databases 数据库分类目录下
 adminer						php-xapian
 adodb5						php81-dba
 
@@ -59,7 +59,7 @@ mongodb60					py-apache-arrow
 mongodb70					py-apsw
 mongodb80					py-asyncmy
 mongosh						py-asyncpg
-ykla@ykla:/usr/ports/databases $ cd databases/postgresql18-server/ # 切换到 postgresql18-server 目录
+$ cd databases/postgresql18-server # 切换到 postgresql18-server 目录
 ykla@ykla:/usr/ports/databases/postgresql18-server $ ls ②
 distinfo		pkg-descr		pkg-plist-contrib	pkg-plist-pltcl
 files			pkg-install-server	pkg-plist-plperl	pkg-plist-server
@@ -67,15 +67,15 @@ Makefile		pkg-plist-client	pkg-plist-plpython
 ```
 
 - ① `/usr/ports` 这个文件夹整体称作 Ports，包括几十种不同的分类目录，每个目录下有若干 Port。
-- ② `/usr/ports/databases/postgresql18-server` 这个文件夹整体称作一个 Port，由 `distinfo`（校验和文件）、`pkg-descr`（软件描述文件）、`Makefile`（主文件，里面有构建方法和版本号及下载方式等）`pkg-plist`（安装的每个文件的列表清单文件及文件权限属组等）`files`（一般是补丁，该 Port 下为安装后的说明文件 `pkg-message`）等文件构成。
+- ② `/usr/ports/databases/postgresql18-server` 这个文件夹整体称作一个 Port，由 `distinfo`（校验和文件）、`pkg-descr`（软件描述文件）、`Makefile`	（主文件，包含构建方法、版本号及下载方式等）、`pkg-plist`（安装文件列表及其权限和属组信息）、`files`（一般为补丁文件，该 Port 下还包含安装后的说明文件 `pkg-message`）等文件构成。
 
-之所以叫做“Ports Collection”，移植集合（不应理解为端口集合，参见 [What does 'port' mean in 'develop a port of BSD'?](https://www.reddit.com/r/linuxquestions/comments/ll2q6j/what_does_port_mean_in_develop_a_port_of_bsd)，注：此来源不可信，请求其他来源）是因为这些软件绝大部分都不由 FreeBSD 控制、管理、和维护，Port 提交者主要做的事情是将 FreeBSD 上 Port 更新到上游开发者提供的最新版本，删除上游不再维护的软件 Port。在上游不接受 BSD 特有的 PR 补丁或难以直接通过既有 Ports 框架实现构建的情况下，Port 维护者也需要自行复刻一个分支出来维护（如 [editors/vscode](https://github.com/tagattie/FreeBSD-VSCode)）。
+之所以称为“Ports Collection”，移植集合（不应理解为端口集合，参见 [What does 'port' mean in 'develop a port of BSD'?](https://www.reddit.com/r/linuxquestions/comments/ll2q6j/what_does_port_mean_in_develop_a_port_of_bsd)，注：此来源不可信，请求其他来源）是因为这些软件绝大部分并不由 FreeBSD 控制、管理和维护。Port 提交者主要做的事情是将 FreeBSD 上 Port 更新到上游开发者提供的最新版本，删除上游不再维护的软件 Port。在上游不接受 BSD 特有的 PR 补丁或难以直接通过既有 Ports 框架实现构建的情况下，Port 维护者也需要自行复刻一个分支出来维护（如 [editors/vscode](https://github.com/tagattie/FreeBSD-VSCode)）。
 
 ## Ports 构建 pkg 软件包的流程
 
 > **注意**
 >
-> ports 和 pkg 可以同时使用，而且大部分人也是这么用的。但是要注意 pkg 的源必须是 latest，否则会存在一些依赖上的问题（比如 ssl）。latest 的源也比 main 上的 ports 要出来的晚（是从 main 编译出来的），因此即使是 latset 源也可能会出现上述问题，总之有问题出现时就卸载那个 pkg 安装的包，重新使用 ports 编译即可。
+> ports 和 pkg 可以同时使用，而且大部分人也是这么用的。但是要注意 pkg 的源必须是 latest，否则会存在一些依赖上的问题（比如 ssl）。latest 源也比 main 分支上的 Ports 发布得更晚（其软件包由 main 构建而来），因此即使使用 latest 源，也可能会出现上述问题，总之有问题出现时就卸载那个 pkg 安装的包，重新使用 ports 编译即可。
 
 >**警告**
 >
@@ -86,12 +86,12 @@ Makefile		pkg-plist-client	pkg-plist-plpython
 
 >**技巧**
 >
->ports 下载路径是 `/usr/ports/distfiles/`。
+>Ports 的下载路径是 `/usr/ports/distfiles/`。
 
 
 ## 使用 ports 压缩包
 
-使用压缩包成功地规避了先有鸡还是先有蛋的哲学问题（要安装 Git 但是没有 Ports 也不想用 pkg 的话）。
+使用压缩包可以规避“先有鸡还是先有蛋”的问题（例如需要安装 Git，但系统中既没有 Ports 又不想使用 pkg 的情况）。
 
 ### 下载 ports 压缩包
 
@@ -169,7 +169,7 @@ Makefile		pkg-plist-client	pkg-plist-plpython
 
 
 ```sh
-root@ykla:/usr/ports # git switch 2025Q1
+# git switch 2025Q1
 正在更新文件: 100% (14323/14323), 完成.
 分支 '2025Q1' 设置为跟踪 'origin/2025Q1'。
 切换到一个新分支 '2025Q1'
@@ -178,7 +178,7 @@ root@ykla:/usr/ports # git switch 2025Q1
 查看本地分支：
 
 ```sh
-root@ykla:/usr/ports # git branch
+# git branch
 * 2025Q1
   main
 ```
@@ -190,15 +190,15 @@ root@ykla:/usr/ports # git branch
 
 
 ```sh
-root@ykla:/ # cd /usr/ports/ # 切换目标目录
-root@ykla:/usr/ports # git pull # 同步更新上游 Ports
+# cd /usr/ports/ # 切换目标目录
+# git pull # 同步更新上游 Ports
 ```
 
 如果提示本地已经修改，放弃本地修改，再更新：
 
 ```sh
-root@ykla:/usr/ports # git checkout . # 放弃本地修改
-root@ykla:/usr/ports # git pull
+# git checkout . # 放弃本地修改
+# git pull
 ```
 
 ### 附录：时间错误导致的证书无效
@@ -251,7 +251,7 @@ python: /usr/ports/lang/python
 已经安装：
 
 ```sh
-root@ykla:~ # pkg info -d screen
+# pkg info -d screen
 screen-4.9.0_6:
 	indexinfo-0.3.1
 ```
@@ -300,8 +300,8 @@ root@ykla:/usr/ports/sysutils/htop # make all-depends-list
   以 `chinese/fcitx` 为示例：
 
 ```sh
-root@ykla:~ # cd /usr/ports/chinese/fcitx
-root@ykla:/usr/ports/chinese/fcitx # make install-missing-packages
+# cd /usr/ports/chinese/fcitx
+# make install-missing-packages
 Updating FreeBSD repository catalogue...
 FreeBSD repository is up to date.
 Updating FreeBSD-base repository catalogue...
@@ -346,7 +346,7 @@ Proceed with this action? [y/N]:
 然后列出过时 Port 软件：
 
 ```sh
-root@ykla:/usr/ports # pkg version -l '<'
+# pkg version -l '<'
 chromium-127.0.6533.99             <
 curl-8.9.1_1                       <
 ffmpeg-6.1.2,1                     <
@@ -354,7 +354,7 @@ vlc-3.0.21_4,4                     <
 w3m-0.5.3.20230718_1               <
 ```
 
-下边分别列出 2 种 FreeBSD 手册中提及的升级工具：
+下面分别列出 FreeBSD 手册中提及的两种升级工具：
 
 ### ① portmaster（推荐）
 
@@ -362,8 +362,8 @@ w3m-0.5.3.20230718_1               <
 
 ```sh
 # cd /usr/ports/ports-mgmt/portmaster && make install clean
-# portmaster -a #自动升级所有软件
-# portmaster screen #升级单个软件
+# portmaster -a # 自动升级所有软件
+# portmaster screen # 升级单个软件
 ```
 
 如果不想回答问题解决依赖，可使用类似 BATCH=yes 的选项 `-a -G --no-confirm`：
@@ -375,7 +375,7 @@ w3m-0.5.3.20230718_1               <
 #### 查看依赖关系
 
 ```sh
-root@ykla:/usr/ports/ports-mgmt/portmaster # portmaster sysutils/htop  --show-work
+# portmaster sysutils/htop  --show-work
 
 ===>>> Port directory: /usr/ports/sysutils/htop
 
@@ -394,9 +394,9 @@ root@ykla:/usr/ports/ports-mgmt/portmaster # portmaster sysutils/htop  --show-wo
 
 ```sh
 # cd /usr/ports/ports-mgmt/portupgrade && make install clean
-# portupgrade -ai #自动升级所有软件，i 会挨个确认
-# portupgrade -R screen #升级单个软件
-# portupgrade -a --batch		#不要问，只做，等同于  BATCH=yes
+# portupgrade -ai # 自动升级所有软件，i 会挨个确认
+# portupgrade -R screen # 升级单个软件
+# portupgrade -a --batch		# 不询问，直接执行，等同于 BATCH=yes
 ```
 
 #### 参考资料
@@ -425,29 +425,29 @@ FORCE_MAKE_JOBS=yes
 MAKE_JOBS_NUMBER=4
 ```
 
-Linux 如 Gentoo 上一般是直接 `-jx` 或者 `jx+1`, `x` 为核心数。
+在 Linux（如 Gentoo）上，一般直接使用 `-jX` 或 `-j(X+1)`，其中 `X` 为核心数。
 
-`4` 是处理器核心数（还是线程数？）。
+`4` 表示处理器的并行编译数（通常对应核心数或线程数）。
 
 可以通过命令查询：
 
 ```sh
-root@ykla:/home/ykla # sysctl kern.smp.cpus
+# sysctl kern.smp.cpus
 kern.smp.cpus: 16
 ```
 
 或者：
 
 ```sh
-root@ykla:/home/ykla # sysctl hw.ncpu 
+# sysctl hw.ncpu 
 hw.ncpu: 16
 ```
 
-输出值即为 `MAKE_JOBS_NUMBER` 值。
+输出值即可作为 `MAKE_JOBS_NUMBER` 的取值。
 
-英特尔的处理器搜索 `CPU 型号+ARK` 转跳英特尔官网可查询线程数。
+英特尔的处理器搜索 `CPU 型号+ARK` 跳转到英特尔官网可查询线程数。
 
-- 个别情况下可以设置别名加速编译：（非永久设置，FreeBSD 14 无须设置默认即生效）
+个别情况下可以通过设置别名加速编译（非永久设置，FreeBSD 14 默认已生效，无须额外设置）：
 
 ```sh
 # alias ninja='ninja -j4'
@@ -480,7 +480,7 @@ tmpfs /tmp tmpfs rw 0 0
 
 >**警告**
 >
->使用 ccache 可能会导致编译失败！只在重复编译时起效果，首次编译不仅不会加速还会慢上一些。是一种以空间换时间的行为。
+>使用 ccache 可能会导致编译失败。它仅在重复编译时才有效，首次编译不仅不会加速，反而可能更慢，是一种以空间换时间的手段。
 
 
 ### ccache3
@@ -488,7 +488,7 @@ tmpfs /tmp tmpfs rw 0 0
 使用 pkg 安装：
 
 ```sh
-root@ykla:~ # pkg install ccache
+# pkg install ccache
 ```
 
 - 使用 Ports 安装：
@@ -501,7 +501,7 @@ root@ykla:~ # pkg install ccache
 - 查看软链接情况：
 
 ```sh
-root@ykla: # ls -al  /usr/local/libexec/ccache
+# ls -al  /usr/local/libexec/ccache
 total 56
 drwxr-xr-x   3 root wheel 15 Sep 20 02:02 .
 drwxr-xr-x  18 root wheel 49 Sep 20 01:39 ..
@@ -531,7 +531,7 @@ WITH_CCACHE_BUILD=yes
 - 设置编译缓存最大为 10GB：
 
 ```sh
-root@ykla:/usr/ports/devel/ccache4 # ccache -M 10G  
+# ccache -M 10G  
 Set cache size limit to 10.0 GB
 root@ykla:/usr/ports/www/chromium # ccache -s
 cache directory                     /root/.ccache
@@ -550,7 +550,7 @@ max cache size                      10.0 GB
 - 在 Ports 编译一段时间后：
 
 ```sh
-root@ykla:~ # ccache -s
+# ccache -s
 cache directory                     /root/.ccache
 primary config                      /root/.ccache/ccache.conf
 secondary config      (readonly)    /usr/local/etc/ccache.conf
@@ -574,7 +574,7 @@ max cache size                      10.0 GB
 
 ### ccache4
 
-目前最新版本是 ccache4：
+目前的最新版本是 ccache4：
 
 使用 pkg 安装：
 
@@ -592,7 +592,7 @@ max cache size                      10.0 GB
 - 查看软链接情况：
 
 ```sh
-root@ykla:~ # ls -al  /usr/local/libexec/ccache    total 55
+# ls -al  /usr/local/libexec/ccache    total 55
 drwxr-xr-x   3 root wheel 13  9月 20 02:29 .
 drwxr-xr-x  20 root wheel 54  9月 20 02:29 ..
 lrwxr-xr-x   1 root wheel 21  9月 20 02:29 c++ -> /usr/local/bin/ccache
@@ -619,14 +619,14 @@ WITH_CCACHE_BUILD=yes
 - 设置编译缓存最大为 20GB：
 
 ```sh
-root@ykla: # ccache -M 20G  
+# ccache -M 20G  
 Set cache size limit to 20.0 GB
 ```
 
 - 在 Ports 编译一段时间后，查看编译缓存：
 
 ```sh
-root@ykla:/ # ccache -s
+# ccache -s
 Cacheable calls:   558 /  579 (96.37%)
   Hits:            110 /  558 (19.71%)
     Direct:        110 /  110 (100.0%)
@@ -642,7 +642,7 @@ Local storage:
 查看当前配置文件：
 
 ```sh
-root@ykla:~ # ccache -p 
+# ccache -p 
 (default) absolute_paths_in_stderr = false
 (default) base_dir =
 (default) cache_dir = /root/.cache/ccache
@@ -712,7 +712,7 @@ DISABLE_SIZE=yes
 
 ### `autoconf-2.72 Invalid perl5 version 5.42.`
 
-也可以理解为“xxx-yy Invalid zz version aa”式报错。
+也可以将其理解为“xxx-yy Invalid zz version aa”这一类报错。
 
 实例，在使用 Ports 安装 openjdk21 时报错如下：
 
@@ -733,8 +733,7 @@ make: stopped in /usr/ports/java/openjdk21
 
 观察整个流程可以发现，openjdk21 依赖 autoconf，但系统中没有。于是递归查找 autoconf 的依赖，发现 autoconf 依赖 perl5；结合 ② 可以发现系统中已有 perl5，但是报错“Invalid version”，即 perl5 的版本不对。
 
-此问题，一般需要先更新 Ports，然后再通过 `pkg install -f perl5` 或 `pkg upgrade` 来更新一下 perl5 的版本即可解决。
-
+此问题一般需要先更新 Ports，然后通过 `pkg install -f perl5` 或 `pkg upgrade` 更新 perl5 的版本即可解决。
 
 #### 参考文献
 

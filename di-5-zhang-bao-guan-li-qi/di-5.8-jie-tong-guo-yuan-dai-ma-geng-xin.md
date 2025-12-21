@@ -1,16 +1,14 @@
 # 5.8 使用源代码更新 FreeBSD
 
-基本思路就是获取 FreeBSD 的源代码，然后进行编译安装。可以使用 git 直接拉取代码，也可以直接下载 ISO 镜像里面的 txz 压缩文件或者去 github 上下载当前 FreeBSD 项目的 zip 压缩包。
+基本思路是获取 FreeBSD 的源代码，然后进行编译和安装。可以使用 Git 直接拉取代码，也可以从 ISO 镜像中下载 txz 压缩文件，或者从 GitHub 下载当前 FreeBSD 项目的 zip 压缩包。
 
-编译流程见 Handbook 即可。非常地简单。
+编译流程参见 Handbook 即可，非常简单。
 
+## svn 到 git 的迁移
 
->**svn 到 git 的迁移**
->
->FreeBSD 项目在 2021 年从 SVN 全面迁移到了 Git，即 [https://git.freebsd.org](https://git.freebsd.org)
->
->所以获取源代码的方式也产生了变化，不再使用 svn 了。
+FreeBSD 项目在 2021 年从 SVN 全面迁移到了 Git，即 [https://git.freebsd.org](https://git.freebsd.org)
 
+因此，获取源代码的方式也发生了变化，不再使用 SVN。
 
 ## 从 Git 获取源代码
 
@@ -60,7 +58,7 @@ $ git clone --depth 1 https://git.FreeBSD.org/src.git /usr/src
 
 - `--depth 1`：浅克隆，仅拉取最新的提交，不拉取日志及历史记录
 
-或者通过 GitHub 拉取（GitHub 是 FreeBSD.org 上 src 的镜像，每 10 分钟同步一次）
+或者通过 GitHub 拉取（GitHub 是 FreeBSD.org 上 src 仓库的镜像，每 10 分钟同步一次。）
 
 ```sh
 $ git clone --depth 1 https://github.com/freebsd/freebsd-src /usr/src
@@ -71,29 +69,22 @@ $ git clone --depth 1 https://github.com/freebsd/freebsd-src /usr/src
 通过 FreeBSD 官方存储库拉取：
 
 ```sh
-$ git clone --branch releng/14.3 --single-branch --depth 1 https://git.FreeBSD.org/src.git /usr/src
+$ git clone --branch releng/15.0 --single-branch --depth 1 https://git.FreeBSD.org/src.git /usr/src
 ```
 
-- `--branch releng/14.3`：指定拉取分支（FreeBSD RELEASE 的版本）
+- `--branch releng/15.0`：指定拉取分支（FreeBSD RELEASE 的版本）
 - `--single-branch`：仅克隆一个分支，除该已克隆的单一分支外不含任何其他引用（refs）。
 
 或者通过 GitHub 拉取：
 
 ```sh
-$ git clone --branch releng/14.3 --single-branch --depth 1 https://github.com/freebsd/freebsd-src /usr/src
+$ git clone --branch releng/15.0 --single-branch --depth 1 https://github.com/freebsd/freebsd-src /usr/src
 ```
 
 ### 参考文献
 
 - [Submitting GitHub Pull Requests to FreeBSD](https://freebsdfoundation.org/our-work/journal/browser-based-edition/configuration-management-2/submitting-github-pull-requests-to-freebsd/)
 
-
-### 故障排除与未竟事宜
-
-
-- Git：`fatal: unable to update url base from redirection`
-
-使用 FreeBSD 源却没加 `.git`
 
 ## Gitup
 
@@ -112,34 +103,25 @@ $ git clone --branch releng/14.3 --single-branch --depth 1 https://github.com/fr
 # gitup current # 获取 current 源代码
 ```
 
-### 故障排除与未竟事宜
-
-- Git：`fatal: unable to access 'https://git.FreeBSD.org/src.git/': SSL certificate problem: certificate is not yet valid`
-
-可能是时间不对造成的，同步时间：
-
-```sh
-# ntpdate -u pool.ntp.org # 当时间相差较大时必须使用该命令，其他命令不会生效
-```
 
 ## 从压缩包获取源代码（方便但非最新）
 
-该方法比较简单快捷。
+该方法较为简单快捷。
 
-以 FreeBSD 14.3-RELASE 为例：
+以 FreeBSD 15.0-RELEASE 为例：
 
 ```sh
-# fetch https://download.freebsd.org/ftp/releases/amd64/14.3-RELEASE/src.txz
-# tar xvzf src.txz  -C /
+# fetch https://download.freebsd.org/ftp/releases/amd64/15.0-RELEASE/src.txz
+# tar xvf src.txz  -C /
 ```
 
 >**为何要解压到 `/`？**
 >
->因为 `/` 会将源代码解压到 `/usr/src`。如果把上面的路径改成 `/usr/src`，会把源代码解压到 `/usr/src/usr/src`。因为他这个压缩包是带路径压缩的。
+>因为解压到 `/` 会将源代码解压到 `/usr/src`。如果把上面的路径改成 `/usr/src`，会把源代码解压到 `/usr/src/usr/src`。因为该压缩包是包含路径的。
 
 >**技巧**
 >
->如果速度慢可以切换到 <https://mirrors.ustc.edu.cn/freebsd/releases/amd64/14.3-RELEASE/src.txz>
+>如果速度慢可以切换到 <https://mirrors.ustc.edu.cn/freebsd/releases/amd64/15.0-RELEASE/src.txz>
 
 ## 开始编译
 
@@ -155,28 +137,31 @@ $ git clone --branch releng/14.3 --single-branch --depth 1 https://github.com/fr
 # reboot               # 重启以完成更新流程
 ```
 
-### 故障排除与未竟事宜
+### 附录：解决冲突
 
 - `Conflicts remain from previous update, aborting.`
 
-需要 **解决冲突**
+需要解决冲突。
 
 >**技巧**
 >
->与绝大多数现代 Linux 不同，[FreeBSD](https://github.com/freebsd/freebsd-src/tree/main/contrib/nvi)（OpenBSD）上的 `vi` 是 *[nvi](https://sites.google.com/a/bostic.com/keithbostic/keith-bostic?authuser=0)*（原版 **ex/vi** 的再实现），并不是指向任何 *vim* 的链接符号。基本上没人会用，一般亦无学习的必要，故有必要换成别的文本编辑器。
+>与绝大多数现代 Linux 不同，[FreeBSD](https://github.com/freebsd/freebsd-src/tree/main/contrib/nvi)（OpenBSD）上的 `vi` 是 *[nvi](https://sites.google.com/a/bostic.com/keithbostic/keith-bostic?authuser=0)*（原版 **ex/vi** 的再实现），并不是指向任何 *vim* 的链接符号。基本上很少有人使用，也一般没有学习的必要，因此有必要更换为其他文本编辑器。
 >
 >```sh
 ># export  EDITOR=/usr/bin/ee # 切换 vi 为 ee。针对 FreeBSD 14 之前的版本或 csh 使用：setenv EDITOR /usr/bin/ee
 ># export  VISUAL=/usr/bin/ee # 切换 vi 为 ee。针对 FreeBSD 14 之前的版本或 csh 使用：setenv VISUAL /usr/bin/ee
 >```
 
+合并冲突：
+
 ```sh
-root@ykla:~ # etcupdate -B     
+# etcupdate -B     
 Conflicts remain from previous update, aborting.
-
 ```
 
-```
+解决冲突：
+
+```sh
 # etcupdate resolve          # 解决冲突
 Resolving conflict in '/etc/group':
 Select: (p) postpone, (df) diff-full, (e) edit,
@@ -184,7 +169,20 @@ Select: (p) postpone, (df) diff-full, (e) edit,
 # etcupdate -B 
 ```
 
-## ZFS 相关升级请参见 ZFS 一节
+
+## 故障排除与未竟事宜
+
+### Git：`fatal: unable to update url base from redirection`
+
+使用 FreeBSD 源仓库地址时未加 `.git` 后缀。
+
+### Git：`fatal: unable to access 'https://git.FreeBSD.org/src.git/': SSL certificate problem: certificate is not yet valid`
+
+可能是系统时间不正确导致的，可同步时间：
+
+```sh
+# ntpdate -u pool.ntp.org # 当时间相差较大时必须使用该命令，其他命令不会生效
+```
 
 ## 参考资料
 

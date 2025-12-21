@@ -13,7 +13,7 @@ md0
 
 - 直接使用 DVD 设备（如通过虚拟机直接挂载的 ISO 镜像）：
 
-观察 ISO 挂载情况：
+观察 ISO 映像的挂载情况：
 
 ```sh
 # gpart show
@@ -24,7 +24,7 @@ md0
         9  2356635       - free -  (4.5G)
 ```
 
-可以看到有个 `cd0`，大小也符合。
+可以看到存在 `cd0`，大小也符合预期。
 
 ```sh
 # mkdir -p /dist # 创建挂载点
@@ -38,11 +38,12 @@ COPYRIGHT	etc		mnt		rescue		usr
 
 ### 故障排除与未竟事宜
 
-**/dist** 目录若改为其他则使用环境变量方法无效，因为 `packages/repos/FreeBSD_install_cdrom.conf` 写死了路径无法修改。
+**/dist** 目录若改为其他目录，则使用环境变量的方法无效，因为 `packages/repos/FreeBSD_install_cdrom.conf` 中的路径被写死，无法修改。
+
 
 ## 使用 `bsdconfig` 安装 DVD 软件（目前无效）
 
-先按上面的方法挂载好。
+先按上述方法完成挂载。
 
 ```sh
 # bsdconfig
@@ -50,11 +51,11 @@ COPYRIGHT	etc		mnt		rescue		usr
 
 `3 Packages`——> `1 CD/DVD Install from a FreeBSD CD/DVD`
 
-有 bug，会报错 `No pkg(8) database found!`。
+存在 Bug，会报错 `No pkg(8) database found!`。
 
 >**思考题**
 >
->请读者自行阅读源代码，分析如何解决，使之生效。
+>请读者自行阅读源代码，分析如何解决该问题，使其生效。
 
 ## 使用环境变量直接安装 DVD 软件
 

@@ -2,37 +2,37 @@
 
 > **注意：**
 >
-> 只有一级架构的 release 版本才提供该源。也就是说 current 和 stable 是没有的。关于架构的支持等级说明请看： [Supported Platforms](https://www.freebsd.org/platforms)
+> 只有一级架构的 RELEASE 版本才提供该更新源。也就是说，CURRENT 和 STABLE 不提供该源。关于架构的支持等级说明请参见： [Supported Platforms](https://www.freebsd.org/platforms)
 
 >**注意**
 >
->ZFS 相关升级参见 ZFS 章节。
+>ZFS 相关升级请参见 ZFS 章节。
 
 ## 历史
 
-FreeBSD 提供了实用工具 `freebsd-update` 来安装系统更新，包括升级到大版本。`freebsd-update` 在 FreeBSD 7.0-RELEASE 中得到了正式支持。
+FreeBSD 提供了实用工具 `freebsd-update`，用于安装系统更新，包括升级到新的大版本。`freebsd-update` 在 FreeBSD 7.0-RELEASE 中获得了正式支持。
 
 ### 参考文献
 
-- [FreeBSD 7.0-RELEASE Announcement](https://www.freebsd.org/releases/7.0R/announce/) 指出 freebsd-update(8) 是由官方支持的二进制更新方式，不仅可用于更新到新版本，还可用于安全修复和勘误补丁的更新。
+- [FreeBSD 7.0-RELEASE Announcement](https://www.freebsd.org/releases/7.0R/announce/) 指出 freebsd-update(8) 是官方支持的二进制更新方式，不仅可用于升级到新版本，还可用于安全修复和勘误补丁的更新。
 
-## 替换默认的文本编辑器为更简单的编辑器
+## 将默认文本编辑器替换为较简单的编辑器
 
-### bash、zsh 或 sh（14.0 及以上）
+### bash、zsh 或 sh（14.0 及以上版本）
 
 ```sh
 # export EDITOR=/usr/bin/ee # 切换 vi 为 ee，默认为 nvi 
 # export VISUAL=/usr/bin/ee # 切换 vi 为 ee
 ```
 
-### csh（14.0 以下）
+### csh（14.0 以下版本）
 
 ```sh
 # setenv EDITOR /usr/bin/ee # 切换 vi 为 ee，默认为 nvi 
 # setenv VISUAL /usr/bin/ee # 切换 vi 为 ee
 ```
 
-### 检查验证
+### 检查与验证
 
 ```sh
 # echo $EDITOR
@@ -45,7 +45,7 @@ FreeBSD 提供了实用工具 `freebsd-update` 来安装系统更新，包括升
 
 >**警告**
 >
->无论你是大版本还是点版本还是常规更新，都应该先走一遍这个流程。不可绕过，否则会出现不可预料的后果。
+>无论是大版本更新、点版本更新还是常规更新，都应该先执行一次该流程。不可绕过，否则可能会出现不可预料的后果。
 
 ### 版本检查
 
@@ -64,18 +64,19 @@ FreeBSD 提供了实用工具 `freebsd-update` 来安装系统更新，包括升
 # freebsd-update fetch
 ```
 
-当出现类似于如下信息时：
+当出现类似如下信息时：
 
 ```sh
-usrlinclude/c++/vl/trllvector usrlinclude/c++/vl/trllversion usrlinclude/c++/v1/trl/wchar.h usr/include/c++/v1/tr1/wctype.h usrlinclude/c++/vllunwind-armh
-usrlinclude/c++/v1/unwind-itaniumh usrlinclude/c++/vllunwindh
-usr/include/crypto/ cryptodevh usrlinclude/crypto/cbcmac.h usr/include/crypto/deflate.h usrlinclude/crypto/gfmult.h usr/include/crypto/gmac.h
-usr/include/crypto/rijndael.h usrlinclude/crypto/rmd160.h usr/include/crypto/xform.h
+usr/include/c++/vl/trllvector usr/include/c++/vl/trllversion usr/include/c++/v1/trl/wchar.h usr/include/c++/v1/tr1/wctype.h usr/include/c++/v1/unwind-armh
+usr/include/c++/v1/unwind-itaniumh usr/include/c++/v1/unwindh
+usr/include/crypto/ cryptodevh usr/include/crypto/cbcmac.h usr/include/crypto/deflate.h usr/include/crypto/gfmult.h usr/include/crypto/gmac.h
+usr/include/crypto/rijndael.h usr/include/crypto/rmd160.h usr/include/crypto/xform.h
 usr/lib/clang/11.0.1/include
 : q # 这里输入 q 再按回车键
-```
 
-这里是发生变动的文件，你只需要在确认后输入字母 `q`（代表“quit”，退出）再按回车键即可。
+上面列出的路径仅为示例输出，实际系统中的路径名称和数量可能会略有不同，以你自己机器上的实际显示为准。
+
+这里列出的是发生变动的文件，你只需要在确认后输入字母 q（代表“quit”，退出）并按回车键即可。
 
 然后安装更新：
 
@@ -96,8 +97,7 @@ usr/lib/clang/11.0.1/include
 
 > **注意：**
 >
-> 有时候补丁不涉及内核，内核版本就不会变，用 `uname -r` 完全看不出来，但是用户空间版本会变。所以你可能会看到两个版本，以较高者为准。
-
+> 有时候补丁不涉及内核，内核版本就不会变，用 `uname -r` 无法体现，但用户空间版本会发生变化。因此你可能会看到两个版本号，应以较高者为准。
 
 重启：
 
@@ -114,13 +114,13 @@ usr/lib/clang/11.0.1/include
 14.3-RELEASE-p6
 ```
 
-## 大版本间更迭（`X.Z-RELEASE-pN`——>`A.0-RELEASE`）
+## 大版本更迭（`X.Z-RELEASE-pN`——>`A.0-RELEASE`）
 
 >**注意**
 >
->`freebsd-update` 下载慢不是因为其更新源在境外（你使用境外服务器更新一样慢；并且在 freebsdcn 境内源还生效的那些日子里，亦如此）。可能因其设计缺陷，`freebsd-update` 是个数千行的纯粹 shell 脚本。[这是一个始终普遍存在的问题](https://freebsd-questions.freebsd.narkive.com/xjVoetUM/why-is-freebsd-update-so-horrible-slow)。
+>`freebsd-update` 下载慢不是因为其更新源在境外（你使用境外服务器更新一样慢；并且在 freebsdcn 境内源还生效的那些日子里，亦如此）。这可能与其设计缺陷有关，`freebsd-update` 是一个由数千行组成的纯 shell 脚本。[这是一个始终普遍存在的问题](https://freebsd-questions.freebsd.narkive.com/xjVoetUM/why-is-freebsd-update-so-horrible-slow)。
 
-**以 FreeBSD 14.3-RELEASE 升级 15.0-RELEASE 为例**
+**以 FreeBSD 14.3-RELEASE 升级至 15.0-RELEASE 为例**
 
 ### 检查版本
 
@@ -253,7 +253,10 @@ The following files are affected by updates. No changes have
 been downloaded, however, because the files have been modified
 locally:
 /etc/ssl/cert.pem
-(END) # 这里输入 q，确认变动，这里是发生变动的文件
+(END) # 这里是发生变动的文件，你只需要在确认后输入字母 `q`（代表“quit”，退出）再按回车键即可。
+
+# 上面列出的路径仅为示例输出，实际系统中的路径名称和数量可能会略有不同，以你自己机器上的实际显示为准。
+
 The following files will be removed as part of updating to
 15.0-RELEASE-p0:
 /.cshrc
@@ -322,7 +325,7 @@ Kernel updates have been installed.  Please reboot and run
 14.3-RELEASE-p6
 ```
 
-可以看到，当前已安装内核的版本和补丁级别是 15.0-RELEASE。但是用户空间和当前运行的都是 14.3-RELEASE，因此我们要按照 `freebsd-update` 的提示来重启：
+可以看到，当前已安装内核的版本和补丁级别是 15.0-RELEASE。但用户空间和当前正在运行的系统仍是 14.3-RELEASE，因此需要按照 `freebsd-update` 的提示进行重启：
 
 
 ```sh
@@ -350,7 +353,7 @@ installed from the ports tree) and then run
 ```
 
 
-重装 `pkg` 本身，将其 ABI 更新到 15.0-RELEASE：
+重新安装 `pkg` 本身，将其 ABI 更新到 15.0-RELEASE：
 
 ```sh
 # pkg bootstrap -f
@@ -363,7 +366,7 @@ package pkg is already installed, forced install
 Extracting pkg-2.4.2: 100%
 ```
 
-将第三方软件的 ABI 更新到 15.0-RELEASE：
+将第三方程序的 ABI 一并更新到 15.0-RELEASE：
 
 ```sh
 # pkg upgrade
@@ -393,9 +396,10 @@ Proceed with this action? [y/N]:  # 此处输入 y 再回车即可
 Proceed with this action? [y/N]:  # 此处输入 y 再回车即可，可能会出现多次，下同
 ```
 
-对第三方程序的更新就完成了。
+第三方程序的更新至此完成。
 
-再次执行 `freebsd-update` 结束更新流程。
+再次执行 `freebsd-update` 以结束更新流程。
+
 
 ```sh
 # freebsd-update install
@@ -413,7 +417,7 @@ Installing updates... done.
 15.0-RELEASE
 ```
 
-更新完成。
+系统更新完成。
 
 ## 更新 EFI 引导
 
@@ -441,7 +445,7 @@ BootOrder  : 0004, 0000, 0001, 0002, 0003
 Unreferenced Variables:
 ```
 
-ESP 应该已经挂载到了 **/boot/efi**。如果没有，可手动挂载之，使用 `efibootmgr` 输出中列出的分区（本例为 `nda0p1`）：`mount_msdosfs /dev/nda0p1 /boot/efi`。有关另一则示例，请参阅 [loader.efi(8)](https://man.freebsd.org/cgi/man.cgi?query=loader.efi&sektion=8&format=html)。
+ESP 通常已经挂载到了 **/boot/efi**。如果没有，可手动挂载之，使用 `efibootmgr` 输出中列出的分区（本例为 `nda0p1`）：`mount_msdosfs /dev/nda0p1 /boot/efi`。有关另一则示例，请参阅 [loader.efi(8)](https://man.freebsd.org/cgi/man.cgi?query=loader.efi&sektion=8&format=html)。
 
 在 `efibootmgr -v` 输出的 `File` 字段中的值，如 `\efi\freebsd\loader.efi`，是 EFI 上正在使用的引导加载程序的位置。若挂载点是 **/boot/efi**，则此文件为 `/boot/efi/efi/freebsd/loader.efi`。（在 FAT32 文件系统上大小写不敏感；FreeBSD 使用小写）`File` 的另一个常见值可能是 `\EFI\boot\bootXXX.efi`，其中 `XXX` 是 amd64（即 `x64`）、aarch64（即 `aa64`）或 riscv64（即 `riscv64`）；如未配置，则为默认引导加载程序。应把 **/boot/loader.efi** 复制到 **/boot/efi** 中的正确路径来更新已配置及默认的引导加载程序。
 
@@ -468,7 +472,7 @@ ESP 应该已经挂载到了 **/boot/efi**。如果没有，可手动挂载之�
 ************************************************************** 
 ```
 
-这说明 loader 需要更新了。还可以使用命令进行版本验证：
+这表明 loader 需要更新。还可以使用命令进行版本验证：
 
 ```sh
 # strings /boot/efi/efi/freebsd/loader.efi|grep FreeBSD|grep EFI
@@ -477,9 +481,9 @@ DFreeBSD/amd64 EFI loader, Revision 1.1
 DFreeBSD/amd64 EFI loader, Revision 3.0
 ```
 
-此处命令参考了手册 [loader.efi](https://man.freebsd.org/cgi/man.cgi?query=loader.efi) 中的例子。`/boot/efi/efi/freebsd/loader.efi` 为正在使用的 loader（版本确实旧了）
+此处命令参考了手册 [loader.efi](https://man.freebsd.org/cgi/man.cgi?query=loader.efi) 中的例子。`/boot/efi/efi/freebsd/loader.efi` 为当前正在使用的 loader（版本确实较旧）。
 
-更新：
+更新方法：
 
 ```sh
 # cp /boot/loader.efi /boot/efi/efi/freebsd/
@@ -491,7 +495,7 @@ DFreeBSD/amd64 EFI loader, Revision 3.0
 
 >**重要**
 >
->非 EFI、bootcode、ZFS 等相关更新请自行查看相关部分章节！
+>非 EFI、bootcode、ZFS 等相关更新请自行查阅相关章节。
 
 
 ## 故障排除与未竟事宜
@@ -502,7 +506,7 @@ DFreeBSD/amd64 EFI loader, Revision 3.0
 # freebsd-update rollback
 ```
 
-### pkg 找不到 `.so`
+### pkg 找不到 `.so` 文件
 
 终端执行命令
 
@@ -510,7 +514,7 @@ DFreeBSD/amd64 EFI loader, Revision 3.0
 # pkg bootstrap -f
 ```
 
-### FreeBSD 升级出错，没有 ntp 用户
+### FreeBSD 升级出错，缺少 ntp 用户
 
 终端执行命令
 
