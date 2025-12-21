@@ -10733,4 +10733,4 @@ Disabled（禁用）
 | List of EFI boot managers available           | 可用 EFI 启动管理器列表     |
 | Boot override to selected boot manager        | 启动覆盖到选定的启动管理器  |
 
-‍
+
