@@ -5,15 +5,16 @@
 
 ### 非法字符
 
-许多在 FreeBSD 中可用的文件名或路径在 Windows 中都是不被允许的（即非法字符）。这些你经常会碰到——如果你使用 Git 在 Windows 上拉取项目。
+许多在 FreeBSD 中可用的文件名或路径在 Windows 中都是不被允许的（即包含非法字符）。这些情况你经常会碰到——如果你在 Windows 上使用 Git 拉取项目。
 
-在这里仅列出一些笔者遇到过的：
+这里只列出一些笔者遇到过的情况：
 
 - 不能出现英文冒号 `:`
 
 ![](../.gitbook/assets/Windows1.png)
 
 - 不能叫 `con`
+
 
 ![](../.gitbook/assets/Windows2.png)
 
@@ -27,7 +28,7 @@
 
 ### 大小写敏感
 
-FreeBSD 的 ZFS 和 UFS 都是 **大小写敏感** 的文件系统。而 macOS 的 HFS+（默认不支持）、APFS（默认不支持）以及 Windows 的 FAT32、NTFS 文件系统都是 **大小写不敏感** 的。
+FreeBSD 的 ZFS 和 UFS 都是 **区分大小写（大小写敏感）** 的文件系统。而 macOS 的 HFS+（默认不区分大小写）、APFS（默认不区分大小写）以及 Windows 的 FAT32、NTFS 文件系统都是 **不区分大小写（大小写不敏感）** 的。
 
 - Windows 下 **大小写不敏感**
 
@@ -57,18 +58,18 @@ abc	ABC
 
 ## 换行符/回车之差异
 
-回车（Carriage Return，CR）和“换行”（Line Feed，LF）是不同的概念，均产生于电传打字机（真 TTY）时代。
+回车（Carriage Return，CR）和换行（Line Feed，LF）是不同的概念，均起源于电传打字机（真实 TTY）时代。
 
 - 回车 CR：将光标移动到当前行的开头部分；
 - 换行 LF：将光标竖直向下移动到下一行。
 
-可以看到在早期二者是独立的，否则 CRLF 会导致当前行“下沉”一行。
+可以看到，在早期二者是独立的，否则 CRLF 会导致当前行“下沉”一行。
 
-Windows 操作系统默认的文本换行符为 CRLF（即 \\r\\n，0x0D 0x0A，`^M$`），而 Unix（早期 macOS 是 \\r，0x0D）默认使用 LF（即 \\n，0x0A，`$`）。
+Windows 操作系统默认的文本换行符为 CRLF（即 \\r\\n，0x0D 0x0A，`^M$`），而 Unix（早期 macOS 使用 \\r，0x0D）默认使用 LF（即 \\n，0x0A，`$`）。
 
-当然，现在这些符号都出现在每行文本的末尾处（即每行都存在）。
+当然，现在这些符号通常都出现在每行文本的末尾处（即每行都存在）。
 
-二者是互不兼容的，如果你把 Windows 换行符的文件放到 Unix 下面，可能导致每行末尾多出一个 `^M` 字符，对于某些工具，会造成识别错误，对于 FreeBSD Port 相关文件来说，则会把多行识别为一行。
+二者互不兼容，如果你把使用 Windows 换行符的文件放到 Unix 系统下，可能会导致每行末尾多出一个 `^M` 字符；对于某些工具会造成识别错误，对于 FreeBSD Port 相关文件来说，则可能把多行识别为一行。
 
 但是两种换行符可以互相转换。在 FreeBSD 下可以用 Port `converters/dos2unix` 来实现，该软件包含 2 个命令：`dos2unix`（Windows 换行符到 Unix）、`unix2dos`（Unix 换行符到 Windows）。基本用法是 `$ dos2unix -n a.txt b.txt`，如果不需要保留源文件，可以直接 `$ dos2unix a.txt b.txt c.txt`（一次转换多个文件）。可以用命令 `file a.txt` 来判断文件的换行符：
 
@@ -96,7 +97,7 @@ b.txt: Unicode text, UTF-8 text, with very long lines (314), with CRLF line term
 
 那么程序如何识别文本的编码呢？通常，有些文件会在开头使用特定的字节序列（即 BOM，byte order mark，字节顺序标记）来标明编码。例如 UTF-8 的 BOM 是 `0xEF 0xBB 0xBF`。但在实际中，很多文本文件并没有 BOM，因此读取程序需要通过上下文猜测编码格式，这往往导致乱码。虽然可以通过程序分析文本内容（如统计字符分布或抽取字符计算）来猜测编码，但这种方法并不总是可靠。编码问题本质上源于系统间默认编码不同或未明确指定编码。
 
- Windows 默认使用 GBK（如系统语言是简体中文，是 GB2312 的超集），而 Linux 或 UNIX 则使用 UTF-8。
+Windows 默认使用 GBK（在简体中文环境下，为 GB2312 的超集），而 Linux 或 UNIX 通常使用 UTF-8。
 
 - Windows 11 24H2
 
@@ -114,7 +115,7 @@ UTF-8
 
 其中，FreeBSD 的编码是在 [main/usr.bin/login/login.conf](https://github.com/freebsd/freebsd-src/blob/main/usr.bin/login/login.conf) 这个源文件中设置的，编译出来路径即 `/etc/login.conf`。
 
-自然，也可以把 Windows 10 及后续版本的字符编码设置为 UTF-8。当然，这样设置除了可能引发更多的编码问题外，通常不能有效地解决问题。
+当然，也可以将 Windows 10 及后续版本的系统字符编码设置为 UTF-8。但这种做法往往除了引入更多编码问题外，并不能有效解决问题。
 
 
 ### 参考文献
@@ -123,15 +124,15 @@ UTF-8
 
 ## 时间与时区的差异
 
-中国统一使用一个时区，东八区，即 UTC+8，UTC（Coordinated Universal Time，协调世界时）时间几乎等同于 GMT（Greenwich Mean Time，格林尼治时间）。UTC 以国际原子时（temps atomique international，TAI）的秒长为基础（并不完全一致）：当铯（Cs）频率 ΔνCs，也就是铯 133 原子不受干扰的基态超精细跃迁频率，以单位 Hz 即 s-1 表示时，取其固定数值为 9 192 631 770 来定义秒——后续又对国际原子时进行了各种修正。
+中国统一使用一个时区，东八区，即 UTC+8，UTC（Coordinated Universal Time，协调世界时）在日常使用中几乎等同于 GMT（Greenwich Mean Time，格林尼治时间）。UTC 以国际原子时（temps atomique international，TAI）的秒长为基础（并不完全一致）：当铯（Cs）频率 ΔνCs，也就是铯 133 原子不受干扰的基态超精细跃迁频率，以单位 Hz 即 s-1 表示时，取其固定数值为 9 192 631 770 来定义秒——后续又对国际原子时进行了各种修正。
 
 有过 Windows 和 Unix 双系统安装经验的人会发现，Windows 和 Unix 的时间总是差 8 个小时。在现代计算机上（一般在主板上），都有一颗由纽扣电池供电的 RTC（Real-time clock，实时时钟芯片）芯片，用来维护系统断电后的计时。
 
 计算机操作系统在开机时会读取 RTC 的时间来设定系统的时间。RTC 的时间并未标注时区。
 
-Windows 会直接读取 RTC 的结果，把其当成默认的本地时间，即 Local Time（地方时，当地太阳运行的时间）；Unix 则会把 RTC 的数据视为 UTC 时间：于是你会发现双系统的时间倒流了 8 个小时。
+Windows 会直接读取 RTC 的结果，并将其视为本地时间，即 Local Time（地方时，当地太阳运行的时间）；Unix 则会把 RTC 的数据视为 UTC 时间：于是你会发现双系统的时间倒流了 8 个小时。
 
-比如，如果 RTC 时间是“2025 年 6 月 6 日白天中午 12:00（即 UTC+8），那么 Windows 下，也是“2025 年 6 月 6 日白天中午 12:00”（即 UTC+8），但在 Unix 下，时间会变为“2025 年 6 月 6 日白天早上 4:00”（即 UTC+8-8）。因为是我们使用 UTC+8，所以二者会相差 8 小时。
+例如，如果 RTC 时间是“2025 年 6 月 6 日中午 12:00（即 UTC+8）”，那么在 Windows 下仍显示为“2025 年 6 月 6 日中午 12:00”（即 UTC+8）；但在 Unix 下，时间会变为“2025 年 6 月 6 日白天早上 4:00”（即 UTC+8-8）。因为是我们使用 UTC+8，所以二者会相差 8 小时。
 
 对于现代计算机网络来说，时间至关重要，我们可以做个小实验，把时间调慢 5 分钟，打开浏览器，你会发现绝大部分网站都打不开了（HTTPS）。
 
@@ -139,7 +140,7 @@ Windows 会直接读取 RTC 的结果，把其当成默认的本地时间，即 
 
 中华民国二十八年（1939），民国政府将中国划分为五个时区，分为哈尔滨（`Asia/Harbin`）、上海（`Asia/Shanghai`）、重庆（`Asia/Chongqing`）、乌鲁木齐（`Asia/Urumqi`）和喀什（`Asia/Kashgar`）时间。
 
-我们知道，按照实际的地理时区来说，新疆是东六区（虽然全国统一使用北京时间）。从地理上看，新疆与北京时间实际上相差了二个小时。实际上，如果东八区八点太阳出来，那么新疆就是十点才出来。
+我们知道，从实际的地理时区来看，新疆属于东六区。（虽然全国统一使用北京时间）。从地理上看，新疆与北京时间实际上相差了二个小时。实际上，如果在燕赵大地太阳在北京时间五点出来，那么对于新疆，北京时间七点才能看到日出。。
 
 在时区数据库 2025b 中，`Asia/Harbin`、`Asia/Chongqing`、`Asia/Shanghai` 均等同于北京时间。`Asia/Urumqi` 和 `Asia/Kashgar` 则均为 `UTC+6` 东六区时间。
 

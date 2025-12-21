@@ -10,17 +10,17 @@ FreeBSD/amd64 (ykla) (ttyv0)
 login:
 ```
 
-我们将这个屏幕上呈现的界面称为 TTY（teletypewriter，电传打字机）或物理终端。
+我们将这个屏幕上呈现的界面称为 TTY（teletypewriter，电传打字机），也称为物理终端。
 
 解释：
 
 - `FreeBSD` 是操作系统名称；
-- `amd64` 是体系架构，一般英特尔和 AMD 处理器都是 amd64，即 x86-64；
+- `amd64` 是体系架构，一般英特尔和 AMD 处理器使用的都是 amd64，即 x86-64；
 - `ykla` 是主机名，是在安装系统时你自己设置的；
-- `ttyv0` 是指首个 TTY，你会发现计算机中大部分事物的序列都是以 0 打头的；
+- `ttyv0` 是指首个 TTY，你会发现计算机中许多事物的编号序列都是以 0 打头的；
 - `login:` 指示用户登录。
 
-我们输入用户名和密码，以登录到系统：
+我们输入用户名和密码，登录到系统：
 
 ```sh
 FreeBSD/amd64 (ykla) (ttyv0)
@@ -49,17 +49,15 @@ Introduction to manual pages:  man man
 FreeBSD directory layout:      man hier
 
 To change this login announcement, see motd(5).
-
-
 ```
 
-祝贺你！你已经成功地登录到了 FreeBSD 操作系统。
+祝贺你！你已经成功登录到 FreeBSD 操作系统。
 
 >**注意**
 >
->密码并不会被回显打印到屏幕上：一般我们输入密码时，屏幕上会显示 `******`。但是在 FreeBSD 中，凡是涉及密码的地方大都不会有任何显示，即使输入了密码屏幕上也是空白的，和没有任何输入是一个状态，就是什么也没有，输入后回车即可。
+>密码并不会被回显打印到屏幕上：一般情况下，我们输入密码时，屏幕上会显示 `******`。但在 FreeBSD 中，凡是涉及密码的地方大都不会有任何显示，即使输入了密码，屏幕上也仍然是空白的，与没有任何输入时的状态相同，直接输入后按回车即可。
 
-- ①：root 是 UNIX 中的最高权限。我们常说的安卓 root，苹果越狱，Kindle 越狱等等都是为了获取这个 root 权限。
+- ①：root 是 UNIX 中的最高权限。我们常说的 Android root、苹果越狱、Kindle 越狱等，都是为了获取这一 root 权限。
 
 ### 参考文献
 
@@ -73,7 +71,7 @@ To change this login announcement, see motd(5).
 ```sh
 login: root
 Password:
-Login: incorrect # 即不正确的意思
+Login: incorrect # 表示登录信息不正确
 login: 
 ```
 
@@ -86,4 +84,4 @@ Login: incorrect
 login: 
 ```
 
-如果你连用户名都不知道，建议你找回 root 密码后看看系统中有哪些用户账户或者重装系统比较快。
+如果你连用户名都不知道，建议你找回 root 密码后查看系统中有哪些用户账户，或者直接重装系统会更快。
