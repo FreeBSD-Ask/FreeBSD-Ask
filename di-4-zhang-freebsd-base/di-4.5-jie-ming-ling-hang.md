@@ -220,7 +220,7 @@ No fucks given
 >root@ykla:~ # plg install gimp
 >-sh: plg: not found
 >root@ykla:~ # abc
->​​​​​​​​​​pkg install gimp [enter/↑/↓/ctrl+c]​​​​​​​​​​
+>pkg install gimp [enter/↑/↓/ctrl+c]
 >……省略一部分……
 >```
 
@@ -231,7 +231,7 @@ No fucks given
 root@ykla:~ # ls-l /home/ykla/ # 先输入一遍错误的试试
 -sh: ls-l: not found
 root@ykla:~ # fuck
-​​​​​​​​​​ls -l /home/ykla/ [enter/↑/↓/ctrl+c] # 上下箭头切换可能的命令，回车确认，ctrl c 中断​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
+ls -l /home/ykla/ [enter/↑/↓/ctrl+c] # 上下箭头切换可能的命令，回车确认，ctrl c 中断
 total 317
 ……省略一部分……
 drwxr-xr-x  2 ykla ykla        2 Mar  9 20:45 下载
@@ -244,7 +244,7 @@ drwxr-xr-x  2 ykla ykla        2 Mar  9 20:45 桌面
 root@ykla:~ # plg install gimp
 -sh: plg: not found
 root@ykla:~ # fuck
-​​​​​​​​​​pkg install gimp [enter/↑/↓/ctrl+c]​​​​​​​​​​
+pkg install gimp [enter/↑/↓/ctrl+c]
 Updating FreeBSD repository catalogue...
 FreeBSD repository is up to date.
 ……省略一部分……
@@ -763,7 +763,7 @@ sed -i '' 's/quarterly/latest/g' /etc/pkg/FreeBSD.conf
 
 ## 关机与重启
 
-​FreeBSD 和 Linux 的 shutdown 命令在语法和行为上有一些重大差异，如果你有使用 Linux 的经验，那么是不能照抄的。
+FreeBSD 和 Linux 的 shutdown 命令在语法和行为上有一些重大差异，如果你有使用 Linux 的经验，那么是不能照抄的。
 
 FreeBSD 的设计更接近传统 UNIX 的行为。
 

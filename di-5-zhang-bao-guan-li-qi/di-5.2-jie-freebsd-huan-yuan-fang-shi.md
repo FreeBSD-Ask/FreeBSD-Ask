@@ -9,19 +9,19 @@
 
 |源 | 说明 | 备注|
 |:---:|:---|:---|
-|pkg|类似于传统 Linux 的包管理器，用于安装二进制软件包 | 不需要二进制方式安装软件可以不配置，默认未安装 `pkg`，输入 `pkg` 回车会提示安装|
+|pkg|类似于传统 Linux 的包管理器，用于安装二进制软件包 | 如果不需要以二进制方式安装软件可以不配置，默认未安装 `pkg`，输入 `pkg` 回车会提示安装|
 |~~portsnap~~|拉取 Ports 的源代码模板（本身不含源代码，只是一些描述文件和补丁集）。换言之，这个源类似 Gentoo 的 [ebuild 数据库](https://mirrors.ustc.edu.cn/help/gentoo.html)|**已于 FreeBSD 14 及后续版本废弃，无需配置** 改用 `git`、`gitup` 和压缩包 `ports.tar.gz` 等方式获取。|
 |ports|Gentoo 的包管理器 Portage（命令为 `emerge`）即是源于此。用于帮助用户从源代码编译安装软件。换言之，等同于 Gentoo 的 [Distfiles 源](https://mirrors.ustc.edu.cn/help/gentoo.html)|不需要源代码方式编译软件可以不配置。|
 |update|用于更新基本系统（内核 + 用户空间） | 预计在 FreeBSD 15 或 16 中废弃，转而使用 [pkgbase](https://wiki.freebsd.org/PkgBase) 代替之|
-|kernel modules（kmods）| 内核模块源（含无线网卡驱动、以太网卡驱动、drm 显卡驱动等），为解决小版本间可能存在的 ABI 不兼容问题 | 参见 [Possible solution to the drm-kmod kernel mismatch after upgrade from Bapt](https://forums.freebsd.org/threads/possible-solution-to-the-drm-kmod-kernel-mismatch-after-upgrade-from-bapt.96058/#post-682984)、[CFT: repository for kernel modules](https://lists.freebsd.org/archives/freebsd-ports/2024-December/006997.html)。可以使用命令 `fwget` 自动安装所需驱动|
-|FreeBSD（pub） | 提供 ISO 安装镜像、文档、开发资料、`snapshot`，在安装系统、系统救援、开发参考时有很大帮助。 | 参考 [FreeBSD.org ftp server](http://ftp.freebsd.org/pub/FreeBSD/) 目录结构。 |
+|kernel modules（kmods）| 内核模块源（包含无线网卡驱动、以太网卡驱动、 DRM 显卡驱动等），用于解决小版本之间可能存在的 ABI 不兼容问题 | 参见 [Possible solution to the drm-kmod kernel mismatch after upgrade from Bapt](https://forums.freebsd.org/threads/possible-solution-to-the-drm-kmod-kernel-mismatch-after-upgrade-from-bapt.96058/#post-682984)、[CFT: repository for kernel modules](https://lists.freebsd.org/archives/freebsd-ports/2024-December/006997.html)。可以使用命令 `fwget` 自动安装所需驱动|
+|FreeBSD（pub） |提供 ISO 安装镜像、文档、开发资料、`snapshots`，在系统安装、系统救援和开发参考时有很大帮助 | 参考 [FreeBSD.org ftp server](http://ftp.freebsd.org/pub/FreeBSD/) 目录结构。 |
 
 
 > **技巧**
 >
 > 本文对于一个源列出了多个镜像站，无须全部配置，只需选择其一即可。
 
-目前境内没有官方镜像站，以下均为非官方镜像站。
+目前境内没有官方镜像站，以下均为非官方镜像。
 
 > **注意**
 >
@@ -29,14 +29,14 @@
 
 >**警告**
 >
->对于那些以安全性为较高优先级的用户来说，应该使用默认的官方镜像 `pkg.freebsd.org`！其由官方构建，分发和维护，且不受境内网络监管。
+>对于那些以安全性为较高优先级的用户来说，应该使用默认的官方镜像 `pkg.freebsd.org`！其由官方构建、分发和维护，且不受境内网络监管。
 
 
 ## pkg 源：pkg 源提供了二进制软件包
 
 境内的源一般只支持 aarch64（arm64）和 amd64 两个架构。
 
-FreeBSD 中 pkg 源分为系统级和用户级两个配置文件。**不建议** 直接修改 `/etc/pkg/FreeBSD.conf` ~~但是太麻烦啦，一般我都是直接改这个文件的~~，因为该文件会随着基本系统的更新而发生改变。
+FreeBSD 中的 pkg 源分为系统级和用户级两个配置文件。**不建议** 直接修改 `/etc/pkg/FreeBSD.conf` ~~但是太麻烦啦，一般我都是直接改这个文件的~~，因为该文件会随着基本系统的更新而发生改变。
 
 >**警告**
 >
@@ -44,7 +44,7 @@ FreeBSD 中 pkg 源分为系统级和用户级两个配置文件。**不建议**
 
 ### 理解 quarterly 季度分支
 
-FreeBSD 的 pkg 分为 quarterly（季度，由 Ports 的 XXXX.QY 分支构建而来）分支与 latest（实时更新，由 Ports 的 main 分支构建而来）分支两个源。quarterly 现在是 FreeBSD 默认的 pkg 软件分支。
+FreeBSD 的 pkg 分为 quarterly（季度，由 Ports 的 XXXXQY 分支构建而来）分支和 latest（实时更新，由 Ports 的 main 分支构建而来）分支两个源。quarterly 目前是 FreeBSD 默认的 pkg 软件分支。
 
 ```sh
 root@ykla:/home/ykla # git clone https://git.FreeBSD.org/ports.git /usr/ports # 拉取 Ports
@@ -87,7 +87,7 @@ root@ykla:/usr/ports # git for-each-ref --sort=-committerdate --format='%(commit
 2014-03-29 Lars Engels origin/2014Q1 5f4d6e1d6b07
 root@ykla:/usr/ports # git merge-base origin/main origin/2025Q4 # 查找两个分支的最近共同祖先 commit
 6c256c6adb790f0588b920d41a5fe4dfa550079f
-root@ykla:/usr/ports # git branch -r --contains 6c256c6adb790f0588b920d41a5fe4dfa550079f # 出哪些远程分支历史中包含此 commit ②
+root@ykla:/usr/ports # git branch -r --contains 6c256c6adb790f0588b920d41a5fe4dfa550079f # 列出哪些远程分支历史中包含此 commit ②
   origin/2025Q4
   origin/HEAD -> origin/main
   origin/main
@@ -117,21 +117,21 @@ origin/main created around 2025-10-24 12:43:02 +0900
 ```
 
 
-其中，quarterly 的内容是由 main 分支（latest）的提交回溯而来，每年的 1 月、4 月、7 月、10 月 ③ 会发布新的分支（从特定时间的 main 分支切出来 ①），形如 `2014Q3`、`2025Q1`，这是为了便于通过 git 直接拉取所需的分支，但 Ports 管理团队（portmgr）只会维护最新分支，旧分支也不会允许任何合并。②
+其中，quarterly 的内容由 main 分支（latest）的提交回溯而来，每年的 1 月、4 月、7 月、10 月 ③ 会发布新的分支（从特定时间点的 main 分支切出 ①），形如 `2014Q3`、`2025Q1`。这是为了便于通过 git 直接拉取所需的分支，但 Ports 管理团队（portmgr）只会维护最新分支，旧分支不再允许任何合并。②
 
-quarterly 实际上类似于 Debian 的 Stable 版本，此处的 Stable 不仅仅代表“稳定”，而是“固定”。我们有必要区分“稳定”和“固定”两个词语：
+quarterly 实际上类似于 Debian 的 Stable 版本，此处的 Stable 不仅表示“稳定”，也包含“固定”的含义。我们有必要区分“稳定”和“固定”两个词语：
 
-根据 [Merriam‑Webster](https://www.merriam-webster.com/dictionary/stable) 和 [Cambridge Dictionary](https://dictionary.cambridge.org/us/dictionary/english/stable)，Stable 有“fixed”（固定）的意思。我们来看一下《现代汉语词典（第 7 版）》第 1374 页，就会发现“稳定”第一个释义被解释为“形容词，稳定安固，没有变动”；第 470 页载“固定”为“动词，不变动或不移动（跟‘流动’相对）”。所以“固定”是“稳定”的一种手段，“稳定”是一种目的。
+根据 [Merriam‑Webster](https://www.merriam-webster.com/dictionary/stable) 和 [Cambridge Dictionary](https://dictionary.cambridge.org/us/dictionary/english/stable)，Stable 有“fixed”（固定）的意思。我们来看一下《现代汉语词典（第 7 版）》第 1374 页，就会发现“稳定”第一个释义被解释为“形容词，稳定安固，没有变动”；第 470 页载“固定”为“动词，不变动或不移动（跟‘流动’相对）”。因此，“固定”是实现“稳定”的一种手段，而“稳定”是一种目的。
 
 >**技巧**
 >
 >Debian 是通过 **固定** 软件包的版本，仅接受安全更新不接受功能更新来实现的 **稳定**，手段是其软件源是 **固定**，Stable 系统的软件源也是 Stable 分支的——Debian 还有 testing 等分支。我们可以看到常见发行版是通过 **固定** 软件来实现的 **Stable** 版本。由于这些软件包已经历经了从 unstable（即 sid，Ubuntu 即基于此）testing 等多个分支的测试和发展，软件包自然比较 **稳定**。而且在 **Stable** 版本的系统生命周期内，任何软件基本上都不会得到大版本更新和功能更新。参见 [DebianStability](https://wiki.debian.org/DebianStability)（看起来是稳定的意思）、[Chapter 3. Choosing a Debian distribution](https://www.debian.org/doc/manuals/debian-faq/choosing.en.html#s3.1.1)（实际上是固定的意思），中文版在 [第 3 章 选择一个 Debian 发布版本](https://www.debian.org/doc/manuals/debian-faq/choosing.zh-cn.html)、[2.2. Are there package upgrades in "stable"?](https://www.debian.org/doc/manuals/debian-faq/getting-debian.en.html#updatestable) 指出软件不会有功能性更新。
 
-FreeBSD pkg 的 quarterly 分支也试图实现相同的目的（提供可预测和稳定的用户体验），也是通过 **非功能性更新** 来实现的——除非涉及 Ports 框架、安全更新（故并非完全禁止版本更替）、简单错误修复（构建、编译、打包）等。任何功能性更新都不会被回溯到 quarterly 分支。可以看出 FreeBSD 的 quarterly 也同时兼有稳定和固定的双重含义。
+FreeBSD pkg 的 quarterly 分支也试图实现相同的目的（提供可预测和稳定的用户体验），也是通过 **非功能性更新** 来实现的——除非涉及 Ports 框架、安全更新（故并非完全禁止版本更替）、简单错误修复（构建、编译、打包）等。任何功能性更新都不会被回溯至 quarterly 分支。可以看出 FreeBSD 的 quarterly 也同时兼有稳定和固定的双重含义。
 
 >**注意**
 >
->并非所有源都有 `quarterly` 和 `latest`，具体请看 <https://pkg.freebsd.org/> 。也并非为所有架构都提供了 pkg 源，与平台支持等级挂钩。
+>并非所有源都提供 `quarterly` 和 `latest`，具体请参见 <https://pkg.freebsd.org/> 。也并非为所有架构都提供了 pkg 源，与平台支持等级挂钩。
 
 #### 参考文献
 
@@ -196,7 +196,8 @@ FreeBSD: { enabled: no }
 
 ### 下载 ports
 
-这个源是下载 ports 本身的源。等同于以前的 `portsnap`。
+该源用于下载 ports 本身的源代码，等同于以前的 `portsnap`。
+
 
 #### Git 方法
 
@@ -229,7 +230,7 @@ FreeBSD: { enabled: no }
 
 > **警告**
 >
-> 通过下载 Port 的压缩文件来使用 Ports，是一次性的：Ports 后续无法更新，建议你优先采用 Git 方法。
+> 通过下载 Ports 的压缩文件来使用 Ports 属于一次性方式：Ports 后续无法更新，建议优先采用 Git 方法。
 
 
 ```sh
@@ -251,12 +252,12 @@ FreeBSD: { enabled: no }
 
 ### ports 源
 
-这个源是下载 ports 中的软件的源。
+该源用于下载 ports 中软件的源代码。
 
 
 > **警告**
 >
-> ports 源可能并不完整。其余的大概只镜像了不到十分之一。见 <https://github.com/ustclug/discussions/issues/408>。
+> ports 源可能并不完整，其内容大约只镜像了不到十分之一。见 <https://github.com/ustclug/discussions/issues/408>。
 
 创建或修改文件 :
 
@@ -381,7 +382,7 @@ Fetching http://ftp-archive.freebsd.org/pub/FreeBSD-Archive/ports/amd64/packages
 
 ## FreeBSD（Pub）源：提供 ISO 安装镜像、文档、开发资料以及各种架构的 `snapshot`
 
-此处的 Pub，指的是官方的 <http://ftp.freebsd.org/pub/FreeBSD/>。类似于普通的镜像分发仓库。和 debian-cd、ubuntu-releases 等应属同一性质。
+此处的 Pub，指的是官方的 <http://ftp.freebsd.org/pub/FreeBSD/>。其性质类似于普通的镜像分发仓库，与 debian-cd、ubuntu-releases 等属于同一类型。
 
 目前已知全量同步 FreeBSD（Pub）源的镜像站：<https://mirrors.nju.edu.cn/freebsd>。其提供了完整的目录结构（如 `snapshots`、`development`），且更新及时。
 

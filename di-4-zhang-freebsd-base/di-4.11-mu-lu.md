@@ -71,7 +71,7 @@
 │   ├── hosts hosts 文件，优先于 DNS 的本地 IP 域名映射表
 │   ├── inetd.conf 配置 BSD inetd，参见 inetd(8)
 │   ├── localtime 本地时区文件，参见 ctime(3)。在笔者的系统中，localtime 被链接到了 /usr/share/zoneinfo/Asia/Shanghai
-│   ├── login.conf ​登录类功能数据库，参见 login.conf(5)
+│   ├── login.conf 登录类功能数据库，参见 login.conf(5)
 │   ├── machine-id 系统的 UUID，dbus 用
 │   ├── motd.template TTY 登录后显示的信息，参见 motd(5)
 │   ├── ntp.conf NTP 客户端配置文件，参见 ntpd(8)

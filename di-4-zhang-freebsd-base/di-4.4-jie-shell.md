@@ -31,7 +31,7 @@ Linux 中常见的 shell 一般是 bash（Bourne Again Shell，即“又一个 B
 
 ### 使用 Scroll Lock 键在 TTY 界面上下翻页/翻行
 
-使用 **Scroll Lock** 键（滚动锁定键）：按下 **Scroll Lock** 键后，可以使用上 ↑/下 ↓ 方向键以及 ​**Page Up**​/**Page Down** 键对屏幕进行操作。
+使用 **Scroll Lock** 键（滚动锁定键）：按下 **Scroll Lock** 键后，可以使用上 ↑/下 ↓ 方向键以及 **Page Up**/**Page Down** 键对屏幕进行操作。
 
 不同点：
 
@@ -86,7 +86,7 @@ $ cp /home/ykla/test/1.txt
 
 ### 终止命令
 
-若要终止命令，可以使用 ​**Ctrl**​+​**C**​：
+若要终止命令，可以使用 **Ctrl**+**C**：
 
 ```sh
 # ping 163.com
@@ -101,7 +101,7 @@ round-trip min/avg/max/stddev = 27.580/27.626/27.672/0.046 ms
 
 ### 命令后台前台
 
-​**Ctrl**​+​**Z**​：将当前进程挂起到后台，随后可使用 `fg` 命令将其恢复到前台：
+**Ctrl**+**Z**：将当前进程挂起到后台，随后可使用 `fg` 命令将其恢复到前台：
 
 ```sh
 # ping 163.com
@@ -122,6 +122,6 @@ round-trip min/avg/max/stddev = 27.465/27.596/27.701/0.085 ms
 
 ### 其他
 
-- ​**Ctrl**​+​**L**​（字母 L）：清空屏幕
-- ​**Ctrl**​+​**A**​：将光标移动到命令行首
-- ​**Ctrl**​+​**E**​：将光标移动到命令行尾
+- **Ctrl**+**L**（字母 L）：清空屏幕
+- **Ctrl**+**A**：将光标移动到命令行首
+- **Ctrl**+**E**：将光标移动到命令行尾

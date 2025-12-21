@@ -2,9 +2,9 @@
 
 ## FreeBSD 版本概述
 
-已知 FreeBSD 有如下版本类型（或开发阶段）：alpha、beta、rc、release、current、stable。
+已知 FreeBSD 有如下版本类型（或开发阶段）：ALPHA、BETA、RC、RELEASE、CURRENT、STABLE。
 
-**release** 版本是适用于生产环境的，即一般意义上的 ​**稳定版**​，或可被视为一类长期支持（LTS）版本。而 ***stable*** 和 ***current*** 都属于 ​**开发分支**​，​**通常不建议用于生产环境**​（“稳定”与“不稳定”是相对概念，例如 [Netflix 几乎所有节点都运行着 **current**](https://freebsdfoundation.org/netflix-case-study/)）。
+**release** 版本是适用于生产环境的，即一般意义上的 **稳定版**，或可被视为一类长期支持（LTS）版本。而 ***stable*** 和 ***current*** 都属于 **开发分支**，**通常不建议用于生产环境**（“稳定”与“不稳定”是相对概念，例如 [Netflix 几乎所有节点都运行着 **current**](https://freebsdfoundation.org/netflix-case-study/)）。
 
 >**注意**
 >
@@ -21,7 +21,7 @@ current 相对稳定后（即满足 MFC 最短三天的要求，MFC 指 `Merge F
 
 >**警告**
 >
->使用非生产版本（如 CURRENT、STABLE、Alpha、BETA、RC 等非 RELEASE 版本）的 FreeBSD 的用户会被社区推定为具备一定的探索精神、关注开发进展和邮件列表的意愿、动手实践的能力、积极反馈问题的意愿以及乐观的心态。这对大多数读者来说都是困难的且无必要的。如果并不满足上述条件，建议读者始终使用面向生产环境的 RELEASE！
+>使用非生产版本（如 CURRENT、STABLE、ALPHA、BETA、RC 等非 RELEASE 版本）的 FreeBSD 的用户会被社区推定为具备一定的探索精神、关注开发进展和邮件列表的意愿、动手实践的能力、积极反馈问题的意愿以及乐观的心态。这对大多数读者来说都是困难的且无必要的。如果并不满足上述条件，建议读者始终使用面向生产环境的 RELEASE！
 
 ![FreeBSD 版本更迭](../.gitbook/assets/bsd-release.png)
 

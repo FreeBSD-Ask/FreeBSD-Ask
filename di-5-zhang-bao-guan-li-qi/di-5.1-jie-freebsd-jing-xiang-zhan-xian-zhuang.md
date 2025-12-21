@@ -4,19 +4,19 @@
 
 ### 官方拒不开放 rsync
 
-主要问题在于官方无论如何也不开放 rsync 且不接受镜像站的官方二级镜像申请。
+主要问题在于官方始终不开放 rsync，且不接受镜像站的官方二级镜像申请。
 
-根据目前可查信息，FreeBSD 项目至迟在 2015 年 5 月就停止了公开 rsync。参见 [Add small section explaining we are not allowing public mirrors of packages and possible workarounds.](https://reviews.freebsd.org/R9:3418e47d2f6cd8dd04ac934f38d136ba9101a5a8)。给出的说明理由是：
+根据目前可查的信息，FreeBSD 项目最迟在 2015 年 5 月就停止了公开 rsync。参见 [Add small section explaining we are not allowing public mirrors of packages and possible workarounds.](https://reviews.freebsd.org/R9:3418e47d2f6cd8dd04ac934f38d136ba9101a5a8)。给出的说明理由是：
 
 >Due to very high requirements of bandwidth, storage and adminstration the FreeBSD; Project has decided not to allow public mirrors of packages.
 >
 >由于对带宽、存储和管理的要求极高，FreeBSD 项目决定不允许公共镜像软件包。
 
-这个理由着实让人摸不到头脑。
+这个理由着实令人难以理解。
 
 ---
 
-2025 收到的回复：
+2025 年收到的回复：
 
 >On Fri, 28 Feb 2025, at 17:45, ykla wrote:
 >> How to mirror pkg and update from official mirror sites?
@@ -30,7 +30,7 @@
 >2025 年 2 月 28 日 星期五 17:45，ykla 写道：
 >> 如何通过官方镜像站点进行 pkg 镜像和系统更新？
 >
->正如我们此前多次回复的：pkg 和 freebsd-update 功能需要由我们管控的物理服务器支持（**注：这里对方指 root 权限**），这些服务器需与我们的集群保持网络连接。
+>正如我们此前多次回复的，pkg 和 freebsd-update 功能需要由我们管控的物理服务器支持（**注：此处对方指 root 权限**），这些服务器需与我们的集群保持网络连接。
 >
 >此前有人曾提议提供南京的一台机器，但后续方案变更为虚拟机形式后讨论便陷入停滞。我们无法使用虚拟机方案，需要真实的硬件设备（**注：对方指裸金属**）、实体存储介质和物理网络传输链路。
 
@@ -38,18 +38,18 @@
 
 #### 安全性问题
 
-FreeBSD 集群过去曾被入侵过，在全面转向 pkg 后，就不允许镜像了。
+FreeBSD 集群过去曾遭受入侵，在全面转向 pkg 后，便不再允许镜像。
 
 - [FreeBSD.org 这次的入侵事件](https://blog.delphij.net/posts/2012/12/freebsdorg-2/)，中文说明
 - [FreeBSD.org intrusion announced November 17th 2012](http://www.freebsd.org/news/2012-compromise.html)，官方说明
 
 #### 传输问题
 
-目前的集群似乎是通过 ZFS 文件系统（zfs send/zfs receive）直接传输的，不是传统意义上的 rsync 镜像站模式。
+目前的集群似乎通过 ZFS 文件系统（zfs send / zfs receive）直接进行传输，而非传统意义上的 rsync 镜像站模式。
 
 #### 带宽不足
 
-根据 [[NEW MIRROR] New full mirror in Belgium](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=288631)，集群管理员 bofh 的回复：
+根据 [[NEW MIRROR] New full mirror in Belgium](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=288631)，集群管理员 bofh 的回复如下：
 
 >There are couple of reasons:
 >
@@ -67,7 +67,7 @@ FreeBSD 集群过去曾被入侵过，在全面转向 pkg 后，就不允许镜�
 >
 > 1. 来自我们中心服务器的带宽。社区镜像数量增加时，如果大家都同时开始拉取，比如在一个新的 quarterly 分支刚发布之后，就会需要更多带宽。
 >
-> 2. 许多站点在创建镜像时非常兴奋，确信自己拥有真实的带宽，但实际上，他们的“道义带宽”往往在几天后就耗尽了，也不再同步我们的镜像。我们经常收到关于其他社区镜像问题的沟通。我们本来日程就很紧，再去监督其他镜像就像给墙上再钉一颗钉子一样。
+> 2. 许多站点在创建镜像时非常兴奋，确信自己拥有真实的带宽，但实际上，他们的“道义带宽”往往在几天后就耗尽了，也不再同步我们的镜像。我们经常收到关于其他社区镜像问题的沟通。我们本来日程就很紧，再去监督其他镜像就如同给墙上再钉一颗钉子。
 >
 > 3. 我们仍然接受镜像，但方式有所不同。如果有人能够赞助裸金属服务器，我们会很乐意部署新的镜像。不过，我们对镜像的要求相当高。你可以查看以下内容来了解我们的要求：
 >
@@ -100,9 +100,9 @@ FreeBSD 集群过去曾被入侵过，在全面转向 pkg 后，就不允许镜�
 
 ### 中国大陆没有 FreeBSD 官方镜像站
 
-多次联系均无二次联系，如邮件列表，大概五次，其中三次回应，两次无回应。其主要回复内容为“深表歉意，但台湾地区已有镜像”。并未直接说明如何镜像，此外特别向中国科学技术大学 Linux 用户协会（其中其他镜像站并未理会，如清华大学 TUNA 协会）申请镜像，对方提到，FreeBSD 也是无人回应。
+多次联系后均未形成进一步沟通，例如通过邮件列表联系约五次，其中三次得到回应，两次未获回应。其主要回复内容为“深表歉意，但台湾地区已有镜像”。并未直接说明如何镜像，此外特别向中国科学技术大学 Linux 用户协会（其中其他镜像站并未理会，如清华大学 TUNA 协会）申请镜像，对方提到，FreeBSD 也是无人回应。
 
-国内网络环境如此，提升速度采取代理方式也是基本功，但是，不能够要求每个人水平都一样，提供便捷的网络服务，方便更多人的使用，才是发展 FreeBSD 的核心要义。请朋友们注意这一点，镜像站是基础设施，就像那句话，“要想富，先修路”，如果通往 FreeBSD 的康庄大道不通，则全是荆棘的小道。在此号召能够联系到 FreeBSD 官方的朋友们，首先解决这一基本问题。
+国内网络环境如此，提升速度采取代理方式也是基本功，但是，不能要求每个人的技术水平都一致，提供便捷的网络服务、方便更多人使用，才是发展 FreeBSD 的核心要义。请朋友们注意这一点，镜像站是基础设施。就像那句话，“要想富，先修路”，如果通往 FreeBSD 的康庄大道不通，剩下的就只会是遍布荆棘的小道。在此号召能够联系到 FreeBSD 官方的朋友，优先解决这一基本问题。
 
 目前开放的非官方 issue 镜像申请：
 
@@ -128,13 +128,13 @@ TUNA: <https://github.com/tuna/issues/issues/16>
 
 ## 官方给出的镜像站基本要求
 
-- 服务器的 root 权限，这一点上国内的大学开源镜像站不会给与；
+- 服务器的 root 权限，这一点上国内的大学开源镜像站通常不会给予；
 - IPv6 及 CN2 网络——国内也很缺乏；
 - BGP 网络；
 - 足够的存储空间（约 50TB）和 1G 带宽；
-- 上述计算机 5 台。
+- 上述服务器共计 5 台。
 - 备案问题——需要专门公司/社会组织才能给 cn.FreeBSD.org 备案；
-- 还有最大的问题，**没有钱**
+- 还有一个最大的问题：**缺乏资金**
 
 细节可看：
 
@@ -145,7 +145,7 @@ TUNA: <https://github.com/tuna/issues/issues/16>
 
 FreeBSD 在中国大陆境内没有官方镜像站；在中国台湾地区有官方镜像站。
 
-FreeBSD 在中国大陆境内的唯一几个能正常同步的镜像站，均未使用 `rsync` 等方式进行同步，都是采取的一些特殊 "手段"，参见 USTCLUG 所提供的同步脚本：
+FreeBSD 在中国大陆境内为数不多且能正常同步的镜像站，均未使用 `rsync` 等方式进行同步，而是采取了一些特殊“手段”，参见 USTCLUG 所提供的同步脚本：
 
 - [FreeBSD-pkg 脚本](https://github.com/ustclug/ustcmirror-images/blob/master/freebsd-pkg/sync.sh)
 - [FreeBSD-ports 脚本](https://github.com/ustclug/ustcmirror-images/blob/master/freebsd-ports/sync-ports.sh)
@@ -182,4 +182,4 @@ FreeBSD 官方联系方式：
 
 ## 其他思路或解决方案
 
-自行使用 Poudriere 进行构建并分发。如 [RISC-V FreeBSD-pkg 软件源上线！11619+ 预编译包助力快速构建 FreeBSD 环境](https://mp.weixin.qq.com/s/ngv3eZh1TEVgk3Pn3XfRBg)（已跑路）
+自行使用 Poudriere 进行构建并分发。如 [RISC-V FreeBSD-pkg 软件源上线！11619+ 预编译包助力快速构建 FreeBSD 环境](https://mp.weixin.qq.com/s/ngv3eZh1TEVgk3Pn3XfRBg)（项目已停止维护）

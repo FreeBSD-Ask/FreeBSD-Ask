@@ -2,9 +2,9 @@
 
 >**技巧**
 >
->FreeBSD 14.0 已经删除了 portsnap，转而使用 git，如本文所述可以使用 gitup 替代之。
+>FreeBSD 14.0 已经删除了 portsnap，转而使用 Git，如本文所述可以使用 gitup 替代 portsnap。
 
-`gitup`，即更新 git 的意思。
+`gitup` 是用于更新 Git 仓库的工具。
 
 ## 安装 gitup
 
@@ -24,7 +24,7 @@
 ## 使用 gitup
 
 ```sh
-# gitup ports 	# 获取 latest 的 ports
+# gitup ports 	# 获取 latest 分支的 Ports
 # gitup release # 获取 release 版本的源代码
 ```
 
@@ -34,7 +34,7 @@
 # cp /usr/local/etc/gitup.conf.sample /usr/local/etc/gitup.conf
 ```
 
-编辑，`/usr/local/etc/gitup.conf`，修改内容如下（有 ①②③ 共计三处需要修改）：
+编辑 `/usr/local/etc/gitup.conf`，修改内容如下（有 ①②③ 共计三处需要修改）：
 
 ```ini
 # $FreeBSD$
@@ -106,31 +106,32 @@
 
 ## 故障排除与未竟事宜
 
-- 速度太慢（若不使用镜像站）：设置 HTTP 代理
+### 速度太慢（若不使用镜像站）
 
-`gitup` 的代理不取决于系统代理，而是由其配置文件 `/usr/local/etc/gitup.conf` 单独决定。
+需要设置 HTTP 代理：`gitup` 不使用系统代理，而是由其配置文件 `/usr/local/etc/gitup.conf` 单独决定代理设置。
 
-示例（先删去前边的 `#` 再改）：
+
+示例（先删去前面的 `#` 再修改）：
 
 ```sh
 "proxy_host" : "192.168.27.1",
 "proxy_port" : 7890,
 ```
 
-- 详细调试输出：
+### 详细调试输出
 
 ```sh
 # gitup -v2 ports
 ```
 
-- gitup: `build_repair_command: There are too many files to repair -- please re-clone the repository: Argument list too long`
+### 报错 `build_repair_command: There are too many files to repair -- please re-clone the repository: Argument list too long`
   
 ```sh
-# rm -rf /usr/ports
+# rm -rf /usr/ports/*
 # gitup ports
 ```
 
-清空目录重新拉取即可，可以无视 `rm: /usr/ports/: Device busy` 这个提示。
+清空目录后重新拉取即可，可以忽略 `rm: /usr/ports/: Device busy` 提示。
 
 ## 参考链接
 
