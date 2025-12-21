@@ -5,9 +5,9 @@
 
 ## doas
 
-实际上对于大部分人来说只需要 `sudo su` 这一行命令，其他都是多余的。在使用时将 `sudo` 直接替换为 `doas` 即可。
+实际上，对于大部分人来说，只需要 `sudo su` 这一条命令，其他内容都是多余的。在使用时将 `sudo` 直接替换为 `doas` 即可。
 
-OpenBSD 认为 sudo 软件配置复杂，代码质量差，漏洞太多，故自行开发了 [doas](https://man.openbsd.org/doas)。自然，FreeBSD 也可以用。
+OpenBSD 认为 sudo 软件配置复杂、代码质量较差、漏洞较多，故自行开发了 [doas](https://man.openbsd.org/doas)。因此，FreeBSD 也可以使用。
 
 ### 安装 doas
 
@@ -24,7 +24,7 @@ OpenBSD 认为 sudo 软件配置复杂，代码质量差，漏洞太多，故自
 # make install clean
 ```
 
-### 查看 doas 安装后信息
+### 查看 doas 安装后的信息
 
 ```sh
 # pkg info -D doas
@@ -67,11 +67,11 @@ Please refer to doas.conf(5) for further details.
 
 ### 配置 doas
 
-由上可知，示例样板在 `/usr/local/etc/doas.conf.sample`。
+由上可知，示例配置文件位于 `/usr/local/etc/doas.conf.sample`。
 
-而我们需要把配置文件放在 `/usr/local/etc/doas.conf`，该文件默认不存在，需要我们自行创建。
+而我们需要将配置文件放在 `/usr/local/etc/doas.conf`，该文件默认不存在，需要自行创建。
 
-- `/usr/local/etc/doas.conf.sample` 内容如下，相比 sudo 来说，非常简单易懂：
+- `/usr/local/etc/doas.conf.sample` 内容如下，相比 sudo 而言，非常简单易懂：
 
 让我们简单注释一下：
 
@@ -104,7 +104,7 @@ permit nolog david as root cmd id # 允许 david 以 root 身份运行 `id` 命�
 ```
 
 
-对于一般人只需要创建文件 `/usr/local/etc/doas.conf`，写入
+对于一般用户，只需要创建文件 `/usr/local/etc/doas.conf`，并写入
 
 ```sh
 permit :wheel
@@ -130,9 +130,9 @@ permit :wheel
 # make install clean
 ```
 
-### sudo 免密码
+### sudo 免密码配置
 
-在 `/usr/local/etc/sudoers.d/` 下新建两个文件 `username`（需要免密码的用户名）和 `wheel`：
+在 `/usr/local/etc/sudoers.d/` 目录下新建两个文件：`username`（需要免密码的用户名）和 `wheel`。
 
 - 文件 `username` 内容如下：
 
@@ -152,10 +152,9 @@ permit :wheel
 
 - `xxx Is Not in the Sudoers File. This Incident Will Be Reported`
 
-应当在 sudoers 中加入一句话来解决这个问题：
+需要在 sudoers 中加入一行配置来解决该问题：
 
-
-编辑 `/usr/local/etc/sudoers`，找到 `root ALL=(ALL:ALL) ALL` 这行，一般是在第 94 行。在这行下面加一句：
+编辑 `/usr/local/etc/sudoers`，找到 `root ALL=(ALL:ALL) ALL` 这一行，通常位于第 94 行左右。在这行下面加一句：
 
 ```sh
 你的普通用户名 ALL=(ALL:ALL) ALL
@@ -169,8 +168,7 @@ sudo-rs 是一款采用 Rust 编写的、以安全为导向并具备内存安全
 
 ### 与 sudo 不共存的安装方案
 
-即安装 sudo-rs 必须先卸载 sudo，此安装方式下二者不共存。
-
+即安装 sudo-rs 前必须先卸载 sudo，在该安装方式下二者不共存。
 
 - 使用 pkg 安装：
 
@@ -192,7 +190,7 @@ sudo-rs 是一款采用 Rust 编写的、以安全为导向并具备内存安全
 
 即系统中同时存在 sudo 与 sudo-rs。
 
-- 使用 pkg 安装
+- 使用 pkg 安装：
 
 ```sh
 # pkg ins sudo-rs-coexist
@@ -370,7 +368,7 @@ root ALL=(ALL:ALL) ALL
 
 ```sh
 ykla@ykla:~ $ sudo su
-[sudo: authenticate] Password: # 这里同样什么也没有，*** 也没有
+[sudo: authenticate] Password: # 此处同样不会显示任何输入内容，*** 这种掩码也没有
 # 
 ```
 
@@ -381,4 +379,4 @@ ykla@ykla:~ $ sudo su
 - [FreeBSD MAC 簡單介紹](https://sandb0x.tw/a/FreeBSD_MAC_%E7%B0%A1%E5%96%AE%E4%BB%8B%E7%B4%B9)
 - [man mac_do(4)](https://man.freebsd.org/cgi/man.cgi?mac_do(4))
 
-此部分比较简单，读者可自行了解或直接提交 PR 到本书。
+此部分内容较为简单，读者可自行了解，或直接向本书提交 PR。

@@ -2,9 +2,9 @@
 
 ## 账户类型
 
-要想访问 FreeBSD，你必须有一个账户，而且所有进程都是以不同账户的名义启动的。
+要想访问 FreeBSD，你必须有一个账户，而且所有进程都是以某个账户的名义启动的。
 
-Ports 中的 `sysutils/htop` 提供的 `htop` 命令能够清晰地显示这一点（注意“USER”）：
+Ports 中的 `sysutils/htop` 提供的 `htop` 命令能够清晰地显示这一点（注意 “USER” 列）：
 
 ```sh
   PID△USER       PRI  NI  VIRT   RES S   CPU% MEM%   TIME+  Command
@@ -32,7 +32,7 @@ Ports 中的 `sysutils/htop` 提供的 `htop` 命令能够清晰地显示这一�
 
 可以看到系统中存在 `ykla`、`root`、`_dhcp`、`messagebus`、`ntpd` 这几个用户账户。
 
-FreeBSD 中主要有三类账户：系统账户、用户账户，以及超级用户账户。
+FreeBSD 中主要有三类账户：系统账户、普通用户账户，以及超级用户账户。
 
 超级用户账户拥有系统中的最高权限，即 root 账户。
 
@@ -40,15 +40,15 @@ FreeBSD 中主要有三类账户：系统账户、用户账户，以及超级用
 >
 >实际上是内核根据账户的 EUID（有效用户 ID）是否为 `0` 来判定其是否拥有 root 权限。参见 [main/sys/kern/kern_priv.c](https://github.com/freebsd/freebsd-src/blob/main/sys/kern/kern_priv.c) 中的 `if (suser_enabled(cred))` 代码块部分。
 
-系统账户由源代码中的 [main/etc/master.passwd](https://github.com/freebsd/freebsd-src/blob/main/etc/master.passwd) 所定义，总共 27 个。故，`_dhcp`、`ntpd` 都属于系统账户。系统账户是具有受限权限的专用账户，通常用于运行系统服务和守护进程。
+系统账户由源代码中的 [main/etc/master.passwd](https://github.com/freebsd/freebsd-src/blob/main/etc/master.passwd) 定义，写作时总计 27 个。故，`_dhcp`、`ntpd` 都属于系统账户。系统账户是具有受限权限的专用账户，通常用于运行系统服务和守护进程。
 
-`ykla` 是笔者在安装系统时创建的普通用户账户。如果希望通过 `su` 命令切换为 `root` 用户，必须将该用户加入 `wheel` 用户组。而 `messagebus` 是 Port `devel/dbus` 自动创建的普通用户。
+`ykla` 是笔者在安装系统时创建的普通用户账户。如果希望通过 `su` 命令切换为 `root` 用户，必须将该用户加入 `wheel` 用户组。而 `messagebus` 是 Port `devel/dbus` 自动创建的系统用户。
 
 需要注意的是，虽然普通用户权限受限，但其运行的软件越多，系统暴露的攻击面也会增加，从而带来潜在的提权风险。这并不意味着账户“自动”变得更危险——用户的权限是固定的，不会因为运行进程增加而发生权限提升。相反，只有在程序存在漏洞或配置不当的情况下，攻击者才可能尝试利用这些进程实现权限提升。
 
 ## `adduser` 创建用户
 
-- 创建一个普通用户（用户名为 `ykla`），并将其添加到 `video` 分组：
+- 创建一个普通用户（用户名为 `ykla`），并将其添加到 `video` 组：
 
 ```sh
 # adduser -g video -s sh -w yes
@@ -58,7 +58,7 @@ FreeBSD 中主要有三类账户：系统账户、用户账户，以及超级用
 示例：创建一个名为 test 的用户，并将其添加到 wheel 组，设置其默认 shell 是 sh：
 
 ```sh
-#  adduser
+root@ykla:/ #  adduser
 Username: test # 用户名 ①
 Full name:  # 全名，可留空
 Uid (Leave empty for default): # UID 设置，可留空
@@ -66,9 +66,9 @@ Login group [test]: # 登录组
 Login group is test. Invite test into other groups? []: wheel # 设置要加入的组，多个用空格隔开，可留空
 Login class [default]: # 登录分类，可留空
 Shell (sh csh tcsh git-shell bash rbash nologin) [sh]: sh  # 除非手动设置默认 shell，否则 shell 为 sh
-Home directory [/home/test]: #指定家目录
+Home directory [/home/test]: # 指定家目录
 Home directory permissions (Leave empty for default): # 指定家目录权限
-Enable ZFS encryption? (yes/no) [no]: # 是否使用 zfs 加密
+Enable ZFS encryption? (yes/no) [no]: # 是否使用 ZFS 加密
 Use password-based authentication? [yes]:  # 是否使用密码
 Use an empty password? (yes/no) [no]:   # 是否空密码
 Use a random password? (yes/no) [no]:   # 是否随机密码
@@ -86,14 +86,14 @@ Home       : /home/test
 Home Mode  :
 Shell      : /bin/sh
 Locked     : no
-OK? (yes/no): yes # 检查有错误否
+OK? (yes/no): yes # 检查是否有错误
 adduser: INFO: Successfully created ZFS dataset (zroot/home/test).
 adduser: INFO: Successfully added (test) to the user database.
 Add another user? (yes/no): no # 还需要创建另一个账号吗？
 Goodbye!
 ```
 
-- ①：登录名命名有一些限制，参见 [passwd(5)](https://man.freebsd.org/cgi/man.cgi?query=passwd&sektion=5&format=html)。但是注意，不支持八位编码字符集，如不支持中文（即仅支持特定 ASCII 字符）。
+- ①：登录名命名有一些限制，参见 [passwd(5)](https://man.freebsd.org/cgi/man.cgi?query=passwd&sektion=5&format=html)。但是注意，不支持八位编码字符集，例如不支持中文（即仅支持特定 ASCII 字符）。
 
 ## `rmuser` 删除用户与 `passwd` 密码修改
 
@@ -110,7 +110,7 @@ Removing user (test2): home passwd.
 
 参数 `-y` 用于跳过确认步骤。
 
-- `chpass` 命令，以 `vi` 编辑器方式打开并修改指定用户信息，如不指定用户则默认为当前用户。
+- `chpass` 命令以 `vi` 编辑器方式打开并修改指定用户信息，如不指定用户则默认为当前用户。
 
 >**技巧**
 >
@@ -132,7 +132,7 @@ root 用户可修改所有用户的密码。
 
 ## `pw` 命令
 
-在 FreeBSD 中，可以用 `pw` 命令管理用户和组：
+在 FreeBSD 中，可以使用 `pw` 命令管理用户和组：
 
 - 创建 `admin` 分组，并将用户 `ykla` 同时添加到 `admin` 和 `wheel` 分组：
 
@@ -171,13 +171,13 @@ uid=1001(ykla) gid=1001(ykla) groups=1001(ykla),0(wheel),1002(admin)
 
 `admin` 和 `wheel` 权限的区别：
 
-- `admin`，具有管理系统的权限（sudo 的默认配置如此），可以使用 `sudo` 命令。
+- `admin`，具有管理系统的权限（sudo 的默认配置如此），可以使用 `sudo` 命令执行特权操作。
 - `wheel`，超级管理员权限（该名称来源于俚语 big wheel，即大人物）。
 
 
 ### `pw useradd` 命令
 
-用于新建用户
+用于新建用户。
 
 示例：
 
@@ -192,7 +192,7 @@ uid=1001(ykla) gid=1001(ykla) groups=1001(ykla),0(wheel),1002(admin)
 
 用于修改用户信息，常用参数：
 
-`-l`，为用户改名 其他参数参考 useradd 子命令。
+`-l`，为用户改名；其他参数参考 `useradd` 子命令。
 
 示例：
 
@@ -202,7 +202,7 @@ uid=1001(ykla) gid=1001(ykla) groups=1001(ykla),0(wheel),1002(admin)
 
 ### `pw userdel` 命令
 
-用于删除用户，常用参数：
+用于删除用户，常用参数如下：
 
 `-r`，删除用户同时删除用户主目录及所有相关信息；若不使用该参数则信息保留，仅删除用户
 
@@ -232,7 +232,7 @@ test2:$6$FkxPcs2y.Y8cxyuj$kVDoV1LC.IWKGlSitll3oLArF18aHQYID0JYE.TUuD0YFgba.c7MbG
 
 ### `pw lock` 命令
 
-锁定账号，锁定后账号无法登录使用，
+锁定账号，锁定后账号无法登录使用。
 
 示例：
 
@@ -242,7 +242,7 @@ test2:$6$FkxPcs2y.Y8cxyuj$kVDoV1LC.IWKGlSitll3oLArF18aHQYID0JYE.TUuD0YFgba.c7MbG
 
 ### `pw unlock` 命令
 
-解锁账号，解锁后账号可以正常使用，
+解锁账号，解锁后账号可以正常使用。
 
 示例：
 
@@ -296,7 +296,7 @@ test2:$6$FkxPcs2y.Y8cxyuj$kVDoV1LC.IWKGlSitll3oLArF18aHQYID0JYE.TUuD0YFgba.c7MbG
 
 ### `pw groupshow` 命令
 
-用于显示组信息，
+用于显示组信息。
 
 示例：
 
@@ -307,7 +307,7 @@ test5:*:1202:test1
 
 ### `pw groupnext` 命令
 
-可返回下一个可用的 `gid`，
+可返回下一个可用的 `gid`。
 
 示例：
 

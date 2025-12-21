@@ -4,27 +4,27 @@
 
 ```sh
 \
-├── COPYRIGHT FreeBSD 版权信息
-├── boot 操作系统引导过程中使用的程序和配置文件。
+├── COPYRIGHT FreeBSD 版权信息文件
+├── boot 操作系统引导过程中使用的程序和配置文件
 │   ├── fonts 终端字体
 │   ├── device.hints 用于控制驱动程序的内核变量，参见 device.hints(5)
 │   ├── uboot 空目录
-│   ├── firmware pkg kmod 会安装至此，同 fwget
+│   ├── firmware pkg kmod 会安装至此，以及通过 fwget 下载的固件
 │   ├── loader.conf.d loader 配置文件的子项
 │   ├── lua 启动加载器的 lua 脚本，包含启动时显示的 ASCII 艺术字（图）等，参见 loader_lua(8) 
 │   ├── zfs 存放 ZFS 存储池（Zpool）的缓存文件 zpool.cache，参见 zpool(8)
 │   ├── kernel 内核及内核模块
 │   ├── images 启动时显示的 FreeBSD Logo 等
 │   ├── modules 旧时 pkg kmod 会安装至此，如 drm-kmod
-│   ├── efi EFI 挂载至此
+│   ├── efi EFI 系统分区挂载至此
 │   ├── dtb 设备树 DTB 文件，x86 架构下应为空
 │   └── defaults 存放默认内核的默认引导配置文件，是个详细的示例说明文件，参见 loader.conf(5)  
 ├── media 媒体文件挂载点，如 U 盘，光盘
 ├── mnt 用作临时挂载点的空目录
-├── tmp 临时文件
+├── tmp 通常在系统重启后仍会保留的临时文件
 ├── root root 的家目录
-├── proc 现代 FreeBSD 不使用 procfs，该目录无意义
-├── zroot 同 ZFS 池的名称，我也不知道干什么用的，看起来是空的
+├── proc 现代 FreeBSD 默认不使用 procfs，该目录通常为空
+├── zroot 与 ZFS 池同名的目录，通常为空，作用未知
 ├── var 多种用途的日志、临时、瞬态、缓存文件
 │   ├── db 存放系统和应用程序的数据文件，如 pkg 的数据库等
 │   ├── games 存放与游戏相关的数据文件，默认为空
@@ -50,7 +50,7 @@
 │   └── tmp 通常会在系统重启后保留的临时文件
 ├── rescue 静态链接的系统工具，紧急模式时用，参见 rescue(8)
 ├── dev 存放设备文件和特殊文件，参见 devfs(5)
-│   ├── reroot reboot -r 用
+│   ├── reroot reboot -r 使用
 │   ├── input 存放输入设备相关的设备文件
 │   ├── nvd0 NVMe 第一块固态硬盘
 │   ├── nvd0p1 第一块固态硬盘的第一个分区
@@ -64,8 +64,8 @@
 │   └── pts 伪终端设备，参见 pts(4)
 ├── etc 基本系统配置文件和脚本
 │   ├── auto_master autofs 配置文件，参见 automount(8)
-│   ├── crontab root 的 crontab 文件
-│   ├── devfs.conf 启动时的设备参数
+│   ├── crontab root 用户的 crontab 文件
+│   ├── devfs.conf 启动时的 devfs 设备规则配置
 │   ├── freebsd-update.conf 基本系统更新工具 freebsd-update 的配置文件，参见 freebsd-update(8)
 │   ├── fstab 文件分区表，参见 fstab(5)
 │   ├── hosts hosts 文件，优先于 DNS 的本地 IP 域名映射表
@@ -77,7 +77,7 @@
 │   ├── ntp.conf NTP 客户端配置文件，参见 ntpd(8)
 │   ├── pf.conf PF 防火墙配置文件，参见 pf(4)
 │   ├── rc.conf 系统 RC，参见 rc.conf(5)
-│   ├── resolv.conf DNS 解析，参见 resolv.conf(5)
+│   ├── resolv.conf DNS 解析配置文件，参见 resolv.conf(5)
 │   ├── sysctl.conf 内核状态默认值，参见 sysctl.conf(5)
 │   ├── syslog.conf 系统日志配置文件
 │   ├── ttys 创建 TTY 的规则文件，参见 getty(8)
@@ -88,7 +88,7 @@
 │   ├── X11 X11 相关，如 XRDP
 │   ├── rc.conf.d 存放特定服务的配置文件，默认为空
 │   ├── cron.d 存放系统级的定时任务配置文件，参见 crontab(1)、cron(8)
-│   ├── profile.d 存放脚本文件，这些脚本在用户登录时由 shell 执行。但不会自动加载。
+│   ├── profile.d 存放脚本文件，这些脚本可在用户登录时由 shell 执行，但不会自动加载
 │   ├── ppp PPP 相关配置，参见 ppp(8)
 │   ├── defaults 存放了一组默认配置文件，如 rc.conf、periodic.conf。
 │   ├── zfs ZFS 相关配置文件，参见 zfs(8)
@@ -113,7 +113,7 @@
 │   ├── syslog.d syslogd 的配置文件，参见 syslog(3)
 │   ├── newsyslog.conf.d newsyslog 的配置文件，参见 newsyslog.conf(5)
 │   └── security OpenBSM 审计配置文件
-├── libexec 系统级的可执行文件
+├── libexec 系统级辅助可执行程序
 │   └── resolvconf 管理 DNS 解析配置的程序，参见 resolvconf.conf(5)
 ├── net NFS 共享挂载点，参见 auto_master(5)
 ├── home 普通用户家目录
@@ -137,7 +137,7 @@
 │   └── sbin 用户系统管理实用程序
 ├── lib /bin、/sbin 的库文件
 │   ├── geom GEOM 库，参见 geom(8)
-│   └── nvmecontrol NVME 用，参见 nvmecontrol(8)
+│   └── nvmecontrol NVMe 相关工具，参见 nvmecontrol(8)
 └── sbin 基本的 BSD 系统管理工具
 ```
 
