@@ -2,11 +2,11 @@
 
 >**警告**
 >
->目前因为 [Bug 287955 - x11/gdm: The user cannot log in; the system hangs at the login screen in gdm 47](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=287955)，目前 gdm 无法正常使用，会卡在登录界面，`startx` 正常。
+>目前因为 [Bug 287955 - x11/gdm: The user cannot log in; the system hangs at the login screen in gdm 47](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=287955)，gdm 无法正常使用，会卡在登录界面，`startx` 正常。
 >
 >虚拟机正常。
 
-GNOME 过去曾是 GNU 项目，旨在开发一套功能齐全的桌面环境。现在已经被红帽公司完全控制。值得注意的是，在英语单词中，GNOME 中的 `G` 并不发音（/ˈnoʊm/）。
+GNOME 过去曾是 GNU 项目，旨在开发一套功能齐全的桌面环境，目前主要由红帽公司主导。值得注意的是，在英语单词中，GNOME 中的 `G` 并不发音（/ˈnoʊm/）。
 
 ## 安装
 
@@ -29,8 +29,8 @@ GNOME 过去曾是 GNU 项目，旨在开发一套功能齐全的桌面环境。
 |     软件      |            用途            |
 | :-----------: | :------------------------: |
 |     xorg      |            X11             |
-|     gnome     |        Gnome 主程序        |
-|    noto-sc    |     思源黑体——简体中文     |
+|     gnome     |        GNOME 主程序       |
+|    noto-sc    |  思源黑体（简体中文）   |
 
 
 ### 附录：精简安装
@@ -51,7 +51,7 @@ GNOME 过去曾是 GNU 项目，旨在开发一套功能齐全的桌面环境。
 # cd /usr/ports/devel/xdg-user-dirs/ && make install clean
 ```
 
-- 解释
+- 软件包解释
 
 
 | 包名             | 作用             |
@@ -59,7 +59,9 @@ GNOME 过去曾是 GNU 项目，旨在开发一套功能齐全的桌面环境。
 | `xorg-minimal`   | 精简版 X 图形环境 |
 | `gnome-lite`     | 精简版 GNOME 桌面 |
 
-如果安装了完整版本也可以使用 pkg 包管理器卸载自带的游戏软件：
+#### 附录：对 GNOME 完整版本的精简
+
+如果安装了完整版本，也可以使用 pkg 包管理器卸载自带的游戏软件：
 
 ```sh
 # pkg delete gnome-2048 gnome-klotski gnome-tetravex gnome-mines gnome-taquin gnome-sudoku gnome-robots gnome-nibbles lightsoff tali quadrapassel swell-foop gnome-mahjongg five-or-more iagno aisleriot four-in-a-row
@@ -94,7 +96,7 @@ $ echo "/usr/local/bin/gnome-session" > ~/.xinitrc
 
 ![FreeBSD Gnome](../.gitbook/assets/gnome1.png)
 
-默认是禁止 root 登录的。
+默认情况下禁止 root 登录。
 
 ![FreeBSD Gnome](../.gitbook/assets/gnome2.png)
 
@@ -122,11 +124,11 @@ LC_MESSAGES="zh_CN.UTF-8"
 
 ### 中文输入法
 
-以下 `ibus`、`fcitx5` 二选一即可。
+以下 `ibus`、`fcitx5` 二选一即可使用。
 
 #### ibus
 
-gnome 捆绑的输入法面板是 `ibus`。
+GNOME 捆绑的输入法框架是 `ibus`。
 
 ```sh
 # pkg install zh-ibus-libpinyin
@@ -141,11 +143,15 @@ gnome 捆绑的输入法面板是 `ibus`。
 
 安装后运行初始化命令 `ibus-setup`。
 
-然后：设置——>键盘——>输入源，“添加输入源”，选择“汉语(中国)”。加入“中文（智能拼音）”
+然后：设置 → 键盘 → 输入源，点击“添加输入源”，选择“汉语（中国）”，加入“中文（智能拼音）”。
 
 #### fcitx 5
 
-参见输入法相关章节。需要注意 IBus 是 gnome 的依赖，不能卸载。也就是说你可以不用 IBus，但是不能卸载。
+参见输入法相关章节。
+
+>**警告**
+>
+>IBus 是 GNOME 的依赖，不能卸载。也就是说可以不使用 IBus，但不能将其卸载，否则将卸载 GNOME 本体。
 
 ![FreeBSD Gnome](../.gitbook/assets/gnome4-1.png)
 
@@ -162,15 +168,15 @@ gnome 捆绑的输入法面板是 `ibus`。
 # make install clean
 ```
 
-## 一些反人类设置的调整
+## 一些不符合常规使用习惯的设置调整
 
-GNOME 一直以反人类著称：桌面不让放图标、右上角没托盘等等。~~是不是和垃圾桶不能有垃圾、人不能在床上、门不能关、桌子上不能放东西有异曲同工之妙~~
+GNOME 一直以不符合部分用户使用习惯著称，例如桌面不允许放置图标、右上角没有托盘等。~~是不是和垃圾桶不能有垃圾、人不能在床上、门不能关、桌子上不能放东西有异曲同工之妙~~
 
 ### 恢复 GNOME 顶栏的托盘图标
 
-需要安装火狐浏览器 `www/firefox` 及 Port `x11-chrome-gnome-shell`。
+需要安装 Firefox 浏览器 `www/firefox` 及 Port `x11-chrome-gnome-shell`。
 
-由于 [TopIcons Plus](https://extensions.gnome.org/extension/1031/topicons/) 已经长期不更新了，所以只能用 [AppIndicator and KStatusNotifierItem Support](https://extensions.gnome.org/extension/615/appindicator-support/) 了。
+由于 [TopIcons Plus](https://extensions.gnome.org/extension/1031/topicons/) 已长期未更新，因此只能使用 [AppIndicator and KStatusNotifierItem Support](https://extensions.gnome.org/extension/615/appindicator-support/) 了。
 
 ![Gnome 恢复 GNOME 顶栏的托盘图标](../.gitbook/assets/gnome3.png)
 
@@ -190,9 +196,9 @@ GNOME 一直以反人类著称：桌面不让放图标、右上角没托盘等�
 
 ### 在桌面放图标
 
-扩展 [gnome-shell-extension-desktop-icons](https://extensions.gnome.org/extension/1465/desktop-icons/) 已经长期未更新，项目地址：[Desktop Icons](https://gitlab.gnome.org/World/ShellExtensions/desktop-icons)。
+扩展 [gnome-shell-extension-desktop-icons](https://extensions.gnome.org/extension/1465/desktop-icons/) 已经长期未更新，项目地址为：[Desktop Icons](https://gitlab.gnome.org/World/ShellExtensions/desktop-icons)。
 
-可以用 [Desktop Icons NG (DING)](https://extensions.gnome.org/extension/2087/desktop-icons-ng-ding/) 解决。安装方式同上。
+可以使用 [Desktop Icons NG (DING)](https://extensions.gnome.org/extension/2087/desktop-icons-ng-ding/) 解决。安装方式同上。
 
 ![Gnome 在桌面放图标](../.gitbook/assets/gnome9.png)
 

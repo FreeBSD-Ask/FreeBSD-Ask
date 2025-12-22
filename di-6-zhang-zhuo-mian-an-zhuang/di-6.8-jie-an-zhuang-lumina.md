@@ -1,13 +1,13 @@
 # 6.8 Lumina
 
-Lumina 使用 BSD 许可证。Lumina 技术栈为 QT5，不使用任何基于 Linux 的桌面框架，主张轻量化。
+Lumina 使用 BSD 许可证。Lumina 技术栈为 Qt 5，不使用任何基于 Linux 的桌面框架，主张轻量化。
 
-2025.1.8 测试在 VMware 中无法进入桌面，进入后闪退。参见 [Some problem Under FreeBSD 13.2 with Xorg and Lumina Desktop...How to solve?](https://forums.freebsd.org/threads/some-problem-under-freebsd-13-2-with-xorg-and-lumina-desktop-how-to-solve.88882/)。但是在 VirtualBox 中显示正常。
+2025 年 01 月 08 日，测试显示在 VMware 中无法进入桌面，或进入后闪退。参见 [Some problem Under FreeBSD 13.2 with Xorg and Lumina Desktop...How to solve?](https://forums.freebsd.org/threads/some-problem-under-freebsd-13-2-with-xorg-and-lumina-desktop-how-to-solve.88882/)。但是在 VirtualBox 中显示正常。
 
 
 >**注意**
 >
->[Lumina](https://github.com/lumina-desktop/lumina) 在换了开发者后，开发长期处于停滞状态，我向其提交的 pull 长期无人处理，并且没有新的 commit 信息。
+>[Lumina](https://github.com/lumina-desktop/lumina) 在更换主维护者后，开发长期处于停滞状态，我向其提交的 pull request 长期无人处理，并且没有新的提交记录。
 
 ## 安装
 
@@ -28,14 +28,14 @@ Lumina 使用 BSD 许可证。Lumina 技术栈为 QT5，不使用任何基于 Li
 # cd /usr/ports/devel/xdg-user-dirs/ && make install clean 
 ```
 
-- 解释
+- 软件包说明
 
-| 包名                   | 作用说明                                                                 |
+| 包名                   | 功能说明                                                                 |
 |:------------------------|:--------------------------------------------------------------------------|
 | `lumina`               | Lumina 桌面环境 |
-| `xorg`                 | X Window 系统 |
+| `xorg`                 |X Window System（X11）|
 | `lightdm`              | 轻量级显示管理器 LightDM|
-| `lightdm-gtk-greeter`  | LightDM 的 GTK+ 登录界面插件。缺少将无法启动 LightDM |
+| `lightdm-gtk-greeter`  |LightDM 的 GTK+ 登录界面插件，缺少该组件将无法启动 LightDM|
 | `wqy-fonts`            | 文泉驿中文字体|
 | `xdg-user-dirs`        | 管理用户目录，如“桌面”、“下载”等 |
 
@@ -58,7 +58,7 @@ exec lumina-desktop
 
 ## 中文化
 
-在 `/etc/rc.conf` 下加入：
+在 `/etc/rc.conf` 中加入：
 
 ```sh
 lightdm_env="LC_MESSAGES=zh_CN.UTF-8" 

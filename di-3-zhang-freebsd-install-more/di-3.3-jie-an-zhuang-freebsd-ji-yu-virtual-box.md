@@ -186,7 +186,7 @@ You may ignore the yellow alert that encourages use of VMSVGA.
 # pw groupmod wheel -m ykla # 将笔者的普通用户 ykla 加入 wheel 组以获得权限，你需要改成你自己的普通用户
 ```
 
-## 故障排除与未尽事宜
+## 故障排除与未竟事宜
 
 ### EFI 下无法正常关机
 

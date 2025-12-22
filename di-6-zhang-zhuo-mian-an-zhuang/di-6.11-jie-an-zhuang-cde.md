@@ -1,6 +1,6 @@
 # 6.11 CDE
 
-CDE 是 Common Desktop Environment（通用桌面环境）的缩写。是一款历史悠久的桌面环境，常被用于 Unix 商业发行版。
+CDE 是 Common Desktop Environment（通用桌面环境）的缩写，是一款历史悠久的桌面环境，常被用于 Unix 商业发行版。
 
 
 ## 安装软件
@@ -21,14 +21,14 @@ CDE 是 Common Desktop Environment（通用桌面环境）的缩写。是一款�
 ```
 
 
-- 解释：
+- 软件包说明：
 
 | 包名             | 作用说明                                                                 |
 |:------------------|:--------------------------------------------------------------------------|
-| `xorg`           |X Window 系统                                          |
-| `cde`            | CDE 提供传统的桌面环境                            |
+| `xorg`           |X Window System                                        |
+| `cde`            | 提供传统的 CDE 桌面环境                       |
 | `wqy-fonts`      | 文泉驿中文字体                                          |
-| `xdg-user-dirs`  | 管理用户目录，如“桌面”、“下载”等。                                           |
+| `xdg-user-dirs`  | 管理用户目录，如“桌面”“下载”等                                         |
 
 
 
@@ -47,7 +47,7 @@ released under an Open source license by The Open Group.
 
 Common Desktop Environment requires the Subprocess Control Service,
 dtcms, and the inetd super server to fully function.
-# 要完整运行 CDE，需启用子进程控制服务（dtspc）、日历管理服务（dtcms）以及 inetd 超级服务器。
+# 要完整运行 CDE，需启用子进程控制服务（dtspc）、日历管理服务（dtcms）以及 inetd 超级服务器进程。
 
 First, add the following line to /etc/inetd.conf:
 
@@ -103,7 +103,7 @@ To start the Common Desktop Enviroment Login Manager:
 # echo "allowed_users=anybody" > /usr/local/etc/X11/Xwrapper.config
 ```
 
-- 为了 `startx`
+- 为 `startx` 配置启动脚本
 
 ```sh
 # ln -s /usr/local/dt/bin/Xsession ~/.xinitrc
@@ -139,7 +139,7 @@ dtspc		6112/tcp
 
 ![FreeBSD 安装 CDE](../.gitbook/assets/cde4.png)
 
-每次启动时都会在这里卡上几分钟。
+每次启动时都会在此处停顿数分钟。
 
 ![FreeBSD 安装 CDE](../.gitbook/assets/cde1.png)
 
@@ -151,11 +151,11 @@ dtspc		6112/tcp
 
 （似乎日历是中文）
 
-根据源码 <https://sourceforge.net/p/cdesktopenv/code/ci/master/tree/cde/imports/motif/localized/>，不存在中文支持。但是根据 [简体中文 Solaris 用户指南](https://docs.oracle.com/cd/E19683-01/816-0668/6m7500nqp/index.html)，其明显存在简体中文支持，疑似在开源中弄丢了，或者 Solaris 是个分支未合并。已经反馈至 [Missing Simplified Chinese locale support under cde/imports/motif/localized](https://sourceforge.net/p/cdesktopenv/discussion/general/thread/c51abcd846/)。
+根据源码 <https://sourceforge.net/p/cdesktopenv/code/ci/master/tree/cde/imports/motif/localized/>，未存在简体中文支持。但是根据 [简体中文 Solaris 用户指南](https://docs.oracle.com/cd/E19683-01/816-0668/6m7500nqp/index.html)，其明显存在简体中文支持，疑似在开源过程中丢失，或 Solaris 为未合并的分支。已经反馈至 [Missing Simplified Chinese locale support under cde/imports/motif/localized](https://sourceforge.net/p/cdesktopenv/discussion/general/thread/c51abcd846/)。
 
 
 ## 参考文献
 
 - [cde Common Desktop Environment](https://www.freshports.org/x11/cde)，Ports 详情
 - [Setting up Common Desktop Environment for modern use](https://forums.freebsd.org/threads/setting-up-common-desktop-environment-for-modern-use.69475/)，详细配置可参考此处
-- [CDE - Common Desktop Environment Wiki](https://sourceforge.net/p/cdesktopenv/wiki/FreeBSDBuild/)，CDE 项目官方 WiKi
+- [CDE - Common Desktop Environment Wiki](https://sourceforge.net/p/cdesktopenv/wiki/FreeBSDBuild/)，CDE 项目官方 Wiki

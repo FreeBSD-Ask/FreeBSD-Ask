@@ -1,6 +1,8 @@
 # 6.6 Xfce
 
-Xfce 旨在开发一款轻量级但功能齐全的桌面。Xfce 的 Logo 是只 [老鼠 🐀](https://docs.xfce.org/faq#what_does_it_mean)，曾有人反馈 bug 称因 Xfce 屏幕壁纸是只老鼠 🐀 导致自己的电脑屏幕被猫 🐈 抓坏了（[\[joke\] The default desktop startup screen causes damage to monitor!](https://bugzilla.xfce.org/show_bug.cgi?id=12117)）。
+Xfce 旨在开发一款轻量级但功能齐全的桌面环境。
+
+Xfce 的 Logo 是只 [老鼠 🐀](https://docs.xfce.org/faq#what_does_it_mean)，曾有人反馈 Bug，称因 Xfce 的默认壁纸是一只老鼠 🐀，导致自己的电脑屏幕被猫 🐈 抓坏了（[\[joke\] The default desktop startup screen causes damage to monitor!](https://bugzilla.xfce.org/show_bug.cgi?id=12117)）。
 
 ## 安装 xfce4
 
@@ -21,21 +23,20 @@ Xfce 旨在开发一款轻量级但功能齐全的桌面。Xfce 的 Logo 是只 
 # cd /usr/ports/x11/lightdm-gtk-greeter/ && make install clean
 # cd /usr/ports/x11/lightdm-gtk-greeter-settings/ && make install clean
 # cd /usr/ports/devel/xdg-user-dirs/ && make install clean 
-# cd /usr/ports/x11/xfce4-goodies/ && make install clean
 ```
 
 - 解释
 
 | 包名                          | 作用说明                               |
 |:-------------------------------|:------------------------------------|
-| `xorg`                        |  X Window 系统|
+| `xorg`                        |  X Window System|
 | `lightdm`                     | 轻量级显示管理器 LightDM |
 | `lightdm-gtk-greeter`         | LightDM 的 GTK+ 登录界面插件|
 | `xfce`                        | Xfce 桌面环境 |
 | `wqy-fonts`                   | 文泉驿中文字体|
 | `xdg-user-dirs`               | 管理用户主目录 |
-| `xfce4-goodies`               | XFCE 的附加组件和插件集合 |
-| `lightdm-gtk-greeter-settings`| 配置 LightDM GTK+ 登录界面的图形工具，缺少将无法启动 |
+| `xfce4-goodies`               | Xfce 的附加组件和插件集合 |
+| `lightdm-gtk-greeter-settings`| 配置 LightDM GTK+ 登录界面的图形工具，缺少该组件将无法启动|
 
 
 ## `startx`
@@ -92,7 +93,7 @@ $ echo "/usr/local/etc/xdg/xfce4/xinitrc" > ~/.xsession
 # cd /usr/ports/x11/appmenu-registrar/ && make install clean
 ```
 
-查看安装后说明，安装说明配置：
+查看安装后说明，并按说明进行配置：
 
 ```sh
 $ xfconf-query -c xsettings -p /Gtk/ShellShowsMenubar -n -t bool -s true
@@ -102,9 +103,10 @@ $ xfconf-query -c xsettings -p /Gtk/Modules -n -t string -s "appmenu-gtk-module"
 
 ## 软件推荐
 
-FreeBSD 的 xfce 邮箱客户端推荐用 `mail/evolution`，可搭配 `xfce4-mailwatch-plugin`、`security/gnome-keyring` 一道使用。
+FreeBSD 的 Xfce 邮箱客户端推荐使用 `mail/evolution`，可搭配 `xfce4-mailwatch-plugin`、`security/gnome-keyring` 一并使用。
 
-还有一款桌面插件，叫 `x11/xfce4-verve-plugin`。配合设置智能书签，可以查网页内容。可通过设置 FreeBSD 的 man 手册，就可以搜索需要的内容。
+
+还有一款桌面插件，名为 `x11/xfce4-verve-plugin`。配合设置智能书签，可以查询网页内容。可通过配置 FreeBSD 的 man 手册，实现对所需内容的搜索。
 
 
 ## XTerm 终端动态标题
@@ -200,5 +202,5 @@ fi
 
 ## 故障排除与未竟事宜
 
-需要进一步动态显示当前进程，目前似乎只有 sh 能做到。
+若需进一步动态显示当前进程，目前似乎只有 sh 能做到。
 
