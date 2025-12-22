@@ -646,7 +646,7 @@
   - 新增一节：“第 5.10 节 FreeBSD 安装微信（Linux 版）”
   - “第 5.5 节 FreeBSD 安装金山 WPS（Linux 版）”：新增“基于 RockyLinux 兼容层（FreeBSD Port）”安装 WPS
 - 2024.11.8  
-  - "第 1.1 节 UNIX、Unix-like、Linux 和 FreeBSD 简介"：补充“MacOS/iOS 等与 BSD 的关系”
+  - "第 1.1 节 UNIX、Unix-like、Linux 和 FreeBSD 简介"：补充“macOS/iOS 等与 BSD 的关系”
 - 2024.11.7  
   - “第 6.4 节 NTFS 的挂载”：新建“格式化”、挂载部分。
   - 针对“[Add new category fs for file systems](https://github.com/freebsd/freebsd-ports/pull/302)” 进行修改
