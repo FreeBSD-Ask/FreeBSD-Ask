@@ -23,29 +23,33 @@
 
 ### 使用
 
-- 测试 `.m4a`（杜比 AC-4 编码）、`.flac`、`.av3a`（AVS2/AVS3 编码）音乐：
+测试 `.m4a`（杜比 AC-4 编码）、`.flac`、`.av3a`（AVS2/AVS3 编码）音乐：
 
-Audacious 仅支持 `.flac`，不支持 `.m4a`、`.av3a`。
+>**技巧**
+>
+>Audacious 仅支持 `.flac`，不支持 `.m4a` 和 `.av3a`。
 
 ![](../.gitbook/assets/audacious.png)
 
 ## VLC
 
-安装等方法见其他章节。FreeBSD `ffmpeg` 默认编码没有打开对 libuavs3d（提供了 AVS2/AVS3）的支持。不知道怎样做。
+安装等方法见其他章节。FreeBSD 中的 `ffmpeg` 默认构建未启用对 libuavs3d（提供 AVS2/AVS3 解码支持）的支持，本文不再展开相关配置方法。
 
-经过测试 VLC 可播放 ac4（m4a）：
+经过测试，VLC 可以播放 AC-4（m4a）：
 
 ![](../.gitbook/assets/vlc3.png)
 
 ## 用 MPD 播放 DSD
 
-Music Player Daemon (MPD) 是一款灵活、强大且可扩展的音乐播放器系统，它可以在计算机上运行，并通过各种客户端进行控制。MPD 的主要功能包括：支持各种音频格式，客户端 - 服务器架构，播放列表管理，支持流媒体，跨平台支持等。
+Music Player Daemon（MPD）是一款灵活、强大且可扩展的音乐播放器系统，可运行于计算机上，并通过多种客户端进行控制。
+
+MPD 的主要功能包括：支持多种音频格式、客户端—服务器架构、播放列表管理、流媒体支持以及跨平台运行等。
 
 ### 准备
 
-支持 DSD 的声卡或 DAC，一段 DSD 音频文件。
+需要准备支持 DSD 的声卡或 DAC，以及一段 DSD 音频文件。
 
-以下基于 FreeBSD 14.0，外置 DAC 使用海贝 R3（声卡设置基本类似），使用 oss 驱动。
+以下内容基于 FreeBSD 14.0，外置 DAC 使用海贝 R3（声卡设置基本类似），并使用 OSS 驱动。
 
 ### 安装
 
@@ -74,7 +78,7 @@ No devices installed from userspace.
 
 这里要使用的是 pcm2，对应设备文件 `/dev/dsp2`，下面会使用到。
 
-可以用 `sysctl -d dev.pcm.2` 查看相关硬件参数意义，摘录关键的三条如下：
+可以使用 `sysctl -d dev.pcm.2` 查看相关硬件参数的含义，摘录关键的三项如下：
 
 ```sh
 dev.pcm.2.bitperfect: bit-perfect playback/recording (0=disable, 1=enable)
@@ -82,7 +86,7 @@ dev.pcm.2.play.vchanrate: virtual channel mixing speed/rate
 dev.pcm.2.play.vchanmode: vchan format/rate selection: 0=fixed, 1=passthrough, 2=adaptive
 ```
 
-如下设置 (可以写入 `sysctl.conf` 永久化设置):
+如下所示进行设置（可写入 `sysctl.conf` 以实现永久生效）：
 
 ```sh
 # sysctl dev.pcm.2.bitperfect=1
@@ -90,15 +94,22 @@ dev.pcm.2.play.vchanmode: vchan format/rate selection: 0=fixed, 1=passthrough, 2
 # sysctl dev.pcm.2.play.vchanmode=1
 ```
 
-- 因为使用的 oss 驱动，muscipd 只能用 dop 传输模式，dop 模式要求开启 bitperfect
-- 采样率 (vchanrate)，DSD 采样率为 44.1khz 的倍数，所以不要设为 48khz 的倍数不然会有杂音，在可能的情况下设置为最高，这里是 352.8khz。
-- 0（fixed）：在此模式下，音频设备使用固定的采样率和格式来处理多路音频流。1（passthrough）：在此模式下，音频设备尽可能地保持输入音频流的原始采样率和格式。2（adaptive）：在此模式下，音频设备会根据需要自动适应和转换输入音频流的采样率和格式。
+参数说明：
+
+- 由于使用的是 OSS 驱动，Music Player Daemon 只能采用 DoP 传输模式，而 DoP 模式要求启用 bitperfect。
+- 采样率（vchanrate）：DSD 的采样率为 44.1 kHz 的整数倍，因此不应设置为 48 kHz 的整数倍，否则可能产生杂音；在条件允许的情况下应设置为尽可能高的数值，此处为 352.8 kHz。
+
+- `dev.pcm.2.play.vchanmode`
+  * `0`（fixed）：在该模式下，音频设备使用固定的采样率和格式处理多路音频流。
+  * `1`（passthrough）：在该模式下，音频设备尽可能保持输入音频流的原始采样率和格式。
+  * `2`（adaptive）：在该模式下，音频设备会根据需要自动适配并转换输入音频流的采样率和格式。
+
 
 >**技巧**
 >
->可以用 `dmesg` 查看可用采样率。在非播放非 dsd 文件时，采样率和音频文件采样率相同（或整数倍）为宜，这样可以避免重采样造成的音质损失。采样率不是越高越好，可以多试几次，找到最佳。
-
-```sh
+>可以用 `dmesg` 查看可用采样率。在播放非 DSD 文件时，采样率和音频文件采样率相同（或整数倍）为宜，这样可以避免重采样造成的音质损失。采样率并非越高越好，可以通过多次尝试找到最合适的设置。
++
++```sh
 # dmesg|grep -i pcm2
 pcm2 on uaudio0
 # dmesg|grep -i uaudio0
@@ -121,9 +132,9 @@ uaudio0: No HID volume keys found.
 
 ### 基本设置
 
-musicpd 配置文件为 `/usr/local/etc/musicpd.conf` 。
+Music Player Daemon（musicpd）的配置文件为 `/usr/local/etc/musicpd.conf` 。
 
-里面默认的一些目录为
+其中默认使用的部分目录结构如下：
 
 ```ini
 /var--> mpd --
@@ -131,16 +142,15 @@ musicpd 配置文件为 `/usr/local/etc/musicpd.conf` 。
                |-> .mpd --> playlists
 ```
 
-这些目录要自行建立
+上述目录需要自行创建。
 
 ```sh
 # mkdir -p /var/mpd/music
 # mkdir -p /var/mpd/.mpd/playlists
-# chown -R mpd:mpd /var/mpd
-# chmod 777 /var/mpd/music
+# chown -R mpd:mpd /var/mpd  # 用于将目录的所有者设置为 mpd 用户，避免出现权限问题
+# chmod 777 /var/mpd/music  # 用于存放音乐文件，设置为 777 仅为方便增删文件，实际使用中可根据需要自行调整权限。
 ```
 
-第三行将目录设为用户 mpd 所有，不然可能有权限问题。第四行 music 目录存放音乐文件用，设置 777 是为方便增删文件，自己根据情况设置即可。
 
 修改 `/usr/local/etc/musicpd.conf` ，"Default OSS Device" 一节后面增加一节：
 
@@ -153,7 +163,9 @@ audio_output {
 }
 ```
 
-注意：可以指定多个输出设备，在各种客户端中可以开启关闭指定的输出设备
+>**技巧**
+>
+>可以指定多个输出设备，并在各类客户端中按需启用或禁用相应的输出设备。
 
 
 开启 musicpd 服务
@@ -165,11 +177,10 @@ audio_output {
 
 ### 客户端使用
 
-可以使用 ncmpc (字符界面），MaximumMPD（iphone）等客户端，客户端有很多。
+可以使用 ncmpc（字符界面）、MaximumMPD（iPhone）等多种客户端，客户端选择较为丰富。
 
-pc 端 GUI 建议使用 cantata (`pkg install cantata`)
+PC 端的 GUI 客户端建议使用 Cantata（`pkg install cantata`）。
 
-命令行建议安装 mpc（`pkg install musicpc`), 适合用于绑定桌面环境全局快捷键
-
+命令行环境下建议安装 mpc（`pkg install musicpc`），适合用于绑定桌面环境的全局快捷键。
 
 
