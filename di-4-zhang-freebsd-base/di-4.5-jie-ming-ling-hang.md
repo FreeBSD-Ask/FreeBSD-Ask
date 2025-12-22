@@ -53,7 +53,6 @@ ykla@ykla:/ $ su ③
 Password: ④
 root@ykla:/ #
 
-
 root@ykla:/ # exit ⑤
 ykla@ykla:/ $ exit ⑥
 root@ykla:/ # exit ⑦

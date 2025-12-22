@@ -460,7 +460,7 @@ FreeBSD-runtime-15.snap20241004232339: checksum mismatch for /etc/master.passwd
 - `bsdadminscripts2` 亦可查找当前系统的过时软件：
 
 ```sh
-# pkg_version -ql \<
+# pkg_version -ql\<
 akonadi-23.08.5_1
 build2-0.17.0
 chromium-128.0.6613.137

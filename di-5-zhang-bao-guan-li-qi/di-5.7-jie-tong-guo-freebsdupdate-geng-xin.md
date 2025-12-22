@@ -80,7 +80,7 @@ usr/lib/clang/11.0.1/include
 
 然后安装更新：
 
-``` sh
+```sh
 # freebsd-update install
 ```
 
@@ -88,7 +88,7 @@ usr/lib/clang/11.0.1/include
 
 - 查看更新后的版本：
 
-``` sh
+```sh
 # freebsd-version -kru
 14.3-RELEASE-p5
 14.3-RELEASE
@@ -101,13 +101,13 @@ usr/lib/clang/11.0.1/include
 
 重启：
 
-``` sh
+```sh
 # reboot
 ```
 
 再查看版本：
 
-``` sh
+```sh
 # freebsd-version -kru
 14.3-RELEASE-p5
 14.3-RELEASE-p5
@@ -124,7 +124,7 @@ usr/lib/clang/11.0.1/include
 
 ### 检查版本
 
-``` sh
+```sh
 # freebsd-version -kru
 14.3-RELEASE-p5
 14.3-RELEASE-p5
@@ -145,7 +145,7 @@ usr/lib/clang/11.0.1/include
 
 ### 更新到 15.0-RELEASE
 
-``` sh
+```sh
 # freebsd-update upgrade -r 15.0-RELEASE
 
 ……当出现类似于下列信息时，按照下方提示操作……
@@ -307,7 +307,7 @@ To install the downloaded upgrades, run 'freebsd-update [options] install'.
 
 运行 `freebsd-update install` 以安装更新：
 
-``` sh
+```sh
 # freebsd-update install
 src component not installed, skipped
 Creating snapshot of existing boot environment... done.
@@ -318,7 +318,7 @@ Kernel updates have been installed.  Please reboot and run
 
 内核更新已经安装：
 
-``` sh
+```sh
 # freebsd-version -kru
 15.0-RELEASE
 14.3-RELEASE-p5
@@ -328,13 +328,13 @@ Kernel updates have been installed.  Please reboot and run
 可以看到，当前已安装内核的版本和补丁级别是 15.0-RELEASE。但用户空间和当前正在运行的系统仍是 14.3-RELEASE，因此需要按照 `freebsd-update` 的提示进行重启：
 
 
-``` sh
+```sh
 # reboot
 ```
 
 运行 `freebsd-update install` 安装用户空间的更新部分：
 
-``` sh
+```sh
 # freebsd-update install
 src component not installed, skipped
 Creating snapshot of existing boot environment... done.
@@ -355,7 +355,7 @@ installed from the ports tree) and then run
 
 重新安装 `pkg` 本身，将其 ABI 更新到 15.0-RELEASE：
 
-``` sh
+```sh
 # pkg bootstrap -f
 The package management tool is not yet installed on your system.
 Do you want to fetch and install it now? [y/N]: y # 此处输入 y 后回车
@@ -368,7 +368,7 @@ Extracting pkg-2.4.2: 100%
 
 将第三方程序的 ABI 一并更新到 15.0-RELEASE：
 
-``` sh
+```sh
 # pkg upgrade
 Updating nju repository catalogue...
 Fetching meta.conf:   0%
@@ -401,7 +401,7 @@ Proceed with this action? [y/N]:  # 此处输入 y 再回车即可，可能会�
 再次执行 `freebsd-update` 以结束更新流程。
 
 
-``` sh
+```sh
 # freebsd-update install
 src component not installed, skipped
 Creating snapshot of existing boot environment... done.
@@ -410,7 +410,7 @@ Installing updates... done.
 
 验证操作系统版本：
 
-``` sh
+```sh
 # freebsd-version -kru
 15.0-RELEASE
 15.0-RELEASE
@@ -429,15 +429,15 @@ Installing updates... done.
 
 可以使用命令 `efibootmgr -v` 来确定当前引导加载程序的位置。`BootCurrent` 显示的值是用于引导系统的当下引导配置的编号。输出的相应条目以 `+` 开头，如
 
-``` sh
+```sh
 # efibootmgr -v
 Boot to FW : false
 BootCurrent: 0004
 BootOrder  : 0004, 0000, 0001, 0002, 0003
-+Boot0004* FreeBSD HD(1, GPT, f83a9e2f-bd87-11ef-95b7-000c29761cd2,0x28,0x82000)/File(\efi\freebsd\loader.efi) # 就是这条
++Boot0004* FreeBSD HD(1,GPT,f83a9e2f-bd87-11ef-95b7-000c29761cd2,0x28,0x82000)/File(\efi\freebsd\loader.efi) # 就是这条
                       nda0p1:/efi/freebsd/loader.efi (null)
  Boot0000* EFI VMware Virtual NVME Namespace (NSID 1) PciRoot(0x0)/Pci(0x15,0x0)/Pci(0x0,0x0)/NVMe(0x1,00-00-00-00-00-00-00-00)
- Boot0001* EFI VMware Virtual IDE CDROM Drive (IDE 1:0) PciRoot(0x0)/Pci(0x7,0x1)/Ata(Secondary, Master,0x0)
+ Boot0001* EFI VMware Virtual IDE CDROM Drive (IDE 1:0) PciRoot(0x0)/Pci(0x7,0x1)/Ata(Secondary,Master,0x0)
  Boot0002* EFI Network PciRoot(0x0)/Pci(0x11,0x0)/Pci(0x1,0x0)/MAC(000c29761cd2,0x0)
  Boot0003* EFI Internal Shell (Unsupported option) MemoryMapped(0xb,0xbeb4d018,0xbf07e017)/FvFile(c57ad6b7-0515-40a8-9d21-551652854e37)
 
@@ -462,19 +462,19 @@ ESP 通常已经挂载到了 **/boot/efi**。如果没有，可手动挂载之�
 
 即
 
-``` sh
-**** **** **** **** **** **** **** **** **** **** **** **** **** **** ******
-**** **** **** **** **** **** **** **** **** **** **** **** **** **** ******
-**** *                                                    * ****   
-**** *      BOOT LOADER IS TOO OLD, PLEASE UPGRADE.       * ****
-**** *                                                    * ****
-**** **** **** **** **** **** **** **** **** **** **** **** **** **** ******
-**** **** **** **** **** **** **** **** **** **** **** **** **** **** ****** 
+```sh
+**************************************************************
+**************************************************************
+*****                                                    *****   
+*****      BOOT LOADER IS TOO OLD, PLEASE UPGRADE.       *****
+*****                                                    *****
+**************************************************************
+************************************************************** 
 ```
 
 这表明 loader 需要更新。还可以使用命令进行版本验证：
 
-``` sh
+```sh
 # strings /boot/efi/efi/freebsd/loader.efi|grep FreeBSD|grep EFI
 DFreeBSD/amd64 EFI loader, Revision 1.1
 # strings /boot/loader.efi|grep FreeBSD|grep EFI
@@ -485,7 +485,7 @@ DFreeBSD/amd64 EFI loader, Revision 3.0
 
 更新方法：
 
-``` sh
+```sh
 # cp /boot/loader.efi /boot/efi/efi/freebsd/
 ```
 
@@ -502,7 +502,7 @@ DFreeBSD/amd64 EFI loader, Revision 3.0
 
 ### 回滚更新
 
-``` sh
+```sh
 # freebsd-update rollback
 ```
 
@@ -510,7 +510,7 @@ DFreeBSD/amd64 EFI loader, Revision 3.0
 
 终端执行命令
 
-``` sh
+```sh
 # pkg bootstrap -f
 ```
 
@@ -518,7 +518,7 @@ DFreeBSD/amd64 EFI loader, Revision 3.0
 
 终端执行命令
 
-``` sh
+```sh
 # pw groupadd ntpd -g 123
 # pw useradd ntpd -u 123 -g ntpd -h - -d /var/db/ntp -s /usr/sbin/nologin -c "NTP Daemon"
 ```

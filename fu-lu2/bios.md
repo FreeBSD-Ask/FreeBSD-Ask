@@ -478,7 +478,7 @@ SGX 能够在计算平台上提供一个可信的隔离空间，保障用户关�
 - [英特尔 ® Software Guard Extensions（英特尔 ® SGX）](https://www.intel.cn/content/www/cn/zh/products/docs/accelerator-engines/software-guard-extensions.html)
 - 王鹃, 樊成阳, 程越强, 赵波, 韦韬, 严飞, 张焕国, 马婧. SGX 技术的分析和研究. 软件学报, 2018, 29(9): 2778-2798.<http://www.jos.org.cn/1000-9825/5594.htm>
 - Wei ZHENG, Ying WU, Xiaoxue WU, Chen FENG, Yulei SUI, Xiapu LUO, Yajin ZHOU. A survey of Intel SGX and its applications. Front. Comput. Sci., 2021, 15(3): 153808 <https://doi.org/10.1007/s11704-019-9096-y>
-- トラストを 確立 する 技術 の 概要 <https://www.jnsa.org/seminar/pki-day/2021/data/0415miyazawa.pdf>
+- トラストを確立する技術の概要 <https://www.jnsa.org/seminar/pki-day/2021/data/0415miyazawa.pdf>
 
 #### CPU Flex Ratio Override（CPU 可变倍频覆盖）
 
@@ -1324,23 +1324,23 @@ Vsys 的输入单位为毫伏（mV），Psys 的输入单位为毫瓦（mW），
 
 主要用于控制信号“断言”（assertion）过程中的消隐（deglitch）行为。用以设置断言信号消隐时间，作用是平衡电路中的噪声抑制与信号响应速度。
 
-断言消隐尾数 0x4F [7-3]（存储在 MSR/寄存器地址 0x4F 的第 7 至第 3 位）。断言消隐= 2µs × 尾数 × 2^(指数)
+断言消隐尾数 0x4F[7-3]（存储在 MSR/寄存器地址 0x4F 的第 7 至第 3 位）。断言消隐= 2µs × 尾数 × 2^(指数)
 
 Assertion Deglitch Mantissa（断言消隐指数）
 
 此选项需搭配选项 Assertion Deglitch Mantissa（断言消隐尾数）使用。
 
-断言消隐指数 0x4F [3-0]（存储在 MSR/寄存器地址 0x4F 的第 3 至第 0 位）。断言消隐 = 2µs × 尾数 × 2^(指数)。
+断言消隐指数 0x4F[3-0]（存储在 MSR/寄存器地址 0x4F 的第 3 至第 0 位）。断言消隐 = 2µs × 尾数 × 2^(指数)。
 
 ###### De assertion Deglitch Mantissa（解除消隐尾数）
 
 信号解除激活时的消隐时间计算参数。类似上方的断言消隐。
 
-断言消隐尾数 0x49 [7-3]（存储在 MSR/寄存器地址 0x49 的第 7 至第 3 位）。断言消隐= 2µs × 尾数 × 2^(指数)
+断言消隐尾数 0x49[7-3]（存储在 MSR/寄存器地址 0x49 的第 7 至第 3 位）。断言消隐= 2µs × 尾数 × 2^(指数)
 
 ###### De assertion Deglitch Mantissa（断言消隐指数）
 
-断言消隐指数 0x49 [3-0]（存储在 MSR/寄存器地址 0x49 的第 3 至第 0 位）。断言消隐 \= 2µs × 尾数 × 2\^(指数)。
+断言消隐指数 0x49[3-0]（存储在 MSR/寄存器地址 0x49 的第 3 至第 0 位）。断言消隐 \= 2µs × 尾数 × 2\^(指数)。
 
 ###### VR Power Delivery Design（电源调节器供电架构设计）
 
@@ -3796,7 +3796,7 @@ Not Happened（未发生）：嵌入式控制器软未重置过
 
 #### External FAN/PWM Settings（外部风扇 ／PWM 设置）
 
-当 SMARC（Smart Mobility ARChitecture，智能移动架构）相关配置中的 PWM／ 风扇管理启用时可见。
+当 SMARC（Smart Mobility ARChitecture，智能移动架构）相关配置中的 PWM／风扇管理启用时可见。
 
 参考文献：[PWM 信号占空比，如何影响散热风扇速度？](https://post.smzdm.com/p/a5p056o3/)
 
@@ -5125,7 +5125,7 @@ Mixed 2DPC：指每个内存通道插入两根不同规格（如品牌、容量�
 
 眼宽（Eye Width）： 眼宽是指眼图中信号时钟周期的宽度，即从信号的一个边沿（上升沿或下降沿）到下一个相同边沿的水平距离。眼宽的大小反映了信号的时序稳定性即信号的边沿是否清晰且稳定。
 
-参见：[10 分钟教会你看眼图，太有用了！！](https://www.eet-china.com/mp/a35960.html) [DisplayPort 测试中的眼高和眼宽分别是什么？ - 高速信号测试](https://www.claudelab.com/article-item-161.html)
+参见：[10 分钟教会你看眼图，太有用了！！](https://www.eet-china.com/mp/a35960.html)[DisplayPort 测试中的眼高和眼宽分别是什么？ - 高速信号测试](https://www.claudelab.com/article-item-161.html)
 
 ##### HOB Buffer Size（HOB 缓冲区总大小）
 
@@ -8306,9 +8306,9 @@ Advanced Link Config：高级链路配置
 
 选择链接模式：
 
-1）HDA-Link(SDIO-1)，DMIC [0-1]
+1）HDA-Link(SDIO-1)，DMIC[0-1]
 
-2）SSP [0-5]，DMIC [0-1]
+2）SSP[0-5]，DMIC[0-1]
 
 3）SNDW [1-4]
 
@@ -10106,9 +10106,9 @@ All GPIO（所有 GPIO）
 
 TGPIO：Time-Aware GPIO，时间感知 GPIO。
 
-Lower：TGPIO(0-19), GPIO(20-29)
+Lower：TGPIO(0-19),GPIO(20-29)
 
-Mid: TGPIO(0-9,20-29), GPIO(10-19)
+Mid: TGPIO(0-9,20-29),GPIO(10-19)
 
 Top：TGPIO(10-29) GPIO(0-9)
 

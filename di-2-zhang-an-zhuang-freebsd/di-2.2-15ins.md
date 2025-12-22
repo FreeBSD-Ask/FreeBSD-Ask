@@ -217,7 +217,7 @@ pkgbase 是 TrueOS 留给 FreeBSD 项目的技术遗产，旨在以软件包形�
 
 ## 分配磁盘空间
 
-FreeBSD 15.0-RELEASE 支持选择 UFS 或 ZFS 作为根文件系统。旧版本中，`bsdinstall` 工具仅支持 UFS；[自 10.0 版本起](http://svn.freebsd.org/viewvc/base?view=revision&revision=256361)，`bsdinstall` 开始支持 ZFS。通过手动安装方式，则早在 [8.0 版本](https://blog.delphij.net/posts/2008/11/zfs-1/) 即可将 ZFS 用作根分区。
+FreeBSD 15.0-RELEASE 支持选择 UFS 或 ZFS 作为根文件系统。旧版本中，`bsdinstall` 工具仅支持 UFS；[自 10.0 版本起](http://svn.freebsd.org/viewvc/base?view=revision&revision=256361)，`bsdinstall` 开始支持 ZFS。通过手动安装方式，则早在 [8.0 版本](https://blog.delphij.net/posts/2008/11/zfs-1/)即可将 ZFS 用作根分区。
 
 ![](../.gitbook/assets/ins7-15.png)
 
@@ -674,7 +674,7 @@ CST 为中国标准时间（China Standard Time）的缩写，确认无误后按
 
 ![虚拟机无固件可安装](../.gitbook/assets/install-14.2.png)
 
-自动检测并安装所需的硬件固件（该功能自 14.2 版本 [引入](https://cgit.freebsd.org/src/commit/?id=03c07bdc8b31)）。
+自动检测并安装所需的硬件固件（该功能自 14.2 版本[引入](https://cgit.freebsd.org/src/commit/?id=03c07bdc8b31)）。
 
 （此图为虚拟机安装界面截图）
 

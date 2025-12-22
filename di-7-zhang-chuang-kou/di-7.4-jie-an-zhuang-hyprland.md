@@ -125,7 +125,7 @@ Hyprland 默认配置文件的位置是 `~/.config/hypr/hyprland.conf`。
 # 进入 Hyprland 后自动启动 fcitx5。该命令已被注释，读者在安装 fcitx5 后可自行取消注释
 #exec-once=fcitx5
 # 设置壁纸，请将路径修改为自己的图片文件位置
-#exec-once=swaybg -i "$HOME/Pictures/Wallpapers/壁纸.jpg "
+#exec-once=swaybg -i "$HOME/Pictures/Wallpapers/壁纸.jpg"
 # 任务栏
 exec-once=waybar
 # swaylock 锁屏
