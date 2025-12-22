@@ -122,18 +122,18 @@ EPUB 格式文档在手机上可使用 [微信读书](https://play.google.com/st
 
 | 指标           | 统计数据     |
 |:---------------:|:-------------:|
-| 用户总数       | 42,059 位  |
-| 会话数         | 87,735 次 |
-| 浏览次数       | 611,605 次 |
+| 用户总数       | 42,061 位  |
+| 会话数         | 87,755 次 |
+| 浏览次数       | 611,857 次 |
 | 平均会话时长   | 8 分 53 秒 |
 
 <!-- GA_STATS:END -->
 
 <!-- GA_BADGES:START -->
 
-![总用户数](https://img.shields.io/badge/总用户数-42,059-green)
-![会话数](https://img.shields.io/badge/会话数-87,735-orange)
-![浏览次数](https://img.shields.io/badge/浏览次数-611,605-blue)
+![总用户数](https://img.shields.io/badge/总用户数-42,061-green)
+![会话数](https://img.shields.io/badge/会话数-87,755-orange)
+![浏览次数](https://img.shields.io/badge/浏览次数-611,857-blue)
 ![平均会话时长](https://img.shields.io/badge/平均会话时长-8min53s-purple)
 
 <!-- GA_BADGES:END -->
