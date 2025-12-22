@@ -1,6 +1,6 @@
 # 5.4 使用 pkg 管理二进制包
 
-FreeBSD 的二进制包管理器目前是 pkg（旧称 pkgng），即 “Package”，意为软件包。
+FreeBSD 的二进制包管理器目前是 pkg（旧称 pkgng），即“Package”，意为软件包。
 
 `pkg install` 可以缩写成 `pkg ins`，其他命令亦类似。
 
@@ -18,7 +18,7 @@ FreeBSD 的二进制包管理器目前是 pkg（旧称 pkgng），即 “Package
 
 >**技巧**
 >
->如果需要查询某个软件包在 FreeBSD 中的具体情况，可以这样做：使用 Google 或 Bing（Bing 很多时候搜索不出来）搜索 “freebsd ports 包名”。如果无法使用，可以直接在网站里搜索包名 [https://www.freshports.org/](https://www.freshports.org/)。
+>如果需要查询某个软件包在 FreeBSD 中的具体情况，可以这样做：使用 Google 或 Bing（Bing 很多时候搜索不出来）搜索“freebsd ports 包名”。如果无法使用，可以直接在网站里搜索包名 [https://www.freshports.org/](https://www.freshports.org/)。
 
 ## 如何从 Port 构建出 pkg
 
@@ -107,7 +107,7 @@ $ pkg ins chromium # 在普通用户权限下安装个浏览器看看
 pkg: Insufficient privileges to install packages
 ```
 
-“Insufficient privileges to install packages”即 “没有足够的权限来安装软件包”。
+“Insufficient privileges to install packages”即“没有足够的权限来安装软件包”。
 
 再试一次：
 
@@ -163,7 +163,7 @@ All repositories are up to date.
 pkg: No packages available to install matching 'chromium' have been found in the repositories
 ```
 
-“pkg: No packages available to install matching 'chromium' have been found in the repositories”即“pkg：在仓库中找不到 与 “chromium” 匹配、可供安装的软件包”。
+“pkg: No packages available to install matching 'chromium' have been found in the repositories”即“pkg：在仓库中找不到 与“chromium”匹配、可供安装的软件包”。
 
 如果你前面显示了“FreeBSD repository update completed. 36804 packages processed.”（FreeBSD 仓库更新完成。处理了 36804 个包），说明当前软件源是可用的，只是找不到 `chromium` 这个软件包而已。
 
@@ -175,7 +175,7 @@ pkg: No packages available to install matching 'chromium' have been found in the
 >
 >>[Is it possible to add i18n multilingual support using po files?](https://github.com/freebsd/pkg/issues/2421)
 >>
->>FreeBSD 基本系统里没有 gettext ，所以没有计划这样做，如果后续在 pkg 中出现可用的 libintl 套件，则可能会重新考虑。
+>>FreeBSD 基本系统里没有 gettext，所以没有计划这样做，如果后续在 pkg 中出现可用的 libintl 套件，则可能会重新考虑。
 >
 >阅读 pkg 源代码，定位问题所在源头，尝试解决这个问题，提交 PR 让 pkg 支持 i18n。
 

@@ -38,7 +38,7 @@ Fiat Lux 出自拉丁文圣经“1.3：Dixitque Deus : Fiat lux. Et facta est lu
 
 “Fiat Lux”精神不仅关乎教育与知识，同样渗透于伯克利的科技创新之中，并辐射至现代计算机技术领域。
 
-伯克利大学孕育了 BSD、RISC-V、RAID 等重要的计算机技术。以FreeBSD 为代表的 BSD 操作系统所体现的开源精神（其 BSD 许可证不像 GPL 许可证那样具有“传染性”，不强制使用者开源），致力于知识共享，让技术被尽可能广泛地使用以产生最大社会效益，忠实恪守了“Fiat Lux”的精神。
+伯克利大学孕育了 BSD、RISC-V、RAID 等重要的计算机技术。以 FreeBSD 为代表的 BSD 操作系统所体现的开源精神（其 BSD 许可证不像 GPL 许可证那样具有“传染性”，不强制使用者开源），致力于知识共享，让技术被尽可能广泛地使用以产生最大社会效益，忠实恪守了“Fiat Lux”的精神。
 
 如同光一样，BSD 技术渗透在诸多领域而不为人所熟知，从 iPhone 到新能源汽车车机，从索尼 PS5 到 Netflix，均有其身影。
 
@@ -50,13 +50,13 @@ Fiat Lux!
 
 - [Fiat Lux Scholarship](https://financialaid.berkeley.edu/types-of-aid-at-berkeley/scholarships/fiat-lux-scholarship/)，Fiat Lux 奖学金
 - [蔡元培像](https://www.xsg.pku.edu.cn/details/1893.html)，北京大学校史馆
-- 蔡元培. 蔡元培：言有物，行有伦 [M]. 北京: 中国文史出版社, 2023. 蔡元培名言出自《何为文化》一节 ISBN 9787520538169.
+- 蔡元培。蔡元培：言有物，行有伦 [M]. 北京：中国文史出版社，2023. 蔡元培名言出自《何为文化》一节 ISBN 9787520538169.
 - 随着明治维新，国力渐增，日本逐步迈上了对外侵略扩张的军国主义道路，1887 年，日本参谋本部制定了所谓“清国征讨策略”，逐渐演化为以侵略中国为中心的“大陆政策”。
 - Piazza L, Lummen TTA, Quiñonez E, Murooka Y, Reed BW, Barwick B, Carbone F.Simultaneous observation of the quantization and the interference pattern of a plasmonic near-field. Nature Communications 02 March 2015.
-- [德] 伊曼努尔•康德. 历史理性批判文集 [M]. 译者: 何兆武, 天津人民出版社, 2014-10.ISBN: 9787201086415，第 22 页《答复这个问题：“什么是启蒙运动？”》
+- [德] 伊曼努尔•康德。历史理性批判文集 [M]. 译者：何兆武，天津人民出版社，2014-10.ISBN: 9787201086415，第 22 页《答复这个问题：“什么是启蒙运动？”》
 - [Portrait of UC Berkeley namesake no longer on display in Doe Library](https://www.lib.berkeley.edu/about/news/george-berkeley-portrait)，加州大学伯克利分校图书馆摘除了贝克莱的画像
-- [德] 尼采. 善恶的彼岸 [M]. 译者: 赵千帆, 商务印书馆, 2015-12. ISBN: 9787100117494 第四章第 146 小节
+- [德] 尼采。善恶的彼岸 [M]. 译者：赵千帆，商务印书馆，2015-12. ISBN: 9787100117494 第四章第 146 小节
 - 《迪迦奥特曼》第 47 集告别黑暗 梅塔莫尔加登场 第 21 分沙耶香
 - [国立西南联合大学纪念碑碑文](https://www.tsinghua.org.cn/info/1952/17852.htm)
-- 闻黎明. 西南联大与现代中国（1937~1946）[M]. 社会科学文献出版社, 2023-1. ISBN: 9787520198059
+- 闻黎明。西南联大与现代中国（1937~1946）[M]. 社会科学文献出版社，2023-1. ISBN: 9787520198059
 - Raphael A. Abrahao, Henri P. N. Morin, Jordan T. R. Pagé, Akbar Safari, Robert W. Boyd, and Jeff S. Lundeen, "Shadow of a laser beam," Optica 11, 1549-1555 (2024)，论文指出，光也有影子

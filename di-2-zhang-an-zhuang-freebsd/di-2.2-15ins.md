@@ -42,7 +42,7 @@
 
 ![](../.gitbook/assets/ins2.png)
 
-|**`7. Boot Options`**|默认值|说明 |
+|**`7. Boot Options`**|默认值 | 说明 |
 | :---------- | :-----:|:----------------------------------------------------------------------- |
 |`1. Back to main menu [Backspace]`| On（开）  |按 **Backspace** 键可返回上级菜单 |
 |`2. Load System Defaults`| off（关）  |恢复默认配置|

@@ -8158,9 +8158,9 @@ xHCI（eXtensible Host Controller Interface）是 USB 3.0 及更高版本的主�
 
 ##### USB3 Link Speed Selection（USB3 链路速率选择）
 
-GEN1：5 Gbps
+GEN1:5 Gbps
 
-GEN2：10 Gbps
+GEN2:10 Gbps
 
 说明：
 

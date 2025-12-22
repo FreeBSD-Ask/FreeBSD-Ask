@@ -1,6 +1,6 @@
-# 6.3 KDE6（X11）
+# 6.3 KDE6 (X11)
 
-KDE 致力于开发一套现代桌面环境，如果你觉得 KDE 界面很像 Windows，那么从时间线上看可以说是 “Windows 很像 KDE”。
+KDE 致力于开发一套现代桌面环境，如果你觉得 KDE 界面很像 Windows，那么从时间线上看可以说是“Windows 很像 KDE”。
 
 >**技巧**
 >
@@ -95,7 +95,7 @@ KDE 致力于开发一套现代桌面环境，如果你觉得 KDE 界面很像 W
 
 ### 系统中文化方法 ② 系统设置
 
-点击开始 -> System Settings -> Language & Time，在 Region & Language 的 Language 栏点击 Modify，找到并选择 “简体中文”。如果显示为 `□□□□`，请检查中文字体是否已安装。然后单击 Apply 按钮；注销后重新登录，此时系统语言将变为中文。
+点击开始 -> System Settings -> Language & Time，在 Region & Language 的 Language 栏点击 Modify，找到并选择“简体中文”。如果显示为 `□□□□`，请检查中文字体是否已安装。然后单击 Apply 按钮；注销后重新登录，此时系统语言将变为中文。
 
 ![KDE 6](../.gitbook/assets/kde6-4.png)
 
@@ -265,11 +265,11 @@ Current=sddm-freebsd-black-theme
 
 ![](../.gitbook/assets/kde-win1.png)
 
-点击任务栏中间的空白部分，然后点击 “显示替代部件”。
+点击任务栏中间的空白部分，然后点击“显示替代部件”。
 
 ![](../.gitbook/assets/kde-win2.png)
 
-在弹出窗口中选择 “图标和文本任务管理器”。
+在弹出窗口中选择“图标和文本任务管理器”。
 
 ![](../.gitbook/assets/kde-win3.png)
 
@@ -295,7 +295,7 @@ Current=sddm-freebsd-black-theme
 
 ### 菜单缺失关机、重启等四个选项
 
-如果无效，请检查是否在 SDDM 界面选择了 “用户会话”（读取 `.xinitrc`），应选择 `plasma-x11`。
+如果无效，请检查是否在 SDDM 界面选择了“用户会话”（读取 `.xinitrc`），应选择 `plasma-x11`。
 
 修改 `/etc/sysctl.conf` 将其中 `security.bsd.see_other_uid` 的值改为 `1`（`1` 为开启）。重启后即可。
 
@@ -314,4 +314,4 @@ Current=sddm-freebsd-black-theme
 
 ### 状态栏不显示时钟和时间
 
-打开时区设置，选择 “Asia/Shanghai” 时区即可。如果仍无效，请先更新相关软件包。
+打开时区设置，选择“Asia/Shanghai”时区即可。如果仍无效，请先更新相关软件包。

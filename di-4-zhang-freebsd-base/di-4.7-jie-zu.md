@@ -4,7 +4,7 @@
 
 要想访问 FreeBSD，你必须有一个账户，而且所有进程都是以某个账户的名义启动的。
 
-Ports 中的 `sysutils/htop` 提供的 `htop` 命令能够清晰地显示这一点（注意 “USER” 列）：
+Ports 中的 `sysutils/htop` 提供的 `htop` 命令能够清晰地显示这一点（注意“USER”列）：
 
 ```sh
   PID△USER       PRI  NI  VIRT   RES S   CPU% MEM%   TIME+  Command
