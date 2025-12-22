@@ -2,7 +2,7 @@
 
 输入法框架和输入法本身是不同的概念，切不可混淆。输入法依赖输入法框架。即使在 Windows 上也是如此： [TSF 管理器](https://learn.microsoft.com/zh-cn/windows/win32/tsf/text-services-framework)。
 
-fcitx 是“小企鹅输入法”，其英文名称为 “A flexible input method framework（一款灵活的输入法框架）”。关于其英文命名来源，请参见 [历史](https://fcitx-im.org/wiki/History/zh-cn)。
+fcitx 是“小企鹅输入法”，其英文名称为“A flexible input method framework（一款灵活的输入法框架）”。关于其英文命名来源，请参见 [历史](https://fcitx-im.org/wiki/History/zh-cn)。
 
 >**技巧**
 >

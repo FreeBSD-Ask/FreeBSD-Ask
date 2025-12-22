@@ -42,7 +42,7 @@
 
 >**警告**
 >
->不要勾选下方的“启用3D加速”选项，否则将导致无法使用 `VBoxSVGA` 控制器。
+>不要勾选下方的“启用 3D 加速”选项，否则将导致无法使用 `VBoxSVGA` 控制器。
 
 ![](../.gitbook/assets/vb5.5.png)
 
@@ -90,7 +90,7 @@
 
 >**技巧**
 >
->在网卡类型下拉列表中，“网络地址转换(NAT)”与“NAT网络”选项类似。根据官方手册 [Introduction to Networking Modes](https://www.virtualbox.org/manual/topics/networkingdetails.html#network_nat)，主要区别在于：“NAT 网络”模式下的虚拟机之间可以互通，而“网络地址转换(NAT)”模式下的虚拟机网络则是相互隔离的。
+>在网卡类型下拉列表中，“网络地址转换 (NAT)”与“NAT 网络”选项类似。根据官方手册 [Introduction to Networking Modes](https://www.virtualbox.org/manual/topics/networkingdetails.html#network_nat)，主要区别在于：“NAT 网络”模式下的虚拟机之间可以互通，而“网络地址转换 (NAT)”模式下的虚拟机网络则是相互隔离的。
 
 ![](../.gitbook/assets/vbnat2.png)
 

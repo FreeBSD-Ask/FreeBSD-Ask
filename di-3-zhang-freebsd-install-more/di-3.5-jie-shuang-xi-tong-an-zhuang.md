@@ -266,7 +266,7 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 # exit  
 ```
 
-- ①：`\n` 代表 Unix/Linux 系统中的换行符。Windows 文本文件的行尾通常是 `\r\n`（回车+换行）。此命令效果等同于使用 `ee /tmp/bsdinstall_etc/rc.conf` 编辑该文件并添加一行 `zfs_enable="YES"`。
+- ①：`\n` 代表 Unix/Linux 系统中的换行符。Windows 文本文件的行尾通常是 `\r\n`（回车 + 换行）。此命令效果等同于使用 `ee /tmp/bsdinstall_etc/rc.conf` 编辑该文件并添加一行 `zfs_enable="YES"`。
 
 ### 完成
 
