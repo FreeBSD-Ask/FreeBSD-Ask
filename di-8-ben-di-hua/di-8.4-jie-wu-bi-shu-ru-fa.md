@@ -2,8 +2,7 @@
 
 ## IBus
 
-需要先安装配置 IBus，从略。
-
+需要先安装并配置 IBus，本节不做详细说明。
 
 ### 安装 Rime 输入法
 
@@ -25,9 +24,9 @@
 
 ### 配置 Rime 输入法
 
-再将 98 五笔码表（`free-bsd-98wubi-tables-master/wubi86.dict.yaml`、`free-bsd-98wubi-tables-master/wubi86.schema.yaml`）复制到 `/usr/local/share/rime-date` 目录下。下载地址：[FreeBSD-98wubi-tables](https://github.com/FreeBSD-Ask/98-input/)
+将 98 五笔码表（`free-bsd-98wubi-tables-master/wubi86.dict.yaml` 和 `free-bsd-98wubi-tables-master/wubi86.schema.yaml`）复制到 `/usr/local/share/rime-data` 目录下。下载地址：[FreeBSD-98wubi-tables](https://github.com/FreeBSD-Ask/98-input/)
 
-修改 `/usr/local/share/rime-date` 目录下 `default.yaml` 文件：打开 `default.yaml` 找到 `schema_lis`，下面第一行添加 `- schema: wubi98`（注意保持缩进），并删除其他方案，如下所示：
+修改 `/usr/local/share/rime-data/default.yaml` 文件：打开文件找到 `schema_list`，在其下第一行添加 `- schema: wubi98`（注意保持缩进），并删除其他输入方案，如下所示：
 
 ```sh
 # Rime default settings
@@ -56,11 +55,11 @@ schema_list:
 # pkg install fcitx5 fcitx5-qt5 fcitx5-qt6 fcitx5-gtk2 fcitx5-gtk3 fcitx5-gtk4 fcitx5-configtool-qt5 fcitx5-configtool-qt6 zh-fcitx5-chinese-addons 
 ```
 
-Fcitx 5 配置从略。
+Fcitx 5 的具体配置步骤本节不做详细说明。
 
 ### Fcitx 5 配置 98 五笔
 
-首先下载所需文件：<https://github.com/FreeBSD-Ask/98-input>。
+首先下载所需文件，地址为 <https://github.com/FreeBSD-Ask/98-input>。
 
 - 把 `98五笔/98wbx.conf` 文件复制到 `/usr/local/share/fcitx5/inputmethod/` 下面；
 - 把 `98五笔/fcitx-98wubi.png` 和 `org.fcitx.Fcitx5.fcitx-98wubi.png` 图标复制到 `/usr/local/share/icons/hicolor/48x48/apps/` 下面；
@@ -113,7 +112,7 @@ schema_list:
 
 ## 配置文件
 
-五笔输入法已经安装好，rime 的配置文件位置如下：
+五笔输入法安装完成后，Rime 的配置文件位置如下：
 
 - IBus
 
@@ -129,7 +128,7 @@ $ cd ~/.local/share/fcitx5/rime
 
 ### 修改候选字为 9 行
 
-必须先 `cd` 到上述配置文件目录再进行下列操作。
+必须先切换到上述配置文件目录后，再进行下列操作。
 
 #### 方法 ①
 
@@ -158,7 +157,7 @@ patch applied.
 
 重启即可。
 
-这里推荐使用形式二进行设置，形式一在复杂一点的设置中要求对配置文件格式有一定了解。
+推荐使用方法二进行设置；方法一在较复杂的设置中需要对配置文件格式有一定了解。
 
 ### 默认英文输出
 
@@ -169,19 +168,20 @@ $ rime_patch wubi86 'switches/@1/reset'
 patch applied.
 ```
 
-这里把 patch 应用到 wubi86 输入法上（写入 `wubi86.custom.yaml`)，大部分的选项都是和输入法相关的，只有少部分选项是全局的（写入 `default.custom.yaml`）
+此处将 patch 应用于 wubi86 输入法（写入 `wubi86.custom.yaml`），大部分选项与输入法相关，少部分选项为全局设置（写入 `default.custom.yaml`）。
+
 
 重启即可。
 
 ### IBus 横排输出
 
-编辑 `~/.config/ibus/rime/build/ibus_rime.yaml`，把里面的 `horizontal: flase` 改成 `horizontal: true` 重新部署输入法或重启即可。
+编辑 `~/.config/ibus/rime/build/ibus_rime.yaml`，把里面的 `horizontal: false` 改成 `horizontal: true` 重新部署输入法或重启即可。
 
 ![](../.gitbook/assets/wubi6.png)
 
 ## 故障排除
 
-- 这个已经动到公用文件了一般只改用户配置，不然会影响全局，碰上更新容易复原。
+- 此操作涉及公用文件，一般只修改用户配置，否则会影响全局设置，更新时容易被覆盖。
 
 待解决。
 

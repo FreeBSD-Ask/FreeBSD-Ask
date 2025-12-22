@@ -1,6 +1,6 @@
 # 7.5 Window Maker
 
-Window Maker 是一款窗口管理器。设计目标旨在重现 NeXTSTEP（macOS 基于此）用户界面与用户体验。
+Window Maker 是一款 X11 窗口管理器，其设计目标是重现 NeXTSTEP（macOS 的前身）用户界面与用户体验。
 
 ## 安装
 
@@ -30,9 +30,9 @@ Window Maker 是一款窗口管理器。设计目标旨在重现 NeXTSTEP（macO
 |:--------------------------|:-------------------------------------------------------|
 | `xorg`                   | X Window 系统                                           |
 | `windowmaker`            | X11 窗口管理器 |
-| `wmakerconf`             | Window Maker 的配置工具，未作为依赖包安装；包含语言包，但是没中文|
+| `wmakerconf`             | Window Maker 的配置工具，未作为依赖包安装；包含语言包，但不包含中文 |
 | `lightdm`                | 轻量级显示管理器 LightDM |
-| `lightdm-gtk-greeter`    | LightDM 的 GTK+ 登录界面插件，缺少将无法启动 LightDM |
+| `lightdm-gtk-greeter`    | LightDM 的 GTK+ 登录界面插件，如未安装将无法启动 LightDM |
 | `wqy-fonts`              | 文泉驿中文字体|
 | `xdg-user-dirs`          | 管理用户目录，如“桌面”、“下载”等|
 
@@ -65,7 +65,7 @@ exec wmaker
 proc           /proc       procfs  rw  0   0
 ```
 
-### 中文配置
+### 设置中文环境
 
 编辑 `/etc/login.conf`，找到 `default:\` 这一段，把 `:lang=C.UTF-8` 修改为 `:lang=zh_CN.UTF-8`。
 
@@ -95,9 +95,9 @@ proc           /proc       procfs  rw  0   0
 
 ### 无法使用中文环境
 
-Window Maker 本身应该是有些字符串没有被处理到 `.po` 文件中 <https://repo.or.cz/wmaker-crm.git/blob/refs/heads/master:/po/zh_CN.po>，因此是中英文混合显示输出的。
+Window Maker 本身部分字符串未被包含在 `.po` 文件中 [https://repo.or.cz/wmaker-crm.git/blob/refs/heads/master:/po/zh\_CN.po](https://repo.or.cz/wmaker-crm.git/blob/refs/heads/master:/po/zh_CN.po)，因此在界面显示时可能出现中英文混合的情况。
 
-<https://sourceforge.net/p/wmakerconf/code/HEAD/tree/wmakerconf/trunk/po/> wmakerconf 在 07 年后就停止开发了。翻译了有极大也有可能性无法被合并。
+<https://sourceforge.net/p/wmakerconf/code/HEAD/tree/wmakerconf/trunk/po/> wmakerconf 自 2007 年以后已停止开发，翻译内容很可能无法被合并。
 
 综上，中文环境处理难度较大，感兴趣的读者可以尝试推进。
 

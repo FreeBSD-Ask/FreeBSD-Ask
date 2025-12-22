@@ -28,13 +28,13 @@ pkg install firefox-esr
 - 或者使用 Ports
 
 ```sh
-#cd /usr/ports/www/firefox-esr/
+# cd /usr/ports/www/firefox-esr/
 # make install clean
 ```
 
 ## Chromium
 
-Chromium 不是 chrome，但在 FreeBSD 中启动命令是 `chrome`。
+Chromium 不是 Chrome，但在 FreeBSD 中的启动命令为 `chrome`。
 
 ---
 
@@ -70,33 +70,31 @@ Chromium 不是 chrome，但在 FreeBSD 中启动命令是 `chrome`。
 # make install clean
 ```
 
-
-
 ## 附录：Chromium 使用 Google 账号同步
 
 >**技巧**
 >
->有项目甚至认为目前移除的组件还不够干净彻底，即 Port `www/ungoogled-chromium`。该软件移除了更多不透明以及和谷歌有关的部分。
+>有些项目认为目前移除的组件仍不够彻底，因此提供了 Port `www/ungoogled-chromium`。该软件移除了更多与谷歌相关的不透明组件。
 
-- 由于是开源产物，Chromium 与 Google Chrome 的关系约等于 AOSP 之于 Pixel UI。Chromium 没有直接从 Google Chrome 的在线插件商店开箱即用的下载安装插件的功能，只能手动从本地安装 crx（加入同步后可自动同步浏览器插件）。亦没有自带的 Google 翻译插件等等，更多两者的不同之处可以 [查看这个网页](https://chromium.googlesource.com/chromium/src/+/master/docs/chromium_browser_vs_google_chrome.md)
+- 由于是开源产物，Chromium 与 Google Chrome 的关系类似于 AOSP 与 Pixel UI 的关系。Chromium 无法直接从 Google Chrome 的在线插件商店下载安装插件，只能手动从本地安装 crx（同步启用后可自动同步浏览器插件）。Chromium 也不自带 Google 翻译插件等功能。更多差异可参见 [此网页](https://chromium.googlesource.com/chromium/src/+/master/docs/chromium_browser_vs_google_chrome.md)。
 - 首先，`Chromium` 并非 `Google Chrome`，前者是 The Chromium Project 在 [BSD 3-Clause "New" or "Revised" License](https://github.com/chromium/chromium/blob/main/LICENSE) 下发布的开源与自由软件，后者是 Google LLC 的专有软件。
 
 - Chromium 在 [Chromium 89](https://archlinux.org/news/chromium-losing-sync-support-in-early-march/) 发布后删除了之前自带的与 Chrome 同款的登录 Google 账号的默认 api。
 
-进入正题，在开始获取 token 之前，你需要加入下列两个 Google 网上论坛（邮件列表）
+在开始获取 token 之前，需要先加入以下两个 Google 邮件列表论坛：
 
 - [Google browser sign-in test account](https://groups.google.com/u/0/a/chromium.org/g/google-browser-signin-testaccounts)
 - [Chromium-dev](https://groups.google.com/a/chromium.org/g/chromium-dev)
 
 ![](../.gitbook/assets/join-chromium-dev-for-api1.png)
 
-因为我们只是需要 Chrome Google API 的访问权限，所以你必须关闭这两个邮件列表的消息通知（即“不接收电子邮件”），否则你就会在事实上遭遇邮件列表的轰炸（其交流频繁）。
+由于仅需 Chrome Google API 的访问权限，因此必须关闭这两个邮件列表的消息通知（即“不接收电子邮件”），否则可能会受到频繁的邮件轰炸。
 
 ![](../.gitbook/assets/join-chromium-dev-for-api2.png)
 
 ![](../.gitbook/assets/join-chromium-dev-for-api3.png)
 
-加入 Google browser sign-in test account 群组后，你可能会看到：“您无权访问此内容”之类的提示，这很正常，不用管。
+加入 Google browser sign-in test account 群组后，你可能会看到：“您无权访问此内容”之类的提示，这很正常，无需担心。
 
 ![join-mail-list-for-google-api-error2](../.gitbook/assets/join-chromium--list-2error.png)
 
@@ -104,7 +102,7 @@ Chromium 不是 chrome，但在 FreeBSD 中启动命令是 `chrome`。
 
 >**注意**
 >
->登录控制台时需要和上一步加入邮件列表的谷歌账户需要是同一个。
+>登录控制台时使用的谷歌账户必须与之前加入邮件列表的账户相同。
 
 ![](../.gitbook/assets/chromium-use-google-api-guide-0.png)
 
@@ -112,7 +110,7 @@ Chromium 不是 chrome，但在 FreeBSD 中启动命令是 `chrome`。
 
 ![](../.gitbook/assets/chromium-use-google-api-guide-02.png)
 
-项目名称任意填写，组织默认即可。
+项目名称可随意填写，组织保持默认设置。
 
 ![](../.gitbook/assets/chromium-use-google-api-guide-03.png)
 
@@ -167,7 +165,7 @@ Chromium 不是 chrome，但在 FreeBSD 中启动命令是 `chrome`。
 
 ![](../.gitbook/assets/chromium-use-google-api-guide-16.png)
 
-我们获得了（这是我的，是无效的，你必须自己生成你自己的）:
+我们获得了（这是笔者的，是无效的，读者必须自己生成自己的）:
 
 - 客户端 ID `502882456359-okloi0a7k6vjodss69so97tmqmv0jjj5.apps.googleusercontent.com`
 - 客户端密钥 `GoCSPX-iKHEKZmP4w_zdq0Z8nwOqz6SF2_M`
@@ -176,7 +174,7 @@ Chromium 不是 chrome，但在 FreeBSD 中启动命令是 `chrome`。
 
 ![](../.gitbook/assets/chromium-use-google-api-guide-17.png)
 
-我们就获得了一个 API 密钥（这是我的，是无效的，你必须自己生成你自己的）：`AIzaSyDVpYvJQUn9HTjAiD89y3xBDOG3oaxV5_E`
+我们就获得了一个 API 密钥（这是笔者的，是无效的，读者必须自己生成自己的）：`AIzaSyDVpYvJQUn9HTjAiD89y3xBDOG3oaxV5_E`
 
 ![](../.gitbook/assets/chromium-use-google-api-guide-18.png)
 
@@ -185,16 +183,16 @@ Chromium 不是 chrome，但在 FreeBSD 中启动命令是 `chrome`。
 ![](../.gitbook/assets/chromium-use-google-api-guide-19.png)
 
 
-编辑 `~/.profile`，加入（这是我的，是无效的，你必须自己生成你自己的）：
+编辑 `~/.profile`，加入（这是笔者的，是无效的，读者必须自己生成自己的）：
 
 >**注意**
 >
->本文仅在默认 shell sh + KDE 6 下测试通过。如果你使用的环境不同，欢迎 PR。
+>本文仅在默认 shell sh 和 KDE 6 下测试通过。如果使用的环境不同，欢迎提交 PR。
 
 ```sh
-export GOOGLE_API_KEY=AIzaSyDVpYvJQUn9HTjAiD89y3xBDOG3oaxV5_E # 这里填 API 密钥
-export GOOGLE_DEFAULT_CLIENT_ID=502882456359-okloi0a7k6vjodss69so97tmqmv0jjj5.apps.googleusercontent.com # 这里填客户端 ID
-export GOOGLE_DEFAULT_CLIENT_SECRET=GoCSPX-iKHEKZmP4w_zdq0Z8nwOqz6SF2_M # 这里填客户端密钥
+export GOOGLE_API_KEY=AIzaSyDVpYvJQUn9HTjAiD89y3xBDOG3oaxV5_E  # 这里填 API 密钥
+export GOOGLE_DEFAULT_CLIENT_ID=502882456359-okloi0a7k6vjodss69so97tmqmv0jjj5.apps.googleusercontent.com  # 这里填客户端 ID
+export GOOGLE_DEFAULT_CLIENT_SECRET=GoCSPX-iKHEKZmP4w_zdq0Z8nwOqz6SF2_M  # 这里填客户端密钥
 ```
 
 然后重启一下。再打开 Chromium。
@@ -225,7 +223,9 @@ export GOOGLE_DEFAULT_CLIENT_SECRET=GoCSPX-iKHEKZmP4w_zdq0Z8nwOqz6SF2_M # 这里
 
 ## 故障排除与未竟事宜
 
-### 解决 chromium 出现未知错误时占用大量性能（加到图标的启动参数中，图标是文本文件）
+### 解决 Chromium 出现未知错误导致占用大量性能的问题
+
+将参数添加到启动图标中（图标为文本文件）：
 
 ```sh
 chrome --disk-cache-size=0 --disable-gpu
