@@ -106,7 +106,7 @@ $ unxz test.tar.xz     # 解压并删除原文件
 # make install clean
 ```
 
-###  7z 压缩
+### 7z 压缩
   
 ```sh
 $ 7z a test.7z test # 将 test 文件压缩成 7z 文件。
