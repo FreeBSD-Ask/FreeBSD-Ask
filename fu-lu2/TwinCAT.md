@@ -207,4 +207,4 @@ doas pkg install os-generic-userland-devtools
 doas ee /usr/local/etc/pkg/repos/FreeBSD.conf
 ```
 
-把 `FreeBSD: {enabled: no}` 中的 `no` 改为 `yes` 即可。
+将 `FreeBSD: {enabled: no}` 中的 `no` 改为 `yes` 即可。

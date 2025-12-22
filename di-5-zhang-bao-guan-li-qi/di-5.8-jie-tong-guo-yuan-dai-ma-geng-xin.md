@@ -117,7 +117,7 @@ $ git clone --branch releng/15.0 --single-branch --depth 1 https://github.com/fr
 
 >**为何要解压到 `/`？**
 >
->因为解压到 `/` 会将源代码解压到 `/usr/src`。如果把上面的路径改成 `/usr/src`，会把源代码解压到 `/usr/src/usr/src`。因为该压缩包是包含路径的。
+>因为解压到 `/` 会将源代码解压到 `/usr/src`。如果将上面的路径改成 `/usr/src`，会将源代码解压到 `/usr/src/usr/src`。因为该压缩包是包含路径的。
 
 >**技巧**
 >

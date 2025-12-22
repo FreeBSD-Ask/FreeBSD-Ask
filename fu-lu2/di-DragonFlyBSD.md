@@ -222,7 +222,7 @@ root 密码设置完成。
 # ee /usr/local/etc/pkg/repos/df-latest.conf
 ```
 
-找到国内的镜像站，把 `no` 改成 `yes`，把之前的源改为 `no`。
+找到国内的镜像站，将 `no` 改成 `yes`，将之前的源改为 `no`。
 
 >**注意**
 >

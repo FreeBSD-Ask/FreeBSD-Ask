@@ -197,7 +197,7 @@ uid=1001(ykla) gid=1001(ykla) groups=1001(ykla),0(wheel),1002(admin)
 示例：
 
 ```sh
-# pw usermod test1 -l test2 # 把用户 test1 重命名为 test2
+# pw usermod test1 -l test2 # 将用户 test1 重命名为 test2
 ```
 
 ### `pw userdel` 命令

@@ -295,7 +295,7 @@ VMware 已被博通（Broadcom）收购。**因此，目前从官方下载任何
 >
 >![注册](../.gitbook/assets/Register2.png)
 >
->- 把第五步得到的“Verification Code: 972980”，中的 972980（你的和我不一样，找你自己的）填到“Enter text from image”里面。
+>- 将第五步得到的“Verification Code: 972980”，中的 972980（你的和我不一样，找你自己的）填到“Enter text from image”里面。
 >
 >![邮箱验证码](../.gitbook/assets/mail.png)
 >
@@ -362,7 +362,7 @@ VMware 已被博通（Broadcom）收购。**因此，目前从官方下载任何
 >
 >![下载主页](../.gitbook/assets/downbcm4.png)
 >
->- 把红色的 `*` 项目填写完成，不会写的自己编，最好不要抄我的。
+>- 将红色的 `*` 项目填写完成，不会写的自己编，最好不要抄我的。
 >  
 >![补充信息](../.gitbook/assets/downbcm5.png)
 >

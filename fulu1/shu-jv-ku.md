@@ -313,7 +313,7 @@ set Price = Price * 1.2
 where Publisher = "人民邮电出版社";
 ```
 
-翻译成人话：把表 `book_table` 中 `Publisher` 值为 `"人民邮电出版社"` 的行，Price 值全乘以 `1.2`（就是增加 20%）
+翻译成人话：将表 `book_table` 中 `Publisher` 值为 `"人民邮电出版社"` 的行，Price 值全乘以 `1.2`（就是增加 20%）
 
 ```sql
 DELETE FROM book_table
@@ -423,7 +423,7 @@ ORDER BY `学号` desc
 LIMIT 0,3;
 ```
 
-### 怎么把别的表给带上（连接查询）
+### 怎么将别的表给带上（连接查询）
 
 #### 显式连接
 

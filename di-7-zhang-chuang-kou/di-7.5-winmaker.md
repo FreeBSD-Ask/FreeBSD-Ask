@@ -67,7 +67,7 @@ proc           /proc       procfs  rw  0   0
 
 ### 设置中文环境
 
-编辑 `/etc/login.conf`，找到 `default:\` 这一段，把 `:lang=C.UTF-8` 修改为 `:lang=zh_CN.UTF-8`。
+编辑 `/etc/login.conf`，找到 `default:\` 这一段，将 `:lang=C.UTF-8` 修改为 `:lang=zh_CN.UTF-8`。
 
 刷新数据库：
 

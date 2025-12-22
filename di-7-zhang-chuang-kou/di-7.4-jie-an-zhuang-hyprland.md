@@ -249,7 +249,7 @@ bind = $mainMod, 9, workspace, 9
 bind = $mainMod, 0, workspace, 10
 
 # Move active window to a workspace with mainMod + SHIFT + [0-9]
-# 把窗口移动到别的工作区，例如 mainmod+Shift+2（win 键 +2 是查看工作区 1）
+# 将窗口移动到别的工作区，例如 mainmod+Shift+2（win 键 +2 是查看工作区 1）
 bind = $mainMod SHIFT, 1, movetoworkspace, 1
 bind = $mainMod SHIFT, 2, movetoworkspace, 2
 bind = $mainMod SHIFT, 3, movetoworkspace, 3

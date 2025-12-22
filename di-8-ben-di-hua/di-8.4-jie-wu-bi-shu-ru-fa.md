@@ -61,9 +61,9 @@ Fcitx 5 的具体配置步骤本节不做详细说明。
 
 首先下载所需文件，地址为 <https://github.com/FreeBSD-Ask/98-input>。
 
-- 把 `98五笔/98wbx.conf` 文件复制到 `/usr/local/share/fcitx5/inputmethod/` 下面；
-- 把 `98五笔/fcitx-98wubi.png` 和 `org.fcitx.Fcitx5.fcitx-98wubi.png` 图标复制到 `/usr/local/share/icons/hicolor/48x48/apps/` 下面；
-- 把 `98五笔/98/wbx.main.dict` 词库放到 `/usr/local/share/libime/` 下面。
+- 将 `98五笔/98wbx.conf` 文件复制到 `/usr/local/share/fcitx5/inputmethod/` 下面；
+- 将 `98五笔/fcitx-98wubi.png` 和 `org.fcitx.Fcitx5.fcitx-98wubi.png` 图标复制到 `/usr/local/share/icons/hicolor/48x48/apps/` 下面；
+- 将 `98五笔/98/wbx.main.dict` 词库放到 `/usr/local/share/libime/` 下面。
 - 重启 `fcitx5`，在设置中起用 98 五笔即可。
 
 ![](../.gitbook/assets/wubi1.png)
@@ -175,7 +175,7 @@ patch applied.
 
 ### IBus 横排输出
 
-编辑 `~/.config/ibus/rime/build/ibus_rime.yaml`，把里面的 `horizontal: false` 改成 `horizontal: true` 重新部署输入法或重启即可。
+编辑 `~/.config/ibus/rime/build/ibus_rime.yaml`，将里面的 `horizontal: false` 改成 `horizontal: true` 重新部署输入法或重启即可。
 
 ![](../.gitbook/assets/wubi6.png)
 

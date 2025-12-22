@@ -140,7 +140,7 @@ musicpd 配置文件为 `/usr/local/etc/musicpd.conf` 。
 # chmod 777 /var/mpd/music
 ```
 
-第三行把目录设为用户 mpd 所有，不然可能有权限问题。第四行 music 目录存放音乐文件用，设置 777 是为方便增删文件，自己根据情况设置即可。
+第三行将目录设为用户 mpd 所有，不然可能有权限问题。第四行 music 目录存放音乐文件用，设置 777 是为方便增删文件，自己根据情况设置即可。
 
 修改 `/usr/local/etc/musicpd.conf` ，"Default OSS Device" 一节后面增加一节：
 
@@ -148,7 +148,7 @@ musicpd 配置文件为 `/usr/local/etc/musicpd.conf` 。
 audio_output {
         type            "oss"
         name            "OSS Device（dop mode）"
-        device          "/dev/dsp2"     # 指定使用的设备，不需要把 dac 或声卡等设置为默认设备，dsp2 专用于播放音乐，默认设备做自己的事就行
+        device          "/dev/dsp2"     # 指定使用的设备，不需要将 dac 或声卡等设置为默认设备，dsp2 专用于播放音乐，默认设备做自己的事就行
         dop             "yes"           # 开启 dop 模式
 }
 ```

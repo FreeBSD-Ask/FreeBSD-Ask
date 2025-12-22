@@ -6,7 +6,7 @@ FreeBSD 的二进制包管理器目前是 pkg（旧称 pkgng），即 “Package
 
 > **注意**
 >
-> pkg 只能管理第三方软件包，并不能起到升级系统，获取安全更新的作用。这是因为 FreeBSD 项目是把内核与用户空间作为一个整体来进行维护的，而不是像 Linux 那样 Linus Torvalds 负责维护内核，各个发行版的人负责维护 GNU 工具（他们这些软件实际上被设计为单个软件包，因此可以用包管理器更新与升级系统）。
+> pkg 只能管理第三方软件包，并不能起到升级系统，获取安全更新的作用。这是因为 FreeBSD 项目是将内核与用户空间作为一个整体来进行维护的，而不是像 Linux 那样 Linus Torvalds 负责维护内核，各个发行版的人负责维护 GNU 工具（他们这些软件实际上被设计为单个软件包，因此可以用包管理器更新与升级系统）。
 >
 >FreeBSD 现在也正 [试图使用 pkg 来实现用户空间和内核的更新](https://wiki.freebsd.org/PkgBase) ，以期解决上述问题。
 >
@@ -221,7 +221,7 @@ pkg: No packages available to install matching 'chromium' have been found in the
 ### 如何卸载所有自行安装的第三方软件？
 
 ```sh
-# pkg delete -fa # 如果带上参数 f，会把 pkg 自己也删掉，因为 pkg 也是用户一开始自行安装的软件。
+# pkg delete -fa # 如果带上参数 f，会将 pkg 自己也删掉，因为 pkg 也是用户一开始自行安装的软件。
 Checking integrity... done (0 conflicting)
 Deinstallation has been requested for the following 87 packages (of 0 packages in the universe):
 
@@ -232,7 +232,7 @@ Installed packages to be REMOVED:
 ……省略一部分……
 	pcre2: 10.43
 	perl5: 5.36.3_1
-	pkg: 1.21.3   # 如果带上参数 `-f`，会把 pkg 本身也删除，因为 pkg 也是用户最初自行安装的软件
+	pkg: 1.21.3   # 如果带上参数 `-f`，会将 pkg 本身也删除，因为 pkg 也是用户最初自行安装的软件
 	png: 1.6.43
 	xorg-fonts-truetype: 7.7_1
 	xorgproto: 2024.1
