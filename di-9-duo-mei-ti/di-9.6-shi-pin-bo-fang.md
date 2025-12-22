@@ -79,7 +79,7 @@ Kodi 曾用名为 XBMC。
 
 ![](../.gitbook/assets/kodi1.png)
 
-点击 `Skin`（皮肤）。再点击左下角，把 `basic`（简单）改为 `expert`（专家）或 `Standard`（标准），否则你看不到 `fonts` 等选项！然后将 `fonts`（字体）改为 `Arial based`，否则中文会乱码！
+点击 `Skin`（皮肤）。再点击左下角，将 `basic`（简单）改为 `expert`（专家）或 `Standard`（标准），否则你看不到 `fonts` 等选项！然后将 `fonts`（字体）改为 `Arial based`，否则中文会乱码！
 
 ![](../.gitbook/assets/kodi3.png)
 
@@ -128,7 +128,7 @@ $ mpv 1.mp4
 
 >**技巧**
 >
->可以使用命令行命令 `mixer` 调整音量。如下列命令将把音量调高 5%。
+>可以使用命令行命令 `mixer` 调整音量。如下列命令将将音量调高 5%。
 >
 >```sh
 >$ mixer vol=+5%

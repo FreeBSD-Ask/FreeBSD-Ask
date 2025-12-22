@@ -447,7 +447,7 @@ Unreferenced Variables:
 
 ESP 通常已经挂载到了 **/boot/efi**。如果没有，可手动挂载之，使用 `efibootmgr` 输出中列出的分区（本例为 `nda0p1`）：`mount_msdosfs /dev/nda0p1 /boot/efi`。有关另一则示例，请参阅 [loader.efi(8)](https://man.freebsd.org/cgi/man.cgi?query=loader.efi&sektion=8&format=html)。
 
-在 `efibootmgr -v` 输出的 `File` 字段中的值，如 `\efi\freebsd\loader.efi`，是 EFI 上正在使用的引导加载程序的位置。若挂载点是 **/boot/efi**，则此文件为 `/boot/efi/efi/freebsd/loader.efi`。（在 FAT32 文件系统上大小写不敏感；FreeBSD 使用小写）`File` 的另一个常见值可能是 `\EFI\boot\bootXXX.efi`，其中 `XXX` 是 amd64（即 `x64`）、aarch64（即 `aa64`）或 riscv64（即 `riscv64`）；如未配置，则为默认引导加载程序。应把 **/boot/loader.efi** 复制到 **/boot/efi** 中的正确路径来更新已配置及默认的引导加载程序。
+在 `efibootmgr -v` 输出的 `File` 字段中的值，如 `\efi\freebsd\loader.efi`，是 EFI 上正在使用的引导加载程序的位置。若挂载点是 **/boot/efi**，则此文件为 `/boot/efi/efi/freebsd/loader.efi`。（在 FAT32 文件系统上大小写不敏感；FreeBSD 使用小写）`File` 的另一个常见值可能是 `\EFI\boot\bootXXX.efi`，其中 `XXX` 是 amd64（即 `x64`）、aarch64（即 `aa64`）或 riscv64（即 `riscv64`）；如未配置，则为默认引导加载程序。应将 **/boot/loader.efi** 复制到 **/boot/efi** 中的正确路径来更新已配置及默认的引导加载程序。
 
 ### 更新方法
 

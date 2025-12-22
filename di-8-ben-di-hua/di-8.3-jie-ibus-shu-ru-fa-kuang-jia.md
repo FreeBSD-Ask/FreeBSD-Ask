@@ -17,20 +17,20 @@ IBus 即“Intelligent Input Bus”（智能输入总线）。
 # cd /usr/ports/chinese/ibus-libpinyin/ && make install clean
 ```
 
-其中 `zh-ibus-pinyin` 为拼音输入法
+其中 `zh-ibus-pinyin` 是拼音输入法。
 
-可选的还有
+可选的输入法还包括：
 
 - `chinese/ibus-cangjie` 仓颉输入法
 - `chinese/ibus-chewing` 酷音输入法
-- `chinese/ibus-rime` rime 输入法引擎（另述）
+- `chinese/ibus-rime` Rime 输入法引擎（后文另行说明）
 - `chinese/ibus-table-chinese` 包含五笔、仓颉等多种输入法
 
 ## 配置环境变量
 
-1. sddm lightdm gdm 都可以在 `~/.xprofile` 中写入 A 组配置
-2. lightdm gdm 可以在 `~/.profile` 中写入 A 组配置
-3. sddm 可以在用户登录 shell 配置文件中写入配置
+1. SDDM、LightDM、GDM 都可以在 `~/.xprofile` 中写入 A 组配置
+2. LightDM、GDM 可以在 `~/.profile` 中写入 A 组配置
+3. SDDM 可以在用户登录 shell 的配置文件中写入配置
 
 ---
 
@@ -39,7 +39,7 @@ IBus 即“Intelligent Input Bus”（智能输入总线）。
 - zsh: `~/.zprofile` 写入 A 组配置
 - csh: `~/.cshrc` 写入 B 组配置
 
-注销后登录，直接点击 ibus 图标加入自己的输入法后，即可使用，无需包括中文化设置（测试环境 sddm/xfce/freebsd 13.2/sh）在内的任何配置。但 IBus 提示应当在相应的 shell 文件中加入以下内容：
+注销后重新登录，点击 IBus 图标添加所需输入法，即可使用，无需进行中文化设置（测试环境为 SDDM/Xfce/FreeBSD 13.2/sh）或其他额外配置。建议在相应的 shell 配置文件中加入以下内容以确保 IBus 正常运行：
 
 - A 组（在 sh、bash、zsh 中）：
 
@@ -65,13 +65,15 @@ setenv XIM_ARGS "--daemonize --xim"
 
 ## IBus 设置
 
+- IBus 设置：
+
 ```sh
 $ ibus-setup
 ```
 
----
+- 编码：
 
-IBus 对编码（须 `UTF-8`）有要求，但对区域（如 `C.UTF-8` 还是 `zh_CN.UTF-8`）并无要求。
+IBus 要求使用 UTF-8 编码，但对区域设置（如 `C.UTF-8` 或 `zh_CN.UTF-8`）没有限制。
 
 ![ibus](../.gitbook/assets/ibus-fr-ch-ok.png)
 

@@ -192,7 +192,7 @@ Seems like fuck alias isn't configured!
 More details - https://github.com/nvbn/thefuck#manual-installation
 ```
 
-我们打开网页浏览。发现要把 `eval $(thefuck --alias)` 加入到 `~/.bash_profile`（bash shell）、`~/.bashrc`（bash shell）或 `~/.zshrc`（zsh shell）。
+我们打开网页浏览。发现要将 `eval $(thefuck --alias)` 加入到 `~/.bash_profile`（bash shell）、`~/.bashrc`（bash shell）或 `~/.zshrc`（zsh shell）。
 
 FreeBSD 默认使用的是 sh，因此将：
 

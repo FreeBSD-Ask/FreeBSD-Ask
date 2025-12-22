@@ -5,6 +5,8 @@
 
 - 2025.12.22
   - 审阅“第 6 章 桌面环境”
+  - 审阅“第 7 章 窗口管理器”
+  - 审阅“第 8 章 本地化——i18n/L10n”
 - 2025.12.21
   - 审阅“第 3 章 FreeBSD 高级安装”
   - 审阅“第 4 章 FreeBSD 基础”
@@ -212,7 +214,7 @@
   - 17.7 OpenList 新增：影视刮削
 - 2025.7.6
   - 新增：17.7 OpenList
-  - 6.2 Fcitx 输入法框架：已经把安装 RIME 中州韵输入法（可选）作为独立子节，并强调了 chinese/rime-essay 的必要性
+  - 6.2 Fcitx 输入法框架：已经将安装 RIME 中州韵输入法（可选）作为独立子节，并强调了 chinese/rime-essay 的必要性
   - 20.1 Renpy 游戏与 Godot 游戏：删除五分钟游戏。都是些桌面自带的游戏，列举无意义
   - 新增：20.4 Steam
 - 2025.7.5
@@ -644,7 +646,7 @@
   - 新增一节：“第 5.10 节 FreeBSD 安装微信（Linux 版）”
   - “第 5.5 节 FreeBSD 安装金山 WPS（Linux 版）”：新增“基于 RockyLinux 兼容层（FreeBSD Port）”安装 WPS
 - 2024.11.8  
-  - "第 1.1 节 UNIX、Unix-like、Linux 和 FreeBSD 简介"：补充“MacOS/iOS 等与 BSD 的关系”
+  - "第 1.1 节 UNIX、Unix-like、Linux 和 FreeBSD 简介"：补充“macOS/iOS 等与 BSD 的关系”
 - 2024.11.7  
   - “第 6.4 节 NTFS 的挂载”：新建“格式化”、挂载部分。
   - 针对“[Add new category fs for file systems](https://github.com/freebsd/freebsd-ports/pull/302)” 进行修改

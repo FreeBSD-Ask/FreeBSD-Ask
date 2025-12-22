@@ -245,7 +245,7 @@ Enable（启用）
 
 说明：
 
-BT Audio Offload，A2DP，英特尔蓝牙音频分发技术，参见 [示范影片：以 Intel® Bluetooth® 音频卸除省电 （A2DP） （MP4）](https://www.intel.cn/content/www/cn/zh/content-details/751466/demo-video-power-saving-with-intel-bluetooth-audio-offload-a2dp-mp4.html)。硬件卸载的音频处理允许在计算机的主 CPU 之外执行主要音频处理任务：即把蓝牙传输音频的解码放到 DSP 进行处理，可降低处理器的负载并省电。参见 [Hardware-Offloaded 音频处理](https://learn.microsoft.com/zh-cn/windows-hardware/drivers/audio/hardware-offloaded-audio-processing)。
+BT Audio Offload，A2DP，英特尔蓝牙音频分发技术，参见 [示范影片：以 Intel® Bluetooth® 音频卸除省电 （A2DP） （MP4）](https://www.intel.cn/content/www/cn/zh/content-details/751466/demo-video-power-saving-with-intel-bluetooth-audio-offload-a2dp-mp4.html)。硬件卸载的音频处理允许在计算机的主 CPU 之外执行主要音频处理任务：即将蓝牙传输音频的解码放到 DSP 进行处理，可降低处理器的负载并省电。参见 [Hardware-Offloaded 音频处理](https://learn.microsoft.com/zh-cn/windows-hardware/drivers/audio/hardware-offloaded-audio-processing)。
 
 该功能可将来自蓝牙设备的 HFP 格式音频输入传送至音频 DSP，同时通过 A2DP 格式实现高能效的音频输出至蓝牙设备。
 
@@ -1686,7 +1686,7 @@ Enable（启用）
 
 说明：
 
-设置后，系统将把发送到 IO 寄存器的 IO_read 指令映射到 MWAIT（偏移量），映射地址为 PMG_IO_BASE_ADDRBASE + 偏移量。
+设置后，系统将将发送到 IO 寄存器的 IO_read 指令映射到 MWAIT（偏移量），映射地址为 PMG_IO_BASE_ADDRBASE + 偏移量。
 
 通过将 I/O 读操作重定向到 MWAIT，系统可以在等待 I/O 操作完成时降低功耗，提升能效。
 
@@ -2348,7 +2348,7 @@ Enable（启用）
 
 说明：
 
-Intel® TCC 错误日志功能可让你查看 BIOS 启动过程中发生的错误。启用后将把 TCC 流程中的错误转储到内存。
+Intel® TCC 错误日志功能可让你查看 BIOS 启动过程中发生的错误。启用后将将 TCC 流程中的错误转储到内存。
 
 #### Intel® TCC Authentication Menu（Intel TCC 认证菜单）
 

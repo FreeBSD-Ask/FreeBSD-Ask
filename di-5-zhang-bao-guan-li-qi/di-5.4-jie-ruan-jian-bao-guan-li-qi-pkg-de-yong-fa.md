@@ -1,12 +1,12 @@
 # 5.4 使用 pkg 管理二进制包
 
-FreeBSD 的二进制包管理器目前是 pkg（旧称 pkgng），即 “Package”，意为软件包。
+FreeBSD 的二进制包管理器目前是 pkg（旧称 pkgng），即“Package”，意为软件包。
 
 `pkg install` 可以缩写成 `pkg ins`，其他命令亦类似。
 
 > **注意**
 >
-> pkg 只能管理第三方软件包，并不能起到升级系统，获取安全更新的作用。这是因为 FreeBSD 项目是把内核与用户空间作为一个整体来进行维护的，而不是像 Linux 那样 Linus Torvalds 负责维护内核，各个发行版的人负责维护 GNU 工具（他们这些软件实际上被设计为单个软件包，因此可以用包管理器更新与升级系统）。
+> pkg 只能管理第三方软件包，并不能起到升级系统，获取安全更新的作用。这是因为 FreeBSD 项目是将内核与用户空间作为一个整体来进行维护的，而不是像 Linux 那样 Linus Torvalds 负责维护内核，各个发行版的人负责维护 GNU 工具（他们这些软件实际上被设计为单个软件包，因此可以用包管理器更新与升级系统）。
 >
 >FreeBSD 现在也正 [试图使用 pkg 来实现用户空间和内核的更新](https://wiki.freebsd.org/PkgBase) ，以期解决上述问题。
 >
@@ -18,7 +18,7 @@ FreeBSD 的二进制包管理器目前是 pkg（旧称 pkgng），即 “Package
 
 >**技巧**
 >
->如果需要查询某个软件包在 FreeBSD 中的具体情况，可以这样做：使用 Google 或 Bing（Bing 很多时候搜索不出来）搜索 “freebsd ports 包名”。如果无法使用，可以直接在网站里搜索包名 [https://www.freshports.org/](https://www.freshports.org/)。
+>如果需要查询某个软件包在 FreeBSD 中的具体情况，可以这样做：使用 Google 或 Bing（Bing 很多时候搜索不出来）搜索“freebsd ports 包名”。如果无法使用，可以直接在网站里搜索包名 [https://www.freshports.org/](https://www.freshports.org/)。
 
 ## 如何从 Port 构建出 pkg
 
@@ -107,7 +107,7 @@ $ pkg ins chromium # 在普通用户权限下安装个浏览器看看
 pkg: Insufficient privileges to install packages
 ```
 
-“Insufficient privileges to install packages”即 “没有足够的权限来安装软件包”。
+“Insufficient privileges to install packages”即“没有足够的权限来安装软件包”。
 
 再试一次：
 
@@ -163,7 +163,7 @@ All repositories are up to date.
 pkg: No packages available to install matching 'chromium' have been found in the repositories
 ```
 
-“pkg: No packages available to install matching 'chromium' have been found in the repositories”即“pkg：在仓库中找不到 与 “chromium” 匹配、可供安装的软件包”。
+“pkg: No packages available to install matching 'chromium' have been found in the repositories”即“pkg：在仓库中找不到 与“chromium”匹配、可供安装的软件包”。
 
 如果你前面显示了“FreeBSD repository update completed. 36804 packages processed.”（FreeBSD 仓库更新完成。处理了 36804 个包），说明当前软件源是可用的，只是找不到 `chromium` 这个软件包而已。
 
@@ -175,7 +175,7 @@ pkg: No packages available to install matching 'chromium' have been found in the
 >
 >>[Is it possible to add i18n multilingual support using po files?](https://github.com/freebsd/pkg/issues/2421)
 >>
->>FreeBSD 基本系统里没有 gettext ，所以没有计划这样做，如果后续在 pkg 中出现可用的 libintl 套件，则可能会重新考虑。
+>>FreeBSD 基本系统里没有 gettext，所以没有计划这样做，如果后续在 pkg 中出现可用的 libintl 套件，则可能会重新考虑。
 >
 >阅读 pkg 源代码，定位问题所在源头，尝试解决这个问题，提交 PR 让 pkg 支持 i18n。
 
@@ -221,7 +221,7 @@ pkg: No packages available to install matching 'chromium' have been found in the
 ### 如何卸载所有自行安装的第三方软件？
 
 ```sh
-# pkg delete -fa # 如果带上参数 f，会把 pkg 自己也删掉，因为 pkg 也是用户一开始自行安装的软件。
+# pkg delete -fa # 如果带上参数 f，会将 pkg 自己也删掉，因为 pkg 也是用户一开始自行安装的软件。
 Checking integrity... done (0 conflicting)
 Deinstallation has been requested for the following 87 packages (of 0 packages in the universe):
 
@@ -232,7 +232,7 @@ Installed packages to be REMOVED:
 ……省略一部分……
 	pcre2: 10.43
 	perl5: 5.36.3_1
-	pkg: 1.21.3   # 如果带上参数 `-f`，会把 pkg 本身也删除，因为 pkg 也是用户最初自行安装的软件
+	pkg: 1.21.3   # 如果带上参数 `-f`，会将 pkg 本身也删除，因为 pkg 也是用户最初自行安装的软件
 	png: 1.6.43
 	xorg-fonts-truetype: 7.7_1
 	xorgproto: 2024.1

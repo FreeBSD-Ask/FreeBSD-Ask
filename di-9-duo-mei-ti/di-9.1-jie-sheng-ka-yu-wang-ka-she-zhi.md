@@ -59,7 +59,7 @@ hint.hdac.0.cad0.nid20.config="as=1"
 hint.hdac.0.cad0.nid21.config="as=2"
 ```
 
-这会交换 line-out（线路输出）和扬声器的功能。因此 **pcm0** 设备会把声音输出到线路输出和耳机插孔。当耳机插入时，线路输出会自动静音。
+这会交换 line-out（线路输出）和扬声器的功能。因此 **pcm0** 设备会将声音输出到线路输出和耳机插孔。当耳机插入时，线路输出会自动静音。
 
 - **pcm0** 的录音输入来自两个外置麦克风和线路输入插孔。
 - **pcm1** 的播放则会输出到内置扬声器。
@@ -72,9 +72,9 @@ hint.hdac.0.cad0.nid27.config="as=2 seq=0"
 hint.hdac.0.cad0.nid25.config="as=4 seq=0"
 ```
 
-这样会把耳机和其中一个麦克风分离到独立的设备。
+这样会将耳机和其中一个麦克风分离到独立的设备。
 
-- **pcm0** 会把声音播放到内置扬声器和线路输出插孔，并且在耳机插入时自动静音扬声器。
+- **pcm0** 会将声音播放到内置扬声器和线路输出插孔，并且在耳机插入时自动静音扬声器。
 - **pcm0** 的录音输入来自一个外部麦克风和线路输入插孔。
 - **pcm1** 设备则完全用于前面板的耳机（耳机 + 麦克风）。
 
@@ -134,7 +134,7 @@ pcm0: <Realtek ALC897 (Analog)> at nid 27 and 26 on hdaa0
 # sysctl dev.hdaa.0.nid27_config="as=1 seq=15"
 ```
 
-- `as=1`：把两者放到同一个关联里。
+- `as=1`：将两者放到同一个关联里。
 - `seq=0`：主输出（扬声器）。
 - `seq=15`：耳机，插入耳机时会自动静音扬声器。
 
@@ -157,11 +157,11 @@ hint.hdaa.0.nid27.config="as=1 seq=15"
 
 部分声卡需要自行编译内核，请参考 [Open Sound System for FreeBSD](http://www.opensound.com/freebsd.html)。
 
-但是 oss 有些缺点，使用 `obs-studio` 无法录制 oss 输出。只能录制 oss 输入。看官方论坛里，可以用 `virtual_oss` 模拟一个设备实现（使用 `virtual_oss` 的参数 `-M` 进行声道路由，即把 oss 输出重定向到 oss 输入）。
+但是 oss 有些缺点，使用 `obs-studio` 无法录制 oss 输出。只能录制 oss 输入。看官方论坛里，可以用 `virtual_oss` 模拟一个设备实现（使用 `virtual_oss` 的参数 `-M` 进行声道路由，即将 oss 输出重定向到 oss 输入）。
 
 但是 `obs-studio` 可以录制 pulseaudio 输出的音频。(默认的“桌面音频”这个输入源，没有说明应该是 pulseaudio 输出，故 oss 输出无法通过此录音）
 
-所以有些软件可以使用 pulseaudio 作为输出。使用 pulseaudio 的软件的音频输出，不受上面的命令控制音频输出设备。pulseaudio 会根据自己的设置把音频送到对应设备，所以需要使用 pulseaudio 混音器控制。
+所以有些软件可以使用 pulseaudio 作为输出。使用 pulseaudio 的软件的音频输出，不受上面的命令控制音频输出设备。pulseaudio 会根据自己的设置将音频送到对应设备，所以需要使用 pulseaudio 混音器控制。
 
 在 kde5 下面自带的音频控制器，切换设备就是控制的 pulseaudio。
 

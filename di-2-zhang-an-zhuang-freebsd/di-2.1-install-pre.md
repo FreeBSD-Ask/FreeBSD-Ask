@@ -118,7 +118,7 @@ FreeBSD-14.2-RELEASE-amd64-mini-memstick.img.xz    107445036      2024-Nov-29 13
 
 >**技巧**
 >
->网络传输可能产生错误，导致下载的文件与原始镜像不一致。~~网盘就经常这样~~。因此，需要一种机制来验证所获取的文件与官方发布的镜像完全一致，这就需要使用**校验值**。Windows 10 和 11 系统自带了命令行工具 `CertUtil`，可用于计算校验值，无需安装额外软件。你还可以参考 [如何确定用于安全应用程序的文件 SHA-256 哈希](https://www.dell.com/support/kbdoc/en-bs/000130826/%E5%A6%82%E4%BD%95-%E7%A1%AE%E5%AE%9A-%E7%94%A8%E4%BA%8E-%E9%98%B2-%E7%97%85%E6%AF%92-%E5%92%8C-%E6%81%B6%E6%84%8F%E8%BD%AF%E4%BB%B6-%E9%98%B2%E6%8A%A4-%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F-%E7%9A%84-%E6%96%87%E4%BB%B6-sha-256-%E5%93%88%E5%B8%8C?lang=zh) 这篇文章。
+>网络传输可能产生错误，导致下载的文件与原始镜像不一致。~~网盘就经常这样~~。因此，需要一种机制来验证所获取的文件与官方发布的镜像完全一致，这就需要使用 **校验值**。Windows 10 和 11 系统自带了命令行工具 `CertUtil`，可用于计算校验值，无需安装额外软件。你还可以参考 [如何确定用于安全应用程序的文件 SHA-256 哈希](https://www.dell.com/support/kbdoc/en-bs/000130826/%E5%A6%82%E4%BD%95-%E7%A1%AE%E5%AE%9A-%E7%94%A8%E4%BA%8E-%E9%98%B2-%E7%97%85%E6%AF%92-%E5%92%8C-%E6%81%B6%E6%84%8F%E8%BD%AF%E4%BB%B6-%E9%98%B2%E6%8A%A4-%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F-%E7%9A%84-%E6%96%87%E4%BB%B6-sha-256-%E5%93%88%E5%B8%8C?lang=zh) 这篇文章。
 
 
 > **注意**
@@ -167,7 +167,7 @@ Windows 平台建议优先使用 **Rufus**，Linux 平台可直接使用 `dd` �
 
 > **警告**
 >
-> **不建议**使用 FreeBSD 手册中提到的 win32diskimager，因为有时会出现校验错误（尽管实际文件校验值是正确的）。**仅在 Rufus 无效的情况下才应使用 win32diskimager。** win32diskimager 下载地址 <https://sourceforge.net/projects/win32diskimager/files/Archive/>，点击 `win32diskimager-1.0.0-install.exe` 即可下载。
+> **不建议** 使用 FreeBSD 手册中提到的 win32diskimager，因为有时会出现校验错误（尽管实际文件校验值是正确的）。**仅在 Rufus 无效的情况下才应使用 win32diskimager。** win32diskimager 下载地址 <https://sourceforge.net/projects/win32diskimager/files/Archive/>，点击 `win32diskimager-1.0.0-install.exe` 即可下载。
 
 
 >**技巧**

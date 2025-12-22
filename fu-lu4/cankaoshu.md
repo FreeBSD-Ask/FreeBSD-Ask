@@ -46,7 +46,7 @@
 | :---: | :---: | :---: |
 | ![FreeBSD 操作系统设计与实现（原书第二版）](../.gitbook/assets/freebsd2rd.png) <br><br> 《FreeBSD 操作系统设计与实现（原书第 2 版）》 |[美] Marshall McKusick、George Neville-Neil、Robert N.M. Watson 等著 <br><br> 陈向群、郭立峰、叶顺平 等译| 9787111689973 <br><br> 机械工业出版社 |  
 
-《FreeBSD 操作系统设计与实现（原书第 2 版）》主要讲解了内核。轻型纸，居然还有几个章节需要自行在[网上](https://course.cmpreading.com/web/refbook/detail/9661/215)下载？该书阅读难度较大，据本书作者之一的博士生毕业生反映（出自韩国 FreeBSD 社区），他自己也看不懂。主要作者: Marshall Kirk McKusick 在其网站上有提供多款 BSD 相关的 [录制课程](https://www.mckusick.com/buylist.html)，大致价格为 1945 美元。目前正在撰写推出第三版，见 2025 年 6 月 BSDCan 大会 [A History of the BSD Daemon by Marshall Kirk McKusick](https://www.youtube.com/watch?v=SGC0191nDp0)（BSD 守护进程史，作者 Marshall Kirk McKusick。见 42:35-50:23）。
+《FreeBSD 操作系统设计与实现（原书第 2 版）》主要讲解了内核。轻型纸，居然还有几个章节需要自行在[网上](https://course.cmpreading.com/web/refbook/detail/9661/215)下载？该书阅读难度较大，据本书作者之一的博士生毕业生反映（出自韩国 FreeBSD 社区），他自己也看不懂。主要作者：Marshall Kirk McKusick 在其网站上有提供多款 BSD 相关的 [录制课程](https://www.mckusick.com/buylist.html)，大致价格为 1945 美元。目前正在撰写推出第三版，见 2025 年 6 月 BSDCan 大会 [A History of the BSD Daemon by Marshall Kirk McKusick](https://www.youtube.com/watch?v=SGC0191nDp0)（BSD 守护进程史，作者 Marshall Kirk McKusick。见 42:35-50:23）。
 
 
 ## 需谨慎对待的书目

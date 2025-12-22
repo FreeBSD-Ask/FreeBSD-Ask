@@ -24,7 +24,7 @@
 
 | 包名                        | 作用说明                                                                 |
 |:-----------------------------|:--------------------------------------------------------------------------|
-| `xorg`                      | X Window 系统                                           |
+| `xorg`                      | X Window 系统（X Window System）               |
 | `fluxbox`                   | 窗口管理器|
 | `fluxbox-tenr-styles-pack`  | Tenner 提供的 Fluxbox 主题包 |
 | `slim`                      | 轻量级图形登录管理器|
@@ -35,7 +35,8 @@
 
 ## `startx`
 
-编辑 `~/.xinitrc`，加入（用谁登录就用谁写入）：
+编辑 `~/.xinitrc` 文件，加入以下内容（每个用户根据自己的登录用户写入）：
+
 
 ```sh
 exec startfluxbox
@@ -44,8 +45,8 @@ exec startfluxbox
 ## 启动项
 
 ```sh
-# service dbus enable
-# service slim enable
+# service dbus enable  # 启用 D-Bus 服务
+# service slim enable  # 启用 slim 登录管理器
 ```
 
 ## fstab
@@ -59,7 +60,8 @@ proc           /proc       procfs  rw  0   0
 ## 中文配置
 
 
-编辑 `/etc/login.conf`：找到 `default:\` 这一段，把 `:lang=C.UTF-8` 修改为 `:lang=zh_CN.UTF-8`。
+编辑 `/etc/login.conf` 文件，找到 `default:\` 这一段，将 `:lang=C.UTF-8` 修改为 `:lang=zh_CN.UTF-8`。
+
 
 刷新数据库：
 
@@ -75,10 +77,12 @@ proc           /proc       procfs  rw  0   0
 
 ## 故障排除与未竟事宜
 
-- lightdm、xdm 均不可用，无法启动 fluxbox
+### LightDM 和 XDM 均不可用
+
+表现为无法启动 Fluxbox
 
 待解决
 
-- 没有中文
+### 中文界面未启用
 
 待解决

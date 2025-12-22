@@ -75,7 +75,7 @@ Listen /var/run/cups/cups.sock
 Listen IP:631
 ```
 
-- 再把
+- 再将
 
 ```ini
 # Restrict access to the server...

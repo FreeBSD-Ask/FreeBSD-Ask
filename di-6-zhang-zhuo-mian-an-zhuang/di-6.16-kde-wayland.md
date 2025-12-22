@@ -50,7 +50,7 @@ seatd 是一个 seat 管理守护进程，用于在非 systemd 环境下管理 W
 # service sddm enable
 ```
 
-通过启用 SDDM 登录管理器启动 KDE，在登录界面选择 “Wayland” 会话。
+通过启用 SDDM 登录管理器启动 KDE，在登录界面选择“Wayland”会话。
 
 ### 方法 ②：通过脚本启动
 
@@ -89,7 +89,7 @@ $ sh ~/kde.sh
 
 >**技巧**
 >
->上图显示为 “Intel UHD Graphics” 而非 “Iris Xe Graphics”，这是因为系统未启用某些硬件加速特性（与内存配置有关）~~笔者无力购买第二根 DDR5 内存条~~。参见 [Intel® Iris® Xe Graphics Shows As Intel® UHD Graphics in the Intel® Graphics Command Center and Device Manager](https://www.intel.com/content/www/us/en/support/articles/000059744/graphics.html)（网站对应页面的中文翻译不正确）。
+>上图显示为“Intel UHD Graphics”而非“Iris Xe Graphics”，这是因为系统未启用某些硬件加速特性（与内存配置有关）~~笔者无力购买第二根 DDR5 内存条~~。参见 [Intel® Iris® Xe Graphics Shows As Intel® UHD Graphics in the Intel® Graphics Command Center and Device Manager](https://www.intel.com/content/www/us/en/support/articles/000059744/graphics.html)（网站对应页面的中文翻译不正确）。
 
 - 检查当前会话是否为 Wayland：
 
@@ -144,7 +144,7 @@ $ cp /usr/local/share/applications/org.fcitx.Fcitx5.desktop ~/.config/autostart/
 
 ### 在 root 下无声音
 
-表现为右下角声音控件提示 “未连接到音频服务”：可以设置 PulseAudio 自启动，方法是在 KDE 设置中添加该服务并赋予可执行权限。
+表现为右下角声音控件提示“未连接到音频服务”：可以设置 PulseAudio 自启动，方法是在 KDE 设置中添加该服务并赋予可执行权限。
 
 ## 参考文献
 
