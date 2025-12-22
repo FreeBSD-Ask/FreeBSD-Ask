@@ -1,6 +1,6 @@
 # 9.4 触摸板与键鼠
 
-在默认情况下 FreeBSD 支持 i2c 和 USB 触摸板。
+在默认情况下，FreeBSD 支持 I²C 和 USB 触摸板。
 
 ## 触摸板
 
@@ -9,7 +9,7 @@
 查找触摸板：
 
 ```sh
-ykla@ykla-mi:~ $ xinput list
+$ xinput list
 ⎡ Virtual core pointer                    	id=2	[master pointer  (3)]
 ⎜   ↳ Virtual core XTEST pointer              	id=4	[slave  pointer  (2)]
 ⎜   ↳ Windows pointer                         	id=6	[slave  pointer  (2)]
@@ -18,10 +18,10 @@ ykla@ykla-mi:~ $ xinput list
     ↳ Windows keyboard                        	id=7	[slave  keyboard (3)]
 ```
 
-可以看到 `6` 是触摸板，关闭：（最后 `1` 为开启；`0` 关闭）
+可以看到，`6` 是触摸板，关闭方式如下（其中 `1` 表示开启，`0` 表示关闭）：
 
 ```sh
-ykla@ykla-mi:~ $ xinput set-prop 6 "Device Enabled" 0
+$ xinput set-prop 6 "Device Enabled" 0
 ```
 
 #### 参考文献
@@ -30,23 +30,26 @@ ykla@ykla-mi:~ $ xinput set-prop 6 "Device Enabled" 0
 
 ### Apple Magic Trackpad
 
-Apple Magic Trackpad 触摸板系列，因压感带来的舒适操作体验而闻名。FreeBSD 支持苹果妙控板，但需要加载 `bcm5974` 内核模块。
+Apple Magic Trackpad 触摸板系列因压感带来的舒适操作体验而闻名。
+
+FreeBSD 支持苹果妙控板，但需要加载 `bcm5974` 内核模块才能正常使用。
+
 
 ```sh
-kldload bcm5974
+# kldload bcm5974
 ```
 
-可以在 `rc.conf` 中永久化这一配置：
+可以使用命令将其永久生效：
 
+```sh
+# sysrc kld_list+="bcm5974"
 ```
-sysrc kld_list+="bcm5974"
-```
 
-该触摸板需要配合 `libinput` 使用，在加载内核模块之后，通常 Wayland 桌面环境可以开箱即用。目前暂不支持蓝牙功能。
+该触摸板需要配合 `libinput` 使用，在加载内核模块之后，通常在 Wayland 桌面环境下可以开箱即用。目前暂不支持通过蓝牙方式使用。
 
-## 附录：解决 15.0 及更高版本键鼠无法驱动
+## 附录：解决 15.0 及更高版本中键鼠无法驱动的问题
 
-如果你的 USB 键鼠或触摸板在 15.0 以下的旧版本中均正常，更新到 15.0 后发生故障，可以参考下文：
+如果你的 USB 键鼠或触摸板在 15.0 以下的旧版本中工作正常，但在更新到 15.0 后发生故障，可以参考下文：
 
 在 `/boot/loader.conf` 或 `/boot/loader.conf.local` 中加入如下一行：
 
@@ -56,7 +59,7 @@ hw.usb.usbhid.enable="0"
 
 随后重启即可。
 
-问题分析：ums 在机器无关的内核里始终存在，usbhid 现在位于 amd64 机器相关内核选项里。15.0 后 usbhid 驱动成为默认，优先级高于传统的 ums 驱动。但都是编译进内核的不是模块。usbhid 引入内核自 [conf: Add hkbd and hms to GENERIC* kernel configs](https://reviews.freebsd.org/D45658)，替代 ums 发生在 [Enable usbhid by default](https://reviews.freebsd.org/D45659)。最早出现在 13.0，从 15.0 成为默认。**此问题仍需读者进一步研究原因并提出 Bug 到 FreeBSD 项目，因为项目计划日后彻底移除 ums 支持。** 具体参见 FreeBSD 期刊 2021/0708 号。
+问题分析：ums 驱动始终存在于与具体机器无关的内核中，而 usbhid 目前位于 amd64 架构相关的内核选项中。在 15.0 之后，usbhid 驱动成为默认，其优先级高于传统的 ums 驱动。但两者均为直接编译进内核的驱动，而非以模块形式加载。usbhid 驱动引入内核始于 [conf: Add hkbd and hms to GENERIC\* kernel configs](https://reviews.freebsd.org/D45658)，而替代 ums 的过程发生在 [Enable usbhid by default](https://reviews.freebsd.org/D45659)。该变更最早出现在 13.0 版本，并从 15.0 起成为默认行为。此问题仍需读者进一步研究原因，并向 FreeBSD 项目提交 Bug 报告，因为项目计划在日后彻底移除 ums 支持。具体可参见 FreeBSD 期刊 2021/0708 期。
 
 ## 附录：Fn 键设置
 

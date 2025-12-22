@@ -1,10 +1,10 @@
 # 9.3 打印机
 
-CUPS 全称 Common Unix Printing System（通用 Unix 打印系统），支持各种打印协议与打印机设备，并且能将打印机以 IPP 或 SMB 协议共享到网络上。
+CUPS 全称为 Common Unix Printing System（通用 Unix 打印系统），支持多种打印协议和打印机设备，并可将打印机通过 IPP 或 SMB 协议共享到网络中。
 
-打印机通过 USB 接入至打印服务器（即 FreeBSD）。打印服务器将打印机共享到内网里，供内网使用。内网中的其他电脑通过发送广播包，可自动地查询内网里有哪些打印机。
+打印机通过 USB 接入打印服务器（即 FreeBSD）。打印服务器将打印机共享到内网中，供内网内的设备使用。内网中的其他计算机可通过发送广播包，自动查询内网中可用的打印机。
 
-本文于 Android、苹果、Debian 测试通过，均可正常发现这台打印服务器。
+本文在 Android、Apple、Debian 上测试通过，均可正常发现该打印服务器。
 
 
 ## 安装 CUPS（通用 Unix 打印系统）
@@ -15,7 +15,7 @@ CUPS 全称 Common Unix Printing System（通用 Unix 打印系统），支持�
 # pkg install cups cups-filters
 ```
 
-- 或者使用 Ports 安装：
+- 或使用 Ports 安装：
 
 ```sh
 # cd /usr/ports/print/cups/ && make install clean
@@ -26,25 +26,27 @@ CUPS 全称 Common Unix Printing System（通用 Unix 打印系统），支持�
 >
 >若使用桌面环境，请在 Ports 选项界面中选中 `x11`，可在系统中生成添加和配置打印机的应用图标。
 
-解释：
+软件包说明：
 
 | 软件包         | 作用说明                                |
 |:----------------|:------------------------------------------|
 | `cups`         | 用于提供 CUPS 服务                        |
 | `cups-filters` | 用于支持免驱动打印机（即 IPP Everywhere 协议） |
 |`dbus`|Avahi 需要，作为 CUPS 依赖自动安装|
- |`avahi-app`    | 作为 CUPS 依赖自动安装，Avahi 守护进程，用于内网中的打印机自动发现|
+ |`avahi-app`    | Avahi 所需组件，作为 CUPS 的依赖自动安装。用于内网中的打印机自动发现|
 
 
 >**技巧**
 >
->本文将 FreeBSD 变成了打印服务器。若 FreeBSD 只是想作为打印客户端、用 USB 连接打印机进行打印，而不需要共享，那么 avahi-app 和 dbus 就不是必需的
+>本文将 FreeBSD 配置为打印服务器。若 FreeBSD 仅作为打印客户端，通过 USB 连接打印机进行打印，而不需要共享打印服务，则 avahi-app 和 dbus 并非必需。
 
 >**注意**
 >
->若打印机不支持免驱动打印，则需要安装对应的驱动
+>若打印机不支持免驱动打印，则需要安装对应的驱动。
 
 ## 添加服务
+
+将 dbus、avahi-daemon 和 cupsd 服务设置为系统启动时自动启用，以确保打印服务及其自动发现功能在系统重启后仍可正常使用：
 
 ```sh
 # service dbus enable
@@ -52,13 +54,11 @@ CUPS 全称 Common Unix Printing System（通用 Unix 打印系统），支持�
 # service cupsd enable
 ```
 
-启动服务后，此时，其他设备应该能够自动发现内网中的共享打印机了。尝试打印测试页，测试能否正常打印。
+启动服务后，其他设备应能够自动发现内网中的共享打印机。尝试打印测试页，测试能否正常打印。
 
 ## 向局域网共享打印服务
 
-若不设置该允许局域网访问，则除了 `localhost` 外的机器无法使用。
-
----
+若未设置“允许局域网访问”，则除 `localhost` 外的其他主机将无法使用该打印服务。
 
 编辑 `/usr/local/etc/cups/cupsd.conf`：
 
@@ -113,13 +113,15 @@ Listen IP:631
 
 ## 添加打印机
 
-在浏览器中输入 `http://IP:631`，该地址为该打印机的管理页面。
+在浏览器中输入 `http://IP:631`，该地址为打印服务器的管理页面。
+
 
 ![](../.gitbook/assets/cup1.png)
 
 点击 `Administration-Add Printer`，根据提示创建打印机。
 
-中途会提示输入账号密码，使用 `root` 或者 `wheel` 组内的用户登录（输入他们在 FreeBSD 系统中的账户密码）即可。
+过程中会提示输入账号和密码，使用 `root` 用户或 `wheel` 组内的用户登录（输入其在 FreeBSD 系统中的账户密码）即可。
+
 
 ![](../.gitbook/assets/cup2.png)
 
@@ -127,7 +129,7 @@ Listen IP:631
 
 ![](../.gitbook/assets/cup3.png)
 
-本文中使用的打印机是 Brother HL L3228CDW。
+本文中使用的打印机型号为 Brother HL L3228CDW。
 
 ![](../.gitbook/assets/cup4.png)
 
@@ -139,7 +141,8 @@ Listen IP:631
 
 ![](../.gitbook/assets/cup6.png)
 
-如果打印机免驱，`Model` 请选择 `Generic IPP Everywhere Printer (en)`；否则需要安装相关驱动，并选择对应型号。
+如果打印机支持免驱动打印，`Model` 请选择 `Generic IPP Everywhere Printer (en)`；否则需要安装相应驱动，并选择对应的打印机型号。
+
 
 ![](../.gitbook/assets/cup7.png)
 
@@ -149,7 +152,7 @@ Listen IP:631
 
 ## KDE 桌面添加打印机
 
-无需额外操作，需要打印的设备一般可自动发现打印服务器，并自动将其加入打印机列表，在打印文件的时候即可选择。比如 KDE 桌面：
+无需额外操作，需要打印的设备通常可自动发现打印服务器，并自动将其加入打印机列表，在打印文件时即可选择。例如在 KDE 桌面上：
 
 ![](../.gitbook/assets/cup10.png)
 
@@ -163,14 +166,15 @@ Listen IP:631
 
 ## 故障排除与未竟事项
 
-- 打印机免驱问题
+### 打印机免驱动支持问题
 
-要确认打印机是否免驱，可以在 <https://openprinting.github.io/printers/> 查询。以本文使用打印机为例：
+要确认打印机是否免驱动，可以在 <https://openprinting.github.io/printers/> 查询。以本文使用打印机为例：
 
 ![](../.gitbook/assets/cup9.png)
 
-惠普 Hp 打印机安装 Port `print/hplip` 即可。
+惠普（HP）打印机可通过安装 Port `print/hplip` 获得支持。
 
-- FreeBSD 打印的测试页是什么样的？
 
-待测试。
+### FreeBSD 打印的测试页示例
+
+尚待测试。
