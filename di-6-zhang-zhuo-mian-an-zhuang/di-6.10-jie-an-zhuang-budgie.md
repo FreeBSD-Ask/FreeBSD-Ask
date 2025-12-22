@@ -1,8 +1,8 @@
 # 6.10 Budgie（预备删除）
 
->目前 Budgie 但无法正常登录桌面。[Bug 289898 x11/budgie: After logging in with LightDM, it crashes and then shows a black screen](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=289898)。若在六个月内（2025-04-01 日前）未得到解决将删除“6.10 Budgie”。
+>目前 Budgie 无法正常登录桌面。[Bug 289898 x11/budgie: After logging in with LightDM, it crashes and then shows a black screen](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=289898)。若在六个月内（2025-04-01 日前）未得到解决将删除“6.10 Budgie”。
 
-Budgie 是 [Solus Linux](https://getsol.us/) 的默认桌面。
+Budgie 是 [Solus Linux](https://getsol.us/) 的默认桌面环境。
 
 ## 安装
 
@@ -22,21 +22,21 @@ Budgie 是 [Solus Linux](https://getsol.us/) 的默认桌面。
 
 >**技巧**
 >
->会自动安装 lightdm。
+>作为依赖，会自动安装 LightDM。
 
-- 解释：
+- 软件包说明
 
-| 包名             | 作用说明                                                  |
+| 包名             | 功能说明        |
 |:------------------|:--------------------------|
 | `budgie`         | 桌面环境 |
-| `wqy-fonts`      | 文泉驿中文字体                                          |
-|`xorg`|X11|
+| `wqy-fonts`      | 文泉驿中文字体       |
+|`xorg`|X11 系统 |
 
 ## 查看安装提示
 
 ```sh
 In order to launch your session. Copy 'xprofile' into your home directory:
-# 为了启动你的会话，把 'xprofile' 文件复制到你的主目录：
+# 为了启动你的会话，请将 'xprofile' 文件复制到你的主目录：
 
   cp /usr/local/share/examples/budgie/xprofile ~/.xprofile
 # 执行以上命令，将示例配置文件复制到主目录下的 .xprofile
@@ -66,7 +66,7 @@ Replace YOURLOGIN by your login.
 $ cp /usr/local/share/examples/budgie/xprofile ~/.xprofile
 ```
 
-## 创建账户服务
+## 创建 AccountsService 用户配置
 
 - 创建所需路径
 
@@ -100,10 +100,10 @@ SystemAccount=false
 # service lightdm enable
 ```
 
-## 中文环境
+## 中文语言环境
 
 
-编辑 `/etc/login.conf`：找到 `default:\` 这一段，把 `:lang=C.UTF-8` 修改为 `:lang=zh_CN.UTF-8`。
+编辑 `/etc/login.conf`：找到 `default:\` 这一段，将 `:lang=C.UTF-8` 修改为 `:lang=zh_CN.UTF-8`。
 
 
 刷新数据库：
@@ -118,10 +118,11 @@ SystemAccount=false
 
 ![FreeBSD 安装 Budgie](../.gitbook/assets/budgie2.png)
 
-图中壁纸为默认。拍摄地为新加坡滨海湾区。
+图中壁纸为默认壁纸。拍摄地为新加坡滨海湾区。
 
 ![FreeBSD 安装 Budgie](../.gitbook/assets/budgie3.png)
 
 ## 参考文献
 
-- [Installation](https://codeberg.org/olivierd/freebsd-ports-budgie/wiki/Installation)，本文主要补充来自此处，但是经过测试无需配置 `05-suspend.rules` 也可以做到关机重启。
+- [Installation](https://codeberg.org/olivierd/freebsd-ports-budgie/wiki/Installation)，本文主要补充自此处，但经测试无需配置 `05-suspend.rules` 也可以实现关机和重启。
+

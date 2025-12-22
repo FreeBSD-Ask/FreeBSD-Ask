@@ -18,7 +18,7 @@ NVIDIA 卡未经测试。本文使用 Intel 12 代处理器（i7-1260P）的核�
 
 ### 安装 seatd
 
-seatd 是一种会话管理器。~~我也不知道它是干什么用的，但是就是需要~~
+seatd 是一个 seat 管理守护进程，用于在非 systemd 环境下管理 Wayland 会话和设备访问。
 
 - 使用 pkg 安装：
   
@@ -35,7 +35,7 @@ seatd 是一种会话管理器。~~我也不知道它是干什么用的，但是
 
 ### 配置 seatd 服务
 
-设置服务项：
+添加并启用服务：
 
 ```sh
 # service dbus enable
@@ -50,11 +50,11 @@ seatd 是一种会话管理器。~~我也不知道它是干什么用的，但是
 # service sddm enable
 ```
 
-直接通过 SDDM 启动即可，在左下角选择“Wayland”会话。
+通过启用 SDDM 登录管理器启动 KDE，在登录界面选择 “Wayland” 会话。
 
 ### 方法 ②：通过脚本启动
 
-- 在 `~/` 下新建一脚本 `kde.sh`：
+- 在 `~/` 下新建一个脚本 `kde.sh`：
 
 ```sh
 #! /bin/sh
@@ -77,7 +77,7 @@ $ chmod 755 ~/kde.sh
 
 - 进入 KDE
 
-此时，你应位于 TTY 界面，并登录到了普通用户，并且不存在任何 X11 会话（如有，请禁用相关服务并重启再来）。
+此时你应在 TTY 界面以普通用户身份登录，并且没有任何 X11 会话正在运行（如存在，请禁用相关服务并重启再试）。
 
 ```sh
 $ sh ~/kde.sh
@@ -89,9 +89,9 @@ $ sh ~/kde.sh
 
 >**技巧**
 >
->上图之所以显示为“Intel UHD Graphics”显卡而非“Iris Xe Graphics”，是因为笔者无力购买第二根 DDR5 内存条。参见 [Intel® Iris® Xe Graphics Shows As Intel® UHD Graphics in the Intel® Graphics Command Center and Device Manager](https://www.intel.com/content/www/us/en/support/articles/000059744/graphics.html)（网站对应页面的中文翻译不正确）。
+>上图显示为 “Intel UHD Graphics” 而非 “Iris Xe Graphics”，这是因为系统未启用某些硬件加速特性（与内存配置有关）~~笔者无力购买第二根 DDR5 内存条~~。参见 [Intel® Iris® Xe Graphics Shows As Intel® UHD Graphics in the Intel® Graphics Command Center and Device Manager](https://www.intel.com/content/www/us/en/support/articles/000059744/graphics.html)（网站对应页面的中文翻译不正确）。
 
-- 检查是否是 Wayland：
+- 检查当前会话是否为 Wayland：
 
 ```sh
 # echo $XDG_SESSION_TYPE
@@ -105,14 +105,14 @@ $ sh ~/kde.sh
 >
 >经测试 IBus 亦可用，且无需配置。
 
-配置 Fcitx 自动启动：
+配置 Fcitx 5 自动启动：
 
 ```sh
-# mkdir -p /root/.config/autostart/ # 创建自启动目录
-# cp /usr/local/share/applications/org.fcitx.Fcitx5.desktop /root/.config/autostart/ # 自动启动 fcitx
+$ mkdir -p ~/.config/autostart/ # 创建自启动目录
+$ cp /usr/local/share/applications/org.fcitx.Fcitx5.desktop ~/.config/autostart/ # 自动启动 Fcitx 5
 ```
 
-当你初次进入 KDE Wayland 桌面时，KDE 会在右下角提示你要在设置的虚拟键盘中进行配置才能启用输入法。请留意该提示。若未设置，将无法切换输入法且无法输入中文。
+当你初次进入 KDE Wayland 桌面时，KDE 会在右下角提示你要在设置的虚拟键盘中进行配置才能启用输入法。请留意该提示。若未进行此设置，将无法切换输入法或输入中文。
 
 ![](../.gitbook/assets/kde-Wayland-fcitx.png)
 
@@ -120,11 +120,11 @@ $ sh ~/kde.sh
 
 ![](../.gitbook/assets/kde-Wayland3-1.png)
 
-请选择“Fcitx 6 Wayland 启动器（实验性）”
+请选择“Fcitx 5 Wayland 启动器（实验性）”
 
 ![](../.gitbook/assets/kde-Wayland5.png)
 
-经测试，在终端 Konsole、火狐浏览器和 Chromium（启动命令为 `chrome --no-sandbox`）中均可输入中文。
+经测试，在 Konsole 终端、Firefox 和 Chromium（使用 `chrome --no-sandbox` 启动）中均可输入中文。
 
 ![](../.gitbook/assets/kde-Wayland4.png)
 
@@ -134,17 +134,17 @@ $ sh ~/kde.sh
 
 ## 故障排除与未竟事宜
 
-### 无法通过 SDDM 的 Wayland 会话启动 KDE
+### 无法通过 SDDM 的 Wayland 会话启动 KDE 6
 
-你的用户可能未加入 video 组。
+你的用户可能尚未加入 video 组。
 
 ### 切换到 PipeWire
 
 待解决。
 
-### root 下没声音
+### 在 root 下无声音
 
-表现为右下角声音选项卡提示“未连接到音频服务”：设置 PulseAudio 自启即可，可在 KDE 设置中自行添加，注意加入可执行权限。
+表现为右下角声音控件提示 “未连接到音频服务”：可以设置 PulseAudio 自启动，方法是在 KDE 设置中添加该服务并赋予可执行权限。
 
 ## 参考文献
 

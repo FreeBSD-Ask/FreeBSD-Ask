@@ -37,7 +37,7 @@
 
 ![VMware 安装 FreeBSD](../.gitbook/assets/vm5.png)
 
-虚拟机通常会占用较大的磁盘空间。若您不希望系统盘（如 C 盘）空间被占满，请自行调整虚拟机的存储位置。
+虚拟机通常会占用较大的磁盘空间。若你不希望系统盘（如 C 盘）空间被占满，请自行调整虚拟机的存储位置。
 
 ![VMware 安装 FreeBSD](../.gitbook/assets/vm6.png)
 
@@ -57,7 +57,7 @@
 
 ![VMware 安装 FreeBSD](../.gitbook/assets/vm11.png)
 
-在“使用 ISO 映像文件”处，点击“浏览”，找到并选中您下载的 `FreeBSD-14.2-RELEASE-amd64-disc1.iso` 文件。
+在“使用 ISO 映像文件”处，点击“浏览”，找到并选中你下载的 `FreeBSD-14.2-RELEASE-amd64-disc1.iso` 文件。
 
 ![VMware 安装 FreeBSD](../.gitbook/assets/vm12.png)
 
@@ -104,7 +104,7 @@
 
 如果无法连接网络，可尝试在虚拟机内将 DNS 服务器设置为 `223.5.5.5`。其他网络配置方法请参阅本章后续章节。
 
-如果配置为桥接模式后始终无法通过 DHCP 获取 IP 地址，可尝试将网络适配器的“桥接到”选项从“自动”改为您主机当前正在使用的物理网卡。
+如果配置为桥接模式后始终无法通过 DHCP 获取 IP 地址，可尝试将网络适配器的“桥接到”选项从“自动”改为你主机当前正在使用的物理网卡。
 
 ![vmware network on freebsd](../.gitbook/assets/net2.png)
 
@@ -210,7 +210,7 @@ fusefs_load="YES"
 
 >**注意**
 >
->请将以下命令中的 `123pan` 替换为您在 VMware 中设置的共享文件夹名称。
+>请将以下命令中的 `123pan` 替换为你在 VMware 中设置的共享文件夹名称。
 
 ```sh
 # vmhgfs-fuse .host:/123pan /mnt/hgfs
@@ -218,7 +218,7 @@ fusefs_load="YES"
 
 ##### 自动挂载
 
-编辑 `/etc/fstab` 文件。添加以下挂载条目（请将 `123pan` 替换为您的共享文件夹名称）：
+编辑 `/etc/fstab` 文件。添加以下挂载条目（请将 `123pan` 替换为你的共享文件夹名称）：
 
 ```sh
 .host:/123pan      /mnt/hgfs    fusefs  rw,mountprog=/usr/local/bin/vmhgfs-fuse,allow_other,failok 0 0
@@ -250,7 +250,7 @@ Downloads
 - [VMware shared folders](https://forums.freebsd.org/threads/vmware-shared-folders.10318/)，挂载方法参考此处
 
 
-## 故障排除与未尽事宜
+## 故障排除与未竟事宜
 
 > **注意**
 >

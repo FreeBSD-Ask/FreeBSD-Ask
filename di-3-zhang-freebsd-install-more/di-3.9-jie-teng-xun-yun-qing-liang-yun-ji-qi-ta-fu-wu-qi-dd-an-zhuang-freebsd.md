@@ -107,7 +107,7 @@ mfsBSD 和 mfsLinux 镜像的默认 `root` 密码均为 `mfsroot`。
 # fetch http://ftp.freebsd.org/pub/FreeBSD/releases/amd64/14.2-RELEASE/MANIFEST # 下载 MANIFEST 文件
 ```
 
-## 故障排除与未尽事宜
+## 故障排除与未竟事宜
 
 ### 为何不能直接使用 dd？（错误示范，仅供说明，请勿执行）
 

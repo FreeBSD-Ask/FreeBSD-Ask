@@ -1,6 +1,6 @@
 # 6.3 KDE6（X11）
 
-KDE 旨在开发一套现代桌面系统，如果你觉得 KDE 界面很像 Windows，那么从时间线上看，你应该说是“Windows 很像 KDE”。
+KDE 致力于开发一套现代桌面环境，如果你觉得 KDE 界面很像 Windows，那么从时间线上看可以说是 “Windows 很像 KDE”。
 
 >**技巧**
 >
@@ -8,6 +8,10 @@ KDE 旨在开发一套现代桌面系统，如果你觉得 KDE 界面很像 Wind
 
 
 ## 安装完整的 KDE 桌面体验
+
+>**技巧**
+>
+>​**那些不希望捆绑安装大量附加工具和软件的用户可以使用附录的最小化安装方案**​，不需要自定义的用户可继续使用上述完整安装方案。
 
 - 使用 pkg 安装：
 
@@ -17,7 +21,7 @@ KDE 旨在开发一套现代桌面系统，如果你觉得 KDE 界面很像 Wind
 
 > **技巧**
 >
-> 如果有时候提示 `pkg` 找不到或者没有 kde，请点击 [x11/kde](https://www.freshports.org/x11/kde) 看看是不是二进制包没有被构建出来。有时候需要切换 quarterly（待上游构建出来了再换到 latest 源，`pkg upgrade` 更新即可）或者 latest 源。类似方法适用于所有软件，故后边不再赘述。如果没有，需要自己使用上述的 Port 进行编译。
+> 如果有时提示 `pkg` 找不到或未提供 kde，请访问 [x11/kde](https://www.freshports.org/x11/kde) 查看是否二进制包尚未构建出来。有时需要切换到 quarterly 或 latest 软件源，待上游构建完成后再运行 `pkg upgrade` 更新。类似方法适用于所有软件，故后边不再赘述。如果没有，需要自己使用上述的 Port 进行编译。
 
 
 - 或者使用 Ports 安装：
@@ -29,7 +33,7 @@ KDE 旨在开发一套现代桌面系统，如果你觉得 KDE 界面很像 Wind
 # cd /usr/ports/x11-fonts/wqy/ && make install clean 
 ```
 
-- 解释
+- 软件包说明
 
 | 包名                   | 作用                     |
 |:----------------------:|:------------------------:|
@@ -60,7 +64,7 @@ KDE 旨在开发一套现代桌面系统，如果你觉得 KDE 界面很像 Wind
 
 ## 权限设置
 
-普通用户还需要将用户加入 wheel 组和 `video` 组，否则设置中一些内容无法显示，图形界面也会受限：
+普通用户还需将用户加入 `wheel` 组和 `video` 组，否则某些设置无法显示，图形界面功能可能受限：
 
 ```sh
 # pw groupmod wheel -m 用户名
@@ -77,7 +81,7 @@ KDE 旨在开发一套现代桌面系统，如果你觉得 KDE 界面很像 Wind
 
 ### 系统中文化方法 ① 用户分级
 
-编辑 `/etc/login.conf`：找到 `default:\` 这一段，把 `:lang=C.UTF-8` 修改为 `:lang=zh_CN.UTF-8`。
+编辑 `/etc/login.conf`：找到 `default:\` 部分，将 `:lang=C.UTF-8` 修改为 `:lang=zh_CN.UTF-8`。
 
 刷新数据库：
 
@@ -91,7 +95,7 @@ KDE 旨在开发一套现代桌面系统，如果你觉得 KDE 界面很像 Wind
 
 ### 系统中文化方法 ② 系统设置
 
-点击开始-> System Settings ->  `Language & Time` 在 `Region & Language` 项的 `Language` 栏点击右侧 `Modify` 中找到“简体中文”（一般是倒数第二，如果都是 `□□□□`，检查你的中文字体安装否）单击之。然后单击 `Apply` 按钮；logout（注销）后重新登录，此时系统语言将变为中文。
+点击开始 -> System Settings -> Language & Time，在 Region & Language 的 Language 栏点击 Modify，找到并选择 “简体中文”。如果显示为 `□□□□`，请检查中文字体是否已安装。然后单击 Apply 按钮；注销后重新登录，此时系统语言将变为中文。
 
 ![KDE 6](../.gitbook/assets/kde6-4.png)
 
@@ -172,8 +176,6 @@ Current=sddm-freebsd-black-theme
 
 直接安装 `x11/kde` 会作为依赖安装 `x11/plasma6-plasma` 和 `x11/kde-baseapps`，其中捆绑了大量的工具软件，在某些情况下可能不方便部署与使用。
 
-**不喜欢捆绑安装一堆附加工具和软件的用户可以使用本小节的最小化安装方案**，无意进行自定义的用户使用上面的完整安装方案即可！
-
 ### 使用 pkg 安装
 
 基础桌面
@@ -189,7 +191,7 @@ Current=sddm-freebsd-black-theme
 |**plasma6-systemsettings**|系统设置|
 
 
-与上面重复的包不再赘述。
+与上文重复的软件包在此不再列出。
 
 可选软件包：
 
@@ -245,7 +247,7 @@ Current=sddm-freebsd-black-theme
 
 >**注意**
 >
->若采用最小化安装 KDE 方法，必须配置 `.xinitrc`！
+>若采用最小化安装 KDE 方案，必须配置 `.xinitrc`。
 
 ### 最小化安装 KDE 图示
 
@@ -263,11 +265,11 @@ Current=sddm-freebsd-black-theme
 
 ![](../.gitbook/assets/kde-win1.png)
 
-点击任务栏中间的空白部分，点击“显示替代部件”
+点击任务栏中间的空白部分，然后点击 “显示替代部件”。
 
 ![](../.gitbook/assets/kde-win2.png)
 
-在弹出窗口中，选择“图标和文本任务管理器”即可。
+在弹出窗口中选择 “图标和文本任务管理器”。
 
 ![](../.gitbook/assets/kde-win3.png)
 
@@ -281,21 +283,19 @@ Current=sddm-freebsd-black-theme
 
 ### sddm 登录闪退
 
-
-如果你使用 VMware 虚拟机时，压根看不见 sddm 最下边的选项，请按照配置虚拟机章节的教程配置屏幕自动缩放。
-
+如果在 VMware 虚拟机中看不到 SDDM 底部选项，请按照虚拟机配置章节的教程设置屏幕自动缩放。
 
 ### 启动 sddm 提醒 `/usr/bin/xauth: (stdin):1: bad display name`，但是可以正常 `startx`
 
-你需要在 `/etc/rc.conf` 里面检查你的 `hostname` 是否为空（理论上不应该为空），有没有设置：
+你需要在 `/etc/rc.conf` 中检查是否已设置 `hostname="XXX"`（理论上应当存在该条目，也不应为 `hostname=""`）：
 
 ![](../.gitbook/assets/errornohostname.png)
 
 按需设置 `hostname` 即可。
 
-### 菜单缺失关机、重启等四个按纽
+### 菜单缺失关机、重启等四个选项
 
-如果无效请先看看你是不是在 sddm 界面选择了 `用户会话`（读取 `.xinitrc`），应该选择 `plasma-x11`。
+如果无效，请检查是否在 SDDM 界面选择了 “用户会话”（读取 `.xinitrc`），应选择 `plasma-x11`。
 
 修改 `/etc/sysctl.conf` 将其中 `security.bsd.see_other_uid` 的值改为 `1`（`1` 为开启）。重启后即可。
 
@@ -314,4 +314,4 @@ Current=sddm-freebsd-black-theme
 
 ### 状态栏不显示时钟和时间
 
-点击时区设置，输入 `beijing`，设置上海即可。若无效，请先更新软件包。
+打开时区设置，选择 “Asia/Shanghai” 时区即可。如果仍无效，请先更新相关软件包。

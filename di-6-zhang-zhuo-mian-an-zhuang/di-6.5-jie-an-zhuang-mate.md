@@ -1,8 +1,8 @@
 # 6.5 Mate
 
-Mate 由 GNOME 2 复刻发展而来。
+MATE 是从 GNOME 2 复刻（fork）发展而来的桌面环境。
 
-你也许不认识 mate，即巴拉圭冬青（Ilex paraguariensis），但是你可能听说“马黛茶”。许多南美球员（如梅西）非常热衷于这种植物制成的茶饮。
+你也许不认识 mate，即巴拉圭冬青（Ilex paraguariensis），但你可能听说“马黛茶”。许多南美球员（如梅西）非常热衷于这种植物制成的茶饮。
 
 ## 安装
 
@@ -23,19 +23,19 @@ Mate 由 GNOME 2 复刻发展而来。
 # cd /usr/ports/devel/xdg-user-dirs/ && make install clean 
 ```
 
-- 解释
+- 软件包说明
 
 
-| 包名               | 作用说明                             |
+| 包名               | 功能说明                          |
 |:--------------------|:--------------------------------------|
 | `mate`             | MATE 桌面环境|
 | `xorg`             | X Window 系统        |
 | `wqy-fonts`        | 文泉驿中文字体             |
 | `lightdm`          | 显示管理器，提供图形登录界面               |
-| `slick-greeter`    | LightDM 的美观登录界面插件，缺少将无法启动 LightDM|
+| `slick-greeter`    |LightDM 的美观登录界面插件，若未安装将无法正常启动 LightDM|
 | `xdg-user-dirs`    | 可自动管理家目录子目录（可选安装）         |
 
-## 安装后启动服务
+## 安装后启用服务
 
 ```sh
 # service dbus enable 
@@ -44,7 +44,7 @@ Mate 由 GNOME 2 复刻发展而来。
 
 ## 配置 LightDM
 
-编辑 `/usr/local/etc/lightdm/lightdm.conf`，找到 `greeter-session=lightdm-gtk-greete` 改成 `greeter-session=slick-greeter`。
+编辑 `/usr/local/etc/lightdm/lightdm.conf`，找到 `greeter-session=lightdm-gtk-greeter` 改成 `greeter-session=slick-greeter`。
 
 ## `startx` 配置文件
 
@@ -54,10 +54,10 @@ Mate 由 GNOME 2 复刻发展而来。
 exec mate-session
 ```
 
-## 显示中文桌面环境
+## 配置中文桌面环境
 
 
-编辑 `/etc/login.conf`：找到 `default:\` 这一段，把 `:lang=C.UTF-8` 修改为 `:lang=zh_CN.UTF-8`。
+编辑 `/etc/login.conf`：找到 `default:\` 这一段，将 `:lang=C.UTF-8` 修改为 `:lang=zh_CN.UTF-8`。
 
 刷新数据库：
 
@@ -69,8 +69,7 @@ exec mate-session
 
 ![FreeBSD 安装 MATE](../.gitbook/assets/mate4.png)
 
-ibus 测试成功。请参见输入法相关章节。
-
+ibus 测试成功，请参见输入法相关章节。
 
 ## 桌面欣赏
 

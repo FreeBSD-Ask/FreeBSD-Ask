@@ -2,11 +2,9 @@
 
 ## x11vnc（FreeBSD 为被控端，镜像屏幕）
 
-x11vnc 会和远程软件 todesk 一样直接镜像屏幕，简言之，你的所有操作都会被同步到显示器上面，反过来在显示器上的操作，你在 VNC 上也可以看到。
+x11vnc 会和远程软件 todesk 一样直接镜像屏幕，简言之，你的所有操作都会同步到显示器上，反过来在显示器上的操作你在 VNC 上也可以看到。
 
----
-
-如果没有显示器则不能使用 x11vnc。
+如果没有显示器则无法使用 x11vnc（可考虑使用 HDMI 显卡欺骗器）。
 
 ### 安装 x11vnc
 
@@ -16,7 +14,7 @@ x11vnc 会和远程软件 todesk 一样直接镜像屏幕，简言之，你的�
 # pkg install x11vnc
 ```
 
-- 或者使用 Ports 安装：
+- 或使用 Ports 安装：
 
 ```sh
 # cd /usr/ports/net/x11vnc/
@@ -41,7 +39,7 @@ $ x11vnc -display :0 -rfbauth ~/.vnc/passwd -auth $(find /var/run/sddm/ -type f)
 
 >**警告**
 >
-> SDDM 左下角选 `Wayland` 是进不去的！因为 x11vnc 尚不支持 Wayland。
+> SDDM 左下角选择 `Wayland` 无法进入，因为 x11vnc 尚不支持 Wayland。
 
 
 - LightDM
@@ -53,7 +51,7 @@ $ x11vnc -display :0 -rfbauth ~/.vnc/passwd -auth /var/run/lightdm/root/\:0
 - GDM
 
 ```sh
-$ x11vnc -display :0 -rfbauth ~/.vnc/passwd -auth /var/lib/gdm/:0.Xauth #或 /run/user/120/gdm/Xauthority，取决于你的 gdm 版本，自己 ls 看一下
+$ x11vnc -display :0 -rfbauth ~/.vnc/passwd -auth /var/lib/gdm/:0.Xauth # 或 /run/user/120/gdm/Xauthority，取决于你的 gdm 版本，可自行 ls 查看
 ```
 
 ![SDDM X11VNC](../.gitbook/assets/x11vnc1.png)
@@ -65,7 +63,7 @@ $ x11vnc -display :0 -rfbauth ~/.vnc/passwd -auth /var/lib/gdm/:0.Xauth #或 /ru
   
 ## TigerVNC（FreeBSD 为被控端）
 
-启用 VNC 服务（目前 Ports 就只剩下这个 [TigerVNC](https://www.freshports.org/net/tigervnc-server/) 了）
+启用 VNC 服务（目前 Ports 中仅剩此 [TigerVNC](https://www.freshports.org/net/tigervnc-server/)）
 
 ### 安装 TigerVNC Server
 
@@ -107,11 +105,12 @@ xsetroot -solid grey
 #exec gnome-session & 
 ```
 
-你用哪个桌面就把那个桌面前面的注释 `#` 删掉即可。
+读者使用哪个桌面，就删除该桌目前面的注释 `#` 即可。
+
 
 >**警告**
 >
->请注意保留 `&`**。
+>请注意保留 `&`。
 
 保存后执行命令授予权限。
 
@@ -126,7 +125,7 @@ $ chmod 755 ~/.vnc/xstartup
 $ vncserver
 ```
 
-或
+或：
 
 ```sh
 $ vncserver :1
@@ -145,7 +144,7 @@ Starting applications specified in /home/ykla/.vnc/xstartup
 Log file is /home/ykla/.vnc/ykla:1.log
 ```
 
-其中“`:1`”意味着 `DISPLAY=:1`，即指定桌面显示的通信端口为 `1`，对应 VNC 服务的端口为 `5901`。桌面显示通信端口从 0 开始，但该端口已被当前桌面占用（除非是镜像 VNC），因此 VNC 服务默认端口虽为 5900，但实际执行须却是从 `5901` 端口开始的。故，你要链接的话，必须指定端口为 `5901`。
+其中 `:1` 表示 `DISPLAY=:1`，即指定桌面显示的通信端口为 `1`，对应 VNC 服务端口为 `5901`。桌面显示通信端口从 0 开始，但该端口已被当前桌面占用（除非是镜像 VNC），因此 VNC 服务默认端口为 5900，但实际执行时从 `5901` 开始。故连接时必须指定端口为 `5901`。
 
 >测试：
 >
@@ -158,9 +157,9 @@ Log file is /home/ykla/.vnc/ykla:1.log
 >A VNC server is already running as :0
 >```
 
-如果启动服务时未通信端口，则系统根据使用情况自动指定。
+如果启动服务时未指定通信端口，则系统将根据情况自动分配。
 
-可以查看进程：
+可查看进程：
 
 ```
 $ ps
@@ -169,15 +168,16 @@ $ ps
 4769  0  S    0:02.72 /usr/local/bin/Xvnc :1 -auth /home/ykla/.Xauthority -desktop ykla:1 (ykla)
 ```
 
-关闭服务请用命令 `vncserver -kill :1`，这里必须指定通信端口。
+关闭服务请使用命令 `vncserver -kill :1`，必须指定通信端口。
 
-- 如果启用了防火墙，以 ipfw 为例，在终端输入命令：
+
+- 如果启用了防火墙，以 ipfw 为例，可在终端输入命令：
 
 ```sh
 # ipfw add allow tcp from any to me 5900-5910 in keep-state
 ```
 
-上行命令表示放通端口 5900-5910，即 DISPLAY 0-10。
+上述命令表示放通端口 5900-5910，即 DISPLAY 0-10。
 
 ### 参考文献
 
@@ -185,7 +185,7 @@ $ ps
 
 ## XRDP（FreeBSD 为被控端）
 
-### 安装 XRDP（基于 kde6）
+### 安装 XRDP（基于 KDE6）
 
 ```sh
 # pkg install xorg kde xrdp wqy-fonts xdg-user-dirs pulseaudio-module-xrdp
@@ -205,7 +205,7 @@ $ ps
 查看配置文件：
 
 ```sh
-root@ykla:/usr/ports/net/xrdp # pkg info -D xrdp
+# pkg info -D xrdp
 xrdp-0.10.2_2,1:
 On install:
 xrdp has been installed.
@@ -255,7 +255,7 @@ your environment.
 # exec xterm                             # xterm 须删除此处开头的 #
 ```
 
-然后重启系统，即可。
+然后重启系统即可。
 
 ### 中文化 (用户使用默认的 sh）
 
@@ -275,7 +275,7 @@ export LANG=zh_CN.UTF-8
 
 你试试火狐浏览器
 
-## 通过 Windows 以 TigerVNC 远程访问 FreeBSD
+## 通过 Windows 使用 TigerVNC 远程访问 FreeBSD
 
 下载 TigerVNC 查看器：
 
@@ -284,7 +284,7 @@ export LANG=zh_CN.UTF-8
 查看 FreeBSD 的 VNC 端口：
 
 ```sh
-root@ykla:/usr/ports/deskutils/anydesk # sockstat -4l
+# sockstat -4l
 USER     COMMAND    PID   FD  PROTO  LOCAL ADDRESS         FOREIGN ADDRESS      
 root     Xvnc        2585 4   tcp4   127.0.0.1:5910        *:*  #VNC 占用
 root     xrdp        2580 13  tcp46  *:3389                *:*  #XRDP 占用
@@ -296,23 +296,25 @@ ntpd     ntpd        1127 26  udp4   192.168.31.187:123    *:*
 root     syslogd     1021 7   udp4   *:514                 *:*
 ```
 
->**故障排除与未竟事宜：由于目标服务器积极拒绝，无法连接**
->
->非镜像 vnc 在连接时必须指定端口，否则按默认端口 5900 进行连接，但是你不是镜像的屏幕（你用的不是 x11vnc），所以必定连不上。
->
->![SDDM VNC](../.gitbook/assets/vnc1.png)
->
->示例：
->
->```sh
->192.168.31.187:5901
->```
+### 故障排除与未竟事宜
+
+#### 由于目标服务器积极拒绝，无法连接
+
+非镜像 VNC 在连接时必须指定端口，否则按默认端口 5900 进行连接。因为你使用的不是镜像屏幕（非 x11vnc），所以无法连接。
+
+![SDDM VNC](../.gitbook/assets/vnc1.png)
+
+示例：
+
+```sh
+192.168.31.187:5901
+```
 
 ![SDDM VNC](../.gitbook/assets/vnc2.png)
 
-### 故障排除与未竟事宜
+#### 通过 VNC 远程 FreeBSD 没声音
 
-- 通过 VNC 远程 FreeBSD  没声音，不知道怎么配置。
+不知道怎么配置。
 
 ## 通过 Windows 自带的桌面远程连接（RDP）远程访问 FreeBSD
 
@@ -330,7 +332,7 @@ root     syslogd     1021 7   udp4   *:514                 *:*
 
 ### 故障排除与未竟事宜
 
-- Windows 的远程桌面窗口若不在左上角或全屏显示，则会模糊
+#### 如果 Windows 的远程桌面窗口既不在左上角也未全屏显示，则会模糊
 
 请 **取消** 勾选“智能调整大小”。
 
@@ -346,7 +348,7 @@ root     syslogd     1021 7   udp4   *:514                 *:*
 
 该软件操作便捷。
 
-请注意，须将左上 🖱️ 改为 👆。默认的鼠标操作很不方便：或者你也可以选择手机 OTG 一个鼠标和键盘。
+请注意，须将左上 🖱️ 改为 👆。默认的鼠标操作很不方便：或者读者也可以选择手机 OTG 一个鼠标和键盘。
 
 ![Remote Desktop FreeBSD](../.gitbook/assets/wrdp3.png)
 
@@ -355,7 +357,7 @@ root     syslogd     1021 7   udp4   *:514                 *:*
 
 ![Remote Desktop FreeBSD](../.gitbook/assets/wrdp4.png)
 
-## 通过 FreeBSD 以 XDRP 远程访问 Windows
+## 通过 FreeBSD 以 XRDP 远程访问 Windows
 
 ### freerdp3（新稳定版，支持 NLA）
 
@@ -375,7 +377,7 @@ root     syslogd     1021 7   udp4   *:514                 *:*
 使用 FreeBSD 通过 freerdp3 远程链接到 Windows 11 24H2：
 
 ```
-ykla@ykla:~ $ xfreerdp3 /u:ykla /p:z  /v:192.168.31.213
+$ xfreerdp3 /u:ykla /p:z  /v:192.168.31.213
 
 ……省略一部分……
 441] [19244:dca12700] [ERROR][com.freerdp.crypto] - [tls_print_new_certificate_warn]: Host key verification failed.
@@ -389,15 +391,15 @@ Certificate details for 192.168.31.213:3389 (RDP-Server):
 The above X.509 certificate could not be verified, possibly because you do not have
 the CA certificate in your certificate store, or the certificate has expired.
 Please look at the OpenSSL documentation on how to add a private CA to the store.
-Do you trust the above certificate? (Y/T/N) y # 输入 y 按回车键以确认链接
+Do you trust the above certificate? (Y/T/N) y # 输入 y 按回车键以确认连接
 
 ```
 
 `xfreerdp3 /u:ykla /p:z  /v:192.168.31.213`：
 
 - `xfreerdp3`，注意前面有个 `x`。
-- `/u:ykla`，`/u:` 即 Username 用户名。`ykla` 是我 Windows 的登录名
-- `/p`，即 Password 密码。`z` 是我 Windows 用户 `ykla` 的登录密码
+- `/u:ykla`，`/u:` 即 Username 用户名。`ykla` 是笔者 Windows 的登录名
+- `/p`，即 Password 密码。`z` 是笔者 Windows 用户 `ykla` 的登录密码
 - `/v:`，即 Server 服务器。
 
 ![freerdp](../.gitbook/assets/freerdp3.png)
@@ -425,7 +427,7 @@ Do you trust the above certificate? (Y/T/N) y # 输入 y 按回车键以确认�
 使用 FreeBSD 远程链接到 Windows 11 24H2：
 
 ```sh
-ykla@ykla:~ $ xfreerdp 192.168.31.213 # 注意是 xfreerdp。
+$ xfreerdp 192.168.31.213 # 注意是 xfreerdp。
 [20:35:20:041] [1105:7c412000] [WARN][com.freerdp.client.common.cmdline] - ----------------------------------------
 ……省略一部分……
 Certificate details for 192.168.31.213:3389 (RDP-Server):
@@ -447,13 +449,13 @@ Password: # 输入密码，密码不会显示出来 ***。
 
 #### 故障排除与未竟事宜
 
-- 但是我没有输入用户名就连上了？
+- 但是笔者没有输入用户名就连上了？
 
-不知道。难道是因为我的 FreeBSD 用户名和 Windows 是一样的？
+不知道。难道是因为笔者的 FreeBSD 用户名和 Windows 是一样的？
 
 ### rdesktop（不支持 NLA）
 
-`net/xrdesktop2` 是 rdesktop 的图形化前端，但我打开里面的键盘设置就卡死了。
+`net/xrdesktop2` 是 rdesktop 的图形化前端，但笔者打开里面的键盘设置就卡死了。
 
 ---
 
@@ -478,10 +480,10 @@ rdesktop 无前端 GUI，故要在终端输入命令：
 
 如果没有特意更改 Windows 配置，无须加 `:端口`。
 
-对于我测试的 Windows 11 24H2 会报错：
+对于笔者测试的 Windows 11 24H2 会报错：
 
 ```sh
-ykla@ykla:~ $ rdesktop 192.168.31.213
+$ rdesktop 192.168.31.213
 Failed to connect, CredSSP required by server (check if server has disabled old TLS versions, if yes use -V option).
 ```
 
@@ -502,7 +504,7 @@ PS C:\Users\ykla> gpupdate /force
 再测试链接：
 
 ```sh
-ykla@ykla:~ $ rdesktop 192.168.31.213
+$ rdesktop 192.168.31.213
 
 ATTENTION! The server uses and invalid security certificate which can not be trusted for
 the following identified reasons(s);
@@ -548,7 +550,7 @@ Do you trust this certificate (yes/no)? # 输入 yes，按回车键
 
 使用 AnyDesk 可进行远程访问，FreeBSD 上仅支持 x86 架构：
 
-由于版权问题（私有软件未经许可默认禁止分发），必须用户使用 Ports 自行编译：
+由于版权原因（私有软件未经许可禁止分发），必须用户使用 Ports 自行编译：
 
 ```sh
 # cd /usr/ports/deskutils/anydesk/
@@ -562,7 +564,7 @@ Do you trust this certificate (yes/no)? # 输入 yes，按回车键
 查看 AnyDesk 安装后说明：
 
 ```sh
-root@ykla:/ # pkg info -D anydesk
+# pkg info -D anydesk
 anydesk-6.1.1_2:
 On install:
 1. Minimum OS version.
@@ -600,7 +602,7 @@ You need a mounted /proc directory. Either mount it manually or add it to your /
 root 用户无法运行 AnyDesk。需要普通用户：
 
 ```
-$ ykla@ykla:~ $ anydesk
+$ $ anydesk
 
 (<unknown>:18311): Gtk-WARNING **: 21:07:13.540: 无法在模块路径中找到主题引擎：“adwaita”，
 
@@ -611,19 +613,19 @@ $ ykla@ykla:~ $ anydesk
 
 ![](../.gitbook/assets/anydesk2.png)
 
-注意，被连接方“接受”（Accept）了才能继续链接。
+注意，被连接方必须“接受”（Accept）才能继续连接。
 
-### Windows 通过 AnyDesk 远程 FreeBSD
+### Windows 通过 AnyDesk 远程访问 FreeBSD
 
 ![Windows 通过 AnyDesk 远程 FreeBSD](../.gitbook/assets/anydesk3.png)
 
-### FreeBSD 通过 AnyDesk 远程 Windows
+### FreeBSD 通过 AnyDesk 远程访问 Windows
 
 ![Windows 通过 AnyDesk 远程 FreeBSD](../.gitbook/assets/anydesk4.png)
 
 ### 故障排除与未竟事宜
 
-- FreeBSD 通过 AnyDesk 远程 Windows，似乎无法在 Windows 中移动鼠标。
+#### FreeBSD 通过 AnyDesk 远程 Windows，似乎无法在 Windows 中移动鼠标
 
 待解决。
 
@@ -631,7 +633,7 @@ $ ykla@ykla:~ $ anydesk
 
 >**注意**
 >
->这个是中继的 ID 服务器，本身不能被远程控制。
+>这是中继 ID 服务器，本身不能被远程控制。
 
 换言之，你没法用 RustDesk 控制 FreeBSD。
 
@@ -650,10 +652,10 @@ $ ykla@ykla:~ $ anydesk
 
 配置：
 
-- 启动 hbbr：
+- 启动 hbbs：
 
 ```sh
-root@ykla:~ # /usr/local/bin/hbbs
+# /usr/local/bin/hbbs
 [2024-08-10 23:02:13.782550 +08:00] INFO [src/common.rs:122] Private key comes from id_ed25519
 [2024-08-10 23:02:13.782587 +08:00] INFO [src/rendezvous_server.rs:1191] Key: mgRwOWJy9Vnz3LqQYjtNHwZQYg73uhdj9iCTMmIyoP4=  #此处是 Key
 [2024-08-10 23:02:13.782655 +08:00] INFO [src/peer.rs:84] DB_URL=./db_v2.sqlite3
@@ -673,10 +675,10 @@ root@ykla:~ # /usr/local/bin/hbbs
 ^C[2024-08-10 23:10:06.746255 +08:00] INFO [src/common.rs:176] signal interrupt
 ```
 
-- 再启动 hbbs：
+- 再启动 hbbr：
 
 ```sh
-root@ykla:~ # /usr/local/bin/hbbr
+# /usr/local/bin/hbbr
 [2024-08-10 22:58:26.593397 +08:00] INFO [src/relay_server.rs:61] #blacklist(blacklist.txt): 0
 [2024-08-10 22:58:26.593439 +08:00] INFO [src/relay_server.rs:76] #blocklist(blocklist.txt): 0
 [2024-08-10 22:58:26.593445 +08:00] INFO [src/relay_server.rs:82] Listening on tcp :21117
@@ -690,7 +692,7 @@ root@ykla:~ # /usr/local/bin/hbbr
 ^C[2024-08-10 23:10:04.393365 +08:00] INFO [src/common.rs:176] signal interrupt
 ```
 
-在其他设备上打开 rustdesk 客户端，两边都要填入相同的“ID 服务器（FreeBSD 的 IP 地址或域名）”和“Key”，其他空着不填，在控制端输入被控端显示的 ID 即可连接。
+在其他设备上打开 RustDesk 客户端，双方都需填写相同的“ID 服务器（FreeBSD 的 IP 地址或域名）”和“Key”，其余项留空，在控制端输入被控端显示的 ID 即可连接。
 
 ### 参考文献
 

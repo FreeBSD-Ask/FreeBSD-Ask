@@ -21,7 +21,7 @@
 ```
 
 
-- 解释：
+- 软件包说明
 
 
 | 包名                     | 作用说明                                                                 |
@@ -29,7 +29,7 @@
 | `xorg`                   |  X Window 系统                                            |
 | `lxde-meta`              | LXDE 桌面环境的元包                              |
 | `lightdm`                | 轻量级显示管理器 LightDM                                      |
-| `lightdm-gtk-greeter`    | LightDM 的 GTK+ 登录界面插件，缺少将无法登录  LightDM                          |
+| `lightdm-gtk-greeter`    | LightDM 的 GTK+ 登录界面插件，缺少将无法登录 LightDM                   |
 | `wqy-fonts`              | 文泉驿中文字体                                           |
 | `xdg-user-dirs`          | 管理用户目录，如“桌面”、“下载”等                                           |
 
@@ -59,7 +59,7 @@ proc           /proc       procfs  rw  0   0
 
 ### 中文配置
 
-在 `/etc/rc.conf` 下加入：
+在 `/etc/rc.conf` 中加入：
 
 ```sh
 lightdm_env="LC_MESSAGES=zh_CN.UTF-8" 
@@ -67,7 +67,7 @@ lightdm_env="LC_MESSAGES=zh_CN.UTF-8"
 
 ---
 
-编辑 `/etc/login.conf`：找到 `default:\` 这一段，把 `:lang=C.UTF-8` 修改为 `:lang=zh_CN.UTF-8`。
+编辑 `/etc/login.conf`：找到 `default:\` 这一段，将 `:lang=C.UTF-8` 修改为 `:lang=zh_CN.UTF-8`。
 
 刷新数据库：
 
