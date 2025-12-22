@@ -23,7 +23,7 @@ UNIX 认证查询网址：[The Open Group official register of UNIX Certified Pr
 现在，我们可以知道认证 UNIX 需要：
 
 1. [符合单一 UNIX 规范](https://www.opengroup.org/openbrand/register/xym0.htm)
-2. 缴纳相应的[认证费用](https://www.opengroup.org/openbrand/Brandfees.htm)
+2. 缴纳相应的 [认证费用](https://www.opengroup.org/openbrand/Brandfees.htm)
 
 
 可以看到，常见的经过认证的 UNIX 操作系统有 Apple macOS。即从商标角度讲，macOS 可以称得上是标准的 UNIX 操作系统。~~故，要安装 UNIX 的人可以去黑苹果了~~

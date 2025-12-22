@@ -184,7 +184,7 @@ function xterm_title_precmd () {
 }
 
 function xterm_title_preexec () {
-	print -Pn -- '\e]2;%n@%m %~ %# ' && print -n -- "${(q)1}\a"
+	print -Pn -- '\e]2;%n@%m %~ %# ' && print -n -- "${(q)1}\a "
 	[[ "$TERM" == 'screen'* ]] && { print -Pn -- '\e_\005{2}%n\005{-}@\005{5}%m\005{-} \005{+b 4}%~\005{-} %# ' && print -n -- "${(q)1}\e\\"; }
 }
 

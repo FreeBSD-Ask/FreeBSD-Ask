@@ -181,7 +181,7 @@ boot # 输入 boot 后回车即可继续启动
 
 ```sh
 ls # 显示磁盘
-ls (hd0,gpt2)/ # 显示磁盘 (hd0,gpt2) 下的内容，MBR 分区表可能为 (hd0,msdosx)。不一定是 (hd0,gpt2)，以实际为准
+ls (hd0,gpt2)/ # 显示磁盘 (hd0, gpt2) 下的内容，MBR 分区表可能为 (hd0, msdosx)。不一定是 (hd0, gpt2)，以实际为准
 linux16 (hd0,gpt2)/memdisk iso
 initrd (hd0,gpt2)/bsd.iso
 boot # 输入 boot 后回车即可继续启动

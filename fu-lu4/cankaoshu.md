@@ -1,8 +1,8 @@
 # 参考书目
 
-部分书籍可通过[微信读书](https://weread.qq.com/)、[番茄免费小说](https://fanqienovel.com/)、[QQ 阅读](https://book.qq.com/)、[京东读书](https://cread.jd.com/custom/custom_pcDownload.action)等软件免费阅读。
+部分书籍可通过 [微信读书](https://weread.qq.com/)、[番茄免费小说](https://fanqienovel.com/)、[QQ 阅读](https://book.qq.com/)、[京东读书](https://cread.jd.com/custom/custom_pcDownload.action) 等软件免费阅读。
 
-部分书籍可能已经绝版，可尝试在社交媒体或致电联络出版社或译者再版，或通过[多抓鱼](https://www.duozhuayu.com/)、[孔夫子旧书网](https://www.kongfz.com/)等专业二手书平台进行购买。
+部分书籍可能已经绝版，可尝试在社交媒体或致电联络出版社或译者再版，或通过 [多抓鱼](https://www.duozhuayu.com/)、[孔夫子旧书网](https://www.kongfz.com/) 等专业二手书平台进行购买。
 
 如需无 DRM 电子书，请读者自行探索。
 
@@ -46,7 +46,7 @@
 | :---: | :---: | :---: |
 | ![FreeBSD 操作系统设计与实现（原书第二版）](../.gitbook/assets/freebsd2rd.png) <br><br> 《FreeBSD 操作系统设计与实现（原书第 2 版）》 |[美] Marshall McKusick、George Neville-Neil、Robert N.M. Watson 等著 <br><br> 陈向群、郭立峰、叶顺平 等译| 9787111689973 <br><br> 机械工业出版社 |  
 
-《FreeBSD 操作系统设计与实现（原书第 2 版）》主要讲解了内核。轻型纸，居然还有几个章节需要自行在[网上](https://course.cmpreading.com/web/refbook/detail/9661/215)下载？该书阅读难度较大，据本书作者之一的博士生毕业生反映（出自韩国 FreeBSD 社区），他自己也看不懂。主要作者：Marshall Kirk McKusick 在其网站上有提供多款 BSD 相关的 [录制课程](https://www.mckusick.com/buylist.html)，大致价格为 1945 美元。目前正在撰写推出第三版，见 2025 年 6 月 BSDCan 大会 [A History of the BSD Daemon by Marshall Kirk McKusick](https://www.youtube.com/watch?v=SGC0191nDp0)（BSD 守护进程史，作者 Marshall Kirk McKusick。见 42:35-50:23）。
+《FreeBSD 操作系统设计与实现（原书第 2 版）》主要讲解了内核。轻型纸，居然还有几个章节需要自行在 [网上](https://course.cmpreading.com/web/refbook/detail/9661/215) 下载？该书阅读难度较大，据本书作者之一的博士生毕业生反映（出自韩国 FreeBSD 社区），他自己也看不懂。主要作者：Marshall Kirk McKusick 在其网站上有提供多款 BSD 相关的 [录制课程](https://www.mckusick.com/buylist.html)，大致价格为 1945 美元。目前正在撰写推出第三版，见 2025 年 6 月 BSDCan 大会 [A History of the BSD Daemon by Marshall Kirk McKusick](https://www.youtube.com/watch?v=SGC0191nDp0)（BSD 守护进程史，作者 Marshall Kirk McKusick。见 42:35-50:23）。
 
 
 ## 需谨慎对待的书目
@@ -82,7 +82,7 @@
 
 ### 二十一世纪初中国人对 FreeBSD 的探索
 
-- 王波. FreeBSD 使用大全[M]. 北京: 机械工业出版社, 1999. ISBN 9787111074823.
+- 王波. FreeBSD 使用大全 [M]. 北京: 机械工业出版社, 1999. ISBN 9787111074823.
 - 王波. FreeBSD 使用大全（第 2 版）[M]. 北京: 机械工业出版社, 2002. ISBN 9787111102861.
 
 此书基本上和 FreeBSD 毫无关系，甚至可以直接改名叫做 Linux 基础入门。作者王波用了大篇幅的文字去撰写了很多现在看来特别奇怪但无用的东西。但这不是批评或质疑，这是必然的，也是合理的。因为在千禧年代，只有极个别家庭拥有自己的 PC 和网络连接（根据中国互联网络信息中心《第十四次中国互联网络发展状况统计报告》统计，2004 年网民总数为 8700 万，仅仅约占时年人口总数的 6.69%）。如果撰写地过于学术和深入，在当时或许是出版价值存疑的。
@@ -93,6 +93,6 @@
 
 对于现在的读者来说，完全没有必要阅读这些书（除历史研究等目的外）。
 
-- 冯宝坤, 陈子鸿. 《FreeBSD》完全攻略[M]. 北京: 中国物资出版社; 北京希望电子出版社, 2004. ISBN 9787504721600.
+- 冯宝坤, 陈子鸿. 《FreeBSD》完全攻略 [M]. 北京: 中国物资出版社; 北京希望电子出版社, 2004. ISBN 9787504721600.
 
 基本完全过时。对于现在的读者来说，没有必要阅读本书（除历史研究等目的外）。

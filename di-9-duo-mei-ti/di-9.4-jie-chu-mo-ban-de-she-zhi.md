@@ -56,7 +56,7 @@ hw.usb.usbhid.enable="0"
 
 随后重启即可。
 
-问题分析：ums 在机器无关的内核里始终存在，usbhid 现在位于 amd64 机器相关内核选项里。15.0 后 usbhid 驱动成为默认，优先级高于传统的 ums 驱动。但都是编译进内核的不是模块。usbhid 引入内核自 [conf: Add hkbd and hms to GENERIC* kernel configs](https://reviews.freebsd.org/D45658)，替代 ums 发生在 [Enable usbhid by default](https://reviews.freebsd.org/D45659)。最早出现在 13.0，从 15.0 成为默认。**此问题仍需读者进一步研究原因并提出 Bug 到 FreeBSD 项目，因为项目计划日后彻底移除 ums 支持。** 具体参见 FreeBSD 期刊 2021/0708 号。
+问题分析：ums 在机器无关的内核里始终存在，usbhid 现在位于 amd64 机器相关内核选项里。15.0 后 usbhid 驱动成为默认，优先级高于传统的 ums 驱动。但都是编译进内核的不是模块。usbhid 引入内核自 [conf: Add hkbd and hms to GENERIC * kernel configs](https://reviews.freebsd.org/D45658)，替代 ums 发生在 [Enable usbhid by default](https://reviews.freebsd.org/D45659)。最早出现在 13.0，从 15.0 成为默认。* *此问题仍需读者进一步研究原因并提出 Bug 到 FreeBSD 项目，因为项目计划日后彻底移除 ums 支持。** 具体参见 FreeBSD 期刊 2021/0708 号。
 
 ## 附录：Fn 键设置
 
