@@ -1,4 +1,4 @@
-# 8.8 金山 WPS（Linux 版）
+# 8.8 WPS Office（Linux 版本）
 
 >**警告**
 >

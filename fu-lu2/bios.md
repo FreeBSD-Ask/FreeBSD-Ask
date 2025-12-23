@@ -1,4 +1,4 @@
-# UEFI/BIOS 注解（基于 AMI BIOS）
+# UEFI/BIOS 基础（基于 AMI BIOS）
 
 ## 警告与免责声明
 

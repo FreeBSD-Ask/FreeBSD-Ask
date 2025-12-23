@@ -1,4 +1,4 @@
-# 3.7 基于 Apple M1 & VMware Fusion Pro 安装 FreeBSD
+# 3.7 基于 Apple M1 和 VMware Fusion Pro 安装 FreeBSD
 
 本文基于 macOS 15.3.1、VMware Fusion Pro 13.6.2、FreeBSD 15.0 以及默认的 UEFI 设置进行测试。经测试，14.2-RELEASE 亦可。
 
