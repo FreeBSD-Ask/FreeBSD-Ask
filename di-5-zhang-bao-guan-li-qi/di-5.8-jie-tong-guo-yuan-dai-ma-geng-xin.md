@@ -178,7 +178,7 @@ Select: (p) postpone, (df) diff-full, (e) edit,
 使用 FreeBSD 源仓库地址时未加 `.git` 后缀。
 
 ### Git：`fatal: unable to access 'https://git.FreeBSD.org/src.git/': SSL certificate problem: certificate is not yet valid`
-：
+
 可能是系统时间不正确导致的，使用 `pool.ntp.org` 服务器同步系统时间
 
 ```sh
