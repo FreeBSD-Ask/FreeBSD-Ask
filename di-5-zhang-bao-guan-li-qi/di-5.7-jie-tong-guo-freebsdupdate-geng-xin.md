@@ -34,9 +34,16 @@ FreeBSD 提供了实用工具 `freebsd-update`，用于安装系统更新，包�
 
 ### 检查与验证
 
+- 查看当前终端默认文本编辑器：
+
 ```sh
 # echo $EDITOR
 /usr/bin/ee
+```
+
+- 查看当前终端可视化文本编辑器：
+
+```sh
 # echo $VISUAL
 /usr/bin/ee
 ```
@@ -47,7 +54,7 @@ FreeBSD 提供了实用工具 `freebsd-update`，用于安装系统更新，包�
 >
 >无论是大版本更新、点版本更新还是常规更新，都应该先执行一次该流程。不可绕过，否则可能会出现不可预料的后果。
 
-### 版本检查
+### FreeBSD 版本检查
 
 ```sh
 # freebsd-version -kru
@@ -84,9 +91,9 @@ usr/lib/clang/11.0.1/include
 # freebsd-update install
 ```
 
-### 版本检查
+### FreeBSD 版本检查
 
-- 查看更新后的版本：
+- 查看更新后的 FreeBSD 版本：
 
 ```sh
 # freebsd-version -kru
@@ -99,13 +106,13 @@ usr/lib/clang/11.0.1/include
 >
 > 有时候补丁不涉及内核，内核版本就不会变，用 `uname -r` 无法体现，但用户空间版本会发生变化。因此你可能会看到两个版本号，应以较高者为准。
 
-重启：
+重启系统：
 
 ```sh
 # reboot
 ```
 
-再查看版本：
+再查看 FreeBSD 版本：
 
 ```sh
 # freebsd-version -kru
@@ -144,6 +151,8 @@ usr/lib/clang/11.0.1/include
 >参见 [libsys.so.7 not found when upgrading userland with legacy freebsd-update](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=289769)。
 
 ### 更新到 15.0-RELEASE
+
+升级系统到 FreeBSD 15.0-RELEASE 版本：
 
 ```sh
 # freebsd-update upgrade -r 15.0-RELEASE
@@ -475,15 +484,16 @@ ESP 通常已经挂载到了 **/boot/efi**。如果没有，可手动挂载之�
 这表明 loader 需要更新。还可以使用命令进行版本验证：
 
 ```sh
-# strings /boot/efi/efi/freebsd/loader.efi|grep FreeBSD|grep EFI
+# strings /boot/efi/efi/freebsd/loader.efi | grep FreeBSD | grep EFI  # 查看 EFI 引导加载器版本
 DFreeBSD/amd64 EFI loader, Revision 1.1
-# strings /boot/loader.efi|grep FreeBSD|grep EFI
+
+# strings /boot/loader.efi | grep FreeBSD | grep EFI  # 查看 /boot/loader.efi 的 EFI 引导加载器版本
 DFreeBSD/amd64 EFI loader, Revision 3.0
 ```
 
 此处命令参考了手册 [loader.efi](https://man.freebsd.org/cgi/man.cgi?query=loader.efi) 中的例子。`/boot/efi/efi/freebsd/loader.efi` 为当前正在使用的 loader（版本确实较旧）。
 
-更新方法：
+将 `/boot/loader.efi` 复制到 EFI 系统分区的 FreeBSD 目录下进行更新：
 
 ```sh
 # cp /boot/loader.efi /boot/efi/efi/freebsd/
@@ -502,13 +512,15 @@ DFreeBSD/amd64 EFI loader, Revision 3.0
 
 ### 回滚更新
 
+回滚最近一次系统更新：
+
 ```sh
 # freebsd-update rollback
 ```
 
 ### pkg 找不到 `.so` 文件
 
-终端执行命令
+终端执行命令强制初始化 pkg 包管理器：
 
 ```sh
 # pkg bootstrap -f
@@ -516,9 +528,9 @@ DFreeBSD/amd64 EFI loader, Revision 3.0
 
 ### FreeBSD 升级出错，缺少 ntp 用户
 
-终端执行命令
+终端执行命令：
 
 ```sh
-# pw groupadd ntpd -g 123
-# pw useradd ntpd -u 123 -g ntpd -h - -d /var/db/ntp -s /usr/sbin/nologin -c "NTP Daemon"
+# pw groupadd ntpd -g 123  # 创建 ntpd 用户组，GID 为 123
+# pw useradd ntpd -u 123 -g ntpd -h - -d /var/db/ntp -s /usr/sbin/nologin -c "NTP Daemon"  # 创建 ntpd 用户，UID 为 123，主目录 /var/db/ntp，禁止登录，仅用于 NTP 守护进程
 ```

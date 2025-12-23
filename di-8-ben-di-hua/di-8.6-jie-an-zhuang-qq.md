@@ -33,8 +33,8 @@
 - 安装 QQ：
 
 ```sh
-root@ykla:/ # cd /compat/linux/
-root@ykla:/compat/linux # rpm2cpio < /home/ykla/QQ_3.2.17_250521_x86_64_01.rpm | cpio -id # 读者注意将 QQ 文件路径改为读者本地的路径
+root@ykla:/ # cd /compat/linux/	# 切换到兼容层路径
+root@ykla:/compat/linux # rpm2cpio < /home/ykla/QQ_3.2.17_250521_x86_64_01.rpm | cpio -id # 安装 QQ。读者请注意将 QQ 文件路径改为读者本地的路径
 ./usr/share/icons/hicolor/512x512/apps/qq.png: Cannot extract through symlink usr/share/icons/hicolor/512x512/apps/qq.png
 1055863 blocks
 ```
@@ -45,7 +45,7 @@ root@ykla:/compat/linux # rpm2cpio < /home/ykla/QQ_3.2.17_250521_x86_64_01.rpm |
 
 ```sh
 # /compat/linux/usr/bin/bash # 切换到兼容层的 shell
-bash-5.1# ldd /opt/QQ/qq 
+bash-5.1# ldd /opt/QQ/qq # 查看 /opt/QQ/qq 可执行文件的动态库依赖
 	linux-vdso.so.1 (0x00007fffffffe000)
 	libffmpeg.so => /opt/QQ/libffmpeg.so (0x000000080c000000)
 	.......此处省略部分输出......
@@ -58,11 +58,11 @@ bash-5.1# ldd /opt/QQ/qq
 - 在兼容层中安装 `ibus-gtk3` 和 `ibus-libs`，下载安装包后执行：
 
 ```sh
-# fetch https://dl.rockylinux.org/pub/rocky/9/AppStream/x86_64/os/Packages/i/ibus-gtk3-1.5.25-6.el9.x86_64.rpm
-# fetch https://dl.rockylinux.org/pub/rocky/9/AppStream/x86_64/os/Packages/i/ibus-libs-1.5.25-6.el9.x86_64.rpm
-# cd /compat/linux 
-# rpm2cpio < /home/ykla/ibus-gtk3-1.5.25-6.el9.x86_64.rpm | cpio -id
-# rpm2cpio < /home/ykla/ibus-libs-1.5.25-6.el9.x86_64.rpm | cpio -id
+# fetch https://dl.rockylinux.org/pub/rocky/9/AppStream/x86_64/os/Packages/i/ibus-gtk3-1.5.25-6.el9.x86_64.rpm   # 下载 ibus-gtk3 RPM 包
+# fetch https://dl.rockylinux.org/pub/rocky/9/AppStream/x86_64/os/Packages/i/ibus-libs-1.5.25-6.el9.x86_64.rpm   # 下载 ibus-libs RPM 包
+# cd /compat/linux   # 切换到 Linux 兼容目录
+# rpm2cpio < /home/ykla/ibus-gtk3-1.5.25-6.el9.x86_64.rpm | cpio -id   # 解压 ibus-gtk3 RPM 包
+# rpm2cpio < /home/ykla/ibus-libs-1.5.25-6.el9.x86_64.rpm | cpio -id   # 解压 ibus-libs RPM 包
 ```
 
 - 接下来：
@@ -74,6 +74,8 @@ bash-5.1# gtk-query-immodules-3.0-64 --update-cache   # 刷新缓存
 
 
 ### 启动 QQ
+
+在 Linux 兼容环境中启动 QQ，禁用沙箱并启用进程内 GPU：
 
 ```sh
 $ /compat/linux/opt/QQ/qq --no-sandbox  --in-process-gpu
@@ -116,7 +118,7 @@ $ exit # 切换回 root
 # # 此时位于 Arch 兼容层，用户已切换回 root
 ```
 
-启动 QQ：
+启动 QQ 客户端，禁用沙箱并启用进程内 GPU：
 
 ```sh
 # /opt/QQ/qq --no-sandbox --in-process-gpu  # 此时位于 Arch 兼容层！
@@ -176,8 +178,8 @@ $ exit # 切换回 root
 若你自行构建兼容层，需要在启动 QQ 前，在兼容层内部，可能需要（如果你完全按照本书教程做，就不需要，因为本书中 Fcitx 指定了以下环境变量）设定以下中文环境变量：
 
 ```sh
-# export LANG=zh_CN.UTF-8 
-# export LC_ALL=zh_CN.UTF-8 
+# export LANG=zh_CN.UTF-8   # 设置系统语言为中文
+# export LC_ALL=zh_CN.UTF-8 # 设置所有本地化环境变量为中文
 ```
 
 设置完成后可以使用 `locale` 命令检查。对于兼容层的软件，Fcitx 输入法只有在上述两个变量设置为中文环境时才会生效。
@@ -189,8 +191,8 @@ $ exit # 切换回 root
 在兼容层中执行以下操作：
 
 ```sh
-$ rm ~/.config/QQ/crash_files/*
-$ chmod a-wx ~/.config/QQ/crash_files/
+$ rm ~/.config/QQ/crash_files/*                 # 删除 QQ 崩溃文件目录下的所有文件
+$ chmod a-wx ~/.config/QQ/crash_files/          # 设置 QQ 崩溃文件目录为不可写不可执行，防止再生成更多崩溃日志造成闪退
 ```
 
 #### 参考文献

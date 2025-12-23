@@ -24,7 +24,7 @@ Budgie 是 [Solus Linux](https://getsol.us/) 的默认桌面环境。
 >
 >作为依赖，会自动安装 LightDM。
 
-- 软件包说明
+- 软件包说明：
 
 | 包名             | 功能说明        |
 |:------------------|:--------------------------|
@@ -62,6 +62,8 @@ Replace YOURLOGIN by your login.
 
 ## 配置 `startx`
 
+将 Budgie 桌面示例 xprofile 文件复制到用户主目录：
+
 ```sh
 $ cp /usr/local/share/examples/budgie/xprofile ~/.xprofile
 ```
@@ -74,30 +76,24 @@ $ cp /usr/local/share/examples/budgie/xprofile ~/.xprofile
 # mkdir -p /var/db/AccountsService/users/
 ```
 
-- 创建并写入文件：
+- 创建 `/var/db/AccountsService/users/ykla` 并写入文件：
 
-```
-# ee /var/db/AccountsService/users/ykla
+```ini
+[User]
+Language=zh_CN.UTF-8  # 设置用户界面语言为中文
+Session=budgie-desktop  # 指定使用 Budgie 桌面会话
+SystemAccount=false  # 标记该用户不是系统账户
 ```
 
 >**注意**
 >
 >根据安装后提示，`ykla` 应改为你自己的用户名。
 
-写入：
-
-```sh
-[User]
-Language=zh_CN.UTF-8
-Session=budgie-desktop
-SystemAccount=false
-```
-
 ## 服务管理
 
 ```sh
-# service dbus enable
-# service lightdm enable
+# service dbus enable  # 设置 D-Bus 服务开机自启
+# service lightdm enable  # 设置 LightDM 显示管理器开机自启
 ```
 
 ## 中文语言环境
@@ -106,7 +102,7 @@ SystemAccount=false
 编辑 `/etc/login.conf`：找到 `default:\` 这一段，将 `:lang=C.UTF-8` 修改为 `:lang=zh_CN.UTF-8`。
 
 
-刷新数据库：
+根据 `/etc/login.conf` 生成能力数据库：
 
 ```sh
 # cap_mkdb /etc/login.conf

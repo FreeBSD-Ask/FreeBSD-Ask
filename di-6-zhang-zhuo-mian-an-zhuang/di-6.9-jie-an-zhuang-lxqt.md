@@ -19,7 +19,7 @@
 # cd /usr/ports/devel/xdg-user-dirs/ && make install clean 
 ```
 
-软件包说明：
+- 软件包说明：
 
 | 包名               | 功能说明                                                                 |
 |:--------------------|:--------------------------------------------------------------------------|
@@ -34,29 +34,34 @@
 ## 服务管理
 
 ```sh
-# service dbus enable
-# service sddm enable
+# service dbus enable  # 设置 D-Bus 服务开机自启
+# service sddm enable  # 设置 SDDM 显示管理器开机自启
 ```
 
-## fstab
+## 挂载 proc 文件系统
 
-编辑 `/etc/fstab`，加入：
+
+编辑 `/etc/fstab` 文件，加入下行：
 
 ```sh
 proc	/proc	procfs	rw	0	0
 ```
 
+将 `procfs` 文件系统挂载到 `/proc`，读写模式。
+
 ## 通过 startx 启动 LXQt
+
+将启动命令写入 `~/.xinitrc` 文件，以启动 LXQt 桌面环境：
 
 ```sh
 $ echo "exec ck-launch-session startlxqt" > ~/.xinitrc
 ```
 
-使用哪个账户登录，就使用该账户写入。
+读者使用哪个账户登录，就使用该账户写入。
 
 ## 设置中文显示
 
-### 中文化 SDDM
+### 设置 SDDM 显示管理器语言为中文
 
 ```sh
 # sysrc sddm_lang="zh_CN"

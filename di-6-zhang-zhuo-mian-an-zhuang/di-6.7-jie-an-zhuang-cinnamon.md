@@ -31,7 +31,7 @@ Cinnamon 本身是肉桂（锡兰肉桂/斯里兰卡肉桂）的意思，但不�
 # cd /usr/ports/devel/xdg-user-dirs/ && make install clean 
 ```
 
-- 软件包说明
+- 软件包说明：
 
 | 包名               | 功能说明                   |
 |:--------------------|:----------------------------------|
@@ -50,30 +50,34 @@ Cinnamon 本身是肉桂（锡兰肉桂/斯里兰卡肉桂）的意思，但不�
 exec cinnamon-session
 ```
 
+方便通过 `startx` 命令启动 Cinnamon 桌面。
+
 ## 配置 LightDM
 
 编辑 `/usr/local/etc/lightdm/lightdm.conf`，找到 `greeter-session=lightdm-gtk-greeter` 或 `#greeter-session=example-gtk-gnome` 等配置项，改成 `greeter-session=slick-greeter`。
 
-## 配置 `fstab`
+## 挂载 proc 文件系统
 
-编辑 `/etc/fstab`，添加：
+编辑 `/etc/fstab` 文件，添加：
 
-```sh
+```ini
 proc /proc procfs rw 0 0
 ```
+
+挂载 `procfs` 文件系统到 `/proc`，读写模式
 
 ## 服务管理
 
 ```sh
-# service dbus enable 
-# service lightdm enable
+# service dbus enable  # 设置 D-Bus 服务开机自启
+# service lightdm enable  # 设置 LightDM 显示管理器开机自启
 ```
 
 ## 中文化
 
 编辑 `/etc/login.conf`：找到 `default:\` 这一段（写作时为第 24 行），将 `:lang=C.UTF-8` 修改为 `:lang=zh_CN.UTF-8`。
 
-刷新数据库：
+根据 ·/etc/login.conf· 更新系统能力数据库：
 
 ```sh
 # cap_mkdb /etc/login.conf

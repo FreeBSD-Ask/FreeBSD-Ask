@@ -27,10 +27,7 @@
 
 ### 下载金山 WPS
 
-官方下载地址：[WPS Office for Linux](https://linux.wps.cn/)
-
-
-<https://wps-linux-personal.wpscdn.cn/wps/download/ep/Linux2023/17900/wps-office-12.1.0.17900-1.x86_64.rpm?t=1731150867&k=8e9446b92a6e5b727047ec256307be78>
+官方下载地址：[WPS Office for Linux](https://linux.wps.cn/)。
 
 请自行获取有效链接，我使用浏览器下载。
 
@@ -41,7 +38,7 @@
 ### 安装金山 WPS
 
 ```sh
-# cd /compat/linux/
+# cd /compat/linux/	# 切换到兼容层路径
 #  rpm2cpio < /home/ykla/Downloads/wps-office-12.1.0.17900-1.x86_64.rpm  | cpio -id  # 读者请将路径替换为你本地下载文件的实际路径
 ```
 
@@ -52,7 +49,7 @@
 
 ```bash
 # /compat/linux/usr/bin/bash # 切换到兼容层的 shell
-bash-5.1# ldd /opt/kingsoft/wps-office/office6/wps
+bash-5.1# ldd /opt/kingsoft/wps-office/office6/wps	# 查看 WPS 可执行文件的动态库依赖
 	linux-vdso.so.1 (0x00007fffffffe000)
 	libdl.so.2 => /lib64/libdl.so.2 (0x000000080105c000)
 	libpthread.so.0 => /lib64/libpthread.so.0 (0x0000000801061000)
@@ -70,7 +67,7 @@ bash-5.1# ldd /opt/kingsoft/wps-office/office6/wps
 
 ### 运行金山 WPS
 
-使用普通用户权限：
+使用普通用户权限在 Linux 兼容环境中启动 WPS Office：
 
 ```bash
 $ /compat/linux/opt/kingsoft/wps-office/office6/wps
@@ -181,7 +178,7 @@ Fcitx5 输入法暂时无法使用，功能待测试。如有解决方法，请�
 ## 基于 Ubuntu 兼容层
 
 ```sh
-# chroot /compat/ubuntu/ /bin/bash #进入 Ubuntu 兼容层
+# chroot /compat/ubuntu/ /bin/bash # 进入 Ubuntu 兼容层
 ```
 
 ```sh
@@ -200,11 +197,13 @@ Fcitx5 输入法暂时无法使用，功能待测试。如有解决方法，请�
 
 ### 启动没反应
 
+查看 /usr/lib/office6/wps 可执行文件的动态库依赖：
+
 ```sh
 # ldd /usr/lib/office6/wps
 ```
 
-根据 ldd 输出缺失的库进行补充
+根据 `ldd` 输出缺失的库进行补充。
 
 ### 需要 root 才能启动
 

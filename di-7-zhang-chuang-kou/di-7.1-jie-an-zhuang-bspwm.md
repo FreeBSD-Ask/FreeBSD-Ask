@@ -29,7 +29,7 @@ bspwm，据说更符合 UNIX 哲学（参见 [bspwm 入门](https://zerovip.verc
 # cd /usr/ports/devel/xdg-user-dirs/ && make install clean
 ```
 
-说明：
+- 软件包说明：
 
 
 | 包名                  | 作用说明                                                                 |
@@ -58,6 +58,8 @@ bspwm，据说更符合 UNIX 哲学（参见 [bspwm 入门](https://zerovip.verc
 
 ## 启用服务
 
+设置 D-Bus 服务开机自启动：
+
 ```sh
 # service dbus enable
 ```
@@ -65,55 +67,61 @@ bspwm，据说更符合 UNIX 哲学（参见 [bspwm 入门](https://zerovip.verc
 ## 创建配置文件
 
 ```sh
-$ mkdir -p ~/.config
-$ mkdir -p ~/.config/bspwm
-$ mkdir -p ~/.config/sxhkd
-$ cp /usr/local/share/examples/bspwm/bspwmrc ~/.config/bspwm
-$ cp /usr/local/share/examples/bspwm/sxhkdrc ~/.config/sxhkd
-$ chmod +x ~/.config/bspwm/bspwmrc
+$ mkdir -p ~/.config                  # 创建用户配置目录
+$ mkdir -p ~/.config/bspwm            # 创建 bspwm 配置目录
+$ mkdir -p ~/.config/sxhkd            # 创建 sxhkd 配置目录
+$ cp /usr/local/share/examples/bspwm/bspwmrc ~/.config/bspwm   # 复制 bspwm 示例配置文件到用户目录
+$ cp /usr/local/share/examples/bspwm/sxhkdrc ~/.config/sxhkd   # 复制 sxhkd 示例配置文件到用户目录
+$ chmod +x ~/.config/bspwm/bspwmrc    # 设置 bspwm 配置文件为可执行权限
 ```
 
-编辑 `~/.config/sxhkd/sxhkdrc` 文件：
+编辑 `~/.config/sxhkd/sxhkdrc` 文件，修改如下：
 
 ```sh
 super + Return
-    kitty
+    kitty   # 使用超级键 + 回车启动 Kitty 终端
 
 super + @space
-    rofi -show drun
+    rofi -show drun   # 使用超级键 + 空格启动 Rofi 应用启动器
 ```
+
+>**思考题**
+>
+>回顾基础入门章节的内容，“超级键”是什么？更多快捷键设置可参考 `~/.config/sxhkd/sxhkdrc` 文件。
 
 ## 设置 polybar 启动脚本和配置文件
 
 ```sh
-$ mkdir ~/.config/polybar 
-$ cp /usr/local/etc/polybar/config.ini ~/.config/polybar
+$ mkdir ~/.config/polybar                    # 创建 Polybar 配置目录
+$ cp /usr/local/etc/polybar/config.ini ~/.config/polybar   # 复制 Polybar 示例配置文件到用户目录
 ```
 
-创建 `~/.config/polybar/launch.sh`
+创建 `~/.config/polybar/launch.sh`，写入：
 
 ```sh
 #!/bin/sh
-killall -q polybar
-polybar example 2>&1 | tee -a /tmp/polybar.log
+killall -q polybar                        # 安静地终止所有正在运行的 Polybar 实例
+polybar example 2>&1 | tee -a /tmp/polybar.log   # 启动 Polybar 并将输出追加到日志文件
 ```
 
-然后执行以下命令
+然后执行以下命令为 Polybar 启动脚本设置可执行权限：
 
 ```sh
 $ chmod +x ~/.config/polybar/launch.sh
 ```
 
-## 设置 picom、polybar、dunst 启动
+## 设置 picom、polybar、dunst 自启动
 
 ```sh
-$ echo "picom &" >> ~/.config/bspwm/bspwmrc
-$ echo "\$HOME/.config/polybar/launch.sh" >> ~/.config/bspwm/bspwmrc
-$ echo "dunst &" >> ~/.config/bspwm/bspwmrc
+$ echo "picom &" >> ~/.config/bspwm/bspwmrc                    # 在 bspwm 配置中启动 picom
+$ echo "\$HOME/.config/polybar/launch.sh" >> ~/.config/bspwm/bspwmrc   # 在 bspwm 配置中启动 Polybar
+$ echo "dunst &" >> ~/.config/bspwm/bspwmrc                    # 在 bspwm 配置中启动 Dunst 通知守护进程
 ```
 
 
 ## 通过 startx 启动 bspwm
+
+在 `.xinitrc` 中添加启动 bspwm 的命令：
 
 ```sh
 $ echo "exec bspwm" >> ~/.xinitrc
@@ -124,17 +132,20 @@ $ echo "exec bspwm" >> ~/.xinitrc
 - 创建 `/usr/local/share/xsessions/bspwm.desktop`
 
 ```sh
-# mkdir /usr/local/share/xsessions
-# ee /usr/local/share/xsessions/bspwm.desktop # 写入以下内容
-
-[Desktop Entry]
-Name=bspwm
-Comment=Log in with bspwm
-Exec=/usr/local/bin/bspwm
-Type=Application
+# mkdir -p /usr/local/share/xsessions
 ```
 
-- lightdm 服务
+- 编辑 `/usr/local/share/xsessions/bspwm.desktop` 文件，写入以下内容：
+
+```ini
+[Desktop Entry]
+Name=bspwm                  # 桌面环境名称
+Comment=Log in with bspwm   # 登录时显示的描述
+Exec=/usr/local/bin/bspwm   # 启动 bspwm 的命令路径
+Type=Application            # 条目类型为应用程序
+```
+
+- 设置 LightDM 显示管理器开机自启动
 
 ```sh
 # service lightdm enable
@@ -142,28 +153,19 @@ Type=Application
 
 ## 一些操作和设置
 
-### 快捷键
-
-按 Windows + 空格：使用 Rofi 启动应用
-
-按 Windows + 回车：启动终端（Kitty）
-
-更多快捷键设置可参考 `~/.config/sxhkd/sxhkdrc` 文件
-
-
 ### 设置桌面背景
 
-- 初次设置
+- 初次设置预览。使用 feh 设置壁纸并居中显示：
 
 ```sh
 $ feh --bg-center "$HOME/.local/share/wallpapers/wallpaper.jpg"
 ```
 
-- 执行一次后自动设置
+- 预览后如满意则设置为永久性设置（开机在后台执行 feh 保存的壁纸设置脚本）：
 
 在 `~/.config/bspwm/bspwmrc` 中的 polybar 启动脚本 **前** 添加
 
-```sh
+```ini
 $HOME/.fehbg &
 ```
 

@@ -73,7 +73,7 @@ KDE 致力于开发一套现代桌面环境，如果你觉得 KDE 界面很像 W
 
 ## 中文化
 
-### SDDM 中文化
+### 设置 SDDM 登录管理器的语言为简体中文
 
 ```sh
 # sysrc sddm_lang="zh_CN"
@@ -83,7 +83,7 @@ KDE 致力于开发一套现代桌面环境，如果你觉得 KDE 界面很像 W
 
 编辑 `/etc/login.conf`：找到 `default:\` 部分，将 `:lang=C.UTF-8` 修改为 `:lang=zh_CN.UTF-8`。
 
-刷新数据库：
+根据 `/etc/login.conf` 更新能力数据库：
 
 ```sh
 # cap_mkdb /etc/login.conf
@@ -124,7 +124,7 @@ KDE 致力于开发一套现代桌面环境，如果你觉得 KDE 界面很像 W
 - 查看安装后配置：
 
 ```sh
-root@ykla:/home/ykla # pkg info -D sddm-freebsd-black-theme
+# pkg info -D sddm-freebsd-black-theme
 sddm-freebsd-black-theme-1.3:
 On install:
 To enable this theme edit:
@@ -157,9 +157,11 @@ https://docs.freebsd.org/en/articles/contributing/#ports-contributing
 # 有关 port 维护的更多信息，请参考 FreeBSD 官方文档中关于贡献 port 的章节。
 ```
 
-- 编辑 `/usr/local/etc/sddm.conf`，写入：
+- 编辑 `/usr/local/etc/sddm.conf` 文件。
 
-```sh
+写入下行，设置当前 SDDM 主题为“sddm-freebsd-black-theme”：
+
+```ini
 [Theme]
 Current=sddm-freebsd-black-theme
 ```
@@ -308,7 +310,6 @@ Current=sddm-freebsd-black-theme
 单击“设置”——>“安全和隐私”——>“锁屏”——>“自动锁定屏幕”选择“不自动锁屏”，然后点击“应用”。（休眠唤醒后锁定屏幕可按需设置）
 
 注销后重新登录即可。
-
 
 ![关闭 KDE 6 锁屏](../.gitbook/assets/suoping.png)
 

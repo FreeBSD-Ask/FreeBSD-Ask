@@ -58,7 +58,7 @@ FreeBSD 中主要有三类账户：系统账户、普通用户账户，以及超
 示例：创建一个名为 test 的用户，并将其添加到 wheel 组，设置其默认 shell 是 sh：
 
 ```sh
-root@ykla:/ #  adduser
+# adduser
 Username: test # 用户名 ①
 Full name:  # 全名，可留空
 Uid (Leave empty for default): # UID 设置，可留空
@@ -105,7 +105,6 @@ Goodbye!
 # rmuser -y test1 test2 # 同时删除用户 test1 和 test2
 Removing user (test1): mailspool home passwd.
 Removing user (test2): home passwd.
-
 ```
 
 参数 `-y` 用于跳过确认步骤。
@@ -123,8 +122,8 @@ Removing user (test2): home passwd.
 ```sh
 # chpass -s sh test1 # 修改用户 test1 的登录环境为 /bin/sh
 chpass: user information updated
-# export EDITOR=/usr/bin/ee 
-# chpass # 以 ee 方式打开当前用户信息进行修改
+# export EDITOR=/usr/bin/ee  # 将编辑器换成更简单的 `ee` 编辑器
+# chpass # 使用 ee 编辑器打开当前用户信息进行修改
 # passwd # 修改用户密码，如不指定用户则默认为当前用户。
 ```
 
@@ -206,7 +205,7 @@ uid=1001(ykla) gid=1001(ykla) groups=1001(ykla),0(wheel),1002(admin)
 
 `-r`，删除用户同时删除用户主目录及所有相关信息；若不使用该参数则信息保留，仅删除用户
 
-示例：
+示例：删除用户 test2 及其主目录。
 
 ```sh
 # pw userdel test2 -r
@@ -217,7 +216,7 @@ uid=1001(ykla) gid=1001(ykla) groups=1001(ykla),0(wheel),1002(admin)
 用于显示用户信息，示例：
 
 ```sh
-# pw usershow test2
+# pw usershow test2  # 显示用户 test2 的详细信息
 test2:$6$FkxPcs2y.Y8cxyuj$kVDoV1LC.IWKGlSitll3oLArF18aHQYID0JYE.TUuD0YFgba.c7MbGs3xLnmpCZyu1nVKHhNqW2X7a57qN0xg/:1201:1201::0:0:User &:/home/test2:/bin/sh
 ```
 

@@ -154,7 +154,7 @@ Makefile		pkg-plist-client	pkg-plist-plpython
 
 ```sh
 # cd /usr/ports/ # 切换到 git 项目
-# git branch -a
+# git branch -a	# 打印 git 分支
 * main # * 代表当前分支
   remotes/origin/2014Q1
 
@@ -166,7 +166,6 @@ Makefile		pkg-plist-client	pkg-plist-plpython
 ```
 
 切换到 `2025Q1` 分支：
-
 
 ```sh
 # git switch 2025Q1
@@ -188,7 +187,6 @@ Makefile		pkg-plist-client	pkg-plist-plpython
 
 ### 同步更新 Ports Git
 
-
 ```sh
 # cd /usr/ports/ # 切换目标目录
 # git pull # 同步更新上游 Ports
@@ -203,6 +201,7 @@ Makefile		pkg-plist-client	pkg-plist-plpython
 
 ### 附录：时间错误导致的证书无效
 
+报错形似：
 
 ```sh
 fatal: unable to access 'https://mirrors.ustc.edu.cn/freebsd-ports/ports.git/': SSL certificate problem: certificate is not yet valid
@@ -215,7 +214,7 @@ fatal: unable to access 'https://mirrors.ustc.edu.cn/freebsd-ports/ports.git/': 
 Fri May 31 12:09:26 UTC 2024
 ```
 
-时间错误。校对时间：
+时间错误。使用 `pool.ntp.org` 服务器同步系统时间：
 
 
 ```sh
@@ -232,7 +231,7 @@ Sat Oct  5 08:39:21 UTC 2024
 
 ## 使用 `whereis` 查询软件路径
 
-如
+查找 python 可执行文件、源代码及手册页所在路径：
 
 ```sh
 # whereis python
@@ -248,7 +247,7 @@ python: /usr/ports/lang/python
 
 ## 查看依赖
 
-已经安装：
+已经安装的情况下：
 
 ```sh
 # pkg info -d screen
@@ -256,7 +255,7 @@ screen-4.9.0_6:
 	indexinfo-0.3.1
 ```
 
-未安装：
+未安装的情况下：
 
 ```sh
 root@ykla:/usr/ports/sysutils/htop # make all-depends-list
@@ -269,9 +268,11 @@ root@ykla:/usr/ports/sysutils/htop # make all-depends-list
 
 ## 看看 python 的 ports 在哪
 
+查找 python 可执行文件、源代码及手册页所在路径：
+
 ```sh
 # whereis python
-# python: /usr/ports/lang/python
+python: /usr/ports/lang/python
 ```
 
 ## 安装 python3
@@ -361,7 +362,7 @@ w3m-0.5.3.20230718_1               <
 - 更新：
 
 ```sh
-# cd /usr/ports/ports-mgmt/portmaster && make install clean
+# cd /usr/ports/ports-mgmt/portmaster && make install clean	# 安装 portmaster
 # portmaster -a # 自动升级所有软件
 # portmaster screen # 升级单个软件
 ```
@@ -407,36 +408,35 @@ w3m-0.5.3.20230718_1               <
 
 ## FreeBSD USE
 
-
-- 如何全局屏蔽 mysql
+### 如何全局屏蔽 MYSQL
 
 ```sh
 # echo "OPTION_UNSET+= MYSQL" >> /etc/make.conf
 ```
 
-完整的列表见 <https://cgit.freebsd.org/ports/tree/Mk/bsd.default-versions.mk>
+完整的 USE 列表见 <https://cgit.freebsd.org/ports/tree/Mk/bsd.default-versions.mk>。
 
 ## FreeBSD ports 多线程编译
 
-将以下内容写入 `/etc/make.conf`，没有就 `touch` 新建一个。
+将以下内容写入 `/etc/make.conf`，若不存在则 `touch` 新建对应文件。
 
 ```ini
-FORCE_MAKE_JOBS=yes
-MAKE_JOBS_NUMBER=4
+FORCE_MAKE_JOBS=yes       # 强制启用并行编译
+MAKE_JOBS_NUMBER=4        # 设置并行编译的作业数为 4
 ```
 
 在 Linux（如 Gentoo）上，一般直接使用 `-jX` 或 `-j(X+1)`，其中 `X` 为核心数。
 
 `4` 表示处理器的并行编译数（通常对应核心数或线程数）。
 
-可以通过命令查询：
+可以通过命令查看系统检测到的 CPU 核心数量：
 
 ```sh
 # sysctl kern.smp.cpus
 kern.smp.cpus: 16
 ```
 
-或者：
+或者查看系统可用的 CPU 核心数：
 
 ```sh
 # sysctl hw.ncpu 
@@ -445,12 +445,12 @@ hw.ncpu: 16
 
 输出值即可作为 `MAKE_JOBS_NUMBER` 的取值。
 
-英特尔的处理器搜索 `CPU 型号+ARK` 跳转到英特尔官网可查询线程数。
+英特尔的处理器搜索 `CPU 型号 ARK` 跳转到英特尔官网可查询线程数。
 
 个别情况下可以通过设置别名加速编译（非永久设置，FreeBSD 14 默认已生效，无须额外设置）：
 
 ```sh
-# alias ninja='ninja -j4'
+# alias ninja='ninja -j4'	# 为 ninja 命令设置别名，指定并行编译 4 个作业
 ```
 
 ### 参考资料
@@ -459,13 +459,10 @@ hw.ncpu: 16
 
 ## 设置内存为 `tmp`
 
-```sh
-# ee /etc/fstab
-```
 
-写入：
+编辑 `/etc/fstab` 文件，写入：
 
-```sh
+```ini
 tmpfs /tmp tmpfs rw 0 0
 ```
 
@@ -493,7 +490,7 @@ tmpfs /tmp tmpfs rw 0 0
 
 - 使用 Ports 安装：
 
-```
+```sh
 # cd /usr/ports/devel/ccache/ 
 # make install clean
 ```
@@ -522,13 +519,13 @@ drwxr-xr-x   2 root wheel 15 Sep 20 02:02 world
 
 ---
 
-- 修改 `/etc/make.conf`，加入下面一行：
+- 修改 `/etc/make.conf`，加入下面一行启用 ccache 加速编译：
 
 ```sh
 WITH_CCACHE_BUILD=yes
 ```
 
-- 设置编译缓存最大为 10GB：
+- 设置 ccache 编译缓存最大为 10GB：
 
 ```sh
 # ccache -M 10G  
@@ -547,7 +544,7 @@ cache size                           0.0 kB
 max cache size                      10.0 GB
 ```
 
-- 在 Ports 编译一段时间后：
+- 在 Ports 编译一段时间后显示 ccache 的统计信息：
 
 ```sh
 # ccache -s
@@ -592,7 +589,7 @@ max cache size                      10.0 GB
 - 查看软链接情况：
 
 ```sh
-# ls -al  /usr/local/libexec/ccache    total 55
+# ls -al  /usr/local/libexec/ccache    total 55	# 查看 /usr/local/libexec/ccache 目录下的详细文件信息
 drwxr-xr-x   3 root wheel 13  9月 20 02:29 .
 drwxr-xr-x  20 root wheel 54  9月 20 02:29 ..
 lrwxr-xr-x   1 root wheel 21  9月 20 02:29 c++ -> /usr/local/bin/ccache
@@ -610,7 +607,7 @@ drwxr-xr-x   2 root wheel 13  9月 20 02:29 world
 
 ---
 
-- 修改 `/etc/make.conf`，加入下面一行：
+- 修改 `/etc/make.conf`，加入下面一行启用 ccache 加速编译：
 
 ```sh
 WITH_CCACHE_BUILD=yes
@@ -639,7 +636,7 @@ Local storage:
   Misses:          448 /  558 (80.29%)
 ```
 
-查看当前配置文件：
+显示 ccache 的当前配置参数：
 
 ```sh
 # ccache -p 
@@ -673,11 +670,11 @@ Local storage:
 
 新建或者编辑 `/etc/make.conf` 文件，写入以下几行：
 
-```sh
-FETCH_CMD=axel
-FETCH_BEFORE_ARGS= -n 10 -a
-FETCH_AFTER_ARGS=
-DISABLE_SIZE=yes
+```ini
+FETCH_CMD=axel                # 设置使用 axel 作为下载工具
+FETCH_BEFORE_ARGS=-n 10 -a    # 设置 axel 下载前的参数：使用 10 个线程并启用自动模式
+FETCH_AFTER_ARGS=              # 下载后执行的命令参数为空
+DISABLE_SIZE=yes               # 禁用文件大小检查
 ```
 
 ### wget2
@@ -688,12 +685,14 @@ DISABLE_SIZE=yes
 
 新建或者编辑 `/etc/make.conf` 文件，写入以下几行：
 
-```sh
-FETCH_CMD=wget2
-FETCH_BEFORE_ARGS= -c -t 3 -o 10
-FETCH_AFTER_ARGS=
-DISABLE_SIZE=yes
+```ini
+FETCH_CMD=wget2               # 设置使用 wget2 作为下载工具
+FETCH_BEFORE_ARGS=-c -t 3 -O 10  # 设置 wget2 下载前的参数
+FETCH_AFTER_ARGS=             # 下载后执行的命令参数为空
+DISABLE_SIZE=yes              # 禁用文件大小检查
 ```
+
+参数说明：
 
 - `-c` 断点续传；
 - `-t 3` 重试次数 3；

@@ -49,9 +49,9 @@ CUPS 全称为 Common Unix Printing System（通用 Unix 打印系统），支�
 将 dbus、avahi-daemon 和 cupsd 服务设置为系统启动时自动启用，以确保打印服务及其自动发现功能在系统重启后仍可正常使用：
 
 ```sh
-# service dbus enable
-# service avahi-daemon enable
-# service cupsd enable
+# service dbus enable           # 设置 D-Bus 服务开机自启动
+# service avahi-daemon enable   # 设置 Avahi 守护进程开机自启动（用于网络服务发现）
+# service cupsd enable          # 设置 CUPS 打印服务开机自启动
 ```
 
 启动服务后，其他设备应能够自动发现内网中的共享打印机。尝试打印测试页，测试能否正常打印。
@@ -60,7 +60,7 @@ CUPS 全称为 Common Unix Printing System（通用 Unix 打印系统），支�
 
 若未设置“允许局域网访问”，则除 `localhost` 外的其他主机将无法使用该打印服务。
 
-编辑 `/usr/local/etc/cups/cupsd.conf`：
+编辑 `/usr/local/etc/cups/cupsd.conf` 文件：
 
 - 在现有的
 
@@ -74,6 +74,8 @@ Listen /var/run/cups/cups.sock
 ```ini
 Listen IP:631
 ```
+
+作用：指定 CUPS 打印服务监听的 IP 地址和端口号（631 为默认 IPP 端口）。
 
 - 再将
 
@@ -96,15 +98,15 @@ Listen IP:631
 ```ini
 # Restrict access to the server...
 <Location />
-  Allow from 192.168.0.0/24 # 要访问的 IP 所在网段
+  Allow from 192.168.0.0/24   # 允许访问的 IP 网段
   Order allow,deny
 </Location>
 
 # Restrict access to the admin pages...
 <Location /admin>
-  Allow from 192.168.0.0/24 # 要访问的 IP 所在网段
-  AuthType Default
-  Require user @SYSTEM
+  Allow from 192.168.0.0/24   # 允许访问的 IP 网段
+  AuthType Default             # 使用默认认证类型
+  Require user @SYSTEM         # 仅系统用户可访问
   Order allow,deny
 </Location>
 ```

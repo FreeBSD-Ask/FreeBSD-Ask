@@ -4,7 +4,7 @@
 
 编译流程参见 Handbook 即可，非常简单。
 
-## svn 到 git 的迁移
+## SVN 到 Git 的迁移
 
 FreeBSD 项目在 2021 年从 SVN 全面迁移到了 Git，即 [https://git.freebsd.org](https://git.freebsd.org)
 
@@ -12,45 +12,43 @@ FreeBSD 项目在 2021 年从 SVN 全面迁移到了 Git，即 [https://git.free
 
 ## 从 Git 获取源代码
 
-
 ### 安装 Git
+
+使用 pkg 安装 Git：
 
 ```sh
 # pkg install git
 ```
 
-或者：
+或者使用 ports 安装 Git：
 
 ```sh
 # cd /usr/ports/devel/git/
 # make install clean
 ```
 
-
 ### Git 代理设置方法
 
-
-- 如果使用的是 `sh`, `bash`, `zsh`：
-
-设置：
+- 设置 Git 全局代理：
 
 ```sh
-# git config --global http.proxy http://192.168.X.X:7890
-# git config --global https.proxy http://192.168.X.X:7890
+# git config --global http.proxy http://192.168.X.X:7890    # 设置 Git 全局 HTTP 代理
+# git config --global https.proxy http://192.168.X.X:7890   # 设置 Git 全局 HTTPS 代理
 ```
 
-取消：
+- 取消 Git 全局代理：
 
 ```sh
-# git config --global --unset http.proxy
-# git config --global --unset https.proxy
+# git config --global --unset http.proxy    # 取消 Git 全局 HTTP 代理设置
+# git config --global --unset https.proxy   # 取消 Git 全局 HTTPS 代理设置
 ```
+
 
 ### Git 拉取源代码
 
 #### 拉取 CURRENT
 
-通过 FreeBSD 官方存储库拉取：
+通过 FreeBSD 官方存储库拉取。克隆 FreeBSD 源码仓库到 `/usr/src`，使用浅克隆减少下载量：
 
 ```sh
 $ git clone --depth 1 https://git.FreeBSD.org/src.git /usr/src 
@@ -66,7 +64,7 @@ $ git clone --depth 1 https://github.com/freebsd/freebsd-src /usr/src
 
 #### 拉取某 RELEASE
 
-通过 FreeBSD 官方存储库拉取：
+通过 FreeBSD 官方存储库拉取。克隆 FreeBSD 15.0 发布分支源码到 `/usr/src`，使用浅克隆并仅包含该分支：
 
 ```sh
 $ git clone --branch releng/15.0 --single-branch --depth 1 https://git.FreeBSD.org/src.git /usr/src
@@ -75,7 +73,7 @@ $ git clone --branch releng/15.0 --single-branch --depth 1 https://git.FreeBSD.o
 - `--branch releng/15.0`：指定拉取分支（FreeBSD RELEASE 的版本）
 - `--single-branch`：仅克隆一个分支，除该已克隆的单一分支外不含任何其他引用（refs）。
 
-或者通过 GitHub 拉取：
+或者通过 GitHub 拉取。从 GitHub 克隆 FreeBSD 15.0 发布分支源码到 `/usr/src`，使用浅克隆并仅包含该分支：
 
 ```sh
 $ git clone --branch releng/15.0 --single-branch --depth 1 https://github.com/freebsd/freebsd-src /usr/src
@@ -88,17 +86,20 @@ $ git clone --branch releng/15.0 --single-branch --depth 1 https://github.com/fr
 
 ## Gitup
 
+使用 pkg 安装 Gitup：
+
 ```sh
 # pkg install gitup
 ```
 
-或者：
+还可以使用 ports 安装 Gitup：
 
-```
-# cd /usr/ports/net/gitup/ && make install clean
+```sh
+# cd /usr/ports/net/gitup/ 
+# make install clean
 ```
 
-```
+```sh
 # gitup release # 具体版本需要参考当前 gitup 配置 https://github.com/johnmehr/gitup/blob/main/gitup.conf
 # gitup current # 获取 current 源代码
 ```
@@ -111,8 +112,8 @@ $ git clone --branch releng/15.0 --single-branch --depth 1 https://github.com/fr
 以 FreeBSD 15.0-RELEASE 为例：
 
 ```sh
-# fetch https://download.freebsd.org/ftp/releases/amd64/15.0-RELEASE/src.txz
-# tar xvf src.txz  -C /
+# fetch https://download.freebsd.org/ftp/releases/amd64/15.0-RELEASE/src.txz  # 下载 FreeBSD 15.0-RELEASE 的源码压缩包
+# tar xvf src.txz -C /                                                    # 将源码解压到根目录
 ```
 
 >**为何要解压到 `/`？**
@@ -152,7 +153,7 @@ $ git clone --branch releng/15.0 --single-branch --depth 1 https://github.com/fr
 ># export  VISUAL=/usr/bin/ee # 切换 vi 为 ee。针对 FreeBSD 14 之前的版本或 csh 使用：setenv VISUAL /usr/bin/ee
 >```
 
-合并冲突：
+合并冲突。使用 `etcupdate` 执行备份模式，以便在更新配置文件前备份现有文件：
 
 ```sh
 # etcupdate -B     
@@ -178,7 +179,7 @@ Select: (p) postpone, (df) diff-full, (e) edit,
 
 ### Git：`fatal: unable to access 'https://git.FreeBSD.org/src.git/': SSL certificate problem: certificate is not yet valid`
 
-可能是系统时间不正确导致的，可同步时间：
+可能是系统时间不正确导致的，使用 `pool.ntp.org` 服务器同步系统时间
 
 ```sh
 # ntpdate -u pool.ntp.org # 当时间相差较大时必须使用该命令，其他命令不会生效

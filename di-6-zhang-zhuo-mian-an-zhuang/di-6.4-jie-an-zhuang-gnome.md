@@ -18,13 +18,13 @@ GNOME 过去曾是 GNU 项目，旨在开发一套功能齐全的桌面环境，
 
 - 或者使用 Ports 安装：
 
-```
+```sh
 # cd /usr/ports/x11/xorg/ && make install clean
 # cd /usr/ports/x11/gnome/ && make install clean
 # cd /usr/ports/x11-fonts/noto-serif-sc/ && make install clean
 ```
 
-- 解释：
+- 软件包说明：
 
 |     软件      |            用途            |
 | :-----------: | :------------------------: |
@@ -40,7 +40,6 @@ GNOME 过去曾是 GNU 项目，旨在开发一套功能齐全的桌面环境，
 ```sh
 # pkg install xorg-minimal gnome-lite wqy-fonts xdg-user-dirs
 ```
-
 
 - 或者使用 Ports 安装：
 
@@ -71,24 +70,22 @@ GNOME 过去曾是 GNU 项目，旨在开发一套功能齐全的桌面环境，
 
 ## 配置
 
-```sh
-# ee /etc/fstab
-```
+使用文本编辑器打开 `/etc/fstab` 文件以编辑文件系统挂载信息。
 
-添加内容如下：
+添加内容如下挂载 proc 文件系统：
 
-```sh
+```ini
 proc /proc procfs rw 0 0
 ```
 
 配置启动项：
 
 ```sh
-# service dbus enable
-# service gdm enable
+# service dbus enable   # 设置 D-Bus 服务开机自启
+# service gdm enable    # 设置 GDM 显示管理器开机自启
 ```
 
-输入以下命令：
+输入以下命令，将 GNOME 会话命令写入 `~/.xinitrc`，以便 `startx` 启动 GNOME：
 
 ```sh
 $ echo "/usr/local/bin/gnome-session" > ~/.xinitrc
@@ -108,18 +105,16 @@ $ echo "/usr/local/bin/gnome-session" > ~/.xinitrc
 
 ### GNOME 界面
 
-> 本小节配置参数与用户 shell 无关，即使是 csh 也该如此配置。
+本小节配置参数与用户 shell 无关，即使是 csh 也该如此配置。
 
-```sh
-# ee /usr/local/etc/gdm/locale.conf
-```
+使用文本编辑器打开 GDM 本地化配置文件 `/usr/local/etc/gdm/locale.conf` 以修改语言设置。
 
 将原有内容替换如下：
 
 ```sh
-LANG="zh_CN.UTF-8"
-LC_CTYPE="zh_CN.UTF-8"
-LC_MESSAGES="zh_CN.UTF-8"
+LANG="zh_CN.UTF-8"         # 设置系统默认语言为简体中文 UTF-8
+LC_CTYPE="zh_CN.UTF-8"     # 设置字符类型和编码为简体中文 UTF-8
+LC_MESSAGES="zh_CN.UTF-8"  # 设置系统消息显示语言为简体中文 UTF-8
 ```
 
 ### 中文输入法

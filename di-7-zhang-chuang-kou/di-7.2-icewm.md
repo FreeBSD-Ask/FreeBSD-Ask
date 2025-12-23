@@ -13,7 +13,7 @@ IceWM 是基于 X Window 系统（X Window System）的窗口管理器。其设�
 ### 使用 Ports 安装
 
 ```sh
-# cd /usr/ports/x11-wm/icewm/ && make install clean # fluxbox
+# cd /usr/ports/x11-wm/icewm/ && make install clean
 # cd /usr/ports/x11-themes/icewm-extra-themes/ && make install clean 
 # cd /usr/ports/x11/xorg/ && make install clean 
 # cd /usr/ports/x11/slim/ && make install clean
@@ -36,30 +36,34 @@ IceWM 是基于 X Window 系统（X Window System）的窗口管理器。其设�
 
 编辑 `~/.xinitrc` 文件，并加入以下内容（请使用当前登录用户的账户进行修改）：
 
-```sh
+```ini
 exec icewm-session
 ```
+
+这样做，就可以在 TTY 使用 `startx` 命令启动 IceWM 会话。
 
 ## 启动项
 
 ```sh
-# service dbus enable # dbus 会作为依赖自动安装
-# service slim enable
+# service dbus enable   # 设置 D-Bus 服务开机自启动（作为依赖自动安装）
+# service slim enable   # 设置 SLiM 显示管理器开机自启动
 ```
 
-## fstab
+## 挂载 proc 文件系统
 
-编辑 `/etc/fstab`，加入：
+编辑 `/etc/fstab`，加入下行：
 
-```sh
+```ini
 proc           /proc       procfs  rw  0   0
 ```
+
+挂载 procfs 文件系统到 `/proc`，读写模式。
 
 ## 中文环境
 
 编辑 `/etc/login.conf` 文件，找到 `default:\` 段，将 `:lang=C.UTF-8` 修改为 `:lang=zh_CN.UTF-8`。
 
-刷新配置数据库：
+重新生成 `login.conf` 的能力数据库：
 
 ```sh
 # cap_mkdb /etc/login.conf

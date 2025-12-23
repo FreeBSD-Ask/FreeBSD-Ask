@@ -68,7 +68,7 @@ FreeBSD 的二进制包管理器目前是 pkg（旧称 pkgng），即“Package�
 基本系统默认不包含 pkg，需要先下载并安装 pkg：
 
 ```sh
-root@ykla:/home/ykla # pkg # 输入 pkg 后按回车
+# pkg # 输入 pkg 后按回车
 The package management tool is not yet installed on your system. # pkg 尚未安装
 Do you want to fetch and install it now? [y/N]: y # “你想下载安装吗？”请在这里输入 y 再按回车键即可安装
 Bootstrapping pkg from pkg+https://pkg.FreeBSD.org/FreeBSD:14:amd64/quarterly, please wait... # 观察此处，可发现默认调用的是 quarterly 分支的源
@@ -90,7 +90,7 @@ For more information on available commands and options see 'pkg help'.
 >如果提示 `00206176BC680000:error:0A000086:SSL routines:tls_post_process_server_certificate:certificate verify failed:/usr/src/crypto/openssl/ssl/statem/statem_clnt.c:1890:`（SSL 证书验证失败），请先校准时间。
 >
 >```sh
-># ntpdate -u pool.ntp.org
+># ntpdate -u pool.ntp.org	#  使用 pool.ntp.org 同步系统时间
 >```
 >
 >>**思考题**
@@ -103,7 +103,7 @@ For more information on available commands and options see 'pkg help'.
 以安装 chromium 为例：
 
 ```sh
-$ pkg ins chromium # 在普通用户权限下安装个浏览器看看
+$ pkg ins chromium # 在普通用户权限下安装 chromium 浏览器看看
 pkg: Insufficient privileges to install packages
 ```
 
@@ -114,7 +114,7 @@ pkg: Insufficient privileges to install packages
 ```sh
 $ su # 提升权限到 root，要求此普通用户在 wheel 组中
 Password: # 这里输入的是 root 账户密码！
-# pkg ins chromium # 再安装试试看！
+# pkg ins chromium # 再安装 chromium 试试看！
 Updating FreeBSD repository catalogue...
 Fetching data.pkg: 100%   10 MiB 768.6kB/s    00:14    
 Processing entries: 100%
@@ -151,7 +151,7 @@ Proceed with this action? [y/N]: # 此处输入 y 再按回车键即可安装
 你极有可能会遇到这种情况：
 
 ```sh
-# pkg ins chromium
+# pkg ins chromium	# 安装 Chromium 浏览器
 Updating FreeBSD repository catalogue.
 Fetching meta.conf: 100%    179 B   0.2kB/s    00:01    
 Fetching data.pkg: 100%   10 MiB   2.7MB/s    00:04    
@@ -326,7 +326,7 @@ To update the provides database run `pkg provides -u`.
 - 编辑 `/usr/local/etc/pkg.conf`，找到空行，写入：
 
 
-```sh
+```ini
 PKG_PLUGINS_DIR = "/usr/local/lib/pkg/";
 PKG_ENABLE_PLUGINS = true;
 PLUGINS [ provides ];
@@ -338,7 +338,6 @@ PLUGINS [ provides ];
 # pkg plugins
 NAME       DESC                                          VERSION   
 provides   A plugin for querying which package provides a particular file 0.7.4     
-root@ykla:/home/ykla # 
 ```
 
 - 刷新数据库：
@@ -374,16 +373,16 @@ Filename: usr/local/lib/libxcb-icccm.so.4.0.0
 请先切换到 latest 源，再使用软件源里的 pkg 包重装 pkg：
 
 ```sh
-# pkg-static bootstrap -f
+# pkg-static bootstrap -f	# # 强制初始化 pkg 包管理器
 ```
 
 若无效，则再：
 
 ```sh
-# freebsd-update fetch
-# freebsd-update install
-# pkg-static update -f
-# pkg-static upgrade -f pkg
+# freebsd-update fetch        # 下载可用的 FreeBSD 更新
+# freebsd-update install      # 安装下载的 FreeBSD 更新
+# pkg-static update -f        # 强制更新本地软件包仓库索引
+# pkg-static upgrade -f pkg   # 强制升级 pkg 工具本体
 ```
 
 #### CURRENT/STABLE
@@ -410,7 +409,7 @@ pkg: PRE-INSTALL script failed
 
 问题原因在于用户数据库未同步。
 
-刷新数据库：
+根据 `/etc/master.passwd` 更新密码数据库：
 
 ```sh
 # /usr/sbin/pwd_mkdb -p /etc/master.passwd
@@ -420,18 +419,20 @@ pkg: PRE-INSTALL script failed
 
 出现该问题通常是由于 ABI 发生破坏，更新即可解决。
 
-安装 `bsdadminscripts2`：
+使用 pkg 安装 `bsdadminscripts2`：
 
 ```sh
 # pkg install bsdadminscripts2
 ```
 
-或者
+或者使用 ports 安装 `bsdadminscripts2`：
 
 ```sh
 # cd /usr/ports/ports-mgmt/bsdadminscripts2/ 
 # make install clean
 ```
+
+检查已安装软件包的动态库依赖是否完整：
 
 ```sh
 # pkg_libchk
@@ -448,7 +449,9 @@ jbig2dec-0.20_1: /usr/local/lib/libjbig2dec.so misses libmd.so.6
 
 - [BSD Administration Scripts II](https://github.com/lonkamikaze/bsda2)，项目地址，含详细使用说明
 
-- 若使用了 pkgbase，`bsdadminscripts2` 可 **检查系统的完整性**，找出哪些系统文件是被窜改过的：
+- 若使用了 pkgbase，`bsdadminscripts2` 可 **检查系统的完整性**，找出哪些系统文件是被窜改过的。
+
+验证已安装软件包的完整性和一致性：
 
 ```sh
 # pkg_validate

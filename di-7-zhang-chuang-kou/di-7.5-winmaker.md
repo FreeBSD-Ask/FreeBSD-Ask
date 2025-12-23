@@ -22,7 +22,7 @@ Window Maker 是一款 X11 窗口管理器，其设计目标是重现 NeXTSTEP�
 # cd /usr/ports/devel/xdg-user-dirs/ && make install clean 
 ```
 
-- 解释：
+- 软件包解释：
 
 
 
@@ -40,11 +40,13 @@ Window Maker 是一款 X11 窗口管理器，其设计目标是重现 NeXTSTEP�
 
 ## `startx`
 
-编辑 `~/.xinitrc`，加入：
+编辑 `~/.xinitrc` 文件，加入下行：
 
-```sh
+```ini
 exec wmaker
 ```
+
+便于在 TTY 通过 `startx` 命令启动 Window Maker 会话。
 
 ### 参考文献
 
@@ -53,23 +55,25 @@ exec wmaker
 ## 启动项
 
 ```sh
-# service dbus enable
-# service lightdm enable
+# service dbus enable       # 设置 D-Bus 服务开机自启动
+# service lightdm enable    # 设置 LightDM 显示管理器开机自启动
 ```
 
-## fstab
+## 挂载 proc 文件系统
 
-编辑 `/etc/fstab`，加入：
+编辑 `/etc/fstab`，加入下行：
 
-```sh
+```ini
 proc           /proc       procfs  rw  0   0
 ```
+
+挂载 procfs 文件系统到 `/proc`，读写模式。
 
 ### 设置中文环境
 
 编辑 `/etc/login.conf`，找到 `default:\` 这一段，将 `:lang=C.UTF-8` 修改为 `:lang=zh_CN.UTF-8`。
 
-刷新数据库：
+刷新用户分类数据库：
 
 ```sh
 # cap_mkdb /etc/login.conf
@@ -85,7 +89,7 @@ proc           /proc       procfs  rw  0   0
 
 ### `Could not execute command: exec WPrefs`
 
-可以在终端输入
+可以在终端输入下行，启动 GNUStep WPrefs 应用程序：
 
 ```sh
 # /usr/local/GNUStep/Applications/WPrefs.app/WPrefs
@@ -97,7 +101,7 @@ proc           /proc       procfs  rw  0   0
 
 Window Maker 本身部分字符串未被包含在 `.po` 文件中 [https://repo.or.cz/wmaker-crm.git/blob/refs/heads/master:/po/zh\_CN.po](https://repo.or.cz/wmaker-crm.git/blob/refs/heads/master:/po/zh_CN.po)，因此在界面显示时可能出现中英文混合的情况。
 
-<https://sourceforge.net/p/wmakerconf/code/HEAD/tree/wmakerconf/trunk/po/> wmakerconf 自 2007 年以后已停止开发，翻译内容很可能无法被合并。
+根据 <https://sourceforge.net/p/wmakerconf/code/HEAD/tree/wmakerconf/trunk/po/>，wmakerconf 自 2007 年以后已停止开发，翻译内容很可能无法被合并。
 
 综上，中文环境处理难度较大，感兴趣的读者可以尝试推进。
 

@@ -47,7 +47,7 @@ FreeBSD 中的 pkg 源分为系统级和用户级两个配置文件。**不建�
 FreeBSD 的 pkg 分为 quarterly（季度，由 Ports 的 XXXXQY 分支构建而来）分支和 latest（实时更新，由 Ports 的 main 分支构建而来）分支两个源。quarterly 目前是 FreeBSD 默认的 pkg 软件分支。
 
 ```sh
-root@ykla:/home/ykla # git clone https://git.FreeBSD.org/ports.git /usr/ports # 拉取 Ports
+# git clone https://git.FreeBSD.org/ports.git /usr/ports # 克隆 FreeBSD ports 仓库到 /usr/ports 目录
 正克隆到 '/usr/ports'...
 remote: Enumerating objects: 6715646, done.
 remote: Counting objects: 100% (936/936), done.
@@ -151,8 +151,8 @@ FreeBSD pkg 的 quarterly 分支也试图实现相同的目的（提供可预测
 #### 创建用户级源目录和文件
 
 ```sh
-# mkdir -p /usr/local/etc/pkg/repos
-# ee /usr/local/etc/pkg/repos/mirrors.conf
+# mkdir -p /usr/local/etc/pkg/repos  # 创建 pkg 仓库配置目录
+# ee /usr/local/etc/pkg/repos/mirrors.conf  # 使用 ee 编辑器创建或修改 mirrors.conf 配置文件
 ```
 
 #### 中国科学技术大学开源软件镜像站（USTC）

@@ -5,7 +5,7 @@
 首先观察以下命令输出：
 
 ```sh
-root@ykla:~ # ls -al /home/ykla
+# ls -al /home/ykla  # 显示 /home/ykla 目录下的详细文件列表
 total 74
 drwxr-xr-x  17 ykla ykla    27 Mar 19 17:57 .
 drwxr-xr-x   3 root wheel    4 Mar 19 16:05 ..
@@ -75,7 +75,9 @@ FreeBSD 文件访问权限可以用 10 个标志位来表示（数一数第一�
 
 ### 操作符方式
 
-```
+赋予所有用户对 test.sh 脚本的执行权限：
+
+```sh
 $ chmod a+x test.sh
 ```
 
@@ -89,6 +91,8 @@ $ chmod a+x test.sh
 
 
 ### 数字方式
+
+设置 `test.sh` 的权限为：所有者可读写执行，组用户可读执行，其他用户无权限：
 
 ```sh
 $ chmod 750 test.sh

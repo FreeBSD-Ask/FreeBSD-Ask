@@ -28,7 +28,7 @@
 
 修改 `/usr/local/share/rime-data/default.yaml` 文件：打开文件找到 `schema_list`，在其下第一行添加 `- schema: wubi98`（注意保持缩进），并删除其他输入方案，如下所示：
 
-```sh
+```yaml
 # Rime default settings
 # encoding: utf-8
 
@@ -70,9 +70,10 @@ Fcitx 5 的具体配置步骤本节不做详细说明。
 
 ![](../.gitbook/assets/wubi2.png)
 
----
 
-附录：王码 98 五笔生成 `.dict` 库方法，可用下面命令生成：
+#### 附录：王码 98 五笔生成 `.dict` 库方法
+
+使用 libime 工具将 `98wbx.txt` 转换为 `98wbx.main.dict` 字典文件：
 
 ```sh
 $ libime_tabledict 98wbx.txt 98wbx.main.dict
@@ -98,7 +99,7 @@ $ libime_tabledict 98wbx.txt 98wbx.main.dict
 
 修改 `/usr/local/share/rime-data/default.yaml`，如下：
 
-```
+```yaml
 # Rime default settings
 # encoding: utf-8
 
@@ -114,13 +115,13 @@ schema_list:
 
 五笔输入法安装完成后，Rime 的配置文件位置如下：
 
-- IBus
+- IBus 下 Rime 配置文件路径
 
 ```sh
 $ cd ~/.config/ibus/rime
 ```
 
-- Fcitx5
+- Fcitx 5 下 Rime 配置文件路径
 
 ```sh
 $ cd ~/.local/share/fcitx5/rime
@@ -131,6 +132,8 @@ $ cd ~/.local/share/fcitx5/rime
 必须先切换到上述配置文件目录后，再进行下列操作。
 
 #### 方法 ①
+
+使用 `rime_patch` 工具为默认 Rime 输入法生成菜单：
 
 ```sh
 $ rime_patch default menu
@@ -148,6 +151,8 @@ patch applied.
 
 #### 方法 ②
 
+使用 rime_patch 工具为默认 Rime 输入法生成带分页大小设置的菜单：
+
 ```sh
 $ rime_patch default menu/page_size
 9 # 输入后回车
@@ -160,6 +165,8 @@ patch applied.
 推荐使用方法二进行设置；方法一在较复杂的设置中需要对配置文件格式有一定了解。
 
 ### 默认英文输出
+
+使用 `rime_patch` 工具重置 wubi86 输入法的第一个开关配置：
 
 ```sh
 $ rime_patch wubi86 'switches/@1/reset'

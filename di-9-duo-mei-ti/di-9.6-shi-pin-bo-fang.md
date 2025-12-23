@@ -114,7 +114,7 @@ Kodi 曾用名为 XBMC。
 # make install clean
 ```
 
-切换到 TTY，然后使用以下命令播放视频：
+切换到 TTY，使用 MPV 播放器播放视频文件 `1.mp4`：
 
 ```sh
 $ mpv 1.mp4
@@ -131,7 +131,7 @@ $ mpv 1.mp4
 >可以使用命令行工具 `mixer` 调整音量，例如以下命令将音量调高 5%
 >
 >```sh
->$ mixer vol=+5%
+>$ mixer vol=+5%  # 将音量增加 5%
 >```
 
 

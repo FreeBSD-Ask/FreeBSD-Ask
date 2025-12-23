@@ -28,7 +28,7 @@ Lumina 使用 BSD 许可证。Lumina 技术栈为 Qt 5，不使用任何基于 L
 # cd /usr/ports/devel/xdg-user-dirs/ && make install clean 
 ```
 
-- 软件包说明
+- 软件包说明：
 
 | 包名                   | 功能说明                                                                 |
 |:------------------------|:--------------------------------------------------------------------------|
@@ -44,31 +44,35 @@ Lumina 使用 BSD 许可证。Lumina 技术栈为 Qt 5，不使用任何基于 L
 
 
 ```sh
-# service dbus enable
-# service lightdm enable
+# service dbus enable  # 设置 D-Bus 服务开机自启
+# service lightdm enable  # 设置 LightDM 显示管理器开机自启
 ```
 
 ## 配置 `startx`
 
 编辑 `~/.xinitrc`，添加：
 
-```sh
+```ini
 exec lumina-desktop
 ```
+
+方便使用 `startx` 命令启动 Lumina 桌面环境。
 
 ## 中文化
 
 在 `/etc/rc.conf` 中加入：
 
-```sh
+```ini
 lightdm_env="LC_MESSAGES=zh_CN.UTF-8" 
 ```
+
+设置 LightDM 的环境变量，使消息显示为中文。
 
 ---
 
 编辑 `/etc/login.conf`：找到 `default:\` 这一段，将 `:lang=C.UTF-8` 修改为 `:lang=zh_CN.UTF-8`。
 
-刷新数据库：
+根据 `/etc/login.conf` 更新系统能力数据库：
 
 ```sh
 # cap_mkdb /etc/login.conf

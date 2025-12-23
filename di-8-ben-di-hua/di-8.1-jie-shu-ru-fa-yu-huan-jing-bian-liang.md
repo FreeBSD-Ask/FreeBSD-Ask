@@ -43,7 +43,7 @@
 - 可以使用 `locale` 命令确定以上变量的当前值，如：
 
 ```sh
-$ locale
+$ locale  # 显示当前系统的本地化设置
 LANG=C.UTF-8
 LC_CTYPE="C.UTF-8"
 LC_COLLATE="C.UTF-8"

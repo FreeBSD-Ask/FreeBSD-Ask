@@ -73,8 +73,8 @@ Hyprland 的窗口焦点切换与传统桌面不同：鼠标光标停留在哪�
 ## 启动服务
 
 ```sh
-# service seatd enable
-# service dbus enable
+# service seatd enable   # 设置 seatd 服务开机自启动
+# service dbus enable    # 设置 D-Bus 服务开机自启动
 ```
 
 ## 启动 Hyprland
@@ -83,9 +83,9 @@ Hyprland 的窗口焦点切换与传统桌面不同：鼠标光标停留在哪�
 
 先设置环境变量 `XDG_RUNTIME_DIR`，以避免启动时报错。
 
-如果是默认 shell sh，将以下写入 `~/.profile`（对于 zsh，放入 `~/.zprofile`，下同）：
+如果是默认 shell sh，将以下写入 `~/.profile`（对于 zsh，放入 `~/.zprofile`，下同）设置当前用户的 XDG 运行时目录：
 
-```sh
+```ini
 export XDG_RUNTIME_DIR=/var/run/user/`id -u`
 ```
 
@@ -98,9 +98,11 @@ export XDG_RUNTIME_DIR=/var/run/user/`id -u`
 
 如果需要在不使用登录管理器的前提下开机自动启动 Hyprland，请将下行写入 `~/.profile`：
 
-```sh
+```ini
 dbus-run-session Hyprland
 ```
+
+即在 D-Bus 会话中启动 Hyprland 窗口管理器。
 
 也可以使用命令 `Hyprland -c <配置文件路径>` 来指定配置文件。
 
@@ -121,7 +123,7 @@ Hyprland 默认配置文件的位置是 `~/.config/hypr/hyprland.conf`。
 
 示例：
 
-```sh
+```ini
 # 进入 Hyprland 后自动启动 fcitx5。该命令已被注释，读者在安装 fcitx5 后可自行取消注释
 #exec-once=fcitx5
 # 设置壁纸，请将路径修改为自己的图片文件位置
@@ -277,7 +279,7 @@ bindm = $mainMod, mouse:273, resizewindow
 
 示例：
 
-```sh
+```ini
 # Look and feel
 
 ## Color
@@ -365,7 +367,6 @@ map ctrl+minus            change_font_size current -1.0
 map ctrl+0                change_font_size current 0
 
 #include ${ARCH}.conf
-
 ```
 
 ## 配置 waybar（任务栏）
@@ -748,11 +749,11 @@ window#waybar {
 
 ## 配置 swaylock
 
-swaylock 的配置文件在 `~/.config/swaylock/config` 中。
+swaylock 的配置文件在 `~/.config/swaylock/config` 文件中。
 
 - 示例配置文件：
 
-```sh
+```ini
 ignore-empty-password
 font=Fira Sans Compressed
 

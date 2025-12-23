@@ -3,15 +3,15 @@
 
 ## 创建启动环境 15.0-RELEASE
 
-- 使用工具 bectl 创建启动环境 `15.0-RELEASE`
-
->**注意**
->
->我们只是将其命名为 15.0，实际上系统仍然是 14.3-RELEASE。
+- 使用工具 bectl 创建启动环境 `15.0-RELEASE`：
 
 ```sh
 # bectl create 15.0-RELEASE
 ```
+
+>**注意**
+>
+>我们只是将其命名为 15.0，实际上系统仍然是 14.3-RELEASE。
 
 - 使用 bectl 检查启动环境：
 
@@ -29,7 +29,7 @@ Active 字段解释（来自 [bectl(8) 手册页](https://man.freebsd.org/cgi/ma
 - “T”：是否会在下次启动时生效（且仅下次，用于一次性选项）
 - “NRT”：这些标识（N / R / T）理论上可以组合出现（但实际不会出现，该组合在语义上存在矛盾）
 
-- 使用 zfs 命令检查：
+- 列出系统中所有 ZFS 文件系统及其属性：
 
 ```sh
 # zfs list
@@ -61,7 +61,7 @@ zroot/ROOT/15.0-RELEASE     8K  83.8G  10.6G  /
 /mnt/upgrade
 ```
 
-- 检查：
+- 显示已挂载文件系统的磁盘使用情况：
 
 ```sh
 # df
@@ -79,7 +79,9 @@ zroot/ROOT/15.0-RELEASE  99036272 11132688 87903584    11%    /mnt/upgrade
 
 ### 验证当前 FreeBSD 版本
 
-目前 15.0-RELEASE 实际上仍是 14.3-RELEASE。虽然这是已知事实，但仍可使用命令 `freebsd-version` 进行验证：
+目前 15.0-RELEASE 实际上仍是 14.3-RELEASE。虽然这是已知事实，但仍可使用命令 `freebsd-version` 进行验证。
+
+在 `/mnt/upgrade` 环境中运行 `freebsd-version`：
 
 ```sh
 # chroot /mnt/upgrade freebsd-version -kru
@@ -107,7 +109,7 @@ pkgbase 的设计初衷是为了让 stable、current 和 release（包括 BETA�
 >
 >**存在风险，可能会丢失所有数据！建议在操作之前做好备份。**
 
-- 锁定 pkg，以防止 pkg 在转换过程中出现问题
+- `在 /mnt/upgrade` 环境中锁定 pkg 软件包，防止被升级或修改：
 
 ```sh
 # pkg -c /mnt/upgrade lock pkg
@@ -202,7 +204,7 @@ FreeBSD-base {
 - 使用 pkgbase 将 14.3-RELEASE 更新到 15.0-RELEASE（即将 ABI 指定为 15）
 
 ```sh
-# env ABI=FreeBSD:15:amd64 pkg-static -c /mnt/upgrade upgrade -r FreeBSD-base
+# env ABI=FreeBSD:15:amd64 pkg-static -c /mnt/upgrade upgrade -r FreeBSD-base	# 在 /mnt/upgrade 环境中使用指定 ABI 升级 FreeBSD 基础系统包
 pkg-static: Setting ABI requires setting OSVERSION, guessing the OSVERSION as: 1500000
 pkg-static: Warning: Major OS version upgrade detected.  Running "pkg bootstrap -f" recommended
 Updating FreeBSD-base repository catalogue...
@@ -283,7 +285,7 @@ Successfully activated boot environment 15.0-RELEASE
 for next boot
 ```
 
-- 验证设置是否成功：
+- 验证设置是否成功。列出系统中所有 ZFS 启动环境：
 
 ```sh
 $ bectl list
@@ -365,6 +367,8 @@ $ freebsd-version -kru
 
 ### 查看内置的 OpenZFS 版本
 
+显示当前 ZFS 工具和内核模块的版本信息：
+
 ```sh
 # zfs --version
 zfs-2.2.7-FreeBSD_ge269af1b3
@@ -395,14 +399,14 @@ zfs-kmod-2.2.7-FreeBSD_ge269af1b3
 形如：
 
 ```ini
-# zfs_load=YES
+# zfs_load=YES	# 禁用内置 ZFS 模块加载
 ```
 
 再新增下列数行：
 
 ```ini
-zfs_load=NO
-openzfs_load=YES
+zfs_load=NO        # 禁用内置 ZFS 模块加载
+openzfs_load=YES   # 启用 OpenZFS 模块加载
 ```
 
 完成后重启系统。

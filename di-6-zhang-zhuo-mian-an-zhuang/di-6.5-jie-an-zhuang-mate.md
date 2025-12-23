@@ -38,8 +38,8 @@ MATE 是从 GNOME 2 复刻（fork）发展而来的桌面环境。
 ## 安装后启用服务
 
 ```sh
-# service dbus enable 
-# service lightdm enable 
+# service dbus enable     # 设置 D-Bus 服务开机自启
+# service lightdm enable  # 设置 LightDM 显示管理器开机自启
 ```
 
 ## 配置 LightDM
@@ -48,7 +48,7 @@ MATE 是从 GNOME 2 复刻（fork）发展而来的桌面环境。
 
 ## `startx` 配置文件
 
-在 `~/.xinitrc` 文件内加入下面一行：
+在 `~/.xinitrc` 文件内加入下面一行，方便 `startx` 启动 MATE 桌面会话：
 
 ```sh
 exec mate-session
@@ -59,7 +59,7 @@ exec mate-session
 
 编辑 `/etc/login.conf`：找到 `default:\` 这一段，将 `:lang=C.UTF-8` 修改为 `:lang=zh_CN.UTF-8`。
 
-刷新数据库：
+根据 `/etc/login.conf` 更新系统能力数据库：
 
 ```sh
 # cap_mkdb /etc/login.conf
@@ -83,7 +83,7 @@ ibus 测试成功，请参见输入法相关章节。
 
 ### 配置 slick-greeter
 
-创建 `/usr/local/etc/lightdm/slick-greeter.conf`，写入
+创建 `/usr/local/etc/lightdm/slick-greeter.conf`，写入以下配置。
 
 ```ini
 [Greeter]

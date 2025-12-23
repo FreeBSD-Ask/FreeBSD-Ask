@@ -43,10 +43,10 @@ FreeBSD 的 ZFS 和 UFS 都是 **区分大小写（大小写敏感）** 的文�
 - FreeBSD 下 **大小写敏感**
 
 ```sh
-$ touch ABC
-$ touch abc
-$ ls
-abc	ABC
+$ touch ABC    # 创建名为 ABC 的文件
+$ touch abc    # 创建名为 abc 的文件
+$ ls           # 列出当前目录内容（区分文件名大小写）
+abc    ABC
 ```
 
 可见，abc 和 ABC 可以共存，文件系统认为这是两个不同的文件。
@@ -76,14 +76,14 @@ Windows 操作系统默认的文本换行符为 CRLF（即 \\r\\n，0x0D 0x0A，
 - 使用普通的 Unix 换行符文本文件
 
 ```sh
-$ file a.txt
+$ file a.txt  # 查看文件类型
 a.txt: Unicode text, UTF-8 text
 ```
 
 - 使用 Windows 换行符的文本文件
 
 ```sh
-$ file b.txt 
+$ file b.txt  # 查看文件类型
 b.txt: Unicode text, UTF-8 text, with very long lines (314), with CRLF line terminators
 ```
 
@@ -99,14 +99,14 @@ b.txt: Unicode text, UTF-8 text, with very long lines (314), with CRLF line term
 
 Windows 默认使用 GBK（在简体中文环境下，为 GB2312 的超集），而 Linux 或 UNIX 通常使用 UTF-8。
 
-- Windows 11 24H2
+- 在 Windows 11 24H2 查看当前控制台使用的代码页：
 
 ```powershell
 PS C:\Users\ykla> chcp
-活动代码页: 936 # 即 GBK
+活动代码页: 936 # GBK 编码
 ```
 
-- Ubuntu 24.04/FreeBSD
+- 在 Ubuntu 24.04/FreeBSD 输出当前区域设置（locale）所使用的字符编码名称：
 
 ```sh
 root@ykla:/home/ykla# locale charmap

@@ -51,7 +51,7 @@ ffmpeg：
 # make install clean
 ```
 
-处理：
+使用 FFmpeg 将 ASS 字幕嵌入到视频中：
 
 ```sh
 $ ffmpeg -i 视频文件.mp4 -vf subtitles=对应字幕.ass 输出视频.mp4
