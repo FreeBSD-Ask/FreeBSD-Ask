@@ -113,9 +113,9 @@ drwxrwxrwt  2 root    wheel  3 Mar 18 17:23 .ICE-unix
 >换成：`ls-l/home/ykla/tmp`、`ls/` 呢？
 >
 >```sh
->root@ykla:~ # ls-l/home/ykla/tmp
+># ls-l/home/ykla/tmp
 >-sh: ls-l/home/ykla/tmp: not found
->root@ykla:~ # ls/
+># ls/
 >-sh: ls/: not found
 >```
 >
@@ -124,13 +124,13 @@ drwxrwxrwt  2 root    wheel  3 Mar 18 17:23 .ICE-unix
 还需要注意，命令行本身不具备自动纠错功能，即使仅拼错一个字母或少输入一个字符，命令也无法正确执行：
 
 ```sh
-root@ykla:~ # LS # 试试全大写
+# LS # 试试全大写
 -sh: LS: not found
-root@ykla:~ # Ls # 一大一小呢
+# Ls # 一大一小呢
 -sh: Ls: not found
-root@ykla:~ # ls /hom1 # 实为 /home
+# ls /hom1 # 实为 /home
 ls: /hom1: No such file or directory
-root@ykla:~ # ls -z /home # 不存在选项 -z
+# ls -z /home # 不存在选项 -z
 ls: invalid option -- z
 usage: ls [-ABCFGHILPRSTUWZabcdfghiklmnopqrstuvwxy1,] [--color=when] [-D format] [--group-directories=] [file ...]
 ```
@@ -187,14 +187,14 @@ usage: ls [-ABCFGHILPRSTUWZabcdfghiklmnopqrstuvwxy1,] [--color=when] [-D format]
 查看安装后配置信息
 
 ```sh
-root@ykla:~ # fuck
+# fuck
 Seems like fuck alias isn't configured!
 More details - https://github.com/nvbn/thefuck#manual-installation
 ```
 
 我们打开网页浏览。发现要将 `eval $(thefuck --alias)` 加入到 `~/.bash_profile`（bash shell）、`~/.bashrc`（bash shell）或 `~/.zshrc`（zsh shell）。
 
-FreeBSD 默认使用的是 sh，因此将：
+FreeBSD 默认使用的是 sh，因此将下行：
 
 ```sh
 eval $(thefuck --alias) 
@@ -205,8 +205,8 @@ eval $(thefuck --alias)
 重新加载 shell 配置：
 
 ```sh
-root@ykla:~ # . ~/.shrc
-root@ykla:~ # fuck
+# . ~/.shrc
+# fuck
 No fucks given
 ```
 
@@ -215,11 +215,11 @@ No fucks given
 >根据作者信息，若不喜欢输入 `fuck`，还可以使用其他别名：若更改为 `eval $(thefuck --alias abc)`，则下方所有 `fuck` 命令都会被换成 `abc`。
 >
 >```sh
->root@ykla:~ # abc
+># abc
 >Nothing found
->root@ykla:~ # plg install gimp
+># plg install gimp
 >-sh: plg: not found
->root@ykla:~ # abc
+># abc
 >pkg install gimp [enter/↑/↓/ctrl+c]
 >……省略一部分……
 >```
@@ -228,9 +228,9 @@ No fucks given
 #### 测试使用 thefuck
 
 ```sh
-root@ykla:~ # ls-l /home/ykla/ # 先输入一遍错误的试试
+# ls-l /home/ykla/ # 先输入一遍错误的试试
 -sh: ls-l: not found
-root@ykla:~ # fuck
+# fuck
 ls -l /home/ykla/ [enter/↑/↓/ctrl+c] # 上下箭头切换可能的命令，回车确认，ctrl c 中断
 total 317
 ……省略一部分……
@@ -241,9 +241,9 @@ drwxr-xr-x  2 ykla ykla        2 Mar  9 20:45 桌面
 再试试：
 
 ```sh
-root@ykla:~ # plg install gimp
+# plg install gimp
 -sh: plg: not found
-root@ykla:~ # fuck
+# fuck
 pkg install gimp [enter/↑/↓/ctrl+c]
 Updating FreeBSD repository catalogue...
 FreeBSD repository is up to date.
@@ -257,7 +257,7 @@ FreeBSD repository is up to date.
 - 成功执行：
 
 ```sh
-root@ykla:~ # cp test /root/mydir/
+# cp test /root/mydir/
 
 
 ```
@@ -265,7 +265,7 @@ root@ykla:~ # cp test /root/mydir/
 - 执行中断：
 
 ```sh
-root@ykla:~ # cp test9 /root/mydir/
+# cp test9 /root/mydir/
 cp: test9: No such file or directory
 ```
 
@@ -345,7 +345,7 @@ cd is a shell builtin
 如果你配置了 pkgbase，则输出类似：
 
 ```sh
-# pkg which /bin/ls
+# pkg which /bin/ls # 查询 /bin/ls 所属的软件包
 /bin/ls was installed by package FreeBSD-runtime-15.snap20250313173555
 
 ```
@@ -359,10 +359,10 @@ cd is a shell builtin
 
 `cd`（change working directory，更改工作目录）
 
-切换到 `/home`
+切换到 `/home`：
 
 ```
-$ cd /home
+$ cd /home # 切换到 `/home`
 $ pwd # 看看现在在哪
 /home
 ```
@@ -393,7 +393,7 @@ drwxr-xr-x  2 ykla ykla    2B Mar  9 20:45 下载
 选项 `-a` 可用于显示隐藏的目录和文件：
 
 ```sh
-ykla@ykla:~ $ ls -a
+$ ls -a
 .		.cshrc		.login		.profile	公共		视频
 ..		.dbus		.login_conf	.sh_history	图片		音乐
 .Xauthority	.face		.mail_aliases	.shrc		文档
@@ -459,7 +459,7 @@ $ touch test
 
 可以一次性使用多个参数创建多个文件（类似用法几乎是通用的，不再赘述）：
 
-```
+```sh
 $ touch test test1 test2 test3
 ```
 
@@ -566,8 +566,8 @@ $ rm -rf /home/ykla/test/
 >使用 `rm -rf` 是相当危险的操作，是不可撤销的。试想，上述命令若 `/home/ykla/test/` 打错成了 `/home/ykla /test/`（多了个空格），会造成什么后果？
 >
 >```sh
->root@ykla:~ # rm -rf /home/ykla /test
->root@ykla:~ # ls /home/ykla
+># rm -rf /home/ykla /test
+># ls /home/ykla
 >ls: /home/ykla: No such file or directory # 发现已经不存在 ykla 这个目录了
 >```
 
@@ -576,14 +576,14 @@ $ rm -rf /home/ykla/test/
 >网上经常有人说使用 `sudo rm -rf /*` 是某某命令可以 xxx，误导他人对系统造成不可挽回的灾难性破坏。该命令实质上是以 root 权限（~~还好 FreeBSD 默认没有 sudo~~），删除 `/` 及其子目录下的一切存在。让我来展示一下：
 >
 >```sh
->root@ykla:/ # rm -rf /*
+># rm -rf /*
 >rm: /boot/efi: Device busy
 >rm: /boot: Directory not empty
 >rm: /dev/reroot: Operation not supported
 >rm: /dev/input: Operation not supported
 >rm: /dev/fd: Operation not supported
 >……省略一部分……
->root@ykla:/ # 
+># 
 >```
 >
 >![](../.gitbook/assets/noefi.png)
@@ -736,7 +736,7 @@ $ rm -rf *
 make BATCH=yes install || make BATCH=yes install || make BATCH=yes install || make BATCH=yes install
 ```
 
-当一次 `make BATCH=yes install` 失败后仍然会执行下一个 `make BATCH=yes install`。即之前的命令执行失败了，转而执行后面的命令……
+当一次 `make BATCH=yes install` 失败后仍然会执行下一个 `make BATCH=yes install`。即之前的命令执行失败了，转而执行后面的命令。
 
 >**技巧**
 >

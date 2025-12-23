@@ -16,10 +16,9 @@
 
 ### 蓝牙鼠标配对
 
-使用 `bluetooth-config` 工具即可添加蓝牙设备。
+将蓝牙鼠标切换到配对模式。
 
-将蓝牙鼠标切换到配对模式，使用 root 权限运行 `bluetooth-config scan`，并按提示信息完成添加：
-
+使用 root 权限运行 `bluetooth-config scan`，扫描可用的蓝牙设备，并按提示信息完成添加：
 
 ```sh
 # bluetooth-config scan

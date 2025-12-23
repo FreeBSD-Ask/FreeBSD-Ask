@@ -37,8 +37,8 @@ fcitx 是“小企鹅输入法”，其英文名称为“A flexible input method
 ### Fcitx 5.X 开启自启
 
 ```sh
-$ mkdir -p ~/.config/autostart/ # 如果使用其他用户，需要在该用户的命令行下执行
-$ cp /usr/local/share/applications/org.fcitx.Fcitx5.desktop ~/.config/autostart/
+$ mkdir -p ~/.config/autostart/ # 创建自启动路径。如果使用其他用户，需要在该用户的命令行下执行
+$ cp /usr/local/share/applications/org.fcitx.Fcitx5.desktop ~/.config/autostart/  # 设置 Fcitx 5 开启启动
 ```
 
 ## 配置 Fcitx 环境变量
@@ -47,36 +47,37 @@ $ cp /usr/local/share/applications/org.fcitx.Fcitx5.desktop ~/.config/autostart/
 
 根据所使用的桌面管理器及 shell，选择适合的方式进行配置：
 
+- 登录管理器配置路径
+
 1. SDDM、LightDM、GDM 都可以在 `~/.xprofile` 中写入 A 组配置
 2. LightDM、GDM 可以在 `~/.profile` 中写入 A 组配置
 3. SDDM 可以在用户登录 shell 的配置文件中写入配置
 
+- Shell 配置路径
 
----
-
-- sh: `~/.profile` 写入 A 组配置
-- bash: `~/.bash_profile` 或 `~/.profile` 写入 A 组配置
-- zsh: `~/.zprofile` 写入 A 组配置
-- csh: `~/.cshrc` 写入 B 组配置
+1. sh: `~/.profile` 写入 A 组配置
+2. bash: `~/.bash_profile` 或 `~/.profile` 写入 A 组配置
+3. zsh: `~/.zprofile` 写入 A 组配置
+4. csh: `~/.cshrc` 写入 B 组配置
 
 >**注意**
 >
 >如果登录桌面的用户账户不是 root，则不能使用 root 身份进行设置：必须切换到该用户，并在不使用 sudo 的情况下进行配置。
 
-- A 组（sh/bash/zsh）：
+- A 组（sh/bash/zsh）
 
-```sh
-export LANG=zh_CN.UTF-8
-export LANGUAGE=zh_CN.UTF-8
-export LC_ALL=zh_CN.UTF-8
-export XMODIFIERS='@im=fcitx'
-export GTK_IM_MODULE=fcitx
-export QT_IM_MODULE=fcitx
+```ini
+export LANG=zh_CN.UTF-8            # 设置系统语言为中文
+export LANGUAGE=zh_CN.UTF-8       # 设置优先语言为中文
+export LC_ALL=zh_CN.UTF-8         # 设置所有本地化环境变量为中文
+export XMODIFIERS='@im=fcitx'    # 设置 X 输入法模块为 fcitx
+export GTK_IM_MODULE=fcitx        # 设置 GTK 应用使用 fcitx 输入法
+export QT_IM_MODULE=fcitx         # 设置 QT 应用使用 fcitx 输入法
 ```
 
 - B 组（csh）
 
-```sh
+```ini
 setenv LANG zh_CN.UTF-8
 setenv LC_ALL zh_CN.UTF-8
 setenv LANGUAGE zh_CN.UTF-8
@@ -93,16 +94,16 @@ setenv QT_IM_MODULE fcitx
 
 - A 组（sh/bash/zsh）：
 
-```sh
-export LANG=zh_CN.UTF-8
-export LANGUAGE=zh_CN.UTF-8
-export LC_ALL=zh_CN.UTF-8
-export XMODIFIERS='@im=fcitx'
+```ini
+export LANG=zh_CN.UTF-8            # 设置系统语言为中文
+export LANGUAGE=zh_CN.UTF-8       # 设置优先语言为中文
+export LC_ALL=zh_CN.UTF-8         # 设置所有本地化环境变量为中文
+export XMODIFIERS='@im=fcitx'    # 设置 X 输入法模块为 fcitx
 ```
 
 - B 组（csh）
 
-```sh
+```ini
 setenv LANG zh_CN.UTF-8
 setenv LC_ALL zh_CN.UTF-8
 setenv LANGUAGE zh_CN.UTF-8
@@ -136,7 +137,9 @@ setenv XMODIFIERS @im=fcitx
 
 遇到问题，请先运行 `fcitx` 故障诊断，但该输出仅针对 `bash` 的环境变量配置。也就是说，输出的环境变量仅适用于 `bash`、`sh` 和 `zsh` 等 shell，不适用于 `csh`。`csh` 的环境变量配置请参考上文。
 
-如果提示 `bash` 字样且无法输出诊断信息，则需要先安装 `bash`：`# pkg install bash`
+如果提示 `bash` 字样且无法输出诊断信息，则需要先安装 `bash`：`# pkg install bash`。
+
+运行 Fcitx5 输入法诊断工具，检查配置和环境问题：
 
 ```sh
 # fcitx5-diagnose

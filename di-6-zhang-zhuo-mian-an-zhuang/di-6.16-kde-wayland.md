@@ -1,4 +1,4 @@
-# 6.16 KDE6（Wayland）
+# 6.16 KDE 6（Wayland 会话）
 
 ## 环境准备
 
@@ -38,8 +38,8 @@ seatd 是一个 seat 管理守护进程，用于在非 systemd 环境下管理 W
 添加并启用服务：
 
 ```sh
-# service dbus enable
-# service seatd enable
+# service dbus enable # 设置 D-Bus 服务开机自启
+# service seatd enable # 设置 Seatd 服务开机自启
 ```
 
 ## 启动 KDE 6
@@ -65,7 +65,7 @@ export XMODIFIERS='@im=fcitx' # Fcitx 需要
 /usr/local/bin/ck-launch-session /usr/local/lib/libexec/plasma-dbus-run-session-if-needed /usr/local/bin/startplasma-wayland # 启动桌面的命令
 ```
 
-- 赋予可执行权限：
+- 授予 `~/kde.sh` 可执行权限：
 
 ```sh
 $ chmod 755 ~/kde.sh
@@ -91,7 +91,7 @@ $ sh ~/kde.sh
 >
 >上图显示为“Intel UHD Graphics”而非“Iris Xe Graphics”，这是因为系统未启用某些硬件加速特性（与内存配置有关）~~笔者无力购买第二根 DDR5 内存条~~。参见 [Intel® Iris® Xe Graphics Shows As Intel® UHD Graphics in the Intel® Graphics Command Center and Device Manager](https://www.intel.com/content/www/us/en/support/articles/000059744/graphics.html)（网站对应页面的中文翻译不正确）。
 
-- 检查当前会话是否为 Wayland：
+- 显示当前会话类型（如 x11 或 wayland）
 
 ```sh
 # echo $XDG_SESSION_TYPE
@@ -109,7 +109,7 @@ $ sh ~/kde.sh
 
 ```sh
 $ mkdir -p ~/.config/autostart/ # 创建自启动目录
-$ cp /usr/local/share/applications/org.fcitx.Fcitx5.desktop ~/.config/autostart/ # 自动启动 Fcitx 5
+$ cp /usr/local/share/applications/org.fcitx.Fcitx5.desktop ~/.config/autostart/ # 系统启动时自动启动 Fcitx 5
 ```
 
 当你初次进入 KDE Wayland 桌面时，KDE 会在右下角提示你要在设置的虚拟键盘中进行配置才能启用输入法。请留意该提示。若未进行此设置，将无法切换输入法或输入中文。

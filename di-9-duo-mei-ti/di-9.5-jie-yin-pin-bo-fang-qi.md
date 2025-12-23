@@ -66,7 +66,7 @@ MPD 的主要功能包括：支持多种音频格式、客户端—服务器架�
 
 ### 硬件设置
 
-查看声卡信息
+查看系统声卡和音频设备状态：
 
 ```sh
 # cat /dev/sndstat
@@ -89,9 +89,9 @@ dev.pcm.2.play.vchanmode: vchan format/rate selection: 0=fixed, 1=passthrough, 2
 如下所示进行设置（可写入 `sysctl.conf` 以实现永久生效）：
 
 ```sh
-# sysctl dev.pcm.2.bitperfect=1
-# sysctl dev.pcm.2.play.vchanrate=352800
-# sysctl dev.pcm.2.play.vchanmode=1
+# sysctl dev.pcm.2.bitperfect=1           # 设置声卡 2 为位完美模式
+# sysctl dev.pcm.2.play.vchanrate=352800  # 设置声卡 2 播放采样率为 352800 Hz
+# sysctl dev.pcm.2.play.vchanmode=1       # 设置声卡 2 播放通道模式
 ```
 
 参数说明：
@@ -104,19 +104,18 @@ dev.pcm.2.play.vchanmode: vchan format/rate selection: 0=fixed, 1=passthrough, 2
   - `1`（passthrough）：在该模式下，音频设备尽可能保持输入音频流的原始采样率和格式。
   - `2`（adaptive）：在该模式下，音频设备会根据需要自动适配并转换输入音频流的采样率和格式。
 
-
 >**技巧**
 >
 >可以用 `dmesg` 查看可用采样率。在播放非 DSD 文件时，采样率和音频文件采样率相同（或整数倍）为宜，这样可以避免重采样造成的音质损失。采样率并非越高越好，可以通过多次尝试找到最合适的设置。
--
 
-+```sh
+查看内核消息中与 pcm2 声卡相关的日志：
 
-# dmesg|grep -i pcm2
+```sh
+# dmesg | grep -i pcm2
 
 pcm2 on uaudio0
 
-# dmesg|grep -i uaudio0
+# dmesg | grep -i uaudio0
 
 uaudio0 on uhub0
 uaudio0: <HiBy R3, class 239/2, rev 2.00/ff.ff, addr 1> on usbus1
@@ -133,7 +132,6 @@ uaudio0: No recording.
 uaudio0: No MIDI sequencer.
 pcm2 on uaudio0
 uaudio0: No HID volume keys found.
-
 ```
 
 ### 基本设置
@@ -151,14 +149,14 @@ Music Player Daemon（musicpd）的配置文件为 `/usr/local/etc/musicpd.conf`
 上述目录需要自行创建。
 
 ```sh
-# mkdir -p /var/mpd/music
-# mkdir -p /var/mpd/.mpd/playlists
+# mkdir -p /var/mpd/music            # 创建 MPD 音乐存放目录
+# mkdir -p /var/mpd/.mpd/playlists  # 创建 MPD 播放列表目录
 # chown -R mpd:mpd /var/mpd  # 用于将目录的所有者设置为 mpd 用户，避免出现权限问题
 # chmod 777 /var/mpd/music  # 用于存放音乐文件，设置为 777 仅为方便增删文件，实际使用中可根据需要自行调整权限。
 ```
 
 
-修改 `/usr/local/etc/musicpd.conf` ，"Default OSS Device" 一节后面增加一节：
+修改 `/usr/local/etc/musicpd.conf` 文件，在 `"Default OSS Device"` 一节后面增加一节：
 
 ```ini
 audio_output {
@@ -177,8 +175,8 @@ audio_output {
 开启 musicpd 服务
 
 ```sh
-# sysrc musicpd_enable=YES
-# service musicpd start
+# sysrc musicpd_enable=YES   # 设置 MPD 服务开机自启动
+# service musicpd start      # 启动 MPD 服务
 ```
 
 ### 客户端使用
@@ -188,5 +186,3 @@ audio_output {
 PC 端的 GUI 客户端建议使用 Cantata（`pkg install cantata`）。
 
 命令行环境下建议安装 mpc（`pkg install musicpc`），适合用于绑定桌面环境的全局快捷键。
-
-

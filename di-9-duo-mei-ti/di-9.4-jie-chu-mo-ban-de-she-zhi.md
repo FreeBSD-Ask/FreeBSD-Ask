@@ -1,4 +1,4 @@
-# 9.4 触摸板与键鼠
+# 9.4 触摸板与键盘鼠标
 
 在默认情况下，FreeBSD 支持 I²C 和 USB 触摸板。
 
@@ -21,7 +21,7 @@ $ xinput list
 可以看到，`6` 是触摸板，关闭方式如下（其中 `1` 表示开启，`0` 表示关闭）：
 
 ```sh
-$ xinput set-prop 6 "Device Enabled" 0
+$ xinput set-prop 6 "Device Enabled" 0    # 禁用 ID 为 6 的输入设备
 ```
 
 #### 参考文献
@@ -32,14 +32,13 @@ $ xinput set-prop 6 "Device Enabled" 0
 
 Apple Magic Trackpad 触摸板系列因压感带来的舒适操作体验而闻名。
 
-FreeBSD 支持苹果妙控板，但需要加载 `bcm5974` 内核模块才能正常使用。
-
+FreeBSD 支持苹果妙控板，但需要加载 `bcm5974` 内核模块才能正常使用：
 
 ```sh
 # kldload bcm5974
 ```
 
-可以使用命令将其永久生效：
+将 bcm5974 内核模块加入开机加载列表：
 
 ```sh
 # sysrc kld_list+="bcm5974"
@@ -57,7 +56,7 @@ FreeBSD 支持苹果妙控板，但需要加载 `bcm5974` 内核模块才能正�
 hw.usb.usbhid.enable="0"
 ```
 
-随后重启即可。
+禁用 USB HID 设备，随后重启即可。
 
 问题分析：ums 驱动始终存在于与具体机器无关的内核中，而 usbhid 目前位于 amd64 架构相关的内核选项中。在 15.0 之后，usbhid 驱动成为默认，其优先级高于传统的 ums 驱动。但两者均为直接编译进内核的驱动，而非以模块形式加载。usbhid 驱动引入内核始于 [conf: Add hkbd and hms to GENERIC\* kernel configs](https://reviews.freebsd.org/D45658)，而替代 ums 的过程发生在 [Enable usbhid by default](https://reviews.freebsd.org/D45659)。该变更最早出现在 13.0 版本，并从 15.0 起成为默认行为。此问题仍需读者进一步研究原因，并向 FreeBSD 项目提交 Bug 报告，因为项目计划在日后彻底移除 ums 支持。具体可参见 FreeBSD 期刊 2021/0708 期。
 

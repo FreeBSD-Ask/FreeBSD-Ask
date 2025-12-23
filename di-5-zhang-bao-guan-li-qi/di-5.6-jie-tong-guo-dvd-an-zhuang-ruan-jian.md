@@ -7,7 +7,7 @@
 ```sh
 # mdconfig /home/ykla/FreeBSD-14.2-RELEASE-amd64-dvd1.iso # 请换成你自己的路径，可以用 pwd 命令查看当前路径
 md0
-# mkdir -p /dist
+# mkdir -p /dist	# 创建挂载路径，必须是此路径
 # mount -t cd9660 /dev/md0 /dist # 不能直接挂载 ISO，会报错 block device required
 ```
 
@@ -16,7 +16,7 @@ md0
 观察 ISO 映像的挂载情况：
 
 ```sh
-# gpart show
+# gpart show	# 显示系统中所有磁盘分区表信息
 
 ……省略无用磁盘……
 
@@ -59,7 +59,7 @@ COPYRIGHT	etc		mnt		rescue		usr
 
 ## 使用环境变量直接安装 DVD 软件
 
-测试安装：
+让 pkg 使用指定的软件仓库路径安装 Xorg：
 
 ```sh
 # env REPOS_DIR=/dist/packages/repos pkg install xorg
@@ -87,11 +87,15 @@ Proceed with this action? [y/N]:
 
 ### 创建 DVD 源
 
+将 `FreeBSD_install_cdrom.conf` 复制到 `/etc/pkg/` 目录下：
+
 ```sh
 # cp /dist/packages/repos/FreeBSD_install_cdrom.conf /etc/pkg/
 ```
 
 ### 测试安装
+
+安装 Xorg 图形系统：
 
 ```sh
 # pkg install xorg

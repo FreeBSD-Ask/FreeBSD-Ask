@@ -35,7 +35,7 @@ CDE 是 Common Desktop Environment（通用桌面环境）的缩写，是一款�
 ## 查看安装后信息
 
 ```sh
-root@ykla:/home/ykla # pkg info -D cde
+# pkg info -D cde
 cde-2.5.2_4:
 On install:
 CDE - The Common Desktop Environment is an X Windows desktop environment
@@ -87,53 +87,50 @@ To start the Common Desktop Enviroment Login Manager:
 
 ## 配置服务与文件
 
-
 - 配置服务
 
 ```sh
-# service rpcbind enable
-# service dtcms enable
-# service inetd enable
-# service dtlogin enable
+# service rpcbind enable  # 设置 RPC 绑定服务开机自启
+# service dtcms enable  # 设置 DTCMS 服务开机自启
+# service inetd enable  # 设置 inetd 守护进程开机自启
+# service dtlogin enable  # 设置 DTLogin 显示管理器开机自启
 ```
 
-- 配置可登录桌面的用户
+- 配置 X 服务器允许任意用户启动：
 
 ```sh
 # echo "allowed_users=anybody" > /usr/local/etc/X11/Xwrapper.config
 ```
 
-- 为 `startx` 配置启动脚本
+- 为当前用户创建 Xsession 的符号链接，用于启动桌面会话：
 
 ```sh
 # ln -s /usr/local/dt/bin/Xsession ~/.xinitrc
 ```
 
-- 将以下内容添加到 `/etc/inetd.conf`：
+- 配置 dtspcd 服务通过 TCP 启动，将以下内容添加到 `/etc/inetd.conf`：
 
-```sh
+```ini
 dtspc	stream	tcp	nowait	root	 /usr/local/dt/bin/dtspcd	/usr/local/dt/bin/dtspcd
 ```
 
-- 将以下内容添加到 `/etc/services`：
+- 为 dtspc 服务指定 TCP 端口 6112，将以下内容添加到 `/etc/services`：
 
-```sh
+```ini
 dtspc		6112/tcp
 ```
-
 
 ### 中文配置
 
 编辑 `/etc/login.conf`：找到 `default:\` 这一段，将 `:lang=C.UTF-8` 修改为 `:lang=zh_CN.UTF-8`。
 
-刷新数据库：
+根据 `/etc/login.conf` 生成能力数据库：
 
 ```sh
 # cap_mkdb /etc/login.conf
 ```
 
 ## 桌面欣赏
-
 
 ![dtlogin](../.gitbook/assets/cde2.png)
 

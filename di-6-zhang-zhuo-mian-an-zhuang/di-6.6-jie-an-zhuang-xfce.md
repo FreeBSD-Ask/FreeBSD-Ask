@@ -25,7 +25,7 @@ Xfce 的 Logo 是只 [老鼠 🐀](https://docs.xfce.org/faq#what_does_it_mean)�
 # cd /usr/ports/devel/xdg-user-dirs/ && make install clean 
 ```
 
-- 解释
+- 软件包说明：
 
 | 包名                          | 作用说明                               |
 |:-------------------------------|:------------------------------------|
@@ -41,29 +41,30 @@ Xfce 的 Logo 是只 [老鼠 🐀](https://docs.xfce.org/faq#what_does_it_mean)�
 
 ## `startx`
 
+将 Xfce 启动脚本写入 `~/.xinitrc`，以便使用 `startx` 命令启动 Xfce：
+
 ```sh
 $ echo "/usr/local/etc/xdg/xfce4/xinitrc" > ~/.xinitrc
 ```
 
-或者
+将 Xfce 启动脚本写入 `~/.xsession`，以便图形登录管理器启动 Xfce
 
 ```sh
 $ echo "/usr/local/etc/xdg/xfce4/xinitrc" > ~/.xsession
 ```
 
-
 ## 启动服务
 
 ```sh
-# service dbus enable
-# service lightdm enable
+# service dbus enable     # 设置 D-Bus 服务开机自启
+# service lightdm enable  # 设置 LightDM 显示管理器开机自启
 ```
 
 ## 设置中文界面
 
 编辑 `/etc/login.conf`：找到 `default:\` 这一段，将 `:lang=C.UTF-8` 修改为 `:lang=zh_CN.UTF-8`。
 
-刷新数据库：
+根据 `/etc/login.conf` 更新系统能力数据库：
 
 ```sh
 # cap_mkdb /etc/login.conf
@@ -96,18 +97,16 @@ $ echo "/usr/local/etc/xdg/xfce4/xinitrc" > ~/.xsession
 查看安装后说明，并按说明进行配置：
 
 ```sh
-$ xfconf-query -c xsettings -p /Gtk/ShellShowsMenubar -n -t bool -s true
-$ xfconf-query -c xsettings -p /Gtk/ShellShowsAppmenu -n -t bool -s true
-$ xfconf-query -c xsettings -p /Gtk/Modules -n -t string -s "appmenu-gtk-module"
+$ xfconf-query -c xsettings -p /Gtk/ShellShowsMenubar -n -t bool -s true  # 启用 GTK 菜单栏显示
+$ xfconf-query -c xsettings -p /Gtk/ShellShowsAppmenu -n -t bool -s true  # 启用 GTK 应用菜单显示
+$ xfconf-query -c xsettings -p /Gtk/Modules -n -t string -s "appmenu-gtk-module"  # 设置 GTK 模块为 appmenu-gtk-module
 ```
 
 ## 软件推荐
 
 FreeBSD 的 Xfce 邮箱客户端推荐使用 `mail/evolution`，可搭配 `xfce4-mailwatch-plugin`、`security/gnome-keyring` 一并使用。
 
-
 还有一款桌面插件，名为 `x11/xfce4-verve-plugin`。配合设置智能书签，可以查询网页内容。可通过配置 FreeBSD 的 man 手册，实现对所需内容的搜索。
-
 
 ## XTerm 终端动态标题
 

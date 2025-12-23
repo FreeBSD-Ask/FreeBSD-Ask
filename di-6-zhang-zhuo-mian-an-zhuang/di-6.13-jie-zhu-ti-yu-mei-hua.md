@@ -73,9 +73,9 @@ FreeBSD 安装桌面环境后，很多时候扑面而来的是简单朴素的色
 试着按照下面的步骤，在终端安装 [Papirus 图标](https://www.gnome-look.org/p/1166289/):
 
 ```sh
-git clone https://github.com/PapirusDevelopmentTeam/papirus-icon-theme
-cd papirus-icon-theme
-./install.sh
+$ git clone https://github.com/PapirusDevelopmentTeam/papirus-icon-theme  # 克隆 Papirus 图标主题仓库
+$ cd papirus-icon-theme  # 进入仓库目录
+$ ./install.sh  # 执行安装脚本安装图标主题
 ```
 
 ## 系统更新提示 `freebsd-update-notify`

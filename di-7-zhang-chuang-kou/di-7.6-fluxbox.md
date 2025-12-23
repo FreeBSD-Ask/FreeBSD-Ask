@@ -19,7 +19,7 @@
 # cd /usr/ports/devel/xdg-user-dirs/ && make install clean 
 ```
 
-### 解释软件包
+### 软件包说明
 
 
 | 包名                        | 作用说明                                                                 |
@@ -37,10 +37,11 @@
 
 编辑 `~/.xinitrc` 文件，加入以下内容（每个用户根据自己的登录用户写入）：
 
-
 ```sh
 exec startfluxbox
 ```
+
+便于在 TTY 直接用命令 `startx` 启动 Fluxbox。
 
 ## 启动项
 
@@ -49,13 +50,15 @@ exec startfluxbox
 # service slim enable  # 启用 slim 登录管理器
 ```
 
-## fstab
+## 挂载 proc 文件系统
 
-编辑 `/etc/fstab`，加入：
+编辑 `/etc/fstab`，加入下行：
 
 ```sh
 proc           /proc       procfs  rw  0   0
 ```
+
+挂载 procfs 文件系统到 `/proc`，读写模式。
 
 ## 中文配置
 
@@ -63,7 +66,7 @@ proc           /proc       procfs  rw  0   0
 编辑 `/etc/login.conf` 文件，找到 `default:\` 这一段，将 `:lang=C.UTF-8` 修改为 `:lang=zh_CN.UTF-8`。
 
 
-刷新数据库：
+刷新用户分类数据库：
 
 ```sh
 # cap_mkdb /etc/login.conf
@@ -79,10 +82,10 @@ proc           /proc       procfs  rw  0   0
 
 ### LightDM 和 XDM 均不可用
 
-表现为无法启动 Fluxbox
+表现为无法启动 Fluxbox。
 
-待解决
+待解决。
 
 ### 中文界面未启用
 
-待解决
+待解决。

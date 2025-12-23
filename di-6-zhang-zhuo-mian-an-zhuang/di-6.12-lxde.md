@@ -38,22 +38,24 @@
 
 编辑 `~/.xinitrc`，加入：
 
-```sh
+```ini
 exec startlxde
 ```
+
+便于通过 `startx` 命令启动 LXDE 桌面环境。
 
 ## 启动项
 
 ```sh
-# service dbus enable
-# service lightdm enable
+# service dbus enable       # 设置 dbus 服务开机自启
+# service lightdm enable    # 设置 LightDM 显示管理器开机自启
 ```
 
-## fstab
+## 挂载 proc 文件系统
 
 编辑 `/etc/fstab`，加入：
 
-```sh
+```ini
 proc           /proc       procfs  rw  0   0
 ```
 
@@ -65,11 +67,13 @@ proc           /proc       procfs  rw  0   0
 lightdm_env="LC_MESSAGES=zh_CN.UTF-8" 
 ```
 
+设置 LightDM 环境变量，指定系统消息语言为中文。
+
 ---
 
 编辑 `/etc/login.conf`：找到 `default:\` 这一段，将 `:lang=C.UTF-8` 修改为 `:lang=zh_CN.UTF-8`。
 
-刷新数据库：
+根据 `/etc/login.conf` 生成能力数据库：
 
 ```sh
 # cap_mkdb /etc/login.conf

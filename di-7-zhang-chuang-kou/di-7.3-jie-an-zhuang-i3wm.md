@@ -15,7 +15,7 @@
 # make install clean
 ```
 
-- 解释：
+- 软件包解释：
 
 | 包名       | 作用说明                                                  |
 |:------------|:--------------------------------------------------|
@@ -27,6 +27,8 @@
 
 
 ## 配置 `startx`
+
+在 `.xinitrc` 中添加启动 i3 窗口管理器的命令：
 
 ```sh
 $ echo "/usr/local/bin/i3" > ~/.xinitrc
@@ -45,7 +47,7 @@ $ echo "/usr/local/bin/i3" > ~/.xinitrc
 
 ## 虚拟机扩展
 
-如果使用 VirtualBox，可按如下方式启用 VirtualBox 扩展功能：
+如果使用 VirtualBox，在 i3 配置中添加启动 VirtualBox 客户端服务的命令：
 
 ```sh
 $ echo 'exec VBoxClient-all' >> ~/.config/i3/config

@@ -17,7 +17,7 @@ Linux 中常见的 shell 一般是 bash（Bourne Again Shell，即“又一个 B
 >- Ubuntu 24.04 LTS 的默认 shell：
 >
 >```bash
->$ ls -l /bin/sh
+>$ ls -l /bin/sh  # 以长格式查看 /bin/sh 这个文件的详细信息
 >lrwxrwxrwx 1 root root 4  2 月 25 23:19 /bin/sh -> dash
 >```
 
@@ -89,7 +89,7 @@ $ cp /home/ykla/test/1.txt
 若要终止命令，可以使用 **Ctrl**+**C**：
 
 ```sh
-# ping 163.com
+# ping 163.com  # 测试与 163.com 的网络连通性
 PING 163.com (59.111.160.244): 56 data bytes
 64 bytes from 59.111.160.244: icmp_seq=0 ttl=52 time=27.672 ms
 64 bytes from 59.111.160.244: icmp_seq=1 ttl=52 time=27.580 ms
@@ -104,7 +104,7 @@ round-trip min/avg/max/stddev = 27.580/27.626/27.672/0.046 ms
 **Ctrl**+**Z**：将当前进程挂起到后台，随后可使用 `fg` 命令将其恢复到前台：
 
 ```sh
-# ping 163.com
+# ping 163.com  # 测试与 163.com 的网络连通性
 PING 163.com (59.111.160.244): 56 data bytes
 64 bytes from 59.111.160.244: icmp_seq=0 ttl=52 time=27.611 ms
 64 bytes from 59.111.160.244: icmp_seq=1 ttl=52 time=27.691 ms

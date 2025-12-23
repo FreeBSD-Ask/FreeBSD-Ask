@@ -2,11 +2,15 @@
 
 ## `ee` 编辑器基本用法
 
+>**注意**
+>
+>`ee` 编辑器不支持中文。已经报告 Bug [Bug 291279 - [Feature Request] Add UTF-8 Support to ee(1)](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=291279)。
+
 `ee` 是 FreeBSD 基本系统内置的编辑器。
 
 `ee` 的用法比 [nano](https://www.redhat.com/zh/blog/getting-started-nano)（一款 GNU 编辑器）还要简单许多，从其名字“easy editor”（简单的编辑器）即可看出。
 
-比如
+比如使用 ee 编辑器打开 `a.txt` 文件：
 
 ```sh
 # ee a.txt
@@ -23,8 +27,10 @@ FreeBSD 还内置了一款编辑器 `vi`，其用法较为复杂。有别于大�
 
 ### macOS 下的 `vi`
 
+显示 macOS 中 `/usr/bin/vi` 的详细文件信息：
+
 ```sh
-$ ls -al /usr/bin/vi   
+$ ls -al /usr/bin/vi
 lrwxr-xr-x  1 root  wheel  3  4 12 13:16 /usr/bin/vi -> vim
 ```
 
@@ -73,8 +79,7 @@ microsoft-edit 是微软开源的文本编辑器，原生支持中文，交互�
 # make install clean
 ```
 
-使用方式：
-
+使用 msedit 编辑器打开 `abc.txt` 文件：
 
 ```sh
 $ msedit abc.txt

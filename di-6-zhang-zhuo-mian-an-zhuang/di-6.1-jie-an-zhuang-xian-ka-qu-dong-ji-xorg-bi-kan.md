@@ -39,7 +39,7 @@ FreeBSD 的 i915、AMD 显卡驱动与基本系统是分离的。目前是移植
 >
 >可以在 port 开发者手册的最后一章中查询 OSVERSION 对应的版本和 Git 提交。
 >
->查看本机 OSVERSION：
+>查看本机 OSVERSION。显示系统的唯一标识符（host UUID）：
 >
 >```sh
 ># uname -U
@@ -54,7 +54,9 @@ FreeBSD 的 i915、AMD 显卡驱动与基本系统是分离的。目前是移植
 DRM 即“Direct Rendering Manager”（直接渲染管理器），DRM 是 Linux 内核的子系统，负责与现代显卡的 GPU 进行交互。FreeBSD 在内核中实现了 Linux 内核编程接口（LinuxKPI），并移植了 Linux DRM，类似的还有一些无线网卡驱动。
 
 
-## 加入 Video 组
+## 加入 video 组
+
+将指定用户添加到 video 用户组，以获得显卡设备访问权限：
 
 ```sh
 # pw groupmod video -m 你的用户名
@@ -109,23 +111,25 @@ DRM 即“Direct Rendering Manager”（直接渲染管理器），DRM 是 Linux
 
 ### Intel 核芯显卡
 
-  ```sh
-  # sysrc -f /etc/rc.conf kld_list+=i915kms
-  ```
+在 `/etc/rc.conf` 中添加 `i915kms` 内核模块到 `kld_list`，以便系统启动时加载：
+
+```sh
+# sysrc -f /etc/rc.conf kld_list+=i915kms
+```
 
 ### AMD
 
-- 如果是 HD7000 以后的 AMD 显卡，添加 `amdgpu`（大部分人应该使用这个，如果没用再换 `radeonkms`）
+- 如果是 HD7000 以后的 AMD 显卡，在 `/etc/rc.conf` 中添加 `amdgpu` 内核模块（大部分人应该使用这个，如果未生效再修改为 `radeonkms`）到 `kld_list`，以便系统启动时加载：
 
-    ```sh
-    # sysrc -f /etc/rc.conf kld_list+=amdgpu
-    ```
+```sh
+# sysrc -f /etc/rc.conf kld_list+=amdgpu
+```
 
-- 如果是 HD7000 以前的 AMD 显卡，添加 `kld_list="radeonkms"`（这是十多年前的显卡了）
+- 如果是 HD7000 以前的 AMD 显卡，在 `/etc/rc.conf` 中添加 `radeonkms` 内核模块（这是十多年前的显卡了）到 `kld_list`，以便系统启动时加载
 
-    ```sh
-    # sysrc -f /etc/rc.conf kld_list+=radeonkms
-    ```
+```sh
+# sysrc -f /etc/rc.conf kld_list+=radeonkms
+```
 
 ### 故障排除与未竟事宜
 
@@ -133,7 +137,7 @@ DRM 即“Direct Rendering Manager”（直接渲染管理器），DRM 是 Linux
 >
 >遇到任何问题时，请先使用 Ports 重新编译安装。尤其是在版本升级时。
 
-- `KLD XXX.ko depends on kernel - not available or version mismatch.`
+#### `KLD XXX.ko depends on kernel - not available or version mismatch.`
 
 提示内核版本不符，请先升级系统或使用 ports 编译安装。14.3-RELEASE 及以上版本可以用内置的内核模块源（参见其他章节），应该不会出现类似问题。
 
@@ -146,6 +150,8 @@ DRM 即“Direct Rendering Manager”（直接渲染管理器），DRM 是 Linux
 >**警告**
 >
 >如果忽略此部分，Blender 等软件将无法运行，并会直接发生“段错误”。
+
+安装 Intel VA-API 媒体驱动。
 
 - 使用 pkg 安装：
 
@@ -162,6 +168,8 @@ DRM 即“Direct Rendering Manager”（直接渲染管理器），DRM 是 Linux
 
 ### AMD 视频硬解
 
+安装 Mesa 的 Gallium VA-API 和 VDPAU 支持包。
+
 - 使用 pkg 安装
 
 ```sh
@@ -175,17 +183,17 @@ DRM 即“Direct Rendering Manager”（直接渲染管理器），DRM 是 Linux
 # cd /usr/ports/graphics/mesa-gallium-vdpau/ && make install clean
 ```
 
----
+#### 附录：设置 X11
 
-可能还需要这么做：
+如果未生效可能还需要设置 X11。
 
 将以下内容写入 `/usr/local/etc/X11/xorg.conf.d/20-amdgpu-tearfree.conf`（请自行创建）
 
 ```ini
 Section "Device"
-  Identifier "AMDgpu"
-  Driver "amdgpu"
-  Option "TearFree" "on"
+  Identifier "AMDgpu"          # 设置设备标识符为 AMDgpu
+  Driver "amdgpu"              # 使用 amdgpu 驱动
+  Option "TearFree" "on"       # 启用 TearFree 功能以防止屏幕撕裂
 EndSection
 ```
 
@@ -195,17 +203,17 @@ EndSection
 
 ### 通用
 
-- 对于一般计算机：
+- 对于一般计算机，在 `/boot/loader.conf` 中启用 ACPI 视频支持：
 
 ```sh
-# sysrc -f /boot/loader.conf  acpi_video="YES"
+# sysrc -f /boot/loader.conf acpi_video="YES"
 ```
 
-- 对于 ThinkPad：
+- 对于 ThinkPad，启用 IBM ACPI 支持和 ACPI 视频支持：
 
 ```sh
-# sysrc -f /boot/loader.conf  acpi_ibm_load="YES"
-# sysrc -f /boot/loader.conf  acpi_video="YES"
+# sysrc -f /boot/loader.conf acpi_ibm_load="YES"  # 在 /boot/loader.conf 中启用 IBM ACPI 支持
+# sysrc -f /boot/loader.conf acpi_video="YES"    # 在 /boot/loader.conf 中启用 ACPI 视频支持
 ```
 
 ### 英特尔/AMD
@@ -224,8 +232,8 @@ EndSection
 - 示例（照抄不会起作用的，自己 `ls /dev/backlight` 看看）：
 
 ```sh
-# backlight -f /dev/backlight/amdgpu_bl00 - 10
-# backlight -f /dev/backlight/backlight0 - 10  
+# backlight -f /dev/backlight/amdgpu_bl00 -10   # 设置 amdgpu_bl00 背光亮度为 10
+# backlight -f /dev/backlight/backlight0 -10    # 设置 backlight0 背光亮度为 10
 ```
 
 ### 参考文献

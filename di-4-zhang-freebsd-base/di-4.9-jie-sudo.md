@@ -75,7 +75,7 @@ Please refer to doas.conf(5) for further details.
 
 让我们简单注释一下：
 
-```
+```ini
 # Sample file for doas
 # Please see doas.conf manual page for information on setting
 # up a doas.conf file.
@@ -367,7 +367,7 @@ root ALL=(ALL:ALL) ALL
 ### 测试
 
 ```sh
-ykla@ykla:~ $ sudo su
+$ sudo su
 [sudo: authenticate] Password: # 此处同样不会显示任何输入内容，*** 这种掩码也没有
 # 
 ```

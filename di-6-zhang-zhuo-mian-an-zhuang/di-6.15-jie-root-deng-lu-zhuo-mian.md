@@ -11,7 +11,7 @@ GDM，即 GNOME Display Manager，GNOME 显示管理器。
 
 打开 `/usr/local/etc/pam.d/gdm-password`，注释掉 `account requisite pam_securetty.so` 这一行（即往最前面加 `#`）
 
-重启服务：
+重启 GDM 服务：
 
 ```sh
 # service gdm restart
@@ -21,11 +21,9 @@ GDM，即 GNOME Display Manager，GNOME 显示管理器。
 
 LightDM，即 Light Display Manager，轻量级显示管理器。
 
-编辑 `/usr/local/etc/pam.d/lightdm`：
+编辑 `/usr/local/etc/pam.d/lightdm`，注释掉 `account requisite pam_securetty.so` 这一行（即往最前面加 `#`）
 
-注释掉 `account requisite pam_securetty.so` 这一行（即往最前面加 `#`）
-
-然后重启服务：
+然后重启 LightDM 服务：
 
 ```sh
 # service lightdm restart
@@ -39,7 +37,7 @@ SDDM 即 Simple Desktop Display Manager，简单的桌面显示管理器。
 
 更改 `/usr/local/etc/pam.d/sddm` 文件：将 `include` 之后的 `login`，替换成 `system`，共计四处。
 
-重启服务
+重启 SDDM 服务：
 
 ```sh
 # service sddm restart

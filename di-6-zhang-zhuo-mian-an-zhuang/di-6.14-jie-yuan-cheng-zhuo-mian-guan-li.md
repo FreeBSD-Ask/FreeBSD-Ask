@@ -23,6 +23,8 @@ x11vnc 会和远程软件 todesk 一样直接镜像屏幕，简言之，你的�
 
 ### 创建密码
 
+设置 x11vnc 的访问密码：
+
 ```sh
 $ x11vnc -storepasswd
 Enter VNC password: 
@@ -33,6 +35,8 @@ Password written to: /root/.vnc/passwd
 
 ### 启动服务器（KDE 6 SDDM）
 
+- 使用指定密码文件和 SDDM 授权文件启动 x11vnc：
+
 ```sh
 $ x11vnc -display :0 -rfbauth ~/.vnc/passwd -auth $(find /var/run/sddm/ -type f)
 ```
@@ -42,13 +46,13 @@ $ x11vnc -display :0 -rfbauth ~/.vnc/passwd -auth $(find /var/run/sddm/ -type f)
 > SDDM 左下角选择 `Wayland` 无法进入，因为 x11vnc 尚不支持 Wayland。
 
 
-- LightDM
+- 使用指定密码文件和 LightDM 授权文件启动 x11vnc：
 
 ```sh
 $ x11vnc -display :0 -rfbauth ~/.vnc/passwd -auth /var/run/lightdm/root/\:0
 ```
 
-- GDM
+- 使用指定密码文件和 GDM 授权文件启动 x11vnc：
 
 ```sh
 $ x11vnc -display :0 -rfbauth ~/.vnc/passwd -auth /var/lib/gdm/:0.Xauth # 或 /run/user/120/gdm/Xauthority，取决于你的 gdm 版本，可自行 ls 查看
@@ -80,29 +84,25 @@ $ x11vnc -display :0 -rfbauth ~/.vnc/passwd -auth /var/lib/gdm/:0.Xauth # 或 /r
 
 ### 做一些设置
 
-在终端执行命令 `vncpasswd`，设置访问密码。
-
-创建 `~/.vnc/xstartup` 文件：
-
+创建 `~/.vnc/` 路径：
 
 ```sh
 $ mkdir -p ~/.vnc/
-$ ee ~/.vnc/xstartup
 ```
 
-内容如下：
+编辑 `~/.vnc/xstartup` 文件，新增以下行：
 
 ```sh
 #!/bin/sh
-unset SESSION_MANAGER
-unset DBUS_SESSION_BUS_ADDRESS
-[ -x /etc/X11/xinit/xinitrc ] && exec /etc/X11/xinit/xinitrc
-[ -f /etc/X11/xinit/xinitrc ] && exec sh /etc/X11/xinit/xinitrc
-xsetroot -solid grey
-#exec startplasma-x11 & 
-#exec mate-session &
-#exec xfce4-session &
-#exec gnome-session & 
+unset SESSION_MANAGER        # 清除 SESSION_MANAGER 环境变量
+unset DBUS_SESSION_BUS_ADDRESS  # 清除 DBUS_SESSION_BUS_ADDRESS 环境变量
+[ -x /etc/X11/xinit/xinitrc ] && exec /etc/X11/xinit/xinitrc  # 如果 xinitrc 可执行则运行
+[ -f /etc/X11/xinit/xinitrc ] && exec sh /etc/X11/xinit/xinitrc  # 否则以 sh 运行 xinitrc 文件
+xsetroot -solid grey        # 设置 X 根窗口背景为灰色
+#exec startplasma-x11 &      # 启动 KDE Plasma（注释示例）
+#exec mate-session &         # 启动 MATE 桌面（注释示例）
+#exec xfce4-session &        # 启动 XFCE4 桌面（注释示例）
+#exec gnome-session &        # 启动 GNOME 桌面（注释示例）
 ```
 
 读者使用哪个桌面，就删除该桌目前面的注释 `#` 即可。
@@ -112,20 +112,19 @@ xsetroot -solid grey
 >
 >请注意保留 `&`。
 
-保存后执行命令授予权限。
+设置 xstartup 脚本为可执行权限：
 
 ```sh
 $ chmod 755 ~/.vnc/xstartup
 ```
 
-- 接下来在终端执行命令
--
+- 接下来在终端执行命令启动 VNC 服务器：
 
 ```sh
 $ vncserver
 ```
 
-或：
+或在显示 `:1` 上启动 VNC 服务器：
 
 ```sh
 $ vncserver :1
@@ -159,9 +158,9 @@ Log file is /home/ykla/.vnc/ykla:1.log
 
 如果启动服务时未指定通信端口，则系统将根据情况自动分配。
 
-可查看进程：
+显示当前用户的进程列表：
 
-```
+```sh
 $ ps
  PID TT  STAT    TIME COMMAND
 ……省略无用内容……
@@ -233,26 +232,26 @@ your environment.
 # 上述为支持 xrdp 音频的模块，可根据你使用的音频系统选择安装。
 ```
 
-### 配置
+### 配置 XRDP
+
+- 配置守护进程
 
 ```sh
-# service xrdp enable 
-# service xrdp-sesman enable 
-# service dbus enable
+# service xrdp enable          # 设置 xrdp 服务开机自启
+# service xrdp-sesman enable   # 设置 xrdp-sesman 服务开机自启
+# service dbus enable          # 设置 dbus 服务开机自启
 ```
 
-编辑 `/usr/local/etc/xrdp/startwm.sh`：
+编辑 `/usr/local/etc/xrdp/startwm.sh`，找到 `#### start desktop environment`，修改如下：
 
-找到 `#### start desktop environment`，修改如下：
-
-```sh
+```ini
 #### start desktop environment
-# exec gnome-session # Gnome 须删除此处开头的 #
-# exec mate-session # mate 须删除此处开头的 #
-# exec start-lumina-desktop # lumina 须删除此处开头的 #
-# exec ck-launch-session startplasma-x11 # KDE6 须删除此处开头的 #
-# exec startxfce4                        # xfce 须删除此处开头的 #
-# exec xterm                             # xterm 须删除此处开头的 #
+# exec gnome-session              # 启动 GNOME 桌面，需删除开头的 #
+# exec mate-session               # 启动 MATE 桌面，需删除开头的 #
+# exec start-lumina-desktop       # 启动 Lumina 桌面，需删除开头的 #
+# exec ck-launch-session startplasma-x11  # 启动 KDE6 桌面，需删除开头的 #
+# exec startxfce4                 # 启动 XFCE 桌面，需删除开头的 #
+# exec xterm                      # 启动 XTerm，需删除开头的 #
 ```
 
 然后重启系统即可。
@@ -260,20 +259,20 @@ your environment.
 ### 中文化 (用户使用默认的 sh）
 
 
-```sh
-# ee /usr/local/etc/xrdp/startwm.sh
-```
+编辑 `/usr/local/etc/xrdp/startwm.sh`，添加或修改以下内容以设置环境变量：
 
 ```sh
 #### set environment variables here if you want
 export LANG=zh_CN.UTF-8
 ```
 
+设置系统语言为中文。
+
 ### 故障排除与未竟事宜
 
-- XRDP 没声音
+#### XRDP 没声音
 
-你试试火狐浏览器
+请读者试试火狐浏览器。
 
 ## 通过 Windows 使用 TigerVNC 远程访问 FreeBSD
 
@@ -376,7 +375,7 @@ root     syslogd     1021 7   udp4   *:514                 *:*
 
 使用 FreeBSD 通过 freerdp3 远程链接到 Windows 11 24H2：
 
-```
+```sh
 $ xfreerdp3 /u:ykla /p:z  /v:192.168.31.213
 
 ……省略一部分……
@@ -392,10 +391,9 @@ The above X.509 certificate could not be verified, possibly because you do not h
 the CA certificate in your certificate store, or the certificate has expired.
 Please look at the OpenSSL documentation on how to add a private CA to the store.
 Do you trust the above certificate? (Y/T/N) y # 输入 y 按回车键以确认连接
-
 ```
 
-`xfreerdp3 /u:ykla /p:z  /v:192.168.31.213`：
+解释：`xfreerdp3 /u:ykla /p:z  /v:192.168.31.213` 参数：
 
 - `xfreerdp3`，注意前面有个 `x`。
 - `/u:ykla`，`/u:` 即 Username 用户名。`ykla` 是笔者 Windows 的登录名
@@ -444,7 +442,6 @@ Password: # 输入密码，密码不会显示出来 ***。
 ……省略一部分……
 ```
 
-
 ![freerdp](../.gitbook/assets/freerdp.png)
 
 #### 故障排除与未竟事宜
@@ -492,9 +489,9 @@ Failed to connect, CredSSP required by server (check if server has disabled old 
 影响安全的解决方案是禁用网络级身份验证（NLA），在要远程连接的 Windows 上操作：
 
 ```powershell
-PS C:\Users\ykla> reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp" /v UserAuthentication /t REG_DWORD /d 0 /f
+PS C:\Users\ykla> reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp" /v UserAuthentication /t REG_DWORD /d 0 /f  # 导入相关注册表
 操作成功完成。
-PS C:\Users\ykla> gpupdate /force
+PS C:\Users\ykla> gpupdate /force  # 强制刷新组策略
 正在更新策略...
 
 计算机策略更新成功完成。
@@ -537,7 +534,7 @@ Do you trust this certificate (yes/no)? # 输入 yes，按回车键
 
 #### 故障排除与未竟事宜
 
-- 看视频没声音
+##### 看视频没声音
 
 待解决
 
@@ -593,7 +590,7 @@ You need a mounted /proc directory. Either mount it manually or add it to your /
 # 或者手动执行此命令来挂载 proc 文件系统。
 ```
 
-提示需要 `/proc`，经过测试没有的话的执行程序确没反应。
+提示挂载 proc 文件系统，经过测试没有的话的执行程序确没反应。
 
 ```sh
 # mount -t procfs proc /proc # 临时用一下。持久化可以参照上面的说明做
@@ -601,8 +598,8 @@ You need a mounted /proc directory. Either mount it manually or add it to your /
 
 root 用户无法运行 AnyDesk。需要普通用户：
 
-```
-$ $ anydesk
+```sh
+$ anydesk
 
 (<unknown>:18311): Gtk-WARNING **: 21:07:13.540: 无法在模块路径中找到主题引擎：“adwaita”，
 
