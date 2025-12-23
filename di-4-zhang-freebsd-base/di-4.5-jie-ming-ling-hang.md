@@ -361,7 +361,7 @@ cd is a shell builtin
 
 切换到 `/home`：
 
-```
+```sh
 $ cd /home # 切换到 `/home`
 $ pwd # 看看现在在哪
 /home
