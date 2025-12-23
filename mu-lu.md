@@ -137,7 +137,7 @@
 * [12.1 通过 BVCP 以网页管理 BHyve](di-12-zhang-xu-ni-hua/di-12.1.md)
 * [12.2 使用 bhyve 安装 Windows 11（vm-bhyve）](di-12-zhang-xu-ni-hua/di-12.2-jie-shi-yong-bhyve-an-zhuang-windows.md)
 * [12.3 Podman](di-12-zhang-xu-ni-hua/di-12.3-Podman.md)
-* [12.4 在 FreeBSD 上安装 VirtualBox](di-12-zhang-xu-ni-hua/di-12.4-vitrualbox.md)
+* [12.4 在 FreeBSD 上安装 VirtualBox](di-12-zhang-xu-ni-hua/di-12.4-VirtualBox.md)
 
 ## 第 13 章 系统管理
 
