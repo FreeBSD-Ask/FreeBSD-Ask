@@ -1,4 +1,4 @@
-# 6.16 KDE6（Wayland）
+# 6.16 KDE 6（Wayland 会话）
 
 ## 环境准备
 

@@ -1,4 +1,4 @@
-# 3.11 配置 rEFInd（双系统用）
+# 3.11 配置 rEFInd 引导管理器（用于多系统引导）
 
 在 BIOS 中来回切换确实很麻烦，我们可以借助 [rEFInd](https://www.rodsbooks.com/refind/) 实现类似于 Clover 的效果，在开机时选择要进入的操作系统。
 
