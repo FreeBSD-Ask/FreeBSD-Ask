@@ -100,19 +100,24 @@ dev.pcm.2.play.vchanmode: vchan format/rate selection: 0=fixed, 1=passthrough, 2
 - 采样率（vchanrate）：DSD 的采样率为 44.1 kHz 的整数倍，因此不应设置为 48 kHz 的整数倍，否则可能产生杂音；在条件允许的情况下应设置为尽可能高的数值，此处为 352.8 kHz。
 
 - `dev.pcm.2.play.vchanmode`
-  * `0`（fixed）：在该模式下，音频设备使用固定的采样率和格式处理多路音频流。
-  * `1`（passthrough）：在该模式下，音频设备尽可能保持输入音频流的原始采样率和格式。
-  * `2`（adaptive）：在该模式下，音频设备会根据需要自动适配并转换输入音频流的采样率和格式。
+  - `0`（fixed）：在该模式下，音频设备使用固定的采样率和格式处理多路音频流。
+  - `1`（passthrough）：在该模式下，音频设备尽可能保持输入音频流的原始采样率和格式。
+  - `2`（adaptive）：在该模式下，音频设备会根据需要自动适配并转换输入音频流的采样率和格式。
 
 
 >**技巧**
 >
 >可以用 `dmesg` 查看可用采样率。在播放非 DSD 文件时，采样率和音频文件采样率相同（或整数倍）为宜，这样可以避免重采样造成的音质损失。采样率并非越高越好，可以通过多次尝试找到最合适的设置。
-+
+-
+
 +```sh
+
 # dmesg|grep -i pcm2
+
 pcm2 on uaudio0
+
 # dmesg|grep -i uaudio0
+
 uaudio0 on uhub0
 uaudio0: <HiBy R3, class 239/2, rev 2.00/ff.ff, addr 1> on usbus1
 uaudio0: Play[0]: 384000 Hz, 2 ch, 32-bit S-LE PCM format, 2x4ms buffer. (selected)
@@ -128,6 +133,7 @@ uaudio0: No recording.
 uaudio0: No MIDI sequencer.
 pcm2 on uaudio0
 uaudio0: No HID volume keys found.
+
 ```
 
 ### 基本设置
