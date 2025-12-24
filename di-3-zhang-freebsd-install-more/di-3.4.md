@@ -55,7 +55,7 @@ Device              Size     Used    Avail Capacity
 /dev/nda0p3          208G       0B     208G     0%
 ```
 
-可以看到交换分区的大小是我们所设定的 208GB。
+可以看到交换分区的大小是我们所设定的 208 GB（其中 200 GB 预留给 Windows 操作系统）。
 
 编辑 `/etc/fstab`，在 swap 对应行的行首添加 `#` 字符将其注释，本例中该行是第三行：
 
