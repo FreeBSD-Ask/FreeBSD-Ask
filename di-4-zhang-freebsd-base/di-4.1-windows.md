@@ -13,7 +13,7 @@
 
 ![](../.gitbook/assets/Windows1.png)
 
-- 无法将文件/文件夹命名为 `con`
+- 无法将文件/文件夹命名为 `con`：
 
 ![](../.gitbook/assets/Windows2.png)
 
