@@ -182,4 +182,4 @@ FreeBSD 官方联系方式：
 
 ## 其他思路或解决方案
 
-自行使用 Poudriere 进行构建并分发。如 [RISC-V FreeBSD-pkg 软件源上线！11619+ 预编译包助力快速构建 FreeBSD 环境](https://mp.weixin.qq.com/s/ngv3eZh1TEVgk3Pn3XfRBg)（项目已停止维护）
+自行使用 Poudriere 进行构建并分发。如 [RISC-V FreeBSD-pkg 软件源上线！11619+ 预编译包助力快速构建 FreeBSD 环境](https://mp.weixin.qq.com/s/ngv3eZh1TEVgk3Pn3XfRBg)（项目已停止维护）
