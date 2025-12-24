@@ -373,7 +373,7 @@ Filename: usr/local/lib/libxcb-icccm.so.4.0.0
 请先切换到 latest 源，再使用软件源里的 pkg 包重装 pkg：
 
 ```sh
-# pkg-static bootstrap -f	# # 强制初始化 pkg 包管理器
+# pkg-static bootstrap -f	# 强制初始化 pkg 包管理器
 ```
 
 若无效，则再：
