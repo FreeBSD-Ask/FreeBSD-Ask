@@ -132,7 +132,7 @@ Username: ykla
 Full name:
 Uid (Leave empty for default):
 Login group [ykla]:
-Login group is ykla. Invite ykla into other groups? []: wheel  # # 注意：请在此处输入 wheel，否则该用户将无法使用 `su` 命令提升权限
+Login group is ykla. Invite ykla into other groups? []: wheel  # 注意：请在此处输入 wheel，否则该用户将无法使用 `su` 命令提升权限
 Login class [default]:
 Shell (sh csh tcsh nologin) [sh]:
 Home directory [/home/ykla]:
