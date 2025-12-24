@@ -24,7 +24,9 @@ $ who
 root             pts/0        Mar 19 15:00 (3413e8b6b43f)
 ```
 
-- 展示当前有哪些用户已登录，以及他们正在做什么
+## 我从哪里来？
+
+展示当前有哪些用户已登录，以及他们正在做什么：
 
 ```sh
 $ w
@@ -44,7 +46,9 @@ $ pwd
 /usr/ports/editors/vscode
 ```
 
-## 账户切换与退出登录
+## 我究竟是谁？
+
+账户切换与退出登录：
 
 ```sh
 root@ykla:/ # su ykla ①
@@ -71,11 +75,35 @@ login:
 - ② 注意到提示符号的变化没有？root 是 `#`，普通用户是 `$`（csh 是 `%`）
 - ③ ③ 如果仅输入 `su` 并回车，命令的含义是从当前用户切换到 root 账户（如果已经是 root，则不会有任何变化）。但是你必须是 wheel 组的成员才能进行此操作，否则会报错 `sorry`。
 - ④ 从普通用户切换到 root，要输入的密码是 root 账户的登录密码。
-- ⑤ 输入 `exit` 可退出当前用户，如果是唯一登录的用户，将退出登录到 TTY
+- ⑤ 输入 `exit` 可退出当前用户，如果是唯一登录的用户，将退出登录到 TTY。
 
 >**思考题**
 >
 >⑥、⑦ 分别切换到了哪些用户或执行了哪些操作？
+
+## 我要去哪里？
+
+`cd` 命令，即“change the working directory”，切换当前工作目录。
+
+```sh
+ykla@ykla:~ $ pwd
+/home/ykla
+ykla@ykla:~ $ cd .
+ykla@ykla:~ $ pwd
+/home/ykla
+ykla@ykla:~ $ cd ..
+ykla@ykla:/home $ pwd
+/home
+ykla@ykla:/home $ cd ..
+ykla@ykla:/ $ pwd
+/
+ykla@ykla:/ $ cd /home/ykla
+ykla@ykla:~ $ cd ../..
+ykla@ykla:/ $ pwd
+/
+```
+
+根据上面的输出，请读者思考：上面的 `.` 和 `..` 分别代表什么？
 
 ## 命令行格式
 
@@ -96,7 +124,6 @@ total 6
 drwxrwxrwt  2 root    wheel  3 Mar 18 17:23 .ICE-unix
 -r--r--r--  1 root    wheel 11 Mar 18 17:10 .X0-lock
 ```
-
 
 其中，`ls`（L 小写）意味着列出当下目录或指定目录下的文件；选项 `-l`（L 小写）意味着打印详细信息，输出长（*long*）的格式。
 
@@ -162,8 +189,6 @@ usage: ls [-ABCFGHILPRSTUWZabcdfghiklmnopqrstuvwxy1,] [--color=when] [-D format]
 > **技巧**
 >
 > 命令后面的 `#` 表示什么意思？`#` 在 shell 当中一般是起注释作用（由 [POSIX.1-2024](https://pubs.opengroup.org/onlinepubs/9799919799/utilities/V3_chap02.html) 规定），相当于 C 语言里面的 `//`。意味着后边的文字只起到说明作用，不起实际作用。
-
-
 
 ### thefuck：自动纠正错误拼写的命令
 
@@ -347,7 +372,6 @@ cd is a shell builtin
 ```sh
 # pkg which /bin/ls # 查询 /bin/ls 所属的软件包
 /bin/ls was installed by package FreeBSD-runtime-15.snap20250313173555
-
 ```
 
 
@@ -400,28 +424,6 @@ $ ls -a
 .cache		.icons		.mailrc		.themes		桌面
 .config		.local		.mozilla	下载		模板
 ```
-
->**思考题**
->
->```sh
->ykla@ykla:~ $ pwd
->/home/ykla
->ykla@ykla:~ $ cd .
->ykla@ykla:~ $ pwd
->/home/ykla
->ykla@ykla:~ $ cd ..
->ykla@ykla:/home $ pwd
->/home
->ykla@ykla:/home $ cd ..
->ykla@ykla:/ $ pwd
->/
->ykla@ykla:/ $ cd /home/ykla
->ykla@ykla:~ $ cd ../..
->ykla@ykla:/ $ pwd
->/
->```
->
->根据上面的输出，思考：上面的 `.`、`..` 分别代表什么？
 
 试试不加选项 `-a` 呢？
 
@@ -780,5 +782,5 @@ FreeBSD 的设计更接近传统 UNIX 的行为。
 
 >**注意**
 >
->关机与重启都需要 root 权限才能执行。
+>在 FreeBSD 下，关机与重启操作都需要 root 权限才能执行。
 
