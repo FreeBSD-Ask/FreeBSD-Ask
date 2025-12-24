@@ -12,7 +12,7 @@
 >- 你的电脑是普通家用机吗？
 > - 处理器品牌是否为 Intel 或 AMD？
 >- 是否关闭了 BIOS 里的安全启动（Secure Boot）？
->- 镜像是否是从 <https://www.freebsd.org> 下载的镜？
+>- 镜像是否是从 <https://www.freebsd.org> 下载的？
 > - 是否下载了最新版本的 RELEASE 镜像？
 > - 你下载的镜像文件扩展名是否为 `img`？
 > - 镜像校验（SHA256）是否通过？
