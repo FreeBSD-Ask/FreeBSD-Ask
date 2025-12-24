@@ -167,7 +167,7 @@
 
 * [16.1 FTP 服务器](di-16-zhang-fu-wu-qi/di-16.1-jie-ftp-fu-wu-qi.md)
 * [16.2 MinIO 对象存储服务](di-16-zhang-fu-wu-qi/di-16.2-jie-minio-dui-xiang-cun-chu-fu-wu.md)
-* [16.3 Gitlab EE](di-16-zhang-fu-wu-qi/16.3-gitlab-ee.md)
+* [16.3 GitLab EE](di-16-zhang-fu-wu-qi/16.3-gitlab-ee.md)
 * [16.4 时间服务](di-16-zhang-fu-wu-qi/di-16.4-jie-shi-jian-fu-wu.md)
 * [16.5 WildFly](di-16-zhang-fu-wu-qi/di-16.5-jie-wildfly.md)
 * [16.6 Rsync 同步服务](di-16-zhang-fu-wu-qi/di-16.6-jie-rsync-tong-bu-fu-wu.md)
