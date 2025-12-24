@@ -399,13 +399,13 @@ zfs-kmod-2.2.7-FreeBSD_ge269af1b3
 形如：
 
 ```ini
-# zfs_load=YES	# 禁用内置 ZFS 模块加载
+# zfs_load=YES 	# 不加载内置 ZFS 内核模块
 ```
 
 再新增下列数行：
 
 ```ini
-zfs_load=NO        # 禁用内置 ZFS 模块加载
+zfs_load=NO        # 显式禁用内置 ZFS 内核模块加载
 openzfs_load=YES   # 启用 OpenZFS 模块加载
 ```
 
