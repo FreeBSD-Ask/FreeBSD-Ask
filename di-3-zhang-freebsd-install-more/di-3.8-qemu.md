@@ -22,8 +22,7 @@ RISC-V FreeBSD 磁盘镜像（以 FreeBSD 14.2 RELEASE 为例）：
 
 ## OpenSBI
 
-获取 OpenSBI（RISC-V Open Source Supervisor Binary Interface），其功能类似于启动固件。
-
+在 FreeBSD 系统中获取 OpenSBI（RISC-V Open Source Supervisor Binary Interface），其功能类似于启动固件。
 
 ### 安装 OpenSBI
 
@@ -52,8 +51,7 @@ RISC-V FreeBSD 磁盘镜像（以 FreeBSD 14.2 RELEASE 为例）：
 
 ## U-Boot
 
-获取 U-Boot，功能上类似于 GRUB 2。
-
+在 FreeBSD 系统中获取 U-Boot，功能上类似于 GRUB 2。
 
 ### 安装 U-Boot
 
