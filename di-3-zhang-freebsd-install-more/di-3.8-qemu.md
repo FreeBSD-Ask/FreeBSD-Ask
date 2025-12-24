@@ -51,7 +51,7 @@ RISC-V FreeBSD 磁盘镜像（以 FreeBSD 14.2 RELEASE 为例）：
 
 ## U-Boot
 
-在 FreeBSD 系统中获取获取 U-Boot，功能上类似于 GRUB 2。
+在 FreeBSD 系统中获取 U-Boot，功能上类似于 GRUB 2。
 
 ### 安装 U-Boot
 
