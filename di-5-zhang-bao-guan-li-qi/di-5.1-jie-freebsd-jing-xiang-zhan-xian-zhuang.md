@@ -8,7 +8,7 @@
 
 根据目前可查的信息，FreeBSD 项目最迟在 2015 年 5 月就停止了公开 rsync。参见 [Add small section explaining we are not allowing public mirrors of packages and possible workarounds.](https://reviews.freebsd.org/R9:3418e47d2f6cd8dd04ac934f38d136ba9101a5a8)。给出的说明理由是：
 
->Due to very high requirements of bandwidth, storage and administration the FreeBSD; Project has decided not to allow public mirrors of packages.
+>Due to very high requirements of bandwidth, storage and administration the FreeBSD Project has decided not to allow public mirrors of packages.
 >
 >由于对带宽、存储和管理的要求极高，FreeBSD 项目决定不允许公共镜像软件包。
 
