@@ -635,7 +635,7 @@ CST 为中国标准时间（China Standard Time）的缩写，确认无误后按
 >
 >**请勿全选！**
 >
->**不要** 选择 `local_unbound`，否则可能影响系统 DNS 解析（参见 [Bug  262290 - After a normal FreeBSD installation and reboot, /etc/resolv.conf will be changed](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=262290)）。除非您明确了解其用途。
+>**不要** 选择 `local_unbound`，否则可能影响系统 DNS 解析（参见 [Bug 262290 - After a normal FreeBSD installation and reboot, /etc/resolv.conf will be changed](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=262290)）。除非您明确了解其用途。
 
 
 |     选项      |                                                                                  解释                                                                                   |
