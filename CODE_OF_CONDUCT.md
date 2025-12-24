@@ -52,6 +52,6 @@
 
 如果您有任何问题，请随时通过问题联系 FreeBSD 中文社区行为规范委员会（`yklaxds@gmail.com`）。
 
-（这段文本基于 LLVM 项目的 [行为规范草案](https://llvm.org/docs/CodeOfConduct.html)，而该草案又基于 [Django 项目](https://www.djangoproject.com/conduct/) 的行为规范，后者又来源于 Speak Up! 项目的用语。）
+（这段文本基于 LLVM 项目的 [行为规范草案](https://llvm.org/docs/CodeOfConduct.html)，而该草案又基于 [Django 项目](https://www.djangoproject.com/conduct/) 的行为规范，后者又来源于 Speak Up! 项目的用语。）
 
 上述文本翻译自 [FreeBSD 社区行为规范](https://www.freebsd.org/internal/code-of-conduct/)。
