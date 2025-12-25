@@ -69,7 +69,7 @@ bash-5.1# ldd /opt/wechat/wechat # 使用 ldd 检查微信的依赖库是否完�
 # make install clean
 ```
 
-- 再安装缺少的依赖 `libbz2.so.1.0` 库：
+- 再链接缺少的依赖 `libbz2.so.1.0` 库：
 
 ```sh
 # ln -s /compat/linux/lib64/libbz2.so.1.0.8 /compat/linux/lib64/libbz2.so.1.0 # 重命名所需的库
