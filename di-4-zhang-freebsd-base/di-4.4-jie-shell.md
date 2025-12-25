@@ -42,7 +42,7 @@ Linux 中常见的 shell 一般是 bash（Bourne Again Shell，即“又一个 B
 
 >**技巧**
 >
->SL 键在 **HOME** 键上方，PS 截图键 **Print Screen** 右侧，PB 键 **Pause break** 左侧。
+>SL 键在 **HOME** 键的上方，PS 截图键 **Print Screen** 的右侧，PB 键 **Pause/Break** 的左侧。
 
 事实上，从历史角度来看，**Scroll Lock** 键正是为此类用途而设计的。
 

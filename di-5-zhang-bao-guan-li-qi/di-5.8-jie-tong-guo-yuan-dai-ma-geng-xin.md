@@ -2,7 +2,7 @@
 
 基本思路是获取 FreeBSD 的源代码，然后进行编译和安装。可以使用 Git 直接拉取代码，也可以从 ISO 镜像中下载 txz 压缩文件，或者从 GitHub 下载当前 FreeBSD 项目的 zip 压缩包。
 
-编译流程参见 Handbook 即可，非常简单。
+编译流程参见 Handbook 即可。
 
 ## SVN 到 Git 的迁移
 
@@ -54,7 +54,7 @@ FreeBSD 项目在 2021 年从 SVN 全面迁移到了 Git，即 [https://git.free
 $ git clone --depth 1 https://git.FreeBSD.org/src.git /usr/src 
 ```
 
-- `--depth 1`：浅克隆，仅拉取最新的提交，不拉取日志及历史记录
+参数 `--depth 1` 说明：浅克隆，仅拉取最新的提交，不拉取全部的日志及历史记录
 
 或者通过 GitHub 拉取（GitHub 是 FreeBSD.org 上 src 仓库的镜像，每 10 分钟同步一次。）
 

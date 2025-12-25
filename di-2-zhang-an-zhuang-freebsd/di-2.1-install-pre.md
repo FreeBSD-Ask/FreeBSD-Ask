@@ -102,7 +102,7 @@ FreeBSD-14.2-RELEASE-amd64-mini-memstick.img.xz    107445036      2024-Nov-29 13
 
 |首列 | 说明|
 |:---|:---|
-|Parent directory/	-	-|点击后返回上级目录|
+|Parent directory/	-	-|指向上级目录|
 |CHECKSUM.SHA256-FreeBSD-14.2-RELEASE-amd64	  | 本页所有镜像的 SHA256 校验值 |
 |CHECKSUM.SHA512-FreeBSD-14.2-RELEASE-amd64   |  本页所有镜像的 SHA512 校验值 |
 |FreeBSD-14.2-RELEASE-amd64-bootonly.iso	      | 网络安装镜像，安装时需联网 |
@@ -148,8 +148,7 @@ FreeBSD-14.2-RELEASE-amd64-mini-memstick.img.xz    107445036      2024-Nov-29 13
 
 >**技巧**
 >
->FreeBSD 14.1-RELEASE 的两个 ISO 镜像在 Ventoy 环境下测试通过（测试环境为英特尔三代处理器平台，UEFI 模式）。但仍不能排除出现兼容性问题的可能。若遇到引导问题，请首先尝试使用 `img` 镜像进行刻录。需要注意的是，15.0-CURRENT 开发版镜像经实测可能无法通过 Ventoy 引导。
-
+>由于设备类型多样，即使在某个机器上测试通过，FreeBSD 的两个 ISO 镜像仍无法排除出现兼容性问题的可能性。若遇到引导问题，请首先尝试使用 Rufus 对 `img` 镜像进行刻录。
 
 >**技巧**
 >

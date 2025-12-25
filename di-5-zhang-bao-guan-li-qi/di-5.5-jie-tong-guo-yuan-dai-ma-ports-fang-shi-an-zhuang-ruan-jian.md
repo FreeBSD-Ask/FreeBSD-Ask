@@ -121,12 +121,11 @@ Makefile		pkg-plist-client	pkg-plist-plpython
 # rm ports.tar.gz # 删除存档
 ```
 
-
 ## 使用 Git 获取 Ports
 
 ### 安装 Git
 
-- 使用 pkg 安装：
+使用 pkg 安装：
 
 ```sh
 # pkg install git
@@ -182,7 +181,7 @@ Makefile		pkg-plist-client	pkg-plist-plpython
   main
 ```
 
-已经切换成功。
+Git 分支已经切换成功。
 
 
 ### 同步更新 Ports Git
@@ -207,7 +206,7 @@ Makefile		pkg-plist-client	pkg-plist-plpython
 fatal: unable to access 'https://mirrors.ustc.edu.cn/freebsd-ports/ports.git/': SSL certificate problem: certificate is not yet valid
 ```
 
-先检查时间：
+先检查系统的时间：
 
 ```sh
 # date
@@ -243,11 +242,9 @@ Sat Oct  5 08:39:21 UTC 2024
 python: /usr/ports/lang/python
 ```
 
+## 查看软件包依赖
 
-
-## 查看依赖
-
-已经安装的情况下：
+在已经安装该软件包的情况下：
 
 ```sh
 # pkg info -d screen
@@ -255,7 +252,7 @@ screen-4.9.0_6:
 	indexinfo-0.3.1
 ```
 
-未安装的情况下：
+在未安装该软件包的情况下：
 
 ```sh
 root@ykla:/usr/ports/sysutils/htop # make all-depends-list
@@ -265,8 +262,7 @@ root@ykla:/usr/ports/sysutils/htop # make all-depends-list
 ……省略一部分……
 ```
 
-
-## 看看 python 的 ports 在哪
+## 看看 python 的 ports 在哪个位置
 
 查找 python 可执行文件、源代码及手册页所在路径：
 
@@ -298,7 +294,7 @@ python: /usr/ports/lang/python
 # make install-missing-packages
 ```
 
-  以 `chinese/fcitx` 为示例：
+以 `chinese/fcitx` 为示例：
 
 ```sh
 # cd /usr/ports/chinese/fcitx
@@ -359,7 +355,7 @@ w3m-0.5.3.20230718_1               <
 
 ### ① portmaster（推荐）
 
-- 更新：
+- 更新已安装的 Port：
 
 ```sh
 # cd /usr/ports/ports-mgmt/portmaster && make install clean	# 安装 portmaster
@@ -373,7 +369,7 @@ w3m-0.5.3.20230718_1               <
 # portmaster -a -G --no-confirm
 ```
 
-#### 查看依赖关系
+#### 查看 Port 依赖关系
 
 ```sh
 # portmaster sysutils/htop  --show-work
@@ -449,7 +445,7 @@ hw.ncpu: 16
 
 个别情况下可以通过设置别名加速编译（非永久设置，FreeBSD 14 默认已生效，无须额外设置）：
 
-```sh
+```ini
 # alias ninja='ninja -j4'	# 为 ninja 命令设置别名，指定并行编译 4 个作业
 ```
 
@@ -459,8 +455,7 @@ hw.ncpu: 16
 
 ## 设置内存为 `tmp`
 
-
-编辑 `/etc/fstab` 文件，写入：
+编辑 `/etc/fstab` 文件，写入下行：
 
 ```ini
 tmpfs /tmp tmpfs rw 0 0
@@ -471,7 +466,6 @@ tmpfs /tmp tmpfs rw 0 0
 ### 参考资料
 
 - [tmpfs --in-memory file system](https://man.freebsd.org/cgi/man.cgi?tmpfs(5))
-
 
 ## ccache
 
@@ -498,7 +492,7 @@ tmpfs /tmp tmpfs rw 0 0
 - 查看软链接情况：
 
 ```sh
-# ls -al  /usr/local/libexec/ccache
+# ls -al /usr/local/libexec/ccache
 total 56
 drwxr-xr-x   3 root wheel 15 Sep 20 02:02 .
 drwxr-xr-x  18 root wheel 49 Sep 20 01:39 ..
@@ -519,9 +513,9 @@ drwxr-xr-x   2 root wheel 15 Sep 20 02:02 world
 
 ---
 
-- 修改 `/etc/make.conf`，加入下面一行启用 ccache 加速编译：
+- 修改 `/etc/make.conf` 文件，加入下面一行启用 ccache 加速编译：
 
-```sh
+```ini
 WITH_CCACHE_BUILD=yes
 ```
 
@@ -607,7 +601,7 @@ drwxr-xr-x   2 root wheel 13  9月 20 02:29 world
 
 ---
 
-- 修改 `/etc/make.conf`，加入下面一行启用 ccache 加速编译：
+- 修改 `/etc/make.conf` 文件，加入下面一行启用 ccache 加速编译：
 
 ```sh
 WITH_CCACHE_BUILD=yes
@@ -655,13 +649,13 @@ Local storage:
 
 ### axel
 
-安装：
+使用 pkg 安装：
 
 ```sh  
 # pkg install axel
 ```
 
-或者
+或者使用 ports 安装：
 
 ```sh
 # cd /usr/ports/ftp/axel/
@@ -679,6 +673,9 @@ DISABLE_SIZE=yes               # 禁用文件大小检查
 
 ### wget2
   
+
+使用 Ports 安装：
+
 ```sh
 # cd /usr/ports/www/wget2/ && make install clean
 ```
@@ -736,4 +733,4 @@ make: stopped in /usr/ports/java/openjdk21
 
 #### 参考文献
 
-- [Invalid perl5 version 5.32](https://forums.freebsd.org/threads/invalid-perl5-version-5-32.77628/)，同样的问题
+- [Invalid perl5 version 5.32](https://forums.freebsd.org/threads/invalid-perl5-version-5-32.77628/)，出现了同样的问题

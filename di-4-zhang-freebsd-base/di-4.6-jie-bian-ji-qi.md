@@ -90,4 +90,3 @@ $ msedit abc.txt
 ![](../.gitbook/assets/msedit2.png)
 
 操作较为简单，此处不再展开说明。
-
