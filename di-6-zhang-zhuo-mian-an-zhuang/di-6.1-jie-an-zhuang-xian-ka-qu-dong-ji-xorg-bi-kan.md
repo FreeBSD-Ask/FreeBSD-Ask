@@ -6,9 +6,9 @@
 
 ## 未安装显卡驱动的设备图片实例
 
-![没安装驱动](../.gitbook/assets/noqudong.png)
+![未安装显卡驱动的报错图](../.gitbook/assets/noqudong.png)
 
-未安装显卡驱动。
+未安装显卡驱动的报错图。
 
 ## 显卡支持情况
 
@@ -39,7 +39,7 @@ FreeBSD 的 i915、AMD 显卡驱动与基本系统是分离的。目前是移植
 >
 >可以在 port 开发者手册的最后一章中查询 OSVERSION 对应的版本和 Git 提交。
 >
->查看本机 OSVERSION。显示系统的唯一标识符（host UUID）：
+>查看本机 `OSVERSION`。显示系统版本构建标识符：
 >
 >```sh
 ># uname -U

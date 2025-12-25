@@ -4,47 +4,47 @@
 
 - Audacity：
 
-安装：
+使用 pkg 安装：
 
 ```sh
 # pkg install audacity
 ```
 
-或者
+或者使用 Ports 安装：
 
 ```sh
 # cd /usr/ports/audio/audacity/ 
 # make install clean
 ```
 
-
 ## 视频剪辑
 
 Olive 视频编辑器（Olive Video Editor）：
 
-安装：
+使用 pkg 安装：
 
 ```sh
 # pkg install olive-video-editor
 ```
 
-或者：
+或者使用 Ports 安装：
 
 ```sh
 # cd /usr/ports/multimedia/olive/ 
 # make install clean
 ```
 
-
 ## 压缩字幕
 
 ffmpeg：
 
-```
+使用 pkg 安装：
+
+```sh
 # pkg install ffmpeg
 ```
 
-或者：
+或者使用 Ports 安装：
 
 ```sh
 # cd /usr/ports/multimedia/ffmpeg/ 
@@ -57,10 +57,9 @@ ffmpeg：
 $ ffmpeg -i 视频文件.mp4 -vf subtitles=对应字幕.ass 输出视频.mp4
 ```
 
-## 扣图
+## 抠图
 
 在 Unix 系统下可用的相关软件较多，这里简要介绍矢量制图程序 ​**Inkscape**​ 的使用方法。
-
 
 ### 安装 Inkscape
 
@@ -84,7 +83,7 @@ $ ffmpeg -i 视频文件.mp4 -vf subtitles=对应字幕.ass 输出视频.mp4
 3. 按 `Alt I` 切换到矢量模式
 4. `Shift F6` 贝塞尔和直线模式
 5. `Ctrl A` 全选
-6. 在菜单中选择 **路径** → ​**交集**​，以实现扣图
+6. 在菜单中选择 **路径** → ​**交集**​，以实现抠图
 
 ### 参考文献
 

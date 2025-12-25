@@ -2,11 +2,13 @@
 
 ## 可生效的配置文件路径
 
+### 登录管理器配置路径
+
 1. SDDM、LightDM、GDM 可以在 `~/.xprofile` 中写入
 2. LightDM、GDM 可以在 `~/.profile` 中写入
 3. SDDM 可以在用户登录 shell 的配置文件中写入
 
----
+### Shell 配置路径
 
 - sh: `~/.profile`
 - bash: `~/.bash_profile` 或 `~/.profile`

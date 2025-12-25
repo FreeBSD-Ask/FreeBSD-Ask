@@ -62,7 +62,7 @@ Kodi 曾用名为 XBMC。
 
 - 使用 pkg 安装：
   
-```
+```sh
 # pkg install kodi
 ```
 
@@ -107,7 +107,7 @@ Kodi 曾用名为 XBMC。
 # pkg ins mpv
 ```
 
-- 还可以通过 Ports 安装
+- 还可以通过 Ports 安装：
 
 ```sh
 # cd /usr/ports/multimedia/mpv/ 
@@ -126,12 +126,12 @@ $ mpv 1.mp4
 >
 >此功能依赖 DRM，虚拟机环境可能无法正常使用。
 
->**技巧**
->
->可以使用命令行工具 `mixer` 调整音量，例如以下命令将音量调高 5%
->
->```sh
->$ mixer vol=+5%  # 将音量增加 5%
->```
+## 附录：音量调节
 
+可以使用命令行工具 `mixer` 调整音量。
 
+例如以下命令可将音量提高 5%：
+
+```sh
+$ mixer vol=+5%  # 将音量增加 5%
+```

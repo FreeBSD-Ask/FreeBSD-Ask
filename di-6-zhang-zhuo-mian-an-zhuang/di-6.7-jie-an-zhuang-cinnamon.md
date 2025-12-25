@@ -77,7 +77,7 @@ proc /proc procfs rw 0 0
 
 编辑 `/etc/login.conf`：找到 `default:\` 这一段（写作时为第 24 行），将 `:lang=C.UTF-8` 修改为 `:lang=zh_CN.UTF-8`。
 
-根据 ·/etc/login.conf· 更新系统能力数据库：
+根据 `/etc/login.conf` 更新系统能力数据库：
 
 ```sh
 # cap_mkdb /etc/login.conf

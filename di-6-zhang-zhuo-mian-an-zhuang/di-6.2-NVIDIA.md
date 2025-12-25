@@ -78,13 +78,13 @@ pkg install libva-vdpau-driver libvdpau libvdpau-va-gl
 - 列出所有 NVIDIA GPU 及其详细信息，并以每秒一次的频率刷新显示
 
 ```sh
-$ nvidia-smi -L -l -1 
+$ nvidia-smi -L -l 1 
 ```
 
 参数说明：
 
 - `-L`：查看 GPU 列表及其 UUID；
-- `-l -1` 每秒刷新一次。
+- `-l 1` 每秒刷新一次。
 
 - 查看 KDE 系统信息：
 

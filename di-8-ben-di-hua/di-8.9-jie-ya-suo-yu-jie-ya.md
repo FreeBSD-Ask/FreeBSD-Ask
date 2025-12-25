@@ -59,15 +59,16 @@ $ tar -Jcvf test.tar.xz test # 压缩成 xz 格式文件。参数 -J 即 xz，�
 ### tar 解压
 
 ```sh
-$ tar -xvf test.tar # 解压 tar 格式文件，支持 test.tar.bz2、test.tar.gz、test.tar.xz 等格式
-$ tar -xvf test.tar -C /home/ykla/mytest # 解压到指定路径
+$ tar -xvf test.tar.其他压缩格式 # 解压 tar 格式文件，可支持如 test.tar.bz2、test.tar.gz、test.tar.xz 等格式
+$ tar -xvf test.tar -C /home/ykla/mytest # 解压 test.tar 到指定路径
 ```
+
+选项说明：
 
 - `x`：Extract 解压的意思
 - `v`：verbose 输出详细信息模式
 - `f`：file 指定文件
 - `C`：`cd` 的意思，即指定路径
-
 
 ## xz
 

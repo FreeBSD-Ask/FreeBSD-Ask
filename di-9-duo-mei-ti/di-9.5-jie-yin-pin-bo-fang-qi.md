@@ -175,8 +175,8 @@ audio_output {
 开启 musicpd 服务
 
 ```sh
-# sysrc musicpd_enable=YES   # 设置 MPD 服务开机自启动
-# service musicpd start      # 启动 MPD 服务
+# service musicpd enable  # 设置 MPD 服务开机自启动
+# service musicpd start  # 启动 MPD 服务
 ```
 
 ### 客户端使用

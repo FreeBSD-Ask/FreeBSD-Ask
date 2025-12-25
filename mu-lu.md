@@ -45,7 +45,7 @@
 * [4.1 Windows 用户迁移指南](di-4-zhang-freebsd-base/di-4.1-windows.md)
 * [4.2 Linux 用户迁移指南](di-4-zhang-freebsd-base/di-4.2-jie-linux-yong-hu-qian-yi-zhi-bei.md)
 * [4.3 虚拟控制台和终端](di-4-zhang-freebsd-base/di-4.3-jie-console.md)
-* [4.4 认识 shell](di-4-zhang-freebsd-base/di-4.4-jie-shell.md)
+* [4.4 认识 Shell](di-4-zhang-freebsd-base/di-4.4-jie-shell.md)
 * [4.5 命令行基础](di-4-zhang-freebsd-base/di-4.5-jie-ming-ling-hang.md)
 * [4.6 文本编辑器](di-4-zhang-freebsd-base/di-4.6-jie-bian-ji-qi.md)
 * [4.7 用户和基本账户管理](di-4-zhang-freebsd-base/di-4.7-jie-zu.md)
@@ -136,7 +136,7 @@
 
 * [12.1 使用 BVCP 通过 Web 界面管理 bhyve](di-12-zhang-xu-ni-hua/di-12.1.md)
 * [12.2 使用 bhyve 及 vm-bhyve 工具安装 Windows 11](di-12-zhang-xu-ni-hua/di-12.2-jie-shi-yong-bhyve-an-zhuang-windows.md)
-* [12.3 Podman](di-12-zhang-xu-ni-hua/di-12.3-Podman.md)
+* [12.3 配置 Podman](di-12-zhang-xu-ni-hua/di-12.3-Podman.md)
 * [12.4 在 FreeBSD 上安装 VirtualBox](di-12-zhang-xu-ni-hua/di-12.4-VirtualBox.md)
 
 ## 第 13 章 系统管理
@@ -217,7 +217,7 @@
 * [21.1 Linux 兼容层实现](di-21-zhang-linux-jian-rong-ceng/di-21.1-jie-linux-jian-rong-ceng-shi-xian.md)
 * [21.2 通过 FreeBSD Ports 安装 Rocky Linux 兼容层](di-21-zhang-linux-jian-rong-ceng/di-21.2-jie-rocky9-jian-rong-ceng.md)
 * [21.3 Ubuntu/Debian 兼容层](di-21-zhang-linux-jian-rong-ceng/di-21.3-jie-linux-jian-rong-ceng-ji-yu-ubuntudebian.md)
-* [21.4 Arch Linux 兼容层（基于 ArchLinux bootstrap）](di-21-zhang-linux-jian-rong-ceng/di-21.4-jie-linux-jian-rong-ceng-ji-yu-archlinux-bootstrap.md)
+* [21.4 Arch Linux 兼容层（基于 Arch Linux bootstrap）](di-21-zhang-linux-jian-rong-ceng/di-21.4-jie-linux-jian-rong-ceng-ji-yu-archlinux-bootstrap.md)
 * [21.5 基于 archlinux-pacman 的 Arch Linux 兼容层（拟删除）](di-21-zhang-linux-jian-rong-ceng/di-21.5-jie-linux-jian-rong-ceng-ji-yu-archlinuxpacman.md)
 * [21.6 OpenSUSE 兼容层](di-21-zhang-linux-jian-rong-ceng/di-21.6-jie-linux-jian-rong-ceng-ji-yu-opensuse.md)
 * [21.7 Gentoo Linux 兼容层](di-21-zhang-linux-jian-rong-ceng/di-21.7-jie-linux-jian-rong-ceng-ji-yu-gentoo-linux.md)

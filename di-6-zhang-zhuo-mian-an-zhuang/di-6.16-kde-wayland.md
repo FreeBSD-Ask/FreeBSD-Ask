@@ -10,6 +10,8 @@ NVIDIA 卡未经测试。本文使用 Intel 12 代处理器（i7-1260P）的核�
 
 ## 加入 video 组
 
+将指定用户加入 video 组以拥有权限调用显卡。
+
 ```sh
 # pw groupmod video -m 你的用户名
 ```
@@ -133,10 +135,6 @@ $ cp /usr/local/share/applications/org.fcitx.Fcitx5.desktop ~/.config/autostart/
 ![](../.gitbook/assets/kde-Wayland9.png)
 
 ## 故障排除与未竟事宜
-
-### 无法通过 SDDM 的 Wayland 会话启动 KDE 6
-
-你的用户可能尚未加入 video 组。
 
 ### 切换到 PipeWire
 

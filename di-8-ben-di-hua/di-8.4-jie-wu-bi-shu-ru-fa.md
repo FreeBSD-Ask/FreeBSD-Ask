@@ -24,7 +24,7 @@
 
 ### 配置 Rime 输入法
 
-将 98 五笔码表（`free-bsd-98wubi-tables-master/wubi86.dict.yaml` 和 `free-bsd-98wubi-tables-master/wubi86.schema.yaml`）复制到 `/usr/local/share/rime-data` 目录下。下载地址：[FreeBSD-98wubi-tables](https://github.com/FreeBSD-Ask/98-input/)
+将 98 五笔码表（`free-bsd-98wubi-tables-master/wubi86.dict.yaml` 和 `free-bsd-98wubi-tables-master/wubi86.schema.yaml`）复制到 `/usr/local/share/rime-data` 目录下。98 五笔码表下载地址：[FreeBSD-98wubi-tables](https://github.com/FreeBSD-Ask/98-input)。
 
 修改 `/usr/local/share/rime-data/default.yaml` 文件：打开文件找到 `schema_list`，在其下第一行添加 `- schema: wubi98`（注意保持缩进），并删除其他输入方案，如下所示：
 

@@ -1,12 +1,10 @@
 # 8.10 微信（Linux 版本）
 
-## 基于 RockyLinux 兼容层（FreeBSD Port）
+## 基于 Rocky Linux 兼容层（FreeBSD Ports）
 
->**注意**
->
->请先参照本书其他章节先行安装 RockyLinux 兼容层（FreeBSD Port）
+请先参照本书其他章节，先行安装 Rocky Linux 兼容层（FreeBSD Ports）。
 
-### 安装 rpm 工具
+### 安装 RPM 工具
 
 - 使用 pkg 安装
 
@@ -23,27 +21,27 @@
 
 ### 下载微信
 
-官方地址：[微信 Linux 测试版](https://linux.weixin.qq.com/)
+官方下载地址：[微信 Linux 测试版](https://linux.weixin.qq.com/)
 
 ```sh
-# fetch https://dldir1v6.qq.com/weixin/Universal/Linux/WeChatLinux_x86_64.rpm # 写作本文时链接如此，请自行获取最新链接
+# fetch https://dldir1v6.qq.com/weixin/Universal/Linux/WeChatLinux_x86_64.rpm	# 写作本文时链接如此，请自行获取最新的微信下载链接
 ```
 
 ### 安装微信
 
 ```sh
-root@ykla:/ # cd /compat/linux/
-root@ykla:/compat/linux # rpm2cpio < WeChatLinux_x86_64.rpm  | cpio -id #注意 WeChatLinux_x86_64.rpm 的路径改成你自己的
+root@ykla:/ # cd /compat/linux/	# 切换到兼容层路径
+root@ykla:/compat/linux # rpm2cpio < WeChatLinux_x86_64.rpm  | cpio -id	# 读者请将 WeChatLinux_x86_64.rpm 的路径改成自己的
 1393412 blocks
 ```
 
 ### 解决依赖问题
 
-查看依赖：
+查看依赖关系：
 
 ```bash
-root@ykla:/compat/linux # /compat/linux/usr/bin/bash # 切换到兼容层的 shell
-bash-5.1# ldd /opt/wechat/wechat 
+# /compat/linux/usr/bin/bash	# 切换到兼容层的 shell
+bash-5.1# ldd /opt/wechat/wechat	# 使用 ldd 检查微信的依赖库是否完整
 	libatomic.so.1 => not found
 	libbz2.so.1.0 => not found
 	libxkbcommon-x11.so.0 => not found
@@ -54,58 +52,64 @@ bash-5.1# ldd /opt/wechat/wechat
 		……其他省略……
 ```
 
-- 解决缺少的依赖 `libatomic.so.1`：
+- 安装缺少的依赖库 `libatomic.so.1`。
+
+使用 pkg 安装：
 
 ```sh
 # pkg install linux-rl9-libatomic
 ```
 
-或者：
+或者使用 ports 安装：
 
 ```sh
-# cd /usr/ports/devel/linux-rl9-libatomic/ && make install clean
+# cd /usr/ports/devel/linux-rl9-libatomic/ 
+# make install clean
 ```
 
-- 继续解决缺少的依赖 `libbz2.so.1.0`：
+- 为缺少的依赖库 `libbz2.so.1.0` 创建符号链接：
 
 ```sh
-# ln -s /compat/linux/lib64/libbz2.so.1.0.8 /compat/linux/lib64/libbz2.so.1.0 # 重命名所需的库
+# ln -s /compat/linux/lib64/libbz2.so.1.0.8 /compat/linux/lib64/libbz2.so.1.0 # 创建所需的符号链接
 ```
 
 >**技巧**
 >
->`libbz2.so.1` 这个库本来就有，但是名字不一样，你找不到的话，自己输入 `ls /compat/linux/lib64/libbz2` 然后按一下 **TAB** 补全看一下你的名字是什么。
+>`libbz2.so.1` 这个库本身已存在，但文件名不同。如果找不到，可以输入 `ls /compat/linux/lib64/libbz2`，然后按 **TAB** 键补全，查看实际文件名。
 
-- 解决依赖 `libxkbcommon-x11.so.0`:
+
+- 安装依赖库 `libxkbcommon-x11.so.0`：
 
 ```sh
-# fetch https://dl.rockylinux.org/pub/rocky/9/devel/x86_64/os/Packages/l/libxkbcommon-x11-1.0.3-4.el9.x86_64.rpm
+# fetch https://dl.rockylinux.org/pub/rocky/9/devel/x86_64/os/Packages/l/libxkbcommon-x11-1.0.3-4.el9.x86_64.rpm	# 下载所需的依赖库
 # cd /compat/linux/
-root@ykla:/compat/linux # rpm2cpio < libxkbcommon-x11-1.0.3-4.el9.x86_64.rpm  | cpio -id 
+root@ykla:/compat/linux # rpm2cpio < libxkbcommon-x11-1.0.3-4.el9.x86_64.rpm  | cpio -id 	# 解压安装该依赖库
 82 blocks
 ```
 
 >**技巧**
 >
->当找不到 rockylinux 的某某库时，可以到 <https://rockylinux.pkgs.org/> 搜索。FreeBSD Ports 已经打包了一部分，可以参照 pkg 章节使用 `pkg-provides` 搜索一下。
+>当找不到 Rocky Linux 的某个库时，可以到 <https://rockylinux.pkgs.org/> 搜索。FreeBSD Ports 已经打包了一部分，可以参照 pkg 章节使用 `pkg-provides` 搜索一下。
 
 
-- 解决依赖 `libxcb-icccm.so.4`：
+- 解决依赖库 `libxcb-icccm.so.4`：
 
 ```sh
-# fetch https://dl.rockylinux.org/pub/rocky/9/AppStream/x86_64/os/Packages/x/xcb-util-wm-0.4.1-22.el9.x86_64.rpm
+# fetch https://dl.rockylinux.org/pub/rocky/9/AppStream/x86_64/os/Packages/x/xcb-util-wm-0.4.1-22.el9.x86_64.rpm	# 下载所需的依赖库
 # cd /compat/linux/
-root@ykla:/compat/linux #  rpm2cpio < xcb-util-wm-0.4.1-22.el9.x86_64.rpm  | cpio -id 
+root@ykla:/compat/linux #  rpm2cpio < xcb-util-wm-0.4.1-22.el9.x86_64.rpm  | cpio -id 	# 解压安装该依赖库 
 175 blocks
 ```
 
-- 解决其他 xcb 库相关依赖：
+- 解决其他与 xcb 库相关的依赖。
+
+使用 pkg 安装：
 
 ```sh
 # pkg install linux-rl9-xcb-util
 ```
 
-或者
+或者使用 ports 安装：
 
 ```sh
 # cd /usr/ports/x11/linux-rl9-xcb-util/ 
@@ -114,11 +118,13 @@ root@ykla:/compat/linux #  rpm2cpio < xcb-util-wm-0.4.1-22.el9.x86_64.rpm  | cpi
 
 ### 启动微信
 
+在命令行中启动微信。
+
 ```sh
 $ /compat/linux/opt/wechat/wechat
 ```
 
-### 软件图标
+### 创建软件图标
 
 在路径 `~/.local/share/applications` 下新建文本文件 `wechat.desktop`，写入：
 
@@ -136,7 +142,13 @@ StartupNotify=false
 Categories=Network
 ```
 
-重启系统，即可在系统菜单中找到微信。
+设置 `wechat.desktop` 文件权限为 `755`，使其可执行:
+
+```sh
+# chmod 755 ~/.local/share/applications/wechat.desktop
+```
+
+重启系统后，即可在系统菜单中找到微信。
 
 功能正常：
 
@@ -146,8 +158,8 @@ Categories=Network
 
 ![FreeBSD 微信](../.gitbook/assets/wechat3.png)
 
-### 中文输入法
+### 中文输入法问题
 
-如果以 root 权限运行 RockyLinux 中的兼容层应用，则输入法会有问题。请以普通用户权限运行之。
+如果以 root 权限运行 Rocky Linux 兼容层中的应用，输入法可能会出现问题。
 
 ![FreeBSD 微信](../.gitbook/assets/wechat4.png)
