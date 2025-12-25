@@ -26,14 +26,14 @@
 官方地址：[微信 Linux 测试版](https://linux.weixin.qq.com/)
 
 ```sh
-# fetch https://dldir1v6.qq.com/weixin/Universal/Linux/WeChatLinux_x86_64.rpm # 写作本文时链接如此，请自行获取最新链接
+# fetch https://dldir1v6.qq.com/weixin/Universal/Linux/WeChatLinux_x86_64.rpm # 写作本文时链接如此，请自行获取最新的微信下载链接
 ```
 
 ### 安装微信
 
 ```sh
 root@ykla:/ # cd /compat/linux/	# 切换到兼容层路径
-root@ykla:/compat/linux # rpm2cpio < WeChatLinux_x86_64.rpm  | cpio -id # 注意 WeChatLinux_x86_64.rpm 的路径改成你自己的
+root@ykla:/compat/linux # rpm2cpio < WeChatLinux_x86_64.rpm  | cpio -id # 读者请将 WeChatLinux_x86_64.rpm 的路径改成自己的
 1393412 blocks
 ```
 
