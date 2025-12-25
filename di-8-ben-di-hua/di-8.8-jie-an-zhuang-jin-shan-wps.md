@@ -20,7 +20,7 @@
 
 或者使用 Ports 方式安装：
 
-```
+```sh
 # cd /usr/ports/archivers/rpm4/ 
 # make install clean
 ```
@@ -39,7 +39,7 @@
 
 ```sh
 # cd /compat/linux/	# 切换到兼容层路径
-#  rpm2cpio < /home/ykla/Downloads/wps-office-12.1.0.17900-1.x86_64.rpm  | cpio -id  # 读者请将路径替换为你本地下载文件的实际路径
+# rpm2cpio < /home/ykla/Downloads/wps-office-12.1.0.17900-1.x86_64.rpm  | cpio -id  # 读者请将路径替换为你本地下载文件的实际路径
 ```
 
 
