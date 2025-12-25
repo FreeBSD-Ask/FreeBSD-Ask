@@ -67,7 +67,7 @@ bash-5.1# ldd /opt/wechat/wechat	# 使用 ldd 检查微信的依赖库是否完�
 # make install clean
 ```
 
-- 再链接缺少的依赖库 `libbz2.so.1.0`：
+- 为缺少的依赖库 `libbz2.so.1.0` 创建符号链接：
 
 ```sh
 # ln -s /compat/linux/lib64/libbz2.so.1.0.8 /compat/linux/lib64/libbz2.so.1.0 # 创建所需的符号链接
