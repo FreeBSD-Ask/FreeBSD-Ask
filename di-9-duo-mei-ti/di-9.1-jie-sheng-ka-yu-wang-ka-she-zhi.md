@@ -147,7 +147,7 @@ hint.hdaa.0.nid27.config="as=1 seq=15"   # 配置 HDA 声卡节点 27 的音频�
 
 ## oss mixer
 
-| GUI 环境 |      名称       |
+| GUI 环境 |      Port      |
 | :------: | :-------------: |
 |   kde5   | audio/dsbmixer  |
 |   gtk    | audio/gtk-mixer |
