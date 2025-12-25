@@ -4,16 +4,17 @@ Wine 是一款能在 Unix 上运行 Microsoft Windows 程序的软件。
 
 >**警告**
 >
->以下内容仅在物理机测试通过。因为需要 drm 驱动，故虚拟机无法正常通过（会报错不支持 3D，无法运行）。虚拟机还会报错处理器不支持特定指令集。
+>以下内容仅在物理机测试通过。因为需要 DRM 驱动，故虚拟机无法正常通过（会报错不支持 3D，无法运行）。虚拟机还会报错处理器不支持特定指令集。
 
 ## 安装 Wine
 
+使用 ports 将无法构建 32 位软件包，因此推荐使用 pkg 安装：
 
 ```sh
 # pkg ins wine wine-gecko wine-mono
 ```
 
-解释：
+软件包说明：
 
 |程序 | 说明|
 |:---|:---|
@@ -23,13 +24,13 @@ Wine 是一款能在 Unix 上运行 Microsoft Windows 程序的软件。
 
 >**注意**
 >
->必须安装 wine-gecko，否则 `winecfg` 会报错找不到 IE。
+>必须安装 wine-gecko，否则 `winecfg` 将报错找不到 IE。
 
 >**技巧**
 >
 >不要使用 Ports 安装，因为那样不会自动构建对应版本的 32 位程序。
 
-切换到普通用户，继续安装 wine：
+切换到普通用户，继续通过脚本调用 pkg 安装 wine：
 
 ```sh
 $ /usr/local/share/wine/pkg32.sh install wine mesa-dri
@@ -45,7 +46,7 @@ $ /usr/local/share/wine/pkg32.sh install wine mesa-dri
 
 ## 配置 Wine
 
-以下均在普通用户下操作：
+以下均以普通用户权限下操作。
 
 ```sh
 $ WINEPREFIX=$HOME/test wine winecfg
