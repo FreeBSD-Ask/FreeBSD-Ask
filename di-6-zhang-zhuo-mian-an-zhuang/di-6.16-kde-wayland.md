@@ -136,10 +136,6 @@ $ cp /usr/local/share/applications/org.fcitx.Fcitx5.desktop ~/.config/autostart/
 
 ## 故障排除与未竟事宜
 
-### 无法通过 SDDM 的 Wayland 会话启动 KDE 6
-
-你的用户可能尚未加入 video 组。
-
 ### 切换到 PipeWire
 
 待解决。
