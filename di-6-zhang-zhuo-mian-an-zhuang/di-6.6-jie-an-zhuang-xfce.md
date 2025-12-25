@@ -136,7 +136,7 @@ fi
 ```sh
 if ( $?TERM && $TERM =~ xterm* ) then
     set host = `hostname`      
-    alias postcmd 'rehash; printf -- "\033]2\;%s\007" "${user}@${host}: ${cwd}"
+    alias postcmd 'rehash; printf -- "\033]2;%s\007" "${user}@${host}: ${cwd}"
 endif
 ```
 
