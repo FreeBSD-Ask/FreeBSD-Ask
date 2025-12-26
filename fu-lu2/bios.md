@@ -1338,7 +1338,7 @@ Assertion Deglitch Mantissa（断言消隐指数）
 
 断言消隐尾数 0x49[7-3]（存储在 MSR/寄存器地址 0x49 的第 7 至第 3 位）。断言消隐= 2µs × 尾数 × 2^(指数)
 
-###### De assertion Deglitch Mantissa（断言消隐指数）
+###### De assertion Deglitch Exponent（断言消隐指数）
 
 断言消隐指数 0x49[3-0]（存储在 MSR/寄存器地址 0x49 的第 3 至第 0 位）。断言消隐 \= 2µs × 尾数 × 2\^(指数)。
 
@@ -1943,7 +1943,7 @@ Enable（启用）
 
 说明：
 
-开启或关闭 ntel 管理引擎。
+开启或关闭 Intel 管理引擎。
 
 ME：Intel Management Engine，Intel 管理引擎状态。英特尔 ® 管理引擎是一个嵌入式微控制器（集成在某些英特尔芯片组上），运行一个轻量级微内核操作系统，为基于英特尔 ® 处理器的计算机系统提供各种功能和服务。
 
@@ -2063,7 +2063,7 @@ TPM 或受信任的平台模块是一种驻留在计算机主板或其处理器�
 
 #### FIPS Configuration（联邦信息处理标准配置）
 
-FIPS 140-2（Federal Information Processing Standard 140-2），联邦信息处理标准(FIPS) 出版物吧 140-2 是美国政府标准，它定义了信息技术产品中加密模块的最低安全要求
+FIPS 140-2（Federal Information Processing Standard 140-2），联邦信息处理标准 (FIPS) 出版物 140-2 是美国政府标准，它定义了信息技术产品中加密模块的最低安全要求
 
 联邦信息处理标准（FIPS） 指定了联邦政府对加密模块的要求。
 
@@ -2170,7 +2170,7 @@ MBP，Memory Based Protection Hand‑Off Blocks，基于内存的保护接续块
 
 调试 Intel 管理引擎用。
 
-##### HECI2 Interface Communication（HCEI2 接口通信）
+##### HECI2 Interface Communication（HECI2 接口通信）
 
 选项：
 
@@ -2182,7 +2182,7 @@ Enable（启用）
 
 添加和移除 PCI 空间中的 HECI2 设备。
 
-HCEI2（Host Embedded Controller Interface 2，主机嵌入式控制器接口 2）接口通信是 Intel 管理引擎与操作系统之间的通信接口。Intel 管理引需要此选项。
+HECI2（Host Embedded Controller Interface 2，主机嵌入式控制器接口 2）接口通信是 Intel 管理引擎与操作系统之间的通信接口。Intel 管理引擎需要此选项。
 
 ##### KT Device（KT 设备）
 
@@ -8750,7 +8750,7 @@ Disabled（禁用）
 
 启用该设置后，BIOS 会在操作系统启动之前将 LPSS（Serial IO）总线上的控制器（如 I²C、SPI、UART、GPIO 等）通过 ACPI 表（如 DSDT、SSDT）枚举并报告。这样操作系统在启动时能识别并管理这些设备。参见 [ACPI Specification 概述 (基于 ACPI_Spec_6_4_Jan22)](https://blog.csdn.net/anqi8955/article/details/120162679)
 
-##### SerilaIO timing parameters（串行 IO 时序参数）
+##### SerialIO timing parameters（串行 IO 时序参数）
 
 选项：
 
@@ -9199,7 +9199,7 @@ VCC_AUX，辅助电源轨为 FPGA 内部各种逻辑资源模块提供电源。
 
 #### FIVR Configuration（全集成电压调节模块配置）
 
-FIVE，Fully Integrated Voltage Regulators，全集成电压调节模块
+FIVR，Fully Integrated Voltage Regulators，全集成电压调节模块
 
 处理器集成了多个电压轨，以降低平台的物料清单（BOM）成本，让主板设计变简单，减少了主板上的元器件。并支持处理器可以利用的额外电压级功能。
 
@@ -10469,7 +10469,7 @@ No（否）
 
 允许该镜像在安全启动模式下运行。将 PE 镜像的 SHA256 哈希证书注册到授权签名数据库（db）中。
 
-##### Remowe 'UEFI CA' from DB（从数据库中删除 UEFI CA）
+##### Remove 'UEFI CA' from DB（从数据库中删除 UEFI CA）
 
 对于已经启用 Device Guard（微软的一种增强系统安全的技术）的系统，授权签名数据库（db）中不应包含“Microsoft UEFI CA”证书。
 

@@ -210,8 +210,8 @@ FOREIGN KEY (fk_column)
 REFERENCES tstu(sid);
 ```
 
-- `fk_name`：外键名
-- `fk_col`：外部表格列名
+- `fk_column_name`：外键名
+- `fk_column`：外部表格列名
 
 ### 表删除外键
 
