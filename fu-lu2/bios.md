@@ -2182,7 +2182,7 @@ Enable（启用）
 
 添加和移除 PCI 空间中的 HECI2 设备。
 
-HECI2（Host Embedded Controller Interface 2，主机嵌入式控制器接口 2）接口通信是 Intel 管理引擎与操作系统之间的通信接口。Intel 管理引需要此选项。
+HECI2（Host Embedded Controller Interface 2，主机嵌入式控制器接口 2）接口通信是 Intel 管理引擎与操作系统之间的通信接口。Intel 管理引擎需要此选项。
 
 ##### KT Device（KT 设备）
 
