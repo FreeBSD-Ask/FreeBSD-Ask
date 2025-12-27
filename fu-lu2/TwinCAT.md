@@ -2,7 +2,7 @@
 
 ## TwinCAT/BSD 简介
 
-TwinCAT/BSD 是一款由倍福公司开发的基于 FreeBSD 的 PLC 控制的操作系统。个人不使用他们的功能则是完全免费的，倍福支持第三方硬件安装，只不过 license 费按照顶配 PLC 收费：倍福的 license 是根据硬件性能收费，一般的 PLC 是 P40/P50 这个标准，假如一个基本 license1500 元，第三方硬件按照 P90 收费，同样的功能 6000 元左右。
+TwinCAT/BSD 是由倍福公司（Beckhoff）开发的基于 FreeBSD 的 PLC（Programmable Logic Controller，可编程逻辑控制器）控制操作系统。在不使用商业功能时，个人用户完全可以免费使用。倍福支持第三方硬件安装，但许可证费用按顶配 PLC 收取：倍福的许可证费用根据硬件性能而定，一般 PLC 标准为 P40/P50。例如，一个基本许可证价格为 1500 元，而第三方硬件按 P90 收费，同样功能约为 6000 元。
 
 更多内容请参考：
 
@@ -22,17 +22,18 @@ TwinCAT/BSD 是一款由倍福公司开发的基于 FreeBSD 的 PLC 控制的操
 
 ## 创建虚拟硬盘并写入镜像
 
-TCBSD 官方的镜像其实是用 `dd` 做成的，对应的是 FreeBSD 的 img 镜像，所以虚拟机无法直接识别。需要曲线救国，创建一个虚拟的 VHD 硬盘，然后将其挂载到虚拟机中再进行安装。
+TCBSD 官方镜像是使用 `dd` 工具制作的，实际上对应 FreeBSD 的 img 镜像，因此虚拟机无法直接识别。需要通过创建虚拟 VHD 硬盘的方式，将镜像写入硬盘后再挂载到虚拟机进行安装。
+
 
 首先右键单击“这台电脑”，选择管理--磁盘管理--操作--创建 VHD。
 
 ![TCBSD](../.gitbook/assets/t1.png)
 
-硬盘大小 1GB 即可，多了没用，是用来写入镜像用的。其他配置参考我的设置即可。
+硬盘大小设置为 1GB 即可，过大无实际必要，该硬盘仅用于写入镜像。其他配置可以参考示例设置。
 
 ![TCBSD](../.gitbook/assets/t2.png)
 
-可以看到多出了一个 `磁盘 2`，我们右键单击左侧区域--选择“初始化磁盘”。（**注意，我原先有 2 块硬盘，分别是 `磁盘 0` 和 `磁盘 1`。**）
+可以看到新增了一个 `磁盘 2`，右键单击左侧区域，选择“初始化磁盘”。（​**注意：文中示例中已有两块硬盘，分别为 `磁盘 0` 和 `磁盘 1`。**​）
 
 ![TCBSD](../.gitbook/assets/t3.png)
 
@@ -50,7 +51,7 @@ TCBSD 官方的镜像其实是用 `dd` 做成的，对应的是 FreeBSD 的 img 
 
 ![TCBSD](../.gitbook/assets/t7.png)
 
-打开 rufus，会自动识别到我们的新加卷 F，选择解压出的镜像 TCBSD-x64-13-92446.iso，点击 "开始" 即可，在最后一步刷新分区表的时候会等待较长时间，请耐心等待。
+打开 Rufus 工具，程序会自动识别新加卷 F。选择解压出的镜像 `TCBSD-x64-13-92446.iso`，点击“开始”即可。在刷新分区表的最后一步可能需要较长时间，请耐心等待。
 
 ![TCBSD](../.gitbook/assets/t8.png)
 
@@ -133,27 +134,25 @@ TCBSD 官方的镜像其实是用 `dd` 做成的，对应的是 FreeBSD 的 img 
 
 默认用户名是 `Administrator`，他的密码是你在安装时设置的。倍福其他 PLC 默认密码都是 `1`。
 
-首先设置 root 密码：
+首先使用 doas 提升权限修改 root 用户密码
 
 ```sh
-doas passwd root
+$ doas passwd root
 ```
 
-然后就可以
+然后就可以使用 doas 提升权限为超级用户（root），进入 root Shell
 
 ```sh
-doas su
+$ doas su
 ```
 
 ## Web 界面登录
 
-网络链接方式使用 NAT，经过测试桥接无法访问。
+网络连接方式使用 NAT，经测试桥接模式无法访问。
 
-使用 `ifconfig` 查看当前 IP，然后打开主机的浏览器输入：
+使用 `ifconfig` 查看当前 IP，然后打开主机的浏览器输入 `ifconfig` 命令输出的 IP 内容！
 
-`ifconfig` 输出的 IP 内容！
-
-我这里 `ifconfig` 显示的 ip 为 `192.168.245.138`，则我应该访问的地址为：`https://192.168.245.138`。（注意是 **https** 不是 http，后者无法访问！）
+示例中，`ifconfig` 显示的 IP 为 `192.168.245.138`，则访问地址为 `https://192.168.245.138`。（注意使用 ​**https**​，而非 *​http*​，后者无法访问）
 
 输入用户名 `Administrator` 和密码即可登录：
 
@@ -166,45 +165,52 @@ doas su
 
 ### 设置静态 IP 后，网卡存在两个 IP
 
-为一个网卡设置静态 IP 后，该网卡会有两个 IP：一个是静态 IP，一个是 DHCP 服务分配的 IP。这是倍福由于开机启动的 dhcpcd 服务的缺陷导致，更改 /etc/rc.conf 可解决：
+为网卡设置静态 IP 后，该网卡可能会出现两个 IP：一个为静态 IP，另一个由 DHCP 服务分配。这是由于倍福系统开机自动启动的 dhcpcd 服务导致的，可以通过修改 `/etc/rc.conf` 文件来解决：
+
 
 修改或加入：
 
-```sh
+```ini
 dhcpcd_flags="--denyinterfaces igb0"
 ```
 
-即将 `dhcpcd_flags` 的值由 `--waitip` 改为 `--denyinterfaces igb0` 。`igb0` 为需要配置静态 IP 的网卡名，请根据实际情况更改。
+即将 `dhcpcd_flags` 的值由 `--waitip` 改为 `--denyinterfaces igb0`（配置 dhcpcd，禁止在指定网卡 `igb0` 上自动获取 DHCP 地址）。`igb0` 为需要配置静态 IP 的网卡名，请根据实际情况更改。
 
 
 ## 换源
 
-切换到中国境内的 pkg 服务器
+使用 `doas` 执行脚本，将 pkg 仓库切换为中国镜像：
 
 ```sh
-doas sh /usr/local/share/examples/bhf/pkgrepo-set.sh china
+$ doas sh /usr/local/share/examples/bhf/pkgrepo-set.sh china
 ```
 
-更新：
+使用 doas 提升权限，先更新 pkg 仓库索引，再升级已安装的软件包：
 
 ```sh
-doas pkg update && doas pkg upgrade
+$ doas pkg update && doas pkg upgrade
 ```
 
 ## 安装 Beckhoff 提供开发工具包
 
-将安装：Beckhoff 维护的 llvm、C/C++ 头文件、C/C++ 库以及 TwinCATSDK。
+
+使用 doas 安装操作系统通用用户空间开发工具包：
 
 ```sh
-doas pkg install os-generic-userland-devtools
+$ doas pkg install os-generic-userland-devtools
 ```
+
+该操作将安装由 Beckhoff 维护的 LLVM、C/C++ 头文件、C/C++ 库以及 TwinCAT SDK。
 
 ## 启用 FreeBSD 源
 
-在默认情况下 pkg 只能安装 Beckhoff 维护的包，若要安装 FreeBSD 维护的包需要手动开启。
+默认情况下，pkg 只能安装 Beckhoff 维护的包。若需安装 FreeBSD 官方维护的包，需要手动启用相关源。
+
+使用 doas 提升权限，用 ee 编辑器修改 FreeBSD pkg 仓库配置文件：
 
 ```sh
-doas ee /usr/local/etc/pkg/repos/FreeBSD.conf
+$ doas ee /usr/local/etc/pkg/repos/FreeBSD.conf
 ```
 
-将 `FreeBSD: {enabled: no}` 中的 `no` 改为 `yes` 即可。
+将配置文件中 `FreeBSD: {enabled: no}` 的 `no` 修改为 `yes` 即可。
+
