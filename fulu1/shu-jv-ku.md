@@ -172,7 +172,7 @@ alter table table_name
 add primary key (col_name);
 ```
 
-- `col_name`：新列名
+- `col_name`：作为主键的列名（通常为已存在的列）
 
 ## 表删除主键
 
