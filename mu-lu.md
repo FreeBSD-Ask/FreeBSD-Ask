@@ -303,19 +303,28 @@
 * [FreeBSD 兼容的网络适配器](fu-lu2/yi-tai-wang-ka.md)
 * [FreeBSD 桌面发行版评述](fu-lu2/others-bsd.md)
 * [BSD 许可证概览](fu-lu2/xukez.md)
-* [UEFI/BIOS 基础（基于 AMI BIOS）](fu-lu2/bios.md)
 
-## 附录 Ⅲ 文学故事
+## 附录 Ⅲ UEFI/BIOS 基础（基于 AMI BIOS）
 
-* [我与 FreeBSD 的故事](fu-lu3/freebsd.md)
-* [两次告别](fu-lu3/exit.md)
-* [小说：《大教堂与集市》](fu-lu3/xiao-shuo-freebsd-cong-ru-men-dao-pao-lu.md)
-* [小说：《吾乡何处》](fu-lu3/wu-xiang-he-chu.md)
-* [小说：《你与暗》](fu-lu3/ni-yu-an.md)
-* [诗歌选](fu-lu3/shi-ge-xuan.md)
-* [手记](fu-lu3/za-ji.md)
+* [UEFI/BIOS 概述与警告](fu-lu3/bios-gaishu.md)
+* [Main（主菜单）](fu-lu3/main.md)
+* [Advanced（高级）](fu-lu3/Advanced.md)
+* [Chipset（芯片组）](fu-lu3/Chipset.md)
+* [Security（安全）](fu-lu3/Security.md)
+* [Boot（启动）](fu-lu3/Boot.md)
+* [Save & Exit（保存与退出）](fu-lu3/sava.md)
+
+## 附录 Ⅳ 文学故事
+
+* [我与 FreeBSD 的故事](fu-lu4/freebsd.md)
+* [两次告别](fu-lu4/exit.md)
+* [小说：《大教堂与集市》](fu-lu4/xiao-shuo-freebsd-cong-ru-men-dao-pao-lu.md)
+* [小说：《吾乡何处》](fu-lu4/wu-xiang-he-chu.md)
+* [小说：《你与暗》](fu-lu4/ni-yu-an.md)
+* [诗歌选](fu-lu4/shi-ge-xuan.md)
+* [手记](fu-lu4/za-ji.md)
   
-## 附录 Ⅳ 参考文献与术语表
+## 附录 Ⅴ 参考文献与术语表
 
-* [参考书目](fu-lu4/cankaoshu.md)
-* [术语表](fu-lu4/shu-yu-biao.md)
+* [参考书目](fu-lu5/cankaoshu.md)
+* [术语表](fu-lu5/shu-yu-biao.md)

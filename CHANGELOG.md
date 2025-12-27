@@ -9,6 +9,7 @@
   - 审阅“DragonFly BSD 导论”
   - 审阅“TwinCAT/BSD 导论”
   - 审阅“FreeBSD 兼容的网络适配器”
+  - 将“UEFI/BIOS 基础（基于 AMI BIOS）”拆分到“附录 Ⅲ UEFI/BIOS 基础（基于 AMI BIOS）”，其他附录编号依次递增
 - 2025.12.26
   - 23-附录 Ⅲ：修正若干事实错误
   - 审阅“第 23 章 存储与文件系统管理”
