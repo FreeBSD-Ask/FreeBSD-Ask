@@ -218,7 +218,7 @@ root 密码设置完成。
 ### 软件源
 
 
-可以使用 ee 编辑器编辑pkg 仓库配置文件 `/usr/local/etc/pkg/repos/df-latest.conf`，找到当中的国内镜像站：将 `no` 改成 `yes`，将之前的源改为 `no`。
+可以使用 ee 编辑器编辑 pkg 仓库配置文件 `/usr/local/etc/pkg/repos/df-latest.conf`，找到当中的国内镜像站：将 `no` 改成 `yes`，将之前的源改为 `no`。
 
 >**注意**
 >

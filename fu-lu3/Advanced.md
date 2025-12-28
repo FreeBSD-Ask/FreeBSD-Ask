@@ -90,7 +90,7 @@ Enable（启用）
 
 说明：
 
-BT Audio Offload（A2DP），英特尔蓝牙音频分发技术，参见 [示范影片：以 Intel® Bluetooth® 音频卸除省电 （A2DP） （MP4）](https://www.intel.cn/content/www/cn/zh/content-details/751466/demo-video-power-saving-with-intel-bluetooth-audio-offload-a2dp-mp4.html)。硬件卸载的音频处理允许在计算机的主 CPU 之外执行主要音频处理任务：即将蓝牙传输音频的解码放到 DSP 进行处理，可降低处理器的负载并省电。参见 [Hardware-Offloaded 音频处理](https://learn.microsoft.com/zh-cn/windows-hardware/drivers/audio/hardware-offloaded-audio-processing)。
+BT Audio Offload（A2DP），英特尔蓝牙音频分发技术，参见 [示范影片：以 Intel® Bluetooth® 音频卸除省电（A2DP） （MP4）](https://www.intel.cn/content/www/cn/zh/content-details/751466/demo-video-power-saving-with-intel-bluetooth-audio-offload-a2dp-mp4.html)。硬件卸载的音频处理允许在计算机的主 CPU 之外执行主要音频处理任务：即将蓝牙传输音频的解码放到 DSP 进行处理，可降低处理器的负载并省电。参见 [Hardware-Offloaded 音频处理](https://learn.microsoft.com/zh-cn/windows-hardware/drivers/audio/hardware-offloaded-audio-processing)。
 
 该功能可将来自蓝牙设备的 HFP 格式音频输入传送至音频 DSP，并通过 A2DP 格式以高能效方式将音频输出至蓝牙设备。
 
@@ -539,7 +539,7 @@ Enable（启用）
 
 MCE，Machine Check Exception，机器检查
 
-MCE 是用来报告内部错误的一种硬件方式 。提供能够检测和报告硬件（机器）的错误机制，如系统总线错误、ECC 错误、奇偶校验错误、缓存错误、TLB 错误等。当发现错误时，拒绝机器重启以收集相关信息进行排错。参见 [x86 服务器 MCE（Machine Check Exception）问题](https://ilinuxkernel.com/?p=303)
+MCE 是用来报告内部错误的一种硬件方式。提供能够检测和报告硬件（机器）的错误机制，如系统总线错误、ECC 错误、奇偶校验错误、缓存错误、TLB 错误等。当发现错误时，拒绝机器重启以收集相关信息进行排错。参见 [x86 服务器 MCE（Machine Check Exception）问题](https://ilinuxkernel.com/?p=303)
 
 ### MonitorMwait（Monitor/Mwait 指令）
 
@@ -571,7 +571,7 @@ Enable（启用）
 
 Intel® Trusted Execution Technology，英特尔 ® TXT。一种非常老（2007）的可信计算技术，参见 SW Guard Extension（英特尔 SGX 技术）。
 
-参见 [英特尔 ® Trusted Execution Technology （英特尔 ® TXT） 概述](https://www.intel.cn/content/www/cn/zh/support/articles/000025873/processors.html)
+参见 [英特尔 ® Trusted Execution Technology（英特尔 ® TXT）概述](https://www.intel.cn/content/www/cn/zh/support/articles/000025873/processors.html)
 
 ### Alias Check Request（别名检查请求）
 
@@ -1081,13 +1081,13 @@ Enable（启用）
 
 此选项依赖 Min Voltage Override（覆盖最低电压）。
 
-运行时最低电压。范围为 0 至 1999mV，以 1/128 伏为增量单位。输入单位为毫伏(mV)。
+运行时最低电压。范围为 0 至 1999mV，以 1/128 伏为增量单位。输入单位为毫伏 (mV)。
 
 ##### Min Voltage C8（C8 节能状态的最低电压）
 
 此选项依赖 Min Voltage Override（覆盖最低电压）。
 
-C8 节能状态的最低电压。范围为 0 至 1999mV，以 1/128 伏为增量单位。输入单位为毫伏(mV)。
+C8 节能状态的最低电压。范围为 0 至 1999mV，以 1/128 伏为增量单位。输入单位为毫伏 (mV)。
 
 ##### VccIn Aux Icc Max（CPU 输入电压辅助最大电流）
 
@@ -1121,7 +1121,7 @@ VCCIN Aux IMON 偏移量，以 1/1000 为增量单位。范围为 0-63999。例�
 
 说明：
 
-此选项和 VccIn Aux IMON Offset（CPU 输入电压辅助电流检测偏移量） 相关。
+此选项和 VccIn Aux IMON Offset（CPU 输入电压辅助电流检测偏移量）相关。
 
 设置前缀，可以为正值或负值。
 
@@ -1291,7 +1291,7 @@ Intel 建议 AC=DC（Same as DC LL）。警告：一般不建议修改 AC/DC Loa
   - IMON Prefix（电流检测前缀）：`+`/`-`。用设置加/减电流检测偏移量。
 
 - VR Current Limit（电压调节器当前限制）：电压调节器电流限制（Icc Max）代表允许 CPU 在任意时刻瞬间拉取的最大电流。该值以 1/4 安培（A）为单位定义，例如输入 `400` 表示 100 A（400 × 0.25A）。取值范围为 0–512，对应实际电流 0–128 A；输入 `0` 表示启用自动模式。该设置通过 BIOS VR mailbox 命令 `0x6` 进行控制。
-- VR Voltage Limit（电压调节器电压限制）：Voltage Limit (VMAX)这是用于设置电压调节器（VR）允许的最大瞬时输出电压，单位为毫伏（mV）。其取值范围为 0–7999 mV。此设置通过 BIOS VR mailbox 命令 0x8 进行控制。
+- VR Voltage Limit（电压调节器电压限制）：Voltage Limit (VMAX) 这是用于设置电压调节器（VR）允许的最大瞬时输出电压，单位为毫伏（mV）。其取值范围为 0–7999 mV。此设置通过 BIOS VR mailbox 命令 0x8 进行控制。
 - TDC Enable（Thermal Design Current，热设计电流）：CPU 平均 *电流* 不能超过此值。选项：Disable（禁用）/Enable（启用）。此选项决定了：
 
   - TDC Current Limit（热设计电流当前限制）：以 1/8 安培（A）为递增单位定义，取值范围为 0–32767。例如，如果要设置最大瞬时电流为 125 A，应输入 1000（1000 × 0.125 A \= 125 A）。输入 `0` 表示设置为自动模式（0 A）。该参数通过 BIOS 的 VR mailbox 命令 `0x1A` 进行配置。
@@ -1429,12 +1429,12 @@ Enable（启用）
 
 注：代表 CPU/封装睡眠状态。
 
-- C0 - 活动： CPU 打开并运行。
-- C1 - 自动停止： 内核时钟已关闭。处理器没有执行指令，但几乎可以立即返回到执行状态。某些处理器还支持增强型 C1 状态 （C1E），以降低功耗。
-- C2 - 停止时钟： 内核时钟和总线时钟已关闭。该处理器保持所有软件可见状态，但可能需要更长的时间才能唤醒。
-- C3 - 深度睡眠： 时钟生成器已关闭。处理器无需保持其高速缓存一致性，但能保持其他状态。某些处理器具有 C3 状态（深度睡眠、深度睡眠）的变体，与唤醒处理器所需的时间不同。
-- C4 - 更深度的睡眠： 降低 VCC
-- DC4 - 更深度的 C4 睡眠： 进一步减少 VCC
+- C0 - 活动：CPU 打开并运行。
+- C1 - 自动停止：内核时钟已关闭。处理器没有执行指令，但几乎可以立即返回到执行状态。某些处理器还支持增强型 C1 状态（C1E），以降低功耗。
+- C2 - 停止时钟：内核时钟和总线时钟已关闭。该处理器保持所有软件可见状态，但可能需要更长的时间才能唤醒。
+- C3 - 深度睡眠：时钟生成器已关闭。处理器无需保持其高速缓存一致性，但能保持其他状态。某些处理器具有 C3 状态（深度睡眠、深度睡眠）的变体，与唤醒处理器所需的时间不同。
+- C4 - 更深度的睡眠：降低 VCC
+- DC4 - 更深度的 C4 睡眠：进一步减少 VCC
 
 参见 [处理器深度和深度睡眠状态之间的差异](https://www.intel.cn/content/www/cn/zh/support/articles/000006619/processors/intel-core-processors.html)
 
@@ -1672,7 +1672,7 @@ Enable（启用）
 
 说明：
 
-指定交流电源适配器（AC 适配器）容量，即交流电源适配器（AC Brick） 的额定功率容量（W）
+指定交流电源适配器（AC 适配器）容量，即交流电源适配器（AC Brick）的额定功率容量（W）
 
 ##### EC Polling Period（嵌入式控制器 EC 轮询周期）
 
@@ -1830,7 +1830,7 @@ Enable（启用）
 
 需要操作系统支持。工业物联网可能会用到此选项，按需开启。
 
-JHI：Intel® DAL（Dynamic Application Loader） Host Interface Service，Intel 动态应用加载器主机接口服务
+JHI：Intel® DAL（Dynamic Application Loader）Host Interface Service，Intel 动态应用加载器主机接口服务
 
 英特尔 ® 动态应用加载器（Intel® DAL）是英特尔 ® 平台的一项独特功能，适用于多种形态的设备，包括工作站、台式机、笔记本、平板电脑和物联网设备。它可用于在英特尔 ® 融合安全与管理引擎固件上运行小段 Java\* 代码。
 
@@ -1884,7 +1884,7 @@ PTT：Platform Trust Technology，Intel 可信平台技术。如果要安装 Win
 
 英特尔 ® PTT 是符合 2.0 规范并提供与独立 TPM 相同的功能的集成 TPM，只是它驻留在系统的固件中，因此无需专用处理或内存资源。
 
-参见 [什么是可信平台模型 （TPM） 及其与英特尔 ® Platform Trust Technology （英特尔 ® PTT） 的关系？](https://www.intel.cn/content/www/cn/zh/support/articles/000094205/processors/intel-core-processors.html)
+参见 [什么是可信平台模型（TPM）及其与英特尔 ® Platform Trust Technology（英特尔 ® PTT）的关系？](https://www.intel.cn/content/www/cn/zh/support/articles/000094205/processors/intel-core-processors.html)
 
 #### TPM Device Selection（TPM 设备选择）
 
@@ -1908,7 +1908,7 @@ TPM 或受信任的平台模块是一种驻留在计算机主板或其处理器�
 
 FIPS 140-2（Federal Information Processing Standard 140-2），联邦信息处理标准 (FIPS) 出版物 140-2 是美国政府标准，它定义了信息技术产品中加密模块的最低安全要求
 
-联邦信息处理标准（FIPS） 指定了联邦政府对加密模块的要求。
+联邦信息处理标准（FIPS）指定了联邦政府对加密模块的要求。
 
 #### FIPS Mode Select（联邦信息处理标准模式选择）
 
@@ -2071,11 +2071,11 @@ MCTP（Management Component Transport Protocol，管理组件传输协议）是�
 
 Intel 管理引擎的设备发现和管理功能需要。
 
-参见 [H3C HDM MCTP 技术白皮书-6W101](https://www.h3c.com/cn/Service/Document_Software/Document_Center/Home/Public/00-Public/Learn_Technologies/White_Paper/H3C_HDM_MCTP_WP-848/)
+参见 [H3C HDM MCTP 技术白皮书 -6W101](https://www.h3c.com/cn/Service/Document_Software/Document_Center/Home/Public/00-Public/Learn_Technologies/White_Paper/H3C_HDM_MCTP_WP-848/)
 
 ### Anti-Rollback SVN Configuration（防回滚 SVN 配置）
 
-Anti-Rollback SVN Configuration 是一个用于配置 Intel 管理引擎（ME） 固件版本控制的选项。该功能通过引入安全版本号（SVN），防止系统降级至较旧或潜在存在安全漏洞的固件版本，从而增强系统的安全性。
+Anti-Rollback SVN Configuration 是一个用于配置 Intel 管理引擎（ME）固件版本控制的选项。该功能通过引入安全版本号（SVN），防止系统降级至较旧或潜在存在安全漏洞的固件版本，从而增强系统的安全性。
 
 #### Automatic HW-Enforced Anti-Rollback SVN（自动硬件强制防回滚 SVN）
 
@@ -2103,7 +2103,7 @@ Enable（启用）
 
 ### OEM Key Revocation Configuration（OEM 密钥吊销配置）
 
-“OEM Key Revocation Configuration BIOS” 是 BIOS/UEFI 中管理 OEM 密钥吊销机制的选项，通常用于控制是否启用针对预装系统 OEM 密钥或证书的废止管理。
+“OEM Key Revocation Configuration BIOS”是 BIOS/UEFI 中管理 OEM 密钥吊销机制的选项，通常用于控制是否启用针对预装系统 OEM 密钥或证书的废止管理。
 
 让 BIOS 通过 HECI 指令吊销（作废）CSME/ME 中的 OEM 密钥，以提升平台安全、避免旧/受损密钥继续被信任。
 
@@ -2137,7 +2137,7 @@ Enable（启用）
 
 Intel® 时间协调计算（Intel® TCC）能为实时应用提供优化的计算和时间性能，支持基于无线和有线融合网络的 IEEE\* 802.1 时间敏感网络（TSN）。
 
-参见 [公共英特尔 ® 时序协调计算 （TCC） 用户指南](https://www.intel.cn/content/www/cn/zh/content-details/851159/public-intel-time-coordinated-compute-tcc-user-guide.html)、[Step 7: Configure Intel® TCC Tools in BIOS](https://www.intel.com/content/www/us/en/docs/tcc-tools/tutorial-vtune-profiler/2022-2/step-7-configure-intel-tcc-tools-in-bios.html)
+参见 [公共英特尔 ® 时序协调计算（TCC）用户指南](https://www.intel.cn/content/www/cn/zh/content-details/851159/public-intel-time-coordinated-compute-tcc-user-guide.html)、[Step 7: Configure Intel® TCC Tools in BIOS](https://www.intel.com/content/www/us/en/docs/tcc-tools/tutorial-vtune-profiler/2022-2/step-7-configure-intel-tcc-tools-in-bios.html)
 
 ### Intel® TCC Mode（Intel TCC 模式）
 
@@ -2326,7 +2326,7 @@ Enable（启用）
 说明：
 
 选择此项目将告知 OS 支持 PPI（Physical Presence Interface，物理存在接口）规范版本 1.2 或 1.3。请注意，一些 HCK 测试（一种用于验证硬件设备和驱动程序与 Windows 操作系统的兼容性的测试框架，用于获得数字证书）可能不支持版本 1.3。
-物理状态接口利用行业标准的高级配置和电源接口 （ACPI） 在操作系统和 BIOS 之间提供通信机制，使操作系统和 BIOS 能够协作，提供简单直接的平台用户体验来管理 TPM，而无需牺牲安全性。
+物理状态接口利用行业标准的高级配置和电源接口（ACPI）在操作系统和 BIOS 之间提供通信机制，使操作系统和 BIOS 能够协作，提供简单直接的平台用户体验来管理 TPM，而无需牺牲安全性。
 
 #### Device Select（设备选择）
 
@@ -2443,7 +2443,7 @@ Enable（启用）
 RTC 是 BIOS 的实时时钟，用于存储时间数据。定时开机。
 
 - RTC Alarm Date (Days)，选项：Everyday（每天），1-31 天。
-- RTC larm Time (Hours)小时
+- RTC larm Time (Hours) 小时
 - RTC Alarm Time (Minutes) 分
 - RTC Alarm Time (seconds) 秒
 
@@ -2635,7 +2635,7 @@ Putty 是 Windows 上一款常用的终端模拟器。
 
 #### Console Redirection Settings (EMS)（Windows 紧急管理控制台重定向设置）
 
-##### Out-of-Band Mgmt Port（）
+##### Out-of-Band Mgmt Port ()
 
 选项：
 
@@ -2827,7 +2827,7 @@ Manual（手动）
 
 设置设备在正确向主机控制器报告自身之前所允许的最长时间。
 
-“Auto”模式使用默认值（对于根端口为 100 毫秒， 对于集线器端口则采用集线器描述符中的延迟值）。
+“Auto”模式使用默认值（对于根端口为 100 毫秒，对于集线器端口则采用集线器描述符中的延迟值）。
 
 即：
 
@@ -2861,7 +2861,7 @@ Enable（启用）
 
 网络启动相关设置。
 
-指定是否启用（Enabled） UEFI 网络栈以允许通过 UEFI 进行网络访问）。当设置为 Disabled 时，将无法通过 PXE 使用 UEFI 进行系统安装。
+指定是否启用（Enabled）UEFI 网络栈以允许通过 UEFI 进行网络访问）。当设置为 Disabled 时，将无法通过 PXE 使用 UEFI 进行系统安装。
 
 此选项决定了以下选项：
 
@@ -2917,7 +2917,7 @@ Enable（启用）
 
 CSM：Compatibility Support Module，兼容性支持模块。
 
-Intel 在 500 及更新系列的芯片组（11 代及后续处理器）不支持 VBIOS 的显示适配器，导致内置核显不支持 legacy boot，因此其 CSM 选项是灰色的。必须使用有支持 VBIOS 的外置独显才能进行配置。参见 [Intel 500 系列开始，在 BIOS 中的 CSM 选项无法选用问题?](https://www.asus.com.cn/support/faq/1045467/)。
+Intel 在 500 及更新系列的芯片组（11 代及后续处理器）不支持 VBIOS 的显示适配器，导致内置核显不支持 legacy boot，因此其 CSM 选项是灰色的。必须使用有支持 VBIOS 的外置独显才能进行配置。参见 [Intel 500 系列开始，在 BIOS 中的 CSM 选项无法选用问题？](https://www.asus.com.cn/support/faq/1045467/)。
 
 ![](../.gitbook/assets/image-20250721170014-1xxoskv.png)
 
@@ -2979,7 +2979,7 @@ Keep（保持）
 
 此选项依赖 Boot option filter（启动选项过滤）
 
-“80h” 是传统 BIOS 中代表第一块硬盘（通常是主启动盘）的编号。
+“80h”是传统 BIOS 中代表第一块硬盘（通常是主启动盘）的编号。
 
 某些操作系统需要调整硬盘驱动器的句柄，例如操作系统安装在 80h 号驱动器上。
 
@@ -3099,7 +3099,7 @@ Not Available：不可用，即未测试过。
 
 SDIO 参数配置。
 
-SDIO（Secure Digital Input and Output），即安全数字输入输出接口。 SDIO 协议是由 SD 卡协议演进而来，向下兼容 SD 卡协议。一般嵌入式设备会使用。
+SDIO（Secure Digital Input and Output），即安全数字输入输出接口。SDIO 协议是由 SD 卡协议演进而来，向下兼容 SD 卡协议。一般嵌入式设备会使用。
 
 ### SDIO Access Mode（SDIO 访问模式）
 
@@ -3127,7 +3127,7 @@ PIO：通过 CPU 按指令逐字节处理 USB/SD 设备数据，CPU 参与度高
 
 列出的 eMMC 设备：
 
-#### eMMC Y20128（125.0GB）
+#### eMMC Y20128 (125.0GB)
 
 选项：
 
@@ -3155,7 +3155,7 @@ Forced FDD：可以将硬盘驱动器强制以软盘方式启动。
 
 选项：
 
-90 / 95 / 100 / 105 / 110 / 115 / 117 / 119 （单位是摄氏度）
+90 / 95 / 100 / 105 / 110 / 115 / 117 / 119（单位是摄氏度）
 
 Disabled（禁用）
 
@@ -3167,7 +3167,7 @@ Disabled（禁用）
 
 选项：
 
-80 / 85 / 90 / 95 / 100 / 105 / 107 / 109 （单位是摄氏度）
+80 / 85 / 90 / 95 / 100 / 105 / 107 / 109（单位是摄氏度）
 
 Disabled（禁用）
 
@@ -3483,7 +3483,7 @@ Last State
 
 指定在电源故障（G3 状态，完全断电）后重新加电时系统应进入的状态。
 
-如果是无电池运行模式（Batteryless Operation），芯片组在电源故障后总是自动开机（即 Always ON）：因此，选择“Always OFF”恢复类型或者“Last State”且上一次状态为关机时，那么系统将自动开机后立即关闭.
+如果是无电池运行模式（Batteryless Operation），芯片组在电源故障后总是自动开机（即 Always ON）：因此，选择“Always OFF”恢复类型或者“Last State”且上一次状态为关机时，那么系统将自动开机后立即关闭。
 
 ### No C-MOS battery handling（无 CMOS 电池处理逻辑）
 
@@ -3496,7 +3496,7 @@ Disabled（禁用）
 说明：
 
 在没有 CMOS 电池的系统中（例如服务器或嵌入式设备），芯片组通常会在断电后自动上电：  
-因此，如果将恢复类型设置为 “Always OFF”，或者设置为 “Last State” 且上一次状态为关机，那么系统将自动开机后立即关闭。
+因此，如果将恢复类型设置为“Always OFF”，或者设置为“Last State”且上一次状态为关机，那么系统将自动开机后立即关闭。
 
 ### LID_BTN# Configuration（LID_BTN# 信号配置）
 
@@ -3707,7 +3707,7 @@ Disabled（禁用）
 
 GPIO，General Purpose Input Output：通用输入/输出。一般嵌入式设备才有。
 
-#### GPIOx（GPIO x）
+#### GPIOx (GPIO x)
 
 ##### Configuration（配置）
 
@@ -3825,7 +3825,7 @@ TLS，Transport Layer Security 传输层安全性协议是一种广泛采用的�
 
 服务器端 CA 证书配置菜单。
 
-CA(Certification Authority)认证机构：CA 是可信任的第三方机构，它负责颁发数字证书并验证证书申请者的身份。CA 是数字证书体系中的最高权威，其颁发的数字证书被广泛接受和信任。数字证书中包含了 CA 的公钥和数字签名，用于验证证书的真实性和完整性。
+CA(Certification Authority) 认证机构：CA 是可信任的第三方机构，它负责颁发数字证书并验证证书申请者的身份。CA 是数字证书体系中的最高权威，其颁发的数字证书被广泛接受和信任。数字证书中包含了 CA 的公钥和数字签名，用于验证证书的真实性和完整性。
 
 CA 证书是网络环境中具体身份的合法性证明。
 
