@@ -142,7 +142,7 @@ StartupNotify=false
 Categories=Network
 ```
 
-设置 `wechat.desktop` 文件权限为 `755`，使其可执行:
+设置 `wechat.desktop` 文件权限为 `755`，使其可执行：
 
 ```sh
 # chmod 755 ~/.local/share/applications/wechat.desktop
