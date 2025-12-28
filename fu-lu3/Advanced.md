@@ -2443,7 +2443,7 @@ Enable（启用）
 RTC 是 BIOS 的实时时钟，用于存储时间数据。定时开机。
 
 - RTC Alarm Date (Days)，选项：Everyday（每天），1-31 天。
-- RTC larm Time (Hours) 小时
+- RTC Alarm Time (Hours) 小时
 - RTC Alarm Time (Minutes) 分
 - RTC Alarm Time (seconds) 秒
 
