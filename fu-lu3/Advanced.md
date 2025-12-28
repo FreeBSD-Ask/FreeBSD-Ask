@@ -2861,7 +2861,7 @@ Enable（启用）
 
 网络启动相关设置。
 
-指定是否启用（Enabled）UEFI 网络栈以允许通过 UEFI 进行网络访问）。当设置为 Disabled 时，将无法通过 PXE 使用 UEFI 进行系统安装。
+指定是否启用（Enabled）UEFI 网络栈以允许通过 UEFI 进行网络访问。当设置为 Disabled 时，将无法通过 PXE 使用 UEFI 进行系统安装。
 
 此选项决定了以下选项：
 
