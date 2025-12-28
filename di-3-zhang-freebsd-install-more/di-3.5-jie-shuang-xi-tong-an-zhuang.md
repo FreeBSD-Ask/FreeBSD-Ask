@@ -244,7 +244,7 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 # 设置 ZFS 池的引导文件系统（bootfs）为 `zroot/ROOT/default`
 # zpool set bootfs=zroot/ROOT/default zroot
 
-# 配置系统在启动时启用 ZFS 服务①
+# 配置系统在启动时启用 ZFS 服务 ①
 # printf 'zfs_enable="YES"\n' >> /tmp/bsdinstall_etc/rc.conf
 
 # 挂载现有的 EFI 系统分区
