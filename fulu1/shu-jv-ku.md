@@ -1,10 +1,10 @@
 # 关系型数据库基础
 
-## UNIX 中连接到数据库、执行 SQL 脚本
+## UNIX 系统中连接数据库并执行 SQL 脚本
 
 ```sh
-# mysql -u root -p
-# source FileName.sql
+# mysql -u root -p          # 以 root 用户登录 MySQL，系统会提示输入密码
+# source FileName.sql       # 在 MySQL 交互式界面中执行指定的 SQL 文件
 ```
 
 ## 建立数据库
@@ -15,7 +15,7 @@ create database db_name;
 
 - `db_name`：数据库名
 
-数据库命名区分大小写，最长 64 字符，别名最长 256 字符，不能使用数据库关键字。
+数据库名称区分大小写，长度最长为 64 个字符，别名长度最长为 256 个字符，不能使用数据库关键字。
 
 ## 数据库重命名
 
@@ -97,14 +97,14 @@ show tables;
 ## 展示表结构
 
 ```sql
-desc tables;
+desc table_name;
 ```
 
 
 ## 显示表全部信息（select 后面细说）
 
 ```sql
-select * from tables;
+select * from table_name;
 ```
 
 ## SQL 语法：注释
@@ -113,9 +113,15 @@ select * from tables;
 -- 注释不会被执行
 ```
 
-写脚本加注释是一个好习惯，防止你过一段时间不知道自己写的什么...
+在脚本中添加注释或许是一种良好习惯，可以避免在一段时间后难以理解代码的用途。
 
-## 主键、唯一、不许为空、自动编号
+>**思考题**
+>
+>>如果代码注释仅仅起到助记作用，那么任何注释都不属于代码本身。除非已经失去了再次编写相同代码的能力，否则也没有必要刻意去理解之前编写的代码。
+>
+>请读者思考代码注释的真正意义。
+
+## 主键、唯一约束、非空约束与自动编号
 
 ```sql
 create table 表名
@@ -153,7 +159,7 @@ add column new_col data_type;
 ## 表删除列
 
 ```sql
-alter table 表名 drop 列名;
+alter table 表名 drop column 列名;
 ```
 
 ## 表修改列数据类型
@@ -211,7 +217,7 @@ REFERENCES tstu(sid);
 ```
 
 - `fk_column_name`：外键名
-- `fk_column`：外部表格列名
+- `fk_column`：子表中的外键列名
 
 ### 表删除外键
 
@@ -226,19 +232,19 @@ drop foreign key fk_name;
 ### 外键的概念
 
 
-- 父表：外键引用的表。父表中的被引用列通常是主键（PRIMARY KEY）或唯一键（UNIQUE）。例如上面的黄色表。
-- 子表：包含外键的表。子表中的外键列指向父表中的主键或唯一键。例如上面的绿色表。
+- 父表：外键引用的表。父表中的被引用列通常是主键（PRIMARY KEY）或唯一键（UNIQUE）。例如上文示例中的父表。
+- 子表：包含外键的表。子表中的外键列指向父表中的主键或唯一键。例如上文示例中的子表。
 
 ### 删除父表数据时失败
 
 - 原因：子表中存在引用该数据的记录。
 - 解决：使用 `ON DELETE CASCADE` 或先删除子表中的记录。
-- `ON DELETE CASCADE` 又是一堆内容，先略过。看 [往下数三个章节](##自动维护父表和子表之间的参照完整性)。
+- `ON DELETE CASCADE` 涉及较多内容，此处暂不展开，详见后文“自动维护父表和子表之间的参照完整性”一节。
 
 ### 下面是一个父、子表格和外键的示例
 
 ```sql
--- 创建父表 customers
+-- 创建父表 customers，包含以下列：
 CREATE TABLE customers (
     id INT AUTO_INCREMENT PRIMARY KEY, -- 主键，自动编号
     name VARCHAR(100) NOT NULL,        -- 客户名
@@ -272,7 +278,7 @@ CREATE TABLE orders (
    `ON DELETE CASCADE` 删除父表记录时，子表中引用该记录的行也会被删除。  
    `ON UPDATE CASCADE` 更新父表主键时，子表外键列会自动更新。
 
-## 修改列数据类型
+## 修改列的数据类型
 
 ```
 ALTER TABLE 表名
@@ -297,7 +303,7 @@ set 列名 = 新的值
 where 条件;
 ```
 
-注：set 你选择了一整列，想修改单个或多个位置的值，就需要 where 的条件来限定，你是要修改整列，还是其中哪个。类似横竖交叉定位一个坐标点。
+注：set 子句用于指定需要修改的列。如果只希望修改部分记录，需要通过 where 子句限定条件，以明确修改的范围。
 
 ```sql
 -- 删除行
@@ -313,7 +319,7 @@ set Price = Price * 1.2
 where Publisher = "人民邮电出版社";
 ```
 
-翻译成人话：将表 `book_table` 中 `Publisher` 值为 `"人民邮电出版社"` 的行，Price 值全乘以 `1.2`（就是增加 20%）
+通俗解释：将表 `book_table` 中 `Publisher` 值为 `"人民邮电出版社"` 的记录，其 `Price` 值统一乘以 `1.2`，即在原价基础上增加 20%。
 
 ```sql
 DELETE FROM book_table
@@ -323,7 +329,7 @@ DELETE FROM book_table
 WHERE author IN ('王阳', '刘天洋');
 ```
 
-### “Where 子句”
+### WHERE 子句
 
 
 ```
@@ -338,7 +344,8 @@ WHERE name in ('张三', '李四');
 1. 如果 `Price` 值小于 50，就...
 2. 如果 `author` 值是王阳或者刘天洋，就...
 3. 如果 `name` 值是张三或者李四，就...
-   where 接收写在后面的表达式，表达式会运算出一个布尔值。
+
+   WHERE 子句用于接收条件表达式，该表达式会计算并返回一个布尔值。
 
 ### 这里就需要一个知识：SQL 运算符
 
@@ -352,7 +359,7 @@ WHERE name in ('张三', '李四');
 
 #### 比较运算符
 
-- `=` 等于（也是赋值运算符）
+- `=` 等于（在 SQL 中用于比较，而非赋值）
 - `!=` 不等于
 - `<` 小于
 - `>` 大于
@@ -369,7 +376,7 @@ WHERE name in ('张三', '李四');
 
 #### 特殊运算符
 
-- `in` ：“值在列表中”运算符，用来筛选符合条件的表项，并对符合的项返回一个“真”的布尔值，交给前面 update 或者 delete 进行操作。例如 `5 in (1, 3, 5)` 返回真。
+- `in` ：“值在列表中”运算符，用于筛选符合条件的记录，并返回布尔结果，供 update 或 delete 语句使用。例如 `5 in (1, 3, 5)` 返回真。
 - `between` 范围匹配：例如 `5 between 1 and 10` 返回真。
 - `like` 模式匹配：`'abc' like 'a%'` 返回真。百分号在这里类似 sh 的通配符。
 - `IS NULL` ”判断表项是否为 NULL“：`NULL IS NULL` 返回 TRUE。  
@@ -386,7 +393,7 @@ where BookName like '_____';
 
 在一个书籍管理库中会返回类似《mysql 数据库设计》的书名。
 
-这样一来，上面 where 后面的东西不就能看懂了？
+通过上述说明，可以更好地理解 WHERE 子句中条件表达式的含义。
 
 ## 自动维护父表和子表之间的参照完整性
 
@@ -398,24 +405,25 @@ where BookName like '_____';
 
 ## SELECT 语句
 
-select 后面是列名，写上 `*` 则是选择所有列
+SELECT 关键字后指定要查询的列名，使用 `*` 表示选择所有列。
+
 
 ```sql
 select * from student_table
-where age=(select max(age) from student_table;);
+where age = (select max(age) from student_table);
 ```
 
-显示 student_table 中，年龄为“student_table 中‘年龄为最大值’的条目”
+用于显示 student_table 中年龄等于该表最大年龄值的记录。
 
 ### 升序输出和降序输出
 
 ASC 升序，DESC 降序。
 
 ```sql
-SELECT student_name FROM student_table DESC;
+SELECT student_name FROM student_table ORDER BY student_name DESC;
 ```
 
-`LIMIT a, b` 截取内容。a 是索引，从 0 开始，b 是偏移量，写几就偏移几。
+`LIMIT a, b` 用于限制查询结果的数量，其中 a 表示起始位置（从 0 开始），b 表示返回的记录条数。
 
 ```sql
 SELECT * from `学生表`
@@ -447,4 +455,4 @@ WHERE stu_table.stu_id = score_table.s_id
 AND name = 'Jack';
 ```
 
-显然隐式连接更加简洁，所以这里推荐大家使用。
+虽然隐式连接语法较为简洁，但在实际开发中更推荐使用显式连接，以提高可读性和可维护性。

@@ -133,7 +133,7 @@ CKEMin：Clock Enable Minimum，时钟使能最小值
 
 CKEMin 的计时器数值，范围 [255；0]。要求最小值为 SC_ROUND_T（系统时钟周期的数量） + BYTE_LENGTH（4）（字节长度，一般是 4）。
 
-##### Allow Opp Ref Below Write Threhold（允许在写入阈值以下的机会刷新）
+##### Allow Opp Ref Below Write Threshold（允许在写入阈值以下的机会刷新）
 
 选项：
 
@@ -153,7 +153,7 @@ Disabled（禁用）
 
 ##### Write Threshold（写入阈值）
 
-配合 Allow Opp Ref Below Write Threhold（允许在写入阈值以下的机会刷新）使用。
+配合 Allow Opp Ref Below Write Threshold（允许在写入阈值以下的机会刷新）使用。
 
 在 CKE（时钟使能）为低电平期间，允许累积的写入次数（内存控制器允许积累的最大写入操作次数。一旦达到此阈值，内存控制器可能会强制退出低功耗模式，处理积累的写入操作），直到重新使能 CKE（CKE 被置为高电平）。
 
@@ -1810,7 +1810,7 @@ PPR，Post Package Repair，封装后修复。
 
 PPR 会在可能的情况下永久修复出错的行。PPR 是一种内存自我修复过程，在该过程中，系统会将对故障存储单元或地址行的访问替换为对 DRAM 设备中备用行的访问。
 
-#### SAM Overlaoding（SAM 过载）
+#### SAM Overloading（SAM 过载）
 
 选项：
 
@@ -2612,7 +2612,7 @@ Enable IOMMU during boot（启动时启用 IOMMU）
 
 如果在 DXE 阶段安装了 DMAR 表，且在 PEI 阶段安装了 VTD_INFO_PPI，则在预启动环境中启用 IOMMU。
 
-雷电 4 所需，在固件阶段尽早启用 IOMMU 可以缓解 PCIe 设备上的恶意 Option ROM，这些 ROM 在作系统加载之前不应该进行 DMA（防止 DMA 攻击）。
+雷电 4 所需，在固件阶段尽早启用 IOMMU 可以缓解 PCIe 设备上的恶意 Option ROM，这些 ROM 在操作系统加载之前不应该进行 DMA（防止 DMA 攻击）。
 
 ### X2APIC Opt Out（是否关闭第二代高级可编程中断控制器）
 
@@ -2739,7 +2739,7 @@ WRC，write cache，写缓存。WRC 功能启用 Intel® 数据直通 I/O 技术
 
 参见 [https://webdls.ieiworld.com/data/\_prod-detail-feature/DRPC-DEV-KIT/Real-Time-Tuning-Guide-11th-Gen-Intel-Core-Processors-1.4.pdf](https://webdls.ieiworld.com/data/_prod-detail-feature/DRPC-DEV-KIT/Real-Time-Tuning-Guide-11th-Gen-Intel-Core-Processors-1.4.pdf)、[file:///D:/improving-real-time-performance-of-codesys-control-applications-with-intel-s-real-time-technologies-1723443578.pdf](file:///D:/improving-real-time-performance-of-codesys-control-applications-with-intel-s-real-time-technologies-1723443578.pdf)
 
-### Above 4GB MIIO BIOS assignment（BIOS 4GB 以上 MMIO 分配）
+### Above 4GB MMIO BIOS assignment（BIOS 4GB 以上 MMIO 分配）
 
 选项：
 
@@ -3990,7 +3990,7 @@ Disabled（禁用）
 
 说明：
 
-xDI，eXtensible Device Controller Interface，可扩展的设备控制器接口
+xDCI，eXtensible Device Controller Interface，可扩展的设备控制器接口
 
 USB OTG 设备支持。
 
@@ -4458,9 +4458,9 @@ SoundWire 链路编号 x 的自主时钟停止。“x”表示链路编号。
 
 No Dmic to codec（不配置数字麦克风）
 
-4 Dmic to codec（2 个数字麦克风通道）
+4 Dmic to codec（4 个数字麦克风通道）
 
-2 Dmic to codec（4 个数字麦克风通道）
+2 Dmic to codec（2 个数字麦克风通道）
 
 说明：
 配置数字麦克风接入 ALC245
@@ -5902,7 +5902,7 @@ PSE GBE Wake On Lan（WoL），PSE 千兆网网络唤醒。
 
 ##### PSE Debug (JTAG/SWD) Enable（启用 PSE JTAG/SWD 调试）
 
-SWD（Serial Wire Debug，串行线调试）和 JTAG（Joint Test Action Group，联合测试工作组)）是两种常用的调试接口协议。
+SWD（Serial Wire Debug，串行线调试）和 JTAG（Joint Test Action Group，联合测试工作组）是两种常用的调试接口协议。
 
 选项：
 
@@ -6184,13 +6184,13 @@ SGMII：Serial Gigabit Media Independent Interface，串行千兆媒体独立接
 
 选项：
 
-24MHz 2.5Gbps
+24MHz 2.5 Gbps
 
-24MHz 1Gbps
+24MHz 1 Gbps
 
-38.4MHz 2.5Gbps
+38.4MHz 2.5 Gbps
 
-38.4MHz 1bps
+38.4MHz 1 Gbps
 
 说明：
 

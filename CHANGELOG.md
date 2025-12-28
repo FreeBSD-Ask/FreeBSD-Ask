@@ -2,6 +2,9 @@
 
 ## 2025 年第四季度
 
+- 2025.12.28
+  - 审阅“附录 Ⅰ 计算机概论”
+  - “附录 Ⅲ UEFI/BIOS 基础（基于 AMI BIOS）”：修正若干事实错误
 - 2025.12.27
   - 审阅“第 24 章 FreeBSD 内核”
   - 审阅“第 26 章 OpenBSD 入门”
@@ -386,7 +389,7 @@
   - 引入 GitHub Action：🔗 从 SUMMARY.md 更新一级标题。用于检查 SUMMARY 标题和对应文件的一级标题的符合情况
 - 2025.4.15
   - 格式化：第 5.6 节 QQ（Linux 版）
-  - 第 4.20 节 远程桌面：删除剩余的“VNC 与 RPD（XRDP）对比”部分
+  - 第 4.20 节 远程桌面：删除剩余的“VNC 与 RDP（XRDP）对比”部分
 - 2025.4.14
   - 目前对全书初版已重写 96.57%（按 Commit 数）
   - 格式化“第 11.5 章 MySQL 数据库”
@@ -649,7 +652,7 @@
 - 2024.12.14  
   - 将文学故事章节 FreeBSD 相关内容重新上线
 - 2024.12.4  
-  - 制作了视频教程《[001-WIndows11 安装 VMware17](https://www.bilibili.com/video/BV1Qji2YLEgS)》、《[002-VMware17 安装 FreeBSD14.2](https://www.bilibili.com/video/BV1gji2YLEoC)》《[003-FreeBSD14.2 安装 KDE5](https://www.bilibili.com/video/BV13ji2YLELM)》、《[004-FreBSD14.2 允许 root 登录 ssh](https://www.bilibili.com/video/BV1gji2YLE2o)》、《[005-FreeBSD14.2 更换 pkg 源为 USTC 镜像站](https://www.bilibili.com/video/BV13ji2YLEkV)》和《[006-FreeBSD14.2 安装 fcitx5 及其输入法](https://www.bilibili.com/video/BV13ji2YLE3m)》。已经分别插入了对应的目录。
+  - 制作了视频教程《[001-Windows 11 安装 VMware17](https://www.bilibili.com/video/BV1Qji2YLEgS)》、《[002-VMware17 安装 FreeBSD14.2](https://www.bilibili.com/video/BV1gji2YLEoC)》《[003-FreeBSD14.2 安装 KDE5](https://www.bilibili.com/video/BV13ji2YLELM)》、《[004-FreeBSD14.2 允许 root 登录 ssh](https://www.bilibili.com/video/BV1gji2YLE2o)》、《[005-FreeBSD14.2 更换 pkg 源为 USTC 镜像站](https://www.bilibili.com/video/BV13ji2YLEkV)》和《[006-FreeBSD14.2 安装 fcitx5 及其输入法](https://www.bilibili.com/video/BV13ji2YLE3m)》。已经分别插入了对应的目录。
 - 2024.12.3  
   - “第 1.3 节 为什么要使用 FreeBSD”新增“旧闻：《FreeBSD 基金会收到史上最大一笔捐款》”
 - 2024.11.30  
@@ -778,7 +781,7 @@
   - “第 1.6 节 UNIX 哲学”：删除不可靠且无依据的内容及引用
     - 出于可靠性考量，本书原则上禁止引用“阮一峰（<https://www.ruanyifeng.com/>）”相关内容作为参考文献
   - “第 18.2 节 系统安装”：整体排版优化；新增存储卡挑选技巧、新增 SD 卡标准分析
-- 2024.8.1：“第 2.4 节 安装 FreeBSD——基于 Vmware Workstation Pro”：新增博通注册、登录、下载流程
+- 2024.8.1：“第 2.4 节 安装 FreeBSD——基于 VMware Workstation Pro”：新增博通注册、登录、下载流程
 
 ## 2024 年 8 月之前
 
