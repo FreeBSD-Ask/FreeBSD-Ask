@@ -373,7 +373,7 @@ root     syslogd     1021 7   udp4   *:514                 *:*
 # make install clean
 ```
 
-使用 FreeBSD 通过 freerdp3 远程链接到 Windows 11 24H2：
+使用 FreeBSD 通过 freerdp3 远程连接到 Windows 11 24H2：
 
 ```sh
 $ xfreerdp3 /u:ykla /p:z  /v:192.168.31.213
@@ -498,7 +498,7 @@ PS C:\Users\ykla> gpupdate /force  # 强制刷新组策略
 用户策略更新成功完成。
 ```
 
-再测试链接：
+再测试连接：
 
 ```sh
 $ rdesktop 192.168.31.213
@@ -654,7 +654,7 @@ $ anydesk
 ```sh
 # /usr/local/bin/hbbs
 [2024-08-10 23:02:13.782550 +08:00] INFO [src/common.rs:122] Private key comes from id_ed25519
-[2024-08-10 23:02:13.782587 +08:00] INFO [src/rendezvous_server.rs:1191] Key: mgRwOWJy9Vnz3LqQYjtNHwZQYg73uhdj9iCTMmIyoP4=  #此处是 Key
+[2024-08-10 23:02:13.782587 +08:00] INFO [src/rendezvous_server.rs:1191] Key: mgRwOWJy9Vnz3LqQYjtNHwZQYg73uhdj9iCTMmIyoP4=  #	此处是 Key
 [2024-08-10 23:02:13.782655 +08:00] INFO [src/peer.rs:84] DB_URL=./db_v2.sqlite3
 [2024-08-10 23:02:13.786349 +08:00] INFO [src/rendezvous_server.rs:99] serial=0
 [2024-08-10 23:02:13.786381 +08:00] INFO [src/common.rs:46] rendezvous-servers=[]
@@ -668,7 +668,7 @@ $ anydesk
 [2024-08-10 23:02:13.786703 +08:00] INFO [src/rendezvous_server.rs:153] ALWAYS_USE_RELAY=N
 [2024-08-10 23:02:13.786734 +08:00] INFO [src/rendezvous_server.rs:185] Start
 [2024-08-10 23:02:13.786793 +08:00] INFO [libs/hbb_common/src/udp.rs:35] Receive buf size of udp [::]:0: Ok(42080)
-[2024-08-10 23:09:11.043094 +08:00] INFO [src/peer.rs:102] update_pk 1101115918 [::ffff:192.168.31.90]:37057 b"\x06\xef\x81\xb4\xe2\x9e\xff(\xcb\xd7\x985S\x95)~1O\xe2\xfcu\xeeE\x91\xf1\xf2\xa1\xbe\rk\xcd\xc1" b"\x06\xef\x81\xb4\xe2\x9e\xff(\xcb\xd7\x985S\x95)~1O\xe2\xfcu\xeeE\x91\xf1\xf2\xa1\xbe\rk\xcd\xc1" #代表设备接入
+[2024-08-10 23:09:11.043094 +08:00] INFO [src/peer.rs:102] update_pk 1101115918 [::ffff:192.168.31.90]:37057 b"\x06\xef\x81\xb4\xe2\x9e\xff(\xcb\xd7\x985S\x95)~1O\xe2\xfcu\xeeE\x91\xf1\xf2\xa1\xbe\rk\xcd\xc1" b"\x06\xef\x81\xb4\xe2\x9e\xff(\xcb\xd7\x985S\x95)~1O\xe2\xfcu\xeeE\x91\xf1\xf2\xa1\xbe\rk\xcd\xc1" #	代表设备接入
 ^C[2024-08-10 23:10:06.746255 +08:00] INFO [src/common.rs:176] signal interrupt
 ```
 

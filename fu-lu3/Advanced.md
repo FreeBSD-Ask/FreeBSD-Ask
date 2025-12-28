@@ -1,7 +1,6 @@
 # Advanced（高级）
 
-
-重复内容不译出。
+重复内容不再译出。
 
 ![](../.gitbook/assets/image-20250719125817-t7s1ru6.png)
 
@@ -11,16 +10,16 @@
 
 ### CNVi CRF Present（显示是否存在 CNVi 模块）
 
-CNVi，Connectivity Integration，英特尔 ® 集成连接技术。
+CNVi（Connectivity Integration），英特尔®集成连接技术。
 
-CRF，Companion RF，辅助 RF，实际上指无线网卡（现代的无线网卡和蓝牙一般是二合一的）。
+CRF（Companion RF，辅助射频模块），实际上指无线网卡（现代无线网卡通常与蓝牙功能集成在同一模块中）。
 
-显示是否存在 CNVi 模块。
+用于显示系统中是否存在 CNVi 模块。
 
 英特尔 ® 集成连接将 Wi-Fi 和 Bluetooth® 技术的关键元件转移到英特尔 ® 处理器上。该解决方案由以下部分组成：
 
 - CNVi，英特尔处理器的集成无线 IP 部分
-- M.2 外形配套的 RF (CRF) 模块（2230 和 1216 焊接）。事实上，尽管这些无线网卡的物理规格是 M.2，但是他们只能被特定的英特尔处理器所支持，AMD 是无法使用的。
+- M.2 外形配套的 RF (CRF) 模块（2230 和 1216 焊接）。事实上，尽管这些无线网卡的物理规格为 M.2，但它们只能被特定的英特尔处理器所支持，AMD 处理器无法使用。
 
 参见 [什么是英特尔 ® 集成连接 (CNVi) 和配套 RF (CRF) 模块？](https://www.intel.cn/content/www/cn/zh/support/articles/000026155/wireless.html)。
 
@@ -40,7 +39,7 @@ Auto Detection（自动检测）意味着如果发现独立方案，将默认启
 
 Disable Integrated（禁用集成）则会禁用集成方案。
 
-注意：当 CNVi 存在时，用于比率的 GPIO 引脚会被占用。
+注意：当 CNVi 存在时，用于比特率配置的 GPIO 引脚会被占用。
 
 #### MfUart1 type（带外通信的 UART 类型）
 
@@ -53,7 +52,7 @@ Disable Integrated（禁用集成）则会禁用集成方案。
 
 说明：
 
-这是一个测试选项，用于配置用于 WiFi 辅助带外通信的 UART 类型。
+这是一个测试选项，用于配置 Wi-Fi 辅助带外通信所使用的 UART 类型。
 
 #### Wi-Fi Core（无线核心）
 
@@ -77,7 +76,7 @@ Enable（启用）
 
 说明：
 
-BT，Bluetooth，蓝牙。
+BT（Bluetooth，蓝牙）。
 
 此选项用于启用或禁用 CNVi 中的蓝牙。
 
@@ -91,15 +90,15 @@ Enable（启用）
 
 说明：
 
-BT Audio Offload，A2DP，英特尔蓝牙音频分发技术，参见 [示范影片：以 Intel® Bluetooth® 音频卸除省电 （A2DP） （MP4）](https://www.intel.cn/content/www/cn/zh/content-details/751466/demo-video-power-saving-with-intel-bluetooth-audio-offload-a2dp-mp4.html)。硬件卸载的音频处理允许在计算机的主 CPU 之外执行主要音频处理任务：即将蓝牙传输音频的解码放到 DSP 进行处理，可降低处理器的负载并省电。参见 [Hardware-Offloaded 音频处理](https://learn.microsoft.com/zh-cn/windows-hardware/drivers/audio/hardware-offloaded-audio-processing)。
+BT Audio Offload（A2DP），英特尔蓝牙音频分发技术，参见 [示范影片：以 Intel® Bluetooth® 音频卸除省电 （A2DP） （MP4）](https://www.intel.cn/content/www/cn/zh/content-details/751466/demo-video-power-saving-with-intel-bluetooth-audio-offload-a2dp-mp4.html)。硬件卸载的音频处理允许在计算机的主 CPU 之外执行主要音频处理任务：即将蓝牙传输音频的解码放到 DSP 进行处理，可降低处理器的负载并省电。参见 [Hardware-Offloaded 音频处理](https://learn.microsoft.com/zh-cn/windows-hardware/drivers/audio/hardware-offloaded-audio-processing)。
 
-该功能可将来自蓝牙设备的 HFP 格式音频输入传送至音频 DSP，同时通过 A2DP 格式实现高能效的音频输出至蓝牙设备。
+该功能可将来自蓝牙设备的 HFP 格式音频输入传送至音频 DSP，并通过 A2DP 格式以高能效方式将音频输出至蓝牙设备。
 
 此功能仅支持 Intel® Wireless-AX 22560 网卡。
 
 #### BT RF-Kill Delay Time（蓝牙射频关闭延迟时间）
 
-作用未知。
+其具体作用尚不明确。
 
 ### RFI Mitigation（射频干扰缓解）
 
@@ -113,7 +112,7 @@ Enable（启用）
 
 启用或禁用 DDR 射频干扰抑制功能，用于控制内存模块的抗射频干扰功能。
 
-该无线电频率干扰缓解功能可能会导致 DDR 速度暂时降低。
+该射频干扰缓解功能可能会导致 DDR 运行速度暂时降低。
 
 ### CoExistence Manager（共存管理）
 
@@ -125,7 +124,7 @@ Enable（启用）
 
 说明：
 
-共存管理器可缓解英特尔 WWAN（无线广域网，如手机的 2/3/4/5G 信号）与英特尔 WLAN（WiFi/蓝牙）之间的无线电共存问题。
+共存管理器可缓解英特尔 WWAN（无线广域网，如蜂窝网络 2G/3G/4G/5G）与英特尔 WLAN（Wi-Fi/蓝牙）之间的无线电共存问题。
 
 ### Preboot BLE（预启动蓝牙）
 
@@ -139,7 +138,7 @@ Enable（启用）
 
 此选项用于启用预启动蓝牙功能。
 
-作用未知。
+其具体作用尚不明确。
 
 ### Discrete Bluetooth Interface（独立蓝牙接口）
 
@@ -163,9 +162,9 @@ Enable（启用）
 
 说明：
 
-Tile 是由 Tile 公司所开发的一款小巧的蓝牙跟踪器，可用于查找丢失物品。
+Tile 是由 Tile 公司开发的一款小型蓝牙跟踪器，可用于查找丢失的物品。
 
-如果启用，此项能让你通过智能手机上的 Tile APP 定位你的电脑。
+启用后，可通过智能手机上的 Tile 应用定位你的计算机。
 
 ### Advanced settings（高级设置）
 
@@ -183,7 +182,7 @@ Enable（启用）
 
 ### WWAN Device（WWAN 设备）
 
-选择 M.2 WWAN 设备选项以启用 4G - 7360/7560（英特尔）和 5G - M80（联发科）调制解调器。
+选择 M.2 WWAN 设备选项以启用 4G 7360/7560（英特尔）或 5G M80（联发科）调制解调器。
 
 #### Firmware Flash Device（固件闪存设备）
 
@@ -211,7 +210,7 @@ Enable（启用）
 
 WCCD ACPI 设备节点设置。
 
-作用未知。
+其具体作用尚不明确。
 
 #### WWAN Reset Workaround（WWAN 重置变通方案）
 
@@ -225,7 +224,7 @@ Enable（启用）
 
 启用此变通方案将使 BIOS 在执行 WWAN 设备加电序列之前，拉高 FULL\_CARD\_POWER\_OFF#、PERST# 和 RESET#WWAN 信号，禁用此选项则不会对其施加任何影响。
 
-作用未知。
+其具体作用尚不明确。
 
 #### WA - WWAN OEM SVID（WWAN 模块所使用的 OEM 子厂商 ID）
 
@@ -253,13 +252,13 @@ Enable（启用）
 | L2 Cache                   | L2 缓存      | 2048 KB                |
 | L3 Cache                   | L3 缓存      | 6 MB                   |
 
-效率内核（E 内核/小核）：
+能效核心（E 核心/小核）：
 
 - 物理尺寸更小，多个小核封装只占用一个大核的物理空间。
 - 旨在最大限度地提高 CPU 效率（以每瓦性能为衡量标准）。
-- 小核与大核协同工作，以加速消耗核心的任务（例如，渲染视频时）。
+- 小核与大核协同工作，用于加速对计算资源消耗较大的任务（例如视频渲染）。
 - 经过优化，可高效运行后台任务。简单的任务可以分载到小核上，例如，处理 Discord 或杀毒软件，从而使大核能够自由发挥游戏性能。
-- 只能运行单个软件线程。
+- 每个能效核心只能运行单个软件线程。
 
 参见 [什么是性能混合架构？](https://www.intel.cn/content/www/cn/zh/support/articles/000091896/processors.html)
 
@@ -301,7 +300,7 @@ Enable（启用）
 
 选择“启用”以在 CPU 进入 C6 状态时将 DRAM 内容移动到 PRM 内存中。
 
-*C6* 是最深级别的休眠，此时 CPU 的供电减少为 0，通常会降低 80%-90% 的功耗。
+C6 是最深级别的休眠状态，此时 CPU 核心供电接近关闭，通常可降低约 80%～90% 的功耗。
 
 ### SW Guard Extension（英特尔 SGX 技术）
 
@@ -313,7 +312,7 @@ Enable（启用）
 
 说明：
 
-SW Guard Extension，SGX。英特尔软件防护扩展功能，一种新型（2013、2015）可信计算技术。英特尔基于 TXT 提出了 SGX。
+SW Guard Extension（SGX），即英特尔软件防护扩展，是一种较新的可信计算技术（提出于 2013 年，逐步应用于 2015 年前后）。
 
 SGX 能够在计算平台上提供一个可信的隔离空间，保障用户关键代码和数据的机密性和完整性。
 
@@ -350,11 +349,11 @@ CPU Flex Ratio Override 即 CPU 倍频设置，仅当此选项为 Enable 时，�
 
 该数值必须介于最大能效比（LFM，即最低主频）和硬件设定的最大非睿频比率（HFM，即默频）之间（最低主频 ≤ 你设置的值 ≤ 默频）。
 
-CPU 主频 \= 基准时钟（Base Clock，即外频，BIOS 中是 100 MHz × 倍频（Multiplier）
+CPU 主频 = 基准时钟（Base Clock，即外频，BIOS 中通常为 100 MHz）× 倍频（Multiplier）。
 
 例如，CPU 倍频为 46x，基本时钟速度为 100 MHz，则时钟速度为 4.6GHz。
 
-因此需要 x 10 来计算即可。
+因此直接将倍频数值乘以 100 MHz 即可得到主频。
 
 最高主频一般可通过官方 CPU 数据表查询，Intel 参见 [https://www.intel.cn/content/www/cn/zh/ark.html#@Processors](https://www.intel.cn/content/www/cn/zh/ark.html#@Processors)
 
@@ -372,7 +371,7 @@ Enable（启用）
 
 需要处理器支持才有此选项。
 
-硬件预先访存技术。用于开启或关闭 MLC 流式预取器。在 CPU 处理指令或数据之前，它将这些指令或数据从内存预取到 L2 缓存中，借此减少内存读取的时间，帮助消除潜在的瓶颈。
+硬件预取技术。用于开启或关闭 MLC 流式预取器。在 CPU 处理指令或数据之前，它将这些指令或数据从内存预取到 L2 缓存中，借此减少内存读取的时间，帮助消除潜在的瓶颈。
 
 ### Adjacent Cache Line Prefetch（相邻的高速缓存行预先访存）
 
@@ -430,7 +429,7 @@ Enable（启用）
 
 说明：
 
-Intel 高级矢量扩展（Intel's Advanced Vector Extensions，AVX），是一组指令集。可以加速工作负载和用例的性能，如科学模拟、金融分析、人工智能 (AI) /深度学习、3D 建模和分析、图像和音频/视频处理、密码学和数据压缩等。
+Intel 高级矢量扩展（Advanced Vector Extensions，AVX）是一组指令集。可以加速工作负载和用例的性能，如科学模拟、金融分析、人工智能 (AI) /深度学习、3D 建模和分析、图像和音频/视频处理、密码学和数据压缩等。
 
 ### Active Performance-cores（激活的性能核心）
 
@@ -454,15 +453,13 @@ ALL（全部）
 
 1
 
-1
-
 说明：
 
 每个处理器封装中要启用的 E-core（能效核心/小核）数量。如果你有大核的话，可完全关闭（即不使用小核）。
 
 但是有的处理器是纯小核。
 
-注意：会同时考虑 P 核心和 E 核心的数量。当两者都设置为 0 时，BIOS 会启用所有核心。
+注意：该设置会同时考虑 P 核心和 E 核心的数量。当两者都设置为 0 时，BIOS 会启用所有核心。
 
 ### Hyper-Threading（英特尔 ® 超线程技术/英特尔 ® HT 技术）
 
@@ -478,7 +475,7 @@ Enable（启用）
 
 参见 [什么是超线程？](https://www.intel.cn/content/www/cn/zh/gaming/resources/hyper-threading.html)
 
-### BIST（内置的自检程序）
+### BIST（内置自检程序）
 
 选项
 
@@ -488,7 +485,7 @@ Enable（启用）
 
 说明：
 
-Built-in Self Test，内置的自我测试程序。
+Built-in Self Test（BIST），内置自检程序。
 
 ### AP threads Idle Manner（AP 线程空闲模式）
 
@@ -502,7 +499,7 @@ RUN Loop
 
 说明：
 
-选择启用以开启 AP 线程的空闲模式。
+选择相应选项以配置 AP 线程的空闲模式。
 
 HALT Loop：让 CPU 进入 C1/C1E 休眠状态，但是不再继续进入更深的休眠状态
 
@@ -510,7 +507,7 @@ MWAIT Loop：MWAIT 指令让 CPU 停止执行，直到被监控的内存区域�
 
 RUN Loop：确保 CPU 始终处于运行状态，不进入空闲循环
 
-AP 线程待机模式-等待运行信号。
+该项用于配置 AP 线程的待机行为，即等待运行信号。
 
 C 状态相关设置。应用处理器（Application Processor，AP）。在计算机系统中，除引导处理器外的所有其他处理器都称为应用处理器。参见 [https://uefi.org/specs/PI/1.8/V2_DXE_Boot_Services_Protocols.html](https://uefi.org/specs/PI/1.8/V2_DXE_Boot_Services_Protocols.html?)
 
@@ -560,7 +557,7 @@ Monitor 指令用于监控某个内存区域的写入操作，而 MWait 指令�
 
 这个是配合上面的 AP threads Idle Manner（AP 线程空闲模式）一起使用的。增强型 vSphere 计算（Enhanced vMotion Compatibility，EVC）也需要开启该选项。
 
-### Intel® Trusted Executed Technology（英特尔可信执行技术/TXT）
+### Intel® Trusted Execution Technology（英特尔可信执行技术/TXT）
 
 选项
 
@@ -733,7 +730,7 @@ Enable（启用）
 
 说明：
 
-Intel SpeedStep 技术可使系统自动调节处理器电压和核心频率（使操作系统能够控制和选择 P-state），以降低功耗和减少散热。开启后可固定 CPU 睿频倍频。
+Intel SpeedStep 技术可使系统自动调节处理器电压和核心频率（允许操作系统控制和选择 P 状态），以降低功耗和散热需求。开启后可固定 CPU 睿频倍频。
 
 让处理器在多个频率和电压点之间切换。在禁用的情况下，CPU 会按照最高频率和电压运行，避免 CPU 频率变化，有助于改善实时性。
 
@@ -769,7 +766,7 @@ Enable（启用）
 
 ITBMT 3.0 能识别处理器上性能最佳的内核，同时通过提高利用电源和散热器空间时所必需的频率，提高这些内核的性能。由于生产差异，处理器内核的最大潜在频率各不相同。ITBMT 3.0 可识别 CPU 上最多两个速度最快的内核，称为“青睐的内核”。然后，它会对这些内核（或该内核）应用频率提升，并将关键工作负载分配到它们。ITBMT 3.0 旨在充分利用每个内核的最高频率，参见 [英特尔 ® 睿频加速 Max 技术 3.0 技术常见问题解答](https://www.intel.cn/content/www/cn/zh/support/articles/000021587/processors.html)。
 
-关闭有助于改善实时性，CPU 频率和电压不会被动态调整。
+关闭该功能有助于改善实时性，此时 CPU 频率和电压不会被动态调整。
 
 #### Per Core P state OS control mode（每核心 P 状态控制）
 
@@ -974,7 +971,7 @@ Enable（启用）
 
 PL1 是平均功耗的限制阈值，不会被超过 —— 英特尔推荐设置为等于处理器的基础功耗（即 TDP）。PL1 不应高于散热方案的散热能力上限。参见 [12th Generation Intel® Core™ Processors](https://edc.intel.com/content/www/us/en/design/ipla/software-development-platforms/client/platforms/alder-lake-desktop/12th-generation-intel-core-processors-datasheet-volume-1-of-2/011/package-power-control/)。
 
-实现 Intel® Turbo Boost 技术 2.0 只需配置 PL1、PL2 和 Tau。
+实现 Intel® Turbo Boost 技术 2.0 通常只需正确配置 PL1、PL2 和 Tau 参数。
 
 ##### Power Limit 1 Time Window（功耗限制 1 时间窗口）
 
@@ -1066,7 +1063,7 @@ PSYS 平台电源最大功率（Pmax）以 1/8 瓦为单位定义，范围为 0 
 
 例如，要设置最大功率为 125 瓦，输入 1000（即 1000 × 1/8 \= 125 瓦）。设置为 0 表示自动（AUTO）。该设置通过 BIOS VR mainbox 命令 0xB 进行控制。
 
-作用未知。
+其具体作用尚不明确。
 
 ##### Min Voltage Override（覆盖最低电压）
 
@@ -1927,7 +1924,7 @@ Enable（启用）
 
 ### ME Debug Configuration（Intel 管理引擎调试配置）
 
-#### HECI Timeous（HECI 超时）
+#### HECI Timeout（HECI 超时）
 
 
 选项：
@@ -2042,7 +2039,7 @@ Enable（启用）
 
 KT 设备即 Intel 管理引擎的硬件接口设备，操作系统通过该设备与 Intel 管理引擎进行通信。
 
-#### DOI3 Setting for HECI Disable（DOI3 设置：用于禁用 HECI）
+#### D0i3 Setting for HECI Disable（D0i3 设置：用于禁用 HECI）
 
 选项：
 
@@ -2329,7 +2326,7 @@ Enable（启用）
 说明：
 
 选择此项目将告知 OS 支持 PPI（Physical Presence Interface，物理存在接口）规范版本 1.2 或 1.3。请注意，一些 HCK 测试（一种用于验证硬件设备和驱动程序与 Windows 操作系统的兼容性的测试框架，用于获得数字证书）可能不支持版本 1.3。
-物理状态接口利用行业标准的高级配置和电源接口 （ACPI） 在作系统和 BIOS 之间提供通信机制，使作系统和 BIOS 能够协作，提供简单直接的平台用户体验来管理 TPM，而无需牺牲安全性。
+物理状态接口利用行业标准的高级配置和电源接口 （ACPI） 在操作系统和 BIOS 之间提供通信机制，使操作系统和 BIOS 能够协作，提供简单直接的平台用户体验来管理 TPM，而无需牺牲安全性。
 
 #### Device Select（设备选择）
 

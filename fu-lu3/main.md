@@ -39,7 +39,9 @@ Aptio 设置 - AMI
 - ID（编号）: 0xB06E0
 - Stepping（步进）: A0
 
-步进（Stepping）：当制造过程有所改进或者功能被修复/删除时，将为英特尔 ® 处理器创建步进代码。现在常见的 Intel 处理器的步进值都是由“一位字母+一位数字”组成的，比如根据 [英特尔 ® 处理器 N100](https://www.intel.cn/content/www/cn/zh/products/sku/231803/intel-processor-n100-6m-cache-up-to-3-40-ghz/ordering.html)，可知 N100 处理器的当前步进为“N0”（一般消费者得到的都是这个步进的处理器）。字母越靠近 z，数字越大，表明步进越高，处理器越新。但是上图 BIOS 显示此 n100 处理器步进为“A0”，很明显这是一颗工程样片。
+步进（Stepping）：当制造过程有所改进，或者功能被修复或删除时，将为英特尔®处理器创建新的步进代码。
+
+目前常见的 Intel 处理器步进值通常由“一位字母 + 一位数字”组成，例如根据[英特尔 ® 处理器 N100](https://www.intel.cn/content/www/cn/zh/products/sku/231803/intel-processor-n100-6m-cache-up-to-3-40-ghz/ordering.html) 的官方资料可知，其当前步进为“N0”（一般消费者获得的均为该步进）。字母越接近 Z，数字越大，通常表明步进版本越高，处理器相对较新。但上图 BIOS 显示该 N100 处理器的步进为“A0”，这通常表明其为工程样片。
 
 参见
 
