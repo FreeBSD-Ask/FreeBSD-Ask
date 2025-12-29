@@ -4,19 +4,19 @@
 
 已知 FreeBSD 有如下版本类型（或开发阶段）：ALPHA、BETA、RC、RELEASE、CURRENT、STABLE。
 
-**release** 版本是适用于生产环境的，即一般意义上的 **稳定版**，或可被视为一类长期支持（LTS）版本。而 ***stable*** 和 ***current*** 都属于 **开发分支**，**通常不建议用于生产环境**（“稳定”与“不稳定”是相对概念，例如 [Netflix 几乎所有节点都运行着 **current**](https://freebsdfoundation.org/netflix-case-study/)）。
+**RELEASE** 版本是适用于生产环境的，即一般意义上的 **稳定版**，或可被视为一类长期支持（LTS）版本。而 ***STABLE*** 和 ***CURRENT*** 都属于 **开发分支**，**通常不建议用于生产环境**（“稳定”与“不稳定”是相对概念，例如 [Netflix 几乎所有节点都运行着 **current**](https://freebsdfoundation.org/netflix-case-study/)）。
 
 >**注意**
 >
->FreeBSD 的 ***Stable*** 与一般 Linux 发行版的“稳定版”概念并不一致，实际上是一种 **不稳定** 的“开发版”。
+>FreeBSD 的 ***STABLE*** 与一般 Linux 发行版的“稳定版”概念并不一致，实际上是一种 **不稳定** 的“开发版”。
 >
->FreeBSD 的 ***stable*** 的真实意思是该分支的 ABI（Application Binary Interface，应用程序二进制接口）是稳定的。
+>FreeBSD 的 ***STABLE*** 的真实意思是该分支的 ABI（Application Binary Interface，应用程序二进制接口）是稳定的。
 >
 > ——参见 [FreeBSD Glossary STABLE](https://wiki.freebsd.org/Glossary#STABLE)
 
-alpha 是 current 进入 release 的第一步。具体流程是：current -> alpha（进入 stable 分支）-> beta -> rc -> release。
+ALPHA 是 CURRENT 进入 RELEASE 的第一步。具体流程是：CURRENT -> ALPHA（进入 STABLE 分支）-> BETA -> RC -> RELEASE。
 
-current 相对稳定后（即满足 MFC 最短三天的要求，MFC 指 `Merge From Current`，类似于 `backporting` 即向后移植）会推送到 stable，但不保证两者没有重大缺陷。参见 [FreeBSD Release Engineering](https://docs.freebsd.org/en/articles/freebsd-releng/)。
+CURRENT 相对稳定后（即满足 MFC 最短三天的要求，MFC 指 `Merge From CURRENT`，类似于 `backporting` 即向后移植）会推送到 STABLE，但不保证两者没有重大缺陷。参见 [FreeBSD Release Engineering](https://docs.freebsd.org/en/articles/freebsd-releng/)。
 
 
 >**警告**
@@ -31,7 +31,7 @@ current 相对稳定后（即满足 MFC 最短三天的要求，MFC 指 `Merge F
 
 >**注意**
 >
->只有 alpha、rc、beta 和 release（[且是一级架构](https://www.freebsd.org/platforms/)）才能使用命令 `freebsd-update` 更新系统，其余版本需通过源代码编译或使用二进制的 pkgbase 更新。
+>只有 ALPHA、RC、BETA 和 RELEASE（[且是一级架构](https://www.freebsd.org/platforms/)）才能使用命令 `freebsd-update` 更新系统，其余版本需通过源代码编译或使用二进制的 pkgbase 更新。
 >
 >FreeBSD 开发计划准备删除命令 `freebsd-update`，一律改用 pkgbase。
 >
