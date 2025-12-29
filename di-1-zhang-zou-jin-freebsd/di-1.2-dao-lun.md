@@ -21,7 +21,7 @@ CURRENT 相对稳定后（即满足 MFC 最短三天的要求，MFC 指 `Merge F
 
 >**警告**
 >
->使用非生产版本（如 CURRENT、STABLE、ALPHA、BETA、RC 等非 RELEASE 版本）的 FreeBSD 的用户会被社区推定为具备一定的探索精神、关注开发进展和邮件列表的意愿、动手实践的能力、积极反馈问题的意愿以及乐观的心态。这对大多数读者来说都是困难的且无必要的。如果并不满足上述条件，建议读者始终使用面向生产环境的 RELEASE！
+>使用非生产版本（如 CURRENT、STABLE、ALPHA、BETA、RC 等非 RELEASE 版本）的 FreeBSD 的用户会被社区推定为具备一定的探索精神、关注开发进展和邮件列表的意愿、动手实践的能力、积极反馈问题的意愿以及乐观的心态。但对大多数读者来说都是困难且无必要的.如果并不满足上述条件，建议读者始终使用面向生产环境的 RELEASE！
 
 ![FreeBSD 版本更迭](../.gitbook/assets/bsd-release.png)
 
@@ -45,13 +45,13 @@ FreeBSD 项目（FreeBSD Project）致力于提供一款真正的自由软件，
 
 >**思考题**
 >
->>BSD 2 条款许可证摘录：“在满足以下条件的前提下，允许在源代码和二进制形式中 **重新分发** 和使用本软件”
+>>BSD 2 条许可证摘录：“在满足以下条件的前提下，允许在源代码和二进制形式中 **重新分发** 和使用本软件”
 >
 >>“你可以继续从上游继续取得 BSD 授权的初始源代码，但是，如果你使用了基于原 BSD 衍生代码但以 GPL 再授权的版本，则仍需遵循 GPL。这形成了一条从 BSD 到 GPL 的单向通道：一旦 BSD 源代码被并入 GPL 项目，就如同进入了“黑洞”，即 **BSD 代码的 GPL 化** 是不可逆的。BSD 世界逐渐被 GPL 蚕食。但是事实上 BSD 代码在开源和闭源世界都得到了最大程度的复用。”
 >
 >1.除了可以将 BSD 授权的软件转为私有软件外，还能怎样理解这种“重新分发”？在满足条件（主要是一些免责和版权声明）后，能以何种许可证再分发和重授权？
 >
->2.为什么自由软件基金会称 BSD 2 条款许可证和 GPLv2/GPLv3 兼容？如果 BSD 授权的软件 A 进入 GPLv2 项目 B 中成为其一部分。下游用户再分发时，在何种条件下，要求软件 A 也遵守 GPLv2 而非通过 BSD 协议转为专有软件？为什么？
+>2.为什么自由软件基金会称 BSD 2 条许可证和 GPLv2/GPLv3 兼容？如果 BSD 授权的软件 A 进入 GPLv2 项目 B 中成为其一部分。下游用户再分发时，在何种条件下，要求软件 A 也遵守 GPLv2 而非通过 BSD 协议转为专有软件？为什么？
 >
 >3.站在许可证的感染性角度，再理解 Linux kernel 的 GNU 化以及 FreeBSD 基本系统的去 GNU 化。
 >
@@ -140,7 +140,7 @@ FreeBSD 日为 6 月 19 日。FreeBSD 基金会和社区在这天庆祝 FreeBSD 
 
 这个问题远没有想象中的那么清楚明白。我看到不少讨论者，甚至是那段岁月的亲历者，也难以给出明确回答或澄清。或者只是简单的说，BSD 并未进行过任何 UNIX 认证，没有持有法律上的商标就草草终结话题；更有甚者只是笼统地说 FreeBSD 是 UNIX 的延续者与正统继承者，仅是“有实无名”；还有人认为，BSD 之于 UNIX，正如 Linux 之于 UNIX。
 
-之所以有上述这些不同的回答，正是因为这个问题不是能够简单地套用法律上的商标归属或者代码上继承性进行分析的纯粹技术性难题。这其实牵涉到了一个深刻的本体论哲学问题——我们究竟是不能两次踏进同一条河流，还是一次也不能踏进同一条河流？（类似的问题如谷堆问题、秃头问题，感兴趣的读者可参见 SEP 条目“[Identity Over Time](https://plato.stanford.edu/entries/identity-time)”、“[Sorites Paradox](https://plato.stanford.edu/entries/sorites-paradox/)”）。对这个问题回答如何，其实映射着你的哲学观与科学技术观。
+之所以有上述这些不同的回答，正是因为这个问题不是能够简单地套用法律上的商标归属或者代码上继承性进行分析的纯粹技术性难题。这其实牵涉到了一个深刻的本体论哲学问题——我们究竟是不能两次踏进同一条河流，还是一次也不能踏进同一条河流？（类似的问题如谷堆问题、秃头问题，感兴趣的读者可参见 SEP 条目“[Identity Over Time](https://plato.stanford.edu/entries/identity-time)”、“[Sorites Paradox](https://plato.stanford.edu/entries/sorites-paradox/)”）。对这个问题的回答如何，其实映射着你的哲学观与科学技术观。
 
 >>**忒修斯之船**
 >>
@@ -179,7 +179,7 @@ BSD 操作系统并非复制品，而是 AT&T Research Unix 操作系统的开�
 
 - 华纳兄弟的电影《[黑客帝国](https://movie.douban.com/subject/1291843/)》（*[The Matrix](https://www.imdb.com/title/tt0133093/)*）的特效就是在一组 FreeBSD 集群上制作的。——参见 [*FreeBSD Used to Generate Spectacular Special Effects*](https://www.freebsd.org/press/press-rel-1/) 及《[FreeBSD 技术内幕](https://book.douban.com/subject/1240853/)》 (简体中文译本)，机械工业出版社。ISBN 7-111-10201-0，第 2 页。
 - 苹果（Apple）的操作系统如 macOS、iOS 等大量复用了 BSD（不止是 FreeBSD）的技术栈。BSD 可以称得上是 macOS 的开源基石。——参见 [Apple’s Open Source Roots: The BSD Heritage Behind macOS and iOS](https://thenewstack.io/apples-open-source-roots-the-bsd-heritage-behind-macos-and-ios/)
-- 索尼（Sony）的游戏机 PlayStation 3（PS3）、PlayStation Vita（PSV）、PlayStation 4（PS4）、和 PlayStation 5（PS5）使用的操作系统。参见索尼官网 [FreeBSD Kernel](https://www.playstation.com/en-us/oss/ps4/freebsd-kernel/)、[Free BSD License](https://www.playstation.com/en-us/oss/ps3/free-bsd/)、[FreeBSD](https://www.playstation.com/en-us/oss/ps-vita/)。PS 5 并未列出许可证，但是根据 [Kernel](https://www.psdevwiki.com/ps5/index.php?title=Kernel)。仍然使用了 FreeBSD 11。
+- 索尼（Sony）的游戏机 PlayStation 3（PS3）、PlayStation Vita（PSV）、PlayStation 4（PS4）、和 PlayStation 5（PS5）使用的操作系统。参见索尼官网 [FreeBSD Kernel](https://www.playstation.com/en-us/oss/ps4/freebsd-kernel/)、[Free BSD License](https://www.playstation.com/en-us/oss/ps3/free-bsd/)、[FreeBSD](https://www.playstation.com/en-us/oss/ps-vita/)。PS 5 并未列出许可证，但是根据 [Kernel](https://www.psdevwiki.com/ps5/index.php?title=Kernel) 的页面，其仍然使用了 FreeBSD 11。
 - 奈飞（Netflix）几乎所有网络活动（内容缓存/CDN）都使用 FreeBSD 设备进行。——参见 [Netflix Case Study](https://freebsdfoundation.org/netflix-case-study/)
 - QNX 操作系统。QNX 是一款实时操作系统。QNX 以前是黑莓手机的操作系统。QNX 现在被广泛应用为汽车安全操作系统（即车机，**安卓是运行在 QNX 之上的操作系统，与车机系统分离**）。国内新能源车辆普遍采用了 QNX 操作系统（关键领域占比超过九成）。QNX 大量复用了 FreeBSD 的技术栈。——参见 [QNX](https://www.qnx.com/developers/docs/8.0/search.html?searchQuery=freebsd) 官网、[中国汽车实现“芯魂兼具”应从两方面发力](http://auto.ce.cn/auto/gundong/202407/31/t20240731_39088063.shtml)、[Automotive](https://www.qnx.com/content/qnx/cn/solutions/industries/automotive/)。同时查询 FreeBSD 基金会 2024 [捐款页面](https://freebsdfoundation.org/our-donors/donors/?donationYear=2024)，上面也有黑莓（QNX 开发者）。
 - Dell EMC Isilon，戴尔的 Isilon（面向企业的 NAS 存储设备）设备使用的操作系统 OneFS 基于 FreeBSD。——参见 [PowerScale OneFS：了解基于源的路由](https://www.dell.com/support/kbdoc/zh-cn/000020056/isilon-onefs-understanding-source-based-routing-sbr-in-isilon?lang=zh)，中明确提及“OneFS 是基于 FreeBSD 的”。另见 [DSA-2020-086: Dell EMC Isilon OneFS Security Update for FreeBSD libfetch Vulnerability](https://www.dell.com/support/kbdoc/000153860/dsa-2020-086-dell-emc-isilon-onefs-security-update-for-freebsd-libfetch-vulnerability?lang=en) 等安全报告。附 [IsilonSystems](https://wiki.freebsd.org/IsilonSystems)
@@ -427,7 +427,7 @@ Jason Evans 于 2005 年开发了 jemalloc，这是一款内存分配器。与�
 
 - 2008 年 3 月 ZFS
 
-在 2005 年，Sun Microsystems 开发了一种新型文件系统，最终产物是 ZFS。ZFS 是一款集成了文件系统和逻辑卷管理器的系统。该系统具有良好的可扩展性，并提供强大的数据完整性保护与高效的数据压缩功能。OpenSolaris 版本的 ZFS 于 2008 年初进入到 FreeBSD 系统中。
+在 2005 年，Sun Microsystems 开发了一种新型文件系统，最终产物是 ZFS。ZFS 是一款集成了文件系统和逻辑卷管理器的系统。该系统具有良好的可扩展性，并提供强大的数据完整性保护与高效的数据压缩功能。OpenSolaris 版本的 ZFS 于 2008 年初进入 FreeBSD 系统。
 
 - 2009 年 1 月 6 日 DTrace
 
@@ -467,7 +467,7 @@ pkg 首次出现在 9.1-RELEASE 中。在 10.0-RELEASE 中成为默认的软件�
 
 - 2014 年 1-2 月 FreeBSD 期刊创刊号
 
-作为 FreeBSD 社区的声音，也是跟进 FreeBSD 最新发布版本和新进展的最佳途径，FreeBSD 期刊的创刊号是 2014 年 1/2 月刊，重点关注 FreeBSD 10。最初是以付费订阅模式进行发行，直至 2019 年 1 月才将 FreeBSD 期刊转为免费出版物，后同时在基金会网站上进行刊载（同时提供了 HTML 和 PDF）。
+作为 FreeBSD 社区的声音，也是跟进 FreeBSD 最新发布版本和新进展的最佳途径，FreeBSD 期刊的创刊号是 2014 年 1/2 月刊，重点关注 FreeBSD 10。最初是以付费订阅模式进行发行，直至 2019 年 1 月才将 FreeBSD 期刊转为免费出版物，随后同时在基金会网站上进行刊载（同时提供了 HTML 和 PDF）。
 
 - 2017 年 6 月 19 日 首个“FreeBSD 日”
 
