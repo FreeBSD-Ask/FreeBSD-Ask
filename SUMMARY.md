@@ -23,7 +23,7 @@
 
 * [2.1 安装前的准备工作](di-2-zhang-an-zhuang-freebsd/di-2.1-install-pre.md)
 * [2.2 FreeBSD 15 安装指南（基于 amd64 架构）](di-2-zhang-an-zhuang-freebsd/di-2.2-15ins.md)
-* [2.3 FreeBSD 13/14 安装指南（基于 amd64 架构）](di-2-zhang-an-zhuang-freebsd/di-2.3-14.0-ins.md)
+* [2.3 FreeBSD 13 和 14 安装指南（基于 amd64 架构）](di-2-zhang-an-zhuang-freebsd/di-2.3-14.0-ins.md)
 * [2.4 故障排除](di-2-zhang-an-zhuang-freebsd/di-2.4-jie-eol.md)
 * [2.5 将 USB 启动盘恢复为普通存储设备（基于 Windows 系统）](di-2-zhang-an-zhuang-freebsd/di-2.5-jie-usb.md)
 
