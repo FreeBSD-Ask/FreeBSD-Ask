@@ -1,18 +1,17 @@
 # Chipset（芯片组）
 
-
 芯片组设置信息
 
 ![](../.gitbook/assets/image-20250726134102-83vu9kl.png)
 
 ## System Agent (SA) Configuration（系统代理配置）
 
-以下选项可能与 PCH-IO Configuration（平台控制总线配置）这个南桥的选项有重叠之处。因为 System Agent (SA) Configuration（系统代理配置）是控制由 CPU 引出的 PCIE 接口的。
+以下选项可能与 PCH-IO Configuration（平台控制器集线器 I/O 配置）中的部分南桥相关选项存在重叠。因为 System Agent（SA）Configuration（系统代理配置）用于控制由 CPU 直接引出的 PCIe 接口。
 
 在 Intel CPU 架构中（第二代 Sandy Bridge 及以后），System Agent 是一个集成在 CPU 芯片内部的模块，它包含了：
 
 - 内存控制器 (IMC - Integrated Memory Controller)
-- PCIe Root Complex (用于 CPU 直连的 PCIe 通道，如 PEG - PCI Express Graphics)
+- PCIe Root Complex（用于 CPU 直连的 PCIe 通道，例如 PEG【PCI Express Graphics）】
 - 显示引擎 (如果 CPU 有核显)
 - 与 Ring Bus 或 Mesh 的接口
 - 电源管理逻辑等
@@ -23,7 +22,7 @@
 
 ### Memory Configuration（内存配置）
 
-内存配置参数
+内存配置参数。
 
 ![](../.gitbook/assets/image-20250726140439-jtn6k0n.png)
 
@@ -99,7 +98,7 @@ Disabled（禁用）
 
 DDR 自刷新。
 
-根据 DDR 的存储单元结构，电容会缓慢的泄露电荷，此时存储的数据就会丢失，因此就需要自刷新，即充电，通过充电保持数据信号。
+根据 DDR 的存储单元结构，电容会缓慢地泄露电荷，此时存储的数据就会丢失，因此就需要自刷新，即充电，通过充电保持数据信号。
 
 ##### SelfRefresh IdleTimer（自刷新定时器）
 
@@ -107,7 +106,7 @@ DDR 自刷新。
 
 [64K-1；512]，单位为 DLCK800s，（默认值为 512）
 
-DLCK800s：表示以 DDR 800MHz 时钟周期（即 1 DLCK800 ≈ 1.25ns）为单位的时间间隔。
+DLCK800s：表示以 DDR 800 MHz 时钟周期（即 1 DLCK800 ≈ 1.25 ns）为单位的时间间隔。
 
 说明：
 
@@ -225,7 +224,7 @@ Disabled（禁用）
 
 说明：
 
-虚拟温度传感器 (VTS) 是一款软件，可实时准确地监控零部件在运行条件下的生命周期的粒度热行为。调试用。
+虚拟温度传感器（VTS）是一种软件机制，可实时、准确地监控零部件在运行条件下的细粒度热行为。用于调试。
 
 #### Memory Training Algorithm（内存训练算法）
 
@@ -237,7 +236,9 @@ Disabled（禁用）
 
 说明：
 
-内存初始化和测试校准。内存训练是一种在保证内存稳定工作的前提下寻找最大化内存工作效率的方法。内存训练可能需要数十分钟不等的时间才能完成。
+内存初始化和测试校准。内存训练是一种在保证内存稳定工作的前提下寻找最大化内存工作效率的方法。
+
+每次的内存训练可能需要数分钟至数十分钟不等的时间才能完成。
 
 内存训练是平台对你或 XMP 配置文件设置的时序和速度进行测试的过程。
 
@@ -288,7 +289,7 @@ Disabled（禁用）
 
 说明：
 
-2D（Two-Dimensional）：表示训练同时作用于两个维度——驱动强度和终端电阻。
+2D（Two-Dimensional）：表示训练同时作用于两个维度，例如驱动强度和终端电阻。
 
 作用未知。
 
@@ -754,7 +755,7 @@ Disabled（禁用）
 
 说明：
 
-Margin 测试是电子系统中中评估设备在参数偏离标称值时的工作能力。
+Margin 测试是电子系统中用于评估设备在参数偏离标称值时工作能力的方法。
 
 ##### DIMM DFE Training（DIMM DFE 训练）
 
@@ -766,7 +767,7 @@ Disabled（禁用）
 
 说明：
 
-用于 DDR 的 Decision Feedback Equalizer（决策反馈均衡器）训练，缓解信号衰减和码间干扰问题
+用于 DDR 的 Decision Feedback Equalizer（决策反馈均衡器）训练，缓解信号衰减和码间干扰问题。
 
 ##### EARLY DIMM DFE Training（早期 DIMM DFE 训练）
 
@@ -790,9 +791,9 @@ Disabled（禁用）
 
 说明：
 
-用于 Tx DQS 信号的占空比校正
+用于 Tx DQS 信号的占空比校正。
 
-##### DRAM DCA Training（内存 DCA 校准训练）
+##### DRAM DCA Training（DRAM DCA 校准训练）
 
 选项：
 
@@ -802,7 +803,7 @@ Disabled（禁用）
 
 说明
 
-优化占空比
+优化占空比。
 
 ##### Write Driver Strength Training（写入驱动强度训练）
 
@@ -818,7 +819,7 @@ Disabled（禁用）
 
 ##### Rank Margin Tool（排名边际工具）
 
-同 Rank Margin Tool Per Bit（按位排名边际工具）
+同 Rank Margin Tool Per Bit（按位排名边际工具）。
 
 ##### Memory Test（内存测试）
 
@@ -842,7 +843,7 @@ Disabled（禁用）
 
 说明
 
-在 DDR 中，DQS 信号主要作用是用来在一个时钟周期内准确的区分出每个数据传输周期，从而便于接收方准确接收数据。
+在 DDR 中，DQS 信号的主要作用是用于在一个时钟周期内准确地区分每个数据传输周期，从而便于接收方准确接收数据。
 
 高级内存信号时序调整
 
@@ -991,7 +992,7 @@ Auto（自动）
 
 说明：
 
-最大内存频率，单位 Mhz
+最大内存频率，单位 MHz。
 
 #### LP5 Bank Mode（LPDDR5 Bank 模式）
 
@@ -1063,7 +1064,7 @@ Mixed：插入两个不同品牌或频率/容量的内存条
 
 可覆盖混合模式下的 2DPC 配置或非 POR 情况下的 2DPC 配置所默认降低的内存速度。
 
-#### Frequency Limit for Mixed 2DPC DDR5 2 Rank（混合  2DPC DDR5 双面内存配置的频率限制）
+#### Frequency Limit for Mixed 2DPC DDR5 2 Rank（混合 2DPC DDR5 双面内存配置的频率限制）
 
 值：
 
@@ -1073,7 +1074,7 @@ Mixed：插入两个不同品牌或频率/容量的内存条
 
 说明：
 
-Mixed 2DPC：指每个内存通道插入两根不同规格（如品牌、容量、rank）的 DDR5 模块，共四根内存条
+Mixed 2DPC：指每个内存通道插入两根不同规格（如品牌、容量、Rank）的 DDR5 模块，共四根内存条。
 
 可覆盖混合模式下的 2DPC 配置或非 POR 情况下的 2DPC 配置所默认降低的内存速度。
 
@@ -1087,7 +1088,7 @@ Mixed 2DPC：指每个内存通道插入两根不同规格（如品牌、容量�
 
 说明：
 
-眼宽（Eye Width）： 眼宽是指眼图中信号时钟周期的宽度，即从信号的一个边沿（上升沿或下降沿）到下一个相同边沿的水平距离。眼宽的大小反映了信号的时序稳定性即信号的边沿是否清晰且稳定。
+眼宽（Eye Width）：眼宽是指眼图中信号时钟周期的宽度，即从信号的一个边沿（上升沿或下降沿）到下一个相同边沿的水平距离。眼宽的大小反映了信号的时序稳定性，即信号边沿是否清晰且稳定。
 
 参见：[10 分钟教会你看眼图，太有用了！！](https://www.eet-china.com/mp/a35960.html)[DisplayPort 测试中的眼高和眼宽分别是什么？ - 高速信号测试](https://www.claudelab.com/article-item-161.html)
 
@@ -1105,7 +1106,7 @@ Auto（自动）
 
 说明：
 
-HOB：Hand-Off-Block，是 UEFI 启动流程中用于在 PEI 阶段向 DXE 阶段传递配置信息和系统资源数据的机制
+HOB：Hand-Off Block，是 UEFI 启动流程中用于在 PEI 阶段向 DXE 阶段传递配置信息和系统资源数据的机制。
 
 #### Max TOLUD（最大 TOLUD）
 
@@ -1118,6 +1119,7 @@ Dynamic（动态），1 GB, 1.25 GB, 1.5 GB, 1.75 GB, 2 GB, 2.25 GB, 2.5 GB, 2.7
 设置 TOLUD 的最大值。动态分配会根据已安装图形控制器所需的最大 MMIO 长度，自动调整 TOLUD。
 
 参见 [为何系统识别不全？4GB 内存终极解迷](https://memory.zol.com.cn/130/1302306_all.html#p1302306)
+
 Top of Low Usable DRAM (TOLUD)，低地址段内存顶端，表示 4GB 以下的可用 DRAM 最大地址边界。其描述的是可设定地址的物理内存总量。TOLUD 寄存器会始终在 4GB 内存地址以下工作。
 
 #### SA GV（SAVG）
@@ -1136,24 +1138,24 @@ Fixed to 4th Point —— 固定到第 4 点
 
 说明：
 
-是否启动 System Agent Geyserville (SAGV)，系统会根据负载动态调整电压. 及频率，或固定在特定的控制点。
+是否启动 System Agent Geyserville（SAGV），系统会根据负载动态调整电压及频率，或固定在特定的控制点。
 
 参见 [12th Generation Intel® Core™ Processors](https://edc.intel.com/content/www/us/en/design/ipla/software-development-platforms/client/platforms/alder-lake-desktop/12th-generation-intel-core-processors-datasheet-volume-1-of-2/011/011/sagv-points/)、[一种借助 SAGV 降低 System Agent 功耗的方式](https://blog.xzr.moe/archives/348/)
 
 SAGV（System Agent Geyserville）是一种使 SoC 能根据内存带宽利用率和/或各类工作负载的延迟需求，动态调整系统代理（System Agent）工作点（电压/频率）的技术，采用动态电压频率调节（DVFS）来提高能效。Pcode 启发式算法通过周期性评估内存利用率和 IA 停顿情况，负责请求合适的 Qclock 工作点。
 
-SAGV 功能可以为内存频率配置四个频点，分别被称为低/中/高/最大频率点，系统会根据对内存带宽/延时的需求，动态的在这四个频率点之间选择频率。对于每个频率点，你还可以通过 Gear 模式来指定内存控制器和内存时钟速度之间的分频比。具体频率参见英特尔手册。
+SAGV 功能可以为内存频率配置四个频点，分别称为低、中、高、最大频率点，系统会根据对内存带宽和延迟的需求，动态地在这四个频率点之间选择频率。对于每个频率点，你还可以通过 Gear 模式来指定内存控制器和内存时钟速度之间的分频比。具体频率参见英特尔手册。
 
 - LowBW — 低频点，最低功耗点。特点是低功耗、低带宽、高延迟。系统在低到中等带宽消耗时会保持在此点。
 - MedBW — 在功耗与性能之间取得平衡的调优点。
 - HighBW — 特点是高功耗、低延迟、中等带宽，同时也用作 RFI（射频干扰）缓解点。
 - MaxBW / lowest latency— 最低延迟点，带宽低但功耗最高。
 
-动态 Gear 技术：内存控制器可以以 DRAM 速度的 1:1（Gear-1，传统模式，内存同频）、1:2（Gear-2 模式，内存分频）或 1:4（Gear-4 模式，内存分频）比例运行。Gear 指的是内存速度（内存频率）与内存控制器时钟（内存控制器频率）的之比。内存控制器通道宽度等于 DDR 通道宽度乘以 Gear 比例。注意，内存控制器位于 CPU 上。
+动态 Gear 技术：内存控制器可以以 DRAM 速度的 1:1（Gear-1，传统模式，内存同频）、1:2（Gear-2 模式，内存分频）或 1:4（Gear-4 模式，内存分频）比例运行。Gear 指的是内存速度（内存频率）与内存控制器时钟（内存控制器频率）之间的比值。内存控制器通道宽度等于 DDR 通道宽度乘以 Gear 比例。注意，内存控制器位于 CPU 上。
 
 Gear 1 模式下，内存控制器和内存同步工作；其他模式下，内存控制器和内存异步工作（更容易超频）
 
-Gear 1 的性能最佳（最大内存能效，内存延迟最低），Gear 4 的性能最差。但是基本上只有 DDR4 才能支持 Gear 1；DDR5 内存频率很高，内存控制器频率几乎不可能达到同等频率（Gear 1），一般最高只能采用 Gear （否则会无法开机）2。对于频率特别高的 DDR5 内存条，可能只能达到 Gear 4。如果你在 CPU-Z 此类软件中看到你的内存频率是 2400 MHz（这里要 x2 才是 MT/s，即内存真实速度），但是你的内存控制器频率是 1200 MHz，则说明你当前的内存模式为 Gear 2 模式。
+Gear 1 的性能最佳（内存能效最高、内存延迟最低），Gear 4 的性能最差。但是基本上只有 DDR4 才能支持 Gear 1；DDR5 内存频率很高，内存控制器频率几乎不可能达到同等频率（Gear 1），一般最高只能采用 Gear 2（否则可能无法开机）。对于频率特别高的 DDR5 内存条，可能只能达到 Gear 4。如果你在 CPU-Z 等软件中看到内存频率为 2400 MHz（需乘以 2 才是 MT/s，即内存的实际传输速率），而内存控制器频率为 1200 MHz，则说明当前内存工作在 Gear 2 模式。
 
 #### First Point Frequency（第 1 点频率）
 
@@ -1183,7 +1185,7 @@ Gear 1 的性能最佳（最大内存能效，内存延迟最低），Gear 4 的
 
 说明：
 
-SAGV 第一点的 Gear 速率。
+SAGV 第 1 点的 Gear 速率。
 
 #### Second Point Frequency（第 2 点频率）
 
@@ -1239,7 +1241,7 @@ SAGV 第一点的 Gear 速率。
 
 1-50
 
-触发升频和降频所需的 IA/GT 停滞百分比阈值（SAGV 切换因子）
+触发升频和降频所需的 IA/GT 停滞百分比阈值（SAGV 切换因子）。
 
 #### Threshold For Switch Up（触发升频所需的持续时间阈值）
 
@@ -1283,7 +1285,7 @@ Enabled（启用）
 
 说明：
 
-DDR4 1DPC 性能特性，针对双排（2R）内存条（DIMMs）。该特性可以仅在 DIMM0 或 DIMM1 上启用，或者同时在两个插槽上启用。
+DDR4 1DPC 性能特性，针对双排（2R）内存条（DIMM）。该特性可以仅在 DIMM0 或 DIMM1 上启用，或者同时在两个插槽上启用。
 
 #### Row Hammer Mode（行敲击模式）
 
@@ -1307,7 +1309,7 @@ pTRR（pseudo Target Row Refresh，伪目标行刷新）
 
 1/2\^1, 1/2\^2, 1/2\^3, 1/2\^4, 1/2\^5, 1/2\^6, 1/2\^7, 1/2\^8, 1/2\^9, 1/2\^10, 1/2\^11, 1/2\^12, 1/2\^13, 1/2\^14, 1/2\^15
 
-控制行敲击防护机制中 pTRR 的触发频率；
+控制行敲击防护机制中 pTRR 的触发频率。
 
 #### RH LFSR1 Mask（行敲击 pTRR 的 LFSR1 掩码）
 
@@ -1325,7 +1327,7 @@ NORMAL Refresh（正常刷新）
 
 说明：
 
-MC，Memory Controller，内存控制器
+MC（Memory Controller，内存控制器）。
 
 为防止 DRAM 中的数据因为电容泄漏而丢失，必须定期刷新。
 
@@ -1351,7 +1353,7 @@ High（高）
 
 为 LPDDR4 / LPDDR5 设置初始 RttWr（写终端电阻）ODT（片上终端）覆盖值，单位为欧姆。取值范围 0x01 到 0xFF，默认值 0 表示自动。
 
-调试用。
+用于调试。
 
 #### LPDDR ODT RttCa（LPDDR RttCa 片的 ODT）
 
@@ -1363,7 +1365,7 @@ High（高）
 
 用于 LPDDR4/LPDDR5 的初始 RttCa 片上终端电阻（ODT）覆盖值，单位为欧姆。范围为  0x01 至 0xFF，默认值 0 表示自动（AUTO）。
 
-调试用。
+用于调试。
 
 #### Exit On Failure (MRC)（内存训练失败后退出）
 
@@ -1415,9 +1417,9 @@ Disabled（禁用）
 
 说明：
 
-这是个只读设置，无法修改。
+这是只读设置，无法修改。
 
-启用/禁用通道哈希支持。注意：仅在内存交织（Memory Interleaving，即通过在不同内存上的交错访问来提高内存访问性能的技术）模式下有效。
+启用／禁用通道哈希支持。注意：仅在内存交织（Memory Interleaving，即通过在不同内存上的交错访问来提高内存访问性能的技术）模式下有效。
 
 #### Ch Hash Mask（通道哈希掩码）
 
@@ -1453,7 +1455,7 @@ Disabled（禁用）
 
 说明：
 
-通过选择更多地址位参与哈希运算，从而创建更复杂的 bank 映射模式；
+通过选择更多地址位参与哈希运算，从而创建更复杂的 bank 映射模式。
 
 #### Per Bank Refresh（每存储单元刷新）
 
@@ -1471,7 +1473,7 @@ Disabled（禁用）
 
 而使用每 bank 刷新（Per-bank refresh）时，系统会对每个 bank 单独发出刷新命令。这样，在某个 bank 正在刷新时，其它 bank 仍然可以继续工作。每 bank 刷新的持续时间较短（如 16 Gb 的 DRAM 中为 tRFCpb ≈ 140 ns），因此每个 bank 的不可用时间约为 3.5%。
 
-使用每 bank 刷新（Per-Bank Refresh）可以减少，甚至消除由于刷新操作带来的性能损失。
+使用每 bank 刷新（Per Bank Refresh）可以减少，甚至消除刷新操作带来的性能损失。
 
 参见 [DDRMC5 Memory Controller](https://docs.amd.com/r/en-US/pg456-integrated-mc/Transaction-Size)
 
@@ -1485,7 +1487,7 @@ Disabled（禁用）
 
 说明：
 
-硬件行为调优项，RdMeter
+硬件行为调优项，RdMeter。
 
 #### Strong Weak Leaker（强/弱泄漏）
 
@@ -1495,7 +1497,7 @@ Disabled（禁用）
 
 说明：
 
-用于设定内存泄漏检测机制的灵敏度
+用于设定内存泄漏检测机制的灵敏度。
 
 #### Power Down Mode（CKE 电源关闭模式控制）
 
@@ -1513,7 +1515,7 @@ PPD-DLLoff（Precharge Power-Down with DLL Off，预充电低功耗模式，关�
 
 当启用该选项后，内存控制器会使用 CKE 上升沿信号（Clock Enable）来控制 DRAM 是否进入低功耗电源关闭模式
 
-它控制内存在处于活动待机状态时是否进入低功耗模式。
+该选项控制内存在处于活动待机状态时是否进入低功耗模式。
 
 #### Pwr Down Idle Timer（低功耗模式空闲计时器）
 
@@ -1529,7 +1531,7 @@ PPD-DLLoff（Precharge Power-Down with DLL Off，预充电低功耗模式，关�
 
 0 表示自动（AUTO）：对于 ULX/ULT 平台为 64，对于 DT/Halo 平台为 128。
 
-ULT \= Ultra Low TDP 超低 TDP; ULX \= Ultra Low eXtreme TDP 极限 TDP
+ULT = Ultra Low TDP（超低 TDP）；ULX = Ultra Low eXtreme TDP（极限 TDP）。
 
 #### Page Close Idle Timeout（页面关闭空闲超时）
 
@@ -1553,7 +1555,7 @@ Disabled（禁用）
 
 说明：
 
-实际的物理内存单元排列通常不与外部看到的逻辑地址顺序一致（这意味着相邻的逻辑地址不一定对应物理上相邻的内存单元）。内存系统会将外部提供的逻辑地址映射（翻译）成内部实际访问的物理地址，这个过程称为地址扰乱
+实际的物理内存单元排列通常不与外部看到的逻辑地址顺序一致（这意味着相邻的逻辑地址不一定对应物理上相邻的内存单元）。内存系统会将外部提供的逻辑地址映射（翻译）为内部实际访问的物理地址，这个过程称为地址扰乱。
 
 内存扰频可提高内存测试的覆盖率和有效性。需要提供地址映射信息来确保测试的准确性和完整性。
 
@@ -1663,7 +1665,7 @@ Disabled（禁用）
 
 说明：
 
-启用/禁用打印执行 MRC 所花费的时间。
+启用或禁用打印执行 MRC 所花费的时间。
 
 #### Fast Boot（快速启动）
 
@@ -1675,7 +1677,7 @@ Disabled（禁用）
 
 说明：
 
-启用/禁用 MRC 的快速通道。意思就是关闭每次启动时的内存训练。
+启用／禁用 MRC 的快速通道。即关闭每次启动时的内存训练过程。
 
 #### Rank Margin Tool Per Task（每任务的边际排名）
 
@@ -1687,7 +1689,7 @@ Disabled（禁用）
 
 说明：
 
-启用/禁用在每个主要训练步骤运行 Rank Margin Tool（RMT）边际排名工具。
+启用／禁用在每个主要训练步骤运行 Rank Margin Tool（RMT）边际排名工具。
 
 #### Training Tracing（训练跟踪）
 
@@ -1699,7 +1701,7 @@ Disabled（禁用）
 
 说明：
 
-启用/禁用在每个主要训练步骤打印当前的训练状态。
+启用／禁用在每个主要训练步骤打印当前的训练状态。
 
 #### Lpddr Mem WL Set（设定内存写入延迟）
 
@@ -1741,7 +1743,7 @@ BDAT：BIOS Data ACPI Table，BIOS 数据 ACPI 表
 
 指定在边际排名工具测试中使用的循环次数。0 表示自动（AUTO）。
 
-#### ECC DFT（ECC 的可测试性设计）
+#### ECC DFT（ECC 可测试性设计）
 
 选项：
 
@@ -1751,7 +1753,7 @@ Disabled（禁用）
 
 说明：
 
-使用 DFT（Design for Test，可测试性设计）检测时 ECC 本身电路是可用无误的。
+在使用 DFT（Design for Test，可测试性设计）进行检测时，可验证 ECC 电路本身的正确性。
 
 #### Write0（写零）
 
@@ -1793,7 +1795,7 @@ Disabled（禁用）
 
 控制 LPMode
 
-功能未知
+该功能暂无公开说明。
 
 #### PPR Enable（启用 PPR）
 
@@ -1804,6 +1806,7 @@ Enabled（启用）
 Hard PPR（hPPR，硬 PPR）
 
 说明：
+
 PPR，Post Package Repair，封装后修复。
 
 参见 [FQXSFMA0026I：DIMM [arg1] 自我修复，尝试进行封装后修复（PPR）成功。[arg2]](https://pubs.lenovo.com/sr635-v3/zh-CN/FQXSFMA0026I)
@@ -1820,13 +1823,13 @@ Disabled（禁用）
 
 说明：
 
-启用：复制 SAGV 频率点。禁用：不复制。
+启用：复制 SAGV 频率点；禁用：不复制。
 
-作用未知。
+该功能暂无公开说明。
 
 ### Graphics Configuration（显卡配置）
 
-核显配置参数
+核显配置参数。
 
 #### Graphics Turbo IMON Current（显卡睿频电流检测电流值）
 
@@ -1848,7 +1851,7 @@ Disabled（禁用）
 
 说明：
 
-禁用独显，只使用核显。
+禁用独立显卡，仅使用集成显卡。
 
 启用此选项后，系统将不会扫描 PEG（PCI Express Graphics）（PCIe x16，一般是显卡插槽）和 PCH PCIe 端口（如 PCIe x1、x4、x8）上的外部显卡。
 
@@ -1908,7 +1911,7 @@ Enabled（启用）
 
 整个 GTT 所能寻址的范围就代表了 GPU 逻辑寻址空间。
 
-用于设置显存大小。映射系统内存到 GPU 的虚拟地址空间
+用于设置显存大小，将系统内存映射到 GPU 的虚拟地址空间。
 
 参考文献：[https://github.com/freelancer-leon/notes/blob/master/kernel/graphic/Linux-Graphic.md](https://github.com/freelancer-leon/notes/blob/master/kernel/graphic/Linux-Graphic.md)
 
@@ -1962,7 +1965,7 @@ PSMI 是一个用于管理和监控电源供应器状态的接口。它允许主
 
 说明：
 
-此值若设置为 512MB 意味着系统内存将永远失去 512M，即使显卡并未占用这么内存作为显存。
+若将此值设置为 512 MB，意味着系统内存将永久预留 512 MB，即使显卡并未实际占用如此多的显存。
 
 选择核显使用的 DVMT 5.0 预分配（固定）显存大小。黑苹果可能需要调大此值。系统在启动时预先保留一部分固定大小的系统内存，专门用作显存。
 
@@ -2008,7 +2011,7 @@ Disabled（禁用）
 
 说明：
 
-PEIM，Pre‑EFI Initialization Module”，预 EFI 初始化模块，是在 PEI（Pre‑EFI Initialization）阶段运行的小型固件驱动模块，承担硬件早期初始化任务
+PEIM（Pre-EFI Initialization Module，预 EFI 初始化模块）是在 PEI（Pre-EFI Initialization）阶段运行的小型固件驱动模块，承担硬件早期初始化任务。
 
 控制是否在 PEI 阶段使用核显显示输出。
 
@@ -2048,7 +2051,7 @@ Disabled（禁用）
 
 如果启用了 RC1p，并且满足其他条件，则向 PMA 发送 RC1p 频率请求。
 
-PAM，Power Management Agent，电源管理代理。
+PMA，Power Management Agent，电源管理代理。
 
 #### PAVP Enable（启用 PAVP）
 
@@ -2088,7 +2091,7 @@ Disabled（禁用）
 
 说明：
 
-Cd，Clock Domain”，表示时钟域，通常用于描述 CPU、内存和集成显卡等组件的时钟频率
+Cd，Clock Domain，表示时钟域，通常用于描述 CPU、内存和集成显卡等组件的时钟频率。
 
 #### GT PM Support（核显电源管理支持）
 
@@ -2356,11 +2359,11 @@ Disabled（禁用）
 
 EQ，Equalization：均衡
 
-DMI Gen3 链路上的动态均衡的第 2 阶段。
+这是 DMI Gen3 链路上的动态均衡第 2 阶段。
 
 Phase 2 是链路均衡中的一个过程，参见 [Gen3 的链路均衡](https://www.intel.cn/content/www/cn/zh/docs/programmable/683621/current/link-equalization-for-gen3.html)
 
-Equalization 是高速串行总线（如 PCIe Gen3/4、DMI Gen3）中确保信号完整性的重要过程。它被分为 四个阶段（Phases），每个阶段在链路训练（Link Training）过程中扮演着不同角色：Phase 0, Phase 1, Phase 2, Phase 3. Phase 0
+Equalization 是高速串行总线（如 PCIe Gen3/4、DMI Gen3）中确保信号完整性的重要过程。它被分为四个阶段（Phases），每个阶段在链路训练（Link Training）过程中扮演着不同角色：Phase 0、Phase 1、Phase 2、Phase 3。
 
 #### DMI Gen3 Eq Phase 3（DMI Gen3 链路上的动态均衡的第 3 阶段）
 
@@ -2388,9 +2391,9 @@ DMI Gen3 链路的主动状态电源管理。
 
 参见 DMI Link ASPM Control（DMI 链路 ASPM 控制）
 
-#### DMI Gen3 L1 Exit Latency（DMI Gen3 链路 L1 退出中断延迟）
+#### DMI Gen3 L1 Exit Latency（DMI Gen3 链路 L1 状态退出延迟）
 
-数值未知。
+具体数值未知。
 
 设置 DMI Gen3 在退出 L1 状态时的延迟参数
 
@@ -2420,7 +2423,7 @@ FOM，Figure of Merit，品质因数，表示接收到的信号质量。可根�
 
 Disabled（禁用）
 
-Fixed EQ（固定的动态均衡）
+Fixed EQ（固定均衡）
 
 HW EQ（硬件动态均衡）
 
@@ -2430,7 +2433,7 @@ HW EQ（硬件动态均衡）
 
 ##### DMI Gen4 TRC0 Cpre Lan0（DMI Gen4 通道 0 发射器前/后游标系数值）
 
-DMI Gen4 通道发射器前/后游标系数值
+DMI Gen4 通道发射器前游标和后游标系数值。
 
 ##### DMI Gen4 TRC0 Cpost Lan0（DMI Gen4 通道 0 发射器前/后游标系数值）
 
@@ -2494,7 +2497,7 @@ DMI Gen4 通道发射器前/后游标系数值
 
 DMI Gen3 TRC0 Cpre Lan0（DMI Gen3 通道 0 发射器前/后游标系数值） \*
 
-DMI Gen3 通道发射器前/后游标系数值
+DMI Gen3 通道发射器前游标和后游标系数值。
 
 作用未知。
 
@@ -2558,7 +2561,7 @@ DMI Gen3 通道发射器前/后游标系数值
 
 同上。
 
-##### PEG Port Feature Configuration（PCG 端口功能配置）
+##### PEG Port Feature Configuration（PEG 端口功能配置）
 
 选项：
 
@@ -2568,7 +2571,7 @@ Disabled（禁用）
 
 说明：
 
-PCI Express Graphics，显卡插槽（x16 PCIe）端口功能配置。
+PEG，PCI Express Graphics，显卡插槽（x16 PCIe）端口功能配置。
 
 - Detect Non-Compliance Device（检测不规范的设备）
 
@@ -2584,9 +2587,11 @@ Manual（手动）
 
 说明：
 
-“Stop Grant mode”是一种低功耗状态（即“停止授予（指令）”模式。），为大多数现代 x86 微处理器所支持。进入该模式的切换是由硬件控制的。
+“Stop Grant mode”是一种低功耗状态（即“停止授予（指令）”模式），为大多数现代 x86 微处理器所支持。
 
-当 CPU 检测到 系统空闲（如操作系统空闲线程运行），它可以通过硬件机制进入该模式以降低功耗。
+进入该模式的切换是由硬件控制的。
+
+当 CPU 检测到系统空闲（如操作系统空闲线程运行）时，可以通过硬件机制进入该模式以降低功耗。
 
 ### VT-d（英特尔 ® 定向 I/O 架构虚拟化技术/IOMMU）
 
@@ -2594,7 +2599,7 @@ VT-d 即 Intel IOMMU 技术，虚拟化 I/O 技术。
 
 VT-d，Intel® Virtualization Technology for Directed I/O，英特尔 ® 定向 I/O 架构虚拟化技术。用于提高系统的安全性和可靠性，并改善 I/O 设备在虚拟化环境中的性能。
 
-VT-d 是一个位于 CPU、内存和 I/O 设备之间的硬件设备，VT-d 的主要功能就是将 I/O 设备的 DMA 访问请求和中断请求重定向到 VMM 设定好的 VM 中。
+VT-d 是一项位于 CPU、内存和 I/O 设备之间的硬件机制，其主要功能是将 I/O 设备的 DMA 访问请求和中断请求重定向到 VMM 设定的虚拟机中。
 
 参见 [Intel VT-d（1）- 简介](https://zhuanlan.zhihu.com/p/50640466)、[定向 I/O 架构规范英特尔 ® 虚拟化技术](https://www.intel.cn/content/www/cn/zh/content-details/774206/intel-virtualization-technology-for-directed-i-o-architecture-specification.html)
 
@@ -2624,11 +2629,11 @@ Disabled（禁用）
 
 说明：
 
-X2APIC，Second-Generation Advanced Programmable Interrupt Controller，第二代高级可编程中断控制器，是 xAPIC 架构的扩展，用于支持处理器的 32 位 APIC 地址能力及相关增强功能。中断重映射（Interrupt remapping）使得 x2APIC 能够支持扩展后的 APIC 地址空间，用于外部中断，而无需对中断源（例如 I/OxAPIC 和 MSI/MSIX 设备）进行硬件更改。
+x2APIC，Second-Generation Advanced Programmable Interrupt Controller，第二代高级可编程中断控制器。是 xAPIC 架构的扩展，用于支持处理器的 32 位 APIC 地址能力及相关增强功能。中断重映射（Interrupt remapping）使得 x2APIC 能够支持扩展后的 APIC 地址空间，用于外部中断，而无需对中断源（例如 I/OxAPIC 和 MSI/MSIX 设备）进行硬件更改。
 
-控制 X2APIC_OPT_OUT 标志位
+控制 X2APIC_OPT_OUT 标志位。
 
-用于控制针对 VT-d 功能是否启用 x2APIC 支持。虚拟化中的设备直通可能会用到此选项。
+用于控制在 VT-d 功能下是否启用 x2APIC 支持。虚拟化中的设备直通可能会用到此选项。
 
 ### DMA Control Guarantee（DMA 控制保护/内存访问保护）
 
@@ -2640,10 +2645,9 @@ Disabled（禁用）
 
 说明：
 
-控制 DMA_CONTROL_GUARANTEE 标志位
+控制 DMA_CONTROL_GUARANTEE 标志位。
 
-借助此功能，操作系统和系统固件可在以下情形中保护系统，以防范针对所有支持 DMA 的设备的恶意和非预期直接内存访问 (DMA) 攻击：  
-在启动过程中。
+借助此功能，操作系统和系统固件可在以下情形中保护系统，以防范针对所有支持 DMA 的设备的恶意和非预期直接内存访问（DMA）攻击。
 
 在操作系统运行时，防范连接到可轻松访问且支持 DMA 功能的内部/外部端口（例如，M.2 PCIe 插槽和 Thunderbolt™3）的设备进行的恶意 DMA。
 
@@ -2659,9 +2663,9 @@ Disabled（禁用）
 
 说明：
 
-启用 ／ 禁用 SA 热管理设备。
+启用／禁用 SA 热管理设备。
 
-SA Thermal Device 是处理器内部的一个关键组件，用于监测系统代理（System Agent）的温度。
+SA Thermal Device 是处理器内部的一个关键组件，用于监测系统代理（System Agent）的温度状态。
 
 对于 ICL A0 步进（Ice Lake，第三代英特尔处理器）版本，始终启用。
 
@@ -2703,7 +2707,7 @@ SA GNA Device.
 
 GNA，Gaussian and Neural Accelerator，英特尔高斯与神经网络加速器。高斯指高斯模型（Gaussian Model），是一种基于高斯分布（正态分布）的数学模型。
 
-这是一个在实际处理器芯片内的人工智能（AI）协处理器（神经网络处理）。主要用于加速语音识别、噪声抑制、语音唤醒等 AI 工作负载。
+这是一个集成在处理器芯片内的人工智能（AI）协处理器，用于神经网络相关处理。主要用于加速语音识别、噪声抑制、语音唤醒等 AI 工作负载。
 
 ### CRID Support（兼容版本标识支持）
 
@@ -2715,9 +2719,9 @@ Disabled（禁用）
 
 说明：
 
-系统报告最初发布的芯片组版本标识和 CPU 兼容版本标识
+系统报告最初发布的芯片组版本标识和 CPU 兼容版本标识信息。
 
-启用 ／ 禁用 SA CRID 和 TCSS CRID 控制，以支持 Intel SIPP。
+启用／禁用 SA CRID 和 TCSS CRID 控制，以支持 Intel SIPP。
 
 Intel SIPP，The Intel Stable IT Platform Program，英特尔 ® 稳定 IT 平台计划，是 vPro® platform 的一部分。参见 [借助英特尔 ® 稳定 IT 平台计划实现可靠的稳定性](https://www.intel.cn/content/www/cn/zh/architecture-and-technology/vpro/stable-it-platform-program/overview.html)、[什么是英特尔 ® vPro®？](https://www.intel.cn/content/www/cn/zh/architecture-and-technology/vpro/what-is-vpro.html)
 
@@ -2733,9 +2737,9 @@ Disabled（禁用）
 
 说明：
 
-启用 ／ 禁用 IOP 的 SA HRC（写缓存）功能。启用后，支持最多 10 个设备分配到环路并进入 LLC（最后一级缓存）。
+启用／禁用 IOP 的 SA WRC（写缓存）功能。启用后，支持最多 10 个设备分配到环路并进入 LLC（最后一级缓存）。
 
-WRC，write cache，写缓存。WRC 功能启用 Intel® 数据直通 I/O 技术（Intel® DDIO），使 I/O 设备能够利用最后一级缓存（LLC）作为中间缓冲区。此功能不对每个 CPU 的最后一级缓存进行分区。
+WRC，Write Cache，写缓存。WRC 功能启用 Intel® 数据直通 I/O 技术（Intel® DDIO），使 I/O 设备能够利用最后一级缓存（LLC）作为中间缓冲区。此功能不对每个 CPU 的最后一级缓存进行分区。
 
 参见 [https://webdls.ieiworld.com/data/\_prod-detail-feature/DRPC-DEV-KIT/Real-Time-Tuning-Guide-11th-Gen-Intel-Core-Processors-1.4.pdf](https://webdls.ieiworld.com/data/_prod-detail-feature/DRPC-DEV-KIT/Real-Time-Tuning-Guide-11th-Gen-Intel-Core-Processors-1.4.pdf)、[file:///D:/improving-real-time-performance-of-codesys-control-applications-with-intel-s-real-time-technologies-1723443578.pdf](file:///D:/improving-real-time-performance-of-codesys-control-applications-with-intel-s-real-time-technologies-1723443578.pdf)
 
@@ -2749,7 +2753,7 @@ Disabled（禁用）
 
 说明：
 
-启用 ／ 禁用 4GB 以上的内存映射 I/O（Memory Mapped I/O）BIOS 分配。
+启用／禁用 4GB 以上的内存映射 I/O（Memory Mapped I/O）BIOS 分配。
 
 当 Aperture Size（显存孔径）设置为 2048MB 时，该功能会自动启用。
 
@@ -2759,7 +2763,7 @@ Disabled（禁用）
 
 目前该功能通常用于同时使用多张显卡的情况；该功能对于游戏和加密货币挖矿等高性能应用特别有用。参见 [BIOS Above 4GB MMIO BIOS Assignment / Above 4G Decoding](https://432hz.myqnapcloud.com:81/WordPress/above-4gb-mmio-bios-assignment-and-above-4g-decoding/)
 
-禁用状态下双 CPU 显卡及雷电接口设备使用受限。参见 [为什么使用类似 RocketRAID 840A 的 Legacy 设备，在其自带的 Raid Option 接口下识别不到硬盘，无法组建 RAID?](https://www.asus.com.cn/support/faq/1043356/)
+在禁用状态下，双 CPU 显卡及雷电接口设备的使用将受到限制。参见 [为什么使用类似 RocketRAID 840A 的 Legacy 设备，在其自带的 Raid Option 接口下识别不到硬盘，无法组建 RAID?](https://www.asus.com.cn/support/faq/1043356/)
 
 ### IPU Device (B0:D5:F0) (IPU 设备)
 
@@ -2783,7 +2787,7 @@ MIPI，Mobile Industry Processor Interface，移动行业处理器接口。
 
 MIPI 是一套协议/标准，用于规范化设备内部接口，如摄像头、显示屏等。在嵌入式设备上很常见，如树莓派。
 
-MIPI 包含 CSI，摄像头接口（Camera Serial Interface）、DSI：显示接口（Display Serial Interface），用于连接显示屏幕等。
+MIPI 包含 CSI（Camera Serial Interface，摄像头接口）和 DSI（Display Serial Interface，显示接口），用于连接摄像头和显示屏等设备。
 
 ![](../.gitbook/assets/image-20250728174206-u0mx1kg.png)
 
@@ -2797,9 +2801,9 @@ Disabled（禁用）
 
 说明：
 
-启用 ／ 禁用通过本地 I/O 或 USB I/O 扩展方式的 CVF 功能。
+启用／禁用通过本地 I/O 或 USB I/O 扩展方式的 CVF 功能。
 
-CVF：Intel Clover Falls，英特尔推出的 AI 协处理器。是一种英特尔集成传感器解决方案。参见 [Dell Laptop Camera Not Working in Teams, Zoom, and Windows Camera Application](https://www.dell.com/support/kbdoc/en-hk/000248760/laptop-mipi-camera-may-not-work-under-windows?lwp=rt)
+CVF，Intel Clover Falls，是英特尔推出的一种 AI 协处理器。是一种英特尔集成传感器解决方案。参见 [Dell Laptop Camera Not Working in Teams, Zoom, and Windows Camera Application](https://www.dell.com/support/kbdoc/en-hk/000248760/laptop-mipi-camera-may-not-work-under-windows?lwp=rt)
 
 #### Control Logic 1（控制逻辑 1）
 
@@ -2811,7 +2815,7 @@ Disabled（禁用）
 
 说明：
 
-功能未知。
+该功能的具体作用尚不明确。
 
 #### Control Logic 2（控制逻辑 2）
 
@@ -2852,9 +2856,16 @@ IMX135, OV5693, IMX179, OV8858, OV2740-IVCAM, OV9728, IMX188, IMX208, OV5670, OV
 说明：
 选择摄像头的传感器模型。
 
-##### Lanes Clock division（通道时钟分频）
+##### Lanes Clock Division（通道时钟分频）
 
-4 4 2 2, 4 4 3 1, 4 4 4 0, 8 0 2 2, 8 0 3 1,8 0 4 0
+选项：
+
+- 4 4 2 2
+- 4 4 3 1
+- 4 4 4 0
+- 8 0 2 2
+- 8 0 3 1
+- 8 0 4 0
 
 设置每个通道的时钟分频。
 
@@ -2882,7 +2893,7 @@ Control Logic 4（控制逻辑 4）
 
 选择 GPIO 控制逻辑
 
-##### Camera position（摄像头机位）
+##### Camera Position（摄像头位置）
 
 选项：
 
@@ -2892,7 +2903,7 @@ Back（后）
 
 说明：
 
-摄像头机位
+摄像头机位。
 
 ##### Flash Support（闪光灯支持）
 
@@ -2950,7 +2961,7 @@ ILEDB 16mA：设置 ILEDB 引脚的电流为 16 毫安
 
 选择链路。
 
-##### LaneUsed（已使用的通道）
+##### Lane Used（已使用的通道数）
 
 选项：
 
@@ -2964,7 +2975,7 @@ x4
 
 说明：
 
-已使用的通道数
+已使用的通道数。
 
 ##### PortSpeed（端口速率）
 
@@ -2986,29 +2997,59 @@ x4
 
 说明：
 
-端口速率
+设置端口速率。
 
 ##### MCLK（主时钟）
 
-MCLK，Master Clock，主时钟
+MCLK（Master Clock，主时钟）。
 
 具体频率取决于传感器的要求。
 
 ##### EEPROM Type（EEPROM 类型）
 
-EEPROM，Electrically Erasable Programmable read only memory：带电可擦可编程只读存储器，一般是存储 ROM 的。
+EEPROM，Electrically Erasable Programmable Read-Only Memory（带电可擦可编程只读存储器），一般用于存储固件或配置数据。
 
-ROM_NONE, ROM_OTP, ROM_EEPROM_16K_64, ROM_EEPROM_16K_16, ROM_OTP_ACPI_ACPI, ROM_ACPI, ROM_EEPROM_BRCA016GWZ, ROM_EEPROM_24AA32, ROM_EEPROM_CAT24C08, ROM_EEPROM_M24C64, ROM_EEPROM_DW98068, ROM_EEPROM_CAT24C16, ROM_EEPROM\_ CAT24C64, ROM_EEPROM_24AA16
+选项：
+
+- ROM_NONE
+- ROM_OTP
+- ROM_EEPROM_16K_64
+- ROM_EEPROM_16K_16
+- ROM_OTP_ACPI_ACPI
+- ROM_ACPI
+- ROM_EEPROM_BRCA016GWZ
+- ROM_EEPROM_24AA32
+- ROM_EEPROM_CAT24C08
+- ROM_EEPROM_M24C64
+- ROM_EEPROM_DW98068
+- ROM_EEPROM_CAT24C16
+- ROM_EEPROM_CAT24C64
+- ROM_EEPROM_24AA16
 
 选项 EEPROM 类型。
 
 ##### VCM Type（VCM 类型）
 
-VCM，Voice Coil Motor，音圈电机。摄像头的自动对焦功能会用到 VCM
+VCM，Voice Coil Motor（音圈电机）。摄像头的自动对焦功能会使用 VCM。
 
-VCM_NONE , VCM_AD5823, VCM_DW9714, VCM_AD5816, VCM_DW9719, VCM_DW9718, VCM_DW98068, VCM_WV517S, VCM_LC898122XA, VCM_LC898212AXB, VCM_RESERVED1, VCM_RESERVED2, VCM_AK7371, VCM_BU64297GWZ
+选项：
 
-选项 VCM 类型
+- VCM_NONE
+- VCM_AD5823
+- VCM_DW9714
+- VCM_AD5816
+- VCM_DW9719
+- VCM_DW9718
+- VCM_DW98068
+- VCM_WV517S
+- VCM_LC898122XA
+- VCM_LC898212AXB
+- VCM_RESERVED1
+- VCM_RESERVED2
+- VCM_AK7371
+- VCM_BU64297GWZ
+
+选择 VCM 类型。
 
 ##### Number of I2C Components（I²C 组件数量）
 
@@ -3022,13 +3063,28 @@ I²C0, I²C1, I²C2, I²C3, I²C4, I²C5
 
 说明：
 
-设定 I²C 通道
+设定 I²C 通道。
 
 ##### I2C Address（I²C 地址）
 
 ##### Device Type（I²C 设备类型）
 
-Sensor（传感器）, VCM, EEPROM, EEPROM_EXT1, EEPROM_EX2, EEPROM_EXT3, EEPROM_EXT4, EEPROM_EXT5, EEPROM_EXT6, EEPROM_EXT7, IO Expander, Flash
+选项：
+
+- Sensor（传感器）
+- VCM
+- EEPROM
+- EEPROM_EXT1
+- EEPROM_EX2
+- EEPROM_EXT3
+- EEPROM_EXT4
+- EEPROM_EXT5
+- EEPROM_EXT6
+- EEPROM_EXT7
+- IO Expander
+- Flash
+
+设定 I²C 设备类型。
 
 ##### Flash Driver Selection（闪光灯驱动选择）
 
@@ -3080,7 +3136,7 @@ Disabled（禁用）
 
 ## PCH-IO Configuration（平台控制总线配置）
 
-PCH，Platform Controller Hub，平台路径控制器，即南桥。这个设置即主板 I/O 设置。
+PCH，Platform Controller Hub（平台控制器集线器），即南桥。这个设置即主板 I/O 设置。
 
 ![](../.gitbook/assets/image-20250726134142-q2c0wfy.png)
 
@@ -3094,7 +3150,7 @@ PCIe（Peripheral Component Interconnect Express，外围组件快速互连）�
 
 ![](../.gitbook/assets/image-20250728184152-1oud3nu.png)
 
-#### Fia Programming（Fia 编程）
+#### Fia Programming（FIA 编程）
 
 选项：
 
@@ -3104,7 +3160,7 @@ Disabled（禁用）
 
 说明：
 
-对于每个 PCIe 根端口，如果该项启用，BIOS 会加载对应的 FIA（Flexible I/O Adapter）配置。平台在初始化时通过 FIA 设置决定 root port 的 lane 分配、启用状态、速率桥接等。
+对于每个 PCIe 根端口，如果该项启用，BIOS 会加载对应的 FIA（Flexible I/O Adapter）配置。平台在初始化时通过 FIA 设置决定 Root Port 的 Lane 分配、启用状态、速率协商等。
 
 #### DMI Link ASPM Control（DMI 链路 ASPM 控制）
 
@@ -3126,13 +3182,13 @@ Auto（自动）
 
 此选项同时控制了 CPU 和芯片组 DMI 链路的 ASPM。
 
-并非所有 PCIe 通道都以相同的方式工作——CPU PCIe 通道直接与 CPU 连接，而芯片组通道（也就是“PCH 通道”/南桥）通过主板的芯片组，经由 DMI (Direct Media Interface，直接媒体接口) 链路连接到 CPU。DMI 其实就是一种 PCIe 通道。
+并非所有 PCIe 通道都以相同的方式工作：CPU PCIe 通道直接与 CPU 相连，而芯片组通道（即“PCH 通道”或南桥通道）通过芯片组并经由 DMI（Direct Media Interface，直接媒体接口）链路连接到 CPU。DMI 其实就是一种 PCIe 通道。
 
 对 DMI 链路主动状态电源管理（Active-state power management，ASPM）的控制。
 
 PCI Express 2.0 规范规定了两种低功耗模式：L0s 和 L1 模式。
 
-对于 英特尔 ® Arc™ 显卡，所有大于 G2 的电源状态都需要 ASPM L1。这意味着必须启用 ASPM L1 和全局作系统设置才能支持英特尔 Arc 显卡低功耗模式。
+对于英特尔® Arc™ 显卡，所有高于 G2 的电源状态都需要启用 ASPM L1。这意味着必须启用 ASPM L1 和全局操作系统设置才能支持英特尔 Arc 显卡低功耗模式。
 
 参考文献：[英特尔 ® 处理器的直接媒体接口（DMI）是什么？](https://www.intel.cn/content/www/cn/zh/support/articles/000094185/processors.html)
 
@@ -3146,7 +3202,7 @@ Disabled（禁用）
 
 说明：
 
-打开/关闭 PCIE 8xh 端口解码。
+打开或关闭 PCIe 8xh 端口解码。
 
 PCIe\* 根端口在设置了 MPC.P8XDE 后，会专门解码并响应地址范围为 80h 到 8Fh 的 I/O 周期。这些 I/O 周期的响应不受标准 PCI 的 I/O 基址/限制寄存器以及 I/O 空间使能字段的限制。这使得 POST 卡可以直接作为 PCI Express 设备连接到根端口，或者通过 PCI Express\* 到 PCI 桥接器以 PCI 卡的形式连接。
 
@@ -3306,7 +3362,7 @@ CEMX4 slot（4 通道 PCI Express 插槽，用于连接标准尺寸的 PCIe 扩�
 
 #### PCI Express Root Port x（PCIe 根端口 x）
 
-为每调单独 PCIe 根端口设置的参数。
+为每条单独的 PCIe 根端口设置的参数。
 
 ##### PCI Express Root Port x（PCIe 根端口 x）
 
@@ -3378,11 +3434,11 @@ Disabled（禁用）
 
 ACS，Access Control Services Extended Capability，访问控制服务扩展能力
 
-PCIe 和服务器规范中定义的访问控制服务（ACS）功能是维护 IOMMU 组内隔离的硬件标准。
+PCIe 和服务器规范中定义的访问控制服务（ACS）功能，是用于维护 IOMMU 组内隔离的硬件标准。
 
 如果没有原生的 ACS，或者硬件供应商没有提供相反的确认，IOMMU 组内的任何多功能设备都存在暴露函数间点对点 DMA 的风险，这些 DMA 操作发生在 IOMMU 保护之外，从而使 IOMMU 组扩展到包括缺乏适当隔离的函数。
 
-增强 IO 虚拟化用。
+用于增强 I/O 虚拟化能力。
 
 参见 [A.2.2.4. Access Control Services (ACS) Capability Structure](https://www.intel.com/content/www/us/en/docs/programmable/683059/24-3/access-control-services-acs-capability.html)、[Hardware Considerations for Implementing SR-IOV](https://docs.redhat.com/zh-cn/documentation/red_hat_virtualization/4.2/html/hardware_considerations_for_implementing_sr-iov/index)
 
@@ -3422,7 +3478,7 @@ DPC 是 PCIe 标准的建议扩展，设计用于自动禁止发生非致命 (�
 
 ##### EPDC（增强型下行端口控制）
 
-EDPC，Enhanced Downstream Port Containment，增强型下行端口控制
+EDPC，Enhanced Downstream Port Containment（增强型下行端口控制）。
 
 - Hot Plug（热插拔）
 
@@ -3490,7 +3546,7 @@ Disabled（禁用）
 
 说明：
 
-CER，Correctable Error Reporting，可纠正错误报告
+CER，Correctable Error Reporting（可纠正错误报告）。
 
 - CTO（PCIe 完成超时）
 
@@ -3506,7 +3562,7 @@ Disabled（禁用）
 
 说明：
 
-PCIe 设备发出的请求中有些请求需要 Completer 反馈 Completion，此时 Requester 会等待 Completion 再进行下一步操作。在某些异常情况下，比如配置不当、系统故障等，Requeser 无法收到或收齐 Completion。
+PCIe 设备发出的请求中有些请求需要 Completer 反馈 Completion，此时 Requester 会等待 Completion 再进行下一步操作。在某些异常情况下，比如配置不当、系统故障等，Requester 将无法收到或收齐 Completion。
 
 为了不影响进一步使用，需要一种超时退出机制让 Requester 从这种等待状态恢复过来，这就是 Completion Timeout 机制（完成超时退出机制）。
 
@@ -3566,7 +3622,7 @@ PME，Power Management Events，电源管理事件。电源管理中断。
 
 SCI，System Control Interrupt，系统控制中断。SCI# 主要是在进入 ACPI 后，ACPI 用的中断信号。
 
-PCIe 的 PME 和 SCI 开关。
+用于控制 PCIe 的 PME 和 SCI。
 
 - Advanced Error Reporting（高级错误报告）
 
@@ -3738,7 +3794,7 @@ P2P（点对点）通信可使 PCIe 设备之间无需经过内存，直接将�
 
 ![](../.gitbook/assets/image-20250729010646-su5cc9b.png)
 
-##### ClockO assignment（时钟 0 分配）
+##### Clock0 Assignment（时钟 0 分配）
 
 选项：
 
@@ -3760,7 +3816,7 @@ Platform-POR：时钟根据主板布局分配给 PCIe 接口或 LAN。
 
 参见 [What is “clock0 assignment” and “ClkReq for clock0” BIOS options?](https://winraid.level1techs.com/t/what-is-clock0-assignment-and-clkreq-for-clock0-bios-options/104666)
 
-##### ClkReq for ClockO（时钟 0 的时钟请求引脚）
+##### ClkReq for Clock0（时钟 0 的时钟请求引脚）
 
 选项：
 
@@ -3790,7 +3846,7 @@ Disabled（禁用）
 
 说明：
 
-控制 SATA 设备开关。
+控制 SATA 控制器的启用或禁用。
 
 #### SATA Mode Selection（SATA 模式选择）
 
@@ -3800,7 +3856,7 @@ AHCI（Advanced Host Controller Interface，高级主机控制接口）
 
 RAID（Redundant Array of Independent Disks，独立磁盘冗余阵列）
 
-IDE (Integrated Drive Electronics，集成磁盘电子接口)
+IDE（Integrated Drive Electronics，集成驱动电子接口）
 
 说明：
 
@@ -3808,7 +3864,7 @@ IDE (Integrated Drive Electronics，集成磁盘电子接口)
 
 一般只有非常老旧的计算机才会使用 IDE 接口。
 
-正常的计算机一般都是 AHCI。大部分非 Windows 操作系统（本身也需要驱动才能支持）都与 RAID 模式不兼容（但是英特尔快速存储技术需要 RAID 模式）。
+现代计算机通常使用 AHCI 模式。大部分非 Windows 操作系统（本身也需要驱动才能支持）都与 RAID 模式不兼容（但是英特尔快速存储技术需要 RAID 模式）。
 
 并且这个 RAID，一般叫做 Fake-RAID/hardware-assisted software RAID，伪 RAID，不是真正的硬 RAID。这种情况下可能需要英特尔快速存储技术（RST）驱动才能正常使用。
 
@@ -3838,7 +3894,7 @@ Disabled（禁用）
 
 说明：
 
-Aggressive LPM Support, ALPM
+Aggressive LPM Support（ALPM）。
 
 使 PCH 主动让 SATA 总线进入链路低功耗状态。此功能仅在 AHCI 模式下受支持。
 
@@ -3942,11 +3998,11 @@ Disabled（禁用）
 
 说明：
 
-启用/禁用 SATA 端口 0 的 DevSlp（设备休眠）功能。要使 DevSlp 正常工作，硬盘和 SATA 端口都必须支持 DevSlp 功能，否则可能会出现意外行为。启用前请确认主板设计是否支持此功能。
+启用／禁用 SATA 端口 0 的 DevSlp（设备休眠）功能。要使 DevSlp 正常工作，硬盘和 SATA 端口都必须支持 DevSlp 功能，否则可能会出现意外行为。启用前请确认主板设计是否支持此功能。
 
 设备睡眠（或 DevSleep / DevSlp）是某些 SATA 设备中的一种新功能，它允许设备进入低功耗的“设备睡眠”状态。例如，在 DevSleep 模式下，Intel® 固态硬盘 Pro 2500 系列（2.5 英寸）的功耗仅为 5 毫瓦，而处于空闲状态时的功耗为 55 毫瓦。
 
-设备睡眠是 SATA 标准的一部分，理论上所有 SATA 设备（无论固态硬盘还是机械硬盘）均应支持。
+设备睡眠是 SATA 标准的一部分，理论上所有 SATA 设备（无论固态硬盘还是机械硬盘）均应支持该功能。
 
 参见 [什麼是 dev 睡眠功能以及如何禁用 dev 睡眠功能](https://www.intel.com.tw/content/www/tw/zh/support/articles/000024170/memory-and-storage.html)
 
@@ -3960,7 +4016,7 @@ Disabled（禁用）
 
 说明：
 
-DTIO，Drive Idle Timeout，驱动空闲超时
+DITO，Drive Idle Timeout（驱动空闲超时配置）。
 
 DITO 是指某个端口在硬件可以自动进入 DevSleep 状态之前必须保持空闲的时间。
 
@@ -3970,7 +4026,7 @@ DITO 是指某个端口在硬件可以自动进入 DevSleep 状态之前必须�
 
 设置 DTIO 值。这是一个最低的时间要求，但不意味着达到此时间就睡眠。
 
-#### DM value（设备睡眠模式时间）
+#### DM Value（设备睡眠模式时间）
 
 DM，Device Sleep Mode Value，设备睡眠模式时间
 
@@ -3990,15 +4046,15 @@ Disabled（禁用）
 
 说明：
 
-xDCI，eXtensible Device Controller Interface，可扩展的设备控制器接口
+xDCI，Extensible Device Controller Interface，可扩展设备控制器接口。
 
-USB OTG 设备支持。
+用于支持 USB OTG 设备。
 
 可扩展设备控制器接口（Extensible Device Controller Interface，简称 xDCI）是一种接口规范，定义了用于通用串行总线（USB 3）的设备控制器，该控制器能够与兼容 USB 1.x、2.0 和 3.x 的设备进行通信。
 
 当计算机作为设备连接到另一台计算机时（例如，平板电脑连接到台式机），xDCI 控制器将在设备端被激活，并与另一台计算机的主机进行通信。
 
-xDCI 控制器支持的最大链路速率为 USB 3.2 Gen 1x1（5Gbps）。
+xDCI 控制器支持的最大链路速率为 USB 3.2 Gen 1x1（5 Gbps）。
 
 注意：这些控制器作为独立的 PCI 功能集成在处理器芯片内部，用于支持具备 USB-C\* 功能的端口。
 
@@ -4014,7 +4070,7 @@ Disabled（禁用）
 
 说明：
 
-此项对 PCH-H 无影响。USB 2.0 物理层的 Sus Well 电源门控
+此项对 PCH-H 无影响，用于控制 USB 2.0 物理层的 Sus Well 电源门控。
 
 节能选项。
 
@@ -4030,7 +4086,7 @@ Disabled（禁用）
 
 PDO，Power Data Objects，供电数据对象
 
-USB PD 2.0 通过 USB PDO 来提供标准功能（电源协议功率等）。
+USB PD 2.0 通过 USB PDO 提供标准功能（如电源协议功率）。
 
 此策略选项设置后，BIOS 会在 PEI 阶段配置端口禁用覆盖（Port Disable Override，PDO）寄存器。
 
@@ -4102,7 +4158,7 @@ Disabled（禁用）
 
 HSII, HS Interrupt IN Alarm
 
-启用/禁用 HSII 功能。启用该功能可能会导致功耗增加。
+启用／禁用 HSII 功能。启用该功能可能会导致功耗增加。
 
 作用未知。参见 [https://raw.githubusercontent.com/intel/FSP/master/TigerLakeFspBinPkg/Docs/TigerLake_FSP_Integration_Guide.pdf](https://raw.githubusercontent.com/intel/FSP/master/TigerLakeFspBinPkg/Docs/TigerLake_FSP_Integration_Guide.pdf)
 
@@ -4144,7 +4200,7 @@ Select Per-Pin（逐引脚选择）
 
 ![](../.gitbook/assets/image-20250729152714-9l5xc3b.png)
 
-以上选项重复的忽略。
+以上重复选项不再赘述。
 
 ##### USB SS Physical Connector #0（USB 3.0 物理连接 0 号）
 
@@ -4232,7 +4288,7 @@ Disabled（禁用）
 
 说明：
 
-HD Audio，HDA，高清音频，其实就是核显自带的声卡。
+HD Audio，HDA，高清音频，是平台上的音频子系统，并不等同于核显自带声卡。
 
 控制 HD-Audio 设备的检测。启用后，以下相关的菜单项将会出现。
 
@@ -4252,7 +4308,7 @@ Disabled（禁用）
 
 DSP，Digital Signal Processors，数字信号处理器。
 
-控制音频数字信号处理器开关。它较大的作用是提升音响喇叭的输出功率，使所有扬声器保持一致
+控制音频数字信号处理器开关。其主要作用是对音频信号进行数字处理和优化，以提升音频效果并保持输出一致性。
 
 ##### HDA Link（HDA 链路）/ Audio Link Mode（音频链路模式）
 
@@ -4276,11 +4332,11 @@ Advanced Link Config：高级链路配置
 
 3）SNDW [1-4]
 
-4）“Advanced”模式可分别启用每个接口
+4）“Advanced”模式可分别启用每个接口。
 
-DMIC，Digital Microphone，数字麦克风
+DMIC，Digital Microphone，数字麦克风。
 
-SNDW，SoundWire
+SNDW，SoundWire。
 
 ##### DMIC #0（数字麦克风 0 号）
 
@@ -4372,7 +4428,7 @@ PME，Power Management Event，电源管理事件
 
 说明：
 
-选择 HD Audio Link 频率。仅在 HAD 编解码器支持所选频率时适用。必须选择正确的选项，否则会没声音。
+选择 HD Audio Link 频率。仅在 HDA 编解码器支持所选频率时适用。必须选择正确的选项，否则可能无法输出音频。
 
 ##### iDisplay Audio Link Frequency（iDisplay 音频链路频率）
 
@@ -4404,7 +4460,7 @@ PME，Power Management Event，电源管理事件
 
 指示 SDI 是以 1T、2T（CNL）模式，还是以 2T、4T、8T（ICL）模式运行。
 
-CNL：Cannon Lake 架构，部分第八代 Intel 酷睿处理器代号
+CNL：Cannon Lake 架构，部分第八代 Intel 酷睿处理器代号。
 
 ICL：Ice Lake 架构，第十代 Intel 酷睿处理器代号
 
@@ -4463,6 +4519,7 @@ No Dmic to codec（不配置数字麦克风）
 2 Dmic to codec（2 个数字麦克风通道）
 
 说明：
+
 配置数字麦克风接入 ALC245
 
 ### THC Configuration（触控主机控制器配置）
@@ -4481,7 +4538,7 @@ THC，Touch Host Controller，触控主机控制器
 
 None（无）
 
-THC0（控主机控制器端口 0）
+THC0（触控主机控制器端口 0）
 
 说明：
 
@@ -4657,7 +4714,8 @@ Disabled（禁用）
 
 说明：
 
-启用 SIO（Super I/O，超级 I/0）I²C WITT 设备，并选择使用哪个控制器。
+启用 SIO（Super I/O，超级 I/O）I²C WITT 设备，并选择使用的控制器。
+
 Windows I²C 测试工具（Windows I²C Test Tool，WITT）和多接口测试工具（Multi-Interface Test Tool，MITT）是一种测试工具，用于验证简单外围总线的硬件和软件。
 
 #### WITT/MITT SPI Test Device（WITT/MITT SPI 测试设备）
@@ -4696,7 +4754,7 @@ Disabled（禁用）
 
 操作系统启动前的 LPSS D3 状态（D3 是低功率设备的最低功率状态）。就是让该设备在 OS 启动前处于哪种子状态，影响其初始化与唤醒行为。
 
-LPSS，Low Power Subsystem，低功率子系统
+LPSS，Low Power Subsystem，低功率子系统。
 
 参考文献：[设备低功率状态](https://learn.microsoft.com/zh-cn/windows-hardware/drivers/kernel/device-sleeping-states)
 
@@ -4873,7 +4931,7 @@ Disabled（禁用）
 
 Enabled（启用）：表示该引脚被配置为 ISH 的原生功能。
 
-Enabled（启用）呈灰色：说明存在冲突，例如另一个 SerialTo 控制器占用了该引脚，必须禁用那个控制器才能配置这个引脚为 ISH 功能。
+Enabled（启用）呈灰色：表示存在冲突，例如另一个 Serial IO 控制器占用了该引脚。必须禁用该控制器才能配置此引脚为 ISH 功能。
 
 | ISH 功能  | 与其共享的设备接口 | 适用芯片组     |
 | --------- | ------------------ | -------------- |
@@ -4955,7 +5013,7 @@ Manual（手动）
 
 以下选项仅当本项选择 Manual（手动）才会出现。
 
-##### Thermal Throttling（热容忍）
+##### Thermal Throttling（热节流）
 
 选项：
 
@@ -4965,7 +5023,7 @@ Disabled（禁用）
 
 说明：
 
-控制热容忍开关。
+控制热节流开关。
 
 ##### TT Status 13（同步电源管理状态 13）
 
@@ -4979,9 +5037,9 @@ Disabled（禁用）
 
 PM Sync 状态 13 将强制系统至少进入 T2 状态。
 
-PM Sync，Power Management synchronization，同步电源管理
+PM Sync，Power Management Synchronization，同步电源管理。
 
-##### Thermal Throttling Lock（热容忍锁定）
+##### Thermal Throttling Lock（热节流锁定）
 
 选项：
 
@@ -4991,7 +5049,7 @@ Disabled（禁用）
 
 说明：
 
-锁定整个热容忍寄存器。
+锁定整个热节流寄存器。
 
 ##### T0 Level（T0 级别）
 
@@ -5017,7 +5075,7 @@ Manual（手动）
 
 以下选项仅当本项选择 Manual（手动）才会出现。
 
-##### DMI Thermal Sensor Autonomous Width（DMI 热传感器自动数据链路宽度宽度协商）
+##### DMI Thermal Sensor Autonomous Width（DMI 热传感器自动数据链路宽度协商）
 
 选项：
 
@@ -5027,9 +5085,9 @@ Disabled（禁用）
 
 说明：
 
-启用/禁用由热传感器发起的自动数据链路宽度协商。即 DMI 热传感器自动数据链路宽度宽度调整功能。
+启用／禁用由热传感器发起的自动数据链路宽度协商，即 DMI 热传感器自动数据链路宽度调整功能。
 
-##### Thermal Sensor 0 Width（热传感器 0 数据链路宽度宽度）
+##### Thermal Sensor 0 Width（热传感器 0 数据链路宽度）
 
 选项：
 
@@ -5047,15 +5105,15 @@ x16
 
 当热传感器的输出为 T0 时，确定 DMI 链路宽度。
 
-##### Thermal Sensor 1 Width（热传感器 1 数据链路宽度宽度）
+##### Thermal Sensor 1 Width（热传感器 1 数据链路宽度）
 
 同上。
 
-##### Thermal Sensor 2 Width（热传感器 2 数据链路宽度宽度）
+##### Thermal Sensor 2 Width（热传感器 2 数据链路宽度）
 
 同上。
 
-##### Thermal Sensor 3 Width（热传感器 3 数据链路宽度宽度）
+##### Thermal Sensor 3 Width（热传感器 3 数据链路宽度）
 
 同上。
 
@@ -5089,13 +5147,14 @@ Disabled（禁用）
 
 说明：
 
-配置 SATA 端口 T1 Multipler 值。Multipler，SATA 端口复用器，它使多路 SATA 设备能够连接到一个 SATA 主端口上。
+配置 SATA 端口 T1 Multiplier 值。Multiplier，SATA 端口复用器，使多路 SATA 设备能够连接到一个 SATA 主端口上。
 
-##### T2 Multipler（T2 端口复用器）
+
+##### T2 Multiplier（T2 端口复用器）
 
 同上。
 
-##### T3 Multipler（T3 端口复用器）
+##### T3 Multiplier（T3 端口复用器）
 
 同上。
 
@@ -5109,7 +5168,7 @@ Disabled（禁用）
 
 说明：
 
-打开/关闭 SATA 端口备用快速初始化。
+打开或关闭 SATA 端口备用快速初始化。
 
 作用未知。
 
@@ -5133,11 +5192,9 @@ Disabled（禁用）
 
 选项：
 
-~32ms
-
-~128ms
-
-~8ms
+- ~32ms
+- ~128ms
+- ~8ms
 
 说明：
 
@@ -5155,7 +5212,7 @@ Disabled（禁用）
 
 说明：
 
-VCC_AUX，辅助电源轨为 FPGA 内部各种逻辑资源模块提供电源。
+VCC_AUX 为辅助电源轨，用于为 FPGA 内部的各种逻辑资源模块提供电源。
 
 参见 [Cyclone® V SoC 设备中使用的 VCC_AUX 和 VCC_AUX_SHARED 电源轨是什么？](https://www.intel.cn/content/www/cn/zh/support/programmable/articles/000086743.html)
 
@@ -5163,11 +5220,11 @@ VCC_AUX，辅助电源轨为 FPGA 内部各种逻辑资源模块提供电源。
 
 ### FIVR Configuration（全集成电压调节模块配置）
 
-FIVR，Fully Integrated Voltage Regulators，全集成电压调节模块
+FIVR，Fully Integrated Voltage Regulator，全集成电压调节模块。
 
 处理器集成了多个电压轨，以降低平台的物料清单（BOM）成本，让主板设计变简单，减少了主板上的元器件。并支持处理器可以利用的额外电压级功能。
 
-PCH 上集成了 FIVR，包括 VNN/V1P05，这些电压由 VCCIN_Aux 提供电源。VCCIN_Aux 还为 CPU 内的 VCCSA 电压轨供电。除了 VCCSA 的 FIVR 外，计算芯片（compute die）还集成了另外 4 个 FIVR，分别为 VCCCORE、VCCSA、VCCL2、VCCGT 和 VCCRING 供电，这些电压均从平台上的 VCCIN VR 衍生而来。每个 FIVR 都能控制特定的电压轨。
+PCH 上集成了 FIVR，包括 VNN、V1P05 等电压轨，这些电压由 VCCIN_Aux 提供电源。VCCIN_Aux 还为 CPU 内的 VCCSA 电压轨供电。除了 VCCSA 的 FIVR 外，计算芯片（compute die）还集成了另外 4 个 FIVR，分别为 VCCCORE、VCCSA、VCCL2、VCCGT 和 VCCRING 供电，这些电压均从平台上的 VCCIN VR 衍生而来。每个 FIVR 都能控制特定的电压轨。
 
 参见 [Fully Integrated Voltage Regulator (FIVR)](https://edc.intel.com/content/www/us/en/design/ipla/software-development-platforms/servers/platforms/intel-pentium-silver-and-intel-celeron-processors-datasheet-volume-1-of-2/fully-integrated-voltage-regulator-fivr/)
 
@@ -5177,9 +5234,9 @@ PCH 上集成了 FIVR，包括 VNN/V1P05，这些电压由 VCCIN_Aux 提供电�
 
 #### External V1P05 Rail S×/S0ix Configuration（外部 V1P05 电压轨 S×/S0ix 配置）
 
-V1P05，VCCRAM，属于外部旁路电压轨
+V1P05，VCCRAM，属于外部旁路电压轨。
 
-##### Enable Rail in S0i1/S0i2（启用 S0i1/S0i2 状态下的电压轨）
+##### Enable Rail in S0i1/S0i2（启用 S0i1/S0i2 状态下的外部电压轨）
 
 选项：
 
@@ -5219,13 +5276,13 @@ Disabled（禁用）
 
 选项：
 
-0.78V@Bypass - 0.78V@Bypass - 1.05V@Internal
+- 0.78V@Bypass - 0.78V@Bypass - 1.05V@Internal
 
-1.05V@Bypass - 1.05V@Bypass - 1.05V@Internal
+- 1.05V@Bypass - 1.05V@Bypass - 1.05V@Internal
 
 说明：
 
-为外部电压轨配置 TARGET_VOLT_LEVEL
+为外部电压轨配置 TARGET_VOLT_LEVEL。
 
 作用未知。
 
@@ -5247,9 +5304,9 @@ Disabled（禁用）
 
 ##### Retention to Low Current Mode（Retention 从关闭状态到低功耗模式的时间）
 
-Retention，Retention（保留）寄存器，是一种低功耗设计技术。
+Retention（保留）寄存器是一种低功耗设计技术。
 
-Retention 至低功耗模式
+Retention 至低功耗模式的过渡说明如下。
 
 从关闭状态（0V）过渡到高电流模式电压的时间，单位为微秒（μs）。该字段的步进为 1 微秒。
 
@@ -5297,13 +5354,13 @@ Disabled（禁用）
 
 说明：
 
-VCCST Voltage：信号维持电压
+VCCST Voltage：信号维持电压。
 
 控制 CPU 待机电压轨的最大电流上限设置。
 
 ### PMC Configuration（电源管理控制器配置）
 
-PMC，Power management controller，电源管理控制器
+PMC，Power Management Controller，电源管理控制器。
 
 ![](../.gitbook/assets/image-20250730182738-7kwprto.png)
 
@@ -5318,6 +5375,7 @@ CPLD（复杂可编程逻辑器件）必须能够检测交流电源故障或即�
 当 PCH 检测到 ADR_TRIGGER 被断言时，会通过 PM_SYNC 链路通知 CPU，并启动 ADR 计时器。
 
 一旦 CPU 收到通知，就会将 ADR 保护写缓冲区中的数据刷新出去。  
+
 当 ADR 计时器超时后，PCH 会断言 ADR_COMPLETE 信号，从而触发 NVDIMM 上的 SAVE 引脚。
 
 ![](../.gitbook/assets/image-20250730183348-wi4q87g.png)
@@ -5348,7 +5406,7 @@ Disabled（禁用）
 
 说明：
 
-功能未知。
+该功能的具体作用尚不明确。
 
 ##### ADR timer 1 expire time（ADR 定时器 1 到期时间）
 
@@ -5395,7 +5453,7 @@ Disabled（禁用）
 
 说明：
 
-DeepSx，深度睡眠模式。
+DeepSx 表示深度睡眠模式。
 
 通过网络从 DeepSx 唤醒功能。
 
@@ -5436,6 +5494,7 @@ USB
 ### DeepSx Power Policies（深度睡眠电源策略）
 
 选项：
+
 Disabled（禁用）
 
 Enable in S4-S5-Battery（在 S4–S5 电池模式下启用）
@@ -5467,6 +5526,7 @@ Disabled（禁用）
 说明：
 
 在退出 DeepSx 或 G3 状态时，禁用 PCH 内部的 ACPRESENT 下拉电阻。这意味着在系统从深度睡眠（DeepSx）或完全关机（G3）状态恢复时，PCH 不会主动拉低 ACPRESENT 信号线（桥的适配器检测信号）。
+
 启用此选项可能会导致某些功能（例如 Wake on LAN）在系统处于低功耗状态时无法正常工作。
 
 ### Port 80h Redirection（端口 80h 重定向）
@@ -5479,9 +5539,9 @@ PCIE Bus
 
 说明：
 
-LPC，Low Pin Count，英特尔低引脚数总线
+LPC，Low Pin Count，英特尔低引脚数总线。
 
-控制 Port 80h 的周期发送位置。调试用。
+控制 Port 80h 的周期发送位置。用于调试。
 
 ### Enhance Port 80h LPC Decoding（增强端口 80h LPC 解码）
 
@@ -5519,7 +5579,7 @@ Disabled（禁用）
 
 设置以启用传统 IO 的低延迟。某些系统无论功耗如何都需要更低的 IO 延迟。这是在功耗与 IO 延迟之间的权衡。
 
-有一定证据表明启用该选项可以改善游戏体验。
+有资料表明，启用该选项在部分场景下可能改善游戏体验。
 
 ### PCH Cross Throttling（PCH 交叉节流）
 
@@ -5537,7 +5597,7 @@ Disabled（禁用）
 
 PCH 交叉节流可能导致总线和外设性能受限，影响实时任务的执行。禁用后避免总线带宽受限，确保实时任务对总线和外设的访问效率。
 
-用于控制系统中多个设备共享 PCIe 根节点时的分配分配，当多个设备同时向根节点发送数据的时候，PCH Cross Throttling 可以通过降低每个设备的带宽，来保证整体带宽的均衡分配，避免任何一个设备的带宽占用过度。
+用于控制系统中多个设备共享 PCIe 根节点时的带宽分配。当多个设备同时向根节点发送数据时，PCH Cross Throttling 可通过降低单个设备的带宽，保证整体带宽的均衡分配，避免某一设备过度占用带宽。
 
 参见 [【实时性】实时性优化的一些参数设置和心得](https://blog.csdn.net/qq_31985307/article/details/130791459)、[【原创】有利于提高 xenomai /PREEMPT-RT 实时性的一些配置建议](https://www.cnblogs.com/wsg1100/p/12730720.html)
 
@@ -5551,7 +5611,7 @@ Disabled（禁用）
 
 说明：
 
-用于监测能耗的 PCH 能耗报告功能
+用于监测能耗的 PCH 能耗报告功能。
 
 启用能耗报告。BIOS 提示必须设置为启用。此选项仅供测试用途。
 
@@ -5563,7 +5623,7 @@ Enabled（启用）
 
 Disabled（禁用）
 
-启用/禁用 S0ix 子状态。
+启用／禁用 S0ix 子状态。
 
 此设置仅用于测试目的。
 
@@ -5583,7 +5643,7 @@ Disabled（禁用）
 
 说明：
 
-C10 状态。
+与 C10 低功耗状态相关。
 
 ### IEH Mode（隔离执行加固模式）
 
@@ -5595,7 +5655,7 @@ Disabled（禁用）
 
 说明：
 
-IEH，Isolated Execution Hardening 隔离执行加固
+IEH，Isolated Execution Hardening，隔离执行加固。
 
 IEH 模式，可提升系统安全性。
 
@@ -5609,7 +5669,7 @@ Disabled（禁用）
 
 说明：
 
-启用/禁用 TCO 计时器。禁用时，将关闭 PCH ACPI 计时器，停止 TCO 计时器，并且不会发布 ACPI MDAT 表。
+启用或禁用 TCO 计时器。禁用时，将关闭 PCH ACPI 计时器，停止 TCO 计时器，并且不会发布 ACPI MDAT 表。
 
 ### Pcie PLL SSC（PCIe PLL 扩频时钟）
 
@@ -5619,13 +5679,13 @@ Auto（自动）
 
 Disabled（禁用）
 
-0.0%-2.0%，步进 0.1
+0.0%–2.0%，步进为 0.1%。
 
 说明：
 
 PCIe PLL 扩频百分比。AUTO —— 保持硬件默认值，不由 BIOS 覆盖。
 
-功能未知。
+该功能的具体作用尚不明确。
 
 ### IOAPIC 24-119 Entries（IOAPIC 24-119 条目）
 
@@ -5639,7 +5699,7 @@ Disabled（禁用）
 
 IRQ24–119 可能会被 PCH 设备使用。禁用这些中断可能会导致某些设备无法正常工作。
 
-是否使用超过 24 个 IOAPIC 项以确保兼容性。I/O APIC 包含一个重定向表，用于将来自外部总线的中断路由到一个或多个本地 APIC。控制 IOAPIC 24–119 项可扩展至 PIROI–PIROX 与否。
+用于设置是否使用超过 24 个 IOAPIC 条目以确保兼容性。I/O APIC 包含一个重定向表，用于将来自外部总线的中断路由到一个或多个本地 APIC。控制 IOAPIC 24–119 项可扩展至 PIROI–PIROX 与否。
 
 ### Enable 8254 Clock Gate（启用 8254 时钟门控）
 
@@ -5651,7 +5711,7 @@ Disabled（禁用）
 
 说明：
 
-在早期阶段启用 ／ 禁用 8254 时钟门控。启用 8254CGE（CGE，Clock Gating Enable，启用时钟门控）是支持 SLP_SO 所必需的。平台也可以在后期阶段禁用该策略并设置 8254CGE。
+在早期阶段启用／禁用 8254 时钟门控。启用 8254CGE（CGE，Clock Gating Enable，启用时钟门控）是支持 SLP_SO 所必需的。平台也可以在后期阶段禁用该策略并设置 8254CGE。
 
 8254 是一种 PIT（Programmable Interval Timer，可编程定时器），它利用若干个寄存器来进行定时和计时的操作。GATE 门控信号实现定时控制与事件计数功能。
 
@@ -5679,7 +5739,7 @@ Disabled（禁用）
 
 说明：
 
-BIOS 写保护机制。可防止恶意软件对 BIOS 进行直接篡改。Flash 保护范围寄存器。
+BIOS 写保护机制，可防止恶意软件对 BIOS 进行直接篡改。通过 Flash 保护范围寄存器实现。
 
 ### SPD Write Disable（SPD 写保护）
 
@@ -5697,7 +5757,7 @@ BIOS 提示：出于安全考虑，必须设置 SPD 写保护位。
 
 SPD 代表串行存在检测（Serial Presence Detect），是一种标准化的方法，用于访问计算机内存模块的信息。SPD 数据存储在内存上的 EEPROM 芯片中，允许系统 BIOS 读取内存的详细信息，如速度、容量和时序，从而确保内存的最佳性能和兼容性。
 
-禁用可影响 XMP（英特尔 ® 至尊内存配置文件）设置，即内存超频。
+禁用该选项可能会影响 XMP（英特尔®至尊内存配置文件）设置，即内存超频功能。
 
 ### LGMR（LPC 内存范围解码）
 
@@ -5711,7 +5771,7 @@ Disabled（禁用）
 
 LGMR，LPC Memory Range Decode，LPC 内存范围解码
 
-用于 LPC 内存范围解码的 64KB 内存块。允许系统将 64KB 的内存块映射到 LPC 接口。调试用。低针数总线（LPC）是一种传统总线，是为取代工业标准架构（ISA）总线而开发的。嵌入式控制器（EC）、基板管理控制器（BMC）和超级 I/O（SIO）是通过低针数总线（LPC）连接到芯片组的。
+用于 LPC 内存范围解码的 64 KB 内存块。允许系统将 64KB 的内存块映射到 LPC 接口。用于调试。低针数总线（LPC）是一种传统总线，是为取代工业标准架构（ISA）总线而开发的。嵌入式控制器（EC）、基板管理控制器（BMC）和超级 I/O（SIO）是通过低针数总线（LPC）连接到芯片组的。
 
 ### HOST_C10 reporting to Target（向目标设备报告 HOST_C10）
 
@@ -5723,7 +5783,7 @@ Disabled（禁用）
 
 说明：
 
-此选项启用通过 eSPI 虚拟线向目标设备报告 HOST_C10 状态。eSPI 是 Intel 推出的新一代总线接口，用于替代 LPC。
+此选项用于启用通过 eSPI 虚拟线向目标设备报告 HOST_C10 状态。eSPI 是 Intel 推出的新一代总线接口，用于替代 LPC。
 
 eSPI，Enhanced Serial Peripheral Interface，增强型串行外设接口
 
@@ -5763,7 +5823,7 @@ Disabled（禁用）
 
 在退出 C10 状态时锁存事件。
 
-功能未知。
+该功能的具体作用尚不明确。
 
 ### Extend BIOS Range Decode（扩展 BIOS 解码范围）
 
@@ -5803,11 +5863,11 @@ Disabled（禁用）
 
 说明：
 
-开关蜂鸣器。
+用于启用或禁用蜂鸣器。
 
 ### PSE Configuration（可编程服务引擎配置）
 
-PSE：Programmable Service Engine，可编程服务引擎
+PSE，Programmable Service Engine，可编程服务引擎。
 
 参见 [借助英特尔的首个物联网增强型平台，推动性能、集成和多功能性](https://www.intel.cn/content/www/cn/zh/products/docs/processors/embedded/enhanced-for-iot-platform-brief.html)
 
@@ -5829,11 +5889,11 @@ Disabled（禁用）
 
 ##### LOG OUTPUT OFFSET（日志输出偏移）
 
-确定内存中 PSE 日志输出区域的偏移量
+确定内存中 PSE 日志输出区域的偏移量。
 
 ##### LOG OUTPUT SIZE（日志输出大小）
 
-确定内存中 PSE 日志输出区域的大小限制
+确定内存中 PSE 日志输出区域的大小限制。
 
 ##### Shell (PSE Shell)
 
@@ -5877,6 +5937,8 @@ PSE Eclite CPU 温度读取。
 
 ##### OOB（远程带外管理）
 
+PSE OOB 服务。专为物联网（IoT）和嵌入式应用设计。
+
 选项：
 
 Enabled（启用）
@@ -5885,8 +5947,7 @@ Disabled（禁用）
 
 说明：
 
-OOB，remote out-of-band，远程带外管理
-PSE OOB 服务。专为物联网（IoT）和嵌入式应用设计。
+OOB，Remote Out-of-Band，远程带外管理。
 
 ##### WoL（网络唤醒）
 
@@ -5952,7 +6013,7 @@ Host owned（主机所有权）
 
 说明：
 
-CAN1 与 I²S0 以及 TGPIO 14-15 存在引脚冲突。控制 CAN1 总线的所有权。
+CAN1 与 I²S0 以及 TGPIO 14–15 存在引脚冲突，用于控制 CAN1 总线的所有权。
 
 ##### DMA0（DMA0 通道）
 
@@ -6022,7 +6083,7 @@ Disabled（禁用）
 
 ##### PSE GBE0 Tx_Delay（PSE GBE0 Tx 延时）
 
-配置 DLL 从属模块中的延迟元件总数。默认值为 16，最小值为 1，最大值为 63。
+配置 DLL 从属模块中延迟元件的总数量。默认值为 16，最小值为 1，最大值为 63。
 
 ##### GBE2（GBE 2 千兆网）
 
@@ -6120,9 +6181,9 @@ Disabled（禁用）
 
 为可以产生中断的 PSE 外设设置中断模式。
 
-启用 \= 中断设置为 SB 模式；SB 模式（Sideband Mode）：也称为传统的 INTx 中断，这种方式存在中断线数量有限、共享资源等限制。
+启用＝中断设置为 SB 模式；SB 模式（Sideband Mode）也称为传统的 INTx 中断，该方式存在中断线数量有限、共享资源等限制。
 
-禁用 \= MSI 模式；MSI 模式（Message Signaled Interrupts，消息信号中断），引入于 PCI 2.2 规范，支持更高效的中断处理
+禁用＝使用 MSI 模式；MSI 模式（Message Signaled Interrupts，消息信号中断）引入于 PCI 2.2 规范，支持更高效的中断处理。
 
 ##### DMA Test（DMA 测试）
 
@@ -6152,7 +6213,7 @@ Disabled（禁用）
 
 说明：
 
-启用/禁用时间敏感局域网控制器。
+启用／禁用时间敏感局域网控制器。
 
 #### PCH TSN GBE Multi-Vc（平台控制器中枢的时间敏感网络千兆以太网多虚拟通道）
 
@@ -6164,7 +6225,7 @@ Disabled（禁用）
 
 说明：
 
-控制时间敏感网络多虚拟通道
+用于控制时间敏感网络的多虚拟通道功能。
 
 #### PCH TSN GBE SGMII Support（平台控制器中枢的时间敏感网络千兆以太网 SGMII 模式支持）
 
@@ -6178,7 +6239,7 @@ Disabled（禁用）
 
 SGMII：Serial Gigabit Media Independent Interface，串行千兆媒体独立接口，可促进网络设备之间的高速通信。
 
-为 PCH TSN GBE 启用/禁用 SGMII 模式。处于同一 PLL 公共通道上的 SGMII 模式端口必须使用相同的链路速度。如果 TSN 端口使用了相同的 PLL 公共通道，可能需要禁用 SATA 或 UFS。请确保 IFWI 为 SGMII 设置了正确的引导配置。确保 Flex IO 通道分配不为 NONE。
+为 PCH TSN GBE 启用／禁用 SGMII 模式。处于同一 PLL 公共通道上的 SGMII 模式端口必须使用相同的链路速度。如果 TSN 端口使用了相同的 PLL 公共通道，可能需要禁用 SATA 或 UFS。请确保 IFWI 为 SGMII 设置了正确的引导配置。确保 Flex IO 通道分配不为 NONE。
 
 #### PCH TSN Link Speed（平台控制器中枢的时间敏感网络链接速率）
 
@@ -6196,7 +6257,7 @@ SGMII：Serial Gigabit Media Independent Interface，串行千兆媒体独立接
 
 PCH TSN 链路速度配置
 
-#### PCH TSN GBE x Multi-Vc（台控制器中枢的时间敏感网络千兆以太网 x 的多虚拟通道）
+#### PCH TSN GBE x Multi-Vc（平台控制器中枢的时间敏感网络千兆以太网 x 的多虚拟通道）
 
 选项：
 
@@ -6206,7 +6267,7 @@ Disabled（禁用）
 
 说明：
 
-启用/禁用 TSN 多虚拟通道。TSN GBE x 必须归主机所有。
+启用／禁用 TSN 多虚拟通道。TSN GBE x 必须归主机所有。
 
 #### PCH TSN GBE x SGMII Support（平台控制器中枢的时间敏感网络千兆以太网 x 的 SGMII 模式支持）
 
@@ -6218,32 +6279,34 @@ Disabled（禁用）
 
 说明：
 
-启用/禁用 PCH TSN GBE x 的 SGMII 模式。处于 SGMII 模式且使用同一 PLL 公共通道的端口必须使用相同的链路速率。由于该 TSN 端口使用相同的 PLL 公共通道，必须禁用 UFS。请确保 IFWI 已为 SGMII 正确设置了跳线。请确保 Flex IO 通道分配不为 NONE。
+启用／禁用 PCH TSN GBE x 的 SGMII 模式。处于 SGMII 模式且使用同一 PLL 公共通道的端口必须使用相同的链路速率。由于该 TSN 端口使用相同的 PLL 公共通道，必须禁用 UFS。请确保 IFWI 已为 SGMII 正确设置了跳线。请确保 Flex IO 通道分配不为 NONE。
 
-#### PCH TSN GBE x Link Speed（平台控制器中枢的时间敏感网络 x 的链接速率）
+#### PCH TSN GBE x Link Speed（平台控制器中枢的时间敏感网络千兆以太网 x 的链路速率）
 
 选项：
 
-24MHz 2.5Gbps
+24MHz 2.5 Gbps
 
-24MHz 1Gbps
+24MHz 1 Gbps
 
-38.4MHz 2.5Gbps
+38.4MHz 2.5 Gbps
 
-38.4MHz 1bps
+38.4MHz 1 Gbps
 
 说明：
 
 PCH TSN GBE x 链路速率配置
 
-### PCIe Ref Pll SSC（PCIe 参考锁相环扩频百分比）
+### PCIe Ref PLL SSC（PCIe 参考锁相环扩频百分比）
 
 SSC：Spread Spectrum Clocking，扩频时钟
 
 PLL：Phase Locked Loop，锁相环
 
-### Flash Protection Range Registers (FPRR)（闪存保护范围寄存器）
+### Flash Protection Range Registers（FPRR，闪存保护范围寄存器）
 
-关闭后可使用 FPT 工具直接修改 BIOS，无需编程器。
+关闭后，可使用 FPT 工具直接修改 BIOS，无需使用编程器。
 
 ### PinCntrl Driver GPIO Scheme（引脚控制驱动 GPIO 方案）
+
+功能未知。

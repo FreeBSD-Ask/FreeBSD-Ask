@@ -1011,9 +1011,9 @@ Enable（启用）
 
 该选项依赖于 Power Limit 2 Override（功耗限制 2 覆盖）。
 
-Power Limit 2（PL2）是短时功耗限制，让 CPU 在短时间内突破 PL1，提供更高性能。一旦超过该阈值，PL2 快速功耗限制算法将尝试限制超过 PL2 的功耗峰值。
+Power Limit 2（PL2）是短时功耗限制，用于允许 CPU 在短时间内突破 PL1，从而提供更高性能。一旦超过该阈值，PL2 快速功耗限制算法将尝试限制超过 PL2 的功耗峰值。
 
-设定在超过长时间功率限制时，降低 CPU 倍频之前的时间长度。
+该参数用于设定在超过长期功耗限制后，CPU 在降低倍频之前所允许的时间长度。
 
 ##### Energy Efficient Turbo（睿频节能）
 
@@ -1037,13 +1037,13 @@ Current VccIn Aux Icc Max（CPU 输入电压辅助最大电流）：108
 
 PSYS 平台电源变化率以 1/100 为单位定义，范围为 0 到 200。
 
-例如，要设置变化率为 1.25，输入 125。设置为 0 表示自动（AUTO）。该设置通过 BIOS VR mainbox 命令 0x9 进行控制。
+例如，要设置变化率为 1.25，输入 125。设置为 0 表示自动（AUTO）。该设置通过 BIOS VR mailbox 命令 0x9 进行控制。
 
 参见 [第 10 代英特尔 ® 酷睿 ™ 处理器系列](https://www.intel.cn/content/dam/www/public/cn/zh/documents/datasheets/10th-gen-core-families-datasheet-vol-1-datasheet.pdf)。
 
 ##### PSYS Offset（PSYS 平台电源偏移量）
 
-PSYS 平台电源偏移量以 1/1000 为单位定义，范围为 0 到 63999。例如，要设置偏移量为 25.348，输入 25348。该设置通过 BIOS VR mainbox 命令 0x9 进行控制。
+PSYS 平台电源偏移量以 1/1000 为单位定义，范围为 0 到 63999。例如，要设置偏移量为 25.348，输入 25348。该设置通过 BIOS VR mailbox 命令 0x9 进行控制。
 
 ##### PSYS Prefix（PSYS 平台电源前缀）
 
@@ -1061,9 +1061,9 @@ PSYS 平台电源偏移量以 1/1000 为单位定义，范围为 0 到 63999。�
 
 PSYS 平台电源最大功率（Pmax）以 1/8 瓦为单位定义，范围为 0 到 8192。
 
-例如，要设置最大功率为 125 瓦，输入 1000（即 1000 × 1/8 \= 125 瓦）。设置为 0 表示自动（AUTO）。该设置通过 BIOS VR mainbox 命令 0xB 进行控制。
+例如，要设置最大功率为 125 瓦，输入 1000（即 1000 × 1/8 \= 125 瓦）。设置为 0 表示自动（AUTO）。该设置通过 BIOS VR mailbox 命令 0xB 进行控制。
 
-其具体作用尚不明确。
+其具体作用在公开文档中未有明确说明。
 
 ##### Min Voltage Override（覆盖最低电压）
 
@@ -1075,7 +1075,7 @@ Enable（启用）
 
 说明：
 
-覆盖当前的最低电压。启用以在运行时和 C8 节能状态中覆盖其最低电压。
+覆盖当前的最低电压。启用后，可在运行时和 C8 节能状态中覆盖最低电压限制。
 
 ##### Min Voltage Runtime（运行时的最低电压）
 
@@ -1095,7 +1095,7 @@ C8 节能状态的最低电压。范围为 0 至 1999mV，以 1/128 伏为增量
 
 设置 VccIn Aux（CPU 输入电压辅助最大电流）的最大 Icc 值，以 1/4A 为增量单位。范围为 0 至 512。
 
-例如：若要设置 ICCMax 为 32A，则输入 128（32\*4）。
+例如：若要设置 Icc Max 为 32 A，则输入 128（32 × 4）。
 
 ##### VccIn Aux IMON Slope（CPU 输入电压辅助电流检测变化率）
 
@@ -1125,7 +1125,7 @@ VCCIN Aux IMON 偏移量，以 1/1000 为增量单位。范围为 0-63999。例�
 
 设置前缀，可以为正值或负值。
 
-用于设置是加上偏移量还是减去偏移量。
+用于指定对测量值是加上偏移量还是减去偏移量。
 
 ##### Vsys/Psys Critical（系统电压/平台功耗临界功能）
 
@@ -1211,7 +1211,7 @@ Enable（启用）
 
 说明：
 
-Acoustic Noise Mitigation（噪声抑制功能）：启用此选项可减轻特定型号的 CPU 在深度 C 状态时的噪声问题。
+Acoustic Noise Mitigation（噪声抑制功能）：启用此选项可减轻部分 CPU 在深度 C 状态下可能出现的噪声问题。
 
 开启此选项，方可设置下方选项：
 
@@ -1222,7 +1222,7 @@ Acoustic Noise Mitigation（噪声抑制功能）：启用此选项可减轻特�
 
   - Disable Fast PKG C State Ramp for  
     VccIn Domain（禁用快速 PKG C 状态切换）：选项：FALSE/TRUE。FALSE: 在深度 C 状态下启用快速切换；TRUE: 在深度 C 状态下禁用快速切换
-  - Slow Slew Rate for IA Domain（处理器核心电压调节域慢速压摆率设置）：选项：Fast/2、Fast/4、Fast/8、Fast/16。设置深度封装 C 状态切换的 VR VccIn（CPU 主供电输入电压）慢速压摆率。慢速压摆率 \= 快速模式压摆率 / 等分系数（可选 2/4/8/16），通过降低压摆率减轻声学噪声。
+  - Slow Slew Rate for IA Domain（处理器核心电压调节域慢速压摆率）：选项：Fast/2、Fast/4、Fast/8、Fast/16。设置深度封装 C 状态切换的 VR VccIn（CPU 主供电输入电压）慢速压摆率。慢速压摆率 \= 快速模式压摆率 / 等分系数（可选 2/4/8/16），通过降低压摆率减轻声学噪声。
 
 - GT VR Domain（Graphics Technology Voltage Regulator，核显电压调节域）
 
@@ -1269,9 +1269,9 @@ Enable（启用）
 
 因为直流电压降（电路长度愈增加，其电压会愈下降，导致其两端电压不同）问题，英特尔将主板到 CPU 之间的物理电阻抽象为虚拟电阻（即 AC/DC Loadline），即不考虑实际物理电阻的实现究竟是多少（每块主板都不同），来拟合 CPU 倍频所需的电压功率，这样不同的主板的主板供电模块的掉压行为就是一致的。AC Loadline 是升压负载线，DC 是降压负载线。
 
-负载线（AC/DC）应通过 VRTT 工具进行测量，并通过 BIOS 的负载线覆盖设置选项进行相应编程。AC 负载线会直接影响工作电压（AC），DC 负载线则会影响功率测量（DC）。与按 POR 阻抗设计的主板相比，采用较低 AC 负载线的优秀主板设计能够在功耗、性能和散热方面实现改进。参见 [VCCCORE DC Specifications](https://edc.intel.com/content/www/de/de/design/products/platforms/details/raptor-lake-s/13th-generation-core-processors-datasheet-volume-1-of-2/vcccore-dc-specifications/)、[Intel CPU AC / DC Loadline、防掉壓 CEP 觀念原理 一次講完](https://forum.gamer.com.tw/C.php?bsn=60030&snA=644011)、[从头开始讲 Loadline](https://tieba.baidu.com/p/8328546013)。
+负载线（AC/DC）应通过 VRTT 工具进行测量，并通过 BIOS 的负载线覆盖设置选项进行相应配置。AC 负载线会直接影响工作电压（AC），DC 负载线则会影响功率测量（DC）。与按 POR 阻抗设计的主板相比，采用较低 AC 负载线的优秀主板设计能够在功耗、性能和散热方面实现改进。参见 [VCCCORE DC Specifications](https://edc.intel.com/content/www/de/de/design/products/platforms/details/raptor-lake-s/13th-generation-core-processors-datasheet-volume-1-of-2/vcccore-dc-specifications/)、[Intel CPU AC / DC Loadline、防掉壓 CEP 觀念原理 一次講完](https://forum.gamer.com.tw/C.php?bsn=60030&snA=644011)、[从头开始讲 Loadline](https://tieba.baidu.com/p/8328546013)。
 
-Intel 建议 AC=DC（Same as DC LL）。警告：一般不建议修改 AC/DC Loadline。
+Intel 建议 AC Loadline 与 DC Loadline 取值一致（AC = DC）。警告：一般不建议修改 AC/DC Loadline。
 
 - DC Loadline（DC 负载线）：DC 负载线以 0.01 毫欧（1/100 mOhms）为单位定义（取值范围：0–6249（对应 0–62.49 毫欧）。该配置通过 BIOS mailbox 命令 0x2 实现。数值换算关系：
 
@@ -1291,7 +1291,7 @@ Intel 建议 AC=DC（Same as DC LL）。警告：一般不建议修改 AC/DC Loa
   - IMON Prefix（电流检测前缀）：`+`/`-`。用设置加/减电流检测偏移量。
 
 - VR Current Limit（电压调节器当前限制）：电压调节器电流限制（Icc Max）代表允许 CPU 在任意时刻瞬间拉取的最大电流。该值以 1/4 安培（A）为单位定义，例如输入 `400` 表示 100 A（400 × 0.25A）。取值范围为 0–512，对应实际电流 0–128 A；输入 `0` 表示启用自动模式。该设置通过 BIOS VR mailbox 命令 `0x6` 进行控制。
-- VR Voltage Limit（电压调节器电压限制）：Voltage Limit (VMAX) 这是用于设置电压调节器（VR）允许的最大瞬时输出电压，单位为毫伏（mV）。其取值范围为 0–7999 mV。此设置通过 BIOS VR mailbox 命令 0x8 进行控制。
+- VR Voltage Limit（电压调节器电压限制）：Voltage Limit（VMAX）：用于设置电压调节器（VR）允许的最大瞬时输出电压。单位为毫伏（mV）。其取值范围为 0–7999 mV。此设置通过 BIOS VR mailbox 命令 0x8 进行控制。
 - TDC Enable（Thermal Design Current，热设计电流）：CPU 平均 *电流* 不能超过此值。选项：Disable（禁用）/Enable（启用）。此选项决定了：
 
   - TDC Current Limit（热设计电流当前限制）：以 1/8 安培（A）为递增单位定义，取值范围为 0–32767。例如，如果要设置最大瞬时电流为 125 A，应输入 1000（1000 × 0.125 A \= 125 A）。输入 `0` 表示设置为自动模式（0 A）。该参数通过 BIOS 的 VR mailbox 命令 `0x1A` 进行配置。
@@ -1394,7 +1394,7 @@ Power Limit 4（功耗限制 4），单位为毫瓦（mW）。BIOS 在编程时�
 
 Power Limit 4（功耗限制 4），单位为毫瓦（mW）。BIOS 在编程时会四舍五入到最接近的 1/8 瓦。例如：如果要设置为 12.50W，应输入 12500。如果该数值设置为 0，BIOS 将保留默认值。
 
-PL4 是一个绝对不会被超过的限制，PL4 功耗限制算法会提前限制频率，以防止功耗峰值超过 PL4。
+PL4 是一个理论上不允许被超过的功耗限制。PL4 功耗限制算法会提前限制频率，以防止功耗峰值超过 PL4。
 
 #### Power Limit 4 Lock（PL4，锁定功耗限制 4）
 
@@ -1407,9 +1407,10 @@ Enable（启用）
 说明：
 
 是否允许在操作系统中动态修改 PL4 设置。Power Limit 4 MSR 601h Lock（功耗限制 4 锁定寄存器）
+
 当启用此选项时，PL4（功耗限制 4）配置将在操作系统运行期间被锁定，不可更改；当禁用此选项时，操作系统运行期间仍可以更改 PL4 配置。
 
-启用 \= 锁定；禁用 \= 可调。
+启用表示锁定；禁用表示可调整。
 
 #### C states（C 状态）
 
@@ -1421,7 +1422,7 @@ Enable（启用）
 
 说明：
 
-英特尔开发的处理器电源管理平台——C 状态架构，可以在基本的 C1（停止状态，阻断 CPU 时钟周期）基础上进一步降低功耗。
+英特尔开发的处理器电源管理机制——C 状态架构，可以在基本的 C1（停止状态，阻断 CPU 时钟周期）基础上进一步降低功耗。
 
 当启用时，所有 CPU 核心进入 C 状态（空闲状态）时，CPU 会自动切换到最低运行频率以降低功耗。
 
@@ -1432,7 +1433,7 @@ Enable（启用）
 - C0 - 活动：CPU 打开并运行。
 - C1 - 自动停止：内核时钟已关闭。处理器没有执行指令，但几乎可以立即返回到执行状态。某些处理器还支持增强型 C1 状态（C1E），以降低功耗。
 - C2 - 停止时钟：内核时钟和总线时钟已关闭。该处理器保持所有软件可见状态，但可能需要更长的时间才能唤醒。
-- C3 - 深度睡眠：时钟生成器已关闭。处理器无需保持其高速缓存一致性，但能保持其他状态。某些处理器具有 C3 状态（深度睡眠、深度睡眠）的变体，与唤醒处理器所需的时间不同。
+- C3 - 深度睡眠：时钟生成器已关闭。处理器无需保持其高速缓存一致性，但能保持其他状态。某些处理器具有 C3 状态（深度睡眠）的不同变体与唤醒处理器所需的时间不同。
 - C4 - 更深度的睡眠：降低 VCC
 - DC4 - 更深度的 C4 睡眠：进一步减少 VCC
 
@@ -1450,7 +1451,7 @@ Enable（启用）
 
 说明：
 
-开启增强型 C1 电源状态，可提升系统性能。
+开启增强型 C1 电源状态，可在部分场景下改善能效与响应性能。
 
 当启用时，所有 CPU 核心进入 C 状态（空闲状态）时，CPU 会自动切换到最低运行频率以降低功耗。
 
@@ -1529,7 +1530,7 @@ Enable（启用）
 
 说明：
 
-设置后，系统将将发送到 IO 寄存器的 IO_read 指令映射到 MWAIT（偏移量），映射地址为 PMG_IO_BASE_ADDRBASE + 偏移量。
+设置后，系统将把发送到 I/O 寄存器的 IO_read 指令重定向到 MWAIT。映射地址为 PMG_IO_BASE_ADDRBASE + 偏移量。
 
 通过将 I/O 读操作重定向到 MWAIT，系统可以在等待 I/O 操作完成时降低功耗，提升能效。
 
@@ -1756,7 +1757,7 @@ Intel Graphics Technology 即 GT，图形技术。
 
 #### Maximum GTT frequency（图形执行管理器最大频率）
 
-GTT：Graphics Translation Table，图形执行管理器
+GTT：Graphics Translation Table，图形地址转换表。
 
 用户限制的最大 GT 频率。可选择 200MHz（RPN）或 400MHz（RP0）。超出范围的数值将被限制到该 SKU 支持的最小值或最大值。
 
@@ -1774,7 +1775,7 @@ Enable（启用）
 
 ## PCH-FW Configuration（平台控制器中枢和固件配置）
 
-PCH：Platform Controller Hub，平台控制器中枢（即南桥）。简而言之，芯片组-固件配置
+PCH：Platform Controller Hub，平台控制器中枢（通常称为南桥），用于芯片组与固件相关配置。
 
 ### ME State（Intel 管理引擎状态）
 
@@ -1792,7 +1793,7 @@ ME：Intel Management Engine，Intel 管理引擎状态。英特尔 ® 管理引
 
 参见 [什么是英特尔 ® 管理引擎？](https://www.intel.cn/content/www/cn/zh/support/articles/000008927/software/chipset-software.html)
 
-### ME Unconfig on RTC Clear（当重置 RTC 时不会重置 ME）
+### ME Unconfig on RTC Clear（重置 RTC 时是否重置 ME）
 
 选项：
 
@@ -1802,9 +1803,9 @@ Enable（启用）
 
 说明：
 
-当设置为 Disabled 时，在执行 RTC Clear（清除实时时钟 RTC 的随机存取内存）操作后不会重置/清除配置 ME。
+当设置为 Disabled 时，在执行 RTC Clear（清除实时时钟 RTC 的 CMOS 存储）操作后，不会重置或清除 ME 配置。
 
-当设置为 Enable 时，在执行 RTC Clear（清除实时时钟 RTC 的随机存取内存）操作后会重置/清除配置 ME。
+当设置为 Enable 时，在执行 RTC Clear（清除实时时钟 RTC 的 CMOS 存储）操作后，会重置或清除 ME 配置。
 
 ### Comms Hub Support（Comms 总线支持）
 
@@ -2007,11 +2008,11 @@ Enable（启用）
 
 说明：
 
-MBP，Memory Based Protection Hand‑Off Blocks，基于内存的保护接续块
+MBP：Memory Based Protection Hand-Off Blocks，基于内存的保护交接块
 
 启用后，BIOS 在启动过程中会跳过 Intel 管理引擎的 Memory‑Based Protection（MBP）的 HOB 区域（主要用于描述内存保护区域的信息），即不创建或不处理该区域内的 HOB（Hand‑Off Blocks）。
 
-调试 Intel 管理引擎用。
+用于调试 Intel 管理引擎。
 
 #### HECI2 Interface Communication（HECI2 接口通信）
 
@@ -2025,11 +2026,11 @@ Enable（启用）
 
 添加和移除 PCI 空间中的 HECI2 设备。
 
-HECI2（Host Embedded Controller Interface 2，主机嵌入式控制器接口 2）接口通信是 Intel 管理引擎与操作系统之间的通信接口。Intel 管理引擎需要此选项。
+HECI2（Host Embedded Controller Interface 2，主机嵌入式控制器接口 2）是 Intel 管理引擎与操作系统之间的通信接口。Intel 管理引擎的部分功能需要启用此选项。
 
 #### KT Device（KT 设备）
 
-控制 KT 设备
+用于控制 KT 设备。
 
 Disable（禁用）
 
@@ -2049,7 +2050,7 @@ Enable（启用）
 
 说明：
 
-软禁用英特尔管理引擎。
+以软件方式禁用 Intel 管理引擎。
 
 软禁用的工作原理是让系统固件通过主机嵌入式控制器接口（HECI）发送“SET_ME_DISABLE”命令。这会命令管理引擎进入禁用状态。管理引擎将保持禁用状态，直到发送“ENABLE”命令。此方法被视为一种通用方法，因为它不需要实现特定于平台或处理器的代码。
 
@@ -2065,17 +2066,17 @@ Enable（启用）
 
 说明：
 
-管理组件传输协议广播周期及设置 PMT 为总线所有者。用于配置管理组件传输协议（MCTP）的周期性广播。
+用于设置管理组件传输协议的广播周期，并将 PMT 设置为总线所有者。用于配置管理组件传输协议（MCTP）的周期性广播。
 
 MCTP（Management Component Transport Protocol，管理组件传输协议）是一种独立于物理介质的协议，用于计算机系统中各部件之间的信息交互。此协议独立于底层物理总线，是一种独立于总线的“数据链路层”协议。
 
-Intel 管理引擎的设备发现和管理功能需要。
+Intel 管理引擎的设备发现和管理功能需要启用此选项。
 
 参见 [H3C HDM MCTP 技术白皮书 -6W101](https://www.h3c.com/cn/Service/Document_Software/Document_Center/Home/Public/00-Public/Learn_Technologies/White_Paper/H3C_HDM_MCTP_WP-848/)
 
 ### Anti-Rollback SVN Configuration（防回滚 SVN 配置）
 
-Anti-Rollback SVN Configuration 是一个用于配置 Intel 管理引擎（ME）固件版本控制的选项。该功能通过引入安全版本号（SVN），防止系统降级至较旧或潜在存在安全漏洞的固件版本，从而增强系统的安全性。
+Anti-Rollback SVN Configuration 是用于配置 Intel 管理引擎（ME）固件版本控制的选项。该功能通过引入安全版本号（SVN），防止系统降级至较旧或潜在存在安全漏洞的固件版本，从而增强系统的安全性。
 
 #### Automatic HW-Enforced Anti-Rollback SVN（自动硬件强制防回滚 SVN）
 
@@ -2099,15 +2100,15 @@ Enable（启用）
 
 说明：
 
-为当前 ARB-SVN 值（ARB 即 Anti-Rollback，反回滚）启用硬件强制的防回滚机制。具有较低 ARB-SVN 的固件将被禁止执行。该值在命令发送后将恢复为禁用状态。
+为当前 ARB-SVN 值（ARB 即 Anti-Rollback，防回滚）启用硬件强制的防回滚机制。具有较低 ARB-SVN 的固件将被禁止执行。该值在命令发送后将恢复为禁用状态。
 
 ### OEM Key Revocation Configuration（OEM 密钥吊销配置）
 
-“OEM Key Revocation Configuration BIOS”是 BIOS/UEFI 中管理 OEM 密钥吊销机制的选项，通常用于控制是否启用针对预装系统 OEM 密钥或证书的废止管理。
+“OEM Key Revocation Configuration”是 BIOS/UEFI 中用于管理 OEM 密钥吊销机制的选项。通常用于控制是否启用针对预装系统 OEM 密钥或证书的废止管理。
 
 让 BIOS 通过 HECI 指令吊销（作废）CSME/ME 中的 OEM 密钥，以提升平台安全、避免旧/受损密钥继续被信任。
 
-安全启动会用到。
+该功能可用于安全启动相关场景。
 
 #### Automatic OEM Key Revocation（OEM 密钥自动吊销）
 
@@ -2133,9 +2134,9 @@ Enable（启用）
 
 启用将发送 HECI 命令以吊销 OEM 密钥。
 
-## Intel® Time Coordinated Computing（TCC，公共英特尔 ® 时序协调计算）
+## Intel® Time Coordinated Computing（TCC，公共英特尔®时序协调计算）
 
-Intel® 时间协调计算（Intel® TCC）能为实时应用提供优化的计算和时间性能，支持基于无线和有线融合网络的 IEEE\* 802.1 时间敏感网络（TSN）。
+Intel® 时间协调计算（Intel® TCC）可为实时应用提供优化的计算和时间性能。支持基于无线和有线融合网络的 IEEE\* 802.1 时间敏感网络（TSN）。
 
 参见 [公共英特尔 ® 时序协调计算（TCC）用户指南](https://www.intel.cn/content/www/cn/zh/content-details/851159/public-intel-time-coordinated-compute-tcc-user-guide.html)、[Step 7: Configure Intel® TCC Tools in BIOS](https://www.intel.com/content/www/us/en/docs/tcc-tools/tutorial-vtune-profiler/2022-2/step-7-configure-intel-tcc-tools-in-bios.html)
 
@@ -2161,7 +2162,7 @@ Enable（启用）
 
 说明：
 
-SRAM 即静态随机存取存储器。
+SRAM 即静态随机存取存储器（Static Random Access Memory）。
 
 软件 SRAM 使你能够为实时应用分配低延迟的内存缓冲区。软件 SRAM 是一种利用硬件能力的软件构造，通过将物理地址空间的一部分分配到缓存中，使这些地址不太可能被自身或其他进程驱逐。
 
@@ -2191,7 +2192,7 @@ Enable（启用）
 
 说明：
 
-Intel® TCC 错误日志功能可让你查看 BIOS 启动过程中发生的错误。启用后将将 TCC 流程中的错误转储到内存。
+Intel® TCC 错误日志功能可让你查看 BIOS 启动过程中发生的错误。启用后将把 TCC 流程中的错误转储到内存。
 
 ### Intel® TCC Authentication Menu（Intel TCC 认证菜单）
 
@@ -2205,7 +2206,7 @@ Enable（启用）
 
 说明：
 
-IO Fabric 即 I/O 架构。
+IO Fabric 指 I/O 架构。
 
 启用此选项将关闭部分 PCH IO 架构中的电源管理功能。该选项提供了最激进的 IO Fabric 性能设置，但不支持 S3 睡眠状态。适用于高性能/实时计算。
 
@@ -2219,15 +2220,15 @@ Enable（启用）
 
 说明：
 
-Graphics Technology (GT) Class of Service，图形技术服务类别
+Graphics Technology (GT) Class of Service，图形技术服务类别。
 
 控制图形技术（GT）服务类别。启用后将减少图形的 LLC 分配，以最小化图形工作负载对 LLC（最后一级缓存）的影响。可提高实时性能和系统响应速度。
 
-##### RAPL PL 1 enable（启用内存运行平均功率限制 1）
+##### RAPL PL1 Enable（启用运行平均功率限制 1）
 
 长期功率限制，平均功耗
 
-##### RAPL PL 2 enable（启用内存运行平均功率限制 2）
+##### RAPL PL2 Enable（启用运行平均功率限制 2）
 
 短期功率限制，峰值功耗
 
@@ -2243,7 +2244,7 @@ Enable（启用）
 
 说明：
 
-禁用后，操作系统将不会显示安全设备。TCG EFI 协议和 INT1A 接口将不可用。
+禁用后，操作系统将不会显示安全设备。TCG EFI 协议和 INT 1Ah 接口将不可用。
 
 启用后，以下所有项目将可用：
 
@@ -2326,7 +2327,7 @@ Enable（启用）
 说明：
 
 选择此项目将告知 OS 支持 PPI（Physical Presence Interface，物理存在接口）规范版本 1.2 或 1.3。请注意，一些 HCK 测试（一种用于验证硬件设备和驱动程序与 Windows 操作系统的兼容性的测试框架，用于获得数字证书）可能不支持版本 1.3。
-物理状态接口利用行业标准的高级配置和电源接口（ACPI）在操作系统和 BIOS 之间提供通信机制，使操作系统和 BIOS 能够协作，提供简单直接的平台用户体验来管理 TPM，而无需牺牲安全性。
+物理存在接口利用行业标准的高级配置和电源接口（ACPI）在操作系统和 BIOS 之间提供通信机制，使操作系统和 BIOS 能够协作，提供简单直接的平台用户体验来管理 TPM，而无需牺牲安全性。
 
 #### Device Select（设备选择）
 
@@ -2344,7 +2345,7 @@ TPM 2.0
 
 ## ACPI Settings（ACPI 设置）
 
-ACPI：Advanced Configuration and Power Interface，高级配置与电源接口
+ACPI：Advanced Configuration and Power Interface，高级配置和电源接口。
 
 ![](../.gitbook/assets/image-20250721154829-u26qa8s.png)
 
@@ -2404,9 +2405,7 @@ Enable（启用）
 
 说明：
 
-Wake on LAN, WOL
-
-网络唤醒功能
+Wake on LAN（WOL），网络唤醒功能
 
 #### Restore AC Power Loss（交流电断电恢复）
 
@@ -2422,7 +2421,7 @@ Last State：若系统电源中断后再次连接电源，计算机会恢复到�
 
 用于控制当电源恢复时系统的启动行为的选项。若启用此功能，当电源中断后再次连接时，主板会自动恢复系统的运作，并自动重新启动。这对于在意外的停电或电源中断后迅速恢复系统运行很有用。
 
-如果电源中断前，系统是开机，睡眠，或休眠其中的一种状态，那么电源中断后再次连接电源后，系统恢复至对应状态
+如果电源中断前系统处于开机、睡眠或休眠状态之一，那么电源中断后再次连接电源后，系统恢复至对应状态
 
 如果电源中断前，系统是关机状态，那么电源中断后再次连接电源后，系统状态还是关机状态
 
@@ -2451,7 +2450,7 @@ RTC 是 BIOS 的实时时钟，用于存储时间数据。定时开机。
 
 ## Serial Port Console Redirection（串口控制台重定向）
 
-串口重定向相关选项设置
+用于配置串口重定向相关选项。
 
 ### Console redirections（COMx 的控制台重定向）
 
@@ -2491,11 +2490,9 @@ EMS 控制台重定向开关。
 
 VT100：ASCII 字符集
 
-VT100+：扩展的 VT100，用于支持颜色显示、功能键  
-等。
+VT100+：扩展的 VT100，用于支持颜色显示、功能键等。
 
-VT-UTF8：使用 UTF8 编码映射 unicode 字符到 1 个或多  
-个字节。
+VT-UTF8：使用 UTF-8 编码映射 Unicode 字符到 1 个或多个字节。
 
 ANSI：扩展 ASCII 字符集。
 
@@ -2611,7 +2608,7 @@ Enable（启用）
 
 将终端分辨率扩展到 100 列 × 31 行。
 
-##### Putty Keypad（Putty 的功能键和键盘）
+##### Putty Keypad（PuTTY 的功能键和键盘）
 
 选项：
 
@@ -2629,9 +2626,9 @@ VT400：模拟 DEC VT400 终端
 
 说明：
 
-Putty 的功能键和键盘设置。
+PuTTY 的功能键和键盘设置。
 
-Putty 是 Windows 上一款常用的终端模拟器。
+PuTTY 是 Windows 上常用的终端模拟器。
 
 #### Console Redirection Settings (EMS)（Windows 紧急管理控制台重定向设置）
 
@@ -2687,7 +2684,7 @@ Enable（启用）
 
 ## AMI Graphic Output Protocol Policy（AMI 显卡输出协议行为）
 
-AMI 是此 BIOS 开发商安迈。Graphic Output Protoco 即 GOP。
+AMI 是该 BIOS 的开发商安迈。Graphic Output Protocol 即 GOP。
 
 黑苹果可能会用到此设置。用于控制 BIOS 的输出画面。
 
@@ -2735,7 +2732,7 @@ Auto（自动）
 
 说明：
 
-对非 UEFI 下的 USB 支持行为（鼠标和键盘等）。
+用于控制非 UEFI 环境下对 USB 设备（如鼠标和键盘）的支持行为。
 
 AUTO 选项：如果没有连接 USB 设备，将禁用传统（Legacy）支持。
 
@@ -2753,7 +2750,7 @@ Enable（启用）
 
 EHCI 用于支持 USB 2.0，xHCI 用于支持 USB 3.0。
 
-xHCI Hand Off：USB 控制器接口手动传递
+xHCI Hand-off：USB 控制器接口控制权交接。
 
 此选项提供你选择是否针对不支持 xHCI Hand-off 功能的操作系统，强制开启此功能。这是针对不支持 xHCI 接管（xHCI hand-off）的操作系统的一种变通方案。XHCI 的所有权应由 XHCI 驱动程序接管。
 
@@ -2773,7 +2770,7 @@ Enable（启用）
 
 说明：
 
-是 BIOS/UEFI 对 USB 大容量存储设备（如 U 盘、移动硬盘）的支持。
+用于控制 BIOS/UEFI 对 USB 大容量存储设备（如 U 盘、移动硬盘）的支持。
 
 关闭后无法从 USB 启动系统，即无法使用 USB 设备安装系统。
 
@@ -2917,7 +2914,7 @@ Enable（启用）
 
 CSM：Compatibility Support Module，兼容性支持模块。
 
-Intel 在 500 及更新系列的芯片组（11 代及后续处理器）不支持 VBIOS 的显示适配器，导致内置核显不支持 legacy boot，因此其 CSM 选项是灰色的。必须使用有支持 VBIOS 的外置独显才能进行配置。参见 [Intel 500 系列开始，在 BIOS 中的 CSM 选项无法选用问题？](https://www.asus.com.cn/support/faq/1045467/)。
+Intel 500 系列及更新芯片组（第 11 代及后续处理器）不支持使用 VBIOS 的显示适配器，导致内置核显不支持 legacy boot，因此其 CSM 选项是灰色的。必须使用有支持 VBIOS 的外置独显才能进行配置。参见 [Intel 500 系列开始，在 BIOS 中的 CSM 选项无法选用问题？](https://www.asus.com.cn/support/faq/1045467/)。
 
 ![](../.gitbook/assets/image-20250721170014-1xxoskv.png)
 
@@ -2995,7 +2992,7 @@ UEFI and Legacy：UEFI 和传统模式并存
 
 说明：
 
-启动模式设置，控制设备 Legacy 或 UEFI 模式启动策略。
+启动模式设置，用于控制设备采用 Legacy 或 UEFI 模式进行启动。
 
 #### Option ROM execution（可选 ROM 执行）
 
@@ -3007,13 +3004,13 @@ Auto：自动
 
 说明：
 
-Option ROM 执行策略，该选项控制系统 Legacy Option ROM 或 UEFI Option ROM 的优先级。
+Option ROM 执行策略。该选项用于控制系统中 Legacy Option ROM 与 UEFI Option ROM 的优先级。
 
 Option ROM 是一种嵌入在主板或扩展设备（如显卡、网卡、RAID 控制器）上的固件程序。
 
-设置该选项为 Auto 时，UEFI Option ROM 会在 UEFI 模式下运行，Legacy Option ROM 会在 Legacy 模式下运行；
+当该选项设置为 Auto 时，UEFI Option ROM 会在 UEFI 模式下运行，Legacy Option ROM 会在 Legacy 模式下运行。
 
-设置该选项为手动时，用户可以根据情况选择运行 UEFI Option ROM 或者 Legacy Option ROM，若设置错误会使得某些 Option ROM 无法运行。
+当该选项设置为 Manual 时，用户可以根据需要选择运行 UEFI Option ROM 或 Legacy Option ROM；若设置不当，可能导致某些 Option ROM 无法运行。
 
 建议该选项设置为 Auto 模式。
 
@@ -3031,19 +3028,19 @@ UEFI：UEFI 模式，加载网卡的 UEFI Option ROM
 
 说明：
 
-网卡 Option Rom 执行方式设置
+网卡 Option ROM 执行方式设置。
 
 ##### Storage（存储）
 
-存储设备 Option Rom 执行方式设置，选项参数同上
+存储设备 Option ROM 执行方式设置，选项参数同上。
 
 ##### Video（显卡）
 
-显卡设备 Option Rom 执行方式设置，选项参数同上
+显卡设备 Option ROM 执行方式设置，选项参数同上。
 
 ##### Other PCI devices（其他 PCI 设备）
 
-其他 PCI 设备的 Option Rom 执行方式设置，选项参数同上
+其他 PCI 设备的 Option ROM 执行方式设置，选项参数同上。
 
 ## NVMe configuration（NVMe 配置）
 
@@ -3083,7 +3080,7 @@ Controller and NameSpace test（控制器和命名空间测试）
 
 ### Run Device Self Test（运行设备自我测试）
 
-此选项依赖 Self Test Option（自我测试选项）和 Self Test Action（自我测试行为）
+此选项依赖 Self Test Option（自我测试选项）和 Self Test Action（自我测试行为）。
 
 执行用户选择的“选项”和“操作”对应的设备自检程序。按下 Esc 键可中止测试。下面显示的结果为设备中最近一次自检的记录。
 
@@ -3097,7 +3094,7 @@ Not Available：不可用，即未测试过。
 
 ## SDIO Configuration（SDIO 配置）
 
-SDIO 参数配置。
+SDIO 参数配置说明。
 
 SDIO（Secure Digital Input and Output），即安全数字输入输出接口。SDIO 协议是由 SD 卡协议演进而来，向下兼容 SD 卡协议。一般嵌入式设备会使用。
 
@@ -3121,11 +3118,11 @@ SDMA：是 SD/eMMC 控制器中的一种基础的 DMA 模式
 
 ADMA：采用 ADMA（Advanced DMA）或 ADMA2 协议，支持描述符表、散列表调度等特性，适合大块数据或复杂控制，性能更优
 
-PIO：通过 CPU 按指令逐字节处理 USB/SD 设备数据，CPU 参与度高，速度慢，但兼容性强
+PIO：通过 CPU 按指令逐字节处理 USB/SD 设备数据，CPU 参与度高，速度较慢，但兼容性强。
 
 ### Bus 0 Dev 1A Func 0
 
-列出的 eMMC 设备：
+列出当前的 eMMC 设备。
 
 #### eMMC Y20128 (125.0GB)
 
@@ -3161,7 +3158,7 @@ Disabled（禁用）
 
 说明：
 
-启用后，超过此阈（yù）值后，支持 ACPI 的操作系统将执行关键关机操作。允许的范围为 90℃ 至 119℃（含）。
+启用后，当温度超过该阈（yù）值时，支持 ACPI 的操作系统将执行关键关机操作。允许的范围为 90℃ 至 119℃（含）。
 
 ### Passive Cooling Temperature (°C)（被动冷却温度）
 
@@ -3193,7 +3190,7 @@ ACPI 被动冷却公式参见 [11.1.5.1. Processor Clock Throttling](https://uef
 
 ## LVDS Configuration（LVDS 配置）
 
-LVDS，low-voltage differential singal，低压差分信号
+LVDS，Low-Voltage Differential Signal（低压差分信号）。
 
 一般笔记本屏幕使用 LVDS 接口和主板相连。所以这部分主要用于设置内置的显示器面板。
 
@@ -3255,7 +3252,7 @@ JEIDA 24bpp（日本标准，JEIDA 标准的 24 位色深格式）
 
 Single Channel（单通道）
 
-Dual Channe（双通道）
+Dual Channel（双通道）
 
 说明：
 
@@ -3271,7 +3268,7 @@ Active Low（低电平有效）
 
 说明：
 
-判断“使能状态”是对应信号的高电平还是低电平。
+用于判断“使能状态”对应的是信号的高电平还是低电平。
 
 #### V-Sync Polarity（垂直同步极性）
 
@@ -3327,7 +3324,7 @@ No Spreading（无扩频）
 
 说明：
 
-设置 LVDS（低压差分信号）接口的差分输出摆幅
+设置 LVDS（低压差分信号）接口的差分输出摆幅。
 
 输出摆幅分为正向和负向摆幅，也就是 VP+、VP-。输出摆幅指的是信号从最低电压到最高电压之间的电压差，也就是输出信号的电压幅度范围。
 
@@ -3345,7 +3342,7 @@ No Spreading（无扩频）
 
 面板电源序列中最小 T3 时序限制。默认值为 10（即 500 毫秒）。
 
-用于控制 LVDS 信号输出到背光开启之间的时间延迟
+用于控制 LVDS 信号输出到背光开启之间的时间延迟。
 
 ##### T4 Timing（T4 延时）
 
@@ -3394,6 +3391,7 @@ Enabled（启用）
 Disabled（禁用）
 
 说明：
+
 从关闭背光电源到停止输出 LVDS 数据之间的延迟时间。
 
 启用后，T5 延迟增加 20 毫秒，误差范围为正负 50%。
@@ -3408,7 +3406,7 @@ Disabled（禁用）
 
 说明：
 
-启用或禁用 LVDS 差分对的交换（正极<——>负极）。
+启用或禁用 LVDS 差分对的交换（正极 ↔ 负极）。
 
 控制交换 LVDS 信号对的 P 和 N 引脚与否。
 
@@ -3460,14 +3458,15 @@ Disabled（禁用）
 
 配置 LVDS 接口的时钟源和频率范围。
 
-LVDS（低压差分信号）接口的时钟信号通常由锁相环（PLL，Phase-Locked Loop）生成。  
-Firmware PLL 指的是通过固件（BIOS）对 PLL 参数进行调节，以优化时钟频率和信号稳定性。
+LVDS（低压差分信号）接口的时钟信号通常由锁相环（PLL，Phase-Locked Loop）生成。
+
+Firmware PLL 指通过固件（BIOS）对 PLL 参数进行调节，以优化时钟频率和信号稳定性。
 
 ## Embedded Controller（嵌入式控制器）
 
 ### Embedded Controller information（嵌入式控制器信息）
 
-显示嵌入式控制器信息
+显示嵌入式控制器相关信息。
 
 ### Power Fail Resume Type（断电恢复类型）
 
@@ -3483,9 +3482,9 @@ Last State
 
 指定在电源故障（G3 状态，完全断电）后重新加电时系统应进入的状态。
 
-如果是无电池运行模式（Batteryless Operation），芯片组在电源故障后总是自动开机（即 Always ON）：因此，选择“Always OFF”恢复类型或者“Last State”且上一次状态为关机时，那么系统将自动开机后立即关闭。
+如果是无电池运行模式（Batteryless Operation），芯片组在电源故障后总是自动开机（即 Always ON）：因此，若选择“Always OFF”恢复类型，或选择“Last State”且上一次状态为关机，系统将自动开机后立即关闭。
 
-### No C-MOS battery handling（无 CMOS 电池处理逻辑）
+### No CMOS Battery Handling（无 CMOS 电池处理逻辑）
 
 选项：
 
@@ -3496,6 +3495,7 @@ Disabled（禁用）
 说明：
 
 在没有 CMOS 电池的系统中（例如服务器或嵌入式设备），芯片组通常会在断电后自动上电：  
+
 因此，如果将恢复类型设置为“Always OFF”，或者设置为“Last State”且上一次状态为关机，那么系统将自动开机后立即关闭。
 
 ### LID_BTN# Configuration（LID_BTN# 信号配置）
@@ -3547,7 +3547,8 @@ None（无）
 说明：
 
 在 BIOS 中，`OUT 80h` 通常指的是将数据写入 I/O 端口 0x80，这是一个用于调试的标准端口。通过向该端口写入特定的值，系统可以在启动过程中输出调试信息，帮助开发人员定位问题。
-调试用。选择将 OUT 80（POST 代码）重定向到哪个 E.C. UART（串口）。
+
+用于调试。选择将 OUT 80（POST 代码）重定向到指定的 EC UART（串口）。
 
 ### Hardware Monitor（硬件监控）
 
@@ -3599,7 +3600,7 @@ Happened（发生）：电源故障了
 
 Not Happened（未发生）：电源未故障
 
-#### E.C. soft reset（嵌入式控制器软重置）
+#### EC Soft Reset（嵌入式控制器软重置）
 
 说明：
 
@@ -3655,7 +3656,7 @@ Generic PWM（通用 PWM）
 
 说明：
 
-风扇 PWM（脉宽调制）输出接口。指定风扇类型。
+风扇 PWM（脉宽调制）输出接口类型，用于指定风扇类型。
 
 #### Automatic Temperature FAN Control（风扇自动温度控制）
 
@@ -3701,11 +3702,11 @@ Disabled（禁用）
 
 说明：
 
-看门狗定时器机制
+看门狗定时器机制配置。
 
 ### GPIO Configurations（GPIO 配置）
 
-GPIO，General Purpose Input Output：通用输入/输出。一般嵌入式设备才有。
+GPIO，General Purpose Input/Output（通用输入/输出），通常用于嵌入式设备。
 
 #### GPIOx (GPIO x)
 
@@ -3727,7 +3728,7 @@ Output Last（保持上次输出状态）：与上次启动时的状态保持一
 
 ### MAC address(es) visualization（MAC 地址显示）
 
-显示 MAC 地址
+显示系统的 MAC 地址。
 
 ### SMARC Related Configuration（SMARC 相关配置）
 
@@ -3781,7 +3782,7 @@ Disabled（禁用）
 
 说明：
 
-禁用 ／ 启用载板上每个 USB 端口的 VBUS 电源（USB 供电线 +5V）
+禁用/启用载板上每个 USB 端口的 VBUS 电源（USB 供电线 +5V）
 
 ## RAM Disk Configuration（内存盘配置）
 
@@ -3855,7 +3856,7 @@ GUID 是一种由算法生成的唯一标识。
 
 ### Client CA Configuration（客户端 CA 设置）
 
-空。
+当前无可配置项。
 
 ## Intel(R) Ethernet Controller I226-V - 10:02:B5:86:0E:F9（Intel 以太网控制器）
 
@@ -3872,7 +3873,7 @@ GUID 是一种由算法生成的唯一标识。
 
 ## Driver Health（驱动健康）
 
-驱动程序/控制器的健康状态
+显示驱动程序或控制器的健康状态。
 
 ![](../.gitbook/assets/image-20250721175121-0c1uf0k.png)
 
