@@ -254,7 +254,7 @@ export PATH=/home/zhanghongkai /bin:$PATH
 
 “要不试试别的”，“这个鸟哥的 Linux 用的是 CentOS，那我得买这本书系统地学一学。那我得先安装一个 CentOS。”也亏得张才哲是联想 G400，不然 CentOS 都装不上，当时内核只有 3.X。“只有 CentOS 6.5 吗？也罢”
 
-这次软碟通刻录没有反应了，百度了一番知道了得使用 win32diskimager 来刻录 CentOS。但是各种教程都是 dd，“这些人是弱智吗？这次软碟通刻录没有反应了，百度了一番知道了得使用 w
+这次软碟通刻录没有反应了，百度了一番知道了得使用 win32diskimager 来刻录 CentOS。但是各种教程都是 dd，“这些人是弱智吗？张才哲就纳闷了，Windows 哪来的 dd？”
 
 花了半小时才刻录完，因为 CentOS-6.5-x86_64-LiveCD.iso 就这样，USB 2.0 又很慢。
 
