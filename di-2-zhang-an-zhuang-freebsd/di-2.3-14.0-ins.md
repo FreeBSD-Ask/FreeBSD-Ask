@@ -1,27 +1,28 @@
 # 2.3 FreeBSD 13 和 14 安装指南（基于 amd64 架构）
 
-这些 RELEASE 系统也可以用于生产环境，不过优先级低于最新的 RELEASE。
+这些 RELEASE 系统也可以用于生产环境，但其优先级低于最新的 RELEASE。
 
 ## 使用 bsdinstall 开始安装
 
 >**技巧**
 >
->视频教程见 [FreeBSD 14.2 基础安装配置教程](https://www.bilibili.com/video/BV1STExzEEhh)（物理机）、[002-VMware17 安装 FreeBSD14.2](https://www.bilibili.com/video/BV1gji2YLEoC)（虚拟机）。
+>视频教程见 [FreeBSD 14.2 基础安装配置教程](https://www.bilibili.com/video/BV1STExzEEhh)（物理机）和 [002-VMware 17 安装 FreeBSD 14.2](https://www.bilibili.com/video/BV1gji2YLEoC)（虚拟机）。
+
 
 ---
 
-以下安装说明基于 `FreeBSD-14.3-RELEASE-amd64-disc1.iso`。`-dvd1.iso` 和 `-memstick.img` 大同小异。
+以下安装说明基于 FreeBSD-14.3-RELEASE-amd64-disc1.iso，-dvd1.iso 和 -memstick.img 的安装流程大同小异。
 
 >**警告**
 >
 >本文基于 VMware 17 进行演示（使用 UEFI）。
 >
->若是物理机，请考虑使用 [rufus](https://rufus.ie/zh/) + [img 镜像](https://download.freebsd.org/ftp/releases/ISO-IMAGES/14.3/FreeBSD-14.3-RELEASE-amd64-memstick.img)。
+>若是物理机，请考虑使用 [Rufus](https://rufus.ie/zh/) 搭配 [img 镜像](https://download.freebsd.org/ftp/releases/ISO-IMAGES/14.3/FreeBSD-14.3-RELEASE-amd64-memstick.img) 镜像制作启动盘。
 
 
 > **警告**
 >
-> 如果要在 VMware 虚拟机使用 UEFI，必须使用 FreeBSD 13.0-RELEASE 及以上，否则启动会花屏。
+> 如果要在 VMware 虚拟机中使用 UEFI，必须使用 FreeBSD 13.0-RELEASE 及以上版本，否则启动时可能出现花屏。
 
 ## 启动安装盘
 
@@ -29,21 +30,24 @@
 
 此界面无需任何操作，等待十秒，可自动进入 `1. Boot Installer [Enter]`；亦可以直接按 **回车键** 进入。
 
-按 **空格键** 可暂停，可选定以下选项。
+按 **空格键** 可暂停启动流程，并选择以下选项。
+
 
 >**技巧**
 >
 >如果按其他任意键会进入提示符 `OK`，可输入 `menu` 再按 **回车键** 返回菜单。
 
-以下操作：按最开头的数字可进行选定。`on` 代表已开启，`off` 代表已关闭。
+以下操作中，按选项最前面的数字可进行选择。
+
+`on` 代表已开启，`off` 代表已关闭。
 
 |     选项     |                                   解释                                    |
 | :----------: | :----------------------------------------------------------------------- |
-|`1. Boot Installer [Enter]`|用于安装系统|
+|`1. Boot Installer [Enter]`|用于安装 FreeBSD 系统|
 | `2. Boot Single user` |  单用户模式，找回 root 密码和修复磁盘时会用到 |
-|  `3.Escape to loader prompt`   |           离开菜单，进入命令模式，进入后输入 `reboot` 回车可重启                                |
+|  `3.Escape to loader prompt`   |      离开菜单，进入命令模式；进入后输入 reboot 并按回车键可重启系统                     |
 | `4.Reboot`  |        重启                      |
-|  `5. Cons: Video`    |    选择输出模式：视频（`Video`）、串口（`Serial`）、同时输出，但串口优先（`Dual (Serial primary)`）、同时输出，但视频优先（`Dual (Video primary)` 可选）                         |
+|  `5. Cons: Video`    |    选择输出模式：视频（`Video`）、串口（`Serial`）、同时输出，但串口优先（`Dual (Serial primary)`）、同时输出，但视频优先（`Dual (Video primary)`） 可选）                         |
 |`6. Kernel: default/kernel (1 of 1)`|选择要启动的内核|
 
 ![](../.gitbook/assets/ins2.png)
@@ -55,12 +59,12 @@
 |`3. ACPI`|Advanced Configuration and Power Management Interface，高级配置和电源接口|
 |`4. Safe Mode`|安全模式|
 |`5. Single user`|单用户模式|
-|`6. Verbose`|啰嗦模式，增加更多调试信息输出|
+|`6. Verbose`|详细模式，输出更多调试信息|
 
 
 >**警告**
 >
->需要指出，某些教程要求人们关闭 ACPI，这样做现在是没有任何依据的。除非你不是 x86，否则对于现代计算机绝没有关闭的道理。ACPI 和电源状态、设备节能、多处理器支持等功能密切相关。应该将此选项视为遗留功能，只有不支持 UEFI 的上古计算机才应考虑。
+>需要指出的是，某些教程要求关闭 ACPI，但这种做法在当前环境下缺乏依据。除非你不是 x86，否则对于现代计算机绝没有关闭的道理。ACPI 和电源状态、设备节能、多处理器支持等功能密切相关。应将关闭 ACPI 视为一种遗留手段，通常仅在不支持 UEFI 的老旧计算机上才需要考虑。
 >
 >如果出现 ACPI 报错，也是非常正常的事情。大部分情况下并不会影响使用。一般通过更新 BIOS 即可解决。在极个别情况下可能需要修补 SSDT 和 DSDT，黑苹果的玩家对此应该并不陌生，甚至是家常便饭。
 
@@ -72,13 +76,13 @@
 
 >**技巧**
 >
->这个界面是由工具 `bsdinstall` 提供的。
+>该界面由 `bsdinstall` 工具提供。
 >
 >本章将指导用户如何使用该工具来进行 FreeBSD 的安装。该工具不仅存在于安装镜像中，安装完成后你在新装系统中依然可以找到它，并且还可用它来执行普通的安装流程（请记住这一点，在高级的安装方式中很有用）。
 >
 > `bsdinstall` 工具本质上是由一系列 sh 脚本构成的，其源代码位于 [usr.sbin/bsdinstall](https://github.com/freebsd/freebsd-src/tree/main/usr.sbin/bsdinstall)，脚本在“scripts”文件夹下。
 
-欢迎菜单。
+这是安装程序的欢迎菜单。
 
 `欢迎使用 FreeBSD！你想要开始安装还是使用 Live 系统？`
 
@@ -86,7 +90,8 @@
 
 >**技巧**
 >
->以下若无特别说明，按 **TAB 键** 或者 **方向键** 可选择不同条目；按 **回车键** 可以选定高亮条目；
+>以下若无特别说明，可使用 **TAB 键** 或 **方向键** 在不同条目之间切换，按 **回车键** 选定高亮条目。
+
 
 >**技巧**
 >
@@ -95,7 +100,8 @@
 
 >**警告**
 >
->无论在任何步骤，按 **ESC 键** 均 **不能** 返回上一菜单，都会直接跳到下一步直至退出安装或结束安装。
+>在任何步骤中，按 **ESC 键** 均无法返回上一菜单，而是会直接跳转到下一步，直至退出或完成安装。
+
 
 ## 设定键盘布局
 
@@ -103,7 +109,8 @@
 
 `FreeBSD 系统控制台驱动程序默认使用标准` US `（美式）键盘布局。可以在下面选择别的键盘布局。`
 
-这里是键盘布局菜单，直接按 **回车键** 使用默认键盘布局即可（因目前中国使用美式键盘布局）。
+这是键盘布局选择菜单，直接按 **回车键** 使用默认布局即可（目前国内通常使用美式键盘布局）。
+
 
 ## 设定主机名
 
@@ -115,11 +122,11 @@
 
 >**警告**
 >
->**不要** 在这一步直接按 **回车键**！这样会导致主机名为空！登录管理器 sddm 会无法启动。
+>**不要** 在这一步直接按 **回车键**！这样会导致主机名为空，从而可能导致登录管理器 sddm 无法启动。
 
 >**警告**
 >
->官方手册上说的是错的（`Amnesiac`），如果你不设置主机名，那么你的主机名不会被赋予任何值（不会给你分配 `Amnesiac`！），因为 FreeBSD 源码已经假设你会通过 DHCP 分配该值了。根据目前的源代码逻辑，只要你使用了 DHCP，也不会有任何报错提示主机名为空，当且仅当你没有网络时，才会在登录时将 login 信息打印为 `Amnesiac`，并打印一条报错信息。
+>官方手册中的相关描述与当前实现不一致（`Amnesiac`）。如果你不设置主机名，那么你的主机名不会被赋予任何值（不会给你分配 `Amnesiac`！），因为 FreeBSD 源码已经假设你会通过 DHCP 分配该值了。根据目前的源代码逻辑，只要你使用了 DHCP，也不会有任何报错提示主机名为空，当且仅当你没有网络时，才会在登录时将 login 信息打印为 `Amnesiac`，并打印一条报错信息。
 
 ### 参考信息
 
@@ -139,7 +146,8 @@
 >
 >以下若无特别说明，按 **空格键** 可以选中条目——就是让 `[ ]` 变成 `[ * ]`。
 >
->推荐：在默认的基础上，**额外** 选中 `src` 即可。因为部分显卡驱动（如 `drm`）和其他程序需要 `src`，经测试 `lib32` 后期安装无效。
+>推荐在默认选择的基础上，**额外** 勾选 `src` 即可。因为部分显卡驱动（如 `drm`）和其他程序需要 `src`，经测试，`lib32` 在系统安装完成后再安装可能无法正常生效。
+
 
 >**警告**
 >
@@ -160,7 +168,7 @@
 
 ## 分配磁盘空间
 
-FreeBSD 14.2 RELEASE 的 `/` 分区支持 UFS 和 ZFS 两种文件系统。旧版 FreeBSD 系统 root 分区仅支持 UFS 一种文件系统：`bsdinstall` 从 10.0 [开始](http://svn.freebsd.org/viewvc/base?view=revision&revision=256361) 支持 zfs，手动安装的话至迟 8.0 就 [可以](https://blog.delphij.net/posts/2008/11/zfs-1/) 用 zfs 作为根分区了。
+FreeBSD 14.3-RELEASE 的根分区（`/`）支持 UFS 和 ZFS 两种文件系统。旧版 FreeBSD 系统 root 分区仅支持 UFS 一种文件系统：`bsdinstall` 从 10.0 [开始](http://svn.freebsd.org/viewvc/base?view=revision&revision=256361) 支持 zfs，手动安装的话至迟 8.0 就 [可以](https://blog.delphij.net/posts/2008/11/zfs-1/) 用 zfs 作为根分区了。
 
 ![](../.gitbook/assets/ins7.png)
 
@@ -173,7 +181,7 @@ FreeBSD 14.2 RELEASE 的 `/` 分区支持 UFS 和 ZFS 两种文件系统。旧�
 |`Manual – Manual Disk Setup (experts)`|手动 – 手动磁盘设置（适合专家）|
 |`Shell – Open a shell and partition by hand`|Shell – 打开 Shell 并手动分区|
 
-文件系统详解见其他章节（可手动分区解压 `txz` 文件以自定义，参见其他章节）。这里，推荐选择默认选项 `auto ZFS`：一般来说，内存小于 8GB 的应该选择 UFS，内存 8G 及以上的应该选用 ZFS。
+文件系统详解见其他章节（可手动分区解压 `txz` 文件以自定义，参见其他章节）。这里，推荐选择默认选项 `auto ZFS`：一般来说，内存小于 8 GB 的系统更适合使用 UFS；内存为 8 GB 及以上的系统则建议使用 ZFS。
 
 
 手动分区和 Shell 分区参见手动安装 FreeBSD 相关章节。
@@ -183,7 +191,7 @@ FreeBSD 14.2 RELEASE 的 `/` 分区支持 UFS 和 ZFS 两种文件系统。旧�
 
 >**技巧**
 >
->经过测试，实际上 256M 内存也能用 ZFS（UEFI）；若使用旧的 BIOS，128M 内存足矣。
+>经过测试，在 UEFI 环境下，256 MB 内存也可以运行 ZFS；若使用传统 BIOS，128 MB 内存即可。
 
 > **注意**
 >
@@ -210,7 +218,7 @@ FreeBSD 14.2 RELEASE 的 `/` 分区支持 UFS 和 ZFS 两种文件系统。旧�
 
 ![](../.gitbook/assets/ins8.png)
 
-现代（近十几年内的）计算机应该选择 `GPT+UEFI`。请勿使用默认选项！这样会产生一个 512KB 的 `freebsd-boot` 多余分区。
+现代（近十几年内的）计算机应该选择 `GPT+UEFI`。请勿使用默认选项！这样会额外生成一个 512 KB 的 `freebsd-boot` 分区。
 
 较老的计算机（如 2013 年以前的）才应该选择选项 `GPT(BIOS)`——此默认选项同时兼容二者。
 
@@ -237,7 +245,7 @@ FreeBSD 14.2 RELEASE 的 `/` 分区支持 UFS 和 ZFS 两种文件系统。旧�
 
 >**注意**
 >
->最好想清楚再设置 `Swap Size`（即交换分区）的大小（一般理论是内存的两倍，但由于设计问题，不应超过 64G），因为 zfs、ufs 文件系统都是不能缩小文件系统的，而 `dd` 一个 swap 文件或文件系统会有负面作用。
+>最好想清楚再设置 `Swap Size`（即交换分区）的大小（一般的经验值是内存大小的两倍，但由于设计限制，交换分区大小不宜超过 64 GB），因为 ZFS、UFS 文件系统都是不能缩小文件系统的，而 `dd` 一个 swap 文件或文件系统会有负面作用。
 
 >**技巧**
 >
@@ -276,7 +284,7 @@ FreeBSD 14.2 RELEASE 的 `/` 分区支持 UFS 和 ZFS 两种文件系统。旧�
 
 >**注意**
 >
->如果你的硬盘是 eMMC，可能会出现三个选项，类似于 `mmcsd0`、`mmcsd0boot0` 和 `mmcboot1`。请选择 `mmcsd0`。另外如果多硬盘与 eMMC 共存，若另一块硬盘分区量大于 5 个，eMMC 中的 FreeBSD 会卡在 `Mounting from zfs:zroot/ROOT/default failed with error 22: retrying for 3 more seconds`。且若手动指定，会直接 Panic。疑似 Bug，但我不知道如何报告，无法获取进一步的细节。
+>如果你的硬盘是 eMMC，可能会出现三个选项，类似于 `mmcsd0`、`mmcsd0boot0` 和 `mmcboot1`。请选择 `mmcsd0`。另外如果多硬盘与 eMMC 共存，若另一块硬盘分区量大于 5 个，eMMC 中的 FreeBSD 会卡在 `Mounting from zfs:zroot/ROOT/default failed with error 22: retrying for 3 more seconds`。且若手动指定，会直接 Panic。该问题疑似为 Bug，但目前尚未定位具体原因，也未能提供进一步的细节。
 
 
 ![](../.gitbook/assets/ins12.png)
@@ -629,14 +637,14 @@ NVMe 硬盘 ZFS 加密后的磁盘结构（同时加密了交换空间）：
 
 >**技巧**
 >
->绝大多数登录管理器都是默认禁止 root 用户登录。换言之，如果不进行一定的修改（参见其他章节），在默认状态下，你可能无法用 root 登录桌面。~~虽然在默认状态下 FreeBSD 不带桌面，或者还可以直接 `startx`~~。
+>绝大多数登录管理器都是默认禁止 root 用户登录。换言之，如果不进行一定的修改（参见其他章节），在默认状态下，你可能无法用 root 登录桌面。~~在默认安装状态下，FreeBSD 并不包含图形桌面环境，或者还可以直接 `startx`~~。
 
 ![](../.gitbook/assets/ins31.png)
 
 
 >**警告**
 >
->如果你要创建普通用户，请务必将其加入到 `wheel` 组和 `video` 组（仅 wheel 不足以使用）中（参见箭头处）。否则将可能无法正常使用命令 su，无法调用 GPU。
+>请务必将其加入 `wheel` 组和 `video` 组，仅加入 `wheel` 组可能无法满足图形和设备访问需求（参见箭头处）。否则将可能无法正常使用命令 su，无法调用 GPU。
 
 
 ```sh
@@ -716,11 +724,11 @@ Add another user? (yes/no) [no]: # 是否还要再添加其他用户
 
 ![](../.gitbook/assets/ins35.png)
 
-完全启动后：
+系统完全启动后：
 
 >**技巧**
 >
->FreeBSD 基本系统并无图形界面，亦未安装 Xorg，所以就是这个样子的。
+>FreeBSD 基本系统默认不包含图形界面，也未安装 Xorg，因此启动后仅显示字符终端界面。
 
 ![](../.gitbook/assets/ins36.png)
 
