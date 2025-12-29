@@ -75,7 +75,7 @@ $ chmod 755 ~/kde.sh
 
 >**注意**
 >
->你必须停止 SDDM 服务才能使用该脚本。请现在就检查 `/etc/rc.conf` 是有否 `sddm_enable="YES"` 字样，如有请删除。并按快捷键 ctrl + alt + f2 进入 TTY，登录 root 后输入 `service sddm stop` 停止 SDDM 服务。
+>你必须停止 SDDM 服务才能使用该脚本。请现在就检查 `/etc/rc.conf` 是否有 `sddm_enable="YES"` 字样，如有请删除。并按快捷键 ctrl + alt + f2 进入 TTY，登录 root 后输入 `service sddm stop` 停止 SDDM 服务。
 
 - 进入 KDE
 
