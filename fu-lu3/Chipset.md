@@ -11,7 +11,7 @@
 在 Intel CPU 架构中（第二代 Sandy Bridge 及以后），System Agent 是一个集成在 CPU 芯片内部的模块，它包含了：
 
 - 内存控制器 (IMC - Integrated Memory Controller)
-- PCIe Root Complex（用于 CPU 直连的 PCIe 通道，例如 PEG【PCI Express Graphics）】
+- PCIe Root Complex（用于 CPU 直连的 PCIe 通道，例如 PEG（PCI Express Graphics）。
 - 显示引擎 (如果 CPU 有核显)
 - 与 Ring Bus 或 Mesh 的接口
 - 电源管理逻辑等
