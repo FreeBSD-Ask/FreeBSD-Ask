@@ -36,7 +36,7 @@
 |  `3.Escape to loader prompt`   |  退出菜单，进入加载器命令行，输入 `reboot` 并回车可重启系统
  |
 | `4.Reboot`  |        重启                      |
-|  `5. Cons: Video`    |    选择控制台输出模式：视频（`Video`）、串口（`Serial`）、串口优先的双模式（`Dual (Serial primary)`）或视频优先的双模式（`Dual (Video primary)`      |
+|  `5. Cons: Video`    |    选择控制台输出模式：视频（`Video`）、串口（`Serial`）、串口优先的双模式（`Dual (Serial primary)`）或视频优先的双模式（`Dual (Video primary)`）      |
 |`6. kernel (1 of 1)`|选择要启动的内核|
 |`7. Boot Options`|启动选项|
 

@@ -1,14 +1,15 @@
 # BSD 许可证概览
 
-本文仅列出主要的，受 OSI 认可的 BSD 许可证（BSD-4-Clause 除外）。更多 BSD 许可证参见 [OSI Approved Licenses](https://opensource.org/licenses?ls=BSD) 和 [SPDX License List](https://spdx.org/licenses/)。
+本文仅列出主要的、受 OSI 认可的 BSD 许可证（不包括 BSD-4-Clause）。更多 BSD 许可证信息参见 [OSI Approved Licenses](https://opensource.org/licenses?ls=BSD) 和 [SPDX License List](https://spdx.org/licenses/)。
 
-下文列出的所有 BSD 许可证都是非 copyleft（著佐权）的，即不要求修改后的版本也必须是自由软件。更多讨论参见 [BSD 许可证的问题](https://www.gnu.org/licenses/bsd.zh-cn.html)。
 
-需要注意的是并非数字越大就越新，而是限制更多。
+下文列出的所有 BSD 许可证均为非 copyleft（著佐权）许可证，即不要求修改后的版本仍必须作为自由软件发布。更多讨论参见 [BSD 许可证的问题](https://www.gnu.org/licenses/bsd.zh-cn.html)。
+
+需要注意的是，BSD 许可证条款编号并非数字越大就越新，而是表示附加的限制条件更多。
 
 ## BSD 零条款许可证（Zero-Clause BSD，0BSD）
 
-此许可证是 ISC 许可证的变体，并非来自 BSD 家族，是一种公共领域许可证。
+此许可证是 ISC 许可证的变体，并非来自 BSD 家族，而是一种类似公共领域的宽松许可证。
 
 ```
 Zero-Clause BSD
