@@ -1,4 +1,4 @@
-# FreeBSD 13/14 安装指南
+# 2.3 FreeBSD 13/14 安装指南（基于 amd64 架构）
 
 这些 RELEASE 系统也可以用于生产环境，不过优先级低于最新的 RELEASE。
 
