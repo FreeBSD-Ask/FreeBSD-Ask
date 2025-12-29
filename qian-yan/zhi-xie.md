@@ -92,7 +92,7 @@ Ubuntu 吧前吧主 Simple 曾建议修改项目的章节文件名与许可协�
 
 本项目部署过程中还使用了若干开源项目，我们对其作者表示感谢。
 
-本项目主要托管在 [GitHub](https://GitHub.com)。
+本项目主要托管在 [GitHub](https://gitHub.com)。
 
 本项目还获得了 [GitBook 开源计划](https://www.gitbook.com/solutions/open-source) 的赞助，网站 `book.bsdcn.org` 即由其驱动。
 
