@@ -34,7 +34,7 @@ Olive 视频编辑器（Olive Video Editor）：
 # make install clean
 ```
 
-## 压缩字幕
+## 压制字幕
 
 ffmpeg：
 
@@ -51,7 +51,7 @@ ffmpeg：
 # make install clean
 ```
 
-使用 FFmpeg 将 ASS 字幕嵌入到视频中：
+使用 FFmpeg 将 ASS 字幕压制到视频中：
 
 ```sh
 $ ffmpeg -i 视频文件.mp4 -vf subtitles=对应字幕.ass 输出视频.mp4
@@ -59,7 +59,7 @@ $ ffmpeg -i 视频文件.mp4 -vf subtitles=对应字幕.ass 输出视频.mp4
 
 ## 抠图
 
-在 Unix 系统下可用的相关软件较多，这里简要介绍矢量制图程序 ​**Inkscape**​ 的使用方法。
+在 Unix 系统下可用的相关软件较多，这里简要介绍矢量制图程序 **Inkscape** 的使用方法。
 
 ### 安装 Inkscape
 
@@ -83,7 +83,7 @@ $ ffmpeg -i 视频文件.mp4 -vf subtitles=对应字幕.ass 输出视频.mp4
 3. 按 `Alt I` 切换到矢量模式
 4. `Shift F6` 贝塞尔和直线模式
 5. `Ctrl A` 全选
-6. 在菜单中选择 **路径** → ​**交集**​，以实现抠图
+6. 在菜单中选择 **路径** → **交集**，以实现抠图
 
 ### 参考文献
 

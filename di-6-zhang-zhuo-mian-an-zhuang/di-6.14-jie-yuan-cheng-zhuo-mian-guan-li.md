@@ -568,7 +568,7 @@ On install:
 ======================
 Anydesk is a binary package for FreeBSD.
 Minimal recommended is 1 GiB system memory
-installed but performence will be reduced.
+installed but performance will be reduced.
 For good performance is recommended and 2 GiB
 system memory.
 # Anydesk 是适用于 FreeBSD 的二进制软件包。

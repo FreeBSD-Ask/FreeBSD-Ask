@@ -30,6 +30,8 @@
 
 ## 境内 Git 镜像站
 
+将 gitup 的示例配置文件复制为正式配置文件：
+
 ```sh
 # cp /usr/local/etc/gitup.conf.sample /usr/local/etc/gitup.conf
 ```
@@ -42,7 +44,7 @@
 # Default configuration options for gitup.conf.
 {
 	"defaults" : {
-		"host"           : "mirrors.ustc.edu.cn",  #①改动成这样
+		"host"           : "mirrors.ustc.edu.cn",  # 改动成这样①
 		"port"           : 443,
 #		"proxy_host"     : "",
 #		"proxy_port"     : 0,
@@ -56,14 +58,14 @@
 	},
 
 	"ports" : {
-		"repository_path"  : "/freebsd-ports/ports.git",  #②改动成这样
+		"repository_path"  : "/freebsd-ports/ports.git",  # 改动成这样②
 		"branch"           : "main",
 		"target_directory" : "/usr/ports",
 		"ignores"          : [],
 	},
 
 	"quarterly" : {
-		"repository_path"  : "/freebsd-ports/ports.git",  #③改动成这样
+		"repository_path"  : "/freebsd-ports/ports.git",  # 改动成这样③
 		"branch"           : "quarterly",
 		"target_directory" : "/usr/ports",
 		"ignores"          : [],
@@ -110,7 +112,6 @@
 
 需要设置 HTTP 代理：`gitup` 不使用系统代理，而是由其配置文件 `/usr/local/etc/gitup.conf` 单独决定代理设置。
 
-
 示例（先删去前面的 `#` 再修改）：
 
 ```sh
@@ -127,9 +128,16 @@
 ```
 
 ### 报错 `build_repair_command: There are too many files to repair -- please re-clone the repository: Argument list too long`
+
+清空 `/usr/ports` 目录中的所有现有内容，准备重新同步 Ports：
   
 ```sh
 # rm -rf /usr/ports/*
+```
+
+使用 gitup 同步并拉取最新的 FreeBSD Ports 树:
+
+```sh
 # gitup ports
 ```
 
