@@ -290,9 +290,8 @@
 
 ## 附录 Ⅰ 计算机概论
 
-* [存储设备基础](fulu1/sd-card-can-shu-jian-shu.md)
-* [总线接口与协议](fulu1/zong-xian.md)
-* [网络基础](fulu1/wang-luo-ji-chu.md)
+* [计算机系统结构](fulu1/zong-xian.md)
+* [计算机网络](fulu1/wang-luo-ji-chu.md)
 * [操作系统](fulu1/cao-zuo-xi-tong.md)
 * [关系型数据库基础](fulu1/shu-jv-ku.md)
 
