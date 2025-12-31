@@ -82,9 +82,9 @@ EPUB 格式文档在手机上可使用 [微信读书](https://play.google.com/st
 
 ![](.gitbook/assets/proud_donor.png)
 
-[点此捐赠 FreeBSD 基金会](https://freebsdfoundation.org/donate)
+[点此捐赠 FreeBSD 基金会](https://freebsdfoundation.org/donate-to-freebsd-foundation/)
 
-需要你持有 VISA 信用卡：请在捐赠页面“Click & Pledge”下使用 `Amazon Pay`，经测试可用。
+需要你持有 VISA 信用卡：请在捐赠页面下使用 Amazon Pay 或 Google Pay，经测试可用。
 
 你还可以通过必应搜索的 Rewards 积分 [对 FreeBSD 基金会进行捐赠](https://rewards.bing.com/redeem/000999036000?causeId=840-841545163&&PC=EMMX01)。也可以用该方式 [捐赠 NetBSD 基金会](https://rewards.bing.com/redeem/000999036000?causeId=840-134134071&PC=EMMX01)。
 
