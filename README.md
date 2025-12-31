@@ -171,7 +171,3 @@ EPUB 格式文档在手机上可使用 [微信读书](https://play.google.com/st
 ---
 
 ~~本书得到的 ⭐ 真是太少啦！~~ 若本书对你有帮助，欢迎给本书所在的 [GitHub 项目存储库](https://github.com/FreeBSD-Ask/FreeBSD-Ask) 加颗 ⭐。
-
-![⭐ 图](https://api.star-history.com/svg?repos=FreeBSD-Ask/FreeBSD-Ask&type=timeline&logscale&legend=top-left)
-
-以上图表由 [GitHub Star History](https://www.star-history.com/) 提供。
