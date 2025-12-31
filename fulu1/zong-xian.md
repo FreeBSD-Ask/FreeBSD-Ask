@@ -1,7 +1,7 @@
 # 计算机系统结构
 
 
-## 总线、接口与协议
+## 总线、接口与协议概念辨析
 
 我们知道 M.2 只是一个物理接口，它本质上是一种迷你 PCIe 接口，可以直接连接物理引脚而无需额外芯片。
 
@@ -209,7 +209,7 @@ microSD 也就是通常所说的 TF 卡（两者关系类似于 EFI 与 UEFI）�
 ![梵想 S690（1TB）NVMe SSD PCIe4.0 读写速率](../.gitbook/assets/pcie4ssd1.png)
 
 
-### 使用 CrystalDiskMark 测试雷克沙 1066x A2 U3 128GB 存储卡读写速率（使用 USB 3.0 读卡器）
+#### 使用 CrystalDiskMark 测试雷克沙 1066x A2 U3 128GB 存储卡读写速率（使用 USB 3.0 读卡器）
 
 
 ![雷克沙 1066x A2 U3 128GB 存储卡读写速率](../.gitbook/assets/lkssd2.png)
