@@ -64,8 +64,6 @@ FreeBSD 基本系统几乎不包含任何与 BSD 协议不兼容的软件；
 |    macOS     |                                 1 年/约 5 年                                  |                                   无                                   |           [专有](https://www.apple.com/legal/sla/)           | clang  |    zsh     |     Aqua     |
 
 
-## 命令替代/软件替代
-
 由于 Linux 广泛使用 GNU 工具，因此理论上只要不依赖特定的 Linux 函数库，这些工具都可以在 FreeBSD 上运行。
 
 | Linux 命令/GNU 软件 | BSD Port/命令 |      作用说明      |                                                                                  备注                                                                                   |
