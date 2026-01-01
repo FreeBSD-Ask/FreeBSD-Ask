@@ -11,6 +11,10 @@
 
 ## FreeBSD 与 Linux 不同之处
 
+>**思考题**
+>
+>如何理解“不同的操作系统/发行版，不同的世界观”这句话？
+
 ### init
 
 FreeBSD 仍然使用 BSD init 而非 systemd；BSD init 与传统的 SysVinit 也有所不同——BSD 没有运行级别（runlevel），也没有 `/etc/inittab`，均由 rc 系统控制。
