@@ -339,7 +339,7 @@ Node.js 的依赖存储在 `node_modules` 目录，而 Nix/NixOS 的所有包则
 
 与 Node.js 生态存在多个包管理器（如 npm、yarn、bun、pnpm）类似，Nix 生态中也出现了不同的工具和前端（如 Nix、NixOS with Flakes、Nix with Home Manager），带来了选择的多样性，也可能造成一定的生态碎片化。~~并且从现状看，NixOS 正在重走 Node.js 的老路~~
 
-因此，对声明式配置和函数式包管理范式接受度高的用户，可能更容易适应 NixOS。~~喜欢 Node.js 的人肯定很喜欢这个系统，讨厌 Node.js 的人自然也喜欢不起来 NixOS。~~
+~~因此，喜欢 Node.js 的人肯定很喜欢这个系统，讨厌 Node.js 的人自然也喜欢不起来 NixOS。~~
 
 ### 参考文献
 
