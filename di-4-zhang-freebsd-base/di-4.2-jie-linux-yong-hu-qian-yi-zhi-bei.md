@@ -114,7 +114,7 @@ FreeBSD 基本系统几乎不包含任何与 BSD 协议不兼容的软件；
 >
 >读者如何理解李白与 FreeBSD 项目及相关社区、人员在经历上的相似点。读者是否有一刻也曾感慨个人在时代面前的无力感。
 >
->论述在经济条件一定及其他现实条件制约下的个人幸福实现的可能性。
+>如果现在有机会回归山洞，在其内与你希望的那些人们一起渡过余生，你会不会做此选择？
 
 本附录旨在对主流 GNU/Linux 发行版进行对比分析，帮助读者更全面地了解不同的 GNU/Linux 发行版。
 
@@ -124,15 +124,15 @@ FreeBSD 基本系统几乎不包含任何与 BSD 协议不兼容的软件；
 
 以下命令可用于查询 Ubuntu 24.04 与 Debian 版本的关联信息：
 
- ```bash
- ykla@ykla-ubuntu:~$ cat /etc/debian_version
- trixie/sid # trixie 即 Debian 13。在当前时间点，Debian 最新的稳定版本是 12 bookworm
- ykla@ykla-ubuntu:~$ cat /etc/lsb-release
- DISTRIB_ID=Ubuntu
- DISTRIB_RELEASE=24.04
- DISTRIB_CODENAME=noble
- DISTRIB_DESCRIPTION="Ubuntu 24.04 LTS"
- ```
+```bash
+ykla@ykla-ubuntu:~$ cat /etc/debian_version
+trixie/sid # trixie 即 Debian 13。在当前时间点，Debian 最新的稳定版本是 12 bookworm
+ykla@ykla-ubuntu:~$ cat /etc/lsb-release
+DISTRIB_ID=Ubuntu
+DISTRIB_RELEASE=24.04
+DISTRIB_CODENAME=noble
+DISTRIB_DESCRIPTION="Ubuntu 24.04 LTS"
+```
 
 在 VMware Workstation 17 Pro 虚拟机上对 Ubuntu 24.04 LTS 版本（发布于伦敦当地时间 2024 年 4 月 25 日）进行测试时，发现其整体使用体验相较于之前版本有所下降。安装过程中即出现报错，且后续使用中遇到了窗口显示异常、鼠标光标消失、输入框无法获取焦点等问题。安装完成后，系统在开机后频繁弹出“内部错误”提示。
 
@@ -207,19 +207,19 @@ Debian Stable 发行版的软件包策略以稳定为主，大部分软件在发
 
 ### openSUSE
 
-在物理机上安装完整的 openSUSE 后，部分用户反馈系统会出现卡顿现象。相关性能问题可能与默认使用的 Btrfs 文件系统的某些特性或配置有关。在多台不同代际的英特尔平台物理机上进行测试，均观察到了卡顿现象。安装后短时间内可能出现系统响应迟缓的情况。因此，不同用户对其使用体验的评价可能存在分歧。有用户通过将根文件系统从 Btrfs 切换为 Ext4 来规避此问题。在网络上搜索“openSUSE btrfs hang”可以发现类似反馈，表明这可能不是个别现象。
+在物理机上安装完整的 openSUSE 后，部分用户反馈系统会出现卡顿现象。相关性能问题可能与默认使用的 Btrfs 文件系统的某些特性或配置有关。在多台不同代际的英特尔平台物理机上进行测试，均观察到了卡顿现象。安装后短时间内可能出现系统响应迟缓的情况。因此，不同用户对其使用体验的评价可能存在分歧。有用户通过将根文件系统从 Btrfs 切换为 Ext4 来规避此问题。在网络上搜索“openSUSE btrfs hang”可以发现类似反馈，表明这可能并非个别现象。
 
 openSUSE 因其 Logo 形象，在社区中被昵称为“大蜥蜴”。
 
 其版本号命名曾有一段趣事：为纪念英国作家道格拉斯·亚当斯在《银河系漫游指南》中提到的数字“42”（被誉为“生命、宇宙以及一切事物的终极答案”），openSUSE 将版本号从 13.x 跳跃至 42.x，随后又下调回 15.x。这导致了版本号逻辑上的一个现象：由于 42 大于 15，在特定条件下，从 15.x 升级可能会错误地指向更高的 42.x 版本。这种版本号跳跃现象在发行版中较为特殊。
 
+openSUSE 有时会在稳定版本的软件包中引入实验性功能，且可能没有明确的提示。这可能导致用户将其视为软件缺陷（Bug）进行反馈。用户可能需要提交问题报告后，才能从维护者处得知该行为是实验性功能所致。
+
 >**思考题**
 >
->你认为在严肃的商业发行版中，允许出现此类版本异动吗？
+>你认为在严肃的商业发行版中，允许出现此类版本异动和未经用户明确批准的测试行为吗？
 >
 >这是否可以用以论述，社区发行版仅仅是企业发行版的试验田。
-
-openSUSE 有时会在稳定版本的软件包中引入实验性功能，且可能没有明确的提示。这可能导致用户将其视为软件缺陷（Bug）进行反馈。用户可能需要提交问题报告后，才能从维护者处得知该行为是实验性功能所致。
 
 openSUSE 原生的包管理器是 `zypper`。有用户将其与 Fedora 的 `dnf` 进行对比，认为 `zypper` 在交互响应速度或某些场景下的性能表现有待优化 ~~比如你数数这有几个字母？~~，`zypper` 相比 `dnf` 存在明显的卡顿和延迟。
 
@@ -311,7 +311,7 @@ Arch Linux 在中文社区中存在一些非正式的社区戏称：“**[邪教
 
 Arch Linux 的主要优势在于软件包版本非常新。但并非所有软件都如此，部分特定领域的工具包（如某些 R 语言包）可能不如其他发行版（如 FreeBSD）更新及时。Arch Linux 在技术社区中拥有很高的知名度。
 
-Arch Linux 官方仓库（Official Repository）的软件包数量有限，用户通常需要启用 Arch 用户软件仓库（Arch User Repository，AUR）来获取更丰富的软件。而 AUR 源是[未经过任何代码审查的](https://wiki.archlinux.org/title/Arch_User_Repository)（`Warning: AUR packages are user-produced content. These PKGBUILDs are completely unofficial and have not been thoroughly vetted. Any use of the provided files is at your own risk.`，`警告： AUR 中的软件包是由其他用户编写的，这些 PKGBUILD 完全是非官方的，未经彻底审查。使用这些文件的风险由您自行承担。`）实际上缺乏系统性的集中审查机制：实际上，恶意或高风险脚本经常被提交其中。虽然构建过程在受限环境中进行，但无法保证生成的软件包本身是安全的。这类似于任何未经严格审核的软件来源（包括部分官方应用商店）都可能存在恶意软件。
+Arch Linux 官方仓库（Official Repository）的软件包数量有限，用户通常需要启用 Arch 用户软件仓库（Arch User Repository，AUR）来获取更丰富的软件。而 AUR 源是[未经过任何代码审查的](https://wiki.archlinux.org/title/Arch_User_Repository)（`Warning: AUR packages are user-produced content. These PKGBUILDs are completely unofficial and have not been thoroughly vetted. Any use of the provided files is at your own risk.`，`警告： AUR 中的软件包是由其他用户编写的，这些 PKGBUILD 完全是非官方的，未经彻底审查。使用这些文件的风险由您自行承担。`）实际上缺乏系统性的集中审查机制：恶意或高风险脚本经常被提交其中。虽然构建过程在受限环境中进行，但无法保证生成的软件包本身是安全的。这类似于任何未经严格审核的软件来源（包括部分官方应用商店）都可能存在恶意软件。
 
 这并非危言耸听，AUR 中确实曾[发现](https://www.linuxuprising.com/2018/07/malware-found-on-arch-user-repository.html?m=1)存在恶意软件包。
 
@@ -321,13 +321,13 @@ Arch Linux 官方仓库（Official Repository）的软件包数量有限，用�
 
 首先，读者不必被 NixOS 提出的一系列术语所困扰，其中部分概念在实际使用中容易被误解。
 
-其核心理念并非简单的“OS as Code”，其包管理与配置方式在某些方面与 Node.js 的依赖管理有相似之处。 ~~它并不是什么“OS as Code”。而是“OS as Node.js”~~
+其核心理念并非简单的“OS as Code”，其包管理与配置方式在某些方面与 Node.js 的依赖管理有相似之处。 ~~它并不是什么“OS as Code”，而是“OS as Node.js”~~
 
 对于熟悉声明式配置和函数式包管理理念的用户（尤其是有 Node.js 生态经验者），这个系统使用起来比大多数 Linux 发行版都要简单得多，而不一定如部分宣传中所描述的那样晦涩难用。
 
 本质上，NixOS 将声明式和函数式的依赖管理范式应用到了整个操作系统层面。~~NixOS 就是把 Node.js 做成了一款系统~~
 
-NixOS 强调可重现的系统构建。其配置文件（如 `/etc/nixos/configuration.nix`）、依赖锁定（如 `flake.lock` 文件）等机制，在理念上与 Node.js 的 `package.json` 和 `package-lock.json` 有相通之处。同样，其错误提示有时也可能不够直观：在某些情况下，错误提示并不能直观反映问题本身，例如将依赖缺失提示为语法错误。
+NixOS 强调可重现的系统构建。其配置文件（如 `/etc/nixos/configuration.nix`）、依赖锁定（如 `flake.lock` 文件）等机制，在理念上与 Node.js 的 `package.json` 和 `package-lock.json` 有相通之处：在某些情况下，错误提示并不能直观反映问题本身，例如将依赖缺失提示为语法错误。
 
 - **声明式配置**：系统的所有配置集中在一个声明式文件中（如 `/etc/nixos/configuration.nix`），类似于 Node.js 项目中的 `package.json`。
 - ​**Flakes**​：这是一个实验性功能，提供了更可重现的依赖管理和项目结构，其锁定文件（`flake.lock`）的作用类似于 `package-lock.json`。
