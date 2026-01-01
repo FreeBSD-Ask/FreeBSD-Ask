@@ -247,7 +247,7 @@ Arch Linux 在中文社区中存在一些非正式的社区戏称：“**[邪教
 
 Arch Linux 的主要优势在于软件包版本非常新。但并非所有软件都如此，部分特定领域的工具包（如某些 R 语言包）可能不如其他发行版（如 FreeBSD）更新及时。Arch Linux 在技术社区中拥有很高的知名度。
 
-Arch Linux 官方仓库（Official Repository）的软件包数量有限，用户通常需要启用 Arch 用户软件仓库（Arch User Repository，AUR）来获取更丰富的软件。而 AUR 源是[未经过任何代码审查的](https://wiki.archlinux.org/title/Arch_User_Repository)（`Warning: AUR packages are user-produced content. These PKGBUILDs are completely unofficial and have not been thoroughly vetted. Any use of the provided files is at your own risk.`，`警告： AUR 中的软件包是由其他用户编写的，这些 PKGBUILD 完全是非官方的，未经彻底审查。使用这些文件的风险由您自行承担。`）实际上不是未经彻底审查，是根本没有任何审查：实际上，恶意或高风险脚本经常被提交其中。虽然构建过程在受限环境中进行，但无法保证生成的软件包本身是安全的。这类似于任何未经严格审核的软件来源（包括部分官方应用商店）都可能存在恶意软件。
+Arch Linux 官方仓库（Official Repository）的软件包数量有限，用户通常需要启用 Arch 用户软件仓库（Arch User Repository，AUR）来获取更丰富的软件。而 AUR 源是[未经过任何代码审查的](https://wiki.archlinux.org/title/Arch_User_Repository)（`Warning: AUR packages are user-produced content. These PKGBUILDs are completely unofficial and have not been thoroughly vetted. Any use of the provided files is at your own risk.`，`警告： AUR 中的软件包是由其他用户编写的，这些 PKGBUILD 完全是非官方的，未经彻底审查。使用这些文件的风险由您自行承担。`）实际上缺乏系统性的集中审查机制：实际上，恶意或高风险脚本经常被提交其中。虽然构建过程在受限环境中进行，但无法保证生成的软件包本身是安全的。这类似于任何未经严格审核的软件来源（包括部分官方应用商店）都可能存在恶意软件。
 
 这并非危言耸听，AUR 中确实曾[发现](https://www.linuxuprising.com/2018/07/malware-found-on-arch-user-repository.html?m=1)存在恶意软件包。
 
@@ -268,7 +268,7 @@ NixOS 强调可重现的系统构建。其配置文件（如 `/etc/nixos/configu
 - **声明式配置**：系统的所有配置集中在一个声明式文件中（如 `/etc/nixos/configuration.nix`），类似于 Node.js 项目中的 `package.json`。
 - ​**Flakes**​：这是一个实验性功能，提供了更可重现的依赖管理和项目结构，其锁定文件（`flake.lock`）的作用类似于 `package-lock.json`。
 - ​**可重现性**​：基于声明的配置和锁定的依赖，可以精确地复现整个系统环境。
-- ​**无依赖冲突**​：通过为每个依赖创建独立存储路径来避免冲突。但这可能导致存储占用较大，且旧版本包需要手动清理。~~大量类似 `node_modules` 的文件冗余且根本无法清理~~
+- ​**无依赖冲突**​：通过为每个依赖创建独立存储路径来避免冲突。但这可能导致存储占用较大，且旧版本包需要手动清理。~~存在较多类似 node_modules 的冗余存储，清理成本较高~~
 - ​**可回滚**​：每次系统更新（通过 `nixos-rebuild switch`）都会生成新的系统系统代际（Generation，即新的启动选项），允许用户轻松回滚到任意历史版本。切换后通常需要重启以完全生效。
 
 Node.js 的依赖存储在 `node_modules` 目录，而 Nix/NixOS 的所有包则存储在 `/nix/store` 目录下。
