@@ -21,7 +21,7 @@
 
 FreeBSD 仍然使用 BSD init 而非 systemd；BSD init 与传统的 SysVinit 也有所不同——BSD 没有运行级别（runlevel），也没有 `/etc/inittab`，均由 rc 系统控制。
 
-当以用户进程身份运行 init 时，可以模拟 AT&T System V UNIX 的行为——即超级用户可以在命令行中指定所需的运行级别：该 init 进程会向原始的（PID 为 1 的）init 进程发送特定信号，以执行相应操作，实现类似功能。参见 [init](https://man.freebsd.org/cgi/man.cgi?query=init&sektion=8&manpath=freebsd-release-ports)。例如，在 FreeBSD 中执行 `init 0` 仍然表示关机。
+当以用户进程身份运行 init 时，可以模拟 AT&T System V UNIX 的行为——即超级用户可以在命令行中指定所需的运行级别：该 init 进程会向原始的（PID 为 1 的）init 进程发送特定信号，以执行相应操作，实现类似功能。参见 [init(8)](https://man.freebsd.org/cgi/man.cgi?query=init&sektion=8&manpath=freebsd-release-ports)。例如，在 FreeBSD 中执行 `init 0` 仍然表示关机。
 
 | 运行级别 | 信号       | 操作说明                             |
 |:----------:|:------------|:--------------------------------------|
