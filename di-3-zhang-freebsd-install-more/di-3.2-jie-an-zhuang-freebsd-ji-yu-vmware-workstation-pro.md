@@ -204,7 +204,7 @@ EndSection
 fusefs_load="YES"
 ```
 
-可在在系统启动时加载 fusefs 内核模块。
+可在系统启动时加载 fusefs 内核模块。
 
 #### 挂载
 
