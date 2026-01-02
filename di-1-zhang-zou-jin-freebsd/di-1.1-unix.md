@@ -221,9 +221,9 @@ GNU's Not Unix，从 GNU 这个名字（GNU 不是 UNIX）你也能看出来 Lin
 - GNU/Linux 发行版 = Ubuntu、RHEL、Deepin、openSUSE……
   - Ubuntu = Linux kernel + apt/dpkg + Gnome（默认桌面环境）
   - openSUSE = Linux kernel + libzypp/rpm（包管理器后端，支持 RPM 格式）+ KDE（默认的桌面环境之一）
- 
+
 > **思考题**
-> 
+>
 > 1. 如果去掉文件系统、Linux 内核、Shell、Systemd（init）、桌面环境、包管理器以及所有第三方软件，一个 Linux 发行版还剩下哪些内容？
 > 2. 在上述组件全部移除，并将其重新组合后，若仍将该系统称为“发行版”，它与传统 Linux 发行版相比存在哪些本质区别？
 > 3. 在这种情况下，该系统是否仍然可以被视为原来的发行版？请说明理由。
