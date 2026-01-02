@@ -116,7 +116,7 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 
 ### 创建交换分区
 
-创建分区 freebsd-swap。
+在 nda0 磁盘上创建 4GB，4K 对齐的 FreeBSD 交换分区，并将其标记为 swap：
 
 ```sh
 # gpart add -a 4k -l swap -s 4G -t freebsd-swap nda0
@@ -134,13 +134,13 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 
 ### 创建 ZFS 分区
 
-创建分区 freebsd-zfs。
+在 nda0 磁盘上创建 4K 对齐的 FreeBSD ZFS 分区，并标记为 zroot：
 
 ```sh
 # gpart add -a 4k -l zroot -t freebsd-zfs nda0
 ```
 
-将设置该分区卷标为 zroot，使用全部空余空间，请注意替换 nda0 为实际硬盘编号。
+将设置使用全部空余空间，请注意替换 nda0 为实际硬盘编号。
 
 #### 查看分区情况
 
