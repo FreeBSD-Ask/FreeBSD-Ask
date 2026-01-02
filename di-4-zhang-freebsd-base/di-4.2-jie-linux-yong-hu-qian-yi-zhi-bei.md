@@ -381,4 +381,4 @@ Node.js 的依赖存储在 `node_modules` 目录，而 Nix/NixOS 的所有包则
 - [Benefits of Gentoo](https://wiki.gentoo.org/wiki/Benefits_of_Gentoo)
 - [The philosophy of Gentoo](https://www.gentoo.org/get-started/philosophy/)，Gentoo 设计哲学
 - [Arch compared to other distributions](https://wiki.archlinux.org/title/Arch_compared_to_other_distributions)，翻译[在这里](https://wiki.archlinuxcn.org/wiki/Arch_%E4%B8%8E%E5%85%B6%E4%BB%96%E5%8F%91%E8%A1%8C%E7%89%88%E7%9A%84%E6%AF%94%E8%BE%83)
-- 《C++ 语言的设计和演化》，[美] Bjarne Stroustrup，译者: 裘宗燕，人民邮电出版社，ISBN 9787115497116
+- 《C++ 语言的设计和演化》，[美] Bjarne Stroustrup，译者：裘宗燕，人民邮电出版社，ISBN 9787115497116
