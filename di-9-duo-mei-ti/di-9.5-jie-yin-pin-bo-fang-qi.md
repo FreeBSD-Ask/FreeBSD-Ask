@@ -136,7 +136,7 @@ uaudio0: No HID volume keys found.
 
 ### 基本设置
 
-Music Player Daemon（musicpd）的配置文件为 `/usr/local/etc/musicpd.conf` 。
+Music Player Daemon（musicpd）的配置文件为 `/usr/local/etc/musicpd.conf`。
 
 其中默认使用的部分目录结构如下：
 
