@@ -642,7 +642,7 @@ test2 -> test2.pdf
 $ cp test /home/ykla/
 ```
 
-末尾的 `/` 很重要，如果缺少了末尾的 `/`，且子目录 ykla 不存在的话， `test` 会被重命名为 `ykla`（ykla 在设想中本应是个目录）：
+末尾的 `/` 很重要，如果缺少了末尾的 `/`，且子目录 ykla 不存在的话，`test` 会被重命名为 `ykla`（ykla 在设想中本应是个目录）：
 
 ```sh
 $ cp test /home/ykla/

@@ -376,7 +376,7 @@ WHERE name in ('张三', '李四');
 
 #### 特殊运算符
 
-- `in` ：“值在列表中”运算符，用于筛选符合条件的记录，并返回布尔结果，供 update 或 delete 语句使用。例如 `5 in (1, 3, 5)` 返回真。
+- `in`：“值在列表中”运算符，用于筛选符合条件的记录，并返回布尔结果，供 update 或 delete 语句使用。例如 `5 in (1, 3, 5)` 返回真。
 - `between` 范围匹配：例如 `5 between 1 and 10` 返回真。
 - `like` 模式匹配：`'abc' like 'a%'` 返回真。百分号在这里类似 sh 的通配符。
 - `IS NULL` ”判断表项是否为 NULL“：`NULL IS NULL` 返回 TRUE。  
