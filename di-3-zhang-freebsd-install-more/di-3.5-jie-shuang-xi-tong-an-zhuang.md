@@ -114,15 +114,33 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 >
 >若使用 NVMe 硬盘，新装系统（UEFI+GPT，无 freebsd-boot 分区）的该默认参数通常为 12。但 4K 对齐究竟对齐的是什么？因为 SSD 并无传统机械硬盘的物理扇区概念。
 
-### 创建分区
+### 创建交换分区
+
+创建分区 freebsd-swap。
 
 ```sh
-# 创建 swap 分区。`-t` 指定类型，`-l` 指定卷标，`-s` 指定大小，`-a` 指定对齐。注意根据实际情况替换 `nda0`
 # gpart add -a 4k -l swap -s 4G -t freebsd-swap nda0
+```
 
-# 创建 ZFS 分区，卷标为 zroot，使用全部空余空间，注意替换 nda0
+选项说明：
+
+- `-t` 指定类型
+- `-l` 指定卷标
+- `-s` 指定大小
+- `-a` 指定对齐
+
+请注意根据实际情况替换 `nda0` 为实际硬盘编号。
+
+
+### 创建 ZFS 分区
+
+创建分区 freebsd-zfs。
+
+```sh
 # gpart add -a 4k -l zroot -t freebsd-zfs nda0
 ```
+
+将设置该分区卷标为 zroot，使用全部空余空间，请注意替换 nda0 为实际硬盘编号。
 
 #### 查看分区情况
 
@@ -151,11 +169,13 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 
 ### 创建 ZFS 池
 
-创建 ZFS 池 zroot，设置挂载点为 `/mnt`，启用 LZ4 压缩，关闭访问时间记录：
+创建 ZFS 池 zroot：
 
 ```sh
 # zpool create -f -o altroot=/mnt -O compress=lz4 -O atime=off -m none zroot /dev/gpt/zroot
 ```
+
+该命令将设置 zroot 池的挂载点为 `/mnt`，启用 LZ4 压缩，关闭访问时间记录。
 
 选项说明如下：
 
