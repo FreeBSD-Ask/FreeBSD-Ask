@@ -551,7 +551,7 @@ Do you trust this certificate (yes/no)? # 输入 yes，按回车键
 
 使用 AnyDesk 可进行远程访问，FreeBSD 上仅支持 x86 架构：
 
-由于版权原因（私有软件未经许可禁止分发），必须用户使用 Ports 自行构建安装：
+由于版权原因（私有软件未经许可禁止分发），必须由用户使用 Ports 自行构建安装：
 
 ```sh
 # cd /usr/ports/deskutils/anydesk/
