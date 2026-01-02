@@ -140,7 +140,7 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 # gpart add -a 4k -l zroot -t freebsd-zfs nda0
 ```
 
-卷标为 zroot，使用全部空余空间，请注意替换 nda0 为实际硬盘编号。
+将设置该分区卷标为 zroot，使用全部空余空间，请注意替换 nda0 为实际硬盘编号。
 
 #### 查看分区情况
 
@@ -175,7 +175,7 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 # zpool create -f -o altroot=/mnt -O compress=lz4 -O atime=off -m none zroot /dev/gpt/zroot
 ```
 
-将设置挂载点为 `/mnt`，启用 LZ4 压缩，关闭访问时间记录。
+该命令将设置 zroot 池的挂载点为 `/mnt`，启用 LZ4 压缩，关闭访问时间记录。
 
 选项说明如下：
 
