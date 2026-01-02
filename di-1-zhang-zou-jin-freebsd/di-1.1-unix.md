@@ -221,12 +221,21 @@ GNU's Not Unix，从 GNU 这个名字（GNU 不是 UNIX）你也能看出来 Lin
 - GNU/Linux 发行版 = Ubuntu、RHEL、Deepin、openSUSE……
   - Ubuntu = Linux kernel + apt/dpkg + Gnome（默认桌面环境）
   - openSUSE = Linux kernel + libzypp/rpm（包管理器后端，支持 RPM 格式）+ KDE（默认的桌面环境之一）
+ 
+> **思考题**
+> 
+> 1. 如果去掉文件系统、Linux 内核、Shell、Systemd（init）、桌面环境、包管理器以及所有第三方软件，一个 Linux 发行版还剩下哪些内容？
+> 2. 在上述组件全部移除，并将其重新组合后，若仍将该系统称为“发行版”，它与传统 Linux 发行版相比存在哪些本质区别？
+> 3. 在这种情况下，该系统是否仍然可以被视为原来的发行版？请说明理由。
+> 4. 如果不能被视为原来的发行版，是在移除哪一类关键组件之后，其不再具备“发行版”的属性？
+> 5. 如果仍然可以被视为原来的发行版，那么其哪些部分可以被认为真正继承自原有发行版，其依据是什么？
+
 
 > **注意**
 >
 > 如果你还是不明白，建议亲自安装试试 [Gentoo](https://www.gentoo.org/downloads/)（stage3）或 [Slackware](http://www.slackware.com/)，再不明白可以试试 [Gentoo（stage1）](https://wiki.gentoo.org/wiki/Stage_file) 或 [LFS](https://www.linuxfromscratch.org/lfs/)。
 >
-> 上述操作较为复杂，需要一定的经验与基础知识。
+> 上述操作较为复杂，需要一定的经验与基础知识。~~又陷入了前理解循环~~
 
 ## 什么是 Unix-like？
 
