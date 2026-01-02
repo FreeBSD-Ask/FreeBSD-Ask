@@ -148,7 +148,7 @@
 请先安装显卡驱动和虚拟机增强工具。
 
 ```sh
-# sysrc moused_enable="YES"    # 启用 moused 服务并写入系统配置
+# service moused enable        # 启用 moused 服务并写入系统配置
 # Xorg -configure             # 生成 Xorg 默认配置文件
 # mv /root/xorg.conf.new /usr/local/share/X11/xorg.conf.d/xorg.conf  # 安装 Xorg 配置文件
 ```
