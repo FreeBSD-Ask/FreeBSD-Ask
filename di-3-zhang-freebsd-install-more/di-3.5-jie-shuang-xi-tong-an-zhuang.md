@@ -15,7 +15,7 @@
 
 首先需要在硬盘上为 FreeBSD 预留空间。该空间不一定位于硬盘末尾，中间位置亦可，因为典型的 Windows 安装中最后一个分区（本例为 `nda0p4`）通常是恢复分区。
 
-分区完成后，在 FreeBSD 下查看，结果如下：
+分区完成后，在 FreeBSD 下查看磁盘分区情况，结果如下：
 
 ```sh
 # gpart show
@@ -67,7 +67,7 @@
 ![](../.gitbook/assets/shuangxitong7.png)
 
 
-之后会进入正常安装的流程。安装完成后：
+之后会进入正常安装的流程。安装完成后列出系统中所有 ZFS 池及其状态：
 
 ```sh
 # zfs list
@@ -91,14 +91,17 @@ root  534M    130G   534M  none
 
 ### 加载 ZFS 内核模块
 
+默认的安装镜像可能未启用 ZFS 默认，让我们现在就加载 ZFS 内核模块：
+
 ```sh
 # kldload zfs
 ```
 
 ### 配置 ZFS 对齐方式（只影响新创建的硬盘分区）
 
+强制 ZFS 文件系统使用 4K 对齐：
+
 ```sh
-# 强制 4K 对齐
 # sysctl vfs.zfs.vdev.min_auto_ashift=12
 vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 ```
@@ -123,6 +126,8 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 
 #### 查看分区情况
 
+显示系统磁盘分区情况：
+
 ```sh
 # gpart show
 =>       34  419430333  nda0  GPT  (200G)
@@ -137,6 +142,8 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 ```
 
 ### 挂载临时文件系统准备安装
+
+挂载一个临时文件系统（tmpfs）：
   
 ```sh
 # mount -t tmpfs tmpfs /mnt
@@ -144,7 +151,7 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 
 ### 创建 ZFS 池
 
-创建 ZFS 池。
+创建 ZFS 池 zroot，设置挂载点为 `/mnt`，启用 LZ4 压缩，关闭访问时间记录：
 
 ```sh
 # zpool create -f -o altroot=/mnt -O compress=lz4 -O atime=off -m none zroot /dev/gpt/zroot
@@ -160,52 +167,118 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 
 ### 创建 ZFS 数据集
 
+
+- 创建根数据集
+
 ```sh
-# 创建根数据集
 # zfs create -o mountpoint=none zroot/ROOT
-# 创建 `zroot/ROOT` 数据集，不设置挂载点（`mountpoint=none`）。此数据集通常作为系统根数据集的容器，其下将创建具体用于挂载的子数据集。
-
-# 创建默认根数据集
-# zfs create -o mountpoint=/ zroot/ROOT/default
-# 创建 `zroot/ROOT/default` 数据集，将其挂载到根目录 `/`。此数据集将作为系统的默认根文件系统。
-
-# 创建 /home 数据集
-# zfs create -o mountpoint=/home zroot/home
-# 创建一个名为 `zroot/home` 的数据集，并挂载到 `/home`，通常用于存储用户主目录。
-
-# 创建 /tmp 数据集，设置 exec 为 on，setuid 为 off
-# zfs create -o mountpoint=/tmp -o exec=on -o setuid=off zroot/tmp
-# 创建 `zroot/tmp` 数据集并挂载到 `/tmp`，允许执行文件（`exec=on`），但禁用 setuid（`setuid=off`）防止该目录中的文件使用 setuid 提升权限。
-
-# 创建 /usr 数据集，并设置 `canmount` 属性为 `off`
-# zfs create -o mountpoint=/usr -o canmount=off zroot/usr
-# 创建 `zroot/usr` 数据集，其挂载点为 `/usr`。设置 `canmount=off` 可防止该数据集被自动挂载，通常用于需要精细控制挂载顺序的场景。
-
-# 创建 /usr/ports 数据集，设置 setuid 为 off
-# zfs create -o setuid=off zroot/usr/ports
-
-# 创建 /usr/src 数据集
-# zfs create zroot/usr/src
-
-# 创建 /var 数据集，设置 canmount 为 off
-# zfs create -o mountpoint=/var -o canmount=off zroot/var
-
-# 创建 /var/audit 数据集，设置 exec 和 setuid 为 off
-# zfs create -o exec=off -o setuid=off zroot/var/audit
-
-# 创建 /var/crash 数据集，设置 exec 和 setuid 为 off
-# zfs create -o exec=off -o setuid=off zroot/var/crash
-
-# 创建 /var/log 数据集，禁用执行（`exec=off`）和 setuid（`setuid=off`）
-# zfs create -o exec=off -o setuid=off zroot/var/log
-
-# 创建 /var/tmp 数据集，设置 setuid 为 off
-# zfs create -o setuid=off zroot/var/tmp
-
-# 创建 /var/mail 数据集，设置 atime 为 on
-# zfs create -o atime=on zroot/var/mail
-# 创建 `zroot/var/mail` 数据集，并启用访问时间记录（`atime=on`），通常用于存放邮件数据。
 ```
+
+将创建数据集 `zroot/ROOT`，不设置挂载点（`mountpoint=none`）。
+
+此类无具体挂载点的数据集通常作为系统根数据集的容器，其下将创建具体用于挂载的子数据集或起到排除作用。
+
+
+- 创建默认根数据集
+
+```sh
+# zfs create -o mountpoint=/ zroot/ROOT/default
+```
+
+将创建数据集 `zroot/ROOT/default`，将其挂载到根目录 `/`。此数据集将作为系统的默认根文件系统。
+
+
+- 创建 `/home` 数据集
+
+```sh
+# zfs create -o mountpoint=/home zroot/home
+```
+
+将创建数据集 `zroot/home`，并将其挂载到 `/home`，通常用于存储用户主目录。
+
+- 创建 `/tmp` 数据集
+
+```sh
+# zfs create -o mountpoint=/tmp -o exec=on -o setuid=off zroot/tmp
+```
+
+创建数据集 `zroot/tmp`，并将其挂载到 `/tmp`，允许执行文件（`exec=on`），但禁用 setuid（`setuid=off`）防止该目录中的文件使用 setuid 提升权限。
+
+- 创建 `zroot/usr` 数据集
+
+```sh
+# zfs create -o mountpoint=/usr -o canmount=off zroot/usr
+```
+
+将创建 `zroot/usr` 数据集，`canmount` 即禁止自动挂载。
+
+
+- 创建 `/usr/ports` 数据集
+
+```sh
+# zfs create -o setuid=off zroot/usr/ports
+```
+
+将创建 `/usr/ports` 数据集，禁用 setuid（`setuid=off`）。
+
+
+- 创建 `/usr/src` 数据集
+
+```sh
+# zfs create zroot/usr/src
+```
+
+将创建 `/usr/src` 数据集。
+
+- 创建 `/var` 数据集
+
+```sh
+# zfs create -o mountpoint=/var -o canmount=off zroot/var
+```
+
+将创建 `/var` 数据集，`canmount` 意味着不会自动挂载。
+
+
+- 创建 `/var/audit` 数据集
+
+```sh
+# zfs create -o exec=off -o setuid=off zroot/var/audit
+```
+
+将创建 `/var/audit` 数据集，禁用执行（`exec=off`），同时禁用 setuid（`setuid=off`）。
+
+- 创建 `/var/crash` 数据集
+
+```sh
+# zfs create -o exec=off -o setuid=off zroot/var/crash
+```
+
+将创建 `/var/crash` 数据集，禁用执行（`exec=off`），同时禁用 setuid（`setuid=off`）。
+
+- 创建 `/var/log` 数据集
+
+```sh
+# zfs create -o exec=off -o setuid=off zroot/var/log
+```
+
+将创建 `/var/log` 数据集，禁用执行（`exec=off`），同时禁用 setuid（`setuid=off`）。
+
+- 创建 `/var/tmp` 数据集
+
+```sh
+# zfs create -o setuid=off zroot/var/tmp
+```
+
+将创建 `/var/tmp` 数据集，同时禁用 setuid（`setuid=off`）。
+
+- 创建 `/var/mail` 数据集
+
+```sh
+# zfs create -o atime=on zroot/var/mail
+```
+
+将创建 `zroot/var/mail` 数据集，并启用访问时间记录（`atime=on`），通常用于存放邮件数据。
+
 
 >**技巧**
 >
@@ -216,17 +289,19 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 将 `/mnt/tmp` 和 `/mnt/var/tmp` 的权限设置为 `1777`（粘滞位），以确保临时目录权限正确：
 
 ```sh
-# chmod 1777 /mnt/tmp
-# chmod 1777 /mnt/var/tmp
+# chmod 1777 /mnt/tmp        # 设置 /mnt/tmp 目录为粘滞位，可读写
+# chmod 1777 /mnt/var/tmp    # 设置 /mnt/var/tmp 目录为粘滞位，可读写
 ```
 
 ### 设置交换分区到 `fstab`
 
-配置 swap 分区。注意将 `/dev/nda0p5` 替换为实际的交换分区设备名，可使用 `gpart show nda0` 命令进行确认：
+将交换分区 `/dev/nda0p5` 添加到临时的 fstab 文件：
 
 ```sh
 # printf "/dev/nda0p5\tnone\tswap\tsw\t0\t0\n" >> /tmp/bsdinstall_etc/fstab
 ```
+
+注意将 `/dev/nda0p5` 替换为实际的交换分区设备名，可使用 `gpart show nda0` 命令进行确认。
 
 >**技巧**
 >
@@ -240,40 +315,76 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 
 ### 设置启动项与 UEFI
 
+- 设置 ZFS 池的引导文件系统（bootfs）为 `zroot/ROOT/default`：
+
 ```sh
-# 设置 ZFS 池的引导文件系统（bootfs）为 `zroot/ROOT/default`
 # zpool set bootfs=zroot/ROOT/default zroot
+```
 
-# 配置系统在启动时启用 ZFS 服务 ①
+- 配置系统在启动时启用 ZFS 服务。
+
+```sh
 # printf 'zfs_enable="YES"\n' >> /tmp/bsdinstall_etc/rc.conf
+````
 
-# 挂载现有的 EFI 系统分区
-# 注意将 `/dev/nda0p1` 替换为实际的 EFI 分区设备名
+`\n` 代表 Unix/Linux 系统中的换行符。
+
+Windows 文本文件的行尾通常是 `\r\n`（回车 + 换行）。
+
+此命令效果等同于使用 `ee /tmp/bsdinstall_etc/rc.conf` 编辑该文件并添加一行 `zfs_enable="YES"`。
+
+- 挂载现有的 EFI 系统分区：
+
+```sh
 # mount -t msdosfs /dev/nda0p1 /media
+```
 
-# 在 EFI 系统分区中为 FreeBSD 创建启动目录
+注意将 `/dev/nda0p1` 替换为实际的 EFI 分区设备名。
+
+- 在 EFI 系统分区中为 FreeBSD 创建启动目录
+
+```sh
 # mkdir -p /media/efi/freebsd
+```
 
-# 将 FreeBSD 的 EFI 启动文件复制到该目录
+
+- 将 FreeBSD 的 EFI 启动文件复制到启动目录
+
+```sh
 # cp /boot/loader.efi /media/efi/freebsd/
+```
 
-# 使用 efibootmgr 工具向主板 UEFI 固件添加一个名为 “FreeBSD” 的启动项
+- 使用 efibootmgr 工具向主板 UEFI 固件添加启动项 “FreeBSD”。
+
+```
 # efibootmgr --create --activate --label "FreeBSD" --loader "/media/efi/freebsd/loader.efi"
+```
 
-# 卸载 EFI 系统分区
+
+- 卸载 EFI 系统分区
+
+```sh
 # umount /media
-# 退出 Shell，安装程序将自动继续后续流程
+```
+
+
+- 退出 Shell
+
+```sh
 # exit  
 ```
 
-- ①：`\n` 代表 Unix/Linux 系统中的换行符。Windows 文本文件的行尾通常是 `\r\n`（回车 + 换行）。此命令效果等同于使用 `ee /tmp/bsdinstall_etc/rc.conf` 编辑该文件并添加一行 `zfs_enable="YES"`。
+安装程序将自动继续后续流程。
+
 
 ### 完成
 
 至此，我们便手动创建了一套与自动安装程序基本相同的 ZFS 数据集结构（自动安装通常还会创建独立的 `/home/用户名` 数据集，此处未包含）。
 
+显示安装后系统的 ZFS 文件系统状态：
+
 ```sh
-root@ykla:/home/ykla # zfs list
+# zfs list
 NAME                 USED  AVAIL  REFER  MOUNTPOINT
 zroot                921M  91.6G    96K  none
 zroot/ROOT           919M  91.6G    96K  none

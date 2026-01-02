@@ -54,8 +54,8 @@
 编辑 `/boot/loader.conf`，加入以下内容即可：
 
 ```sh
-hw.usb.usbhid.enable="1"
-usbhid_load="YES"
+hw.usb.usbhid.enable="1"    # 启用 USB HID 设备支持
+usbhid_load="YES"           # 配置系统启动时自动加载 USB HID 驱动
 ```
 
 

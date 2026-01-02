@@ -75,13 +75,13 @@ ums_load="YES"
 
 ## 虚拟机工具
 
-安装：
+使用 pkg 安装虚拟机工具：
 
 ```sh
 # pkg install parallels-tools
 ```
 
-若提示找不到软件包，可通过 Ports 编译安装：
+若提示找不到软件包，可通过 Ports 编译安装虚拟机工具：
 
 ```sh
 # cd /usr/ports/emulators/parallels-tools/ 

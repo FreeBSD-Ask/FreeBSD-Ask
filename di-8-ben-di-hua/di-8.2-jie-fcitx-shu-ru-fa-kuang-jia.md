@@ -11,7 +11,7 @@ fcitx 是“小企鹅输入法”，其英文名称为“A flexible input method
 
 > **注意**
 >
-> 在 FreeBSD-CURRENT 中可能会出现许多不可预料的怪异 bug：fcitx5 诊断信息英文乱码，输入法显示出奇怪的汉字，fcitx5-qt5 环境不能正常加载……
+> 在 FreeBSD-CURRENT 中可能会出现许多不可预料的怪异 Bug：fcitx5 诊断信息英文乱码，输入法显示出奇怪的汉字，Qt 环境下无法正常加载输入法。
 
 ## 安装 Fcitx5
 

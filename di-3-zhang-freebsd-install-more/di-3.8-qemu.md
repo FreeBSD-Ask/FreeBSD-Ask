@@ -175,6 +175,8 @@ Goodbye!
 ssh ykla@localhost:8022
 ```
 
+即可使用端口 8022（由文件 `qemu.bat` 指定）通过 SSH 连接到本地主机的 ykla 用户。
+
 ## 故障排除与未竟事宜
 
 ### 无法显示图形界面

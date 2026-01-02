@@ -160,9 +160,9 @@ FreeBSD 基本系统几乎不包含任何与 BSD 协议不兼容的软件；
 以下命令可用于查询 Ubuntu 24.04 与 Debian 版本的关联信息：
 
 ```bash
-ykla@ykla-ubuntu:~$ cat /etc/debian_version
+ykla@ykla-ubuntu:~$ cat /etc/debian_version	# 查看当前 Debian 系统的版本号
 trixie/sid # trixie 即 Debian 13。在当前时间点，Debian 最新的稳定版本是 12 bookworm
-ykla@ykla-ubuntu:~$ cat /etc/lsb-release
+ykla@ykla-ubuntu:~$ cat /etc/lsb-release	# 查看当前 Linux 发行版的详细信息
 DISTRIB_ID=Ubuntu
 DISTRIB_RELEASE=24.04
 DISTRIB_CODENAME=noble
@@ -210,12 +210,12 @@ Debian 的名称及 Logo 在中文语境中偶有基于谐音的非正式调侃�
 此外，在部分版本（如 Debian 12.6）中，虽然会安装 sudo，但创建的第一个普通用户默认未被加入 `sudo` 组。这在实际使用中会带来不便，例如该普通用户无法直接通过 sudo 命令重启网络服务。用户需要切换到 tty 控制台登录 root 账户进行操作，这在一定程度上降低了图形界面（GUI）默认安装环境下的使用便利性。
 
 > ```sh
-> ykla@debian:~$ sudo su
+> ykla@debian:~$ sudo su	# 切换到 root 用户
 > [sudo]ykla 的密码：
 > ykla 不是 sudoers 文件。
-> ykla@debian:~$ id
+> ykla@debian:~$ id	# 显示当前用户的 UID、GID 及所属组信息
 > uid=1000(ykla) gid=1000(ykla) 组=1000(ykla),24(cdrom),25(floppy),29(audio),30(dip),44(video),46(plugdev),100(users),106(netdev),111(bluetooth),113(Lpadmin),116(scanner)
-> ykla@debian:~$ hostnamectl
+> ykla@debian:~$ hostnamectl	# 显示或设置系统主机名及相关信息
 > Static hostname: debian
 >       Icon name: computer-vm
 >         Chassis: vm

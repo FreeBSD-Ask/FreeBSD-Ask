@@ -1,20 +1,20 @@
 # 4.4 认识 Shell
 
-## 什么是 shell
+## 什么是 Shell
 
 ![](../.gitbook/assets/you-shell.png)
 
-我们的命令运行在 shell 中，并通过 shell 与系统进行交互。
+我们的命令运行在 Shell 中，并通过 Shell 与系统进行交互。
 
-FreeBSD 默认的 shell 是 sh（Bourne shell，原作者为 Stephen R. Bourne）。该实现已被重写，目前基本符合 [POSIX.1-2024](https://pubs.opengroup.org/onlinepubs/9799919799/utilities/V3_chap02.html) 中对 shell 的规范。
+FreeBSD 默认的 Shell 是 sh（Bourne shell，原作者为 Stephen R. Bourne）。该实现已被重写，目前基本符合 [POSIX.1-2024](https://pubs.opengroup.org/onlinepubs/9799919799/utilities/V3_chap02.html) 中对 Shell 的规范。
 
-Linux 中常见的 shell 一般是 bash（Bourne Again Shell，即“又一个 Bourne shell”）。而 macOS 中的默认 shell 通常是 zsh（Z shell）。
+Linux 中常见的 Shell 一般是 bash（Bourne Again Shell，即“又一个 Bourne shell”）。而 macOS 中的默认 Shell 通常是 zsh（Z Shell）。
 
 >**注意**
 >
->Linux 中也存在 sh，但通常被软链接到 bash 或其他 shell，它们并不是真正的 sh。
+>Linux 中也存在 sh，但通常被软链接到 bash 或其他 Shell，它们并不是真正的 sh。
 >
->- Ubuntu 24.04 LTS 的默认 shell：
+>- Ubuntu 24.04 LTS 的默认 Shell：
 >
 >```bash
 >$ ls -l /bin/sh  # 以长格式查看 /bin/sh 这个文件的详细信息
