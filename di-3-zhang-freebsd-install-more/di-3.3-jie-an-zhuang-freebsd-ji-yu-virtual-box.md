@@ -174,8 +174,8 @@ You may ignore the yellow alert that encourages use of VMSVGA.
 - 启用服务并开机自启：
 
 ```sh
-# sysrc vboxguest_enable="YES"   # 启用 VirtualBox Guest Additions 驱动
-# sysrc vboxservice_enable="YES" # 启用 VirtualBox 服务
+# service vboxguest enable   # 启用 VirtualBox Guest Additions 驱动
+# service vboxservice enable # 启用 VirtualBox 服务
 ```
 
 - 启动服务，调整权限（以普通用户 ykla 为例）：
