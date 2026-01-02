@@ -135,7 +135,7 @@
 # rm -rf /usr/ports/*
 ```
 
-使用 gitup 同步并拉取最新的 FreeBSD Ports 树:
+使用 gitup 同步并拉取最新的 FreeBSD Ports 树：
 
 ```sh
 # gitup ports

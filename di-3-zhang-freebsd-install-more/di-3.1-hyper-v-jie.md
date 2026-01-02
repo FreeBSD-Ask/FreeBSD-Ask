@@ -25,7 +25,7 @@ Hyper-V 是微软为 Windows / Windows Server 开发的企业级虚拟化管理�
 | Hyper-V 代数 | FreeBSD 版本 |                                鼠标                                |  键盘  |                                              备注                                              |
 | :----------: | :----------: | :----------------------------------------------------------------: | :----: | :--------------------------------------------------------------------------------------------: |
 |    Gen 1     |     13.0     |                                支持                                | 不支持 |                                               /                                                |
-|    Gen 2     |     13.0     | RELEASE [不支持](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=221074) |  支持  |                          需修改参数 `sysctl kern.evdev.rcpt_mask=6`                           |
+|    Gen 2     |     13.0     | RELEASE [不支持](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=221074) |  支持  |                          需修改参数 `sysctl kern.evdev.rcpt_mask=6`（启用 evdev，让 Xorg 正确检测 PS/2 设备）                           |
 |    Gen 2     |     14.0     |                                支持                                |  支持  | 参见 [源代码](https://cgit.FreeBSD.org/src/commit/?id=21f4e817fde79d5de79bfbdf180d358ca5f48bf9) |
 
 ### 参考文献
@@ -43,7 +43,7 @@ Hyper-V 是微软为 Windows / Windows Server 开发的企业级虚拟化管理�
 
 ![Hyper-V](../.gitbook/assets/hp1.png)
 
-右键单击 Windows 徽标，在弹出的菜单中选择“终端（管理员）”，然后输入以下内容：
+右键单击 Windows 徽标，在弹出的菜单中选择“终端（管理员）”，然后输入以下内容启用 Microsoft Hyper-V 功能：
 
 ```powershell
 PS C:\Users\ykla> Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All 

@@ -71,7 +71,7 @@ LC_ALL=
 第一种设置只影响界面和提示信息，而对其他格式的输出无影响（参考 `LC_*` 系列变量概述），例如在 sh 下：
 
 ```sh
-$ locale
+$ locale	# 显示当前系统的本地化设置
 LANG=C.UTF-8
 LC_CTYPE="C.UTF-8"
 LC_COLLATE="C.UTF-8"
@@ -80,7 +80,7 @@ LC_NUMERIC="C.UTF-8"
 LC_MONETARY="C.UTF-8"
 LC_MESSAGES=zh_CN.UTF-8
 LC_ALL=
-$ date
+$ date	# 显示时间和日期
 Fri Apr 21 21:14:43 UTC 2023
 $ export LC_TIME=zh_CN.UTF-8
 $ date

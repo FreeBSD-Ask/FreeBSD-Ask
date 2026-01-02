@@ -44,7 +44,7 @@ PCODE
 
 DDR：Double Data Rate SDRAM，双倍数据速率同步动态随机存取内存，即 DDR 内存
 
-此功能用于决定由 BIOS 还是硬件控制 DDR 的省电模式与空闲计数器。当选择 “PCODE” 时，由硬件算法控制这些模式；当选择 “BIOS” 时，则由 BIOS 控制这些模式。默认设置为 “BIOS”。
+此功能用于决定由 BIOS 还是硬件控制 DDR 的省电模式与空闲计数器。当选择“PCODE”时，由硬件算法控制这些模式；当选择“BIOS”时，则由 BIOS 控制这些模式。默认设置为“BIOS”。
 
 ##### For LPDDR Only: DDR PowerDown and idle（仅适用于 LPDDR：DDR 省电与空闲控制）
 
@@ -84,7 +84,7 @@ Enabled HOT only（仅当热时开启）
 
 仅当热状态为“热”时，iMC 启用 2 倍刷新率模式
 
-默认设置为 “Disabled”（禁用）。
+默认设置为“Disabled”（禁用）。
 
 ##### SelfRefresh Enable（启用自刷新）
 

@@ -71,11 +71,13 @@ $ x11vnc -display :0 -rfbauth ~/.vnc/passwd -auth /var/lib/gdm/:0.Xauth # 或 /r
 
 ### 安装 TigerVNC Server
 
+使用 pkg 安装：
+
 ```sh
 # pkg install tigervnc-server
 ```
 
-或者：
+或者使用 ports 安装：
 
 ```sh
 # cd /usr/ports/net/tigervnc-server/ 
@@ -186,11 +188,13 @@ $ ps
 
 ### 安装 XRDP（基于 KDE6）
 
+使用 pkg 安装：
+
 ```sh
 # pkg install xorg kde xrdp wqy-fonts xdg-user-dirs pulseaudio-module-xrdp
 ```
 
-或者：
+或者使用 ports 安装：
 
 ```sh
 # cd /usr/ports/x11/xorg/ && make install clean
@@ -362,7 +366,7 @@ root     syslogd     1021 7   udp4   *:514                 *:*
 
 使用 pkg 安装：
 
-```
+```sh
 # pkg ins freerdp3
 ```
 
@@ -462,7 +466,7 @@ Password: # 输入密码，密码不会显示出来 ***。
 # pkg install rdesktop
 ```
 
-或者用 Ports：
+或者用 Ports 安装：
 
 ```sh
 # cd /usr/ports/net/rdesktop/
@@ -547,7 +551,7 @@ Do you trust this certificate (yes/no)? # 输入 yes，按回车键
 
 使用 AnyDesk 可进行远程访问，FreeBSD 上仅支持 x86 架构：
 
-由于版权原因（私有软件未经许可禁止分发），必须用户使用 Ports 自行编译：
+由于版权原因（私有软件未经许可禁止分发），必须由用户使用 Ports 自行构建安装：
 
 ```sh
 # cd /usr/ports/deskutils/anydesk/
@@ -634,20 +638,20 @@ $ anydesk
 
 换言之，你没法用 RustDesk 控制 FreeBSD。
 
-安装：
+- 使用 pkg 安装：
 
 ```sh
 # pkg install rustdesk-server
 ```
 
-或者：
+或者使用 ports 安装：
 
 ```sh
 # cd /usr/ports/net/rustdesk-server/ 
 # make install clean
 ```
 
-配置：
+配置 RustDesk 中继服务器：
 
 - 启动 hbbs：
 

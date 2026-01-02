@@ -129,7 +129,7 @@ $ echo "exec bspwm" >> ~/.xinitrc
 
 ## 通过 lightdm 启动 bspwm
 
-- 创建 `/usr/local/share/xsessions/bspwm.desktop`
+- 创建配置路径：
 
 ```sh
 # mkdir -p /usr/local/share/xsessions

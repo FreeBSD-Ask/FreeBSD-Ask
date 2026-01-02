@@ -174,16 +174,16 @@ You may ignore the yellow alert that encourages use of VMSVGA.
 - 启用服务并开机自启：
 
 ```sh
-# service vboxguest enable
-# service vboxservice enable
+# service vboxguest enable   # 启用 VirtualBox Guest Additions 驱动
+# service vboxservice enable # 启用 VirtualBox 服务
 ```
 
 - 启动服务，调整权限（以普通用户 ykla 为例）：
 
 ```sh
-# service vboxguest restart # 可能会提示找不到模块，但不影响使用
-# service vboxservice restart
-# pw groupmod wheel -m ykla # 将笔者的普通用户 ykla 加入 wheel 组以获得权限，你需要改成你自己的普通用户
+# service vboxguest restart  # 重启 vboxguest 服务，可能提示找不到模块，但不影响使用
+# service vboxservice restart # 重启 vboxservice 服务
+# pw groupmod wheel -m ykla  # 将普通用户 ykla 添加到 wheel 组以获得管理权限，请替换为你的用户
 ```
 
 ## 故障排除与未竟事宜
@@ -193,7 +193,7 @@ You may ignore the yellow alert that encourages use of VMSVGA.
 编辑 `/etc/sysctl.conf`，添加
 
 ```ini
-hw.efi.poweroff=0
+hw.efi.poweroff=0	# 禁用 EFI 电源关闭功能，使系统通过 ACPI 正常关机
 ```
 
 然后重启系统，再执行关机即可恢复正常，即使用 ACPI 而非 UEFI 接口进行关机操作。

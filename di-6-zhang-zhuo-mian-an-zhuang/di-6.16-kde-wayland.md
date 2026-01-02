@@ -28,7 +28,7 @@ seatd 是一个 seat 管理守护进程，用于在非 systemd 环境下管理 W
 # pkg ins seatd
 ```
 
-- 通过 Ports：
+- 或者通过 Ports 安装：
 
 ```sh
 # cd /usr/ports/sysutils/seatd/ 
@@ -47,6 +47,8 @@ seatd 是一个 seat 管理守护进程，用于在非 systemd 环境下管理 W
 ## 启动 KDE 6
 
 ### 方法 ① SDDM
+
+设置 SDDM 服务开机自启：
 
 ```sh
 # service sddm enable

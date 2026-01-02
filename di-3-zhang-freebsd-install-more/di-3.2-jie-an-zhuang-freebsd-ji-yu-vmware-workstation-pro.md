@@ -148,9 +148,9 @@
 请先安装显卡驱动和虚拟机增强工具。
 
 ```sh
-# service moused enable
-# Xorg -configure
-# mv /root/xorg.conf.new /usr/local/share/X11/xorg.conf.d/xorg.conf
+# service moused enable        # 启用 moused 服务并写入系统配置
+# Xorg -configure             # 生成 Xorg 默认配置文件
+# mv /root/xorg.conf.new /usr/local/share/X11/xorg.conf.d/xorg.conf  # 安装 Xorg 配置文件
 ```
 
 编辑 `/usr/local/share/X11/xorg.conf.d/xorg.conf` 文件，修改以下段落（其他部分保持不变）：
@@ -161,14 +161,14 @@ Section "ServerLayout"
         Screen          0  "Screen0" 0 0
         InputDevice    "Mouse0" "CorePointer"
         InputDevice    "Keyboard0" "CoreKeyboard"
-        Option          "AutoAddDevices" "Off"  # 添加此行到此处
+        Option          "AutoAddDevices" "Off"  # 添加此行到此处：禁止 Xorg 自动添加输入设备
 EndSection
 
 …………此处省略一部分…………
 
 Section "InputDevice"
       Identifier  "Mouse0"
-      Driver      "vmmouse"  # 修改 mouse 为 vmmouse
+      Driver      "vmmouse"  # 修改 mouse 为 vmmouse：使用 VMware 虚拟鼠标驱动
       Option      "Protocol" "auto"
       Option      "Device" "/dev/sysmouse"
       Option      "ZAxisMapping" "4 5 6 7"
@@ -189,7 +189,7 @@ EndSection
 >
 >此示例中虚拟机名称显示为“Windows 11”，这是因为该虚拟机被配置为 Windows 11 与 FreeBSD 双系统，属正常情况。
 
-在 FreeBSD 虚拟机中查看设置的文件夹：
+列出当前可用的 VMware 共享文件夹：
 
 ```sh
 # vmware-hgfsclient
@@ -198,11 +198,13 @@ EndSection
 
 #### 加载 fuse 模块
 
-加载 FUSE 内核模块。将以下内容添加到 `/boot/loader.conf` 文件中：
+将以下内容添加到 `/boot/loader.conf` 文件中：
 
 ```sh
 fusefs_load="YES"
 ```
+
+可在系统启动时加载 fusefs 内核模块。
 
 #### 挂载
 
@@ -211,6 +213,8 @@ fusefs_load="YES"
 >**注意**
 >
 >请将以下命令中的 `123pan` 替换为你在 VMware 中设置的共享文件夹名称。
+
+将 VMware 共享目录 `123pan` 挂载到 `/mnt/hgfs`：
 
 ```sh
 # vmhgfs-fuse .host:/123pan /mnt/hgfs
@@ -224,13 +228,17 @@ fusefs_load="YES"
 .host:/123pan      /mnt/hgfs    fusefs  rw,mountprog=/usr/local/bin/vmhgfs-fuse,allow_other,failok 0 0
 ```
 
-添加后，请务必执行以下命令检查配置是否正确（若无错误输出则正常），错误的配置可能导致系统无法正常启动：
+即可自动挂载 VMware 共享目录 123pan。
+
+挂载 fstab 中所有未挂载的文件系统，检查有无错误（若无错误输出则正常），错误的配置可能导致系统无法正常启动：
 
 ```sh
 # mount -al
 ```
 
 #### 查看共享文件夹
+
+列出已挂载的 VMware 共享文件夹内容：
 
 ```sh
 # ls /mnt/hgfs/

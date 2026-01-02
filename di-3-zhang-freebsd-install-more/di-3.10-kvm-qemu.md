@@ -42,7 +42,7 @@ mfsBSD 是一款完全载入内存的 FreeBSD 系统，类似于 Windows 的 PE 
 
 ### 内存 <= 512 MB
 
-下载 mfsBSD Mini：
+下载 mfsBSD Mini 14.1 RELEASE ISO 镜像：
 
 ```sh
 # wget https://mfsbsd.vx.sk/files/iso/14/amd64/mfsbsd-mini-14.1-RELEASE-amd64.iso
@@ -60,7 +60,7 @@ mfsBSD 是一款完全载入内存的 FreeBSD 系统，类似于 Windows 的 PE 
 
 ### 内存 > 512 MB
 
-下载 mfsBSD 完整版：
+下载 mfsBSD 14.2 RELEASE AMD64 ISO 镜像：
 
 ```sh
 # wget https://mfsbsd.vx.sk/files/iso/14/amd64/mfsbsd-14.2-RELEASE-amd64.iso
@@ -96,7 +96,7 @@ mfsBSD 是一款完全载入内存的 FreeBSD 系统，类似于 Windows 的 PE 
 
 ### 提取 memdisk
 
-从已安装的 syslinux 包中提取 memdisk 文件到 `/boot`
+从已安装的 syslinux 包中提取 memdisk 文件到 `/boot`：
 
 ```sh
 # cp /usr/lib/syslinux/memdisk /boot/
@@ -104,9 +104,9 @@ mfsBSD 是一款完全载入内存的 FreeBSD 系统，类似于 Windows 的 PE 
 
 ## 取消隐藏的 GRUB 菜单
 
-目前大多数发行版的 GRUB 菜单默认处于隐藏状态，需要在开机时按 **Esc** 才能进入，但有时会直接进入 BIOS，因此直接取消隐藏会更为方便。
+取消 GRUB2 菜单自动隐藏设置：
 
-```sh
+```bash
 # grub2-editenv - unset menu_auto_hide
 ```
 

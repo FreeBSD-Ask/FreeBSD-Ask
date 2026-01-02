@@ -27,7 +27,7 @@
 ![](../.gitbook/assets/shuang4.png)
 
 
-查看磁盘分区：
+列出系统磁盘分区情况：
 
 ```sh
 # gpart show
@@ -47,7 +47,7 @@
   
 ```
 
-查看交换分区：
+显示交换分区和交换文件的使用情况（单位为 MB/GB）：
 
 ```sh
 # swapinfo -mh
@@ -97,7 +97,7 @@ Device              Size     Used    Avail Capacity
 
 ![](../.gitbook/assets/shaung11.png)
 
-回到 FreeBSD，查看磁盘：
+回到 FreeBSD，查看磁盘分区情况：
 
 ```sh
 # gpart show
@@ -116,7 +116,7 @@ Device              Size     Used    Avail Capacity
 
 ```
 
-可以看到，`nda0p5`（分区 5）即是我们新建的交换分区。测试一下：
+可以看到，`nda0p5`（分区 5）即是我们新建的交换分区。测试一下，立刻启用指定交换分区 `/dev/nda0p5`：
 
 ```sh
 # swapon /dev/nda0p5
@@ -124,7 +124,7 @@ Device              Size     Used    Avail Capacity
 
 没有报错，也没有任何提示，说明正常。
 
-编辑 `/etc/fstab`，在 swap 一行最前面去掉 `#`，并将分区改为正确的值，在本例中如下第三行：
+编辑 `/etc/fstab`，在 swap 一行最前面删去注释符号 `#`，并将分区改为正确的值，在本例中如下第三行：
 
 ```sh
 # Device                Mountpoint      FStype  Options         Dump    Pass#
@@ -132,7 +132,7 @@ Device              Size     Used    Avail Capacity
 /dev/nda0p5             none    swap    sw              0       0
 ```
 
-重启测试一下：
+重启再查看一下既有的交换分区情况：
 
 ```sh
 # swapinfo -mh
@@ -140,7 +140,7 @@ Device              Size     Used    Avail Capacity
 /dev/nda0p5         8.0G       0B     8.0G     0%
 ```
 
-查看 ZFS 卷：
+列出系统中所有 ZFS 池及其状态：
 
 ```sh
 # zpool list

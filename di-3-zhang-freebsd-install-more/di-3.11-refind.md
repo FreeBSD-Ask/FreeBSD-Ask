@@ -82,7 +82,9 @@ rEFInd 支持多种图形化主题。
 include themes/Matrix-rEFInd/theme.conf
 ```
 
-重启：
+即可调用主题 Matrix-rEFInd。
+
+重启之后观察效果：
 
 ![](../.gitbook/assets/shuang18.jpg)
 

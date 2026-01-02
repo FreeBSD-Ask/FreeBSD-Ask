@@ -10,7 +10,7 @@
 
 根据反馈，在 VMware ESXi 等半虚拟化平台上安装或升级 FreeBSD 时可能遇到故障（例如阿里云的 VirtIO-BLK 驱动问题）。
 
-需在开机时按 **ESC** 键，输入 `set kern.maxphys=65536` 并按回车，再输入 `boot` 才能正常启动。安装完成后，在 `/boot/loader.conf` 中加入 `kern.maxphys=65536` 一行，即可避免每次开机重复此操作。
+需在开机时按 **ESC** 键，输入 `set kern.maxphys=65536`（设置内核最大物理 I/O 大小为 65536 字节，大块 I/O 有时会触发驱动或缓存问题）并按回车，再输入 `boot` 才能正常启动。安装完成后，在 `/boot/loader.conf` 中加入 `kern.maxphys=65536` 一行，即可避免每次开机重复此操作。
 
 阿里云升级后可能会因此类问题卡在引导界面，此时需通过 VNC 连接并执行上述操作。
 
@@ -45,9 +45,11 @@
 
 ## 取消隐藏的 GRUB 菜单
 
-目前大多数 Linux 发行版的 GRUB 菜单默认处于隐藏状态，需在开机时按 Esc 键唤出，但该操作有时会直接进入 BIOS 设置界面。因此，直接取消隐藏菜单更为方便。
+目前大多数 Linux 发行版的 GRUB 菜单默认处于隐藏状态，需在开机时按 Esc 键唤出，但该操作有时会直接进入 BIOS 设置界面。
 
-```sh
+因此，直接取消 GRUB2 菜单自动隐藏设置更为方便：
+
+```bash
 # grub2-editenv - unset menu_auto_hide
 ```
 
@@ -62,8 +64,8 @@
 首先，将从该 ISO 中提取出的内核和 initrd 文件放置于根目录。重启机器并进入 GRUB 命令行界面（可在引导倒计时时按 `e` 键进入编辑模式，删除原有 `linux` 和 `initrd` 行的内容并修改，完成后按 `Ctrl+X` 启动）。手动指定启动的内核与 initrd（可使用 `Tab` 键补全路径）。输入 `boot` 并按回车即可继续启动。或按 `c` 键进入 GRUB 命令行模式。
 
 ```sh
-linux (hd0,msdos1)/vmlinuz
-initrd (hd0,msdos1)/initramfs.igz
+linux (hd0,msdos1)/vmlinuz       # 指定内核文件路径
+initrd (hd0,msdos1)/initramfs.igz  # 指定初始 RAM 磁盘映像文件路径
 boot # 输入 boot 后回车即可继续启动
 ```
 
@@ -117,6 +119,8 @@ mfsBSD 和 mfsLinux 镜像的默认 `root` 密码均为 `mfsroot`。
 
 在正常的 Linux 系统中，若直接将 mfsBSD 的 img 镜像通过 `dd` 写入硬盘，重启后虽能正常加载引导程序，但可能因系统对硬盘的后续写入操作而导致无法正常挂载内存盘。
 
+下载 mfsBSD 镜像并写入 `/dev/vda`：
+
 ```sh
 # wget https://mfsbsd.vx.sk/files/images/13/amd64/mfsbsd-se-13.1-RELEASE-amd64.img -O- | dd of=/dev/vda
 ```
@@ -149,10 +153,10 @@ mfsBSD 和 mfsLinux 镜像的默认 `root` 密码均为 `mfsroot`。
 在 UEFI 模式下：
 
 ```sh
-set iso=(hd0,gpt2)/bsd.iso
-loopback loop $iso
-set root=(loop)
-chainloader /boot/loader.efi
+set iso=(hd0,gpt2)/bsd.iso          # 指定 ISO 文件路径
+loopback loop $iso                  # 将 ISO 文件挂载为 loop 设备
+set root=(loop)                     # 设置 GRUB 根目录为 loop 设备
+chainloader /boot/loader.efi        # 加载 EFI 启动加载程序
 boot # 输入 boot 后回车即可继续启动
 ```
 
@@ -184,11 +188,11 @@ boot # 输入 boot 后回车即可继续启动
 ```
 
 ```sh
-ls # 显示磁盘
-ls (hd0,gpt2)/ # 显示磁盘 (hd0,gpt2) 下的内容，MBR 分区表可能为 (hd0,msdosx)。不一定是 (hd0,gpt2)，以实际为准
-linux16 (hd0,gpt2)/memdisk iso
-initrd (hd0,gpt2)/bsd.iso
-boot # 输入 boot 后回车即可继续启动
+ls                                # 列出所有磁盘和分区
+ls (hd0,gpt2)/                     # 列出 (hd0,gpt2) 分区下的内容。MBR 分区表可能为 (hd0,msdosx)，具体以实际情况为准
+linux16 (hd0,gpt2)/memdisk iso     # 指定 memdisk 内核镜像
+initrd (hd0,gpt2)/bsd.iso          # 指定初始 RAM 磁盘映像
+boot                               # 输入 boot 后回车以启动系统
 ```
 
 上述方法可能适用于 BIOS 搭配 MBR 分区表，但在 GPT 分区表下测试失败。

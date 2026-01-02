@@ -196,7 +196,7 @@ Windows 平台建议优先使用 **Rufus**，Linux 平台可直接使用 `dd` �
 
 ### 上传数据
 
-命令行执行：
+执行以下命令可采集硬件信息并上传到 hw-probe 数据库：
 
 ```sh
 # hw-probe -all -upload
