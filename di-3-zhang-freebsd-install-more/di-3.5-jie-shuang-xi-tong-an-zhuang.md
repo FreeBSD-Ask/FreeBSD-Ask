@@ -325,7 +325,7 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 
 ```sh
 # printf 'zfs_enable="YES"\n' >> /tmp/bsdinstall_etc/rc.conf
-````
+```
 
 `\n` 代表 Unix/Linux 系统中的换行符。
 
