@@ -306,3 +306,68 @@ vtnet0: link state changed to UP
 # echo "kern.maxphys=65536" >> /boot/loader.conf
 ```
 
+-------------------------
+
+```sh
+[root@iZuf6796zmyoxqo7fzn665Z ~]# dd if=mfsbsd-14.2-RELEASE-amd64.iso of=/dev/vda bs=4M status=progress
+25+1 records in
+25+1 records out
+105928704 bytes (106 MB, 101 MiB) copied, 0.206646 s, 513 MB/s
+```
+
+```sh
+root@mfsbsd:~ # gpart show
+=>      34  62914493  vtbd0  GPT  (30G) [CORRUPT]
+        34      2014         - free -  (1.0M)
+      2048      2048      1  bios-boot  (1.0M)
+      4096    204800      2  efi  (100M)
+    208896  62705631      3  linux-data  (30G)
+
+=>      34  62914493  iso9660/MFSBSD  GPT  (30G) [CORRUPT]
+        34      2014                  - free -  (1.0M)
+      2048      2048               1  bios-boot  (1.0M)
+      4096    204800               2  efi  (100M)
+    208896  62705631               3  linux-data  (30G)
+
+=>      34  62914493  diskid/DISK-uf69bteajghre1t7oe0z  GPT  (30G) [CORRUPT]
+        34      2014                                    - free -  (1.0M)
+      2048      2048                                 1  bios-boot  (1.0M)
+      4096    204800                                 2  efi  (100M)
+    208896  62705631                                 3  linux-data  (30G)
+```
+
+
+```sh
+root@mfsbsd:~ # gpart recover vtbd0
+vtbd0 recovered
+root@mfsbsd:~ # gpart show
+=>      40  62914487  vtbd0  GPT  (30G)
+        40      2008         - free -  (1.0M)
+      2048      2048      1  bios-boot  (1.0M)
+      4096    204800      2  efi  (100M)
+    208896  62705631      3  linux-data  (30G)
+
+=>      40  62914487  iso9660/MFSBSD  GPT  (30G)
+        40      2008                  - free -  (1.0M)
+      2048      2048               1  bios-boot  (1.0M)
+      4096    204800               2  efi  (100M)
+    208896  62705631               3  linux-data  (30G)
+
+=>      40  62914487  diskid/DISK-uf69bteajghre1t7oe0z  GPT  (30G)
+        40      2008                                    - free -  (1.0M)
+      2048      2048                                 1  bios-boot  (1.0M)
+      4096    204800                                 2  efi  (100M)
+    208896  62705631                                 3  linux-data  (30G)
+```
+
+```sh
+ZFS storage pool version: features support (5000)
+pid 1151 (zpool) is attempting to use unsafe AIO requests - not logging anymore
+pid 1562 (distextract), jid 0, uid 0, was killed: failed to reclaim memory
+```
+
+```sh
+dd if=mfslinux-0.1.11-94b1466.iso of=/dev/vda bs=4M status=progress
+```
+
+
