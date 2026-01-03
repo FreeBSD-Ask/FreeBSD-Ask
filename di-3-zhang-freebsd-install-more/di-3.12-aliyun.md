@@ -120,7 +120,7 @@ default via 172.24.63.253 dev eth0 proto dhcp src 172.24.0.80 metric 100
 
 
 ```sh
-# wget https://mirrors.nju.edu.cn/github-release/ventoy/Ventoy/Ventoy%201.1.10%20release/ventoy-1.1.10-linux.tar.gz
+# wget http://mirrors.nju.edu.cn/github-release/ventoy/Ventoy/Ventoy%201.1.10%20release/ventoy-1.1.10-linux.tar.gz
 # tar xvf ventoy-1.1.10-linux.tar.gz
 [root@iZuf6796zmyoxqo7fzn665Z ~]# ls
 ventoy-1.1.10  ventoy-1.1.10-linux.tar.gz
@@ -373,3 +373,20 @@ pid 1562 (distextract), jid 0, uid 0, was killed: failed to reclaim memory
 ```
 wget -qO- https://mirrors.hit.edu.cn/ubuntu-releases/24.04.3/ubuntu-24.04.3-desktop-amd64.iso | dd of=/dev/vda bs=4M status=progress conv=fdatasync
 ```
+
+## 测试方案二
+
+```sh
+# dd if=TinyCorePure64-16.2.iso of=/dev/vda bs=4M status=progress conv=fdatasync
+```
+
+
+```sh
+$ sudo echo http://mirrors.163.com/tinycorelinux/ > /opt/tcemirror
+$ tce-load -wi exfat-utils parted dosfstools util-linux openssl ca-certificates
+```
+
+```sh
+# wget --user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64)" https://mirrors.nju.edu.cn/freebsd/releases/ISO-IMAGES/15.0/FreeBSD-15.0-RELEASE-amd64-bootonly.iso
+```
+
