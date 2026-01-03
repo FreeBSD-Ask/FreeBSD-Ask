@@ -367,7 +367,9 @@ pid 1562 (distextract), jid 0, uid 0, was killed: failed to reclaim memory
 ```
 
 ```sh
-dd if=mfslinux-0.1.11-94b1466.iso of=/dev/vda bs=4M status=progress
+[root@iZuf6796zmyoxqo7fzn665Z ~]# dd if=mfsbsd-mini-14.2-RELEASE-amd64.iso of=/dev/vda bs=4M status=progress
 ```
 
-
+```
+wget -qO- https://mirrors.hit.edu.cn/ubuntu-releases/24.04.3/ubuntu-24.04.3-desktop-amd64.iso | dd of=/dev/vda bs=4M status=progress conv=fdatasync
+```
