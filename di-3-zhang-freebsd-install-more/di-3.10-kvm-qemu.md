@@ -1,4 +1,4 @@
-# 3.10 KVM、QEMU 等平台安装 FreeBSD
+# 3.10 KVM、QEMU 等平台安装 FreeBSD（传统引导和 MBR 分区表）
 
 > **注意**
 >
