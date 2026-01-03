@@ -1,4 +1,4 @@
-# 阿里云
+# 3.12 阿里云轻量应用服务器安装 FreeBSD（UEFI 和 GPT 分区表）
 
 ```sh
 [root@iZuf6796zmyoxqo7fzn665Z ventoy-1.1.10]# [ -d /sys/firmware/efi ] && echo UEFI || echo BIOS
