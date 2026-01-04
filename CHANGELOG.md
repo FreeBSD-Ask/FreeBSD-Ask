@@ -6,6 +6,7 @@
   - 新增“3.12 阿里云轻量应用服务器安装 FreeBSD（UEFI 和 GPT 分区表）”
   - 审阅“26.1 OpenBSD 概述”
   - 审阅“27.1 NetBSD 概述”
+  - 将 book 代码块内等字体调整使用 IBM Plex Mono
 - 2026.1.2
   - “4.2 Linux 用户迁移指南”新增“何以成为 GNU/Linux 发行版”
   - 21、22：改正若干事实错误
