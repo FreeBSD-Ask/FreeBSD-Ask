@@ -66,7 +66,7 @@
 * [5.6 使用 DVD 安装软件](di-5-zhang-bao-guan-li-qi/di-5.6-jie-tong-guo-dvd-an-zhuang-ruan-jian.md)
 * [5.7 使用 freebsd-update 更新 FreeBSD](di-5-zhang-bao-guan-li-qi/di-5.7-jie-tong-guo-freebsdupdate-geng-xin.md)
 * [5.8 使用源代码更新 FreeBSD](di-5-zhang-bao-guan-li-qi/di-5.8-jie-tong-guo-yuan-dai-ma-geng-xin.md)
-* [5.9 使用 ZFS 启动环境更新 FreeBSD 并实现多版共存](di-5-zhang-bao-guan-li-qi/di-5.9-jie-shi-yong-pkgbase-geng-xin.md)
+* [5.9 使用 ZFS 启动环境更新 FreeBSD 并实现多版本共存](di-5-zhang-bao-guan-li-qi/di-5.9-jie-shi-yong-pkgbase-geng-xin.md)
 
 ## 第 6 章 桌面环境
 
