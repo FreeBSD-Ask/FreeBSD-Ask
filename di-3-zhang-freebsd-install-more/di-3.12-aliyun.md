@@ -133,7 +133,7 @@ Firmware Version: 0.0.0
        valid_lft forever preferred_lft forever
     inet6 ::1/128 scope host
        valid_lft forever preferred_lft forever
-2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group defaultqlen 1000
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
     link/ether 00:16:3e:45:bc:81 brd ff:ff:ff:ff:ff:ff
     altname enp0s5
     altname ens5
