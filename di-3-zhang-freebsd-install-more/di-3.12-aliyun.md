@@ -649,6 +649,8 @@ $ tce-load -wi exfat-utils parted dosfstools util-linux openssl ca-certificates
 >
 >该包管理器无法在 root 权限下运行。
 
+参照上述章节内容，将 Ventoy 安装到整块磁盘上。然后挂载 Ventoy 生成的磁盘到内存盘。
+
 使用指定用户代理从镜像站下载 FreeBSD 15.0 Bootonly ISO 镜像至 Ventoy：
 
 ```sh
