@@ -511,7 +511,15 @@ pid 1562 (distextract), jid 0, uid 0, was killed: failed to reclaim memory
 # kldload zfs
 ```
 
-无任何信息输出则加载成功，可以继续进行安装流程。
+无任何信息输出则加载成功。
+
+或者还可以用以下命令验证 zfs 模块的加载情况：
+
+```sh
+# kldstat | grep zfs
+```
+
+如果有相关输出，则可以继续进行 bsdinstall 的安装流程。
 
 这可能是一个长期存在但难以复现的 Bug，参见 [Bug 249157 - installer reports sysctl: unknown oid 'vfs.zfs.min_auto_ashift' when ZFS module not loaded](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=249157)。
 
