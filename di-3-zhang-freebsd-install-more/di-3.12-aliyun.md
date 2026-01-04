@@ -544,24 +544,24 @@ plugin                  Ventoy2Disk.sh  VentoyGUI.x86_64    WebUI
 
 ![](../.gitbook/assets/Ventoyins.png)
 
-参数说明：
+Ventoy2Disk.sh 参数说明：
 
 - `-I`：强制安装
 - `-g`：使用 GPT 分区表
 
-验证安装：
+通过命令来验证 Ventoy 安装情况：
 
 ![](../.gitbook/assets/Ventoyins2.png)
 
-读者可参见 [Linux系统安装 Ventoy —— 命令行界面](https://www.ventoy.net/cn/doc_start.html#doc_linux_cli)了解更多信息。
+读者可通过 [Linux 系统安装 Ventoy —— 命令行界面](https://www.ventoy.net/cn/doc_start.html#doc_linux_cli)了解更多信息。
 
-#### 使用 Ventoy Livecd 写入 Ventoy
+#### 使用 Ventoy LiveCD 写入 Ventoy
 
- Ventoy Livecd 下载地址为 [安装包](https://www.ventoy.net/cn/download.html)。
+Ventoy LiveCD 下载地址为 [安装包](https://www.ventoy.net/cn/download.html)。
 
- Ventoy Livecd 并非 Ventoy 本体，而是一种用于安装 Ventoy 的内存盘系统映像。参见 [Ventoy LiveCD 使用说明](https://www.ventoy.net/cn/doc_livecd.html)。
+Ventoy LiveCD 并非 Ventoy 本体，而是一种用于安装 Ventoy 的内存盘系统映像。参见 [Ventoy LiveCD 使用说明](https://www.ventoy.net/cn/doc_livecd.html)。
 
-在使用 dd 将镜像写入整块硬盘后，强制重启实例，Ventoy Livecd 可以正常启动。
+在使用 dd 将镜像写入整块硬盘后，强制重启实例，Ventoy LiveCD 可以正常启动。
 
 ![](../.gitbook/assets/Ventoy1.png)
 
