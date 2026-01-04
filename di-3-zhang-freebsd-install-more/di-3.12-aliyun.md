@@ -1,12 +1,42 @@
 # 3.12 阿里云轻量应用服务器安装 FreeBSD（UEFI 和 GPT 分区表）
 
+本文在实际操作中尝试了若干方法，但最终只有两种方法相对成功。为了便于有意探索的读者进行研究，未完成的方法将在“未竟事项”部分列出。
+
+## 服务器环境
+
+![Rocky Linux 9](../.gitbook/assets/fb-rock.png)
+
+首先将服务器重置为 Rocky Linux 9，该发行版在服务器市场占据主流地位，通常由大多数厂商提供。
+
+### 救援登录
+
+![Rocky Linux 9](../.gitbook/assets/fb-rock3.png)
+
+本文描述的大部分操作通过 VNC 连接（救援登录）进行。
+
+![Rocky Linux 9](../.gitbook/assets/fb-rock4.png)
+
+为方便使用，读者可将救援登录临时设置为默认登录方式。
+
+![Rocky Linux 9](../.gitbook/assets/fb-rock2.png)
+
+救援登录如上所示。可通过右上角的“复制命令”将较冗长的命令复制到系统内部。
+
+### 验证服务器是否处于 UEFI 环境
+
+本文针对 UEFI 启动环境和 GPT 分区表，因此必须首先确认服务器是否处于该环境。由于不同服务器环境存在差异，本节提供多种方法供读者参考。
+
+- 通过系统固件判断当前系统是以 UEFI 还是 BIOS 模式启动：
+
 ```sh
-[root@iZuf6796zmyoxqo7fzn665Z ventoy-1.1.10]# [ -d /sys/firmware/efi ] && echo UEFI || echo BIOS
+# [ -d /sys/firmware/efi ] && echo UEFI || echo BIOS
 UEFI
 ```
 
+- 通过 UEFI 启动项管理工具判断启动模式：
+
 ```sh
-[root@iZuf6796zmyoxqo7fzn665Z ventoy-1.1.10]# efibootmgr
+# efibootmgr
 BootCurrent: 0003
 Timeout: 0 seconds
 BootOrder: 0006,0000,0001,0002,0003,0004,0005
@@ -19,20 +49,26 @@ Boot0005* EFI Internal Shell
 Boot0006* rocky
 ```
 
+### 服务器的磁盘分区情况
+
+- 通过文件系统类型与磁盘使用情况（同时请读者注意 `/boot/efi`）判断：
+
 ```sh
-[root@iZuf6796zmyoxqo7fzn665Z ~]# df -Th
+# df -Th
 Filesystem     Type      Size  Used Avail Use% Mounted on
 devtmpfs       devtmpfs  4.0M     0  4.0M   0% /dev
 tmpfs          tmpfs     447M     0  447M   0% /dev/shm
 tmpfs          tmpfs     179M  2.8M  176M   2% /run
 efivarfs       efivarfs  256K  7.4K  244K   3% /sys/firmware/efi/efivars
 /dev/vda3      xfs        30G  3.4G   27G  12% /
-/dev/vda2      vfat      100M  7.1M   93M   8% /boot/efi
+/dev/vda2      vfat      100M  7.1M   93M   8% /boot/efi	# 标志着系统可能正在使用 UEFI 模式
 tmpfs          tmpfs      90M     0   90M   0% /run/user/0
 ```
 
+- 通过文件系统静态挂载配置判断：
+
 ```sh
-[root@iZuf6796zmyoxqo7fzn665Z ~]# cat /etc/fstab
+# cat /etc/fstab
 
 #
 # /etc/fstab
@@ -48,20 +84,28 @@ UUID=a1a902bf-090a-4942-b533-c016a4e1c142 /                       xfs     defaul
 UUID=638D-9E50          /boot/efi               vfat    defaults,uid=0,gid=0,umask=077,shortname=winnt 0 2
 ```
 
+- 查看块设备的 UUID 和文件系统类型：
+
 ```sh
-[root@iZuf6796zmyoxqo7fzn665Z ventoy-1.1.10]# blkid
+# blkid
 /dev/vda2: SEC_TYPE="msdos" UUID="638D-9E50" TYPE="vfat" PARTUUID="a4ab187d-a07f-4f62-ac3e-c4e35548fcba"
 /dev/vda3: LABEL="root" UUID="a1a902bf-090a-4942-b533-c016a4e1c142" TYPE="xfs" PARTUUID="4a488c1d-987b-4242-9b74-4b453717e917"
 /dev/vda1: PARTUUID="6ce991dd-7936-4b15-b0f9-10fd95a4393c"
 ```
 
+- 探测指定块设备的文件系统信息：
+
 ```sh
-[root@iZuf6796zmyoxqo7fzn665Z ventoy-1.1.10]# blkid -p /dev/vda1
+# blkid -p /dev/vda1
 /dev/vda1: PART_ENTRY_SCHEME="gpt" PART_ENTRY_UUID="6ce991dd-7936-4b15-b0f9-10fd95a4393c"PART_ENTRY_TYPE="21686148-6449-6e6f-744e-656564454649" PART_ENTRY_NUMBER="1" PART_ENTRY_OFFSET="2048" PART_ENTRY_SIZE="2048" PART_ENTRY_DISK="253:0"
 ```
 
+BIOS Boot 分区用于兼容传统 BIOS 启动。
+
+### 查看系统主机名及系统信息
+
 ```sh
-[root@iZuf6796zmyoxqo7fzn665Z ~]# hostnamectl
+# hostnamectl
  Static hostname: iZuf6796zmyoxqo7fzn665Z
        Icon name: computer-vm
          Chassis: vm 🖴
@@ -77,8 +121,12 @@ Operating System: Rocky Linux 9.5 (Blue Onyx)
 Firmware Version: 0.0.0
 ```
 
+### 查看网络信息
+
+- 显示所有网络接口及其 IP 地址信息：
+
 ```sh
-[root@iZuf6796zmyoxqo7fzn665Z ~]# ip a
+# ip a
 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
     link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
     inet 127.0.0.1/8 scope host lo
@@ -95,15 +143,18 @@ Firmware Version: 0.0.0
        valid_lft forever preferred_lft forever
 ```
 
+- 显示系统的路由表：
+
 ```sh
-[root@iZuf6796zmyoxqo7fzn665Z ~]# ip route show
+# ip route show
 default via 172.24.63.253 dev eth0 proto dhcp src 172.24.0.80 metric 100
 172.24.0.0/18 dev eth0 proto kernel scope link src 172.24.0.80 metric 100
 ```
 
+- 列出所有 PCI 总线及其设备信息：
 
 ```sh
-[root@iZuf6796zmyoxqo7fzn665Z ~]# lspci
+# lspci
 00:00.0 Host bridge: Intel Corporation 440FX - 82441FX PMC [Natoma] (rev 02)
 00:01.0 ISA bridge: Intel Corporation 82371SB PIIX3 ISA [Natoma/Triton II]
 00:01.1 IDE interface: Intel Corporation 82371SB PIIX3 IDE [Natoma/Triton II]
@@ -116,41 +167,53 @@ default via 172.24.63.253 dev eth0 proto dhcp src 172.24.0.80 metric 100
 00:06.0 Unclassified device [00ff]: Red Hat, Inc. Virtio memory balloon
 ```
 
+## 通过裸磁盘映像安装 FreeBSD
 
+>**警告**
+>
+>你将丢失所有数据，请做好备份工作再进行。经过测试，操作后，快照将可能无法正确回滚，但是自定义镜像可间接还原。
 
+下载并写入 FreeBSD ZFS 镜像到 `/dev/vda`：
 
-```sh
-# wget http://mirrors.nju.edu.cn/github-release/ventoy/Ventoy/Ventoy%201.1.10%20release/ventoy-1.1.10-linux.tar.gz
-# tar xvf ventoy-1.1.10-linux.tar.gz
-[root@iZuf6796zmyoxqo7fzn665Z ~]# ls
-ventoy-1.1.10  ventoy-1.1.10-linux.tar.gz
-[root@iZuf6796zmyoxqo7fzn665Z ~]# cd ventoy-1.1.10/
-[root@iZuf6796zmyoxqo7fzn665Z ventoy-1.1.10]# ls
-boot                    README          VentoyGUI.aarch64   VentoyPlugson.sh
-CreatePersistentImg.sh  tool            VentoyGUI.i386      VentoyVlnk.sh
-ExtendPersistentImg.sh  ventoy          VentoyGUI.mips64el  VentoyWeb.sh
-plugin                  Ventoy2Disk.sh  VentoyGUI.x86_64    WebUI
-```
-
-
-[Linux系统安装 Ventoy —— 命令行界面](https://www.ventoy.net/cn/doc_start.html#doc_linux_cli)
-
-
-```sh
-[root@iZuf6796zmyoxqo7fzn665Z ventoy-1.1.10]# umount /dev/vda2
-```
-
-```sh
-[root@iZuf6796zmyoxqo7fzn665Z ventoy-1.1.10]# mkfs.vfat -F 32 /dev/vda2
-mkfs.fat 4.2 (2021-01-31)
-[root@iZuf6796zmyoxqo7fzn665Z ventoy-1.1.10]# blkid /dev/vda2
-/dev/vda2: UUID="35FB-D455" TYPE="vfat" PARTUUID="a4ab187d-a07f-4f62-ac3e-c4e35548fcba"
-```
-
+![写入 FreeBSD ZFS 镜像到整块硬盘](../.gitbook/assets/fb-zfs-2.png)
 
 ```sh
 # wget -qO- https://mirrors.nju.edu.cn/freebsd/releases/VM-IMAGES/15.0-RELEASE/amd64/Latest/FreeBSD-15.0-RELEASE-amd64-zfs.raw.xz | xzcat | dd of=/dev/vda bs=4M status=progress
 ```
+
+参数说明：
+- `wget -qO- URL`：`-q` 静默模式，不显示下载过程；`-O-` 将下载内容输出到标准输出（stdout）
+- `xzcat`：解压 xz 格式文件，并将解压后的内容输出到标准输出
+- `dd of=/dev/vda`：将输入写入 `/dev/vda` 设备，注意不是某个分区，是对整块磁盘进行写入。
+- `bs=4M`：设置块大小为 4MB，提高写入效率
+- `status=progress`：显示 dd 的写入进度
+
+随后使用阿里云网页上的“更多操作”，再选择里面的“重启”，勾选“强制重启实例”这一选项，执行强制重启以进入 FreeBSD。
+
+![初次启动的 FreeBSD 系统](../.gitbook/assets/fb-zfs-1.png)
+
+
+根据读者反馈与实际测试，在 VMware ESXi 等半虚拟化平台上安装或升级 FreeBSD 时可能会遇到故障（例如阿里云的 VirtIO-BLK 存储设备驱动的问题）。
+
+![调整可调参数](../.gitbook/assets/fb-zfs-1-1.png)
+
+
+此时，需在 FreeBSD 系统启动时，在启动器菜单界面（上图所示界面），按下 **ESC** 键。进入命令提示符“OK”，随后输入 `set kern.maxphys=65536`（设置内核最大物理 I/O 大小为 65536 字节，大块 I/O 有时会触发驱动或缓存问题）进行确认，再输入 `boot` 方可正常启动。
+
+
+FreeBSD 系统完全启动后：在引导加载器配置文件中设置最大 I/O 缓冲区大小：
+
+```sh
+# echo "kern.maxphys=65536" >> /boot/loader.conf
+```
+
+如果不进行上述设置，系统开机仍可能卡在引导界面。
+
+正常执行安装流程，选择 ZFS 分区方式。
+
+![安装 FreeBSD 系统](../.gitbook/assets/fb-zfs-2.png)
+
+显示 FreeBSD 系统磁盘分区表及分区信息：
 
 ```sh
 root@freebsd:~ # gpart show
@@ -161,6 +224,9 @@ root@freebsd:~ # gpart show
    2164118  60750402      4  freebsd-zfs  (29G)
 ```
 
+观察发现，系统已自动扩展磁盘容量。
+
+再查看 FreeBSD 系统网络接口信息：
 
 ```sh
 root@freebsd:~ # ifconfig
@@ -180,6 +246,10 @@ lo0: flags=1008049<UP,LOOPBACK,RUNNING,MULTICAST,LOWER_UP> metric 0 mtu 16384
 	groups: lo
 	nd6 options=23<PERFORMNUD,ACCEPT_RTADV,AUTO_LINKLOCAL>
 ```
+
+可通过 ping 常用网站，确认网络连接正常。
+
+显示内核启动信息和内核日志：
 
 ```sh
 root@freebsd:~ # dmesg
@@ -301,19 +371,36 @@ lo0: link state changed to UP
 vtnet0: link state changed to UP
 ```
 
+## 通过 mfsBSD 间接安装 FreeBSD
+
+通过 WinSCP 将 mfsBSD ISO 镜像传入 Rocky Linux：
+
+![](../.gitbook/assets/fb-ufs-scp.png)
+
+将 mfsBSD ISO 镜像写入 `/dev/vda`（块大小 4MB，并显示进度）：
 
 ```sh
-# echo "kern.maxphys=65536" >> /boot/loader.conf
-```
-
--------------------------
-
-```sh
-[root@iZuf6796zmyoxqo7fzn665Z ~]# dd if=mfsbsd-14.2-RELEASE-amd64.iso of=/dev/vda bs=4M status=progress
+# dd if=mfsbsd-14.2-RELEASE-amd64.iso of=/dev/vda bs=4M status=progress
 25+1 records in
 25+1 records out
 105928704 bytes (106 MB, 101 MiB) copied, 0.206646 s, 513 MB/s
 ```
+
+强制重启实例，启动到 mfsBSD。在启动到启动项菜单界面时，参照上节配置 `kern.maxphys`，否则将无法正确识别硬盘。
+
+>**警告**
+>
+>不可使用精简系统 `mfsbsd-mini-14.2-RELEASE-amd64.iso` 进行代替，将无法调整可调参数 `kern.maxphys`，进而造成启动失败。
+>
+>![mfsbsd-mini 启动界面](../.gitbook/assets/mfsbsd-mini1.png)
+>
+> 手动指定可调参数后仍然失败。
+>
+>![mfsbsd-mini 启动界面](../.gitbook/assets/mfsbsd-mini2.png)
+
+完全启动后，输入登录到 root 账户，密码是 `mfsroot`。
+
+观察 mfsBSD 磁盘分区情况：
 
 ```sh
 root@mfsbsd:~ # gpart show
@@ -336,9 +423,10 @@ root@mfsbsd:~ # gpart show
     208896  62705631                                 3  linux-data  (30G)
 ```
 
+注意到，大部分分区都被标记为了 `[CORRUPT]`，这会影响系统的安装。因此必须先修复 GPT 分区表：
 
 ```sh
-root@mfsbsd:~ # gpart recover vtbd0
+root@mfsbsd:~ # gpart recover vtbd0	# 恢复 vtbd0 磁盘的分区表信息
 vtbd0 recovered
 root@mfsbsd:~ # gpart show
 =>      40  62914487  vtbd0  GPT  (30G)
@@ -360,33 +448,221 @@ root@mfsbsd:~ # gpart show
     208896  62705631                                 3  linux-data  (30G)
 ```
 
+### UFS 安装
+
+执行 `bsdinstall` 开始安装即可，流程可参见本章其他相关文章。
+
+![UFS 安装](../.gitbook/assets/fb-ufs-ins.png)
+
+安装后，使用 Juice SSH 连接 FreeBSD 机器：
+
+![UFS 安装](../.gitbook/assets/fb-ufs-ins2.png)
+
+### ZFS 安装
+
+本次实验的机器仅有 1G 内存，在 mfsBSD 占用约 100M 后，可用内存只有不到 800M。因此指定 ZFS 安装会报错“Distribution extract failed”（分发文件解压失败）：
+
+![Distribution extract failed](../.gitbook/assets/fb-ufs-1.png)
+
+让我们来看看实际发生了什么，退出到 Shell 界面，通过以下命令观察：
+
 ```sh
+# dmesg
+
+…………无关输出已经省略…………
+
 ZFS storage pool version: features support (5000)
 pid 1151 (zpool) is attempting to use unsafe AIO requests - not logging anymore
 pid 1562 (distextract), jid 0, uid 0, was killed: failed to reclaim memory
 ```
 
+“failed to reclaim memory”表示内存回收失败。解压进程 1562 被强制终止，显然是内存不足导致的。
+
+待进一步测试，感兴趣的读者也可以在测试后提交 PR。
+
+## 故障排除与未竟事项
+
+
+### 文件系统不支持在线压缩
+
+EXT2、EXT3、EXT4、Btrfs 和 XFS 文件系统均不支持在线压缩。目前对此尚无解决方案。
+
+### 找不到 UEFI 启动项，启动后直接进入 UEFI Shell
+
+![找不到 UEFI 启动项](../.gitbook/assets/nouefi.png)
+
+
+确认所选镜像确实支持 UEFI 启动，例如 mfslinux 和 TinyCore-current.iso 不支持 UEFI 启动。
+
+### 找不到根分区
+
+应将镜像写入整个磁盘（例如 `/dev/vda`），而非单个分区（例如 `/dev/vda2`），否则可能出现如下错误：
+
+
+![未写入整块磁盘，写入了 EFI 分区](../.gitbook/assets/novda2.png)
+
+即使手动指定根分区，仍可能出现如下错误：
+
+![未写入整块磁盘，写入了 EFI 分区](../.gitbook/assets/novda.png)
+
+### 通过 Ventoy 安装 FreeBSD
+
+基本思路是通过内存盘系统将 Ventoy 写入整个硬盘，然后将 Ventoy 创建的容量较大的磁盘分区挂载到内存盘，再将 FreeBSD 系统写入该磁盘分区。随后强制重启实例，并从 Ventoy 启动进行系统安装。
+
+随后强制重启实例，启动到 Ventoy 进行系统安装。
+
+#### Ventoy 使用方法
+
+从南京大学镜像站下载 Ventoy 的 Linux 压缩包：
+
 ```sh
-[root@iZuf6796zmyoxqo7fzn665Z ~]# dd if=mfsbsd-mini-14.2-RELEASE-amd64.iso of=/dev/vda bs=4M status=progress conv=fdatasync
+# wget "http://mirrors.nju.edu.cn/github-release/ventoy/Ventoy/Ventoy%201.1.10%20release/ventoy-1.1.10-linux.tar.gz"
 ```
 
-```
-wget -qO- https://mirrors.hit.edu.cn/ubuntu-releases/24.04.3/ubuntu-24.04.3-desktop-amd64.iso | dd of=/dev/vda bs=4M status=progress conv=fdatasync
+在当前目录解压 Ventoy 的文件和目录：
+
+```sh
+# tar xvf ventoy-1.1.10-linux.tar.gz
+# ls	# 列出所有文件
+ventoy-1.1.10  ventoy-1.1.10-linux.tar.gz
 ```
 
-## 测试方案二
+安装 Ventoy 到硬盘：
+
+```sh
+# cd ventoy-1.1.10/	# 进入 Ventoy 目录
+# ls	# 列出 Ventoy 的文件和目录
+boot                    README          VentoyGUI.aarch64   VentoyPlugson.sh
+CreatePersistentImg.sh  tool            VentoyGUI.i386      VentoyVlnk.sh
+ExtendPersistentImg.sh  ventoy          VentoyGUI.mips64el  VentoyWeb.sh
+plugin                  Ventoy2Disk.sh  VentoyGUI.x86_64    WebUI
+# sh Ventoy2Disk.sh -I -g /dev/vda	# 执行安装
+```
+
+![](../.gitbook/assets/Ventoyins.png)
+
+参数说明：
+
+- `-I`：强制安装
+- `-g`：使用 GPT 分区表
+
+验证安装：
+
+![](../.gitbook/assets/Ventoyins2.png)
+
+读者可参见 [Linux系统安装 Ventoy —— 命令行界面](https://www.ventoy.net/cn/doc_start.html#doc_linux_cli)了解更多信息。
+
+#### 使用 Ventoy Livecd 写入 Ventoy
+
+
+`ventoy-1.1.10-livecd.iso` 并非 Ventoy 本体，而是一种用于安装 Ventoy 的内存盘系统映像。
+
+在使用 dd 将镜像写入整块硬盘后，强制重启实例，Ventoy Livecd 可以正常启动。
+
+![](../.gitbook/assets/Ventoy1.png)
+
+在配置选项中允许所有类型的磁盘。
+
+![](../.gitbook/assets/Ventoy2.png)
+
+将 Ventoy 安装到整块磁盘中。
+
+![](../.gitbook/assets/Ventoy3.png)
+
+强制重启实例后，系统可以正确启动到 Ventoy。
+
+![](../.gitbook/assets/Ventoy4.png)
+
+Ventoy 目前不支持在线下载 ISO 镜像文件。
+
+于是我们陷入了一种困境。
+
+因此，需要使用其他内存盘在启动 Ventoy 之前，将镜像写入硬盘。
+
+#### 使用 TinyCorePure64 写入 Ventoy
 
 ```sh
 # dd if=TinyCorePure64-16.2.iso of=/dev/vda bs=4M status=progress conv=fdatasync
 ```
 
+强制重启实例以启动到 TinyCorePure64。
+
+![启动到 TinyCorePure64](../.gitbook/assets/TinyCorePure1.png)
+
+
+选择最后一项“corew”，因为默认图形界面（tc）在通过 VNC 执行命令时可能出现异常。同时，其 GUI 下无法运行 Ventoy GUI，这是由于 libc 格式不兼容所致。
+
+观察分区情况：
+
+![](../.gitbook/assets/TinyCorePuredisk.png)
+
+详细看看：
+
+![](../.gitbook/assets/TinyCorePuredisk2.png)
+
+由于 TinyCorePure64 是精简发行版，缺少许多 Ventoy 所需工具，因此需要手动安装。
+
+配置 Tiny Core Linux 镜像源地址，指定使用网易开源镜像站作为下载源：
 
 ```sh
-$ sudo echo http://mirrors.163.com/tinycorelinux/ > /opt/tcemirror
+# echo http://mirrors.163.com/tinycorelinux/ > /opt/tcemirror
+```
+
+
+安装 exFAT 工具、分区工具、FAT 文件系统工具、Linux 工具集及证书组件：
+
+```sh
 $ tce-load -wi exfat-utils parted dosfstools util-linux openssl ca-certificates
 ```
+
+>**技巧**
+>
+>该包管理器无法在 root 权限下运行。
+
+使用指定用户代理从镜像站下载 FreeBSD 15.0 Bootonly ISO 镜像至 Ventoy：
 
 ```sh
 # wget --user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64)" https://mirrors.nju.edu.cn/freebsd/releases/ISO-IMAGES/15.0/FreeBSD-15.0-RELEASE-amd64-bootonly.iso
 ```
 
+强制重启实例到 Ventoy。
+
+![](../.gitbook/assets/Ventoy5.png)
+
+在引导菜单中设置可调参数 `kern.maxphys` 后，继续启动 FreeBSD 系统。
+
+
+列出磁盘分区情况：
+
+![](../.gitbook/assets/Ventoy6.png)
+
+磁盘处于只读状态，无法进行任何操作，包括删除分区表、格式化或使用 dd 写零。
+
+均报错如下：
+
+![](../.gitbook/assets/Ventoy8.png)
+
+因此无法执行任何安装操作。
+
+## 附录：可能会用到的实用命令
+
+卸载 EFI 分区示例：
+
+```sh
+# umount /dev/vda2
+```
+
+将 EFI 分区重新格式化为 FAT32 文件系统：
+
+```sh
+# mkfs.vfat -F 32 /dev/vda2
+mkfs.fat 4.2 (2021-01-31)
+```
+
+查看 `/dev/vda2` 分区的文件系统类型：
+
+
+```
+# blkid /dev/vda2
+/dev/vda2: UUID="35FB-D455" TYPE="vfat" PARTUUID="a4ab187d-a07f-4f62-ac3e-c4e35548fcba"
+```
