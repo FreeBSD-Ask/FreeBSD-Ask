@@ -499,6 +499,20 @@ pid 1562 (distextract), jid 0, uid 0, was killed: failed to reclaim memory
 
 ## 故障排除与未竟事项
 
+### 安装过程中报错 `sysctl: unknown oid 'vfs.zfs.min_auto_ashift'`
+
+通常是由于未预先手动加载 zfs 内核模块引发的。
+
+解决方法，退出到 Shell 界面，执行以下命令，手动加载 zfs 内核模块：
+
+```sh
+# kldload zfs
+```
+
+无任何信息输出则加载成功，可以继续进行安装流程。
+
+这可能是一个长期存在但难以复现的 Bug，参见 [Bug 249157 - installer reports sysctl: unknown oid 'vfs.zfs.min_auto_ashift' when ZFS module not loaded](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=249157)。
+
 
 ### 文件系统不支持在线压缩
 
