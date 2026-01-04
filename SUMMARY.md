@@ -37,9 +37,10 @@
 * [3.6 基于 Apple M1 和 Parallels Desktop 20 安装 FreeBSD](di-3-zhang-freebsd-install-more/di-3.6-jie-apple.md)
 * [3.7 基于 Apple M1 和 VMware Fusion Pro 安装 FreeBSD](di-3-zhang-freebsd-install-more/di-3.7-jie-apple.md)
 * [3.8 使用 QEMU 安装 RISC-V 架构的 FreeBSD（基于 x86 Windows）](di-3-zhang-freebsd-install-more/di-3.8-qemu.md)
-* [3.9 云服务器安装 FreeBSD（基于腾讯云轻量云、阿里云轻量应用服务器）](di-3-zhang-freebsd-install-more/di-3.9-jie-teng-xun-yun-qing-liang-yun-ji-qi-ta-fu-wu-qi-dd-an-zhuang-freebsd.md)
-* [3.10 云服务器安装 FreeBSD（基于 KVM、QEMU 等平台）](di-3-zhang-freebsd-install-more/di-3.10-kvm-qemu.md)
+* [3.9 腾讯云轻量云安装 FreeBSD（传统引导和 MBR 分区表）](di-3-zhang-freebsd-install-more/di-3.9-jie-teng-xun-yun-qing-liang-yun-ji-qi-ta-fu-wu-qi-dd-an-zhuang-freebsd.md)
+* [3.10 KVM、QEMU 等平台安装 FreeBSD（传统引导和 MBR 分区表）](di-3-zhang-freebsd-install-more/di-3.10-kvm-qemu.md)
 * [3.11 配置 rEFInd 引导管理器（用于多系统引导）](di-3-zhang-freebsd-install-more/di-3.11-refind.md)
+* [3.12 阿里云轻量应用服务器安装 FreeBSD（UEFI 和 GPT 分区表）](di-3-zhang-freebsd-install-more/di-3.12-aliyun.md)
 
 ## 第 4 章 FreeBSD 基础
 
