@@ -151,17 +151,18 @@ EPUB 格式文档在手机上可使用 [微信读书](https://play.google.com/st
 
 与上周相比：+2.09 万字（+2.60%）
 
+
 与上月相比：数据暂缺
 
 <!-- CHINESE_CHAR_COUNT_END -->
 
 
 <!-- commit-progress-start -->
-**第 3 版编纂进度:**   （草稿提交数: 1370）
+**第 3 版编纂进度:**   （草稿提交数: 1375）
 
 ![进度徽章](.gitbook/assets/progress.svg)
 
-距离第 3 版还需提交: 2163 次
+距离第 3 版还需提交: 2158 次
 <!-- commit-progress-end -->
 
 ---
