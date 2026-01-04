@@ -211,7 +211,7 @@ FreeBSD 系统完全启动后：在引导加载器配置文件中设置最大 I/
 
 正常执行安装流程，选择 ZFS 分区方式。
 
-![安装 FreeBSD 系统](../.gitbook/assets/fb-zfs-2.png)
+![安装 FreeBSD 系统](../.gitbook/assets/fb-zfs-1-2.png)
 
 显示 FreeBSD 系统磁盘分区表及分区信息：
 
@@ -640,7 +640,7 @@ $ tce-load -wi exfat-utils parted dosfstools util-linux openssl ca-certificates
 
 均报错如下：
 
-![](../.gitbook/assets/Ventoy8.png)
+![](../.gitbook/assets/Ventoy7.png)
 
 因此无法执行任何安装操作。
 
