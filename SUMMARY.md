@@ -289,14 +289,14 @@
 * [27.3 NetBSD 换源和包管理器](di-27-zhang-netbsd/di-27.3-jie-huan-yuan-yu-bao-guan-li-qi.md)
 * [27.4 桌面和中文环境常用软件](di-27-zhang-netbsd/di-27.4-jie-zhuo-mian-yu-qi-ta-ruan-jian.md)
 
-## 附录Ⅰ 计算机概论
+## 附录Ⅰ计算机概论
 
 * [计算机系统结构](fulu1/zong-xian.md)
 * [计算机网络](fulu1/wang-luo-ji-chu.md)
 * [操作系统](fulu1/cao-zuo-xi-tong.md)
 * [关系型数据库基础](fulu1/shu-jv-ku.md)
 
-## 附录 Ⅱ 工具与资源
+## 附录 II 工具与资源
 
 * [DragonFly BSD 导论](fu-lu2/di-DragonFlyBSD.md)
 * [TwinCAT/BSD 导论](fu-lu2/TwinCAT.md)
@@ -304,7 +304,7 @@
 * [FreeBSD 桌面发行版评述](fu-lu2/others-bsd.md)
 * [BSD 许可证概览](fu-lu2/xukez.md)
 
-## 附录Ⅲ UEFI 与 BIOS 基础（基于 AMI BIOS）
+## 附录 III UEFI 与 BIOS 基础（基于 AMI BIOS）
 
 * [UEFI/BIOS 概述与警告](fu-lu3/bios-gaishu.md)
 * [Main（主菜单）](fu-lu3/main.md)
@@ -314,7 +314,7 @@
 * [Boot（启动）](fu-lu3/Boot.md)
 * [Save & Exit（保存与退出）](fu-lu3/sava.md)
 
-## 附录 Ⅳ 文学故事
+## 附录 IV 文学故事
 
 * [我与 FreeBSD 的故事](fu-lu4/freebsd.md)
 * [两次告别](fu-lu4/exit.md)
@@ -324,7 +324,7 @@
 * [诗歌选](fu-lu4/shi-ge-xuan.md)
 * [手记](fu-lu4/za-ji.md)
   
-## 附录 Ⅴ 参考文献与术语表
+## 附录 V 参考文献与术语表
 
 * [参考书目](fu-lu5/cankaoshu.md)
 * [术语表](fu-lu5/shu-yu-biao.md)
