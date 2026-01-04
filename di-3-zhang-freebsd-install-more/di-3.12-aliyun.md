@@ -384,6 +384,12 @@ vtnet0: link state changed to UP
 
 ## 通过 mfsBSD 间接安装 FreeBSD
 
+mfsBSD 是一款精简的 FreeBSD 内存盘映像，支持 UEFI 和 ZFS 环境。可用于安装 FreeBSD，充当急救盘等。mfsBSD 的下载地址为：[mfsBSD and mfslinux](https://mfsbsd.vx.sk/)。
+
+>**警告**
+>
+>请勿选择任何带后缀的版本，如 `special edition` 或 `mini edition`。参见故障排除部分。
+
 通过 WinSCP 将 mfsBSD ISO 镜像传入 Rocky Linux：
 
 ![](../.gitbook/assets/fb-ufs-scp.png)
