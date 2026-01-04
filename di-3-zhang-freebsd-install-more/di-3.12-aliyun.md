@@ -175,8 +175,6 @@ default via 172.24.63.253 dev eth0 proto dhcp src 172.24.0.80 metric 100
 
 下载并写入 FreeBSD ZFS 镜像到 `/dev/vda`：
 
-![写入 FreeBSD ZFS 镜像到整块硬盘](../.gitbook/assets/fb-zfs-2.png)
-
 ```sh
 # wget -qO- https://mirrors.nju.edu.cn/freebsd/releases/VM-IMAGES/15.0-RELEASE/amd64/Latest/FreeBSD-15.0-RELEASE-amd64-zfs.raw.xz | xzcat | dd of=/dev/vda bs=4M status=progress
 ```
@@ -189,7 +187,19 @@ default via 172.24.63.253 dev eth0 proto dhcp src 172.24.0.80 metric 100
 - `bs=4M`：设置块大小为 4MB，提高写入效率
 - `status=progress`：显示 dd 的写入进度
 
-随后使用阿里云网页上的“更多操作”，再选择里面的“重启”，勾选“强制重启实例”这一选项，执行强制重启以进入 FreeBSD。
+![写入 FreeBSD ZFS 镜像到整块硬盘](../.gitbook/assets/fb-zfs-2.png)
+
+随后使用阿里云网页上的“更多操作”，再选择里面的“重启”
+
+![强制重启实例](../.gitbook/assets/reb-1.png)
+
+
+勾选“强制重启实例”这一选项。
+
+![重启实例](../.gitbook/assets/reb-2.png)
+
+
+执行强制重启以进入 FreeBSD。
 
 ![初次启动的 FreeBSD 系统](../.gitbook/assets/fb-zfs-1.png)
 
