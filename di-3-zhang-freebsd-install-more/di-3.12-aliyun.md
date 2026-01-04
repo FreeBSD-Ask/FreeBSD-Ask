@@ -80,7 +80,7 @@ tmpfs          tmpfs      90M     0   90M   0% /run/user/0
 # After editing this file, run 'systemctl daemon-reload' to update systemd
 # units generated from this file.
 #
-UUID=a1a902bf-090a-4942-b533-c016a4e1c142 /                       xfs     defaults0 0
+UUID=a1a902bf-090a-4942-b533-c016a4e1c142 /                       xfs     defaults 0 0
 UUID=638D-9E50          /boot/efi               vfat    defaults,uid=0,gid=0,umask=077,shortname=winnt 0 2
 ```
 
