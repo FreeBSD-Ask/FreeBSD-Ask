@@ -501,6 +501,8 @@ pid 1562 (distextract), jid 0, uid 0, was killed: failed to reclaim memory
 
 ### 安装过程中报错 `sysctl: unknown oid 'vfs.zfs.min_auto_ashift'`
 
+分析报错信息：从字面理解，这是一个设置 zfs 4k 对齐的可调参数，报错指出该参数是未知的。因此首先将问题定位到 zfs 模块。
+
 通常是由于未预先手动加载 zfs 内核模块引发的。
 
 解决方法，退出到 Shell 界面，执行以下命令，手动加载 zfs 内核模块：
