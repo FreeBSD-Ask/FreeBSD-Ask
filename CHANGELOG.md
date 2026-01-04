@@ -7,6 +7,7 @@
   - 审阅“26.1 OpenBSD 概述”
   - 审阅“27.1 NetBSD 概述”
   - 将 book 代码块内等字体调整使用 IBM Plex Mono
+  - 本项目新增镜像站 <https://doc.bsdcn.org>，境内访问速度较佳，注意域名是 `doc`，没有 `s`。
 - 2026.1.2
   - “4.2 Linux 用户迁移指南”新增“何以成为 GNU/Linux 发行版”
   - 21、22：改正若干事实错误
