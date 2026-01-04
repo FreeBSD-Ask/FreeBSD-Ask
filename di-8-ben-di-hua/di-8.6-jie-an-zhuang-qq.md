@@ -1,4 +1,4 @@
-# 8.6 QQ（Linux 版本）
+# 8.6 QQ（Linux 版）
 
 
 ## 基于 Rocky Linux（FreeBSD Port）

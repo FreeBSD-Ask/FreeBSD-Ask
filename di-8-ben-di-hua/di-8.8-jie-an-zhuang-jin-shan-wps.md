@@ -1,4 +1,4 @@
-# 8.8 WPS Office（Linux 版本）
+# 8.8 WPS Office（Linux 版）
 
 >**警告**
 >

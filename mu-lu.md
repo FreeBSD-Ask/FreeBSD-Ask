@@ -16,16 +16,16 @@
 
 * [1.1 操作系统的历程与开源往事](di-1-zhang-zou-jin-freebsd/di-1.1-unix.md)
 * [1.2 FreeBSD 导论](di-1-zhang-zou-jin-freebsd/di-1.2-dao-lun.md)
-* [1.3 乔治·贝克莱（George Berkeley）与 BSD 命名的文化渊源](di-1-zhang-zou-jin-freebsd/di-1.3-jie-freebsd-jian-shi.md)
-* [1.4 加州大学伯克利分校和“要有光”（Fiat Lux）](di-1-zhang-zou-jin-freebsd/di-1.4-Fiat-Lux.md)
+* [1.3 乔治·贝克莱（George Berkeley）与 BSD 的命名渊源](di-1-zhang-zou-jin-freebsd/di-1.3-jie-freebsd-jian-shi.md)
+* [1.4 加州大学伯克利分校与“要有光”（Fiat Lux）](di-1-zhang-zou-jin-freebsd/di-1.4-Fiat-Lux.md)
 
 ## 第 2 章 安装 FreeBSD
 
 * [2.1 安装前的准备工作](di-2-zhang-an-zhuang-freebsd/di-2.1-install-pre.md)
-* [2.2 FreeBSD 15 安装指南（基于 amd64 架构）](di-2-zhang-an-zhuang-freebsd/di-2.2-15ins.md)
-* [2.3 FreeBSD 13 和 14 安装指南（基于 amd64 架构）](di-2-zhang-an-zhuang-freebsd/di-2.3-14.0-ins.md)
+* [2.2 FreeBSD 15 安装指南（AMD64 架构）](di-2-zhang-an-zhuang-freebsd/di-2.2-15ins.md)
+* [2.3 FreeBSD 13 和 14 安装指南（AMD64 架构）](di-2-zhang-an-zhuang-freebsd/di-2.3-14.0-ins.md)
 * [2.4 故障排除](di-2-zhang-an-zhuang-freebsd/di-2.4-jie-eol.md)
-* [2.5 将 USB 启动盘恢复为普通存储设备（基于 Windows 系统）](di-2-zhang-an-zhuang-freebsd/di-2.5-jie-usb.md)
+* [2.5 在 Windows 中将 USB 启动盘恢复为普通存储设备](di-2-zhang-an-zhuang-freebsd/di-2.5-jie-usb.md)
 
 ## 第 3 章 FreeBSD 高级安装
 
@@ -36,7 +36,7 @@
 * [3.5 手动安装双系统（后安装 FreeBSD）](di-3-zhang-freebsd-install-more/di-3.5-jie-shuang-xi-tong-an-zhuang.md)
 * [3.6 基于 Apple M1 和 Parallels Desktop 20 安装 FreeBSD](di-3-zhang-freebsd-install-more/di-3.6-jie-apple.md)
 * [3.7 基于 Apple M1 和 VMware Fusion Pro 安装 FreeBSD](di-3-zhang-freebsd-install-more/di-3.7-jie-apple.md)
-* [3.8 使用 QEMU 安装 RISC-V 架构的 FreeBSD（基于 x86 Windows）](di-3-zhang-freebsd-install-more/di-3.8-qemu.md)
+* [3.8 使用 QEMU 在 x86 架构 Windows 主机上安装 RISC-V 架构的 FreeBSD](di-3-zhang-freebsd-install-more/di-3.8-qemu.md)
 * [3.9 腾讯云轻量云安装 FreeBSD（传统引导和 MBR 分区表）](di-3-zhang-freebsd-install-more/di-3.9-jie-teng-xun-yun-qing-liang-yun-ji-qi-ta-fu-wu-qi-dd-an-zhuang-freebsd.md)
 * [3.10 KVM、QEMU 等平台安装 FreeBSD（传统引导和 MBR 分区表）](di-3-zhang-freebsd-install-more/di-3.10-kvm-qemu.md)
 * [3.11 配置 rEFInd 引导管理器（用于多系统引导）](di-3-zhang-freebsd-install-more/di-3.11-refind.md)
@@ -60,7 +60,7 @@
 
 * [5.1 FreeBSD 镜像站现状](di-5-zhang-bao-guan-li-qi/di-5.1-jie-freebsd-jing-xiang-zhan-xian-zhuang.md)
 * [5.2 更换 FreeBSD 软件源](di-5-zhang-bao-guan-li-qi/di-5.2-jie-freebsd-huan-yuan-fang-shi.md)
-* [5.3 Gitup 的用法](di-5-zhang-bao-guan-li-qi/di-5.3-jie-gitup-de-yong-fa.md)
+* [5.3 gitup 的用法](di-5-zhang-bao-guan-li-qi/di-5.3-jie-gitup-de-yong-fa.md)
 * [5.4 使用 pkg 管理二进制包](di-5-zhang-bao-guan-li-qi/di-5.4-jie-ruan-jian-bao-guan-li-qi-pkg-de-yong-fa.md)
 * [5.5 使用 Ports 以源代码方式安装软件](di-5-zhang-bao-guan-li-qi/di-5.5-jie-tong-guo-yuan-dai-ma-ports-fang-shi-an-zhuang-ruan-jian.md)
 * [5.6 使用 DVD 安装软件](di-5-zhang-bao-guan-li-qi/di-5.6-jie-tong-guo-dvd-an-zhuang-ruan-jian.md)
@@ -74,7 +74,7 @@
 * [6.2 NVIDIA 显卡驱动](di-6-zhang-zhuo-mian-an-zhuang/di-6.2-NVIDIA.md)
 * [6.3 KDE 6（X11 会话）](di-6-zhang-zhuo-mian-an-zhuang/di-6.3-jie-an-zhuang-kde.md)
 * [6.4 GNOME](di-6-zhang-zhuo-mian-an-zhuang/di-6.4-jie-an-zhuang-gnome.md)
-* [6.5 Mate](di-6-zhang-zhuo-mian-an-zhuang/di-6.5-jie-an-zhuang-mate.md)
+* [6.5 MATE](di-6-zhang-zhuo-mian-an-zhuang/di-6.5-jie-an-zhuang-mate.md)
 * [6.6 Xfce](di-6-zhang-zhuo-mian-an-zhuang/di-6.6-jie-an-zhuang-xfce.md)
 * [6.7 Cinnamon](di-6-zhang-zhuo-mian-an-zhuang/di-6.7-jie-an-zhuang-cinnamon.md)
 * [6.8 Lumina](di-6-zhang-zhuo-mian-an-zhuang/di-6.8-jie-an-zhuang-lumina.md)
@@ -98,16 +98,16 @@
 
 ## 第 8 章 本地化与中文环境配置
 
-* [8.1 本地化环境变量](di-8-ben-di-hua/di-8.1-jie-shu-ru-fa-yu-huan-jing-bian-liang.md)
+* [8.1 本地化环境变量设置](di-8-ben-di-hua/di-8.1-jie-shu-ru-fa-yu-huan-jing-bian-liang.md)
 * [8.2 Fcitx 输入法框架](di-8-ben-di-hua/di-8.2-jie-fcitx-shu-ru-fa-kuang-jia.md)
 * [8.3 IBus 输入法框架](di-8-ben-di-hua/di-8.3-jie-ibus-shu-ru-fa-kuang-jia.md)
 * [8.4 五笔输入法](di-8-ben-di-hua/di-8.4-jie-wu-bi-shu-ru-fa.md)
 * [8.5 网络浏览器](di-8-ben-di-hua/di-8.5-jie-firefox-yu-chromium-an-zhuang.md)
-* [8.6 QQ（Linux 版本）](di-8-ben-di-hua/di-8.6-jie-an-zhuang-qq.md)
+* [8.6 QQ（Linux 版）](di-8-ben-di-hua/di-8.6-jie-an-zhuang-qq.md)
 * [8.7 更换字体](di-8-ben-di-hua/di-8.7-jie-geng-huan-zi-ti.md)
-* [8.8 WPS Office（Linux 版本）](di-8-ben-di-hua/di-8.8-jie-an-zhuang-jin-shan-wps.md)
+* [8.8 WPS Office（Linux 版）](di-8-ben-di-hua/di-8.8-jie-an-zhuang-jin-shan-wps.md)
 * [8.9 压缩和解压](di-8-ben-di-hua/di-8.9-jie-ya-suo-yu-jie-ya.md)
-* [8.10 微信（Linux 版本）](di-8-ben-di-hua/di-8.10-wechat.md)
+* [8.10 微信（Linux 版）](di-8-ben-di-hua/di-8.10-wechat.md)
 * [8.11 Wine](di-8-ben-di-hua/di-8.11-wine.md)
 
 ## 第 9 章 多媒体和外部设备
@@ -124,7 +124,7 @@
 
 * [10.1 HTTP 代理](di-10-zhang-vpn-yu-dai-li/di-10.1-jie-http-dai-li.md)
 * [10.2 配置 V2Ray](di-10-zhang-vpn-yu-dai-li/di-10.2-jie-v2ray.md)
-* [10.3 配置 Mihomo（Clash）](di-10-zhang-vpn-yu-dai-li/di-10.3-jie-clash.md)
+* [10.3 配置 Mihomo（原 Clash 内核）](di-10-zhang-vpn-yu-dai-li/di-10.3-jie-clash.md)
 * [10.4 配置 OpenVPN](di-10-zhang-vpn-yu-dai-li/di-10.4-jie-openvpn.md)
 
 ## 第 11 章 Jail
@@ -136,7 +136,7 @@
 
 ## 第 12 章 虚拟化和容器
 
-* [12.1 使用 BVCP 通过 Web 界面管理 bhyve](di-12-zhang-xu-ni-hua/di-12.1.md)
+* [12.1 使用 BVCP 通过 Web 界面管理 bhyve 虚拟机](di-12-zhang-xu-ni-hua/di-12.1.md)
 * [12.2 使用 bhyve 及 vm-bhyve 工具安装 Windows 11](di-12-zhang-xu-ni-hua/di-12.2-jie-shi-yong-bhyve-an-zhuang-windows.md)
 * [12.3 配置 Podman](di-12-zhang-xu-ni-hua/di-12.3-Podman.md)
 * [12.4 在 FreeBSD 上安装 VirtualBox](di-12-zhang-xu-ni-hua/di-12.4-VirtualBox.md)
@@ -147,20 +147,20 @@
 * [13.2 管理 FreeBSD 中的服务](di-13-zhang-freebsd-te-se/di-13.2-jie-bsd-init-guan-li-fu-wu.md)
 * [13.3 bsdconfig 系统配置工具](di-13-zhang-freebsd-te-se/di-13.3-jie-bsdinstall-yu-bsdconfig.md)
 * [13.4 SSH 配置和相关工具](di-13-zhang-freebsd-te-se/di-13.4-jie-chang-yong-ruan-jian-yu-ssh-pei-zhi.md)
-* [13.5 Live CD 与系统急救](di-13-zhang-freebsd-te-se/di-13.5-jie-hui-fu-mo-shi-yu-mi-ma-zhong-zhi.md)
+* [13.5 Live 镜像与系统急救](di-13-zhang-freebsd-te-se/di-13.5-jie-hui-fu-mo-shi-yu-mi-ma-zhong-zhi.md)
 * [13.6 引导管理器与 UEFI 固件](di-13-zhang-freebsd-te-se/di-13.6-jie-grub-ji-qi-ta-yin-dao.md)
 * [13.7 用户分级与资源配额（login.conf）](di-13-zhang-freebsd-te-se/di-13.7-jie-conf.md)
 
 ## 第 14 章 网络管理
 
 * [14.1 设置网络](di-14-zhang-wang-luo-guan-li/di-14.1-jie-wang-luo-can-shu-pei-zhi-ming-ling.md)
-* [14.2 无线网络（WiFi）](di-14-zhang-wang-luo-guan-li/di-14.2-jie-wifi.md)
+* [14.2 无线网络（Wi-Fi）](di-14-zhang-wang-luo-guan-li/di-14.2-jie-wifi.md)
 * [14.3 USB 网络共享（USB tethering）](di-14-zhang-wang-luo-guan-li/di-14.3-jie-usb-rndis-usb-wang-luo-gong-xiang.md)
 * [14.4 TCP/IP 协议栈配置与优化](di-14-zhang-wang-luo-guan-li/di-14.4-jie-tcp-bbr.md)
 
 ## 第 15 章 防火墙
 
-* [15.1 Fail2Ban（基于 IPFW、PF 和 IPF）](di-15-zhang-freebsd-fang-huo-qiang/di-15.1-fail2ban.md)
+* [15.1 Fail2Ban（基于 IPFW、PF 与 IPF）](di-15-zhang-freebsd-fang-huo-qiang/di-15.1-fail2ban.md)
 * [15.2 Packet Filter（PF）](di-15-zhang-freebsd-fang-huo-qiang/di-15.2-jie-pf.md)
 * [15.3 IPFilter（IPF）](di-15-zhang-freebsd-fang-huo-qiang/di-15.3-jie-ipfilter-ipf.md)
 * [15.4 ipfirewall（IPFW）](di-15-zhang-freebsd-fang-huo-qiang/di-15.4-jie-ipfw.md)
@@ -169,9 +169,9 @@
 
 * [16.1 FTP 服务器](di-16-zhang-fu-wu-qi/di-16.1-jie-ftp-fu-wu-qi.md)
 * [16.2 MinIO 对象存储服务](di-16-zhang-fu-wu-qi/di-16.2-jie-minio-dui-xiang-cun-chu-fu-wu.md)
-* [16.3 GitLab EE](di-16-zhang-fu-wu-qi/16.3-gitlab-ee.md)
+* [16.3 GitLab Enterprise Edition](di-16-zhang-fu-wu-qi/16.3-gitlab-ee.md)
 * [16.4 时间服务](di-16-zhang-fu-wu-qi/di-16.4-jie-shi-jian-fu-wu.md)
-* [16.5 WildFly](di-16-zhang-fu-wu-qi/di-16.5-jie-wildfly.md)
+* [16.5 WildFly 应用服务器](di-16-zhang-fu-wu-qi/di-16.5-jie-wildfly.md)
 * [16.6 Rsync 同步服务](di-16-zhang-fu-wu-qi/di-16.6-jie-rsync-tong-bu-fu-wu.md)
 * [16.7 Samba 服务器](di-16-zhang-fu-wu-qi/di-16.7-jie-samba-fu-wu-qi.md)
 * [16.8 NFS 服务器](di-16-zhang-fu-wu-qi/di-16.8-jie-nfs-fu-wu-qi.md)
@@ -182,9 +182,9 @@
 * [17.1 Apache](di-17-zhang-wang-luo-fu-wu-qi/di-17.1-jie-apache.md)
 * [17.2 Nginx](di-17-zhang-wang-luo-fu-wu-qi/di-17.2-jie-nginx.md)
 * [17.3 PHP 8.x](di-17-zhang-wang-luo-fu-wu-qi/di-17.3-jie-php-8.x.md)
-* [17.4 Zabbix 监控（基于 PostgreSQL）](di-17-zhang-wang-luo-fu-wu-qi/17.4-Zabbix.md)
+* [17.4 Zabbix 监控系统（基于 PostgreSQL）](di-17-zhang-wang-luo-fu-wu-qi/17.4-Zabbix.md)
 * [17.5 Nextcloud（基于 PostgreSQL）](di-17-zhang-wang-luo-fu-wu-qi/di-17.5-jie-NextCloud.md)
-* [17.6 Telegraf、InfluxDB 与 Grafana 监控平台](di-17-zhang-wang-luo-fu-wu-qi/di-17.6-jie-telegraf+influxdb+grafana-jian-kong-ping-tai.md)
+* [17.6 Telegraf、InfluxDB 与 Grafana 监控平台架构](di-17-zhang-wang-luo-fu-wu-qi/di-17.6-jie-telegraf+influxdb+grafana-jian-kong-ping-tai.md)
 * [17.7 OpenList](di-17-zhang-wang-luo-fu-wu-qi/di-17.7-alist.md)
 * [17.8 Prometheus 监控部署](di-17-zhang-wang-luo-fu-wu-qi/17.8.prometheus.md)
 * [17.9 Tomcat](di-17-zhang-wang-luo-fu-wu-qi/17.9-Tomcat.md)
@@ -193,7 +193,7 @@
 
 ## 第 18 章 FreeBSD 与嵌入式平台
 
-* [18.1 树莓派（Raspberry Pi）简介](di-18-zhang-shu-mei-pai-yu-riscv/di-18.1-jie-shu-mei-pai-de-jian-jie.md)
+* [18.1 树莓派简介（Raspberry Pi）](di-18-zhang-shu-mei-pai-yu-riscv/di-18.1-jie-shu-mei-pai-de-jian-jie.md)
 * [18.2 树莓派安装 FreeBSD](di-18-zhang-shu-mei-pai-yu-riscv/di-18.2-jie-xi-tong-an-zhuang.md)
 * [18.3 树莓派 FreeBSD 配置](di-18-zhang-shu-mei-pai-yu-riscv/di-18.3-jie-shi-yong-pei-zhi.md)
 * [18.4 在树莓派上使用 Linux 二进制兼容层](di-18-zhang-shu-mei-pai-yu-riscv/di-18.4-jie-shu-mei-pai-yu-linux-jian-rong-ceng.md)
@@ -203,8 +203,8 @@
 
 * [19.1 PostgreSQL](di-19-zhang-database/di-19.1-jie-postgresql.md)
 * [19.2 pgAdmin4](di-19-zhang-database/di-19.2-pgadmin4.md)
-* [19.3 MySQL 5.x](di-19-zhang-database/di-19.3-jie-mysql-5.x.md)
-* [19.4 MySQL 8.x](di-19-zhang-database/di-19.4-jie-mysql-8.x.md)
+* [19.3 MySQL 5.x 系列](di-19-zhang-database/di-19.3-jie-mysql-5.x.md)
+* [19.4 MySQL 8.x 系列](di-19-zhang-database/di-19.4-jie-mysql-8.x.md)
 * [19.5 MongoDB 8.0](di-19-zhang-database/di-19.5-mongodb.md)
 
 ## 第 20 章 游戏、科学计算和专业工具
@@ -239,7 +239,7 @@
 * [22.7 Python 和 VS Code](di-22-zhang-bian-cheng-yu-kai-fa/di-22.7-jie-python-yu-vscode.md)
 * [22.8 Rust/Go 环境的配置](di-22-zhang-bian-cheng-yu-kai-fa/di-22.8-jie-rustgo-huan-jing-de-pei-zhi.md)
 * [22.9 配置 Shell](di-22-zhang-bian-cheng-yu-kai-fa/di-22.9-jie-csh-yu-qi-ta-shell.md)
-* [22.10 使用 IDA 7 调试 FreeBSD](di-22-zhang-bian-cheng-yu-kai-fa/di-22.10-jie-tong-guo-ida-7-tiao-shi-freebsd.md)
+* [22.10 使用 IDA Pro 调试 FreeBSD](di-22-zhang-bian-cheng-yu-kai-fa/di-22.10-jie-tong-guo-ida-7-tiao-shi-freebsd.md)
 * [22.11 如何订阅 FreeBSD 的邮件列表](di-22-zhang-bian-cheng-yu-kai-fa/di-22.11-jie-ru-he-ding-yue-freebsd-de-you-jian-lie-biao.md)
 * [22.12 code-server 和 clangd](di-22-zhang-bian-cheng-yu-kai-fa/di-22.12-jie-an-zhuang-code-server-he-clangd.md)
 * [22.13 Node.js](di-22-zhang-bian-cheng-yu-kai-fa/di-22.13-jie-nodejs-xiang-guan.md)
@@ -289,14 +289,14 @@
 * [27.3 NetBSD 换源和包管理器](di-27-zhang-netbsd/di-27.3-jie-huan-yuan-yu-bao-guan-li-qi.md)
 * [27.4 桌面和中文环境常用软件](di-27-zhang-netbsd/di-27.4-jie-zhuo-mian-yu-qi-ta-ruan-jian.md)
 
-## 附录 Ⅰ 计算机概论
+## 附录Ⅰ计算机概论
 
 * [计算机系统结构](fulu1/zong-xian.md)
 * [计算机网络](fulu1/wang-luo-ji-chu.md)
 * [操作系统](fulu1/cao-zuo-xi-tong.md)
 * [关系型数据库基础](fulu1/shu-jv-ku.md)
 
-## 附录 Ⅱ 工具与资源
+## 附录 II 工具与资源
 
 * [DragonFly BSD 导论](fu-lu2/di-DragonFlyBSD.md)
 * [TwinCAT/BSD 导论](fu-lu2/TwinCAT.md)
@@ -304,7 +304,7 @@
 * [FreeBSD 桌面发行版评述](fu-lu2/others-bsd.md)
 * [BSD 许可证概览](fu-lu2/xukez.md)
 
-## 附录 Ⅲ UEFI/BIOS 基础（基于 AMI BIOS）
+## 附录 III UEFI 与 BIOS 基础（基于 AMI BIOS）
 
 * [UEFI/BIOS 概述与警告](fu-lu3/bios-gaishu.md)
 * [Main（主菜单）](fu-lu3/main.md)
@@ -314,7 +314,7 @@
 * [Boot（启动）](fu-lu3/Boot.md)
 * [Save & Exit（保存与退出）](fu-lu3/sava.md)
 
-## 附录 Ⅳ 文学故事
+## 附录 IV 文学故事
 
 * [我与 FreeBSD 的故事](fu-lu4/freebsd.md)
 * [两次告别](fu-lu4/exit.md)
@@ -324,7 +324,7 @@
 * [诗歌选](fu-lu4/shi-ge-xuan.md)
 * [手记](fu-lu4/za-ji.md)
   
-## 附录 Ⅴ 参考文献与术语表
+## 附录 V 参考文献与术语表
 
 * [参考书目](fu-lu5/cankaoshu.md)
 * [术语表](fu-lu5/shu-yu-biao.md)

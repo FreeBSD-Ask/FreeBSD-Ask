@@ -1,4 +1,4 @@
-# 6.5 Mate
+# 6.5 MATE
 
 MATE 是从 GNOME 2 复刻（fork）发展而来的桌面环境。
 

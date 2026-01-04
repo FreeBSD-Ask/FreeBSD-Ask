@@ -1,4 +1,4 @@
-# 3.8 使用 QEMU 安装 RISC-V 架构的 FreeBSD（基于 x86 Windows）
+# 3.8 使用 QEMU 在 x86 架构 Windows 主机上安装 RISC-V 架构的 FreeBSD
 
 QEMU 是一款通过纯软件进行模拟的开源虚拟机监视器，支持多种处理器体系结构的模拟。
 
