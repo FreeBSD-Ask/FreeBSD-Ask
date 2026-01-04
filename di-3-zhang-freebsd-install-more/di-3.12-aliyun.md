@@ -399,7 +399,7 @@ vtnet0: link state changed to UP
 >
 >![mfsbsd-mini 启动界面](../.gitbook/assets/mfsbsd-mini2.png)
 
-完全启动后，输入登录到 root 账户，密码是 `mfsroot`。
+完全启动后，输入密码登录到 root 账户，密码是 `mfsroot`。
 
 观察 mfsBSD 磁盘分区情况：
 
