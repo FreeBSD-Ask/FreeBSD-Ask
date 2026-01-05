@@ -97,7 +97,7 @@ UUID=638D-9E50          /boot/efi               vfat    defaults,uid=0,gid=0,uma
 
 ```sh
 # blkid -p /dev/vda1
-/dev/vda1: PART_ENTRY_SCHEME="gpt" PART_ENTRY_UUID="6ce991dd-7936-4b15-b0f9-10fd95a4393c"PART_ENTRY_TYPE="21686148-6449-6e6f-744e-656564454649" PART_ENTRY_NUMBER="1" PART_ENTRY_OFFSET="2048" PART_ENTRY_SIZE="2048" PART_ENTRY_DISK="253:0"
+/dev/vda1: PART_ENTRY_SCHEME="gpt" PART_ENTRY_UUID="6ce991dd-7936-4b15-b0f9-10fd95a4393c" PART_ENTRY_TYPE="21686148-6449-6e6f-744e-656564454649" PART_ENTRY_NUMBER="1" PART_ENTRY_OFFSET="2048" PART_ENTRY_SIZE="2048" PART_ENTRY_DISK="253:0"
 ```
 
 BIOS Boot 分区用于兼容传统 BIOS 启动。
@@ -204,7 +204,7 @@ default via 172.24.63.253 dev eth0 proto dhcp src 172.24.0.80 metric 100
 ![初次启动的 FreeBSD 系统](../.gitbook/assets/fb-zfs-1.png)
 
 
-根据读者反馈与实际测试，在 VMware ESXi 等半虚拟化平台上安装或升级 FreeBSD 时可能会遇到故障（例如阿里云的 VirtIO-BLK 存储设备驱动的问题）。
+根据读者反馈与实际测试，在 VMware ESXi 等虚拟化平台上安装或升级 FreeBSD 时可能会遇到故障（例如阿里云的 VirtIO-BLK 存储设备驱动的问题）。
 
 ![调整可调参数](../.gitbook/assets/fb-zfs-1-1.png)
 
@@ -550,7 +550,7 @@ EXT2、EXT3、EXT4、Btrfs 和 XFS 文件系统均不支持在线压缩。目前
 
 Ventoy 是新一代多系统启动 U 盘解决方案，其项目官网地址为 [Ventoy](https://www.ventoy.net/cn/index.html)。
 
-基本思路是通过内存盘系统将 Ventoy 写入整个硬盘，然后将 Ventoy 创建的容量较大的磁盘分区挂载到内存盘，再将 FreeBSD 系统写入该磁盘分区。随后强制重启实例，并从 Ventoy 启动进行系统安装。
+基本思路是通过内存盘系统将 Ventoy 写入整个硬盘，然后将 Ventoy 创建的容量较大的磁盘分区挂载到内存盘，再将 FreeBSD 系统写入该磁盘分区。
 
 随后强制重启实例，启动到 Ventoy 进行系统安装。
 
@@ -625,7 +625,7 @@ Ventoy 目前不支持在线下载 ISO 镜像文件。
 
 #### 使用 TinyCorePure64 写入 Ventoy
 
-TinyCorePure64 属于 [Core 项目](http://www.tinycorelinux.net/welcome.html)，该项目是旨在提供高度模块化的系统，同时支持社区自定义构建。
+TinyCorePure64 属于 [Core 项目](http://www.tinycorelinux.net/welcome.html)，该项目旨在提供高度模块化的系统，同时支持社区自定义构建。
 
 TinyCorePure64 能够在启动后完全载入内存，同时重启后亦将丢失所有数据。
 
@@ -718,7 +718,7 @@ mkfs.fat 4.2 (2021-01-31)
 查看 `/dev/vda2` 分区的文件系统类型：
 
 
-```
+```sh
 # blkid /dev/vda2
 /dev/vda2: UUID="35FB-D455" TYPE="vfat" PARTUUID="a4ab187d-a07f-4f62-ac3e-c4e35548fcba"
 ```
