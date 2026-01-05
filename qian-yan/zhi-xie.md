@@ -29,7 +29,8 @@ Ubuntu 吧前吧主 Simple 曾建议修改项目的章节文件名与许可协�
 
 ## 文档贡献者名单（A-Z）
 
-- [5gura](https://github.com/5gura)  
+- [5gura](https://github.com/5gura)
+- [algotao](https://github.com/algotao)
 - [Alex6357](https://github.com/Alex6357)
 - April Simone🍥
 - [VZstless](https://github.com/atlarator)
