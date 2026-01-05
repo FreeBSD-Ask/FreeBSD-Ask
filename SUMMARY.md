@@ -289,7 +289,7 @@
 * [27.3 NetBSD 换源和包管理器](di-27-zhang-netbsd/di-27.3-jie-huan-yuan-yu-bao-guan-li-qi.md)
 * [27.4 桌面和中文环境常用软件](di-27-zhang-netbsd/di-27.4-jie-zhuo-mian-yu-qi-ta-ruan-jian.md)
 
-## 附录Ⅰ计算机概论
+## 附录 Ⅰ 计算机概论
 
 * [计算机系统结构](fulu1/zong-xian.md)
 * [计算机网络](fulu1/wang-luo-ji-chu.md)
