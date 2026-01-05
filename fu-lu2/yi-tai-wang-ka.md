@@ -26,7 +26,7 @@
   * RTL8125 / RTL8125B(G)
 * 10/100/1000M 网卡
   * RTL8111B / RTL8111C / RTL8111D / RTL8111E / RTL8111F / RTL8111G
-    RTL8111H / RTL8118(A) / RTL8119i / RTL8111L / RTL8111K
+    RTL8111H / RTL8118(A) / RTL8119I / RTL8111L / RTL8111K
   * RTL8168B / RTL8168E / RTL8168H
   * RTL8111DP / RTL8111EP(P) / RTL8111FP
   * RTL8411 / RTL8411B
@@ -56,7 +56,7 @@ pkg install realtek-re-kmod
 
 >**技巧**
 >
->如果你的 realtek 网卡仍存在断流，时有时无等情况，可以试试 [net/realtek-re-kmod198](https://www.freshports.org/net/realtek-re-kmod198/)，参见 [Bug 275882 - net/realtek-re-kmod: Problem with checksum offload since +199.00](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=275882)。
+>如果你的 Realtek 网卡仍存在断流，时有时无等情况，可以试试 [net/realtek-re-kmod198](https://www.freshports.org/net/realtek-re-kmod198/)，参见 [Bug 275882 - net/realtek-re-kmod: Problem with checksum offload since +199.00](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=275882)。
 
 ---
 

@@ -11,7 +11,7 @@ FreeBSD 项目拒绝（表现为长期搁置）任何实质上的 PR，除了季
 
 项目结构复杂且混乱。维护者自己都看不懂。比如在翻译时的某些数据引用是否可复用。
 
-由于其安全报告的文件名在 Windows 下是非法字符（有英文冒号 `:`），因此导致整个项目无法在 Windows 被正常拉取：
+由于其安全报告的文件名在 Windows 下是非法字符（有英文冒号 `:`），因此导致整个项目无法在 Windows 下被正常拉取：
 
 ```powershell
 PS C:\Users\ykla> git clone https://github.com/freebsd/freebsd-doc

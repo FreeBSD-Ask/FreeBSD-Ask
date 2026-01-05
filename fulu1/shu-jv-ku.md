@@ -241,7 +241,7 @@ drop foreign key fk_name;
 - 解决：使用 `ON DELETE CASCADE` 或先删除子表中的记录。
 - `ON DELETE CASCADE` 涉及较多内容，此处暂不展开，详见后文“自动维护父表和子表之间的参照完整性”一节。
 
-### 下面是一个父、子表格和外键的示例
+### 下面是一个父、子表和外键的示例
 
 ```sql
 -- 创建父表 customers，包含以下列：
@@ -289,9 +289,9 @@ ALTER TABLE book_table
 MODIFY COLUMN BookName CHAR(100) NOT NULL DEFAULT "《书名》";
 
 -- 如果修改的列是外键，必须先删除外键约束，然后修改数据类型，再重新添加外键
-alter table 子表格 drop FOREIGN KEY 外键名;
-alter table 子表格 modify column 列名 新数据类型;
-alter table 子表格 add constraint 外键名 FOREIGN KEY (列名) REFERENCES 父表名(父列名);
+alter table 子表 drop FOREIGN KEY 外键名;
+alter table 子表 modify column 列名 新数据类型;
+alter table 子表 add constraint 外键名 FOREIGN KEY (列名) REFERENCES 父表名(父列名);
 ```
 
 ## 修改表信息、删除行
@@ -379,8 +379,8 @@ WHERE name in ('张三', '李四');
 - `in`：“值在列表中”运算符，用于筛选符合条件的记录，并返回布尔结果，供 update 或 delete 语句使用。例如 `5 in (1, 3, 5)` 返回真。
 - `between` 范围匹配：例如 `5 between 1 and 10` 返回真。
 - `like` 模式匹配：`'abc' like 'a%'` 返回真。百分号在这里类似 sh 的通配符。
-- `IS NULL` ”判断表项是否为 NULL“：`NULL IS NULL` 返回 TRUE。  
-  例子：查看书名有没有叫《xxx 设计 xxx》的
+- `IS NULL` “判断表项是否为 NULL”：`NULL IS NULL` 返回 TRUE。  
+  例子：查看书名条目是否存在 `《xxx 设计 yyy》`。
 
 ```sql
 select * from book_table
@@ -391,7 +391,7 @@ where BookName like '_____';
 -- 五个下划线代表五个字，返回长度为 5 个字的书名。
 ```
 
-在一个书籍管理库中会返回类似《mysql 数据库设计》的书名。
+在一个书籍管理库中会返回类似《MySQL 数据库设计》的书名。
 
 通过上述说明，可以更好地理解 WHERE 子句中条件表达式的含义。
 
