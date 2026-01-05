@@ -318,7 +318,6 @@
 
 * [我与 FreeBSD 的故事](fu-lu4/freebsd.md)
 * [两次告别](fu-lu4/exit.md)
-* [小说：《大教堂与集市》](fu-lu4/xiao-shuo-freebsd-cong-ru-men-dao-pao-lu.md)
 * [小说：《吾乡何处》](fu-lu4/wu-xiang-he-chu.md)
 * [小说：《你与暗》](fu-lu4/ni-yu-an.md)
 * [诗歌选](fu-lu4/shi-ge-xuan.md)
