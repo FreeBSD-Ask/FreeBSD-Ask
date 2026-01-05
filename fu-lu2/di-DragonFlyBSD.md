@@ -10,7 +10,7 @@ DragonFly BSD 因延续 FreeBSD 4 的发展路线而面临限制，其开发在�
 
 DragonFly BSD 自带 i915 显卡驱动，架构仅支持 x86-64。DragonFly BSD 不提供 Linux 兼容层。DPorts 可与 FreeBSD Ports 兼容。需要注意的是，DragonFly BSD 的驱动支持较为落后，显卡驱动平均滞后约 10 年。
 
-捐赠 DragonFly BSD：[Sponsoring projects](https://www.dragonflybsd.org/donations/)，目前仅支持国际 Paypal。此前已通过邮件咨询，但未收到任何反馈。
+捐赠 DragonFly BSD：[Sponsoring projects](https://www.dragonflybsd.org/donations/)，目前仅支持国际 PayPal。此前已通过邮件咨询，但未收到任何反馈。
 
 > **注意**
 >
@@ -243,7 +243,7 @@ export LC_ALL="zh_CN.UTF-8"     # 设置所有本地化环境变量为中文 UTF
 export LC_CTYPE="zh_CN.UTF-8"   # 设置字符类型本地化为中文 UTF-8
 ```
 
-### intel i915kms 显卡
+### Intel i915kms 显卡
 
 [根据硬件说明](https://www.dragonflybsd.org/docs/supportedhardware)，DragonFly BSD 6.4 显卡只支持到了英特尔第八代（Coffeelake）处理器。
 

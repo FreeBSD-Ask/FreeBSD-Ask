@@ -331,7 +331,7 @@ FreeBSD 15.0-RELEASE 支持选择 UFS 或 ZFS 作为根文件系统。旧版本�
 
 >**注意**
 >
->若硬盘为 eMMC 类型，可能会出现 `mmcsd0`、`mmcsd0boot0`、`mmcboot1` 等选项，请选择 `mmcsd0`。此外，在多硬盘与 eMMC 共存的情况下，若另一块硬盘的分区数量超过 5 个，安装在 eMMC 中的 FreeBSD 可能会在启动时卡在 `Mounting from zfs:zroot/ROOT/default failed with error 22: retrying for 3 more seconds` 提示处。若手动指定参数，则可能导致内核恐慌（Panic）。这疑似一个程序缺陷，但暂无更详细的报告信息。
+>若硬盘为 eMMC 类型，可能会出现 `mmcsd0`、`mmcsd0boot0`、`mmcsd0boot1` 等选项，请选择 `mmcsd0`。此外，在多硬盘与 eMMC 共存的情况下，若另一块硬盘的分区数量超过 5 个，安装在 eMMC 中的 FreeBSD 可能会在启动时卡在 `Mounting from zfs:zroot/ROOT/default failed with error 22: retrying for 3 more seconds` 提示处。若手动指定参数，则可能导致内核恐慌（Panic）。这疑似一个程序缺陷，但暂无更详细的报告信息。
 
 
 ![](../.gitbook/assets/ins12-15.png)
