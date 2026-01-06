@@ -4,15 +4,13 @@
 
 FreeBSD 是真正自由（Liberty）的 **操作系统**，在这波谲云诡的世界中仍然坚守 BSD UNIX 哲学——恪守古老的法则，追寻真正的自由。
 
-“入门”本是一种快乐，“跑路”亦是一种豁达。“本乘兴而行，兴尽而反，何必 FreeBSD 邪！”[^1]
-
-[^1]: 转写自房玄龄.晋书·王羲之传附王徽之传 [M].中华书局，1974
+“入门”本是一种快乐，“跑路”亦是一种豁达。“本乘兴而行，兴尽而反，何必 FreeBSD 邪！”（化用房玄龄.晋书·王羲之传附王徽之传 [M].中华书局，1974）
 
 ## 📄 内容提要
 
 这是一本开源的 FreeBSD 操作系统研究书籍，还包含一些关于 OpenBSD、NetBSD 等 Berkeley Unix 家族系统的导论章节。
 
-[~~FreeBSD 项目即将归档（Archived）~~，为了保护我们心爱的操作系统……我们能做的事情就是，写一本书！](https://www.bilibili.com/bangumi/media/md3068)（转写自《Love Live! School Idol Project》中的经典口号）
+[~~FreeBSD 项目即将归档（Archived）~~，为了保护我们心爱的操作系统……我们能做的事情就是，写一本书！](https://www.bilibili.com/bangumi/media/md3068)（化用《Love Live! School Idol Project》中的经典口号）
 
 
 ## 🖋️ 作者
