@@ -201,30 +201,29 @@ default via 172.24.63.253 dev eth0 proto dhcp src 172.24.0.80 metric 100
 
 执行强制重启以进入 FreeBSD。
 
+根据读者反馈与实际测试，在半虚拟化平台上安装或升级 FreeBSD 时可能会遇到故障，例如阿里云的 VirtIO-BLK 存储设备驱动的问题。
+
 ![初次启动的 FreeBSD 系统](../.gitbook/assets/fb-zfs-1.png)
 
-
-根据读者反馈与实际测试，在 VMware ESXi 等虚拟化平台上安装或升级 FreeBSD 时可能会遇到故障（例如阿里云的 VirtIO-BLK 存储设备驱动的问题）。
+此时，需在 FreeBSD 系统启动时，在启动器菜单界面（上图所示界面），按下 **ESC** 键。进入命令提示符“OK”。
 
 ![调整可调参数](../.gitbook/assets/fb-zfs-1-1.png)
 
+请在该界面输入 `set kern.maxphys=65536`，设置内核最大物理 I/O 大小为 65536 字节，大块 I/O 有时会触发驱动或缓存问题，并按回车键进行确认，再输入 `boot` 按回车键方可正常启动。
 
-此时，需在 FreeBSD 系统启动时，在启动器菜单界面（上图所示界面），按下 **ESC** 键。进入命令提示符“OK”，随后输入 `set kern.maxphys=65536`（设置内核最大物理 I/O 大小为 65536 字节，大块 I/O 有时会触发驱动或缓存问题）进行确认，再输入 `boot` 方可正常启动。
+随后正常执行安装流程即可，选择 ZFS 分区方式。
 
+![安装 FreeBSD 系统](../.gitbook/assets/fb-zfs-1-2.png)
 
-FreeBSD 系统完全启动后：在引导加载器配置文件中设置最大 I/O 缓冲区大小：
+待 FreeBSD 系统完全启动后：在引导加载器配置文件中永久性设置最大 I/O 缓冲区大小：
 
 ```sh
 # echo "kern.maxphys=65536" >> /boot/loader.conf
 ```
 
-如果不进行上述设置，系统开机仍可能卡在引导界面。
+如果不进行上述设置，系统下次开机时仍可能卡在引导界面。
 
-正常执行安装流程，选择 ZFS 分区方式。
-
-![安装 FreeBSD 系统](../.gitbook/assets/fb-zfs-1-2.png)
-
-显示 FreeBSD 系统磁盘分区表及分区信息：
+再列出 FreeBSD 系统磁盘分区表及分区信息：
 
 ```sh
 root@freebsd:~ # gpart show
@@ -445,7 +444,7 @@ root@mfsbsd:~ # gpart show
 ```sh
 root@mfsbsd:~ # gpart recover vtbd0	# 恢复 vtbd0 磁盘的分区表信息
 vtbd0 recovered
-root@mfsbsd:~ # gpart show
+root@mfsbsd:~ # gpart show # 查看修复分区表后的磁盘信息
 =>      40  62914487  vtbd0  GPT  (30G)
         40      2008         - free -  (1.0M)
       2048      2048      1  bios-boot  (1.0M)
@@ -477,11 +476,27 @@ root@mfsbsd:~ # gpart show
 
 ### ZFS 安装
 
+在 Shell 界面，执行以下命令，手动加载 zfs 内核模块：
+
+```sh
+# kldload zfs
+```
+
+无任何信息输出则加载成功。
+
+还可以用以下命令验证 zfs 模块的加载情况：
+
+```sh
+# kldstat | grep zfs
+```
+
+如果有相关输出，则可以继续输入命令 `bsdinstall`，继续正常的安装流程。
+
 本次实验的机器仅有 1G 内存，在 mfsBSD 占用约 100M 后，可用内存只有不到 800M。因此指定 ZFS 安装会报错“Distribution extract failed”（分发文件解压失败）：
 
 ![Distribution extract failed](../.gitbook/assets/fb-ufs-1.png)
 
-让我们来看看实际发生了什么，退出到 Shell 界面，通过以下命令观察：
+让我们来看看实际发生了什么，按 Ctrl + C 键，退回到 Shell 界面，通过以下命令观察：
 
 ```sh
 # dmesg
@@ -505,21 +520,7 @@ pid 1562 (distextract), jid 0, uid 0, was killed: failed to reclaim memory
 
 通常是由于未预先手动加载 zfs 内核模块引发的。
 
-解决方法，退出到 Shell 界面，执行以下命令，手动加载 zfs 内核模块：
-
-```sh
-# kldload zfs
-```
-
-无任何信息输出则加载成功。
-
-或者还可以用以下命令验证 zfs 模块的加载情况：
-
-```sh
-# kldstat | grep zfs
-```
-
-如果有相关输出，则可以继续进行 bsdinstall 的安装流程。
+解决方法，按照上文所述，执行命令 `kldload zfs` 手动加载内核模块。
 
 这可能是一个长期存在但难以复现的 Bug，参见 [Bug 249157 - installer reports sysctl: unknown oid 'vfs.zfs.min_auto_ashift' when ZFS module not loaded](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=249157)。
 
