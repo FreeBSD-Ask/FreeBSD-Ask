@@ -445,7 +445,7 @@ root@mfsbsd:~ # gpart show
 ```sh
 root@mfsbsd:~ # gpart recover vtbd0	# 恢复 vtbd0 磁盘的分区表信息
 vtbd0 recovered
-root@mfsbsd:~ # gpart show
+root@mfsbsd:~ # gpart show # 查看修复分区表后的磁盘信息
 =>      40  62914487  vtbd0  GPT  (30G)
         40      2008         - free -  (1.0M)
       2048      2048      1  bios-boot  (1.0M)
@@ -477,11 +477,27 @@ root@mfsbsd:~ # gpart show
 
 ### ZFS 安装
 
+在 Shell 界面，执行以下命令，手动加载 zfs 内核模块：
+
+```sh
+# kldload zfs
+```
+
+无任何信息输出则加载成功。
+
+还可以用以下命令验证 zfs 模块的加载情况：
+
+```sh
+# kldstat | grep zfs
+```
+
+如果有相关输出，则可以继续输入命令 `bsdinstall`，继续正常的安装流程。
+
 本次实验的机器仅有 1G 内存，在 mfsBSD 占用约 100M 后，可用内存只有不到 800M。因此指定 ZFS 安装会报错“Distribution extract failed”（分发文件解压失败）：
 
 ![Distribution extract failed](../.gitbook/assets/fb-ufs-1.png)
 
-让我们来看看实际发生了什么，退出到 Shell 界面，通过以下命令观察：
+让我们来看看实际发生了什么，按 Ctrl + C 键，退回到 Shell 界面，通过以下命令观察：
 
 ```sh
 # dmesg
@@ -505,21 +521,7 @@ pid 1562 (distextract), jid 0, uid 0, was killed: failed to reclaim memory
 
 通常是由于未预先手动加载 zfs 内核模块引发的。
 
-解决方法，退出到 Shell 界面，执行以下命令，手动加载 zfs 内核模块：
-
-```sh
-# kldload zfs
-```
-
-无任何信息输出则加载成功。
-
-或者还可以用以下命令验证 zfs 模块的加载情况：
-
-```sh
-# kldstat | grep zfs
-```
-
-如果有相关输出，则可以继续进行 bsdinstall 的安装流程。
+解决方法，按照上文所述，执行命令 `kldload zfs` 手动加载内核模块。
 
 这可能是一个长期存在但难以复现的 Bug，参见 [Bug 249157 - installer reports sysctl: unknown oid 'vfs.zfs.min_auto_ashift' when ZFS module not loaded](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=249157)。
 
