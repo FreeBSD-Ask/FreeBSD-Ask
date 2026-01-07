@@ -318,6 +318,7 @@
 
 * [我与 FreeBSD 的故事](fu-lu4/freebsd.md)
 * [两次告别](fu-lu4/exit.md)
+* [小说：《青其正色》](fu-lu4/qing-qi-zheng-se.md)
 * [小说：《吾乡何处》](fu-lu4/wu-xiang-he-chu.md)
 * [小说：《你与暗》](fu-lu4/ni-yu-an.md)
 * [诗歌选](fu-lu4/shi-ge-xuan.md)
