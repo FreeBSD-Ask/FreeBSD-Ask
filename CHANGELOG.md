@@ -986,7 +986,7 @@
 - 2023.7.9
   - 向 openSUSE 提交 [Bug 1213157 - repo http://download.opensuse.org/update/leap/15.5/oss : metadata expired](https://bugzilla.opensuse.org/show_bug.cgi?id=1213157) zypper 一直有这个警告，不知道如何消除。更新、换源均不起作用。dnf 显示正常。但是不影响正常使用。
 - 2023.7.8
-  - 新增“第 30.6 节 Linux 兼容层——基于 OpenSUSE”
+  - 新增“第 30.6 节 Linux 兼容层——基于 openSUSE”
 - 2023.7.7
   - 新增视频教程 [07-FreeBSD-ArchLinux 兼容层脚本使用说明](https://www.bilibili.com/video/BV1wg4y1w7QV/)
   - 新增视频教程 [06-FreeBSD-Ubuntu 兼容层脚本使用说明](https://www.bilibili.com/video/BV1iM4y1j7E9/)
