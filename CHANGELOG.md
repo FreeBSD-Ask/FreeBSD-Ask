@@ -1091,7 +1091,7 @@
   - 实现 PDF 文档导出
   - 实质性填充“第22.6节 Qt 环境的配置”
 - 2022.12.30
-  - “第5.7节 安装 QQ”新增“Linux 3.x（electron）”
+  - “第5.7节 安装 QQ”新增“Linux QQ 3.x（electron）”
   - “第5.5节 Linux 兼容层”新增“缺失 .so 文件”的故障排除
 - 2022.12.7
   - “第11.1节 通过 freebsd-update 更新”新增“查看 FreeBSD 版本”
