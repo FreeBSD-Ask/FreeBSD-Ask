@@ -886,7 +886,7 @@
 - 2023.10.13
   - 增补“第 22.12 节 安装 code-server 和 clangd”
 - 2023.10.12
-  - “第 4.2 节 安装 KDE 5”中的“lightdm 登陆管理器本地化语言”移动至“第 4.5 节 安装 Xfce”
+  - “第 4.2 节 安装 KDE 5”中的“lightdm 登录管理器本地化语言”移动至“第 4.5 节 安装 Xfce”
   - “第 4.2 节 安装 KDE 5”新增“SDDM 中文化”
   
 ## 2023 年第三季度
@@ -1258,7 +1258,14 @@
 
 《FreeBSD 从入门到跑路》项目在 [clean-master/freebsdcn](https://github.com/clean-master/freebsdcn) 进行更新。
 
-## 2021 年第一季度
-  
+## 2021 年第一季
+
+- 2021.3.15
+  - ykla 在翌日凌晨（2021 年 3 月 15 日）完成了教程的初步整理与发布，此后主要维护者均为 ykla
 - 2021.3.14
-  - 《FreeBSD 从入门到跑路》肇始于 2021 年 3 月 14 日（依据 [clean-master/freebsdcn](https://github.com/clean-master/freebsdcn/graphs/contributors) 项目的创建时间，其同天产生了此书原型），由 FreeBSD 中文社区 [clean-master 清理大师](https://github.com/clean-master) 发起，ykla 在翌日凌晨（2021 年 3 月 15 日）完成了教程的初步整理与发布。《FreeBSD 从入门到跑路》其原型最早可追溯至 2020 年 12 月 31 日 ykla 发布的帖子《FreeBSD 艺术科学哲学导论》。
+  - 《FreeBSD 从入门到跑路》肇始于 2021 年 3 月 14 日（依据 [clean-master/freebsdcn](https://github.com/clean-master/freebsdcn/graphs/contributors) 项目的创建时间分析），由 FreeBSD 中文社区 [clean-master 清理大师](https://github.com/clean-master) 发起
+
+## 2020 年第四季度
+
+- 2020.12.31
+  - 《FreeBSD 从入门到跑路》其原型最早可追溯至 2020 年 12 月 31 日 ykla 发布的帖子《FreeBSD 艺术科学哲学导论》
