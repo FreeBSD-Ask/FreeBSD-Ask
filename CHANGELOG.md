@@ -1201,7 +1201,7 @@
   - 增补“第二节 FreeBSD 13.0 安装——基于 Virtual Box”网络相关
   - 增补“两种虚拟机与 FreeBSD 版本比较”
 - 2021.12.30
-  - 增补“第三节 FreeBSD 13.0 安装——基于 Vmware Workstation Pro 15”
+  - 增补“第三节 FreeBSD 13.0 安装——基于 VMware Workstation Pro 15”
 - 2021.12.21
   - “第八节 Linux 用户迁移指北”新增“命令对比”
 - 2021.12.18
