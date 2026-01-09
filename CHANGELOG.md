@@ -1035,7 +1035,7 @@
 - 2023.5.23
   - 新增“第22.12节 安装 code-server 和 clangd”
 - 2023.5.21
-  - 更新“第22.7节 Python 与 VScode”
+  - 更新“第22.7节 Python 与 VS Code”
 - 2023.5.3
   - 引入 GitHub Action：链接检查、Markdown 格式化
 - 2023.4.27
