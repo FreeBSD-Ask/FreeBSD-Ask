@@ -256,7 +256,7 @@ openSUSE 有时会在稳定版本的软件包中引入实验性功能，且可�
 >
 >这是否可以用以论述，社区发行版仅仅是企业发行版的试验田。
 
-openSUSE 原生的包管理器是 `zypper`。有用户将其与 Fedora 的 `dnf` 进行对比，认为 `zypper` 在交互响应速度或某些场景下的性能表现有待优化 ~~比如你数数这有几个字母？~~，`zypper` 相比 `dnf` 存在明显的卡顿和延迟。
+openSUSE 原生的包管理器是 `zypper`。有用户将其与 Fedora 的 `dnf` 进行对比，认为 `zypper` 在交互响应速度或某些场景下的性能表现有待优化 ~~比如你数数这有几个字母？~~，`zypper` 相比 `dnf` 存在明显的卡顿和延迟。且这两个包管理器在某些情况下存在竞争关系，参见 [Bug 1213158 - Packages install failed with ndb backend](https://bugzilla.opensuse.org/show_bug.cgi?id=1213158)
 
 ### Gentoo Linux
 
