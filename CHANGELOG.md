@@ -1258,7 +1258,7 @@
 
 《FreeBSD 从入门到跑路》项目在 [clean-master/freebsdcn](https://github.com/clean-master/freebsdcn) 进行更新。
 
-## 2021 年第一季
+## 2021 年第一季度
 
 - 2021.3.15
   - ykla 在翌日凌晨完成了教程的初步整理与发布，此后主要维护者始终是 ykla
