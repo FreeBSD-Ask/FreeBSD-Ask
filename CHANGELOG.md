@@ -1063,7 +1063,7 @@
   - 新增“第30.1节 Linux 兼容层实现”
   - 新增“第30.3节 Linux 兼容层——基于 Ubuntu/Debian” 
   - 新增“第30.4 Linux 兼容层——基于 ArchLinux”  
-  - 新增“第30.5 高级教程：Linux 兼容层与 Jail”
+  - 新增“第30.5节 高级教程：Linux 兼容层与 Jail”
 - 2023.2.8
   - “第14.2节 WIFI”新增“博通（broadcom）网卡驱动”  
 - 2023.1.24
