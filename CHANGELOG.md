@@ -1198,7 +1198,7 @@
 ## 2021 年第四季度 
  
 - 2021.12.31
-  - 增补“第二节 FreeBSD 13.0 安装——基于 Virtual Box”网络相关
+  - 增补“第二节 FreeBSD 13.0 安装——基于 VirtualBox”网络相关
   - 增补“两种虚拟机与 FreeBSD 版本比较”
 - 2021.12.30
   - 增补“第三节 FreeBSD 13.0 安装——基于 VMware Workstation Pro 15”
