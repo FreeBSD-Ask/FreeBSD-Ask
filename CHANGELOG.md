@@ -1175,7 +1175,7 @@
 - 2022.3.3
   - 增补 FreeBSD“第〇章 图解安装” 
 - 2022.3.2
-  - 增补“第三节 FreeBSD 13.0 安装——基于 Vmware Workstation Pro 16”
+  - 增补“第三节 FreeBSD 13.0 安装——基于 VMware Workstation Pro 16”
 - 2022.2.9
   - 实质性填充“第一节 FTP 服务器”
 - 2022.2.5
