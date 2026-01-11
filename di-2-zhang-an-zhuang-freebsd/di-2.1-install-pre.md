@@ -179,7 +179,7 @@ win32diskimager 的下载地址是 <https://sourceforge.net/projects/win32diskim
 
 ## 附录：共享硬件数据到数据库
 
-如果读者也想上传你的数据到 <https://bsd-hardware.info>，与大家共享，可参照本节进行。
+如果读者也想上传自己的数据到 <https://bsd-hardware.info>，与大家共享，可参照本节进行。
 
 ### 安装 hw-probe
 
