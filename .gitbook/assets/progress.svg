@@ -8,6 +8,6 @@
   </defs>
     <!-- 背景灰色 -->
   <rect x="0" y="0" width="260" height="30" fill="#CCCCCC" rx="5" ry="5"/>
-  <rect x="0" y="0" width="104" height="30" fill="url(#grad1)" rx="5" ry="5"/>
-  <text x="52" y="20" font-size="16" text-anchor="middle" fill="#000000">39.95%</text>
+  <rect x="0" y="0" width="105" height="30" fill="url(#grad1)" rx="5" ry="5"/>
+  <text x="52" y="20" font-size="16" text-anchor="middle" fill="#000000">40.05%</text>
 </svg>
