@@ -80,7 +80,6 @@
 
 ![FreeBSD 镜像](../.gitbook/assets/do3.png)
 
-
 ```sh
 File Name                                          File Size      Date                 
 Parent directory/                                  -              -                     
@@ -134,6 +133,8 @@ FreeBSD 镜像 BT 种子下载地址（非官方，建议检查文件校验和�
   - 虚拟机用：[https://download.freebsd.org/snapshots/amd64/amd64/ISO-IMAGES/16.0/](https://download.freebsd.org/snapshots/amd64/amd64/ISO-IMAGES/16.0/)
   - 物理机下载 `-amd64-memstick.img` 或 `-amd64-memstick.img.xz` 结尾的文件
 
+当读者浏览到此处的时候，事情已并非原貌，还请读者自行查阅，选择合适的 RELEASE 版本用于生产。
+
 FreeBSD `-RELEASE` 历史版本下载地址：
 
 - 5.1-RELEASE 至 9.2-RELEASE <http://ftp-archive.freebsd.org/pub/FreeBSD-Archive/old-releases/amd64/ISO-IMAGES>
@@ -185,7 +186,7 @@ win32diskimager 的下载地址是 <https://sourceforge.net/projects/win32diskim
 
 - 使用 pkg 安装 hw-probe：
 
- ```sh
+```sh
  # pkg install hw-probe
 ```
 
