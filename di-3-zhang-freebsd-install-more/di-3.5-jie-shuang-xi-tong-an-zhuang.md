@@ -1,7 +1,6 @@
 # 3.5 手动安装双系统（后安装 FreeBSD）
 
-本文以 `FreeBSD-14.2-RELEASE-amd64-disc1.iso` 为例，演示在 UEFI 环境下，安装 FreeBSD 14.2 RELEASE 与 Windows 11 24H2 双系统。
-
+本文以 `FreeBSD-14.2-RELEASE-amd64-disc1.iso` 为例，演示了如何在 UEFI 环境下，安装 FreeBSD 14.2 RELEASE 与 Windows 11 24H2 双系统。
 
 >**技巧**
 >
@@ -187,6 +186,8 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 
 ### 创建 ZFS 数据集
 
+以下数据集的设置参照 FreeBSD 源代码中的 [usr.sbin/bsdinstall/scripts/zfsboot](https://github.com/freebsd/freebsd-src/blob/main/usr.sbin/bsdinstall/scripts/zfsboot) 进行创建，因为 FreeBSD 本身的开发是持续不断的，所以 FreeBSD 不同版本间的 ZFS 数据集也有所差异。读者在创建数据集时若希望创建与默认安装相同的数据集结构，应参照对应分支的 `usr.sbin/bsdinstall/scripts/zfsboot` 文件。
+
 
 - 创建根数据集
 
@@ -240,6 +241,17 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 ```
 
 将创建 `/usr/ports` 数据集，禁用 setuid（`setuid=off`）。
+
+- 为 ports 下的部分文件夹关闭压缩功能
+
+```sh
+# zfs create -o compress=off zroot/usr/ports/distfiles
+# zfs create -o compress=off zroot/usr/ports/packages
+```
+
+在 ZFS 上创建数据集 `zroot/usr/ports/distfiles` 和 `zroot/usr/ports/packages`。
+
+参数 `-o compress=off` 表示关闭压缩功能，因为存储的文件本身已是经过压缩的。
 
 
 - 创建 `/usr/src` 数据集
