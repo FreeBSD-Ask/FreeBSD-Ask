@@ -129,7 +129,7 @@ if [ -n "$(git status --porcelain)" ]; then
 
 提交统计:
 - 非机器人提交数: $last_author
-- 机器人提交数: $bot_commits
+- 机器人提交数: $commits
 "
 
   git push
