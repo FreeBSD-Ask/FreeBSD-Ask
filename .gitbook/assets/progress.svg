@@ -6,8 +6,8 @@
       <stop offset="100%" stop-color="#00FF00"/>
     </linearGradient>
   </defs>
-    <!-- 背景灰色 -->
   <rect x="0" y="0" width="260" height="30" fill="#CCCCCC" rx="5" ry="5"/>
-  <rect x="0" y="0" width="105" height="30" fill="url(#grad1)" rx="5" ry="5"/>
-  <text x="52" y="20" font-size="16" text-anchor="middle" fill="#000000">40.25%</text>
+  <rect x="0" y="0" width="-504" height="30" fill="url(#grad1)" rx="5" ry="5"/>
+  <text x="15" y="20"
+        font-size="16" text-anchor="middle" fill="#000000">-194.55%</text>
 </svg>
