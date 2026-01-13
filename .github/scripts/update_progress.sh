@@ -123,7 +123,9 @@ echo "README 已更新：版本 ${VERSION}，进度 ${percent_rounded}%"
 if [ -n "$(git status --porcelain)" ]; then
   git config user.name "github-actions[bot]"
   git config user.email "github-actions[bot]@users.noreply.github.com"
+
   git add "$README" "$SVG_FILE"
   git commit -m "CI: 更新提交进度徽章（排除机器人提交）"
-  git push origin main
+
+  git push
 fi
