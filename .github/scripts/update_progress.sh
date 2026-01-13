@@ -8,36 +8,32 @@ MARKER_END="<!-- commit-progress-end -->"
 PER=3533
 VERSION=3  # 当前目标版本
 
-# 机器人账号列表
-BOT_AUTHORS=(
-  "github-actions\\[bot\\]"
-  "dependabot\\[bot\\]"
-  "renovate\\[bot\\]"
-  "ImgBotApp"
-  "codecov\\[bot\\]"
-  "allcontributors\\[bot\\]"
-  "greenkeeper\\[bot\\]"
-)
+# 机器人作者正则（一次性，覆盖历史全部）
+BOT_REGEX='(github-actions\[bot\]|dependabot\[bot\]|renovate\[bot\]|ImgBotApp|codecov\[bot\]|allcontributors\[bot\]|greenkeeper\[bot\])'
 
 # 如果不存在标记则初始化
 if ! grep -qF "$MARKER_START" "$README"; then
   echo -e "\n$MARKER_START\n$MARKER_END" >> "$README"
 fi
 
-# 构建排除机器人参数
-EXCLUDE_BOTS_OPTIONS=()
-for bot in "${BOT_AUTHORS[@]}"; do
-  EXCLUDE_BOTS_OPTIONS+=( --invert-grep --author="$bot" )
-done
+# 非机器人提交总数（正确算法）
+commits=$(git log --perl-regexp \
+  --author='^(?!.*'"$BOT_REGEX"').*$' \
+  --pretty=oneline | wc -l | tr -d ' ')
 
-# 非机器人提交总数
-commits=$(git rev-list --count HEAD "${EXCLUDE_BOTS_OPTIONS[@]}")
+# 机器人提交总数
+bot_commits=$(git log --perl-regexp \
+  --author="$BOT_REGEX" \
+  --pretty=oneline | wc -l | tr -d ' ')
 
 # 最近一次非机器人提交者
-last_author=$(git log -1 --pretty=format:'%an' "${EXCLUDE_BOTS_OPTIONS[@]}" | tr -d '\r\n' | xargs)
+last_author=$(git log --perl-regexp \
+  --author='^(?!.*'"$BOT_REGEX"').*$' \
+  -1 --pretty=format:'%an' | tr -d '\r\n' | xargs)
 
 echo "最近非机器人提交者: [$last_author]"
 echo "非机器人提交总数: $commits"
+echo "机器人提交总数: $bot_commits"
 
 # 没有非机器人提交则退出
 if [[ -z "$last_author" ]]; then
@@ -106,9 +102,9 @@ EOF
 awk -v start="$MARKER_START" -v end="$MARKER_END" -v repl="$replacement" '
 BEGIN {inside=0}
 {
-  if($0 == start) { print repl; inside=1; next }
-  if(inside==1 && $0 == end) { inside=0; next }
-  if(inside==0) print
+  if ($0 == start) { print repl; inside=1; next }
+  if (inside==1 && $0 == end) { inside=0; next }
+  if (inside==0) print
 }' "$README" > "${README}.tmp"
 
 if cmp -s "$README" "${README}.tmp"; then
@@ -128,8 +124,8 @@ if [ -n "$(git status --porcelain)" ]; then
   git commit -m "CI: 更新提交进度徽章
 
 提交统计:
-- 非机器人提交数: $last_author
-- 机器人提交数: $commits
+- 非机器人提交数: $commits
+- 机器人提交数: $bot_commits
 "
 
   git push
