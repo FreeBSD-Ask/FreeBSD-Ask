@@ -125,7 +125,12 @@ if [ -n "$(git status --porcelain)" ]; then
   git config user.email "github-actions[bot]@users.noreply.github.com"
 
   git add "$README" "$SVG_FILE"
-  git commit -m "CI: 更新提交进度徽章（排除机器人提交）"
+  git commit -m "CI: 更新提交进度徽章
+
+提交统计:
+- 非机器人提交数: $human_commits
+- 机器人提交数: $bot_commits
+"
 
   git push
 fi
