@@ -8,19 +8,19 @@ MARKER_END="<!-- commit-progress-end -->"
 PER=3533
 VERSION=3  # 当前目标版本
 
-# GitHub Actions / 机器人提交过滤规则
-BOT_GREP='github-actions\[bot\]|dependabot\[bot\]|github-actions'
+# 机器人作者过滤规则（基于作者，而不是提交信息）
+BOT_GREP='github-actions\[bot\]|dependabot\[bot\]'
 
 # 如果不存在标记则初始化
 if ! grep -qF "$MARKER_START" "$README"; then
   echo -e "\n$MARKER_START\n$MARKER_END" >> "$README"
 fi
 
-# 获取总提交数（排除所有 GitHub Actions 机器人）
-commits=$(git log --invert-grep --grep="$BOT_GREP" --pretty=oneline | wc -l)
+# 获取总提交数（排除机器人作者）
+commits=$(git log --pretty='%H %an' | grep -Ev "$BOT_GREP" | wc -l | tr -d ' ')
 
-# 获取最近一次“非机器人”的提交者
-last_author=$(git log --invert-grep --grep="$BOT_GREP" -1 --pretty=format:'%an' | tr -d '\r\n' | xargs)
+# 获取最近一次非机器人提交者
+last_author=$(git log --pretty='%an' | grep -Ev "$BOT_GREP" | head -n1 | tr -d '\r\n' | xargs)
 
 # 若不存在人工提交则退出
 if [ -z "$last_author" ]; then
@@ -59,7 +59,6 @@ ORIG_WIDTH=400
 WIDTH=$(awk "BEGIN {printf \"%d\", $ORIG_WIDTH*0.65}")
 HEIGHT=30
 FILLED_WIDTH=$(awk "BEGIN {w=$WIDTH*$percent_rounded/100; print (w>0 && w<1) ? 1 : int((w+0.999999))}")
-UNFILLED_WIDTH=$((WIDTH - FILLED_WIDTH))
 bg_color="#CCCCCC"
 
 # 生成 SVG
@@ -113,7 +112,7 @@ fi
 mv "${README}.tmp" "$README"
 echo "README 已更新：版本 ${VERSION}，进度 ${percent_rounded}%"
 
-# 自动提交（机器人提交本身不会被再次计入统计）
+# 自动提交（机器人提交不会被统计）
 if [ -n "$(git status --porcelain)" ]; then
   git config user.name "github-actions[bot]"
   git config user.email "github-actions[bot]@users.noreply.github.com"
