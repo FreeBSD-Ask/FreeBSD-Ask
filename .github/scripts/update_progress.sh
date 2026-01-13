@@ -128,7 +128,7 @@ if [ -n "$(git status --porcelain)" ]; then
   git commit -m "CI: 更新提交进度徽章
 
 提交统计:
-- 非机器人提交数: $human_commits
+- 非机器人提交数: $last_author
 - 机器人提交数: $bot_commits
 "
 
