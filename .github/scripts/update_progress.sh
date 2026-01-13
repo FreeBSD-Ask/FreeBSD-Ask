@@ -8,7 +8,7 @@ MARKER_END="<!-- commit-progress-end -->"
 PER=3533
 VERSION=3  # 当前目标版本
 
-# 机器人作者过滤规则（基于作者，而不是提交信息）
+# 机器人作者过滤规则（基于作者名）
 BOT_GREP='github-actions\[bot\]|dependabot\[bot\]'
 
 # 如果不存在标记则初始化
@@ -16,11 +16,13 @@ if ! grep -qF "$MARKER_START" "$README"; then
   echo -e "\n$MARKER_START\n$MARKER_END" >> "$README"
 fi
 
-# 获取总提交数（排除机器人作者）
-commits=$(git log --pretty='%H %an' | grep -Ev "$BOT_GREP" | wc -l | tr -d ' ')
+# 获取总提交数（排除机器人作者，避免 broken pipe）
+commits=$(git log --pretty='%an' \
+  | awk -v re="$BOT_GREP" '$0 !~ re { c++ } END { print c+0 }')
 
 # 获取最近一次非机器人提交者
-last_author=$(git log --pretty='%an' | grep -Ev "$BOT_GREP" | head -n1 | tr -d '\r\n' | xargs)
+last_author=$(git log --pretty='%an' \
+  | awk -v re="$BOT_GREP" '$0 !~ re { print; exit }')
 
 # 若不存在人工提交则退出
 if [ -z "$last_author" ]; then
