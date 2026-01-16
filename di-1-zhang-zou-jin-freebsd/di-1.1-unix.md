@@ -15,15 +15,15 @@
 
 ---
 
-UNIX 认证查询网址：[The Open Group official register of UNIX Certified Products](http://www.opengroup.org/openbrand/register)
+UNIX 认证查询网址：[The Open Group official register of UNIX Certified Products](http://www.opengroup.org/openbrand/register) [备份](https://web.archive.org/web/20260108065248/https://www.opengroup.org/openbrand/register/) 
 
 ![The Open Group official register of UNIX Certified Products](../.gitbook/assets/unixrenzheng.png)
 
 
 现在，我们可以知道认证 UNIX 需要：
 
-1. [符合单一 UNIX 规范](https://www.opengroup.org/openbrand/register/xym0.htm)
-2. 缴纳相应的[认证费用](https://www.opengroup.org/openbrand/Brandfees.htm)
+1. [符合单一 UNIX 规范](https://www.opengroup.org/openbrand/register/xym0.htm) [备份](https://web.archive.org/web/20260114071648/https://www.opengroup.org/openbrand/register/xym0.htm) 
+2. 缴纳相应的[认证费用](https://www.opengroup.org/openbrand/Brandfees.htm) [备份](https://web.archive.org/web/20260114154111/https://www.opengroup.org/openbrand/Brandfees.htm)
 
 
 可以看到，常见的经过认证的 UNIX 操作系统有 Apple macOS。即从商标角度讲，macOS 可以称得上是标准的 UNIX 操作系统。~~故，要安装 UNIX 的人可以去黑苹果了~~
@@ -32,7 +32,7 @@ UNIX 认证查询网址：[The Open Group official register of UNIX Certified Pr
 >
 >macOS/iOS 等与 BSD 的关系
 >
->从历史来看，macOS（以及由此衍生的 iOS、iPadOS 等）的核心层（Darwin）确实基于 BSD 代码，并融合了其他技术。它可以被理解为一款独立的、类 BSD 的操作系统分支——同 OpenBSD、NetBSD 和 FreeBSD 一样。参见 [《苹果的开源基石：macOS 和 iOS 背后的 BSD 传统》](https://book.bsdcn.org/fan-yi-wen-zhang-cun-dang/2024-nian-11-yue/apple)
+>从历史来看，macOS（以及由此衍生的 iOS、iPadOS 等）的核心层（Darwin）确实基于 BSD 代码，并融合了其他技术。它可以被理解为一款独立的、类 BSD 的操作系统分支——同 OpenBSD、NetBSD 和 FreeBSD 一样。参见 [《苹果的开源基石：macOS 和 iOS 背后的 BSD 传统》](https://book.bsdcn.org/fan-yi-wen-zhang-cun-dang/2024-nian-11-yue/apple) [备份](https://web.archive.org/web/20260115132720/https://book.bsdcn.org/fan-yi-wen-zhang-cun-dang/2024-nian-11-yue/apple) 
 >
 >所以看似是安卓和苹果之争，其实是 Linux 与 BSD 之争。~~也许也是大教堂与市集之争。~~
 
@@ -45,7 +45,7 @@ UNIX 认证查询网址：[The Open Group official register of UNIX Certified Pr
 >
 >> Those who do not understand Unix are condemned to reinvent it, poorly. （那些不懂 Unix 的人注定要再造一个四不像式 Unix）
 >>
->>——[Henry Spencer](https://www.nasa.gov/history/alsj/henry.html)
+>>——[Henry Spencer](https://www.nasa.gov/history/alsj/henry.html) [备份](https://web.archive.org/web/20260115025048/https://www.nasa.gov/history/alsj-and-afj/) 
 >
 >作者 Henry Spencer 并未明确批评哪个操作系统，那么你认为，现在这句话更适合哪个常见的操作系统？为什么？
 
@@ -64,7 +64,7 @@ Unix 哲学源于 UNIX 操作系统的开发实践，并由 Ken Thompson、Denni
 
 - 《UNIX 编程艺术》，Eric Raymond 著，ISBN: 9787121176654，电子工业出版社。
 - 《Linux/Unix 设计思想》，Mike Gancarz 著，9787115266927，人民邮电出版社。（已绝版）
-- [The Open Group Standards Process](https://www.opengroup.org/standardsprocess/certification.html)
+- [The Open Group Standards Process](https://www.opengroup.org/standardsprocess/certification.html) [备份](https://web.archive.org/web/20260115021154/https://www.opengroup.org/standardsprocess/certification.html) 
 
 ### 二十一世纪四分之一处的 Unix 哲学观
 
@@ -94,7 +94,7 @@ Multics 意图创造强悍的新软件和比肩 IBM 7094 功能更丰富的新�
 
 >**技巧**
 >
->《星际旅行》被人移植了，现在可以直接在网页上玩，项目位于 [C port of Ken Thompson's Space Travel](https://github.com/mohd-akram/st)，在线游玩的网站是 [Space Travel](https://akr.am/st/)。
+>《星际旅行》被人移植了，现在可以直接在网页上玩，项目位于 [C port of Ken Thompson's Space Travel](https://github.com/mohd-akram/st) [备份](https://web.archive.org/web/20260115021129/https://github.com/mohd-akram/st) ，在线游玩的网站是 [Space Travel](https://akr.am/st/) [备份](https://web.archive.org/web/20260114153540/https://akr.am/st/) 。
 >
 >~~虽然操作简单但是看不懂怎么玩~~
 
@@ -108,24 +108,24 @@ Multics 意图创造强悍的新软件和比肩 IBM 7094 功能更丰富的新�
 
 由于 Unix 在后期愈发封闭，许可证昂贵、受限制于商业公司等原因，RMS（Richard Matthew Stallman）就想创造一款自由且兼容 Unix 的操作系统。
 
-- 1983 年，RMS 发表 [《GNU 宣言》](https://www.gnu.org/gnu/manifesto.html)，其中 GNU 即 GNU is Not Unix（GNU 不是 Unix）。GNU 是一款操作系统——旨在完全替代 Unix。
-- 1984 年，创建 [GNU 项目](https://www.gnu.org/)
+- 1983 年，RMS 发表 [《GNU 宣言》](https://www.gnu.org/gnu/manifesto.html) [备份](https://web.archive.org/web/20260115033223/https://www.gnu.org/gnu/manifesto.html) ，其中 GNU 即 GNU is Not Unix（GNU 不是 Unix）。GNU 是一款操作系统——旨在完全替代 Unix。
+- 1984 年，创建 [GNU 项目](https://www.gnu.org/) [备份](https://web.archive.org/web/20260115033101/https://www.gnu.org/) 
 - 1985 年，RMS 创建自由软件基金会（Free Software Foundation，FSF）
 - 1989 年，FSF 发布 GPLv1
 - 1991 年，FSF 发布 GPLv2
 - 2007 年，FSF 发布 GPLv3
 
-一开始，RMS 为 Unix 编写了许多实用程序（用户空间），然而 GNU 的目标操作系统始终缺乏稳定内核（即使到 2025 年，[GNU Hurd](https://hurd.gnu.org/) 仍未完成）。Linux 内核的诞生打破了这一困境。
+一开始，RMS 为 Unix 编写了许多实用程序（用户空间），然而 GNU 的目标操作系统始终缺乏稳定内核（即使到 2025 年，[GNU Hurd](https://hurd.gnu.org/)  仍未完成）。Linux 内核的诞生打破了这一困境。
 
-作为由 Linux 内核和 GNU 软件组合而成的操作系统，Linux 不断地 GNU 化，形成了 GNU/Linux，其中 GNU 的贡献不可忽视，但很多人常忽略这一事实。这是因为：Linux 内核的开发由 Linus Torvalds 主导。Linus 本人对 FSF 和 RMS 的理念并不完全认同。因此，Linux 内核项目的理念与自由软件运动，甚至与严格的开源理念之间，存在一定的张力（例如，Linux 内核包含了不符合自由软件定义或严格开源定义的二进制固件模块，参见 [Linux-libre](https://www.fsfla.org/ikiwiki/selibre/linux-libre/)）。并且 Linux 内核使用 GPLv2，而非 GNU 推荐的 GPLv3。事实是，Linus Torvalds 随意移除 Linux 项目的参与者，却未同时移除他们贡献的代码。——这无论同自由还是开源理念都是冲突的。
+作为由 Linux 内核和 GNU 软件组合而成的操作系统，Linux 不断地 GNU 化，形成了 GNU/Linux，其中 GNU 的贡献不可忽视，但很多人常忽略这一事实。这是因为：Linux 内核的开发由 Linus Torvalds 主导。Linus 本人对 FSF 和 RMS 的理念并不完全认同。因此，Linux 内核项目的理念与自由软件运动，甚至与严格的开源理念之间，存在一定的张力（例如，Linux 内核包含了不符合自由软件定义或严格开源定义的二进制固件模块，参见 [Linux-libre](https://www.fsfla.org/ikiwiki/selibre/linux-libre/) [备份](https://web.archive.org/web/20260115033255/https://www.fsfla.org/ikiwiki/selibre/linux-libre/) ）。并且 Linux 内核使用 GPLv2，而非 GNU 推荐的 GPLv3。事实是，Linus Torvalds 随意移除 Linux 项目的参与者，却未同时移除他们贡献的代码。——这无论同自由还是开源理念都是冲突的。
 
-我们将 Linux 之前这段时间称作“自由软件运动”（代表人物 RMS）。Linux 的流行促成了另一种理念的兴起，即“开源运动”——代表人物有 Eric S. Raymond，OSI（Open Source Initiative，开放源代码促进会）的创始人，《UNIX 编程艺术》、《大教堂与集市》的作者；Bruce Perens，Debian 项目前领导人——想想下面有关开源的定义为什么是自 [Debian 的开源定义 DFSG](https://www.debian.org/social_contract#guidelines) 衍生而来？
+我们将 Linux 之前这段时间称作“自由软件运动”（代表人物 RMS）。Linux 的流行促成了另一种理念的兴起，即“开源运动”——代表人物有 Eric S. Raymond，OSI（Open Source Initiative，开放源代码促进会）的创始人，《UNIX 编程艺术》、《大教堂与集市》的作者；Bruce Perens，Debian 项目前领导人——想想下面有关开源的定义为什么是自 [Debian 的开源定义 DFSG](https://www.debian.org/social_contract#guidelines) [备份](https://web.archive.org/web/20260114070814/https://www.debian.org/social_contract#guidelines) 衍生而来？
 
 自由软件运动并未停止，但人们对开源的误解却越来越重。
 
 ### 自由软件运动与开源运动之间的张力
 
-需要注意的是，根据笔者与 RMS 的通讯，其强调的 GNU 与自由软件运动并不强调“开源”（甚至是反对开源），而是强调“Free”式自由。有些人可能认为现在的“开源”仅仅是由 [OSI 定义](https://opensource.org/osd) 的那样，这是一种极其片面的观点。
+需要注意的是，根据笔者与 RMS 的通讯，其强调的 GNU 与自由软件运动并不强调“开源”（甚至是反对开源），而是强调“Free”式自由。有些人可能认为现在的“开源”仅仅是由 [OSI 定义](https://opensource.org/osd)  的那样，这是一种极其片面的观点。
 
 >致所有阅读我邮件的 NSA（美国国家安全局）和 FBI 特工：请考虑一下，捍卫美国宪法以抵御一切敌人，无论是外国的还是本国的，是否需要你效仿斯诺登的做法。
 >
@@ -185,7 +185,7 @@ Linux 之名来自 Linux 之父 Linus Torvalds。
 
 Linux 受启发于 Minix（UNIX 版权限制下的产物），一款设计用于教学的微内核操作系统。当时 22 岁的 Linus Torvalds 是芬兰赫尔辛基大学计算机科学系的研究生。
 
-Linus Torvalds 的硕士毕业论文是 [《Linux: A Portable Operating System》](https://www.cs.helsinki.fi/u/kutvonen/index_files/linus.pdf)（Linux：一款可移植的操作系统），他在 1997 年（28 岁）获得理学硕士学位。为什么花了这么长时间都没被学校清退呢？芬兰是典型的学分制国家。根据芬兰赫尔辛基大学官网说明，并无 [最长学习期限](https://studies.helsinki.fi/instructions/article/expiry-studies?) 限制，仅规定某课程成绩有效时间为十年。“你的课程到期不会影响你在大学继续学习的权利”。
+Linus Torvalds 的硕士毕业论文是 [《Linux: A Portable Operating System》](https://www.cs.helsinki.fi/u/kutvonen/index_files/linus.pdf) [备份](https://web.archive.org/web/20251114200921/https://www.cs.helsinki.fi/u/kutvonen/index_files/linus.pdf)（Linux：一款可移植的操作系统），他在 1997 年（28 岁）获得理学硕士学位。为什么花了这么长时间都没被学校清退呢？芬兰是典型的学分制国家。根据芬兰赫尔辛基大学官网说明，并无 [最长学习期限](https://studies.helsinki.fi/instructions/article/expiry-studies?) [备份](https://web.archive.org/web/20260114070831/https://studies.helsinki.fi/instructions/article/expiry-studies) 限制，仅规定某课程成绩有效时间为十年。“你的课程到期不会影响你在大学继续学习的权利”。
 
 >我们探讨了在将 Linux 操作系统移植到多种 CPU 和总线架构时所暴露出的硬件可移植性问题。我们还讨论了软件接口的可移植性问题，尤其是与能够共享同一硬件平台的其他操作系统之间的二进制兼容性问题。文中描述了 Linux 所采取的方法，并对其中几个架构进行了更为详细的介绍。
 >
@@ -197,20 +197,20 @@ Linus Torvalds 的硕士毕业论文是 [《Linux: A Portable Operating System�
 >
 >~~或许 Minix 才是世界上最流行的操作系统~~
 
-UNIX 标准 SUS 包含 POSIX 标准，是其超集。Linux 实现了 POSIX 标准，但未获得 [POSIX 认证](http://get.posixcertified.ieee.org/)。
+UNIX 标准 SUS 包含 POSIX 标准，是其超集。Linux 实现了 POSIX 标准，但未获得 [POSIX 认证](http://get.posixcertified.ieee.org/) [备份](https://web.archive.org/web/20260114153011/https://posix.opengroup.org/)。
 
 从本质上说，Linux 是 UNIX 的一种仿制或克隆产物（类似于人与机器人的关系）。
 
 
 ### 狭义 Linux 是内核
 
-[Linux kernel](https://www.kernel.org/) 项目 1991；
+[Linux kernel](https://www.kernel.org/) [备份](https://web.archive.org/web/20260114152922/https://www.kernel.org/) 项目 1991；
 
 ### 广义 Linux 是 GNU/Linux
 
 GNU/Linux = Linux kernel + GNU 等软件 + 包管理器
 
->**[Chimera Linux](https://chimera-linux.org/) 除外。**
+>**[Chimera Linux](https://chimera-linux.org/) [备份](https://web.archive.org/web/20260114152849/https://chimera-linux.org/)  除外。**
 
 Linux 全称为 GNU/Linux；
 
@@ -233,7 +233,7 @@ GNU's Not Unix，从 GNU 这个名字（GNU 不是 UNIX）你也能看出来 Lin
 
 > **注意**
 >
-> 如果你还是不明白，建议亲自安装试试 [Gentoo](https://www.gentoo.org/downloads/)（stage3）或 [Slackware](http://www.slackware.com/)，再不明白可以试试 [Gentoo（stage1）](https://wiki.gentoo.org/wiki/Stage_file) 或 [LFS](https://www.linuxfromscratch.org/lfs/)。
+> 如果你还是不明白，建议亲自安装试试 [Gentoo](https://www.gentoo.org/downloads/) [备份](https://web.archive.org/web/20260115021338/https://www.gentoo.org/downloads/) （stage3）或 [Slackware](http://www.slackware.com/) ，再不明白可以试试 [Gentoo（stage1）](https://wiki.gentoo.org/wiki/Stage_file) [备份](https://web.archive.org/web/20260115132845/https://wiki.gentoo.org/wiki/Stage_file)  或 [LFS](https://www.linuxfromscratch.org/lfs/) [备份](https://web.archive.org/web/20260115021242/https://www.linuxfromscratch.org/lfs/) 。
 >
 > 上述操作较为复杂，需要一定的经验与基础知识。~~又陷入了前理解循环~~
 
@@ -245,7 +245,7 @@ Unix-like 即类 Unix，指一切符合 UNIX 标准、基本遵守 POSIX 规范�
 
 ## 附录：自由软件与开源软件语境下的典型误解与思想偏差探析
 
-我们必须先给自由软件和开源协议分别下个定义，我们引用 [GNU 网站](https://www.gnu.org/philosophy/free-sw.zh-cn.html) 的相关内容来定义什么是自由软件的自由。
+我们必须先给自由软件和开源协议分别下个定义，我们引用 [GNU 网站](https://www.gnu.org/philosophy/free-sw.zh-cn.html)  的相关内容来定义什么是自由软件的自由。
 
 ### 厘清“营利”和“盈利”
 
@@ -268,11 +268,11 @@ Unix-like 即类 Unix，指一切符合 UNIX 标准、基本遵守 POSIX 规范�
 
 即：“用户可以自由地运行、拷贝、分发、学习、修改并改进该软件。”
 
-推论 1：如果商业用户为了营利（自由度 0）而修改（自由度 1）再分发（自由度 2），只要修改后仍然开源（自由度 3），商业用户的行为是完全合规的，并说明他们完全有权自由使用、修改、分发及通过该软件营利。任何自由度均未限制 **营利** 行为。引证 1：[自由软件可以是商业软件](https://www.gnu.org/philosophy/free-sw.zh-cn.html#four-freedoms)；
+推论 1：如果商业用户为了营利（自由度 0）而修改（自由度 1）再分发（自由度 2），只要修改后仍然开源（自由度 3），商业用户的行为是完全合规的，并说明他们完全有权自由使用、修改、分发及通过该软件营利。任何自由度均未限制 **营利** 行为。引证 1：[自由软件可以是商业软件](https://www.gnu.org/philosophy/free-sw.zh-cn.html#four-freedoms) [备份](https://web.archive.org/web/20260115033837/https://www.gnu.org/philosophy/free-sw.zh-cn.html#four-freedoms) ；
 
 ### 开源协议定义与开源软件定义
 
-为了坚持开源定义 (OSD)，并防范开源运动原则的滥用而成立的开源促进会（OSI）对开源协议是这么定义的（基于 [Debian Free Software Guidelines](https://www.debian.org/social_contract#guidelines), DFSG），为了避免歧义，我们 [全文引用](https://opensource.org/osd) 如下：
+为了坚持开源定义 (OSD)，并防范开源运动原则的滥用而成立的开源促进会（OSI）对开源协议是这么定义的（基于 [Debian Free Software Guidelines](https://www.debian.org/social_contract#guidelines) [备份](https://web.archive.org/web/20260114070814/https://www.debian.org/social_contract#guidelines), DFSG），为了避免歧义，我们 [全文引用](https://opensource.org/osd)  如下：
 
 >导言
 >
@@ -318,15 +318,15 @@ Unix-like 即类 Unix，指一切符合 UNIX 标准、基本遵守 POSIX 规范�
 >
 >许可证的任何条款都不得基于任何个人技术或界面风格。
 
-OSI（Open Source Initiative，开源促进会）基于开放软件定义（OSD）的开放认证许可证，已成为全球公认的开放软件判定标准，并通过国际组织、产业界与政府政策的采纳而确立其权威性。参见 [International Authority & Recognition](https://opensource.org/about/authority)。
+OSI（Open Source Initiative，开源促进会）基于开放软件定义（OSD）的开放认证许可证，已成为全球公认的开放软件判定标准，并通过国际组织、产业界与政府政策的采纳而确立其权威性。参见 [International Authority & Recognition](https://opensource.org/about/authority) 。
 
-受 OSI 认可的开源协议有：[OSI Approved Licenses](https://opensource.org/licenses)，严格意义上讲，只有列表中的许可证才属于开源许可证。
+受 OSI 认可的开源协议有：[OSI Approved Licenses](https://opensource.org/licenses) ，严格意义上讲，只有列表中的许可证才属于开源许可证。
 
 ### 关于各种软件的定义
 
-根据 [自由与非自由软件的分类](https://www.gnu.org/philosophy/categories.zh-cn.html)，我们定义如下：
+根据 [自由与非自由软件的分类](https://www.gnu.org/philosophy/categories.zh-cn.html) ，我们定义如下：
 
-- 自由软件：符合上述四项基本自由定义的软件即称为自由软件。推论：商业软件可以是自由软件，商业 ≠ 非自由。引证 1：[自由软件可以是商业软件](https://www.gnu.org/philosophy/free-sw.zh-cn.html#four-freedoms)；引证 2：[Words to Avoid (or Use with Care) Because They Are Loaded or Confusing](https://www.gnu.org/philosophy/words-to-avoid.html),“Commercial”部分
+- 自由软件：符合上述四项基本自由定义的软件即称为自由软件。推论：商业软件可以是自由软件，商业 ≠ 非自由。引证 1：[自由软件可以是商业软件](https://www.gnu.org/philosophy/free-sw.zh-cn.html#four-freedoms) [备份](https://web.archive.org/web/20260115033837/https://www.gnu.org/philosophy/free-sw.zh-cn.html#four-freedoms) ；引证 2：[Words to Avoid (or Use with Care) Because They Are Loaded or Confusing](https://www.gnu.org/philosophy/words-to-avoid.html) ,“Commercial”部分
 - 开源软件：使用上述开源协议授权的软件。所有自由软件都是开源软件，但是所有开源软件不一定是自由软件。二者的定义和理念都有一定的差异。自由软件是开源软件的充分不必要条件
 - 专有软件/私有软件（proprietary software）：即真正意义上的“非自由软件”，大部分商业软件属此类型。这是 GNU 宣言一开始真正的目标
 - 免费软件：定义模糊。其他类别的软件均可能是“免费”的，但并不一定
@@ -356,7 +356,7 @@ OSI（Open Source Initiative，开源促进会）基于开放软件定义（OSD�
 
 ### CC-BY-NC（所有版本）、CC-BY-ND（所有版本）既不自由也不开源
 
-根据 [各类许可证及其评论](https://www.gnu.org/philosophy/categories.zh-cn.html)，结合 [OSI Approved Licenses](https://opensource.org/licenses)，CC-BY-NC（所有版本）、CC-BY-ND（所有版本）等均不属于开源软件许可证或自由软件许可证，因此在该许可证授权下的项目既非传统意义上的自由软件亦非开源软件。
+根据 [各类许可证及其评论](https://www.gnu.org/philosophy/categories.zh-cn.html) ，结合 [OSI Approved Licenses](https://opensource.org/licenses) ，CC-BY-NC（所有版本）、CC-BY-ND（所有版本）等均不属于开源软件许可证或自由软件许可证，因此在该许可证授权下的项目既非传统意义上的自由软件亦非开源软件。
 
 原因很简单，上述协议都歧视商业用户，剥夺了商业用户的“自由”。
 
@@ -368,6 +368,6 @@ OSI（Open Source Initiative，开源促进会）基于开放软件定义（OSD�
 
 根据微软的 Enterprise Source Licensing Program: ESLP 协议（或者 Microsoft Reference Source License, Ms-RSL），商业用户只要购买了一定量的产品副本（并不要求多么离谱的数量或额度），即可获取其对应的源代码。
 
-你可以获取源代码，并且微软的限制条件仍然在表面上看似符合“自由度 1”（自由修改参见 [神州网信](https://www.cmgos.com/) 的 Windows 10 神州网信政府版）。
+你可以获取源代码，并且微软的限制条件仍然在表面上看似符合“自由度 1”（自由修改参见 [神州网信](https://www.cmgos.com/) [备份](https://web.archive.org/web/20260115132700/https://www.cmgos.com/web/home/)  的 Windows 10 神州网信政府版）。
 
 但是你很难说这种协议是一种开源协议，在某种意义上 CC-BY-NC（所有版本）、CC-BY-ND（所有版本）其实和这种许可协议没有什么本质区别。

@@ -4,7 +4,7 @@
 
 已知 FreeBSD 有如下版本类型（或开发阶段）：ALPHA、BETA、RC、RELEASE、CURRENT、STABLE。
 
-**RELEASE** 版本是适用于生产环境的，即一般意义上的 **稳定版**，或可被视为一类长期支持（LTS）版本。而 ***STABLE*** 和 ***CURRENT*** 都属于 **开发分支**，**通常不建议用于生产环境**（“稳定”与“不稳定”是相对概念，例如 [Netflix 几乎所有节点都运行着 **current**](https://freebsdfoundation.org/netflix-case-study/)）。
+**RELEASE** 版本是适用于生产环境的，即一般意义上的 **稳定版**，或可被视为一类长期支持（LTS）版本。而 ***STABLE*** 和 ***CURRENT*** 都属于 **开发分支**，**通常不建议用于生产环境**（“稳定”与“不稳定”是相对概念，例如 [Netflix 几乎所有节点都运行着 **current**](https://freebsdfoundation.org/netflix-case-study/) [备份](https://web.archive.org/web/20260114162158/https://freebsdfoundation.org/netflix-case-study/)）。
 
 >**注意**
 >
@@ -12,11 +12,11 @@
 >
 >FreeBSD 的 ***STABLE*** 的真实意思是该分支的 ABI（Application Binary Interface，应用程序二进制接口）是稳定的。
 >
-> ——参见 [FreeBSD Glossary STABLE](https://wiki.freebsd.org/Glossary#STABLE)
+> ——参见 [FreeBSD Glossary STABLE](https://wiki.freebsd.org/Glossary#STABLE) [备份](https://web.archive.org/web/20251205085012/https://wiki.freebsd.org/Glossary#STABLE)
 
 ALPHA 是 CURRENT 进入 RELEASE 的第一步。具体流程是：CURRENT -> ALPHA（进入 STABLE 分支）-> BETA -> RC -> RELEASE。
 
-CURRENT 相对稳定后（即满足 MFC 最短三天的要求，MFC 指 `Merge From CURRENT`，类似于 `backporting` 即向后移植）会推送到 STABLE，但不保证两者没有重大缺陷。参见 [FreeBSD Release Engineering](https://docs.freebsd.org/en/articles/freebsd-releng/)。
+CURRENT 相对稳定后（即满足 MFC 最短三天的要求，MFC 指 `Merge From CURRENT`，类似于 `backporting` 即向后移植）会推送到 STABLE，但不保证两者没有重大缺陷。参见 [FreeBSD Release Engineering](https://docs.freebsd.org/en/articles/freebsd-releng/) [备份](https://web.archive.org/web/20260115034817/https://docs.freebsd.org/en/articles/freebsd-releng/) 。
 
 
 >**警告**
@@ -31,11 +31,11 @@ CURRENT 相对稳定后（即满足 MFC 最短三天的要求，MFC 指 `Merge F
 
 >**注意**
 >
->只有 ALPHA、RC、BETA 和 RELEASE（[且是一级架构](https://www.freebsd.org/platforms/)）才能使用命令 `freebsd-update` 更新系统，其余版本需通过源代码编译或使用二进制的 pkgbase 更新。
+>只有 ALPHA、RC、BETA 和 RELEASE（[且是一级架构](https://www.freebsd.org/platforms/) [备份](https://web.archive.org/web/20260115035231/https://www.freebsd.org/platforms/) ）才能使用命令 `freebsd-update` 更新系统，其余版本需通过源代码编译或使用二进制的 pkgbase 更新。
 >
 >FreeBSD 开发计划准备删除命令 `freebsd-update`，一律改用 pkgbase。
 >
-> ——参见 [FreeBSD Manual Pages freebsd-update](https://man.freebsd.org/cgi/man.cgi?freebsd-update)
+> ——参见 [FreeBSD Manual Pages freebsd-update](https://man.freebsd.org/cgi/man.cgi?freebsd-update) 
 
 ## FreeBSD 项目宗旨
 
@@ -134,13 +134,13 @@ BSD 最初由加州大学伯克利分校（University of California, Berkeley）
 
 Free 则包含自由（Liberty）和免费（Gratis）两种含义。
 
-FreeBSD 日为 6 月 19 日。FreeBSD 基金会和社区在这天庆祝 FreeBSD 的生日。——[Join us to celebrate FreeBSD Day!](https://freebsdfoundation.org/freebsd-day/)
+FreeBSD 日为 6 月 19 日。FreeBSD 基金会和社区在这天庆祝 FreeBSD 的生日。——[Join us to celebrate FreeBSD Day!](https://freebsdfoundation.org/freebsd-day/) [备份](https://web.archive.org/web/20260115034607/https://freebsdfoundation.org/freebsd-day/) 
 
 ### UNIX 之船：FreeBSD 是不是 UNIX？
 
 这个问题远没有想象中的那么清楚明白。我看到不少讨论者，甚至是那段岁月的亲历者，也难以给出明确回答或澄清。或者只是简单的说，BSD 并未进行过任何 UNIX 认证，没有持有法律上的商标就草草终结话题；更有甚者只是笼统地说 FreeBSD 是 UNIX 的延续者与正统继承者，仅是“有实无名”；还有人认为，BSD 之于 UNIX，正如 Linux 之于 UNIX。
 
-之所以有上述这些不同的回答，正是因为这个问题不是能够简单地套用法律上的商标归属或者代码上继承性进行分析的纯粹技术性难题。这其实牵涉到了一个深刻的本体论哲学问题——我们究竟是不能两次踏进同一条河流，还是一次也不能踏进同一条河流？（类似的问题如谷堆问题、秃头问题，感兴趣的读者可参见 SEP 条目“[Identity Over Time](https://plato.stanford.edu/entries/identity-time)”、“[Sorites Paradox](https://plato.stanford.edu/entries/sorites-paradox/)”）。对这个问题的回答如何，其实映射着你的哲学观与科学技术观。
+之所以有上述这些不同的回答，正是因为这个问题不是能够简单地套用法律上的商标归属或者代码上继承性进行分析的纯粹技术性难题。这其实牵涉到了一个深刻的本体论哲学问题——我们究竟是不能两次踏进同一条河流，还是一次也不能踏进同一条河流？（类似的问题如谷堆问题、秃头问题，感兴趣的读者可参见 SEP 条目“[Identity Over Time](https://plato.stanford.edu/entries/identity-time) [备份](https://web.archive.org/web/20260115133245/https://plato.stanford.edu/entries/identity-time/) ”、“[Sorites Paradox](https://plato.stanford.edu/entries/sorites-paradox/) [备份](https://web.archive.org/web/20260115021513/https://plato.stanford.edu/entries/sorites-paradox/) ”）。对这个问题的回答如何，其实映射着你的哲学观与科学技术观。
 
 >>**忒修斯之船**
 >>
@@ -175,20 +175,20 @@ BSD 操作系统并非复制品，而是 AT&T Research Unix 操作系统的开�
 
 ![谁在使用 FreeBSD](../.gitbook/assets/whousingbsd.png)
 
-图片来源 [FreeBSD 基金会宣传图](https://i.imgur.com/qW0IePB.png)
+图片来源 [FreeBSD 基金会宣传图](https://i.imgur.com/qW0IePB.png) 
 
-- 华纳兄弟的电影《[黑客帝国](https://movie.douban.com/subject/1291843/)》（*[The Matrix](https://www.imdb.com/title/tt0133093/)*）的特效就是在一组 FreeBSD 集群上制作的。——参见 [*FreeBSD Used to Generate Spectacular Special Effects*](https://www.freebsd.org/press/press-rel-1/) 及《[FreeBSD 技术内幕](https://book.douban.com/subject/1240853/)》 (简体中文译本)，机械工业出版社。ISBN 7-111-10201-0，第 2 页。
-- 苹果（Apple）的操作系统如 macOS、iOS 等大量复用了 BSD（不止是 FreeBSD）的技术栈。BSD 可以称得上是 macOS 的开源基石。——参见 [Apple’s Open Source Roots: The BSD Heritage Behind macOS and iOS](https://thenewstack.io/apples-open-source-roots-the-bsd-heritage-behind-macos-and-ios/)
-- 索尼（Sony）的游戏机 PlayStation 3（PS3）、PlayStation Vita（PSV）、PlayStation 4（PS4）、和 PlayStation 5（PS5）使用的操作系统。参见索尼官网 [FreeBSD Kernel](https://www.playstation.com/en-us/oss/ps4/freebsd-kernel/)、[Free BSD License](https://www.playstation.com/en-us/oss/ps3/free-bsd/)、[FreeBSD](https://www.playstation.com/en-us/oss/ps-vita/)。PS 5 并未列出许可证，但是根据 [Kernel](https://www.psdevwiki.com/ps5/index.php?title=Kernel) 的页面，其仍然使用了 FreeBSD 11。
-- 奈飞（Netflix）几乎所有网络活动（内容缓存/CDN）都使用 FreeBSD 设备进行。——参见 [Netflix Case Study](https://freebsdfoundation.org/netflix-case-study/)
-- QNX 操作系统。QNX 是一款实时操作系统。QNX 以前是黑莓手机的操作系统。QNX 现在被广泛应用为汽车安全操作系统（即车机，**安卓是运行在 QNX 之上的操作系统，与车机系统分离**）。国内新能源车辆普遍采用了 QNX 操作系统（关键领域占比超过九成）。QNX 大量复用了 FreeBSD 的技术栈。——参见 [QNX](https://www.qnx.com/developers/docs/8.0/search.html?searchQuery=freebsd) 官网、[中国汽车实现“芯魂兼具”应从两方面发力](http://auto.ce.cn/auto/gundong/202407/31/t20240731_39088063.shtml)、[Automotive](https://www.qnx.com/content/qnx/cn/solutions/industries/automotive/)。同时查询 FreeBSD 基金会 2024 [捐款页面](https://freebsdfoundation.org/our-donors/donors/?donationYear=2024)，上面也有黑莓（QNX 开发者）。
-- Dell EMC Isilon，戴尔的 Isilon（面向企业的 NAS 存储设备）设备使用的操作系统 OneFS 基于 FreeBSD。——参见 [PowerScale OneFS：了解基于源的路由](https://www.dell.com/support/kbdoc/zh-cn/000020056/isilon-onefs-understanding-source-based-routing-sbr-in-isilon?lang=zh)，中明确提及“OneFS 是基于 FreeBSD 的”。另见 [DSA-2020-086: Dell EMC Isilon OneFS Security Update for FreeBSD libfetch Vulnerability](https://www.dell.com/support/kbdoc/000153860/dsa-2020-086-dell-emc-isilon-onefs-security-update-for-freebsd-libfetch-vulnerability?lang=en) 等安全报告。附 [IsilonSystems](https://wiki.freebsd.org/IsilonSystems)
-- Beckhoff 倍福自动化控制系统的操作系统 TwinCAT/BSD。——参见 [TwinCAT/BSD](https://www.beckhoff.com/en-en/products/ipc/software-and-tools/twincat-bsd/)
-- OpenHarmony LiteOS 内核引入了一些 FreeBSD 代码用作驱动等。——参见 [kernel_liteos_a](https://gitee.com/openharmony/kernel_liteos_a/tree/master)
+- 华纳兄弟的电影《[黑客帝国](https://movie.douban.com/subject/1291843/) 》（*[The Matrix](https://www.imdb.com/title/tt0133093/) *）的特效就是在一组 FreeBSD 集群上制作的。——参见 [*FreeBSD Used to Generate Spectacular Special Effects*](https://www.freebsd.org/press/press-rel-1/) [备份](https://web.archive.org/web/20260114163021/https://www.freebsd.org/press/press-rel-1/) 及《[FreeBSD 技术内幕](https://book.douban.com/subject/1240853/) 》 (简体中文译本)，机械工业出版社。ISBN 7-111-10201-0，第 2 页。
+- 苹果（Apple）的操作系统如 macOS、iOS 等大量复用了 BSD（不止是 FreeBSD）的技术栈。BSD 可以称得上是 macOS 的开源基石。——参见 [Apple’s Open Source Roots: The BSD Heritage Behind macOS and iOS](https://thenewstack.io/apples-open-source-roots-the-bsd-heritage-behind-macos-and-ios/) [备份](https://web.archive.org/web/20260115133808/https://thenewstack.io/apples-open-source-roots-the-bsd-heritage-behind-macos-and-ios/) 
+- 索尼（Sony）的游戏机 PlayStation 3（PS3）、PlayStation Vita（PSV）、PlayStation 4（PS4）、和 PlayStation 5（PS5）使用的操作系统。参见索尼官网 [FreeBSD Kernel](https://www.playstation.com/en-us/oss/ps4/freebsd-kernel/) 、[Free BSD License](https://www.playstation.com/en-us/oss/ps3/free-bsd/) 、[FreeBSD](https://www.playstation.com/en-us/oss/ps-vita/) 。PS 5 并未列出许可证，但是根据 [Kernel](https://www.psdevwiki.com/ps5/index.php?title=Kernel)  的页面，其仍然使用了 FreeBSD 11。
+- 奈飞（Netflix）几乎所有网络活动（内容缓存/CDN）都使用 FreeBSD 设备进行。——参见 [Netflix Case Study](https://freebsdfoundation.org/netflix-case-study/) [备份](https://web.archive.org/web/20260114162158/https://freebsdfoundation.org/netflix-case-study/)
+- QNX 操作系统。QNX 是一款实时操作系统。QNX 以前是黑莓手机的操作系统。QNX 现在被广泛应用为汽车安全操作系统（即车机，**安卓是运行在 QNX 之上的操作系统，与车机系统分离**）。国内新能源车辆普遍采用了 QNX 操作系统（关键领域占比超过九成）。QNX 大量复用了 FreeBSD 的技术栈。——参见 [QNX](https://www.qnx.com/developers/docs/8.0/search.html?searchQuery=freebsd) [备份](https://web.archive.org/web/20260115134009/https://www.qnx.com/developers/docs/8.0/search.html?searchQuery=freebsd)  官网、[中国汽车实现“芯魂兼具”应从两方面发力](http://auto.ce.cn/auto/gundong/202407/31/t20240731_39088063.shtml) 、[Automotive](https://www.qnx.com/content/qnx/cn/solutions/industries/automotive/) 。同时查询 FreeBSD 基金会 2024 [捐款页面](https://freebsdfoundation.org/our-donors/donors/?donationYear=2024) [备份](https://web.archive.org/web/20260114161801/https://freebsdfoundation.org/our-donors/donors/?donationYear=2024) ，上面也有黑莓（QNX 开发者）。
+- Dell EMC Isilon，戴尔的 Isilon（面向企业的 NAS 存储设备）设备使用的操作系统 OneFS 基于 FreeBSD。——参见 [PowerScale OneFS：了解基于源的路由](https://www.dell.com/support/kbdoc/zh-cn/000020056/isilon-onefs-understanding-source-based-routing-sbr-in-isilon?lang=zh) [备份](https://web.archive.org/web/20260115133806/https://www.dell.com/support/kbdoc/zh-cn/000020056/isilon-onefs-understanding-source-based-routing-sbr-in-isilon?lang=zh) ，中明确提及“OneFS 是基于 FreeBSD 的”。另见 [DSA-2020-086: Dell EMC Isilon OneFS Security Update for FreeBSD libfetch Vulnerability](https://www.dell.com/support/kbdoc/000153860/dsa-2020-086-dell-emc-isilon-onefs-security-update-for-freebsd-libfetch-vulnerability?lang=en) [备份](https://web.archive.org/web/20260115034348/https://www.dell.com/support/kbdoc/en-us/000153860/dsa-2020-086-dell-emc-isilon-onefs-security-update-for-freebsd-libfetch-vulnerability?lang=en)  等安全报告。附 [IsilonSystems](https://wiki.freebsd.org/IsilonSystems) [备份](https://web.archive.org/web/20260115034653/https://wiki.freebsd.org/IsilonSystems) 
+- Beckhoff 倍福自动化控制系统的操作系统 TwinCAT/BSD。——参见 [TwinCAT/BSD](https://www.beckhoff.com/en-en/products/ipc/software-and-tools/twincat-bsd/) 
+- OpenHarmony LiteOS 内核引入了一些 FreeBSD 代码用作驱动等。——参见 [kernel_liteos_a](https://gitee.com/openharmony/kernel_liteos_a/tree/master) 
 
 ### 参考文献
 
-- [谁在使用 FreeBSD](https://book.bsdcn.org/fan-yi-wen-zhang-cun-dang/2025-nian-1-yue/di-1.5-jie-shui-zai-shi-yong-freebsd)，有一份 FreeBSD 基金会官方版本
+- [谁在使用 FreeBSD](https://book.bsdcn.org/fan-yi-wen-zhang-cun-dang/2025-nian-1-yue/di-1.5-jie-shui-zai-shi-yong-freebsd) ，有一份 FreeBSD 基金会官方版本
 
 ## 为什么选择 FreeBSD
 
@@ -236,35 +236,35 @@ FreeBSD 不仅仅是 **在生命周期内不变**，大版本更新也具有连�
 - DTrace 框架与 GEOM 存储框架。
 - Linux 二进制兼容层可运行 Linux 软件。且软件运行性能通常不逊色于 Linux。
 - FreeBSD 的驱动在大体上与内核解耦合。
-- FreeBSD 秉持人人自由开发的理念，目前 [你可以直接在 GitHub 上提交你的代码](https://github.com/freebsd/freebsd-src/pulls)，或者注册个账号在 <https://reviews.freebsd.org/> 进行大规模变更。
+- FreeBSD 秉持人人自由开发的理念，目前 [你可以直接在 GitHub 上提交你的代码](https://github.com/freebsd/freebsd-src/pulls) [备份](https://web.archive.org/web/20260115133500/https://github.com/freebsd/freebsd-src/pulls) ，或者注册个账号在 <https://reviews.freebsd.org/> 进行大规模变更。
 - FreeBSD 的代码风格是 Kernighan & Ritchie 经典著作《C 程序设计语言》（*The C Programming Language*）中使用的风格。
 
 #### 安全原因
 
-- 对部分 Ports 进行了加固，参见 [FreeBSD security hardening with compiler options](https://www.leidinger.net/blog/2025/05/24/freebsd-security-hardening-with-compiler-options/)、[Add new features fortify, stack_autoinit and zeroregs](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=284270)
+- 对部分 Ports 进行了加固，参见 [FreeBSD security hardening with compiler options](https://www.leidinger.net/blog/2025/05/24/freebsd-security-hardening-with-compiler-options/) [备份](https://web.archive.org/web/20260114160710/https://www.leidinger.net/blog/2025/05/24/freebsd-security-hardening-with-compiler-options/)、[Add new features fortify, stack_autoinit and zeroregs](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=284270) 
 - 披露的安全漏洞少于其他主流操作系统（尽管可能存在样本数量较少的客观因素）。截至 2025 年 9 月，FreeBSD 基本系统（用户空间与内核）的 CVE 漏洞数量约为 Linux 内核的二十分之一（根据 <https://www.cvedetails.com> 统计），而 Linux 内核的 CVE 数量与 Windows 大致持平。同期，OpenBSD 的 CVE 漏洞数量约为 FreeBSD 的 40%。
 - 可以避免在产品和架构中出现共同故障点。
 - 安全事件审计。
-- 集成了标准 Unix DAC、ACL、TrustedBSD MAC 安全框架（基于 POSIX®.1e 草案的安全扩展），参见 [wiki TrustedBSD](https://wiki.freebsd.org/TrustedBSD/)
-- 集成 W^X 策略，参见 [Implement enforcing write XOR execute mapping policy.](https://reviews.freebsd.org/D28050)
-- 默认启用了内核和用户空间的 PIE 和 ASLR，参见 [Enable ASLR by default for 64-bit executables.](https://reviews.freebsd.org/D27666)
-- FreeBSD 通过了 National Institute of Standards and Technology（NIST，美国国家标准及技术研究所）安全软件开发框架（SSDF）认证，参见 [FreeBSD Foundation Announces SSDF Attestation](https://freebsdfoundation.org/news-and-events/latest-news/freebsd-foundation-announces-ssdf-attestation/)
-- 实现了 FreeBSD 14 CIS 基准。参见 [New CIS® FreeBSD 14 Benchmark: Secure Your Systems with Expert-Guided Best Practices](https://freebsdfoundation.org/blog/new-cis-freebsd-14-benchmark-secure-your-systems-with-expert-guided-best-practices/)
+- 集成了标准 Unix DAC、ACL、TrustedBSD MAC 安全框架（基于 POSIX®.1e 草案的安全扩展），参见 [wiki TrustedBSD](https://wiki.freebsd.org/TrustedBSD/) 
+- 集成 W^X 策略，参见 [Implement enforcing write XOR execute mapping policy.](https://reviews.freebsd.org/D28050) 
+- 默认启用了内核和用户空间的 PIE 和 ASLR，参见 [Enable ASLR by default for 64-bit executables.](https://reviews.freebsd.org/D27666) [备份](https://web.archive.org/web/20260114160348/https://reviews.freebsd.org/D27666)
+- FreeBSD 通过了 National Institute of Standards and Technology（NIST，美国国家标准及技术研究所）安全软件开发框架（SSDF）认证，参见 [FreeBSD Foundation Announces SSDF Attestation](https://freebsdfoundation.org/news-and-events/latest-news/freebsd-foundation-announces-ssdf-attestation/) [备份](https://web.archive.org/web/20260115021839/https://freebsdfoundation.org/news-and-events/latest-news/freebsd-foundation-announces-ssdf-attestation/) 
+- 实现了 FreeBSD 14 CIS 基准。参见 [New CIS® FreeBSD 14 Benchmark: Secure Your Systems with Expert-Guided Best Practices](https://freebsdfoundation.org/blog/new-cis-freebsd-14-benchmark-secure-your-systems-with-expert-guided-best-practices/) [备份](https://web.archive.org/web/20260114160148/https://freebsdfoundation.org/blog/new-cis-freebsd-14-benchmark-secure-your-systems-with-expert-guided-best-practices/) 
 - 正在实现 FreeBSD 的零信任构建，参见 Sovereign Tech Agency 相关赞助
 - 基于 GEOM 框架的全盘加密（含 ZFS、Swap）方案
 - 正在改进软件物料清单（Software Bill of Materials，SBOM），参见 Sovereign Tech Agency 相关赞助
-- Capsicum 框架，并且已经对基本系统中大量工具进行了能力化加固。参见 [wiki Capsicum](https://wiki.freebsd.org/Capsicum)
-- FreeBSD 内核拥有五种不同的安全级别（securelevel）可以自由选择，参见 [man mitigations](https://man.freebsd.org/cgi/man.cgi?query=mitigations)，还介绍了 FreeBSD 上若干安全漏洞缓解手段
+- Capsicum 框架，并且已经对基本系统中大量工具进行了能力化加固。参见 [wiki Capsicum](https://wiki.freebsd.org/Capsicum) [备份](https://web.archive.org/web/20260115133621/https://wiki.freebsd.org/Capsicum) 
+- FreeBSD 内核拥有五种不同的安全级别（securelevel）可以自由选择，参见 [man mitigations](https://man.freebsd.org/cgi/man.cgi?query=mitigations) ，还介绍了 FreeBSD 上若干安全漏洞缓解手段
   
   
 #### 参考文献
 
-- [Submitting GitHub Pull Requests to FreeBSD](https://freebsdfoundation.org/our-work/journal/browser-based-edition/configuration-management-2/submitting-github-pull-requests-to-freebsd/)，翻译在 [在 GitHub 上向 FreeBSD 提交 PR](https://github.com/taophilosophy/freebsd-journal-cn/blob/main/2024-0506/zai-github-shang-xiang-freebsd-ti-jiao-pr.md)
-- [Contribution Guidelines for GitHub](https://github.com/freebsd/freebsd-src/blob/main/CONTRIBUTING.md)，应该以此为准
-- Linux Kernel 由 Linus 一人裁决：“[Linus Torvalds 是决定改动能否进入 Linux 内核的最终裁决者。](https://www.kernel.org/doc/html/latest/translations/zh_CN/process/submitting-patches.html)”
-- [Linux 内核编码风格](https://www.kernel.org/doc/html/latest/process/coding-style.html)
-- Linux 内核开发是个 [较为封闭的过程](https://www.kernel.org/doc/html/latest/process/submitting-patches.html)，只有少数人能够参与直接提交代码
-- [Sandbox Your Program Using FreeBSD's Capsicum](https://cdaemon.com/posts/capsicum)，翻译在 [利用 FreeBSD Capsicum 框架实现程序沙箱化](https://book.bsdcn.org/fan-yi-wen-zhang-cun-dang/2025-nian/capsicum)。这是篇有关 Capsicum 框架的简介
+- [Submitting GitHub Pull Requests to FreeBSD](https://freebsdfoundation.org/our-work/journal/browser-based-edition/configuration-management-2/submitting-github-pull-requests-to-freebsd/) [备份](https://web.archive.org/web/20260115021904/https://freebsdfoundation.org/our-work/journal/browser-based-edition/configuration-management-2/submitting-github-pull-requests-to-freebsd/) ，翻译在 [在 GitHub 上向 FreeBSD 提交 PR](https://github.com/taophilosophy/freebsd-journal-cn/blob/main/2024-0506/zai-github-shang-xiang-freebsd-ti-jiao-pr.md) 
+- [Contribution Guidelines for GitHub](https://github.com/freebsd/freebsd-src/blob/main/CONTRIBUTING.md) [备份](https://web.archive.org/web/20260114072238/https://github.com/freebsd/freebsd-src/blob/main/CONTRIBUTING.md)，应该以此为准
+- Linux Kernel 由 Linus 一人裁决：“[Linus Torvalds 是决定改动能否进入 Linux 内核的最终裁决者。](https://www.kernel.org/doc/html/latest/translations/zh_CN/process/submitting-patches.html) [备份](https://web.archive.org/web/20260114072211/https://www.kernel.org/doc/html/latest/translations/zh_CN/process/submitting-patches.html)”
+- [Linux 内核编码风格](https://www.kernel.org/doc/html/latest/process/coding-style.html) [备份](https://web.archive.org/web/20260114155734/https://www.kernel.org/doc/html/latest/process/coding-style.html)
+- Linux 内核开发是个 [较为封闭的过程](https://www.kernel.org/doc/html/latest/process/submitting-patches.html) [备份](https://web.archive.org/web/20260114155640/https://www.kernel.org/doc/html/latest/process/submitting-patches.html)，只有少数人能够参与直接提交代码
+- [Sandbox Your Program Using FreeBSD's Capsicum](https://cdaemon.com/posts/capsicum) [备份](https://web.archive.org/web/20260114155551/https://cdaemon.com/posts/capsicum)，翻译在 [利用 FreeBSD Capsicum 框架实现程序沙箱化](https://book.bsdcn.org/fan-yi-wen-zhang-cun-dang/2025-nian/capsicum) [备份](https://web.archive.org/web/20260114155500/https://book.bsdcn.org/fan-yi-wen-zhang-cun-dang/2025-nian/capsicum)。这是篇有关 Capsicum 框架的简介
   
 ### 选择 FreeBSD 的社会意义
 
@@ -275,14 +275,14 @@ FreeBSD 不仅仅是 **在生命周期内不变**，大版本更新也具有连�
 
 显而易见：目前 FreeBSD 上的桌面部件的缺失很大程度上是因为他们过分依赖了 Linux 特有函数库，例如包含 `ip` 命令的 `iproute2` 软件包。更多的原因则是因为这些桌面或部件和 systemd 做了深度捆绑或者根本就是强制依赖，比如 `NetworkManager`。而 Samba 开发者则说“We use Linux, we develop for Linux, all others please submit patches”（我们使用 Linux，为 Linux 开发，其他系统的用户请自行提交补丁）FreeBSD 社区将此类现象称为“Linuxism”（Linux 主义/Linux 歧视）。
 
-这种行为将导致何种后果尚不得而知，但此类程序正变得越来越多，并有成为主流的趋势。甚至许多开发者在开发程序（如 `todesk`）时也不再考虑对传统 init 系统的兼容。甚至 Java 程序也失去了可移植性，为什么 FreeBSD 上的 Eclipse 将近两年没有更新？正是由于此类 [捆绑问题](https://git.eclipse.org/r/c/platform/eclipse.platform.swt/+/163641/)。预计在将来所有可运行在 Linux 上的程序也将失去任何的可移植性。
+这种行为将导致何种后果尚不得而知，但此类程序正变得越来越多，并有成为主流的趋势。甚至许多开发者在开发程序（如 `todesk`）时也不再考虑对传统 init 系统的兼容。甚至 Java 程序也失去了可移植性，为什么 FreeBSD 上的 Eclipse 将近两年没有更新？正是由于此类 [捆绑问题](https://git.eclipse.org/r/c/platform/eclipse.platform.swt/+/163641/) [备份](https://web.archive.org/web/20260114072048/https://gitlab.eclipse.org/eclipse)。预计在将来所有可运行在 Linux 上的程序也将失去任何的可移植性。
 
 目前 FreeBSD 所面临的困境，可能是未来其他系统也会遇到的。
 
 - 选择 FreeBSD，就是选择保留一份自由软件的火种。
 - 选择 FreeBSD，就是选择保留下一份真正自由的操作系统。能够使开源事业继续坚持下去，并践行真正的 UNIX 哲学。
 
-#### 旧闻：《[FreeBSD 基金会收到史上最大一笔捐款](https://freebsdfoundation.blogspot.com/2014/11/freebsd-foundation-announces-generous.html)》
+#### 旧闻：《[FreeBSD 基金会收到史上最大一笔捐款](https://freebsdfoundation.blogspot.com/2014/11/freebsd-foundation-announces-generous.html) 》
 
 
 >上周，我向 FreeBSD 基金会捐赠了 100 万美元，FreeBSD 基金会支持着开源操作系统 FreeBSD。FreeBSD 帮助了数百万程序员追随他们的热情、实现创意。我自己就是受益者。在 90 年代末，我开始使用 FreeBSD，那时我经济拮据，住在政府提供的住房中。在某种程度上，FreeBSD 帮助我摆脱了贫困——我能进入 Yahoo!（雅虎）工作的重要原因是，他们使用 FreeBSD，而这正是我首选的操作系统。多年后，当 Brian 和我开始创建 WhatsApp 时，我们依然使用 FreeBSD 来支撑我们的服务器运营，直到今天亦如此。
@@ -291,7 +291,7 @@ FreeBSD 不仅仅是 **在生命周期内不变**，大版本更新也具有连�
 >
 >——WhatsApp 原 CEO 及创始人 Jan Koum
 
-实际上，这并非一锤子买卖，在查阅 FreeBSD 基金会捐款名单（可查 [2018](https://freebsdfoundation.org/our-donors/donors/?donationYear=2018)、[2019](https://freebsdfoundation.org/our-donors/donors/?donationYear=2019)、[2020](https://freebsdfoundation.org/our-donors/donors/?donationYear=2020)、[2021](https://freebsdfoundation.org/our-donors/donors/?donationYear=2021)、[2022](https://freebsdfoundation.org/our-donors/donors/?donationYear=2022)）后就会发现，Jan Koum 仍在继续以 [Koum Family Foundation](https://philanthropynewsdigest.org/news/other-sources/article/?id=15306123&title=Tech-Philanthropy-Watch:-WhatsApp-Founder-Jan-Koum-Has-a-New-$1.5-Billion-Fund) 的名义在持续地为 FreeBSD 捐款。每年都捐款 25 万美元以上。
+实际上，这并非一锤子买卖，在查阅 FreeBSD 基金会捐款名单（可查 [2018](https://freebsdfoundation.org/our-donors/donors/?donationYear=2018) [备份](https://web.archive.org/web/20260114071839/https://freebsdfoundation.org/our-donors/donors/?donationYear=2018)、[2019](https://freebsdfoundation.org/our-donors/donors/?donationYear=2019) [备份](https://web.archive.org/web/20260114155210/https://freebsdfoundation.org/our-donors/donors/?donationYear=2019) 、[2020](https://freebsdfoundation.org/our-donors/donors/?donationYear=2020) [备份](https://web.archive.org/web/20260114155032/https://freebsdfoundation.org/our-donors/donors/?donationYear=2020) 、[2021](https://freebsdfoundation.org/our-donors/donors/?donationYear=2021) [备份](https://web.archive.org/web/20260115021927/https://freebsdfoundation.org/our-donors/donors/?donationYear=2021) 、[2022](https://freebsdfoundation.org/our-donors/donors/?donationYear=2022) [备份](https://web.archive.org/web/20260115022058/https://freebsdfoundation.org/our-donors/donors/?donationYear=2022) ）后就会发现，Jan Koum 仍在继续以 [Koum Family Foundation](https://philanthropynewsdigest.org/news/other-sources/article/?id=15306123&title=Tech-Philanthropy-Watch:-WhatsApp-Founder-Jan-Koum-Has-a-New-$1.5-Billion-Fund)  的名义在持续地为 FreeBSD 捐款。每年都捐款 25 万美元以上。
 
 #### 诚实与可信
 
@@ -503,4 +503,4 @@ Alpha-Omega 项目先后对 FreeBSD 的 bhyve 虚拟机管理程序、Capsicum �
 
 ### 参考文献
 
-- 原文来自 [Timeline](https://freebsdfoundation.org/freebsd/timeline/)，有改动。
+- 原文来自 [Timeline](https://freebsdfoundation.org/freebsd/timeline/) [备份](https://web.archive.org/web/20260114154520/https://freebsdfoundation.org/freebsd/timeline/)，有改动。

@@ -4,7 +4,7 @@
 
 FreeBSD 项目拒绝（表现为长期搁置）任何实质上的 PR，除了季度报告。事实上，纵观提交数据，freebsd doc 项目已经死亡十余年：
 
-使用 [统计分析 git 项目](https://gist.github.com/ykla/6c3df44c371d37fc3196ddf5fa87ce5f) 对 freebsd-doc 进行分析的结果参见 [freebsd-doc-2025 分析报告](https://gist.github.com/ykla/363bf922d0785d0b02dd43f8289368db)。
+使用 [统计分析 git 项目](https://gist.github.com/ykla/6c3df44c371d37fc3196ddf5fa87ce5f) [备份](https://megalodon.jp/?url=https://gist.github.com/ykla/6c3df44c371d37fc3196ddf5fa87ce5f) 对 freebsd-doc 进行分析的结果参见 [freebsd-doc-2025 分析报告](https://gist.github.com/ykla/363bf922d0785d0b02dd43f8289368db) [备份](https://megalodon.jp/?url=https://gist.github.com/ykla/363bf922d0785d0b02dd43f8289368db)。
 
 - 2005-2006 年：第一次显著下滑
 - 2015-2016 年：第二次大幅下滑
@@ -51,8 +51,8 @@ and retry with 'git restore --source=HEAD :/'
 - **应注意引用的权威性、时效性和准确性。尽量采用原始文献，次选二手文献，避免三手文献**
 - 在引用其他网站内容时，请查证其引用的内容是否真实可信，并且不要直接引用网站内容，而是要尽量查阅一手来源
 - 请提交到 main 分支
-- 请避免学术不端行为，参见 [高等学校预防与处理学术不端行为办法](https://www.gov.cn/zhengce/2016-07/19/content_5713390.htm)
-- 遵守 [FreeBSD 中文社区行为规范](https://docs.bsdcn.org/CODE_OF_CONDUCT)
+- 请避免学术不端行为，参见 [高等学校预防与处理学术不端行为办法](https://www.gov.cn/zhengce/2016-07/19/content_5713390.htm) [备份](https://megalodon.jp/?url=https://www.gov.cn/zhengce/2016-07/19/content_5713390.htm)
+- 遵守 [FreeBSD 中文社区行为规范](https://docs.bsdcn.org/CODE_OF_CONDUCT) [备份](https://web.archive.org/web/20260114065427/https://docs.bsdcn.org/CODE_OF_CONDUCT)
 
 #### 使之成为“一本书”，而不仅仅是本字典或手册
 
@@ -124,8 +124,8 @@ and retry with 'git restore --source=HEAD :/'
 
 名词解释：
 
-- `autocrlf`：配置 Git 自动处理(转换)行结束符的默认行为。参见 [配置 Git 处理行结束符 - Github Docs](https://docs.github.com/zh/get-started/git-basics/configuring-git-to-handle-line-endings)
-- `signingkey`：指设置带签名提交时默认使用的签名密钥。signingkey 既可指 GPG Key，亦可指 SSH Key。因为自 Git 2.34 起，Git 支持了 SSH 签名验证功能。参见 [关于提交签名验证 - Github Docs](https://docs.github.com/zh/authentication/managing-commit-signature-verification/about-commit-signature-verification)
+- `autocrlf`：配置 Git 自动处理(转换)行结束符的默认行为。参见 [配置 Git 处理行结束符 - Github Docs](https://docs.github.com/zh/get-started/git-basics/configuring-git-to-handle-line-endings) [备份](https://web.archive.org/web/20260114065307/https://docs.github.com/zh/get-started/git-basics/configuring-git-to-handle-line-endings)
+- `signingkey`：指设置带签名提交时默认使用的签名密钥。signingkey 既可指 GPG Key，亦可指 SSH Key。因为自 Git 2.34 起，Git 支持了 SSH 签名验证功能。参见 [关于提交签名验证 - Github Docs](https://docs.github.com/zh/authentication/managing-commit-signature-verification/about-commit-signature-verification) [备份](https://web.archive.org/web/20260114065242/https://docs.github.com/zh/authentication/managing-commit-signature-verification/about-commit-signature-verification)
 
 拉取命令：
 
@@ -145,7 +145,7 @@ $ git clone https://github.com/FreeBSD-Ask/FreeBSD-Ask
 
 本项目是主项目（即 `https://book.bsdcn.org`）托管在 Gitbook；
 
-`https://docs.bsdcn.org` 是社区自行构建的，docs 网站本身的贡献指南参见 [FreeBSD 从入门到跑路 VitePress 镜像项目](https://github.com/FreeBSD-Ask/FreeBSD-Ask.github.io/blob/main/README.md)。
+`https://docs.bsdcn.org` 是社区自行构建的，docs 网站本身的贡献指南参见 [FreeBSD 从入门到跑路 VitePress 镜像项目](https://github.com/FreeBSD-Ask/FreeBSD-Ask.github.io/blob/main/README.md) [备份](https://web.archive.org/web/20260115014200/https://github.com/FreeBSD-Ask/FreeBSD-Ask.github.io/blob/main/README.md)。
 
 >**技巧**
 >
@@ -235,7 +235,7 @@ $ git clone https://github.com/FreeBSD-Ask/FreeBSD-Ask
 
 ### 如何新建章节
 
-自行操作时参见操作实例 [Commit 6023cc8](https://github.com/FreeBSD-Ask/FreeBSD-Ask/commit/6023cc8d58f3a1b9849ff11fa63bf3980177c370) 和下方 `SUMMARY.md` 结构说明。
+自行操作时参见操作实例 [Commit 6023cc8](https://github.com/FreeBSD-Ask/FreeBSD-Ask/commit/6023cc8d58f3a1b9849ff11fa63bf3980177c370) [备份](https://web.archive.org/web/20260115011403/https://github.com/FreeBSD-Ask/FreeBSD-Ask/commit/6023cc8d58f3a1b9849ff11fa63bf3980177c370) 和下方 `SUMMARY.md` 结构说明。
 
 如果有困难可发邮件联系 ykla 来操作。
 
@@ -334,7 +334,7 @@ $ git clone https://github.com/FreeBSD-Ask/FreeBSD-Ask
 - [ ] 32.4.网络信息系统（NIS）（过时，用 SSSD-LADP 代替）
 - [ ] 30.5.使用 ATM 上的 PPP (PPPoA)（过时）
 - [ ] 29.4.拨入服务（过时）
-- [ ] gbde 相关加密（已从 [源代码](https://github.com/freebsd/freebsd-src/commit/8d2d1d651678178aa7f24f0530347f860423fd9e) 移除）
+- [ ] gbde 相关加密（已从 [源代码](https://github.com/freebsd/freebsd-src/commit/8d2d1d651678178aa7f24f0530347f860423fd9e) [备份](https://web.archive.org/web/20260115011216/https://github.com/freebsd/freebsd-src/commit/8d2d1d651678178aa7f24f0530347f860423fd9e) 移除）
 - [ ] 29.5.拨出服务（过时）
 - [ ] 30.2.配置 PPP（过时）
 - [ ] 31.3.DragonFly 邮件代理（DMA）（过时，用 Postfix 等代替）
@@ -350,12 +350,12 @@ $ git clone https://github.com/FreeBSD-Ask/FreeBSD-Ask
 
 **需要重写** 的内容（请撰写这些内容）：
 
-参见 [Projects](https://github.com/FreeBSD-Ask/FreeBSD-Ask/projects)。
+参见 [Projects](https://github.com/FreeBSD-Ask/FreeBSD-Ask/projects) [备份](https://web.archive.org/web/20260114065016/https://github.com/FreeBSD-Ask/FreeBSD-Ask/projects?query=is%3Aopen)。
 
 ### NetBSD ToDo
 
-参见 [Projects](https://github.com/FreeBSD-Ask/FreeBSD-Ask/projects)。
+参见 [Projects](https://github.com/FreeBSD-Ask/FreeBSD-Ask/projects) [备份](https://web.archive.org/web/20260114065016/https://github.com/FreeBSD-Ask/FreeBSD-Ask/projects?query=is%3Aopen)。
 
 ### DragonFlyBSD ToDo
 
-参见 [Projects](https://github.com/FreeBSD-Ask/FreeBSD-Ask/projects)。
+参见 [Projects](https://github.com/FreeBSD-Ask/FreeBSD-Ask/projects) [备份](https://web.archive.org/web/20260114065016/https://github.com/FreeBSD-Ask/FreeBSD-Ask/projects?query=is%3Aopen)。

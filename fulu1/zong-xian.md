@@ -232,7 +232,7 @@ microSD 也就是通常所说的 TF 卡（两者关系类似于 EFI 与 UEFI）�
 
 ### 参考文献
 
-- [Raspberry Pi 树莓派中文文档](https://rpicn.bsdcn.org)
+- [Raspberry Pi 树莓派中文文档](https://rpicn.bsdcn.org) [备份](https://web.archive.org/web/20260115142621/https://rpicn.bsdcn.org/)
 - [Inside the Raspberry Pi: The story of the $35 computer that changed the world](https://www.techrepublic.com/article/inside-the-raspberry-pi-the-story-of-the-35-computer-that-changed-the-world/)
 - [SD 卡和 microSD 卡类型指南](https://www.kingston.com/cn/blog/personal-storage/microsd-sd-memory-card-guide)
 - [SD 卡 和 microSD 卡速度等级指南](https://www.kingston.com/cn/blog/personal-storage/memory-card-speed-classes)

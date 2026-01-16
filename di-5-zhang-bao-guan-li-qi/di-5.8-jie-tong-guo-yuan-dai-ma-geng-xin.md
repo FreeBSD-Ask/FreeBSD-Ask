@@ -81,7 +81,7 @@ $ git clone --branch releng/15.0 --single-branch --depth 1 https://github.com/fr
 
 ### 参考文献
 
-- [Submitting GitHub Pull Requests to FreeBSD](https://freebsdfoundation.org/our-work/journal/browser-based-edition/configuration-management-2/submitting-github-pull-requests-to-freebsd/)
+- [Submitting GitHub Pull Requests to FreeBSD](https://freebsdfoundation.org/our-work/journal/browser-based-edition/configuration-management-2/submitting-github-pull-requests-to-freebsd/) [备份](https://web.archive.org/web/20260115021904/https://freebsdfoundation.org/our-work/journal/browser-based-edition/configuration-management-2/submitting-github-pull-requests-to-freebsd/)
 
 
 ## Gitup

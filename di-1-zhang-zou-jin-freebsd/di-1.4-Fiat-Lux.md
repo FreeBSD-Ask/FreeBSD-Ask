@@ -32,7 +32,7 @@ Fiat Lux 出自拉丁文圣经“1.3：Dixitque Deus : Fiat lux. Et facta est lu
 
 叔本华认为，许多人将圆滑世故视为成熟，而这实际上只是另一种不成熟。“Fiat Lux”号召学生永葆赤子之心，追求自由与理想。它鼓励学生不仅止于言说，更重于实践。
 
-作为公立大学，Fiat Lux 意味着鼓励学生们投身于加州地区乃至于美国的建设，提高美国人民的受教育水平，伯克利大学的助学政策，对近一半的本科生免除了学费。旨在保障所有人接受高等教育的权利，使其不因经济拮据而放弃学业，从而实现大学的教育使命。加州大学伯克利分校在 2025 年的 QS 世界排名为第 12 名。加州大学伯克利分校已诞生 59 位 [诺贝尔奖](https://inspire.berkeley.edu/get-inspired/nobels/) 得主，切实履行了大学的学术责任。
+作为公立大学，Fiat Lux 意味着鼓励学生们投身于加州地区乃至于美国的建设，提高美国人民的受教育水平，伯克利大学的助学政策，对近一半的本科生免除了学费。旨在保障所有人接受高等教育的权利，使其不因经济拮据而放弃学业，从而实现大学的教育使命。加州大学伯克利分校在 2025 年的 QS 世界排名为第 12 名。加州大学伯克利分校已诞生 59 位 [诺贝尔奖](https://inspire.berkeley.edu/get-inspired/nobels/) [备份](https://web.archive.org/web/20260114074014/https://inspire.berkeley.edu/get-inspired/nobels/) 得主，切实履行了大学的学术责任。
 
 《说文解字》载：“光，明也”。Fiat Lux 意味着追求光明与正义。加州大学伯克利分校学子亦始终通过反对越南战争、言论自由运动等一系列运动践行校训。作为中国教育史上的丰碑，国立西南联合大学，其纪念碑碑文载“河山既复，日月重光，联合大学之战时使命既成，奉命于三十五年五月四日结束。”在艰苦卓绝的环境下仍旧保留着学术的火种，散发着大学的光芒。国立西南联大存续时间虽短，却令人久久难忘。学生们或投笔从戎，或勤奋苦学以立志报国。“Fiat Lux”同时也是数十所其他高校的校训。国立西南联合大学的校训是“刚毅坚卓”，虽然没有光，但学生教授们都变成了光，推动着中国现代化的进程。而今我们再也找不到我们的西南联大了。
 
@@ -54,15 +54,15 @@ Fiat Lux!
 
 ## 参考文献
 
-- [Fiat Lux Scholarship](https://financialaid.berkeley.edu/types-of-aid-at-berkeley/scholarships/fiat-lux-scholarship/)，Fiat Lux 奖学金
-- [蔡元培像](https://www.xsg.pku.edu.cn/details/1893.html)，北京大学校史馆
+- [Fiat Lux Scholarship](https://financialaid.berkeley.edu/types-of-aid-at-berkeley/scholarships/fiat-lux-scholarship/) [备份](https://web.archive.org/web/20260115035656/https://financialaid.berkeley.edu/types-of-aid-at-berkeley/scholarships/fiat-lux-scholarship/) ，Fiat Lux 奖学金
+- [蔡元培像](https://www.xsg.pku.edu.cn/details/1893.html) ，北京大学校史馆
 - 蔡元培. 蔡元培：言有物，行有伦 [M]. 北京: 中国文史出版社, 2023. 蔡元培名言出自《何为文化》一节 ISBN 9787520538169.
 - 随着明治维新，国力渐增，日本逐步迈上了对外侵略扩张的军国主义道路，1887 年，日本参谋本部制定了所谓“清国征讨策略”，逐渐演化为以侵略中国为中心的“大陆政策”。
 - Piazza L, Lummen TTA, Quiñonez E, Murooka Y, Reed BW, Barwick B, Carbone F.Simultaneous observation of the quantization and the interference pattern of a plasmonic near-field. Nature Communications 02 March 2015.
 - [德] 伊曼努尔•康德. 历史理性批判文集 [M]. 译者: 何兆武, 天津人民出版社, 2014-10.ISBN: 9787201086415，第 22 页《答复这个问题：“什么是启蒙运动？”》
-- [Portrait of UC Berkeley namesake no longer on display in Doe Library](https://www.lib.berkeley.edu/about/news/george-berkeley-portrait)，加州大学伯克利分校图书馆摘除了贝克莱的画像
+- [Portrait of UC Berkeley namesake no longer on display in Doe Library](https://www.lib.berkeley.edu/about/news/george-berkeley-portrait) [备份](https://web.archive.org/web/20260114073819/https://www.lib.berkeley.edu/about/news/george-berkeley-portrait)，加州大学伯克利分校图书馆摘除了贝克莱的画像
 - [德] 尼采. 善恶的彼岸 [M]. 译者: 赵千帆, 商务印书馆, 2015-12. ISBN: 9787100117494 第四章第 146 小节
 - 《迪迦奥特曼》第 47 集告别黑暗 梅塔莫尔加登场 第 21 分沙耶香
-- [国立西南联合大学纪念碑碑文](https://www.tsinghua.org.cn/info/1952/17852.htm)
+- [国立西南联合大学纪念碑碑文](https://www.tsinghua.org.cn/info/1952/17852.htm) [备份](https://web.archive.org/web/20260114164444/https://www.tsinghua.org.cn/info/1952/17852.htm)
 - 闻黎明. 西南联大与现代中国（1937~1946）[M]. 社会科学文献出版社, 2023-1. ISBN: 9787520198059
 - Raphael A. Abrahao, Henri P. N. Morin, Jordan T. R. Pagé, Akbar Safari, Robert W. Boyd, and Jeff S. Lundeen, "Shadow of a laser beam," Optica 11, 1549-1555 (2024)，论文指出，光也有影子

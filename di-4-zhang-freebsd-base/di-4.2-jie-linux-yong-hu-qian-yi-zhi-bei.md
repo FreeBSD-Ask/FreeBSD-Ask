@@ -248,7 +248,7 @@ openSUSE 因其 Logo 形象，在社区中被昵称为“大蜥蜴”。
 
 其版本号命名曾有一段趣事：为纪念英国作家道格拉斯·亚当斯在《银河系漫游指南》中提到的数字“42”（被誉为“生命、宇宙以及一切事物的终极答案”），openSUSE 将版本号从 13.x 跳跃至 42.x，随后又下调回 15.x。这导致了版本号逻辑上的一个现象：由于 42 大于 15，在特定条件下，从 15.x 升级可能会错误地指向 **更低** 的 42.x 版本。这种版本号跳跃再跌落现象在发行版中实属罕见。
 
-openSUSE 有时会在稳定版本的软件包中引入实验性功能，且可能没有明确的提示（参见 [Bugzilla – Bug 1213157 repo http://download.opensuse.org/update/leap/15.5/oss : metadata expired](https://bugzilla.opensuse.org/show_bug.cgi?id=1213157)）。这可能导致用户将其视为软件缺陷（Bug）进行反馈。用户可能需要提交问题报告后，才能从维护者处得知该行为是实验性功能所致。
+openSUSE 有时会在稳定版本的软件包中引入实验性功能，且可能没有明确的提示（参见 [Bugzilla – Bug 1213157 repo http://download.opensuse.org/update/leap/15.5/oss : metadata expired](https://bugzilla.opensuse.org/show_bug.cgi?id=1213157) [备份](https://web.archive.org/web/20260115013739/https://bugzilla.opensuse.org/show_bug.cgi?id=1213157)）。这可能导致用户将其视为软件缺陷（Bug）进行反馈。用户可能需要提交问题报告后，才能从维护者处得知该行为是实验性功能所致。
 
 >**思考题**
 >

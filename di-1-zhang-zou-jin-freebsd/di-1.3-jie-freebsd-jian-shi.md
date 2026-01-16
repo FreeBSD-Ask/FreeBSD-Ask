@@ -6,13 +6,13 @@
 
 “Berkeley”在中文音译上存在不同写法，其美式与英式发音也不同（英 /ˈbɑ:kli, ˈbə:kli/ 美 /ˈbɚkli/），但英文拼写保持一致。
 
-受政治正确（涉及其[黑奴问题](https://www.lib.berkeley.edu/about/news/george-berkeley-portrait)）及翻译习惯（历史上曾译作“巴克莱”等）的影响，这一关联不仅在汉语世界鲜为人知，在英语世界也可能如此。
+受政治正确（涉及其[黑奴问题](https://www.lib.berkeley.edu/about/news/george-berkeley-portrait) [备份](https://web.archive.org/web/20260114073819/https://www.lib.berkeley.edu/about/news/george-berkeley-portrait)）及翻译习惯（历史上曾译作“巴克莱”等）的影响，这一关联不仅在汉语世界鲜为人知，在英语世界也可能如此。
 
 ## 乔治·贝克莱生平简介
 
 ![George Berkeley](../.gitbook/assets/Berkeley2.png)
 
-图片出处：[George Berkeley](https://www.npg.org.uk/collections/search/portrait.php?search=ap&npgno=653&eDate=&lDate=)
+图片出处：[George Berkeley](https://www.npg.org.uk/collections/search/portrait.php?search=ap&npgno=653&eDate=&lDate=) 
 
 
 George Berkeley（1685.3.12—1753.1.14），2023 年是他逝世 270 周年。2025 年则是其诞辰 340 周年。
@@ -46,7 +46,7 @@ George Berkeley（1685.3.12—1753.1.14），2023 年是他逝世 270 周年。2
 
 贝克莱大主教的著作还引发了数学史上关于无穷小量的数学哲学讨论（即贝克莱悖论，参见 1734，《分析学家；或一篇致一位不信神数学家的论文，其中审查一下近代分析学的对象、原则及论断是不是比宗教的神秘、信仰的要点有更清晰的表达，或更明显的推理》）。
 
-贝克莱悖论本身并未被“解决”，其哲学层面仍是开放性问题。ε‑δ 定义只是使实分析在 ZFC 公理体系下变得形式自洽。许多人常以该定义来尝试解决[芝诺（Zeno of Elea）悖论](https://plato.stanford.edu/entries/paradox-zeno/)，进而否定其哲学价值。
+贝克莱悖论本身并未被“解决”，其哲学层面仍是开放性问题。ε‑δ 定义只是使实分析在 ZFC 公理体系下变得形式自洽。许多人常以该定义来尝试解决[芝诺（Zeno of Elea）悖论](https://plato.stanford.edu/entries/paradox-zeno/) [备份](https://web.archive.org/web/20260115134315/https://plato.stanford.edu/entries/paradox-zeno/) ，进而否定其哲学价值。
 
 更多相关资源可参阅关于非标准分析、超实数及数学哲学等方面的书籍。
 
@@ -133,6 +133,6 @@ George Berkeley（1685.3.12—1753.1.14），2023 年是他逝世 270 周年。2
 - [澳] 陶哲轩. 陶哲轩实分析 [M]. 李馨， 译. 第 4 版. 北京： 人民邮电出版社， 2025.（ISBN 9787115665546）
 - George Berkeley. *The Querist, containing several queries proposed to the consideration of the public* [M]. Gale ECCO, Print Editions, April 23, 2018（ISBN 9781385411018）
 - Schabas, Margaret, "Economics in Early Modern Philosophy", The Stanford Encyclopedia of Philosophy (Summer 2022 Edition), Edward N. Zalta (ed.), URL = <https://plato.stanford.edu/archives/sum2022/entries/economics-early-modern/>. SEP 早期现代经济哲学条目
-- [George Berkeley, Bishop of Cloyne/Philosopher](http://cloyne.ie/about/george-berkeley-bishop-of-cloyne/)，Cloyne District Community Council
-- [George Berkeley](https://www.britannica.com/biography/George-Berkeley)，大英百科全书贝克莱条目
+- [George Berkeley, Bishop of Cloyne/Philosopher](http://cloyne.ie/about/george-berkeley-bishop-of-cloyne/) [备份](https://web.archive.org/web/20260114073713/https://cloyne.ie/about/george-berkeley-bishop-of-cloyne/)，Cloyne District Community Council
+- [George Berkeley](https://www.britannica.com/biography/George-Berkeley) [备份](https://web.archive.org/web/20260115022234/https://www.britannica.com/biography/George-Berkeley) ，大英百科全书贝克莱条目
 - 胡化凯. 20 世纪 50-70 年代中国科学批判资料选（上下）[M]. 济南： 山东教育出版社， 2009.（已绝版，ISBN 7532853861）。其中整本下册均涉及对爱因斯坦的批判。
