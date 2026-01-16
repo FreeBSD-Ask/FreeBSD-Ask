@@ -13,11 +13,11 @@
 
 [超平和 Busters](https://github.com/banbo96)（QQ 昵称/微信名）对本社区及文档，以及 QQ 群、微信公众号、微信群发挥了重要的管理作用，并创建和维护过本社区的多个关联账号。
 
-本项目早期发起人为 [clean-master 清理大师](https://github.com/clean-master)。他自费创建了域名 `freebsdcn.org`（现已不再使用）并创建了目前仍在维护的主页 <https://bsdcn.org>。他鼓励 ykla 创建一个项目来维护相关的 FreeBSD 教程。
+本项目早期发起人为 [clean-master 清理大师](https://github.com/clean-master) [备份](https://web.archive.org/web/20260114061313/https://github.com/clean-master)。他自费创建了域名 `freebsdcn.org`（现已不再使用）并创建了目前仍在维护的主页 <https://bsdcn.org>。他鼓励 ykla 创建一个项目来维护相关的 FreeBSD 教程。
 
 [Roberta Wheeler](https://github.com/rowheel) 曾自费部署并维护本项目的服务器（现已切换至 GitBook 及 GitHub Pages 免费服务），并撰写了部分文章。
 
-[safreya](https://github.com/safreya) 曾开发了两款用于导出本项目 PDF 文档的开源工具（目前仍在使用），并撰写了大量文章。
+[safreya](https://github.com/safreya) [备份](https://web.archive.org/web/20260114070028/https://github.com/safreya) 曾开发了两款用于导出本项目 PDF 文档的开源工具（目前仍在使用），并撰写了大量文章。
 
 Ubuntu 吧前吧主 Simple 曾建议修改项目的章节文件名与许可协议，这提高了本项目的可维护性。
 

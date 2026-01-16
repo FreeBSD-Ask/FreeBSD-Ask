@@ -20,7 +20,7 @@
 >   - 请确认是 `amd64`（适用于普通电脑）**而非** `arm64`（适用于开发板）。
 >- 你的 U 盘是否为扩容盘？（假冒伪劣）
 > - 你是否使用了 Ventoy 工具？
->   - 建议使用 [Rufus](https://rufus.ie/zh/) 进行刻录，而非 [Ventoy](https://www.ventoy.net/cn/index.html)。
+>   - 建议使用 [Rufus](https://rufus.ie/zh/) [备份](https://web.archive.org/web/20260115142915/https://rufus.ie/zh/) 进行刻录，而非 [Ventoy](https://www.ventoy.net/cn/index.html)。
 
 
 若仍出现问题，请先在 [官方论坛](https://forums.freebsd.org/) 使用英语询问；若无果，可按其他章节指引提交 bug。

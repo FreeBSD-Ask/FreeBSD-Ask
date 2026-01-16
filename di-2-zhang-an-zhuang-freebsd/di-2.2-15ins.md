@@ -13,7 +13,7 @@
 >
 >本文基于 VMware 17 进行演示（使用 UEFI）。
 >
->若为物理机安装，可考虑使用 [rufus](https://rufus.ie/zh/) 工具配合 [img 镜像](https://download.freebsd.org/ftp/releases/ISO-IMAGES/15.0/FreeBSD-15.0-RELEASE-amd64-memstick.img)。
+>若为物理机安装，可考虑使用 [rufus](https://rufus.ie/zh/) [备份](https://web.archive.org/web/20260115142915/https://rufus.ie/zh/) 工具配合 [img 镜像](https://download.freebsd.org/ftp/releases/ISO-IMAGES/15.0/FreeBSD-15.0-RELEASE-amd64-memstick.img)。
 
 ## 启动安装盘
 
@@ -70,7 +70,7 @@
 >
 >本章将指导用户如何使用该工具来进行 FreeBSD 的安装。该工具不仅存在于安装镜像中，安装完成后你在新装系统中依然可以找到它，并且还可用它来执行普通的安装流程（请记住这一点，在高级的安装方式中很有用）。
 >
-> `bsdinstall` 工具本质上是由一系列 sh 脚本构成的，其源代码位于 [usr.sbin/bsdinstall](https://github.com/freebsd/freebsd-src/tree/main/usr.sbin/bsdinstall)，脚本在“scripts”文件夹下。
+> `bsdinstall` 工具本质上是由一系列 sh 脚本构成的，其源代码位于 [usr.sbin/bsdinstall](https://github.com/freebsd/freebsd-src/tree/main/usr.sbin/bsdinstall) [备份](https://web.archive.org/web/20260115144213/https://github.com/freebsd/freebsd-src/tree/main/usr.sbin/bsdinstall)，脚本在“scripts”文件夹下。
 
 欢迎菜单。
 
@@ -119,8 +119,8 @@
 ### 参考信息
 
 - [If the hostname is not set for the host, the value "Amnesiac" should be written to rc.conf.](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=286847)，笔者发现的 bug
-- [libexec/getty/main.c](https://github.com/freebsd/freebsd-src/blob/80c12959679ab203459dc20eb9ece3a7328b7de5/libexec/getty/main.c#L178)，`Amnesiac` 源码
-- [bsdinstall: Warn if hostname is empty](https://github.com/freebsd/freebsd-src/pull/1700)，笔者的 PR
+- [libexec/getty/main.c](https://github.com/freebsd/freebsd-src/blob/80c12959679ab203459dc20eb9ece3a7328b7de5/libexec/getty/main.c#L178) [备份](https://web.archive.org/web/20260115144130/https://github.com/freebsd/freebsd-src/blob/80c12959679ab203459dc20eb9ece3a7328b7de5/libexec/getty/main.c#L178)，`Amnesiac` 源码
+- [bsdinstall: Warn if hostname is empty](https://github.com/freebsd/freebsd-src/pull/1700) [备份](https://web.archive.org/web/20260115144314/https://github.com/freebsd/freebsd-src/pull/1700)，笔者的 PR
 
 ## 选择安装类型
 
@@ -217,7 +217,7 @@ pkgbase 是 TrueOS 留给 FreeBSD 项目的技术遗产，旨在以软件包形�
 
 ## 分配磁盘空间
 
-FreeBSD 15.0-RELEASE 支持选择 UFS 或 ZFS 作为根文件系统。旧版本中，`bsdinstall` 工具仅支持 UFS；[自 10.0 版本起](http://svn.freebsd.org/viewvc/base?view=revision&revision=256361)，`bsdinstall` 开始支持 ZFS。通过手动安装方式，则早在 [8.0 版本](https://blog.delphij.net/posts/2008/11/zfs-1/)即可将 ZFS 用作根分区。
+FreeBSD 15.0-RELEASE 支持选择 UFS 或 ZFS 作为根文件系统。旧版本中，`bsdinstall` 工具仅支持 UFS；[自 10.0 版本起](http://svn.freebsd.org/viewvc/base?view=revision&revision=256361)，`bsdinstall` 开始支持 ZFS。通过手动安装方式，则早在 [8.0 版本](https://blog.delphij.net/posts/2008/11/zfs-1/) [备份](https://web.archive.org/web/20260115144031/https://blog.delphij.net/posts/2008/11/zfs-1/)即可将 ZFS 用作根分区。
 
 ![](../.gitbook/assets/ins7-15.png)
 
@@ -583,7 +583,7 @@ root 密码强度无强制要求，但不可为空。若密码为空，将提示
 ### 参考文献
 
 - [Regulatory Domain Support](https://wiki.freebsd.org/WiFi/RegulatoryDomainSupport)
-- [main/lib/lib80211/regdomain.xml](https://github.com/freebsd/freebsd-src/blob/main/lib/lib80211/regdomain.xml)，regdomain.xml 在源代码的位置
+- [main/lib/lib80211/regdomain.xml](https://github.com/freebsd/freebsd-src/blob/main/lib/lib80211/regdomain.xml) [备份](https://web.archive.org/web/20260115144118/https://github.com/freebsd/freebsd-src/blob/main/lib/lib80211/regdomain.xml)，regdomain.xml 在源代码的位置
 - [regdomain.xml --	802.11 wireless	regulatory definitions](https://man.freebsd.org/cgi/man.cgi?query=regdomain&sektion=5)，对应编码请参考系统中的 `/etc/regdomain.xml` 文件
 - [阿里公共 DNS](https://www.alidns.com/)
 
@@ -674,7 +674,7 @@ CST 为中国标准时间（China Standard Time）的缩写，确认无误后按
 
 ![虚拟机无固件可安装](../.gitbook/assets/install-14.2.png)
 
-自动检测并安装所需的硬件固件（该功能自 14.2 版本[引入](https://cgit.freebsd.org/src/commit/?id=03c07bdc8b31)）。
+自动检测并安装所需的硬件固件（该功能自 14.2 版本[引入](https://cgit.freebsd.org/src/commit/?id=03c07bdc8b31) [备份](https://web.archive.org/web/20260115144114/https://cgit.freebsd.org/src/commit/?id=03c07bdc8b31)）。
 
 （此图为虚拟机安装界面截图）
 
@@ -749,7 +749,7 @@ adduser: INFO: Successfully added (ykla) to the user database. # 用户 ykla 已
 Add another user? (yes/no) [no]: # 是否继续添加其他用户
 ```
 
-- ① 如果用户全名为空（即不设置），系统会分配一个默认值 `User &`。这是早期 Unix 系统 GECOS 字段的遗留行为。相关代码位于 [freebsd-src/usr.sbin/pw/pw_user.c](https://github.com/freebsd/freebsd-src/blob/main/usr.sbin/pw/pw_user.c) 的 `static struct passwd fakeuser` 结构中。
+- ① 如果用户全名为空（即不设置），系统会分配一个默认值 `User &`。这是早期 Unix 系统 GECOS 字段的遗留行为。相关代码位于 [freebsd-src/usr.sbin/pw/pw_user.c](https://github.com/freebsd/freebsd-src/blob/main/usr.sbin/pw/pw_user.c) [备份](https://web.archive.org/web/20260115144213/https://github.com/freebsd/freebsd-src/blob/main/usr.sbin/pw/pw_user.c) 的 `static struct passwd fakeuser` 结构中。
 
 - ② 若选择使用随机密码，在最终确认信息前会显示一行：`adduser: INFO: Password for (ykla) is: D1MnujkWMv/m`，其中 `D1MnujkWMv/m` 即为生成的随机密码。
 
