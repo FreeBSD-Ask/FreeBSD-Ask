@@ -1,0 +1,19 @@
+name: 🔗 存档链接
+
+on:
+  workflow_dispatch:       # 手动触发
+
+jobs:
+  update_progress:
+    runs-on: ubuntu-latest
+    steps:
+    
+      - name: 检出仓库
+        uses: actions/checkout@v6
+        with:
+          ssh-key: ${{ secrets.DEPLOY_KEY }}
+          fetch-depth: 0
+
+      - name: 更新提交进度
+        run: |
+          python .github/scripts/link.py .
