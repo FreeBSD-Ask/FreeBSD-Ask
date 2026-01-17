@@ -29,7 +29,7 @@ jobs:
 
       - name: 更新 Markdown 链接
         run: |
-          echo "$(date)" >> test
+          python .github/scripts/link.py .  
 
       - name: 检查变动
         id: diff
@@ -52,8 +52,8 @@ jobs:
         if: steps.diff.outputs.changed == 'true'
         uses: peter-evans/create-pull-request@v8
         with:
-          commit-message: "📦 更新"
-          title: "📦 更新"
+          commit-message: "📦 更新归档链接"
+          title: "📦 更新归档链接"
           body: |
             自动更新 Markdown 中的存档链接。
             忽略 archive_log* 文件。
