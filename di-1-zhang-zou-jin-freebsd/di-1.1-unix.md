@@ -324,7 +324,7 @@ OSI（Open Source Initiative，开源促进会）基于开放软件定义（OSD�
 
 ### 关于各种软件的定义
 
-根据 [自由与非自由软件的分类](https://www.gnu.org/philosophy/categories.zh-cn.html) ，我们定义如下：
+根据 [自由与非自由软件的分类](https://www.gnu.org/philosophy/categories.zh-cn.html) [备份](https://web.archive.org/web/20260117035802/https://www.gnu.org/philosophy/categories.zh-cn.html) ，我们定义如下：
 
 - 自由软件：符合上述四项基本自由定义的软件即称为自由软件。推论：商业软件可以是自由软件，商业 ≠ 非自由。引证 1：[自由软件可以是商业软件](https://www.gnu.org/philosophy/free-sw.zh-cn.html#four-freedoms) [备份](https://web.archive.org/web/20260115033837/https://www.gnu.org/philosophy/free-sw.zh-cn.html#four-freedoms) ；引证 2：[Words to Avoid (or Use with Care) Because They Are Loaded or Confusing](https://www.gnu.org/philosophy/words-to-avoid.html) ,“Commercial”部分
 - 开源软件：使用上述开源协议授权的软件。所有自由软件都是开源软件，但是所有开源软件不一定是自由软件。二者的定义和理念都有一定的差异。自由软件是开源软件的充分不必要条件
@@ -356,7 +356,7 @@ OSI（Open Source Initiative，开源促进会）基于开放软件定义（OSD�
 
 ### CC-BY-NC（所有版本）、CC-BY-ND（所有版本）既不自由也不开源
 
-根据 [各类许可证及其评论](https://www.gnu.org/philosophy/categories.zh-cn.html) ，结合 [OSI Approved Licenses](https://opensource.org/licenses) ，CC-BY-NC（所有版本）、CC-BY-ND（所有版本）等均不属于开源软件许可证或自由软件许可证，因此在该许可证授权下的项目既非传统意义上的自由软件亦非开源软件。
+根据 [各类许可证及其评论](https://www.gnu.org/philosophy/categories.zh-cn.html) [备份](https://web.archive.org/web/20260117035802/https://www.gnu.org/philosophy/categories.zh-cn.html) ，结合 [OSI Approved Licenses](https://opensource.org/licenses) ，CC-BY-NC（所有版本）、CC-BY-ND（所有版本）等均不属于开源软件许可证或自由软件许可证，因此在该许可证授权下的项目既非传统意义上的自由软件亦非开源软件。
 
 原因很简单，上述协议都歧视商业用户，剥夺了商业用户的“自由”。
 
