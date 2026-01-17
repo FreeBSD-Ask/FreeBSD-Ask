@@ -29,7 +29,7 @@ jobs:
 
       - name: 更新 Markdown 链接
         run: |
-          python .github/scripts/link.py .  
+          python .github/scripts/link.py .  && rm -rf archive_log*
 
       - name: 检查变动
         id: diff
