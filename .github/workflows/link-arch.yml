@@ -19,6 +19,25 @@ jobs:
         with:
           python-version: '3.14'
 
-      - name: 更新提交进度
+      - name: 安装依赖
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests tqdm
+
+      - name: 更新 Markdown 链接
         run: |
           python .github/scripts/link.py .
+
+      - name: 检查变动并提交 PR
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          # 忽略 archive_log* 文件
+          if ! git diff --quiet -- . ':!archive_log*'; then
+            git add . ':!archive_log*'
+            git commit -m "📦 更新存档链接"
+            git push origin HEAD:refs/heads/update-archive-links
+            # 创建 PR（可选使用 gh cli）
+            gh pr create --title "更新存档链接" --body "自动更新 Markdown 存档链接" --head update-archive-links --base main
+          else
+            echo "没有文件变动，无需提交。"
