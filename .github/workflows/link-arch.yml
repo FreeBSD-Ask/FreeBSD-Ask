@@ -1,20 +1,21 @@
 name: 🔗 存档链接
 
 on:
-  workflow_dispatch:       # 手动触发
+  workflow_dispatch:
 
 jobs:
   update_progress:
     runs-on: ubuntu-latest
+
     steps:
-    
       - name: 检出仓库
         uses: actions/checkout@v6
         with:
-          ssh-key: ${{ secrets.DEPLOY_KEY }}
           fetch-depth: 0
-          
-      - name: 部署 python
+
+
+
+      - name: 部署 Python
         uses: actions/setup-python@v6
         with:
           python-version: '3.14'
@@ -26,19 +27,27 @@ jobs:
 
       - name: 更新 Markdown 链接
         run: |
-          python .github/scripts/link.py .
+          touch test
 
-      - name: 检查变动并提交 PR
+      - name: 检查变动
+        id: diff
         run: |
-          git config user.name "github-actions"
-          git config user.email "actions@github.com"
-          # 忽略 archive_log* 文件
-          if ! git diff --quiet -- . ':(exclude)archive_log*'; then
-            git add . ':(exclude)archive_log*'
-            git commit -m "📦 更新存档链接"
-            git push origin HEAD:refs/heads/update-archive-links
-            # 创建 PR（可选使用 gh cli）
-            gh pr create --title "更新存档链接" --body "自动更新 Markdown 存档链接" --head update-archive-links --base main
+          if git diff --quiet -- . ':(exclude)archive_log*'; then
+            echo "changed=false" >> $GITHUB_OUTPUT
           else
-            echo "没有文件变动，无需提交。"
+            echo "changed=true" >> $GITHUB_OUTPUT
           fi
+
+      - name: 创建 Pull Request
+        if: steps.diff.outputs.changed == 'true'
+        uses: peter-evans/create-pull-request@v8
+        with:
+          commit-message: "📦 更新存档链接"
+          title: "📦 更新存档链接"
+          body: |
+            自动更新 Markdown 中的存档链接。
+            忽略 archive_log* 文件。
+          labels: |
+            automation
+            markdown
+          delete-branch: true
