@@ -34,18 +34,26 @@ jobs:
       - name: 检查变动
         id: diff
         run: |
-          if git diff --quiet -- . ':(exclude)archive_log*'; then
-            echo "changed=false" >> $GITHUB_OUTPUT
-          else
+          # 先添加所有变更到暂存区
+          git add .
+          
+          # 检查是否有除了 archive_log* 之外的变更
+          # 使用 :(exclude)archive_log* 排除 archive_log 开头的文件
+          if git diff --cached --name-only -- . ":(exclude)archive_log*" | grep -q "."; then
             echo "changed=true" >> $GITHUB_OUTPUT
+          else
+            echo "changed=false" >> $GITHUB_OUTPUT
           fi
+          
+          # 重置暂存区，让 create-pull-request action 处理提交
+          git reset
 
       - name: 创建 Pull Request
         if: steps.diff.outputs.changed == 'true'
         uses: peter-evans/create-pull-request@v8
         with:
-          commit-message: "📦 更新存档链接"
-          title: "📦 更新存档链接"
+          commit-message: "📦 更新"
+          title: "📦 更新"
           body: |
             自动更新 Markdown 中的存档链接。
             忽略 archive_log* 文件。
