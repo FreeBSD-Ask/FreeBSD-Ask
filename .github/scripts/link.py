@@ -266,6 +266,19 @@ def process_file(path):
     with LIST_LOCK:
         PROCESSED_FILES += 1
 
+# ================= 递归收集文件 =================
+
+def collect_md_files(path):
+    md_files = []
+    if os.path.isfile(path) and path.endswith(".md"):
+        md_files.append(path)
+    elif os.path.isdir(path):
+        for entry in os.scandir(path):
+            md_files.extend(collect_md_files(entry.path))
+    return md_files
+
+# ================= 主函数 =================
+
 def main():
     global TOTAL_FILES
     if len(sys.argv) != 2:
@@ -274,15 +287,8 @@ def main():
 
     target = sys.argv[1]
     
-    # 预扫描：计算文件总数
-    all_files = []
-    if os.path.isfile(target) and target.endswith(".md"):
-        all_files.append(target)
-    elif os.path.isdir(target):
-        for root, _, files in os.walk(target):
-            for f in files:
-                if f.endswith(".md"):
-                    all_files.append(os.path.join(root, f))
+    # 递归收集文件
+    all_files = collect_md_files(target)
     
     TOTAL_FILES = len(all_files)
     if TOTAL_FILES == 0:
