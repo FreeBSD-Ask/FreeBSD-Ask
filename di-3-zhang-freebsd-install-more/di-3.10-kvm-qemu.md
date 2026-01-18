@@ -176,7 +176,7 @@ mfsBSD 的 `root` 默认密码为 `mfsroot`。你可以使用 SSH 工具连接�
 
 也许可以参考：
 
-- [Booting mfsBSD via PXE with UEFI](https://unix.stackexchange.com/questions/563053/booting-mfsbsd-via-pxe-with-uefi) 与 [Booting mfsBSD via iPXE on EFI](https://forums.freebsd.org/threads/booting-mfsbsd-via-ipxe-on-efi.66169/) 采用 PXE 方式引导。
+- [Booting mfsBSD via PXE with UEFI](https://unix.stackexchange.com/questions/563053/booting-mfsbsd-via-pxe-with-uefi) [备份](https://web.archive.org/web/20260118023519/https://unix.stackexchange.com/questions/563053/booting-mfsbsd-via-pxe-with-uefi) 与 [Booting mfsBSD via iPXE on EFI](https://forums.freebsd.org/threads/booting-mfsbsd-via-ipxe-on-efi.66169/) 采用 PXE 方式引导。
 - [FreeBSD 下搭建 PXE 服务器](https://book.bsdcn.org/freebsd-shou-ce/di-34-zhang-gao-ji-wang-luo/34.10.-shi-yong-pxe-jin-hang-wu-pan-cao-zuo)
 
 待解决、待尝试。
@@ -189,7 +189,7 @@ mfsBSD 的 `root` 默认密码为 `mfsroot`。你可以使用 SSH 工具连接�
 
 ### 待尝试的方案
 
-- `dd` 写入 [VM-IMAGES 列表下的镜像](https://download.freebsd.org/releases/VM-IMAGES/14.3-RELEASE/amd64/Latest/)
+- `dd` 写入 [VM-IMAGES 列表下的镜像](https://download.freebsd.org/releases/VM-IMAGES/14.3-RELEASE/amd64/Latest/) [备份](https://web.archive.org/web/20260118023657/https://download.freebsd.org/releases/VM-IMAGES/14.3-RELEASE/amd64/Latest/)
 - `dd` 写入 [FreeBSD-14.3-RELEASE-amd64-memstick](https://download.freebsd.org/releases/ISO-IMAGES/14.3/FreeBSD-14.3-RELEASE-amd64-memstick.img)
 - 在 QEMU 平台上，尝试直接 `dd`
 

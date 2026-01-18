@@ -17,7 +17,7 @@
 >
 >本文基于 VMware 17 进行演示（使用 UEFI）。
 >
->若是物理机，请考虑使用 [Rufus](https://rufus.ie/zh/) [备份](https://web.archive.org/web/20260115142915/https://rufus.ie/zh/) 搭配 [img 镜像](https://download.freebsd.org/ftp/releases/ISO-IMAGES/14.3/FreeBSD-14.3-RELEASE-amd64-memstick.img) 镜像制作启动盘。
+>若是物理机，请考虑使用 [Rufus](https://rufus.ie/zh/) [备份](https://web.archive.org/web/20260115142915/https://rufus.ie/zh/) 搭配 [img 镜像](https://download.freebsd.org/ftp/releases/ISO-IMAGES/14.3/FreeBSD-14.3-RELEASE-amd64-memstick.img) [备份](https://web.archive.org/web/20260116195032/https://download.freebsd.org/ftp/releases/ISO-IMAGES/14.3/FreeBSD-14.3-RELEASE-amd64-memstick.img) 镜像制作启动盘。
 
 
 > **警告**

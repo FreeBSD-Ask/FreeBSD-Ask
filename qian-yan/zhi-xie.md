@@ -34,7 +34,7 @@ Ubuntu 吧前吧主 Simple 曾建议修改项目的章节文件名与许可协�
 - [Alex6357](https://github.com/Alex6357)
 - April Simone🍥
 - [VZstless](https://github.com/atlarator)
-- [bduath](https://github.com/bduath)  
+- [bduath](https://github.com/bduath) [备份](https://web.archive.org/web/20260118021541/https://github.com/bduath)  
 - [blu10ph](https://github.com/blu10ph)  
 - [bsdwiki](https://github.com/bsdwiki)
 - [dacheng119](https://github.com/dacheng119) [备份](https://web.archive.org/web/20260117181422/https://github.com/dacheng119)
@@ -59,13 +59,13 @@ Ubuntu 吧前吧主 Simple 曾建议修改项目的章节文件名与许可协�
 - matatabi-wang  
 - 墨子  
 - [mxdyeah / mxdabc](https://mxdyeah.top/)  
-- [nerdroychan](https://github.com/nerdroychan)  
+- [nerdroychan](https://github.com/nerdroychan) [备份](https://web.archive.org/web/20260117121724/https://github.com/nerdroychan)  
 - [number201724](https://github.com/number201724)  
 - [orzyyyy](https://github.com/orzyyyy)  
 - [peiyafei](https://github.com/peiyafei)  
-- [pengxingwei](https://github.com/pengxingwei)  
+- [pengxingwei](https://github.com/pengxingwei) [备份](https://web.archive.org/web/20260118020032/https://github.com/pengxingwei)  
 - [puffinjiang](https://github.com/puffinjiang)  
-- 清和 [qinghecyn](https://github.com/qinghecyn)  
+- 清和 [qinghecyn](https://github.com/qinghecyn) [备份](https://web.archive.org/web/20260117181455/https://github.com/qinghecyn)  
 - 清热解毒口服液  
 - [Rintim](https://github.com/Rintim)  
 - [ruur](https://github.com/ruur)  

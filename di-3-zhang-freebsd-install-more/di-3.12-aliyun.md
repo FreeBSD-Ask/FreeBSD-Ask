@@ -549,7 +549,7 @@ EXT2、EXT3、EXT4、Btrfs 和 XFS 文件系统均不支持在线压缩。目前
 
 ### 通过 Ventoy 安装 FreeBSD
 
-Ventoy 是新一代多系统启动 U 盘解决方案，其项目官网地址为 [Ventoy](https://www.ventoy.net/cn/index.html)。
+Ventoy 是新一代多系统启动 U 盘解决方案，其项目官网地址为 [Ventoy](https://www.ventoy.net/cn/index.html) [备份](https://web.archive.org/web/20260116224411/https://www.ventoy.net/cn/index.html)。
 
 基本思路是通过内存盘系统将 Ventoy 写入整个硬盘，然后将 Ventoy 创建的容量较大的磁盘分区挂载到内存盘，再将 FreeBSD 系统写入该磁盘分区。
 
@@ -626,11 +626,11 @@ Ventoy 目前不支持在线下载 ISO 镜像文件。
 
 #### 使用 TinyCorePure64 写入 Ventoy
 
-TinyCorePure64 属于 [Core 项目](http://www.tinycorelinux.net/welcome.html)，该项目旨在提供高度模块化的系统，同时支持社区自定义构建。
+TinyCorePure64 属于 [Core 项目](http://www.tinycorelinux.net/welcome.html) [备份](https://web.archive.org/web/20260115184811/http://tinycorelinux.net/welcome.html)，该项目旨在提供高度模块化的系统，同时支持社区自定义构建。
 
 TinyCorePure64 能够在启动后完全载入内存，同时重启后亦将丢失所有数据。
 
-TinyCorePure64 下载地址是 [x86 Pure 64](http://www.tinycorelinux.net/ports.html)，进入页面后点击“Core Pure 64 Latest Build”选择“TinyCorePure64-16.2.iso”或类似版本下载即可。
+TinyCorePure64 下载地址是 [x86 Pure 64](http://www.tinycorelinux.net/ports.html) [备份](https://web.archive.org/web/20260118024746/http://www.tinycorelinux.net/ports.html)，进入页面后点击“Core Pure 64 Latest Build”选择“TinyCorePure64-16.2.iso”或类似版本下载即可。
 
 >**注意**
 >

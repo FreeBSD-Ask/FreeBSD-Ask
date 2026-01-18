@@ -5,7 +5,7 @@
 访问该网站，点击页面右侧的 `Download` 按钮即可下载。
 
 
-[https://www.virtualbox.org](https://www.virtualbox.org)
+[https://www.virtualbox.org](https://www.virtualbox.org) [备份](https://web.archive.org/web/20260118024400/https://www.virtualbox.org/)
 
 ## 安装设置
 

@@ -45,7 +45,7 @@ EPUB 格式文档在手机上可使用 [微信读书](https://play.google.com/st
 
 上述电子文档始终反映实时的网页内容，随 Git 提交而 **实时更新**（但其文件名不会发生变化）。
 
-电子书的生成由 [safreya](https://github.com/safreya) [备份](https://web.archive.org/web/20260114070028/https://github.com/safreya) 开发的 [GitBook PDF/EPUB 导出工具](https://github.com/FreeBSD-Ask/gitbook-pdf-export) [备份](https://web.archive.org/web/20260115023638/https://github.com/FreeBSD-Ask/gitbook-pdf-export) 提供支持。
+电子书的生成由 [safreya](https://github.com/safreya) 开发的 [GitBook PDF/EPUB 导出工具](https://github.com/FreeBSD-Ask/gitbook-pdf-export) 提供支持。
 
 ## 🌐 部署地址
 
@@ -148,7 +148,8 @@ EPUB 格式文档在手机上可使用 [微信读书](https://play.google.com/st
 <!-- CHINESE_CHAR_COUNT_START -->
 文档总字数：85.70 万字；
 
-统计时间：2026-01-18 09:38:12（北京时间）
+
+统计时间：2026-01-18 09:32:45（北京时间）
 
 与上周相比：+3.29 万字（+3.99%）
 
