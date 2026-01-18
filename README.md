@@ -79,7 +79,7 @@ EPUB 格式文档在手机上可使用 [微信读书](https://play.google.com/st
 
 ![](.gitbook/assets/proud_donor.png)
 
-[点此捐赠 FreeBSD 基金会](https://freebsdfoundation.org/donate-to-freebsd-foundation/) [备份](https://web.archive.org/web/20260115020445/https://freebsdfoundation.org/donate-to-freebsd-foundation/)
+[点此捐赠 FreeBSD 基金会](https://freebsdfoundation.org/donate-to-freebsd-foundation/)
 
 需要你持有 VISA 信用卡：请在捐赠页面下使用 Amazon Pay 或 Google Pay，经测试可用。
 
@@ -171,4 +171,4 @@ EPUB 格式文档在手机上可使用 [微信读书](https://play.google.com/st
 
 ---
 
-~~本书得到的 ⭐ 真是太少啦！~~ 若本书对你有帮助，欢迎给本书所在的 [GitHub 项目存储库](https://github.com/FreeBSD-Ask/FreeBSD-Ask) [备份](https://web.archive.org/web/20260115024725/https://github.com/FreeBSD-Ask/FreeBSD-Ask) 加颗 ⭐。
+~~本书得到的 ⭐ 真是太少啦！~~ 若本书对你有帮助，欢迎给本书所在的 [GitHub 项目存储库](https://github.com/FreeBSD-Ask/FreeBSD-Ask) 加颗 ⭐。
