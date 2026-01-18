@@ -1,0 +1,63 @@
+name: 🔗 存档链接
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  update_progress:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 检出仓库
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: 部署 Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.14'
+
+      - name: 安装依赖
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests tqdm
+
+      - name: 更新 Markdown 链接
+        run: |
+          python .github/scripts/link.py .  && rm -rf archive*
+
+      - name: 检查变动
+        id: diff
+        run: |
+          # 先添加所有变更到暂存区
+          git add .
+          
+          # 检查是否有除了 archive_log* 之外的变更
+          # 使用 :(exclude)archive_log* 排除 archive_log 开头的文件
+          if git diff --cached --name-only -- . ":(exclude)archive_log*" | grep -q "."; then
+            echo "changed=true" >> $GITHUB_OUTPUT
+          else
+            echo "changed=false" >> $GITHUB_OUTPUT
+          fi
+          
+          # 重置暂存区，让 create-pull-request action 处理提交
+          git reset
+
+      - name: 创建 Pull Request
+        if: steps.diff.outputs.changed == 'true'
+        uses: peter-evans/create-pull-request@v8
+        with:
+          commit-message: "📦 更新归档链接"
+          title: "📦 更新归档链接"
+          body: |
+            自动更新 Markdown 中的存档链接。
+            忽略 archive_log* 文件。
+          labels: |
+            automation
+            markdown
+          delete-branch: true

@@ -2,7 +2,7 @@
 
 ## DragonFly BSD 概述
 
-DragonFly BSD（蜻蜓 BSD）是一款基于 FreeBSD 4.8 衍生的类 Unix 操作系统。该项目由曾参与开发 Amiga（上世纪比较火的电脑）的 Matthew Dillon（毕业于伯克利大学）于 2003 年 6 月启动，在 2003 年 7 月发布在 [FreeBSD 邮件列表](https://lists.freebsd.org/pipermail/freebsd-current/2003-July/006889.html) 上。
+DragonFly BSD（蜻蜓 BSD）是一款基于 FreeBSD 4.8 衍生的类 Unix 操作系统。该项目由曾参与开发 Amiga（上世纪比较火的电脑）的 Matthew Dillon（毕业于伯克利大学）于 2003 年 6 月启动，在 2003 年 7 月发布在 [FreeBSD 邮件列表](https://lists.freebsd.org/pipermail/freebsd-current/2003-July/006889.html) [备份](https://web.archive.org/web/20251228020117/https://lists.freebsd.org/pipermail/freebsd-current/2003-July/006889.html) 上。
 
 Dillon 启动 DragonFly BSD 项目是因为他认为 FreeBSD 5 的开发人员采用了并行计算开发方式（例如 SMP 对称多处理），这可能降低系统性能。Dillon 试图影响 FreeBSD 项目的设计原则，并与 FreeBSD 开发人员发生争执，他被剥夺了直接编辑源代码的权力。尽管如此，DragonFly BSD 与 FreeBSD 项目仍在合作修复部分错误并更新驱动程序。
 
@@ -10,7 +10,7 @@ DragonFly BSD 因延续 FreeBSD 4 的发展路线而面临限制，其开发在�
 
 DragonFly BSD 自带 i915 显卡驱动，架构仅支持 x86-64。DragonFly BSD 不提供 Linux 兼容层。DPorts 可与 FreeBSD Ports 兼容。需要注意的是，DragonFly BSD 的驱动支持较为落后，显卡驱动平均滞后约 10 年。
 
-捐赠 DragonFly BSD：[Sponsoring projects](https://www.dragonflybsd.org/donations/)，目前仅支持国际 PayPal。此前已通过邮件咨询，但未收到任何反馈。
+捐赠 DragonFly BSD：[Sponsoring projects](https://www.dragonflybsd.org/donations/) [备份](https://web.archive.org/web/20260117173454/https://www.dragonflybsd.org/donations/)，目前仅支持国际 PayPal。此前已通过邮件咨询，但未收到任何反馈。
 
 > **注意**
 >
@@ -245,7 +245,7 @@ export LC_CTYPE="zh_CN.UTF-8"   # 设置字符类型本地化为中文 UTF-8
 
 ### Intel i915kms 显卡
 
-[根据硬件说明](https://www.dragonflybsd.org/docs/supportedhardware)，DragonFly BSD 6.4 显卡只支持到了英特尔第八代（Coffeelake）处理器。
+[根据硬件说明](https://www.dragonflybsd.org/docs/supportedhardware) [备份](https://web.archive.org/web/20240701033415/https://www.dragonflybsd.org/docs/supportedhardware/)，DragonFly BSD 6.4 显卡只支持到了英特尔第八代（Coffeelake）处理器。
 
 手动加载 DRM 内核模块，以启用显卡直接渲染（KMS、GPU 加速）并进行效果测试：
 
@@ -261,5 +261,5 @@ drm_load="YES"
 
 ## 参考文献
 
-- [DragonFlyBSD Updates Its Graphics Drivers With New GPU Support But Still Years Behind](https://www.phoronix.com/news/DragonFlyBSD-DRM-Linux-4.20.17)，2025 年，DragonFly BSD DRM 驱动程序代码方才与 Linux 4.20.17 中的代码同步
-- [Booting, UEFI, and text consoles](https://www.dragonflydigest.com/2017/09/14/booting-uefi-and-text-consoles/)
+- [DragonFlyBSD Updates Its Graphics Drivers With New GPU Support But Still Years Behind](https://www.phoronix.com/news/DragonFlyBSD-DRM-Linux-4.20.17) [备份](https://web.archive.org/web/20260117110925/https://www.phoronix.com/news/DragonFlyBSD-DRM-Linux-4.20.17)，2025 年，DragonFly BSD DRM 驱动程序代码方才与 Linux 4.20.17 中的代码同步
+- [Booting, UEFI, and text consoles](https://www.dragonflydigest.com/2017/09/14/booting-uefi-and-text-consoles/) [备份](https://web.archive.org/web/20260117173457/https://www.dragonflydigest.com/2017/09/14/booting-uefi-and-text-consoles/)
