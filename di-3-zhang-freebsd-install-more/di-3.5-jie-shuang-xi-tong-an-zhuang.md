@@ -437,5 +437,5 @@ zroot/var/tmp         96K  91.6G    96K  /var/tmp
 
 ## 参考文献
 
-- [How to manually install FreeBSD on a remote server (with UFS, ZFS, encryption...)](https://stanislas.blog/2018/12/how-to-install-freebsd-server/)
-- [RootOnZFS/GPTZFSBoot](https://wiki.freebsd.org/RootOnZFS/GPTZFSBoot)
+- [How to manually install FreeBSD on a remote server (with UFS, ZFS, encryption...)](https://stanislas.blog/2018/12/how-to-install-freebsd-server/) [备份](https://web.archive.org/web/20260117184103/https://stanislas.blog/2018/12/how-to-install-freebsd-server/)
+- [RootOnZFS/GPTZFSBoot](https://wiki.freebsd.org/RootOnZFS/GPTZFSBoot) [备份](https://web.archive.org/web/20251202034128/https://wiki.freebsd.org/RootOnZFS/GPTZFSBoot)

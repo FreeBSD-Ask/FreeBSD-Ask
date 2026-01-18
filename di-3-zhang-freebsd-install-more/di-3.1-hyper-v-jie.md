@@ -26,11 +26,11 @@ Hyper-V 是微软为 Windows / Windows Server 开发的企业级虚拟化管理�
 | :----------: | :----------: | :----------------------------------------------------------------: | :----: | :--------------------------------------------------------------------------------------------: |
 |    Gen 1     |     13.0     |                                支持                                | 不支持 |                                               /                                                |
 |    Gen 2     |     13.0     | RELEASE [不支持](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=221074) |  支持  |                          需修改参数 `sysctl kern.evdev.rcpt_mask=6`（启用 evdev，让 Xorg 正确检测 PS/2 设备）                           |
-|    Gen 2     |     14.0     |                                支持                                |  支持  | 参见 [源代码](https://cgit.FreeBSD.org/src/commit/?id=21f4e817fde79d5de79bfbdf180d358ca5f48bf9) |
+|    Gen 2     |     14.0     |                                支持                                |  支持  | 参见 [源代码](https://cgit.FreeBSD.org/src/commit/?id=21f4e817fde79d5de79bfbdf180d358ca5f48bf9) [备份](https://web.archive.org/web/20260117184405/https://cgit.freebsd.org/src/commit/?id=21f4e817fde79d5de79bfbdf180d358ca5f48bf9) |
 
 ### 参考文献
 
-- [Windows Server 和 Windows 中的 Hyper-V 虚拟化](https://learn.microsoft.com/zh-cn/windows-server/virtualization/hyper-v/overview)，微软官方对 Hyper-V 的说明。
+- [Windows Server 和 Windows 中的 Hyper-V 虚拟化](https://learn.microsoft.com/zh-cn/windows-server/virtualization/hyper-v/overview) [备份](https://web.archive.org/web/20251228031747/https://learn.microsoft.com/zh-cn/windows-server/virtualization/hyper-v/overview)，微软官方对 Hyper-V 的说明。
 
 ## 测试环境
 
@@ -137,7 +137,7 @@ PS C:\Users\ykla> Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-H
 
 ## 参考文献
 
-- [在 Windows 上安装 Hyper-V](https://learn.microsoft.com/zh-cn/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v)，微软官方教程，还有多种方法可选
+- [在 Windows 上安装 Hyper-V](https://learn.microsoft.com/zh-cn/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v) [备份](https://web.archive.org/web/20251222054254/https://learn.microsoft.com/zh-cn/windows-server/virtualization/hyper-v/get-started/install-hyper-v)，微软官方教程，还有多种方法可选
 - [Hyper-V 集成服务](https://learn.microsoft.com/zh-cn/virtualization/hyper-v-on-windows/reference/integration-services)，对各种 Hyper-V 服务进行了详细说明
 - [使用检查点将虚拟机恢复到以前的状态](https://learn.microsoft.com/zh-cn/virtualization/hyper-v-on-windows/user-guide/checkpoints?source=recommendations&tabs=hyper-v-manager%2Cpowershell)
 - [在 Hyper-V 中在标准检查点与生产检查点之间进行选择](https://learn.microsoft.com/zh-cn/windows-server/virtualization/hyper-v/manage/choose-between-standard-or-production-checkpoints-in-hyper-v)

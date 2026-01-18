@@ -24,7 +24,7 @@
 
 ### 下载安装 QQ
 
-- 下载 QQ，官方链接：[QQ Linux 版 - 轻松做自己](https://im.qq.com/linuxqq/index.shtml)
+- 下载 QQ，官方链接：[QQ Linux 版 - 轻松做自己](https://im.qq.com/linuxqq/index.shtml) [备份](https://web.archive.org/web/20260117102215/https://im.qq.com/linuxqq/index.shtml)
 
 ```sh
 # fetch https://dldir1.qq.com/qqfile/qq/QQNT/Linux/QQ_3.2.17_250521_x86_64_01.rpm # 文章撰写时的链接，实际使用请获取最新版本

@@ -29,7 +29,7 @@ Ubuntu 吧前吧主 Simple 曾建议修改项目的章节文件名与许可协�
 
 ## 文档贡献者名单（A-Z）
 
-- [5gura](https://github.com/5gura)
+- [5gura](https://github.com/5gura) [备份](https://web.archive.org/web/20260117181304/https://github.com/5gura)
 - [algotao](https://github.com/algotao)
 - [Alex6357](https://github.com/Alex6357)
 - April Simone🍥
@@ -37,20 +37,20 @@ Ubuntu 吧前吧主 Simple 曾建议修改项目的章节文件名与许可协�
 - [bduath](https://github.com/bduath)  
 - [blu10ph](https://github.com/blu10ph)  
 - [bsdwiki](https://github.com/bsdwiki)
-- [dacheng119](https://github.com/dacheng119)
+- [dacheng119](https://github.com/dacheng119) [备份](https://web.archive.org/web/20260117181422/https://github.com/dacheng119)
 - [Dedicatus5457](https://github.com/Dedicatus5457)  
 - DogeW  
 - [dongdigua](https://github.com/dongdigua)  
 - [fanyang1997](https://github.com/fanyang1997)  
 - [fjh1997](https://github.com/fjh1997)  
 - freyr  
-- [gua-leopard](https://github.com/gua-leopard)
+- [gua-leopard](https://github.com/gua-leopard) [备份](https://web.archive.org/web/20260117182650/https://github.com/gua-leopard)
 - heguru5  
 - isNijikawa  
 - Jack  
 - Jiacong Fang（[zldrobit](https://github.com/zldrobit)）
 - kuntop  
-- [李大鹏](https://dapeng.li/)  
+- [李大鹏](https://dapeng.li/) [备份](https://web.archive.org/web/20250621115454/https://dapeng.li/)  
 - [liguangsheng](https://github.com/liguangsheng)
 - livrth  
 - [凌莞](https://clansty.com)  
@@ -75,7 +75,7 @@ Ubuntu 吧前吧主 Simple 曾建议修改项目的章节文件名与许可协�
 - [tergel93](https://github.com/tergel93)  
 - [tomblackwhite](https://github.com/tomblackwhite)  
 - 艳阳天
-- [Wang Yan Hao](https://github.com/Wang-Yan-Hao)
+- [Wang Yan Hao](https://github.com/Wang-Yan-Hao) [备份](https://web.archive.org/web/20260117182303/https://github.com/Wang-Yan-Hao)
 - [wyathou](https://github.com/wyathou)  
 - X-Ray  
 - 心即理物即心  
@@ -84,10 +84,10 @@ Ubuntu 吧前吧主 Simple 曾建议修改项目的章节文件名与许可协�
 - 地铁卡  
 - 兜率  
 - 极品盗号  
-- [魔王酱](https://github.com/maou-sama-desu)  
+- [魔王酱](https://github.com/maou-sama-desu) [备份](https://web.archive.org/web/20260117182545/https://github.com/maou-sama-desu)  
 - 🎀🌸 星不萌 🌸🎀（贴吧账户）  
 - 雨天
-- [玟茵开源社区](https://www.wenyinos.com/)
+- [玟茵开源社区](https://www.wenyinos.com/) [备份](https://web.archive.org/web/20250628160552/https://www.wenyinos.com/)
 
 ## 开源项目
 
@@ -97,4 +97,4 @@ Ubuntu 吧前吧主 Simple 曾建议修改项目的章节文件名与许可协�
 
 本项目还获得了 [GitBook 开源计划](https://www.gitbook.com/solutions/open-source) 的赞助，网站 `book.bsdcn.org` 即由其驱动。
 
-本项目的镜像网站 `docs.bsdcn.org` 基于 [VitePress](https://vitejs.cn/vitepress/) 构建。
+本项目的镜像网站 `docs.bsdcn.org` 基于 [VitePress](https://vitejs.cn/vitepress/) [备份](https://web.archive.org/web/20260117182314/https://vitejs.cn/vitepress/) 构建。

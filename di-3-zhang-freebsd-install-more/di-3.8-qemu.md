@@ -8,7 +8,7 @@ QEMU 是一款通过纯软件进行模拟的开源虚拟机监视器，支持多
 
 QEMU 下载地址：
 
-[QEMU Binaries for Windows (64 bit)](https://qemu.weilnetz.de/w64/)，请下载列表中最新的安装程序。写作本文时，最新版本为 `qemu-w64-setup-20241220.exe`。大小为 174M。
+[QEMU Binaries for Windows (64 bit)](https://qemu.weilnetz.de/w64/) [备份](https://web.archive.org/web/20260108214840/https://qemu.weilnetz.de/w64/)，请下载列表中最新的安装程序。写作本文时，最新版本为 `qemu-w64-setup-20241220.exe`。大小为 174M。
 
 下载后在 Windows 上安装 QEMU。
 
@@ -186,5 +186,5 @@ ssh ykla@localhost:8022
 ## 参考文献
 
 - [Create FreeBSD virtual machine using qemu. Run the VM using xhyve.](https://gist.github.com/zg/38a3afa112ddf7de4912aafc249ec82f)，有一些扩容方法
-- [在 QEMU for Windows x64 上搭建 RISC-V 环境（Debian Linux）](https://naiv.fun/Ops/83.html)，有一些概念解释和整体框架
+- [在 QEMU for Windows x64 上搭建 RISC-V 环境（Debian Linux）](https://naiv.fun/Ops/83.html) [备份](https://web.archive.org/web/20260117183356/https://naiv.fun/Ops/83.html)，有一些概念解释和整体框架
 - [RISC-V Emulation Revisited](https://smist08.wordpress.com/2023/04/28/risc-v-emulation-revisited/)，各种参数来自此处。

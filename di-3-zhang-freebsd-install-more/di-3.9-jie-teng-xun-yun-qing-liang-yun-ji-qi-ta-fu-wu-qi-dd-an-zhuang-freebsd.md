@@ -47,7 +47,7 @@
 
 如前所述，由于 FreeBSD 与 Linux 生态不同，需要先引导至一个运行在内存中的 Linux 环境，在该环境中将 mfsBSD 写入硬盘，最后通过 `bsdinstall` 工具完成系统安装。
 
-在 mfsBSD 下载页面的下方，可找到 [mfsLinux](https://mfsbsd.vx.sk/files/iso/mfslinux/mfslinux-0.1.11-94b1466.iso)，这正是我们所需的 Linux 环境。由于它仅提供 ISO 格式，无法在当前环境下直接启动。由于其基于纯 initrd 架构，需要从中提取内核和 initrd 文件，存放于硬盘并进行手动引导。
+在 mfsBSD 下载页面的下方，可找到 [mfsLinux](https://mfsbsd.vx.sk/files/iso/mfslinux/mfslinux-0.1.11-94b1466.iso) [备份](https://web.archive.org/web/20251207044607/https://mfsbsd.vx.sk/files/iso/mfslinux/mfslinux-0.1.11-94b1466.iso)，这正是我们所需的 Linux 环境。由于它仅提供 ISO 格式，无法在当前环境下直接启动。由于其基于纯 initrd 架构，需要从中提取内核和 initrd 文件，存放于硬盘并进行手动引导。
 
 在典型的 Linux 系统中，initrd 是一个被打包为内存盘的精简根文件系统，内含驱动程序、挂载工具以及启动初始化程序所必需的数据。开机时，引导加载程序（Bootloader）加载内核与 initrd，由 initrd 中的脚本执行启动准备，随后移交控制权给硬盘上的初始化程序。
 

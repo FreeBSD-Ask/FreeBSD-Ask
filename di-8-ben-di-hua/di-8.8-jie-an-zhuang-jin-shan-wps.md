@@ -27,7 +27,7 @@
 
 ### 下载金山 WPS
 
-官方下载地址：[WPS Office for Linux](https://linux.wps.cn/)。
+官方下载地址：[WPS Office for Linux](https://linux.wps.cn/) [备份](https://web.archive.org/web/20260117103105/https://linux.wps.cn/)。
 
 请自行获取有效链接，我使用浏览器下载。
 
