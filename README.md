@@ -67,7 +67,7 @@ EPUB 格式文档在手机上可使用 [微信读书](https://play.google.com/st
 
 为了建设一个友爱、希望与和平的社区环境，请确保您的行为符合 [FreeBSD 中文社区行为规范（CoC）](https://docs.bsdcn.org/CODE_OF_CONDUCT) 及其精神。
 
-由于架构设计原因，您必须使用 GitHub 账户登录方可留言，并且您在 docs 上的评论将会公开到 GitHub 存储库 [Handbook-giscus-discussions](https://github.com/FreeBSD-Ask/Handbook-giscus-discussions) [备份](https://web.archive.org/web/20260115020815/https://github.com/FreeBSD-Ask/Handbook-giscus-discussions) 的 Discussions 中，您可自行前往上述位置管理您的历史留言。
+由于架构设计原因，您必须使用 GitHub 账户登录方可留言，并且您在 docs 上的评论将会公开到 GitHub 存储库 [Handbook-giscus-discussions](https://github.com/FreeBSD-Ask/Handbook-giscus-discussions) 的 Discussions 中，您可自行前往上述位置管理您的历史留言。
 
 ## 🧭 目标与方向
 
