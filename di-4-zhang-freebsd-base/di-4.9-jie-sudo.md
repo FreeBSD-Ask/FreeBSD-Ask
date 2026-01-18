@@ -7,7 +7,7 @@
 
 对于大部分人来说，只需要 `sudo su` 这一条命令，其他内容都是多余的。在使用时将 `sudo` 直接替换为 `doas` 即可。
 
-OpenBSD 项目认为 sudo 软件配置复杂、代码质量较差、漏洞较多，故自行开发了 [doas](https://man.openbsd.org/doas)。因此，FreeBSD 也可以使用。
+OpenBSD 项目认为 sudo 软件配置复杂、代码质量较差、漏洞较多，故自行开发了 [doas](https://man.openbsd.org/doas) [备份](https://web.archive.org/web/20260102031731/https://man.openbsd.org/doas)。因此，FreeBSD 也可以使用。
 
 ### 安装 doas
 

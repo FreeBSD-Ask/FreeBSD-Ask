@@ -21,7 +21,7 @@
 
 ### 下载微信
 
-官方下载地址：[微信 Linux 测试版](https://linux.weixin.qq.com/)
+官方下载地址：[微信 Linux 测试版](https://linux.weixin.qq.com/) [备份](https://web.archive.org/web/20260117043920/https://linux.weixin.qq.com/en)
 
 ```sh
 # fetch https://dldir1v6.qq.com/weixin/Universal/Linux/WeChatLinux_x86_64.rpm	# 写作本文时链接如此，请自行获取最新的微信下载链接

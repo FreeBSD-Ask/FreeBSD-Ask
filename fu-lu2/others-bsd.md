@@ -5,7 +5,7 @@
 
 GhostBSD 始于 2010 年。
 
-GhostBSD 官网为 [https://www.ghostbsd.org](https://www.ghostbsd.org)。其口号为“A simple, elegant desktop BSD Operating System”，意为“简洁而优雅的 BSD 桌面操作系统”。
+GhostBSD 官网为 [https://www.ghostbsd.org](https://www.ghostbsd.org) [备份](https://web.archive.org/web/20260104044154/https://ghostbsd.org/)。其口号为“A simple, elegant desktop BSD Operating System”，意为“简洁而优雅的 BSD 桌面操作系统”。
 
 GhostBSD 曾基于 TrueOS（另一款消逝的桌面发行版），也曾使用 GNOME 作为桌面。GhostBSD 这一名称与早期 Windows 平台上常用的 Ghost 软件并无任何关联，其含义为“(G)nome (host)ed by Free(BSD)”（由 FreeBSD 驱动的 GNOME 桌面），而当前所使用的 MATE 桌面环境亦源自 GNOME 项目。GhostBSD 默认配置了 Linux 兼容层，但其使用方式与常规目录结构不同，且无法通过 chroot 直接进入，对 deb、rpm 文件的处理也无明显反馈。GhostBSD 使用 FreeBSD 的 pkg（默认软件源为 GhostBSD 镜像站）和 Ports，同时也提供了官方的图形化软件管理工具及自有的二进制软件包。
 
@@ -48,7 +48,7 @@ NomadBSD 默认采用 Xfce 桌面。
 
 ## MidnightBSD
 
-MidnightBSD 的官网为 [https://www.midnightbsd.org](https://www.midnightbsd.org)。MidnightBSD 也是一款基于 Xfce 桌面环境的发行版。~~起个名字真是太难了，而创始人的第一只猫叫 Midnight（即午夜，可能因为是只黑猫），所以就叫 MidnightBSD 啦。~~
+MidnightBSD 的官网为 [https://www.midnightbsd.org](https://www.midnightbsd.org) [备份](https://web.archive.org/web/20260118013614/https://www.midnightbsd.org/)。MidnightBSD 也是一款基于 Xfce 桌面环境的发行版。~~起个名字真是太难了，而创始人的第一只猫叫 Midnight（即午夜，可能因为是只黑猫），所以就叫 MidnightBSD 啦。~~
 
 MidnightBSD 始于 2006 年，拥有自己的二进制软件包系统——[mports](https://www.midnightbsd.org/documentation/mports/index.html)，安装过程中该选项默认启用。
 
@@ -73,7 +73,7 @@ helloSystem 始于 2021 年。helloSystem 在设计理念上类似于 Linux 生�
 
 helloSystem 项目的开发进度在一段时间内较为停滞。该项目团队甚至并未注册 helloSystem.org 域名。
 
-helloSystem 的官网为 <https://hellosystem.github.io/docs>，同时也是他们的文档网站。下载地址位于 [GitHub Releases 页面](https://github.com/helloSystem/ISO/releases)。
+helloSystem 的官网为 <https://hellosystem.github.io/docs>，同时也是他们的文档网站。下载地址位于 [GitHub Releases 页面](https://github.com/helloSystem/ISO/releases) [备份](https://web.archive.org/web/20260118013432/https://github.com/helloSystem/ISO/releases)。
 
 helloSystem 的设计原则主要面向 macOS 用户，可概括为“桌面风格 Mac 化的 FreeBSD”。设计哲学是“少而精”。
 

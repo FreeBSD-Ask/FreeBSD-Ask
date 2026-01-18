@@ -21,7 +21,7 @@
 
 ## 概述
 
-[腾讯云轻量应用服务器（即腾讯云轻量云）](https://cloud.tencent.com/product/lighthouse) 以及 [阿里云轻量应用服务器](https://www.aliyun.com/product/swas) 均未提供 FreeBSD 系统支持，只能通过特殊方法手动安装。
+[腾讯云轻量应用服务器（即腾讯云轻量云）](https://cloud.tencent.com/product/lighthouse) [备份](https://web.archive.org/web/20260118022716/https://cloud.tencent.com/product/lighthouse) 以及 [阿里云轻量应用服务器](https://www.aliyun.com/product/swas) 均未提供 FreeBSD 系统支持，只能通过特殊方法手动安装。
 
 >**警告**
 >
@@ -219,6 +219,6 @@ GRUB 不支持将 ISO 镜像挂载为内存盘，但其他引导程序或许可�
 
 ## 参考资料
 
-- [Remote Installation of the FreeBSD Operating System Without a Remote Console](https://docs.freebsd.org/en/articles/remote-install/)
+- [Remote Installation of the FreeBSD Operating System Without a Remote Console](https://docs.freebsd.org/en/articles/remote-install/) [备份](https://web.archive.org/web/20260118022819/https://docs.freebsd.org/en/articles/remote-install/)
 - [GRUB2 配置文件“grub.cfg”详解（GRUB2 实战手册）](https://www.jinbuguo.com/linux/grub.cfg.html)，作者：金步国。参数解释参见此处，有需要的读者请自行阅读。下同。
 - [关于启动时不显示 grub 界面的问题](https://phorum.vbird.org/viewtopic.php?f=2&t=40587)
