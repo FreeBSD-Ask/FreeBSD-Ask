@@ -133,6 +133,22 @@ Mon Jan 19 19:06:59 2026
 
 ## 故障排除
 
+### nvidia-smi 命令报错“mismatch”
+
+![](../.gitbook/assets/no-version-vo.jpg)
+
+当执行 nvidia-smi 命令时会出现错误提示“API mismatch”等字样。直译是 API 不匹配，提及不匹配，首先会想到是版本不匹配，即问题可能出现在 NVIDIA 本身的版本不匹配、NVIDIA 驱动本身与其他 NVIDIA 软件包版本不匹配、NVIDIA 和现有 FreeBSD 基本系统不匹配。
+
+因此建议将所有 NVIDIA 软件包全部卸载，随后将 FreeBSD 基本系统更新到最新，再重新执行驱动安装流程。
+
+### 如何卸载既有 NVIDIA 相关软件包
+
+如果提示版本不符，需要先卸载所有安装的 NVIDIA 相关软件包，然后按本文进行配置：
+
+```sh
+# pkg delete *nvidia*
+```
+
 ### 如何阻止驱动更新
 
 把 `pkg info -q | grep -i nvidia` 输出的相关软件包都逐个使用 `pkg lock`命令锁定即可。
@@ -148,10 +164,3 @@ Mon Jan 19 19:06:59 2026
 
 因此需要读者自行平衡安全与日常。
 
-### 如何卸载既有 NVIDIA 相关软件包
-
-如果提示版本不符，需要先卸载所有安装的 NVIDIA 相关软件包，然后安装本文进行配置：
-
-```sh
-# pkg delete *nvidia*
-```
