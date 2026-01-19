@@ -27,7 +27,7 @@ jobs:
     if: github.event_name == 'pull_request' || github.event_name == 'workflow_dispatch'
     steps:
       - name: Auto Assign PR
-        uses: kentaro-m/auto-assign-action@v2.0.0
+        uses: kentaro-m/auto-assign-action@v2.0.1
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           configuration-path: '.github/auto_assign.yml'
