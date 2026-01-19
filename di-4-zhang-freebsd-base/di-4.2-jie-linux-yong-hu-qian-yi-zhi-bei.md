@@ -5,7 +5,7 @@
 许多流行于 Linux 中的常见概念，其最初的提出者实际上是 BSD：
 
 - 例如“容器”的概念（可参考 [什么是 Linux 容器？](https://www.redhat.com/zh/topics/containers/whats-a-linux-container)）；
-- “发行版”的概念（参见 [《FreeBSD：原始操作系统发行版的火炬传承者》](https://book.bsdcn.org/fan-yi-wen-zhang-cun-dang/2025-nian-1-yue/bsd)）；
+- “发行版”的概念（参见 [《FreeBSD：原始操作系统发行版的火炬传承者》](https://book.bsdcn.org/fan-yi-wen-zhang-cun-dang/2025-nian-1-yue/bsd) [备份](https://web.archive.org/web/20260119054752/https://book.bsdcn.org/fan-yi-wen-zhang-cun-dang/2025-nian/bsd)）；
 - Gentoo 的 Ports 方法源于 BSD；
 - 乃至开源理念本身，也是 BSD 最早提出的，世界上第一款开源许可证即 BSD 许可证。在这个意义上，BSD 是世界上第一款真正自由开源的操作系统。
 
@@ -45,7 +45,7 @@ FreeBSD 基本系统几乎不包含任何与 BSD 协议不兼容的软件；
 
 许多 Linux 的常用概念最初源于 BSD，例如容器和发行版的概念。
 
-—— [什么是 Linux 容器？](https://www.redhat.com/zh/topics/containers/shenmeshi-linux-rongqi)
+—— [什么是 Linux 容器？](https://www.redhat.com/zh/topics/containers/shenmeshi-linux-rongqi) [备份](https://web.archive.org/web/20260119054228/https://www.redhat.com/zh-cn/topics/containers/whats-a-linux-container)
 
 我们现在称为容器技术的概念最初出现在 2000 年，当时称为 FreeBSD jail，这种技术可将 FreeBSD 系统分区为多个子系统（也称为 Jail）。Jail 是作为安全环境而开发的，系统管理员可与企业内部或外部的多个用户共享这些 Jail。2001 年，通过 Jacques Gélinas 的 VServer 项目，隔离环境的实施进入了 Linux 领域。在完成了这项针对 Linux 中多个受控制用户空间的基础性工作后，Linux 容器开始逐渐成形并最终发展成了现在的模样。2008 年，Docker 项目通过 dotCloud 平台推出其同名的容器技术并进入公众视野。
 
@@ -53,19 +53,19 @@ FreeBSD 基本系统几乎不包含任何与 BSD 协议不兼容的软件；
 
 - [浅析 Linux 初始化 init 系统，第 1 部分：sysvinit 第 2 部分：UpStart 第 3 部分：Systemd](https://www.cnblogs.com/MYSQLZOUQI/p/5250336.html)，为存档，原文已佚
 - [init -- process control initialization](https://man.freebsd.org/cgi/man.cgi?query=init)
-- [Comparison of init systems](https://wiki.gentoo.org/wiki/Comparison_of_init_systems)，各大 init 对比图
-- [GPL Software in FreeBSD Base](https://wiki.freebsd.org/GPLinBase)，FreeBSD 基本系统中的 GPL 软件
+- [Comparison of init systems](https://wiki.gentoo.org/wiki/Comparison_of_init_systems) [备份](https://web.archive.org/web/20260119054306/https://wiki.gentoo.org/wiki/Comparison_of_init_systems)，各大 init 对比图
+- [GPL Software in FreeBSD Base](https://wiki.freebsd.org/GPLinBase) [备份](https://web.archive.org/web/20260119053904/https://wiki.freebsd.org/GPLinBase)，FreeBSD 基本系统中的 GPL 软件
 
 ## 基本对比
 
 |   操作系统   |                           发布/生命周期（主要版本）                           |                          主要包管理器（命令）                          |                        许可证（主要）                        | 工具链 |   shell    |     桌面     |
 | :----------: | :---------------------------------------------------------------------------: | :--------------------------------------------------------------------: | :----------------------------------------------------------: | :----: | :--------: | :----------: |
-|    Ubuntu    |             [2 年/10 年](https://ubuntu.com/about/release-cycle)              |        [apt](https://ubuntu.com/server/docs/package-management)        | [GNU](https://ubuntu.com/legal/intellectual-property-policy) |  gcc   |    bash    |    Gnome     |
+|    Ubuntu    |             [2 年/10 年](https://ubuntu.com/about/release-cycle) [备份](https://web.archive.org/web/20260119053423/https://ubuntu.com/about/release-cycle)              |        [apt](https://ubuntu.com/server/docs/package-management)        | [GNU](https://ubuntu.com/legal/intellectual-property-policy) |  gcc   |    bash    |    Gnome     |
 | Gentoo Linux |                                   滚动更新                                    |       [Portage（emerge）](https://wiki.gentoo.org/wiki/Portage)        |                             GNU                              |  gcc   |    bash    |     可选     |
 |  Arch Linux  |                                   滚动更新                                    |           [pacman](https://wiki.archlinux.org/title/pacman)            |                             GNU                              |  gcc   |    bash    |     可选     |
 |     RHEL     | [3/最长 12 年](https://access.redhat.com/zh_CN/support/policy/updates/errata) | [RPM（yum、dnf）](https://www.redhat.com/sysadmin/how-manage-packages) |                             GNU                              |  gcc   |    bash    |    Gnome     |
-|   FreeBSD    |               [约 2/4 年](https://www.freebsd.org/security/)                |                               pkg/ports                                |                             BSD                              | clang  |   csh/sh   |     可选     |
-|   Windows    |       [不固定](https://docs.microsoft.com/zh-cn/lifecycle/faq/windows)        |                                  可选                                  |                             专有                             |  可选  | PowerShell | Windows 桌面 |
+|   FreeBSD    |               [约 2/4 年](https://www.freebsd.org/security/) [备份](https://web.archive.org/web/20260119053327/https://www.freebsd.org/security/)                |                               pkg/ports                                |                             BSD                              | clang  |   csh/sh   |     可选     |
+|   Windows    |       [不固定](https://docs.microsoft.com/zh-cn/lifecycle/faq/windows) [备份](https://web.archive.org/web/20260119054726/https://learn.microsoft.com/zh-cn/lifecycle/faq/windows)        |                                  可选                                  |                             专有                             |  可选  | PowerShell | Windows 桌面 |
 |    macOS     |                                 1 年/约 5 年                                  |                                   无                                   |           [专有](https://www.apple.com/legal/sla/)           | clang  |    zsh     |     Aqua     |
 
 
@@ -180,7 +180,7 @@ DISTRIB_DESCRIPTION="Ubuntu 24.04 LTS"
 
 Fedora 在部分社区中存在较为戏谑的称呼“[地沟油](https://zh.moegirl.org.cn/zh-hans/Fedora%E5%A8%98)”。
 
-Fedora 是基于 Red Hat Enterprise Linux（RHEL）的上游发行版，其定位侧重于技术验证和前沿特性测试，根本目的是为 RHEL 系统的新设计和新架构提供试验平台（[该社区由 Red Hat 红帽公司完全主导](https://docs.fedoraproject.org/en-US/council/)）。待特性稳定后，会引入到 RHEL 中。
+Fedora 是基于 Red Hat Enterprise Linux（RHEL）的上游发行版，其定位侧重于技术验证和前沿特性测试，根本目的是为 RHEL 系统的新设计和新架构提供试验平台（[该社区由 Red Hat 红帽公司完全主导](https://docs.fedoraproject.org/en-US/council/) [备份](https://web.archive.org/web/20260119053234/https://docs.fedoraproject.org/en-US/council/)）。待特性稳定后，会引入到 RHEL 中。
 
 因此，稳定性并非该发行版的主要设计目标。Fedora 官方的直接跨大版本升级失败率较高。这意味着长期使用后，用户可能需要进行全新安装并重新配置环境。用户难以在该发行版上获得长期的稳定性支持。与基于 Debian 的发行版不同，Fedora 不同大版本之间的软件源通常无法通用，因为软件依赖关系变动频繁。其各版本在定位上更接近于持续迭代的开发分支。其所有版本均包含大量新特性，稳定性表现与持续集成的 [nightly](https://openqa.fedoraproject.org/nightlies.html) 版本较为接近，差异不大。其稳定性特征与滚动更新发行版有相似之处。在部分测试场景下，其稳定性表现可能不及 Ubuntu。例如，在关闭屏幕保护与锁屏休眠功能后，进行长时间的高负载编译任务。在特定测试中，Fedora 系统可能在数小时后出现界面无响应，而在相同条件下，Ubuntu 系统运行正常。
 
@@ -203,9 +203,9 @@ CentOS 已从原先基于 RHEL 源代码重建的稳定发行版，转变为 RHE
 
 ![Debian Logo，图片来自 https://www.debian.org/](../.gitbook/assets/debian.png)
 
-Debian 的名称及 Logo 在中文语境中偶有基于谐音的非正式调侃“大便”（[谐音](https://www.debian.org/intro/about)“/ˈde.bi.ən/”）。
+Debian 的名称及 Logo 在中文语境中偶有基于谐音的非正式调侃“大便”（[谐音](https://www.debian.org/intro/about) [备份](https://web.archive.org/web/20260119054152/https://www.debian.org/intro/about)“/ˈde.bi.ən/”）。
 
-一个值得注意的[现象](https://lists.debian.org/debian-cd/2020/02/msg00000.html)是，如果在 Debian 安装过程中设置了 root 密码，系统默认可能不会安装 sudo 工具。这一设计通常被认为是出于安全性方面的考虑。但这可能与 GNOME 等桌面环境及大多数登录管理器默认禁止 root 账户直接登录的惯例存在张力。
+一个值得注意的[现象](https://lists.debian.org/debian-cd/2020/02/msg00000.html) [备份](https://web.archive.org/web/20260119053219/https://lists.debian.org/debian-cd/2020/02/msg00000.html)是，如果在 Debian 安装过程中设置了 root 密码，系统默认可能不会安装 sudo 工具。这一设计通常被认为是出于安全性方面的考虑。但这可能与 GNOME 等桌面环境及大多数登录管理器默认禁止 root 账户直接登录的惯例存在张力。
 
 此外，在部分版本（如 Debian 12.6）中，虽然会安装 sudo，但创建的第一个普通用户默认未被加入 `sudo` 组。这在实际使用中会带来不便，例如该普通用户无法直接通过 sudo 命令重启网络服务。用户需要切换到 tty 控制台登录 root 账户进行操作，这在一定程度上降低了图形界面（GUI）默认安装环境下的使用便利性。
 
@@ -256,7 +256,7 @@ openSUSE 有时会在稳定版本的软件包中引入实验性功能，且可�
 >
 >这是否可以用以论述，社区发行版仅仅是企业发行版的试验田。
 
-openSUSE 原生的包管理器是 `zypper`。有用户将其与 Fedora 的 `dnf` 进行对比，认为 `zypper` 在交互响应速度或某些场景下的性能表现有待优化 ~~比如你数数这有几个字母？~~，`zypper` 相比 `dnf` 存在明显的卡顿和延迟。且这两个包管理器在某些情况下存在竞争关系，参见 [Bug 1213158 - Packages install failed with ndb backend](https://bugzilla.opensuse.org/show_bug.cgi?id=1213158)。
+openSUSE 原生的包管理器是 `zypper`。有用户将其与 Fedora 的 `dnf` 进行对比，认为 `zypper` 在交互响应速度或某些场景下的性能表现有待优化 ~~比如你数数这有几个字母？~~，`zypper` 相比 `dnf` 存在明显的卡顿和延迟。且这两个包管理器在某些情况下存在竞争关系，参见 [Bug 1213158 - Packages install failed with ndb backend](https://bugzilla.opensuse.org/show_bug.cgi?id=1213158) [备份](https://web.archive.org/web/20260119054414/https://bugzilla.opensuse.org/show_bug.cgi?id=1213158)。
 
 ### Gentoo Linux
 
@@ -340,13 +340,13 @@ UOS 服务器承载能力有限，因此 UOS 对镜像下载方式存在过限�
 
 ### Arch Linux/Manjaro
 
-Arch Linux 在中文社区中存在一些非正式的社区戏称：“**[邪教](https://zh.moegirl.org.cn/zh-hans/Arch_Linux%E5%A8%98) 和 [洗发水](https://bbs.archlinuxcn.org/viewtopic.php?id=694)**”。这是一个以滚动更新模式著称的 Linux 发行版，因其高度的可定制性和软件的新颖度吸引了许多用户。
+Arch Linux 在中文社区中存在一些非正式的社区戏称：“**[邪教](https://zh.moegirl.org.cn/zh-hans/Arch_Linux%E5%A8%98) 和 [洗发水](https://bbs.archlinuxcn.org/viewtopic.php?id=694) [备份](https://web.archive.org/web/20260119054643/https://forum.archlinuxcn.org/t/topic/5929?redirected_from=https://bbs.archlinuxcn.org/viewtopic.php?id%3D694)**”。这是一个以滚动更新模式著称的 Linux 发行版，因其高度的可定制性和软件的新颖度吸引了许多用户。
 
 然而，滚动更新模式也意味着系统可能面临更高的不稳定风险。随着系统中安装的软件包数量增加，因依赖冲突或版本不兼容导致问题的概率也可能上升。有观点认为，通过仔细阅读官方更新公告可以规避多数问题。但这要求用户具备较高的主动维护意识和排查能力。
 
 Arch Linux 的主要优势在于软件包版本非常新。但并非所有软件都如此，部分特定领域的工具包（如某些 R 语言包）可能不如其他发行版（如 FreeBSD）更新及时。Arch Linux 在技术社区中拥有很高的知名度。
 
-Arch Linux 官方仓库（Official Repository）的软件包数量有限，用户通常需要启用 Arch 用户软件仓库（Arch User Repository，AUR）来获取更丰富的软件。而 AUR 源是[未经过任何代码审查的](https://wiki.archlinux.org/title/Arch_User_Repository)（`Warning: AUR packages are user-produced content. These PKGBUILDs are completely unofficial and have not been thoroughly vetted. Any use of the provided files is at your own risk.`，`警告： AUR 中的软件包是由其他用户编写的，这些 PKGBUILD 完全是非官方的，未经彻底审查。使用这些文件的风险由您自行承担。`）实际上缺乏系统性的集中审查机制：恶意或高风险脚本经常被提交其中。虽然构建过程在受限环境中进行，但无法保证生成的软件包本身是安全的。这类似于任何未经严格审核的软件来源（包括部分官方应用商店）都可能存在恶意软件。
+Arch Linux 官方仓库（Official Repository）的软件包数量有限，用户通常需要启用 Arch 用户软件仓库（Arch User Repository，AUR）来获取更丰富的软件。而 AUR 源是[未经过任何代码审查的](https://wiki.archlinux.org/title/Arch_User_Repository) [备份](https://web.archive.org/web/20260119054523/https://wiki.archlinux.org/title/Arch_User_Repository)（`Warning: AUR packages are user-produced content. These PKGBUILDs are completely unofficial and have not been thoroughly vetted. Any use of the provided files is at your own risk.`，`警告： AUR 中的软件包是由其他用户编写的，这些 PKGBUILD 完全是非官方的，未经彻底审查。使用这些文件的风险由您自行承担。`）实际上缺乏系统性的集中审查机制：恶意或高风险脚本经常被提交其中。虽然构建过程在受限环境中进行，但无法保证生成的软件包本身是安全的。这类似于任何未经严格审核的软件来源（包括部分官方应用商店）都可能存在恶意软件。
 
 这并非危言耸听，AUR 中确实曾[发现](https://www.linuxuprising.com/2018/07/malware-found-on-arch-user-repository.html?m=1)存在恶意软件包。
 
@@ -379,6 +379,6 @@ Node.js 的依赖存储在 `node_modules` 目录，而 Nix/NixOS 的所有包则
 ### 参考文献
 
 - [Benefits of Gentoo](https://wiki.gentoo.org/wiki/Benefits_of_Gentoo)
-- [The philosophy of Gentoo](https://www.gentoo.org/get-started/philosophy/)，Gentoo 设计哲学
-- [Arch compared to other distributions](https://wiki.archlinux.org/title/Arch_compared_to_other_distributions)，翻译[在这里](https://wiki.archlinuxcn.org/wiki/Arch_%E4%B8%8E%E5%85%B6%E4%BB%96%E5%8F%91%E8%A1%8C%E7%89%88%E7%9A%84%E6%AF%94%E8%BE%83)
+- [The philosophy of Gentoo](https://www.gentoo.org/get-started/philosophy/) [备份](https://web.archive.org/web/20260119053027/https://www.gentoo.org/get-started/philosophy/)，Gentoo 设计哲学
+- [Arch compared to other distributions](https://wiki.archlinux.org/title/Arch_compared_to_other_distributions)，翻译[在这里](https://wiki.archlinuxcn.org/wiki/Arch_%E4%B8%8E%E5%85%B6%E4%BB%96%E5%8F%91%E8%A1%8C%E7%89%88%E7%9A%84%E6%AF%94%E8%BE%83) [备份](https://web.archive.org/web/20260119053802/https://wiki.archlinuxcn.org/wiki/Arch_%E4%B8%8E%E5%85%B6%E4%BB%96%E5%8F%91%E8%A1%8C%E7%89%88%E7%9A%84%E6%AF%94%E8%BE%83)
 - 《C++ 语言的设计和演化》，[美] Bjarne Stroustrup，译者：裘宗燕，人民邮电出版社，ISBN 9787115497116

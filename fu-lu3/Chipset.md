@@ -1475,7 +1475,7 @@ Disabled（禁用）
 
 使用每 bank 刷新（Per Bank Refresh）可以减少，甚至消除刷新操作带来的性能损失。
 
-参见 [DDRMC5 Memory Controller](https://docs.amd.com/r/en-US/pg456-integrated-mc/Transaction-Size)
+参见 [DDRMC5 Memory Controller](https://docs.amd.com/r/en-US/pg456-integrated-mc/Transaction-Size) [备份](https://web.archive.org/web/20260119061410/https://docs.amd.com/r/en-US/pg456-integrated-mc/Transaction-Size)
 
 #### VC1 Read Metering（VC1 读取计量功能）
 
@@ -1971,7 +1971,7 @@ PSMI 是一个用于管理和监控电源供应器状态的接口。它允许主
 
 DVMT，Dynamic Video Memory，动态视频内存技术。DVMT 动态分配系统内存以用作视频内存。
 
-参考文献：[关于旧型英特尔 ® 图形产品内存的常见问题解答](https://www.intel.cn/content/www/cn/zh/support/articles/000006532/graphics/legacy-graphics.html)
+参考文献：[关于旧型英特尔 ® 图形产品内存的常见问题解答](https://www.intel.cn/content/www/cn/zh/support/articles/000006532/graphics/legacy-graphics.html) [备份](https://web.archive.org/web/20260119061914/https://www.intel.cn/content/www/cn/zh/support.html)
 
 #### DVMT Total Gfx Mem（DVMT 总计显存）
 
@@ -2063,7 +2063,7 @@ Disabled（禁用）
 
 说明：
 
-参见：[使用英特尔 ® 显卡播放蓝光光盘常见问题解答](https://www.intel.cn/content/www/cn/zh/support/articles/000006968/graphics.html)
+参见：[使用英特尔 ® 显卡播放蓝光光盘常见问题解答](https://www.intel.cn/content/www/cn/zh/support/articles/000006968/graphics.html) [备份](https://web.archive.org/web/20260119062220/https://www.intel.cn/content/www/cn/zh/support/articles/000006968/graphics.html)
 
 PAVP，Protected Audio Video Path，受保护的音频视频路径。
 
@@ -2741,7 +2741,7 @@ Disabled（禁用）
 
 WRC，Write Cache，写缓存。WRC 功能启用 Intel® 数据直通 I/O 技术（Intel® DDIO），使 I/O 设备能够利用最后一级缓存（LLC）作为中间缓冲区。此功能不对每个 CPU 的最后一级缓存进行分区。
 
-参见 [https://webdls.ieiworld.com/data/\_prod-detail-feature/DRPC-DEV-KIT/Real-Time-Tuning-Guide-11th-Gen-Intel-Core-Processors-1.4.pdf](https://webdls.ieiworld.com/data/_prod-detail-feature/DRPC-DEV-KIT/Real-Time-Tuning-Guide-11th-Gen-Intel-Core-Processors-1.4.pdf)、[file:///D:/improving-real-time-performance-of-codesys-control-applications-with-intel-s-real-time-technologies-1723443578.pdf](file:///D:/improving-real-time-performance-of-codesys-control-applications-with-intel-s-real-time-technologies-1723443578.pdf)
+参见 [https://webdls.ieiworld.com/data/\_prod-detail-feature/DRPC-DEV-KIT/Real-Time-Tuning-Guide-11th-Gen-Intel-Core-Processors-1.4.pdf](https://webdls.ieiworld.com/data/_prod-detail-feature/DRPC-DEV-KIT/Real-Time-Tuning-Guide-11th-Gen-Intel-Core-Processors-1.4.pdf) [备份](https://web.archive.org/web/20251207044805/https://webdls.ieiworld.com/data/_prod-detail-feature/DRPC-DEV-KIT/Real-Time-Tuning-Guide-11th-Gen-Intel-Core-Processors-1.4.pdf)、[file:///D:/improving-real-time-performance-of-codesys-control-applications-with-intel-s-real-time-technologies-1723443578.pdf](file:///D:/improving-real-time-performance-of-codesys-control-applications-with-intel-s-real-time-technologies-1723443578.pdf)
 
 ### Above 4GB MMIO BIOS assignment（BIOS 4GB 以上 MMIO 分配）
 
@@ -2761,7 +2761,7 @@ Disabled（禁用）
 
 在 BIOS 中启用此选项，可以让 64 位 PCIe 设备使用大于 4GB 的地址空间，但操作系统也必须是 64 位系统才能完全支持。
 
-目前该功能通常用于同时使用多张显卡的情况；该功能对于游戏和加密货币挖矿等高性能应用特别有用。参见 [BIOS Above 4GB MMIO BIOS Assignment / Above 4G Decoding](https://432hz.myqnapcloud.com:81/WordPress/above-4gb-mmio-bios-assignment-and-above-4g-decoding/)
+目前该功能通常用于同时使用多张显卡的情况；该功能对于游戏和加密货币挖矿等高性能应用特别有用。参见 [BIOS Above 4GB MMIO BIOS Assignment / Above 4G Decoding](https://432hz.myqnapcloud.com:81/WordPress/above-4gb-mmio-bios-assignment-and-above-4g-decoding/) [备份](https://web.archive.org/web/20260119062020/https://432hz.myqnapcloud.com:81/WordPress/above-4gb-mmio-bios-assignment-and-above-4g-decoding/)
 
 在禁用状态下，双 CPU 显卡及雷电接口设备的使用将受到限制。参见 [为什么使用类似 RocketRAID 840A 的 Legacy 设备，在其自带的 Raid Option 接口下识别不到硬盘，无法组建 RAID?](https://www.asus.com.cn/support/faq/1043356/)
 
@@ -3190,7 +3190,7 @@ PCI Express 2.0 规范规定了两种低功耗模式：L0s 和 L1 模式。
 
 对于英特尔® Arc™ 显卡，所有高于 G2 的电源状态都需要启用 ASPM L1。这意味着必须启用 ASPM L1 和全局操作系统设置才能支持英特尔 Arc 显卡低功耗模式。
 
-参考文献：[英特尔 ® 处理器的直接媒体接口（DMI）是什么？](https://www.intel.cn/content/www/cn/zh/support/articles/000094185/processors.html)
+参考文献：[英特尔 ® 处理器的直接媒体接口（DMI）是什么？](https://www.intel.cn/content/www/cn/zh/support/articles/000094185/processors.html) [备份](https://web.archive.org/web/20260119060854/https://www.intel.cn/content/www/cn/zh/support/articles/000094185/processors.html)
 
 #### Port8xh Decode（PCIE 8xh 端口解码）
 
@@ -3868,7 +3868,7 @@ IDE（Integrated Drive Electronics，集成驱动电子接口）
 
 并且这个 RAID，一般叫做 Fake-RAID/hardware-assisted software RAID，伪 RAID，不是真正的硬 RAID。这种情况下可能需要英特尔快速存储技术（RST）驱动才能正常使用。
 
-参见 [Install Arch Linux with Fake RAID](https://wiki.archlinuxcn.org/wiki/Install_Arch_Linux_with_Fake_RAID)
+参见 [Install Arch Linux with Fake RAID](https://wiki.archlinuxcn.org/wiki/Install_Arch_Linux_with_Fake_RAID) [备份](https://web.archive.org/web/20260119060851/https://wiki.archlinuxcn.org/wiki/Install_Arch_Linux_with_Fake_RAID)
 
 #### SATA Test Mode(SATA 测试模式)
 
@@ -4004,7 +4004,7 @@ Disabled（禁用）
 
 设备睡眠是 SATA 标准的一部分，理论上所有 SATA 设备（无论固态硬盘还是机械硬盘）均应支持该功能。
 
-参见 [什麼是 dev 睡眠功能以及如何禁用 dev 睡眠功能](https://www.intel.com.tw/content/www/tw/zh/support/articles/000024170/memory-and-storage.html)
+参见 [什麼是 dev 睡眠功能以及如何禁用 dev 睡眠功能](https://www.intel.com.tw/content/www/tw/zh/support/articles/000024170/memory-and-storage.html) [备份](https://web.archive.org/web/20260119060931/https://www.intel.com.tw/content/www/tw/zh/support/articles/000024170/memory-and-storage.html)
 
 #### DITO Configuration（驱动空闲超时配置）
 
@@ -4020,7 +4020,7 @@ DITO，Drive Idle Timeout（驱动空闲超时配置）。
 
 DITO 是指某个端口在硬件可以自动进入 DevSleep 状态之前必须保持空闲的时间。
 
-参见 [https://www.intel.com/content/dam/www/public/us/en/documents/technical-specifications/serial-ata-ahci-tech-proposal-rev1_3_1.pdf](https://www.intel.com/content/dam/www/public/us/en/documents/technical-specifications/serial-ata-ahci-tech-proposal-rev1_3_1.pdf)
+参见 [https://www.intel.com/content/dam/www/public/us/en/documents/technical-specifications/serial-ata-ahci-tech-proposal-rev1_3_1.pdf](https://www.intel.com/content/dam/www/public/us/en/documents/technical-specifications/serial-ata-ahci-tech-proposal-rev1_3_1.pdf) [备份](https://web.archive.org/web/20251207044815/https://www.intel.com/content/dam/www/public/us/en/documents/technical-specifications/serial-ata-ahci-tech-proposal-rev1_3_1.pdf)
 
 #### DTIO Value（驱动空闲超时时间）
 
@@ -4160,7 +4160,7 @@ HSII, HS Interrupt IN Alarm
 
 启用／禁用 HSII 功能。启用该功能可能会导致功耗增加。
 
-作用未知。参见 [https://raw.githubusercontent.com/intel/FSP/master/TigerLakeFspBinPkg/Docs/TigerLake_FSP_Integration_Guide.pdf](https://raw.githubusercontent.com/intel/FSP/master/TigerLakeFspBinPkg/Docs/TigerLake_FSP_Integration_Guide.pdf)
+作用未知。参见 [https://raw.githubusercontent.com/intel/FSP/master/TigerLakeFspBinPkg/Docs/TigerLake_FSP_Integration_Guide.pdf](https://raw.githubusercontent.com/intel/FSP/master/TigerLakeFspBinPkg/Docs/TigerLake_FSP_Integration_Guide.pdf) [备份](https://web.archive.org/web/20260119061422/https://raw.githubusercontent.com/intel/FSP/master/TigerLakeFspBinPkg/Docs/TigerLake_FSP_Integration_Guide.pdf)
 
 #### xHCI Compliance Mode（xHCI 合规模式）
 
@@ -5300,7 +5300,7 @@ Disabled（禁用）
 
 指定 VCCAUX 电源轨的电压。有关当前器件系列的详细信息，请参阅该器件的数据手册。
 
-参见 [Altera® Quartus® Prime Standard Edition Settings File Reference Manual](https://www.intel.com/content/www/us/en/docs/programmable/683084/current/vccaux-user-voltage.html)
+参见 [Altera® Quartus® Prime Standard Edition Settings File Reference Manual](https://www.intel.com/content/www/us/en/docs/programmable/683084/current/vccaux-user-voltage.html) [备份](https://web.archive.org/web/20260119061631/https://docs.altera.com/)
 
 ##### Retention to Low Current Mode（Retention 从关闭状态到低功耗模式的时间）
 
@@ -5751,7 +5751,7 @@ False（禁用）
 
 说明：
 
-参见 [What is SPD?](https://www.lenovo.com/us/en/glossary/spd/)
+参见 [What is SPD?](https://www.lenovo.com/us/en/glossary/spd/) [备份](https://web.archive.org/web/20260119062204/https://www.lenovo.com/us/en/glossary/?cid=flash_redirect_2p3o1i)
 
 BIOS 提示：出于安全考虑，必须设置 SPD 写保护位。
 
@@ -5787,7 +5787,7 @@ Disabled（禁用）
 
 eSPI，Enhanced Serial Peripheral Interface，增强型串行外设接口
 
-参见 [增强型串行外设接口（eSPI）接口基本规格（适用于客户端和服务器平台）](https://www.intel.cn/content/www/cn/zh/content-details/841685/enhanced-serial-peripheral-interface-espi-interface-base-specification-for-client-and-server-platforms.html)
+参见 [增强型串行外设接口（eSPI）接口基本规格（适用于客户端和服务器平台）](https://www.intel.cn/content/www/cn/zh/content-details/841685/enhanced-serial-peripheral-interface-espi-interface-base-specification-for-client-and-server-platforms.html) [备份](https://web.archive.org/web/20260119061912/https://www.intel.cn/content/www/cn/zh/content-details/841685/enhanced-serial-peripheral-interface-espi-interface-base-specification-for-client-and-server-platforms.html)
 
 ### OS IDLE Mode（系统待机状态）
 
@@ -5917,7 +5917,7 @@ Disabled（禁用）
 
 说明：
 
-PSE Eclite 服务。嵌入式控制器替代方案。参见 [Intel ISHTP eclite controller Driver](https://www.kernelconfig.io/config_intel_ishtp_eclite)
+PSE Eclite 服务。嵌入式控制器替代方案。参见 [Intel ISHTP eclite controller Driver](https://www.kernelconfig.io/config_intel_ishtp_eclite) [备份](https://web.archive.org/web/20260119062118/https://www.kernelconfig.io/config_intel_ishtp_eclite)
 
 用于访问 PSE（可编程服务引擎）——一种类似嵌入式控制器的 IP，通过 ISHTP（集成传感器集线器传输协议）从平台获取电池、温度和 UCSI（USB Type-C 连接器系统软件接口）相关数据。
 

@@ -383,7 +383,7 @@ vtnet0: link state changed to UP
 
 ## 通过 mfsBSD 间接安装 FreeBSD
 
-mfsBSD 是一款精简的 FreeBSD 内存盘映像，支持 UEFI 和 ZFS 环境。可用于安装 FreeBSD，充当急救盘等。mfsBSD 的下载地址为：[mfsBSD and mfslinux](https://mfsbsd.vx.sk/)。
+mfsBSD 是一款精简的 FreeBSD 内存盘映像，支持 UEFI 和 ZFS 环境。可用于安装 FreeBSD，充当急救盘等。mfsBSD 的下载地址为：[mfsBSD and mfslinux](https://mfsbsd.vx.sk/) [备份](https://web.archive.org/web/20260118024656/https://mfsbsd.vx.sk/)。
 
 >**警告**
 >
@@ -594,13 +594,13 @@ Ventoy2Disk.sh 参数说明：
 
 ![](../.gitbook/assets/Ventoyins2.png)
 
-读者可通过 [Linux 系统安装 Ventoy —— 命令行界面](https://www.ventoy.net/cn/doc_start.html#doc_linux_cli)了解更多信息。
+读者可通过 [Linux 系统安装 Ventoy —— 命令行界面](https://www.ventoy.net/cn/doc_start.html#doc_linux_cli) [备份](https://web.archive.org/web/20260108124134/https://www.ventoy.net/cn/doc_start.html#doc_linux_cli)了解更多信息。
 
 #### 使用 Ventoy LiveCD 写入 Ventoy
 
 Ventoy LiveCD 下载地址为 [安装包](https://www.ventoy.net/cn/download.html)。
 
-Ventoy LiveCD 并非 Ventoy 本体，而是一种用于安装 Ventoy 的内存盘系统映像。参见 [Ventoy LiveCD 使用说明](https://www.ventoy.net/cn/doc_livecd.html)。
+Ventoy LiveCD 并非 Ventoy 本体，而是一种用于安装 Ventoy 的内存盘系统映像。参见 [Ventoy LiveCD 使用说明](https://www.ventoy.net/cn/doc_livecd.html) [备份](https://web.archive.org/web/20260108123456/https://www.ventoy.net/cn/doc_livecd.html)。
 
 在使用 dd 将镜像写入整块硬盘后，强制重启实例，Ventoy LiveCD 可以正常启动。
 

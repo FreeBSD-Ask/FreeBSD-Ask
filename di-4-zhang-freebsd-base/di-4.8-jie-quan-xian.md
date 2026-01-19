@@ -61,7 +61,7 @@ FreeBSD 文件访问权限可以用 10 个标志位来表示（请读者数一�
 
 >**技巧**
 >
->关于上面数字代表权限的代码可以在 [main/sys/sys/stat.h](https://github.com/freebsd/freebsd-src/blob/main/sys/sys/stat.h) 找到，由 IEEE Std 1003.1 所规范：
+>关于上面数字代表权限的代码可以在 [main/sys/sys/stat.h](https://github.com/freebsd/freebsd-src/blob/main/sys/sys/stat.h) [备份](https://web.archive.org/web/20260119052515/https://github.com/freebsd/freebsd-src/blob/main/sys/sys/stat.h) 找到，由 IEEE Std 1003.1 所规范：
 >
 >```c
 >#define	S_IRWXU	0000700			/* 拥有者的读、写、执行（RWX）权限掩码 */

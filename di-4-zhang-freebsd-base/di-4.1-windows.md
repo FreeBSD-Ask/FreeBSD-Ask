@@ -17,7 +17,7 @@
 
 ![](../.gitbook/assets/Windows2.png)
 
-更多要求，参见微软官方文档 [命名文件、路径和命名空间](https://learn.microsoft.com/zh-cn/windows/win32/fileio/naming-a-file)。
+更多要求，参见微软官方文档 [命名文件、路径和命名空间](https://learn.microsoft.com/zh-cn/windows/win32/fileio/naming-a-file) [备份](https://web.archive.org/web/20260119052825/https://learn.microsoft.com/zh-cn/windows/win32/fileio/naming-a-file)。
 
 >**技巧**
 >
@@ -53,7 +53,7 @@ abc    ABC
 
 #### 参考文献
 
-- [调整区分大小写](https://learn.microsoft.com/zh-cn/windows/wsl/case-sensitivity)，Windows 文件系统支持使用属性标志按目录设置区分大小写
+- [调整区分大小写](https://learn.microsoft.com/zh-cn/windows/wsl/case-sensitivity) [备份](https://web.archive.org/web/20260119052826/https://learn.microsoft.com/zh-cn/windows/wsl/case-sensitivity)，Windows 文件系统支持使用属性标志按目录设置区分大小写
 
 ## 换行符/回车之差异
 
@@ -119,7 +119,7 @@ UTF-8
 
 ### 参考文献
 
-- [Code pages](https://learn.microsoft.com/en-us/globalization/encoding/code-pages)，微软官方称，936 即是 GBK。
+- [Code pages](https://learn.microsoft.com/en-us/globalization/encoding/code-pages) [备份](https://web.archive.org/web/20260119052725/https://learn.microsoft.com/en-us/globalization/encoding/code-pages)，微软官方称，936 即是 GBK。
 
 ## 时间与时区的差异
 

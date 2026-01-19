@@ -50,7 +50,7 @@ NomadBSD 默认采用 Xfce 桌面。
 
 MidnightBSD 的官网为 [https://www.midnightbsd.org](https://www.midnightbsd.org) [备份](https://web.archive.org/web/20260118013614/https://www.midnightbsd.org/)。MidnightBSD 也是一款基于 Xfce 桌面环境的发行版。~~起个名字真是太难了，而创始人的第一只猫叫 Midnight（即午夜，可能因为是只黑猫），所以就叫 MidnightBSD 啦。~~
 
-MidnightBSD 始于 2006 年，拥有自己的二进制软件包系统——[mports](https://www.midnightbsd.org/documentation/mports/index.html)，安装过程中该选项默认启用。
+MidnightBSD 始于 2006 年，拥有自己的二进制软件包系统——[mports](https://www.midnightbsd.org/documentation/mports/index.html) [备份](https://web.archive.org/web/20260118013526/https://www.midnightbsd.org/documentation/mports/index.html)，安装过程中该选项默认启用。
 
 MidnightBSD 的安装界面与 FreeBSD 基本一致，采用经典的蓝底白字文本界面。普通用户的默认 Shell 为 [mksh](https://github.com/MirBSD/mksh)
 
