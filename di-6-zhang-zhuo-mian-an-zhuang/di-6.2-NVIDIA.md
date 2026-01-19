@@ -87,7 +87,7 @@
 
 ## 查看 Nvidia 驱动状态
 
-- 列出所有 NVIDIA GPU 及其详细信息，并以每秒一次的频率刷新显示
+- 列出所有 NVIDIA GPU 及其详细信息
 
 ```sh
 $ nvidia-smi 
