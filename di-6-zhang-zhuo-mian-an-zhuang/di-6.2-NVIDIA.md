@@ -1,8 +1,12 @@
 # 6.2 NVIDIA 显卡驱动
 
->**警告**
->
->对于没有显卡直通能力的笔记本，必须安装英特尔核显驱动（相关 DRM）！
+## NVIDIA 显卡驱动概述
+
+对于台式机，注意若 CPU 是英特尔处理器，且型号以 F 或者 KF 结尾的型号，是没有核芯显卡的，不需要处理核显相关配置。
+
+若你已拥有独立显卡，且你的视频输出（DP 或 HDMI）是直接插入的独立显卡。那么通常来说，你同样无需对核显进行任何配置，仅处理独显本身的驱动即可。
+
+对于没有显卡直通能力的笔记本，必须先按照其他章节内容先安装配置英特尔核显驱动（相关 DRM）再参照下文进行配置！
 
 ## 加入 video 组
 
@@ -27,10 +31,16 @@
 # cd /usr/ports/x11/nvidia-settings/ && make install clean
 ```
 
+列出已经安装的 NVIDIA 相关软件：
+
+```sh
+# pkg info -q | grep -i nvidia
+```
+
 
 ## 配置 NVIDIA 显卡
 
-- 启动 NVIDIA 相关内核模块
+### 启动 NVIDIA 相关内核模块
 
 ```sh
 # echo 'hw.nvidiadrm.modeset="1"' >> /boot/loader.conf  # 启用 NVIDIA DRM 模式设置
@@ -41,7 +51,9 @@
 >
 >不要试图加载 `nvidia-drm.ko`，会导致系统宕机。
 
-- 生成 X11 配置文件。注意，若可正常显示，则无需执行此步及下一步！
+###  生成 X11 配置文件
+
+注意，若可正常显示，则无需执行此节！
 
 ```sh
 # Xorg -configure                     # 自动生成 Xorg 配置文件
@@ -60,7 +72,7 @@
 - 使用 pkg 安装：
 
 ```sh
-pkg install libva-vdpau-driver libvdpau libvdpau-va-gl
+# pkg install libva-vdpau-driver libvdpau libvdpau-va-gl
 ```
 
 - 或者使用 Ports 安装：
@@ -73,18 +85,39 @@ pkg install libva-vdpau-driver libvdpau libvdpau-va-gl
 
 然后重新启动后即可正常使用 NVIDIA 驱动。
 
-## 查看 Nvidia 驱动状态
+## 查看 NVIDIA 驱动状态
 
-- 列出所有 NVIDIA GPU 及其详细信息，并以每秒一次的频率刷新显示
+- 列出所有 NVIDIA GPU 及其详细信息
 
 ```sh
-$ nvidia-smi -L -l 1 
+$ nvidia-smi 
 ```
 
-参数说明：
+`nvidia-smi` 示例输出：
 
-- `-L`：查看 GPU 列表及其 UUID；
-- `-l 1` 每秒刷新一次。
+```sh
+# nvidia-smi
+Mon Jan 19 19:06:59 2026
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 580.126.09             Driver Version: 580.126.09     CUDA Version: N/A      |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA GeForce RTX 3060 Ti     Off |   00000000:01:00.0  On |                  N/A |
+|  0%   39C    P8             12W /  225W |     409MiB /   8192MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+```
 
 - 查看 KDE 系统信息：
 
@@ -94,4 +127,20 @@ $ nvidia-smi -L -l 1
 
 ![](../.gitbook/assets/nvi1.jpg)
 
+## 故障排除
+
+### 如何阻止驱动更新
+
+把 `pkg info -q | grep -i nvidia` 输出的相关软件包都逐个使用 `pkg lock`命令锁定即可。
+
+形如
+
+```sh
+# pkg lock nvidia-drm-kmod
+# pkg lock nvidia-settings
+```
+
+但是如果运行 `freebsd-update` 命令，或者执行 pkgbase 对系统打补丁或更新补丁也可能会影响驱动。
+
+因此需要读者自行平衡安全与日常。
 
