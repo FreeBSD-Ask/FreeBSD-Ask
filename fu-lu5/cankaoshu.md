@@ -125,7 +125,7 @@ LIONS J. 莱昂氏 UNIX 源代码分析[M]. 尤晋元, 译. 北京: 机械工业
 
 该书原作名 *Lion's Commentary on UNIX with Source Code*，实际上应该翻译为《莱昂氏 UNIX 源代码注释》，在引进翻译时“Commentary”被篡改为了“分析”（Analysis）。
 
-该著作占前面页数一半的内容是原封不动地直接打印 UNIX 的源代码。
+该著作前一半页数的内容是原封不动地直接打印 UNIX 的源代码。
 
 该著作后面的内容类似下面的注释方法：
 
