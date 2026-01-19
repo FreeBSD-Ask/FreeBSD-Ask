@@ -149,5 +149,5 @@ Mon Jan 19 19:06:59 2026
 如果提示版本不符，需要先卸载所有安装的 NVIDIA 相关软件包，然后安装本文进行配置：
 
 ```sh
-# pkg deleta *nvidia*
+# pkg delete *nvidia*
 ```
