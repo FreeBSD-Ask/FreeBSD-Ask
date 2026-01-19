@@ -115,8 +115,29 @@
 
 购买凭证（中亚已经关闭历史订单，只能通过这种方式获取数据）："亚马逊", "C03-7970199-0880003", "2018-11-20T02:45:08Z", "Not Applicable", "CNY", "261.56", "0", "0", "'-2.31'", "259.25", "261.56", "0", "1593278926", "New", "1", "Gift Certificate/Card", "Closed", "Shipped", "2018-11-20T09:28:35Z", "std-cn-d2d", "此处地址、邮编、联系人已隐去 China", "Not Available", "HEBKD(221461786692)", "Absolute FreeBSD, 3rd Edition", "Not Available", "Not Available", "Not Available", "Not Available"。可以看到当时这本书最后售价为 261.56 元，实收 259.25 元。
 
+### 《莱昂氏 UNIX 源代码分析》
 
-### 二十一世纪初中文社区对 FreeBSD 的探索
+LIONS J. 莱昂氏 UNIX 源代码分析[M]. 尤晋元, 译. 北京: 机械工业出版社, 2000.
+
+该书原作名 *Lion's Commentary on UNIX with Source Code*，实际上应该翻译为《莱昂氏 UNIX 源代码注释》，在引进翻译时“Commentary”被篡改为了“分析”。
+
+该著作占前面页数一半的内容是原封不动地直接打印 UNIX 的源代码。
+
+该著作后面的内容类似下面的注释方法：
+
+```c
+#include <stdio.h> // # 预处理行，代表引入头文件 stdio.h
+// 这里是空行
+int main(void) // 这里是 main 函数
+{ //开始大括号
+    printf("Hello, world!\n"); // 打印括号，你好，世界，感叹号，换行，分号
+    return 0; //返回 0 分号
+} // 闭合大括号
+```
+
+总之，“分析”这个词语可能欠妥。
+
+### 二十一世纪初中文用户对 FreeBSD 的探索
 
 - 王波. FreeBSD 使用大全[M]. 北京: 机械工业出版社, 1999. ISBN 9787111074823.
 - 王波. FreeBSD 使用大全（第 2 版）[M]. 北京: 机械工业出版社, 2002. ISBN 9787111102861.
