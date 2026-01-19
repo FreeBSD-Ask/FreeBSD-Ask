@@ -4,7 +4,7 @@
 
 `rEFInd` 派生自 `rEFIt`，其名称结合了“refind”（意为“重新发现”或“改进”）与“EFI”（Extensible Firmware Interface，可扩展固件接口），主要用于管理 UEFI 启动。
 
-打开下载页面 [Getting rEFInd from Sourceforge](https://www.rodsbooks.com/refind/getting.html)，点击 `A binary zip file` 链接即可开始下载。本文撰写时使用的版本为 `refind-bin-0.14.2.zip`。
+打开下载页面 [Getting rEFInd from Sourceforge](https://www.rodsbooks.com/refind/getting.html) [备份](https://web.archive.org/web/20260118173750/https://www.rodsbooks.com/refind/getting.html)，点击 `A binary zip file` 链接即可开始下载。本文撰写时使用的版本为 `refind-bin-0.14.2.zip`。
 
 下载的压缩包中，仅部分文件是必需的启动文件。我们只需要其中的 `refind` 文件夹，其余文件可忽略。
 

@@ -1,6 +1,6 @@
 # BSD 许可证概览
 
-本文仅列出主要的、受 OSI 认可的 BSD 许可证（不包括 BSD-4-Clause）。更多 BSD 许可证信息参见 [OSI Approved Licenses](https://opensource.org/licenses?ls=BSD) 和 [SPDX License List](https://spdx.org/licenses/)。
+本文仅列出主要的、受 OSI 认可的 BSD 许可证（不包括 BSD-4-Clause）。更多 BSD 许可证信息参见 [OSI Approved Licenses](https://opensource.org/licenses?ls=BSD) 和 [SPDX License List](https://spdx.org/licenses/) [备份](https://web.archive.org/web/20260114114343/https://spdx.org/licenses/)。
 
 
 下文列出的所有 BSD 许可证均为非 copyleft（著佐权）许可证，即不要求修改后的版本仍必须作为自由软件发布。更多讨论参见 [BSD 许可证的问题](https://www.gnu.org/licenses/bsd.zh-cn.html)。

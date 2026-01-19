@@ -187,4 +187,4 @@ ssh ykla@localhost:8022
 
 - [Create FreeBSD virtual machine using qemu. Run the VM using xhyve.](https://gist.github.com/zg/38a3afa112ddf7de4912aafc249ec82f)，有一些扩容方法
 - [在 QEMU for Windows x64 上搭建 RISC-V 环境（Debian Linux）](https://naiv.fun/Ops/83.html) [备份](https://web.archive.org/web/20260117183356/https://naiv.fun/Ops/83.html)，有一些概念解释和整体框架
-- [RISC-V Emulation Revisited](https://smist08.wordpress.com/2023/04/28/risc-v-emulation-revisited/)，各种参数来自此处。
+- [RISC-V Emulation Revisited](https://smist08.wordpress.com/2023/04/28/risc-v-emulation-revisited/) [备份](https://web.archive.org/web/20260118173136/https://smist08.wordpress.com/2023/04/28/risc-v-emulation-revisited/)，各种参数来自此处。
