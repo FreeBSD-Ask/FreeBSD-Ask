@@ -66,7 +66,7 @@ mfsBSD 是一款完全载入内存的 FreeBSD 系统，类似于 Windows 的 PE 
 # wget https://mfsbsd.vx.sk/files/iso/14/amd64/mfsbsd-14.2-RELEASE-amd64.iso
 ```
 
-检验码：[checksums](https://mfsbsd.vx.sk/files/iso/14/amd64/mfsbsd-14.2-RELEASE-amd64.iso.sums.txt)
+检验码：[checksums](https://mfsbsd.vx.sk/files/iso/14/amd64/mfsbsd-14.2-RELEASE-amd64.iso.sums.txt) [备份](https://web.archive.org/web/20260118173935/https://mfsbsd.vx.sk/files/iso/14/amd64/mfsbsd-14.2-RELEASE-amd64.iso.sums.txt)
 
 ### 准备 mfsBSD.iso
 
@@ -190,7 +190,7 @@ mfsBSD 的 `root` 默认密码为 `mfsroot`。你可以使用 SSH 工具连接�
 ### 待尝试的方案
 
 - `dd` 写入 [VM-IMAGES 列表下的镜像](https://download.freebsd.org/releases/VM-IMAGES/14.3-RELEASE/amd64/Latest/) [备份](https://web.archive.org/web/20260118023657/https://download.freebsd.org/releases/VM-IMAGES/14.3-RELEASE/amd64/Latest/)
-- `dd` 写入 [FreeBSD-14.3-RELEASE-amd64-memstick](https://download.freebsd.org/releases/ISO-IMAGES/14.3/FreeBSD-14.3-RELEASE-amd64-memstick.img)
+- `dd` 写入 [FreeBSD-14.3-RELEASE-amd64-memstick](https://download.freebsd.org/releases/ISO-IMAGES/14.3/FreeBSD-14.3-RELEASE-amd64-memstick.img) [备份](https://web.archive.org/web/20260117184714/https://download.freebsd.org/releases/ISO-IMAGES/14.3/FreeBSD-14.3-RELEASE-amd64-memstick.img)
 - 在 QEMU 平台上，尝试直接 `dd`
 
 ![能进入 BootLoader，但启动失败](../.gitbook/assets/qemu-dd-mfsbsd.png)

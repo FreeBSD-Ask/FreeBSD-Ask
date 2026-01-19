@@ -195,5 +195,5 @@ patch applied.
 ## 参考文献
 
 - [请问 ibus-rime 如何设置输入框横排显示](https://github.com/rime/ibus-rime/issues/52) [备份](https://web.archive.org/web/20251216213556/https://github.com/rime/ibus-rime/issues/52)
-- [LEOYoon-Tsaw/Rime_collections/](https://github.com/LEOYoon-Tsaw/Rime_collections/blob/master/Rime_description.md)
-- [rime/CustomizationGuide](https://github.com/rime/home/wiki/CustomizationGuide)
+- [LEOYoon-Tsaw/Rime_collections/](https://github.com/LEOYoon-Tsaw/Rime_collections/blob/master/Rime_description.md) [备份](https://web.archive.org/web/20260118163129/https://github.com/LEOYoon-Tsaw/Rime_collections/blob/master/Rime_description.md)
+- [rime/CustomizationGuide](https://github.com/rime/home/wiki/CustomizationGuide) [备份](https://web.archive.org/web/20260118163128/https://github.com/rime/home/wiki/CustomizationGuide)

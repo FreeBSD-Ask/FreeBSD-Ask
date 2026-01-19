@@ -15,7 +15,7 @@
 
 本项目早期发起人为 [clean-master 清理大师](https://github.com/clean-master) [备份](https://web.archive.org/web/20260114061313/https://github.com/clean-master)。他自费创建了域名 `freebsdcn.org`（现已不再使用）并创建了目前仍在维护的主页 <https://bsdcn.org>。他鼓励 ykla 创建一个项目来维护相关的 FreeBSD 教程。
 
-[Roberta Wheeler](https://github.com/rowheel) 曾自费部署并维护本项目的服务器（现已切换至 GitBook 及 GitHub Pages 免费服务），并撰写了部分文章。
+[Roberta Wheeler](https://github.com/rowheel) [备份](https://web.archive.org/web/20260118172441/https://github.com/rowheel) 曾自费部署并维护本项目的服务器（现已切换至 GitBook 及 GitHub Pages 免费服务），并撰写了部分文章。
 
 [safreya](https://github.com/safreya) [备份](https://web.archive.org/web/20260114070028/https://github.com/safreya) 曾开发了两款用于导出本项目 PDF 文档的开源工具（目前仍在使用），并撰写了大量文章。
 
@@ -35,13 +35,13 @@ Ubuntu 吧前吧主 Simple 曾建议修改项目的章节文件名与许可协�
 - April Simone🍥
 - [VZstless](https://github.com/atlarator)
 - [bduath](https://github.com/bduath) [备份](https://web.archive.org/web/20260118021541/https://github.com/bduath)  
-- [blu10ph](https://github.com/blu10ph)  
+- [blu10ph](https://github.com/blu10ph) [备份](https://web.archive.org/web/20260118172239/https://github.com/blu10ph)  
 - [bsdwiki](https://github.com/bsdwiki)
 - [dacheng119](https://github.com/dacheng119) [备份](https://web.archive.org/web/20260117181422/https://github.com/dacheng119)
-- [Dedicatus5457](https://github.com/Dedicatus5457)  
+- [Dedicatus5457](https://github.com/Dedicatus5457) [备份](https://web.archive.org/web/20260118171820/https://github.com/Dedicatus5457)  
 - DogeW  
-- [dongdigua](https://github.com/dongdigua)  
-- [fanyang1997](https://github.com/fanyang1997)  
+- [dongdigua](https://github.com/dongdigua) [备份](https://web.archive.org/web/20260118172510/https://github.com/dongdigua)  
+- [fanyang1997](https://github.com/fanyang1997) [备份](https://web.archive.org/web/20260118172032/https://github.com/fanyang1997)  
 - [fjh1997](https://github.com/fjh1997)  
 - freyr  
 - [gua-leopard](https://github.com/gua-leopard) [备份](https://web.archive.org/web/20260117182650/https://github.com/gua-leopard)
@@ -51,7 +51,7 @@ Ubuntu 吧前吧主 Simple 曾建议修改项目的章节文件名与许可协�
 - Jiacong Fang（[zldrobit](https://github.com/zldrobit)）
 - kuntop  
 - [李大鹏](https://dapeng.li/) [备份](https://web.archive.org/web/20250621115454/https://dapeng.li/)  
-- [liguangsheng](https://github.com/liguangsheng)
+- [liguangsheng](https://github.com/liguangsheng) [备份](https://web.archive.org/web/20260118172423/https://github.com/liguangsheng)
 - livrth  
 - [凌莞](https://clansty.com)  
 - [柳离枝](https://github.com/liulitchi)
@@ -69,18 +69,18 @@ Ubuntu 吧前吧主 Simple 曾建议修改项目的章节文件名与许可协�
 - 清热解毒口服液  
 - [Rintim](https://github.com/Rintim)  
 - [ruur](https://github.com/ruur)  
-- [Sayunosyjou](https://github.com/Sayunosyjou)  
+- [Sayunosyjou](https://github.com/Sayunosyjou) [备份](https://web.archive.org/web/20260118171656/https://github.com/Sayunosyjou)  
 - 施主  
 - [Suyun114](https://github.com/Suyun114)  
 - [tergel93](https://github.com/tergel93)  
-- [tomblackwhite](https://github.com/tomblackwhite)  
+- [tomblackwhite](https://github.com/tomblackwhite) [备份](https://web.archive.org/web/20260118172022/https://github.com/tomblackwhite)  
 - 艳阳天
 - [Wang Yan Hao](https://github.com/Wang-Yan-Hao) [备份](https://web.archive.org/web/20260117182303/https://github.com/Wang-Yan-Hao)
-- [wyathou](https://github.com/wyathou)  
+- [wyathou](https://github.com/wyathou) [备份](https://web.archive.org/web/20260118171909/https://github.com/wyathou)  
 - X-Ray  
 - 心即理物即心  
 - 仰望天空  
-- [Zomby7e](https://github.com/Zomby7e)  
+- [Zomby7e](https://github.com/Zomby7e) [备份](https://web.archive.org/web/20260118171608/https://github.com/Zomby7e)  
 - 地铁卡  
 - 兜率  
 - 极品盗号  
@@ -95,6 +95,6 @@ Ubuntu 吧前吧主 Simple 曾建议修改项目的章节文件名与许可协�
 
 本项目主要托管在 [GitHub](https://gitHub.com)。
 
-本项目还获得了 [GitBook 开源计划](https://www.gitbook.com/solutions/open-source) 的赞助，网站 `book.bsdcn.org` 即由其驱动。
+本项目还获得了 [GitBook 开源计划](https://www.gitbook.com/solutions/open-source) [备份](https://web.archive.org/web/20260118171346/https://www.gitbook.com/solutions/open-source) 的赞助，网站 `book.bsdcn.org` 即由其驱动。
 
 本项目的镜像网站 `docs.bsdcn.org` 基于 [VitePress](https://vitejs.cn/vitepress/) [备份](https://web.archive.org/web/20260117182314/https://vitejs.cn/vitepress/) 构建。

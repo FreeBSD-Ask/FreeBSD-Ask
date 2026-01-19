@@ -32,7 +32,7 @@ NomadBSD 始于 2018 年。“Nomad”意为“游牧者、经常迁移的人”
 
 NomadBSD 的官网为 [https://nomadbsd.org](https://nomadbsd.org) [备份](https://web.archive.org/web/20260117174021/https://nomadbsd.org/)。NomadBSD 基于 FreeBSD 最新的 RELEASE 版本，2 GB 内存即可运行，主要设计用于 LiveCD 场景，以测试 FreeBSD 的硬件兼容性。
 
-NomadBSD 的下载地址为 [https://nomadbsd.org/download.html](https://nomadbsd.org/download.html)（页面右侧的 MANIFEST 文件列出了预装的软件）。
+NomadBSD 的下载地址为 [https://nomadbsd.org/download.html](https://nomadbsd.org/download.html) [备份](https://web.archive.org/web/20260118165339/https://nomadbsd.org/download.html)（页面右侧的 MANIFEST 文件列出了预装的软件）。
 
 NomadBSD 默认采用 Xfce 桌面。
 
@@ -69,7 +69,7 @@ MidnightBSD 的安装界面与 FreeBSD 基本一致，采用经典的蓝底白�
 
 ## helloSystem
 
-helloSystem 始于 2021 年。helloSystem 在设计理念上类似于 Linux 生态中的 [Pear OS](https://pearos.xyz)。
+helloSystem 始于 2021 年。helloSystem 在设计理念上类似于 Linux 生态中的 [Pear OS](https://pearos.xyz) [备份](https://web.archive.org/web/20260113211521/https://pearos.xyz/)。
 
 helloSystem 项目的开发进度在一段时间内较为停滞。该项目团队甚至并未注册 helloSystem.org 域名。
 

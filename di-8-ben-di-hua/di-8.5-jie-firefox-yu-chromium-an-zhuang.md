@@ -77,7 +77,7 @@ Chromium 不是 Chrome，但在 FreeBSD 中的启动命令为 `chrome`。
 >有些项目认为目前移除的组件仍不够彻底，因此提供了 Port `www/ungoogled-chromium`。该软件移除了更多与谷歌相关的不透明组件。
 
 - 由于是开源产物，Chromium 与 Google Chrome 的关系类似于 AOSP 与 Pixel UI 的关系。Chromium 无法直接从 Google Chrome 的在线插件商店下载安装插件，只能手动从本地安装 crx（同步启用后可自动同步浏览器插件）。Chromium 也不自带 Google 翻译插件等功能。更多差异可参见 [此网页](https://chromium.googlesource.com/chromium/src/+/master/docs/chromium_browser_vs_google_chrome.md) [备份](https://web.archive.org/web/20260117171058/https://chromium.googlesource.com/chromium/src/+/master/docs/chromium_browser_vs_google_chrome.md)。
-- 首先，`Chromium` 并非 `Google Chrome`，前者是 The Chromium Project 在 [BSD 3-Clause "New" or "Revised" License](https://github.com/chromium/chromium/blob/main/LICENSE) 下发布的开源与自由软件，后者是 Google LLC 的专有软件。
+- 首先，`Chromium` 并非 `Google Chrome`，前者是 The Chromium Project 在 [BSD 3-Clause "New" or "Revised" License](https://github.com/chromium/chromium/blob/main/LICENSE) [备份](https://web.archive.org/web/20260118163224/https://github.com/chromium/chromium/blob/main/LICENSE) 下发布的开源与自由软件，后者是 Google LLC 的专有软件。
 
 - Chromium 在 [Chromium 89](https://archlinux.org/news/chromium-losing-sync-support-in-early-march/) [备份](https://web.archive.org/web/20260117171034/https://archlinux.org/news/chromium-losing-sync-support-in-early-march/) 发布后删除了之前自带的与 Chrome 同款的登录 Google 账号的默认 api。
 

@@ -29,7 +29,7 @@
 
 | 封面/书名 |  作者/译者 | ISBN/出版社 | 说明 |
 | :---: | :---: | :---: | :--- |
-| ![Unix 四分之一世纪](../.gitbook/assets/unix25.png) <br><br> 《Unix 四分之一世纪》|  Peter H. Salus | 9780201547771 <br><br> Addison-Wesley Professional | 历史类书籍，中译本在 [此](https://freebsd.gitbook.io/unix-er-shi-wu-nian) |
+| ![Unix 四分之一世纪](../.gitbook/assets/unix25.png) <br><br> 《Unix 四分之一世纪》|  Peter H. Salus | 9780201547771 <br><br> Addison-Wesley Professional | 历史类书籍，中译本在 [此](https://freebsd.gitbook.io/unix-er-shi-wu-nian) [备份](https://web.archive.org/web/20260118165553/https://freebsd.gitbook.io/unix-er-shi-wu-nian) |
 | ![Unix 痛恨者手册](../.gitbook/assets/unixno.png) <br><br> 《Unix 痛恨者手册》 | Simson Garfinkel、Daniel Weise、Steven Strassmann | 9781568842035 <br><br>  IDG Books Worldwide, Inc. |  历史书，中译本在 [此](https://book.bsdcn.org/unix-tong-hen-zhe-shou-ce) <br><br>|
 | ![大教堂与集市](../.gitbook/assets/dajiaotang.png) <br><br> 《大教堂与集市》 |[美] Eric S. Raymond <br><br> 卫剑钒 译 | 9787111452478 <br><br> 机械工业出版社 | 主要介绍开源运动的发展历史|
 | ![UNIX 传奇：历史与回忆](../.gitbook/assets/unixchuanqi.png) <br><br> 《UNIX 传奇——历史与回忆》 | [美] Brian W. Kernighan 著 <br><br> 韩磊 译 | 9787115557179 <br><br> 人民邮电出版社 | 主要介绍 UNIX 的发展历史，整体内容相对概括 |
@@ -57,7 +57,7 @@
 
 《FreeBSD 操作系统设计与实现（原书第 2 版）》主要讲解了内核。
 
-该书采用轻型纸印刷，且部分章节需要读者自行通过[网络](https://course.cmpreading.com/web/refbook/detail/9661/215)下载获取。
+该书采用轻型纸印刷，且部分章节需要读者自行通过[网络](https://course.cmpreading.com/web/refbook/detail/9661/215) [备份](https://web.archive.org/web/20260118165733/https://course.cmpreading.com/web/refbook/detail/9661/215)下载获取。
 
 该书阅读难度较高。据韩国 FreeBSD 社区的相关反馈，即使部分专业读者也认为其内容较为晦涩。
 
