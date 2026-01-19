@@ -85,7 +85,7 @@
 
 然后重新启动后即可正常使用 NVIDIA 驱动。
 
-## 查看 Nvidia 驱动状态
+## 查看 NVIDIA 驱动状态
 
 - 列出所有 NVIDIA GPU 及其详细信息
 
