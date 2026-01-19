@@ -126,3 +126,21 @@ Mon Jan 19 19:06:59 2026
 - 用 MPV 打开一部电影，可以看到显存使用量明显上升（我是从 3 MB 上升到了数百兆），也可以用 SMPlayer 观看。
 
 ![](../.gitbook/assets/nvi1.jpg)
+
+## 故障排除
+
+### 如何阻止驱动更新
+
+把 `pkg info -q | grep -i nvidia` 输出的相关软件包都逐个使用 `pkg lock`命令锁定即可。
+
+形如
+
+```sh
+# pkg lock nvidia-drm-kmod
+# pkg lock nvidia-settings
+```
+
+但是如果运行 `freebsd-update` 命令，或者执行 pkgbase 对系统打补丁或更新补丁也可能会影响驱动。
+
+因此需要读者自行平衡安全与日常。
+
