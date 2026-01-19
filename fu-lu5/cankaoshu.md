@@ -101,7 +101,7 @@
 
 说明：
 
-打开美国亚马逊官网作者 Michael W. Lucas 的 [页面](https://www.amazon.com/stores/Michael-W.-Lucas/author/B004MNWSFG?language=zh_TW&ref=ap_rdr&isDramIntegrated=true&shoppingPortalEnabled=true)，你会惊讶地发现竟有人如此著作等身，博闻强识。从 ZFS 到 FreeBSD，从 OpenBSD 到 GPG，居然出版了近五十本。
+打开美国亚马逊官网作者 Michael W. Lucas 的 [页面](https://www.amazon.com/stores/Michael-W.-Lucas/author/B004MNWSFG?language=zh_TW&ref=ap_rdr&isDramIntegrated=true&shoppingPortalEnabled=true) [备份](https://web.archive.org/web/20260119104253/https://www.amazon.com/stores/Michael-W.-Lucas/author/B004MNWSFG?language=zh_TW&ref=ap_rdr&isDramIntegrated=true&shoppingPortalEnabled=true)，你会惊讶地发现竟有人如此著作等身，博闻强识。从 ZFS 到 FreeBSD，从 OpenBSD 到 GPG，居然出版了近五十本。
 
 笔者随机抽取了几本进行泛读，并对 *Absolute FreeBSD, 3rd Edition*（本人曾在中亚购买过正版印刷版）进行了深入阅读。
 
@@ -121,7 +121,7 @@
 
 LIONS J. 莱昂氏 UNIX 源代码分析[M]. 尤晋元, 译. 北京: 机械工业出版社, 2000.
 
-查阅该书的引进历史（[中华读书报《莱昂氏UNIX源代码分析》出版一波三折](https://www.gmw.cn/01ds/2000-08/02/GB/2000%5E311%5E0%5EDS1418.htm)），过程并不容易。
+查阅该书的引进历史（[中华读书报《莱昂氏UNIX源代码分析》出版一波三折](https://www.gmw.cn/01ds/2000-08/02/GB/2000%5E311%5E0%5EDS1418.htm) [备份](https://web.archive.org/web/20260119104147/https://www.gmw.cn/01ds/2000-08/02/GB/2000%5E311%5E0%5EDS1418.htm)），过程并不容易。
 
 该书原作名 *Lion's Commentary on UNIX with Source Code*，实际上应该翻译为《莱昂氏 UNIX 源代码注释》，在引进翻译时“Commentary”被窜改为了“分析”（Analysis）。
 

@@ -11,7 +11,7 @@
 
 ## 项目部署与维护
 
-[超平和 Busters](https://github.com/banbo96)（QQ 昵称/微信名）对本社区及文档，以及 QQ 群、微信公众号、微信群发挥了重要的管理作用，并创建和维护过本社区的多个关联账号。
+[超平和 Busters](https://github.com/banbo96) [备份](https://web.archive.org/web/20260119105504/https://github.com/banbo96)（QQ 昵称/微信名）对本社区及文档，以及 QQ 群、微信公众号、微信群发挥了重要的管理作用，并创建和维护过本社区的多个关联账号。
 
 本项目早期发起人为 [clean-master 清理大师](https://github.com/clean-master) [备份](https://web.archive.org/web/20260114061313/https://github.com/clean-master)。他自费创建了域名 `freebsdcn.org`（现已不再使用）并创建了目前仍在维护的主页 <https://bsdcn.org>。他鼓励 ykla 创建一个项目来维护相关的 FreeBSD 教程。
 
@@ -30,10 +30,10 @@ Ubuntu 吧前吧主 Simple 曾建议修改项目的章节文件名与许可协�
 ## 文档贡献者名单（A-Z）
 
 - [5gura](https://github.com/5gura) [备份](https://web.archive.org/web/20260117181304/https://github.com/5gura)
-- [algotao](https://github.com/algotao)
-- [Alex6357](https://github.com/Alex6357)
+- [algotao](https://github.com/algotao) [备份](https://web.archive.org/web/20260119105616/https://github.com/algotao)
+- [Alex6357](https://github.com/Alex6357) [备份](https://web.archive.org/web/20260119105831/https://github.com/Alex6357)
 - April Simone🍥
-- [VZstless](https://github.com/atlarator)
+- [VZstless](https://github.com/atlarator) [备份](https://web.archive.org/web/20260119105412/https://github.com/atlarator)
 - [bduath](https://github.com/bduath) [备份](https://web.archive.org/web/20260118021541/https://github.com/bduath)  
 - [blu10ph](https://github.com/blu10ph) [备份](https://web.archive.org/web/20260118172239/https://github.com/blu10ph)  
 - [bsdwiki](https://github.com/bsdwiki)
@@ -54,24 +54,24 @@ Ubuntu 吧前吧主 Simple 曾建议修改项目的章节文件名与许可协�
 - [liguangsheng](https://github.com/liguangsheng) [备份](https://web.archive.org/web/20260118172423/https://github.com/liguangsheng)
 - livrth  
 - [凌莞](https://clansty.com)  
-- [柳离枝](https://github.com/liulitchi)
+- [柳离枝](https://github.com/liulitchi) [备份](https://web.archive.org/web/20260119105351/https://github.com/liulitchi)
 - 刘昕宇  
 - matatabi-wang  
 - 墨子  
 - [mxdyeah / mxdabc](https://mxdyeah.top/)  
 - [nerdroychan](https://github.com/nerdroychan) [备份](https://web.archive.org/web/20260117121724/https://github.com/nerdroychan)  
 - [number201724](https://github.com/number201724)  
-- [orzyyyy](https://github.com/orzyyyy)  
+- [orzyyyy](https://github.com/orzyyyy) [备份](https://web.archive.org/web/20260119105509/https://github.com/orzyyyy)  
 - [peiyafei](https://github.com/peiyafei)  
 - [pengxingwei](https://github.com/pengxingwei) [备份](https://web.archive.org/web/20260118020032/https://github.com/pengxingwei)  
 - [puffinjiang](https://github.com/puffinjiang)  
 - 清和 [qinghecyn](https://github.com/qinghecyn) [备份](https://web.archive.org/web/20260117181455/https://github.com/qinghecyn)  
 - 清热解毒口服液  
 - [Rintim](https://github.com/Rintim) [备份](https://web.archive.org/web/20260119042645/https://github.com/Rintim)  
-- [ruur](https://github.com/ruur)  
+- [ruur](https://github.com/ruur) [备份](https://web.archive.org/web/20260119105650/https://github.com/ruur)  
 - [Sayunosyjou](https://github.com/Sayunosyjou) [备份](https://web.archive.org/web/20260118171656/https://github.com/Sayunosyjou)  
 - 施主  
-- [Suyun114](https://github.com/Suyun114)  
+- [Suyun114](https://github.com/Suyun114) [备份](https://web.archive.org/web/20260119105437/https://github.com/Suyun114)  
 - [tergel93](https://github.com/tergel93)  
 - [tomblackwhite](https://github.com/tomblackwhite) [备份](https://web.archive.org/web/20260118172022/https://github.com/tomblackwhite)  
 - 艳阳天
