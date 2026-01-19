@@ -23,7 +23,7 @@
 >   - 建议使用 [Rufus](https://rufus.ie/zh/) [备份](https://web.archive.org/web/20260115142915/https://rufus.ie/zh/) 进行刻录，而非 [Ventoy](https://www.ventoy.net/cn/index.html) [备份](https://web.archive.org/web/20260116224411/https://www.ventoy.net/cn/index.html)。
 
 
-若仍出现问题，请先在 [官方论坛](https://forums.freebsd.org/) 使用英语询问；若无果，可按其他章节指引提交 bug。
+若仍出现问题，请先在 [官方论坛](https://forums.freebsd.org/) [备份](https://web.archive.org/web/20260119051244/https://forums.freebsd.org/) 使用英语询问；若无果，可按其他章节指引提交 bug。
 
 ## 重启后又进入了安装界面
 

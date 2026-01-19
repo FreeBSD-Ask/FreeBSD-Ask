@@ -217,7 +217,7 @@ pkgbase 是 TrueOS 留给 FreeBSD 项目的技术遗产，旨在以软件包形�
 
 ## 分配磁盘空间
 
-FreeBSD 15.0-RELEASE 支持选择 UFS 或 ZFS 作为根文件系统。旧版本中，`bsdinstall` 工具仅支持 UFS；[自 10.0 版本起](http://svn.freebsd.org/viewvc/base?view=revision&revision=256361)，`bsdinstall` 开始支持 ZFS。通过手动安装方式，则早在 [8.0 版本](https://blog.delphij.net/posts/2008/11/zfs-1/) [备份](https://web.archive.org/web/20260115144031/https://blog.delphij.net/posts/2008/11/zfs-1/)即可将 ZFS 用作根分区。
+FreeBSD 15.0-RELEASE 支持选择 UFS 或 ZFS 作为根文件系统。旧版本中，`bsdinstall` 工具仅支持 UFS；[自 10.0 版本起](http://svn.freebsd.org/viewvc/base?view=revision&revision=256361) [备份](https://web.archive.org/web/20260115144422/https://svnweb.freebsd.org/base?view=revision&revision=256361)，`bsdinstall` 开始支持 ZFS。通过手动安装方式，则早在 [8.0 版本](https://blog.delphij.net/posts/2008/11/zfs-1/) [备份](https://web.archive.org/web/20260115144031/https://blog.delphij.net/posts/2008/11/zfs-1/)即可将 ZFS 用作根分区。
 
 ![](../.gitbook/assets/ins7-15.png)
 
@@ -582,10 +582,10 @@ root 密码强度无强制要求，但不可为空。若密码为空，将提示
 
 ### 参考文献
 
-- [Regulatory Domain Support](https://wiki.freebsd.org/WiFi/RegulatoryDomainSupport)
+- [Regulatory Domain Support](https://wiki.freebsd.org/WiFi/RegulatoryDomainSupport) [备份](https://web.archive.org/web/20260118030429/https://wiki.freebsd.org/WiFi/RegulatoryDomainSupport)
 - [main/lib/lib80211/regdomain.xml](https://github.com/freebsd/freebsd-src/blob/main/lib/lib80211/regdomain.xml) [备份](https://web.archive.org/web/20260115144118/https://github.com/freebsd/freebsd-src/blob/main/lib/lib80211/regdomain.xml)，regdomain.xml 在源代码的位置
 - [regdomain.xml --	802.11 wireless	regulatory definitions](https://man.freebsd.org/cgi/man.cgi?query=regdomain&sektion=5)，对应编码请参考系统中的 `/etc/regdomain.xml` 文件
-- [阿里公共 DNS](https://www.alidns.com/)
+- [阿里公共 DNS](https://www.alidns.com/) [备份](https://web.archive.org/web/20260119050754/https://cn.aliyun.com/product/dns?from_alibabacloud=)
 
 
 

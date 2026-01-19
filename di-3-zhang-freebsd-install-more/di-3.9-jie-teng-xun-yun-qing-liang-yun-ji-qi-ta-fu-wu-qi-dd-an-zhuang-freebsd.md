@@ -27,7 +27,7 @@
 >
 >请注意数据安全。本教程操作具有一定风险，并要求你具备一定的动手能力。
 
-上述服务器的管理面板未提供 FreeBSD 镜像，因此需要采用变通方法进行安装。由于 FreeBSD 与 Linux 在内核及可执行文件格式上不兼容，因此无法通过 `chroot` 后删除原系统的方式进行安装。安装方法为：首先在内存盘中启动 FreeBSD 系统（即先引导 [mfsBSD](https://mfsbsd.vx.sk)），然后格式化硬盘并安装新系统。mfsBSD 是一款完全载入内存的 FreeBSD 系统，类似于 Windows PE 环境。
+上述服务器的管理面板未提供 FreeBSD 镜像，因此需要采用变通方法进行安装。由于 FreeBSD 与 Linux 在内核及可执行文件格式上不兼容，因此无法通过 `chroot` 后删除原系统的方式进行安装。安装方法为：首先在内存盘中启动 FreeBSD 系统（即先引导 [mfsBSD](https://mfsbsd.vx.sk) [备份](https://web.archive.org/web/20260118024656/https://mfsbsd.vx.sk/)），然后格式化硬盘并安装新系统。mfsBSD 是一款完全载入内存的 FreeBSD 系统，类似于 Windows PE 环境。
 
 
 我们需要下载 [img 格式的 mfsBSD 镜像](https://mfsbsd.vx.sk/files/images/14/amd64/mfsbsd-se-14.2-RELEASE-amd64.img)，可提前下载后通过 WinSCP 上传至服务器；若直接在服务器上下载，可能耗时较长（约两小时）。
@@ -220,5 +220,5 @@ GRUB 不支持将 ISO 镜像挂载为内存盘，但其他引导程序或许可�
 ## 参考资料
 
 - [Remote Installation of the FreeBSD Operating System Without a Remote Console](https://docs.freebsd.org/en/articles/remote-install/) [备份](https://web.archive.org/web/20260118022819/https://docs.freebsd.org/en/articles/remote-install/)
-- [GRUB2 配置文件“grub.cfg”详解（GRUB2 实战手册）](https://www.jinbuguo.com/linux/grub.cfg.html)，作者：金步国。参数解释参见此处，有需要的读者请自行阅读。下同。
+- [GRUB2 配置文件“grub.cfg”详解（GRUB2 实战手册）](https://www.jinbuguo.com/linux/grub.cfg.html) [备份](https://web.archive.org/web/20260117183747/https://www.jinbuguo.com/linux/grub.cfg.html)，作者：金步国。参数解释参见此处，有需要的读者请自行阅读。下同。
 - [关于启动时不显示 grub 界面的问题](https://phorum.vbird.org/viewtopic.php?f=2&t=40587) [备份](https://web.archive.org/web/20260118173331/https://phorum.vbird.org/viewtopic.php?f=2&t=40587)

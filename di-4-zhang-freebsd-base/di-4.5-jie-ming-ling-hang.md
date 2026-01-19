@@ -190,7 +190,7 @@ usage: ls [-ABCFGHILPRSTUWZabcdfghiklmnopqrstuvwxy1,] [--color=when] [-D format]
 
 > **技巧**
 >
-> 命令后面的 `#` 表示什么意思？`#` 在 shell 当中一般是起注释作用（由 [POSIX.1-2024](https://pubs.opengroup.org/onlinepubs/9799919799/utilities/V3_chap02.html) 规定），相当于 C 语言里面的 `//`。意味着后边的文字只起到说明作用，不起实际作用。
+> 命令后面的 `#` 表示什么意思？`#` 在 shell 当中一般是起注释作用（由 [POSIX.1-2024](https://pubs.opengroup.org/onlinepubs/9799919799/utilities/V3_chap02.html) [备份](https://web.archive.org/web/20260112081410/https://pubs.opengroup.org/onlinepubs/9799919799/utilities/V3_chap02.html) 规定），相当于 C 语言里面的 `//`。意味着后边的文字只起到说明作用，不起实际作用。
 
 ### thefuck：自动纠正错误拼写的命令
 
@@ -367,7 +367,7 @@ $ type cd
 cd is a shell builtin
 ```
 
-在 FreeBSD 中，除了上述 shell 内置命令外（参见 [sh(1)](https://man.freebsd.org/cgi/man.cgi?sh(1))），常用命令都是基本系统自带的，不属于任何一个包。比如 `ls` 命令，其源代码位于 [freebsd-src/bin/ls/](https://github.com/freebsd/freebsd-src/tree/main/bin/ls)。可见 FreeBSD 系统是一个有机整体，而非由不同人员或团队维护的软件包简单拼凑而成。
+在 FreeBSD 中，除了上述 shell 内置命令外（参见 [sh(1)](https://man.freebsd.org/cgi/man.cgi?sh(1))），常用命令都是基本系统自带的，不属于任何一个包。比如 `ls` 命令，其源代码位于 [freebsd-src/bin/ls/](https://github.com/freebsd/freebsd-src/tree/main/bin/ls) [备份](https://web.archive.org/web/20260119055105/https://github.com/freebsd/freebsd-src/tree/main/bin/ls)。可见 FreeBSD 系统是一个有机整体，而非由不同人员或团队维护的软件包简单拼凑而成。
 
 如果你配置了 pkgbase，则输出类似：
 
@@ -414,7 +414,7 @@ drwxr-xr-x  2 ykla ykla    2B Mar  9 20:45 下载
 ……省略一部分……
 ```
 
-在 UNIX 系统中，以 `.` 开头的文件或目录（如上面的 `.XIM-unix`）都是隐藏的。你的安卓手机也是一样的——你可以通过 [MT 文件管理器](https://mt2.cn/) 自行查看一下。
+在 UNIX 系统中，以 `.` 开头的文件或目录（如上面的 `.XIM-unix`）都是隐藏的。你的安卓手机也是一样的——你可以通过 [MT 文件管理器](https://mt2.cn/) [备份](https://web.archive.org/web/20260119054949/https://mt2.cn/) 自行查看一下。
 
 选项 `-a` 可用于显示隐藏的目录和文件：
 
@@ -754,7 +754,7 @@ make BATCH=yes install || make BATCH=yes install || make BATCH=yes install || ma
 
 ## BSD 风格的 make/grep/sed/awk
 
-FreeBSD 的 [make](https://www.freebsd.org/cgi/man.cgi?query=make&apropos=0&sektion=0&manpath=FreeBSD+13.1-RELEASE+and+Ports&arch=default&format=html)/[grep](https://www.freebsd.org/cgi/man.cgi?query=grep&sektion=&n=1)/[sed](https://www.freebsd.org/cgi/man.cgi?query=sed&apropos=0&sektion=0&manpath=FreeBSD+13.1-RELEASE+and+Ports&arch=default&format=html)/[awk](https://www.freebsd.org/cgi/man.cgi?query=awk&apropos=0&sektion=0&manpath=FreeBSD+13.1-RELEASE+and+Ports&arch=default&format=html) 与 GNU 那套有所不同。详见 man 手册。
+FreeBSD 的 [make](https://www.freebsd.org/cgi/man.cgi?query=make&apropos=0&sektion=0&manpath=FreeBSD+13.1-RELEASE+and+Ports&arch=default&format=html) [备份](https://web.archive.org/web/20260119055134/https://man.freebsd.org/cgi/man.cgi?query=make&apropos=0&sektion=0&manpath=FreeBSD+13.1-RELEASE+and+Ports&arch=default&format=html)/[grep](https://www.freebsd.org/cgi/man.cgi?query=grep&sektion=&n=1)/[sed](https://www.freebsd.org/cgi/man.cgi?query=sed&apropos=0&sektion=0&manpath=FreeBSD+13.1-RELEASE+and+Ports&arch=default&format=html)/[awk](https://www.freebsd.org/cgi/man.cgi?query=awk&apropos=0&sektion=0&manpath=FreeBSD+13.1-RELEASE+and+Ports&arch=default&format=html) [备份](https://web.archive.org/web/20260119055023/https://man.freebsd.org/cgi/man.cgi?query=awk&apropos=0&sektion=0&manpath=FreeBSD+13.1-RELEASE+and+Ports&arch=default&format=html) 与 GNU 那套有所不同。详见 man 手册。
 
 示例：
 

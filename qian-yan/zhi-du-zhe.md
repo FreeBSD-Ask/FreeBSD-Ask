@@ -69,7 +69,7 @@
 
 >**思考题**
 >
->大多数发行版倾向于不使用 `pwfeedback` 的一种原因是其相关代码可能会引入更多的安全漏洞。你认为是 sudo 让我们陷入了平衡安全与便捷的讨论泥潭，还是 sudo 本身设计有问题？了解那些替代实现（[sudo-rs](https://github.com/trifectatechfoundation/sudo-rs)、[doas](https://man.openbsd.org/doas) [备份](https://web.archive.org/web/20260102031731/https://man.openbsd.org/doas)），你能否在保证安全的前提下，为这些工具实现 `pwfeedback`？如果在现有的安全模型下永远也无法实现，你认为我们还能做些什么？
+>大多数发行版倾向于不使用 `pwfeedback` 的一种原因是其相关代码可能会引入更多的安全漏洞。你认为是 sudo 让我们陷入了平衡安全与便捷的讨论泥潭，还是 sudo 本身设计有问题？了解那些替代实现（[sudo-rs](https://github.com/trifectatechfoundation/sudo-rs) [备份](https://web.archive.org/web/20260119042131/https://github.com/trifectatechfoundation/sudo-rs)、[doas](https://man.openbsd.org/doas) [备份](https://web.archive.org/web/20260102031731/https://man.openbsd.org/doas)），你能否在保证安全的前提下，为这些工具实现 `pwfeedback`？如果在现有的安全模型下永远也无法实现，你认为我们还能做些什么？
 
 许多人经常打错或混淆命令、参数及选项，但这并非读者的错。
 

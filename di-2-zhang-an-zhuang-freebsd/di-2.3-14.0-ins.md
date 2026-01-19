@@ -514,10 +514,10 @@ NVMe 硬盘 ZFS 加密后的磁盘结构（同时加密了交换空间）：
 
 ### 参考文献
 
-- [Regulatory Domain Support](https://wiki.freebsd.org/WiFi/RegulatoryDomainSupport)
+- [Regulatory Domain Support](https://wiki.freebsd.org/WiFi/RegulatoryDomainSupport) [备份](https://web.archive.org/web/20260118030429/https://wiki.freebsd.org/WiFi/RegulatoryDomainSupport)
 - [main/lib/lib80211/regdomain.xml](https://github.com/freebsd/freebsd-src/blob/main/lib/lib80211/regdomain.xml) [备份](https://web.archive.org/web/20260115144118/https://github.com/freebsd/freebsd-src/blob/main/lib/lib80211/regdomain.xml)，regdomain.xml 在源代码的位置
 - [regdomain.xml --	802.11 wireless	regulatory definitions](https://man.freebsd.org/cgi/man.cgi?query=regdomain&sektion=5)，对应编码请参考系统中的 `/etc/regdomain.xml` 文件
-- [阿里公共 DNS](https://www.alidns.com/)
+- [阿里公共 DNS](https://www.alidns.com/) [备份](https://web.archive.org/web/20260119050754/https://cn.aliyun.com/product/dns?from_alibabacloud=)
 
 
 ## 时区设置

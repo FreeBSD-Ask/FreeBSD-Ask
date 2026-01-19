@@ -200,7 +200,7 @@ hw.efi.poweroff=0	# 禁用 EFI 电源关闭功能，使系统通过 ACPI 正常�
 
 #### 参考文献
 
-- [12.0-U8.1 -> 13.0-U2 poweroff problem & solution](https://www.truenas.com/community/threads/12-0-u8-1-13-0-u2-poweroff-problem-solution.104813/)
+- [12.0-U8.1 -> 13.0-U2 poweroff problem & solution](https://www.truenas.com/community/threads/12-0-u8-1-13-0-u2-poweroff-problem-solution.104813/) [备份](https://web.archive.org/web/20260119044842/https://www.truenas.com/community/threads/12-0-u8-1-13-0-u2-poweroff-problem-solution.104813/)
 - [EFI: VirtualBox computer non-stop after successful shutdown of FreeBSD](https://forums.freebsd.org/threads/efi-virtualbox-computer-non-stop-after-successful-shutdown-of-freebsd.84856/)
 
 ### 鼠标被捕获在虚拟机窗口内无法移出
