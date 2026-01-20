@@ -55,7 +55,7 @@ Fiat Lux!
 ## 参考文献
 
 - [Fiat Lux Scholarship](https://financialaid.berkeley.edu/types-of-aid-at-berkeley/scholarships/fiat-lux-scholarship/) [备份](https://web.archive.org/web/20260115035656/https://financialaid.berkeley.edu/types-of-aid-at-berkeley/scholarships/fiat-lux-scholarship/) ，Fiat Lux 奖学金
-- [蔡元培像](https://www.xsg.pku.edu.cn/details/1893.html) ，北京大学校史馆
+- [蔡元培像](https://www.xsg.pku.edu.cn/details/1893.html) [备份](https://web.archive.org/web/20260117041422/https://www.xsg.pku.edu.cn/details/1893.html) ，北京大学校史馆
 - 蔡元培. 蔡元培：言有物，行有伦 [M]. 北京: 中国文史出版社, 2023. 蔡元培名言出自《何为文化》一节 ISBN 9787520538169.
 - 随着明治维新，国力渐增，日本逐步迈上了对外侵略扩张的军国主义道路，1887 年，日本参谋本部制定了所谓“清国征讨策略”，逐渐演化为以侵略中国为中心的“大陆政策”。
 - Piazza L, Lummen TTA, Quiñonez E, Murooka Y, Reed BW, Barwick B, Carbone F.Simultaneous observation of the quantization and the interference pattern of a plasmonic near-field. Nature Communications 02 March 2015.

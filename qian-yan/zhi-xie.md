@@ -58,7 +58,7 @@ Ubuntu 吧前吧主 Simple 曾建议修改项目的章节文件名与许可协�
 - 刘昕宇  
 - matatabi-wang  
 - 墨子  
-- [mxdyeah / mxdabc](https://mxdyeah.top/)  
+- [mxdyeah / mxdabc](https://mxdyeah.top/) [备份](https://web.archive.org/web/20260120145232/https://www.mxdyeah.com/)  
 - [nerdroychan](https://github.com/nerdroychan) [备份](https://web.archive.org/web/20260117121724/https://github.com/nerdroychan)  
 - [number201724](https://github.com/number201724)  
 - [orzyyyy](https://github.com/orzyyyy) [备份](https://web.archive.org/web/20260119105509/https://github.com/orzyyyy)  

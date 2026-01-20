@@ -18,7 +18,7 @@ BIOS 界面、选项和设置可能因系统不同而有所差异。
 
 根据 AMI 官方网站 [The World Runs on AMI](https://www.ami.com/about-us/) 的介绍，全球约 70% 的服务器平台采用 AMI 软件。
 
-根据 [安迈信息科技（昆山）有限公司](https://www.ami.com.cn/) 官网介绍，AMI 为 BIOS 业界的公认领导者之一，市场占有率超过 65％。
+根据 [安迈信息科技（昆山）有限公司](https://www.ami.com.cn/) [备份](https://web.archive.org/web/20260120155120/https://www.ami.com.cn/) 官网介绍，AMI 为 BIOS 业界的公认领导者之一，市场占有率超过 65％。
 
 市场上大部分英特尔迷你主机所使用的 BIOS 均为 AMI BIOS。
 

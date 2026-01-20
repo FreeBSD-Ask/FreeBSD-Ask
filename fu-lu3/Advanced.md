@@ -21,7 +21,7 @@ CRF（Companion RF，辅助射频模块），实际上指无线网卡（现代�
 - CNVi，英特尔处理器的集成无线 IP 部分
 - M.2 外形配套的 RF (CRF) 模块（2230 和 1216 焊接）。事实上，尽管这些无线网卡的物理规格为 M.2，但它们只能被特定的英特尔处理器所支持，AMD 处理器无法使用。
 
-参见 [什么是英特尔 ® 集成连接 (CNVi) 和配套 RF (CRF) 模块？](https://www.intel.cn/content/www/cn/zh/support/articles/000026155/wireless.html)。
+参见 [什么是英特尔 ® 集成连接 (CNVi) 和配套 RF (CRF) 模块？](https://www.intel.cn/content/www/cn/zh/support/articles/000026155/wireless.html) [备份](https://web.archive.org/web/20260120162551/https://www.intel.cn/content/www/cn/zh/support/articles/000026155/wireless.html)。
 
 ### CNVi Configuration（CNVi 配置）
 
@@ -90,7 +90,7 @@ Enable（启用）
 
 说明：
 
-BT Audio Offload（A2DP），英特尔蓝牙音频分发技术，参见 [示范影片：以 Intel® Bluetooth® 音频卸除省电（A2DP） （MP4）](https://www.intel.cn/content/www/cn/zh/content-details/751466/demo-video-power-saving-with-intel-bluetooth-audio-offload-a2dp-mp4.html)。硬件卸载的音频处理允许在计算机的主 CPU 之外执行主要音频处理任务：即将蓝牙传输音频的解码放到 DSP 进行处理，可降低处理器的负载并省电。参见 [Hardware-Offloaded 音频处理](https://learn.microsoft.com/zh-cn/windows-hardware/drivers/audio/hardware-offloaded-audio-processing)。
+BT Audio Offload（A2DP），英特尔蓝牙音频分发技术，参见 [示范影片：以 Intel® Bluetooth® 音频卸除省电（A2DP） （MP4）](https://www.intel.cn/content/www/cn/zh/content-details/751466/demo-video-power-saving-with-intel-bluetooth-audio-offload-a2dp-mp4.html)。硬件卸载的音频处理允许在计算机的主 CPU 之外执行主要音频处理任务：即将蓝牙传输音频的解码放到 DSP 进行处理，可降低处理器的负载并省电。参见 [Hardware-Offloaded 音频处理](https://learn.microsoft.com/zh-cn/windows-hardware/drivers/audio/hardware-offloaded-audio-processing) [备份](https://web.archive.org/web/20260120163041/https://learn.microsoft.com/zh-cn/windows-hardware/drivers/audio/hardware-offloaded-audio-processing)。
 
 该功能可将来自蓝牙设备的 HFP 格式音频输入传送至音频 DSP，并通过 A2DP 格式以高能效方式将音频输出至蓝牙设备。
 
@@ -260,7 +260,7 @@ Enable（启用）
 - 经过优化，可高效运行后台任务。简单的任务可以分载到小核上，例如，处理 Discord 或杀毒软件，从而使大核能够自由发挥游戏性能。
 - 每个能效核心只能运行单个软件线程。
 
-参见 [什么是性能混合架构？](https://www.intel.cn/content/www/cn/zh/support/articles/000091896/processors.html)
+参见 [什么是性能混合架构？](https://www.intel.cn/content/www/cn/zh/support/articles/000091896/processors.html) [备份](https://web.archive.org/web/20260120162022/https://www.intel.cn/content/www/cn/zh/support/articles/000091896/processors.html)
 
 
 ### Performance-core Information（性能核心信息）
@@ -284,7 +284,7 @@ Enable（启用）
 - 非常适合处理许多游戏引擎需要的繁重单线程工作。
 - 支持超线程，这意味着大核可同时运行两个软件线程（英特尔 ® Core™ Ultra 处理器（系列 2）除外）
 
-参见 [什么是性能混合架构？](https://www.intel.cn/content/www/cn/zh/support/articles/000091896/processors.html)
+参见 [什么是性能混合架构？](https://www.intel.cn/content/www/cn/zh/support/articles/000091896/processors.html) [备份](https://web.archive.org/web/20260120162022/https://www.intel.cn/content/www/cn/zh/support/articles/000091896/processors.html)
 
 ### C6DRAM（C6 节能状态下的 DRAM 控制）
 
@@ -473,7 +473,7 @@ Enable（启用）
 
 英特尔 ® 超线程技术是一项硬件创新，能在每个内核上都运行多个线程。可使一个物理内核表现的如同两个“逻辑内核”一样。
 
-参见 [什么是超线程？](https://www.intel.cn/content/www/cn/zh/gaming/resources/hyper-threading.html)
+参见 [什么是超线程？](https://www.intel.cn/content/www/cn/zh/gaming/resources/hyper-threading.html) [备份](https://web.archive.org/web/20260120161952/https://www.intel.cn/content/www/cn/zh/gaming/resources/hyper-threading.html)
 
 ### BIST（内置自检程序）
 
@@ -571,7 +571,7 @@ Enable（启用）
 
 Intel® Trusted Execution Technology，英特尔 ® TXT。一种非常老（2007）的可信计算技术，参见 SW Guard Extension（英特尔 SGX 技术）。
 
-参见 [英特尔 ® Trusted Execution Technology（英特尔 ® TXT）概述](https://www.intel.cn/content/www/cn/zh/support/articles/000025873/processors.html)
+参见 [英特尔 ® Trusted Execution Technology（英特尔 ® TXT）概述](https://www.intel.cn/content/www/cn/zh/support/articles/000025873/processors.html) [备份](https://web.archive.org/web/20260120162019/https://www.intel.cn/content/www/cn/zh/support/articles/000025873/processors.html)
 
 ### Alias Check Request（别名检查请求）
 
@@ -598,7 +598,7 @@ DPR：DMA Protected Range：内核直接内存访问受保护范围。
 DMA 受保护范围（DPR）是一段连续的物理内存区域，其最后一个字节位于 TXT 段（TSEG）起始地址之前一个字节的位置，并且该区域受到所有 DMA 访问的保护。
 
 
-参见 [Where to read about DMA Protected Range (DPR)?](https://community.intel.com/t5/Software-Archive/Where-to-read-about-DMA-Protected-Range-DPR/td-p/922654)
+参见 [Where to read about DMA Protected Range (DPR)?](https://community.intel.com/t5/Software-Archive/Where-to-read-about-DMA-Protected-Range-DPR/td-p/922654) [备份](https://web.archive.org/web/20260120162633/https://community.intel.com/t5/Software-Archive/Where-to-read-about-DMA-Protected-Range-DPR/td-p/922654)
 
 ### Reset AUX Content（重置 AUX 内容）
 
@@ -764,7 +764,7 @@ Enable（启用）
 
 若要支持 Intel Turbo Boost Max（ITBMT，英特尔睿频加速 Max）3.0 技术，则必须开启此项。若处理器不支持 ITBMT 3.0，此项将呈现灰色，不可设定状态。
 
-ITBMT 3.0 能识别处理器上性能最佳的内核，同时通过提高利用电源和散热器空间时所必需的频率，提高这些内核的性能。由于生产差异，处理器内核的最大潜在频率各不相同。ITBMT 3.0 可识别 CPU 上最多两个速度最快的内核，称为“青睐的内核”。然后，它会对这些内核（或该内核）应用频率提升，并将关键工作负载分配到它们。ITBMT 3.0 旨在充分利用每个内核的最高频率，参见 [英特尔 ® 睿频加速 Max 技术 3.0 技术常见问题解答](https://www.intel.cn/content/www/cn/zh/support/articles/000021587/processors.html)。
+ITBMT 3.0 能识别处理器上性能最佳的内核，同时通过提高利用电源和散热器空间时所必需的频率，提高这些内核的性能。由于生产差异，处理器内核的最大潜在频率各不相同。ITBMT 3.0 可识别 CPU 上最多两个速度最快的内核，称为“青睐的内核”。然后，它会对这些内核（或该内核）应用频率提升，并将关键工作负载分配到它们。ITBMT 3.0 旨在充分利用每个内核的最高频率，参见 [英特尔 ® 睿频加速 Max 技术 3.0 技术常见问题解答](https://www.intel.cn/content/www/cn/zh/support/articles/000021587/processors.html) [备份](https://web.archive.org/web/20260120161917/https://www.intel.cn/content/www/cn/zh/support/articles/000021587/processors.html)。
 
 关闭该功能有助于改善实时性，此时 CPU 频率和电压不会被动态调整。
 
@@ -800,7 +800,7 @@ Enable（启用）
 
 这是 Intel 第 12 代和第 13 代 处理器配备的技术。
 
-禁用每核心自主 P 状态（Autonomous PCPS）后，所有核心将始终请求相同的性能状态值。HWP（Hardware Controlled Performance States，硬件性能状态）可操作系统通过 MSR 中的能效偏好字段（EPP）设置其对性能或节能的偏好。启用 HWP 后，处理器将自行根据工作负载的需求，独立选择最合适的性能状态。参见 Empowering Mixed-criticality Industrial Realtime Computing on Performance Hybrid Architecture with Intel's Dynamic Frequency Scaling Evolution [https://builders.intel.com/docs/networkbuilders/empowering-mixed-criticality-industrial-real-time-computing-with-intel-s-dvfs-evolution-1712135964.pdf](https://builders.intel.com/docs/networkbuilders/empowering-mixed-criticality-industrial-real-time-computing-with-intel-s-dvfs-evolution-1712135964.pdf)
+禁用每核心自主 P 状态（Autonomous PCPS）后，所有核心将始终请求相同的性能状态值。HWP（Hardware Controlled Performance States，硬件性能状态）可操作系统通过 MSR 中的能效偏好字段（EPP）设置其对性能或节能的偏好。启用 HWP 后，处理器将自行根据工作负载的需求，独立选择最合适的性能状态。参见 Empowering Mixed-criticality Industrial Realtime Computing on Performance Hybrid Architecture with Intel's Dynamic Frequency Scaling Evolution [https://builders.intel.com/docs/networkbuilders/empowering-mixed-criticality-industrial-real-time-computing-with-intel-s-dvfs-evolution-1712135964.pdf](https://builders.intel.com/docs/networkbuilders/empowering-mixed-criticality-industrial-real-time-computing-with-intel-s-dvfs-evolution-1712135964.pdf) [备份](https://web.archive.org/web/20251207044722/https://builders.intel.com/docs/networkbuilders/empowering-mixed-criticality-industrial-real-time-computing-with-intel-s-dvfs-evolution-1712135964.pdf)
 
 对性能一致性有要求的用户（如实时计算等）可能需要关闭此选项。
 
@@ -836,7 +836,7 @@ Enable（启用）
 
 EPB，Performance and Energy Bias Hint：性能与能耗偏好提示能让软件指定其对处理器中性能与功耗权衡的偏好。
 
-参见 [Intel Performance and Energy Bias Hint](https://docs.kernel.org/admin-guide/pm/intel_epb.html)。
+参见 [Intel Performance and Energy Bias Hint](https://docs.kernel.org/admin-guide/pm/intel_epb.html) [备份](https://web.archive.org/web/20260120162143/https://docs.kernel.org/admin-guide/pm/intel_epb.html)。
 
 是否允许系统通过 PECI 接口修改处理器的 EPB 设置，从而实现更精确的能效控制。
 
@@ -1039,7 +1039,7 @@ PSYS 平台电源变化率以 1/100 为单位定义，范围为 0 到 200。
 
 例如，要设置变化率为 1.25，输入 125。设置为 0 表示自动（AUTO）。该设置通过 BIOS VR mailbox 命令 0x9 进行控制。
 
-参见 [第 10 代英特尔 ® 酷睿 ™ 处理器系列](https://www.intel.cn/content/dam/www/public/cn/zh/documents/datasheets/10th-gen-core-families-datasheet-vol-1-datasheet.pdf)。
+参见 [第 10 代英特尔 ® 酷睿 ™ 处理器系列](https://www.intel.cn/content/dam/www/public/cn/zh/documents/datasheets/10th-gen-core-families-datasheet-vol-1-datasheet.pdf) [备份](https://web.archive.org/web/20260120162514/https://www.intel.cn/content/dam/www/public/cn/zh/documents/datasheets/10th-gen-core-families-datasheet-vol-1-datasheet.pdf)。
 
 ##### PSYS Offset（PSYS 平台电源偏移量）
 
@@ -1269,7 +1269,7 @@ Enable（启用）
 
 因为直流电压降（电路长度愈增加，其电压会愈下降，导致其两端电压不同）问题，英特尔将主板到 CPU 之间的物理电阻抽象为虚拟电阻（即 AC/DC Loadline），即不考虑实际物理电阻的实现究竟是多少（每块主板都不同），来拟合 CPU 倍频所需的电压功率，这样不同的主板的主板供电模块的掉压行为就是一致的。AC Loadline 是升压负载线，DC 是降压负载线。
 
-负载线（AC/DC）应通过 VRTT 工具进行测量，并通过 BIOS 的负载线覆盖设置选项进行相应配置。AC 负载线会直接影响工作电压（AC），DC 负载线则会影响功率测量（DC）。与按 POR 阻抗设计的主板相比，采用较低 AC 负载线的优秀主板设计能够在功耗、性能和散热方面实现改进。参见 [VCCCORE DC Specifications](https://edc.intel.com/content/www/de/de/design/products/platforms/details/raptor-lake-s/13th-generation-core-processors-datasheet-volume-1-of-2/vcccore-dc-specifications/)、[Intel CPU AC / DC Loadline、防掉壓 CEP 觀念原理 一次講完](https://forum.gamer.com.tw/C.php?bsn=60030&snA=644011)、[从头开始讲 Loadline](https://tieba.baidu.com/p/8328546013)。
+负载线（AC/DC）应通过 VRTT 工具进行测量，并通过 BIOS 的负载线覆盖设置选项进行相应配置。AC 负载线会直接影响工作电压（AC），DC 负载线则会影响功率测量（DC）。与按 POR 阻抗设计的主板相比，采用较低 AC 负载线的优秀主板设计能够在功耗、性能和散热方面实现改进。参见 [VCCCORE DC Specifications](https://edc.intel.com/content/www/de/de/design/products/platforms/details/raptor-lake-s/13th-generation-core-processors-datasheet-volume-1-of-2/vcccore-dc-specifications/) [备份](https://web.archive.org/web/20260120162645/https://edc.intel.com/content/www/de/de/design/products/platforms/details/raptor-lake-s/13th-generation-core-processors-datasheet-volume-1-of-2/vcccore-dc-specifications/)、[Intel CPU AC / DC Loadline、防掉壓 CEP 觀念原理 一次講完](https://forum.gamer.com.tw/C.php?bsn=60030&snA=644011)、[从头开始讲 Loadline](https://tieba.baidu.com/p/8328546013)。
 
 Intel 建议 AC Loadline 与 DC Loadline 取值一致（AC = DC）。警告：一般不建议修改 AC/DC Loadline。
 
@@ -1791,7 +1791,7 @@ Enable（启用）
 
 ME：Intel Management Engine，Intel 管理引擎状态。英特尔 ® 管理引擎是一个嵌入式微控制器（集成在某些英特尔芯片组上），运行一个轻量级微内核操作系统，为基于英特尔 ® 处理器的计算机系统提供各种功能和服务。
 
-参见 [什么是英特尔 ® 管理引擎？](https://www.intel.cn/content/www/cn/zh/support/articles/000008927/software/chipset-software.html)
+参见 [什么是英特尔 ® 管理引擎？](https://www.intel.cn/content/www/cn/zh/support/articles/000008927/software/chipset-software.html) [备份](https://web.archive.org/web/20260120162926/https://www.intel.cn/content/www/cn/zh/support/articles/000008927/software/chipset-software.html)
 
 ### ME Unconfig on RTC Clear（重置 RTC 时是否重置 ME）
 
@@ -3174,7 +3174,7 @@ Disabled（禁用）
 
 ### TC1（热常数 1：ACPI 被动冷却公式的一部分）
 
-ACPI 被动冷却公式参见 [11.1.5.1. Processor Clock Throttling](https://uefi.org/htmlspecs/ACPI_Spec_6_4_html/11_Thermal_Management/thermal-control.html) 。
+ACPI 被动冷却公式参见 [11.1.5.1. Processor Clock Throttling](https://uefi.org/htmlspecs/ACPI_Spec_6_4_html/11_Thermal_Management/thermal-control.html) [备份](https://web.archive.org/web/20260120162733/https://uefi.org/htmlspecs/ACPI_Spec_6_4_html/11_Thermal_Management/thermal-control.html) 。
 
 默认为 1
 
@@ -3636,13 +3636,13 @@ Not Happened（未发生）：嵌入式控制器软未重置过
 
 串口 I/O IRQ（Interrupt Request，来自设备的中断请求），定义串口通信中断请求的硬件资源。
 
-参见 [什么是 IRQ？](https://www.kernel.org/doc/html/v6.9/translations/zh_CN/core-api/irq/concepts.html)
+参见 [什么是 IRQ？](https://www.kernel.org/doc/html/v6.9/translations/zh_CN/core-api/irq/concepts.html) [备份](https://web.archive.org/web/20251207044743/https://www.kernel.org/doc/html/v6.9/translations/zh_CN/core-api/irq/concepts.html)
 
 ### External FAN/PWM Settings（外部风扇 ／PWM 设置）
 
 当 SMARC（Smart Mobility ARChitecture，智能移动架构）相关配置中的 PWM／风扇管理启用时可见。
 
-参考文献：[PWM 信号占空比，如何影响散热风扇速度？](https://post.smzdm.com/p/a5p056o3/)
+参考文献：[PWM 信号占空比，如何影响散热风扇速度？](https://post.smzdm.com/p/a5p056o3/) [备份](https://web.archive.org/web/20260120162439/https://post.smzdm.com/p/a5p056o3/)
 
 #### FAN_PWMOUT device type(FAN_PWMOUT 设备类型)
 

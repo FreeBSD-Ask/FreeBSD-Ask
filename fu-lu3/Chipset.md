@@ -1140,7 +1140,7 @@ Fixed to 4th Point —— 固定到第 4 点
 
 是否启动 System Agent Geyserville（SAGV），系统会根据负载动态调整电压及频率，或固定在特定的控制点。
 
-参见 [12th Generation Intel® Core™ Processors](https://edc.intel.com/content/www/us/en/design/ipla/software-development-platforms/client/platforms/alder-lake-desktop/12th-generation-intel-core-processors-datasheet-volume-1-of-2/011/011/sagv-points/)、[一种借助 SAGV 降低 System Agent 功耗的方式](https://blog.xzr.moe/archives/348/)
+参见 [12th Generation Intel® Core™ Processors](https://edc.intel.com/content/www/us/en/design/ipla/software-development-platforms/client/platforms/alder-lake-desktop/12th-generation-intel-core-processors-datasheet-volume-1-of-2/011/011/sagv-points/) [备份](https://web.archive.org/web/20260120160736/https://edc.intel.com/content/www/us/en/design/ipla/software-development-platforms/client/platforms/alder-lake-desktop/12th-generation-intel-core-processors-datasheet-volume-1-of-2/011/011/sagv-points/)、[一种借助 SAGV 降低 System Agent 功耗的方式](https://blog.xzr.moe/archives/348/)
 
 SAGV（System Agent Geyserville）是一种使 SoC 能根据内存带宽利用率和/或各类工作负载的延迟需求，动态调整系统代理（System Agent）工作点（电压/频率）的技术，采用动态电压频率调节（DVFS）来提高能效。Pcode 启发式算法通过周期性评估内存利用率和 IA 停顿情况，负责请求合适的 Qclock 工作点。
 
@@ -2723,7 +2723,7 @@ Disabled（禁用）
 
 启用／禁用 SA CRID 和 TCSS CRID 控制，以支持 Intel SIPP。
 
-Intel SIPP，The Intel Stable IT Platform Program，英特尔 ® 稳定 IT 平台计划，是 vPro® platform 的一部分。参见 [借助英特尔 ® 稳定 IT 平台计划实现可靠的稳定性](https://www.intel.cn/content/www/cn/zh/architecture-and-technology/vpro/stable-it-platform-program/overview.html)、[什么是英特尔 ® vPro®？](https://www.intel.cn/content/www/cn/zh/architecture-and-technology/vpro/what-is-vpro.html)
+Intel SIPP，The Intel Stable IT Platform Program，英特尔 ® 稳定 IT 平台计划，是 vPro® platform 的一部分。参见 [借助英特尔 ® 稳定 IT 平台计划实现可靠的稳定性](https://www.intel.cn/content/www/cn/zh/architecture-and-technology/vpro/stable-it-platform-program/overview.html) [备份](https://web.archive.org/web/20260120155503/https://www.intel.cn/content/www/cn/zh/architecture-and-technology/vpro/stable-it-platform-program/overview.html)、[什么是英特尔 ® vPro®？](https://www.intel.cn/content/www/cn/zh/architecture-and-technology/vpro/what-is-vpro.html)
 
 英特尔 ® 稳定 IT 平台计划（英特尔 ® SIPP）能让 IT 部门至少在 15 个月内或在下一代产品发布之前，几乎不用修改平台组件和驱动程序。
 
@@ -3210,7 +3210,7 @@ PCIe\* 根端口在设置了 MPC.P8XDE 后，会专门解码并响应地址范�
 
 主要用于系统启动和诊断。
 
-参见 [Port 8xh Decode](https://edc.intel.com/content/www/us/en/design/ipla/software-development-platforms/client/platforms/tiger-lake-mobile-y/intel-500-series-chipset-family-on-package-platform-controller-hub-datasheet-v/006/port-8xh-decode/)
+参见 [Port 8xh Decode](https://edc.intel.com/content/www/us/en/design/ipla/software-development-platforms/client/platforms/tiger-lake-mobile-y/intel-500-series-chipset-family-on-package-platform-controller-hub-datasheet-v/006/port-8xh-decode/) [备份](https://web.archive.org/web/20260120160914/https://edc.intel.com/content/www/us/en/design/ipla/software-development-platforms/client/platforms/tiger-lake-mobile-y/intel-500-series-chipset-family-on-package-platform-controller-hub-datasheet-v/006/port-8xh-decode/)
 
 #### Compliance Test Mode（合规测试模式）
 
@@ -3504,7 +3504,7 @@ Disabled（禁用）
 
 说明：
 
-参见 [为什么使用适用于 PCI Express * 的 英特尔 ® FPGA P-Tile/H-Tile、Avalon® 流传输和 Avalon® 内存映射 IP 时，在高级错误报告（AER）中记录非严重 PCIe* 错误？](https://www.intel.cn/content/www/cn/zh/support/programmable/articles/000080831.html)
+参见 [为什么使用适用于 PCI Express * 的 英特尔 ® FPGA P-Tile/H-Tile、Avalon® 流传输和 Avalon® 内存映射 IP 时，在高级错误报告（AER）中记录非严重 PCIe* 错误？](https://www.intel.cn/content/www/cn/zh/support/programmable/articles/000080831.html) [备份](https://web.archive.org/web/20260120161434/https://community.altera.com/kb/knowledge-base/why-are-non-fatal-pcie-errors-logged-in-advanced-error-reporting-aer-when-using-/344197)
 
 - FER（PCIe 设备致命错误报告）
 
@@ -3566,7 +3566,7 @@ PCIe 设备发出的请求中有些请求需要 Completer 反馈 Completion，�
 
 为了不影响进一步使用，需要一种超时退出机制让 Requester 从这种等待状态恢复过来，这就是 Completion Timeout 机制（完成超时退出机制）。
 
-参见 [【PCIe】PCIe 完成超时机制](https://www.cnblogs.com/linhaostudy/p/18958287)
+参见 [【PCIe】PCIe 完成超时机制](https://www.cnblogs.com/linhaostudy/p/18958287) [备份](https://web.archive.org/web/20260120161520/https://www.cnblogs.com/linhaostudy/p/18958287)
 
 - SEFE（在发生致命错误时触发根 PCIe 系统错误）
 
@@ -3814,7 +3814,7 @@ Platform-POR：时钟根据主板布局分配给 PCIe 接口或 LAN。
 
 禁用 clock1 会禁用 LAN 控制器，但不会禁用其根端口。
 
-参见 [What is “clock0 assignment” and “ClkReq for clock0” BIOS options?](https://winraid.level1techs.com/t/what-is-clock0-assignment-and-clkreq-for-clock0-bios-options/104666)
+参见 [What is “clock0 assignment” and “ClkReq for clock0” BIOS options?](https://winraid.level1techs.com/t/what-is-clock0-assignment-and-clkreq-for-clock0-bios-options/104666) [备份](https://web.archive.org/web/20260120155425/https://winraid.level1techs.com/t/what-is-clock0-assignment-and-clkreq-for-clock0-bios-options/104666)
 
 ##### ClkReq for Clock0（时钟 0 的时钟请求引脚）
 
@@ -3936,7 +3936,7 @@ Hot Plug support。支持热插拔
 
 eSATA 的全称是 External Serial ATA（外部串行 ATA），它是 SATA 接口的外部扩展规范。换言之，eSATA 就是 "外置" 版的 SATA，它是用来连接外部而非内部 SATA 设备。
 
-参见 [eSATA 接口的介绍和使用](https://www.dell.com/support/kbdoc/zh-cn/000127522/esata-%E6%8E%A5%E5%8F%A3%E7%9A%84%E4%BB%8B%E7%BB%8D%E5%92%8C%E4%BD%BF%E7%94%A8)
+参见 [eSATA 接口的介绍和使用](https://www.dell.com/support/kbdoc/zh-cn/000127522/esata-%E6%8E%A5%E5%8F%A3%E7%9A%84%E4%BB%8B%E7%BB%8D%E5%92%8C%E4%BD%BF%E7%94%A8) [备份](https://web.archive.org/web/20260120160623/https://www.dell.com/support/kbdoc/zh-cn/000127522/esata-%E6%8E%A5%E5%8F%A3%E7%9A%84%E4%BB%8B%E7%BB%8D%E5%92%8C%E4%BD%BF%E7%94%A8)
 
 #### External（外置）
 
@@ -4756,7 +4756,7 @@ Disabled（禁用）
 
 LPSS，Low Power Subsystem，低功率子系统。
 
-参考文献：[设备低功率状态](https://learn.microsoft.com/zh-cn/windows-hardware/drivers/kernel/device-sleeping-states)
+参考文献：[设备低功率状态](https://learn.microsoft.com/zh-cn/windows-hardware/drivers/kernel/device-sleeping-states) [备份](https://web.archive.org/web/20260120155636/https://learn.microsoft.com/zh-cn/windows-hardware/drivers/kernel/device-sleeping-states)
 
 #### Additional Serial IO devices（附加串行 IO 设备）
 
