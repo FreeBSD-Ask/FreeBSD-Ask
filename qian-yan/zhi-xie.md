@@ -25,7 +25,7 @@ Ubuntu 吧前吧主 Simple 曾建议修改项目的章节文件名与许可协�
 
 目前，本项目的主要管理者是 [Voosk](https://github.com/MilkGolium)，他也参与了部分文章的撰写。
 
-目前本项目的主要技术维护者为  [ykla](https://github.com/ykla)。
+目前本项目的主要技术维护者为  [ykla](https://github.com/ykla) [备份](https://web.archive.org/web/20260119170654/https://github.com/ykla)。
 
 ## 文档贡献者名单（A-Z）
 

@@ -1931,7 +1931,7 @@ GTT：Graphics Translation Table，图形转换表，又称 GART（Graphics Addr
 
 选择显示内存占用大小。在系统内存中为 GPU 分配的地址空间。使用此选项设置必须留给图形引擎（GFX Engine）的内存总大小。主内存区域中为图形保留的最大大小，操作系统可将其用作显存。
 
-参见 [What is IGD Aperture Size?](https://www.intel.com/content/www/us/en/support/articles/000028294/graphics.html)
+参见 [What is IGD Aperture Size?](https://www.intel.com/content/www/us/en/support/articles/000028294/graphics.html) [备份](https://web.archive.org/web/20260119181804/https://www.intel.com/content/www/us/en/support/articles/000028294/graphics.html)
 
 用于指定分配给集成显卡的 PCIe 基址寄存器 (BAR) 或访问窗口的大小。
 
@@ -5226,7 +5226,7 @@ FIVR，Fully Integrated Voltage Regulator，全集成电压调节模块。
 
 PCH 上集成了 FIVR，包括 VNN、V1P05 等电压轨，这些电压由 VCCIN_Aux 提供电源。VCCIN_Aux 还为 CPU 内的 VCCSA 电压轨供电。除了 VCCSA 的 FIVR 外，计算芯片（compute die）还集成了另外 4 个 FIVR，分别为 VCCCORE、VCCSA、VCCL2、VCCGT 和 VCCRING 供电，这些电压均从平台上的 VCCIN VR 衍生而来。每个 FIVR 都能控制特定的电压轨。
 
-参见 [Fully Integrated Voltage Regulator (FIVR)](https://edc.intel.com/content/www/us/en/design/ipla/software-development-platforms/servers/platforms/intel-pentium-silver-and-intel-celeron-processors-datasheet-volume-1-of-2/fully-integrated-voltage-regulator-fivr/)
+参见 [Fully Integrated Voltage Regulator (FIVR)](https://edc.intel.com/content/www/us/en/design/ipla/software-development-platforms/servers/platforms/intel-pentium-silver-and-intel-celeron-processors-datasheet-volume-1-of-2/fully-integrated-voltage-regulator-fivr/) [备份](https://web.archive.org/web/20260119182351/https://edc.intel.com/content/www/us/en/design/ipla/software-development-platforms/servers/platforms/intel-pentium-silver-and-intel-celeron-processors-datasheet-volume-1-of-2/fully-integrated-voltage-regulator-fivr/)
 
 ![](../.gitbook/assets/image-20250730154029-f83b8pi.png)
 

@@ -62,11 +62,11 @@ FreeBSD 基本系统几乎不包含任何与 BSD 协议不兼容的软件；
 | :----------: | :---------------------------------------------------------------------------: | :--------------------------------------------------------------------: | :----------------------------------------------------------: | :----: | :--------: | :----------: |
 |    Ubuntu    |             [2 年/10 年](https://ubuntu.com/about/release-cycle) [备份](https://web.archive.org/web/20260119053423/https://ubuntu.com/about/release-cycle)              |        [apt](https://ubuntu.com/server/docs/package-management)        | [GNU](https://ubuntu.com/legal/intellectual-property-policy) |  gcc   |    bash    |    Gnome     |
 | Gentoo Linux |                                   滚动更新                                    |       [Portage（emerge）](https://wiki.gentoo.org/wiki/Portage)        |                             GNU                              |  gcc   |    bash    |     可选     |
-|  Arch Linux  |                                   滚动更新                                    |           [pacman](https://wiki.archlinux.org/title/pacman)            |                             GNU                              |  gcc   |    bash    |     可选     |
+|  Arch Linux  |                                   滚动更新                                    |           [pacman](https://wiki.archlinux.org/title/pacman) [备份](https://web.archive.org/web/20260119175658/https://wiki.archlinux.org/title/Pacman)            |                             GNU                              |  gcc   |    bash    |     可选     |
 |     RHEL     | [3/最长 12 年](https://access.redhat.com/zh_CN/support/policy/updates/errata) | [RPM（yum、dnf）](https://www.redhat.com/sysadmin/how-manage-packages) |                             GNU                              |  gcc   |    bash    |    Gnome     |
 |   FreeBSD    |               [约 2/4 年](https://www.freebsd.org/security/) [备份](https://web.archive.org/web/20260119053327/https://www.freebsd.org/security/)                |                               pkg/ports                                |                             BSD                              | clang  |   csh/sh   |     可选     |
 |   Windows    |       [不固定](https://docs.microsoft.com/zh-cn/lifecycle/faq/windows) [备份](https://web.archive.org/web/20260119054726/https://learn.microsoft.com/zh-cn/lifecycle/faq/windows)        |                                  可选                                  |                             专有                             |  可选  | PowerShell | Windows 桌面 |
-|    macOS     |                                 1 年/约 5 年                                  |                                   无                                   |           [专有](https://www.apple.com/legal/sla/)           | clang  |    zsh     |     Aqua     |
+|    macOS     |                                 1 年/约 5 年                                  |                                   无                                   |           [专有](https://www.apple.com/legal/sla/) [备份](https://web.archive.org/web/20260117014737/https://www.apple.com/legal/sla/)           | clang  |    zsh     |     Aqua     |
 
 
 由于 Linux 广泛使用 GNU 工具，因此理论上只要不依赖特定的 Linux 函数库，这些工具都可以在 FreeBSD 上运行。
@@ -260,7 +260,7 @@ openSUSE 原生的包管理器是 `zypper`。有用户将其与 Fedora 的 `dnf`
 
 ### Gentoo Linux
 
-Gentoo [自称](https://www.gentoo.org/get-started/about/)是“元发行版（*Metadistribution*）”。其传统安装方式是从源代码 **编译** 所有软件。虽然近年提供了[官方二进制包](https://www.gentoo.org/news/2023/12/29/Gentoo-binary.html)支持，但在依赖管理方面仍有一定复杂性，且二进制包通用性极为有限。
+Gentoo [自称](https://www.gentoo.org/get-started/about/) [备份](https://web.archive.org/web/20260119175719/https://www.gentoo.org/get-started/about/)是“元发行版（*Metadistribution*）”。其传统安装方式是从源代码 **编译** 所有软件。虽然近年提供了[官方二进制包](https://www.gentoo.org/news/2023/12/29/Gentoo-binary.html)支持，但在依赖管理方面仍有一定复杂性，且二进制包通用性极为有限。
 
 Gentoo 包管理系统的缺点在于，若某个软件包编译失败，则无法安装，且编译失败的情况时有发生。如果系统长时间不更新，再次更新时可能会遇到复杂的 **循环依赖** 问题。此外，Gentoo 难以进行大规模标准化部署，在服务器环境中的应用也相对较少。
 
@@ -378,7 +378,7 @@ Node.js 的依赖存储在 `node_modules` 目录，而 Nix/NixOS 的所有包则
 
 ### 参考文献
 
-- [Benefits of Gentoo](https://wiki.gentoo.org/wiki/Benefits_of_Gentoo)
+- [Benefits of Gentoo](https://wiki.gentoo.org/wiki/Benefits_of_Gentoo) [备份](https://web.archive.org/web/20260119180353/https://wiki.gentoo.org/wiki/Benefits_of_Gentoo)
 - [The philosophy of Gentoo](https://www.gentoo.org/get-started/philosophy/) [备份](https://web.archive.org/web/20260119053027/https://www.gentoo.org/get-started/philosophy/)，Gentoo 设计哲学
 - [Arch compared to other distributions](https://wiki.archlinux.org/title/Arch_compared_to_other_distributions)，翻译[在这里](https://wiki.archlinuxcn.org/wiki/Arch_%E4%B8%8E%E5%85%B6%E4%BB%96%E5%8F%91%E8%A1%8C%E7%89%88%E7%9A%84%E6%AF%94%E8%BE%83) [备份](https://web.archive.org/web/20260119053802/https://wiki.archlinuxcn.org/wiki/Arch_%E4%B8%8E%E5%85%B6%E4%BB%96%E5%8F%91%E8%A1%8C%E7%89%88%E7%9A%84%E6%AF%94%E8%BE%83)
 - 《C++ 语言的设计和演化》，[美] Bjarne Stroustrup，译者：裘宗燕，人民邮电出版社，ISBN 9787115497116

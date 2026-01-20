@@ -129,7 +129,7 @@ drwxrwxrwt  2 root    wheel  3 Mar 18 17:23 .ICE-unix
 
 其中，`ls`（L 小写）意味着列出当下目录或指定目录下的文件；选项 `-l`（L 小写）意味着打印详细信息，输出长（*long*）的格式。
 
-目前，大多数命令均遵循上述形式（细节有所省略）。这是 [POSIX.1-2024](https://pubs.opengroup.org/onlinepubs/9799919799/) 规范所规定的。
+目前，大多数命令均遵循上述形式（细节有所省略）。这是 [POSIX.1-2024](https://pubs.opengroup.org/onlinepubs/9799919799/) [备份](https://web.archive.org/web/20260119180715/https://pubs.opengroup.org/onlinepubs/9799919799/) 规范所规定的。
 
 需要注意中英文书写习惯的差异：中文行文不使用空格分隔，而英文单词必须使用空格加以区分。因此，命令行中各个组成部分之间应使用空格分隔 ` `。空格的数量一般不受限制，但最少应该为一个，即 ` `。
 

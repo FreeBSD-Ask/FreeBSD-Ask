@@ -51,7 +51,7 @@ Disabled（禁用）
 
 用于启用或禁用在启动过程中仅初始化启动活动选项所需的最小设备集合。该设置对 BBS 启动选项（非 UEFI 启动选项）无效。如果使用外置显卡，则其 VBIOS 需要支持 UEFI GOP。
 
-警告：开启此选项后可能无法再次进入 BIOS，因为启用快速启动后，系统在启动阶段会忽略所有 USB 设备（如键盘）。通常可通过重置 CMOS，或使用 Windows 的高级启动功能进入 UEFI 固件设置。参见 [Windows 11/10 如何进入 BIOS 设置界面](https://www.asus.com.cn/support/faq/1008829/)。需要注意的是，此方法并非对所有主板均有效，部分主板仍无法通过该方式进入 BIOS。
+警告：开启此选项后可能无法再次进入 BIOS，因为启用快速启动后，系统在启动阶段会忽略所有 USB 设备（如键盘）。通常可通过重置 CMOS，或使用 Windows 的高级启动功能进入 UEFI 固件设置。参见 [Windows 11/10 如何进入 BIOS 设置界面](https://www.asus.com.cn/support/faq/1008829/) [备份](https://web.archive.org/web/20260119181725/https://www.asus.com.cn/support/faq/1008829/)。需要注意的是，此方法并非对所有主板均有效，部分主板仍无法通过该方式进入 BIOS。
 
 ## SATA Support（SATA 支持）
 

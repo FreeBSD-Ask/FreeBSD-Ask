@@ -598,7 +598,7 @@ Ventoy2Disk.sh 参数说明：
 
 #### 使用 Ventoy LiveCD 写入 Ventoy
 
-Ventoy LiveCD 下载地址为 [安装包](https://www.ventoy.net/cn/download.html)。
+Ventoy LiveCD 下载地址为 [安装包](https://www.ventoy.net/cn/download.html) [备份](https://web.archive.org/web/20260119172459/https://www.ventoy.net/cn/download.html)。
 
 Ventoy LiveCD 并非 Ventoy 本体，而是一种用于安装 Ventoy 的内存盘系统映像。参见 [Ventoy LiveCD 使用说明](https://www.ventoy.net/cn/doc_livecd.html) [备份](https://web.archive.org/web/20260108123456/https://www.ventoy.net/cn/doc_livecd.html)。
 
