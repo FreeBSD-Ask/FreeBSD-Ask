@@ -14,7 +14,7 @@
 
 ## 使用 DiskGenius 恢复 U 盘启动盘
 
-DiskGenius 官网：[https://www.diskgenius.cn/](https://www.diskgenius.cn/)。该软件包含收费功能，但免费功能已足够使用。
+DiskGenius 官网：[https://www.diskgenius.cn/](https://www.diskgenius.cn/) [备份](https://web.archive.org/web/20260120014911/https://www.diskgenius.cn/)。该软件包含收费功能，但免费功能已足够使用。
 
 ### 下载 DiskGenius
 

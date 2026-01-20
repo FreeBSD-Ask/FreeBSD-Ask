@@ -186,7 +186,7 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 
 ### 创建 ZFS 数据集
 
-以下数据集的设置参照 FreeBSD 源代码中的 [usr.sbin/bsdinstall/scripts/zfsboot](https://github.com/freebsd/freebsd-src/blob/main/usr.sbin/bsdinstall/scripts/zfsboot) 进行创建，因为 FreeBSD 本身的开发是持续不断的，所以 FreeBSD 不同版本间的 ZFS 数据集也有所差异。读者在创建数据集时若希望创建与默认安装相同的数据集结构，应参照对应分支的 `usr.sbin/bsdinstall/scripts/zfsboot` 文件。
+以下数据集的设置参照 FreeBSD 源代码中的 [usr.sbin/bsdinstall/scripts/zfsboot](https://github.com/freebsd/freebsd-src/blob/main/usr.sbin/bsdinstall/scripts/zfsboot) [备份](https://web.archive.org/web/20260120012933/https://github.com/freebsd/freebsd-src/blob/main/usr.sbin/bsdinstall/scripts/zfsboot) 进行创建，因为 FreeBSD 本身的开发是持续不断的，所以 FreeBSD 不同版本间的 ZFS 数据集也有所差异。读者在创建数据集时若希望创建与默认安装相同的数据集结构，应参照对应分支的 `usr.sbin/bsdinstall/scripts/zfsboot` 文件。
 
 
 - 创建根数据集

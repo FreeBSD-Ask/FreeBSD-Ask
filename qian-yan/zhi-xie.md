@@ -42,7 +42,7 @@ Ubuntu 吧前吧主 Simple 曾建议修改项目的章节文件名与许可协�
 - DogeW  
 - [dongdigua](https://github.com/dongdigua) [备份](https://web.archive.org/web/20260118172510/https://github.com/dongdigua)  
 - [fanyang1997](https://github.com/fanyang1997) [备份](https://web.archive.org/web/20260118172032/https://github.com/fanyang1997)  
-- [fjh1997](https://github.com/fjh1997)  
+- [fjh1997](https://github.com/fjh1997) [备份](https://web.archive.org/web/20260120012349/https://github.com/fjh1997)  
 - freyr  
 - [gua-leopard](https://github.com/gua-leopard) [备份](https://web.archive.org/web/20260117182650/https://github.com/gua-leopard)
 - heguru5  
@@ -62,7 +62,7 @@ Ubuntu 吧前吧主 Simple 曾建议修改项目的章节文件名与许可协�
 - [nerdroychan](https://github.com/nerdroychan) [备份](https://web.archive.org/web/20260117121724/https://github.com/nerdroychan)  
 - [number201724](https://github.com/number201724)  
 - [orzyyyy](https://github.com/orzyyyy) [备份](https://web.archive.org/web/20260119105509/https://github.com/orzyyyy)  
-- [peiyafei](https://github.com/peiyafei)  
+- [peiyafei](https://github.com/peiyafei) [备份](https://web.archive.org/web/20260120011913/https://github.com/peiyafei)  
 - [pengxingwei](https://github.com/pengxingwei) [备份](https://web.archive.org/web/20260118020032/https://github.com/pengxingwei)  
 - [puffinjiang](https://github.com/puffinjiang)  
 - 清和 [qinghecyn](https://github.com/qinghecyn) [备份](https://web.archive.org/web/20260117181455/https://github.com/qinghecyn)  

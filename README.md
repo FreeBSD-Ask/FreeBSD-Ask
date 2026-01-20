@@ -45,7 +45,7 @@ EPUB 格式文档在手机上可使用 [微信读书](https://play.google.com/st
 
 上述电子文档始终反映实时的网页内容，随 Git 提交而 **实时更新**（但其文件名不会发生变化）。
 
-电子书的生成由 [safreya](https://github.com/safreya) 开发的 [GitBook PDF/EPUB 导出工具](https://github.com/FreeBSD-Ask/gitbook-pdf-export) [备份](https://web.archive.org/web/20260119111555/https://github.com/FreeBSD-Ask/gitbook-pdf-export) 提供支持。
+电子书的生成由 [safreya](https://github.com/safreya) [备份](https://web.archive.org/web/20260120013715/https://github.com/safreya) 开发的 [GitBook PDF/EPUB 导出工具](https://github.com/FreeBSD-Ask/gitbook-pdf-export) [备份](https://web.archive.org/web/20260119111555/https://github.com/FreeBSD-Ask/gitbook-pdf-export) 提供支持。
 
 ## 🌐 部署地址
 
