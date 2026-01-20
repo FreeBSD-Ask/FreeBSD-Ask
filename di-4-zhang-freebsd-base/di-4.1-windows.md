@@ -161,7 +161,7 @@ Windows 会直接读取 RTC 的结果，并将其视为本地时间，即 Local 
 
 ### 参考文献
 
-- [秒的定义](https://www.nim.ac.cn/520/node/4.html)，中国计量科学院载秒的定义
+- [秒的定义](https://www.nim.ac.cn/520/node/4.html) [备份](https://web.archive.org/web/20251207044618/https://www.nim.ac.cn/520/node/4.html)，中国计量科学院载秒的定义
 - [Time Zone Database](https://www.iana.org/time-zones)，时区数据库
 - [历书基本术语简介](http://www.pmo.cas.cn/xwdt2019/kpdt2019/202203/t20220314_6389637.html#b4)，本文所涉术语，可参考此处中国科学院紫金山天文台的精确解释
 

@@ -254,7 +254,7 @@ Downloads
 #### 参考文献
 
 - [解决 vmware 上 Ubuntu 共享文件夹（2022 年 7 月）](https://www.cnblogs.com/MaRcOGO/p/16463460.html) [备份](https://web.archive.org/web/20260118024132/https://www.cnblogs.com/MaRcOGO/p/16463460.html)，整体方法参考此处
-- [fuse: failed to open fuse device](https://forums.freebsd.org/threads/fuse-failed-to-open-fuse-device.44544/)，解决 `fuse: failed to open fuse device: No such file or directory` 的问题
+- [fuse: failed to open fuse device](https://forums.freebsd.org/threads/fuse-failed-to-open-fuse-device.44544/) [备份](https://web.archive.org/web/20260119110915/https://forums.freebsd.org/threads/fuse-failed-to-open-fuse-device.44544/)，解决 `fuse: failed to open fuse device: No such file or directory` 的问题
 - [VMware shared folders](https://forums.freebsd.org/threads/vmware-shared-folders.10318/) [备份](https://web.archive.org/web/20260118024140/https://forums.freebsd.org/threads/vmware-shared-folders.10318/)，挂载方法参考此处
 
 

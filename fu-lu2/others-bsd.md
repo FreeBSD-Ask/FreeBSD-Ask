@@ -52,7 +52,7 @@ MidnightBSD 的官网为 [https://www.midnightbsd.org](https://www.midnightbsd.o
 
 MidnightBSD 始于 2006 年，拥有自己的二进制软件包系统——[mports](https://www.midnightbsd.org/documentation/mports/index.html) [备份](https://web.archive.org/web/20260118013526/https://www.midnightbsd.org/documentation/mports/index.html)，安装过程中该选项默认启用。
 
-MidnightBSD 的安装界面与 FreeBSD 基本一致，采用经典的蓝底白字文本界面。普通用户的默认 Shell 为 [mksh](https://github.com/MirBSD/mksh)
+MidnightBSD 的安装界面与 FreeBSD 基本一致，采用经典的蓝底白字文本界面。普通用户的默认 Shell 为 [mksh](https://github.com/MirBSD/mksh) [备份](https://web.archive.org/web/20260119165619/https://github.com/MirBSD/mksh)
 
 ![](../.gitbook/assets/midnightbsd1.png)
 
