@@ -16,7 +16,7 @@
 - 与 Ring Bus 或 Mesh 的接口
 - 电源管理逻辑等
 
-参见 [BIOS PCIe 配置里的 LTR Snoop Latency value of SA PCIE](https://www.cnblogs.com/wanglouxiaozi/p/18946234)
+参见 [BIOS PCIe 配置里的 LTR Snoop Latency value of SA PCIE](https://www.cnblogs.com/wanglouxiaozi/p/18946234) [备份](https://web.archive.org/web/20260121061741/https://www.cnblogs.com/wanglouxiaozi/p/18946234)
 
 ![](../.gitbook/assets/image-20250726134119-yow827m.png)
 
@@ -1090,7 +1090,7 @@ Mixed 2DPC：指每个内存通道插入两根不同规格（如品牌、容量�
 
 眼宽（Eye Width）：眼宽是指眼图中信号时钟周期的宽度，即从信号的一个边沿（上升沿或下降沿）到下一个相同边沿的水平距离。眼宽的大小反映了信号的时序稳定性，即信号边沿是否清晰且稳定。
 
-参见：[10 分钟教会你看眼图，太有用了！！](https://www.eet-china.com/mp/a35960.html)[DisplayPort 测试中的眼高和眼宽分别是什么？ - 高速信号测试](https://www.claudelab.com/article-item-161.html)
+参见：[10 分钟教会你看眼图，太有用了！！](https://www.eet-china.com/mp/a35960.html) [备份](https://web.archive.org/web/20260121062436/https://www.eet-china.com/mp/a35960.html)[DisplayPort 测试中的眼高和眼宽分别是什么？ - 高速信号测试](https://www.claudelab.com/article-item-161.html)
 
 #### HOB Buffer Size（HOB 缓冲区总大小）
 
@@ -3454,7 +3454,7 @@ Disabled（禁用）
 
 PTM，Precision Time Measurement，精确时间测量
 
-参见 [F-Tile Avalon® Streaming Intel® FPGA IP for PCI Express\* User Guide](https://www.intel.com/content/www/us/en/docs/programmable/683140/25-1/precision-time-measurement-ptm-58323.html)
+参见 [F-Tile Avalon® Streaming Intel® FPGA IP for PCI Express\* User Guide](https://www.intel.com/content/www/us/en/docs/programmable/683140/25-1/precision-time-measurement-ptm-58323.html) [备份](https://web.archive.org/web/20260120205001/https://docs.altera.com/r/docs/683140/current)
 
 精确时间测量（PTM）使得多个具有独立本地时钟的组件之间能够实现精确的事件协调。通常，由于各自时钟对时间的值和变化速率的认知不同，实现这种精确协调是非常困难的。为了解决这一限制，PTM 允许组件计算其本地时间与共享的 PTM 主时间之间的关系：PTM 主时间是与 PTM 根节点相关联的独立时间域。每个 PTM 根节点为一个 PTM 层级提供 PTM 主时间。
 
@@ -3636,7 +3636,7 @@ Advanced Error Reporting 即 AER，
 
 每个符合 PCI Express 标准的设备都必须实现基本级别的错误管理，并且可以选择性地实现高级错误管理。PCI Express 高级错误报告功能（Advanced Error Reporting Capability，AER）是一种可选的扩展能力，可由支持高级错误控制与报告的 PCI Express 设备功能实现。
 
-参见 [P-Tile Avalon® Memory-mapped Intel® FPGA IP for PCI Express\* User Guide](https://www.intel.com/content/www/us/en/docs/programmable/683268/21-1-4-0-0/advanced-error-reporting-aer.html)
+参见 [P-Tile Avalon® Memory-mapped Intel® FPGA IP for PCI Express\* User Guide](https://www.intel.com/content/www/us/en/docs/programmable/683268/21-1-4-0-0/advanced-error-reporting-aer.html) [备份](https://web.archive.org/web/20260121061835/https://docs.altera.com/r/docs/683268/current)
 
 ##### PCIe Speed（PCIe 速率）
 
@@ -3750,7 +3750,7 @@ Auto（自动）
 
 这个 BIOS 设置项不是 PCIe 设备报告的 LTR 值本身。它是系统 (具体是 SA 内的 PCIe 控制器/电源管理逻辑) 在评估 PCIe 设备 LTR 要求时，需要额外考虑的一个内部延迟补偿值。
 
-参见 [BIOS PCIe 配置里的 LTR Snoop Latency value of SA PCIE](https://www.cnblogs.com/wanglouxiaozi/p/18946234)
+参见 [BIOS PCIe 配置里的 LTR Snoop Latency value of SA PCIE](https://www.cnblogs.com/wanglouxiaozi/p/18946234) [备份](https://web.archive.org/web/20260121061741/https://www.cnblogs.com/wanglouxiaozi/p/18946234)
 
 - Non Snoop Latency Override（覆盖非侦听延迟）
 
@@ -3786,7 +3786,7 @@ Disabled（禁用）
 
 Peer Memory Write，PCIe Peer-to-Peer(PCIe P2P) DMA，PCIe 点对点 DMA。
 
-参见 [Peer Memory Write Enable](https://jasonyychiu.blogspot.com/2021/03/peer-memory-write-enable.html)
+参见 [Peer Memory Write Enable](https://jasonyychiu.blogspot.com/2021/03/peer-memory-write-enable.html) [备份](https://web.archive.org/web/20260121062443/https://jasonyychiu.blogspot.com/2021/03/peer-memory-write-enable.html)
 
 P2P（点对点）通信可使 PCIe 设备之间无需经过内存，直接将数据传输给对方（例如 NVMe SSD ↔️ PCIe GPU），从而实现 PCIe 总线上不同设备之间的数据共享。
 
@@ -4144,7 +4144,7 @@ Disabled（禁用）
 
 硬件卸载的音频处理允许在计算机的主 CPU 之外执行主要音频处理任务。简而言之，这是一项使用声卡进行的音频硬件加速功能。音频处理的大部分工作不再交由 CPU 来完成，
 
-参见 [Hardware-Offloaded 音频处理](https://learn.microsoft.com/zh-cn/windows-hardware/drivers/audio/hardware-offloaded-audio-processing)
+参见 [Hardware-Offloaded 音频处理](https://learn.microsoft.com/zh-cn/windows-hardware/drivers/audio/hardware-offloaded-audio-processing) [备份](https://web.archive.org/web/20260121062425/https://learn.microsoft.com/zh-cn/windows-hardware/drivers/audio/hardware-offloaded-audio-processing)
 
 #### Enable HSII on xHCI（对 xHCI 启用 HSII）
 
@@ -4528,7 +4528,7 @@ THC，Touch Host Controller，触控主机控制器
 
 触控主机控制器（Touch Host Controller）是芯片组（PCH）中的一个 IP 模块，用于与触控设备（例如：触控屏、触控板等）进行通信。
 
-参见 [Intel Touch Host Controller (THC)](https://docs.kernel.org/hid/intel-thc-hid.html)
+参见 [Intel Touch Host Controller (THC)](https://docs.kernel.org/hid/intel-thc-hid.html) [备份](https://web.archive.org/web/20260121061724/https://docs.kernel.org/hid/intel-thc-hid.html)
 
 ![](../.gitbook/assets/image-20250729183212-xea4on7.png)
 

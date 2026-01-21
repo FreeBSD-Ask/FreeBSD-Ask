@@ -187,7 +187,7 @@ GNOME 一直以不符合部分用户使用习惯著称，例如桌面不允许�
 
 #### 参考文献
 
-- [恢复 GNOME 顶栏的托盘图标](https://linuxstory.org/restore-tray-icon-for-gnome-top-bar/)
+- [恢复 GNOME 顶栏的托盘图标](https://linuxstory.org/restore-tray-icon-for-gnome-top-bar/) [备份](https://web.archive.org/web/20260121071945/https://linuxstory.org/restore-tray-icon-for-gnome-top-bar/)
 
 ### 在桌面放图标
 

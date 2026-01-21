@@ -120,5 +120,5 @@ SystemAccount=false  # 标记该用户不是系统账户
 
 ## 参考文献
 
-- [Installation](https://codeberg.org/olivierd/freebsd-ports-budgie/wiki/Installation)，本文主要补充自此处，但经测试无需配置 `05-suspend.rules` 也可以实现关机和重启。
+- [Installation](https://codeberg.org/olivierd/freebsd-ports-budgie/wiki/Installation) [备份](https://web.archive.org/web/20260121071044/https://codeberg.org/olivierd/freebsd-ports-budgie/wiki/Installation)，本文主要补充自此处，但经测试无需配置 `05-suspend.rules` 也可以实现关机和重启。
 

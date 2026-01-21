@@ -23,7 +23,7 @@ Ubuntu 吧前吧主 Simple 曾建议修改项目的章节文件名与许可协�
 
 本项目的域名 `bsdcn.org` 由 FreeBSD 中文社区（CFC）及 ykla 赞助。
 
-目前，本项目的主要管理者是 [Voosk](https://github.com/MilkGolium)，他也参与了部分文章的撰写。
+目前，本项目的主要管理者是 [Voosk](https://github.com/MilkGolium) [备份](https://web.archive.org/web/20260121052918/https://github.com/MilkGolium)，他也参与了部分文章的撰写。
 
 目前本项目的主要技术维护者为  [ykla](https://github.com/ykla) [备份](https://web.archive.org/web/20260119170654/https://github.com/ykla)。
 
@@ -48,7 +48,7 @@ Ubuntu 吧前吧主 Simple 曾建议修改项目的章节文件名与许可协�
 - heguru5  
 - isNijikawa  
 - Jack  
-- Jiacong Fang（[zldrobit](https://github.com/zldrobit)）
+- Jiacong Fang（[zldrobit](https://github.com/zldrobit) [备份](https://web.archive.org/web/20260121052855/https://github.com/zldrobit)）
 - kuntop  
 - [李大鹏](https://dapeng.li/) [备份](https://web.archive.org/web/20250621115454/https://dapeng.li/)  
 - [liguangsheng](https://github.com/liguangsheng) [备份](https://web.archive.org/web/20260118172423/https://github.com/liguangsheng)

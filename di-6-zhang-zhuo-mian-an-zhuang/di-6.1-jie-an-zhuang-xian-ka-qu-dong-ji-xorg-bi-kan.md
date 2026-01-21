@@ -20,7 +20,7 @@ FreeBSD 的 i915、AMD 显卡驱动与基本系统是分离的。目前是移植
 
 >**注意**
 >
->DG2 Arc 显卡尚不受支持（截至 DRM 6.10 版本），参见 [Intel Arc A770: Kernel panic on kldload i915kms.ko #315](https://github.com/freebsd/drm-kmod/issues/315)。可能需要等到 6.12 的移植才能受支持。
+>DG2 Arc 显卡尚不受支持（截至 DRM 6.10 版本），参见 [Intel Arc A770: Kernel panic on kldload i915kms.ko #315](https://github.com/freebsd/drm-kmod/issues/315) [备份](https://web.archive.org/web/20260121071237/https://github.com/freebsd/drm-kmod/issues/315)。可能需要等到 6.12 的移植才能受支持。
 
 >**注意**
 >

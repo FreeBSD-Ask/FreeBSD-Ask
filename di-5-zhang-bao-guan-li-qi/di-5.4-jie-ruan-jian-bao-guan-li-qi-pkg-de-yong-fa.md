@@ -51,8 +51,8 @@ FreeBSD 的二进制包管理器目前是 pkg（旧称 pkgng），即“Package�
 >**思考题**
 >
 >- 相关讨论 [the disappearing pkg issue](https://www.reddit.com/r/freebsd/comments/1nlnwtd/the_disappearing_pkg_issue/) [备份](https://web.archive.org/web/20260120223508/https://www.reddit.com/r/freebsd/comments/1nlnwtd/the_disappearing_pkg_issue/)
->- pkg 项目位于 [freebsd/pkg](https://github.com/freebsd/pkg)
->- pkg 软件包的构建系统位于 [Poudriere](https://github.com/freebsd/poudriere)。
+>- pkg 项目位于 [freebsd/pkg](https://github.com/freebsd/pkg) [备份](https://web.archive.org/web/20260121073903/https://github.com/freebsd/pkg)
+>- pkg 软件包的构建系统位于 [Poudriere](https://github.com/freebsd/poudriere) [备份](https://web.archive.org/web/20260121073849/https://github.com/freebsd/poudriere)。
 >
 >试一试：帮助 FreeBSD 项目实现 pkg 二进制软件包的原子更新？
 
@@ -144,7 +144,7 @@ Proceed with this action? [y/N]: # 此处输入 y 再按回车键即可安装
 
 >**思考题**
 >
->>[Add Concurrent Downloads of Multiple Packages](https://github.com/freebsd/pkg/issues/1628)
+>>[Add Concurrent Downloads of Multiple Packages](https://github.com/freebsd/pkg/issues/1628) [备份](https://web.archive.org/web/20251115011503/https://github.com/freebsd/pkg/issues/1628)
 >
 >你会发现 pkg 既不支持并行下载也不支持并行安装，阅读源代码，尝试解决提交 PR 这个问题。
 
@@ -447,7 +447,7 @@ jbig2dec-0.20_1: /usr/local/lib/libjbig2dec.so misses libmd.so.6
 #### 附录：`bsdadminscripts2` 扩展用法及参考文献
 
 
-- [BSD Administration Scripts II](https://github.com/lonkamikaze/bsda2)，项目地址，含详细使用说明
+- [BSD Administration Scripts II](https://github.com/lonkamikaze/bsda2) [备份](https://web.archive.org/web/20260121073908/https://github.com/lonkamikaze/bsda2)，项目地址，含详细使用说明
 
 - 若使用了 pkgbase，`bsdadminscripts2` 可 **检查系统的完整性**，找出哪些系统文件是被窜改过的。
 

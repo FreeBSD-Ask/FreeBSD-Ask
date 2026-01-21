@@ -40,7 +40,7 @@
 
 FreeBSD 集群过去曾遭受入侵，在全面转向 pkg 后，便不再允许镜像。
 
-- [FreeBSD.org 这次的入侵事件](https://blog.delphij.net/posts/2012/12/freebsdorg-2/)，中文说明
+- [FreeBSD.org 这次的入侵事件](https://blog.delphij.net/posts/2012/12/freebsdorg-2/) [备份](https://web.archive.org/web/20260121072905/https://blog.delphij.net/posts/2012/12/freebsdorg-2/)，中文说明
 - [FreeBSD.org intrusion announced November 17th 2012](http://www.freebsd.org/news/2012-compromise.html) [备份](https://web.archive.org/web/20260120222213/https://www.freebsd.org/news/2012-compromise/)，官方说明
 
 #### 传输问题
@@ -120,7 +120,7 @@ TUNA: <https://github.com/tuna/issues/issues/16>
 如果你有办法或者能够有条件搭建非官方镜像，也可以使用 USTCLUG 所提供的同步脚本：
 
 - [FreeBSD-pkg Script](https://github.com/ustclug/ustcmirror-images/blob/master/freebsd-pkg/sync.sh)
-- [FreeBSD-ports Script](https://github.com/ustclug/ustcmirror-images/blob/master/freebsd-ports/sync-ports.sh)
+- [FreeBSD-ports Script](https://github.com/ustclug/ustcmirror-images/blob/master/freebsd-ports/sync-ports.sh) [备份](https://web.archive.org/web/20260121072735/https://github.com/ustclug/ustcmirror-images/blob/master/freebsd-ports/sync-ports.sh)
 
 来搭建非官方镜像站。赠人玫瑰，手留余香。
 
@@ -148,7 +148,7 @@ FreeBSD 在中国大陆境内没有官方镜像站；在中国台湾地区有官
 FreeBSD 在中国大陆境内为数不多且能正常同步的镜像站，均未使用 `rsync` 等方式进行同步，而是采取了一些特殊“手段”，参见 USTCLUG 所提供的同步脚本：
 
 - [FreeBSD-pkg 脚本](https://github.com/ustclug/ustcmirror-images/blob/master/freebsd-pkg/sync.sh)
-- [FreeBSD-ports 脚本](https://github.com/ustclug/ustcmirror-images/blob/master/freebsd-ports/sync-ports.sh)
+- [FreeBSD-ports 脚本](https://github.com/ustclug/ustcmirror-images/blob/master/freebsd-ports/sync-ports.sh) [备份](https://web.archive.org/web/20260121072735/https://github.com/ustclug/ustcmirror-images/blob/master/freebsd-ports/sync-ports.sh)
 
 >**注意**
 >
@@ -160,7 +160,7 @@ FreeBSD 目前在大陆非官方镜像站有若干个：
   - FreeBSD Pub <https://mirrors.ustc.edu.cn/freebsd/>
   - FreeBSD Packages <https://mirrors.ustc.edu.cn/freebsd-pkg/>
   - FreeBSD Ports
-    - [使用文档](https://mirrors.ustc.edu.cn/help/freebsd-ports.html)
+    - [使用文档](https://mirrors.ustc.edu.cn/help/freebsd-ports.html) [备份](https://web.archive.org/web/20260121072901/https://mirrors.ustc.edu.cn/help/freebsd-ports.html)
     - <https://mirrors.ustc.edu.cn/freebsd-ports/>
   - 联系方式：[lug@ustc.edu.cn](mailto:lug@ustc.edu.cn)
 
@@ -173,7 +173,7 @@ FreeBSD 目前在大陆非官方镜像站有若干个：
   - FreeBSD Pub <https://mirrors.nju.edu.cn/freebsd/>
   - FreeBSD Packages <https://mirrors.nju.edu.cn/freebsd-pkg/>
   - FreeBSD Ports <https://mirrors.nju.edu.cn/freebsd-ports/>
-  - 联系方式：[Github Issue](https://github.com/nju-lug/NJU-Mirror-Issue/issues)
+  - 联系方式：[Github Issue](https://github.com/nju-lug/NJU-Mirror-Issue/issues) [备份](https://web.archive.org/web/20260121072739/https://github.com/nju-lug/NJU-Mirror-Issue/issues)
 
 FreeBSD 官方联系方式：
 
@@ -182,4 +182,4 @@ FreeBSD 官方联系方式：
 
 ## 其他思路或解决方案
 
-自行使用 Poudriere 进行构建并分发。如 [RISC-V FreeBSD-pkg 软件源上线！11619+ 预编译包助力快速构建 FreeBSD 环境](https://mp.weixin.qq.com/s/ngv3eZh1TEVgk3Pn3XfRBg)（项目已停止维护）
+自行使用 Poudriere 进行构建并分发。如 [RISC-V FreeBSD-pkg 软件源上线！11619+ 预编译包助力快速构建 FreeBSD 环境](https://mp.weixin.qq.com/s/ngv3eZh1TEVgk3Pn3XfRBg) [备份](https://web.archive.org/web/20260121072759/https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HPt_cGmj3uehilyyGw-gACOkccq7QSjM5QJ_bL2u&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%2Fngv3eZh1TEVgk3Pn3XfRBg)（项目已停止维护）

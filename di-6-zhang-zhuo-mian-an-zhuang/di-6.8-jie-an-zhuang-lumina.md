@@ -7,7 +7,7 @@ Lumina 使用 BSD 许可证。Lumina 技术栈为 Qt 5，不使用任何基于 L
 
 >**注意**
 >
->[Lumina](https://github.com/lumina-desktop/lumina) 在更换主维护者后，开发长期处于停滞状态，我向其提交的 pull request 长期无人处理，并且没有新的提交记录。
+>[Lumina](https://github.com/lumina-desktop/lumina) [备份](https://web.archive.org/web/20260121072155/https://github.com/lumina-desktop/lumina) 在更换主维护者后，开发长期处于停滞状态，我向其提交的 pull request 长期无人处理，并且没有新的提交记录。
 
 ## 安装
 

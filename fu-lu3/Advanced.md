@@ -320,7 +320,7 @@ SGX 能够在计算平台上提供一个可信的隔离空间，保障用户关�
 
 参见：
 
-- [英特尔 ® Software Guard Extensions（英特尔 ® SGX）](https://www.intel.cn/content/www/cn/zh/products/docs/accelerator-engines/software-guard-extensions.html)
+- [英特尔 ® Software Guard Extensions（英特尔 ® SGX）](https://www.intel.cn/content/www/cn/zh/products/docs/accelerator-engines/software-guard-extensions.html) [备份](https://web.archive.org/web/20260121063057/https://www.intel.cn/content/www/cn/zh/products/docs/accelerator-engines/software-guard-extensions.html)
 - 王鹃, 樊成阳, 程越强, 赵波, 韦韬, 严飞, 张焕国, 马婧. SGX 技术的分析和研究. 软件学报, 2018, 29(9): 2778-2798.<http://www.jos.org.cn/1000-9825/5594.htm>
 - Wei ZHENG, Ying WU, Xiaoxue WU, Chen FENG, Yulei SUI, Xiapu LUO, Yajin ZHOU. A survey of Intel SGX and its applications. Front. Comput. Sci., 2021, 15(3): 153808 <https://doi.org/10.1007/s11704-019-9096-y>
 - トラストを確立する技術の概要 <https://www.jnsa.org/seminar/pki-day/2021/data/0415miyazawa.pdf>
@@ -1437,7 +1437,7 @@ Enable（启用）
 - C4 - 更深度的睡眠：降低 VCC
 - DC4 - 更深度的 C4 睡眠：进一步减少 VCC
 
-参见 [处理器深度和深度睡眠状态之间的差异](https://www.intel.cn/content/www/cn/zh/support/articles/000006619/processors/intel-core-processors.html)
+参见 [处理器深度和深度睡眠状态之间的差异](https://www.intel.cn/content/www/cn/zh/support/articles/000006619/processors/intel-core-processors.html) [备份](https://web.archive.org/web/20260121062850/https://www.intel.cn/content/www/cn/zh/support/articles/000006619/processors/intel-core-processors.html)
 
 该选项决定了以下选项：
 
@@ -2072,7 +2072,7 @@ MCTP（Management Component Transport Protocol，管理组件传输协议）是�
 
 Intel 管理引擎的设备发现和管理功能需要启用此选项。
 
-参见 [H3C HDM MCTP 技术白皮书 -6W101](https://www.h3c.com/cn/Service/Document_Software/Document_Center/Home/Public/00-Public/Learn_Technologies/White_Paper/H3C_HDM_MCTP_WP-848/)
+参见 [H3C HDM MCTP 技术白皮书 -6W101](https://www.h3c.com/cn/Service/Document_Software/Document_Center/Home/Public/00-Public/Learn_Technologies/White_Paper/H3C_HDM_MCTP_WP-848/) [备份](https://web.archive.org/web/20260121063412/https://www.h3c.com/cn/Service/Document_Software/Document_Center/Home/Public/00-Public/Learn_Technologies/White_Paper/H3C_HDM_MCTP_WP-848/)
 
 ### Anti-Rollback SVN Configuration（防回滚 SVN 配置）
 

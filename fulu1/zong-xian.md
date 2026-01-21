@@ -181,7 +181,7 @@ microSD 也就是通常所说的 TF 卡（两者关系类似于 EFI 与 UEFI）�
 
 我们可以用 `CrystalDiskInfo` 查看硬盘的 S.M.A.R.T. 信息及基本参数。还可以用 `CrystalDiskMark` 测试硬盘和存储卡的读写（请使用 USB 3.0 及以上规格的读卡器）。
 
-上述两款软件由同一位开发者开发，但其[官方网站](https://crystalmark.info/en/) 包含较多广告内容，可能导致用户误下载非官方文件。
+上述两款软件由同一位开发者开发，但其[官方网站](https://crystalmark.info/en/) [备份](https://web.archive.org/web/20260121074528/https://crystalmark.info/en/) 包含较多广告内容，可能导致用户误下载非官方文件。
 
 请从 **[这里](https://sourceforge.net/projects/crystaldiskinfo)** 下载 CrystalDiskInfo；请从 **[这里](https://sourceforge.net/projects/crystaldiskmark/files/) [备份](https://web.archive.org/web/20260120223833/https://sourceforge.net/projects/crystaldiskmark/files/)** 下载 CrystalDiskMark；
 
@@ -239,7 +239,7 @@ microSD 也就是通常所说的 TF 卡（两者关系类似于 EFI 与 UEFI）�
 - [了解 SD 卡和 microSD 卡的命名惯例和标签](https://www.kingston.com/cn/blog/personal-storage/microsd-sd-memory-card-naming-conventions) [备份](https://web.archive.org/web/20260119050613/https://www.kingston.com/cn/blog/personal-storage/microsd-sd-memory-card-naming-conventions)
 - [電腦概論中的考古題，關於光碟機的倍數是指什麼](https://www.mobile01.com/topicdetail.php?f=300&t=2126605&p=3)
 - [移速（MOVE SPEED）64GB TF（MicroSD）存储卡测试](https://www.bilibili.com/read/mobile?id=21681916)
-- [移速这个卡虚标了，速度只有标注的二分之一](https://post.m.smzdm.com/talk/p/az6o8zkr/)
+- [移速这个卡虚标了，速度只有标注的二分之一](https://post.m.smzdm.com/talk/p/az6o8zkr/) [备份](https://web.archive.org/web/20260121074504/https://post.smzdm.com/talk/p/az6o8zkr/)
 - [Mvespeed 移速 400G 内存卡简单测评](https://post.m.smzdm.com/p/arq759g7/) [备份](https://web.archive.org/web/20260120223730/https://post.smzdm.com/p/arq759g7/)
 - [移速 TF 卡翻不翻车？看来没翻（附游戏测试）](https://post.m.smzdm.com/p/awzqn9z4/)
 - [闪迪至尊超极速移动 ™ microSDXC™ UHS-I 存储卡 - 128GB](https://www.westerndigital.com/zh-cn/products/memory-cards/sandisk-extreme-pro-uhs-i-microsd?sku=SDSQXCY-128G-ZN6MA) [备份](https://web.archive.org/web/20260120223705/https://shop.sandisk.com/zh-cn/products/memory-cards/microsd-cards/sandisk-extreme-pro-uhs-i-microsd?sku=SDSQXCY-128G-ZN6MA)（参见注释 8：“采用专利技术”）

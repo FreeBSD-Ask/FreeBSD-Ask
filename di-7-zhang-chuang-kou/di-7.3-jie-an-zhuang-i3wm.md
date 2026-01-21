@@ -55,8 +55,8 @@ $ echo 'exec VBoxClient-all' >> ~/.config/i3/config
 
 ## 参考文献
 
-- [i3 使用手册](https://www.freebsd.org/cgi/man.cgi?query=i3&apropos=0&sektion=1&manpath=freebsd-ports&format=html)
+- [i3 使用手册](https://www.freebsd.org/cgi/man.cgi?query=i3&apropos=0&sektion=1&manpath=freebsd-ports&format=html) [备份](https://web.archive.org/web/20260121075011/https://man.freebsd.org/cgi/man.cgi?query=i3&apropos=0&sektion=1&manpath=freebsd-ports&format=html)
 - [Installing i3wm on FreeBSD](http://bottlenix.wikidot.com/installing-i3wm)
-- [How to setup FreeBSD with a riced desktop - part 3 - i3](https://unixsheikh.com/tutorials/how-to-setup-freebsd-with-a-riced-desktop-part-3-i3.html#xterm)
+- [How to setup FreeBSD with a riced desktop - part 3 - i3](https://unixsheikh.com/tutorials/how-to-setup-freebsd-with-a-riced-desktop-part-3-i3.html#xterm) [备份](https://web.archive.org/web/20260120224825/https://unixdigest.com/tutorials/how-to-setup-freebsd-with-a-riced-desktop-part-3-i3.html#xterm)
 - [How to install i3?](https://forums.freebsd.org/threads/how-to-install-i3.62305/) [备份](https://web.archive.org/web/20260120224957/https://forums.freebsd.org/threads/how-to-install-i3.62305/)
-- [i3 - an improved dynamic, tiling window manager](https://www.freebsd.org/cgi/man.cgi?query=i3&apropos=0&sektion=1&manpath=freebsd-ports&format=html)
+- [i3 - an improved dynamic, tiling window manager](https://www.freebsd.org/cgi/man.cgi?query=i3&apropos=0&sektion=1&manpath=freebsd-ports&format=html) [备份](https://web.archive.org/web/20260121075011/https://man.freebsd.org/cgi/man.cgi?query=i3&apropos=0&sektion=1&manpath=freebsd-ports&format=html)
