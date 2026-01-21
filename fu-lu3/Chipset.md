@@ -2691,7 +2691,7 @@ Crash Data Detector 会将错误状况通知 Crash Data Requester（故障数据
 
 在系统重启后，Crash Data Collector（故障数据收集器）会从 Crash Data Storage 中读取故障数据，并将其提供给软件或上传至中央服务器，用于追踪错误频率和趋势。
 
-参见 [12th Generation Intel® Core™ Processors](https://edc.intel.com/content/www/us/en/design/ipla/software-development-platforms/client/platforms/alder-lake-desktop/12th-generation-intel-core-processors-datasheet-volume-1-of-2/011/platform-crashlog/)
+参见 [12th Generation Intel® Core™ Processors](https://edc.intel.com/content/www/us/en/design/ipla/software-development-platforms/client/platforms/alder-lake-desktop/12th-generation-intel-core-processors-datasheet-volume-1-of-2/011/platform-crashlog/) [备份](https://web.archive.org/web/20260120170002/https://edc.intel.com/content/www/us/en/design/ipla/software-development-platforms/client/platforms/alder-lake-desktop/12th-generation-intel-core-processors-datasheet-volume-1-of-2/011/platform-crashlog/)
 
 ### GNA Device（B0:D8:F0）(高斯与神经网络加速器设备)
 
@@ -2803,7 +2803,7 @@ Disabled（禁用）
 
 启用／禁用通过本地 I/O 或 USB I/O 扩展方式的 CVF 功能。
 
-CVF，Intel Clover Falls，是英特尔推出的一种 AI 协处理器。是一种英特尔集成传感器解决方案。参见 [Dell Laptop Camera Not Working in Teams, Zoom, and Windows Camera Application](https://www.dell.com/support/kbdoc/en-hk/000248760/laptop-mipi-camera-may-not-work-under-windows?lwp=rt)
+CVF，Intel Clover Falls，是英特尔推出的一种 AI 协处理器。是一种英特尔集成传感器解决方案。参见 [Dell Laptop Camera Not Working in Teams, Zoom, and Windows Camera Application](https://www.dell.com/support/kbdoc/en-hk/000248760/laptop-mipi-camera-may-not-work-under-windows?lwp=rt) [备份](https://web.archive.org/web/20260121120420/https://www.dell.com/support/kbdoc/en-hk/000248760/laptop-mipi-camera-may-not-work-under-windows?lwp=rt)
 
 #### Control Logic 1（控制逻辑 1）
 
@@ -5869,7 +5869,7 @@ Disabled（禁用）
 
 PSE，Programmable Service Engine，可编程服务引擎。
 
-参见 [借助英特尔的首个物联网增强型平台，推动性能、集成和多功能性](https://www.intel.cn/content/www/cn/zh/products/docs/processors/embedded/enhanced-for-iot-platform-brief.html)
+参见 [借助英特尔的首个物联网增强型平台，推动性能、集成和多功能性](https://www.intel.cn/content/www/cn/zh/products/docs/processors/embedded/enhanced-for-iot-platform-brief.html) [备份](https://web.archive.org/web/20260121120235/https://www.intel.cn/content/www/cn/zh/products/overview.html)
 
 英特尔 ® 可编程服务引擎是专为物联网功能打造的卸载引擎，采用了 ARM Cortex-M7 微控制器。该引擎可为物联网应用程序提供独立的低 DMIPS 计算和低速输入/输出，还能为实时计算和时间敏感型同步提供专门服务。
 
