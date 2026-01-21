@@ -245,7 +245,7 @@ Unix-like 即类 Unix，指一切符合 UNIX 标准、基本遵守 POSIX 规范�
 
 ## 附录：自由软件与开源软件语境下的典型误解与思想偏差探析
 
-我们必须先给自由软件和开源协议分别下个定义，我们引用 [GNU 网站](https://www.gnu.org/philosophy/free-sw.zh-cn.html)  的相关内容来定义什么是自由软件的自由。
+我们必须先给自由软件和开源协议分别下个定义，我们引用 [GNU 网站](https://www.gnu.org/philosophy/free-sw.zh-cn.html) [备份](https://web.archive.org/web/20260121155047/https://www.gnu.org/philosophy/free-sw.zh-cn.html)  的相关内容来定义什么是自由软件的自由。
 
 ### 厘清“营利”和“盈利”
 
