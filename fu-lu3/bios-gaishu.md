@@ -44,6 +44,6 @@ UEFI：Unified Extensible Firmware Interface，统一可扩展固件接口。UEF
 
 CMOS（Complementary Metal-Oxide-Semiconductor，互补金属氧化物半导体）是计算机内部一种由电池供电的芯片，用于存储信息（如时间信息、BIOS 密码和 BIOS 设置等）。它通常与实时时钟（RTC）配合使用，系统的相关配置信息（如 UEFI/BIOS 设置）存储在非易失性 RAM（NVRAM）中。CMOS 一般是由纽扣电池供电的，部分嵌入式设备的 CMOS 电池是可充电式纽扣电池。
 
-清空 CMOS 可清除上述参数。清空方法参见 [主板如何 Clear CMOS](https://www.asus.com.cn/support/faq/1040820/)。
+清空 CMOS 可清除上述参数。清空方法参见 [主板如何 Clear CMOS](https://www.asus.com.cn/support/faq/1040820/) [备份](https://web.archive.org/web/20260120204201/https://www.asus.com.cn/support/faq/1040820/)。
 
-参见 [BIOS 和 CMOS 有什么不同？](https://iknow.lenovo.com.cn/detail/043962?type=undefined&keyword=BIOS&keyWordId=)。
+参见 [BIOS 和 CMOS 有什么不同？](https://iknow.lenovo.com.cn/detail/043962?type=undefined&keyword=BIOS&keyWordId=) [备份](https://web.archive.org/web/20260120204219/https://iknow.lenovo.com.cn/detail/043962?type=undefined&keyword=BIOS&keyWordId=)。

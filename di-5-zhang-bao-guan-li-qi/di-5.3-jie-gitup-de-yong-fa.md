@@ -145,6 +145,6 @@
 
 ## 参考链接
 
-- [gitup --A minimalist, dependency-free program to clone/pull Git repos-itories.](https://www.freebsd.org/cgi/man.cgi?query=gitup&sektion=1&manpath=freebsd-release-ports)，man 手册
+- [gitup --A minimalist, dependency-free program to clone/pull Git repos-itories.](https://www.freebsd.org/cgi/man.cgi?query=gitup&sektion=1&manpath=freebsd-release-ports) [备份](https://web.archive.org/web/20260120222429/https://man.freebsd.org/cgi/man.cgi?query=gitup&sektion=1&manpath=freebsd-release-ports)，man 手册
 - [net/gitup](https://www.freshports.org/net/gitup)
 - [johnmehr/gitup](https://github.com/johnmehr/gitup)，开发者官网

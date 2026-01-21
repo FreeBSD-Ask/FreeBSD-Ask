@@ -8,7 +8,7 @@ FreeBSD 的二进制包管理器目前是 pkg（旧称 pkgng），即“Package�
 >
 > pkg 只能管理第三方软件包，并不能起到升级系统，获取安全更新的作用。这是因为 FreeBSD 项目是将内核与用户空间作为一个整体来进行维护的，而不是像 Linux 那样 Linus Torvalds 负责维护内核，各个发行版的人负责维护 GNU 工具（他们这些软件实际上被设计为单个软件包，因此可以用包管理器更新与升级系统）。
 >
->FreeBSD 现在也正 [试图使用 pkg 来实现用户空间和内核的更新](https://wiki.freebsd.org/PkgBase) ，以期解决上述问题。
+>FreeBSD 现在也正 [试图使用 pkg 来实现用户空间和内核的更新](https://wiki.freebsd.org/PkgBase) [备份](https://web.archive.org/web/20260120222940/https://wiki.freebsd.org/action/show/pkgbase?action=show&redirect=PkgBase) ，以期解决上述问题。
 >
 > FreeBSD 使用 `freebsd-update` 来升级系统，获取安全补丁。<https://pkg-status.freebsd.org/> 可以查看当前的 pkg 编译状态。
 >
@@ -50,7 +50,7 @@ FreeBSD 的二进制包管理器目前是 pkg（旧称 pkgng），即“Package�
 
 >**思考题**
 >
->- 相关讨论 [the disappearing pkg issue](https://www.reddit.com/r/freebsd/comments/1nlnwtd/the_disappearing_pkg_issue/)
+>- 相关讨论 [the disappearing pkg issue](https://www.reddit.com/r/freebsd/comments/1nlnwtd/the_disappearing_pkg_issue/) [备份](https://web.archive.org/web/20260120223508/https://www.reddit.com/r/freebsd/comments/1nlnwtd/the_disappearing_pkg_issue/)
 >- pkg 项目位于 [freebsd/pkg](https://github.com/freebsd/pkg)
 >- pkg 软件包的构建系统位于 [Poudriere](https://github.com/freebsd/poudriere)。
 >
@@ -173,7 +173,7 @@ pkg: No packages available to install matching 'chromium' have been found in the
 
 >**思考题**
 >
->>[Is it possible to add i18n multilingual support using po files?](https://github.com/freebsd/pkg/issues/2421)
+>>[Is it possible to add i18n multilingual support using po files?](https://github.com/freebsd/pkg/issues/2421) [备份](https://web.archive.org/web/20260120223523/https://github.com/freebsd/pkg/issues/2421)
 >>
 >>FreeBSD 基本系统里没有 gettext，所以没有计划这样做，如果后续在 pkg 中出现可用的 libintl 套件，则可能会重新考虑。
 >
@@ -491,6 +491,6 @@ Ignore the mismatch and continue? [y/N]:
 
 以 root 权限执行 `certctl rehash` 刷新证书即可。
 
-参见 [pkg(8): "An error occured while fetching package: No error"](https://forums.freebsd.org/threads/pkg-8-an-error-occured-while-fetching-package-no-error.96761/)
+参见 [pkg(8): "An error occured while fetching package: No error"](https://forums.freebsd.org/threads/pkg-8-an-error-occured-while-fetching-package-no-error.96761/) [备份](https://web.archive.org/web/20260120223523/https://forums.freebsd.org/threads/pkg-8-an-error-occured-while-fetching-package-no-error.96761/)
 
 

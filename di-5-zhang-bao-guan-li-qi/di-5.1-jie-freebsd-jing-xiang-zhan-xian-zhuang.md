@@ -41,7 +41,7 @@
 FreeBSD 集群过去曾遭受入侵，在全面转向 pkg 后，便不再允许镜像。
 
 - [FreeBSD.org 这次的入侵事件](https://blog.delphij.net/posts/2012/12/freebsdorg-2/)，中文说明
-- [FreeBSD.org intrusion announced November 17th 2012](http://www.freebsd.org/news/2012-compromise.html)，官方说明
+- [FreeBSD.org intrusion announced November 17th 2012](http://www.freebsd.org/news/2012-compromise.html) [备份](https://web.archive.org/web/20260120222213/https://www.freebsd.org/news/2012-compromise/)，官方说明
 
 #### 传输问题
 

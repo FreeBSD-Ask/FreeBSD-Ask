@@ -509,7 +509,7 @@ RUN Loop：确保 CPU 始终处于运行状态，不进入空闲循环
 
 该项用于配置 AP 线程的待机行为，即等待运行信号。
 
-C 状态相关设置。应用处理器（Application Processor，AP）。在计算机系统中，除引导处理器外的所有其他处理器都称为应用处理器。参见 [https://uefi.org/specs/PI/1.8/V2_DXE_Boot_Services_Protocols.html](https://uefi.org/specs/PI/1.8/V2_DXE_Boot_Services_Protocols.html?)
+C 状态相关设置。应用处理器（Application Processor，AP）。在计算机系统中，除引导处理器外的所有其他处理器都称为应用处理器。参见 [https://uefi.org/specs/PI/1.8/V2_DXE_Boot_Services_Protocols.html](https://uefi.org/specs/PI/1.8/V2_DXE_Boot_Services_Protocols.html?) [备份](https://web.archive.org/web/20260120210442/https://uefi.org/specs/PI/1.8/V2_DXE_Boot_Services_Protocols.html)
 
 ### AES（AES 加密）
 
@@ -1269,7 +1269,7 @@ Enable（启用）
 
 因为直流电压降（电路长度愈增加，其电压会愈下降，导致其两端电压不同）问题，英特尔将主板到 CPU 之间的物理电阻抽象为虚拟电阻（即 AC/DC Loadline），即不考虑实际物理电阻的实现究竟是多少（每块主板都不同），来拟合 CPU 倍频所需的电压功率，这样不同的主板的主板供电模块的掉压行为就是一致的。AC Loadline 是升压负载线，DC 是降压负载线。
 
-负载线（AC/DC）应通过 VRTT 工具进行测量，并通过 BIOS 的负载线覆盖设置选项进行相应配置。AC 负载线会直接影响工作电压（AC），DC 负载线则会影响功率测量（DC）。与按 POR 阻抗设计的主板相比，采用较低 AC 负载线的优秀主板设计能够在功耗、性能和散热方面实现改进。参见 [VCCCORE DC Specifications](https://edc.intel.com/content/www/de/de/design/products/platforms/details/raptor-lake-s/13th-generation-core-processors-datasheet-volume-1-of-2/vcccore-dc-specifications/) [备份](https://web.archive.org/web/20260120162645/https://edc.intel.com/content/www/de/de/design/products/platforms/details/raptor-lake-s/13th-generation-core-processors-datasheet-volume-1-of-2/vcccore-dc-specifications/)、[Intel CPU AC / DC Loadline、防掉壓 CEP 觀念原理 一次講完](https://forum.gamer.com.tw/C.php?bsn=60030&snA=644011)、[从头开始讲 Loadline](https://tieba.baidu.com/p/8328546013)。
+负载线（AC/DC）应通过 VRTT 工具进行测量，并通过 BIOS 的负载线覆盖设置选项进行相应配置。AC 负载线会直接影响工作电压（AC），DC 负载线则会影响功率测量（DC）。与按 POR 阻抗设计的主板相比，采用较低 AC 负载线的优秀主板设计能够在功耗、性能和散热方面实现改进。参见 [VCCCORE DC Specifications](https://edc.intel.com/content/www/de/de/design/products/platforms/details/raptor-lake-s/13th-generation-core-processors-datasheet-volume-1-of-2/vcccore-dc-specifications/) [备份](https://web.archive.org/web/20260120162645/https://edc.intel.com/content/www/de/de/design/products/platforms/details/raptor-lake-s/13th-generation-core-processors-datasheet-volume-1-of-2/vcccore-dc-specifications/)、[Intel CPU AC / DC Loadline、防掉壓 CEP 觀念原理 一次講完](https://forum.gamer.com.tw/C.php?bsn=60030&snA=644011) [备份](https://web.archive.org/web/20260120210027/https://forum.gamer.com.tw/C.php?bsn=60030&snA=644011)、[从头开始讲 Loadline](https://tieba.baidu.com/p/8328546013)。
 
 Intel 建议 AC Loadline 与 DC Loadline 取值一致（AC = DC）。警告：一般不建议修改 AC/DC Loadline。
 
@@ -1885,7 +1885,7 @@ PTT：Platform Trust Technology，Intel 可信平台技术。如果要安装 Win
 
 英特尔 ® PTT 是符合 2.0 规范并提供与独立 TPM 相同的功能的集成 TPM，只是它驻留在系统的固件中，因此无需专用处理或内存资源。
 
-参见 [什么是可信平台模型（TPM）及其与英特尔 ® Platform Trust Technology（英特尔 ® PTT）的关系？](https://www.intel.cn/content/www/cn/zh/support/articles/000094205/processors/intel-core-processors.html)
+参见 [什么是可信平台模型（TPM）及其与英特尔 ® Platform Trust Technology（英特尔 ® PTT）的关系？](https://www.intel.cn/content/www/cn/zh/support/articles/000094205/processors/intel-core-processors.html) [备份](https://web.archive.org/web/20260120210554/https://www.intel.cn/content/www/cn/zh/support/articles/000094205/processors/intel-core-processors.html)
 
 #### TPM Device Selection（TPM 设备选择）
 
@@ -2054,7 +2054,7 @@ Enable（启用）
 
 软禁用的工作原理是让系统固件通过主机嵌入式控制器接口（HECI）发送“SET_ME_DISABLE”命令。这会命令管理引擎进入禁用状态。管理引擎将保持禁用状态，直到发送“ENABLE”命令。此方法被视为一种通用方法，因为它不需要实现特定于平台或处理器的代码。
 
-参见 [Disabling the Intel Management Engine (ME)](https://kb.protectli.com/kb/me-disable/)
+参见 [Disabling the Intel Management Engine (ME)](https://kb.protectli.com/kb/me-disable/) [备份](https://web.archive.org/web/20260120210024/https://kb.protectli.com/kb/me-disable/)
 
 #### MCTP Broadcast Cycle（MCTP 周期性广播）
 
@@ -2138,7 +2138,7 @@ Enable（启用）
 
 Intel® 时间协调计算（Intel® TCC）可为实时应用提供优化的计算和时间性能。支持基于无线和有线融合网络的 IEEE\* 802.1 时间敏感网络（TSN）。
 
-参见 [公共英特尔 ® 时序协调计算（TCC）用户指南](https://www.intel.cn/content/www/cn/zh/content-details/851159/public-intel-time-coordinated-compute-tcc-user-guide.html)、[Step 7: Configure Intel® TCC Tools in BIOS](https://www.intel.com/content/www/us/en/docs/tcc-tools/tutorial-vtune-profiler/2022-2/step-7-configure-intel-tcc-tools-in-bios.html)
+参见 [公共英特尔 ® 时序协调计算（TCC）用户指南](https://www.intel.cn/content/www/cn/zh/content-details/851159/public-intel-time-coordinated-compute-tcc-user-guide.html) [备份](https://web.archive.org/web/20260120205925/https://www.intel.cn/content/www/cn/zh/content-details/851159/public-intel-time-coordinated-compute-tcc-user-guide.html)、[Step 7: Configure Intel® TCC Tools in BIOS](https://www.intel.com/content/www/us/en/docs/tcc-tools/tutorial-vtune-profiler/2022-2/step-7-configure-intel-tcc-tools-in-bios.html)
 
 ### Intel® TCC Mode（Intel TCC 模式）
 
@@ -2914,7 +2914,7 @@ Enable（启用）
 
 CSM：Compatibility Support Module，兼容性支持模块。
 
-Intel 500 系列及更新芯片组（第 11 代及后续处理器）不支持使用 VBIOS 的显示适配器，导致内置核显不支持 legacy boot，因此其 CSM 选项是灰色的。必须使用有支持 VBIOS 的外置独显才能进行配置。参见 [Intel 500 系列开始，在 BIOS 中的 CSM 选项无法选用问题？](https://www.asus.com.cn/support/faq/1045467/)。
+Intel 500 系列及更新芯片组（第 11 代及后续处理器）不支持使用 VBIOS 的显示适配器，导致内置核显不支持 legacy boot，因此其 CSM 选项是灰色的。必须使用有支持 VBIOS 的外置独显才能进行配置。参见 [Intel 500 系列开始，在 BIOS 中的 CSM 选项无法选用问题？](https://www.asus.com.cn/support/faq/1045467/) [备份](https://web.archive.org/web/20260120210045/https://www.asus.com.cn/support/faq/1045467/)。
 
 ![](../.gitbook/assets/image-20250721170014-1xxoskv.png)
 
@@ -3332,7 +3332,7 @@ No Spreading（无扩频）
 
 ##### T3 Timing（T3 延时）
 
-参考文献 [LVDS 接口液晶屏点屏流程详解](https://www.cnblogs.com/yuanqiangfei/p/11654412.html)，下同
+参考文献 [LVDS 接口液晶屏点屏流程详解](https://www.cnblogs.com/yuanqiangfei/p/11654412.html) [备份](https://web.archive.org/web/20260120210407/https://www.cnblogs.com/yuanqiangfei/p/11654412.html)，下同
 
 选项范围：
 
@@ -3610,7 +3610,7 @@ Not Happened（未发生）：嵌入式控制器软未重置过
 
 ### Super IO Configuration（超级 I/O 配置）
 
-参考文献：[BIOS 实战之 Super IO-Smart Fan](https://blog.csdn.net/u011397314/article/details/111147528)
+参考文献：[BIOS 实战之 Super IO-Smart Fan](https://blog.csdn.net/u011397314/article/details/111147528) [备份](https://web.archive.org/web/20260120210433/https://blog.csdn.net/u011397314/article/details/111147528)
 
 用于管理主板上的传统 I/O 接口，如串口（COM）、并口（LPT）、PS/2 键盘/鼠标、红外接口（IR）以及环境控制器（EC）等。这些接口通常由 Super I/O 芯片控制，负责处理低速 I/O 设备的通信。
 

@@ -36,7 +36,7 @@
 >
 >参考文献：
 >
->- [将 HDMI 信号通过单条网线传输的方法](https://patents.google.com/patent/CN101572074A/zh)
+>- [将 HDMI 信号通过单条网线传输的方法](https://patents.google.com/patent/CN101572074A/zh) [备份](https://web.archive.org/web/20260120224237/https://patents.google.com/patent/CN101572074A/zh)
 
 
 物理接口在理论上决定了其承载上限和电气性能，例如可承受的电压、电流和功率、IP 等级，以及尺寸规格（如具体的长宽尺寸）。常见的物理接口包括 M.2、U.2、SATA、USB（包括 Type-C）、HDMI、DP 和 RJ45。
@@ -183,7 +183,7 @@ microSD 也就是通常所说的 TF 卡（两者关系类似于 EFI 与 UEFI）�
 
 上述两款软件由同一位开发者开发，但其[官方网站](https://crystalmark.info/en/) 包含较多广告内容，可能导致用户误下载非官方文件。
 
-请从 **[这里](https://sourceforge.net/projects/crystaldiskinfo)** 下载 CrystalDiskInfo；请从 **[这里](https://sourceforge.net/projects/crystaldiskmark/files/)** 下载 CrystalDiskMark；
+请从 **[这里](https://sourceforge.net/projects/crystaldiskinfo)** 下载 CrystalDiskInfo；请从 **[这里](https://sourceforge.net/projects/crystaldiskmark/files/) [备份](https://web.archive.org/web/20260120223833/https://sourceforge.net/projects/crystaldiskmark/files/)** 下载 CrystalDiskMark；
 
 因此不建议直接访问其官方网站，因为最终下载链接仍会跳转至上述页面。
 
@@ -235,14 +235,14 @@ microSD 也就是通常所说的 TF 卡（两者关系类似于 EFI 与 UEFI）�
 - [Raspberry Pi 树莓派中文文档](https://rpicn.bsdcn.org) [备份](https://web.archive.org/web/20260115142621/https://rpicn.bsdcn.org/)
 - [Inside the Raspberry Pi: The story of the $35 computer that changed the world](https://www.techrepublic.com/article/inside-the-raspberry-pi-the-story-of-the-35-computer-that-changed-the-world/)
 - [SD 卡和 microSD 卡类型指南](https://www.kingston.com/cn/blog/personal-storage/microsd-sd-memory-card-guide)
-- [SD 卡 和 microSD 卡速度等级指南](https://www.kingston.com/cn/blog/personal-storage/memory-card-speed-classes)
+- [SD 卡 和 microSD 卡速度等级指南](https://www.kingston.com/cn/blog/personal-storage/memory-card-speed-classes) [备份](https://web.archive.org/web/20260120224129/https://www.kingston.com/cn/blog/personal-storage/memory-card-speed-classes)
 - [了解 SD 卡和 microSD 卡的命名惯例和标签](https://www.kingston.com/cn/blog/personal-storage/microsd-sd-memory-card-naming-conventions) [备份](https://web.archive.org/web/20260119050613/https://www.kingston.com/cn/blog/personal-storage/microsd-sd-memory-card-naming-conventions)
 - [電腦概論中的考古題，關於光碟機的倍數是指什麼](https://www.mobile01.com/topicdetail.php?f=300&t=2126605&p=3)
 - [移速（MOVE SPEED）64GB TF（MicroSD）存储卡测试](https://www.bilibili.com/read/mobile?id=21681916)
 - [移速这个卡虚标了，速度只有标注的二分之一](https://post.m.smzdm.com/talk/p/az6o8zkr/)
-- [Mvespeed 移速 400G 内存卡简单测评](https://post.m.smzdm.com/p/arq759g7/)
+- [Mvespeed 移速 400G 内存卡简单测评](https://post.m.smzdm.com/p/arq759g7/) [备份](https://web.archive.org/web/20260120223730/https://post.smzdm.com/p/arq759g7/)
 - [移速 TF 卡翻不翻车？看来没翻（附游戏测试）](https://post.m.smzdm.com/p/awzqn9z4/)
-- [闪迪至尊超极速移动 ™ microSDXC™ UHS-I 存储卡 - 128GB](https://www.westerndigital.com/zh-cn/products/memory-cards/sandisk-extreme-pro-uhs-i-microsd?sku=SDSQXCY-128G-ZN6MA)（参见注释 8：“采用专利技术”）
+- [闪迪至尊超极速移动 ™ microSDXC™ UHS-I 存储卡 - 128GB](https://www.westerndigital.com/zh-cn/products/memory-cards/sandisk-extreme-pro-uhs-i-microsd?sku=SDSQXCY-128G-ZN6MA) [备份](https://web.archive.org/web/20260120223705/https://shop.sandisk.com/zh-cn/products/memory-cards/microsd-cards/sandisk-extreme-pro-uhs-i-microsd?sku=SDSQXCY-128G-ZN6MA)（参见注释 8：“采用专利技术”）
 - [存储卡也超频？实测结果非常意外](https://mp.weixin.qq.com/s/CMioVrUx0YJbF_v7zvQMRA)
 - [BAR 升级版 + USB3.1 闪存盘](https://www.samsung.com.cn/memory-storage/usb-flash-drive/usb-3-1-flash-drive-bar-plus-64gb-titanium-gray-muf-64be4-cn/)
 

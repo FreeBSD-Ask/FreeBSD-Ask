@@ -544,7 +544,7 @@ Do you trust this certificate (yes/no)? # 输入 yes，按回车键
 
 #### 参考文献
 
-- [使用 RDP 连接到 Azure VM 时排查身份验证错误](https://learn.microsoft.com/zh-cn/troubleshoot/azure/virtual-machines/windows/cannot-connect-rdp-azure-vm)，打开和关闭 NLA 的方法在此。经过测试关闭后 rdesktop 果然又连不上了。
+- [使用 RDP 连接到 Azure VM 时排查身份验证错误](https://learn.microsoft.com/zh-cn/troubleshoot/azure/virtual-machines/windows/cannot-connect-rdp-azure-vm) [备份](https://web.archive.org/web/20260120220615/https://learn.microsoft.com/zh-cn/troubleshoot/azure/virtual-machines/windows/cannot-connect-rdp-azure-vm)，打开和关闭 NLA 的方法在此。经过测试关闭后 rdesktop 果然又连不上了。
 
 
 ## AnyDesk
@@ -698,5 +698,5 @@ $ anydesk
 ### 参考文献
 
 - [rustdesk-server Self hosted RustDesk server](https://www.freshports.org/net/rustdesk-server/)
-- [远程控制软件 RustDesk 自建服务器全平台部署及使用教程](https://www.cnblogs.com/safe-rabbit/p/18020812)
+- [远程控制软件 RustDesk 自建服务器全平台部署及使用教程](https://www.cnblogs.com/safe-rabbit/p/18020812) [备份](https://web.archive.org/web/20260120220700/https://www.cnblogs.com/safe-rabbit/p/18020812)
 

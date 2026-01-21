@@ -191,7 +191,7 @@ GNOME 一直以不符合部分用户使用习惯著称，例如桌面不允许�
 
 ### 在桌面放图标
 
-扩展 [gnome-shell-extension-desktop-icons](https://extensions.gnome.org/extension/1465/desktop-icons/) 已经长期未更新，项目地址为：[Desktop Icons](https://gitlab.gnome.org/World/ShellExtensions/desktop-icons)。
+扩展 [gnome-shell-extension-desktop-icons](https://extensions.gnome.org/extension/1465/desktop-icons/) [备份](https://web.archive.org/web/20260120220814/https://extensions.gnome.org/extension/1465/desktop-icons/) 已经长期未更新，项目地址为：[Desktop Icons](https://gitlab.gnome.org/World/ShellExtensions/desktop-icons) [备份](https://web.archive.org/web/20260120221139/https://gitlab.gnome.org/World/ShellExtensions/desktop-icons)。
 
 可以使用 [Desktop Icons NG (DING)](https://extensions.gnome.org/extension/2087/desktop-icons-ng-ding/) 解决。安装方式同上。
 

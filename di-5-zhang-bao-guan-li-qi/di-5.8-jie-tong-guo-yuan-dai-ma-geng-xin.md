@@ -6,7 +6,7 @@
 
 ## SVN 到 Git 的迁移
 
-FreeBSD 项目在 2021 年从 SVN 全面迁移到了 Git，即 [https://git.freebsd.org](https://git.freebsd.org)
+FreeBSD 项目在 2021 年从 SVN 全面迁移到了 Git，即 [https://git.freebsd.org](https://git.freebsd.org) [备份](https://web.archive.org/web/20260120222010/https://git.freebsd.org/)
 
 因此，获取源代码的方式也发生了变化，不再使用 SVN。
 
@@ -146,7 +146,7 @@ $ git clone --branch releng/15.0 --single-branch --depth 1 https://github.com/fr
 
 >**技巧**
 >
->与绝大多数现代 Linux 不同，[FreeBSD](https://github.com/freebsd/freebsd-src/tree/main/contrib/nvi)（OpenBSD）上的 `vi` 是 *[nvi](https://sites.google.com/a/bostic.com/keithbostic/keith-bostic?authuser=0)*（原版 **ex/vi** 的再实现），并不是指向任何 *vim* 的链接符号。基本上很少有人使用，也一般没有学习的必要，因此有必要更换为其他文本编辑器。
+>与绝大多数现代 Linux 不同，[FreeBSD](https://github.com/freebsd/freebsd-src/tree/main/contrib/nvi) [备份](https://web.archive.org/web/20260120222007/https://github.com/freebsd/freebsd-src/tree/main/contrib/nvi)（OpenBSD）上的 `vi` 是 *[nvi](https://sites.google.com/a/bostic.com/keithbostic/keith-bostic?authuser=0) [备份](https://web.archive.org/web/20260120222012/https://sites.google.com/a/bostic.com/keithbostic/keith-bostic?authuser=0)*（原版 **ex/vi** 的再实现），并不是指向任何 *vim* 的链接符号。基本上很少有人使用，也一般没有学习的必要，因此有必要更换为其他文本编辑器。
 >
 >```sh
 ># export  EDITOR=/usr/bin/ee # 切换 vi 为 ee。针对 FreeBSD 14 之前的版本或 csh 使用：setenv EDITOR /usr/bin/ee
@@ -187,5 +187,5 @@ Select: (p) postpone, (df) diff-full, (e) edit,
 
 ## 参考资料
 
-- [FreeBSD 手册](https://handbook.bsdcn.org/)。
+- [FreeBSD 手册](https://handbook.bsdcn.org/) [备份](https://web.archive.org/web/20260120221948/https://handbook.bsdcn.org/)。
 - [etcupdate -- manage updates to system files not updated by installworld](https://man.freebsd.org/cgi/man.cgi?etcupdate(8))

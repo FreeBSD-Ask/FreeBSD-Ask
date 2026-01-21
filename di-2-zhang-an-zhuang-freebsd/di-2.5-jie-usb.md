@@ -18,7 +18,7 @@ DiskGenius 官网：[https://www.diskgenius.cn/](https://www.diskgenius.cn/) [�
 
 ### 下载 DiskGenius
 
-下载时，大部分用户应选择 [64 位版本](https://www.diskgenius.cn/download.php)。
+下载时，大部分用户应选择 [64 位版本](https://www.diskgenius.cn/download.php) [备份](https://web.archive.org/web/20260120201333/https://www.diskgenius.cn/download.php)。
 
 下载后，发现是个 zip 压缩包。
 

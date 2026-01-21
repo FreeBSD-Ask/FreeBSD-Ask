@@ -264,4 +264,4 @@ crw-rw---- 1 root video 1, 177 2025年 8月22日 /dev/backlight/backlight0 # 台
 
 ## 参考文献
 
-- 显卡详细支持情况可以看 [wiki/Graphics](https://wiki.freebsd.org/Graphics)
+- 显卡详细支持情况可以看 [wiki/Graphics](https://wiki.freebsd.org/Graphics) [备份](https://web.archive.org/web/20260120220132/https://wiki.freebsd.org/Graphics)

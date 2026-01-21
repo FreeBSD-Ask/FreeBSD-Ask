@@ -46,7 +46,7 @@ Aptio 设置 - AMI
 参见
 
 - [英特尔 ® 处理器步进意味着什么？](https://www.intel.cn/content/www/cn/zh/support/articles/000057218/processors.html) [备份](https://web.archive.org/web/20260120163248/https://www.intel.cn/content/www/cn/zh/support/articles/000057218/processors.html)
-- [CPU“步进”介绍](https://iknow.lenovo.com.cn/detail/320528)
+- [CPU“步进”介绍](https://iknow.lenovo.com.cn/detail/320528) [备份](https://web.archive.org/web/20260120210927/https://iknow.lenovo.com.cn/detail/320528)
 
 ### Memory Information（内存信息）
 

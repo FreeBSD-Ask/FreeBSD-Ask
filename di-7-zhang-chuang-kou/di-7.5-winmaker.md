@@ -99,7 +99,7 @@ proc           /proc       procfs  rw  0   0
 
 ### 无法使用中文环境
 
-Window Maker 本身部分字符串未被包含在 `.po` 文件中 [https://repo.or.cz/wmaker-crm.git/blob/refs/heads/master:/po/zh\_CN.po](https://repo.or.cz/wmaker-crm.git/blob/refs/heads/master:/po/zh_CN.po)，因此在界面显示时可能出现中英文混合的情况。
+Window Maker 本身部分字符串未被包含在 `.po` 文件中 [https://repo.or.cz/wmaker-crm.git/blob/refs/heads/master:/po/zh\_CN.po](https://repo.or.cz/wmaker-crm.git/blob/refs/heads/master:/po/zh_CN.po) [备份](https://web.archive.org/web/20260120224654/https://repo.or.cz/wmaker-crm.git/blob/refs/heads/master:/po/zh_CN.po)，因此在界面显示时可能出现中英文混合的情况。
 
 根据 <https://sourceforge.net/p/wmakerconf/code/HEAD/tree/wmakerconf/trunk/po/>，wmakerconf 自 2007 年以后已停止开发，翻译内容很可能无法被合并。
 

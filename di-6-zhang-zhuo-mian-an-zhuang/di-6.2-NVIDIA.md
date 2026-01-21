@@ -2,7 +2,7 @@
 
 ## NVIDIA 显卡驱动概述
 
-对于台式机，注意若 CPU 是英特尔处理器，且型号以 F（如 [i5-9400F](https://www.intel.cn/content/www/cn/zh/products/sku/190883/intel-core-i59400f-processor-9m-cache-up-to-4-10-ghz/specifications.html)）或者 KF（如 [i5-12600KF](https://www.intel.cn/content/www/cn/zh/products/sku/134590/intel-core-i512600kf-processor-20m-cache-up-to-4-90-ghz/specifications.html)）结尾的型号，是没有核芯显卡的，不需要处理核显相关配置。
+对于台式机，注意若 CPU 是英特尔处理器，且型号以 F（如 [i5-9400F](https://www.intel.cn/content/www/cn/zh/products/sku/190883/intel-core-i59400f-processor-9m-cache-up-to-4-10-ghz/specifications.html) [备份](https://web.archive.org/web/20260120221551/https://www.intel.cn/content/www/cn/zh/products/sku/190883/intel-core-i59400f-processor-9m-cache-up-to-4-10-ghz/specifications.html)）或者 KF（如 [i5-12600KF](https://www.intel.cn/content/www/cn/zh/products/sku/134590/intel-core-i512600kf-processor-20m-cache-up-to-4-90-ghz/specifications.html)）结尾的型号，是没有核芯显卡的，不需要处理核显相关配置。
 
 若你已拥有独立显卡，且你的视频输出（DP 或 HDMI）是直接插入的独立显卡。那么通常来说，你同样无需对核显进行任何配置，仅处理独显本身的驱动即可。
 

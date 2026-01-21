@@ -2,7 +2,7 @@
 
 Lumina 使用 BSD 许可证。Lumina 技术栈为 Qt 5，不使用任何基于 Linux 的桌面框架，主张轻量化。
 
-2025 年 01 月 08 日，测试显示在 VMware 中无法进入桌面，或进入后闪退。参见 [Some problem Under FreeBSD 13.2 with Xorg and Lumina Desktop...How to solve?](https://forums.freebsd.org/threads/some-problem-under-freebsd-13-2-with-xorg-and-lumina-desktop-how-to-solve.88882/)。但是在 VirtualBox 中显示正常。
+2025 年 01 月 08 日，测试显示在 VMware 中无法进入桌面，或进入后闪退。参见 [Some problem Under FreeBSD 13.2 with Xorg and Lumina Desktop...How to solve?](https://forums.freebsd.org/threads/some-problem-under-freebsd-13-2-with-xorg-and-lumina-desktop-how-to-solve.88882/) [备份](https://web.archive.org/web/20260120221344/https://forums.freebsd.org/threads/some-problem-under-freebsd-13-2-with-xorg-and-lumina-desktop-how-to-solve.88882/)。但是在 VirtualBox 中显示正常。
 
 
 >**注意**
