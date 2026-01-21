@@ -90,7 +90,7 @@ Enable（启用）
 
 说明：
 
-BT Audio Offload（A2DP），英特尔蓝牙音频分发技术，参见 [示范影片：以 Intel® Bluetooth® 音频卸除省电（A2DP） （MP4）](https://www.intel.cn/content/www/cn/zh/content-details/751466/demo-video-power-saving-with-intel-bluetooth-audio-offload-a2dp-mp4.html)。硬件卸载的音频处理允许在计算机的主 CPU 之外执行主要音频处理任务：即将蓝牙传输音频的解码放到 DSP 进行处理，可降低处理器的负载并省电。参见 [Hardware-Offloaded 音频处理](https://learn.microsoft.com/zh-cn/windows-hardware/drivers/audio/hardware-offloaded-audio-processing) [备份](https://web.archive.org/web/20260120163041/https://learn.microsoft.com/zh-cn/windows-hardware/drivers/audio/hardware-offloaded-audio-processing)。
+BT Audio Offload（A2DP），英特尔蓝牙音频分发技术，参见 [示范影片：以 Intel® Bluetooth® 音频卸除省电（A2DP） （MP4）](https://www.intel.cn/content/www/cn/zh/content-details/751466/demo-video-power-saving-with-intel-bluetooth-audio-offload-a2dp-mp4.html) [备份](https://web.archive.org/web/20260121095803/https://www.intel.cn/content/www/cn/zh/content-details/751466/demo-video-power-saving-with-intel-bluetooth-audio-offload-a2dp-mp4.html)。硬件卸载的音频处理允许在计算机的主 CPU 之外执行主要音频处理任务：即将蓝牙传输音频的解码放到 DSP 进行处理，可降低处理器的负载并省电。参见 [Hardware-Offloaded 音频处理](https://learn.microsoft.com/zh-cn/windows-hardware/drivers/audio/hardware-offloaded-audio-processing) [备份](https://web.archive.org/web/20260120163041/https://learn.microsoft.com/zh-cn/windows-hardware/drivers/audio/hardware-offloaded-audio-processing)。
 
 该功能可将来自蓝牙设备的 HFP 格式音频输入传送至音频 DSP，并通过 A2DP 格式以高能效方式将音频输出至蓝牙设备。
 
@@ -616,7 +616,7 @@ No（否）
 
 SMM 代码访问是一种特殊的操作模式，由 BIOS 用于处理电源和硬件管理功能。
 
-SMM，即 System Management Mode 系统管理模式，SMM 模式具有比内核模式更高的特权级别，是 CPU 的最高运行权限，运行在内核模式下的内核驱动程序只能通过 SMI 中断来访问运行在 SMM 模式下的 UEFI 固件运行时服务。参见 [以 Protocol 为中心的 UEFI 固件 SMM 提权漏洞静态检测](https://www.secrss.com/articles/53078)。
+SMM，即 System Management Mode 系统管理模式，SMM 模式具有比内核模式更高的特权级别，是 CPU 的最高运行权限，运行在内核模式下的内核驱动程序只能通过 SMI 中断来访问运行在 SMM 模式下的 UEFI 固件运行时服务。参见 [以 Protocol 为中心的 UEFI 固件 SMM 提权漏洞静态检测](https://www.secrss.com/articles/53078) [备份](https://web.archive.org/web/20260121095758/https://www.secrss.com/articles/53078)。
 
 ![](../.gitbook/assets/CPU-SMM.png)
 
@@ -632,7 +632,7 @@ Enable（启用）
 
 启用 SMM 使用延迟指示，以检查线程在进入 SMM 时是否会被延迟。
 
-进入系统管理模式（SMM）会发生在指令边界处。当一个逻辑处理器正在执行包含大量内部操作流程的指令时，该处理器对 SMI（系统管理中断）的响应将会被延迟。参见 [34.17.2  SMI Delivery Delay Reporting](https://xem.github.io/minix86/manual/intel-x86-and-64-manual-vol3/o_fe12b1e2a880e0ce-1280.html)。
+进入系统管理模式（SMM）会发生在指令边界处。当一个逻辑处理器正在执行包含大量内部操作流程的指令时，该处理器对 SMI（系统管理中断）的响应将会被延迟。参见 [34.17.2  SMI Delivery Delay Reporting](https://xem.github.io/minix86/manual/intel-x86-and-64-manual-vol3/o_fe12b1e2a880e0ce-1280.html) [备份](https://web.archive.org/web/20260120162243/https://xem.github.io/minix86/manual/intel-x86-and-64-manual-vol3/o_fe12b1e2a880e0ce-1280.html)。
 
 #### SMM Use Block Indication（SMM 使用阻塞指示）
 
@@ -1352,7 +1352,7 @@ Enable（启用）
 
 平台功耗限制  1”（Platform Power Limit 1，简称 PL1）以毫瓦（mW）为单位设置。BIOS 在编程时会将其四舍五入到最接近的  1/8 瓦。你可以在由 `PACKAGE_POWER_SKU_MSR` 指定的最小功耗限制和最大功耗限制之间设置任意值。例如，如果你想设置为  12.50  瓦，就输入  `12500`。该设置会成为处理器 RAPL 算法（用于监控功耗并控制频率和电压的闭环控制算法）中的新 PL1 值。
 
-此值是平台平均功耗不会被超过的阈值 —— 英特尔推荐设置为等于平台的散热能力。参见 [Platform Power Control](https://edc.intel.com/content/www/us/en/design/ipla/software-development-platforms/client/platforms/alder-lake-desktop/12th-generation-intel-core-processors-datasheet-volume-1-of-2/011/platform-power-control/)
+此值是平台平均功耗不会被超过的阈值 —— 英特尔推荐设置为等于平台的散热能力。参见 [Platform Power Control](https://edc.intel.com/content/www/us/en/design/ipla/software-development-platforms/client/platforms/alder-lake-desktop/12th-generation-intel-core-processors-datasheet-volume-1-of-2/011/platform-power-control/) [备份](https://web.archive.org/web/20260121095920/https://edc.intel.com/content/www/us/en/design/ipla/software-development-platforms/client/platforms/alder-lake-desktop/12th-generation-intel-core-processors-datasheet-volume-1-of-2/011/platform-power-control/)
 
 #### Platform PL1 Time Window（平台 PL1 / PsysPL1 窗口时间）
 
@@ -2138,7 +2138,7 @@ Enable（启用）
 
 Intel® 时间协调计算（Intel® TCC）可为实时应用提供优化的计算和时间性能。支持基于无线和有线融合网络的 IEEE\* 802.1 时间敏感网络（TSN）。
 
-参见 [公共英特尔 ® 时序协调计算（TCC）用户指南](https://www.intel.cn/content/www/cn/zh/content-details/851159/public-intel-time-coordinated-compute-tcc-user-guide.html) [备份](https://web.archive.org/web/20260120205925/https://www.intel.cn/content/www/cn/zh/content-details/851159/public-intel-time-coordinated-compute-tcc-user-guide.html)、[Step 7: Configure Intel® TCC Tools in BIOS](https://www.intel.com/content/www/us/en/docs/tcc-tools/tutorial-vtune-profiler/2022-2/step-7-configure-intel-tcc-tools-in-bios.html)
+参见 [公共英特尔 ® 时序协调计算（TCC）用户指南](https://www.intel.cn/content/www/cn/zh/content-details/851159/public-intel-time-coordinated-compute-tcc-user-guide.html) [备份](https://web.archive.org/web/20260120205925/https://www.intel.cn/content/www/cn/zh/content-details/851159/public-intel-time-coordinated-compute-tcc-user-guide.html)、[Step 7: Configure Intel® TCC Tools in BIOS](https://www.intel.com/content/www/us/en/docs/tcc-tools/tutorial-vtune-profiler/2022-2/step-7-configure-intel-tcc-tools-in-bios.html) [备份](https://web.archive.org/web/20260121095811/https://www.intel.com/content/www/us/en/docs/tcc-tools/tutorial-vtune-profiler/2022-2/step-7-configure-intel-tcc-tools-in-bios.html)
 
 ### Intel® TCC Mode（Intel TCC 模式）
 
