@@ -8,7 +8,7 @@
 
 `ee` 是 FreeBSD 基本系统内置的编辑器。
 
-`ee` 的用法比 [nano](https://www.redhat.com/zh/blog/getting-started-nano)（一款 GNU 编辑器）还要简单许多，从其名字“easy editor”（简单的编辑器）即可看出。
+`ee` 的用法比 [nano](https://www.redhat.com/zh/blog/getting-started-nano) [备份](https://web.archive.org/web/20260121060144/https://www.redhat.com/zh-cn/blog/getting-started-nano)（一款 GNU 编辑器）还要简单许多，从其名字“easy editor”（简单的编辑器）即可看出。
 
 比如使用 ee 编辑器打开 `a.txt` 文件：
 

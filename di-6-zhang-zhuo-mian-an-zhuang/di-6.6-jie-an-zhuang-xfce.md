@@ -196,7 +196,7 @@ fi
 ### 参考文献
 
 - [6.1 动态设置标题不起作用](https://docs.oracle.com/cd/E19683-01/817-1951/6mhl8aiii/index.html) [备份](https://web.archive.org/web/20251207044645/https://docs.oracle.com/cd/E19683-01/817-1951/6mhl8aiii/index.html)，bash 配置来自此处
-- [Wamphyre/BSD-XFCE](https://github.com/Wamphyre/BSD-XFCE)，配置参考集合
+- [Wamphyre/BSD-XFCE](https://github.com/Wamphyre/BSD-XFCE) [备份](https://web.archive.org/web/20260121072214/https://github.com/Wamphyre/BSD-XFCE)，配置参考集合
 - [Zsh - Arch Linux 中文维基](https://wiki.archlinuxcn.org/wiki/Zsh)，Zsh 配置来自此处
 
 ## 故障排除与未竟事宜

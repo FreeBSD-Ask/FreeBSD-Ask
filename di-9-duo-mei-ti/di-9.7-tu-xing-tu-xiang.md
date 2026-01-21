@@ -87,4 +87,4 @@ $ ffmpeg -i 视频文件.mp4 -vf subtitles=对应字幕.ass 输出视频.mp4
 
 ### 参考文献
 
-- Inkscape [官方教程](https://inkscape.org/zh-hans/learn/tutorials/)
+- Inkscape [官方教程](https://inkscape.org/zh-hans/learn/tutorials/) [备份](https://web.archive.org/web/20260121063653/https://inkscape.org/zh-hans/learn/tutorials/)

@@ -63,7 +63,7 @@ $ x11vnc -display :0 -rfbauth ~/.vnc/passwd -auth /var/lib/gdm/:0.Xauth # 或 /r
 ### 参考文献
 
 - [x11vnc -allow VNC connections to real X11 displays](https://man.freebsd.org/cgi/man.cgi?query=x11vnc&sektion=&manpath=freebsd-release-ports)
-- [X11vnc](https://wiki.archlinux.org/title/X11vnc)
+- [X11vnc](https://wiki.archlinux.org/title/X11vnc) [备份](https://web.archive.org/web/20260121071804/https://wiki.archlinux.org/title/X11vnc)
   
 ## TigerVNC（FreeBSD 为被控端）
 
@@ -182,7 +182,7 @@ $ ps
 
 ### 参考文献
 
-- [Xfce4 is not displayed correctly when I connect vncviewer (in Linux) to tightvnc-server (on FreeBSD)](https://forums.freebsd.org/threads/xfce4-is-not-displayed-correctly-when-i-connect-vncviewer-in-linux-to-tightvnc-server-on-freebsd.85709/)
+- [Xfce4 is not displayed correctly when I connect vncviewer (in Linux) to tightvnc-server (on FreeBSD)](https://forums.freebsd.org/threads/xfce4-is-not-displayed-correctly-when-i-connect-vncviewer-in-linux-to-tightvnc-server-on-freebsd.85709/) [备份](https://web.archive.org/web/20260121071814/https://forums.freebsd.org/threads/xfce4-is-not-displayed-correctly-when-i-connect-vncviewer-in-linux-to-tightvnc-server-on-freebsd.85709/)
 
 ## XRDP（FreeBSD 为被控端）
 
@@ -408,7 +408,7 @@ Do you trust the above certificate? (Y/T/N) y # 输入 y 按回车键以确认�
 
 #### 参考文献
 
-- [FreeRDP User Manual](https://github.com/awakecoding/FreeRDP-Manuals/blob/master/User/FreeRDP-User-Manual.markdown)，里面命令说明和一些用法示例
+- [FreeRDP User Manual](https://github.com/awakecoding/FreeRDP-Manuals/blob/master/User/FreeRDP-User-Manual.markdown) [备份](https://web.archive.org/web/20260121071743/https://github.com/awakecoding/FreeRDP-Manuals/blob/master/User/FreeRDP-User-Manual.markdown)，里面命令说明和一些用法示例
 
 
 ### freerdp2（旧稳定版，支持 NLA）

@@ -66,7 +66,7 @@ FreeBSD 安装桌面环境后，很多时候扑面而来的是简单朴素的色
 
 ## 背景图片
 
-[下载地址](https://github.com/vinceliuice/WhiteSur-kde/tree/master/wallpaper)
+[下载地址](https://github.com/vinceliuice/WhiteSur-kde/tree/master/wallpaper) [备份](https://web.archive.org/web/20260121071602/https://github.com/vinceliuice/WhiteSur-kde/tree/master/wallpaper)
 
 ## 思考题
 
