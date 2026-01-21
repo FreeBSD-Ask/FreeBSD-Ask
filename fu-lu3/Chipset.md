@@ -2763,7 +2763,7 @@ Disabled（禁用）
 
 目前该功能通常用于同时使用多张显卡的情况；该功能对于游戏和加密货币挖矿等高性能应用特别有用。参见 [BIOS Above 4GB MMIO BIOS Assignment / Above 4G Decoding](https://432hz.myqnapcloud.com:81/WordPress/above-4gb-mmio-bios-assignment-and-above-4g-decoding/) [备份](https://web.archive.org/web/20260119062020/https://432hz.myqnapcloud.com:81/WordPress/above-4gb-mmio-bios-assignment-and-above-4g-decoding/)
 
-在禁用状态下，双 CPU 显卡及雷电接口设备的使用将受到限制。参见 [为什么使用类似 RocketRAID 840A 的 Legacy 设备，在其自带的 Raid Option 接口下识别不到硬盘，无法组建 RAID?](https://www.asus.com.cn/support/faq/1043356/)
+在禁用状态下，双 CPU 显卡及雷电接口设备的使用将受到限制。参见 [为什么使用类似 RocketRAID 840A 的 Legacy 设备，在其自带的 Raid Option 接口下识别不到硬盘，无法组建 RAID?](https://www.asus.com.cn/support/faq/1043356/) [备份](https://web.archive.org/web/20260121152327/https://www.asus.com.cn/support/faq/1043356/)
 
 ### IPU Device (B0:D5:F0) (IPU 设备)
 
