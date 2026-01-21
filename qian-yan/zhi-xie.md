@@ -64,7 +64,7 @@ Ubuntu 吧前吧主 Simple 曾建议修改项目的章节文件名与许可协�
 - [orzyyyy](https://github.com/orzyyyy) [备份](https://web.archive.org/web/20260119105509/https://github.com/orzyyyy)  
 - [peiyafei](https://github.com/peiyafei) [备份](https://web.archive.org/web/20260120011913/https://github.com/peiyafei)  
 - [pengxingwei](https://github.com/pengxingwei) [备份](https://web.archive.org/web/20260118020032/https://github.com/pengxingwei)  
-- [puffinjiang](https://github.com/puffinjiang)  
+- [puffinjiang](https://github.com/puffinjiang) [备份](https://web.archive.org/web/20260121091901/https://github.com/puffinjiang)  
 - 清和 [qinghecyn](https://github.com/qinghecyn) [备份](https://web.archive.org/web/20260117181455/https://github.com/qinghecyn)  
 - 清热解毒口服液  
 - [Rintim](https://github.com/Rintim) [备份](https://web.archive.org/web/20260119042645/https://github.com/Rintim)  

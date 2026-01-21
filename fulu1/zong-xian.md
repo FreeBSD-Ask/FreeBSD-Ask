@@ -183,7 +183,7 @@ microSD 也就是通常所说的 TF 卡（两者关系类似于 EFI 与 UEFI）�
 
 上述两款软件由同一位开发者开发，但其[官方网站](https://crystalmark.info/en/) [备份](https://web.archive.org/web/20260121074528/https://crystalmark.info/en/) 包含较多广告内容，可能导致用户误下载非官方文件。
 
-请从 **[这里](https://sourceforge.net/projects/crystaldiskinfo)** 下载 CrystalDiskInfo；请从 **[这里](https://sourceforge.net/projects/crystaldiskmark/files/) [备份](https://web.archive.org/web/20260120223833/https://sourceforge.net/projects/crystaldiskmark/files/)** 下载 CrystalDiskMark；
+请从 **[这里](https://sourceforge.net/projects/crystaldiskinfo) [备份](https://web.archive.org/web/20260121065150/https://sourceforge.net/projects/crystaldiskinfo/)** 下载 CrystalDiskInfo；请从 **[这里](https://sourceforge.net/projects/crystaldiskmark/files/) [备份](https://web.archive.org/web/20260120223833/https://sourceforge.net/projects/crystaldiskmark/files/)** 下载 CrystalDiskMark；
 
 因此不建议直接访问其官方网站，因为最终下载链接仍会跳转至上述页面。
 
