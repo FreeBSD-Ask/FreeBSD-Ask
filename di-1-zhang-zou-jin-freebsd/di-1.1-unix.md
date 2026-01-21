@@ -115,7 +115,7 @@ Multics 意图创造强悍的新软件和比肩 IBM 7094 功能更丰富的新�
 - 1991 年，FSF 发布 GPLv2
 - 2007 年，FSF 发布 GPLv3
 
-一开始，RMS 为 Unix 编写了许多实用程序（用户空间），然而 GNU 的目标操作系统始终缺乏稳定内核（即使到 2025 年，[GNU Hurd](https://hurd.gnu.org/)  仍未完成）。Linux 内核的诞生打破了这一困境。
+一开始，RMS 为 Unix 编写了许多实用程序（用户空间），然而 GNU 的目标操作系统始终缺乏稳定内核（即使到 2025 年，[GNU Hurd](https://hurd.gnu.org/) [备份](https://web.archive.org/web/20260116222211/https://www.gnu.org/software/hurd/)  仍未完成）。Linux 内核的诞生打破了这一困境。
 
 作为由 Linux 内核和 GNU 软件组合而成的操作系统，Linux 不断地 GNU 化，形成了 GNU/Linux，其中 GNU 的贡献不可忽视，但很多人常忽略这一事实。这是因为：Linux 内核的开发由 Linus Torvalds 主导。Linus 本人对 FSF 和 RMS 的理念并不完全认同。因此，Linux 内核项目的理念与自由软件运动，甚至与严格的开源理念之间，存在一定的张力（例如，Linux 内核包含了不符合自由软件定义或严格开源定义的二进制固件模块，参见 [Linux-libre](https://www.fsfla.org/ikiwiki/selibre/linux-libre/) [备份](https://web.archive.org/web/20260115033255/https://www.fsfla.org/ikiwiki/selibre/linux-libre/) ）。并且 Linux 内核使用 GPLv2，而非 GNU 推荐的 GPLv3。事实是，Linus Torvalds 随意移除 Linux 项目的参与者，却未同时移除他们贡献的代码。——这无论同自由还是开源理念都是冲突的。
 
@@ -326,7 +326,7 @@ OSI（Open Source Initiative，开源促进会）基于开放软件定义（OSD�
 
 根据 [自由与非自由软件的分类](https://www.gnu.org/philosophy/categories.zh-cn.html) [备份](https://web.archive.org/web/20260117035802/https://www.gnu.org/philosophy/categories.zh-cn.html) ，我们定义如下：
 
-- 自由软件：符合上述四项基本自由定义的软件即称为自由软件。推论：商业软件可以是自由软件，商业 ≠ 非自由。引证 1：[自由软件可以是商业软件](https://www.gnu.org/philosophy/free-sw.zh-cn.html#four-freedoms) [备份](https://web.archive.org/web/20260115033837/https://www.gnu.org/philosophy/free-sw.zh-cn.html#four-freedoms) ；引证 2：[Words to Avoid (or Use with Care) Because They Are Loaded or Confusing](https://www.gnu.org/philosophy/words-to-avoid.html) ,“Commercial”部分
+- 自由软件：符合上述四项基本自由定义的软件即称为自由软件。推论：商业软件可以是自由软件，商业 ≠ 非自由。引证 1：[自由软件可以是商业软件](https://www.gnu.org/philosophy/free-sw.zh-cn.html#four-freedoms) [备份](https://web.archive.org/web/20260115033837/https://www.gnu.org/philosophy/free-sw.zh-cn.html#four-freedoms) ；引证 2：[Words to Avoid (or Use with Care) Because They Are Loaded or Confusing](https://www.gnu.org/philosophy/words-to-avoid.html) [备份](https://web.archive.org/web/20260120174001/https://www.gnu.org/philosophy/words-to-avoid.html) ,“Commercial”部分
 - 开源软件：使用上述开源协议授权的软件。所有自由软件都是开源软件，但是所有开源软件不一定是自由软件。二者的定义和理念都有一定的差异。自由软件是开源软件的充分不必要条件
 - 专有软件/私有软件（proprietary software）：即真正意义上的“非自由软件”，大部分商业软件属此类型。这是 GNU 宣言一开始真正的目标
 - 免费软件：定义模糊。其他类别的软件均可能是“免费”的，但并不一定

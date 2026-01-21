@@ -26,7 +26,7 @@ $ xinput set-prop 6 "Device Enabled" 0    # 禁用 ID 为 6 的输入设备
 
 #### 参考文献
 
-- [FreeBSD タッチパッドを off にする](https://qiita.com/fygar256/items/35100d43b096470631d6)
+- [FreeBSD タッチパッドを off にする](https://qiita.com/fygar256/items/35100d43b096470631d6) [备份](https://web.archive.org/web/20260120211042/https://qiita.com/fygar256/items/35100d43b096470631d6)
 
 ### Apple Magic Trackpad
 
@@ -58,8 +58,8 @@ hw.usb.usbhid.enable="0"
 
 禁用 USB HID 设备，随后重启即可。
 
-问题分析：ums 驱动始终存在于与具体机器无关的内核中，而 usbhid 目前位于 amd64 架构相关的内核选项中。在 15.0 之后，usbhid 驱动成为默认，其优先级高于传统的 ums 驱动。但两者均为直接编译进内核的驱动，而非以模块形式加载。usbhid 驱动引入内核始于 [conf: Add hkbd and hms to GENERIC\* kernel configs](https://reviews.freebsd.org/D45658)，而替代 ums 的过程发生在 [Enable usbhid by default](https://reviews.freebsd.org/D45659)。该变更最早出现在 13.0 版本，并从 15.0 起成为默认行为。此问题仍需读者进一步研究原因，并向 FreeBSD 项目提交 Bug 报告，因为项目计划在日后彻底移除 ums 支持。具体可参见 FreeBSD 期刊 2021/0708 期。
+问题分析：ums 驱动始终存在于与具体机器无关的内核中，而 usbhid 目前位于 amd64 架构相关的内核选项中。在 15.0 之后，usbhid 驱动成为默认，其优先级高于传统的 ums 驱动。但两者均为直接编译进内核的驱动，而非以模块形式加载。usbhid 驱动引入内核始于 [conf: Add hkbd and hms to GENERIC\* kernel configs](https://reviews.freebsd.org/D45658) [备份](https://web.archive.org/web/20260120211221/https://reviews.freebsd.org/D45658)，而替代 ums 的过程发生在 [Enable usbhid by default](https://reviews.freebsd.org/D45659) [备份](https://web.archive.org/web/20260120211156/https://reviews.freebsd.org/D45659)。该变更最早出现在 13.0 版本，并从 15.0 起成为默认行为。此问题仍需读者进一步研究原因，并向 FreeBSD 项目提交 Bug 报告，因为项目计划在日后彻底移除 ums 支持。具体可参见 FreeBSD 期刊 2021/0708 期。
 
 ## 附录：Fn 键设置
 
-- [Adjusting acpi_video brightness increments on FreeBSD](https://www.davidschlachter.com/misc/freebsd-acpi_video-thinkpad-display-brightness)
+- [Adjusting acpi_video brightness increments on FreeBSD](https://www.davidschlachter.com/misc/freebsd-acpi_video-thinkpad-display-brightness) [备份](https://web.archive.org/web/20260120211035/https://www.davidschlachter.com/misc/freebsd-acpi_video-thinkpad-display-brightness)

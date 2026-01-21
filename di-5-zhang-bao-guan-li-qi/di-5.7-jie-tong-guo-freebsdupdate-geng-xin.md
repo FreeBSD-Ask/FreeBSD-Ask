@@ -2,7 +2,7 @@
 
 > **注意：**
 >
-> 只有一级架构的 RELEASE 版本才提供该更新源。也就是说，CURRENT 和 STABLE 不提供该源。关于架构的支持等级说明请参见： [Supported Platforms](https://www.freebsd.org/platforms)
+> 只有一级架构的 RELEASE 版本才提供该更新源。也就是说，CURRENT 和 STABLE 不提供该源。关于架构的支持等级说明请参见： [Supported Platforms](https://www.freebsd.org/platforms) [备份](https://web.archive.org/web/20260115035231/https://www.freebsd.org/platforms/)
 
 >**注意**
 >
@@ -125,7 +125,7 @@ usr/lib/clang/11.0.1/include
 
 >**注意**
 >
->`freebsd-update` 下载慢不是因为其更新源在境外（你使用境外服务器更新一样慢；并且在 freebsdcn 境内源还生效的那些日子里，亦如此）。这可能与其设计缺陷有关，`freebsd-update` 是一个由数千行组成的纯 shell 脚本。[这是一个始终普遍存在的问题](https://freebsd-questions.freebsd.narkive.com/xjVoetUM/why-is-freebsd-update-so-horrible-slow)。
+>`freebsd-update` 下载慢不是因为其更新源在境外（你使用境外服务器更新一样慢；并且在 freebsdcn 境内源还生效的那些日子里，亦如此）。这可能与其设计缺陷有关，`freebsd-update` 是一个由数千行组成的纯 shell 脚本。[这是一个始终普遍存在的问题](https://freebsd-questions.freebsd.narkive.com/xjVoetUM/why-is-freebsd-update-so-horrible-slow) [备份](https://web.archive.org/web/20260120223038/https://freebsd-questions.freebsd.narkive.com/xjVoetUM/why-is-freebsd-update-so-horrible-slow)。
 
 **以 FreeBSD 14.3-RELEASE 升级至 15.0-RELEASE 为例**
 

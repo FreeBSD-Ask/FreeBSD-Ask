@@ -451,7 +451,7 @@ hw.ncpu: 16
 
 ### 参考资料
 
-- [Easy way to get cpu features](https://forums.freebsd.org/threads/easy-way-to-get-cpu-features.10553/)，获取 CPU 线程数量的命令来自此处。
+- [Easy way to get cpu features](https://forums.freebsd.org/threads/easy-way-to-get-cpu-features.10553/) [备份](https://web.archive.org/web/20260120221823/https://forums.freebsd.org/threads/easy-way-to-get-cpu-features.10553/)，获取 CPU 线程数量的命令来自此处。
 
 ## 设置内存为 `tmp`
 
@@ -733,4 +733,4 @@ make: stopped in /usr/ports/java/openjdk21
 
 #### 参考文献
 
-- [Invalid perl5 version 5.32](https://forums.freebsd.org/threads/invalid-perl5-version-5-32.77628/)，出现了同样的问题
+- [Invalid perl5 version 5.32](https://forums.freebsd.org/threads/invalid-perl5-version-5-32.77628/) [备份](https://web.archive.org/web/20260120221833/https://forums.freebsd.org/threads/invalid-perl5-version-5-32.77628/)，出现了同样的问题

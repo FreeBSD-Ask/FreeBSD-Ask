@@ -103,7 +103,7 @@ KDE 致力于开发一套现代桌面环境，如果你觉得 KDE 界面很像 W
 
 #### 参考文献
 
-- [SDDM login screen with KDE: change language?](https://forums.freebsd.org/threads/sddm-login-screen-with-kde-change-language.80535/)
+- [SDDM login screen with KDE: change language?](https://forums.freebsd.org/threads/sddm-login-screen-with-kde-change-language.80535/) [备份](https://web.archive.org/web/20260120215906/https://forums.freebsd.org/threads/sddm-login-screen-with-kde-change-language.80535/)
 
 ## 附录：登录界面主题
 
@@ -172,7 +172,7 @@ Current=sddm-freebsd-black-theme
 
 ### 参考文献
 
-- [デスクトップ 環境 の 構築 - 4-7. LXQT のインストールと 設定 (LXQT 2.0.0)](http://silversack.my.coocan.jp/bsd/fbsd11x_bde-4-7_lxqt.htm)
+- [デスクトップ 環境 の 構築 - 4-7. LXQT のインストールと 設定 (LXQT 2.0.0)](http://silversack.my.coocan.jp/bsd/fbsd11x_bde-4-7_lxqt.htm) [备份](https://web.archive.org/web/20260120215847/https://silversack.my.coocan.jp/bsd/fbsd11x_bde-4-7_lxqt.htm)
 
 ## 附录：最小化 KDE 桌面安装方案
 
@@ -303,7 +303,7 @@ Current=sddm-freebsd-black-theme
 
 #### 参考文献
 
-- [Missing power buttons when logged in from SDDM](https://forums.freebsd.org/threads/missing-power-buttons-when-logged-in-from-sddm.88231/)
+- [Missing power buttons when logged in from SDDM](https://forums.freebsd.org/threads/missing-power-buttons-when-logged-in-from-sddm.88231/) [备份](https://web.archive.org/web/20260120215910/https://forums.freebsd.org/threads/missing-power-buttons-when-logged-in-from-sddm.88231/)
 
 ### 解除自动锁屏
 

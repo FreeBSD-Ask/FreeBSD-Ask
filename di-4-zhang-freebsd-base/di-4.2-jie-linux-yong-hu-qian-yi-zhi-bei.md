@@ -60,8 +60,8 @@ FreeBSD 基本系统几乎不包含任何与 BSD 协议不兼容的软件；
 
 |   操作系统   |                           发布/生命周期（主要版本）                           |                          主要包管理器（命令）                          |                        许可证（主要）                        | 工具链 |   shell    |     桌面     |
 | :----------: | :---------------------------------------------------------------------------: | :--------------------------------------------------------------------: | :----------------------------------------------------------: | :----: | :--------: | :----------: |
-|    Ubuntu    |             [2 年/10 年](https://ubuntu.com/about/release-cycle) [备份](https://web.archive.org/web/20260119053423/https://ubuntu.com/about/release-cycle)              |        [apt](https://ubuntu.com/server/docs/package-management)        | [GNU](https://ubuntu.com/legal/intellectual-property-policy) |  gcc   |    bash    |    Gnome     |
-| Gentoo Linux |                                   滚动更新                                    |       [Portage（emerge）](https://wiki.gentoo.org/wiki/Portage)        |                             GNU                              |  gcc   |    bash    |     可选     |
+|    Ubuntu    |             [2 年/10 年](https://ubuntu.com/about/release-cycle) [备份](https://web.archive.org/web/20260119053423/https://ubuntu.com/about/release-cycle)              |        [apt](https://ubuntu.com/server/docs/package-management)        | [GNU](https://ubuntu.com/legal/intellectual-property-policy) [备份](https://web.archive.org/web/20260120202912/https://canonical.com/legal/intellectual-property-policy) |  gcc   |    bash    |    Gnome     |
+| Gentoo Linux |                                   滚动更新                                    |       [Portage（emerge）](https://wiki.gentoo.org/wiki/Portage) [备份](https://web.archive.org/web/20260120154004/https://wiki.gentoo.org/wiki/Portage)        |                             GNU                              |  gcc   |    bash    |     可选     |
 |  Arch Linux  |                                   滚动更新                                    |           [pacman](https://wiki.archlinux.org/title/pacman) [备份](https://web.archive.org/web/20260119175658/https://wiki.archlinux.org/title/Pacman)            |                             GNU                              |  gcc   |    bash    |     可选     |
 |     RHEL     | [3/最长 12 年](https://access.redhat.com/zh_CN/support/policy/updates/errata) | [RPM（yum、dnf）](https://www.redhat.com/sysadmin/how-manage-packages) |                             GNU                              |  gcc   |    bash    |    Gnome     |
 |   FreeBSD    |               [约 2/4 年](https://www.freebsd.org/security/) [备份](https://web.archive.org/web/20260119053327/https://www.freebsd.org/security/)                |                               pkg/ports                                |                             BSD                              | clang  |   csh/sh   |     可选     |
@@ -155,7 +155,7 @@ FreeBSD 基本系统几乎不包含任何与 BSD 协议不兼容的软件；
 
 ### Ubuntu
 
-部分用户反馈 Ubuntu 系统中会出现“[内部错误（internal error）](https://www.google.com/search?q=internal+error+ubuntu+site:askubuntu.com)”提示。有观点认为这是 Ubuntu 对错误信息的统一提示方式。需要注意的是，Ubuntu 在开发过程中会阶段性引入 Debian SID（不稳定分支）的软件包。这可能导致其稳定性在特定阶段存在不确定性（无论普通版本还是 LTS）。例如，在跨大版本或小版本升级时，部分用户反馈存在升级失败的风险，即使在初始环境较为干净的系统上也可能会出现。
+部分用户反馈 Ubuntu 系统中会出现“[内部错误（internal error）](https://www.google.com/search?q=internal+error+ubuntu+site:askubuntu.com) [备份](https://web.archive.org/web/20260120153207/https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3Dinternal%2Berror%2Bubuntu%2Bsite:askubuntu.com%26sei%3D959vaabSCozHkPIP-eblOA&q=EgTP8e5fGPe_vssGIjCj1B3crbT71trbPDKM0-07h3HVs3QNTIjwZULHoK7_a1hyfUlJujeOQip_swusXPsyAVJaAUM)”提示。有观点认为这是 Ubuntu 对错误信息的统一提示方式。需要注意的是，Ubuntu 在开发过程中会阶段性引入 Debian SID（不稳定分支）的软件包。这可能导致其稳定性在特定阶段存在不确定性（无论普通版本还是 LTS）。例如，在跨大版本或小版本升级时，部分用户反馈存在升级失败的风险，即使在初始环境较为干净的系统上也可能会出现。
 
 以下命令可用于查询 Ubuntu 24.04 与 Debian 版本的关联信息：
 
@@ -182,7 +182,7 @@ Fedora 在部分社区中存在较为戏谑的称呼“[地沟油](https://zh.mo
 
 Fedora 是基于 Red Hat Enterprise Linux（RHEL）的上游发行版，其定位侧重于技术验证和前沿特性测试，根本目的是为 RHEL 系统的新设计和新架构提供试验平台（[该社区由 Red Hat 红帽公司完全主导](https://docs.fedoraproject.org/en-US/council/) [备份](https://web.archive.org/web/20260119053234/https://docs.fedoraproject.org/en-US/council/)）。待特性稳定后，会引入到 RHEL 中。
 
-因此，稳定性并非该发行版的主要设计目标。Fedora 官方的直接跨大版本升级失败率较高。这意味着长期使用后，用户可能需要进行全新安装并重新配置环境。用户难以在该发行版上获得长期的稳定性支持。与基于 Debian 的发行版不同，Fedora 不同大版本之间的软件源通常无法通用，因为软件依赖关系变动频繁。其各版本在定位上更接近于持续迭代的开发分支。其所有版本均包含大量新特性，稳定性表现与持续集成的 [nightly](https://openqa.fedoraproject.org/nightlies.html) 版本较为接近，差异不大。其稳定性特征与滚动更新发行版有相似之处。在部分测试场景下，其稳定性表现可能不及 Ubuntu。例如，在关闭屏幕保护与锁屏休眠功能后，进行长时间的高负载编译任务。在特定测试中，Fedora 系统可能在数小时后出现界面无响应，而在相同条件下，Ubuntu 系统运行正常。
+因此，稳定性并非该发行版的主要设计目标。Fedora 官方的直接跨大版本升级失败率较高。这意味着长期使用后，用户可能需要进行全新安装并重新配置环境。用户难以在该发行版上获得长期的稳定性支持。与基于 Debian 的发行版不同，Fedora 不同大版本之间的软件源通常无法通用，因为软件依赖关系变动频繁。其各版本在定位上更接近于持续迭代的开发分支。其所有版本均包含大量新特性，稳定性表现与持续集成的 [nightly](https://openqa.fedoraproject.org/nightlies.html) [备份](https://web.archive.org/web/20260120154125/https://openqa.fedoraproject.org/nightlies.html) 版本较为接近，差异不大。其稳定性特征与滚动更新发行版有相似之处。在部分测试场景下，其稳定性表现可能不及 Ubuntu。例如，在关闭屏幕保护与锁屏休眠功能后，进行长时间的高负载编译任务。在特定测试中，Fedora 系统可能在数小时后出现界面无响应，而在相同条件下，Ubuntu 系统运行正常。
 
 由此可见，部分开源软件项目采用“社区测试，成熟后进入商业或企业级产品”的开发路径，例如 Wine 与 CrossOver。
 
@@ -232,9 +232,9 @@ Debian 的名称及 Logo 在中文语境中偶有基于谐音的非正式调侃�
 
 上述问题在实际安装和使用过程中较为明显。例如，安装程序在配置软件源时可能不会同步更新 `debian-security` 源，却默认尝试连接网络进行系统更新（此问题在 Ubuntu 中也存在。鲜为人知的是，在 Debian 高级安装中可绕过该问题），这有时会导致安装失败。
 
-另外，其网络管理工具 [NetworkManager](https://wiki.debian.org/NetworkManager) 与 systemd 在部分功能的集成上可能存在冲突。类似的设计在实际使用中容易引发用户困扰。
+另外，其网络管理工具 [NetworkManager](https://wiki.debian.org/NetworkManager) [备份](https://web.archive.org/web/20260120203128/https://wiki.debian.org/NetworkManager) 与 systemd 在部分功能的集成上可能存在冲突。类似的设计在实际使用中容易引发用户困扰。
 
-对于普通用户而言，向 Debian 社区提交 Bug 报告并获取及时反馈的流程可能较为复杂。Debian 的 [Bug 报告流程](https://www.debian.org/Bugs/Reporting)相对于一些更注重用户友好性的开源项目而言，对普通用户门槛较高。
+对于普通用户而言，向 Debian 社区提交 Bug 报告并获取及时反馈的流程可能较为复杂。Debian 的 [Bug 报告流程](https://www.debian.org/Bugs/Reporting) [备份](https://web.archive.org/web/20260120203324/https://www.debian.org/Bugs/Reporting)相对于一些更注重用户友好性的开源项目而言，对普通用户门槛较高。
 
 Debian Stable 发行版的软件包策略以稳定为主，大部分软件在发布后，其主版本号在生命周期内通常不会升级，软件版本会被锁定，因此应将 Stable 同时理解为“稳定”与“固定”。若用户需要获取更新的软件版本，则需要切换到 Testing 或 Unstable（Sid）分支，但这会牺牲系统的整体稳定性。
 
@@ -260,7 +260,7 @@ openSUSE 原生的包管理器是 `zypper`。有用户将其与 Fedora 的 `dnf`
 
 ### Gentoo Linux
 
-Gentoo [自称](https://www.gentoo.org/get-started/about/) [备份](https://web.archive.org/web/20260119175719/https://www.gentoo.org/get-started/about/)是“元发行版（*Metadistribution*）”。其传统安装方式是从源代码 **编译** 所有软件。虽然近年提供了[官方二进制包](https://www.gentoo.org/news/2023/12/29/Gentoo-binary.html)支持，但在依赖管理方面仍有一定复杂性，且二进制包通用性极为有限。
+Gentoo [自称](https://www.gentoo.org/get-started/about/) [备份](https://web.archive.org/web/20260119175719/https://www.gentoo.org/get-started/about/)是“元发行版（*Metadistribution*）”。其传统安装方式是从源代码 **编译** 所有软件。虽然近年提供了[官方二进制包](https://www.gentoo.org/news/2023/12/29/Gentoo-binary.html) [备份](https://web.archive.org/web/20260120153529/https://www.gentoo.org/news/2023/12/29/Gentoo-binary.html)支持，但在依赖管理方面仍有一定复杂性，且二进制包通用性极为有限。
 
 Gentoo 包管理系统的缺点在于，若某个软件包编译失败，则无法安装，且编译失败的情况时有发生。如果系统长时间不更新，再次更新时可能会遇到复杂的 **循环依赖** 问题。此外，Gentoo 难以进行大规模标准化部署，在服务器环境中的应用也相对较少。
 
@@ -340,7 +340,7 @@ UOS 服务器承载能力有限，因此 UOS 对镜像下载方式存在过限�
 
 ### Arch Linux/Manjaro
 
-Arch Linux 在中文社区中存在一些非正式的社区戏称：“**[邪教](https://zh.moegirl.org.cn/zh-hans/Arch_Linux%E5%A8%98) 和 [洗发水](https://bbs.archlinuxcn.org/viewtopic.php?id=694) [备份](https://web.archive.org/web/20260119054643/https://forum.archlinuxcn.org/t/topic/5929?redirected_from=https://bbs.archlinuxcn.org/viewtopic.php?id%3D694)**”。这是一个以滚动更新模式著称的 Linux 发行版，因其高度的可定制性和软件的新颖度吸引了许多用户。
+Arch Linux 在中文社区中存在一些非正式的社区戏称：“**[邪教](https://zh.moegirl.org.cn/zh-hans/Arch_Linux%E5%A8%98) [备份](https://web.archive.org/web/20260120202636/https://zh.moegirl.org.cn/zh-hans/Arch_Linux%E5%A8%98) 和 [洗发水](https://bbs.archlinuxcn.org/viewtopic.php?id=694) [备份](https://web.archive.org/web/20260119054643/https://forum.archlinuxcn.org/t/topic/5929?redirected_from=https://bbs.archlinuxcn.org/viewtopic.php?id%3D694)**”。这是一个以滚动更新模式著称的 Linux 发行版，因其高度的可定制性和软件的新颖度吸引了许多用户。
 
 然而，滚动更新模式也意味着系统可能面临更高的不稳定风险。随着系统中安装的软件包数量增加，因依赖冲突或版本不兼容导致问题的概率也可能上升。有观点认为，通过仔细阅读官方更新公告可以规避多数问题。但这要求用户具备较高的主动维护意识和排查能力。
 

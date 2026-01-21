@@ -61,4 +61,4 @@ usbhid_load="YES"           # 配置系统启动时自动加载 USB HID 驱动
 
 #### 参考文献
 
-- [Mouse does not work in VMWARE Fusion and Freebsd 14.2](https://forums.freebsd.org/threads/mouse-does-not-work-in-vmware-fusion-and-freebsd-14-2.96563/)
+- [Mouse does not work in VMWARE Fusion and Freebsd 14.2](https://forums.freebsd.org/threads/mouse-does-not-work-in-vmware-fusion-and-freebsd-14-2.96563/) [备份](https://web.archive.org/web/20260121030355/https://forums.freebsd.org/threads/mouse-does-not-work-in-vmware-fusion-and-freebsd-14-2.96563/)

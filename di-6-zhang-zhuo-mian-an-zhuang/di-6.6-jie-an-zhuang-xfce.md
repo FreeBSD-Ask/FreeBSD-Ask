@@ -2,7 +2,7 @@
 
 Xfce 旨在开发一款轻量级但功能齐全的桌面环境。
 
-Xfce 的 Logo 是只 [老鼠 🐀](https://docs.xfce.org/faq#what_does_it_mean)，曾有人反馈 Bug，称因 Xfce 的默认壁纸是一只老鼠 🐀，导致自己的电脑屏幕被猫 🐈 抓坏了（[\[joke\] The default desktop startup screen causes damage to monitor!](https://bugzilla.xfce.org/show_bug.cgi?id=12117)）。
+Xfce 的 Logo 是只 [老鼠 🐀](https://docs.xfce.org/faq#what_does_it_mean) [备份](https://web.archive.org/web/20260120221407/https://docs.xfce.org/faq#what_does_it_mean)，曾有人反馈 Bug，称因 Xfce 的默认壁纸是一只老鼠 🐀，导致自己的电脑屏幕被猫 🐈 抓坏了（[\[joke\] The default desktop startup screen causes damage to monitor!](https://bugzilla.xfce.org/show_bug.cgi?id=12117)）。
 
 ## 安装 xfce4
 
@@ -195,7 +195,7 @@ fi
 
 ### 参考文献
 
-- [6.1 动态设置标题不起作用](https://docs.oracle.com/cd/E19683-01/817-1951/6mhl8aiii/index.html)，bash 配置来自此处
+- [6.1 动态设置标题不起作用](https://docs.oracle.com/cd/E19683-01/817-1951/6mhl8aiii/index.html) [备份](https://web.archive.org/web/20251207044645/https://docs.oracle.com/cd/E19683-01/817-1951/6mhl8aiii/index.html)，bash 配置来自此处
 - [Wamphyre/BSD-XFCE](https://github.com/Wamphyre/BSD-XFCE)，配置参考集合
 - [Zsh - Arch Linux 中文维基](https://wiki.archlinuxcn.org/wiki/Zsh)，Zsh 配置来自此处
 
