@@ -72,7 +72,7 @@ Ubuntu 吧前吧主 Simple 曾建议修改项目的章节文件名与许可协�
 - [Sayunosyjou](https://github.com/Sayunosyjou) [备份](https://web.archive.org/web/20260118171656/https://github.com/Sayunosyjou)  
 - 施主  
 - [Suyun114](https://github.com/Suyun114) [备份](https://web.archive.org/web/20260119105437/https://github.com/Suyun114)  
-- [tergel93](https://github.com/tergel93)  
+- [tergel93](https://github.com/tergel93) [备份](https://web.archive.org/web/20260121025431/https://github.com/tergel93)  
 - [tomblackwhite](https://github.com/tomblackwhite) [备份](https://web.archive.org/web/20260118172022/https://github.com/tomblackwhite)  
 - 艳阳天
 - [Wang Yan Hao](https://github.com/Wang-Yan-Hao) [备份](https://web.archive.org/web/20260117182303/https://github.com/Wang-Yan-Hao)
@@ -93,7 +93,7 @@ Ubuntu 吧前吧主 Simple 曾建议修改项目的章节文件名与许可协�
 
 本项目部署过程中还使用了若干开源项目，我们对其作者表示感谢。
 
-本项目主要托管在 [GitHub](https://gitHub.com)。
+本项目主要托管在 [GitHub](https://gitHub.com) [备份](https://web.archive.org/web/20260121023816/https://github.com/)。
 
 本项目还获得了 [GitBook 开源计划](https://www.gitbook.com/solutions/open-source) [备份](https://web.archive.org/web/20260118171346/https://www.gitbook.com/solutions/open-source) 的赞助，网站 `book.bsdcn.org` 即由其驱动。
 

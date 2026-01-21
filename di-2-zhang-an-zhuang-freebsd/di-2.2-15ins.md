@@ -13,7 +13,7 @@
 >
 >本文基于 VMware 17 进行演示（使用 UEFI）。
 >
->若为物理机安装，可考虑使用 [rufus](https://rufus.ie/zh/) [备份](https://web.archive.org/web/20260115142915/https://rufus.ie/zh/) 工具配合 [img 镜像](https://download.freebsd.org/ftp/releases/ISO-IMAGES/15.0/FreeBSD-15.0-RELEASE-amd64-memstick.img)。
+>若为物理机安装，可考虑使用 [rufus](https://rufus.ie/zh/) [备份](https://web.archive.org/web/20260115142915/https://rufus.ie/zh/) 工具配合 [img 镜像](https://download.freebsd.org/ftp/releases/ISO-IMAGES/15.0/FreeBSD-15.0-RELEASE-amd64-memstick.img) [备份](https://web.archive.org/web/20260120015054/https://download.freebsd.org/ftp/releases/ISO-IMAGES/15.0/FreeBSD-15.0-RELEASE-amd64-memstick.img)。
 
 ## 启动安装盘
 
