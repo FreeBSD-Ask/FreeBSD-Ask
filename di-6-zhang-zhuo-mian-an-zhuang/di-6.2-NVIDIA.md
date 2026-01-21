@@ -129,7 +129,7 @@ Mon Jan 19 19:06:59 2026
 
 ## 参考文献
 
-- [关于我们的最新处理器和命名更新的简要指南](https://www.intel.cn/content/www/cn/zh/processors/processor-numbers.html)。英特尔官方关于 CPU 代号的说明。
+- [关于我们的最新处理器和命名更新的简要指南](https://www.intel.cn/content/www/cn/zh/processors/processor-numbers.html) [备份](https://web.archive.org/web/20260121102640/https://www.intel.cn/content/www/cn/zh/processors/processor-numbers.html)。英特尔官方关于 CPU 代号的说明。
 
 ## 故障排除
 

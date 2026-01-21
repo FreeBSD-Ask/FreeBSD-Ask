@@ -107,4 +107,4 @@ Window Maker 本身部分字符串未被包含在 `.po` 文件中 [https://repo.
 
 ### 参考文献
 
-- [windowmaker could not execute wprefs!](https://forums.freebsd.org/threads/windowmaker-could-not-execute-wprefs.92625/)
+- [windowmaker could not execute wprefs!](https://forums.freebsd.org/threads/windowmaker-could-not-execute-wprefs.92625/) [备份](https://web.archive.org/web/20260121103948/https://forums.freebsd.org/threads/windowmaker-could-not-execute-wprefs.92625/)

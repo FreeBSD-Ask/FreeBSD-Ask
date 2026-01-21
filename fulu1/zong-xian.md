@@ -234,7 +234,7 @@ microSD 也就是通常所说的 TF 卡（两者关系类似于 EFI 与 UEFI）�
 
 - [Raspberry Pi 树莓派中文文档](https://rpicn.bsdcn.org) [备份](https://web.archive.org/web/20260115142621/https://rpicn.bsdcn.org/)
 - [Inside the Raspberry Pi: The story of the $35 computer that changed the world](https://www.techrepublic.com/article/inside-the-raspberry-pi-the-story-of-the-35-computer-that-changed-the-world/)
-- [SD 卡和 microSD 卡类型指南](https://www.kingston.com/cn/blog/personal-storage/microsd-sd-memory-card-guide)
+- [SD 卡和 microSD 卡类型指南](https://www.kingston.com/cn/blog/personal-storage/microsd-sd-memory-card-guide) [备份](https://web.archive.org/web/20260121103619/https://www.kingston.com/cn/blog/personal-storage/microsd-sd-memory-card-guide)
 - [SD 卡 和 microSD 卡速度等级指南](https://www.kingston.com/cn/blog/personal-storage/memory-card-speed-classes) [备份](https://web.archive.org/web/20260120224129/https://www.kingston.com/cn/blog/personal-storage/memory-card-speed-classes)
 - [了解 SD 卡和 microSD 卡的命名惯例和标签](https://www.kingston.com/cn/blog/personal-storage/microsd-sd-memory-card-naming-conventions) [备份](https://web.archive.org/web/20260119050613/https://www.kingston.com/cn/blog/personal-storage/microsd-sd-memory-card-naming-conventions)
 - [電腦概論中的考古題，關於光碟機的倍數是指什麼](https://www.mobile01.com/topicdetail.php?f=300&t=2126605&p=3)

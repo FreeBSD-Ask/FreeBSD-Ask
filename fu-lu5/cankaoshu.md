@@ -2,7 +2,7 @@
 
 部分书籍可通过[微信读书](https://weread.qq.com/) [备份](https://web.archive.org/web/20260117174923/https://weread.qq.com/)、[番茄免费小说](https://fanqienovel.com/)、[QQ 阅读](https://book.qq.com/) [备份](https://web.archive.org/web/20260117163601/https://book.qq.com/)、[京东读书](https://cread.jd.com/custom/custom_pcDownload.action) [备份](https://web.archive.org/web/20260101112245/https://cread.jd.com/custom/custom_pcDownload.action)等软件免费阅读。
 
-部分书籍可能已经绝版，可尝试通过社交媒体联系出版社、译者或作者推动再版，或通过[多抓鱼](https://www.duozhuayu.com/)、[孔夫子旧书网](https://www.kongfz.com/)等专业二手书平台进行购买。
+部分书籍可能已经绝版，可尝试通过社交媒体联系出版社、译者或作者推动再版，或通过[多抓鱼](https://www.duozhuayu.com/) [备份](https://web.archive.org/web/20260121091432/https://www.duozhuayu.com/)、[孔夫子旧书网](https://www.kongfz.com/) [备份](https://web.archive.org/web/20260121083050/https://www.kongfz.com/)等专业二手书平台进行购买。
 
 如需无 DRM 电子书，请读者自行探索。
 

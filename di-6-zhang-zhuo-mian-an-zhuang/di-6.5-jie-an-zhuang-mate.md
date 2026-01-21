@@ -122,4 +122,4 @@ show-quit=true
 
 #### 参考文献
 
-- [lightdm not reading slick-greeter.conf](https://forums.freebsd.org/threads/lightdm-not-reading-slick-greeter-conf.92256/)
+- [lightdm not reading slick-greeter.conf](https://forums.freebsd.org/threads/lightdm-not-reading-slick-greeter-conf.92256/) [备份](https://web.archive.org/web/20260121101925/https://forums.freebsd.org/threads/lightdm-not-reading-slick-greeter-conf.92256/)

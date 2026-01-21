@@ -1303,7 +1303,7 @@ pTRR（pseudo Target Row Refresh，伪目标行刷新）
 
 行敲击：一种针对 DRAM 内存的攻击或故障现象，通过反复快速访问某一行内存，可能导致相邻内存行的数据发生位翻转（数据破坏）。
 
-参见 [RowHammer 攻击：内存的隐形威胁](https://www.cnblogs.com/zhanggaoxing/p/18099550)
+参见 [RowHammer 攻击：内存的隐形威胁](https://www.cnblogs.com/zhanggaoxing/p/18099550) [备份](https://web.archive.org/web/20260121095129/https://www.cnblogs.com/zhanggaoxing/p/18099550)
 
 #### RH LFSR0 Mask（行敲击 pTRR 的 LFSR0 掩码）
 
@@ -3146,7 +3146,7 @@ PCH，Platform Controller Hub（平台控制器集线器），即南桥。这个
 
 PCIe（Peripheral Component Interconnect Express，外围组件快速互连）是一种高带宽扩展总线，通常用于连接显卡、固态硬盘以及采集卡和无线网卡等外设。
 
-参见 [什么是 PCIe 4.0 和 5.0？](https://www.intel.cn/content/www/cn/zh/gaming/resources/what-is-pcie-4-and-why-does-it-matter.html)
+参见 [什么是 PCIe 4.0 和 5.0？](https://www.intel.cn/content/www/cn/zh/gaming/resources/what-is-pcie-4-and-why-does-it-matter.html) [备份](https://web.archive.org/web/20260121095630/https://www.intel.cn/content/www/cn/zh/gaming/resources/what-is-pcie-4-and-why-does-it-matter.html)
 
 ![](../.gitbook/assets/image-20250728184152-1oud3nu.png)
 
@@ -3440,7 +3440,7 @@ PCIe 和服务器规范中定义的访问控制服务（ACS）功能，是用于
 
 用于增强 I/O 虚拟化能力。
 
-参见 [A.2.2.4. Access Control Services (ACS) Capability Structure](https://www.intel.com/content/www/us/en/docs/programmable/683059/24-3/access-control-services-acs-capability.html) [备份](https://web.archive.org/web/20260120204431/https://docs.altera.com/r/docs/683059/current)、[Hardware Considerations for Implementing SR-IOV](https://docs.redhat.com/zh-cn/documentation/red_hat_virtualization/4.2/html/hardware_considerations_for_implementing_sr-iov/index)
+参见 [A.2.2.4. Access Control Services (ACS) Capability Structure](https://www.intel.com/content/www/us/en/docs/programmable/683059/24-3/access-control-services-acs-capability.html) [备份](https://web.archive.org/web/20260120204431/https://docs.altera.com/r/docs/683059/current)、[Hardware Considerations for Implementing SR-IOV](https://docs.redhat.com/zh-cn/documentation/red_hat_virtualization/4.2/html/hardware_considerations_for_implementing_sr-iov/index) [备份](https://web.archive.org/web/20260120204650/https://docs.redhat.com/zh-cn/documentation/red_hat_virtualization/4.2/html/hardware_considerations_for_implementing_sr-iov/index)
 
 ##### PTM（精确时间测量）
 
@@ -4872,7 +4872,7 @@ Disabled（禁用）
 
 ISH，Integrated Sensor Hub，整合传感器中枢。ISH 内置于 PCH 中，且依赖 PCI 总线。
 
-参见 [Intel Integrated Sensor Hub](https://docs.kernel.org/hid/intel-ish-hid.html)、[ISH Micro-Controller](https://edc.intel.com/content/www/us/en/design/products/platforms/processor-and-core-i3-n-series-datasheet-volume-1-of-2/002/ish-micro-controller/)
+参见 [Intel Integrated Sensor Hub](https://docs.kernel.org/hid/intel-ish-hid.html) [备份](https://web.archive.org/web/20260121095706/https://docs.kernel.org/hid/intel-ish-hid.html)、[ISH Micro-Controller](https://edc.intel.com/content/www/us/en/design/products/platforms/processor-and-core-i3-n-series-datasheet-volume-1-of-2/002/ish-micro-controller/)
 
 ISH（集成传感器 Hub）由一个微控制器驱动运行。
 
@@ -5214,7 +5214,7 @@ Disabled（禁用）
 
 VCC_AUX 为辅助电源轨，用于为 FPGA 内部的各种逻辑资源模块提供电源。
 
-参见 [Cyclone® V SoC 设备中使用的 VCC_AUX 和 VCC_AUX_SHARED 电源轨是什么？](https://www.intel.cn/content/www/cn/zh/support/programmable/articles/000086743.html)
+参见 [Cyclone® V SoC 设备中使用的 VCC_AUX 和 VCC_AUX_SHARED 电源轨是什么？](https://www.intel.cn/content/www/cn/zh/support/programmable/articles/000086743.html) [备份](https://web.archive.org/web/20260121095128/https://community.altera.com/kb/knowledge-base/what-are-vcc-aux-and-vcc-aux-shared-power-rail-in-cyclone%c2%ae-v-soc-device-used-for/345582)
 
 作用未知。
 

@@ -171,7 +171,7 @@ GNOME 一直以不符合部分用户使用习惯著称，例如桌面不允许�
 
 需要安装 Firefox 浏览器 `www/firefox` 及 Port `x11-chrome-gnome-shell`。
 
-由于 [TopIcons Plus](https://extensions.gnome.org/extension/1031/topicons/) 已长期未更新，因此只能使用 [AppIndicator and KStatusNotifierItem Support](https://extensions.gnome.org/extension/615/appindicator-support/) 了。
+由于 [TopIcons Plus](https://extensions.gnome.org/extension/1031/topicons/) [备份](https://web.archive.org/web/20260121102452/https://extensions.gnome.org/extension/1031/topicons/) 已长期未更新，因此只能使用 [AppIndicator and KStatusNotifierItem Support](https://extensions.gnome.org/extension/615/appindicator-support/) [备份](https://web.archive.org/web/20260121102502/https://extensions.gnome.org/extension/615/appindicator-support/) 了。
 
 ![Gnome 恢复 GNOME 顶栏的托盘图标](../.gitbook/assets/gnome3.png)
 
@@ -193,7 +193,7 @@ GNOME 一直以不符合部分用户使用习惯著称，例如桌面不允许�
 
 扩展 [gnome-shell-extension-desktop-icons](https://extensions.gnome.org/extension/1465/desktop-icons/) [备份](https://web.archive.org/web/20260120220814/https://extensions.gnome.org/extension/1465/desktop-icons/) 已经长期未更新，项目地址为：[Desktop Icons](https://gitlab.gnome.org/World/ShellExtensions/desktop-icons) [备份](https://web.archive.org/web/20260120221139/https://gitlab.gnome.org/World/ShellExtensions/desktop-icons)。
 
-可以使用 [Desktop Icons NG (DING)](https://extensions.gnome.org/extension/2087/desktop-icons-ng-ding/) 解决。安装方式同上。
+可以使用 [Desktop Icons NG (DING)](https://extensions.gnome.org/extension/2087/desktop-icons-ng-ding/) [备份](https://web.archive.org/web/20260121102501/https://extensions.gnome.org/extension/2087/desktop-icons-ng-ding/) 解决。安装方式同上。
 
 ![Gnome 在桌面放图标](../.gitbook/assets/gnome9.png)
 

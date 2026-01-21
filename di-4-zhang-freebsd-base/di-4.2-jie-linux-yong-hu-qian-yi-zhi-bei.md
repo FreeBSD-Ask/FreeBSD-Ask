@@ -51,7 +51,7 @@ FreeBSD 基本系统几乎不包含任何与 BSD 协议不兼容的软件；
 
 ### 参考文献
 
-- [浅析 Linux 初始化 init 系统，第 1 部分：sysvinit 第 2 部分：UpStart 第 3 部分：Systemd](https://www.cnblogs.com/MYSQLZOUQI/p/5250336.html)，为存档，原文已佚
+- [浅析 Linux 初始化 init 系统，第 1 部分：sysvinit 第 2 部分：UpStart 第 3 部分：Systemd](https://www.cnblogs.com/MYSQLZOUQI/p/5250336.html) [备份](https://web.archive.org/web/20260121094424/https://www.cnblogs.com/MYSQLZOUQI/p/5250336.html)，为存档，原文已佚
 - [init -- process control initialization](https://man.freebsd.org/cgi/man.cgi?query=init)
 - [Comparison of init systems](https://wiki.gentoo.org/wiki/Comparison_of_init_systems) [备份](https://web.archive.org/web/20260119054306/https://wiki.gentoo.org/wiki/Comparison_of_init_systems)，各大 init 对比图
 - [GPL Software in FreeBSD Base](https://wiki.freebsd.org/GPLinBase) [备份](https://web.archive.org/web/20260119053904/https://wiki.freebsd.org/GPLinBase)，FreeBSD 基本系统中的 GPL 软件
@@ -63,7 +63,7 @@ FreeBSD 基本系统几乎不包含任何与 BSD 协议不兼容的软件；
 |    Ubuntu    |             [2 年/10 年](https://ubuntu.com/about/release-cycle) [备份](https://web.archive.org/web/20260119053423/https://ubuntu.com/about/release-cycle)              |        [apt](https://ubuntu.com/server/docs/package-management)        | [GNU](https://ubuntu.com/legal/intellectual-property-policy) [备份](https://web.archive.org/web/20260120202912/https://canonical.com/legal/intellectual-property-policy) |  gcc   |    bash    |    Gnome     |
 | Gentoo Linux |                                   滚动更新                                    |       [Portage（emerge）](https://wiki.gentoo.org/wiki/Portage) [备份](https://web.archive.org/web/20260120154004/https://wiki.gentoo.org/wiki/Portage)        |                             GNU                              |  gcc   |    bash    |     可选     |
 |  Arch Linux  |                                   滚动更新                                    |           [pacman](https://wiki.archlinux.org/title/pacman) [备份](https://web.archive.org/web/20260119175658/https://wiki.archlinux.org/title/Pacman)            |                             GNU                              |  gcc   |    bash    |     可选     |
-|     RHEL     | [3/最长 12 年](https://access.redhat.com/zh_CN/support/policy/updates/errata) | [RPM（yum、dnf）](https://www.redhat.com/sysadmin/how-manage-packages) |                             GNU                              |  gcc   |    bash    |    Gnome     |
+|     RHEL     | [3/最长 12 年](https://access.redhat.com/zh_CN/support/policy/updates/errata) | [RPM（yum、dnf）](https://www.redhat.com/sysadmin/how-manage-packages) [备份](https://web.archive.org/web/20260121094407/https://www.redhat.com/en/blog/how-manage-packages) |                             GNU                              |  gcc   |    bash    |    Gnome     |
 |   FreeBSD    |               [约 2/4 年](https://www.freebsd.org/security/) [备份](https://web.archive.org/web/20260119053327/https://www.freebsd.org/security/)                |                               pkg/ports                                |                             BSD                              | clang  |   csh/sh   |     可选     |
 |   Windows    |       [不固定](https://docs.microsoft.com/zh-cn/lifecycle/faq/windows) [备份](https://web.archive.org/web/20260119054726/https://learn.microsoft.com/zh-cn/lifecycle/faq/windows)        |                                  可选                                  |                             专有                             |  可选  | PowerShell | Windows 桌面 |
 |    macOS     |                                 1 年/约 5 年                                  |                                   无                                   |           [专有](https://www.apple.com/legal/sla/) [备份](https://web.archive.org/web/20260117014737/https://www.apple.com/legal/sla/)           | clang  |    zsh     |     Aqua     |
@@ -288,7 +288,7 @@ Gentoo 哲学和 C++ 哲学有异曲同工之妙：
 >
 >在此基石上，请读者再理解 GPL 许可证与 BSD 许可证。
 
-Gentoo 平台的 Bug 跟踪与反馈流程可能对普通用户不够友好。在个别情况下，相关问题可能在较长时间后，随着软件被移除而被标记为不再适用。其 Bug 报告平台的搜索与使用体验有待优化。有时通过外部搜索引擎（如 Google）使用“site:bugs.gentoo.org”语法进行搜索，可能比直接使用平台内搜索更有效。[高级搜索](https://bugs.gentoo.org/query.cgi)功能的使用也较为复杂。
+Gentoo 平台的 Bug 跟踪与反馈流程可能对普通用户不够友好。在个别情况下，相关问题可能在较长时间后，随着软件被移除而被标记为不再适用。其 Bug 报告平台的搜索与使用体验有待优化。有时通过外部搜索引擎（如 Google）使用“site:bugs.gentoo.org”语法进行搜索，可能比直接使用平台内搜索更有效。[高级搜索](https://bugs.gentoo.org/query.cgi) [备份](https://web.archive.org/web/20260121094340/https://bugs.gentoo.org/query.cgi)功能的使用也较为复杂。
 
 ### Deepin/UOS/中标麒麟
 
