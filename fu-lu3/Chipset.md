@@ -1010,7 +1010,7 @@ LP5 BG Mode
 
 根据内存频率进行选择。
 
-内存 Bank 的电脑系统与内存之间数据总线的基本工作单位。参见 [什么是内存 BANK](https://iknow.lenovo.com.cn/spider/detail/kd/030022)
+内存 Bank 的电脑系统与内存之间数据总线的基本工作单位。参见 [什么是内存 BANK](https://iknow.lenovo.com.cn/spider/detail/kd/030022) [备份](https://web.archive.org/web/20260122124304/https://iknow.lenovo.com.cn/spider/detail/kd/030022)
 
 #### Frequency Limit for Mixed 2DPC DDR4（混合 2DPC DDR4 内存条的频率限制）
 

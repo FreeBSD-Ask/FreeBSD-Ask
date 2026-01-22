@@ -21,7 +21,7 @@
 
 >**技巧**
 >
->你可以在 Windows 下使用 git 工具拉取 [freebsd-doc](https://github.com/freebsd/freebsd-doc) 项目试试看能否成功。我已经报告过 Bug。
+>你可以在 Windows 下使用 git 工具拉取 [freebsd-doc](https://github.com/freebsd/freebsd-doc) [备份](https://web.archive.org/web/20260122123446/https://github.com/freebsd/freebsd-doc) 项目试试看能否成功。我已经报告过 Bug。
 >
 >[The colon in the file name of the security report of the FreeBSD doc is not compatible with Microsoft Windows](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=267636)
 
