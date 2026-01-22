@@ -4058,7 +4058,7 @@ xDCI 控制器支持的最大链路速率为 USB 3.2 Gen 1x1（5 Gbps）。
 
 注意：这些控制器作为独立的 PCI 功能集成在处理器芯片内部，用于支持具备 USB-C\* 功能的端口。
 
-参见 [12th Generation Intel® Core™ Processors](https://edc.intel.com/content/www/tw/zh/design/ipla/software-development-platforms/client/platforms/alder-lake-desktop/12th-generation-intel-core-processors-datasheet-volume-1-of-2/011/extensible-device-controller-interface-xdci/)
+参见 [12th Generation Intel® Core™ Processors](https://edc.intel.com/content/www/tw/zh/design/ipla/software-development-platforms/client/platforms/alder-lake-desktop/12th-generation-intel-core-processors-datasheet-volume-1-of-2/011/extensible-device-controller-interface-xdci/) [备份](https://web.archive.org/web/20260120160312/https://edc.intel.com/content/www/tw/zh/design/ipla/software-development-platforms/client/platforms/alder-lake-desktop/12th-generation-intel-core-processors-datasheet-volume-1-of-2/011/extensible-device-controller-interface-xdci/)
 
 #### USB2 PHY Sus Well Power Gating（USB 2.0 物理层的 Sus Well 电源门控）
 
@@ -5599,7 +5599,7 @@ PCH 交叉节流可能导致总线和外设性能受限，影响实时任务的�
 
 用于控制系统中多个设备共享 PCIe 根节点时的带宽分配。当多个设备同时向根节点发送数据时，PCH Cross Throttling 可通过降低单个设备的带宽，保证整体带宽的均衡分配，避免某一设备过度占用带宽。
 
-参见 [【实时性】实时性优化的一些参数设置和心得](https://blog.csdn.net/qq_31985307/article/details/130791459)、[【原创】有利于提高 xenomai /PREEMPT-RT 实时性的一些配置建议](https://www.cnblogs.com/wsg1100/p/12730720.html) [备份](https://web.archive.org/web/20260120204504/https://www.cnblogs.com/wsg1100/p/12730720.html)
+参见 [【实时性】实时性优化的一些参数设置和心得](https://blog.csdn.net/qq_31985307/article/details/130791459) [备份](https://web.archive.org/web/20260122085504/https://blog.csdn.net/qq_31985307/article/details/130791459)、[【原创】有利于提高 xenomai /PREEMPT-RT 实时性的一些配置建议](https://www.cnblogs.com/wsg1100/p/12730720.html) [备份](https://web.archive.org/web/20260120204504/https://www.cnblogs.com/wsg1100/p/12730720.html)
 
 ### PCH Energy Reporting（PCH 能耗报告）
 

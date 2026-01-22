@@ -116,4 +116,4 @@ Proceed with this action? [y/N]:
 ## 参考资料
 
 - [Product Details](https://www.freebsdmall.com/cgi-bin/fm/bsddvd10.1)
-- [HOWTO: Install binary package without internet acces](https://forums.freebsd.org/threads/howto-install-binary-package-without-internet-acces.60723/)
+- [HOWTO: Install binary package without internet acces](https://forums.freebsd.org/threads/howto-install-binary-package-without-internet-acces.60723/) [备份](https://web.archive.org/web/20260122093701/https://forums.freebsd.org/threads/howto-install-binary-package-without-internet-acces.60723/)

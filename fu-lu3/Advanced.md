@@ -355,7 +355,7 @@ CPU 主频 = 基准时钟（Base Clock，即外频，BIOS 中通常为 100 MHz�
 
 因此直接将倍频数值乘以 100 MHz 即可得到主频。
 
-最高主频一般可通过官方 CPU 数据表查询，Intel 参见 [https://www.intel.cn/content/www/cn/zh/ark.html#@Processors](https://www.intel.cn/content/www/cn/zh/ark.html#@Processors)
+最高主频一般可通过官方 CPU 数据表查询，Intel 参见 [https://www.intel.cn/content/www/cn/zh/ark.html#@Processors](https://www.intel.cn/content/www/cn/zh/ark.html#@Processors) [备份](https://web.archive.org/web/20260122085820/https://www.intel.cn/content/www/cn/zh/ark.html#@Processors)
 
 一般 Intel 和 AMD 的最低主频均为 800MHz，可通过系统命令查询。
 
@@ -1835,7 +1835,7 @@ JHI：Intel® DAL（Dynamic Application Loader）Host Interface Service，Intel 
 
 英特尔 ® 动态应用加载器（Intel® DAL）是英特尔 ® 平台的一项独特功能，适用于多种形态的设备，包括工作站、台式机、笔记本、平板电脑和物联网设备。它可用于在英特尔 ® 融合安全与管理引擎固件上运行小段 Java\* 代码。
 
-参见 [Intel® Dynamic Application Loader](https://www.intel.com/content/www/us/en/developer/tools/dal/overview.html)
+参见 [Intel® Dynamic Application Loader](https://www.intel.com/content/www/us/en/developer/tools/dal/overview.html) [备份](https://web.archive.org/web/20260122085939/https://www.intel.com/content/www/us/en/developer/tools/dal/overview.html)
 
 ### Core Bios Done Message（核心 BIOS 初始化完成信息）
 
