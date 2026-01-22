@@ -61,7 +61,7 @@ To change this login announcement, see motd(5).
 
 ### 参考文献
 
-- [What is TTY in Linux?](https://itsfoss.com/what-is-tty-in-linux/)，翻译在 [Linux 黑话解释：TTY 是什么？](https://linuxstory.org/linux-blackmail-explained-what-is-tty/) [备份](https://web.archive.org/web/20260120152731/https://linuxstory.org/linux-blackmail-explained-what-is-tty/)。
+- [What is TTY in Linux?](https://itsfoss.com/what-is-tty-in-linux/) [备份](https://web.archive.org/web/20260122123421/https://itsfoss.com/what-is-tty-in-linux/)，翻译在 [Linux 黑话解释：TTY 是什么？](https://linuxstory.org/linux-blackmail-explained-what-is-tty/) [备份](https://web.archive.org/web/20260120152731/https://linuxstory.org/linux-blackmail-explained-what-is-tty/)。
 
 
 ### 故障排除与未竟事宜
