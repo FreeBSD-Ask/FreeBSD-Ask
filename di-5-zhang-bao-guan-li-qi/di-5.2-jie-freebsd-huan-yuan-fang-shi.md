@@ -14,7 +14,7 @@
 |ports|Gentoo 的包管理器 Portage（命令为 `emerge`）即是源于此。用于帮助用户从源代码编译安装软件。换言之，等同于 Gentoo 的 [Distfiles 源](https://mirrors.ustc.edu.cn/help/gentoo.html) [备份](https://web.archive.org/web/20260120222541/https://mirrors.ustc.edu.cn/help/gentoo.html)|不需要源代码方式编译软件可以不配置。|
 |update|用于更新基本系统（内核 + 用户空间） | 预计在 FreeBSD 15 或 16 中废弃，转而使用 [pkgbase](https://wiki.freebsd.org/PkgBase) [备份](https://web.archive.org/web/20260120222940/https://wiki.freebsd.org/action/show/pkgbase?action=show&redirect=PkgBase) 代替之|
 |kernel modules（kmods）| 内核模块源（包含无线网卡驱动、以太网卡驱动、DRM 显卡驱动等），用于解决小版本之间可能存在的 ABI 不兼容问题 | 参见 [Possible solution to the drm-kmod kernel mismatch after upgrade from Bapt](https://forums.freebsd.org/threads/possible-solution-to-the-drm-kmod-kernel-mismatch-after-upgrade-from-bapt.96058/#post-682984) [备份](https://web.archive.org/web/20260120222509/https://forums.freebsd.org/threads/possible-solution-to-the-drm-kmod-kernel-mismatch-after-upgrade-from-bapt.96058/#post-682984)、[CFT: repository for kernel modules](https://lists.freebsd.org/archives/freebsd-ports/2024-December/006997.html) [备份](https://web.archive.org/web/20251207043842/https://lists.freebsd.org/archives/freebsd-ports/2024-December/006997.html)。可以使用命令 `fwget` 自动安装所需驱动|
-|FreeBSD（pub） |提供 ISO 安装镜像、文档、开发资料、`snapshots`，在系统安装、系统救援和开发参考时有很大帮助 | 参考 [FreeBSD.org ftp server](http://ftp.freebsd.org/pub/FreeBSD/) 目录结构。 |
+|FreeBSD（pub） |提供 ISO 安装镜像、文档、开发资料、`snapshots`，在系统安装、系统救援和开发参考时有很大帮助 | 参考 [FreeBSD.org ftp server](http://ftp.freebsd.org/pub/FreeBSD/) [备份](https://web.archive.org/web/20260122042612/https://download.freebsd.org/ftp/) 目录结构。 |
 
 
 > **技巧**
@@ -25,7 +25,7 @@
 
 > **注意**
 >
-> [NJU](https://github.com/nju-lug/NJU-Mirror-Issue/issues/54) 和 163 均同步自 USTC 而非 FreeBSD 直接上游。
+> [NJU](https://github.com/nju-lug/NJU-Mirror-Issue/issues/54) [备份](https://web.archive.org/web/20260122093544/https://github.com/nju-lug/NJU-Mirror-Issue/issues/54) 和 163 均同步自 USTC 而非 FreeBSD 直接上游。
 
 >**警告**
 >

@@ -567,5 +567,5 @@ FreeBSD 官方源的 pkgbase 信息如下：
 ## 参考文献
 
 - [ZFS Boot Environments Explained](https://vermaden.wordpress.com/2025/11/25/zfs-boot-environments-explained/) [备份](https://web.archive.org/web/20260120223606/https://vermaden.wordpress.com/2025/11/25/zfs-boot-environments-explained/)，指出可以手动安装 openzfs 来达到旧系统使用新 zfs 池的目的
-- [wiki/BootEnvironments](https://wiki.freebsd.org/BootEnvironments)，维基
+- [wiki/BootEnvironments](https://wiki.freebsd.org/BootEnvironments) [备份](https://web.archive.org/web/20260111062150/https://wiki.freebsd.org/BootEnvironments)，维基
 - man [bectl(8)](https://man.freebsd.org/cgi/man.cgi?bectl)

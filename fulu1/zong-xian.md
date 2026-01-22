@@ -110,7 +110,7 @@ SATA 协议或 SATA 硬盘性能较低，主要是由协议设计所限制的，
 
 ## microSD 卡（存储卡/TF 卡/SD 卡/内存卡）参数简介
 
-存储卡规范是由 [SD 协会](https://www.sdcard.org/) 制定的。
+存储卡规范是由 [SD 协会](https://www.sdcard.org/) [备份](https://web.archive.org/web/20260122043150/https://www.sdcard.org/) 制定的。
 
 SD 卡的标准较为复杂，甚至与 USB-IF 协会制定的 USB 标准相比，其复杂程度亦难分伯仲，这一点 SD 卡协会负有主要责任。
 

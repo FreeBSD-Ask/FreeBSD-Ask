@@ -258,7 +258,7 @@ crw-rw---- 1 root video 1, 177 2025年 8月22日 /dev/backlight/backlight0 # 台
 
 ## 故障排除与未竟事宜
 
-- 如果显卡驱动使用有问题，请直接联系维护者：[https://github.com/freebsd/drm-kmod/issues](https://github.com/freebsd/drm-kmod/issues)
+- 如果显卡驱动使用有问题，请直接联系维护者：[https://github.com/freebsd/drm-kmod/issues](https://github.com/freebsd/drm-kmod/issues) [备份](https://web.archive.org/web/20260122092535/https://github.com/freebsd/drm-kmod/issues)
 - 如果笔记本出现了唤醒时屏幕点不亮的问题，可以在 `/boot/loader.conf` 中添加 `hw.acpi.reset_video="1"` 以在唤醒时重置显示适配器。
 - 普通用户若非 `wheel` 组成员，那么请加入 `video` 组。如果普通用户没有被加入到 video 组（wheel 还不够），那么 KDE 的设置中，此系统的显卡驱动将始终显示为“llvmpipe”。会影响 Wayland 下普通用户的显示或硬解调用。
 
