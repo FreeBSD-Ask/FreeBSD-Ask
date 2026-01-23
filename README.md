@@ -49,7 +49,7 @@ EPUB 格式文档在手机上可使用 [微信读书](https://play.google.com/st
 
 ## 🌐 部署地址
 
-本书目前部署了两个域名以供访问，分别使用不同的网站架构：
+本书目前部署了三个域名以供访问，分别使用不同的网站架构：
 
 - <https://book.bsdcn.org>
 - <https://docs.bsdcn.org>
