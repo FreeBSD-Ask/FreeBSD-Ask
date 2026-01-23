@@ -4872,7 +4872,7 @@ Disabled（禁用）
 
 ISH，Integrated Sensor Hub，整合传感器中枢。ISH 内置于 PCH 中，且依赖 PCI 总线。
 
-参见 [Intel Integrated Sensor Hub](https://docs.kernel.org/hid/intel-ish-hid.html) [备份](https://web.archive.org/web/20260121095706/https://docs.kernel.org/hid/intel-ish-hid.html)、[ISH Micro-Controller](https://edc.intel.com/content/www/us/en/design/products/platforms/processor-and-core-i3-n-series-datasheet-volume-1-of-2/002/ish-micro-controller/)
+参见 [Intel Integrated Sensor Hub](https://docs.kernel.org/hid/intel-ish-hid.html) [备份](https://web.archive.org/web/20260121095706/https://docs.kernel.org/hid/intel-ish-hid.html)、[ISH Micro-Controller](https://edc.intel.com/content/www/us/en/design/products/platforms/processor-and-core-i3-n-series-datasheet-volume-1-of-2/002/ish-micro-controller/) [备份](https://web.archive.org/web/20260122124622/https://edc.intel.com/content/www/us/en/design/products/platforms/processor-and-core-i3-n-series-datasheet-volume-1-of-2/002/ish-micro-controller/)
 
 ISH（集成传感器 Hub）由一个微控制器驱动运行。
 
