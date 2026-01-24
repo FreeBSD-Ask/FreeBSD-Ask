@@ -188,7 +188,7 @@ BSD 操作系统并非复制品，而是 AT&T Research Unix 操作系统的开�
 
 ### 参考文献
 
-- [谁在使用 FreeBSD](https://book.bsdcn.org/fan-yi-wen-zhang-cun-dang/2025-nian-1-yue/di-1.5-jie-shui-zai-shi-yong-freebsd) ，有一份 FreeBSD 基金会官方版本
+- [谁在使用 FreeBSD](https://book.bsdcn.org/fan-yi-wen-zhang-cun-dang/2025-nian-1-yue/di-1.5-jie-shui-zai-shi-yong-freebsd) [备份](https://web.archive.org/web/20260124080640/https://book.bsdcn.org/fan-yi-wen-zhang-cun-dang/2025-nian/di-1.5-jie-shui-zai-shi-yong-freebsd) ，有一份 FreeBSD 基金会官方版本
 
 ## 为什么选择 FreeBSD
 

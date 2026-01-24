@@ -969,7 +969,7 @@ Enable（启用）
 
 当超出限制时，CPU 的倍频会在经过一段时间后降低。下限可保护 CPU 并节省功耗，而上限则有助于提升性能。
 
-PL1 是平均功耗的限制阈值，不会被超过 —— 英特尔推荐设置为等于处理器的基础功耗（即 TDP）。PL1 不应高于散热方案的散热能力上限。参见 [12th Generation Intel® Core™ Processors](https://edc.intel.com/content/www/us/en/design/ipla/software-development-platforms/client/platforms/alder-lake-desktop/12th-generation-intel-core-processors-datasheet-volume-1-of-2/011/package-power-control/)。
+PL1 是平均功耗的限制阈值，不会被超过 —— 英特尔推荐设置为等于处理器的基础功耗（即 TDP）。PL1 不应高于散热方案的散热能力上限。参见 [12th Generation Intel® Core™ Processors](https://edc.intel.com/content/www/us/en/design/ipla/software-development-platforms/client/platforms/alder-lake-desktop/12th-generation-intel-core-processors-datasheet-volume-1-of-2/011/package-power-control/) [备份](https://web.archive.org/web/20260122085833/https://edc.intel.com/content/www/us/en/design/ipla/software-development-platforms/client/platforms/alder-lake-desktop/12th-generation-intel-core-processors-datasheet-volume-1-of-2/011/package-power-control/)。
 
 实现 Intel® Turbo Boost 技术 2.0 通常只需正确配置 PL1、PL2 和 Tau 参数。
 
@@ -1944,7 +1944,7 @@ HECI，Host Embedded Controller Interface，增强型主机控制器接口。EHC
 
 增强型主机控制器接口（EHCI）规范描述了通用串行总线（USB）修订版 2.0 的主机控制器的寄存器级接口。该规范包括对系统软件和主机控制器硬件之间的硬件和软件接口的描述。
 
-参见 [Enhanced Host Controller Interface Specification](https://www.intel.com/content/www/us/en/products/docs/io/universal-serial-bus/ehci-specification.html)
+参见 [Enhanced Host Controller Interface Specification](https://www.intel.com/content/www/us/en/products/docs/io/universal-serial-bus/ehci-specification.html) [备份](https://web.archive.org/web/20260124075257/https://www.intel.com/content/www/us/en/products/docs/io/universal-serial-bus/ehci-specification.html)
 
 #### Force ME DID Init Status（强制初始化 Intel 管理引擎（ME）的设备标识符）
 
