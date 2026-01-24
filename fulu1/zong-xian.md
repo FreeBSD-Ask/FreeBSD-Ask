@@ -241,7 +241,7 @@ microSD 也就是通常所说的 TF 卡（两者关系类似于 EFI 与 UEFI）�
 - [移速（MOVE SPEED）64GB TF（MicroSD）存储卡测试](https://www.bilibili.com/read/mobile?id=21681916)
 - [移速这个卡虚标了，速度只有标注的二分之一](https://post.m.smzdm.com/talk/p/az6o8zkr/) [备份](https://web.archive.org/web/20260121074504/https://post.smzdm.com/talk/p/az6o8zkr/)
 - [Mvespeed 移速 400G 内存卡简单测评](https://post.m.smzdm.com/p/arq759g7/) [备份](https://web.archive.org/web/20260120223730/https://post.smzdm.com/p/arq759g7/)
-- [移速 TF 卡翻不翻车？看来没翻（附游戏测试）](https://post.m.smzdm.com/p/awzqn9z4/)
+- [移速 TF 卡翻不翻车？看来没翻（附游戏测试）](https://post.m.smzdm.com/p/awzqn9z4/) [备份](https://web.archive.org/web/20260123164146/https://post.smzdm.com/p/awzqn9z4/)
 - [闪迪至尊超极速移动 ™ microSDXC™ UHS-I 存储卡 - 128GB](https://www.westerndigital.com/zh-cn/products/memory-cards/sandisk-extreme-pro-uhs-i-microsd?sku=SDSQXCY-128G-ZN6MA) [备份](https://web.archive.org/web/20260120223705/https://shop.sandisk.com/zh-cn/products/memory-cards/microsd-cards/sandisk-extreme-pro-uhs-i-microsd?sku=SDSQXCY-128G-ZN6MA)（参见注释 8：“采用专利技术”）
 - [存储卡也超频？实测结果非常意外](https://mp.weixin.qq.com/s/CMioVrUx0YJbF_v7zvQMRA) [备份](https://web.archive.org/web/20260122043011/https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HM-ncWmjOlwetDPoCbkqMuxYwoc0YLP8WmyyTI5v&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%2FCMioVrUx0YJbF_v7zvQMRA)
 - [BAR 升级版 + USB3.1 闪存盘](https://www.samsung.com.cn/memory-storage/usb-flash-drive/usb-3-1-flash-drive-bar-plus-64gb-titanium-gray-muf-64be4-cn/)
