@@ -43,7 +43,7 @@ FreeBSD 安装桌面环境后，很多时候扑面而来的是简单朴素的色
 
 ## Gnome 主题美化
 
-同样，我们要安装的是 [WhiteSur](https://www.pling.com/p/1403328/) 主题。
+同样，我们要安装的是 [WhiteSur](https://www.pling.com/p/1403328/) [备份](https://web.archive.org/web/20260124164656/https://www.pling.com/p/1403328/) 主题。
 
 1. 下载主题源码包：`git clone https://github.com/vinceliuice/WhiteSur-gtk-theme`
 2. 进入主题包目录：`cd WhiteSur-gtk-theme`
