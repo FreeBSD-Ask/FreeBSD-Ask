@@ -4666,7 +4666,7 @@ Disabled（禁用）
 
 启用后，将额外配置两个 GPIO 引脚，用作 UART 的 RTS/CTS 信号支持 UART 硬件流控。流控本身可以控制数据传输的进度，进而防止数据丢失。
 
-参见 [什么是硬件流控制](https://www.cnblogs.com/liyu925/p/4671911.html)
+参见 [什么是硬件流控制](https://www.cnblogs.com/liyu925/p/4671911.html) [备份](https://web.archive.org/web/20260129123013/https://www.cnblogs.com/liyu925/p/4671911.html)
 
 ##### DMA Enable（启用 DMA）
 

@@ -488,7 +488,7 @@ $ rdesktop 192.168.31.213
 Failed to connect, CredSSP required by server (check if server has disabled old TLS versions, if yes use -V option).
 ```
 
-根据 [CredSSP does not work](https://github.com/rdesktop/rdesktop/issues/71)，是个老问题了。
+根据 [CredSSP does not work](https://github.com/rdesktop/rdesktop/issues/71) [备份](https://web.archive.org/web/20260129125026/https://github.com/rdesktop/rdesktop/issues/71)，是个老问题了。
 
 影响安全的解决方案是禁用网络级身份验证（NLA），在要远程连接的 Windows 上操作：
 
