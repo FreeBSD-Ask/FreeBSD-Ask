@@ -176,7 +176,8 @@
 >Oh, thank you very much. May I ask what's the differences between those two packages(xxx and xxx-dev)? I am new to it. Thanks again.（哦，非常感谢。可以请问一下这两个包（xxx 和 xxx-dev）之间有什么区别吗？我是新手。再次感谢。）
 >
 >Find the answers on Google or StackOverflow. If you are participating in open source software development, this kind of configuration problems should not be proposed as an "issue" unless you have strong evidence of faults existed in the code base or documentation.（在谷歌或 StackOverflow 上可以找到答案。如果你在参与开源软件开发，除非你有充分证据表明代码库或文档中确实存在缺陷，否则这类配置问题不应被作为“issue”提出。）
-`xxx and xxx-dev` 的意义本就不明确：
+
+注意到，`xxx and xxx-dev` 的意义本就不明确：
 
 * 开发版的二进制包
 * 用于共存的新版本的二进制包
