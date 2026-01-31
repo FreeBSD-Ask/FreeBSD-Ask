@@ -171,11 +171,11 @@
 
 >I am using ubuntu 14.04 and even though I install the `liballegro5.0`, It seems no header files are downloaded with it (I search it and look up in usr/include). So do I have to download source and make it as tutorial said? Thanks.（我正在使用 Ubuntu 14.04，即使我安装了 `liballegro5.0`，似乎也没有随之下载任何头文件（我搜索过，而且也在 usr/include 里找过）。那么我是否必须下载源码并像教程中说的那样自行编译？谢谢。）
 >
->Try install liballegro5-dev as pointed in the tutorial, and the problem should be fixed.（尝试按照教程中的说明安装 liballegro5-dev，问题应该就能解决。）
+>Try install liballegro5-dev as pointed in the tutorial, and the problem should be fixed.（尝试按照教程中的说明安装 liballegro5-dev，应该就能解决问题。）
 >
 >Oh, thank you very much. May I ask what's the differences between those two packages(xxx and xxx-dev)? I am new to it. Thanks again.（哦，非常感谢。可以请问一下这两个包（xxx 和 xxx-dev）之间有什么区别吗？我是新手。再次感谢。）
 >
->Find the answers on Google or StackOverflow. If you are participating in open source software development, this kind of configuration problems should not be proposed as an "issue" unless you have strong evidence of faults existed in the code base or documentation.（在 Google 或 StackOverflow 上可以找到答案。如果你在参与开源软件开发，除非你有充分证据表明代码库或文档中确实存在缺陷，否则这类配置问题不应被作为“issue”提出。）
+>Find the answers on Google or StackOverflow. If you are participating in open source software development, this kind of configuration problems should not be proposed as an "issue" unless you have strong evidence of faults existed in the code base or documentation.（在谷歌或 StackOverflow 上可以找到答案。如果你在参与开源软件开发，除非你有充分证据表明代码库或文档中确实存在缺陷，否则这类配置问题不应被作为“issue”提出。）
 
 `xxx and xxx-dev` 的意义本就不明确：
 
@@ -191,7 +191,7 @@
 
 一方面指出有这样一个大佬，是不可替代的，另一方面工业化要求的是标准化和统一化。这二者是冲突的，那么肯定有一个是假象。那么唯一的答案是替代成本，而后者又要求不断地通过标准化降低这种成本。
 
-综上，这是一种幻觉。真正的问题不在于解决问题，而在于回答他究竟想干什么。如果他的目的根本不是编译的话，你为什么不能直接发个 deb 包呢？能用 Windows 完成的为什么非要在 Linux BSD 下乱搞苦难哲学。
+综上，这是一种幻觉。真正的问题不在于解决问题，而在于回答他究竟想干什么。如果他的目的根本不是编译的话，你为什么不能直接发个 deb 包呢？能用 Windows 完成的为什么非要在 Linux、BSD 下乱搞苦难哲学。
 
 大音希声，真正的解决问题的方式在于消解问题本身。说白了不付费的话，别人没什么义务，所以对面怎么回答也属合理，只是粗暴的回答者他要知道自己也并非上帝，也会有这一天。确实看到很多人，你明确告诉他在哪，还装看不见的，这种是故意找茬的。
 
@@ -201,7 +201,7 @@
 
 再看以下场景：
 
->“但中文翻译有的词汇使用并不标准, 例如将library翻译为图书馆. 因此后续讲义中介绍Logisim时主要还是给出英文词汇, 并在括号中给出中文版的翻译.”
+>“但中文翻译有的词汇使用并不标准, 例如将 library 翻译为图书馆. 因此后续讲义中介绍 Logisim 时主要还是给出英文词汇, 并在括号中给出中文版的翻译.”
 
 所以他为什么不去反馈不去改？是没有权限还是提交了对方也不会接受？无论如何，写在这里让人别用中文用英语，这种思路就有问题，写一下简单告诉读者在哪反馈不就行了？现在的人连原始人都不如吗？原始人还知道从打制石器到磨制石器，主动适应蹩脚的工具，是一种精神的退化。苹果那个开发工具 Xcode 也是没中文，后来全部人都是用的盗版，结果就被插入病毒了，现在也不知道悔改，还是不提供中文支持，他的逻辑是没中文就只能用我这个正版的英文的，然而，无论在多么恶劣的环境下，生命都会自行找到出路。
 
