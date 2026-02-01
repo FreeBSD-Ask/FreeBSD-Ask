@@ -7,10 +7,10 @@
     </linearGradient>
   </defs>
   <rect x="0" y="0" width="260" height="30" fill="#CCCCCC" rx="5" ry="5"/>
-  <rect x="0" y="0" width="93" height="30" fill="url(#grad1)" rx="5" ry="5"/>
-  <text x="46"
+  <rect x="0" y="0" width="94" height="30" fill="url(#grad1)" rx="5" ry="5"/>
+  <text x="47"
         y="20"
         font-size="16"
         text-anchor="middle"
-        fill="#000000">35.70%</text>
+        fill="#000000">35.85%</text>
 </svg>
