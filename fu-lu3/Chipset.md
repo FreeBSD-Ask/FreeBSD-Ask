@@ -1913,7 +1913,7 @@ Enabled（启用）
 
 用于设置显存大小，将系统内存映射到 GPU 的虚拟地址空间。
 
-参考文献：[https://github.com/freelancer-leon/notes/blob/master/kernel/graphic/Linux-Graphic.md](https://github.com/freelancer-leon/notes/blob/master/kernel/graphic/Linux-Graphic.md)
+参考文献：[https://github.com/freelancer-leon/notes/blob/master/kernel/graphic/Linux-Graphic.md](https://github.com/freelancer-leon/notes/blob/master/kernel/graphic/Linux-Graphic.md) [备份](https://web.archive.org/web/20260203103622/https://github.com/freelancer-leon/notes/blob/master/kernel/graphic/Linux-Graphic.md)
 
 动态显存技术（Dynamic Video Memory Technology）不再是在内存中为 GPU 开辟专用显存，而是显存和系统按需动态共享整个主存。
 
