@@ -78,7 +78,7 @@ EPUB 格式文档在手机上可使用 [微信读书](https://play.google.com/st
 请优先捐赠 FreeBSD 基金会！
 
 <div align="center">
-    <img src=".gitbook/assets/proud_donor.png" alt="FreeBSD 捐赠徽章" height="150px" width="150px" />
+    <img src=".gitbook/assets/proud_donor.png" alt="" height="150px" width="150px" />
 </div>
 
 [点此捐赠 FreeBSD 基金会](https://freebsdfoundation.org/donate-to-freebsd-foundation/) [备份](https://web.archive.org/web/20260120150526/https://freebsdfoundation.org/donate-to-freebsd-foundation/)
