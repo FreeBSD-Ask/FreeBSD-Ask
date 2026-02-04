@@ -275,7 +275,7 @@ strong, b
 }
 /* brand 配色 */
 :root {
-	--vp-c-brand-1: #B3E0F7; /* 秋冬配色为 #FF0072 */
+	--vp-c-brand-1: #007FFF; /* 秋冬配色为 #FF0072 */
 	--vp-c-brand-2: #3dd68c;
 	--vp-c-brand-3: #30a46c;
 }
