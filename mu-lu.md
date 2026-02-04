@@ -122,10 +122,9 @@
 
 ## 第 10 章 代理服务器
 
-* [10.1 HTTP 代理](di-10-zhang-vpn-yu-dai-li/di-10.1-jie-http-dai-li.md)
+* [10.1 系统代理](di-10-zhang-vpn-yu-dai-li/di-10.1-jie-http-dai-li.md)
 * [10.2 配置 V2Ray](di-10-zhang-vpn-yu-dai-li/di-10.2-jie-v2ray.md)
-* [10.3 配置 Mihomo（原 Clash 内核）](di-10-zhang-vpn-yu-dai-li/di-10.3-jie-clash.md)
-* [10.4 配置 OpenVPN](di-10-zhang-vpn-yu-dai-li/di-10.4-jie-openvpn.md)
+* [10.3 配置 Mihomo](di-10-zhang-vpn-yu-dai-li/di-10.3-jie-clash.md)
 
 ## 第 11 章 Jail
 
