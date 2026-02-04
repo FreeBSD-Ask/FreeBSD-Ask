@@ -268,7 +268,7 @@ strong, b
 .vp-doc h5,
 .vp-doc h6,
 .vp-doc .header-anchor:before {
-	background: linear-gradient(90deg, #8ACBED 0%, #B3E0F7 50%, #EEF8FD 100%); /* 秋冬配色为 #f3714b 0%, #f5a67a 50%, #f8c27b 100% */
+	background: linear-gradient(90deg, #6BB6DE 0%, #B3E0F7 50%, #E6F5FC 100%); /* 秋冬配色为 #f3714b 0%, #f5a67a 50%, #f8c27b 100% */
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
