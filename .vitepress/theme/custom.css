@@ -15,7 +15,7 @@
 .vp-doc a
 {
 	text-decoration: none; /* 去掉链接下划线 */
-	color: #FF0072; /* 链接使用秋冬季配色 */
+	color: #007FFF; /* 秋冬季配色为#FF0072；春夏配色为 #007FFF */
 }
 
 /* 对正文段落设置首行缩进 2 个字符 */
@@ -268,14 +268,14 @@ strong, b
 .vp-doc h5,
 .vp-doc h6,
 .vp-doc .header-anchor:before {
-	background: linear-gradient(90deg, #f3714b 0%, #f5a67a 50%, #f8c27b 100%);
+	background: linear-gradient(90deg, #8ACBED 0%, #B3E0F7 50%, #EEF8FD 100%); /* 秋冬配色为 #f3714b 0%, #f5a67a 50%, #f8c27b 100% */
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
 /* brand 配色 */
 :root {
-	--vp-c-brand-1: #FF0072;
+	--vp-c-brand-1: #B3E0F7; /* 秋冬配色为 #FF0072 */
 	--vp-c-brand-2: #3dd68c;
 	--vp-c-brand-3: #30a46c;
 }
