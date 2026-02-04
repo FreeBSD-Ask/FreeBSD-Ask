@@ -8,14 +8,14 @@ FreeBSD 是真正自由（Liberty）的 **操作系统**，在这波谲云诡的
 
 “入门”本是一种快乐，“跑路”亦是一种豁达。“本乘兴而行，兴尽而反，何必 FreeBSD 邪！”（化用房玄龄.晋书·王羲之传附王徽之传 [M].中华书局，1974）
 
-## 📄 内容提要
+## 内容提要
 
 这是一本开源的 FreeBSD 操作系统研究书籍，还包含一些关于 OpenBSD、NetBSD 等 Berkeley Unix 家族系统的导论章节。
 
 [~~FreeBSD 项目即将归档（Archived）~~，为了保护我们心爱的操作系统……我们能做的事情就是，写一本书！](https://www.bilibili.com/bangumi/media/md3068)（化用《Love Live! School Idol Project》中的经典口号）
 
 
-## 🖋️ 作者
+## 关于作者
 
 本书是 **FreeBSD 中文社区** 许多人共同努力的成果。
 
@@ -28,7 +28,7 @@ FreeBSD 是真正自由（Liberty）的 **操作系统**，在这波谲云诡的
 - Telegram 群组：[https://t.me/oh_my_BSD](https://t.me/oh_my_BSD)（需代理）
 
 
-## 📚 电子书
+## 电子文档
 
 目前网站提供了 PDF 和 EPUB 格式的电子文档：
 
@@ -47,7 +47,7 @@ EPUB 格式文档在手机上可使用 [微信读书](https://play.google.com/st
 
 电子书的生成由 [safreya](https://github.com/safreya) [备份](https://web.archive.org/web/20260121054246/https://github.com/safreya) 开发的 [GitBook PDF/EPUB 导出工具](https://github.com/FreeBSD-Ask/gitbook-pdf-export) [备份](https://web.archive.org/web/20260121054138/https://github.com/FreeBSD-Ask/gitbook-pdf-export) 提供支持。
 
-## 🌐 部署地址
+## 部署地址
 
 本书目前部署了三个域名以供访问，分别使用不同的网站架构：
 
@@ -57,7 +57,7 @@ EPUB 格式文档在手机上可使用 [微信读书](https://play.google.com/st
 
 除此之外，FreeBSD 中文社区未对本书进行任何部署。我们唯一的域名只有 “bsdcn.org”。
 
-## 💬 意见反馈
+## 意见反馈
 
 由于编者水平所限，书中缺点和谬误之处自不可免。
 
@@ -69,11 +69,11 @@ EPUB 格式文档在手机上可使用 [微信读书](https://play.google.com/st
 
 由于架构设计原因，您必须使用 GitHub 账户登录方可留言，并且您在 docs 上的评论将会公开到 GitHub 存储库 [Handbook-giscus-discussions](https://github.com/FreeBSD-Ask/Handbook-giscus-discussions) [备份](https://web.archive.org/web/20260121092806/https://github.com/FreeBSD-Ask/Handbook-giscus-discussions) 的 Discussions 中，您可自行前往上述位置管理您的历史留言。
 
-## 🧭 目标与方向
+## 目标与方向
 
 详见 [贡献指南与开放任务](CONTRIBUTING.md)。
 
-## ☕ 捐赠
+## 捐赠
 
 请优先捐赠 FreeBSD 基金会！
 
@@ -81,15 +81,15 @@ EPUB 格式文档在手机上可使用 [微信读书](https://play.google.com/st
 
 [点此捐赠 FreeBSD 基金会](https://freebsdfoundation.org/donate-to-freebsd-foundation/) [备份](https://web.archive.org/web/20260120150526/https://freebsdfoundation.org/donate-to-freebsd-foundation/)
 
-需要你持有 VISA 信用卡：请在捐赠页面下使用 Amazon Pay 或 Google Pay，经测试可用。
+需要你持有 VISA 信用卡：请在捐赠页面下使用 Amazon Pay 或 Google Pay，经测试可用。您也可以申请一张万事达品牌的二类借记卡（储蓄卡），同样也可以便捷支付。
 
 你还可以通过必应搜索的 Rewards 积分 [对 FreeBSD 基金会进行捐赠](https://rewards.bing.com/redeem/000999036000?causeId=840-841545163&&PC=EMMX01)。也可以用该方式 [捐赠 NetBSD 基金会](https://rewards.bing.com/redeem/000999036000?causeId=840-134134071&PC=EMMX01)。
 
-## 🏗️ 贡献者
+## 贡献者
 
 ![贡献者](https://contrib.nn.ci/api?no_bot=true&repo=FreeBSD-Ask/FreeBSD-Ask)
 
-## ⚖️ 授权协议与法律声明
+## 授权协议与法律声明
 
 本项目采用《CC BY 4.0 署名 4.0 协议国际版》，详见 [署名 4.0 协议国际版法律文本](https://creativecommons.org/licenses/by/4.0/legalcode.zh-hans)。
 
@@ -107,13 +107,13 @@ EPUB 格式文档在手机上可使用 [微信读书](https://play.google.com/st
 
 [![License: BSD 2 Clause](https://img.shields.io/badge/License-BSD--2--Clause-EB0028.svg)](https://opensource.org/license/bsd-2-clause)
 
-## 📜 项目历史
+## 项目历史
 
 《FreeBSD 从入门到跑路》肇始于 2021 年 3 月 14 日，其原型最早可追溯至 ykla 于 2020 年 12 月 31 日发表的文章《FreeBSD 艺术科学哲学导论》。
 
 <!-- GA_STATS:START -->
 
-## 📈 统计信息
+## 统计信息
 
 自 2022 年 6 月 1 日以降，本书的访问情况如下：
 
