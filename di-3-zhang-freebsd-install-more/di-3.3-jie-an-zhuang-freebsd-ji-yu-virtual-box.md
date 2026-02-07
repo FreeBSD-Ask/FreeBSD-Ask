@@ -105,21 +105,21 @@
 - 使用 pkg 安装：
 
 ```sh
-# pkg install virtualbox-ose-additions
+# pkg install virtualbox-ose-additions-72
 ```
 
 或者使用 Ports：
 
 ```sh
-# cd /usr/ports/emulators/virtualbox-ose-additions/
+# cd /usr/ports/emulators/virtualbox-ose-additions-72/
 # make install clean
 ```
 
 ## 查看安装说明
 
 ```sh
-root@ykla:/home/ykla # pkg info -D virtualbox-ose-additions
-virtualbox-ose-additions-6.1.50.1401000:
+root@ykla:/home/ykla # pkg info -D virtualbox-ose-additions-72
+virtualbox-ose-additions-7.2.6.1500068:
 On install:
 VirtualBox Guest Additions are installed.
 # VirtualBox 客户端增强功能已安装。
