@@ -242,17 +242,6 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 
 将创建 `/usr/ports` 数据集，禁用 setuid（`setuid=off`）。
 
-- 为 ports 下的部分文件夹关闭压缩功能
-
-```sh
-# zfs create -o compress=off zroot/usr/ports/distfiles
-# zfs create -o compress=off zroot/usr/ports/packages
-```
-
-在 ZFS 上创建数据集 `zroot/usr/ports/distfiles` 和 `zroot/usr/ports/packages`。
-
-参数 `-o compress=off` 表示关闭压缩功能，因为存储的文件本身已是经过压缩的。
-
 
 - 创建 `/usr/src` 数据集
 
