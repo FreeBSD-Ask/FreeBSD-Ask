@@ -229,7 +229,7 @@ FreeBSD-ports-kmods: {
 }
 ```
 
-- 其他的镜像站设置同上面提到的 `FreeBSD 14.x-RELEASE`，唯一需要注意的是，在 `FreeBSD 15.0-RELEASE` 以后，`pkg` 源从 `FreeBSD` 变更为 `FreeBSD-ports`，所以使用其他镜像站是如果要禁用官方源，应当是 `FreeBSD-ports: { enabled: no }` 而非 `FreeBSD: { enabled: no }`。
+- 其他的镜像站设置同上面提到的 `FreeBSD 14.x-RELEASE`，唯一需要注意的是，在 `FreeBSD 15.0-RELEASE` 以后，`pkg` 源从 `FreeBSD` 变更为 `FreeBSD-ports`，所以，如果要禁用官方源以使用其他镜像站，应当是 `FreeBSD-ports: { enabled: no }` 而非 `FreeBSD: { enabled: no }`。
 
 ## ports 源：以源代码方式编译安装软件的包管理器
 
@@ -371,7 +371,7 @@ FreeBSD-kmods {
 > 14.x 用户可以选择转换为 pkgbase：使用 FreeBSD Foundation 赞助的工具 [pkgbasify](https://github.com/FreeBSDFoundation/pkgbasify) 一键转换现有系统。或手动转换。转换后，无法再使用 freebsd-update，升级/维护改用 `pkg upgrade` 等命令。属于实验性质，生产环境慎用。参考 [pkgbasify GitHub](https://github.com/FreeBSDFoundation/pkgbasify) [备份](https://web.archive.org/web/20260122093544/https://github.com/FreeBSDFoundation/pkgbasify)。
 > 如需尝鲜 `pkgbase`，建议安装 `FreeBSD 15.0-RELEASE` 体验。
 
-### 对于 15.0-RELEASE 及以上版本：
+### 对于 15.0-RELEASE 版本：
 
 - 在 `FreeBSD 15.0-RELEASE` 以后，`kmods` 源从 `FreeBSD-kmods` 变更为 `FreeBSD-kmods-ports`。
 - 编辑 `/usr/local/etc/pkg/repos/FreeBSD.conf`。
