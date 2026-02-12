@@ -13,6 +13,7 @@
 |~~portsnap~~|拉取 Ports 的源代码模板（本身不含源代码，只是一些描述文件和补丁集）。换言之，这个源类似 Gentoo 的 [ebuild 数据库](https://mirrors.ustc.edu.cn/help/gentoo.html) [备份](https://web.archive.org/web/20260120222541/https://mirrors.ustc.edu.cn/help/gentoo.html)|**已于 FreeBSD 14 及后续版本废弃，无需配置** 改用 `git`、`gitup` 和压缩包 `ports.tar.gz` 等方式获取。|
 |ports|Gentoo 的包管理器 Portage（命令为 `emerge`）即是源于此。用于帮助用户从源代码编译安装软件。换言之，等同于 Gentoo 的 [Distfiles 源](https://mirrors.ustc.edu.cn/help/gentoo.html) [备份](https://web.archive.org/web/20260120222541/https://mirrors.ustc.edu.cn/help/gentoo.html)|不需要源代码方式编译软件可以不配置。|
 |update|用于更新基本系统（内核 + 用户空间） | 预计在 FreeBSD 15 或 16 中废弃，转而使用 [pkgbase](https://wiki.freebsd.org/PkgBase) [备份](https://web.archive.org/web/20260120222940/https://wiki.freebsd.org/action/show/pkgbase?action=show&redirect=PkgBase) 代替之|
+|pkgbase|将 FreeBSD base 系统（内核 + 用户空间）打包成 pkg 包，使用 pkg(8) 管理 base 的方式，取代传统的 update 和 distribution sets |从 FreeBSD 15.0 开始可选（技术预览，整个 15.x 周期可选），预计在 16.0 成为默认/标准方式。14.x 为实验性支持，可使用 pkgbasify 工具转换。base 系统升级/维护使用 `pkg upgrade`。生产环境建议继续使用传统方式。需配置 base 源（见下文）。参考 [PkgBase Wiki](https://wiki.freebsd.org/PkgBase)[备份](https://web.archive.org/web/20260120222940/https://wiki.freebsd.org/action/show/pkgbase?action=show&redirect=PkgBase)。
 |kernel modules（kmods）| 内核模块源（包含无线网卡驱动、以太网卡驱动、DRM 显卡驱动等），用于解决小版本之间可能存在的 ABI 不兼容问题 | 参见 [Possible solution to the drm-kmod kernel mismatch after upgrade from Bapt](https://forums.freebsd.org/threads/possible-solution-to-the-drm-kmod-kernel-mismatch-after-upgrade-from-bapt.96058/#post-682984) [备份](https://web.archive.org/web/20260120222509/https://forums.freebsd.org/threads/possible-solution-to-the-drm-kmod-kernel-mismatch-after-upgrade-from-bapt.96058/#post-682984)、[CFT: repository for kernel modules](https://lists.freebsd.org/archives/freebsd-ports/2024-December/006997.html) [备份](https://web.archive.org/web/20251207043842/https://lists.freebsd.org/archives/freebsd-ports/2024-December/006997.html)。可以使用命令 `fwget` 自动安装所需驱动|
 |FreeBSD（pub） |提供 ISO 安装镜像、文档、开发资料、`snapshots`，在系统安装、系统救援和开发参考时有很大帮助 | 参考 [FreeBSD.org ftp server](http://ftp.freebsd.org/pub/FreeBSD/) [备份](https://web.archive.org/web/20260122042612/https://download.freebsd.org/ftp/) 目录结构。 |
 
@@ -36,7 +37,7 @@
 
 境内的源一般只支持 aarch64（arm64）和 amd64 两个架构。
 
-FreeBSD 中的 pkg 源分为系统级和用户级两个配置文件。**不建议** 直接修改 `/etc/pkg/FreeBSD.conf` ~~但是太麻烦啦，一般我都是直接改这个文件的~~，因为该文件会随着基本系统的更新而发生改变。
+FreeBSD 中的 pkg 源分为系统级和用户级两个配置文件。**不建议** 直接修改 `/etc/pkg/FreeBSD.conf`，**因为该文件会随着基本系统的更新而发生改变。**
 
 >**警告**
 >
@@ -139,7 +140,7 @@ FreeBSD pkg 的 quarterly 分支也试图实现相同的目的（提供可预测
 
 ### pkg 换源
 
-若要获取滚动更新的包，请将 `quarterly` 修改为 `latest`。二者区别见 FreeBSD 手册。请注意，`CURRENT` 版本只有 `latest`。
+**注意**： 若要获取滚动更新的包，请将 `quarterly` 修改为 `latest`。二者区别见 FreeBSD 手册。请注意，`CURRENT` 版本只有 `latest`。
 
 使用命令修改系统级 pkg 源使用 latest：
 
@@ -147,6 +148,7 @@ FreeBSD pkg 的 quarterly 分支也试图实现相同的目的（提供可预测
 # sed -i '' 's/quarterly/latest/g' /etc/pkg/FreeBSD.conf
 ```
 
+### 对于 14.x-RELEASE 版本：
 
 #### 创建用户级源目录和文件
 
@@ -155,7 +157,7 @@ FreeBSD pkg 的 quarterly 分支也试图实现相同的目的（提供可预测
 # ee /usr/local/etc/pkg/repos/mirrors.conf  # 使用 ee 编辑器创建或修改 mirrors.conf 配置文件
 ```
 
-#### 中国科学技术大学开源软件镜像站（USTC）
+#### 中国科学技术大学开源软件镜像站
 
 > **技巧**
 >
@@ -191,6 +193,43 @@ url: "https://mirrors.163.com/freebsd-pkg/${ABI}/latest"
 }
 FreeBSD: { enabled: no }
 ```
+
+#### 阿里云开源镜像站
+
+写入以下内容：
+
+```sh
+aliyun: {
+url: "https://mirrors.aliyun.com/freebsd-pkg/${ABI}/latest"
+}
+FreeBSD: { enabled: no }
+```
+
+### 对于 15.0-RELEASE（pkgbase 和 distribution sets 都适用）：
+
+#### 官方源
+```sh
+FreeBSD-ports: {
+  url: "pkg+https://pkg.FreeBSD.org/${ABI}/quarterly",
+  mirror_type: "srv",
+  signature_type: "fingerprints",
+  fingerprints: "/usr/share/keys/pkg",
+  enabled: yes
+}
+```
+
+#### 阿里云开源镜像站
+```sh
+FreeBSD-ports-kmods: {
+  url: "https://mirrors.aliyun.com/freebsd-pkg/${ABI}/kmods_quarterly_${VERSION_MINOR}",
+  mirror_type: "none",
+  signature_type: "fingerprints",
+  fingerprints: "/usr/share/keys/pkg",
+  enabled: yes
+}
+```
+
+- 其他的镜像站设置同上面提到的 `FreeBSD 14.x-RELEASE`，唯一需要注意的是，在 `FreeBSD 15.0-RELEASE` 以后，`pkg` 源从 `FreeBSD` 变更为 `FreeBSD-ports`，所以使用其他镜像站是如果要禁用官方源，应当是 `FreeBSD-ports: { enabled: no }` 而非 `FreeBSD: { enabled: no }`。
 
 ## ports 源：以源代码方式编译安装软件的包管理器
 
@@ -292,16 +331,15 @@ MASTER_SITE_OVERRIDE?=https://mirrors.163.com/freebsd-ports/distfiles/${DIST_SUB
 MASTER_SITE_OVERRIDE?=https://mirrors.ustc.edu.cn/freebsd-ports/distfiles/${DIST_SUBDIR}/
 ```
 
-## Kernel modules（kmods）内核模块源：面向 FreeBSD 14.2 及更高版本（不含 15.0-CURRENT）
+## Kernel modules（kmods）内核模块源（不含 16.0-CURRENT）
 
-- 对于 14.2-RELEASE：新建文件夹 `/usr/local/etc/pkg/repos`（即 `mkdir -p /usr/local/etc/pkg/repos`），再新建文件 `/usr/local/etc/pkg/repos/FreeBSD-kmods.conf`。
-- \> 14.2-RELEASE：编辑 `/etc/pkg/FreeBSD.conf`。
+### 对于 14.x-RELEASE 版本：
 
-### FreeBSD 官方源
+- 新建文件夹 `/usr/local/etc/pkg/repos`（即 `mkdir -p /usr/local/etc/pkg/repos`），再新建文件 `/usr/local/etc/pkg/repos/FreeBSD-kmods.conf`。
 
-写入：
+#### FreeBSD 官方源：
 
-#### quarterly 分支
+- quarterly 分支：
 
 ```sh
 FreeBSD-kmods {
@@ -313,24 +351,11 @@ FreeBSD-kmods {
 }
 ```
 
-#### latest 分支
+- 切换 latest 分支： 把 `kmods_quarterly_${VERSION_MINOR}` 改为 `kmods_latest_${VERSION_MINOR}` 即可。
 
-```sh
-FreeBSD-kmods {
-	url: pkg+https://pkg.freebsd.org/${ABI}/kmods_latest_${VERSION_MINOR}
-	signature_type: "fingerprints"
-	fingerprints: "/usr/share/keys/pkg"
-	mirror_type: "srv"
-	enabled: yes
-}
-```
+#### 中国科学技术大学开源软件镜像站：
 
-### 中国科学技术大学开源软件镜像站
-
-
-写入：
-
-#### quarterly 分支
+- quarterly 分支：
 
 ```sh
 FreeBSD-kmods {
@@ -339,15 +364,81 @@ FreeBSD-kmods {
 }
 ```
 
-#### latest 分支
+- 切换 latest 分支：同 FreeBSD 官方源改法。
+
+> **技巧**
+>
+> 14.x 用户可以选择转换为 pkgbase：使用 FreeBSD Foundation 赞助的工具 [pkgbasify](https://github.com/FreeBSDFoundation/pkgbasify) 一键转换现有系统。或手动转换。转换后，无法再使用 freebsd-update，升级/维护改用 `pkg upgrade` 等命令。属于实验性质，生产环境慎用。参考 [pkgbasify GitHub](https://github.com/FreeBSDFoundation/pkgbasify) [备份](https://web.archive.org/web/20260122093544/https://github.com/FreeBSDFoundation/pkgbasify)。
+> 如需尝鲜 `pkgbase`，建议安装 `FreeBSD 15.0-RELEASE` 体验。
+
+### 对于 15.0-RELEASE 及以上版本：
+
+- 在 `FreeBSD 15.0-RELEASE` 以后，`kmods` 源从 `FreeBSD-kmods` 变更为 `FreeBSD-kmods-ports`。
+- 编辑 `/usr/local/etc/pkg/repos/FreeBSD.conf`。
+
+#### 官方源
 
 ```sh
-FreeBSD-kmods {
-	url: https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/kmods_latest_${VERSION_MINOR}
-	enabled: yes
+FreeBSD-ports-kmods: {
+  url: "pkg+https://pkg.FreeBSD.org/${ABI}/kmods_quarterly_${VERSION_MINOR}",
+  mirror_type: "srv",
+  signature_type: "fingerprints",
+  fingerprints: "/usr/share/keys/pkg",
+  enabled: yes
 }
 ```
 
+#### 阿里云开源软件镜像站：
+
+``` sh
+FreeBSD-ports-kmods: {
+  url: "https://mirrors.aliyun.com/freebsd-pkg/${ABI}/kmods_quarterly_${VERSION_MINOR}",
+  mirror_type: "none",
+  signature_type: "fingerprints",
+  fingerprints: "/usr/share/keys/pkg",
+  enabled: yes
+}
+```
+
+此外还有中国科学技术大学开源镜像站、南京大学开源镜像站、网易开源镜像站等的内核模块源，只需替换其中的 url 到指定镜像站的网址即可，如修改阿里云源为 USTC 的源，即把 `url: https://mirrors.aliyun.com/freebsd-pkg/${ABI}/kmods_quarterly_${VERSION_MINOR}` 换为 `url: https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/kmods_quarterly_${VERSION_MINOR}`。
+
+> **注意**
+>
+>应当保持 ports 源和 kmods 源（如果开启 pkgbase，则还要加上 base 源）为同一镜像站，以避免发生破坏软件依赖等错误。
+
+## Base 源（适用 FreeBSD 15.0-RELEASE及以上）
+
+- `pkgbase` 在 `FreeBSD 15.0-RELEASE` 中为技术预览，官方仍支持传统 `freebsd-update` 方式直至 15.x 结束。生产环境慎用 `pkgbase` 升级系统。
+- 不同于 `FreeBSD 14.x-RELEASE`，无论是 `distribution sets` 还是 `pkgbase`，`/etc/pkg/FreeBSD.conf` 都内置了 `FreeBSD-base` 源。
+- 尽管使用 `pkgbase`，`FreeBSD 15.0-RELEASE` 仍默认关闭了 `base` 源，如要打开，修改 `/usr/local/etc/pkg/repos/FreeBSD.conf` 加入 `FreeBSD-base: { enabled: yes }` 即可。
+-  `base` 源没有 `quarterly` 和 `latest` 之分。
+
+#### 官方源
+```sh
+FreeBSD-base: {
+  url: "pkg+https://pkg.FreeBSD.org/${ABI}/base_release_${VERSION_MINOR}",
+  mirror_type: "srv",
+  signature_type: "fingerprints",
+  fingerprints: "/usr/share/keys/pkgbase-${VERSION_MAJOR}",
+  enabled: no
+}
+```
+
+#### 阿里云开源镜像站
+
+```sh
+FreeBSD-base: {
+  url: "https://mirrors.aliyun.com/freebsd-pkg/${ABI}/base_release_${VERSION_MINOR}",
+  mirror_type: "none",
+  signature_type: "fingerprints",
+  fingerprints: "/usr/share/keys/pkgbase-${VERSION_MAJOR}",
+  enabled: yes
+}
+```
+
+> **注意**
+>
+> 从 14.x pkgbase 系统升级到 15.0 时，常遇到签名密钥问题。请确保 `/usr/share/keys/pkgbase-15` 存在（如果缺失，可从官方源手动 fetch 或参考 Release Notes 中的升级说明）。否则会出现 “no trusted public keys found” 错误。详见 [15.0 Release Notes - Upgrading](https://www.freebsd.org/releases/15.0R/relnotes/#upgrade) [备份](https://web.archive.org/web/20260212000000/https://www.freebsd.org/releases/15.0R/relnotes/#upgrade) 和论坛相关讨论。
 
 ## 不受安全支持的版本（请酌情使用）
 
