@@ -119,18 +119,18 @@ EPUB 格式文档在手机上可使用 [微信读书](https://play.google.com/st
 
 | 指标           | 统计数据     |
 |:---------------:|:-------------:|
-| 用户总数       | 43,251 位  |
-| 会话数         | 90,567 次 |
-| 浏览次数       | 625,336 次 |
+| 用户总数       | 43,262 位  |
+| 会话数         | 90,626 次 |
+| 浏览次数       | 625,469 次 |
 | 平均会话时长   | 8 分 52 秒 |
 
 <!-- GA_STATS:END -->
 
 <!-- GA_BADGES:START -->
 
-![总用户数](https://img.shields.io/badge/总用户数-43,251-green)
-![会话数](https://img.shields.io/badge/会话数-90,567-orange)
-![浏览次数](https://img.shields.io/badge/浏览次数-625,336-blue)
+![总用户数](https://img.shields.io/badge/总用户数-43,262-green)
+![会话数](https://img.shields.io/badge/会话数-90,626-orange)
+![浏览次数](https://img.shields.io/badge/浏览次数-625,469-blue)
 ![平均会话时长](https://img.shields.io/badge/平均会话时长-8min52s-purple)
 
 <!-- GA_BADGES:END -->
@@ -146,27 +146,27 @@ EPUB 格式文档在手机上可使用 [微信读书](https://play.google.com/st
 ---
 
 <!-- CHINESE_CHAR_COUNT_START -->
-文档总字数：91.84 万字；
+文档总字数：91.97 万字；
 
-统计时间：2026-02-10 09:43:18（北京时间）
+统计时间：2026-02-13 09:41:58（北京时间）
 
-与上周相比：+664 字（+0.07%）
+与上周相比：+1180 字（+0.13%）
 
-与上月相比：+9.42 万字（+11.43%）
+与上月相比：+9.10 万字（+10.98%）
 
 <!-- CHINESE_CHAR_COUNT_END -->
 
 
 <!-- commit-progress-start -->
-**第 3 版编纂进度:**   （人工提交数: 1280 / 3533）
+**第 3 版编纂进度:**   （人工提交数: 1282 / 3533）
 
 ![进度徽章](.gitbook/assets/progress.svg)
 
-距离第 3 版还需提交: 2253 次
+距离第 3 版还需提交: 2251 次
 
 提交统计（历史）:
-- 人工提交: 8346
-- 机器人提交: 278
+- 人工提交: 8348
+- 机器人提交: 280
 <!-- commit-progress-end -->
 
 ---
