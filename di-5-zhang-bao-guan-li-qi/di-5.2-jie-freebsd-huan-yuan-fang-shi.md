@@ -1,11 +1,12 @@
 # 5.2 更换 FreeBSD 软件源
 
-## FreeBSD 包管理器设计理念
+## 软件源概览
 
-熟悉 Linux 的人也许会发现，FreeBSD 的包管理方案实际上大约等于以下两大 Linux 发行版包管理器的完美合体：
+目前大陆境内没有 FreeBSD 的任何官方镜像站。
 
-- Arch Linux：Pacman，对应 pkg（同样秉持 KISS 的理念）
-- Gentoo Linux：Portage，对应 Ports（Portage 本身就是 Ports 的仿制品）
+>**警告**
+>
+>对于那些以安全性为较高优先级的用户来说，应该使用默认的官方镜像 `pkg.freebsd.org`！其由官方构建、分发和维护。
 
 |源 | 说明 | 备注|
 |:---:|:---|:---|
@@ -14,29 +15,9 @@
 |freebsd-update|用于更新基本系统（内核 + 用户空间） | 预计在 FreeBSD 16 中退役，转而使用 pkgbase|
 |pkgbase|将 FreeBSD 基本系统（内核 + 用户空间）打包成 pkg 包，使用 pkg(8) 管理基本系统的方式，取代传统的 freebsd-update 和 distribution |从 FreeBSD 15.0 开始可选（技术预览，在整个 15.X 周期内可选），预计在 16.0 成为默认/标准方式。14.X 为实验性支持，可使用 pkgbasify 工具转换。基本系统升级/维护使用 `pkg upgrade`。生产环境建议继续使用传统方式。需配置 FreeBSD-base 源（见下文）。参考 [PkgBase Wiki](https://wiki.freebsd.org/PkgBase)[备份](https://web.archive.org/web/20260120222940/https://wiki.freebsd.org/action/show/pkgbase?action=show&redirect=PkgBase) |
 |kernel modules（kmods）| 内核模块源（包含无线网卡驱动、以太网卡驱动、DRM 显卡驱动等），用于解决小版本之间可能存在的 ABI 不兼容问题 | 参见 [Possible solution to the drm-kmod kernel mismatch after upgrade from Bapt](https://forums.freebsd.org/threads/possible-solution-to-the-drm-kmod-kernel-mismatch-after-upgrade-from-bapt.96058/#post-682984) [备份](https://web.archive.org/web/20260120222509/https://forums.freebsd.org/threads/possible-solution-to-the-drm-kmod-kernel-mismatch-after-upgrade-from-bapt.96058/#post-682984)、[CFT: repository for kernel modules](https://lists.freebsd.org/archives/freebsd-ports/2024-December/006997.html) [备份](https://web.archive.org/web/20251207043842/https://lists.freebsd.org/archives/freebsd-ports/2024-December/006997.html)。可以使用命令 `fwget` 自动安装所需驱动|
-|FreeBSD（pub） |提供 ISO 安装镜像、文档、开发资料、`snapshots`，在系统安装、系统救援和开发参考时有很大帮助 | 参考 [FreeBSD.org ftp server](http://ftp.freebsd.org/pub/FreeBSD/) [备份](https://web.archive.org/web/20260122042612/https://download.freebsd.org/ftp/) 目录结构。 |
+|FreeBSD（pub） |提供 ISO 安装镜像、文档、开发资料、`snapshots`，在系统安装、系统救援和开发参考时有很大帮助 | 此处的 Pub，指的是官方的 <http://ftp.freebsd.org/pub/FreeBSD/>。其性质类似于普通的镜像分发仓库，与 debian-cd、ubuntu-releases 等属于同一类型。目前已知全量同步 FreeBSD（Pub）源的镜像站：<https://mirrors.nju.edu.cn/freebsd>。其提供了完整的目录结构（如 `snapshots`、`development`），且更新较为及时，参见 [FreeBSD.org ftp server](http://ftp.freebsd.org/pub/FreeBSD/) [备份](https://web.archive.org/web/20260122042612/https://download.freebsd.org/ftp/) 目录结构。 |
 
-目前境内没有官方镜像站，以下均为非官方镜像。
-
->**警告**
->
->对于那些以安全性为较高优先级的用户来说，应该使用默认的官方镜像 `pkg.freebsd.org`！其由官方构建、分发和维护。
-
-## FreeBSD（Pub）源：提供 ISO 安装镜像、文档、开发资料以及各种架构的 `snapshots`
-
-此处的 Pub，指的是官方的 <http://ftp.freebsd.org/pub/FreeBSD/>。其性质类似于普通的镜像分发仓库，与 debian-cd、ubuntu-releases 等属于同一类型。
-
-目前已知全量同步 FreeBSD（Pub）源的镜像站：<https://mirrors.nju.edu.cn/freebsd>。其提供了完整的目录结构（如 `snapshots`、`development`），且更新较为及时。
-
-## pkg 源：pkg 源提供了二进制软件包
-
-FreeBSD 中的 pkg 源分为系统级和用户级两个配置文件。**不建议** 直接修改 `/etc/pkg/FreeBSD.conf`，**因为该文件会随着基本系统的更新而发生改变。**
-
->**警告**
->
-> 请勿同时启用多个 pkg 镜像站，无论是官方镜像站（如 `pkg.freebsd.org` 与 USTC 混用），还是境内非官方镜像站都不建议混合使用！后果类似于 FreeBSD 季度分支的 Ports 和 latest 分支的 pkg 混用，可能会破坏软件的依赖关系。案例：[混用导致 KDE 桌面被删除](https://blog.mxdyeah.top/mxdyeah_blog_post/freebsd_exp_kde6.html) [备份](https://web.archive.org/web/20260121073302/https://blog.mxdyeah.com/post/freebsd_exp_kde6)。
-
-### 理解 quarterly 季度分支
+### 理解 quarterly 季度分支与滚动更新的 latest 分支
 
 FreeBSD 的 pkg 分为 quarterly（季度，由 Ports 的 XXXXQY 分支构建而来）分支和 latest（实时更新，由 Ports 的 main 分支构建而来）分支两个源。quarterly 目前是 FreeBSD 默认的 pkg 软件分支。
 
@@ -132,19 +113,23 @@ FreeBSD pkg 的 quarterly 分支也试图实现相同的目的（提供可预测
 
 ## pkg 二进制包（由 Ports 构建的二进制包）换源
 
->**注意**
+FreeBSD 中的 pkg 源分为系统级和用户级两个配置文件。**不建议** 直接修改 `/etc/pkg/FreeBSD.conf`，**因为该文件会随着基本系统的更新而发生改变。**
+
+>**警告**
 >
->若要获取滚动更新的包，请将 `quarterly` 修改为 `latest`。二者区别参见上文。**请注意，对于 `CURRENT` 版本默认只提供了 `latest`。**
-
-使用命令修改系统级 pkg 源使用 latest：
-
-```sh
-# sed -i '' 's/quarterly/latest/g' /etc/pkg/FreeBSD.conf
-```
+> 请勿同时启用多个 pkg 镜像站，无论是官方镜像站（如 `pkg.freebsd.org` 与 USTC 混用），还是境内非官方镜像站都不建议混合使用！后果类似于 FreeBSD 季度分支的 Ports 和 latest 分支的 pkg 混用，可能会破坏软件的依赖关系。案例：[混用导致 KDE 桌面被删除](https://blog.mxdyeah.top/mxdyeah_blog_post/freebsd_exp_kde6.html) [备份](https://web.archive.org/web/20260121073302/https://blog.mxdyeah.com/post/freebsd_exp_kde6)。
 
 >**警告**
 >
 >请勿同时混用 `quarterly` 和 `latest`，在所有配置文件中尽量保持一致。
+
+若要获取滚动更新的包，请将 `quarterly` 修改为 `latest`。二者区别参见上文。**请注意，对于 `CURRENT` 版本默认只提供了 `latest`。**
+
+示例：使用命令修改系统级 pkg 源使用 latest：
+
+```sh
+# sed -i '' 's/quarterly/latest/g' /etc/pkg/FreeBSD.conf
+```
 
 ### 14.X-RELEASE
 
