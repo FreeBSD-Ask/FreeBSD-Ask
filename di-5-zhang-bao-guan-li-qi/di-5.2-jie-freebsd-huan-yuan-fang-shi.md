@@ -252,7 +252,7 @@ USTC-kmods: {
 }
 ```
 
-### 15.0-RELEASE 版本
+### 15.0-RELEASE
 
 自 `FreeBSD 15.0-RELEASE` 以降，`kmods` 源的名称，由 `FreeBSD-kmods` 变更为 `FreeBSD-kmods-ports`。
 
