@@ -237,7 +237,7 @@ FreeBSD-ports: { enabled: no }
 - quarterly 分支：
 
 ```sh
-USTC-kmods {
+USTC-kmods:  {
 	url: https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/kmods_quarterly_${VERSION_MINOR}
 	enabled: yes
 }
@@ -246,13 +246,11 @@ USTC-kmods {
 - latest 分支：
 
 ```sh
-USTC-kmods {
+USTC-kmods: {
 	url: https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/kmods_latest_${VERSION_MINOR}
 	enabled: yes
 }
 ```
-
-
 
 ### 15.0-RELEASE 版本
 
