@@ -107,7 +107,7 @@ FreeBSD pkg 的 quarterly 分支也试图实现相同的目的（提供可预测
 
 - [Wiki QuarterlyBranch](https://wiki.freebsd.org/Ports/QuarterlyBranch) [备份](https://web.archive.org/web/20260120222534/https://wiki.freebsd.org/Ports/QuarterlyBranch)
 
-## 15.0-RELEASE 快速切换软件源到中国科学技术大学开源镜像站
+## 15.0-RELEASE 快速切换 pkg 软件源到中国科学技术大学开源镜像站
 
 该配置要求读者在安装过程中就使用了 pkgbase 方式。可以帮助读者配置 pkg 二进制包源（ports 构建而来）、pkgbase 源、内核模块源。
 
@@ -199,7 +199,7 @@ FreeBSD 中的 pkg 源分为系统级和用户级两个配置文件。**不建�
 
 #### 中国科学技术大学开源软件镜像站
 
-编辑 `/usr/local/etc/pkg/repos/USTC.conf` 文件，写入以下配置之一：
+编辑 `/usr/local/etc/pkg/repos/USTC.conf` 文件，写入以下配置 **之一**：
 
 - quarterly：
 
@@ -239,7 +239,7 @@ FreeBSD: { enabled: no }
 
 #### 中国科学技术大学开源软件镜像站
 
-编辑 `/usr/local/etc/pkg/repos/USTC.conf` 文件，写入以下配置之一：
+编辑 `/usr/local/etc/pkg/repos/USTC.conf` 文件，写入以下配置 **之一**：
 
 - quarterly 分支：
 
@@ -305,7 +305,7 @@ USTC-kmods: {
 
 #### 中国科学技术大学开源镜像站
 
-编辑 `/usr/local/etc/pkg/repos/USTC.conf` 文件，写入以下配置之一：
+编辑 `/usr/local/etc/pkg/repos/USTC.conf` 文件，写入以下配置 **之一**：
 
 - quarterly 分支：
 
@@ -399,7 +399,7 @@ USTC-base: {
 > 在从 14.X pkgbase 系统升级到 15.0 时，常遇到签名密钥问题。请确保 `/usr/share/keys/pkgbase-15` 存在（如果缺失，可从官方源手动 fetch 或参考 Release Notes 中的升级说明）。否则会出现 “no trusted public keys found” 错误。详见 [15.0 Release Notes - Upgrading](https://www.freebsd.org/releases/15.0R/relnotes/#upgrade) [备份](https://web.archive.org/web/20260212000000/https://www.freebsd.org/releases/15.0R/relnotes/#upgrade) 和论坛相关讨论。
 
 
-## STABLE/CURRENT 快速切换软件源到中国科学技术大学开源镜像站
+## STABLE/CURRENT 快速切换 pkg 软件源到中国科学技术大学开源镜像站
 
 >**警告**
 >
@@ -443,11 +443,76 @@ USTC-base: {
 }
 ```
 
+## Ports：以源代码方式编译安装软件的框架
+
+用于下载 ports 本身（即 [freebsd-ports](https://github.com/freebsd/freebsd-ports) 项目）。
+
+### 通过 Git 拉取 Ports
+
+须参照其他章节提前安装 git，从略。
+
+使用 git 拉取 Ports 源代码：
+
+```sh
+# git clone  --filter=tree:0 https://mirrors.ustc.edu.cn/freebsd-ports/ports.git /usr/ports
+```
+
+> **注意**
+>
+> `--depth 1`（仅拉取最新的日志和提交记录）会给服务器带来较大计算压力，请尽量使用参数 `--filter=tree:0` 进行拉取。
+
+### 通过归档文件获取 Ports
+
+> **警告**
+>
+> 通过该方法拉取的 Ports 属于一次性方式：Ports 后续将无法更新，建议优先采用 Git 方法。
+
+从南京大学开源镜像拉取：
+
+```sh
+# fetch https://mirrors.nju.edu.cn/freebsd-ports/ports.tar.gz
+```
+
+或者从中国科学技术大学开源镜像拉取：
+
+```sh
+# fetch https://mirrors.ustc.edu.cn/freebsd-ports/ports.tar.gz
+```
+
+然后处理压缩包：
+
+```sh
+# tar -zxvf ports.tar.gz -C /usr/ # 将解压至路径 /usr/src
+# rm ports.tar.gz # 删除存档
+```
+
+### Ports 源
+
+该源用于下载 Ports 框架中软件（称 Port）的源代码。
+
+> **警告**
+>
+> ports 源可能并不完整，这是受 Ports 框架结构的限制。见 <https://github.com/ustclug/discussions/issues/408>。
+
+创建或修改文件 `/etc/make.conf`。写入以下配置文件 **之一**：
+
+- 南京大学开源镜像站
+
+```ini
+MASTER_SITE_OVERRIDE?=https://mirrors.nju.edu.cn/freebsd-ports/distfiles/${DIST_SUBDIR}/
+```
+
+- 中国科学技术大学开源软件镜像站
+
+```ini
+MASTER_SITE_OVERRIDE?=https://mirrors.ustc.edu.cn/freebsd-ports/distfiles/${DIST_SUBDIR}/
+```
+
 ## 故障排除与未竟事宜
 
 ### 平衡安全与便利
 
-### 为什么配置中要写完整选项（mirror_type / signature_type / fingerprints）
+### 为什么 pkg 配置文件中要写完整选项（mirror_type / signature_type / fingerprints）
 
 虽然只写 `url` 和 `enabled: yes` pkg 也能正常工作（pkg 会默认 `mirror_type: "none"` 和 `signature_type: "none"`），但这样做 **关闭了签名验证**。不会检查 pkg 下载的包是否被篡改，可能存在安全风险（尤其是 ports、kmods 和 pkgbase 系统包）。
 
