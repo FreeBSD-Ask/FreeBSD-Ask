@@ -326,6 +326,10 @@ FreeBSD-base: {
 # mv /usr/local/etc/pkg/repos/FreeBSD.conf /usr/local/etc/pkg/repos/FreeBSD.conf.back
 ```
 
+>**技巧**
+>
+>在某些环境中，文件 `/usr/local/etc/pkg/repos/FreeBSD.conf` 里也可能包含非 FreeBSD-base 仓库的定义，建议用户在重命名之前先确认文件内容。
+
 编辑 `/usr/local/etc/pkg/repos/USTC.conf` 文件，写入以下配置：
 
 ```sh
