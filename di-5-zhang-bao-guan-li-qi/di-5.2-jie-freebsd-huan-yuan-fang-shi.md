@@ -2,11 +2,7 @@
 
 ## 软件源概览
 
-目前大陆境内没有 FreeBSD 的任何官方镜像站。
 
->**警告**
->
->对于那些以安全性为较高优先级的用户来说，应该使用默认的官方镜像 `pkg.freebsd.org`！其由官方构建、分发和维护。
 
 |源 | 说明 | 备注|
 |:---:|:---|:---|
@@ -111,7 +107,7 @@ FreeBSD pkg 的 quarterly 分支也试图实现相同的目的（提供可预测
 
 - [Wiki QuarterlyBranch](https://wiki.freebsd.org/Ports/QuarterlyBranch) [备份](https://web.archive.org/web/20260120222534/https://wiki.freebsd.org/Ports/QuarterlyBranch)
 
-## 15.0-RELEASE 软件源快速配置
+## 15.0-RELEASE 快速切换软件源到中国科学技术大学开源镜像站
 
 该配置要求读者在安装过程中就使用了 pkgbase 方式。可以帮助读者配置 pkg 二进制包源（ports 构建而来）、pkgbase 源、内核模块源。
 
@@ -210,6 +206,10 @@ FreeBSD 中的 pkg 源分为系统级和用户级两个配置文件。**不建�
 ```sh
 USTC: {
   url: "https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/quarterly"
+  mirror_type: "none",
+  signature_type: "fingerprints",
+  fingerprints: "/usr/share/keys/pkg",
+  enabled: yes
 }
 FreeBSD: { enabled: no }
 ```
@@ -219,6 +219,10 @@ FreeBSD: { enabled: no }
 ```sh
 USTC: {
   url: "https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/latest"
+  mirror_type: "none",
+  signature_type: "fingerprints",
+  fingerprints: "/usr/share/keys/pkg",
+  enabled: yes
 }
 FreeBSD: { enabled: no }
 ```
@@ -276,6 +280,9 @@ FreeBSD-ports: { enabled: no }
 ```sh
 USTC-kmods:  {
   url: https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/kmods_quarterly_${VERSION_MINOR}
+  mirror_type: "none",
+  signature_type: "fingerprints",
+  fingerprints: "/usr/share/keys/pkg",
   enabled: yes
 }
 ```
@@ -285,6 +292,9 @@ USTC-kmods:  {
 ```sh
 USTC-kmods: {
   url: https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/kmods_latest_${VERSION_MINOR}
+  mirror_type: "none",
+  signature_type: "fingerprints",
+  fingerprints: "/usr/share/keys/pkg",
   enabled: yes
 }
 ```
@@ -388,27 +398,16 @@ USTC-base: {
 >
 > 在从 14.X pkgbase 系统升级到 15.0 时，常遇到签名密钥问题。请确保 `/usr/share/keys/pkgbase-15` 存在（如果缺失，可从官方源手动 fetch 或参考 Release Notes 中的升级说明）。否则会出现 “no trusted public keys found” 错误。详见 [15.0 Release Notes - Upgrading](https://www.freebsd.org/releases/15.0R/relnotes/#upgrade) [备份](https://web.archive.org/web/20260212000000/https://www.freebsd.org/releases/15.0R/relnotes/#upgrade) 和论坛相关讨论。
 
-## 镜像源配置细节与高级用法
 
-### 为什么配置中要写完整选项（mirror_type / signature_type / fingerprints）
+### STABLE/CURRENT 快速切换软件源到中国科学技术大学开源镜像站
 
-虽然只写 `url` 和 `enabled: yes` 也能正常工作（pkg 会默认 `mirror_type: "none"` 和 `signature_type: "none"`），但这样**关闭了签名验证**，pkg 下载的包不会检查是否被篡改，存在安全风险（尤其是 ports、kmods 和 base 系统包）。
+>**警告**
+>
+> STABLE/CURRENT 并非生产版本，不适用于生产环境，使用上述版本的用户被推定为具有一定的知识基础，故此小节未列出具体步骤和过多解释。
 
-这里使用完整配置是为了：
-- 启用 `signature_type: "fingerprints"` + `fingerprints` 路径 → 使用 FreeBSD 官方内置密钥验证包签名（与官方源相同的安全级别）。
-- `mirror_type: "none"` → 适合国内的 HTTPS 直链镜像（官方用 "srv" 是因为 pkg+https:// 支持 DNS SRV，但镜像站不需要）。
+#### 内核模块源
 
-推荐生产环境始终启用签名验证。如果追求极简，可以去掉这些行，但不建议，除非你完全信任网络环境。
-
-### 使用 STABLE 或者 CURRENT 版本如何换镜像源
-
-对于 `STABLE` 或者 `CURRENT` 版本，更换镜像源的原理同 `RELEASE`，唯一不同的是 `STABLE` 或者 `CURRENT` 版本的 `FreeBSD-kmods`（或者 `FreeBSD-ports-kmods`） 相较于 `RELEASE` 在 `url` 中不带 `_${VERSION_MINOR}` 后缀；而 `FreeBSD-base` 相较于 `RELEASE` 在 `url` 中把 `/base_release_${VERSION_MINOR}` 切换为 `/base_weekly` 或者 `/base_latest`。
-
-如切换到中国科学技术大学开源镜像站：
-
-- kmods 源：
-
-对于 `FreeBSD 14.x-STABLE` 版本：
+- 对于 `FreeBSD 14.x-STABLE`
 
 ``` sh
 USTC-kmods: {
@@ -420,7 +419,7 @@ USTC-kmods: {
 }
 ```
 
-对于 `FreeBSD 15.0-STABLE / FreeBSD 16.0-CURRENT` 版本：
+- 对于 `FreeBSD 15.0-STABLE / FreeBSD 16.0-CURRENT`：
 
 ``` sh
 USTC-ports-kmods: {
@@ -432,7 +431,7 @@ USTC-ports-kmods: {
 }
 ```
 
-- base 源：
+#### pkgbase 源
 
 ```sh
 USTC-base: {
@@ -445,6 +444,25 @@ USTC-base: {
 ```
 
 ## 故障排除与未竟事宜
+
+### 平衡安全与便利
+
+### 为什么配置中要写完整选项（mirror_type / signature_type / fingerprints）
+
+虽然只写 `url` 和 `enabled: yes` 也能正常工作（pkg 会默认 `mirror_type: "none"` 和 `signature_type: "none"`），但这样 **关闭了签名验证**，pkg 下载的包不会检查是否被篡改，存在安全风险（尤其是 ports、kmods 和 base 系统包）。
+
+优点在于：
+
+- 启用 `signature_type: "fingerprints"` 核 `fingerprints`：使用 FreeBSD 官方内置密钥验证包签名
+- `mirror_type: "none"`：适合国内的 HTTPS 直链镜像（官方用 `"srv"` 是因为 `pkg+https://` 支持 DNS SRV，但镜像站不需要）
+
+推荐在生产环境始终启用签名验证。如果追求极简，可以去掉这些行，但不建议，除非你完全信任网络环境。
+
+>**警告**
+>
+>目前中国大陆境内不存在任何 FreeBSD 官方镜像站。
+>
+>对于那些以安全性为较高优先级的用户来说，应该使用默认的官方镜像 `pkg.freebsd.org`！其由 FreeBSD 项目官方构建、分发和维护。
 
 ### 旧版本存档的 pkg 二进制包源（请酌情使用）
 
