@@ -190,6 +190,8 @@ FreeBSD: { enabled: no }
 
 ### 15.0-RELEASE
 
+自 `FreeBSD 15.0-RELEASE` 以降，`FreeBSD` 源的名称，由 `FreeBSD-kmods` 变更为 `FreeBSD-ports`。
+
 #### 官方源
 
 欲了解更多，参见源代码 [usr.sbin/pkg/FreeBSD.conf.quarterly-release](https://github.com/freebsd/freebsd-src/blob/releng/15.0/usr.sbin/pkg/FreeBSD.conf.quarterly-release)。下同。
