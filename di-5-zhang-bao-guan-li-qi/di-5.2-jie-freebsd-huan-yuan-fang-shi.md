@@ -252,9 +252,7 @@ USTC-kmods {
 }
 ```
 
-> **技巧**
->
-> 14.x 用户可以选择由传统安装方式直接转换为 pkgbase，参见本书其他相关文章。
+
 
 ### 15.0-RELEASE 版本
 
@@ -297,6 +295,10 @@ FreeBSD-ports-kmods: { enabled: no }
 ## 面向基本系统的 pkgbase 源（适用 FreeBSD 14.3-RELEASE 及以上）
 
 `pkgbase` 在 `FreeBSD 15.0-RELEASE` 中为技术预览出现，FreeBSD 项目仍支持传统方式直至 15.X 结束。在生产环境中使用 `pkgbase` 升级系统时应注意备份。
+
+> **技巧**
+>
+> 14.x 用户可以选择由传统安装方式直接转换为 pkgbase，参见本书其他相关文章。
 
 #### 官方源
 
