@@ -342,7 +342,7 @@ USTC-base: {
 >
 >对于 **RELEASE** 版本的系统，pkgbase 在整个生命周期内是几乎固定不变的！
 >
->仓库 `base_latest` 和 `base_weekly` 仅面向 STABEL 或 CURRENT！
+>仓库 `base_latest` 和 `base_weekly` 仅面向 STABLE 或 CURRENT！
 >
 >请勿变动字符串 `base_release_${VERSION_MINOR}`！
 
