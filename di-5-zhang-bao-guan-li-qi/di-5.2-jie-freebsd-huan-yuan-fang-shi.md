@@ -209,7 +209,7 @@ FreeBSD 中的 pkg 源分为系统级和用户级两个配置文件。**不建�
 
 ```sh
 USTC: {
-	url: "https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/quarterly"
+  url: "https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/quarterly"
 }
 FreeBSD: { enabled: no }
 ```
@@ -218,7 +218,7 @@ FreeBSD: { enabled: no }
 
 ```sh
 USTC: {
-	url: "https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/latest"
+  url: "https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/latest"
 }
 FreeBSD: { enabled: no }
 ```
@@ -275,8 +275,8 @@ FreeBSD-ports: { enabled: no }
 
 ```sh
 USTC-kmods:  {
-	url: https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/kmods_quarterly_${VERSION_MINOR}
-	enabled: yes
+  url: https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/kmods_quarterly_${VERSION_MINOR}
+  enabled: yes
 }
 ```
 
@@ -284,8 +284,8 @@ USTC-kmods:  {
 
 ```sh
 USTC-kmods: {
-	url: https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/kmods_latest_${VERSION_MINOR}
-	enabled: yes
+  url: https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/kmods_latest_${VERSION_MINOR}
+  enabled: yes
 }
 ```
 
@@ -376,7 +376,6 @@ USTC-base: {
   enabled: yes
 }
 ```
-
 >**警告**
 >
 >对于 **RELEASE** 版本的系统，pkgbase 在整个生命周期内是几乎固定不变的！
@@ -389,6 +388,61 @@ USTC-base: {
 >
 > 在从 14.X pkgbase 系统升级到 15.0 时，常遇到签名密钥问题。请确保 `/usr/share/keys/pkgbase-15` 存在（如果缺失，可从官方源手动 fetch 或参考 Release Notes 中的升级说明）。否则会出现 “no trusted public keys found” 错误。详见 [15.0 Release Notes - Upgrading](https://www.freebsd.org/releases/15.0R/relnotes/#upgrade) [备份](https://web.archive.org/web/20260212000000/https://www.freebsd.org/releases/15.0R/relnotes/#upgrade) 和论坛相关讨论。
 
+## 镜像源配置细节与高级用法
+
+### 为什么配置中要写完整选项（mirror_type / signature_type / fingerprints）
+
+虽然只写 `url` 和 `enabled: yes` 也能正常工作（pkg 会默认 `mirror_type: "none"` 和 `signature_type: "none"`），但这样**关闭了签名验证**，pkg 下载的包不会检查是否被篡改，存在安全风险（尤其是 ports、kmods 和 base 系统包）。
+
+这里使用完整配置是为了：
+- 启用 `signature_type: "fingerprints"` + `fingerprints` 路径 → 使用 FreeBSD 官方内置密钥验证包签名（与官方源相同的安全级别）。
+- `mirror_type: "none"` → 适合国内的 HTTPS 直链镜像（官方用 "srv" 是因为 pkg+https:// 支持 DNS SRV，但镜像站不需要）。
+
+推荐生产环境始终启用签名验证。如果追求极简，可以去掉这些行，但不建议，除非你完全信任网络环境。
+
+### 使用 STABLE 或者 CURRENT 版本如何换镜像源
+
+对于 `STABLE` 或者 `CURRENT` 版本，更换镜像源的原理同 `RELEASE`，唯一不同的是 `STABLE` 或者 `CURRENT` 版本的 `FreeBSD-kmods`（或者 `FreeBSD-ports-kmods`） 相较于 `RELEASE` 在 `url` 中不带 `_${VERSION_MINOR}` 后缀；而 `FreeBSD-base` 相较于 `RELEASE` 在 `url` 中把 `/base_release_${VERSION_MINOR}` 切换为 `/base_weekly` 或者 `/base_latest`。
+
+如切换到中国科学技术大学开源镜像站：
+
+- kmods 源：
+
+对于 `FreeBSD 14.x-STABLE` 版本：
+
+``` sh
+USTC-kmods: {
+  url: "https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/kmods_latest",
+  mirror_type: "none",
+  signature_type: "fingerprints",
+  fingerprints: "/usr/share/keys/pkg",
+  enabled: yes
+}
+```
+
+对于 `FreeBSD 15.0-STABLE / FreeBSD 16.0-CURRENT` 版本：
+
+``` sh
+USTC-ports-kmods: {
+  url: "https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/kmods_latest",
+  mirror_type: "none",
+  signature_type: "fingerprints",
+  fingerprints: "/usr/share/keys/pkg",
+  enabled: yes
+}
+```
+
+- base 源：
+
+```sh
+USTC-base: {
+  url: "https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/base_latest",
+  mirror_type: "none",
+  signature_type: "fingerprints",
+  fingerprints: "/usr/share/keys/pkgbase-${VERSION_MAJOR}",
+  enabled: yes
+}
+```
 
 ## 故障排除与未竟事宜
 
@@ -422,4 +476,3 @@ Fetching http://ftp-archive.freebsd.org/pub/FreeBSD-Archive/ports/amd64/packages
 > **注意**
 >
 > pkg 是不可用的，会提示找不到 `digests.txz` 和 `repo.txz`，因为当时 pkgng 还没有被官方所支持，仍然仅支持使用 `pkg_*` 命令。
-
