@@ -205,7 +205,7 @@ FreeBSD 中的 pkg 源分为系统级和用户级两个配置文件。**不建�
 
 ```sh
 USTC: {
-  url: "https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/quarterly"
+  url: "https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/quarterly",
   mirror_type: "none",
   signature_type: "fingerprints",
   fingerprints: "/usr/share/keys/pkg",
@@ -218,7 +218,7 @@ FreeBSD: { enabled: no }
 
 ```sh
 USTC: {
-  url: "https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/latest"
+  url: "https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/latest",
   mirror_type: "none",
   signature_type: "fingerprints",
   fingerprints: "/usr/share/keys/pkg",
@@ -279,7 +279,7 @@ FreeBSD-ports: { enabled: no }
 
 ```sh
 USTC-kmods:  {
-  url: https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/kmods_quarterly_${VERSION_MINOR}
+  url: "https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/kmods_quarterly_${VERSION_MINOR}",
   mirror_type: "none",
   signature_type: "fingerprints",
   fingerprints: "/usr/share/keys/pkg",
@@ -291,7 +291,7 @@ USTC-kmods:  {
 
 ```sh
 USTC-kmods: {
-  url: https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/kmods_latest_${VERSION_MINOR}
+  url: "https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/kmods_latest_${VERSION_MINOR}",
   mirror_type: "none",
   signature_type: "fingerprints",
   fingerprints: "/usr/share/keys/pkg",
