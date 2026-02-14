@@ -22,7 +22,7 @@
 >
 >对于那些以安全性为较高优先级的用户来说，应该使用默认的官方镜像 `pkg.freebsd.org`！其由官方构建、分发和维护。
 
-## FreeBSD（Pub）源：提供 ISO 安装镜像、文档、开发资料以及各种架构的 `snapshot`
+## FreeBSD（Pub）源：提供 ISO 安装镜像、文档、开发资料以及各种架构的 `snapshots`
 
 此处的 Pub，指的是官方的 <http://ftp.freebsd.org/pub/FreeBSD/>。其性质类似于普通的镜像分发仓库，与 debian-cd、ubuntu-releases 等属于同一类型。
 
