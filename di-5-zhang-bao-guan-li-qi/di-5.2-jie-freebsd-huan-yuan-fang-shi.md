@@ -409,7 +409,7 @@ USTC-base: {
 
 - 对于 `FreeBSD 14.x-STABLE`
 
-``` sh
+```sh
 USTC-kmods: {
   url: "https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/kmods_latest",
   mirror_type: "none",
@@ -421,7 +421,7 @@ USTC-kmods: {
 
 - 对于 `FreeBSD 15.0-STABLE / FreeBSD 16.0-CURRENT`：
 
-``` sh
+```sh
 USTC-ports-kmods: {
   url: "https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/kmods_latest",
   mirror_type: "none",
@@ -449,9 +449,9 @@ USTC-base: {
 
 ### 为什么配置中要写完整选项（mirror_type / signature_type / fingerprints）
 
-虽然只写 `url` 和 `enabled: yes` 也能正常工作（pkg 会默认 `mirror_type: "none"` 和 `signature_type: "none"`），但这样 **关闭了签名验证**，pkg 下载的包不会检查是否被篡改，存在安全风险（尤其是 ports、kmods 和 base 系统包）。
+虽然只写 `url` 和 `enabled: yes` pkg 也能正常工作（pkg 会默认 `mirror_type: "none"` 和 `signature_type: "none"`），但这样做 **关闭了签名验证**。不会检查 pkg 下载的包是否被篡改，可能存在安全风险（尤其是 ports、kmods 和 pkgbase 系统包）。
 
-优点在于：
+其优点在于：
 
 - 启用 `signature_type: "fingerprints"` 核 `fingerprints`：使用 FreeBSD 官方内置密钥验证包签名
 - `mirror_type: "none"`：适合国内的 HTTPS 直链镜像（官方用 `"srv"` 是因为 `pkg+https://` 支持 DNS SRV，但镜像站不需要）
@@ -464,11 +464,12 @@ USTC-base: {
 >
 >对于那些以安全性为较高优先级的用户来说，应该使用默认的官方镜像 `pkg.freebsd.org`！其由 FreeBSD 项目官方构建、分发和维护。
 
+
 ### 旧版本存档的 pkg 二进制包源（请酌情使用）
 
 > **技巧**
 >
-> 网易开源镜像站还提供了 FreeBSD 11、12 等过期版本的 pkg 二进制源。可自行配置使用。
+> 网易开源镜像站还提供了 FreeBSD 11、12 等过期版本的 pkg 二进制源。可自行配置使用。但可能存在安全风险。
 
 不受安全支持的版本也是可以使用二进制源的。以下，以 `FreeBSD 9.2` 为例：
 
