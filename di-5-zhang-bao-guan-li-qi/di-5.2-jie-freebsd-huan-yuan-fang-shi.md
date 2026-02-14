@@ -111,6 +111,52 @@ FreeBSD pkg 的 quarterly 分支也试图实现相同的目的（提供可预测
 
 - [Wiki QuarterlyBranch](https://wiki.freebsd.org/Ports/QuarterlyBranch) [备份](https://web.archive.org/web/20260120222534/https://wiki.freebsd.org/Ports/QuarterlyBranch)
 
+## 15.0-RELEASE 软件源快速配置
+
+该配置要求读者在安装过程中就使用了 pkgbase 方式。可以帮助读者配置 pkg 二进制包源（ports 构建而来）、pkgbase 源、内核模块源。
+
+使用 ee 编辑器打开 `/usr/local/etc/pkg/repos/FreeBSD.conf` 文件。
+
+>**技巧**
+>
+>如果提示文件不存在或打开后内容并非 `FreeBSD-base: { enabled: yes }`，则本小节不适用。请按下文内容手动配置。
+
+清空 `FreeBSD.conf` 中原有内容 `FreeBSD-base: { enabled: yes }`。
+
+写入以下内容：
+
+```sh
+USTC-ports: {
+  url: "https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/quarterly",
+  mirror_type: "none",
+  signature_type: "fingerprints",
+  fingerprints: "/usr/share/keys/pkg",
+  enabled: yes
+}
+
+FreeBSD-ports: { enabled: no }
+
+USTC-ports-kmods: {
+  url: "https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/kmods_quarterly_${VERSION_MINOR}",
+  mirror_type: "none",
+  signature_type: "fingerprints",
+  fingerprints: "/usr/share/keys/pkg",
+  enabled: yes
+}
+
+FreeBSD-ports-kmods: { enabled: no }
+
+USTC-base: {
+  url: "https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/base_release_${VERSION_MINOR}",
+  mirror_type: "none",
+  signature_type: "fingerprints",
+  fingerprints: "/usr/share/keys/pkgbase-${VERSION_MAJOR}",
+  enabled: yes
+}
+```
+
+随后运行命令 `pkg update -f` 刷新软件源即可。
+
 ## pkg 二进制包（由 Ports 构建的二进制包）换源
 
 FreeBSD 中的 pkg 源分为系统级和用户级两个配置文件。**不建议** 直接修改 `/etc/pkg/FreeBSD.conf`，**因为该文件会随着基本系统的更新而发生改变。**
