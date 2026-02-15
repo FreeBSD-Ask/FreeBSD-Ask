@@ -2,6 +2,11 @@
 
 FreeBSD 的二进制包管理器目前是 pkg（旧称 pkgng），即“Package”，意为软件包。
 
+那些熟悉 Linux 发行版的人也许会发现，FreeBSD 的包管理方案实际上大约等于以下两大 Linux 发行版包管理器的完美合体：
+
+- Arch Linux：Pacman，对应 pkg（同样秉持 KISS 的理念）
+- Gentoo Linux：Portage，对应 Ports（Portage 本身就是 Ports 的仿制品）
+
 `pkg install` 可以缩写成 `pkg ins`，其他命令亦类似。
 
 > **注意**
