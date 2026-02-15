@@ -17,6 +17,41 @@
 
 ## FreeBSD 与 Linux 不同之处
 
+### 理解 FreeBSD 并非发行版而是操作系统
+
+不知为何，或许没有说清楚，还是预设的前见，会让大多数有 Linux 发行版使用经验的用户难以理解 FreeBSD 基本系统和 Ports 的独立。
+
+#### 独立自存的基本系统
+
+freebsd-src = 基本系统存储库 = 用户空间 + 内核
+
+main 分支即 CURRENT 版本，releng/15.0 即 15.0-RELEASE，stable/15 即 15.0-STABLE。任何提交都会先提交到 CURRENT，根据需要（写入下个 RELEASE 大版本发行说明的特性不应回溯）回溯到 STABLE，再回溯到点版本的 RELEASE。RELEASE 大版本由 CURRENT 经由短期的 STABLE 发展而来。
+
+pkgbase 直接由 freebsd-src 构建而来：
+
+```sh
+# cd /usr/src # 需要预先拉取 freebsd-src 到该路径
+# make -j8 buildworld # 世界即用户空间
+# make -j8 buildkernel # 内核
+# make -j8 packages # 构建 pkgbase 二进制包
+```
+
+#### 安装第三方软件的 Ports 框架与 pkg 包管理器
+
+freebsd-ports = 第三方软件（单个称为 Port），集合称为 Ports 框架存储库
+
+Port 本身是若干文件的集合，由源码包的检验和，说明文件，补丁等构成。其中，Makefile 是核心。类似 Arch 的 PKGBUILD 或 Gentoo 的 ebuild，事实上他们只是由 Ports 框架衍生出的技术，不应该说“类似”。
+
+其中，pkg 包直接由 freebsd-ports 通过 poudriere 构建系统构建而来。
+
+freebsd-ports 的 main 分支即 latest 源，形如 2026Q1 的分支（最新的那个季度）即 quarter 分支。季度分支是直接从 main 按季度切下来的。
+
+默认的基本系统不包含任何 Port 软件，甚至没有 pkg 包管理器本体。（传统安装模式）大多数硬件的固件也从基本系统移到了 Ports。
+
+#### 总结
+
+整套系统整体看上去非常符合一般 Windows 用户，安卓用户或者 macOS 用户的直觉。
+
 ### init
 
 FreeBSD 仍然使用 BSD init 而非 systemd；BSD init 与传统的 SysVinit 也有所不同——BSD 没有运行级别（runlevel），也没有 `/etc/inittab`，均由 rc 系统控制。
