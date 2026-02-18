@@ -72,7 +72,7 @@ def replace_section(content, start, end, new_text):
 
 # Markdown 表格
 stats_table = f"""
-## 📈 统计信息
+## 统计信息
 
 自 2022 年 6 月 1 日以降，本书的访问情况如下：
 
