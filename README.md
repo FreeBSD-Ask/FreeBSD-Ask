@@ -10,6 +10,10 @@ FreeBSD 是真正自由（Liberty）的 **操作系统**，在这波谲云诡的
 
 ## 内容提要
 
+>**注意**
+>
+>本书还有约 60% 的章节尚待撰写（参见下文），既有章节已经通过了审阅和修订，但还不是正式版本。~~还是 EA 版呢（Early Access），或许永远都是……~~
+
 这是一本开源的 FreeBSD 操作系统研究书籍，还包含一些关于 OpenBSD、NetBSD 等 Berkeley Unix 家族系统的导论章节。
 
 [~~FreeBSD 项目即将归档（Archived）~~，为了保护我们心爱的操作系统……我们能做的事情就是，写一本书！](https://www.bilibili.com/bangumi/media/md3068)（化用《Love Live! School Idol Project》中的经典口号）
@@ -45,7 +49,7 @@ EPUB 格式文档在手机上可使用 [微信读书](https://play.google.com/st
 
 上述电子文档始终反映实时的网页内容，随 Git 提交而 **实时更新**（但其文件名不会发生变化）。
 
-电子书的生成由 [safreya](https://github.com/safreya) [备份](https://web.archive.org/web/20260121054246/https://github.com/safreya) 开发的 [GitBook PDF/EPUB 导出工具](https://github.com/FreeBSD-Ask/gitbook-pdf-export) [备份](https://web.archive.org/web/20260121054138/https://github.com/FreeBSD-Ask/gitbook-pdf-export) 提供支持。
+电子书的生成由 [safreya](https://github.com/safreya) 开发的 [GitBook PDF/EPUB 导出工具](https://github.com/FreeBSD-Ask/gitbook-pdf-export) 提供支持。
 
 ## 部署地址
 
@@ -67,7 +71,7 @@ EPUB 格式文档在手机上可使用 [微信读书](https://play.google.com/st
 
 为了建设一个友爱、希望与和平的社区环境，请确保您的行为符合 [FreeBSD 中文社区行为规范（CoC）](https://docs.bsdcn.org/CODE_OF_CONDUCT) 及其精神。
 
-由于架构设计原因，您必须使用 GitHub 账户登录方可留言，并且您在 docs 上的评论将会公开到 GitHub 存储库 [Handbook-giscus-discussions](https://github.com/FreeBSD-Ask/Handbook-giscus-discussions) [备份](https://web.archive.org/web/20260121092806/https://github.com/FreeBSD-Ask/Handbook-giscus-discussions) 的 Discussions 中，您可自行前往上述位置管理您的历史留言。
+由于架构设计原因，您必须使用 GitHub 账户登录方可留言，并且您在 docs 上的评论将会公开到 GitHub 存储库 [Handbook-giscus-discussions](https://github.com/FreeBSD-Ask/Handbook-giscus-discussions) 的 Discussions 中，您可自行前往上述位置管理您的历史留言。
 
 ## 目标与方向
 
@@ -79,7 +83,7 @@ EPUB 格式文档在手机上可使用 [微信读书](https://play.google.com/st
 
 ![](.gitbook/assets/proud_donor.png)
 
-[点此捐赠 FreeBSD 基金会](https://freebsdfoundation.org/donate-to-freebsd-foundation/) [备份](https://web.archive.org/web/20260120150526/https://freebsdfoundation.org/donate-to-freebsd-foundation/)
+[点此捐赠 FreeBSD 基金会](https://freebsdfoundation.org/donate-to-freebsd-foundation/) 
 
 需要你持有 VISA 信用卡：请在捐赠页面下使用 Amazon Pay 或 Google Pay，经测试可用。您也可以申请一张万事达品牌的二类借记卡（储蓄卡），同样也可以便捷支付。
 
@@ -171,4 +175,4 @@ EPUB 格式文档在手机上可使用 [微信读书](https://play.google.com/st
 
 ---
 
-~~本书得到的 ⭐ 真是太少啦！~~ 若本书对你有帮助，欢迎给本书所在的 [GitHub 项目存储库](https://github.com/FreeBSD-Ask/FreeBSD-Ask) [备份](https://web.archive.org/web/20260121092738/https://github.com/FreeBSD-Ask/FreeBSD-Ask) 加颗 ⭐。
+若本书对你有帮助，欢迎给本书所在的 [GitHub 项目存储库](https://github.com/FreeBSD-Ask/FreeBSD-Ask) 加颗 ⭐。
