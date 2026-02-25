@@ -170,7 +170,7 @@ Current=sddm-freebsd-black-theme
 
  ![KDE 6 FreeBSD 主题](../.gitbook/assets/kde-theme.png)
 
-如果遇到仍无法显示主题的问题，页面仍为默认界面，你需要执行：
+如果遇到仍无法显示主题的问题，页面仍为默认界面，你需要执行（已反馈，等待解决）：
 
 ```
 # ln -s /usr/local/bin/sddm-greeter-qt6 /usr/local/bin/sddm-greeter
@@ -219,7 +219,7 @@ Current=sddm-freebsd-black-theme
 | **kdeconnect-kde**                      | 手机电脑互联  |
 | **plasma6-plasma-workspace-wallpapers** | 桌面壁纸  |
 | **plasma6-plasma-disks**                | 磁盘健康（S.M.A.R.T.）监测  |
-|**ark**|解压缩软件 (需要实现全功能还需安装7-zip、unrar、rar)|
+|**ark**|解压缩软件|
 
 
 ### 使用 Ports 安装
@@ -249,10 +249,7 @@ Current=sddm-freebsd-black-theme
 # cd /usr/ports/deskutils/kdeconnect-kde/ && make install clean # 手机电脑互联
 # cd /usr/ports/x11-themes/plasma6-plasma-workspace-wallpapers/ && make install clean # 桌面壁纸
 # cd /usr/ports/sysutils/plasma6-plasma-disks/ && make install clean # 磁盘健康（S.M.A.R.T.）监测 
-# cd /usr/ports/archivers/ark/ && make install clean # 解压缩软件 (需要实现全功能还需安装7-zip、unrar、rar)
-# cd /usr/ports/archivers/7-zip/ && make install clean
-# cd /usr/ports/archivers/unrar/ && make install clean
-# cd /usr/ports/archivers/rar/ && make install clean
+# cd /usr/ports/archivers/ark/ && make install clean # 解压缩软件
 ```
 
 ### xinitrc
