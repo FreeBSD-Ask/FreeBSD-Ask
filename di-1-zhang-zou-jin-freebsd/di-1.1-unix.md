@@ -158,7 +158,7 @@ Multics 意图创造强悍的新软件和比肩 IBM 7094 功能更丰富的新�
 ## 什么是 Linux？
 
 
-我们首先来看一下 Linux 内核项目（(What is Linux?)[https://www.kernel.org/doc/html/latest/admin-guide/README.html]）是如何回答这一问题的：
+我们首先来看一下 Linux 内核项目（[What is Linux?](https://www.kernel.org/doc/html/latest/admin-guide/README.html)）是如何回答这一问题的：
 
 >What is Linux?（什么是 Linux？）
 >
