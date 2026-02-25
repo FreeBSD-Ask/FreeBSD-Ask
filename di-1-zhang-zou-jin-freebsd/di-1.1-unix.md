@@ -157,6 +157,19 @@ Multics 意图创造强悍的新软件和比肩 IBM 7094 功能更丰富的新�
 
 ## 什么是 Linux？
 
+
+我们首先来看一下 Linux 内核项目（[What is Linux?](https://www.kernel.org/doc/html/latest/admin-guide/README.html)）是如何回答这一问题的：
+
+>What is Linux?（什么是 Linux？）
+>
+>Linux is a clone of the operating system Unix, written from scratch by Linus Torvalds with assistance from a loosely-knit team of hackers across the Net. It aims towards POSIX and Single UNIX Specification compliance.（Linux 是 Unix 操作系统的克隆版本，由 Linus Torvalds 从零开始编写，并在网络上一支组织松散的极客团队协助下完成。Linux 旨在实现对 POSIX 和单一 UNIX 规范的兼容。）
+>
+>It has all the features you would expect in a modern fully-fledged Unix, including true multitasking, virtual memory, shared libraries, demand loading, shared copy-on-write executables, proper memory management, and multistack networking including IPv4 and IPv6.（Linux 具备你在现代、功能完备的 Unix 中所期望的一切特性，如真正的多任务处理、虚拟内存、共享库、按需加载、共享写时复制可执行文件、完善的内存管理，以及包括对 IPv4 和 IPv6 在内的多协议栈网络支持。）
+>
+>It is distributed under the GNU General Public License v2 - see the accompanying COPYING file for more details.（Linux 在 GNU 通用公共许可证 v2 下进行分发 —— 有关更多细节，请参阅随附的 COPYING 文件。）
+
+再看看这个框架图：
+
 ```
 +-----------------------------------------+
 |               应用程序层                |
