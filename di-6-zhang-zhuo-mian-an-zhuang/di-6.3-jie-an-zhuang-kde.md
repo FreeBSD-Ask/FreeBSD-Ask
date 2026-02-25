@@ -170,7 +170,7 @@ Current=sddm-freebsd-black-theme
 
  ![KDE 6 FreeBSD 主题](../.gitbook/assets/kde-theme.png)
 
-如果遇到仍无法显示主题，仍为默认页面，你需要执行：
+如果遇到仍无法显示主题的问题，页面仍为默认界面，你需要执行：
 
 ```
 # ln -s /usr/local/bin/sddm-greeter-qt6 /usr/local/bin/sddm-greeter
