@@ -179,6 +179,7 @@ Current=sddm-freebsd-black-theme
 ### 参考文献
 
 - [デスクトップ 環境 の 構築 - 4-7. LXQT のインストールと 設定 (LXQT 2.0.0)](http://silversack.my.coocan.jp/bsd/fbsd11x_bde-4-7_lxqt.htm) [备份](https://web.archive.org/web/20260120215847/https://silversack.my.coocan.jp/bsd/fbsd11x_bde-4-7_lxqt.htm)
+- [sddm–greeter The FreeBSD Forums](https://forums.freebsd.org/threads/sddm-greeter.98389/) [备份](https://web.archive.org/web/20260225032218/https://forums.freebsd.org/threads/sddm-greeter.98389/)
 
 ## 附录：最小化 KDE 桌面安装方案
 
@@ -204,7 +205,7 @@ Current=sddm-freebsd-black-theme
 可选软件包：
 
 ```sh
-# pkg ins konsole dolphin kate plasma6-plasma-systemmonitor plasma6-plasma-pa plasma6-discover kdeconnect-kde plasma6-plasma-workspace-wallpapers plasma6-plasma-disks ark
+# pkg ins konsole dolphin kate plasma6-plasma-systemmonitor plasma6-plasma-pa plasma6-discover kdeconnect-kde plasma6-plasma-workspace-wallpapers plasma6-plasma-disks ark 7-zip unrar rar
 ```
 
 | 软件包                           |作用 |
@@ -218,7 +219,7 @@ Current=sddm-freebsd-black-theme
 | **kdeconnect-kde**                      | 手机电脑互联  |
 | **plasma6-plasma-workspace-wallpapers** | 桌面壁纸  |
 | **plasma6-plasma-disks**                | 磁盘健康（S.M.A.R.T.）监测  |
-|**ark**|解压缩软件|
+|**ark**|解压缩软件 (需要实现全功能还需安装7-zip、unrar、rar)|
 
 
 ### 使用 Ports 安装
@@ -248,7 +249,10 @@ Current=sddm-freebsd-black-theme
 # cd /usr/ports/deskutils/kdeconnect-kde/ && make install clean # 手机电脑互联
 # cd /usr/ports/x11-themes/plasma6-plasma-workspace-wallpapers/ && make install clean # 桌面壁纸
 # cd /usr/ports/sysutils/plasma6-plasma-disks/ && make install clean # 磁盘健康（S.M.A.R.T.）监测 
-# cd /usr/ports/archivers/ark/ && make install clean # 解压缩软件 
+# cd /usr/ports/archivers/ark/ && make install clean # 解压缩软件 (需要实现全功能还需安装7-zip、unrar、rar)
+# cd /usr/ports/archivers/7-zip/ && make install clean
+# cd /usr/ports/archivers/unrar/ && make install clean
+# cd /usr/ports/archivers/rar/ && make install clean
 ```
 
 ### xinitrc
