@@ -170,6 +170,12 @@ Current=sddm-freebsd-black-theme
 
  ![KDE 6 FreeBSD 主题](../.gitbook/assets/kde-theme.png)
 
+如果遇到仍无法显示主题，仍为默认页面，你需要执行：
+
+```
+# ln -s /usr/local/bin/sddm-greeter-qt6 /usr/local/bin/sddm-greeter
+```
+
 ### 参考文献
 
 - [デスクトップ 環境 の 構築 - 4-7. LXQT のインストールと 設定 (LXQT 2.0.0)](http://silversack.my.coocan.jp/bsd/fbsd11x_bde-4-7_lxqt.htm) [备份](https://web.archive.org/web/20260120215847/https://silversack.my.coocan.jp/bsd/fbsd11x_bde-4-7_lxqt.htm)
