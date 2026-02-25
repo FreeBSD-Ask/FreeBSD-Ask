@@ -41,6 +41,7 @@
 * [3.10 KVM、QEMU 等平台安装 FreeBSD（传统引导和 MBR 分区表）](di-3-zhang-freebsd-install-more/di-3.10-kvm-qemu.md)
 * [3.11 配置 rEFInd 引导管理器（用于多系统引导）](di-3-zhang-freebsd-install-more/di-3.11-refind.md)
 * [3.12 阿里云轻量应用服务器安装 FreeBSD（UEFI 和 GPT 分区表）](di-3-zhang-freebsd-install-more/di-3.12-aliyun.md)
+* [3.13 基于 Apple M1 和 UTM 安装 FreeBSD](di-3-zhang-freebsd-install-more/di-3.13-utm.md)
 
 ## 第 4 章 FreeBSD 基础
 
