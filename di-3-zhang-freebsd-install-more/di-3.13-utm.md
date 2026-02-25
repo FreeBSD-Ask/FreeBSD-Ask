@@ -1,6 +1,6 @@
 # 3.13 基于 Apple M1 和 UTM 安装 FreeBSD
 
-首先下载FreeBSD的安装介质镜像。注意自己下载的是 aarch64 的还是 amd64 的，除非有特殊需求，建议下载 aarch64 的，相同架构速度快一些，性能损失小。
+首先下载 FreeBSD 的安装介质镜像。注意自己下载的是 aarch64 的还是 amd64 的，除非有特殊需求，建议下载 aarch64 的，相同架构速度快一些，性能损失小。
 
 ![下载安装镜像](../.gitbook/assets/install_bsd_on_utm/0.png)
 
@@ -16,7 +16,7 @@
 
 ![选择操作系统](../.gitbook/assets/install_bsd_on_utm/3.png)
 
-内存默认的4GB能适应大多数情况，初始状态下 FreeBSD 15 会占用大约 500M 的内存，有需求可以自己增加或者减少内存。CPU 核心按需设置，M1 芯片可以设置成 4 。
+内存默认的 4GB 能适应大多数情况，初始状态下 FreeBSD 15 会占用大约 500M 的内存，有需求可以自己增加或者减少内存。CPU 核心按需设置，M1 芯片可以设置成 4 。
 
 ![设置内存和处理器核心数](../.gitbook/assets/install_bsd_on_utm/4.png)
 
