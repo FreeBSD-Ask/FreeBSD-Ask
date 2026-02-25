@@ -205,7 +205,7 @@ Current=sddm-freebsd-black-theme
 可选软件包：
 
 ```sh
-# pkg ins konsole dolphin kate plasma6-plasma-systemmonitor plasma6-plasma-pa plasma6-discover kdeconnect-kde plasma6-plasma-workspace-wallpapers plasma6-plasma-disks ark 7-zip unrar rar
+# pkg ins konsole dolphin kate plasma6-plasma-systemmonitor plasma6-plasma-pa plasma6-discover kdeconnect-kde plasma6-plasma-workspace-wallpapers plasma6-plasma-disks ark
 ```
 
 | 软件包                           |作用 |
