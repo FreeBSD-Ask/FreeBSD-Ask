@@ -148,3 +148,7 @@ twm: created fontset with 10 fonts (7 missing) for "-adobe-helvetica-bold-r-norm
 twm: created fontset with 10 fonts (7 missing) for "-adobe-helvetica-bold-r-normal--*-100-*-*-*"
 twm: created fontset with 2 fonts (15 missing) for "fixed"
 ```
+
+虚拟机看不到画面，显示 Display output is not active.
+
+![虚拟机看不到画面](../.gitbook/assets/install_bsd_on_utm/15.png)
