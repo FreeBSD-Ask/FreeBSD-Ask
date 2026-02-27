@@ -170,9 +170,18 @@ Current=sddm-freebsd-black-theme
 
  ![KDE 6 FreeBSD 主题](../.gitbook/assets/kde-theme.png)
 
+如果读者遇到无法切换主题的问题（仍为默认界面），需要执行  :
+
+```sh
+# ln -s /usr/local/bin/sddm-greeter-qt6 /usr/local/bin/sddm-greeter
+```
+
+此问题已反馈至 [x11-themes/sddm-freebsd-black-theme incompatible with SDDM 0.21.0 (Qt6 greeter)](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=293449) [备份](https://web.archive.org/web/20260225213341/https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=293449)，待解决。
+
 ### 参考文献
 
 - [デスクトップ 環境 の 構築 - 4-7. LXQT のインストールと 設定 (LXQT 2.0.0)](http://silversack.my.coocan.jp/bsd/fbsd11x_bde-4-7_lxqt.htm) [备份](https://web.archive.org/web/20260120215847/https://silversack.my.coocan.jp/bsd/fbsd11x_bde-4-7_lxqt.htm)
+- [sddm–greeter The FreeBSD Forums](https://forums.freebsd.org/threads/sddm-greeter.98389/) [备份](https://web.archive.org/web/20260225032218/https://forums.freebsd.org/threads/sddm-greeter.98389/)
 
 ## 附录：最小化 KDE 桌面安装方案
 
@@ -242,7 +251,7 @@ Current=sddm-freebsd-black-theme
 # cd /usr/ports/deskutils/kdeconnect-kde/ && make install clean # 手机电脑互联
 # cd /usr/ports/x11-themes/plasma6-plasma-workspace-wallpapers/ && make install clean # 桌面壁纸
 # cd /usr/ports/sysutils/plasma6-plasma-disks/ && make install clean # 磁盘健康（S.M.A.R.T.）监测 
-# cd /usr/ports/archivers/ark/ && make install clean # 解压缩软件 
+# cd /usr/ports/archivers/ark/ && make install clean # 解压缩软件
 ```
 
 ### xinitrc

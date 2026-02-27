@@ -106,6 +106,14 @@ Multics 意图创造强悍的新软件和比肩 IBM 7094 功能更丰富的新�
 
 ## GNU 与自由软件运动
 
+根据 Linux 内核文档 [1.5. Licensing](https://www.kernel.org/doc/html/latest/process/1.Intro.html)（另见 [Linux kernel licensing rules](https://www.kernel.org/doc/html/latest/process/license-rules.html)）：
+
+>Code is contributed to the Linux kernel under a number of licenses, but all code must be compatible with version 2 of the GNU General Public License (GPLv2), which is the license covering the kernel distribution as a whole. In practice, that means that all code contributions are covered either by GPLv2 (with, optionally, language allowing distribution under later versions of the GPL) or the three-clause BSD license. Any contributions which are not covered by a compatible license will not be accepted into the kernel.（Linux 内核中的代码是在多种许可证之下被贡献的，但所有代码都必须与 GNU 通用公共许可证第 2 版（ GPLv2 ）兼容，而该许可证覆盖了所有内核发行文件。实际上，这意味着所有对代码的贡献要么受 GPLv2 约束（可选地包含允许在 GPL 后续版本下发布的条款），要么受三条款 BSD 许可证约束。任何未被兼容许可证覆盖的贡献都不会被接纳进内核。）
+
+我们有必要了解一下 GPL 背后的故事。
+
+---
+
 由于 Unix 在后期愈发封闭，许可证昂贵、受限制于商业公司等原因，RMS（Richard Matthew Stallman）就想创造一款自由且兼容 Unix 的操作系统。
 
 - 1983 年，RMS 发表 [《GNU 宣言》](https://www.gnu.org/gnu/manifesto.html) [备份](https://web.archive.org/web/20260115033223/https://www.gnu.org/gnu/manifesto.html) ，其中 GNU 即 GNU is Not Unix（GNU 不是 Unix）。GNU 是一款操作系统——旨在完全替代 Unix。
@@ -156,6 +164,19 @@ Multics 意图创造强悍的新软件和比肩 IBM 7094 功能更丰富的新�
 此为私人通信引用，不涉及隐私话题。
 
 ## 什么是 Linux？
+
+
+我们首先来看一下 Linux 内核项目（[What is Linux?](https://www.kernel.org/doc/html/latest/admin-guide/README.html)）是如何回答这一问题的：
+
+>What is Linux?（什么是 Linux？）
+>
+>Linux is a clone of the operating system Unix, written from scratch by Linus Torvalds with assistance from a loosely-knit team of hackers across the Net. It aims towards POSIX and Single UNIX Specification compliance.（Linux 是 Unix 操作系统的克隆版本，由 Linus Torvalds 从零开始编写，并在网络上一支组织松散的极客团队协助下完成。Linux 旨在实现对 POSIX 和单一 UNIX 规范的兼容。）
+>
+>It has all the features you would expect in a modern fully-fledged Unix, including true multitasking, virtual memory, shared libraries, demand loading, shared copy-on-write executables, proper memory management, and multistack networking including IPv4 and IPv6.（Linux 具备你在现代、功能完备的 Unix 中所期望的一切特性，如真正的多任务处理、虚拟内存、共享库、按需加载、共享写时复制可执行文件、完善的内存管理，以及包括对 IPv4 和 IPv6 在内的多协议栈网络支持。）
+>
+>It is distributed under the GNU General Public License v2 - see the accompanying COPYING file for more details.（Linux 在 GNU 通用公共许可证 v2 下进行分发 —— 有关更多细节，请参阅随附的 COPYING 文件。）
+
+再看看这个框架图：
 
 ```
 +-----------------------------------------+
@@ -233,7 +254,7 @@ GNU's Not Unix，从 GNU 这个名字（GNU 不是 UNIX）你也能看出来 Lin
 
 > **注意**
 >
-> 如果你还是不明白，建议亲自安装试试 [Gentoo](https://www.gentoo.org/downloads/) [备份](https://web.archive.org/web/20260115021338/https://www.gentoo.org/downloads/) （stage3）或 [Slackware](http://www.slackware.com/) ，再不明白可以试试 [Gentoo（stage1）](https://wiki.gentoo.org/wiki/Stage_file) [备份](https://web.archive.org/web/20260115132845/https://wiki.gentoo.org/wiki/Stage_file)  或 [LFS](https://www.linuxfromscratch.org/lfs/) [备份](https://web.archive.org/web/20260115021242/https://www.linuxfromscratch.org/lfs/) 。
+> 如果读者还是有所疑惑，建议亲自安装试试 [Gentoo](https://www.gentoo.org/downloads/) [备份](https://web.archive.org/web/20260115021338/https://www.gentoo.org/downloads/) （stage3）或 [Slackware](http://www.slackware.com/) ，再不明白可以试试 [Gentoo（stage1）](https://wiki.gentoo.org/wiki/Stage_file) [备份](https://web.archive.org/web/20260115132845/https://wiki.gentoo.org/wiki/Stage_file)  或 [LFS](https://www.linuxfromscratch.org/lfs/) [备份](https://web.archive.org/web/20260115021242/https://www.linuxfromscratch.org/lfs/) 。
 >
 > 上述操作较为复杂，需要一定的经验与基础知识。~~又陷入了前理解循环~~
 
