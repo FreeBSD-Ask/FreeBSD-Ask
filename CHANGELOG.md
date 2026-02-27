@@ -9,7 +9,7 @@
   - 将“附录：登录界面主题”从“6.3 KDE 6（X11 会话）”彻底删除，因为软件源中仅存在 Port x11-themes/sddm-freebsd-black-theme，且无人维护，存在 [x11-themes/sddm-freebsd-black-theme incompatible with SDDM 0.21.0 (Qt6 greeter)](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=293449) 无法得到解决
 - 2026.2.18
   - “21.2 通过 FreeBSD Ports 安装 Rocky Linux 兼容层”新增“Rocky Linux 版本号概述”
-  - 根据 <https://reviews.freebsd.org/D55303> 以及 <https://cgit.freebsd.org/src/commit/?id=62fba0054d9eb2303116f54be1f9bc0e7b75cc15>，目前 FreeBSD 16-CURRENT 已经引入 UTF-8 支持，如中文。本地测试通过
+  - 根据 <https://reviews.freebsd.org/D55303> 以及 <https://cgit.freebsd.org/src/commit/?id=62fba0054d9eb2303116f54be1f9bc0e7b75cc15>，目前 FreeBSD 16-CURRENT 中的 ee 编辑器已经引入 UTF-8 支持，如中文。本地测试通过
 - 2026.2.15
   - “4.2 Linux 用户迁移指南”新增：“理解 FreeBSD 并非发行版而是操作系统”
 - 2026.2.14
