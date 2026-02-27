@@ -4,7 +4,7 @@
 
 - 2026.2.28
   - 新增“3.13 基于 Apple M1 和 UTM 安装 FreeBSD”
-  - 删除“21.5 基于 archlinux-pacman 的 Arch Linux 兼容层（拟删除）”。原因：存在  Bug 287690 [sysutils/pacman: The archlinux flavor cannot be built or installed.](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=287690) 无法得到解决
+  - 删除“21.5 基于 archlinux-pacman 的 Arch Linux 兼容层（拟删除）”。原因：存在 Bug 287690 [sysutils/pacman: The archlinux flavor cannot be built or installed.](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=287690) 无法得到解决
   - 删除“6.10 Budgie（拟删除）”，原因：欠缺维护，存在 [Bug 289898 x11/budgie: After logging in with LightDM, it crashes and then shows a black screen](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=289898) 无法得到解决
   - 将“附录：登录界面主题”从“6.3 KDE 6（X11 会话）”彻底删除，因为软件源中仅存在 Port x11-themes/sddm-freebsd-black-theme，且无人维护，存在 [x11-themes/sddm-freebsd-black-theme incompatible with SDDM 0.21.0 (Qt6 greeter)](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=293449) 无法得到解决
 - 2026.2.18
