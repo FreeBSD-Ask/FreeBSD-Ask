@@ -12,7 +12,7 @@
 
 ![George Berkeley](../.gitbook/assets/Berkeley2.png)
 
-图片出处：[George Berkeley](https://www.npg.org.uk/collections/search/portrait.php?search=ap&npgno=653&eDate=&lDate=) 
+图片出处：[George Berkeley](https://www.npg.org.uk/collections/search/portrait.php?search=ap&npgno=653&eDate=&lDate=)
 
 
 George Berkeley（1685.3.12—1753.1.14），2023 年是他逝世 270 周年。2025 年则是其诞辰 340 周年。

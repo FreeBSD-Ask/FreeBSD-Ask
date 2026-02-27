@@ -165,7 +165,7 @@ Rufus 下载地址为 [https://rufus.ie/zh](https://rufus.ie/zh) [备份](https:
 
 **不建议** 使用 FreeBSD 手册中提到的 win32diskimager，因为有时会出现校验错误（尽管实际文件校验值是正确的）。类似地，**同样不建议** 使用 [Ventoy](https://www.ventoy.net/) [备份](https://web.archive.org/web/20260115143659/https://www.ventoy.net/en/index.html) 直接加载 ISO 或 IMG 镜像文件。
 
-**读者应仅在 Rufus 无效的情况下再使用 win32diskimager 或 Ventoy。** 
+**读者应仅在 Rufus 无效的情况下再使用 win32diskimager 或 Ventoy。**
 
 win32diskimager 的下载地址是 <https://sourceforge.net/projects/win32diskimager/files/Archive/>，点击 `win32diskimager-1.0.0-install.exe` 即可下载。
 

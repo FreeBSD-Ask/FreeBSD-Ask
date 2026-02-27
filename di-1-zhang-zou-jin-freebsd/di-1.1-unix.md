@@ -15,14 +15,14 @@
 
 ---
 
-UNIX 认证查询网址：[The Open Group official register of UNIX Certified Products](http://www.opengroup.org/openbrand/register) [备份](https://web.archive.org/web/20260108065248/https://www.opengroup.org/openbrand/register/) 
+UNIX 认证查询网址：[The Open Group official register of UNIX Certified Products](http://www.opengroup.org/openbrand/register) [备份](https://web.archive.org/web/20260108065248/https://www.opengroup.org/openbrand/register/)
 
 ![The Open Group official register of UNIX Certified Products](../.gitbook/assets/unixrenzheng.png)
 
 
 现在，我们可以知道认证 UNIX 需要：
 
-1. [符合单一 UNIX 规范](https://www.opengroup.org/openbrand/register/xym0.htm) [备份](https://web.archive.org/web/20260114071648/https://www.opengroup.org/openbrand/register/xym0.htm) 
+1. [符合单一 UNIX 规范](https://www.opengroup.org/openbrand/register/xym0.htm) [备份](https://web.archive.org/web/20260114071648/https://www.opengroup.org/openbrand/register/xym0.htm)
 2. 缴纳相应的[认证费用](https://www.opengroup.org/openbrand/Brandfees.htm) [备份](https://web.archive.org/web/20260114154111/https://www.opengroup.org/openbrand/Brandfees.htm)
 
 
@@ -32,7 +32,7 @@ UNIX 认证查询网址：[The Open Group official register of UNIX Certified Pr
 >
 >macOS/iOS 等与 BSD 的关系
 >
->从历史来看，macOS（以及由此衍生的 iOS、iPadOS 等）的核心层（Darwin）确实基于 BSD 代码，并融合了其他技术。它可以被理解为一款独立的、类 BSD 的操作系统分支——同 OpenBSD、NetBSD 和 FreeBSD 一样。参见 [《苹果的开源基石：macOS 和 iOS 背后的 BSD 传统》](https://book.bsdcn.org/fan-yi-wen-zhang-cun-dang/2024-nian-11-yue/apple) [备份](https://web.archive.org/web/20260115132720/https://book.bsdcn.org/fan-yi-wen-zhang-cun-dang/2024-nian-11-yue/apple) 
+>从历史来看，macOS（以及由此衍生的 iOS、iPadOS 等）的核心层（Darwin）确实基于 BSD 代码，并融合了其他技术。它可以被理解为一款独立的、类 BSD 的操作系统分支——同 OpenBSD、NetBSD 和 FreeBSD 一样。参见 [《苹果的开源基石：macOS 和 iOS 背后的 BSD 传统》](https://book.bsdcn.org/fan-yi-wen-zhang-cun-dang/2024-nian-11-yue/apple) [备份](https://web.archive.org/web/20260115132720/https://book.bsdcn.org/fan-yi-wen-zhang-cun-dang/2024-nian-11-yue/apple)
 >
 >所以看似是安卓和苹果之争，其实是 Linux 与 BSD 之争。~~也许也是大教堂与市集之争。~~
 
@@ -43,7 +43,7 @@ UNIX 认证查询网址：[The Open Group official register of UNIX Certified Pr
 >
 >> Those who do not understand Unix are condemned to reinvent it, poorly. （那些不懂 Unix 的人注定要再造一个四不像式 Unix）
 >>
->>——[Henry Spencer](https://www.nasa.gov/history/alsj/henry.html) [备份](https://web.archive.org/web/20260115025048/https://www.nasa.gov/history/alsj-and-afj/) 
+>>——[Henry Spencer](https://www.nasa.gov/history/alsj/henry.html) [备份](https://web.archive.org/web/20260115025048/https://www.nasa.gov/history/alsj-and-afj/)
 >
 >作者 Henry Spencer 并未明确批评哪个操作系统，那么你认为，现在这句话更适合哪个常见的操作系统？为什么？
 
@@ -62,7 +62,7 @@ Unix 哲学源于 UNIX 操作系统的开发实践，并由 Ken Thompson、Denni
 
 - 《UNIX 编程艺术》，Eric Raymond 著，ISBN: 9787121176654，电子工业出版社。
 - 《Linux/Unix 设计思想》，Mike Gancarz 著，9787115266927，人民邮电出版社。（已绝版）
-- [The Open Group Standards Process](https://www.opengroup.org/standardsprocess/certification.html) [备份](https://web.archive.org/web/20260115021154/https://www.opengroup.org/standardsprocess/certification.html) 
+- [The Open Group Standards Process](https://www.opengroup.org/standardsprocess/certification.html) [备份](https://web.archive.org/web/20260115021154/https://www.opengroup.org/standardsprocess/certification.html)
 
 
 ### Unix 的一段历史
@@ -104,7 +104,7 @@ Multics 意图创造强悍的新软件和比肩 IBM 7094 功能更丰富的新�
 由于 Unix 在后期愈发封闭，许可证昂贵、受限制于商业公司等原因，RMS（Richard Matthew Stallman）就想创造一款自由且兼容 Unix 的操作系统。
 
 - 1983 年，RMS 发表 [《GNU 宣言》](https://www.gnu.org/gnu/manifesto.html) [备份](https://web.archive.org/web/20260115033223/https://www.gnu.org/gnu/manifesto.html) ，其中 GNU 即 GNU is Not Unix（GNU 不是 Unix）。GNU 是一款操作系统——旨在完全替代 Unix。
-- 1984 年，创建 [GNU 项目](https://www.gnu.org/) [备份](https://web.archive.org/web/20260115033101/https://www.gnu.org/) 
+- 1984 年，创建 [GNU 项目](https://www.gnu.org/) [备份](https://web.archive.org/web/20260115033101/https://www.gnu.org/)
 - 1985 年，RMS 创建自由软件基金会（Free Software Foundation，FSF）
 - 1989 年，FSF 发布 GPLv1
 - 1991 年，FSF 发布 GPLv2

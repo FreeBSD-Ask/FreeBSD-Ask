@@ -122,13 +122,13 @@
   - 增补“致读者：解放思想，回归本真，高扬人道主义，不走苦难哲学的邪路”
 - 2025.12.14
   - 新增“13.7 用户分级与资源配额（login.conf）”。
-    - 根据编纂发现，提交 [Bug 291649 Submitted – COPYRIGHT in login classes/login.conf(5) does not work](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=291649) 
+    - 根据编纂发现，提交 [Bug 291649 Submitted – COPYRIGHT in login classes/login.conf(5) does not work](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=291649)
 - 2025.12.13
   - 重写“7.2 IceWM”
   - “10.3 Mihomo（Clash）”新增“RC 脚本”。已向 Ports 维护者发出请求合并（[Bug 291295 - net/mihomo: Add rc.conf and some Post-installation](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=291295) [备份](https://web.archive.org/web/20260115020637/https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=291295) ），但未予回应。
   - 将“4.10 文件系统的挂载和卸载”、“4.11 磁盘结构”合并到“4.10 文件系统基础”
   - 将“4.12 目录结构”拆分到“4.11 系统目录结构”和“24.6 FreeBSD 源代码目录结构”
-  - 根据编纂发现，增补 [Bug 236786 FreeBSD -.iso files not support written to USB drive](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=236786) [备份](https://web.archive.org/web/20260115023515/https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=236786) 
+  - 根据编纂发现，增补 [Bug 236786 FreeBSD -.iso files not support written to USB drive](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=236786) [备份](https://web.archive.org/web/20260115023515/https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=236786)
 - 2025.12.8
   - “5.1 FreeBSD 镜像站现状”新增“拒绝开放的可能性原因分析”
 - 2025.12.7
@@ -192,7 +192,7 @@
   - “5.4 使用 pkg 管理二进制包”重写“使用 pkg 安装软件”
 - 2025.11.17
   - “4.1 Windows 用户迁移指南”新增“深入阅读”
-  - FreeBSD 安装镜像缺乏 kmod 的离线包，提交 [Bug 291052 - Request to offline-distribute kernel modules and pkg(8) repositories in iso and img images.](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=291052) [备份](https://web.archive.org/web/20260115023447/https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=291052) 
+  - FreeBSD 安装镜像缺乏 kmod 的离线包，提交 [Bug 291052 - Request to offline-distribute kernel modules and pkg(8) repositories in iso and img images.](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=291052) [备份](https://web.archive.org/web/20260115023447/https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=291052)
 - 2025.11.14
   - “3.3 使用 Virtual Box 安装 FreeBSD”增补“网络设置”
   - Port [net/wutil](https://www.freshports.org/net/wutil) [备份](https://web.archive.org/web/20260114055124/https://www.freshports.org/net/wutil) 测试失败，提交 issue [wutil: no wpa ctrl interface on default path, provide --ctrl-interface: No error: 0](https://github.com/MainKt/wutil/issues/2) [备份](https://web.archive.org/web/20260114055632/https://github.com/MainKt/wutil/issues/2)
@@ -208,7 +208,7 @@
   - 移除“12.5 无线网络环境下使用 bhyve”与“12.2 使用 bhyve 安装 Windows 11（vm-bhyve）”的“可选配置”章节。引用不符合规范
   - 将上面移除的内容涉及的 wiki 全部翻译，并放在 [vm-bhyve Wiki](https://book.bsdcn.org/wen-zhang/wen-zhang/vm-bhyve) [备份](https://web.archive.org/web/20260114055841/https://book.bsdcn.org/wen-zhang/wen-zhang/vm-bhyve)
 - 2025.11.8
-  - 由于 FreeBSD 的默认 ESP 不符合 UEFI 规范，提交 [Bug 290857 - bsdinstall: The ESP on FreeBSD Should Be FAT32 Instead of FAT16: D28897 Is Actually Ineffective](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=290857) [备份](https://web.archive.org/web/20260115020642/https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=290857) 
+  - 由于 FreeBSD 的默认 ESP 不符合 UEFI 规范，提交 [Bug 290857 - bsdinstall: The ESP on FreeBSD Should Be FAT32 Instead of FAT16: D28897 Is Actually Ineffective](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=290857) [备份](https://web.archive.org/web/20260115020642/https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=290857)
 - 2025.11.5
   - “26.5 桌面和其他软件”新增故障排除，解决“KDE 无声音”
   - 增补贡献指南
@@ -251,7 +251,7 @@
   - “6.1 Intel 和 AMD 显卡驱动”：明确目前 FreeBSD 移植的 drm 尚不支持 Intel DG2 Arc 显卡（如 Arc A770），预计在 15.1 RELEASE 前得到支持。
 - 2025.10.10
   - “6.1 Intel 和 AMD 显卡驱动”重写“显卡支持情况”
-  - 提交 [Bug 290122 - graphics/drm-latest-kmod：and related DRM ports missing CONFLICTS_INSTALL entries](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=290122) 
+  - 提交 [Bug 290122 - graphics/drm-latest-kmod：and related DRM ports missing CONFLICTS_INSTALL entries](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=290122)
 - 2025.10.6
   - “1.1 操作系统的历程：UNIX、BSD 和 Linux”：新增“附录：自由软件与开源软件语境下的典型误解与思想偏差探析”
 - 2025.10.1
@@ -385,7 +385,7 @@
 - 2025.5.17
   - 删除“第 21.2 节 Linux 兼容层——基于 CentOS（FreeBSD Port）”，过时
 - 2025.5.16
-  - 录制视频 [FreeBSD 14.2 基础安装配置教程](https://www.bilibili.com/video/BV1STExzEEhh) 
+  - 录制视频 [FreeBSD 14.2 基础安装配置教程](https://www.bilibili.com/video/BV1STExzEEhh)
 - 2025.5.12
   - 移除“第 4.18 节 KDE6”中的“基于 Wayland”，可能存在错误
 - 2025.5.9
@@ -480,7 +480,7 @@
   - “桌面与中文环境常用软件”新增输入法
   - “桌面与中文环境常用软件”新增中文环境
   - NetBSD KDE 4 UEFI 下测试失败，还是黑屏，报错见 <https://gnats.netbsd.org/57554>
-  - “第 16.5 节 Wildfly”测试失败，见 [Bug 285956 - java/wildfly: service start fail, illegal group name](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=285956) [备份](https://web.archive.org/web/20260115020631/https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=285956) 
+  - “第 16.5 节 Wildfly”测试失败，见 [Bug 285956 - java/wildfly: service start fail, illegal group name](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=285956) [备份](https://web.archive.org/web/20260115020631/https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=285956)
 - 2025.4.7
   - 全译现有所有安装后说明
   - 从 [2024.8-3533 次](https://github.com/FreeBSD-Ask/FreeBSD-Ask/commit/c4d657fb586f91e9f8664ee1181a2711f7350d17) [备份](https://web.archive.org/web/20260114060608/https://github.com/FreeBSD-Ask/FreeBSD-Ask/commit/c4d657fb586f91e9f8664ee1181a2711f7350d17) 开始，目前对全书初版已重写 94%（按 Commit 数），下同
@@ -622,7 +622,7 @@
 - 2025.2.21
   - 新增“第 2.12 节 安装 FreeBSD——基于 Apple M1&VMware Fusion Pro”
 - 2025.2.19
-  - 制作了视频教程 [《003-FreeBSD14.2 安装 KDE6》](https://www.bilibili.com/video/BV12zAYeKEej) 
+  - 制作了视频教程 [《003-FreeBSD14.2 安装 KDE6》](https://www.bilibili.com/video/BV12zAYeKEej)
 - 2025.2.16
   - 拆分“Git&Linux 败局与 FreeBSD 败局”到 19.5、19.6、19.7
 - 2025.2.15
@@ -1020,8 +1020,8 @@
 - 2023.7.8
   - 新增“第 30.6 节 Linux 兼容层——基于 openSUSE”
 - 2023.7.7
-  - 新增视频教程 [07-FreeBSD-ArchLinux 兼容层脚本使用说明](https://www.bilibili.com/video/BV1wg4y1w7QV/) 
-  - 新增视频教程 [06-FreeBSD-Ubuntu 兼容层脚本使用说明](https://www.bilibili.com/video/BV1iM4y1j7E9/) 
+  - 新增视频教程 [07-FreeBSD-ArchLinux 兼容层脚本使用说明](https://www.bilibili.com/video/BV1wg4y1w7QV/)
+  - 新增视频教程 [06-FreeBSD-Ubuntu 兼容层脚本使用说明](https://www.bilibili.com/video/BV1iM4y1j7E9/)
 - 2023.7.5
   - 合并全书 fcitx 相关教程到“第5.1节 Fcitx 输入法框架”，减少重复
   - 合并全书 ibus 相关教程到“第5.2节 Ibus 输入法框架”，减少重复
@@ -1104,7 +1104,7 @@
   - OpenBSD“第26.2节 配置”新增“挂载安卓设备”  
   - 在合适的位置引入“xdg-user-dirs”以自动创建家目录相关路径
 - 2023.1.11
-  - 新增视频：[安装 DragonFly BSD 6.4](https://www.bilibili.com/video/BV1BM41187pD/)   
+  - 新增视频：[安装 DragonFly BSD 6.4](https://www.bilibili.com/video/BV1BM41187pD/)
 - 2023.1.9
   - “第5.7节 安装 QQ”新增“Linux QQ 3.x（electron）【可选：基于 ArchLinux 兼容层】”
 - 2023.1.8

@@ -83,7 +83,7 @@ EPUB 格式文档在手机上可使用 [微信读书](https://play.google.com/st
 
 ![](.gitbook/assets/proud_donor.png)
 
-[点此捐赠 FreeBSD 基金会](https://freebsdfoundation.org/donate-to-freebsd-foundation/) 
+[点此捐赠 FreeBSD 基金会](https://freebsdfoundation.org/donate-to-freebsd-foundation/)
 
 需要你持有 VISA 信用卡：请在捐赠页面下使用 Amazon Pay 或 Google Pay，经测试可用。您也可以申请一张万事达品牌的二类借记卡（储蓄卡），同样也可以便捷支付。
 
@@ -169,6 +169,7 @@ EPUB 格式文档在手机上可使用 [微信读书](https://play.google.com/st
 距离第 3 版还需提交: 2237 次
 
 提交统计（历史）:
+
 - 人工提交: 8362
 - 机器人提交: 303
 <!-- commit-progress-end -->
