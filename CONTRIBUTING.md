@@ -133,6 +133,40 @@ and retry with 'git restore --source=HEAD :/'
 $ git clone https://github.com/FreeBSD-Ask/FreeBSD-Ask
 ```
 
+#### 附录：Windows git 配置示例
+
+```ini
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+[user]
+	name = ykla
+	email = yklaxds@gmail.com
+	signingkey = 11B44C23A0A0B986
+[commit]
+  gpgsign = true 
+[core]
+	autocrlf = true
+	longpaths = true
+	editor = 'C:/Program Files/Notepad++/notepad++.exe' -multiInst -nosession
+[difftool "sourcetree"]
+	cmd = "'' "
+[mergetool "sourcetree"]
+	cmd = "'' "
+	trustExitCode = true
+[http]
+	proxy = http://localhost:7890
+	postBuffer = 1048576000
+	maxRequestBuffer = 1048576000
+
+[gpg]
+	program = C:/Program Files/GnuPG/bin/gpg.exe
+[safe]
+	directory = C:/Users/ykla/Documents/hub/unix-haters
+```
+
 #### 故障排除
 
 - `致命错误:无法访问 'https://github.com/FreeBSD-Ask/FreeBSD-Ask/': Recv failure: 连接被对方重置`
