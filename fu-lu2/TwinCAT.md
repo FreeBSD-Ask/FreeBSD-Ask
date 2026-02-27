@@ -18,7 +18,7 @@ TwinCAT/BSD 是由倍福公司（Beckhoff）开发的基于 FreeBSD 的 PLC（Pr
 
 点击 `↓ ZIP` 即可下载。**注意：需要注册才能下载。**
 
-首先解压 ZIP，得到 “TCBSD-x64-13-92446.iso” 文件。
+首先解压 ZIP，得到“TCBSD-x64-13-92446.iso”文件。
 
 ## 创建虚拟硬盘并写入镜像
 

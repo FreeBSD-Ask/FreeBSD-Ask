@@ -28,15 +28,15 @@ UTM 是一款开源的，基于 QEMU 的，面向 Apple 设备的虚拟机。其
 
 ![选择操作系统](../.gitbook/assets/install_bsd_on_utm/3.png)
 
-内存默认的 4GB 能适应大多数情况，初始状态下 FreeBSD 15 会占用大约 500M 的内存，有需求可以自己增加或者减少内存。CPU 核心按需设置，M1 芯片可以设置成 4 。
+内存默认的 4GB 能适应大多数情况，初始状态下 FreeBSD 15 会占用大约 500M 的内存，有需求可以自己增加或者减少内存。CPU 核心按需设置，M1 芯片可以设置成 4。
 
 ![设置内存和处理器核心数](../.gitbook/assets/install_bsd_on_utm/4.png)
 
-启动设备选择 CD/DVD 映像 ，点击“浏览”按钮选择你下载好的安装介质镜像。
+启动设备选择 CD/DVD 映像，点击“浏览”按钮选择你下载好的安装介质镜像。
 
 ![设置启动设备](../.gitbook/assets/install_bsd_on_utm/5.png)
 
-存储空间默认 64GB ，初始状态 FreeBSD 会使用 5GB 左右的空间，可以根据需求调节。
+存储空间默认 64GB，初始状态 FreeBSD 会使用 5GB 左右的空间，可以根据需求调节。
 
 ![设置存储空间](../.gitbook/assets/install_bsd_on_utm/6.png)
 
@@ -116,14 +116,14 @@ xinit: server error
 voosk@BSDVM:~ $
 ```
 
-在 `/boot/loader.conf` 里面加入下面两行能成功启动 TWM ，但是虚拟机就看不到画面了（ssh 仍然能连进去，说明只是显示问题）。
+在 `/boot/loader.conf` 里面加入下面两行能成功启动 TWM，但是虚拟机就看不到画面了（ssh 仍然能连进去，说明只是显示问题）。
 
 ```sh
 hint.virtio_gpu.0.disabled="1"
 hint.vtgpu.0.disabled="1"
 ```
 
-重启以后 startx 能够正常启动 TWM ，输出如下：
+重启以后 startx 能够正常启动 TWM，输出如下：
 
 ```sh
 voosk@BSDVM:~ $ startx

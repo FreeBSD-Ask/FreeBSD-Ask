@@ -61,32 +61,30 @@
 
 * [5.1 FreeBSD 镜像站现状](di-5-zhang-bao-guan-li-qi/di-5.1-jie-freebsd-jing-xiang-zhan-xian-zhuang.md)
 * [5.2 更换 FreeBSD 软件源](di-5-zhang-bao-guan-li-qi/di-5.2-jie-freebsd-huan-yuan-fang-shi.md)
-* [5.3 gitup 的用法](di-5-zhang-bao-guan-li-qi/di-5.3-jie-gitup-de-yong-fa.md)
-* [5.4 使用 pkg 管理二进制包](di-5-zhang-bao-guan-li-qi/di-5.4-jie-ruan-jian-bao-guan-li-qi-pkg-de-yong-fa.md)
-* [5.5 使用 Ports 以源代码方式安装软件](di-5-zhang-bao-guan-li-qi/di-5.5-jie-tong-guo-yuan-dai-ma-ports-fang-shi-an-zhuang-ruan-jian.md)
-* [5.6 使用 DVD 安装软件](di-5-zhang-bao-guan-li-qi/di-5.6-jie-tong-guo-dvd-an-zhuang-ruan-jian.md)
-* [5.7 使用 freebsd-update 更新 FreeBSD](di-5-zhang-bao-guan-li-qi/di-5.7-jie-tong-guo-freebsdupdate-geng-xin.md)
-* [5.8 使用源代码更新 FreeBSD](di-5-zhang-bao-guan-li-qi/di-5.8-jie-tong-guo-yuan-dai-ma-geng-xin.md)
-* [5.9 使用 ZFS 启动环境更新 FreeBSD 并实现多版本共存](di-5-zhang-bao-guan-li-qi/di-5.9-jie-shi-yong-pkgbase-geng-xin.md)
+* [5.3 使用 pkg 管理二进制包](di-5-zhang-bao-guan-li-qi/di-5.3-jie-ruan-jian-bao-guan-li-qi-pkg-de-yong-fa.md)
+* [5.4 使用 Ports 以源代码方式安装软件](di-5-zhang-bao-guan-li-qi/di-5.4-jie-tong-guo-yuan-dai-ma-ports-fang-shi-an-zhuang-ruan-jian.md)
+* [5.5 使用 DVD 安装软件](di-5-zhang-bao-guan-li-qi/di-5.5-jie-tong-guo-dvd-an-zhuang-ruan-jian.md)
+* [5.6 使用 freebsd-update 更新 FreeBSD](di-5-zhang-bao-guan-li-qi/di-5.6-jie-tong-guo-freebsdupdate-geng-xin.md)
+* [5.7 使用源代码更新 FreeBSD](di-5-zhang-bao-guan-li-qi/di-5.7-jie-tong-guo-yuan-dai-ma-geng-xin.md)
+* [5.8 使用 ZFS 启动环境更新 FreeBSD 并实现多版本共存](di-5-zhang-bao-guan-li-qi/di-5.8-jie-shi-yong-pkgbase-geng-xin.md)
 
 ## 第 6 章 桌面环境
 
 * [6.1 Intel 和 AMD 显卡驱动](di-6-zhang-zhuo-mian-an-zhuang/di-6.1-jie-an-zhuang-xian-ka-qu-dong-ji-xorg-bi-kan.md)
 * [6.2 NVIDIA 显卡驱动](di-6-zhang-zhuo-mian-an-zhuang/di-6.2-NVIDIA.md)
 * [6.3 KDE 6（X11 会话）](di-6-zhang-zhuo-mian-an-zhuang/di-6.3-jie-an-zhuang-kde.md)
-* [6.4 GNOME](di-6-zhang-zhuo-mian-an-zhuang/di-6.4-jie-an-zhuang-gnome.md)
+* [6.4 KDE 6（Wayland 会话）](di-6-zhang-zhuo-mian-an-zhuang/di-6.4-kde-wayland.md)
 * [6.5 MATE](di-6-zhang-zhuo-mian-an-zhuang/di-6.5-jie-an-zhuang-mate.md)
 * [6.6 Xfce](di-6-zhang-zhuo-mian-an-zhuang/di-6.6-jie-an-zhuang-xfce.md)
 * [6.7 Cinnamon](di-6-zhang-zhuo-mian-an-zhuang/di-6.7-jie-an-zhuang-cinnamon.md)
 * [6.8 Lumina](di-6-zhang-zhuo-mian-an-zhuang/di-6.8-jie-an-zhuang-lumina.md)
 * [6.9 LXQt](di-6-zhang-zhuo-mian-an-zhuang/di-6.9-jie-an-zhuang-lxqt.md)
-* [6.10 Budgie（拟删除）](di-6-zhang-zhuo-mian-an-zhuang/di-6.10-jie-an-zhuang-budgie.md)
+* [6.10 GNOME](di-6-zhang-zhuo-mian-an-zhuang/di-6.10-jie-an-zhuang-gnome.md)
 * [6.11 CDE](di-6-zhang-zhuo-mian-an-zhuang/di-6.11-jie-an-zhuang-cde.md)
 * [6.12 LXDE](di-6-zhang-zhuo-mian-an-zhuang/di-6.12-lxde.md)
 * [6.13 主题美化](di-6-zhang-zhuo-mian-an-zhuang/di-6.13-jie-zhu-ti-yu-mei-hua.md)
 * [6.14 远程桌面](di-6-zhang-zhuo-mian-an-zhuang/di-6.14-jie-yuan-cheng-zhuo-mian-guan-li.md)
 * [6.15 启用 root 桌面登录](di-6-zhang-zhuo-mian-an-zhuang/di-6.15-jie-root-deng-lu-zhuo-mian.md)
-* [6.16 KDE 6（Wayland 会话）](di-6-zhang-zhuo-mian-an-zhuang/di-6.16-kde-wayland.md)
 
 ## 第 7 章 窗口管理器
 
@@ -220,13 +218,12 @@
 * [21.2 通过 FreeBSD Ports 安装 Rocky Linux 兼容层](di-21-zhang-linux-jian-rong-ceng/di-21.2-jie-rocky9-jian-rong-ceng.md)
 * [21.3 Ubuntu/Debian 兼容层](di-21-zhang-linux-jian-rong-ceng/di-21.3-jie-linux-jian-rong-ceng-ji-yu-ubuntudebian.md)
 * [21.4 Arch Linux 兼容层（基于 Arch Linux bootstrap）](di-21-zhang-linux-jian-rong-ceng/di-21.4-jie-linux-jian-rong-ceng-ji-yu-archlinux-bootstrap.md)
-* [21.5 基于 archlinux-pacman 的 Arch Linux 兼容层（拟删除）](di-21-zhang-linux-jian-rong-ceng/di-21.5-jie-linux-jian-rong-ceng-ji-yu-archlinuxpacman.md)
+* [21.5 Deepin 兼容层](di-21-zhang-linux-jian-rong-ceng/di-21.5-jie-linux-jian-rong-ceng-ji-yu-deepin.md)
 * [21.6 openSUSE 兼容层](di-21-zhang-linux-jian-rong-ceng/di-21.6-jie-linux-jian-rong-ceng-ji-yu-opensuse.md)
 * [21.7 Gentoo Linux 兼容层](di-21-zhang-linux-jian-rong-ceng/di-21.7-jie-linux-jian-rong-ceng-ji-yu-gentoo-linux.md)
 * [21.8 Rocky Linux 兼容层](di-21-zhang-linux-jian-rong-ceng/di-21.8-jie-linux-jian-rong-ceng-ji-yu-rocky-linux.md)
 * [21.9 Slackware Linux 兼容层](di-21-zhang-linux-jian-rong-ceng/di-21.9-jie-linux-jian-rong-ceng-ji-yu-slackware-linux.md)
-* [21.10 Deepin 兼容层](di-21-zhang-linux-jian-rong-ceng/di-21.10-jie-linux-jian-rong-ceng-ji-yu-deepin.md)
-* [21.11 故障排除与未竟事宜](di-21-zhang-linux-jian-rong-ceng/di-21.11-jie-linux-jian-rong-ceng-gu-zhang-pai-chu-yu-pei-zhi.md)
+* [21.10 故障排除与未竟事宜](di-21-zhang-linux-jian-rong-ceng/di-21.10-jie-linux-jian-rong-ceng-gu-zhang-pai-chu-yu-pei-zhi.md)
 
 ## 第 22 章 开发生态与贡献社区
 

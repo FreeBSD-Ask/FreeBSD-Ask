@@ -1,4 +1,4 @@
-# 5.4 使用 pkg 管理二进制包
+# 5.3 使用 pkg 管理二进制包
 
 FreeBSD 的二进制包管理器目前是 pkg（旧称 pkgng），即“Package”，意为软件包。
 

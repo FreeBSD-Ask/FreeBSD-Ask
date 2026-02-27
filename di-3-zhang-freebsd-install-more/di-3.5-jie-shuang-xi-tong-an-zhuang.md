@@ -375,7 +375,7 @@ Windows 文本文件的行尾通常是 `\r\n`（回车 + 换行）。
 # cp /boot/loader.efi /media/efi/freebsd/
 ```
 
-- 使用 efibootmgr 工具向主板 UEFI 固件添加启动项 “FreeBSD”。
+- 使用 efibootmgr 工具向主板 UEFI 固件添加启动项“FreeBSD”。
 
 ```
 # efibootmgr --create --activate --label "FreeBSD" --loader "/media/efi/freebsd/loader.efi"

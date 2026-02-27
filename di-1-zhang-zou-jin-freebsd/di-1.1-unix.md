@@ -15,14 +15,14 @@
 
 ---
 
-UNIX 认证查询网址：[The Open Group official register of UNIX Certified Products](http://www.opengroup.org/openbrand/register) [备份](https://web.archive.org/web/20260108065248/https://www.opengroup.org/openbrand/register/) 
+UNIX 认证查询网址：[The Open Group official register of UNIX Certified Products](http://www.opengroup.org/openbrand/register) [备份](https://web.archive.org/web/20260108065248/https://www.opengroup.org/openbrand/register/)
 
 ![The Open Group official register of UNIX Certified Products](../.gitbook/assets/unixrenzheng.png)
 
 
 现在，我们可以知道认证 UNIX 需要：
 
-1. [符合单一 UNIX 规范](https://www.opengroup.org/openbrand/register/xym0.htm) [备份](https://web.archive.org/web/20260114071648/https://www.opengroup.org/openbrand/register/xym0.htm) 
+1. [符合单一 UNIX 规范](https://www.opengroup.org/openbrand/register/xym0.htm) [备份](https://web.archive.org/web/20260114071648/https://www.opengroup.org/openbrand/register/xym0.htm)
 2. 缴纳相应的[认证费用](https://www.opengroup.org/openbrand/Brandfees.htm) [备份](https://web.archive.org/web/20260114154111/https://www.opengroup.org/openbrand/Brandfees.htm)
 
 
@@ -32,20 +32,18 @@ UNIX 认证查询网址：[The Open Group official register of UNIX Certified Pr
 >
 >macOS/iOS 等与 BSD 的关系
 >
->从历史来看，macOS（以及由此衍生的 iOS、iPadOS 等）的核心层（Darwin）确实基于 BSD 代码，并融合了其他技术。它可以被理解为一款独立的、类 BSD 的操作系统分支——同 OpenBSD、NetBSD 和 FreeBSD 一样。参见 [《苹果的开源基石：macOS 和 iOS 背后的 BSD 传统》](https://book.bsdcn.org/fan-yi-wen-zhang-cun-dang/2024-nian-11-yue/apple) [备份](https://web.archive.org/web/20260115132720/https://book.bsdcn.org/fan-yi-wen-zhang-cun-dang/2024-nian-11-yue/apple) 
+>从历史来看，macOS（以及由此衍生的 iOS、iPadOS 等）的核心层（Darwin）确实基于 BSD 代码，并融合了其他技术。它可以被理解为一款独立的、类 BSD 的操作系统分支——同 OpenBSD、NetBSD 和 FreeBSD 一样。参见 [《苹果的开源基石：macOS 和 iOS 背后的 BSD 传统》](https://book.bsdcn.org/fan-yi-wen-zhang-cun-dang/2024-nian-11-yue/apple) [备份](https://web.archive.org/web/20260115132720/https://book.bsdcn.org/fan-yi-wen-zhang-cun-dang/2024-nian-11-yue/apple)
 >
 >所以看似是安卓和苹果之争，其实是 Linux 与 BSD 之争。~~也许也是大教堂与市集之争。~~
 
 
-### UNIX 哲学与软件工程原则简介
-
-#### 传统的 Unix 哲学观（以《UNIX 编程艺术》为核心）
+### 传统的 Unix 哲学观（以《UNIX 编程艺术》为核心）
 
 >**思考题**
 >
 >> Those who do not understand Unix are condemned to reinvent it, poorly. （那些不懂 Unix 的人注定要再造一个四不像式 Unix）
 >>
->>——[Henry Spencer](https://www.nasa.gov/history/alsj/henry.html) [备份](https://web.archive.org/web/20260115025048/https://www.nasa.gov/history/alsj-and-afj/) 
+>>——[Henry Spencer](https://www.nasa.gov/history/alsj/henry.html) [备份](https://web.archive.org/web/20260115025048/https://www.nasa.gov/history/alsj-and-afj/)
 >
 >作者 Henry Spencer 并未明确批评哪个操作系统，那么你认为，现在这句话更适合哪个常见的操作系统？为什么？
 
@@ -60,23 +58,12 @@ Unix 哲学源于 UNIX 操作系统的开发实践，并由 Ken Thompson、Denni
 - 沉默是金（无报错就沉默，成功则无输出，不显示操作进度等）
 - 避免仅用户界面（避免无命令行，仅 GUI）
 
-##### 参考文献
+#### 参考文献
 
 - 《UNIX 编程艺术》，Eric Raymond 著，ISBN: 9787121176654，电子工业出版社。
 - 《Linux/Unix 设计思想》，Mike Gancarz 著，9787115266927，人民邮电出版社。（已绝版）
-- [The Open Group Standards Process](https://www.opengroup.org/standardsprocess/certification.html) [备份](https://web.archive.org/web/20260115021154/https://www.opengroup.org/standardsprocess/certification.html) 
+- [The Open Group Standards Process](https://www.opengroup.org/standardsprocess/certification.html) [备份](https://web.archive.org/web/20260115021154/https://www.opengroup.org/standardsprocess/certification.html)
 
-### 二十一世纪四分之一处的 Unix 哲学观
-
-事实证明，技术很快就会过时。这也是很多人在今天认为谈论 Unix，谈论 Unix 哲学毫无意义的重要原因。因为他们的确过时了，将 Unix 哲学简单仅归结为纯粹而具体的技术性操作，这是对 Unix 哲学最大的误读。也是促使不少人走上苦难哲学这条改旗易帜的歪路的诱因。
-
-真正的 Unix 哲学绝不是上面那些陈旧古板的祖宗之法，Unix 哲学的精髓在于以人为本，真正的 Unix 哲学是一种人道主义。在不同的年代，Unix 哲学应有不同的诠释，但是归根结底是一种人道主义——我们要高扬人的主体性。正是为了好玩，为了玩太空旅行才诞生了 Unix，为了“Just For Fun”才有了 Linux：这无不说明，是改造计算机以适应人，而非强迫让人去适应所谓计算机的规则，去迎合吹捧那些本就拙劣不堪的设计思路。
-
-大道至简在西方哲学中表现为奥卡姆的剃刀，即“如无必要，勿增实体。”这在某种程度上也启发了现象学的观念，我们应该将一些自行设定的观念从我们的脑子里排除出去，只留下我们能够直接感受到的东西——即回到事物本身。
-
-我们现在回到操作系统本身，回到计算机本身，计算机不应成为一种额外的负担，而应为人所服务——正如 FreeBSD 的口号“The Power To Serve（服务的力量）”那样。
-
-所以，现代的 Unix 哲学具体不应该是“避免仅用户界面”，而应该是“避免仅命令行”。每款程序都应该报告自己的操作进度，最好还有进度条（无论是否真的体现了进度），可以使用参数静默上述行为，但默认行为不应该是所谓的沉默是金——你有多少次在使用 `dd`、`cp` 等命令的时候渴望看到一个进度条而不是什么都没有，即使是卡死了也不知道？ChatGPT 这种程序无疑是对“小即美”，“一个程序只做一件事”最大的反叛。人们需要什么，就应该有什么。
 
 ### Unix 的一段历史
 
@@ -108,7 +95,7 @@ Multics 意图创造强悍的新软件和比肩 IBM 7094 功能更丰富的新�
 
 根据 Linux 内核文档 [1.5. Licensing](https://www.kernel.org/doc/html/latest/process/1.Intro.html)（另见 [Linux kernel licensing rules](https://www.kernel.org/doc/html/latest/process/license-rules.html)）：
 
->Code is contributed to the Linux kernel under a number of licenses, but all code must be compatible with version 2 of the GNU General Public License (GPLv2), which is the license covering the kernel distribution as a whole. In practice, that means that all code contributions are covered either by GPLv2 (with, optionally, language allowing distribution under later versions of the GPL) or the three-clause BSD license. Any contributions which are not covered by a compatible license will not be accepted into the kernel.（Linux 内核中的代码是在多种许可证之下被贡献的，但所有代码都必须与 GNU 通用公共许可证第 2 版（ GPLv2 ）兼容，而该许可证覆盖了所有内核发行文件。实际上，这意味着所有对代码的贡献要么受 GPLv2 约束（可选地包含允许在 GPL 后续版本下发布的条款），要么受三条款 BSD 许可证约束。任何未被兼容许可证覆盖的贡献都不会被接纳进内核。）
+>Code is contributed to the Linux kernel under a number of licenses, but all code must be compatible with version 2 of the GNU General Public License (GPLv2), which is the license covering the kernel distribution as a whole. In practice, that means that all code contributions are covered either by GPLv2 (with, optionally, language allowing distribution under later versions of the GPL) or the three-clause BSD license. Any contributions which are not covered by a compatible license will not be accepted into the kernel.（Linux 内核中的代码是在多种许可证之下被贡献的，但所有代码都必须与 GNU 通用公共许可证第 2 版（GPLv2）兼容，而该许可证覆盖了所有内核发行文件。实际上，这意味着所有对代码的贡献要么受 GPLv2 约束（可选地包含允许在 GPL 后续版本下发布的条款），要么受三条款 BSD 许可证约束。任何未被兼容许可证覆盖的贡献都不会被接纳进内核。）
 
 我们有必要了解一下 GPL 背后的故事。
 
@@ -117,7 +104,7 @@ Multics 意图创造强悍的新软件和比肩 IBM 7094 功能更丰富的新�
 由于 Unix 在后期愈发封闭，许可证昂贵、受限制于商业公司等原因，RMS（Richard Matthew Stallman）就想创造一款自由且兼容 Unix 的操作系统。
 
 - 1983 年，RMS 发表 [《GNU 宣言》](https://www.gnu.org/gnu/manifesto.html) [备份](https://web.archive.org/web/20260115033223/https://www.gnu.org/gnu/manifesto.html) ，其中 GNU 即 GNU is Not Unix（GNU 不是 Unix）。GNU 是一款操作系统——旨在完全替代 Unix。
-- 1984 年，创建 [GNU 项目](https://www.gnu.org/) [备份](https://web.archive.org/web/20260115033101/https://www.gnu.org/) 
+- 1984 年，创建 [GNU 项目](https://www.gnu.org/) [备份](https://web.archive.org/web/20260115033101/https://www.gnu.org/)
 - 1985 年，RMS 创建自由软件基金会（Free Software Foundation，FSF）
 - 1989 年，FSF 发布 GPLv1
 - 1991 年，FSF 发布 GPLv2
