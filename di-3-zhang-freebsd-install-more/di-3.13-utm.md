@@ -1,14 +1,16 @@
 # 3.13 基于 Apple M1 和 UTM 安装 FreeBSD
 
-首先下载 FreeBSD 的安装介质镜像。注意自己下载的是 aarch64 的还是 amd64 的，除非有特殊需求，建议下载 aarch64 的，相同架构速度快一些，性能损失小。
+首先下载 FreeBSD 的安装介质镜像。
+
+读者需要注意此处建议下载 aarch64 架构，除非有特殊需求，否则建议下载 aarch64 的，相同架构速度快一些（M1 为 aarch64 架构），性能损失小。
 
 ![下载安装镜像](../.gitbook/assets/install_bsd_on_utm/0.png)
 
-接下来新建一个虚拟机，点击窗口上的加号。
+接下来新建一个虚拟机，点击窗口上的加号 `+`。
 
 ![新建虚拟机](../.gitbook/assets/install_bsd_on_utm/1.png)
 
-如果你下载的是 aarch64 的镜像，选择“虚拟化”，如果是 amd64 的镜像，选择“模拟”。
+如果你下载的是 aarch64 的镜像，选择“虚拟化”；如果是 amd64 的镜像，选择“模拟”。
 
 ![选择虚拟化类型](../.gitbook/assets/install_bsd_on_utm/2.png)
 
@@ -36,13 +38,13 @@
 
 ![结束设置](../.gitbook/assets/install_bsd_on_utm/8.png)
 
-点击大大的播放按钮即可启动虚拟机。
+点击播放按钮即可启动虚拟机。
 
 ![启动虚拟机](../.gitbook/assets/install_bsd_on_utm/9.png)
 
 ![虚拟机启动界面](../.gitbook/assets/install_bsd_on_utm/10.png)
 
-启动 FreeBSD 安装介质镜像，按 Enter 可以跳过三秒的等待时间。
+启动 FreeBSD 安装介质镜像，按回车键可以启动菜单跳过等待时间。
 
 ![系统引导界面](../.gitbook/assets/install_bsd_on_utm/11.png)
 
@@ -50,7 +52,7 @@
 
 ![安装程序界面](../.gitbook/assets/install_bsd_on_utm/12.png)
 
-系统基础安装完成，终端能正常运行，在虚拟机里面执行 ifconfig 看到 IP 以后可以在宿主机的终端模拟器中连接。
+基本系统安装完成，终端能正常运行，在虚拟机里面执行 ifconfig 看到 IP 以后可以在宿主机的终端模拟器中连接。
 
 ![终端](../.gitbook/assets/install_bsd_on_utm/13.png)
 
@@ -58,9 +60,11 @@
 
 ## 未竟事宜
 
+### Xorg 不可用
+
 直接启动 Xorg 默认的窗口管理器 TWM 会报错，输出内容如下：
 
-```
+```sh
 voosk@BSDVM:~ $ startx
 xauth:  file /home/voosk/.serverauth.3074 does not exist
 
@@ -102,16 +106,16 @@ xinit: server error
 voosk@BSDVM:~ $
 ```
 
-在 /boot/loader.conf 里面加入下面两行能成功启动 TWM ，但是虚拟机就看不到画面了（ssh仍然能连进去，说明只是显示问题）。
+在 `/boot/loader.conf` 里面加入下面两行能成功启动 TWM ，但是虚拟机就看不到画面了（ssh 仍然能连进去，说明只是显示问题）。
 
-```
+```sh
 hint.virtio_gpu.0.disabled="1"
 hint.vtgpu.0.disabled="1"
 ```
 
 重启以后 startx 能够正常启动 TWM ，输出如下：
 
-```
+```sh
 voosk@BSDVM:~ $ startx
 xauth:  file /home/voosk/.serverauth.3072 does not exist
 
