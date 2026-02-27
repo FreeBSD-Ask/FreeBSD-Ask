@@ -2,6 +2,8 @@
 
 ## 2026 年第一季度
 
+- 2026.2.28
+  新增“3.13 基于 Apple M1 和 UTM 安装 FreeBSD”
 - 2026.2.18
   - “21.2 通过 FreeBSD Ports 安装 Rocky Linux 兼容层”新增“Rocky Linux 版本号概述”
   - 根据 <https://reviews.freebsd.org/D55303> 以及 <https://cgit.freebsd.org/src/commit/?id=62fba0054d9eb2303116f54be1f9bc0e7b75cc15>，目前 FreeBSD 16-CURRENT 已经引入 UTF-8 支持，如中文。本地测试通过
