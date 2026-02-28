@@ -1,4 +1,4 @@
-# 6.9 LXQt
+# 6.8 LXQt
 
 ## 安装 LXQt
 
