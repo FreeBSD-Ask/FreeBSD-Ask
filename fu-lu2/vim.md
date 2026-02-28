@@ -2,35 +2,32 @@
 
 >**思考题**
 >
->>沉迷工具的美化，花费相当长时间来配置 vim，neovim，emacs 等，最后也仅仅是堪堪达到了一个基本能用，却只是媲美初级 IDE 的工具，这是一种苦难哲学。
+>>沉迷工具的美化，花费相当长时间来配置 Vim，Neovim，Emacs 等，最后也仅仅是堪堪达到了一个基本能用，却只是媲美初级 IDE 的工具，这是一种苦难哲学。
+>>
+>>有的人并非出于学业或工作等目的才使用这些东西，还是好玩就行。但是这并不是指好玩就是业余，反而应该更专业。业余或民间本指热爱，反而被污名化了。
 >
->这个问题请读者自行回答。
+>读者怎样理解上面的话？
 
-本节待办事项：
+## 安装 Vim 及插件管理器
 
-- vim 配置的内容仅仅描述了插件的自动补全，完全没有描述如何运行与调试，还需要集成自动化/GUI/AI
-- vim 的配置实在是太麻烦了，将 vim 换成更好配置，更现代化的 neovim 甚至推荐 lazyvim 等作为辅助
+### 安装 Vim
 
-感兴趣的读者可以进行撰写，然后发起 PR。
-
-## 安装 vim 及插件管理器
-
-- 使用 pkg 安装：
+使用 pkg 安装：
 
 ```sh
 # pkg install vim
 ```
 
-- 或者使用 Ports 安装：
+或者使用 Ports 安装：
 
 ```
 # cd /usr/ports/editors/vim/ 
 # make install clean
 ```
 
----
+### 安装 Vim 插件管理器
 
-安装 vim 插件管理器 vim-plug。若使用其它插件管理器，请自行调整：
+此处将安装 vim 插件管理器 vim-plug。若使用其它插件管理器，请自行调整：
 
 ```sh
 $ mkdir -p ~/.vim/autoload   # 创建 Vim 自动加载目录
@@ -41,20 +38,7 @@ $ fetch -o ~/.vim/autoload/plug.vim https://raw.githubusercontent.com/junegunn/v
 
 Coc.nvim 是一款基于 Node.js 的智能补全插件，适用于 Vim 和 Neovim，支持完整的 LSP（Language Server Protocol，语言服务协议）。其配置方式和插件系统整体风格类似 VSCode。clangd 用于为 C/C++ 提供 LSP 支持。
 
-使用 pkg 安装 coc.nvim 依赖
-
-```sh
-# pkg install npm
-```
-
-或者使用 ports 安装：
-
-```sh
-# cd /usr/ports/www/npm/ 
-# make install clean
-```
-
-其中 node 作为依赖会自动安装。
+使用 pkg 安装 coc.nvim 依赖，请读者参照其他章节安装 npm，其中 node 作为依赖会自动安装。
 
 在 `~/.vimrc` 中写入
 
@@ -70,13 +54,13 @@ call plug#end()                             # 结束插件安装块
 :PlugInstall
 ```
 
-插件安装完成，仍继续在 vim 中，安装 json clangd cmake 补全插件：
+插件安装完成，仍继续在 Vim 中，安装 json clangd cmake 补全插件：
 
 ```sh
 :CocInstall coc-json coc-clangd coc-cmake
 ```
 
-配置 clangd 补全：在 vim 中使用 Coc.nvim 安装 JSON、Clang 和 CMake 支持插件。
+配置 clangd 补全：在 Vim 中使用 Coc.nvim 安装 JSON、Clang 和 CMake 支持插件。
 
 ```sh
 :CocConfig
@@ -329,3 +313,11 @@ $ cmake ..                   # 运行 CMake 配置上级目录的项目
 
 ![](../.gitbook/assets/ccenv8.png)
 
+## 未竟事项
+
+### 本节待办事项
+
+- vim 配置的内容仅仅描述了插件的自动补全，完全没有描述如何运行与调试，还需要集成自动化/GUI/AI
+- vim 的配置实在是太麻烦了，将 vim 换成更好配置，更现代化的 neovim 甚至推荐 lazyvim 等作为辅助
+
+感兴趣的读者可以进行撰写，然后发起 PR。
