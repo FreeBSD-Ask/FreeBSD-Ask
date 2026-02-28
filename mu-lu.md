@@ -77,7 +77,7 @@
 * [6.5 MATE](di-6-zhang-zhuo-mian-an-zhuang/di-6.5-jie-an-zhuang-mate.md)
 * [6.6 Xfce](di-6-zhang-zhuo-mian-an-zhuang/di-6.6-jie-an-zhuang-xfce.md)
 * [6.7 Cinnamon](di-6-zhang-zhuo-mian-an-zhuang/di-6.7-jie-an-zhuang-cinnamon.md)
-* [6.8 Lumina](di-6-zhang-zhuo-mian-an-zhuang/di-6.8-jie-an-zhuang-lumina.md)
+* [6.8 Lumina（拟删除）](di-6-zhang-zhuo-mian-an-zhuang/di-6.8-jie-an-zhuang-lumina.md)
 * [6.9 LXQt](di-6-zhang-zhuo-mian-an-zhuang/di-6.9-jie-an-zhuang-lxqt.md)
 * [6.10 GNOME](di-6-zhang-zhuo-mian-an-zhuang/di-6.10-jie-an-zhuang-gnome.md)
 * [6.11 CDE](di-6-zhang-zhuo-mian-an-zhuang/di-6.11-jie-an-zhuang-cde.md)
