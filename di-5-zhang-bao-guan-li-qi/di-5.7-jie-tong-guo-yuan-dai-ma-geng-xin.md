@@ -84,27 +84,6 @@ $ git clone --branch releng/15.0 --single-branch --depth 1 https://github.com/fr
 - [Submitting GitHub Pull Requests to FreeBSD](https://freebsdfoundation.org/our-work/journal/browser-based-edition/configuration-management-2/submitting-github-pull-requests-to-freebsd/) [备份](https://web.archive.org/web/20260115021904/https://freebsdfoundation.org/our-work/journal/browser-based-edition/configuration-management-2/submitting-github-pull-requests-to-freebsd/)
 
 
-## Gitup
-
-使用 pkg 安装 Gitup：
-
-```sh
-# pkg install gitup
-```
-
-还可以使用 ports 安装 Gitup：
-
-```sh
-# cd /usr/ports/net/gitup/ 
-# make install clean
-```
-
-```sh
-# gitup release # 具体版本需要参考当前 gitup 配置 https://github.com/johnmehr/gitup/blob/main/gitup.conf
-# gitup current # 获取 current 源代码
-```
-
-
 ## 从压缩包获取源代码（方便但非最新）
 
 该方法较为简单快捷。
