@@ -298,7 +298,7 @@
 * [FreeBSD 兼容的网络适配器](fu-lu2/yi-tai-wang-ka.md)
 * [FreeBSD 桌面发行版评述](fu-lu2/others-bsd.md)
 * [BSD 许可证概览](fu-lu2/xukez.md)
-* [vim 编程环境配置](fu-lu2/vim.md)
+* [Vim 编程环境配置](fu-lu2/vim.md)
 
 ## 附录 III UEFI 与 BIOS 基础（基于 AMI BIOS）
 
