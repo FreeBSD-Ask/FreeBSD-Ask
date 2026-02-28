@@ -1,73 +1,6 @@
-# 22.4 C/C++ 环境的配置
+# vim 编程环境配置
 
-## 概述
-
-FreeBSD 基本系统内置 Clang 编译器，但并不包含 LLVM 中的其他组件，如 clangd（语言服务器，用于代码补全、编译错误提示和定义跳转等）、Clang-Tidy（代码风格诊断器）以及 clang-format（用于格式化 C/C++ 代码）。
-
-因此需要安装 LLVM，这里可以使用各个版本的 LLVM，但其版本至少不应低于系统自带的 Clang。在 FreeBSD 15.0-RELEASE 中，基本系统中的 Clang 版本为 19。
-
-查看 Clang 编译器的版本信息：
-
-```sh
-# clang -v
-FreeBSD clang version 19.1.7 (https://github.com/llvm/llvm-project.git llvmorg-19.1.7-0-gcd708029e0b2)
-Target: x86_64-unknown-freebsd15.0
-Thread model: posix
-InstalledDir: /usr/bin
-```
-
-下文使用 LLVM 20，安装后对应的程序名为 clang20、clang++20、clangd20 和 clang-format20。系统自带的 Clang 程序名为 `clang`。如果使用不同版本，请注意对应的程序名称。
-
-### Clang 版本概述
-
-#### LLVM 项目上游的 LLVM 版本号
-
-在 LLVM 项目上游的源代码中，在 LLVM 19 之前，LLVM 源代码的版本号规定在文件 `llvm/CMakeLists.txt` 中，在 [[cmake] Exposes LLVM version number in the runtimes.](https://github.com/llvm/llvm-project/commit/81e20472a0c5a4a8edc5ec38dc345d580681af81) 之后，LLVM 版本号规定在源文件 [‎cmake/Modules/LLVMVersion.cmake](https://github.com/llvm/llvm-project/blob/main/cmake/Modules/LLVMVersion.cmake) 中。
-
-```cmake
-# The LLVM Version number information
-# LLVM 版本号信息
-
-if(NOT DEFINED LLVM_VERSION_MAJOR)
-  set(LLVM_VERSION_MAJOR 23) # 注意此处，代表写作本文时，主线版本是 LLVM 23
-
-……省略其他内容……
-```
-
-#### FreeBSD 基本系统中的 LLVM 版本号
-
-FreeBSD 将 LLVM 导入了基本系统源代码中，但是不是直接导入，而是经过了一定的处理，写作文章时 FreeBSD src 内置的 LLVM 仍为 LLVM 19，故而，注明版本号的文件路径位于 [lib/clang/include/clang/Basic/Version.inc](https://github.com/freebsd/freebsd-src/blob/main/lib%2Fclang%2Finclude%2Fclang%2FBasic%2FVersion.inc)：
-
-```c
-#define	CLANG_VERSION			19.1.7
-#define	CLANG_VERSION_STRING		"19.1.7"
-#define	CLANG_VERSION_MAJOR		19
-#define	CLANG_VERSION_MAJOR_STRING	"19"
-#define	CLANG_VERSION_MINOR		1
-#define	CLANG_VERSION_PATCHLEVEL	7
-
-#define	CLANG_VENDOR			"FreeBSD "
-```
-
-## 安装 Clang 环境包
-
-- 使用 pkg 安装：
-
-```sh
-# pkg install llvm20 cmake git
-```
-
-- 或者使用 Ports 安装：
-
-```
-# cd /usr/ports/devel/llvm20/ && make install clean
-# cd /usr/ports/devel/cmake/ && make install clean
-# cd /usr/ports/devel/git/ && make install clean
-```
-
-## 配置 vim
-
-### 安装 vim 及插件管理器
+## 安装 vim 及插件管理器
 
 - 使用 pkg 安装：
 
@@ -91,7 +24,7 @@ $ mkdir -p ~/.vim/autoload   # 创建 Vim 自动加载目录
 $ fetch -o ~/.vim/autoload/plug.vim https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim   # 下载 vim-plug 插件管理器到指定目录
 ```
 
-### coc.nvim 添加 clangd 补全
+## coc.nvim 添加 clangd 补全
 
 Coc.nvim 是一款基于 Node.js 的智能补全插件，适用于 Vim 和 Neovim，支持完整的 LSP（Language Server Protocol，语言服务协议）。其配置方式和插件系统整体风格类似 VSCode。clangd 用于为 C/C++ 提供 LSP 支持。
 
@@ -207,11 +140,11 @@ export CXX=clang++20    # 设置 C++ 编译器为 clang++20
 >
 >以下操作在 sh/bash/zsh 中使用，csh/tcsh 请作相应改动
 
-### 代码美化
+## 代码美化
 
 vim-clang-format 多年未更新，因此对新版本的 clang-format 支持存在问题（clang-format15 可正常使用，而 clang-format17 和 clang-format19 可能存在异常）。因此，推荐使用 vim-codefmt。
 
-#### vim-codefmt 代码美化
+### vim-codefmt 代码美化
 
 `~/.vimrc` 中加入：
 
@@ -251,7 +184,7 @@ augroup END
 此时可以在退出插入模式后自动格式化代码，也可以在 Vim 中手动执行 `:FormatCode` 命令进行格式化。
 
 
-#### vim-clang-format 代码美化
+### vim-clang-format 代码美化
 
 clang-format 代码美化需安装插件 vim-clang-format。
 
@@ -285,7 +218,7 @@ let g:clang_format#auto_format_on_insert_leave = 1           # 在离开插入�
 
 ![](../.gitbook/assets/ccenv5.png)
 
-### asynctasks.vim 构建任务系统
+## asynctasks.vim 构建任务系统
 
 插件 asynctasks.vim 为 Vim 引入类似 VSCode 的 tasks 任务系统，以统一方式系统化管理各类编译、运行、测试和部署任务。
 
@@ -325,7 +258,7 @@ cwd=<root>
 
 - [asynctasks.vim - 现代化的构建任务系统](https://github.com/skywind3000/asynctasks.vim/blob/master/README-cn.md) [备份](https://web.archive.org/web/20260203104135/https://github.com/skywind3000/asynctasks.vim/blob/master/README-cn.md)
 
-### 最后以最简单的 C++ hello world 项目为例
+## 最后以最简单的 C++ hello world 项目为例
 
 项目文件结构如下：
 
@@ -383,6 +316,3 @@ $ cmake ..                   # 运行 CMake 配置上级目录的项目
 
 ![](../.gitbook/assets/ccenv8.png)
 
-## 参考文献
-
-- [algcl](https://github.com/Jianping-Duan/algcl) [备份](https://web.archive.org/web/20260121064214/https://github.com/Jianping-Duan/algcl)，一些可直接运行于 FreeBSD 的 C 语言算法与数据结构编程实例。
