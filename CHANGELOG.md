@@ -4,6 +4,7 @@
 
 - 2026.2.28
   - 新增“3.13 基于 Apple M1 和 UTM 安装 FreeBSD”
+  - “20.2 我的世界（Minecraft）”新增“Prism Launcher 启动器”
   - 将“5.3 gitup 的用法”合并入 5.4 作为附录，作拟删除处理。原因：缺乏实质性维护近 2 年。
     - 若其在 2026 年 9 月 1 日前仍未有任何实质性版本提交到 Ports，则删除该附录。
   - 删除“21.5 基于 archlinux-pacman 的 Arch Linux 兼容层（拟删除）”。原因：存在 Bug 287690 [sysutils/pacman: The archlinux flavor cannot be built or installed.](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=287690) 无法得到解决
