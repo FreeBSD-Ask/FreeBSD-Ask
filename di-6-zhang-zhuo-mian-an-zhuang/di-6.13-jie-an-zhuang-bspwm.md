@@ -1,4 +1,4 @@
-# 7.1 bspwm
+# 6.13 bspwm
 
 bspwm，据说更符合 UNIX 哲学（参见 [bspwm 入门](https://zerovip.vercel.app/zh/63233/) [备份](https://web.archive.org/web/20260120225041/https://zerovip.vercel.app/zh/63233/)，7.2 Unix 哲学）。
 

@@ -1,4 +1,4 @@
-# 7.4 Hyprland
+# 6.16 Hyprland
 
 >**警告**
 >
