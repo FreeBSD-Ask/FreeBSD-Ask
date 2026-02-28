@@ -4,10 +4,12 @@
 
 - 2026.2.28
   - 新增“3.13 基于 Apple M1 和 UTM 安装 FreeBSD”
-  - 将“5.3 gitup 的用法”合并入 5.4 作为附录，作拟删除处理。原因：缺乏实质性维护近 2 年
+  - 将“5.3 gitup 的用法”合并入 5.4 作为附录，作拟删除处理。原因：缺乏实质性维护近 2 年。
+    - 若其在 2026 年 9 月 1 日前仍未有任何实质性版本提交到 Ports，则删除该附录。
   - 删除“21.5 基于 archlinux-pacman 的 Arch Linux 兼容层（拟删除）”。原因：存在 Bug 287690 [sysutils/pacman: The archlinux flavor cannot be built or installed.](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=287690) 无法得到解决
   - 删除“6.10 Budgie（拟删除）”，原因：欠缺维护，存在 [Bug 289898 x11/budgie: After logging in with LightDM, it crashes and then shows a black screen](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=289898) 无法得到解决
   - 将“附录：登录界面主题”从“6.3 KDE 6（X11 会话）”彻底删除，因为软件源中仅存在 Port x11-themes/sddm-freebsd-black-theme，且无人维护，存在 [x11-themes/sddm-freebsd-black-theme incompatible with SDDM 0.21.0 (Qt6 greeter)](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=293449) 无法得到解决
+  - 注意到 Lumina 实际上不存在任何维护者，且长期未更新，作拟删除处理。若其在 2026 年 9 月 1 日前仍未有任何提交则删除该章节。
 - 2026.2.18
   - “21.2 通过 FreeBSD Ports 安装 Rocky Linux 兼容层”新增“Rocky Linux 版本号概述”
   - 根据 <https://reviews.freebsd.org/D55303> 以及 <https://cgit.freebsd.org/src/commit/?id=62fba0054d9eb2303116f54be1f9bc0e7b75cc15>，目前 FreeBSD 16-CURRENT 中的 ee 编辑器已经引入 UTF-8 支持，如中文。本地测试通过
