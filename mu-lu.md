@@ -82,18 +82,17 @@
 * [6.10 GNOME](di-6-zhang-zhuo-mian-an-zhuang/di-6.10-jie-an-zhuang-gnome.md)
 * [6.11 CDE](di-6-zhang-zhuo-mian-an-zhuang/di-6.11-jie-an-zhuang-cde.md)
 * [6.12 LXDE](di-6-zhang-zhuo-mian-an-zhuang/di-6.12-lxde.md)
-* [6.13 主题美化](di-6-zhang-zhuo-mian-an-zhuang/di-6.13-jie-zhu-ti-yu-mei-hua.md)
-* [6.14 远程桌面](di-6-zhang-zhuo-mian-an-zhuang/di-6.14-jie-yuan-cheng-zhuo-mian-guan-li.md)
-* [6.15 启用 root 桌面登录](di-6-zhang-zhuo-mian-an-zhuang/di-6.15-jie-root-deng-lu-zhuo-mian.md)
+* [6.13 bspwm](di-7-zhang-chuang-kou/di-6.13-jie-an-zhuang-bspwm.md)
+* [6.14 IceWM](di-7-zhang-chuang-kou/di-6.14-icewm.md)
+* [6.15 i3wm](di-7-zhang-chuang-kou/di-6.15-jie-an-zhuang-i3wm.md)
+* [6.16 Hyprland](di-7-zhang-chuang-kou/di-6.16-jie-an-zhuang-hyprland.md)
+* [6.17 主题美化](di-6-zhang-zhuo-mian-an-zhuang/di-6.17-jie-zhu-ti-yu-mei-hua.md)
+* [6.18 远程桌面](di-6-zhang-zhuo-mian-an-zhuang/di-6.18-jie-yuan-cheng-zhuo-mian-guan-li.md)
+* [6.19 启用 root 账户登录](di-6-zhang-zhuo-mian-an-zhuang/di-6.19-jie-root-deng-lu-zhuo-mian.md)
 
-## 第 7 章 窗口管理器
+## 第 7 章 人工智能（AI）
 
-* [7.1 bspwm](di-7-zhang-chuang-kou/di-7.1-jie-an-zhuang-bspwm.md)
-* [7.2 IceWM](di-7-zhang-chuang-kou/di-7.2-icewm.md)
-* [7.3 i3wm](di-7-zhang-chuang-kou/di-7.3-jie-an-zhuang-i3wm.md)
-* [7.4 Hyprland](di-7-zhang-chuang-kou/di-7.4-jie-an-zhuang-hyprland.md)
-* [7.5 Window Maker](di-7-zhang-chuang-kou/di-7.5-winmaker.md)
-* [7.6 Fluxbox](di-7-zhang-chuang-kou/di-7.6-fluxbox.md)
+* [7.1 人工智能（AI）概述](di-7-zhang-ai/di-7.1-jie-AI-gai-shu.md)
 
 ## 第 8 章 本地化与中文环境配置
 
@@ -230,7 +229,7 @@
 * [22.1 如何报告缺陷（Bug）](di-22-zhang-bian-cheng-yu-kai-fa/di-22.1-jie-ru-he-bao-gao-bug.md)
 * [22.2 如何开发一个 Port](di-22-zhang-bian-cheng-yu-kai-fa/di-22.2-jie-ru-he-ti-jiao-yi-ge-ruan-jian-bao.md)
 * [22.3 如何参与 FreeBSD 开发](di-22-zhang-bian-cheng-yu-kai-fa/di-22.3-jie-ru-he-can-yu-freebsd-xie-zuo.md)
-* [22.4 C/C++ 环境的配置](di-22-zhang-bian-cheng-yu-kai-fa/di-22.4-jie-cc++-huan-jing-de-pei-zhi.md)
+* [22.4 LLVM / Clang 概述](di-22-zhang-bian-cheng-yu-kai-fa/di-22.4-jie-llvm.md)
 * [22.5 Java 环境的配置](di-22-zhang-bian-cheng-yu-kai-fa/di-22.5-jie-java-huan-jing-de-pei-zhi.md)
 * [22.6 Qt 环境的配置](di-22-zhang-bian-cheng-yu-kai-fa/di-22.6-jie-qt-huan-jing-de-pei-zhi.md)
 * [22.7 Python 和 VS Code](di-22-zhang-bian-cheng-yu-kai-fa/di-22.7-jie-python-yu-vscode.md)
@@ -300,6 +299,7 @@
 * [FreeBSD 兼容的网络适配器](fu-lu2/yi-tai-wang-ka.md)
 * [FreeBSD 桌面发行版评述](fu-lu2/others-bsd.md)
 * [BSD 许可证概览](fu-lu2/xukez.md)
+* [vim 编程环境配置](fu-lu2/vim.md)
 
 ## 附录 III UEFI 与 BIOS 基础（基于 AMI BIOS）
 

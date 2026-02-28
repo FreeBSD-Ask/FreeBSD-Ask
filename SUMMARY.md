@@ -88,7 +88,7 @@
 * [6.16 Hyprland](di-6-zhang-zhuo-mian-an-zhuang/di-6.16-jie-an-zhuang-hyprland.md)
 * [6.17 主题美化](di-6-zhang-zhuo-mian-an-zhuang/di-6.17-jie-zhu-ti-yu-mei-hua.md)
 * [6.18 远程桌面](di-6-zhang-zhuo-mian-an-zhuang/di-6.18-jie-yuan-cheng-zhuo-mian-guan-li.md)
-* [6.19 启用 root 桌面登录](di-6-zhang-zhuo-mian-an-zhuang/di-6.19-jie-root-deng-lu-zhuo-mian.md)
+* [6.19 启用 root 账户登录](di-6-zhang-zhuo-mian-an-zhuang/di-6.19-jie-root-deng-lu-zhuo-mian.md)
 
 ## 第 7 章 人工智能（AI）
 
