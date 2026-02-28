@@ -5,7 +5,11 @@
 从前，UNIX 是一款操作系统。它最初使用汇编语言编写，后主要由 C 语言重写。UNIX 起源于 AT&T（American Telephone & Telegraph，美国电话电报公司）的贝尔实验室。
 
 
-现在，它是一种 **标准规范**、一款 **法律上的商标**。更是一种 **哲学思想**，一项 **软件工程原则**。
+现在，它是一种 **[标准规范](https://www.opengroup.org//openbrand/register/xym0.htm)**、一款 **[法律上的商标](https://www.opengroup.org//openbrand/register/index2.html)**。更是一种 **哲学思想**，一项 **软件工程原则**。
+
+
+>Only systems that are fully compliant and certified according to the Single UNIX Specification are qualified to use the UNIX® trademark.（只有完全符合并经过《单一 UNIX 规范》认证的系统，才有资格使用 UNIX® 商标。
+）——[UNIX® Certification](https://www.opengroup.org//openbrand/register/)
 
 ---
 
