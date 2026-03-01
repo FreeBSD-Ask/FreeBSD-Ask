@@ -2,6 +2,10 @@
 
 ## 2026 年第一季度
 
+- 2026.3.1
+  - 新增“22.15 在 FreeBSD 上开发 C/C++”
+  - “4.6 文本编辑器”新增“Emacs 编辑器、Vim”
+  - 将“22.7 Python 和 VS Code”中的 VS Code 章节拆分至“22.15 在 FreeBSD 上开发 C/C++”
 - 2026.2.28
   - 新增“3.13 基于 Apple M1 和 UTM 安装 FreeBSD”
   - “20.2 我的世界（Minecraft）”新增“Prism Launcher 启动器”

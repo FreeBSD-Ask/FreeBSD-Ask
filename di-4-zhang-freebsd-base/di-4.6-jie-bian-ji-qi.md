@@ -124,6 +124,7 @@ NeoVim 是 vim 的重构分支，更加模块化，支持 Lua 脚本，插件生
 # cd /usr/ports/editors/neovim
 # make install clean
 ```
+
 #### 配置 NeoVim
 
 **基础配置**：NeoVim 的配置文件位于 `~/.config/nvim/init.lua`（推荐使用 Lua）。
