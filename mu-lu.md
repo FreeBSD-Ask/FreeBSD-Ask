@@ -228,7 +228,7 @@
 * [22.1 如何报告缺陷（Bug）](di-22-zhang-bian-cheng-yu-kai-fa/di-22.1-jie-ru-he-bao-gao-bug.md)
 * [22.2 如何开发一个 Port](di-22-zhang-bian-cheng-yu-kai-fa/di-22.2-jie-ru-he-ti-jiao-yi-ge-ruan-jian-bao.md)
 * [22.3 如何参与 FreeBSD 开发](di-22-zhang-bian-cheng-yu-kai-fa/di-22.3-jie-ru-he-can-yu-freebsd-xie-zuo.md)
-* [22.4 LLVM / Clang 概述](di-22-zhang-bian-cheng-yu-kai-fa/di-22.4-jie-llvm.md)
+* [22.4 在 FreeBSD 上开发 C/C++](di-22-zhang-bian-cheng-yu-kai-fa/di-22.4-jie-zai-freebsd-shang-kai-fa-c-cpp.md)
 * [22.5 Java 环境的配置](di-22-zhang-bian-cheng-yu-kai-fa/di-22.5-jie-java-huan-jing-de-pei-zhi.md)
 * [22.6 Qt 环境的配置](di-22-zhang-bian-cheng-yu-kai-fa/di-22.6-jie-qt-huan-jing-de-pei-zhi.md)
 * [22.7 Python](di-22-zhang-bian-cheng-yu-kai-fa/di-22.7-jie-python-yu-vscode.md)
@@ -239,7 +239,7 @@
 * [22.12 code-server 和 clangd](di-22-zhang-bian-cheng-yu-kai-fa/di-22.12-jie-an-zhuang-code-server-he-clangd.md)
 * [22.13 Node.js](di-22-zhang-bian-cheng-yu-kai-fa/di-22.13-jie-nodejs-xiang-guan.md)
 * [22.14 利用脚本自动生成 BSD libc 库文本](di-22-zhang-bian-cheng-yu-kai-fa/di-22.14-jie-li-yong-jiao-ben-zi-dong-sheng-cheng-bsdlibc-ku-wen-ben.md)
-* [22.15 在 FreeBSD 上开发 C/C++](di-22-zhang-bian-cheng-yu-kai-fa/di-22.15-jie-zai-freebsd-shang-kai-fa-c-cpp.md)
+
   
 ## 第 23 章 存储与文件系统管理
 
