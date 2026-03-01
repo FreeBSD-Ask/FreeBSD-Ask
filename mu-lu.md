@@ -189,11 +189,11 @@
 
 ## 第 18 章 嵌入式平台
 
-* [18.1 树莓派简介（Raspberry Pi）](di-18-zhang-shu-mei-pai-yu-riscv/di-18.1-jie-shu-mei-pai-de-jian-jie.md)
+* [18.1 树莓派简介 （Raspberry Pi）](di-18-zhang-shu-mei-pai-yu-riscv/di-18.1-jie-shu-mei-pai-de-jian-jie.md)
 * [18.2 树莓派安装 FreeBSD](di-18-zhang-shu-mei-pai-yu-riscv/di-18.2-jie-xi-tong-an-zhuang.md)
-* [18.3 树莓派 FreeBSD 配置](di-18-zhang-shu-mei-pai-yu-riscv/di-18.3-jie-shi-yong-pei-zhi.md)
+* [18.3 树莓派 FreeBSD 的配置](di-18-zhang-shu-mei-pai-yu-riscv/di-18.3-jie-shi-yong-pei-zhi.md)
 * [18.4 在树莓派上使用 Linux 二进制兼容层](di-18-zhang-shu-mei-pai-yu-riscv/di-18.4-jie-shu-mei-pai-yu-linux-jian-rong-ceng.md)
-* [18.5 Radxa X4（x86）](di-18-zhang-shu-mei-pai-yu-riscv/18.5-radxax4.md)
+* [18.5 Radxa X4（x86）开发板](di-18-zhang-shu-mei-pai-yu-riscv/18.5-radxax4.md)
 
 ## 第 19 章 数据库管理
 
@@ -209,7 +209,7 @@
 * [20.2 Godot 开源游戏引擎](di-20-zhang-yu-le-yu-jiao-yu/di-20.2-jie-Godot.md)
 * [20.3 我的世界（Minecraft）](di-20-zhang-yu-le-yu-jiao-yu/20.3-minecraft.md)
 * [20.4 科研和专业工具](di-20-zhang-yu-le-yu-jiao-yu/di-20.4-jie-ke-yan-yu-zhuan-ye-gong-ju.md)
-* [20.5 Steam](di-20-zhang-yu-le-yu-jiao-yu/20.5-steam.md)
+* [20.5 Steam 客户端](di-20-zhang-yu-le-yu-jiao-yu/20.5-steam.md)
 
 ## 第 21 章 Linux 二进制兼容层
 
