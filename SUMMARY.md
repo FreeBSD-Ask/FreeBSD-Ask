@@ -231,7 +231,7 @@
 * [22.4 LLVM / Clang 概述](di-22-zhang-bian-cheng-yu-kai-fa/di-22.4-jie-llvm.md)
 * [22.5 Java 环境的配置](di-22-zhang-bian-cheng-yu-kai-fa/di-22.5-jie-java-huan-jing-de-pei-zhi.md)
 * [22.6 Qt 环境的配置](di-22-zhang-bian-cheng-yu-kai-fa/di-22.6-jie-qt-huan-jing-de-pei-zhi.md)
-* [22.7 Python 和 VS Code](di-22-zhang-bian-cheng-yu-kai-fa/di-22.7-jie-python-yu-vscode.md)
+* [22.7 Python](di-22-zhang-bian-cheng-yu-kai-fa/di-22.7-jie-python-yu-vscode.md)
 * [22.8 Rust/Go 环境的配置](di-22-zhang-bian-cheng-yu-kai-fa/di-22.8-jie-rustgo-huan-jing-de-pei-zhi.md)
 * [22.9 配置 Shell](di-22-zhang-bian-cheng-yu-kai-fa/di-22.9-jie-csh-yu-qi-ta-shell.md)
 * [22.10 使用 IDA Pro 调试 FreeBSD](di-22-zhang-bian-cheng-yu-kai-fa/di-22.10-jie-tong-guo-ida-7-tiao-shi-freebsd.md)
