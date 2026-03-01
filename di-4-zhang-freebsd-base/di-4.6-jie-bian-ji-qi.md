@@ -31,7 +31,7 @@ CLI 编辑器无需图形界面，可在 SSH 远程连接、纯文本控制台�
 
 按 **ESC 键** 会显示提示框，再按两次 **回车键** 即可保存。
 
-## Vi / Vim / Neovim 编辑器
+## Vi / Vim / NeoVim 编辑器
 
 FreeBSD 还内置了一款编辑器 `vi`（实际为 `nvi`，New vi，是 4.4BSD 的重新实现）。与大多数 Linux 发行版将 `vi` 链接到 `vim` 不同，BSD 系统提供的是原生 `vi`，其用法较为复杂但功能强大。
 
@@ -102,9 +102,9 @@ set number              " 或 set nu
 " set relativenumber    " 可选：启用相对行号
 ```
 
-### Neovim（现代 Vi 改进版）
+### NeoVim（现代 Vi 改进版）
 
-Neovim 是 vim 的重构分支，更加模块化，支持 Lua 脚本，插件生态更活跃，性能更好。
+NeoVim 是 vim 的重构分支，更加模块化，支持 Lua 脚本，插件生态更活跃，性能更好。
 
 #### 安装 NeoVim
 
@@ -120,9 +120,9 @@ Neovim 是 vim 的重构分支，更加模块化，支持 Lua 脚本，插件生
 #cd /usr/ports/editors/neovim
 #make install clean
 ```
-#### 配置 Neovim
+#### 配置 NeoVim
 
-**基础配置**：Neovim 的配置文件位于 `~/.config/nvim/init.lua`（推荐使用 Lua）。
+**基础配置**：NeoVim 的配置文件位于 `~/.config/nvim/init.lua`（推荐使用 Lua）。
 
 临时启用行号的命令与 Vim 相同，如需永久启用，编辑 ~/.config/nvim/init.lua（如果不存在则创建）：
 
@@ -133,7 +133,7 @@ vim.opt.relativenumber = true  -- 显示相对行号（推荐与 number 一起�
 
 **LazyVim 介绍**：
 
-LazyVim 是一个开箱即用的 Neovim 配置发行版（distribution），基于 lazy.nvim 插件管理器，集成了代码补全、LSP、文件浏览器、Git 集成等 IDE 特性，非常适合想快速获得强大编辑体验的用户。
+LazyVim 是一个开箱即用的 NeoVim 配置发行版（distribution），基于 lazy.nvim 插件管理器，集成了代码补全、LSP、文件浏览器、Git 集成等 IDE 特性，非常适合想快速获得强大编辑体验的用户。
 
 **安装 LazyVim**（推荐全新配置）：
 
@@ -156,13 +156,13 @@ LazyVim 是一个开箱即用的 Neovim 配置发行版（distribution），基�
 
 启动后按空格键（Space）可打开 LazyVim 的快捷键菜单，非常直观。
 
-Neovim 和 Vim 共享大部分命令，上述 `:q :q! :wq :wq! :/` 等在 LazyVim 中同样适用。
+NeoVim 和 Vim 共享大部分命令，上述 `:q :q! :wq :wq! :/` 等在 LazyVim 中同样适用。
 
 ![](../.gitbook/assets/di-4.6-jie-neovim.png)
 
 > **注意**
 >
-> 本篇内容旨在简单介绍 FreeBSD 上创建的文本编辑器，不详细介绍 Vim 及 NeoVim 的详细配置，想要折腾的用户自行探索。
+> 本篇内容旨在简单介绍 FreeBSD 上常见的文本编辑器，不详细介绍 Vim 及 NeoVim 的详细配置，想要折腾的用户自行探索。
 
 ## microsoft-edit
 
@@ -208,7 +208,7 @@ Emacs 是历史悠久、功能极其强大的文本编辑器，以“可扩展�
 或者使用 ports 构建：
 
 ```sh
-#cd /usr/ports/editor/emacs
+#cd /usr/ports/editors/emacs
 #make install clean
 ```
 
