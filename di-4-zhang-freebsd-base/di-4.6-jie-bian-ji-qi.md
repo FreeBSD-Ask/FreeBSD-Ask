@@ -4,14 +4,14 @@
 
 本节将依次介绍 FreeBSD 中常见的几款文本编辑器，从最简单易上手的内置工具，到功能强大但学习曲线较陡的经典编辑器，再到现代增强版和图形化选择：
 
-| 编辑器          | 类型     | 特点简述                                      |
+| 编辑器          | 获取途径     | 特点简述                                      |
 |-----------------|----------|-----------------------------------------------|
-| ee             | 终端     | 内置、极其简单，像记事本，按 ESC 菜单操作      |
-| vi             | 终端     | 经典 modal 编辑器，BSD 原生 vi，轻量但命令多   |
-| vim            | 终端     | vi 增强版，语法高亮、插件、宏等现代功能        |
-| neovim         | 终端     | vim 重构现代版，Lua 配置、异步插件、LazyVim 发行版 |
-| emacs          | 终端/图形| 高度可扩展，几乎是“操作系统”，Lisp 配置       |
-| microsoft-edit | 图形     | 微软开源，支持中文、鼠标操作、界面友好         |
+| ee             | 基本系统    | 极其简单，像记事本，按 ESC 菜单操作      |
+| vi             | 基本系统    | 经典 modal 编辑器，BSD 原生 vi，轻量但命令多   |
+| vim            |Ports     | vi 增强版，语法高亮、插件、宏等现代功能        |
+| neovim         | Ports     | vim 重构现代版，Lua 配置、异步插件、LazyVim 发行版 |
+| emacs          | Ports| 高度可扩展，几乎是“操作系统”，Lisp 配置       |
+| microsoft-edit | Ports     | 微软开源，支持中文、鼠标操作、界面友好         |
 
 CLI 编辑器无需图形界面，可在 SSH 远程连接、纯文本控制台中使用，资源占用低。GUI 编辑器提供可视化界面和鼠标支持，更适合桌面环境。
 
@@ -99,7 +99,7 @@ ABC
 
 永久启用行号：
 
-编辑用户配置文件 ~/.vimrc（如果不存在则创建）：
+编辑用户配置文件 `~/.vimrc`（如果不存在则创建）：
 
 ```sh
 set number              " 或 set nu
@@ -128,9 +128,9 @@ NeoVim 是 vim 的重构分支，更加模块化，支持 Lua 脚本，插件生
 
 **基础配置**：NeoVim 的配置文件位于 `~/.config/nvim/init.lua`（推荐使用 Lua）。
 
-临时启用行号的命令与 Vim 相同，如需永久启用，编辑 ~/.config/nvim/init.lua（如果不存在则创建）：
+临时启用行号的命令与 Vim 相同，如需永久启用，编辑 `~/.config/nvim/init.lua`（如果不存在则创建）：
 
-```sh
+```lua
 vim.opt.number = true          -- 显示绝对行号
 vim.opt.relativenumber = true  -- 显示相对行号（推荐与 number 一起用，形成混合模式）
 ```
@@ -158,19 +158,16 @@ rm -rf ~/.config/nvim/.git
 nvim
 ```
 
-启动后按空格键（Space）可打开 LazyVim 的快捷键菜单，非常直观。
+启动后按空格键可打开 LazyVim 的快捷键菜单，非常直观。
 
 NeoVim 和 Vim 共享大部分命令，上述 `:q :q! :wq :wq! :/` 等在 LazyVim 中同样适用。
 
 ![](../.gitbook/assets/di-4.6-jie-neovim.png)
 
-> **注意**
->
-> 本篇内容旨在简单介绍 FreeBSD 上常见的文本编辑器，不详细介绍 Vim 及 NeoVim 的详细配置，想要折腾的用户自行探索。
 
 ## microsoft-edit
 
-microsoft-edit 是微软开源的文本编辑器，原生支持中文，交互界面简单，并支持鼠标操作。
+microsoft-edit 是由微软开源的文本编辑器，原生支持中文，交互界面简单，并支持鼠标操作。
 
 - 使用 pkg 安装：
 
@@ -195,7 +192,7 @@ $ msedit abc.txt
 
 ![](../.gitbook/assets/msedit2.png)
 
-操作较为简单，此处不再展开说明。
+操作较为简单，此处无需展开说明。
 
 ## Emacs 编辑器
 
