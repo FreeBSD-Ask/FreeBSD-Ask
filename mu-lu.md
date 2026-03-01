@@ -187,7 +187,7 @@
 * [17.10 Caddy](di-17-zhang-wang-luo-fu-wu-qi/17.10-caddy.md)
 * [17.11 OnlyOffice（基于 PostgreSQL）](di-17-zhang-wang-luo-fu-wu-qi/17.11-onlyoffice.md)
 
-## 第 18 章 FreeBSD 与嵌入式平台
+## 第 18 章 嵌入式平台
 
 * [18.1 树莓派简介（Raspberry Pi）](di-18-zhang-shu-mei-pai-yu-riscv/di-18.1-jie-shu-mei-pai-de-jian-jie.md)
 * [18.2 树莓派安装 FreeBSD](di-18-zhang-shu-mei-pai-yu-riscv/di-18.2-jie-xi-tong-an-zhuang.md)
@@ -239,8 +239,6 @@
 * [22.11 Node.js](di-22-zhang-bian-cheng-yu-kai-fa/di-22.11-jie-nodejs-xiang-guan.md)
 * [22.12 code-server 和 clangd](di-22-zhang-bian-cheng-yu-kai-fa/di-22.12-jie-an-zhuang-code-server-he-clangd.md)
 
-
-  
 ## 第 23 章 存储与文件系统管理
 
 * [23.1 自动挂载文件系统](di-23-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-23.1-zi-dong-gua-zai.md)
@@ -264,7 +262,7 @@
 * [25.2 ZFS 磁盘扩容](di-25-zhang-zfs/di-25.2-zfs-kuorong.md)
 * [25.3 ZFS 快照与还原](di-25-zhang-zfs/di-25.3-zfs-snap.md)
 * [25.4 ZFS 启动环境](di-25-zhang-zfs/di-25.4-zfs-boot.md)
-* [25.5 更新 ZFS 的 zpool](di-25-zhang-zfs/di-25.5-zfs-update.md)
+* [25.5 ZFS 存储池更新](di-25-zhang-zfs/di-25.5-zfs-update.md)
 * [25.6 ZFS 委托管理](di-25-zhang-zfs/di-25.6-zfs-weituo.md)
 * [25.7 ZFS 压缩](di-25-zhang-zfs/di-25.7-zfs-yasuo.md)
 
