@@ -299,7 +299,7 @@
 * [BSD 许可证概览](fu-lu2/xukez.md)
 * [Vim 编程环境配置](fu-lu2/vim.md)
 
-## 附录 III UEFI 与 BIOS 基础（基于 AMI BIOS）
+## 附录 III UEFI/BIOS 注解（基于 AMI BIOS）
 
 * [UEFI/BIOS 概述与警告](fu-lu3/bios-gaishu.md)
 * [Main（主菜单）](fu-lu3/main.md)
