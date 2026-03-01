@@ -273,7 +273,7 @@
 * [26.3 配置 OpenBSD](di-26-zhang-openbsd/di-26.3-jie-pei-zhi.md)
 * [26.4 OpenBSD 包管理器](di-26-zhang-openbsd/di-26.4-jie-bao-guan-li-qi.md)
 * [26.5 桌面和其他软件](di-26-zhang-openbsd/di-26.5-jie-zhuo-mian-yu-qi-ta-ruan-jian.md)
-* [26.6 在 RISC-V 开发板上安装 OpenBSD](di-26-zhang-openbsd/di-26.6-jie-zai-riscv-kai-fa-ban-shang-an-zhuang-openbsd.md)
+* [26.6 在昉·星光 2 开发板（RISC-V）上安装 OpenBSD](di-26-zhang-openbsd/di-26.6-jie-zai-riscv-kai-fa-ban-shang-an-zhuang-openbsd.md)
 * [26.7 在树莓派上安装 OpenBSD](di-26-zhang-openbsd/di-26.7-jie-shu-mei-pai-yu-openbsd.md)
 
 ## 第 27 章 NetBSD 入门
