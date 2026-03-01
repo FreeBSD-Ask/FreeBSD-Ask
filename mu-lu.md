@@ -189,11 +189,10 @@
 
 ## 第 18 章 嵌入式平台
 
-* [18.1 树莓派简介（Raspberry Pi）](di-18-zhang-shu-mei-pai-yu-riscv/di-18.1-jie-shu-mei-pai-de-jian-jie.md)
-* [18.2 树莓派安装 FreeBSD](di-18-zhang-shu-mei-pai-yu-riscv/di-18.2-jie-xi-tong-an-zhuang.md)
-* [18.3 配置树莓派中 FreeBSD](di-18-zhang-shu-mei-pai-yu-riscv/di-18.3-jie-shi-yong-pei-zhi.md)
-* [18.4 在树莓派上使用 Linux 二进制兼容层](di-18-zhang-shu-mei-pai-yu-riscv/di-18.4-jie-shu-mei-pai-yu-linux-jian-rong-ceng.md)
-* [18.5 Radxa X4（x86）开发板](di-18-zhang-shu-mei-pai-yu-riscv/18.5-radxax4.md)
+* [18.1 树莓派安装 FreeBSD](di-18-zhang-shu-mei-pai-yu-riscv/di-18.1-jie-xi-tong-an-zhuang.md)
+* [18.2 配置树莓派中 FreeBSD](di-18-zhang-shu-mei-pai-yu-riscv/di-18.2-jie-shi-yong-pei-zhi.md)
+* [18.3 在树莓派上使用 Linux 二进制兼容层](di-18-zhang-shu-mei-pai-yu-riscv/di-18.3-jie-shu-mei-pai-yu-linux-jian-rong-ceng.md)
+* [18.4 Radxa X4（x86）开发板](di-18-zhang-shu-mei-pai-yu-riscv/di-18.4-jie-radxax4.md)
 
 ## 第 19 章 数据库管理
 
@@ -249,10 +248,10 @@
 
 ## 第 24 章 FreeBSD 内核
 
-* [24.1 FreeBSD 内核选项概述](di-24-zhang-kernel/di-24.1-kernel-conf.md)
-* [24.2 机器相关的内核选项](di-24-zhang-kernel/di-24.2-kernel-md.md)
-* [24.3 机器无关的内核选项](di-24-zhang-kernel/di-24.3-kernel-mi.md)
-* [24.4 GENERIC 内核选项（amd64）](di-24-zhang-kernel/di-24.4-GENERIC-kernel-mi.md)
+* [24.1 FreeBSD 内核文件结构](di-24-zhang-kernel/di-24.1-kernel-conf.md)
+* [24.2 机器相关的内核选项注解](di-24-zhang-kernel/di-24.2-kernel-md.md)
+* [24.3 机器无关的内核选项注解](di-24-zhang-kernel/di-24.3-kernel-mi.md)
+* [24.4 GENERIC 内核选项（amd64）注解](di-24-zhang-kernel/di-24.4-GENERIC-kernel-mi.md)
 * [24.5 在 Linux 系统上交叉构建 FreeBSD](di-24-zhang-kernel/di-24.5-jie-build-freebsd-on-linux.md)
 * [24.6 FreeBSD 源代码目录结构](di-24-zhang-kernel/di-24.6-mulu.md)
 
