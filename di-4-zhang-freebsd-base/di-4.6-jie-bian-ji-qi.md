@@ -76,8 +76,8 @@ ABC
 或者使用 ports 构建：
 
 ```sh
-#cd /usr/ports/editors/vim
-#make install clean
+# cd /usr/ports/editors/vim
+# make install clean
 ```
 
 #### 配置 Vim
@@ -117,8 +117,8 @@ NeoVim 是 vim 的重构分支，更加模块化，支持 Lua 脚本，插件生
 或者使用 ports 构建：
 
 ```sh
-#cd /usr/ports/editors/neovim
-#make install clean
+# cd /usr/ports/editors/neovim
+# make install clean
 ```
 #### 配置 NeoVim
 
@@ -139,19 +139,19 @@ LazyVim 是一个开箱即用的 NeoVim 配置发行版（distribution），基�
 
 ```sh
 # 备份旧配置（如果存在）
-#mv ~/.config/nvim{,.bak} 2>/dev/null || true
-#mv ~/.local/share/nvim{,.bak} 2>/dev/null || true
-#mv ~/.local/state/nvim{,.bak} 2>/dev/null || true
-#mv ~/.cache/nvim{,.bak} 2>/dev/null || true
+mv ~/.config/nvim{,.bak} 2>/dev/null || true
+mv ~/.local/share/nvim{,.bak} 2>/dev/null || true
+mv ~/.local/state/nvim{,.bak} 2>/dev/null || true
+mv ~/.cache/nvim{,.bak} 2>/dev/null || true
 
 # 克隆 Starter 模板
-#git clone https://github.com/LazyVim/starter ~/.config/nvim
+git clone https://github.com/LazyVim/starter ~/.config/nvim
 
 # 移除 git 历史
-#rm -rf ~/.config/nvim/.git
+rm -rf ~/.config/nvim/.git
 
 # 启动（首次会自动下载大量插件）
-#nvim
+nvim
 ```
 
 启动后按空格键（Space）可打开 LazyVim 的快捷键菜单，非常直观。
@@ -208,8 +208,8 @@ Emacs 是历史悠久、功能极其强大的文本编辑器，以“可扩展�
 或者使用 ports 构建：
 
 ```sh
-#cd /usr/ports/editors/emacs
-#make install clean
+# cd /usr/ports/editors/emacs
+# make install clean
 ```
 
 ### 配置 Emacs
