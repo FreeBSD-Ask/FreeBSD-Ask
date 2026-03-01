@@ -205,10 +205,11 @@
 
 ## 第 20 章 游戏、科学计算和专业工具
 
-* [20.1 Ren’Py 和 Godot 游戏引擎](di-20-zhang-yu-le-yu-jiao-yu/di-20.1-jie-you-xi.md)
-* [20.2 我的世界（Minecraft）](di-20-zhang-yu-le-yu-jiao-yu/20.2-minecraft.md)
-* [20.3 科研和专业工具](di-20-zhang-yu-le-yu-jiao-yu/di-20.3-jie-ke-yan-yu-zhuan-ye-gong-ju.md)
-* [20.4 Steam](di-20-zhang-yu-le-yu-jiao-yu/20.4-steam.md)
+* [20.1 Ren’Py 视觉小说引擎](di-20-zhang-yu-le-yu-jiao-yu/di-20.1-jie-renpy.md)
+* [20.2 Godot 开源游戏引擎](di-20-zhang-yu-le-yu-jiao-yu/di-20.2-jie-Godot.md)
+* [20.3 我的世界（Minecraft）](di-20-zhang-yu-le-yu-jiao-yu/20.3-minecraft.md)
+* [20.4 科研和专业工具](di-20-zhang-yu-le-yu-jiao-yu/di-20.4-jie-ke-yan-yu-zhuan-ye-gong-ju.md)
+* [20.5 Steam](di-20-zhang-yu-le-yu-jiao-yu/20.5-steam.md)
 
 ## 第 21 章 Linux 二进制兼容层
 
