@@ -239,7 +239,7 @@
 * [22.12 code-server 和 clangd](di-22-zhang-bian-cheng-yu-kai-fa/di-22.12-jie-an-zhuang-code-server-he-clangd.md)
 * [22.13 Node.js](di-22-zhang-bian-cheng-yu-kai-fa/di-22.13-jie-nodejs-xiang-guan.md)
 * [22.14 利用脚本自动生成 BSD libc 库文本](di-22-zhang-bian-cheng-yu-kai-fa/di-22.14-jie-li-yong-jiao-ben-zi-dong-sheng-cheng-bsdlibc-ku-wen-ben.md)
-* [22.15 在 FreeBSD 上开发 C/C++](di-22-zhang-bian-cheng-yu-kai-fa/di-22.15-jie-zai-freebsd-shang-kai-fa-c-cpp.mdd)
+* [22.15 在 FreeBSD 上开发 C/C++](di-22-zhang-bian-cheng-yu-kai-fa/di-22.15-jie-zai-freebsd-shang-kai-fa-c-cpp.md)
 
 ## 第 23 章 存储与文件系统管理
 
