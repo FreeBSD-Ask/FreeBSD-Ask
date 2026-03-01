@@ -112,7 +112,7 @@
 * [9.1 音频设备配置](di-9-duo-mei-ti/di-9.1-jie-sheng-ka-yu-wang-ka-she-zhi.md)
 * [9.2 蓝牙](di-9-duo-mei-ti/di-9.2-jie-lan-ya.md)
 * [9.3 打印机](di-9-duo-mei-ti/di-9.3-jie-da-yin-ji-de-an-zhuang.md)
-* [9.4 触摸板与键盘鼠标](di-9-duo-mei-ti/di-9.4-jie-chu-mo-ban-de-she-zhi.md)
+* [9.4 人机输入设备](di-9-duo-mei-ti/di-9.4-jie-chu-mo-ban-de-she-zhi.md)
 * [9.5 音频播放器](di-9-duo-mei-ti/di-9.5-jie-yin-pin-bo-fang-qi.md)
 * [9.6 视频播放器](di-9-duo-mei-ti/di-9.6-shi-pin-bo-fang.md)
 * [9.7 多媒体处理工具](di-9-duo-mei-ti/di-9.7-tu-xing-tu-xiang.md)
@@ -145,14 +145,14 @@
 * [13.4 SSH 配置和相关工具](di-13-zhang-freebsd-te-se/di-13.4-jie-chang-yong-ruan-jian-yu-ssh-pei-zhi.md)
 * [13.5 Live 镜像与系统急救](di-13-zhang-freebsd-te-se/di-13.5-jie-hui-fu-mo-shi-yu-mi-ma-zhong-zhi.md)
 * [13.6 引导管理器与 UEFI 固件](di-13-zhang-freebsd-te-se/di-13.6-jie-grub-ji-qi-ta-yin-dao.md)
-* [13.7 用户分级与资源配额（login.conf）](di-13-zhang-freebsd-te-se/di-13.7-jie-conf.md)
+* [13.7 用户分级文件（login.conf）](di-13-zhang-freebsd-te-se/di-13.7-jie-conf.md)
 
 ## 第 14 章 网络管理
 
 * [14.1 设置网络](di-14-zhang-wang-luo-guan-li/di-14.1-jie-wang-luo-can-shu-pei-zhi-ming-ling.md)
 * [14.2 无线网络（Wi-Fi）](di-14-zhang-wang-luo-guan-li/di-14.2-jie-wifi.md)
 * [14.3 USB 网络共享（USB tethering）](di-14-zhang-wang-luo-guan-li/di-14.3-jie-usb-rndis-usb-wang-luo-gong-xiang.md)
-* [14.4 TCP/IP 协议栈配置与优化](di-14-zhang-wang-luo-guan-li/di-14.4-jie-tcp-bbr.md)
+* [14.4 TCP/IP 协议栈](di-14-zhang-wang-luo-guan-li/di-14.4-jie-tcp-bbr.md)
 
 ## 第 15 章 防火墙
 
@@ -189,9 +189,9 @@
 
 ## 第 18 章 嵌入式平台
 
-* [18.1 树莓派简介 （Raspberry Pi）](di-18-zhang-shu-mei-pai-yu-riscv/di-18.1-jie-shu-mei-pai-de-jian-jie.md)
+* [18.1 树莓派简介（Raspberry Pi）](di-18-zhang-shu-mei-pai-yu-riscv/di-18.1-jie-shu-mei-pai-de-jian-jie.md)
 * [18.2 树莓派安装 FreeBSD](di-18-zhang-shu-mei-pai-yu-riscv/di-18.2-jie-xi-tong-an-zhuang.md)
-* [18.3 树莓派 FreeBSD 的配置](di-18-zhang-shu-mei-pai-yu-riscv/di-18.3-jie-shi-yong-pei-zhi.md)
+* [18.3 配置树莓派中 FreeBSD](di-18-zhang-shu-mei-pai-yu-riscv/di-18.3-jie-shi-yong-pei-zhi.md)
 * [18.4 在树莓派上使用 Linux 二进制兼容层](di-18-zhang-shu-mei-pai-yu-riscv/di-18.4-jie-shu-mei-pai-yu-linux-jian-rong-ceng.md)
 * [18.5 Radxa X4（x86）开发板](di-18-zhang-shu-mei-pai-yu-riscv/18.5-radxax4.md)
 
