@@ -14,10 +14,12 @@
 
 ## 第 1 章 FreeBSD 初见
 
-* [1.1 操作系统的历程与开源往事](di-1-zhang-zou-jin-freebsd/di-1.1-unix.md)
-* [1.2 FreeBSD 导论](di-1-zhang-zou-jin-freebsd/di-1.2-dao-lun.md)
-* [1.3 乔治·贝克莱（George Berkeley）与 BSD 的命名渊源](di-1-zhang-zou-jin-freebsd/di-1.3-jie-freebsd-jian-shi.md)
-* [1.4 加州大学伯克利分校与“要有光”（Fiat Lux）](di-1-zhang-zou-jin-freebsd/di-1.4-Fiat-Lux.md)
+* [1.1 什么是 UNIX？](di-1-zhang-zou-jin-freebsd/di-1.1-unix.md)
+* [1.2 GNU 操作系统和自由软件运动](di-1-zhang-zou-jin-freebsd/di-1.2-gnu.md)
+* [1.3 Linux 与类 UNIX](di-1-zhang-zou-jin-freebsd/di-1.3-linux.md)
+* [1.4 FreeBSD 导论](di-1-zhang-zou-jin-freebsd/di-1.4-dao-lun.md)
+* [1.5 乔治·贝克莱（George Berkeley）与 BSD 的命名渊源](di-1-zhang-zou-jin-freebsd/di-1.5-jie-freebsd-jian-shi.md)
+* [1.6 加州大学伯克利分校与“要有光”（Fiat Lux）](di-1-zhang-zou-jin-freebsd/di-1.6-Fiat-Lux.md)
 
 ## 第 2 章 安装 FreeBSD
 
