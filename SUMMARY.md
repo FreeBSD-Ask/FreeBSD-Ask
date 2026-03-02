@@ -14,17 +14,19 @@
 
 ## 第 1 章 FreeBSD 初见
 
-* [1.1 操作系统的历程与开源往事](di-1-zhang-zou-jin-freebsd/di-1.1-unix.md)
-* [1.2 FreeBSD 导论](di-1-zhang-zou-jin-freebsd/di-1.2-dao-lun.md)
-* [1.3 乔治·贝克莱（George Berkeley）与 BSD 的命名渊源](di-1-zhang-zou-jin-freebsd/di-1.3-jie-freebsd-jian-shi.md)
-* [1.4 加州大学伯克利分校与“要有光”（Fiat Lux）](di-1-zhang-zou-jin-freebsd/di-1.4-Fiat-Lux.md)
+* [1.1 什么是 UNIX？](di-1-zhang-zou-jin-freebsd/di-1.1-unix.md)
+* [1.2 GNU 操作系统和自由软件运动](di-1-zhang-zou-jin-freebsd/di-1.2-gnu.md)
+* [1.3 Linux 与类 UNIX](di-1-zhang-zou-jin-freebsd/di-1.3-linux.md)
+* [1.4 FreeBSD 导论](di-1-zhang-zou-jin-freebsd/di-1.4-dao-lun.md)
+* [1.5 乔治·贝克莱（George Berkeley）与 BSD 的命名渊源](di-1-zhang-zou-jin-freebsd/di-1.5-jie-freebsd-jian-shi.md)
+* [1.6 加州大学伯克利分校与“要有光”（Fiat Lux）](di-1-zhang-zou-jin-freebsd/di-1.6-Fiat-Lux.md)
 
 ## 第 2 章 安装 FreeBSD
 
 * [2.1 安装前的准备工作](di-2-zhang-an-zhuang-freebsd/di-2.1-install-pre.md)
 * [2.2 FreeBSD 15 安装指南（AMD64 架构）](di-2-zhang-an-zhuang-freebsd/di-2.2-15ins.md)
 * [2.3 FreeBSD 13 和 14 安装指南（AMD64 架构）](di-2-zhang-an-zhuang-freebsd/di-2.3-14.0-ins.md)
-* [2.4 故障排除](di-2-zhang-an-zhuang-freebsd/di-2.4-jie-eol.md)
+* [2.4 FreeBSD 安装的故障排除](di-2-zhang-an-zhuang-freebsd/di-2.4-jie-eol.md)
 * [2.5 在 Windows 中将 USB 启动盘恢复为普通存储设备](di-2-zhang-an-zhuang-freebsd/di-2.5-jie-usb.md)
 
 ## 第 3 章 FreeBSD 高级安装
@@ -112,7 +114,7 @@
 * [9.1 音频设备配置](di-9-duo-mei-ti/di-9.1-jie-sheng-ka-yu-wang-ka-she-zhi.md)
 * [9.2 蓝牙](di-9-duo-mei-ti/di-9.2-jie-lan-ya.md)
 * [9.3 打印机](di-9-duo-mei-ti/di-9.3-jie-da-yin-ji-de-an-zhuang.md)
-* [9.4 触摸板与键盘鼠标](di-9-duo-mei-ti/di-9.4-jie-chu-mo-ban-de-she-zhi.md)
+* [9.4 人机输入设备](di-9-duo-mei-ti/di-9.4-jie-chu-mo-ban-de-she-zhi.md)
 * [9.5 音频播放器](di-9-duo-mei-ti/di-9.5-jie-yin-pin-bo-fang-qi.md)
 * [9.6 视频播放器](di-9-duo-mei-ti/di-9.6-shi-pin-bo-fang.md)
 * [9.7 多媒体处理工具](di-9-duo-mei-ti/di-9.7-tu-xing-tu-xiang.md)
@@ -145,14 +147,14 @@
 * [13.4 SSH 配置和相关工具](di-13-zhang-freebsd-te-se/di-13.4-jie-chang-yong-ruan-jian-yu-ssh-pei-zhi.md)
 * [13.5 Live 镜像与系统急救](di-13-zhang-freebsd-te-se/di-13.5-jie-hui-fu-mo-shi-yu-mi-ma-zhong-zhi.md)
 * [13.6 引导管理器与 UEFI 固件](di-13-zhang-freebsd-te-se/di-13.6-jie-grub-ji-qi-ta-yin-dao.md)
-* [13.7 用户分级与资源配额（login.conf）](di-13-zhang-freebsd-te-se/di-13.7-jie-conf.md)
+* [13.7 用户分级文件（login.conf）](di-13-zhang-freebsd-te-se/di-13.7-jie-conf.md)
 
 ## 第 14 章 网络管理
 
 * [14.1 设置网络](di-14-zhang-wang-luo-guan-li/di-14.1-jie-wang-luo-can-shu-pei-zhi-ming-ling.md)
 * [14.2 无线网络（Wi-Fi）](di-14-zhang-wang-luo-guan-li/di-14.2-jie-wifi.md)
 * [14.3 USB 网络共享（USB tethering）](di-14-zhang-wang-luo-guan-li/di-14.3-jie-usb-rndis-usb-wang-luo-gong-xiang.md)
-* [14.4 TCP/IP 协议栈配置与优化](di-14-zhang-wang-luo-guan-li/di-14.4-jie-tcp-bbr.md)
+* [14.4 TCP/IP 协议栈](di-14-zhang-wang-luo-guan-li/di-14.4-jie-tcp-bbr.md)
 
 ## 第 15 章 防火墙
 
@@ -187,13 +189,12 @@
 * [17.10 Caddy](di-17-zhang-wang-luo-fu-wu-qi/17.10-caddy.md)
 * [17.11 OnlyOffice（基于 PostgreSQL）](di-17-zhang-wang-luo-fu-wu-qi/17.11-onlyoffice.md)
 
-## 第 18 章 FreeBSD 与嵌入式平台
+## 第 18 章 嵌入式平台
 
-* [18.1 树莓派简介（Raspberry Pi）](di-18-zhang-shu-mei-pai-yu-riscv/di-18.1-jie-shu-mei-pai-de-jian-jie.md)
-* [18.2 树莓派安装 FreeBSD](di-18-zhang-shu-mei-pai-yu-riscv/di-18.2-jie-xi-tong-an-zhuang.md)
-* [18.3 树莓派 FreeBSD 配置](di-18-zhang-shu-mei-pai-yu-riscv/di-18.3-jie-shi-yong-pei-zhi.md)
-* [18.4 在树莓派上使用 Linux 二进制兼容层](di-18-zhang-shu-mei-pai-yu-riscv/di-18.4-jie-shu-mei-pai-yu-linux-jian-rong-ceng.md)
-* [18.5 Radxa X4（x86）](di-18-zhang-shu-mei-pai-yu-riscv/18.5-radxax4.md)
+* [18.1 树莓派安装 FreeBSD](di-18-zhang-shu-mei-pai-yu-riscv/di-18.1-jie-xi-tong-an-zhuang.md)
+* [18.2 在树莓派中使用 FreeBSD](di-18-zhang-shu-mei-pai-yu-riscv/di-18.2-jie-shi-yong-pei-zhi.md)
+* [18.3 在树莓派上使用 Linux 二进制兼容层](di-18-zhang-shu-mei-pai-yu-riscv/di-18.3-jie-shu-mei-pai-yu-linux-jian-rong-ceng.md)
+* [18.4 Radxa X4（x86）开发板](di-18-zhang-shu-mei-pai-yu-riscv/di-18.4-jie-radxax4.md)
 
 ## 第 19 章 数据库管理
 
@@ -205,10 +206,11 @@
 
 ## 第 20 章 游戏、科学计算和专业工具
 
-* [20.1 Ren’Py 和 Godot 游戏引擎](di-20-zhang-yu-le-yu-jiao-yu/di-20.1-jie-you-xi.md)
-* [20.2 我的世界（Minecraft）](di-20-zhang-yu-le-yu-jiao-yu/20.2-minecraft.md)
-* [20.3 科研和专业工具](di-20-zhang-yu-le-yu-jiao-yu/di-20.3-jie-ke-yan-yu-zhuan-ye-gong-ju.md)
-* [20.4 Steam](di-20-zhang-yu-le-yu-jiao-yu/20.4-steam.md)
+* [20.1 Ren’Py 视觉小说引擎](di-20-zhang-yu-le-yu-jiao-yu/di-20.1-jie-renpy.md)
+* [20.2 Godot 开源游戏引擎](di-20-zhang-yu-le-yu-jiao-yu/di-20.2-jie-Godot.md)
+* [20.3 我的世界（Minecraft）](di-20-zhang-yu-le-yu-jiao-yu/20.3-minecraft.md)
+* [20.4 科研和专业工具](di-20-zhang-yu-le-yu-jiao-yu/di-20.4-jie-ke-yan-yu-zhuan-ye-gong-ju.md)
+* [20.5 Steam 客户端](di-20-zhang-yu-le-yu-jiao-yu/20.5-steam.md)
 
 ## 第 21 章 Linux 二进制兼容层
 
@@ -226,21 +228,18 @@
 ## 第 22 章 开发生态与贡献社区
 
 * [22.1 如何报告缺陷（Bug）](di-22-zhang-bian-cheng-yu-kai-fa/di-22.1-jie-ru-he-bao-gao-bug.md)
-* [22.2 如何开发一个 Port](di-22-zhang-bian-cheng-yu-kai-fa/di-22.2-jie-ru-he-ti-jiao-yi-ge-ruan-jian-bao.md)
-* [22.3 如何参与 FreeBSD 开发](di-22-zhang-bian-cheng-yu-kai-fa/di-22.3-jie-ru-he-can-yu-freebsd-xie-zuo.md)
-* [22.4 在 FreeBSD 上开发 C/C++](di-22-zhang-bian-cheng-yu-kai-fa/di-22.4-jie-zai-freebsd-shang-kai-fa-c-cpp.md)
-* [22.5 Java 环境的配置](di-22-zhang-bian-cheng-yu-kai-fa/di-22.5-jie-java-huan-jing-de-pei-zhi.md)
-* [22.6 Qt 环境的配置](di-22-zhang-bian-cheng-yu-kai-fa/di-22.6-jie-qt-huan-jing-de-pei-zhi.md)
+* [22.2 如何订阅 FreeBSD 的邮件列表](di-22-zhang-bian-cheng-yu-kai-fa/di-22.2-jie-ru-he-ding-yue-freebsd-de-you-jian-lie-biao.md)
+* [22.3 参与 FreeBSD 开发](di-22-zhang-bian-cheng-yu-kai-fa/di-22.3-jie-ru-he-can-yu-freebsd-xie-zuo.md)
+* [22.4 C/C++ 开发环境](di-22-zhang-bian-cheng-yu-kai-fa/di-22.4-jie-zai-freebsd-shang-kai-fa-c-cpp.md)
+* [22.5 Java 开发环境](di-22-zhang-bian-cheng-yu-kai-fa/di-22.5-jie-java-huan-jing-de-pei-zhi.md)
+* [22.6 Qt 开发环境](di-22-zhang-bian-cheng-yu-kai-fa/di-22.6-jie-qt-huan-jing-de-pei-zhi.md)
 * [22.7 Python](di-22-zhang-bian-cheng-yu-kai-fa/di-22.7-jie-python-yu-vscode.md)
-* [22.8 Rust/Go 环境的配置](di-22-zhang-bian-cheng-yu-kai-fa/di-22.8-jie-rustgo-huan-jing-de-pei-zhi.md)
+* [22.8 Rust/Go 开发环境](di-22-zhang-bian-cheng-yu-kai-fa/di-22.8-jie-rustgo-huan-jing-de-pei-zhi.md)
 * [22.9 配置 Shell](di-22-zhang-bian-cheng-yu-kai-fa/di-22.9-jie-csh-yu-qi-ta-shell.md)
 * [22.10 使用 IDA Pro 调试 FreeBSD](di-22-zhang-bian-cheng-yu-kai-fa/di-22.10-jie-tong-guo-ida-7-tiao-shi-freebsd.md)
-* [22.11 如何订阅 FreeBSD 的邮件列表](di-22-zhang-bian-cheng-yu-kai-fa/di-22.11-jie-ru-he-ding-yue-freebsd-de-you-jian-lie-biao.md)
+* [22.11 Node.js](di-22-zhang-bian-cheng-yu-kai-fa/di-22.11-jie-nodejs-xiang-guan.md)
 * [22.12 code-server 和 clangd](di-22-zhang-bian-cheng-yu-kai-fa/di-22.12-jie-an-zhuang-code-server-he-clangd.md)
-* [22.13 Node.js](di-22-zhang-bian-cheng-yu-kai-fa/di-22.13-jie-nodejs-xiang-guan.md)
-* [22.14 利用脚本自动生成 BSD libc 库文本](di-22-zhang-bian-cheng-yu-kai-fa/di-22.14-jie-li-yong-jiao-ben-zi-dong-sheng-cheng-bsdlibc-ku-wen-ben.md)
 
-  
 ## 第 23 章 存储与文件系统管理
 
 * [23.1 自动挂载文件系统](di-23-zhang-wen-jian-xi-tong-yu-ci-pan-guan-li/di-23.1-zi-dong-gua-zai.md)
@@ -251,10 +250,10 @@
 
 ## 第 24 章 FreeBSD 内核
 
-* [24.1 FreeBSD 内核选项概述](di-24-zhang-kernel/di-24.1-kernel-conf.md)
-* [24.2 机器相关的内核选项](di-24-zhang-kernel/di-24.2-kernel-md.md)
-* [24.3 机器无关的内核选项](di-24-zhang-kernel/di-24.3-kernel-mi.md)
-* [24.4 GENERIC 内核选项（amd64）](di-24-zhang-kernel/di-24.4-GENERIC-kernel-mi.md)
+* [24.1 FreeBSD 内核文件结构](di-24-zhang-kernel/di-24.1-kernel-conf.md)
+* [24.2 机器相关的内核选项注解](di-24-zhang-kernel/di-24.2-kernel-md.md)
+* [24.3 机器无关的内核选项注解](di-24-zhang-kernel/di-24.3-kernel-mi.md)
+* [24.4 GENERIC 内核选项（amd64）注解](di-24-zhang-kernel/di-24.4-GENERIC-kernel-mi.md)
 * [24.5 在 Linux 系统上交叉构建 FreeBSD](di-24-zhang-kernel/di-24.5-jie-build-freebsd-on-linux.md)
 * [24.6 FreeBSD 源代码目录结构](di-24-zhang-kernel/di-24.6-mulu.md)
 
@@ -264,7 +263,7 @@
 * [25.2 ZFS 磁盘扩容](di-25-zhang-zfs/di-25.2-zfs-kuorong.md)
 * [25.3 ZFS 快照与还原](di-25-zhang-zfs/di-25.3-zfs-snap.md)
 * [25.4 ZFS 启动环境](di-25-zhang-zfs/di-25.4-zfs-boot.md)
-* [25.5 更新 ZFS 的 zpool](di-25-zhang-zfs/di-25.5-zfs-update.md)
+* [25.5 ZFS 存储池更新](di-25-zhang-zfs/di-25.5-zfs-update.md)
 * [25.6 ZFS 委托管理](di-25-zhang-zfs/di-25.6-zfs-weituo.md)
 * [25.7 ZFS 压缩](di-25-zhang-zfs/di-25.7-zfs-yasuo.md)
 
@@ -275,7 +274,7 @@
 * [26.3 配置 OpenBSD](di-26-zhang-openbsd/di-26.3-jie-pei-zhi.md)
 * [26.4 OpenBSD 包管理器](di-26-zhang-openbsd/di-26.4-jie-bao-guan-li-qi.md)
 * [26.5 桌面和其他软件](di-26-zhang-openbsd/di-26.5-jie-zhuo-mian-yu-qi-ta-ruan-jian.md)
-* [26.6 在 RISC-V 开发板上安装 OpenBSD](di-26-zhang-openbsd/di-26.6-jie-zai-riscv-kai-fa-ban-shang-an-zhuang-openbsd.md)
+* [26.6 在昉·星光 2 开发板（RISC-V）上安装 OpenBSD](di-26-zhang-openbsd/di-26.6-jie-zai-riscv-kai-fa-ban-shang-an-zhuang-openbsd.md)
 * [26.7 在树莓派上安装 OpenBSD](di-26-zhang-openbsd/di-26.7-jie-shu-mei-pai-yu-openbsd.md)
 
 ## 第 27 章 NetBSD 入门
@@ -301,7 +300,7 @@
 * [BSD 许可证概览](fu-lu2/xukez.md)
 * [Vim 编程环境配置](fu-lu2/vim.md)
 
-## 附录 III UEFI 与 BIOS 基础（基于 AMI BIOS）
+## 附录 III UEFI/BIOS 注解（基于 AMI BIOS）
 
 * [UEFI/BIOS 概述与警告](fu-lu3/bios-gaishu.md)
 * [Main（主菜单）](fu-lu3/main.md)

@@ -1,4 +1,4 @@
-# 1.2 FreeBSD 导论
+# 1.4 FreeBSD 导论
 
 ## FreeBSD 版本概述
 

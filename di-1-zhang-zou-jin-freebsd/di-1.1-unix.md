@@ -1,6 +1,6 @@
-# 1.1 操作系统的历程与开源往事
+# 1.1 什么是 UNIX？
 
-## 什么是 UNIX？
+## 何为 UNIX？
 
 从前，UNIX 是一款操作系统。它最初使用汇编语言编写，后主要由 C 语言重写。UNIX 起源于 AT&T（American Telephone & Telegraph，美国电话电报公司）的贝尔实验室。
 
@@ -41,7 +41,7 @@ UNIX 认证查询网址：[The Open Group official register of UNIX Certified Pr
 >所以看似是安卓和苹果之争，其实是 Linux 与 BSD 之争。~~也许也是大教堂与市集之争。~~
 
 
-### 传统的 Unix 哲学观（以《UNIX 编程艺术》为核心）
+## 传统的 Unix 哲学观（以《UNIX 编程艺术》为核心）
 
 >**思考题**
 >
@@ -62,16 +62,16 @@ Unix 哲学源于 UNIX 操作系统的开发实践，并由 Ken Thompson、Denni
 - 沉默是金（无报错就沉默，成功则无输出，不显示操作进度等）
 - 避免仅用户界面（避免无命令行，仅 GUI）
 
-#### 参考文献
+### 参考文献
 
 - 《UNIX 编程艺术》，Eric Raymond 著，ISBN: 9787121176654，电子工业出版社。
 - 《Linux/Unix 设计思想》，Mike Gancarz 著，9787115266927，人民邮电出版社。（已绝版）
 - [The Open Group Standards Process](https://www.opengroup.org/standardsprocess/certification.html) [备份](https://web.archive.org/web/20260115021154/https://www.opengroup.org/standardsprocess/certification.html)
 
 
-### Unix 的一段历史
+## Unix 的一段历史
 
-#### Multics
+### Multics
 
 1964 年，麻省理工学院推出了 CTSS（兼容分时系统），是当时最具创新性的操作系统。有了 CTSS 这种高效的操作系统，研究人员决定设计一个更好的版本——Multics 系统。Multics 意思是多路复用信息和计算服务。
 
@@ -79,7 +79,7 @@ Multics 意图创造强悍的新软件和比肩 IBM 7094 功能更丰富的新�
 
 最终 Multics 的开发陷入了困境，Multics 设计了大量的程序及功能，经常塞入很多不同的东西进去，导致系统过于复杂。1969 年，由于在贝尔实验室看来作为一套信息处理工具，它已经无法为实验室提供计算服务的目标，它的设计太昂贵了，于是在同年 4 月，贝尔实验室退出 Multics 项目，只剩麻省理工和美国通用电气公司继续开发。
 
-#### UNICS
+### UNICS
 
 贝尔实验室退出 Multics 开发项目后，项目组成员 Kenneth Lane Thompson 找到一台 DEC PDP-7 型计算机，该计算机性能有限，只有 4KB 内存，但图形界面较为美观。Thompson 在其上开发了游戏 Space Travel（《星际旅行》）。PDP-7 的磁盘转速远低于计算机的读写速度，为解决这一问题，Thompson 编写了磁盘调度算法以提高磁盘总吞吐量。
 
@@ -94,292 +94,3 @@ Multics 意图创造强悍的新软件和比肩 IBM 7094 功能更丰富的新�
 他需要写三个程序，每周写一个：创建代码的编辑器，将代码转换为 PDP-7 能运行的机器语言汇编器，再加“内核的外层——操作系统就完成了”。
 
 新的 PDP-7 操作系统开发不久后，Thompson 和几位同事讨论，当时系统尚未命名，最初称为“UnICS”（Uniplexed Information and Computing Service，非复用信息和计算机服务），后来改名为 UNIX，更易于记忆。
-
-## GNU 与自由软件运动
-
-根据 Linux 内核文档 [1.5. Licensing](https://www.kernel.org/doc/html/latest/process/1.Intro.html)（另见 [Linux kernel licensing rules](https://www.kernel.org/doc/html/latest/process/license-rules.html)）：
-
->Code is contributed to the Linux kernel under a number of licenses, but all code must be compatible with version 2 of the GNU General Public License (GPLv2), which is the license covering the kernel distribution as a whole. In practice, that means that all code contributions are covered either by GPLv2 (with, optionally, language allowing distribution under later versions of the GPL) or the three-clause BSD license. Any contributions which are not covered by a compatible license will not be accepted into the kernel.（Linux 内核中的代码是在多种许可证之下被贡献的，但所有代码都必须与 GNU 通用公共许可证第 2 版（GPLv2）兼容，而该许可证覆盖了所有内核发行文件。实际上，这意味着所有对代码的贡献要么受 GPLv2 约束（可选地包含允许在 GPL 后续版本下发布的条款），要么受三条款 BSD 许可证约束。任何未被兼容许可证覆盖的贡献都不会被接纳进内核。）
-
-我们有必要了解一下 GPL 背后的故事。
-
----
-
-由于 Unix 在后期愈发封闭，许可证昂贵、受限制于商业公司等原因，RMS（Richard Matthew Stallman）就想创造一款自由且兼容 Unix 的操作系统。
-
-- 1983 年，RMS 发表 [《GNU 宣言》](https://www.gnu.org/gnu/manifesto.html) [备份](https://web.archive.org/web/20260115033223/https://www.gnu.org/gnu/manifesto.html) ，其中 GNU 即 GNU is Not Unix（GNU 不是 Unix）。GNU 是一款操作系统——旨在完全替代 Unix。
-- 1984 年，创建 [GNU 项目](https://www.gnu.org/) [备份](https://web.archive.org/web/20260115033101/https://www.gnu.org/)
-- 1985 年，RMS 创建自由软件基金会（Free Software Foundation，FSF）
-- 1989 年，FSF 发布 GPLv1
-- 1991 年，FSF 发布 GPLv2
-- 2007 年，FSF 发布 GPLv3
-
-一开始，RMS 为 Unix 编写了许多实用程序（用户空间），然而 GNU 的目标操作系统始终缺乏稳定内核（即使到 2025 年，[GNU Hurd](https://hurd.gnu.org/) [备份](https://web.archive.org/web/20260116222211/https://www.gnu.org/software/hurd/)  仍未完成）。Linux 内核的诞生打破了这一困境。
-
-作为由 Linux 内核和 GNU 软件组合而成的操作系统，Linux 不断地 GNU 化，形成了 GNU/Linux，其中 GNU 的贡献不可忽视，但很多人常忽略这一事实。这是因为：Linux 内核的开发由 Linus Torvalds 主导。Linus 本人对 FSF 和 RMS 的理念并不完全认同。因此，Linux 内核项目的理念与自由软件运动，甚至与严格的开源理念之间，存在一定的张力（例如，Linux 内核包含了不符合自由软件定义或严格开源定义的二进制固件模块，参见 [Linux-libre](https://www.fsfla.org/ikiwiki/selibre/linux-libre/) [备份](https://web.archive.org/web/20260115033255/https://www.fsfla.org/ikiwiki/selibre/linux-libre/) ）。并且 Linux 内核使用 GPLv2，而非 GNU 推荐的 GPLv3。事实是，Linus Torvalds 随意移除 Linux 项目的参与者，却未同时移除他们贡献的代码。——这无论同自由还是开源理念都是冲突的。
-
-我们将 Linux 之前这段时间称作“自由软件运动”（代表人物 RMS）。Linux 的流行促成了另一种理念的兴起，即“开源运动”——代表人物有 Eric S. Raymond，OSI（Open Source Initiative，开放源代码促进会）的创始人，《UNIX 编程艺术》、《大教堂与集市》的作者；Bruce Perens，Debian 项目前领导人——想想下面有关开源的定义为什么是自 [Debian 的开源定义 DFSG](https://www.debian.org/social_contract#guidelines) [备份](https://web.archive.org/web/20260114070814/https://www.debian.org/social_contract#guidelines) 衍生而来？
-
-自由软件运动并未停止，但人们对开源的误解却越来越重。
-
-### 自由软件运动与开源运动之间的张力
-
-需要注意的是，根据笔者与 RMS 的通讯，其强调的 GNU 与自由软件运动并不强调“开源”（甚至是反对开源），而是强调“Free”式自由。有些人可能认为现在的“开源”仅仅是由 [OSI 定义](https://opensource.org/osd)  的那样，这是一种极其片面的观点。
-
->致所有阅读我邮件的 NSA（美国国家安全局）和 FBI 特工：请考虑一下，捍卫美国宪法以抵御一切敌人，无论是外国的还是本国的，是否需要你效仿斯诺登的做法。
->
->>但是我有点困惑：GNU 项目是否强制要求开发必须开源？因为 GNU 通用公共许可证（GPL）强制开源。
->
->GNU 项目并不倡导“开源”。我们从不用这个词，除非是为了表达与它的分歧。我们代表的是自由软件（Free Software）——自由如同自由的言论。我们致力于在计算中为用户争取自由。
->
->请参见：<https://gnu.org/philosophy/free-software-even-more-important.html>
->
->“开源”这个词是一些反对自由软件运动的人发明的——他们与我们意见相左。他们想谈论同样的软件，却又掩盖自由的理念。
->
->关于自由软件与开源的区别，请参见：<https://gnu.org/philosophy/open-source-misses-the-point.html>
->
->另请阅读 Evgeny Morozov 的文章：<https://thebaffler.com/salvos/the-meme-hustler>，他在文中也探讨了这一点。
->
->所以请不要问我们关于“开源”或“开放”某些东西的问题。我们不是那样思考的。你真正应该问我们的是：我们如何以自由软件的方式做事情。
->
->>它属于 GNU 项目，那么 GNU 项目是否也会强制他人……
->
->我不太确定你所说的“强制”是什么意思，这里可能存在误解。通常我们会告诉人们我们认为什么是对的，什么是错的，但我们无法命令他们做什么。
->
->唯一的例外是他们使用了 GPL 许可的软件代码。在这种情况下，GNU GPL 本身是一种法律上的约束，规定了他们如何使用这些代码。它要求他们在再发布代码时，尊重其他用户的自由。
->
->这正是 copyleft（著佐权）的意义所在。
->
->如果你还有更多问题，请写信至 licensing@gnu.org。
-
-此为私人通信引用，不涉及隐私话题。
-
-## 什么是 Linux？
-
-
-我们首先来看一下 Linux 内核项目（[What is Linux?](https://www.kernel.org/doc/html/latest/admin-guide/README.html)）是如何回答这一问题的：
-
->What is Linux?（什么是 Linux？）
->
->Linux is a clone of the operating system Unix, written from scratch by Linus Torvalds with assistance from a loosely-knit team of hackers across the Net. It aims towards POSIX and Single UNIX Specification compliance.（Linux 是 Unix 操作系统的克隆版本，由 Linus Torvalds 从零开始编写，并在网络上一支组织松散的极客团队协助下完成。Linux 旨在实现对 POSIX 和单一 UNIX 规范的兼容。）
->
->It has all the features you would expect in a modern fully-fledged Unix, including true multitasking, virtual memory, shared libraries, demand loading, shared copy-on-write executables, proper memory management, and multistack networking including IPv4 and IPv6.（Linux 具备你在现代、功能完备的 Unix 中所期望的一切特性，如真正的多任务处理、虚拟内存、共享库、按需加载、共享写时复制可执行文件、完善的内存管理，以及包括对 IPv4 和 IPv6 在内的多协议栈网络支持。）
->
->It is distributed under the GNU General Public License v2 - see the accompanying COPYING file for more details.（Linux 在 GNU 通用公共许可证 v2 下进行分发 —— 有关更多细节，请参阅随附的 COPYING 文件。）
-
-再看看这个框架图：
-
-```
-+-----------------------------------------+
-|               应用程序层                |
-|  (浏览器/办公软件/开发工具/数据库等)      |
-+-----------------------------------------+
-|             图形界面（可选）             |
-|       (GNOME █ KDE █ XFCE 等)           |
-+-----------------------------------------+
-|           核心系统工具层                 |
-|  █ GNU 基础工具 (bash/gcc/glibc 等)      |
-|  █ 包管理器 (apt/yum/pacman 等)          |
-|  █ 初始化系统 (systemd/OpenRC 等)        |
-+-------------------+---------------------+
-|                   |   狭义的 Linux       |
-|    Linux 内核层   +---------------------+
-|                   | (直接控制硬件的中枢)  |
-+-------------------+---------------------+
-|                   硬件层                 |
-|    (CPU █ 内存 █ 硬盘 █ 网卡 █ 外设)      |
-+-----------------------------------------+
-```
-
-Linux 是一款开源软件。
-
-Linux 之名来自 Linux 之父 Linus Torvalds。
-
-Linux 受启发于 Minix（UNIX 版权限制下的产物），一款设计用于教学的微内核操作系统。当时 22 岁的 Linus Torvalds 是芬兰赫尔辛基大学计算机科学系的研究生。
-
-Linus Torvalds 的硕士毕业论文是 [《Linux: A Portable Operating System》](https://www.cs.helsinki.fi/u/kutvonen/index_files/linus.pdf) [备份](https://web.archive.org/web/20251114200921/https://www.cs.helsinki.fi/u/kutvonen/index_files/linus.pdf)（Linux：一款可移植的操作系统），他在 1997 年（28 岁）获得理学硕士学位。为什么花了这么长时间都没被学校清退呢？芬兰是典型的学分制国家。根据芬兰赫尔辛基大学官网说明，并无 [最长学习期限](https://studies.helsinki.fi/instructions/article/expiry-studies?) [备份](https://web.archive.org/web/20260114070831/https://studies.helsinki.fi/instructions/article/expiry-studies) 限制，仅规定某课程成绩有效时间为十年。“你的课程到期不会影响你在大学继续学习的权利”。
-
->我们探讨了在将 Linux 操作系统移植到多种 CPU 和总线架构时所暴露出的硬件可移植性问题。我们还讨论了软件接口的可移植性问题，尤其是与能够共享同一硬件平台的其他操作系统之间的二进制兼容性问题。文中描述了 Linux 所采取的方法，并对其中几个架构进行了更为详细的介绍。
->
->《Linux：一款可移植的操作系统》论文摘要
-
->**技巧**
->
->现在，几乎每颗英特尔处理器上都运行着 Minix。
->
->~~或许 Minix 才是世界上最流行的操作系统~~
-
-UNIX 标准 SUS 包含 POSIX 标准，是其超集。Linux 实现了 POSIX 标准，但未获得 [POSIX 认证](http://get.posixcertified.ieee.org/) [备份](https://web.archive.org/web/20260114153011/https://posix.opengroup.org/)。
-
-从本质上说，Linux 是 UNIX 的一种仿制或克隆产物（类似于人与机器人的关系）。
-
-
-### 狭义 Linux 是内核
-
-[Linux kernel](https://www.kernel.org/) [备份](https://web.archive.org/web/20260114152922/https://www.kernel.org/) 项目 1991；
-
-### 广义 Linux 是 GNU/Linux
-
-GNU/Linux = Linux kernel + GNU 等软件 + 包管理器
-
->**[Chimera Linux](https://chimera-linux.org/) [备份](https://web.archive.org/web/20260114152849/https://chimera-linux.org/)  除外。**
-
-Linux 全称为 GNU/Linux；
-
-GNU's Not Unix，从 GNU 这个名字（GNU 不是 UNIX）你也能看出来 Linux 与 UNIX 并无直接关联。
-
-具体地：
-
-- GNU/Linux 发行版 = Ubuntu、RHEL、Deepin、openSUSE……
-  - Ubuntu = Linux kernel + apt/dpkg + Gnome（默认桌面环境）
-  - openSUSE = Linux kernel + libzypp/rpm（包管理器后端，支持 RPM 格式）+ KDE（默认的桌面环境之一）
-
-> **思考题**
->
-> 1. 如果去掉文件系统、Linux 内核、Shell、systemd（init）、桌面环境、包管理器以及所有第三方软件，一个 Linux 发行版还剩下哪些内容？
-> 2. 在上述组件全部移除，并将其重新组合后，若仍将该系统称为“发行版”，它与传统 Linux 发行版相比存在哪些本质区别？
-> 3. 在这种情况下，该系统是否仍然可以被视为原来的发行版？请说明理由。
-> 4. 如果不能被视为原来的发行版，是在移除哪一类关键组件之后，其不再具备“发行版”的属性？
-> 5. 如果仍然可以被视为原来的发行版，那么其哪些部分可以被认为真正继承自原有发行版，其依据是什么？
-
-
-> **注意**
->
-> 如果读者还是有所疑惑，建议亲自安装试试 [Gentoo](https://www.gentoo.org/downloads/) [备份](https://web.archive.org/web/20260115021338/https://www.gentoo.org/downloads/) （stage3）或 [Slackware](http://www.slackware.com/) ，再不明白可以试试 [Gentoo（stage1）](https://wiki.gentoo.org/wiki/Stage_file) [备份](https://web.archive.org/web/20260115132845/https://wiki.gentoo.org/wiki/Stage_file)  或 [LFS](https://www.linuxfromscratch.org/lfs/) [备份](https://web.archive.org/web/20260115021242/https://www.linuxfromscratch.org/lfs/) 。
->
-> 上述操作较为复杂，需要一定的经验与基础知识。~~又陷入了前理解循环~~
-
-## 什么是 Unix-like？
-
-Unix-like 即类 Unix，指一切符合 UNIX 标准、基本遵守 POSIX 规范但未获得第一节中所述 UNIX 认证的操作系统。
-
-也就是说，除 Windows 外，世界上绝大多数操作系统都可称为 Unix-like，包括 Linux 和 FreeBSD。
-
-## 附录：自由软件与开源软件语境下的典型误解与思想偏差探析
-
-我们必须先给自由软件和开源协议分别下个定义，我们引用 [GNU 网站](https://www.gnu.org/philosophy/free-sw.zh-cn.html) [备份](https://web.archive.org/web/20260121155047/https://www.gnu.org/philosophy/free-sw.zh-cn.html)  的相关内容来定义什么是自由软件的自由。
-
-### 厘清“营利”和“盈利”
-
-这两个词语的含义不同，用法也不同。
-
-- “盈利”：名词，扣除成本后获得的利润，也作赢利。《现代汉语词典》（ISBN：9787100124508，中国社会科学院语言研究所词典编辑室编，商务印书馆，第 7 版，第 1572 页）
-- “营利”：动词，谋求利润。《现代汉语词典》（ISBN：9787100124508，中国社会科学院语言研究所词典编辑室编，商务印书馆，第 7 版，第 1572 页）
-
-### 自由软件定义：四项基本自由
-
->如果一款软件是自由软件，那么它必须为用户提供以下四项基本自由：
->
->自由度 0：无论用户出于何种目的，必须可以按照用户意愿，自由地运行该软件。
->
->自由度 1：用户可以自由地学习并修改该软件，以此来帮助用户完成用户自己的计算。作为前提，用户必须可以访问到该软件的源代码。
->
->自由度 2：用户可以自由地分发该软件的拷贝，这样就可以助人。
->
->自由度 3：用户可以自由地分发该软件修改后的拷贝。借此，用户可以将改进后的软件分享给整个社区令他人也从中受益。作为前提，用户必须可以访问到该软件的源代码。
-
-即：“用户可以自由地运行、拷贝、分发、学习、修改并改进该软件。”
-
-推论 1：如果商业用户为了营利（自由度 0）而修改（自由度 1）再分发（自由度 2），只要修改后仍然开源（自由度 3），商业用户的行为是完全合规的，并说明他们完全有权自由使用、修改、分发及通过该软件营利。任何自由度均未限制 **营利** 行为。引证 1：[自由软件可以是商业软件](https://www.gnu.org/philosophy/free-sw.zh-cn.html#four-freedoms) [备份](https://web.archive.org/web/20260115033837/https://www.gnu.org/philosophy/free-sw.zh-cn.html#four-freedoms) ；
-
-### 开源协议定义与开源软件定义
-
-为了坚持开源定义 (OSD)，并防范开源运动原则的滥用而成立的开源促进会（OSI）对开源协议是这么定义的（基于 [Debian Free Software Guidelines](https://www.debian.org/social_contract#guidelines) [备份](https://web.archive.org/web/20260114070814/https://www.debian.org/social_contract#guidelines), DFSG），为了避免歧义，我们 [全文引用](https://opensource.org/osd)  如下：
-
->导言
->
->开源不仅仅意味着可以访问源代码。开源软件的分发条款必须符合以下标准
->
->1. 自由再分发
->
->许可证不得限制任何一方出售或赠送该软件，作为包含来自多个不同来源的程序的聚合软件分发包的组件。许可证不得要求对此类销售收取版税或其他费用。
->
->2. 源代码
->
->程序必须包含源代码，并且必须允许以源代码以及编译形式分发。如果某种形式的产品未与源代码一起分发，则必须有公开的方式来获取源代码，费用不得超过合理的复制成本，最好是通过互联网免费下载。源代码必须是程序员修改程序时的首选形式。故意混淆的源代码是不允许的。中间形式，例如预处理器或翻译器的输出，是不允许的。
->
->3. 衍生作品
->
->许可证必须允许修改和衍生作品，并且必须允许它们按照与原始软件许可证相同的条款进行分发。
->
->4. 作者源代码的完整性
->
->许可证可以限制以修改形式分发源代码，仅当许可证允许分发带有源代码的“补丁文件”，以便在构建时修改程序。许可证必须明确允许分发从修改后的源代码构建的软件。许可证可以要求衍生作品使用与原始软件不同的名称或版本号。
->
->5. 不得歧视个人或群体
->
->许可证不得歧视任何个人或群体。
->
->6. 不得歧视应用领域
->
->许可证不得限制任何人在特定应用领域中使用该程序。例如，它不得限制该程序在商业中使用，或用于基因研究。
->
->7. 许可证的分发
->
->附加到程序的权利必须适用于所有重新分发程序的人，而无需这些方执行额外的许可证。
->
->8. 许可证不得特定于产品
->
->附加到程序的权利不得取决于程序是否为特定软件分发包的一部分。如果程序从该分发包中提取出来，并在程序许可证的条款范围内使用或分发，则所有重新分发程序的一方都应享有与原始软件分发包授予的权利相同的权利。
->
->9. 许可证不得限制其他软件
->
->许可证不得对与许可软件一起分发的其他软件施加限制。例如，许可证不得坚持要求在同一介质上分发的所有其他程序都必须是开源软件。
->
->10. 许可证必须保持技术中立
->
->许可证的任何条款都不得基于任何个人技术或界面风格。
-
-OSI（Open Source Initiative，开源促进会）基于开放软件定义（OSD）的开放认证许可证，已成为全球公认的开放软件判定标准，并通过国际组织、产业界与政府政策的采纳而确立其权威性。参见 [International Authority & Recognition](https://opensource.org/about/authority) 。
-
-受 OSI 认可的开源协议有：[OSI Approved Licenses](https://opensource.org/licenses) ，严格意义上讲，只有列表中的许可证才属于开源许可证。
-
-### 关于各种软件的定义
-
-根据 [自由与非自由软件的分类](https://www.gnu.org/philosophy/categories.zh-cn.html) [备份](https://web.archive.org/web/20260117035802/https://www.gnu.org/philosophy/categories.zh-cn.html) ，我们定义如下：
-
-- 自由软件：符合上述四项基本自由定义的软件即称为自由软件。推论：商业软件可以是自由软件，商业 ≠ 非自由。引证 1：[自由软件可以是商业软件](https://www.gnu.org/philosophy/free-sw.zh-cn.html#four-freedoms) [备份](https://web.archive.org/web/20260115033837/https://www.gnu.org/philosophy/free-sw.zh-cn.html#four-freedoms) ；引证 2：[Words to Avoid (or Use with Care) Because They Are Loaded or Confusing](https://www.gnu.org/philosophy/words-to-avoid.html) [备份](https://web.archive.org/web/20260120174001/https://www.gnu.org/philosophy/words-to-avoid.html) ,“Commercial”部分
-- 开源软件：使用上述开源协议授权的软件。所有自由软件都是开源软件，但是所有开源软件不一定是自由软件。二者的定义和理念都有一定的差异。自由软件是开源软件的充分不必要条件
-- 专有软件/私有软件（proprietary software）：即真正意义上的“非自由软件”，大部分商业软件属此类型。这是 GNU 宣言一开始真正的目标
-- 免费软件：定义模糊。其他类别的软件均可能是“免费”的，但并不一定
-- 商业软件：商业软件是由企业作为其业务的一部分所开发的软件
-
-#### 推论
-
-- 推论 1：商业软件可以是开源软件/自由软件。反之，开源软件/自由软件也同样可以是商业软件。
-- 推论 2：商业软件形式的开源软件/自由软件可以营利（无论项目作者是不是参与此商业软件），且合规。比如我们常见的行为是淘宝商户拿开源许可的软件营利，遭到原作者的不忿。其实这种行为是合规的，只要其标注了原作者并愿意分发相应的源码（如许可证要求）。现实中对此类商家的指责，多源于公众对所采用的开源协议缺乏理解——不少人甚至未通读协议（含中文译本），从而产生误解。在遵守许可的前提下，此类营利可是合乎伦理的，尽管若只是简单搬运可能惹人不快；
-- 推论 3：商业软件不一定是私有软件或专有软件。反之，私有软件或专有软件也不一定是商业软件（如将你的个人项目无营利目的地闭源分发给你的几位朋友）。
-
-### 自由/开源软件与免费
-
-根据“自由度 2：用户可以自由地分发该软件的拷贝”，事实上只要阅读过 GPL 2/3 等相关开源协议，就会知道协议并未限制开源软件的营利行为。从现实出发的红帽公司就是一个典型例子。
-
-开源软件/自由软件 ≠ 免费。
-
-### 开源 ≠ 无版权？协议不可撤销？
-
-很多人会混淆开源与无版权，认为开源=无版权。这种想法在实际中存在逻辑问题：如果你不持有版权，凭什么要求他人遵守你的开源协议？（部分人会将版权转给 GNU 协会，但仍在事实上存在版权）
-
-在司法实践中也存在矛盾，许多开源软件项目作者仍然被追究了法律责任，如果是无版权，那么应该追究谁的责任？
-
-在各国版权法中，版权不可转让所有权利，只能让渡部分权利。让渡全部权利（包括人身权）既荒谬又存在逻辑问题。以《中华人民共和国著作权法》为例，只有“第（五）项至第（十七）项”是可以让渡的，发表权、署名权、修改权、保护作品完整权都是无法让渡的。
-
-在实例中，作者永远不会受到开源协议本身的限制（除非他也引用了别人的项目），那是用来限制他人的，即使协议声称不可撤销，在司法实践中通常无效，并已有相关判例。
-
-### CC-BY-NC（所有版本）、CC-BY-ND（所有版本）既不自由也不开源
-
-根据 [各类许可证及其评论](https://www.gnu.org/philosophy/categories.zh-cn.html) [备份](https://web.archive.org/web/20260117035802/https://www.gnu.org/philosophy/categories.zh-cn.html) ，结合 [OSI Approved Licenses](https://opensource.org/licenses) ，CC-BY-NC（所有版本）、CC-BY-ND（所有版本）等均不属于开源软件许可证或自由软件许可证，因此在该许可证授权下的项目既非传统意义上的自由软件亦非开源软件。
-
-原因很简单，上述协议都歧视商业用户，剥夺了商业用户的“自由”。
-
-此外，前项 CC 协议也不符合自由软件精神，即要求冗长的署名与声明，这种广告条款增加了项目复用时的合规成本。
-
-笔者注意到，不少项目虽然采用了前项 CC 协议进行授权，却依然自诩支持开源软件，拥护自由软件运动，甚至标榜自己是忠实拥趸。这一现象表明，尽管“自由软件”和“开源软件”的名号已广为人知，但其背后的理念却未必真正得到了理解与践行。
-
-### 可以获取源代码 ≠ 开源 ≠ 自由
-
-根据微软的 Enterprise Source Licensing Program: ESLP 协议（或者 Microsoft Reference Source License, Ms-RSL），商业用户只要购买了一定量的产品副本（并不要求多么离谱的数量或额度），即可获取其对应的源代码。
-
-你可以获取源代码，并且微软的限制条件仍然在表面上看似符合“自由度 1”（自由修改参见 [神州网信](https://www.cmgos.com/) [备份](https://web.archive.org/web/20260115132700/https://www.cmgos.com/web/home/)  的 Windows 10 神州网信政府版）。
-
-但是你很难说这种协议是一种开源协议，在某种意义上 CC-BY-NC（所有版本）、CC-BY-ND（所有版本）其实和这种许可协议没有什么本质区别。
