@@ -192,7 +192,7 @@
 ## 第 18 章 嵌入式平台
 
 * [18.1 树莓派安装 FreeBSD](di-18-zhang-shu-mei-pai-yu-riscv/di-18.1-jie-xi-tong-an-zhuang.md)
-* [18.2 配置树莓派中 FreeBSD](di-18-zhang-shu-mei-pai-yu-riscv/di-18.2-jie-shi-yong-pei-zhi.md)
+* [18.2 在树莓派中使用 FreeBSD](di-18-zhang-shu-mei-pai-yu-riscv/di-18.2-jie-shi-yong-pei-zhi.md)
 * [18.3 在树莓派上使用 Linux 二进制兼容层](di-18-zhang-shu-mei-pai-yu-riscv/di-18.3-jie-shu-mei-pai-yu-linux-jian-rong-ceng.md)
 * [18.4 Radxa X4（x86）开发板](di-18-zhang-shu-mei-pai-yu-riscv/di-18.4-jie-radxax4.md)
 
