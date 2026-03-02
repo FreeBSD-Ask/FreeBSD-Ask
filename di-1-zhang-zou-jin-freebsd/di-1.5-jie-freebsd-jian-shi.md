@@ -1,4 +1,4 @@
-# 1.3 乔治·贝克莱（George Berkeley）与 BSD 的命名渊源
+# 1.5 乔治·贝克莱（George Berkeley）与 BSD 的命名渊源
 
 值得注意的是，BSD（Berkeley Software Distribution，伯克利软件发行版）之名源于爱尔兰近代伟大的经验论哲学家 George Berkeley（乔治·贝克莱，1685－1753）。在各种著作中，他常被称为 Bishop of Cloyne（克洛因主教）或贝克莱主教。
 
