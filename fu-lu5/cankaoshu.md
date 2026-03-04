@@ -63,6 +63,14 @@
 
 主要作者：Marshall Kirk McKusick 在其网站上有提供多款 BSD 相关的 [录制课程](https://www.mckusick.com/buylist.html) [备份](https://web.archive.org/web/20260117174307/https://www.mckusick.com/buylist.html)，大致价格为 1945 美元。目前正在撰写推出第三版，见 2025 年 6 月 BSDCan 大会 [A History of the BSD Daemon by Marshall Kirk McKusick](https://www.youtube.com/watch?v=SGC0191nDp0) [备份](https://web.archive.org/web/20260117174326/https://www.youtube.com/watch?v=SGC0191nDp0)（BSD 守护进程史，作者 Marshall Kirk McKusick。见 42:35-50:23）。
 
+
+#### IPv6 网络堆栈
+
+逐行讲解了 FreeBSD IPv6 网络堆栈（KAME）的设计与实现。
+
+- （美）QingLi，（日）神明达哉（Tatuya Jinmei），（日）岛庆一（Keiichi Shima）. IPv6详解：卷1，核心协议实现[M]. 陈涓，赵振平，译. 北京：人民邮电出版社，2009：846. ISBN 9787115189509（英文影印版本 ISBN 9787115195517）
+- （美）Qing Li，（日）神明达哉（Tatuya Jinmei），（日）岛庆一（Keiichi Shima）. IPv6详解：卷2，高级协议实现[M]. 王嘉祯，等译. 北京：人民邮电出版社，2009：869. ISBN 9787115208910（英文影印版本 ISBN 9787115195197）
+
 #### ZFS
 
 | 封面/书名 |  作者/译者 | ISBN/出版社 | 说明 |
