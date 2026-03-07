@@ -278,7 +278,7 @@ python: /usr/ports/lang/python
 # make BATCH=yes clean
 ```
 
-其中 `BATCH=yes` 意味着使用默认参数进行构建。
+其中 `BATCH=yes`（批处理）意味着使用默认参数进行构建。
 
 ## 如何设置全部所需的依赖
 
