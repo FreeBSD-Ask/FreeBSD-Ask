@@ -194,6 +194,7 @@
 * [18.2 在树莓派中使用 FreeBSD](di-18-zhang-shu-mei-pai-yu-riscv/di-18.2-jie-shi-yong-pei-zhi.md)
 * [18.3 在树莓派上使用 Linux 二进制兼容层](di-18-zhang-shu-mei-pai-yu-riscv/di-18.3-jie-shu-mei-pai-yu-linux-jian-rong-ceng.md)
 * [18.4 Radxa X4（x86）开发板](di-18-zhang-shu-mei-pai-yu-riscv/di-18.4-jie-radxax4.md)
+* [18.5 嵌入式开发](di-18-zhang-shu-mei-pai-yu-riscv/di-18.5-jie-qian-ru-shi-kai-fa-huan-jing.md)
 
 ## 第 19 章 数据库管理
 
