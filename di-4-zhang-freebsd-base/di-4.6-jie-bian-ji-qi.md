@@ -136,11 +136,11 @@ vim.opt.number = true          -- 显示绝对行号
 vim.opt.relativenumber = true  -- 显示相对行号（推荐与 number 一起用，形成混合模式）
 ```
 
-## LazyVim 编辑器
+### LazyVim 编辑器概述
 
 LazyVim 是一个开箱即用的 NeoVim 配置发行版（distribution），基于 lazy.nvim 插件管理器，集成了代码补全、LSP、文件浏览器、Git 集成等 IDE 特性，非常适合想快速获得强大编辑体验的用户。
 
-### 安装 LazyVim
+#### 安装 LazyVim
 
 推荐全新配置：
 
@@ -166,36 +166,6 @@ nvim
 NeoVim 和 Vim 共享大部分命令，上述 `:q :q! :wq :wq! :/` 等在 LazyVim 中同样适用。
 
 ![](../.gitbook/assets/di-4.6-jie-neovim.png)
-
-
-## microsoft-edit
-
-microsoft-edit 是由微软开源的文本编辑器，原生支持中文，交互界面简单，并支持鼠标操作。
-
-- 使用 pkg 安装：
-
-```sh
-# pkg ins microsoft-edit
-```
-
-- 还可以使用 Ports 安装：
-
-```sh
-# cd /usr/ports/editors/microsoft-edit/ 
-# make install clean
-```
-
-使用 msedit 编辑器打开 `abc.txt` 文件：
-
-```sh
-$ msedit abc.txt
-```
-
-![](../.gitbook/assets/msedit1.png)
-
-![](../.gitbook/assets/msedit2.png)
-
-操作较为简单，此处无需展开说明。
 
 ## Emacs 编辑器
 
@@ -248,3 +218,36 @@ Emacs GUI：
 Emacs CLI:
 
 ![Emacs CLI](../.gitbook/assets/di-4.6-jie-emacs-2.png)
+
+## microsoft-edit
+
+microsoft-edit 是由微软开源的文本编辑器，原生支持中文，交互界面简单，并支持鼠标操作。
+
+### 安装 microsoft-edit
+
+- 使用 pkg 安装：
+
+```sh
+# pkg ins microsoft-edit
+```
+
+- 还可以使用 Ports 安装：
+
+```sh
+# cd /usr/ports/editors/microsoft-edit/ 
+# make install clean
+```
+
+### 使用 microsoft-edit
+
+使用 msedit 编辑器打开 `abc.txt` 文件：
+
+```sh
+$ msedit abc.txt
+```
+
+![](../.gitbook/assets/msedit1.png)
+
+![](../.gitbook/assets/msedit2.png)
+
+操作较为简单，此处无需展开说明。
