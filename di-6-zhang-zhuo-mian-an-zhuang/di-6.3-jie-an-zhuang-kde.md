@@ -11,7 +11,7 @@ KDE 致力于开发一套现代桌面环境，如果你觉得 KDE 界面很像 W
 
 >**技巧**
 >
->**那些不希望捆绑安装大量附加工具和软件的用户可以使用附录的最小化安装方案**，不需要自定义的用户可继续使用上述完整安装方案。
+>**那些不希望捆绑安装大量附加工具和软件的用户可以使用下方附录的最小化安装方案**，不需要自定义的用户可继续使用上述完整安装方案。
 
 - 使用 pkg 安装：
 
@@ -46,7 +46,7 @@ KDE 致力于开发一套现代桌面环境，如果你觉得 KDE 界面很像 W
 ## 启动项设置
 
 ```sh
-# service dbus enable # 用于桌面环境的进程间通信，作为依赖自动安装的
+# service dbus enable # 用于桌面环境的进程间通信，D-Bus 是作为依赖自动安装的
 # service sddm enable # SDDM 登录管理器
 ```
 
@@ -81,9 +81,22 @@ KDE 致力于开发一套现代桌面环境，如果你觉得 KDE 界面很像 W
 
 ### 系统中文化方法 ① 用户分级
 
-编辑 `/etc/login.conf`：找到 `default:\` 部分，将 `:lang=C.UTF-8` 修改为 `:lang=zh_CN.UTF-8`。
+编辑 `/etc/login.conf` 文件：找到 `default:\` 这一部分，将 `:lang=C.UTF-8` 修改为 `:lang=zh_CN.UTF-8`。
 
-根据 `/etc/login.conf` 更新能力数据库：
+编辑后形如下方：
+
+```ini
+      ……省略其他部分……
+
+        :priority=0:\
+        :umask=022:\
+        :charset=UTF-8:\
+        :lang=zh_CN.UTF-8:  <—— 此处原文是 :lang=C.UTF-8
+
+      ……省略其他部分……
+```
+
+根据 `/etc/login.conf` 文件刷新能力数据库：
 
 ```sh
 # cap_mkdb /etc/login.conf
@@ -167,7 +180,7 @@ KDE 致力于开发一套现代桌面环境，如果你觉得 KDE 界面很像 W
 
 可选 Ports：
 
-```
+```sh
 # cd /usr/ports/x11/konsole/ && make install clean # 终端 
 # cd /usr/ports/x11-fm/dolphin/ && make install clean # 文件管理器
 # cd /usr/ports/editors/kate/ && make install clean # 文本编辑器
