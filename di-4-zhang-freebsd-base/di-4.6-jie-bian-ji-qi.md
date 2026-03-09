@@ -69,7 +69,7 @@ ABC
 
 ## Vim（增强版 Vi）
 
-`vim`（Vi IMproved）是 Vi 的增强版本，提供了语法高亮、插件支持、多窗口等现代功能。
+Vim（Vi IMproved）是 Vi 的增强版本，提供了语法高亮、插件支持、多窗口等现代功能。
 
 ### 安装 Vim
 
@@ -108,17 +108,17 @@ set number              " 或 set nu
 
 ## NeoVim（现代 Vi 改进版）
 
-NeoVim 是 vim 的重构分支，更加模块化，支持 Lua 脚本，插件生态更活跃，性能更好。
+NeoVim 是 Vim 的重构分支，更加模块化，支持 Lua 脚本，插件生态更活跃，性能更好。
 
 ### 安装 NeoVim
 
-使用 pkg 安装：
+- 使用 pkg 安装：
 
 ```sh
 # pkg install neovim
 ```
 
-或者使用 ports 构建：
+- 或者使用 ports 构建：
 
 ```sh
 # cd /usr/ports/editors/neovim
