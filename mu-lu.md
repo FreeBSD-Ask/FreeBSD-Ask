@@ -56,8 +56,7 @@
 * [4.7 用户和基本账户管理](di-4-zhang-freebsd-base/di-4.7-jie-zu.md)
 * [4.8 权限](di-4-zhang-freebsd-base/di-4.8-jie-quan-xian.md)
 * [4.9 sudo 和 doas](di-4-zhang-freebsd-base/di-4.9-jie-sudo.md)
-* [4.10 文件系统基础](di-4-zhang-freebsd-base/di-4.10-mount.md)
-* [4.11 系统目录结构](di-4-zhang-freebsd-base/di-4.11-mu-lu.md)
+* [4.10 系统目录结构](di-4-zhang-freebsd-base/di-4.10-mu-lu.md)
 
 ## 第 5 章 软件管理和系统升级
 
