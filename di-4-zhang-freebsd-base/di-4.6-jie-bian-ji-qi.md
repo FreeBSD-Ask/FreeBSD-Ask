@@ -222,7 +222,7 @@ Emacs 的用户配置文件通常为 `~/.emacs.d/init.el`。
 
 编辑或创建 `~/.emacs.d/init.el` 配置文件：
 
-```sh
+```elisp
 ;; Emacs 基础配置示例
 (setq inhibit-startup-screen t)     ; 关闭启动画面
 (menu-bar-mode -1)                  ; 禁用菜单栏
