@@ -174,6 +174,8 @@ EPUB 格式文档在手机上可使用 [微信读书](https://play.google.com/st
 - 机器人提交: 312
 <!-- commit-progress-end -->
 
----
+## ⭐ 图
+
+![⭐ 图](https://api.star-history.com/image?repos=FreeBSD-Ask/FreeBSD-Ask&type=date&legend=top-left)
 
 若本书对你有帮助，欢迎给本书所在的 [GitHub 项目存储库](https://github.com/FreeBSD-Ask/FreeBSD-Ask) 加颗 ⭐。
