@@ -1,5 +1,7 @@
 # 4.10 系统目录结构
 
+## 目录结果概览
+
 为了方便说明，仅列出三级目录和重要文件：
 
 ```sh
@@ -10,15 +12,18 @@
 │   ├── device.hints 用于控制驱动程序的内核变量，参见 device.hints(5)
 │   ├── uboot 空目录
 │   ├── firmware pkg kmod 会安装至此，以及通过 fwget 下载的固件
+│   ├── loader.conf loader 配置文件
 │   ├── loader.conf.d loader 配置文件的子项
 │   ├── lua 启动加载器的 lua 脚本，包含启动时显示的 ASCII 艺术字（图）等，参见 loader_lua(8) 
-│   ├── zfs 存放 ZFS 存储池（Zpool）的缓存文件 zpool.cache，参见 zpool(8)
+│   ├── zfs 存放 ZFS 存储池（Zpool）的缓存文件
+│   │    └── zpool.cache，硬编码的磁盘驱动器路径，参见 zpool(8)
 │   ├── kernel 内核及内核模块
 │   ├── images 启动时显示的 FreeBSD Logo 等
 │   ├── modules 旧时 pkg kmod 会安装至此，如 drm-kmod
 │   ├── efi EFI 系统分区挂载至此
 │   ├── dtb 设备树 DTB 文件，x86 架构下应为空
-│   └── defaults 存放默认内核的默认引导配置文件，是个详细的示例说明文件，参见 loader.conf(5)  
+│   └── defaults 存放默认内核的默认引导配置文件
+│       └── loader.conf 详细的示例说明文件，参见 loader.conf(5)  
 ├── media 媒体文件挂载点，如 U 盘，光盘
 ├── mnt 用作临时挂载点的空目录
 ├── tmp 通常在系统重启后仍会保留的临时文件
@@ -147,7 +152,128 @@
 dr-xr-xr-x   2 root    wheel   schg,uarch  2 Feb 21 10:26 empty
 ```
 
-
-## 参考文献
+### 参考文献
 
 - 手册页 [hier(7)](https://man.freebsd.org/cgi/man.cgi?query=hier&sektion=7&manpath=freebsd-release-ports)
+
+## device.hints 设备资源提示文件
+
+[device.hints(5)](https://man.freebsd.org/cgi/man.cgi?device.hints) 相关文件结构：
+
+```sh
+/
+├── boot 操作系统引导过程中使用的程序和配置文件
+│    └── device.hints 设备资源提示文件
+└── sys
+     └── ARCH 某具体价格，具体参见内核
+          └── conf 内核配置相关文件
+               ├── GENERIC.hints GENERIC 内核的设备资源提示示例
+               └── NOTES 关于内核配置文件和设备资源提示的说明
+```
+
+根据源代码分析，[sys/amd64/conf/GENERIC.hints](https://github.com/freebsd/freebsd-src/blob/main/sys/amd64/conf/GENERIC.hints) 即为 amd64 架构默认的 device.hints 文件。
+
+根据 [device.hints(5)](https://man.freebsd.org/cgi/man.cgi?device.hints) 所述：
+
+当系统即将启动时，启动引导器 loader(8) 会读取 device.hints（字面意思是设备提示）文件，并将其内容传递给内核。device.hints 包含各种变量来控制内核的启动行为。这些变量通常是“device.hints”，但也可以是内核可调参数值。
+
+该文件的默认内容根据架构的不同而变化，基每条格式为（`#` 代表注释）：
+
+```ini
+hint.设备驱动名称.单元编号.关键字="值"
+```
+
+为驱动的某单元编号设备实例指定某个资源或属性。
+
+
+```ini
+# 下面的驱动大都已经被现代计算机所淘汰，或在个人 PC 上较为罕见
+
+# AT 键盘控制器驱动 atkbdc(4) AT 机，1980 年代产物
+hint.atkbdc.0.at="isa"  # at：指定设备所连接的总线
+hint.atkbdc.0.port="0x060"  # port：即指定设备将使用的 I/O Port 起始地址
+hint.atkbd.0.at="atkbdc"
+hint.atkbd.0.irq="1"  # irq：要使用的中断线路编号
+
+# PS/2 外设 IBM 兼容键盘驱动 psm(4)，1980 年代产物
+
+#isa
+# └── atkbdc0
+#       ├── atkbd0
+#       └── psm0
+
+hint.psm.0.at="atkbdc"  
+hint.psm.0.irq="12"
+
+# syscons(4) 传统控制台驱动
+hint.sc.0.at="isa"
+hint.sc.0.flags="0x100"  # flags：为设备设置标志位
+
+# 串口驱动 uart(4)
+hint.uart.0.at="acpi"  # 即设置 COM1
+hint.uart.0.port="0x3F8"
+hint.uart.0.flags="0x10"
+hint.uart.1.at="acpi"  # 即设置 COM2
+hint.uart.1.port="0x2F8"
+
+# RTC 驱动（实时时钟 atrtc(4)）
+hint.atrtc.0.at="isa"
+hint.atrtc.0.port="0x70"
+hint.atrtc.0.irq="8"
+
+# i8254 可编程间隔定时器（AT 定时器）驱动 attimer(4) 
+hint.attimer.0.at="isa"
+hint.attimer.0.port="0x40"
+hint.attimer.0.irq="0"
+
+# 禁用 ACPI CPU throttle 驱动，参见 cpufreq(4)
+hint.acpi_throttle.0.disabled="1"  # disabled：设置为 “1” 意味着禁用该设备
+
+# 禁用 Pentium 4 热控制，参见 cpufreq(4)
+hint.p4tcc.0.disabled="1"
+```
+
+文件版本：[amd64 GENERIC: Switch uart hints from "isa" to "acpi"](https://github.com/freebsd/freebsd-src/commit/9cc06bf7aa2846c35483de567779bb8afc289f53)
+
+解释：
+
+```sh
+hint.atkbdc.0.at="isa"
+```
+
+将驱动 [atkbdc](https://man.freebsd.org/cgi/man.cgi?query=atkbdc&amp;sektion=4)（AT 键盘控制器）的设备实例号 0 附加（attach）到 ISA 总线上，即指定第 0 个 atkbdc 设备位于 ISA 总线上。
+
+## loader.conf 系统启动配置信息
+
+根据 [loader.conf(5)](https://man.freebsd.org/cgi/man.cgi?query=loader.conf) 所述，loader.conf 文件包含了关于系统引导过程的说明信息。通过 loader.conf，可以指定要启动的内核、传递给内核的参数以及需要加载的附加模块；通常还可以设置 loader(8) 中所述的一切变量。
+
+loader.conf(5) 相关文件结构：
+
+```sh
+/
+└── boot 操作系统引导过程中使用的程序和配置文件
+     ├── loader.conf 用户定义设置
+     ├── loader.conf.lua 使用 Lua 编写的用户定义设置（默认不存在）
+     ├── loader.conf.d 用户定义设置的子目录（默认为空）
+     │    ├── *.conf 拆分成多个文件的用户定义设置（默认不存在）
+     │    └── *.lua 使用 Lua 编写并拆分成多个文件的用户定义设置（默认不存在）
+     ├── loader.conf.local 机器特定设置，可覆盖其它配置文件中的设置（默认不存在）
+     └── defaults 存放默认引导配置文件（请勿直接修改）
+          └── loader.conf 默认设置文件，参见 loader.conf(5)
+```
+
+使用标准 ZFS 安装系统下的 `/boot/loader.conf` 文件内容如下：
+
+```sh
+kern.geom.label.disk_ident.enable="0"
+kern.geom.label.gptid.enable="0"
+zfs_enable="YES"
+```
+
+需要注意的是，该文件是由 bsdinstall(8) 在安装过程中写入的。
+
+如 [usr.sbin/bsdinstall/scripts/zfsboot](https://github.com/freebsd/freebsd-src/blob/e6d579be42550f366cc85188b15c6eb0cad27367/usr.sbin/bsdinstall/scripts/zfsboot#L1385) 将分别写入 `kern.geom.label.disk_ident.enable="0"`、`kern.geom.label.gptid.enable="0"` 和 `zfs_enable="YES"` 这三行，因此在使用 ZFS 标准安装方案的系统中，这三行即是 `/boot/loader.conf` 的全部内容。
+
+
+
+
