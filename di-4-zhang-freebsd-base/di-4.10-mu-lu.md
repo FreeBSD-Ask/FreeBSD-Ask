@@ -1,5 +1,7 @@
 # 4.10 系统目录结构
 
+## 目录结构概览
+
 为了方便说明，仅列出三级目录和重要文件：
 
 ```sh
@@ -10,15 +12,18 @@
 │   ├── device.hints 用于控制驱动程序的内核变量，参见 device.hints(5)
 │   ├── uboot 空目录
 │   ├── firmware pkg kmod 会安装至此，以及通过 fwget 下载的固件
+│   ├── loader.conf loader 配置文件
 │   ├── loader.conf.d loader 配置文件的子项
 │   ├── lua 启动加载器的 lua 脚本，包含启动时显示的 ASCII 艺术字（图）等，参见 loader_lua(8) 
-│   ├── zfs 存放 ZFS 存储池（Zpool）的缓存文件 zpool.cache，参见 zpool(8)
+│   ├── zfs 存放 ZFS 存储池（Zpool）的缓存文件
+│   │    └── zpool.cache，硬编码的磁盘驱动器路径，参见 zpool(8)
 │   ├── kernel 内核及内核模块
 │   ├── images 启动时显示的 FreeBSD Logo 等
 │   ├── modules 旧时 pkg kmod 会安装至此，如 drm-kmod
 │   ├── efi EFI 系统分区挂载至此
 │   ├── dtb 设备树 DTB 文件，x86 架构下应为空
-│   └── defaults 存放默认内核的默认引导配置文件，是个详细的示例说明文件，参见 loader.conf(5)  
+│   └── defaults 存放默认内核的默认引导配置文件
+│       └── loader.conf 详细的示例说明文件，参见 loader.conf(5)  
 ├── media 媒体文件挂载点，如 U 盘，光盘
 ├── mnt 用作临时挂载点的空目录
 ├── tmp 通常在系统重启后仍会保留的临时文件
@@ -147,7 +152,7 @@
 dr-xr-xr-x   2 root    wheel   schg,uarch  2 Feb 21 10:26 empty
 ```
 
-
-## 参考文献
+### 参考文献
 
 - 手册页 [hier(7)](https://man.freebsd.org/cgi/man.cgi?query=hier&sektion=7&manpath=freebsd-release-ports)
+
