@@ -258,22 +258,219 @@ loader.conf(5) 相关文件结构：
      │    ├── *.conf 拆分成多个文件的用户定义设置（默认不存在）
      │    └── *.lua 使用 Lua 编写并拆分成多个文件的用户定义设置（默认不存在）
      ├── loader.conf.local 机器特定设置，可覆盖其它配置文件中的设置（默认不存在）
-     └── defaults 存放默认引导配置文件（请勿直接修改）
-          └── loader.conf 默认设置文件，参见 loader.conf(5)
+     └── defaults 存放默认引导配置文件
+          └── loader.conf 默认设置文件（请勿直接修改），参见 loader.conf(5)
 ```
 
-使用标准 ZFS 安装系统下的 `/boot/loader.conf` 文件内容如下：
+### 标准 ZFS 安装系统下的 `/boot/loader.conf` 文件
 
-```sh
-kern.geom.label.disk_ident.enable="0"
-kern.geom.label.gptid.enable="0"
-zfs_enable="YES"
+`/boot/loader.conf` 文件内容如下（15.0-RELEASE）：
+
+```ini
+kern.geom.label.disk_ident.enable="0"     # 禁用 disk_ident 标签，形如 /dev/diskid/DISK-S3Z4NB0K123456（硬件序列号）
+kern.geom.label.gptid.enable="0"     # 禁用基于磁盘序列号生成的设备名，形如 /dev/gptid/3f6c3a3e-4bcb-11ee-8e6d-001b217e6c8a（GPT UUID）
+zfs_enable="YES"     # 默认加载 zfs 模块
 ```
 
 需要注意的是，该文件是由 bsdinstall(8) 在安装过程中写入的。
 
-如 [usr.sbin/bsdinstall/scripts/zfsboot](https://github.com/freebsd/freebsd-src/blob/e6d579be42550f366cc85188b15c6eb0cad27367/usr.sbin/bsdinstall/scripts/zfsboot#L1385) 将分别写入 `kern.geom.label.disk_ident.enable="0"`、`kern.geom.label.gptid.enable="0"` 和 `zfs_enable="YES"` 这三行，因此在使用 ZFS 标准安装方案的系统中，这三行即是 `/boot/loader.conf` 的全部内容。
+如 [usr.sbin/bsdinstall/scripts/zfsboot](https://github.com/freebsd/freebsd-src/blob/e6d579be42550f366cc85188b15c6eb0cad27367/usr.sbin/bsdinstall/scripts/zfsboot#L1385) 将分别写入 `kern.geom.label.disk_ident.enable="0"`、`kern.geom.label.gptid.enable="0"` 和 `zfs_enable="YES"` 这三行。因此在使用 ZFS 标准安装方案的系统中，这三行即是 `/boot/loader.conf` 的全部内容。
 
 
+### 默认设置文件 `/boot/defaults/loader.conf`
+
+该文件在源代码中的位置是 [stand/defaults/loader.conf]([https://github.com/freebsd/freebsd-src/blob/main/stand/defaults/loader.conf)。
+
+来看看文件内容（版本 [loader.conf.5: "console" setting does not document multi-value possiblity](https://github.com/freebsd/freebsd-src/commit/240c614d48cb0484bfe7876decdf6bbdcc99ba73)）：
+
+```ini
+# 这是 loader.conf —— 一个包含许多实用变量的文件
+# 你可以通过设置这些变量来改变系统的默认加载行为。
+# 你不应该直接编辑此文件！
+# 请把任何要覆盖设置放入 loader_conf_files 中的某个文件里
+# 这样以后在更新这些默认值时，就不会污染你的原生配置信息。
+
+#
+# 所有参数都必须使用双引号。
+#
+
+###  基础配置选项  ############################
+# 执行命令，在屏幕上打印“Loading /boot/defaults/loader.conf”这句话
+exec="echo Loading /boot/defaults/loader.conf"     # （正在加载 /boot/defaults/loader.conf）
+
+# 内核设置
+kernel="kernel"		# /boot 子目录，包含内核和模块。
+bootfile="kernel"	# 内核名称（可以是绝对路径）
+kernel_options=""	# 传递给内核的标志
+
+# 引导启动器配置文件配置
+loader_conf_files="/boot/device.hints /boot/loader.conf"   # loader 默认读取的配置文件列表
+loader_conf_dirs="/boot/loader.conf.d"                     # loader 读取的配置目录，将加载该目录中的 *.conf 和 *.lua 文件
+local_loader_conf_files="/boot/loader.conf.local"          # 本机专用配置文件，可覆盖其它配置文件中的设置
+nextboot_conf="/boot/nextboot.conf"                        # 下一次启动使用的临时配置文件
+verbose_loading="NO"		# 设置为 YES 将启用详细的引导输出
+
+###  启动画面配置  ############################
+# 启动 Logo 设置
+splash_bmp_load="NO"		# 设置为 YES 将启用 bmp 启动画面
+splash_pcx_load="NO"		# 设置为 YES 将启用 pcx 启动画面
+splash_txt_load="NO"		# 设置为 YES 将启用 TheDraw 启动画面
+vesa_load="NO"			# 设置为 YES 将加载 vesa 模块
+bitmap_load="NO"		# 如果想使用启动画面，请设置为 YES
+bitmap_name="splash.bmp"	# 设置为文件名
+bitmap_type="splash_image_data" # 并将其放在 module_path 中
+splash="/boot/images/freebsd-logo-rev.png"  # 再设置 boot_mute=YES 将加载它
+
+###  屏幕保护模块  ###################################
+# 最好在 rc.conf 中设置这些屏保
+screensave_load="NO"		# 设置为 YES 将加载屏幕保护程序模块
+screensave_name="green_saver"	# 设置要使用的屏幕保护程序模块名称
+
+###  早期 hostid 配置 ############################
+# 这台机器的唯一标识
+hostuuid_load="YES"        # 设置为 YES 来加载 hostuuid 模块
+hostuuid_name="/etc/hostid" # 指定 hostid 文件路径
+hostuuid_type="hostuuid"   # 指定模块类型为 hostuuid
+
+###  随机数生成配置  ##################
+# 适用于密码模块，随机数生成用
+# 参见 rc.conf(5)。rc.conf 中 entropy_boot_file 配置变量必须与下面的设置相同
+# rc.conf 中的 entropy_boot_file 和 loader.conf 中的 entropy_cache_name 必须指定的是同一个文件
+entropy_cache_load="YES"		# 设置为 NO 将禁用在启动时加载缓存的熵
+entropy_cache_name="/boot/entropy"	# 设置为该文件的名称
+entropy_cache_type="boot_entropy_cache"	# 内核查找启动时熵缓存所必需的类型。即使上面的 _name 发生变化，这个值也绝不能改变！
+entropy_efi_seed="YES"			# 设置为 NO 将禁用从 UEFI 硬件随机数生成器 API 加载熵
+entropy_efi_seed_size="2048"		# 设置为其他值以改变从 EFI 请求的熵数量
+
+
+###  内存黑名单配置  ############################
+# 屏蔽坏内存地址用，适用于服务器
+ram_blacklist_load="NO"			# 设置为 YES 可加载一个文件，该文件包含需要从运行系统中排除的地址列表
+ram_blacklist_name="/boot/blacklist.txt" # 设置为该文件的名称
+ram_blacklist_type="ram_blacklist"	# 内核查找黑名单模块所必需的类型
+
+###  微码加载配置  ########################
+# 处理器微码配置
+cpu_microcode_load="NO"			# 设置为 YES 以在启动时加载并应用微码更新文件
+cpu_microcode_name="/boot/firmware/ucode.bin" # 设置为微码更新文件路径
+cpu_microcode_type="cpu_microcode"	# 内核查找微码更新文件所必需的类型
+
+###  ACPI 设置  ##########################################
+acpi_dsdt_load="NO"		# DSDT 覆盖
+acpi_dsdt_type="acpi_dsdt"	# 请勿修改此项
+acpi_dsdt_name="/boot/acpi_dsdt.aml"     # 使用此文件覆盖 BIOS 中的 DSDT
+acpi_video_load="NO"		# ACPI 视频扩展驱动
+
+###  审计设置  #########################################
+# 安全审计系统的事件定义预加载配置
+audit_event_load="NO"		# 设置为 YES 将在启动早期预加载 audit_event 配置文件
+audit_event_name="/etc/security/audit_event" # 指定 audit_event 配置文件路径
+audit_event_type="etc_security_audit_event"  # 内核查找并识别该配置文件所需的类型
+
+### 初始内存磁盘设置 ###########################
+# 内存盘设置
+#mdroot_load="YES"		# “mdroot” 前缀可任意修改
+#mdroot_type="md_image"		# 在启动时创建 md(4) 内存磁盘
+#mdroot_name="/boot/root.img"	# 指向包含磁盘镜像的文件路径
+#rootdev="ufs:/dev/md0"		# 将根文件系统设置为 md(4) 设备
+
+###  引导设置  ########################################
+#loader_delay="3"		# 在加载任何内容前延迟的秒数。默认未设置且禁用（无延迟）
+#autoboot_delay="10"		# 自动启动前延迟的秒数，-1 表示禁止用户中断，NO 表示禁用
+#print_delay="1000000"		# loader 消息的慢速打印，便于调试。单位为微秒（1000000 微秒 = 1 秒）
+#password=""			# 修改启动选项的密码，避免修改启动选项
+#bootlock_password=""		# 设置启动锁定密码，避免未授权启动（参见 check-password.4th(8)）
+#geom_eli_passphrase_prompt="NO" # 是否提示：输入 geli(8) 密码来挂载根文件系统
+bootenv_autolist="YES"		# 自动填充 ZFS 启动环境列表
+#beastie_disable="NO"		# 是否启用 Beastie（小恶魔）启动菜单
+efi_max_resolution="1x1"	# 设置 EFI 引导下使用的最大分辨率：可选 480p、720p、1080p、1440p、2160p/4k、5k；自定义宽 x 高（例如 1920x1080）
+#kernels="kernel kernel.old"	        # 在启动菜单中显示的内核列表
+kernels_autodetect="YES"	        # 自动检测 /boot 中的内核目录
+#loader_gfx="YES"		        # 当图形可用时使用图形界面
+#loader_logo="orbbw"		        # 可选启动 Logo 有：orbbw、orb、fbsdbw、beastiebw、beastie、none
+#comconsole_speed="115200"	        # 设置当前串口控制台速率
+#console="vidconsole"		        # 以逗号（,）或空格（ ）分隔的控制台列表
+#currdev="disk1s1a"		        # 设置当前设备
+module_path="/boot/modules;/boot/firmware;/boot/dtb;/boot/dtb/overlays"  # 设置模块搜索路径
+module_blacklist="drm drm2 radeonkms i915kms amdgpu if_iwlwifi if_rtw88 if_rtw89"  # 引导器模块黑名单
+module_blacklist="${module_blacklist} nvidia nvidia-drm nvidia-modeset"        # 追加黑名单模块
+#prompt="\\${interpret}"		        # 设置 loader 命令提示符
+#root_disk_unit="0"		        # 强制设置根磁盘单元号
+#rootdev="disk1s1a"		        # 设置根文件系统
+#dumpdev="disk1s1b"		        # 在启动早期设置 dump 设备
+#tftp.blksize="1428"		        # 设置 RFC 2348 TFTP 块大小。若 TFTP 服务器不支持 RFC 2348，则块大小为 512 有效值范围：(8,9007)
+#twiddle_divisor="16"		        # 减慢进度指示器 < 16 < 加快进度指示器
+
+###  内核设置  ########################################
+# 以下 boot_ 变量通过赋值来启用
+# 它们在内核环境中存在（参见 kenv(1)）时，效果与设置对应的启动标志相同（参见 boot(8)）。
+#boot_askname=""	# -a：提示用户输入根设备名称
+#boot_cdrom=""		# -C：尝试从 CD-ROM 光学介质挂载根文件系统
+#boot_ddb=""		# -d：指示内核通过 DDB 调试器模式启动
+#boot_dfltroot=""	# -r：使用静态配置的根文件系统
+#boot_gdb=""		# -g：为内核调试器选择 gdb-remote 模式
+#boot_multicons=""	# -D：使用多个控制台
+#boot_mute=""		# -m：静默控制台
+#boot_pause=""		# -p：在设备探测时每行暂停
+#boot_serial=""		# -h：使用串口控制台
+#boot_single=""		# -s：以单用户模式启动系统
+#boot_verbose=""	# -v：打印额外调试信息
+#init_path="/sbin/init:/sbin/oinit:/sbin/init.bak:/rescue/init"     # 设置 init 的候选路径列表
+#init_shell="/bin/sh"	# init(8) 使用的 shell 二进制文件
+#init_script=""		# init(8) 在 chroot 前运行的初始脚本
+#init_chroot=""		# init(8) 要 chroot 的目录
+
+###  内核可调参数  ########################################
+#hw.physmem="1G"		# 限制物理内存大小。参见 loader(8)
+#kern.dfldsiz=""		# 设置初始数据段大小限制
+#kern.dflssiz=""		# 设置初始堆栈大小限制
+#kern.hz="100"			# 设置内核时间间隔定时器频率
+#kern.maxbcache=""		# 设置最大缓冲区缓存 KVA 存储
+#kern.maxdsiz=""		# 设置最大数据段大小
+#kern.maxfiles=""		# 设置系统全局最大打开文件数
+#kern.maxproc=""		# 设置最大进程数
+#kern.maxssiz=""		# 设置最大堆栈大小
+#kern.maxswzone=""		# 设置最大交换元 KVA 存储
+#kern.maxtsiz=""		# 设置最大文本段大小
+#kern.maxusers="32"		# 设置各种静态表的大小
+#kern.msgbufsize="65536"	# 设置内核消息缓冲区大小
+#kern.nbuf=""			# 设置缓冲区头数量
+#kern.ncallout=""		# 设置最大定时器事件数量
+#kern.ngroups="1023"		# 设置最大附加组数
+#kern.sgrowsiz=""		# 设置堆栈增长量
+#kern.cam.boot_delay="10000"	# 根挂载时 CAM 总线注册延迟（毫秒），当 USB 设备作为根分区时有用
+#kern.cam.scsi_delay="2000"	# 扫描 SCSI 前的延迟（毫秒）
+#kern.ipc.maxsockets=""		# 设置最大可用套接字数量
+#kern.ipc.nmbclusters=""	# 设置 mbuf 集群数量
+#kern.ipc.nsfbufs=""		# 设置 sendfile(2) 缓冲区数量
+#net.inet.tcp.tcbhashsize=""	# 设置 TCBHASHSIZE 值（TCP 控制块哈希表的大小）
+#vfs.root.mountfrom=""		# 指定根分区
+#vm.kmem_size=""		# 设置内核内存大小（字节）
+#debug.kdb.break_to_debugger="0" # 允许控制台进入调试器
+#debug.ktr.cpumask="0xf"	# 启用 KTR 的 CPU 位掩码
+#debug.ktr.mask="0x1200"	# 启用的 KTR 事件位掩码
+#debug.ktr.verbose="1"		# 启用 KTR 事件的控制台输出
+
+### 模块加载语法示例  ##########################
+#module_load="YES"		# 加载模块 "module"
+#module_name="realname"		# 使用 "realname" 替代 "module"
+#module_type="type"		# 加载时传递 "-t type"
+#module_flags="flags"		# 传递 "flags" 给模块
+#module_before="cmd"		# 在加载模块前执行 "cmd" 命令
+#module_after="cmd"		# 在加载模块后执行 "cmd"
+#module_error="cmd"		# 模块加载失败时执行 "cmd"
+
+### 固件名称映射列表
+# 内核在加载网卡驱动时会去寻找对应固件文件
+iwm3160fw_type="firmware"   # iwm3160 固件类型
+iwm7260fw_type="firmware"   # iwm7260 固件类型
+iwm7265fw_type="firmware"   # iwm7265 固件类型
+iwm8265fw_type="firmware"   # iwm8265 固件类型
+iwm9260fw_type="firmware"   # iwm9260 固件类型
+iwm3168fw_type="firmware"   # iwm3168 固件类型
+iwm7265Dfw_type="firmware"  # iwm7265D 固件类型
+iwm8000Cfw_type="firmware"  # iwm8000C 固件类型
+iwm9000fw_type="firmware"   # iwm9000 固件类型
+```
 
 
