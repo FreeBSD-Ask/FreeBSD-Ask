@@ -1,4 +1,4 @@
-# Boot（启动）
+# Boot 启动
 
 
 ![](../.gitbook/assets/image-20250726132126-uafgj13.png)
