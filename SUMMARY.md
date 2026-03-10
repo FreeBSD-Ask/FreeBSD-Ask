@@ -147,6 +147,7 @@
 * [13.5 Live 镜像与系统急救](di-13-zhang-freebsd-te-se/di-13.5-jie-hui-fu-mo-shi-yu-mi-ma-zhong-zhi.md)
 * [13.6 引导管理器与 UEFI 固件](di-13-zhang-freebsd-te-se/di-13.6-jie-grub-ji-qi-ta-yin-dao.md)
 * [13.7 用户分级文件（login.conf）](di-13-zhang-freebsd-te-se/di-13.7-jie-conf.md)
+* [13.8 设备资源提示文件（device.hints）](di-13-zhang-freebsd-te-se/di-13.8-jie-hints.md)
 
 ## 第 14 章 网络管理
 
