@@ -140,7 +140,7 @@
 
 ## 第 13 章 系统管理
 
-* [13.1 引导界面和虚拟控制台](di-13-zhang-freebsd-te-se/di-13.1-jie-yin-dao-jie-mian.md)
+* [13.1 启动引导器及配置文件（loader.conf）](di-13-zhang-freebsd-te-se/di-13.1-jie-yin-dao-jie-mian.md)
 * [13.2 管理 FreeBSD 中的服务](di-13-zhang-freebsd-te-se/di-13.2-jie-bsd-init-guan-li-fu-wu.md)
 * [13.3 bsdconfig 系统配置工具](di-13-zhang-freebsd-te-se/di-13.3-jie-bsdinstall-yu-bsdconfig.md)
 * [13.4 SSH 配置和相关工具](di-13-zhang-freebsd-te-se/di-13.4-jie-chang-yong-ruan-jian-yu-ssh-pei-zhi.md)
