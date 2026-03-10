@@ -6,6 +6,7 @@
   - “13.1 启动引导器及配置文件（loader.conf）”新增“loader.conf 系统启动配置信息”
   - 新增“13.8 设备资源提示文件（device.hints）”
   - “13.2 管理 FreeBSD 中的服务”易名为“13.2 init.rc 服务”，非 rc 服务部分拆分到下面章节
+  - “13.2 init.rc 服务”：完全重写
   - 新增“13.9 crontab 及定时任务文件（periodic.conf）”
   - 新增“13.10 内核状态默认配置文件（sysctl.conf）”
 - 2026.3.9
