@@ -1,4 +1,4 @@
-# 4.9 sudo 和 doas
+# 4.9 特权提升工具（sudo、doas 等）
 
 
 ![权限示意图](../.gitbook/assets/qie-su.png)

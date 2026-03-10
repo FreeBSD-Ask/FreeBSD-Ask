@@ -1,4 +1,4 @@
-# Security（安全）
+# Security 安全
 
 
 参见 [如何设置或解决忘记 BIOS 密码/UEFI 密码/开机密码](https://www.asus.com.cn/support/faq/1046347/) [备份](https://web.archive.org/web/20260119060629/https://www.asus.com.cn/support/faq/1046347/)

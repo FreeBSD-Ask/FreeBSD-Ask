@@ -1,4 +1,4 @@
-# Main（主菜单）
+# Main 主菜单
 
 ![](../.gitbook/assets/R7HQ2ZAJNW76VA29V7AM-20250719125219-xv8j22t.png)
 

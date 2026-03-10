@@ -1,4 +1,4 @@
-# 8.11 Wine
+# 8.11 Wine 配置
 
 Wine 是一款能够在 Unix 系统上运行 Microsoft Windows 程序的软件。
 

@@ -1,4 +1,4 @@
-# Chipset（芯片组）
+# Chipset 芯片组
 
 芯片组设置信息
 

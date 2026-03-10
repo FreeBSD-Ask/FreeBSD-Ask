@@ -1,4 +1,4 @@
-# 6.2 NVIDIA 显卡驱动
+# 6.2 NVIDIA 显卡驱动配置
 
 ## NVIDIA 显卡驱动概述
 

@@ -1,4 +1,4 @@
-# Advanced（高级）
+# Advanced 高级
 
 重复内容不再译出。
 
