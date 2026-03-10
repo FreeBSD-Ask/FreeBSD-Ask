@@ -255,7 +255,7 @@
 * [24.1 FreeBSD 内核文件结构](di-24-zhang-kernel/di-24.1-kernel-conf.md)
 * [24.2 机器相关的内核选项注解](di-24-zhang-kernel/di-24.2-kernel-md.md)
 * [24.3 机器无关的内核选项注解](di-24-zhang-kernel/di-24.3-kernel-mi.md)
-* [24.4 GENERIC 内核选项（amd64）注解](di-24-zhang-kernel/di-24.4-GENERIC-kernel-mi.md)
+* [24.4 GENERIC 内核选项注解（amd64）](di-24-zhang-kernel/di-24.4-GENERIC-kernel-mi.md)
 * [24.5 在 Linux 系统上交叉构建 FreeBSD](di-24-zhang-kernel/di-24.5-jie-build-freebsd-on-linux.md)
 * [24.6 FreeBSD 源代码目录结构](di-24-zhang-kernel/di-24.6-mulu.md)
 
