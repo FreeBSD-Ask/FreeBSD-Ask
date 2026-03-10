@@ -2,6 +2,7 @@
 
 |术语 | 中文 | 说明|
 |:---|:---|:---|
+|Berkeley Software Distribution, BSD |伯克利软件套件|直译应为“伯克利软件发行版”，这是加利福尼亚大学伯克利分校的计算机系统研究小组（CSRG）对其针对 AT&T 的 UNIX v7 进行改进和修改的成果命名。FreeBSD 正是 CSRG 工作的后续 |
 |Port|/|单个软件的移植|
 |Ports|/|所有 Port 的集合|
 |Ports Collection|/|Ports 技术体系的整体|
