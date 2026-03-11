@@ -23,6 +23,10 @@ FreeBSD 是一款真正自由（Liberty）的 **操作系统**，在这波谲云
 
 本书是 **FreeBSD 中文社区** 许多人共同努力的成果。
 
+![微信公众号](.gitbook/assets/wechatnew.png)
+
+微信公众号：bsdcn2018
+
 - FreeBSD 中文社区 **首要** 联系方式为 **QQ 群**：[787969044](https://qm.qq.com/q/cX5mpJ36gg)（点击加群）
 
 ![FreeBSD 中文社区 QQ 群](.gitbook/assets/2025-qq.png)
