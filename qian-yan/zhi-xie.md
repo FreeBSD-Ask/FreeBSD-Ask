@@ -1,6 +1,6 @@
 # 致谢
 
-本书初版架构基于贴吧用户“Smile_Zheng”分享的《操作系统笔记》早期版本（[链接](https://tieba.baidu.com/p/7424071955)）。主要引用了防火墙章节、用户与权限章节。【其中引用了《FreeBSD 技术内幕》（*[FreeBSD Unleashed](https://www.amazon.com/FreeBSD-Unleashed-2nd-Brian-Tiemann/dp/0672324563)*），ISBN 9787111102010，机械工业出版社，2002，作者是 Brian Tiemann、Michael Urban，译者智慧东方工作室】以及 🎀🌸 星不萌 🌸🎀 的博客文章（已佚）。
+本书初版架构基于贴吧用户“Smile_Zheng”分享的《操作系统笔记》早期版本（[链接](https://tieba.baidu.com/p/7424071955)）。主要引用了防火墙章节、用户与权限章节。【其中引用了《FreeBSD 技术内幕》（*[FreeBSD Unleashed](https://www.amazon.com/FreeBSD-Unleashed-2nd-Brian-Tiemann/dp/0672324563)*），ISBN 9787111102010，机械工业出版社，2002，作者是 Brian Tiemann、Michael Urban，译者智慧东方工作室】以及 [🎀🌸 星不萌 🌸🎀](https://tieba.baidu.com/home/main?un=%E6%98%9F%E5%85%89Re) 的博客文章（已佚，互联网档案馆 [备份](https://web.archive.org/web/20211027120312/https://www.moebsd.cn/)）。
 
 ## 致歉
 
