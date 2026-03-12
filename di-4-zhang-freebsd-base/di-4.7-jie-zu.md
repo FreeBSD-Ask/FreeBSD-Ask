@@ -2,11 +2,12 @@
 
 ## 账户类型
 
-要想访问 FreeBSD，你必须有一个账户，而且所有进程都是以某个账户的名义启动的。
+要想访问 FreeBSD，你必须有一个账户。
 
-Ports 中的 `sysutils/htop` 提供的 `htop` 命令能够清晰地显示这一点（注意“USER”列）：
+在 FreeBSD 中，所有进程都是以某个账户的名义启动的。`sysutils/htop` 能够直观地呈现这一点（注意 `△USER` 这列）：
 
 ```sh
+$ htop
   PID△USER       PRI  NI  VIRT   RES S   CPU% MEM%   TIME+  Command
     1 root        20   0 12724  1324 S    0.0  0.0  0:00.08 /sbin/init
   216 root        20   0 36172  7308 S    0.0  0.1  0:00.77 ├─ /usr/local/bin/vmtoolsd -c /usr/local/share/vmware-tools/to
@@ -36,11 +37,9 @@ FreeBSD 中主要有三类账户：系统账户、普通用户账户，以及超
 
 超级用户账户拥有系统中的最高权限，即 root 账户。
 
->**技巧**
->
->实际上是内核根据账户的 EUID（有效用户 ID）是否为 `0` 来判定其是否拥有 root 权限。参见 [main/sys/kern/kern_priv.c](https://github.com/freebsd/freebsd-src/blob/main/sys/kern/kern_priv.c) [备份](https://web.archive.org/web/20260119052134/https://github.com/freebsd/freebsd-src/blob/main/sys/kern/kern_priv.c) 中的 `if (suser_enabled(cred))` 代码块部分。
+实际上是内核根据账户的 EUID（有效用户 ID）是否为 `0` 来判定某账户是否拥有 root 权限。参见 [main/sys/kern/kern_priv.c](https://github.com/freebsd/freebsd-src/blob/main/sys/kern/kern_priv.c) 中的 `if (suser_enabled(cred))` 代码块部分。
 
-系统账户由源代码中的 [main/etc/master.passwd](https://github.com/freebsd/freebsd-src/blob/main/etc/master.passwd) [备份](https://web.archive.org/web/20260119052158/https://github.com/freebsd/freebsd-src/blob/main/etc/master.passwd) 定义，写作时总计 27 个。故，`_dhcp`、`ntpd` 都属于系统账户。系统账户是具有受限权限的专用账户，通常用于运行系统服务和守护进程。
+系统账户由源代码中的 [main/etc/master.passwd](https://github.com/freebsd/freebsd-src/blob/main/etc/master.passwd) 定义，写作时总计 27 个。故，`_dhcp`、`ntpd` 都属于系统账户。系统账户是具有受限权限的专用账户，通常用于运行系统服务和守护进程。
 
 `ykla` 是笔者在安装系统时创建的普通用户账户。如果希望通过 `su` 命令切换为 `root` 用户，必须将该用户加入 `wheel` 用户组。而 `messagebus` 是 Port `devel/dbus` 自动创建的系统用户。
 
@@ -93,7 +92,7 @@ Add another user? (yes/no): no # 还需要创建另一个账号吗？
 Goodbye!
 ```
 
-- ①：登录名命名有一些限制，参见 [passwd(5)](https://man.freebsd.org/cgi/man.cgi?query=passwd&sektion=5&format=html)。但是注意，不支持八位编码字符集，例如不支持中文（即仅支持特定 ASCII 字符）。
+- ①：登录名命名有一些限制，参见 [passwd(5)](https://man.freebsd.org/cgi/man.cgi?query=passwd&sektion=5&format=html)。但请注意，登录名不支持八位编码字符集，例如不支持中文（即仅支持特定 ASCII 字符）。
 
 ## `rmuser` 删除用户与 `passwd` 密码修改
 
@@ -133,14 +132,14 @@ root 用户可修改所有用户的密码。
 
 在 FreeBSD 中，可以使用 `pw` 命令管理用户和组：
 
-- 创建 `admin` 分组，并将用户 `ykla` 同时添加到 `admin` 和 `wheel` 分组：
+- 创建 `admin` 组，并将用户 `ykla` 同时添加到 `admin` 和 `wheel` 组：
 
 ```sh
 # pw groupadd admin
 # pw usermod ykla -G admin,wheel
 ```
 
-验证一下：
+让我们来验证一下：
 
 ```sh
 # id ykla
@@ -165,14 +164,6 @@ uid=1001(ykla) gid=1001(ykla) groups=1001(ykla),0(wheel),1002(admin)
 ```sh
 # pw groupdel admin
 ```
-
----
-
-`admin` 和 `wheel` 权限的区别：
-
-- `admin`，具有管理系统的权限（sudo 的默认配置如此），可以使用 `sudo` 命令执行特权操作。
-- `wheel`，超级管理员权限（该名称来源于俚语 big wheel，即大人物）。
-
 
 ### `pw useradd` 命令
 
@@ -201,14 +192,14 @@ uid=1001(ykla) gid=1001(ykla) groups=1001(ykla),0(wheel),1002(admin)
 
 ### `pw userdel` 命令
 
-用于删除用户，常用参数如下：
+用于删除用户，常用参数：
 
 `-r`，删除用户同时删除用户主目录及所有相关信息；若不使用该参数则信息保留，仅删除用户
 
 示例：删除用户 test2 及其主目录。
 
 ```sh
-# pw userdel test2 -r
+# pw userdel -r test2 
 ```
 
 ### `pw usershow` 命令
@@ -218,35 +209,6 @@ uid=1001(ykla) gid=1001(ykla) groups=1001(ykla),0(wheel),1002(admin)
 ```sh
 # pw usershow test2  # 显示用户 test2 的详细信息
 test2:$6$FkxPcs2y.Y8cxyuj$kVDoV1LC.IWKGlSitll3oLArF18aHQYID0JYE.TUuD0YFgba.c7MbGs3xLnmpCZyu1nVKHhNqW2X7a57qN0xg/:1201:1201::0:0:User &:/home/test2:/bin/sh
-```
-
-### `pw usernext` 命令
-
-可返回下一个可用的 UID 和 GID，示例：
-
-```sh
-# pw usernext
-1202:1202
-```
-
-### `pw lock` 命令
-
-锁定账号，锁定后账号无法登录使用。
-
-示例：
-
-```sh
-# pw lock test2
-```
-
-### `pw unlock` 命令
-
-解锁账号，解锁后账号可以正常使用。
-
-示例：
-
-```sh
-# pw unlock test2
 ```
 
 ### `pw groupadd` 命令
@@ -304,17 +266,6 @@ test2:$6$FkxPcs2y.Y8cxyuj$kVDoV1LC.IWKGlSitll3oLArF18aHQYID0JYE.TUuD0YFgba.c7MbG
 test5:*:1202:test1
 ```
 
-### `pw groupnext` 命令
-
-可返回下一个可用的 `gid`。
-
-示例：
-
-```sh
-# pw groupnext
-1301
-```
-
 ## 参考文献
 
-- [FreeBSD 入门笔记](https://lvv.me/posts/2021/04/19_freebsd_101/) [备份](https://web.archive.org/web/20260122123340/https://lvv.me/posts/2021/04/19_freebsd_101/)，作者 lvv.me
+- [pw(8)](https://man.freebsd.org/cgi/man.cgi?pw)，man 页
