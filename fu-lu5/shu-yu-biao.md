@@ -79,13 +79,13 @@
 |Oracle Solaris|/|Oracle 收购 Sun 后，Solaris 项目进入闭源开发模式后的名称|
 |LLNL|美国劳伦斯利弗莫尔国家实验室|Lawrence Livermore National Laboratory，OpenZFS 代码提交量的首位成员所属机构|
 |ALTQ|交错队列|Alternate Queuing，PF 防火墙的功能|
-|NAT|网络地址转换|Network Address Translation，|
-|ICMP|互联网控制报文协议|Internet Control Message Protocol，|
-|UDP|用户数据报协议|User Datagram Protocol，|
-|TCP|传输控制协议|Transmission Control Protocol，|
+|NAT|网络地址转换|Network Address Translation|
+|ICMP|互联网控制报文协议|Internet Control Message Protocol|
+|UDP|用户数据报协议|User Datagram Protocol|
+|TCP|传输控制协议|Transmission Control Protocol|
 |DNS|域名系统|Domain Name System|
-|HTTP|超文本传输协议|HyperText Transfer Protocol，|
-|HTTPS|安全超文本传输协议|HyperText Transfer Protocol Secure，|
+|HTTP|超文本传输协议|HyperText Transfer Protocol|
+|HTTPS|安全超文本传输协议|HyperText Transfer Protocol Secure|
 |SSH|安全外壳协议|Secure Shell，用于安全远程登录|
 |SSHD|SSH 守护进程|SSH Daemon|
 |PR|/|Pull Request，拉取请求，在 Git 中提交代码变更的方式；在 FreeBSD 中亦指 Bug 报告|
@@ -99,7 +99,7 @@
 |PIE|位置无关可执行文件|Position Independent Executable，一种安全缓解技术|
 |ASLR|地址空间布局随机化|Address Space Layout Randomization，一种安全缓解技术|
 |DAC|自主访问控制|Discretionary Access Control，标准 Unix 安全模型|
-|ACL|访问控制列表|Access Control List，|
+|ACL|访问控制列表|Access Control List|
 |TrustedBSD|/|FreeBSD 的安全扩展项目，基于 POSIX.1e 草案|
 |gop|/|Graphics Output Protocol，图形输出协议，用于设置 UEFI 引导分辨率|
 |VESA|/|Video Electronics Standards Association，视频电子标准协会，用于设置 BIOS 引导分辨率|
@@ -178,14 +178,14 @@
 |谷堆悖论|/|一个哲学悖论，探讨的是本体论的连续性问题|
 |秃头悖论|/|一个哲学悖论，探讨本体论的连续性问题|
 |同一时间的同一性|/|Identity Over Time，哲学中探讨事物在时间中保持同一性的问题|
-|Single UNIX Specification|单一 UNIX 规范|，SUS，UNIX 操作系统的标准规范|
+|Single UNIX Specification|单一 UNIX 规范|SUS，UNIX 操作系统的标准规范|
 |The Open Group|开放组织|负责管理 UNIX 商标和单一 UNIX 规范的组织|
 |501(c)3|/|美国税法中的一种非营利组织类型，可接受免税捐赠|
 |Sun Microsystems|/|太阳计算机系统公司，ZFS 和 Solaris 的原开发商，2009 年被 Oracle 收购|
 |Oracle|甲骨文公司|收购了 Sun Microsystems|
 |AT&T|美国电话电报公司|UNIX 的原开发商|
 |Bell Labs|贝尔实验室|AT&T 的研究实验室，UNIX 的诞生地|
-|University of California|加州大学伯克利分校|, Berkeley，BSD 的诞生地|
+|University of California|加州大学伯克利分校| Berkeley，BSD 的诞生地|
 |Bill Joy|/|Sun Microsystems 的创始人之一，也是 BSD Unix 的关键开发者|
 |Ken Thompson|/|UNIX 的主要开发者之一|
 |Dennis Ritchie|/|UNIX 的主要开发者之一，C 语言的发明者|
