@@ -15,7 +15,6 @@
 |RELEASE|稳定版|适用于生产环境的正式发布版本|
 |ABI|应用程序二进制接口|Application Binary Interface，应用程序与操作系统之间的二进制接口标准|
 |Unix|/|最初由 AT&T 贝尔实验室开发的操作系统，现为一种标准规范和法律商标|
-|UNIX 哲学|/|源于 UNIX 操作系统的开发实践，强调大道至简、小即美、一个程序只做一件事等原则|
 |ZFS|/|Zettabyte File System，一款集成了文件系统和逻辑卷管理器的系统，具有强大的数据完整性保护与高效的数据压缩功能|
 |OpenZFS|/|ZFS 的开源社区版本，统一了 ZFS 的开源开发|
 |CDDL|通用开发及发行许可|Common Development and Distribution License，ZFS 采用的开源许可证|
@@ -92,7 +91,6 @@
 |PR|/|Pull Request，拉取请求，在 Git 中提交代码变更的方式；在 FreeBSD 中亦指 Bug 报告|
 |CVS|/|Concurrent Versions System，并发版本系统，FreeBSD 早期使用的版本控制工具|
 |SVN|/|Subversion，FreeBSD 中期使用的版本控制工具|
-|Git|/|FreeBSD 目前使用的版本控制工具|
 |CIS|互联网安全中心|Center for Internet Security，提供安全基准|
 |SBOM|软件物料清单|Software Bill of Materials|
 |SSDF|安全软件开发框架|Secure Software Development Framework|
@@ -169,15 +167,13 @@
 |Google Summer of Code|谷歌编程之夏|，一个为学生提供参与开源项目机会的项目|
 |FreeBSD Handbook|/|FreeBSD 官方文档，提供详细的使用指南和参考|
 |FreshPorts|/|一个 FreeBSD Ports 的搜索引擎和信息网站|
-|TrustedBSD|/|FreeBSD 的安全扩展项目|
 |OpenBSM|/|Open Basic Security Module，FreeBSD 的安全审计系统|
-|Capsicum|/|FreeBSD 的轻量级能力和沙盒框架|
 |CHERI|/|Capability Hardware Enhanced RISC Instructions，基于 Capsicum 项目发展而来的 CPU 架构扩展|
 |Linuxism|Linux 主义/Linux 歧视|指软件过分依赖 Linux 特有特性而难以移植到其他类 Unix 操作系统的现象|
 |POLA|最小惊讶原则|Principle of Least Astonishment，，一种设计原则，指设计必须符合用户的习惯、期望和心智能力|
 |大教堂与市集|/|一种软件开发模型的比喻，大教堂指集中式开发，市集指分布式开发|
 |KISS 原则|/|Keep It Simple, Stupid，一种设计原则，强调保持简单|
-|UNIX 哲学|/|源于 UNIX 操作系统的开发实践，在传统上强调小即美、一个程序只做一件事、原型先行、可移植性先于高效率性等原则|
+||/|源于 UNIX 操作系统的开发实践，在传统上强调小即美、一个程序只做一件事、原型先行、可移植性先于高效率性等原则|
 |Ship of Theseus|忒修斯之船|一个哲学悖论，用于探讨主体的同一性问题|
 |谷堆悖论|/|一个哲学悖论，探讨的是本体论的连续性问题|
 |秃头悖论|/|一个哲学悖论，探讨本体论的连续性问题|
@@ -212,10 +208,7 @@
 |Beckhoff|倍福公司|TwinCAT/BSD 自动化控制系统使用 FreeBSD|
 |Container|容器|一种轻量级的虚拟化技术|
 |CI/CD|/|Continuous Integration/Continuous Deployment，持续集成/持续部署|
-|Git|/|一种分布式版本控制系统|
 |GitHub Actions|/|GitHub 的持续集成和持续部署服务|
 |GitHub|/|一个代码托管平台|
 |Git|/|一种分布式版本控制系统|
-|SVN|/|Subversion，一种集中式版本控制系统|
-|CVS|/|Concurrent Versions System，一种早期的版本控制系统|
 |DevSummit|/|FreeBSD 的开发者峰会|
