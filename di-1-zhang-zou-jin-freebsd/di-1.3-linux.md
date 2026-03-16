@@ -43,7 +43,7 @@ Linux 之名来自 Linux 之父 Linus Torvalds。
 
 Linux 受启发于 Minix（UNIX 版权限制下的产物），一款设计用于教学的微内核操作系统。当时 22 岁的 Linus Torvalds 是芬兰赫尔辛基大学计算机科学系的研究生。
 
-Linus Torvalds 的硕士毕业论文是 [《Linux: A Portable Operating System》](https://www.cs.helsinki.fi/u/kutvonen/index_files/linus.pdf) [备份](https://web.archive.org/web/20251114200921/https://www.cs.helsinki.fi/u/kutvonen/index_files/linus.pdf)（Linux：一款可移植的操作系统），他在 1997 年（28 岁）获得理学硕士学位。为什么花了这么长时间都没被学校清退呢？芬兰是典型的学分制国家。根据芬兰赫尔辛基大学官网说明，并无 [最长学习期限](https://studies.helsinki.fi/instructions/article/expiry-studies?) [备份](https://web.archive.org/web/20260114070831/https://studies.helsinki.fi/instructions/article/expiry-studies) 限制，仅规定某课程成绩有效时间为十年。“你的课程到期不会影响你在大学继续学习的权利”。
+Linus Torvalds 的硕士毕业论文是 [《Linux: A Portable Operating System》](https://www.cs.helsinki.fi/u/kutvonen/index_files/linus.pdf) [备份](https://web.archive.org/web/20251114200921/https://www.cs.helsinki.fi/u/kutvonen/index_files/linus.pdf)（Linux：一款可移植的操作系统），他在 1997 年（28 岁）获得理学硕士学位。为何他能长时间未被学校清退？芬兰实行典型的学分制。根据芬兰赫尔辛基大学官网的说明，该校并无 [最长学习期限](https://studies.helsinki.fi/instructions/article/expiry-studies?) [备份](https://web.archive.org/web/20260114070831/https://studies.helsinki.fi/instructions/article/expiry-studies) 限制，仅规定课程成绩的有效期为十年。官网明确指出：“你的课程到期不会影响你在大学继续学习的权利。”
 
 >我们探讨了在将 Linux 操作系统移植到多种 CPU 和总线架构时所暴露出的硬件可移植性问题。我们还讨论了软件接口的可移植性问题，尤其是与能够共享同一硬件平台的其他操作系统之间的二进制兼容性问题。文中描述了 Linux 所采取的方法，并对其中几个架构进行了更为详细的介绍。
 >
@@ -72,7 +72,7 @@ GNU/Linux = Linux kernel + GNU 等软件 + 包管理器
 
 Linux 全称为 GNU/Linux；
 
-GNU's Not Unix，从 GNU 这个名字（GNU 不是 UNIX）你也能看出来 Linux 与 UNIX 并无直接关联。
+GNU's Not Unix，从 GNU 这个递归缩写（意为“GNU 不是 UNIX”）可以看出，Linux 与 UNIX 并无直接的血缘关系。
 
 具体地：
 

@@ -4,7 +4,7 @@
 
 已知 FreeBSD 有如下版本类型（或开发阶段）：ALPHA、BETA、RC、RELEASE、CURRENT、STABLE。
 
-**RELEASE** 版本是适用于生产环境的，即一般意义上的 **稳定版**，或可被视为一类长期支持（LTS）版本。而 ***STABLE*** 和 ***CURRENT*** 都属于 **开发分支**，**通常不建议用于生产环境**（“稳定”与“不稳定”是相对概念，例如 [Netflix 几乎所有节点都运行着 **current**](https://freebsdfoundation.org/netflix-case-study/) [备份](https://web.archive.org/web/20260114162158/https://freebsdfoundation.org/netflix-case-study/)）。
+**RELEASE** 版本适用于生产环境，通常被视为 **稳定版** 或长期支持（LTS）版本。而 ***STABLE*** 和 ***CURRENT*** 则属于 **开发分支**，**通常不建议用于生产环境**（“稳定”与“不稳定”是相对概念，例如 [Netflix 几乎所有节点都运行着 **current**](https://freebsdfoundation.org/netflix-case-study/) [备份](https://web.archive.org/web/20260114162158/https://freebsdfoundation.org/netflix-case-study/)）。
 
 >**注意**
 >

@@ -21,7 +21,7 @@
 
 一开始，RMS 为 Unix 编写了许多实用程序（用户空间），然而 GNU 的目标操作系统始终缺乏稳定内核（即使到 2025 年，[GNU Hurd](https://hurd.gnu.org/) [备份](https://web.archive.org/web/20260116222211/https://www.gnu.org/software/hurd/) 仍未完成）。Linux 内核的诞生打破了这一困境。
 
-作为由 Linux 内核和 GNU 软件组合而成的操作系统，Linux 不断地 GNU 化，形成了 GNU/Linux。其中 GNU 的贡献不可忽视，但常被忽略。这是因为 Linux 内核的开发由林纳斯·托瓦兹（Linus Torvalds）主导，而林纳斯本人对 FSF 和 RMS 的理念并不完全认同。因此，Linux 内核项目的理念与自由软件运动，甚至与严格的开源理念之间，存在一定的张力（例如，Linux 内核包含了不符合自由软件定义或严格开源定义的二进制固件模块，参见 [Linux-libre](https://www.fsfla.org/ikiwiki/selibre/linux-libre/) [备份](https://web.archive.org/web/20260115033255/https://www.fsfla.org/ikiwiki/selibre/linux-libre/) ）。此外，Linux 内核使用 GPLv2，而非 GNU 推荐的 GPLv3。
+Linux 作为一个由 Linux 内核与 GNU 软件组合而成的操作系统，在发展过程中不断融入 GNU 理念，最终形成了 GNU/Linux。尽管 GNU 在此过程中贡献巨大，其作用却常被忽视。这主要是因为 Linux 内核的开发由林纳斯·托瓦兹（Linus Torvalds）主导，而他本人对自由软件基金会（FSF）和理查德·马修·斯托曼（RMS）的理念并不完全认同。因此，Linux 内核项目与自由软件运动，乃至严格的开源理念之间，存在一定的分歧（例如，Linux 内核包含了一些不符合自由软件或严格开源定义的二进制固件模块，参见 [Linux-libre](https://www.fsfla.org/ikiwiki/selibre/linux-libre/) [备份](https://web.archive.org/web/20260115033255/https://www.fsfla.org/ikiwiki/selibre/linux-libre/)）。此外，Linux 内核采用的是 GPLv2 许可证，而非 GNU 所推荐的 GPLv3。
 
 我们将 Linux 诞生之前的这段时期称作“自由软件运动”（代表人物为 RMS）。Linux 的流行促成了另一种理念的兴起，即“开源运动”——代表人物包括开放源代码促进会（Open Source Initiative，OSI）的创始人、《UNIX 编程艺术》与《大教堂与集市》的作者埃里克·斯蒂芬·雷蒙德（Eric S. Raymond），以及 Debian 项目前领导人布鲁斯·佩伦斯（Bruce Perens）。值得思考的是，下文提及的开源定义为何源自 Debian 自由软件指导方针（Debian Free Software Guidelines，DFSG）。
 
