@@ -54,7 +54,6 @@ PS C:\Users\ykla> Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-H
 
 ## 创建虚拟机
 
-在 Hyper-V 管理器中创建新的虚拟机，按照以下步骤进行配置。
 
 ![Hyper-V](../.gitbook/assets/hp2.png)
 
