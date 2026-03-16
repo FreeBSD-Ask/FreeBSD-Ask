@@ -170,7 +170,7 @@
 |OpenBSM|/|Open Basic Security Module，FreeBSD 的安全审计系统|
 |CHERI|/|Capability Hardware Enhanced RISC Instructions，基于 Capsicum 项目发展而来的 CPU 架构扩展|
 |Linuxism|Linux 主义/Linux 歧视|指软件过分依赖 Linux 特有特性而难以移植到其他类 Unix 操作系统的现象|
-|POLA|最小惊讶原则|Principle of Least Astonishment，，一种设计原则，指设计必须符合用户的习惯、期望和心智能力|
+|POLA|最小惊讶原则|Principle of Least Astonishment，一种设计原则，指设计必须符合用户的习惯、期望和心智能力|
 |大教堂与市集|/|一种软件开发模型的比喻，大教堂指集中式开发，市集指分布式开发|
 |KISS 原则|/|Keep It Simple, Stupid，一种设计原则，强调保持简单|
 |UNIX 哲学|/|源于 UNIX 操作系统的开发实践，在传统上强调小即美、一个程序只做一件事、原型先行、可移植性先于高效率性等原则|
@@ -186,7 +186,6 @@
 |AT&T|美国电话电报公司|UNIX 的原开发商|
 |Bell Labs|贝尔实验室|AT&T 的研究实验室，UNIX 的诞生地|
 |University of California|加州大学伯克利分校|, Berkeley，BSD 的诞生地|
-|CSRG|/|Computer Systems Research Group，加州大学伯克利分校的计算机系统研究小组|
 |Bill Joy|/|Sun Microsystems 的创始人之一，也是 BSD Unix 的关键开发者|
 |Ken Thompson|/|UNIX 的主要开发者之一|
 |Dennis Ritchie|/|UNIX 的主要开发者之一，C 语言的发明者|
