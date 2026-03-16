@@ -19,7 +19,7 @@
 
 | 硬件类别  | 系列        | 实测型号                                         | 备注                                                                                                          |
 | --------- | ------------ | -------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| CPU       | Intel 混合架构（异构大小核）    | i7-1260P、N100                                | 实测可启动运行，但调度机制不完善，睿频功能受限                   |
+| CPU       | Intel 混合架构（异构大小核）    | i7-1260P、N100                                | 实测可正常启动运行，但调度机制尚不完善，睿频功能受限                   |
 | NVMe 固态硬盘 | M.2 接口       | 英睿达 P310，Intel 600P，梵想 S530Q、S500Pro、S542PRO | 正常工作                                                                                                        |
 | 无线网卡      | Intel AX 系列  | AX200                                        | Wi-Fi 5 速率与 Windows 11 IoT Enterprise 24H2 相当（使用 iperf2 测得）                                                                     |
 | 有线网卡      | Realtek 2.5G | RTL8125B                                     | 需要额外安装驱动，参见全书附录                                                                                             |
@@ -59,7 +59,7 @@
 
 >**技巧**
 >
->随着时间的推移，当读者进行下载时，可能已经没有 14.2-RELEASE 版本了。你只需选择列表最顶部的 `FreeBSD-X.Y-RELEASE`（推荐用于生产环境）即可。其中，`X.Y` 应是一个比 `14.2` 更大的版本号，如 `15.0`、`22.4` 等，但需要注意，它们都应该是以 `RELEASE` 结尾的，而不是 `CURRENT`。
+>随着时间的推移，当读者进行下载时，可能已经没有 14.2-RELEASE 版本了。只需选择列表最顶部的 `FreeBSD-X.Y-RELEASE`（该版本推荐用于生产环境）即可。其中，`X.Y` 应是一个比 `14.2` 更大的版本号，如 `15.0`、`22.4` 等，但需要注意，它们都应该是以 `RELEASE` 结尾的，而不是 `CURRENT`。
 
 >**警告**
 >
@@ -117,7 +117,7 @@ FreeBSD-14.2-RELEASE-amd64-mini-memstick.img.xz    107445036      2024-Nov-29 13
 
 需要注意的是，DVD 镜像并不包含一切离线软件包，仅精选了若干软件包，具体清单可参见源代码文件 [release/scripts/pkg-stage.sh](https://github.com/freebsd/freebsd-src/blob/main/release/scripts/pkg-stage.sh) [备份](https://web.archive.org/web/20260115143613/https://github.com/freebsd/freebsd-src/blob/main/release/scripts/pkg-stage.sh)。
 
-FreeBSD 的所有安装介质（包括但不限于虚拟机镜像）默认均不提供图形界面，需要用户自行安装和配置。DVD 镜像虽包含更多软件包，但由于依赖问题，在安装图形界面时仍可能遇到问题，不建议使用 DVD 镜像。
+FreeBSD 的所有安装介质（包括但不限于虚拟机镜像）默认均不提供图形界面，需要用户自行安装和配置。DVD 镜像虽包含更多软件包，但由于依赖关系复杂，在安装图形界面时仍可能遇到问题，因此不建议使用 DVD 镜像。
 
 >**技巧**
 >
@@ -147,7 +147,7 @@ FreeBSD `-RELEASE` 历史版本下载地址：
 
 ### 建议使用 `-img` 或 `-img.xz` 格式的镜像
 
-制作 U 盘安装介质时，最好使用 `-img` 或 `-img.xz` 格式的镜像。因为 `.iso` 镜像采用的 Hybrid 混合启动模式可能未完全遵循 UEFI 规范，直接写入 U 盘可能导致错误。见 [FreeBSD -.iso files not support written to USB drive](https://bugs.freebsd.org/bugzilla/show\_bug.cgi?id=236786)。建议读者应仅在使用 **光学介质/虚拟机/云平台** 安装时选用 `iso` 结尾的镜像。
+制作 U 盘安装介质时，最好使用 `-img` 或 `-img.xz` 格式的镜像。因为 `.iso` 镜像采用的混合启动（Hybrid）模式可能未完全遵循 UEFI 规范，直接写入 U 盘可能导致错误。见 [FreeBSD -.iso files not support written to USB drive](https://bugs.freebsd.org/bugzilla/show\_bug.cgi?id=236786)。建议读者应仅在使用 **光学介质/虚拟机/云平台** 安装时选用 `iso` 结尾的镜像。
 
 当然，也存在例外情况。部分机器的 UEFI 固件支持从 `.iso` 镜像刻录的 U 盘启动（例如一些老款神舟电脑），但并非所有机器都支持此方式（例如部分小米电脑可能无法引导）。
 
