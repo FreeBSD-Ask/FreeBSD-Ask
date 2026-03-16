@@ -2,7 +2,7 @@
 
 ## Hyper-V 简介
 
-Hyper-V 是微软为 Windows / Windows Server 开发的企业级虚拟化管理程序（系统内置），分为 `Gen 1`（第一代）和 `Gen 2`（第二代）。
+Hyper-V 是微软公司（Microsoft）为 Windows / Windows Server 开发的企业级虚拟化管理程序（系统内置），分为 `Gen 1`（第一代）和 `Gen 2`（第二代）。
 
 
 >**注意**
@@ -53,6 +53,7 @@ PS C:\Users\ykla> Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-H
 ```
 
 ## 创建虚拟机
+
 
 ![Hyper-V](../.gitbook/assets/hp2.png)
 

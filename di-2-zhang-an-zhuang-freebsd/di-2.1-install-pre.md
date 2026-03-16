@@ -11,8 +11,8 @@
   - 仅基本系统（安装后）：550MB
   - KDE 桌面（通过 pkg 安装后）：15 GB
 - 内存：
-  - UEFI 模式下，最小内存需求为 128 MB
-  - BIOS 模式下，最小内存需求为 64 MB
+  - 统一可扩展固件接口（Unified Extensible Firmware Interface，UEFI）模式下，最小内存需求为 128 MB
+  - 基本输入/输出系统（Basic Input/Output System，BIOS）模式下，最小内存需求为 64 MB
 
 ### 实测硬件支持
 
@@ -21,7 +21,7 @@
 | --------- | ------------ | -------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
 | CPU       | Intel 混合架构（大小核）    | i7-1260P、N100                                | 实测可启动运行，但调度机制不完善，睿频功能受限                   |
 | NVMe 固态硬盘 | M.2 接口       | 英睿达 P310，Intel 600P，梵想 S530Q、S500Pro、S542PRO | 正常工作                                                                                                        |
-| 无线网卡      | Intel AX 系列  | AX200                                        | WiFi 5 速率与 Windows 11 IoT Enterprise 24H2 相当（使用 iperf2 测得）                                                                     |
+| 无线网卡      | Intel AX 系列  | AX200                                        | Wi-Fi 5 速率与 Windows 11 IoT Enterprise 24H2 相当（使用 iperf2 测得）                                                                     |
 | 有线网卡      | Realtek 2.5G | RTL8125B                                     | 需要额外安装驱动，参见全书附录                                                                                             |
 | 有线网卡      | Intel 2.5G   | i226-V                                       | 正常工作                                                                                                        |
 | 显卡   | 近十年的 Intel 及 AMD 集成/独立显卡  |   英特尔锐炬 ® Xe 显卡、Intel HD Graphics 4000       | 支持程度与 DRM 驱动移植进度相关；截至写作时，其代码状态约相当于 Linux 内核 6.10，最新进展请参见 [freebsd/drm-kmod](https://github.com/freebsd/drm-kmod/pulls) [备份](https://web.archive.org/web/20260115143641/https://github.com/freebsd/drm-kmod/pulls) |

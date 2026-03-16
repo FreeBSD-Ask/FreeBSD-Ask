@@ -10,7 +10,7 @@ FreeBSD/amd64 (ykla) (ttyv0)
 login:
 ```
 
-我们将这个屏幕上呈现的界面称为 TTY（teletypewriter，电传打字机），也称为物理终端。
+我们将这个屏幕上呈现的界面称为 TTY（teletypewriter，电传打字机），也称为物理终端。TTY 是用户与操作系统进行交互的早期方式，在图形界面出现之前是主要的交互手段。
 
 解释：
 
