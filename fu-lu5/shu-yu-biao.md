@@ -164,7 +164,7 @@
 |BSDCan|/|加拿大 BSD 大会|
 |FreeBSDCon|/|FreeBSD 大会，首届于 1999 年举行|
 |FreeBSD 期刊|/|FreeBSD 社区的期刊，跟进 FreeBSD 最新发布版本和新进展|
-|Google Summer of Code|谷歌编程之夏|，一个为学生提供参与开源项目机会的项目|
+|Google Summer of Code|谷歌编程之夏|一个为学生提供参与开源项目机会的项目|
 |FreeBSD Handbook|/|FreeBSD 官方文档，提供详细的使用指南和参考|
 |FreshPorts|/|一个 FreeBSD Ports 的搜索引擎和信息网站|
 |OpenBSM|/|Open Basic Security Module，FreeBSD 的安全审计系统|
