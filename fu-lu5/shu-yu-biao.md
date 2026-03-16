@@ -64,7 +64,7 @@
 |Caddy|/|一款支持自动 HTTPS 的 Web 服务器|
 |Fail2Ban|/|一款入侵防御软件，用于保护服务器免受暴力攻击|
 |TCP BBR|/|TCP Bottleneck Bandwidth and RTT，一种 TCP 拥塞控制算法|
-|Wi-Fi|无线局域网技术|Wireless Fidelity，|
+|Wi-Fi|无线局域网技术|Wireless Fidelity|
 |USB RNDIS|/|USB Remote Network Driver Interface Specification，USB 网络共享技术|
 |Linux 兼容层|/|FreeBSD 的功能，可运行 Linux 二进制程序|
 |RISC-V|/|一种开源的指令集架构|
