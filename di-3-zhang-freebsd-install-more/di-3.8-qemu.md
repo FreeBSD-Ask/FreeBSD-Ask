@@ -116,7 +116,7 @@ cd /d "C:\Program Files\qemu"
 
 输入用户名 `root` 并回车即可登录，默认没有密码。
 
-由于在 PowerShell 和 CMD 中运行都会产生各种乱码（例如 `ee` 命令或按 **TAB 键**）。
+在 PowerShell 和 CMD 中运行都会产生各种乱码（例如 `ee` 命令或按 **TAB 键**）。
 
 但该镜像默认未配置 SSH 服务与普通用户，因此无法直接通过 SSH 连接。
 
