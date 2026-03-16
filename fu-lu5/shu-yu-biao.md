@@ -180,7 +180,7 @@
 |同一时间的同一性|/|Identity Over Time，哲学中探讨事物在时间中保持同一性的问题|
 |Single UNIX Specification|单一 UNIX 规范|SUS，UNIX 操作系统的标准规范|
 |The Open Group|开放组织|负责管理 UNIX 商标和单一 UNIX 规范的组织|
-|501(c)3|/|美国税法中的一种非营利组织类型，可接受免税捐赠|
+|501(c)(3)|/|美国税法中的一种非营利组织类型，可接受免税捐赠|
 |Sun Microsystems|/|太阳计算机系统公司，ZFS 和 Solaris 的原开发商，2009 年被 Oracle 收购|
 |Oracle|甲骨文公司|收购了 Sun Microsystems|
 |AT&T|美国电话电报公司|UNIX 的原开发商|
