@@ -3,6 +3,8 @@
 
 ## 视频教程
 
+以下视频教程演示了 VMware Workstation Pro 的安装过程，可供参考。
+
 - [001-Windows 11 安装 VMware 17](https://www.bilibili.com/video/BV1Qji2YLEgS)
 
 ## 镜像下载
@@ -17,6 +19,7 @@
 
 ## 配置虚拟机
 
+在 VMware Workstation Pro 中创建新的虚拟机，按照以下步骤进行配置。
 
 ![VMware 安装 FreeBSD](../.gitbook/assets/vm1.png)
 
@@ -64,7 +67,7 @@
 
 >**技巧**
 >
-> 经过测试，FreeBSD 也可以支持驱动 UEFI 下 VMware 的显卡。——2025.3.24
+> 经过测试，FreeBSD 也可以支持在 UEFI 环境下驱动 VMware 的显卡（2025年3月24日测试）。
 
 
 > **警告**
@@ -276,13 +279,13 @@ Downloads
 
 加载声卡后若仍然没有声音，请将音量调至 100% 后再进行确认，因为默认音量几乎微不可闻。
 
-## 附录：博通（Broadcom）账号相关
+## 附录：博通公司（Broadcom）账号相关
 
 >**警告**
 >
->博通官网频繁变动，无法始终提供一致的解决方案，请读者自行理解并操作；如仍无法完成，可加入中文社区聊天群寻求帮助。
+>博通官网频繁变动，无法始终提供一致的解决方案。请读者自行理解并操作；如仍无法完成，可加入中文社区聊天群寻求帮助。
 
-### 博通（broadcom）账号注册
+### 博通（Broadcom）账号注册
 
 VMware 已被博通（Broadcom）收购。**因此，目前从官方下载任何相关产品均需先注册并登录博通账号。** 请注意，任何非博通官方域名（`broadcom.com`）的下载教程可能已失效。
 
@@ -320,7 +323,7 @@ VMware 已被博通（Broadcom）收购。**因此，目前从官方下载任何
 >![结束注册](../.gitbook/assets/dolater.png)
 
 
-### 博通（broadcom）账号登录
+### 博通（Broadcom）账号登录
 
 >**博通（broadcom）账号登录流程**
 >

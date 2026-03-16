@@ -1,6 +1,6 @@
 # 3.8 使用 QEMU 在 x86 架构 Windows 主机上安装 RISC-V 架构的 FreeBSD
 
-QEMU 是一款通过纯软件进行模拟的开源虚拟机监视器，支持多种处理器体系结构的模拟。
+QEMU（Quick Emulator，QEMU）是一款通过纯软件进行模拟的开源虚拟机监视器，支持多种处理器体系结构的模拟。
 
 本文环境基于 Windows 11 24H2（宿主机，x86-64 架构）、FreeBSD 14.2-RELEASE（虚拟机，RISC-V 架构）以及 QEMU 20241220。
 
@@ -51,7 +51,7 @@ RISC-V FreeBSD 磁盘镜像（以 FreeBSD 14.2 RELEASE 为例）：
 
 ## U-Boot
 
-在 FreeBSD 系统中获取 U-Boot，功能上类似于 GRUB 2。
+在 FreeBSD 系统中获取 U-Boot（Universal Boot Loader），功能上类似于 GRUB 2。
 
 ### 安装 U-Boot
 
@@ -116,7 +116,7 @@ cd /d "C:\Program Files\qemu"
 
 输入用户名 `root` 并回车即可登录，默认没有密码。
 
-由于在 PowerShell 和 CMD 中运行都会产生各种乱码（比如 `ee` 命令，或按 **TAB 键**）。
+由于在 PowerShell 和 CMD 中运行都会产生各种乱码（例如 `ee` 命令或按 **TAB 键**）。
 
 但该镜像默认未配置 SSH 服务与普通用户，因此无法直接通过 SSH 连接。
 

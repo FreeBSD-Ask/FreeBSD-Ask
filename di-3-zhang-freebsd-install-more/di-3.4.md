@@ -6,7 +6,7 @@
 
 ## 安装 FreeBSD 14.2 RELEASE
 
-本文未特别说明之处，均采用默认设置与参数。
+按照以下步骤安装 FreeBSD 14.2 RELEASE，本文未特别说明之处，均采用默认设置与参数。
 
 ![](../.gitbook/assets/shuang1.png)
 

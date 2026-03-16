@@ -9,7 +9,7 @@
 
 ## 安装设置
 
-以下演示基于 VirtualBox 7.1.4 和 Windows 11 24H2。
+以下演示基于 VirtualBox 7.1.4 和 Windows 11 24H2，按照以下步骤进行安装设置。
 
 ![](../.gitbook/assets/vb1.png)
 
@@ -63,6 +63,8 @@
 ![](../.gitbook/assets/vb9.png)
 
 ## 网络设置
+
+VirtualBox 提供多种网络配置方式，以下介绍两种常用的网络设置方法。
 
 ### 方法 ① 桥接
 
