@@ -42,7 +42,7 @@ PCODE
 
 说明：
 
-DDR：Double Data Rate SDRAM，双倍数据速率同步动态随机存取内存，即 DDR 内存
+DDR（Double Data Rate SDRAM，双倍数据速率同步动态随机存取内存），即 DDR 内存。
 
 此功能用于决定由 BIOS 还是硬件控制 DDR 的省电模式与空闲计数器。当选择“PCODE”时，由硬件算法控制这些模式；当选择“BIOS”时，则由 BIOS 控制这些模式。默认设置为“BIOS”。
 
@@ -56,7 +56,7 @@ PCODE
 
 说明：
 
-LPDDR：Low Power Double Data Rate SDRAM，低功耗内存，适用于笔记本平板等移动平台
+LPDDR（Low Power Double Data Rate SDRAM，低功耗内存），适用于笔记本、平板等移动平台。
 
 仅适用于 LPDDR：
 

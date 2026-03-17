@@ -38,7 +38,7 @@ NomadBSD 默认采用 Xfce 桌面。
 
 ![](../.gitbook/assets/nomadbsd1.png)
 
-  从界面来看，系统似乎支持对默认 Shell 进行自定义配置。
+从界面来看，系统似乎支持对默认 Shell 进行自定义配置。
 
 ![](../.gitbook/assets/nomadbsd2.png)
 

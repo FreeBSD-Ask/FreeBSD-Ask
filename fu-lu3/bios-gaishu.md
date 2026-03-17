@@ -34,9 +34,9 @@ BIOS 界面、选项和设置可能因系统不同而有所差异。
 
 ## BIOS 与 UEFI 简介
 
-BIOS：Basic Input/Output System，基本输入输出系统，多采用汇编语言编写。BIOS 最早出现于 20 世纪 70 年代。BIOS 的目的是识别和初始化处理器、内存、硬盘驱动器、光驱以及其他硬件。
+BIOS（Basic Input/Output System，基本输入输出系统），多采用汇编语言编写。BIOS 最早出现于 20 世纪 70 年代。BIOS 的目的是识别和初始化处理器、内存、硬盘驱动器、光驱以及其他硬件。
 
-UEFI：Unified Extensible Firmware Interface，统一可扩展固件接口。UEFI 是一种规范，定义了操作系统和平台固件之间的软件接口，多采用 C/C++ 编写。UEFI 的原型 EFI 最早出现在 20 世纪末。UEFI 取代了基本输入输出系统（BIOS）的固件接口，大多数 UEFI 固件实现仍提供对 BIOS 服务的遗留支持。
+UEFI（Unified Extensible Firmware Interface，统一可扩展固件接口）。UEFI 是一种规范，定义了操作系统和平台固件之间的软件接口，多采用 C/C++ 编写。UEFI 的原型 EFI 最早出现在 20 世纪末。UEFI 取代了基本输入输出系统（BIOS）的固件接口，大多数 UEFI 固件实现仍提供对 BIOS 服务的遗留支持。
 
 目前主流电脑（大约从 2013 年起）配备的都是 UEFI，而不是传统的 BIOS。也就是说，现在很多人可能根本没见过真正的 BIOS，但是出于习惯（界面和操作逻辑都类似），我们仍将 UEFI 统称作 BIOS 或 UEFI BIOS。
 

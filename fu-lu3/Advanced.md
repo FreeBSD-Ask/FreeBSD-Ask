@@ -10,7 +10,7 @@
 
 ### CNVi CRF Present（显示是否存在 CNVi 模块）
 
-CNVi（Connectivity Integration），英特尔®集成连接技术。
+CNVi（Connectivity Integration，英特尔® 集成连接技术）。
 
 CRF（Companion RF，辅助射频模块），实际上指无线网卡（现代无线网卡通常与蓝牙功能集成在同一模块中）。
 

@@ -42,7 +42,7 @@
 
 * 使用 pkg 安装：
   
-```
+```sh
 pkg install realtek-re-kmod
 ```
 
