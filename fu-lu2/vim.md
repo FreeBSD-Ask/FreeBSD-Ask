@@ -255,7 +255,7 @@ cwd=<root>
 
 ## 最后以最简单的 C++ hello world 项目为例
 
-项目文件结构如下：
+下面以最简单的 C++ 项目为例，展示整个开发环境的使用流程。项目文件结构如下：
 
 ```sh
 /home/j/project/CMakeLists.txt
@@ -294,7 +294,7 @@ int main() {
 }
 ```
 
-编译运行
+编译运行：
 
 ```sh
 $ cd /home/j/project/build   # 进入构建目录
