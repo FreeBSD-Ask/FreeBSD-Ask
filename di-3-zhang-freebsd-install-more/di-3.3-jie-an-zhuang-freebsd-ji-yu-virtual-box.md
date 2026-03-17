@@ -2,6 +2,8 @@
 
 ## 下载 VirtualBox
 
+首先需要下载并安装 VirtualBox 虚拟机软件。
+
 访问该网站，点击页面右侧的 `Download` 按钮即可下载。
 
 
@@ -9,7 +11,7 @@
 
 ## 安装设置
 
-以下演示基于 VirtualBox 7.1.4 和 Windows 11 24H2，按照以下步骤进行安装设置。
+VirtualBox 安装完成后，按照以下步骤创建并配置虚拟机。以下演示基于 VirtualBox 7.1.4 和 Windows 11 24H2。
 
 ![](../.gitbook/assets/vb1.png)
 

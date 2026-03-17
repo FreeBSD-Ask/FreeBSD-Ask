@@ -4,11 +4,15 @@
 
 ## 服务器环境
 
+本节首先介绍服务器环境的准备工作。
+
 ![Rocky Linux 9](../.gitbook/assets/fb-rock.png)
 
 首先将服务器重置为 Rocky Linux 9，该发行版在服务器市场占据主流地位，通常由大多数厂商提供。
 
 ### 救援登录
+
+环境准备完成后，开始配置救援登录。
 
 ![Rocky Linux 9](../.gitbook/assets/fb-rock3.png)
 

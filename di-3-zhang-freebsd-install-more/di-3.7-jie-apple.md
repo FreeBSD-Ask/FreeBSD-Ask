@@ -8,9 +8,11 @@
 
 ## 下载 FreeBSD
 
-由于 Apple M1 为 ARM 架构，请下载带有 `aarch64` 字样的镜像。**不要** 下成 `amd64`。
+首先需要下载适合 Apple M1 架构的 FreeBSD 镜像。由于 Apple M1 为 ARM 架构，请下载带有 `aarch64` 字样的镜像。**不要** 下成 `amd64`。
 
 ## 配置虚拟机
+
+镜像下载完成后，开始配置虚拟机。
 
 ![](../.gitbook/assets/Fusion1.png)
 

@@ -6,7 +6,7 @@
 
 ## 安装 FreeBSD 14.2 RELEASE
 
-按照以下步骤安装 FreeBSD 14.2 RELEASE，本文未特别说明之处，均采用默认设置与参数。
+首先按照以下步骤安装 FreeBSD 14.2 RELEASE，本文未特别说明之处，均采用默认设置与参数。
 
 ![](../.gitbook/assets/shuang1.png)
 
@@ -67,6 +67,8 @@ Device              Size     Used    Avail Capacity
 
 ## 安装 Windows 11
 
+FreeBSD 安装完成后，接下来安装 Windows 系统。
+
 插入 Windows 启动盘，设置 BIOS 从该启动盘启动，开始安装 Windows。
 
 ![](../.gitbook/assets/shuang5.png)
@@ -83,7 +85,7 @@ Device              Size     Used    Avail Capacity
 
 ## 还原交换分区（Swap）
 
-我们分配了 208 GB 空间，其中有 8 GB 是为交换分区预留的。现在需要将其还原。需要用到工具 [DiskGenius](https://www.diskgenius.com/) [备份](https://web.archive.org/web/20260117184154/https://www.diskgenius.com/)。
+Windows 安装完成后，需要为 FreeBSD 还原交换分区。我们分配了 208 GB 空间，其中有 8 GB 是为交换分区预留的。现在需要将其还原。需要用到工具 [DiskGenius](https://www.diskgenius.com/) [备份](https://web.archive.org/web/20260117184154/https://www.diskgenius.com/)。
 
 ![](../.gitbook/assets/shuang8.png)
 

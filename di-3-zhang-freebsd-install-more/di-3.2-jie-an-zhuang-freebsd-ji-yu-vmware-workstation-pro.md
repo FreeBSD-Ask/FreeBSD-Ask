@@ -9,6 +9,8 @@
 
 ## 镜像下载
 
+在开始安装之前，需要先下载 FreeBSD 的安装镜像。
+
 >**提示**
 >
 >虚拟机也可以使用 FreeBSD 官方构建的 [虚拟机镜像](https://download.freebsd.org/releases/VM-IMAGES/14.2-RELEASE/amd64/Latest/)，需要手动扩容，文件系统可选 UFS 与 ZFS。
@@ -19,7 +21,7 @@
 
 ## 配置虚拟机
 
-在 VMware Workstation Pro 中创建新的虚拟机，按照以下步骤进行配置。
+镜像下载完成后，在 VMware Workstation Pro 中创建新的虚拟机，按照以下步骤进行配置。
 
 ![VMware 安装 FreeBSD](../.gitbook/assets/vm1.png)
 

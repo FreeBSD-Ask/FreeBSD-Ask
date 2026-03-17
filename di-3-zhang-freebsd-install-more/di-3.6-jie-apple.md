@@ -11,6 +11,8 @@
 
 ## 安装
 
+环境准备完成后，按照以下步骤安装 FreeBSD。
+
 ![Parallels Desktop 20 安装 FreeBSD 15.0](../.gitbook/assets/pd1.png)
 
 选择“通过映像文件安装 Windows、Linux 或 macOS”，然后点击“继续”。

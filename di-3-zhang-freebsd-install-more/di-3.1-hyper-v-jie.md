@@ -34,12 +34,16 @@ Gen 1 与 Gen 2 的区别如下：
 
 ## 测试环境
 
+本节基于以下环境进行测试与演示。
+
 - Windows 11 23H2 专业版
 - FreeBSD 14.1-RELEASE（`FreeBSD-14.1-RELEASE-amd64-disc1.iso`）
 - Hyper-V 版本：10.0.22621.4249
 - 使用第二代 Hyper-V 虚拟机
 
 ## 安装 Hyper-V
+
+在 Windows 系统中安装 Hyper-V 功能，需以管理员身份执行相关命令。
 
 ![Hyper-V](../.gitbook/assets/hp1.png)
 
@@ -54,6 +58,7 @@ PS C:\Users\ykla> Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-H
 
 ## 创建虚拟机
 
+安装完成 Hyper-V 后，按照以下步骤创建虚拟机。
 
 ![Hyper-V](../.gitbook/assets/hp2.png)
 
@@ -66,7 +71,7 @@ PS C:\Users\ykla> Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-H
 
 ![Hyper-V](../.gitbook/assets/hp4.png)
 
-起个名字，然后点击“下一页”。
+为虚拟机设置名称，然后点击“下一页”。
 
 ![Hyper-V](../.gitbook/assets/hp.png)
 
@@ -98,6 +103,8 @@ PS C:\Users\ykla> Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-H
 
 ## 调整虚拟机
 
+虚拟机创建完成后，需要对部分设置进行调整。
+
 ![Hyper-V](../.gitbook/assets/hp10.png)
 
 点击“设置”
@@ -116,6 +123,8 @@ PS C:\Users\ykla> Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-H
 
 ## 安装 FreeBSD
 
+虚拟机设置调整完成后，即可开始安装 FreeBSD 系统。
+
 ![Hyper-V](../.gitbook/assets/hp13.png)
 
 启动该虚拟机。
@@ -129,6 +138,8 @@ PS C:\Users\ykla> Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-H
 安装完成。
 
 ## 测试桌面
+
+安装完成后，可对虚拟机进行基本功能测试。
 
 鼠标和键盘均可正常工作，可在宿主机和虚拟机间无缝切换，但虚拟机桌面分辨率无法自适应调整。
 
