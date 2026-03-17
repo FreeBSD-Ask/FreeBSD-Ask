@@ -16,17 +16,13 @@
 
 ## 使用 DiskGenius 恢复 U 盘启动盘
 
-首先介绍使用 DiskGenius 恢复 U 盘的方法。
-
-DiskGenius 是一款常用的磁盘管理工具。DiskGenius 官网：[https://www.diskgenius.cn/](https://www.diskgenius.cn/) [备份](https://web.archive.org/web/20260120014911/https://www.diskgenius.cn/)。该软件包含收费功能，但免费功能已足够使用。
+首先介绍使用 DiskGenius 恢复 U 盘的方法。DiskGenius 是一款常用的磁盘管理工具，其官网为：[https://www.diskgenius.cn/](https://www.diskgenius.cn/) [备份](https://web.archive.org/web/20260120014911/https://www.diskgenius.cn/)。该软件包含收费功能，但免费功能已足够使用。
 
 ### 下载 DiskGenius
 
-首先需要下载 DiskGenius 软件。
+首先需要下载 DiskGenius 软件。下载时，大多数用户应选择 [64 位版本](https://www.diskgenius.cn/download.php) [备份](https://web.archive.org/web/20260120201333/https://www.diskgenius.cn/download.php)。
 
-下载时，大多数用户应选择 [64 位版本](https://www.diskgenius.cn/download.php) [备份](https://web.archive.org/web/20260120201333/https://www.diskgenius.cn/download.php)。
-
-下载后，发现是一个 zip 压缩包。
+下载后，会得到一个 zip 压缩包。
 
 ![下载的 DiskGenius](../.gitbook/assets/usb-diskgenius.png)
 
@@ -80,7 +76,6 @@ DiskGenius 是一款常用的磁盘管理工具。DiskGenius 官网：[https://w
 
 右键单击空白区域，选择“建立新分区”。
 
-
 ![DiskGenius](../.gitbook/assets/usb-diskgenius10.png)
 
 参数设置如下：文件系统选择 `exFAT`（通用性好，主流操作系统均支持读写，且不受单文件 4 GB 大小限制），勾选“对齐到下列扇区数的整数倍”，并选择“4096 扇区”（实现 4K 对齐）。
@@ -112,9 +107,7 @@ DiskGenius 是一款常用的磁盘管理工具。DiskGenius 官网：[https://w
 
 ## 使用傲梅分区助手恢复 U 盘启动盘
 
-除了 DiskGenius 外，还可以使用傲梅分区助手来恢复 U 盘。
-
-傲梅分区助手是另一款常用的磁盘管理工具。使用方法与前述 DiskGenius 方法基本相同。
+除了 DiskGenius 外，还可以使用傲梅分区助手来恢复 U 盘。傲梅分区助手是另一款常用的磁盘管理工具，使用方法与前述 DiskGenius 方法基本相同。
 
 ### 下载安装傲梅分区助手
 
@@ -213,8 +206,6 @@ DiskGenius 是一款常用的磁盘管理工具。DiskGenius 官网：[https://w
 ## 通过命令 diskpart 恢复
 
 除了图形界面工具外，还可以使用 Windows 自带的命令行工具 diskpart 来恢复 U 盘。
-
-除图形界面工具外，也可使用 Windows 自带的 diskpart 命令行工具进行恢复。
 
 打开 PowerShell：右键单击 Windows 图标，选择“Windows PowerShell（管理员）”。
 
