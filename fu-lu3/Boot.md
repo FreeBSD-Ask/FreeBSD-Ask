@@ -6,6 +6,8 @@
 
 ## Setup Prompt Timeout（设置 Setup 提示超时时间）
 
+本选项用于配置进入 BIOS 设置界面的等待时间。
+
 值：
 
 0–65535 秒
@@ -15,6 +17,8 @@
 Setup 提示超时设置，用于设置等待 Setup 激活键的时间，最大值为 65535 秒，表示无限等待。
 
 ## Bootup NumLock State（启动时 NumLock 状态）
+
+本选项用于设置系统启动后数字小键盘的状态。
 
 选项：
 
@@ -27,6 +31,8 @@ Off（关）
 选择键盘 NumLock 状态（锁定或解锁数字小键盘）。设备启动后，可将数字小键盘设置为开启（On，用于数字输入）或关闭（Off，用于导航功能）。导航功能指通过数字键实现界面上下左右移动。
 
 ## Quiet Boot（静默启动）
+
+本选项用于控制启动过程中是否显示详细的自检信息。
 
 选项：
 
@@ -42,6 +48,8 @@ Disabled（禁用）
 
 ## Fast Boot（快速启动）
 
+本选项用于优化系统启动速度，但可能会影响部分硬件的初始化。
+
 选项：
 
 Enabled（启用）
@@ -55,6 +63,8 @@ Disabled（禁用）
 警告：开启此选项后可能无法再次进入 BIOS，因为启用快速启动后，系统在启动阶段会忽略所有 USB 设备（如键盘）。通常可通过重置 CMOS，或使用 Windows 的高级启动功能进入 UEFI 固件设置。参见 [Windows 11/10 如何进入 BIOS 设置界面](https://www.asus.com.cn/support/faq/1008829/) [备份](https://web.archive.org/web/20260119181725/https://www.asus.com.cn/support/faq/1008829/)。需要注意的是，此方法并非对所有主板均有效，部分主板仍无法通过该方式进入 BIOS。
 
 ## SATA Support（SATA 支持）
+
+本选项用于配置 SATA 设备的检测范围。
 
 选项：
 
@@ -70,6 +80,8 @@ All SATA Devices（全部 SATA 设备）
 
 ## NVMe Support（NVMe 支持）
 
+本选项用于启用或禁用 NVMe 设备的支持。
+
 选项：
 
 Enabled（启用）
@@ -81,6 +93,8 @@ Disabled（禁用）
 若禁用，NVMe 设备将被跳过。M.2 固态硬盘通常使用该协议。
 
 ## USB Support（USB 支持）
+
+本选项用于配置 USB 设备在启动过程中的初始化程度。
 
 选项：
 
@@ -104,6 +118,8 @@ Partial Initial（部分初始化）
 
 ## PS2 Devices Support（PS/2 设备支持）
 
+本选项用于配置 PS/2 接口设备的支持。
+
 选项：
 
 Enabled（启用）
@@ -115,6 +131,8 @@ Disabled（禁用）
 若禁用，PS/2 设备将被跳过。较早期的鼠标、键盘或摇杆设备使用该协议，该接口大约在 2009 年前后逐渐被淘汰。现代设备通常不再提供 PS/2 接口，因此该选项在多数情况下意义不大。
 
 ## Network Stack Driver Support（网络协议栈驱动支持）
+
+本选项用于启用网络启动所需的协议栈驱动。
 
 选项：
 
@@ -128,6 +146,8 @@ Disabled（禁用）
 
 ## Redirection Support（重定向支持）
 
+本选项用于启用或禁用控制台重定向功能。
+
 选项：
 
 Enabled（启用）
@@ -139,6 +159,8 @@ Disabled（禁用）
 若禁用，重定向功能将被跳过。
 
 ## Boot Option #1（启动选项 1）
+
+本选项用于设置系统启动时的第一启动设备。
 
 选项：
 
@@ -166,40 +188,60 @@ Disabled（禁用）
 
 ## Boot Option #2（启动选项 2）
 
+本选项用于设置系统启动时的第二启动设备。
+
 同上。
 
 ## Boot Option #3（启动选项 3）
+
+本选项用于设置系统启动时的第三启动设备。
 
 同上。
 
 ## Boot Option #4（启动选项 4）
 
+本选项用于设置系统启动时的第四启动设备。
+
 同上。
 
 ## Boot Option #5（启动选项 5）
+
+本选项用于设置系统启动时的第五启动设备。
 
 同上。
 
 ## Boot Option #6（启动选项 6）
 
+本选项用于设置系统启动时的第六启动设备。
+
 同上。
 
 ## Boot Option #7（启动选项 7）
+
+本选项用于设置系统启动时的第七启动设备。
 
 同上。
 
 ## Boot Option #8（启动选项 8）
 
+本选项用于设置系统启动时的第八启动设备。
+
 同上。
 
 ## Boot Option #9（启动选项 9）
+
+本选项用于设置系统启动时的第九启动设备。
 
 同上。
 
 ## UEFI EMMC Drive BBS Priorities（UEFI EMMC 驱动 BBS 优先级）
 
+本选项用于配置 eMMC 设备的启动优先级。
+
 用于指定来自可用 UEFI eMMC 设备的启动优先顺序。
 
 ## UEFI SD Drive BBS Priorities（UEFI SD 驱动 BBS 优先级）
+
+本选项用于配置 SD 卡设备的启动优先级。
 
 指定来自可用 UEFI SD 驱动的启动设备优先顺序。
