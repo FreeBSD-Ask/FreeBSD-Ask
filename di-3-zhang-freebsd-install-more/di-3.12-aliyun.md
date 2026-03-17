@@ -193,7 +193,7 @@ default via 172.24.63.253 dev eth0 proto dhcp src 172.24.0.80 metric 100
 
 ![写入 FreeBSD ZFS 镜像到整块硬盘](../.gitbook/assets/fb-zfs-2.png)
 
-随后使用阿里云网页上的“更多操作”，再选择里面的“重启”
+随后使用阿里云网页上的“更多操作”，选择其中的“重启”选项。
 
 ![强制重启实例](../.gitbook/assets/reb-1.png)
 
