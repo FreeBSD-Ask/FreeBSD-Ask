@@ -185,7 +185,7 @@ dhcpcd_flags="--denyinterfaces igb0"
 
 ## 换源
 
-下面介绍如何将 pkg 仓库切换为中国镜像。使用 `doas` 执行脚本，将 pkg 仓库切换为中国镜像：
+为了提高软件安装和更新的速度，我们可以将 pkg 仓库切换为中国镜像。下面介绍如何将 pkg 仓库切换为中国镜像。使用 `doas` 执行脚本，将 pkg 仓库切换为中国镜像：
 
 ```sh
 $ doas sh /usr/local/share/examples/bhf/pkgrepo-set.sh china
@@ -199,7 +199,7 @@ $ doas pkg update && doas pkg upgrade
 
 ## 安装 Beckhoff 提供开发工具包
 
-使用 doas 安装操作系统通用用户空间开发工具包：
+如果需要进行开发工作，我们可以安装 Beckhoff 提供的开发工具包。使用 doas 安装操作系统通用用户空间开发工具包：
 
 ```sh
 $ doas pkg install os-generic-userland-devtools
@@ -209,7 +209,7 @@ $ doas pkg install os-generic-userland-devtools
 
 ## 启用 FreeBSD 源
 
-默认情况下，pkg 只能安装 Beckhoff 维护的包。若需安装 FreeBSD 官方维护的包，需要手动启用相关源。
+TwinCAT/BSD 默认只提供 Beckhoff 维护的软件包。如果需要使用更多 FreeBSD 官方维护的软件包，我们可以手动启用相关源。默认情况下，pkg 只能安装 Beckhoff 维护的包。若需安装 FreeBSD 官方维护的包，需要手动启用相关源。
 
 使用 doas 提升权限，用 ee 编辑器修改 FreeBSD pkg 仓库配置文件：
 
