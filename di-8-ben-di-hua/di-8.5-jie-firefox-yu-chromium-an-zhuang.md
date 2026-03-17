@@ -24,7 +24,7 @@
 - 使用 pkg 安装
 
 ```sh
-pkg install firefox-esr
+# pkg install firefox-esr
 ```
 
 - 或者使用 Ports

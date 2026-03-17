@@ -1,6 +1,6 @@
 # 8.2 Fcitx 输入法框架
 
-输入法框架和输入法本身是不同的概念，切不可混淆。输入法依赖输入法框架。即使在 Windows 上也是如此： [TSF 管理器](https://learn.microsoft.com/zh-cn/windows/win32/tsf/text-services-framework) [备份](https://web.archive.org/web/20260117044713/https://learn.microsoft.com/zh-cn/windows/win32/tsf/text-services-framework)。
+输入法框架和输入法本身是不同的概念，切不可混淆。输入法依赖输入法框架。即使在 Windows 上也是如此：[TSF 管理器](https://learn.microsoft.com/zh-cn/windows/win32/tsf/text-services-framework) [备份](https://web.archive.org/web/20260117044713/https://learn.microsoft.com/zh-cn/windows/win32/tsf/text-services-framework)。
 
 fcitx 是“小企鹅输入法”，其英文名称为“A flexible input method framework（一款灵活的输入法框架）”。关于其英文命名来源，请参见 [历史](https://fcitx-im.org/wiki/History/zh-cn) [备份](https://web.archive.org/web/20260117170922/https://fcitx-im.org/wiki/History/zh-cn)。
 
@@ -42,7 +42,7 @@ fcitx 是“小企鹅输入法”，其英文名称为“A flexible input method
 
 ```sh
 $ mkdir -p ~/.config/autostart/ # 创建自启动路径。如果使用其他用户，需要在该用户的命令行下执行
-$ cp /usr/local/share/applications/org.fcitx.Fcitx5.desktop ~/.config/autostart/  # 设置 Fcitx 5 开启启动
+$ cp /usr/local/share/applications/org.fcitx.Fcitx5.desktop ~/.config/autostart/  # 设置 Fcitx 5 开机启动
 ```
 
 ## 配置 Fcitx 环境变量
@@ -139,7 +139,7 @@ setenv XMODIFIERS @im=fcitx
 >
 >`chinese/rime-essay` 是必要的，是 Rime 的共享词汇与语言模型，没有这个 Port，你的 RIME 输入法只会显示乱码。
 
-如果 rime 未被自动添加到输入法，请手动添加完成初始化（程序里找到 fcitx 配置工具，添加 rime 输入法即可）。
+如果 rime 未被自动添加到输入法，请手动添加完成初始化（在程序中找到 fcitx 配置工具，添加 rime 输入法即可）。
 
 对于普通用户，如果配置未生效，请检查所使用的 shell 是否按照教程进行了设置。同时，请将该用户加入 wheel 组。
 

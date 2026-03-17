@@ -1,5 +1,7 @@
 # 2.5 在 Windows 中将 USB 启动盘恢复为普通存储设备
 
+完成 FreeBSD 安装后，有时需要将 U 盘启动盘恢复为普通存储设备使用。
+
 >**警告**
 >
 >本文所述操作具有高风险性，可能会损坏部分或全部数据。除非已明确可接受的最坏结果、做好完整可验证的备份、并有可用的回滚方案，否则请勿执行。
@@ -14,9 +16,13 @@
 
 ## 使用 DiskGenius 恢复 U 盘启动盘
 
+首先介绍使用 DiskGenius 恢复 U 盘的方法。
+
 DiskGenius 是一款常用的磁盘管理工具。DiskGenius 官网：[https://www.diskgenius.cn/](https://www.diskgenius.cn/) [备份](https://web.archive.org/web/20260120014911/https://www.diskgenius.cn/)。该软件包含收费功能，但免费功能已足够使用。
 
 ### 下载 DiskGenius
+
+首先需要下载 DiskGenius 软件。
 
 下载时，大多数用户应选择 [64 位版本](https://www.diskgenius.cn/download.php) [备份](https://web.archive.org/web/20260120201333/https://www.diskgenius.cn/download.php)。
 
@@ -34,6 +40,8 @@ DiskGenius 是一款常用的磁盘管理工具。DiskGenius 官网：[https://w
 
 ### 启动 DiskGenius
 
+下载并解压完成后，即可启动 DiskGenius。
+
 启动 DiskGenius 时，双击 `DiskGenius.exe` 即可（路径如 `C:\Users\用户名\Desktop\1\DiskGenius\DiskGenius.exe`，具体路径因解压位置而异）。
 
 ![DiskGenius](../.gitbook/assets/usb-diskgenius4.png)
@@ -44,6 +52,8 @@ DiskGenius 是一款常用的磁盘管理工具。DiskGenius 官网：[https://w
 
 ### 判断哪个是 U 盘
 
+启动 DiskGenius 后，需要先判断哪个设备是目标 U 盘。
+
 判断哪个是目标 U 盘，通常可通过 U 盘容量进行判断。若不记得 U 盘容量，可查询购买记录或拔下 U 盘查看其外壳上标注的容量。
 
 - 通过容量判断：64 GB 的 U 盘在 Windows/Linux 中通常显示为 58 GB，在 macOS 中显示为 64 GB；
@@ -53,6 +63,8 @@ DiskGenius 是一款常用的磁盘管理工具。DiskGenius 官网：[https://w
 ![DiskGenius](../.gitbook/assets/usb-diskgenius6.png)
 
 ### 恢复 U 盘
+
+确定目标 U 盘后，即可开始恢复操作。
 
 确认目标 U 盘后，在其上右键单击，选择“删除所有分区”：
 
@@ -100,9 +112,13 @@ DiskGenius 是一款常用的磁盘管理工具。DiskGenius 官网：[https://w
 
 ## 使用傲梅分区助手恢复 U 盘启动盘
 
+除了 DiskGenius 外，还可以使用傲梅分区助手来恢复 U 盘。
+
 傲梅分区助手是另一款常用的磁盘管理工具。使用方法与前述 DiskGenius 方法基本相同。
 
 ### 下载安装傲梅分区助手
+
+首先需要下载傲梅分区助手软件。
 
 傲梅分区助手官网：<https://www.disktool.cn/>
 
@@ -118,6 +134,8 @@ DiskGenius 是一款常用的磁盘管理工具。DiskGenius 官网：[https://w
 
 ### 判断 U 盘设备
 
+启动傲梅分区助手后，首先需要判断哪个设备是目标 U 盘。
+
 可通过以下信息判断设备是否为 U 盘（若界面显示不全，可使用鼠标滚轮向下滚动）：
 
 ![傲梅分区助手](../.gitbook/assets/aomei3.png)
@@ -132,7 +150,11 @@ DiskGenius 是一款常用的磁盘管理工具。DiskGenius 官网：[https://w
 
 ### 还原 U 盘启动盘
 
+确定目标 U 盘后，即可开始还原操作。
+
 #### 删除所有分区
+
+首先需要删除 U 盘上的所有分区。
 
 选中 U 盘设备，右键单击“删除所有分区”
 
@@ -161,6 +183,8 @@ DiskGenius 是一款常用的磁盘管理工具。DiskGenius 官网：[https://w
 
 #### 创建新分区
 
+删除所有分区后，需要为 U 盘创建新的分区。
+
 点击底部的 U 盘，右键单击，选择“创建分区”
 
 ![傲梅分区助手](../.gitbook/assets/aomei11.png)
@@ -188,11 +212,15 @@ DiskGenius 是一款常用的磁盘管理工具。DiskGenius 官网：[https://w
 
 ## 通过命令 diskpart 恢复
 
+除了图形界面工具外，还可以使用 Windows 自带的命令行工具 diskpart 来恢复 U 盘。
+
 除图形界面工具外，也可使用 Windows 自带的 diskpart 命令行工具进行恢复。
 
 打开 PowerShell：右键单击 Windows 图标，选择“Windows PowerShell（管理员）”。
 
 ### MBR 分区表
+
+首先介绍 MBR 分区表的 U 盘恢复方法。
 
 ```powershell
 PS C:\WINDOWS\system32> diskpart # 进入 diskpart

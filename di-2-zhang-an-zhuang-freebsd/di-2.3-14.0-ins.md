@@ -4,6 +4,8 @@
 
 ## 使用 bsdinstall 开始安装
 
+在开始安装前，可先了解相关视频教程。
+
 >**技巧**
 >
 >视频教程见 [FreeBSD 14.2 基础安装配置教程](https://www.bilibili.com/video/BV1STExzEEhh)（物理机）和 [002-VMware 17 安装 FreeBSD 14.2](https://www.bilibili.com/video/BV1gji2YLEoC)（虚拟机）。
@@ -25,6 +27,8 @@
 > 如果要在 VMware 虚拟机中使用 UEFI，必须使用 FreeBSD 13.0-RELEASE 及以上版本，否则启动时可能出现花屏。
 
 ## 启动安装盘
+
+准备工作就绪后，即可从安装盘启动系统。
 
 ![](../.gitbook/assets/ins1.png)
 

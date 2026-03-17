@@ -1,5 +1,7 @@
 # 9.6 视频播放器
 
+FreeBSD 提供了多种视频播放器选择，本节将介绍几款常用视频播放器的安装和使用方法。
+
 ## VLC
 
 ### 安装 VLC
@@ -46,7 +48,7 @@ SMPlayer 是 MPlayer（纯命令行播放器）的 Qt 前端，推荐使用。
 
 ### SMPlayer 视频播放测试
 
-视频 A、B 均正常
+视频 A、B 均能正常播放。
 
 ![SMPlayer](../.gitbook/assets/smplayer1.png)
 
@@ -93,7 +95,7 @@ Kodi 曾用名为 XBMC。
 
 ### Kodi 播放视频测试
 
-视频 A 和 B 均能正常播放
+视频 A 和 B 均能正常播放。
 
 ![](../.gitbook/assets/kodi4.png)
 
