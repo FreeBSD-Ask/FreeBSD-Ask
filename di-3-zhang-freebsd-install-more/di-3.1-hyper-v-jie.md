@@ -2,21 +2,21 @@
 
 ## Hyper-V 简介
 
-Hyper-V 是微软公司（Microsoft）为 Windows / Windows Server 开发的企业级虚拟化管理程序（系统内置），分为 `Gen 1`（第一代）和 `Gen 2`（第二代）。
+Hyper-V 是微软公司（Microsoft）为 Windows / Windows Server 开发的企业级虚拟化管理程序（系统内置），分为 Gen 1（第一代）和 Gen 2（第二代）。
 
 
 >**注意**
 >
 >Windows 家庭版/家庭中文版并不支持 Hyper-V。
 
-`Gen 1` 与 `Gen 2` 的区别如下：
+Gen 1 与 Gen 2 的区别如下：
 
 | Hyper-V 代数 |    硬盘    |            启动方式              |
 | :----------: | :--------: | :-------------------------------: |
 |    Gen 1     | IDE + SCSI |            仅支持 MBR            |
 |    Gen 2     |  仅 SCSI   | 仅支持 UEFI（包含安全启动及 PXE 支持）|
 
-系统快速创建的虚拟机默认为 `Gen 2`。
+系统快速创建的虚拟机默认为 Gen 2。
 
 >**注意：**
 >
