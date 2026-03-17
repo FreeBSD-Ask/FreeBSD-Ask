@@ -22,7 +22,7 @@
 在这一步修改 `S Swap Size` 的大小（该数值表示计划中的交换分区与 Windows 系统分区容量之和）。
 
 
-本文中，交换分区（Swap）大小为 8 GB，其余 200 GB 空间预留给 Windows。
+本文中，交换分区（Swap）大小为 8GB，其余 200GB 空间预留给 Windows。
 
 ![](../.gitbook/assets/shuang4.png)
 
@@ -55,7 +55,7 @@ Device              Size     Used    Avail Capacity
 /dev/nda0p3          208G       0B     208G     0%
 ```
 
-可以看到交换分区的大小是我们所设定的 208 GB（其中 200 GB 预留给 Windows 操作系统）。
+可以看到交换分区的大小是我们所设定的 208GB（其中 200GB 预留给 Windows 操作系统）。
 
 编辑 `/etc/fstab`，在 swap 对应行的行首添加 `#` 字符将其注释，本例中该行是第三行：
 
@@ -85,15 +85,15 @@ FreeBSD 安装完成后，接下来安装 Windows 系统。
 
 ## 还原交换分区（Swap）
 
-Windows 安装完成后，需要为 FreeBSD 还原交换分区。我们分配了 208 GB 空间，其中有 8 GB 是为交换分区预留的。现在需要将其还原。需要用到工具 [DiskGenius](https://www.diskgenius.com/) [备份](https://web.archive.org/web/20260117184154/https://www.diskgenius.com/)。
+Windows 安装完成后，需要为 FreeBSD 还原交换分区。我们分配了 208GB 空间，其中有 8GB 是为交换分区预留的。现在需要将其还原。需要用到工具 [DiskGenius](https://www.diskgenius.com/) [备份](https://web.archive.org/web/20260117184154/https://www.diskgenius.com/)。
 
 ![](../.gitbook/assets/shuang8.png)
 
-打开 DiskGenius，压缩 C 盘，腾出 8 GB 的未分配空间。
+打开 DiskGenius，压缩 C 盘，腾出 8GB 的未分配空间。
 
 ![](../.gitbook/assets/shuang9.png)
 
-将这 8 GB 空间格式化为 `FreeBSD Swap partition` 类型，然后点击“保存更改”。
+将这 8GB 空间格式化为 `FreeBSD Swap partition` 类型，然后点击“保存更改”。
 
 ![](../.gitbook/assets/shuang10.png)
 

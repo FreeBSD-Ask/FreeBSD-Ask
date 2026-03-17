@@ -119,7 +119,7 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 
 ### 创建交换分区
 
-在 nda0 磁盘上创建 4GB，4K 对齐的 FreeBSD 交换分区，并将其标记为 swap：
+在 nda0 磁盘上创建 4GB、4K 对齐的 FreeBSD 交换分区，并将其标记为 swap：
 
 ```sh
 # gpart add -a 4k -l swap -s 4G -t freebsd-swap nda0
