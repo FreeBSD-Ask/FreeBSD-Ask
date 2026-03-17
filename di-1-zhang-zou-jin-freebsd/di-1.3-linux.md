@@ -2,7 +2,6 @@
 
 ## 何为 Linux？
 
-
 我们首先来看一下 Linux 内核项目（[What is Linux?](https://www.kernel.org/doc/html/latest/admin-guide/README.html)）是如何回答这一问题的：
 
 >What is Linux?（什么是 Linux？）
