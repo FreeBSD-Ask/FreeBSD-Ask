@@ -2,7 +2,7 @@
 
 IBus 即“Intelligent Input Bus”（智能输入总线）。
 
-## IBus
+## 安装 IBus
 
 了解了 IBus 的基本概念后，接下来介绍如何在 FreeBSD 上安装和配置 IBus 输入法框架。
 
@@ -70,6 +70,8 @@ setenv XIM_ARGS "--daemonize --xim"
 ```
 
 ## IBus 设置
+
+完成环境变量配置后，可以通过以下方式进行 IBus 的设置：
 
 - IBus 设置：
 

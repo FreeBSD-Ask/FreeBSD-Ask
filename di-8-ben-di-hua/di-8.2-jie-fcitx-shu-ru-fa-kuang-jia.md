@@ -11,7 +11,7 @@ fcitx 是“小企鹅输入法”，其英文名称为“A flexible input method
 
 > **注意**
 >
-> 在 FreeBSD-CURRENT 中可能会出现许多不可预料的怪异 Bug：fcitx5 诊断信息英文乱码，输入法显示出奇怪的汉字，Qt 环境下无法正常加载输入法。
+> 在 FreeBSD-CURRENT 中可能会出现许多不可预料的问题：fcitx5 诊断信息英文乱码，输入法显示出奇怪的汉字，Qt 环境下无法正常加载输入法。
 
 ## 安装 Fcitx5
 
@@ -34,7 +34,7 @@ fcitx 是“小企鹅输入法”，其英文名称为“A flexible input method
 ```
 
 
-经测试，在 SLiM 窗口下可能会提示找不到 IBus，这可能是一个 bug，也可能是配置问题。
+经测试，在 SLiM 窗口下可能会提示找不到 IBus，这可能是一个问题，也可能是配置问题。
 
 ### Fcitx 5.X 开启自启
 
@@ -51,7 +51,7 @@ $ cp /usr/local/share/applications/org.fcitx.Fcitx5.desktop ~/.config/autostart/
 
 ### X11
 
-根据所使用的桌面管理器及 shell，选择适合的方式进行配置：
+在 X11 环境下，需要根据所使用的桌面管理器及 shell，选择适合的方式进行配置：
 
 - 登录管理器配置路径
 
@@ -137,7 +137,7 @@ setenv XMODIFIERS @im=fcitx
 
 >**注意**
 >
->`chinese/rime-essay` 是必要的，是 Rime 的共享词汇与语言模型，没有这个 Port，你的 RIME 输入法只会显示一团乱码。
+>`chinese/rime-essay` 是必要的，是 Rime 的共享词汇与语言模型，没有这个 Port，你的 RIME 输入法只会显示乱码。
 
 如果 rime 未被自动添加到输入法，请手动添加完成初始化（程序里找到 fcitx 配置工具，添加 rime 输入法即可）。
 
@@ -157,5 +157,5 @@ setenv XMODIFIERS @im=fcitx
 # fcitx5-diagnose
 ```
 
-对于 Fcitx 5.x 来说，找不到 `fcitx qt 4` 的支持是正常现象
+对于 Fcitx 5.x 来说，找不到 `fcitx qt 4` 的支持是正常现象。
 
