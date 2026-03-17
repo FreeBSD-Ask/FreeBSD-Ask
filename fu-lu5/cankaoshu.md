@@ -78,7 +78,7 @@
 主要作者 Marshall Kirk McKusick 在其网站上有提供多款 BSD 相关的 [录制课程](https://www.mckusick.com/buylist.html) [备份](https://web.archive.org/web/20260117174307/https://www.mckusick.com/buylist.html)，大致价格为 1945 美元。目前正在撰写推出第三版，见 2025 年 6 月 BSDCan 大会 [A History of the BSD Daemon by Marshall Kirk McKusick](https://www.youtube.com/watch?v=SGC0191nDp0) [备份](https://web.archive.org/web/20260117174326/https://www.youtube.com/watch?v=SGC0191nDp0)（BSD 守护进程史，作者 Marshall Kirk McKusick。见 42:35-50:23）。
 
 
-#### IPv6 网络堆栈
+### IPv6 网络堆栈
 
 以下书籍逐行讲解了 FreeBSD IPv6 网络堆栈（KAME）的设计与实现，适合深入学习网络协议的读者。
 
@@ -103,7 +103,7 @@
 
 | 封面/书名 |  作者/译者 | ISBN/出版社 | 说明 |
 | :---: | :---: | :---: | :--- |
-|  《DTrace 用户指南》  | Oracle | 文件号码 E22192（版本 [Oracle Solaris 10 8/11](https://docs.oracle.com/cd/E24847_01/) [备份](https://web.archive.org/web/20250921124435/https://docs.oracle.com/cd/E24847_01/)）    |  [在线阅读地址](https://docs.oracle.com/cd/E24847_01/html/E22192/index.html) [备份](https://web.archive.org/web/20260117112521/https://docs.oracle.com/cd/E24847_01/html/E22192/index.html)、[PDF](https://docs.oracle.com/cd/E24847_01/pdf/E22192.pdf) [备份](https://web.archive.org/web/20210508203548/https://docs.oracle.com/cd/E24847_01/pdf/E22192.pdf)；很短的小册子。任何 Oracle 后续文档不一定与当前及以前的 FreeBSD DTrace 兼容。|
+|  《DTrace 用户指南》  | Oracle | 文件号码 E22192（版本 [Oracle Solaris 10 8/11](https://docs.oracle.com/cd/E24847_01/) [备份](https://web.archive.org/web/20250921124435/https://docs.oracle.com/cd/E24847_01/)）    |  [在线阅读地址](https://docs.oracle.com/cd/E24847_01/html/E22192/index.html) [备份](https://web.archive.org/web/20260117112521/https://docs.oracle.com/cd/E24847_01/html/E22192/index.html)、[PDF](https://docs.oracle.com/cd/E24847_01/pdf/E22192.pdf) [备份](https://web.archive.org/web/20210508203548/https://docs.oracle.com/cd/E24847_01/pdf/E22192.pdf)；篇幅较短的手册。任何 Oracle 后续文档不一定与当前及以前的 FreeBSD DTrace 兼容。|
 |  《Solaris 动态跟踪指南》  | Oracle | 文件号码 819-6959-10（版本 [Oracle Solaris 10 8/11](https://docs.oracle.com/cd/E24847_01/) [备份](https://web.archive.org/web/20250921124435/https://docs.oracle.com/cd/E24847_01/)）   | [在线阅读地址](http://download.oracle.com/docs/cd/E19253-01/819-6959/index.html) [备份](https://web.archive.org/web/20211024192418/https://docs.oracle.com/cd/E19253-01/819-6959/index.html)、[PDF](http://download.oracle.com/docs/cd/E19253-01/819-6959/819-6959.pdf) [备份](https://web.archive.org/web/20260118013742/https://docs.oracle.com/cd/E19253-01/819-6959/819-6959.pdf)；《DTrace 用户指南》的增强版本。任何 Oracle 后续文档不一定与当前及以前的 FreeBSD DTrace 兼容。 |
 
 
@@ -169,9 +169,9 @@ int main(void) // 这里是 main 函数
 } // 闭合大括号
 ```
 
-总之，“分析”这个词语可能欠妥，“分析”是一种和“综合”相对的研究方法，如数学分析，化学分析，哲学分析。并且原书的确自称为注释。
+总之，“分析”一词可能不够准确，“分析”是一种与“综合”相对的研究方法，如数学分析、化学分析、哲学分析。且原书的确自称为注释。
 
-因此，现今大多数读者在实际上，并不会出于技术原因而依赖该书，但这也可能是该书出版后二十余年长期未再版的原因之一。
+因此，现今大多数读者实际上并不会出于技术原因而依赖该书，但这也可能是该书出版后二十余年长期未再版的原因之一。
 
 ### 二十一世纪初中文用户对 FreeBSD 的探索
 
