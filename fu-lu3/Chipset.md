@@ -3934,7 +3934,7 @@ Disabled（禁用）
 
 Hot Plug support。支持热插拔
 
-eSATA 的全称是 External Serial ATA（外部串行 ATA），它是 SATA 接口的外部扩展规范。换言之，eSATA 就是 "外置" 版的 SATA，它是用来连接外部而非内部 SATA 设备。
+eSATA 的全称是 External Serial ATA（外部串行 ATA），它是 SATA 接口的外部扩展规范。换言之，eSATA 就是 “外置” 版的 SATA，它是用来连接外部而非内部 SATA 设备。
 
 参见 [eSATA 接口的介绍和使用](https://www.dell.com/support/kbdoc/zh-cn/000127522/esata-%E6%8E%A5%E5%8F%A3%E7%9A%84%E4%BB%8B%E7%BB%8D%E5%92%8C%E4%BD%BF%E7%94%A8) [备份](https://web.archive.org/web/20260120160623/https://www.dell.com/support/kbdoc/zh-cn/000127522/esata-%E6%8E%A5%E5%8F%A3%E7%9A%84%E4%BB%8B%E7%BB%8D%E5%92%8C%E4%BD%BF%E7%94%A8)
 
