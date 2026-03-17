@@ -49,7 +49,7 @@
 
 ## 下载 FreeBSD 镜像
 
-首先打开 FreeBSD 项目官网：<https://www.freebsd.org/>：
+首先打开 FreeBSD 项目官网：<https://www.freebsd.org/>。
 
 ![FreeBSD 项目官网](../.gitbook/assets/do1.png)
 
@@ -72,7 +72,7 @@
 
 >**技巧**
 >
->如果你不知道选哪个，请你选择 `Installer`（普通家用电脑，苹果除外）。
+>如果不知道选哪个，请选择 `Installer`（普通家用电脑，苹果除外）。
 
 >**技巧**
 >
@@ -143,7 +143,7 @@ FreeBSD `-RELEASE` 历史版本下载地址：
 
 ## 刻录 FreeBSD 镜像
 
-我该如何刻录 FreeBSD 镜像到 U 盘？
+如何刻录 FreeBSD 镜像到 U 盘？
 
 ### 建议使用 `-img` 或 `-img.xz` 格式的镜像
 

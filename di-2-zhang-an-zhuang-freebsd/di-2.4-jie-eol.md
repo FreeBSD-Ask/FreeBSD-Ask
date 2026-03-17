@@ -5,11 +5,11 @@
 
 若是虚拟机，请检查虚拟机配置。
 
-  若是物理机：
+若是物理机：
 
 >请依次检查如下项目：
 >
-> - 你的电脑是否为普通家用计算机？
+> - 电脑是否为普通家用计算机？
 > - 处理器品牌是否为 Intel 或 AMD？
 > - 是否已关闭 BIOS 中的安全启动（Secure Boot）？
 > - 镜像是否从 <https://www.freebsd.org> 下载？
@@ -18,10 +18,9 @@
 > - 镜像校验（SHA256）是否通过？
 > - 下载的镜像是否带有 `amd64`（普通家用电脑）字样？
 >   - 请确认是 `amd64`（适用于普通电脑）**而非** `arm64`（适用于开发板）。
-> - 你的 U 盘是否为扩容盘（假冒产品）？
-> - 你是否使用了 Ventoy 工具？
+> - U 盘是否为扩容盘（假冒产品）？
+> - 是否使用了 Ventoy 工具？
 >   - 建议使用 [Rufus](https://rufus.ie/zh/) [备份](https://web.archive.org/web/20260115142915/https://rufus.ie/zh/) 进行刻录，而非 [Ventoy](https://www.ventoy.net/cn/index.html) [备份](https://web.archive.org/web/20260116224411/https://www.ventoy.net/cn/index.html)。
-
 
 若仍出现问题，请先在 [官方论坛](https://forums.freebsd.org/) [备份](https://web.archive.org/web/20260119051244/https://forums.freebsd.org/) 使用英语询问；若无果，可按其他章节指引提交 Bug。
 
