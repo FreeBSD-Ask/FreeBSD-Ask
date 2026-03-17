@@ -29,7 +29,7 @@ UNIX 认证查询网址：[The Open Group official register of UNIX Certified Pr
 2. 缴纳相应的[认证费用](https://www.opengroup.org/openbrand/Brandfees.htm) [备份](https://web.archive.org/web/20260114154111/https://www.opengroup.org/openbrand/Brandfees.htm)
 
 
-可以看到，常见的经过认证的 UNIX 操作系统有苹果公司（Apple）的 macOS。即从商标角度讲，macOS 可以称得上是标准的 UNIX 操作系统。
+可以看到，常见的经过认证的 UNIX 操作系统有苹果公司（Apple）的 macOS。从商标角度讲，macOS 可以称得上是标准的 UNIX 操作系统。
 
 >**技巧**
 >
@@ -76,7 +76,7 @@ Unix 哲学源于 UNIX 操作系统的开发实践，并由肯·汤普森（Ken 
 
 Multics 意图创造强悍的新软件和比肩 IBM 7094 功能更丰富的新硬件，麻省理工学院邀请了两家公司来帮忙。美国通用电气公司（General Electric，GE）负责设计及生产有全新硬件特性、能更好地支撑分时及多用户体系的计算机。贝尔实验室在计算机发展早期就开发了自己的操作系统，因此麻省理工学院邀请了贝尔实验室与美国通用电气公司共同开发 Multics。
 
-最终 Multics 的开发陷入了困境，Multics 设计了大量的程序及功能，经常塞入很多不同的东西进去，导致系统过于复杂。1969 年，由于在贝尔实验室看来作为一套信息处理工具，它已经无法为实验室提供计算服务的目标，它的设计太昂贵了，于是在同年 4 月，贝尔实验室退出 Multics 项目，只剩麻省理工学院和美国通用电气公司继续开发。
+最终 Multics 的开发陷入了困境，Multics 设计了大量的程序及功能，经常塞入很多不同的东西，导致系统过于复杂。1969 年，由于在贝尔实验室看来作为一套信息处理工具，它已经无法实现为实验室提供计算服务的目标，设计太昂贵了，于是在同年 4 月，贝尔实验室退出 Multics 项目，只剩麻省理工学院和美国通用电气公司继续开发。
 
 ### UNICS
 
