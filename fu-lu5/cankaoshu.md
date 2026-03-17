@@ -30,7 +30,7 @@
 | 封面/书名 |  作者/译者 | ISBN/出版社 | 说明 |
 | :---: | :---: | :---: | :--- |
 | ![Unix 四分之一世纪](../.gitbook/assets/unix25.png) <br><br> 《Unix 四分之一世纪》|  Peter H. Salus | 9780201547771 <br><br> Addison-Wesley Professional | 历史类书籍，中译本在 [此](https://freebsd.gitbook.io/unix-er-shi-wu-nian) [备份](https://web.archive.org/web/20260118165553/https://freebsd.gitbook.io/unix-er-shi-wu-nian) |
-| ![Unix 痛恨者手册](../.gitbook/assets/unixno.png) <br><br> 《Unix 痛恨者手册》 | Simson Garfinkel、Daniel Weise、Steven Strassmann | 9781568842035 <br><br>  IDG Books Worldwide, Inc. |  历史书，中译本在 [此](https://book.bsdcn.org/unix-tong-hen-zhe-shou-ce) <br><br>|
+| ![Unix 痛恨者手册](../.gitbook/assets/unixno.png) <br><br> 《Unix 痛恨者手册》 | Simson Garfinkel、Daniel Weise、Steven Strassmann | 9781568842035 <br><br>  IDG Books Worldwide, Inc. |  历史书籍，中译本在 [此](https://book.bsdcn.org/unix-tong-hen-zhe-shou-ce) <br><br>|
 | ![大教堂与集市](../.gitbook/assets/dajiaotang.png) <br><br> 《大教堂与集市》 |[美] Eric S. Raymond <br><br> 卫剑钒 译 | 9787111452478 <br><br> 机械工业出版社 | 主要介绍开源运动的发展历史|
 | ![UNIX 传奇：历史与回忆](../.gitbook/assets/unixchuanqi.png) <br><br> 《UNIX 传奇——历史与回忆》 | [美] Brian W. Kernighan 著 <br><br> 韩磊 译 | 9787115557179 <br><br> 人民邮电出版社 | 主要介绍 UNIX 的发展历史，整体内容相对概括 |
 
@@ -41,7 +41,7 @@
 
 《UNIX 编程艺术》主要讲解了 UNIX 的设计思路与软件工程理论。需要说明的是，本书并不涉及哲学层面的讨论。书中许多设计原则源于特定历史背景下的现实选择，后续被部分读者赋予了过度解读。
 
-本书作者虽然是 OSI 创始人，深度参与了开源事业，但其对开源和 UNIX 哲学理解与自由软件基金会等传统观点存在明显的张力。
+本书作者虽然是 OSI 创始人，深度参与了开源事业，但其对开源和 UNIX 哲学的理解与自由软件基金会等传统观点存在明显的张力。
 
 ### FreeBSD 基础
 
@@ -55,7 +55,7 @@
 | :---: | :---: | :---: |
 | ![FreeBSD 操作系统设计与实现（原书第二版）](../.gitbook/assets/freebsd2rd.png) <br><br> 《FreeBSD 操作系统设计与实现（原书第 2 版）》 |[美] Marshall McKusick、George Neville-Neil、Robert N.M. Watson 等著 <br><br> 陈向群、郭立峰、叶顺平 等译 | 9787111689973 <br><br> 机械工业出版社 |  
 
-《FreeBSD 操作系统设计与实现（原书第 2 版）》主要讲解了内核。
+《FreeBSD 操作系统设计与实现（原书第 2 版）》主要讲解了内核的相关内容。
 
 该书采用轻型纸印刷，且部分章节需要读者自行通过[网络](https://course.cmpreading.com/web/refbook/detail/9661/215) [备份](https://web.archive.org/web/20260118165733/https://course.cmpreading.com/web/refbook/detail/9661/215)下载获取。
 
@@ -127,7 +127,7 @@
 
 ### 《莱昂氏 UNIX 源代码分析》
 
-LIONS J. 莱昂氏 UNIX 源代码分析[M]. 尤晋元，译。北京：机械工业出版社，2000.
+LIONS J. 莱昂氏 UNIX 源代码分析[M]. 尤晋元，译. 北京：机械工业出版社，2000.
 
 查阅该书的引进历史（[中华读书报《莱昂氏UNIX源代码分析》出版一波三折](https://www.gmw.cn/01ds/2000-08/02/GB/2000%5E311%5E0%5EDS1418.htm) [备份](https://web.archive.org/web/20260119104147/https://www.gmw.cn/01ds/2000-08/02/GB/2000%5E311%5E0%5EDS1418.htm)），过程并不容易。
 
