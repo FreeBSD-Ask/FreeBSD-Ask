@@ -4,12 +4,16 @@
 
 ## UNIX 系统中连接数据库并执行 SQL 脚本
 
+在 UNIX 或类 UNIX 系统中，我们可以通过命令行连接数据库并执行 SQL 脚本。以下是一些常用的基础操作命令。
+
 ```sh
 # mysql -u root -p          # 以 root 用户登录 MySQL，系统会提示输入密码
 # source FileName.sql       # 在 MySQL 交互式界面中执行指定的 SQL 文件
 ```
 
 ## 建立数据库
+
+在关系型数据库中，创建数据库是使用数据库的第一步。我们可以通过 SQL 语句来创建新的数据库。
 
 ```sql
 create database db_name;

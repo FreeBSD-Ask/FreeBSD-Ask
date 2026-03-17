@@ -214,4 +214,3 @@ $ doas ee /usr/local/etc/pkg/repos/FreeBSD.conf
 ```
 
 将配置文件中 `FreeBSD: {enabled: no}` 的 `no` 修改为 `yes` 即可。
-
