@@ -1,6 +1,6 @@
 # 2.3 FreeBSD 13/14 安装指南（AMD64）
 
-这些 RELEASE 系统亦可用于生产环境，但其优先级低于最新的 RELEASE。
+这些 RELEASE 系统亦可用于生产环境，但其优先级低于最新的 RELEASE。本节将介绍 FreeBSD 13 和 14 版本的安装流程。
 
 ## 使用 bsdinstall 开始安装
 
