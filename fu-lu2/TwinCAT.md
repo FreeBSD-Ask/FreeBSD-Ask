@@ -14,7 +14,7 @@ TwinCAT/BSD 是由倍福公司（Beckhoff）开发的基于 FreeBSD 的 PLC（Pr
 
 ## 下载 TwinCAT/BSD
 
-TwinCAT/BSD 的下载地址如下：
+了解 TwinCAT/BSD 的基本信息后，我们可以开始准备安装。首先需要获取系统安装镜像。TwinCAT/BSD 的下载地址如下：
 
 <https://www.beckhoff.com/en-us/search-results/?q=bsd>
 
@@ -26,7 +26,7 @@ TwinCAT/BSD 的下载地址如下：
 
 ## 创建虚拟硬盘并写入镜像
 
-TCBSD 官方镜像是使用 `dd` 工具制作的，实际上对应 FreeBSD 的 img 镜像，因此虚拟机无法直接识别。需要通过创建虚拟 VHD 硬盘的方式，将镜像写入硬盘后再挂载到虚拟机进行安装。
+下载完成后，我们需要对镜像进行特殊处理才能用于虚拟机安装。TCBSD 官方镜像是使用 `dd` 工具制作的，实际上对应 FreeBSD 的 img 镜像，因此虚拟机无法直接识别。需要通过创建虚拟 VHD 硬盘的方式，将镜像写入硬盘后再挂载到虚拟机进行安装。
 
 
 首先右键单击“这台电脑”，选择“管理”→“磁盘管理”→“操作”→“创建 VHD”。
@@ -69,7 +69,7 @@ TCBSD 官方镜像是使用 `dd` 工具制作的，实际上对应 FreeBSD 的 i
 
 ## 通过 VMware Workstation 安装 TwinCAT/BSD
 
-下面介绍通过 VMware Workstation 安装 TwinCAT/BSD 的步骤。我们先以正常方法创建一个空白的虚拟机模板，然后点击“虚拟机设置”→“添加”→“硬盘”。点击下一步：
+虚拟硬盘准备完成后，我们可以开始通过 VMware Workstation 进行系统安装。下面介绍通过 VMware Workstation 安装 TwinCAT/BSD 的步骤。我们先以正常方法创建一个空白的虚拟机模板，然后点击“虚拟机设置”→“添加”→“硬盘”。点击下一步：
 
 ![TCBSD](../.gitbook/assets/t11.png)
 
@@ -136,7 +136,7 @@ TCBSD 官方镜像是使用 `dd` 工具制作的，实际上对应 FreeBSD 的 i
 
 ## 用户账户
 
-默认用户名是 `Administrator`，其密码是你在安装时设置的。倍福其他 PLC 默认密码都是 `1`。
+系统安装完成后，我们需要了解系统的用户账户配置。默认用户名是 `Administrator`，其密码是你在安装时设置的。倍福其他 PLC 默认密码都是 `1`。
 
 首先使用 doas 提升权限修改 root 用户密码：
 
@@ -152,7 +152,7 @@ $ doas su
 
 ## Web 界面登录
 
-网络连接方式使用 NAT，经测试桥接模式无法访问。
+TwinCAT/BSD 提供了 Web 管理界面，方便用户进行系统配置和管理。网络连接方式使用 NAT，经测试桥接模式无法访问。
 
 使用 `ifconfig` 查看当前 IP，然后打开主机的浏览器输入 `ifconfig` 命令输出的 IP 地址。
 
@@ -166,6 +166,8 @@ $ doas su
 
 
 ## 故障排除与未竟事宜
+
+在使用 TwinCAT/BSD 的过程中，可能会遇到一些问题。以下是一些常见问题的解决方法。
 
 ### 设置静态 IP 后，网卡存在两个 IP
 
