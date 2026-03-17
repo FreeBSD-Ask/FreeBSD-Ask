@@ -95,6 +95,8 @@
 
 ### DTrace 与系统调优
 
+本小节收录系统性能调优与动态跟踪相关的参考资料，帮助读者掌握系统调试与性能优化技术。
+
 | 封面/书名 |  作者/译者 | ISBN/出版社 | 说明 |
 | :---: | :---: | :---: | :--- |
 |![Solaris 性能与工具](../.gitbook/assets/Solaris.png) <br><br> 《Solaris 性能与工具》 | [美] Richard McDougall、Jim Mauro、Brendan Gregg 等著 <br><br> Sun 中国工程研究院 译 | 9787111214038 <br><br> 机械工业出版社 | 介绍常用性能监测工具及 DTrace 使用方法。本书基于 Solaris 10，同时适用于 FreeBSD |
@@ -107,7 +109,11 @@
 
 ## 需谨慎对待的书目
 
+以下部分对部分书籍进行客观评述，旨在帮助读者根据自身需求选择合适的参考资料。
+
 ### FreeBSD Mastery（FreeBSD 精通）系列丛书
+
+本系列丛书包含以下书目，相关说明详见下文。
 
 - *FreeBSD Mastery: Storage Essentials*（可译为《FreeBSD 精通：存储基础》）
 - *FreeBSD Mastery: Specialty Filesystems*（可译为《FreeBSD 精通：特殊文件系统》）
@@ -115,17 +121,15 @@
 - *FreeBSD Mastery: Advanced ZFS*（可译为《FreeBSD 精通：ZFS 高级教程》）
 - *FreeBSD Mastery: Jails*（可译为《FreeBSD 精通：Jail》）
 
-说明见下。
-
 ### *Absolute FreeBSD, 3rd Edition: The Complete Guide to FreeBSD*（可译为《FreeBSD 完全指南》第三版）
+
+以下是对该书及同系列书籍的介绍与评述。
 
 |封面/书名 | 作者 | ISBN/出版社 |
 | :---: | :---: | :---: |
 | ![Absolute FreeBSD, 3rd Edition: The Complete Guide to FreeBSD](../.gitbook/assets/AbsoluteBSD.png) <br><br> ***Absolute FreeBSD, 3rd Edition: The Complete Guide to FreeBSD*** <br> （可译为《FreeBSD 完全指南》第三版） | Michael W. Lucas | 9781593278922 <br><br> No Starch Press |
 
-说明：
-
-打开美国亚马逊官网作者 Michael W. Lucas 的 [页面](https://www.amazon.com/stores/Michael-W.-Lucas/author/B004MNWSFG?language=zh_TW&ref=ap_rdr&isDramIntegrated=true&shoppingPortalEnabled=true) [备份](https://web.archive.org/web/20260119104253/https://www.amazon.com/stores/Michael-W.-Lucas/author/B004MNWSFG?language=zh_TW&ref=ap_rdr&isDramIntegrated=true&shoppingPortalEnabled=true)，你会惊讶地发现竟有人如此著作等身，博闻强识。从 ZFS 到 FreeBSD，从 OpenBSD 到 GPG，居然出版了近五十本。
+打开美国亚马逊官网作者 Michael W. Lucas 的 [页面](https://www.amazon.com/stores/Michael-W.-Lucas/author/B004MNWSFG?language=zh_TW&ref=ap_rdr&isDramIntegrated=true&shoppingPortalEnabled=true) [备份](https://web.archive.org/web/20260119104253/https://www.amazon.com/stores/Michael-W.-Lucas/author/B004MNWSFG?language=zh_TW&ref=ap_rdr&isDramIntegrated=true&shoppingPortalEnabled=true)，可以看到该作者著述颇丰，从 ZFS 到 FreeBSD，从 OpenBSD 到 GPG，出版了近五十本相关书籍。
 
 笔者随机抽取了几本进行泛读，并对 *Absolute FreeBSD, 3rd Edition*进行了深入阅读。
 
@@ -142,6 +146,8 @@
 
 
 ### 《莱昂氏 UNIX 源代码分析》
+
+本小节介绍一部在 UNIX 发展史上具有重要历史意义的著作。
 
 LIONS J. 莱昂氏 UNIX 源代码分析[M]. 尤晋元，译. 北京：机械工业出版社，2000.
 
@@ -169,6 +175,8 @@ int main(void) // 这里是 main 函数
 
 ### 二十一世纪初中文用户对 FreeBSD 的探索
 
+本小节回顾二十一世纪初中文世界对 FreeBSD 的探索历程，介绍早期的中文 FreeBSD 相关书籍。
+
 - 王波。FreeBSD 使用大全[M]. 北京：机械工业出版社，1999. ISBN 9787111074823.
 - 王波。FreeBSD 使用大全（第 2 版）[M]. 北京：机械工业出版社，2002. ISBN 9787111102861.
 
@@ -178,7 +186,7 @@ int main(void) // 这里是 main 函数
 
 因为在千禧年代，只有极个别家庭拥有自己的 PC 和网络连接（根据中国互联网络信息中心《第十四次中国互联网络发展状况统计报告》统计，2004 年网民总数为 8700 万，仅仅约占时年人口总数的 6.69%）。如果内容在当时写得过于学术和深入，其出版价值可能会受到影响。
 
-此第二版的确在台湾地区出版过，但是无人问津，连图片也难以搜寻。作者也在本书第二版出版后就难寻踪迹，其网站也在不久后关停。
+此第二版的确在台湾地区出版过，但是反响平平，连图片也难以搜寻。作者也在本书第二版出版后就难寻踪迹，其网站也在不久后关停。
 
 站在当初的时间节点上，有这样一本书，或许就能够帮助很多人入门，享受 FreeBSD 世界带来的快乐！但不可否认的是，该书具有作为国内早期 FreeBSD 相关书籍的重要历史地位。作者王波是早期 FreeBSD 中文社区的推动者和深入参与者。
 
