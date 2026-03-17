@@ -8,7 +8,11 @@
 
 ## 主要参考书目
 
+本部分列出了本书编写过程中参考的主要书籍，涵盖命令行基础、UNIX 内核、FreeBSD 技术等多个领域，读者可根据自身需求进一步查阅。
+
 ### 命令行基础
+
+本小节介绍命令行学习的基础与进阶书籍，适合不同层次的读者选择阅读。
 
 | 封面/书名 |  作者/译者 | ISBN/出版社 | 说明 |
 | :---: | :---: | :---: | :--- |
@@ -16,6 +20,8 @@
 | ![UNIX/Linux 系统管理技术手册（第 5 版）](../.gitbook/assets/unix4.png) <br><br> 《UNIX/Linux 系统管理技术手册（第 5 版）》 | [美] Evi Nemeth、Garth Snyder、Trent R. Hein、Ben Whaley、Dan Mackin 等著 <br><br> 门佳 译 | 9787115532763 <br><br> 人民邮电出版社 |命令行进阶与 UNIX 基础知识|
 
 ### UNIX 基础
+
+本小节收录 UNIX 操作系统核心技术书籍，涵盖编程接口、网络通信、内核实现等关键领域。
 
 | 封面/书名 |  作者/译者 | ISBN/出版社 | 说明 |
 | :---: | :---: | :---: | :--- |
@@ -27,6 +33,8 @@
 
 ### 开源与自由软件运动
 
+本小节介绍开源与自由软件运动的历史背景与核心文献，帮助读者理解相关文化与思想。
+
 | 封面/书名 |  作者/译者 | ISBN/出版社 | 说明 |
 | :---: | :---: | :---: | :--- |
 | ![Unix 四分之一世纪](../.gitbook/assets/unix25.png) <br><br> 《Unix 四分之一世纪》|  Peter H. Salus | 9780201547771 <br><br> Addison-Wesley Professional | 历史类书籍，中译本在 [此](https://freebsd.gitbook.io/unix-er-shi-wu-nian) [备份](https://web.archive.org/web/20260118165553/https://freebsd.gitbook.io/unix-er-shi-wu-nian) |
@@ -34,6 +42,8 @@
 | ![大教堂与集市](../.gitbook/assets/dajiaotang.png) <br><br> 《大教堂与集市》 |[美] Eric S. Raymond <br><br> 卫剑钒 译 | 9787111452478 <br><br> 机械工业出版社 | 主要介绍开源运动的发展历史|
 | ![UNIX 传奇：历史与回忆](../.gitbook/assets/unixchuanqi.png) <br><br> 《UNIX 传奇——历史与回忆》 | [美] Brian W. Kernighan 著 <br><br> 韩磊 译 | 9787115557179 <br><br> 人民邮电出版社 | 主要介绍 UNIX 的发展历史，整体内容相对概括 |
 
+
+以下是关于 UNIX 设计理念的经典著作，值得读者深入研读。
 
 | 封面/书名 | 作者/译者 | ISBN/出版社 |
 | :----: | :----: | :----: |
@@ -45,11 +55,15 @@
 
 ### FreeBSD 基础
 
+本小节收录 FreeBSD 操作系统的核心技术书籍，包括基础入门、设备驱动开发及内核设计等方面的著作。
+
 | 封面/书名 |  作者/译者 | ISBN/出版社 | 说明 |
 | :---: | :---: | :---: | :--- |
 |![FreeBSD 技术内幕](../.gitbook/assets/Unleashed.png)  <br><br> 《FreeBSD 技术内幕》 | [美] Michael Urban、Brian Tiemann 等著 <br><br> 智慧东方工作室 译 | 9787111102010 <br><br> 机械工业出版社 |  本书出版于 2002 年，但部分内容至今仍具有参考价值，体现了 FreeBSD 的稳健发展。本书推荐选读第 1、4、8、9、10、11、12、13 章|
 | ![深入理解 FreeBSD 设备驱动程序开发](../.gitbook/assets/qudong.png) <br><br> 《深入理解 FreeBSD 设备驱动程序开发》 | [加] Joseph Kong 著 <br><br> 陈毅东 译 | 9787111411574 <br><br> 机械工业出版社 |  介绍 FreeBSD 设备驱动程序的开发方法 |
 
+
+以下是 FreeBSD 内核设计的权威著作，内容深入且专业。
 
 | 封面/书名 | 作者/译者 | ISBN/出版社 |
 | :---: | :---: | :---: |
@@ -61,7 +75,7 @@
 
 该书阅读难度较高。据韩国 FreeBSD 社区的相关反馈，即使部分专业读者也认为其内容较为晦涩。
 
-主要作者：Marshall Kirk McKusick 在其网站上有提供多款 BSD 相关的 [录制课程](https://www.mckusick.com/buylist.html) [备份](https://web.archive.org/web/20260117174307/https://www.mckusick.com/buylist.html)，大致价格为 1945 美元。目前正在撰写推出第三版，见 2025 年 6 月 BSDCan 大会 [A History of the BSD Daemon by Marshall Kirk McKusick](https://www.youtube.com/watch?v=SGC0191nDp0) [备份](https://web.archive.org/web/20260117174326/https://www.youtube.com/watch?v=SGC0191nDp0)（BSD 守护进程史，作者 Marshall Kirk McKusick。见 42:35-50:23）。
+主要作者 Marshall Kirk McKusick 在其网站上有提供多款 BSD 相关的 [录制课程](https://www.mckusick.com/buylist.html) [备份](https://web.archive.org/web/20260117174307/https://www.mckusick.com/buylist.html)，大致价格为 1945 美元。目前正在撰写推出第三版，见 2025 年 6 月 BSDCan 大会 [A History of the BSD Daemon by Marshall Kirk McKusick](https://www.youtube.com/watch?v=SGC0191nDp0) [备份](https://web.archive.org/web/20260117174326/https://www.youtube.com/watch?v=SGC0191nDp0)（BSD 守护进程史，作者 Marshall Kirk McKusick。见 42:35-50:23）。
 
 
 #### IPv6 网络堆栈
