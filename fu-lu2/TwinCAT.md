@@ -12,20 +12,22 @@ TwinCAT/BSD 是由倍福公司（Beckhoff）开发的基于 FreeBSD 的 PLC（Pr
 
 ## 下载 TwinCAT/BSD
 
+TwinCAT/BSD 的下载地址如下：
+
 <https://www.beckhoff.com/en-us/search-results/?q=bsd>
 
 ![TCBSD](../.gitbook/assets/tcbsd.png)
 
 点击 `↓ ZIP` 即可下载。**注意：需要注册才能下载。**
 
-首先解压 ZIP，得到“TCBSD-x64-13-92446.iso”文件。
+首先解压 ZIP，得到 `TCBSD-x64-13-92446.iso` 文件。
 
 ## 创建虚拟硬盘并写入镜像
 
 TCBSD 官方镜像是使用 `dd` 工具制作的，实际上对应 FreeBSD 的 img 镜像，因此虚拟机无法直接识别。需要通过创建虚拟 VHD 硬盘的方式，将镜像写入硬盘后再挂载到虚拟机进行安装。
 
 
-首先右键单击“这台电脑”，选择管理--磁盘管理--操作--创建 VHD。
+首先右键单击“这台电脑”，选择“管理”→“磁盘管理”→“操作”→“创建 VHD”。
 
 ![TCBSD](../.gitbook/assets/t1.png)
 
@@ -55,7 +57,7 @@ TCBSD 官方镜像是使用 `dd` 工具制作的，实际上对应 FreeBSD 的 i
 
 ![TCBSD](../.gitbook/assets/t8.png)
 
-返回磁盘管理，选择“操作”--重新扫描磁盘。**否则下面虚拟机无法加载出磁盘 2。**
+返回磁盘管理，选择“操作”→“重新扫描磁盘”。**否则下面虚拟机无法加载出磁盘 2。**
 
 ![TCBSD](../.gitbook/assets/t9.png)
 
@@ -65,7 +67,7 @@ TCBSD 官方镜像是使用 `dd` 工具制作的，实际上对应 FreeBSD 的 i
 
 ## 通过 VMware Workstation 安装 TwinCAT/BSD
 
-我们先以正常方法创建一个空白的虚拟机模板，然后点击“虚拟机设置”--“添加”--“硬盘”。点击下一步：
+下面介绍通过 VMware Workstation 安装 TwinCAT/BSD 的步骤。我们先以正常方法创建一个空白的虚拟机模板，然后点击“虚拟机设置”→“添加”→“硬盘”。点击下一步：
 
 ![TCBSD](../.gitbook/assets/t11.png)
 
@@ -117,7 +119,7 @@ TCBSD 官方镜像是使用 `dd` 工具制作的，实际上对应 FreeBSD 的 i
 
 ![TCBSD](../.gitbook/assets/t23.png)
 
-开始安装了：
+开始安装：
 
 ![TCBSD](../.gitbook/assets/t24.png)
 
@@ -132,15 +134,15 @@ TCBSD 官方镜像是使用 `dd` 工具制作的，实际上对应 FreeBSD 的 i
 
 ## 用户账户
 
-默认用户名是 `Administrator`，他的密码是你在安装时设置的。倍福其他 PLC 默认密码都是 `1`。
+默认用户名是 `Administrator`，其密码是你在安装时设置的。倍福其他 PLC 默认密码都是 `1`。
 
-首先使用 doas 提升权限修改 root 用户密码
+首先使用 doas 提升权限修改 root 用户密码：
 
 ```sh
 $ doas passwd root
 ```
 
-然后就可以使用 doas 提升权限为超级用户（root），进入 root Shell
+然后就可以使用 doas 提升权限为超级用户（root），进入 root Shell：
 
 ```sh
 $ doas su
@@ -150,7 +152,7 @@ $ doas su
 
 网络连接方式使用 NAT，经测试桥接模式无法访问。
 
-使用 `ifconfig` 查看当前 IP，然后打开主机的浏览器输入 `ifconfig` 命令输出的 IP 内容！
+使用 `ifconfig` 查看当前 IP，然后打开主机的浏览器输入 `ifconfig` 命令输出的 IP 地址。
 
 示例中，`ifconfig` 显示的 IP 为 `192.168.245.138`，则访问地址为 `https://192.168.245.138`。（注意使用 **https**，而非 *http*，后者无法访问）
 
@@ -179,7 +181,7 @@ dhcpcd_flags="--denyinterfaces igb0"
 
 ## 换源
 
-使用 `doas` 执行脚本，将 pkg 仓库切换为中国镜像：
+下面介绍如何将 pkg 仓库切换为中国镜像。使用 `doas` 执行脚本，将 pkg 仓库切换为中国镜像：
 
 ```sh
 $ doas sh /usr/local/share/examples/bhf/pkgrepo-set.sh china
@@ -192,7 +194,6 @@ $ doas pkg update && doas pkg upgrade
 ```
 
 ## 安装 Beckhoff 提供开发工具包
-
 
 使用 doas 安装操作系统通用用户空间开发工具包：
 
