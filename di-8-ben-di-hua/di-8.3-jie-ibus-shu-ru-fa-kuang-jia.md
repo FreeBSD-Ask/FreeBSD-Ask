@@ -4,6 +4,8 @@ IBus 即“Intelligent Input Bus”（智能输入总线）。
 
 ## IBus
 
+了解了 IBus 的基本概念后，接下来介绍如何在 FreeBSD 上安装和配置 IBus 输入法框架。
+
 - 使用 pkg 安装：
 
 ```sh
@@ -27,6 +29,8 @@ IBus 即“Intelligent Input Bus”（智能输入总线）。
 - `chinese/ibus-table-chinese` 包含五笔、仓颉等多种输入法
 
 ## 配置环境变量
+
+安装完成后，需要配置相应的环境变量以确保 IBus 能够在各种应用程序中正常工作。
 
 - 登录管理器配置路径
 
