@@ -168,7 +168,7 @@ All repositories are up to date.
 pkg: No packages available to install matching 'chromium' have been found in the repositories
 ```
 
-“pkg: No packages available to install matching 'chromium' have been found in the repositories”即“pkg：在仓库中找不到 与“chromium”匹配、可供安装的软件包”。
+“pkg: No packages available to install matching 'chromium' have been found in the repositories”即“pkg：在仓库中找不到与 chromium 匹配、可供安装的软件包”。
 
 如果你前面显示了“FreeBSD repository update completed. 36804 packages processed.”（FreeBSD 仓库更新完成。处理了 36804 个包），说明当前软件源是可用的，只是找不到 `chromium` 这个软件包而已。
 

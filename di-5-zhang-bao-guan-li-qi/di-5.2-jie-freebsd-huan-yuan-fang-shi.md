@@ -518,7 +518,7 @@ MASTER_SITE_OVERRIDE?=https://mirrors.ustc.edu.cn/freebsd-ports/distfiles/${DIST
 
 其优点在于：
 
-- 启用 `signature_type: "fingerprints"` 核 `fingerprints`：使用 FreeBSD 官方内置密钥验证包签名
+- 启用 `signature_type: "fingerprints"` 和 `fingerprints`：使用 FreeBSD 官方内置密钥验证包签名
 - `mirror_type: "none"`：适合国内的 HTTPS 直链镜像（官方用 `"srv"` 是因为 `pkg+https://` 支持 DNS SRV，但镜像站不需要）
 
 推荐在生产环境始终启用签名验证。如果追求极简，可以去掉这些行，但不建议，除非你完全信任网络环境。
