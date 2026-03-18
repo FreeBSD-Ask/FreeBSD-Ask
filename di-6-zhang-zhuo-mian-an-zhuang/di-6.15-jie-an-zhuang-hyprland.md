@@ -8,9 +8,9 @@
 >
 >除软件包安装和系统重启操作外，本文中的所有命令应在非 root 用户权限下执行。
 
-Hyprland 是基于 Wayland 的合成器（compositor），支持窗口透明、模糊、圆角等特效，并且动画效果表现良好。
+Hyprland 是基于 Wayland 的动态平铺式合成器（compositor），支持窗口透明、模糊、圆角等视觉特效，并且动画效果表现良好。
 
-Hyprland 的窗口焦点切换与传统桌面不同：鼠标光标停留在哪个窗口上，该窗口即获得焦点（无需点击），通常不使用 Alt+Tab 等快捷键进行切换。
+Hyprland 的窗口焦点切换机制与传统桌面环境不同：鼠标光标停留在哪个窗口上，该窗口即获得焦点（无需点击），通常不使用 Alt+Tab 等快捷键进行切换。
 
 ![hyprland on FreeBSD](../.gitbook/assets/hyprland.png)
 

@@ -1,21 +1,22 @@
 # 3.2 使用 VMware Workstation Pro 安装 FreeBSD
 
+本章系统介绍在 VMware Workstation Pro 虚拟化平台上部署 FreeBSD 操作系统的完整流程与关键配置细节。
 
 ## 视频教程
 
-以下视频教程演示了 VMware Workstation Pro 的安装过程，可供参考。
+以下视频教程演示了 VMware Workstation Pro 的安装过程，具有直观的操作演示，可供读者参考。
 
 - [001-Windows 11 安装 VMware 17](https://www.bilibili.com/video/BV1Qji2YLEgS)
 
 ## 镜像下载
 
-在开始安装之前，需要先下载 FreeBSD 的安装镜像。
+在开始安装之前，需要先下载 FreeBSD 的安装介质镜像，这是系统部署的前提条件。
 
 >**提示**
 >
->虚拟机也可以使用 FreeBSD 官方构建的 [虚拟机镜像](https://download.freebsd.org/releases/VM-IMAGES/14.2-RELEASE/amd64/Latest/)，需要手动扩容，文件系统可选 UFS 与 ZFS。
+>虚拟机也可以使用 FreeBSD 官方构建的 [虚拟机镜像](https://download.freebsd.org/releases/VM-IMAGES/14.2-RELEASE/amd64/Latest/)，该类镜像经过预配置，使用时需要手动扩容，文件系统可选 UFS 与 ZFS。
 >
->虚拟机一般使用 `FreeBSD-14.2-RELEASE-amd64-disc1.iso` 等类似文件名和后缀的镜像，但是 `FreeBSD-14.2-RELEASE-amd64-memstick.img` 也并非只能用于 U 盘刻录，虚拟机同样可以使用，使用方法参考其他章节。
+>虚拟机一般使用 `FreeBSD-14.2-RELEASE-amd64-disc1.iso` 等类似文件名和后缀的 ISO 光盘镜像，但是 `FreeBSD-14.2-RELEASE-amd64-memstick.img` 也并非只能用于 U 盘刻录，虚拟机同样可以使用，具体使用方法可参考其他章节。
 
 
 

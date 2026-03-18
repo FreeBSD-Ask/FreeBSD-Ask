@@ -1,8 +1,8 @@
 # 8.2 Fcitx 输入法框架
 
-输入法框架和输入法本身是不同的概念，切不可混淆。输入法依赖输入法框架。即使在 Windows 上也是如此：[TSF 管理器](https://learn.microsoft.com/zh-cn/windows/win32/tsf/text-services-framework) [备份](https://web.archive.org/web/20260117044713/https://learn.microsoft.com/zh-cn/windows/win32/tsf/text-services-framework)。
+首先需要明确：输入法框架与具体输入法属于两个不同的技术概念，二者不可混淆。输入法的正常运行依赖于输入法框架的支持。这种架构关系在 Windows 系统中同样存在，可参考 [TSF 管理器](https://learn.microsoft.com/zh-cn/windows/win32/tsf/text-services-framework) [备份](https://web.archive.org/web/20260117044713/https://learn.microsoft.com/zh-cn/windows/win32/tsf/text-services-framework)。
 
-fcitx 是“小企鹅输入法”，其英文名称为“A flexible input method framework（一款灵活的输入法框架）”。关于其英文命名来源，请参见 [历史](https://fcitx-im.org/wiki/History/zh-cn) [备份](https://web.archive.org/web/20260117170922/https://fcitx-im.org/wiki/History/zh-cn)。
+fcitx 即“小企鹅输入法”，其英文全称为“A flexible input method framework（一款灵活的输入法框架）”。关于其英文命名的历史渊源，可参见 [历史](https://fcitx-im.org/wiki/History/zh-cn) [备份](https://web.archive.org/web/20260117170922/https://fcitx-im.org/wiki/History/zh-cn)。
 
 >**技巧**
 >
@@ -15,7 +15,7 @@ fcitx 是“小企鹅输入法”，其英文名称为“A flexible input method
 
 ## 安装 Fcitx5
 
-了解了输入法框架的概念后，接下来介绍如何在 FreeBSD 上安装 Fcitx5。有两种主要安装方式：使用 pkg 安装或通过 Ports 安装。
+在明确了输入法框架的基本概念后，接下来介绍如何在 FreeBSD 系统上安装 Fcitx5。主要有两种安装途径：通过 pkg 包管理器安装，或通过 Ports 从源代码编译安装。
 
 - 使用 pkg 安装：
 

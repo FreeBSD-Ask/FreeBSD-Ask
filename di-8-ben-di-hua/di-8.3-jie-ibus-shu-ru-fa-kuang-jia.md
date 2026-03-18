@@ -1,10 +1,10 @@
 # 8.3 IBus 输入法框架
 
-IBus 即“Intelligent Input Bus”（智能输入总线）。
+IBus 即“Intelligent Input Bus”（智能输入总线），是 Linux 及类 UNIX 系统中广泛应用的一种输入法框架体系。
 
 ## 安装 IBus
 
-了解了 IBus 的基本概念后，接下来介绍如何在 FreeBSD 上安装和配置 IBus 输入法框架。
+在明确了 IBus 的基本概念后，接下来介绍如何在 FreeBSD 系统上安装和配置 IBus 输入法框架。
 
 - 使用 pkg 安装：
 

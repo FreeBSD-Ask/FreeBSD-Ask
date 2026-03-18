@@ -6,7 +6,7 @@
 
 ## 基于 Rocky Linux 兼容层（FreeBSD Port）
 
-WPS Office 是一款常用的办公软件套装。与 QQ 类似，目前也没有原生的 FreeBSD 版本，需要通过 Linux 兼容层来安装和运行。
+WPS Office 是一款常用的办公软件套装。与 QQ 类似，目前也没有原生的 FreeBSD 版本，需要通过 Linux 兼容层来实现安装与运行。
 
 >**注意**
 >

@@ -2,11 +2,11 @@
 
 ## 环境准备
 
-由于 issue [Request to restore support for vboxvideo and vmwgfx DRM drivers #356](https://github.com/freebsd/drm-kmod/issues/356) [备份](https://web.archive.org/web/20260120215704/https://github.com/freebsd/drm-kmod/issues/356) 始终未能得到解决（FreeBSD drm 驱动的移植只覆盖了 Intel、AMD 和 NVIDIA 等 GPU），故在 VMware、VirtualBox 或任何基于 Virtio 的虚拟机上均无法复现此教程。你需要在真实的物理机上进行参照。
+由于 issue [Request to restore support for vboxvideo and vmwgfx DRM drivers #356](https://github.com/freebsd/drm-kmod/issues/356) [备份](https://web.archive.org/web/20260120215704/https://github.com/freebsd/drm-kmod/issues/356) 尚未得到解决（FreeBSD DRM 驱动的移植仅覆盖了 Intel、AMD 和 NVIDIA 等 GPU），故在 VMware、VirtualBox 或任何基于 Virtio 的虚拟机上均无法复现本教程。您需要在真实的物理机上进行操作。
 
-NVIDIA 卡未经测试。本文使用 Intel 12 代处理器（i7-1260P）的核显进行测试。
+NVIDIA 显卡尚未经过测试。本文使用 Intel 第 12 代处理器（i7-1260P）的集成显卡进行测试。
 
-请参照其他章节内容自行 **安装** drm、KDE 6、Fcitx 5、火狐浏览器等软件包。**并配置 drm 显卡驱动。** 其余软件包暂且 **不要** 进行任何配置，**仅安装** 即可。请加入 video 组。
+请参照其他章节内容自行 **安装** DRM、KDE 6、Fcitx 5、Firefox 浏览器等软件包。**并配置 DRM 显卡驱动。** 其余软件包暂且 **不要** 进行任何配置，**仅安装** 即可。请确保将用户加入 video 组。
 
 ## 加入 video 组
 

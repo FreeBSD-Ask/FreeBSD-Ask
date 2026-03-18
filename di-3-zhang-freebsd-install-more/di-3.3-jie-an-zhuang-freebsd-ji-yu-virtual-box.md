@@ -1,10 +1,12 @@
 # 3.3 使用 VirtualBox 安装 FreeBSD
 
+本章系统介绍在 Oracle VirtualBox 开源虚拟化平台上部署 FreeBSD 操作系统的技术方案与配置细节。
+
 ## 下载 VirtualBox
 
-首先需要下载并安装 VirtualBox 虚拟机软件。
+首先需要下载并安装 VirtualBox 虚拟机软件，这是实施后续操作的必要前提。
 
-访问该网站，点击页面右侧的 `Download` 按钮即可下载。
+访问该官方网站，点击页面右侧的 `Download` 按钮即可下载对应版本的安装程序。
 
 
 [https://www.virtualbox.org](https://www.virtualbox.org) [备份](https://web.archive.org/web/20260118024400/https://www.virtualbox.org/)

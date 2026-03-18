@@ -1,12 +1,14 @@
 # 3.4 安装双系统（先安装 FreeBSD）
 
+本章系统介绍在同一物理设备上部署 FreeBSD 与 Windows 多操作系统的技术方案，本小节聚焦于先安装 FreeBSD、再安装其他操作系统的场景。
+
 > **注意**
 >
-> 本文要求先安装 FreeBSD，再安装 Windows 或其他操作系统。
+> 本文要求先安装 FreeBSD，再安装 Windows 或其他操作系统，请遵循此顺序进行操作。
 
 ## 安装 FreeBSD 14.2 RELEASE
 
-首先按照以下步骤安装 FreeBSD 14.2 RELEASE，本文未特别说明之处，均采用默认设置与参数。
+首先按照以下步骤安装 FreeBSD 14.2 RELEASE 系统，本文未特别说明之处，均采用默认设置与参数，以确保系统的稳定性。
 
 ![](../.gitbook/assets/shuang1.png)
 

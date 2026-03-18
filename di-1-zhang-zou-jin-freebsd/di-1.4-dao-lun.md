@@ -2,7 +2,7 @@
 
 ## FreeBSD 版本概述
 
-FreeBSD 作为一个持续演进的开源操作系统，其版本管理体系经过精心设计，以满足不同用户群体的多样化需求。FreeBSD 提供了多种版本类型，以满足不同用户的需求。已知 FreeBSD 有如下版本类型（或开发阶段）：ALPHA、BETA、RC、RELEASE、CURRENT、STABLE。
+FreeBSD 作为一个持续演进的开源操作系统，其版本管理体系经过精心设计，以满足不同用户群体的多样化需求。FreeBSD 提供了多种版本类型，以满足不同用户的差异化需求。已知 FreeBSD 有如下版本类型（或开发阶段）：ALPHA、BETA、RC、RELEASE、CURRENT、STABLE。
 
 **RELEASE** 版本适用于生产环境，通常被视为 **稳定版** 或长期支持（LTS）版本。而 ***STABLE*** 和 ***CURRENT*** 则属于 **开发分支**，**通常不建议用于生产环境**（“稳定”与“不稳定”是相对概念，例如 [Netflix 几乎所有节点都运行着 **current**](https://freebsdfoundation.org/netflix-case-study/) [备份](https://web.archive.org/web/20260114162158/https://freebsdfoundation.org/netflix-case-study/)）。
 
@@ -39,7 +39,7 @@ CURRENT 相对稳定后（即满足 MFC 最短三天的要求，MFC 指 `Merge F
 
 ## FreeBSD 项目宗旨
 
-FreeBSD 项目有着明确而清晰的宗旨，这一宗旨构成了其开发实践和社区文化的核心价值导向。FreeBSD 项目（FreeBSD Project）致力于提供一款真正的自由软件，实践自由软件的使命：使 FreeBSD 的代码得到最大程度的利用，让所有人——无论其目的为何——都能从中受益。简而言之，我们热情拥护“只求我为人人，不求人人为我”的宗旨。
+FreeBSD 项目有着明确而清晰的宗旨，这一宗旨构成了其开发实践和社区文化的核心价值导向。FreeBSD 项目（FreeBSD Project）致力于提供一款真正的自由软件，实践自由软件的使命：使 FreeBSD 的代码得到最大程度的利用，让所有人——无论其目的为何——都能从中受益。简而言之，这一宗旨可概括为“只求我为人人，不求人人为我”的开放共享理念。
 
 FreeBSD 项目的源代码中包含部分受 GNU 通用公共许可证（GPL）和 GNU 宽通用公共许可证（LGPL）授权的软件，项目方正持续努力减少其比重。尽管这些许可证要求开源而非闭源，但它们仍带来一定的法律挑战和额外复杂性。为更好地实现 FreeBSD 的宗旨，即尽可能提供无附加条件的软件以降低商业使用中的复杂性，FreeBSD 项目在可能的情况下，更倾向于采用限制更少的 BSD 许可证。
 

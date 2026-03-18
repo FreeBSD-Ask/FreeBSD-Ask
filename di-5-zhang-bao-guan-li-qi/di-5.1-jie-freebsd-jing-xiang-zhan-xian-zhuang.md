@@ -1,8 +1,8 @@
 # 5.1 FreeBSD 镜像站现状
 
-本章系统阐述 FreeBSD 镜像站的当前格局、历史演进及相关技术考量。FreeBSD 镜像站作为开源软件分发基础设施的重要组成部分，对全球用户的软件获取体验具有关键性影响。
+本章系统阐述 FreeBSD 镜像站的当前格局、历史演进及相关技术考量。FreeBSD 镜像站作为开源软件分发基础设施的重要组成部分，对全球用户的软件获取体验具有关键性影响，其部署与维护直接关系到 FreeBSD 生态系统的可用性与传播效率。
 
-## 现状
+## 镜像站现状与基本格局
 
 ### 官方未开放 rsync
 
@@ -36,18 +36,18 @@
 
 ### 未开放的可能性原因分析
 
-#### 安全性问题
+#### 安全性因素
 
-FreeBSD 集群过去曾遭受入侵，在全面转向 pkg 后，便不再允许镜像。
+从历史记录来看，FreeBSD 基础设施集群在过去曾遭受入侵，在全面转向 pkg 分发机制后，便不再允许外部镜像。这一决策可能与确保软件供应链安全性有关。
 
 - [FreeBSD.org 这次的入侵事件](https://blog.delphij.net/posts/2012/12/freebsdorg-2/) [备份](https://web.archive.org/web/20260121072905/https://blog.delphij.net/posts/2012/12/freebsdorg-2/)，中文说明
 - [FreeBSD.org intrusion announced November 17th 2012](http://www.freebsd.org/news/2012-compromise.html) [备份](https://web.archive.org/web/20260120222213/https://www.freebsd.org/news/2012-compromise/)，官方说明
 
-#### 传输问题
+#### 传输机制因素
 
-目前的集群似乎通过 ZFS 文件系统（zfs send / zfs receive）直接进行传输，而非传统意义上的 rsync 镜像站模式。
+目前的集群传输机制似乎采用了基于 ZFS 文件系统的直接传输方式（使用 zfs send / zfs receive 命令），而非传统意义上的 rsync 镜像站同步模式。这一技术选择可能影响了外部镜像的可行性。
 
-#### 带宽不足
+#### 资源限制因素
 
 根据 [[NEW MIRROR] New full mirror in Belgium](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=288631)，集群管理员 bofh 的回复如下：
 

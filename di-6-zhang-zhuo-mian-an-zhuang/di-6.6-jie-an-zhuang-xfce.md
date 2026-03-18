@@ -1,8 +1,8 @@
 # 6.6 Xfce
 
-Xfce 旨在开发一款轻量级但功能齐全的桌面环境。
+Xfce 项目旨在开发一款轻量级但功能齐全的桌面环境。
 
-Xfce 的 Logo 是一只 [老鼠 🐀](https://docs.xfce.org/faq#what_does_it_mean) [备份](https://web.archive.org/web/20260120221407/https://docs.xfce.org/faq#what_does_it_mean)，曾有人反馈错误，称因 Xfce 的默认壁纸是一只老鼠 🐀，导致自己的电脑屏幕被猫 🐈 抓坏了（[\[joke\] The default desktop startup screen causes damage to monitor!](https://bugzilla.xfce.org/show_bug.cgi?id=12117)）。
+Xfce 的 Logo 是一只 [老鼠 🐀](https://docs.xfce.org/faq#what_does_it_mean) [备份](https://web.archive.org/web/20260120221407/https://docs.xfce.org/faq#what_does_it_mean)，曾有用户反馈趣事，称因 Xfce 的默认壁纸是一只老鼠 🐀，导致自己的电脑屏幕被猫 🐈 抓坏了（[\[joke\] The default desktop startup screen causes damage to monitor!](https://bugzilla.xfce.org/show_bug.cgi?id=12117)）。
 
 ## 安装 xfce4
 

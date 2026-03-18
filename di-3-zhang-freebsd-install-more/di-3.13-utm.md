@@ -1,14 +1,16 @@
 # 3.13 基于 Apple M1 和 UTM 安装 FreeBSD
 
+本章系统介绍在 Apple M1 架构设备上，通过 UTM 虚拟化平台部署 FreeBSD 操作系统的技术方案与实测结果。
+
 ## 概述
 
-本节介绍在 Apple M1 设备上使用 UTM 安装 FreeBSD 的方法。
+本节介绍在 Apple M1 设备上使用 UTM 安装 FreeBSD 的方法，为 macOS 用户提供 FreeBSD 系统的部署途径。
 
-UTM 官方网站是 <https://getutm.app>。
+UTM 官方网站是 &lt;https://getutm.app&gt;。
 
-UTM（Universal Turing Machine）是一款开源、基于 QEMU、面向 Apple 设备的虚拟机，支持 ARM 和 x86 架构虚拟机。读者需要注意，建议下载 aarch64（arm64）架构而非 amd64（x86-64），除非有特殊需求，否则建议下载 aarch64 版本，相同架构速度更快（M1 为 aarch64 架构），性能损失更小。
+UTM（Universal Turing Machine）是一款开源、基于 QEMU、面向 Apple 设备的虚拟机软件，支持 ARM 和 x86 架构虚拟机。读者需要注意，建议下载 aarch64（arm64）架构而非 amd64（x86-64），除非有特殊需求，否则建议下载 aarch64 版本，相同架构速度更快（M1 为 aarch64 架构），性能损失更小，系统运行更为流畅。
 
-因开发成本问题（Apple 开发者需要每年缴纳一定的费用才能获取资格），UTM 在 App Store 中是收费的。但是可以在 [GitHub 项目，utmapp/UTM](https://github.com/utmapp/UTM/releases) 中免费获取 UTM。
+因开发成本问题（Apple 开发者需要每年缴纳一定的费用才能获取资格），UTM 在 App Store 中是收费的。但是可以在 [GitHub 项目，utmapp/UTM](https://github.com/utmapp/UTM/releases) 中免费获取 UTM，为用户提供了灵活的选择。
 
 ## 安装介绍
 

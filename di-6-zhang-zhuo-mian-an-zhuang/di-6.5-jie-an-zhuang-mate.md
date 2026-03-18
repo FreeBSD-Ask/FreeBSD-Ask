@@ -1,6 +1,6 @@
 # 6.5 MATE
 
-MATE 是从 GNOME 2 复刻（fork）发展而来的桌面环境。
+MATE 是从 GNOME 2 复刻（fork）发展而来的桌面环境，其设计理念保持了 GNOME 2 的传统风格。
 
 你也许不认识 mate，即巴拉圭冬青（Ilex paraguariensis），但你可能听说“马黛茶”。许多南美球员（如梅西）非常热衷于这种植物制成的茶饮。
 

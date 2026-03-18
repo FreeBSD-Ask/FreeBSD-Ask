@@ -22,10 +22,10 @@ UNIX 认证查询网址：[The Open Group official register of UNIX Certified Pr
 ![图 1-2 UNIX 认证查询](../.gitbook/assets/unixrenzheng.png)
 
 
-现在，我们可以知道认证 UNIX 需要：
+现在，我们可以知道认证 UNIX 需要满足以下两项核心要件：
 
-1. [符合单一 UNIX 规范](https://www.opengroup.org/openbrand/register/xym0.htm) [备份](https://web.archive.org/web/20260114071648/https://www.opengroup.org/openbrand/register/xym0.htm)
-2. 缴纳相应的[认证费用](https://www.opengroup.org/openbrand/Brandfees.htm) [备份](https://web.archive.org/web/20260114154111/https://www.opengroup.org/openbrand/Brandfees.htm)
+1. 技术标准要求：[符合单一 UNIX 规范](https://www.opengroup.org/openbrand/register/xym0.htm) [备份](https://web.archive.org/web/20260114071648/https://www.opengroup.org/openbrand/register/xym0.htm)
+2. 法律与费用要求：缴纳相应的[认证费用](https://www.opengroup.org/openbrand/Brandfees.htm) [备份](https://web.archive.org/web/20260114154111/https://www.opengroup.org/openbrand/Brandfees.htm)
 
 
 可以看到，常见的经过认证的 UNIX 操作系统有苹果公司（Apple）的 macOS。从商标角度讲，macOS 可以称得上是标准的 UNIX 操作系统。
@@ -41,7 +41,7 @@ UNIX 认证查询网址：[The Open Group official register of UNIX Certified Pr
 
 ## 传统的 Unix 哲学观（以《UNIX 编程艺术》为核心）
 
-Unix 哲学是在 UNIX 操作系统长期的开发实践中逐渐形成的一套设计理念，它影响了无数后来的操作系统和软件的开发思路。作为软件工程领域的重要思想遗产，Unix 哲学为系统设计提供了一套经过实践检验的方法论框架。
+Unix 哲学是在 UNIX 操作系统长期的开发实践中逐渐形成的一套设计理念，它影响了无数后来的操作系统和软件的开发思路。作为软件工程领域的重要思想遗产，Unix 哲学为系统设计提供了一套经过实践检验的方法论框架，具有重要的理论与实践价值。
 
 >**思考题**
 >
@@ -51,7 +51,7 @@ Unix 哲学是在 UNIX 操作系统长期的开发实践中逐渐形成的一套
 >
 >作者亨利·斯宾塞（Henry Spencer）并未明确批评哪个操作系统，那么你认为，现在这句话更适合哪个常见的操作系统？为什么？
 
-Unix 哲学源于 UNIX 操作系统的开发实践，并由肯·汤普森（Ken Thompson）与丹尼斯·里奇（Dennis Ritchie）等早期开发者共同塑造。Unix 哲学一言以蔽之，即大道至简（“keep it simple, stupid”）：
+Unix 哲学源于 UNIX 操作系统的开发实践，并由肯·汤普森（Ken Thompson）与丹尼斯·里奇（Dennis Ritchie）等早期核心开发者共同塑造与提炼。Unix 哲学一言以蔽之，即大道至简（“keep it simple, stupid”），其核心主张可归纳为以下原则：
 
 - 小即美
 - 一个程序只做一件事

@@ -1,6 +1,6 @@
 # 6.10 CDE
 
-CDE 是通用桌面环境（Common Desktop Environment，CDE）的缩写，是一款历史悠久的桌面环境，常被用于 UNIX 商业发行版。
+CDE 是通用桌面环境（Common Desktop Environment，CDE）的缩写，是一款历史悠久的桌面环境，曾被广泛用于 UNIX 商业发行版。
 
 
 ## 安装软件

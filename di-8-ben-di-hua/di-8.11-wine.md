@@ -1,12 +1,12 @@
 # 8.11 Wine 配置
 
-Wine 是一款能够在 Unix 系统上运行 Microsoft Windows 程序的软件。
+Wine 是一款能够在 Unix 及类 Unix 系统上运行 Microsoft Windows 程序的兼容层软件。
 
 本节内容仅在物理机环境中测试通过。由于需要 DRM 驱动，虚拟机环境下无法正常运行（会报错提示不支持 3D，程序无法启动），并且虚拟机还可能提示处理器不支持特定指令集。
 
 ## 安装 Wine
 
-Wine 使得在 FreeBSD 上运行 Windows 程序成为可能。本节将介绍 Wine 的安装和配置方法。
+Wine 使得在 FreeBSD 系统上运行 Windows 程序成为可能。本节将介绍 Wine 的安装和配置方法。
 
 使用 pkg 进行安装：
 

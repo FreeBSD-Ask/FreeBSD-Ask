@@ -1,10 +1,10 @@
 # 6.3 KDE 6 桌面环境（X11 会话）
 
-KDE 致力于开发一套现代桌面环境，如果你觉得 KDE 界面很像 Windows，那么从时间线上看可以说是“Windows 很像 KDE”。
+KDE 项目致力于开发一套现代化的桌面环境，若您觉得 KDE 界面与 Windows 相似，那么从时间发展的角度来看，可以说是“Windows 的设计借鉴了 KDE”。
 
 >**技巧**
 >
->视频教程参见 [003-FreeBSD14.2 安装 KDE6](https://www.bilibili.com/video/BV12zAYeKEej)
+>视频教程可参见 [003-FreeBSD14.2 安装 KDE6](https://www.bilibili.com/video/BV12zAYeKEej)
 
 
 ## 安装完整的 KDE 桌面体验
