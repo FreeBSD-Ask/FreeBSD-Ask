@@ -27,9 +27,9 @@ FreeBSD 是一款真正自由（Liberty）的 **操作系统**，在这波谲云
 
 微信公众号：bsdcn2018
 
-- FreeBSD 中文社区 **首要** 联系方式为 **QQ 群**：[787969044](https://qm.qq.com/q/cX5mpJ36gg)（点击加群）
+- FreeBSD 中文社区 **首要** 联系方式为 **QQ 群**：[787969044](https://qm.qq.com/q/4PRzrzC7Ic)（点击加群）
 
-![FreeBSD 中文社区 QQ 群](.gitbook/assets/2025-qq.png)
+![FreeBSD 中文社区 QQ 群](.gitbook/assets/2026-qq.png)
 
 - 微信群：由于微信平台的限制，须先加入 QQ 群，再联系群主获取新鲜的入群二维码。
 - Discord：<https://discord.gg/j7VhWrhp3e>（需代理，可通过网页使用）
