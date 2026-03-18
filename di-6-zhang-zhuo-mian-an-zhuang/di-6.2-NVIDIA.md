@@ -137,7 +137,7 @@ Mon Jan 19 19:06:59 2026
 
 ![](../.gitbook/assets/no-version-vo.jpg)
 
-当执行 nvidia-smi 命令时会出现错误提示“API mismatch”等字样。直译是 API 不匹配，提及不匹配，首先会想到是版本不匹配，即问题可能出现在 NVIDIA 本身的版本不匹配、NVIDIA 驱动本身与其他 NVIDIA 软件包版本不匹配、NVIDIA 和现有 FreeBSD 基本系统不匹配。
+当执行 nvidia-smi 命令时会出现错误提示“API mismatch”等字样。该错误直译表示 API 不匹配，问题通常源于版本兼容性问题，即可能存在以下几种情况：NVIDIA 驱动组件本身版本不匹配、NVIDIA 驱动与其他 NVIDIA 软件包版本不匹配、NVIDIA 驱动与当前 FreeBSD 基本系统版本不匹配。
 
 因此建议将所有 NVIDIA 软件包全部卸载，随后将 FreeBSD 基本系统更新到最新，再重新执行驱动安装流程。
 

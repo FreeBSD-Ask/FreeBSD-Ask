@@ -6,7 +6,7 @@
 
 ### 官方未开放 rsync
 
-主要问题在于官方暂未开放 rsync，且不接受镜像站的官方二级镜像申请。
+核心问题聚焦于两点：一是官方 rsync 服务暂未对公众开放；二是项目未接受镜像站的官方二级镜像申请。这两项政策共同构成了当前镜像站生态的基本约束条件。
 
 根据目前可查的信息，FreeBSD 项目最迟在 2015 年 5 月就停止了公开 rsync。参见 [Add small section explaining we are not allowing public mirrors of packages and possible workarounds.](https://reviews.freebsd.org/R9:3418e47d2f6cd8dd04ac934f38d136ba9101a5a8)。给出的说明理由是：
 
@@ -16,7 +16,7 @@
 
 ---
 
-2025 年收到的回复：
+2025 年 2 月获取的最新官方回复进一步阐明了项目立场：
 
 > On Fri, 28 Feb 2025, at 17:45, ykla wrote:
 >> How to mirror pkg and update from official mirror sites?
@@ -38,14 +38,14 @@
 
 #### 安全性因素
 
-从历史记录来看，FreeBSD 基础设施集群在过去曾遭受入侵，在全面转向 pkg 分发机制后，便不再允许外部镜像。这一决策可能与确保软件供应链安全性有关。
+从历史记录追溯，FreeBSD 基础设施集群在过去曾发生安全入侵事件，在全面转向 pkg 分发机制后，便终止了外部镜像的授权。这一战略决策可能与保障软件供应链完整性与安全性直接相关。
 
 - [FreeBSD.org 这次的入侵事件](https://blog.delphij.net/posts/2012/12/freebsdorg-2/) [备份](https://web.archive.org/web/20260121072905/https://blog.delphij.net/posts/2012/12/freebsdorg-2/)，中文说明
 - [FreeBSD.org intrusion announced November 17th 2012](http://www.freebsd.org/news/2012-compromise.html) [备份](https://web.archive.org/web/20260120222213/https://www.freebsd.org/news/2012-compromise/)，官方说明
 
 #### 传输机制因素
 
-目前的集群传输机制似乎采用了基于 ZFS 文件系统的直接传输方式（使用 zfs send / zfs receive 命令），而非传统意义上的 rsync 镜像站同步模式。这一技术选择可能影响了外部镜像的可行性。
+当前集群的数据同步机制似乎采用了基于 ZFS 文件系统的直接传输方式（通过 zfs send / zfs receive 命令实现），而非传统的 rsync 镜像站同步模式。这一技术选型构成了外部镜像可行性的潜在限制因素。
 
 #### 资源限制因素
 
@@ -100,7 +100,7 @@
 
 ### 中国大陆暂无 FreeBSD 官方镜像站
 
-多次联系后均未形成进一步沟通，例如通过邮件列表联系约五次，其中三次得到回应，两次未获回应。其主要回复内容为“深表歉意，但台湾地区已有镜像”。并未直接说明如何镜像，此外特别向中国科学技术大学 Linux 用户协会申请镜像，对方提到，FreeBSD 也是无人回应。
+经多次沟通尝试（包括通过邮件列表联系约五次，其中三次获得回应，两次未获回应），均未形成有效推进。官方主要回复为“深表歉意，但台湾地区已有镜像”，未就镜像申请的具体流程提供进一步说明。此外，曾特别向中国科学技术大学 Linux 用户协会申请镜像，对方反馈 FreeBSD 官方亦未有回应。
 
 国内网络环境如此，提升速度采取代理方式也是基本功，但是，不能要求每个人的技术水平都一致，提供便捷的网络服务、方便更多人使用，才是发展 FreeBSD 的核心要义。请朋友们注意这一点，镜像站是基础设施。就像那句话，“要想富，先修路”，如果通往 FreeBSD 的康庄大道不通，剩下的就只会是遍布荆棘的小道。在此号召能够联系到 FreeBSD 官方的朋友，优先解决这一基本问题。
 

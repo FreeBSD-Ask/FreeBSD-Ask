@@ -3,6 +3,9 @@
 >**警告**
 >
 >请勿使用 `sysutils/desktop-installer`，该工具在当前环境下可能引发不必要的错误和配置冲突。
+## 引言
+
+本节旨在系统阐述 FreeBSD 操作系统中 Intel 与 AMD 图形处理器（Graphics Processing Unit，GPU）驱动程序的安装与配置方法。图形驱动作为连接操作系统内核与图形硬件的关键抽象层，其正确配置对于桌面环境的稳定运行与性能发挥至关重要。
 
 ## 未安装显卡驱动的设备图片实例
 
@@ -53,7 +56,7 @@ DRM 即“Direct Rendering Manager”（直接渲染管理器），DRM 是 Linux
 
 ## 加入 video 组
 
-将指定用户添加到 video 用户组，以获得显卡设备的访问权限，这是图形加速和 Wayland 会话正常工作的必要条件：
+为获得显卡设备的访问权限，需将指定用户添加到 video 用户组，这是图形加速功能正常运行以及 Wayland 会话正常工作的必要前提条件：
 
 ```sh
 # pw groupmod video -m 你的用户名

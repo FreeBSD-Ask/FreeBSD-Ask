@@ -2,6 +2,8 @@
 
 本章节主要介绍 BIOS 中芯片组相关的设置选项，包括系统代理配置、内存配置等内容。芯片组配置作为连接处理器、内存和外部设备的核心枢纽，其参数设置对系统整体性能、内存稳定性和扩展能力具有决定性影响。
 
+芯片组作为计算机系统的核心互连架构，负责在中央处理器（CPU）、主存储器（RAM）和各类输入输出（I/O）设备之间建立高效的数据传输通道，是系统性能发挥的关键支撑。
+
 以下是芯片组设置的相关信息。
 
 ![](../.gitbook/assets/image-20250726134102-83vu9kl.png)
@@ -12,13 +14,13 @@
 
 以下选项可能与 PCH-IO Configuration（平台控制器集线器 I/O 配置）中的部分南桥相关选项存在重叠。因为 System Agent（SA）Configuration（系统代理配置）用于控制由 CPU 直接引出的 PCIe 接口。
 
-在 Intel CPU 架构中（第二代 Sandy Bridge 及以后），System Agent 是一个集成在 CPU 芯片内部的模块，它包含了：
+在 Intel CPU 架构中（第二代 Sandy Bridge 及以后），System Agent 是一个集成在 CPU 芯片内部的模块，它作为处理器与系统组件之间的核心互连单元，包含了：
 
-- 内存控制器（IMC - Integrated Memory Controller）
-- PCIe Root Complex（用于 CPU 直连的 PCIe 通道，例如 PEG（PCI Express Graphics））。
-- 显示引擎（如果 CPU 有核显）
-- 与 Ring Bus 或 Mesh 的接口
-- 电源管理逻辑等
+- 内存控制器（IMC - Integrated Memory Controller），负责管理与主存储系统的通信
+- PCIe Root Complex（用于 CPU 直连的 PCIe 通道，例如 PEG（PCI Express Graphics）），提供高速外设互连
+- 显示引擎（如果 CPU 有核显），处理图形输出
+- 与 Ring Bus 或 Mesh 的接口，实现处理器核心间通信
+- 电源管理逻辑等，优化系统能效
 
 参见 [BIOS PCIe 配置里的 LTR Snoop Latency value of SA PCIE](https://www.cnblogs.com/wanglouxiaozi/p/18946234) [备份](https://web.archive.org/web/20260121061741/https://www.cnblogs.com/wanglouxiaozi/p/18946234)
 
@@ -26,7 +28,7 @@
 
 ### Memory Configuration（内存配置）
 
-以下是内存配置的相关参数。
+内存配置作为系统代理配置的核心组成部分，直接影响内存系统的性能、稳定性和功耗表现。以下是内存配置的相关参数。
 
 ![](../.gitbook/assets/image-20250726140439-jtn6k0n.png)
 
@@ -3146,7 +3148,7 @@ Disabled（禁用）
 
 以下是 PCH-IO 配置的相关内容。
 
-PCH，Platform Controller Hub（平台控制器集线器），即南桥。这个设置即主板 I/O 设置。
+PCH，Platform Controller Hub（平台控制器集线器），即南桥。作为平台控制器集线器，PCH 负责管理各类低速和中速外设的互连，这个设置即主板 I/O 设置。
 
 ![](../.gitbook/assets/image-20250726134142-q2c0wfy.png)
 
@@ -3156,7 +3158,7 @@ PCH，Platform Controller Hub（平台控制器集线器），即南桥。这个
 
 以下是 PCIe 配置的相关内容。
 
-PCIe（Peripheral Component Interconnect Express，外围组件快速互连）是一种高带宽扩展总线，通常用于连接显卡、固态硬盘以及采集卡和无线网卡等外设。
+PCIe（Peripheral Component Interconnect Express，外围组件快速互连）是一种高带宽扩展总线，通常用于连接显卡、固态硬盘以及采集卡和无线网卡等外设。作为现代计算机系统的核心高速互连标准，PCIe 采用串行点对点拓扑结构，提供高吞吐量和低延迟的数据传输能力。
 
 参见 [什么是 PCIe 4.0 和 5.0？](https://www.intel.cn/content/www/cn/zh/gaming/resources/what-is-pcie-4-and-why-does-it-matter.html) [备份](https://web.archive.org/web/20260121095630/https://www.intel.cn/content/www/cn/zh/gaming/resources/what-is-pcie-4-and-why-does-it-matter.html)
 

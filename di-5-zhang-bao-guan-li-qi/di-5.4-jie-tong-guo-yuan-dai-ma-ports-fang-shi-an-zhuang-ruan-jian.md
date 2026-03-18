@@ -1,12 +1,12 @@
 # 5.4 使用 Ports 以源代码方式安装软件
 
-本章深入探讨 FreeBSD Ports 框架的设计理念、使用方法及高级配置。Ports 作为 FreeBSD 源代码构建软件的核心框架，提供了灵活、可定制的软件安装途径。
+本章深入探讨 FreeBSD Ports 框架的设计理念、使用方法及高级配置。Ports 作为 FreeBSD 源代码构建软件的核心框架，提供了灵活、可定制的软件安装途径。从技术架构层面看，Ports 框架构成了 FreeBSD 软件生态系统中源代码构建与分发的标准化基础设施。
 
 ## Ports 与 Port 概述
 
 ### Ports 历史
 
-Ports 是一种从源代码（也支持闭源二进制包）构建软件的框架。由 Jordan K. Hubbard（jkh@FreeBSD.org）创建，最初于 1994 年 8 月公开发布。
+Ports 是一种从源代码（也支持闭源二进制包）构建软件的框架。该框架由 Jordan K. Hubbard（jkh@FreeBSD.org）创建，最初于 1994 年 8 月公开发布，标志着 FreeBSD 软件生态系统进入了一个新的发展阶段。
 
 ```sh
 # git log --reverse --max-parents=0 --pretty=format:"commit: %h%nAuthor: %an%nDate: %ci%n%n%B" # 打印第一次提交
@@ -33,7 +33,7 @@ NetBSD 和 OpenBSD 也使用 Ports，但实现并不通用。
 
 ### Ports 与 Port 释义
 
-一款软件的相关文件或文件夹（补丁文件、校验码、Makefile 等）的集合（表现为一个文件夹）称为一个 Port，所有 Port（移植软件）的集合即 Ports Collection 或 Ports Tree，简称 Ports。
+一款软件的相关文件或文件夹（补丁文件、校验码、Makefile 等）的集合（表现为一个文件夹）称为一个 Port，所有 Port（移植软件）的集合即 Ports Collection 或 Ports Tree，简称 Ports。从术语定义角度，Port 指单个软件的移植构建配置，而 Ports 则指整个移植软件集合。
 
 ```sh
 $ cd /usr/ports # 切换到 /usr/ports

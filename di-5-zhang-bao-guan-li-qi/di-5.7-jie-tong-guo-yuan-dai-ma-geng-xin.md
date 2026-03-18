@@ -10,7 +10,7 @@
 
 FreeBSD 项目在 2021 年从 SVN 全面迁移到了 Git，即 [https://git.freebsd.org](https://git.freebsd.org) [备份](https://web.archive.org/web/20260120222010/https://git.freebsd.org/)
 
-因此，获取源代码的方式也发生了变化，不再使用 SVN。
+这一版本控制系统的迁移标志着 FreeBSD 项目开发流程的现代化转型，因此，获取源代码的方式也相应发生了变化，不再使用 SVN。
 
 ## 从 Git 获取源代码
 

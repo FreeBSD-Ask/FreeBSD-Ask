@@ -1,6 +1,8 @@
 # 6.7 Cinnamon
 
-Cinnamon 桌面环境基于 GNOME Shell，来自 Linux Mint 项目。
+## Cinnamon 桌面环境概述
+
+Cinnamon 桌面环境基于 GNOME Shell 技术栈，源自 Linux Mint 项目。作为 Linux Mint 项目的核心组件之一，Cinnamon 旨在提供符合传统桌面交互范式且易于使用的桌面体验。
 
 ## Cinnamon：肉桂、桂皮、桂枝、烟桂概念辨析
 

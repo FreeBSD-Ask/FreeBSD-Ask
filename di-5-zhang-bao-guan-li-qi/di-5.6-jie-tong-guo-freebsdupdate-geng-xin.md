@@ -12,7 +12,7 @@
 
 ## 历史
 
-FreeBSD 提供了实用工具 `freebsd-update`，用于安装系统更新，包括升级到新的大版本。`freebsd-update` 在 FreeBSD 7.0-RELEASE 中获得了正式支持。
+FreeBSD 提供了实用工具 `freebsd-update`，用于安装系统更新，包括升级到新的大版本。`freebsd-update` 在 FreeBSD 7.0-RELEASE 中获得了正式支持，这标志着 FreeBSD 系统更新机制进入了标准化发展阶段。
 
 ### 参考文献
 
