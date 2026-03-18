@@ -2,7 +2,7 @@
 
 本文基于 macOS 15.3.1、VMware Fusion Pro 13.6.2、FreeBSD 15.0 以及默认的 UEFI 设置进行测试。经测试，14.2-RELEASE 亦可。
 
->**注意**
+> **注意**
 >
 >如果你使用 macOS 14，可能存在键盘无法输入的故障。
 

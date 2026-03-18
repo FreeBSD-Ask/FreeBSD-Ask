@@ -11,7 +11,7 @@
 针对 amd64 架构，14.2-RELEASE 版本在虚拟机环境中测得：
 
 - 硬盘：
-  - 仅基本系统（安装后）：550MB
+  - 仅基本系统（安装后）：550 MB
   - KDE 桌面（通过 pkg 安装后）：15 GB
 - 内存：
   - 统一可扩展固件接口（Unified Extensible Firmware Interface，UEFI）模式下，最小内存需求为 128 MB
@@ -28,14 +28,14 @@
 | 无线网卡      | Intel AX 系列  | AX200                                        | Wi-Fi 5 速率与 Windows 11 IoT Enterprise 24H2 相当（使用 iperf2 测得）                                                                     |
 | 有线网卡      | Realtek 2.5G | RTL8125B                                     | 需要额外安装驱动，参见全书附录                                                                                             |
 | 有线网卡      | Intel 2.5G   | i226-V                                       | 正常工作                                                                                                        |
-| 显卡   | 近十年的 Intel 及 AMD 集成/独立显卡  |   英特尔锐炬 ® Xe 显卡、英特尔 HD Graphics 4000       | 支持程度与 DRM 驱动移植进度相关；截至写作时，其代码状态约相当于 Linux 内核 6.10，最新进展请参见 [freebsd/drm-kmod](https://github.com/freebsd/drm-kmod/pulls) [备份](https://web.archive.org/web/20260115143641/https://github.com/freebsd/drm-kmod/pulls) |
+| 显卡   | 近十年的 Intel 及 AMD 集成/独立显卡  |   英特尔锐炬® Xe 显卡、英特尔 HD Graphics 4000       | 支持程度与 DRM 驱动移植进度相关；截至写作时，其代码状态约相当于 Linux 内核 6.10，最新进展请参见 [freebsd/drm-kmod](https://github.com/freebsd/drm-kmod/pulls) [备份](https://web.archive.org/web/20260115143641/https://github.com/freebsd/drm-kmod/pulls) |
 | NVIDIA 显卡 | 近十多年的显卡   | GTX 850M  | 受 NVIDIA 官方显卡驱动支持     |
 
->**注意**
+> **注意**
 >
->FreeBSD 不支持 [安全启动](https://wiki.freebsd.org/SecureBoot) [备份](https://web.archive.org/web/20260115143726/https://wiki.freebsd.org/SecureBoot)，在安装 FreeBSD 前请务必关闭安全启动（Secure Boot）；FreeBSD 也不支持 Fake RAID（伪 RAID），请将其控制器修改为 AHCI。
+> FreeBSD 不支持 [安全启动](https://wiki.freebsd.org/SecureBoot) [备份](https://web.archive.org/web/20260115143726/https://wiki.freebsd.org/SecureBoot)，在安装 FreeBSD 前请务必关闭安全启动（Secure Boot）；FreeBSD 也不支持 Fake RAID（伪 RAID），请将其控制器修改为 AHCI。
 >
->操作方法请咨询购机厂商技术售后。
+> 操作方法请咨询购机厂商技术售后。
 
 ### 特定硬件支持情况查询
 
@@ -49,9 +49,9 @@
 
 ![](../.gitbook/assets/h2.png)
 
->**注意**
+> **注意**
 >
->仍建议进行实际测试，因为该网站也可能出现错误，例如将 LPDDR5 误识别为 LPDDR4。
+> 仍建议进行实际测试，因为该网站也可能出现错误，例如将 LPDDR5 误识别为 LPDDR4。
 
 ## 下载 FreeBSD 镜像
 
@@ -63,26 +63,26 @@
 
 ![下载 FreeBSD](../.gitbook/assets/do2.png)
 
->**技巧**
+> **技巧**
 >
->随着时间推移，当读者进行下载时，可能已无 14.2-RELEASE 版本。此时只需选择列表最顶部的 `FreeBSD-X.Y-RELEASE`（该版本推荐用于生产环境）即可。其中，`X.Y` 应为比 `14.2` 更大的版本号，如 `15.0`、`22.4` 等，但须注意，其应以 `RELEASE` 结尾，而非 `CURRENT`。
+> 随着时间推移，当读者进行下载时，可能已无 14.2-RELEASE 版本。此时只需选择列表最顶部的 `FreeBSD-X.Y-RELEASE`（该版本推荐用于生产环境）即可。其中，`X.Y` 应为比 `14.2` 更大的版本号，如 `15.0`、`22.4` 等，但须注意，其应以 `RELEASE` 结尾，而非 `CURRENT`。
 
->**警告**
+> **警告**
 >
->使用非 RELEASE 版本的用户应有意愿和时间关注开发动态，浏览邮件列表与问题追踪系统，例如 [freebsd-src/UPDATING](https://github.com/freebsd/freebsd-src/blob/main/UPDATING) [备份](https://web.archive.org/web/20260115143917/https://github.com/freebsd/freebsd-src/blob/main/UPDATING) 及 [freebsd-src/RELNOTES](https://github.com/freebsd/freebsd-src/blob/main/RELNOTES) [备份](https://web.archive.org/web/20260119051314/https://github.com/freebsd/freebsd-src/blob/main/RELNOTES) 等文档。同时要求用户具备一定的探索和动手能力。否则，建议使用 RELEASE 版本。
+> 使用非 RELEASE 版本的用户应有意愿和时间关注开发动态，浏览邮件列表与问题追踪系统，例如 [freebsd-src/UPDATING](https://github.com/freebsd/freebsd-src/blob/main/UPDATING) [备份](https://web.archive.org/web/20260115143917/https://github.com/freebsd/freebsd-src/blob/main/UPDATING) 及 [freebsd-src/RELNOTES](https://github.com/freebsd/freebsd-src/blob/main/RELNOTES) [备份](https://web.archive.org/web/20260119051314/https://github.com/freebsd/freebsd-src/blob/main/RELNOTES) 等文档。同时要求用户具备一定的探索和动手能力。否则，建议使用 RELEASE 版本。
 
-|Installer|VM|SD Card|Documentation|
-|:---:|:---:|:---:|:---:|
-|安装镜像 | 虚拟机预安装镜像 | 存储卡镜像 | 文档|
-|适用于常规安装 | 适用于云平台和虚拟机 |适用于单板机/嵌入式设备 | 发行说明等文档   |
+| Installer | VM | SD Card | Documentation |
+| :---: | :---: | :---: | :---: |
+| 安装镜像 | 虚拟机预安装镜像 | 存储卡镜像 | 文档 |
+| 适用于常规安装 | 适用于云平台和虚拟机 | 适用于单板机/嵌入式设备 | 发行说明等文档   |
 
->**技巧**
+> **技巧**
 >
->如果不知道选哪个，请选择 `Installer`（普通家用电脑，苹果除外）。
+> 如果不知道选哪个，请选择 `Installer`（普通家用电脑，苹果除外）。
 
->**技巧**
+> **技巧**
 >
->如果读者不清楚 `amd64`、`i386`、`aarch64`、`armv7` 这些架构的区别，请选择 `amd64`（适用于大多数普通家用电脑，苹果电脑除外）。
+> 如果读者不清楚 `amd64`、`i386`、`aarch64`、`armv7` 这些架构的区别，请选择 `amd64`（适用于大多数普通家用电脑，苹果电脑除外）。
 
 选择好安装镜像的主要类型后，即可看到具体的下载列表，见图：
 
@@ -107,29 +107,29 @@ FreeBSD-14.2-RELEASE-amd64-mini-memstick.img.xz    107445036      2024-Nov-29 13
 
 上述列表中，第一列为文件名，第二列为文件大小，第三列为发布日期。
 
-|首列 | 说明|
-|:---|:---|
-|Parent directory/	-	-|指向上级目录|
-|CHECKSUM.SHA256-FreeBSD-14.2-RELEASE-amd64	  | 本页所有镜像的 SHA256 校验值 |
-|CHECKSUM.SHA512-FreeBSD-14.2-RELEASE-amd64   |  本页所有镜像的 SHA512 校验值 |
-|FreeBSD-14.2-RELEASE-amd64-bootonly.iso	      | 网络安装镜像，安装时需联网 |
-|FreeBSD-14.2-RELEASE-amd64-bootonly.iso.xz	    | 压缩的网络安装镜像，安装时需联网|
-|FreeBSD-14.2-RELEASE-amd64-disc1.iso	 | CD 镜像    |
-|FreeBSD-14.2-RELEASE-amd64-disc1.iso.xz	|  压缩的 CD 镜像 |
-|FreeBSD-14.2-RELEASE-amd64-dvd1.iso	 | DVD 镜像，相比 CD 镜像包含了更多的软件包（pkg）   |
-|FreeBSD-14.2-RELEASE-amd64-dvd1.iso.xz	  | 压缩的 DVD 镜像，相比 CD 镜像包含了更多软件包（pkg）  |
-|FreeBSD-14.2-RELEASE-amd64-memstick.img	| U 盘用的镜像（可以使用 Rufus 制作 U 盘启动盘）   |
-|FreeBSD-14.2-RELEASE-amd64-memstick.img.xz	 | 压缩的 U 盘用的镜像（无需解压缩，可以使用 Rufus 制作 U 盘启动盘）   |
-|FreeBSD-14.2-RELEASE-amd64-mini-memstick.img	 | U 盘用的网络安装镜像，安装时需联网 |
-|FreeBSD-14.2-RELEASE-amd64-mini-memstick.img.xz|压缩的 U 盘用的网络安装镜像，安装时需联网 |
+| 首列 | 说明 |
+| :--- | :--- |
+| Parent directory/	-	- | 指向上级目录 |
+| CHECKSUM.SHA256-FreeBSD-14.2-RELEASE-amd64	  | 本页所有镜像的 SHA256 校验值 |
+| CHECKSUM.SHA512-FreeBSD-14.2-RELEASE-amd64   |  本页所有镜像的 SHA512 校验值 |
+| FreeBSD-14.2-RELEASE-amd64-bootonly.iso	      | 网络安装镜像，安装时需联网 |
+| FreeBSD-14.2-RELEASE-amd64-bootonly.iso.xz	    | 压缩的网络安装镜像，安装时需联网 |
+| FreeBSD-14.2-RELEASE-amd64-disc1.iso	 | CD 镜像    |
+| FreeBSD-14.2-RELEASE-amd64-disc1.iso.xz	|  压缩的 CD 镜像 |
+| FreeBSD-14.2-RELEASE-amd64-dvd1.iso	 | DVD 镜像，相比 CD 镜像包含了更多的软件包（pkg）   |
+| FreeBSD-14.2-RELEASE-amd64-dvd1.iso.xz	  | 压缩的 DVD 镜像，相比 CD 镜像包含了更多软件包（pkg）  |
+| FreeBSD-14.2-RELEASE-amd64-memstick.img	| U 盘用的镜像（可以使用 Rufus 制作 U 盘启动盘）   |
+| FreeBSD-14.2-RELEASE-amd64-memstick.img.xz	 | 压缩的 U 盘用的镜像（无需解压缩，可以使用 Rufus 制作 U 盘启动盘）   |
+| FreeBSD-14.2-RELEASE-amd64-mini-memstick.img	 | U 盘用的网络安装镜像，安装时需联网 |
+| FreeBSD-14.2-RELEASE-amd64-mini-memstick.img.xz | 压缩的 U 盘用的网络安装镜像，安装时需联网 |
 
 需要注意的是，DVD 镜像并不包含一切离线软件包，仅精选了若干软件包，具体清单可参见源代码文件 [release/scripts/pkg-stage.sh](https://github.com/freebsd/freebsd-src/blob/main/release/scripts/pkg-stage.sh) [备份](https://web.archive.org/web/20260115143613/https://github.com/freebsd/freebsd-src/blob/main/release/scripts/pkg-stage.sh)。
 
 FreeBSD 的所有安装介质（包括但不限于虚拟机镜像）默认均不提供图形界面，须由用户自行安装和配置。DVD 镜像虽包含更多软件包，但由于依赖关系复杂，在安装图形界面时仍可能遇到问题，因此不建议使用 DVD 镜像。
 
->**技巧**
+> **技巧**
 >
->网络传输可能产生错误，导致下载的文件与原始镜像不一致。因此，需要一种机制来验证所获取的文件与官方发布的镜像完全一致，这就需要使用 **校验值**。Windows 10 和 11 系统自带命令行工具 `CertUtil`，可用于计算校验值，无需安装额外软件。读者还可参考 [如何确定用于安全应用程序的文件 SHA-256 哈希](https://www.dell.com/support/kbdoc/en-bs/000130826/%E5%A6%82%E4%BD%95-%E7%A1%AE%E5%AE%9A-%E7%94%A8%E4%BA%8E-%E9%98%B2-%E7%97%85%E6%AF%92-%E5%92%8C-%E6%81%B6%E6%84%8F%E8%BD%AF%E4%BB%B6-%E9%98%B2%E6%8A%A4-%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F-%E7%9A%84-%E6%96%87%E4%BB%B6-sha-256-%E5%93%88%E5%B8%8C?lang=zh) [备份](https://web.archive.org/web/20260115143827/https://www.dell.com/support/kbdoc/en-bs/000130826/%E5%A6%82%E4%BD%95%E7%A1%AE%E5%AE%9A%E7%94%A8%E4%BA%8E%E5%AE%89%E5%85%A8%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%96%87%E4%BB%B6-sha-256-%E5%93%88%E5%B8%8C?lang=zh) 这篇文章。
+> 网络传输可能产生错误，导致下载的文件与原始镜像不一致。因此，需要一种机制来验证所获取的文件与官方发布的镜像完全一致，这就需要使用 **校验值**。Windows 10 和 11 系统自带命令行工具 `CertUtil`，可用于计算校验值，无需安装额外软件。读者还可参考 [如何确定用于安全应用程序的文件 SHA-256 哈希](https://www.dell.com/support/kbdoc/en-bs/000130826/%E5%A6%82%E4%BD%95-%E7%A1%AE%E5%AE%9A-%E7%94%A8%E4%BA%8E-%E9%98%B2-%E7%97%85%E6%AF%92-%E5%92%8C-%E6%81%B6%E6%84%8F%E8%BD%AF%E4%BB%B6-%E9%98%B2%E6%8A%A4-%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F-%E7%9A%84-%E6%96%87%E4%BB%B6-sha-256-%E5%93%88%E5%B8%8C?lang=zh) [备份](https://web.archive.org/web/20260115143827/https://www.dell.com/support/kbdoc/en-bs/000130826/%E5%A6%82%E4%BD%95%E7%A1%AE%E5%AE%9A%E7%94%A8%E4%BA%8E%E5%AE%89%E5%85%A8%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%96%87%E4%BB%B6-sha-256-%E5%93%88%E5%B8%8C?lang=zh) 这篇文章。
 
 
 FreeBSD 镜像 BT 种子下载地址（非官方，建议检查文件校验和后使用）：<https://fosstorrents.com/distributions/freebsd/>
@@ -157,7 +157,7 @@ FreeBSD `-RELEASE` 历史版本下载地址：
 
 在选择镜像格式时，有一些注意事项需要了解。
 
-制作 U 盘安装介质时，建议使用 `-img` 或 `-img.xz` 格式的镜像。`.iso` 镜像采用混合启动（Hybrid）模式，可能未完全遵循 UEFI 规范，直接写入 U 盘可能导致错误。详见 [FreeBSD -.iso files not support written to USB drive](https://bugs.freebsd.org/bugzilla/show\_bug.cgi?id=236786)。建议读者仅在使用 **光学介质/虚拟机/云平台** 安装时选用 `iso` 结尾的镜像。
+制作 U 盘安装介质时，建议使用 `-img` 或 `-img.xz` 格式的镜像。`.iso` 镜像采用混合启动（Hybrid）模式，可能未完全遵循 UEFI 规范，直接写入 U 盘可能导致错误。详见 [FreeBSD -.iso files not support written to USB drive](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=236786)。建议读者仅在使用 **光学介质/虚拟机/云平台** 安装时选用 `iso` 结尾的镜像。
 
 当然，也存在例外情况。部分机器的 UEFI 固件支持从 `.iso` 镜像刻录的 U 盘启动（例如一些老款神舟电脑），但并非所有机器都支持此方式（例如部分小米电脑可能无法引导）。
 
@@ -181,14 +181,14 @@ Rufus 下载地址为 [https://rufus.ie/zh](https://rufus.ie/zh) [备份](https:
 
 win32diskimager 的下载地址是 <https://sourceforge.net/projects/win32diskimager/files/Archive/>，点击 `win32diskimager-1.0.0-install.exe` 即可下载。
 
->**思考题**
+> **思考题**
 >
->>有时候绕远路是必须的，人生是片森林，人们终究会再次迷路，短暂相遇。正所谓“念念不忘，必有回响”。然而，人们清醒地意识到，没有什么“必有回响”，有的只是“没有结局的开始”或者“稍纵即逝的追寻”。没有任何人许诺回响，这只是苦难哲学的鸦片，让人们与这种现实“和解”。“念念不忘，必有回响”的完整说明并非李叔同所述，而是源于当代人的《李叔同〈晚晴集〉人生解读》（王少农。李叔同《晚晴集》人生解读[M]. 线装书局，2008.）其中上半句“念念不忘”亦非李叔同原作，而是看似引用了南宋王龙舒的《龙舒净土文卷第四》“蓋欲念念不忘也。如此久久念心成熟。”其中在清俞行敏重辑《净土全书》一书的“净土起信”中同样有类似描述“净土指归云：欲了生死，修行净业，当发十种信心，念念不忘，决生净土。”，再次索引到《净土指归集》，实际上是绕回了《佛说四谛经》，载“亦观持宿命，亦从得道行，念世间行不可悔，摄、止、度世、无为、寂然、止见、一德、无所著、如解脱意观念想念，从念念、念不忘、少言、念不离，是名为直正念，是名为道德谛。”由于这是汉传佛教，在历史上被记载为安世高的翻译贡献，我们需要看看原本可能的样子。查《佛说四谛经》，实际对应于中阿含经《分别圣谛经》，即对应《巴利三藏》的《中部》的《一四一 分别谛经》（段晴，范晶晶，等译。汉译巴利三藏·经藏·中部[M]. 上海：中西书局，2022: 963–965.）。是这样写的“众仁友，何为正念？此谓比丘于身循观身，精勤，正知，具念，于世间戒除贪与忧；于诸受（……）于心（……）于诸法循观法，精勤，正知，具念，于世间断除贪与忧。这被称为正念。”可以清晰地看出，“念念不忘”实际上对应的是“具念”（巴利语 sati），在文献中往往又被翻译为“念”、“正念”。实际上我们知道，在任何早期人类宗教活动中，传递的思想都是当时最合适不过的道德思想和伦理行为，也是最质朴，最清楚明白的，任何过于复杂的理论绝不可能流传数千年。因此，我们有必要怀疑这种“念念不忘”说法的合理性，在不同的学术观点中对此看法存在较大差异，但是无可辩驳地是，在佛教最早期的发展中，不可能有任何超越当时信众知识结构、道德伦理、认知能力的理论被普遍认可。因此，我们无需考察任何文本，越是从经验出发的理解，却往往是最接近合理性的存在。念念不忘实质上接近这种说法：“厨师一定要会做饭、垃圾桶里一定要有垃圾”，即，xx 就是 xx。可以看到，“念念不忘”与当代欧陆哲学产生了深切共鸣，不是让事情回到本身，而是认识到，有些时候，事情就是本身。“大音希声”。“一切真历史都是当代史”（克罗齐。历史学的理论和历史[M]. 田时纲译。北京：中国社会科学出版社，2018），但无论是玄奘短命的“法相唯识宗”，还是“念念不忘”的本义，都向我们启示着一个深邃的事实，“一切真历史都是古代史”。“谁试图诠释历史，谁就在篡改历史。讨论真假无非是在争夺自己的话语权。”历史学是一种解释学。佛经和道教经文的文言文呈现方式仍是绝对主流，且无定本；而与此同时，基督教两会甚至出版了官方的《拼音版圣经》。但在过去，甚至如今的天主教，保守也是常态。形式上的精致化现代化与内在的理论嬗变的平衡是大多数理论发展的痛点。后人对前人的经典论述究竟是形成了一层又一层的遮蔽，还是使其精致化顺应时代发展？我们现在看到的，持有的意见，究竟有几分是最初作者的面貌？后人往往通过注解经典来阐发自己的观点，甚至托名作书。念念不忘，恰巧就是指出一个道理，“没有回响才是常态”，这不是固执地坚持和重复，而是理解到一个无数人提及的话语，我们本就一无所有，唯一重要的事情只有生或死。念念不忘，不是执着于铭记，而是发现，我们感知到什么，那就是什么。与其说我们一生都在选择，不如说我们一生都在等待，等待回响。
+> > 有时候绕远路是必须的，人生是片森林，人们终究会再次迷路，短暂相遇。正所谓“念念不忘，必有回响”。然而，人们清醒地意识到，没有什么“必有回响”，有的只是“没有结局的开始”或者“稍纵即逝的追寻”。没有任何人许诺回响，这只是苦难哲学的鸦片，让人们与这种现实“和解”。“念念不忘，必有回响”的完整说明并非李叔同所述，而是源于当代人的《李叔同〈晚晴集〉人生解读》（王少农。李叔同《晚晴集》人生解读[M]。线装书局，2008。）其中上半句“念念不忘”亦非李叔同原作，而是看似引用了南宋王龙舒的《龙舒净土文卷第四》“蓋欲念念不忘也。如此久久念心成熟。”其中在清俞行敏重辑《净土全书》一书的“净土起信”中同样有类似描述“净土指归云：欲了生死，修行净业，当发十种信心，念念不忘，决生净土。”，再次索引到《净土指归集》，实际上是绕回了《佛说四谛经》，载“亦观持宿命，亦从得道行，念世间行不可悔，摄、止、度世、无为、寂然、止见、一德、无所著、如解脱意观念想念，从念念、念不忘、少言、念不离，是名为直正念，是名为道德谛。”由于这是汉传佛教，在历史上被记载为安世高的翻译贡献，我们需要看看原本可能的样子。查《佛说四谛经》，实际对应于中阿含经《分别圣谛经》，即对应《巴利三藏》的《中部》的《一四一 分别谛经》（段晴，范晶晶，等译。汉译巴利三藏·经藏·中部[M]。上海：中西书局，2022：963–965。）。是这样写的“众仁友，何为正念？此谓比丘于身循观身，精勤，正知，具念，于世间戒除贪与忧；于诸受（……）于心（……）于诸法循观法，精勤，正知，具念，于世间断除贪与忧。这被称为正念。”可以清晰地看出，“念念不忘”实际上对应的是“具念”（巴利语 sati），在文献中往往又被翻译为“念”、“正念”。实际上我们知道，在任何早期人类宗教活动中，传递的思想都是当时最合适不过的道德思想和伦理行为，也是最质朴，最清楚明白的，任何过于复杂的理论绝不可能流传数千年。因此，我们有必要怀疑这种“念念不忘”说法的合理性，在不同的学术观点中对此看法存在较大差异，但是无可辩驳地是，在佛教最早期的发展中，不可能有任何超越当时信众知识结构、道德伦理、认知能力的理论被普遍认可。因此，我们无需考察任何文本，越是从经验出发的理解，却往往是最接近合理性的存在。念念不忘实质上接近这种说法：“厨师一定要会做饭、垃圾桶里一定要有垃圾”，即，xx 就是 xx。可以看到，“念念不忘”与当代欧陆哲学产生了深切共鸣，不是让事情回到本身，而是认识到，有些时候，事情就是本身。“大音希声”。“一切真历史都是当代史”（克罗齐。历史学的理论和历史[M]。田时纲译。北京：中国社会科学出版社，2018），但无论是玄奘短命的“法相唯识宗”，还是“念念不忘”的本义，都向我们启示着一个深邃的事实，“一切真历史都是古代史”。“谁试图诠释历史，谁就在篡改历史。讨论真假无非是在争夺自己的话语权。”历史学是一种解释学。佛经和道教经文的文言文呈现方式仍是绝对主流，且无定本；而与此同时，基督教两会甚至出版了官方的《拼音版圣经》。但在过去，甚至如今的天主教，保守也是常态。形式上的精致化现代化与内在的理论嬗变的平衡是大多数理论发展的痛点。后人对前人的经典论述究竟是形成了一层又一层的遮蔽，还是使其精致化顺应时代发展？我们现在看到的，持有的意见，究竟有几分是最初作者的面貌？后人往往通过注解经典来阐发自己的观点，甚至托名作书。念念不忘，恰巧就是指出一个道理，“没有回响才是常态”，这不是固执地坚持和重复，而是理解到一个无数人提及的话语，我们本就一无所有，唯一重要的事情只有生或死。念念不忘，不是执着于铭记，而是发现，我们感知到什么，那就是什么。与其说我们一生都在选择，不如说我们一生都在等待，等待回响。
 >
 >
->你如何理解“念念不忘”与“必有回响”的关系？
+> 你如何理解“念念不忘”与“必有回响”的关系？
 >
->如果一切都是临时的，短暂的。那么，会不会有一天，有那么一刻，恰巧宇宙本身也不存在了？
+> 如果一切都是临时的，短暂的。那么，会不会有一天，有那么一刻，恰巧宇宙本身也不存在了？
 
 
 ## 附录：共享硬件数据到数据库

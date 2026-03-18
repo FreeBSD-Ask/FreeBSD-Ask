@@ -25,5 +25,3 @@
 | Restore User Defaults                         | 将用户默认值恢复到所有设置项    |
 | List of EFI boot managers available           | 可用的 EFI 启动管理器列表      |
 | Boot override to selected boot manager        | 启动时覆盖为选定的启动管理器    |
-
-

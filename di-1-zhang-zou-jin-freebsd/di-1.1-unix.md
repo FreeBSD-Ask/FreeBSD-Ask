@@ -2,7 +2,7 @@
 
 ## 何为 UNIX？
 
-UNIX 作为操作系统发展史上的里程碑式成果，其内涵历经了从技术实现到文化符号的深刻演变。从前，UNIX 是一款操作系统。它最初使用汇编语言编写，后主要由 C 语言重写。UNIX 起源于美国电话电报公司（American Telephone & Telegraph，AT&amp;T）的贝尔实验室。
+UNIX 作为操作系统发展史上的里程碑式成果，其内涵历经了从技术实现到文化符号的深刻演变。从前，UNIX 是一款操作系统。它最初使用汇编语言编写，后主要由 C 语言重写。UNIX 起源于美国电话电报公司（American Telephone & Telegraph，AT&T）的贝尔实验室。
 
 现在，它是一种 **[标准规范](https://www.opengroup.org/openbrand/register/xym0.htm)**、一款 **[法律上的商标](https://www.opengroup.org/openbrand/register/index2.html)**，更是一种 **哲学思想** 和一项 **软件工程原则**。这种多维度的身份界定，使得 UNIX 超越了单纯的技术范畴，成为现代操作系统设计的思想源泉。
 

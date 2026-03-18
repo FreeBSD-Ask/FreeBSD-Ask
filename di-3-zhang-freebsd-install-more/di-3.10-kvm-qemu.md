@@ -52,7 +52,7 @@ mfsBSD 是一款完全载入内存的 FreeBSD 系统，类似于 Windows PE（Pr
 
 校验码（官网链接指向错误，已反馈但未收到回复）：[checksums](https://mfsbsd.vx.sk/files/iso/14/amd64/mfsbsd-mini-14.1-RELEASE-amd64.iso.sums.txt) [备份](https://web.archive.org/web/20260119044412/https://mfsbsd.vx.sk/files/iso/14/amd64/mfsbsd-mini-14.1-RELEASE-amd64.iso.sums.txt)
 
->**技巧**
+> **技巧**
 >
 >内存小于或等于 4 GB 的机器不建议使用 ZFS 文件系统。
 >
@@ -142,7 +142,7 @@ boot # 输入 boot 后回车即可从 mfsBSD 继续启动
 
 mfsBSD 的 `root` 默认密码为 `mfsroot`。你可以使用 SSH 工具连接后进行安装。
 
->**技巧**
+> **技巧**
 >
 >如果平台支持 DHCP 自动获取网络配置，可跳过本节。
 

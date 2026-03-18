@@ -64,7 +64,7 @@ exec cinnamon-session
 proc /proc procfs rw 0 0
 ```
 
-挂载 `procfs` 文件系统到 `/proc`，读写模式
+挂载 `procfs` 文件系统到 `/proc`，读写模式。
 
 ## 服务管理
 

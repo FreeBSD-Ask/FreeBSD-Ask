@@ -18,7 +18,7 @@
 
 将 `refind.conf-sample` 文件复制一份，并重命名为 `refind.conf`。
 
->**技巧**
+> **技巧**
 >
 >通常无需手动配置。但若出现无法自动识别现有操作系统的情况，请按以下方法手动添加引导项：
 >
@@ -90,6 +90,6 @@ include themes/Matrix-rEFInd/theme.conf
 
 ![](../.gitbook/assets/shuang18.jpg)
 
->**技巧**
+> **技巧**
 >
 >如果在虚拟机（如 VMware、VirtualBox）中操作，由于其 UEFI 固件的屏幕分辨率限制，rEFInd 界面可能无法同时显示所有操作系统选项，需通过方向键切换查看，这与上图所示的效果可能不同。

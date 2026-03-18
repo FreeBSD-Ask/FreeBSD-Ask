@@ -112,9 +112,9 @@ Removing user (test2): home passwd.
 
 - `chpass` 命令以 `vi` 编辑器方式打开并修改指定用户信息，如不指定用户则默认为当前用户。
 
->**技巧**
+> **技巧**
 >
->`export EDITOR=/usr/bin/ee` 可将编辑器换成更简单的 `ee`。
+> `export EDITOR=/usr/bin/ee` 可将编辑器换成更简单的 `ee`。
 
 常用参数：`-s`，用于修改登录 shell
 

@@ -116,14 +116,14 @@ DRM 即“Direct Rendering Manager”（直接渲染管理器），DRM 是 Linux
 
 ### AMD
 
-- 如果是 HD7000 以后的 AMD 显卡，在 `/etc/rc.conf` 中添加 `amdgpu` 内核模块（大部分人应该使用这个，如果未生效再修改为 `radeonkms`）到 `kld_list`，以便系统启动时加载：
+- 如果是 HD 7000 以后的 AMD 显卡，在 `/etc/rc.conf` 中添加 `amdgpu` 内核模块（大部分人应该使用这个，如果未生效再修改为 `radeonkms`）到 `kld_list`，以便系统启动时加载：
 
 ```sh
 # sysrc -f /etc/rc.conf kld_list+=amdgpu
 ```
 
-- 如果是 HD7000 以前的 AMD 显卡，在 `/etc/rc.conf` 中添加 `radeonkms` 内核模块（这是十多年前的显卡了）到 `kld_list`，以便系统启动时加载
-- 如果是 HD7000 以前的 AMD 显卡，在 `/etc/rc.conf` 中添加 `radeonkms` 内核模块到 `kld_list`，以便系统启动时加载。
+- 如果是 HD 7000 以前的 AMD 显卡，在 `/etc/rc.conf` 中添加 `radeonkms` 内核模块（这是十多年前的显卡了）到 `kld_list`，以便系统启动时加载
+- 如果是 HD 7000 以前的 AMD 显卡，在 `/etc/rc.conf` 中添加 `radeonkms` 内核模块到 `kld_list`，以便系统启动时加载。
 
 ```sh
 # sysrc -f /etc/rc.conf kld_list+=radeonkms

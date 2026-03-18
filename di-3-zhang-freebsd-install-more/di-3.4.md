@@ -1,8 +1,8 @@
 # 3.4 安装双系统（先安装 FreeBSD）
 
->**注意**
+> **注意**
 >
->本文要求先安装 FreeBSD，再安装 Windows 或其他操作系统。
+> 本文要求先安装 FreeBSD，再安装 Windows 或其他操作系统。
 
 ## 安装 FreeBSD 14.2 RELEASE
 
@@ -12,9 +12,9 @@
 
 ![](../.gitbook/assets/shuang2.png)
 
->**技巧**
+> **技巧**
 >
->如果在此处设置 `P Partition Scheme` 为 `GPT (UEFI)` 而非其他（只有老电脑才需要 `GPT (BIOS+UEFI)` 等选项），后续分区与系统更新过程会更加简单，也能实现 4K 对齐。
+> 如果在此处设置 `P Partition Scheme` 为 `GPT (UEFI)` 而非其他（只有老电脑才需要 `GPT (BIOS+UEFI)` 等选项），后续分区与系统更新过程会更加简单，也能实现 4K 对齐。
 
 
 ![](../.gitbook/assets/shuang3.png)
@@ -166,4 +166,3 @@ zroot/var/log        188K  87.8G   188K  /var/log
 zroot/var/mail        96K  87.8G    96K  /var/mail
 zroot/var/tmp         96K  87.8G    96K  /var/tmp
 ```
-

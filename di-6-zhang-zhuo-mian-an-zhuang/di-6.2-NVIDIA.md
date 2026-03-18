@@ -151,7 +151,7 @@ Mon Jan 19 19:06:59 2026
 
 ### 如何阻止驱动更新
 
-把 `pkg info -q | grep -i nvidia` 输出的相关软件包都逐个使用 `pkg lock`命令锁定即可。
+把 `pkg info -q | grep -i nvidia` 输出的相关软件包都逐个使用 `pkg lock` 命令锁定即可。
 
 形如
 
@@ -163,4 +163,3 @@ Mon Jan 19 19:06:59 2026
 但是如果运行 `freebsd-update` 命令，或者执行 pkgbase 对系统打补丁或更新补丁也可能会影响驱动。
 
 因此需要读者自行平衡安全与日常。
-

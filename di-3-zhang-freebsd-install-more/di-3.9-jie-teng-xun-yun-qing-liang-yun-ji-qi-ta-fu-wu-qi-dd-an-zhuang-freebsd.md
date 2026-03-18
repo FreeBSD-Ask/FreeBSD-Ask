@@ -23,7 +23,7 @@
 
 [腾讯云轻量应用服务器（即腾讯云轻量云）](https://cloud.tencent.com/product/lighthouse) [备份](https://web.archive.org/web/20260118022716/https://cloud.tencent.com/product/lighthouse) 以及 [阿里云轻量应用服务器](https://www.aliyun.com/product/swas) [备份](https://web.archive.org/web/20260119171609/https://cn.aliyun.com/product/swas?from_alibabacloud=) 均未提供 FreeBSD 系统支持，只能通过特殊方法手动安装。
 
->**警告**
+> **警告**
 >
 >请注意数据安全。本教程操作具有一定风险，并要求你具备一定的动手能力。
 
@@ -59,7 +59,7 @@ initrd (hd0,msdos1)/initramfs.igz  # 指定初始 RAM 磁盘映像文件路径
 boot # 输入 boot 后回车即可继续启动
 ```
 
->**技巧**
+> **技巧**
 >
 >分区标识不一定是 `(hd0,msdos1)`，请以实际情况为准。注意不要误删过多内容导致无法辨识。
 
@@ -78,7 +78,7 @@ mfsBSD 和 mfsLinux 镜像的默认 `root` 密码均为 `mfsroot`。
 # reboot # 重启系统
 ```
 
->**技巧**
+> **技巧**
 >
 >建议在此处使用服务器的“快照”功能进行备份，以防后续操作失误导致重装，耽误时间。
 
@@ -167,7 +167,7 @@ boot # 输入 boot 后回车即可继续启动
 # dnf install syslinux
 ```
 
->**警告**
+> **警告**
 >
 >GRUB2 自带的 `memdisk.mod` 模块并非 MEMDISK。必须安装 syslinux 包才能获得 MEMDISK 工具。
 

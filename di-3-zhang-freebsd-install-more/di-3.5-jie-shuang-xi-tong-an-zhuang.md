@@ -4,7 +4,7 @@
 
 本文以 `FreeBSD-14.2-RELEASE-amd64-disc1.iso` 为例，演示了如何在 UEFI 环境下，安装 FreeBSD 14.2 RELEASE 与 Windows 11 24H2 双系统。
 
->**技巧**
+> **技巧**
 >
 >本文示例要求先安装其他操作系统（如 Windows），再安装 FreeBSD。
 
@@ -39,7 +39,7 @@
 
 此处选择 `Manual`
 
->**技巧**
+> **技巧**
 >
 >其实这里调用的是软件 `sade`（sysadmins disk editor，系统管理员磁盘编辑器），`bsdconfig` 中的分区模块亦调用此工具。
 
@@ -59,7 +59,7 @@
 
 ![](../.gitbook/assets/shuangxitong5.png)
 
->**注意**
+> **注意**
 >
 >请将 Windows 创建的 300M EFI 系统分区的挂载点设置为 `/boot/efi`。
 
@@ -111,11 +111,11 @@ root  534M    130G   534M  none
 vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 ```
 
->**技巧**
+> **技巧**
 >
 > 参数 `12` 表示 2^12 = 4096 字节（4KB）的扇区大小。默认参数（可通过命令 `sysctl vfs.zfs.vdev.min_auto_ashift` 查看）是 `9`，即 2^9 = 512 字节。
 
->**思考题**
+> **思考题**
 >
 >若使用 NVMe 硬盘，新装系统（UEFI+GPT，无 freebsd-boot 分区）的该默认参数通常为 12。但 4K 对齐究竟对齐的是什么？因为 SSD 并无传统机械硬盘的物理扇区概念。
 
@@ -307,7 +307,7 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 将创建 `zroot/var/mail` 数据集，并启用访问时间记录（`atime=on`），通常用于存放邮件数据。
 
 
->**技巧**
+> **技巧**
 >
 >上述参数参考自 [bsdinstall(8)](https://man.freebsd.org/cgi/man.cgi?bsdinstall(8)) 的默认配置。安装后，也可通过命令 `zfs get exec,setuid,mountpoint` 查看相关属性。具体代码位于 `/usr/src/usr.sbin/bsdinstall/scripts/zfsboot`。
 
@@ -330,7 +330,7 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 
 注意将 `/dev/nda0p5` 替换为实际的交换分区设备名，可使用 `gpart show nda0` 命令进行确认。
 
->**技巧**
+> **技巧**
 >
 >`\t` 是制表符（Tab）的转义字符（意味着按了一下 **TAB** 键），用于对齐字段，使用空格亦可达到相同效果。也可使用 `ee /tmp/bsdinstall_etc/fstab` 命令手动编辑该文件并写入如下格式的行：
 >

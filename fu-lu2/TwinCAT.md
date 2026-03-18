@@ -32,7 +32,7 @@ TwinCAT/BSD 是由倍福公司（Beckhoff）开发的基于 FreeBSD 的 PLC（Pr
 
 ![TCBSD](../.gitbook/assets/t1.png)
 
-硬盘大小设置为 1GB 即可，过大无实际必要，该硬盘仅用于写入镜像。其他配置可以参考示例设置。
+硬盘大小设置为 1 GB 即可，过大无实际必要，该硬盘仅用于写入镜像。其他配置可以参考示例设置。
 
 ![TCBSD](../.gitbook/assets/t2.png)
 
