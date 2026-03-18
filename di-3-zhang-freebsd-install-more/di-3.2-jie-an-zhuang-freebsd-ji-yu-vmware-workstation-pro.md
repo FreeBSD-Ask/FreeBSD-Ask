@@ -233,7 +233,7 @@ fusefs_load="YES"
 .host:/123pan      /mnt/hgfs    fusefs  rw,mountprog=/usr/local/bin/vmhgfs-fuse,allow_other,failok 0 0
 ```
 
-即可自动挂载 VMware 共享目录 123pan。
+即可自动挂载 VMware 共享目录。
 
 挂载 fstab 中所有未挂载的文件系统，检查有无错误（若无错误输出则正常），错误的配置可能导致系统无法正常启动：
 

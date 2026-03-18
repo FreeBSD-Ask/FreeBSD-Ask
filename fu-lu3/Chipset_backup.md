@@ -2989,7 +2989,7 @@ x4
 
 选项：
 
-0 ： Sensor Default（传感器默认）
+0 : Sensor Default（传感器默认）
 
 1 : <416Mbps
 

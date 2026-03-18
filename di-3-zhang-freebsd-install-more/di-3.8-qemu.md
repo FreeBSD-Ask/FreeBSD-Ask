@@ -83,7 +83,7 @@ root@ykla:/home/ykla # locate u-boot.bin
 
 提取 `u-boot.bin` 到 Windows 下备用。
 
-## 配置 Qemu
+## 配置 QEMU
 
 在桌面新建一个文本文件 `qemu.bat`，写入
 
