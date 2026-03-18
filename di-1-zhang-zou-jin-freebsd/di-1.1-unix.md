@@ -2,9 +2,9 @@
 
 ## 何为 UNIX？
 
-从前，UNIX 是一款操作系统。它最初使用汇编语言编写，后主要由 C 语言重写。UNIX 起源于美国电话电报公司（American Telephone & Telegraph，AT&T）的贝尔实验室。
+UNIX 作为操作系统发展史上的里程碑式成果，其内涵历经了从技术实现到文化符号的深刻演变。从前，UNIX 是一款操作系统。它最初使用汇编语言编写，后主要由 C 语言重写。UNIX 起源于美国电话电报公司（American Telephone & Telegraph，AT&amp;T）的贝尔实验室。
 
-现在，它是一种 **[标准规范](https://www.opengroup.org/openbrand/register/xym0.htm)**、一款 **[法律上的商标](https://www.opengroup.org/openbrand/register/index2.html)**，更是一种 **哲学思想** 和一项 **软件工程原则**。
+现在，它是一种 **[标准规范](https://www.opengroup.org/openbrand/register/xym0.htm)**、一款 **[法律上的商标](https://www.opengroup.org/openbrand/register/index2.html)**，更是一种 **哲学思想** 和一项 **软件工程原则**。这种多维度的身份界定，使得 UNIX 超越了单纯的技术范畴，成为现代操作系统设计的思想源泉。
 
 
 > Only systems that are fully compliant and certified according to the Single UNIX Specification are qualified to use the UNIX® trademark.（只有完全符合并经过《单一 UNIX 规范》认证的系统，才有资格使用 UNIX® 商标。）——[UNIX® Certification](https://www.opengroup.org/openbrand/register/)
@@ -41,7 +41,7 @@ UNIX 认证查询网址：[The Open Group official register of UNIX Certified Pr
 
 ## 传统的 Unix 哲学观（以《UNIX 编程艺术》为核心）
 
-Unix 哲学是在 UNIX 操作系统长期的开发实践中逐渐形成的一套设计理念，它影响了无数后来的操作系统和软件的开发思路。
+Unix 哲学是在 UNIX 操作系统长期的开发实践中逐渐形成的一套设计理念，它影响了无数后来的操作系统和软件的开发思路。作为软件工程领域的重要思想遗产，Unix 哲学为系统设计提供了一套经过实践检验的方法论框架。
 
 >**思考题**
 >

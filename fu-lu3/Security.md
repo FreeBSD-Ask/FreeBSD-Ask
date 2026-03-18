@@ -1,6 +1,6 @@
 # Security 安全
 
-本章节主要介绍 BIOS 中与安全相关的设置选项，包括密码保护、硬盘安全配置和安全启动等功能。
+本章节主要介绍 BIOS 中与安全相关的设置选项，包括密码保护、硬盘安全配置和安全启动等功能。在现代计算机安全框架中，BIOS/UEFI 安全配置构成了系统安全的第一道防线，对于防范未授权访问和保护数据完整性具有不可替代的作用。
 
 参见 [如何设置或解决忘记 BIOS 密码/UEFI 密码/开机密码](https://www.asus.com.cn/support/faq/1046347/) [备份](https://web.archive.org/web/20260119060629/https://www.asus.com.cn/support/faq/1046347/)
 

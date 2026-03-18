@@ -1,5 +1,7 @@
 # 5.4 使用 Ports 以源代码方式安装软件
 
+本章深入探讨 FreeBSD Ports 框架的设计理念、使用方法及高级配置。Ports 作为 FreeBSD 源代码构建软件的核心框架，提供了灵活、可定制的软件安装途径。
+
 ## Ports 与 Port 概述
 
 ### Ports 历史

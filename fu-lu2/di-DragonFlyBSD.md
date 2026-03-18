@@ -2,15 +2,15 @@
 
 ## DragonFly BSD 概述
 
-DragonFly BSD 是一款具有独特设计理念的类 UNIX 操作系统，其发展历程与 FreeBSD 有着密切的渊源。
+DragonFly BSD 是一款具有独特设计理念的类 UNIX 操作系统，其发展历程与 FreeBSD 有着密切的技术渊源和历史联系。从操作系统演进的视角来看，DragonFly BSD 代表了对 UNIX 遗产的创新性重构。
 
-DragonFly BSD（蜻蜓 BSD）是一款基于 FreeBSD 4.8 衍生的类 UNIX 操作系统。该项目由曾参与开发 Amiga（上世纪较热门的电脑）的 Matthew Dillon（毕业于加州大学伯克利分校）于 2003 年 6 月启动，在 2003 年 7 月发布在 [FreeBSD 邮件列表](https://lists.freebsd.org/pipermail/freebsd-current/2003-July/006889.html) [备份](https://web.archive.org/web/20251228020117/https://lists.freebsd.org/pipermail/freebsd-current/2003-July/006889.html) 上。
+DragonFly BSD（蜻蜓 BSD）是一款基于 FreeBSD 4.8 衍生的类 UNIX 操作系统。该项目由曾参与开发 Amiga（上世纪重要的个人计算平台）的 Matthew Dillon（毕业于加州大学伯克利分校）于 2003 年 6 月启动，在 2003 年 7 月正式发布于 [FreeBSD 邮件列表](https://lists.freebsd.org/pipermail/freebsd-current/2003-July/006889.html) [备份](https://web.archive.org/web/20251228020117/https://lists.freebsd.org/pipermail/freebsd-current/2003-July/006889.html)。
 
-Dillon 启动 DragonFly BSD 项目是因为他认为 FreeBSD 5 的开发人员采用了并行计算开发方式（例如 SMP 对称多处理），这可能降低系统性能。Dillon 试图影响 FreeBSD 项目的设计原则，并与 FreeBSD 开发人员发生争执，他被剥夺了直接编辑源代码的权力。尽管如此，DragonFly BSD 与 FreeBSD 项目仍在合作修复部分错误并更新驱动程序。
+从技术争议与社区治理的维度分析，Dillon 启动 DragonFly BSD 项目的核心动因是对 FreeBSD 5 中采用的 SMP（对称多处理）并行计算架构存在不同的技术判断，他认为该设计可能引入不必要的性能开销。这一技术分歧导致了与 FreeBSD 核心开发团队的讨论，并最终促成了独立项目的形成。尽管存在技术路径的差异，DragonFly BSD 与 FreeBSD 项目在错误修复和驱动程序更新等领域仍保持着协作关系。
 
-DragonFly BSD 因延续 FreeBSD 4 的发展路线而面临限制，其开发在多个方面与 FreeBSD 基本系统有显著差异，包括轻量级内核线程实现和 HAMMER 文件系统。DragonFly BSD 的许多设计概念借鉴了 AmigaOS 的解决方案。
+DragonFly BSD 在继承 FreeBSD 4 技术路线的同时，在多个关键系统层面进行了创新性设计，包括轻量级内核线程实现机制和 HAMMER/HAMMER2 文件系统等核心组件。值得注意的是，DragonFly BSD 的部分设计理念受到了 AmigaOS 架构的启发。
 
-DragonFly BSD 自带 i915 显卡驱动，架构仅支持 x86-64。DragonFly BSD 不提供 Linux 兼容层。DPorts 可与 FreeBSD Ports 兼容。需要注意的是，DragonFly BSD 的驱动支持较为落后，显卡驱动平均滞后约 10 年。
+从硬件支持的现状来看，DragonFly BSD 自带 i915 显卡驱动，架构仅支持 x86-64 平台，未提供 Linux 兼容层。其 DPorts 软件包系统与 FreeBSD Ports 保持兼容。需要指出的是，DragonFly BSD 的驱动支持存在一定滞后性，特别是显卡驱动的更新节奏相对较慢。
 
 捐赠 DragonFly BSD：[Sponsoring projects](https://www.dragonflybsd.org/donations/) [备份](https://web.archive.org/web/20260117173454/https://www.dragonflybsd.org/donations/)，目前仅支持国际 PayPal。此前已通过邮件咨询，但未收到任何反馈。
 

@@ -1,4 +1,6 @@
-# 5.8 ZFS 启动环境与多版本共存
+# 5.8 ZFS 启动环境与 pkgbase 系统更新
+
+本章系统介绍 ZFS 启动环境（Boot Environment，BE）的创建与管理，以及基于 pkgbase 的系统版本升级方法。ZFS 启动环境与 pkgbase 相结合，为 FreeBSD 提供了安全、灵活的系统更新与多版本共存机制。
 
 
 ## 创建启动环境 15.0-RELEASE

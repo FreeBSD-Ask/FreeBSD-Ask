@@ -1,6 +1,8 @@
 # 3.11 rEFInd 引导管理器（多系统引导管理）
 
-在 BIOS 中来回切换操作系统确实很麻烦，我们可以借助 [rEFInd](https://www.rodsbooks.com/refind/) [备份](https://web.archive.org/web/20260107121430/https://www.rodsbooks.com/refind/) 实现类似于 Clover 的效果，在开机时选择要进入的操作系统。
+在多系统环境下，频繁通过 BIOS 固件界面切换操作系统存在效率低下的问题。本章研究 rEFInd 引导管理器的部署与配置技术，旨在为多系统用户提供一种便捷的启动选择解决方案。
+
+我们可以借助 [rEFInd](https://www.rodsbooks.com/refind/) [备份](https://web.archive.org/web/20260107121430/https://www.rodsbooks.com/refind/) 实现类似于 Clover 的效果，在开机时选择要进入的操作系统。
 
 `rEFInd` 派生自 `rEFIt`，其名称结合了“refind”（意为“重新发现”或“改进”）与“EFI”（Extensible Firmware Interface，可扩展固件接口），主要用于管理 UEFI 启动。
 

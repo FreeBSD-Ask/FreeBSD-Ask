@@ -1,5 +1,7 @@
 # 3.1 使用 Hyper-V 安装 FreeBSD
 
+本章聚焦于 FreeBSD 操作系统在 Microsoft Hyper-V 虚拟化平台上的部署技术问题，旨在为读者提供一套完整的、经过验证的安装配置流程。
+
 ## Hyper-V 简介
 
 Hyper-V 是微软公司（Microsoft）为 Windows / Windows Server 开发的企业级虚拟化管理程序（系统内置），分为 Gen 1（第一代）和 Gen 2（第二代）。

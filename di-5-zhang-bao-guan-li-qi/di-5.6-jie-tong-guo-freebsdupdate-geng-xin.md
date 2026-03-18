@@ -1,5 +1,7 @@
 # 5.6 使用 freebsd-update 更新 FreeBSD
 
+本章详细阐述 freebsd-update 工具的使用方法，包括常规补丁更新、大版本升级及相关注意事项。freebsd-update 作为 FreeBSD 官方支持的二进制更新机制，是系统维护的核心工具之一。
+
 > **注意：**
 >
 > 只有一级架构的 RELEASE 版本才提供该更新源。也就是说，CURRENT 和 STABLE 不提供该源。关于架构的支持等级说明请参见： [Supported Platforms](https://www.freebsd.org/platforms) [备份](https://web.archive.org/web/20260115035231/https://www.freebsd.org/platforms/)

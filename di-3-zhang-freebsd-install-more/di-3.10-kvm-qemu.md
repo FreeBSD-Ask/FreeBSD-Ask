@@ -1,5 +1,7 @@
 # 3.10 KVM、QEMU 等平台安装 FreeBSD（传统引导和 MBR 分区表）
 
+本章研究在 KVM/QEMU 等硬件辅助虚拟化平台上，通过传统 BIOS + MBR 方式部署 FreeBSD 的技术方案，特别适用于不直接提供 FreeBSD 镜像的云服务环境。
+
 > **注意**
 >
 > 此方法不支持 OpenVZ、LXC 虚拟机，因为它们本质上不属于虚拟机，宿主机与客户机共享内核。内核已经是 Linux，自然无法运行 FreeBSD。

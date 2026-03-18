@@ -1,11 +1,10 @@
 # BSD 许可证概览
 
-BSD 许可证是自由软件许可证中的重要类别，具有宽松的使用条款。本文仅列出主要的、受 OSI 认可的 BSD 许可证（不包括 BSD-4-Clause）。更多 BSD 许可证信息参见 [OSI Approved Licenses](https://opensource.org/licenses?ls=BSD) 和 [SPDX License List](https://spdx.org/licenses/) [备份](https://web.archive.org/web/20260114114343/https://spdx.org/licenses/)。
+BSD 许可证是自由软件许可证中的重要类别，以其宽松的使用条款为特点，在开源软件生态系统中具有重要地位。本文仅列出主要的、受 OSI（开放源代码促进会）认可的 BSD 许可证（不包括 BSD-4-Clause）。更多 BSD 许可证信息参见 [OSI Approved Licenses](https://opensource.org/licenses?ls=BSD) 和 [SPDX License List](https://spdx.org/licenses/) [备份](https://web.archive.org/web/20260114114343/https://spdx.org/licenses/)。
 
+从软件自由理论框架来看，下文列出的所有 BSD 许可证均为非 copyleft（著佐权）许可证，即不要求修改后的版本仍必须作为自由软件发布，这使得它们在商业与开源融合场景中具有独特优势。更多关于 BSD 许可证与 copyleft 范式比较的讨论参见 [BSD 许可证的问题](https://www.gnu.org/licenses/bsd.zh-cn.html) [备份](https://web.archive.org/web/20260121024603/https://www.gnu.org/licenses/bsd.zh-cn.html)。
 
-下文列出的所有 BSD 许可证均为非 copyleft（著佐权）许可证，即不要求修改后的版本仍必须作为自由软件发布。更多讨论参见 [BSD 许可证的问题](https://www.gnu.org/licenses/bsd.zh-cn.html) [备份](https://web.archive.org/web/20260121024603/https://www.gnu.org/licenses/bsd.zh-cn.html)。
-
-需要注意的是，BSD 许可证条款编号并非数字越大就越新，而是表示附加的限制条件更多。
+需要注意的是，BSD 许可证条款编号并非按时间序列递增，而是表示附加的义务和限制条件的复杂度层级。
 
 ## BSD 零条款许可证（Zero-Clause BSD，0BSD）
 
