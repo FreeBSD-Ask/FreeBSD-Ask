@@ -10,6 +10,8 @@
 
 ## 乔治·贝克莱生平简介
 
+乔治·贝克莱是 18 世纪爱尔兰著名的哲学家，其思想对后世产生了深远影响。让我们先通过一张画像来了解这位哲学家。
+
 ![George Berkeley](../.gitbook/assets/Berkeley2.png)
 
 图片出处：[George Berkeley](https://www.npg.org.uk/collections/search/portrait.php?search=ap&npgno=653&eDate=&lDate=)
@@ -116,6 +118,7 @@ George Berkeley（1685.3.12—1753.1.14），2023 年是他逝世 270 周年。2
 
 几乎在每一本合格的哲学史著作中 [旧版人教版思想政治必修四（生活与哲学）第 13 页即为一例（ISBN  9787107327100）。]
 
+在高中思想政治教材中，也能看到贝克莱思想的相关介绍。
 
 ![教材教科书 高中思想政治 必修 4 生活与哲学 人教版 第 13 页](../.gitbook/assets/George.png)
 

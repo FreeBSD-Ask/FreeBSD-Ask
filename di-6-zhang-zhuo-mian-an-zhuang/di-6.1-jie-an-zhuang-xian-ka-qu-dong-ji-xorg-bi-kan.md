@@ -12,7 +12,7 @@
 
 ## 显卡支持情况
 
-FreeBSD 的 i915、AMD 显卡驱动与基本系统是分离的。目前是移植的 LTS 版本 Linux kernel 的 DRM 驱动，作为 Port 提供。面向不同的系统版本，能支持的 Linux 内核版本也是不同的。
+FreeBSD 的 i915、AMD 显卡驱动与基本系统是分离的。目前是移植的长期支持（Long Term Support，LTS）版本 Linux 内核的 DRM 驱动，作为 Port 提供。面向不同的系统版本，能支持的 Linux 内核版本也是不同的。
 
 >**技巧**
 >
@@ -22,9 +22,6 @@ FreeBSD 的 i915、AMD 显卡驱动与基本系统是分离的。目前是移植
 >
 >DG2 Arc 显卡尚不受支持（截至 DRM 6.10 版本），参见 [Intel Arc A770: Kernel panic on kldload i915kms.ko #315](https://github.com/freebsd/drm-kmod/issues/315) [备份](https://web.archive.org/web/20260121071237/https://github.com/freebsd/drm-kmod/issues/315)。可能需要等到 6.12 的移植才能受支持。
 
->**注意**
->
->根据笔记本和桌面项目反馈，“在使用 drm-kmod 6.1 及更高版本的桌面系统（搭载 RX 570、580 等 AMD GPU）运行数分钟或数小时后，会逐渐出现严重卡顿，最终导致桌面完全不可用。”该问题预计会在今年 12 月初前得到解决。参见 <https://github.com/FreeBSDFoundation/proj-laptop/issues/89>
 
 | **FreeBSD 版本**         | **对应 DRM 驱动版本**                   | **GPU 支持范围（AMD / Intel）**    | **备注**             |
 | :--------------------------: | :--------------------------------- | :---------------------------- | :------------------- |
@@ -126,6 +123,7 @@ DRM 即“Direct Rendering Manager”（直接渲染管理器），DRM 是 Linux
 ```
 
 - 如果是 HD7000 以前的 AMD 显卡，在 `/etc/rc.conf` 中添加 `radeonkms` 内核模块（这是十多年前的显卡了）到 `kld_list`，以便系统启动时加载
+- 如果是 HD7000 以前的 AMD 显卡，在 `/etc/rc.conf` 中添加 `radeonkms` 内核模块到 `kld_list`，以便系统启动时加载。
 
 ```sh
 # sysrc -f /etc/rc.conf kld_list+=radeonkms
@@ -229,7 +227,7 @@ EndSection
 
 如果上述操作不起作用，请检查路径 `/dev/backlight` 下都有哪些设备。
 
-- 示例（照抄不会起作用的，自己 `ls /dev/backlight` 看看）：
+- 示例（请自行使用 `ls /dev/backlight` 查看实际设备）：
 
 ```sh
 # backlight -f /dev/backlight/amdgpu_bl00 -10   # 设置 amdgpu_bl00 背光亮度为 10

@@ -4,7 +4,6 @@
 
 从前，UNIX 是一款操作系统。它最初使用汇编语言编写，后主要由 C 语言重写。UNIX 起源于美国电话电报公司（American Telephone & Telegraph，AT&T）的贝尔实验室。
 
-
 现在，它是一种 **[标准规范](https://www.opengroup.org/openbrand/register/xym0.htm)**、一款 **[法律上的商标](https://www.opengroup.org/openbrand/register/index2.html)**，更是一种 **哲学思想** 和一项 **软件工程原则**。
 
 
@@ -51,7 +50,6 @@ UNIX 认证查询网址：[The Open Group official register of UNIX Certified Pr
 >作者亨利·斯宾塞（Henry Spencer）并未明确批评哪个操作系统，那么你认为，现在这句话更适合哪个常见的操作系统？为什么？
 
 Unix 哲学源于 UNIX 操作系统的开发实践，并由肯·汤普森（Ken Thompson）与丹尼斯·里奇（Dennis Ritchie）等早期开发者共同塑造。Unix 哲学一言以蔽之，即大道至简（“keep it simple, stupid”）：
-
 
 - 小即美
 - 一个程序只做一件事
