@@ -53,7 +53,7 @@
 
 ### 非法字符
 
-许多在 FreeBSD 中可用的文件名或路径在 Windows 中都是不被允许的（即包含非法字符）。这些情况你经常会碰到——如果你在 Windows 上使用 Git 拉取项目。
+许多在 FreeBSD 中可用的文件名或路径在 Windows 中都是不被允许的，即包含非法字符。这些情况你经常会碰到，如果你在 Windows 上使用 Git 拉取项目。
 
 这里只列出一些笔者遇到过的情况：
 
@@ -138,7 +138,7 @@ b.txt: Unicode text, UTF-8 text, with very long lines (314), with CRLF line term
 
 由于计算机只识别 `0` 和 `1`，故字符编码是一种用于将字符转换为数字表示的规则体系。字符可以是屏幕上可见的文字，也可以是不可见的控制标记，如换行符（LF）、回车符（CR）等，涵盖文本中常见的元素，如数字、Emoji 表情符号、汉字、拉丁字母等。编码方式则是为这些字符分配唯一数字标识（通常是整数），即代码点（code point）的过程。
 
-例如，在 ASCII（American Standard Code for Information Interchange，美国信息交换标准代码，ISO/IEC 646）编码中，`0x41`（即二进制 `0100 0001`）代表大写字母 `A`。ASCII 编码仅支持英文字母、数字及常见英文标点符号——共计支持 128 个字符。
+例如，在 ASCII（American Standard Code for Information Interchange，美国信息交换标准代码，ISO/IEC 646）编码中，`0x41`（即二进制 `0100 0001`）代表大写字母 `A`。ASCII 编码仅支持英文字母、数字及常见英文标点符号，共计支持 128 个字符。
 
 而在 Unicode 编码体系中，“你”这个汉字的代码点是 U+4F60。在 UTF-8（8-bit Unicode Transformation Format，8 位 Unicode 转换格式）编码方式下，它被编码为字节序列 `0xE4 0xBD 0xA0`（二进制为 `11100100 10111101 10100000`）。UTF-8 编码涵盖的字符范围远超 GBK（国家 `G` 标准 `B` 扩展 `K`），里面甚至还有埃及圣书体——如果现在你的屏幕上能看到“𓀀”“𓃕”“𓌊”这三个字符，那么你很可能正在使用 UTF-8 编码（如果你使用的是 UTF-8 编码但仍无法显示这些字符，很可能是字体不支持这些字符集，而非编码问题）。
 

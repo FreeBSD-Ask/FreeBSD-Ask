@@ -124,7 +124,7 @@ Chromium 不是 Chrome，但在 FreeBSD 中的启动命令为 `chrome`。
 
 ![](../.gitbook/assets/chromium-use-google-api-guide-04-1.png)
 
-搜索 “chrome-sync” 找到下列内容
+搜索 “chrome-sync” 找到下列内容。
 
 ![](../.gitbook/assets/chromium-use-google-api-guide-06.png)
 
@@ -155,7 +155,7 @@ Chromium 不是 Chrome，但在 FreeBSD 中的启动命令为 `chrome`。
 
 ![](../.gitbook/assets/chromium-use-google-api-guide-13.png)
 
-点击“客户端”，创建 OAuth 客户端 ID“，应用类型为“桌面应用”：
+点击“客户端”，创建 OAuth 客户端 ID，应用类型为“桌面应用”：
 
 ![](../.gitbook/assets/chromium-use-google-api-guide-14.png)
 

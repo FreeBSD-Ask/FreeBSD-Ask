@@ -146,7 +146,7 @@
 └── sbin 基本的 BSD 系统管理工具
 ```
 
-①：目录 `/var/empty` 加注了 schg 权限，即系统不可变标志：
+①：目录 `/var/empty` 加注了 schg 权限，即系统不可变标志。
 
 ```sh
 dr-xr-xr-x   2 root    wheel   schg,uarch  2 Feb 21 10:26 empty

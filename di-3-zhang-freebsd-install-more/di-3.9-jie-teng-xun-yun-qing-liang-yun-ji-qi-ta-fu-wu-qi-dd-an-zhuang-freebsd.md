@@ -19,7 +19,7 @@
 
 视频内容与文字教程可能存在差异，任选其一操作即可。SCP 命令可以使用图形化工具 WinSCP 替代。安装完成后，建议按照其他章节设置密钥登录并禁用密码验证，以提升安全性。
 
-## 概述
+## 腾讯云轻量云及阿里云轻量应用服务器介绍
 
 [腾讯云轻量应用服务器（即腾讯云轻量云）](https://cloud.tencent.com/product/lighthouse) [备份](https://web.archive.org/web/20260118022716/https://cloud.tencent.com/product/lighthouse) 以及 [阿里云轻量应用服务器](https://www.aliyun.com/product/swas) [备份](https://web.archive.org/web/20260119171609/https://cn.aliyun.com/product/swas?from_alibabacloud=) 均未提供 FreeBSD 系统支持，只能通过特殊方法手动安装。
 

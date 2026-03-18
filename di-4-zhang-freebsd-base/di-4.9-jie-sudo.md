@@ -43,7 +43,7 @@ Note: In order to be able to run most desktop (GUI) applications, the user
 needs to have the keepenv keyword specified. If keepenv is not specified then
 key elements, like the user's $HOME variable, will be reset and cause the GUI
 application to crash.
-# 注意：如果需要运行图形界面（GUI）程序，配置中必须添加 keepenv 关键词。
+# 注意：如果需要运行图形界面程序，配置中必须添加 keepenv 关键词。
 # 否则像 $HOME 这样的环境变量将会被清空，导致 GUI 程序崩溃。
 
 Users who only need to run command line applications can usually get away

@@ -2,6 +2,8 @@
 
 ## 安装 LXQt
 
+LXQt 是一款轻量级桌面环境。本节将介绍如何在 FreeBSD 上安装和配置 LXQt。
+
 - 通过 pkg 安装：
 
 ```sh

@@ -131,7 +131,7 @@
 
 打开美国亚马逊官网作者 Michael W. Lucas 的 [页面](https://www.amazon.com/stores/Michael-W.-Lucas/author/B004MNWSFG?language=zh_TW&ref=ap_rdr&isDramIntegrated=true&shoppingPortalEnabled=true) [备份](https://web.archive.org/web/20260119104253/https://www.amazon.com/stores/Michael-W.-Lucas/author/B004MNWSFG?language=zh_TW&ref=ap_rdr&isDramIntegrated=true&shoppingPortalEnabled=true)，可以看到该作者著述颇丰，从 ZFS 到 FreeBSD，从 OpenBSD 到 GPG，出版了近五十本相关书籍。
 
-笔者随机抽取了几本进行泛读，并对 *Absolute FreeBSD, 3rd Edition*进行了深入阅读。
+笔者随机抽取了几本进行泛读，并对 *Absolute FreeBSD, 3rd Edition* 进行了深入阅读。
 
 观察发现，作者撰写的内容整体较为基础，许多章节都花费较多篇幅介绍对多数人来说较为常识性的内容，例如“电脑应安装杀毒软件”“应开启电脑防火墙”等（这在一定程度上和美国教科书的风格相吻合）。
 

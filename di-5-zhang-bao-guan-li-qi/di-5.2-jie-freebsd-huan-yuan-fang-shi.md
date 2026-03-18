@@ -104,6 +104,8 @@ FreeBSD pkg 的 quarterly 分支也试图实现相同的目的（提供可预测
 
 ### 参考文献
 
+关于 quarterly 分支的更多信息，可以参考以下官方文档。
+
 - [Wiki QuarterlyBranch](https://wiki.freebsd.org/Ports/QuarterlyBranch) [备份](https://web.archive.org/web/20260120222534/https://wiki.freebsd.org/Ports/QuarterlyBranch)
 
 ## 15.0-RELEASE 快速切换 pkg 软件源到中国科学技术大学开源镜像站

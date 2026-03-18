@@ -1,5 +1,7 @@
 # 1.6 加州大学伯克利分校与“要有光”（Fiat Lux）
 
+加州大学伯克利分校的校训蕴含着深刻的意义，让我们从一首诗开始了解。
+
 >Westward the course of empire takes its way; 帝国一路向西；
 >
 >The four first acts already past. 前四幕已经过去。

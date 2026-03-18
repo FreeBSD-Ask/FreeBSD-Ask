@@ -10,7 +10,7 @@
 
 - 或者使用 Ports 安装：
 
-```
+```sh
 # cd /usr/ports/x11/xorg/
 # make install clean
 ```

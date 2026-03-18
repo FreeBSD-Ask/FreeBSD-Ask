@@ -3,6 +3,8 @@
 
 ## 创建启动环境 15.0-RELEASE
 
+ZFS 启动环境（Boot Environment，BE）是 FreeBSD 的一个重要特性，它允许我们在系统中创建多个独立的系统环境，从而实现不同系统版本的共存与安全切换。下面我们将创建一个名为 15.0-RELEASE 的启动环境。
+
 - 使用工具 bectl 创建启动环境 `15.0-RELEASE`：
 
 ```sh
@@ -46,7 +48,11 @@ zroot/ROOT/15.0-RELEASE     8K  83.8G  10.6G  /
 
 ## 将启动环境中的系统版本更新到 15.0-RELEASE
 
+创建好启动环境后，我们需要在其中进行系统版本的更新操作。整个过程分为挂载启动环境、验证版本、转换为 pkgbase 以及升级到目标版本等步骤。
+
 ### 挂载启动环境 15.0-RELEASE
+
+要对启动环境进行操作，首先需要将其挂载到文件系统中的某个目录。下面我们将创建一个临时目录并挂载启动环境。
 
 - 创建一个临时目录用于更新启动环境 15.0-RELEASE 中的 FreeBSD 系统
 
@@ -98,6 +104,8 @@ zroot/ROOT/15.0-RELEASE  99036272 11132688 87903584    11%    /mnt/upgrade
 
 
 ### 使用 pkgbase 将启动环境中的 14.3-RELEASE（系统版本）转换到 pkgbase
+
+在开始升级之前，我们需要将传统的 FreeBSD 系统转换为 pkgbase 格式。pkgbase 是 FreeBSD 官方提供的一种新的基本系统打包方式，它使用 pkg 包管理器来管理系统组件。
 
 pkgbase 的设计初衷是为了让 stable、current 和 release（包括 BETA、RC 等）都能使用统一的二进制工具进行更新。之前，stable 和 current 只能通过完整编译源代码的方式进行更新。
 
@@ -171,6 +179,8 @@ After verifying those files, restart the system.
 可以看到，pkgbasify 已将系统更新到最新的补丁版本，并完成了向 pkgbase 的转换。
 
 ### 使用 pkgbase 将启动环境中的系统版本更新到 15.0-RELEASE
+
+成功转换为 pkgbase 后，我们就可以使用 pkg 包管理器来升级系统版本了。下面我们将配置 pkgbase 源并执行升级操作。
 
 - 创建 pkgbase 软件源目录
 
@@ -277,6 +287,8 @@ Unlocking pkg-2.4.2_1
 
 ### 启动到启动环境 15.0-RELEASE
 
+完成所有更新操作后，我们可以尝试启动到新的启动环境中验证更新结果。
+
 - 在下次启动时进入启动环境 15.0-RELEASE
 
 ```sh
@@ -321,6 +333,8 @@ default                        R      -          10.9G 2025-01-14 20:36
 
 ## 附录：永久性使用 15.0-RELEASE
 
+前面我们使用的是一次性启动环境的方式进行验证。如果验证通过并且不需要再保留旧版本，可以将新环境设置为永久默认。
+
 如果读者不需要多版本共存，并且验证过目前的环境满足需要，也可以将启动环境 15.0-RELEASE 设置为永久的：
 
 ```sh
@@ -337,6 +351,8 @@ default                        R      -          10.9G 2025-01-14 20:36
 
 ## 将基本系统中的 ZFS 替换为 Ports 版本
 
+在实现多版本 FreeBSD 共存时，一个重要的考虑因素是 ZFS 池版本的兼容性问题。不同版本的 FreeBSD 内置的 ZFS 版本可能不同，这可能导致无法互相访问存储池。
+
 通常，在 FreeBSD 大版本之间，ZFS 池版本和特性都会发生变化，例如从 13 到 14 时 zpool 就有所变动。
 
 可通过 Ports 中的 OpenZFS 实现 13、14、15 等多个系统版本的共存。
@@ -348,6 +364,8 @@ default                        R      -          10.9G 2025-01-14 20:36
 那些有意愿实现多版本共存的读者可以直接重启，进入启动环境 `default`（14.3-RELEASE）。
 
 ### 验证当前系统版本
+
+在开始操作之前，首先需要确认我们已经回到了默认的启动环境中。
 
 我们需要确定我们的确在启动环境 `default`（14.3-RELEASE）中。
 
@@ -367,6 +385,8 @@ $ freebsd-version -kru
 
 ### 查看内置的 OpenZFS 版本
 
+首先，让我们查看一下当前系统内置的 ZFS 版本信息，以便了解我们要替换的是什么。
+
 显示当前 ZFS 工具和内核模块的版本信息：
 
 ```sh
@@ -378,6 +398,8 @@ zfs-kmod-2.2.7-FreeBSD_ge269af1b3
 目前 FreeBSD 基本系统内置的是 OpenZFS 2.2.7（即来自 <https://github.com/openzfs/zfs/commit/e269af1b3>）
 
 ### 安装 filesystems/openzfs
+
+Ports 中的 OpenZFS 提供了比基本系统更灵活的版本选择。我们可以使用 pkg 或 Ports 两种方式来安装它。
 
 - 使用 pkg 安装
 
@@ -393,6 +415,8 @@ zfs-kmod-2.2.7-FreeBSD_ge269af1b3
 ```
 
 ### 编辑 `/boot/loader.conf`
+
+安装完成后，我们需要配置系统启动时加载哪个 ZFS 模块。默认情况下，系统会加载基本系统内置的 ZFS 模块，我们需要修改这个行为。
 
 为了防止系统加载基本系统内置的 ZFS 版本，需要在 `zfs_load=YES` 前加上注释 `#`，取消其开机自动加载。
 
@@ -413,6 +437,8 @@ openzfs_load=YES   # 启用 OpenZFS 模块加载
 
 ### 检查 ZFS 版本
 
+配置完成并重启后，我们需要验证系统是否正确加载了 Ports 版本的 OpenZFS。
+
 在重启后，检查 ZFS 版本：
 
 ```sh
@@ -429,7 +455,11 @@ zfs-kmod-2.3.5-1
 
 ## 附录：给 pkgbasify 脚本换源
 
+对于网络环境受限制的用户，可能需要为 pkgbasify 脚本配置国内镜像源以提高下载速度。下面介绍如何修改脚本中的源地址。
+
 ### 修改示例（使用 USTC）
+
+中国科学技术大学（USTC）提供了 FreeBSD 的镜像服务，我们可以修改 pkgbasify 脚本来使用这个镜像源。首先需要找到脚本中的相关函数。
 
 找到 Lua 脚本中的 `create_base_repo_conf` 函数：
 
@@ -534,6 +564,8 @@ end
 
 ### 南京大学开源镜像站 NJU
 
+除了 USTC 镜像站外，南京大学也提供了 FreeBSD pkgbase 的镜像源，其地址如下。
+
 ```ini
 https://mirrors.nju.edu.cn/freebsd-pkg/
 ```
@@ -541,13 +573,15 @@ https://mirrors.nju.edu.cn/freebsd-pkg/
 
 ### 网易开源镜像站 163
 
+网易开源镜像站同样提供了 FreeBSD pkgbase 的镜像服务，地址如下。
+
 ```ini
 https://mirrors.163.com/freebsd-pkg/
 ```
 
 ## 附录：配置软件源
 
-FreeBSD 官方源的 pkgbase 信息如下：
+为了帮助读者更好地配置 pkgbase 源，下面整理了 FreeBSD 官方源的 pkgbase 信息，包括各分支的更新频率和对应的 URL 地址。
 
 | **分支** | **更新频率** | **URL 地址** |
 | :---: | :---: | :--- |
@@ -565,6 +599,8 @@ FreeBSD 官方源的 pkgbase 信息如下：
 若官方源下载速度慢，可以考虑换成国内镜像。只需要替换 `https://pkg.freebsd.org` 这部分。
 
 ## 参考文献
+
+本章介绍的内容涉及多个技术点，下面列出了一些相关的参考资料，供有兴趣的读者进一步学习。
 
 - [ZFS Boot Environments Explained](https://vermaden.wordpress.com/2025/11/25/zfs-boot-environments-explained/) [备份](https://web.archive.org/web/20260120223606/https://vermaden.wordpress.com/2025/11/25/zfs-boot-environments-explained/)，指出可以手动安装 openzfs 来达到旧系统使用新 zfs 池的目的
 - [wiki/BootEnvironments](https://wiki.freebsd.org/BootEnvironments) [备份](https://web.archive.org/web/20260111062150/https://wiki.freebsd.org/BootEnvironments)，维基
