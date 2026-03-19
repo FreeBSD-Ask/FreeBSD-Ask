@@ -16,7 +16,7 @@
 
 加州大学伯克利分校成立于 1868 年，是一所公立大学。同年，中国近代第一所国立大学——北京大学的校长蔡元培诞生。他“要有良好的社会，必先有良好的个人，要有良好的个人，就要先有良好的教育”的观点，与“Fiat Lux”所倡导的以个人进步推动社会发展的理念不谋而合。蔡元培被尊为北大“永远的校长”。同年，日本启动明治维新，迈入新时代并走上现代化道路，然而这一进程也为日本未来的侵略战争埋下了伏笔。
 
-Fiat Lux 出自拉丁文圣经“1.3：Dixitque Deus : Fiat lux. Et facta est lux.”（圣经武加大译本）。“And God said, 1.3: Let there be light, and there was light.”（NIV 版圣经）“1.3：神说、要有光、就有了光。”（《和合本圣经》）
+Fiat Lux 出自拉丁文圣经“1.3：Dixitque Deus : Fiat lux. Et facta est lux.”（圣经武加大译本）。“And God said, ‘Let there be light,’ and there was light.”（NIV 版圣经）“1.3：神说、要有光、就有了光。”（《和合本圣经》）
 
 由此可见，先有光，后有世界。在基督教神学中，上帝先于人类创造了光，这真理之光照耀世人，也被视作人类理性的源泉。
 
