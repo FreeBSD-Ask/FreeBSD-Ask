@@ -98,7 +98,7 @@ dev.pcm.2.play.vchanmode: vchan format/rate selection: 0=fixed, 1=passthrough, 2
 
 参数说明：
 
-- 由于使用的是 OSS 音频驱动，Music Player Daemon 只能采用 DoP（DSD over PCM）传输模式，而 DoP 模式要求必须启用 bitperfect 位完美模式。
+- 由于使用的是 OSS 音频驱动，Music Player Daemon 只能采用 DoP（DSD over PCM）传输模式，而 DoP 模式要求必须启用 bit-perfect 比特完美模式。
 - 采样率（vchanrate）：DSD 音频的采样率为 44.1 kHz 的整数倍，因此不应设置为 48 kHz 的整数倍，否则可能产生音频杂音；在硬件条件允许的情况下应设置为尽可能高的数值，此处示例设置为 352.8 kHz。
 
 - `dev.pcm.2.play.vchanmode` 虚拟通道模式参数说明：
