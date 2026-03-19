@@ -155,7 +155,7 @@ Proceed with this action? [y/N]: # 此处输入 y 再按回车键即可安装
 >
 >> [Add Concurrent Downloads of Multiple Packages](https://github.com/freebsd/pkg/issues/1628) [备份](https://web.archive.org/web/20251115011503/https://github.com/freebsd/pkg/issues/1628)
 >
-> 你会发现 pkg 既不支持并行下载也不支持并行安装，阅读源代码，尝试解决提交 PR 这个问题。
+> 你会发现 pkg 既不支持并行下载也不支持并行安装，阅读源代码，尝试解决这个问题并提交 PR。
 
 你极有可能会遇到这种情况：
 
