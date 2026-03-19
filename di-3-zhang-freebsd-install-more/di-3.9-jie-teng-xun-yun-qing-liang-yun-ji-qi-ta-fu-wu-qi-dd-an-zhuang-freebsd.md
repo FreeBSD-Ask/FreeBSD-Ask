@@ -1,10 +1,10 @@
 # 3.9 腾讯云轻量云安装 FreeBSD（传统引导和 MBR 分区表）
 
-这实质上是通过本地硬盘安装 FreeBSD。即在不依赖额外介质的前提下，借助已有的操作系统（Linux）完成 FreeBSD 的安装。
+本节介绍在不提供 FreeBSD 官方镜像的云服务器环境下，通过已有 Linux 系统间接部署 FreeBSD 的技术方案，其本质是通过本地硬盘完成 FreeBSD 的安装。即在不依赖额外安装介质的前提下，借助已有的操作系统（Linux）完成 FreeBSD 的安装与部署。
 
 ## 概述
 
-对于已停止安全支持的版本（如 9.2），请参考本文内容，并结合“手动安装 FreeBSD”章节进行操作。
+本节介绍在腾讯云轻量云等服务器上安装 FreeBSD 的方法，具有一定的普适性。对于已停止安全支持的版本（如 9.2），请参考本文内容，并结合“手动安装 FreeBSD”章节进行操作。
 
 安装前，请在原有的 Linux 系统中查看 IP 地址及子网掩码。
 
@@ -19,11 +19,11 @@
 
 视频内容与文字教程可能存在差异，任选其一操作即可。SCP 命令可以使用图形化工具 WinSCP 替代。安装完成后，建议按照其他章节设置密钥登录并禁用密码验证，以提升安全性。
 
-## 概述
+## 腾讯云轻量云及阿里云轻量应用服务器介绍
 
 [腾讯云轻量应用服务器（即腾讯云轻量云）](https://cloud.tencent.com/product/lighthouse) [备份](https://web.archive.org/web/20260118022716/https://cloud.tencent.com/product/lighthouse) 以及 [阿里云轻量应用服务器](https://www.aliyun.com/product/swas) [备份](https://web.archive.org/web/20260119171609/https://cn.aliyun.com/product/swas?from_alibabacloud=) 均未提供 FreeBSD 系统支持，只能通过特殊方法手动安装。
 
->**警告**
+> **警告**
 >
 >请注意数据安全。本教程操作具有一定风险，并要求你具备一定的动手能力。
 
@@ -59,7 +59,7 @@ initrd (hd0,msdos1)/initramfs.igz  # 指定初始 RAM 磁盘映像文件路径
 boot # 输入 boot 后回车即可继续启动
 ```
 
->**技巧**
+> **技巧**
 >
 >分区标识不一定是 `(hd0,msdos1)`，请以实际情况为准。注意不要误删过多内容导致无法辨识。
 
@@ -78,7 +78,7 @@ mfsBSD 和 mfsLinux 镜像的默认 `root` 密码均为 `mfsroot`。
 # reboot # 重启系统
 ```
 
->**技巧**
+> **技巧**
 >
 >建议在此处使用服务器的“快照”功能进行备份，以防后续操作失误导致重装，耽误时间。
 
@@ -167,7 +167,7 @@ boot # 输入 boot 后回车即可继续启动
 # dnf install syslinux
 ```
 
->**警告**
+> **警告**
 >
 >GRUB2 自带的 `memdisk.mod` 模块并非 MEMDISK。必须安装 syslinux 包才能获得 MEMDISK 工具。
 

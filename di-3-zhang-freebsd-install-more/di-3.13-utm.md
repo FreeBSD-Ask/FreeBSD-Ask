@@ -1,12 +1,16 @@
 # 3.13 基于 Apple M1 和 UTM 安装 FreeBSD
 
+本节系统介绍在 Apple M1 架构设备上，通过 UTM 虚拟化平台部署 FreeBSD 操作系统的技术方案与实测结果。
+
 ## 概述
+
+本节介绍在 Apple M1 设备上使用 UTM 安装 FreeBSD 的方法，为 macOS 用户提供 FreeBSD 系统的部署途径。
 
 UTM 官方网站是 <https://getutm.app>。
 
-UTM（Universal Turing Machine）是一款开源的，基于 QEMU 的，面向 Apple 设备的虚拟机。其支持 ARM 和 x86 架构虚拟机。读者需要注意，建议下载 aarch64（arm64）架构而非 amd64（x86-64），除非有特殊需求，否则建议下载 aarch64 的，相同架构速度快一些（M1 为 aarch64 架构），性能损失小。
+UTM（Universal Turing Machine）是一款开源、基于 QEMU、面向 Apple 设备的虚拟机软件，支持 ARM 和 x86 架构虚拟机。读者需要注意，建议下载 aarch64（arm64）架构而非 amd64（x86-64），除非有特殊需求，否则建议下载 aarch64 版本，相同架构速度更快（M1 为 aarch64 架构），性能损失更小，系统运行更为流畅。
 
-因开发成本问题（Apple 开发者需要每年缴纳一定的费用才能获取资格），UTM 在 App Store 中是收费的。但是可以在 [GitHub 项目，utmapp/UTM](https://github.com/utmapp/UTM/releases) 中免费获取 UTM。
+因开发成本问题（Apple 开发者需要每年缴纳一定的费用才能获取资格），UTM 在 App Store 中是收费的。但是可以在 [GitHub 项目，utmapp/UTM](https://github.com/utmapp/UTM/releases) 中免费获取 UTM，为用户提供了灵活的选择。
 
 ## 安装介绍
 
@@ -28,7 +32,7 @@ UTM（Universal Turing Machine）是一款开源的，基于 QEMU 的，面向 A
 
 ![选择操作系统](../.gitbook/assets/install_bsd_on_utm/3.png)
 
-内存默认的 4GB 能适应大多数情况，初始状态下 FreeBSD 15 会占用大约 500M 的内存，有需求可以自己增加或者减少内存。CPU 核心按需设置，M1 芯片可以设置成 4。
+默认 4GB 内存能适应大多数情况，初始状态下 FreeBSD 15 会占用大约 500MB 内存，有需求可以自行增加或减少内存。CPU 核心按需设置，M1 芯片可以设置为 4。
 
 ![设置内存和处理器核心数](../.gitbook/assets/install_bsd_on_utm/4.png)
 
@@ -36,7 +40,7 @@ UTM（Universal Turing Machine）是一款开源的，基于 QEMU 的，面向 A
 
 ![设置启动设备](../.gitbook/assets/install_bsd_on_utm/5.png)
 
-存储空间默认 64GB，初始状态 FreeBSD 会使用 5GB 左右的空间，可以根据需求调节。
+存储空间默认 64GB，初始状态 FreeBSD 会使用 5GB 左右的空间，可以根据需求调整。
 
 ![设置存储空间](../.gitbook/assets/install_bsd_on_utm/6.png)
 
@@ -44,7 +48,7 @@ UTM（Universal Turing Machine）是一款开源的，基于 QEMU 的，面向 A
 
 ![跳过共享目录](../.gitbook/assets/install_bsd_on_utm/7.png)
 
-以上步骤设置完以后点击存储即可，想要进一步设置可以勾选“打开虚拟机设置”，或者点击存储以后点击右上角设置按钮打开设置。
+以上步骤设置完成后点击“存储”即可。如需进一步设置，可以勾选“打开虚拟机设置”，或者在保存后点击右上角的设置按钮打开配置界面。
 
 ![结束设置](../.gitbook/assets/install_bsd_on_utm/8.png)
 
@@ -54,7 +58,7 @@ UTM（Universal Turing Machine）是一款开源的，基于 QEMU 的，面向 A
 
 ![虚拟机启动界面](../.gitbook/assets/install_bsd_on_utm/10.png)
 
-启动 FreeBSD 安装介质镜像，按回车键可以启动菜单跳过等待时间。
+启动 FreeBSD 安装介质镜像，按回车键可以跳过启动菜单等待时间。
 
 ![系统引导界面](../.gitbook/assets/install_bsd_on_utm/11.png)
 
@@ -62,7 +66,7 @@ UTM（Universal Turing Machine）是一款开源的，基于 QEMU 的，面向 A
 
 ![安装程序界面](../.gitbook/assets/install_bsd_on_utm/12.png)
 
-基本系统安装完成，终端能正常运行，在虚拟机里面执行 ifconfig 看到 IP 以后可以在宿主机的终端模拟器中连接。
+基本系统安装完成，终端能正常运行，在虚拟机内执行 ifconfig 查看到 IP 地址后，可以在宿主机的终端模拟器中连接。
 
 ![终端](../.gitbook/assets/install_bsd_on_utm/13.png)
 

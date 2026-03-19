@@ -1,20 +1,22 @@
 # 3.4 安装双系统（先安装 FreeBSD）
 
->**注意**
+本节系统介绍在同一物理设备上部署 FreeBSD 与 Windows 多操作系统的技术方案，本小节聚焦于先安装 FreeBSD、再安装其他操作系统的场景。
+
+> **注意**
 >
->本文要求先安装 FreeBSD，再安装 Windows 或其他操作系统。
+> 本文要求先安装 FreeBSD，再安装 Windows 或其他操作系统，请遵循此顺序进行操作。
 
 ## 安装 FreeBSD 14.2 RELEASE
 
-按照以下步骤安装 FreeBSD 14.2 RELEASE，本文未特别说明之处，均采用默认设置与参数。
+首先按照以下步骤安装 FreeBSD 14.2 RELEASE 系统，本文未特别说明之处，均采用默认设置与参数，以确保系统的稳定性。
 
 ![](../.gitbook/assets/shuang1.png)
 
 ![](../.gitbook/assets/shuang2.png)
 
->**技巧**
+> **技巧**
 >
->如果在此处设置 `P Partition Scheme` 为 `GPT (UEFI)` 而非其他（只有老电脑才需要 `GPT (BIOS+UEFI)` 等选项），后续分区与系统更新过程会更加简单，也能实现 4K 对齐。
+> 如果在此处设置 `P Partition Scheme` 为 `GPT (UEFI)` 而非其他（只有老电脑才需要 `GPT (BIOS+UEFI)` 等选项），后续分区与系统更新过程会更加简单，也能实现 4K 对齐。
 
 
 ![](../.gitbook/assets/shuang3.png)
@@ -22,7 +24,7 @@
 在这一步修改 `S Swap Size` 的大小（该数值表示计划中的交换分区与 Windows 系统分区容量之和）。
 
 
-本文中，交换分区（Swap）大小为 8 GB，其余 200 GB 空间预留给 Windows。
+本文中，交换分区（Swap）大小为 8GB，其余 200GB 空间预留给 Windows。
 
 ![](../.gitbook/assets/shuang4.png)
 
@@ -55,7 +57,7 @@ Device              Size     Used    Avail Capacity
 /dev/nda0p3          208G       0B     208G     0%
 ```
 
-可以看到交换分区的大小是我们所设定的 208 GB（其中 200 GB 预留给 Windows 操作系统）。
+可以看到交换分区的大小是我们所设定的 208GB（其中 200GB 预留给 Windows 操作系统）。
 
 编辑 `/etc/fstab`，在 swap 对应行的行首添加 `#` 字符将其注释，本例中该行是第三行：
 
@@ -66,6 +68,8 @@ Device              Size     Used    Avail Capacity
 ```
 
 ## 安装 Windows 11
+
+FreeBSD 安装完成后，接下来安装 Windows 系统。
 
 插入 Windows 启动盘，设置 BIOS 从该启动盘启动，开始安装 Windows。
 
@@ -83,15 +87,15 @@ Device              Size     Used    Avail Capacity
 
 ## 还原交换分区（Swap）
 
-我们分配了 208 GB 空间，其中有 8 GB 是为交换分区预留的。现在需要将其还原。需要用到工具 [DiskGenius](https://www.diskgenius.com/) [备份](https://web.archive.org/web/20260117184154/https://www.diskgenius.com/)。
+Windows 安装完成后，需要为 FreeBSD 还原交换分区。我们分配了 208GB 空间，其中有 8GB 是为交换分区预留的。现在需要将其还原。需要用到工具 [DiskGenius](https://www.diskgenius.com/) [备份](https://web.archive.org/web/20260117184154/https://www.diskgenius.com/)。
 
 ![](../.gitbook/assets/shuang8.png)
 
-打开 DiskGenius，压缩 C 盘，腾出 8 GB 的未分配空间。
+打开 DiskGenius，压缩 C 盘，腾出 8GB 的未分配空间。
 
 ![](../.gitbook/assets/shuang9.png)
 
-将这 8 GB 空间格式化为 `FreeBSD Swap partition` 类型，然后点击“保存更改”。
+将这 8GB 空间格式化为 `FreeBSD Swap partition` 类型，然后点击“保存更改”。
 
 ![](../.gitbook/assets/shuang10.png)
 
@@ -164,4 +168,3 @@ zroot/var/log        188K  87.8G   188K  /var/log
 zroot/var/mail        96K  87.8G    96K  /var/mail
 zroot/var/tmp         96K  87.8G    96K  /var/tmp
 ```
-

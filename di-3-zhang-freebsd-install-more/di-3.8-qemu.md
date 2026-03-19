@@ -1,18 +1,24 @@
 # 3.8 使用 QEMU 在 x86 架构 Windows 主机上安装 RISC-V 架构的 FreeBSD
 
-QEMU（Quick Emulator）是一款通过纯软件进行模拟的开源虚拟机监视器，支持多种处理器体系结构的模拟。
+本节研究跨架构虚拟化技术问题，具体探讨在 x86-64 架构的 Windows 宿主机上，通过 QEMU 实现 RISC-V 架构虚拟机部署 FreeBSD 的技术方案，为异构计算环境下的系统部署提供参考。
 
-本文环境基于 Windows 11 24H2（宿主机，x86-64 架构）、FreeBSD 14.2-RELEASE（虚拟机，RISC-V 架构）以及 QEMU 20241220。
+QEMU（Quick Emulator）是一款通过纯软件进行模拟的开源虚拟机监视器（VMM，Virtual Machine Monitor），支持多种处理器体系结构的模拟与跨架构执行，具有良好的兼容性与灵活性。
+
+本文实验环境基于 Windows 11 24H2（宿主机，x86-64 架构）、FreeBSD 14.2-RELEASE（虚拟机，RISC-V 架构）以及 QEMU 20241220，所有操作步骤均在此环境下验证。
 
 ## QEMU
 
+首先需要下载并安装 QEMU 虚拟机软件。
+
 QEMU 下载地址：
 
-[QEMU Binaries for Windows (64 bit)](https://qemu.weilnetz.de/w64/) [备份](https://web.archive.org/web/20260108214840/https://qemu.weilnetz.de/w64/)，请下载列表中最新的安装程序。写作本文时，最新版本为 `qemu-w64-setup-20241220.exe`。大小为 174M。
+[QEMU Binaries for Windows (64 bit)](https://qemu.weilnetz.de/w64/) [备份](https://web.archive.org/web/20260108214840/https://qemu.weilnetz.de/w64/)，请下载列表中最新的安装程序。写作本文时，最新版本为 `qemu-w64-setup-20241220.exe`。大小为 174MB。
 
 下载后在 Windows 上安装 QEMU。
 
 ## RISC-V FreeBSD 磁盘镜像
+
+QEMU 安装完成后，需要下载 RISC-V 架构的 FreeBSD 磁盘镜像。
 
 RISC-V FreeBSD 磁盘镜像（以 FreeBSD 14.2 RELEASE 为例）：
 
@@ -22,7 +28,7 @@ RISC-V FreeBSD 磁盘镜像（以 FreeBSD 14.2 RELEASE 为例）：
 
 ## OpenSBI
 
-在 FreeBSD 系统中获取 OpenSBI（RISC-V Open Source Supervisor Binary Interface），其功能类似于启动固件。
+接下来需要获取 OpenSBI（RISC-V Open Source Supervisor Binary Interface），其功能类似于启动固件。
 
 ### 安装 OpenSBI
 
@@ -79,7 +85,7 @@ root@ykla:/home/ykla # locate u-boot.bin
 
 提取 `u-boot.bin` 到 Windows 下备用。
 
-## 配置 Qemu
+## 配置 QEMU
 
 在桌面新建一个文本文件 `qemu.bat`，写入
 
