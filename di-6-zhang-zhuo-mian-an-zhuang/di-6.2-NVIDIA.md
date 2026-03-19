@@ -4,7 +4,7 @@
 
 对于台式机，若 CPU 是英特尔处理器，且型号以 F（如 [i5-9400F](https://www.intel.cn/content/www/cn/zh/products/sku/190883/intel-core-i59400f-processor-9m-cache-up-to-4-10-ghz/specifications.html) [备份](https://web.archive.org/web/20260120221551/https://www.intel.cn/content/www/cn/zh/products/sku/190883/intel-core-i59400f-processor-9m-cache-up-to-4-10-ghz/specifications.html)）或者 KF（如 [i5-12600KF](https://www.intel.cn/content/www/cn/zh/products/sku/134590/intel-core-i512600kf-processor-20m-cache-up-to-4-90-ghz/specifications.html) [备份](https://web.archive.org/web/20260121072407/https://www.intel.cn/content/www/cn/zh/products/sku/134590/intel-core-i512600kf-processor-20m-cache-up-to-4-90-ghz/specifications.html)）结尾，则该型号没有核芯显卡，不需要处理核显相关配置。
 
-若您已拥有独立显卡，且视频输出接口（DP 或 HDMI）直接连接至独立显卡，则通常无需对核显进行任何配置，仅需处理独立显卡本身的驱动即可。
+若你已拥有独立显卡，且视频输出接口（DP 或 HDMI）直接连接至独立显卡，则通常无需对核显进行任何配置，仅需处理独立显卡本身的驱动即可。
 
 对于不具备显卡直通能力的笔记本设备，必须先按照其他章节内容安装配置英特尔核显驱动（相关 DRM 模块），再参照下文进行配置！
 
