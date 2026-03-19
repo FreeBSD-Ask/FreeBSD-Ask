@@ -1,16 +1,18 @@
 # 6.4 KDE 6 桌面环境（Wayland 会话）
 
-## 环境准备
+## Wayland 会话环境概述
 
-由于 issue [Request to restore support for vboxvideo and vmwgfx DRM drivers #356](https://github.com/freebsd/drm-kmod/issues/356) [备份](https://web.archive.org/web/20260120215704/https://github.com/freebsd/drm-kmod/issues/356) 始终未能得到解决（FreeBSD drm 驱动的移植只覆盖了 Intel、AMD 和 NVIDIA 等 GPU），故在 VMware、VirtualBox 或任何基于 Virtio 的虚拟机上均无法复现此教程。你需要在真实的物理机上进行参照。
+Wayland 作为新一代显示服务器协议，相比传统的 X11 协议在架构设计与安全性方面具有多项技术优势。本节系统阐述在 FreeBSD 操作系统中配置 KDE 6 Wayland 会话的具体方法与相关注意事项。
 
-NVIDIA 卡未经测试。本文使用 Intel 12 代处理器（i7-1260P）的核显进行测试。
+由于 issue [Request to restore support for vboxvideo and vmwgfx DRM drivers #356](https://github.com/freebsd/drm-kmod/issues/356) [备份](https://web.archive.org/web/20260120215704/https://github.com/freebsd/drm-kmod/issues/356) 尚未得到解决（FreeBSD DRM 驱动的移植仅覆盖了 Intel、AMD 和 NVIDIA 等 GPU），故在 VMware、VirtualBox 或任何基于 Virtio 的虚拟机上均无法复现本教程。你需要在真实的物理机上进行操作。
 
-请参照其他章节内容自行 **安装** drm、KDE 6、Fcitx 5、火狐浏览器等软件包。**并配置 drm 显卡驱动。** 其余软件包暂且 **不要** 进行任何配置，**仅安装** 即可。请加入 video 组。
+NVIDIA 显卡尚未经过测试。本文使用 Intel 第 12 代处理器（i7-1260P）的集成显卡进行测试。
 
-## 加入 video 组
+请参照其他章节内容自行 **安装** DRM、KDE 6、Fcitx 5、Firefox 浏览器等软件包。**并配置 DRM 显卡驱动。** 其余软件包暂且 **不要** 进行任何配置，**仅安装** 即可。请确保将用户加入 video 组。
 
-将指定用户加入 video 组以拥有权限调用显卡。
+## 用户权限配置：加入 video 组
+
+将指定用户加入 video 组以获得调用显卡设备的权限：
 
 ```sh
 # pw groupmod video -m 你的用户名
@@ -77,7 +79,7 @@ $ chmod 755 ~/kde.sh
 
 >**注意**
 >
->你必须停止 SDDM 服务才能使用该脚本。请现在就检查 `/etc/rc.conf` 是否有 `sddm_enable="YES"` 字样，如有请删除。并按快捷键 ctrl + alt + f2 进入 TTY，登录 root 后输入 `service sddm stop` 停止 SDDM 服务。
+>你必须停止 SDDM 服务才能使用该脚本。请现在就检查 `/etc/rc.conf` 是否有 `sddm_enable="YES"` 字样，如有请删除。并按快捷键 Ctrl+Alt+F2 进入 TTY，登录 root 后输入 `service sddm stop` 停止 SDDM 服务。
 
 - 进入 KDE
 

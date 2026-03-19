@@ -1,6 +1,8 @@
 # 6.12 bspwm
 
-bspwm，据说更符合 UNIX 哲学（参见 [bspwm 入门](https://zerovip.vercel.app/zh/63233/) [备份](https://web.archive.org/web/20260120225041/https://zerovip.vercel.app/zh/63233/)，7.2 Unix 哲学）。
+## bspwm 窗口管理器概述
+
+bspwm 是一款轻量级平铺窗口管理器，其设计理念更契合 UNIX 哲学原则（参见 [bspwm 入门](https://zerovip.vercel.app/zh/63233/) [备份](https://web.archive.org/web/20260120225041/https://zerovip.vercel.app/zh/63233/)，7.2 UNIX 哲学）。作为平铺式窗口管理器，bspwm 以其高效的窗口组织与管理方式著称。
 
 ## 安装 bspwm
 

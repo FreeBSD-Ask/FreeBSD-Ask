@@ -2,11 +2,11 @@
 
 ## NVIDIA 显卡驱动概述
 
-对于台式机，注意若 CPU 是英特尔处理器，且型号以 F（如 [i5-9400F](https://www.intel.cn/content/www/cn/zh/products/sku/190883/intel-core-i59400f-processor-9m-cache-up-to-4-10-ghz/specifications.html) [备份](https://web.archive.org/web/20260120221551/https://www.intel.cn/content/www/cn/zh/products/sku/190883/intel-core-i59400f-processor-9m-cache-up-to-4-10-ghz/specifications.html)）或者 KF（如 [i5-12600KF](https://www.intel.cn/content/www/cn/zh/products/sku/134590/intel-core-i512600kf-processor-20m-cache-up-to-4-90-ghz/specifications.html) [备份](https://web.archive.org/web/20260121072407/https://www.intel.cn/content/www/cn/zh/products/sku/134590/intel-core-i512600kf-processor-20m-cache-up-to-4-90-ghz/specifications.html)）结尾的型号，是没有核芯显卡的，不需要处理核显相关配置。
+对于台式机，若 CPU 是英特尔处理器，且型号以 F（如 [i5-9400F](https://www.intel.cn/content/www/cn/zh/products/sku/190883/intel-core-i59400f-processor-9m-cache-up-to-4-10-ghz/specifications.html) [备份](https://web.archive.org/web/20260120221551/https://www.intel.cn/content/www/cn/zh/products/sku/190883/intel-core-i59400f-processor-9m-cache-up-to-4-10-ghz/specifications.html)）或者 KF（如 [i5-12600KF](https://www.intel.cn/content/www/cn/zh/products/sku/134590/intel-core-i512600kf-processor-20m-cache-up-to-4-90-ghz/specifications.html) [备份](https://web.archive.org/web/20260121072407/https://www.intel.cn/content/www/cn/zh/products/sku/134590/intel-core-i512600kf-processor-20m-cache-up-to-4-90-ghz/specifications.html)）结尾，则该型号没有核芯显卡，不需要处理核显相关配置。
 
-若你已拥有独立显卡，且你的视频输出（DP 或 HDMI）是直接插入的独立显卡。那么通常来说，你同样无需对核显进行任何配置，仅处理独显本身的驱动即可。
+若你已拥有独立显卡，且视频输出接口（DP 或 HDMI）直接连接至独立显卡，则通常无需对核显进行任何配置，仅需处理独立显卡本身的驱动即可。
 
-对于没有显卡直通能力的笔记本，必须先按照其他章节内容先安装配置英特尔核显驱动（相关 DRM）再参照下文进行配置！
+对于不具备显卡直通能力的笔记本设备，必须先按照其他章节内容安装配置英特尔核显驱动（相关 DRM 模块），再参照下文进行配置！
 
 ## 加入 video 组
 
@@ -49,11 +49,11 @@
 
 >**警告**
 >
->不要试图加载 `nvidia-drm.ko`，会导致系统宕机。
+>请勿尝试加载 `nvidia-drm.ko` 内核模块，该操作可能导致系统崩溃。
 
 ### 生成 X11 配置文件
 
-注意，若可正常显示，则无需执行此节！
+需要注意的是，若系统可正常显示，则无需执行本节内容！
 
 ```sh
 # Xorg -configure                     # 自动生成 Xorg 配置文件
@@ -62,7 +62,7 @@
 
 >**警告**
 >
->不要试图安装和使用 Port `x11/nvidia-xconfig`。没有用且会卡死。
+>不要试图安装和使用 Port `x11/nvidia-xconfig`。该工具当前不适用，可能导致系统无响应。
 
 
 ## 硬件加速和解码器
@@ -137,7 +137,7 @@ Mon Jan 19 19:06:59 2026
 
 ![](../.gitbook/assets/no-version-vo.jpg)
 
-当执行 nvidia-smi 命令时会出现错误提示“API mismatch”等字样。直译是 API 不匹配，提及不匹配，首先会想到是版本不匹配，即问题可能出现在 NVIDIA 本身的版本不匹配、NVIDIA 驱动本身与其他 NVIDIA 软件包版本不匹配、NVIDIA 和现有 FreeBSD 基本系统不匹配。
+当执行 nvidia-smi 命令时会出现错误提示“API mismatch”等字样。该错误直译表示 API 不匹配，问题通常源于版本兼容性问题，即可能存在以下几种情况：NVIDIA 驱动组件本身版本不匹配、NVIDIA 驱动与其他 NVIDIA 软件包版本不匹配、NVIDIA 驱动与当前 FreeBSD 基本系统版本不匹配。
 
 因此建议将所有 NVIDIA 软件包全部卸载，随后将 FreeBSD 基本系统更新到最新，再重新执行驱动安装流程。
 
@@ -151,7 +151,7 @@ Mon Jan 19 19:06:59 2026
 
 ### 如何阻止驱动更新
 
-把 `pkg info -q | grep -i nvidia` 输出的相关软件包都逐个使用 `pkg lock`命令锁定即可。
+把 `pkg info -q | grep -i nvidia` 输出的相关软件包都逐个使用 `pkg lock` 命令锁定即可。
 
 形如
 
@@ -163,4 +163,3 @@ Mon Jan 19 19:06:59 2026
 但是如果运行 `freebsd-update` 命令，或者执行 pkgbase 对系统打补丁或更新补丁也可能会影响驱动。
 
 因此需要读者自行平衡安全与日常。
-

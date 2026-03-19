@@ -1,10 +1,12 @@
 # 6.7 Cinnamon
 
-Cinnamon 基于 GNOME Shell，来自 Linux Mint 项目。
+## Cinnamon 桌面环境概述
+
+Cinnamon 桌面环境基于 GNOME Shell 技术栈，源自 Linux Mint 项目。作为 Linux Mint 项目的核心组件之一，Cinnamon 旨在提供符合传统桌面交互范式且易于使用的桌面体验。
 
 ## Cinnamon：肉桂、桂皮、桂枝、烟桂概念辨析
 
-Cinnamon 本身是肉桂（锡兰肉桂/斯里兰卡肉桂）的意思，但不是我们炖肉用的那个桂皮（尽管二者都是肉桂树的树皮，树种不同），而是一种用于制作冰红茶或西式糕点、咖啡的香料。
+Cinnamon 本身是肉桂（锡兰肉桂/斯里兰卡肉桂）的意思，但不是我们日常烹饪用的桂皮（尽管二者都是肉桂树的树皮，但所属树种不同），而是一种常用于制作冰红茶或西式糕点、咖啡的香料。
 
 锡兰肉桂主要产地是斯里兰卡，有一种柑橘香甜的复合气味。而桂皮（烟桂则是去掉青皮的优质桂皮）主要产地是中国南方以及越南，气味则是一股辛辣刺激的中药味。
 
@@ -64,7 +66,7 @@ exec cinnamon-session
 proc /proc procfs rw 0 0
 ```
 
-挂载 `procfs` 文件系统到 `/proc`，读写模式
+挂载 `procfs` 文件系统到 `/proc`，读写模式。
 
 ## 服务管理
 
@@ -89,7 +91,7 @@ proc /proc procfs rw 0 0
 
 ![cinnamon on FreeBSD](../.gitbook/assets/cinnamon2.png)
 
-壁纸就是黑色的，不是哪儿出了问题。
+默认壁纸为黑色，此为正常现象。
 
 ![cinnamon on FreeBSD](../.gitbook/assets/cinnamon3.png)
 
