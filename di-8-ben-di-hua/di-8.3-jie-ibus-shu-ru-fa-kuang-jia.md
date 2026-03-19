@@ -1,8 +1,10 @@
 # 8.3 IBus 输入法框架
 
-IBus 即“Intelligent Input Bus”（智能输入总线）。
+IBus 即“Intelligent Input Bus”（智能输入总线），是 Linux 及类 UNIX 系统中广泛应用的一种输入法框架体系。
 
-## IBus
+## 安装 IBus
+
+在明确了 IBus 的基本概念后，接下来介绍如何在 FreeBSD 系统上安装和配置 IBus 输入法框架。
 
 - 使用 pkg 安装：
 
@@ -27,6 +29,8 @@ IBus 即“Intelligent Input Bus”（智能输入总线）。
 - `chinese/ibus-table-chinese` 包含五笔、仓颉等多种输入法
 
 ## 配置环境变量
+
+安装完成后，需要配置相应的环境变量以确保 IBus 能够在各种应用程序中正常工作。
 
 - 登录管理器配置路径
 
@@ -66,6 +70,8 @@ setenv XIM_ARGS "--daemonize --xim"
 ```
 
 ## IBus 设置
+
+完成环境变量配置后，可以通过以下方式进行 IBus 的设置：
 
 - IBus 设置：
 
