@@ -1,5 +1,7 @@
 # 5.2 更换 FreeBSD 软件源
 
+本章详细介绍FreeBSD生态系统中各类软件源的概念、配置方法及最佳实践。软件源配置是FreeBSD系统管理的核心环节，直接影响软件安装效率、系统更新速度及整体运维体验。
+
 ## 软件源概览
 
 | 软件源 | 简介 | 备注|
@@ -103,6 +105,8 @@ FreeBSD pkg 的 quarterly 分支也试图实现相同的目的（提供可预测
 >并非所有源都提供 `quarterly` 和 `latest`，具体请参见 <https://pkg.freebsd.org/> 。也并非为所有架构都提供了 pkg 源，与平台支持等级有关。
 
 ### 参考文献
+
+关于 quarterly 分支的更多信息，可以参考以下官方文档。
 
 - [Wiki QuarterlyBranch](https://wiki.freebsd.org/Ports/QuarterlyBranch) [备份](https://web.archive.org/web/20260120222534/https://wiki.freebsd.org/Ports/QuarterlyBranch)
 
@@ -518,7 +522,7 @@ MASTER_SITE_OVERRIDE?=https://mirrors.ustc.edu.cn/freebsd-ports/distfiles/${DIST
 
 其优点在于：
 
-- 启用 `signature_type: "fingerprints"` 核 `fingerprints`：使用 FreeBSD 官方内置密钥验证包签名
+- 启用 `signature_type: "fingerprints"` 和 `fingerprints`：使用 FreeBSD 官方内置密钥验证包签名
 - `mirror_type: "none"`：适合国内的 HTTPS 直链镜像（官方用 `"srv"` 是因为 `pkg+https://` 支持 DNS SRV，但镜像站不需要）
 
 推荐在生产环境始终启用签名验证。如果追求极简，可以去掉这些行，但不建议，除非你完全信任网络环境。
