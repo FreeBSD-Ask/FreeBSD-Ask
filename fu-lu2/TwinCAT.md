@@ -2,7 +2,9 @@
 
 ## TwinCAT/BSD 简介
 
-TwinCAT/BSD 是由倍福公司（Beckhoff）开发的基于 FreeBSD 的 PLC（Programmable Logic Controller，可编程逻辑控制器）控制操作系统。在不使用商业功能时，个人用户完全可以免费使用。倍福支持第三方硬件安装，但许可证费用按顶配 PLC 收取：倍福的许可证费用根据硬件性能而定，一般 PLC 标准为 P40/P50。例如，一个基本许可证价格为 1500 元，而第三方硬件按 P90 收费，同样功能约为 6000 元。
+在工业自动化与控制系统的技术谱系中，TwinCAT/BSD 是一款专门针对工业控制领域深度优化的操作系统，它基于 FreeBSD 开发，代表了开源操作系统在工业自动化领域的创新性应用。从工业控制系统的架构视角来看，TwinCAT/BSD 为工业自动化场景提供了兼具实时性和开放性的操作系统解决方案。
+
+TwinCAT/BSD 是由倍福公司（Beckhoff）开发的基于 FreeBSD 的 PLC（Programmable Logic Controller，可编程逻辑控制器）控制操作系统。从许可模式来看，在不使用商业功能时，个人用户完全可以免费使用。关于硬件兼容性与授权策略，倍福支持第三方硬件安装，但许可证费用按顶配 PLC 级别收取：倍福的许可证费用根据硬件性能分级，一般 PLC 标准为 P40/P50 级别。例如，一个基本许可证价格为 1500 元，而第三方硬件按 P90 级别收费，同样功能约为 6000 元。
 
 更多内容请参考：
 
@@ -12,24 +14,25 @@ TwinCAT/BSD 是由倍福公司（Beckhoff）开发的基于 FreeBSD 的 PLC（Pr
 
 ## 下载 TwinCAT/BSD
 
+了解 TwinCAT/BSD 的基本信息后，我们可以开始准备安装。首先需要获取系统安装镜像。TwinCAT/BSD 的下载地址如下：
+
 <https://www.beckhoff.com/en-us/search-results/?q=bsd>
 
 ![TCBSD](../.gitbook/assets/tcbsd.png)
 
 点击 `↓ ZIP` 即可下载。**注意：需要注册才能下载。**
 
-首先解压 ZIP，得到“TCBSD-x64-13-92446.iso”文件。
+首先解压 ZIP，得到 `TCBSD-x64-13-92446.iso` 文件。
 
 ## 创建虚拟硬盘并写入镜像
 
-TCBSD 官方镜像是使用 `dd` 工具制作的，实际上对应 FreeBSD 的 img 镜像，因此虚拟机无法直接识别。需要通过创建虚拟 VHD 硬盘的方式，将镜像写入硬盘后再挂载到虚拟机进行安装。
+下载完成后，我们需要对镜像进行特殊处理才能用于虚拟机安装。TCBSD 官方镜像是使用 `dd` 工具制作的，实际上对应 FreeBSD 的 img 镜像，因此虚拟机无法直接识别。需要通过创建虚拟 VHD 硬盘的方式，将镜像写入硬盘后再挂载到虚拟机进行安装。
 
-
-首先右键单击“这台电脑”，选择管理--磁盘管理--操作--创建 VHD。
+首先右键单击“这台电脑”，选择“管理”→“磁盘管理”→“操作”→“创建 VHD”。
 
 ![TCBSD](../.gitbook/assets/t1.png)
 
-硬盘大小设置为 1GB 即可，过大无实际必要，该硬盘仅用于写入镜像。其他配置可以参考示例设置。
+硬盘大小设置为 1 GB 即可，过大无实际必要，该硬盘仅用于写入镜像。其他配置可以参考示例设置。
 
 ![TCBSD](../.gitbook/assets/t2.png)
 
@@ -55,7 +58,7 @@ TCBSD 官方镜像是使用 `dd` 工具制作的，实际上对应 FreeBSD 的 i
 
 ![TCBSD](../.gitbook/assets/t8.png)
 
-返回磁盘管理，选择“操作”--重新扫描磁盘。**否则下面虚拟机无法加载出磁盘 2。**
+返回磁盘管理，选择“操作”→“重新扫描磁盘”。**否则下面虚拟机无法加载出磁盘 2。**
 
 ![TCBSD](../.gitbook/assets/t9.png)
 
@@ -65,7 +68,7 @@ TCBSD 官方镜像是使用 `dd` 工具制作的，实际上对应 FreeBSD 的 i
 
 ## 通过 VMware Workstation 安装 TwinCAT/BSD
 
-我们先以正常方法创建一个空白的虚拟机模板，然后点击“虚拟机设置”--“添加”--“硬盘”。点击下一步：
+虚拟硬盘准备完成后，我们可以开始通过 VMware Workstation 进行系统安装。下面介绍通过 VMware Workstation 安装 TwinCAT/BSD 的步骤。我们先以正常方法创建一个空白的虚拟机模板，然后点击“虚拟机设置”→“添加”→“硬盘”。点击下一步：
 
 ![TCBSD](../.gitbook/assets/t11.png)
 
@@ -117,7 +120,7 @@ TCBSD 官方镜像是使用 `dd` 工具制作的，实际上对应 FreeBSD 的 i
 
 ![TCBSD](../.gitbook/assets/t23.png)
 
-开始安装了：
+开始安装：
 
 ![TCBSD](../.gitbook/assets/t24.png)
 
@@ -132,15 +135,15 @@ TCBSD 官方镜像是使用 `dd` 工具制作的，实际上对应 FreeBSD 的 i
 
 ## 用户账户
 
-默认用户名是 `Administrator`，他的密码是你在安装时设置的。倍福其他 PLC 默认密码都是 `1`。
+系统安装完成后，我们需要了解系统的用户账户配置。默认用户名是 `Administrator`，其密码是你在安装时设置的。倍福其他 PLC 默认密码都是 `1`。
 
-首先使用 doas 提升权限修改 root 用户密码
+首先使用 doas 提升权限修改 root 用户密码：
 
 ```sh
 $ doas passwd root
 ```
 
-然后就可以使用 doas 提升权限为超级用户（root），进入 root Shell
+然后就可以使用 doas 提升权限为超级用户（root），进入 root Shell：
 
 ```sh
 $ doas su
@@ -148,9 +151,9 @@ $ doas su
 
 ## Web 界面登录
 
-网络连接方式使用 NAT，经测试桥接模式无法访问。
+TwinCAT/BSD 提供了 Web 管理界面，方便用户进行系统配置和管理。网络连接方式使用 NAT，经测试桥接模式无法访问。
 
-使用 `ifconfig` 查看当前 IP，然后打开主机的浏览器输入 `ifconfig` 命令输出的 IP 内容！
+使用 `ifconfig` 查看当前 IP，然后打开主机的浏览器输入 `ifconfig` 命令输出的 IP 地址。
 
 示例中，`ifconfig` 显示的 IP 为 `192.168.245.138`，则访问地址为 `https://192.168.245.138`。（注意使用 **https**，而非 *http*，后者无法访问）
 
@@ -162,6 +165,8 @@ $ doas su
 
 
 ## 故障排除与未竟事宜
+
+在使用 TwinCAT/BSD 的过程中，可能会遇到一些问题。以下是一些常见问题的解决方法。
 
 ### 设置静态 IP 后，网卡存在两个 IP
 
@@ -179,7 +184,7 @@ dhcpcd_flags="--denyinterfaces igb0"
 
 ## 换源
 
-使用 `doas` 执行脚本，将 pkg 仓库切换为中国镜像：
+为了提高软件安装和更新的速度，我们可以将 pkg 仓库切换为中国镜像。下面介绍如何将 pkg 仓库切换为中国镜像。使用 `doas` 执行脚本，将 pkg 仓库切换为中国镜像：
 
 ```sh
 $ doas sh /usr/local/share/examples/bhf/pkgrepo-set.sh china
@@ -193,8 +198,7 @@ $ doas pkg update && doas pkg upgrade
 
 ## 安装 Beckhoff 提供开发工具包
 
-
-使用 doas 安装操作系统通用用户空间开发工具包：
+如果需要进行开发工作，我们可以安装 Beckhoff 提供的开发工具包。使用 doas 安装操作系统通用用户空间开发工具包：
 
 ```sh
 $ doas pkg install os-generic-userland-devtools
@@ -204,7 +208,7 @@ $ doas pkg install os-generic-userland-devtools
 
 ## 启用 FreeBSD 源
 
-默认情况下，pkg 只能安装 Beckhoff 维护的包。若需安装 FreeBSD 官方维护的包，需要手动启用相关源。
+TwinCAT/BSD 默认只提供 Beckhoff 维护的软件包。如果需要使用更多 FreeBSD 官方维护的软件包，我们可以手动启用相关源。默认情况下，pkg 只能安装 Beckhoff 维护的包。若需安装 FreeBSD 官方维护的包，需要手动启用相关源。
 
 使用 doas 提升权限，用 ee 编辑器修改 FreeBSD pkg 仓库配置文件：
 
@@ -213,4 +217,3 @@ $ doas ee /usr/local/etc/pkg/repos/FreeBSD.conf
 ```
 
 将配置文件中 `FreeBSD: {enabled: no}` 的 `no` 修改为 `yes` 即可。
-
