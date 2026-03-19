@@ -318,10 +318,9 @@ root     syslogd     1021 7   udp4   *:514                 *:*
 ```
 
 ![SDDM VNC](../.gitbook/assets/vnc2.png)
-
 #### 通过 VNC 远程 FreeBSD 没声音
 
-本文尚未涉及该问题，有待进一步研究。
+该问题在本文中尚未涉及，有待进一步研究。
 
 ## 通过 Windows 自带的桌面远程连接（RDP）远程访问 FreeBSD
 
