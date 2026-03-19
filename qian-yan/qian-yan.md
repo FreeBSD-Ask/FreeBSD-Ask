@@ -103,7 +103,7 @@
 
 >引用一：
 >
->>本书 <注 ①> 注重例子，少理论，只要你对这<着>例子一步一步操作，就会成功，会让你有成就感并能坚持学下去，因为很多人遇到障碍就会放弃，其实我就是这种人，只要让他看到希望，就能坚持下去。（这段话出自 [Netkiller FreeBSD 手札](https://www.netkiller.cn/freebsd/preface.html) [备份](https://web.archive.org/web/20251207043836/https://www.netkiller.cn/freebsd/preface.html)，作者陈景峰）
+>>本书 <注 ①> 注重例子，少理论，只要你对着例子一步一步操作（原文“对着”误作“对这”，此处据意调整），就会成功，会让你有成就感并能坚持学下去，因为很多人遇到障碍就会放弃，其实我就是这种人，只要让他看到希望，就能坚持下去。（这段话出自 [Netkiller FreeBSD 手札](https://www.netkiller.cn/freebsd/preface.html) [备份](https://web.archive.org/web/20251207043836/https://www.netkiller.cn/freebsd/preface.html)，作者陈景峰）
 >
 > 注 ①：指《Netkiller FreeBSD 手札》
 >
