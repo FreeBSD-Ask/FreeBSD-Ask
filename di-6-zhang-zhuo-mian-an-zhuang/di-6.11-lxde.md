@@ -36,7 +36,7 @@ LXDE 是一款轻量级桌面环境，专注于资源利用效率和交互简洁
 | `lightdm`                | 轻量级显示管理器 LightDM                                      |
 | `lightdm-gtk-greeter`    | LightDM 的 GTK+ 登录界面插件，缺少将无法登录 LightDM                   |
 | `wqy-fonts`              | 文泉驿中文字体                                           |
-| `xdg-user-dirs`          | 管理用户目录，如“桌面”“下载”等                                           |
+| `xdg-user-dirs`          | 管理用户目录，如“桌面”、“下载”等                                           |
 
 
 ## `startx`
