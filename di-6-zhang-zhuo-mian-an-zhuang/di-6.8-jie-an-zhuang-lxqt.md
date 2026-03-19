@@ -1,6 +1,11 @@
 # 6.8 LXQt
 
+## LXQt 桌面环境概述
+
+LXQt 是一款轻量级桌面环境，基于 Qt 应用框架开发。作为 LXDE 桌面环境的 Qt 重写版本，LXQt 继承了其轻量高效的特性，同时采用现代化的 Qt 框架进行技术重构。本节将介绍如何在 FreeBSD 上安装和配置 LXQt。
+
 ## 安装 LXQt
+
 
 - 通过 pkg 安装：
 
@@ -86,4 +91,3 @@ $ echo "exec ck-launch-session startlxqt" > ~/.xinitrc
 ### 桌面图标不显示
 
 请事先安装自己喜欢的其他图标主题。然后：菜单 -> "Preferences" -> "LXQt Settings" -> "Appearance" -> "Icons Theme"，选择已安装的图标主题，点击 "Apply" 后重新登录。
-

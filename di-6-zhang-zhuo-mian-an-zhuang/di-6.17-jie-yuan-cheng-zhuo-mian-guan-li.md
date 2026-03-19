@@ -1,16 +1,20 @@
 # 6.17 远程桌面访问
 
+## 远程桌面访问概述
+
+远程桌面访问技术允许用户通过网络从一台设备远程控制另一台设备的桌面环境。本节系统阐述在 FreeBSD 操作系统中配置和使用多种远程桌面协议的具体方法，包括 VNC、RDP 等主流协议。远程桌面访问在系统管理、技术支持等应用场景中具有重要实用价值。
+
 ## x11vnc（FreeBSD 为被控端，镜像屏幕）
 
-x11vnc 会和远程软件 todesk 一样直接镜像屏幕，简言之，你的所有操作都会同步到显示器上，反过来在显示器上的操作你在 VNC 上也可以看到。
+x11vnc 会像远程软件 ToDesk 一样直接镜像屏幕，简言之，您的所有操作都会同步到显示器上，反过来在显示器上的操作您在 VNC 上也可以看到。
 
-如果没有显示器则无法使用 x11vnc（可考虑使用 HDMI 显卡欺骗器）。
+如果没有物理显示器则无法使用 x11vnc（可考虑使用 HDMI 显卡欺骗器）。
 
 ### 安装 x11vnc
 
 - 使用 pkg 安装：
 
-```
+```sh
 # pkg install x11vnc
 ```
 
@@ -49,7 +53,7 @@ $ x11vnc -display :0 -rfbauth ~/.vnc/passwd -auth $(find /var/run/sddm/ -type f)
 - 使用指定密码文件和 LightDM 授权文件启动 x11vnc：
 
 ```sh
-$ x11vnc -display :0 -rfbauth ~/.vnc/passwd -auth /var/run/lightdm/root/\:0
+$ x11vnc -display :0 -rfbauth ~/.vnc/passwd -auth /var/run/lightdm/root/:0
 ```
 
 - 使用指定密码文件和 GDM 授权文件启动 x11vnc：
@@ -317,7 +321,7 @@ root     syslogd     1021 7   udp4   *:514                 *:*
 
 #### 通过 VNC 远程 FreeBSD 没声音
 
-不知道怎么配置。
+该问题尚未在本文范围内暂未涉及，有待进一步研究。
 
 ## 通过 Windows 自带的桌面远程连接（RDP）远程访问 FreeBSD
 
@@ -450,13 +454,13 @@ Password: # 输入密码，密码不会显示出来 ***。
 
 #### 故障排除与未竟事宜
 
-- 但是笔者没有输入用户名就连上了？
+- 测试过程中未输入用户名也成功连接。
 
-不知道。难道是因为笔者的 FreeBSD 用户名和 Windows 是一样的？
+这可能是由于 FreeBSD 用户名与 Windows 用户名一致的缘故。
 
 ### rdesktop（不支持 NLA）
 
-`net/xrdesktop2` 是 rdesktop 的图形化前端，但笔者打开里面的键盘设置就卡死了。
+`net/xrdesktop2` 是 rdesktop 的图形化前端，测试中在打开键盘设置时出现无响应的情况。
 
 ---
 
@@ -594,7 +598,7 @@ You need a mounted /proc directory. Either mount it manually or add it to your /
 # 或者手动执行此命令来挂载 proc 文件系统。
 ```
 
-提示挂载 proc 文件系统，经过测试没有的话的执行程序确没反应。
+提示需要挂载 proc 文件系统，经测试，若未挂载该文件系统，程序将无法正常启动。
 
 ```sh
 # mount -t procfs proc /proc # 临时用一下。持久化可以参照上面的说明做

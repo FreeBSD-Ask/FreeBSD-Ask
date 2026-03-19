@@ -2,7 +2,10 @@
 
 >**警告**
 >
->请勿使用 `sysutils/desktop-installer`，会引发不必要的错误和问题。
+>请勿使用 `sysutils/desktop-installer`，该工具在当前环境下可能引发不必要的错误和配置冲突。
+## 引言
+
+本节旨在系统阐述 FreeBSD 操作系统中 Intel 与 AMD 图形处理器（Graphics Processing Unit，GPU）驱动程序的安装与配置方法。图形驱动作为连接操作系统内核与图形硬件的关键抽象层，其正确配置对于桌面环境的稳定运行与性能发挥至关重要。
 
 ## 未安装显卡驱动的设备图片实例
 
@@ -12,19 +15,16 @@
 
 ## 显卡支持情况
 
-FreeBSD 的 i915、AMD 显卡驱动与基本系统是分离的。目前是移植的 LTS 版本 Linux kernel 的 DRM 驱动，作为 Port 提供。面向不同的系统版本，能支持的 Linux 内核版本也是不同的。
+FreeBSD 的 i915、AMD 显卡驱动与基本系统是分离的。目前是移植的长期支持（Long Term Support，LTS）版本 Linux 内核的 DRM（Direct Rendering Manager）驱动，作为 Port 提供。面向不同的系统版本，能支持的 Linux 内核版本也是不同的。
 
 >**技巧**
 >
->这种移植并不覆盖 Linux 现有的全部 DRM GPU 驱动，目前仅有 i915、amdgpu 和 radeon，其他 vmwgfx、xe、virtio 等均未进行移植。因此在一般情况下，也无法在 Wayland 下运行上述未移植的 GPU，它们目前只能使用 X11。
+>这种移植并不覆盖 Linux 现有的全部 DRM GPU 驱动，目前仅有 i915、amdgpu 和 radeon，其他如 vmwgfx、xe、virtio 等均未进行移植。因此在一般情况下，也无法在 Wayland 下运行上述未移植的 GPU，它们目前只能使用 X11 显示协议。
 
 >**注意**
 >
->DG2 Arc 显卡尚不受支持（截至 DRM 6.10 版本），参见 [Intel Arc A770: Kernel panic on kldload i915kms.ko #315](https://github.com/freebsd/drm-kmod/issues/315) [备份](https://web.archive.org/web/20260121071237/https://github.com/freebsd/drm-kmod/issues/315)。可能需要等到 6.12 的移植才能受支持。
+>DG2 Arc 显卡尚不受支持（截至 DRM 6.10 版本），相关技术细节可参见 [Intel Arc A770: Kernel panic on kldload i915kms.ko #315](https://github.com/freebsd/drm-kmod/issues/315) [备份](https://web.archive.org/web/20260121071237/https://github.com/freebsd/drm-kmod/issues/315)。可能需要等到 6.12 的移植才能提供支持。
 
->**注意**
->
->根据笔记本和桌面项目反馈，“在使用 drm-kmod 6.1 及更高版本的桌面系统（搭载 RX 570、580 等 AMD GPU）运行数分钟或数小时后，会逐渐出现严重卡顿，最终导致桌面完全不可用。”该问题预计会在今年 12 月初前得到解决。参见 <https://github.com/FreeBSDFoundation/proj-laptop/issues/89>
 
 | **FreeBSD 版本**         | **对应 DRM 驱动版本**                   | **GPU 支持范围（AMD / Intel）**    | **备注**             |
 | :--------------------------: | :--------------------------------- | :---------------------------- | :------------------- |
@@ -51,12 +51,12 @@ FreeBSD 的 i915、AMD 显卡驱动与基本系统是分离的。目前是移植
 >每次点版本或大版本升级时，可能需要重新获取系统源代码并重新编译安装显卡驱动模块，方可顺利完成升级，而不是卡在黑屏界面；或者你使用“模块源”。
 
 
-DRM 即“Direct Rendering Manager”（直接渲染管理器），DRM 是 Linux 内核的子系统，负责与现代显卡的 GPU 进行交互。FreeBSD 在内核中实现了 Linux 内核编程接口（LinuxKPI），并移植了 Linux DRM，类似的还有一些无线网卡驱动。
+DRM 即“Direct Rendering Manager”（直接渲染管理器），DRM 是 Linux 内核的子系统，负责与现代显卡的 GPU 进行交互。FreeBSD 在内核中实现了 Linux 内核编程接口（LinuxKPI，Linux Kernel Programming Interface），并移植了 Linux DRM，类似的还有一些无线网卡驱动也采用了这种移植方式。
 
 
 ## 加入 video 组
 
-将指定用户添加到 video 用户组，以获得显卡设备访问权限：
+为获得显卡设备的访问权限，需将指定用户添加到 video 用户组，这是图形加速功能正常运行以及 Wayland 会话正常工作的必要前提条件：
 
 ```sh
 # pw groupmod video -m 你的用户名
@@ -64,17 +64,17 @@ DRM 即“Direct Rendering Manager”（直接渲染管理器），DRM 是 Linux
 
 >**警告**
 >
->即使加入了 `wheel` 组，也应再加入 `video` 组，否则硬解显示会出问题，且 Wayland 下普通用户将无权限调用显卡。
+>即使加入了 `wheel` 组，也应再加入 `video` 组，否则硬件解码功能会出现问题，且 Wayland 下普通用户将无权限调用显卡。
 
 ## 安装 Intel 核显/AMD 显卡驱动
 
 >**注意**
 >
-> 在使用 Gnome 时，如果自动锁屏/息屏，可能无法再次进入桌面。见 [Bug 255049 - x11/gdm doesn't show the login screen](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=255049)。
+> 在使用 GNOME 时，如果自动锁屏/息屏，可能无法再次进入桌面。相关技术问题可参见 [Bug 255049 - x11/gdm doesn't show the login screen](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=255049)。
 
 >**注意**
 >
->在使用 Ports 时，drm 需要在 `/usr/src` 中有一份当前版本系统源代码，可参考系统更新章节。如果你是参考的本书其他章节进行的安装，那么你的系统中很可能已经有一份源码了，无需再获取源码。
+>在使用 Ports 时，drm 需要在 `/usr/src` 中有一份当前版本系统源代码，具体可参考系统更新章节。如果您是参考本书其他章节进行的安装，那么系统中很可能已经有一份源码，无需再次获取。
 
 
 ### FreeBSD 14.X
@@ -119,13 +119,13 @@ DRM 即“Direct Rendering Manager”（直接渲染管理器），DRM 是 Linux
 
 ### AMD
 
-- 如果是 HD7000 以后的 AMD 显卡，在 `/etc/rc.conf` 中添加 `amdgpu` 内核模块（大部分人应该使用这个，如果未生效再修改为 `radeonkms`）到 `kld_list`，以便系统启动时加载：
+- 如果是 HD 7000 以后的 AMD 显卡，在 `/etc/rc.conf` 中添加 `amdgpu` 内核模块（大部分人应该使用这个，如果未生效再修改为 `radeonkms`）到 `kld_list`，以便系统启动时加载：
 
 ```sh
 # sysrc -f /etc/rc.conf kld_list+=amdgpu
 ```
 
-- 如果是 HD7000 以前的 AMD 显卡，在 `/etc/rc.conf` 中添加 `radeonkms` 内核模块（这是十多年前的显卡了）到 `kld_list`，以便系统启动时加载
+- 如果是 HD 7000 以前的 AMD 显卡，在 `/etc/rc.conf` 中添加 `radeonkms` 内核模块（这是较早期的显卡驱动）到 `kld_list`，以便系统启动时加载。
 
 ```sh
 # sysrc -f /etc/rc.conf kld_list+=radeonkms
@@ -229,7 +229,7 @@ EndSection
 
 如果上述操作不起作用，请检查路径 `/dev/backlight` 下都有哪些设备。
 
-- 示例（照抄不会起作用的，自己 `ls /dev/backlight` 看看）：
+- 示例（请自行使用 `ls /dev/backlight` 查看实际设备）：
 
 ```sh
 # backlight -f /dev/backlight/amdgpu_bl00 -10   # 设置 amdgpu_bl00 背光亮度为 10

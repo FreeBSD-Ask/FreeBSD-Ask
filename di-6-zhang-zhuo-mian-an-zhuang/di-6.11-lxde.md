@@ -1,6 +1,11 @@
 # 6.11 LXDE
 
+## LXDE 桌面环境概述
+
+LXDE 是一款轻量级桌面环境，专注于资源利用效率和交互简洁性。作为轻量级桌面环境的代表之一，LXDE 在低配置硬件平台上表现优异。
+
 ## 安装
+
 
 - 使用 pkg 安装：
 
@@ -31,7 +36,7 @@
 | `lightdm`                | 轻量级显示管理器 LightDM                                      |
 | `lightdm-gtk-greeter`    | LightDM 的 GTK+ 登录界面插件，缺少将无法登录 LightDM                   |
 | `wqy-fonts`              | 文泉驿中文字体                                           |
-| `xdg-user-dirs`          | 管理用户目录，如“桌面”、“下载”等                                           |
+| `xdg-user-dirs`          | 管理用户目录，如“桌面”“下载”等                                           |
 
 
 ## `startx`
