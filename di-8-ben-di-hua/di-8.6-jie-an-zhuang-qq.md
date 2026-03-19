@@ -3,6 +3,8 @@
 
 ## 基于 Rocky Linux（FreeBSD Port）
 
+QQ 是一款在中国大陆广泛使用的即时通讯软件。由于目前缺乏原生的 FreeBSD 版本，需要通过 Linux 兼容层（Linux Compatibility Layer）来实现安装与运行。本节将介绍基于不同 Linux 兼容层安装 QQ 的具体方法。
+
 >**注意**
 >
 >请先参照本书其他章节安装 Rocky Linux 兼容层（FreeBSD Port）。
