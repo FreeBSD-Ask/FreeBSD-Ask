@@ -1,10 +1,12 @@
 # 5.4 使用 Ports 以源代码方式安装软件
 
+本章深入探讨 FreeBSD Ports 框架的设计理念、使用方法及高级配置。Ports 作为 FreeBSD 源代码构建软件的核心框架，提供了灵活、可定制的软件安装途径。从技术架构层面看，Ports 框架构成了 FreeBSD 软件生态系统中源代码构建与分发的标准化基础设施。
+
 ## Ports 与 Port 概述
 
 ### Ports 历史
 
-Ports 是一种从源代码（也支持闭源二进制包）构建软件的框架。由 Jordan K. Hubbard（jkh@FreeBSD.org）创建，最初于 1994 年 8 月公开发布。
+Ports 是一种从源代码（也支持闭源二进制包）构建软件的框架。该框架由 Jordan K. Hubbard（jkh@FreeBSD.org）创建，最初于 1994 年 8 月公开发布，标志着 FreeBSD 软件生态系统进入了一个新的发展阶段。
 
 ```sh
 # git log --reverse --max-parents=0 --pretty=format:"commit: %h%nAuthor: %an%nDate: %ci%n%n%B" # 打印第一次提交
@@ -31,7 +33,7 @@ NetBSD 和 OpenBSD 也使用 Ports，但实现并不通用。
 
 ### Ports 与 Port 释义
 
-一款软件的相关文件或文件夹（补丁文件、校验码、Makefile 等）的集合（表现为一个文件夹）称为一个 Port，所有 Port（移植软件）的集合即 Ports Collection 或 Ports Tree，简称 Ports。
+一款软件的相关文件或文件夹（补丁文件、校验码、Makefile 等）的集合（表现为一个文件夹）称为一个 Port，所有 Port（移植软件）的集合即 Ports Collection 或 Ports Tree，简称 Ports。从术语定义角度，Port 指单个软件的移植构建配置，而 Ports 则指整个移植软件集合。
 
 ```sh
 $ cd /usr/ports # 切换到 /usr/ports
@@ -81,6 +83,8 @@ Makefile		pkg-plist-client	pkg-plist-plpython
 >
 >需要对上面的“注意”进行补充说明的是：一旦你使用了 `make config` 修改了 Port 的默认构建参数（进行了自定义），那么如果你仍然想保留该设置，后续的软件更新是不能通过 pkg 进行管理的，否则通过 pkg 安装的软件包会完全取代之前自定义的 Port（即 Port 开发者默认设定的构建参数将覆盖你自定义的 Port 参数）。
 
+了解了注意事项后，我们可以通过流程图来直观地理解 Ports 构建 pkg 软件包的完整流程。
+
 ![Ports 流程图](../.gitbook/assets/ports-pkg.png)
 
 
@@ -94,6 +98,8 @@ Makefile		pkg-plist-client	pkg-plist-plpython
 使用压缩包可以规避“先有鸡还是先有蛋”的问题（例如需要安装 Git，但系统中既没有 Ports 又不想使用 pkg 的情况）。
 
 ### 下载 ports 压缩包
+
+我们可以从多个镜像源下载 ports 压缩包，下面列出了几个常用的源地址。
 
 - NJU:
 
@@ -115,6 +121,7 @@ Makefile		pkg-plist-client	pkg-plist-plpython
 
 ### 解压 ports 压缩包
 
+下载完成后，需要将压缩包解压到正确的位置。
 
 ```sh
 # tar -zxvf ports.tar.gz -C /usr/ # 解压至路径
@@ -123,7 +130,11 @@ Makefile		pkg-plist-client	pkg-plist-plpython
 
 ## 使用 Git 获取 Ports
 
+Git 是获取 Ports 源代码的推荐方式，可以方便地进行版本管理和更新。
+
 ### 安装 Git
+
+首先需要安装 Git 工具，以便能够拉取源代码。
 
 使用 pkg 安装：
 
@@ -133,11 +144,15 @@ Makefile		pkg-plist-client	pkg-plist-plpython
 
 ### 拉取 Ports 存储库（USTC）浅克隆
 
+中国科学技术大学提供了 FreeBSD ports 的镜像源，可以使用浅克隆的方式快速获取代码。
+
 ```sh
 # git clone --filter=tree:0 https://mirrors.ustc.edu.cn/freebsd-ports/ports.git /usr/ports
 ```
 
 ### 拉取 Ports 存储库（FreeBSD 官方）浅克隆
+
+也可以直接从 FreeBSD 官方仓库获取源代码。
 
 ```sh
 # git clone --filter=tree:0 https://git.FreeBSD.org/ports.git /usr/ports
@@ -145,9 +160,13 @@ Makefile		pkg-plist-client	pkg-plist-plpython
 
 ### 完全拉取 Ports 存储库（FreeBSD 官方）并指定分支
 
+如果需要完整的提交历史和所有分支，可以进行完全克隆。
+
 ```sh
 # git clone https://git.FreeBSD.org/ports.git /usr/ports
 ```
+
+克隆完成后，可以查看所有可用的分支。
 
 查看所有分支：
 
@@ -164,6 +183,8 @@ Makefile		pkg-plist-client	pkg-plist-plpython
   remotes/origin/main
 ```
 
+根据需要，可以切换到特定的分支，例如季度分支。
+
 切换到 `2025Q1` 分支：
 
 ```sh
@@ -172,6 +193,8 @@ Makefile		pkg-plist-client	pkg-plist-plpython
 分支 '2025Q1' 设置为跟踪 'origin/2025Q1'。
 切换到一个新分支 '2025Q1'
 ```
+
+切换完成后，可以查看本地分支以确认。
 
 查看本地分支：
 
@@ -186,12 +209,14 @@ Git 分支已经切换成功。
 
 ### 同步更新 Ports Git
 
+获取 Ports 源代码后，需要定期同步更新以获取最新的修改。
+
 ```sh
 # cd /usr/ports/ # 切换目标目录
 # git pull # 同步更新上游 Ports
 ```
 
-如果提示本地已经修改，放弃本地修改，再更新：
+如果提示本地已经修改，可以放弃本地修改后再进行更新：
 
 ```sh
 # git checkout . # 放弃本地修改
@@ -199,6 +224,8 @@ Git 分支已经切换成功。
 ```
 
 ### 附录：时间错误导致的证书无效
+
+在使用 Git 拉取代码时，可能会遇到 SSL 证书问题，其中一个常见原因是系统时间不正确。
 
 报错形似：
 
@@ -230,6 +257,8 @@ Sat Oct  5 08:39:21 UTC 2024
 
 ## 使用 `whereis` 查询软件路径
 
+`whereis` 命令可以帮助我们快速查找软件的可执行文件、源代码及手册页所在路径。
+
 查找 python 可执行文件、源代码及手册页所在路径：
 
 ```sh
@@ -243,6 +272,8 @@ python: /usr/ports/lang/python
 ```
 
 ## 查看软件包依赖
+
+了解软件包的依赖关系对于管理和编译软件非常重要。我们可以在软件已安装或未安装的情况下查看其依赖。
 
 在已经安装该软件包的情况下：
 
@@ -264,6 +295,8 @@ root@ykla:/usr/ports/sysutils/htop # make all-depends-list
 
 ## 看看 python 的 ports 在哪个位置
 
+我们可以再次使用 `whereis` 命令来确认 python 的 ports 具体在哪个位置。
+
 查找 python 可执行文件、源代码及手册页所在路径：
 
 ```sh
@@ -272,6 +305,8 @@ python: /usr/ports/lang/python
 ```
 
 ## 安装 python3
+
+现在我们以安装 python3 为例，演示如何使用 Ports 编译安装软件。
 
 ```sh
 # cd /usr/ports/lang/python
@@ -282,11 +317,15 @@ python: /usr/ports/lang/python
 
 ## 如何设置全部所需的依赖
 
+在编译软件前，有时需要先设置所有依赖项的配置选项。
+
 ```sh
 # make config-recursive
 ```
 
 ## 如何使用 pkg 安装依赖
+
+为了节省编译时间，我们可以使用 pkg 来安装所需的依赖，仅使用 Ports 来编译软件包本体。
 
 不使用 Ports 来编译依赖，仅使用 Ports 来编译软件包本体：
 
@@ -320,11 +359,15 @@ Proceed with this action? [y/N]:
 
 ## 如何删除当前 port 及其依赖的配置文件
 
+如果需要清理之前配置的选项，可以使用以下命令删除当前 port 及其所有依赖的配置文件。
+
 ```sh
 # make rmconfig-recursive
 ```
 
 ## 如何一次性下载所有需要的软件包
+
+为了避免在编译过程中因为网络问题中断，可以先一次性下载所有需要的软件包。
 
 ```sh
 # make BATCH=yes fetch-recursive
@@ -332,11 +375,15 @@ Proceed with this action? [y/N]:
 
 ## ports 编译的软件也可以转换为 pkg 包
 
+使用 Ports 编译安装的软件也可以转换为 pkg 格式的二进制包，方便在其他机器上安装。
+
 ```sh
 # pkg create nginx
 ```
 
 ## 更新 FreeBSD 软件包/Port
+
+定期更新已安装的软件包是保持系统安全和最新的重要步骤。更新前需要先同步更新 Ports Git。
 
 先同步更新 Ports Git。
 
@@ -355,6 +402,8 @@ w3m-0.5.3.20230718_1               <
 
 ### ① portmaster（推荐）
 
+portmaster 是一个常用的 Ports 更新工具，可以帮助我们方便地管理和更新已安装的软件。
+
 - 更新已安装的 Port：
 
 ```sh
@@ -370,6 +419,8 @@ w3m-0.5.3.20230718_1               <
 ```
 
 #### 查看 Port 依赖关系
+
+在更新软件前，我们可以先查看 Port 的依赖关系，了解更新会影响哪些软件。
 
 ```sh
 # portmaster sysutils/htop  --show-work
@@ -389,6 +440,8 @@ w3m-0.5.3.20230718_1               <
 
 ### ② portupgrade
 
+除了 portmaster 外，portupgrade 也是另一个常用的 Ports 更新工具。
+
 ```sh
 # cd /usr/ports/ports-mgmt/portupgrade && make install clean
 # portupgrade -ai # 自动升级所有软件，i 会挨个确认
@@ -398,13 +451,19 @@ w3m-0.5.3.20230718_1               <
 
 #### 参考资料
 
+关于这两个工具的更多信息，可以参考以下官方手册页。
+
 - [portmaster -- manage your ports without external databases or languages](https://man.freebsd.org/cgi/man.cgi?portmaster(8))
 - [portupgrade,  portinstall -- tools to upgrade installed packages	or in- stall new ones via ports	or packages](https://man.freebsd.org/cgi/man.cgi?portupgrade(1))
   
 
 ## FreeBSD USE
 
+FreeBSD USE 是 Ports 框架中的一个重要机制，用于控制软件的构建选项和依赖。
+
 ### 如何全局屏蔽 MYSQL
+
+如果不希望使用 MYSQL 相关选项，可以在全局配置中屏蔽它。
 
 ```sh
 # echo "OPTION_UNSET+= MYSQL" >> /etc/make.conf
@@ -413,6 +472,8 @@ w3m-0.5.3.20230718_1               <
 完整的 USE 列表见 <https://cgit.freebsd.org/ports/tree/Mk/bsd.default-versions.mk>。
 
 ## FreeBSD ports 多线程编译
+
+为了加快编译速度，可以配置多线程编译选项，充分利用多核处理器的性能。
 
 将以下内容写入 `/etc/make.conf`，若不存在则 `touch` 新建对应文件。
 
@@ -451,9 +512,13 @@ hw.ncpu: 16
 
 ### 参考资料
 
+关于多线程编译和 CPU 特性的更多信息，可以参考以下资料。
+
 - [Easy way to get cpu features](https://forums.freebsd.org/threads/easy-way-to-get-cpu-features.10553/) [备份](https://web.archive.org/web/20260120221823/https://forums.freebsd.org/threads/easy-way-to-get-cpu-features.10553/)，获取 CPU 线程数量的命令来自此处。
 
 ## 设置内存为 `tmp`
+
+为了提高临时文件的读写速度，可以将 `/tmp` 目录挂载为内存文件系统 tmpfs。
 
 编辑 `/etc/fstab` 文件，写入下行：
 
@@ -465,9 +530,13 @@ tmpfs /tmp tmpfs rw 0 0
 
 ### 参考资料
 
+关于 tmpfs 的更多信息，可以参考官方手册页。
+
 - [tmpfs --in-memory file system](https://man.freebsd.org/cgi/man.cgi?tmpfs(5))
 
 ## ccache
+
+ccache 是一个编译缓存工具，可以加速重复编译的过程。
 
 >**警告**
 >
@@ -475,6 +544,8 @@ tmpfs /tmp tmpfs rw 0 0
 
 
 ### ccache3
+
+ccache3 是一个常用的版本，我们可以使用 pkg 或 Ports 来安装它。
 
 使用 pkg 安装：
 
@@ -488,6 +559,8 @@ tmpfs /tmp tmpfs rw 0 0
 # cd /usr/ports/devel/ccache/ 
 # make install clean
 ```
+
+安装完成后，我们可以查看 ccache 创建的软链接情况。
 
 - 查看软链接情况：
 
@@ -513,11 +586,15 @@ drwxr-xr-x   2 root wheel 15 Sep 20 02:02 world
 
 ---
 
+接下来需要配置 ccache 以启用编译缓存。
+
 - 修改 `/etc/make.conf` 文件，加入下面一行启用 ccache 加速编译：
 
 ```ini
 WITH_CCACHE_BUILD=yes
 ```
+
+为了避免缓存占用过多磁盘空间，建议设置缓存大小上限。
 
 - 设置 ccache 编译缓存最大为 10GB：
 
@@ -537,6 +614,8 @@ files in cache                         0
 cache size                           0.0 kB
 max cache size                      10.0 GB
 ```
+
+在使用一段时间后，可以查看 ccache 的统计信息，了解缓存的命中情况。
 
 - 在 Ports 编译一段时间后显示 ccache 的统计信息：
 
@@ -565,6 +644,8 @@ max cache size                      10.0 GB
 
 ### ccache4
 
+ccache4 是目前的最新版本，提供了更好的性能和功能。
+
 目前的最新版本是 ccache4：
 
 使用 pkg 安装：
@@ -579,6 +660,8 @@ max cache size                      10.0 GB
 # cd /usr/ports/devel/ccache4/
 # make install clean
 ```
+
+安装完成后，同样可以查看软链接情况。
 
 - 查看软链接情况：
 
@@ -601,11 +684,15 @@ drwxr-xr-x   2 root wheel 13  9月 20 02:29 world
 
 ---
 
+ccache4 的配置方式与 ccache3 类似。
+
 - 修改 `/etc/make.conf` 文件，加入下面一行启用 ccache 加速编译：
 
-```sh
+```ini
 WITH_CCACHE_BUILD=yes
 ```
+
+同样，建议为 ccache4 设置缓存大小上限。
 
 - 设置编译缓存最大为 20GB：
 
@@ -613,6 +700,8 @@ WITH_CCACHE_BUILD=yes
 # ccache -M 20G  
 Set cache size limit to 20.0 GB
 ```
+
+在使用一段时间后，可以查看 ccache4 的编译缓存统计信息。
 
 - 在 Ports 编译一段时间后，查看编译缓存：
 
@@ -630,6 +719,8 @@ Local storage:
   Misses:          448 /  558 (80.29%)
 ```
 
+如果需要查看 ccache 的详细配置参数，可以使用以下命令。
+
 显示 ccache 的当前配置参数：
 
 ```sh
@@ -642,12 +733,18 @@ Local storage:
 
 ### 参考文献
 
+关于 ccache 的更多详细信息和使用方法，可以参考以下资料。
+
 - [ccache-howto-freebsd.txt.in](https://github.com/freebsd/freebsd-ports/blob/main/devel/ccache/files/ccache-howto-freebsd.txt.in) [备份](https://web.archive.org/web/20260129125259/https://github.com/freebsd/freebsd-ports/blob/main/devel/ccache/files/ccache-howto-freebsd.txt.in)
 - [ccache -a fast C/C++ compiler cache](https://man.freebsd.org/cgi/man.cgi?query=ccache&sektion=1&n=1)
 
 ## 多线程下载
 
+为了加快 Ports 源代码的下载速度，可以使用多线程下载工具。
+
 ### axel
+
+axel 是一个轻量级的多线程下载工具，可以显著提高下载速度。
 
 使用 pkg 安装：
 
@@ -661,6 +758,8 @@ Local storage:
 # cd /usr/ports/ftp/axel/
 # make install clean
 ```
+
+安装完成后，需要配置 Ports 框架使用 axel 作为下载工具。
 
 新建或者编辑 `/etc/make.conf` 文件，写入以下几行：
 

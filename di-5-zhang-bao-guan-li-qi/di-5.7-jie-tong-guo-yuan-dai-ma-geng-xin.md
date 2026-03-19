@@ -1,5 +1,7 @@
 # 5.7 使用源代码更新 FreeBSD
 
+本章讲解从源代码构建和更新 FreeBSD 系统的完整流程。源代码构建作为 FreeBSD 系统定制和深度维护的高级途径，提供了最大的灵活性和控制能力。
+
 基本思路是获取 FreeBSD 的源代码，然后进行编译和安装。可以使用 Git 直接拉取代码，也可以从 ISO 镜像中下载 txz 压缩文件，或者从 GitHub 下载当前 FreeBSD 项目的 zip 压缩包。
 
 编译流程参见 Handbook 即可。
@@ -8,7 +10,7 @@
 
 FreeBSD 项目在 2021 年从 SVN 全面迁移到了 Git，即 [https://git.freebsd.org](https://git.freebsd.org) [备份](https://web.archive.org/web/20260120222010/https://git.freebsd.org/)
 
-因此，获取源代码的方式也发生了变化，不再使用 SVN。
+这一版本控制系统的迁移标志着 FreeBSD 项目开发流程的现代化转型，因此，获取源代码的方式也相应发生了变化，不再使用 SVN。
 
 ## 从 Git 获取源代码
 
@@ -28,6 +30,8 @@ FreeBSD 项目在 2021 年从 SVN 全面迁移到了 Git，即 [https://git.free
 ```
 
 ### Git 代理设置方法
+
+在网络环境受限制的情况下，可能需要为 Git 设置代理才能正常拉取源代码。下面分别介绍设置和取消 Git 代理的方法。
 
 - 设置 Git 全局代理：
 
