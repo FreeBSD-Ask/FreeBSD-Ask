@@ -40,7 +40,7 @@ pkgbase 直接由 freebsd-src 构建而来：
 
 freebsd-ports = 第三方软件（单个称为 Port），集合称为 Ports 框架存储库
 
-Port 本身是若干文件的集合，由源码包的检验和、说明文件、补丁等构成。其中，Makefile 是核心。类似 Arch 的 PKGBUILD 或 Gentoo 的 ebuild，事实上他们只是由 Ports 框架衍生出的技术，不应该说“类似”。
+Port 本身是若干文件的集合，由源码包的检验和、说明文件、补丁等构成。其中，Makefile 是核心。类似 Arch 的 PKGBUILD 或 Gentoo 的 ebuild，事实上它们只是由 Ports 框架衍生出的技术，不应该说“类似”。
 
 其中，pkg 包直接由 freebsd-ports 通过 poudriere 构建系统构建而来。
 
