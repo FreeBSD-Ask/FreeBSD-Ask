@@ -1,6 +1,6 @@
 # 3.6 基于 Apple M1 和 Parallels Desktop 20 安装 FreeBSD
 
-本章系统介绍在 Apple M1 架构设备上，通过 Parallels Desktop 20 虚拟化平台部署 FreeBSD 操作系统的技术方案与实测结果。
+本节系统介绍在 Apple M1 架构设备上，通过 Parallels Desktop 20 虚拟化平台部署 FreeBSD 操作系统的技术方案与实测结果。
 
 本文基于 Apple M1（macOS 14.7）及 Parallels Desktop 20.1.3-55743 环境进行实验与演示。
 

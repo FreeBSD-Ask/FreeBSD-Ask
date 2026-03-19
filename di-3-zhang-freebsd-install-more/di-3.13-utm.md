@@ -1,6 +1,6 @@
 # 3.13 基于 Apple M1 和 UTM 安装 FreeBSD
 
-本章系统介绍在 Apple M1 架构设备上，通过 UTM 虚拟化平台部署 FreeBSD 操作系统的技术方案与实测结果。
+本节系统介绍在 Apple M1 架构设备上，通过 UTM 虚拟化平台部署 FreeBSD 操作系统的技术方案与实测结果。
 
 ## 概述
 

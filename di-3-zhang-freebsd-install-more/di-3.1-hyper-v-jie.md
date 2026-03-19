@@ -1,6 +1,6 @@
 # 3.1 使用 Hyper-V 安装 FreeBSD
 
-本章聚焦于 FreeBSD 操作系统在 Microsoft Hyper-V 虚拟化平台上的部署技术问题，旨在为读者提供一套完整的、经过验证的安装配置流程。本节内容基于 Windows 11 23H2 专业版与 FreeBSD 14.1-RELEASE 环境的实测结果。
+本节聚焦于 FreeBSD 操作系统在 Microsoft Hyper-V 虚拟化平台上的部署技术问题，旨在为读者提供一套完整的、经过验证的安装配置流程。本节内容基于 Windows 11 23H2 专业版与 FreeBSD 14.1-RELEASE 环境的实测结果。
 
 ## Hyper-V 简介
 

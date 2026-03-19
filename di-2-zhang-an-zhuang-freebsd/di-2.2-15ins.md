@@ -1,6 +1,6 @@
 # 2.2 FreeBSD 15 安装指南（AMD64）
 
-本章聚焦于 FreeBSD 15.0-RELEASE 在 AMD64 架构上的标准化安装流程。作为系统生命周期的初始阶段，安装过程的规范性直接影响后续系统的稳定性与可维护性。本节基于 bsdinstall 安装工具，提供从系统启动到首次登录的完整操作指南，确保系统部署过程的规范性与可重复性。
+本节聚焦于 FreeBSD 15.0-RELEASE 在 AMD64 架构上的标准化安装流程。作为系统生命周期的初始阶段，安装过程的规范性直接影响后续系统的稳定性与可维护性。本节基于 bsdinstall 安装工具，提供从系统启动到首次登录的完整操作指南，确保系统部署过程的规范性与可重复性。
 
 本节将系统地介绍 FreeBSD 15 的安装流程。
 
@@ -75,7 +75,7 @@
 >
 > 这个界面是由工具 `bsdinstall` 提供的。
 >
-> 本章将指导用户如何使用该工具来进行 FreeBSD 的安装。该工具不仅存在于安装镜像中，安装完成后你在新装系统中依然可以找到它，并且还可用它来执行普通的安装流程（请记住这一点，在高级的安装方式中很有用）。
+> 本节将指导用户如何使用该工具来进行 FreeBSD 的安装。该工具不仅存在于安装镜像中，安装完成后你在新装系统中依然可以找到它，并且还可用它来执行普通的安装流程（请记住这一点，在高级的安装方式中很有用）。
 >
 > `bsdinstall` 工具本质上是由一系列 sh 脚本构成的，其源代码位于 [usr.sbin/bsdinstall](https://github.com/freebsd/freebsd-src/tree/main/usr.sbin/bsdinstall) [备份](https://web.archive.org/web/20260115144213/https://github.com/freebsd/freebsd-src/tree/main/usr.sbin/bsdinstall)，脚本在“scripts”文件夹下。
 
