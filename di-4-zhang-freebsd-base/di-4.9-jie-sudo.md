@@ -5,7 +5,7 @@
 
 ## doas
 
-对于大部分人来说，只需要 `sudo su` 这一条命令，其他内容都是多余的。在使用时将 `sudo` 直接替换为 `doas` 即可。
+对于大部分用户来说，掌握 `sudo su` 这一基础命令即可满足日常需求。在使用时可以将 `sudo` 直接替换为 `doas`，二者在基本使用场景下具有功能等价性。
 
 OpenBSD 项目认为 sudo 软件配置复杂、代码质量较差、漏洞较多，故自行开发了 [doas](https://man.openbsd.org/doas) [备份](https://web.archive.org/web/20260102031731/https://man.openbsd.org/doas)。因此，FreeBSD 也可以使用。
 
@@ -43,7 +43,7 @@ Note: In order to be able to run most desktop (GUI) applications, the user
 needs to have the keepenv keyword specified. If keepenv is not specified then
 key elements, like the user's $HOME variable, will be reset and cause the GUI
 application to crash.
-# 注意：如果需要运行图形界面（GUI）程序，配置中必须添加 keepenv 关键词。
+# 注意：如果需要运行图形界面程序，配置中必须添加 keepenv 关键词。
 # 否则像 $HOME 这样的环境变量将会被清空，导致 GUI 程序崩溃。
 
 Users who only need to run command line applications can usually get away

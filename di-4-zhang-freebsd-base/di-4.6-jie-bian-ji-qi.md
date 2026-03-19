@@ -1,6 +1,6 @@
 # 4.6 文本编辑器
 
-文本编辑器是类 UNIX 系统（如 FreeBSD）中用于创建、查看、修改纯文本文件的核心工具。无论是编辑 `/etc/rc.conf`、编写脚本还是查看日志，熟练使用合适的编辑器都能极大提升效率。
+文本编辑器是类 UNIX 系统（如 FreeBSD）中用于创建、查看、修改纯文本文件的核心工具。无论是编辑 `/etc/rc.conf`、编写脚本还是查看日志，熟练使用合适的编辑器都能极大提升效率。文本编辑工具构成了软件开发生命周期中不可或缺的基础设施。
 
 本节将依次介绍 FreeBSD 中常见的几款文本编辑器，从最简单易上手的内置工具，到功能强大但学习曲线较陡的经典编辑器，再到现代增强版和图形化选择：
 
@@ -13,17 +13,17 @@
 | emacs          | Ports| 高度可扩展，几乎是“操作系统”，Lisp 配置       |
 | microsoft-edit | Ports     | 微软开源，支持中文、鼠标操作、界面友好         |
 
-CLI 编辑器无需图形界面，可在 SSH 远程连接、纯文本控制台中使用，资源占用低。GUI 编辑器提供可视化界面和鼠标支持，更适合桌面环境。
+CLI 编辑器无需图形界面，可在 SSH 远程连接、纯文本控制台中使用，资源占用低，适用于服务器环境和远程管理场景。GUI 编辑器提供可视化界面和鼠标支持，更适合桌面环境下的日常开发与文档编辑工作。
 
 > **注意**
 >
-> 本篇内容旨在简单介绍 FreeBSD 上常见的文本编辑器，不涉及深入的详细配置，有探索意愿的读者请的自行研读相关书籍和教程。
+> 本篇内容旨在简单介绍 FreeBSD 上常见的文本编辑器，不涉及深入的详细配置，有探索意愿的读者请自行研读相关书籍和教程。
 
 ## ee 编辑器
 
-`ee` 是 FreeBSD 基本系统内置的编辑器。支持编辑中文。
+`ee` 是 FreeBSD 基本系统内置的编辑器，支持中文文本编辑。
 
-`ee` 的用法比 [nano](https://www.redhat.com/zh/blog/getting-started-nano) [备份](https://web.archive.org/web/20260121060144/https://www.redhat.com/zh-cn/blog/getting-started-nano)（一款 GNU 编辑器）还要简单许多，从其名字“easy editor”（简单的编辑器）即可看出。
+`ee` 的用法比 [nano](https://www.redhat.com/zh/blog/getting-started-nano) [备份](https://web.archive.org/web/20260121060144/https://www.redhat.com/zh-cn/blog/getting-started-nano)（一款 GNU 编辑器）更为简洁，从其名字“easy editor”（简单的编辑器）即可看出其设计目标。
 
 比如使用 ee 编辑器打开 `a.txt` 文件：
 
