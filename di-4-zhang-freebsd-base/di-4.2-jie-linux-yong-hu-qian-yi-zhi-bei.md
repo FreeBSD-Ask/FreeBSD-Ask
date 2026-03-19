@@ -7,7 +7,7 @@
 - 例如“容器”的概念，其技术原型可追溯至 FreeBSD Jail 机制（参见 [什么是 Linux 容器？](https://www.redhat.com/zh/topics/containers/whats-a-linux-container) [备份](https://web.archive.org/web/20260122032914/https://www.redhat.com/zh-cn/topics/containers/whats-a-linux-container)）；
 - “发行版”的概念框架（参见 [《FreeBSD：原始操作系统发行版的火炬传承者》](https://book.bsdcn.org/fan-yi-wen-zhang-cun-dang/2025-nian-1-yue/bsd) [备份](https://web.archive.org/web/20260119054752/https://book.bsdcn.org/fan-yi-wen-zhang-cun-dang/2025-nian/bsd)）；
 - Gentoo 所采用的 Ports 包管理方法论，其技术渊源可追溯至 BSD Ports 框架；
-- 乃至现代开源理念本身，BSD 也是最早的实践者之一，世界上第一款开源许可证即 BSD 许可证。在这一意义上，BSD 系统构成了现代自由开源操作系统的重要历史源头。
+- 乃至现代开源理念本身，BSD 也是最早的实践者之一，世界上第一款开源许可证即 BSD 许可证。在这个意义上，BSD 是世界上第一款真正自由开源的操作系统。
 
 > **思考题**
 >
