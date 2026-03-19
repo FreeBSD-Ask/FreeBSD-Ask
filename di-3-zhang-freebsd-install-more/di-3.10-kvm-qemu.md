@@ -1,18 +1,20 @@
 # 3.10 KVM、QEMU 等平台安装 FreeBSD（传统引导和 MBR 分区表）
 
+本章研究在 KVM/QEMU 等硬件辅助虚拟化平台上，通过传统 BIOS + MBR 方式部署 FreeBSD 的技术方案，特别适用于不直接提供 FreeBSD 镜像的云服务环境，为这类场景下的系统部署提供可行路径。
+
 > **注意**
 >
-> 此方法不支持 OpenVZ、LXC 虚拟机，因为它们本质上不属于虚拟机，宿主机与客户机共享内核。内核已经是 Linux，自然无法运行 FreeBSD。
+> 此方法不支持 OpenVZ、LXC 等容器化技术，因为它们本质上不属于完整的虚拟化解决方案，宿主机与客户机共享内核。由于内核已经是 Linux，自然无法运行 FreeBSD 系统。
 >
-> 此方法不支持 UEFI 引导模式（BIOS + GPT 分区表同样不支持），仅支持传统 BIOS + MBR 引导方式。
+> 此方法不支持 UEFI 引导模式（BIOS + GPT 分区表同样不支持），仅支持传统 BIOS + MBR 引导方式，请确保环境符合要求。
 
 > **警告**
 >
-> 请注意数据安全，以下教程具有一定风险，并且要求具备一定的动手能力。
+> 请注意数据安全，以下教程具有一定风险，并且要求操作者具备一定的动手能力与系统管理知识。
 
 ## 概述
 
-在各种采用 KVM、QEMU 虚拟化架构的服务商中，大部分不直接提供 FreeBSD 系统支持，只能通过特殊方法手动安装。
+本节介绍在 KVM、QEMU 等平台上安装 FreeBSD 的方法。在各种采用 KVM、QEMU 虚拟化架构的服务商中，大部分不直接提供 FreeBSD 系统支持，只能通过特殊方法手动安装。
 
 它们虽然在部分机型上提供 FreeBSD 系统镜像，但支持并不完善，例如自带镜像默认未启用 `BBR`，而部分机型则完全不提供 FreeBSD 支持。
 
@@ -50,7 +52,7 @@ mfsBSD 是一款完全载入内存的 FreeBSD 系统，类似于 Windows PE（Pr
 
 校验码（官网链接指向错误，已反馈但未收到回复）：[checksums](https://mfsbsd.vx.sk/files/iso/14/amd64/mfsbsd-mini-14.1-RELEASE-amd64.iso.sums.txt) [备份](https://web.archive.org/web/20260119044412/https://mfsbsd.vx.sk/files/iso/14/amd64/mfsbsd-mini-14.1-RELEASE-amd64.iso.sums.txt)
 
->**技巧**
+> **技巧**
 >
 >内存小于或等于 4 GB 的机器不建议使用 ZFS 文件系统。
 >
@@ -140,7 +142,7 @@ boot # 输入 boot 后回车即可从 mfsBSD 继续启动
 
 mfsBSD 的 `root` 默认密码为 `mfsroot`。你可以使用 SSH 工具连接后进行安装。
 
->**技巧**
+> **技巧**
 >
 >如果平台支持 DHCP 自动获取网络配置，可跳过本节。
 

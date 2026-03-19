@@ -1,25 +1,28 @@
 # 3.2 使用 VMware Workstation Pro 安装 FreeBSD
 
+本章系统介绍在 VMware Workstation Pro 虚拟化平台上部署 FreeBSD 操作系统的完整流程与关键配置细节。
 
 ## 视频教程
 
-以下视频教程演示了 VMware Workstation Pro 的安装过程，可供参考。
+以下视频教程演示了 VMware Workstation Pro 的安装过程，具有直观的操作演示，可供读者参考。
 
 - [001-Windows 11 安装 VMware 17](https://www.bilibili.com/video/BV1Qji2YLEgS)
 
 ## 镜像下载
 
+在开始安装之前，需要先下载 FreeBSD 的安装介质镜像，这是系统部署的前提条件。
+
 >**提示**
 >
->虚拟机也可以使用 FreeBSD 官方构建的 [虚拟机镜像](https://download.freebsd.org/releases/VM-IMAGES/14.2-RELEASE/amd64/Latest/)，需要手动扩容，文件系统可选 UFS 与 ZFS。
+>虚拟机也可以使用 FreeBSD 官方构建的 [虚拟机镜像](https://download.freebsd.org/releases/VM-IMAGES/14.2-RELEASE/amd64/Latest/)，该类镜像经过预配置，使用时需要手动扩容，文件系统可选 UFS 与 ZFS。
 >
->虚拟机一般使用 `FreeBSD-14.2-RELEASE-amd64-disc1.iso` 等类似文件名和后缀的镜像，但是 `FreeBSD-14.2-RELEASE-amd64-memstick.img` 也并非只能用于 U 盘刻录，虚拟机同样可以使用，使用方法参考其他章节。
+>虚拟机一般使用 `FreeBSD-14.2-RELEASE-amd64-disc1.iso` 等类似文件名和后缀的 ISO 光盘镜像，但是 `FreeBSD-14.2-RELEASE-amd64-memstick.img` 也并非只能用于 U 盘刻录，虚拟机同样可以使用，具体使用方法可参考其他章节。
 
 
 
 ## 配置虚拟机
 
-在 VMware Workstation Pro 中创建新的虚拟机，按照以下步骤进行配置。
+镜像下载完成后，在 VMware Workstation Pro 中创建新的虚拟机，按照以下步骤进行配置。
 
 ![VMware 安装 FreeBSD](../.gitbook/assets/vm1.png)
 
@@ -36,7 +39,7 @@
 
 >**技巧**
 >
->这一步实际上并无实质影响，甚至选择 Windows 也可以顺利启动。但是对于低版本的 FreeBSD，虚拟机增强工具没有开源，可能会出问题。
+>这一步实际上并无实质影响，甚至选择 Windows 也可以顺利启动。但是对于低版本的 FreeBSD，虚拟机增强工具没有开源，可能会出现问题。
 
 ![VMware 安装 FreeBSD](../.gitbook/assets/vm5.png)
 
@@ -44,7 +47,7 @@
 
 ![VMware 安装 FreeBSD](../.gitbook/assets/vm6.png)
 
-请根据实际需要调整虚拟磁盘的最大大小。默认值可能偏小。若要安装图形化桌面环境，建议分配至少 20 GB 的磁盘空间。
+请根据实际需要调整虚拟磁盘的最大大小。默认值可能偏小。若要安装图形化桌面环境，建议分配至少 20GB 的磁盘空间。
 
 ![VMware 安装 FreeBSD](../.gitbook/assets/vm7.png)
 
@@ -52,7 +55,7 @@
 
 ![VMware 安装 FreeBSD](../.gitbook/assets/vm9.png)
 
-默认的 256 MB 内存可以启动系统，但不建议用于实际使用。最低建议配置为 512 MB。
+默认的 256MB 内存可以启动系统，但不建议用于实际使用。最低建议配置为 512MB。
 
 ![VMware 安装 FreeBSD](../.gitbook/assets/vm10.png)
 
@@ -67,7 +70,7 @@
 
 >**技巧**
 >
-> 经过测试，FreeBSD 也可以支持驱动 UEFI 下 VMware 的显卡。——2025.3.24
+> 经过测试，FreeBSD 也可以支持驱动 UEFI 下 VMware 的显卡。——2025 年 3 月 24 日
 
 
 > **警告**
@@ -143,7 +146,7 @@
 
 >**技巧**
 >
-> 如果屏幕显示不正常（过大），请尝试：编辑虚拟机设置——> 硬件、设备——> 显示器——> 监视器、指定监视器设置——> 任意监视器的最大分辨率，设置为主机的分辨率或者略低于主机分辨率均可。
+> 如果屏幕显示不正常（过大），请尝试：编辑虚拟机设置→硬件、设备→显示器→监视器、指定监视器设置→任意监视器的最大分辨率，设置为主机的分辨率或者略低于主机分辨率均可。
 
 
 ### 鼠标集成（主机虚拟机鼠标自由切换）
@@ -231,7 +234,7 @@ fusefs_load="YES"
 .host:/123pan      /mnt/hgfs    fusefs  rw,mountprog=/usr/local/bin/vmhgfs-fuse,allow_other,failok 0 0
 ```
 
-即可自动挂载 VMware 共享目录 123pan。
+即可自动挂载 VMware 共享目录。
 
 挂载 fstab 中所有未挂载的文件系统，检查有无错误（若无错误输出则正常），错误的配置可能导致系统无法正常启动：
 
@@ -265,7 +268,7 @@ Downloads
 
 > **注意**
 >
-> 在使用 Windows 远程桌面或者其他 XRDP 工具远程另一台 Windows 桌面，并使用其上面运行的 VMware 虚拟机操作 FreeBSD 时，鼠标通常会变得难以控制。这是正常的！
+> 在使用 Windows 远程桌面或者其他 XRDP 工具远程另一台 Windows 桌面，并使用其上面运行的 VMware 虚拟机操作 FreeBSD 时，鼠标通常会变得难以控制。这是正常现象。
 
 - 每次进入图形界面，窗口都会异常扩大。
 
@@ -386,7 +389,7 @@ VMware 已被博通（Broadcom）收购。**因此，目前从官方下载任何
 >![下载](../.gitbook/assets/downbcm7.png)
 
 
-VMware Workstation Pro 目前对于个人用户来说是 **免费下载、免费使用、免费授权的。** **请勿从任何第三方站点下载。** 否则会造成一些未知的后果——90% 的问题都是由此产生的。
+VMware Workstation Pro 目前对于个人用户来说是 **免费下载、免费使用、免费授权的。** **请勿从任何第三方站点下载，** 否则会造成一些未知的后果——90% 的问题都是由此产生的。
 
 
 ### 博通开源/社区产品
