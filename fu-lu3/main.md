@@ -1,14 +1,22 @@
 # Main 主菜单
 
+本章节主要介绍 BIOS 主菜单的基本界面元素，包括顶部标题、菜单选项、主页面内容、帮助信息等。作为 BIOS 配置的入口界面，主菜单提供了系统硬件信息的概览和基础配置的访问路径，是进行系统底层配置的起点。
+
 ![](../.gitbook/assets/R7HQ2ZAJNW76VA29V7AM-20250719125219-xv8j22t.png)
 
 ## 顶部标题
+
+顶部标题区域通常显示 BIOS 固件的名称和版本信息，用于标识当前使用的 BIOS 类型。
 
 Aptio Setup - AMI
 
 Aptio 设置 - AMI
 
 ## 菜单选项
+
+菜单选项区域位于 BIOS 界面的核心位置，用户可通过键盘方向键在各选项之间切换。
+
+BIOS 主菜单包含以下主要功能选项，每个选项对应不同的配置页面。
 
 | 英文菜单    | 中文翻译   |
 | ----------- | ---------- |
@@ -21,7 +29,13 @@ Aptio 设置 - AMI
 
 ## 主页面内容
 
+主页面内容区域展示了系统的核心硬件信息和基本配置选项，用户可在此区域查看 BIOS 版本、处理器信息、内存信息等关键参数。
+
 ### BIOS Information（BIOS 信息）
+
+BIOS 信息子页面用于展示 BIOS 固件的详细属性，帮助用户了解当前系统的固件版本和兼容性信息。
+
+本页面展示 BIOS 的基本信息，包括厂商、版本、兼容性等关键参数。
 
 - BIOS Vendor（BIOS 厂商）: American Megatrends（安迈科技）
 - Core Version（核心版本）: 5.27
@@ -33,22 +47,30 @@ Aptio 设置 - AMI
 
 ### Processor Information（处理器信息）
 
+处理器信息子页面展示了中央处理器的详细规格，包括型号、频率、步进等关键参数。
+
+本页面展示处理器的详细信息，包括名称、类型、频率等。
+
 - Name（名称）: AlderLake ULX
 - Type（类型）: Intel(R) N100
 - Speed（频率）: 800 MHz
 - ID（编号）: 0xB06E0
 - Stepping（步进）: A0
 
-步进（Stepping）：当制造过程有所改进，或者功能被修复或删除时，将为英特尔®处理器创建新的步进代码。
+步进（Stepping）：当制造过程有所改进，或者功能被修复或删除时，将为英特尔® 处理器创建新的步进代码。
 
-目前常见的 Intel 处理器步进值通常由“一位字母 + 一位数字”组成，例如根据[英特尔 ® 处理器 N100](https://www.intel.cn/content/www/cn/zh/products/sku/231803/intel-processor-n100-6m-cache-up-to-3-40-ghz/ordering.html) [备份](https://web.archive.org/web/20260120163356/https://www.intel.cn/content/www/cn/zh/products/sku/231803/intel-processor-n100-6m-cache-up-to-3-40-ghz/ordering.html) 的官方资料可知，其当前步进为“N0”（一般消费者获得的均为该步进）。字母越接近 Z，数字越大，通常表明步进版本越高，处理器相对较新。但上图 BIOS 显示该 N100 处理器的步进为“A0”，这通常表明其为工程样片。
+目前常见的 Intel 处理器步进值通常由“一位字母 + 一位数字”组成，例如根据 [英特尔® 处理器 N100](https://www.intel.cn/content/www/cn/zh/products/sku/231803/intel-processor-n100-6m-cache-up-to-3-40-ghz/ordering.html) [备份](https://web.archive.org/web/20260120163356/https://www.intel.cn/content/www/cn/zh/products/sku/231803/intel-processor-n100-6m-cache-up-to-3-40-ghz/ordering.html) 的官方资料可知，其当前步进为“N0”（一般消费者获得的均为该步进）。字母越接近 Z，数字越大，通常表明步进版本越高，处理器相对较新。但上图 BIOS 显示该 N100 处理器的步进为“A0”，这通常表明其为工程样片。
 
-参见
+参见：
 
-- [英特尔 ® 处理器步进意味着什么？](https://www.intel.cn/content/www/cn/zh/support/articles/000057218/processors.html) [备份](https://web.archive.org/web/20260120163248/https://www.intel.cn/content/www/cn/zh/support/articles/000057218/processors.html)
+- [英特尔® 处理器步进意味着什么？](https://www.intel.cn/content/www/cn/zh/support/articles/000057218/processors.html) [备份](https://web.archive.org/web/20260120163248/https://www.intel.cn/content/www/cn/zh/support/articles/000057218/processors.html)
 - [CPU“步进”介绍](https://iknow.lenovo.com.cn/detail/320528) [备份](https://web.archive.org/web/20260120210927/https://iknow.lenovo.com.cn/detail/320528)
 
 ### Memory Information（内存信息）
+
+内存信息子页面展示了系统内存的配置情况，包括总容量、运行频率等参数。
+
+本页面展示内存的基本信息，包括版本、容量和频率。
 
 - Memory RC Version（内存 RC 版本）: 0.0.4.73
 - Total Memory（总内存）: 16384 MB
@@ -56,15 +78,27 @@ Aptio 设置 - AMI
 
 ### Language and Time（语言与时间）
 
+语言与时间子页面用于配置系统的语言偏好和时间日期设置。
+
+本页面用于配置系统语言、日期和时间。
+
 - System Language（系统语言）: [English]（[英语]）
 - System Date（系统日期）: [Sat 07/19/2025]（[2025 年 07 月 19 日 星期六]）
 - System Time（系统时间）: [04:49:48]
 
 ## 右侧帮助信息
 
+右侧帮助信息区域用于显示当前选中菜单项的详细说明，帮助用户理解各项功能的作用和配置方法。
+
+本区域提供当前选中选项的帮助说明，帮助用户了解各项功能的作用。
+
 Choose the system default language（选择系统默认语言）
 
 ## 键盘帮助（底部右侧）
+
+底部右侧的键盘帮助区域列出了 BIOS 界面中常用的操作快捷键，用户可通过这些快捷键快速导航和操作 BIOS。
+
+本区域提供操作快捷键说明，帮助用户快速导航和操作 BIOS 界面。
 
 - →↑↓←: Select Screen / Item
 
@@ -98,9 +132,13 @@ Choose the system default language（选择系统默认语言）
 
   ESC：退出
 
-- K/k 对右上角的提示内容向上翻页
+- K/k：对右上角的提示内容向上翻页
 - M/m：对右上角的提示内容向下翻页
 
 ## 底部版本信息
+
+底部版本信息区域显示了 BIOS 固件的版本号和版权声明，用于标识固件的发布信息。
+
+本区域显示 BIOS 的版本信息和版权声明。
 
 Version 2.22.1289 Copyright (C) 2025 AMI（版本 2.22.1289 版权所有 (C) AMI 2025）
