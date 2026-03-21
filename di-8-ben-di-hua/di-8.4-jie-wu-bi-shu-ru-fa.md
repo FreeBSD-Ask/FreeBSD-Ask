@@ -43,7 +43,7 @@ config_version: '0.40'
 schema_list:
   - schema: wubi98
 
-……其他省略……
+……其余省略……
 ```
 
 保存退出重新部署 Rime 输入法即可。
