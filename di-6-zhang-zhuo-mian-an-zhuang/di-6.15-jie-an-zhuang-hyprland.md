@@ -817,7 +817,7 @@ text-caps-lock-color=000000FF
 
 ## 参考文献
 
-- [ArchLinux 下 Hyprland 配置指北](https://www.bilibili.com/read/cv22707313/)
-- [Hyprland 的配置](https://nth233.top/posts/2023-02-26-Hyprland%E9%85%8D%E7%BD%AE) [备份](https://web.archive.org/web/20260120225144/https://nth233.top/posts/2023-02-26-Hyprland%E9%85%8D%E7%BD%AE)
-- [Gentoo Wiki Hyprland](https://wiki.gentoo.org/wiki/Hyprland) [备份](https://web.archive.org/web/20260120225151/https://wiki.gentoo.org/wiki/Hyprland) 指出启动命令应为 `dbus-run-session Hyprland`
-- [Arch Wiki Hyprland](https://wiki.archlinux.org/title/Hyprland) [备份](https://web.archive.org/web/20260120225141/https://wiki.archlinux.org/title/Hyprland) 指出虚拟机需要 3D 加速，因此依赖 drm GPU，而 FreeBSD 目前未进行移植，故在 FreeBSD 上不支持。同时在所有平台上 Nvidia 均无法得到支持。
+- [ArchLinux 下 Hyprland 配置指北](https://www.bilibili.com/read/cv22707313/)。Bilibili 专栏提供的 Hyprland 窗口管理器详细配置中文教程。
+- [Hyprland 的配置](https://nth233.top/posts/2023-02-26-Hyprland%E9%85%8D%E7%BD%AE) [备份](https://web.archive.org/web/20260120225144/https://nth233.top/posts/2023-02-26-Hyprland%E9%85%8D%E7%BD%AE)。个人博客提供的 Hyprland 窗口管理器配置详解与实践指南。
+- [Gentoo Wiki Hyprland](https://wiki.gentoo.org/wiki/Hyprland) [备份](https://web.archive.org/web/20260120225151/https://wiki.gentoo.org/wiki/Hyprland)。Gentoo 官方维基明确指出 Hyprland 启动命令应为 `dbus-run-session Hyprland`。
+- [Arch Wiki Hyprland](https://wiki.archlinux.org/title/Hyprland) [备份](https://web.archive.org/web/20260120225141/https://wiki.archlinux.org/title/Hyprland)。Arch Linux 官方维基指出虚拟机需 3D 加速且依赖 DRM GPU，同时所有平台 NVIDIA 显卡均不被支持。

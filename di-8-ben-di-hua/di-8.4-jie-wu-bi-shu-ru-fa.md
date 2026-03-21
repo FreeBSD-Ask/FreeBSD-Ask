@@ -30,7 +30,7 @@
 
 安装完成后，需要对 Rime 输入法进行配置以使用五笔输入法。
 
-将 98 五笔码表（`free-bsd-98wubi-tables-master/wubi86.dict.yaml` 和 `free-bsd-98wubi-tables-master/wubi86.schema.yaml`）复制到 `/usr/local/share/rime-data` 目录下。98 五笔码表下载地址：[FreeBSD-98wubi-tables](https://github.com/FreeBSD-Ask/98-input) [备份](https://web.archive.org/web/20260119034851/https://github.com/FreeBSD-Ask/98-input)。
+将 98 五笔码表（`free-bsd-98wubi-tables-master/wubi86.dict.yaml` 和 `free-bsd-98wubi-tables-master/wubi86.schema.yaml`）复制到 `/usr/local/share/rime-data` 目录下。98 五笔码表下载地址：[FreeBSD-98wubi-tables](https://github.com/FreeBSD-Ask/98-input) [备份](https://web.archive.org/web/20260119034851/https://github.com/FreeBSD-Ask/98-input)。该仓库提供适用于 FreeBSD 的 98 五笔输入法码表文件。
 
 修改 `/usr/local/share/rime-data/default.yaml` 文件：打开文件找到 `schema_list`，在其下第一行添加 `- schema: wubi98`（注意保持缩进），并删除其他输入方案，如下所示：
 
@@ -203,6 +203,6 @@ patch applied.
 
 ## 参考文献
 
-- [请问 ibus-rime 如何设置输入框横排显示](https://github.com/rime/ibus-rime/issues/52) [备份](https://web.archive.org/web/20251216213556/https://github.com/rime/ibus-rime/issues/52)
-- [LEOYoon-Tsaw/Rime_collections/](https://github.com/LEOYoon-Tsaw/Rime_collections/blob/master/Rime_description.md) [备份](https://web.archive.org/web/20260118163129/https://github.com/LEOYoon-Tsaw/Rime_collections/blob/master/Rime_description.md)
-- [rime/CustomizationGuide](https://github.com/rime/home/wiki/CustomizationGuide) [备份](https://web.archive.org/web/20260118163128/https://github.com/rime/home/wiki/CustomizationGuide)
+- [请问 ibus-rime 如何设置输入框横排显示](https://github.com/rime/ibus-rime/issues/52) [备份](https://web.archive.org/web/20251216213556/https://github.com/rime/ibus-rime/issues/52) 该 Issue 提供了 ibus-rime 横排显示的配置方案。
+- [LEOYoon-Tsaw/Rime_collections/](https://github.com/LEOYoon-Tsaw/Rime_collections/blob/master/Rime_description.md) [备份](https://web.archive.org/web/20260118163129/https://github.com/LEOYoon-Tsaw/Rime_collections/blob/master/Rime_description.md) 该文档详细介绍了 Rime 输入法的配置格式与选项。
+- [rime/CustomizationGuide](https://github.com/rime/home/wiki/CustomizationGuide) [备份](https://web.archive.org/web/20260118163128/https://github.com/rime/home/wiki/CustomizationGuide) 该指南系统阐述了 Rime 输入法的定制方法与技巧。

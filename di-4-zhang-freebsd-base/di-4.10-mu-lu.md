@@ -154,4 +154,4 @@ dr-xr-xr-x   2 root    wheel   schg,uarch  2 Feb 21 10:26 empty
 
 ### 参考文献
 
-- 手册页 [hier(7)](https://man.freebsd.org/cgi/man.cgi?query=hier&sektion=7&manpath=freebsd-release-ports)
+- 手册页 [hier(7)](https://man.freebsd.org/cgi/man.cgi?query=hier&sektion=7&manpath=freebsd-release-ports)，系统阐述 FreeBSD 文件系统层次结构

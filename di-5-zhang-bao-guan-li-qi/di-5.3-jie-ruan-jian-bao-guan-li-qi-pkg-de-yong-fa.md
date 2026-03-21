@@ -256,7 +256,7 @@ Proceed with deinstalling packages? [y/N]: # 输入 y 按回车键就卸载了
 
 #### 参考文献
 
-- [pkg delete -- deletes packages from the database	and the	system](https://man.freebsd.org/cgi/man.cgi?query=pkg-delete&sektion=8&n=1)
+- [pkg delete -- deletes packages from the database	and the	system](https://man.freebsd.org/cgi/man.cgi?query=pkg-delete&sektion=8&n=1)，提供 pkg 命令删除软件包的详细规范与参数说明
 
 ## 列出 pkg 包安装的文件
 
@@ -456,7 +456,7 @@ jbig2dec-0.20_1: /usr/local/lib/libjbig2dec.so misses libmd.so.6
 #### 附录：`bsdadminscripts2` 扩展用法及参考文献
 
 
-- [BSD Administration Scripts II](https://github.com/lonkamikaze/bsda2) [备份](https://web.archive.org/web/20260121073908/https://github.com/lonkamikaze/bsda2)，项目地址，含详细使用说明
+- [BSD Administration Scripts II](https://github.com/lonkamikaze/bsda2) [备份](https://web.archive.org/web/20260121073908/https://github.com/lonkamikaze/bsda2)，提供 FreeBSD 系统管理辅助工具集，含包完整性检查等功能
 
 - 若使用了 pkgbase，`bsdadminscripts2` 可 **检查系统的完整性**，找出哪些系统文件是被窜改过的。
 

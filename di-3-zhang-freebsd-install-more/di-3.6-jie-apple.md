@@ -64,8 +64,7 @@
 
 ### 鼠标不能移动的问题
 
-若在 Parallels Desktop 中遇到 FreeBSD 鼠标无法移动的问题，可在 `/boot/loader.conf` 中添加如下配置：
-
+若在 Parallels Desktop 中遇到 FreeBSD 鼠标无法移动的问题，可在 `/boot/loader.conf.local`（推荐使用本地配置扩展文件，避免直接修改系统默认配置 `/boot/loader.conf`）中添加如下配置：
 
 ```sh
 ums_load="YES"
@@ -74,7 +73,7 @@ ums_load="YES"
 
 ### 参考文献
 
-- [Issue(s) booting FreeBSD 12.2 aarch64 on Parallels Desktop on Apple Silicon](https://forums.freebsd.org/threads/issue-s-booting-freebsd-12-2-aarch64-on-parallels-desktop-on-apple-silicon.78654/) [备份](https://web.archive.org/web/20260107092021/https://forums.freebsd.org/threads/issue-s-booting-freebsd-12-2-aarch64-on-parallels-desktop-on-apple-silicon.78654/)
+- [Issue(s) booting FreeBSD 12.2 aarch64 on Parallels Desktop on Apple Silicon](https://forums.freebsd.org/threads/issue-s-booting-freebsd-12-2-aarch64-on-parallels-desktop-on-apple-silicon.78654/) [备份](https://web.archive.org/web/20260107092021/https://forums.freebsd.org/threads/issue-s-booting-freebsd-12-2-aarch64-on-parallels-desktop-on-apple-silicon.78654/)，提供了 Apple Silicon 上 Parallels Desktop 中 FreeBSD 启动问题的讨论与解决方案。
 
 ## 虚拟机工具
 
@@ -102,4 +101,4 @@ ums_load="YES"
 
 ### 参考文献
 
-- [parallels-tools Parallels Desktop Tools for FreeBSD](https://www.freshports.org/emulators/parallels-tools/)
+- [parallels-tools Parallels Desktop Tools for FreeBSD](https://www.freshports.org/emulators/parallels-tools/)，提供了 Parallels Desktop 虚拟机工具的 FreeBSD 端口信息与安装说明。

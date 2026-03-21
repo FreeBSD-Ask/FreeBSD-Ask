@@ -102,7 +102,7 @@ abc    ABC
 
 #### 参考文献
 
-- [调整区分大小写](https://learn.microsoft.com/zh-cn/windows/wsl/case-sensitivity) [备份](https://web.archive.org/web/20260119052826/https://learn.microsoft.com/zh-cn/windows/wsl/case-sensitivity)，Windows 文件系统支持使用属性标志按目录设置区分大小写
+- [调整区分大小写](https://learn.microsoft.com/zh-cn/windows/wsl/case-sensitivity) [备份](https://web.archive.org/web/20260119052826/https://learn.microsoft.com/zh-cn/windows/wsl/case-sensitivity)，Windows 文件系统支持使用属性标志按目录设置区分大小写，提供跨平台文件兼容性支持
 
 ## 换行符/回车之差异
 
@@ -168,7 +168,7 @@ UTF-8
 
 ### 参考文献
 
-- [Code pages](https://learn.microsoft.com/en-us/globalization/encoding/code-pages) [备份](https://web.archive.org/web/20260119052725/https://learn.microsoft.com/en-us/globalization/encoding/code-pages)，微软官方称，936 即是 GBK。
+- [Code pages](https://learn.microsoft.com/en-us/globalization/encoding/code-pages) [备份](https://web.archive.org/web/20260119052725/https://learn.microsoft.com/en-us/globalization/encoding/code-pages)，微软官方称，936 即是 GBK，用于中文简体字符编码
 
 ## 时间与时区的差异
 
@@ -210,8 +210,8 @@ Windows 会直接读取 RTC 的结果，并将其视为本地时间，即 Local 
 
 ### 参考文献
 
-- [秒的定义](https://www.nim.ac.cn/520/node/4.html) [备份](https://web.archive.org/web/20251207044618/https://www.nim.ac.cn/520/node/4.html)，中国计量科学院载秒的定义
-- [Time Zone Database](https://www.iana.org/time-zones) [备份](https://web.archive.org/web/20260120202547/https://www.iana.org/time-zones)，时区数据库
+- [秒的定义](https://www.nim.ac.cn/520/node/4.html) [备份](https://web.archive.org/web/20251207044618/https://www.nim.ac.cn/520/node/4.html)，中国计量科学院载秒的定义，基于铯原子超精细跃迁频率
+- [Time Zone Database](https://www.iana.org/time-zones) [备份](https://web.archive.org/web/20260120202547/https://www.iana.org/time-zones)，时区数据库，提供全球时区信息标准化
 - [历书基本术语简介](http://www.pmo.cas.cn/xwdt2019/kpdt2019/202203/t20220314_6389637.html#b4) [备份](https://web.archive.org/web/20260120202508/https://www.pmo.cas.cn/xwdt2019/kpdt2019/202203/t20220314_6389637.html#b4)，本文所涉术语，可参考此处中国科学院紫金山天文台的精确解释
 
 ## 深入阅读
@@ -220,17 +220,17 @@ Windows 会直接读取 RTC 的结果，并将其视为本地时间，即 Local 
 
 这里有若干书籍可供有意向的读者进一步研究学习 Windows 操作系统设计与实现：
 
-- RUSSINOVICH M, SOLOMON D, IONESCU A, 等. 深入解析 Windows 操作系统：第 7 版. 卷 1 [M]. 刘晖，译. 北京：人民邮电出版社，2021. ISBN: 9787115556943 微软官方教材，具有权威性
-- RUSSINOVICH M, SOLOMON D, IONESCU A, 等. 深入解析 Windows 操作系统：第 7 版. 卷 2 [M]. 刘晖，译. 北京：人民邮电出版社，2024. ISBN: 9787115619747 微软官方教材，具有权威性
+- RUSSINOVICH M, SOLOMON D, IONESCU A, 等. 深入解析 Windows 操作系统：第 7 版. 卷 1 [M]. 刘晖，译. 北京：人民邮电出版社，2021. ISBN: 9787115556943 微软官方教材，具有权威性，系统阐述Windows内核架构
+- RUSSINOVICH M, SOLOMON D, IONESCU A, 等. 深入解析 Windows 操作系统：第 7 版. 卷 2 [M]. 刘晖，译. 北京：人民邮电出版社，2024. ISBN: 9787115619747 微软官方教材，具有权威性，详解Windows系统组件
 
 ### 天文历法
 
-- 中国科学院紫金山天文台. 2026 年中国天文年历 [M]. 北京：科学出版社，2025. ISBN：9787030825841 注：每年一版。一般日历会写潮起潮落太阳东升西落的时间，该书则是大全
-- 胡中为. 天文学教程（上）[M]. 上海：上海交通大学出版社，2019. ISBN: 9787313216557 天文学历史悠久，这是本现代天文学入门书籍，本科生教材
-- 胡中为. 天文学教程（下）[M]. 上海：上海交通大学出版社，2020. ISBN：9787313235725 天文学是一级学科
-- DODELSON S, SCHMIDT F. 现代宇宙学 [M]. 于浩然，译. 2 版. 北京：科学出版社，2024. ISBN: 9787030786937 用数学和物理学描述宇宙宏观整体而非具体天体行星
-- 卢央. 中国古代星占学 [M]. 北京：中国科学技术出版社，2013. ISBN: 9787504661401 中国古代天文学入门，星占学即用哲学或神秘学解释天文学
-- CARROLL B W, OSTLIE D A. 当代天体物理学导论 [M]. 姜碧沩，李庆康，高健，等，译. 2 版. 北京：科学出版社，2023. ISBN: 9787030766663 天体物理学即用物理学解释天文学，是现代天文学的核心（还有一些测量、分类、天文历法等不属于此目）
+- 中国科学院紫金山天文台. 2026 年中国天文年历 [M]. 北京：科学出版社，2025. ISBN：9787030825841 注：每年一版。一般日历会写潮起潮落太阳东升西落的时间，该书则是大全，提供精确的天文数据
+- 胡中为. 天文学教程（上）[M]. 上海：上海交通大学出版社，2019. ISBN: 9787313216557 天文学历史悠久，这是本现代天文学入门书籍，本科生教材，系统介绍天文学基础
+- 胡中为. 天文学教程（下）[M]. 上海：上海交通大学出版社，2020. ISBN：9787313235725 天文学是一级学科，深入讲解天体物理与宇宙学
+- DODELSON S, SCHMIDT F. 现代宇宙学 [M]. 于浩然，译. 2 版. 北京：科学出版社，2024. ISBN: 9787030786937 用数学和物理学描述宇宙宏观整体而非具体天体行星，提供现代宇宙学理论框架
+- 卢央. 中国古代星占学 [M]. 北京：中国科学技术出版社，2013. ISBN: 9787504661401 中国古代天文学入门，星占学即用哲学或神秘学解释天文学，梳理古代星占文化
+- CARROLL B W, OSTLIE D A. 当代天体物理学导论 [M]. 姜碧沩，李庆康，高健，等，译. 2 版. 北京：科学出版社，2023. ISBN: 9787030766663 天体物理学即用物理学解释天文学，是现代天文学的核心（还有一些测量、分类、天文历法等不属于此目），提供天体物理系统介绍
 
 > **思考题**
 >

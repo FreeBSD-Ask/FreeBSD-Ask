@@ -150,4 +150,4 @@ $ cp /usr/local/share/applications/org.fcitx.Fcitx5.desktop ~/.config/autostart/
 
 ## 参考文献
 
-- [KDE Plasma 6 Wayland on FreeBSD](https://euroquis.nl/kde/2025/09/07/wayland.html) [备份](https://web.archive.org/web/20260103223224/https://euroquis.nl/kde/2025/09/07/wayland.html)，此处提示需要 `seatd`。
+- [KDE Plasma 6 Wayland on FreeBSD](https://euroquis.nl/kde/2025/09/07/wayland.html) [备份](https://web.archive.org/web/20260103223224/https://euroquis.nl/kde/2025/09/07/wayland.html)。提供在 FreeBSD 上配置 KDE Plasma 6 Wayland 会话的技术指南，明确指出 seatd 服务的必要性。

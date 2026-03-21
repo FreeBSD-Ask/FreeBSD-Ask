@@ -2,7 +2,7 @@
 
 本章节主要介绍 BIOS 中与安全相关的设置选项，包括密码保护、硬盘安全配置和安全启动等功能。在现代计算机安全框架体系中，BIOS/UEFI 安全配置构成了系统启动链路安全的第一道可信边界，对于防范物理层面的未授权访问和保护系统启动完整性具有不可替代的基础保障作用。
 
-参见 [如何设置或解决忘记 BIOS 密码/UEFI 密码/开机密码](https://www.asus.com.cn/support/faq/1046347/) [备份](https://web.archive.org/web/20260119060629/https://www.asus.com.cn/support/faq/1046347/)
+参见 [如何设置或解决忘记 BIOS 密码/UEFI 密码/开机密码](https://www.asus.com.cn/support/faq/1046347/) [备份](https://web.archive.org/web/20260119060629/https://www.asus.com.cn/support/faq/1046347/) 提供 BIOS/UEFI 密码设置与重置的详细指导。
 
 BIOS（基本输入/输出系统，Basic Input/Output System）密码是一种固件层面的安全功能，用于阻止计算机在预启动阶段遭到未经授权的访问。BIOS 密码也常被称为系统设置密码、UEFI 密码、开机密码或安全密码。
 

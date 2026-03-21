@@ -270,4 +270,4 @@ test5:*:1202:test1
 
 ## 参考文献
 
-- [pw(8)](https://man.freebsd.org/cgi/man.cgi?pw)，man 页
+- [pw(8)](https://man.freebsd.org/cgi/man.cgi?pw)，man 页，系统介绍用户和组管理命令

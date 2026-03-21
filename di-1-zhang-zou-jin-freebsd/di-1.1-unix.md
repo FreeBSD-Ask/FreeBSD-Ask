@@ -63,9 +63,9 @@ Unix 哲学源于 UNIX 操作系统的开发实践，并由肯·汤普森（Ken 
 
 ### 参考文献
 
-- 《UNIX 编程艺术》，埃里克·雷蒙德（Eric Raymond）著，ISBN：9787121176654，电子工业出版社。
-- 《Linux/Unix 设计思想》，迈克·甘卡兹（Mike Gancarz）著，ISBN：9787115266927，人民邮电出版社。（已绝版）
-- [The Open Group Standards Process](https://www.opengroup.org/standardsprocess/certification.html) [备份](https://web.archive.org/web/20260115021154/https://www.opengroup.org/standardsprocess/certification.html)
+- 《UNIX 编程艺术》，埃里克·雷蒙德（Eric Raymond）著，ISBN：9787121176654，电子工业出版社。系统阐述 UNIX 哲学与软件工程实践原则。
+- 《Linux/Unix 设计思想》，迈克·甘卡兹（Mike Gancarz）著，ISBN：9787115266927，人民邮电出版社。（已绝版）提炼 UNIX 系统设计核心思想与实践方法。
+- [The Open Group Standards Process](https://www.opengroup.org/standardsprocess/certification.html) [备份](https://web.archive.org/web/20260115021154/https://www.opengroup.org/standardsprocess/certification.html)。规范 UNIX 认证流程与技术标准框架。
 
 
 ## Unix 的一段历史

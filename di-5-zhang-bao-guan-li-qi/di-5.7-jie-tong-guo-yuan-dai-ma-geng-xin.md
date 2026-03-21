@@ -170,5 +170,5 @@ Select: (p) postpone, (df) diff-full, (e) edit,
 
 ## 参考资料
 
-- [FreeBSD 手册](https://handbook.bsdcn.org/) [备份](https://web.archive.org/web/20260120221948/https://handbook.bsdcn.org/)。
-- [etcupdate -- manage updates to system files not updated by installworld](https://man.freebsd.org/cgi/man.cgi?etcupdate(8))
+- [FreeBSD 手册](https://handbook.bsdcn.org/) [备份](https://web.archive.org/web/20260120221948/https://handbook.bsdcn.org/)，提供 FreeBSD 系统管理的完整中文参考指南
+- [etcupdate -- manage updates to system files not updated by installworld](https://man.freebsd.org/cgi/man.cgi?etcupdate(8))，提供系统配置文件更新工具的官方技术文档
