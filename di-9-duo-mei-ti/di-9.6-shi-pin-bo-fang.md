@@ -7,7 +7,7 @@ FreeBSD 操作系统提供了多种视频播放器选择，本节将介绍几款
 ### 安装 VLC
 
 - 使用 pkg 二进制包管理器安装：
-  
+
 ```sh
 # pkg install vlc
 ```
@@ -15,7 +15,7 @@ FreeBSD 操作系统提供了多种视频播放器选择，本节将介绍几款
 - 或者使用 Ports 源码编译安装：
 
 ```sh
-# cd /usr/ports/multimedia/vlc/ 
+# cd /usr/ports/multimedia/vlc/
 # make install clean
 ```
 
@@ -42,7 +42,7 @@ SMPlayer 是 MPlayer（一款功能强大的纯命令行视频播放器）的 Qt
 - 或者使用 Ports 源码编译安装：
 
 ```sh
-# cd /usr/ports/multimedia/smplayer/ 
+# cd /usr/ports/multimedia/smplayer/
 # make install clean
 ```
 
@@ -63,15 +63,15 @@ Kodi 是一款知名的开源媒体中心软件，其曾用名为 XBMC（Xbox Me
 ### 安装 Kodi
 
 - 使用 pkg 二进制包管理器安装：
-  
+
 ```sh
 # pkg install kodi
 ```
 
 - 或者使用 Ports 源码编译安装：
-  
+
 ```sh
-# cd /usr/ports/multimedia/kodi/ 
+# cd /usr/ports/multimedia/kodi/
 # make install clean
 ```
 
@@ -112,7 +112,7 @@ Kodi 是一款知名的开源媒体中心软件，其曾用名为 XBMC（Xbox Me
 - 还可以通过 Ports 源码编译安装：
 
 ```sh
-# cd /usr/ports/multimedia/mpv/ 
+# cd /usr/ports/multimedia/mpv/
 # make install clean
 ```
 
@@ -124,9 +124,9 @@ $ mpv 1.mp4
 
 请读者自行尝试上述操作步骤。
 
->**注意**
+> **注意**
 >
->此功能依赖 DRM（Direct Rendering Manager，直接渲染管理器）图形子系统，在虚拟机环境中可能无法正常使用。
+> 此功能依赖 DRM（Direct Rendering Manager，直接渲染管理器）图形子系统，在虚拟机环境中可能无法正常使用。
 
 ## 附录：音量调节
 

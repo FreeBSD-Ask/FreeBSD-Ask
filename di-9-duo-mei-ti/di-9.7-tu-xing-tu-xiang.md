@@ -17,7 +17,7 @@ FreeBSD 操作系统支持多种多媒体处理工具，本节将介绍音频剪
 或者使用 Ports 源码编译安装：
 
 ```sh
-# cd /usr/ports/audio/audacity/ 
+# cd /usr/ports/audio/audacity/
 # make install clean
 ```
 
@@ -36,7 +36,7 @@ Olive 视频编辑器（Olive Video Editor）安装方式：
 或者使用 Ports 源码编译安装：
 
 ```sh
-# cd /usr/ports/multimedia/olive/ 
+# cd /usr/ports/multimedia/olive/
 # make install clean
 ```
 
@@ -55,7 +55,7 @@ FFmpeg 安装方式：
 或者使用 Ports 源码编译安装：
 
 ```sh
-# cd /usr/ports/multimedia/ffmpeg/ 
+# cd /usr/ports/multimedia/ffmpeg/
 # make install clean
 ```
 
@@ -80,7 +80,7 @@ $ ffmpeg -i 视频文件.mp4 -vf subtitles=对应字幕.ass 输出视频.mp4
 - 或者使用 Ports 源码编译安装：
 
 ```sh
-# cd /usr/ports/graphics/inkscape/ 
+# cd /usr/ports/graphics/inkscape/
 # make install clean
 ```
 

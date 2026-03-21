@@ -43,7 +43,7 @@ config_version: '0.40'
 schema_list:
   - schema: wubi98
 
-……其余省略……
+……其他省略……
 ```
 
 保存退出重新部署 Rime 输入法即可。
@@ -93,7 +93,7 @@ $ libime_tabledict 98wbx.txt 98wbx.main.dict
 首先安装并配置好 Fcitx 5。配置从略。
 
 ```sh
-# pkg ins zh-fcitx5-rime zh-rime-essay zh-rime-wubi 
+# pkg install zh-fcitx5-rime zh-rime-essay zh-rime-wubi 
 ```
 
 或者：

@@ -18,8 +18,6 @@ CNVi（Connectivity Integration，英特尔®集成连接技术）。
 
 CRF（Companion RF，辅助射频模块），实际上指无线网卡（现代无线网卡通常与蓝牙功能集成在同一模块中）。
 
-用于显示系统中是否存在 CNVi 模块。
-
 英特尔®集成连接将 Wi-Fi 和 Bluetooth® 技术的关键元件转移到英特尔®处理器上。该解决方案由以下部分组成：
 
 - CNVi，英特尔处理器的集成无线 IP 部分
