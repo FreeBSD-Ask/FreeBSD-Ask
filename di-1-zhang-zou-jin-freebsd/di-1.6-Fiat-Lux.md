@@ -69,5 +69,5 @@ Fiat Lux!
 - 闻黎明. 西南联大与现代中国（1937~1946）[M]. 社会科学文献出版社, 2023-1. ISBN: 9787520198059。全面研究西南联大历史地位与文化影响。
 - Raphael A. Abrahao, Henri P. N. Morin, Jordan T. R. Pagé, Akbar Safari, Robert W. Boyd, and Jeff S. Lundeen, "Shadow of a laser beam," Optica 11, 1549-1555 (2024)，论文指出，光也有影子。实验证明激光束存在阴影的光学现象。
 
-## 课后习题
+
 
