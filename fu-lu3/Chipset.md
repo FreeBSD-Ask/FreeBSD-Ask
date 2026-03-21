@@ -152,7 +152,7 @@ Disabled（禁用）
 
 当设置为 Enabled 时，集成内存控制器在空闲一段时间后可能进入自刷新模式。
 
-参见 [PowerEdge: DRAM Refresh and Opportunistic Self-Refresh](https://infohub.delltechnologies.com/zh-cn/l/cpu-best-practices-3/poweredge-dram-refresh-and-opportunistic-self-refresh/)
+参见 [PowerEdge: DRAM Refresh and Opportunistic Self-Refresh](https://infohub.delltechnologies.com/zh-cn/l/cpu-best-practices-3/poweredge-dram-refresh-and-opportunistic-self-refresh/)。讲解 DRAM 刷新与机会性自刷新的最佳实践。
 
 允许在不退出低功耗状态（power down）的情况下进行机会性刷新（opportunistic refreshes）
 
@@ -180,7 +180,7 @@ Disabled（禁用）
 
 说明：
 
-Intel® Memory Thermal Management，Intel 内存热效应管理。参见 [12th Generation Intel® Core™ Processors](https://edc.intel.com/content/www/tw/zh/design/ipla/software-development-platforms/client/platforms/alder-lake-desktop/12th-generation-intel-core-processors-datasheet-volume-1-of-2/011/intel-memory-thermal-management/) [备份](https://web.archive.org/web/20260120204806/https://edc.intel.com/content/www/tw/zh/design/ipla/software-development-platforms/client/platforms/alder-lake-desktop/12th-generation-intel-core-processors-datasheet-volume-1-of-2/011/intel-memory-thermal-management/)。一系列控制内存温度的措施。
+Intel® Memory Thermal Management，Intel 内存热效应管理。参见 [12th Generation Intel® Core™ Processors](https://edc.intel.com/content/www/tw/zh/design/ipla/software-development-platforms/client/platforms/alder-lake-desktop/12th-generation-intel-core-processors-datasheet-volume-1-of-2/011/intel-memory-thermal-management/) [备份](https://web.archive.org/web/20260120204806/https://edc.intel.com/content/www/tw/zh/design/ipla/software-development-platforms/client/platforms/alder-lake-desktop/12th-generation-intel-core-processors-datasheet-volume-1-of-2/011/intel-memory-thermal-management/)。提供 Intel 第 12 代处理器内存热管理的技术规范。一系列控制内存温度的措施。
 
 ##### PECI Injected Temperature（通过 PECI 传入温度）
 

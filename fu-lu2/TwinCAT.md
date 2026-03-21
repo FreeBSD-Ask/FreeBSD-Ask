@@ -8,8 +8,8 @@ TwinCAT/BSD 是由倍福公司（Beckhoff）开发的基于 FreeBSD 的 PLC（Pr
 
 更多内容请参考：
 
-- [GPU 直通](https://github.com/FreeBSD-Ask/freebsd-journal-cn/blob/main/2023-0304/GPU%20Passthrough.md)
-- [TwinCAT/BSD for Industrial PCs](https://www.beckhoff.com/en-en/products/ipc/software-and-tools/twincat-bsd/)
+- [GPU 直通](https://github.com/FreeBSD-Ask/freebsd-journal-cn/blob/main/2023-0304/GPU%20Passthrough.md)。详细介绍 FreeBSD 平台下 GPU 直通技术的实现方法与配置步骤。
+- [TwinCAT/BSD for Industrial PCs](https://www.beckhoff.com/en-en/products/ipc/software-and-tools/twincat-bsd/)。倍福官方 TwinCAT/BSD 产品说明，涵盖技术规格与授权信息。
 
 
 ## 下载 TwinCAT/BSD

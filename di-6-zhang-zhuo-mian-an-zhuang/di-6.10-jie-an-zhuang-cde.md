@@ -155,6 +155,6 @@ dtspc		6112/tcp
 
 ## 参考文献
 
-- [cde Common Desktop Environment](https://www.freshports.org/x11/cde)，Ports 详情
+- [cde Common Desktop Environment](https://www.freshports.org/x11/cde)。FreshPorts 提供的 CDE 桌面环境端口详情与安装指南。
 - [Setting up Common Desktop Environment for modern use](https://forums.freebsd.org/threads/setting-up-common-desktop-environment-for-modern-use.69475/) [备份](https://web.archive.org/web/20260120221212/https://forums.freebsd.org/threads/setting-up-common-desktop-environment-for-modern-use.69475/)，详细配置可参考此处
-- [CDE - Common Desktop Environment Wiki](https://sourceforge.net/p/cdesktopenv/wiki/FreeBSDBuild/) [备份](https://web.archive.org/web/20260120221126/https://sourceforge.net/p/cdesktopenv/wiki/FreeBSDBuild/)，CDE 项目官方 Wiki
+- [CDE - Common Desktop Environment Wiki](https://sourceforge.net/p/cdesktopenv/wiki/FreeBSDBuild/) [备份](https://web.archive.org/web/20260120221126/https://sourceforge.net/p/cdesktopenv/wiki/FreeBSDBuild/)。CDE 项目官方 Wiki 提供的 FreeBSD 平台构建与配置指南。

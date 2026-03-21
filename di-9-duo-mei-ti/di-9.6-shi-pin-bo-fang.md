@@ -106,7 +106,7 @@ Kodi 是一款知名的开源媒体中心软件，其曾用名为 XBMC（Xbox Me
 - 使用 pkg 二进制包管理器安装：
 
 ```sh
-# pkg ins mpv
+# pkg install mpv
 ```
 
 - 还可以通过 Ports 源码编译安装：

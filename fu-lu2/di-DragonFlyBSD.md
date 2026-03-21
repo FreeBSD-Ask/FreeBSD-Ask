@@ -271,5 +271,5 @@ drm_load="YES"
 
 ## 参考文献
 
-- [DragonFlyBSD Updates Its Graphics Drivers With New GPU Support But Still Years Behind](https://www.phoronix.com/news/DragonFlyBSD-DRM-Linux-4.20.17) [备份](https://web.archive.org/web/20260117110925/https://www.phoronix.com/news/DragonFlyBSD-DRM-Linux-4.20.17)，2025 年，DragonFly BSD DRM 驱动程序代码方才与 Linux 4.20.17 中的代码同步
-- [Booting, UEFI, and text consoles](https://www.dragonflydigest.com/2017/09/14/booting-uefi-and-text-consoles/) [备份](https://web.archive.org/web/20260117173457/https://www.dragonflydigest.com/2017/09/14/booting-uefi-and-text-consoles/)
+- [DragonFlyBSD Updates Its Graphics Drivers With New GPU Support But Still Years Behind](https://www.phoronix.com/news/DragonFlyBSD-DRM-Linux-4.20.17) [备份](https://web.archive.org/web/20260117110925/https://www.phoronix.com/news/DragonFlyBSD-DRM-Linux-4.20.17)，2025 年，DragonFly BSD DRM 驱动程序代码方才与 Linux 4.20.17 中的代码同步，为显卡支持提供最新技术依据。
+- [Booting, UEFI, and text consoles](https://www.dragonflydigest.com/2017/09/14/booting-uefi-and-text-consoles/) [备份](https://web.archive.org/web/20260117173457/https://www.dragonflydigest.com/2017/09/14/booting-uefi-and-text-consoles/)。详细阐述 DragonFly BSD 的 UEFI 启动机制与文本控制台配置方法。

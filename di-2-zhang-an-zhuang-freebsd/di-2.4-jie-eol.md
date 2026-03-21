@@ -21,9 +21,9 @@
   - 请确认是 `amd64`（适用于普通电脑）**而非** `arm64`（适用于开发板）。
 - U 盘是否为扩容盘（假冒产品）？
 - 是否使用了 Ventoy 工具？
-  - 建议使用 [Rufus](https://rufus.ie/zh/) [备份](https://web.archive.org/web/20260115142915/https://rufus.ie/zh/) 进行刻录，而非 [Ventoy](https://www.ventoy.net/cn/index.html) [备份](https://web.archive.org/web/20260116224411/https://www.ventoy.net/cn/index.html)。
+  - 建议使用 [Rufus](https://rufus.ie/zh/) [备份](https://web.archive.org/web/20260115142915/https://rufus.ie/zh/)，该工具为 Windows 平台开源 USB 启动盘制作工具，进行刻录，而非 [Ventoy](https://www.ventoy.net/cn/index.html) [备份](https://web.archive.org/web/20260116224411/https://www.ventoy.net/cn/index.html)，该工具为多系统启动 USB 启动盘制作工具。
 
-若仍出现问题，请先在 [官方论坛](https://forums.freebsd.org/) [备份](https://web.archive.org/web/20260119051244/https://forums.freebsd.org/) 使用英语询问；若无果，可按其他章节指引提交 Bug。
+若仍出现问题，请先在 [官方论坛](https://forums.freebsd.org/) [备份](https://web.archive.org/web/20260119051244/https://forums.freebsd.org/)，该论坛为 FreeBSD 官方用户社区，使用英语询问；若无果，可按其他章节指引提交 Bug。
 
 ## 重启后又进入了安装界面
 

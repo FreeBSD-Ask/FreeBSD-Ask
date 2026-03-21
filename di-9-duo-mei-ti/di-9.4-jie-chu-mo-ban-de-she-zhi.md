@@ -26,7 +26,7 @@ $ xinput set-prop 6 "Device Enabled" 0    # 禁用 ID 为 6 的输入设备
 
 #### 参考文献
 
-- [FreeBSD タッチパッドを off にする](https://qiita.com/fygar256/items/35100d43b096470631d6) [备份](https://web.archive.org/web/20260120211042/https://qiita.com/fygar256/items/35100d43b096470631d6)
+- [FreeBSD タッチパッドを off にする](https://qiita.com/fygar256/items/35100d43b096470631d6) [备份](https://web.archive.org/web/20260120211042/https://qiita.com/fygar256/items/35100d43b096470631d6) 详细介绍使用 xinput 工具禁用 FreeBSD 触摸板的方法，提供实用命令示例。
 
 ### Apple Magic Trackpad
 
@@ -62,4 +62,4 @@ hw.usb.usbhid.enable="0"
 
 ## 附录：Fn 键设置
 
-- [Adjusting acpi_video brightness increments on FreeBSD](https://www.davidschlachter.com/misc/freebsd-acpi_video-thinkpad-display-brightness) [备份](https://web.archive.org/web/20260120211035/https://www.davidschlachter.com/misc/freebsd-acpi_video-thinkpad-display-brightness)
+- [Adjusting acpi_video brightness increments on FreeBSD](https://www.davidschlachter.com/misc/freebsd-acpi_video-thinkpad-display-brightness) [备份](https://web.archive.org/web/20260120211035/https://www.davidschlachter.com/misc/freebsd-acpi_video-thinkpad-display-brightness) 介绍在 FreeBSD 上调整 ACPI 视频亮度增量的具体方法，适用于 ThinkPad 等笔记本电脑。

@@ -40,7 +40,7 @@ pkgbase 直接由 freebsd-src 构建而来：
 
 freebsd-ports = 第三方软件（单个称为 Port），集合称为 Ports 框架存储库
 
-Port 本身是若干文件的集合，由源码包的检验和、说明文件、补丁等构成。其中，Makefile 是核心。类似 Arch 的 PKGBUILD 或 Gentoo 的 ebuild，事实上它们只是由 Ports 框架衍生出的技术，不应该说“类似”。
+Port 本身是若干文件的集合，由源码包的检验和、说明文件、补丁等构成。其中，Makefile 是核心。Arch 的 PKGBUILD 或 Gentoo 的 ebuild 与此类似，事实上它们是由 Ports 框架衍生出的技术。
 
 其中，pkg 包直接由 freebsd-ports 通过 poudriere 构建系统构建而来。
 
@@ -86,10 +86,10 @@ FreeBSD 基本系统几乎不包含任何与 BSD 协议不兼容的软件；
 
 ### 参考文献
 
-- [浅析 Linux 初始化 init 系统，第 1 部分：sysvinit 第 2 部分：UpStart 第 3 部分：Systemd](https://www.cnblogs.com/MYSQLZOUQI/p/5250336.html) [备份](https://web.archive.org/web/20260121094424/https://www.cnblogs.com/MYSQLZOUQI/p/5250336.html)，为存档，原文已佚
-- [init -- process control initialization](https://man.freebsd.org/cgi/man.cgi?query=init)
-- [Comparison of init systems](https://wiki.gentoo.org/wiki/Comparison_of_init_systems) [备份](https://web.archive.org/web/20260119054306/https://wiki.gentoo.org/wiki/Comparison_of_init_systems)，各大 init 对比图
-- [GPL Software in FreeBSD Base](https://wiki.freebsd.org/GPLinBase) [备份](https://web.archive.org/web/20260119053904/https://wiki.freebsd.org/GPLinBase)，FreeBSD 基本系统中的 GPL 软件
+- [浅析 Linux 初始化 init 系统，第 1 部分：sysvinit 第 2 部分：UpStart 第 3 部分：Systemd](https://www.cnblogs.com/MYSQLZOUQI/p/5250336.html) [备份](https://web.archive.org/web/20260121094424/https://www.cnblogs.com/MYSQLZOUQI/p/5250336.html)，为存档，原文已佚，系统介绍各初始化系统
+- [init -- process control initialization](https://man.freebsd.org/cgi/man.cgi?query=init)，FreeBSD init 系统官方文档
+- [Comparison of init systems](https://wiki.gentoo.org/wiki/Comparison_of_init_systems) [备份](https://web.archive.org/web/20260119054306/https://wiki.gentoo.org/wiki/Comparison_of_init_systems)，各大 init 对比图，提供系统选型参考
+- [GPL Software in FreeBSD Base](https://wiki.freebsd.org/GPLinBase) [备份](https://web.archive.org/web/20260119053904/https://wiki.freebsd.org/GPLinBase)，FreeBSD 基本系统中的 GPL 软件，梳理系统许可证兼容性
 
 ## 基本对比
 
@@ -413,7 +413,7 @@ Node.js 的依赖存储在 `node_modules` 目录，而 Nix/NixOS 的所有包则
 
 ### 参考文献
 
-- [Benefits of Gentoo](https://wiki.gentoo.org/wiki/Benefits_of_Gentoo) [备份](https://web.archive.org/web/20260119180353/https://wiki.gentoo.org/wiki/Benefits_of_Gentoo)
-- [The philosophy of Gentoo](https://www.gentoo.org/get-started/philosophy/) [备份](https://web.archive.org/web/20260119053027/https://www.gentoo.org/get-started/philosophy/)，Gentoo 设计哲学
-- [Arch compared to other distributions](https://wiki.archlinux.org/title/Arch_compared_to_other_distributions) [备份](https://web.archive.org/web/20260122123537/https://wiki.archlinux.org/title/Arch_compared_to_other_distributions)，翻译[在这里](https://wiki.archlinuxcn.org/wiki/Arch_%E4%B8%8E%E5%85%B6%E4%BB%96%E5%8F%91%E8%A1%8C%E7%89%88%E7%9A%84%E6%AF%94%E8%BE%83) [备份](https://web.archive.org/web/20260119053802/https://wiki.archlinuxcn.org/wiki/Arch_%E4%B8%8E%E5%85%B6%E4%BB%96%E5%8F%91%E8%A1%8C%E7%89%88%E7%9A%84%E6%AF%94%E8%BE%83)
-- 《C++ 语言的设计和演化》，[美] Bjarne Stroustrup，译者：裘宗燕，人民邮电出版社，ISBN 9787115497116
+- [Benefits of Gentoo](https://wiki.gentoo.org/wiki/Benefits_of_Gentoo) [备份](https://web.archive.org/web/20260119180353/https://wiki.gentoo.org/wiki/Benefits_of_Gentoo)，介绍 Gentoo 系统优势与特性
+- [The philosophy of Gentoo](https://www.gentoo.org/get-started/philosophy/) [备份](https://web.archive.org/web/20260119053027/https://www.gentoo.org/get-started/philosophy/)，Gentoo 设计哲学，阐述系统设计理念
+- [Arch compared to other distributions](https://wiki.archlinux.org/title/Arch_compared_to_other_distributions) [备份](https://web.archive.org/web/20260122123537/https://wiki.archlinux.org/title/Arch_compared_to_other_distributions)，翻译[在这里](https://wiki.archlinuxcn.org/wiki/Arch_%E4%B8%8E%E5%85%B6%E4%BB%96%E5%8F%91%E8%A1%8C%E7%89%88%E7%9A%84%E6%AF%94%E8%BE%83) [备份](https://web.archive.org/web/20260119053802/https://wiki.archlinuxcn.org/wiki/Arch_%E4%B8%8E%E5%85%B6%E4%BB%96%E5%8F%91%E8%A1%8C%E7%89%88%E7%9A%84%E6%AF%94%E8%BE%83)，提供 Arch 与其他发行版对比分析
+- 《C++ 语言的设计和演化》，[美] Bjarne Stroustrup，译者：裘宗燕，人民邮电出版社，ISBN 9787115497116，详解 C++ 语言设计理念与演进历程

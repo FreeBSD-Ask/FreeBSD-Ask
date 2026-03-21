@@ -92,4 +92,4 @@ proc           /proc       procfs  rw  0   0
 
 ## 参考文献
 
-- [icewm-preferences(5)](https://man.freebsd.org/cgi/man.cgi?query=icewm-preferences)，手册页
+- [icewm-preferences(5)](https://man.freebsd.org/cgi/man.cgi?query=icewm-preferences)。IceWM 窗口管理器配置选项的官方手册页，详细说明各项配置参数。

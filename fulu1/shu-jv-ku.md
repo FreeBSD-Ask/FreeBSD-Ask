@@ -326,7 +326,7 @@ set Price = Price * 1.2
 where Publisher = "人民邮电出版社";
 ```
 
-通俗解释：将表 `book_table` 中 `Publisher` 值为“人民邮电出版社”的记录，其 `Price` 值统一乘以 `1.2`，即在原价基础上增加 20%。
+该示例将表 `book_table` 中 `Publisher` 值为“人民邮电出版社”的记录，其 `Price` 值统一乘以 `1.2`，即在原价基础上增加 20%。
 
 ```sql
 DELETE FROM book_table

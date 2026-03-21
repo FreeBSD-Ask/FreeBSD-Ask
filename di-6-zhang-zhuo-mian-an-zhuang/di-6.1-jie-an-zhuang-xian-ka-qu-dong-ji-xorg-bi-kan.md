@@ -3,6 +3,7 @@
 >**警告**
 >
 >请勿使用 `sysutils/desktop-installer`，该工具在当前环境下可能引发不必要的错误和配置冲突。
+>
 ## 引言
 
 本节旨在系统阐述 FreeBSD 操作系统中 Intel 与 AMD 图形处理器（Graphics Processing Unit，GPU）驱动程序的安装与配置方法。图形驱动作为连接操作系统内核与图形硬件的关键抽象层，其正确配置对于桌面环境的稳定运行与性能发挥至关重要。
@@ -264,4 +265,4 @@ crw-rw---- 1 root video 1, 177 2025年 8月22日 /dev/backlight/backlight0 # 台
 
 ## 参考文献
 
-- 显卡详细支持情况可以看 [wiki/Graphics](https://wiki.freebsd.org/Graphics) [备份](https://web.archive.org/web/20260120220132/https://wiki.freebsd.org/Graphics)
+- 显卡详细支持情况可以看 [wiki/Graphics](https://wiki.freebsd.org/Graphics) [备份](https://web.archive.org/web/20260120220132/https://wiki.freebsd.org/Graphics)。FreeBSD 官方维基提供的图形硬件兼容性详细列表与配置指南。
