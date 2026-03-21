@@ -102,3 +102,11 @@ ums_load="YES"
 ### 参考文献
 
 - [parallels-tools Parallels Desktop Tools for FreeBSD](https://www.freshports.org/emulators/parallels-tools/)，提供了 Parallels Desktop 虚拟机工具的 FreeBSD 端口信息与安装说明。
+
+## 课后习题
+
+1. 查找 FreeBSD 15 源代码中关于 `acpi_ged` 的提交记录，理解该补丁解决的具体问题，尝试在 FreeBSD 14 上手动应用该补丁并验证系统能否正常启动。
+
+2. 分析 Parallels Desktop 虚拟机工具的端口源代码，研究其长期未更新的技术原因，尝试构建一个最小化的虚拟机工具替代方案。
+
+3. 对比 `ums` 与 `usbhid` 两种 USB 鼠标驱动的实现差异，在不同虚拟机环境中测试两种驱动的兼容性。

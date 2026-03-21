@@ -96,3 +96,11 @@ $ ffmpeg -i 视频文件.mp4 -vf subtitles=对应字幕.ass 输出视频.mp4
 ### 参考文献
 
 - Inkscape [官方教程](https://inkscape.org/zh-hans/learn/tutorials/) [备份](https://web.archive.org/web/20260121063653/https://inkscape.org/zh-hans/learn/tutorials/) 提供 Inkscape 矢量绘图软件的详细中文教程，涵盖基础操作与高级功能。
+
+## 课后习题
+
+1. 查找 FFmpeg 的 Ports，修改其编译选项以启用更多编解码器支持，构建并用其压制一段带字幕的视频，验证输出结果。
+
+2. 选取 Audacity 中的音频编辑机制，重构其最小实现。
+
+3. 修改 Inkscape 的默认矢量转换参数（如 Ctrl+I 的转换精度），验证其抠图效果变化。

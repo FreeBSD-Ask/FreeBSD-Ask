@@ -217,3 +217,9 @@ $ doas ee /usr/local/etc/pkg/repos/FreeBSD.conf
 ```
 
 将配置文件中 `FreeBSD: {enabled: no}` 的 `no` 修改为 `yes` 即可。
+
+## 课后习题
+
+1. 查找 TwinCAT/BSD 中 dhcpcd 服务的实现，分析其为何在设置静态 IP 后仍会分配 DHCP 地址，重构最小化的网络配置方案并验证，思考这种默认行为如何在工业场景中体现"可用性优先"的设计哲学。
+
+2. 在 TwinCAT/BSD 系统中同时启用 Beckhoff 源和 FreeBSD 官方源，尝试安装一个来自 FreeBSD 源的软件包（如 nginx），分析这两个软件源体系之间的潜在冲突，并思考倍福为何选择构建独立的软件包生态而非直接沿用 FreeBSD 的 pkg 系统。

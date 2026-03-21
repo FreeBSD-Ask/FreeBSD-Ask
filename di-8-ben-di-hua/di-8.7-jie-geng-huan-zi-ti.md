@@ -76,3 +76,9 @@ allscreens_flags="-f /root/b16.fnt"
 
 - [rc.conf](https://man.freebsd.org/cgi/man.cgi?query=rc.conf&sektion=5) ，此页搜索“allscreens_flags”。该手册页详细说明了 rc.conf 系统配置文件的语法与选项。
 - [vidcontrol font and color via /etc/rc.conf problem](https://forums.freebsd.org/threads/vidcontrol-font-and-color-via-etc-rc-conf-problem.81696/) [备份](https://web.archive.org/web/20260115023113/https://forums.freebsd.org/threads/vidcontrol-font-and-color-via-etc-rc-conf-problem.81696/)。该讨论帖探讨了控制台字体与颜色配置的相关问题。
+
+## 课后习题
+
+1. 从 Windows 系统提取字体文件并在 FreeBSD 中配置，测试多个 GTK 和 Qt 应用程序的字体显示效果。
+2. 下载 bdf 或 hex 格式的字体文件，使用 vtfontcvt 工具将其转换为 fnt 格式，在控制台中测试显示效果。
+3. 尝试使用第三方工具（如 vt-fnt）生成中文字体的 fnt 文件，验证其在 FreeBSD 控制台中的显示效果。

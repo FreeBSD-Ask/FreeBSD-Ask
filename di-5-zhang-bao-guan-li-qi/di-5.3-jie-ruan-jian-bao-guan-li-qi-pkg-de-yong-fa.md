@@ -502,3 +502,11 @@ Ignore the mismatch and continue? [y/N]:
 
 
 参见 [pkg(8): "An error occured while fetching package: No error"](https://forums.freebsd.org/threads/pkg-8-an-error-occured-while-fetching-package-no-error.96761/) [备份](https://web.archive.org/web/20260120223523/https://forums.freebsd.org/threads/pkg-8-an-error-occured-while-fetching-package-no-error.96761/)
+
+## 课后习题
+
+1. 阅读 pkg 源代码，定位其并行下载与安装的实现位置，尝试为其添加并行下载功能，并验证是否能显著提升安装速度。
+
+2. 选取 pkg 的原子更新问题，设计一个实验方案，复现该问题，并尝试提出一个可行的解决方案。
+
+3. 为 pkg 新增 i18n 支持。

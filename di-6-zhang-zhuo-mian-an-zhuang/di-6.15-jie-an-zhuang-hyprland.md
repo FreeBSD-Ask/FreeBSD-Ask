@@ -821,3 +821,8 @@ text-caps-lock-color=000000FF
 - [Hyprland 的配置](https://nth233.top/posts/2023-02-26-Hyprland%E9%85%8D%E7%BD%AE) [备份](https://web.archive.org/web/20260120225144/https://nth233.top/posts/2023-02-26-Hyprland%E9%85%8D%E7%BD%AE)。个人博客提供的 Hyprland 窗口管理器配置详解与实践指南。
 - [Gentoo Wiki Hyprland](https://wiki.gentoo.org/wiki/Hyprland) [备份](https://web.archive.org/web/20260120225151/https://wiki.gentoo.org/wiki/Hyprland)。Gentoo 官方维基明确指出 Hyprland 启动命令应为 `dbus-run-session Hyprland`。
 - [Arch Wiki Hyprland](https://wiki.archlinux.org/title/Hyprland) [备份](https://web.archive.org/web/20260120225141/https://wiki.archlinux.org/title/Hyprland)。Arch Linux 官方维基指出虚拟机需 3D 加速且依赖 DRM GPU，同时所有平台 NVIDIA 显卡均不被支持。
+
+## 课后习题
+
+1. 查找 Hyprland 合成器的 Port 源码，分析其与 wlroots 的技术关联，在真实硬件上构建最小化 Hyprland 环境并验证其 Wayland 会话行为。
+2. 重构本文，全面增补重写。

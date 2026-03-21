@@ -141,3 +141,7 @@ George Berkeley（1685.3.12—1753.1.14），2023 年是他逝世 270 周年。2
 - [George Berkeley, Bishop of Cloyne/Philosopher](http://cloyne.ie/about/george-berkeley-bishop-of-cloyne/) [备份](https://web.archive.org/web/20260114073713/https://cloyne.ie/about/george-berkeley-bishop-of-cloyne/)，Cloyne District Community Council。介绍贝克莱主教在克洛因教区的生平与工作。
 - [George Berkeley](https://www.britannica.com/biography/George-Berkeley) [备份](https://web.archive.org/web/20260115022234/https://www.britannica.com/biography/George-Berkeley) ，大英百科全书贝克莱条目。提供贝克莱生平与思想的权威百科介绍。
 - 胡化凯. 20 世纪 50-70 年代中国科学批判资料选（上下）[M]. 济南： 山东教育出版社， 2009.（已绝版，ISBN 7532853861）。其中整本下册均涉及对爱因斯坦的批判。记录特定历史时期科学与政治交织的学术史料。
+
+## 课后习题
+
+1. 查找贝克莱《人类知识原理》的原始文本与早期版本，复现其中关于存在与感知关系的核心论证，并尝试用逻辑符号重构其推理过程。

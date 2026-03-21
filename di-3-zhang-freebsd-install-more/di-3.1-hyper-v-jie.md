@@ -155,3 +155,11 @@ PS C:\Users\ykla> Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-H
 - [使用检查点将虚拟机恢复到以前的状态](https://learn.microsoft.com/zh-cn/virtualization/hyper-v-on-windows/user-guide/checkpoints?source=recommendations&tabs=hyper-v-manager%2Cpowershell) [备份](https://web.archive.org/web/20260118173806/https://learn.microsoft.com/zh-cn/windows-server/virtualization/hyper-v/checkpoints?source=recommendations&tabs=hyper-v-manager%2Cpowershell)，介绍了 Hyper-V 检查点的创建与使用方法。
 - [在 Hyper-V 中在标准检查点与生产检查点之间进行选择](https://learn.microsoft.com/zh-cn/windows-server/virtualization/hyper-v/manage/choose-between-standard-or-production-checkpoints-in-hyper-v) [备份](https://web.archive.org/web/20260117184502/https://learn.microsoft.com/zh-cn/windows-server/virtualization/hyper-v/checkpoints)，对比了标准检查点与生产检查点的差异与适用场景。
 - [FreeBSD13 を Hyper-V 環境 にインストールしてみた 所感](https://qiita.com/nanorkyo/items/d33e1befd4eb9c004fcd) [备份](https://web.archive.org/web/20260118173835/https://qiita.com/nanorkyo/items/d33e1befd4eb9c004fcd)，提供了 FreeBSD 在 Hyper-V 环境下的安装经验与技巧。
+
+## 课后习题
+
+1. 查找 FreeBSD 13.0 源代码中关于 `kern.evdev.rcpt_mask` 的实现，在 FreeBSD 13.0 系统上应用该参数修改，并验证鼠标是否正常工作，分析该参数如何改变内核对输入设备的处理方式。
+
+2. 分析 Hyper-V 安全启动机制，研究其与 FreeBSD 启动流程的兼容性问题，尝试构建一个最小化的 FreeBSD 启动链。
+
+3. 启用 Hyper-V 来宾服务，尝试通过宿主机与虚拟机进行文件交换操作，分析该服务是如何在虚拟化边界创建可控的数据通道的。

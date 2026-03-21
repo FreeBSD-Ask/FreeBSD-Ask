@@ -245,3 +245,11 @@ Disabled（禁用）
 本选项用于配置 SD 卡设备的启动优先级。通过该设置，用户可以根据自身需求，合理安排 SD 卡的启动优先次序。
 
 指定来自可用 UEFI SD 驱动的启动设备优先顺序。
+
+## 课后习题
+
+1. 在 FreeBSD 中配置 PXE 网络启动环境，制作网络启动镜像，设置 Network Stack Driver Support 为启用，验证从网络启动 FreeBSD 的完整流程，并对比本地启动与网络启动的差异。
+
+2. 分析启动顺序（Boot Option #1-#9）机制的设计，重构其最小功能模型，探讨为什么固件优先于操作系统控制启动设备选择。
+
+3. 启用 Fast Boot 并设置 USB Support 为 Disabled，记录无法访问 BIOS 的后果，然后使用 CMOS 清空或 Windows 高级启动恢复。

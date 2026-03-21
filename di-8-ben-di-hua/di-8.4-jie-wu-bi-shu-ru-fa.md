@@ -206,3 +206,9 @@ patch applied.
 - [请问 ibus-rime 如何设置输入框横排显示](https://github.com/rime/ibus-rime/issues/52) [备份](https://web.archive.org/web/20251216213556/https://github.com/rime/ibus-rime/issues/52) 该 Issue 提供了 ibus-rime 横排显示的配置方案。
 - [LEOYoon-Tsaw/Rime_collections/](https://github.com/LEOYoon-Tsaw/Rime_collections/blob/master/Rime_description.md) [备份](https://web.archive.org/web/20260118163129/https://github.com/LEOYoon-Tsaw/Rime_collections/blob/master/Rime_description.md) 该文档详细介绍了 Rime 输入法的配置格式与选项。
 - [rime/CustomizationGuide](https://github.com/rime/home/wiki/CustomizationGuide) [备份](https://web.archive.org/web/20260118163128/https://github.com/rime/home/wiki/CustomizationGuide) 该指南系统阐述了 Rime 输入法的定制方法与技巧。
+
+## 课后习题
+
+1. 下载 98 五笔码表并在 IBus 和 Fcitx5 两种框架下分别完成配置，对比两种框架下的配置流程、文件位置和最终使用效果。
+2. 使用 rime_patch 工具修改 Rime 输入法的多个配置选项（如候选字数量、默认输出状态等），验证修改后的行为变化。
+3. 尝试创建一个简单的自定义码表，使用 libime_tabledict 工具将其转换为 dict 格式，在 Fcitx5 中测试使用，分析输入法引擎的可扩展性设计。

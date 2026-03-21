@@ -273,3 +273,9 @@ drm_load="YES"
 
 - [DragonFlyBSD Updates Its Graphics Drivers With New GPU Support But Still Years Behind](https://www.phoronix.com/news/DragonFlyBSD-DRM-Linux-4.20.17) [备份](https://web.archive.org/web/20260117110925/https://www.phoronix.com/news/DragonFlyBSD-DRM-Linux-4.20.17)，2025 年，DragonFly BSD DRM 驱动程序代码方才与 Linux 4.20.17 中的代码同步，为显卡支持提供最新技术依据。
 - [Booting, UEFI, and text consoles](https://www.dragonflydigest.com/2017/09/14/booting-uefi-and-text-consoles/) [备份](https://web.archive.org/web/20260117173457/https://www.dragonflydigest.com/2017/09/14/booting-uefi-and-text-consoles/)。详细阐述 DragonFly BSD 的 UEFI 启动机制与文本控制台配置方法。
+
+## 课后习题
+
+1. 在 QEMU 或 VirtualBox 中安装 DragonFly BSD 并使用 HAMMER2 文件系统，查找 HAMMER2 的相关文档，尝试创建一个快照并验证其功能，分析该文件系统设计如何在数据可靠性与性能之间进行权衡。
+
+2. 查找 DragonFly BSD 中与 SMP 相关的内核源代码或文档，对比其与 FreeBSD 的并行计算架构设计差异，思考为什么技术分歧会导致社区分裂，并分析这种分裂如何同时限制和扩展了两个系统的技术演进路径。

@@ -93,3 +93,8 @@ proc           /proc       procfs  rw  0   0
 ## 参考文献
 
 - [icewm-preferences(5)](https://man.freebsd.org/cgi/man.cgi?query=icewm-preferences)。IceWM 窗口管理器配置选项的官方手册页，详细说明各项配置参数。
+
+## 课后习题
+
+1. 查找 IceWM 窗口管理器的 Port 源码，分析其轻量级设计的历史背景，在 QEMU 中验证其与现代 Wayland 应用的兼容性。
+2. 为 IceWM 补充 i18n 支持。

@@ -266,3 +266,9 @@ crw-rw---- 1 root video 1, 177 2025年 8月22日 /dev/backlight/backlight0 # 台
 ## 参考文献
 
 - 显卡详细支持情况可以看 [wiki/Graphics](https://wiki.freebsd.org/Graphics) [备份](https://web.archive.org/web/20260120220132/https://wiki.freebsd.org/Graphics)。FreeBSD 官方维基提供的图形硬件兼容性详细列表与配置指南。
+
+## 课后习题
+
+1. 查找 drm-61-kmod 或 drm-66-kmod 的 Port 源码，分析其构建依赖与内核版本的对应关系，在 QEMU 中模拟不同 FreeBSD 版本并验证驱动加载行为。
+2. 尝试从 OpenBSD 移植 drm 实现。
+3. 尝试自动化上述 drm 的移植流程。

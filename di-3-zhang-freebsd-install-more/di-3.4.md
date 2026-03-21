@@ -168,3 +168,11 @@ zroot/var/log        188K  87.8G   188K  /var/log
 zroot/var/mail        96K  87.8G    96K  /var/mail
 zroot/var/tmp         96K  87.8G    96K  /var/tmp
 ```
+
+## 课后习题
+
+1. 研究 FreeBSD 安装程序的分区算法，尝试设计一种无需预先预留大空间、也无需后期压缩 Windows 分区的双系统安装方案，并在虚拟机环境中验证其可行性。
+
+2. 分析 GPT 分区表中各分区类型标识的历史演变，对比 freebsd-swap 与 Linux swap 分区的实现差异，修改 swap 分区类型标识并观察系统行为变化。
+
+3. 尝试修改 Windows 安装过程，使其在不破坏 FreeBSD ZFS 分区的情况下完成安装。

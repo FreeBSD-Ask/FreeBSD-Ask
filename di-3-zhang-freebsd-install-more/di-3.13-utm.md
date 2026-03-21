@@ -170,3 +170,11 @@ twm: created fontset with 2 fonts (15 missing) for "fixed"
 虚拟机看不到画面，显示 Display output is not active.
 
 ![虚拟机看不到画面](../.gitbook/assets/install_bsd_on_utm/15.png)
+
+## 课后习题
+
+1. 研究 `virtio_gpu` 和 `vtgpu` 驱动在 FreeBSD ARM64 上的实现状态，分析为什么禁用它们可以让 Xorg 启动但失去画面输出，尝试寻找一个两全其美的配置。
+
+2. 分析 UTM 与 QEMU 的关系，研究 UTM 如何封装 QEMU 并提供图形化界面，尝试直接使用 QEMU 命令行启动 FreeBSD 并对比差异。
+
+3. 对比 UTM 在 App Store 收费版与 GitHub 免费版的功能差异。

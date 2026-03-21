@@ -537,3 +537,12 @@ DFreeBSD/amd64 EFI loader, Revision 3.0
 # pw groupadd ntpd -g 123  # 创建 ntpd 用户组，GID 为 123
 # pw useradd ntpd -u 123 -g ntpd -h - -d /var/db/ntp -s /usr/sbin/nologin -c "NTP Daemon"  # 创建 ntpd 用户，UID 为 123，主目录 /var/db/ntp，禁止登录，仅用于 NTP 守护进程
 ```
+
+## 课后习题
+
+1. 阅读 `freebsd-update` 脚本的源代码，定位其速度缓慢的原因，重构其核心下载逻辑，并验证是否能显著提升更新速度。
+
+2. 选取 freebsd-update 的版本检查机制，重构其最小实现，并分析该机制如何在"安全性"与"用户便利性"之间做权衡。
+
+3. 修改 freebsd-update 的默认行为，使其支持从自定义镜像源获取更新，验证其在不同网络环境下的可用性，并分析这种修改是否改变了系统对用户的约束边界。
+

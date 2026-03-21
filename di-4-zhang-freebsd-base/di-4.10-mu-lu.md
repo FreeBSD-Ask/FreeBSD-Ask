@@ -155,3 +155,9 @@ dr-xr-xr-x   2 root    wheel   schg,uarch  2 Feb 21 10:26 empty
 ### 参考文献
 
 - 手册页 [hier(7)](https://man.freebsd.org/cgi/man.cgi?query=hier&sektion=7&manpath=freebsd-release-ports)，系统阐述 FreeBSD 文件系统层次结构
+
+## 课后习题
+
+1. 在 FreeBSD 中遍历整个目录树结构，使用 find 命令定位 10 个重要系统配置文件，记录其路径和用途。
+2. 查看 FreeBSD 源码中 `/etc/defaults/` 目录的设计文档，分析其目录结构如何在组织性与灵活性之间做权衡。
+3. 修改 FreeBSD 中 `/tmp` 目录的默认权限配置，验证其行为变化。

@@ -380,3 +380,9 @@ $ sudo su
 - [man mac_do(4)](https://man.freebsd.org/cgi/man.cgi?mac_do(4))
 
 此部分内容较为简单，读者可自行了解，或直接向本书提交 PR。
+
+## 课后习题
+
+1. 在 FreeBSD 中分别配置 doas、sudo、sudo-rs 三种提权工具，测试并记录三者的功能差异。
+2. 查看 FreeBSD Ports 中 doas 工具的源码实现，分析其设计如何在简单性与安全性之间做权衡。
+3. 修改 FreeBSD 中 doas 配置的 keepenv 选项，验证其行为变化。

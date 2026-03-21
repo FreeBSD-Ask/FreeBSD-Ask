@@ -158,3 +158,9 @@ dtspc		6112/tcp
 - [cde Common Desktop Environment](https://www.freshports.org/x11/cde)。FreshPorts 提供的 CDE 桌面环境端口详情与安装指南。
 - [Setting up Common Desktop Environment for modern use](https://forums.freebsd.org/threads/setting-up-common-desktop-environment-for-modern-use.69475/) [备份](https://web.archive.org/web/20260120221212/https://forums.freebsd.org/threads/setting-up-common-desktop-environment-for-modern-use.69475/)，详细配置可参考此处
 - [CDE - Common Desktop Environment Wiki](https://sourceforge.net/p/cdesktopenv/wiki/FreeBSDBuild/) [备份](https://web.archive.org/web/20260120221126/https://sourceforge.net/p/cdesktopenv/wiki/FreeBSDBuild/)。CDE 项目官方 Wiki 提供的 FreeBSD 平台构建与配置指南。
+
+## 课后习题
+
+1. 查找 CDE 桌面环境的源码仓库，分析其与 20 世纪 90 年代商业 UNIX 系统的历史关联。
+2. 选取 CDE 的 dtspcd 子进程控制服务机制，重构最小化服务依赖配置。
+3. 为 CDE 补充 i18n 支持。

@@ -127,3 +127,8 @@ hours-between-reminders     8   # 提醒间隔（小时）
 
 ![freebsd-update-notify on FreeBSD](../.gitbook/assets/notify3.png)
 
+## 课后习题
+
+1. 查找 WhiteSur 主题的源码仓库，分析其跨平台适配机制，在 QEMU 中构建主题安装环境并验证其在 FreeBSD 上的应用效果。
+2. 修改 freebsd-update-notify 的默认更新检测间隔，验证其通知行为变化。
+

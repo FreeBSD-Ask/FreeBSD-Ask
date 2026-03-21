@@ -225,3 +225,10 @@ KDE5 下 WPS 可能会无法启动。
 # cd /usr/ports/shells/bash/
 # make install clean
 ```
+
+## 课后习题
+
+1. 分别在 Rocky Linux 和 Arch Linux 两种兼容层下安装 WPS Office，对比两种安装方式的流程复杂度、依赖处理和最终运行效果。
+2. 测试 WPS Office 在不同用户权限和不同桌面环境下的运行情况，验证输入法兼容性和文件读写功能。
+3. 尝试修改 WPS Office 的启动方式或环境变量，观察其行为变化。
+4. 更新 Ports 中的 WPS。

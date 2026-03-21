@@ -93,3 +93,11 @@ include themes/Matrix-rEFInd/theme.conf
 > **技巧**
 >
 >如果在虚拟机（如 VMware、VirtualBox）中操作，由于其 UEFI 固件的屏幕分辨率限制，rEFInd 界面可能无法同时显示所有操作系统选项，需通过方向键切换查看，这与上图所示的效果可能不同。
+
+## 课后习题
+
+1. 研究 rEFInd 的自动操作系统检测机制，分析它如何扫描 EFI 系统分区并识别不同的操作系统，尝试手动添加一个自定义启动项并验证。
+
+2. 使 [Clover](https://github.com/cloverhackycolor/cloverbootloader/) 等更多类似软件适配 FreeBSD。
+
+3. 尝试创建一个 FreeBSD 特色主题。

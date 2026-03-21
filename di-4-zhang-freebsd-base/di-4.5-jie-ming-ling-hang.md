@@ -786,3 +786,9 @@ FreeBSD 的设计更接近传统 UNIX 的行为。
 > **注意**
 >
 > 在 FreeBSD 下，关机与重启操作都需要 root 权限才能执行。
+
+## 课后习题
+
+1. 在 FreeBSD 中使用 BSD 风格的 sed/awk/grep 处理 3 个文本文件，记录与 GNU 版本的差异。
+2. 查看 FreeBSD 中 ls 命令的源码实现，与 GNU 的实现进行对比。
+3. 修改 FreeBSD 中默认 umask 值，验证新建文件权限的变化。

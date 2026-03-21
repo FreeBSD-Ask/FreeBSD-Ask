@@ -226,3 +226,9 @@ Probe URL: https://bsd-hardware.info/?probe=f64606c4b1
 打开上面的链接，即可看到你的设备。笔者这里上传的是 Radxa x4 的配置信息。
 
 其他操作系统可参见 [INSTALL HOWTO FOR BSD](https://github.com/linuxhw/hw-probe/blob/master/INSTALL.BSD.md) [备份](https://web.archive.org/web/20260115143827/https://github.com/linuxhw/hw-probe/blob/master/INSTALL.BSD.md)，该文档提供 BSD 系统上 hw-probe 工具的安装说明。
+
+## 课后习题
+
+1. 下载 FreeBSD 14.2-RELEASE 的 memstick 镜像，使用 CertUtil 计算其 SHA256 校验值，与官方 CHECKSUM 文件进行比对验证。
+
+2. 查阅 bsd-hardware.info 网站，查找你当前设备的硬件兼容性信息，如果可以安装 FreeBSD，则使用 hw-probe 工具将你自己的硬件数据上传到该平台。

@@ -194,3 +194,11 @@ ssh ykla@localhost:8022
 - [Create FreeBSD virtual machine using qemu. Run the VM using xhyve.](https://gist.github.com/zg/38a3afa112ddf7de4912aafc249ec82f) [备份](https://web.archive.org/web/20260119043934/https://gist.github.com/zg/38a3afa112ddf7de4912aafc249ec82f)，提供了 QEMU 下 FreeBSD 虚拟机扩容的技术方法。
 - [在 QEMU for Windows x64 上搭建 RISC-V 环境（Debian Linux）](https://naiv.fun/Ops/83.html) [备份](https://web.archive.org/web/20260117183356/https://naiv.fun/Ops/83.html)，提供了 RISC-V 环境搭建的概念解释与整体框架。
 - [RISC-V Emulation Revisited](https://smist08.wordpress.com/2023/04/28/risc-v-emulation-revisited/) [备份](https://web.archive.org/web/20260118173136/https://smist08.wordpress.com/2023/04/28/risc-v-emulation-revisited/)，详细介绍了 QEMU 中 RISC-V 虚拟化的各种配置参数与实现细节。
+
+## 课后习题
+
+1. 研究 OpenSBI 与 U-Boot 在 RISC-V 启动链中的职责划分，尝试移除其中一个组件并替换为简化实现，验证系统能否正常启动。
+
+2. 分析 QEMU 中 RISC-V 图形界面支持的技术障碍，研究 virtio-gpu 设备在 FreeBSD RISC-V 上的驱动状态，尝试配置基本的图形输出。
+
+3. 修改 QEMU 启动脚本中的 CPU 核心数与内存大小参数，对比不同配置下系统的启动时间与运行性能。

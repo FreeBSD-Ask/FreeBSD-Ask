@@ -140,10 +140,6 @@ $ cp /usr/local/share/applications/org.fcitx.Fcitx5.desktop ~/.config/autostart/
 
 ## 故障排除与未竟事宜
 
-### 切换到 PipeWire
-
-待解决。
-
 ### 在 root 下无声音
 
 表现为右下角声音控件提示“未连接到音频服务”：可以设置 PulseAudio 自启动，方法是在 KDE 设置中添加该服务并赋予可执行权限。
@@ -151,3 +147,8 @@ $ cp /usr/local/share/applications/org.fcitx.Fcitx5.desktop ~/.config/autostart/
 ## 参考文献
 
 - [KDE Plasma 6 Wayland on FreeBSD](https://euroquis.nl/kde/2025/09/07/wayland.html) [备份](https://web.archive.org/web/20260103223224/https://euroquis.nl/kde/2025/09/07/wayland.html)。提供在 FreeBSD 上配置 KDE Plasma 6 Wayland 会话的技术指南，明确指出 seatd 服务的必要性。
+
+## 课后习题
+
+1. 优化在 Wayland 上 KDE 的使用体验。
+2. 适配 PipeWire 音频。

@@ -704,3 +704,9 @@ $ anydesk
 - [rustdesk-server Self hosted RustDesk server](https://www.freshports.org/net/rustdesk-server/)。FreshPorts 提供的 RustDesk 中继服务器端口详情与安装指南。
 - [远程控制软件 RustDesk 自建服务器全平台部署及使用教程](https://www.cnblogs.com/safe-rabbit/p/18020812) [备份](https://web.archive.org/web/20260120220700/https://www.cnblogs.com/safe-rabbit/p/18020812)。博客园提供的 RustDesk 自建中继服务器全平台部署与使用详细教程。
 
+## 课后习题
+
+1. 查找 TigerVNC Server 的 Port 源码，分析其 Xvnc 虚拟桌面实现机制，在 QEMU 中构建最小化 VNC 环境并验证其远程访问功能。
+2. 适配 Wayland。
+
+
