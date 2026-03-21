@@ -5,7 +5,7 @@
 为了方便说明，仅列出三级目录和重要文件。这一目录结构遵循文件系统层次标准（Filesystem Hierarchy Standard (FHS)）的基本设计理念：
 
 ```sh
-\
+/
 ├── COPYRIGHT FreeBSD 版权信息文件
 ├── boot 操作系统引导过程中使用的程序和配置文件
 │   ├── fonts 终端字体

@@ -11,7 +11,7 @@ Wine 使得在 FreeBSD 系统上运行 Windows 程序成为可能。本节将介
 使用 pkg 进行安装：
 
 ```sh
-# pkg ins wine wine-gecko wine-mono
+# pkg install wine wine-gecko wine-mono
 ```
 
 >**技巧**

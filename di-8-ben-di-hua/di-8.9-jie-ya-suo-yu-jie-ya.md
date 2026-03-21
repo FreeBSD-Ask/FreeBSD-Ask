@@ -119,7 +119,7 @@ $ 7z a test.7z test # 将 test 文件压缩成 7z 文件。
 
 ### 7z 解压
 
-```
+```sh
 $ 7z x test.7z # 解压 7z 文件
 $ 7z x test.7z -o/home/ykla/下载/test # 将 test.7z 解压到指定路径
 ```
@@ -140,7 +140,7 @@ rar 是 Windows 上常见的压缩工具。
 - 通过 pkg 安装：
 
 ```sh
-# pkg ins rar unrar
+# pkg install rar unrar
 ```
 
 - 通过 Ports：

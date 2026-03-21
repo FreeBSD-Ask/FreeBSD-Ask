@@ -1,8 +1,8 @@
 # 9.1 音频设备配置
 
->**警告**
+> **警告**
 >
->KDE 6 Ports 默认通过 PulseAudio 在全局占用音频，请勿手动切换到其他音频后端（如 PipeWire），以免造成不必要的问题。
+> KDE 6 Ports 默认通过 PulseAudio 在全局占用音频，请勿手动切换到其他音频后端（如 PipeWire），以免造成不必要的问题。
 
 ## 声音设置
 
@@ -28,7 +28,7 @@ No devices installed from userspace.
 可以通过调整内核参数，使上面命令输出更为详细的声卡信息，便于深度诊断：
 
 ```sh
-# sysctl hw.snd.verbose=4  #  设置 FreeBSD 声卡驱动调试输出等级为 4
+# sysctl hw.snd.verbose=4  # 设置 FreeBSD 声卡驱动调试输出等级为 4
 ```
 
 FreeBSD 中大部分软件的音频输出接口为 OSS（Open Sound System，开放声音系统）。有些软件默认使用 PulseAudio（如 Firefox），这些软件的相关设置请参见后文提示。Firefox 可以通过 `about:support` 页面查看当前使用的音频后端。Firefox 支持多种音频后端，可根据系统中已安装的后端按优先顺序自动选择，也可以手动指定。
@@ -48,9 +48,9 @@ FreeBSD 中大部分软件的音频输出接口为 OSS（Open Sound System，开
 
 以下示例均需要将相关配置行写入 `/boot/device.hints` 文件中，该文件用于在系统启动时配置硬件设备提示信息。
 
->**注意**
+> **注意**
 >
->`cad0` 应以 `cat /dev/sndstat` 实际输出为准。
+> `cad0` 应以 `cat /dev/sndstat` 实际输出为准。
 
 ### 示例 1
 

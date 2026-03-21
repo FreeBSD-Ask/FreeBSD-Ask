@@ -16,7 +16,7 @@
 
 - 或者使用 Ports 安装：
 
-```
+```sh
 # cd /usr/ports/archivers/rpm4/ 
 # make install clean
 ```

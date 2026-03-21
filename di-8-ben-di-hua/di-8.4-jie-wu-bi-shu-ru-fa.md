@@ -93,7 +93,7 @@ $ libime_tabledict 98wbx.txt 98wbx.main.dict
 首先安装并配置好 Fcitx 5。配置从略。
 
 ```sh
-# pkg ins zh-fcitx5-rime zh-rime-essay zh-rime-wubi 
+# pkg install zh-fcitx5-rime zh-rime-essay zh-rime-wubi 
 ```
 
 或者：

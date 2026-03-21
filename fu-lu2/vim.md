@@ -72,7 +72,7 @@ call plug#end()                             # 结束插件安装块
 
 打开配置文件后，输入并保存（你也可以手动编辑 `~/.vim/coc-settings.json` 写入）：
 
-```sh
+```json
 {
 	"clangd.path":"clangd20"
 }
@@ -270,15 +270,15 @@ cwd=<root>
 
 - `/home/j/project/CMakeLists.txt` 文件
 
-```cpp
-cmake_minimum_required(VERSION 3.10)      // 指定 CMake 最低版本要求为 3.10
-project(test)                              // 定义项目名称为 test
+```cmake
+cmake_minimum_required(VERSION 3.10)      # 指定 CMake 最低版本要求为 3.10
+project(test)                              # 定义项目名称为 test
 
-set(CMAKE_EXPORT_COMPILE_COMMANDS ON)       // 启用生成 compile_commands.json 文件
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)       # 启用生成 compile_commands.json 文件
 
-include_directories(/usr/local/include)    // 添加头文件搜索路径 /usr/local/include
+include_directories(/usr/local/include)    # 添加头文件搜索路径 /usr/local/include
 
-add_subdirectory(src)                       // 添加 src 子目录作为构建子目录
+add_subdirectory(src)                       # 添加 src 子目录作为构建子目录
 ```
 
 - `/home/j/project/src/CMakeLists.txt` 文件

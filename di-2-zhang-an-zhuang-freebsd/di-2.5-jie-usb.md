@@ -300,7 +300,7 @@ DISKPART> clean # 清空磁盘
 
 DiskPart 成功地清除了磁盘。
 
-DISKPART> con gpt # 将所选磁盘转换为 GPT 分区表格式
+DISKPART> convert gpt # 将所选磁盘转换为 GPT 分区表格式
  
 DiskPart 已将所选磁盘成功地转更换为 GPT 格式。
 
@@ -315,7 +315,7 @@ DISKPART> cre part pri # 创建主分区
 
 DiskPart 成功地创建了指定分区。
 
-DISKPART> list par # 列出磁盘 1 的所有分区
+DISKPART> list part # 列出磁盘 1 的所有分区
 
   分区 ###       类型              大小     偏移量
   -------------  ----------------  -------  -------

@@ -128,7 +128,7 @@ $ chmod 750 test.sh
 
 - 修改 `t.sh` 属主为用户 `test1`、组 `test`
 
-```
+```sh
 # chown test1:test t.sh
 ```
 

@@ -119,9 +119,9 @@ FreeBSD 基本系统几乎不包含任何与 BSD 协议不兼容的软件；
 |        `wget`         |          `ftp/wget`    |       下载器       |                                                                               系统默认的下载工具是 `fetch`                                                                                |
 |        bash         |           `shells/bash`   |       shell        |                                              系统默认的 shell 是 `sh`（非软连接）。你可以自己改。                                             |
 |   NetworkManager    |      `net-mgmt/networkmgr`  |    网络连接工具    |                                                                        NetworkManager 依赖 `systemd` 无法直接移植                                                                        |
-|`lsmod`|	`kldstat`|列出已加载的内核模块|/|
-|`strace`|	`truss`|跟踪系统调用|/|
-|`modprobe`|	加载内核模块：`kldload`；卸载内核模块：`kldunload` |加载内核模块、卸载内核模块|/|
+| `lsmod` | `kldstat` | 列出已加载的内核模块 | / |
+| `strace` | `truss` | 跟踪系统调用 | / |
+| `modprobe` | 加载内核模块：`kldload`；卸载内核模块：`kldunload` | 加载内核模块、卸载内核模块 | / |
 
 
 ## 附录：GNU/Linux 发行版比较

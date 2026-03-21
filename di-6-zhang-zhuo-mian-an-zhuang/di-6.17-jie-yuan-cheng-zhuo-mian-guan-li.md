@@ -206,7 +206,7 @@ $ ps
 # cd /usr/ports/net/xrdp/ && make install clean
 # cd /usr/ports/x11-fonts/wqy/ && make install clean
 # cd /usr/ports/devel/xdg-user-dirs/ && make install clean
-# cd /usr/ports/audio/pulseaudio-module-xrdp && make install clean
+# cd /usr/ports/audio/pulseaudio-module-xrdp/ && make install clean
 ```
 
 查看配置文件：
