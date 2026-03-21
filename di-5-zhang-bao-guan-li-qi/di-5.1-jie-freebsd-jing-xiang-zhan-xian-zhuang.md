@@ -183,3 +183,11 @@ FreeBSD 官方联系方式：
 ## 其他思路或解决方案
 
 自行使用 Poudriere 进行构建并分发。如 [RISC-V FreeBSD-pkg 软件源上线！11619+ 预编译包助力快速构建 FreeBSD 环境](https://mp.weixin.qq.com/s/ngv3eZh1TEVgk3Pn3XfRBg) [备份](https://web.archive.org/web/20260121072759/https://mp.weixin.qq.com/mp/wappoc_appmsgcaptcha?poc_token=HPt_cGmj3uehilyyGw-gACOkccq7QSjM5QJ_bL2u&target_url=https%3A%2F%2Fmp.weixin.qq.com%2Fs%2Fngv3eZh1TEVgk3Pn3XfRBg)（项目已停止维护）
+
+## 课后习题
+
+1. 查找 USTCLUG 提供的 FreeBSD-pkg 同步脚本，在本地搭建一个最小化的 pkg 镜像站，并测试其是否可以被其他 FreeBSD 系统作为软件源使用。
+
+2. 对比 FreeBSD、OpenBSD 和 NetBSD 三个项目的镜像站授权政策差异，分析这种差异如何影响各自的用户群体规模与生态健康度。
+
+3. 假设你有一台裸金属服务器可以赞助给 FreeBSD 项目，设计一个完整的镜像站部署方案。

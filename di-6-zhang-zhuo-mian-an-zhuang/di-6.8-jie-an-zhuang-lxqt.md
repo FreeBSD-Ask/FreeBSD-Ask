@@ -91,3 +91,9 @@ $ echo "exec ck-launch-session startlxqt" > ~/.xinitrc
 ### 桌面图标不显示
 
 请事先安装自己喜欢的其他图标主题。然后：菜单 -> "Preferences" -> "LXQt Settings" -> "Appearance" -> "Icons Theme"，选择已安装的图标主题，点击 "Apply" 后重新登录。
+
+## 课后习题
+
+1. 查找 LXQt 桌面环境的 Port 构建过程，分析其从 LXDE 到 Qt 的技术迁移路径，在 QEMU 中验证其轻量级设计的实现。
+2. 选取 LXQt 的 gvfs 依赖机制，验证其是否真正有效。
+3. 修改 LXQt 桌面的默认图标主题加载机制，验证其界面显示行为变化，将其记录到本文。

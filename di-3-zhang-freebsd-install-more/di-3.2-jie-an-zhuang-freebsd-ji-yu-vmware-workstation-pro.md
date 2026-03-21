@@ -403,3 +403,11 @@ VMware Workstation Pro 目前对于个人用户来说是 **免费下载、免费
 ### VMware Workstation Player（已不再维护）
 
 VMware Workstation Player 目前已弃用，且相较于 VMware Workstation Pro 功能存在较多缺失。不建议使用，非要下载，请点击 <https://support.broadcom.com/group/ecx/productdownloads?subfamily=VMware%20Workstation%20Player>。目前所有包含该软件的教程均为旧教程。
+
+## 课后习题
+
+1. 研究 VMware 共享文件夹实现机制，修改 fstab 挂载选项，分析 `failok` 参数如何改变系统对非关键文件系统的处理策略。
+
+2. 分析 VMware 虚拟机增强工具（open-vm-tools）的源代码结构，尝试移除其中一个功能模块并重新编译，验证该功能缺失后的系统行为变化。
+
+3. 对比 NAT 模式与桥接模式的网络隔离差异，分别在两种模式下测试宿主机与虚拟机的端口访问权限。

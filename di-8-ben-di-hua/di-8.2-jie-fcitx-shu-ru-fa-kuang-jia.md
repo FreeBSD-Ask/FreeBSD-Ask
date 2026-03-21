@@ -159,3 +159,9 @@ setenv XMODIFIERS @im=fcitx
 
 对于 Fcitx 5.x 来说，找不到 `fcitx qt 4` 的支持是正常现象。
 
+## 课后习题
+
+1. 在 FreeBSD 系统中分别使用 pkg 和 Ports 两种方式安装 Fcitx5，对比两种安装方式的时间、依赖关系处理以及最终运行效果。
+2. 配置 Fcitx5 在 X11 和 Wayland 两种环境下的运行，分别测试 GTK 和 Qt 应用程序的输入法兼容性。
+3. 安装并配置 RIME 中州韵输入法，自定义一个简单的输入方案并验证其功能。
+

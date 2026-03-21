@@ -833,3 +833,11 @@ make: stopped in /usr/ports/java/openjdk21
 #### 参考文献
 
 - [Invalid perl5 version 5.32](https://forums.freebsd.org/threads/invalid-perl5-version-5-32.77628/) [备份](https://web.archive.org/web/20260120221833/https://forums.freebsd.org/threads/invalid-perl5-version-5-32.77628/)，出现了同样的问题
+
+## 课后习题
+
+1. 查找 Ports 框架的早期提交历史，构建一个最小化的 Ports 实现（仅支持一个简单软件），并分析其设计如何体现“小即美”的原则及其缺陷，尝试修补。
+
+2. 选取 Ports 中的 USE 机制，重构其最小实现。
+
+3. 修改 Ports 的默认下载工具，将其从 fetch 替换为 wget2，并验证其下载速度变化。

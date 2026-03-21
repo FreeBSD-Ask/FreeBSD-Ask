@@ -142,3 +142,11 @@ Choose the system default language（选择系统默认语言）
 本区域显示 BIOS 的版本信息和版权声明。
 
 Version 2.22.1289 Copyright (C) 2025 AMI（版本 2.22.1289 版权所有 (C) AMI 2025）
+
+## 课后习题
+
+1. 使用 FreeBSD 的 dmidecode 工具提取 BIOS 信息，对比 BIOS 主菜单中显示的参数，分析哪些信息被固件主动暴露给用户。
+
+2. 恢复 BIOS 优化默认值，保存并重启后记录系统启动行为。
+
+3. 修改 BIOS 语言和时间设置，在 FreeBSD 中验证这些设置的影响。

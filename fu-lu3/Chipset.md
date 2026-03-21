@@ -6326,3 +6326,11 @@ PLL：Phase Locked Loop，锁相环
 ### PinCntrl Driver GPIO Scheme（引脚控制驱动 GPIO 方案）
 
 功能未知。
+
+## 课后习题
+
+1. 在 FreeBSD 中使用 pciconf 工具列出 PCH 设备，选取其中一个控制器（如 SATA、PCIe 或 USB），编写简单程序读取其配置空间寄存器，记录并分析 BIOS 中默认配置与实际运行时的配置差异。
+
+2. 选取 PCH 交叉节流（PCH Cross Throttling）机制，重构其最小概念模型。
+
+3. 修改 Flash Protection Range Registers (FPRR) 为禁用状态，验证是否可使用工具直接访问 BIOS 闪存区域。

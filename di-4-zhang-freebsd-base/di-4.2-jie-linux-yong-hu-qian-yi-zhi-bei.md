@@ -417,3 +417,9 @@ Node.js 的依赖存储在 `node_modules` 目录，而 Nix/NixOS 的所有包则
 - [The philosophy of Gentoo](https://www.gentoo.org/get-started/philosophy/) [备份](https://web.archive.org/web/20260119053027/https://www.gentoo.org/get-started/philosophy/)，Gentoo 设计哲学，阐述系统设计理念
 - [Arch compared to other distributions](https://wiki.archlinux.org/title/Arch_compared_to_other_distributions) [备份](https://web.archive.org/web/20260122123537/https://wiki.archlinux.org/title/Arch_compared_to_other_distributions)，翻译[在这里](https://wiki.archlinuxcn.org/wiki/Arch_%E4%B8%8E%E5%85%B6%E4%BB%96%E5%8F%91%E8%A1%8C%E7%89%88%E7%9A%84%E6%AF%94%E8%BE%83) [备份](https://web.archive.org/web/20260119053802/https://wiki.archlinuxcn.org/wiki/Arch_%E4%B8%8E%E5%85%B6%E4%BB%96%E5%8F%91%E8%A1%8C%E7%89%88%E7%9A%84%E6%AF%94%E8%BE%83)，提供 Arch 与其他发行版对比分析
 - 《C++ 语言的设计和演化》，[美] Bjarne Stroustrup，译者：裘宗燕，人民邮电出版社，ISBN 9787115497116，详解 C++ 语言设计理念与演进历程
+
+## 课后习题
+
+1. 在 FreeBSD 中构建一个简单的 Port，编写 Makefile，使其能下载、编译并安装一个最小化的 hello world 程序，验证 Ports 框架。
+2. 查看 FreeBSD init 系统源码中 rc 脚本的最小实现，分析其设计如何在简单性与功能完整性之间的权衡，对比 Linux systemd 的设计思路。
+3. 修改 FreeBSD 中 wheel 组的默认权限配置，验证其行为变化。

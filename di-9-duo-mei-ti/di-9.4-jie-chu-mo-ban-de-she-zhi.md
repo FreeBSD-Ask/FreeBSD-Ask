@@ -63,3 +63,11 @@ hw.usb.usbhid.enable="0"
 ## 附录：Fn 键设置
 
 - [Adjusting acpi_video brightness increments on FreeBSD](https://www.davidschlachter.com/misc/freebsd-acpi_video-thinkpad-display-brightness) [备份](https://web.archive.org/web/20260120211035/https://www.davidschlachter.com/misc/freebsd-acpi_video-thinkpad-display-brightness) 介绍在 FreeBSD 上调整 ACPI 视频亮度增量的具体方法，适用于 ThinkPad 等笔记本电脑。
+
+## 课后习题
+
+1. 查找 usbhid 驱动源代码，分析其与 ums 驱动的设计差异，在 QEMU 中复现 15.0 版本键鼠驱动问题并尝试修复，验证修复结果。
+
+2. 选取触摸板驱动栈中的某机制（如 xinput 设备管理），重构其最小实现。
+
+3. 修改系统默认的触摸板行为（如禁用 tap to click 或调整灵敏度），验证其行为变化。

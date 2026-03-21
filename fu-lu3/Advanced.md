@@ -3880,3 +3880,11 @@ GUID 是一种由算法生成的唯一标识。
 ![](../.gitbook/assets/image-20250721175121-0c1uf0k.png)
 
 ![](../.gitbook/assets/image-20250721175203-ezue80h.png)
+
+## 课后习题
+
+1. 在 Intel 处理器上配置并启用 CFG Lock，编写一个简单的工具读取 MSR 0xE2 寄存器值，分析其对 CPU 电源管理参数可见性的影响。
+
+2. 禁用 Intel 管理引擎（ME），记录系统启动流程的变化，并分析该修改对平台安全性与功能完整性的权衡关系。
+
+3. 修改 Package C State Limit 为 C0，在 FreeBSD 中测量系统功耗与响应延迟的变化，并分析该设置如何改变系统对用户活动的约束边界。

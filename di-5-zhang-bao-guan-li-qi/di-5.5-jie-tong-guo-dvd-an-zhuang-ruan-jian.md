@@ -121,3 +121,11 @@ Proceed with this action? [y/N]:
 
 - [Product Details](https://www.freebsdmall.com/cgi-bin/fm/bsddvd10.1)，提供 FreeBSD DVD 产品信息与购买渠道
 - [HOWTO: Install binary package without internet acces](https://forums.freebsd.org/threads/howto-install-binary-package-without-internet-acces.60723/) [备份](https://web.archive.org/web/20260122093701/https://forums.freebsd.org/threads/howto-install-binary-package-without-internet-acces.60723/)，介绍无网络环境下通过 DVD 安装二进制包的方法
+
+## 课后习题
+
+1. 阅读 `bsdconfig` 的源代码，定位 `No pkg(8) database found!` 错误的原因，并尝试修复该问题使其能够正常使用 DVD 安装软件。
+
+2. 分析 DVD 安装方式中路径被硬编码为 `/dist` 的设计，重构这一机制使其支持自定义路径。
+
+3. 修改 pkg 的仓库配置机制，使其支持从任意目录的本地文件系统作为软件源，验证其在离线环境中的可用性。

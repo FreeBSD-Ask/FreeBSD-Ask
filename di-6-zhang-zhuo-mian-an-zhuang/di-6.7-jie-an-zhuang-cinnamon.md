@@ -96,3 +96,9 @@ proc /proc procfs rw 0 0
 ![cinnamon on FreeBSD](../.gitbook/assets/cinnamon3.png)
 
 自定义壁纸。
+
+## 课后习题
+
+1. 查找 Cinnamon 桌面环境的 Port 构建过程，分析其与 GNOME Shell 的技术关联，在 QEMU 中验证其启动流程与 GNOME 的差异。
+2. 选取 Cinnamon 的 procfs 挂载机制，分析 procfs 在 FreeBSD 是否真正意义和作用。
+3. 修改 Cinnamon 桌面的默认窗口布局策略，验证其交互行为变化。

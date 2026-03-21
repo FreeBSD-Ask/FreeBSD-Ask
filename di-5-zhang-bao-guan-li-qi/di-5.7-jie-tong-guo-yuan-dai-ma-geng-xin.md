@@ -172,3 +172,11 @@ Select: (p) postpone, (df) diff-full, (e) edit,
 
 - [FreeBSD 手册](https://handbook.bsdcn.org/) [备份](https://web.archive.org/web/20260120221948/https://handbook.bsdcn.org/)，提供 FreeBSD 系统管理的完整中文参考指南
 - [etcupdate -- manage updates to system files not updated by installworld](https://man.freebsd.org/cgi/man.cgi?etcupdate(8))，提供系统配置文件更新工具的官方技术文档
+
+## 课后习题
+
+1. 查找 FreeBSD 从 SVN 迁移到 Git 的相关文档，构建一个最小化的源代码获取流程。
+
+2. 选取 etcupdate 的冲突解决机制，重构其最小实现。
+
+3. 修改 buildworld 的默认行为，增加一个选项让用户可以跳过某些不需要的组件，验证其对编译时间的影响。

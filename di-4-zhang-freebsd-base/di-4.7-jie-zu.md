@@ -271,3 +271,9 @@ test5:*:1202:test1
 ## 参考文献
 
 - [pw(8)](https://man.freebsd.org/cgi/man.cgi?pw)，man 页，系统介绍用户和组管理命令
+
+## 课后习题
+
+1. 在 FreeBSD 中使用 adduser、pw useradd、rmuser、pw userdel 各创建和删除 3 个测试用户，验证并记录结果。
+2. 查看 FreeBSD 中 pw 命令的源码实现，使其更现代化。
+3. 修改 FreeBSD 中 wheel 组的默认成员配置，验证其权限变化。

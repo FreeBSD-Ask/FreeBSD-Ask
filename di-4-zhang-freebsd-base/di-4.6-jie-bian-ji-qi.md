@@ -251,3 +251,9 @@ $ msedit abc.txt
 ![](../.gitbook/assets/msedit2.png)
 
 操作较为简单，此处无需展开说明。
+
+## 课后习题
+
+1. 在 FreeBSD 中配置 Vim、NeoVim 和 Emacs 各一个最小化配置文件，测试并记录三者的功能差异。
+2. 查看 FreeBSD 中 nvi 编辑器的源码，分析其与 BSD UNIX 的区别。
+3. 修改 FreeBSD 中 vi 编辑器的默认配置为 ee。

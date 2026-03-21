@@ -607,3 +607,11 @@ https://mirrors.163.com/freebsd-pkg/
 - [ZFS Boot Environments Explained](https://vermaden.wordpress.com/2025/11/25/zfs-boot-environments-explained/) [备份](https://web.archive.org/web/20260120223606/https://vermaden.wordpress.com/2025/11/25/zfs-boot-environments-explained/)，详细阐释 ZFS 启动环境的原理与实践，包含跨版本 ZFS 池兼容方案
 - [wiki/BootEnvironments](https://wiki.freebsd.org/BootEnvironments) [备份](https://web.archive.org/web/20260111062150/https://wiki.freebsd.org/BootEnvironments)，FreeBSD 官方 Wiki 提供的启动环境技术文档
 - man [bectl(8)](https://man.freebsd.org/cgi/man.cgi?bectl)，提供 ZFS 启动环境管理工具的官方技术规范
+
+## 课后习题
+
+1. 阅读 pkgbasify 脚本的源代码，构建一个最小化的 pkgbase 转换工具。
+
+2. 选取 ZFS 启动环境的快照机制，重构其最小实现。
+
+3. 修改 pkgbase 的默认更新策略，使其可以同时保留多个版本的系统组件，验证其在回滚场景下的可用性。

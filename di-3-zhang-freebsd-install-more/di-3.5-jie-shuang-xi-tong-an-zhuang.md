@@ -434,3 +434,11 @@ zroot/var/tmp         96K  91.6G    96K  /var/tmp
 
 - [How to manually install FreeBSD on a remote server (with UFS, ZFS, encryption...)](https://stanislas.blog/2018/12/how-to-install-freebsd-server/) [备份](https://web.archive.org/web/20260117184103/https://stanislas.blog/2018/12/how-to-install-freebsd-server/)，提供了 FreeBSD 手动安装的完整技术指南，包括 UFS、ZFS 等文件系统配置方法。
 - [RootOnZFS/GPTZFSBoot](https://wiki.freebsd.org/RootOnZFS/GPTZFSBoot) [备份](https://web.archive.org/web/20251202034128/https://wiki.freebsd.org/RootOnZFS/GPTZFSBoot)，详细介绍了 FreeBSD 在 GPT 分区表上的 ZFS 根文件系统配置方法。
+
+## 课后习题
+
+1. 查找 FreeBSD 14.2 源代码中的 `/usr/src/usr.sbin/bsdinstall/scripts/zfsboot` 脚本，在测试环境中执行简单方法安装后，参照该脚本手动补全 `/home/用户名` 数据集的创建并验证用户登录后的主目录挂载。
+
+2. 选取文中 ZFS 数据集的权限隔离机制（如 `/tmp` 目录的 `exec=on` 和 `setuid=off` 组合），分析该设计如何在“使用便利性”与“安全性”之间做权衡，尝试修改其中一个参数并观察系统行为变化。
+
+3. 修改 EFI 启动项配置，为 FreeBSD 启动项设置较低的启动优先级，验证 Windows 作为默认启动系统的行为。
