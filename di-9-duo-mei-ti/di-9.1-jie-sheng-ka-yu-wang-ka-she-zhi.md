@@ -48,6 +48,14 @@ FreeBSD 中大部分软件的音频输出接口为 OSS（Open Sound System，开
 
 以下示例均需要将相关配置行写入 `/boot/device.hints` 文件中，该文件用于在系统启动时配置硬件设备提示信息。
 
+```sh
+/
+├── boot/
+│   └── device.hints # 硬件设备提示文件
+└── dev/
+    └── sndstat # 声卡设备状态文件
+```
+
 > **注意**
 >
 > `cad0` 应以 `cat /dev/sndstat` 实际输出为准。

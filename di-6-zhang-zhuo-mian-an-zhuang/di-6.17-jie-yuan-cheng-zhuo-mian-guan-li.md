@@ -4,6 +4,37 @@
 
 远程桌面访问技术允许用户通过网络从一台设备远程控制另一台设备的桌面环境。本节系统阐述在 FreeBSD 操作系统中配置和使用多种远程桌面协议的具体方法，包括 VNC、RDP 等主流协议。远程桌面访问在系统管理、技术支持等应用场景中具有重要实用价值。
 
+## 目录结构 
+
+
+```sh
+/
+├── home
+│   └── ykla
+│       └── .vnc
+│           ├── passwd              # VNC 密码文件
+│           ├── xstartup             # VNC 启动脚本
+│           └── config               # VNC 配置文件
+│       └── .Xauthority              # X 授权文件
+├── usr
+│   └── local
+│       └── etc
+│           └── xrdp
+│               ├── xrdp.ini        # XRDP 主配置文件
+│               ├── sesman.ini      # XRDP 会话管理器配置
+│               └── startwm.sh      # XRDP 启动桌面环境脚本
+└── var
+    ├── run
+    │   ├── sddm                     # SDDM 授权文件目录
+    │   ├── lightdm                  # LightDM 授权文件目录
+    │   └── user
+    │       └── 120
+    │           └── gdm              # GDM 授权文件目录
+    └── lib
+        └── gdm                      # GDM 旧版授权文件目录
+```
+
+
 ## x11vnc（FreeBSD 为被控端，镜像屏幕）
 
 x11vnc 会像远程软件 ToDesk 一样直接镜像屏幕，简言之，你的所有操作都会同步到显示器上，反过来在显示器上的操作你在 VNC 上也可以看到。
@@ -95,6 +126,7 @@ $ x11vnc -display :0 -rfbauth ~/.vnc/passwd -auth /var/lib/gdm/:0.Xauth # 或 /r
 ```sh
 $ mkdir -p ~/.vnc/
 ```
+
 
 编辑 `~/.vnc/xstartup` 文件，新增以下行：
 

@@ -37,6 +37,12 @@ Wine 使得在 FreeBSD 系统上运行 Windows 程序成为可能。本节将介
 $ /usr/local/share/wine/pkg32.sh install wine mesa-dri
 ```
 
+```sh
+/usr/local/share/
+└── wine/
+    └── pkg32.sh # Wine 32位安装脚本
+```
+
 >**注意**
 >
 >如果不执行这一步，将无法支持 32 位 Windows 程序。其中，mesa-dri 提供了显卡硬件加速支持。
@@ -78,6 +84,12 @@ $ wine winecfg
 ```sh
 $ rm -rf $HOME/test                          # 删除指定的 WINEPREFIX 目录，用于重置环境
 $ WINEPREFIX=$HOME/test wine winecfg         # 使用新的 WINEPREFIX 目录启动 winecfg 配置工具
+```
+
+```sh
+~/
+├── .wine/ # 默认 Wine 配置目录
+└── test/ # 自定义 Wine 配置目录（WINEPREFIX）
 ```
 
 ## 测试运行 WinSCP（32 位 Windows 程序）

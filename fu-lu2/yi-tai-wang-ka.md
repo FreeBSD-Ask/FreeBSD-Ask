@@ -59,6 +59,14 @@ pkg install realtek-re-kmod
 # make install clean
 ```
 
+```sh
+/usr/
+├── ports/
+│   └── net/
+│       └── realtek-re-kmod/  # Realtek 网卡驱动 Ports 目录
+└── src/                      # 系统源代码目录（编译驱动时需要）
+```
+
 > **注意**
 >
 > 编译安装时，需要有一份源代码在 `/usr/src`。
@@ -71,6 +79,13 @@ pkg install realtek-re-kmod
 ---
 
 编辑 `/boot/loader.conf` 文件，写入以下两行：
+
+```sh
+/boot/
+├── loader.conf        # 系统启动加载器配置文件
+└── modules/
+    └── if_re.ko       # re 网卡驱动内核模块
+```
 
 ```ini
 if_re_load="YES"                 # 设置开机自动加载 re 网卡驱动模块

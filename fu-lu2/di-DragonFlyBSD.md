@@ -230,6 +230,14 @@ root 密码设置完成。
 
 配置合适的软件源可以提高软件安装和更新的速度。可以使用 ee 编辑器编辑 pkg 仓库配置文件 `/usr/local/etc/pkg/repos/df-latest.conf`，找到其中的国内镜像站：将 `no` 改成 `yes`，将之前的源改为 `no`。
 
+```sh
+/usr/local/
+└── etc/
+    └── pkg/
+        └── repos/
+            └── df-latest.conf  # DragonFly BSD pkg 仓库配置文件
+```
+
 > **注意**
 >
 > 在 DragonFly BSD 6.4 中，该镜像站已被移除，需要手动配置。请读者参考 <https://mirror.sjtu.edu.cn/docs/dragonflybsd/dports>。
@@ -237,6 +245,12 @@ root 密码设置完成。
 ### 中文环境
 
 为了更好地使用中文，我们需要配置系统的中文环境。在 `/etc/csh.cshrc` 文件中添加：
+
+```sh
+/etc/
+├── csh.cshrc  # C Shell 系统配置文件
+└── profile     # POSIX Shell 系统配置文件
+```
 
 ```ini
 setenv LANG "zh_CN.UTF-8"

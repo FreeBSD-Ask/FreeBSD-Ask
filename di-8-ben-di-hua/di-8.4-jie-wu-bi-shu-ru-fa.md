@@ -32,6 +32,12 @@
 
 将 98 五笔码表（`free-bsd-98wubi-tables-master/wubi86.dict.yaml` 和 `free-bsd-98wubi-tables-master/wubi86.schema.yaml`）复制到 `/usr/local/share/rime-data` 目录下。98 五笔码表下载地址：[FreeBSD-98wubi-tables](https://github.com/FreeBSD-Ask/98-input) [备份](https://web.archive.org/web/20260119034851/https://github.com/FreeBSD-Ask/98-input)。该仓库提供适用于 FreeBSD 的 98 五笔输入法码表文件。
 
+```sh
+/usr/local/share/
+└── rime-data/
+    └── default.yaml # Rime 默认配置文件
+```
+
 修改 `/usr/local/share/rime-data/default.yaml` 文件：打开文件找到 `schema_list`，在其下第一行添加 `- schema: wubi98`（注意保持缩进），并删除其他输入方案，如下所示：
 
 ```yaml
@@ -74,6 +80,21 @@ Fcitx 5 的具体配置步骤本节不做详细说明。
 - 将 `98五笔/fcitx-98wubi.png` 和 `org.fcitx.Fcitx5.fcitx-98wubi.png` 图标复制到 `/usr/local/share/icons/hicolor/48x48/apps/` 下面；
 - 将 `98五笔/98/wbx.main.dict` 词库放到 `/usr/local/share/libime/` 下面。
 - 重启 `fcitx5`，在设置中启用 98 五笔即可。
+
+```sh
+/usr/local/share/
+├── fcitx5/
+│   └── inputmethod/
+│       └── 98wbx.conf # Fcitx5 98五笔配置文件
+├── icons/
+│   └── hicolor/
+│       └── 48x48/
+│           └── apps/
+│               ├── fcitx-98wubi.png # 98五笔图标
+│               └── org.fcitx.Fcitx5.fcitx-98wubi.png # 98五笔图标
+└── libime/
+    └── wbx.main.dict # 98五笔词库
+```
 
 ![](../.gitbook/assets/wubi1.png)
 
@@ -134,6 +155,19 @@ $ cd ~/.config/ibus/rime
 
 ```sh
 $ cd ~/.local/share/fcitx5/rime
+```
+
+```sh
+~/
+├── .config/
+│   └── ibus/
+│       └── rime/ # IBus 下 Rime 配置文件目录
+│           └── build/
+│               └── ibus_rime.yaml # IBus Rime 配置文件
+└── .local/
+    └── share/
+        └── fcitx5/
+            └── rime/ # Fcitx 5 下 Rime 配置文件目录
 ```
 
 ### 修改候选字为 9 行
