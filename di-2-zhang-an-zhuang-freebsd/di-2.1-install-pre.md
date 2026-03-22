@@ -1,6 +1,6 @@
 # 2.1 安装前的准备工作
 
-本节作为 FreeBSD 系统部署的前置性章节，旨在为读者提供系统安装前的必要知识框架。操作系统的成功部署首先依赖于硬件兼容性评估、介质准备及安装介质制作等环节的系统性规划。本节将从硬件需求分析入手，逐步引导读者完成系统安装的前期准备工作，为后续系统部署奠定坚实基础。
+在开始 FreeBSD 系统部署前，需要完成硬件兼容性评估、介质准备及安装介质制作等环节。以下从硬件需求分析入手，逐步引导完成系统安装的前期准备工作。
 
 ## 硬件支持情况
 
@@ -148,7 +148,6 @@ FreeBSD `-RELEASE` 历史版本下载地址：
 - 5.1-RELEASE 至 9.2-RELEASE <http://ftp-archive.freebsd.org/pub/FreeBSD-Archive/old-releases/amd64/ISO-IMAGES>
 - 9.3-RELEASE 至最新的 `-RELEASE` 版本 <http://ftp-archive.freebsd.org/pub/FreeBSD-Archive/old-releases/ISO-IMAGES/>
 
-
 ## 刻录 FreeBSD 镜像
 
 下载好 FreeBSD 镜像后，需要将其刻录到 U 盘上才能进行安装。以下将介绍如何刻录 FreeBSD 镜像到 U 盘。
@@ -156,8 +155,7 @@ FreeBSD `-RELEASE` 历史版本下载地址：
 ### 建议使用 `-img` 或 `-img.xz` 格式的镜像
 
 在选择镜像格式时，有一些注意事项需要了解。
-
-制作 U 盘安装介质时，建议使用 `-img` 或 `-img.xz` 格式的镜像。`.iso` 镜像采用混合启动（Hybrid）模式，可能未完全遵循 UEFI 规范，直接写入 U 盘可能导致错误。详见 [FreeBSD -.iso files not support written to USB drive](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=236786)，该 Bug 报告记录 ISO 镜像直接写入 USB 设备的兼容性问题。建议读者仅在使用 **光学介质/虚拟机/云平台** 安装时选用 `iso` 结尾的镜像。
+制作 U 盘安装介质时，建议使用 `-img` 或 `-img.xz` 格式的镜像。`.iso` 镜像采用混合启动（Hybrid）模式，可能未完全遵循 UEFI 规范，直接写入 U 盘可能导致错误。详见 [FreeBSD -.iso files not support written to USB drive](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=236786)，该 Bug 报告记录 ISO 镜像直接写入 USB 设备的兼容性问题。建议读者仅在使用光学介质/虚拟机/云平台安装时选用 `iso` 结尾的镜像。
 
 当然，也存在例外情况。部分机器的 UEFI 固件支持从 `.iso` 镜像刻录的 U 盘启动（例如一些老款神舟电脑），但并非所有机器都支持此方式（例如部分小米电脑可能无法引导）。
 
@@ -190,7 +188,6 @@ win32diskimager 的下载地址是 <https://sourceforge.net/projects/win32diskim
 >
 > 如果一切都是临时的，短暂的。那么，会不会有一天，有那么一刻，恰巧宇宙本身也不存在了？
 
-
 ## 附录：共享硬件数据到数据库
 
 如果读者也想上传自己的数据到 <https://bsd-hardware.info>，与大家共享，可参照本节进行。
@@ -208,6 +205,13 @@ win32diskimager 的下载地址是 <https://sourceforge.net/projects/win32diskim
 ```sh
 # cd /usr/ports/sysutils/hw-probe/
 # make install clean
+```
+
+```text
+/usr/
+└── ports/
+    └── sysutils/
+        └── hw-probe/ # hw-probe 端口目录
 ```
 
 ### 上传硬件数据

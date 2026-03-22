@@ -24,7 +24,7 @@
 在这一步修改 `S Swap Size` 的大小（该数值表示计划中的交换分区与 Windows 系统分区容量之和）。
 
 
-本文中，交换分区（Swap）大小为 8GB，其余 200GB 空间预留给 Windows。
+本文中，交换分区（Swap）大小为 8GB，其余 200GB 空间预留给 Windows。这里设置一个大的临时交换分区，是为了后续安装 Windows 时能够直接使用这部分空间，避免额外的分区操作。
 
 ![](../.gitbook/assets/shuang4.png)
 
@@ -59,7 +59,7 @@ Device              Size     Used    Avail Capacity
 
 可以看到交换分区的大小是我们所设定的 208GB（其中 200GB 预留给 Windows 操作系统）。
 
-编辑 `/etc/fstab`，在 swap 对应行的行首添加 `#` 字符将其注释，本例中该行是第三行：
+编辑 `/etc/fstab`，在 swap 对应行的行首添加 `#` 字符将其注释，本例中该行是第三行，这样可以避免系统在启动时不挂载这个大的交换分区，为后续安装 Windows 做准备：
 
 ```sh
 # Device                Mountpoint      FStype  Options         Dump    Pass#
@@ -71,15 +71,15 @@ Device              Size     Used    Avail Capacity
 
 FreeBSD 安装完成后，接下来安装 Windows 系统。
 
-插入 Windows 启动盘，设置 BIOS 从该启动盘启动，开始安装 Windows。
+插入 Windows 启动盘，设置 BIOS 从该启动盘启动，开始安装 Windows。此时系统会识别到这块硬盘上的现有分区结构，我们只需要使用之前预留的空间。
 
 ![](../.gitbook/assets/shuang5.png)
 
-在分区时，删除（Delete Partition）整个 208 GB 的交换分区（本例中为“磁盘 0 分区 3”）。
+在分区时，删除（Delete Partition）整个 208 GB 的交换分区（本例中为"磁盘 0 分区 3"），因为这部分空间正是我们为 Windows 预留的。
 
 ![](../.gitbook/assets/shuang6.png)
 
-然后点击创建分区（Create Partition），如果提示出错，点击刷新（Refresh）即可。
+然后点击创建分区（Create Partition），如果提示出错，点击刷新（Refresh）即可。Windows 安装程序会自动在未分配空间上创建它需要的分区，包括 MSR 分区、系统分区和恢复分区。
 
 然后选中 208G 的“磁盘 0 未分配空间”，点击“下一步”进行安装。
 
@@ -91,11 +91,11 @@ Windows 安装完成后，需要为 FreeBSD 还原交换分区。我们分配了
 
 ![](../.gitbook/assets/shuang8.png)
 
-打开 DiskGenius，压缩 C 盘，腾出 8GB 的未分配空间。
+打开 DiskGenius，压缩 C 盘，腾出 8GB 的未分配空间。Windows 系统安装完成后，C 盘占用了我们之前预留的大部分空间，我们只需要从 C 盘末尾压缩出 8GB 即可。
 
 ![](../.gitbook/assets/shuang9.png)
 
-将这 8GB 空间格式化为 `FreeBSD Swap partition` 类型，然后点击“保存更改”。
+将这 8GB 空间格式化为 `FreeBSD Swap partition` 类型，然后点击“保存更改”。这一步操作是将新创建的交换分区标记为 FreeBSD 可以识别的类型。
 
 ![](../.gitbook/assets/shuang10.png)
 
@@ -126,7 +126,7 @@ Windows 安装完成后，需要为 FreeBSD 还原交换分区。我们分配了
 # swapon /dev/nda0p5
 ```
 
-没有报错，也没有任何提示，说明正常。
+没有报错，也没有任何提示，说明正常，系统已经可以正常识别并使用这个新的交换分区。
 
 编辑 `/etc/fstab`，在 swap 一行最前面删去注释符号 `#`，并将分区改为正确的值，在本例中如下第三行：
 

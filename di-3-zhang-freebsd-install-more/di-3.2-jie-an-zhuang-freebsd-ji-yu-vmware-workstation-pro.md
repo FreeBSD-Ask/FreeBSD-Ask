@@ -130,6 +130,16 @@
 # cd /usr/ports/x11-drivers/xf86-input-vmmouse/  && make install clean
 ```
 
+```text
+/usr/
+└── ports/
+    ├── x11-drivers/
+    │   ├── xf86-video-vmware/ # VMware 显卡驱动
+    │   └── xf86-input-vmmouse/  # VMware 虚拟鼠标驱动
+    └── emulators/
+        └── open-vm-tools/        # 虚拟机增强工具
+```
+
 >**注意**
 >
 >如果不需要图形界面支持，可以安装无 X11 依赖的版本（仍然是 Port `emulators/open-vm-tools`）：
@@ -157,6 +167,18 @@
 # service moused enable        # 启用 moused 服务并写入系统配置
 # Xorg -configure             # 生成 Xorg 默认配置文件
 # mv /root/xorg.conf.new /usr/local/share/X11/xorg.conf.d/xorg.conf  # 安装 Xorg 配置文件
+```
+
+```text
+/
+├── root/
+│   └── xorg.conf.new # 生成的 Xorg 默认配置文件
+└── usr/
+    └── local/
+        └── share/
+            └── X11/
+                └── xorg.conf.d/
+                    └── xorg.conf # 最终安装的 Xorg 配置文件
 ```
 
 编辑 `/usr/local/share/X11/xorg.conf.d/xorg.conf` 文件，修改以下段落（其他部分保持不变）：
@@ -211,6 +233,16 @@ fusefs_load="YES"
 ```
 
 可在系统启动时加载 fusefs 内核模块。
+
+```text
+/
+├── boot/
+│   └── loader.conf    # 系统启动加载配置文件
+├── etc/
+│   └── fstab          # 文件系统挂载配置
+└── mnt/
+    └── hgfs/          # VMware 共享文件夹挂载点
+```
 
 #### 挂载
 

@@ -1,8 +1,6 @@
 # 2.3 FreeBSD 13/14 安装指南（AMD64）
 
-FreeBSD 13.x 和 14.x 系列作为稳定的长期支持版本，在生产环境中仍被广泛采用。尽管其安装流程与 15.x 系列具有高度一致性，但在 pkgbase 支持等特性上存在版本差异。本节提供针对这些版本的标准化安装指南，确保系统部署的兼容性与可靠性。
-
-这些 RELEASE 系统亦可用于生产环境，但其优先级低于最新的 RELEASE。本节将系统地介绍 FreeBSD 13 和 14 版本的安装流程。
+FreeBSD 13.x 和 14.x 系列作为稳定的长期支持版本，在生产环境中仍被广泛采用。尽管其安装流程与 15.x 系列具有高度一致性，但在 pkgbase 支持等特性上存在版本差异。以下提供针对这些版本的标准化安装指南。
 
 ## 使用 bsdinstall 开始安装
 
@@ -540,7 +538,13 @@ root 密码强度无强制要求，但不可为空。若密码为空，将提示
 
 - [Regulatory Domain Support](https://wiki.freebsd.org/WiFi/RegulatoryDomainSupport) [备份](https://web.archive.org/web/20260118030429/https://wiki.freebsd.org/WiFi/RegulatoryDomainSupport)，该页面介绍 FreeBSD 无线管制域支持状态
 - [main/lib/lib80211/regdomain.xml](https://github.com/freebsd/freebsd-src/blob/main/lib/lib80211/regdomain.xml) [备份](https://web.archive.org/web/20260115144118/https://github.com/freebsd/freebsd-src/blob/main/lib/lib80211/regdomain.xml)，该文件定义 802.11 无线管制域配置，regdomain.xml 在源代码的位置
-- [regdomain.xml --	802.11 wireless	regulatory definitions](https://man.freebsd.org/cgi/man.cgi?query=regdomain&sektion=5)，该手册页说明无线管制域配置文件格式，对应编码请参考系统中的 `/etc/regdomain.xml` 文件
+- [regdomain.xml --	802.11 wireless	regulatory definitions](https://man.freebsd.org/cgi/man.cgi?query=regdomain&sektion=5)，该手册页说明无线管制域配置文件格式，对应编码请参考系统中的 `/etc/regdomain.xml 文件
+
+```text
+/etc/
+├── regdomain.xml # 无线管制域配置文件
+└── resolv.conf # DNS 解析配置文件
+```
 - [阿里公共 DNS](https://www.alidns.com/) [备份](https://web.archive.org/web/20260119050754/https://cn.aliyun.com/product/dns?from_alibabacloud=)，该服务提供公共 DNS 解析
 
 
@@ -631,6 +635,13 @@ root 密码强度无强制要求，但不可为空。若密码为空，将提示
 | `4 proc_debug` | 禁用非特权用户的进程调试功能 |
 | `5 random_pid` | 启用进程 PID 随机化 |
 | `6 clear_tmp` | 系统启动时自动清理 `/tmp` 目录 |
+
+```text
+/
+├── tmp/ # 临时文件目录
+└── etc/
+    └── rc.conf # 系统启动配置文件
+```
 | `7 disable_syslogd` | 禁用 syslogd 的网络套接字（即禁用远程日志接收） |
 | `8 secure_console` | 启用控制台安全保护（单用户模式也需 root 密码） |
 | `9 disable_ddtrace` | 禁用 DTrace 的破坏性（destructive）操作模式 |

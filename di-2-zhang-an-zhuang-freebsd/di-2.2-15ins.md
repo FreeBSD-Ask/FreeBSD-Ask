@@ -1,8 +1,6 @@
 # 2.2 FreeBSD 15 安装指南（AMD64）
 
-本节聚焦于 FreeBSD 15.0-RELEASE 在 AMD64 架构上的标准化安装流程。作为系统生命周期的初始阶段，安装过程的规范性直接影响后续系统的稳定性与可维护性。本节基于 bsdinstall 安装工具，提供从系统启动到首次登录的完整操作指南，确保系统部署过程的规范性与可重复性。
-
-本节将系统地介绍 FreeBSD 15 的安装流程。
+本节聚焦于 FreeBSD 15.0-RELEASE 在 AMD64 架构上的标准化安装流程。以下介绍基于 bsdinstall 安装工具，提供从系统启动到首次登录的完整操作指南。
 
 > **技巧**
 >
@@ -59,7 +57,7 @@
 > **警告**
 >
 >
-> 需要指出，某些教程建议用户关闭 ACPI，这种做法目前已缺乏依据。除非不是 x86 架构，否则现代计算机没有关闭 ACPI 的理由。ACPI（高级配置与电源管理接口，Advanced Configuration and Power Management Interface）与电源状态管理、设备节能、多处理器支持等功能密切相关。应将该选项视为遗留功能，仅在不支持 UEFI 的旧式计算机上才需考虑。
+> 需要指出，某些教程建议用户关闭 ACPI，这种做法目前已缺乏依据。除非不是 x86 架构，否则现代计算机没有关闭 ACPI 的理由。ACPI 与电源状态管理、设备节能、多处理器支持等功能密切相关。应将该选项视为遗留功能，仅在不支持 UEFI 的旧式计算机上才需考虑。
 >
 > 若出现 ACPI 报错，亦属正常现象，大多数情况下不会影响正常使用。一般通过更新 BIOS 即可解决。在极个别情况下可能需要修补 SSDT（次级系统描述表）和 DSDT（差异化系统描述表），黑苹果用户对此应不陌生。
 
@@ -611,7 +609,12 @@ root 密码强度无强制要求，但不可为空。若密码为空，将提示
 
 - [Regulatory Domain Support](https://wiki.freebsd.org/WiFi/RegulatoryDomainSupport) [备份](https://web.archive.org/web/20260118030429/https://wiki.freebsd.org/WiFi/RegulatoryDomainSupport)，该页面介绍 FreeBSD 无线管制域支持状态
 - [main/lib/lib80211/regdomain.xml](https://github.com/freebsd/freebsd-src/blob/main/lib/lib80211/regdomain.xml) [备份](https://web.archive.org/web/20260115144118/https://github.com/freebsd/freebsd-src/blob/main/lib/lib80211/regdomain.xml)，该文件定义 802.11 无线管制域配置，regdomain.xml 在源代码的位置
-- [regdomain.xml --	802.11 wireless	regulatory definitions](https://man.freebsd.org/cgi/man.cgi?query=regdomain&sektion=5)，该手册页说明无线管制域配置文件格式，对应编码请参考系统中的 `/etc/regdomain.xml` 文件
+- [regdomain.xml --	802.11 wireless	regulatory definitions](https://man.freebsd.org/cgi/man.cgi?query=regdomain&sektion=5)，该手册页说明无线管制域配置文件格式，对应编码请参考系统中的 `/etc/regdomain.xml 文件
+
+```text
+/etc/
+└── regdomain.xml # 无线管制域配置文件
+```
 - [阿里公共 DNS](https://www.alidns.com/) [备份](https://web.archive.org/web/20260119050754/https://cn.aliyun.com/product/dns?from_alibabacloud=)，该服务提供公共 DNS 解析
 
 
@@ -781,6 +784,16 @@ Locked      : no # 是否锁定（禁用）用户
 OK? (yes/no) [yes]: #  确认上述设置是否正确
 adduser: INFO: Successfully added (ykla) to the user database. # 用户 ykla 已成功添加至数据库
 Add another user? (yes/no) [no]: # 是否继续添加其他用户
+```
+
+```text
+/
+├── bin/
+│   └── sh # 默认 shell
+├── etc/
+│   └── rc.conf # 系统启动配置文件
+└── home/
+    └── ykla/ # 用户家目录
 ```
 
 - ① 如果用户全名为空（即不设置），系统会分配一个默认值 `User &`。这是早期 Unix 系统 GECOS 字段的遗留行为。相关代码位于 [freebsd-src/usr.sbin/pw/pw_user.c](https://github.com/freebsd/freebsd-src/blob/main/usr.sbin/pw/pw_user.c) [备份](https://web.archive.org/web/20260115144213/https://github.com/freebsd/freebsd-src/blob/main/usr.sbin/pw/pw_user.c) 的 `static struct passwd fakeuser` 结构中。

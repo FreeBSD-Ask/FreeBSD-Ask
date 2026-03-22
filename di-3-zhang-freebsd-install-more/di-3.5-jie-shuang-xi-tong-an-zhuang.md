@@ -18,7 +18,7 @@
 
 使用简单方法安装 FreeBSD，按照以下步骤进行操作。
 
-首先需要在硬盘上为 FreeBSD 预留空间。该空间不一定位于硬盘末尾，中间位置亦可，因为典型的 Windows 安装中最后一个分区（本例为 `nda0p4`）通常是恢复分区。
+首先需要在硬盘上为 FreeBSD 预留空间。该空间不一定位于硬盘末尾，中间位置亦可，因为典型的 Windows 安装中最后一个分区（本例为 `nda0p4`）通常是恢复分区，不适合用来安装系统。
 
 分区完成后，在 FreeBSD 下查看磁盘分区情况，结果如下：
 
@@ -33,7 +33,7 @@
   419426304       4063        - free -  (100G)
 ```
 
-你应关闭安全启动和快速启动。或者，也可通过 Windows 设置 → 更新与安全 → 恢复 → 高级启动，选择从 U 盘设备启动。然后正常引导 FreeBSD 安装程序，直至进入分区选择界面。
+你应关闭安全启动和快速启动。安全启动会阻止未签名的引导加载程序运行，而 FreeBSD 的启动加载程序目前未被微软签名，因此必须关闭。快速启动会让 Windows 在关机时处于一种特殊的休眠状态，导致其他系统无法正常访问 NTFS 分区。或者，也可通过 Windows 设置 → 更新与安全 → 恢复 → 高级启动，选择从 U 盘设备启动。然后正常引导 FreeBSD 安装程序，直至进入分区选择界面。
 
 ![](../.gitbook/assets/shuangxitong1.png)
 
@@ -47,7 +47,7 @@
 
 ![](../.gitbook/assets/shuangxitong2.png)
 
-此处在第一行输入分区类型（即下方会列出的 `Filesystem type`）。如需添加 swap 分区，请在此步骤首先添加，后添加难以控制分区大小。在添加 UFS 或 ZFS 分区时，需在 `Mountpoint` 处填写 `/`，表示将该分区挂载到根目录。`Label` 是 FreeBSD 的卷标（gptlabel），用于方便识别分区，可根据需要填写或留空。此处使用 ZFS，不添加 swap 分区，并且填入卷标 `zroot`。
+此处在第一行输入分区类型（即下方会列出的 `Filesystem type`）。如需添加 swap 分区，请在此步骤首先添加，后添加难以控制分区大小，因为分区会从空闲空间的开头或结尾分配，先添加 swap 可以更好地控制其位置。在添加 UFS 或 ZFS 分区时，需在 `Mountpoint` 处填写 `/`，表示将该分区挂载到根目录。`Label` 是 FreeBSD 的卷标（gptlabel），用于方便识别分区，可根据需要填写或留空。此处使用 ZFS，不添加 swap 分区，并且填入卷标 `zroot`。
 
 ![](../.gitbook/assets/shuangxitong3.png)
 
@@ -55,13 +55,13 @@
 
 ![](../.gitbook/assets/shuangxitong4.png)
 
-此处会警告 ZFS 分区可能无法启动，但经实测可以正常启动。选择 `Yes` 忽略此警告：
+此处会警告 ZFS 分区可能无法启动，但经实测可以正常启动。这个警告是安装程序的通用提示，对于 UEFI 环境下的配置并不适用。选择 `Yes` 忽略此警告：
 
 ![](../.gitbook/assets/shuangxitong5.png)
 
 > **注意**
 >
->请将 Windows 创建的 300M EFI 系统分区的挂载点设置为 `/boot/efi`。
+>请将 Windows 创建的 300M EFI 系统分区的挂载点设置为 `/boot/efi`，这样 FreeBSD 就能正确找到并使用已有的 EFI 分区，避免创建多个 EFI 分区带来的混乱。
 
 选择 `Finish`（完成）
 
@@ -96,7 +96,7 @@ root  534M    130G   534M  none
 
 ### 加载 ZFS 内核模块
 
-默认的安装镜像可能未默认启用 ZFS，让我们现在就加载 ZFS 内核模块：
+默认的安装镜像可能未默认启用 ZFS，让我们现在就加载 ZFS 内核模块，因为 ZFS 支持并不在内核中，而是作为可加载模块提供：
 
 ```sh
 # kldload zfs
@@ -104,7 +104,7 @@ root  534M    130G   534M  none
 
 ### 配置 ZFS 对齐方式（只影响新创建的硬盘分区）
 
-强制 ZFS 文件系统使用 4K 对齐：
+强制 ZFS 文件系统使用 4K 对齐，这样可以更好地适配现代硬盘的物理扇区大小，提高读写性能：
 
 ```sh
 # sysctl vfs.zfs.vdev.min_auto_ashift=12
@@ -113,7 +113,7 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 
 > **技巧**
 >
-> 参数 `12` 表示 2^12 = 4096 字节（4KB）的扇区大小。默认参数（可通过命令 `sysctl vfs.zfs.vdev.min_auto_ashift` 查看）是 `9`，即 2^9 = 512 字节。
+> 参数 `12` 表示 2^12 = 4096 字节（4KB）的扇区大小。默认参数（可通过命令 `sysctl vfs.zfs.vdev.min_auto_ashift` 查看）是 `9`，即 2^9 = 512 字节，这是传统硬盘的扇区大小。
 
 > **思考题**
 >
@@ -166,7 +166,7 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 
 ### 挂载临时文件系统准备安装
 
-挂载一个临时文件系统（tmpfs）：
+挂载一个临时文件系统（tmpfs），这样可以在内存中临时存储安装过程中需要的文件，避免频繁写入磁盘：
   
 ```sh
 # mount -t tmpfs tmpfs /mnt
@@ -180,7 +180,7 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 # zpool create -f -o altroot=/mnt -O compress=lz4 -O atime=off -m none zroot /dev/gpt/zroot
 ```
 
-该命令将设置 zroot 池的挂载点为 `/mnt`，启用 LZ4 压缩，关闭访问时间记录。
+该命令将设置 zroot 池的挂载点为 `/mnt`，启用 LZ4 压缩以节省空间并提高读写性能，关闭访问时间记录以减少磁盘写入。
 
 选项说明如下：
 
@@ -237,7 +237,7 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 # zfs create -o mountpoint=/usr -o canmount=off zroot/usr
 ```
 
-将创建 `zroot/usr` 数据集，`canmount` 即禁止自动挂载。
+将创建 `zroot/usr` 数据集，`canmount` 即禁止自动挂载，这样可以将相关的子数据集组织在一起，但不会单独挂载这个父数据集。
 
 
 - 创建 `/usr/ports` 数据集
@@ -304,7 +304,7 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 # zfs create -o atime=on zroot/var/mail
 ```
 
-将创建 `zroot/var/mail` 数据集，并启用访问时间记录（`atime=on`），通常用于存放邮件数据。
+将创建 `zroot/var/mail` 数据集，并启用访问时间记录（`atime=on`），通常用于存放邮件数据，因为邮件程序可能需要知道文件的最后访问时间。
 
 
 > **技巧**
@@ -313,7 +313,7 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 
 ### 修改文件夹权限
 
-将 `/mnt/tmp` 和 `/mnt/var/tmp` 的权限设置为 `1777`（粘滞位），以确保临时目录权限正确：
+将 `/mnt/tmp` 和 `/mnt/var/tmp` 的权限设置为 `1777`（粘滞位），以确保临时目录权限正确，这样任何用户都可以在这些目录中创建文件，但只能删除自己创建的文件：
 
 ```sh
 # chmod 1777 /mnt/tmp        # 设置 /mnt/tmp 目录为粘滞位，可读写
@@ -322,7 +322,7 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 
 ### 设置交换分区到 `fstab`
 
-将交换分区 `/dev/nda0p5` 添加到临时的 fstab 文件：
+将交换分区 `/dev/nda0p5` 添加到临时的 fstab 文件，这样系统启动时就能自动挂载这个交换分区：
 
 ```sh
 # printf "/dev/nda0p5\tnone\tswap\tsw\t0\t0\n" >> /tmp/bsdinstall_etc/fstab
@@ -342,7 +342,7 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 
 ### 设置启动项与 UEFI
 
-- 设置 ZFS 池的引导文件系统（bootfs）为 `zroot/ROOT/default`：
+- 设置 ZFS 池的引导文件系统（bootfs）为 `zroot/ROOT/default`，这样系统启动时会自动从这个数据集引导：
 
 ```sh
 # zpool set bootfs=zroot/ROOT/default zroot
@@ -360,7 +360,7 @@ Windows 文本文件的行尾通常是 `\r\n`（回车 + 换行）。
 
 此命令效果等同于使用 `ee /tmp/bsdinstall_etc/rc.conf` 编辑该文件并添加一行 `zfs_enable="YES"`。
 
-- 挂载现有的 EFI 系统分区：
+- 挂载现有的 EFI 系统分区，这样我们可以在其中添加 FreeBSD 的启动文件：
 
 ```sh
 # mount -t msdosfs /dev/nda0p1 /media
@@ -381,7 +381,7 @@ Windows 文本文件的行尾通常是 `\r\n`（回车 + 换行）。
 # cp /boot/loader.efi /media/efi/freebsd/
 ```
 
-- 使用 efibootmgr 工具向主板 UEFI 固件添加启动项“FreeBSD”。
+- 使用 efibootmgr 工具向主板 UEFI 固件添加启动项 `FreeBSD`，这样在开机时就能在 UEFI 启动菜单中看到 FreeBSD 选项。
 
 ```sh
 # efibootmgr --create --activate --label "FreeBSD" --loader "/media/efi/freebsd/loader.efi"
