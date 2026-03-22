@@ -615,6 +615,7 @@ root 密码强度无强制要求，但不可为空。若密码为空，将提示
 /etc/
 └── regdomain.xml # 无线管制域配置文件
 ```
+
 - [阿里公共 DNS](https://www.alidns.com/) [备份](https://web.archive.org/web/20260119050754/https://cn.aliyun.com/product/dns?from_alibabacloud=)，该服务提供公共 DNS 解析
 
 
