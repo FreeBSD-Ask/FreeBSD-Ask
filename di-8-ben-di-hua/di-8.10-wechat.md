@@ -37,6 +37,18 @@ root@ykla:/compat/linux # rpm2cpio < WeChatLinux_x86_64.rpm  | cpio -id	# 读者
 1393412 blocks
 ```
 
+```sh
+/compat/linux/
+├── opt/
+│   └── wechat/
+│       ├── wechat # 微信可执行文件
+│       └── icons/
+│           └── wechat.png # 微信图标
+└── lib64/
+    └── libbz2.so.1.0 # libbz2 库文件
+```
+
+
 ### 解决依赖问题
 
 查看依赖关系：
@@ -149,6 +161,15 @@ Categories=Network
 ```sh
 # chmod 755 ~/.local/share/applications/wechat.desktop
 ```
+
+```sh
+~/
+└── .local/
+    └── share/
+        └── applications/
+            └── wechat.desktop # 微信桌面图标文件
+```
+
 
 重启系统后，即可在系统菜单中找到微信。
 

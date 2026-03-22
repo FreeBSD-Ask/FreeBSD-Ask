@@ -21,6 +21,18 @@ FreeBSD 操作系统支持多种多媒体处理工具，本节将介绍音频剪
 # make install clean
 ```
 
+```sh
+/usr/
+└── ports/
+    ├── audio/
+    │   └── audacity/ # Audacity 音频编辑器端口
+    ├── multimedia/
+    │   ├── olive/ # Olive 视频编辑器端口
+    │   └── ffmpeg/ # FFmpeg 多媒体处理框架端口
+    └── graphics/
+        └── inkscape/ # Inkscape 矢量绘图软件端口
+```
+
 ## 视频剪辑
 
 视频剪辑是处理视频内容的重要环节，Olive 视频编辑器是一款开源的非线性视频编辑软件，适用于专业和非专业的视频制作场景。

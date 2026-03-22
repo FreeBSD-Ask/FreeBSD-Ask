@@ -20,6 +20,12 @@
 # fc-cache                                           # 刷新字体缓存
 ```
 
+```sh
+/usr/local/share/
+└── fonts/
+    └── WindowsFonts/ # Windows 字体存放目录
+```
+
 ## TTY 中文控制台
 
 FreeBSD 的新型终端 VT 原生支持 CJK 字符集，只需加载字体即可显示中文。

@@ -41,6 +41,20 @@ root@ykla:/compat/linux # rpm2cpio < /home/ykla/QQ_3.2.17_250521_x86_64_01.rpm |
 1055863 blocks
 ```
 
+```sh
+/compat/linux/
+├── opt/
+│   └── QQ/
+│       └── qq # QQ 可执行文件
+└── usr/
+    └── share/
+        └── icons/
+            └── hicolor/
+                └── 512x512/
+                    └── apps/
+                        └── qq.png # QQ 图标
+```
+
 ### 解决依赖库
 
 - 查看依赖：
@@ -195,6 +209,13 @@ $ exit # 切换回 root
 ```sh
 $ rm ~/.config/QQ/crash_files/*                 # 删除 QQ 崩溃文件目录下的所有文件
 $ chmod a-wx ~/.config/QQ/crash_files/          # 设置 QQ 崩溃文件目录为不可写不可执行，防止再生成更多崩溃日志造成闪退
+```
+
+```sh
+~/
+└── .config/
+    └── QQ/
+        └── crash_files/ # QQ 崩溃文件目录
 ```
 
 #### 参考文献

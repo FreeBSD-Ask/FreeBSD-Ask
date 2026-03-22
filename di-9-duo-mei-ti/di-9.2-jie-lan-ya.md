@@ -52,6 +52,13 @@ Set it up? [yes]:
 # make install clean
 ```
 
+```sh
+/usr/
+└── ports/
+    └── comms/
+        └── iwmbt-firmware/ # 英特尔蓝牙固件端口
+```
+
 蓝牙设备通过 USB 总线连接，可使用 `usbconfig` 工具查看所有 USB 设备（包括蓝牙设备）。例如，若蓝牙设备标识为 `ugen1.5`，则可执行：`iwmbtfw -d ugen1.5` 以加载固件。
 
 ## 故障排除与未竟事项
@@ -59,6 +66,12 @@ Set it up? [yes]:
 ### Logitech M337 配对连接后会自动断开
 
 针对此问题的解决方案：删除 `/var/db/bthidd.hids` 文件中对应鼠标的 `bd_addr` 行（该行包含设备的蓝牙地址，格式为 `xx:xx:xx:xx:xx:xx`）。
+
+```sh
+/var/
+└── db/
+    └── bthidd.hids # 蓝牙 HID 设备数据库文件
+```
 
 完成上述操作后，重启蓝牙 HID 守护进程服务以使更改生效：
 
