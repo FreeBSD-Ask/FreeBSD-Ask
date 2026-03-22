@@ -158,7 +158,7 @@ Makefile		pkg-plist-client	pkg-plist-plpython
 - ① `/usr/ports` 这个文件夹整体称作 Ports，包括几十种不同的分类目录，每个目录下有若干 Port。
 - ② `/usr/ports/databases/postgresql18-server` 这个文件夹整体称作一个 Port，由 `distinfo`（校验和文件）、`pkg-descr`（软件描述文件）、`Makefile`	（主文件，包含构建方法、版本号及下载方式等）、`pkg-plist`（安装文件列表及其权限和属组信息）、`files`（一般为补丁文件，该 Port 下还包含安装后的说明文件 `pkg-message`）等文件构成。
 
-之所以称为“Ports Collection”，移植集合（不应理解为端口集合，参见 [What does 'port' mean in 'develop a port of BSD'?](https://www.reddit.com/r/linuxquestions/comments/ll2q6j/what_does_port_mean_in_develop_a_port_of_bsd) [备份](https://web.archive.org/web/20250309204249/https://www.reddit.com/r/linuxquestions/comments/ll2q6j/what_does_port_mean_in_develop_a_port_of_bsd/)，注：此来源不可信，请求其他来源）是因为这些软件绝大部分并不由 FreeBSD 控制、管理和维护。Port 提交者主要做的事情是将 FreeBSD 上 Port 更新到上游开发者提供的最新版本，删除上游不再维护的软件 Port。在上游不接受 BSD 特有的 PR 补丁或难以直接通过既有 Ports 框架实现构建的情况下，Port 维护者也需要自行复刻一个分支出来维护（如 [editors/vscode](https://github.com/tagattie/FreeBSD-VSCode) [备份](https://web.archive.org/web/20260121160204/https://github.com/tagattie/FreeBSD-VSCode)）。
+之所以称为“Ports Collection”，移植集合（不应理解为端口集合）是因为这些软件绝大部分并不由 FreeBSD 控制、管理和维护。Port 提交者主要做的事情是将 FreeBSD 上 Port 更新到上游开发者提供的最新版本，删除上游不再维护的软件 Port。在上游不接受 BSD 特有的 PR 补丁或难以直接通过既有 Ports 框架实现构建的情况下，Port 维护者也需要自行复刻一个分支出来维护（如 [editors/vscode](https://github.com/tagattie/FreeBSD-VSCode) [备份](https://web.archive.org/web/20260121160204/https://github.com/tagattie/FreeBSD-VSCode)）。
 
 ## Ports 构建 pkg 软件包的流程
 
@@ -758,7 +758,8 @@ ccache4 是目前的最新版本，提供了更好的性能和功能。
 - 查看软链接情况：
 
 ```sh
-# ls -al  /usr/local/libexec/ccache    total 55	# 查看 /usr/local/libexec/ccache 目录下的详细文件信息
+# ls -al  /usr/local/libexec/ccache    # 查看 /usr/local/libexec/ccache 目录下的详细文件信息
+total 55
 drwxr-xr-x   3 root wheel 13  9月 20 02:29 .
 drwxr-xr-x  20 root wheel 54  9月 20 02:29 ..
 lrwxr-xr-x   1 root wheel 21  9月 20 02:29 c++ -> /usr/local/bin/ccache

@@ -2,7 +2,7 @@
 
 本章详细阐述 freebsd-update 工具的使用方法，包括常规补丁更新、大版本升级及相关注意事项。freebsd-update 作为 FreeBSD 官方支持的二进制更新机制，是系统维护的核心工具之一。
 
-> **注意：**
+> **注意**
 >
 > 只有一级架构的 RELEASE 版本才提供该更新源。也就是说，CURRENT 和 STABLE 不提供该源。关于架构的支持等级说明请参见： [Supported Platforms](https://www.freebsd.org/platforms) [备份](https://web.archive.org/web/20260115035231/https://www.freebsd.org/platforms/)
 
@@ -104,7 +104,7 @@ usr/lib/clang/11.0.1/include
 14.3-RELEASE-p6
 ```
 
-> **注意：**
+> **注意**
 >
 > 有时候补丁不涉及内核，内核版本就不会变，用 `uname -r` 无法体现，但用户空间版本会发生变化。因此你可能会看到两个版本号，应以较高者为准。
 
@@ -144,9 +144,9 @@ usr/lib/clang/11.0.1/include
 >
 >由于大版本间的变动，可能影响 `freebsd-update` 更新工具本身，所以一定要：
 >
->先更新到当前版本最新的补丁版本（如 `X.Y-RELEASE-pN`），然后再更新到最新的点版本（如 `X.Z-RELEASE`）.
->
->接下来：更新到最新的点版本及该点版本上最新的补丁版本（如 `X.Z-RELEASE-pN`）
+>先更新到当前版本最新的补丁版本（如 `X.Y-RELEASE-pN`），然后再更新到最新的点版本（如 `X.Z-RELEASE`）。
+
+接下来：更新到最新的点版本及该点版本上最新的补丁版本（如 `X.Z-RELEASE-pN`）
 >
 >最后：进行大版本（`X.Z-RELEASE-pN`——>`A.0-RELEASE`）的更迭。
 >
