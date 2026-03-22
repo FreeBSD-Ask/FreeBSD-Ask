@@ -4,7 +4,7 @@ IBus 即“Intelligent Input Bus”（智能输入总线），是 Linux 及类 U
 
 ## 安装 IBus
 
-在明确了 IBus 的基本概念后，接下来介绍如何在 FreeBSD 系统上安装和配置 IBus 输入法框架。
+在 FreeBSD 系统上安装和配置 IBus 输入法框架：
 
 - 使用 pkg 安装：
 
@@ -25,7 +25,7 @@ IBus 即“Intelligent Input Bus”（智能输入总线），是 Linux 及类 U
 
 - `chinese/ibus-cangjie` 仓颉输入法
 - `chinese/ibus-chewing` 酷音输入法
-- `chinese/ibus-rime` Rime 输入法引擎（后文另行说明）
+- `chinese/ibus-rime` Rime 输入法引擎
 - `chinese/ibus-table-chinese` 包含五笔、仓颉等多种输入法
 
 ## 配置环境变量
@@ -45,7 +45,7 @@ IBus 即“Intelligent Input Bus”（智能输入总线），是 Linux 及类 U
 3. zsh: `~/.zprofile` 写入 A 组配置
 4. csh: `~/.cshrc` 写入 B 组配置
 
-注销后重新登录，点击 IBus 图标添加所需输入法，即可使用，无需进行中文化设置（测试环境为 SDDM/Xfce/FreeBSD 13.2/sh）或其他额外配置。建议在相应的 shell 配置文件中加入以下内容以确保 IBus 正常运行：
+注销后重新登录，点击 IBus 图标添加所需输入法，即可使用，无需进行中文化设置或其他额外配置。建议在相应的 shell 配置文件中加入以下内容以确保 IBus 正常运行：
 
 - A 组（在 sh、bash、zsh 中）
 
@@ -90,4 +90,3 @@ IBus 要求使用 UTF-8 编码，但对区域设置（如 `C.UTF-8` 或 `zh_CN.U
 1. 分别在 Fcitx5 和 IBus 两种输入法框架下安装并配置相同的中文输入法，对比两种框架的资源占用、响应速度和应用程序兼容性。
 2. 测试 IBus 在不同区域设置（C.UTF-8 与 zh_CN.UTF-8）下的运行情况，验证其对系统编码的要求。
 3. 尝试修改 IBus 的环境变量配置，移除某一个关键变量后观察系统行为变化。
-

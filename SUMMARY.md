@@ -310,7 +310,7 @@
 * [Chipset 芯片组](fu-lu3/Chipset.md)
 * [Security 安全](fu-lu3/Security.md)
 * [Boot 启动](fu-lu3/Boot.md)
-* [Save & Exit 保存与退出](fu-lu3/sava.md)
+* [Save & Exit 保存与退出](fu-lu3/save.md)
 
 ## 附录 IV 文学故事
 

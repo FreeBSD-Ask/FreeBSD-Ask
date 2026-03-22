@@ -193,17 +193,19 @@ usage: ls [-ABCFGHILPRSTUWZabcdfghiklmnopqrstuvwxy1,] [--color=when] [-D format]
 >
 > 命令后面的 `#` 表示什么意思？`#` 在 shell 当中一般是起注释作用（由 [POSIX.1-2024](https://pubs.opengroup.org/onlinepubs/9799919799/utilities/V3_chap02.html) [备份](https://web.archive.org/web/20260112081410/https://pubs.opengroup.org/onlinepubs/9799919799/utilities/V3_chap02.html) 规定），相当于 C 语言里面的 `//`。意味着后边的文字只起到说明作用，不起实际作用。
 
-### thefuck：自动纠正错误拼写的命令
+### 命令拼写自动纠正工具（可选）
 
-#### 安装 thefuck
+#### 安装与配置
 
-使用 pkg
+FreeBSD 可使用 `sysutils/thefuck` 工具实现命令拼写自动纠正功能。该工具可自动检测并纠正命令输入错误。
+
+使用 pkg 安装：
 
 ```sh
-# pkg ins thefuck
+# pkg install thefuck
 ```
 
-或者 ports
+或使用 Ports 构建：
 
 ```sh
 # cd /usr/ports/misc/thefuck/
@@ -230,7 +232,7 @@ eval $(thefuck --alias)
 
 写入 `~/.shrc`，请勿使用 `>>` 重定向，请手动编辑加入。
 
-重新加载 shell 配置：
+在 FreeBSD 默认 sh 环境中，需将以下配置写入 `~/.shrc`：
 
 ```sh
 # . ~/.shrc
@@ -253,7 +255,7 @@ No fucks given
 >```
 
 
-#### 测试使用 thefuck
+#### 使用示例
 
 ```sh
 # ls-l /home/ykla/ # 先输入一遍错误的试试
@@ -568,7 +570,7 @@ $ rm -rf /home/ykla/test/
 
 > **警告**
 >
-> 使用 `rm -rf` 是相当危险的操作，是不可撤销的。试想，上述命令若 `/home/ykla/test/` 打错成了 `/home/ykla /test/`（多了个空格），会造成什么后果？
+> 使用 `rm -rf` 是相当危险的操作，是不可撤销的。若命令中误输入空格，如将 `/home/ykla/test/` 打错成 `/home/ykla /test/`，会导致删除路径错误：
 >
 >```sh
 ># rm -rf /home/ykla /test

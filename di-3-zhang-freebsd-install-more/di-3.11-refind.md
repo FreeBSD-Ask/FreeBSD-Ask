@@ -18,19 +18,7 @@
 
 将 `refind.conf-sample` 文件复制一份，并重命名为 `refind.conf`。
 
-> **技巧**
->
->通常无需手动配置。但若出现无法自动识别现有操作系统的情况，请按以下方法手动添加引导项：
->
->打开 `refind.conf` 文件，在任意空白处添加如下配置：
->
->```ini
->menuentry "FreeBSD" { 
->	icon \EFI\refind\icons\os_freebsd.png 
->	volume "FreeBSD"
->	loader \EFI\freebsd\loader.efi 
->}
->
+通常无需手动配置。但若出现无法自动识别现有操作系统的情况，请按以下方法手动添加引导项：
 
 打开 `refind.conf` 文件，在任意空白处添加如下配置：
 

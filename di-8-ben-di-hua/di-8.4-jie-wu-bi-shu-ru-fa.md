@@ -10,7 +10,6 @@
 
 在 IBus 框架下，可以通过安装 Rime 输入法来使用五笔输入法。
 
-
 ```sh
 # pkg install zh-ibus-rime
 ```
@@ -18,7 +17,7 @@
 或者：
 
 ```sh
-# cd /usr/ports/chinese/ibus-rime/ 
+# cd /usr/ports/chinese/ibus-rime/
 # make install clean
 ```
 
@@ -65,7 +64,7 @@ schema_list:
 ### 安装 Fcitx 5
 
 ```sh
-# pkg install fcitx5 fcitx5-qt5 fcitx5-qt6 fcitx5-gtk2 fcitx5-gtk3 fcitx5-gtk4 fcitx5-configtool-qt5 fcitx5-configtool-qt6 zh-fcitx5-chinese-addons 
+# pkg install fcitx5 fcitx5-qt5 fcitx5-qt6 fcitx5-gtk2 fcitx5-gtk3 fcitx5-gtk4 fcitx5-configtool-qt5 fcitx5-configtool-qt6 zh-fcitx5-chinese-addons
 ```
 
 Fcitx 5 的具体配置步骤本节不做详细说明。
@@ -114,7 +113,7 @@ $ libime_tabledict 98wbx.txt 98wbx.main.dict
 首先安装并配置好 Fcitx 5，配置步骤从略。
 
 ```sh
-# pkg install zh-fcitx5-rime zh-rime-essay zh-rime-wubi 
+# pkg install zh-fcitx5-rime zh-rime-essay zh-rime-wubi
 ```
 
 或者：
@@ -125,7 +124,7 @@ $ libime_tabledict 98wbx.txt 98wbx.main.dict
 # cd /usr/ports/chinese/rime-essay/ && make install clean
 ```
 
-加入 Rime 的方法同上（Rime 输入法叫中州韵），此处从略。
+加入 Rime 的方法同上，此处从略。
 
 修改 `/usr/local/share/rime-data/default.yaml`，如下：
 
@@ -219,7 +218,6 @@ patch applied.
 ```
 
 此处将 patch 应用于 wubi86 输入法（写入 `wubi86.custom.yaml`），大部分选项与输入法相关，少部分选项为全局设置（写入 `default.custom.yaml`）。
-
 
 重启即可。
 

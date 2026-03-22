@@ -4,18 +4,20 @@
 
 ## 硬件支持情况
 
-在开始安装前，了解 FreeBSD 的硬件支持情况很有必要。以下介绍最低硬件需求与实测硬件支持情况。
+以下介绍最低硬件需求与实测硬件支持情况。
 
 ### 最低硬件需求
 
-针对 amd64 架构，14.2-RELEASE 版本在虚拟机环境中测得：
+amd64（又称 x86-64）是 64 位 x86 架构的扩展，广泛应用于现代家用电脑与服务器。针对 amd64 架构，14.2-RELEASE 版本在虚拟机环境中测得：
 
 - 硬盘：
   - 仅基本系统（安装后）：550 MB
   - KDE 桌面（通过 pkg 安装后）：15 GB
 - 内存：
-  - 统一可扩展固件接口（Unified Extensible Firmware Interface，UEFI）模式下，最小内存需求为 128 MB
-  - 基本输入/输出系统（Basic Input/Output System，BIOS）模式下，最小内存需求为 64 MB
+  - 统一可扩展固件接口（UEFI）模式下，最小内存需求为 128 MB
+  - 基本输入/输出系统（BIOS）模式下，最小内存需求为 64 MB
+
+UEFI（Unified Extensible Firmware Interface）是现代计算机的固件接口标准，替代了传统的 BIOS，提供更强大的启动管理功能。BIOS（Basic Input/Output System）是早期计算机的固件接口。
 
 ### 实测硬件支持
 
@@ -35,13 +37,13 @@
 >
 > FreeBSD 不支持 [安全启动](https://wiki.freebsd.org/SecureBoot) [备份](https://web.archive.org/web/20260115143726/https://wiki.freebsd.org/SecureBoot)，该页面提供 FreeBSD 安全启动相关状态信息，在安装 FreeBSD 前请务必关闭安全启动（Secure Boot）；FreeBSD 也不支持 Fake RAID（伪 RAID），请将其控制器修改为 AHCI。
 >
-> 操作方法请咨询购机厂商技术售后。
+> Fake RAID 是由主板 BIOS/固件提供的软件 RAID 功能，依赖操作系统驱动支持，并非真正的硬件 RAID。AHCI（Advanced Host Controller Interface）是 SATA 控制器的标准工作模式，提供原生支持 SATA 设备的高级特性。
+>
+> 操作方法：进入 BIOS/UEFI 设置界面，找到存储控制器相关选项，将其模式从 RAID 改为 AHCI 后保存重启。具体菜单位置因主板型号而异，可参考主板说明书。
 
 ### 特定硬件支持情况查询
 
-除了上述实测硬件外，更多硬件的支持情况可参考以下外部资源，以获取更全面的硬件兼容性信息。
-
-更多硬件请参考：
+除了上述实测硬件外，更多硬件的支持情况可参考以下外部资源。
 
 [Hardware for BSD](https://bsd-hardware.info/?view=search)。该平台提供 BSD 系统硬件兼容性数据库，可查询设备支持情况。
 
@@ -66,6 +68,8 @@
 > **技巧**
 >
 > 随着时间推移，当读者进行下载时，可能已无 14.2-RELEASE 版本。此时只需选择列表最顶部的 `FreeBSD-X.Y-RELEASE`（该版本推荐用于生产环境）即可。其中，`X.Y` 应为比 `14.2` 更大的版本号，如 `15.0`、`22.4` 等，但须注意，其应以 `RELEASE` 结尾，而非 `CURRENT`。
+>
+> RELEASE 是 FreeBSD 的正式发布版本，经过充分测试，适合生产环境使用。CURRENT 是 FreeBSD 的开发版本，包含最新特性但不够稳定，仅适合开发者和高级用户。
 
 > **警告**
 >
@@ -123,9 +127,11 @@ FreeBSD-14.2-RELEASE-amd64-mini-memstick.img.xz    107445036      2024-Nov-29 13
 | FreeBSD-14.2-RELEASE-amd64-mini-memstick.img	 | U 盘用的网络安装镜像，安装时需联网 |
 | FreeBSD-14.2-RELEASE-amd64-mini-memstick.img.xz | 压缩的 U 盘用的网络安装镜像，安装时需联网 |
 
+.xz 是一种高压缩比的文件压缩格式，常用于缩小软件发行包的体积。SHA256 和 SHA512 是密码散列函数，用于生成文件的唯一指纹，校验值（Checksum）则是通过这些函数计算出的固定长度字符串，用于验证文件完整性。
+
 需要注意的是，DVD 镜像并不包含一切离线软件包，仅精选了若干软件包，具体清单可参见源代码文件 [release/scripts/pkg-stage.sh](https://github.com/freebsd/freebsd-src/blob/main/release/scripts/pkg-stage.sh) [备份](https://web.archive.org/web/20260115143613/https://github.com/freebsd/freebsd-src/blob/main/release/scripts/pkg-stage.sh)，该脚本定义 DVD 镜像包含的预安装软件包清单。
 
-FreeBSD 的所有安装介质（包括但不限于虚拟机镜像）默认均不提供图形界面，须由用户自行安装和配置。DVD 镜像虽包含更多软件包，但由于依赖关系复杂，在安装图形界面时仍可能遇到问题，因此不建议使用 DVD 镜像。
+FreeBSD 的所有安装介质（包括但不限于虚拟机镜像）默认均不提供图形界面，须由用户自行安装和配置。DVD 镜像虽包含更多软件包，但由于图形界面依赖关系复杂，且 DVD 上的软件包版本可能较旧，在安装图形界面时仍可能遇到依赖冲突或版本不匹配问题，因此不建议使用 DVD 镜像。
 
 > **技巧**
 >
@@ -154,8 +160,7 @@ FreeBSD `-RELEASE` 历史版本下载地址：
 
 ### 建议使用 `-img` 或 `-img.xz` 格式的镜像
 
-在选择镜像格式时，有一些注意事项需要了解。
-制作 U 盘安装介质时，建议使用 `-img` 或 `-img.xz` 格式的镜像。`.iso` 镜像采用混合启动（Hybrid）模式，可能未完全遵循 UEFI 规范，直接写入 U 盘可能导致错误。详见 [FreeBSD -.iso files not support written to USB drive](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=236786)，该 Bug 报告记录 ISO 镜像直接写入 USB 设备的兼容性问题。建议读者仅在使用光学介质/虚拟机/云平台安装时选用 `iso` 结尾的镜像。
+制作 U 盘安装介质时，建议使用 `-img` 或 `-img.xz` 格式的镜像。`.iso` 镜像采用混合启动（Hybrid）模式，该模式同时支持从光驱和 U 盘启动，但可能未完全遵循 UEFI 规范，直接写入 U 盘可能导致启动错误。详见 [FreeBSD -.iso files not support written to USB drive](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=236786)，该 Bug 报告记录 ISO 镜像直接写入 USB 设备的兼容性问题。建议读者仅在使用光学介质/虚拟机/云平台安装时选用 `iso` 结尾的镜像。
 
 当然，也存在例外情况。部分机器的 UEFI 固件支持从 `.iso` 镜像刻录的 U 盘启动（例如一些老款神舟电脑），但并非所有机器都支持此方式（例如部分小米电脑可能无法引导）。
 
@@ -173,7 +178,7 @@ Rufus 下载地址为 [https://rufus.ie/zh](https://rufus.ie/zh) [备份](https:
 
 ![Rufus](../.gitbook/assets/rufus.png)
 
-**不建议** 使用 FreeBSD 手册中提到的 win32diskimager，因其有时会出现校验错误（尽管实际文件校验值正确）。类似地，**亦不建议** 使用 [Ventoy](https://www.ventoy.net/) [备份](https://web.archive.org/web/20260115143659/https://www.ventoy.net/en/index.html)，该工具为多系统启动 USB 启动盘制作工具，直接加载 ISO 或 IMG 镜像文件。
+**不建议** 使用 FreeBSD 手册中提到的 win32diskimager，因其对某些镜像格式的处理存在缺陷，尽管实际文件校验值正确，但有时会错误地报告校验失败。类似地，**亦不建议** 使用 [Ventoy](https://www.ventoy.net/) [备份](https://web.archive.org/web/20260115143659/https://www.ventoy.net/en/index.html)，该工具为多系统启动 USB 启动盘制作工具，直接加载 ISO 或 IMG 镜像文件，但 Ventoy 的启动加载机制与 FreeBSD 镜像不完全兼容，可能导致启动失败。
 
 **读者应仅在 Rufus 无效的情况下再使用 win32diskimager 或 Ventoy。**
 

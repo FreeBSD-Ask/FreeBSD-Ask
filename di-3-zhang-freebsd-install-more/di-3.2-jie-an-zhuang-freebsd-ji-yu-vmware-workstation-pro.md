@@ -39,7 +39,7 @@
 
 > **技巧**
 >
->这一步实际上并无实质影响，甚至选择 Windows 也可以顺利启动。但是对于低版本的 FreeBSD，虚拟机增强工具没有开源，可能会出现问题。
+>在本次测试环境中，选择其他操作系统类型也能正常启动，但为保持配置一致性并避免潜在兼容性问题，建议选择 FreeBSD。对于低版本的 FreeBSD，虚拟机增强工具没有开源，可能会出现问题。
 
 ![VMware 安装 FreeBSD](../.gitbook/assets/vm5.png)
 
@@ -116,7 +116,7 @@
 
 ## 虚拟机增强工具与显卡驱动
 
-安装 VMware 显卡驱动和虚拟机增强工具（Open VM Tools），使用 pkg 的命令如下：
+为实现虚拟机与宿主机的良好集成，需安装 VMware 显卡驱动和虚拟机增强工具。Open VM Tools 是 VMware 提供的开源虚拟机增强工具套件，提供屏幕自动缩放、鼠标集成、文件共享等功能；xf86-video-vmware 是 VMware 显卡驱动；xf86-input-vmmouse 是 VMware 虚拟鼠标驱动。使用 pkg 的命令如下：
 
 ```sh
 # pkg install xf86-video-vmware open-vm-tools xf86-input-vmmouse
@@ -318,11 +318,11 @@ Downloads
 
 > **警告**
 >
->博通官网频繁变动，无法始终提供一致的解决方案，请读者自行理解并操作；如仍无法完成，可加入中文社区聊天群寻求帮助。
+>博通官网可能发生变动，请以官网最新流程为准。
 
-### 博通账号注册
+### 账号与下载说明
 
-VMware 已被博通（Broadcom）收购。**因此，目前从官方下载任何相关产品均需先注册并登录博通账号。** 请注意，任何非博通官方域名（`broadcom.com`）的下载教程可能已失效。
+VMware 已被博通（Broadcom）收购。从官方下载 VMware 相关产品需先注册并登录博通账号。请注意，仅从博通官方域名（`broadcom.com`）下载软件。
 
 > **博通账号的注册流程**
 >
@@ -434,7 +434,7 @@ VMware Workstation Pro 目前对于个人用户来说是 **免费下载、免费
 
 ### VMware Workstation Player（已不再维护）
 
-VMware Workstation Player 目前已弃用，且相较于 VMware Workstation Pro 功能存在较多缺失。不建议使用，非要下载，请点击 <https://support.broadcom.com/group/ecx/productdownloads?subfamily=VMware%20Workstation%20Player>。目前所有包含该软件的教程均为旧教程。
+>VMware Workstation Player 已不再维护，建议使用 VMware Workstation Pro。
 
 ## 课后习题
 

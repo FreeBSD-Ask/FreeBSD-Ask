@@ -23,21 +23,13 @@ FreeBSD 操作系统支持多种音频播放器，本节将介绍几款常用播
 # cd /usr/ports/multimedia/audacious-plugins/ && make install clean
 ```
 
-```sh
-/usr/
-└── ports/
-    └── multimedia/
-        ├── audacious/ # Audacious 音频播放器端口
-        └── audacious-plugins/ # Audacious 插件端口
-```
-
 ### 使用
 
-对 `.m4a`（杜比 AC‑4 编码）、`.flac`（无损音频压缩编码）、`.av3a`（AVS2/AVS3 编码）等音乐格式进行兼容性测试：
+对 `.m4a`（MPEG-4 音频容器格式）、`.flac`（无损音频压缩编码）、`.av3a`（AVS2/AVS3 编码）等音乐格式进行兼容性测试。`.m4a` 为容器格式，可包含多种编码（如 AAC、ALAC 等）。
 
 > **技巧**
 >
-> 经测试验证，Audacious 仅原生支持 `.flac` 格式，目前不支持 `.m4a` 和 `.av3a` 等编码格式。
+> 经测试验证，Audacious 仅原生支持 `.flac` 格式，目前默认构建不支持 `.m4a` 和 `.av3a` 等编码格式，需安装相应插件或另行配置。
 
 ![](../.gitbook/assets/audacious.png)
 
@@ -170,7 +162,7 @@ Music Player Daemon（musicpd）的配置文件为 `/usr/local/etc/musicpd.conf`
     └── dsp2                           # 音频设备文件（示例）
 ```
 
-上述目录需要自行创建。
+MPD 默认使用的部分目录需要自行创建：
 
 ```sh
 # mkdir -p /var/mpd/music            # 创建 MPD 音乐存放目录
