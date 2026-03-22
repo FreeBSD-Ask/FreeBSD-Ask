@@ -138,7 +138,9 @@ $ git clone --branch releng/15.0 --single-branch --depth 1 https://github.com/fr
 >
 >```sh
 ># export EDITOR=/usr/bin/ee  # 切换 vi 为 ee。针对 FreeBSD 14 之前的版本或 csh 使用：setenv EDITOR /usr/bin/ee
+>
 # export VISUAL=/usr/bin/ee  # 切换 vi 为 ee。针对 FreeBSD 14 之前的版本或 csh 使用：setenv VISUAL /usr/bin/ee
+>
 >```
 
 合并冲突。使用 `etcupdate` 执行备份模式，以便在更新配置文件前备份现有文件：
