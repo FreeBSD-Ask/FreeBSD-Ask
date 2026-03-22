@@ -19,7 +19,7 @@
 
 ### 理解 FreeBSD 并非发行版而是操作系统
 
-可能由于某些原因，或者预设的前见，会让大多数有 Linux 发行版使用经验的用户难以理解 FreeBSD 基本系统和 Ports 的独立。
+可能由于某些原因，或者预设的前见，会让大多数有 Linux 发行版使用经验的用户难以理解 FreeBSD 基本系统和 Ports 的独立性。
 
 #### 独立自存的基本系统
 
@@ -40,7 +40,7 @@ pkgbase 直接由 freebsd-src 构建而来：
 
 freebsd-ports = 第三方软件（单个称为 Port），集合称为 Ports 框架存储库
 
-Port 本身是若干文件的集合，由源码包的检验和、说明文件、补丁等构成。其中，Makefile 是核心。Arch 的 PKGBUILD 或 Gentoo 的 ebuild 与此类似，事实上它们是由 Ports 框架衍生出的技术。
+Port 本身是若干文件的集合，由源码包的校验和、说明文件、补丁等构成。其中，Makefile 是核心。Arch 的 PKGBUILD 或 Gentoo 的 ebuild 与此类似，事实上它们是由 Ports 框架衍生出的技术。
 
 其中，pkg 包直接由 freebsd-ports 通过 poudriere 构建系统构建而来。
 
@@ -115,9 +115,9 @@ FreeBSD 基本系统几乎不包含任何与 BSD 协议不兼容的软件；
 |        `lscpu`        |        `sysutils/lscpu`    |   显示处理器信息   |                                                                                            /                                                                                             |
 |        glibc        |        bsdlibc        |                   C 库        |                                                                                            /                                                                                             |
 |         GCC         |     LLVM + Clang      |            编译器、编译链工具 |                                                                              非要用也可以安装 `devel/gcc`                                                                               |
-|         `vim`         |            `editors/vim/`    |     文本编辑器     |                                                                  FreeBSD 的 `vi` 不是软连接到 `vim`，而是早期的 `nvi`                                                                   |
+|         `vim`         |            `editors/vim/`    |     文本编辑器     |                                                                  FreeBSD 的 `vi` 不是软链接到 `vim`，而是早期的 `nvi`                                                                   |
 |        `wget`         |          `ftp/wget`    |       下载器       |                                                                               系统默认的下载工具是 `fetch`                                                                                |
-|        bash         |           `shells/bash`   |       shell        |                                              系统默认的 shell 是 `sh`（非软连接）。你可以自己改。                                             |
+|        bash         |           `shells/bash`   |       shell        |                                              系统默认的 shell 是 `sh`（非软链接）。你可以自己改。                                             |
 |   NetworkManager    |      `net-mgmt/networkmgr`  |    网络连接工具    |                                                                        NetworkManager 依赖 `systemd` 无法直接移植                                                                        |
 | `lsmod` | `kldstat` | 列出已加载的内核模块 | / |
 | `strace` | `truss` | 跟踪系统调用 | / |

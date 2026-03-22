@@ -11,14 +11,14 @@ $ whoami
 ykla
 ```
 
-- 查看当前登录用户所属的用户组信息
+- 查看当前登录用户所属的用户组信息。
 
 ```sh
 $ id
 uid=1001(ykla) gid=1001(ykla) groups=1001(ykla),0(wheel)
 ```
 
-- 查看当前用户登录的终端及本次登录时间
+- 查看当前用户登录的终端及本次登录时间。
 
 ```sh
 $ who
@@ -38,9 +38,9 @@ root       pts/0    3413e8b6b43f   3:00PM     - w
 
 ## 我在哪？
 
-- 查看当前所在路径
+- 查看当前所在路径。
 
-`pwd` 即 `print working directory`，用于打印当前工作目录
+`pwd` 即 `print working directory`，用于打印当前工作目录。
 
 ```sh
 $ pwd
@@ -72,7 +72,7 @@ login:
 - ① 使用  `su空格用户名` 可以切换到用户 ykla，从 root 切换的话，不需要输入 ykla 的密码：
   - `root@ykla:/`：
     - `root`：当前用户是 root
-    - `@` “谁” `在` “xx”主机上
+    - `@`：“谁”在“xx”主机上
     - `ykla`：这里是主机名，和用户 ykla 无涉。你可以随便起不一样的主机名
     - `:/`：代表当前在 `/` 路径下
 - ② 注意到提示符号的变化没有？root 是 `#`，普通用户是 `$`（csh 是 `%`）
@@ -110,7 +110,7 @@ ykla@ykla:/ $ pwd
 
 ## 命令行格式
 
-大部分命令行命令的名称都具有明确含义，例如 `ls` 即 `list`（列出）、`wget` 即通过 web（网络）来 `get`（下载）；也存在少量见名不知意的命令，例如 `fuck` 命令（用于自动纠正拼写错误）。
+大部分命令行命令的名称都具有明确含义，例如 `ls` 即 `list`（列出）、`wget` 即通过 web（网络）来 `get`（下载）；也存在少量见名不知意的命令，例如 `thefuck` 命令（用于自动纠正拼写错误）。
 
 ```sh
 # 命令 选项  参数 1       参数 2
@@ -128,7 +128,7 @@ drwxrwxrwt  2 root    wheel  3 Mar 18 17:23 .ICE-unix
 -r--r--r--  1 root    wheel 11 Mar 18 17:10 .X0-lock
 ```
 
-其中，`ls`（L 小写）意味着列出当下目录或指定目录下的文件；选项 `-l`（L 小写）意味着打印详细信息，输出长（*long*）的格式。
+其中，`ls`（L 小写）意味着列出当前目录或指定目录下的文件；选项 `-l`（L 小写）意味着打印详细信息，输出长（*long*）的格式。
 
 目前，大多数命令均遵循上述形式（细节有所省略）。这是 [POSIX.1-2024](https://pubs.opengroup.org/onlinepubs/9799919799/) [备份](https://web.archive.org/web/20260119180715/https://pubs.opengroup.org/onlinepubs/9799919799/) 规范所规定的。
 
@@ -378,7 +378,7 @@ cd is a shell builtin
 ```
 
 
-如果缺少了哪个命令，一般可以通过安装相应的软件包来获取，比如 `lspci` 命令，来自软件包 `sysutils/pciutils`。但是也有很多命令存在 Linux 主义问题，不兼容其他操作系统，比如 ip 命令，来自 GNU 软件包 iproute2。
+如果缺少了哪个命令，一般可以通过安装相应的软件包来获取，比如 `lspci` 命令，来自软件包 `sysutils/pciutils`。但是也有很多命令存在 Linux 主义问题，不兼容其他操作系统，比如 `ip` 命令，来自 GNU 软件包 iproute2。
 
 ## 常用命令
 
@@ -472,14 +472,14 @@ $ touch test test1 test2 test3
 
 `mkdir` 即 `make directories`，创建目录
 
-创建一个目录，叫 ykla
+创建一个目录，叫 ykla。
 
 ```sh
 $ mkdir -v ykla # -v 选项可以帮我们看到文件的变动，是 verbose 的缩写，即“啰嗦”一些，意为输出详细信息
 ykla
 ```
 
-如果文件已存在
+如果文件已存在：
 
 ```sh
 $ mkdir ykla

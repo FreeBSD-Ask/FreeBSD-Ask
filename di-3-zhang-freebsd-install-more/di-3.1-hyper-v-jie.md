@@ -90,12 +90,12 @@ PS C:\Users\ykla> Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-H
 
 ![Hyper-V](../.gitbook/assets/hp7.png)
 
-指定虚拟硬盘的名称、大小及存储位置，然后点击“下一步”。
+指定虚拟硬盘的名称、大小及存储位置，然后点击“下一页”。
 
 
 ![Hyper-V](../.gitbook/assets/hp8.png)
 
-点击“浏览”，找到并选中已下载的 `FreeBSD-14.1-RELEASE-amd64-disc1.iso` 文件，然后点击“下一步”。
+点击“浏览”，找到并选中已下载的 `FreeBSD-14.1-RELEASE-amd64-disc1.iso` 文件，然后点击“下一页”。
 
 
 ![Hyper-V](../.gitbook/assets/hp9.png)
@@ -108,7 +108,7 @@ PS C:\Users\ykla> Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-H
 
 ![Hyper-V](../.gitbook/assets/hp10.png)
 
-点击“设置”
+点击“设置”。
 
 ![Hyper-V](../.gitbook/assets/hp11.png)
 

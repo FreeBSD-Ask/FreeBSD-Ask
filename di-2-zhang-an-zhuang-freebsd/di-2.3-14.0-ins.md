@@ -642,6 +642,7 @@ root 密码强度无强制要求，但不可为空。若密码为空，将提示
 └── etc/
     └── rc.conf # 系统启动配置文件
 ```
+
 | `7 disable_syslogd` | 禁用 syslogd 的网络套接字（即禁用远程日志接收） |
 | `8 secure_console` | 启用控制台安全保护（单用户模式也需 root 密码） |
 | `9 disable_ddtrace` | 禁用 DTrace 的破坏性（destructive）操作模式 |

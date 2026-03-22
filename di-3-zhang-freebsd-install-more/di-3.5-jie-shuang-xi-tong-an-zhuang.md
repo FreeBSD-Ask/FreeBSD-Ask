@@ -37,7 +37,7 @@
 
 ![](../.gitbook/assets/shuangxitong1.png)
 
-此处选择 `Manual`
+此处选择 `Manual`。
 
 > **技巧**
 >
