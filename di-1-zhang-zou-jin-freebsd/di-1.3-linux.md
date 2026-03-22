@@ -2,7 +2,7 @@
 
 ## 何为 Linux？
 
-Linux 作为开源操作系统发展史上的里程碑，其技术演进和生态构建为现代计算环境提供了重要基石。它是当今世界上最流行的开源操作系统之一。我们首先来看一下 Linux 内核项目（[What is Linux?](https://www.kernel.org/doc/html/latest/admin-guide/README.html)）是如何回答这一问题的：
+Linux 作为开源操作系统发展史上的里程碑，其技术演进和生态构建为现代计算环境提供了重要基石。它是当今世界上最流行的开源操作系统之一。Linux 在不同语境下有着不同的含义，从狭义上讲指的是 Linux 内核，从广义上讲通常指完整的操作系统，即 GNU/Linux。我们首先来看一下 Linux 内核项目（[What is Linux?](https://www.kernel.org/doc/html/latest/admin-guide/README.html)）是如何回答这一问题的：
 
 >What is Linux?（什么是 Linux？）
 >
