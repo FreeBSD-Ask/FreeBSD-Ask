@@ -539,12 +539,6 @@ root 密码强度无强制要求，但不可为空。若密码为空，将提示
 - [Regulatory Domain Support](https://wiki.freebsd.org/WiFi/RegulatoryDomainSupport) [备份](https://web.archive.org/web/20260118030429/https://wiki.freebsd.org/WiFi/RegulatoryDomainSupport)，该页面介绍 FreeBSD 无线管制域支持状态
 - [main/lib/lib80211/regdomain.xml](https://github.com/freebsd/freebsd-src/blob/main/lib/lib80211/regdomain.xml) [备份](https://web.archive.org/web/20260115144118/https://github.com/freebsd/freebsd-src/blob/main/lib/lib80211/regdomain.xml)，该文件定义 802.11 无线管制域配置，regdomain.xml 在源代码的位置
 - [regdomain.xml --	802.11 wireless	regulatory definitions](https://man.freebsd.org/cgi/man.cgi?query=regdomain&sektion=5)，该手册页说明无线管制域配置文件格式，对应编码请参考系统中的 `/etc/regdomain.xml` 文件
-
-```sh
-/etc/
-├── regdomain.xml # 无线管制域配置文件
-└── resolv.conf # DNS 解析配置文件
-```
 - [阿里公共 DNS](https://www.alidns.com/) [备份](https://web.archive.org/web/20260119050754/https://cn.aliyun.com/product/dns?from_alibabacloud=)，该服务提供公共 DNS 解析
 
 
@@ -642,6 +636,7 @@ root 密码强度无强制要求，但不可为空。若密码为空，将提示
 └── etc/
     └── rc.conf # 系统启动配置文件
 ```
+
 | `7 disable_syslogd` | 禁用 syslogd 的网络套接字（即禁用远程日志接收） |
 | `8 secure_console` | 启用控制台安全保护（单用户模式也需 root 密码） |
 | `9 disable_ddtrace` | 禁用 DTrace 的破坏性（destructive）操作模式 |

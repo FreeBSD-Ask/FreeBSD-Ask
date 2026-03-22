@@ -71,7 +71,7 @@ DRM 即“Direct Rendering Manager”（直接渲染管理器），DRM 是 Linux
 
 >**注意**
 >
-> 在使用 GNOME 时，如果自动锁屏/息屏，可能无法再次进入桌面。相关技术问题可参见 [Bug 255049 - x11/gdm doesn't show the login screen](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=255049)。
+>在使用 GNOME 时，如果自动锁屏/息屏，可能无法再次进入桌面。相关技术问题可参见 [Bug 255049 - x11/gdm doesn't show the login screen](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=255049)。
 
 >**注意**
 >
@@ -104,7 +104,7 @@ DRM 即“Direct Rendering Manager”（直接渲染管理器），DRM 是 Linux
 
 >**注意**
 >
-> 像英特尔三代处理器的 HD 4000 这种比较古老的显卡，它在传统的 BIOS 模式下无需额外安装显卡驱动，但是 UEFI 下有可能会花屏（FreeBSD 13.0 及以后无此问题），且需要安装此 DRM 显卡驱动。
+>像英特尔三代处理器的 HD 4000 这种比较古老的显卡，它在传统的 BIOS 模式下无需额外安装显卡驱动，但是 UEFI 下有可能会花屏（FreeBSD 13.0 及以后无此问题），且需要安装此 DRM 显卡驱动。
 
 ## 配置 Intel 核显/AMD 显卡
 
@@ -171,10 +171,10 @@ DRM 即“Direct Rendering Manager”（直接渲染管理器），DRM 是 Linux
 
 安装 Mesa 的 Gallium VA-API 和 VDPAU 支持包。
 
-- 使用 pkg 安装
+- 使用 pkg 安装：
 
 ```sh
-# pkg ins mesa-gallium-va mesa-gallium-vdpau
+# pkg install mesa-gallium-va mesa-gallium-vdpau
 ```
 
 - 或者使用 Ports 安装：
@@ -239,8 +239,8 @@ EndSection
 
 ### 参考文献
 
-- [backlight -- configure backlight	hardware](https://man.freebsd.org/cgi/man.cgi?backlight)
-- 经过测试，此部分教程适用于 renoir 显卡：
+- [backlight -- configure backlight hardware](https://man.freebsd.org/cgi/man.cgi?backlight)
+- 经过测试，此部分教程适用于 renoir 显卡。
 
 ## 检查状态
 
@@ -251,7 +251,7 @@ $ ls -al /dev/dri/card0
 lrwxr-xr-x  1 root wheel 8 Jul  2 19:39 /dev/dri/card0 -> ../drm/0
 
 $ ls -al /dev/backlight/backlight0 
-crw-rw---- 1 root video 1, 177 2025年 8月22日 /dev/backlight/backlight0 # 台式机 HDMI 等输出可能没有
+crw-rw---- 1 root video 1, 177 2025年 8月22日 /dev/backlight/backlight0  # 台式机 HDMI 等输出可能没有
 ```
 
 你会发现系统中多了一个名为 `card0` 的设备（一般编号为 `0`，如果有第二块显卡，则为 `card1`），同时还会多出一个名为 `backlight0` 的设备（HDMI 输出下不会存在该设备）。
@@ -261,7 +261,7 @@ crw-rw---- 1 root video 1, 177 2025年 8月22日 /dev/backlight/backlight0 # 台
 
 - 如果显卡驱动使用有问题，请直接联系维护者：[https://github.com/freebsd/drm-kmod/issues](https://github.com/freebsd/drm-kmod/issues) [备份](https://web.archive.org/web/20260122092535/https://github.com/freebsd/drm-kmod/issues)
 - 如果笔记本出现了唤醒时屏幕点不亮的问题，可以在 `/boot/loader.conf` 中添加 `hw.acpi.reset_video="1"` 以在唤醒时重置显示适配器。
-- 普通用户若非 `wheel` 组成员，那么请加入 `video` 组。如果普通用户没有被加入到 video 组（wheel 还不够），那么 KDE 的设置中，此系统的显卡驱动将始终显示为“llvmpipe”。会影响 Wayland 下普通用户的显示或硬解调用。
+- 普通用户若非 `wheel` 组成员，请加入 `video` 组。如果普通用户没有被加入到 video 组（wheel 还不够），那么 KDE 的设置中，此系统的显卡驱动将始终显示为“llvmpipe”，这会影响 Wayland 下普通用户的显示或硬解调用。
 
 ## 参考文献
 

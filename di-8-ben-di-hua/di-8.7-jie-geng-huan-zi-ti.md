@@ -80,7 +80,7 @@ allscreens_flags="-f /root/b16.fnt"
 
 ### 参考文献
 
-- [rc.conf](https://man.freebsd.org/cgi/man.cgi?query=rc.conf&sektion=5) ，此页搜索“allscreens_flags”。该手册页详细说明了 rc.conf 系统配置文件的语法与选项。
+- [rc.conf](https://man.freebsd.org/cgi/man.cgi?query=rc.conf&sektion=5)，此页搜索“allscreens_flags”。该手册页详细说明了 rc.conf 系统配置文件的语法与选项。
 - [vidcontrol font and color via /etc/rc.conf problem](https://forums.freebsd.org/threads/vidcontrol-font-and-color-via-etc-rc-conf-problem.81696/) [备份](https://web.archive.org/web/20260115023113/https://forums.freebsd.org/threads/vidcontrol-font-and-color-via-etc-rc-conf-problem.81696/)。该讨论帖探讨了控制台字体与颜色配置的相关问题。
 
 ## 课后习题

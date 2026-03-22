@@ -96,7 +96,7 @@
 >> 日孚美质，诚可与共学，此时计已发舟。倘未行，出此同致意。廨中事以累尚谦，想不厌烦琐。小儿正宪，犹望时赐督责。（《王阳明全集·卷四·文录一·与杨仕德薛尚谦书》）
 >
 >
-> 结合王阳明平、定南赣，改革吏治，肃清朝野，破官、民“心中贼”的历史史实，请读者阐述强迫某人使之自由，这本身是一种自由还是法西斯主义？
+> 结合王阳明平定南赣，改革吏治，肃清朝野，破官、民“心中贼”的历史史实，请读者阐述强迫某人使之自由，这本身是一种自由还是法西斯主义？
 
 ### 中国大陆暂无 FreeBSD 官方镜像站
 
@@ -173,7 +173,7 @@ FreeBSD 目前在大陆非官方镜像站有若干个：
   - FreeBSD Pub <https://mirrors.nju.edu.cn/freebsd/>
   - FreeBSD Packages <https://mirrors.nju.edu.cn/freebsd-pkg/>
   - FreeBSD Ports <https://mirrors.nju.edu.cn/freebsd-ports/>
-  - 联系方式：[Github Issue](https://github.com/nju-lug/NJU-Mirror-Issue/issues) [备份](https://web.archive.org/web/20260121072739/https://github.com/nju-lug/NJU-Mirror-Issue/issues)
+  - 联系方式：[GitHub Issue](https://github.com/nju-lug/NJU-Mirror-Issue/issues) [备份](https://web.archive.org/web/20260121072739/https://github.com/nju-lug/NJU-Mirror-Issue/issues)
 
 FreeBSD 官方联系方式：
 

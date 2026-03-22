@@ -220,7 +220,7 @@ $ doas pkg install os-generic-userland-devtools
 
 ## 启用 FreeBSD 源
 
-TwinCAT/BSD 默认只提供 Beckhoff 维护的软件包。如果需要使用更多 FreeBSD 官方维护的软件包，我们可以手动启用相关源。默认情况下，pkg 只能安装 Beckhoff 维护的包。若需安装 FreeBSD 官方维护的包，需要手动启用相关源。
+TwinCAT/BSD 默认只提供 Beckhoff 维护的软件包。如果需要使用更多 FreeBSD 官方维护的软件包，我们可以手动启用相关源。
 
 使用 doas 提升权限，用 ee 编辑器修改 FreeBSD pkg 仓库配置文件：
 

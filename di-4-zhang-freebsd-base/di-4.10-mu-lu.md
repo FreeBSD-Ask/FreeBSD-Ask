@@ -2,7 +2,7 @@
 
 ## 目录结构概览
 
-为了方便说明，仅列出三级目录和重要文件。这一目录结构遵循文件系统层次标准（Filesystem Hierarchy Standard (FHS)）的基本设计理念：
+为了方便说明，仅列出三级目录和重要文件。这一目录结构遵循文件系统层次标准（Filesystem Hierarchy Standard, FHS）的基本设计理念：
 
 ```sh
 /

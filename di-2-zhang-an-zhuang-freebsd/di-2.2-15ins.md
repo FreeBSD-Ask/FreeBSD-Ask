@@ -14,7 +14,7 @@
 >
 > 本文基于 VMware 17 进行演示（使用 UEFI）。
 >
-> 若为物理机安装，可考虑使用 [rufus](https://rufus.ie/zh/) [备份](https://web.archive.org/web/20260115142915/https://rufus.ie/zh/) 工具配合 [img 镜像](https://download.freebsd.org/ftp/releases/ISO-IMAGES/15.0/FreeBSD-15.0-RELEASE-amd64-memstick.img) [备份](https://web.archive.org/web/20260120015054/https://download.freebsd.org/ftp/releases/ISO-IMAGES/15.0/FreeBSD-15.0-RELEASE-amd64-memstick.img)。该文件为 FreeBSD 15.0-RELEASE amd64 架构 U 盘安装镜像。
+> 若为物理机安装，可考虑使用 [Rufus](https://rufus.ie/zh/) [备份](https://web.archive.org/web/20260115142915/https://rufus.ie/zh/) 工具配合 [img 镜像](https://download.freebsd.org/ftp/releases/ISO-IMAGES/15.0/FreeBSD-15.0-RELEASE-amd64-memstick.img) [备份](https://web.archive.org/web/20260120015054/https://download.freebsd.org/ftp/releases/ISO-IMAGES/15.0/FreeBSD-15.0-RELEASE-amd64-memstick.img)。该文件为 FreeBSD 15.0-RELEASE amd64 架构 U 盘安装镜像。
 
 ## 启动安装盘
 
@@ -615,6 +615,7 @@ root 密码强度无强制要求，但不可为空。若密码为空，将提示
 /etc/
 └── regdomain.xml # 无线管制域配置文件
 ```
+
 - [阿里公共 DNS](https://www.alidns.com/) [备份](https://web.archive.org/web/20260119050754/https://cn.aliyun.com/product/dns?from_alibabacloud=)，该服务提供公共 DNS 解析
 
 

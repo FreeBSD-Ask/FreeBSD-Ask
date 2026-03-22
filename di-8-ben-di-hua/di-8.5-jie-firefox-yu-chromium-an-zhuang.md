@@ -90,7 +90,7 @@ Chromium 不是 Chrome，但在 FreeBSD 中的启动命令为 `chrome`。
 
 ![](../.gitbook/assets/join-chromium-dev-for-api1.png)
 
-由于仅需 Chrome Google API 的访问权限，因此必须关闭这两个邮件列表的消息通知（即“不接收电子邮件”），否则可能会受到频繁的邮件轰炸。
+由于仅需 Chrome Google API 的访问权限，因此必须关闭这两个邮件列表的消息通知（即“不接收电子邮件”），否则可能会收到大量邮件通知。
 
 ![](../.gitbook/assets/join-chromium-dev-for-api2.png)
 
@@ -172,7 +172,7 @@ Chromium 不是 Chrome，但在 FreeBSD 中的启动命令为 `chrome`。
 - 客户端 ID `502882456359-okloi0a7k6vjodss69so97tmqmv0jjj5.apps.googleusercontent.com`
 - 客户端密钥 `GoCSPX-iKHEKZmP4w_zdq0Z8nwOqz6SF2_M`
 
-退回“API 和服务”，点击“+ 创建凭据”，再点击”API 密钥“。
+退回“API 和服务”，点击“+ 创建凭据”，再点击“API 密钥”。
 
 ![](../.gitbook/assets/chromium-use-google-api-guide-17.png)
 
@@ -197,7 +197,7 @@ export GOOGLE_DEFAULT_CLIENT_ID=502882456359-okloi0a7k6vjodss69so97tmqmv0jjj5.ap
 export GOOGLE_DEFAULT_CLIENT_SECRET=GoCSPX-iKHEKZmP4w_zdq0Z8nwOqz6SF2_M  # 这里填客户端密钥
 ```
 
-然后重启一下。再打开 Chromium。
+然后重启系统，再打开 Chromium。
 
 点击“开启同步功能”：
 

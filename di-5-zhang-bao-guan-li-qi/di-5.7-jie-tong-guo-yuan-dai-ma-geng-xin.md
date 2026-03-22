@@ -36,15 +36,15 @@ FreeBSD 项目在 2021 年从 SVN 全面迁移到了 Git，即 [https://git.free
 - 设置 Git 全局代理：
 
 ```sh
-# git config --global http.proxy http://192.168.X.X:7890    # 设置 Git 全局 HTTP 代理
-# git config --global https.proxy http://192.168.X.X:7890   # 设置 Git 全局 HTTPS 代理
+# git config --global http.proxy http://192.168.X.X:7890  # 设置 Git 全局 HTTP 代理
+# git config --global https.proxy http://192.168.X.X:7890  # 设置 Git 全局 HTTPS 代理
 ```
 
 - 取消 Git 全局代理：
 
 ```sh
-# git config --global --unset http.proxy    # 取消 Git 全局 HTTP 代理设置
-# git config --global --unset https.proxy   # 取消 Git 全局 HTTPS 代理设置
+# git config --global --unset http.proxy  # 取消 Git 全局 HTTP 代理设置
+# git config --global --unset https.proxy  # 取消 Git 全局 HTTPS 代理设置
 ```
 
 
@@ -55,7 +55,7 @@ FreeBSD 项目在 2021 年从 SVN 全面迁移到了 Git，即 [https://git.free
 通过 FreeBSD 官方存储库拉取。克隆 FreeBSD 源码仓库到 `/usr/src`，使用浅克隆减少下载量：
 
 ```sh
-$ git clone --depth 1 https://git.FreeBSD.org/src.git /usr/src 
+$ git clone --depth 1 https://git.FreeBSD.org/src.git /usr/src
 ```
 
 ```sh
@@ -137,8 +137,10 @@ $ git clone --branch releng/15.0 --single-branch --depth 1 https://github.com/fr
 >与绝大多数现代 Linux 不同，[FreeBSD](https://github.com/freebsd/freebsd-src/tree/main/contrib/nvi) [备份](https://web.archive.org/web/20260120222007/https://github.com/freebsd/freebsd-src/tree/main/contrib/nvi)（OpenBSD）上的 `vi` 是 *[nvi](https://sites.google.com/a/bostic.com/keithbostic/keith-bostic?authuser=0) [备份](https://web.archive.org/web/20260120222012/https://sites.google.com/a/bostic.com/keithbostic/keith-bostic?authuser=0)*（原版 **ex/vi** 的再实现），并不是指向任何 *vim* 的链接符号。基本上很少有人使用，也一般没有学习的必要，因此有必要更换为其他文本编辑器。
 >
 >```sh
-># export  EDITOR=/usr/bin/ee # 切换 vi 为 ee。针对 FreeBSD 14 之前的版本或 csh 使用：setenv EDITOR /usr/bin/ee
-># export  VISUAL=/usr/bin/ee # 切换 vi 为 ee。针对 FreeBSD 14 之前的版本或 csh 使用：setenv VISUAL /usr/bin/ee
+># export EDITOR=/usr/bin/ee  # 切换 vi 为 ee。针对 FreeBSD 14 之前的版本或 csh 使用：setenv EDITOR /usr/bin/ee
+>
+# export VISUAL=/usr/bin/ee  # 切换 vi 为 ee。针对 FreeBSD 14 之前的版本或 csh 使用：setenv VISUAL /usr/bin/ee
+>
 >```
 
 合并冲突。使用 `etcupdate` 执行备份模式，以便在更新配置文件前备份现有文件：
@@ -170,7 +172,7 @@ Select: (p) postpone, (df) diff-full, (e) edit,
 可能是系统时间不正确导致的，使用 `pool.ntp.org` 服务器同步系统时间
 
 ```sh
-# ntpdate -u pool.ntp.org # 当时间相差较大时必须使用该命令，其他命令不会生效
+# ntpdate -u pool.ntp.org  # 当时间相差较大时必须使用该命令，其他命令不会生效
 ```
 
 ## 参考资料

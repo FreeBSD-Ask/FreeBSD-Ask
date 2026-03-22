@@ -3,7 +3,7 @@
 
 ## 无线蓝牙鼠标的设置
 
-本文使用罗技 M337 蓝牙鼠标作为示例设备进行配置说明。
+本节使用罗技（Logitech）M337 蓝牙鼠标作为示例设备进行配置说明。
 
 ### 服务管理
 
@@ -20,7 +20,7 @@
 
 将蓝牙鼠标切换到配对模式，使其进入可被发现的状态。
 
-使用 root 权限运行 `bluetooth-config scan` 命令，扫描附近可用的蓝牙设备，并按提示信息完成设备配对与添加：
+使用 root（超级用户）权限运行 `bluetooth-config scan` 命令，扫描附近可用的蓝牙设备，并按提示信息完成设备配对与添加：
 
 ```sh
 # bluetooth-config scan
@@ -39,7 +39,7 @@ Set it up? [yes]:
 由 iwm 驱动的网卡可以通过安装 `comms/iwmbt-firmware` 固件包来启用蓝牙功能，该固件为蓝牙硬件提供必要的微码支持：
 
 
-- 使用 pkg 安装：
+- 使用 pkg（二进制包管理器）安装：
 
 ```sh
 # pkg install iwmbt-firmware

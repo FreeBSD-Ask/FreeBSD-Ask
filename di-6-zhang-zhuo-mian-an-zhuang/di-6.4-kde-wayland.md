@@ -27,7 +27,7 @@ seatd 是一个 seat 管理守护进程，用于在非 systemd 环境下管理 W
 - 使用 pkg 安装：
   
 ```sh
-# pkg ins seatd
+# pkg install seatd
 ```
 
 - 或者通过 Ports 安装：
@@ -122,7 +122,7 @@ $ cp /usr/local/share/applications/org.fcitx.Fcitx5.desktop ~/.config/autostart/
 
 ![](../.gitbook/assets/kde-Wayland-fcitx.png)
 
-打开 KDE 系统设置：找到“键盘”——>虚拟键盘
+打开 KDE 系统设置：找到“键盘”→“虚拟键盘”
 
 ![](../.gitbook/assets/kde-Wayland3-1.png)
 

@@ -113,7 +113,7 @@ fcitx5 输入法正常：
 
 ![FreeBSD QQ](../.gitbook/assets/rlqq2.png)
 
-## 基于 ArchLinux 兼容层
+## 基于 Arch Linux 兼容层
 
 请参阅本书中“Linux 兼容层 - Arch Linux 兼容层”部分
 
@@ -124,7 +124,7 @@ fcitx5 输入法正常：
 
 ```
 
-新开一个终端，输入 `reboot` 重启 FreeBSD，否则新设置的密码可能无法生效。
+请新开一个终端，输入 `reboot` 重启 FreeBSD，否则新设置的密码可能无法生效。
 
 ```sh
 # chroot /compat/arch/ /bin/bash # 进入 Arch 兼容层
@@ -191,7 +191,7 @@ $ exit # 切换回 root
 >
 >不应在兼容层内部安装输入法，因为此操作不会生效。
 
-若你自行构建兼容层，需要在启动 QQ 前，在兼容层内部，可能需要（如果你完全按照本书教程做，就不需要，因为本书中 Fcitx 指定了以下环境变量）设定以下中文环境变量：
+若你自行构建兼容层，可能需要在启动 QQ 前在兼容层内部设定以下中文环境变量（如果完全按照本书教程操作则无需此步骤，因为本书中 Fcitx 已指定以下环境变量）：
 
 ```sh
 # export LANG=zh_CN.UTF-8   # 设置系统语言为中文
