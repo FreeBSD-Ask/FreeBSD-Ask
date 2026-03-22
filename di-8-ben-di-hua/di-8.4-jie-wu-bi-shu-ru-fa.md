@@ -111,7 +111,7 @@ $ libime_tabledict 98wbx.txt 98wbx.main.dict
 
 ## 配置 Rime 使用 86 五笔
 
-首先安装并配置好 Fcitx 5。配置从略。
+首先安装并配置好 Fcitx 5，配置步骤从略。
 
 ```sh
 # pkg install zh-fcitx5-rime zh-rime-essay zh-rime-wubi 
@@ -125,7 +125,7 @@ $ libime_tabledict 98wbx.txt 98wbx.main.dict
 # cd /usr/ports/chinese/rime-essay/ && make install clean
 ```
 
-加入 Rime 的方法同上（Rime 输入法叫 `中州韵`），从略。
+加入 Rime 的方法同上（Rime 输入法叫中州韵），此处从略。
 
 修改 `/usr/local/share/rime-data/default.yaml`，如下：
 
@@ -231,9 +231,9 @@ patch applied.
 
 ## 故障排除
 
-- 此操作涉及公用文件，一般只修改用户配置，否则会影响全局设置，更新时容易被覆盖。
+- 上述操作涉及系统公用文件，建议一般只修改用户配置，否则会影响全局设置，且在系统更新时容易被覆盖。
 
-待解决。
+其他问题待后续解决。
 
 ## 参考文献
 

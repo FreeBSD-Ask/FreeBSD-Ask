@@ -99,7 +99,7 @@ For more information on available commands and options see 'pkg help'.
 > 如果提示 `00206176BC680000:error:0A000086:SSL routines:tls_post_process_server_certificate:certificate verify failed:/usr/src/crypto/openssl/ssl/statem/statem_clnt.c:1890:`（SSL 证书验证失败），请先校准时间。
 >
 > ```sh
-> # ntpdate -u pool.ntp.org	#  使用 pool.ntp.org 同步系统时间
+> # ntpdate -u pool.ntp.org  # 使用 pool.ntp.org 同步系统时间
 > ```
 >
 >> **思考题**
@@ -160,7 +160,7 @@ Proceed with this action? [y/N]: # 此处输入 y 再按回车键即可安装
 你极有可能会遇到这种情况：
 
 ```sh
-# pkg ins chromium	# 安装 Chromium 浏览器
+# pkg ins chromium  # 安装 Chromium 浏览器
 Updating FreeBSD repository catalogue.
 Fetching meta.conf: 100%    179 B   0.2kB/s    00:01    
 Fetching data.pkg: 100%   10 MiB   2.7MB/s    00:04    
@@ -399,7 +399,7 @@ Filename: usr/local/lib/libxcb-icccm.so.4.0.0
 请先切换到 latest 源，再使用软件源里的 pkg 包重装 pkg：
 
 ```sh
-# pkg-static bootstrap -f	# 强制初始化 pkg 包管理器
+# pkg-static bootstrap -f  # 强制初始化 pkg 包管理器
 ```
 
 若无效，则再：

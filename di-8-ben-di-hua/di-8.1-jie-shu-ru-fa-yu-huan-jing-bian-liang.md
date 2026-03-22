@@ -19,9 +19,9 @@
 
 ## 本地化相关的环境变量
 
-在明确了配置文件的路径选择后，需要进一步掌握与系统本地化（Localization）相关的环境变量体系。下述变量均用于控制系统环境的本地化行为，且大部分变量由 POSIX（Portable Operating System Interface）标准规范定义。
+在明确了配置文件的路径选择后，需要进一步掌握与系统本地化（Localization）相关的环境变量体系。下述变量均用于控制系统环境的本地化行为，且大部分变量由 POSIX（Portable Operating System Interface，可移植操作系统接口）标准规范定义。
 
-`LC_*` 系列变量是 UNIX 及类 UNIX 操作系统中用于实现国际化（Internationalization）与本地化（Localization）的核心环境变量。这些变量系统性地控制文本字符编码、日期时间格式、货币符号、界面语言等多个维度的本地化行为。其中常见的变量包括：
+`LC_*` 系列变量是 UNIX 及类 UNIX 操作系统中用于实现国际化（Internationalization，i18n）与本地化（Localization，l10n）的核心环境变量。这些变量系统性地控制文本字符编码、日期时间格式、货币符号、界面语言等多个维度的本地化行为。其中常见的变量包括：
 
 - `LC_COLLATE`：定义字符串排序的规则。
 - `LC_CTYPE`：定义字符集和字符类型判断规则，例如字母、数字、标点符号等。
@@ -62,7 +62,7 @@ LC_ALL=
 
 1. 单纯的界面中文化只要设置 `LC_MESSAGES` 为 `"zh_CN.UTF-8"`（在 SDDM/Xfce 下验证）。
 2. 较常见的将 `LANG`、`LC_ALL`、`LANGUAGE` 三个环境变量都设为 `"zh_CN.UTF-8"`。
-3. 在纯英文环境下，同时使用中文输入法
+3. 在纯英文环境下同时使用中文输入法，仅设置输入法相关变量，其他保持默认英文设置
 
 ---
 

@@ -8,13 +8,13 @@ FreeBSD 操作系统支持多种多媒体处理工具，本节将介绍音频剪
 
 - Audacity 安装方式：
 
-使用 pkg 二进制包管理器安装：
+使用 pkg（二进制包管理器）安装：
 
 ```sh
 # pkg install audacity
 ```
 
-或者使用 Ports 源码编译安装：
+或者使用 Ports（源码包管理器）编译安装：
 
 ```sh
 # cd /usr/ports/audio/audacity/
@@ -39,13 +39,13 @@ FreeBSD 操作系统支持多种多媒体处理工具，本节将介绍音频剪
 
 Olive 视频编辑器（Olive Video Editor）安装方式：
 
-使用 pkg 二进制包管理器安装：
+使用 pkg（二进制包管理器）安装：
 
 ```sh
 # pkg install olive-video-editor
 ```
 
-或者使用 Ports 源码编译安装：
+或者使用 Ports（源码包管理器）编译安装：
 
 ```sh
 # cd /usr/ports/multimedia/olive/
@@ -58,20 +58,20 @@ Olive 视频编辑器（Olive Video Editor）安装方式：
 
 FFmpeg 安装方式：
 
-使用 pkg 二进制包管理器安装：
+使用 pkg（二进制包管理器）安装：
 
 ```sh
 # pkg install ffmpeg
 ```
 
-或者使用 Ports 源码编译安装：
+或者使用 Ports（源码包管理器）编译安装：
 
 ```sh
 # cd /usr/ports/multimedia/ffmpeg/
 # make install clean
 ```
 
-使用 FFmpeg 将 ASS（Advanced SubStation Alpha）格式字幕压制到视频中的示例命令：
+使用 FFmpeg 将 ASS（高级字幕，Advanced SubStation Alpha）格式字幕压制到视频中的示例命令：
 
 ```sh
 $ ffmpeg -i 视频文件.mp4 -vf subtitles=对应字幕.ass 输出视频.mp4
@@ -83,7 +83,7 @@ $ ffmpeg -i 视频文件.mp4 -vf subtitles=对应字幕.ass 输出视频.mp4
 
 ### 安装 Inkscape
 
-- 使用 pkg 二进制包管理器安装：
+- 使用 pkg（二进制包管理器）安装：
 
 ```sh
 # pkg install inkscape

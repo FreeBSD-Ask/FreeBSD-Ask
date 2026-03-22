@@ -648,7 +648,7 @@ ccache3 是一个常用的版本，我们可以使用 pkg 或 Ports 来安装它
 - 使用 Ports 安装：
 
 ```sh
-# cd /usr/ports/devel/ccache/ 
+# cd /usr/ports/devel/ccache/
 # make install clean
 ```
 
@@ -691,7 +691,7 @@ WITH_CCACHE_BUILD=yes
 - 设置 ccache 编译缓存最大为 10GB：
 
 ```sh
-# ccache -M 10G  
+# ccache -M 10G
 Set cache size limit to 10.0 GB
 root@ykla:/usr/ports/www/chromium # ccache -s
 cache directory                     /root/.ccache
@@ -758,7 +758,7 @@ ccache4 是目前的最新版本，提供了更好的性能和功能。
 - 查看软链接情况：
 
 ```sh
-# ls -al  /usr/local/libexec/ccache    # 查看 /usr/local/libexec/ccache 目录下的详细文件信息
+# ls -al /usr/local/libexec/ccache  # 查看 /usr/local/libexec/ccache 目录下的详细文件信息
 total 55
 drwxr-xr-x   3 root wheel 13  9月 20 02:29 .
 drwxr-xr-x  20 root wheel 54  9月 20 02:29 ..
@@ -790,7 +790,7 @@ WITH_CCACHE_BUILD=yes
 - 设置编译缓存最大为 20GB：
 
 ```sh
-# ccache -M 20G  
+# ccache -M 20G
 Set cache size limit to 20.0 GB
 ```
 

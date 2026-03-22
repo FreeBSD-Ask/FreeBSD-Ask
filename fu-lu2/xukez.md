@@ -53,7 +53,7 @@ THIS SOFTWARE IS PROVIDED BY [Name of Organization] "AS IS" AND ANY EXPRESS OR I
 
 ---
 
-版权声明 (c) [年份]
+版权所有 (c) [年份]
 
 [组织名称] 保留所有权利。
 

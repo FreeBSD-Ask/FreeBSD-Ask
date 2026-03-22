@@ -2136,7 +2136,7 @@ Enable（启用）
 
 启用将发送 HECI 命令以吊销 OEM 密钥。
 
-## Intel® Time Coordinated Computing（TCC，公共英特尔®时序协调计算）
+## Intel® Time Coordinated Computing（TCC，英特尔® 时间协调计算）
 
 Intel® 时间协调计算（Intel® TCC）可为实时应用提供优化的计算和时间性能。支持基于无线和有线融合网络的 IEEE\* 802.1 时间敏感网络（TSN）。
 
