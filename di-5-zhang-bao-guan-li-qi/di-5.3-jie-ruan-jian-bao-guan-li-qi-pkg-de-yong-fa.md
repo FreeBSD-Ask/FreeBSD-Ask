@@ -264,6 +264,13 @@ Proceed with deinstalling packages? [y/N]: # 输入 y 按回车键就卸载了
 >
 > pkg 的下载路径是 `/var/cache/pkg/`。
 
+```sh
+/
+└── var/
+    └── cache/
+        └── pkg/ # pkg 的下载路径
+```
+
 > **注意**
 >
 > 只能列出已安装的包的文件，未安装的不能用这个命令。
@@ -330,6 +337,16 @@ On upgrade:
 
 To update the provides database run `pkg provides -u`.
 # 要更新 provides 数据库，运行 `pkg provides -u`。
+```
+
+目录结构：
+
+```sh
+/usr/local/
+├── etc/
+│   └── pkg.conf # pkg 配置文件
+└── lib/
+    └── pkg/ # pkg 插件目录
 ```
 
 - 编辑 `/usr/local/etc/pkg.conf`，找到空行，写入：

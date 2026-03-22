@@ -68,6 +68,93 @@ files			pkg-install-server	pkg-plist-plperl	pkg-plist-server
 Makefile		pkg-plist-client	pkg-plist-plpython
 ```
 
+```sh
+/usr/
+└── ports/ # Ports 目录
+    ├── accessibility/ # 分类目录
+    ├── arabic/
+    ├── archivers/
+    ├── astro/
+    ├── audio/
+    ├── benchmarks/
+    ├── biology/
+    ├── cad/
+    ├── chinese/
+    ├── comms/
+    ├── converters/
+    ├── databases/ # 数据库分类
+    │   ├── postgresql18-server/ # 单个 Port 示例
+    │   │   ├── Makefile # 主文件
+    │   │   ├── distinfo # 校验和文件
+    │   │   ├── pkg-descr # 软件描述
+    │   │   ├── files/ # 补丁文件目录
+    │   │   └── pkg-plist-* # 安装文件列表
+    │   └── ……其他 Port……
+    ├── deskutils/
+    ├── devel/
+    ├── dns/
+    ├── editors/
+    ├── emulators/
+    ├── finance/
+    ├── french/
+    ├── ftp/
+    ├── games/
+    ├── german/
+    ├── graphics/
+    ├── hebrew/
+    ├── hungarian/
+    ├── irc/
+    ├── japanese/
+    ├── java/
+    ├── korean/
+    ├── lang/
+    ├── mail/
+    ├── math/
+    ├── misc/
+    ├── multimedia/
+    ├── net/
+    ├── net-im/
+    ├── net-mgmt/
+    ├── net-p2p/
+    ├── news/
+    ├── polish/
+    ├── portuguese/
+    ├── print/
+    ├── russian/
+    ├── science/
+    ├── security/
+    ├── shells/
+    ├── sysutils/
+    ├── textproc/
+    ├── ukrainian/
+    ├── vietnamese/
+    ├── www/
+    ├── x11/
+    ├── x11-clocks/
+    ├── x11-drivers/
+    ├── x11-fm/
+    ├── x11-fonts/
+    ├── x11-servers/
+    ├── x11-themes/
+    ├── x11-toolkits/
+    ├── x11-wm/
+    ├── ports-mgmt/
+    ├── Mk/
+    ├── Templates/
+    ├── Tools/
+    ├── Keywords/
+    ├── distfiles/ # 下载源文件目录
+    ├── COPYRIGHT
+    ├── GIDs
+    ├── UIDs
+    ├── README
+    ├── CHANGES
+    ├── MOVED
+    ├── UPDATING
+    ├── Makefile
+    └── CONTRIBUTING.md
+```
+
 - ① `/usr/ports` 这个文件夹整体称作 Ports，包括几十种不同的分类目录，每个目录下有若干 Port。
 - ② `/usr/ports/databases/postgresql18-server` 这个文件夹整体称作一个 Port，由 `distinfo`（校验和文件）、`pkg-descr`（软件描述文件）、`Makefile`	（主文件，包含构建方法、版本号及下载方式等）、`pkg-plist`（安装文件列表及其权限和属组信息）、`files`（一般为补丁文件，该 Port 下还包含安装后的说明文件 `pkg-message`）等文件构成。
 
@@ -91,6 +178,11 @@ Makefile		pkg-plist-client	pkg-plist-plpython
 >**技巧**
 >
 >Ports 的下载路径是 `/usr/ports/distfiles/`。
+
+```sh
+/usr/ports/
+└── distfiles/ # Ports 的下载路径
+```
 
 
 ## 使用 ports 压缩包

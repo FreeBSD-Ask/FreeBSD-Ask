@@ -62,6 +62,17 @@ zroot/ROOT/15.0-RELEASE     8K  83.8G  10.6G  /
 # mkdir /mnt/upgrade
 ```
 
+```sh
+/mnt/
+└── upgrade/ # 启动环境挂载目录
+    └── usr/
+        └── local/
+            └── etc/
+                └── pkg/
+                    └── repos/
+                        └── FreeBSD-base.conf # pkgbase 源配置文件
+```
+
 - 将启动环境（实际上是一个数据集）15.0-RELEASE 挂载到上面的路径中
 
 ```sh
@@ -188,6 +199,12 @@ After verifying those files, restart the system.
 
 ```sh
 # mkdir -p /mnt/upgrade/usr/local/etc/pkg/repos/
+```
+
+```sh
+/usr/local/etc/pkg/
+└── repos/ # pkg 仓库配置目录
+    └── FreeBSD-base.conf # pkgbase 源配置文件
 ```
 
 - 编辑 `/mnt/upgrade/usr/local/etc/pkg/repos/FreeBSD-base.conf`，添加 pkgbase 源

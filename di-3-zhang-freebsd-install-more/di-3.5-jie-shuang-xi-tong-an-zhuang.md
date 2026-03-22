@@ -311,6 +311,23 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 >
 >上述参数参考自 [bsdinstall(8)](https://man.freebsd.org/cgi/man.cgi?bsdinstall(8)) 的默认配置。安装后，也可通过命令 `zfs get exec,setuid,mountpoint` 查看相关属性。具体代码位于 `/usr/src/usr.sbin/bsdinstall/scripts/zfsboot`。
 
+```sh
+zroot/
+├── ROOT/
+│   └── default/      # 挂载到 /（根文件系统）
+├── home/             # 挂载到 /home（用户主目录）
+├── tmp/              # 挂载到 /tmp（临时文件）
+├── usr/
+│   ├── ports/        # 挂载到 /usr/ports（Ports 树）
+│   └── src/          # 挂载到 /usr/src（系统源代码）
+└── var/
+    ├── audit/        # 挂载到 /var/audit（审计日志）
+    ├── crash/        # 挂载到 /var/crash（系统崩溃转储）
+    ├── log/          # 挂载到 /var/log（系统日志）
+    ├── mail/         # 挂载到 /var/mail（邮件存储）
+    └── tmp/          # 挂载到 /var/tmp（持久化临时文件）
+```
+
 ### 修改文件夹权限
 
 将 `/mnt/tmp` 和 `/mnt/var/tmp` 的权限设置为 `1777`（粘滞位），以确保临时目录权限正确，这样任何用户都可以在这些目录中创建文件，但只能删除自己创建的文件：
@@ -394,6 +411,21 @@ Windows 文本文件的行尾通常是 `\r\n`（回车 + 换行）。
 # umount /media
 ```
 
+目录结构：
+
+```sh
+/
+├── boot/
+│   └── loader.efi          # FreeBSD EFI 启动加载器
+├── tmp/
+│   └── bsdinstall_etc/
+│       ├── fstab           # 临时 fstab 配置
+│       └── rc.conf         # 临时 rc.conf 配置
+└── media/
+    └── efi/
+        └── freebsd/
+            └── loader.efi  # 复制到 EFI 分区的启动加载器
+```
 
 - 退出 Shell
 

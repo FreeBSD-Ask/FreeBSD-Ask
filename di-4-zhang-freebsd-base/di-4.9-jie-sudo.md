@@ -381,6 +381,20 @@ $ sudo su
 
 此部分内容较为简单，读者可自行了解，或直接向本书提交 PR。
 
+## 提权工具配置文件结构
+
+以下是本节介绍的提权工具配置文件路径总结：
+
+```sh
+/usr/local/etc/
+├── doas.conf  # doas 配置文件
+├── doas.conf.sample  # doas 示例配置文件
+├── sudoers  # sudo/sudo-rs 主配置文件
+└── sudoers.d/  # sudo 附加配置目录
+    ├── username  # 用户名配置文件
+    └── wheel  # wheel 组配置文件
+```
+
 ## 课后习题
 
 1. 在 FreeBSD 中分别配置 doas、sudo、sudo-rs 三种提权工具，测试并记录三者的功能差异。
