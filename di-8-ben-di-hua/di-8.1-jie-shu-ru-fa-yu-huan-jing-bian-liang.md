@@ -90,6 +90,7 @@ $ date
 ```
 
 在默认情况下：
+
 - `LC_TIME` 环境变量值为 `C.UTF-8`
 - `date` 命令输出 `Fri Apr 21 21:14:43 UTC 2023`
 - `LC_TIME` 环境变量值设置为 `zh_CN.UTF-8`
