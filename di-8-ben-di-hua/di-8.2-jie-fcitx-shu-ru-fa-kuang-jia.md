@@ -6,7 +6,6 @@ fcitx 即“小企鹅输入法”，其英文全称为“A flexible input method
 
 >**技巧**
 >
-
 >视频教程见 [006-FreeBSD 14.2 安装 fcitx5 及其输入法](https://www.bilibili.com/video/BV13ji2YLE3m)
 
 > **注意**
@@ -15,7 +14,7 @@ fcitx 即“小企鹅输入法”，其英文全称为“A flexible input method
 
 ## 安装 Fcitx5
 
-在明确了输入法框架的基本概念后，接下来介绍如何在 FreeBSD 系统上安装 Fcitx5。主要有两种安装途径：通过 pkg 包管理器安装，或通过 Ports 从源代码编译安装。
+在 FreeBSD 系统上安装 Fcitx5 主要有两种途径：通过 pkg 包管理器安装，或通过 Ports 从源代码编译安装。
 
 - 使用 pkg 安装：
 
@@ -38,7 +37,7 @@ fcitx 即“小企鹅输入法”，其英文全称为“A flexible input method
 
 ### Fcitx 5.X 开启自启
 
-安装完成后，为了方便使用，可以设置 Fcitx5 随系统自动启动。以下是设置自启动的步骤。
+安装完成后，可以设置 Fcitx5 随系统自动启动：
 
 ```sh
 $ mkdir -p ~/.config/autostart/ # 创建自启动路径。如果使用其他用户，需要在该用户的命令行下执行
@@ -94,9 +93,7 @@ setenv QT_IM_MODULE fcitx
 
 ### Wayland
 
-除了 X11 环境，在 Wayland 环境下的配置方式有所不同，需要特别注意。
-
-在 Wayland 下，不应设置 `GTK_IM_MODULE` 与 `QT_IM_MODULE`。Wayland 提供了输入法相关的协议（`text-input` 和 `input-method`），这些协议已得到广泛支持，因此不依赖 GTK 和 Qt 的输入法模块也能正常使用输入法。设置 `GTK_IM_MODULE` 或 `QT_IM_MODULE` 可能会产生反效果，例如输入候选框与光标位置间距离异常。
+在 Wayland 下，不应设置 `GTK_IM_MODULE` 与 `QT_IM_MODULE`。Wayland 提供了输入法相关的协议（`text-input` 和 `input-method`），因此不依赖 GTK 和 Qt 的输入法模块也能正常使用输入法。设置 `GTK_IM_MODULE` 或 `QT_IM_MODULE` 可能会产生反效果，例如输入候选框与光标位置间距离异常。
 
 运行在 XWayland 下的程序，输入法由环境变量 `XMODIFIERS='@im=fcitx'` 配置。
 
@@ -137,17 +134,15 @@ setenv XMODIFIERS @im=fcitx
 
 >**注意**
 >
->`chinese/rime-essay` 是必要的，是 Rime 的共享词汇与语言模型，没有这个 Port，你的 RIME 输入法只会显示乱码。
+>`chinese/rime-essay` 是必要的，是 Rime 的共享词汇与语言模型，没有这个 Port，RIME 输入法只会显示乱码。
 
-如果 rime 未被自动添加到输入法，请手动添加完成初始化（在程序中找到 fcitx 配置工具，添加 rime 输入法即可）。
+如果 rime 未被自动添加到输入法，请手动添加完成初始化。
 
 对于普通用户，如果配置未生效，请检查所使用的 shell 是否按照教程进行了设置，同时确保该用户已加入 wheel 组。
 
 ## 故障排除与未竟事宜
 
-在配置和使用 Fcitx5 的过程中，可能会遇到一些问题。本节将介绍一些常见的故障排除方法。
-
-遇到问题，请先运行 `fcitx` 故障诊断，但该输出仅针对 `bash` 的环境变量配置。也就是说，输出的环境变量仅适用于 `bash`、`sh` 和 `zsh` 等 shell，不适用于 `csh`。`csh` 的环境变量配置请参考上文。
+遇到问题，请先运行 `fcitx` 故障诊断，但该输出仅针对 `bash` 的环境变量配置。`csh` 的环境变量配置请参考上文。
 
 如果提示 `bash` 字样且无法输出诊断信息，则需要先安装 `bash`：`# pkg install bash`。
 
@@ -164,4 +159,3 @@ setenv XMODIFIERS @im=fcitx
 1. 在 FreeBSD 系统中分别使用 pkg 和 Ports 两种方式安装 Fcitx5，对比两种安装方式的时间、依赖关系处理以及最终运行效果。
 2. 配置 Fcitx5 在 X11 和 Wayland 两种环境下的运行，分别测试 GTK 和 Qt 应用程序的输入法兼容性。
 3. 安装并配置 RIME 中州韵输入法，自定义一个简单的输入方案并验证其功能。
-

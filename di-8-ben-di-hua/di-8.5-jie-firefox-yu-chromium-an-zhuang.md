@@ -68,7 +68,7 @@ Chromium 不是 Chrome，但在 FreeBSD 中的启动命令为 `chrome`。
 - 或者使用 Ports
 
 ```sh
-# cd /usr/ports/www/linux-chrome/ 
+# cd /usr/ports/www/linux-chrome/
 # make install clean
 ```
 
@@ -185,7 +185,7 @@ Chromium 不是 Chrome，但在 FreeBSD 中的启动命令为 `chrome`。
 ![](../.gitbook/assets/chromium-use-google-api-guide-19.png)
 
 
-编辑 `~/.profile`，加入（这是笔者的，是无效的，读者必须自己生成自己的）：
+编辑 `~/.profile`，加入：
 
 >**注意**
 >
