@@ -116,7 +116,7 @@ PS C:\Users\ykla> Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-H
 
 ![Hyper-V](../.gitbook/assets/hp12.png)
 
-请勾选"来宾服务"。来宾服务是 Hyper-V 集成服务的一部分，提供宿主机与虚拟机之间的文件交换、时间同步等集成功能。其作用详见参考文献。
+请勾选“来宾服务”。来宾服务是 Hyper-V 集成服务的一部分，提供宿主机与虚拟机之间的文件交换、时间同步等集成功能。其作用详见参考文献。
 
 ![Hyper-V](../.gitbook/assets/hp16.jpg)
 
