@@ -252,6 +252,19 @@ $ msedit abc.txt
 
 操作较为简单，此处无需展开说明。
 
+## 编辑器配置文件结构
+
+以下是本节介绍的编辑器配置文件路径总结：
+
+```sh
+~/.vimrc  # Vim 配置文件
+~/.config/
+└── nvim/
+    └── init.lua  # NeoVim 配置文件
+~/.emacs.d/
+└── init.el  # Emacs 配置文件
+```
+
 ## 课后习题
 
 1. 在 FreeBSD 中配置 Vim、NeoVim 和 Emacs 各一个最小化配置文件，测试并记录三者的功能差异。

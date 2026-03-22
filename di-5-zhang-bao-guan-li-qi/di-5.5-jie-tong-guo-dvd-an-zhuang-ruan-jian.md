@@ -6,6 +6,32 @@
 
 使用 DVD 安装软件前，首先需要将 DVD 挂载到系统中。挂载方式有两种，分别适用于本地 ISO 文件和真实的 DVD 设备。这两种方式构成了 DVD 介质挂载的完整技术方案。
 
+目录结构：
+
+```sh
+/
+└── dist/ # DVD 挂载路径
+    ├── packages/
+    │   └── repos/
+    │       └── FreeBSD_install_cdrom.conf # pkg 仓库配置文件
+    ├── bin/
+    ├── boot/
+    ├── dev/
+    ├── etc/
+    ├── lib/
+    ├── libexec/
+    ├── media/
+    ├── mnt/
+    ├── net/
+    ├── proc/
+    ├── rescue/
+    ├── root/
+    ├── sbin/
+    ├── tmp/
+    ├── usr/
+    └── var/
+```
+
 - 直接挂载本地 ISO：
 
 ```sh
@@ -95,6 +121,12 @@ Proceed with this action? [y/N]:
 
 ```sh
 # cp /dist/packages/repos/FreeBSD_install_cdrom.conf /etc/pkg/
+```
+
+```sh
+/etc/
+└── pkg/ # pkg 仓库配置目录
+    └── FreeBSD_install_cdrom.conf # DVD 仓库配置文件
 ```
 
 ### 测试安装

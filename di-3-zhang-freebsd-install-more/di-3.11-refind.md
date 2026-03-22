@@ -31,12 +31,43 @@
 >	loader \EFI\freebsd\loader.efi 
 >}
 >
->menuentry "Windows 10" { 
->	icon \EFI\refind\icons\os_win.png
->	volume "Windows 10"  
->	loader \EFI\Microsoft\Boot\bootmgfw.efi 
->}
->```
+
+打开 `refind.conf` 文件，在任意空白处添加如下配置：
+
+```ini
+menuentry "FreeBSD" { 
+	icon \EFI\refind\icons\os_freebsd.png 
+	volume "FreeBSD"
+	loader \EFI\freebsd\loader.efi 
+}
+
+menuentry "Windows 10" { 
+	icon \EFI\refind\icons\os_win.png
+	volume "Windows 10"  
+	loader \EFI\Microsoft\Boot\bootmgfw.efi 
+}
+```
+
+目录结构：
+
+```sh
+EFI/
+├── refind/
+│   ├── refind.conf        # rEFInd 主配置文件
+│   ├── refind.conf-sample # rEFInd 示例配置文件
+│   ├── refind_x64.efi     # rEFInd 64位启动文件
+│   ├── icons/
+│   │   ├── os_freebsd.png # FreeBSD 图标
+│   │   └── os_win.png    # Windows 图标
+│   └── themes/
+│       └── Matrix-rEFInd/
+│           └── theme.conf  # Matrix 主题配置
+├── freebsd/
+│   └── loader.efi        # FreeBSD 启动加载器
+└── Microsoft/
+    └── Boot/
+        └── bootmgfw.efi   # Windows 启动管理器
+```
 
 使用 [DiskGenius](https://www.diskgenius.com/) [备份](https://web.archive.org/web/20260117184154/https://www.diskgenius.com/) 将处理好的 `refind` 文件夹复制到 EFI 系统分区（ESP）中的 `EFI` 目录下。
 

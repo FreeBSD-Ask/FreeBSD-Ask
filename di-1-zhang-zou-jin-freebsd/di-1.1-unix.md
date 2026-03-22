@@ -2,9 +2,7 @@
 
 ## 何为 UNIX？
 
-UNIX 作为操作系统发展史上的里程碑式成果，其内涵历经了从技术实现到文化符号的深刻演变。从前，UNIX 是一款操作系统。它最初使用汇编语言编写，后主要由 C 语言重写。UNIX 起源于美国电话电报公司（American Telephone & Telegraph，AT&T）的贝尔实验室。
-
-现在，它是一种 **[标准规范](https://www.opengroup.org/openbrand/register/xym0.htm)**、一款 **[法律上的商标](https://www.opengroup.org/openbrand/register/index2.html)**，更是一种 **哲学思想** 和一项 **软件工程原则**。这种多维度的身份界定，使得 UNIX 超越了单纯的技术范畴，成为现代操作系统设计的思想源泉。
+UNIX 作为操作系统发展史上的里程碑式成果，其内涵历经了从技术实现到文化符号的深刻演变。从前，UNIX 是一款操作系统，最初使用汇编语言编写，后主要由 C 语言重写，起源于美国电话电报公司（American Telephone & Telegraph，AT&T）的贝尔实验室。现在，它是一种 **[标准规范](https://www.opengroup.org/openbrand/register/xym0.htm)**、一款 **[法律上的商标](https://www.opengroup.org/openbrand/register/index2.html)**，更是一种 **哲学思想** 和一项 **软件工程原则**。这种多维度的身份界定，使得 UNIX 超越了单纯的技术范畴，成为现代操作系统设计的思想源泉。
 
 
 > Only systems that are fully compliant and certified according to the Single UNIX Specification are qualified to use the UNIX® trademark.（只有完全符合并经过《单一 UNIX 规范》认证的系统，才有资格使用 UNIX® 商标。）——[UNIX® Certification](https://www.opengroup.org/openbrand/register/)
@@ -41,7 +39,7 @@ UNIX 认证查询网址：[The Open Group official register of UNIX Certified Pr
 
 ## 传统的 Unix 哲学观（以《UNIX 编程艺术》为核心）
 
-Unix 哲学是在 UNIX 操作系统长期的开发实践中逐渐形成的一套设计理念，它影响了无数后来的操作系统和软件的开发思路。作为软件工程领域的重要思想遗产，Unix 哲学为系统设计提供了一套经过实践检验的方法论框架，具有重要的理论与实践价值。
+Unix 哲学是在 UNIX 操作系统长期的开发实践中逐渐形成的一套设计理念，它影响了无数后来的操作系统和软件的开发思路。作为软件工程领域的重要思想遗产，Unix 哲学为系统设计提供了一套经过实践检验的方法论框架，具有重要的理论与实践价值。Unix 哲学源于 UNIX 操作系统的开发实践，并由肯·汤普森（Ken Thompson）与丹尼斯·里奇（Dennis Ritchie）等早期核心开发者共同塑造与提炼。Unix 哲学一言以蔽之，即大道至简（"keep it simple, stupid"），其核心主张可归纳为以下原则：小即美、一个程序只做一件事、原型先行、可移植性先于高效率性、避免使用不必要的二进制格式或复杂表示、沉默是金（无报错就沉默，成功则无输出，不显示操作进度等）、避免仅用户界面（避免无命令行，仅 GUI）。这些原则在软件设计中通过相互配合，帮助开发者构建出简洁、高效、可维护的系统。
 
 >**思考题**
 >
@@ -50,16 +48,6 @@ Unix 哲学是在 UNIX 操作系统长期的开发实践中逐渐形成的一套
 >>——[Henry Spencer](https://www.nasa.gov/history/alsj/henry.html) [备份](https://web.archive.org/web/20260115025048/https://www.nasa.gov/history/alsj-and-afj/)
 >
 >作者亨利·斯宾塞（Henry Spencer）并未明确批评哪个操作系统，那么你认为，现在这句话更适合哪个常见的操作系统？为什么？
-
-Unix 哲学源于 UNIX 操作系统的开发实践，并由肯·汤普森（Ken Thompson）与丹尼斯·里奇（Dennis Ritchie）等早期核心开发者共同塑造与提炼。Unix 哲学一言以蔽之，即大道至简（“keep it simple, stupid”），其核心主张可归纳为以下原则：
-
-- 小即美
-- 一个程序只做一件事
-- 原型先行
-- 可移植性先于高效率性
-- 避免使用不必要的二进制格式或复杂表示
-- 沉默是金（无报错就沉默，成功则无输出，不显示操作进度等）
-- 避免仅用户界面（避免无命令行，仅 GUI）
 
 ### 参考文献
 

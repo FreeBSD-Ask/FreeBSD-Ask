@@ -26,6 +26,21 @@ RISC-V FreeBSD 磁盘镜像（以 FreeBSD 14.2 RELEASE 为例）：
 
 下载后解压缩备用。
 
+
+```sh
+/usr/
+└── local/
+    └── share/
+        ├── opensbi/
+        │   └── lp64/
+        │       └── generic/
+        │           └── firmware/
+        │               └── fw_jump.elf # OpenSBI 固件
+        └── u-boot/
+            └── u-boot-qemu-riscv64/
+                └── u-boot.bin # U-Boot 引导加载器
+```
+
 ## OpenSBI
 
 接下来需要获取 OpenSBI（RISC-V Open Source Supervisor Binary Interface），其功能类似于启动固件。
@@ -54,6 +69,7 @@ RISC-V FreeBSD 磁盘镜像（以 FreeBSD 14.2 RELEASE 为例）：
 ```
 
 提取 `fw_jump.elf` 到 Windows 下备用。
+
 
 ## U-Boot
 
