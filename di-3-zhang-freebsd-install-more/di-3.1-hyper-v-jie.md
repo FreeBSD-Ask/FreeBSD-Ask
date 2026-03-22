@@ -1,10 +1,10 @@
 # 3.1 使用 Hyper-V 安装 FreeBSD
 
-本节聚焦于 FreeBSD 操作系统在 Microsoft Hyper-V 虚拟化平台上的部署技术问题，旨在为读者提供一套完整的、经过验证的安装配置流程。本节内容基于 Windows 11 23H2 专业版与 FreeBSD 14.1-RELEASE 环境的实测结果。
+本节聚焦于 FreeBSD 操作系统在 Microsoft Hyper-V 虚拟化平台上的部署技术问题，旨在为读者提供一套完整的、经过验证的安装配置流程。本节内容基于 Windows 11 23H2 专业版与 FreeBSD 14.1-RELEASE 环境的实测结果，该环境具有较好的代表性，能够代表当前主流配置环境。
 
 ## Hyper-V 简介
 
-Hyper-V 是微软公司（Microsoft）为 Windows / Windows Server 开发的企业级虚拟化管理程序（系统内置），分为 Gen 1（第一代）和 Gen 2（第二代）两种虚拟机架构。
+Hyper-V 是微软公司（Microsoft）为 Windows / Windows Server 开发的企业级虚拟化管理程序（系统内置）。虚拟化管理程序是一种创建和运行虚拟机的软件，它允许在单个物理主机上同时运行多个独立的操作系统。Hyper-V 分为 Gen 1（第一代）和 Gen 2（第二代）两种虚拟机架构，两种架构在硬件支持和启动方式上存在技术差异。
 
 > **注意**
 >
@@ -48,7 +48,7 @@ Gen 1 与 Gen 2 的区别如下表所示：
 
 ![Hyper-V](../.gitbook/assets/hp1.png)
 
-右键单击 Windows 徽标，在弹出的菜单中选择“终端（管理员）”，然后输入以下命令启用 Microsoft Hyper-V 功能：
+右键单击 Windows 徽标，在弹出的菜单中选择“终端（管理员）”。启用 Hyper-V 需要使用 `Enable-WindowsOptionalFeature` 命令，该命令将启用 Windows 的 Hyper-V 可选功能组件，包括虚拟机管理程序、管理工具等核心模块。输入以下命令：
 
 ```powershell
 PS C:\Users\ykla> Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All 
@@ -116,7 +116,7 @@ PS C:\Users\ykla> Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-H
 
 ![Hyper-V](../.gitbook/assets/hp12.png)
 
-请勾选“来宾服务”。其作用详见参考文献。
+请勾选"来宾服务"。来宾服务是 Hyper-V 集成服务的一部分，提供宿主机与虚拟机之间的文件交换、时间同步等集成功能。其作用详见参考文献。
 
 ![Hyper-V](../.gitbook/assets/hp16.jpg)
 

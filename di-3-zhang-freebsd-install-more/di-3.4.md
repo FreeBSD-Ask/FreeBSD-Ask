@@ -21,10 +21,7 @@
 
 ![](../.gitbook/assets/shuang3.png)
 
-在这一步修改 `S Swap Size` 的大小（该数值表示计划中的交换分区与 Windows 系统分区容量之和）。
-
-
-本文中，交换分区（Swap）大小为 8GB，其余 200GB 空间预留给 Windows。这里设置一个大的临时交换分区，是为了后续安装 Windows 时能够直接使用这部分空间，避免额外的分区操作。
+这里需要设置一个大的临时交换分区，该数值表示计划中的交换分区与 Windows 系统分区容量之和。这样设置是为了后续安装 Windows 时能够直接使用这部分空间，避免额外的分区操作。在本文中，交换分区（Swap）大小为 8GB，其余 200GB 空间预留给 Windows。请修改 `S Swap Size` 的大小。
 
 ![](../.gitbook/assets/shuang4.png)
 
