@@ -609,9 +609,9 @@ root 密码强度无强制要求，但不可为空。若密码为空，将提示
 
 - [Regulatory Domain Support](https://wiki.freebsd.org/WiFi/RegulatoryDomainSupport) [备份](https://web.archive.org/web/20260118030429/https://wiki.freebsd.org/WiFi/RegulatoryDomainSupport)，该页面介绍 FreeBSD 无线管制域支持状态
 - [main/lib/lib80211/regdomain.xml](https://github.com/freebsd/freebsd-src/blob/main/lib/lib80211/regdomain.xml) [备份](https://web.archive.org/web/20260115144118/https://github.com/freebsd/freebsd-src/blob/main/lib/lib80211/regdomain.xml)，该文件定义 802.11 无线管制域配置，regdomain.xml 在源代码的位置
-- [regdomain.xml --	802.11 wireless	regulatory definitions](https://man.freebsd.org/cgi/man.cgi?query=regdomain&sektion=5)，该手册页说明无线管制域配置文件格式，对应编码请参考系统中的 `/etc/regdomain.xml 文件
+- [regdomain.xml --	802.11 wireless	regulatory definitions](https://man.freebsd.org/cgi/man.cgi?query=regdomain&sektion=5)，该手册页说明无线管制域配置文件格式，对应编码请参考系统中的 `/etc/regdomain.xml` 文件
 
-```text
+```sh
 /etc/
 └── regdomain.xml # 无线管制域配置文件
 ```
