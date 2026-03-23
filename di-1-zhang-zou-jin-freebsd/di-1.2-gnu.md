@@ -12,7 +12,7 @@
 
 由于 Unix 在后期发展中逐渐呈现封闭化趋势：从最初开放的研究项目逐渐转变为商业产品，普通用户无法再自由获取和修改其源代码，许可证价格高昂且使用权受到商业公司的严格限制。理查德·马修·斯托曼（Richard Matthew Stallman，RMS）希望创造一款自由且与 Unix 兼容的操作系统。这一愿景直接触发了自由软件运动的兴起。
 
-- 1983 年，RMS 发表 [《GNU 宣言》](https://www.gnu.org/gnu/manifesto.html) [备份](https://web.archive.org/web/20260115033223/https://www.gnu.org/gnu/manifesto.html) ，其中 GNU 即“GNU is Not Unix”（GNU 不是 Unix）。GNU 是一款操作系统——旨在完全替代 Unix。
+- 1983 年，RMS 发表 GNU 项目初始公告；1985 年，RMS 撰写 [《GNU 宣言》](https://www.gnu.org/gnu/manifesto.html) [备份](https://web.archive.org/web/20260115033223/https://www.gnu.org/gnu/manifesto.html) ，其中 GNU 即“GNU's Not Unix”（GNU 不是 Unix）的递归缩写。GNU 是一款操作系统——旨在完全替代 Unix。
 - 1984 年，创建 [GNU 项目](https://www.gnu.org/) [备份](https://web.archive.org/web/20260115033101/https://www.gnu.org/)。
 - 1985 年，RMS 创建自由软件基金会（Free Software Foundation，FSF）。
 - 1989 年，FSF 发布 GPLv1。
