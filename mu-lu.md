@@ -208,7 +208,7 @@
 
 ## 第 20 章 游戏、科学计算和专业工具
 
-* [20.1 Ren’Py 视觉小说引擎](di-20-zhang-yu-le-yu-jiao-yu/di-20.1-jie-renpy.md)
+* [20.1 Ren'Py 视觉小说引擎](di-20-zhang-yu-le-yu-jiao-yu/di-20.1-jie-renpy.md)
 * [20.2 Godot 开源游戏引擎](di-20-zhang-yu-le-yu-jiao-yu/di-20.2-jie-Godot.md)
 * [20.3 我的世界（Minecraft）](di-20-zhang-yu-le-yu-jiao-yu/20.3-minecraft.md)
 * [20.4 科研和专业计算工具](di-20-zhang-yu-le-yu-jiao-yu/di-20.4-jie-ke-yan-yu-zhuan-ye-gong-ju.md)
