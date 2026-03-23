@@ -6,28 +6,28 @@
 |术语 | 中文 | 说明|
 |:---|:---|:---|
 |Berkeley Software Distribution, BSD|伯克利软件发行版|伯克利软件发行版，这是加利福尼亚大学伯克利分校的计算机系统研究小组（CSRG）对其针对 AT&T 的 UNIX v7 进行改进和修改的成果命名，是 UNIX 技术演化史上的重要分支。从技术演化角度，BSD 构成了现代类 Unix 操作系统的重要技术谱系之一，FreeBSD 正是 CSRG 这一工作的直接延续与发展|
-|Port|/|单个软件的移植|
-|Ports|/|所有 Port 的集合|
-|Ports Collection|/|Ports 技术体系的整体|
+|Port|/|FreeBSD 系统中单个软件的源代码包，包含编译和安装该软件所需的配置文件和脚本|
+|Ports|/|FreeBSD 的软件包管理系统，包含所有 Port 的集合，用于从源代码编译和安装软件|
+|Ports Collection|/|Ports 系统的完整集合，包含软件分类目录、构建工具和依赖管理机制|
 |Jail|/|一种在 Chroot 基础上发展而来的操作系统级隔离技术，通过命名空间隔离、资源限制等机制实现轻量级虚拟化，是现代容器技术的重要早期实践之一，为后续容器技术的发展奠定了技术基础|
 |copyleft|著佐权|Copyleft 指通过类似 GPL 的许可证条款，对衍生作品施加版权约束，例如要求源代码公开|
 |Base System|基本系统|内核与用户空间（在 FreeBSD 中称为 world）的组合，即所有来自 src 源码树的组件|
-|CURRENT|/|对应一般项目中的 head 或 main 开发分支|
-|MFC（Merge From Head）|合并自 Head|将 CURRENT 或 main 分支中的更改向稳定分支回溯|
-|XX.0-STABLE|/|仅表示 ABI 稳定性保证，仍属于开发中的不稳定分支|
+|CURRENT|/|FreeBSD 的主要开发分支，对应一般项目中的 head 或 main 分支，包含最新的代码变更但可能不稳定|
+|MFC（Merge From Head）|合并自 Head|FreeBSD 开发流程，将 CURRENT 或 main 分支中的更改合并到稳定分支的过程|
+|XX.0-STABLE|/|FreeBSD 的固定开发分支，提供应用程序二进制接口（ABI）稳定性保证，但仍处于开发阶段|
 |RELEASE|稳定版|适用于生产环境的正式发布版本|
 |ABI|应用程序二进制接口|Application Binary Interface，应用程序与操作系统之间的二进制接口标准|
 |Unix|/|最初由 AT&T 贝尔实验室开发的操作系统，现为一种标准规范和法律商标|
 |ZFS|/|Zettabyte File System，一款集成了文件系统和逻辑卷管理器的先进存储系统，采用 copy-on-write（写时复制）事务模型，具有强大的数据完整性保护机制、高效的数据压缩功能与可扩展存储架构，是现代存储技术的重要创新|
 |OpenZFS|/|ZFS 的开源社区版本，统一了 ZFS 的开源开发|
-|CDDL|通用开发及发行许可|Common Development and Distribution License，ZFS 采用的开源许可证|
-|PF|包过滤器|Packet Filter，源自 OpenBSD 的防火墙，提供了丰富功能，包括 ALTQ 等|
-|IPFW|/|ipfirewall，FreeBSD 内置的防火墙，采用首次匹配规则|
-|IPF|/|IPFilter，一款防火墙软件|
-|pkg|/|FreeBSD 的二进制包管理器，旧称 pkgng|
-|PkgBase|/|FreeBSD 项目试图使用 pkg 来实现用户空间和内核更新的方案|
-|Poudriere|/|通过 jail 测试 port，并构建 FreeBSD 镜像的工具|
-|freebsd-update|/|FreeBSD 传统的基本系统更新工具，用于获取安全更新和系统升级|
+|CDDL|通用开发及发行许可|Common Development and Distribution License，ZFS 采用的开源许可证，允许商业使用和修改|
+|PF|包过滤器|Packet Filter，源自 OpenBSD 的防火墙软件，在 FreeBSD 中作为可选防火墙提供，支持 ALTQ 流量整形等功能|
+|IPFW|/|ipfirewall，FreeBSD 内置的防火墙系统，采用首次匹配规则，提供基本的包过滤功能|
+|IPF|/|IPFilter，一款防火墙软件，在 FreeBSD 历史版本中曾作为可选防火墙组件|
+|pkg|/|FreeBSD 的二进制包管理器，用于安装、更新和管理预编译的软件包，旧称 pkgng|
+|PkgBase|/|FreeBSD 项目方案，尝试使用 pkg 包管理器来实现用户空间和内核的更新|
+|Poudriere|/|FreeBSD 工具，通过 jail 环境测试 port 并构建 FreeBSD 软件包镜像|
+|freebsd-update|/|FreeBSD 基本系统更新工具，用于获取安全更新和执行系统版本升级|
 |Chroot|/|Change Root，一种将进程及其子进程的根目录更改到文件系统中另一个位置的操作|
 |bhyve|/|FreeBSD 内置的虚拟机管理程序|
 |kqueue|/|FreeBSD 的事件通知接口，取代了 select/poll|
@@ -69,19 +69,19 @@
 |TCP BBR|/|TCP Bottleneck Bandwidth and RTT，一种 TCP 拥塞控制算法|
 |Wi-Fi|无线局域网技术|Wireless Fidelity|
 |USB RNDIS|/|USB Remote Network Driver Interface Specification，USB 网络共享技术|
-|Linux 兼容层|/|FreeBSD 的功能，可运行 Linux 二进制程序|
-|RISC-V|/|一种开源的指令集架构|
-|Beastie|/|BSD 的吉祥物，一个红色的小恶魔形象|
-|FreeBSD 基金会|/|美国科罗拉多州博尔德县的一家 501(c)3 非营利机构，负责支持 FreeBSD 项目|
-|FreeBSD 核心小组|/|FreeBSD 项目的最高领导机构，共 9 人，采取集体领导制度|
-|提交者|/|有权力直接写入 FreeBSD 存储库的人|
+|Linux 兼容层|/|FreeBSD 系统功能，可在 FreeBSD 上运行 Linux 二进制程序，提供应用程序兼容性|
+|RISC-V|/|开源指令集架构，FreeBSD 支持 RISC-V 架构的硬件平台|
+|Beastie|/|BSD 操作系统家族的吉祥物，形象为红色小恶魔|
+|FreeBSD 基金会|/|支持 FreeBSD 项目的非营利机构，位于美国科罗拉多州博尔德县，负责资金筹集和项目支持|
+|FreeBSD 核心小组|/|FreeBSD 项目的最高管理机构，由 9 名成员组成，负责项目战略决策和方向指导|
+|提交者|/|FreeBSD 项目中有权限直接向代码仓库提交更改的开发者|
 |CSRG|/|Computer Systems Research Group，加州大学伯克利分校的计算机系统研究小组|
 |Multics|/|多路复用信息和计算服务，一个早期的操作系统项目|
-|OpenSolaris|/|Sun Microsystems 开源的 Solaris 操作系统|
-|illumos|/|OpenSolaris 社区管理委员会解散后，主要社区开发力量迁移到的新分支|
-|Oracle Solaris|/|Oracle 收购 Sun 后，Solaris 项目进入闭源开发模式后的名称|
-|LLNL|美国劳伦斯利弗莫尔国家实验室|Lawrence Livermore National Laboratory，OpenZFS 代码提交量的首位成员所属机构|
-|ALTQ|交错队列|Alternate Queuing，PF 防火墙的功能|
+|OpenSolaris|/|Sun Microsystems 开源的 Solaris 操作系统版本，ZFS 和 DTrace 等技术的开源实现基础|
+|illumos|/|OpenSolaris 社区分支，在 Oracle 收购 Sun 后由社区维护的开源操作系统项目|
+|Oracle Solaris|/|Oracle 公司维护的 Solaris 操作系统商业版本，基于早期 OpenSolaris 代码|
+|LLNL|美国劳伦斯利弗莫尔国家实验室|Lawrence Livermore National Laboratory，OpenZFS 项目的主要贡献机构之一|
+|ALTQ|交错队列|Alternate Queuing，PF 防火墙的流量整形和队列管理功能|
 |NAT|网络地址转换|Network Address Translation|
 |ICMP|互联网控制报文协议|Internet Control Message Protocol|
 |UDP|用户数据报协议|User Datagram Protocol|
@@ -177,10 +177,10 @@
 |大教堂与集市|/|一种软件开发模型的比喻，大教堂指集中式开发，市集指分布式开发|
 |KISS 原则|/|Keep It Simple, Stupid，一种设计原则，强调保持简单|
 |UNIX 哲学|/|源于 UNIX 操作系统的开发实践，是一套经过长期演化的软件工程方法论体系，在传统上强调小即美、一个程序只做一件事、原型先行、可移植性先于高效率性等核心设计原则，对现代软件设计与系统架构产生了深远的范式性影响|
-|Ship of Theseus|忒修斯之船|一个经典的哲学悖论，用于探讨形而上学中主体的同一性问题，是同一性理论研究的重要思想实验|
-|谷堆悖论|/|一个经典的连锁悖论（Sorites Paradox），探讨的是本体论的模糊性与连续性问题，属于语言哲学与形而上学的研究范畴|
-|秃头悖论|/|一个经典的连锁悖论（Sorites Paradox），探讨本体论的模糊性与连续性问题，与谷堆悖论同属一类思想实验|
-|跨时间的同一性|/|Identity Over Time，哲学形而上学中探讨事物在时间流变中保持同一性的核心问题，与忒修斯之船悖论直接相关|
+|Ship of Theseus|忒修斯之船|哲学思想实验，探讨物体在部件逐步更换后是否保持同一性的问题|
+|谷堆悖论|/|连锁悖论，探讨模糊概念的边界问题，如多少粒谷子能构成一个谷堆|
+|秃头悖论|/|连锁悖论，探讨渐变过程中的分类问题，如掉多少根头发算秃头|
+|跨时间的同一性|/|哲学概念，探讨事物随时间变化如何保持自身同一性的问题|
 |Single UNIX Specification|单一 UNIX 规范|SUS，UNIX 操作系统的标准规范|
 |The Open Group|开放组织|负责管理 UNIX 商标和单一 UNIX 规范的组织|
 |501(c)(3)|/|美国税法中的一种非营利组织类型，可接受免税捐赠|
