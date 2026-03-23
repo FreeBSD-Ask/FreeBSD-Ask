@@ -6,7 +6,7 @@
 
 本章节包含重要的安全警告和免责声明，请务必仔细阅读。
 
-默认值通常可提供最佳性能，可在一般情况下确保系统稳定性。除非熟悉 BIOS 设置，否则请务必使用默认值，以避免系统损坏或启动失败。应仅在必要时更新或降级 BIOS。
+BIOS 默认值通常经过厂商严格测试和优化，可在一般情况下确保系统稳定性和最佳性能。除非熟悉 BIOS 设置，否则请使用默认值，以避免系统损坏或启动失败。应仅在必要时更新或降级 BIOS。
 
 BIOS 界面、选项和设置可能因系统不同而有所差异。
 
@@ -16,17 +16,13 @@ BIOS 界面、选项和设置可能因系统不同而有所差异。
 
 ## 说明
 
-本章节的相关内容可参考以下资料。
-
-参见 [NUC BIOS 概述](https://www.asus.com.cn/support/faq/1052524/)。
+本章节的相关内容可参考 [NUC BIOS 概述](https://www.asus.com.cn/support/faq/1052524/)，该文档提供了 BIOS 配置的基础说明。
 
 ## 为什么选择 AMI BIOS
 
 本章节介绍 AMI BIOS 的市场地位和选择理由。
 
-根据 AMI 官方网站 [The World Runs on AMI](https://www.ami.com/about-us/) 的介绍，全球约 70% 的服务器平台采用 AMI 软件。展示 AMI 固件在全球服务器市场的主导地位。
-
-根据 [安迈信息科技（昆山）有限公司](https://www.ami.com.cn/) [备份](https://web.archive.org/web/20260120155120/https://www.ami.com.cn/) 官网介绍，AMI 为 BIOS 业界的公认领导者之一，市场占有率超过 65％。提供 AMI 在中国市场的业务介绍与市场地位说明。
+根据 AMI 官方网站 [The World Runs on AMI](https://www.ami.com/about-us/) 的介绍，全球约 70% 的服务器平台采用 AMI 软件。而根据 [安迈信息科技（昆山）有限公司](https://www.ami.com.cn/) [备份](https://web.archive.org/web/20260120155120/https://www.ami.com.cn/) 官网介绍，AMI 为 BIOS 业界的公认领导者之一，整体市场占有率超过 65％。两个数据分别统计服务器市场和整体市场，均展示了 AMI 固件在市场中的主导地位。
 
 市场上大部分英特尔迷你主机所使用的 BIOS 均为 AMI BIOS。
 
@@ -46,9 +42,9 @@ BIOS 界面、选项和设置可能因系统不同而有所差异。
 
 本章节介绍 BIOS 和 UEFI 的基本概念、发展历程和主要区别。
 
-BIOS（Basic Input/Output System，基本输入输出系统），多采用汇编语言编写。BIOS 最早出现于 20 世纪 70 年代。BIOS 的目的是识别和初始化处理器、内存、硬盘驱动器、光驱以及其他硬件。
+BIOS（Basic Input/Output System，基本输入输出系统），多采用汇编语言编写。BIOS 最早出现于 20 世纪 70 年代，其工作流程包括加电自检（POST）、硬件初始化、引导加载等步骤，目的是识别和初始化处理器、内存、硬盘驱动器、光驱以及其他硬件。
 
-UEFI（Unified Extensible Firmware Interface，统一可扩展固件接口），多采用 C/C++ 编写。UEFI 是一种规范，定义了操作系统和平台固件之间的软件接口。UEFI 的原型 EFI 最早出现于 20 世纪末。UEFI 取代了基本输入输出系统（BIOS）的固件接口，大多数 UEFI 固件实现仍提供对 BIOS 服务的遗留支持。
+UEFI（Unified Extensible Firmware Interface，统一可扩展固件接口），多采用 C/C++ 编写。UEFI 是一种规范，定义了操作系统和平台固件之间的软件接口，相比 BIOS 具有支持更大磁盘分区、图形界面、网络启动等优势。UEFI 的原型 EFI 最早出现于 20 世纪末。UEFI 取代了基本输入输出系统（BIOS）的固件接口，大多数 UEFI 固件实现仍提供对 BIOS 服务的遗留支持。
 
 目前主流电脑（大约从 2013 年起）配备的都是 UEFI，而不是传统的 BIOS。也就是说，现在很多人可能根本没见过真正的 BIOS，但是出于习惯（界面和操作逻辑都类似），我们仍将 UEFI 统称作 BIOS 或 UEFI BIOS。
 
