@@ -2,11 +2,11 @@
 
 本章旨在为 FreeBSD 学习者与研究者提供系统性的文献参考框架。作为技术专著的附录，本参考书目遵循学术出版规范，涵盖从基础入门到高级研究的多层次文献资源。
 
-部分书籍可通过[微信读书](https://weread.qq.com/) [备份](https://web.archive.org/web/20260117174923/https://weread.qq.com/)、[番茄免费小说](https://fanqienovel.com/)、[QQ 阅读](https://book.qq.com/) [备份](https://web.archive.org/web/20260117163601/https://book.qq.com/)、[京东读书](https://cread.jd.com/custom/custom_pcDownload.action) [备份](https://web.archive.org/web/20260101112245/https://cread.jd.com/custom/custom_pcDownload.action)等平台获取。
+部分书籍可通过[微信读书](https://weread.qq.com/) [备份](https://web.archive.org/web/20260117174923/https://weread.qq.com/)、[番茄免费小说](https://fanqienovel.com/)、[QQ 阅读](https://book.qq.com/) [备份](https://web.archive.org/web/20260117163601/https://book.qq.com/)、[京东读书](https://cread.jd.com/custom/custom_pcDownload.action) [备份](https://web.archive.org/web/20260101112245/https://cread.jd.com/custom/custom_pcDownload.action)等平台获取。读者可在这些平台的搜索框中输入书名或作者名进行查找。
 
-部分书籍可能已经绝版，可尝试通过[多抓鱼](https://www.duozhuayu.com/) [备份](https://web.archive.org/web/20260121091432/https://www.duozhuayu.com/)、[孔夫子旧书网](https://www.kongfz.com/) [备份](https://web.archive.org/web/20260121083050/https://www.kongfz.com/)等专业二手书平台进行购买。
+部分书籍可能已经绝版，可尝试通过[多抓鱼](https://www.duozhuayu.com/) [备份](https://web.archive.org/web/20260121091432/https://www.duozhuayu.com/)、[孔夫子旧书网](https://www.kongfz.com/) [备份](https://web.archive.org/web/20260121083050/https://www.kongfz.com/)等专业二手书平台进行购买。购买时请注意书籍版本和品相。
 
-如需无 DRM 电子书，请读者自行探索。
+如需无 DRM 电子书，请读者自行探索相关资源。
 
 ## 主要参考书目
 
@@ -18,8 +18,8 @@
 
 | 封面/书名 |  作者/译者 | ISBN/出版社 | 说明 |
 | :---: | :---: | :---: | :--- |
-| ![Unix & Linux 大学教程](../.gitbook/assets/unix3.png) <br><br> 《Unix & Linux 大学教程》 | [美] Harley Hahn 著 <br><br> 张杰良 译 | 9787302209560 <br><br> 清华大学出版社 | 命令行基础。系统讲解 Unix/Linux 命令行操作与 Shell 编程，适合初学者建立基础。 |
-| ![UNIX/Linux 系统管理技术手册（第 5 版）](../.gitbook/assets/unix4.png) <br><br> 《UNIX/Linux 系统管理技术手册（第 5 版）》 | [美] Evi Nemeth、Garth Snyder、Trent R. Hein、Ben Whaley、Dan Mackin 等著 <br><br> 门佳 译 | 9787115532763 <br><br> 人民邮电出版社 |命令行进阶与 UNIX 基础知识。系统管理权威指南，涵盖系统运维核心技术与最佳实践。|
+| ![Unix & Linux 大学教程](../.gitbook/assets/unix3.png) <br><br> 《Unix & Linux 大学教程》 | [美] Harley Hahn 著 <br><br> 张杰良 译 | 9787302209560 <br><br> 清华大学出版社 | 命令行基础教程，系统讲解 Unix/Linux 命令行操作与 Shell 编程。 |
+| ![UNIX/Linux 系统管理技术手册（第 5 版）](../.gitbook/assets/unix4.png) <br><br> 《UNIX/Linux 系统管理技术手册（第 5 版）》 | [美] Evi Nemeth、Garth Snyder、Trent R. Hein、Ben Whaley、Dan Mackin 等著 <br><br> 门佳 译 | 9787115532763 <br><br> 人民邮电出版社 | 系统管理权威指南，涵盖 UNIX/Linux 系统运维核心技术。|
 
 ### UNIX 基础
 
@@ -27,11 +27,11 @@
 
 | 封面/书名 |  作者/译者 | ISBN/出版社 | 说明 |
 | :---: | :---: | :---: | :--- |
-| ![UNIX 环境高级编程（第 3 版）](../.gitbook/assets/unix.png) <br><br> 《UNIX 环境高级编程（第 3 版）》 | [美] W. Richard Stevens、Stephen A. Rago 等著<br><br>张毅峰、马树超 等译 | 9787121478338 <br><br> 电子工业出版社 | 深入介绍驱动 UNIX 内核的编程接口及相关实用知识。系统编程权威著作，详解 Unix 系统调用与编程接口。 |
-| ![UNIX 网络编程 卷 1：套接字联网 API（第 3 版）](../.gitbook/assets/unix1.png) <br><br> 《UNIX 网络编程 卷 1：套接字联网 API（第 3 版）》 | [美] W. Richard Stevens、Bill Fenner、Andrew M. Rudoff 等著 | 9787115517791 <br><br> 人民邮电出版社 | 如何使用套接字 API 进行网络编程。网络编程经典之作，系统讲解套接字 API 与网络协议实现。 |
-| ![UNIX 网络编程 卷 2：进程间通信（第 2 版）](../.gitbook/assets/unix2.png) <br><br> 《UNIX 网络编程 卷 2：进程间通信（第 2 版）》 | [美] W. Richard Stevens 著 | 9787115517807 <br><br> 人民邮电出版社 | 深入介绍各种进程间通信形式。原作者未出版第 3 版。详解 IPC 机制，包括管道、消息队列、共享内存与信号量。 |
-| ![深入理解 UNIX 系统内核](../.gitbook/assets/unixinternals.png) <br><br> 《深入理解 UNIX 系统内核》 | [美] Uresh Vahalia 著<br><br>薛磊、黄庆新、李雨 等译 | 9787111491453 <br><br>机械工业出版社 | UNIX 内核基础。系统讲解 UNIX 内核设计原理与实现机制，深入浅出。 |
-| ![4.4BSD 操作系统设计与实现](../.gitbook/assets/4BSD.png) <br><br> 《4.4BSD 操作系统设计与实现》 | [美] Marshall Kirk McKusick 等著 <br><br>李善平、刘文峰、马天驰 等译 | 9787111366478 <br><br> 机械工业出版社 | 介绍 4.4BSD 操作系统的设计与实现。BSD 系统设计权威著作，详解 4.4BSD 内核架构与关键技术。 |
+| ![UNIX 环境高级编程（第 3 版）](../.gitbook/assets/unix.png) <br><br> 《UNIX 环境高级编程（第 3 版）》 | [美] W. Richard Stevens、Stephen A. Rago 等著<br><br>张毅峰、马树超 等译 | 9787121478338 <br><br> 电子工业出版社 | UNIX 系统编程权威著作，详解系统调用与编程接口。 |
+| ![UNIX 网络编程 卷 1：套接字联网 API（第 3 版）](../.gitbook/assets/unix1.png) <br><br> 《UNIX 网络编程 卷 1：套接字联网 API（第 3 版）》 | [美] W. Richard Stevens、Bill Fenner、Andrew M. Rudoff 等著 | 9787115517791 <br><br> 人民邮电出版社 | 网络编程经典著作，系统讲解套接字 API 与网络协议实现。 |
+| ![UNIX 网络编程 卷 2：进程间通信（第 2 版）](../.gitbook/assets/unix2.png) <br><br> 《UNIX 网络编程 卷 2：进程间通信（第 2 版）》 | [美] W. Richard Stevens 著 | 9787115517807 <br><br> 人民邮电出版社 | 进程间通信技术专著，详解管道、消息队列、共享内存等 IPC 机制。 |
+| ![深入理解 UNIX 系统内核](../.gitbook/assets/unixinternals.png) <br><br> 《深入理解 UNIX 系统内核》 | [美] Uresh Vahalia 著<br><br>薛磊、黄庆新、李雨 等译 | 9787111491453 <br><br>机械工业出版社 | UNIX 内核设计原理与实现机制的技术专著。 |
+| ![4.4BSD 操作系统设计与实现](../.gitbook/assets/4BSD.png) <br><br> 《4.4BSD 操作系统设计与实现》 | [美] Marshall Kirk McKusick 等著 <br><br>李善平、刘文峰、马天驰 等译 | 9787111366478 <br><br> 机械工业出版社 | 4.4BSD 操作系统设计与实现的技术专著。 |
 
 ### 开源与自由软件运动
 
