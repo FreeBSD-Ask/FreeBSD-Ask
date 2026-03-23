@@ -4,7 +4,7 @@
 
 ## UNIX 系统中连接数据库并执行 SQL 脚本
 
-在 UNIX 或类 UNIX 系统中，我们可以通过命令行连接数据库并执行 SQL 脚本。数据库客户端程序通过网络协议（如 MySQL 的T CP/IP 协议）与数据库服务器通信，发送SQL语句并接收执行结果。以下命令用于连接 MySQL 数据库并执行 SQL 脚本：
+在 UNIX 或类 UNIX 系统中，我们可以通过命令行连接数据库并执行 SQL 脚本。数据库客户端程序通过网络协议（如 MySQL 的 TCP/IP 协议）与数据库服务器通信，发送SQL语句并接收执行结果。以下命令用于连接 MySQL 数据库并执行 SQL 脚本：
 
 ```sh
 # mysql -u root -p          # 以 root 用户登录 MySQL，-u 指定用户名，-p 表示需要密码验证
@@ -31,7 +31,7 @@ rename database old_name to new_name;
 - `old_name`：旧数据库名，要重命名的数据库当前名称
 - `new_name`：新数据库名，重命名后的数据库名称
 
-在MySQL中，`RENAME DATABASE`语句在早期版本中存在，但在MySQL 5.1.23之后被移除，因为该操作存在安全风险。现代MySQL版本中，重命名数据库需要通过导出、创建新数据库、导入数据的方式实现。
+ 在MySQL 中，`RENAME DATABASE` 语句在早期版本中存在，但在 MySQL 5.1.23 之后被移除，因为该操作存在安全风险。现代 MySQL 版本中，重命名数据库需要通过导出、创建新数据库、导入数据的方式实现。
 
 
 ## 查看数据库
