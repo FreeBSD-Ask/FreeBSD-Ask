@@ -1,6 +1,6 @@
 # UEFI/BIOS 概述与警告
 
-本章节主要介绍 UEFI 和 BIOS 的基本概念、区别、警告事项以及技术信息，帮助读者理解后续章节的内容。作为计算机系统硬件初始化的核心固件层，BIOS/UEFI 在现代计算架构中扮演着至关重要的角色，其配置直接影响系统的启动流程、硬件兼容性和性能表现。
+本章节主要介绍 UEFI 和 BIOS 的基本概念、区别、警告事项以及技术信息，帮助读者理解后续章节的内容。UEFI（统一可扩展固件接口）和 BIOS（基本输入输出系统）是计算机启动时最先执行的固件程序，负责硬件初始化、系统配置和操作系统引导。作为计算机系统硬件初始化的核心固件层，BIOS/UEFI 在现代计算架构中扮演着至关重要的角色，其配置直接影响系统的启动流程、硬件兼容性和性能表现。
 
 ## 警告与免责声明
 
@@ -20,13 +20,11 @@ BIOS 界面、选项和设置可能因系统不同而有所差异。
 
 ## 为什么选择 AMI BIOS
 
-本章节介绍 AMI BIOS 的市场地位和选择理由。
+本章节介绍 AMI BIOS 的技术特点和市场地位。AMI BIOS 是美国 Megatrends 公司开发的 BIOS 固件，广泛应用于个人计算机和服务器平台。
 
 根据 AMI 官方网站 [The World Runs on AMI](https://www.ami.com/about-us/) 的介绍，全球约 70% 的服务器平台采用 AMI 软件。而根据 [安迈信息科技（昆山）有限公司](https://www.ami.com.cn/) [备份](https://web.archive.org/web/20260120155120/https://www.ami.com.cn/) 官网介绍，AMI 为 BIOS 业界的公认领导者之一，整体市场占有率超过 65％。两个数据分别统计服务器市场和整体市场，均展示了 AMI 固件在市场中的主导地位。
 
-市场上大部分英特尔迷你主机所使用的 BIOS 均为 AMI BIOS。
-
-因此，对 AMI BIOS 进行注解具有普遍意义。
+市场上大部分英特尔迷你主机所使用的 BIOS 均为 AMI BIOS，因此对 AMI BIOS 进行注解具有普遍意义，能够覆盖大多数实际应用场景。
 
 ## 技术信息
 
@@ -42,26 +40,26 @@ BIOS 界面、选项和设置可能因系统不同而有所差异。
 
 本章节介绍 BIOS 和 UEFI 的基本概念、发展历程和主要区别。
 
-BIOS（Basic Input/Output System，基本输入输出系统），多采用汇编语言编写。BIOS 最早出现于 20 世纪 70 年代，其工作流程包括加电自检（POST）、硬件初始化、引导加载等步骤，目的是识别和初始化处理器、内存、硬盘驱动器、光驱以及其他硬件。
+BIOS（Basic Input/Output System，基本输入输出系统）是计算机启动时最先执行的固件程序，多采用汇编语言编写以实现硬件直接操作。BIOS 最早出现于 20 世纪 70 年代，其工作流程包括加电自检（POST）、硬件初始化、引导加载等步骤，目的是识别和初始化处理器、内存、硬盘驱动器、光驱以及其他硬件。BIOS 采用实模式运行，地址空间限制在 1MB 以内。
 
-UEFI（Unified Extensible Firmware Interface，统一可扩展固件接口），多采用 C/C++ 编写。UEFI 是一种规范，定义了操作系统和平台固件之间的软件接口，相比 BIOS 具有支持更大磁盘分区、图形界面、网络启动等优势。UEFI 的原型 EFI 最早出现于 20 世纪末。UEFI 取代了基本输入输出系统（BIOS）的固件接口，大多数 UEFI 固件实现仍提供对 BIOS 服务的遗留支持。
+UEFI（Unified Extensible Firmware Interface，统一可扩展固件接口）是一种规范，定义了操作系统和平台固件之间的软件接口，多采用 C/C++ 编写以支持模块化开发。相比 BIOS，UEFI 具有支持更大磁盘分区（GPT）、图形界面、网络启动、安全启动（Secure Boot）等优势。UEFI 的原型 EFI 最早由 Intel 于 20 世纪末开发。UEFI 取代了基本输入输出系统（BIOS）的固件接口，大多数 UEFI 固件实现仍提供对 BIOS 服务的遗留支持以兼容旧操作系统。
 
-目前主流电脑（大约从 2013 年起）配备的都是 UEFI，而不是传统的 BIOS。也就是说，现在很多人可能根本没见过真正的 BIOS，但是出于习惯（界面和操作逻辑都类似），我们仍将 UEFI 统称作 BIOS 或 UEFI BIOS。
+目前主流电脑（大约从 2013 年起）配备的都是 UEFI，而不是传统的 BIOS。由于 UEFI 在界面和操作逻辑上与 BIOS 类似，且需要向后兼容，人们仍习惯将其统称为 BIOS 或 UEFI BIOS。
 
 ## 设置 BIOS 后无法开机怎么办（CMOS 简介）
 
 本章节介绍 CMOS 的基本概念以及在 BIOS 设置错误后如何恢复系统。
 
-CMOS（Complementary Metal-Oxide-Semiconductor，互补金属氧化物半导体）原指一种由电池供电的芯片，用于存储信息（如时间信息、BIOS 密码和 BIOS 设置等）。在现代 UEFI 系统中，系统的相关配置信息通常存储在非易失性 RAM（NVRAM）中，但出于习惯，人们仍将这种存储 BIOS/UEFI 设置的非易失性存储称为 CMOS。CMOS 一般由纽扣电池供电，部分嵌入式设备的 CMOS 电池是可充电式纽扣电池。
+CMOS（Complementary Metal-Oxide-Semiconductor，互补金属氧化物半导体）原指一种由电池供电的芯片，用于存储 BIOS 配置信息（如时间信息、BIOS 密码和硬件设置等）。该芯片采用 CMOS 工艺制造，功耗极低，可由纽扣电池维持数据数月甚至数年。在现代 UEFI 系统中，系统的相关配置信息通常存储在非易失性 RAM（NVRAM）中，但出于习惯，人们仍将这种存储 BIOS/UEFI 设置的非易失性存储称为 CMOS。
 
-清空 CMOS 可清除上述参数。清空方法参见 [主板如何 Clear CMOS](https://www.asus.com.cn/support/faq/1040820/) [备份](https://web.archive.org/web/20260120204201/https://www.asus.com.cn/support/faq/1040820/)。详细说明主板 CMOS 清空的具体操作步骤。
+清空 CMOS 可清除所有 BIOS 配置参数，恢复出厂默认设置。当 BIOS 设置错误导致系统无法启动时，可通过短接主板上的 CMOS 清除跳线、移除纽扣电池或使用专用按钮来清空 CMOS。具体操作方法因主板型号而异，可参考主板说明书或访问 [主板如何 Clear CMOS](https://www.asus.com.cn/support/faq/1040820/) [备份](https://web.archive.org/web/20260120204201/https://www.asus.com.cn/support/faq/1040820/) 获取详细指导。
 
-参见 [BIOS 和 CMOS 有什么不同？](https://iknow.lenovo.com.cn/detail/043962?type=undefined&keyword=BIOS&keyWordId=) [备份](https://web.archive.org/web/20260120204219/https://iknow.lenovo.com.cn/detail/043962?type=undefined&keyword=BIOS&keyWordId=)。清晰解释 BIOS 与 CMOS 两个概念的区别与联系。
+BIOS 是执行硬件初始化的固件程序，而 CMOS 是存储 BIOS 配置参数的硬件芯片。两者功能不同但紧密相关：BIOS 在启动时读取 CMOS 中的配置信息来初始化硬件。更多区别可参考 [BIOS 和 CMOS 有什么不同？](https://iknow.lenovo.com.cn/detail/043962?type=undefined&keyword=BIOS&keyWordId=) [备份](https://web.archive.org/web/20260120204219/https://iknow.lenovo.com.cn/detail/043962?type=undefined&keyword=BIOS&keyWordId=)。
 
 ## 课后习题
 
-1. 查找一个早期 BIOS（如 1980 年代 IBM PC 或 1990 年代 Award BIOS）的源代码或技术文档，对比其与现代 UEFI 的架构差异，并在 QEMU 中尝试启动一个 BIOS 系统镜像。
+1. 查找一个早期 BIOS（如 1980 年代 IBM PC 或 1990 年代 Award BIOS）的源代码或技术文档，对比其与现代 UEFI 的架构差异，并在 QEMU 中尝试启动一个 BIOS 系统镜像。建议参考开源项目如 [SeaBIOS](https://www.seabios.org/) 或 [Coreboot](https://www.coreboot.org/) 的相关文档。
 
-2. 分析 CMOS 存储机制的设计，重构其最小功能模型，探讨为什么系统配置权力被委托给由电池维持的非易失性存储，而非完全由操作系统控制。
+2. 分析 CMOS 存储机制的设计，重构其最小功能模型，探讨为什么系统配置权力被委托给由电池维持的非易失性存储，而非完全由操作系统控制。考虑启动顺序依赖、安全隔离和硬件初始化时序等因素。
 
-3. 修改 BIOS 中一项核心配置（如启动顺序或内存频率）导致无法启动，使用 CMOS 清空方法恢复系统，并分析这种"恢复机制"如何塑造用户对 BIOS 修改的风险认知。
+3. 在实验环境中修改 BIOS 中一项核心配置（如启动顺序或内存频率）导致无法启动，使用 CMOS 清空方法恢复系统，并分析这种"恢复机制"如何塑造用户对 BIOS 修改的风险认知。操作前请确保已备份重要数据，并在不影响生产系统的环境中进行。
