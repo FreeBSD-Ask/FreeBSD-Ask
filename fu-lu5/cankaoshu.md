@@ -45,15 +45,13 @@
 | ![UNIX 传奇：历史与回忆](../.gitbook/assets/unixchuanqi.png) <br><br> 《UNIX 传奇——历史与回忆》 | [美] Brian W. Kernighan 著 <br><br> 韩磊 译 | 9787115557179 <br><br> 人民邮电出版社 | 主要介绍 UNIX 的发展历史，整体内容相对概括。由 Unix 先驱撰写的个人回忆录，记录技术发展的关键节点。 |
 
 
-以下是关于 UNIX 设计理念的经典著作，值得读者深入研读，以理解其软件工程思想与技术哲学。
+以下书籍阐述了 UNIX 的设计理念，有助于读者理解其软件工程思想与技术哲学。
 
 | 封面/书名 | 作者/译者 | ISBN/出版社 |
 | :----: | :----: | :----: |
 | ![UNIX 编程艺术](../.gitbook/assets/s11345267.png) <br><br> 《UNIX 编程艺术》（TAOUP） | [美] Eric Raymond 著 <br><br> 姜宏、何源、蔡晓骏 等译 | 9787121176654 <br><br> 电子工业出版社 |
 
-《UNIX 编程艺术》主要讲解了 UNIX 的设计思路与软件工程理论，为理解类 Unix 系统的设计范式提供了重要参考。需要说明的是，本书并不涉及哲学层面的讨论，其内容聚焦于工程实践领域。书中许多设计原则源于特定历史背景下的现实选择，后续被部分读者赋予了过度解读，这一点需要读者审慎辨析。
-
-本书作者虽然是 OSI（Open Source Initiative）创始人，深度参与了开源事业的发展，但其对开源和 UNIX 哲学的理解与自由软件基金会（FSF）等传统观点存在明显的张力，这一思想差异构成了开源运动内部重要的学术讨论点。
+《UNIX 编程艺术》讲解了 UNIX 的设计思路与软件工程理论，为理解类 Unix 系统的设计范式提供了重要参考。该书聚焦于工程实践领域，书中许多设计原则源于特定历史背景下的现实选择。读者需要注意，该书作者作为 OSI（Open Source Initiative）创始人，其对开源和 UNIX 哲学的理解与自由软件基金会（FSF）等传统观点存在差异，这构成了开源运动内部重要的学术讨论点。
 
 ### FreeBSD 基础
 
@@ -61,8 +59,8 @@
 
 | 封面/书名 |  作者/译者 | ISBN/出版社 | 说明 |
 | :---: | :---: | :---: | :--- |
-|![FreeBSD 技术内幕](../.gitbook/assets/Unleashed.png)  <br><br> 《FreeBSD 技术内幕》 | [美] Michael Urban、Brian Tiemann 等著 <br><br> 智慧东方工作室 译 | 9787111102010 <br><br> 机械工业出版社 |  本书出版于 2002 年，但部分内容至今仍具有参考价值，体现了 FreeBSD 的稳健发展。本书推荐选读第 1、4、8、9、10、11、12、13 章。早期 FreeBSD 技术专著，系统讲解 FreeBSD 系统架构与核心组件。 |
-| ![深入理解 FreeBSD 设备驱动程序开发](../.gitbook/assets/qudong.png) <br><br> 《深入理解 FreeBSD 设备驱动程序开发》 | [加] Joseph Kong 著 <br><br> 陈毅东 译 | 9787111411574 <br><br> 机械工业出版社 |  介绍 FreeBSD 设备驱动程序的开发方法。FreeBSD 驱动开发权威指南，详解内核模块编程与设备驱动架构。 |
+|![FreeBSD 技术内幕](../.gitbook/assets/Unleashed.png)  <br><br> 《FreeBSD 技术内幕》 | [美] Michael Urban、Brian Tiemann 等著 <br><br> 智慧东方工作室 译 | 9787111102010 <br><br> 机械工业出版社 |  早期 FreeBSD 技术专著，系统讲解 FreeBSD 系统架构与核心组件。虽然出版于 2002 年，但部分内容至今仍具有参考价值，适合了解 FreeBSD 的发展脉络。 |
+| ![深入理解 FreeBSD 设备驱动程序开发](../.gitbook/assets/qudong.png) <br><br> 《深入理解 FreeBSD 设备驱动程序开发》 | [加] Joseph Kong 著 <br><br> 陈毅东 译 | 9787111411574 <br><br> 机械工业出版社 |  FreeBSD 驱动开发权威指南，详解内核模块编程与设备驱动架构。适合有一定内核基础的开发者深入学习。 |
 
 
 
