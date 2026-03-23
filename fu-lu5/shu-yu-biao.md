@@ -14,7 +14,7 @@
 |Base System|基本系统|内核与用户空间（在 FreeBSD 中称为 world）的组合，即所有来自 src 源码树的组件|
 |CURRENT|/|FreeBSD 的主要开发分支，对应一般项目中的 head 或 main 分支，包含最新的代码变更但可能不稳定|
 |MFC（Merge From Head）|合并自 Head|FreeBSD 开发流程，将 CURRENT 或 main 分支中的更改合并到稳定分支的过程|
-|XX.0-STABLE|/|FreeBSD 的稳定开发分支，提供应用程序二进制接口（ABI）稳定性保证，但仍处于开发阶段|
+|XX.0-STABLE|/|FreeBSD 的固定开发分支，提供应用程序二进制接口（ABI）稳定性保证，但仍处于开发阶段|
 |RELEASE|稳定版|适用于生产环境的正式发布版本|
 |ABI|应用程序二进制接口|Application Binary Interface，应用程序与操作系统之间的二进制接口标准|
 |Unix|/|最初由 AT&T 贝尔实验室开发的操作系统，现为一种标准规范和法律商标|
