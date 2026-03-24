@@ -61,7 +61,7 @@ FreeBSD 镜像站（无论是官方的还是非官方的）的软件源存在以
 >
 > - 相关讨论 [the disappearing pkg issue](https://www.reddit.com/r/freebsd/comments/1nlnwtd/the_disappearing_pkg_issue/) [备份](https://web.archive.org/web/20260120223508/https://www.reddit.com/r/freebsd/comments/1nlnwtd/the_disappearing_pkg_issue/)
 > - pkg 项目位于 [freebsd/pkg](https://github.com/freebsd/pkg) [备份](https://web.archive.org/web/20260121073903/https://github.com/freebsd/pkg)
-> - pkg 软件包的构建系统位于 [Poudriere](https://github.com/freebsd/poudriere) [备份](https://web.archive.org/web/20260121073849/https://github.com/freebsd/poudriere)。
+> - pkg 软件包的构建系统位于 [Poudriere](https://github.com/freebsd/poudriere) [备份](https://web.archive.org/web/20260121073849/https://github.com/freebsd/poudriere)
 >
 > 试一试：帮助 FreeBSD 项目实现 pkg 二进制软件包的原子更新？
 
@@ -97,7 +97,7 @@ For more information on available commands and options see 'pkg help'.
 > **技巧**
 >
 > 如果提示 `00206176BC680000:error:0A000086:SSL routines:tls_post_process_server_certificate:certificate verify failed:/usr/src/crypto/openssl/ssl/statem/statem_clnt.c:1890:`（SSL 证书验证失败），请先校准时间。
->
+
 > ```sh
 > # ntpdate -u pool.ntp.org  # 使用 pool.ntp.org 同步系统时间
 > ```

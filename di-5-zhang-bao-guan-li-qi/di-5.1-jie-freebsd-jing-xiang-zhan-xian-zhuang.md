@@ -1,14 +1,14 @@
 # 5.1 FreeBSD 镜像站现状
 
-本章介绍 FreeBSD 镜像站的当前格局、历史演进及相关技术考量。
+本章系统介绍 FreeBSD 镜像站的当前格局、历史演进及相关技术考量。镜像站作为软件分发的重要基础设施，其可用性与稳定性直接影响用户获取系统更新与软件包的体验。
 
 ## 镜像站现状与基本格局
 
-### 官方未开放 rsync
+### 官方未开放 rsync 服务
 
-核心问题聚焦于两点：一是官方 rsync 服务暂未对公众开放；二是项目未接受镜像站的官方二级镜像申请。这两项政策共同构成了当前镜像站生态的基本约束条件。
+当前 FreeBSD 镜像站生态面临两个核心约束：一是官方 rsync 服务暂未对公众开放；二是项目未接受镜像站的官方二级镜像申请。这两项政策共同构成了镜像站部署的基本限制条件。
 
-根据目前可查的信息，FreeBSD 项目最迟在 2015 年 5 月就停止了公开 rsync。参见 [Add small section explaining we are not allowing public mirrors of packages and possible workarounds.](https://reviews.freebsd.org/R9:3418e47d2f6cd8dd04ac934f38d136ba9101a5a8)，文档记录了项目禁止公共包镜像的决策及替代方案。给出的说明理由是：
+根据可查证的历史信息，FreeBSD 项目最迟在 2015 年 5 月就已停止公开 rsync 服务。相关文档 [Add small section explaining we are not allowing public mirrors of packages and possible workarounds.](https://reviews.freebsd.org/R9:3418e47d2f6cd8dd04ac934f38d136ba9101a5a8) 记录了项目禁止公共包镜像的决策及替代方案。官方给出的说明理由如下：
 
 > Due to very high requirements of bandwidth, storage and administration the FreeBSD Project has decided not to allow public mirrors of packages.
 >
@@ -34,18 +34,18 @@
 >
 > 此前有人曾提议提供南京的一台机器，但后续方案变更为虚拟机形式后讨论便陷入停滞。我们无法使用虚拟机方案，需要真实的硬件设备（注：对方指裸金属）、实体存储介质和物理网络传输链路。
 
-### 未开放的可能性原因分析
+### 未开放的可能原因分析
 
 #### 安全性因素
 
-从历史记录追溯，FreeBSD 基础设施集群在过去曾发生安全入侵事件，在全面转向 pkg 分发机制后，便终止了外部镜像的授权。这一战略决策可能与保障软件供应链完整性与安全性直接相关。
+从历史记录追溯，FreeBSD 基础设施集群在过去曾发生安全入侵事件。在全面转向 pkg 分发机制后，项目便终止了外部镜像的授权。这一战略决策可能与保障软件供应链完整性与安全性直接相关。
 
 - [FreeBSD.org 这次的入侵事件](https://blog.delphij.net/posts/2012/12/freebsdorg-2/) [备份](https://web.archive.org/web/20260121072905/https://blog.delphij.net/posts/2012/12/freebsdorg-2/)，中文说明
 - [FreeBSD.org intrusion announced November 17th 2012](http://www.freebsd.org/news/2012-compromise.html) [备份](https://web.archive.org/web/20260120222213/https://www.freebsd.org/news/2012-compromise/)，官方说明
 
 #### 传输机制因素
 
-当前集群的数据同步机制采用了基于 ZFS 文件系统的直接传输方式（通过 zfs send / zfs receive 命令实现），而非传统的 rsync 镜像站同步模式。这一技术选型构成了外部镜像可行性的潜在限制因素。
+当前集群的数据同步机制采用了基于 ZFS 文件系统的直接传输方式（通过 `zfs send` / `zfs receive` 命令实现），而非传统的 rsync 镜像站同步模式。这一技术选型构成了外部镜像可行性的潜在限制因素。
 
 #### 资源限制因素
 
@@ -90,17 +90,15 @@
 >>
 >> FreeBSD 只是在技术上切换到了 Git，思想还停留在 SVN 时代。SVN 是集中式的、统一的、强权限的；Git 是分布式的，去权限的，允许自由分支的。当代互联网强调的是去中心化和分享。没有为什么，正如城市化和逆城市化一样都是合理的，也都是不合理的，只是一种趋势要求我们必须这样那样做，否则就会失去自身存在的合理性。你说得有道理也是现实，他们可能同步几天就撒手不管了。而问题在于，选择权应该取决于用户而不是项目本身。我认为这是一种家长制作风的体现。这也表明了老项目转型的困难更多地不是技术而是理念。
 >
->
 >> 即日已抵龙南，明日入巢，四路兵皆已如期并进，贼有必破之势。某向在横水，尝寄书仕德云：“破山中贼易，破心中贼难。”区区剪除鼠窃，何足为异？若诸贤扫荡心腹之寇，以收廓清平定之功，此诚大丈夫不世之伟绩。数日来谅已得必胜之策，捷奏有期矣。何喜如之！
 >>
 >> 日孚美质，诚可与共学，此时计已发舟。倘未行，出此同致意。廨中事以累尚谦，想不厌烦琐。小儿正宪，犹望时赐督责。（《王阳明全集·卷四·文录一·与杨仕德薛尚谦书》）
 >
->
-> 结合王阳明平定南赣，改革吏治，肃清朝野，破官、民“心中贼”的历史史实，请读者阐述强迫某人使之自由，这本身是一种自由还是法西斯主义？
+>> 结合王阳明平定南赣，改革吏治，肃清朝野，破官、民“心中贼”的历史史实，请读者阐述强迫某人使之自由，这本身是一种自由还是法西斯主义？
 
 ### 中国大陆暂无 FreeBSD 官方镜像站
 
-经多次沟通尝试（包括通过邮件列表联系约五次，其中三次获得回应，两次未获回应），均未形成有效推进。官方主要回复为"深表歉意，但台湾地区已有镜像"，未就镜像申请的具体流程提供进一步说明。此外，曾特别向中国科学技术大学 Linux 用户协会申请镜像，对方反馈 FreeBSD 官方亦未有回应。
+经多次沟通尝试（包括通过邮件列表联系约五次，其中三次获得回应，两次未获回应），均未形成有效推进。官方主要回复为“深表歉意，但台湾地区已有镜像”，未就镜像申请的具体流程提供进一步说明。此外，曾特别向中国科学技术大学 Linux 用户协会申请镜像，对方反馈 FreeBSD 官方亦未有回应。
 
 目前开放的非官方 issue 镜像申请：
 
@@ -122,7 +120,7 @@ TUNA: <https://github.com/tuna/issues/issues/16>
 
 来搭建非官方镜像站。赠人玫瑰，手留余香。
 
-优先建议高校学生使用校内资源搭建，或者直接从 USTC 的 `rsync` 服务来同步。建议同步前先咨询 USTCLUG，以免带来不必要的麻烦，联系方式： [lug@ustc.edu.cn](mailto:lug@ustc.edu.cn)。参考 [科大源同步方法与注意事项](https://mirrors.ustc.edu.cn/help/rsync-guide.html) [备份](https://web.archive.org/web/20260122131852/https://mirrors.ustc.edu.cn/help/rsync-guide.html) 来进行同步。
+优先建议高校学生使用校内资源搭建，或者直接从 USTC 的 `rsync` 服务来同步。建议同步前先咨询 USTCLUG，以免带来不必要的麻烦，联系方式：[lug@ustc.edu.cn](mailto:lug@ustc.edu.cn)。参考 [科大源同步方法与注意事项](https://mirrors.ustc.edu.cn/help/rsync-guide.html) [备份](https://web.archive.org/web/20260122131852/https://mirrors.ustc.edu.cn/help/rsync-guide.html) 来进行同步。
 
 ## 官方给出的镜像站基本要求
 
@@ -130,11 +128,11 @@ TUNA: <https://github.com/tuna/issues/issues/16>
 - IPv6 及 CN2 网络——国内也很缺乏；
 - BGP 网络；
 - 足够的存储空间（约 50TB）和 1G 带宽；
-- 上述服务器共计 5 台。
+- 上述服务器共计 5 台；
 - 备案问题——需要专门公司/社会组织才能给 cn.FreeBSD.org 备案；
-- 还有一个最大的问题：**缺乏资金**
+- 还有一个最大的问题：**缺乏资金**。
 
-细节可看：
+细节可查看：
 
 - 单个镜像：<https://wiki.freebsd.org/Teams/clusteradm/tiny-mirror>
 - 完整镜像：<https://wiki.freebsd.org/Teams/clusteradm/generic-mirror-layout>

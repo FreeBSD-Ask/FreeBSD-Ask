@@ -1,10 +1,10 @@
 # 3.2 使用 VMware Workstation Pro 安装 FreeBSD
 
-本节系统介绍在 VMware Workstation Pro 虚拟化平台上部署 FreeBSD 操作系统的完整流程与关键配置细节。
+本节介绍在 VMware Workstation Pro 虚拟化平台上部署 FreeBSD 操作系统的完整流程与关键配置细节。
 
 ## 视频教程
 
-以下视频教程演示了 VMware Workstation Pro 的安装过程，具有直观的操作演示，可供读者参考。
+以下视频教程演示了在 Windows 11 上安装 VMware Workstation Pro 17 的过程，具有直观的操作演示，可供读者参考。
 
 - [001-Windows 11 安装 VMware 17](https://www.bilibili.com/video/BV1Qji2YLEgS)
 
@@ -25,7 +25,6 @@
 镜像下载完成后，在 VMware Workstation Pro 中创建新的虚拟机，按照以下步骤进行配置。
 
 ![VMware 安装 FreeBSD](../.gitbook/assets/vm1.png)
-
 
 ![VMware 安装 FreeBSD](../.gitbook/assets/vm2.png)
 
@@ -72,7 +71,6 @@
 >
 > 经过测试，FreeBSD 也可以支持 UEFI 下 VMware 的显卡驱动。——2025 年 3 月 24 日
 
-
 > **警告**
 >
 > 由于 [Bug 250580 - VMware UEFI guests crash in virtual hardware after r366691](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=250580) 的存在，FreeBSD 11/12 在 VMware 的 UEFI 环境下可能无法启动。经测试，FreeBSD 13.0 可正常启动。
@@ -110,7 +108,7 @@
 
 如果无法连接网络，可尝试在虚拟机内将 DNS 服务器设置为 `223.5.5.5`。其他网络配置方法请参阅本章其他小节。
 
-如果配置为桥接模式后始终无法通过 DHCP 获取 IP 地址，可尝试将网络适配器的“桥接到”选项从“自动”改为你主机当前正在使用的物理网卡。
+如果配置为桥接模式后始终无法通过 DHCP 获取 IP 地址，可尝试将网络适配器的“桥接到”选项从“自动”改为你的主机当前正在使用的物理网卡。
 
 ![vmware network on freebsd](../.gitbook/assets/net2.png)
 
@@ -156,8 +154,7 @@
 
 > **技巧**
 >
-> 如果屏幕显示不正常（过大），请尝试：编辑虚拟机设置→硬件、设备→显示器→监视器、指定监视器设置→任意监视器的最大分辨率，设置为主机的分辨率或者略低于主机分辨率均可。
-
+> 如果屏幕显示不正常（过大），请尝试：编辑虚拟机设置→硬件→显示器→监视器→指定监视器设置→任意监视器的最大分辨率，设置为主机的分辨率或略低于主机分辨率。具体步骤可参考故障排除部分。
 
 ### 鼠标集成（主机虚拟机鼠标自由切换）
 
@@ -308,7 +305,7 @@ Downloads
 
 ![VMware 安装 FreeBSD](../.gitbook/assets/vm16.png)
 
-硬件——显示——监视器——任意监视器的最大分辨率 (M)，将其由默认最大的 `2560 x 1600`（2K）改成其他较小值即可，亦可自定义数值。
+硬件→显示→监视器→指定监视器设置→任意监视器的最大分辨率 (M)，将其由默认最大的 `2560 x 1600`（2K）改成其他较小值即可，亦可自定义数值。
 
 - 没有声音
 

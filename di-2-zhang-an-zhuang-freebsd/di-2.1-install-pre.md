@@ -1,41 +1,41 @@
 # 2.1 安装前的准备工作
 
-在开始 FreeBSD 系统部署前，需要完成硬件兼容性评估、介质准备及安装介质制作等环节。以下从硬件需求分析入手，逐步引导完成系统安装的前期准备工作。
+在部署 FreeBSD 系统之前，需完成硬件兼容性评估、安装介质准备与制作等前期工作。本章节从硬件需求分析入手，逐步引导读者完成系统安装前的各项准备工作。
 
 ## 硬件支持情况
 
-以下介绍最低硬件需求与实测硬件支持情况。
+本节介绍 FreeBSD 系统的最低硬件需求与实测硬件支持情况。
 
 ### 最低硬件需求
 
-amd64（又称 x86-64）是 64 位 x86 架构的扩展，广泛应用于现代家用电脑与服务器。针对 amd64 架构，14.2-RELEASE 版本在虚拟机环境中测得：
+amd64（又称 x86-64）是 64 位 x86 架构的扩展，广泛应用于现代家用电脑与服务器。针对 amd64 架构，14.2-RELEASE 版本在虚拟机环境中测得的最低硬件需求如下：
 
 - 硬盘：
-  - 仅基本系统（安装后）：550 MB
-  - KDE 桌面（通过 pkg 安装后）：15 GB
+  - 仅安装基本系统：约 550 MB
+  - 安装 KDE 桌面环境（通过 pkg 安装后）：约 15 GB
 - 内存：
-  - 统一可扩展固件接口（UEFI）模式下，最小内存需求为 128 MB
-  - 基本输入/输出系统（BIOS）模式下，最小内存需求为 64 MB
+  - 统一可扩展固件接口（UEFI）模式下：最小 128 MB
+  - 基本输入/输出系统（BIOS）模式下：最小 64 MB
 
 UEFI（Unified Extensible Firmware Interface）是现代计算机的固件接口标准，替代了传统的 BIOS，提供更强大的启动管理功能。BIOS（Basic Input/Output System）是早期计算机的固件接口。
 
 ### 实测硬件支持
 
-以下是部分实测硬件的支持情况：
+下表列出了部分硬件的实测支持情况：
 
-| 硬件类别  | 系列        | 实测型号                                         | 备注                                                                                                          |
-| --------- | ------------ | -------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| CPU       | Intel 混合架构（异构大小核）    | i7-1260P、N100                                | 实测可正常启动运行，但调度机制尚不完善，睿频功能受限                   |
-| NVMe 固态硬盘 | M.2 接口       | 英睿达 P310，Intel 600P，梵想 S530Q、S500Pro、S542PRO | 正常工作                                                                                                        |
-| 无线网卡      | Intel AX 系列  | AX200                                        | Wi-Fi 5 速率与 Windows 11 IoT Enterprise 24H2 相当（使用 iperf2 测得）                                                                     |
-| 有线网卡      | Realtek 2.5G | RTL8125B                                     | 需要额外安装驱动，参见全书附录                                                                                             |
-| 有线网卡      | Intel 2.5G   | i226-V                                       | 正常工作                                                                                                        |
-| 显卡   | 近十年的 Intel 及 AMD 集成/独立显卡  |   英特尔锐炬® Xe 显卡、英特尔 HD Graphics 4000       | 支持程度与 DRM 驱动移植进度相关；截至写作时，其代码状态约相当于 Linux 内核 6.10，最新进展请参见 [freebsd/drm-kmod](https://github.com/freebsd/drm-kmod/pulls) [备份](https://web.archive.org/web/20260115143641/https://github.com/freebsd/drm-kmod/pulls)。该仓库提供 FreeBSD 图形驱动内核模块更新，追踪 Linux DRM 驱动移植进度。 |
-| NVIDIA 显卡 | 近十多年的显卡   | GTX 850M  | 受 NVIDIA 官方显卡驱动支持     |
+| 硬件类别       | 系列                     | 实测型号                                                                 | 备注                                                                                                                              |
+| -------------- | ------------------------ | ------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------- |
+| CPU            | Intel 混合架构（异构大小核） | i7-1260P、N100                                                           | 可正常启动运行，但调度机制尚不完善，睿频功能受限                                                                                    |
+| NVMe 固态硬盘  | M.2 接口                 | 英睿达 P310，Intel 600P，梵想 S530Q、S500Pro、S542PRO                     | 正常工作                                                                                                                            |
+| 无线网卡       | Intel AX 系列            | AX200                                                                    | Wi-Fi 5 速率与 Windows 11 IoT Enterprise 24H2 相当（使用 iperf2 测得）                                                               |
+| 有线网卡       | Realtek 2.5G             | RTL8125B                                                                 | 需要额外安装驱动，参见全书附录                                                                                                      |
+| 有线网卡       | Intel 2.5G               | i226-V                                                                   | 正常工作                                                                                                                            |
+| 显卡           | 近十年的 Intel 及 AMD 集成/独立显卡 | 英特尔锐炬® Xe 显卡、英特尔 HD Graphics 4000                               | 支持程度与 DRM 驱动移植进度相关；截至写作时，其代码状态约相当于 Linux 内核 6.10，最新进展请参见 [freebsd/drm-kmod](https://github.com/freebsd/drm-kmod/pulls) [备份](https://web.archive.org/web/20260115143641/https://github.com/freebsd/drm-kmod/pulls)。该仓库提供 FreeBSD 图形驱动内核模块更新，追踪 Linux DRM 驱动移植进度。 |
+| NVIDIA 显卡    | 近十多年的显卡           | GTX 850M                                                                 | 受 NVIDIA 官方显卡驱动支持                                                                                                          |
 
 > **注意**
 >
-> FreeBSD 不支持 [安全启动](https://wiki.freebsd.org/SecureBoot) [备份](https://web.archive.org/web/20260115143726/https://wiki.freebsd.org/SecureBoot)，该页面提供 FreeBSD 安全启动相关状态信息，在安装 FreeBSD 前请务必关闭安全启动（Secure Boot）；FreeBSD 也不支持 Fake RAID（伪 RAID），请将其控制器修改为 AHCI。
+> FreeBSD 不支持 [安全启动](https://wiki.freebsd.org/SecureBoot) [备份](https://web.archive.org/web/20260115143726/https://wiki.freebsd.org/SecureBoot)，该页面提供 FreeBSD 安全启动相关状态信息。在安装 FreeBSD 前，请务必关闭安全启动（Secure Boot）。此外，FreeBSD 也不支持 Fake RAID（伪 RAID），需将控制器模式修改为 AHCI。
 >
 > Fake RAID 是由主板 BIOS/固件提供的软件 RAID 功能，依赖操作系统驱动支持，并非真正的硬件 RAID。AHCI（Advanced Host Controller Interface）是 SATA 控制器的标准工作模式，提供原生支持 SATA 设备的高级特性。
 >
@@ -43,9 +43,9 @@ UEFI（Unified Extensible Firmware Interface）是现代计算机的固件接口
 
 ### 特定硬件支持情况查询
 
-除了上述实测硬件外，更多硬件的支持情况可参考以下外部资源。
+除上述实测硬件外，更多硬件的支持情况可参考以下外部资源。
 
-[Hardware for BSD](https://bsd-hardware.info/?view=search)。该平台提供 BSD 系统硬件兼容性数据库，可查询设备支持情况。
+[Hardware for BSD](https://bsd-hardware.info/?view=search) 平台提供 BSD 系统硬件兼容性数据库，可用于查询设备支持情况。
 
 ![](../.gitbook/assets/h1.png)
 
@@ -53,42 +53,42 @@ UEFI（Unified Extensible Firmware Interface）是现代计算机的固件接口
 
 > **注意**
 >
-> 仍建议进行实际测试，因为该网站也可能出现错误，例如将 LPDDR5 误识别为 LPDDR4。
+> 建议进行实际测试，因为该网站也可能出现错误，例如将 LPDDR5 误识别为 LPDDR4。
 
 ## 下载 FreeBSD 镜像
 
-在了解硬件支持情况后，即可开始下载 FreeBSD 镜像。首先打开 FreeBSD 项目官网：<https://www.freebsd.org/>。
+了解硬件支持情况后，即可开始下载 FreeBSD 镜像。首先访问 FreeBSD 项目官网：<https://www.freebsd.org/>。
 
 ![FreeBSD 项目官网](../.gitbook/assets/do1.png)
 
-点击黄底红字的 `Download FreeBSD`，页面将跳转如下：
+点击黄底红字的 `Download FreeBSD`，页面将跳转至下载页面：
 
 ![下载 FreeBSD](../.gitbook/assets/do2.png)
 
 > **技巧**
 >
-> 随着时间推移，当读者进行下载时，可能已无 14.2-RELEASE 版本。此时只需选择列表最顶部的 `FreeBSD-X.Y-RELEASE`（该版本推荐用于生产环境）即可。其中，`X.Y` 应为比 `14.2` 更大的版本号，如 `15.0`、`22.4` 等，但须注意，其应以 `RELEASE` 结尾，而非 `CURRENT`。
+> 随着时间推移，读者进行下载时可能已无 14.2-RELEASE 版本。此时只需选择列表最顶部的 `FreeBSD-X.Y-RELEASE`（该版本推荐用于生产环境）即可。其中，`X.Y` 应为比 `14.2` 更大的版本号，如 `15.0`、`22.4` 等，但须注意其应以 `RELEASE` 结尾，而非 `CURRENT`。
 >
 > RELEASE 是 FreeBSD 的正式发布版本，经过充分测试，适合生产环境使用。CURRENT 是 FreeBSD 的开发版本，包含最新特性但不够稳定，仅适合开发者和高级用户。
 
 > **警告**
 >
-> 使用非 RELEASE 版本的用户应有意愿和时间关注开发动态，浏览邮件列表与问题追踪系统，例如 [freebsd-src/UPDATING](https://github.com/freebsd/freebsd-src/blob/main/UPDATING) [备份](https://web.archive.org/web/20260115143917/https://github.com/freebsd/freebsd-src/blob/main/UPDATING)，该文件记录系统更新重大变更，及 [freebsd-src/RELNOTES](https://github.com/freebsd/freebsd-src/blob/main/RELNOTES) [备份](https://web.archive.org/web/20260119051314/https://github.com/freebsd/freebsd-src/blob/main/RELNOTES)，该文件提供发行版发布说明与新特性等文档。同时要求用户具备一定的探索和动手能力。否则，建议使用 RELEASE 版本。
+> 使用非 RELEASE 版本的用户应有时间和意愿关注开发动态，浏览邮件列表与问题追踪系统，例如 [freebsd-src/UPDATING](https://github.com/freebsd/freebsd-src/blob/main/UPDATING) [备份](https://web.archive.org/web/20260115143917/https://github.com/freebsd/freebsd-src/blob/main/UPDATING)，该文件记录系统更新重大变更，及 [freebsd-src/RELNOTES](https://github.com/freebsd/freebsd-src/blob/main/RELNOTES) [备份](https://web.archive.org/web/20260119051314/https://github.com/freebsd/freebsd-src/blob/main/RELNOTES)，该文件提供发行版发布说明与新特性等文档。同时要求用户具备一定的探索和动手能力。否则，建议使用 RELEASE 版本。
 
 | Installer | VM | SD Card | Documentation |
 | :---: | :---: | :---: | :---: |
 | 安装镜像 | 虚拟机预安装镜像 | 存储卡镜像 | 文档 |
-| 适用于常规安装 | 适用于云平台和虚拟机 | 适用于单板机/嵌入式设备 | 发行说明等文档   |
+| 适用于常规安装 | 适用于云平台和虚拟机 | 适用于单板机/嵌入式设备 | 发行说明等文档 |
 
 > **技巧**
 >
-> 如果不知道选哪个，请选择 `Installer`（普通家用电脑，苹果除外）。
+> 若不确定选择哪种镜像，请选择 `Installer`（普通家用电脑，苹果除外）。
 
 > **技巧**
 >
-> 如果读者不清楚 `amd64`、`i386`、`aarch64`、`armv7` 这些架构的区别，请选择 `amd64`（适用于大多数普通家用电脑，苹果电脑除外）。
+> 若不清楚 `amd64`、`i386`、`aarch64`、`armv7` 这些架构的区别，请选择 `amd64`（适用于大多数普通家用电脑，苹果电脑除外）。
 
-选择好安装镜像的主要类型后，即可看到具体的下载列表，见图：
+选择好安装镜像的主要类型后，即可看到具体的下载列表：
 
 ![FreeBSD 镜像](../.gitbook/assets/do3.png)
 
@@ -114,22 +114,22 @@ FreeBSD-14.2-RELEASE-amd64-mini-memstick.img.xz    107445036      2024-Nov-29 13
 | 首列 | 说明 |
 | :--- | :--- |
 | Parent directory/	-	- | 指向上级目录 |
-| CHECKSUM.SHA256-FreeBSD-14.2-RELEASE-amd64	  | 本页所有镜像的 SHA256 校验值 |
-| CHECKSUM.SHA512-FreeBSD-14.2-RELEASE-amd64   |  本页所有镜像的 SHA512 校验值 |
-| FreeBSD-14.2-RELEASE-amd64-bootonly.iso	      | 网络安装镜像，安装时需联网 |
-| FreeBSD-14.2-RELEASE-amd64-bootonly.iso.xz	    | 压缩的网络安装镜像，安装时需联网 |
-| FreeBSD-14.2-RELEASE-amd64-disc1.iso	 | CD 镜像    |
-| FreeBSD-14.2-RELEASE-amd64-disc1.iso.xz	|  压缩的 CD 镜像 |
-| FreeBSD-14.2-RELEASE-amd64-dvd1.iso	 | DVD 镜像，相比 CD 镜像包含了更多的软件包（pkg）   |
-| FreeBSD-14.2-RELEASE-amd64-dvd1.iso.xz	  | 压缩的 DVD 镜像，相比 CD 镜像包含了更多软件包（pkg）  |
-| FreeBSD-14.2-RELEASE-amd64-memstick.img	| U 盘用的镜像（可以使用 Rufus 制作 U 盘启动盘）   |
-| FreeBSD-14.2-RELEASE-amd64-memstick.img.xz	 | 压缩的 U 盘用的镜像（无需解压缩，可以使用 Rufus 制作 U 盘启动盘）   |
-| FreeBSD-14.2-RELEASE-amd64-mini-memstick.img	 | U 盘用的网络安装镜像，安装时需联网 |
+| CHECKSUM.SHA256-FreeBSD-14.2-RELEASE-amd64 | 本页所有镜像的 SHA256 校验值 |
+| CHECKSUM.SHA512-FreeBSD-14.2-RELEASE-amd64 | 本页所有镜像的 SHA512 校验值 |
+| FreeBSD-14.2-RELEASE-amd64-bootonly.iso | 网络安装镜像，安装时需联网 |
+| FreeBSD-14.2-RELEASE-amd64-bootonly.iso.xz | 压缩的网络安装镜像，安装时需联网 |
+| FreeBSD-14.2-RELEASE-amd64-disc1.iso | CD 镜像 |
+| FreeBSD-14.2-RELEASE-amd64-disc1.iso.xz | 压缩的 CD 镜像 |
+| FreeBSD-14.2-RELEASE-amd64-dvd1.iso | DVD 镜像，相比 CD 镜像包含了更多的软件包（pkg） |
+| FreeBSD-14.2-RELEASE-amd64-dvd1.iso.xz | 压缩的 DVD 镜像，相比 CD 镜像包含了更多软件包（pkg） |
+| FreeBSD-14.2-RELEASE-amd64-memstick.img | U 盘用的镜像（可以使用 Rufus 制作 U 盘启动盘） |
+| FreeBSD-14.2-RELEASE-amd64-memstick.img.xz | 压缩的 U 盘用的镜像（无需解压缩，可以使用 Rufus 制作 U 盘启动盘） |
+| FreeBSD-14.2-RELEASE-amd64-mini-memstick.img | U 盘用的网络安装镜像，安装时需联网 |
 | FreeBSD-14.2-RELEASE-amd64-mini-memstick.img.xz | 压缩的 U 盘用的网络安装镜像，安装时需联网 |
 
 .xz 是一种高压缩比的文件压缩格式，常用于缩小软件发行包的体积。SHA256 和 SHA512 是密码散列函数，用于生成文件的唯一指纹，校验值（Checksum）则是通过这些函数计算出的固定长度字符串，用于验证文件完整性。
 
-需要注意的是，DVD 镜像并不包含一切离线软件包，仅精选了若干软件包，具体清单可参见源代码文件 [release/scripts/pkg-stage.sh](https://github.com/freebsd/freebsd-src/blob/main/release/scripts/pkg-stage.sh) [备份](https://web.archive.org/web/20260115143613/https://github.com/freebsd/freebsd-src/blob/main/release/scripts/pkg-stage.sh)，该脚本定义 DVD 镜像包含的预安装软件包清单。
+需要注意的是，DVD 镜像并不包含所有离线软件包，仅精选了若干软件包，具体清单可参见源代码文件 [release/scripts/pkg-stage.sh](https://github.com/freebsd/freebsd-src/blob/main/release/scripts/pkg-stage.sh) [备份](https://web.archive.org/web/20260115143613/https://github.com/freebsd/freebsd-src/blob/main/release/scripts/pkg-stage.sh)，该脚本定义 DVD 镜像包含的预安装软件包清单。
 
 FreeBSD 的所有安装介质（包括但不限于虚拟机镜像）默认均不提供图形界面，须由用户自行安装和配置。DVD 镜像虽包含更多软件包，但由于图形界面依赖关系复杂，且 DVD 上的软件包版本可能较旧，在安装图形界面时仍可能遇到依赖冲突或版本不匹配问题，因此不建议使用 DVD 镜像。
 
@@ -156,11 +156,11 @@ FreeBSD `-RELEASE` 历史版本下载地址：
 
 ## 刻录 FreeBSD 镜像
 
-下载好 FreeBSD 镜像后，需要将其刻录到 U 盘上才能进行安装。以下将介绍如何刻录 FreeBSD 镜像到 U 盘。
+下载好 FreeBSD 镜像后，需要将其刻录到 U 盘上才能进行安装。本节将介绍如何刻录 FreeBSD 镜像到 U 盘。
 
 ### 建议使用 `-img` 或 `-img.xz` 格式的镜像
 
-制作 U 盘安装介质时，建议使用 `-img` 或 `-img.xz` 格式的镜像。`.iso` 镜像采用混合启动（Hybrid）模式，该模式同时支持从光驱和 U 盘启动，但可能未完全遵循 UEFI 规范，直接写入 U 盘可能导致启动错误。详见 [FreeBSD -.iso files not support written to USB drive](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=236786)，该 Bug 报告记录 ISO 镜像直接写入 USB 设备的兼容性问题。建议读者仅在使用光学介质/虚拟机/云平台安装时选用 `iso` 结尾的镜像。
+制作 U 盘安装介质时，建议使用 `-img` 或 `-img.xz` 格式的镜像。`.iso` 镜像采用混合启动（Hybrid）模式，该模式同时支持从光驱和 U 盘启动，但可能未完全遵循 UEFI 规范，直接写入 U 盘可能导致启动错误。详见 [FreeBSD -.iso files not support written to USB drive](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=236786)，该 Bug 报告记录 ISO 镜像直接写入 USB 设备的兼容性问题。建议读者仅在使用光学介质、虚拟机或云平台安装时选用 `iso` 结尾的镜像。
 
 当然，也存在例外情况。部分机器的 UEFI 固件支持从 `.iso` 镜像刻录的 U 盘启动（例如一些老款神舟电脑），但并非所有机器都支持此方式（例如部分小米电脑可能无法引导）。
 
