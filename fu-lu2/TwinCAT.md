@@ -206,6 +206,7 @@ $ doas sh /usr/local/share/examples/bhf/pkgrepo-set.sh china
 ```sh
 $ doas pkg update && doas pkg upgrade
 ```
+
 ## 安装 Beckhoff 开发工具包
 
 如果需要进行开发工作，我们可以安装 Beckhoff 提供的开发工具包。使用 doas 安装操作系统通用用户空间开发工具包：
