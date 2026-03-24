@@ -6,15 +6,13 @@ LXDE 是一款轻量级桌面环境，专注于资源利用效率和交互简洁
 
 ## 安装
 
-
 - 使用 pkg 安装：
 
 ```sh
 # pkg install lxde-meta xorg lightdm lightdm-gtk-greeter wqy-fonts xdg-user-dirs
 ```
 
-
-- 或者使用 Ports 安装：
+- 或使用 Ports 安装：
 
 ```sh
 # cd /usr/ports/x11/lxde-meta/ && make install clean 

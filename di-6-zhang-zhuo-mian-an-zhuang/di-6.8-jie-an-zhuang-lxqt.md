@@ -2,7 +2,7 @@
 
 ## LXQt 桌面环境概述
 
-LXQt 是一款轻量级桌面环境，基于 Qt 应用框架开发。作为 LXDE 桌面环境的 Qt 重写版本，LXQt 继承了其轻量高效的特性，同时采用现代化的 Qt 框架进行技术重构。本节将介绍如何在 FreeBSD 上安装和配置 LXQt。
+LXQt 是一款轻量级桌面环境，基于 Qt 应用框架开发。作为 LXDE 桌面环境的 Qt 重写版本，LXQt 继承了其轻量高效的特性，同时采用现代化的 Qt 框架进行技术重构。本节介绍如何在 FreeBSD 上安装和配置 LXQt。
 
 ## 安装 LXQt
 
@@ -13,7 +13,7 @@ LXQt 是一款轻量级桌面环境，基于 Qt 应用框架开发。作为 LXDE
 # pkg install xorg sddm lxqt gvfs wqy-fonts xdg-user-dirs
 ```
 
-- 或者使用 Ports 安装：
+- 或使用 Ports 安装：
 
 ```sh
 # cd /usr/ports/x11/xorg/ && make install clean
