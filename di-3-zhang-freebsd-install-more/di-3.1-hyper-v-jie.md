@@ -1,14 +1,14 @@
 # 3.1 使用 Hyper-V 安装 FreeBSD
 
-本节聚焦于 FreeBSD 操作系统在 Microsoft Hyper-V 虚拟化平台上的部署技术问题，旨在为读者提供一套完整的、经过验证的安装配置流程。本节内容基于 Windows 11 23H2 专业版与 FreeBSD 14.1-RELEASE 环境的实测结果，该环境具有较好的代表性，能够代表当前主流配置环境。
+本节介绍 FreeBSD 操作系统在 Microsoft Hyper-V 虚拟化平台上的部署方法，旨在为读者提供一套完整的、经过验证的安装配置流程。本节内容基于 Windows 11 23H2 专业版与 FreeBSD 14.1-RELEASE 环境的实测结果，该环境具有较好的代表性，能够反映当前主流配置环境。
 
 ## Hyper-V 简介
 
-Hyper-V 是微软公司（Microsoft）为 Windows / Windows Server 开发的企业级虚拟化管理程序（系统内置）。虚拟化管理程序是一种创建和运行虚拟机的软件，它允许在单个物理主机上同时运行多个独立的操作系统。Hyper-V 分为 Gen 1（第一代）和 Gen 2（第二代）两种虚拟机架构，两种架构在硬件支持和启动方式上存在技术差异。
+Hyper-V 是微软公司（Microsoft）为 Windows 和 Windows Server 开发的企业级虚拟化管理程序，属于系统内置组件。虚拟化管理程序是一种创建和运行虚拟机的软件，它允许在单个物理主机上同时运行多个独立的操作系统。Hyper-V 分为 Gen 1（第一代）和 Gen 2（第二代）两种虚拟机架构，两种架构在硬件支持和启动方式上存在技术差异。
 
 > **注意**
 >
-> Windows 家庭版/家庭中文版并不支持 Hyper-V。
+> Windows 家庭版和家庭中文版不支持 Hyper-V。
 
 Gen 1 与 Gen 2 的区别如下表所示：
 
@@ -26,7 +26,7 @@ Gen 1 与 Gen 2 的区别如下表所示：
 | Hyper-V 代数 | FreeBSD 版本 |                                鼠标                                |  键盘  |                                              备注                                              |
 | :----------: | :----------: | :----------------------------------------------------------------: | :----: | :--------------------------------------------------------------------------------------------: |
 |    Gen 1     |     13.0     |                                支持                                | 不支持 |                                               /                                                |
-|    Gen 2     |     13.0     | RELEASE [不支持](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=221074) |  支持  |                          需修改参数 `sysctl kern.evdev.rcpt_mask=6`（启用 evdev，让 Xorg 正确检测 PS/2 设备）                           |
+|    Gen 2     |     13.0     | [不支持](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=221074) |  支持  |                          需修改参数 `sysctl kern.evdev.rcpt_mask=6`（启用 evdev，让 Xorg 正确检测 PS/2 设备）                           |
 |    Gen 2     |     14.0     |                                支持                                |  支持  | 参见 [源代码](https://cgit.FreeBSD.org/src/commit/?id=21f4e817fde79d5de79bfbdf180d358ca5f48bf9) [备份](https://web.archive.org/web/20260117184405/https://cgit.freebsd.org/src/commit/?id=21f4e817fde79d5de79bfbdf180d358ca5f48bf9) |
 
 ### 参考文献
@@ -142,7 +142,7 @@ PS C:\Users\ykla> Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-H
 
 安装完成后，可对虚拟机进行基本功能测试。
 
-鼠标和键盘均可正常工作，可在宿主机和虚拟机间无缝切换，但虚拟机桌面分辨率无法自适应调整。
+鼠标和键盘均可正常工作，可在宿主机和虚拟机间无缝切换，但虚拟机桌面分辨率无法自适应调整。建议检查 Hyper-V 集成服务安装并参考 FreeBSD 文档以获取显示配置指南。
 
 ![Hyper-V](../.gitbook/assets/hp.jpg)
 

@@ -1,6 +1,6 @@
 # 3.4 安装双系统（先安装 FreeBSD）
 
-本节系统介绍在同一物理设备上部署 FreeBSD 与 Windows 多操作系统的技术方案，本小节聚焦于先安装 FreeBSD、再安装其他操作系统的场景。
+本节介绍在同一物理设备上部署 FreeBSD 与 Windows 多操作系统的技术方案，本小节聚焦于先安装 FreeBSD、再安装其他操作系统的场景。
 
 > **注意**
 >
@@ -17,7 +17,6 @@
 > **技巧**
 >
 > 如果在此处设置 `P Partition Scheme` 为 `GPT (UEFI)` 而非其他（只有老电脑才需要 `GPT (BIOS+UEFI)` 等选项），后续分区与系统更新过程会更加简单，也能实现 4K 对齐。
-
 
 ![](../.gitbook/assets/shuang3.png)
 

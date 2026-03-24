@@ -1,13 +1,12 @@
 # 3.3 使用 VirtualBox 安装 FreeBSD
 
-本节系统介绍在 Oracle VirtualBox 开源虚拟化平台上部署 FreeBSD 操作系统的技术方案与配置细节。
+本节介绍在 Oracle VirtualBox 开源虚拟化平台上部署 FreeBSD 操作系统的技术方案与配置细节。
 
 ## 下载 VirtualBox
 
 首先需要下载并安装 VirtualBox 虚拟机软件，这是实施后续操作的必要前提。
 
-访问该官方网站，点击页面右侧的 `Download` 按钮即可下载对应版本的安装程序。
-
+访问官方网站，点击页面右侧的 `Download` 按钮即可下载对应版本的安装程序。
 
 [https://www.virtualbox.org](https://www.virtualbox.org) [备份](https://web.archive.org/web/20260118024400/https://www.virtualbox.org/)
 
@@ -50,7 +49,7 @@ VirtualBox 安装完成后，按照以下步骤创建并配置虚拟机。以下
 
 ![](../.gitbook/assets/vb5.5.png)
 
-开始安装！
+开始安装。
 
 ![](../.gitbook/assets/vb6.png)
 
@@ -80,7 +79,7 @@ VirtualBox 提供多种网络配置方式，以下介绍两种常用的网络设
 
 ![](../.gitbook/assets/VBbridge.png)
 
-设置后 `# dhclient em0` 即可（为了长期生效可在 `/etc/rc.conf` 中加入 `ifconfig_em0="DHCP"`）。
+设置后执行 `# dhclient em0` 即可（为了长期生效可在 `/etc/rc.conf` 中加入 `ifconfig_em0="DHCP"`）。
 
 如果无法访问互联网，请将 DNS 设置为 `223.5.5.5`。如不清楚具体操作，请参阅本章其他部分。
 
@@ -90,7 +89,7 @@ VirtualBox 提供多种网络配置方式，以下介绍两种常用的网络设
 >
 > 与 VMware 不同，VirtualBox 的默认 NAT 模式下，主机和虚拟机无法直接互通。虚拟机可以访问主机的特殊地址 `10.0.2.2` 及其上运行的服务，但主机无法访问虚拟机的端口，各虚拟机之间网络也相互隔离。参见 [Network Address Translation (NAT)](https://www.virtualbox.org/manual/topics/networkingdetails.html#network_nat)。你也可以按照手册中的端口转发来连通网络。
 
-网络设置比较复杂，有时桥接不一定可以生效。为了达到使用宿主机（如 Windows 10）控制虚拟机里的 FreeBSD 系统的目的，需要设置两块网卡——一块是 NAT 网络模式的网卡用来上网、另一块是仅主机模式的网卡用来互通宿主机。如图所示：
+网络设置比较复杂，有时桥接不一定可以生效。为了达到使用宿主机（如 Windows 11）控制虚拟机里的 FreeBSD 系统的目的，需要设置两块网卡——一块是 NAT 网络模式的网卡用来上网、另一块是仅主机模式的网卡用来互通宿主机。如图所示：
 
 ![](../.gitbook/assets/vbnat1.png)
 
