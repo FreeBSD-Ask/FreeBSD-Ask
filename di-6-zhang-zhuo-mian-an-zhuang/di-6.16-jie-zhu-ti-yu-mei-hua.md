@@ -2,9 +2,9 @@
 
 FreeBSD 安装桌面环境后，默认通常采用简单朴素的色调。这种未加修饰的设定，可能一时会让新用户不太习惯。为了提升系统的美观度，我们将在本节尝试添加主题和图标。
 
->**注意**
+> **注意**
 >
->本节仅涉及 `GTK` 库的桌面主题，囊括 `GNOME`、`Xfce`、`MATE`、`Cinnamon` 和 `LXDE` 等桌面环境。
+> 本节仅涉及 `GTK` 库的桌面主题，囊括 `GNOME`、`Xfce`、`MATE`、`Cinnamon` 和 `LXDE` 等桌面环境。
 
 
 以下仅收录部分图标和主题，如需获取更多资源，可访问 [FreshPorts](https://www.freshports.org)。
@@ -80,9 +80,9 @@ $ ./install.sh  # 执行安装脚本安装图标主题
 
 ## 系统更新提示 `freebsd-update-notify`
 
->**技巧**
+> **技巧**
 >
->FreeBSD 上的 KDE6 自带类似功能，无需安装 `freebsd-update-notify`，本教程仅做示例。
+> FreeBSD 上的 KDE6 自带类似功能，无需安装 `freebsd-update-notify`，本教程仅做示例。
 
 
 `freebsd-update-notify` 可以自动检测 FreeBSD 系统和 pkg 包的更新。
@@ -114,9 +114,9 @@ hours-between-reminders     8   # 提醒间隔（小时）
 ### 图片示例
 
 
->**注意**
+> **注意**
 >
->截图为手动执行示例，实际上程序可以在后台自动运行，无需手动验证。若无法再现，可以尝试将 `freebsd-update-notify.conf` 中两个值都改为 `0`，再手动以 `root` 权限执行 `/usr/local/libexec/freebsd-update-notify`。
+> 截图为手动执行示例，实际上程序可以在后台自动运行，无需手动验证。若无法再现，可以尝试将 `freebsd-update-notify.conf` 中两个值都改为 `0`，再手动以 `root` 权限执行 `/usr/local/libexec/freebsd-update-notify`。
 
 日志位于 `/var/log/freebsd-update-cron` 和 `/var/log/freebsd-update-notify`。若要反馈故障，请使用英文提交 [issue](https://github.com/outpaddling/freebsd-update-notify/issues) [备份](https://web.archive.org/web/20260121102145/https://github.com/outpaddling/freebsd-update-notify/issues)。
 

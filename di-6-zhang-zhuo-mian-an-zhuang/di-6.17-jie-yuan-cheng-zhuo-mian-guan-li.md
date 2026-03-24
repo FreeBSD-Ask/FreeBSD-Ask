@@ -76,7 +76,7 @@ Password written to: /root/.vnc/passwd
 $ x11vnc -display :0 -rfbauth ~/.vnc/passwd -auth $(find /var/run/sddm/ -type f)
 ```
 
->**警告**
+> **警告**
 >
 > SDDM 左下角选择 `Wayland` 无法进入，因为 x11vnc 尚不支持 Wayland。
 
@@ -146,9 +146,9 @@ xsetroot -solid grey        # 设置 X 根窗口背景为灰色
 读者使用哪个桌面，就删除该桌目前面的注释 `#` 即可。
 
 
->**警告**
+> **警告**
 >
->请注意保留 `&`。
+> 请注意保留 `&`。
 
 设置 xstartup 脚本为可执行权限：
 
@@ -668,9 +668,9 @@ $ anydesk
 
 ## RustDesk 中继服务器
 
->**注意**
+> **注意**
 >
->这是中继 ID 服务器，本身不能被远程控制。
+> 这是中继 ID 服务器，本身不能被远程控制。
 
 换言之，你没法用 RustDesk 控制 FreeBSD。
 

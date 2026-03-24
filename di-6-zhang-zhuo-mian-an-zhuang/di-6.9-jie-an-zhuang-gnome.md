@@ -1,12 +1,12 @@
 # 6.9 GNOME
 
->**警告**
+> **警告**
 >
->目前因为 [Bug 287955 - x11/gdm: The user cannot log in; the system hangs at the login screen in gdm 47](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=287955)，gdm 无法正常使用，会卡在登录界面，`startx` 正常。
+> 目前因 [Bug 287955 - x11/gdm: The user cannot log in; the system hangs at the login screen in gdm 47](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=287955)，gdm 无法正常使用，会卡在登录界面，`startx` 正常。
 >
->虚拟机正常。
+> 虚拟机正常。
 
-GNOME 过去曾是 GNU 项目的组成部分，旨在开发一套功能完备的桌面环境，目前主要由红帽公司主导开发与维护。作为 Linux 与类 Unix 系统中广泛采用的主流桌面环境之一，GNOME 以其简洁现代的设计理念著称。值得注意的是，在英语发音中，GNOME 中的首字母 `G` 不发音（音标为 /ˈnoʊm/）。
+GNOME 过去曾是 GNU 项目的组成部分，旨在开发一套功能完备的桌面环境，目前主要由红帽公司主导开发与维护。作为 Linux 与类 Unix 系统中广泛采用的主流桌面环境之一，GNOME 以其简洁现代的设计理念著称。需注意的是，在英语发音中，GNOME 的首字母 `G` 不发音（音标为 /ˈnoʊm/）。
 
 ## 安装
 
@@ -16,7 +16,7 @@ GNOME 过去曾是 GNU 项目的组成部分，旨在开发一套功能完备的
 # pkg install xorg gnome noto-sc
 ```
 
-- 或者使用 Ports 安装：
+- 或使用 Ports 安装：
 
 ```sh
 # cd /usr/ports/x11/xorg/ && make install clean
@@ -144,9 +144,9 @@ GNOME 捆绑的输入法框架是 `ibus`。
 
 参见输入法相关章节。
 
->**警告**
+> **警告**
 >
->IBus 是 GNOME 的依赖，不能卸载。也就是说可以不使用 IBus，但不能将其卸载，否则将卸载 GNOME 本体。
+> IBus 是 GNOME 的依赖，不能卸载。也就是说可以不使用 IBus，但不能将其卸载，否则将卸载 GNOME 本体。
 
 ![FreeBSD Gnome](../.gitbook/assets/gnome4-1.png)
 

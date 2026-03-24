@@ -2,11 +2,11 @@
 
 ## NVIDIA 显卡驱动概述
 
-对于台式机，若 CPU 是英特尔处理器，且型号以 F（如 [i5-9400F](https://www.intel.cn/content/www/cn/zh/products/sku/190883/intel-core-i59400f-processor-9m-cache-up-to-4-10-ghz/specifications.html) [备份](https://web.archive.org/web/20260120221551/https://www.intel.cn/content/www/cn/zh/products/sku/190883/intel-core-i59400f-processor-9m-cache-up-to-4-10-ghz/specifications.html)）或者 KF（如 [i5-12600KF](https://www.intel.cn/content/www/cn/zh/products/sku/134590/intel-core-i512600kf-processor-20m-cache-up-to-4-90-ghz/specifications.html) [备份](https://web.archive.org/web/20260121072407/https://www.intel.cn/content/www/cn/zh/products/sku/134590/intel-core-i512600kf-processor-20m-cache-up-to-4-90-ghz/specifications.html)）结尾，则该型号没有核芯显卡，不需要处理核显相关配置。
+对于台式机，若 CPU 是英特尔处理器，且型号以 F（如 [i5-9400F](https://www.intel.cn/content/www/cn/zh/products/sku/190883/intel-core-i59400f-processor-9m-cache-up-to-4-10-ghz/specifications.html) [备份](https://web.archive.org/web/20260120221551/https://www.intel.cn/content/www/cn/zh/products/sku/190883/intel-core-i59400f-processor-9m-cache-up-to-4-10-ghz/specifications.html)）或 KF（如 [i5-12600KF](https://www.intel.cn/content/www/cn/zh/products/sku/134590/intel-core-i512600kf-processor-20m-cache-up-to-4-90-ghz/specifications.html) [备份](https://web.archive.org/web/20260121072407/https://www.intel.cn/content/www/cn/zh/products/sku/134590/intel-core-i512600kf-processor-20m-cache-up-to-4-90-ghz/specifications.html)）结尾，则该型号没有核芯显卡，无需处理核显相关配置。
 
-若你已拥有独立显卡，且视频输出接口（DP 或 HDMI）直接连接至独立显卡，则通常无需对核显进行任何配置，仅需处理独立显卡本身的驱动即可。
+若已拥有独立显卡，且视频输出接口（DP 或 HDMI）直接连接至独立显卡，则通常无需对核显进行任何配置，仅需处理独立显卡本身的驱动即可。
 
-对于不具备显卡直通能力的笔记本设备，必须先按照其他章节内容安装配置英特尔核显驱动（相关 DRM 模块），再参照下文进行配置！
+对于不具备显卡直通能力的笔记本设备，必须先按照其他章节内容安装配置英特尔核显驱动（相关 DRM 模块），再参照下文进行配置。
 
 ## 加入 video 组
 
@@ -24,14 +24,14 @@
 # pkg install nvidia-drm-kmod nvidia-settings
 ```
 
-或者使用 Ports 安装：
+或使用 Ports 安装：
 
 ```sh
 # cd /usr/ports/graphics/nvidia-drm-kmod/ && make install clean
 # cd /usr/ports/x11/nvidia-settings/ && make install clean
 ```
 
-列出已经安装的 NVIDIA 相关软件：
+列出已安装的 NVIDIA 相关软件：
 
 ```sh
 # pkg info -q | grep -i nvidia
@@ -47,22 +47,22 @@
 # sysrc -f /etc/rc.conf kld_list+=nvidia-modeset       # 添加 nvidia-modeset 内核模块以便启动时加载
 ```
 
->**警告**
+> **警告**
 >
->请勿尝试加载 `nvidia-drm.ko` 内核模块，该操作可能导致系统崩溃。
+> 请勿尝试加载 `nvidia-drm.ko` 内核模块，该操作可能导致系统崩溃。
 
 ### 生成 X11 配置文件
 
-需要注意的是，若系统可正常显示，则无需执行本节内容！
+需注意的是，若系统可正常显示，则无需执行本节内容。
 
 ```sh
 # Xorg -configure                     # 自动生成 Xorg 配置文件
 # cp /root/xorg.conf.new /etc/X11/xorg.conf  # 将生成的配置文件复制到 /etc/X11/xorg.conf
 ```
 
->**警告**
+> **警告**
 >
->不要试图安装和使用 Port `x11/nvidia-xconfig`。该工具当前不适用，可能导致系统无响应。
+> 不要试图安装和使用 Port `x11/nvidia-xconfig`。该工具当前不适用，可能导致系统无响应。
 
 
 ## 硬件加速和解码器
@@ -75,7 +75,7 @@
 # pkg install libva-vdpau-driver libvdpau libvdpau-va-gl
 ```
 
-- 或者使用 Ports 安装：
+- 或使用 Ports 安装：
 
 ```sh
 # cd /usr/ports/multimedia/libva-vdpau-driver/ && make install clean
@@ -83,11 +83,11 @@
 # cd /usr/ports/multimedia/libvdpau-va-gl/ && make install clean
 ```
 
-然后重新启动后即可正常使用 NVIDIA 驱动。
+重新启动后即可正常使用 NVIDIA 驱动。
 
 ## 查看 NVIDIA 驱动状态
 
-- 列出所有 NVIDIA GPU 及其详细信息
+- 列出所有 NVIDIA GPU 及其详细信息：
 
 ```sh
 $ nvidia-smi 
@@ -123,7 +123,7 @@ Mon Jan 19 19:06:59 2026
 
 ![](../.gitbook/assets/nvi2.png)
 
-- 用 MPV 打开一部电影，可以看到显存使用量明显上升（我是从 3 MB 上升到了数百兆），也可以用 SMPlayer 观看。
+- 使用 MPV 打开电影，可见显存使用量明显上升（从 3 MB 上升至数百兆），也可使用 SMPlayer 观看。
 
 ![](../.gitbook/assets/nvi1.jpg)
 
@@ -137,13 +137,13 @@ Mon Jan 19 19:06:59 2026
 
 ![](../.gitbook/assets/no-version-vo.jpg)
 
-当执行 nvidia-smi 命令时会出现错误提示“API mismatch”等字样。该错误直译表示 API 不匹配，问题通常源于版本兼容性问题，即可能存在以下几种情况：NVIDIA 驱动组件本身版本不匹配、NVIDIA 驱动与其他 NVIDIA 软件包版本不匹配、NVIDIA 驱动与当前 FreeBSD 基本系统版本不匹配。
+执行 nvidia-smi 命令时出现错误提示“API mismatch”等字样。该错误表示 API 不匹配，问题通常源于版本兼容性问题，可能存在以下几种情况：NVIDIA 驱动组件本身版本不匹配、NVIDIA 驱动与其他 NVIDIA 软件包版本不匹配、NVIDIA 驱动与当前 FreeBSD 基本系统版本不匹配。
 
-因此建议将所有 NVIDIA 软件包全部卸载，随后将 FreeBSD 基本系统更新到最新，再重新执行驱动安装流程。
+建议将所有 NVIDIA 软件包卸载，随后将 FreeBSD 基本系统更新到最新，再重新执行驱动安装流程。
 
 ### 如何卸载既有 NVIDIA 相关软件包
 
-如果提示版本不符，需要先卸载所有安装的 NVIDIA 相关软件包，然后按本文进行配置：
+若提示版本不符，需先卸载所有已安装的 NVIDIA 相关软件包，然后按本文进行配置：
 
 ```sh
 # pkg delete *nvidia*
@@ -151,16 +151,16 @@ Mon Jan 19 19:06:59 2026
 
 ### 如何阻止驱动更新
 
-把 `pkg info -q | grep -i nvidia` 输出的相关软件包都逐个使用 `pkg lock` 命令锁定即可。
+将 `pkg info -q | grep -i nvidia` 输出的相关软件包逐个使用 `pkg lock` 命令锁定即可。
 
-形如
+例如：
 
 ```sh
 # pkg lock nvidia-drm-kmod
 # pkg lock nvidia-settings
 ```
 
-但是如果运行 `freebsd-update` 命令，或者执行 pkgbase 对系统打补丁或更新补丁也可能会影响驱动。
+但若运行 `freebsd-update` 命令，或执行 pkgbase 对系统打补丁或更新补丁，也可能影响驱动。
 
 因此需要读者自行平衡安全需求与日常使用。
 
