@@ -8,9 +8,9 @@ BSD 许可证条款编号用于表征附加义务和限制条件的复杂度。0
 
 ## BSD 零条款许可证（Zero-Clause BSD，0BSD）
 
-BSD 零条款许可证是 BSD 许可证系列中限制最少的一种。
+BSD 零条款许可证是 BSD 许可证系列中限制最少的一种，尽管其名称包含 "BSD"，但它并非来自传统的 BSD 家族。
 
-此许可证是 ISC 许可证的变体。ISC 许可证源自 Internet Systems Consortium，是一种简洁的宽松许可证。0BSD 并非来自 BSD 家族，而是一种类似公共领域的宽松许可证。
+此许可证是 ISC 许可证的变体。ISC 许可证源自 Internet Systems Consortium，是一种简洁的宽松许可证。0BSD 是一种类似公共领域的宽松许可证。
 
 ```
 Zero-Clause BSD
@@ -37,7 +37,7 @@ BSD 零条款许可证
 本软件按“原样”提供，作者不对本软件作出任何保证，包括所有对适销性和适用性的暗示保证。在任何情况下，作者均不对因使用、数据或利润的损失所造成的任何特殊、直接、间接或后果性损害，或任何形式的损害承担责任，无论该损害是在合同诉讼、过失或其他侵权行为中引起，或由使用或执行本软件所引起。
 
 
-## BSD 一条款许可证（1-clause BSD License，BSD-1-Clause）
+## BSD 一条款许可证（The 1-Clause BSD License，BSD-1-Clause）
 
 BSD 一条款许可证在零条款的基础上增加了版权声明的要求。
 
@@ -92,7 +92,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 ## BSD 三条款许可证（The 3-Clause BSD License，BSD-3-Clause）
 
-BSD 三条款许可证在两条款的基础上增加了对使用作者名义推广的限制。BSD 三条款许可证亦称为新 BSD 许可证、修改版 BSD 许可证。此许可证删除了 BSD 四条款许可证中的广告条款，额外限制以作者名义推广衍生产品。
+BSD 三条款许可证在两条款的基础上增加了对使用作者名义推广的限制。BSD 三条款许可证亦称为新 BSD 许可证、修改版 BSD 许可证。此许可证删除了原始 BSD 许可证（即 BSD-4-Clause）中的广告条款，额外限制以作者名义推广衍生产品。
 
 ```
 Copyright <年份> <版权持有者>
@@ -124,7 +124,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 ## BSD 四条款许可证（BSD 4-Clause "Original" or "Old" License，BSD-4-Clause）
 
-BSD 四条款许可证是 BSD 许可证的原始版本，具有较多的限制条件。BSD 四条款许可证即原始的 BSD 许可证，目前不被 OSI 认可。此许可证带有广告条款，要求在软件中声明使用了原作者的产品（参见下文第 3 条）。
+BSD 四条款许可证是 BSD 许可证的原始版本，具有较多的限制条件。BSD 四条款许可证即原始的 BSD 许可证，目前不被 OSI 认可。此许可证带有广告条款，要求在所有提及本软件功能或用途的广告材料中声明使用了原作者的产品（参见下文第 3 条）。
 
 ```
 Copyright (c) <年份> <持有者>. All rights reserved.
