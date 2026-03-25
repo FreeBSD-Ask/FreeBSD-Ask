@@ -176,7 +176,7 @@
   - “10.3 Mihomo（Clash）”新增“RC 脚本”。已向 Ports 维护者发出请求合并（[Bug 291295 - net/mihomo: Add rc.conf and some Post-installation](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=291295)  ），但未予回应。
   - 将“4.10 文件系统的挂载和卸载”、“4.11 磁盘结构”合并到“4.10 文件系统基础”
   - 将“4.12 目录结构”拆分到“4.11 系统目录结构”和“24.6 FreeBSD 源代码目录结构”
-  - 根据编纂发现，增补 [Bug 236786 FreeBSD -.iso files not support written to USB drive](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=236786) 
+  - 根据编纂发现，增补 [Bug 236786 FreeBSD -.iso files not support written to USB drive](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=236786)
 - 2025.12.8
   - “5.1 FreeBSD 镜像站现状”新增“拒绝开放的可能性原因分析”
 - 2025.12.7
@@ -185,7 +185,7 @@
 - 2025.12.6
   - 将“5.9 使用 pkgbase 更新 FreeBSD”完全重写为“5.9 使用 ZFS 启动环境更新 FreeBSD 并实现多版本共存”
 - 2025.12.5
-  - 新增 ZFS 脚本，可用于查看、创建、删除、恢复 ZFS 快照。[FreeBSD-Ask/zfs-snap 项目地址](https://github.com/FreeBSD-Ask/zfs-snap) 
+  - 新增 ZFS 脚本，可用于查看、创建、删除、恢复 ZFS 快照。[FreeBSD-Ask/zfs-snap 项目地址](https://github.com/FreeBSD-Ask/zfs-snap)
   - 同时将 ZFS 脚本部署到了 <https://docs.bsdcn.org/zfs.sh>，方便直接 `fetch` 下载使用
   - “25.4 ZFS 启动环境”新增“附录：多版本/系统共存的 ZFS 版本问题”
 - 2025.12.4
@@ -217,11 +217,11 @@
 - 2025.11.26
   - 全面重写“致读者”
   - “24.3 机器无关的内核选项”引入 75%（按行数计）
-    - 根据编纂发现，提交 [Fix typos and unify Realtek terminology](https://github.com/freebsd/freebsd-src/pull/1901) 
+    - 根据编纂发现，提交 [Fix typos and unify Realtek terminology](https://github.com/freebsd/freebsd-src/pull/1901)
 - 2025.11.25
   - “24.3 机器无关的内核选项”引入 69%（按行数计）
-    - 根据编纂发现，提交 [NOTES: Fix a typo in a comments](https://github.com/freebsd/freebsd-src/pull/1899) 
-    - 根据编纂发现，提交 [NOTES: Remove duplicate options KCSAN entries](https://github.com/freebsd/freebsd-src/pull/1900) 
+    - 根据编纂发现，提交 [NOTES: Fix a typo in a comments](https://github.com/freebsd/freebsd-src/pull/1899)
+    - 根据编纂发现，提交 [NOTES: Remove duplicate options KCSAN entries](https://github.com/freebsd/freebsd-src/pull/1900)
   - 由于内容不足以构成一章，将“第 24 章 DragonFly BSD 入门”压缩到附录 Ⅱ“DragonFly BSD 导论”
   - 新增“第 24 章 FreeBSD 内核”，将“22.16 FreeBSD 内核配置选项”分别拆分为：
     - 24.1 FreeBSD 内核选项概述
@@ -240,10 +240,10 @@
   - “5.4 使用 pkg 管理二进制包”重写“使用 pkg 安装软件”
 - 2025.11.17
   - “4.1 Windows 用户迁移指南”新增“深入阅读”
-  - FreeBSD 安装镜像缺乏 kmod 的离线包，提交 [Bug 291052 - Request to offline-distribute kernel modules and pkg(8) repositories in iso and img images.](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=291052) 
+  - FreeBSD 安装镜像缺乏 kmod 的离线包，提交 [Bug 291052 - Request to offline-distribute kernel modules and pkg(8) repositories in iso and img images.](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=291052)
 - 2025.11.14
   - “3.3 使用 Virtual Box 安装 FreeBSD”增补“网络设置”
-  - Port [net/wutil](https://www.freshports.org/net/wutil)  测试失败，提交 issue [wutil: no wpa ctrl interface on default path, provide --ctrl-interface: No error: 0](https://github.com/MainKt/wutil/issues/2) 
+  - Port [net/wutil](https://www.freshports.org/net/wutil)  测试失败，提交 issue [wutil: no wpa ctrl interface on default path, provide --ctrl-interface: No error: 0](https://github.com/MainKt/wutil/issues/2)
   - “6.3 KDE6（X11）”新增“附录：解决开机时总是自动打开特定程序”
 - 2025.11.13
   - CSP 配置错误，已经移除
@@ -254,9 +254,9 @@
 - 2025.11.9
   - 除特别注明外，本书的文字、图表等内容依据 CC BY 4.0 协议发布。书中所有代码示例依据 BSD 二条款许可发布。
   - 移除“12.5 无线网络环境下使用 bhyve”与“12.2 使用 bhyve 安装 Windows 11（vm-bhyve）”的“可选配置”章节。引用不符合规范
-  - 将上面移除的内容涉及的 wiki 全部翻译，并放在 [vm-bhyve Wiki](https://book.bsdcn.org/wen-zhang/wen-zhang/vm-bhyve) 
+  - 将上面移除的内容涉及的 wiki 全部翻译，并放在 [vm-bhyve Wiki](https://book.bsdcn.org/wen-zhang/wen-zhang/vm-bhyve)
 - 2025.11.8
-  - 由于 FreeBSD 的默认 ESP 不符合 UEFI 规范，提交 [Bug 290857 - bsdinstall: The ESP on FreeBSD Should Be FAT32 Instead of FAT16: D28897 Is Actually Ineffective](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=290857) 
+  - 由于 FreeBSD 的默认 ESP 不符合 UEFI 规范，提交 [Bug 290857 - bsdinstall: The ESP on FreeBSD Should Be FAT32 Instead of FAT16: D28897 Is Actually Ineffective](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=290857)
 - 2025.11.5
   - “26.5 桌面和其他软件”新增故障排除，解决“KDE 无声音”
   - 增补贡献指南
@@ -401,7 +401,7 @@
 - 2025.6.15
   - 计划全面重写 FreeBSD 手册
 - 2025.6.14
-  - 重新引入：[贡献指南与开放任务](CONTRIBUTING.md) 
+  - 重新引入：[贡献指南与开放任务](CONTRIBUTING.md)
 - 2025.6.13
   - 第 1.1 节 操作系统的历程：UNIX、Unix-like、Linux & FreeBSD 重写：什么是 Linux？
   - 第 1.1 节 操作系统的历程：UNIX、Unix-like、Linux & FreeBSD 新增：GNU 与自由软件运动
@@ -528,7 +528,7 @@
   - “桌面与中文环境常用软件”新增输入法
   - “桌面与中文环境常用软件”新增中文环境
   - NetBSD KDE 4 UEFI 下测试失败，还是黑屏，报错见 <https://gnats.netbsd.org/57554>
-  - “第 16.5 节 Wildfly”测试失败，见 [Bug 285956 - java/wildfly: service start fail, illegal group name](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=285956) 
+  - “第 16.5 节 Wildfly”测试失败，见 [Bug 285956 - java/wildfly: service start fail, illegal group name](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=285956)
 - 2025.4.7
   - 全译现有所有安装后说明
   - 从 [2024.8-3533 次](https://github.com/FreeBSD-Ask/FreeBSD-Ask/commit/c4d657fb586f91e9f8664ee1181a2711f7350d17)  开始，目前对全书初版已重写 94%（按 Commit 数），下同
@@ -704,7 +704,7 @@
   - 添加“献词”
   - 添加“凡例”，将“序言”中非序言部分移动至此。
 - 2025.1.13
-  - 关闭 Issue [第 1.5 章，内容有误](https://github.com/FreeBSD-Ask/FreeBSD-Ask/issues/159) 
+  - 关闭 Issue [第 1.5 章，内容有误](https://github.com/FreeBSD-Ask/FreeBSD-Ask/issues/159)
   - 新增“第 2.11 节 Qemu 安装 RISC-V FreeBSD（基于 x86 Windows）”
   - 新增“第 4.23 节 安装 Fluxbox”
   - 新增“第 4.24 节 安装 IceWM”
@@ -1121,7 +1121,7 @@
 - 2023.4.27
   - 经过 safreya 的提醒，目前 KDE 已不需要 procfs，移除教程中所有对其引用链接和说明
 - 2023.4.15
-  - 经过 safreya 的提醒，移除不存在的服务项 `gnome_enable="YES"`。同时提交 PR 到了 FreeBSD 手册，[The gnome service does not exist](https://reviews.freebsd.org/D39580) 
+  - 经过 safreya 的提醒，移除不存在的服务项 `gnome_enable="YES"`。同时提交 PR 到了 FreeBSD 手册，[The gnome service does not exist](https://reviews.freebsd.org/D39580)
   - “第4.8节 root 登录桌面”增补“GDM（GNOME 显示管理器）”
 - 2023.4.13
   - 更新“第11.1节 通过 freebsd-update 更新”

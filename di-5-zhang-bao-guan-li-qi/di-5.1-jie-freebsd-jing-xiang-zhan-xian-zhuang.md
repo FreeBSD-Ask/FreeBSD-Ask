@@ -115,8 +115,8 @@ TUNA: <https://github.com/tuna/issues/issues/16>
 
 如果有条件搭建非官方镜像，可以使用 USTCLUG 所提供的同步脚本：
 
-- [FreeBSD-pkg Script](https://github.com/ustclug/ustcmirror-images/blob/master/freebsd-pkg/sync.sh) 
-- [FreeBSD-ports Script](https://github.com/ustclug/ustcmirror-images/blob/master/freebsd-ports/sync-ports.sh) 
+- [FreeBSD-pkg Script](https://github.com/ustclug/ustcmirror-images/blob/master/freebsd-pkg/sync.sh)
+- [FreeBSD-ports Script](https://github.com/ustclug/ustcmirror-images/blob/master/freebsd-ports/sync-ports.sh)
 
 来搭建非官方镜像站。赠人玫瑰，手留余香。
 
@@ -143,8 +143,8 @@ FreeBSD 在中国大陆境内没有官方镜像站；在中国台湾地区有官
 
 FreeBSD 在中国大陆境内为数不多且能正常同步的镜像站，均未使用 `rsync` 等方式进行同步，而是采取了一些特殊“手段”，参见 USTCLUG 所提供的同步脚本：
 
-- [FreeBSD-pkg 脚本](https://github.com/ustclug/ustcmirror-images/blob/master/freebsd-pkg/sync.sh) 
-- [FreeBSD-ports 脚本](https://github.com/ustclug/ustcmirror-images/blob/master/freebsd-ports/sync-ports.sh) 
+- [FreeBSD-pkg 脚本](https://github.com/ustclug/ustcmirror-images/blob/master/freebsd-pkg/sync.sh)
+- [FreeBSD-ports 脚本](https://github.com/ustclug/ustcmirror-images/blob/master/freebsd-ports/sync-ports.sh)
 
 > **注意**
 >
@@ -156,7 +156,7 @@ FreeBSD 目前在大陆非官方镜像站有若干个：
   - FreeBSD Pub <https://mirrors.ustc.edu.cn/freebsd/>
   - FreeBSD Packages <https://mirrors.ustc.edu.cn/freebsd-pkg/>
   - FreeBSD Ports
-    - [使用文档](https://mirrors.ustc.edu.cn/help/freebsd-ports.html) 
+    - [使用文档](https://mirrors.ustc.edu.cn/help/freebsd-ports.html)
     - <https://mirrors.ustc.edu.cn/freebsd-ports/>
   - 联系方式：[lug@ustc.edu.cn](mailto:lug@ustc.edu.cn)
 
@@ -169,7 +169,7 @@ FreeBSD 目前在大陆非官方镜像站有若干个：
   - FreeBSD Pub <https://mirrors.nju.edu.cn/freebsd/>
   - FreeBSD Packages <https://mirrors.nju.edu.cn/freebsd-pkg/>
   - FreeBSD Ports <https://mirrors.nju.edu.cn/freebsd-ports/>
-  - 联系方式：[GitHub Issue](https://github.com/nju-lug/NJU-Mirror-Issue/issues) 
+  - 联系方式：[GitHub Issue](https://github.com/nju-lug/NJU-Mirror-Issue/issues)
 
 FreeBSD 官方联系方式：
 

@@ -59,9 +59,9 @@ FreeBSD 镜像站（无论是官方的还是非官方的）的软件源存在以
 
 > **思考题**
 >
-> - 相关讨论 [the disappearing pkg issue](https://www.reddit.com/r/freebsd/comments/1nlnwtd/the_disappearing_pkg_issue/) 
-> - pkg 项目位于 [freebsd/pkg](https://github.com/freebsd/pkg) 
-> - pkg 软件包的构建系统位于 [Poudriere](https://github.com/freebsd/poudriere) 
+> - 相关讨论 [the disappearing pkg issue](https://www.reddit.com/r/freebsd/comments/1nlnwtd/the_disappearing_pkg_issue/)
+> - pkg 项目位于 [freebsd/pkg](https://github.com/freebsd/pkg)
+> - pkg 软件包的构建系统位于 [Poudriere](https://github.com/freebsd/poudriere)
 >
 > 试一试：帮助 FreeBSD 项目实现 pkg 二进制软件包的原子更新？
 
@@ -153,7 +153,7 @@ Proceed with this action? [y/N]: # 此处输入 y 再按回车键即可安装
 
 > **思考题**
 >
->> [Add Concurrent Downloads of Multiple Packages](https://github.com/freebsd/pkg/issues/1628) 
+>> [Add Concurrent Downloads of Multiple Packages](https://github.com/freebsd/pkg/issues/1628)
 >
 > 你会发现 pkg 既不支持并行下载也不支持并行安装，阅读源代码，尝试解决这个问题并提交 PR。
 
@@ -182,7 +182,7 @@ pkg: No packages available to install matching 'chromium' have been found in the
 
 > **思考题**
 >
->> [Is it possible to add i18n multilingual support using po files?](https://github.com/freebsd/pkg/issues/2421) 
+>> [Is it possible to add i18n multilingual support using po files?](https://github.com/freebsd/pkg/issues/2421)
 >>
 >> FreeBSD 基本系统里没有 gettext，所以没有计划这样做，如果后续在 pkg 中出现可用的 libintl 套件，则可能会重新考虑。
 >
@@ -518,7 +518,7 @@ Ignore the mismatch and continue? [y/N]:
 以 root 权限执行 `certctl rehash` 刷新证书即可。
 
 
-参见 [pkg(8): "An error occured while fetching package: No error"](https://forums.freebsd.org/threads/pkg-8-an-error-occured-while-fetching-package-no-error.96761/) 
+参见 [pkg(8): "An error occured while fetching package: No error"](https://forums.freebsd.org/threads/pkg-8-an-error-occured-while-fetching-package-no-error.96761/)
 
 ## 课后习题
 

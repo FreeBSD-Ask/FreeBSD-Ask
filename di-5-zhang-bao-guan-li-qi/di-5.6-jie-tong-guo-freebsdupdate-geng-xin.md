@@ -4,7 +4,7 @@
 
 > **注意**
 >
-> 只有一级架构的 RELEASE 版本才提供该更新源。也就是说，CURRENT 和 STABLE 不提供该源。关于架构的支持等级说明请参见： [Supported Platforms](https://www.freebsd.org/platforms) 
+> 只有一级架构的 RELEASE 版本才提供该更新源。也就是说，CURRENT 和 STABLE 不提供该源。关于架构的支持等级说明请参见： [Supported Platforms](https://www.freebsd.org/platforms)
 
 >**注意**
 >

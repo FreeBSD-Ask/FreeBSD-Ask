@@ -85,8 +85,8 @@ Chromium 不是 Chrome，但在 FreeBSD 中的启动命令为 `chrome`。
 
 在开始获取 token 之前，需要先加入以下两个 Google 邮件列表论坛：
 
-- [Google browser sign-in test account](https://groups.google.com/u/0/a/chromium.org/g/google-browser-signin-testaccounts) 
-- [Chromium-dev](https://groups.google.com/a/chromium.org/g/chromium-dev) 
+- [Google browser sign-in test account](https://groups.google.com/u/0/a/chromium.org/g/google-browser-signin-testaccounts)
+- [Chromium-dev](https://groups.google.com/a/chromium.org/g/chromium-dev)
 
 ![](../.gitbook/assets/join-chromium-dev-for-api1.png)
 
@@ -100,7 +100,7 @@ Chromium 不是 Chrome，但在 FreeBSD 中的启动命令为 `chrome`。
 
 ![join-mail-list-for-google-api-error2](../.gitbook/assets/join-chromium--list-2error.png)
 
-之后，用浏览器打开 [谷歌云控制台网站](https://console.cloud.google.com/) 
+之后，用浏览器打开 [谷歌云控制台网站](https://console.cloud.google.com/)
 
 >**注意**
 >

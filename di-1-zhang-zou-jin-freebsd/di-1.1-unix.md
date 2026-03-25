@@ -21,7 +21,7 @@ UNIX 认证查询网址：[The Open Group official register of UNIX Certified Pr
 认证 UNIX 需要满足以下两项核心要件：
 
 1. 技术标准要求：符合[单一 UNIX 规范](https://www.opengroup.org/openbrand/register/xym0.htm)（Single UNIX Specification，SUS），该规范定义了 UNIX 系统必须实现的接口、命令、实用程序和库函数，确保不同 UNIX 系统间的兼容性。
-2. 法律与费用要求：缴纳相应的[认证费用](https://www.opengroup.org/openbrand/Brandfees.htm) 
+2. 法律与费用要求：缴纳相应的[认证费用](https://www.opengroup.org/openbrand/Brandfees.htm)
 
 
 常见的经过认证的 UNIX 操作系统有苹果公司（Apple）的 macOS。从商标角度讲，macOS 是标准的 UNIX 操作系统。~~故，要安装 UNIX 的人可以去黑苹果了~~
@@ -30,7 +30,7 @@ UNIX 认证查询网址：[The Open Group official register of UNIX Certified Pr
 >
 >macOS/iOS 等与 BSD 的关系
 >
->从历史角度看，macOS（以及由此衍生的 iOS、iPadOS 等）的核心层（Darwin）确实基于 BSD 代码，并融合了其他技术。它可被视为一款独立的、类 BSD 的操作系统分支，与 OpenBSD、NetBSD 和 FreeBSD 等系统类似。参见 [《苹果的开源基石：macOS 和 iOS 背后的 BSD 传统》](https://book.bsdcn.org/fan-yi-wen-zhang-cun-dang/2024-nian-11-yue/apple) 
+>从历史角度看，macOS（以及由此衍生的 iOS、iPadOS 等）的核心层（Darwin）确实基于 BSD 代码，并融合了其他技术。它可被视为一款独立的、类 BSD 的操作系统分支，与 OpenBSD、NetBSD 和 FreeBSD 等系统类似。参见 [《苹果的开源基石：macOS 和 iOS 背后的 BSD 传统》](https://book.bsdcn.org/fan-yi-wen-zhang-cun-dang/2024-nian-11-yue/apple)
 >
 >所以看似是安卓和苹果之争，其实是 Linux 与 BSD 之争。~~也许也是大教堂与市集之争。~~
 
@@ -53,7 +53,7 @@ Unix 哲学是在 UNIX 操作系统长期的开发实践中逐渐形成的一套
 >
 >> Those who do not understand Unix are condemned to reinvent it, poorly. （那些不懂 Unix 的人注定要再造一个四不像式 Unix）
 >>
->>——[Henry Spencer](https://www.nasa.gov/history/alsj/henry.html) 
+>>——[Henry Spencer](https://www.nasa.gov/history/alsj/henry.html)
 >
 >作者亨利·斯宾塞（Henry Spencer）并未明确批评哪个操作系统，那么你认为，现在这句话更适合哪个常见的操作系统？为什么？
 

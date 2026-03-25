@@ -8,7 +8,7 @@
 
 访问官方网站，点击页面右侧的 `Download` 按钮即可下载对应版本的安装程序。
 
-[https://www.virtualbox.org](https://www.virtualbox.org) 
+[https://www.virtualbox.org](https://www.virtualbox.org)
 
 ## 安装设置
 
