@@ -158,7 +158,7 @@ Makefile		pkg-plist-client	pkg-plist-plpython
 - ① `/usr/ports` 这个文件夹整体称作 Ports，包括几十种不同的分类目录，每个目录下有若干 Port。
 - ② `/usr/ports/databases/postgresql18-server` 这个文件夹整体称作一个 Port，由 `distinfo`（校验和文件）、`pkg-descr`（软件描述文件）、`Makefile`	（主文件，包含构建方法、版本号及下载方式等）、`pkg-plist`（安装文件列表及其权限和属组信息）、`files`（一般为补丁文件，该 Port 下还包含安装后的说明文件 `pkg-message`）等文件构成。
 
-之所以称为“Ports Collection”，移植集合（不应理解为端口集合）是因为这些软件绝大部分并不由 FreeBSD 控制、管理和维护。Port 提交者主要做的事情是将 FreeBSD 上 Port 更新到上游开发者提供的最新版本，删除上游不再维护的软件 Port。在上游不接受 BSD 特有的 PR 补丁或难以直接通过既有 Ports 框架实现构建的情况下，Port 维护者也需要自行复刻一个分支出来维护（如 [editors/vscode](https://github.com/tagattie/FreeBSD-VSCode) [备份](https://web.archive.org/web/20260121160204/https://github.com/tagattie/FreeBSD-VSCode)）。
+之所以称为“Ports Collection”，移植集合（不应理解为端口集合）是因为这些软件绝大部分并不由 FreeBSD 控制、管理和维护。Port 提交者主要做的事情是将 FreeBSD 上 Port 更新到上游开发者提供的最新版本，删除上游不再维护的软件 Port。在上游不接受 BSD 特有的 PR 补丁或难以直接通过既有 Ports 框架实现构建的情况下，Port 维护者也需要自行复刻一个分支出来维护（如 [editors/vscode](https://github.com/tagattie/FreeBSD-VSCode) ）。
 
 ## Ports 构建 pkg 软件包的流程
 
@@ -606,7 +606,7 @@ hw.ncpu: 16
 
 关于多线程编译和 CPU 特性的更多信息，可以参考以下资料。
 
-- [Easy way to get cpu features](https://forums.freebsd.org/threads/easy-way-to-get-cpu-features.10553/) [备份](https://web.archive.org/web/20260120221823/https://forums.freebsd.org/threads/easy-way-to-get-cpu-features.10553/)，获取 CPU 线程数量的命令来自此处。
+- [Easy way to get cpu features](https://forums.freebsd.org/threads/easy-way-to-get-cpu-features.10553/) ，获取 CPU 线程数量的命令来自此处。
 
 ## 设置内存为 `tmp`
 
@@ -828,7 +828,7 @@ Local storage:
 
 关于 ccache 的更多详细信息和使用方法，可以参考以下资料。
 
-- [ccache-howto-freebsd.txt.in](https://github.com/freebsd/freebsd-ports/blob/main/devel/ccache/files/ccache-howto-freebsd.txt.in) [备份](https://web.archive.org/web/20260129125259/https://github.com/freebsd/freebsd-ports/blob/main/devel/ccache/files/ccache-howto-freebsd.txt.in)
+- [ccache-howto-freebsd.txt.in](https://github.com/freebsd/freebsd-ports/blob/main/devel/ccache/files/ccache-howto-freebsd.txt.in)
 - [ccache -a fast C/C++ compiler cache](https://man.freebsd.org/cgi/man.cgi?query=ccache&sektion=1&n=1)
 
 ## 多线程下载
@@ -925,7 +925,7 @@ make: stopped in /usr/ports/java/openjdk21
 
 #### 参考文献
 
-- [Invalid perl5 version 5.32](https://forums.freebsd.org/threads/invalid-perl5-version-5-32.77628/) [备份](https://web.archive.org/web/20260120221833/https://forums.freebsd.org/threads/invalid-perl5-version-5-32.77628/)，出现了同样的问题
+- [Invalid perl5 version 5.32](https://forums.freebsd.org/threads/invalid-perl5-version-5-32.77628/) ，出现了同样的问题
 
 ## 课后习题
 

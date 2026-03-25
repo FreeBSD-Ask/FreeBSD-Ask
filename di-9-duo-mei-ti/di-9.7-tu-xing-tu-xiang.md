@@ -109,7 +109,7 @@ $ ffmpeg -i 视频文件.mp4 -vf subtitles=对应字幕.ass 输出视频.mp4
 
 ### 参考文献
 
-- Inkscape [官方教程](https://inkscape.org/zh-hans/learn/tutorials/) [备份](https://web.archive.org/web/20260121063653/https://inkscape.org/zh-hans/learn/tutorials/) 提供 Inkscape 矢量绘图软件的详细中文教程，涵盖基础操作与高级功能。
+- Inkscape [官方教程](https://inkscape.org/zh-hans/learn/tutorials/)  提供 Inkscape 矢量绘图软件的详细中文教程，涵盖基础操作与高级功能。
 
 ## 课后习题
 

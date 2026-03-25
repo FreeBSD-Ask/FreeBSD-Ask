@@ -4,7 +4,7 @@
 
 Xfce 项目旨在开发一款轻量级但功能完备的桌面环境。作为类 Unix 系统中广受欢迎的轻量级桌面环境之一，Xfce 以其资源占用率低、响应速度快而著称。
 
-Xfce 的 Logo 是一只 [老鼠 🐀](https://docs.xfce.org/faq#what_does_it_mean) [备份](https://web.archive.org/web/20260120221407/https://docs.xfce.org/faq#what_does_it_mean)。曾有用户反馈趣事，称因 Xfce 的默认壁纸是一只老鼠 🐀，导致自己的电脑屏幕被猫 🐈 抓坏（[\[joke\] The default desktop startup screen causes damage to monitor!](https://bugzilla.xfce.org/show_bug.cgi?id=12117)）。
+Xfce 的 Logo 是一只 [老鼠 🐀](https://docs.xfce.org/faq#what_does_it_mean) 。曾有用户反馈趣事，称因 Xfce 的默认壁纸是一只老鼠 🐀，导致自己的电脑屏幕被猫 🐈 抓坏（[\[joke\] The default desktop startup screen causes damage to monitor!](https://bugzilla.xfce.org/show_bug.cgi?id=12117)）。
 
 ## 安装 xfce4
 
@@ -197,9 +197,9 @@ fi
 
 ### 参考文献
 
-- [6.1 动态设置标题不起作用](https://docs.oracle.com/cd/E19683-01/817-1951/6mhl8aiii/index.html) [备份](https://web.archive.org/web/20251207044645/https://docs.oracle.com/cd/E19683-01/817-1951/6mhl8aiii/index.html)，bash 配置来自此处
-- [Wamphyre/BSD-XFCE](https://github.com/Wamphyre/BSD-XFCE) [备份](https://web.archive.org/web/20260121072214/https://github.com/Wamphyre/BSD-XFCE)，配置参考集合
-- [Zsh - Arch Linux 中文维基](https://wiki.archlinuxcn.org/wiki/Zsh) [备份](https://web.archive.org/web/20260122092937/https://wiki.archlinuxcn.org/wiki/Zsh)。Arch Linux 中文维基提供的 Zsh 配置详细教程，本文 Zsh 配置源自此。
+- [6.1 动态设置标题不起作用](https://docs.oracle.com/cd/E19683-01/817-1951/6mhl8aiii/index.html) ，bash 配置来自此处
+- [Wamphyre/BSD-XFCE](https://github.com/Wamphyre/BSD-XFCE) ，配置参考集合
+- [Zsh - Arch Linux 中文维基](https://wiki.archlinuxcn.org/wiki/Zsh) 。Arch Linux 中文维基提供的 Zsh 配置详细教程，本文 Zsh 配置源自此。
 
 ## 故障排除与未竟事宜
 

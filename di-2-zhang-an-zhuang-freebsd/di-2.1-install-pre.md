@@ -30,12 +30,12 @@ UEFI（Unified Extensible Firmware Interface）是现代计算机的固件接口
 | 无线网卡       | Intel AX 系列            | AX200                                                                    | Wi-Fi 5 速率与 Windows 11 IoT Enterprise 24H2 相当（使用 iperf2 测得）                                                               |
 | 有线网卡       | Realtek 2.5G             | RTL8125B                                                                 | 需要额外安装驱动，参见全书附录                                                                                                      |
 | 有线网卡       | Intel 2.5G               | i226-V                                                                   | 正常工作                                                                                                                            |
-| 显卡           | 近十年的 Intel 及 AMD 集成/独立显卡 | 英特尔锐炬® Xe 显卡、英特尔 HD Graphics 4000                               | 支持程度与 DRM 驱动移植进度相关；截至写作时，其代码状态约相当于 Linux 内核 6.10，最新进展请参见 [freebsd/drm-kmod](https://github.com/freebsd/drm-kmod/pulls) [备份](https://web.archive.org/web/20260115143641/https://github.com/freebsd/drm-kmod/pulls)。该仓库提供 FreeBSD 图形驱动内核模块更新，追踪 Linux DRM 驱动移植进度。 |
+| 显卡           | 近十年的 Intel 及 AMD 集成/独立显卡 | 英特尔锐炬® Xe 显卡、英特尔 HD Graphics 4000                               | 支持程度与 DRM 驱动移植进度相关；截至写作时，其代码状态约相当于 Linux 内核 6.10，最新进展请参见 [freebsd/drm-kmod](https://github.com/freebsd/drm-kmod/pulls) 。该仓库提供 FreeBSD 图形驱动内核模块更新，追踪 Linux DRM 驱动移植进度。 |
 | NVIDIA 显卡    | 近十多年的显卡           | GTX 850M                                                                 | 受 NVIDIA 官方显卡驱动支持                                                                                                          |
 
 > **注意**
 >
-> FreeBSD 不支持 [安全启动](https://wiki.freebsd.org/SecureBoot) [备份](https://web.archive.org/web/20260115143726/https://wiki.freebsd.org/SecureBoot)，该页面提供 FreeBSD 安全启动相关状态信息。在安装 FreeBSD 前，请务必关闭安全启动（Secure Boot）。此外，FreeBSD 也不支持 Fake RAID（伪 RAID），需将控制器模式修改为 AHCI。
+> FreeBSD 不支持 [安全启动](https://wiki.freebsd.org/SecureBoot) ，该页面提供 FreeBSD 安全启动相关状态信息。在安装 FreeBSD 前，请务必关闭安全启动（Secure Boot）。此外，FreeBSD 也不支持 Fake RAID（伪 RAID），需将控制器模式修改为 AHCI。
 >
 > Fake RAID 是由主板 BIOS/固件提供的软件 RAID 功能，依赖操作系统驱动支持，并非真正的硬件 RAID。AHCI（Advanced Host Controller Interface）是 SATA 控制器的标准工作模式，提供原生支持 SATA 设备的高级特性。
 >
@@ -73,7 +73,7 @@ UEFI（Unified Extensible Firmware Interface）是现代计算机的固件接口
 
 > **警告**
 >
-> 使用非 RELEASE 版本的用户应有时间和意愿关注开发动态，浏览邮件列表与问题追踪系统，例如 [freebsd-src/UPDATING](https://github.com/freebsd/freebsd-src/blob/main/UPDATING) [备份](https://web.archive.org/web/20260115143917/https://github.com/freebsd/freebsd-src/blob/main/UPDATING)，该文件记录系统更新重大变更，及 [freebsd-src/RELNOTES](https://github.com/freebsd/freebsd-src/blob/main/RELNOTES) [备份](https://web.archive.org/web/20260119051314/https://github.com/freebsd/freebsd-src/blob/main/RELNOTES)，该文件提供发行版发布说明与新特性等文档。同时要求用户具备一定的探索和动手能力。否则，建议使用 RELEASE 版本。
+> 使用非 RELEASE 版本的用户应有时间和意愿关注开发动态，浏览邮件列表与问题追踪系统，例如 [freebsd-src/UPDATING](https://github.com/freebsd/freebsd-src/blob/main/UPDATING) ，该文件记录系统更新重大变更，及 [freebsd-src/RELNOTES](https://github.com/freebsd/freebsd-src/blob/main/RELNOTES) ，该文件提供发行版发布说明与新特性等文档。同时要求用户具备一定的探索和动手能力。否则，建议使用 RELEASE 版本。
 
 | Installer | VM | SD Card | Documentation |
 | :---: | :---: | :---: | :---: |
@@ -129,13 +129,13 @@ FreeBSD-14.2-RELEASE-amd64-mini-memstick.img.xz    107445036      2024-Nov-29 13
 
 .xz 是一种高压缩比的文件压缩格式，常用于缩小软件发行包的体积。SHA256 和 SHA512 是密码散列函数，用于生成文件的唯一指纹，校验值（Checksum）则是通过这些函数计算出的固定长度字符串，用于验证文件完整性。
 
-需要注意的是，DVD 镜像并不包含所有离线软件包，仅精选了若干软件包，具体清单可参见源代码文件 [release/scripts/pkg-stage.sh](https://github.com/freebsd/freebsd-src/blob/main/release/scripts/pkg-stage.sh) [备份](https://web.archive.org/web/20260115143613/https://github.com/freebsd/freebsd-src/blob/main/release/scripts/pkg-stage.sh)，该脚本定义 DVD 镜像包含的预安装软件包清单。
+需要注意的是，DVD 镜像并不包含所有离线软件包，仅精选了若干软件包，具体清单可参见源代码文件 [release/scripts/pkg-stage.sh](https://github.com/freebsd/freebsd-src/blob/main/release/scripts/pkg-stage.sh) ，该脚本定义 DVD 镜像包含的预安装软件包清单。
 
 FreeBSD 的所有安装介质（包括但不限于虚拟机镜像）默认均不提供图形界面，须由用户自行安装和配置。DVD 镜像虽包含更多软件包，但由于图形界面依赖关系复杂，且 DVD 上的软件包版本可能较旧，在安装图形界面时仍可能遇到依赖冲突或版本不匹配问题，因此不建议使用 DVD 镜像。
 
 > **技巧**
 >
-> 网络传输可能产生错误，导致下载的文件与原始镜像不一致。因此，需要一种机制来验证所获取的文件与官方发布的镜像完全一致，这就需要使用 **校验值**。Windows 10 和 11 系统自带命令行工具 `CertUtil`，可用于计算校验值，无需安装额外软件。读者还可参考 [如何确定用于安全应用程序的文件 SHA-256 哈希](https://www.dell.com/support/kbdoc/en-bs/000130826/%E5%A6%82%E4%BD%95-%E7%A1%AE%E5%AE%9A-%E7%94%A8%E4%BA%8E-%E9%98%B2-%E7%97%85%E6%AF%92-%E5%92%8C-%E6%81%B6%E6%84%8F%E8%BD%AF%E4%BB%B6-%E9%98%B2%E6%8A%A4-%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F-%E7%9A%84-%E6%96%87%E4%BB%B6-sha-256-%E5%93%88%E5%B8%8C?lang=zh) [备份](https://web.archive.org/web/20260115143827/https://www.dell.com/support/kbdoc/en-bs/000130826/%E5%A6%82%E4%BD%95%E7%A1%AE%E5%AE%9A%E7%94%A8%E4%BA%8E%E5%AE%89%E5%85%A8%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%96%87%E4%BB%B6-sha-256-%E5%93%88%E5%B8%8C?lang=zh) 这篇文章。该文档介绍 Windows 系统下文件 SHA-256 哈希值计算方法。
+> 网络传输可能产生错误，导致下载的文件与原始镜像不一致。因此，需要一种机制来验证所获取的文件与官方发布的镜像完全一致，这就需要使用 **校验值**。Windows 10 和 11 系统自带命令行工具 `CertUtil`，可用于计算校验值，无需安装额外软件。读者还可参考 [如何确定用于安全应用程序的文件 SHA-256 哈希](https://www.dell.com/support/kbdoc/en-bs/000130826/%E5%A6%82%E4%BD%95-%E7%A1%AE%E5%AE%9A-%E7%94%A8%E4%BA%8E-%E9%98%B2-%E7%97%85%E6%AF%92-%E5%92%8C-%E6%81%B6%E6%84%8F%E8%BD%AF%E4%BB%B6-%E9%98%B2%E6%8A%A4-%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F-%E7%9A%84-%E6%96%87%E4%BB%B6-sha-256-%E5%93%88%E5%B8%8C?lang=zh)  这篇文章。该文档介绍 Windows 系统下文件 SHA-256 哈希值计算方法。
 
 
 FreeBSD 镜像 BT 种子下载地址（非官方，建议检查文件校验和后使用）：<https://fosstorrents.com/distributions/freebsd/>
@@ -172,13 +172,13 @@ FreeBSD `-RELEASE` 历史版本下载地址：
 
 Windows 平台建议优先使用 **Rufus**，Linux 平台可直接使用 `dd` 命令进行镜像刻录。
 
-Rufus 下载地址为 [https://rufus.ie/zh](https://rufus.ie/zh) [备份](https://web.archive.org/web/20260115142915/https://rufus.ie/zh/)，该工具为 Windows 平台开源 USB 启动盘制作工具。
+Rufus 下载地址为 [https://rufus.ie/zh](https://rufus.ie/zh) ，该工具为 Windows 平台开源 USB 启动盘制作工具。
 
 当使用 Rufus 刻录镜像时，无需解压缩文件，直接选择 `-img.xz` 即可制作启动盘。
 
 ![Rufus](../.gitbook/assets/rufus.png)
 
-**不建议** 使用 FreeBSD 手册中提到的 win32diskimager，因其对某些镜像格式的处理存在缺陷，尽管实际文件校验值正确，但有时会错误地报告校验失败。类似地，**亦不建议** 使用 [Ventoy](https://www.ventoy.net/) [备份](https://web.archive.org/web/20260115143659/https://www.ventoy.net/en/index.html)，该工具为多系统启动 USB 启动盘制作工具，直接加载 ISO 或 IMG 镜像文件，但 Ventoy 的启动加载机制与 FreeBSD 镜像不完全兼容，可能导致启动失败。
+**不建议** 使用 FreeBSD 手册中提到的 win32diskimager，因其对某些镜像格式的处理存在缺陷，尽管实际文件校验值正确，但有时会错误地报告校验失败。类似地，**亦不建议** 使用 [Ventoy](https://www.ventoy.net/) ，该工具为多系统启动 USB 启动盘制作工具，直接加载 ISO 或 IMG 镜像文件，但 Ventoy 的启动加载机制与 FreeBSD 镜像不完全兼容，可能导致启动失败。
 
 **读者应仅在 Rufus 无效的情况下再使用 win32diskimager 或 Ventoy。**
 
@@ -234,7 +234,7 @@ Probe URL: https://bsd-hardware.info/?probe=f64606c4b1
 
 打开上面的链接，即可看到你的设备。笔者这里上传的是 Radxa x4 的配置信息。
 
-其他操作系统可参见 [INSTALL HOWTO FOR BSD](https://github.com/linuxhw/hw-probe/blob/master/INSTALL.BSD.md) [备份](https://web.archive.org/web/20260115143827/https://github.com/linuxhw/hw-probe/blob/master/INSTALL.BSD.md)，该文档提供 BSD 系统上 hw-probe 工具的安装说明。
+其他操作系统可参见 [INSTALL HOWTO FOR BSD](https://github.com/linuxhw/hw-probe/blob/master/INSTALL.BSD.md) ，该文档提供 BSD 系统上 hw-probe 工具的安装说明。
 
 ## 课后习题
 

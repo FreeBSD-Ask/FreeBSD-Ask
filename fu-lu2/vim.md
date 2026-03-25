@@ -183,7 +183,7 @@ augroup END
 ```
 
 - 第一句 Glaive 语句用于设置 clang-format 执行文件路径。
-- 第二句 Glaive 语句设置格式化的风格样式。也可以设为 `"file"` 或 `"file:<format_file_path>"`。参考 [格式](https://clang.llvm.org/docs/ClangFormatStyleOptions.html) [备份](https://web.archive.org/web/20260116204037/https://clang.llvm.org/docs/ClangFormatStyleOptions.html)。该文档详细列出了 ClangFormat 的所有配置选项与用法。
+- 第二句 Glaive 语句设置格式化的风格样式。也可以设为 `"file"` 或 `"file:<format_file_path>"`。参考 [格式](https://clang.llvm.org/docs/ClangFormatStyleOptions.html) 。该文档详细列出了 ClangFormat 的所有配置选项与用法。
 - 第一句 autocmd 设置在文件类型为 c/cpp 时启用 vim-codefmt 的 AutoFormatBuffer clang-format。
 - 第二句 autocmd 设置在文件后缀为 `.h`、`.hpp`、`.c`、`.cpp` 时，退出插入模式后执行 `:FormatCode` 命令。
 
@@ -269,7 +269,7 @@ cwd=<root>
 
 参考：
 
-- [asynctasks.vim - 现代化的构建任务系统](https://github.com/skywind3000/asynctasks.vim/blob/master/README-cn.md) [备份](https://web.archive.org/web/20260203104135/https://github.com/skywind3000/asynctasks.vim/blob/master/README-cn.md)。该插件为 Vim 提供类似 VSCode 的任务系统，统一管理编译、运行等工作流程。
+- [asynctasks.vim - 现代化的构建任务系统](https://github.com/skywind3000/asynctasks.vim/blob/master/README-cn.md) 。该插件为 Vim 提供类似 VSCode 的任务系统，统一管理编译、运行等工作流程。
 
 ## 最后以最简单的 C++ hello world 项目为例
 

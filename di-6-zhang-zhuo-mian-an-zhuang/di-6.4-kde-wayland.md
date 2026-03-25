@@ -4,7 +4,7 @@
 
 Wayland 作为新一代显示服务器协议，相比传统的 X11 协议在架构设计与安全性方面具有多项技术优势。本节系统阐述在 FreeBSD 操作系统中配置 KDE 6 Wayland 会话的具体方法与相关注意事项。
 
-由于 issue [Request to restore support for vboxvideo and vmwgfx DRM drivers #356](https://github.com/freebsd/drm-kmod/issues/356) [备份](https://web.archive.org/web/20260120215704/https://github.com/freebsd/drm-kmod/issues/356) 尚未得到解决（FreeBSD DRM 驱动的移植仅覆盖了 Intel、AMD 和 NVIDIA 等 GPU），故在 VMware、VirtualBox 或任何基于 Virtio 的虚拟机上均无法复现本教程。需在真实的物理机上进行操作。
+由于 issue [Request to restore support for vboxvideo and vmwgfx DRM drivers #356](https://github.com/freebsd/drm-kmod/issues/356)  尚未得到解决（FreeBSD DRM 驱动的移植仅覆盖了 Intel、AMD 和 NVIDIA 等 GPU），故在 VMware、VirtualBox 或任何基于 Virtio 的虚拟机上均无法复现本教程。需在真实的物理机上进行操作。
 
 NVIDIA 显卡尚未经过测试。本文使用 Intel 第 12 代处理器（i7-1260P）的集成显卡进行测试。
 
@@ -95,7 +95,7 @@ $ sh ~/kde.sh
 
 > **技巧**
 >
-> 上图显示为“Intel UHD Graphics”而非“Iris Xe Graphics”，这是因为系统未启用某些硬件加速特性（与内存配置有关）~~笔者无力购买第二根 DDR5 内存条~~。参见 [Intel® Iris® Xe Graphics Shows As Intel® UHD Graphics in the Intel® Graphics Command Center and Device Manager](https://www.intel.com/content/www/us/en/support/articles/000059744/graphics.html) [备份](https://web.archive.org/web/20260120174613/https://www.intel.com/content/www/us/en/support/articles/000059744/graphics.html)（网站对应页面的中文翻译不正确）。
+> 上图显示为“Intel UHD Graphics”而非“Iris Xe Graphics”，这是因为系统未启用某些硬件加速特性（与内存配置有关）~~笔者无力购买第二根 DDR5 内存条~~。参见 [Intel® Iris® Xe Graphics Shows As Intel® UHD Graphics in the Intel® Graphics Command Center and Device Manager](https://www.intel.com/content/www/us/en/support/articles/000059744/graphics.html) （网站对应页面的中文翻译不正确）。
 
 - 显示当前会话类型（如 x11 或 wayland）
 
@@ -146,7 +146,7 @@ $ cp /usr/local/share/applications/org.fcitx.Fcitx5.desktop ~/.config/autostart/
 
 ## 参考文献
 
-- [KDE Plasma 6 Wayland on FreeBSD](https://euroquis.nl/kde/2025/09/07/wayland.html) [备份](https://web.archive.org/web/20260103223224/https://euroquis.nl/kde/2025/09/07/wayland.html)。提供在 FreeBSD 上配置 KDE Plasma 6 Wayland 会话的技术指南，明确指出 seatd 服务的必要性。
+- [KDE Plasma 6 Wayland on FreeBSD](https://euroquis.nl/kde/2025/09/07/wayland.html) 。提供在 FreeBSD 上配置 KDE Plasma 6 Wayland 会话的技术指南，明确指出 seatd 服务的必要性。
 
 ## 课后习题
 

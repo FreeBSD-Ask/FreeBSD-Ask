@@ -22,7 +22,7 @@ BIOS 界面、选项和设置可能因系统不同而有所差异。
 
 本章节介绍 AMI BIOS 的技术特点和市场地位。AMI BIOS 是美国 Megatrends 公司开发的 BIOS 固件，广泛应用于个人计算机和服务器平台。
 
-根据 AMI 官方网站 [The World Runs on AMI](https://www.ami.com/about-us/) 的介绍，全球约 70% 的服务器平台采用 AMI 软件。而根据 [安迈信息科技（昆山）有限公司](https://www.ami.com.cn/) [备份](https://web.archive.org/web/20260120155120/https://www.ami.com.cn/) 官网介绍，AMI 为 BIOS 业界的公认领导者之一，整体市场占有率超过 65％。两个数据分别统计服务器市场和整体市场，均展示了 AMI 固件在市场中的主导地位。
+根据 AMI 官方网站 [The World Runs on AMI](https://www.ami.com/about-us/) 的介绍，全球约 70% 的服务器平台采用 AMI 软件。而根据 [安迈信息科技（昆山）有限公司](https://www.ami.com.cn/)  官网介绍，AMI 为 BIOS 业界的公认领导者之一，整体市场占有率超过 65％。两个数据分别统计服务器市场和整体市场，均展示了 AMI 固件在市场中的主导地位。
 
 市场上大部分英特尔迷你主机所使用的 BIOS 均为 AMI BIOS，因此对 AMI BIOS 进行注解具有普遍意义，能够覆盖大多数实际应用场景。
 
@@ -52,9 +52,9 @@ UEFI（Unified Extensible Firmware Interface，统一可扩展固件接口）是
 
 CMOS（Complementary Metal-Oxide-Semiconductor，互补金属氧化物半导体）原指一种由电池供电的芯片，用于存储 BIOS 配置信息（如时间信息、BIOS 密码和硬件设置等）。该芯片采用 CMOS 工艺制造，功耗极低，可由纽扣电池维持数据数月甚至数年。在现代 UEFI 系统中，系统的相关配置信息通常存储在非易失性 RAM（NVRAM）中，但出于习惯，人们仍将这种存储 BIOS/UEFI 设置的非易失性存储称为 CMOS。
 
-清空 CMOS 可清除所有 BIOS 配置参数，恢复出厂默认设置。当 BIOS 设置错误导致系统无法启动时，可通过短接主板上的 CMOS 清除跳线、移除纽扣电池或使用专用按钮来清空 CMOS。具体操作方法因主板型号而异，可参考主板说明书或访问 [主板如何 Clear CMOS](https://www.asus.com.cn/support/faq/1040820/) [备份](https://web.archive.org/web/20260120204201/https://www.asus.com.cn/support/faq/1040820/) 获取详细指导。
+清空 CMOS 可清除所有 BIOS 配置参数，恢复出厂默认设置。当 BIOS 设置错误导致系统无法启动时，可通过短接主板上的 CMOS 清除跳线、移除纽扣电池或使用专用按钮来清空 CMOS。具体操作方法因主板型号而异，可参考主板说明书或访问 [主板如何 Clear CMOS](https://www.asus.com.cn/support/faq/1040820/)  获取详细指导。
 
-BIOS 是执行硬件初始化的固件程序，而 CMOS 是存储 BIOS 配置参数的硬件芯片。两者功能不同但紧密相关：BIOS 在启动时读取 CMOS 中的配置信息来初始化硬件。更多区别可参考 [BIOS 和 CMOS 有什么不同？](https://iknow.lenovo.com.cn/detail/043962?type=undefined&keyword=BIOS&keyWordId=) [备份](https://web.archive.org/web/20260120204219/https://iknow.lenovo.com.cn/detail/043962?type=undefined&keyword=BIOS&keyWordId=)。
+BIOS 是执行硬件初始化的固件程序，而 CMOS 是存储 BIOS 配置参数的硬件芯片。两者功能不同但紧密相关：BIOS 在启动时读取 CMOS 中的配置信息来初始化硬件。更多区别可参考 [BIOS 和 CMOS 有什么不同？](https://iknow.lenovo.com.cn/detail/043962?type=undefined&keyword=BIOS&keyWordId=) 。
 
 ## 课后习题
 

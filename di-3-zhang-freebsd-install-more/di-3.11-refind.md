@@ -2,11 +2,11 @@
 
 在多系统环境下，频繁通过 BIOS 固件界面切换操作系统存在效率低下的问题。本节研究 rEFInd 引导管理器的部署与配置技术，旨在为多系统用户提供一种便捷的启动选择解决方案，提升多系统使用的用户体验。
 
-我们可以借助 [rEFInd](https://www.rodsbooks.com/refind/) [备份](https://web.archive.org/web/20260107121430/https://www.rodsbooks.com/refind/) 实现类似于 Clover 的可视化启动菜单效果，在开机时直观地选择要进入的操作系统。
+我们可以借助 [rEFInd](https://www.rodsbooks.com/refind/)  实现类似于 Clover 的可视化启动菜单效果，在开机时直观地选择要进入的操作系统。
 
 `rEFInd` 派生自 `rEFIt`，其名称结合了“refind”（意为“重新发现”或“改进”）与“EFI”（Extensible Firmware Interface，可扩展固件接口），主要用于管理 UEFI 启动，具有良好的图形化界面与可配置性。
 
-首先需要下载 rEFInd 软件。打开下载页面 [Getting rEFInd from Sourceforge](https://www.rodsbooks.com/refind/getting.html) [备份](https://web.archive.org/web/20260118173750/https://www.rodsbooks.com/refind/getting.html)，点击 `A binary zip file` 链接即可开始下载。本文撰写时使用的版本为 `refind-bin-0.14.2.zip`。
+首先需要下载 rEFInd 软件。打开下载页面 [Getting rEFInd from Sourceforge](https://www.rodsbooks.com/refind/getting.html) ，点击 `A binary zip file` 链接即可开始下载。本文撰写时使用的版本为 `refind-bin-0.14.2.zip`。
 
 下载的压缩包中，仅部分文件是必需的启动文件。我们只需要其中的 `refind` 文件夹，其余文件可忽略。
 
@@ -57,13 +57,13 @@ EFI/
         └── bootmgfw.efi   # Windows 启动管理器
 ```
 
-使用 [DiskGenius](https://www.diskgenius.com/) [备份](https://web.archive.org/web/20260117184154/https://www.diskgenius.com/) 将处理好的 `refind` 文件夹复制到 EFI 系统分区（ESP）中的 `EFI` 目录下。
+使用 [DiskGenius](https://www.diskgenius.com/)  将处理好的 `refind` 文件夹复制到 EFI 系统分区（ESP）中的 `EFI` 目录下。
 
 ![](../.gitbook/assets/shaung13.png)
 
 ## 添加启动项
 
-使用 [DiskGenius](https://www.diskgenius.com/) [备份](https://web.archive.org/web/20260117184154/https://www.diskgenius.com/) 添加 UEFI 引导项。
+使用 [DiskGenius](https://www.diskgenius.com/)  添加 UEFI 引导项。
 
 ![](../.gitbook/assets/shuang14.png)
 
@@ -89,7 +89,7 @@ rEFInd 支持多种图形化主题。
 
 本例以 Matrix-rEFInd（灵感来源于电影《黑客帝国》）主题为例进行说明。
 
-项目地址为：[Matrix-rEFInd](https://github.com/Yannis4444/Matrix-rEFInd/) [备份](https://web.archive.org/web/20250724091414/https://github.com/Yannis4444/Matrix-rEFInd)
+项目地址为：[Matrix-rEFInd](https://github.com/Yannis4444/Matrix-rEFInd/)
 
 下载项目压缩包 `Matrix-rEFInd-master.zip` 并解压。将解压得到的文件夹 `Matrix-rEFInd-master` 重命名为 `Matrix-rEFInd`。
 

@@ -65,11 +65,11 @@
 
 ![](../.gitbook/assets/Windows2.png)
 
-更多要求，参见微软官方文档 [命名文件、路径和命名空间](https://learn.microsoft.com/zh-cn/windows/win32/fileio/naming-a-file) [备份](https://web.archive.org/web/20260119052825/https://learn.microsoft.com/zh-cn/windows/win32/fileio/naming-a-file)。
+更多要求，参见微软官方文档 [命名文件、路径和命名空间](https://learn.microsoft.com/zh-cn/windows/win32/fileio/naming-a-file) 。
 
 > **技巧**
 >
-> 可在 Windows 下使用 git 工具拉取 [freebsd-doc](https://github.com/freebsd/freebsd-doc) [备份](https://web.archive.org/web/20260122123446/https://github.com/freebsd/freebsd-doc) 项目验证兼容性问题。相关 Bug 报告：[The colon in the file name of the security report of the FreeBSD doc is not compatible with Microsoft Windows](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=267636)
+> 可在 Windows 下使用 git 工具拉取 [freebsd-doc](https://github.com/freebsd/freebsd-doc)  项目验证兼容性问题。相关 Bug 报告：[The colon in the file name of the security report of the FreeBSD doc is not compatible with Microsoft Windows](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=267636)
 
 ### 大小写敏感
 
@@ -98,7 +98,7 @@ abc    ABC
 
 #### 参考文献
 
-- [调整区分大小写](https://learn.microsoft.com/zh-cn/windows/wsl/case-sensitivity) [备份](https://web.archive.org/web/20260119052826/https://learn.microsoft.com/zh-cn/windows/wsl/case-sensitivity)，Windows 文件系统支持使用属性标志按目录设置区分大小写，提供跨平台文件兼容性支持
+- [调整区分大小写](https://learn.microsoft.com/zh-cn/windows/wsl/case-sensitivity) ，Windows 文件系统支持使用属性标志按目录设置区分大小写，提供跨平台文件兼容性支持
 
 ## 换行符/回车之差异
 
@@ -160,11 +160,11 @@ UTF-8
 
 当然，也可以将 Windows 10 及后续版本的系统字符编码设置为 UTF-8。但这种做法往往除了引入更多编码问题外，并不能有效解决问题。
 
-FreeBSD 的编码在 [main/usr.bin/login/login.conf](https://github.com/freebsd/freebsd-src/blob/main/usr.bin/login/login.conf) [备份](https://web.archive.org/web/20260115042059/https://github.com/freebsd/freebsd-src/blob/main/usr.bin/login/login.conf) 中设置，编译后路径为 `/etc/login.conf`。
+FreeBSD 的编码在 [main/usr.bin/login/login.conf](https://github.com/freebsd/freebsd-src/blob/main/usr.bin/login/login.conf)  中设置，编译后路径为 `/etc/login.conf`。
 
 ### 参考文献
 
-- [Code pages](https://learn.microsoft.com/en-us/globalization/encoding/code-pages) [备份](https://web.archive.org/web/20260119052725/https://learn.microsoft.com/en-us/globalization/encoding/code-pages)，微软官方称，936 即是 GBK，用于中文简体字符编码
+- [Code pages](https://learn.microsoft.com/en-us/globalization/encoding/code-pages) ，微软官方称，936 即是 GBK，用于中文简体字符编码
 
 ## 时间与时区的差异
 
@@ -206,9 +206,9 @@ Windows 会直接读取 RTC 的结果，并将其视为本地时间，即 Local 
 
 ### 参考文献
 
-- [秒的定义](https://www.nim.ac.cn/520/node/4.html) [备份](https://web.archive.org/web/20251207044618/https://www.nim.ac.cn/520/node/4.html)，中国计量科学院载秒的定义，基于铯原子超精细跃迁频率
-- [Time Zone Database](https://www.iana.org/time-zones) [备份](https://web.archive.org/web/20260120202547/https://www.iana.org/time-zones)，时区数据库，提供全球时区信息标准化
-- [历书基本术语简介](http://www.pmo.cas.cn/xwdt2019/kpdt2019/202203/t20220314_6389637.html#b4) [备份](https://web.archive.org/web/20260120202508/https://www.pmo.cas.cn/xwdt2019/kpdt2019/202203/t20220314_6389637.html#b4)，本文所涉术语，可参考此处中国科学院紫金山天文台的精确解释
+- [秒的定义](https://www.nim.ac.cn/520/node/4.html) ，中国计量科学院载秒的定义，基于铯原子超精细跃迁频率
+- [Time Zone Database](https://www.iana.org/time-zones) ，时区数据库，提供全球时区信息标准化
+- [历书基本术语简介](http://www.pmo.cas.cn/xwdt2019/kpdt2019/202203/t20220314_6389637.html#b4) ，本文所涉术语，可参考此处中国科学院紫金山天文台的精确解释
 
 ## 深入阅读
 
