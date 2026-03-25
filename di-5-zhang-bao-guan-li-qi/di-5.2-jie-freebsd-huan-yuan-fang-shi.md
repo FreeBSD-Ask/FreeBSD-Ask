@@ -110,7 +110,7 @@ quarterly 分支类似于 Debian 的 Stable 版本，通过固定软件包版本
 
 关于 quarterly 分支的更多信息，可以参考以下官方文档。
 
-- [Wiki QuarterlyBranch](https://wiki.freebsd.org/Ports/QuarterlyBranch) 
+- [Wiki QuarterlyBranch](https://wiki.freebsd.org/Ports/QuarterlyBranch)
 
 ## 15.0-RELEASE 快速切换 pkg 软件源到中国科学技术大学开源镜像站
 

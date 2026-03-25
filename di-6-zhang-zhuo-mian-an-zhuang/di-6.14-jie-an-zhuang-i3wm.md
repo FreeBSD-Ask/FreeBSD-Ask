@@ -65,7 +65,7 @@ $ echo 'exec VBoxClient-all' >> ~/.config/i3/config
 - [Installing i3wm on FreeBSD](http://bottlenix.wikidot.com/installing-i3wm) 。Bottlenix Wiki 提供的在 FreeBSD 上安装 i3wm 的详细指南。
 - [How to setup FreeBSD with a riced desktop - part 3 - i3](https://unixsheikh.com/tutorials/how-to-setup-freebsd-with-a-riced-desktop-part-3-i3.html#xterm) 。Unix Digest 提供的 FreeBSD i3 桌面美化与配置完整教程。
 - [How to install i3?](https://forums.freebsd.org/threads/how-to-install-i3.62305/) 。FreeBSD 官方论坛讨论，解答 i3 窗口管理器的安装与配置问题。
-- [i3 - an improved dynamic, tiling window manager](https://www.freebsd.org/cgi/man.cgi?query=i3&apropos=0&sektion=1&manpath=freebsd-ports&format=html) 
+- [i3 - an improved dynamic, tiling window manager](https://www.freebsd.org/cgi/man.cgi?query=i3&apropos=0&sektion=1&manpath=freebsd-ports&format=html)
 
 ## 课后习题
 
