@@ -2,9 +2,9 @@
 
 本章旨在为 FreeBSD 学习者与研究者提供系统性的文献参考框架。作为技术专著的附录，本参考书目遵循学术出版规范，涵盖从基础入门到高级研究的多层次文献资源。
 
-部分书籍可通过中文数字阅读平台获取，包括 [微信读书](https://weread.qq.com/) [备份](https://web.archive.org/web/20260117174923/https://weread.qq.com/)、[QQ 阅读](https://book.qq.com/) [备份](https://web.archive.org/web/20260117163601/https://book.qq.com/)、[京东读书](https://cread.jd.com/custom/custom_pcDownload.action) [备份](https://web.archive.org/web/20260101112245/https://cread.jd.com/custom/custom_pcDownload.action) 等。这些平台提供了技术类书籍的数字版本，便于读者在线阅读。
+部分书籍可通过中文数字阅读平台获取，包括 [微信读书](https://weread.qq.com/) 、[QQ 阅读](https://book.qq.com/) 、[京东读书](https://cread.jd.com/custom/custom_pcDownload.action)  等。这些平台提供了技术类书籍的数字版本，便于读者在线阅读。
 
-部分书籍可能已经绝版，可尝试通过专业二手书交易平台进行购买，如 [多抓鱼](https://www.duozhuayu.com/) [备份](https://web.archive.org/web/20260121091432/https://www.duozhuayu.com/)、[孔夫子旧书网](https://www.kongfz.com/) [备份](https://web.archive.org/web/20260121083050/https://www.kongfz.com/) 等。
+部分书籍可能已经绝版，可尝试通过专业二手书交易平台进行购买，如 [多抓鱼](https://www.duozhuayu.com/) 、[孔夫子旧书网](https://www.kongfz.com/)  等。
 
 ## 主要参考书目
 
@@ -37,7 +37,7 @@
 
 | 封面/书名 | 作者/译者 | ISBN/出版社 | 说明 |
 | :---: | :---: | :---: | :--- |
-| ![Unix 四分之一世纪](../.gitbook/assets/unix25.png) <br><br> 《Unix 四分之一世纪》 | Peter H. Salus | 9780201547771 <br><br> Addison-Wesley Professional | UNIX 发展历史书籍，中译本在 [此](https://freebsd.gitbook.io/unix-er-shi-wu-nian) [备份](https://web.archive.org/web/20260118165553/https://freebsd.gitbook.io/unix-er-shi-wu-nian)。详细记录 Unix 从诞生到普及的技术演进历程。 |
+| ![Unix 四分之一世纪](../.gitbook/assets/unix25.png) <br><br> 《Unix 四分之一世纪》 | Peter H. Salus | 9780201547771 <br><br> Addison-Wesley Professional | UNIX 发展历史书籍，中译本在 [此](https://freebsd.gitbook.io/unix-er-shi-wu-nian) 。详细记录 Unix 从诞生到普及的技术演进历程。 |
 | ![Unix 痛恨者手册](../.gitbook/assets/unixno.png) <br><br> 《Unix 痛恨者手册》 | Simson Garfinkel、Daniel Weise、Steven Strassmann | 9781568842035 <br><br> IDG Books Worldwide, Inc. | Unix 技术批评书籍，中译本在 [此](https://book.bsdcn.org/unix-tong-hen-zhe-shou-ce)。从批评视角分析 Unix 系统的设计缺陷和技术局限性。 |
 | ![大教堂与集市](../.gitbook/assets/dajiaotang.png) <br><br> 《大教堂与集市》 | [美] Eric S. Raymond <br><br> 卫剑钒 译 | 9787111452478 <br><br> 机械工业出版社 | 开源运动历史书籍，阐释集中式与分布式两种软件开发模式的差异。 |
 | ![UNIX 传奇：历史与回忆](../.gitbook/assets/unixchuanqi.png) <br><br> 《UNIX 传奇——历史与回忆》 | [美] Brian W. Kernighan 著 <br><br> 韩磊 译 | 9787115557179 <br><br> 人民邮电出版社 | UNIX 发展历史书籍，记录 Unix 技术发展的关键节点和历史背景。 |
@@ -70,11 +70,11 @@
 
 《FreeBSD 操作系统设计与实现（原书第 2 版）》是 FreeBSD 技术体系中的权威学术著作，详解现代 FreeBSD 内核架构与实现细节。
 
-该书采用轻型纸印刷，且部分章节需要读者自行通过 [网络](https://course.cmpreading.com/web/refbook/detail/9661/215) [备份](https://web.archive.org/web/20260118165733/https://course.cmpreading.com/web/refbook/detail/9661/215) 下载获取。
+该书采用轻型纸印刷，且部分章节需要读者自行通过 [网络](https://course.cmpreading.com/web/refbook/detail/9661/215)  下载获取。
 
 该书阅读难度较高，属于高级技术专著范畴，需要具备一定的操作系统理论基础方能深入理解。
 
-主要作者 Marshall Kirk McKusick 在其网站上有提供多款 BSD 相关的 [录制课程](https://www.mckusick.com/buylist.html) [备份](https://web.archive.org/web/20260117174307/https://www.mckusick.com/buylist.html)。目前正在撰写推出第三版，相关信息可参见 2025 年 6 月 BSDCan 大会 [A History of the BSD Daemon by Marshall Kirk McKusick](https://www.youtube.com/watch?v=SGC0191nDp0) [备份](https://web.archive.org/web/20260117174326/https://www.youtube.com/watch?v=SGC0191nDp0)，这一信息对于追踪 FreeBSD 技术演进具有重要的文献价值。
+主要作者 Marshall Kirk McKusick 在其网站上有提供多款 BSD 相关的 [录制课程](https://www.mckusick.com/buylist.html) 。目前正在撰写推出第三版，相关信息可参见 2025 年 6 月 BSDCan 大会 [A History of the BSD Daemon by Marshall Kirk McKusick](https://www.youtube.com/watch?v=SGC0191nDp0) ，这一信息对于追踪 FreeBSD 技术演进具有重要的文献价值。
 
 
 ### IPv6 网络堆栈
@@ -90,7 +90,7 @@
 
 | 封面/书名 | 作者/译者 | ISBN/出版社 | 说明 |
 | :---: | :---: | :---: | :--- |
-| 《Oracle® Solaris ZFS 管理指南》 | Oracle | 文件号码 819–7065–17（版本 [Oracle Solaris 10 8/11](https://docs.oracle.com/cd/E24847_01/) [备份](https://web.archive.org/web/20250921124435/https://docs.oracle.com/cd/E24847_01/)） | [在线阅读地址](https://docs.oracle.com/cd/E24847_01/html/819-7065/index.html) [备份](https://web.archive.org/web/20260117174441/https://docs.oracle.com/cd/E24847_01/html/819-7065/index.html)、[PDF](https://docs.oracle.com/cd/E24847_01/pdf/819-7065.pdf) [备份](https://web.archive.org/web/20220418224518/https://docs.oracle.com/cd/E24847_01/pdf/819-7065.pdf)。ZFS 管理技术文档，详解 Solaris ZFS 架构与管理操作。注意 ZFS 存储池版本兼容性限制。 |
+| 《Oracle® Solaris ZFS 管理指南》 | Oracle | 文件号码 819–7065–17（版本 [Oracle Solaris 10 8/11](https://docs.oracle.com/cd/E24847_01/) ） | [在线阅读地址](https://docs.oracle.com/cd/E24847_01/html/819-7065/index.html) 、[PDF](https://docs.oracle.com/cd/E24847_01/pdf/819-7065.pdf) 。ZFS 管理技术文档，详解 Solaris ZFS 架构与管理操作。注意 ZFS 存储池版本兼容性限制。 |
 
 ### DTrace 与系统调优
 
@@ -102,8 +102,8 @@
 
 | 封面/书名 | 作者/译者 | ISBN/出版社 | 说明 |
 | :---: | :---: | :---: | :--- |
-| 《DTrace 用户指南》 | Oracle | 文件号码 E22192（版本 [Oracle Solaris 10 8/11](https://docs.oracle.com/cd/E24847_01/) [备份](https://web.archive.org/web/20250921124435/https://docs.oracle.com/cd/E24847_01/)） | [在线阅读地址](https://docs.oracle.com/cd/E24847_01/html/E22192/index.html) [备份](https://web.archive.org/web/20260117112521/https://docs.oracle.com/cd/E24847_01/html/E22192/index.html)、[PDF](https://docs.oracle.com/cd/E24847_01/pdf/E22192.pdf) [备份](https://web.archive.org/web/20210508203548/https://docs.oracle.com/cd/E24847_01/pdf/E22192.pdf)。DTrace 入门技术文档，讲解动态跟踪框架的基本概念与使用方法。 |
-| 《Solaris 动态跟踪指南》 | Oracle | 文件号码 819-6959-10（版本 [Oracle Solaris 10 8/11](https://docs.oracle.com/cd/E24847_01/) [备份](https://web.archive.org/web/20250921124435/https://docs.oracle.com/cd/E24847_01/)） | [在线阅读地址](http://download.oracle.com/docs/cd/E19253-01/819-6959/index.html) [备份](https://web.archive.org/web/20211024192418/https://docs.oracle.com/cd/E19253-01/819-6959/index.html)、[PDF](http://download.oracle.com/docs/cd/E19253-01/819-6959/819-6959.pdf) [备份](https://web.archive.org/web/20260118013742/https://docs.oracle.com/cd/E19253-01/819-6959/819-6959.pdf)。DTrace 高级技术文档，讲解动态跟踪框架的高级技巧与性能分析方法。 |
+| 《DTrace 用户指南》 | Oracle | 文件号码 E22192（版本 [Oracle Solaris 10 8/11](https://docs.oracle.com/cd/E24847_01/) ） | [在线阅读地址](https://docs.oracle.com/cd/E24847_01/html/E22192/index.html) 、[PDF](https://docs.oracle.com/cd/E24847_01/pdf/E22192.pdf) 。DTrace 入门技术文档，讲解动态跟踪框架的基本概念与使用方法。 |
+| 《Solaris 动态跟踪指南》 | Oracle | 文件号码 819-6959-10（版本 [Oracle Solaris 10 8/11](https://docs.oracle.com/cd/E24847_01/) ） | [在线阅读地址](http://download.oracle.com/docs/cd/E19253-01/819-6959/index.html) 、[PDF](http://download.oracle.com/docs/cd/E19253-01/819-6959/819-6959.pdf) 。DTrace 高级技术文档，讲解动态跟踪框架的高级技巧与性能分析方法。 |
 
 
 ## 文献评述与历史文献
@@ -136,7 +136,7 @@
 
 LIONS J. 莱昂氏 UNIX 源代码分析[M]. 尤晋元，译. 北京：机械工业出版社，2000. UNIX 早期教学核心文献，带注释的 UNIX v6 源代码汇编。
 
-该书原作名为 *Lion's Commentary on UNIX with Source Code*，由 John Lions 撰写，最初作为澳大利亚新南威尔士大学的课程讲义，是 UNIX 早期教学的核心文献。该书的中文翻译历程颇具历史意义，反映了中国开源社区对经典技术文献的重视（参见：[中华读书报《莱昂氏UNIX源代码分析》出版一波三折](https://www.gmw.cn/01ds/2000-08/02/GB/2000%5E311%5E0%5EDS1418.htm) [备份](https://web.archive.org/web/20260119104147/https://www.gmw.cn/01ds/2000-08/02/GB/2000%5E311%5E0%5EDS1418.htm)）。
+该书原作名为 *Lion's Commentary on UNIX with Source Code*，由 John Lions 撰写，最初作为澳大利亚新南威尔士大学的课程讲义，是 UNIX 早期教学的核心文献。该书的中文翻译历程颇具历史意义，反映了中国开源社区对经典技术文献的重视（参见：[中华读书报《莱昂氏UNIX源代码分析》出版一波三折](https://www.gmw.cn/01ds/2000-08/02/GB/2000%5E311%5E0%5EDS1418.htm) ）。
 
 从学术文献分类的角度看，该书更接近“带注释的源代码汇编”而非系统的理论分析，其价值在于提供了 UNIX 早期实现的原始文本。它在 UNIX 教学史上具有里程碑式的地位，但随着技术演进，其直接技术参考价值已让位于历史研究价值，成为技术史研究的重要文献。
 

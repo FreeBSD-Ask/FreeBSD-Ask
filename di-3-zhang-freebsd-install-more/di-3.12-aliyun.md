@@ -387,7 +387,7 @@ vtnet0: link state changed to UP
 
 ## 通过 mfsBSD 间接安装 FreeBSD
 
-mfsBSD 是一款精简的 FreeBSD 内存盘映像，支持 UEFI 和 ZFS 环境。可用于安装 FreeBSD，充当急救盘等。mfsBSD 的下载地址为：[mfsBSD and mfslinux](https://mfsbsd.vx.sk/) [备份](https://web.archive.org/web/20260118024656/https://mfsbsd.vx.sk/)。
+mfsBSD 是一款精简的 FreeBSD 内存盘映像，支持 UEFI 和 ZFS 环境。可用于安装 FreeBSD，充当急救盘等。mfsBSD 的下载地址为：[mfsBSD and mfslinux](https://mfsbsd.vx.sk/) 。
 
 > **警告**
 >
@@ -553,7 +553,7 @@ EXT2、EXT3、EXT4、Btrfs 和 XFS 文件系统均不支持在线压缩。目前
 
 ### 通过 Ventoy 安装 FreeBSD
 
-Ventoy 是新一代多系统启动 U 盘解决方案，其项目官网地址为 [Ventoy](https://www.ventoy.net/cn/index.html) [备份](https://web.archive.org/web/20260116224411/https://www.ventoy.net/cn/index.html)。
+Ventoy 是新一代多系统启动 U 盘解决方案，其项目官网地址为 [Ventoy](https://www.ventoy.net/cn/index.html) 。
 
 基本思路是通过内存盘系统将 Ventoy 写入整个硬盘，然后将 Ventoy 创建的容量较大的磁盘分区挂载到内存盘，再将 FreeBSD 系统写入该磁盘分区。
 
@@ -598,13 +598,13 @@ Ventoy2Disk.sh 参数说明：
 
 ![](../.gitbook/assets/Ventoyins2.png)
 
-读者可通过 [Linux 系统安装 Ventoy —— 命令行界面](https://www.ventoy.net/cn/doc_start.html#doc_linux_cli) [备份](https://web.archive.org/web/20260108124134/https://www.ventoy.net/cn/doc_start.html#doc_linux_cli)了解更多信息。
+读者可通过 [Linux 系统安装 Ventoy —— 命令行界面](https://www.ventoy.net/cn/doc_start.html#doc_linux_cli) 了解更多信息。
 
 #### 使用 Ventoy LiveCD 写入 Ventoy
 
-Ventoy LiveCD 下载地址为 [安装包](https://www.ventoy.net/cn/download.html) [备份](https://web.archive.org/web/20260119172459/https://www.ventoy.net/cn/download.html)。
+Ventoy LiveCD 下载地址为 [安装包](https://www.ventoy.net/cn/download.html) 。
 
-Ventoy LiveCD 并非 Ventoy 本体，而是一种用于安装 Ventoy 的内存盘系统映像。参见 [Ventoy LiveCD 使用说明](https://www.ventoy.net/cn/doc_livecd.html) [备份](https://web.archive.org/web/20260108123456/https://www.ventoy.net/cn/doc_livecd.html)。
+Ventoy LiveCD 并非 Ventoy 本体，而是一种用于安装 Ventoy 的内存盘系统映像。参见 [Ventoy LiveCD 使用说明](https://www.ventoy.net/cn/doc_livecd.html) 。
 
 在使用 dd 将镜像写入整块硬盘后，强制重启实例，Ventoy LiveCD 可以正常启动。
 
@@ -630,11 +630,11 @@ Ventoy 目前不支持在线下载 ISO 镜像文件。
 
 #### 使用 TinyCorePure64 写入 Ventoy
 
-TinyCorePure64 属于 [Core 项目](http://www.tinycorelinux.net/welcome.html) [备份](https://web.archive.org/web/20260115184811/http://tinycorelinux.net/welcome.html)，该项目旨在提供高度模块化的系统，同时支持社区自定义构建。
+TinyCorePure64 属于 [Core 项目](http://www.tinycorelinux.net/welcome.html) ，该项目旨在提供高度模块化的系统，同时支持社区自定义构建。
 
 TinyCorePure64 能够在启动后完全载入内存，同时重启后亦将丢失所有数据。
 
-TinyCorePure64 下载地址是 [x86 Pure 64](http://www.tinycorelinux.net/ports.html) [备份](https://web.archive.org/web/20260118024746/http://www.tinycorelinux.net/ports.html)，进入页面后点击“Core Pure 64 Latest Build”选择“TinyCorePure64-16.2.iso”或类似版本下载即可。
+TinyCorePure64 下载地址是 [x86 Pure 64](http://www.tinycorelinux.net/ports.html) ，进入页面后点击“Core Pure 64 Latest Build”选择“TinyCorePure64-16.2.iso”或类似版本下载即可。
 
 > **注意**
 >

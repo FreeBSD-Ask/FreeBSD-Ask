@@ -2,7 +2,7 @@
 
 ## NVIDIA 显卡驱动概述
 
-对于台式机，若 CPU 是英特尔处理器，且型号以 F（如 [i5-9400F](https://www.intel.cn/content/www/cn/zh/products/sku/190883/intel-core-i59400f-processor-9m-cache-up-to-4-10-ghz/specifications.html) [备份](https://web.archive.org/web/20260120221551/https://www.intel.cn/content/www/cn/zh/products/sku/190883/intel-core-i59400f-processor-9m-cache-up-to-4-10-ghz/specifications.html)）或 KF（如 [i5-12600KF](https://www.intel.cn/content/www/cn/zh/products/sku/134590/intel-core-i512600kf-processor-20m-cache-up-to-4-90-ghz/specifications.html) [备份](https://web.archive.org/web/20260121072407/https://www.intel.cn/content/www/cn/zh/products/sku/134590/intel-core-i512600kf-processor-20m-cache-up-to-4-90-ghz/specifications.html)）结尾，则该型号没有核芯显卡，无需处理核显相关配置。
+对于台式机，若 CPU 是英特尔处理器，且型号以 F（如 [i5-9400F](https://www.intel.cn/content/www/cn/zh/products/sku/190883/intel-core-i59400f-processor-9m-cache-up-to-4-10-ghz/specifications.html) ）或 KF（如 [i5-12600KF](https://www.intel.cn/content/www/cn/zh/products/sku/134590/intel-core-i512600kf-processor-20m-cache-up-to-4-90-ghz/specifications.html) ）结尾，则该型号没有核芯显卡，无需处理核显相关配置。
 
 若已拥有独立显卡，且视频输出接口（DP 或 HDMI）直接连接至独立显卡，则通常无需对核显进行任何配置，仅需处理独立显卡本身的驱动即可。
 
@@ -129,7 +129,7 @@ Mon Jan 19 19:06:59 2026
 
 ## 参考文献
 
-- [关于我们的最新处理器和命名更新的简要指南](https://www.intel.cn/content/www/cn/zh/processors/processor-numbers.html) [备份](https://web.archive.org/web/20260121102640/https://www.intel.cn/content/www/cn/zh/processors/processor-numbers.html)。英特尔官方关于 CPU 命名规则与型号标识的权威说明文档。
+- [关于我们的最新处理器和命名更新的简要指南](https://www.intel.cn/content/www/cn/zh/processors/processor-numbers.html) 。英特尔官方关于 CPU 命名规则与型号标识的权威说明文档。
 
 ## 故障排除
 

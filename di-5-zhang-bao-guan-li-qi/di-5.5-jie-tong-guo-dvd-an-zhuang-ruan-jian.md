@@ -152,7 +152,7 @@ Proceed with this action? [y/N]:
 ## 参考资料
 
 - [Product Details](https://www.freebsdmall.com/cgi-bin/fm/bsddvd10.1)，提供 FreeBSD DVD 产品信息与购买渠道
-- [HOWTO: Install binary package without internet acces](https://forums.freebsd.org/threads/howto-install-binary-package-without-internet-acces.60723/) [备份](https://web.archive.org/web/20260122093701/https://forums.freebsd.org/threads/howto-install-binary-package-without-internet-acces.60723/)，介绍无网络环境下通过 DVD 安装二进制包的方法
+- [HOWTO: Install binary package without internet acces](https://forums.freebsd.org/threads/howto-install-binary-package-without-internet-acces.60723/) ，介绍无网络环境下通过 DVD 安装二进制包的方法
 
 ## 课后习题
 
