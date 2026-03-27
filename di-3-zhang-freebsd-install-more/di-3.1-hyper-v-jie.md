@@ -147,12 +147,12 @@ PS C:\Users\ykla> Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-H
 
 ## 参考文献
 
-- Windows Server 和 Windows 中的 Hyper-V 虚拟化[EB/OL]. <https://learn.microsoft.com/zh-cn/windows-server/virtualization/hyper-v/overview>.，微软官方对 Hyper-V 的说明，详细介绍了 Hyper-V 虚拟化架构与功能特性。
-- 在 Windows 上安装 Hyper-V[EB/OL]. <https://learn.microsoft.com/zh-cn/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v>.，微软官方教程，提供了多种 Hyper-V 启用方法。
-- Hyper-V 集成服务[EB/OL]. <https://learn.microsoft.com/zh-cn/virtualization/hyper-v-on-windows/reference/integration-services>.，详细说明了 Hyper-V 集成服务的功能与配置方法。
-- 使用检查点将虚拟机恢复到以前的状态[EB/OL]. <https://learn.microsoft.com/zh-cn/virtualization/hyper-v-on-windows/user-guide/checkpoints?source=recommendations&tabs=hyper-v-manager%2Cpowershell>.，介绍了 Hyper-V 检查点的创建与使用方法。
-- 在 Hyper-V 中在标准检查点与生产检查点之间进行选择[EB/OL]. <https://learn.microsoft.com/zh-cn/windows-server/virtualization/hyper-v/manage/choose-between-standard-or-production-checkpoints-in-hyper-v>.，对比了标准检查点与生产检查点的差异与适用场景。
-- FreeBSD13 を Hyper-V 環境 にインストールしてみた 所感[EB/OL]. <https://qiita.com/nanorkyo/items/d33e1befd4eb9c004fcd>.，提供了 FreeBSD 在 Hyper-V 环境下的安装经验与技巧。
+- Windows Server 和 Windows 中的 Hyper-V 虚拟化[EB/OL]. <https://learn.microsoft.com/zh-cn/windows-server/virtualization/hyper-v/overview>. 微软官方对 Hyper-V 的说明，详细介绍了 Hyper-V 虚拟化架构与功能特性。
+- 在 Windows 上安装 Hyper-V[EB/OL]. <https://learn.microsoft.com/zh-cn/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v>. 微软官方教程，提供了多种 Hyper-V 启用方法。
+- Hyper-V 集成服务[EB/OL]. <https://learn.microsoft.com/zh-cn/virtualization/hyper-v-on-windows/reference/integration-services>. 详细说明了 Hyper-V 集成服务的功能与配置方法。
+- 使用检查点将虚拟机恢复到以前的状态[EB/OL]. <https://learn.microsoft.com/zh-cn/virtualization/hyper-v-on-windows/user-guide/checkpoints?source=recommendations&tabs=hyper-v-manager%2Cpowershell>. 介绍了 Hyper-V 检查点的创建与使用方法。
+- 在 Hyper-V 中在标准检查点与生产检查点之间进行选择[EB/OL]. <https://learn.microsoft.com/zh-cn/windows-server/virtualization/hyper-v/manage/choose-between-standard-or-production-checkpoints-in-hyper-v>. 对比了标准检查点与生产检查点的差异与适用场景。
+- FreeBSD13 を Hyper-V 環境 にインストールしてみた 所感[EB/OL]. <https://qiita.com/nanorkyo/items/d33e1befd4eb9c004fcd>. 提供了 FreeBSD 在 Hyper-V 环境下的安装经验与技巧。
 
 ## 课后习题
 
