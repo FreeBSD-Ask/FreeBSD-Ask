@@ -26,7 +26,7 @@ $ xinput set-prop 6 "Device Enabled" 0    # 禁用 ID 为 6 的输入设备
 
 #### 参考文献
 
-- [FreeBSD タッチパッドを off にする](https://qiita.com/fygar256/items/35100d43b096470631d6)  详细介绍使用 xinput 工具禁用 FreeBSD 触摸板的方法，提供实用命令示例。
+- fygar256. FreeBSDタッチパッドをoffにする[EB/OL]. Qiita, 2023-03-16. <https://qiita.com/fygar256/items/35100d43b096470631d6>. 详细介绍使用 xinput 工具禁用 FreeBSD 触摸板的方法，提供实用命令示例。
 
 ### Apple Magic Trackpad
 
@@ -58,11 +58,11 @@ hw.usb.usbhid.enable="0"
 
 该配置禁用 usbhid 驱动栈来回退到旧驱动，随后重启系统即可。
 
-问题分析：ums（USB Mouse/Keyboard）驱动始终存在于与具体硬件架构无关的通用内核中，而 usbhid 驱动目前位于 amd64 架构相关的内核选项中。在 15.0 版本之后，usbhid 驱动成为默认选择，其优先级高于传统的 ums 驱动。需要注意的是，两者均为直接编译进内核的驱动，而非以可加载模块形式存在。usbhid 驱动引入内核的过程始于 [conf: Add hkbd and hms to GENERIC\* kernel configs](https://reviews.freebsd.org/D45658) ，而替代 ums 作为默认驱动的变更发生在 [Enable usbhid by default](https://reviews.freebsd.org/D45659) 。该变更最早出现在 13.0 版本，并从 15.0 起成为系统默认行为。此问题仍需读者进一步研究其根本原因，并向 FreeBSD 项目提交 Bug 报告，因为项目计划在未来版本中彻底移除 ums 驱动支持。具体可参考 FreeBSD 期刊 2021/0708 期的相关报道。
+问题分析：ums（USB Mouse/Keyboard）驱动始终存在于与具体硬件架构无关的通用内核中，而 usbhid 驱动目前位于 amd64 架构相关的内核选项中。在 15.0 版本之后，usbhid 驱动成为默认选择，其优先级高于传统的 ums 驱动。需要注意的是，两者均为直接编译进内核的驱动，而非以可加载模块形式存在。usbhid 驱动引入内核的过程始于 conf: Add hkbd and hms to GENERIC* kernel configs[EB/OL]. FreeBSD, 2024-06-20. <https://reviews.freebsd.org/D45658>，而替代 ums 作为默认驱动的变更发生在 Enable usbhid by default[EB/OL]. FreeBSD, 2024-06-20. <https://reviews.freebsd.org/D45659>。该变更最早出现在 13.0 版本，并从 15.0 起成为系统默认行为。此问题仍需读者进一步研究其根本原因，并向 FreeBSD 项目提交 Bug 报告，因为项目计划在未来版本中彻底移除 ums 驱动支持。具体可参考 FreeBSD 期刊 2021/0708 期的相关报道。
 
 ## 附录：Fn 键设置
 
-- [Adjusting acpi_video brightness increments on FreeBSD](https://www.davidschlachter.com/misc/freebsd-acpi_video-thinkpad-display-brightness)  介绍在 FreeBSD 上调整 ACPI 视频亮度增量的具体方法，适用于 ThinkPad 等笔记本电脑。
+- David Schlachter. Adjusting acpi_video brightness increments on FreeBSD[EB/OL]. David Schlachter, 2020-03-12. <https://www.davidschlachter.com/misc/freebsd-acpi_video-thinkpad-display-brightness>. 介绍在 FreeBSD 上调整 ACPI 视频亮度增量的具体方法，适用于 ThinkPad 等笔记本电脑。
 
 ## 课后习题
 

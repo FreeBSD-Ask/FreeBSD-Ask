@@ -23,10 +23,10 @@ FreeBSD 操作系统提供了多种视频播放器选择，本节将介绍几款
 /usr/
 └── ports/
     └── multimedia/
-        ├── vlc/ # VLC 视频播放器端口
-        ├── smplayer/ # SMPlayer 视频播放器端口
-        ├── kodi/ # Kodi 媒体中心端口
-        └── mpv/ # mpv 视频播放器端口
+        ├── vlc/ # VLC 视频播放器 Port
+        ├── smplayer/ # SMPlayer 视频播放器 Port
+        ├── kodi/ # Kodi 媒体中心 Port
+        └── mpv/ # mpv 视频播放器 Port
 ```
 
 ### VLC 视频播放测试

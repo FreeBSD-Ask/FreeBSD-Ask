@@ -152,7 +152,7 @@ Music Player Daemon（musicpd）的配置文件为 `/usr/local/etc/musicpd.conf`
 ├── usr
 │   └── ports
 │       └── audio
-│           └── musicpd              # MPD 音频播放器端口
+│           └── musicpd              # MPD 音频播放器 Port
 ├── usr
 │   └── local
 │       └── etc

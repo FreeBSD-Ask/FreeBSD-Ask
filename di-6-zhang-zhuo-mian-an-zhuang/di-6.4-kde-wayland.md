@@ -95,7 +95,7 @@ $ sh ~/kde.sh
 
 > **技巧**
 >
-> 上图显示为“Intel UHD Graphics”而非“Iris Xe Graphics”，这是因为系统未启用某些硬件加速特性（与内存配置有关）~~笔者无力购买第二根 DDR5 内存条~~。参见 [Intel® Iris® Xe Graphics Shows As Intel® UHD Graphics in the Intel® Graphics Command Center and Device Manager](https://www.intel.com/content/www/us/en/support/articles/000059744/graphics.html) （网站对应页面的中文翻译不正确）。
+> 上图显示为“Intel UHD Graphics”而非“Iris Xe Graphics”，这是因为系统未启用某些硬件加速特性（与内存配置有关）~~笔者无力购买第二根 DDR5 内存条~~。参见：Intel® Iris® Xe Graphics Shows As Intel® UHD Graphics in the Intel® Graphics Command Center and Device Manager[EB/OL]. [2026-03-26]. <https://www.intel.com/content/www/us/en/support/articles/000059744/graphics.html> （网站对应页面的中文翻译不正确）。
 
 - 显示当前会话类型（如 x11 或 wayland）
 
@@ -146,7 +146,7 @@ $ cp /usr/local/share/applications/org.fcitx.Fcitx5.desktop ~/.config/autostart/
 
 ## 参考文献
 
-- [KDE Plasma 6 Wayland on FreeBSD](https://euroquis.nl/kde/2025/09/07/wayland.html) 。提供在 FreeBSD 上配置 KDE Plasma 6 Wayland 会话的技术指南，明确指出 seatd 服务的必要性。
+- Euroquis. KDE Plasma 6 Wayland on FreeBSD[EB/OL]. [2026-03-25]. <https://euroquis.nl/kde/2025/09/07/wayland.html>. 提供了在 FreeBSD 上配置 KDE Plasma 6 Wayland 会话的技术指南，明确指出 seatd 服务的必要性。
 
 ## 课后习题
 
