@@ -39,7 +39,7 @@ FreeBSD 中主要有三类账户：系统账户、普通用户账户，以及超
 
 超级用户账户拥有系统中的最高权限，即 root 账户。
 
-实际上是内核根据账户的 EUID（有效用户 ID）是否为 `0` 来判定某账户是否拥有 root 权限。参见 [main/sys/kern/kern_priv.c](https://github.com/freebsd/freebsd-src/blob/main/sys/kern/kern_priv.c) 中的 `if (suser_enabled(cred))` 代码块部分。
+实际上是内核根据账户的 EUID（有效用户 ID）是否为 `0` 来判定某账户是否拥有 root 权限。参见：main/sys/kern/kern_priv.c[EB/OL]. [2026-03-26]. <https://github.com/freebsd/freebsd-src/blob/main/sys/kern/kern_priv.c> 中的 `if (suser_enabled(cred))` 代码块部分。
 
 系统账户由源代码中的 [main/etc/master.passwd](https://github.com/freebsd/freebsd-src/blob/main/etc/master.passwd) 定义，写作时总计 27 个。故，`_dhcp`、`ntpd` 都属于系统账户。系统账户是具有受限权限的专用账户，通常用于运行系统服务和守护进程。
 
@@ -94,7 +94,7 @@ Add another user? (yes/no): no # 还需要创建另一个账号吗？
 Goodbye!
 ```
 
-- ①：登录名命名有一些限制，参见 [passwd(5)](https://man.freebsd.org/cgi/man.cgi?query=passwd&sektion=5&format=html)。但请注意，登录名不支持八位编码字符集，例如不支持中文（即仅支持特定 ASCII 字符）。
+- ①：登录名命名有一些限制，参见：passwd(5)[EB/OL]. [2026-03-26]. <https://man.freebsd.org/cgi/man.cgi?query=passwd&sektion=5&format=html>。但请注意，登录名不支持八位编码字符集，例如不支持中文（即仅支持特定 ASCII 字符）。
 
 ## `rmuser` 删除用户与 `passwd` 密码修改
 
