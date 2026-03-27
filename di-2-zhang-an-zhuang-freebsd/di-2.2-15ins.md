@@ -712,7 +712,7 @@ CST 为中国标准时间（China Standard Time）的缩写，确认无误后按
 
 ![虚拟机无固件可安装](../.gitbook/assets/install-14.2.png)
 
-自动检测并安装所需的硬件固件（该功能自 14.2 版本FreeBSD Project. Commit 03c07bdc8b31: firmware auto-detection[EB/OL]. [2026-03-25]. <https://cgit.freebsd.org/src/commit/?id=03c07bdc8b31> ）。
+自动检测并安装所需的硬件固件（该功能自 14.2 版本 FreeBSD Project. Commit 03c07bdc8b31: firmware auto-detection[EB/OL]. [2026-03-25]. <https://cgit.freebsd.org/src/commit/?id=03c07bdc8b31> ）。
 
 （此图为虚拟机安装界面截图）
 
