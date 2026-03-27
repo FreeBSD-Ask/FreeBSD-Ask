@@ -192,8 +192,8 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 
 ### 创建 ZFS 数据集
 
-以下数据集的设置参照 FreeBSD 源代码中的 [usr.sbin/bsdinstall/scripts/zfsboot](https://github.com/freebsd/freebsd-src/blob/main/usr.sbin/bsdinstall/scripts/zfsboot)  进行创建，因为 FreeBSD 本身的开发是持续不断的，所以 FreeBSD 不同版本间的 ZFS 数据集也有所差异。读者在创建数据集时若希望创建与默认安装相同的数据集结构，应参照对应分支的 `usr.sbin/bsdinstall/scripts/zfsboot` 文件。
 
+以下数据集的设置参照 FreeBSD 源代码中的 [usr.sbin/bsdinstall/scripts/zfsboot](https://github.com/freebsd/freebsd-src/blob/main/usr.sbin/bsdinstall/scripts/zfsboot) 进行创建，因为 FreeBSD 本身的开发是持续不断的，所以 FreeBSD 不同版本间的 ZFS 数据集也有所差异。读者在创建数据集时若希望创建与默认安装相同的数据集结构，应参照对应分支的 `usr.sbin/bsdinstall/scripts/zfsboot` 文件。
 
 - 创建根数据集
 
@@ -309,7 +309,7 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 
 > **技巧**
 >
->上述参数参考自 [bsdinstall(8)](https://man.freebsd.org/cgi/man.cgi?bsdinstall(8)) 的默认配置。安装后，也可通过命令 `zfs get exec,setuid,mountpoint` 查看相关属性。具体代码位于 `/usr/src/usr.sbin/bsdinstall/scripts/zfsboot`。
+>上述参数参考自 [bsdinstall(8)](https://man.freebsd.org/cgi/man.cgi?bsdinstall(8)) 的默认配置。安装后，也可通过命令 `zfs get exec,setuid,mountpoint` 查看相关属性。具体代码位于 [usr.sbin/bsdinstall/scripts/zfsboot](https://github.com/freebsd/freebsd-src/blob/main/usr.sbin/bsdinstall/scripts/zfsboot)。
 
 ```sh
 zroot/
@@ -464,8 +464,8 @@ zroot/var/tmp         96K  91.6G    96K  /var/tmp
 
 ## 参考文献
 
-- [How to manually install FreeBSD on a remote server (with UFS, ZFS, encryption...)](https://stanislas.blog/2018/12/how-to-install-freebsd-server/) ，提供了 FreeBSD 手动安装的完整技术指南，包括 UFS、ZFS 等文件系统配置方法。
-- [RootOnZFS/GPTZFSBoot](https://wiki.freebsd.org/RootOnZFS/GPTZFSBoot) ，详细介绍了 FreeBSD 在 GPT 分区表上的 ZFS 根文件系统配置方法。
+- How to manually install FreeBSD on a remote server (with UFS, ZFS, encryption...)[EB/OL]. <https://stanislas.blog/2018/12/how-to-install-freebsd-server/>.，提供了 FreeBSD 手动安装的完整技术指南，包括 UFS、ZFS 等文件系统配置方法。
+- RootOnZFS/GPTZFSBoot[EB/OL]. <https://wiki.freebsd.org/RootOnZFS/GPTZFSBoot>.，详细介绍了 FreeBSD 在 GPT 分区表上的 ZFS 根文件系统配置方法。
 
 ## 课后习题
 
