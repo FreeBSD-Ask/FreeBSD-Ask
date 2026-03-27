@@ -8,7 +8,7 @@
 
 ## SVN 到 Git 的迁移
 
-FreeBSD 项目在 2021 年从 SVN 全面迁移到了 Git，即 [https://git.freebsd.org](https://git.freebsd.org)
+FreeBSD 项目在 2021 年从 SVN 全面迁移到了 Git，即 <https://git.freebsd.org>
 
 这一版本控制系统的迁移标志着 FreeBSD 项目开发流程的现代化转型，因此，获取源代码的方式也相应发生了变化，不再使用 SVN。
 
@@ -76,7 +76,7 @@ $ git clone --depth 1 https://github.com/freebsd/freebsd-src /usr/src
 通过 FreeBSD 官方存储库拉取。克隆 FreeBSD 15.0 发布分支源码到 `/usr/src`，使用浅克隆并仅包含该分支：
 
 ```sh
-$ git clone --branch releng/15.0 --single-branch --depth 1 https://git.FreeBSD.org/src.git /usr/src
+$ git clone --branch releng/15.0 --single-branch --depth 1 https://git.freebsd.org/src.git /usr/src
 ```
 
 - `--branch releng/15.0`：指定拉取分支（FreeBSD RELEASE 的版本）
@@ -90,7 +90,7 @@ $ git clone --branch releng/15.0 --single-branch --depth 1 https://github.com/fr
 
 ### 参考文献
 
-- [Submitting GitHub Pull Requests to FreeBSD](https://freebsdfoundation.org/our-work/journal/browser-based-edition/configuration-management-2/submitting-github-pull-requests-to-freebsd/)
+- Warner Losh. Submitting GitHub Pull Requests to FreeBSD[EB/OL]. (2024)[2026-03-25]. <https://freebsdfoundation.org/our-work/journal/browser-based-edition/configuration-management-2/submitting-github-pull-requests-to-freebsd/>.
 
 
 ## 从压缩包获取源代码（方便但非最新）
@@ -175,10 +175,10 @@ Select: (p) postpone, (df) diff-full, (e) edit,
 # ntpdate -u pool.ntp.org  # 当时间相差较大时必须使用该命令，其他命令不会生效
 ```
 
-## 参考资料
+## 参考文献
 
-- [FreeBSD 手册](https://handbook.bsdcn.org/) ，提供 FreeBSD 系统管理的完整中文参考指南
-- [etcupdate -- manage updates to system files not updated by installworld](https://man.freebsd.org/cgi/man.cgi?etcupdate(8))，提供系统配置文件更新工具的官方技术文档
+- FreeBSD 中文社区. FreeBSD 手册[EB/OL]. [2026-03-25]. <https://handbook.bsdcn.org/>. FreeBSD 系统管理的完整中文参考指南
+- FreeBSD Project. etcupdate -- manage updates to system files not updated by installworld[EB/OL]. [2026-03-25]. <https://man.freebsd.org/cgi/man.cgi?etcupdate(8)>. 系统配置文件更新工具的官方技术文档
 
 ## 课后习题
 

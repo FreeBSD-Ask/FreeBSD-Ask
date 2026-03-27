@@ -83,7 +83,7 @@ FreeBSD 安装完成后，接下来安装 Windows 系统。
 
 ## 还原交换分区（Swap）
 
-Windows 安装完成后，需要为 FreeBSD 还原交换分区。我们分配了 208GB 空间，其中有 8GB 是为交换分区预留的。现在需要将其还原。需要用到工具 [DiskGenius](https://www.diskgenius.com/) 。
+Windows 安装完成后，需要为 FreeBSD 还原交换分区。我们分配了 208GB 空间，其中有 8GB 是为交换分区预留的。现在需要将其还原。需要用到工具 [DiskGenius](https://www.diskgenius.com/)。
 
 ![](../.gitbook/assets/shuang8.png)
 

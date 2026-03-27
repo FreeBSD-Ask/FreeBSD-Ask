@@ -149,10 +149,10 @@ Number of packages to be installed: 1
 Proceed with this action? [y/N]:
 ```
 
-## 参考资料
+## 参考文献
 
-- [Product Details](https://www.freebsdmall.com/cgi-bin/fm/bsddvd10.1)，提供 FreeBSD DVD 产品信息与购买渠道
-- [HOWTO: Install binary package without internet acces](https://forums.freebsd.org/threads/howto-install-binary-package-without-internet-acces.60723/) ，介绍无网络环境下通过 DVD 安装二进制包的方法
+- FreeBSD Mall. Product Details[EB/OL]. [2026-03-25]. <https://www.freebsdmall.com/cgi-bin/fm/bsddvd10.1>. FreeBSD DVD 产品信息与购买渠道
+- FreeBSD Forums. HOWTO: Install binary package without internet access[EB/OL]. [2026-03-25]. <https://forums.freebsd.org/threads/howto-install-binary-package-without-internet-acces.60723/>. 无网络环境下通过 DVD 安装二进制包的方法
 
 ## 课后习题
 

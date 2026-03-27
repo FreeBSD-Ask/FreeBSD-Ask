@@ -40,8 +40,10 @@
 
 从历史记录追溯，FreeBSD 基础设施集群在过去曾发生安全入侵事件。在全面转向 pkg 分发机制后，项目便终止了外部镜像的授权。这一战略决策可能与保障软件供应链完整性与安全性直接相关。
 
-- [FreeBSD.org 这次的入侵事件](https://blog.delphij.net/posts/2012/12/freebsdorg-2/) ，中文说明
-- [FreeBSD.org intrusion announced November 17th 2012](http://www.freebsd.org/news/2012-compromise.html) ，官方说明
+参考文献：
+
+- delphij. FreeBSD.org 这次的入侵事件[EB/OL]. (2012-12-17)[2026-03-25]. <https://blog.delphij.net/posts/2012/12/freebsdorg-2/>. 中文说明
+- FreeBSD Project. FreeBSD.org intrusion announced November 17th 2012[EB/OL]. (2012-11-17)[2026-03-25]. <http://www.freebsd.org/news/2012-compromise.html>. FreeBSD 项目官方说明
 
 #### 传输机制因素
 
@@ -57,9 +59,9 @@
 > 2. While many sites are excited to create mirrors as they think they have real bandwidth in reality they lose their moral bandwidth in couple of days and our mirrors are no longer in sync. We are often communicated regarding the problems of other community mirrors. We already operate in a tight schedule and often overseeing other mirrors is just another nail in the wall.
 > 3. We still accept mirrors but on a different way. If people can sponsor bare metal we would be happy to deploy a new mirror. However our mirror requirements are pretty high. You can have a look at the following to understand our requirements:
 >
-> - https://wiki.freebsd.org/Teams/clusteradm/generic-mirror-layout
+> - <https://wiki.freebsd.org/Teams/clusteradm/generic-mirror-layout>
 >
-> - https://wiki.freebsd.org/Teams/clusteradm/tiny-mirror
+> - <https://wiki.freebsd.org/Teams/clusteradm/tiny-mirror>
 
 译文：
 
@@ -71,9 +73,9 @@
 >
 > 3. 我们仍然接受镜像，但方式有所不同。如果有人能够赞助裸金属服务器，我们会很乐意部署新的镜像。不过，我们对镜像的要求相当高。你可以查看以下内容来了解我们的要求：
 >
-> - [https://wiki.freebsd.org/Teams/clusteradm/generic-mirror-layout](https://wiki.freebsd.org/Teams/clusteradm/generic-mirror-layout)
+> - <https://wiki.freebsd.org/Teams/clusteradm/generic-mirror-layout>
 >
-> - [https://wiki.freebsd.org/Teams/clusteradm/tiny-mirror](https://wiki.freebsd.org/Teams/clusteradm/tiny-mirror)
+> - <https://wiki.freebsd.org/Teams/clusteradm/tiny-mirror>
 
 
 > **思考题**
@@ -115,8 +117,8 @@ TUNA: <https://github.com/tuna/issues/issues/16>
 
 如果有条件搭建非官方镜像，可以使用 USTCLUG 所提供的同步脚本：
 
-- [FreeBSD-pkg Script](https://github.com/ustclug/ustcmirror-images/blob/master/freebsd-pkg/sync.sh)
-- [FreeBSD-ports Script](https://github.com/ustclug/ustcmirror-images/blob/master/freebsd-ports/sync-ports.sh)
+1. USTCLUG. FreeBSD-pkg Script[EB/OL]. [2026-03-25]. <https://github.com/ustclug/ustcmirror-images/blob/master/freebsd-pkg/sync.sh>.
+2. USTCLUG. FreeBSD-ports Script[EB/OL]. [2026-03-25]. <https://github.com/ustclug/ustcmirror-images/blob/master/freebsd-ports/sync-ports.sh>.
 
 来搭建非官方镜像站。赠人玫瑰，手留余香。
 

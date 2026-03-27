@@ -8,7 +8,7 @@
 
 > **注意**
 >
->由于补丁 [acpi_ged: Handle events directly](https://reviews.freebsd.org/D42158)  未合入 FreeBSD 14，因此版本 14 无法安装，会在安装界面报错（参见 [Virtualizing FreeBSD 14 CURRENT on macOS M2 via Parallels 19](https://forums.freebsd.org/threads/virtualizing-freebsd-14-current-on-macos-m2-via-parallels-19.93266/) ），故只能安装 15 及以上版本。
+>由于补丁 acpi_ged: Handle events directly[EB/OL]. [2026-03-26]. <https://reviews.freebsd.org/D42158>  未合入 FreeBSD 14，因此版本 14 无法安装，会在安装界面报错（参见 Virtualizing FreeBSD 14 CURRENT on macOS M2 via Parallels 19[EB/OL]. [2026-03-26]. <https://forums.freebsd.org/threads/virtualizing-freebsd-14-current-on-macos-m2-via-parallels-19.93266/> ），故只能安装 15 及以上版本。
 
 ## 安装
 
@@ -73,7 +73,7 @@ ums_load="YES"
 
 ### 参考文献
 
-- [Issue(s) booting FreeBSD 12.2 aarch64 on Parallels Desktop on Apple Silicon](https://forums.freebsd.org/threads/issue-s-booting-freebsd-12-2-aarch64-on-parallels-desktop-on-apple-silicon.78654/) ，提供了 Apple Silicon 上 Parallels Desktop 中 FreeBSD 启动问题的讨论与解决方案。
+- Issue(s) booting FreeBSD 12.2 aarch64 on Parallels Desktop on Apple Silicon[EB/OL]. <https://forums.freebsd.org/threads/issue-s-booting-freebsd-12-2-aarch64-on-parallels-desktop-on-apple-silicon.78654/>. 提供了 Apple Silicon 上 Parallels Desktop 中 FreeBSD 启动问题的讨论与解决方案。
 
 ## 虚拟机工具
 
@@ -101,12 +101,12 @@ ums_load="YES"
 
 ### 参考文献
 
-- [parallels-tools Parallels Desktop Tools for FreeBSD](https://www.freshports.org/emulators/parallels-tools/)，提供了 Parallels Desktop 虚拟机工具的 FreeBSD 端口信息与安装说明。
+- parallels-tools Parallels Desktop Tools for FreeBSD[EB/OL]. <https://www.freshports.org/emulators/parallels-tools/>. 提供了 Parallels Desktop 虚拟机工具的 FreeBSD Port 信息与安装说明。
 
 ## 课后习题
 
 1. 查找 FreeBSD 15 源代码中关于 `acpi_ged` 的提交记录，理解该补丁解决的具体问题，尝试在 FreeBSD 14 上手动应用该补丁并验证系统能否正常启动。
 
-2. 分析 Parallels Desktop 虚拟机工具的端口源代码，研究其长期未更新的技术原因，尝试构建一个最小化的虚拟机工具替代方案。
+2. 分析 Parallels Desktop 虚拟机工具的 Port 源代码，研究其长期未更新的技术原因，尝试构建一个最小化的虚拟机工具替代方案。
 
 3. 对比 `ums` 与 `usbhid` 两种 USB 鼠标驱动的实现差异，在不同虚拟机环境中测试两种驱动的兼容性。
