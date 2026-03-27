@@ -561,7 +561,7 @@ FreeBSD USE 是 Ports 框架中的一个重要机制，用于控制软件的构�
 # echo "OPTION_UNSET+= MYSQL" >> /etc/make.conf
 ```
 
-完整的 OPTIONS 列表见 <https://cgit.freebsd.org/ports/tree/Mk/bsd.port.mk>。
+完整的 OPTIONS 列表见 <https://cgit.freebsd.org/ports/tree/Mk/bsd.port.mk>。完整的 USE 列表见 <https://cgit.freebsd.org/ports/tree/Mk/bsd.default-versions.mk>。
 
 ## FreeBSD ports 多线程编译
 
