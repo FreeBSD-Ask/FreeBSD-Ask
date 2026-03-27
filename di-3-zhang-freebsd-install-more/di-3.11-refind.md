@@ -23,13 +23,13 @@
 打开 `refind.conf` 文件，在任意空白处添加如下配置：
 
 ```ini
-menuentry "FreeBSD" { 
+menuentry "FreeBSD"  
 	icon \EFI\refind\icons\os_freebsd.png 
 	volume "FreeBSD"
 	loader \EFI\freebsd\loader.efi 
 }
 
-menuentry "Windows 10" { 
+menuentry "Windows 10"  
 	icon \EFI\refind\icons\os_win.png
 	volume "Windows 10"  
 	loader \EFI\Microsoft\Boot\bootmgfw.efi 
