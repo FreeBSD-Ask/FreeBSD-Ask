@@ -92,7 +92,7 @@ lightdm_env="LC_MESSAGES=zh_CN.UTF-8"
 
 ## 参考文献
 
-- [Install & Configure a Desktop Environment: LXDE](https://wiki.freebsd.org/LXDE) 。FreeBSD 官方维基提供的 LXDE 桌面环境安装与配置指南。
+- FreeBSD Wiki. Install & Configure a Desktop Environment: LXDE[EB/OL]. [2026-03-25]. <https://wiki.freebsd.org/LXDE>. FreeBSD 官方维基。是 LXDE 桌面环境安装与配置指南。
 
 ## 课后习题
 

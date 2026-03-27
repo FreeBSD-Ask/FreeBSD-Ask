@@ -88,11 +88,11 @@ proc           /proc       procfs  rw  0   0
 
 ### 中文环境不完整
 
-此问题已反馈至 [Many UI Strings Are Missing from .po Files](https://github.com/bbidulock/icewm/issues/821) 。
+此问题已反馈至 [Many UI Strings Are Missing from .po Files](https://github.com/bbidulock/icewm/issues/821)。
 
 ## 参考文献
 
-- [icewm-preferences(5)](https://man.freebsd.org/cgi/man.cgi?query=icewm-preferences)。IceWM 窗口管理器配置选项的官方手册页，详细说明各项配置参数。
+- FreeBSD Project. icewm-preferences(5)[EB/OL]. FreeBSD Manual Pages, [2026-03-25]. <https://man.freebsd.org/cgi/man.cgi?query=icewm-preferences>. IceWM 窗口管理器配置选项的官方手册页，详细说明了各项配置参数。
 
 ## 课后习题
 

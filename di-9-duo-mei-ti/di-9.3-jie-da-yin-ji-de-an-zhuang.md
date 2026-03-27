@@ -179,7 +179,7 @@ Listen IP:631
 
 ### 打印机免驱动支持问题
 
-要确认打印机是否免驱动，可以在 <https://openprinting.github.io/printers/> 查询。以本文使用打印机为例：
+要确认打印机是否免驱动，可以在 OpenPrinting. Find a Driverless Printer[EB/OL]. OpenPrinting, [2026-03-25]. <https://openprinting.github.io/printers/> 查询。以本文使用打印机为例：
 
 ![](../.gitbook/assets/cup9.png)
 

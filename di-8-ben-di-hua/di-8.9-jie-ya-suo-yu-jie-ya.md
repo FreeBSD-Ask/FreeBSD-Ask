@@ -168,7 +168,7 @@ $ unrar x archive.rar /home/ykla/桌面/test/ # 解压缩到指定目录
 
 ## zstd
 
-基本系统内置 zstd，无需安装。参见 [Add support for zstd-compressed user and kernel core dumps.](https://svnweb.freebsd.org/base?view=revision&revision=329240) 。该修订记录了 zstd 压缩转储支持的实现细节。
+基本系统内置 zstd，无需安装。参见：Add support for zstd-compressed user and kernel core dumps.[EB/OL]. [2026-03-26]. <https://svnweb.freebsd.org/base?view=revision&revision=329240>。该修订记录了 zstd 压缩转储支持的实现细节。
 
 ### zstd 压缩
 
@@ -180,7 +180,7 @@ $ zstd test.pdf
 
 - 使用 zstd 压缩文件夹
   
-zstd 不直接支持压缩文件夹（参见 [How can I compress a directory?](https://github.com/facebook/zstd/issues/1526) ）。该 Issue 讨论了 zstd 不支持直接压缩目录的技术原因与替代方案，因此需要先将文件夹打包为 tar 文件。
+zstd 不直接支持压缩文件夹（参见：How can I compress a directory?[EB/OL]. [2026-03-26]. <https://github.com/facebook/zstd/issues/1526> ）。该 Issue 讨论了 zstd 不支持直接压缩目录的技术原因与替代方案，因此需要先将文件夹打包为 tar 文件。
 
 >**思考题**
 >

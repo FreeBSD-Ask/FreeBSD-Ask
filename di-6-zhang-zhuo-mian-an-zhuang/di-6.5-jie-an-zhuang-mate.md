@@ -124,7 +124,7 @@ show-quit=true
 
 #### 参考文献
 
-- [lightdm not reading slick-greeter.conf](https://forums.freebsd.org/threads/lightdm-not-reading-slick-greeter-conf.92256/) 。FreeBSD 官方论坛讨论，解决 LightDM 无法正确读取 slick-greeter 配置文件的技术问题。
+- FreeBSD Forums. lightdm not reading slick-greeter.conf[EB/OL]. FreeBSD Forums, [2026-03-25]. <https://forums.freebsd.org/threads/lightdm-not-reading-slick-greeter-conf.92256/>. FreeBSD 官方论坛讨论，解决了 LightDM 无法正确读取 slick-greeter 配置文件的技术问题。
 
 ## 课后习题
 

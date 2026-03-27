@@ -2,7 +2,7 @@
 
 ## bspwm 窗口管理器概述
 
-bspwm 是一款轻量级平铺窗口管理器，其设计理念更契合 UNIX 哲学原则（参见 [bspwm 入门](https://zerovip.vercel.app/zh/63233/) ，7.2 UNIX 哲学）。作为平铺式窗口管理器，bspwm 以其高效的窗口组织与管理方式著称。
+bspwm 是一款轻量级平铺窗口管理器，其设计理念更契合 UNIX 哲学原则（参见：bspwm 入门[EB/OL]. [2026-03-26]. <https://zerovip.vercel.app/zh/63233/>，7.2 UNIX 哲学）。作为平铺式窗口管理器，bspwm 以其高效的窗口组织与管理方式著称。
 
 ## 安装 bspwm
 
@@ -203,7 +203,7 @@ $HOME/.fehbg &
 
 ## 参考文献
 
-- [从零开始的 Bspwm 安装与配置教程](https://zhuanlan.zhihu.com/p/568211941)。知乎专栏提供的 Bspwm 窗口管理器详细安装与配置中文教程。
+- 知乎. 从零开始的 Bspwm 安装与配置教程[EB/OL]. 知乎专栏, [2026-03-25]. <https://zhuanlan.zhihu.com/p/568211941>. 知乎专栏提供的 Bspwm 窗口管理器详细安装与配置中文教程。
 
 ## 课后习题
 
