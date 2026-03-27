@@ -647,7 +647,7 @@ root 密码强度无强制要求，但不可为空。若密码为空，将提示
 
 ![虚拟机无固件可安装](../.gitbook/assets/install-14.2.png)
 
-自动检测并安装所需的硬件固件（该功能自 14.2 版本FreeBSD Project. Commit 03c07bdc8b31: firmware auto-detection[EB/OL]. [2026-03-25]. <https://cgit.freebsd.org/src/commit/?id=03c07bdc8b31> ）。
+自动检测并安装所需的硬件固件（该功能自 14.2 版本 FreeBSD Project. Commit 03c07bdc8b31: firmware auto-detection[EB/OL]. [2026-03-25]. <https://cgit.freebsd.org/src/commit/?id=03c07bdc8b31> ）。
 
 **此图片来自虚拟机安装界面**。
 
