@@ -377,7 +377,7 @@
 ## 2025 年第二季度
 
 - 2025.6.24
-  - freebsd 14.3 的 wifi country select 有问题。选哪个都是这个报错：`Error while applying chosen settings  (unknown regdomain Expected  eval: Use: not found)` 参见：show_bug[EB/OL]. [2026-03-26]. <https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=287538>。替代方法是手动写，参照无线网络章节。
+  - freebsd 14.3 的 wifi country select 有问题。选哪个都是这个报错：`Error while applying chosen settings  (unknown regdomain Expected  eval: Use: not found)` 参见：Bug 287538 - Installer error on setting regdomain[EB/OL]. [2026-03-26]. <https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=287538>。替代方法是手动写，参照无线网络章节。
 - 2025.6.23
   - 3.6 文本编辑器新增：microsoft-edit
 - 2025.6.21
