@@ -126,8 +126,8 @@
 ### 参考信息
 
 - FreeBSD Project. Bug 286847: If the hostname is not set for the host, the value "Amnesiac" should be written to rc.conf.[EB/OL]. [2026-03-25]. <https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=286847>。该 Bug 报告提出空主机名时应写入默认值，笔者发现的 bug
-- freebsd. freebsd-src/libexec/getty/main.c[EB/OL]. [2026-03-25]. <https://github.com/freebsd/freebsd-src/blob/80c12959679ab203459dc20eb9ece3a7328b7de5/libexec/getty/main.c#L178>。该代码段包含登录提示符显示逻辑，`Amnesiac` 源码
-- freebsd. bsdinstall: Warn if hostname is empty[EB/OL]. [2026-03-25]. <https://github.com/freebsd/freebsd-src/pull/1700>。该 PR 为空主机名添加警告，笔者的 PR
+- FreeBSD Project. freebsd-src/libexec/getty/main.c[EB/OL]. [2026-03-25]. <https://github.com/freebsd/freebsd-src/blob/80c12959679ab203459dc20eb9ece3a7328b7de5/libexec/getty/main.c#L178>。该代码段包含登录提示符显示逻辑，`Amnesiac` 源码
+- FreeBSD Project. bsdinstall: Warn if hostname is empty[EB/OL]. [2026-03-25]. <https://github.com/freebsd/freebsd-src/pull/1700>。该 PR 为空主机名添加警告，笔者的 PR
 
 ## 选择安装类型
 
