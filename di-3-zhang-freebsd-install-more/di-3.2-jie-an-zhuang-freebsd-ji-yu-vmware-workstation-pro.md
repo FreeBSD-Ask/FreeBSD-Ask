@@ -325,9 +325,7 @@ VMware 已被博通（Broadcom）收购。从官方下载 VMware 相关产品需
 >
 >- 打开 <https://support.broadcom.com/>
 >
-> ![打开 <https://support.broadcom.com/> 
->
->(../.gitbook/assets/Register.png)
+> ![打开博通官网](../.gitbook/assets/Register.png)
 >
 >- 点击右上角的“Register”（注册）（或者直接打开 <https://profile.broadcom.com/web/registration>）
 >>
