@@ -95,7 +95,7 @@ FreeBSD 基本系统几乎不包含任何与 BSD 协议不兼容的软件。
 - MYSQLZOUQI. 浅析 Linux 初始化 init 系统，第 1 部分：sysvinit 第 2 部分：UpStart 第 3 部分：Systemd[EB/OL]. [2026-03-25]. <https://www.cnblogs.com/MYSQLZOUQI/p/5250336.html>. 是存档，原文已佚，系统介绍了各初始化系统
 - FreeBSD Project. init -- process control initialization[EB/OL]. [2026-03-25]. <https://man.freebsd.org/cgi/man.cgi?query=init>. FreeBSD init 手册页
 - Gentoo. Comparison of init systems[EB/OL]. [2026-03-25]. <https://wiki.gentoo.org/wiki/Comparison_of_init_systems>. 各大 init 对比图，为系统选型提供参考
-- FreeBSD Project. GPL Software in FreeBSD Base[EB/OL]. [2026-03-25]. <https://wiki.freebsd.org/GPLinBase>. reeBSD 基本系统中的 GPL 软件，系统梳理了基本系统的许可证兼容性
+- FreeBSD Project. GPL Software in FreeBSD Base[EB/OL]. [2026-03-25]. <https://wiki.freebsd.org/GPLinBase>. FreeBSD 基本系统中的 GPL 软件，系统梳理了基本系统的许可证兼容性
 
 ## 基本对比
 
