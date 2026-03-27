@@ -74,7 +74,7 @@
 >
 > 本节将指导用户如何使用该工具进行 FreeBSD 安装。该工具不仅存在于安装镜像中，安装完成后在新系统中依然可以找到，并且还可用于执行普通的安装流程（请记住这一点，在高级安装方式中很有用）。
 >
-> `bsdinstall` 工具本质上是由一系列 sh 脚本构成的，其源代码位于 freebsd. freebsd-src/usr.sbin/bsdinstall[EB/OL]. [2026-03-25]. <https://github.com/freebsd/freebsd-src/tree/main/usr.sbin/bsdinstall>。该仓库提供 FreeBSD 系统安装工具源代码，脚本在“scripts”文件夹下。
+> `bsdinstall` 工具本质上是由一系列 sh 脚本构成的，其源代码位于 FreeBSD Project. freebsd-src/usr.sbin/bsdinstall[EB/OL]. [2026-03-25]. <https://github.com/freebsd/freebsd-src/tree/main/usr.sbin/bsdinstall>。该仓库提供 FreeBSD 系统安装工具源代码，脚本在“scripts”文件夹下。
 
 安装程序显示欢迎菜单：
 
@@ -606,7 +606,7 @@ root 密码强度无强制要求，但不可为空。若密码为空，将提示
 ### 参考文献
 
 - FreeBSD Project. Regulatory Domain Support[EB/OL]. [2026-03-25]. <https://wiki.freebsd.org/WiFi/RegulatoryDomainSupport>。该页面介绍 FreeBSD 无线管制域支持状态
-- freebsd. freebsd-src/lib/lib80211/regdomain.xml[EB/OL]. [2026-03-25]. <https://github.com/freebsd/freebsd-src/blob/main/lib/lib80211/regdomain.xml>。该文件定义 802.11 无线管制域配置，regdomain.xml 在源代码的位置
+- FreeBSD Project. freebsd-src/lib/lib80211/regdomain.xml[EB/OL]. [2026-03-25]. <https://github.com/freebsd/freebsd-src/blob/main/lib/lib80211/regdomain.xml>。该文件定义 802.11 无线管制域配置，regdomain.xml 在源代码的位置
 - FreeBSD Project. regdomain.xml -- 802.11 wireless regulatory definitions[EB/OL]. [2026-03-25]. <https://man.freebsd.org/cgi/man.cgi?query=regdomain&sektion=5>。该手册页说明无线管制域配置文件格式，对应编码请参考系统中的 `/etc/regdomain.xml` 文件
 
 ```sh
@@ -795,7 +795,7 @@ Add another user? (yes/no) [no]: # 是否继续添加其他用户
     └── ykla/ # 用户家目录
 ```
 
-- ① 如果用户全名为空（即不设置），系统会分配一个默认值 `User &`。这是早期 Unix 系统 GECOS 字段的遗留行为。相关代码位于 freebsd. freebsd-src/usr.sbin/pw/pw_user.c[EB/OL]. [2026-03-25]. <https://github.com/freebsd/freebsd-src/blob/main/usr.sbin/pw/pw_user.c> 的 `static struct passwd fakeuser` 结构中。
+- ① 如果用户全名为空（即不设置），系统会分配一个默认值 `User &`。这是早期 Unix 系统 GECOS 字段的遗留行为。相关代码位于 FreeBSD Project. freebsd-src/usr.sbin/pw/pw_user.c[EB/OL]. [2026-03-25]. <https://github.com/freebsd/freebsd-src/blob/main/usr.sbin/pw/pw_user.c> 的 `static struct passwd fakeuser` 结构中。
 
 - ② 若选择使用随机密码，在最终确认信息前会显示一行：`adduser: INFO: Password for (ykla) is: D1MnujkWMv/m`，其中 `D1MnujkWMv/m` 即为生成的随机密码。
 
