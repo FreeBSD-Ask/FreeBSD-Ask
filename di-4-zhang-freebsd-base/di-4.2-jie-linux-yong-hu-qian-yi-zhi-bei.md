@@ -171,8 +171,8 @@ FreeBSD 基本系统几乎不包含任何与 BSD 协议不兼容的软件。
 
 在长期支持与稳定性方面，红帽企业 Linux（Red Hat Enterprise Linux，RHEL）投入了大量资源，这是其区别于许多其他发行版的重要特征。RHEL 通过保证应用二进制接口（Application Binary Interface，ABI）和内核应用二进制接口（Kernel Application Binary Interface，kABI）的长期稳定性，提供了最长可达十年的支持周期，这与许多其他发行版的支持策略存在明显差异。相关参考如下：
 
-1. Red Hat. Red Hat Enterprise Linux 10: Application Compatibility Guide[EB/OL]. [2026-03-25]. <https://access.redhat.com/articles/rhel10-abi-compatibility>.
-2. Red Hat. What is Kernel Application Binary Interface (kABI)?[EB/OL]. [2026-03-25]. <https://access.redhat.com/solutions/444773>.
+- Red Hat. Red Hat Enterprise Linux 10: Application Compatibility Guide[EB/OL]. [2026-03-25]. <https://access.redhat.com/articles/rhel10-abi-compatibility>.
+- Red Hat. What is Kernel Application Binary Interface (kABI)?[EB/OL]. [2026-03-25]. <https://access.redhat.com/solutions/444773>.
 
 许多发行版并不直接维护或对上述软件和工具进行全面测试，也不一定为其持续编写补丁或文档。直接将修改回溯并贡献至上游的发行版相对较少，Ubuntu 是其中较为典型的例子。此外，即使发行版维护者有意向向上游贡献代码，也可能面临补丁被接受的挑战，因为其并不对上游项目拥有直接的决策权。
 
