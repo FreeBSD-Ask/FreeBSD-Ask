@@ -101,7 +101,7 @@ ums_load="YES"
 
 ### 参考文献
 
-- parallels-tools Parallels Desktop Tools for FreeBSD[EB/OL]. <https://www.freshports.org/emulators/parallels-tools/>. 提供了 Parallels Desktop 虚拟机工具的 FreeBSD  Port 信息与安装说明。
+- parallels-tools Parallels Desktop Tools for FreeBSD[EB/OL]. <https://www.freshports.org/emulators/parallels-tools/>. 提供了 Parallels Desktop 虚拟机工具的 FreeBSD Port 信息与安装说明。
 
 ## 课后习题
 
