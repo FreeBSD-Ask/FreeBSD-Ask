@@ -25,12 +25,12 @@ FreeBSD 操作系统支持多种多媒体处理工具，本节将介绍音频剪
 /usr/
 └── ports/
     ├── audio/
-    │   └── audacity/ # Audacity 音频编辑器端口
+    │   └── audacity/ # Audacity 音频编辑器 Port
     ├── multimedia/
-    │   ├── olive/ # Olive 视频编辑器端口
-    │   └── ffmpeg/ # FFmpeg 多媒体处理框架端口
+    │   ├── olive/ # Olive 视频编辑器 Port
+    │   └── ffmpeg/ # FFmpeg 多媒体处理框架 Port
     └── graphics/
-        └── inkscape/ # Inkscape 矢量绘图软件端口
+        └── inkscape/ # Inkscape 矢量绘图软件 Port
 ```
 
 ## 视频剪辑
@@ -109,7 +109,7 @@ $ ffmpeg -i 视频文件.mp4 -vf subtitles=对应字幕.ass 输出视频.mp4
 
 ### 参考文献
 
-- Inkscape [官方教程](https://inkscape.org/zh-hans/learn/tutorials/)  提供 Inkscape 矢量绘图软件的详细中文教程，涵盖基础操作与高级功能。
+- Inkscape. Inkscape Tutorials[EB/OL]. Inkscape, [2026-03-25]. <https://inkscape.org/zh-hans/learn/tutorials/>. 提供 Inkscape 矢量绘图软件的详细中文教程，涵盖基础操作与高级功能。
 
 ## 课后习题
 
