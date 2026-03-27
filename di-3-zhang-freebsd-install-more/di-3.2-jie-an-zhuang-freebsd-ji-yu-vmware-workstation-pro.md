@@ -288,9 +288,9 @@ Downloads
 
 #### 参考文献
 
-- [解决 vmware 上 Ubuntu 共享文件夹（2022 年 7 月）](https://www.cnblogs.com/MaRcOGO/p/16463460.html) ，提供了 VMware 共享文件夹配置的整体方法框架。
-- [fuse: failed to open fuse device](https://forums.freebsd.org/threads/fuse-failed-to-open-fuse-device.44544/) ，解决了 fuse 设备无法打开的问题（如 `fuse: failed to open fuse device: No such file or directory`），为共享文件夹配置提供了关键参考。
-- [VMware shared folders](https://forums.freebsd.org/threads/vmware-shared-folders.10318/) ，详细介绍了 FreeBSD 下 VMware 共享文件夹的具体挂载方法。
+- 解决 vmware 上 Ubuntu 共享文件夹（2022 年 7 月）[EB/OL]. <https://www.cnblogs.com/MaRcOGO/p/16463460.html>. 提供了 VMware 共享文件夹配置的整体方法框架。
+- fuse: failed to open fuse device[EB/OL]. <https://forums.freebsd.org/threads/fuse-failed-to-open-fuse-device.44544/>. 解决了 fuse 设备无法打开的问题（如 `fuse: failed to open fuse device: No such file or directory`），为共享文件夹配置提供了关键参考。
+- VMware shared folders[EB/OL]. <https://forums.freebsd.org/threads/vmware-shared-folders.10318/>. 详细介绍了 FreeBSD 下 VMware 共享文件夹的具体挂载方法。
 
 
 ## 故障排除与未竟事宜
@@ -325,7 +325,7 @@ VMware 已被博通（Broadcom）收购。从官方下载 VMware 相关产品需
 >
 >- 打开 <https://support.broadcom.com/>
 >
-> ![打开 <https://support.broadcom.com/>](../.gitbook/assets/Register.png)
+> ![打开博通官网](../.gitbook/assets/Register.png)
 >
 >- 点击右上角的“Register”（注册）（或者直接打开 <https://profile.broadcom.com/web/registration>）
 >>

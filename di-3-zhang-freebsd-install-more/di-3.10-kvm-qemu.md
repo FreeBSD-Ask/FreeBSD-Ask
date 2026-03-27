@@ -68,7 +68,7 @@ mfsBSD 是一款完全载入内存的 FreeBSD 系统，类似于 Windows PE（Pr
 # wget https://mfsbsd.vx.sk/files/iso/14/amd64/mfsbsd-14.2-RELEASE-amd64.iso
 ```
 
-检验码：[checksums](https://mfsbsd.vx.sk/files/iso/14/amd64/mfsbsd-14.2-RELEASE-amd64.iso.sums.txt)
+校验码：[checksums](https://mfsbsd.vx.sk/files/iso/14/amd64/mfsbsd-14.2-RELEASE-amd64.iso.sums.txt)
 
 ### 准备 mfsBSD.iso
 
