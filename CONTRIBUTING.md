@@ -4,7 +4,7 @@
 
 FreeBSD 项目拒绝（表现为长期搁置）任何实质上的 PR，除了季度报告。事实上，纵观提交数据，freebsd doc 项目已经死亡十余年：
 
-使用 [统计分析 git 项目](https://gist.github.com/ykla/6c3df44c371d37fc3196ddf5fa87ce5f)  对 freebsd-doc 进行分析的结果参见 [freebsd-doc-2025 分析报告](https://gist.github.com/ykla/363bf922d0785d0b02dd43f8289368db) 。
+使用统计分析 git 项目[EB/OL]. [2026-03-26]. <https://gist.github.com/ykla/6c3df44c371d37fc3196ddf5fa87ce5f>  对 freebsd-doc 进行分析的结果参见：freebsd-doc-2025 分析报告[EB/OL]. [2026-03-26]. <https://gist.github.com/ykla/363bf922d0785d0b02dd43f8289368db>。
 
 - 2005-2006 年：第一次显著下滑
 - 2015-2016 年：第二次大幅下滑
@@ -51,7 +51,7 @@ and retry with 'git restore --source=HEAD :/'
 - **应注意引用的权威性、时效性和准确性。尽量采用原始文献，次选二手文献，避免三手文献**
 - 在引用其他网站内容时，请查证其引用的内容是否真实可信，并且不要直接引用网站内容，而是要尽量查阅一手来源
 - 请提交到 main 分支
-- 请避免学术不端行为，参见 [高等学校预防与处理学术不端行为办法](https://www.gov.cn/zhengce/2016-07/19/content_5713390.htm) （AIGC 相关规定除外）
+- 请避免学术不端行为，参见：高等学校预防与处理学术不端行为办法[EB/OL]. [2026-03-26]. <https://www.gov.cn/zhengce/2016-07/19/content_5713390.htm> （AIGC 相关规定除外）
 - 遵守 [FreeBSD 中文社区行为规范](https://docs.bsdcn.org/CODE_OF_CONDUCT)
 - 一切 AIGC（AI-Generated Content，人工智能生成内容）内容必须经过人工二次确认，考察实际最开始的出处和来源，以及来源本身的可靠性，不得直接提交。但作为特例，纯粹翻译可以绕过本条规定。任何人对自己提交的内容自行负责，无论是否由 AIGC 生成
 
@@ -79,9 +79,9 @@ and retry with 'git restore --source=HEAD :/'
 
 - 非拉丁字符与拉丁字符间应该加空格（中英文/数字间应有一个半角空格），有许多 Markdown 格式化工具可以自动完成。
 - 不应该使用 `sudo` 而应该用 `#` 代替，除非特例（如讲解如何使用 `sudo` 本身）；普通用户权限请使用 `$` 表示。
-- 安装软件时，给出 pkg 或 ports 两种方法，除非极不建议使用 pkg，如特定内核模块等。
+- 安装软件时，给出 pkg（FreeBSD 的二进制包管理器，用于安装、更新和管理预编译的软件包，提供依赖关系解析和版本管理功能） 或 ports 两种方法，除非极不建议使用 pkg，如特定内核模块等。
 - 请注意版权问题。引用或灵感受到启发时，请备注文章链接出处，必要时可使用互联网档案馆进行快照保存。
-- 编辑时尽量以最新的 FreeBSD RELEASE 为基准，绝对避免出现 `pkg_add` 此类过时东西。如有必要，必须予以注明版本。
+- 编辑时尽量以最新的 FreeBSD RELEASE（FreeBSD 的正式发布版本，经过充分测试和稳定化，适合生产环境使用。每个 RELEASE 版本都有长期支持周期） 为基准，绝对避免出现 `pkg_add` 此类过时东西。如有必要，必须予以注明版本。
 - 对于编写时长问题，理论上会一直持续下去，跟随每个 FreeBSD 大版本迭代。
 - 由于种种原因，无法立即验证所写内容是否正确无误时，请编辑者打上“警告：以下内容为理论，未经实际测试，仅供参考，如果可以使用请提交 issue 以移除本标签。”标签以作区分。
 - 不应该对文学故事章节进行除错字排版以外的删减。
@@ -99,7 +99,7 @@ and retry with 'git restore --source=HEAD :/'
 ![](https://img.shields.io/github/repo-size/FreeBSD-Ask/FreeBSD-Ask?style=for-the-badge&label=%E6%9C%AC%E9%A1%B9%E7%9B%AE%E5%AD%98%E5%82%A8%E5%BA%93%E4%BD%93%E7%A7%AF&color=EB0028)
 
 
-本项目太大，使用 git 拉取时可能会导致缓冲区溢出，可改变 git 配置文件，以实现对缓冲区的扩大：
+本项目太大，使用 git 拉取时可能会导致缓冲区溢出，可改变 git 配置文件，以实现对缓冲区的扩大：，此配置修改系统或应用程序的行为参数，更改后通常需要重启相应服务或整个系统才能生效。
 
 以下是一个可用的 `~/.gitconfig`（Windows 上的位置为 `C:\Users\你的用户名\.gitconfig`） 的文件示例：
 
@@ -125,8 +125,8 @@ and retry with 'git restore --source=HEAD :/'
 
 名词解释：
 
-- `autocrlf`：配置 Git 自动处理(转换)行结束符的默认行为。参见 [配置 Git 处理行结束符 - Github Docs](https://docs.github.com/zh/get-started/git-basics/configuring-git-to-handle-line-endings)
-- `signingkey`：指设置带签名提交时默认使用的签名密钥。signingkey 既可指 GPG Key，亦可指 SSH Key。因为自 Git 2.34 起，Git 支持了 SSH 签名验证功能。参见 [关于提交签名验证 - Github Docs](https://docs.github.com/zh/authentication/managing-commit-signature-verification/about-commit-signature-verification)
+- `autocrlf`：配置 Git 自动处理(转换)行结束符的默认行为。参见：配置 Git 处理行结束符 - Github Docs[EB/OL]. [2026-03-26]. <https://docs.github.com/zh/get-started/git-basics/configuring-git-to-handle-line-endings>
+- `signingkey`：指设置带签名提交时默认使用的签名密钥。signingkey 既可指 GPG Key，亦可指 SSH Key。因为自 Git 2.34 起，Git 支持了 SSH 签名验证功能。参见：关于提交签名验证 - Github Docs[EB/OL]. [2026-03-26]. <https://docs.github.com/zh/authentication/managing-commit-signature-verification/about-commit-signature-verification>
 
 拉取命令：
 
@@ -180,7 +180,7 @@ $ git clone https://github.com/FreeBSD-Ask/FreeBSD-Ask
 
 本项目是主项目（即 `https://book.bsdcn.org`）托管在 Gitbook；
 
-`https://docs.bsdcn.org` 是社区自行构建的，docs 网站本身的贡献指南参见 [FreeBSD 从入门到跑路 VitePress 镜像项目](https://github.com/FreeBSD-Ask/FreeBSD-Ask.github.io/blob/main/README.md) 。
+`https://docs.bsdcn.org` 是社区自行构建的，docs 网站本身的贡献指南参见：FreeBSD 从入门到跑路 VitePress 镜像项目[EB/OL]. [2026-03-26]. <https://github.com/FreeBSD-Ask/FreeBSD-Ask.github.io/blob/main/README.md>。
 
 >**技巧**
 >
@@ -270,7 +270,7 @@ $ git clone https://github.com/FreeBSD-Ask/FreeBSD-Ask
 
 ### 如何新建章节
 
-自行操作时参见操作实例 [Commit 6023cc8](https://github.com/FreeBSD-Ask/FreeBSD-Ask/commit/6023cc8d58f3a1b9849ff11fa63bf3980177c370)  和下方 `SUMMARY.md` 结构说明。
+自行操作时参见操作实例 Commit 6023cc8[EB/OL]. [2026-03-26]. <https://github.com/FreeBSD-Ask/FreeBSD-Ask/commit/6023cc8d58f3a1b9849ff11fa63bf3980177c370> 和下方 `SUMMARY.md` 结构说明。
 
 如果有困难可发邮件联系 ykla 来操作。
 
@@ -385,12 +385,12 @@ $ git clone https://github.com/FreeBSD-Ask/FreeBSD-Ask
 
 **需要重写** 的内容（请撰写这些内容）：
 
-参见 [Projects](https://github.com/FreeBSD-Ask/FreeBSD-Ask/projects) 。
+参见：Projects[EB/OL]. [2026-03-26]. <https://github.com/FreeBSD-Ask/FreeBSD-Ask/projects>。
 
 ### NetBSD ToDo
 
-参见 [Projects](https://github.com/FreeBSD-Ask/FreeBSD-Ask/projects) 。
+参见：Projects[EB/OL]. [2026-03-26]. <https://github.com/FreeBSD-Ask/FreeBSD-Ask/projects>。
 
 ### DragonFlyBSD ToDo
 
-参见 [Projects](https://github.com/FreeBSD-Ask/FreeBSD-Ask/projects) 。
+参见：Projects[EB/OL]. [2026-03-26]. <https://github.com/FreeBSD-Ask/FreeBSD-Ask/projects>。
