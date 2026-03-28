@@ -56,5 +56,9 @@
 	"MD053": false,
 	"MD054": false,
 	"MD055": true,
-	"MD056": true
+	"MD056": true,
+	"exclude": [
+    "mu-lu.md",
+    "README.md"
+  ]
 }
