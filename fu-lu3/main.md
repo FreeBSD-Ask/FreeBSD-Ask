@@ -49,10 +49,10 @@ BIOS 信息子页面用于展示 BIOS 固件的详细属性，包括厂商、版
 
 步进（Stepping）是处理器制造过程中的版本标识，当制造工艺改进或功能修复时，会创建新的步进代码。Intel 处理器步进通常由"一位字母 + 一位数字"组成，字母越靠后、数字越大，通常表示步进版本越高，处理器相对较新。根据 [英特尔® 处理器 N100](https://www.intel.cn/content/www/cn/zh/products/sku/231803/intel-processor-n100-6m-cache-up-to-3-40-ghz/ordering.html)  的官方资料，其当前步进为"N0"（一般消费者获得的均为该步进）。但上图 BIOS 显示该 N100 处理器的步进为"A0"，这通常表明其为工程样片。
 
-参见：
+参考文献：
 
-- [英特尔® 处理器步进意味着什么？](https://www.intel.cn/content/www/cn/zh/support/articles/000057218/processors.html)  解释处理器步进的含义及其重要性。
-- [CPU“步进”介绍](https://iknow.lenovo.com.cn/detail/320528)  详细介绍 CPU 步进的基础知识。
+- 英特尔公司. 英特尔® 处理器步进意味着什么？[EB/OL]. [2024-01-15]. <https://www.intel.cn/content/www/cn/zh/support/articles/000057218/processors.html>
+- CPU“步进”介绍[EB/OL]. [2024-01-15]. <https://iknow.lenovo.com.cn/detail/320528>
 
 ### Memory Information（内存信息）
 
