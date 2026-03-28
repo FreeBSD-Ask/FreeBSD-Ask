@@ -1,15 +1,14 @@
 {
 	"MD001": true,
 	"MD003": true,
-	"MD004": true,
-	{
+	"MD004": {
 		"style": "asterisk"
 	},
 	"MD005": true,
 	"MD007": true,
 	"MD009": true,
 	"MD010": false,
-	"MD011": false,	
+	"MD011": false,
 	"MD012": false,
 	"MD013": false,
 	"MD014": false,
@@ -20,7 +19,7 @@
 	"MD022": true,
 	"MD023": true,
 	"MD024": {
-		"siblings_only": "true"
+		"siblings_only": true
 	},
 	"MD025": true,
 	"MD026": true,
@@ -50,7 +49,7 @@
 		"style": "asterisk"
 	},
 	"MD050": {
-		"style": "asterisk" 
+		"style": "asterisk"
 	},
 	"MD051": false,
 	"MD052": false,
