@@ -51,8 +51,8 @@ BIOS 信息子页面用于展示 BIOS 固件的详细属性，包括厂商、版
 
 参考文献：
 
-- 英特尔公司. 英特尔® 处理器步进意味着什么？[EB/OL]. [2024-01-15]. <https://www.intel.cn/content/www/cn/zh/support/articles/000057218/processors.html>
-- CPU“步进”介绍[EB/OL]. [2024-01-15]. <https://iknow.lenovo.com.cn/detail/320528>
+- 英特尔公司. 英特尔® 处理器步进意味着什么？[EB/OL]. [2024-01-15]. <https://www.intel.cn/content/www/cn/zh/support/articles/000057218/processors.html>.
+- CPU“步进”介绍[EB/OL]. [2024-01-15]. <https://iknow.lenovo.com.cn/detail/320528>.
 
 ### Memory Information（内存信息）
 
