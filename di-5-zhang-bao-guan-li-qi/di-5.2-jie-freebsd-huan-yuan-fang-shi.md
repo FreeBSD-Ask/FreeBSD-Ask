@@ -350,7 +350,7 @@ FreeBSD-ports-kmods: { enabled: no }
 >
 > 14.x 用户可以选择由传统安装方式直接转换为 pkgbase，参见本书其他相关文章。
 
-#### 官方源
+### 官方源
 
 默认路径：`/etc/pkg/repos/FreeBSD.conf`（请勿修改，仅做展示）
 

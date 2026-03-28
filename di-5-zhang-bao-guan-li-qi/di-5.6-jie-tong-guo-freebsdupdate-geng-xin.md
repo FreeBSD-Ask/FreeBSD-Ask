@@ -93,7 +93,7 @@ usr/lib/clang/11.0.1/include
 # freebsd-update install
 ```
 
-### FreeBSD 版本检查
+### 验证更新后的 FreeBSD 版本
 
 - 查看更新后的 FreeBSD 版本：
 

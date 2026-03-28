@@ -24,7 +24,7 @@ fcitx 即“小企鹅输入法”，其英文全称为“A flexible input method
 
 - 或者使用 Ports 安装：
 
-```
+```sh
 # cd /usr/ports/textproc/fcitx5/ && make install clean # 主程序
 # cd /usr/ports/textproc/fcitx5-qt/ && make install clean  # 同时包含 QT 5 和 QT 6
 # cd /usr/ports/textproc/fcitx5-gtk/ && make install clean # 同时包含 gtk 2、3、4

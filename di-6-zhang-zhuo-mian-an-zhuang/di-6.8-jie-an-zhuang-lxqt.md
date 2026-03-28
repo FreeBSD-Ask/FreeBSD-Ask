@@ -25,14 +25,14 @@ LXQt 是一款轻量级桌面环境，基于 Qt 应用框架开发。作为 LXDE
 
 - 软件包说明：
 
-| 包名               | 功能说明                                                                 |
-|:--------------------|:--------------------------------------------------------------------------|
-| `xorg`             | X Window System |
-| `sddm`             | 登录管理器 |
-| `lxqt`             | LXQt 桌面环境 |
-| `gvfs`             | GNOME 虚拟文件系统，LXQt 依赖此组件以打开 Computer 和 Network，否则会提示 `Operation not supported` |
-| `wqy-fonts`        | 文泉驿中文字体 |
-| `xdg-user-dirs`    | 管理用户目录，如“桌面”、“下载”等，并处理目录名称的本地化 |
+| 包名             | 功能说明 |
+| ---------------- | -------- |
+| `xorg` | X Window System |
+| `sddm` | 登录管理器 |
+| `lxqt` | LXQt 桌面环境 |
+| `gvfs` | GNOME 虚拟文件系统，LXQt 依赖此组件以打开 Computer 和 Network，否则会提示 `Operation not supported` |
+| `wqy-fonts` | 文泉驿中文字体 |
+| `xdg-user-dirs` | 管理用户目录，如“桌面”、“下载”等，并处理目录名称的本地化 |
 
 ## 服务管理
 
