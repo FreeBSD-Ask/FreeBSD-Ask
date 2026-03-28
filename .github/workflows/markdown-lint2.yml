@@ -12,8 +12,10 @@ jobs:
         with:
           config: '.github/.markdownlint.json'
           fix: true
-          globs: '**/*.md'
-
+          globs: |
+            '**/*.md'        # 匹配所有 Markdown
+            '!mu-lu.md'     # 排除单个文件
+            '!README.md'     # 排除单个文件
       - name: markdownlint cli2 RP
         if: failure()
         uses: peter-evans/create-pull-request@v8
