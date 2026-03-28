@@ -1,6 +1,6 @@
 # FreeBSD 从入门到跑路
 
-![](.gitbook/assets/web-logo.png)
+![🎉 欢迎来到 BSD 的世界！](.gitbook/assets/web-logo.png)
 
 🎉 欢迎来到 BSD 的世界！
 
@@ -84,7 +84,7 @@ FreeBSD 中文社区未通过其他域名部署本书，唯一官方域名为 `b
 
 请优先考虑向 FreeBSD 基金会捐赠。
 
-![](.gitbook/assets/proud_donor.png)
+![捐赠 FreeBSD 基金会](.gitbook/assets/proud_donor.png)
 
 [点此捐赠 FreeBSD 基金会](https://freebsdfoundation.org/donate-to-freebsd-foundation/)
 

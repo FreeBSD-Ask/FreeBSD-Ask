@@ -47,9 +47,9 @@ UEFI（Unified Extensible Firmware Interface）是现代计算机的固件接口
 
 bsd-hardware.info. Hardware for BSD[EB/OL]. [2026-03-25]. <https://bsd-hardware.info/?view=search>。该平台提供 BSD 系统硬件兼容性数据库，可用于查询设备支持情况。
 
-![](../.gitbook/assets/h1.png)
+![硬件支持查询](../.gitbook/assets/h1.png)
 
-![](../.gitbook/assets/h2.png)
+![硬件支持查询](../.gitbook/assets/h2.png)
 
 > **注意**
 >

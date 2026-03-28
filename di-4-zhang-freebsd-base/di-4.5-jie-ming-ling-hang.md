@@ -593,7 +593,7 @@ $ rm -rf /home/ykla/test/
 ># 
 >```
 >
-> ![](../.gitbook/assets/noefi.png)
+> ![引导错误](../.gitbook/assets/noefi.png)
 >
 > 重启后你会发现连引导都没了。
 >

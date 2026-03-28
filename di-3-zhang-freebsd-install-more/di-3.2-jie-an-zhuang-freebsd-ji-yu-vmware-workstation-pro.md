@@ -387,11 +387,11 @@ VMware 已被博通（Broadcom）收购。从官方下载 VMware 相关产品需
 >
 >- 点击右上角对应图标（名字左侧第一个），选择“VMware Cloud Foundation”（VMware 云计算基础架构）
 >  
->![](../.gitbook/assets/downbcm1.png)
+>![VMware 云计算基础架构](../.gitbook/assets/downbcm1.png)
 >
 >- 点击右侧的“My Downloads”（我的下载）
 >
->![](../.gitbook/assets/downbcm0.png)
+>![我的下载](../.gitbook/assets/downbcm0.png)
 >
 >- 往下翻，点击“VMware Workstation Pro“
 >

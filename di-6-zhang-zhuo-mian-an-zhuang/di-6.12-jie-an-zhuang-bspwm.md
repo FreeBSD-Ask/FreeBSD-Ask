@@ -197,7 +197,7 @@ $HOME/.fehbg &
 
 ## 展示图片
 
-![](../.gitbook/assets/bspwm.png)
+![bspwm 界面](../.gitbook/assets/bspwm.png)
 
 图片中显示的 Chrome 浏览器和 Thunar 文件管理器均需用户自行安装
 

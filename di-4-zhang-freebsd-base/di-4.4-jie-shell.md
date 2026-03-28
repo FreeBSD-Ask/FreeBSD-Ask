@@ -2,7 +2,7 @@
 
 ## 什么是 Shell
 
-![](../.gitbook/assets/you-shell.png)
+![什么是 Shell](../.gitbook/assets/you-shell.png)
 
 Shell 是用户与操作系统内核进行交互的命令解释器（command interpreter），它接收用户输入的命令并将其传递给内核执行。用户的命令运行在 Shell 中，并通过 Shell 与系统进行交互。
 

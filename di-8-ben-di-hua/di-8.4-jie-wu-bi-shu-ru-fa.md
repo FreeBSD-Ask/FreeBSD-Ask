@@ -23,7 +23,7 @@
 
 然后在终端运行初始化命令 `ibus-setup` 添加 `rime` 输入法：
 
-![](../.gitbook/assets/wubi3.png)
+![添加 Rime 输入法](../.gitbook/assets/wubi3.png)
 
 ### 配置 Rime 输入法
 
@@ -53,9 +53,9 @@ schema_list:
 
 保存退出重新部署 Rime 输入法即可。
 
-![](../.gitbook/assets/wubi4.png)
+![配置 Rime 输入法](../.gitbook/assets/wubi4.png)
 
-![](../.gitbook/assets/wubi5.png)
+![Rime 配置界面](../.gitbook/assets/wubi5.png)
 
 ## Fcitx 5
 
@@ -95,9 +95,9 @@ Fcitx 5 的具体配置步骤本节不做详细说明。
     └── wbx.main.dict # 98五笔词库
 ```
 
-![](../.gitbook/assets/wubi1.png)
+![Fcitx 5 配置界面](../.gitbook/assets/wubi1.png)
 
-![](../.gitbook/assets/wubi2.png)
+![Fcitx 5 输入法设置](../.gitbook/assets/wubi2.png)
 
 
 #### 附录：王码 98 五笔生成 `.dict` 库方法
@@ -225,7 +225,7 @@ patch applied.
 
 编辑 `~/.config/ibus/rime/build/ibus_rime.yaml`，将里面的 `horizontal: false` 改成 `horizontal: true` 重新部署输入法或重启即可。
 
-![](../.gitbook/assets/wubi6.png)
+![IBus 横排设置](../.gitbook/assets/wubi6.png)
 
 ## 故障排除
 

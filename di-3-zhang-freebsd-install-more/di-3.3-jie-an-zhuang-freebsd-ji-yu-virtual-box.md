@@ -14,15 +14,15 @@
 
 VirtualBox 安装完成后，按照以下步骤创建并配置虚拟机。以下演示基于 VirtualBox 7.1.4 和 Windows 11 24H2。
 
-![](../.gitbook/assets/vb1.png)
+![VirtualBox 主界面](../.gitbook/assets/vb1.png)
 
 选择“新建”。
 
-![](../.gitbook/assets/vb2.png)
+![新建虚拟机](../.gitbook/assets/vb2.png)
 
 名称输入“FreeBSD”，下方的相关选项会自动补全。
 
-![](../.gitbook/assets/vb3.png)
+![虚拟机名称设置](../.gitbook/assets/vb3.png)
 
 设置内存大小与 CPU 数量，并开启 EFI 支持选项。
 
@@ -31,15 +31,15 @@ VirtualBox 安装完成后，按照以下步骤创建并配置虚拟机。以下
 > 在 UEFI 模式下显卡可以正常驱动；而在 Wayland 下，由于缺少对应的 DRM/KMS（Direct Rendering Manager/Kernel Mode Setting，直接渲染管理器/内核模式设置）驱动支持，暂时无法使用。DRM/KMS 是 Linux/FreeBSD 等系统中用于管理显卡显示的内核子系统。
 
 
-![](../.gitbook/assets/vb4.png)
+![硬件设置](../.gitbook/assets/vb4.png)
 
 调整硬盘大小。
 
-![](../.gitbook/assets/vb4.5.png)
+![硬盘大小设置](../.gitbook/assets/vb4.5.png)
 
 打开设置。
 
-![](../.gitbook/assets/vb5.png)
+![虚拟机设置](../.gitbook/assets/vb5.png)
 
 显卡控制器使用 `VBoxSVGA` 即可。
 
@@ -47,15 +47,15 @@ VirtualBox 安装完成后，按照以下步骤创建并配置虚拟机。以下
 >
 > 不要勾选下方的“启用 3D 加速”选项，否则将导致无法使用 `VBoxSVGA` 控制器。
 
-![](../.gitbook/assets/vb5.5.png)
+![显示设置](../.gitbook/assets/vb5.5.png)
 
 开始安装。
 
-![](../.gitbook/assets/vb6.png)
+![FreeBSD 安装界面](../.gitbook/assets/vb6.png)
 
-![](../.gitbook/assets/vb7.png)
+![FreeBSD 安装界面](../.gitbook/assets/vb7.png)
 
-![](../.gitbook/assets/vb8.png)
+![FreeBSD 安装界面](../.gitbook/assets/vb8.png)
 
 > **注意**
 >
@@ -63,7 +63,7 @@ VirtualBox 安装完成后，按照以下步骤创建并配置虚拟机。以下
 
 安装后的系统：
 
-![](../.gitbook/assets/vb9.png)
+![FreeBSD 系统界面](../.gitbook/assets/vb9.png)
 
 ## 网络设置
 
@@ -77,7 +77,7 @@ VirtualBox 提供多种网络配置方式，以下介绍两种常用的网络设
 
 桥接是最简单的实现主机与虚拟机互通的方法，虚拟机可以获得一个与宿主机在同一网段的 IP 地址。例如，若主机 IP 为 192.168.31.123，则虚拟机 IP 可能为 192.168.31.x。
 
-![](../.gitbook/assets/VBbridge.png)
+![桥接网络设置](../.gitbook/assets/VBbridge.png)
 
 设置后执行 `# dhclient em0` 即可（为了长期生效可在 `/etc/rc.conf` 中加入 `ifconfig_em0="DHCP"`）。
 
@@ -91,13 +91,13 @@ VirtualBox 提供多种网络配置方式，以下介绍两种常用的网络设
 
 网络设置比较复杂，有时桥接不一定可以生效。为了达到使用宿主机（如 Windows 11）控制虚拟机里的 FreeBSD 系统的目的，需要设置两块网卡——一块是 NAT 网络模式的网卡用来上网、另一块是仅主机模式的网卡用来互通宿主机。如图所示：
 
-![](../.gitbook/assets/vbnat1.png)
+![双网卡设置](../.gitbook/assets/vbnat1.png)
 
 > **技巧**
 >
 > 在网卡类型下拉列表中，“网络地址转换（NAT）”与“NAT 网络”选项类似。根据官方手册 [Introduction to Networking Modes](https://www.virtualbox.org/manual/topics/networkingdetails.html#network_nat)，主要区别在于：“NAT 网络”模式下的虚拟机之间可以互通，而“网络地址转换（NAT）”模式下的虚拟机网络则是相互隔离的。
 
-![](../.gitbook/assets/vbnat2.png)
+![仅主机模式设置](../.gitbook/assets/vbnat2.png)
 
 使用命令 `# ifconfig` 查看状态，如果第二块网卡 `em1` 没有获取到 IP 地址，请手动通过 DHCP 获取：`# dhclient em1`（为了长期生效，可在 `/etc/rc.conf` 中加入 `ifconfig_em1="DHCP"`）。
 

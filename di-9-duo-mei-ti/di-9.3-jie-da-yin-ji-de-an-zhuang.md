@@ -127,53 +127,53 @@ Listen IP:631
 在浏览器中输入 `http://IP:631`，该地址为打印服务器的管理页面。
 
 
-![](../.gitbook/assets/cup1.png)
+![CUPS 管理页面](../.gitbook/assets/cup1.png)
 
 点击 `Administration-Add Printer`，根据提示创建打印机。
 
 过程中会提示输入账号和密码，使用 `root` 用户或 `wheel` 组内的用户登录（输入其在 FreeBSD 系统中的账户密码）即可。
 
 
-![](../.gitbook/assets/cup2.png)
+![添加打印机](../.gitbook/assets/cup2.png)
 
 点击 `Add Printer`，添加打印机。
 
-![](../.gitbook/assets/cup3.png)
+![选择打印机](../.gitbook/assets/cup3.png)
 
 本文中使用的打印机型号为 Brother HL L3228CDW。
 
-![](../.gitbook/assets/cup4.png)
+![打印机详情](../.gitbook/assets/cup4.png)
 
 在创建时，请务必勾选 `Share This Printer`。
 
-![](../.gitbook/assets/cup5.png)
+![共享打印机](../.gitbook/assets/cup5.png)
 
 选择型号。
 
-![](../.gitbook/assets/cup6.png)
+![选择型号](../.gitbook/assets/cup6.png)
 
 如果打印机支持免驱动打印，`Model` 请选择 `Generic IPP Everywhere Printer (en)`；否则需要安装相应驱动，并选择对应的打印机型号。
 
 
-![](../.gitbook/assets/cup7.png)
+![打印机配置](../.gitbook/assets/cup7.png)
 
 成功添加打印机！
 
-![](../.gitbook/assets/cup8.png)
+![添加成功](../.gitbook/assets/cup8.png)
 
 ## KDE 桌面添加打印机
 
 无需额外操作，需要打印的设备通常可自动发现打印服务器，并自动将其加入打印机列表，在打印文件时即可选择。例如在 KDE 桌面上：
 
-![](../.gitbook/assets/cup10.png)
+![KDE 打印机列表](../.gitbook/assets/cup10.png)
 
-![](../.gitbook/assets/cup11.png)
+![KDE 打印机详情](../.gitbook/assets/cup11.png)
 
 ## 打印测试页
 
 从内网的 Debian 机器打印测试页：
 
-![](../.gitbook/assets/cup12.jpg)
+![测试页打印](../.gitbook/assets/cup12.jpg)
 
 ## 故障排除与未竟事项
 
@@ -181,7 +181,7 @@ Listen IP:631
 
 要确认打印机是否免驱动，可以在 OpenPrinting. Find a Driverless Printer[EB/OL]. OpenPrinting, [2026-03-25]. <https://openprinting.github.io/printers/> 查询。以本文使用打印机为例：
 
-![](../.gitbook/assets/cup9.png)
+![OpenPrinting 查询](../.gitbook/assets/cup9.png)
 
 惠普（HP）打印机可通过安装 Port `print/hplip` 获得支持。
 

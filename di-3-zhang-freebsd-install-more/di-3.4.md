@@ -10,19 +10,19 @@
 
 首先按照以下步骤安装 FreeBSD 14.2 RELEASE 系统，本文未特别说明之处，均采用默认设置与参数，以确保系统的稳定性。
 
-![](../.gitbook/assets/shuang1.png)
+![FreeBSD 安装界面](../.gitbook/assets/shuang1.png)
 
-![](../.gitbook/assets/shuang2.png)
+![FreeBSD 安装界面](../.gitbook/assets/shuang2.png)
 
 > **技巧**
 >
 > 如果在此处设置 `P Partition Scheme` 为 `GPT (UEFI)` 而非其他（只有老电脑才需要 `GPT (BIOS+UEFI)` 等选项），后续分区与系统更新过程会更加简单，也能实现 4K 对齐。
 
-![](../.gitbook/assets/shuang3.png)
+![分区方案选择](../.gitbook/assets/shuang3.png)
 
 这里需要设置一个大的临时交换分区，该数值表示计划中的交换分区与 Windows 系统分区容量之和。这样设置是为了后续安装 Windows 时能够直接使用这部分空间，避免额外的分区操作。在本文中，交换分区（Swap）大小为 8GB，其余 200GB 空间预留给 Windows。请修改 `S Swap Size` 的大小。
 
-![](../.gitbook/assets/shuang4.png)
+![交换分区大小设置](../.gitbook/assets/shuang4.png)
 
 
 列出系统磁盘分区情况：
@@ -69,33 +69,33 @@ FreeBSD 安装完成后，接下来安装 Windows 系统。
 
 插入 Windows 启动盘，设置 BIOS 从该启动盘启动，开始安装 Windows。此时系统会识别到这块硬盘上的现有分区结构，我们只需要使用之前预留的空间。
 
-![](../.gitbook/assets/shuang5.png)
+![Windows 安装分区界面](../.gitbook/assets/shuang5.png)
 
 在分区时，删除（Delete Partition）整个 208 GB 的交换分区（本例中为"磁盘 0 分区 3"），因为这部分空间正是我们为 Windows 预留的。
 
-![](../.gitbook/assets/shuang6.png)
+![删除交换分区](../.gitbook/assets/shuang6.png)
 
 然后点击创建分区（Create Partition），如果提示出错，点击刷新（Refresh）即可。Windows 安装程序会自动在未分配空间上创建它需要的分区，包括 MSR 分区、系统分区和恢复分区。
 
 然后选中 208G 的“磁盘 0 未分配空间”，点击“下一步”进行安装。
 
-![](../.gitbook/assets/shuang7.png)
+![选择未分配空间安装 Windows](../.gitbook/assets/shuang7.png)
 
 ## 还原交换分区（Swap）
 
 Windows 安装完成后，需要为 FreeBSD 还原交换分区。我们分配了 208GB 空间，其中有 8GB 是为交换分区预留的。现在需要将其还原。需要用到工具 [DiskGenius](https://www.diskgenius.com/)。
 
-![](../.gitbook/assets/shuang8.png)
+![DiskGenius 主界面](../.gitbook/assets/shuang8.png)
 
 打开 DiskGenius，压缩 C 盘，腾出 8GB 的未分配空间。Windows 系统安装完成后，C 盘占用了我们之前预留的大部分空间，我们只需要从 C 盘末尾压缩出 8GB 即可。
 
-![](../.gitbook/assets/shuang9.png)
+![压缩 C 盘](../.gitbook/assets/shuang9.png)
 
 将这 8GB 空间格式化为 `FreeBSD Swap partition` 类型，然后点击“保存更改”。这一步操作是将新创建的交换分区标记为 FreeBSD 可以识别的类型。
 
-![](../.gitbook/assets/shuang10.png)
+![格式化交换分区](../.gitbook/assets/shuang10.png)
 
-![](../.gitbook/assets/shaung11.png)
+![保存分区更改](../.gitbook/assets/shaung11.png)
 
 回到 FreeBSD，查看磁盘分区情况：
 

@@ -2,7 +2,7 @@
 
 本章节主要介绍 BIOS（基本输入/输出系统，Basic Input/Output System）中与启动相关的设置选项，包括启动超时、启动设备顺序、USB（通用串行总线，Universal Serial Bus）支持等重要配置。系统启动流程的配置对于操作系统的正确加载、硬件兼容性保障和启动性能优化具有关键意义。
 
-![](../.gitbook/assets/image-20250726132126-uafgj13.png)
+![Boot 启动菜单](../.gitbook/assets/image-20250726132126-uafgj13.png)
 
 ## Setup Prompt Timeout（设置 Setup 提示超时时间）
 

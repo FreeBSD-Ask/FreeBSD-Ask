@@ -375,7 +375,7 @@ root     syslogd     1021 7   udp4   *:514                 *:*
 
 请 **取消** 勾选“智能调整大小”。
 
-![](../.gitbook/assets/xrdp6.png)
+![智能调整大小](../.gitbook/assets/xrdp6.png)
 
 ## 使用 Android 通过 XRDP 远程访问 FreeBSD
 
@@ -646,9 +646,9 @@ $ anydesk
 ……省略一部分……
 ```
 
-执行命令后弹出来这个界面：
+执行命令后弹出来 AnyDesk 主界面：
 
-![](../.gitbook/assets/anydesk2.png)
+![AnyDesk 主界面](../.gitbook/assets/anydesk2.png)
 
 注意，被连接方必须“接受”（Accept）才能继续连接。
 

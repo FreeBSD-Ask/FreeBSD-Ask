@@ -64,7 +64,7 @@ $ WINEPREFIX=$HOME/test wine winecfg
 >
 >`WINEPREFIX` 是一组目录集合，用于存放 Wine 的相关配置文件以及模拟的 Windows 系统文件。通过设置不同的 WINEPREFIX，可以实现多个配置环境的共存。
 
-![](../.gitbook/assets/wine1.png)
+![Wine 配置界面](../.gitbook/assets/wine1.png)
 
 如果出现报错，或者命令执行后没有任何响应，则可以执行以下操作来删除默认的 Wine 配置目录，重置 Wine 环境：
 
@@ -110,11 +110,11 @@ winscp.exe: PE32 executable for MS Windows 6.01 (GUI), Intel i386, 11 sections
 $ wine /home/ykla/winscp.exe
 ```
 
-![](../.gitbook/assets/wine2.png)
+![WinSCP 安装界面](../.gitbook/assets/wine2.png)
 
-![](../.gitbook/assets/wine4.png)
+![WinSCP 运行界面](../.gitbook/assets/wine4.png)
 
-![](../.gitbook/assets/wine3.png)
+![WinSCP 程序界面](../.gitbook/assets/wine3.png)
 
 >**技巧**
 >
@@ -158,11 +158,11 @@ $ winetricks
 >
 >`warning: You are using a 64-bit WINEPREFIX. Note that many verbs only install 32-bit versions of packages. If you encounter problems, please retest in a clean 32-bit WINEPREFIX before reporting a bug.`
 
-![](../.gitbook/assets/winetricks1.png)
+![Winetricks 主界面](../.gitbook/assets/winetricks1.png)
 
-![](../.gitbook/assets/winetricks2.png)
+![Winetricks 选择界面](../.gitbook/assets/winetricks2.png)
 
-![](../.gitbook/assets/winetricks3.png)
+![Winetricks 字体选项](../.gitbook/assets/winetricks3.png)
 
 这里可以尝试安装列表中的最后两个中文字体。安装完成后，大多数程序即可正常显示中文。
 

@@ -63,7 +63,7 @@ boot # 输入 boot 后回车即可继续启动
 >
 >分区标识不一定是 `(hd0,msdos1)`，请以实际情况为准。注意不要误删过多内容导致无法辨识。
 
-![](../.gitbook/assets/2.png)
+![GRUB 命令行界面](../.gitbook/assets/2.png)
 
 这个特制的 initrd 启动后，不会加载硬盘上的原系统，而是自行配置网络并启动 SSH 服务器。由此，我们获得了一个运行在内存中的 Linux 系统。
 
@@ -123,7 +123,7 @@ mfsBSD 和 mfsLinux 镜像的默认 `root` 密码均为 `mfsroot`。
 直接执行此 `dd` 命令会报错，如图所示：
 
 
-![](../.gitbook/assets/1.png)
+![dd 命令报错](../.gitbook/assets/1.png)
 
 
 ### LVM 逻辑卷
