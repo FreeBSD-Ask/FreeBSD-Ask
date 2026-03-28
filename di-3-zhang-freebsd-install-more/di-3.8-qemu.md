@@ -26,7 +26,6 @@ RISC-V FreeBSD 磁盘镜像（以 FreeBSD 14.2 RELEASE 为例）：
 
 下载后解压缩备用。
 
-
 ```sh
 /usr/
 └── local/
@@ -69,7 +68,6 @@ RISC-V FreeBSD 磁盘镜像（以 FreeBSD 14.2 RELEASE 为例）：
 ```
 
 提取 `fw_jump.elf` 到 Windows 下备用。
-
 
 ## U-Boot
 

@@ -34,7 +34,6 @@ FreeBSD 是一款真正自由（Liberty）的 **操作系统**，在这波谲云
 - Discord：<https://discord.gg/j7VhWrhp3e>（需代理，可通过网页使用）
 - Telegram 群组：[https://t.me/oh_my_BSD](https://t.me/oh_my_BSD)（需代理）
 
-
 ## 电子文档
 
 目前网站提供了 PDF 和 EPUB 格式的电子文档：
@@ -162,7 +161,6 @@ FreeBSD 中文社区未通过其他域名部署本书，唯一官方域名为 `b
 与上月相比：+12.88 万字（+13.94%）
 
 <!-- CHINESE_CHAR_COUNT_END -->
-
 
 <!-- commit-progress-start -->
 **第 3 版编纂进度:**   （人工提交数: 1391 / 3533）

@@ -24,7 +24,6 @@
 
 ![交换分区大小设置](../.gitbook/assets/shuang4.png)
 
-
 列出系统磁盘分区情况：
 
 ```sh

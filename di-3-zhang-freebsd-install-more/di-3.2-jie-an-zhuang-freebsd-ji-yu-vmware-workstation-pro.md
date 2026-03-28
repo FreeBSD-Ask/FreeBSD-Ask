@@ -18,8 +18,6 @@
 >
 >虚拟机一般使用 `FreeBSD-14.2-RELEASE-amd64-disc1.iso` 等类似文件名和后缀的 ISO 光盘镜像，但是 `FreeBSD-14.2-RELEASE-amd64-memstick.img` 也并非只能用于 U 盘刻录，虚拟机同样可以使用，具体使用方法可参考其他章节。
 
-
-
 ## 配置虚拟机
 
 镜像下载完成后，在 VMware Workstation Pro 中创建新的虚拟机，按照以下步骤进行配置。
@@ -66,7 +64,6 @@
 
 ![VMware 安装 FreeBSD](../.gitbook/assets/vm12.png)
 
-
 > **技巧**
 >
 > 经过测试，FreeBSD 也可以支持 UEFI 下 VMware 的显卡驱动。——2025 年 3 月 24 日
@@ -75,13 +72,11 @@
 >
 > 由于 [Bug 250580 - VMware UEFI guests crash in virtual hardware after r366691](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=250580) 的存在，FreeBSD 11/12 在 VMware 的 UEFI 环境下可能无法启动。经测试，FreeBSD 13.0 可正常启动。
 
-
 ![VMware 安装 FreeBSD](../.gitbook/assets/vm13.png)
 
 ![VMware 安装 FreeBSD](../.gitbook/assets/vm14.png)
 
 ![VMware 安装 FreeBSD](../.gitbook/assets/vm15.png)
-
 
 ## 网络设置
 
@@ -100,7 +95,6 @@
 >NAT 模式的“名称”与你主机的 `控制面板\网络和 Internet\网络连接` 中的 `VMware Network Adapter VMnet8` 绑定，默认绑定的是 `8`。换言之，NAT 模式的“名称”默认必须指定为下图所示的 `VMnet8`，否则虚拟机将无法联网。
 >
 >![vmware network on freebsd](../.gitbook/assets/VMnat8.png)
-
 
 ![vmware network on freebsd](../.gitbook/assets/net1.png)
 
@@ -292,7 +286,6 @@ Downloads
 - fuse: failed to open fuse device[EB/OL]. <https://forums.freebsd.org/threads/fuse-failed-to-open-fuse-device.44544/>. 解决了 fuse 设备无法打开的问题（如 `fuse: failed to open fuse device: No such file or directory`），为共享文件夹配置提供了关键参考。
 - VMware shared folders[EB/OL]. <https://forums.freebsd.org/threads/vmware-shared-folders.10318/>. 详细介绍了 FreeBSD 下 VMware 共享文件夹的具体挂载方法。
 
-
 ## 故障排除与未竟事宜
 
 > **注意**
@@ -353,7 +346,6 @@ VMware 已被博通（Broadcom）收购。从官方下载 VMware 相关产品需
 >- 结束注册流程
 >  
 >![结束注册](../.gitbook/assets/dolater.png)
-
 
 ### 博通（Broadcom）账号登录
 
@@ -417,9 +409,7 @@ VMware 已被博通（Broadcom）收购。从官方下载 VMware 相关产品需
 >  
 >![下载](../.gitbook/assets/downbcm7.png)
 
-
 VMware Workstation Pro 目前对于个人用户来说是 **免费下载、免费使用、免费授权的。** **请勿从任何第三方站点下载，** 否则会造成一些未知的后果——90% 的问题都是由此产生的。
-
 
 ### 博通开源/社区产品
 

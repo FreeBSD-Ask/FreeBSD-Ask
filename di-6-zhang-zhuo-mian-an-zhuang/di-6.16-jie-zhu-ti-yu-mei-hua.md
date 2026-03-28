@@ -6,7 +6,6 @@ FreeBSD 安装桌面环境后，默认通常采用简单朴素的色调。这种
 >
 > 本节仅涉及 `GTK` 库的桌面主题，囊括 `GNOME`、`Xfce`、`MATE`、`Cinnamon` 和 `LXDE` 等桌面环境。
 
-
 以下仅收录部分图标和主题，如需获取更多资源，可访问 [FreshPorts](https://www.freshports.org)。
 
 ## 主题
@@ -30,7 +29,6 @@ FreeBSD 安装桌面环境后，默认通常采用简单朴素的色调。这种
 - Numix 圆形图标：`# pkg install numix-icon-theme-circle`
 - Yaru 图标：`# pkg install yaru-icon-theme`
 - Canta 图标：`# pkg install canta-icon-theme`
-
 
 ## KDE 主题美化
 
@@ -84,7 +82,6 @@ $ ./install.sh  # 执行安装脚本安装图标主题
 >
 > FreeBSD 上的 KDE6 自带类似功能，无需安装 `freebsd-update-notify`，本教程仅做示例。
 
-
 `freebsd-update-notify` 可以自动检测 FreeBSD 系统和 pkg 包的更新。
 
 ### 安装 `freebsd-update-notify`
@@ -113,13 +110,11 @@ hours-between-reminders     8   # 提醒间隔（小时）
 
 ### 图片示例
 
-
 > **注意**
 >
 > 截图为手动执行示例，实际上程序可以在后台自动运行，无需手动验证。若无法再现，可以尝试将 `freebsd-update-notify.conf` 中两个值都改为 `0`，再手动以 `root` 权限执行 `/usr/local/libexec/freebsd-update-notify`。
 
 日志位于 `/var/log/freebsd-update-cron` 和 `/var/log/freebsd-update-notify`。若要反馈故障，请使用英文提交 [issue](https://github.com/outpaddling/freebsd-update-notify/issues)。
-
 
 ![freebsd-update-notify on FreeBSD](../.gitbook/assets/notify1.png)
 
@@ -131,4 +126,3 @@ hours-between-reminders     8   # 提醒间隔（小时）
 
 1. 查找 WhiteSur 主题的源码仓库，分析其跨平台适配机制，在 QEMU 中构建主题安装环境并验证其在 FreeBSD 上的应用效果。
 2. 修改 freebsd-update-notify 的默认更新检测间隔，验证其通知行为变化。
-

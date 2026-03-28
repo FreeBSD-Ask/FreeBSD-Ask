@@ -70,7 +70,6 @@
 ums_load="YES"
 ```
 
-
 ### 参考文献
 
 - Issue(s) booting FreeBSD 12.2 aarch64 on Parallels Desktop on Apple Silicon[EB/OL]. <https://forums.freebsd.org/threads/issue-s-booting-freebsd-12-2-aarch64-on-parallels-desktop-on-apple-silicon.78654/>. 提供了 Apple Silicon 上 Parallels Desktop 中 FreeBSD 启动问题的讨论与解决方案。
@@ -93,7 +92,6 @@ ums_load="YES"
 > **注意**
 >
 >若通过 Ports 编译安装，需确保当前系统的源代码位于 `/usr/src` 目录下。
-
 
 ### 故障排除与未竟事宜
 

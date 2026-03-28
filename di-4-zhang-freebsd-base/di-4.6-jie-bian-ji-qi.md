@@ -214,7 +214,6 @@ Emacs GUI：
 
 ![Emacs GUI](../.gitbook/assets/di-4.6-jie-emcs-1.png)
 
-
 Emacs CLI:
 
 ![Emacs CLI](../.gitbook/assets/di-4.6-jie-emacs-2.png)

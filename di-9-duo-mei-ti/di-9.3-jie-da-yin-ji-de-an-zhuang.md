@@ -126,13 +126,11 @@ Listen IP:631
 
 在浏览器中输入 `http://IP:631`，该地址为打印服务器的管理页面。
 
-
 ![CUPS 管理页面](../.gitbook/assets/cup1.png)
 
 点击 `Administration-Add Printer`，根据提示创建打印机。
 
 过程中会提示输入账号和密码，使用 `root` 用户或 `wheel` 组内的用户登录（输入其在 FreeBSD 系统中的账户密码）即可。
-
 
 ![添加打印机](../.gitbook/assets/cup2.png)
 
@@ -153,7 +151,6 @@ Listen IP:631
 ![选择型号](../.gitbook/assets/cup6.png)
 
 如果打印机支持免驱动打印，`Model` 请选择 `Generic IPP Everywhere Printer (en)`；否则需要安装相应驱动，并选择对应的打印机型号。
-
 
 ![打印机配置](../.gitbook/assets/cup7.png)
 
@@ -184,7 +181,6 @@ Listen IP:631
 ![OpenPrinting 查询](../.gitbook/assets/cup9.png)
 
 惠普（HP）打印机可通过安装 Port `print/hplip` 获得支持。
-
 
 ### FreeBSD 打印的测试页示例
 

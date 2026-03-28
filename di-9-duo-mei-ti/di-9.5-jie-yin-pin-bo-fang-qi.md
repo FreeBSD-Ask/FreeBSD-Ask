@@ -171,7 +171,6 @@ MPD 默认使用的部分目录需要自行创建：
 # chmod 777 /var/mpd/music  # 用于存放音乐文件，设置为 777 仅为方便增删文件，实际使用中可根据需要自行调整权限。
 ```
 
-
 修改 `/usr/local/etc/musicpd.conf` 文件，在 `"Default OSS Device"` 一节后面增加一节：
 
 ```ini
@@ -186,7 +185,6 @@ audio_output {
 > **技巧**
 >
 > 可以指定多个输出设备，并在各类客户端中按需启用或禁用相应的输出设备。
-
 
 开启 musicpd 服务
 

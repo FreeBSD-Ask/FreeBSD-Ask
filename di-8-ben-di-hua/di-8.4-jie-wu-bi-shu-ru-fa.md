@@ -99,7 +99,6 @@ Fcitx 5 的具体配置步骤本节不做详细说明。
 
 ![Fcitx 5 输入法设置](../.gitbook/assets/wubi2.png)
 
-
 #### 附录：王码 98 五笔生成 `.dict` 库方法
 
 使用 libime 工具将 `98wbx.txt` 转换为 `98wbx.main.dict` 字典文件：

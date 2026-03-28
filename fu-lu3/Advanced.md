@@ -254,7 +254,6 @@ Enable（启用）
 
 参见 英特尔. 什么是性能混合架构？[EB/OL]. (2024-12-16)[2026-03-26]. <https://www.intel.cn/content/www/cn/zh/support/articles/000091896/processors.html>. 详细介绍 Intel 性能混合架构的设计理念与优势。
 
-
 ### Performance-core Information（性能核心信息）
 
 | 英文原文                     | 中文翻译                    |
@@ -586,7 +585,6 @@ Enable（启用）
 DPR：DMA Protected Range：内核直接内存访问受保护范围。
 
 DMA 受保护范围（DPR）是一段连续的物理内存区域，其最后一个字节位于 TXT 段（TSEG）起始地址之前一个字节的位置，并且该区域受到所有 DMA 访问的保护。
-
 
 参见 Where to read about DMA Protected Range (DPR)?[EB/OL]. [2026-03-26]. <https://community.intel.com/t5/Software-Archive/Where-to-read-about-DMA-Protected-Range-DPR/td-p/922654>
 
@@ -1364,7 +1362,6 @@ Enable（启用）
 
 这是是否允许修改 PL2 的总开关。是启用/禁用平台功耗限制 2（Platform Power Limit2，PL2）的编程设置。一旦功耗超过该阈值，PsysPL2 快速功耗限制算法将尝试限制超出 PsysPL2 的功耗峰值。
 
-
 启用（Enabled）：BIOS 会激活并写入 PL2 值，处理器会在指定时间窗口内以该值限制平均功耗。
 
 禁用（Disabled）：BIOS 不编程 PL2，此时处理器将使用默认或平台固件设定的限制值。
@@ -1916,7 +1913,6 @@ Enable（启用）
 ### ME Debug Configuration（Intel 管理引擎调试配置）
 
 #### HECI Timeout（HECI 超时）
-
 
 选项：
 

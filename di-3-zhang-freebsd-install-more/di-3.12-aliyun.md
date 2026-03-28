@@ -197,11 +197,9 @@ default via 172.24.63.253 dev eth0 proto dhcp src 172.24.0.80 metric 100
 
 ![强制重启实例](../.gitbook/assets/reb-1.png)
 
-
 勾选“强制重启实例”这一选项。
 
 ![重启实例](../.gitbook/assets/reb-2.png)
-
 
 执行强制重启以进入 FreeBSD。
 
@@ -528,7 +526,6 @@ pid 1562 (distextract), jid 0, uid 0, was killed: failed to reclaim memory
 
 这可能是一个长期存在但难以复现的 Bug，参见：Bug 249157 - installer reports sysctl: unknown oid 'vfs.zfs.min_auto_ashift' when ZFS module not loaded[EB/OL]. [2026-03-26]. <https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=249157>。
 
-
 ### 文件系统不支持在线压缩
 
 EXT2、EXT3、EXT4、Btrfs 和 XFS 文件系统均不支持在线压缩。目前对此尚无解决方案。
@@ -537,13 +534,11 @@ EXT2、EXT3、EXT4、Btrfs 和 XFS 文件系统均不支持在线压缩。目前
 
 ![找不到 UEFI 启动项](../.gitbook/assets/nouefi.png)
 
-
 确认所选镜像确实支持 UEFI 启动，例如 mfslinux 和 TinyCore-current.iso 不支持 UEFI 启动。
 
 ### 找不到根分区
 
 应将镜像写入整个磁盘（例如 `/dev/vda`），而非单个分区（例如 `/dev/vda2`），否则可能出现如下错误：
-
 
 ![未写入整块磁盘，写入了 EFI 分区](../.gitbook/assets/novda2.png)
 
@@ -648,7 +643,6 @@ TinyCorePure64 下载地址是 [x86 Pure 64](http://www.tinycorelinux.net/ports.
 
 ![启动到 TinyCorePure64](../.gitbook/assets/TinyCorePure1.png)
 
-
 选择最后一项“corew”，因为默认图形界面（tc）在通过 VNC 执行命令时可能出现异常。同时，其 GUI 下无法运行 Ventoy GUI，这是由于 libc 格式不兼容所致。
 
 观察分区情况：
@@ -666,7 +660,6 @@ TinyCorePure64 下载地址是 [x86 Pure 64](http://www.tinycorelinux.net/ports.
 ```sh
 # echo http://mirrors.163.com/tinycorelinux/ > /opt/tcemirror
 ```
-
 
 安装 exFAT 工具、分区工具、FAT 文件系统工具、Linux 工具集及证书组件：
 
@@ -691,7 +684,6 @@ $ tce-load -wi exfat-utils parted dosfstools util-linux openssl ca-certificates
 ![Ventoy 启动菜单](../.gitbook/assets/Ventoy5.png)
 
 在引导菜单中设置可调参数 `kern.maxphys` 后，继续启动 FreeBSD 系统。
-
 
 列出磁盘分区情况：
 
@@ -721,7 +713,6 @@ mkfs.fat 4.2 (2021-01-31)
 ```
 
 查看 `/dev/vda2` 分区的文件系统类型：
-
 
 ```sh
 # blkid /dev/vda2

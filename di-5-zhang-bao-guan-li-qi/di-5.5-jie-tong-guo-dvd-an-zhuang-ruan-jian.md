@@ -70,7 +70,6 @@ COPYRIGHT	etc		mnt		rescue		usr
 
 **/dist** 目录若改为其他目录，则使用环境变量的方法无效，因为 `packages/repos/FreeBSD_install_cdrom.conf` 中的路径被写死，无法修改。
 
-
 ## 使用 `bsdconfig` 安装 DVD 软件（目前无效）
 
 先按上述方法完成挂载。
