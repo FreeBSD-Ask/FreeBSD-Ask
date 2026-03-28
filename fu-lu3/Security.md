@@ -60,14 +60,14 @@ HDD 密码说明：
 
 如果已设置主密码（可选），也可用其解锁硬盘。
 
-| 项目                                | 状态                    |
-| ----------------------------------- | ----------------------- |
-| 支持安全功能（Security Supported）  | 是（Yes）               |
-| 安全功能启用（Security Enabled）    | 否（No）                |
-| 安全锁定（Security Locked）         | 否（No）                |
-| 安全冻结（Security Frozen）         | 否（No）                |
+| 项目 | 状态 |
+| ---- | ---- |
+| 支持安全功能（Security Supported） | 是（Yes） |
+| 安全功能启用（Security Enabled） | 否（No） |
+| 安全锁定（Security Locked） | 否（No） |
+| 安全冻结（Security Frozen） | 否（No） |
 | 用户密码状态（HDD User Pwd Status） | 未安装（NOT INSTALLED） |
-| 主密码状态（HDD Master Pwd Status） | 已安装（INSTALLED）     |
+| 主密码状态（HDD Master Pwd Status） | 已安装（INSTALLED） |
 
 设置硬盘密码后，建议重启系统以确保设置生效。
 
