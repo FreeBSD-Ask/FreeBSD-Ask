@@ -20,11 +20,11 @@ Wine 使得在 FreeBSD 系统上运行 Windows 程序成为可能。本节将介
 
 软件包说明：
 
-|程序 | 说明|
-|:---|:---|
-|wine|Wine 主程序|
-|wine-gecko| Wine 项目基于 Firefox 的 Gecko 浏览器内核实现的 Internet Explorer 组件 |
-|wine-mono| Mono 提供了对 .NET Framework 4.8 及更低版本的支持 |
+| 程序 | 说明 |
+| ---- | ---- |
+| wine | Wine 主程序 |
+| wine-gecko | Wine 项目基于 Firefox 的 Gecko 浏览器内核实现的 Internet Explorer 组件 |
+| wine-mono | Mono 提供了对 .NET Framework 4.8 及更低版本的支持 |
 
 >**注意**
 >

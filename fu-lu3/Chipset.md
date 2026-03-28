@@ -623,7 +623,7 @@ Disabled（禁用）
 
 CMD/CTL：指内存控制器与内存模块之间传输命令和控制信号的线路。
 
-##### Read Timing Centering 1D（读取时序中心化 1D）
+##### Read Timing Centering 1D（读取时序中心化 1D）（第二组）
 
 选项：
 
@@ -4952,11 +4952,11 @@ Enabled（启用）：表示该引脚被配置为 ISH 的原生功能。
 
 Enabled（启用）呈灰色：表示存在冲突，例如另一个 Serial IO 控制器占用了该引脚。必须禁用该控制器才能配置此引脚为 ISH 功能。
 
-| ISH 功能  | 与其共享的设备接口 | 适用芯片组     |
-| --------- | ------------------ | -------------- |
-| ISH UART0 | LPSS I2C2          | PCH-H          |
-| ISH UART1 | LPSS UART1         | 不区分         |
-| ISH I2C2  | LPSS I2C5 或 I2C3  | PCH-LP / PCH-H |
+|ISH 功能|与其共享的设备接口|适用芯片组|
+|---|---|---|
+|ISH UART0|LPSS I2C2|PCH-H|
+|ISH UART1|LPSS UART1|不区分|
+|ISH I2C2|LPSS I2C5 或 I2C3|PCH-LP / PCH-H|
 
 为了防止引脚冲突让用户手动决定引脚由 ISH 使用还是由其他低功耗控制器（如 I2C、UART）使用。
 
