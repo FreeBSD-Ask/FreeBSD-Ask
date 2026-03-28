@@ -100,7 +100,7 @@ FreeBSD 基本系统几乎不包含任何与 BSD 协议不兼容的软件。
 ## 基本对比
 
 | 操作系统 | 发布/生命周期（主要版本） | 主要包管理器（命令） | 许可证（主要） | 工具链 | shell | 桌面 |
-| ------ | ------------------------ | -------------------- | -------------- | ------ | ----- | ---- |
+| -------- | ------------------------ | -------------------- | -------------- | ------ | ----- | ------ |
 | Ubuntu | [2 年/10 年](https://ubuntu.com/about/release-cycle) | [apt](https://ubuntu.com/server/docs/package-management) | [GNU](https://ubuntu.com/legal/intellectual-property-policy) | gcc | bash | Gnome |
 | Gentoo Linux | 滚动更新 | [Portage（emerge）](https://wiki.gentoo.org/wiki/Portage) | GNU | gcc | bash | 可选 |
 | Arch Linux | 滚动更新 | [pacman](https://wiki.archlinux.org/title/pacman) | GNU | gcc | bash | 可选 |
@@ -112,7 +112,7 @@ FreeBSD 基本系统几乎不包含任何与 BSD 协议不兼容的软件。
 由于 Linux 广泛使用 GNU 工具，因此理论上只要不依赖特定的 Linux 函数库，这些工具都可以在 FreeBSD 上运行。
 
 | Linux 命令/GNU 软件 | BSD Port/命令 | 作用说明 | 备注 |
-| -------------------- | ------------- | -------- | ---- |
+| ------------------- | ------------- | -------- | ---- |
 | `lsusb` | `sysutils/usbutils` | 显示 USB 信息 | 粗略地可以用 `cat /var/run/dmesg` |
 | `lspci` | `sysutils/pciutils` | 显示 PCI 信息 | 粗略地可以用 `cat /var/run/dmesg` |
 | `lsblk` | `sysutils/lsblk` | 显示磁盘使用情况 | / |

@@ -7,9 +7,9 @@
 FreeBSD 提供了多种类型的软件源，分别服务于不同的系统组件和软件安装需求。下表概括了各类软件源的基本信息：
 
 | 软件源 | 简介 | 备注 |
-| ------- | ---- | ---- |
+| ------- | ---- | ----- |
 | pkg | 类似于传统 Linux 的包管理器，用于安装二进制软件包 | 如果不需要以二进制方式安装软件可以不配置。默认未安装 `pkg`，输入 `pkg` 回车会提示安装。**除 pkgbase 外的 pkg 包实际上都是由 Port 直接构建而来** |
-| Ports 框架 | 拉取 Port 的源代码模板（本身不含源代码，只是对第三方软件的一些描述文件、补丁集和 Makefile）。Ports 是这些 Port 的 **集合**，在 `freebsd-ports` 存储库中统一维护 | Gentoo 的包管理器 Portage（命令为 `emerge`）即是借鉴于此。用于帮助用户从源代码编译安装第三方软件。换言之，Ports（Port 集合）类似 Gentoo 的 [ebuild 数据库](https://mirrors.ustc.edu.cn/help/gentoo.html)  |
+| Ports 框架 | 拉取 Port 的源代码模板（本身不含源代码，只是对第三方软件的一些描述文件、补丁集和 Makefile）。Ports 是这些 Port 的 **集合**，在 `freebsd-ports` 存储库中统一维护 | Gentoo 的包管理器 Portage（命令为 `emerge`）即是借鉴于此。用于帮助用户从源代码编译安装第三方软件。换言之，Ports（Port 集合）类似 Gentoo 的 [ebuild 数据库](https://mirrors.ustc.edu.cn/help/gentoo.html) |
 | ports 源 | 在 Port 中的 Makefile 文件中会定义若干软件包源码的地址，该软件源用于拉取这些源。因为有时候从官方上游拉取速度不佳 | 等同于 Gentoo 的 [Distfiles 源](https://mirrors.ustc.edu.cn/help/gentoo.html)。不需要源代码方式编译软件可以不配置 |
 | freebsd-update | 用于更新基本系统（内核 + 用户空间） | 预计在 FreeBSD 16 中退役，转而使用 pkgbase |
 | pkgbase | 将 FreeBSD 基本系统（内核 + 用户空间）打包成 pkg 包，使用 pkg(8) 管理基本系统的方式，取代传统的 freebsd-update 和 distribution | 从 FreeBSD 15.0 开始可选（技术预览，在整个 15.X 周期内可选），预计在 16.0 成为默认/标准方式。14.X 为实验性支持，可使用 pkgbasify 工具转换。基本系统升级/维护使用 `pkg upgrade`。生产环境建议继续使用传统方式。需配置 FreeBSD-base 源（见下文）。参考 [PkgBase Wiki](https://wiki.freebsd.org/PkgBase)。pkgbase 实际上由存储库 `freebsd-src` 构建而来，与 Ports 完全无关。FreeBSD 基本系统始终是独立于 Ports 而自存的 |
