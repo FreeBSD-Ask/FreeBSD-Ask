@@ -29,7 +29,7 @@ DRM 是 Linux 内核的子系统，负责与现代显卡的 GPU 进行交互。F
 > DG2 Arc 显卡尚不受支持（截至 DRM 6.1 版本），相关技术细节可参见：Intel Arc A770: Kernel panic on kldload i915kms.ko #315[EB/OL]. [2026-03-26]. <https://github.com/freebsd/drm-kmod/issues/315>。可能需要等到 6.12 的移植才能提供支持。
 
 | FreeBSD 版本 | 对应 DRM 驱动版本 | GPU 支持范围（AMD / Intel） | 备注 |
-| ---- | ---- | ---- | ---- |
+| ------------ | ----------------- | --------------------------- | ---- |
 | **FreeBSD 14.3-RELEASE** | **drm-61-kmod（基于 Linux 6.1 DRM）** | - **AMD：** <br>**GCN 1（Southern Islands）** <br>**GCN 5（Polaris / Vega）** <br> **RDNA 1 / RDNA 2 / RDNA 3（Radeon RX 7000 系列）**<br>- **Intel：** <br>**Gen 4（GMA X3000 / 965）**<br>**Gen 5（Iron Lake）**<br>**Gen 6（Sandy Bridge）**<br>**Gen 7（Ivy / Haswell）**<br>**Gen 8（Broadwell）**<br>**Gen 9（Skylake / Kaby Lake / Coffee Lake）**<br>**Gen 10（Cannon Lake – 已废弃）**<br>**Gen 11（Ice Lake / Jasper Lake）**<br>**Gen 12（Tiger Lake / Alder Lake）** | 理论支持 Intel 第 3 ～ 12 代 GPU。 |
 | **FreeBSD 15.0/16.0-CURRENT** | **drm-66-kmod（基于 Linux 6.6 DRM）** | - **AMD：** 自 **GCN 1** 起至 **RDNA 3（Radeon RX 7000 系列）**，并包含 **Instinct MI300 加速卡** 支持。<br>- **Intel：** <br> **Gen 4–8：** 旧核显（GMA、HD Graphics 4000 等）<br> **Gen 9：** Skylake / Kaby Lake / Coffee Lake<br> **Gen 10：** Cannon Lake（已废弃）<br> **Gen 11：** Ice Lake / Jasper Lake<br> **Gen 12：** Tiger Lake / Alder Lake <br> **Gen 13：** Raptor Lake（基本兼容 Alder Lake 驱动）<br> **Gen 14：** Meteor Lake（实验性，已合入 drm-66） | 实测 **Intel Alder Lake-N (N100)、i7-1260P** 显卡驱动加载正常，显示与视频加速功能稳定；<br><br>理论支持 Intel 第 3～14 代 GPU（含 Meteor Lake），但第 13 代及以后缺乏充分实测； |
 

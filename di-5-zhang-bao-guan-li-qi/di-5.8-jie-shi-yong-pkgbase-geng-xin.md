@@ -597,7 +597,7 @@ https://mirrors.163.com/freebsd-pkg/
 为了帮助读者更好地配置 pkgbase 源，下面整理了 FreeBSD 官方源的 pkgbase 信息，包括各分支的更新频率和对应的 URL 地址。
 
 | 分支 | 更新频率 | URL 地址 |
-| ---- | -------- | --------- |
+| ---- | -------- | -------- |
 | main（16.0-CURRENT） | 每天两次：08:00、20:00 | <https://pkg.freebsd.org/${ABI}/base_latest> |
 | main（16.0-CURRENT） | 每周一次：星期日 20:00 | <https://pkg.freebsd.org/${ABI}/base_weekly> |
 | stable/14 | 每天两次：08:00、20:00 | <https://pkg.freebsd.org/${ABI}/base_latest> |
