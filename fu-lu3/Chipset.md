@@ -3456,7 +3456,7 @@ PCIe 和服务器规范中定义的访问控制服务（ACS）功能，是用于
 
 参见:
 
-- Intel. A.2.2.4. Access Control Services (ACS) Capability Structure[EB/OL]. [2026-03-26]. <https://www.intel.com/content/www/us/en/docs/programmable/683059/24-3/access-control-services-acs-capability.html)>
+- Intel. A.2.2.4. Access Control Services (ACS) Capability Structure[EB/OL]. [2026-03-26]. <https://www.intel.com/content/www/us/en/docs/programmable/683059/24-3/access-control-services-acs-capability.html>
 - RedHat. Hardware Considerations for Implementing SR-IOV[EB/OL]. [2026-03-26]. <https://docs.redhat.com/zh-cn/documentation/red_hat_virtualization/4.2/html/hardware_considerations_for_implementing_sr-iov/index>
 
 ##### PTM（精确时间测量）
