@@ -93,7 +93,6 @@ export XDG_RUNTIME_DIR=/var/run/user/`id -u`
 
 按快捷键 Ctrl+Alt+F2 进入 TTY，执行 `dbus-run-session Hyprland`，系统将在 `~/.config/hypr` 生成默认配置文件。
 
-
 ## 配置自动启动
 
 如果需要在不使用登录管理器的前提下开机自动启动 Hyprland，请将下行写入 `~/.profile`：
@@ -830,14 +829,12 @@ text-caps-lock-color=000000FF
 
 请读者检查是否已将普通用户添加到 `video` 组，是否安装了显卡驱动，以及是否正确设置环境变量 `XDG_RUNTIME_DIR`，并确认上述设置已生效。
 
-
 ## 参考文献
 
 - Bilibili. ArchLinux 下 Hyprland 配置指北[EB/OL]. Bilibili 专栏, [2026-03-25]. <https://www.bilibili.com/read/cv22707313/>. Bilibili 专栏提供的 Hyprland 窗口管理器详细配置中文教程。
 - nth233. Hyprland 的配置[EB/OL]. 个人博客, [2026-03-25]. <https://nth233.top/posts/2023-02-26-Hyprland%E9%85%8D%E7%BD%AE>. Hyprland 窗口管理器配置详解与实践指南。
 - Gentoo Wiki. Hyprland[EB/OL]. [2026-03-25]. <https://wiki.gentoo.org/wiki/Hyprland>. Gentoo 官方维基明确指出 Hyprland 启动命令应为 `dbus-run-session Hyprland`。
 - Arch Linux Wiki. Hyprland[EB/OL]. [2026-03-25]. <https://wiki.archlinux.org/title/Hyprland>. Arch Linux 官方维基指出虚拟机需 3D 加速且依赖 DRM GPU，同时所有平台 NVIDIA 显卡均不被支持。
-
 
 ## 课后习题
 

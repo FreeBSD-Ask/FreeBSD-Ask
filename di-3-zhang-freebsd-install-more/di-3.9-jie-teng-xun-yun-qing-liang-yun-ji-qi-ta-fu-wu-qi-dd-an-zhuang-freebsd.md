@@ -12,7 +12,6 @@
 
 因为部分服务器未启用 DHCP 服务，因此可能需要手动配置 IP。
 
-
 ## 视频教程
 
 [08-腾讯云轻量云及其他服务器安装 FreeBSD](https://www.bilibili.com/video/BV1y8411d7pp)
@@ -29,9 +28,7 @@
 
 上述服务器的管理面板未提供 FreeBSD 镜像，因此需要采用变通方法进行安装。由于 FreeBSD 与 Linux 在内核及可执行文件格式上不兼容，因此无法通过 `chroot` 后删除原系统的方式进行安装。安装方法为：首先在内存盘中启动 FreeBSD 系统（即先引导 [mfsBSD](https://mfsbsd.vx.sk) ），然后格式化硬盘并安装新系统。mfsBSD 是一款完全载入内存的 FreeBSD 系统，类似于 Windows PE（Preinstallation Environment）环境。
 
-
 我们需要下载 [img 格式的 mfsBSD 镜像](https://mfsbsd.vx.sk/files/images/14/amd64/mfsbsd-se-14.2-RELEASE-amd64.img)，可提前下载后通过 WinSCP 上传至服务器；若直接在服务器上下载，可能耗时较长（约两小时）。
-
 
 ## 取消隐藏的 GRUB 菜单
 
@@ -94,7 +91,6 @@ mfsBSD 和 mfsLinux 镜像的默认 `root` 密码均为 `mfsroot`。
 
 ![腾讯云轻量云及其他服务器安装 FreeBSD](../.gitbook/assets/installBSD3.png)
 
-
 - 我们也可以手动下载 FreeBSD 的安装文件，以 `MANIFEST` 文件为例：
 
 ```sh
@@ -122,9 +118,7 @@ mfsBSD 和 mfsLinux 镜像的默认 `root` 密码均为 `mfsroot`。
 
 直接执行此 `dd` 命令会报错，如图所示：
 
-
 ![dd 命令报错](../.gitbook/assets/1.png)
-
 
 ### LVM 逻辑卷
 
@@ -153,7 +147,6 @@ boot # 输入 boot 后回车即可继续启动
 此方法失败。该操作并非将镜像挂载为内存盘，虽可引导，但 FreeBSD 在启动过程中会报错，无法找到启动文件。
 
 此外，在 UEFI 模式下，GRUB2 不提供 `linux16`、`kfreebsd` 等命令。
-
 
 #### 方案二
 

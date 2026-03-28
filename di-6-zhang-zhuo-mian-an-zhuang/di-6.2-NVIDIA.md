@@ -37,7 +37,6 @@
 # pkg info -q | grep -i nvidia
 ```
 
-
 ## 配置 NVIDIA 显卡
 
 ### 启动 NVIDIA 相关内核模块
@@ -63,7 +62,6 @@
 > **警告**
 >
 > 不要试图安装和使用 Port `x11/nvidia-xconfig`。该工具当前不适用，可能导致系统无响应。
-
 
 ## 硬件加速和解码器
 

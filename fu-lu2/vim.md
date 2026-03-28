@@ -197,7 +197,6 @@ augroup END
 
 此时可以在退出插入模式后自动格式化代码，也可以在 Vim 中手动执行 `:FormatCode` 命令进行格式化。
 
-
 ### vim-clang-format 代码美化
 
 除了 vim-codefmt 外，vim-clang-format 也是一个常用的代码格式化插件。clang-format 代码美化需安装插件 vim-clang-format。

@@ -210,7 +210,6 @@ root 密码设置完成。
 - VMware 17 安装失败，无论是否使用 UEFI。
 - 对于 NVMe 存储设备的支持可能有限，建议查阅官方硬件兼容性列表。
 
-
 ## 配置 DragonFly BSD
 
 完成系统安装后，我们需要对 DragonFly BSD 进行一些基本的系统配置。下面介绍 DragonFly BSD 的系统配置方法。
@@ -268,7 +267,6 @@ export LC_CTYPE="zh_CN.UTF-8"   # 设置字符类型本地化为中文 UTF-8
 ### Intel i915kms 显卡
 
 DragonFly BSD 对 Intel 显卡有特定的支持要求。[根据硬件说明](https://www.dragonflybsd.org/docs/supportedhardware)，DragonFly BSD 6.4 显卡只支持到英特尔第八代（Coffeelake）处理器。
-
 
 ## 参考文献
 

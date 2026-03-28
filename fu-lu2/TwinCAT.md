@@ -11,7 +11,6 @@ TwinCAT/BSD 是由倍福公司（Beckhoff）开发的基于 FreeBSD 的 PLC（Pr
 - GPU 直通[EB/OL]. [2026-03-25]. <https://github.com/FreeBSD-Ask/freebsd-journal-cn/blob/main/2023-0304/GPU%20Passthrough.md>. 详细介绍 FreeBSD 平台下 GPU 直通技术的实现方法与配置步骤。
 - TwinCAT/BSD for Industrial PCs[EB/OL]. [2026-03-25]. <https://www.beckhoff.com/en-en/products/ipc/software-and-tools/twincat-bsd/>. 倍福官方 TwinCAT/BSD 产品说明，涵盖技术规格与授权信息。
 
-
 ## 下载 TwinCAT/BSD
 
 了解 TwinCAT/BSD 的基本信息后，我们可以开始准备安装。首先需要获取系统安装镜像。TwinCAT/BSD 的下载地址如下：
@@ -132,7 +131,6 @@ TwinCAT/BSD 是由倍福公司（Beckhoff）开发的基于 FreeBSD 的 PLC（Pr
 
 ![TCBSD](../.gitbook/assets/t26.png)
 
-
 ## 用户账户
 
 系统安装完成后，我们需要了解系统的用户账户配置。默认用户名是 `Administrator`，其密码是你在安装时设置的。倍福其他 PLC 默认密码通常是 `1`，但 TwinCAT/BSD 的密码由用户自定义。
@@ -163,7 +161,6 @@ TwinCAT/BSD 提供了 Web 管理界面，方便用户进行系统配置和管理
 
 ![TCBSD](../.gitbook/assets/tcbsd2.png)
 
-
 ## 故障排除与未竟事宜
 
 在使用 TwinCAT/BSD 的过程中，可能会遇到一些问题。以下是一些常见问题的解决方法。
@@ -179,7 +176,6 @@ dhcpcd_flags="--denyinterfaces igb0"
 ```
 
 即将 `dhcpcd_flags` 的值由 `--waitip` 改为 `--denyinterfaces igb0`（配置 dhcpcd，禁止在指定网卡 `igb0` 上自动获取 DHCP 地址）。`igb0` 为需要配置静态 IP 的网卡名，请根据实际情况更改。
-
 
 ## 换源
 

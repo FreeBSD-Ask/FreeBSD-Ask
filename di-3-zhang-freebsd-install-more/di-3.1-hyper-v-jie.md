@@ -29,7 +29,6 @@ Gen 1 与 Gen 2 的区别如下表所示：
 |    Gen 2     |     13.0     | [不支持](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=221074) |  支持  |                          需修改参数 `sysctl kern.evdev.rcpt_mask=6`（启用 evdev，让 Xorg 正确检测 PS/2 设备）                           |
 |    Gen 2     |     14.0     |                                支持                                |  支持  | 参见：源代码[EB/OL]. [2026-03-26]. <https://cgit.FreeBSD.org/src/commit/?id=21f4e817fde79d5de79bfbdf180d358ca5f48bf9>  |
 
-
 ## 测试环境
 
 本节基于以下软硬件环境进行测试与演示，实验结果具有一定的环境依赖性。
@@ -66,7 +65,6 @@ PS C:\Users\ykla> Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-H
 
 点击“下一页”。
 
-
 ![Hyper-V](../.gitbook/assets/hp4.png)
 
 为虚拟机设置名称，然后点击“下一页”。
@@ -74,7 +72,6 @@ PS C:\Users\ykla> Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-H
 ![Hyper-V](../.gitbook/assets/hp.png)
 
 选择“第二代”。然后点击“下一页”。
-
 
 ![Hyper-V](../.gitbook/assets/hp5.png)
 
@@ -84,16 +81,13 @@ PS C:\Users\ykla> Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-H
 
 设置网络，然后点击“下一页”。
 
-
 ![Hyper-V](../.gitbook/assets/hp7.png)
 
 指定虚拟硬盘的名称、大小及存储位置，然后点击“下一页”。
 
-
 ![Hyper-V](../.gitbook/assets/hp8.png)
 
 点击“浏览”，找到并选中已下载的 `FreeBSD-14.1-RELEASE-amd64-disc1.iso` 文件，然后点击“下一页”。
-
 
 ![Hyper-V](../.gitbook/assets/hp9.png)
 

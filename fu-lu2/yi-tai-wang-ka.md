@@ -28,31 +28,31 @@ Realtek RTL8125 是一款常见的 2.5 G 以太网卡。在消费级市场中，
 
 在安装驱动之前，我们需要了解当前网卡型号是否在支持列表中。
 
-* 5G 网卡
-  * RTL8126
-* 2.5G 网卡
-  * RTL8125 / RTL8125B(G)
-* 10/100/1000M 网卡
-  * RTL8111B / RTL8111C / RTL8111D / RTL8111E / RTL8111F / RTL8111G
+- 5G 网卡
+  - RTL8126
+- 2.5G 网卡
+  - RTL8125 / RTL8125B(G)
+- 10/100/1000M 网卡
+  - RTL8111B / RTL8111C / RTL8111D / RTL8111E / RTL8111F / RTL8111G
     RTL8111H / RTL8118(A) / RTL8119I / RTL8111L / RTL8111K
-  * RTL8168B / RTL8168E / RTL8168H
-  * RTL8111DP / RTL8111EP(P) / RTL8111FP
-  * RTL8411 / RTL8411B
-* 10/100M 网卡
-  * RTL8101E / RTL8102E / RTL8103E / RTL8105E / RTL8106E / RTL8107E
-  * rtl8401 / rtl8402
+  - RTL8168B / RTL8168E / RTL8168H
+  - RTL8111DP / RTL8111EP(P) / RTL8111FP
+  - RTL8411 / RTL8411B
+- 10/100M 网卡
+  - RTL8101E / RTL8102E / RTL8103E / RTL8105E / RTL8106E / RTL8107E
+  - rtl8401 / rtl8402
 
 #### Realtek 以太网卡驱动安装方法
 
 确认网卡型号在支持列表中后，我们可以开始安装驱动。
 
-* 使用 pkg 安装：
+- 使用 pkg 安装：
   
 ```sh
 pkg install realtek-re-kmod
 ```
 
-* 使用 Ports 安装：
+- 使用 Ports 安装：
 
 ```sh
 # cd /usr/ports/net/realtek-re-kmod/ 
@@ -120,10 +120,10 @@ Intel 网卡也是常见的网络适配器类型，FreeBSD 对其有良好的支
 
 支持列表：
 
-* I225-LM（商业端产品线，服务器用）
-* I225-V（桌面端产品线，常见于家用台式机）
-* I225-IT
-* I225-K
+- I225-LM（商业端产品线，服务器用）
+- I225-V（桌面端产品线，常见于家用台式机）
+- I225-IT
+- I225-K
 
 参考文献：
 
@@ -136,7 +136,6 @@ Intel 网卡也是常见的网络适配器类型，FreeBSD 对其有良好的支
 支持列表及更多参见：
 
 - em, lem, igb -- Intel(R) PRO/1000 Gigabit Ethernet adapter driver[EB/OL]. [2026-03-25]. <https://man.freebsd.org/cgi/man.cgi?query=igc>. 手册页，涵盖 Intel PRO/1000 系列千兆网卡驱动说明。
-
 
 ## USB 网卡推荐
 

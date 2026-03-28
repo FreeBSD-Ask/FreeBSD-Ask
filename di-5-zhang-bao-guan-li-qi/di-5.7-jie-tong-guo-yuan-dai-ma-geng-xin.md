@@ -47,7 +47,6 @@ FreeBSD 项目在 2021 年从 SVN 全面迁移到了 Git，即 <https://git.free
 # git config --global --unset https.proxy  # 取消 Git 全局 HTTPS 代理设置
 ```
 
-
 ### Git 拉取源代码
 
 #### 拉取 CURRENT
@@ -91,7 +90,6 @@ $ git clone --branch releng/15.0 --single-branch --depth 1 https://github.com/fr
 ### 参考文献
 
 - Warner Losh. Submitting GitHub Pull Requests to FreeBSD[EB/OL]. (2024)[2026-03-25]. <https://freebsdfoundation.org/our-work/journal/browser-based-edition/configuration-management-2/submitting-github-pull-requests-to-freebsd/>.
-
 
 ## 从压缩包获取源代码（方便但非最新）
 
@@ -159,7 +157,6 @@ Select: (p) postpone, (df) diff-full, (e) edit,
         (h) help for more options: e # 输入 e 解决冲突
 # etcupdate -B 
 ```
-
 
 ## 故障排除与未竟事宜
 

@@ -404,7 +404,6 @@ USTC-base: {
 >
 > 在从 14.X pkgbase 系统升级到 15.0 时，常遇到签名密钥问题。请确保 `/usr/share/keys/pkgbase-15` 存在（如果缺失，可从官方源手动 fetch 或参考 Release Notes 中的升级说明）。否则会出现 “no trusted public keys found” 错误。详见 [15.0 Release Notes - Upgrading](https://www.freebsd.org/releases/15.0R/relnotes/#upgrade)  和论坛相关讨论。
 
-
 ## STABLE/CURRENT 快速切换 pkg 软件源到中国科学技术大学开源镜像站
 
 >**警告**
@@ -534,7 +533,6 @@ MASTER_SITE_OVERRIDE?=https://mirrors.ustc.edu.cn/freebsd-ports/distfiles/${DIST
 >目前中国大陆境内不存在任何 FreeBSD 官方镜像站。
 >
 >对于那些以安全性为较高优先级的用户来说，应该使用默认的官方镜像 `pkg.freebsd.org`！其由 FreeBSD 项目官方构建、分发和维护。
-
 
 ### 旧版本存档的 pkg 二进制包源（请酌情使用）
 

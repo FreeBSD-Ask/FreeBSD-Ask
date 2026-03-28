@@ -71,7 +71,6 @@
 
 ![确认分区变更](../.gitbook/assets/shuangxitong7.png)
 
-
 之后会进入正常安装的流程。安装完成后列出系统中所有 ZFS 池及其状态：
 
 ```sh
@@ -136,7 +135,6 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 
 请注意根据实际情况替换 `nda0` 为实际硬盘编号。
 
-
 ### 创建 ZFS 分区
 
 在 nda0 磁盘上创建 4K 对齐的 FreeBSD ZFS 分区，并标记为 zroot：
@@ -192,7 +190,6 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 
 ### 创建 ZFS 数据集
 
-
 以下数据集的设置参照 FreeBSD 源代码中的 [usr.sbin/bsdinstall/scripts/zfsboot](https://github.com/freebsd/freebsd-src/blob/main/usr.sbin/bsdinstall/scripts/zfsboot) 进行创建，因为 FreeBSD 本身的开发是持续不断的，所以 FreeBSD 不同版本间的 ZFS 数据集也有所差异。读者在创建数据集时若希望创建与默认安装相同的数据集结构，应参照对应分支的 `usr.sbin/bsdinstall/scripts/zfsboot` 文件。
 
 - 创建根数据集
@@ -205,7 +202,6 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 
 此类无具体挂载点的数据集通常作为系统根数据集的容器，其下将创建具体用于挂载的子数据集或起到排除作用。
 
-
 - 创建默认根数据集
 
 ```sh
@@ -213,7 +209,6 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 ```
 
 将创建数据集 `zroot/ROOT/default`，将其挂载到根目录 `/`。此数据集将作为系统的默认根文件系统。
-
 
 - 创建 `/home` 数据集
 
@@ -239,7 +234,6 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 
 将创建 `zroot/usr` 数据集，`canmount` 即禁止自动挂载，这样可以将相关的子数据集组织在一起，但不会单独挂载这个父数据集。
 
-
 - 创建 `/usr/ports` 数据集
 
 ```sh
@@ -247,7 +241,6 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 ```
 
 将创建 `/usr/ports` 数据集，禁用 setuid（`setuid=off`）。
-
 
 - 创建 `/usr/src` 数据集
 
@@ -264,7 +257,6 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 ```
 
 将创建 `/var` 数据集，`canmount` 意味着不会自动挂载。
-
 
 - 创建 `/var/audit` 数据集
 
@@ -305,7 +297,6 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 ```
 
 将创建 `zroot/var/mail` 数据集，并启用访问时间记录（`atime=on`），通常用于存放邮件数据，因为邮件程序可能需要知道文件的最后访问时间。
-
 
 > **技巧**
 >
@@ -391,7 +382,6 @@ Windows 文本文件的行尾通常是 `\r\n`（回车 + 换行）。
 # mkdir -p /media/efi/freebsd
 ```
 
-
 - 将 FreeBSD 的 EFI 启动文件复制到启动目录
 
 ```sh
@@ -403,7 +393,6 @@ Windows 文本文件的行尾通常是 `\r\n`（回车 + 换行）。
 ```sh
 # efibootmgr --create --activate --label "FreeBSD" --loader "/media/efi/freebsd/loader.efi"
 ```
-
 
 - 卸载 EFI 系统分区
 
@@ -435,7 +424,6 @@ Windows 文本文件的行尾通常是 `\r\n`（回车 + 换行）。
 
 安装程序将自动继续后续流程。
 
-
 ### 完成
 
 至此，我们已手动创建了一套与自动安装程序基本相同的 ZFS 数据集结构（自动安装通常还会创建独立的 `/home/用户名` 数据集，此处未包含）。
@@ -460,7 +448,6 @@ zroot/var/log        156K  91.6G   156K  /var/log
 zroot/var/mail        96K  91.6G    96K  /var/mail
 zroot/var/tmp         96K  91.6G    96K  /var/tmp
 ```
-
 
 ## 参考文献
 

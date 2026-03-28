@@ -27,7 +27,6 @@
 $ zip test.zip test # 压缩成 zip 文件
 ```
 
-
 ### zip 解压
 
 zip 文件解压时，系统通常自带 `unzip` 工具，无需额外安装。
@@ -130,7 +129,6 @@ $ 7z x test.7z -o/home/ykla/下载/test # 将 test.7z 解压到指定路径
 >
 >`-o/home/ykla/下载/test` 中 `-o` 与路径之间没有空格，这并非拼写错误，而是 7z 命令的设计方式。如有意者可提交 PR 改进。
 
-
 ## rar
 
 rar 是 Windows 上常见的压缩工具。
@@ -149,7 +147,6 @@ rar 是 Windows 上常见的压缩工具。
 # cd /usr/ports/archivers/rar/ && make install clean
 # cd /usr/ports/archivers/unrar/ && make install clean
 ```
-
 
 ### rar 压缩
 
