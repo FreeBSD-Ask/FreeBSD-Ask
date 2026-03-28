@@ -499,7 +499,7 @@ RUN Loop：确保 CPU 始终处于运行状态，不进入空闲循环
 
 该项用于配置 AP 线程的待机行为，即等待运行信号。
 
-C 状态相关设置。应用处理器（Application Processor，AP）。在计算机系统中，除引导处理器外的所有其他处理器都称为应用处理器。参见：UEFI Specs[EB/OL]. [2026-03-26]. [2026-03-26]. <https://uefi.org/specs/PI/1.8/V2_DXE_Boot_Services_Protocols.html>
+C 状态相关设置。应用处理器（Application Processor，AP）。在计算机系统中，除引导处理器外的所有其他处理器都称为应用处理器。参见：UEFI Specs[EB/OL]. [2026-03-26]. <https://uefi.org/specs/PI/1.8/V2_DXE_Boot_Services_Protocols.html>
 
 ### AES（AES 加密）
 
