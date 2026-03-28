@@ -50,12 +50,12 @@
 		"style": "asterisk"
 	},
 	"MD050": {
-		"style": "asterisk"
+		"style": "asterisk" 
 	},
 	"MD051": false,
 	"MD052": false,
 	"MD053": false,
 	"MD054": false,
 	"MD055": true,
-	"MD056": true,
+	"MD056": true
 }
