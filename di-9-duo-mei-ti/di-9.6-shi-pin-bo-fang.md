@@ -33,9 +33,9 @@ FreeBSD 操作系统提供了多种视频播放器选择，本节将介绍几款
 
 经实际测试，常用视频格式均能在 VLC 播放器中正常播放。
 
-![](../.gitbook/assets/vlc1.png)
+![VLC 播放器](../.gitbook/assets/vlc1.png)
 
-![](../.gitbook/assets/vlc2.png)
+![VLC 视频播放](../.gitbook/assets/vlc2.png)
 
 ## SMPlayer
 
@@ -89,25 +89,25 @@ Kodi 是一款知名的开源媒体中心软件，其曾用名为 XBMC（Xbox Me
 
 首先打开 Kodi 主界面中的 `interface`（界面）设置选项：
 
-![](../.gitbook/assets/kodi1.png)
+![Kodi 设置界面](../.gitbook/assets/kodi1.png)
 
 点击 `Skin`（皮肤）选项，然后点击界面左下角的设置级别按钮，将当前的 `Basic`（简单）级别改为 `Expert`（专家）或 `Standard`（标准）级别，否则无法看到 `Fonts`（字体）等高级设置选项。随后将 `Fonts`（字体）设置为 `Arial based`，否则中文可能出现乱码显示问题。
 
-![](../.gitbook/assets/kodi3.png)
+![Kodi 字体设置界面](../.gitbook/assets/kodi3.png)
 
 返回上一级菜单后，依次选择 `Regional`（区域）→ `Language`（语言）→ `Chinese (Simplified)`（简体中文）选项以完成语言切换。
 
-![](../.gitbook/assets/kodi2.png)
+![Kodi 语言设置界面](../.gitbook/assets/kodi2.png)
 
 中文界面设置完成后的效果如下：
 
-![](../.gitbook/assets/kodi5.png)
+![Kodi 中文界面](../.gitbook/assets/kodi5.png)
 
 ### Kodi 播放视频测试
 
 经实际测试，常用视频格式均能在 Kodi 媒体中心中正常播放。
 
-![](../.gitbook/assets/kodi4.png)
+![Kodi 播放视频测试](../.gitbook/assets/kodi4.png)
 
 ## 附录：直接在 TTY 播放视频（mpv）
 

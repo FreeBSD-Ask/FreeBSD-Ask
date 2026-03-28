@@ -31,15 +31,15 @@ FreeBSD 操作系统支持多种音频播放器，本节将介绍几款常用播
 >
 > 经测试验证，Audacious 仅原生支持 `.flac` 格式，目前默认构建不支持 `.m4a` 和 `.av3a` 等编码格式，需安装相应插件或另行配置。
 
-![](../.gitbook/assets/audacious.png)
+![Audacious](../.gitbook/assets/audacious.png)
 
 ## VLC
 
 VLC（VideoLAN Client，视频局域网客户端）播放器的安装等方法可参见其他相关章节。需要说明的是，FreeBSD 中的 `ffmpeg`（快速多媒体，Fast Forward MPEG）多媒体框架默认构建配置未启用对 libuavs3d（该库提供 AVS2/AVS3 解码支持）的编译支持，本文不再展开相关的重新编译配置方法。
 
-经过实际测试，VLC 播放器可以正常播放 AC‑4 编码的 m4a 格式音频：
+经过实际测试，VLC 播放器可以正常播放 AC-4 编码的 m4a 格式音频：
 
-![](../.gitbook/assets/vlc3.png)
+![播放 AC4 编码的 m4a 格式音频](../.gitbook/assets/vlc3.png)
 
 ## 用 MPD 播放 DSD
 
@@ -171,7 +171,6 @@ MPD 默认使用的部分目录需要自行创建：
 # chmod 777 /var/mpd/music  # 用于存放音乐文件，设置为 777 仅为方便增删文件，实际使用中可根据需要自行调整权限。
 ```
 
-
 修改 `/usr/local/etc/musicpd.conf` 文件，在 `"Default OSS Device"` 一节后面增加一节：
 
 ```ini
@@ -186,7 +185,6 @@ audio_output {
 > **技巧**
 >
 > 可以指定多个输出设备，并在各类客户端中按需启用或禁用相应的输出设备。
-
 
 开启 musicpd 服务
 

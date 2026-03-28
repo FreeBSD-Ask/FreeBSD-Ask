@@ -42,7 +42,6 @@
 | ![大教堂与集市](../.gitbook/assets/dajiaotang.png) <br><br> 《大教堂与集市》 | [美] Eric S. Raymond <br><br> 卫剑钒 译 | 978-7-111-45247-8 <br><br> 机械工业出版社 | 开源运动历史书籍，阐释集中式与分布式两种软件开发模式的差异。 |
 | ![UNIX 传奇：历史与回忆](../.gitbook/assets/unixchuanqi.png) <br><br> 《UNIX 传奇——历史与回忆》 | [美] Brian W. Kernighan 著 <br><br> 韩磊 译 | 978-7-115-55717-9 <br><br> 人民邮电出版社 | UNIX 发展历史书籍，记录 Unix 技术发展的关键节点和历史背景。 |
 
-
 以下书籍阐述了 UNIX 的设计理念，有助于读者理解其软件工程思想与技术哲学。
 
 | 封面/书名 | 作者/译者 | ISBN/出版社 |
@@ -60,7 +59,6 @@
 | ![FreeBSD 技术内幕](../.gitbook/assets/Unleashed.png) <br><br> 《FreeBSD 技术内幕》 | [美] Michael Urban、Brian Tiemann 等著 <br><br> 智慧东方工作室 译 | 978-7-111-10201-0 <br><br> 机械工业出版社 | FreeBSD 技术书籍，出版于 2002 年，系统讲解 FreeBSD 系统架构与核心组件。部分内容如系统架构概述仍具参考价值，适合了解 FreeBSD 的发展脉络。 |
 | ![深入理解 FreeBSD 设备驱动程序开发](../.gitbook/assets/qudong.png) <br><br> 《深入理解 FreeBSD 设备驱动程序开发》 | [加] Joseph Kong 著 <br><br> 陈毅东 译 | 978-7-111-41157-4 <br><br> 机械工业出版社 | FreeBSD 驱动开发技术书籍，详细讲解内核模块编程、设备驱动架构和驱动程序开发技术。 |
 
-
 以下是 FreeBSD 内核设计的权威著作，内容深入且专业，为高级研究者提供核心技术参考。
 
 | 封面/书名 | 作者/译者 | ISBN/出版社 |
@@ -74,7 +72,6 @@
 该书阅读难度较高，属于高级技术专著范畴，需要具备一定的操作系统理论基础方能深入理解。
 
 主要作者 Marshall Kirk McKusick 在其网站上有提供多款 BSD 相关的录制课程[EB/OL]. [2026-03-26]. <https://www.mckusick.com/buylist.html>。目前正在撰写推出第三版，相关信息可参见 2025 年 6 月 BSDCan 大会 A History of the BSD Daemon by Marshall Kirk McKusick[EB/OL]. [2026-03-26]. <https://www.youtube.com/watch?v=SGC0191nDp0>，这一信息对于追踪 FreeBSD 技术演进具有重要的文献价值。
-
 
 ### IPv6 网络堆栈
 
@@ -104,7 +101,6 @@
 | 《DTrace 用户指南》 | Oracle | 文件号码 E22192（版本 [Oracle Solaris 10 8/11](https://docs.oracle.com/cd/E24847_01/) ） | [在线阅读地址](https://docs.oracle.com/cd/E24847_01/html/E22192/index.html)、[PDF](https://docs.oracle.com/cd/E24847_01/pdf/E22192.pdf)。DTrace 入门技术文档，讲解动态跟踪框架的基本概念与使用方法。 |
 | 《Solaris 动态跟踪指南》 | Oracle | 文件号码 819-6959-10（版本 [Oracle Solaris 10 8/11](https://docs.oracle.com/cd/E24847_01/) ） | [在线阅读地址](http://download.oracle.com/docs/cd/E19253-01/819-6959/index.html)、[PDF](http://download.oracle.com/docs/cd/E19253-01/819-6959/819-6959.pdf)。DTrace 高级技术文档，讲解动态跟踪框架的高级技巧与性能分析方法。 |
 
-
 ## 文献评述与历史文献
 
 ### FreeBSD Mastery 系列丛书
@@ -126,7 +122,6 @@
 | ![Absolute FreeBSD, 3rd Edition: The Complete Guide to FreeBSD](../.gitbook/assets/AbsoluteBSD.png) <br><br> ***Absolute FreeBSD, 3rd Edition: The Complete Guide to FreeBSD*** | Michael W. Lucas | 978-1-59327-892-2 <br><br> No Starch Press |
 
 *Absolute FreeBSD* 系列初版于 2002 年，第三版出版于 2018 年。该书作为 FreeBSD 入门综合指南，内容覆盖系统安装、配置管理、基本运维等主题。
-
 
 ### 《莱昂氏 UNIX 源代码分析》
 

@@ -2,7 +2,6 @@
 
 本章系统介绍 ZFS 启动环境（Boot Environment，BE）的创建与管理，以及基于 pkgbase 的系统版本升级方法。ZFS 启动环境与 pkgbase 相结合，为 FreeBSD 提供了安全、灵活的系统更新与多版本共存机制，是现代 FreeBSD 系统管理的重要技术手段。
 
-
 ## 创建启动环境 15.0-RELEASE
 
 ZFS 启动环境（Boot Environment，BE）是 FreeBSD 的一个重要特性，它允许我们在系统中创建多个独立的系统环境，从而实现不同系统版本的共存与安全切换。下面我们将创建一个名为 15.0-RELEASE 的启动环境。
@@ -95,7 +94,6 @@ zroot/ROOT/15.0-RELEASE  99036272 11132688 87903584    11%    /mnt/upgrade
 
 可以看到，已经成功将启动环境 15.0-RELEASE 挂载到了指定路径。
 
-
 ### 验证当前 FreeBSD 版本
 
 目前 15.0-RELEASE 实际上仍是 14.3-RELEASE。虽然这是已知事实，但仍可使用命令 `freebsd-version` 进行验证。
@@ -114,7 +112,6 @@ zroot/ROOT/15.0-RELEASE  99036272 11132688 87903584    11%    /mnt/upgrade
 - `-k`：打印已安装内核的版本和补丁级别。与 [uname(1)](https://man.freebsd.org/uname(1)) 不同的是，如果新的内核已经安装但系统尚未重启，`freebsd-version` 会打印新内核的版本和补丁级别。
 - `-r`：打印正在运行中的内核的版本和补丁级别。与 [uname(1)](https://man.freebsd.org/uname(1)) 不同的是，`freebsd-version` 不受环境变量影响。
 - `-u`：打印已安装用户态的版本和补丁级别。这些信息在构建过程中会被写入程序 `freebsd-version` 中。
-
 
 ### 使用 pkgbase 将启动环境中的 14.3-RELEASE（系统版本）转换到 pkgbase
 
@@ -275,7 +272,6 @@ Proceed with this action? [y/N]: y # 此处输入 y 后继续
 >
 >如果检查不到任何更新，请检查你当前是否已成功转换为 pkgbase，并确认软件源配置是否正确
 
-
 - 检查启动环境 15.0-RELEASE 中的系统版本
   
 ```sh
@@ -400,7 +396,6 @@ $ freebsd-version -kru
 ```
 
 可以看到，我们已经回来了。
-
 
 ### 查看内置的 OpenZFS 版本
 
@@ -589,7 +584,6 @@ end
 https://mirrors.nju.edu.cn/freebsd-pkg/
 ```
 
-
 ### 网易开源镜像站 163
 
 网易开源镜像站同样提供了 FreeBSD pkgbase 的镜像服务，地址如下。
@@ -621,7 +615,7 @@ https://mirrors.163.com/freebsd-pkg/
 
 本章介绍的内容涉及多个技术点，下面列出了一些相关的参考资料，供有兴趣的读者进一步学习。
 
-- vermaden. ZFS Boot Environments Explained[EB/OL]. (2025-11-25)[2026-03-25]. <https://vermaden.wordpress.com/2025/11/25/zfs-boot-environments-explained/>. 详细阐释 ZFS 启动环境的原理与实践，包含跨版本 ZFS 池兼容方案 
+- vermaden. ZFS Boot Environments Explained[EB/OL]. (2025-11-25)[2026-03-25]. <https://vermaden.wordpress.com/2025/11/25/zfs-boot-environments-explained/>. 详细阐释 ZFS 启动环境的原理与实践，包含跨版本 ZFS 池兼容方案
 - FreeBSD Project. BootEnvironments[EB/OL]. [2026-03-25]. <https://wiki.freebsd.org/BootEnvironments>. FreeBSD 官方关于启动环境的 Wiki
 - FreeBSD Project. bectl(8)[EB/OL]. [2026-03-25]. <https://man.freebsd.org/cgi/man.cgi?bectl>. ZFS 启动环境管理工具的官方技术规范
 

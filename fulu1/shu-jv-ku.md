@@ -21,7 +21,6 @@ create database db_name;
 
 - `db_name`：数据库名，用于标识数据库。数据库名在数据库实例中必须唯一。
 
-
 ## 数据库重命名
 
 ```sql
@@ -33,13 +32,11 @@ rename database old_name to new_name;
 
 在 MySQL 中，`RENAME DATABASE` 语句在早期版本中存在，但在 MySQL 5.1.23 之后被移除，因为该操作存在安全风险。现代 MySQL 版本中，重命名数据库需要通过导出、创建新数据库、导入数据的方式实现。
 
-
 ## 查看数据库
 
 ```sql
 show databases;
 ```
-
 
 ## 进入数据库
 
@@ -105,13 +102,11 @@ alter table old_name rename to new_name;
 show tables;
 ```
 
-
 ## 展示表结构
 
 ```sql
 desc table_name;
 ```
-
 
 ## 显示表全部信息（select 后面细说）
 
@@ -121,7 +116,6 @@ select * from table_name;
 
 ## SQL 语法：注释
 
-
 单行注释：
 
 ```sql
@@ -130,7 +124,7 @@ select * from table_name;
 
 多行注释：
 
-```
+```sql
 /* 
    这里是多行注释
    可以跨越多行，用于描述复杂的业务逻辑或临时禁用代码块
@@ -187,7 +181,6 @@ alter table table_name modify column col_name new_data_type;
 ```
 
 - `new_data_type`：新数据类型
-
 
 ## 表添加主键
 

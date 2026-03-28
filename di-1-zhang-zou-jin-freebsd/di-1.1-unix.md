@@ -23,7 +23,6 @@ UNIX 认证查询网址：[The Open Group official register of UNIX Certified Pr
 1. 技术标准要求：符合[单一 UNIX 规范](https://www.opengroup.org/openbrand/register/xym0.htm)（Single UNIX Specification，SUS），该规范定义了 UNIX 系统必须实现的接口、命令、实用程序和库函数，确保不同 UNIX 系统间的兼容性。
 2. 法律与费用要求：缴纳相应的[认证费用](https://www.opengroup.org/openbrand/Brandfees.htm)
 
-
 常见的经过认证的 UNIX 操作系统有苹果公司（Apple）的 macOS。从商标角度讲，macOS 是标准的 UNIX 操作系统。~~故，要安装 UNIX 的人可以去黑苹果了~~
 
 >**技巧**
@@ -33,7 +32,6 @@ UNIX 认证查询网址：[The Open Group official register of UNIX Certified Pr
 >从历史角度看，macOS（以及由此衍生的 iOS、iPadOS 等）的核心层（Darwin）确实基于 BSD 代码，并融合了其他技术。它可被视为一款独立的、类 BSD 的操作系统分支，与 OpenBSD、NetBSD 和 FreeBSD 等系统类似。参见：《苹果的开源基石：macOS 和 iOS 背后的 BSD 传统》[EB/OL]. [2026-03-26]. <https://book.bsdcn.org/fan-yi-wen-zhang-cun-dang/2024-nian-11-yue/apple>
 >
 >所以看似是安卓和苹果之争，其实是 Linux 与 BSD 之争。~~也许也是大教堂与市集之争。~~
-
 
 ## 传统的 Unix 哲学观（以《UNIX 编程艺术》为核心）
 
@@ -62,7 +60,6 @@ Unix 哲学是在 UNIX 操作系统长期的开发实践中逐渐形成的一套
 - 埃里克·雷蒙德. UNIX 编程艺术[M]. 北京: 电子工业出版社, 2012. ISBN: 978-7-121-17665-4. 系统阐述 UNIX 哲学与软件工程实践原则。
 - 迈克·甘卡兹. Linux/Unix 设计思想[M]. 北京: 人民邮电出版社, 2012. ISBN: 978-7-115-26692-7. （已绝版）提炼 UNIX 系统设计核心思想与实践方法。
 - The Open Group. The Open Group Standards Process[EB/OL]. [2026-03-25]. <https://www.opengroup.org/standardsprocess/certification.html>. 规范 UNIX 认证流程与技术标准框架。
-
 
 ## Unix 的一段历史
 

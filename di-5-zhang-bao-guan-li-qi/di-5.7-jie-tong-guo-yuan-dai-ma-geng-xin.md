@@ -47,7 +47,6 @@ FreeBSD 项目在 2021 年从 SVN 全面迁移到了 Git，即 <https://git.free
 # git config --global --unset https.proxy  # 取消 Git 全局 HTTPS 代理设置
 ```
 
-
 ### Git 拉取源代码
 
 #### 拉取 CURRENT
@@ -91,7 +90,6 @@ $ git clone --branch releng/15.0 --single-branch --depth 1 https://github.com/fr
 ### 参考文献
 
 - Warner Losh. Submitting GitHub Pull Requests to FreeBSD[EB/OL]. (2024)[2026-03-25]. <https://freebsdfoundation.org/our-work/journal/browser-based-edition/configuration-management-2/submitting-github-pull-requests-to-freebsd/>.
-
 
 ## 从压缩包获取源代码（方便但非最新）
 
@@ -137,10 +135,8 @@ $ git clone --branch releng/15.0 --single-branch --depth 1 https://github.com/fr
 >与绝大多数现代 Linux 不同，[FreeBSD](https://github.com/freebsd/freebsd-src/tree/main/contrib/nvi) （OpenBSD）上的 `vi` 是 *[nvi](https://sites.google.com/a/bostic.com/keithbostic/keith-bostic?authuser=0)*（原版 **ex/vi** 的再实现），并不是指向任何 *vim* 的链接符号。基本上很少有人使用，也一般没有学习的必要，因此有必要更换为其他文本编辑器。
 >
 >```sh
-># export EDITOR=/usr/bin/ee  # 切换 vi 为 ee。针对 FreeBSD 14 之前的版本或 csh 使用：setenv EDITOR /usr/bin/ee
->
-# export VISUAL=/usr/bin/ee  # 切换 vi 为 ee。针对 FreeBSD 14 之前的版本或 csh 使用：setenv VISUAL /usr/bin/ee
->
+>export EDITOR=/usr/bin/ee  # 切换 vi 为 ee。针对 FreeBSD 14 之前的版本或 csh 使用：setenv EDITOR /usr/bin/ee
+>export VISUAL=/usr/bin/ee  # 切换 vi 为 ee。针对 FreeBSD 14 之前的版本或 csh 使用：setenv VISUAL /usr/bin/ee
 >```
 
 合并冲突。使用 `etcupdate` 执行备份模式，以便在更新配置文件前备份现有文件：
@@ -159,7 +155,6 @@ Select: (p) postpone, (df) diff-full, (e) edit,
         (h) help for more options: e # 输入 e 解决冲突
 # etcupdate -B 
 ```
-
 
 ## 故障排除与未竟事宜
 

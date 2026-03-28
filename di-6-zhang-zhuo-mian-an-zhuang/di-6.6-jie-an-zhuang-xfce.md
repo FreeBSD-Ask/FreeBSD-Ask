@@ -29,17 +29,16 @@ Xfce 的 Logo 是一只 [老鼠 🐀](https://docs.xfce.org/faq#what_does_it_mea
 
 - 软件包说明：
 
-| 包名                          | 作用说明                               |
-|:-------------------------------|:------------------------------------|
-| `xorg`                        | X Window System |
-| `lightdm`                     | 轻量级显示管理器 LightDM |
-| `lightdm-gtk-greeter`         | LightDM 的 GTK+ 登录界面插件 |
-| `xfce`                        | Xfce 桌面环境 |
-| `wqy-fonts`                   | 文泉驿中文字体 |
-| `xdg-user-dirs`               | 管理用户主目录 |
-| `xfce4-goodies`               | Xfce 的附加组件和插件集合 |
-| `lightdm-gtk-greeter-settings`| 配置 LightDM GTK+ 登录界面的图形工具，缺少该组件将无法启动 |
-
+| 包名                          | 作用说明 |
+| ----------------------------- | -------- |
+| `xorg` | X Window System |
+| `lightdm` | 轻量级显示管理器 LightDM |
+| `lightdm-gtk-greeter` | LightDM 的 GTK+ 登录界面插件 |
+| `xfce` | Xfce 桌面环境 |
+| `wqy-fonts` | 文泉驿中文字体 |
+| `xdg-user-dirs` | 管理用户主目录 |
+| `xfce4-goodies` | Xfce 的附加组件和插件集合 |
+| `lightdm-gtk-greeter-settings` | 配置 LightDM GTK+ 登录界面的图形工具，缺少该组件将无法启动 |
 
 ## `startx`
 
@@ -210,4 +209,3 @@ fi
 1. 查找 xfce4-goodies 集合的 Port 依赖关系，构建最小化 Xfce 附加组件集，在 QEMU 中验证其与核心桌面的集成行为。
 2. 选取 Xfce 全局菜单插件的配置机制，重构最小化菜单显示流程。
 3. 修改 Xfce 桌面的默认窗口管理器行为（如窗口聚焦策略），验证其交互变化。
-

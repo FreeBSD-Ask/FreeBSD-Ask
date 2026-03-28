@@ -16,37 +16,37 @@
 
 镜像下载完成后，开始配置虚拟机。
 
-![](../.gitbook/assets/Fusion1.png)
+![VMware Fusion 主界面](../.gitbook/assets/Fusion1.png)
 
 选择下载的 FreeBSD 镜像。
 
-![](../.gitbook/assets/Fusion2.png)
+![选择 FreeBSD 镜像](../.gitbook/assets/Fusion2.png)
 
 默认的内存大小可能不足，请点击“自定设置”。
 
-![](../.gitbook/assets/Fusion3.png)
+![自定义设置](../.gitbook/assets/Fusion3.png)
 
 点击“处理器和内存”。
 
-![](../.gitbook/assets/Fusion4.png)
+![处理器和内存设置](../.gitbook/assets/Fusion4.png)
 
 修改处理器数量和内存大小。`4096MB` 即 4GB。
 
 ## 开始安装
 
-![](../.gitbook/assets/Fusion5.png)
+![安装界面](../.gitbook/assets/Fusion5.png)
 
-![](../.gitbook/assets/Fusion6.png)
+![安装界面](../.gitbook/assets/Fusion6.png)
 
 ## 配置桌面
 
 无需安装任何虚拟机增强工具即可使用。
 
-![](../.gitbook/assets/Fusion7.png)
+![桌面界面](../.gitbook/assets/Fusion7.png)
 
-![](../.gitbook/assets/Fusion8.png)
+![桌面界面](../.gitbook/assets/Fusion8.png)
 
-![](../.gitbook/assets/Fusion9.png)
+![桌面界面](../.gitbook/assets/Fusion9.png)
 
 桌面窗口大小无法自由调整。
 
@@ -60,7 +60,6 @@
 hw.usb.usbhid.enable="1"    # 启用 USB HID 设备支持
 usbhid_load="YES"           # 配置系统启动时自动加载 USB HID 驱动
 ```
-
 
 ### 参考文献
 

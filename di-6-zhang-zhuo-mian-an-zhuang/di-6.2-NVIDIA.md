@@ -37,7 +37,6 @@
 # pkg info -q | grep -i nvidia
 ```
 
-
 ## 配置 NVIDIA 显卡
 
 ### 启动 NVIDIA 相关内核模块
@@ -63,7 +62,6 @@
 > **警告**
 >
 > 不要试图安装和使用 Port `x11/nvidia-xconfig`。该工具当前不适用，可能导致系统无响应。
-
 
 ## 硬件加速和解码器
 
@@ -121,11 +119,11 @@ Mon Jan 19 19:06:59 2026
 
 - 查看 KDE 系统信息：
 
-![](../.gitbook/assets/nvi2.png)
+![KDE 系统信息](../.gitbook/assets/nvi2.png)
 
 - 使用 MPV 打开电影，可见显存使用量明显上升（从 3 MB 上升至数百兆），也可使用 SMPlayer 观看。
 
-![](../.gitbook/assets/nvi1.jpg)
+![MPV 显存使用](../.gitbook/assets/nvi1.jpg)
 
 ## 参考文献
 
@@ -136,7 +134,7 @@ Mon Jan 19 19:06:59 2026
 
 ### nvidia-smi 命令报错“mismatch”
 
-![](../.gitbook/assets/no-version-vo.jpg)
+![nvidia-smi 报错](../.gitbook/assets/no-version-vo.jpg)
 
 执行 nvidia-smi 命令时出现错误提示“API mismatch”等字样。该错误表示 API 不匹配，问题通常源于版本兼容性问题，可能存在以下几种情况：NVIDIA 驱动组件本身版本不匹配、NVIDIA 驱动与其他 NVIDIA 软件包版本不匹配、NVIDIA 驱动与当前 FreeBSD 基本系统版本不匹配。
 

@@ -24,14 +24,13 @@ fcitx 即“小企鹅输入法”，其英文全称为“A flexible input method
 
 - 或者使用 Ports 安装：
 
-```
+```sh
 # cd /usr/ports/textproc/fcitx5/ && make install clean # 主程序
 # cd /usr/ports/textproc/fcitx5-qt/ && make install clean  # 同时包含 QT 5 和 QT 6
 # cd /usr/ports/textproc/fcitx5-gtk/ && make install clean # 同时包含 gtk 2、3、4
 # cd /usr/ports/textproc/fcitx5-configtool/ && make install clean # fcitx5 的图形配置工具。同时包含 QT 5 和 QT 6
 # cd /usr/ports/chinese/fcitx5-chinese-addons/ && make install clean # 输入法
 ```
-
 
 经测试，在 SLiM 窗口管理器下可能会提示找不到 IBus，这可能是软件问题，也可能是配置问题。
 

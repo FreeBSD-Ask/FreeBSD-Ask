@@ -120,23 +120,23 @@ $ cp /usr/local/share/applications/org.fcitx.Fcitx5.desktop ~/.config/autostart/
 
 初次进入 KDE Wayland 桌面时，KDE 会在右下角提示需在设置的虚拟键盘中进行配置才能启用输入法。请留意该提示。若未进行此设置，将无法切换输入法或输入中文。
 
-![](../.gitbook/assets/kde-Wayland-fcitx.png)
+![KDE Wayland 设置](../.gitbook/assets/kde-Wayland-fcitx.png)
 
 打开 KDE 系统设置：找到“键盘”→“虚拟键盘”
 
-![](../.gitbook/assets/kde-Wayland3-1.png)
+![虚拟键盘](../.gitbook/assets/kde-Wayland3-1.png)
 
 选择“Fcitx 5 Wayland 启动器（实验性）”
 
-![](../.gitbook/assets/kde-Wayland5.png)
+![Fcitx 5 Wayland 启动器（实验性）](../.gitbook/assets/kde-Wayland5.png)
 
 经测试，在 Konsole 终端、Firefox 和 Chromium（使用 `chrome --no-sandbox` 启动）中均可输入中文。
 
-![](../.gitbook/assets/kde-Wayland4.png)
+![Wayland Fcitx 5 演示](../.gitbook/assets/kde-Wayland4.png)
 
 ## 视频播放测试
 
-![](../.gitbook/assets/kde-Wayland9.png)
+![Wayland 视频播放测试](../.gitbook/assets/kde-Wayland9.png)
 
 ## 故障排除与未竟事宜
 

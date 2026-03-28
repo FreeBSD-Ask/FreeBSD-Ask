@@ -1,6 +1,6 @@
 # FreeBSD 从入门到跑路
 
-![](.gitbook/assets/web-logo.png)
+![🎉 欢迎来到 BSD 的世界！](.gitbook/assets/web-logo.png)
 
 🎉 欢迎来到 BSD 的世界！
 
@@ -34,15 +34,14 @@ FreeBSD 是一款真正自由（Liberty）的 **操作系统**，在这波谲云
 - Discord：<https://discord.gg/j7VhWrhp3e>（需代理，可通过网页使用）
 - Telegram 群组：[https://t.me/oh_my_BSD](https://t.me/oh_my_BSD)（需代理）
 
-
 ## 电子文档
 
 目前网站提供了 PDF 和 EPUB 格式的电子文档：
 本书提供 PDF 和 EPUB 两种格式的电子文档：
 
-- PDF（适用于印刷及桌面端离线阅读）下载地址：<https://docs.bsdcn.org/bsdbook.pdf> ![](https://img.shields.io/website?url=https%3A%2F%2Fdocs.bsdcn.org%2Fbsdbook.pdf&up_message=%E6%96%87%E4%BB%B6%E5%8F%AF%E7%94%A8&down_message=%E6%96%87%E4%BB%B6%E4%B8%8D%E5%8F%AF%E7%94%A8&style=for-the-badge&label=%E6%96%87%E6%A1%A3%E7%8A%B6%E6%80%81)
+- PDF（适用于印刷及桌面端离线阅读）下载地址：<https://docs.bsdcn.org/bsdbook.pdf> ![PDF 文件状态](https://img.shields.io/website?url=https%3A%2F%2Fdocs.bsdcn.org%2Fbsdbook.pdf&up_message=%E6%96%87%E4%BB%B6%E5%8F%AF%E7%94%A8&down_message=%E6%96%87%E4%BB%B6%E4%B8%8D%E5%8F%AF%E7%94%A8&style=for-the-badge&label=%E6%96%87%E6%A1%A3%E7%8A%B6%E6%80%81)
 
-- EPUB（适用于移动端离线阅读）下载地址：<https://docs.bsdcn.org/bsdbook.epub> ![](https://img.shields.io/website?url=https%3A%2F%2Fdocs.bsdcn.org%2Fbsdbook.epub&up_message=%E6%96%87%E4%BB%B6%E5%8F%AF%E7%94%A8&down_message=%E6%96%87%E4%BB%B6%E4%B8%8D%E5%8F%AF%E7%94%A8&style=for-the-badge&label=%E6%96%87%E6%A1%A3%E7%8A%B6%E6%80%81)
+- EPUB（适用于移动端离线阅读）下载地址：<https://docs.bsdcn.org/bsdbook.epub> ![EPUB 文件状态](https://img.shields.io/website?url=https%3A%2F%2Fdocs.bsdcn.org%2Fbsdbook.epub&up_message=%E6%96%87%E4%BB%B6%E5%8F%AF%E7%94%A8&down_message=%E6%96%87%E4%BB%B6%E4%B8%8D%E5%8F%AF%E7%94%A8&style=for-the-badge&label=%E6%96%87%E6%A1%A3%E7%8A%B6%E6%80%81)
 
 >**注意**
 >
@@ -84,7 +83,7 @@ FreeBSD 中文社区未通过其他域名部署本书，唯一官方域名为 `b
 
 请优先考虑向 FreeBSD 基金会捐赠。
 
-![](.gitbook/assets/proud_donor.png)
+![捐赠 FreeBSD 基金会](.gitbook/assets/proud_donor.png)
 
 [点此捐赠 FreeBSD 基金会](https://freebsdfoundation.org/donate-to-freebsd-foundation/)
 
@@ -162,7 +161,6 @@ FreeBSD 中文社区未通过其他域名部署本书，唯一官方域名为 `b
 与上月相比：+12.88 万字（+13.94%）
 
 <!-- CHINESE_CHAR_COUNT_END -->
-
 
 <!-- commit-progress-start -->
 **第 3 版编纂进度:**   （人工提交数: 1391 / 3533）

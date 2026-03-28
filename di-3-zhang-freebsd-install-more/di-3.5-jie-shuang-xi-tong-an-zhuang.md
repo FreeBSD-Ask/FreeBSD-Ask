@@ -35,7 +35,7 @@
 
 你应关闭安全启动和快速启动。安全启动会阻止未签名的引导加载程序运行，而 FreeBSD 的启动加载程序目前未被微软签名，因此必须关闭。快速启动会让 Windows 在关机时处于一种特殊的休眠状态，导致其他系统无法正常访问 NTFS 分区。或者，也可通过 Windows 设置 → 更新与安全 → 恢复 → 高级启动，选择从 U 盘设备启动。然后正常引导 FreeBSD 安装程序，直至进入分区选择界面。
 
-![](../.gitbook/assets/shuangxitong1.png)
+![分区选择界面](../.gitbook/assets/shuangxitong1.png)
 
 此处选择 `Manual`。
 
@@ -45,19 +45,19 @@
 
 此处可查看硬盘分区情况。图中仅有一块硬盘，包含一个 300M 的 EFI 系统分区、一个 16M 的 MSR 分区、一个 64G 的 Windows 系统分区（即 C 盘）以及未显示的空闲空间。直接选择 `Create`（创建）。
 
-![](../.gitbook/assets/shuangxitong2.png)
+![硬盘分区情况](../.gitbook/assets/shuangxitong2.png)
 
 此处在第一行输入分区类型（即下方会列出的 `Filesystem type`）。如需添加 swap 分区，请在此步骤首先添加，后添加难以控制分区大小，因为分区会从空闲空间的开头或结尾分配，先添加 swap 可以更好地控制其位置。在添加 UFS 或 ZFS 分区时，需在 `Mountpoint` 处填写 `/`，表示将该分区挂载到根目录。`Label` 是 FreeBSD 的卷标（gptlabel），用于方便识别分区，可根据需要填写或留空。此处使用 ZFS，不添加 swap 分区，并且填入卷标 `zroot`。
 
-![](../.gitbook/assets/shuangxitong3.png)
+![创建分区](../.gitbook/assets/shuangxitong3.png)
 
 使用 **Tab 键** 将焦点移动到 `OK`，然后按回车键确认。
 
-![](../.gitbook/assets/shuangxitong4.png)
+![确认分区创建](../.gitbook/assets/shuangxitong4.png)
 
 此处会警告 ZFS 分区可能无法启动，但经实测可以正常启动。这个警告是安装程序的通用提示，对于 UEFI 环境下的配置并不适用。选择 `Yes` 忽略此警告：
 
-![](../.gitbook/assets/shuangxitong5.png)
+![ZFS 分区警告](../.gitbook/assets/shuangxitong5.png)
 
 > **注意**
 >
@@ -65,12 +65,11 @@
 
 选择 `Finish`（完成）
 
-![](../.gitbook/assets/shuangxitong6.png)
+![完成分区设置](../.gitbook/assets/shuangxitong6.png)
 
 选择 `Commit`（确认）
 
-![](../.gitbook/assets/shuangxitong7.png)
-
+![确认分区变更](../.gitbook/assets/shuangxitong7.png)
 
 之后会进入正常安装的流程。安装完成后列出系统中所有 ZFS 池及其状态：
 
@@ -86,11 +85,11 @@ root  534M    130G   534M  none
 
 仍进行到分区选择界面，此时选择 `Shell`
 
-![](../.gitbook/assets/shuangxitong9.png)
+![选择 Shell 分区](../.gitbook/assets/shuangxitong9.png)
 
 之后将进入终端（TTY）：
 
-![](../.gitbook/assets/shuangxitong10.png)
+![Shell 终端界面](../.gitbook/assets/shuangxitong10.png)
 
 执行以下命令。
 
@@ -135,7 +134,6 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 - `-a` 指定对齐
 
 请注意根据实际情况替换 `nda0` 为实际硬盘编号。
-
 
 ### 创建 ZFS 分区
 
@@ -192,7 +190,6 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 
 ### 创建 ZFS 数据集
 
-
 以下数据集的设置参照 FreeBSD 源代码中的 [usr.sbin/bsdinstall/scripts/zfsboot](https://github.com/freebsd/freebsd-src/blob/main/usr.sbin/bsdinstall/scripts/zfsboot) 进行创建，因为 FreeBSD 本身的开发是持续不断的，所以 FreeBSD 不同版本间的 ZFS 数据集也有所差异。读者在创建数据集时若希望创建与默认安装相同的数据集结构，应参照对应分支的 `usr.sbin/bsdinstall/scripts/zfsboot` 文件。
 
 - 创建根数据集
@@ -205,7 +202,6 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 
 此类无具体挂载点的数据集通常作为系统根数据集的容器，其下将创建具体用于挂载的子数据集或起到排除作用。
 
-
 - 创建默认根数据集
 
 ```sh
@@ -213,7 +209,6 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 ```
 
 将创建数据集 `zroot/ROOT/default`，将其挂载到根目录 `/`。此数据集将作为系统的默认根文件系统。
-
 
 - 创建 `/home` 数据集
 
@@ -239,7 +234,6 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 
 将创建 `zroot/usr` 数据集，`canmount` 即禁止自动挂载，这样可以将相关的子数据集组织在一起，但不会单独挂载这个父数据集。
 
-
 - 创建 `/usr/ports` 数据集
 
 ```sh
@@ -247,7 +241,6 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 ```
 
 将创建 `/usr/ports` 数据集，禁用 setuid（`setuid=off`）。
-
 
 - 创建 `/usr/src` 数据集
 
@@ -264,7 +257,6 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 ```
 
 将创建 `/var` 数据集，`canmount` 意味着不会自动挂载。
-
 
 - 创建 `/var/audit` 数据集
 
@@ -305,7 +297,6 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 ```
 
 将创建 `zroot/var/mail` 数据集，并启用访问时间记录（`atime=on`），通常用于存放邮件数据，因为邮件程序可能需要知道文件的最后访问时间。
-
 
 > **技巧**
 >
@@ -391,7 +382,6 @@ Windows 文本文件的行尾通常是 `\r\n`（回车 + 换行）。
 # mkdir -p /media/efi/freebsd
 ```
 
-
 - 将 FreeBSD 的 EFI 启动文件复制到启动目录
 
 ```sh
@@ -403,7 +393,6 @@ Windows 文本文件的行尾通常是 `\r\n`（回车 + 换行）。
 ```sh
 # efibootmgr --create --activate --label "FreeBSD" --loader "/media/efi/freebsd/loader.efi"
 ```
-
 
 - 卸载 EFI 系统分区
 
@@ -435,7 +424,6 @@ Windows 文本文件的行尾通常是 `\r\n`（回车 + 换行）。
 
 安装程序将自动继续后续流程。
 
-
 ### 完成
 
 至此，我们已手动创建了一套与自动安装程序基本相同的 ZFS 数据集结构（自动安装通常还会创建独立的 `/home/用户名` 数据集，此处未包含）。
@@ -460,7 +448,6 @@ zroot/var/log        156K  91.6G   156K  /var/log
 zroot/var/mail        96K  91.6G    96K  /var/mail
 zroot/var/tmp         96K  91.6G    96K  /var/tmp
 ```
-
 
 ## 参考文献
 
