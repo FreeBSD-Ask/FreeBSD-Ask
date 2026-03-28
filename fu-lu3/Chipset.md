@@ -2749,7 +2749,7 @@ Disabled（禁用）
 
 WRC，Write Cache，写缓存。WRC 功能启用 Intel® 数据直通 I/O 技术（Intel® DDIO），使 I/O 设备能够利用最后一级缓存（LLC）作为中间缓冲区。此功能不对每个 CPU 的最后一级缓存进行分区。
 
-参见：11th Gen Intel® Core™ Processors Real-Time Tuning Guide. [EB/OL]. [2026-03-26]. [2026-03-26]. [2026-03-26]. <https://webdls.ieiworld.com/data/_prod-detail-feature/DRPC-DEV-KIT/Real-Time-Tuning-Guide-11th-Gen-Intel-Core-Processors-1.4.pdf>.
+参见：11th Gen Intel® Core™ Processors Real-Time Tuning Guide. [EB/OL]. [2026-03-26]. <https://webdls.ieiworld.com/data/_prod-detail-feature/DRPC-DEV-KIT/Real-Time-Tuning-Guide-11th-Gen-Intel-Core-Processors-1.4.pdf>.
 
 ### Above 4GB MMIO BIOS assignment（BIOS 4GB 以上 MMIO 分配）
 
