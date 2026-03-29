@@ -4,7 +4,7 @@
 
 在 FreeBSD 系统中，本地化环境变量的生效路径取决于所使用的登录管理器（Display Manager）和用户 Shell 环境。
 
-### 登录管理器配置路径
+### 显示管理器配置路径
 
 1. SDDM、LightDM、GDM 可以在 `~/.xprofile` 中写入
 2. LightDM、GDM 可以在 `~/.profile` 中写入
