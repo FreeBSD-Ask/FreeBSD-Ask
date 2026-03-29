@@ -37,8 +37,8 @@
 
 | 封面/书名 | 作者/译者 | ISBN/出版社 | 说明 |
 | --------- | --------- | ----------- | ---- |
-| ![Unix 四分之一世纪](../.gitbook/assets/unix25.png) <br><br> 《Unix 四分之一世纪》 | Peter H. Salus | 978-0-20154-777-1 <br><br> Addison-Wesley Professional | UNIX 发展历史书籍，中译本在 [此](https://freebsd.gitbook.io/unix-er-shi-wu-nian)。详细记录 Unix 从诞生到普及的技术演进历程。 |
-| ![Unix 痛恨者手册](../.gitbook/assets/unixno.png) <br><br> 《Unix 痛恨者手册》 | Simson Garfinkel、Daniel Weise、Steven Strassmann | 978-1-56884-203-5 <br><br> IDG Books Worldwide, Inc. | Unix 技术批评书籍，中译本在 [此](https://book.bsdcn.org/unix-tong-hen-zhe-shou-ce)。从批评视角分析 Unix 系统的设计缺陷和技术局限性。 |
+| ![Unix 四分之一世纪](../.gitbook/assets/unix25.png) <br><br> 《Unix 四分之一世纪》 | Peter H. Salus | 978-0-20154-777-1 <br><br> Addison-Wesley Professional | UNIX 发展历史书籍。详细记录了 Unix 从诞生到普及的技术演进历程。 |
+| ![Unix 痛恨者手册](../.gitbook/assets/unixno.png) <br><br> 《Unix 痛恨者手册》 | Simson Garfinkel、Daniel Weise、Steven Strassmann | 978-1-56884-203-5 <br><br> IDG Books Worldwide, Inc. | Unix 技术批评书籍。从批评视角分析 Unix 系统的设计缺陷和技术局限性。 |
 | ![大教堂与集市](../.gitbook/assets/dajiaotang.png) <br><br> 《大教堂与集市》 | [美] Eric S. Raymond <br><br> 卫剑钒 译 | 978-7-111-45247-8 <br><br> 机械工业出版社 | 开源运动历史书籍，阐释集中式与分布式两种软件开发模式的差异。 |
 | ![UNIX 传奇：历史与回忆](../.gitbook/assets/unixchuanqi.png) <br><br> 《UNIX 传奇——历史与回忆》 | [美] Brian W. Kernighan 著 <br><br> 韩磊 译 | 978-7-115-55717-9 <br><br> 人民邮电出版社 | UNIX 发展历史书籍，记录 Unix 技术发展的关键节点和历史背景。 |
 

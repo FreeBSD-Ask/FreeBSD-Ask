@@ -220,12 +220,11 @@
 * [21.2 通过 FreeBSD Ports 安装 Rocky Linux 兼容层](di-21-zhang-linux-jian-rong-ceng/di-21.2-jie-rocky9-jian-rong-ceng.md)
 * [21.3 Ubuntu/Debian 兼容层](di-21-zhang-linux-jian-rong-ceng/di-21.3-jie-linux-jian-rong-ceng-ji-yu-ubuntudebian.md)
 * [21.4 Arch Linux 兼容层（基于 Arch Linux bootstrap）](di-21-zhang-linux-jian-rong-ceng/di-21.4-jie-linux-jian-rong-ceng-ji-yu-archlinux-bootstrap.md)
-* [21.5 Deepin 兼容层](di-21-zhang-linux-jian-rong-ceng/di-21.5-jie-linux-jian-rong-ceng-ji-yu-deepin.md)
+* [21.5 Slackware Linux 兼容层](di-21-zhang-linux-jian-rong-ceng/di-21.5-jie-linux-jian-rong-ceng-ji-yu-slackware-linux.md)
 * [21.6 openSUSE 兼容层](di-21-zhang-linux-jian-rong-ceng/di-21.6-jie-linux-jian-rong-ceng-ji-yu-opensuse.md)
 * [21.7 Gentoo Linux 兼容层](di-21-zhang-linux-jian-rong-ceng/di-21.7-jie-linux-jian-rong-ceng-ji-yu-gentoo-linux.md)
 * [21.8 Rocky Linux 兼容层](di-21-zhang-linux-jian-rong-ceng/di-21.8-jie-linux-jian-rong-ceng-ji-yu-rocky-linux.md)
-* [21.9 Slackware Linux 兼容层](di-21-zhang-linux-jian-rong-ceng/di-21.9-jie-linux-jian-rong-ceng-ji-yu-slackware-linux.md)
-* [21.10 故障排除与未竟事宜](di-21-zhang-linux-jian-rong-ceng/di-21.10-jie-linux-jian-rong-ceng-gu-zhang-pai-chu-yu-pei-zhi.md)
+* [21.9 故障排除与未竟事宜](di-21-zhang-linux-jian-rong-ceng/di-21.9-jie-linux-jian-rong-ceng-gu-zhang-pai-chu-yu-pei-zhi.md)
 
 ## 第 22 章 FreeBSD 开发与社区贡献
 

@@ -14,9 +14,9 @@
 
 > **提示**
 >
->虚拟机也可以使用 FreeBSD 官方构建的 [虚拟机镜像](https://download.freebsd.org/releases/VM-IMAGES/14.2-RELEASE/amd64/Latest/)，该类镜像经过预配置，使用时需要手动扩容，文件系统可选 UFS 与 ZFS。
+>虚拟机也可以使用 FreeBSD 官方构建的 [虚拟机镜像](https://download.freebsd.org/releases/VM-IMAGES/15.0-RELEASE/amd64/Latest/)，该类镜像经过预配置，使用时需要手动扩容，文件系统可选 UFS 与 ZFS。
 >
->虚拟机一般使用 `FreeBSD-14.2-RELEASE-amd64-disc1.iso` 等类似文件名和后缀的 ISO 光盘镜像，但是 `FreeBSD-14.2-RELEASE-amd64-memstick.img` 也并非只能用于 U 盘刻录，虚拟机同样可以使用，具体使用方法可参考其他章节。
+>虚拟机一般使用 `FreeBSD-15.0-RELEASE-amd64-disc1.iso` 等类似文件名和后缀的 ISO 光盘镜像，但是 `FreeBSD-15.0-RELEASE-amd64-memstick.img` 也并非只能用于 U 盘刻录，虚拟机同样可以使用，具体使用方法可参考其他章节。
 
 ## 配置虚拟机
 
@@ -60,7 +60,7 @@
 
 ![VMware 安装 FreeBSD](../.gitbook/assets/vm11.png)
 
-在“使用 ISO 映像文件”处，点击“浏览”，找到并选中你下载的 `FreeBSD-14.2-RELEASE-amd64-disc1.iso` 文件。
+在“使用 ISO 映像文件”处，点击“浏览”，找到并选中你下载的 `FreeBSD-15.0-RELEASE-amd64-disc1.iso` 文件。
 
 ![VMware 安装 FreeBSD](../.gitbook/assets/vm12.png)
 

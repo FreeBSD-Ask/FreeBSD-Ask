@@ -62,7 +62,6 @@ To change this login announcement, see motd(5).
 ### 参考文献
 
 - ItsFOSS. What is TTY in Linux?[EB/OL]. [2026-03-25]. <https://itsfoss.com/what-is-tty-in-linux/>. 详细介绍 TTY 概念与历史
-- LinuxStory. Linux 黑话解释：TTY 是什么？[EB/OL]. [2026-03-25]. <https://linuxstory.org/linux-blackmail-explained-what-is-tty/>. 这是上一篇参考文献的译文
 
 ### 故障排除与未竟事宜
 
