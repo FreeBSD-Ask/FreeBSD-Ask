@@ -1187,9 +1187,9 @@ AUTO (0)：使用主板 ID 自动确定主板设计。
 
 该功能用于控制用于 VR 设置覆盖值的 ADL 台式机主板设计。此选项将根据主板 ID 来判断使用哪种主板设计。
 
-##### Acoustic Noise Settings（声学噪音设置）
+##### Acoustic Noise Settings（声学噪声设置）
 
-![声学噪音设置](../.gitbook/assets/image-20250719193202-imaxam5.png)
+![声学噪声设置](../.gitbook/assets/image-20250719193202-imaxam5.png)
 
 选项
 
@@ -2666,7 +2666,7 @@ Enable（启用）
 
 说明：
 
-大多数现代硬盘驱动器都能够降低磁头移动速度以减少其噪音输出。可设定的值取决于磁盘，某些磁盘可能不支持此功能。
+大多数现代硬盘驱动器都能够降低磁头移动速度以减少其噪声输出。可设定的值取决于磁盘，某些磁盘可能不支持此功能。
 
 ## AMI Graphic Output Protocol Policy（AMI 显卡输出协议行为）
 
@@ -3692,7 +3692,7 @@ Disabled（禁用）
 
 ### GPIO Configurations（GPIO 配置）
 
-GPIO，General Purpose Input/Output（通用输入/输出），通常用于嵌入式设备。
+GPIO，General Purpose Input/Output（通用输入输出），通常用于嵌入式设备。
 
 #### GPIOx (GPIO x)
 

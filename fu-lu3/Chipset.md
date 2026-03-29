@@ -48,7 +48,7 @@ PCODE
 
 说明：
 
-DDR（Double Data Rate SDRAM，双倍数据速率同步动态随机存取内存），即 DDR 内存。
+DDR（Double Data Rate SDRAM，双倍数据速率同步动态随机存取存储器），即 DDR 内存。
 
 此功能用于决定由 BIOS 还是硬件控制 DDR 的省电模式与空闲计数器。当选择“PCODE”时，由硬件算法控制这些模式；当选择“BIOS”时，则由 BIOS 控制这些模式。默认设置为“BIOS”。
 
@@ -1479,7 +1479,7 @@ Disabled（禁用）
 
 当使用全 bank 刷新（All-bank refresh）时，所有的 bank 在发出刷新指令前必须先被预充电（precharge）。这意味着在刷新操作（如 16 Gb 的 DRAM 中为 tRFC ≈ 280 ns）期间，所有 bank 都无法使用。全 bank 刷新会使整个 DRAM 在约 7% 的时间内不可用。
 
-而使用每 bank 刷新（Per-bank refresh）时，系统会对每个 bank 单独发出刷新命令。这样，在某个 bank 正在刷新时，其它 bank 仍然可以继续工作。每 bank 刷新的持续时间较短（如 16 Gb 的 DRAM 中为 tRFCpb ≈ 140 ns），因此每个 bank 的不可用时间约为 3.5%。
+而使用每 bank 刷新（Per-bank refresh）时，系统会对每个 bank 单独发出刷新命令。这样，在某个 bank 正在刷新时，其他 bank 仍然可以继续工作。每 bank 刷新的持续时间较短（如 16 Gb 的 DRAM 中为 tRFCpb ≈ 140 ns），因此每个 bank 的不可用时间约为 3.5%。
 
 使用每 bank 刷新（Per Bank Refresh）可以减少，甚至消除刷新操作带来的性能损失。
 
@@ -4701,7 +4701,7 @@ Disabled（禁用）
 
 禁用：操作系统的 UART 驱动将强制使用 PIO 模式。
 
-PIO，The Programmed Input/Output，编程输入/输出。关闭后由 PIO 设计实例执行从主机处理器到目标器件的内存传输。
+PIO，The Programmed Input/Output，编程输入输出。关闭后由 PIO 设计实例执行从主机处理器到目标器件的内存传输。
 
 ##### Power Gating（电源门控）
 
@@ -5892,7 +5892,7 @@ PSE，Programmable Service Engine，可编程服务引擎。
 
 参见：借助英特尔的首个物联网增强型平台，推动性能、集成和多功能性[EB/OL]. [2026-03-26]. <https://www.intel.cn/content/www/cn/zh/products/docs/processors/embedded/enhanced-for-iot-platform-brief.html>
 
-英特尔 ® 可编程服务引擎是专为物联网功能打造的卸载引擎，采用了 ARM Cortex-M7 微控制器。该引擎可为物联网应用程序提供独立的低 DMIPS 计算和低速输入/输出，还能为实时计算和时间敏感型同步提供专门服务。
+英特尔 ® 可编程服务引擎是专为物联网功能打造的卸载引擎，采用了 ARM Cortex-M7 微控制器。该引擎可为物联网应用程序提供独立的低 DMIPS 计算和低速输入输出，还能为实时计算和时间敏感型同步提供专门服务。
 
 英特尔 ® 可编程服务引擎配备了新的功能，如远程带外设备管理、网络代理、嵌入式控制器精简版和传感器控制中心。通过开源代码或预置固件二进制，可以使用灵活的编程方式对其进行配置，从而满足应用需求，并运行基于 ARM 的实时应用程序。
 

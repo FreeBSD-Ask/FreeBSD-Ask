@@ -24,7 +24,7 @@ IBus 即“Intelligent Input Bus”（智能输入总线），是 Linux 及类 U
 可选的输入法还包括：
 
 - `chinese/ibus-cangjie` 仓颉输入法
-- `chinese/ibus-chewing` 酷音输入法
+- `chinese/ibus-chewing` 新酷音输入法
 - `chinese/ibus-rime` Rime 输入法引擎
 - `chinese/ibus-table-chinese` 包含五笔、仓颉等多种输入法
 
@@ -32,7 +32,7 @@ IBus 即“Intelligent Input Bus”（智能输入总线），是 Linux 及类 U
 
 安装完成后，需要配置相应的环境变量以确保 IBus 能够在各种应用程序中正常工作。
 
-- 登录管理器配置路径
+- 显示管理器配置路径
 
 1. SDDM、LightDM、GDM 都可以在 `~/.xprofile` 中写入 A 组配置
 2. LightDM、GDM 可以在 `~/.profile` 中写入 A 组配置
@@ -52,7 +52,7 @@ IBus 即“Intelligent Input Bus”（智能输入总线），是 Linux 及类 U
 ```ini
 export XIM=ibus                     # 设置 X 输入法为 IBus
 export GTK_IM_MODULE=ibus           # 设置 GTK 应用使用 IBus 输入法
-export QT_IM_MODULE=ibus            # 设置 QT 应用使用 IBus 输入法
+export QT_IM_MODULE=ibus            # 设置 Qt 应用使用 IBus 输入法
 export XMODIFIERS=@im=ibus          # 设置 X 输入法修饰符为 IBus
 export XIM_PROGRAM="ibus-daemon"    # 指定 XIM 程序为 ibus-daemon
 export XIM_ARGS="--daemonize --xim" # 设置 XIM 启动参数为守护进程模式并启用 XIM

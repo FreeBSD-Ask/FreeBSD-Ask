@@ -26,9 +26,9 @@ fcitx 即“小企鹅输入法”，其英文全称为“A flexible input method
 
 ```sh
 # cd /usr/ports/textproc/fcitx5/ && make install clean # 主程序
-# cd /usr/ports/textproc/fcitx5-qt/ && make install clean  # 同时包含 QT 5 和 QT 6
-# cd /usr/ports/textproc/fcitx5-gtk/ && make install clean # 同时包含 gtk 2、3、4
-# cd /usr/ports/textproc/fcitx5-configtool/ && make install clean # fcitx5 的图形配置工具。同时包含 QT 5 和 QT 6
+# cd /usr/ports/textproc/fcitx5-qt/ && make install clean  # 同时包含 Qt 5 和 Qt 6
+# cd /usr/ports/textproc/fcitx5-gtk/ && make install clean # 同时包含 GTK 2、3、4
+# cd /usr/ports/textproc/fcitx5-configtool/ && make install clean # fcitx5 的图形配置工具。同时包含 Qt 5 和 Qt 6
 # cd /usr/ports/chinese/fcitx5-chinese-addons/ && make install clean # 输入法
 ```
 
@@ -51,7 +51,7 @@ $ cp /usr/local/share/applications/org.fcitx.Fcitx5.desktop ~/.config/autostart/
 
 在 X11 环境下，需要根据所使用的桌面管理器及 shell，选择适合的方式进行配置：
 
-- 登录管理器配置路径
+- 显示管理器配置路径
 
 1. SDDM、LightDM、GDM 都可以在 `~/.xprofile` 中写入 A 组配置
 2. LightDM、GDM 可以在 `~/.profile` 中写入 A 组配置
@@ -76,7 +76,7 @@ export LANGUAGE=zh_CN.UTF-8       # 设置优先语言为中文
 export LC_ALL=zh_CN.UTF-8         # 设置所有本地化环境变量为中文
 export XMODIFIERS='@im=fcitx'    # 设置 X 输入法模块为 fcitx
 export GTK_IM_MODULE=fcitx        # 设置 GTK 应用使用 fcitx 输入法
-export QT_IM_MODULE=fcitx         # 设置 QT 应用使用 fcitx 输入法
+export QT_IM_MODULE=fcitx         # 设置 Qt 应用使用 fcitx 输入法
 ```
 
 - B 组（csh）
