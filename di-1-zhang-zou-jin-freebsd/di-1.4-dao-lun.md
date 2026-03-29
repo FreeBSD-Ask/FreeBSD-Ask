@@ -373,7 +373,7 @@ ipfirewall（IPFW）随 FreeBSD 2.0-RELEASE 引入，这种采用“首次匹配
 
 - 1999 年 10 月 17 日 首届 BSD 大会
 
-首届 FreeBSD 大会（FreeBSDCon‘99）在加利福尼亚州伯克利举行。来自世界各地的 300 多名开发者和用户参加了此次活动，标志着 FreeBSD 在受欢迎度和影响力上的一个重要里程碑。
+首届 FreeBSD 大会（FreeBSDCon’99）在加利福尼亚州伯克利举行。来自世界各地的 300 多名开发者和用户参加了此次活动，标志着 FreeBSD 在受欢迎度和影响力上的一个重要里程碑。
 
 - 2000 年 3 月 14 日 FreeBSD Jail
 
