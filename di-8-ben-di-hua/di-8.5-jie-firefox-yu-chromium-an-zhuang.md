@@ -55,7 +55,7 @@ Chromium 不是 Chrome，但在 FreeBSD 中的启动命令为 `chrome`。
 
 > **警告**
 >
-> 要编译 Chromium，你必须拥有至少 12G 内存，或等量的交换分区 + 内存。
+> 要编译 Chromium，你必须拥有至少 12 G 内存，或等量的交换分区 + 内存。
 
 ## Chrome（Linux 兼容层）
 

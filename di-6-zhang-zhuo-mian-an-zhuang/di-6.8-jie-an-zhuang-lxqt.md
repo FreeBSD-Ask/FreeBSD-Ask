@@ -77,7 +77,7 @@ $ echo "exec ck-launch-session startlxqt" > ~/.xinitrc
 
 ### 中文化桌面
 
-进入 LXQt 后，菜单 -> "Preferences" -> "LXQt Settings" -> "Locale" -> "Region"，在下拉菜单中选择中文。
+进入 LXQt 后，菜单 -> “Preferences” -> “LXQt Settings” -> “Locale” -> “Region”，在下拉菜单中选择中文。
 
 ![FreeBSD 安装 LXQt](../.gitbook/assets/lxqt4.png)
 
@@ -87,7 +87,7 @@ $ echo "exec ck-launch-session startlxqt" > ~/.xinitrc
 
 ### 桌面图标不显示
 
-请事先安装自己喜欢的其他图标主题。然后：菜单 -> "Preferences" -> "LXQt Settings" -> "Appearance" -> "Icons Theme"，选择已安装的图标主题，点击 "Apply" 后重新登录。
+请事先安装自己喜欢的其他图标主题。然后：菜单 -> “Preferences” -> “LXQt Settings” -> “Appearance” -> “Icons Theme”，选择已安装的图标主题，点击 “Apply” 后重新登录。
 
 ## 课后习题
 

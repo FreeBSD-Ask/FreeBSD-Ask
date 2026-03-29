@@ -43,7 +43,7 @@
 >
 >其实这里调用的是软件 `sade`（sysadmins disk editor，系统管理员磁盘编辑器），`bsdconfig` 中的分区模块亦调用此工具。
 
-此处可查看硬盘分区情况。图中仅有一块硬盘，包含一个 300M 的 EFI 系统分区、一个 16M 的 MSR 分区、一个 64G 的 Windows 系统分区（即 C 盘）以及未显示的空闲空间。直接选择 `Create`（创建）。
+此处可查看硬盘分区情况。图中仅有一块硬盘，包含一个 300 M 的 EFI 系统分区、一个 16 M 的 MSR 分区、一个 64 G 的 Windows 系统分区（即 C 盘）以及未显示的空闲空间。直接选择 `Create`（创建）。
 
 ![硬盘分区情况](../.gitbook/assets/shuangxitong2.png)
 
@@ -61,7 +61,7 @@
 
 > **注意**
 >
->请将 Windows 创建的 300M EFI 系统分区的挂载点设置为 `/boot/efi`，这样 FreeBSD 就能正确找到并使用已有的 EFI 分区，避免创建多个 EFI 分区带来的混乱。
+>请将 Windows 创建的 300 M EFI 系统分区的挂载点设置为 `/boot/efi`，这样 FreeBSD 就能正确找到并使用已有的 EFI 分区，避免创建多个 EFI 分区带来的混乱。
 
 选择 `Finish`（完成）
 
@@ -103,7 +103,7 @@ root  534M    130G   534M  none
 
 ### 配置 ZFS 对齐方式（只影响新创建的硬盘分区）
 
-强制 ZFS 文件系统使用 4K 对齐，这样可以更好地适配现代硬盘的物理扇区大小，提高读写性能：
+强制 ZFS 文件系统使用 4 K 对齐，这样可以更好地适配现代硬盘的物理扇区大小，提高读写性能：
 
 ```sh
 # sysctl vfs.zfs.vdev.min_auto_ashift=12
@@ -112,15 +112,15 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 
 > **技巧**
 >
-> 参数 `12` 表示 2^12 = 4096 字节（4KB）的扇区大小。默认参数（可通过命令 `sysctl vfs.zfs.vdev.min_auto_ashift` 查看）是 `9`，即 2^9 = 512 字节，这是传统硬盘的扇区大小。
+> 参数 `12` 表示 2^12 = 4096 字节（4 KB）的扇区大小。默认参数（可通过命令 `sysctl vfs.zfs.vdev.min_auto_ashift` 查看）是 `9`，即 2^9 = 512 字节，这是传统硬盘的扇区大小。
 
 > **思考题**
 >
->若使用 NVMe 硬盘，新装系统（UEFI+GPT，无 freebsd-boot 分区）的该默认参数通常为 12。但 4K 对齐究竟对齐的是什么？因为 SSD 并无传统机械硬盘的物理扇区概念。
+>若使用 NVMe 硬盘，新装系统（UEFI+GPT，无 freebsd-boot 分区）的该默认参数通常为 12。但 4 K 对齐究竟对齐的是什么？因为 SSD 并无传统机械硬盘的物理扇区概念。
 
 ### 创建交换分区
 
-在 nda0 磁盘上创建 4GB、4K 对齐的 FreeBSD 交换分区，并将其标记为 swap：
+在 nda0 磁盘上创建 4 GB、4 K 对齐的 FreeBSD 交换分区，并将其标记为 swap：
 
 ```sh
 # gpart add -a 4k -l swap -s 4G -t freebsd-swap nda0
@@ -137,7 +137,7 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 
 ### 创建 ZFS 分区
 
-在 nda0 磁盘上创建 4K 对齐的 FreeBSD ZFS 分区，并标记为 zroot：
+在 nda0 磁盘上创建 4 K 对齐的 FreeBSD ZFS 分区，并标记为 zroot：
 
 ```sh
 # gpart add -a 4k -l zroot -t freebsd-zfs nda0

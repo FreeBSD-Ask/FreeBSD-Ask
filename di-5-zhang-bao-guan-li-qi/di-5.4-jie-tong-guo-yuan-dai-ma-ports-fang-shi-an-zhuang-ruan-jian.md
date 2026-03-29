@@ -678,7 +678,7 @@ WITH_CCACHE_BUILD=yes
 
 为了避免缓存占用过多磁盘空间，建议设置缓存大小上限。
 
-- 设置 ccache 编译缓存最大为 10GB：
+- 设置 ccache 编译缓存最大为 10 GB：
 
 ```sh
 # ccache -M 10G
@@ -777,7 +777,7 @@ WITH_CCACHE_BUILD=yes
 
 同样，建议为 ccache4 设置缓存大小上限。
 
-- 设置编译缓存最大为 20GB：
+- 设置编译缓存最大为 20 GB：
 
 ```sh
 # ccache -M 20G
