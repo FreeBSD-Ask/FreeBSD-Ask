@@ -507,7 +507,7 @@ Ignore the mismatch and continue? [y/N]:
 
 以 root 权限执行 `certctl rehash` 刷新证书即可。
 
-参见：pkg(8): “An error occured while fetching package: No error“[EB/OL]. [2026-03-26]. <https://forums.freebsd.org/threads/pkg-8-an-error-occured-while-fetching-package-no-error.96761/>
+参见：pkg(8): An error occured while fetching package: No error[EB/OL]. [2026-03-26]. <https://forums.freebsd.org/threads/pkg-8-an-error-occured-while-fetching-package-no-error.96761/>.
 
 ## 课后习题
 
