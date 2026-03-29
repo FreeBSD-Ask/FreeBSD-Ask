@@ -28,10 +28,10 @@ UEFI（Unified Extensible Firmware Interface）是现代计算机的固件接口
 | CPU | Intel 混合架构（异构大小核） | i7-1260P、N100 | 可正常启动运行，但调度机制尚不完善，睿频功能受限 |
 | NVMe 固态硬盘 | M.2 接口 | 英睿达 P310，Intel 600P，梵想 S530Q、S500Pro、S542PRO | 正常工作 |
 | 无线网卡 | Intel AX 系列 | AX200 | Wi-Fi 5 速率与 Windows 11 IoT Enterprise 24H2 相当（使用 iperf2 测得） |
-| 有线网卡 | Realtek 2.5G | RTL8125B | 需要额外安装驱动程序，参见全书附录 |
-| 有线网卡 | Intel 2.5G | i226-V | 正常工作 |
+| 有线网卡 | Realtek 2.5 G | RTL8125B | 需要额外安装驱动程序，参见全书附录 |
+| 有线网卡 | Intel 2.5 G | i226-V | 正常工作 |
 | 显卡 | 近十年的 Intel 及 AMD 集成/独立显卡 | 英特尔锐炬® Xe 显卡、英特尔 HD Graphics 4000 | 支持程度与 DRM 驱动程序移植进度相关；截至写作时，其代码状态约相当于 Linux 内核 6.10，最新进展请参见 FreeBSD Project. drm-kmod: drm driver for FreeBSD[EB/OL]. [2026-03-25]. <https://github.com/freebsd/drm-kmod/pulls>。该仓库提供 FreeBSD 图形驱动程序内核模块更新，追踪 Linux DRM 驱动程序移植进度。 |
-| NVIDIA 显卡 | 近十多年的显卡 | GTX 850M | 受 NVIDIA 官方显卡驱动程序支持 |
+| NVIDIA 显卡 | 近十多年的显卡 | GTX 850 M | 受 NVIDIA 官方显卡驱动程序支持 |
 
 > **注意**
 >

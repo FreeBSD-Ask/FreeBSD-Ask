@@ -88,7 +88,7 @@ C:\Users\用户名\
 
 ![DiskGenius](../.gitbook/assets/usb-diskgenius10.png)
 
-参数设置如下：文件系统选择 `exFAT`（通用性好，主流操作系统均支持读写，且不受单文件 4 GB 大小限制），勾选“对齐到下列扇区数的整数倍”，并选择“4096 扇区”（实现 4K 对齐）。
+参数设置如下：文件系统选择 `exFAT`（通用性好，主流操作系统均支持读写，且不受单文件 4 GB 大小限制），勾选“对齐到下列扇区数的整数倍”，并选择“4096 扇区”（实现 4 K 对齐）。
 
 ![DiskGenius](../.gitbook/assets/usb-diskgenius11.png)
 

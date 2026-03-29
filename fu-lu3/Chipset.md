@@ -1036,7 +1036,7 @@ Mixed：插入两个不同品牌或频率/容量的内存条
 
 覆盖混合 2DPC 配置或非 POR 2DPC 配置下的降频限制。0 表示自动决定，否则指定内存速度（单位：MT/s）。
 
-#### Frequency Limit for Mixed 2DPC DDR5 1 Rank 8GB and 8GB（混合 2DPC DDR5 单排 8GB 与 8GB 配置的频率限制）
+#### Frequency Limit for Mixed 2DPC DDR5 1 Rank 8 GB and 8 GB（混合 2DPC DDR5 单排 8 GB 与 8 GB 配置的频率限制）
 
 值：
 
@@ -1046,9 +1046,9 @@ Mixed：插入两个不同品牌或频率/容量的内存条
 
 说明：
 
-2DPC DDR5 1 Rank：在每个内存通道（DPC）中各插入一根 8GB 容量、单排名（1R）的内存条，共两根，组成双通道配置。
+2DPC DDR5 1 Rank：在每个内存通道（DPC）中各插入一根 8 GB 容量、单排名（1R）的内存条，共两根，组成双通道配置。
 
-#### Frequency Limit for Mixed 2DPC DDR5 1 Rank 16GB and 16GB（混合 2DPC DDR5 单排 16GB 与 16GB 配置的频率限制）
+#### Frequency Limit for Mixed 2DPC DDR5 1 Rank 16 GB and 16 GB（混合 2DPC DDR5 单排 16 GB 与 16 GB 配置的频率限制）
 
 值：
 
@@ -1058,9 +1058,9 @@ Mixed：插入两个不同品牌或频率/容量的内存条
 
 说明：
 
-2DPC DDR5 1 Rank：在每个内存通道（DPC）中各插入一根 16GB 容量、单排名（1R）的内存条，共两根，组成双通道配置。
+2DPC DDR5 1 Rank：在每个内存通道（DPC）中各插入一根 16 GB 容量、单排名（1R）的内存条，共两根，组成双通道配置。
 
-#### Frequency Limit for Mixed 2DPC DDR5 1 Rank 8GB and 16GB（混合 2DPC DDR5 单排 8GB 与 16GB 配置的频率限制）
+#### Frequency Limit for Mixed 2DPC DDR5 1 Rank 8 GB and 16 GB（混合 2DPC DDR5 单排 8 GB 与 16 GB 配置的频率限制）
 
 值：
 
@@ -1108,9 +1108,9 @@ Auto（自动）
 
 1B
 
-1KB
+1 KB
 
-最大值（假设 HOB 总大小为 63KB）
+最大值（假设 HOB 总大小为 63 KB）
 
 说明：
 
@@ -1126,9 +1126,9 @@ Dynamic（动态），1 GB, 1.25 GB, 1.5 GB, 1.75 GB, 2 GB, 2.25 GB, 2.5 GB, 2.7
 
 设置 TOLUD 的最大值。动态分配会根据已安装图形控制器所需的最大 MMIO 长度，自动调整 TOLUD。
 
-参见 为何系统识别不全？4GB 内存终极解迷[EB/OL]. [2026-03-26]. <https://memory.zol.com.cn/130/1302306_all.html#p1302306>
+参见 为何系统识别不全？4 GB 内存终极解迷[EB/OL]. [2026-03-26]. <https://memory.zol.com.cn/130/1302306_all.html#p1302306>
 
-Top of Low Usable DRAM (TOLUD)，低地址段内存顶端，表示 4GB 以下的可用 DRAM 最大地址边界。其描述的是可设定地址的物理内存总量。TOLUD 寄存器会始终在 4GB 内存地址以下工作。
+Top of Low Usable DRAM (TOLUD)，低地址段内存顶端，表示 4 GB 以下的可用 DRAM 最大地址边界。其描述的是可设定地址的物理内存总量。TOLUD 寄存器会始终在 4 GB 内存地址以下工作。
 
 #### SA GV（SAVG）
 
@@ -1581,7 +1581,7 @@ Disabled（禁用）
 
 对 DDR 内存执行完整的初始化过程，包括断电后重新上电或复位所有寄存器和状态。
 
-强制冷重置（Force ColdReset）或选择 MrcColdBoot 模式，当在内存参考代码（MRC）执行期间需要进行冷启动（Coldboot）时使用。注意：如果系统中存在管理引擎（ME）5.0MB 版本，则必须使用强制冷重置（ForceColdReset）！
+强制冷重置（Force ColdReset）或选择 MrcColdBoot 模式，当在内存参考代码（MRC）执行期间需要进行冷启动（Coldboot）时使用。注意：如果系统中存在管理引擎（ME）5.0 MB 版本，则必须使用强制冷重置（ForceColdReset）！
 
 #### Controller 0, Channel 0 Control（控制器 0 通道 0 控制）
 
@@ -1661,7 +1661,7 @@ Disabled（禁用）
 
 说明：
 
-4GB 以上内存重映射。该功能允许系统将物理内存地址空间中 4GB 以上的内存重新映射，使操作系统能够识别和使用超过 4GB 的内存容量。
+4 GB 以上内存重映射。该功能允许系统将物理内存地址空间中 4 GB 以上的内存重新映射，使操作系统能够识别和使用超过 4 GB 的内存容量。
 
 #### Time Measure（时间测量）
 
@@ -1945,7 +1945,7 @@ GTT：Graphics Translation Table，图形转换表，又称 GART（Graphics Addr
 
 应用程序通过访问 BAR，与专用于集成显卡的系统内存或用于 de‑swizzle 的常规系统内存交互。较大的 IGD Aperture Size 并不总是最佳选择，因为它会增加系统地址空间中 BAR 的占用。
 
-核显显存孔径（默认）\=256MB（适用于第 10 代及更早 Intel® 处理器）。
+核显显存孔径（默认）\=256 MB（适用于第 10 代及更早 Intel® 处理器）。
 
 注意，核显的总显存大小取决于操作系统，而不等同于此项。
 
@@ -1969,7 +1969,7 @@ PSMI 是一个用于管理和监控电源供应器状态的接口。它允许主
 
 选项：
 
-64M / 96M / 128M / 160M / 192M / 224M / 256M / 288M / 320M / 352M / 384M / 416M / 448M / 480M / 512M
+64 M / 96 M / 128 M / 160 M / 192 M / 224 M / 256 M / 288 M / 320 M / 352 M / 384 M / 416 M / 448 M / 480 M / 512 M
 
 说明：
 
@@ -1985,9 +1985,9 @@ DVMT，Dynamic Video Memory，动态视频内存技术。DVMT 动态分配系统
 
 选项：
 
-128M
+128 M
 
-256M
+256 M
 
 MAX（最大值）
 
@@ -2751,7 +2751,7 @@ WRC，Write Cache，写缓存。WRC 功能启用 Intel® 数据直通 I/O 技术
 
 参见：11th Gen Intel® Core™ Processors Real-Time Tuning Guide. [EB/OL]. [2026-03-26]. <https://webdls.ieiworld.com/data/_prod-detail-feature/DRPC-DEV-KIT/Real-Time-Tuning-Guide-11th-Gen-Intel-Core-Processors-1.4.pdf>.
 
-### Above 4GB MMIO BIOS assignment（BIOS 4GB 以上 MMIO 分配）
+### Above 4 GB MMIO BIOS assignment（BIOS 4 GB 以上 MMIO 分配）
 
 选项：
 
@@ -2761,13 +2761,13 @@ Disabled（禁用）
 
 说明：
 
-启用／禁用 4GB 以上的内存映射 I/O（Memory Mapped I/O）BIOS 分配。
+启用／禁用 4 GB 以上的内存映射 I/O（Memory Mapped I/O）BIOS 分配。
 
-当 Aperture Size（显存孔径）设置为 2048MB 时，该功能会自动启用。
+当 Aperture Size（显存孔径）设置为 2048 MB 时，该功能会自动启用。
 
-在 32 位模式下，PCIe 设备在进行内存映射 I/O（MMIO）时最多只能使用到 4GB 的内存地址空间，因为大于 4GB 的地址空间属于 64 位系统才能使用的范围。
+在 32 位模式下，PCIe 设备在进行内存映射 I/O（MMIO）时最多只能使用到 4 GB 的内存地址空间，因为大于 4 GB 的地址空间属于 64 位系统才能使用的范围。
 
-在 BIOS 中启用此选项，可以让 64 位 PCIe 设备使用大于 4GB 的地址空间，但操作系统也必须是 64 位系统才能完全支持。
+在 BIOS 中启用此选项，可以让 64 位 PCIe 设备使用大于 4 GB 的地址空间，但操作系统也必须是 64 位系统才能完全支持。
 
 目前该功能通常用于同时使用多张显卡的情况；该功能对于游戏和加密货币挖矿等高性能应用特别有用。参见 BIOS Above 4GB MMIO BIOS Assignment / Above 4G Decoding[EB/OL]. [2026-03-26]. <https://432hz.myqnapcloud.com:81/WordPress/above-4gb-mmio-bios-assignment-and-above-4g-decoding/>
 
@@ -2935,15 +2935,15 @@ Enabled（启用）
 
 Driver default：使用驱动程序的默认设置。
 
-ILEDA 16mA：设置 ILEDA 引脚的电流为 16 毫安。
+ILEDA 16 mA：设置 ILEDA 引脚的电流为 16 毫安。
 
-ILEDB 2mA：设置 ILEDB 引脚的电流为 2 毫安。
+ILEDB 2 mA：设置 ILEDB 引脚的电流为 2 毫安。
 
-ILEDB 4mA：设置 ILEDB 引脚的电流为 4 毫安。
+ILEDB 4 mA：设置 ILEDB 引脚的电流为 4 毫安。
 
-ILEDB 8mA：设置 ILEDB 引脚的电流为 8 毫安。
+ILEDB 8 mA：设置 ILEDB 引脚的电流为 8 毫安。
 
-ILEDB 16mA：设置 ILEDB 引脚的电流为 16 毫安
+ILEDB 16 mA：设置 ILEDB 引脚的电流为 16 毫安
 
 说明：
 
@@ -3727,7 +3727,7 @@ PCIe 物理层的发送器。如何选取输出摆幅模式的方法是特定于
 
 说明：
 
-此根桥保留的 I/O 范围（4K、8K、12K、16K 或 20K）。
+此根桥保留的 I/O 范围（4 K、8 K、12 K、16 K 或 20 K）。
 
 ##### PCIEx CLKREQ Mapping Override（PCIe CLKREQ# 映射覆盖）
 
@@ -3885,7 +3885,7 @@ IDE（Integrated Drive Electronics，集成驱动电子接口）
 
 现代计算机通常使用 AHCI 模式。大部分非 Windows 操作系统（本身也需要驱动才能支持）都与 RAID 模式不兼容（但是英特尔快速存储技术需要 RAID 模式）。
 
-并且这个 RAID，一般叫做 Fake-RAID/hardware-assisted software RAID，伪 RAID，不是真正的硬 RAID。这种情况下可能需要英特尔快速存储技术（RST）驱动才能正常使用。
+并且这个 RAID，一般叫作 Fake-RAID/hardware-assisted software RAID，伪 RAID，不是真正的硬 RAID。这种情况下可能需要英特尔快速存储技术（RST）驱动才能正常使用。
 
 参见：Install Arch Linux with Fake RAID[EB/OL]. [2026-03-26]. <https://wiki.archlinuxcn.org/wiki/Install_Arch_Linux_with_Fake_RAID>
 
@@ -4477,7 +4477,7 @@ PME，Power Management Event，电源管理事件
 
 说明：
 
-指示 SDI 是以 1T、2T（CNL）模式，还是以 2T、4T、8T（ICL）模式运行。
+指示 SDI 是以 1 T、2 T（CNL）模式，还是以 2 T、4 T、8 T（ICL）模式运行。
 
 CNL：Cannon Lake 架构，部分第八代 Intel 酷睿处理器代号。
 
@@ -4833,7 +4833,7 @@ Disabled（禁用）
 
 控制 eMMC 5.1 HS400 模式（总线速度）开关。
 
-HS400，是一种 eMMC 的 HS400 数据传输模式，为 eMMC 数据总线工作于双边采样 (DDR) 模式下的数据传输模式，带宽可达 400MB/s。
+HS400，是一种 eMMC 的 HS400 数据传输模式，为 eMMC 数据总线工作于双边采样 (DDR) 模式下的数据传输模式，带宽可达 400 MB/s。
 
 #### Enable HS400 software tuning（启用 HS400 软件调优）
 
@@ -5194,11 +5194,11 @@ Disabled（禁用）
 
 选项：
 
-~32ms
+~32 ms
 
-~128ms
+~128 ms
 
-~8ms
+~8 ms
 
 说明：
 
@@ -5210,9 +5210,9 @@ Disabled（禁用）
 
 选项：
 
-- ~32ms
-- ~128ms
-- ~8ms
+- ~32 ms
+- ~128 ms
+- ~8 ms
 
 说明：
 
@@ -5326,7 +5326,7 @@ Retention（保留）寄存器是一种低功耗设计技术。
 
 Retention 至低功耗模式的过渡说明如下。
 
-从关闭状态（0V）过渡到高电流模式电压的时间，单位为微秒（μs）。该字段的步进为 1 微秒。
+从关闭状态（0 V）过渡到高电流模式电压的时间，单位为微秒（μs）。该字段的步进为 1 微秒。
 
 ##### Retention to High Current Mode（Retention 到高功耗模式的时间）
 
@@ -5346,7 +5346,7 @@ Retention 至低功耗模式的过渡说明如下。
 
 该字段的步进为 1 微秒。
 
-值为 0 表示禁止过渡到 0V。该数值必须大于或等于 VccST 板上 FET 的上升时间（FET ramp time）。
+值为 0 表示禁止过渡到 0 V。该数值必须大于或等于 VccST 板上 FET 的上升时间（FET ramp time）。
 
 #### FIVR Dynamic PM（FIVR 动态功率管理器）
 
@@ -5437,11 +5437,11 @@ Disabled（禁用）
 [1us]  
 [10us]  
 [100us]  
-[1ms]  
-[10ms]  
-[100ms]  
-[1s]  
-[10s]
+[1 ms]  
+[10 ms]  
+[100 ms]  
+[1 s]  
+[10 s]
 
 说明：
 
@@ -6266,13 +6266,13 @@ SGMII：Serial Gigabit Media Independent Interface，串行千兆媒体独立接
 
 选项：
 
-24MHz 2.5 Gbps
+24 MHz 2.5 Gbps
 
-24MHz 1 Gbps
+24 MHz 1 Gbps
 
-38.4MHz 2.5 Gbps
+38.4 MHz 2.5 Gbps
 
-38.4MHz 1 Gbps
+38.4 MHz 1 Gbps
 
 说明：
 
@@ -6306,13 +6306,13 @@ Disabled（禁用）
 
 选项：
 
-24MHz 2.5 Gbps
+24 MHz 2.5 Gbps
 
-24MHz 1 Gbps
+24 MHz 1 Gbps
 
-38.4MHz 2.5 Gbps
+38.4 MHz 2.5 Gbps
 
-38.4MHz 1 Gbps
+38.4 MHz 1 Gbps
 
 说明：
 
