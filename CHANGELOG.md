@@ -801,7 +801,7 @@
   - 新增一节：“第 5.10 节 FreeBSD 安装微信（Linux 版）”
   - “第 5.5 节 FreeBSD 安装金山 WPS（Linux 版）”：新增“基于 RockyLinux 兼容层（FreeBSD Port）”安装 WPS
 - 2024.11.8  
-  - "第 1.1 节 UNIX、Unix-like、Linux 和 FreeBSD 简介"：补充“macOS/iOS 等与 BSD 的关系”
+  - “第 1.1 节 UNIX、Unix-like、Linux 和 FreeBSD 简介“：补充“macOS/iOS 等与 BSD 的关系”
 - 2024.11.7  
   - “第 6.4 节 NTFS 的挂载”：新建“格式化”、挂载部分。
   - 针对“[Add new category fs for file systems](https://github.com/freebsd/freebsd-ports/pull/302) ” 进行修改
@@ -822,7 +822,7 @@
 - 2024.10.27  
   - USTC、163、NJU pkg-freebsd 源基本恢复正常
   - 新增一节：“第 17.9 节 AList”
-  - "第 4.16 节 安装 CDE" 测试通过
+  - “第 4.16 节 安装 CDE” 测试通过
 - 2024.10.8
   - 同步更新“第 1.5 节 谁在使用 FreeBSD”
   - 重写“第 4.1 节 安装显卡驱动及 Xorg（必看）”

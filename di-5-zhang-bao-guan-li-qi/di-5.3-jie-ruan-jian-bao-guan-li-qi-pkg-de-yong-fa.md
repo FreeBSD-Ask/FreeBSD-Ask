@@ -2,7 +2,7 @@
 
 本章系统讲解 FreeBSD 二进制包管理器 pkg 的核心功能与使用方法。pkg 作为 FreeBSD 现代包管理体系的核心组件，提供了高效、可靠的软件安装、更新与卸载机制，是 FreeBSD 用户进行第三方软件管理的主要工具。
 
-FreeBSD 的二进制包管理器目前是 pkg（旧称 pkgng），名称来源于英文单词"Package"，即软件包的简称。
+FreeBSD 的二进制包管理器目前是 pkg（旧称 pkgng），名称来源于英文单词“Package”，即软件包的简称。
 
 对于熟悉 Linux 发行版的读者而言，FreeBSD 的包管理方案可类比于两大 Linux 发行版包管理器的功能组合：
 
@@ -507,7 +507,7 @@ Ignore the mismatch and continue? [y/N]:
 
 以 root 权限执行 `certctl rehash` 刷新证书即可。
 
-参见：pkg(8): "An error occured while fetching package: No error"[EB/OL]. [2026-03-26]. <https://forums.freebsd.org/threads/pkg-8-an-error-occured-while-fetching-package-no-error.96761/>
+参见：pkg(8): “An error occured while fetching package: No error“[EB/OL]. [2026-03-26]. <https://forums.freebsd.org/threads/pkg-8-an-error-occured-while-fetching-package-no-error.96761/>
 
 ## 课后习题
 
