@@ -381,6 +381,17 @@ root@ykla:/usr/ports/sysutils/htop # make all-depends-list
 ……省略一部分……
 ```
 
+## 看看 python 的 ports 在哪个位置
+
+我们可以再次使用 `whereis` 命令来确认 python 的 ports 具体在哪个位置。
+
+查找 python 可执行文件、源代码及手册页所在路径：
+
+```sh
+# whereis python
+python: /usr/ports/lang/python
+```
+
 ## 安装 python3
 
 现在我们以安装 python3 为例，演示如何使用 Ports 编译安装软件。
