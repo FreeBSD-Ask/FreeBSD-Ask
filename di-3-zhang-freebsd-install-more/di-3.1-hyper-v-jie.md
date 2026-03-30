@@ -1,6 +1,6 @@
 # 3.1 使用 Hyper-V 安装 FreeBSD
 
-本节介绍 FreeBSD 操作系统在 Microsoft Hyper-V 虚拟化平台上的部署方法，旨在为读者提供一套完整的、经过验证的安装配置流程。本节内容基于 Windows 11 23H2 专业版与 FreeBSD 14.1-RELEASE 环境的实测结果，该环境具有较好的代表性，能够反映当前主流配置环境。
+本节介绍 FreeBSD 操作系统在 Microsoft Hyper-V 虚拟化平台上的部署方法，旨在为读者提供一套完整的、经过验证的安装配置流程。本篇内容基于 Windows 11 23H2 专业版与 FreeBSD 14.1-RELEASE 环境的实测结果，该环境具有较好的代表性，能够反映当前主流配置环境。
 
 ## Hyper-V 简介
 
@@ -137,7 +137,7 @@ PS C:\Users\ykla> Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-H
 
 ![Hyper-V](../.gitbook/assets/hp.jpg)
 
-删除虚拟机前，必须先将其关机。
+删除虚拟机前，必须先将其关闭。
 
 ## 参考文献
 
