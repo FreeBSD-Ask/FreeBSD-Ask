@@ -16,7 +16,7 @@
 >
 >虚拟机也可以使用 FreeBSD 官方构建的 [虚拟机镜像](https://download.freebsd.org/releases/VM-IMAGES/15.0-RELEASE/amd64/Latest/)，该类镜像经过预配置，使用时需要手动扩容，文件系统可选 UFS 与 ZFS。
 >
->虚拟机一般使用 `FreeBSD-15.0-RELEASE-amd64-disc1.iso` 等类似文件名和后缀的 ISO 光盘镜像，但是 `FreeBSD-15.0-RELEASE-amd64-memstick.img` 也并非只能用于 U 盘刻录，虚拟机同样可以使用，具体使用方法可参考其他章节。
+>虚拟机一般使用 `FreeBSD-15.0-RELEASE-amd64-disc1.iso` 等类似文件名和后缀的 ISO 光盘镜像，但 `FreeBSD-15.0-RELEASE-amd64-memstick.img` 并非只能用于 U 盘刻录，虚拟机同样可以使用，具体使用方法可参考其他章节。
 
 ## 配置虚拟机
 
@@ -94,9 +94,9 @@
 >
 >NAT 模式的“名称”与你主机的 `控制面板\网络和 Internet\网络连接` 中的 `VMware Network Adapter VMnet8` 绑定，默认绑定的是 `8`。换言之，NAT 模式的“名称”默认必须指定为下图所示的 `VMnet8`，否则虚拟机将无法联网。
 >
->![vmware network on freebsd](../.gitbook/assets/VMnat8.png)
+>![VMware network on FreeBSD](../.gitbook/assets/VMnat8.png)
 
-![vmware network on freebsd](../.gitbook/assets/net1.png)
+![VMware network on FreeBSD](../.gitbook/assets/net1.png)
 
 通常情况下无需进行手动设置。如果虚拟机内网络接口一直提示 `no link`，请尝试重启宿主机，然后打开 VMware 的虚拟网络编辑器，再次执行“还原默认设置”操作（不推荐手动配置，可能无效）。
 
@@ -104,7 +104,7 @@
 
 如果配置为桥接模式后始终无法通过 DHCP 获取 IP 地址，可尝试将网络适配器的“桥接到”选项从“自动”改为你的主机当前正在使用的物理网卡。
 
-![vmware network on freebsd](../.gitbook/assets/net2.png)
+![VMware network on FreeBSD](../.gitbook/assets/net2.png)
 
 ## 虚拟机增强工具与显卡驱动
 
@@ -148,7 +148,7 @@
 
 > **技巧**
 >
-> 如果屏幕显示不正常（过大），请尝试：编辑虚拟机设置→硬件→显示器→监视器→指定监视器设置→任意监视器的最大分辨率，设置为主机的分辨率或略低于主机分辨率。具体步骤可参考故障排除部分。
+> 如果屏幕显示不正常（过大），请尝试以下操作：编辑虚拟机设置→硬件→显示器→监视器→指定监视器设置→任意监视器的最大分辨率，设置为主机的分辨率或略低于主机分辨率。具体步骤可参考故障排除部分。
 
 ### 鼠标集成（主机虚拟机鼠标自由切换）
 
@@ -290,7 +290,7 @@ Downloads
 
 > **注意**
 >
-> 在使用 Windows 远程桌面或者其他 XRDP 工具远程另一台 Windows 桌面，并使用其上面运行的 VMware 虚拟机操作 FreeBSD 时，鼠标通常会变得难以控制。这是正常现象。
+> 在使用 Windows 远程桌面或其他 XRDP 工具远程另一台 Windows 桌面，并使用其上面运行的 VMware 虚拟机操作 FreeBSD 时，鼠标通常会变得难以控制。这是正常现象。
 
 - 每次进入图形界面，窗口都会异常扩大。
 
@@ -324,7 +324,7 @@ VMware 已被博通（Broadcom）收购。从官方下载 VMware 相关产品需
 >>
 >>在页面“Email Address”（电子邮件）处输入你的电子邮箱。如果没有的话，可以用你的 QQ 号，然后直接加上一个 `@qq.com`，比如你的 QQ 号是 `1212111111`，那么你的 QQ 邮箱则为 `1212111111@qq.com`
 >>
->>在页面“Enter text from image”（输入图片上的文本）处输入图片上的文本信息（实际上是验证码）。如果看不清或者不认识，可以点 `Enter text from image` 右侧的 🔁
+>>在页面“Enter text from image”（输入图片上的文本）处输入图片上的文本信息（实际上是验证码）。如果看不清或不认识，可以点 `Enter text from image` 右侧的 🔁
 >>点击“Next”（继续）
 >>
 >>如果你使用的是 QQ 号生成的邮箱，请打开 <https://wx.mail.qq.com/>。其他邮箱请在各自网站打开，如果不知道，请使用 QQ 邮箱。
