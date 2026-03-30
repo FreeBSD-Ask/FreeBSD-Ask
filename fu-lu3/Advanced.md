@@ -957,7 +957,7 @@ Enable（启用）
 
 当超出限制时，CPU 的倍频会在经过一段时间后降低。下限可保护 CPU 并节省功耗，而上限则有助于提升性能。
 
-PL1 是平均功耗的限制阈值，不会被超过 —— 英特尔推荐设置为等于处理器的基础功耗（即 TDP）。PL1 不应高于散热方案的散热能力上限。参见 12th Generation Intel® Core™ Processors[EB/OL]. [2026-03-26]. <https://edc.intel.com/content/www/us/en/design/ipla/software-development-platforms/client/platforms/alder-lake-desktop/12th-generation-intel-core-processors-datasheet-volume-1-of-2/011/package-power-control/>。
+PL1 是平均功耗的限制阈值，不会被超过 —— 英特尔推荐设置为等于处理器的基础功耗（TDP）。PL1 不应高于散热方案的散热能力上限。参见 12th Generation Intel® Core™ Processors[EB/OL]. [2026-03-26]. <https://edc.intel.com/content/www/us/en/design/ipla/software-development-platforms/client/platforms/alder-lake-desktop/12th-generation-intel-core-processors-datasheet-volume-1-of-2/011/package-power-control/>。
 
 实现 Intel® Turbo Boost 技术 2.0 通常只需正确配置 PL1、PL2 和 Tau 参数。
 

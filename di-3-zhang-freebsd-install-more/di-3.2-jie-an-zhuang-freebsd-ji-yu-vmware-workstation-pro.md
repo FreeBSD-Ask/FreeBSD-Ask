@@ -322,7 +322,7 @@ VMware 已被博通（Broadcom）收购。从官方下载 VMware 相关产品需
 >
 >- 点击右上角的“Register”（注册）（或者直接打开 <https://profile.broadcom.com/web/registration>）
 >>
->>在页面“Email Address”（电子邮件）处输入你的电子邮箱。如果没有的话，可以用你的 QQ 号，然后直接加上一个 `@qq.com`——比如你的 QQ 号是 `1212111111`，那么你的 QQ 邮箱则为 `1212111111@qq.com`
+>>在页面“Email Address”（电子邮件）处输入你的电子邮箱。如果没有的话，可以用你的 QQ 号，然后直接加上一个 `@qq.com`，比如你的 QQ 号是 `1212111111`，那么你的 QQ 邮箱则为 `1212111111@qq.com`
 >>
 >>在页面“Enter text from image”（输入图片上的文本）处输入图片上的文本信息（实际上是验证码）。如果看不清或者不认识，可以点 `Enter text from image` 右侧的 🔁
 >>点击“Next”（继续）
