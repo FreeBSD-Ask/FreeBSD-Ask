@@ -66,7 +66,7 @@ $ cp /usr/local/share/applications/org.fcitx.Fcitx5.desktop ~/.config/autostart/
 
 >**注意**
 >
->如果登录桌面的用户账户不是 root，则不能使用 root 身份进行设置：必须切换到 root 账户，并在不使用 sudo 的情况下进行配置。
+>如果登录桌面的用户账户不是 root，则不能使用 root 身份进行设置：必须切换到该普通用户，并在不使用 sudo 的情况下进行配置。
 
 - A 组（sh/bash/zsh）
 
