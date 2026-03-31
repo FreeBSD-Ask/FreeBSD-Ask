@@ -4,7 +4,7 @@
 
 ## 账户类型
 
-要想访问 FreeBSD，你必须有一个账户。
+要想访问 FreeBSD，必须有一个账户。
 
 在 FreeBSD 中，所有进程都是以某个账户的名义启动的。`sysutils/htop` 能够直观地呈现这一点（注意 `△USER` 这列）：
 
@@ -56,7 +56,7 @@ FreeBSD 中主要有三类账户：系统账户、普通用户账户，以及超
 # Username: ykla
 ```
 
-示例：创建一个名为 test 的用户，并将其添加到 wheel 组，设置其默认 shell 是 sh：
+示例：创建一个名为 test 的用户，并将其添加到 wheel 组，设置其默认 shell 为 sh：
 
 ```sh
 # adduser
@@ -128,7 +128,7 @@ chpass: user information updated
 # passwd # 修改用户密码，如不指定用户则默认为当前用户。
 ```
 
-root 用户可修改所有用户的密码。
+root 用户可以修改所有用户的密码。
 
 ## `pw` 命令
 
@@ -270,7 +270,7 @@ test5:*:1202:test1
 
 ## 参考文献
 
-- [pw(8)](https://man.freebsd.org/cgi/man.cgi?pw)，man 页，系统介绍用户和组管理命令
+- [pw(8)](https://man.freebsd.org/cgi/man.cgi?pw)，man 页，介绍了用户和组管理命令
 
 ## 课后习题
 

@@ -39,7 +39,7 @@
 - 2026.3.8
   - 新增“18.5 嵌入式开发”
 - 2026.3.3
-  - 删除《16.2 MinIO 对象存储服务》，原因：由于上游不再维护，其将从 Ports 删除
+  - 删除《16.2 MinIO 对象存储服务》，原因：由于上游不再维护，将其从 Ports 删除
 - 2026.3.2
   - 将“22.4 LLVM / Clang 概述”合并入“22.15 在 FreeBSD 上开发 C/C++”，成为“22.4 在 FreeBSD 上开发 C/C++”
   - 将“22.2 如何开发一个 Port”、“22.14 利用脚本自动生成 BSD libc 库文本”合并入“22.3 如何参与 FreeBSD 开发”
@@ -58,7 +58,7 @@
   - 将“5.3 gitup 的用法”作删除处理。原因：缺乏实质性维护近 2 年。
   - 删除“21.5 基于 archlinux-pacman 的 Arch Linux 兼容层（拟删除）”。原因：存在 Bug 287690 [sysutils/pacman: The archlinux flavor cannot be built or installed.](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=287690) 无法得到解决
   - 删除“6.10 Budgie（拟删除）”，原因：欠缺维护，存在 [Bug 289898 x11/budgie: After logging in with LightDM, it crashes and then shows a black screen](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=289898) 无法得到解决
-  - 将“附录：登录界面主题”从“6.3 KDE 6（X11 会话）”彻底删除，因为软件源中仅存在 Port x11-themes/sddm-freebsd-black-theme，且无人维护，存在 [x11-themes/sddm-freebsd-black-theme incompatible with SDDM 0.21.0 (Qt6 greeter)](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=293449) 无法得到解决
+  - 将“附录：登录界面主题”从“6.3 KDE 6（X11 会话）”彻底删除，因为软件源中仅存在 Port x11-themes/sddm-freebsd-black-theme，且无人维护，存在 [x11-themes/sddm-freebsd-black-theme incompatible with SDDM 0.21.0 (Qt6 greeter)](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=293449) 的问题无法得到解决
   - 注意到 Lumina 实际上不存在任何维护者，且长期未更新，作删除处理。
   - 删除“7.5 Window Maker”，Bug 较多，基本无法使用
   - 删除“7.6 Fluxbox”，Bug 较多，基本无法使用
@@ -83,7 +83,7 @@
   - 增补“6.2 NVIDIA 显卡驱动”，在台式机 3060 显卡上进行实际测试
   - 为其余链接添加部分存档
 - 2026.1.18
-  - 引入归档 CI，同时再为其余链接添加部分存档
+  - 引入归档 CI，同时为其余链接添加部分存档
 - 2026.1.17
   - “26.2 安装 OpenBSD”新增“OpenBSD 自动分区的源代码分析”
 - 2026.1.16

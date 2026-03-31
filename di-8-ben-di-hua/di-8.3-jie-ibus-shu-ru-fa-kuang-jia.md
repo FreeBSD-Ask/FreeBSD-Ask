@@ -71,7 +71,7 @@ setenv XIM_ARGS "--daemonize --xim"
 
 ## IBus 设置
 
-完成环境变量配置后，可以通过以下方式进行 IBus 的设置：
+完成环境变量配置后，可以通过以下方式设置 IBus：
 
 - IBus 设置：
 

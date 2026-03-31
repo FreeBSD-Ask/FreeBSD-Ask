@@ -1,8 +1,12 @@
 # 5.4 使用 Ports 以源代码方式安装软件
 
-本章深入探讨 FreeBSD Ports 框架的设计理念、使用方法及高级配置。Ports 作为 FreeBSD 源代码构建软件的核心框架，提供了灵活、可定制的软件安装途径。从技术架构层面看，Ports 框架构成了 FreeBSD 软件生态系统中源代码构建与分发的标准化基础设施。
+本章深入探讨 FreeBSD Ports 框架的设计理念、使用方法及高级配置。
+
 
 ## Ports 与 Port 概述
+
+
+Ports 作为 FreeBSD 源代码构建软件的核心框架，提供了灵活、可定制的软件安装途径。
 
 ### Ports 历史
 
@@ -19,7 +23,7 @@ but fairly usable at this stage.
 Submitted by:   jkh
 ```
 
-“提交了我为 ports 编写的新 Make 宏。虽然还远未完全完善，但目前已经可以较为正常地使用了。”
+“提交了我为 ports 编写的新 Make 宏。虽然还远未完善，但目前已经可以较为正常地使用了。”
 
 > **技巧**
 >
@@ -35,38 +39,7 @@ NetBSD 和 OpenBSD 也使用 Ports，但实现并不通用。
 
 一款软件的相关文件或文件夹（补丁文件、校验码、Makefile 等）的集合（表现为一个文件夹）称为一个 Port，所有 Port（移植软件）的集合即 Ports Collection 或 Ports Tree，简称 Ports。从术语定义角度，Port 指单个软件的移植构建配置，而 Ports 则指整个移植软件集合。
 
-```sh
-$ cd /usr/ports # 切换到 /usr/ports
-$ ls # 列出此目录下所有文件  ①
-accessibility	COPYRIGHT	GIDs		misc		README		www
-arabic		databases	graphics	Mk		russian		x11
-archivers	deskutils	hebrew		MOVED		science		x11-clocks
-astro		devel		hungarian	multimedia	security	x11-drivers
-audio		dns		irc		net		shells		x11-fm
-benchmarks	editors		japanese	net-im		sysutils	x11-fonts
-biology		emulators	java		net-mgmt	Templates	x11-servers
-cad		filesystems	Keywords	net-p2p		textproc	x11-themes
-CHANGES		finance		korean		news		Tools		x11-toolkits
-chinese		french		lang		polish		UIDs		x11-wm
-comms		ftp		mail		ports-mgmt	ukrainian
-CONTRIBUTING.md	games		Makefile	portuguese	UPDATING
-converters	german		math		print		vietnamese
-$ ls databases/ # 切换到 databases 数据库分类目录下
-adminer						php-xapian
-adodb5						php81-dba
-
-    ……省略一部分……
-
-mongodb60					py-apache-arrow
-mongodb70					py-apsw
-mongodb80					py-asyncmy
-mongosh						py-asyncpg
-$ cd databases/postgresql18-server # 切换到 postgresql18-server 目录
-ykla@ykla:/usr/ports/databases/postgresql18-server $ ls ②
-distinfo		pkg-descr		pkg-plist-contrib	pkg-plist-pltcl
-files			pkg-install-server	pkg-plist-plperl	pkg-plist-server
-Makefile		pkg-plist-client	pkg-plist-plpython
-```
+项目结构
 
 ```sh
 /usr/
@@ -155,6 +128,43 @@ Makefile		pkg-plist-client	pkg-plist-plpython
     └── CONTRIBUTING.md
 ```
 
+看看 Ports 框架结构：
+
+```sh
+$ cd /usr/ports # 切换到 /usr/ports
+$ ls # 列出此目录下所有文件  ①
+accessibility	COPYRIGHT	GIDs		misc		README		www
+arabic		databases	graphics	Mk		russian		x11
+archivers	deskutils	hebrew		MOVED		science		x11-clocks
+astro		devel		hungarian	multimedia	security	x11-drivers
+audio		dns		irc		net		shells		x11-fm
+benchmarks	editors		japanese	net-im		sysutils	x11-fonts
+biology		emulators	java		net-mgmt	Templates	x11-servers
+cad		filesystems	Keywords	net-p2p		textproc	x11-themes
+CHANGES		finance		korean		news		Tools		x11-toolkits
+chinese		french		lang		polish		UIDs		x11-wm
+comms		ftp		mail		ports-mgmt	ukrainian
+CONTRIBUTING.md	games		Makefile	portuguese	UPDATING
+converters	german		math		print		vietnamese
+$ ls databases/ # 切换到 databases 数据库分类目录下
+adminer						php-xapian
+adodb5						php81-dba
+
+    ……省略一部分……
+
+mongodb60					py-apache-arrow
+mongodb70					py-apsw
+mongodb80					py-asyncmy
+mongosh						py-asyncpg
+$ cd databases/postgresql18-server # 切换到 postgresql18-server 目录
+ykla@ykla:/usr/ports/databases/postgresql18-server $ ls ②
+distinfo		pkg-descr		pkg-plist-contrib	pkg-plist-pltcl
+files			pkg-install-server	pkg-plist-plperl	pkg-plist-server
+Makefile		pkg-plist-client	pkg-plist-plpython
+```
+
+
+
 - ① `/usr/ports` 这个文件夹整体称作 Ports，包括几十种不同的分类目录，每个目录下有若干 Port。
 - ② `/usr/ports/databases/postgresql18-server` 这个文件夹整体称作一个 Port，由 `distinfo`（校验和文件）、`pkg-descr`（软件描述文件）、`Makefile`	（主文件，包含构建方法、版本号及下载方式等）、`pkg-plist`（安装文件列表及其权限和属组信息）、`files`（一般为补丁文件，该 Port 下还包含安装后的说明文件 `pkg-message`）等文件构成。
 
@@ -164,13 +174,13 @@ Makefile		pkg-plist-client	pkg-plist-plpython
 
 > **注意**
 >
-> ports 和 pkg 可以同时使用，而且大部分人也是这么用的。但是要注意 pkg 的源必须是 latest，否则会存在一些依赖上的问题（比如 ssl）。latest 源也比 main 分支上的 Ports 发布得更晚（其软件包由 main 构建而来），因此即使使用 latest 源，也可能会出现上述问题，总之有问题出现时就卸载那个 pkg 安装的包，重新使用 ports 编译即可。
+> ports 和 pkg 可以同时使用，而且大部分人也是这么用的。但是要注意 pkg 的源必须是 latest，否则会存在一些依赖上的问题（比如 ssl）。latest 源也比 main 分支下的 Ports 发布的更晚（其软件包由 main 构建而来），因此即使使用 latest 源，也可能会出现上述问题，总之有问题出现时就卸载那个 pkg 安装的包，重新使用 ports 编译即可。
 
 >**警告**
 >
->需要对上面的“注意”进行补充说明的是：一旦你使用了 `make config` 修改了 Port 的默认构建参数（进行了自定义），那么如果你仍然想保留该设置，后续的软件更新是不能通过 pkg 进行管理的，否则通过 pkg 安装的软件包会完全取代之前自定义的 Port（即 Port 开发者默认设定的构建参数将覆盖你自定义的 Port 参数）。
+>需要对上面的“注意”进行补充说明的是：一旦你使用 `make config` 修改了 Port 的默认构建参数（进行了自定义），那么如果你仍然想保留该设置，后续的软件更新是不能通过 pkg 进行管理的，否则通过 pkg 安装的软件包会完全取代之前自定义的 Port（即 Port 开发者默认设定的构建参数将覆盖你自定义的 Port 参数）。
 
-了解了注意事项后，我们可以通过流程图来直观地理解 Ports 构建 pkg 软件包的完整流程。
+了解了注意事项后，我们可以通过流程图直观地理解 Ports 构建 pkg 软件包的完整流程。
 
 ![Ports 流程图](../.gitbook/assets/ports-pkg.png)
 
@@ -211,7 +221,7 @@ Makefile		pkg-plist-client	pkg-plist-plpython
 
 ### 解压 ports 压缩包
 
-下载完成后，需要将压缩包解压到正确的位置。
+下载完成后，需要将压缩包解压到指定位置。
 
 ```sh
 # tar -zxvf ports.tar.gz -C /usr/ # 解压至路径
@@ -232,7 +242,7 @@ Git 是获取 Ports 源代码的推荐方式，可以方便地进行版本管理
 # pkg install git
 ```
 
-### 拉取 Ports 存储库（USTC）浅克隆
+### 拉取 Ports 存储库（USTC）的浅克隆
 
 中国科学技术大学提供了 FreeBSD ports 的镜像源，可以使用浅克隆的方式快速获取代码。
 
@@ -250,7 +260,7 @@ Git 是获取 Ports 源代码的推荐方式，可以方便地进行版本管理
 
 ### 完全拉取 Ports 存储库（FreeBSD 官方）并指定分支
 
-如果需要完整的提交历史和所有分支，可以进行完全克隆。
+如果需要完整的提交历史和所有分支，可以进行完整克隆。
 
 ```sh
 # git clone https://git.FreeBSD.org/ports.git /usr/ports
@@ -363,7 +373,7 @@ python: /usr/ports/lang/python
 
 了解软件包的依赖关系对于管理和编译软件非常重要。我们可以在软件已安装或未安装的情况下查看其依赖。
 
-在已经安装该软件包的情况下：
+在已安装该软件包的情况下：
 
 ```sh
 # pkg info -d screen
@@ -383,7 +393,7 @@ root@ykla:/usr/ports/sysutils/htop # make all-depends-list
 
 ## 看看 python 的 ports 在哪个位置
 
-我们可以再次使用 `whereis` 命令来确认 python 的 ports 具体在哪个位置。
+我们可以再次使用 `whereis` 命令来确认 python 的 ports 具体位置。
 
 查找 python 可执行文件、源代码及手册页所在路径：
 
@@ -403,7 +413,7 @@ python: /usr/ports/lang/python
 
 其中 `BATCH=yes`（批处理）意味着使用默认参数进行构建。
 
-## 如何设置全部所需的依赖
+## 如何设置所有所需的依赖
 
 在编译软件前，有时需要先设置所有依赖项的配置选项。
 
@@ -455,7 +465,7 @@ Proceed with this action? [y/N]:
 
 ## 如何一次性下载所有需要的软件包
 
-为了避免在编译过程中因为网络问题中断，可以先一次性下载所有需要的软件包。
+为了避免在编译过程中因网络问题中断，可以先一次性下载所有需要的软件包。
 
 ```sh
 # make BATCH=yes fetch-recursive
@@ -473,9 +483,9 @@ Proceed with this action? [y/N]:
 
 定期更新已安装的软件包是保持系统安全和最新的重要步骤。更新前需要先同步更新 Ports Git。
 
-先同步更新 Ports Git。
+先同步 Ports Git。
 
-然后列出过时 Port 软件：
+然后列出过时的 Port 软件：
 
 ```sh
 # pkg version -l '<'
@@ -728,8 +738,6 @@ max cache size                      10.0 GB
 
 ccache4 是目前的最新版本，提供了更好的性能和功能。
 
-目前的最新版本是 ccache4：
-
 使用 pkg 安装：
 
 ```sh
@@ -878,7 +886,7 @@ wget2 参数说明：
 
 >**技巧**
 >
->请注意很多服务器不支持较多线程同时下载。同时会给服务器带来较大压力，也可能会触发服务器的反制措施，如将下载的 IP 拉入黑名单。
+>很多服务器不支持较多线程同时下载。这会给服务器带来较大压力，也可能会触发服务器的反制措施，如将下载的 IP 拉入黑名单。
 
 ### 参考文献
 

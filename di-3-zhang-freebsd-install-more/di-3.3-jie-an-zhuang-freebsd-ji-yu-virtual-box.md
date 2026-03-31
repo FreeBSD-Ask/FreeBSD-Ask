@@ -4,7 +4,7 @@
 
 ## 下载 VirtualBox
 
-首先需要下载并安装 VirtualBox 虚拟机软件，这是实施后续操作的必要前提。
+首先需要下载并安装 VirtualBox 虚拟机软件，这是后续操作的必要前提。
 
 访问官方网站，点击页面右侧的 `Download` 按钮即可下载对应版本的安装程序。
 
@@ -88,7 +88,7 @@ VirtualBox 提供多种网络配置方式，以下介绍两种常用的网络设
 >
 > 与 VMware 不同，VirtualBox 的默认 NAT 模式下，主机和虚拟机无法直接互通。虚拟机可以访问主机的特殊地址 `10.0.2.2` 及其上运行的服务，但主机无法访问虚拟机的端口，各虚拟机之间网络也相互隔离。参见：Network Address Translation (NAT)[EB/OL]. [2026-03-26]. <https://www.virtualbox.org/manual/topics/networkingdetails.html#network_nat>。你也可以按照手册中的端口转发来连通网络。
 
-网络设置比较复杂，有时桥接不一定可以生效。为了达到使用宿主机（如 Windows 11）控制虚拟机里的 FreeBSD 系统的目的，需要设置两块网卡——一块是 NAT 网络模式的网卡用来上网、另一块是仅主机模式的网卡用来互通宿主机。如图所示：
+网络设置比较复杂，有时桥接不一定能生效。为了达到使用宿主机（如 Windows 11）控制虚拟机里的 FreeBSD 系统的目的，需要设置两块网卡——一块是 NAT 网络模式的网卡用来上网、另一块是仅主机模式的网卡用来与宿主机互通。如图所示：
 
 ![双网卡设置](../.gitbook/assets/vbnat1.png)
 
@@ -200,14 +200,14 @@ You may ignore the yellow alert that encourages use of VMSVGA.
 hw.efi.poweroff=0	# 禁用 EFI 电源关闭功能，使系统通过 ACPI 正常关机
 ```
 
-然后重启系统，再执行关机即可恢复正常，即使用 ACPI 而非 UEFI 接口进行关机操作。
+然后重启系统，再执行关机即可恢复，即使用 ACPI 而非 UEFI 接口进行关机操作。
 
 ### 参考文献
 
 - 12.0-U8.1 -> 13.0-U2 poweroff problem & solution[EB/OL]. <https://www.truenas.com/community/threads/12-0-u8-1-13-0-u2-poweroff-problem-solution.104813/>. 提供了 EFI 环境下 FreeBSD 关机问题的解决方案。
 - EFI: VirtualBox computer non-stop after successful shutdown of FreeBSD[EB/OL]. <https://forums.freebsd.org/threads/efi-virtualbox-computer-non-stop-after-successful-shutdown-of-freebsd.84856/>. 详细分析了 VirtualBox 中 FreeBSD 关机异常的技术原因与修复方法。
 
-### 鼠标被捕获在虚拟机窗口内无法移出
+### 鼠标被捕获在虚拟机窗口内，无法移出
 
 请先按右侧的 `Ctrl` 键（默认设置下键盘左右各有一个 `Ctrl`），如果因自动缩放需要还原屏幕或找不到菜单栏，请按 `Home` + 右侧 `Ctrl`。
 

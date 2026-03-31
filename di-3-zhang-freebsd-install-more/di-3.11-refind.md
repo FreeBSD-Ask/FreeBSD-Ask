@@ -10,7 +10,7 @@
 
 下载的压缩包中，仅部分文件是必需的启动文件。我们只需要其中的 `refind` 文件夹，其余文件可忽略。
 
-`refind` 文件夹中也仅包含部分必需的启动文件。所有文件名中包含 `aa64` 或 `ia32` 的文件均可删除（通常仅保留 `x64` 版本）。
+`refind` 文件夹中也仅包含部分必须的启动文件。所有文件名中包含 `aa64` 或 `ia32` 的文件均可删除（通常仅保留 `x64` 版本）。
 
 最终需要保留的文件如下图所示。
 
@@ -57,7 +57,7 @@ EFI/
         └── bootmgfw.efi   # Windows 启动管理器
 ```
 
-使用 [DiskGenius](https://www.diskgenius.com/)  将处理好的 `refind` 文件夹复制到 EFI 系统分区（ESP）中的 `EFI` 目录下。
+使用 [DiskGenius](https://www.diskgenius.com/)  将处理好的 `refind` 文件夹复制到 EFI 系统分区（ESP）的 `EFI` 目录下。
 
 ![复制 rEFInd 到 EFI 分区](../.gitbook/assets/shaung13.png)
 
@@ -75,7 +75,7 @@ EFI/
 
 ![选择 rEFInd 启动文件](../.gitbook/assets/shaung16.png)
 
-将该启动项移动至列表顶部，将其设为第一启动项。保存设置并重启电脑以测试效果。
+将该启动项移动至列表顶部，设为第一启动项。保存设置并重启电脑以测试效果。
 
 ![移动启动项至顶部](../.gitbook/assets/shuang16-2.png)
 

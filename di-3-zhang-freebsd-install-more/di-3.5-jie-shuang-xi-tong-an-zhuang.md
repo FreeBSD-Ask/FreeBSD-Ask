@@ -8,7 +8,7 @@
 >
 >本文示例要求先安装其他操作系统（如 Windows），再安装 FreeBSD，请遵循此操作顺序。
 
-## 简单方法（无众多数据集）
+## 简单方法（无需众多数据集）
 
 首先介绍一种相对简单的安装方法。
 
@@ -18,7 +18,7 @@
 
 使用简单方法安装 FreeBSD，按照以下步骤进行操作。
 
-首先需要在硬盘上为 FreeBSD 预留空间。该空间不一定位于硬盘末尾，中间位置亦可，因为典型的 Windows 安装中最后一个分区（本例为 `nda0p4`）通常是恢复分区，不适合用来安装系统。
+首先需要在硬盘上为 FreeBSD 预留空间。该空间不一定位于硬盘末尾，中间位置亦可，因为在典型的 Windows 安装中，最后一个分区（本例为 `nda0p4`）通常是恢复分区，不适合用来安装系统。
 
 分区完成后，在 FreeBSD 下查看磁盘分区情况，结果如下：
 
@@ -71,7 +71,7 @@
 
 ![确认分区变更](../.gitbook/assets/shuangxitong7.png)
 
-之后会进入正常安装的流程。安装完成后列出系统中所有 ZFS 池及其状态：
+之后会进入正常安装流程。安装完成后，列出系统中所有 ZFS 池及其状态：
 
 ```sh
 # zfs list
@@ -83,7 +83,7 @@ root  534M    130G   534M  none
 
 ## Shell 分区
 
-仍进行到分区选择界面，此时选择 `Shell`
+仍停留在分区选择界面，此时选择 `Shell`
 
 ![选择 Shell 分区](../.gitbook/assets/shuangxitong9.png)
 
@@ -95,13 +95,13 @@ root  534M    130G   534M  none
 
 ### 加载 ZFS 内核模块
 
-默认的安装镜像可能未默认启用 ZFS，让我们现在就加载 ZFS 内核模块，因为 ZFS 支持并不在内核中，而是作为可加载模块提供：
+默认的安装镜像可能未启用 ZFS，让我们现在就加载 ZFS 内核模块，因为 ZFS 支持并不在内核中，而是作为可加载模块提供：
 
 ```sh
 # kldload zfs
 ```
 
-### 配置 ZFS 对齐方式（只影响新创建的硬盘分区）
+### 配置 ZFS 对齐方式（仅影响新创建的硬盘分区）
 
 强制 ZFS 文件系统使用 4 K 对齐，这样可以更好地适配现代硬盘的物理扇区大小，提高读写性能：
 
@@ -116,7 +116,7 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 
 > **思考题**
 >
->若使用 NVMe 硬盘，新装系统（UEFI+GPT，无 freebsd-boot 分区）的该默认参数通常为 12。但 4 K 对齐究竟对齐的是什么？因为 SSD 并无传统机械硬盘的物理扇区概念。
+>若使用 NVMe 硬盘，新装系统（UEFI+GPT，无 freebsd-boot 分区）的默认参数通常为 12。但 4 K 对齐究竟对齐的是什么？因为 SSD 并无传统机械硬盘的物理扇区概念。
 
 ### 创建交换分区
 
@@ -143,7 +143,7 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 # gpart add -a 4k -l zroot -t freebsd-zfs nda0
 ```
 
-将设置使用全部空余空间，请注意替换 nda0 为实际硬盘编号。
+上面的设置将使用全部空余空间，请注意替换 nda0 为实际硬盘编号。
 
 #### 查看分区情况
 
@@ -328,7 +328,7 @@ zroot/
 # chmod 1777 /mnt/var/tmp    # 设置 /mnt/var/tmp 目录为粘滞位，可读写
 ```
 
-### 设置交换分区到 `fstab`
+### 配置交换分区到 `fstab`
 
 将交换分区 `/dev/nda0p5` 添加到临时的 fstab 文件，这样系统启动时就能自动挂载这个交换分区：
 
@@ -356,7 +356,7 @@ zroot/
 # zpool set bootfs=zroot/ROOT/default zroot
 ```
 
-- 配置系统在启动时启用 ZFS 服务。
+- 要求系统在启动时启用 ZFS 服务。
 
 ```sh
 # printf 'zfs_enable="YES"\n' >> /tmp/bsdinstall_etc/rc.conf
@@ -368,7 +368,7 @@ Windows 文本文件的行尾通常是 `\r\n`（回车 + 换行）。
 
 此命令效果等同于使用 `ee /tmp/bsdinstall_etc/rc.conf` 编辑该文件并添加一行 `zfs_enable="YES"`。
 
-- 挂载现有的 EFI 系统分区，这样我们可以在其中添加 FreeBSD 的启动文件：
+- 挂载现有的 EFI 系统分区，这样我们便可以在其中添加 FreeBSD 的启动文件：
 
 ```sh
 # mount -t msdosfs /dev/nda0p1 /media

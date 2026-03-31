@@ -73,14 +73,14 @@ FreeBSD 安装桌面环境后，默认通常采用简单朴素的色调。这种
 ```sh
 $ git clone https://github.com/PapirusDevelopmentTeam/papirus-icon-theme  # 克隆 Papirus 图标主题仓库
 $ cd papirus-icon-theme  # 进入仓库目录
-$ ./install.sh  # 执行安装脚本安装图标主题
+$ ./install.sh  # 执行脚本安装图标主题
 ```
 
 ## 系统更新提示 `freebsd-update-notify`
 
 > **技巧**
 >
-> FreeBSD 上的 KDE6 自带类似功能，无需安装 `freebsd-update-notify`，本教程仅做示例。
+> FreeBSD 上的 KDE6 自带类似功能，无需安装 `freebsd-update-notify`，本教程仅作示例。
 
 `freebsd-update-notify` 可以自动检测 FreeBSD 系统和 pkg 包的更新。
 

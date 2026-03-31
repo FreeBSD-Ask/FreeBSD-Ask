@@ -2,14 +2,14 @@
 
 ## 为什么不去建设《FreeBSD 手册》
 
-FreeBSD 项目拒绝（表现为长期搁置）任何实质上的 PR，除了季度报告。事实上，纵观提交数据，freebsd doc 项目已经死亡十余年：
+FreeBSD 项目拒绝（表现为长期搁置）任何实质上的 PR，除了季度报告。事实上，纵观提交数据，freebsd-doc 项目已经死亡十余年：
 
 使用统计分析 git 项目[EB/OL]. [2026-03-26]. <https://gist.github.com/ykla/6c3df44c371d37fc3196ddf5fa87ce5f>  对 freebsd-doc 进行分析的结果参见：freebsd-doc-2025 分析报告[EB/OL]. [2026-03-26]. <https://gist.github.com/ykla/363bf922d0785d0b02dd43f8289368db>。
 
 - 2005-2006 年：第一次显著下滑
 - 2015-2016 年：第二次大幅下滑
 
-项目结构复杂且混乱。维护者自己都看不懂。比如在翻译时的某些数据引用是否可复用。
+项目结构复杂且混乱。维护者自己都看不懂，比如在翻译时的某些数据引用是否可复用。
 
 由于其安全报告的文件名在 Windows 下是非法字符（有英文冒号 `:`），因此导致整个项目无法在 Windows 下正常拉取：
 
@@ -34,11 +34,11 @@ and retry with 'git restore --source=HEAD :/'
 如果你想让你的教程出现在本书中，你可以这样做：
 
 - 如果你熟悉 GitHub，可以点击电脑端右侧的“编辑此页”，进入项目进行操作。整个项目使用 Markdown 语法 +  Gitbook，简单易上手（具体详见项目 WiKi）；
-- 如果以上有困难，你还可以发 PDF、Word 或者 TXT 给我。请将文件发送至电子邮件 `yklaxds@gmail.com`（我将在 3 天内回复。若我没有回复，请换个邮件再发一次，或者提交 issue）；如果有视频教程，以各大云盘链接为宜。
+- 如果以上有困难，你还可以发 PDF、Word 或者 TXT 给我。请将文件发送至电子邮件 `yklaxds@gmail.com`（将在 3 天内回复。若我没有回复，请换个邮件再发一次，或者提交 issue）；如果有视频教程，以各大云盘链接为宜。
 
-本书现接受以下内容：
+本书现收录以下内容：
 
-- 一切与 BSD 相关（包括不限于 FreeBSD，OpenBSD，NetBSD）以及各种体系结构的教程。你既可以扩充当前教程，也可以新建一节；
+- 一切与 BSD 相关（包括但不限于 FreeBSD，OpenBSD，NetBSD）以及各种体系结构的教程。你既可以扩充当前教程，也可以新建一节；
 - 下方的 ToDo 列表或 GitHub Project；
 - 你亦可在文学故事章节分享你与 BSD 的故事，你的个人心得体会。
 
@@ -81,7 +81,7 @@ and retry with 'git restore --source=HEAD :/'
 - 不应该使用 `sudo` 而应该用 `#` 代替，除非特例（如讲解如何使用 `sudo` 本身）；普通用户权限请使用 `$` 表示。
 - 安装软件时，给出 pkg（FreeBSD 的二进制包管理器，用于安装、更新和管理预编译的软件包，提供依赖关系解析和版本管理功能） 或 ports 两种方法，除非极不建议使用 pkg，如特定内核模块等。
 - 请注意版权问题。引用或灵感受到启发时，请备注文章链接出处，必要时可使用互联网档案馆进行快照保存。
-- 编辑时尽量以最新的 FreeBSD RELEASE（FreeBSD 的正式发布版本，经过充分测试和稳定化，适合生产环境使用。每个 RELEASE 版本都有长期支持周期） 为基准，绝对避免出现 `pkg_add` 此类过时东西。如有必要，必须予以注明版本。
+- 编辑时尽量以最新的 FreeBSD RELEASE（FreeBSD 的正式发布版本，经过充分测试和稳定化，适合生产环境使用。每个 RELEASE 版本都有长期支持周期） 为基准，绝对避免出现 `pkg_add` 此类过时内容。如有必要，必须予以注明版本。
 - 对于编写时长问题，理论上会一直持续下去，跟随每个 FreeBSD 大版本迭代。
 - 由于种种原因，无法立即验证所写内容是否正确无误时，请编辑者打上“警告：以下内容为理论，未经实际测试，仅供参考，如果可以使用请提交 issue 以移除本标签。”标签以作区分。
 - 不应该对文学故事章节进行除错字排版以外的删减。
@@ -94,11 +94,11 @@ and retry with 'git restore --source=HEAD :/'
 
 >**技巧**
 >
->理论上你完全可以通过 GitHub 在线完成所有提交。
+>你完全可以通过 GitHub 在线完成所有提交。
 
 ![项目体积](https://img.shields.io/github/repo-size/FreeBSD-Ask/FreeBSD-Ask?style=for-the-badge&label=%E6%9C%AC%E9%A1%B9%E7%9B%AE%E5%AD%98%E5%82%A8%E5%BA%93%E4%BD%93%E7%A7%AF&color=EB0028)
 
-本项目太大，使用 git 拉取时可能会导致缓冲区溢出，可改变 git 配置文件，以实现对缓冲区的扩大。
+本项目太大，使用 git 拉取时可能会导致缓冲区溢出，可修改 git 配置文件，以扩大缓冲区。
 
 以下是一个可用的 `~/.gitconfig`（Windows 上的位置为 `C:\Users\你的用户名\.gitconfig`） 的文件示例：
 
@@ -124,8 +124,8 @@ and retry with 'git restore --source=HEAD :/'
 
 名词解释：
 
-- `autocrlf`：配置 Git 自动处理(转换)行结束符的默认行为。参见：配置 Git 处理行结束符 - Github Docs[EB/OL]. [2026-03-26]. <https://docs.github.com/zh/get-started/git-basics/configuring-git-to-handle-line-endings>
-- `signingkey`：指设置带签名提交时默认使用的签名密钥。signingkey 既可指 GPG Key，亦可指 SSH Key。因为自 Git 2.34 起，Git 支持了 SSH 签名验证功能。参见：关于提交签名验证 - Github Docs[EB/OL]. [2026-03-26]. <https://docs.github.com/zh/authentication/managing-commit-signature-verification/about-commit-signature-verification>
+- `autocrlf`：配置 Git 自动处理(转换)行结束符的默认行为。参见：配置 Git 处理行结束符 - GitHub Docs[EB/OL]. [2026-03-26]. <https://docs.github.com/zh/get-started/git-basics/configuring-git-to-handle-line-endings>
+- `signingkey`：指设置带签名提交时默认使用的签名密钥。signingkey 既可指 GPG Key，亦可指 SSH Key。因为自 Git 2.34 起，Git 支持了 SSH 签名验证功能。参见：关于提交签名验证 - GitHub Docs[EB/OL]. [2026-03-26]. <https://docs.github.com/zh/authentication/managing-commit-signature-verification/about-commit-signature-verification>
 
 拉取命令：
 
@@ -183,20 +183,20 @@ $ git clone https://github.com/FreeBSD-Ask/FreeBSD-Ask
 
 >**技巧**
 >
->如果你仅想贡献内容本身，尚无改进网站 docs 的浏览体验与构建优化等等意向，则仅需阅读本文即可。
+>如果你仅想贡献内容本身，尚无改进网站 docs 的浏览体验与构建优化等意向，则仅需阅读本文即可。
 
 ### 项目结构概览
 
 ```sh
 >FreeBSD-Ask-main
-│  .gitattributes  # 用于让 github 正确识别 markdown，用于在 github 正确高亮，正确显示编程语言（Languages）的统计信息
+│  .gitattributes  # 用于让 GitHub 正确识别 markdown，用于在 GitHub 正确高亮，正确显示编程语言（Languages）的统计信息
 │  .gitignore # 一些规则，用于阻止 git 上传特定类型的文件或目录，如 node_modules
 │  CHANGELOG-ARCHIVE.md # 普通文件，记录既往所有重要变动
 │  CHANGELOG.md # 普通文件，记录当前季度的重要变动。当你有新的子章节提交或彻底重写时，请将其记录到此处
 │  CODE_OF_CONDUCT.md # 用于合规，行为准则
-│  CONTRIBUTING.md # 本贡献指南
+│  CONTRIBUTING.md # 贡献指南（本文本身）
 │  LICENSE # 许可证
-│  mu-lu.md # 由 Github Action mulu.yml 自动同步
+│  mu-lu.md # 由 GitHub Action mulu.yml 自动同步
 │  README.md # 主页
 │  SECURITY.md # 用于合规，安全报告策略
 │  SUMMARY.md # 目录文件，同时用于生成 vitepress 左侧边栏
@@ -215,16 +215,16 @@ $ git clone https://github.com/FreeBSD-Ask/FreeBSD-Ask
 │  │  dependabot.yml # 检查 GitHub Action 调用的 Action 有无更新，并提交 PR
 │  │  lychee.toml # 由 links.yml 调用
 │  │
-│  ├─ISSUE_TEMPLATE  # Github issue、PR 模板
-│  │      bug_report.md  # Github issue 模板
-│  │      feature_request.md  # Github PR 模板
+│  ├─ISSUE_TEMPLATE  # GitHub issue、PR 模板
+│  │      bug_report.md  # GitHub issue 模板
+│  │      feature_request.md  # GitHub PR 模板
 │  │
-│  ├─scripts # Github Action 相关，由相关 yml 脚本调用
+│  ├─scripts # GitHub Action 相关，由 yml 脚本调用
 │  │      check_images.py # 由 check-images.yml 调用
 │  │      update_ga4_readme.py # 由 update-ga4.yml 调用
 │  │      update_progress.sh # 由 Update-commit-progress.yml 调用
 │  │
-│  └─workflows # Github Action，用于自动化处理一些简单任务
+│  └─workflows # GitHub Action，用于自动化处理一些简单任务
 │          Auto-Assign.yml # 自动为 issue PR 分配人员进行处理
 │          AutoCorrect.yml # markdown 格式修正，会自动提交 PR
 │          check-images.yml # 检查图片的调用情况，有无正确引用图片，不正确会生成 issue
@@ -320,13 +320,13 @@ $ git clone https://github.com/FreeBSD-Ask/FreeBSD-Ask
 
 - 第一行 `# Table of contents` 是绝对不允许变动的，否则 Gitbook 将无法识别，造成失去同步。
 - 我们要求应该形如 `* [2.2 使用 bsdinstall 开始安装](di-2-zhang-an-zhuang-freebsd/di-2.2-jie-start-install.md)`，不允许 `* [2.2 使用 bsdinstall 开始安装](di-3-zhang-ni-hao/di-2.2-jie-start-install.md)`，即你的目录结构和放置的文件位置必须一致。（不一致并不会出错，但是本项目要求你一致）
-- 通过 `sync-headers.yml`，将自动同步 `SUMMARY.md` 中的章节标题到具体的 markdown 文件中。因此若你要修改 `di-2.2-jie-start-install.md` 的一级标题 `# 2.2 使用 bsdinstall 开始安装`，必须只能修改 `SUMMARY.md` 中的 `2.2 使用 bsdinstall 开始安装`，否则会被 `sync-headers.yml` 覆盖。当二者不同时，若正好在提交时未触发脚本即构建，那么 Gitbook 将以 `SUMMARY.md` 中的目录为准。
+- 通过 `sync-headers.yml`，将自动同步 `SUMMARY.md` 中的章节标题到具体的 markdown 文件中。因此若你要修改 `di-2.2-jie-start-install.md` 的一级标题 `# 2.2 使用 bsdinstall 开始安装`，必须只能修改 `SUMMARY.md` 中的 `2.2 使用 bsdinstall 开始安装`，否则会被 `sync-headers.yml` 覆盖。当二者不同时，若提交时未触发脚本构建，那么 Gitbook 将以 `SUMMARY.md` 中的目录为准。
 
 ### 预览页面
 
 当你提交 PR 时，会自动生成一个预览的网站。
 
-实际上，所有提交都有对应版本的网站：
+实际上，所有提交都有对应的网站版本：
 
 ![GitHub PR 页面](.gitbook/assets/yu-lan1.png)
 
@@ -375,7 +375,7 @@ $ git clone https://github.com/FreeBSD-Ask/FreeBSD-Ask
 - [ ] 20.10.文件系统快照（UFS）（UFS 快照？？？）
 - [ ] 21.8.通过 GEOM 实现 UFS 日志（无意义）
 
- **Just for fun**（没有也行无关紧要）
+ **Just for fun**（可有可无）
 
 - [ ] 20.7.创建和使用软盘（谁还有这种东西？2024，日本政府决定全面淘汰软盘）（无意义，但勉强可以写，若有光驱和软盘 *Just for fun*）
 - [ ] 20.6.创建和使用 DVD（无意义，但勉强可以写，若有光驱和光盘 *Just for fun*）

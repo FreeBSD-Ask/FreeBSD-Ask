@@ -22,7 +22,7 @@ DRM 是 Linux 内核的子系统，负责与现代显卡的 GPU 进行交互。F
 
 > **技巧**
 >
-> 这种移植并不覆盖 Linux 现有的全部 DRM GPU 驱动，目前仅有 i915、amdgpu 和 radeon，其他如 vmwgfx、xe、virtio 等均未进行移植。因此在一般情况下，也无法在 Wayland 下运行上述未移植的 GPU，它们目前只能使用 X11 显示协议。
+> 这种移植并不覆盖 Linux 现有的全部 DRM GPU 驱动，目前仅有 i915、amdgpu 和 radeon，其他如 vmwgfx、xe、virtio 等均未进行移植。因此在一般情况下，也无法在 Wayland 上运行上述未移植的 GPU，它们目前只能使用 X11 显示协议。
 
 > **注意**
 >
@@ -68,7 +68,7 @@ DRM 是 Linux 内核的子系统，负责与现代显卡的 GPU 进行交互。F
 
 > **注意**
 >
-> 在使用 GNOME 时，如果自动锁屏/息屏，可能无法再次进入桌面。相关技术问题可参见：Bug 255049 - x11/gdm doesn't show the login screen[EB/OL]. [2026-03-26]. <https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=255049>。
+> 在使用 GNOME 时，如果自动锁屏/熄屏，可能无法再次进入桌面。相关技术问题可参见：Bug 255049 - x11/gdm doesn't show the login screen[EB/OL]. [2026-03-26]. <https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=255049>。
 
 > **注意**
 >
@@ -100,7 +100,7 @@ DRM 是 Linux 内核的子系统，负责与现代显卡的 GPU 进行交互。F
 
 > **注意**
 >
-> 对于英特尔三代处理器的 HD 4000 等较古老的显卡，在传统 BIOS 模式下无需额外安装显卡驱动，但在 UEFI 模式下可能出现花屏现象（FreeBSD 13.0 及以后版本无此问题），此时需要安装此 DRM 显卡驱动。
+> 对于英特尔三代处理器的 HD 4000 等较古老的核芯显卡，在传统 BIOS 模式下无需额外安装显卡驱动，但在 UEFI 模式下可能出现花屏现象（FreeBSD 13.0 及以后版本无此问题），此时需要安装此 DRM 显卡驱动。
 
 ## 配置 Intel 核芯显卡/AMD 显卡
 
@@ -182,7 +182,7 @@ DRM 是 Linux 内核的子系统，负责与现代显卡的 GPU 进行交互。F
 
 #### 附录：设置 X11
 
-若上述配置未生效，可能还需要设置 X11。
+若上述配置未生效，可能还需要配置 X11。
 
 将以下内容写入 `/usr/local/etc/X11/xorg.conf.d/20-amdgpu-tearfree.conf`（请自行创建该文件）：
 

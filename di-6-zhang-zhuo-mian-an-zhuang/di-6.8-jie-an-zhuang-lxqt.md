@@ -63,7 +63,7 @@ $ echo "exec ck-launch-session startlxqt" > ~/.xinitrc
 
 ## 设置中文显示
 
-### 设置 SDDM 显示管理器语言为中文
+### 设置 SDDM 显示管理器的语言为中文
 
 ```sh
 # sysrc sddm_lang="zh_CN"
@@ -77,7 +77,7 @@ $ echo "exec ck-launch-session startlxqt" > ~/.xinitrc
 
 ### 中文化桌面
 
-进入 LXQt 后，菜单 -> “Preferences” -> “LXQt Settings” -> “Locale” -> “Region”，在下拉菜单中选择中文。
+进入 LXQt 后，点击菜单 -> “Preferences” -> “LXQt Settings” -> “Locale” -> “Region”，在下拉菜单中选择中文。
 
 ![FreeBSD 安装 LXQt](../.gitbook/assets/lxqt4.png)
 
