@@ -8,7 +8,7 @@
 | ------ | -------- | -------- |
 | ee | 基本系统 | 极其简单，像记事本，按 ESC 菜单操作 |
 | vi | 基本系统 | 经典 modal（多模式）编辑器，BSD 原生 nvi，轻量但命令多 |
-| vim | Ports | vi 增强版，语法高亮、插件、宏等现代功能 |
+| vim | Ports | vi 增强版，具有语法高亮、插件、宏等现代功能 |
 | neovim | Ports | vim 重构现代版，Lua 配置、异步插件、LazyVim 发行版 |
 | emacs | Ports | 高度可扩展，几乎是“操作系统”，Lisp 配置 |
 | microsoft-edit | Ports | 微软开源，支持中文、鼠标操作、界面友好 |
@@ -249,7 +249,7 @@ $ msedit abc.txt
 
 ![microsoft-edit 界面](../.gitbook/assets/msedit2.png)
 
-操作较为简单，此处无需展开说明。
+操作较为简洁，此处无需展开说明。
 
 ## 编辑器配置文件结构
 

@@ -4,7 +4,7 @@
 
 ![什么是 Shell](../.gitbook/assets/you-shell.png)
 
-Shell 是用户与操作系统内核进行交互的命令解释器（command interpreter），它接收用户输入的命令并将其传递给内核执行。用户的命令运行在 Shell 中，并通过 Shell 与系统进行交互。
+Shell 是用户与操作系统内核进行交互的命令解释器（command interpreter），它接受用户输入的命令并将其传递给内核执行。用户的命令运行在 Shell 中，并通过 Shell 与系统进行交互。
 
 FreeBSD 系统默认采用的 Shell 是 sh，即 Bourne shell，其原始作者为 Stephen R. Bourne。当前 FreeBSD 中的 sh 实现已经过重写，在功能上基本符合 [POSIX.1-2024](https://pubs.opengroup.org/onlinepubs/9799919799/utilities/V3_chap02.html)  标准中关于 Shell 的规范要求。
 
@@ -14,7 +14,7 @@ Linux 中常见的 Shell 一般是 bash（Bourne Again Shell，即“又一个 B
 >
 > Linux 中也存在 sh，但通常被软链接到 bash 或其他 Shell，它们并不是真正的 sh。
 >
->- Ubuntu 24.04 LTS 的默认 Shell：
+>- Ubuntu 24.04 LTS 默认的 Shell：
 >
 >```bash
 >$ ls -l /bin/sh  # 以长格式查看 /bin/sh 这个文件的详细信息
@@ -95,7 +95,7 @@ PING 163.com (59.111.160.244): 56 data bytes
 round-trip min/avg/max/stddev = 27.580/27.626/27.672/0.046 ms
 ```
 
-### 命令后台前台
+### 让命令位于前台和后台
 
 **Ctrl**+**Z**：将当前进程挂起到后台，随后可使用 `fg` 命令将其恢复到前台：
 

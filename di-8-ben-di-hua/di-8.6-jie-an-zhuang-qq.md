@@ -117,7 +117,7 @@ fcitx5 输入法正常：
 
 ```sh
 # chroot /compat/arch/ /bin/bash # 进入 Arch 兼容层
-# passwd # 为 Arch 的 root 设置一个密码
+# passwd # 为 Arch 的 root 设置密码
 # passwd test # 为 Arch 的 test 用户设置密码，上述脚本已创建该用户。不设置密码可能无法正常使用 AUR
 
 ```
@@ -179,7 +179,7 @@ $ exit # 切换回 root
 
 ### 网络错误
 
-如果系统中有多张网卡，例如一块有线网卡和一块无线网卡，打开 QQ 后可能会出现网络错误提示，此时需要为空闲网卡随机分配一个 IP。
+如果系统中有多张网卡，例如一块有线网卡和一块无线网卡，打开 QQ 后可能会出现网络错误提示，此时需要为未使用的网卡随机分配一个 IP。
 
 参见《Linux 兼容层故障排除与未竟事宜》
 
@@ -208,6 +208,8 @@ $ exit # 切换回 root
 $ rm ~/.config/QQ/crash_files/*                 # 删除 QQ 崩溃文件目录下的所有文件
 $ chmod a-wx ~/.config/QQ/crash_files/          # 设置 QQ 崩溃文件目录为不可写不可执行，防止再生成更多崩溃日志造成闪退
 ```
+
+相关文件结构：
 
 ```sh
 ~/

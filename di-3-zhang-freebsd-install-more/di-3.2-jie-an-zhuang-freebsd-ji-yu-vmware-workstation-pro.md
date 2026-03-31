@@ -401,7 +401,7 @@ VMware 已被博通（Broadcom）收购。从官方下载 VMware 相关产品需
 >  
 >![补充信息](../.gitbook/assets/downbcm5.png)
 >
->- 勾选“I agree to Terms and Conditions”（我同意条款及条件）左侧的方框 ⬜，让他变成 🟦。（必须先点击“Terms and Conditions”弹窗新页面，再回来就能勾选了）
+>- 勾选“I agree to Terms and Conditions”（我同意条款及条件）左侧的方框 ⬜，让它变成 🟦。（必须先点击“Terms and Conditions”弹窗新页面，再回来就能勾选了）
 >  
 >![同意许可协议](../.gitbook/assets/downbcm6.png)
 >
@@ -419,7 +419,7 @@ VMware Workstation Pro 目前对于个人用户来说是 **免费下载、免费
 
 访问地址：<https://community.broadcom.com/flings/home>。目前任何非此域名教程（`community.broadcom.com`）均无效。
 
-### VMware Workstation Player（已不再维护）
+### VMware Workstation Player（已停止维护）
 
 >VMware Workstation Player 已不再维护，建议使用 VMware Workstation Pro。
 

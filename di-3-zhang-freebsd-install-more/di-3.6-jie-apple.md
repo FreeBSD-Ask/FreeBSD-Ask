@@ -1,6 +1,5 @@
 # 3.6 基于 Apple M1 和 Parallels Desktop 20 安装 FreeBSD
 
-本节介绍在 Apple M1 架构设备上，通过 Parallels Desktop 20 虚拟化平台部署 FreeBSD 操作系统的技术方案与实测结果。
 
 本文基于 Apple M1（macOS 14.7）及 Parallels Desktop 20.1.3-55743 环境进行实验与演示。
 
@@ -32,7 +31,7 @@
 
 > **警告**
 >
->本文基于 Apple M1，故你选择的 FreeBSD 架构应该是 aarch64。
+>本文基于 Apple M1，故你选择的 FreeBSD 架构应为 aarch64。
 
 ![Parallels Desktop 20 安装 FreeBSD 15.0](../.gitbook/assets/pd5.png)
 
@@ -58,11 +57,11 @@
 
 ![Parallels Desktop 20 安装 FreeBSD 15.0](../.gitbook/assets/pd10.png)
 
-手动安装桌面环境后，桌面显示正常运行。
+手动安装桌面环境后，桌面正常运行。
 
 ## 故障排除与未竟事项
 
-### 鼠标不能移动的问题
+### 鼠标无法移动的问题
 
 若在 Parallels Desktop 中遇到 FreeBSD 鼠标无法移动的问题，可在 `/boot/loader.conf.local`（推荐使用本地配置扩展文件，避免直接修改系统默认配置 `/boot/loader.conf`）中添加如下配置：
 
@@ -107,4 +106,4 @@ ums_load="YES"
 
 2. 分析 Parallels Desktop 虚拟机工具的 Port 源代码，研究其长期未更新的技术原因，尝试构建一个最小化的虚拟机工具替代方案。
 
-3. 对比 `ums` 与 `usbhid` 两种 USB 鼠标驱动的实现差异，在不同虚拟机环境中测试两种驱动的兼容性。
+3. 对比 `ums` 与 `usbhid` 两种 USB 鼠标驱动的实现差异，并在不同虚拟机环境中测试两种驱动的兼容性。

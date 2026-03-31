@@ -8,7 +8,7 @@
 
 ![Rocky Linux 9](../.gitbook/assets/fb-rock.png)
 
-首先将服务器重置为 Rocky Linux 9，该发行版在服务器市场占据主流地位，通常由大多数厂商提供。
+首先将服务器重置为 Rocky Linux 9，该发行版在服务器市场占据主流地位，通常为大多数厂商所支持。
 
 ### 救援登录
 
@@ -37,7 +37,7 @@
 UEFI
 ```
 
-- 通过 UEFI 启动项管理工具判断启动模式：
+- 通过 UEFI 启动工具判断启动模式：
 
 ```sh
 # efibootmgr

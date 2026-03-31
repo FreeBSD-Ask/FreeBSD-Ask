@@ -1,7 +1,5 @@
 # 3.8 使用 QEMU 在 x86 架构 Windows 主机上安装 RISC-V 架构的 FreeBSD
 
-本节研究跨架构虚拟化技术问题，具体探讨在 x86-64 架构的 Windows 宿主机上，通过 QEMU 实现 RISC-V 架构虚拟机部署 FreeBSD 的技术方案，为异构计算环境下的系统部署提供参考。
-
 QEMU（Quick Emulator）是一款通过纯软件进行模拟的开源虚拟机监视器（VMM，Virtual Machine Monitor）。纯软件模拟指不依赖硬件虚拟化扩展，通过软件完全模拟处理器指令执行，支持多种处理器体系结构的模拟与跨架构执行，具有良好的兼容性与灵活性。
 
 本文实验环境基于 Windows 11 24H2（宿主机，x86-64 架构）、FreeBSD 14.2-RELEASE（虚拟机，RISC-V 架构）以及 QEMU 20241220，所有操作步骤均在此环境下验证。
@@ -71,7 +69,7 @@ RISC-V FreeBSD 磁盘镜像（以 FreeBSD 14.2 RELEASE 为例）：
 
 ## U-Boot
 
-在 FreeBSD 系统中获取 U-Boot（Universal Boot Loader），功能上类似于 GRUB 2。
+在 FreeBSD 系统中获取 U-Boot（Universal Boot Loader），其功能类似于 GRUB 2。
 
 ### 安装 U-Boot
 
@@ -136,9 +134,9 @@ cd /d "C:\Program Files\qemu"
 
 输入用户名 `root` 并回车即可登录，默认没有密码。
 
-在 PowerShell 和 CMD 中运行都会产生各种乱码（例如 `ee` 命令或按 **TAB 键**）。
+在 PowerShell 和 CMD 中运行都会产生乱码（例如 `ee` 命令或按 **TAB 键**）。
 
-但该镜像默认未配置 SSH 服务与普通用户，因此无法直接通过 SSH 连接。
+但该镜像默认没有为普通用户配置 SSH 服务，因此无法直接通过 SSH 连接 FreeBSD 设备。
 
 ## 创建普通用户（如没有）
 
@@ -189,7 +187,7 @@ Goodbye!
 # service sshd start # 启动 sshd 服务
 ```
 
-然后就可以在 Windows 上通过 ssh 连接了（IP 就是 `localhost`）：
+然后就可以在 Windows 上通过 ssh 连接了（IP 是 `localhost`）：
 
 ```powershell
 ssh ykla@localhost:8022
