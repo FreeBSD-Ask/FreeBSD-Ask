@@ -4,9 +4,10 @@
 
 TwinCAT/BSD 是一款专门针对工业控制领域优化的操作系统，它基于 FreeBSD 开发。
 
-TwinCAT/BSD 是由倍福公司（Beckhoff）开发的基于 FreeBSD 的 PLC（Programmable Logic Controller，可编程逻辑控制器）控制操作系统。PLC 是一种专门用于工业自动化控制的计算机，用于监控和控制生产设备。从许可模式来看，在不使用商业功能时，个人用户完全可以免费使用。关于硬件兼容性与授权策略，倍福支持第三方硬件安装，但许可证费用按硬件性能分级收取。一般 PLC 标准为 P40/P50 级别。P40/P50 是倍福定义的硬件性能等级，P 后面的数字越大表示硬件性能越高。例如，一个基本许可证价格为 1500 元，而第三方硬件按 P90 级别收费，同样功能约为 6000 元。
+TwinCAT/BSD 是由倍福公司（Beckhoff）开发的基于 FreeBSD 的 PLC（Programmable Logic Controller，可编程逻辑控制器）控制操作系统。PLC 是一种专门用于工业自动化控制的计算机，用于监控和控制生产设备。从许可模式来看，在不使用商业功能时，个人用户完全可以免费使用。关于硬件兼容性与授权策略，倍福支持第三方硬件安装，但许可证费用按硬件性能分级收取。一般 PLC 标准为 P40/P50 级别。P40/P50 是倍福定义的硬件性能等级，P 后面的数字越大表示硬件性能越好。例如，一个基本许可证价格为 1500 元，而第三方硬件按 P90 级别收费，同样功能约为 6000 元。
 
 更多内容请参考：
+
 - TwinCAT/BSD for Industrial PCs[EB/OL]. [2026-03-25]. <https://www.beckhoff.com/en-en/products/ipc/software-and-tools/twincat-bsd/>. 倍福官方 TwinCAT/BSD 产品说明，涵盖技术规格与授权信息。
 
 ## 下载 TwinCAT/BSD
@@ -29,7 +30,7 @@ TwinCAT/BSD 是由倍福公司（Beckhoff）开发的基于 FreeBSD 的 PLC（Pr
 
 ![TCBSD](../.gitbook/assets/t1.png)
 
-硬盘大小设置为 1 GB 即可，过大无实际必要，该硬盘仅用于写入镜像。其他配置可以参考示例设置。
+硬盘大小设置为 1 GB 即可，过大无实际必要，该硬盘仅用于写入镜像。其他配置可参考示例设置。
 
 ![TCBSD](../.gitbook/assets/t2.png)
 
@@ -55,7 +56,7 @@ TwinCAT/BSD 是由倍福公司（Beckhoff）开发的基于 FreeBSD 的 PLC（Pr
 
 ![TCBSD](../.gitbook/assets/t8.png)
 
-返回磁盘管理，选择“操作”→“重新扫描磁盘”。**否则下面虚拟机无法加载出磁盘 2。**
+返回磁盘管理，选择“操作”→“重新扫描磁盘”。**否则下面虚拟机无法加载磁盘 2。**
 
 ![TCBSD](../.gitbook/assets/t9.png)
 
@@ -85,7 +86,7 @@ TwinCAT/BSD 是由倍福公司（Beckhoff）开发的基于 FreeBSD 的 PLC（Pr
 
 ![TCBSD](../.gitbook/assets/t15.png)
 
-检查磁盘的大小、名称是否符合，选错了就无法启动。
+检查磁盘的大小和名称是否符合，选错了就无法启动。
 
 ![TCBSD](../.gitbook/assets/t16.png)
 
@@ -175,9 +176,9 @@ dhcpcd_flags="--denyinterfaces igb0"
 
 即将 `dhcpcd_flags` 的值由 `--waitip` 改为 `--denyinterfaces igb0`（配置 dhcpcd，禁止在指定网卡 `igb0` 上自动获取 DHCP 地址）。`igb0` 为需要配置静态 IP 的网卡名，请根据实际情况更改。
 
-## 换源
+## 修改软件源
 
-为了提高软件安装和更新的速度，我们可以将 pkg 仓库切换为中国镜像。下面介绍如何将 pkg 仓库切换为中国镜像。使用 `doas` 执行脚本，将 pkg 仓库切换为中国镜像：
+软件源结构：
 
 ```sh
 /usr/local/
@@ -190,6 +191,8 @@ dhcpcd_flags="--denyinterfaces igb0"
         └── repos/
             └── FreeBSD.conf  # FreeBSD pkg 仓库配置文件
 ```
+
+为了提高软件安装和更新的速度，我们可以将 pkg 仓库切换为中国镜像。下面介绍如何将 pkg 仓库切换为中国镜像。使用 `doas` 执行脚本，将 pkg 仓库切换为中国镜像：
 
 ```sh
 $ doas sh /usr/local/share/examples/bhf/pkgrepo-set.sh china

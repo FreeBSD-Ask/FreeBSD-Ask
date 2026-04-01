@@ -1,6 +1,6 @@
 # 9.4 人机输入设备
 
-在默认情况下，FreeBSD 操作系统原生支持 I²C（集成电路总线，Inter-Integrated Circuit）和 USB（通用串行总线，Universal Serial Bus）接口的触摸板。本节将介绍触摸板的相关配置方法与技术细节。
+在默认情况下，FreeBSD 操作系统原生支持 I²C（Inter-Integrated Circuit，集成电路总线）和 USB（Universal Serial Bus，通用串行总线）接口的触摸板。本节将介绍触摸板的相关配置方法与技术细节。
 
 ## 触摸板
 

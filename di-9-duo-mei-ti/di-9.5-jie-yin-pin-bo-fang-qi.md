@@ -203,7 +203,7 @@ PC 端的 GUI 客户端建议使用 Cantata（`pkg install cantata`）。
 
 ## 课后习题
 
-1. 查找并安装 ffmpeg 的 Ports，修改其编译选项以启用 libuavs3d 支持，构建并验证其能否解码 AVS2/AVS3 编码文件，分析编译选项如何扩展系统的媒体处理能力。
+1. 查找并安装 ffmpeg 的 Ports，修改其编译选项以启用 libuavs3d 支持，构建并验证其能否解码 AVS2/AVS3 编码文件。
 
 2. 选取 MPD 的 OSS 输出配置机制，重构其最小实现。
 

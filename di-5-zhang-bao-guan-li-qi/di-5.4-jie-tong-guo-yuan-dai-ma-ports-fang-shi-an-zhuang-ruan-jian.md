@@ -2,9 +2,7 @@
 
 本章深入探讨 FreeBSD Ports 框架的设计理念、使用方法及高级配置。
 
-
 ## Ports 与 Port 概述
-
 
 Ports 作为 FreeBSD 源代码构建软件的核心框架，提供了灵活、可定制的软件安装途径。
 
@@ -162,8 +160,6 @@ distinfo		pkg-descr		pkg-plist-contrib	pkg-plist-pltcl
 files			pkg-install-server	pkg-plist-plperl	pkg-plist-server
 Makefile		pkg-plist-client	pkg-plist-plpython
 ```
-
-
 
 - ① `/usr/ports` 这个文件夹整体称作 Ports，包括几十种不同的分类目录，每个目录下有若干 Port。
 - ② `/usr/ports/databases/postgresql18-server` 这个文件夹整体称作一个 Port，由 `distinfo`（校验和文件）、`pkg-descr`（软件描述文件）、`Makefile`	（主文件，包含构建方法、版本号及下载方式等）、`pkg-plist`（安装文件列表及其权限和属组信息）、`files`（一般为补丁文件，该 Port 下还包含安装后的说明文件 `pkg-message`）等文件构成。
