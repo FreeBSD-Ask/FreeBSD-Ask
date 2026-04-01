@@ -92,7 +92,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 ## BSD 三条款许可证（The 3-Clause BSD License，BSD-3-Clause）
 
-BSD 三条款许可证在两条款的基础上增加了对使用作者名义推广的限制。BSD 三条款许可证亦称为新 BSD 许可证、修改版 BSD 许可证。此许可证删除了原始 BSD 许可证（即 BSD-4-Clause）中的广告条款，额外限制以作者名义推广衍生产品。
+BSD 三条款许可证在两条款的基础上增加了对使用作者名义推广的限制。BSD 三条款许可证亦称为新 BSD 许可证、修改版 BSD 许可证。此许可证删除了原始 BSD 许可证（即 BSD-4-Clause）中的广告条款，并额外限制以作者名义推广衍生产品。
 
 ```text
 Copyright <年份> <版权持有者>
