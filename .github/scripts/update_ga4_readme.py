@@ -76,12 +76,12 @@ stats_table = f"""
 
 自 2022 年 6 月 1 日以降，本书的访问情况如下：
 
-| 指标           | 统计数据     |
-|:---------------:|:-------------:|
-| 用户总数       | {total_users:,} 位  |
-| 会话数         | {sessions:,} 次 |
-| 浏览次数       | {page_views:,} 次 |
-| 平均会话时长   | {avg_session_duration_str} |
+| 指标 | 统计数据 |
+| ---- | -------- |
+| 用户总数 | {total_users:,} 位 |
+| 会话数 | {sessions:,} 次 |
+| 浏览次数 | {page_views:,} 次 |
+| 平均会话时长 | {avg_session_duration_str} |
 """
 
 # 徽章
