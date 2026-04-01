@@ -8,7 +8,6 @@
 
 了解 GPL 许可证的历史背景有助于理解其设计初衷。
 
-
 UNIX 在后期发展中逐渐呈现封闭化趋势：从最初开放的研究项目转变为商业产品，普通用户无法自由获取和修改其源代码，许可证价格高昂且使用权受到商业公司的严格限制。理查德·马修·斯托曼（Richard Matthew Stallman，RMS）希望创造一款自由且与 UNIX 兼容的操作系统，这一愿景直接触发了自由软件运动的兴起。
 
 - 1983 年，RMS 发表 GNU 项目初始公告；1985 年，RMS 撰写了 GNU 宣言（Stallman R. The GNU Manifesto[EB/OL]. [2026-03-26]. <https://www.gnu.org/gnu/manifesto.html>.）其中 GNU 即“GNU's Not Unix”（GNU 不是 Unix）的递归缩写。GNU 是一款旨在完全替代 UNIX 的操作系统。
