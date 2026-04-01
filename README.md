@@ -122,21 +122,21 @@ FreeBSD 中文社区未通过其他域名部署本书，唯一官方域名为 `b
 
 自 2022 年 6 月 1 日以降，本书的访问情况如下：
 
-| 指标           | 统计数据     |
-|:---------------:|:-------------:|
-| 用户总数       | 45,214 位  |
-| 会话数         | 93,440 次 |
-| 浏览次数       | 638,025 次 |
-| 平均会话时长   | 8 分 50 秒 |
+| 指标 | 统计数据 |
+| ---- | -------- |
+| 用户总数 | 45,418 位 |
+| 会话数 | 93,557 次 |
+| 浏览次数 | 638,655 次 |
+| 平均会话时长 | 8 分 49 秒 |
 
 <!-- GA_STATS:END -->
 
 <!-- GA_BADGES:START -->
 
-![总用户数](https://img.shields.io/badge/总用户数-45,214-green)
-![会话数](https://img.shields.io/badge/会话数-93,440-orange)
-![浏览次数](https://img.shields.io/badge/浏览次数-638,025-blue)
-![平均会话时长](https://img.shields.io/badge/平均会话时长-8min50s-purple)
+![总用户数](https://img.shields.io/badge/总用户数-45,418-green)
+![会话数](https://img.shields.io/badge/会话数-93,557-orange)
+![浏览次数](https://img.shields.io/badge/浏览次数-638,655-blue)
+![平均会话时长](https://img.shields.io/badge/平均会话时长-8min49s-purple)
 
 <!-- GA_BADGES:END -->
 
