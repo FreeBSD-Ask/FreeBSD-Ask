@@ -181,14 +181,14 @@
 * [17.1 Apache Web 服务器](di-17-zhang-wang-luo-fu-wu-qi/di-17.1-jie-apache.md)
 * [17.2 Nginx Web 服务器](di-17-zhang-wang-luo-fu-wu-qi/di-17.2-jie-nginx.md)
 * [17.3 PHP 8.x 配置](di-17-zhang-wang-luo-fu-wu-qi/di-17.3-jie-php-8.x.md)
-* [17.4 Zabbix 监控系统（基于 PostgreSQL）](di-17-zhang-wang-luo-fu-wu-qi/17.4-Zabbix.md)
+* [17.4 Zabbix 监控系统（基于 PostgreSQL）](di-17-zhang-wang-luo-fu-wu-qi/di-17.4-jie-Zabbix.md)
 * [17.5 Nextcloud 云服务（基于 PostgreSQL）](di-17-zhang-wang-luo-fu-wu-qi/di-17.5-jie-NextCloud.md)
 * [17.6 Telegraf、InfluxDB 与 Grafana 监控平台架构](di-17-zhang-wang-luo-fu-wu-qi/di-17.6-jie-telegraf+influxdb+grafana-jian-kong-ping-tai.md)
-* [17.7 OpenList 部署](di-17-zhang-wang-luo-fu-wu-qi/di-17.7-alist.md)
-* [17.8 Prometheus 监控部署](di-17-zhang-wang-luo-fu-wu-qi/17.8.prometheus.md)
-* [17.9 Tomcat 应用服务器](di-17-zhang-wang-luo-fu-wu-qi/17.9-Tomcat.md)
-* [17.10 Caddy Web 服务器](di-17-zhang-wang-luo-fu-wu-qi/17.10-caddy.md)
-* [17.11 OnlyOffice 部署（基于 PostgreSQL）](di-17-zhang-wang-luo-fu-wu-qi/17.11-onlyoffice.md)
+* [17.7 OpenList 部署](di-17-zhang-wang-luo-fu-wu-qi/di-17.7-jie-alist.md)
+* [17.8 Prometheus 监控部署](di-17-zhang-wang-luo-fu-wu-qi/di-17.8-jie-prometheus.md)
+* [17.9 Tomcat 应用服务器](di-17-zhang-wang-luo-fu-wu-qi/di-17.9-jie-Tomcat.md)
+* [17.10 Caddy Web 服务器](di-17-zhang-wang-luo-fu-wu-qi/di-17.10-jie-caddy.md)
+* [17.11 OnlyOffice 部署（基于 PostgreSQL）](di-17-zhang-wang-luo-fu-wu-qi/di-17.11-jie-onlyoffice.md)
 
 ## 第 18 章 嵌入式平台
 
@@ -201,18 +201,18 @@
 ## 第 19 章 数据库管理
 
 * [19.1 PostgreSQL 数据库](di-19-zhang-database/di-19.1-jie-postgresql.md)
-* [19.2 pgAdmin4 管理工具](di-19-zhang-database/di-19.2-pgadmin4.md)
+* [19.2 pgAdmin4 管理工具](di-19-zhang-database/di-19.2-jie-pgadmin4.md)
 * [19.3 MySQL 5.x 系列](di-19-zhang-database/di-19.3-jie-mysql-5.x.md)
 * [19.4 MySQL 8.x 系列](di-19-zhang-database/di-19.4-jie-mysql-8.x.md)
-* [19.5 MongoDB 8.0](di-19-zhang-database/di-19.5-mongodb.md)
+* [19.5 MongoDB 8.0](di-19-zhang-database/di-19.5-jie-mongodb.md)
 
 ## 第 20 章 游戏、科学计算和专业工具
 
 * [20.1 Ren'Py 视觉小说引擎](di-20-zhang-yu-le-yu-jiao-yu/di-20.1-jie-renpy.md)
 * [20.2 Godot 开源游戏引擎](di-20-zhang-yu-le-yu-jiao-yu/di-20.2-jie-Godot.md)
-* [20.3 我的世界（Minecraft）](di-20-zhang-yu-le-yu-jiao-yu/20.3-minecraft.md)
+* [20.3 我的世界（Minecraft）](di-20-zhang-yu-le-yu-jiao-yu/di-20.3-jie-minecraft.md)
 * [20.4 科研和专业计算工具](di-20-zhang-yu-le-yu-jiao-yu/di-20.4-jie-ke-yan-yu-zhuan-ye-gong-ju.md)
-* [20.5 Steam 客户端](di-20-zhang-yu-le-yu-jiao-yu/20.5-steam.md)
+* [20.5 Steam 客户端](di-20-zhang-yu-le-yu-jiao-yu/di-20.5-jie-steam.md)
 
 ## 第 21 章 Linux 二进制兼容层
 
@@ -287,10 +287,10 @@
 
 ## 附录 Ⅰ 计算机概论
 
-* [计算机系统结构](fulu1/zong-xian.md)
-* [计算机网络](fulu1/wang-luo-ji-chu.md)
-* [操作系统](fulu1/cao-zuo-xi-tong.md)
-* [关系型数据库基础](fulu1/shu-jv-ku.md)
+* [计算机系统结构](fu-lu1/zong-xian.md)
+* [计算机网络](fu-lu1/wang-luo-ji-chu.md)
+* [操作系统](fu-lu1/cao-zuo-xi-tong.md)
+* [关系型数据库基础](fu-lu1/shu-jv-ku.md)
 
 ## 附录 II 工具与资源
 
