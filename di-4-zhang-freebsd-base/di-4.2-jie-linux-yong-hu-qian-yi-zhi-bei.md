@@ -11,7 +11,7 @@
 
 > **思考题**
 >
->>“一切真历史都是当代史”（克罗齐. 历史学的理论和历史 [M]. 田时纲，译. 北京：中国社会科学出版社，2018）
+>>“一切真历史都是当代史”（克罗齐. 历史学的理论和历史[M]. 田时纲，译. 北京: 中国社会科学出版社，2018）
 >
 > 读者如何理解这句话？如何定义“真”与“非真”？
 
@@ -409,7 +409,7 @@ Node.js 的依赖存储在 `node_modules` 目录，而 Nix/NixOS 的所有包则
 - Gentoo. Benefits of Gentoo[EB/OL]. [2026-03-25]. <https://wiki.gentoo.org/wiki/Benefits_of_Gentoo>.
 - Gentoo. The philosophy of Gentoo[EB/OL]. [2026-03-25]. <https://www.gentoo.org/get-started/philosophy/>.
 - Arch Linux. Arch compared to other distributions[EB/OL]. [2026-03-25]. <https://wiki.archlinux.org/title/Arch_compared_to_other_distributions>.
-- STROUSTRUP B. C++ 语言的设计和演化 [M]. 裘宗燕，译. 北京：人民邮电出版社，2020. ISBN: 978-7-115-49711-6.
+- STROUSTRUP B. C++ 语言的设计和演化[M]. 裘宗燕，译. 北京: 人民邮电出版社，2020. ISBN: 978-7-115-49711-6.
 
 ## 课后习题
 

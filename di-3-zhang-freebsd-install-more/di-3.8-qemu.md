@@ -203,9 +203,9 @@ ssh ykla@localhost:8022
 
 ## 参考文献
 
-- Create FreeBSD virtual machine using qemu. Run the VM using xhyve.[EB/OL]. <https://gist.github.com/zg/38a3afa112ddf7de4912aafc249ec82f>. 提供了 QEMU 下 FreeBSD 虚拟机扩容的技术方法。
-- 在 QEMU for Windows x64 上搭建 RISC-V 环境（Debian Linux）[EB/OL]. <https://naiv.fun/Ops/83.html>. 提供了 RISC-V 环境搭建的概念解释与整体框架。
-- RISC-V Emulation Revisited[EB/OL]. <https://smist08.wordpress.com/2023/04/28/risc-v-emulation-revisited>. 详细介绍了 QEMU 中 RISC-V 虚拟化的各种配置参数与实现细节。
+- zg. Create FreeBSD virtual machine using qemu. Run the VM using xhyve.[EB/OL]. [2026-03-26]. <https://gist.github.com/zg/38a3afa112ddf7de4912aafc249ec82f>. 提供了 QEMU 下 FreeBSD 虚拟机扩容的技术方法。
+- Nativus . 在 QEMU for Windows x64 上搭建 RISC-V 环境（Debian Linux）[EB/OL]. (2022-10-12)[2026-03-26]. <https://naiv.fun/Ops/83.html>. 提供了 RISC-V 环境搭建的概念解释与整体框架。
+- smist08. RISC-V Emulation Revisited[EB/OL]. (2023-04-28)[2026-03-26]. <https://smist08.wordpress.com/2023/04/28/risc-v-emulation-revisited>. 详细介绍了 QEMU 中 RISC-V 虚拟化的各种配置参数与实现细节。
 
 ## 课后习题
 

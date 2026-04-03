@@ -524,7 +524,7 @@ pid 1562 (distextract), jid 0, uid 0, was killed: failed to reclaim memory
 
 解决方法，按照上文所述，执行命令 `kldload zfs` 手动加载内核模块。
 
-这可能是一个长期存在但难以复现的 Bug，参见：Bug 249157 - installer reports sysctl: unknown oid 'vfs.zfs.min_auto_ashift' when ZFS module not loaded[EB/OL]. [2026-03-26]. <https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=249157>。
+这可能是一个长期存在但难以复现的 Bug，参见：FreeBSD 基金会. Bug 249157 - installer reports sysctl: unknown oid 'vfs.zfs.min_auto_ashift' when ZFS module not loaded[EB/OL]. [2026-03-26]. <https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=249157>.
 
 ### 文件系统不支持在线压缩
 
@@ -599,7 +599,7 @@ Ventoy2Disk.sh 参数说明：
 
 Ventoy LiveCD 下载地址为 [安装包](https://www.ventoy.net/cn/download.html)。
 
-Ventoy LiveCD 并非 Ventoy 本体，而是一种用于安装 Ventoy 的内存盘系统映像。参见：Ventoy LiveCD 使用说明[EB/OL]. [2026-03-26]. <https://www.ventoy.net/cn/doc_livecd.html>。
+Ventoy LiveCD 并非 Ventoy 本体，而是一种用于安装 Ventoy 的内存盘系统映像。参见：Ventoy 团队. Ventoy LiveCD 使用说明[EB/OL]. [2026-03-26]. <https://www.ventoy.net/cn/doc_livecd.html>.
 
 在使用 dd 将镜像写入整块硬盘后，强制重启实例，Ventoy LiveCD 可以正常启动。
 

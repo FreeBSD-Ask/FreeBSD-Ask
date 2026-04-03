@@ -372,8 +372,8 @@ $ sudo su
 
 参考文献：
 
-- [FreeBSD MAC 簡單介紹](https://sandb0x.tw/a/FreeBSD_MAC_%E7%B0%A1%E5%96%AE%E4%BB%8B%E7%B4%B9)
-- [man mac_do(4)](https://man.freebsd.org/cgi/man.cgi?mac_do(4))
+- K Rin. FreeBSD MAC 簡單介紹[EB/OL]. [2026-03-26]. <https://sandb0x.tw/a/FreeBSD_MAC_%E7%B0%A1%E5%96%AE%E4%BB%8B%E7%B4%B9>
+- FreeBSD Project. man mac_do(4)[EB/OL]. [2026-03-26]. <https://man.freebsd.org/cgi/man.cgi?mac_do(4)>
 
 此部分内容较为简单，读者可自行了解，或直接向本书提交 PR。
 
