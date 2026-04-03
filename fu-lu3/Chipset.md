@@ -208,7 +208,7 @@ Disabled（禁用）
 
 板载温度传感器（TS‑on‑Board）用于检测 PCB 或模块温度。若要让系统统一协调管理风扇或功耗策略，就需要将这些信号注入至 PCH。
 
-##### EXTT# via TS-on-DIMM（通过内存上的温度传感器 连接 EXTT#）
+##### EXTT# via TS-on-DIMM（通过内存上的温度传感器连接 EXTT#）
 
 选项：
 
@@ -255,7 +255,7 @@ Disabled（禁用）
 - UEFI BIOS 中的总内存加密设置发生更改
 - UEFI BIOS 更新时内存参考代码（MRC）发生更改
 
-参见 检测内存重新训练[EB/OL]. [2026-03-26]. <https://download.lenovo.com/manual/thinkpad_x1_carbon_gen13/user_guide/zh-cn/Detect_memory_retraining.html>
+参见检测内存重新训练[EB/OL]. [2026-03-26]. <https://download.lenovo.com/manual/thinkpad_x1_carbon_gen13/user_guide/zh-cn/Detect_memory_retraining.html>
 
 ![内存训练算法](../.gitbook/assets/image-20250726153543-6lin7v1.png)
 
@@ -1018,7 +1018,7 @@ LP5 BG Mode
 
 根据内存频率进行选择。
 
-内存 Bank 是电脑系统与内存之间数据总线的基本工作单位。参见 什么是内存 BANK[EB/OL]. [2026-03-26]. <https://iknow.lenovo.com.cn/spider/detail/kd/030022>
+内存 Bank 是电脑系统与内存之间数据总线的基本工作单位。参见什么是内存 BANK[EB/OL]. [2026-03-26]. <https://iknow.lenovo.com.cn/spider/detail/kd/030022>
 
 #### Frequency Limit for Mixed 2DPC DDR4（混合 2DPC DDR4 内存条的频率限制）
 
@@ -1126,7 +1126,7 @@ Dynamic（动态），1 GB, 1.25 GB, 1.5 GB, 1.75 GB, 2 GB, 2.25 GB, 2.5 GB, 2.7
 
 设置 TOLUD 的最大值。动态分配会根据已安装图形控制器所需的最大 MMIO 长度，自动调整 TOLUD。
 
-参见 为何系统识别不全？4 GB 内存终极解迷[EB/OL]. [2026-03-26]. <https://memory.zol.com.cn/130/1302306_all.html#p1302306>
+参见为何系统识别不全？4 GB 内存终极解迷[EB/OL]. [2026-03-26]. <https://memory.zol.com.cn/130/1302306_all.html#p1302306>
 
 Top of Low Usable DRAM (TOLUD)，低地址段内存顶端，表示 4 GB 以下的可用 DRAM 最大地址边界。其描述的是可设定地址的物理内存总量。TOLUD 寄存器会始终在 4 GB 内存地址以下工作。
 
@@ -2267,13 +2267,13 @@ PWM Normal（正常）
 
 No LVDS: VBIOS 不启用 LVDS
 
-Int‑LVDS: VBIOS 通过 集成 编码器启用 LVDS 驱动
+Int‑LVDS: VBIOS 通过集成编码器启用 LVDS 驱动
 
 SDV0 LVDS: VBIOS 通过 SDV0 编码器启用 LVDS 驱动
 
 No eDP: VBIOS 不启用 eDP
 
-eDP Port‑A: LFP 由 来自 Port‑A 的 Int‑DisplayPort 编码器驱动
+eDP Port‑A: LFP 由来自 Port‑A 的 Int‑DisplayPort 编码器驱动
 
 说明：
 
@@ -2659,7 +2659,7 @@ Disabled（禁用）
 
 在操作系统运行时，防范连接到可轻松访问且支持 DMA 功能的内部/外部端口（例如，M.2 PCIe 插槽和 Thunderbolt™3）的设备进行的恶意 DMA。
 
-参见 适用于 OEM 的内核 DMA 保护（内存访问保护）[EB/OL]. [2026-03-26]. <https://learn.microsoft.com/zh-cn/windows-hardware/design/device-experiences/oem-kernel-dma-protection>
+参见适用于 OEM 的内核 DMA 保护（内存访问保护）[EB/OL]. [2026-03-26]. <https://learn.microsoft.com/zh-cn/windows-hardware/design/device-experiences/oem-kernel-dma-protection>
 
 ### Thermal Device B0:D4:F0（热管理设备 B0:D4:F0）
 
@@ -2731,7 +2731,7 @@ Disabled（禁用）
 
 启用／禁用 SA CRID 和 TCSS CRID 控制，以支持 Intel SIPP。
 
-Intel SIPP，The Intel Stable IT Platform Program，英特尔 ® 稳定 IT 平台计划，是 vPro® platform 的一部分。参见 借助英特尔 ® 稳定 IT 平台计划实现可靠的稳定性[EB/OL]. [2026-03-26]. <https://www.intel.cn/content/www/cn/zh/architecture-and-technology/vpro/stable-it-platform-program/overview.html>；什么是英特尔 ® vPro®？[EB/OL]. [2026-03-26]. <https://www.intel.cn/content/www/cn/zh/architecture-and-technology/vpro/what-is-vpro.html>
+Intel SIPP，The Intel Stable IT Platform Program，英特尔 ® 稳定 IT 平台计划，是 vPro® platform 的一部分。参见借助英特尔 ® 稳定 IT 平台计划实现可靠的稳定性[EB/OL]. [2026-03-26]. <https://www.intel.cn/content/www/cn/zh/architecture-and-technology/vpro/stable-it-platform-program/overview.html>；什么是英特尔 ® vPro®？[EB/OL]. [2026-03-26]. <https://www.intel.cn/content/www/cn/zh/architecture-and-technology/vpro/what-is-vpro.html>
 
 英特尔 ® 稳定 IT 平台计划（英特尔 ® SIPP）能让 IT 部门至少在 15 个月内或在下一代产品发布之前，几乎不用修改平台组件和驱动程序。
 
@@ -2771,7 +2771,7 @@ Disabled（禁用）
 
 目前该功能通常用于同时使用多张显卡的情况；该功能对于游戏和加密货币挖矿等高性能应用特别有用。参见 BIOS Above 4GB MMIO BIOS Assignment / Above 4G Decoding[EB/OL]. [2026-03-26]. <https://432hz.myqnapcloud.com:81/WordPress/above-4gb-mmio-bios-assignment-and-above-4g-decoding/>
 
-在禁用状态下，双 CPU 显卡及雷电接口设备的使用将受到限制。参见 为什么使用类似 RocketRAID 840A 的 Legacy 设备，在其自带的 Raid Option 接口下识别不到硬盘，无法组建 RAID?[EB/OL]. [2026-03-26]. <https://www.asus.com.cn/support/faq/1043356/>
+在禁用状态下，双 CPU 显卡及雷电接口设备的使用将受到限制。参见为什么使用类似 RocketRAID 840A 的 Legacy 设备，在其自带的 Raid Option 接口下识别不到硬盘，无法组建 RAID?[EB/OL]. [2026-03-26]. <https://www.asus.com.cn/support/faq/1043356/>
 
 ### IPU Device (B0:D5:F0) (IPU 设备)
 
@@ -3521,7 +3521,7 @@ Disabled（禁用）
 
 说明：
 
-参见：为什么使用适用于 PCI Express *的 英特尔 ® FPGA P-Tile/H-Tile、Avalon® 流传输和 Avalon® 内存映射 IP 时，在高级错误报告（AER）中记录非严重 PCIe* 错误？[EB/OL]. [2026-03-26]. <https://www.intel.cn/content/www/cn/zh/support/programmable/articles/000080831.html>
+参见：为什么使用适用于 PCI Express *的英特尔 ® FPGA P-Tile/H-Tile、Avalon® 流传输和 Avalon® 内存映射 IP 时，在高级错误报告（AER）中记录非严重 PCIe* 错误？[EB/OL]. [2026-03-26]. <https://www.intel.cn/content/www/cn/zh/support/programmable/articles/000080831.html>
 
 - FER（PCIe 设备致命错误报告）
 
