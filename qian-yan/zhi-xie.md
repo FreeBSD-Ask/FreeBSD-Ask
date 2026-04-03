@@ -2,7 +2,7 @@
 
 ## 文献来源与基础架构
 
-本书初版架构基于贴吧用户“Smile_Zheng”分享的《操作系统笔记》早期版本（[链接](https://tieba.baidu.com/p/7424071955)）。主要引用了防火墙章节、用户与权限章节。其中引用了《FreeBSD 技术内幕》（*[FreeBSD Unleashed](https://www.amazon.com/FreeBSD-Unleashed-2nd-Brian-Tiemann/dp/0672324563)*），ISBN 978-7-111-10201-0，机械工业出版社，2002，作者是 Brian Tiemann、Michael Urban，译者智慧东方工作室。该书是 FreeBSD 系统管理经典著作，全面涵盖系统配置与管理技术，以及 [🎀🌸 星不萌 🌸🎀](https://tieba.baidu.com/home/main?un=%E6%98%9F%E5%85%89Re) 的博客文章（已佚，互联网档案馆）。
+本书初版架构基于贴吧用户“Smile_Zheng”分享的《操作系统笔记》早期版本（[链接](https://tieba.baidu.com/p/7424071955)）。主要引用了防火墙章节、用户与权限章节。其中引用了《FreeBSD 技术内幕》（TIEMANN B, URBAN M. FreeBSD Unleashed[M]. 智慧东方工作室, 译. 北京:机械工业出版社, 2002. ISBN 978-7-111-10201-0. <https://www.amazon.com/FreeBSD-Unleashed-2nd-Brian-Tiemann/dp/0672324563>）。该书是 FreeBSD 系统管理经典著作，全面涵盖系统配置与管理技术，以及 [🎀🌸 星不萌 🌸🎀](https://tieba.baidu.com/home/main?un=%E6%98%9F%E5%85%89Re) 的博客文章（已佚，互联网档案馆）。
 
 ## 致歉
 

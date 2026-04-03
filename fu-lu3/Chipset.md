@@ -22,7 +22,7 @@
 - 与 Ring Bus 或 Mesh 的接口，实现处理器核心间通信
 - 电源管理逻辑等，优化系统能效
 
-参见 BIOS PCIe 配置里的 LTR Snoop Latency value of SA PCIE[EB/OL]. [2026-03-26]. <https://www.cnblogs.com/wanglouxiaozi/p/18946234>
+参见博客园. BIOS PCIe 配置里的 LTR Snoop Latency value of SA PCIE[EB/OL]. [2026-03-26]. <https://www.cnblogs.com/wanglouxiaozi/p/18946234>
 
 ![系统代理配置](../.gitbook/assets/image-20250726134119-yow827m.png)
 
@@ -152,7 +152,7 @@ Disabled（禁用）
 
 当设置为 Enabled 时，集成内存控制器在空闲一段时间后可能进入自刷新模式。
 
-参见 PowerEdge: DRAM Refresh and Opportunistic Self-Refresh[EB/OL]. [2026-03-26]. <https://infohub.delltechnologies.com/zh-cn/l/cpu-best-practices-3/poweredge-dram-refresh-and-opportunistic-self-refresh/>。讲解 DRAM 刷新与机会性自刷新的最佳实践。
+参见戴尔科技. PowerEdge: DRAM Refresh and Opportunistic Self-Refresh[EB/OL]. [2026-03-26]. <https://infohub.delltechnologies.com/zh-cn/l/cpu-best-practices-3/poweredge-dram-refresh-and-opportunistic-self-refresh/> DRAM 刷新与机会性自刷新的最佳实践。
 
 允许在不退出低功耗状态（power down）的情况下进行机会性刷新（opportunistic refreshes）
 
@@ -180,7 +180,7 @@ Disabled（禁用）
 
 说明：
 
-Intel® Memory Thermal Management，Intel 内存热效应管理。参见 12th Generation Intel® Core™ Processors[EB/OL]. [2026-03-26]. <https://edc.intel.com/content/www/tw/zh/design/ipla/software-development-platforms/client/platforms/alder-lake-desktop/12th-generation-intel-core-processors-datasheet-volume-1-of-2/011/intel-memory-thermal-management/>。提供 Intel 第 12 代处理器内存热管理的技术规范。一系列控制内存温度的措施。
+Intel® Memory Thermal Management，Intel 内存热效应管理。参见英特尔公司. 12th Generation Intel® Core™ Processors[EB/OL]. [2026-03-26]. <https://edc.intel.com/content/www/tw/zh/design/ipla/software-development-platforms/client/platforms/alder-lake-desktop/12th-generation-intel-core-processors-datasheet-volume-1-of-2/011/intel-memory-thermal-management/> Intel 第 12 代处理器内存热管理的技术规范。一系列控制内存温度的措施。
 
 ##### PECI Injected Temperature（通过 PECI 传入温度）
 
@@ -1148,7 +1148,7 @@ Fixed to 4th Point —— 固定到第 4 点
 
 是否启动 System Agent Geyserville（SAGV），系统会根据负载动态调整电压及频率，或固定在特定的控制点。
 
-参见 12th Generation Intel® Core™ Processors[EB/OL]. [2026-03-26]. <https://edc.intel.com/content/www/us/en/design/ipla/software-development-platforms/client/platforms/alder-lake-desktop/12th-generation-intel-core-processors-datasheet-volume-1-of-2/011/011/sagv-points/>；一种借助 SAGV 降低 System Agent 功耗的方式[EB/OL]. [2026-03-26]. <https://blog.xzr.moe/archives/348/>
+参见英特尔公司. 12th Generation Intel® Core™ Processors[EB/OL]. [2026-03-26]. <https://edc.intel.com/content/www/us/en/design/ipla/software-development-platforms/client/platforms/alder-lake-desktop/12th-generation-intel-core-processors-datasheet-volume-1-of-2/011/011/sagv-points/> SAGV 降低 System Agent 功耗的方式[EB/OL]. [2026-03-26]. <https://blog.xzr.moe/archives/348/>
 
 SAGV（System Agent Geyserville）是一种使 SoC 能根据内存带宽利用率和/或各类工作负载的延迟需求，动态调整系统代理（System Agent）工作点（电压/频率）的技术，采用动态电压频率调节（DVFS）来提高能效。Pcode 启发式算法通过周期性评估内存利用率和 IA 停顿情况，负责请求合适的 Qclock 工作点。
 
@@ -1567,7 +1567,7 @@ Disabled（禁用）
 
 内存扰频可提高内存测试的覆盖率和有效性。需要提供地址映射信息来确保测试的准确性和完整性。
 
-参见 study and implementation of bist for 65nm high speed memory[EB/OL]. [2026-03-26]. <https://repository.nirmauni.ac.in/jspui/bitstream/123456789/150/1/04MEC005.pdf>
+参见佚名. study and implementation of bist for 65nm high speed memory[EB/OL]. [2026-03-26]. <https://repository.nirmauni.ac.in/jspui/bitstream/123456789/150/1/04MEC005.pdf>
 
 #### Force ColdReset（强制冷重置）
 
@@ -1939,7 +1939,7 @@ GTT：Graphics Translation Table，图形转换表，又称 GART（Graphics Addr
 
 选择显示内存占用大小。在系统内存中为 GPU 分配的地址空间。使用此选项设置必须留给图形引擎（GFX Engine）的内存总大小。主内存区域中为图形保留的最大大小，操作系统可将其用作显存。
 
-参见 What is IGD Aperture Size?[EB/OL]. [2026-03-26]. <https://www.intel.com/content/www/us/en/support/articles/000028294/graphics.html>
+参见英特尔公司. What is IGD Aperture Size?[EB/OL]. [2026-03-26]. <https://www.intel.com/content/www/us/en/support/articles/000028294/graphics.html>
 
 用于指定分配给集成显卡的 PCIe 基址寄存器 (BAR) 或访问窗口的大小。
 
@@ -3767,7 +3767,7 @@ Auto（自动）
 
 这个 BIOS 设置项不是 PCIe 设备报告的 LTR 值本身。它是系统 (具体是 SA 内的 PCIe 控制器/电源管理逻辑) 在评估 PCIe 设备 LTR 要求时，需要额外考虑的一个内部延迟补偿值。
 
-参见：BIOS PCIe 配置里的 LTR Snoop Latency value of SA PCIE[EB/OL]. [2026-03-26]. <https://www.cnblogs.com/wanglouxiaozi/p/18946234>
+参见：博客园. BIOS PCIe 配置里的 LTR Snoop Latency value of SA PCIE[EB/OL]. [2026-03-26]. <https://www.cnblogs.com/wanglouxiaozi/p/18946234>
 
 - Non Snoop Latency Override（覆盖非侦听延迟）
 

@@ -451,8 +451,8 @@ zroot/var/tmp         96K  91.6G    96K  /var/tmp
 
 ## 参考文献
 
-- How to manually install FreeBSD on a remote server (with UFS, ZFS, encryption...)[EB/OL]. <https://stanislas.blog/2018/12/how-to-install-freebsd-server/>. 提供了 FreeBSD 手动安装的完整技术指南，包括 UFS、ZFS 等文件系统配置方法。
-- RootOnZFS/GPTZFSBoot[EB/OL]. <https://wiki.freebsd.org/RootOnZFS/GPTZFSBoot>. 详细介绍了 FreeBSD 在 GPT 分区表上的 ZFS 根文件系统配置方法。
+- Stanislas. How to manually install FreeBSD on a remote server (with UFS, ZFS, encryption...)[EB/OL]. (2018-12)[2026-03-26]. <https://stanislas.blog/2018/12/how-to-install-freebsd-server/>. 提供了 FreeBSD 手动安装的完整技术指南，包括 UFS、ZFS 等文件系统配置方法。
+- FreeBSD Foundation. RootOnZFS/GPTZFSBoot[EB/OL]. [2026-03-26]. <https://wiki.freebsd.org/RootOnZFS/GPTZFSBoot>. 详细介绍了 FreeBSD 在 GPT 分区表上的 ZFS 根文件系统配置方法。
 
 ## 课后习题
 

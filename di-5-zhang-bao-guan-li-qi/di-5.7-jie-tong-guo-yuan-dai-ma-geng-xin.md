@@ -89,7 +89,7 @@ $ git clone --branch releng/15.0 --single-branch --depth 1 https://github.com/fr
 
 ### 参考文献
 
-- Warner Losh. Submitting GitHub Pull Requests to FreeBSD[EB/OL]. (2024)[2026-03-25]. <https://freebsdfoundation.org/our-work/journal/browser-based-edition/configuration-management-2/submitting-github-pull-requests-to-freebsd/>.
+- Warner Losh. Submitting GitHub Pull Requests to FreeBSD[EB/OL]. [2026-03-25]. <https://freebsdfoundation.org/our-work/journal/browser-based-edition/configuration-management-2/submitting-github-pull-requests-to-freebsd/>.
 
 ## 从压缩包获取源代码（方便但非最新）
 
