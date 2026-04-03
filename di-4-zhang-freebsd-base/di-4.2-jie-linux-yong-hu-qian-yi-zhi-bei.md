@@ -409,7 +409,7 @@ Node.js 的依赖存储在 `node_modules` 目录，而 Nix/NixOS 的所有包则
 - Gentoo. Benefits of Gentoo[EB/OL]. [2026-03-25]. <https://wiki.gentoo.org/wiki/Benefits_of_Gentoo>.
 - Gentoo. The philosophy of Gentoo[EB/OL]. [2026-03-25]. <https://www.gentoo.org/get-started/philosophy/>.
 - Arch Linux. Arch compared to other distributions[EB/OL]. [2026-03-25]. <https://wiki.archlinux.org/title/Arch_compared_to_other_distributions>.
-- STROUSTRUP B. C++ 语言的设计和演化[M]. 裘宗燕，译. 北京: 人民邮电出版社，2020. ISBN: 978-7-115-49711-6.
+- STROUSTRUP B. C++ 语言的设计和演化[M]. 裘宗燕, 译. 北京:人民邮电出版社, 2020. ISBN: 978-7-115-49711-6.
 
 ## 课后习题
 
