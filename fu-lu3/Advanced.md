@@ -462,7 +462,7 @@ Enable（启用）
 
 英特尔®超线程技术是一项硬件创新，能在每个内核上都运行多个线程。可使一个物理内核表现得如同两个“逻辑内核”一样。
 
-参见 什么是超线程？[EB/OL]. [2026-03-26]. <https://www.intel.cn/content/www/cn/zh/gaming/resources/hyper-threading.html>
+参见什么是超线程？[EB/OL]. [2026-03-26]. <https://www.intel.cn/content/www/cn/zh/gaming/resources/hyper-threading.html>
 
 ### BIST（内置自检程序）
 
@@ -1257,7 +1257,7 @@ Enable（启用）
 
 因为直流电压降（电路长度愈增加，其电压会愈下降，导致其两端电压不同）问题，英特尔将主板到 CPU 之间的物理电阻抽象为虚拟电阻（即 AC/DC Loadline），即不考虑实际物理电阻的实现究竟是多少（每块主板都不同），来拟合 CPU 倍频所需的电压功率，这样不同的主板的主板供电模块的掉压行为就是一致的。AC Loadline 是升压负载线，DC 是降压负载线。
 
-负载线（AC/DC）应通过 VRTT 工具进行测量，并通过 BIOS 的负载线覆盖设置选项进行相应配置。AC 负载线会直接影响工作电压（AC），DC 负载线则会影响功率测量（DC）。与按 POR 阻抗设计的主板相比，采用较低 AC 负载线的优秀主板设计能够在功耗、性能和散热方面实现改进。参见：VCCCORE DC Specifications[EB/OL]. [2026-03-26]. <https://edc.intel.com/content/www/de/de/design/products/platforms/details/raptor-lake-s/13th-generation-core-processors-datasheet-volume-1-of-2/vcccore-dc-specifications/>、Intel CPU AC / DC Loadline、防掉壓 CEP 觀念原理 一次講完[EB/OL]. [2026-03-26]. <https://forum.gamer.com.tw/C.php?bsn=60030&snA=644011>、从头开始讲 Loadline[EB/OL]. [2026-03-26]. <https://tieba.baidu.com/p/8328546013>。
+负载线（AC/DC）应通过 VRTT 工具进行测量，并通过 BIOS 的负载线覆盖设置选项进行相应配置。AC 负载线会直接影响工作电压（AC），DC 负载线则会影响功率测量（DC）。与按 POR 阻抗设计的主板相比，采用较低 AC 负载线的优秀主板设计能够在功耗、性能和散热方面实现改进。参见：VCCCORE DC Specifications[EB/OL]. [2026-03-26]. <https://edc.intel.com/content/www/de/de/design/products/platforms/details/raptor-lake-s/13th-generation-core-processors-datasheet-volume-1-of-2/vcccore-dc-specifications/>、Intel CPU AC / DC Loadline、防掉壓 CEP 觀念原理一次講完[EB/OL]. [2026-03-26]. <https://forum.gamer.com.tw/C.php?bsn=60030&snA=644011>、从头开始讲 Loadline[EB/OL]. [2026-03-26]. <https://tieba.baidu.com/p/8328546013>。
 
 Intel 建议 AC Loadline 与 DC Loadline 取值一致（AC = DC）。警告：一般不建议修改 AC/DC Loadline。
 
@@ -1666,7 +1666,7 @@ Enable（启用）
 
 查询（轮询）EC 状态或数据的时间间隔
 
-数值从 1 到 255，对应时间范围为 10 毫秒 到 2.55 秒（1 个计数单位 \= 10 毫秒）。
+数值从 1 到 255，对应时间范围为 10 毫秒到 2.55 秒（1 个计数单位 \= 10 毫秒）。
 
 ##### EC Guard Band Value（嵌入式控制器 EC 保护带值）
 

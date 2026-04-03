@@ -22,7 +22,7 @@ BIOS 界面、选项和设置可能因系统不同而有所差异。
 
 本章节介绍 AMI BIOS 的技术特点和市场地位。AMI BIOS 是美国 Megatrends 公司开发的 BIOS 固件，广泛应用于个人计算机和服务器平台。
 
-根据 AMI 官方网站：美国 Megatrends 公司. The World Runs on AMI[EB/OL]. [2026-03-26]. <https://www.ami.com/about-us/> 的介绍，全球约 70% 的服务器平台采用 AMI 软件。而根据 安迈信息科技（昆山）有限公司. 安迈信息科技（昆山）有限公司官网[EB/OL]. [2026-03-26]. <https://www.ami.com.cn/>  官网介绍，AMI 为 BIOS 业界的公认领导者之一，整体市场占有率超过 65％。两个数据分别统计服务器市场和整体市场，均展示了 AMI 固件在市场中的主导地位。
+根据 AMI 官方网站：美国 Megatrends 公司. The World Runs on AMI[EB/OL]. [2026-03-26]. <https://www.ami.com/about-us/> 的介绍，全球约 70% 的服务器平台采用 AMI 软件。而根据安迈信息科技（昆山）有限公司. 安迈信息科技（昆山）有限公司官网[EB/OL]. [2026-03-26]. <https://www.ami.com.cn/>. 官网介绍，AMI 为 BIOS 业界的公认领导者之一，整体市场占有率超过 65％。两个数据分别统计服务器市场和整体市场，均展示了 AMI 固件在市场中的主导地位。
 
 市场上大部分英特尔迷你主机所使用的 BIOS 均为 AMI BIOS，因此对 AMI BIOS 进行注解具有普遍意义，能够覆盖大多数实际应用场景。
 

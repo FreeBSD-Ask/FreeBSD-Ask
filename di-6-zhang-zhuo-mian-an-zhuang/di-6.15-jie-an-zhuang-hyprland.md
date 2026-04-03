@@ -278,7 +278,7 @@ bind = $mainMod SHIFT, 8, movetoworkspace, 8
 bind = $mainMod SHIFT, 9, movetoworkspace, 9
 bind = $mainMod SHIFT, 0, movetoworkspace, 10
 
-# 使用 mainMod + 鼠标滚轮 滚动浏览现有工作区
+# 使用 mainMod + 鼠标滚轮滚动浏览现有工作区
 bind = $mainMod, mouse_down, workspace, e+1
 bind = $mainMod, mouse_up, workspace, e-1
 
