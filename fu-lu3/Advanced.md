@@ -1027,7 +1027,7 @@ PSYS 平台电源变化率以 1/100 为单位定义，范围为 0 到 200。
 
 例如，要设置变化率为 1.25，输入 125。设置为 0 表示自动（AUTO）。该设置通过 BIOS VR mailbox 命令 0x9 进行控制。
 
-参见：第英特尔公司. 第 10 代英特尔 ® 酷睿 ™ 处理器系列[EB/OL]. [2026-03-26]. <https://www.intel.cn/content/dam/www/public/cn/zh/documents/datasheets/10th-gen-core-families-datasheet-vol-1-datasheet.pdf>
+参见：英特尔公司. 第 10 代英特尔 ® 酷睿 ™ 处理器系列[EB/OL]. [2026-03-26]. <https://www.intel.cn/content/dam/www/public/cn/zh/documents/datasheets/10th-gen-core-families-datasheet-vol-1-datasheet.pdf>
 
 ##### PSYS Offset（PSYS 平台电源偏移量）
 
