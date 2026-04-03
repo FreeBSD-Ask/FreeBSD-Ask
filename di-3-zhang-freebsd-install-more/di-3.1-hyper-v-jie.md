@@ -27,7 +27,7 @@ Gen 1 与 Gen 2 的区别如下表所示：
 | ------------ | ------------ | ---- | ---- | ---- |
 | Gen 1 | 13.0 | 支持 | 不支持 | / |
 | Gen 2 | 13.0 | [不支持](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=221074) | 支持 | 需修改参数 `sysctl kern.evdev.rcpt_mask=6`（启用 evdev，让 Xorg 正确检测 PS/2 设备） |
-| Gen 2 | 14.0 | 支持 | 支持 | 参见：FreeBSD 基金会. 源代码[EB/OL]. [2026-03-26]. <https://cgit.FreeBSD.org/src/commit/?id=21f4e817fde79d5de79bfbdf180d358ca5f48bf9>. |
+| Gen 2 | 14.0 | 支持 | 支持 | 参见：FreeBSD Foundation. 源代码[EB/OL]. [2026-03-26]. <https://cgit.FreeBSD.org/src/commit/?id=21f4e817fde79d5de79bfbdf180d358ca5f48bf9>. |
 
 ## 测试环境
 
