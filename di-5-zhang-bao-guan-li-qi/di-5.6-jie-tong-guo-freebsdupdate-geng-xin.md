@@ -82,6 +82,7 @@ usr/include/crypto/cryptodev.h usr/include/crypto/cbcmac.h usr/include/crypto/de
 usr/include/crypto/rijndael.h usr/include/crypto/rmd160.h usr/include/crypto/xform.h
 usr/lib/clang/11.0.1/include
 : q # 这里输入 q 再按回车键
+```
 
 上面列出的路径仅为示例输出，实际系统中的路径名称和数量可能会略有不同，以你自己机器上的实际显示为准。
 
