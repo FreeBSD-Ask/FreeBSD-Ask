@@ -275,21 +275,20 @@ FreeBSD 不仅仅在生命周期内不变，大版本更新也具有连贯性和
 
 显而易见：目前 FreeBSD 上的桌面部件的缺失很大程度上是因为他们过分依赖了 Linux 特有函数库，例如包含 `ip` 命令的 `iproute2` 软件包。更多的原因则是因为这些桌面或部件和 systemd 做了深度捆绑或者根本就是强制依赖，比如 `NetworkManager`。而 Samba 开发者则说“We use Linux, we develop for Linux, all others please submit patches”（我们使用 Linux，为 Linux 开发，其他系统的用户请自行提交补丁）FreeBSD 社区将此类现象称为“Linuxism”（Linux 主义/Linux 歧视）。
 
-这种行为将导致何种后果尚不得而知，但此类程序正变得越来越多，并有成为主流的趋势。甚至许多开发者在开发程序（如 `todesk`）时也不再考虑对传统 init 系统的兼容。甚至 Java 程序也失去了可移植性，为什么 FreeBSD 上的 Eclipse 将近两年没有更新？正是由于此类 [捆绑问题](https://git.eclipse.org/r/c/platform/eclipse.platform.swt/+/163641/)。预计将来所有可运行在 Linux 上的程序也将失去任何可移植性。
+这种行为将导致何种后果尚不得而知，但此类程序正变得越来越多，并有成为主流的趋势。甚至许多开发者在开发程序（如 `todesk`）时也不再考虑对传统 init 系统的兼容。甚至 Java 程序也失去了可移植性，为什么 FreeBSD 上的 Eclipse 将近两年没有更新？正是由于此类捆绑问题（D'Pong P. Bug 562443 - SWT spams temp folder with innumerable folders[EB/OL]. (2020-05-26)[2026-04-05]. <https://gitlab.simantics.org/simantics/eclipse/eclipse.platform.swt/-/commit/19153b908d6d4cedcbd59824686717502cfde4f7>.）预计将来所有可运行在 Linux 上的程序也将失去任何可移植性。
 
 目前 FreeBSD 所面临的困境，可能是未来其他系统也会遇到的。
 
 - 选择 FreeBSD，就是选择保留一份自由软件的火种。
 - 选择 FreeBSD，就是选择保留下一份真正自由的操作系统。能够使开源事业继续坚持下去，并践行真正的 UNIX 哲学。
 
-#### 旧闻：《[FreeBSD 基金会收到史上最大一笔捐款](https://freebsdfoundation.blogspot.com/2014/11/freebsd-foundation-announces-generous.html)》
+#### 旧闻：FreeBSD 基金会收到史上最大一笔捐款
 
 >上周，我向 FreeBSD 基金会捐赠了 100 万美元，FreeBSD 基金会支持着开源操作系统 FreeBSD。FreeBSD 帮助了数百万程序员追随他们的热情、实现创意。我自己就是受益者。在 90 年代末，我开始使用 FreeBSD，那时我经济拮据，住在政府提供的住房中。在某种程度上，FreeBSD 帮助我摆脱了贫困——我能进入 Yahoo!（雅虎）工作的重要原因是他们使用 FreeBSD，而这正是我首选的操作系统。多年后，当 Brian 和我开始创建 WhatsApp 时，我们依然使用 FreeBSD 来支撑我们的服务器运营，直到今天亦如此。
 >
 >我发布这项捐赠的消息，是希望让更多人看到 FreeBSD 基金会所做的有益工作，并激励他人也能支持 FreeBSD。我们大家都会受益，如果 FreeBSD 能够继续为像我一样的人提供机会，帮助更多的移民子女脱贫，帮助更多的初创公司取得成功，甚至是具有变革性的成果。
 >
->——WhatsApp 原 CEO 及创始人 Jan Koum
-
+>——WhatsApp 原 CEO 及创始人 Jan Koum（FreeBSD Foundation. Updated! – FreeBSD Foundation Announces Generous Donation and Fundraising Milestone[EB/OL]. (2014-11-17)[2026-04-05]. <https://freebsdfoundation.org/blog/updated-freebsd-foundation-announces-generous-donation-and-fundraising-milestone/>.）
 
 #### 诚实与可信
 
