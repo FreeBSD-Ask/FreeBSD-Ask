@@ -1,12 +1,12 @@
 # 8.11 Wine 配置
 
-Wine 是一款能够在 UNIX 及类 UNIX 系统上运行 Microsoft Windows 程序的兼容层软件，通过实现 Windows API 接口，使 Windows 二进制程序能够在非 Windows 环境中执行。
+Wine 是一款能够在 UNIX 及类 UNIX 系统上运行 Microsoft Windows 程序的兼容层软件，通过实现 Windows API 接口，使得在 FreeBSD 系统上运行 Windows 程序成为可能。
+
+本节将介绍 Wine 的安装和配置方法。
 
 本节内容仅在物理机环境中测试通过。由于 Wine 对图形硬件加速的依赖（需要 DRM 驱动支持），虚拟机环境下可能无法正常运行（通常会提示不支持 3D 加速）；此外，虚拟机可能对某些特定 CPU 指令集的支持不完善，这也会导致程序启动失败。
 
 ## 安装 Wine
-
-Wine 使得在 FreeBSD 系统上运行 Windows 程序成为可能。本节将介绍 Wine 的安装和配置方法。
 
 使用 pkg 包管理器安装 Wine 及相关组件：
 
@@ -18,14 +18,6 @@ Wine 使得在 FreeBSD 系统上运行 Windows 程序成为可能。本节将介
 >
 >不推荐使用 Ports 安装，因为该方式不会自动构建对应版本的 32 位程序。
 
-软件包说明：
-
-| 程序 | 说明 |
-| ---- | ---- |
-| wine | Wine 主程序 |
-| wine-gecko | Wine 项目基于 Firefox 的 Gecko 浏览器内核实现的 Internet Explorer 组件 |
-| wine-mono | Mono 提供了对 .NET Framework 4.8 及更低版本的支持 |
-
 >**注意**
 >
 >必须安装 wine-gecko，否则 `winecfg` 将报错找不到 IE。
@@ -36,19 +28,21 @@ Wine 使得在 FreeBSD 系统上运行 Windows 程序成为可能。本节将介
 $ /usr/local/share/wine/pkg32.sh install wine mesa-dri
 ```
 
-```sh
-/usr/local/share/
-└── wine/
-    └── pkg32.sh # Wine 32位安装脚本
-```
+### 软件包说明
+
+| 程序 | 说明 |
+| ---- | ---- |
+| wine | Wine 主程序 |
+| wine-gecko | Wine 项目基于 Firefox 的 Gecko 浏览器内核实现的 Internet Explorer 组件 |
+| wine-mono | Mono 提供了对 .NET Framework 4.8 及更低版本的支持 |
 
 >**注意**
 >
 >如果不执行这一步，将无法支持 32 位 Windows 程序。其中，mesa-dri 提供了显卡硬件加速支持。
 
-## 配置显卡硬解
+## 配置显卡硬件解码
 
-请读者参照显卡相关章节配置硬件加速。
+请读者参考显卡相关章节配置硬件加速。
 
 ## 配置 Wine
 
@@ -84,6 +78,8 @@ $ wine winecfg
 $ rm -rf $HOME/test                          # 删除指定的 WINEPREFIX 目录，用于重置环境
 $ WINEPREFIX=$HOME/test wine winecfg         # 使用新的 WINEPREFIX 目录启动 winecfg 配置工具
 ```
+
+目录结构：
 
 ```sh
 ~/
@@ -175,4 +171,4 @@ $ winetricks
 
 1. 按照教程步骤安装 Wine 并配置环境，分别测试运行 32 位和 64 位 Windows 程序，对比两者的运行效果和资源占用。
 2. 使用 Winetricks 安装中文字体和其他必要组件，测试多个 Windows 程序的中文显示效果。
-3. 尝试修改 Wine 的配置（如 WINEPREFIX、Windows 版本设置等），观察程序行为变化。
+3. 尝试使用 Wine 运行 Office。

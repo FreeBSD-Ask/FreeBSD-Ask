@@ -4,7 +4,7 @@
 
 浏览器是计算机日常使用中最为频繁的应用软件之一。本节将介绍如何在 FreeBSD 系统上安装和配置常用的浏览器，包括火狐浏览器（Firefox）和 Chromium 等。
 
-### 安装普通版本（更新频繁）
+### 安装标准版本的火狐浏览器（更新频繁）
 
 - 使用 pkg 安装
 
@@ -19,7 +19,7 @@
 # make install clean
 ```
 
-### 安装长期支持版本
+### 安装长期支持版本的火狐浏览器
 
 - 使用 pkg 安装
 
@@ -38,15 +38,17 @@
 
 Chromium 不是 Chrome，但在 FreeBSD 中的启动命令为 `chrome`。
 
----
+>**技巧**
+>
+>有些项目认为目前移除的组件仍不够彻底，因此提供了 Port `www/ungoogled-chromium`。该软件移除了更多与谷歌相关的不透明组件。
 
-- 使用 pkg 安装
+- 使用 pkg 安装 Chromium
 
 ```sh
 # pkg install chromium
 ```
 
-- 或者使用 Ports
+- 或者使用 Ports 安装 Chromium
 
 ```sh
 # cd /usr/ports/www/chromium
@@ -59,26 +61,22 @@ Chromium 不是 Chrome，但在 FreeBSD 中的启动命令为 `chrome`。
 
 ## Chrome（Linux 兼容层）
 
-- 使用 pkg 安装
+- 使用 pkg 安装 Chrome
 
 ```sh
 # pkg install linux-chrome
 ```
 
-- 或者使用 Ports
+- 或者使用 Ports 安装 Chrome
 
 ```sh
 # cd /usr/ports/www/linux-chrome/
 # make install clean
 ```
 
-## 附录：Chromium 使用 Google 账号同步
+## 附录：让 Chromium 使用 Google 账号同步
 
->**技巧**
->
->有些项目认为目前移除的组件仍不够彻底，因此提供了 Port `www/ungoogled-chromium`。该软件移除了更多与谷歌相关的不透明组件。
-
-- 由于是开源产物，Chromium 与 Google Chrome 的关系类似于 AOSP 与 Pixel UI 的关系。Chromium 无法直接从 Google Chrome 的在线插件商店下载安装插件，只能手动从本地安装 crx（同步启用后可自动同步浏览器插件）。Chromium 也不自带 Google 翻译插件等功能。更多差异可参见：The Chromium Project. 此网页[EB/OL]. [2026-03-26]. <https://chromium.googlesource.com/chromium/src/+/master/docs/chromium_browser_vs_google_chrome.md>。该文档对比了 Chromium 与 Google Chrome 在功能与授权上的差异。
+- 由于是开源产物，Chromium 与 Google Chrome 的关系类似于 AOSP 与 Pixel UI 的关系。Chromium 无法直接从 Google Chrome 的在线插件商店下载安装插件，只能手动从本地安装 crx（同步启用后可自动同步浏览器插件）。Chromium 也不自带 Google 翻译插件等功能。更多差异可参见：The Chromium Project. 此网页[EB/OL]. [2026-03-26]. <https://chromium.googlesource.com/chromium/src/+/master/docs/chromium_browser_vs_google_chrome.md>。该文档比较了 Chromium 与 Google Chrome 在功能和授权上的差异。
 - 首先，`Chromium` 并非 `Google Chrome`，前者是 The Chromium Project 在 [BSD 3-Clause “New” or “Revised” License](https://github.com/chromium/chromium/blob/main/LICENSE) 下发布的开源与自由软件，后者是 Google LLC 的专有软件。该许可证允许自由使用、修改与再分发。
 
 - 在 [Chromium 89](https://archlinux.org/news/chromium-losing-sync-support-in-early-march/) 版本发布后，Chromium 删除了之前自带的与 Chrome 同款的登录 Google 账号的默认 API。该公告说明了 Chromium 移除同步 API 的原因与影响。
@@ -166,7 +164,7 @@ Chromium 不是 Chrome，但在 FreeBSD 中的启动命令为 `chrome`。
 
 ![查看客户端详情](../.gitbook/assets/chromium-use-google-api-guide-16.png)
 
-我们获得了（这是笔者的，是无效的，读者必须自己生成自己的）：
+我们获得了（这是笔者的，读者必须自己生成自己的）：
 
 - 客户端 ID `502882456359-okloi0a7k6vjodss69so97tmqmv0jjj5.apps.googleusercontent.com`
 - 客户端密钥 `GoCSPX-iKHEKZmP4w_zdq0Z8nwOqz6SF2_M`
@@ -183,11 +181,7 @@ Chromium 不是 Chrome，但在 FreeBSD 中的启动命令为 `chrome`。
 
 ![凭据概览](../.gitbook/assets/chromium-use-google-api-guide-19.png)
 
-编辑 `~/.profile`，加入：
-
->**注意**
->
->本文仅在默认 shell sh 和 KDE 6 下测试通过。如果使用的环境不同，欢迎提交 PR。
+编辑 `~/.profile` 文件，加入：
 
 ```sh
 export GOOGLE_API_KEY=AIzaSyDVpYvJQUn9HTjAiD89y3xBDOG3oaxV5_E  # 这里填 API 密钥
@@ -195,7 +189,11 @@ export GOOGLE_DEFAULT_CLIENT_ID=502882456359-okloi0a7k6vjodss69so97tmqmv0jjj5.ap
 export GOOGLE_DEFAULT_CLIENT_SECRET=GoCSPX-iKHEKZmP4w_zdq0Z8nwOqz6SF2_M  # 这里填客户端密钥
 ```
 
-然后重启系统，再打开 Chromium。
+>**注意**
+>
+>本文仅在默认 shell sh 和 KDE 6 下测试通过。如果使用的环境不同，欢迎提交 PR。
+
+然后重启系统，再启动 Chromium。
 
 点击“开启同步功能”：
 

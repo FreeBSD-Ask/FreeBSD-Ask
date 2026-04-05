@@ -6,7 +6,7 @@
 
 Shell 是用户与操作系统内核进行交互的命令解释器（command interpreter），它接受用户输入的命令并将其传递给内核执行。用户的命令运行在 Shell 中，并通过 Shell 与系统进行交互。
 
-FreeBSD 系统默认采用的 Shell 是 sh，即 Bourne shell，其原始作者为 Stephen R. Bourne。当前 FreeBSD 中的 sh 实现已经过重写，在功能上基本符合 [POSIX.1-2024](https://pubs.opengroup.org/onlinepubs/9799919799/utilities/V3_chap02.html)  标准中关于 Shell 的规范要求。
+FreeBSD 系统默认采用的 Shell 是 sh，即 Bourne shell，其原始作者为 Stephen R. Bourne。当前 FreeBSD 中的 sh 实现已经过重写，在功能上基本符合 [POSIX.1-2024](https://pubs.opengroup.org/onlinepubs/9799919799/utilities/V3_chap02.html) 标准中关于 Shell 的规范要求。
 
 Linux 中常见的 Shell 一般是 bash（Bourne Again Shell，即“又一个 Bourne shell”）。而 macOS 中的默认 Shell 通常是 zsh（Z Shell）。
 

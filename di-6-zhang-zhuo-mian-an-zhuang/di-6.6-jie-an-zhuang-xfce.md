@@ -4,9 +4,9 @@
 
 Xfce 项目旨在开发一款轻量级但功能完备的桌面环境。作为类 Unix 系统中广受欢迎的轻量级桌面环境之一，Xfce 以其资源占用率低、响应速度快而著称。
 
-Xfce 的 Logo 是一只 [老鼠 🐀](https://docs.xfce.org/faq#what_does_it_mean)。曾有用户反馈趣事，称因 Xfce 的默认壁纸是一只老鼠 🐀，导致自己的电脑屏幕被猫 🐈 抓坏（[\[joke\] The default desktop startup screen causes damage to monitor!](https://bugzilla.xfce.org/show_bug.cgi?id=12117)）。
+Xfce 的 Logo 是一只 [老鼠 🐀](https://docs.xfce.org/faq#what_does_it_mean)。曾有用户反馈趣事，称因 Xfce 的默认壁纸是一只老鼠 🐀，导致自己的电脑屏幕被猫 🐈 抓坏（SanjaytheToilet. [joke] The default desktop startup screen causes damage to monitor![EB/OL]. (2015-08-04)[2026-04-04]. <https://bugzilla.xfce.org/show_bug.cgi?id=12117>.）。
 
-## 安装 xfce4
+## 安装 Xfce 桌面环境
 
 - 通过 pkg 安装
 
@@ -27,7 +27,7 @@ Xfce 的 Logo 是一只 [老鼠 🐀](https://docs.xfce.org/faq#what_does_it_mea
 # cd /usr/ports/devel/xdg-user-dirs/ && make install clean 
 ```
 
-- 软件包说明：
+### 软件包说明
 
 | 包名 | 作用说明 |
 | ---- | -------- |
@@ -40,15 +40,15 @@ Xfce 的 Logo 是一只 [老鼠 🐀](https://docs.xfce.org/faq#what_does_it_mea
 | `xfce4-goodies` | Xfce 的附加组件和插件集合 |
 | `lightdm-gtk-greeter-settings` | 配置 LightDM GTK+ 登录界面的图形工具，缺少该组件将无法启动 |
 
-## `startx`
+## startx 命令
 
-将 Xfce 启动脚本写入 `~/.xinitrc`，以便使用 `startx` 命令启动 Xfce：
+将 Xfce 启动脚本写入 `~/.xinitrc` 文件，以便使用 `startx` 命令启动 Xfce：
 
 ```sh
 $ echo "/usr/local/etc/xdg/xfce4/xinitrc" > ~/.xinitrc
 ```
 
-将 Xfce 启动脚本写入 `~/.xsession`，以便图形登录管理器启动 Xfce
+将 Xfce 启动脚本写入 `~/.xsession` 文件，以便通过登录管理器启动 Xfce
 
 ```sh
 $ echo "/usr/local/etc/xdg/xfce4/xinitrc" > ~/.xsession
@@ -56,16 +56,23 @@ $ echo "/usr/local/etc/xdg/xfce4/xinitrc" > ~/.xsession
 
 ## 启动服务
 
+设置 D-Bus 服务开机自启：
+
 ```sh
-# service dbus enable     # 设置 D-Bus 服务开机自启
-# service lightdm enable  # 设置 LightDM 显示管理器开机自启
+# service dbus enable
 ```
 
-## 设置中文界面
+设置 LightDM 显示管理器开机自启：
 
-编辑 `/etc/login.conf`：找到 `default:\` 这一段，将 `:lang=C.UTF-8` 修改为 `:lang=zh_CN.UTF-8`。
+```sh
+# service lightdm enable
+```
 
-根据 `/etc/login.conf` 更新系统能力数据库：
+## 设置中文环境
+
+编辑 `/etc/login.conf` 文件：找到 `default:\` 这一段，将 `:lang=C.UTF-8` 修改为 `:lang=zh_CN.UTF-8`。
+
+还需要根据 `/etc/login.conf` 文件更新系统能力数据库：
 
 ```sh
 # cap_mkdb /etc/login.conf
@@ -81,13 +88,13 @@ $ echo "/usr/local/etc/xdg/xfce4/xinitrc" > ~/.xsession
 
 ## 全局菜单（可选）
 
-安装：
+使用 pkg 安装：
 
 ```sh
 # pkg install xfce4-appmenu-plugin appmenu-gtk-module appmenu-registrar
 ```
 
-或：
+或使用 Ports 安装：
 
 ```sh
 # cd /usr/ports/x11/xfce4-appmenu-plugin/ && make install clean
@@ -95,7 +102,7 @@ $ echo "/usr/local/etc/xdg/xfce4/xinitrc" > ~/.xsession
 # cd /usr/ports/x11/appmenu-registrar/ && make install clean
 ```
 
-查看安装后说明，并按说明进行配置：
+查看安装后的说明，并根据说明进行配置。
 
 ```sh
 $ xfconf-query -c xsettings -p /Gtk/ShellShowsMenubar -n -t bool -s true  # 启用 GTK 菜单栏显示
@@ -105,7 +112,7 @@ $ xfconf-query -c xsettings -p /Gtk/Modules -n -t string -s "appmenu-gtk-module"
 
 ## 软件推荐
 
-FreeBSD 的 Xfce 邮箱客户端推荐使用 `mail/evolution`，可搭配 `xfce4-mailwatch-plugin`、`security/gnome-keyring` 一并使用。
+FreeBSD 的 Xfce 邮箱客户端推荐使用 `mail/evolution` 文件，可搭配 `xfce4-mailwatch-plugin`、`security/gnome-keyring` 一并使用。
 
 还有一款桌面插件，名为 `x11/xfce4-verve-plugin`。配合设置智能书签，可以查询网页内容。可通过配置 FreeBSD 的 man 手册，实现对所需内容的搜索。
 
@@ -113,7 +120,7 @@ FreeBSD 的 Xfce 邮箱客户端推荐使用 `mail/evolution`，可搭配 `xfce4
 
 ### sh
 
-编辑 `~/.shrc`，写入：
+编辑 `~/.shrc` 文件，写入：
 
 ```sh
 if [ -t 1 ]; then       
@@ -132,7 +139,7 @@ fi
 
 ### csh
 
-编辑 `~/.cshrc`，写入：
+编辑 `~/.cshrc` 文件，写入：
 
 ```sh
 if ( $?TERM && $TERM =~ xterm* ) then
@@ -143,7 +150,7 @@ endif
 
 ### tcsh
 
-编辑 `~/.tcshrc`，写入：
+编辑 `~/.tcshrc` 文件，写入：
 
 ```sh
 switch ($TERM)
@@ -158,7 +165,7 @@ endsw
 
 ### bash
 
-编辑 `~/.bashrc`，写入：
+编辑 `~/.bashrc` 文件，写入：
 
 ```sh
 case $TERM in
@@ -173,7 +180,7 @@ case $TERM in
 
 ### zsh
 
-编辑 `~/.zshrc`，写入：
+编辑 `~/.zshrc` 文件，写入：
 
 ```sh
 autoload -Uz add-zsh-hook
@@ -206,6 +213,5 @@ fi
 
 ## 课后习题
 
-1. 查找 xfce4-goodies 集合的 Port 依赖关系，构建最小化 Xfce 附加组件集，在 QEMU 中验证其与核心桌面的集成行为。
-2. 选取 Xfce 全局菜单插件的配置机制，重构最小化菜单显示流程。
-3. 修改 Xfce 桌面的默认窗口管理器行为（如窗口聚焦策略），验证其交互变化。
+1. 查找 xfce4-goodies 集合的 Port 依赖关系，构建最小化 Xfce 附加组件集。
+2. 找一只猫，测试其对 Xfce 桌面环境的反应。

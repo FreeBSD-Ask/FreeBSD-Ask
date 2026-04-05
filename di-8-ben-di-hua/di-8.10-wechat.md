@@ -26,27 +26,27 @@
 官方下载地址：[微信 Linux 测试版](https://linux.weixin.qq.com/)。该页面提供了 Linux 版微信的官方下载。
 
 ```sh
-# fetch https://dldir1v6.qq.com/weixin/Universal/Linux/WeChatLinux_x86_64.rpm	# 写作本文时链接如此，请自行获取最新的微信下载链接
+# fetch https://dldir1v6.qq.com/weixin/Universal/Linux/WeChatLinux_x86_64.rpm
 ```
+
+写作本文时链接如此，请读者自行获取最新的微信下载链接。
 
 ### 安装微信
 
+切换到兼容层路径：
+
 ```sh
-root@ykla:/ # cd /compat/linux/	# 切换到兼容层路径
-root@ykla:/compat/linux # rpm2cpio < WeChatLinux_x86_64.rpm  | cpio -id	# 读者请将 WeChatLinux_x86_64.rpm 的路径改成自己的
+root@ykla:/ # cd /compat/linux/
+```
+
+进行安装：
+
+```sh
+root@ykla:/compat/linux # rpm2cpio < WeChatLinux_x86_64.rpm  | cpio -id
 1393412 blocks
 ```
 
-```sh
-/compat/linux/
-├── opt/
-│   └── wechat/
-│       ├── wechat # 微信可执行文件
-│       └── icons/
-│           └── wechat.png # 微信图标
-└── lib64/
-    └── libbz2.so.1.0 # libbz2 库文件
-```
+读者请将 WeChatLinux_x86_64.rpm 的路径改为自己的。
 
 ### 解决依赖问题
 
@@ -159,6 +159,8 @@ Categories=Network
 # chmod 755 ~/.local/share/applications/wechat.desktop
 ```
 
+图标目录结构：
+
 ```sh
 ~/
 └── .local/
@@ -179,12 +181,12 @@ Categories=Network
 
 ### 中文输入法问题
 
-如果以 root 权限运行 Rocky Linux 兼容层中的应用，输入法可能会出现问题。
+如果以 root 权限运行 Rocky Linux 兼容层中的应用，中文输入法可能会出现问题。
 
 ![FreeBSD 微信](../.gitbook/assets/wechat4.png)
 
 ## 课后习题
 
-1. 按照教程步骤在 Rocky Linux 兼容层下安装微信，记录并分析每一个依赖库的解决过程，理解兼容层下依赖管理的复杂性与设计思路。
-2. 测试微信在 root 和普通用户两种权限下的运行情况，验证输入法功能和文件访问权限。
-3. 尝试修改微信的启动方式或创建不同的启动脚本，观察其行为变化，分析兼容层下应用程序启动流程的可配置性与限制。
+1. 将微信制作成 FreeBSD Ports。
+2. 在 root 和普通用户两种权限下测试微信的运行情况，验证输入法功能和文件访问权限。
+3. 尝试修改微信的启动方式或创建不同的启动脚本。

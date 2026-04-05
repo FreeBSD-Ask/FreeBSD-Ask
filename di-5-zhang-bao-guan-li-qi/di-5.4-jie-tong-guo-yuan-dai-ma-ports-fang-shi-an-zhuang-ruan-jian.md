@@ -4,7 +4,7 @@
 
 ## Ports 与 Port 概述
 
-Ports 作为 FreeBSD 源代码构建软件的核心框架，提供了灵活、可定制的软件安装途径。
+Ports 作为 FreeBSD 源代码构建软件的核心框架，提供了灵活、可定制的软件安装方式。
 
 ### Ports 历史
 
@@ -21,7 +21,7 @@ but fairly usable at this stage.
 Submitted by:   jkh
 ```
 
-“提交了我为 ports 编写的新 Make 宏。虽然还远未完善，但目前已经可以较为正常地使用了。”
+“提交了我为 ports 编写的新 Make 宏。虽然还远未完善，但目前已经可以正常使用。”
 
 > **技巧**
 >
@@ -164,7 +164,7 @@ Makefile		pkg-plist-client	pkg-plist-plpython
 - ① `/usr/ports` 这个文件夹整体称作 Ports，包括几十种不同的分类目录，每个目录下有若干 Port。
 - ② `/usr/ports/databases/postgresql18-server` 这个文件夹整体称作一个 Port，由 `distinfo`（校验和文件）、`pkg-descr`（软件描述文件）、`Makefile`	（主文件，包含构建方法、版本号及下载方式等）、`pkg-plist`（安装文件列表及其权限和属组信息）、`files`（一般为补丁文件，该 Port 下还包含安装后的说明文件 `pkg-message`）等文件构成。
 
-之所以称为“Ports Collection”，移植集合（不应理解为“端口集合”）是因为这些软件绝大部分并不由 FreeBSD 控制、管理和维护。Port 提交者主要做的事情是将 FreeBSD 上 Port 更新到上游开发者提供的最新版本，删除上游不再维护的软件 Port。在上游不接受 BSD 特有的 PR 补丁或难以直接通过既有 Ports 框架实现构建的情况下，Port 维护者也需要自行复刻一个分支出来维护（如 [editors/vscode](https://github.com/tagattie/FreeBSD-VSCode) ）。
+之所以称为“Ports Collection”，移植集合（不应理解为“端口集合”）是因为这些软件绝大部分并不由 FreeBSD 控制、管理和维护。Port 提交者主要做的事情是将 FreeBSD 上 Port 更新到上游开发者提供的最新版本，删除上游不再维护的软件 Port。在上游不接受 BSD 特有的 PR 补丁或难以直接通过既有 Ports 框架实现构建的情况下，Port 维护者也需要自行复刻一个分支出来维护（如 [editors/vscode](https://github.com/tagattie/FreeBSD-VSCode)）。
 
 ## Ports 构建 pkg 软件包的流程
 
@@ -318,7 +318,7 @@ Git 分支已经切换成功。
 # git pull
 ```
 
-### 附录：时间错误导致的证书无效
+### 附录：因时间错误导致的证书无效
 
 在使用 Git 拉取代码时，可能会遇到 SSL 证书问题，其中一个常见原因是系统时间不正确。
 
@@ -328,7 +328,7 @@ Git 分支已经切换成功。
 fatal: unable to access 'https://mirrors.ustc.edu.cn/freebsd-ports/ports.git/': SSL certificate problem: certificate is not yet valid
 ```
 
-先检查系统的时间：
+先检查系统时间：
 
 ```sh
 # date
@@ -387,9 +387,9 @@ root@ykla:/usr/ports/sysutils/htop # make all-depends-list
 ……省略一部分……
 ```
 
-## 看看 python 的 ports 在哪个位置
+## 查看 python 的 ports 在哪个位置
 
-我们可以再次使用 `whereis` 命令来确认 python 的 ports 具体位置。
+我们可以再次使用 `whereis` 命令来确认 python 的具体位置。
 
 查找 python 可执行文件、源代码及手册页所在路径：
 
@@ -409,7 +409,7 @@ python: /usr/ports/lang/python
 
 其中 `BATCH=yes`（批处理）意味着使用默认参数进行构建。
 
-## 如何设置所有所需的依赖
+## 如何设置所有必需的依赖
 
 在编译软件前，有时需要先设置所有依赖项的配置选项。
 
@@ -467,9 +467,9 @@ Proceed with this action? [y/N]:
 # make BATCH=yes fetch-recursive
 ```
 
-## ports 编译的软件也可以转换为 pkg 包
+## ports 编译的软件也可以打包为 pkg 包
 
-使用 Ports 编译安装的软件也可以转换为 pkg 格式的二进制包，方便在其他机器上安装。
+使用 Ports 编译安装的软件也可以打包为 pkg 格式的二进制包，方便在其他机器上安装。
 
 ```sh
 # pkg create nginx
@@ -593,11 +593,11 @@ kern.smp.cpus: 16
 hw.ncpu: 16
 ```
 
-输出值即可作为 `MAKE_JOBS_NUMBER` 的取值。
+输出值即可作为 `MAKE_JOBS_NUMBER` 取值。
 
 英特尔的处理器搜索 `CPU 型号 ARK` 跳转到英特尔官网可查询线程数。
 
-个别情况下可以通过设置别名加速编译（非永久设置，FreeBSD 14 默认已生效，无须额外设置）：
+个别情况下可以通过设置别名加速编译（非永久设置，FreeBSD 14 默认已生效，无需额外设置）：
 
 ```ini
 # alias ninja='ninja -j4'	# 为 ninja 命令设置别名，指定并行编译 4 个作业
@@ -648,7 +648,7 @@ ccache3 是一个常用的版本，我们可以使用 pkg 或 Ports 来安装它
 # make install clean
 ```
 
-安装完成后，我们可以查看 ccache 创建的软链接情况。
+安装完成后，我们可以查看 ccache 创建的软链接。
 
 - 查看软链接情况：
 
@@ -882,7 +882,7 @@ wget2 参数说明：
 
 >**技巧**
 >
->很多服务器不支持较多线程同时下载。这会给服务器带来较大压力，也可能会触发服务器的反制措施，如将下载的 IP 拉入黑名单。
+>很多服务器不支持较多线程同时下载。这会给服务器带来较大压力，也可能会触发服务器的反制措施，如将下载的 IP 加入黑名单。
 
 ### 参考文献
 
@@ -921,8 +921,6 @@ make: stopped in /usr/ports/java/openjdk21
 
 ## 课后习题
 
-1. 查找 Ports 框架的早期提交历史，构建一个最小化的 Ports 实现（仅支持一个简单软件），并分析其设计如何体现“小即美”的原则及其缺陷，尝试修补。
+1. 尝试复活 Gentoo BSD 项目。
 
-2. 选取 Ports 中的 USE 机制，重构其最小实现。
-
-3. 修改 Ports 的默认下载工具，将其从 fetch 替换为 wget2，并验证其下载速度变化。
+2. 修改 pkg 包管理器源代码，使其支持并行下载和安装。

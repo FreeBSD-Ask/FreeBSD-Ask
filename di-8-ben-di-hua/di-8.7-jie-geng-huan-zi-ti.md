@@ -12,17 +12,26 @@
 # mkdir -p /usr/local/share/fonts/WindowsFonts
 ```
 
-将字体文件复制到 `WindowsFonts` 目录即可：
+将字体文件复制到 `WindowsFonts` 目录。
 
-```sh
-# chmod -R 755 /usr/local/share/fonts/WindowsFonts   # 设置 Windows 字体目录及其内容的权限为 755
-# fc-cache                                           # 刷新字体缓存
-```
+字体目录结构：
 
 ```sh
 /usr/local/share/
 └── fonts/
     └── WindowsFonts/ # Windows 字体存放目录
+```
+
+然后设置 Windows 字体目录及其内容的权限为 755：
+
+```sh
+# chmod -R 755 /usr/local/share/fonts/WindowsFonts
+```
+
+还需要刷新字体缓存：
+
+```sh
+# fc-cache
 ```
 
 ## TTY 中文控制台
@@ -72,7 +81,7 @@ allscreens_flags="-f /root/b16.fnt"
 
 #### 如何手动生成中文字体的 fnt 文件
 
-[https://github.com/usonianhorizon/vt-fnt](https://github.com/usonianhorizon/vt-fnt)   提供的方法较难理解，可生成 bdf 文件，但会出现文中相同的报错。该项目探索了 FreeBSD 控制台字体的生成方法。文中提到的软件 FontForge 提供 Windows 版本，下载地址为 [https://fontforge.org/en-US/downloads/windows-dl/](https://fontforge.org/en-US/downloads/windows-dl/)，该页面提供 FontForge 字体编辑工具的 Windows 版本下载。
+[https://github.com/usonianhorizon/vt-fnt](https://github.com/usonianhorizon/vt-fnt) 提供的方法较难理解，可生成 bdf 文件，但会出现文中相同的报错。该项目探索了 FreeBSD 控制台字体的生成方法。文中提到的软件 FontForge 提供 Windows 版本，下载地址为 [https://fontforge.org/en-US/downloads/windows-dl/](https://fontforge.org/en-US/downloads/windows-dl/)，该页面提供 FontForge 字体编辑工具的 Windows 版本下载。
 
 ### 参考文献
 

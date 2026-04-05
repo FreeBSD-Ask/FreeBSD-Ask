@@ -6,7 +6,7 @@
 
 > **注意**
 >
->由于补丁 FreeBSD Foundation. acpi_ged: Handle events directly[EB/OL]. [2026-03-26]. <https://reviews.freebsd.org/D42158>. 未合入 FreeBSD 14，因此版本 14 无法安装，会在安装界面报错（参见 FreeBSD Forums. Virtualizing FreeBSD 14 CURRENT on macOS M2 via Parallels 19[EB/OL]. [2026-03-26]. <https://forums.freebsd.org/threads/virtualizing-freebsd-14-current-on-macos-m2-via-parallels-19.93266/>. ），故只能安装 15 及以上版本。
+>由于补丁 FreeBSD Project. acpi_ged: Handle events directly[EB/OL]. [2026-03-26]. <https://reviews.freebsd.org/D42158>. 未合入 FreeBSD 14，因此版本 14 无法安装，会在安装界面报错（参见 FreeBSD Forums. Virtualizing FreeBSD 14 CURRENT on macOS M2 via Parallels 19[EB/OL]. [2026-03-26]. <https://forums.freebsd.org/threads/virtualizing-freebsd-14-current-on-macos-m2-via-parallels-19.93266/>. ），故只能安装 15 及以上版本。
 
 ## 安装
 
@@ -60,7 +60,7 @@
 
 ## 故障排除与未竟事项
 
-### 鼠标无法移动的问题
+### 鼠标无法移动
 
 若在 Parallels Desktop 中遇到 FreeBSD 鼠标无法移动的问题，可在 `/boot/loader.conf.local`（推荐使用本地配置扩展文件，避免直接修改系统默认配置 `/boot/loader.conf`）中添加如下配置：
 
@@ -101,8 +101,8 @@ ums_load="YES"
 
 ## 课后习题
 
-1. 查找 FreeBSD 15 源代码中关于 `acpi_ged` 的提交记录，理解该补丁解决的具体问题，尝试在 FreeBSD 14 上手动应用该补丁并验证系统能否正常启动。
+1. 查找 FreeBSD 源代码中关于 `acpi_ged` 的提交记录，逐行注释并分析其实现原理。
 
-2. 分析 Parallels Desktop 虚拟机工具的 Port 源代码，研究其长期未更新的技术原因，尝试构建一个最小化的虚拟机工具替代方案。
+2. 分析 Parallels Desktop 虚拟机工具的 Port 源代码，研究其长期未更新的技术原因，尝试更新。
 
-3. 对比 `ums` 与 `usbhid` 两种 USB 鼠标驱动的实现差异，并在不同虚拟机环境中测试两种驱动的兼容性。
+3. 比较 `ums` 与 `usbhid` 两种 USB 鼠标驱动的实现差异。

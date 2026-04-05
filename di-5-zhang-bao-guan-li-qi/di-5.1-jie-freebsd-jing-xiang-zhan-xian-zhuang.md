@@ -8,7 +8,7 @@
 
 当前 FreeBSD 镜像站生态面临两个核心约束：一是官方 rsync 服务暂未对公众开放；二是项目未接受镜像站的官方二级镜像申请。这两项政策共同构成了镜像站部署的基本限制条件。
 
-根据可查证的历史信息，FreeBSD 项目最迟在 2015 年 5 月就已停止公开 rsync 服务。相关文档 [Add small section explaining we are not allowing public mirrors of packages and possible workarounds.](https://reviews.freebsd.org/R9:3418e47d2f6cd8dd04ac934f38d136ba9101a5a8) 记录了项目禁止公共包镜像的决策及替代方案。官方给出的说明理由如下：
+根据可查证的历史信息，FreeBSD 项目最迟在 2015 年 5 月就已停止公开 rsync 服务。相关文档 [Add small section explaining we are not allowing public mirrors of packages and possible workarounds.](https://reviews.freebsd.org/R9:3418e47d2f6cd8dd04ac934f38d136ba9101a5a8) 记录了项目禁止公共包镜像的决策及替代方案。官方给出的理由如下：
 
 > Due to very high requirements of bandwidth, storage and administration the FreeBSD Project has decided not to allow public mirrors of packages.
 >
@@ -83,13 +83,13 @@
 >>
 >> 对于一个快要渴死的人来说，问题不是他该喝可口可乐还是污水。
 >
->> 在关闭 rsync 且不提供其他同步渠道的情况下，而多数开源镜像都依赖 rsync，他们实际上阻碍了 FreeBSD 项目的自身发展。项目声称带宽不足，但我怀疑 OpenBSD 或 NetBSD 的带宽能显著更高。然而它们却通过开放与自由的方式，让用户自己掌握选择。
+>> 在关闭 rsync 且不提供其他同步渠道的情况下，而多数开源镜像都依赖 rsync，他们实际上阻碍了 FreeBSD 项目的自身发展。项目声称带宽不足，但我怀疑 OpenBSD 或 NetBSD 的带宽能显著更多。然而它们却通过开放与自由的方式，让用户自己掌握选择。
 >>
 >> 就像今天发生的事情一样：我批评了一个据说用于测试并切换不同 FreeBSD 包镜像的测速工具，可安装它却需要额外拉上 45 个依赖。感觉就像在想象皇帝应该穿什么衣服、用哪种金锄头锄地——或者发明一种只能在白天亮灯的灯泡。
 >>
 >> 我并非在批评任何个人；我真正质疑的是，这套系统及其设计本身是否合理。
 >>
->> FreeBSD 只是在技术上切换到了 Git，思想还停留在 SVN 时代。SVN 是集中式的、统一的、强权限的；Git 是分布式的，去权限的，允许自由分支的。当代互联网强调的是去中心化和分享。没有为什么，正如城市化和逆城市化一样都是合理的，也都是不合理的，只是一种趋势要求我们必须这样那样做，否则就会失去自身存在的合理性。你说得有道理也是现实，他们可能同步几天就撒手不管了。而问题在于，选择权应该取决于用户而不是项目本身。我认为这是一种家长制作风的体现。这也表明了老项目转型的困难更多的不是技术而是理念。
+>> FreeBSD 只是在技术上切换到了 Git，思想还停留在 SVN 时代。SVN 是集中式的、统一的、强权限的；Git 是分布式的，去权限的，允许自由分支的。当代互联网强调的是去中心化和分享。没有为什么，正如城市化和逆城市化一样都是合理的，也都是不合理的，只是一种趋势要求我们必须这样那样做，否则就会失去自身存在的合理性。你说得有道理也是现实，他们可能同步几天就撒手不管了。而问题在于，选择权应该取决于用户而不是项目本身。我认为这是一种家长制作风的体现。这也表明了老项目转型的困难更多不是技术而是理念。
 >
 >> 即日已抵龙南，明日入巢，四路兵皆已如期并进，贼有必破之势。某向在横水，尝寄书仕德云：“破山中贼易，破心中贼难。”区区剪除鼠窃，何足为异？若诸贤扫荡心腹之寇，以收廓清平定之功，此诚大丈夫不世之伟绩。数日来谅已得必胜之策，捷奏有期矣。何喜如之！
 >>
@@ -97,7 +97,7 @@
 >
 >> 结合王阳明平定南赣，改革吏治，肃清朝野，破官、民“心中贼”的历史史实，请读者阐述：强迫某人使之自由，这本身是一种自由还是法西斯主义？
 
-### 中国大陆暂无 FreeBSD 官方镜像站
+### 中国大陆目前没有 FreeBSD 官方镜像站
 
 经多次沟通尝试（包括通过邮件列表联系约五次，其中三次获得回应，两次未获回应），均未形成有效推进。官方主要回复为“深表歉意，但台湾地区已有镜像”，未就镜像申请的具体流程提供进一步说明。此外，曾特别向中国科学技术大学 Linux 用户协会申请镜像，反馈 FreeBSD 官方亦未有回应。
 
@@ -121,11 +121,11 @@ TUNA: <https://github.com/tuna/issues/issues/16>
 
 来搭建非官方镜像站。赠人玫瑰，手有余香。
 
-优先建议高校学生使用校内资源搭建，或者直接从 USTC 的 `rsync` 服务来同步。建议同步前先咨询 USTCLUG，以免带来不必要的麻烦，联系方式：[lug@ustc.edu.cn](mailto:lug@ustc.edu.cn)。参考 [科大源同步方法与注意事项](https://mirrors.ustc.edu.cn/help/rsync-guide.html)  来进行同步。
+优先建议高校学生使用校内资源搭建，或者直接从 USTC 的 `rsync` 服务来同步。建议同步前先咨询 USTCLUG，以免带来不必要的麻烦，联系方式：[lug@ustc.edu.cn](mailto:lug@ustc.edu.cn)。参考 [科大源同步方法与注意事项](https://mirrors.ustc.edu.cn/help/rsync-guide.html) 来进行同步。
 
 ## 官方给出的镜像站基本要求
 
-- 服务器的 root 权限，这一点上国内的大学开源镜像站通常不会给予；
+- 服务器的 root 权限，这一国内同样稀缺，开源镜像站通常不会给予；
 - IPv6 及 CN2 网络——国内也很缺乏；
 - BGP 网络；
 - 足够的存储空间（约 50 TB）和 1 G 带宽；
@@ -161,12 +161,12 @@ FreeBSD 目前在大陆有若干个非官方镜像站：
     - <https://mirrors.ustc.edu.cn/freebsd-ports/>
   - 联系方式：[lug@ustc.edu.cn](mailto:lug@ustc.edu.cn)
 
-- 网易 163 镜像站（pkg 和 ports 上游均为中科大）<https://mirrors.163.com/>
+- 网易 163 镜像站（pkg 和 ports 上游均为中国科学技术大学）<https://mirrors.163.com/>
   - FreeBSD Pub <https://mirrors.163.com/freebsd/>
   - FreeBSD Packages <https://mirrors.163.com/freebsd-pkg/>
   - FreeBSD Ports <https://mirrors.163.com/freebsd-ports/>
 
-- 南京大学开源镜像站（pkg 和 ports 上游均为中科大）<https://mirrors.nju.edu.cn/>
+- 南京大学开源镜像站（pkg 和 ports 上游均为中国科学技术大学）<https://mirrors.nju.edu.cn/>
   - FreeBSD Pub <https://mirrors.nju.edu.cn/freebsd/>
   - FreeBSD Packages <https://mirrors.nju.edu.cn/freebsd-pkg/>
   - FreeBSD Ports <https://mirrors.nju.edu.cn/freebsd-ports/>
@@ -179,12 +179,12 @@ FreeBSD 官方联系方式：
 
 ## 其他思路或解决方案
 
-自行使用 Poudriere 进行构建并分发。如 [RISC-V FreeBSD-pkg 软件源上线！11619+ 预编译包助力快速构建 FreeBSD 环境](https://mp.weixin.qq.com/s/ngv3eZh1TEVgk3Pn3XfRBg) （项目已停止维护）
+自行使用 Poudriere 进行构建并分发。如 [RISC-V FreeBSD-pkg 软件源上线！11619+ 预编译包助力快速构建 FreeBSD 环境](https://mp.weixin.qq.com/s/ngv3eZh1TEVgk3Pn3XfRBg)（项目已停止维护）
 
 ## 课后习题
 
 1. 查找 USTCLUG 提供的 FreeBSD-pkg 同步脚本，在本地搭建一个最小化的 pkg 镜像站，并测试其是否可以被其他 FreeBSD 系统作为软件源使用。
 
-2. 对比 FreeBSD、OpenBSD 和 NetBSD 三个项目的镜像站授权政策差异，分析这种差异如何影响各自的用户群体规模与生态健康度。
+2. 比较 FreeBSD、OpenBSD 和 NetBSD 三个项目的镜像站授权政策差异，分析这种差异如何影响各自的用户群体规模与生态健康度。
 
 3. 假设你有一台裸金属服务器可以赞助给 FreeBSD 项目，设计一个完整的镜像站部署方案。

@@ -302,6 +302,8 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 >
 >上述参数参考自 [bsdinstall(8)](https://man.freebsd.org/cgi/man.cgi?bsdinstall(8)) 的默认配置。安装后，也可通过命令 `zfs get exec,setuid,mountpoint` 查看相关属性。具体代码位于 [usr.sbin/bsdinstall/scripts/zfsboot](https://github.com/freebsd/freebsd-src/blob/main/usr.sbin/bsdinstall/scripts/zfsboot)。
 
+相关文件结构：
+
 ```sh
 zroot/
 ├── ROOT/
@@ -340,7 +342,7 @@ zroot/
 
 > **技巧**
 >
->`\t` 是制表符（Tab）的转义字符（意味着按了一下 **TAB** 键），用于对齐字段，使用空格亦可达到相同效果。也可使用 `ee /tmp/bsdinstall_etc/fstab` 命令手动编辑该文件并写入如下格式的行：
+>`\t` 是制表符（Tab）的转义字符（意味着按一下 **TAB** 键），用于对齐字段，使用空格亦可达到相同效果。也可使用 `ee /tmp/bsdinstall_etc/fstab` 命令手动编辑该文件并写入如下格式的行：
 >
 >```sh
 >/dev/nda0p5  none  swap  sw  0  0
@@ -452,12 +454,12 @@ zroot/var/tmp         96K  91.6G    96K  /var/tmp
 ## 参考文献
 
 - Stanislas. How to manually install FreeBSD on a remote server (with UFS, ZFS, encryption...)[EB/OL]. (2018-12)[2026-03-26]. <https://stanislas.blog/2018/12/how-to-install-freebsd-server/>. 提供了 FreeBSD 手动安装的完整技术指南，包括 UFS、ZFS 等文件系统配置方法。
-- FreeBSD Foundation. RootOnZFS/GPTZFSBoot[EB/OL]. [2026-03-26]. <https://wiki.freebsd.org/RootOnZFS/GPTZFSBoot>. 详细介绍了 FreeBSD 在 GPT 分区表上的 ZFS 根文件系统配置方法。
+- FreeBSD Project. RootOnZFS/GPTZFSBoot[EB/OL]. [2026-03-26]. <https://wiki.freebsd.org/RootOnZFS/GPTZFSBoot>. 详细介绍了 FreeBSD 在 GPT 分区表上的 ZFS 根文件系统配置方法。
 
 ## 课后习题
 
-1. 查找 FreeBSD 14.2 源代码中的 `/usr/src/usr.sbin/bsdinstall/scripts/zfsboot` 脚本，在测试环境中执行简单方法安装后，参照该脚本手动补全 `/home/用户名` 数据集的创建并验证用户登录后的主目录挂载。
+1. 尝试完全脱离 bsdinstall 安装 FreeBSD。
 
-2. 选取文中 ZFS 数据集的权限隔离机制（如 `/tmp` 目录的 `exec=on` 和 `setuid=off` 组合），分析该设计如何在“使用便利性”与“安全性”之间做权衡，尝试修改其中一个参数并观察系统行为变化。
+2. 重构一套图形化的安装界面。
 
-3. 修改 EFI 启动项配置，为 FreeBSD 启动项设置较低的启动优先级，验证 Windows 作为默认启动系统的行为。
+3. 在 UFS 文件系统下重构本文，并发起 PR。

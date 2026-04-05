@@ -4,7 +4,7 @@
 
 > **技巧**
 >
-> 相关视频教程可参考：Bilibili. FreeBSD 14.2 基础安装配置教程[EB/OL]. [2026-03-25]. <https://www.bilibili.com/video/BV1STExzEEhh>（物理机）、Bilibili. 002-VMware17 安装 FreeBSD 14.2[EB/OL]. [2026-03-25]. <https://www.bilibili.com/video/BV1gji2YLEoC>（虚拟机），提供 FreeBSD 安装视频演示。
+> 相关视频教程可参考：Bilibili. FreeBSD 14.2 基础安装配置教程[EB/OL]. [2026-03-25]. <https://www.bilibili.com/video/BV1STExzEEhh>（物理机）、Bilibili. 002-VMware17 安装 FreeBSD 14.2[EB/OL]. [2026-03-25]. <https://www.bilibili.com/video/BV1gji2YLEoC>（虚拟机），提供了 FreeBSD 安装视频演示。
 
 ---
 
@@ -847,8 +847,4 @@ Add another user? (yes/no) [no]: # 是否继续添加其他用户
 
 ## 课后习题
 
-1. 在虚拟机中安装 FreeBSD 15.0-RELEASE，使用 pkgbase 在线安装方式，安装后修改 /etc/rc.conf 并观察其对系统启动行为的影响。
-
-2. 阅读 bsdinstall 的源代码脚本，找出其中处理主机名设置的部分，分析为什么未设置主机名时不会显示 Amnesiac。
-
-3. 对比 pkgbase 与传统发行组件安装方式，讨论这种将基本系统拆分为软件包的设计的缺陷。
+1. 阅读 bsdinstall 的源代码脚本，找出其中处理主机名设置的部分，分析为什么未设置主机名时不会显示其他名称。

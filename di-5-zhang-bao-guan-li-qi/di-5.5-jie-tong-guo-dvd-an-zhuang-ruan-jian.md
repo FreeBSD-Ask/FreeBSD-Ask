@@ -70,7 +70,7 @@ COPYRIGHT	etc		mnt		rescue		usr
 
 **/dist** 目录若改为其他目录，则使用环境变量的方法无效，因为 `packages/repos/FreeBSD_install_cdrom.conf` 中的路径被写死，无法修改。
 
-## 使用 `bsdconfig` 安装 DVD 软件（目前无效）
+## 使用 `bsdconfig` 安装 DVD 软件（当前无效）
 
 先按上述方法完成挂载。
 
@@ -112,9 +112,9 @@ Proceed with this action? [y/N]:
 # env REPOS_DIR=/dist/packages/repos pkg rquery "%n"
 ```
 
-## 换源为 DVD
+## 更换软件源为 DVD
 
-### 创建 DVD 源
+### 创建 DVD 软件源
 
 将 `FreeBSD_install_cdrom.conf` 复制到 `/etc/pkg/` 目录下：
 
@@ -158,4 +158,4 @@ Proceed with this action? [y/N]:
 
 2. 分析 DVD 安装方式中路径被硬编码为 `/dist` 的设计，重构这一机制使其支持自定义路径。
 
-3. 修改 pkg 的仓库配置机制，使其支持从任意目录的本地文件系统作为软件源，验证其在离线环境中的可用性。
+3. 修改 pkg 的仓库配置机制，使其支持从本地文件系统的任意目录作为软件源，并验证其在离线环境中的可用性。

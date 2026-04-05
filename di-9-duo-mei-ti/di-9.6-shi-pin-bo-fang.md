@@ -19,19 +19,9 @@ FreeBSD 操作系统提供了多种视频播放器选择，本节将介绍几款
 # make install clean
 ```
 
-```sh
-/usr/
-└── ports/
-    └── multimedia/
-        ├── vlc/ # VLC 视频播放器 Port
-        ├── smplayer/ # SMPlayer 视频播放器 Port
-        ├── kodi/ # Kodi 媒体中心 Port
-        └── mpv/ # mpv 视频播放器 Port
-```
+### 使用 VLC 播放视频
 
-### VLC 视频播放测试
-
-经测试，常用视频格式均能在 VLC 播放器中正常播放。
+经测试，常用视频格式均能在 VLC 中正常播放。
 
 ![VLC 播放器](../.gitbook/assets/vlc1.png)
 
@@ -56,7 +46,7 @@ SMPlayer 是 MPlayer（一款功能强大的纯命令行视频播放器）的 Qt
 # make install clean
 ```
 
-### SMPlayer 视频播放测试
+### 使用 SMPlayer 播放视频
 
 经测试，常用视频格式均能在 SMPlayer 播放器中正常播放。
 
@@ -85,7 +75,7 @@ Kodi 是一款知名的开源媒体中心软件，其曾用名为 XBMC（Xbox Me
 # make install clean
 ```
 
-### Kodi 设置中文
+### 为 Kodi 设置中文环境
 
 首先打开 Kodi 主界面中的 `interface`（界面）设置选项：
 
@@ -103,13 +93,13 @@ Kodi 是一款知名的开源媒体中心软件，其曾用名为 XBMC（Xbox Me
 
 ![Kodi 中文界面](../.gitbook/assets/kodi5.png)
 
-### Kodi 播放视频测试
+### 使用 Kodi 播放视频
 
 经测试，常用视频格式均能在 Kodi 媒体中心中正常播放。
 
 ![Kodi 播放视频测试](../.gitbook/assets/kodi4.png)
 
-## 附录：直接在 TTY 播放视频（mpv）
+## 附录：直接在 TTY 播放视频（MPV）
 
 可以直接在 Linux/FreeBSD 的 TTY（电传打字机，Teletypewriter，即纯文本终端）环境中使用 mpv 命令播放视频文件。
 

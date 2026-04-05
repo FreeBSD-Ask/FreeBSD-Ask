@@ -1,14 +1,14 @@
 # 3.1 使用 Hyper-V 安装 FreeBSD
 
-本节介绍 FreeBSD 操作系统在 Microsoft Hyper-V 虚拟化平台上的部署方法，旨在为读者提供一套完整的、经过验证的安装配置流程。本篇内容基于 Windows 11 23H2 专业版与 FreeBSD 14.1-RELEASE 环境的实测结果，该环境具有较好的代表性，能够反映当前主流配置环境。
+本节介绍 FreeBSD 操作系统在 Microsoft Hyper-V 虚拟化平台上的部署方法。
 
 ## Hyper-V 简介
 
-Hyper-V 是微软公司（Microsoft）为 Windows 和 Windows Server 开发的企业级虚拟化管理程序，属于系统内置组件。虚拟化管理程序是一种创建和运行虚拟机的软件，它允许在单个物理主机上同时运行多个独立的操作系统。Hyper-V 分为 Gen 1（第一代）和 Gen 2（第二代）两种虚拟机架构，两种架构在硬件支持和启动方式上存在技术差异。
+虚拟化管理程序是一种创建和运行虚拟机的软件，它允许在单个物理主机上同时运行多个独立的操作系统。
 
-> **注意**
->
-> Windows 家庭版和家庭中文版不支持 Hyper-V。
+Hyper-V 是微软公司（Microsoft）为 Windows 和 Windows Server 开发的企业级虚拟化管理程序，属于系统内置组件。
+
+Hyper-V 分为 Gen 1（第一代）和 Gen 2（第二代）两种虚拟机架构，两种架构在硬件支持和启动方式上存在技术差异。
 
 Gen 1 与 Gen 2 的区别如下表所示：
 
@@ -27,7 +27,7 @@ Gen 1 与 Gen 2 的区别如下表所示：
 | ------------ | ------------ | ---- | ---- | ---- |
 | Gen 1 | 13.0 | 支持 | 不支持 | / |
 | Gen 2 | 13.0 | [不支持](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=221074) | 支持 | 需修改参数 `sysctl kern.evdev.rcpt_mask=6`（启用 evdev，让 Xorg 正确检测 PS/2 设备） |
-| Gen 2 | 14.0 | 支持 | 支持 | 参见：FreeBSD Foundation. 源代码[EB/OL]. [2026-03-26]. <https://cgit.FreeBSD.org/src/commit/?id=21f4e817fde79d5de79bfbdf180d358ca5f48bf9>. |
+| Gen 2 | 14.0 | 支持 | 支持 | 参见：FreeBSD Project. src[EB/OL]. [2026-03-26]. <https://cgit.FreeBSD.org/src/commit/?id=21f4e817fde79d5de79bfbdf180d358ca5f48bf9>. |
 
 ## 测试环境
 
@@ -39,6 +39,10 @@ Gen 1 与 Gen 2 的区别如下表所示：
 - 使用第二代 Hyper-V 虚拟机
 
 ## 安装 Hyper-V
+
+> **注意**
+>
+> Windows 家庭版和家庭中文版不支持 Hyper-V。
 
 在 Windows 系统中启用 Hyper-V 功能组件，需以管理员权限执行相关命令，以确保操作的合法性与系统配置的正确性。
 
@@ -141,6 +145,7 @@ PS C:\Users\ykla> Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-H
 
 ## 参考文献
 
+- 微软. 安装 Hyper-V[EB/OL]. (2025-05-23)[2026-04-04]. <https://learn.microsoft.com/zh-cn/windows-server/virtualization/hyper-v/get-started/install-hyper-v?tabs=powershell&pivots=windows>. 指出家庭版并不支持 Hyper-V 虚拟化技术。
 - 微软. Windows Server 和 Windows 中的 Hyper-V 虚拟化[EB/OL]. [2026-03-26]. <https://learn.microsoft.com/zh-cn/windows-server/virtualization/hyper-v/overview>. 微软官方对 Hyper-V 的说明，详细介绍了 Hyper-V 虚拟化架构与功能特性。
 - 微软. 在 Windows 上安装 Hyper-V[EB/OL]. [2026-03-26]. <https://learn.microsoft.com/zh-cn/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v>. 微软官方教程，提供了多种 Hyper-V 启用方法。
 - 微软. Hyper-V 集成服务[EB/OL]. [2026-03-26]. <https://learn.microsoft.com/zh-cn/virtualization/hyper-v-on-windows/reference/integration-services>. 详细说明了 Hyper-V 集成服务的功能与配置方法。
@@ -150,8 +155,6 @@ PS C:\Users\ykla> Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-H
 
 ## 课后习题
 
-1. 查找 FreeBSD 13.0 源代码中关于 `kern.evdev.rcpt_mask` 的实现，在 FreeBSD 13.0 系统上应用该参数修改，并验证鼠标是否正常工作，分析该参数如何改变内核对输入设备的处理方式。
+1. 查找 FreeBSD 源代码中关于 `kern.evdev.rcpt_mask` 的实现，逐行注释并分析原理。
 
-2. 分析 Hyper-V 安全启动机制，研究其与 FreeBSD 启动流程的兼容性问题，尝试构建一个最小化的 FreeBSD 启动链。
-
-3. 启用 Hyper-V 来宾服务，尝试通过宿主机与虚拟机进行文件交换操作，分析该服务是如何在虚拟化边界创建可控的数据通道的。
+2. 探索哪些 Hyper-V 虚拟化设置能够优化虚拟化体验。

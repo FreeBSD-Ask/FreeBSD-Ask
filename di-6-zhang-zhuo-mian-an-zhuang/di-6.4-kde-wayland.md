@@ -4,7 +4,7 @@
 
 Wayland 作为新一代显示服务器协议，相比传统的 X11 协议在架构设计与安全性方面具有多项技术优势。本节系统阐述在 FreeBSD 操作系统中配置 KDE 6 Wayland 会话的具体方法与相关注意事项。
 
-由于 issue [Request to restore support for vboxvideo and vmwgfx DRM drivers #356](https://github.com/freebsd/drm-kmod/issues/356)  尚未得到解决（FreeBSD DRM 驱动的移植仅覆盖了 Intel、AMD 和 NVIDIA 等 GPU），故在 VMware、VirtualBox 或任何基于 Virtio 的虚拟机上均无法复现本教程。需在真实的物理机上进行操作。
+由于 freebsd/drm-kmod. Request to restore support for vboxvideo and vmwgfx DRM drivers #356[EB/OL]. [2026-04-04]. <https://github.com/freebsd/drm-kmod/issues/356>. 尚未得到解决（FreeBSD DRM 驱动的移植仅覆盖了 Intel、AMD 和 NVIDIA 等 GPU），故在 VMware、VirtualBox 或任何基于 Virtio 的虚拟机上均无法复现本教程。需要在真实的物理机上进行操作。
 
 NVIDIA 显卡尚未经过测试。本文使用 Intel 第 12 代处理器（i7-1260P）的集成显卡进行测试。
 
@@ -95,7 +95,7 @@ $ sh ~/kde.sh
 
 > **技巧**
 >
-> 上图显示为“Intel UHD Graphics”而非“Iris Xe Graphics”，这是因为系统未启用某些硬件加速特性（与内存配置有关）~~笔者无力购买第二根 DDR5 内存条~~。参见：Intel® Iris® Xe Graphics Shows As Intel® UHD Graphics in the Intel® Graphics Command Center and Device Manager[EB/OL]. [2026-03-26]. <https://www.intel.com/content/www/us/en/support/articles/000059744/graphics.html> （网站对应页面的中文翻译不正确）。
+> 上图显示为“Intel UHD Graphics”而非“Iris Xe Graphics”，这是因为系统未启用某些硬件加速特性（与内存配置有关）~~无力购买第二根 DDR5 内存条~~。参见：Intel® Iris® Xe Graphics Shows As Intel® UHD Graphics in the Intel® Graphics Command Center and Device Manager[EB/OL]. [2026-03-26]. <https://www.intel.com/content/www/us/en/support/articles/000059744/graphics.html> （网站对应页面的中文翻译不正确）。
 
 - 显示当前会话类型（如 X11 或 wayland）
 
@@ -105,11 +105,7 @@ $ sh ~/kde.sh
 
 ![检查当前是否位于 Wayland](../.gitbook/assets/kde-Wayland2.png)
 
-## 配置 Fcitx 5
-
-> **技巧**
->
-> 经测试 IBus 亦可用，且无需配置。
+## 配置 Fcitx 5 输入法框架
 
 配置 Fcitx 5 自动启动：
 
@@ -140,7 +136,7 @@ $ cp /usr/local/share/applications/org.fcitx.Fcitx5.desktop ~/.config/autostart/
 
 ## 故障排除与未竟事宜
 
-### 在 root 下无声音
+### 在 root 账户下没有声音
 
 表现为右下角声音控件提示“未连接到音频服务”：可设置 PulseAudio 自启动，方法是在 KDE 设置中添加该服务并赋予可执行权限。
 
@@ -150,5 +146,5 @@ $ cp /usr/local/share/applications/org.fcitx.Fcitx5.desktop ~/.config/autostart/
 
 ## 课后习题
 
-1. 优化在 Wayland 上 KDE 的使用体验。
+1. 测试 IBus 输入法框架在基于 Wayland 的 KDE 上使用体验，提交 PR。
 2. 适配 PipeWire 音频。

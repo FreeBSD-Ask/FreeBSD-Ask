@@ -574,7 +574,7 @@ Enable（启用）
 
 此项可以启用英特尔®TXT Alias 测试。如果系统没有启用 TXT，这些更改将不会起作用。
 
-### DPR Memory Size (MB) （DMA 内存受保护范围）
+### DPR Memory Size (MB)（DMA 内存受保护范围）
 
 值：
 
@@ -3869,6 +3869,6 @@ GUID 是一种由算法生成的唯一标识。
 
 1. 在 Intel 处理器上配置并启用 CFG Lock，编写一个简单的工具读取 MSR 0xE2 寄存器值，分析其对 CPU 电源管理参数可见性的影响。
 
-2. 禁用 Intel 管理引擎（ME），记录系统启动流程的变化，并分析该修改对平台安全性与功能完整性的权衡关系。
+2. 禁用 Intel 管理引擎（ME），记录系统启动流程的变化。
 
-3. 修改 Package C State Limit 为 C0，在 FreeBSD 中测量系统功耗与响应延迟的变化，并分析该设置如何改变系统对用户活动的约束边界。
+3. 修改 Package C State Limit 为 C0，在 FreeBSD 中测量系统功耗与响应延迟的变化。

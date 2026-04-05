@@ -1,21 +1,21 @@
 # 8.1 本地化环境变量
 
-## 可生效的配置文件路径
+## 本地化环境变量配置文件路径
 
 在 FreeBSD 系统中，本地化环境变量的生效路径取决于所使用的登录管理器（Display Manager）和用户 Shell 环境。
 
 ### 显示管理器配置路径
 
-1. SDDM、LightDM、GDM 可以在 `~/.xprofile` 中写入
-2. LightDM、GDM 可以在 `~/.profile` 中写入
+1. SDDM、LightDM、GDM 可以在 `~/.xprofile` 文件中写入
+2. LightDM、GDM 可以在 `~/.profile` 文件中写入
 3. SDDM 可以在用户登录 shell 的配置文件中写入
 
 ### Shell 配置路径
 
-- sh: `~/.profile`
-- bash: `~/.bash_profile` 或 `~/.profile`
-- zsh: `~/.zprofile`
-- csh: `~/.cshrc`
+- sh: `~/.profile` 文件
+- bash: `~/.bash_profile` 文件或 `~/.profile` 文件
+- zsh: `~/.zprofile` 文件
+- csh: `~/.cshrc` 文件
 
 ## 本地化相关的环境变量
 
@@ -60,9 +60,9 @@ LC_ALL=
 
 ### 常见配置方案
 
-实现中文化的方式可以有所不同：
+有多种途径实现中文环境：
 
-1. 单纯的界面中文化只要设置 `LC_MESSAGES` 为 `"zh_CN.UTF-8"`（在 SDDM/Xfce 下验证）
+1. 单纯的界面中文环境只要设置 `LC_MESSAGES` 为 `"zh_CN.UTF-8"`（在 SDDM/Xfce 下验证）
 2. 较常见的做法是将 `LANG`、`LC_ALL`、`LANGUAGE` 三个环境变量都设为 `"zh_CN.UTF-8"`
 3. 在纯英文环境下同时使用中文输入法，仅设置输入法相关变量，其他保持默认英文设置
 
@@ -104,4 +104,3 @@ $ date
 
 1. 在 FreeBSD 系统中配置不同 Shell（sh、bash、zsh、csh）的本地化环境变量，分别验证 `date` 命令在英文和中文环境下的输出。
 2. 构建一个仅设置 `LC_MESSAGES=zh_CN.UTF-8` 的环境，测试多个常用命令（如 ls、pkg、man）的中文提示可用性。
-3. 设计一个脚本在执行特定任务前临时切换 `LC_TIME` 变量值，验证脚本执行期间的时间格式变化，并分析环境变量的作用域与生命周期机制。
