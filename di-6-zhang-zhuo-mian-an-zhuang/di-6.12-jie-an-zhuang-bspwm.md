@@ -143,7 +143,7 @@ $ echo "picom &" >> ~/.config/bspwm/bspwmrc
 
 在 bspwm 配置中启动 Polybar：
 
-```
+```sh
 $ echo "\$HOME/.config/polybar/launch.sh" >> ~/.config/bspwm/bspwmrc
 ```
 

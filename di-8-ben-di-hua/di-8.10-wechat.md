@@ -41,7 +41,7 @@ root@ykla:/ # cd /compat/linux/
 
 进行安装：
 
-```
+```sh
 root@ykla:/compat/linux # rpm2cpio < WeChatLinux_x86_64.rpm  | cpio -id
 1393412 blocks
 ```

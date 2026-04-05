@@ -64,7 +64,7 @@ $ echo "/usr/local/etc/xdg/xfce4/xinitrc" > ~/.xsession
 
 设置 LightDM 显示管理器开机自启：
 
-```
+```sh
 # service lightdm enable
 ```
 
