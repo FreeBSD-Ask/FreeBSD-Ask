@@ -3519,7 +3519,6 @@ Enabled（启用）
 
 Disabled（禁用）
 
-
 参见：为什么使用适用于 PCI Express *的英特尔 ® FPGA P-Tile/H-Tile、Avalon® 流传输和 Avalon® 内存映射 IP 时，在高级错误报告（AER）中记录非严重 PCIe* 错误？[EB/OL]. [2026-03-26]. <https://www.intel.cn/content/www/cn/zh/support/programmable/articles/000080831.html>
 
 - FER（PCIe 设备致命错误报告）

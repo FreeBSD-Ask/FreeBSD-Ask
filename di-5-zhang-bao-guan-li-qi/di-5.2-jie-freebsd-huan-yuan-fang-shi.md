@@ -565,7 +565,6 @@ Fetching http://ftp-archive.freebsd.org/pub/FreeBSD-Archive/ports/amd64/packages
 >
 > pkg 是不可用的，会提示找不到 `digests.txz` 和 `repo.txz`，因为当时 pkgng 还没有被官方支持，仍然仅支持使用 `pkg_*` 命令。
 
-
 ## 课后习题
 
 1. 尝试让 [Portsnap](https://man.freebsd.org/portsnap) 工具复活，弥补其原有欠缺的功能，使之现代化。

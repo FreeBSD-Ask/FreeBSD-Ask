@@ -87,7 +87,6 @@ DRM 是 Linux 内核的子系统，负责与现代显卡的 GPU 进行交互。F
 # make BATCH=yes install clean
 ```
 
-
 或者使用 Ports 安装（如有问题请使用此方法）：
 
 ```sh
@@ -235,7 +234,6 @@ EndSection
 若上述操作不起作用，请检查 `/dev/backlight` 路径下有哪些设备。
 
 - 示例（请使用 `ls /dev/backlight` 命令查看实际设备）：
-
 
 设置 amdgpu_bl00 背光亮度为 10：
 

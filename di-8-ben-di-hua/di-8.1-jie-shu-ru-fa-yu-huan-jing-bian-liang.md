@@ -104,4 +104,3 @@ $ date
 
 1. 在 FreeBSD 系统中配置不同 Shell（sh、bash、zsh、csh）的本地化环境变量，分别验证 `date` 命令在英文和中文环境下的输出。
 2. 构建一个仅设置 `LC_MESSAGES=zh_CN.UTF-8` 的环境，测试多个常用命令（如 ls、pkg、man）的中文提示可用性。
-

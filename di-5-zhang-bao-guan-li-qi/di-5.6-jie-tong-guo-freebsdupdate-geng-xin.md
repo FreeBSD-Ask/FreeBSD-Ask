@@ -540,4 +540,3 @@ DFreeBSD/amd64 EFI loader, Revision 3.0
 1. 阅读 `freebsd-update` 脚本的源代码，使用高级编程语言重构，并验证是否能显著提升更新速度。
 
 2. 制作一个 freebsd-update 镜像站。
-

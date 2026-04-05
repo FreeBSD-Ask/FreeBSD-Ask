@@ -11,7 +11,6 @@
 可使用命令 `ip addr` 和 `ip route show` 查看网关信息及最大传输单元（MTU）数值；同时请注意子网和 CIDR 表示法。
 因为部分服务器未启用 DHCP 服务，可能需要手动配置 IP。
 
-
 ## 视频教程
 
 FreeBSD 中文社区. 08-腾讯云轻量云及其他服务器安装 FreeBSD[EB/OL]. [2026-04-04]. <https://www.bilibili.com/video/BV1y8411d7pp>.

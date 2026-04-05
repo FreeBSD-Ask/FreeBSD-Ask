@@ -790,4 +790,3 @@ FreeBSD 的设计更接近传统 UNIX 的行为。
 
 1. 尝试进行对 BSD 风格的 sed/awk/grep 命令选项进行优化，使其兼容 GNU 语法。
 2. 查看 FreeBSD 中 ls 命令的源码实现，并与 GNU 的实现进行比较。
-
