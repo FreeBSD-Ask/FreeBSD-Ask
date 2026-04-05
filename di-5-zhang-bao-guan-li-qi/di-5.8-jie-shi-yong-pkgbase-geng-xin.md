@@ -232,7 +232,7 @@ FreeBSD-base {
 - 使用 pkgbase 将 14.3-RELEASE 更新到 15.0-RELEASE（即将 ABI 指定为 15）
 
 ```sh
-# env ABI=FreeBSD:15:amd64 pkg-static -c /mnt/upgrade upgrade -r FreeBSD-base  # 在 /mnt/upgrade 环境中使用指定 ABI 升级 FreeBSD 基础系统包
+# env ABI=FreeBSD:15:amd64 pkg-static -c /mnt/upgrade upgrade -r FreeBSD-base  # 在 /mnt/upgrade 环境中使用指定 ABI 升级 FreeBSD 基本系统包
 pkg-static: Setting ABI requires setting OSVERSION, guessing the OSVERSION as: 1500000
 pkg-static: Warning: Major OS version upgrade detected.  Running "pkg bootstrap -f" recommended
 Updating FreeBSD-base repository catalogue...
