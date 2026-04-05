@@ -48,7 +48,6 @@ root@ykla:/compat/linux # rpm2cpio < WeChatLinux_x86_64.rpm  | cpio -id
 
 读者请将 WeChatLinux_x86_64.rpm 的路径改为自己的。
 
-
 ### 解决依赖问题
 
 查看依赖关系：

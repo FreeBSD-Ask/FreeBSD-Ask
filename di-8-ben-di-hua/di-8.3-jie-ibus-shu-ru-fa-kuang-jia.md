@@ -4,7 +4,6 @@ IBus 即“Intelligent Input Bus”（智能输入总线），是 Linux 及类 U
 
 ## 安装 IBus 输入法框架
 
-
 - 使用 pkg 安装：
 
 ```sh
@@ -19,7 +18,6 @@ IBus 即“Intelligent Input Bus”（智能输入总线），是 Linux 及类 U
 # cd /usr/ports/textproc/ibus/ && make install clean
 # cd /usr/ports/chinese/ibus-libpinyin/ && make install clean
 ```
-
 
 可选的输入法还包括：
 

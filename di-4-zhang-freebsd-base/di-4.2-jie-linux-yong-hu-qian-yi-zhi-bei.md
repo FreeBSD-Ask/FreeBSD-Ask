@@ -410,7 +410,7 @@ Node.js 的依赖存储在 `node_modules` 目录，而 Nix/NixOS 的所有包则
 - Debian. About Debian[EB/OL]. [2026-04-04]. <https://www.debian.org/intro/about>. Debian 发音。
 - Fedora娘[EB/OL]. 萌娘百科. (2025-05-03)[2026-04-04]. <https://zh.moegirl.org.cn/zh-hans/Fedora%E5%A8%98>. Fedora 外号“地沟油”。
 - Arch Linux 娘[EB/OL]. (2023-08-24)[2026-04-04]. <https://zh.moegirl.org.cn/zh-hans/Arch_Linux%E5%A8%98>. Arch Linux “邪教”说法的来历。
-- Arch Linux 中文论坛. 回归洗发水[EB/OL]. [2026-04-04]. https://bbs.archlinuxcn.org/viewtopic.php?id=694. Arch Linux “洗发水”的用法例子。
+- Arch Linux 中文论坛. 回归洗发水[EB/OL]. [2026-04-04]. <https://bbs.archlinuxcn.org/viewtopic.php?id=694>. Arch Linux “洗发水”的用法例子。
 - Gentoo Foundation. About Gentoo[EB/OL]. [2026-04-04]. <https://www.gentoo.org/get-started/about/>. Gentoo Linux 元发行版的说法来自此处。
 - Arch Linux Wiki. Arch User Repository[EB/OL]. [2026-04-04]. <https://wiki.archlinux.org/title/Arch_User_Repository>. Wiki 指出 “Warning: AUR packages are user-produced content. These PKGBUILDs are completely unofficial and have not been thoroughly vetted. Any use of the provided files is at your own risk.”，译文：“警告： AUR 中的软件包是由其他用户编写的，这些 PKGBUILD 是非官方的，未经彻底审查。使用这些文件的风险由您自行承担。”`
 - Linux Uprising. Malware Found On The Arch User Repository (AUR)[EB/OL]. (2018-07-09)[2026-04-04]. <https://www.linuxuprising.com/2018/07/malware-found-on-arch-user-repository.html?m=1>. AUR 中确实曾存在恶意软件包。

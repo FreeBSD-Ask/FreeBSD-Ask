@@ -252,7 +252,6 @@ root 密码设置完成。
 
 为了更好地使用中文，还需要配置系统的中文环境。在 `/etc/csh.cshrc` 文件中添加：
 
-
 ```ini
 setenv LANG "zh_CN.UTF-8"
 ```

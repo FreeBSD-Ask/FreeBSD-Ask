@@ -36,8 +36,6 @@ $ /usr/local/share/wine/pkg32.sh install wine mesa-dri
 | wine-gecko | Wine 项目基于 Firefox 的 Gecko 浏览器内核实现的 Internet Explorer 组件 |
 | wine-mono | Mono 提供了对 .NET Framework 4.8 及更低版本的支持 |
 
-
-
 >**注意**
 >
 >如果不执行这一步，将无法支持 32 位 Windows 程序。其中，mesa-dri 提供了显卡硬件加速支持。
