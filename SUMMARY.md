@@ -8,7 +8,7 @@
 ## 前言
 
 * [前言](qian-yan/qian-yan.md)
-* [致读者：解放思想，回归本真，高扬人道主义，不走苦难哲学的邪路](qian-yan/zhi-du-zhe.md)
+* [致读者：解放思想，回归本真，高扬人道主义，不走苦难哲学的邪路](qian-yan/zhi-du-zhe-jie-fang-si-xiang-hui-gui-ben-zhen-gao-yang-ren-dao-zhu-yi-bu-zou-ku-nan-zhe-xue-de-xie-lu.md)
 * [致谢](qian-yan/zhi-xie.md)
 * [绪论](qian-yan/xu-lun.md)
 
@@ -287,41 +287,41 @@
 
 ## 附录 Ⅰ 计算机概论
 
-* [计算机系统结构](fu-lu1/zong-xian.md)
-* [计算机网络](fu-lu1/wang-luo-ji-chu.md)
+* [计算机系统结构](fu-lu1/ji-suan-ji-xi-tong-jie-gou.md)
+* [计算机网络](fu-lu1/ji-suan-ji-wang-luo.md)
 * [操作系统](fu-lu1/cao-zuo-xi-tong.md)
-* [关系型数据库基础](fu-lu1/shu-jv-ku.md)
+* [关系型数据库基础](fu-lu1/guan-xi-xing-shu-ju-ku-ji-chu.md)
 
 ## 附录 II 工具与资源
 
-* [DragonFly BSD 系统导论](fu-lu2/di-DragonFlyBSD.md)
-* [TwinCAT/BSD 系统导论](fu-lu2/TwinCAT.md)
-* [FreeBSD 兼容的网络适配器](fu-lu2/yi-tai-wang-ka.md)
-* [FreeBSD 桌面发行版评述](fu-lu2/others-bsd.md)
-* [BSD 许可证概览](fu-lu2/xukez.md)
-* [Vim 开发环境配置](fu-lu2/vim.md)
+* [DragonFly BSD 系统导论](fu-lu2/dragonfly-bsd-xi-tong-dao-lun.md)
+* [TwinCAT/BSD 系统导论](fu-lu2/twincat-bsd-xi-tong-dao-lun.md)
+* [FreeBSD 兼容的网络适配器](fu-lu2/freebsd-jian-rong-de-wang-luo-shi-pei-qi.md)
+* [FreeBSD 桌面发行版评述](fu-lu2/freebsd-zhuo-mian-fa-xing-ban-ping-shu.md)
+* [BSD 许可证概览](fu-lu2/bsd-xu-ke-zheng-gai-lan.md)
+* [Vim 开发环境配置](fu-lu2/vim-kai-fa-huan-jing-pei-zhi.md)
 
 ## 附录 III UEFI/BIOS 注解（AMI BIOS）
 
-* [UEFI/BIOS 概述与警告](fu-lu3/bios-gaishu.md)
-* [Main 主菜单](fu-lu3/main.md)
-* [Advanced 高级](fu-lu3/Advanced.md)
-* [Chipset 芯片组](fu-lu3/Chipset.md)
-* [Security 安全](fu-lu3/Security.md)
-* [Boot 启动](fu-lu3/Boot.md)
-* [Save & Exit 保存与退出](fu-lu3/save.md)
+* [UEFI/BIOS 概述与警告](fu-lu3/uefi-bios-gai-shu-yu-jing-gao.md)
+* [Main 主菜单](fu-lu3/main-zhu-cai-dan.md)
+* [Advanced 高级](fu-lu3/advanced-gao-ji.md)
+* [Chipset 芯片组](fu-lu3/chipset-xin-pian-zu.md)
+* [Security 安全](fu-lu3/security-an-quan.md)
+* [Boot 启动](fu-lu3/boot-qi-dong.md)
+* [Save & Exit 保存与退出](fu-lu3/save-exit-bao-cun-yu-tui-chu.md)
 
 ## 附录 IV 文学故事
 
-* [我与 FreeBSD 的故事](fu-lu4/freebsd.md)
-* [两次告别](fu-lu4/exit.md)
-* [小说：《青其正色》](fu-lu4/qing-qi-zheng-se.md)
-* [小说：《吾乡何处》](fu-lu4/wu-xiang-he-chu.md)
-* [小说：《你与暗》](fu-lu4/ni-yu-an.md)
+* [我与 FreeBSD 的故事](fu-lu4/wo-yu-freebsd-de-gu-shi.md)
+* [两次告别](fu-lu4/liang-ci-gao-bie.md)
+* [小说：《青其正色》](fu-lu4/xiao-shuo-qing-qi-zheng-se.md)
+* [小说：《吾乡何处》](fu-lu4/xiao-shuo-wu-xiang-he-chu.md)
+* [小说：《你与暗》](fu-lu4/xiao-shuo-ni-yu-an.md)
 * [诗歌选](fu-lu4/shi-ge-xuan.md)
-* [手记](fu-lu4/za-ji.md)
+* [手记](fu-lu4/shou-ji.md)
   
 ## 附录 V 参考文献与术语表
 
-* [参考书目](fu-lu5/cankaoshu.md)
+* [参考书目](fu-lu5/can-kao-shu-mu.md)
 * [术语表](fu-lu5/shu-yu-biao.md)
