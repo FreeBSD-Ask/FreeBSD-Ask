@@ -93,7 +93,7 @@ LC_MESSAGES="zh_CN.UTF-8"  # 设置系统消息显示语言为简体中文 UTF-8
 
 IBus、Fcitx 5 二选一即可。
 
-### ibus
+### IBus
 
 GNOME 捆绑的输入法框架是 IBus。
 
