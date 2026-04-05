@@ -21,18 +21,6 @@ FreeBSD 操作系统支持多种多媒体处理工具，本节将介绍音频剪
 # make install clean
 ```
 
-```sh
-/usr/
-└── ports/
-    ├── audio/
-    │   └── audacity/ # Audacity 音频编辑器 Port
-    ├── multimedia/
-    │   ├── olive/ # Olive 视频编辑器 Port
-    │   └── ffmpeg/ # FFmpeg 多媒体处理框架 Port
-    └── graphics/
-        └── inkscape/ # Inkscape 矢量绘图软件 Port
-```
-
 ## 视频剪辑
 
 视频剪辑是处理视频内容的重要环节，Olive 视频编辑器是一款开源的非线性视频编辑软件，适用于专业和非专业的视频制作场景。
@@ -115,6 +103,4 @@ $ ffmpeg -i 视频文件.mp4 -vf subtitles=对应字幕.ass 输出视频.mp4
 
 1. 查找 FFmpeg 的 Ports，修改其编译选项以启用更多编解码器支持，构建并用其压制一段带字幕的视频，验证输出结果。
 
-2. 选取 Audacity 中的音频编辑机制，重构其最小实现。
-
-3. 修改 Inkscape 的默认矢量转换参数（如 Ctrl+I 的转换精度），验证其抠图效果变化。
+3. 使用 Ports 中的工具，重构一个 FreeBSD 小恶魔 Logo。

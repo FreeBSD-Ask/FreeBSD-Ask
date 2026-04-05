@@ -1,8 +1,8 @@
 # 8.4 五笔输入法
 
-## IBus
-
 五笔输入法是中文输入领域中一种常用的形码输入方法，可在多种输入法框架下进行配置与使用。本节将介绍如何在 IBus 和 Fcitx 5 两种主流框架下配置五笔输入法。
+
+## IBus 输入法框架
 
 需要先安装并配置 IBus，本节不做详细说明。
 
@@ -31,9 +31,9 @@
 
 安装完成后，需要对 Rime 输入法进行配置以使用五笔输入法。
 
-将 98 五笔码表（`free-bsd-98wubi-tables-master/wubi86.dict.yaml` 和 `free-bsd-98wubi-tables-master/wubi86.schema.yaml`）复制到 `/usr/local/share/rime-data` 目录下。98 五笔码表下载地址：[FreeBSD-98wubi-tables](https://github.com/FreeBSD-Ask/98-input)。该仓库提供适用于 FreeBSD 的 98 五笔输入法码表文件。
+将 98 五笔码表（`free-bsd-98wubi-tables-master/wubi86.dict.yaml` 文件和 `free-bsd-98wubi-tables-master/wubi86.schema.yaml` 文件）复制到 `/usr/local/share/rime-data` 目录下。98 五笔码表下载地址：[FreeBSD-98wubi-tables](https://github.com/FreeBSD-Ask/98-input)。该仓库提供了适用于 FreeBSD 的 98 五笔输入法码表文件。
 
-文件结构：
+配置文件结构：
 
 ```sh
 /usr/local/share/
@@ -55,7 +55,7 @@ schema_list:
 ……其余省略……
 ```
 
-保存后退出重新部署 Rime 输入法即可。
+保存后退出。随后重新部署 Rime 输入法即可。
 
 ![配置 Rime 输入法](../.gitbook/assets/wubi4.png)
 
@@ -84,7 +84,7 @@ Fcitx 5 的具体配置步骤本节不做详细说明。
 - 将 `98五笔/98/wbx.main.dict` 词库放到 `/usr/local/share/libime/` 下面。
 - 重启 `fcitx5`，在设置中启用 98 五笔即可。
 
-文件结构：
+相关文件结构：
 
 ```sh
 /usr/local/share/
@@ -133,7 +133,7 @@ $ libime_tabledict 98wbx.txt 98wbx.main.dict
 
 加入 Rime 的方法同上，此处从略。
 
-修改 `/usr/local/share/rime-data/default.yaml`，如下：
+修改 `/usr/local/share/rime-data/default.yaml` 文件，如下：
 
 ```yaml
 # Rime default settings
@@ -232,15 +232,13 @@ patch applied.
 
 ### IBus 横排输出
 
-编辑 `~/.config/ibus/rime/build/ibus_rime.yaml`，将里面的 `horizontal: false` 改成 `horizontal: true` 重新部署输入法或重启即可。
+编辑 `~/.config/ibus/rime/build/ibus_rime.yaml` 文件，将当中的 `horizontal: false` 改成 `horizontal: true` 重新部署输入法或重启即可。
 
 ![IBus 横排设置](../.gitbook/assets/wubi6.png)
 
 ## 故障排除
 
-- 上述操作涉及基本系统文件，建议一般只修改用户配置，否则会影响全局设置，且在系统更新时容易被覆盖。
-
-其他问题待后续解决。
+上述操作涉及基本系统文件，建议仅修改用户配置，否则会影响全局设置，且在系统更新时容易被覆盖。
 
 ## 参考文献
 

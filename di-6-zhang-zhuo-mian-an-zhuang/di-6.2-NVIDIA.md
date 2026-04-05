@@ -2,7 +2,7 @@
 
 ## NVIDIA 显卡驱动概述
 
-对于台式机，若 CPU 是英特尔处理器，且型号以 F（如 [i5-9400F](https://www.intel.cn/content/www/cn/zh/products/sku/190883/intel-core-i59400f-processor-9m-cache-up-to-4-10-ghz/specifications.html) ）或 KF（如 [i5-12600KF](https://www.intel.cn/content/www/cn/zh/products/sku/134590/intel-core-i512600kf-processor-20m-cache-up-to-4-90-ghz/specifications.html) ）结尾，则该型号没有核芯显卡，无需处理核芯显卡相关配置。
+对于台式机，若 CPU 是英特尔处理器，且型号以 F（如 [i5-9400F](https://www.intel.cn/content/www/cn/zh/products/sku/190883/intel-core-i59400f-processor-9m-cache-up-to-4-10-ghz/specifications.html)）或 KF（如 [i5-12600KF](https://www.intel.cn/content/www/cn/zh/products/sku/134590/intel-core-i512600kf-processor-20m-cache-up-to-4-90-ghz/specifications.html)）结尾，则该型号没有核芯显卡，无需处理核芯显卡相关配置。
 
 若已拥有独立显卡，且视频输出接口（DP 或 HDMI）直接连接至独立显卡，则通常无需对核芯显卡进行任何配置，仅需处理独立显卡本身的驱动即可。
 
@@ -85,13 +85,13 @@
 
 ## 查看 NVIDIA 驱动状态
 
-- 列出所有 NVIDIA GPU 及其详细信息：
+列出所有 NVIDIA GPU 及其详细信息：
 
 ```sh
 $ nvidia-smi 
 ```
 
-`nvidia-smi` 示例输出：
+`nvidia-smi` 命令示例输出：
 
 ```sh
 # nvidia-smi
@@ -165,6 +165,5 @@ Mon Jan 19 19:06:59 2026
 
 ## 课后习题
 
-1. 查找 nvidia-drm-kmod 的 Port 构建过程，分析其与内核版本的绑定机制，尝试在不同 FreeBSD 版本间迁移并验证兼容性。
-2. 选取 NVIDIA 驱动的模块加载机制，重构最小化加载流程。
-3. 修改 nvidia-smi 的访问权限或配置，验证其信息披露范围变化。
+1. 在显卡直连的笔记本上进行实际测试，提交 PR。
+2. 在 Linux 兼容层下调用 NVIDIA CUDA 进行测试。

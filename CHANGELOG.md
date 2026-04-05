@@ -190,7 +190,7 @@
     - 根据编纂发现，提交 [Bug 291649 Submitted – COPYRIGHT in login classes/login.conf(5) does not work](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=291649)
 - 2025.12.13
   - 重写“7.2 IceWM”
-  - “10.3 Mihomo（Clash）”新增“RC 脚本”。已向 Ports 维护者发出请求合并（[Bug 291295 - net/mihomo: Add rc.conf and some Post-installation](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=291295)  ），但未予回应。
+  - “10.3 Mihomo（Clash）”新增“RC 脚本”。已向 Ports 维护者发出请求合并（[Bug 291295 - net/mihomo: Add rc.conf and some Post-installation](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=291295)），但未予回应。
   - 将“4.10 文件系统的挂载和卸载”、“4.11 磁盘结构”合并到“4.10 文件系统基础”
   - 将“4.12 目录结构”拆分到“4.11 系统目录结构”和“24.6 FreeBSD 源代码目录结构”
   - 根据编纂发现，增补 [Bug 236786 FreeBSD -.iso files not support written to USB drive](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=236786)
@@ -215,7 +215,7 @@
   - 将“23.3 磁盘扩容和分区调整”中的 ZFS 部分拆分到“第 25 章 ZFS 文件系统”，原有章节调整为“23.3 UFS 文件系统”
   - “24.2 机器相关的内核选项”引入“powerpc（32/64 位）机器相关配置”“64 位 RISC-V 机器相关配置”“arm64（aarch64）机器相关配置”
   - 新增“24.4 GENERIC 内核选项（amd64）”
-  - “24.1 FreeBSD 内核选项概述”新增“附录：man config(5) 中文”“附录：man [device.hints(5)](https://man.freebsd.org/cgi/man.cgi?query=device.hints)  中文”
+  - “24.1 FreeBSD 内核选项概述”新增“附录：man config(5) 中文”“附录：man [device.hints(5)](https://man.freebsd.org/cgi/man.cgi?query=device.hints) 中文”
   - 将“22.15 在 Linux 上构建 FreeBSD”移动到“第 24 章 FreeBSD 内核”
   - 将“2.1-2.9”压缩归档至附录 Ⅱ“FreeBSD 13/14 安装指南”
   - 新增“2.2 安装 FreeBSD 15”
@@ -260,7 +260,7 @@
   - FreeBSD 安装镜像缺乏 kmod 的离线包，提交 [Bug 291052 - Request to offline-distribute kernel modules and pkg(8) repositories in iso and img images.](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=291052)
 - 2025.11.14
   - “3.3 使用 Virtual Box 安装 FreeBSD”增补“网络设置”
-  - Port [net/wutil](https://www.freshports.org/net/wutil)  测试失败，提交 issue [wutil: no wpa ctrl interface on default path, provide --ctrl-interface: No error: 0](https://github.com/MainKt/wutil/issues/2)
+  - Port [net/wutil](https://www.freshports.org/net/wutil) 测试失败，提交 issue [wutil: no wpa ctrl interface on default path, provide --ctrl-interface: No error: 0](https://github.com/MainKt/wutil/issues/2)
   - “6.3 KDE6（X11）”新增“附录：解决开机时总是自动打开特定程序”
 - 2025.11.13
   - CSP 配置错误，已经移除
@@ -350,7 +350,7 @@
   - 新增“6.16 KDE6（Wayland）”
 - 2025.8.31
   - 目前将无线电（WiFi）区域码设置为 `CN NONE`（`create_args_wlan0="country CN regdomain NONE"`）是不正确的，因为 FreeBSD 的文件没有得到维护，实际上会导致无法协商到 WiFi5（FreeBSD 为 VHT40），速率始终是 11a，不是应有的 11ac；并且对于 DFS，配置写的也不正确。已经报告 Bug 至 [Missing CN regulatory domain and 11ac/DFS support in regdomain.xml](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=289202)。临时解决方案：如果你的信道 > 48，需要专门在 `/etc/rc.conf` 中修改或写入 `create_args_wlan0="country HR regdomain ETSI"`；如果你的信道 <= 48，且存在 `create_args_wlan0="country CN regdomain NONE"`，请将其删除，因为默认的 FCC US 配置可支持其 WiFi5 协议。经过测试，即使是 WiFi 6 路由器，开启 WPA3、160MHz，也是受支持的。按照以上临时方案进行配置，Intel AX200 网卡在 FreeBSD 14.3-RELEASE 上可成功协商至 11ac。
-  - 因 budgie 主要维护者 Olivier Duchateau 称已对此项目不感兴趣，放弃维护。且无人主动维护，目前核心组件 Port `sysutils/budgie-control-center` [被标记为](https://www.freshports.org/sysutils/budgie-control-center/)  `broken`（破损）。考虑在日后删除 6.10 Budgie。如果 6 个月内仍未得到修复将建议上游删除此项目，并从本书中移除此节。
+  - 因 budgie 主要维护者 Olivier Duchateau 称已对此项目不感兴趣，放弃维护。且无人主动维护，目前核心组件 Port `sysutils/budgie-control-center` [被标记为](https://www.freshports.org/sysutils/budgie-control-center/) `broken`（破损）。考虑在日后删除 6.10 Budgie。如果 6 个月内仍未得到修复将建议上游删除此项目，并从本书中移除此节。
 - 2025.8.24
   - 新增：“12.5 无线网络环境下使用 bhyve”
   - “4.2 Linux 用户迁移指南”新增“历史”
@@ -547,7 +547,7 @@
   - “第 16.5 节 Wildfly”测试失败，见 [Bug 285956 - java/wildfly: service start fail, illegal group name](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=285956)
 - 2025.4.7
   - 全译现有所有安装后说明
-  - 从 [2024.8-3533 次](https://github.com/FreeBSD-Ask/FreeBSD-Ask/commit/c4d657fb586f91e9f8664ee1181a2711f7350d17)  开始，目前对全书初版已重写 94%（按 Commit 数），下同
+  - 从 [2024.8-3533 次](https://github.com/FreeBSD-Ask/FreeBSD-Ask/commit/c4d657fb586f91e9f8664ee1181a2711f7350d17) 开始，目前对全书初版已重写 94%（按 Commit 数），下同
   - 删除“第 11.3 节 散热器、风扇、鼓风机”，可能包含错误内容
 - 2025.4.6
   - “第 17.8 节 PostgreSQL 与 pgAdmin4”新增“深入 PostgreSQL 服务管理”
@@ -678,7 +678,7 @@
 - 2025.2.24
    “第 6.2 节 ZFS”新增“ZFS 压缩”
    “第 23.5 节 Grub 及其他引导”新增“UEFI 与 efibootmgr”
-  - “第 3.2 节 FreeBSD 换源方式”新增“kernel modules（kmods）内核模块源：面向 FreeBSD 14.2 及更高版本（不含 15.0-CURRENT）”
+  - “第 3.2 节 FreeBSD 切换软件源方式”新增“kernel modules（kmods）内核模块源：面向 FreeBSD 14.2 及更高版本（不含 15.0-CURRENT）”
   - 从“第 2.10 节 手动安装双系统（先安装 FreeBSD）”拆分出“第 2.13 节 配置 rEFInd（双系统用）”
 - 2025.2.23
   - 新增“后记”
@@ -1063,7 +1063,7 @@
   - 新增“第 19.17 节 杂记”
 - 2023.7.26
   - 新增 NetBSD “第 27.1 节 安装与配置”
-  - 新增 NetBSD “第 27.2 节 换源与包管理器”
+  - 新增 NetBSD “第 27.2 节 切换软件源与包管理器”
 - 2023.7.22
   - 增补 OpenBSD “第 26.1 节 安装”，将其更新至 OpenBSD 7.3
 - 2023.7.21
@@ -1077,7 +1077,7 @@
   - 新增“第 30.8 节 Linux 兼容层——基于 Rocky Linux”
   - 新增“第 30.9 节 Linux 兼容层——基于 Slackware Linux”
 - 2023.7.9
-  - 向 openSUSE 提交 [Bug 1213157 - repo http://download.opensuse.org/update/leap/15.5/oss : metadata expired](https://bugzilla.opensuse.org/show_bug.cgi?id=1213157)   zypper 一直有这个警告，不知道如何消除。更新、换源均不起作用。dnf 显示正常。但是不影响正常使用。
+  - 向 openSUSE 提交 [Bug 1213157 - repo http://download.opensuse.org/update/leap/15.5/oss : metadata expired](https://bugzilla.opensuse.org/show_bug.cgi?id=1213157) zypper 一直有这个警告，不知道如何消除。更新、切换软件源均不起作用。dnf 显示正常。但是不影响正常使用。
 - 2023.7.8
   - 新增“第 30.6 节 Linux 兼容层——基于 openSUSE”
 - 2023.7.7
@@ -1161,7 +1161,7 @@
 - 2023.1.24
   - 实质性填充“第 22.3 节 如何参与 FreeBSD 协作”  
 - 2023.1.13
-  - OpenBSD“第 26.2 节 配置”新增“挂载安卓设备”  
+  - OpenBSD“第 26.2 节 配置”新增“挂载 Android 设备”  
   - 在合适的位置引入“xdg-user-dirs”以自动创建家目录相关路径
 - 2023.1.11
   - 新增视频：[安装 DragonFly BSD 6.4](https://www.bilibili.com/video/BV1BM41187pD/)
@@ -1270,7 +1270,7 @@
 - 2022.2.9
   - 实质性填充“第一节 FTP 服务器”
 - 2022.2.5
-  - 增补“第二节 FreeBSD 换源方式”
+  - 增补“第二节 FreeBSD 切换软件源方式”
 - 2022.1.28
   - “第一节 三种虚拟机与 FreeBSD 版本比较”新增“Hyper-V”  
 - 2022.1.24
@@ -1297,14 +1297,14 @@
   - “第八节 Linux 用户迁移指北”新增“命令对比”
 - 2021.12.18
   - 实质性填充“第七节 安装 QQ”  
-  - 实质性增补“第二节 FreeBSD 换源方式”
+  - 实质性增补“第二节 FreeBSD 切换软件源方式”
   - 实质性增补“第二节 Nginx”
   - 新增“第八节 PostgreSQL 与 pgAdmin4”
 - 2021.12.15
   - 实质性填充“第七节 Samba 服务器”  
   - 实质性填充 OpenBSD“第一节 安装”
   - 实质性填充 OpenBSD“第二节 配置”
-  - 实质性填充 OpenBSD“第三节 换源”
+  - 实质性填充 OpenBSD“第三节 切换软件源”
   - 实质性填充 OpenBSD“第五节 桌面与其他软件”
 - 2021.12.14
   - 实质性填充 DragonFly BSD“第〇节 概述”  
@@ -1347,14 +1347,14 @@
 
 ## 2021 年第二季度
 
-《FreeBSD 从入门到跑路》项目在 [clean-master/freebsdcn](https://github.com/clean-master/freebsdcn)  进行更新。
+《FreeBSD 从入门到跑路》项目在 [clean-master/freebsdcn](https://github.com/clean-master/freebsdcn) 进行更新。
 
 ## 2021 年第一季度
 
 - 2021.3.15
   - ykla 在翌日凌晨完成了教程的初步整理与发布，此后主要维护者始终是 ykla
 - 2021.3.14
-  - 《FreeBSD 从入门到跑路》肇始于 2021 年 3 月 14 日（依据 [clean-master/freebsdcn](https://github.com/clean-master/freebsdcn/graphs/contributors)  项目的创建时间分析），由 FreeBSD 中文社区 [clean-master 清理大师](https://github.com/clean-master)  发起
+  - 《FreeBSD 从入门到跑路》肇始于 2021 年 3 月 14 日（依据 [clean-master/freebsdcn](https://github.com/clean-master/freebsdcn/graphs/contributors) 项目的创建时间分析），由 FreeBSD 中文社区 [clean-master 清理大师](https://github.com/clean-master) 发起
 
 ## 2020 年第四季度
 

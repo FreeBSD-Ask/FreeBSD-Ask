@@ -73,11 +73,11 @@ login:
   - `root@ykla:/`：
     - `root`：当前用户是 root
     - `@`：“谁”在“xx”主机上
-    - `ykla`：这里是主机名，和用户 ykla 无涉。你可以随便起不一样的主机名
+    - `ykla`：这里是主机名，和用户 ykla 无关。你可以随便起不一样的主机名
     - `:/`：代表当前位于 `/` 路径下
 - ② 注意到提示符号的变化没有？root 是 `#`，普通用户是 `$`（csh 是 `%`）
 - ③ 如果仅输入 `su` 并回车，命令的含义是从当前用户切换到 root 账户（如果已经是 root，则不会有任何变化）。但必须是 wheel 组的成员才能进行此操作，否则会报错 `sorry`。
-- ④ 从普通用户切换到 root，要输入的密码是 root 账户的登录密码。
+- ④ 从普通用户切换到 root，需要 root 账户的登录密码。
 - ⑤ 输入 `exit` 可退出当前用户，如果是唯一登录的用户，将退出登录到 TTY。
 
 > **思考题**
@@ -130,7 +130,7 @@ drwxrwxrwt  2 root    wheel  3 Mar 18 17:23 .ICE-unix
 
 其中，`ls`（L 小写）意味着列出当前目录或指定目录下的文件；选项 `-l`（L 小写）意味着打印详细信息，输出长（*long*）格式。
 
-目前，大多数命令均遵循上述形式（细节有所省略）。这是 [POSIX.1-2024](https://pubs.opengroup.org/onlinepubs/9799919799/)  规范所规定的。
+目前，大多数命令均遵循上述形式（细节有所省略）。这是 [POSIX.1-2024](https://pubs.opengroup.org/onlinepubs/9799919799/) 规范所规定的。
 
 需要注意中英文书写习惯的差异：中文行文不使用空格分隔，而英文单词必须使用空格加以区分。因此，命令行中各个组成部分之间应使用空格分隔 ` `。空格的数量一般不受限制，但最少应该为一个，即 ` `。
 
@@ -191,7 +191,7 @@ usage: ls [-ABCFGHILPRSTUWZabcdfghiklmnopqrstuvwxy1,] [--color=when] [-D format]
 
 > **技巧**
 >
-> 命令前面的 `#` 表示什么意思？`#` 在 shell 当中一般是起注释作用（由 [POSIX.1-2024](https://pubs.opengroup.org/onlinepubs/9799919799/utilities/V3_chap02.html)  规定），相当于 C 语言里面的 `//`。意味着后边的文字只起到说明作用，不起实际作用。
+> 命令前面的 `#` 表示什么意思？`#` 在 shell 当中一般是起注释作用（由 [POSIX.1-2024](https://pubs.opengroup.org/onlinepubs/9799919799/utilities/V3_chap02.html) 规定），相当于 C 语言中的 `//`。意味着后边的文字只起到说明作用，不起实际作用。
 >
 ### 拼写自动纠正工具（可选）
 
@@ -300,7 +300,7 @@ cp: test9: No such file or directory
 
 执行中断有很多可能的情形，以上只是其中一种（指定的文件或目录不存在）。
 
-可以看到，只有当执行中断时，命令行才会有提示；若执行完毕，是不会有任何提示的。这种 Unix 设计哲学旨在保证终端输出的简洁性。
+可以看到，只有当执行中断时，命令行才会有提示；若执行完毕，是不会有任何提示的。这种 UNIX 设计哲学旨在保证终端输出的简洁性。
 
 ## shell 命令的来源
 
@@ -415,7 +415,7 @@ drwxr-xr-x  2 ykla ykla    2B Mar  9 20:45 下载
 ……省略一部分……
 ```
 
-在 UNIX 系统中，以 `.` 开头的文件或目录（如上面的 `.XIM-unix`）都是隐藏的。你的安卓手机也是一样的——你可以通过 [MT 文件管理器](https://mt2.cn/)  自行查看一下。
+在 UNIX 系统中，以 `.` 开头的文件或目录（如上面的 `.XIM-unix`）都是隐藏的。Android 手机也是一样的——可以通过 [MT 文件管理器](https://mt2.cn/) 自行查看。
 
 选项 `-a` 可用于显示隐藏的目录和文件：
 
@@ -453,7 +453,7 @@ $ touch test
 
 > **技巧**
 >
-> 你可以看到我是创建了 `test`，而不是叫什么 `test.txt`、`test.word`、`test.pdf` 之类的。事实上，`.txt` 这一部分称为文件后缀名，主要用于提示用户文件类型，而非供系统识别。许多我们以为的清楚明白的事物真的如我们所认为的那般吗？
+> 可以看到上述命令创建的是 `test`，而非 `test.txt`、`test.word`、`test.pdf` 之类的。事实上，`.txt` 这一部分称为文件后缀名，主要用于提示用户文件类型，而非供系统识别。许多我们以为的清楚明白的事物真的如我们所认为的那般吗？
 >
 > 即使我们去掉相应的后缀名，在类 UNIX 系统中也可以识别文件的类型，这是根据文件幻数（magic numbers）确定的：
 >
@@ -578,7 +578,7 @@ $ rm -rf /home/ykla/test/
 
 > **警告**
 >
-> 网上经常有人说使用 `sudo rm -rf /*` 是某某命令可以 xxx，误导他人对系统造成不可挽回的灾难性破坏。该命令实质上是以 root 权限（~~还好 FreeBSD 默认没有 sudo~~），删除 `/` 及其子目录下的一切存在。让我来展示一下：
+> 网上经常有人说使用 `sudo rm -rf /*` 是某某命令可以 xxx，误导他人对系统造成不可挽回的灾难性破坏。该命令实质上是以 root 权限（~~还好 FreeBSD 默认没有 sudo~~），删除 `/` 及其子目录下的一切存在。现在展示一下结果：
 >
 >```sh
 ># rm -rf /*
@@ -593,7 +593,7 @@ $ rm -rf /home/ykla/test/
 >
 > ![引导错误](../.gitbook/assets/noefi.png)
 >
-> 重启后你会发现连引导都没了。
+> 重启后即可发现引导项丢失。
 >
 >> **思考题**
 >>
@@ -731,11 +731,11 @@ $ rm -rf *
 
 ### 逻辑运算符 `||`
 
-`||`（逻辑或，OR）：只有 `||` 之前的命令执行错误了，后边的命令才会执行；否则如果 `||` 之前的命令执行成功了，后面的命令就不会执行。
+`||`（逻辑或，OR）：只有 `||` 之前的命令执行失败时，后边的命令才会执行；如果 `||` 之前的命令执行成功，后面的命令就不会执行。
 
 简单理解：你要么做饭，要么点外卖，要么出去吃——> 做饭 `||` 点外卖 `||` 出去吃。如果不会做饭，就只能点外卖，如果外卖没有好吃的，就只能出去吃。
 
-使用场景：如果一个命令一直执行失败，但偏要它一直执行。就可以写很多的 `||`，防止一次失败后反复手动再次执行该命令，比如：
+使用场景：如果一个命令一直执行失败，但偏要它一直执行。就可以写很多 `||`，防止一次失败后反复手动再次执行该命令，比如：
 
 ```sh
 make BATCH=yes install || make BATCH=yes install || make BATCH=yes install || make BATCH=yes install
@@ -755,7 +755,7 @@ make BATCH=yes install || make BATCH=yes install || make BATCH=yes install || ma
 
 ## BSD 风格的 make/grep/sed/awk
 
-FreeBSD 的 [make](https://www.freebsd.org/cgi/man.cgi?query=make&apropos=0&sektion=0&manpath=FreeBSD+13.1-RELEASE+and+Ports&arch=default&format=html) /[grep](https://www.freebsd.org/cgi/man.cgi?query=grep&sektion=&n=1) /[sed](https://www.freebsd.org/cgi/man.cgi?query=sed&apropos=0&sektion=0&manpath=FreeBSD+13.1-RELEASE+and+Ports&arch=default&format=html) /[awk](https://www.freebsd.org/cgi/man.cgi?query=awk&apropos=0&sektion=0&manpath=FreeBSD+13.1-RELEASE+and+Ports&arch=default&format=html)  与 GNU 那套有所不同。详见 man 手册。
+FreeBSD 的 [make](https://www.freebsd.org/cgi/man.cgi?query=make&apropos=0&sektion=0&manpath=FreeBSD+13.1-RELEASE+and+Ports&arch=default&format=html) /[grep](https://www.freebsd.org/cgi/man.cgi?query=grep&sektion=&n=1) /[sed](https://www.freebsd.org/cgi/man.cgi?query=sed&apropos=0&sektion=0&manpath=FreeBSD+13.1-RELEASE+and+Ports&arch=default&format=html) /[awk](https://www.freebsd.org/cgi/man.cgi?query=awk&apropos=0&sektion=0&manpath=FreeBSD+13.1-RELEASE+and+Ports&arch=default&format=html) 与 GNU 那套有所不同。详见 man 手册。
 
 示例：
 
@@ -767,14 +767,14 @@ sed -i '' 's/quarterly/latest/g' /etc/pkg/FreeBSD.conf
 
 ## 关机与重启
 
-FreeBSD 和 Linux 的 shutdown 命令在语法和行为上有一些差异，如果你有使用 Linux 的经验，那么是不能照抄的。
+FreeBSD 和 Linux 的 shutdown 命令在语法和行为上有一些差异，如果你有使用 Linux 的经验，那么是不能照搬的。
 
 FreeBSD 的设计更接近传统 UNIX 的行为。
 
 关机：
 
 - 使用 `shutdown now` 将不会关机，而是切换到“单用户模式”，将提示：`Enter full pathname of shell or RETURN for /bin/sh :` 回车后进入单用户模式；
-- 使用 `shutdown -h now` 将不会彻底断电，只会停止系统的运行，将提示：`The operating system has halted. Please press any key to reboot.` 此处按任意键可重启系统；
+- 使用 `shutdown -h now` 将不会彻底断电，只会停止系统的运行，提示：`The operating system has halted. Please press any key to reboot.` 此处按任意键可重启系统；
 - 正确的关机并断电命令是 `poweroff`，等同于命令 `shutdown -p now`。
 
 重启：
@@ -788,6 +788,6 @@ FreeBSD 的设计更接近传统 UNIX 的行为。
 
 ## 课后习题
 
-1. 在 FreeBSD 中使用 BSD 风格的 sed/awk/grep 处理 3 个文本文件，记录与 GNU 版本的差异。
-2. 查看 FreeBSD 中 ls 命令的源码实现，与 GNU 的实现进行对比。
-3. 修改 FreeBSD 中默认 umask 值，验证新建文件权限的变化。
+1. 尝试进行对 BSD 风格的 sed/awk/grep 命令选项进行优化，使其兼容 GNU 语法。
+2. 查看 FreeBSD 中 ls 命令的源码实现，并与 GNU 的实现进行比较。
+

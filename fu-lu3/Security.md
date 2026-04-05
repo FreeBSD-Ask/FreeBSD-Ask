@@ -14,7 +14,7 @@ BIOS（基本输入输出系统，Basic Input/Output System）密码是一种固
 
 若仅设置了管理员密码，则仅限制进入固件设置程序（BIOS 或 UEFI）。必须输入管理员密码才能读取和修改 BIOS 设置。
 
-若仅设置了用户密码，则此为开机密码，并且需在开机进入 Windows 或进入 BIOS 时输入此密码。在 BIOS 设置中，使用者将拥有管理员权限。
+若仅设置了用户密码，则此为开机密码，需在开机进入 Windows 或进入 BIOS 时输入此密码。在 BIOS 设置中，使用者将拥有管理员权限。
 
 如果同时设置了管理员密码和用户密码，进入 BIOS 设置时，必须输入管理员密码才能读取和变更 BIOS 设置。若输入的是用户密码，仅能浏览而不能修改 BIOS 设置。
 
@@ -54,9 +54,9 @@ BIOS（基本输入输出系统，Basic Input/Output System）密码是一种固
 
 HDD 密码说明：
 
-可设置、修改和清除硬盘用户密码和主密码。
+可设置、修改和清除硬盘的用户密码和主密码。
 
-用户密码是启用硬盘安全功能的前提。
+用户密码是启用硬盘安全功能的前提条件。
 
 如果已设置主密码（可选），也可用其解锁硬盘。
 
@@ -99,7 +99,7 @@ Disabled（禁用）
 
 当启用此选项、平台密钥（Platform Key，PK）已注册且系统处于用户模式时，安全启动功能将处于激活状态。更改模式需要重启。平台密钥（Platform Key，PK）用于在平台所有者与平台固件之间建立信任关系，平台所有者会将密钥的一部分注册到平台固件中。
 
-当未注册 PK 时，安全启动在 Setup Mode 模式下运行，在修改 PK、KEK、DB 和 DBX 变量时 BIOS 无需认证，此时可通过写入 PK、KEK、DB 和 DBX 变量来配置安全启动策略。BIOS 可工作在 Setup Mode 和 Audit Mode 模式，且从 Setup Mode 模式可以直接修改为 Audit Mode。
+当未注册 PK 时，安全启动在 Setup Mode 模式下运行，在修改 PK、KEK、DB 和 DBX 变量时 BIOS 无需认证，此时可通过写入 PK、KEK、DB 和 DBX 变量来配置安全启动策略。BIOS 可工作在 Setup Mode 和 Audit Mode 模式，且从 Setup Mode 可以直接切换为 Audit Mode。
 
 当注册了 PK 后，且 BIOS 在 User Mode 模式下运行时，User Mode 模式要求所有可执行文件在运行之前都要经过认证。此时 BIOS 可工作在 User Mode 和 Deployed Mode 模式下，且从 User Mode 模式可以直接修改为 Deployed Mode。
 

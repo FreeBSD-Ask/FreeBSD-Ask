@@ -94,7 +94,7 @@ origin/main created around 2025-10-24 12:43:02 +0900
 
 quarterly 实际上类似于 Debian 的 Stable 版本，此处的 Stable 不仅表示“稳定”，也包含“固定”的含义。我们有必要区分“稳定”和“固定”两个词语：
 
-根据 [Merriam‑Webster](https://www.merriam-webster.com/dictionary/stable)  和 [Cambridge Dictionary](https://dictionary.cambridge.org/us/dictionary/english/stable)，Stable 有“fixed”（固定）的意思。我们来看一下《现代汉语词典（第 7 版）》第 1374 页，就会发现“稳定”第一个释义被解释为“形容词，稳定安固，没有变动”；第 470 页载“固定”为“动词，不变动或不移动（跟‘流动’相对）”。因此，“固定”是实现“稳定”的一种手段，而“稳定”是一种目的。
+根据 [Merriam‑Webster](https://www.merriam-webster.com/dictionary/stable) 和 [Cambridge Dictionary](https://dictionary.cambridge.org/us/dictionary/english/stable)，Stable 有“fixed”（固定）的意思。我们来看一下《现代汉语词典（第 7 版）》第 1374 页，就会发现“稳定”第一个释义被解释为“形容词，稳定安固，没有变动”；第 470 页载“固定”为“动词，不变动或不移动（跟‘流动’相对）”。因此，“固定”是实现“稳定”的一种手段，而“稳定”是一种目的。
 
 >**技巧**
 >
@@ -162,7 +162,7 @@ USTC-base: {
 >
 >可以简单地将上述配置中的两个 `quarterly` 都替换成 `latest` 来使用滚动更新的软件源。
 
-## pkg 二进制包（由 Ports 构建的二进制包）换源
+## pkg 二进制包（由 Ports 构建的二进制包）切换软件源
 
 FreeBSD 中的 pkg 源分为系统级和用户级两个配置文件。**不建议** 直接修改 `/etc/pkg/FreeBSD.conf`，**因为该文件会随着基本系统的更新而发生改变。**
 
@@ -402,7 +402,7 @@ USTC-base: {
 
 > **技巧**
 >
-> 在从 14.X pkgbase 系统升级到 15.0 时，常遇到签名密钥问题。请确保 `/usr/share/keys/pkgbase-15` 存在（如果缺失，可从官方源手动 fetch 或参考 Release Notes 中的升级说明）。否则会出现 “no trusted public keys found” 错误。详见 [15.0 Release Notes - Upgrading](https://www.freebsd.org/releases/15.0R/relnotes/#upgrade)  和论坛相关讨论。
+> 在从 14.X pkgbase 系统升级到 15.0 时，常遇到签名密钥问题。请确保 `/usr/share/keys/pkgbase-15` 存在（如果缺失，可从官方源手动 fetch 或参考 Release Notes 中的升级说明）。否则会出现 “no trusted public keys found” 错误。详见 [15.0 Release Notes - Upgrading](https://www.freebsd.org/releases/15.0R/relnotes/#upgrade) 和论坛相关讨论。
 
 ## STABLE/CURRENT 快速切换 pkg 软件源到中国科学技术大学开源镜像站
 
@@ -564,3 +564,8 @@ Fetching http://ftp-archive.freebsd.org/pub/FreeBSD-Archive/ports/amd64/packages
 > **注意**
 >
 > pkg 是不可用的，会提示找不到 `digests.txz` 和 `repo.txz`，因为当时 pkgng 还没有被官方支持，仍然仅支持使用 `pkg_*` 命令。
+
+
+## 课后习题
+
+1. 尝试让 [Portsnap](https://man.freebsd.org/portsnap) 工具复活，弥补其原有欠缺的功能，使之现代化。

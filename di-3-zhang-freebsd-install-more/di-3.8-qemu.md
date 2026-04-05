@@ -24,6 +24,8 @@ RISC-V FreeBSD 磁盘镜像（以 FreeBSD 14.2 RELEASE 为例）：
 
 下载后解压缩备用。
 
+## 相关文件结构
+
 ```sh
 /usr/
 └── local/
@@ -209,8 +211,5 @@ ssh ykla@localhost:8022
 
 ## 课后习题
 
-1. 研究 OpenSBI 与 U-Boot 在 RISC-V 启动链中的职责划分，尝试移除其中一个组件并替换为简化实现，验证系统能否正常启动。
-
-2. 分析 QEMU 中 RISC-V 图形界面支持的技术障碍，研究 virtio-gpu 设备在 FreeBSD RISC-V 上的驱动状态，尝试配置基本的图形输出。
-
-3. 修改 QEMU 启动脚本中的 CPU 核心数与内存大小参数，对比不同配置下系统的启动时间与运行性能。
+1. 使用更简单的方法提取 OpenSBI、u-boot.bin 等文件。
+2. 分析 QEMU 中 RISC-V 图形界面支持的技术障碍并提出解决方案。

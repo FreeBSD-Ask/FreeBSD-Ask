@@ -4,9 +4,9 @@
 
 ## 视频教程
 
-以下视频教程演示了在 Windows 11 上安装 VMware Workstation Pro 17 的过程，具有直观的操作演示，可供读者参考。
+以下视频教程演示了在 Windows 11 上安装 VMware Workstation Pro 17 的过程，具有直观的操作演示，可供读者参考：
 
-- [001-Windows 11 安装 VMware 17](https://www.bilibili.com/video/BV1Qji2YLEgS)
+FreeBSD 中文社区. 001-Windows 11 安装 VMware 17[EB/OL]. [2026-04-04]. <https://www.bilibili.com/video/BV1Qji2YLEgS>.
 
 ## 镜像下载
 
@@ -70,7 +70,7 @@
 
 > **警告**
 >
-> 由于 [Bug 250580 - VMware UEFI guests crash in virtual hardware after r366691](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=250580) 的存在，FreeBSD 11/12 在 VMware 的 UEFI 环境下可能无法启动。经测试，FreeBSD 13.0 可正常启动。
+> 由于 FreeBSD. Bug 250580 – VMware UEFI guests crash in virtual hardware after r366691[EB/OL]. (2020-10-24)[2026-04-04]. <https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=250580>. 的存在，FreeBSD 11-RELEASE/12-RELEASE 在 VMware 的 UEFI 环境下可能无法启动。经测试，FreeBSD 13.0-RELEASE 可正常启动。
 
 ![VMware 安装 FreeBSD](../.gitbook/assets/vm13.png)
 
@@ -122,16 +122,6 @@
 # cd /usr/ports/x11-drivers/xf86-input-vmmouse/  && make install clean
 ```
 
-```text
-/usr/
-└── ports/
-    ├── x11-drivers/
-    │   ├── xf86-video-vmware/ # VMware 显卡驱动
-    │   └── xf86-input-vmmouse/  # VMware 虚拟鼠标驱动
-    └── emulators/
-        └── open-vm-tools/        # 虚拟机增强工具
-```
-
 > **注意**
 >
 >如果不需要图形界面支持，可以安装无 X11 依赖的版本（仍然是 Port `emulators/open-vm-tools`）：
@@ -159,6 +149,8 @@
 # Xorg -configure             # 生成 Xorg 默认配置文件
 # mv /root/xorg.conf.new /usr/local/share/X11/xorg.conf.d/xorg.conf  # 安装 Xorg 配置文件
 ```
+
+相关文件结构：
 
 ```text
 /
@@ -224,6 +216,8 @@ fusefs_load="YES"
 ```
 
 可在系统启动时加载 fusefs 内核模块。
+
+相关文件结构：
 
 ```text
 /
@@ -331,7 +325,7 @@ VMware 已被博通（Broadcom）收购。从官方下载 VMware 相关产品需
 >
 >![注册](../.gitbook/assets/Register2.png)
 >
->- 将第五步得到的“Verification Code: 972980”，中的 972980（你的和我不一样，找你自己的）填到“Enter text from image”里面。
+>- 将第五步得到的“Verification Code: 972980”，中的 972980（你的和我不一样，找你自己的）填入“Enter text from image”中。
 >
 >![邮箱验证码](../.gitbook/assets/mail.png)
 >
@@ -421,12 +415,10 @@ VMware Workstation Pro 目前对于个人用户来说是 **免费下载、免费
 
 ### VMware Workstation Player（已停止维护）
 
->VMware Workstation Player 已不再维护，建议使用 VMware Workstation Pro。
+VMware Workstation Player 已不再维护，建议使用 VMware Workstation Pro。
 
 ## 课后习题
 
-1. 研究 VMware 共享文件夹实现机制，修改 fstab 挂载选项，分析 `failok` 参数如何改变系统对非关键文件系统的处理策略。
-
-2. 分析 VMware 虚拟机增强工具（open-vm-tools）的源代码结构，尝试移除其中一个功能模块并重新编译，验证该功能缺失后的系统行为变化。
-
-3. 对比 NAT 模式与桥接模式的网络隔离差异，分别在两种模式下测试宿主机与虚拟机的端口访问权限。
+1. 在博通官网下载最新版本的 VMware Workstation Pro。
+2. 就境内软件和境外软件，分别分析如何辨别软件的官方分发网站。
+3. 解释为什么人们往往对“官方网站”分发的软件持有一种天然的信任感（例如“只从官方网站下载软件”这种说法），这种信任是正确可靠的吗？

@@ -28,7 +28,7 @@ Off（关）
 
 具体说明：
 
-选择键盘 NumLock 状态（锁定或解锁数字小键盘）。设备启动后，可将数字小键盘设置为开启（On，用于数字输入）或关闭（Off，用于导航功能）。导航功能指通过数字键实现界面上下左右移动。
+选择键盘 NumLock 状态（锁定或解锁数字小键盘）。设备启动后，可将数字小键盘设置为开启（On，用于数字输入）或关闭（Off，用于导航功能）。导航功能指通过数字键实现界面的上下左右移动。
 
 ## Quiet Boot（静默启动）
 
@@ -76,7 +76,7 @@ All SATA Devices（全部 SATA 设备）
 
 如果选择“仅最后启动的 SATA 设备”，则在 POST 过程中仅检测并显示上一次启动时使用的 SATA 设备。
 
-如果选择“全部 SATA 设备”，则所有 SATA 设备都会在 POST 过程中被检测，并在操作系统中可用。
+如果选择“全部 SATA 设备”，则所有 SATA 设备都会在 POST 过程中被检测到，并在操作系统中可用。
 
 ## NVMe Support（NVMe 支持）
 
@@ -248,8 +248,6 @@ Disabled（禁用）
 
 ## 课后习题
 
-1. 在 FreeBSD 中配置 PXE 网络启动环境，制作网络启动镜像，设置 Network Stack Driver Support 为启用，验证从网络启动 FreeBSD 的完整流程，并对比本地启动与网络启动的差异。
+1. 在 FreeBSD 中配置 PXE 网络启动环境，制作网络启动镜像，设置 Network Stack Driver Support 为启用，验证从网络启动 FreeBSD 的完整流程。
 
-2. 分析启动顺序（Boot Option #1-#9）机制的设计，重构其最小功能模型，探讨为什么固件优先于操作系统控制启动设备选择。
-
-3. 启用 Fast Boot 并设置 USB Support 为 Disabled，记录无法访问 BIOS 的后果，然后使用 CMOS 清空或 Windows 高级启动恢复。
+2. 分析启动顺序（Boot Option #1-#9）机制的设计。

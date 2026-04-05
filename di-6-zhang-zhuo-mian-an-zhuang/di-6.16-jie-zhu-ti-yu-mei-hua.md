@@ -8,7 +8,7 @@ FreeBSD 安装桌面环境后，默认通常采用简单朴素的色调。这种
 
 以下仅收录部分图标和主题，如需获取更多资源，可访问 [FreshPorts](https://www.freshports.org)。
 
-## 主题
+## 桌面主题
 
 - matcha 主题：`# pkg install matcha-gtk-themes`
 - Qogir 主题：`# pkg install qogir-gtk-themes`
@@ -19,7 +19,7 @@ FreeBSD 安装桌面环境后，默认通常采用简单朴素的色调。这种
 - Yaru 主题：`# pkg install yaru-gtk-themes`
 - Canta 主题：`# pkg install canta-gtk-themes`
 
-## 图标
+## 桌面图标
 
 - papirus 图标：`# pkg install papirus-icon-theme`
 - Qogir 图标：`# pkg install qogir-icon-themes`
@@ -36,35 +36,35 @@ FreeBSD 安装桌面环境后，默认通常采用简单朴素的色调。这种
 
 1. 下载主题源码包：`git clone https://github.com/vinceliuice/WhiteSur-kde`
 2. 进入主题包目录：`cd WhiteSur-kde`
-3. 修改 shebang：`ee install.sh`，修改第一行为 `#!/usr/local/bin/bash`，然后保存。
+3. 修改 shebang：编辑 `install.sh` 文件，修改第一行为 `#!/usr/local/bin/bash`，然后保存。
 4. 执行安装：`bash install.sh`
 
 ## Gnome 主题美化
 
-同样，我们要安装的是 [WhiteSur](https://www.pling.com/p/1403328/)  主题。
+同样，我们要安装的是 [WhiteSur](https://www.pling.com/p/1403328/) 主题。
 
 1. 下载主题源码包：`git clone https://github.com/vinceliuice/WhiteSur-gtk-theme`
 2. 进入主题包目录：`cd WhiteSur-gtk-theme`
-3. 修改 shebang：`ee install.sh`，修改第一行为 `#!/usr/local/bin/bash`，然后保存。
+3. 修改 shebang：编辑 `install.sh` 文件，修改第一行为 `#!/usr/local/bin/bash`，然后保存。
 4. 执行安装：`bash install.sh`
 
 ## [图标](https://www.pling.com/p/1405756/)
 
 1. 下载图标：`git clone https://github.com/vinceliuice/WhiteSur-icon-theme`
 2. 进入软件目录：`cd WhiteSur-icon-theme`
-3. 修改 shebang：`ee install.sh`，修改第一行为 `#!/usr/local/bin/bash`，然后保存。
+3. 修改 shebang：编辑 `install.sh` 文件，修改第一行为 `#!/usr/local/bin/bash`，然后保存。
 4. 执行安装：`bash install.sh`
 
 ## [光标](https://www.pling.com/p/1355701/)
 
 1. 下载光标：`git clone https://github.com/vinceliuice/McMojave-cursors`
 2. 进入软件目录：`cd McMojave-cursors`
-3. 修改 shebang：`ee install.sh`，修改第一行为 `#!/usr/local/bin/bash`，然后保存。
+3. 修改 shebang：编辑 `install.sh` 文件，修改第一行为 `#!/usr/local/bin/bash`，然后保存。
 4. 执行安装：`bash install.sh`
 
 ## 背景图片
 
-[下载地址](https://github.com/vinceliuice/WhiteSur-kde/tree/master/wallpaper)
+[下载地址](https://github.com/vinceliuice/WhiteSur-kde/tree/master/wallpaper)。
 
 ## 思考题
 
@@ -76,30 +76,32 @@ $ cd papirus-icon-theme  # 进入仓库目录
 $ ./install.sh  # 执行脚本安装图标主题
 ```
 
-## 系统更新提示 `freebsd-update-notify`
+## 系统更新检测工具
 
 > **技巧**
 >
-> FreeBSD 上的 KDE6 自带类似功能，无需安装 `freebsd-update-notify`，本教程仅作示例。
+> FreeBSD 下的 KDE6 自带类似功能，无需安装 `freebsd-update-notify`，本教程仅作示例。
 
-`freebsd-update-notify` 可以自动检测 FreeBSD 系统和 pkg 包的更新。
+freebsd-update-notify 可以自动检测 FreeBSD 系统和 pkg 包的更新。
 
-### 安装 `freebsd-update-notify`
+### 安装 freebsd-update-notify
+
+使用 pkg 安装：
 
 ```sh
 # pkg install freebsd-update-notify
 ```
 
-或
+或使用 Ports 安装：
 
 ```sh
 # cd /usr/ports/deskutils/freebsd-update-notify/
 # make install clean
 ```
 
-### 配置 `freebsd-update-notify`
+### 配置 freebsd-update-notify
 
-配置文件位于 `/usr/local/etc/freebsd-update-notify/freebsd-update-notify.conf`：
+freebsd-update-notify 的配置文件位于 `/usr/local/etc/freebsd-update-notify/freebsd-update-notify.conf`：
 
 默认配置的更新间隔较长，可以改为：
 
@@ -114,7 +116,7 @@ hours-between-reminders     8   # 提醒间隔（小时）
 >
 > 截图为手动执行示例，实际上程序可以在后台自动运行，无需手动验证。若无法再现，可以尝试将 `freebsd-update-notify.conf` 中两个值都改为 `0`，再手动以 `root` 权限执行 `/usr/local/libexec/freebsd-update-notify`。
 
-日志位于 `/var/log/freebsd-update-cron` 和 `/var/log/freebsd-update-notify`。若要反馈故障，请使用英文提交 [issue](https://github.com/outpaddling/freebsd-update-notify/issues)。
+freebsd-update-notify 的日志位于 `/var/log/freebsd-update-cron` 和 `/var/log/freebsd-update-notify`。若要反馈故障，请使用英文提交至 [issue](https://github.com/outpaddling/freebsd-update-notify/issues)。
 
 ![freebsd-update-notify on FreeBSD](../.gitbook/assets/notify1.png)
 
@@ -124,5 +126,5 @@ hours-between-reminders     8   # 提醒间隔（小时）
 
 ## 课后习题
 
-1. 查找 WhiteSur 主题的源码仓库，分析其跨平台适配机制，在 QEMU 中构建主题安装环境并验证其在 FreeBSD 上的应用效果。
-2. 修改 freebsd-update-notify 的默认更新检测间隔，验证其通知行为变化。
+1. 移植若干主题到 Ports。
+2. 移植若干图标到 Ports。

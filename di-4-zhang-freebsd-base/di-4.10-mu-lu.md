@@ -23,7 +23,7 @@
 │   ├── efi EFI 系统分区挂载至此
 │   ├── dtb 设备树 DTB 文件，x86 架构下应为空
 │   └── defaults 存放默认内核的默认引导配置文件
-│       └── loader.conf 详细的示例说明文件，参见 loader.conf(5)  
+│       └── loader.conf 详细的示例说明文件，参见 loader.conf(5) 
 ├── media 媒体文件挂载点，如 U 盘，光盘
 ├── mnt 用作临时挂载点的空目录
 ├── tmp 通常在系统重启后仍会保留的临时文件
@@ -53,7 +53,7 @@
 │   ├── audit 存储安全审计日志文件，属于 audit 组
 │   ├── account 默认为空，系统审计用，参见 accton(8)
 │   └── tmp 通常会在系统重启后保留的临时文件
-├── rescue 静态链接的系统工具，紧急模式时用，参见 rescue(8)
+├── rescue 静态链接的系统工具，紧急模式时使用，参见 rescue(8)
 ├── dev 存放设备文件和特殊文件，参见 devfs(5)
 │   ├── reroot reboot -r 使用
 │   ├── input 存放输入设备相关的设备文件
@@ -158,6 +158,6 @@ dr-xr-xr-x   2 root    wheel   schg,uarch  2 Feb 21 10:26 empty
 
 ## 课后习题
 
-1. 在 FreeBSD 中遍历整个目录树结构，使用 find 命令定位 10 个重要系统配置文件，记录其路径和用途。
-2. 查看 FreeBSD 源码中 `/etc/defaults/` 目录的设计文档，分析其目录结构如何在组织性与灵活性之间做权衡。
+1. 在 FreeBSD 中遍历整个目录树结构，并与 Ubuntu 最新 LTS 版本进行比较。
+2. 分析 FreeBSD 源码中有关文件结构的设计。
 3. 修改 FreeBSD 中 `/tmp` 目录的默认权限配置，验证其行为变化。

@@ -3884,7 +3884,7 @@ IDE（Integrated Drive Electronics，集成驱动电子接口）
 
 现代计算机通常使用 AHCI 模式。大部分非 Windows 操作系统（本身也需要驱动才能支持）都与 RAID 模式不兼容（但是英特尔快速存储技术需要 RAID 模式）。
 
-并且这个 RAID，一般叫作 Fake-RAID/hardware-assisted software RAID，伪 RAID，不是真正的硬 RAID。这种情况下可能需要英特尔快速存储技术（RST）驱动才能正常使用。
+并且该 RAID，一般称作 Fake-RAID/hardware-assisted software RAID，伪 RAID，不是真正的硬 RAID。这种情况下可能需要英特尔快速存储技术（RST）驱动才能正常使用。
 
 参见：Install Arch Linux with Fake RAID[EB/OL]. [2026-03-26]. <https://wiki.archlinuxcn.org/wiki/Install_Arch_Linux_with_Fake_RAID>
 
@@ -6333,8 +6333,6 @@ PLL：Phase Locked Loop，锁相环
 
 ## 课后习题
 
-1. 在 FreeBSD 中使用 pciconf 工具列出 PCH 设备，选取其中一个控制器（如 SATA、PCIe 或 USB），编写简单程序读取其配置空间寄存器，记录并分析 BIOS 中默认配置与实际运行时的配置差异。
+1. 在 FreeBSD 中使用 pciconf 工具列出 PCH 设备，选取其中一个控制器（如 SATA、PCIe 或 USB），编写简单程序读取其配置空间寄存器。
 
-2. 选取 PCH 交叉节流（PCH Cross Throttling）机制，重构其最小概念模型。
-
-3. 修改 Flash Protection Range Registers (FPRR) 为禁用状态，验证是否可使用工具直接访问 BIOS 闪存区域。
+2. 修改 Flash Protection Range Registers (FPRR) 为禁用状态，验证是否可使用工具直接访问 BIOS 闪存区域。

@@ -2,7 +2,7 @@
 
 在多系统环境下，频繁通过 BIOS 固件界面切换操作系统存在效率低下的问题。本节研究 rEFInd 引导管理器的部署与配置技术，旨在为多系统用户提供一种便捷的启动选择解决方案，提升多系统使用的用户体验。
 
-我们可以借助 [rEFInd](https://www.rodsbooks.com/refind/)  实现类似于 Clover 的可视化启动菜单效果，在开机时直观地选择要进入的操作系统。
+我们可以借助 [rEFInd](https://www.rodsbooks.com/refind/) 实现类似于 Clover 的可视化启动菜单效果，在开机时直观地选择要进入的操作系统。
 
 `rEFInd` 派生自 `rEFIt`，其名称结合了“refind”（意为“重新发现”或“改进”）与“EFI”（Extensible Firmware Interface，可扩展固件接口），主要用于管理 UEFI 启动，具有良好的图形化界面与可配置性。
 
@@ -57,13 +57,13 @@ EFI/
         └── bootmgfw.efi   # Windows 启动管理器
 ```
 
-使用 [DiskGenius](https://www.diskgenius.com/)  将处理好的 `refind` 文件夹复制到 EFI 系统分区（ESP）的 `EFI` 目录下。
+使用 [DiskGenius](https://www.diskgenius.com/) 将处理好的 `refind` 文件夹复制到 EFI 系统分区（ESP）的 `EFI` 目录下。
 
 ![复制 rEFInd 到 EFI 分区](../.gitbook/assets/shaung13.png)
 
 ## 添加启动项
 
-使用 [DiskGenius](https://www.diskgenius.com/)  添加 UEFI 引导项。
+使用 [DiskGenius](https://www.diskgenius.com/) 添加 UEFI 引导项。
 
 ![添加 UEFI 引导项](../.gitbook/assets/shuang14.png)
 

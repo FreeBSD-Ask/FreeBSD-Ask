@@ -4,7 +4,7 @@
 
 ## 账户类型
 
-要想访问 FreeBSD，必须有一个账户。
+要想登录 FreeBSD，必须有一个账户。
 
 在 FreeBSD 中，所有进程都是以某个账户的名义启动的。`sysutils/htop` 能够直观地呈现这一点（注意 `△USER` 这列）：
 
@@ -37,7 +37,7 @@ $ htop
 
 FreeBSD 中主要有三类账户：系统账户、普通用户账户，以及超级用户账户。
 
-超级用户账户拥有系统中的最高权限，即 root 账户。
+超级用户账户拥有系统中的最高权限，即 root 权限。
 
 实际上是内核根据账户的 EUID（有效用户 ID）是否为 `0` 来判定某账户是否拥有 root 权限。参见：main/sys/kern/kern_priv.c[EB/OL]. [2026-03-26]. <https://github.com/freebsd/freebsd-src/blob/main/sys/kern/kern_priv.c> 中的 `if (suser_enabled(cred))` 代码块部分。
 
@@ -96,7 +96,7 @@ Goodbye!
 
 - ①：登录名命名有一些限制，参见：passwd(5)[EB/OL]. [2026-03-26]. <https://man.freebsd.org/cgi/man.cgi?query=passwd&sektion=5&format=html>。但请注意，登录名不支持八位编码字符集，例如不支持中文（即仅支持特定 ASCII 字符）。
 
-## `rmuser` 删除用户与 `passwd` 密码修改
+## `rmuser` 删除用户与 `passwd` 修改密码
 
 - `rmuser` 用于删除用户。与 `adduser` 命令一样，也是交互式的。
 
@@ -220,7 +220,7 @@ test2:$6$FkxPcs2y.Y8cxyuj$kVDoV1LC.IWKGlSitll3oLArF18aHQYID0JYE.TUuD0YFgba.c7MbG
 示例：
 
 ```sh
-# pw groupadd test -g 1200 # 创建组 test。gid 为 1200；gid 与 uid 有所不同
+# pw groupadd test -g 1200 # 创建组 test。gid 为 1200；gid 与 uid 不同
 # pw groupadd test5 -M test1,test2 # 创建组 test5。成员有 test1 和 test2
 ```
 
@@ -274,6 +274,6 @@ test5:*:1202:test1
 
 ## 课后习题
 
-1. 在 FreeBSD 中使用 adduser、pw useradd、rmuser、pw userdel 各创建和删除 3 个测试用户，验证并记录结果。
-2. 查看 FreeBSD 中 pw 命令的源码实现，使其更现代化。
-3. 修改 FreeBSD 中 wheel 组的默认成员配置，验证其权限变化。
+1. 修改 FreeBSD 源代码，使操作的用户名支持 UTF-8 编码。
+2. 查看 FreeBSD 中 pw 命令的源代码实现，使其更加现代化。
+

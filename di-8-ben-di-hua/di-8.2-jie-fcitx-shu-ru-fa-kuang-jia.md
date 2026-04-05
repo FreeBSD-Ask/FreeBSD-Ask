@@ -1,20 +1,18 @@
 # 8.2 Fcitx 输入法框架
 
-首先需要明确：输入法框架与具体输入法属于两个不同的技术概念，二者不可混淆。输入法的正常运行依赖于输入法框架的支持。这种架构关系在 Windows 系统中同样存在，可参考 [TSF 管理器](https://learn.microsoft.com/zh-cn/windows/win32/tsf/text-services-framework)。该文档介绍了 Windows 文本服务框架的架构与接口规范。
+首先需要明确：输入法框架与具体输入法属于两个不同的技术概念，二者不可混淆。输入法的正常运行依赖于输入法框架的支持。这种架构关系在 Windows 系统中同样存在，可参考 Microsoft. TSF 管理器[EB/OL]. [2026-04-04]. <https://learn.microsoft.com/zh-cn/windows/win32/tsf/text-services-framework>. 该文档介绍了 Windows 文本服务框架的架构与接口规范。
 
-fcitx 即“小企鹅输入法”，其英文全称为“A flexible input method framework（一款灵活的输入法框架）”。关于其英文命名的历史渊源，可参见：小企鹅输入法5. 历史[EB/OL]. [2026-03-26]. <https://fcitx-im.org/wiki/History/zh-cn>。该页面记录了 Fcitx 从创始至今的发展历程。
+fcitx 即“小企鹅输入法”，其英文全称为“A flexible input method framework（一款灵活的输入法框架）”。关于其英文命名的历史渊源，可参见：小企鹅输入法 5. 历史[EB/OL]. [2026-03-26]. <https://fcitx-im.org/wiki/History/zh-cn>。该页面记录了 Fcitx 从创始至今的发展历程。
 
 >**技巧**
 >
->视频教程见 [006-FreeBSD 14.2 安装 fcitx5 及其输入法](https://www.bilibili.com/video/BV13ji2YLE3m)
+>视频教程见 FreeBSD 中文社区. 006-FreeBSD 14.2 安装 fcitx5 及其输入法[EB/OL]. [2026-04-04]. <https://www.bilibili.com/video/BV13ji2YLE3m>.
 
 > **注意**
 >
-> 在 FreeBSD-CURRENT 中可能会出现许多不可预期的问题：fcitx5 诊断信息英文乱码，输入法显示出奇怪的汉字，Qt 环境下无法正常加载输入法。
+> 在 FreeBSD-CURRENT 中可能会出现许多不可预期的问题：Fcitx5 诊断信息英文乱码，输入法显示出奇怪的汉字，Qt 环境下无法正常加载输入法。
 
 ## 安装 Fcitx5
-
-在 FreeBSD 系统上安装 Fcitx5 主要有两种途径：通过 pkg 包管理器安装，或通过 Ports 从源代码编译安装。
 
 - 使用 pkg 安装：
 
@@ -32,7 +30,7 @@ fcitx 即“小企鹅输入法”，其英文全称为“A flexible input method
 # cd /usr/ports/chinese/fcitx5-chinese-addons/ && make install clean # 输入法
 ```
 
-经测试，在 SLiM 窗口管理器下可能会提示找不到 IBus，这可能是软件问题，也可能是配置问题。
+在 SLiM 窗口管理器下可能会提示找不到 IBus。
 
 ### Fcitx 5.X 开启自启
 
@@ -53,16 +51,16 @@ $ cp /usr/local/share/applications/org.fcitx.Fcitx5.desktop ~/.config/autostart/
 
 - 显示管理器配置路径
 
-1. SDDM、LightDM、GDM 都可以在 `~/.xprofile` 中写入 A 组配置
-2. LightDM、GDM 可以在 `~/.profile` 中写入 A 组配置
+1. SDDM、LightDM、GDM 都可以在 `~/.xprofile` 文件中写入 A 组配置
+2. LightDM、GDM 可以在 `~/.profile` 文件中写入 A 组配置
 3. SDDM 可以在用户登录 shell 的配置文件中写入配置
 
 - Shell 配置路径
 
-1. sh: `~/.profile` 写入 A 组配置
-2. bash: `~/.bash_profile` 或 `~/.profile` 写入 A 组配置
-3. zsh: `~/.zprofile` 写入 A 组配置
-4. csh: `~/.cshrc` 写入 B 组配置
+1. sh: 在 `~/.profile` 文件写入 A 组配置
+2. bash: 在 `~/.bash_profile` 文件或 `~/.profile` 文件写入 A 组配置
+3. zsh: 在 `~/.zprofile` 文件写入 A 组配置
+4. csh: 在 `~/.cshrc` 文件写入 B 组配置
 
 >**注意**
 >
@@ -141,9 +139,9 @@ setenv XMODIFIERS @im=fcitx
 
 ## 故障排除与未竟事宜
 
-遇到问题，请先运行 `fcitx` 故障诊断，但该输出仅针对 `bash` 的环境变量配置。`csh` 的环境变量配置请参考上文。
+遇到问题，请先运行 `fcitx` 故障诊断，但该输出仅针对 bash 的环境变量配置。`csh` 的环境变量配置请参考上文。
 
-如果提示 `bash` 字样且无法输出诊断信息，则需要先安装 `bash`：`# pkg install bash`。
+如果提示 `bash` 字样且无法输出诊断信息，则需要先安装 bash。
 
 运行 Fcitx5 输入法诊断工具，检查配置和环境问题：
 
@@ -155,6 +153,5 @@ setenv XMODIFIERS @im=fcitx
 
 ## 课后习题
 
-1. 在 FreeBSD 系统中分别使用 pkg 和 Ports 两种方式安装 Fcitx5，对比两种安装方式的时间、依赖关系处理以及最终运行效果。
-2. 配置 Fcitx5 在 X11 和 Wayland 两种环境下的运行，分别测试 GTK 和 Qt 应用程序的输入法兼容性。
-3. 安装并配置 RIME 中州韵输入法，自定义一个简单的输入方案并验证其功能。
+1. 配置 Fcitx5 在 X11 和 Wayland 两种环境下的运行，分别测试 GTK 和 Qt 应用程序的输入法兼容性。
+2. 安装并配置 RIME 中州韵输入法，自定义一个简单的输入方案并验证其功能。
