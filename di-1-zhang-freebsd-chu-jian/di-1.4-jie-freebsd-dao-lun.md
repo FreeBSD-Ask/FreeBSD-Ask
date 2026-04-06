@@ -126,7 +126,7 @@ Free 和三个字母 B、S、D 分别读——先读 Free，再逐字母拼读 B
 
 ## 什么是 FreeBSD？
 
-在了解了 FreeBSD 的版本、宗旨和开发模型后，让我们来深入探讨 FreeBSD 到底是什么。这一问题的答案涉及技术谱系、设计哲学和社区文化等多个维度。FreeBSD 不是 Linux，也不是 UNIX 的克隆。FreeBSD 是一款自由软件。
+在了解了 FreeBSD 的版本、宗旨和开发模型后，下文深入探讨 FreeBSD 到底是什么。这一问题的答案涉及技术谱系、设计哲学和社区文化等多个维度。FreeBSD 不是 Linux，也不是 UNIX 的克隆。FreeBSD 是一款自由软件。
 
 ![什么是 FreeBSD？](../.gitbook/assets/nolinux.png)
 
@@ -195,7 +195,7 @@ FreeBSD 的稳定性和可靠性使其在许多领域得到了广泛应用。以
 
 ## 为什么选择 FreeBSD
 
-选择一款操作系统往往是基于多方面的考虑。让我们来看看为什么选择 FreeBSD。
+选择一款操作系统往往是基于多方面的考虑。下文介绍为什么选择 FreeBSD。
 
 ### 一句话原因——FreeBSD 能在这流变的世界中寻求理想的中道
 
@@ -238,7 +238,7 @@ FreeBSD 不仅仅在生命周期内不变，大版本更新也具有连贯性和
 - DTrace 框架与 GEOM 存储框架。
 - Linux 二进制兼容层可运行 Linux 软件。且软件运行性能通常不逊色于 Linux。
 - FreeBSD 的驱动大体上与内核解耦合。
-- FreeBSD 秉持人人自由开发的理念，目前 [可以直接在 GitHub 上提交的代码](https://github.com/freebsd/freebsd-src/pulls)，或者注册个账号在 <https://reviews.freebsd.org/> 进行大规模变更。
+- FreeBSD 秉持人人自由开发的理念，目前 [可直接在 GitHub 上提交的代码](https://github.com/freebsd/freebsd-src/pulls)，或者注册个账号在 <https://reviews.freebsd.org/> 进行大规模变更。
 - FreeBSD 的代码风格是 Kernighan & Ritchie 经典著作 The C Programming Language（中译本：KERNIGHAN B W, RITCHIE D M. C 程序设计语言[M]. 徐宝文, 李志, 译. 第 2 版. 北京:机械工业出版社, 2019. ISBN: 978-7-111-61794-5.）中使用的风格。
 
 #### 安全原因

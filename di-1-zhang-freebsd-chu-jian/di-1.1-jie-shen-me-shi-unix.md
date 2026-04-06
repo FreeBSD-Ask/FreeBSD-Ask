@@ -29,7 +29,7 @@ UNIX 操作系统认证查询网址：[The Open Group official register of UNIX 
 1. 技术标准要求：符合[单一 UNIX 规范](https://www.opengroup.org/openbrand/register/xym0.htm)（Single UNIX Specification，SUS），该规范定义了 UNIX 系统必须实现的接口、命令、实用程序和库函数，确保了不同的 UNIX 操作系统间的兼容性。
 2. 法律与费用要求：缴纳相应的[认证费用](https://www.opengroup.org/openbrand/Brandfees.htm)
 
-常见经过认证的 UNIX 操作系统是 Apple 公司的 macOS。从商标角度讲，macOS 是标准的 UNIX 操作系统。~~故，要安装 UNIX 的人可以考虑 macOS。~~
+常见经过认证的 UNIX 操作系统是 Apple 公司的 macOS。从商标角度讲，macOS 是标准的 UNIX 操作系统。~~故，要安装 UNIX 的人可考虑 macOS。~~
 
 >**技巧**
 >
@@ -57,7 +57,7 @@ UNIX 哲学是在 UNIX 操作系统长期开发实践中逐渐形成的一套设
 >
 >>2. 小弗雷德里克·P. 布鲁克斯. 人月神话[M]. UMLChina, 译. 纪念典藏版. 北京: 清华大学出版社, 2023. ISBN: 978-7-302-63538-3
 >
->阅读上述文本和参考文献，读者如何理解 UNIX 哲学的不足之处，以及背后的时代背景。
+>阅读上述文本和参考文献，如何理解 UNIX 哲学的不足之处，以及背后的时代背景。
 
 这些原则在当年的软件设计中相互配合，帮助开发者构建出简洁、高效、可维护的系统。
 
