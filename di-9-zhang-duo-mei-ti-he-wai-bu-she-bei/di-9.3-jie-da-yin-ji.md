@@ -80,7 +80,7 @@ Listen localhost:631
 Listen /var/run/cups/cups.sock
 ```
 
-后面添加以下配置（其中 IP 替换 FreeBSD 系统的局域网 IP 地址）：
+后面添加以下配置（将其中 IP 替换为 FreeBSD 系统的局域网 IP 地址）：
 
 ```ini
 Listen IP:631
