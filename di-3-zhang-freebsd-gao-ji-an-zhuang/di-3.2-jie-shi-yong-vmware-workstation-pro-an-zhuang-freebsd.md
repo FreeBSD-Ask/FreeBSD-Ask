@@ -36,7 +36,7 @@ FreeBSD 中文社区. 001-Windows 11 安装 VMware 17[EB/OL]. [2026-04-04]. <htt
 
 > **技巧**
 >
->在本次测试环境中，选择其他操作系统类型也能正常启动，但为保持配置一致性并避免潜在兼容性问题，建议选择 FreeBSD。对于低版本的 FreeBSD，虚拟机增强工具没有开源，可能会出现问题。
+>在测试环境中，选择其他操作系统类型也能正常启动，但为保持配置一致性并避免潜在兼容性问题，建议选择 FreeBSD。对于低版本的 FreeBSD，虚拟机增强工具没有开源，可能会出现问题。
 
 ![VMware 安装 FreeBSD](../.gitbook/assets/vm5.png)
 
@@ -383,7 +383,7 @@ VMware 已被博通（Broadcom）收购。从官方下载 VMware 相关产品需
 >
 >![点击“VMware Workstation Pro“](../.gitbook/assets/downbcm2.png)
 >
->- 点击“Release”（发行版），选择最顶部的那个，你看到的不一定和我一样。
+>- 点击“Release”（发行版），选择最顶部的那个，所见可能不同。
 >
 >![点击“Release”（发行版）](../.gitbook/assets/downbcm3.png)
 >
