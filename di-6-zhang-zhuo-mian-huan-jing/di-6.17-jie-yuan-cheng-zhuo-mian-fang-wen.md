@@ -87,7 +87,7 @@ $ x11vnc -display :0 -rfbauth ~/.vnc/passwd -auth /var/run/lightdm/root/:0
 - 使用指定密码文件和 GDM 授权文件启动 x11vnc：
 
 ```sh
-$ x11vnc -display :0 -rfbauth ~/.vnc/passwd -auth /var/lib/gdm/:0.Xauth # 或 /run/user/120/gdm/Xauthority，取决于你的 gdm 版本，可执行 ls 查看
+$ x11vnc -display :0 -rfbauth ~/.vnc/passwd -auth /var/lib/gdm/:0.Xauth # 或 /run/user/120/gdm/Xauthority，取决于实际 gdm 版本，可执行 ls 查看
 ```
 
 ![SDDM X11VNC](../.gitbook/assets/x11vnc1.png)
@@ -139,7 +139,7 @@ xsetroot -solid grey        # 设置 X 根窗口背景为灰色
 #exec gnome-session &        # 启动 GNOME 桌面（注释示例）
 ```
 
-读者使用哪个桌面，就删除该桌面条目前的注释 `#` 即可。
+使用哪个桌面，就删除该桌面条目前的注释 `#` 即可。
 
 > **警告**
 >
@@ -258,11 +258,11 @@ and the "/usr/local/etc/xrdp/startwm.sh" script.
 
 To enable audio redirection, install the following ports/packages to meet
 your environment.
-# 如需启用音频重定向（远程桌面声音传输），请根据你的系统环境安装以下软件包：
+# 如需启用音频重定向（远程桌面声音传输），请根据当前系统环境安装以下软件包：
 
 - audio/pipewire-module-xrdp
 - audio/pulseaudio-module-xrdp
-# 上述为支持 xrdp 音频的模块，可根据你使用的音频系统选择安装。
+# 上述为支持 xrdp 音频的模块，可根据实际使用的音频系统选择安装。
 ```
 
 ### 配置 XRDP
@@ -304,7 +304,7 @@ export LANG=zh_CN.UTF-8
 
 #### XRDP 下没有声音
 
-请读者试试火狐浏览器。
+请尝试火狐浏览器。
 
 ## 通过 Windows 使用 TigerVNC 远程访问 FreeBSD
 
@@ -379,7 +379,7 @@ root     syslogd     1021 7   udp4   *:514                 *:*
 
 该软件操作便捷。
 
-请注意，须将左上 🖱️ 改为 👆。默认的鼠标操作很不方便：或者读者也可以选择手机 OTG 一个鼠标和键盘。
+请注意，须将左上 🖱️ 改为 👆。默认的鼠标操作很不方便：或者也可以选择手机 OTG 一个鼠标和键盘。
 
 ![Remote Desktop FreeBSD](../.gitbook/assets/wrdp3.png)
 

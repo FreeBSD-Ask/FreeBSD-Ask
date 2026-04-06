@@ -13,7 +13,7 @@
 将指定用户添加到 video 组，以便访问显卡设备：
 
 ```sh
-# pw groupmod video -m 你的用户名
+# pw groupmod video -m 实际用户名
 ```
 
 ## 安装显卡驱动

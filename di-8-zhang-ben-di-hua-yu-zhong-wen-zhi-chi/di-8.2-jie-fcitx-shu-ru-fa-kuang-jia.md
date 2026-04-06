@@ -37,7 +37,7 @@ fcitx 即“小企鹅输入法”，其英文全称为“A flexible input method
 安装完成后，可以设置 Fcitx5 随系统自动启动：
 
 ```sh
-$ mkdir -p ~/.config/autostart/ # 创建自启动路径。如果使用其他用户，需要在该用户的命令行下执行
+$ mkdir -p ~/.config/autostart/ # 创建自启动路径。如果使用其他用户，应在该用户的命令行下执行
 $ cp /usr/local/share/applications/org.fcitx.Fcitx5.desktop ~/.config/autostart/  # 设置 Fcitx 5 开机启动
 ```
 

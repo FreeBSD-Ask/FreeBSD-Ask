@@ -42,7 +42,7 @@ $ /usr/local/share/wine/pkg32.sh install wine mesa-dri
 
 ## 配置显卡硬件解码
 
-请读者参考显卡相关章节配置硬件加速。
+请参考显卡相关章节配置硬件加速。
 
 ## 配置 Wine
 

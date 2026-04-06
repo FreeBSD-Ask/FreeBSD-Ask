@@ -152,7 +152,7 @@ permit :wheel
 需要在 sudoers 配置文件中加入一行来解决该问题：编辑 `/usr/local/etc/sudoers` 文件，找到 `root ALL=(ALL:ALL) ALL` 这一行，通常位于第 94 行左右。在这行下面加一句：
 
 ```sh
-你的普通用户名 ALL=(ALL:ALL) ALL
+实际普通用户名 ALL=(ALL:ALL) ALL
 ```
 
 然后保存并退出即可。

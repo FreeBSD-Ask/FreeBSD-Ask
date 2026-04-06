@@ -59,7 +59,7 @@ DRM 是 Linux 内核的子系统，负责与现代显卡的 GPU 进行交互。F
 为获得显卡设备的访问权限，需将指定用户添加到 video 用户组。这是图形加速功能正常运行以及 Wayland 会话正常工作的必要前提条件：
 
 ```sh
-# pw groupmod video -m 你的用户名
+# pw groupmod video -m 实际用户名
 ```
 
 > **警告**

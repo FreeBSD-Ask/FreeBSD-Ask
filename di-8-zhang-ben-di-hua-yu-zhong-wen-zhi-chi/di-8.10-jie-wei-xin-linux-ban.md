@@ -29,7 +29,7 @@
 # fetch https://dldir1v6.qq.com/weixin/Universal/Linux/WeChatLinux_x86_64.rpm
 ```
 
-写作本文时链接如此，请读者自行获取最新的微信下载链接。
+写作本文时链接如此，请自行获取最新的微信下载链接。
 
 ### 安装微信
 
@@ -46,7 +46,7 @@ root@ykla:/compat/linux # rpm2cpio < WeChatLinux_x86_64.rpm  | cpio -id
 1393412 blocks
 ```
 
-读者请将 WeChatLinux_x86_64.rpm 的路径改为自己的。
+请将 WeChatLinux_x86_64.rpm 的路径改为实际的。
 
 ### 解决依赖问题
 
