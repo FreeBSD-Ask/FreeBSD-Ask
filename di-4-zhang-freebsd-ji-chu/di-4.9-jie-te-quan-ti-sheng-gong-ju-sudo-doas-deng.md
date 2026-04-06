@@ -68,11 +68,11 @@ Please refer to doas.conf(5) for further details.
 
 由上可知，示例配置文件位于 `/usr/local/etc/doas.conf.sample`。
 
-而我们需要将配置文件放在 `/usr/local/etc/doas.conf`，该文件默认不存在，需要自行创建。
+需要将配置文件放在 `/usr/local/etc/doas.conf`，该文件默认不存在，需要自行创建。
 
 - `/usr/local/etc/doas.conf.sample` 内容如下，相比 sudo 而言，非常简单易懂：
 
-让我们简单注释一下：
+简单注释一下：
 
 ```ini
 # Sample file for doas

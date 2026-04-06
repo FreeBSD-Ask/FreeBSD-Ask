@@ -107,7 +107,7 @@ usr/lib/clang/11.0.1/include
 
 > **注意**
 >
-> 有时候补丁不涉及内核，内核版本就不会变，用 `uname -r` 无法体现，但用户空间版本会发生变化。因此你可能会看到两个版本号，应以较高者为准。
+> 有时候补丁不涉及内核，内核版本就不会变，用 `uname -r` 无法体现，但用户空间版本会发生变化。因此可能会看到两个版本号，应以较高者为准。
 
 重启系统：
 
@@ -128,7 +128,7 @@ usr/lib/clang/11.0.1/include
 
 >**注意**
 >
->`freebsd-update` 下载慢不是因为其更新源在境外（你使用境外服务器更新一样慢；并且在 freebsdcn 境内源还生效的那些日子里，亦如此）。这可能与其设计缺陷有关，`freebsd-update` 是一个由数千行组成的纯 shell 脚本。[这是一个长期存在的问题](https://freebsd-questions.freebsd.narkive.com/xjVoetUM/why-is-freebsd-update-so-horrible-slow)。
+>`freebsd-update` 下载慢不是因为其更新源在境外（使用境外服务器更新一样慢；并且在 freebsdcn 境内源还生效的那些日子里，亦如此）。这可能与其设计缺陷有关，`freebsd-update` 是一个由数千行组成的纯 shell 脚本。[这是一个长期存在的问题](https://freebsd-questions.freebsd.narkive.com/xjVoetUM/why-is-freebsd-update-so-horrible-slow)。
 
 **以 FreeBSD 14.3-RELEASE 升级到 15.0-RELEASE 为例**
 

@@ -57,7 +57,7 @@ Chromium 不是 Chrome，但在 FreeBSD 中的启动命令为 `chrome`。
 
 > **警告**
 >
-> 要编译 Chromium，你必须拥有至少 12 GB 内存，或等量的交换分区 + 内存。
+> 要编译 Chromium，必须拥有至少 12 GB 内存，或等量的交换分区 + 内存。
 
 ## Chrome（Linux 兼容层）
 
@@ -94,7 +94,7 @@ Chromium 不是 Chrome，但在 FreeBSD 中的启动命令为 `chrome`。
 
 ![邮件列表设置](../.gitbook/assets/join-chromium-dev-for-api3.png)
 
-加入 Google browser sign-in test account 群组后，你可能会看到：“您无权访问此内容”之类的提示，这很正常，无需担心。
+加入 Google browser sign-in test account 群组后，可能会看到：“您无权访问此内容”之类的提示，这很正常，无需担心。
 
 ![join-mail-list-for-google-api-error2](../.gitbook/assets/join-chromium--list-2error.png)
 
@@ -114,7 +114,7 @@ Chromium 不是 Chrome，但在 FreeBSD 中的启动命令为 `chrome`。
 
 ![填写项目信息](../.gitbook/assets/chromium-use-google-api-guide-03.png)
 
-点击左上角的“My First Project”，然后在弹出窗口中选择你刚才创建的项目（此处我的是 google-sync）。
+点击左上角的“My First Project”，然后在弹出窗口中选择刚才创建的项目（此处的是 google-sync）。
 
 ![选择项目](../.gitbook/assets/chromium-use-google-api-guide-04.png)
 

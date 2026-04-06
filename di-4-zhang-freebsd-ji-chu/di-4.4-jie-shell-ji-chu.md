@@ -17,8 +17,8 @@ Linux 中常见的 Shell 一般是 bash（Bourne Again Shell，即“又一个 B
 >- Ubuntu 24.04 LTS 默认的 Shell：
 >
 >```bash
->$ ls -l /bin/sh  # 以长格式查看 /bin/sh 这个文件的详细信息
 >lrwxrwxrwx 1 root root 4  2 月 25 23:19 /bin/sh -> dash
+>$ ls -l /bin/sh # 以长格式查看 /bin/sh 这个文件的详细信息
 >```
 
 ## 快捷键
@@ -56,7 +56,7 @@ Linux 中常见的 Shell 一般是 bash（Bourne Again Shell，即“又一个 B
 一般可以使用 **Tab** 键补全命令或目录；上箭头 **↑** 用于查看上一条命令，下箭头 **↓** 用于查看下一条命令。
 
 - 补全命令
-  
+
 ```sh
 # lo # 若此时按 TAB 键，输出如下。可以再输一个字母再按一次 TAB 键看看
 local                    localedef                login
@@ -69,7 +69,7 @@ locale
 ```
 
 - 补全文件目录或文件名
-  
+
 ```sh
 $ cp /home/ykla/ # 此处按 TAB 键，然后再重复按一次 TAB 键，看看效果
 $ cp /home/ykla/test/1.txt

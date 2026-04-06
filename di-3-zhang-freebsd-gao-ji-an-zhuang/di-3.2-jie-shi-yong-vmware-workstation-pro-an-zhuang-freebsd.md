@@ -40,7 +40,7 @@ FreeBSD 中文社区. 001-Windows 11 安装 VMware 17[EB/OL]. [2026-04-04]. <htt
 
 ![VMware 安装 FreeBSD](../.gitbook/assets/vm5.png)
 
-虚拟机通常会占用较大的磁盘空间。若你不希望系统盘（如 C 盘）空间被占满，请自行调整虚拟机的存储位置。
+虚拟机通常会占用较大的磁盘空间。若不希望系统盘（如 C 盘）空间被占满，请自行调整虚拟机的存储位置。
 
 ![VMware 安装 FreeBSD](../.gitbook/assets/vm6.png)
 
@@ -60,7 +60,7 @@ FreeBSD 中文社区. 001-Windows 11 安装 VMware 17[EB/OL]. [2026-04-04]. <htt
 
 ![VMware 安装 FreeBSD](../.gitbook/assets/vm11.png)
 
-在“使用 ISO 映像文件”处，点击“浏览”，找到并选中你下载的 `FreeBSD-15.0-RELEASE-amd64-disc1.iso` 文件。
+在“使用 ISO 映像文件”处，点击“浏览”，找到并选中下载的 `FreeBSD-15.0-RELEASE-amd64-disc1.iso` 文件。
 
 ![VMware 安装 FreeBSD](../.gitbook/assets/vm12.png)
 
@@ -92,7 +92,7 @@ FreeBSD 中文社区. 001-Windows 11 安装 VMware 17[EB/OL]. [2026-04-04]. <htt
 
 > **警告**
 >
->NAT 模式的“名称”与你主机的 `控制面板\网络和 Internet\网络连接` 中的 `VMware Network Adapter VMnet8` 绑定，默认绑定的是 `8`。换言之，NAT 模式的“名称”默认必须指定为下图所示的 `VMnet8`，否则虚拟机将无法联网。
+>NAT 模式的“名称”与主机的 `控制面板\网络和 Internet\网络连接` 中的 `VMware Network Adapter VMnet8` 绑定，默认绑定的是 `8`。换言之，NAT 模式的“名称”默认必须指定为下图所示的 `VMnet8`，否则虚拟机将无法联网。
 >
 >![VMware network on FreeBSD](../.gitbook/assets/VMnat8.png)
 
@@ -102,7 +102,7 @@ FreeBSD 中文社区. 001-Windows 11 安装 VMware 17[EB/OL]. [2026-04-04]. <htt
 
 如果无法连接网络，可尝试在虚拟机内将 DNS 服务器设置为 `223.5.5.5`。其他网络配置方法请参阅本章其他小节。
 
-如果配置为桥接模式后始终无法通过 DHCP 获取 IP 地址，可尝试将网络适配器的“桥接到”选项从“自动”改为你的主机当前正在使用的物理网卡。
+如果配置为桥接模式后始终无法通过 DHCP 获取 IP 地址，可尝试将网络适配器的“桥接到”选项从“自动”改为的主机当前正在使用的物理网卡。
 
 ![VMware network on FreeBSD](../.gitbook/assets/net2.png)
 
@@ -235,7 +235,7 @@ fusefs_load="YES"
 
 > **注意**
 >
->请将以下命令中的 `123pan` 替换为你在 VMware 中设置的共享文件夹名称。
+>请将以下命令中的 `123pan` 替换为在 VMware 中设置的共享文件夹名称。
 
 将 VMware 共享目录 `123pan` 挂载到 `/mnt/hgfs`：
 
@@ -245,7 +245,7 @@ fusefs_load="YES"
 
 ##### 自动挂载
 
-编辑 `/etc/fstab` 文件。添加以下挂载条目（请将 `123pan` 替换为你的共享文件夹名称）：
+编辑 `/etc/fstab` 文件。添加以下挂载条目（请将 `123pan` 替换为的共享文件夹名称）：
 
 ```sh
 .host:/123pan      /mnt/hgfs    fusefs  rw,mountprog=/usr/local/bin/vmhgfs-fuse,allow_other,failok 0 0
@@ -316,16 +316,16 @@ VMware 已被博通（Broadcom）收购。从官方下载 VMware 相关产品需
 >
 >- 点击右上角的“Register”（注册）（或者直接打开 <https://profile.broadcom.com/web/registration>）
 >>
->>在页面“Email Address”（电子邮件）处输入你的电子邮箱。如果没有的话，可以用你的 QQ 号，然后直接加上一个 `@qq.com`，比如你的 QQ 号是 `1212111111`，那么你的 QQ 邮箱则为 `1212111111@qq.com`
+>>在页面“Email Address”（电子邮件）处输入电子邮箱。若没有电子邮箱，可以用 QQ 号，然后在 QQ 号后面加上 `@qq.com` 即可。如 QQ 号是 `1212111111`，那么 QQ 邮箱则为 `1212111111@qq.com`。
 >>
 >>在页面“Enter text from image”（输入图片上的文本）处输入图片上的文本信息（实际上是验证码）。如果看不清或不认识，可以点 `Enter text from image` 右侧的 🔁
 >>点击“Next”（继续）
 >>
->>如果你使用的是 QQ 号生成的邮箱，请打开 <https://wx.mail.qq.com/>。其他邮箱请在各自网站打开，如果不知道，请使用 QQ 邮箱。
+>>如果使用的是 QQ 号生成的邮箱，请打开 <https://wx.mail.qq.com/>。其他邮箱请在各自网站打开，如果不知道，请使用 QQ 邮箱。
 >
 >![注册](../.gitbook/assets/Register2.png)
 >
->- 将第五步得到的“Verification Code: 972980”，中的 972980（你的和我不一样，找你自己的）填入“Enter text from image”中。
+>- 将第五步得到的“Verification Code: 972980”，中的 972980（请根据实际填写）填入“Enter text from image”中。
 >
 >![邮箱验证码](../.gitbook/assets/mail.png)
 >
@@ -338,7 +338,7 @@ VMware 已被博通（Broadcom）收购。从官方下载 VMware 相关产品需
 >![完成注册](../.gitbook/assets/comreg.png)
 >
 >- 结束注册流程
->  
+>
 >![结束注册](../.gitbook/assets/dolater.png)
 
 ### 博通（Broadcom）账号登录
@@ -351,7 +351,7 @@ VMware 已被博通（Broadcom）收购。从官方下载 VMware 相关产品需
 >
 >![登录](../.gitbook/assets/loginbcm.png)
 >
->- Username（用户名）就是你注册时候的邮箱。然后点“Next”（下一步）
+>- Username（用户名）就是注册时候的邮箱。然后点“Next”（下一步）
 >
 >![登录](../.gitbook/assets/loginbcm2.png)
 >
@@ -372,7 +372,7 @@ VMware 已被博通（Broadcom）收购。从官方下载 VMware 相关产品需
 > **VMware Workstation Pro 下载流程**
 >
 >- 点击右上角对应图标（名字左侧第一个），选择“VMware Cloud Foundation”（VMware 云计算基础架构）
->  
+>
 >![VMware 云计算基础架构](../.gitbook/assets/downbcm1.png)
 >
 >- 点击右侧的“My Downloads”（我的下载）
@@ -391,16 +391,16 @@ VMware 已被博通（Broadcom）收购。从官方下载 VMware 相关产品需
 >
 >![下载主页](../.gitbook/assets/downbcm4.png)
 >
->- 将红色的 `*` 项目填写完成，不会写的自己编，最好不要抄我的。
->  
+>- 将红色的 `*` 项目填写完成。
+>
 >![补充信息](../.gitbook/assets/downbcm5.png)
 >
 >- 勾选“I agree to Terms and Conditions”（我同意条款及条件）左侧的方框 ⬜，让它变成 🟦。（必须先点击“Terms and Conditions”弹窗新页面，再回来就能勾选了）
->  
+>
 >![同意许可协议](../.gitbook/assets/downbcm6.png)
 >
 >- 点击右侧箭头的云朵图片 ☁️ 即可下载
->  
+>
 >![下载](../.gitbook/assets/downbcm7.png)
 
 VMware Workstation Pro 目前对于个人用户来说是 **免费下载、免费使用、免费授权的。** **请勿从任何第三方站点下载，** 否则会造成一些未知的后果——90% 的问题都是由此产生的。

@@ -30,7 +30,7 @@
 
 > **警告**
 >
->本文基于 Apple M1，故你选择的 FreeBSD 架构应为 aarch64。
+>本文基于 Apple M1，故选择的 FreeBSD 架构应为 aarch64。
 
 ![Parallels Desktop 20 安装 FreeBSD 15.0](../.gitbook/assets/pd5.png)
 

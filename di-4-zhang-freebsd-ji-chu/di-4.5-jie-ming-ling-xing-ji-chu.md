@@ -69,12 +69,12 @@ FreeBSD/amd64 (ykla) (ttyv0)
 login:
 ```
 
-- ① 使用  `su空格用户名` 可以切换到用户 ykla，从 root 切换的话，不需要输入 ykla 的密码：
+- ① 使用 `su空格用户名` 可以切换到用户 ykla，从 root 切换的话，不需要输入 ykla 的密码：
   - `root@ykla:/`：
-    - `root`：当前用户是 root
-    - `@`：“谁”在“xx”主机上
-    - `ykla`：这里是主机名，和用户 ykla 无关。你可以随便起不一样的主机名
-    - `:/`：代表当前位于 `/` 路径下
+  - `root`：当前用户是 root
+  - `@`：“谁”在“xx”主机上
+  - `ykla`：这里是主机名，和用户 ykla 无关。可以随便起不一样的主机名
+  - `:/`：代表当前位于 `/` 路径下
 - ② 注意到提示符号的变化没有？root 是 `#`，普通用户是 `$`（csh 是 `%`）
 - ③ 如果仅输入 `su` 并回车，命令的含义是从当前用户切换到 root 账户（如果已经是 root，则不会有任何变化）。但必须是 wheel 组的成员才能进行此操作，否则会报错 `sorry`。
 - ④ 从普通用户切换到 root，需要 root 账户的登录密码。
@@ -185,7 +185,7 @@ usage: ls [-ABCFGHILPRSTUWZabcdfghiklmnopqrstuvwxy1,] [--color=when] [-D format]
 >C:.
 >├─.android
 >├─.cache
->│  ├─selenium
+>│ ├─selenium
 >……省略一部分……
 >```
 
@@ -222,7 +222,7 @@ Seems like fuck alias isn't configured!
 More details - https://github.com/nvbn/thefuck#manual-installation
 ```
 
-我们打开网页浏览。发现要将 `eval $(thefuck --alias)` 加入到 `~/.bash_profile`（bash shell）、`~/.bashrc`（bash shell）或 `~/.zshrc`（zsh shell）。
+打开网页浏览。发现要将 `eval $(thefuck --alias)` 加入到 `~/.bash_profile`（bash shell）、`~/.bashrc`（bash shell）或 `~/.zshrc`（zsh shell）。
 
 FreeBSD 默认使用的是 sh，因此将下行：
 
@@ -306,7 +306,7 @@ cp: test9: No such file or directory
 
 ### Linux
 
-在 Linux 中，大多数常用命令来自 GNU 等用户空间软件包，Linux 内核本身并不提供用户级命令。我们来验证这一点：
+在 Linux 中，大多数常用命令来自 GNU 等用户空间软件包，Linux 内核本身并不提供用户级命令。来验证这一点：
 
 ```bash
 $ dpkg -S /bin/mv 
@@ -371,7 +371,7 @@ cd is a shell builtin
 
 在 FreeBSD 中，除了上述 shell 内置命令外（参见：sh(1)[EB/OL]. [2026-03-26]. <https://man.freebsd.org/cgi/man.cgi?sh(1)>），常用命令都是基本系统自带的，不属于任何一个包。比如 `ls` 命令，其源代码位于 `freebsd-src/bin/ls/`[EB/OL]. [2026-03-26]. <https://github.com/freebsd/freebsd-src/tree/main/bin/ls>。可见 FreeBSD 系统是一个有机整体，而非由不同人员或团队维护的软件包简单拼凑而成。
 
-如果你配置了 pkgbase，则输出类似：
+如果配置了 pkgbase，则输出类似：
 
 ```sh
 # pkg which /bin/ls # 查询 /bin/ls 所属的软件包
@@ -455,7 +455,7 @@ $ touch test
 >
 > 可以看到上述命令创建的是 `test`，而非 `test.txt`、`test.word`、`test.pdf` 之类的。事实上，`.txt` 这一部分称为文件后缀名，主要用于提示用户文件类型，而非供系统识别。许多我们以为的清楚明白的事物真的如我们所认为的那般吗？
 >
-> 即使我们去掉相应的后缀名，在类 UNIX 系统中也可以识别文件的类型，这是根据文件幻数（magic numbers）确定的：
+> 即使去掉相应的后缀名，在类 UNIX 系统中也可以识别文件的类型，这是根据文件幻数（magic numbers）确定的：
 >
 >```sh
 >$ file book
@@ -527,7 +527,7 @@ $ rm test
 rm: test: No such file or directory # 报错指定的文件或目录不存在
 ```
 
----  
+---
 
 删除路径 `/home/ykla/test`
 
@@ -588,7 +588,7 @@ $ rm -rf /home/ykla/test/
 >rm: /dev/input: Operation not supported
 >rm: /dev/fd: Operation not supported
 >……省略一部分……
-># 
+>#
 >```
 >
 > ![引导错误](../.gitbook/assets/noefi.png)
@@ -660,7 +660,7 @@ test -> /home/ykla
 
 > **思考题**
 >
-> 其他命令有没有类似的问题？请你试一试。
+> 其他命令有没有类似的问题？请试一试。
 
 ---
 
@@ -684,7 +684,7 @@ cp: /usr/ports/editors/vscode is a directory (not copied).
 
 可见直接复制是不行的，提示是目录不是文件。
 
-我们需要选项 `-r`。`r` 是英文 `recursively`（递归）的意思：
+因此还需要选项 `-r`。`r` 是英文 `recursively`（递归）的意思：
 
 ```sh
 $ cp -vr /usr/ports/editors/vscode /home/ykla
@@ -725,15 +725,15 @@ $ rm -rf *
 
 `&&`（逻辑与，AND）：只有 `&&` 之前的命令执行成功了，才会执行后续的命令；否则如果 `&&` 之前的命令执行失败，后面的命令就不会执行。
 
-简单理解：你得先做饭才能吃饭，然后才能刷锅——> 做饭 `&&` 吃饭 `&&` 刷锅。如果你没有做饭，自然谈不上吃饭，更遑论刷锅了。
+简单理解：得先做饭才能吃饭，然后才能刷锅——> 做饭 `&&` 吃饭 `&&` 刷锅。如果没有做饭，自然谈不上吃饭，更遑论刷锅了。
 
-使用场景：执行一连串有依赖关系的命令。比如你得先刷新软件源才能更新系统，然后才能重启。以 Ubuntu 为例：`sudo apt update -y && sudo apt upgrade -y && sudo reboot`。只有前面的命令执行成功，才会执行后面的命令。
+使用场景：执行一连串有依赖关系的命令。比如得先刷新软件源才能更新系统，然后才能重启。以 Ubuntu 为例：`sudo apt update -y && sudo apt upgrade -y && sudo reboot`。只有前面的命令执行成功，才会执行后面的命令。
 
 ### 逻辑运算符 `||`
 
 `||`（逻辑或，OR）：只有 `||` 之前的命令执行失败时，后边的命令才会执行；如果 `||` 之前的命令执行成功，后面的命令就不会执行。
 
-简单理解：你要么做饭，要么点外卖，要么出去吃——> 做饭 `||` 点外卖 `||` 出去吃。如果不会做饭，就只能点外卖，如果外卖没有好吃的，就只能出去吃。
+简单理解：要么做饭，要么点外卖，要么出去吃——> 做饭 `||` 点外卖 `||` 出去吃。如果不会做饭，就只能点外卖，如果外卖没有好吃的，就只能出去吃。
 
 使用场景：如果一个命令一直执行失败，但偏要它一直执行。就可以写很多 `||`，防止一次失败后反复手动再次执行该命令，比如：
 
@@ -767,7 +767,7 @@ sed -i '' 's/quarterly/latest/g' /etc/pkg/FreeBSD.conf
 
 ## 关机与重启
 
-FreeBSD 和 Linux 的 shutdown 命令在语法和行为上有一些差异，如果你有使用 Linux 的经验，那么是不能照搬的。
+FreeBSD 和 Linux 的 shutdown 命令在语法和行为上有差异，如果有使用 Linux 的经验，那么是不能照搬的。
 
 FreeBSD 的设计更接近传统 UNIX 的行为。
 

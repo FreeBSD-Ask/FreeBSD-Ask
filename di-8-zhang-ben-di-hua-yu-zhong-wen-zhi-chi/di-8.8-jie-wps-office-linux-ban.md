@@ -51,7 +51,7 @@ WPS Office 官方下载地址：[WPS Office for Linux](https://linux.wps.cn/)。
 # rpm2cpio < /home/ykla/Downloads/wps-office-12.1.0.17900-1.x86_64.rpm  | cpio -id
 ```
 
-读者请将路径替换为你本地下载文件的实际路径。
+读者请将路径替换为本地下载文件的实际路径。
 
 WPS Office 文件结构：
 

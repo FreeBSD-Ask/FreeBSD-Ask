@@ -67,7 +67,7 @@ UNIX 哲学是在 UNIX 操作系统长期开发实践中逐渐形成的一套设
 >>
 >>NASA. The Apollo Lunar Surface Journal and Apollo Flight Journal[EB/OL]. [2026-04-04]. <https://www.nasa.gov/history/alsj/henry.html>.
 >
->作者亨利·斯宾塞（Henry Spencer）并未明确批评哪个操作系统，那么你认为，现在这句话更适合哪个常见的操作系统？为什么？
+>作者亨利·斯宾塞（Henry Spencer）并未明确批评哪个操作系统，那么，现在这句话更适合哪个常见的操作系统？为什么？
 
 ### 参考文献
 
@@ -77,7 +77,7 @@ UNIX 哲学是在 UNIX 操作系统长期开发实践中逐渐形成的一套设
 
 ## UNIX 的一段历史
 
-UNIX 的诞生有其历史背景，让我们从它的前身 Multics 开始说起。
+UNIX 的诞生有其历史背景，这还要从它的前身 Multics 开始说起。
 
 ### Multics
 

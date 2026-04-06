@@ -126,7 +126,7 @@ C:\Users\用户名\
 
 傲梅分区助手官网：<https://www.disktool.cn/>，该网站为傲梅分区助手官方网站。
 
-我们点击 AOMEI Technology. 傲梅分区助手下载页面[EB/OL]. [2026-03-25]. <https://www.disktool.cn/download.html>，该页面提供傲梅分区助手各版本下载链接，“绿色版”（免安装，可直接运行）。在解压目录中找到“PartAssist.exe”（可执行文件名称可能略有不同），右键单击并选择“打开”。
+点击 AOMEI Technology. 傲梅分区助手下载页面[EB/OL]. [2026-03-25]. <https://www.disktool.cn/download.html>，该页面提供傲梅分区助手各版本下载链接，“绿色版”（免安装，可直接运行）。在解压目录中找到“PartAssist.exe”（可执行文件名称可能略有不同），右键单击并选择“打开”。
 
 ![傲梅分区助手](../.gitbook/assets/aomei1.png)
 

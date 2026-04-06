@@ -41,7 +41,7 @@ Ports 框架可以将源代码编译并打包成 pkg 格式的二进制包，这
 
 具体是哪些问题造成的，建议查询 <https://www.freshports.org/>，上面会显示软件包的依赖情况和 pkg 包的构建情况。
 
-本书中一般会同时列出 Ports 安装方式，比如要查 Port `x11/budgie`，你可以这么做：直接访问 <https://www.freshports.org/x11/budgie/>。
+本书中一般会同时列出 Ports 安装方式，比如要查 Port `x11/budgie`，可以这么做：直接访问 <https://www.freshports.org/x11/budgie/>。
 
 一般来说，如果 Ports 中有该 Port，但 pkg 中暂时没有，等待 7–14 天通常即可（构建失败的包系统会自动向维护者报告错误）。如要立刻安装使用，请使用 Ports。
 
@@ -97,7 +97,7 @@ For more information on available commands and options see 'pkg help'.
 > 若提示 `00206176BC680000:error:0A000086:SSL routines:tls_post_process_server_certificate:certificate verify failed:/usr/src/crypto/openssl/ssl/statem/statem_clnt.c:1890:`（SSL 证书验证失败），请先校准时间。
 
 > ```sh
-> # ntpdate -u pool.ntp.org  # 使用 pool.ntp.org 同步系统时间
+> # ntpdate -u pool.ntp.org # 使用 pool.ntp.org 同步系统时间
 > ```
 >
 >> **思考题**
@@ -152,9 +152,9 @@ Proceed with this action? [y/N]: # 此处输入 y 再按回车键即可安装
 >
 >> [Add Concurrent Downloads of Multiple Packages](https://github.com/freebsd/pkg/issues/1628)
 >
-> 你会发现 pkg 既不支持并行下载也不支持并行安装。阅读源代码，尝试解决这个问题并提交 PR。
+> 会发现 pkg 既不支持并行下载也不支持并行安装。阅读源代码，尝试解决这个问题并提交 PR。
 
-你可能会遇到这种情况：
+可能会遇到这种情况：
 
 ```sh
 # pkg ins chromium  # 安装 Chromium 浏览器
@@ -171,7 +171,7 @@ pkg: No packages available to install matching 'chromium' have been found in the
 
 “pkg: No packages available to install matching 'chromium' have been found in the repositories”即“pkg：在仓库中找不到与 chromium 匹配的可安装软件包”。
 
-如果你前面显示了“FreeBSD repository update completed. 36804 packages processed.”（FreeBSD 仓库更新完成。处理了 36804 个包），说明当前软件源是可用的，只是找不到 `chromium` 这个软件包而已。
+如果前面显示了“FreeBSD repository update completed. 36804 packages processed.”（FreeBSD 仓库更新完成。处理了 36804 个包），说明当前软件源是可用的，只是找不到 `chromium` 这个软件包而已。
 
 这就是上述缺乏“原子更新”的表现。
 
@@ -288,7 +288,7 @@ xrdp-0.10.2_2,1:
 
 > **警告**
 >
-> 本节仅针对 Linux 兼容层缺少 `.so` 文件的问题。如果你在 FreeBSD 中遇到了此类问题，应首先更新系统，然后再更新软件源和软件。
+> 本节仅针对 Linux 兼容层缺少 `.so` 文件的问题。如果在 FreeBSD 中遇到了此类问题，应首先更新系统，然后再更新软件源和软件。
 
 ### 安装 pkg-provides
 
