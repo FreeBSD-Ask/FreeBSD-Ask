@@ -221,7 +221,7 @@ FreeBSD-base {
 
 >**技巧**
 >
->需要切换软件源的用户可以将 `url` 这行改成 `url = "https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/base_release_${VERSION_MINOR}";`。而对于那些优先考虑安全性的读者应该维持默认设置。
+>需要切换软件源的用户可以将 `url` 这行改为 `url = "https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/base_release_${VERSION_MINOR}";`。而对于那些优先考虑安全性的读者应该维持默认设置。
 
 - 刷新软件源
 

@@ -69,7 +69,7 @@ FreeBSD/amd64 (ykla) (ttyv0)
 login:
 ```
 
-- ① 使用 `su空格用户名` 可以切换到用户 ykla，从 root 切换的话，不需要输入 ykla 的密码：
+- ① 使用 `su空格用户名` 可以切换到用户 ykla。若从 root 切换到 ykla，则不需要输入 ykla 的密码：
   - `root@ykla:/`：
   - `root`：当前用户是 root
   - `@`：“谁”在“xx”主机上
@@ -644,7 +644,7 @@ test2 -> test2.pdf
 $ cp test /home/ykla/
 ```
 
-末尾的 `/` 很重要，如果缺少了末尾的 `/`，且子目录 ykla 不存在的话，`test` 会被重命名为 `ykla`（ykla 在设想中本应是个目录）：
+末尾的 `/` 很重要，如果缺少了末尾的 `/`，且子目录 ykla 不存在，`test` 将被重命名为 `ykla`（ykla 在设想中本应是个目录）：
 
 ```sh
 $ cp test /home/ykla/
