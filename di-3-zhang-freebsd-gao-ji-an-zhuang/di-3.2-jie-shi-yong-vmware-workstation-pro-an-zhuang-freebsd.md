@@ -102,7 +102,7 @@ FreeBSD 中文社区. 001-Windows 11 安装 VMware 17[EB/OL]. [2026-04-04]. <htt
 
 如果无法连接网络，可尝试在虚拟机内将 DNS 服务器设置为 `223.5.5.5`。其他网络配置方法请参阅本章其他小节。
 
-如果配置为桥接模式后始终无法通过 DHCP 获取 IP 地址，可尝试将网络适配器的“桥接到”选项从“自动”改为的主机当前正在使用的物理网卡。
+如果配置为桥接模式后始终无法通过 DHCP 获取 IP 地址，可尝试将网络适配器的“桥接到”选项从“自动”改为主机当前正在使用的物理网卡。
 
 ![VMware network on FreeBSD](../.gitbook/assets/net2.png)
 
@@ -245,7 +245,7 @@ fusefs_load="YES"
 
 ##### 自动挂载
 
-编辑 `/etc/fstab` 文件。添加以下挂载条目（请将 `123pan` 替换为的共享文件夹名称）：
+编辑 `/etc/fstab` 文件。添加以下挂载条目（请将 `123pan` 替换为实际的共享文件夹名称）：
 
 ```sh
 .host:/123pan      /mnt/hgfs    fusefs  rw,mountprog=/usr/local/bin/vmhgfs-fuse,allow_other,failok 0 0
