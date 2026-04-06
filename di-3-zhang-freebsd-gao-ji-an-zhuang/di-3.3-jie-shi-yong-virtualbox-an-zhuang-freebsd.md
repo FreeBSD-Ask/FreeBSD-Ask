@@ -187,7 +187,7 @@ You may ignore the yellow alert that encourages use of VMSVGA.
 ```sh
 # service vboxguest restart  # 重启 vboxguest 服务，可能提示找不到模块，但不影响使用
 # service vboxservice restart # 重启 vboxservice 服务
-# pw groupmod wheel -m ykla  # 将普通用户 ykla 添加到 wheel 组以获得管理权限，请替换为你的用户
+# pw groupmod wheel -m ykla  # 将普通用户 ykla 添加到 wheel 组以获得管理权限，请替换为实际用户
 ```
 
 ## 故障排除与未竟事宜
