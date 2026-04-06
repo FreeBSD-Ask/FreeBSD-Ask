@@ -128,7 +128,7 @@ cd /d "C:\Program Files\qemu"
 - `m` 指定内存大小
 - `hostfwd=tcp::8022-:22` 将宿主机的 8022 端口转发至虚拟机的 22 端口（SSH）
 
-以上示例中，请将 `C:\Users\ykla\Desktop\` 替换为你自己的路径。
+以上示例中，请将 `C:\Users\ykla\Desktop\` 替换为实际路径。
 
 运行脚本即可。
 

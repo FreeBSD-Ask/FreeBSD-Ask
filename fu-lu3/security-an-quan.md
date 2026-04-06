@@ -2,7 +2,7 @@
 
 本章节主要介绍 BIOS 中与系统安全相关的设置选项，包括管理员密码、用户密码、安全启动、TPM（可信平台模块）等重要安全功能。系统安全配置对于保护硬件资源、防止未授权访问和确保系统完整性具有关键意义。
 
-参见：华硕. 如何设置或解决忘记 BIOS 密码/UEFI 密码/开机密码[EB/OL]. [2026-03-26]. <https://www.asus.com.cn/support/faq/1046347/>  提供 BIOS/UEFI 密码设置与重置的详细指导。
+参见：华硕. 如何设置或解决忘记 BIOS 密码/UEFI 密码/开机密码[EB/OL]. [2026-03-26]. <https://www.asus.com.cn/support/faq/1046347/> 提供 BIOS/UEFI 密码设置与重置的详细指导。
 
 BIOS（基本输入输出系统，Basic Input/Output System）密码是一种固件层面的安全功能，用于阻止计算机在预启动阶段遭到未经授权的访问。BIOS 密码也常被称为系统设置密码、UEFI 密码、开机密码或安全密码。
 
@@ -231,12 +231,14 @@ Append Key：追加密钥
 
 注册出厂默认值或从文件加载证书：
 
-1. 公钥证书格式包括：  
-   a）EFI_SIGNATURE_LIST  
-   b）EFI_CERT_X509（DER 编码）  
-   c）EFI_CERT_RSA2048（二进制）  
-   d）EFI_CERT_SHAxxx
+1. 公钥证书格式包括：
+  a）EFI_SIGNATURE_LIST
+  b）EFI_CERT_X509（DER 编码）
+  c）EFI_CERT_RSA2048（二进制）
+  d）EFI_CERT_SHAxxx
+  
 2. 经过认证的 UEFI 变量
+
 3. EFI PE/COFF 镜像（SHA256），密钥来源：出厂、外部、混合
 
 #### Key Exchange Keys（密钥交换密钥）

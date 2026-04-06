@@ -9,12 +9,12 @@ FreeBSD 提供了多种类型的软件源，分别服务于不同的系统组件
 | 软件源 | 简介 | 备注 |
 | ------ | ---- | ---- |
 | pkg | 类似于传统 Linux 的包管理器，用于安装二进制软件包 | 如果不需要以二进制方式安装软件可以不配置。默认未安装 `pkg`，输入 `pkg` 回车会提示安装。**除 pkgbase 外的 pkg 包实际上都是由 Port 直接构建而来** |
-| Ports 框架 | 拉取 Port 的源代码模板（本身不含源代码，只是对第三方软件的一些描述文件、补丁集和 Makefile）。Ports 是这些 Port 的 **集合**，在 `freebsd-ports` 存储库中统一维护 | Gentoo 的包管理器 Portage（命令为 `emerge`）即是借鉴于此。用于帮助用户从源代码编译安装第三方软件。换言之，Ports（Port 集合）类似 Gentoo 的 [ebuild 数据库](https://mirrors.ustc.edu.cn/help/gentoo.html) |
+| Ports 框架 | 拉取 Port 的源代码模板（本身不含源代码，只是对第三方软件的描述文件、补丁集和 Makefile）。Ports 是这些 Port 的 **集合**，在 `freebsd-ports` 存储库中统一维护 | Gentoo 的包管理器 Portage（命令为 `emerge`）即是借鉴于此。用于帮助用户从源代码编译安装第三方软件。换言之，Ports（Port 集合）类似 Gentoo 的 [ebuild 数据库](https://mirrors.ustc.edu.cn/help/gentoo.html) |
 | ports 源 | 在 Port 中的 Makefile 文件里会定义若干软件包源码的地址，该软件源用于拉取这些源。因为有时候从官方上游拉取速度不佳 | 等同于 Gentoo 的 [Distfiles 源](https://mirrors.ustc.edu.cn/help/gentoo.html)。不需要以源代码方式编译软件可以不配置 |
 | freebsd-update | 用于更新基本系统（内核 + 用户空间） | 预计将在 FreeBSD 16 中退役，转而使用 pkgbase |
 | pkgbase | 将 FreeBSD 基本系统（内核 + 用户空间）打包成 pkg 包，使用 pkg(8) 管理基本系统，取代传统的 freebsd-update 和 distribution | 从 FreeBSD 15.0 开始可选（技术预览，在整个 15.X 周期内可选），预计将在 16.0 成为默认/标准方式。14.X 为实验性支持，可使用 pkgbasify 工具转换。基本系统升级/维护使用 `pkg upgrade`。生产环境建议继续使用传统方式。需配置 FreeBSD-base 源（见下文）。参考 [PkgBase Wiki](https://wiki.freebsd.org/PkgBase)。pkgbase 实际上由存储库 `freebsd-src` 构建而来，与 Ports 完全无关。FreeBSD 基本系统始终是独立于 Ports 而自存的 |
 | kernel modules（kmods） | 内核模块源（包含无线网卡驱动、以太网卡驱动、DRM 显卡驱动等），用于解决小版本之间可能存在的 ABI 不兼容问题 | 参见：Possible solution to the drm-kmod kernel mismatch after upgrade from Bapt[EB/OL]. [2026-03-26]. <https://forums.freebsd.org/threads/possible-solution-to-the-drm-kmod-kernel-mismatch-after-upgrade-from-bapt.96058/#post-682984>、CFT: repository for kernel modules[EB/OL]. [2026-03-26]. <https://lists.freebsd.org/archives/freebsd-ports/2024-December/006997.html>。可以使用命令 `fwget` 自动安装所需驱动 |
-| FreeBSD（pub） | 提供 ISO 安装镜像、文档、开发资料和 `snapshots`，在系统安装、系统救援和开发参考时有很大帮助 | 此处的 Pub，指的是官方的 <http://ftp.freebsd.org/pub/FreeBSD/>。其性质类似于普通的镜像分发仓库，与 debian-cd、ubuntu-releases 等属于同一类型。目前已知全量同步 FreeBSD（Pub）源的镜像站：<https://mirrors.nju.edu.cn/freebsd>。其提供了完整的目录结构（如 `snapshots`、`development`），且更新较为及时，参见：FreeBSD.org ftp server[EB/OL]. [2026-03-26]. <http://ftp.freebsd.org/pub/FreeBSD/>  目录结构 |
+| FreeBSD（pub） | 提供 ISO 安装镜像、文档、开发资料和 `snapshots`，在系统安装、系统救援和开发参考时有很大帮助 | 此处的 Pub，指的是官方的 <http://ftp.freebsd.org/pub/FreeBSD/>。其性质类似于普通的镜像分发仓库，与 debian-cd、ubuntu-releases 等属于同一类型。目前已知全量同步 FreeBSD（Pub）源的镜像站：<https://mirrors.nju.edu.cn/freebsd>。其提供了完整的目录结构（如 `snapshots`、`development`），且更新较为及时，参见：FreeBSD.org ftp server[EB/OL]. [2026-03-26]. <http://ftp.freebsd.org/pub/FreeBSD/> 目录结构 |
 
 ### 理解 quarterly 季度分支与滚动更新的 latest 分支
 
@@ -92,13 +92,13 @@ origin/main created around 2025-10-24 12:43:02 +0900
 
 其中，quarterly 的内容由 main 分支（latest）的提交回溯而来，每年的 1 月、4 月、7 月、10 月 ③ 会发布新的分支（从特定时间点的 main 分支切出 ①），形如 `2014Q3`、`2025Q1`。这是为了便于通过 git 直接拉取所需的分支，但 Ports 管理团队（portmgr）只会维护最新分支，旧分支不再允许任何合并。②
 
-quarterly 实际上类似于 Debian 的 Stable 版本，此处的 Stable 不仅表示“稳定”，也包含“固定”的含义。我们有必要区分“稳定”和“固定”两个词语：
+quarterly 实际上类似于 Debian 的 Stable 版本，此处的 Stable 不仅表示“稳定”，也包含“固定”的含义。有必要区分“稳定”和“固定”两个词语：
 
 根据 [Merriam‑Webster](https://www.merriam-webster.com/dictionary/stable) 和 [Cambridge Dictionary](https://dictionary.cambridge.org/us/dictionary/english/stable)，Stable 有“fixed”（固定）的意思。我们来看一下《现代汉语词典（第 7 版）》第 1374 页，就会发现“稳定”第一个释义被解释为“形容词，稳定安固，没有变动”；第 470 页载“固定”为“动词，不变动或不移动（跟‘流动’相对）”。因此，“固定”是实现“稳定”的一种手段，而“稳定”是一种目的。
 
 >**技巧**
 >
->Debian 是通过 **固定** 软件包的版本，仅接受安全更新不接受功能更新来实现 **稳定** 的。其手段是其软件源是 **固定的**，Stable 系统的软件源也是 Stable 分支的——Debian 还有 testing 等分支。我们可以看到常见发行版是通过 **固定** 软件来实现 **Stable** 版本的。由于这些软件包已经历经了从 unstable（即 sid，Ubuntu 即基于此）到 testing 等多个分支的测试和发展，软件包自然比较 **稳定**。而且在 **Stable** 版本的系统生命周期内，任何软件基本上都不会得到大版本更新和功能更新。参见：DebianStability[EB/OL]. [2026-03-26]. <https://wiki.debian.org/DebianStability> （看起来是稳定的意思）、Chapter 3. Choosing a Debian distribution[EB/OL]. [2026-03-26]. <https://www.debian.org/doc/manuals/debian-faq/choosing.en.html#s3.1.1> （实际上是固定的意思），中文版在第 3 章选择一个 Debian 发布版本[EB/OL]. [2026-03-26]. <https://www.debian.org/doc/manuals/debian-faq/choosing.zh-cn.html>、2.2. Are there package upgrades in "stable"?[EB/OL]. [2026-03-26]. <https://www.debian.org/doc/manuals/debian-faq/getting-debian.en.html#updatestable> 指出软件不会有功能性更新。
+>Debian 是通过 **固定** 软件包的版本，仅接受安全更新不接受功能更新来实现 **稳定** 的。其手段是其软件源是 **固定的**，Stable 系统的软件源也是 Stable 分支的——Debian 还有 testing 等分支。可以看到常见发行版是通过 **固定** 软件来实现 **Stable** 版本的。由于这些软件包已经历经了从 unstable（即 sid，Ubuntu 即基于此）到 testing 等多个分支的测试和发展，软件包自然比较 **稳定**。而且在 **Stable** 版本的系统生命周期内，任何软件基本上都不会得到大版本更新和功能更新。参见：DebianStability[EB/OL]. [2026-03-26]. <https://wiki.debian.org/DebianStability> （看起来是稳定的意思）、Chapter 3. Choosing a Debian distribution[EB/OL]. [2026-03-26]. <https://www.debian.org/doc/manuals/debian-faq/choosing.en.html#s3.1.1> （实际上是固定的意思），中文版在第 3 章选择一个 Debian 发布版本[EB/OL]. [2026-03-26]. <https://www.debian.org/doc/manuals/debian-faq/choosing.zh-cn.html>、2.2. Are there package upgrades in "stable"?[EB/OL]. [2026-03-26]. <https://www.debian.org/doc/manuals/debian-faq/getting-debian.en.html#updatestable> 指出软件不会有功能性更新。
 
 quarterly 分支类似于 Debian 的 Stable 版本，通过固定软件包版本并仅接受安全更新和错误修复来提供可预测和稳定的用户体验。任何功能性更新都不会被回溯至 quarterly 分支。
 
@@ -526,7 +526,7 @@ MASTER_SITE_OVERRIDE?=https://mirrors.ustc.edu.cn/freebsd-ports/distfiles/${DIST
 - 启用 `signature_type: "fingerprints"` 和 `fingerprints`：使用 FreeBSD 官方内置密钥验证包签名
 - `mirror_type: "none"`：适合国内的 HTTPS 直链镜像（官方用 `"srv"` 是因为 `pkg+https://` 支持 DNS SRV，但镜像站不需要）
 
-推荐在生产环境始终启用签名验证。如果追求极简，可以去掉这些，但不建议，除非你完全信任网络环境。
+推荐在生产环境始终启用签名验证。如果追求极简，可以去掉这些，但不建议，除非完全信任网络环境。
 
 >**警告**
 >

@@ -35,7 +35,7 @@
 
 ## x11vnc（FreeBSD 作为被控端，镜像屏幕）
 
-x11vnc 会像远程软件 ToDesk 一样直接镜像屏幕，简言之，你的所有操作都会同步到显示器上，反过来显示器上的操作你在 VNC 上也可以看到。
+x11vnc 会像远程软件 ToDesk 一样直接镜像屏幕，简言之，用户的所有操作都会同步到显示器上，反过来显示器上的操作在 VNC 上也可以看到。
 
 如果没有物理显示器则无法使用 x11vnc（可考虑使用 HDMI 显卡欺骗器）。
 
@@ -96,7 +96,7 @@ $ x11vnc -display :0 -rfbauth ~/.vnc/passwd -auth /var/lib/gdm/:0.Xauth # 或 /r
 
 - FreeBSD Project. x11vnc(1)[EB/OL]. FreeBSD Manual Pages, [2026-03-25]. <https://man.freebsd.org/cgi/man.cgi?query=x11vnc>. FreeBSD 手册页，详细说明远程桌面镜像配置参数。
 - Arch Linux Wiki. X11vnc[EB/OL]. [2026-03-25]. <https://wiki.archlinux.org/title/X11vnc>. Arch Linux 官方维基提供的 X11vnc 配置与使用详细指南。
-  
+
 ## TigerVNC（FreeBSD 作为被控端）
 
 启用 VNC 服务端（目前 Ports 中仅剩 [TigerVNC](https://www.freshports.org/net/tigervnc-server/)）。
@@ -331,7 +331,7 @@ root     syslogd     1021 7   udp4   *:514                 *:*
 
 #### 由于目标服务器积极拒绝，无法连接
 
-非镜像 VNC 在连接时必须指定端口，否则按默认端口 5900 进行连接。因为你使用的不是镜像屏幕（非 x11vnc），所以无法连接。
+非镜像 VNC 在连接时必须指定端口，否则按默认端口 5900 进行连接。因为使用的不是镜像屏幕（非 x11vnc），所以无法连接。
 
 ![SDDM VNC](../.gitbook/assets/vnc1.png)
 
@@ -424,10 +424,10 @@ Please look at the OpenSSL documentation on how to add a private CA to the store
 Do you trust the above certificate? (Y/T/N) y # 输入 y 按回车键以确认连接
 ```
 
-解释：`xfreerdp3 /u:ykla /p:z  /v:192.168.31.213` 参数：
+解释：`xfreerdp3 /u:ykla /p:z /v:192.168.31.213` 参数：
 
 - `xfreerdp3`，注意前面有个 `x`。
-- `/u:ykla`，`/u:` 即 Username 用户名。`ykla` 是笔者 Windows 的登录名
+- `/u:ykla`，`/u:` 即 Username 用户名。`ykla` 是 Windows 的登录名
 - `/p`，即 Password 密码。`z` 是 Windows 用户 `ykla` 的登录密码
 - `/v:`，即 Server 服务器。
 
@@ -507,7 +507,7 @@ rdesktop 无前端 GUI，故要在终端输入命令：
 
 如果没有特意更改 Windows 配置，无须加 `:端口号`。
 
-对于笔者测试的 Windows 11 24H2 会报错：
+对于测试的 Windows 11 24H2 会报错：
 
 ```sh
 $ rdesktop 192.168.31.213

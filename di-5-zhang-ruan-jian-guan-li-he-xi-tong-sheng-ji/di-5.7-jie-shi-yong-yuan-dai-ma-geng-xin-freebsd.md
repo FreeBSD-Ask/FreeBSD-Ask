@@ -104,7 +104,7 @@ $ git clone --branch releng/15.0 --single-branch --depth 1 https://github.com/fr
 
 >**为何要解压到 `/`？**
 >
->因为解压到 `/` 会将源代码解压到 `/usr/src`。如果将上面的路径改成 `/usr/src`，会将源代码解压到 `/usr/src/usr/src`。因为该压缩包是包含路径的。
+>因为解压到 `/` 会将源代码解压到 `/usr/src`。如果将上面的路径改为 `/usr/src`，会将源代码解压到 `/usr/src/usr/src`。因为该压缩包是包含路径的。
 
 >**技巧**
 >
@@ -135,8 +135,8 @@ $ git clone --branch releng/15.0 --single-branch --depth 1 https://github.com/fr
 >与绝大多数现代 Linux 不同，[FreeBSD](https://github.com/freebsd/freebsd-src/tree/main/contrib/nvi)（OpenBSD）上的 `vi` 是 *[nvi](https://sites.google.com/a/bostic.com/keithbostic/keith-bostic?authuser=0)*（原版 **ex/vi** 的再实现），并不是指向任何 *vim* 的链接符号。基本上很少有人使用，也一般没有学习的必要，因此有必要更换为其他文本编辑器。
 >
 >```sh
->export EDITOR=/usr/bin/ee  # 切换 vi 为 ee。针对 FreeBSD 14 之前的版本或 csh 使用：setenv EDITOR /usr/bin/ee
->export VISUAL=/usr/bin/ee  # 切换 vi 为 ee。针对 FreeBSD 14 之前的版本或 csh 使用：setenv VISUAL /usr/bin/ee
+>export EDITOR=/usr/bin/ee # 切换 vi 为 ee。针对 FreeBSD 14 之前的版本或 csh 使用：setenv EDITOR /usr/bin/ee
+>export VISUAL=/usr/bin/ee # 切换 vi 为 ee。针对 FreeBSD 14 之前的版本或 csh 使用：setenv VISUAL /usr/bin/ee
 >```
 
 合并冲突。使用 `etcupdate` 执行备份模式，以便在更新配置文件前备份现有文件：

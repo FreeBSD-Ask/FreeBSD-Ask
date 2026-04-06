@@ -1,6 +1,6 @@
 # 6.16 桌面主题美化
 
-FreeBSD 安装桌面环境后，默认通常采用简单朴素的色调。这种未加修饰的设定，可能一时会让新用户不太习惯。为了提升系统的美观度，我们将在本节尝试添加主题和图标。
+FreeBSD 安装桌面环境后，默认通常采用简单朴素的色调。这种未加修饰的设定，可能一时会让新用户不太习惯。为了提升系统的美观度，将在本节尝试添加主题和图标。
 
 > **注意**
 >
@@ -32,7 +32,7 @@ FreeBSD 安装桌面环境后，默认通常采用简单朴素的色调。这种
 
 ## KDE 主题美化
 
-我们要安装的是 [WhiteSur](https://www.pling.com/p/1398840/) 主题。
+要安装的是 [WhiteSur](https://www.pling.com/p/1398840/) 主题。
 
 1. 下载主题源码包：`git clone https://github.com/vinceliuice/WhiteSur-kde`
 2. 进入主题包目录：`cd WhiteSur-kde`
@@ -41,7 +41,7 @@ FreeBSD 安装桌面环境后，默认通常采用简单朴素的色调。这种
 
 ## Gnome 主题美化
 
-同样，我们要安装的是 [WhiteSur](https://www.pling.com/p/1403328/) 主题。
+同样，要安装的是 [WhiteSur](https://www.pling.com/p/1403328/) 主题。
 
 1. 下载主题源码包：`git clone https://github.com/vinceliuice/WhiteSur-gtk-theme`
 2. 进入主题包目录：`cd WhiteSur-gtk-theme`

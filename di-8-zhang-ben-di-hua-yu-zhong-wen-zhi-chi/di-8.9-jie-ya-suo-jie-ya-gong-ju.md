@@ -176,7 +176,7 @@ $ zstd test.pdf
 ```
 
 - 使用 zstd 压缩文件夹
-  
+
 zstd 不直接支持压缩文件夹（参见：GitHub. How can I compress a directory?[EB/OL]. [2026-03-26]. <https://github.com/facebook/zstd/issues/1526> ）。该 Issue 讨论了 zstd 不支持直接压缩目录的技术原因与替代方案，因此需要先将文件夹打包为 tar 文件。
 
 >**思考题**

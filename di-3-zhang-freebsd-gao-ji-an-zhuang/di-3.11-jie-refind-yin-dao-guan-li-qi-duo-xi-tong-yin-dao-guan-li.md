@@ -2,13 +2,13 @@
 
 在多系统环境下，频繁通过 BIOS 固件界面切换操作系统存在效率低下的问题。本节研究 rEFInd 引导管理器的部署与配置技术，旨在为多系统用户提供一种便捷的启动选择解决方案，提升多系统使用的用户体验。
 
-我们可以借助 [rEFInd](https://www.rodsbooks.com/refind/) 实现类似于 Clover 的可视化启动菜单效果，在开机时直观地选择要进入的操作系统。
+可以借助 [rEFInd](https://www.rodsbooks.com/refind/) 实现类似于 Clover 的可视化启动菜单效果，在开机时直观地选择要进入的操作系统。
 
 `rEFInd` 派生自 `rEFIt`，其名称结合了“refind”（意为“重新发现”或“改进”）与“EFI”（Extensible Firmware Interface，可扩展固件接口），主要用于管理 UEFI 启动，具有良好的图形化界面与可配置性。
 
 首先需要下载 rEFInd 软件。打开下载页面 [Getting rEFInd from Sourceforge](https://www.rodsbooks.com/refind/getting.html)，点击 `A binary zip file` 链接即可开始下载。本文撰写时使用的版本为 `refind-bin-0.14.2.zip`。
 
-下载的压缩包中，仅部分文件是必需的启动文件。我们只需要其中的 `refind` 文件夹，其余文件可忽略。
+下载的压缩包中，仅部分文件是必需的启动文件。只需要其中的 `refind` 文件夹，其余文件可忽略。
 
 `refind` 文件夹中也仅包含部分必须的启动文件。所有文件名中包含 `aa64` 或 `ia32` 的文件均可删除（通常仅保留 `x64` 版本）。
 

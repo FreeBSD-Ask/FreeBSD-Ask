@@ -52,7 +52,7 @@ Device              Size     Used    Avail Capacity
 /dev/nda0p3          208G       0B     208G     0%
 ```
 
-可以看到交换分区的大小是我们所设定的 208 GB（其中 200 GB 预留给 Windows 操作系统）。
+可以看到交换分区的大小是所设定的 208 GB（其中 200 GB 预留给 Windows 操作系统）。
 
 编辑 `/etc/fstab`，在 swap 对应行的行首添加 `#` 字符将其注释，本例中该行是第三行，这样可以避免系统在启动时不挂载这个大的交换分区，为后续安装 Windows 作准备：
 
@@ -66,11 +66,11 @@ Device              Size     Used    Avail Capacity
 
 FreeBSD 安装完成后，接下来安装 Windows 系统。
 
-插入 Windows 启动盘，设置 BIOS 从该启动盘启动，开始安装 Windows。此时系统会识别到这块硬盘上的现有分区结构，我们只需要使用之前预留的空间。
+插入 Windows 启动盘，设置 BIOS 从该启动盘启动，开始安装 Windows。此时系统会识别到这块硬盘上的现有分区结构，只需要使用之前预留的空间。
 
 ![Windows 安装分区界面](../.gitbook/assets/shuang5.png)
 
-在分区时，删除（Delete Partition）整个 208 GB 的交换分区（本例中为“磁盘 0 分区 3”），因为这部分空间正是我们为 Windows 预留的。
+在分区时，删除（Delete Partition）整个 208 GB 的交换分区（本例中为“磁盘 0 分区 3”），因为这部分空间正是为 Windows 预留的。
 
 ![删除交换分区](../.gitbook/assets/shuang6.png)
 
@@ -82,11 +82,11 @@ FreeBSD 安装完成后，接下来安装 Windows 系统。
 
 ## 还原交换分区（Swap）
 
-Windows 安装完成后，需要为 FreeBSD 还原交换分区。我们分配了 208 GB 空间，其中有 8 GB 是为交换分区预留的。现在需要将其还原。需要用到工具 [DiskGenius](https://www.diskgenius.com/)。
+Windows 安装完成后，需要为 FreeBSD 还原交换分区。分配了 208 GB 空间，其中有 8 GB 是为交换分区预留的。现在需要将其还原。需要用到工具 [DiskGenius](https://www.diskgenius.com/)。
 
 ![DiskGenius 主界面](../.gitbook/assets/shuang8.png)
 
-打开 DiskGenius，压缩 C 盘，腾出 8 GB 的未分配空间。Windows 系统安装完成后，C 盘占用了我们之前预留的大部分空间，我们只需要从 C 盘末尾压缩出 8 GB 即可。
+打开 DiskGenius，压缩 C 盘，腾出 8 GB 的未分配空间。Windows 系统安装完成后，C 盘占用了之前预留的大部分空间，只需要从 C 盘末尾压缩出 8 GB 即可。
 
 ![压缩 C 盘](../.gitbook/assets/shuang9.png)
 
@@ -115,7 +115,7 @@ Windows 安装完成后，需要为 FreeBSD 还原交换分区。我们分配了
 
 ```
 
-可以看到，`nda0p5`（分区 5）即是我们新建的交换分区。测试立刻启用指定交换分区 `/dev/nda0p5`：
+可以看到，`nda0p5`（分区 5）即是新建的交换分区。测试立刻启用指定交换分区 `/dev/nda0p5`：
 
 ```sh
 # swapon /dev/nda0p5

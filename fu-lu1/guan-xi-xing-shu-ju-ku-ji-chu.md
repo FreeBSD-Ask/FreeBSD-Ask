@@ -6,7 +6,7 @@
 
 ## 在 UNIX 系统中连接数据库并执行 SQL 脚本
 
-在 UNIX 或类 UNIX 系统中，我们可以通过命令行连接数据库并执行 SQL 脚本。数据库客户端程序通过网络协议（如 MySQL 的 TCP/IP 协议）与数据库服务器通信，发送 SQL 语句并接收结果。以下命令用于连接 MySQL 数据库并执行 SQL 脚本：
+在 UNIX 或类 UNIX 系统中，可以通过命令行连接数据库并执行 SQL 脚本。数据库客户端程序通过网络协议（如 MySQL 的 TCP/IP 协议）与数据库服务器通信，发送 SQL 语句并接收结果。以下命令用于连接 MySQL 数据库并执行 SQL 脚本：
 
 ```sh
 # mysql -u root -p          # 以 root 用户登录 MySQL，-u 指定用户名，-p 表示需要密码验证
@@ -15,7 +15,7 @@
 
 ## 建立数据库
 
-在关系型数据库中，创建数据库是使用数据库的第一步。数据库是存储相关数据表的容器，每个数据库有独立的权限控制和存储空间。我们可以通过 SQL 语句来创建新的数据库，数据库管理系统会在磁盘上分配空间并创建系统表来管理数据库元数据。
+在关系型数据库中，创建数据库是使用数据库的第一步。数据库是存储相关数据表的容器，每个数据库有独立的权限控制和存储空间。可以通过 SQL 语句来创建新的数据库，数据库管理系统会在磁盘上分配空间并创建系统表来管理数据库元数据。
 
 ```sql
 create database db_name;
@@ -70,9 +70,9 @@ default character set UTF-8;
 
 SQL 数据类型定义了表中列可以存储的数据种类和格式。正确选择数据类型对于数据存储效率和查询性能至关重要。
 
-- `tinyint` (1B), `smallint` (2B), `mediumint` (3B), `int` (4B), `bigint` (8B)  
-- `float` (4B), `double` (8B), `decimal(整体位数, 小数点后位数)`  
-- `char` 是字符类型，想存字符串用 `char(字符数)`  
+- `tinyint` (1B), `smallint` (2B), `mediumint` (3B), `int` (4B), `bigint` (8B)
+- `float` (4B), `double` (8B), `decimal(整体位数, 小数点后位数)`
+- `char` 是字符类型，想存字符串用 `char(字符数)`
 - `unsigned + 数据类型` 可设置为无符号的数据类型
 
 ## 建立表
@@ -396,8 +396,8 @@ WHERE name in ('张三', '李四');
 - `in`：“值在列表中”运算符，用于筛选符合条件的记录，并返回布尔结果，供 update 或 delete 语句使用。例如 `5 in (1, 3, 5)` 返回真。
 - `between` 范围匹配：例如 `5 between 1 and 10` 返回真。
 - `like` 模式匹配：`'abc' like 'a%'` 返回真。百分号在这里类似 sh 的通配符。
-- `IS NULL` “判断表项是否为 NULL”：`NULL IS NULL` 返回 TRUE。  
-  例子：查看书名条目是否存在 `《xxx 设计 yyy》`。
+- `IS NULL` “判断表项是否为 NULL”：`NULL IS NULL` 返回 TRUE。
+例子：查看书名条目是否存在 `《xxx 设计 yyy》`。
 
 ```sql
 select * from book_table
@@ -414,10 +414,10 @@ where BookName like '_____';
 
 参照完整性是数据库的重要特性，它确保了相关表之间数据的一致性。当父表中的数据发生变化时，子表中的相关数据也需要相应地调整。
 
-- **CASCADE** 级联操作：父表记录删除/更新时，子表中相关记录也被删除/更新。  
-- **SET NULL** 将子表中的外键列设置为 NULL（要求外键列允许 NULL）。  
-- **RESTRICT** 拒绝操作：不允许删除/更新父表中被引用的记录（立即返回错误）。  
-- **NO ACTION** 类似 RESTRICT，但延迟到事务结束时才检查完整性。  
+- **CASCADE** 级联操作：父表记录删除/更新时，子表中相关记录也被删除/更新。
+- **SET NULL** 将子表中的外键列设置为 NULL（要求外键列允许 NULL）。
+- **RESTRICT** 拒绝操作：不允许删除/更新父表中被引用的记录（立即返回错误）。
+- **NO ACTION** 类似 RESTRICT，但延迟到事务结束时才检查完整性。
 - **SET DEFAULT** 设置为默认值，MySQL 不支持。
 
 ## SELECT 语句
@@ -465,7 +465,7 @@ ON stu_table.stu_id = score_table.s_id; -- 连接条件
 WHERE name = 'Jack' -- 筛选条件，后面还可以接上 AND 或 OR。
 ```
 
-`name` 取自 `stu_table`  
+`name` 取自 `stu_table`
 `score` 取自 `score_table`
 
 #### 隐式连接

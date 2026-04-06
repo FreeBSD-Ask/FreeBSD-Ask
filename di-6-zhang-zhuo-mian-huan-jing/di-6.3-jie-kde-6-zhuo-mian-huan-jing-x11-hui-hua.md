@@ -242,7 +242,7 @@ $ echo "exec ck-launch-session startplasma-x11" > ~/.xinitrc
 
 ### 启动 SDDM 提醒 `/usr/bin/xauth: (stdin):1: bad display name`，但是可以正常 `startx`
 
-你需要在 `/etc/rc.conf` 中检查是否已设置 `hostname="XXX"`（理论上应当存在该条目，也不应为 `hostname=""`）：
+需要在 `/etc/rc.conf` 文件中检查是否已设置 `hostname="XXX"`（理论上应当存在该条目，也不应为 `hostname=""`）：
 
 ![检查是否设置了主机名](../.gitbook/assets/errornohostname.png)
 
@@ -250,9 +250,9 @@ $ echo "exec ck-launch-session startplasma-x11" > ~/.xinitrc
 
 ### 菜单缺少关机、重启等选项
 
-如果无效，请检查是否在 SDDM 界面选择了“用户会话”（读取 `.xinitrc`），应选择 `plasma-x11`。
+如果无效，请检查是否在 SDDM 界面选择了“用户会话”（读取 `.xinitrc` 文件），应选择 `plasma-x11`。
 
-修改 `/etc/sysctl.conf` 将其中 `security.bsd.see_other_uid` 的值改为 `1`（`1` 为开启）。重启后即可。
+修改 `/etc/sysctl.conf` 文件，将其中 `security.bsd.see_other_uid` 的值改为 `1`（`1` 为开启）。重启后即可。
 
 #### 参考文献
 
