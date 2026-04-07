@@ -164,7 +164,7 @@ Chromium 不是 Chrome，但在 FreeBSD 中的启动命令为 `chrome`。
 
 ![查看客户端详情](../.gitbook/assets/chromium-use-google-api-guide-16.png)
 
-获得了（这是示例的，必须自己生成自己的）：
+获得了（这是示例的，必须自行生成）：
 
 - 客户端 ID `502882456359-okloi0a7k6vjodss69so97tmqmv0jjj5.apps.googleusercontent.com`
 - 客户端密钥 `GoCSPX-iKHEKZmP4w_zdq0Z8nwOqz6SF2_M`
@@ -173,7 +173,7 @@ Chromium 不是 Chrome，但在 FreeBSD 中的启动命令为 `chrome`。
 
 ![创建 API 密钥](../.gitbook/assets/chromium-use-google-api-guide-17.png)
 
-就获得了一个 API 密钥（这是示例的，必须自己生成自己的）：`AIzaSyDVpYvJQUn9HTjAiD89y3xBDOG3oaxV5_E`
+就获得了一个 API 密钥（这是示例，读者必须自行生成）：`AIzaSyDVpYvJQUn9HTjAiD89y3xBDOG3oaxV5_E`
 
 ![API 密钥生成](../.gitbook/assets/chromium-use-google-api-guide-18.png)
 
