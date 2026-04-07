@@ -46,7 +46,7 @@ LightDM，即 Light Display Manager，轻量级显示管理器。
 
 SDDM 即 Simple Desktop Display Manager，简单的桌面显示管理器。
 
-更改 `/usr/local/etc/pam.d/sddm` 文件：将 `include` 之后的 `login`，替换成 `system`，共计四处。
+更改 `/usr/local/etc/pam.d/sddm` 文件：将 `include` 之后的 `login`，改为 `system`，共计四处。
 
 重启 SDDM 服务：
 

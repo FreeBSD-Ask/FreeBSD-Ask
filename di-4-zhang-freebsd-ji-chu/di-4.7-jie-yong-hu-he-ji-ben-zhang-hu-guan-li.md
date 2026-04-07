@@ -114,7 +114,7 @@ Removing user (test2): home passwd.
 
 > **技巧**
 >
-> `export EDITOR=/usr/bin/ee` 可将编辑器换成更简单的 `ee`。
+> `export EDITOR=/usr/bin/ee` 可将编辑器改为更简单的 `ee`。
 
 常用参数：`-s`，用于修改登录 shell
 
@@ -123,7 +123,7 @@ Removing user (test2): home passwd.
 ```sh
 # chpass -s sh test1 # 修改用户 test1 的登录环境为 /bin/sh
 chpass: user information updated
-# export EDITOR=/usr/bin/ee  # 将编辑器换成更简单的 `ee` 编辑器
+# export EDITOR=/usr/bin/ee  # 将编辑器改为更简单的 `ee` 编辑器
 # chpass # 使用 ee 编辑器打开当前用户信息进行修改
 # passwd # 修改用户密码，如不指定用户则默认为当前用户。
 ```

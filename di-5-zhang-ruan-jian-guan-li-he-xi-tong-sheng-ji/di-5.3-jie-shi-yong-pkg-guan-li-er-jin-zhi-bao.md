@@ -102,7 +102,7 @@ For more information on available commands and options see 'pkg help'.
 >
 >> **思考题**
 >>
->> 在 SSL 大行其道的年代里，任何网络问题总是要看看自己机器的时间是否正确。而一般人总会忽略这一点（有时候甚至是 CPU 中负责加密的模块损坏导致的），并且大多数情况下报错也极不明确。你认为应该如何解决这个问题？
+>> 在 SSL 大行其道的年代里，任何网络问题总是要看看自己机器的时间是否正确。而一般人总会忽略这一点（有时候甚至是 CPU 中负责加密的模块损坏导致的），并且大多数情况下报错也极不明确。请读者进行思考，如何解决这个问题？
 
 ## 使用 pkg 安装软件
 
@@ -225,7 +225,7 @@ pkg: No packages available to install matching 'chromium' have been found in the
 ### 如何卸载所有自行安装的第三方软件？
 
 ```sh
-# pkg delete -fa # 如果带上参数 f，会将 pkg 自己也删掉，因为 pkg 也是用户一开始自行安装的软件。
+# pkg delete -fa # 如果带上参数 f，会将 pkg 包管理器本身也卸载，因为 pkg 也是用户一开始自行安装的软件。
 Checking integrity... done (0 conflicting)
 Deinstallation has been requested for the following 87 packages (of 0 packages in the universe):
 
@@ -499,7 +499,7 @@ Ignore the mismatch and continue? [y/N]:
 
 这通常发生在已失去安全支持的系统，或 CURRENT/STABLE 分支系统上，不影响使用，输入 `y` 即可。
 
-如果想要从根源上解决，需要自己卸载 pkg，从 ports 安装 `ports-mgmt/pkg`；或者从源代码更新整个系统。
+如果想要从根源上解决，需要卸载 pkg，从 ports 安装 `ports-mgmt/pkg`；或者从源代码更新整个系统。
 
 如果只是不想看到这个提示：只需要按照提示将 `IGNORE_OSVERSION=yes` 写入 `/etc/make.conf` 文件中（没有就新建）就行。
 
