@@ -224,7 +224,7 @@ Uploaded to DB, Thank you!
 Probe URL: https://bsd-hardware.info/?probe=f64606c4b1
 ```
 
-打开上面的链接，即可看到设备。这里上传的是 Radxa x4 的配置信息。
+打开上面的链接，即可看到设备信息。这里上传的是 Radxa x4 的配置信息。
 
 其他操作系统可参见 linuxhw. hw-probe/INSTALL.BSD.md[EB/OL]. [2026-03-25]. <https://github.com/linuxhw/hw-probe/blob/master/INSTALL.BSD.md>，该文档提供 BSD 系统上 hw-probe 工具的安装说明。
 
