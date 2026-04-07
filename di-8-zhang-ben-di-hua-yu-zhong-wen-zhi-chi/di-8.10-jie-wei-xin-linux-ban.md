@@ -46,7 +46,7 @@ root@ykla:/compat/linux # rpm2cpio < WeChatLinux_x86_64.rpm  | cpio -id
 1393412 blocks
 ```
 
-请将 WeChatLinux_x86_64.rpm 的路径改为实际的。
+请将 WeChatLinux_x86_64.rpm 改为实际的本地文件路径。
 
 ### 解决依赖问题
 
