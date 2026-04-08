@@ -195,11 +195,11 @@
 | Jordan Hubbard | / | FreeBSD 的创始人之一，Ports 系统的创建者。 |
 | Justin Gibbs | / | FreeBSD 基金会的创始人之一。 |
 | Deb Goodkin | / | FreeBSD 基金会的首位执行董事。 |
-| Jan Koum | / | WhatsApp 的原 CEO 及创始人，FreeBSD 的重要捐赠者 |
-| Eric S. Raymond | / | 开源运动的重要人物，《大教堂与集市》和《UNIX 编程艺术》的作者 |
-| Henry Spencer | / | UNIX 社区的重要人物，有著名言论：“那些不懂 Unix 的人注定要再造一个四不像式 Unix” |
-| Linus Torvalds | / | Linux 内核的创始人 |
-| Richard M. Stallman | / | 自由软件基金会的创始人，GNU 项目的发起者 |
+| Jan Koum | / | WhatsApp 的原 CEO 及创始人，FreeBSD 的重要捐赠者。 |
+| Eric S. Raymond | / | 开源运动的重要人物，《大教堂与集市》和《UNIX 编程艺术》的作者。 |
+| Henry Spencer | / | UNIX 社区的重要人物，有著名言论：“那些不懂 Unix 的人注定要再造一个四不像式 Unix”。 |
+| Linus Torvalds | / | Linux 内核的创始人。 |
+| Richard M. Stallman | / | 自由软件基金会的创始人，GNU 项目的发起者。 |
 | Theo de Raadt | / | OpenBSD 的创始人 |
 | Matt Dillon | / | DragonFly BSD 的创始人 |
 | Red Hat | 红帽公司 | 一家重要的 Linux 发行商，控制着许多主流 Linux 项目 |
