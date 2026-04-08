@@ -191,7 +191,7 @@ FreeBSD 的稳定性和可靠性使其在许多领域得到了广泛应用。以
 
 ### 参考文献
 
-- FreeBSD Foundation. Read how organisations are using FreeBSD across the globe [EB/OL]. [2026-03-25]. <https://freebsdfoundation.org/end-user-stories/>. FreeBSD 基金会官方版本，汇集了 FreeBSD 在各领域的典型应用案例。
+- FreeBSD Foundation. Read how organisations are using FreeBSD across the globe[EB/OL]. [2026-03-25]. <https://freebsdfoundation.org/end-user-stories/>. FreeBSD 基金会官方版本，汇集了 FreeBSD 在各领域的典型应用案例。
 
 ## 为什么选择 FreeBSD
 
