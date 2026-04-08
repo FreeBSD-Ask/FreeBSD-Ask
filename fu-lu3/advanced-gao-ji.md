@@ -1056,7 +1056,7 @@ PSYS 平台电源最大功率（Pmax）以 1/8 瓦为单位定义，范围为 0 
 
 ##### Min Voltage Override（覆盖最低电压）
 
-选项
+选项：
 
 Disable（禁用）
 
