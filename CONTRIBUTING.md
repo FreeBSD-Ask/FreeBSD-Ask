@@ -4,7 +4,7 @@
 
 FreeBSD 项目对除季度报告外的实质性 PR 多采取长期搁置的处理方式。从提交数据来看，freebsd-doc 项目的活跃度在过去十余年持续走低：
 
-使用统计分析 git 项目 [EB/OL]. [2026-03-26]. <https://gist.github.com/ykla/6c3df44c371d37fc3196ddf5fa87ce5f> 对 freebsd-doc 进行分析的结果参见：freebsd-doc-2025 分析报告 [EB/OL]. [2026-03-26]. <https://gist.github.com/ykla/363bf922d0785d0b02dd43f8289368db>。
+使用统计分析 git 项目[EB/OL]. [2026-03-26]. <https://gist.github.com/ykla/6c3df44c371d37fc3196ddf5fa87ce5f> 对 freebsd-doc 进行分析的结果参见：freebsd-doc-2025 分析报告[EB/OL]. [2026-03-26]. <https://gist.github.com/ykla/363bf922d0785d0b02dd43f8289368db>。
 
 - 2005–2006 年：第一次显著下滑
 - 2015–2016 年：第二次大幅下滑
@@ -51,7 +51,7 @@ and retry with 'git restore --source=HEAD :/'
 - **引用应注重权威性、时效性与准确性。优先采用原始文献，次选二手文献，避免使用三手文献**
 - 引用其他网站内容时，请核实其内容是否真实可信，尽量查阅一手来源而非直接引用网站内容
 - 请提交至 main 分支
-- 请避免学术不端行为，参见：高等学校预防与处理学术不端行为办法 [EB/OL]. [2026-03-26]. <https://www.gov.cn/zhengce/2016-07/19/content_5713390.htm> （AIGC 相关规定除外）
+- 请避免学术不端行为，参见：高等学校预防与处理学术不端行为办法[EB/OL]. [2026-03-26]. <https://www.gov.cn/zhengce/2016-07/19/content_5713390.htm> （AIGC 相关规定除外）
 - 请遵守 [FreeBSD 中文社区行为规范](https://docs.bsdcn.org/CODE_OF_CONDUCT)
 - 所有 AIGC（AI-Generated Content，人工智能生成内容）必须经过人工二次确认，核实其原始出处与来源的可靠性，不得直接提交。但纯粹翻译可作为例外绕过本规定。任何人对所提交内容自行负责，无论其是否由 AIGC 生成
 
@@ -124,8 +124,8 @@ and retry with 'git restore --source=HEAD :/'
 
 名词解释：
 
-- `autocrlf`：配置 Git 自动处理（转换）行结束符的默认行为。参见：配置 Git 处理行结束符 - GitHub Docs [EB/OL]. [2026-03-26]. <https://docs.github.com/zh/get-started/git-basics/configuring-git-to-handle-line-endings>
-- `signingkey`：指设置带签名提交时默认使用的签名密钥。signingkey 既可指 GPG Key，亦可指 SSH Key。自 Git 2.34 起，Git 支持了 SSH 签名验证功能。参见：关于提交签名验证 - GitHub Docs [EB/OL]. [2026-03-26]. <https://docs.github.com/zh/authentication/managing-commit-signature-verification/about-commit-signature-verification>
+- `autocrlf`：配置 Git 自动处理（转换）行结束符的默认行为。参见：配置 Git 处理行结束符 - GitHub Docs[EB/OL]. [2026-03-26]. <https://docs.github.com/zh/get-started/git-basics/configuring-git-to-handle-line-endings>
+- `signingkey`：指设置带签名提交时默认使用的签名密钥。signingkey 既可指 GPG Key，亦可指 SSH Key。自 Git 2.34 起，Git 支持了 SSH 签名验证功能。参见：关于提交签名验证 - GitHub Docs[EB/OL]. [2026-03-26]. <https://docs.github.com/zh/authentication/managing-commit-signature-verification/about-commit-signature-verification>
 
 拉取命令：
 
@@ -179,7 +179,7 @@ $ git clone https://github.com/FreeBSD-Ask/FreeBSD-Ask
 
 本项目是托管在 GitBook 的主项目（即 `https://book.bsdcn.org`）；
 
-`https://docs.bsdcn.org` 由社区自行构建，docs 网站本身的贡献指南参见：FreeBSD 从入门到跑路 VitePress 镜像项目 [EB/OL]. [2026-03-26]. <https://github.com/FreeBSD-Ask/FreeBSD-Ask.github.io/blob/main/README.md>。
+`https://docs.bsdcn.org` 由社区自行构建，docs 网站本身的贡献指南参见：FreeBSD 从入门到跑路 VitePress 镜像项目[EB/OL]. [2026-03-26]. <https://github.com/FreeBSD-Ask/FreeBSD-Ask.github.io/blob/main/README.md>。
 
 >**技巧**
 >
