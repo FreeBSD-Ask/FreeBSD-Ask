@@ -20,7 +20,7 @@
 
 GDM，即 GNOME Display Manager，GNOME 显示管理器。
 
-打开 `/usr/local/etc/pam.d/gdm-password` 文件，注释掉 `account requisite pam_securetty.so` 这一行（往最前面加 `#`）
+打开 `/usr/local/etc/pam.d/gdm-password` 文件，注释掉 `account requisite pam_securetty.so` 这一行（往最前面加 `#`）。
 
 重启 GDM 服务：
 
