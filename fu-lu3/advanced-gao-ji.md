@@ -1649,11 +1649,11 @@ Enable（启用）
 
 选项：
 
-90W AC Brick
+90 W AC Brick
 
-65W AC Brick
+65 W AC Brick
 
-75W AC Brick
+75 W AC Brick
 
 说明：
 
