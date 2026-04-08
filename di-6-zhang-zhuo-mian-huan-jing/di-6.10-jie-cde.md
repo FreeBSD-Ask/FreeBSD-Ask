@@ -76,13 +76,13 @@ Alternatively, if you want to use the Login Manager as well, create
 /usr/local/etc/X11/Xwrapper.config and add this line:
 
 allowed_users=anybody
-# 如果你想启用图形登录管理器（Login Manager），请创建 Xwrapper.config 并添加 allowed_users=anybody。
+# 如果你想启用图形显示管理器（Login Manager），请创建 Xwrapper.config 并添加 allowed_users=anybody。
 
 To start the Common Desktop Enviroment Login Manager:
 
 % /usr/local/dt/bin/dtlogin -daemon
 
-# 使用 dtlogin -daemon 命令启动 CDE 登录管理器（守护进程模式）。
+# 使用 dtlogin -daemon 命令启动 CDE 显示管理器（守护进程模式）。
 ```
 
 ## 配置服务与文件
