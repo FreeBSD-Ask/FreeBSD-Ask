@@ -74,7 +74,7 @@
 | FreeBSD 基金会 | / | 支持 FreeBSD 项目的非营利机构，位于美国科罗拉多州博尔德县，负责资金筹集和项目支持。 |
 | FreeBSD 核心小组 | / | FreeBSD 项目的最高管理机构，由 9 名成员组成，负责项目战略决策和方向指导。 |
 | 提交者 | / | FreeBSD 项目中有权限直接向代码仓库提交更改的开发者。 |
-| CSRG | / | Computer Systems Research Group，加州大学伯克利分校的计算机系统研究小组。 |
+| CSRG | / | Computer Systems Research Group，加州大学伯克利分校的计算机系统研究小组，主要活动时间为 1980-1992 年。 |
 | Multics | / | 多路复用信息和计算服务，一个早期的操作系统项目。 |
 | OpenSolaris | / | Sun Microsystems 开源的 Solaris 操作系统版本，ZFS 和 DTrace 等技术的开源实现基础。 |
 | illumos | / | OpenSolaris 社区分支，在 Oracle 收购 Sun 后由社区维护的开源操作系统项目。 |
