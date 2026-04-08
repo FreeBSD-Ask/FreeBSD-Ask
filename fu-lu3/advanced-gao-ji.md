@@ -1302,7 +1302,7 @@ RFI Current Frequency（当前 RFI 频率）：139.200 MHz
 
 - RFI Frequency（RFI 频率）：设置目标 RFI 频率（Set desired RFI Frequency）
 
-- 调节单位：以 100 千赫兹（100KHz）为步进
+- 调节单位：以 100 千赫兹（100 KHz）为步进
 - 频率范围：130 MHz 至 160 MHz
 - 默认硬件频率：139.6 MHz
 - 输入值 = 目标频率（MHz） × 10（例如：需设置 139.6 MHz 时 → 输入 1396）
