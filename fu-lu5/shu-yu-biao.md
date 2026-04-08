@@ -126,30 +126,30 @@
 | Python | / | 一种高级编程语言。 |
 | Rust | / | 一种系统编程语言，注重安全和性能。 |
 | Go | / | Golang，Google 开发的编程语言。 |
-| Qt | / | 一款跨平台的应用程序开发框架。 |
+| Qt | / | 一种跨平台的应用程序开发框架。 |
 | Node.js | / | 一个基于 Chrome V8 引擎的 JavaScript 运行时。 |
 | Code Server | / | 在浏览器中运行 VS Code 的工具。 |
 | Clangd | / | Clang 的语言服务器，提供代码补全等功能。 |
-| Ren'Py | / | 一款视觉小说引擎。 |
-| Godot | / | 一款开源的游戏引擎。 |
-| Minecraft | / | 一款沙盒游戏。 |
+| Ren'Py | / | 一种视觉小说引擎。 |
+| Godot | / | 一种开源的游戏引擎。 |
+| Minecraft | / | 一种沙盒游戏。 |
 | Steam | / | Valve 开发的游戏平台。 |
-| Fcitx | / | 一款输入法框架。 |
-| IBus | / | Intelligent Input Bus，一款输入法框架。 |
-| Chromium | / | 一款开源的 Web 浏览器。 |
-| Wine | / | 一款在类 Unix 系统上运行 Windows 程序的兼容层。 |
-| Termius | / | 一款 SSH 客户端。 |
-| MobaXterm | / | 一款 Windows 下的 SSH 客户端和 X11 服务器。 |
-| AnyDesk | / | 一款远程桌面软件。 |
-| VirtualBox | / | 一款虚拟机软件。 |
-| VMware | / | 一款虚拟机软件。 |
+| Fcitx | / | 一种输入法框架。 |
+| IBus | / | Intelligent Input Bus，一种输入法框架。 |
+| Chromium | / | 一种开源的 Web 浏览器。 |
+| Wine | / | 一种在类 Unix 系统上运行 Windows 程序的兼容层。 |
+| Termius | / | 一种 SSH 客户端。 |
+| MobaXterm | / | 一种 Windows 下的 SSH 客户端和 X11 服务器。 |
+| AnyDesk | / | 一种远程桌面软件。 |
+| VirtualBox | / | 一种虚拟机软件。 |
+| VMware | / | 一种虚拟机软件。 |
 | Hyper-V | / | Microsoft 的虚拟机技术。 |
-| Parallels Desktop | / | 一款 macOS 下的虚拟机软件。 |
-| UTM | / | 一款 macOS 和 iOS 下的虚拟机软件。 |
+| Parallels Desktop | / | 一种 macOS 下的虚拟机软件。 |
+| UTM | / | 一种 macOS 和 iOS 下的虚拟机软件。 |
 | KVM | / | Kernel-based Virtual Machine，Linux 的内核虚拟机。 |
-| QEMU | / | 一款开源的机器模拟器和虚拟机。 |
-| Ventoy | / | 一款多合一启动盘制作工具。 |
-| rEFInd | / | 一款 UEFI 引导管理器。 |
+| QEMU | / | 一种开源的机器模拟器和虚拟机。 |
+| Ventoy | / | 一种多合一启动盘制作工具。 |
+| rEFInd | / | 一种 UEFI 引导管理器。 |
 | Radxa | 瑞莎 | 一家中国的半导体公司，开发 Radxa 系列开发板。 |
 | Raspberry Pi | 树莓派 | 一款流行的单板计算机。 |
 | VisionFive 2 | 昉·星光 2 | 一款 RISC-V 开发板。 |
