@@ -1255,7 +1255,7 @@ Enable（启用）
 
 因为直流电压降（电路长度愈增加，其电压会愈下降，导致其两端电压不同）问题，英特尔将主板到 CPU 之间的物理电阻抽象为虚拟电阻（即 AC/DC Loadline），即不考虑实际物理电阻的实现究竟是多少（每块主板都不同），来拟合 CPU 倍频所需的电压功率，这样不同的主板的主板供电模块的掉压行为就是一致的。AC Loadline 是升压负载线，DC 是降压负载线。
 
-负载线（AC/DC）应通过 VRTT 工具进行测量，并通过 BIOS 的负载线覆盖设置选项进行相应配置。AC 负载线会直接影响工作电压（AC），DC 负载线则会影响功率测量（DC）。与按 POR 阻抗设计的主板相比，采用较低 AC 负载线的优秀主板设计能够在功耗、性能和散热方面实现改进。参见：VCCCORE DC Specifications[EB/OL]. [2026-03-26]. <https://edc.intel.com/content/www/de/de/design/products/platforms/details/raptor-lake-s/13th-generation-core-processors-datasheet-volume-1-of-2/vcccore-dc-specifications/>；Intel CPU AC/DC Loadline、防掉壓CEP觀念原理一次講完[EB/OL]. [2026-03-26]. <https://forum.gamer.com.tw/C.php?bsn=60030&snA=644011>；从头开始讲Loadline[EB/OL]. [2026-03-26]. <https://tieba.baidu.com/p/8328546013>。
+负载线（AC/DC）应通过 VRTT 工具进行测量，并通过 BIOS 的负载线覆盖设置选项进行相应配置。AC 负载线会直接影响工作电压（AC），DC 负载线则会影响功率测量（DC）。与按 POR 阻抗设计的主板相比，采用较低 AC 负载线的优秀主板设计能够在功耗、性能和散热方面实现改进。参见：VCCCORE DC Specifications[EB/OL]. [2026-03-26]. <https://edc.intel.com/content/www/de/de/design/products/platforms/details/raptor-lake-s/13th-generation-core-processors-datasheet-volume-1-of-2/vcccore-dc-specifications/>；Intel CPU AC/DC Loadline、防掉壓CEP觀念原理一次講完[EB/OL]. [2026-03-26]. <https://forum.gamer.com.tw/C.php?bsn=60030&snA=644011>；从头开始讲 Loadline[EB/OL]. [2026-03-26]. <https://tieba.baidu.com/p/8328546013>。
 
 Intel 建议 AC Loadline 与 DC Loadline 取值一致（AC = DC）。警告：一般不建议修改 AC/DC Loadline。
 
@@ -2897,7 +2897,7 @@ Enable（启用）
 
 CSM：Compatibility Support Module，兼容性支持模块。
 
-Intel 500 系列及更新芯片组（第 11 代及后续处理器）不支持使用 VBIOS 的显示适配器，导致内置核显不支持 legacy boot，因此其 CSM 选项是灰色的。必须使用有支持 VBIOS 的外置独显才能进行配置。参见：华硕公司. Intel 500系列开始，在BIOS中的CSM选项无法选用问题？[EB/OL]. [2026-03-26]. <https://www.asus.com.cn/support/faq/1045467/>。
+Intel 500 系列及更新芯片组（第 11 代及后续处理器）不支持使用 VBIOS 的显示适配器，导致内置核显不支持 legacy boot，因此其 CSM 选项是灰色的。必须使用有支持 VBIOS 的外置独显才能进行配置。参见：华硕公司. Intel 500系列开始，在 BIOS 中的 CSM 选项无法选用问题？[EB/OL]. [2026-03-26]. <https://www.asus.com.cn/support/faq/1045467/>。
 
 ![CSM 配置](../.gitbook/assets/image-20250721170014-1xxoskv.png)
 
@@ -3593,7 +3593,7 @@ Not Happened（未发生）：嵌入式控制器软未重置过
 
 ### Super IO Configuration（超级 I/O 配置）
 
-参见：CSDN博主u011397314. BIOS实战之Super IO-Smart Fan[EB/OL]. (2024-01-15)[2024-01-15]. <https://blog.csdn.net/u011397314/article/details/111147528>。
+参见：CSDN博主u011397314. BIOS 实战之 Super IO-Smart Fan[EB/OL]. (2024-01-15)[2024-01-15]. <https://blog.csdn.net/u011397314/article/details/111147528>。
 
 用于管理主板上的传统 I/O 接口，如串口（COM）、并口（LPT）、PS/2 键盘/鼠标、红外接口（IR）以及环境控制器（EC）等。这些接口通常由 Super I/O 芯片控制，负责处理低速 I/O 设备的通信。
 
