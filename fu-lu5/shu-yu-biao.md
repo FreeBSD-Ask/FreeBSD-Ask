@@ -185,11 +185,11 @@
 | 501(c)(3) | / | 美国税法中的一种非营利组织类型，可接受免税捐赠。 |
 | Sun Microsystems | / | 太阳计算机系统公司，ZFS 和 Solaris 的原开发商，2009 年被 Oracle 收购。 |
 | Oracle | 甲骨文公司 | 收购了 Sun Microsystems。 |
-| AT&T | 美国电话电报公司 | UNIX 的原开发商 |
-| Bell Labs | 贝尔实验室 | AT&T 的研究实验室，UNIX 的诞生地 |
-| University of California, Berkeley | 加州大学伯克利分校 | BSD 的诞生地 |
-| Bill Joy | / | Sun Microsystems 的创始人之一，也是 BSD Unix 的关键开发者 |
-| Ken Thompson | / | UNIX 的主要开发者之一 |
+| AT&T | 美国电话电报公司 | UNIX 的原开发商。 |
+| Bell Labs | 贝尔实验室 | AT&T 的研究实验室，UNIX 的诞生地。 |
+| University of California, Berkeley | 加州大学伯克利分校 | BSD 的诞生地。 |
+| Bill Joy | / | Sun Microsystems 的创始人之一，也是 BSD Unix 的关键开发者。 |
+| Ken Thompson | / | UNIX 的主要开发者之一。 |
 | Dennis Ritchie | / | UNIX 的主要开发者之一，C 语言的发明者 |
 | Marshall Kirk McKusick | / | FreeBSD 的重要开发者，《FreeBSD 操作系统设计与实现》的作者之一 |
 | Jordan Hubbard | / | FreeBSD 的创始人之一，Ports 系统的创建者 |
