@@ -4,7 +4,7 @@
 
 UNIX 的内涵经历了从具体技术实现到文化象征的演变过程。
 
-20 世纪 60 年代末至 70 年代初，UNIX 是一款操作系统，最初使用汇编语言编写，后来主要由 C 语言重写。UNIX 系统起源于美国电话电报公司（American Telephone & Telegraph，AT&T）的贝尔实验室。
+20 世纪 60 年代末至 70 年代初，UNIX 是一种操作系统，最初使用汇编语言编写，后来主要由 C 语言重写。UNIX 系统起源于美国电话电报公司（American Telephone & Telegraph，AT&T）的贝尔实验室。
 
 20 世纪 80 年代以后，UNIX 逐渐成为一种 **[标准规范](https://www.opengroup.org/openbrand/register/xym0.htm)**。
 
