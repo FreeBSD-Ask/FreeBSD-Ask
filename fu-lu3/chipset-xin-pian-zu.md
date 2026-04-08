@@ -20,7 +20,7 @@
 - 与 Ring Bus 或 Mesh 的接口，实现处理器核心间通信
 - 电源管理逻辑等，优化系统能效
 
-参见博客园. BIOS PCIe 配置里的 LTR Snoop Latency value of SA PCIE[EB/OL]. [2026-03-26]. <https://www.cnblogs.com/wanglouxiaozi/p/18946234>
+参见：博客园. BIOS PCIe配置里的LTR Snoop Latency value of SA PCIE[EB/OL]. [2026-03-26]. <https://www.cnblogs.com/wanglouxiaozi/p/18946234>
 
 ![系统代理配置](../.gitbook/assets/image-20250726134119-yow827m.png)
 
@@ -150,7 +150,7 @@ Disabled（禁用）
 
 当设置为 Enabled 时，集成内存控制器在空闲一段时间后可能进入自刷新模式。
 
-参见戴尔科技. PowerEdge: DRAM Refresh and Opportunistic Self-Refresh[EB/OL]. [2026-03-26]. <https://infohub.delltechnologies.com/zh-cn/l/cpu-best-practices-3/poweredge-dram-refresh-and-opportunistic-self-refresh/> DRAM 刷新与机会性自刷新的最佳实践。
+参见：戴尔科技. PowerEdge: DRAM Refresh and Opportunistic Self-Refresh[EB/OL]. [2026-03-26]. <https://infohub.delltechnologies.com/zh-cn/l/cpu-best-practices-3/poweredge-dram-refresh-and-opportunistic-self-refresh/>。DRAM刷新与机会性自刷新的最佳实践。
 
 允许在不退出低功耗状态（power down）的情况下进行机会性刷新（opportunistic refreshes）
 
@@ -178,7 +178,7 @@ Disabled（禁用）
 
 说明：
 
-Intel® Memory Thermal Management，Intel 内存热效应管理。参见英特尔公司. 12th Generation Intel® Core™ Processors[EB/OL]. [2026-03-26]. <https://edc.intel.com/content/www/tw/zh/design/ipla/software-development-platforms/client/platforms/alder-lake-desktop/12th-generation-intel-core-processors-datasheet-volume-1-of-2/011/intel-memory-thermal-management/> Intel 第 12 代处理器内存热管理的技术规范。一系列控制内存温度的措施。
+Intel® Memory Thermal Management，Intel内存热效应管理。参见：英特尔公司. 12th Generation Intel® Core™ Processors[EB/OL]. [2026-03-26]. <https://edc.intel.com/content/www/tw/zh/design/ipla/software-development-platforms/client/platforms/alder-lake-desktop/12th-generation-intel-core-processors-datasheet-volume-1-of-2/011/intel-memory-thermal-management/>。Intel第12代处理器内存热管理的技术规范。一系列控制内存温度的措施。
 
 ##### PECI Injected Temperature（通过 PECI 传入温度）
 
@@ -253,7 +253,7 @@ Disabled（禁用）
 - UEFI BIOS 中的总内存加密设置发生更改
 - UEFI BIOS 更新时内存参考代码（MRC）发生更改
 
-参见检测内存重新训练[EB/OL]. [2026-03-26]. <https://download.lenovo.com/manual/thinkpad_x1_carbon_gen13/user_guide/zh-cn/Detect_memory_retraining.html>
+参见：联想公司. 检测内存重新训练[EB/OL]. [2026-03-26]. <https://download.lenovo.com/manual/thinkpad_x1_carbon_gen13/user_guide/zh-cn/Detect_memory_retraining.html>
 
 ![内存训练算法](../.gitbook/assets/image-20250726153543-6lin7v1.png)
 
