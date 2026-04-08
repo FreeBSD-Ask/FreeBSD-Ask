@@ -31,7 +31,7 @@ Xfce 的 Logo 是一只 [老鼠 🐀](https://docs.xfce.org/faq#what_does_it_mea
 
 | 包名 | 作用说明 |
 | ---- | -------- |
-| `xorg` | X Window System |
+| `xorg` | X 窗口系统 |
 | `lightdm` | 轻量级显示管理器 LightDM |
 | `lightdm-gtk-greeter` | LightDM 的 GTK+ 登录界面插件 |
 | `xfce` | Xfce 桌面环境 |
