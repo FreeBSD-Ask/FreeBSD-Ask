@@ -200,16 +200,16 @@
 | Henry Spencer | / | UNIX 社区的重要人物，有著名言论：“那些不懂 Unix 的人注定要再造一个四不像式 Unix”。 |
 | Linus Torvalds | / | Linux 内核的创始人。 |
 | Richard M. Stallman | / | 自由软件基金会的创始人，GNU 项目的发起者。 |
-| Theo de Raadt | / | OpenBSD 的创始人 |
-| Matt Dillon | / | DragonFly BSD 的创始人 |
-| Red Hat | 红帽公司 | 一家重要的 Linux 发行商，控制着许多主流 Linux 项目 |
-| Netflix | 奈飞公司 | 几乎所有网络活动都使用 FreeBSD 设备进行 |
-| Sony | 索尼公司 | PlayStation 系列游戏机使用基于 FreeBSD 的操作系统 |
-| Dell EMC | 戴尔 EMC | Isilon NAS 存储设备使用基于 FreeBSD 的 OneFS 操作系统 |
-| Beckhoff | 倍福公司 | TwinCAT/BSD 自动化控制系统使用 FreeBSD |
-| Container | 容器 | 一种轻量级的虚拟化技术 |
-| CI/CD | / | Continuous Integration/Continuous Deployment，持续集成/持续部署 |
-| GitHub Actions | / | GitHub 的持续集成和持续部署服务 |
-| GitHub | / | 一个代码托管平台 |
-| Git | / | 一种分布式版本控制系统 |
-| DevSummit | / | FreeBSD 的开发者峰会 |
+| Theo de Raadt | / | OpenBSD 的创始人。 |
+| Matt Dillon | / | DragonFly BSD 的创始人。 |
+| Red Hat | 红帽公司 | 一家重要的 Linux 发行商，控制着许多主流 Linux 项目。 |
+| Netflix | 奈飞公司 | 几乎所有网络活动都使用 FreeBSD 设备进行。 |
+| Sony | 索尼公司 | PlayStation 系列游戏机使用基于 FreeBSD 的操作系统。 |
+| Dell EMC | 戴尔 EMC | Isilon NAS 存储设备使用基于 FreeBSD 的 OneFS 操作系统。 |
+| Beckhoff | 倍福公司 | TwinCAT/BSD 自动化控制系统使用 FreeBSD。 |
+| Container | 容器 | 一种轻量级的虚拟化技术。 |
+| CI/CD | / | Continuous Integration/Continuous Deployment，持续集成/持续部署。 |
+| GitHub Actions | / | GitHub 的持续集成和持续部署服务。 |
+| GitHub | / | 一个代码托管平台。 |
+| Git | / | 一种分布式版本控制系统。 |
+| DevSummit | / | FreeBSD 的开发者峰会。 |
