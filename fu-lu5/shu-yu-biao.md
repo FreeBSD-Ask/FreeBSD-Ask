@@ -66,7 +66,7 @@
 | Caddy | / | 一款支持自动 HTTPS 的 Web 服务器。 |
 | Fail2Ban | / | 一款入侵防御软件，用于保护服务器免受暴力攻击。 |
 | TCP BBR | / | TCP Bottleneck Bandwidth and RTT，一种 TCP 拥塞控制算法。 |
-| Wi-Fi | 无线局域网技术 | Wireless Fidelity。 |
+| Wi-Fi | 无线局域网技术 | Wireless Fidelity，一种无线局域网技术。 |
 | USB RNDIS | / | USB Remote Network Driver Interface Specification，USB 网络共享技术。 |
 | Linux 兼容层 | / | FreeBSD 系统功能，可在 FreeBSD 上运行 Linux 二进制程序，提供应用程序兼容性。 |
 | RISC-V | / | 开源指令集架构，FreeBSD 支持 RISC-V 架构的硬件平台。 |
@@ -100,81 +100,81 @@
 | W^X | 写异或执行 | Write XOR Execute，一种安全策略。 |
 | PIE | 位置无关可执行文件 | Position Independent Executable，一种安全缓解技术。 |
 | ASLR | 地址空间布局随机化 | Address Space Layout Randomization，一种安全缓解技术。 |
-| DAC | 自主访问控制 | Discretionary Access Control，标准 Unix 安全模型 |
-| ACL | 访问控制列表 | Access Control List |
-| TrustedBSD | / | FreeBSD 的安全扩展项目，基于 POSIX.1e 草案 |
-| gop | / | Graphics Output Protocol，图形输出协议，用于设置 UEFI 引导分辨率 |
-| VESA | / | Video Electronics Standards Association，视频电子标准协会，用于设置 BIOS 引导分辨率 |
-| device.hints | / | 设备资源提示文件，用于控制驱动程序的内核变量 |
-| motd | / | Message of the Day，今日信息，登录后显示的信息 |
-| fstab | / | 文件系统表，用于配置文件系统挂载 |
-| hosts | / | 本地 IP 域名映射表，优先于 DNS |
-| ttys | / | 创建 TTY 的规则文件 |
-| csh | / | C Shell，一种 shell |
-| sh | / | Bourne Shell，FreeBSD 的默认 shell |
-| tcsh | / | Tenex C Shell，csh 的增强版本 |
-| bash | / | Bourne Again Shell，GNU 的 shell |
-| zsh | / | Z Shell，一种功能强大的 shell |
-| vi | / | 一款经典的文本编辑器 |
-| Vim | / | Vi IMproved，vi 的增强版本 |
-| Emacs | / | 一款功能强大的文本编辑器 |
-| Neovim | / | Vim 的重构版本 |
-| gcc | / | GNU Compiler Collection，GNU 编译器集合 |
-| gdb | / | GNU Debugger，GNU 调试器 |
-| IDA Pro | / | Interactive Disassembler Professional，一款专业的反汇编和调试工具 |
-| Java | / | 一种编程语言和计算平台 |
-| Python | / | 一种高级编程语言 |
-| Rust | / | 一种系统编程语言，注重安全和性能 |
-| Go | / | Golang，Google 开发的编程语言 |
-| Qt | / | 一款跨平台的应用程序开发框架 |
-| Node.js | / | 一个基于 Chrome V8 引擎的 JavaScript 运行时 |
-| Code Server | / | 在浏览器中运行 VS Code 的工具 |
-| Clangd | / | Clang 的语言服务器，提供代码补全等功能 |
-| Ren'Py | / | 一款视觉小说引擎 |
-| Godot | / | 一款开源的游戏引擎 |
-| Minecraft | / | 一款沙盒游戏 |
-| Steam | / | Valve 开发的游戏平台 |
-| Fcitx | / | 一款输入法框架 |
-| IBus | / | Intelligent Input Bus，一款输入法框架 |
-| Chromium | / | 一款开源的 Web 浏览器 |
-| Wine | / | 一款在类 Unix 系统上运行 Windows 程序的兼容层 |
-| Termius | / | 一款 SSH 客户端 |
-| MobaXterm | / | 一款 Windows 下的 SSH 客户端和 X11 服务器 |
-| AnyDesk | / | 一款远程桌面软件 |
-| VirtualBox | / | 一款虚拟机软件 |
-| VMware | / | 一款虚拟机软件 |
-| Hyper-V | / | Microsoft 的虚拟机技术 |
-| Parallels Desktop | / | 一款 macOS 下的虚拟机软件 |
-| UTM | / | 一款 macOS 和 iOS 下的虚拟机软件 |
-| KVM | / | Kernel-based Virtual Machine，Linux 的内核虚拟机 |
-| QEMU | / | 一款开源的机器模拟器和虚拟机 |
-| Ventoy | / | 一款多合一启动盘制作工具 |
-| rEFInd | / | 一款 UEFI 引导管理器 |
-| Radxa | 瑞莎 | 一家中国的半导体公司，开发 Radxa 系列开发板 |
-| Raspberry Pi | 树莓派 | 一款流行的单板计算机 |
-| VisionFive 2 | 昉·星光 2 | 一款 RISC-V 开发板 |
-| TwinCAT/BSD | / | 倍福自动化控制系统的操作系统 |
-| GhostBSD | / | 一款基于 FreeBSD 的桌面发行版 |
-| MidnightBSD | / | 一款基于 FreeBSD 的操作系统 |
-| NomadBSD | / | 一款基于 FreeBSD 的 Live USB 发行版 |
-| HelloSystem | / | 一款基于 FreeBSD 的桌面操作系统，设计风格类似 macOS |
-| MfsBSD | / | 一款基于 FreeBSD 的内存文件系统发行版 |
-| FreeBSD 中文社区 | / | FreeBSD 的中文用户和开发者社区 |
-| FreeBSD 日 | / | 每年 6 月 19 日，FreeBSD 基金会和社区庆祝 FreeBSD 生日的日子 |
-| EuroBSDCon | / | 欧洲 BSD 大会 |
-| AsiaBSDCon | / | 亚洲 BSD 大会 |
-| BSDCan | / | 加拿大 BSD 大会 |
-| FreeBSDCon | / | FreeBSD 大会，首届于 1999 年举行 |
-| FreeBSD 期刊 | / | FreeBSD 社区的期刊，跟进 FreeBSD 最新发布版本和新进展 |
-| Google Summer of Code | 谷歌编程之夏 | 一个为学生提供参与开源项目机会的项目 |
-| FreeBSD Handbook | / | FreeBSD 官方文档，提供详细的使用指南和参考 |
-| FreshPorts | / | 一个 FreeBSD Ports 的搜索引擎和信息网站 |
-| OpenBSM | / | Open Basic Security Module，FreeBSD 的安全审计系统 |
-| CHERI | / | Capability Hardware Enhanced RISC Instructions，基于 Capsicum 项目发展而来的 CPU 架构扩展 |
-| Linuxism | Linux 主义/Linux 歧视 | 指软件过分依赖 Linux 特有特性而难以移植到其他类 Unix 操作系统的现象 |
-| POLA | 最小惊讶原则 | Principle of Least Astonishment，一种设计原则，指设计必须符合用户的习惯、期望和心智能力 |
-| 大教堂与集市 | / | 一种软件开发模型的比喻，大教堂指集中式开发，市集指分布式开发 |
-| KISS 原则 | / | Keep It Simple, Stupid，一种设计原则，强调保持简单 |
+| DAC | 自主访问控制 | Discretionary Access Control，标准 Unix 安全模型。 |
+| ACL | 访问控制列表 | Access Control List。 |
+| TrustedBSD | / | FreeBSD 的安全扩展项目，基于 POSIX.1e 草案。 |
+| gop | / | Graphics Output Protocol，图形输出协议，用于设置 UEFI 引导分辨率。 |
+| VESA | / | Video Electronics Standards Association，视频电子标准协会，用于设置 BIOS 引导分辨率。 |
+| device.hints | / | 设备资源提示文件，用于控制驱动程序的内核变量。 |
+| motd | / | Message of the Day，今日信息，登录后显示的信息。 |
+| fstab | / | 文件系统表，用于配置文件系统挂载。 |
+| hosts | / | 本地 IP 域名映射表，优先于 DNS。 |
+| ttys | / | 创建 TTY 的规则文件。 |
+| csh | / | C Shell，一种 shell。 |
+| sh | / | Bourne Shell，FreeBSD 的默认 shell。 |
+| tcsh | / | Tenex C Shell，csh 的增强版本。 |
+| bash | / | Bourne Again Shell，GNU 的 shell。 |
+| zsh | / | Z Shell，一种功能强大的 shell。 |
+| vi | / | 一款经典的文本编辑器。 |
+| Vim | / | Vi IMproved，vi 的增强版本。 |
+| Emacs | / | 一款功能强大的文本编辑器。 |
+| Neovim | / | Vim 的重构版本。 |
+| gcc | / | GNU Compiler Collection，GNU 编译器集合。 |
+| gdb | / | GNU Debugger，GNU 调试器。 |
+| IDA Pro | / | Interactive Disassembler Professional，一款专业的反汇编和调试工具。 |
+| Java | / | 一种编程语言和计算平台。 |
+| Python | / | 一种高级编程语言。 |
+| Rust | / | 一种系统编程语言，注重安全和性能。 |
+| Go | / | Golang，Google 开发的编程语言。 |
+| Qt | / | 一款跨平台的应用程序开发框架。 |
+| Node.js | / | 一个基于 Chrome V8 引擎的 JavaScript 运行时。 |
+| Code Server | / | 在浏览器中运行 VS Code 的工具。 |
+| Clangd | / | Clang 的语言服务器，提供代码补全等功能。 |
+| Ren'Py | / | 一款视觉小说引擎。 |
+| Godot | / | 一款开源的游戏引擎。 |
+| Minecraft | / | 一款沙盒游戏。 |
+| Steam | / | Valve 开发的游戏平台。 |
+| Fcitx | / | 一款输入法框架。 |
+| IBus | / | Intelligent Input Bus，一款输入法框架。 |
+| Chromium | / | 一款开源的 Web 浏览器。 |
+| Wine | / | 一款在类 Unix 系统上运行 Windows 程序的兼容层。 |
+| Termius | / | 一款 SSH 客户端。 |
+| MobaXterm | / | 一款 Windows 下的 SSH 客户端和 X11 服务器。 |
+| AnyDesk | / | 一款远程桌面软件。 |
+| VirtualBox | / | 一款虚拟机软件。 |
+| VMware | / | 一款虚拟机软件。 |
+| Hyper-V | / | Microsoft 的虚拟机技术。 |
+| Parallels Desktop | / | 一款 macOS 下的虚拟机软件。 |
+| UTM | / | 一款 macOS 和 iOS 下的虚拟机软件。 |
+| KVM | / | Kernel-based Virtual Machine，Linux 的内核虚拟机。 |
+| QEMU | / | 一款开源的机器模拟器和虚拟机。 |
+| Ventoy | / | 一款多合一启动盘制作工具。 |
+| rEFInd | / | 一款 UEFI 引导管理器。 |
+| Radxa | 瑞莎 | 一家中国的半导体公司，开发 Radxa 系列开发板。 |
+| Raspberry Pi | 树莓派 | 一款流行的单板计算机。 |
+| VisionFive 2 | 昉·星光 2 | 一款 RISC-V 开发板。 |
+| TwinCAT/BSD | / | 倍福自动化控制系统的操作系统。 |
+| GhostBSD | / | 一款基于 FreeBSD 的桌面发行版。 |
+| MidnightBSD | / | 一款基于 FreeBSD 的操作系统。 |
+| NomadBSD | / | 一款基于 FreeBSD 的 Live USB 发行版。 |
+| HelloSystem | / | 一款基于 FreeBSD 的桌面操作系统，设计风格类似 macOS。 |
+| MfsBSD | / | 一款基于 FreeBSD 的内存文件系统发行版。 |
+| FreeBSD 中文社区 | / | FreeBSD 的中文用户和开发者社区。 |
+| FreeBSD 日 | / | 每年 6 月 19 日，FreeBSD 基金会和社区庆祝 FreeBSD 生日的日子。 |
+| EuroBSDCon | / | 欧洲 BSD 大会。 |
+| AsiaBSDCon | / | 亚洲 BSD 大会。 |
+| BSDCan | / | 加拿大 BSD 大会。 |
+| FreeBSDCon | / | FreeBSD 大会，首届于 1999 年举行。 |
+| FreeBSD 期刊 | / | FreeBSD 社区的期刊，跟进 FreeBSD 最新发布版本和新进展。 |
+| Google Summer of Code | 谷歌编程之夏 | 一个为学生提供参与开源项目机会的项目。 |
+| FreeBSD Handbook | / | FreeBSD 官方文档，提供详细的使用指南和参考。 |
+| FreshPorts | / | 一个 FreeBSD Ports 的搜索引擎和信息网站。 |
+| OpenBSM | / | Open Basic Security Module，FreeBSD 的安全审计系统。 |
+| CHERI | / | Capability Hardware Enhanced RISC Instructions，基于 Capsicum 项目发展而来的 CPU 架构扩展。 |
+| Linuxism | Linux 主义/Linux 歧视 | 指软件过分依赖 Linux 特有特性而难以移植到其他类 Unix 操作系统的现象。 |
+| POLA | 最小惊讶原则 | Principle of Least Astonishment，一种设计原则，指设计必须符合用户的习惯、期望和心智能力。 |
+| 大教堂与集市 | / | 一种软件开发模型的比喻，大教堂指集中式开发，市集指分布式开发。 |
+| KISS 原则 | / | Keep It Simple, Stupid，一种设计原则，强调保持简单。 |
 | UNIX 哲学 | / | 源于 UNIX 操作系统的开发实践，是一套经过长期演化的软件工程方法论体系，传统上强调小即美、一个程序只做一件事、原型先行、可移植性先于高效率性等核心设计原则，对现代软件设计与系统架构产生了深远的范式性影响 |
 | Ship of Theseus | 忒修斯之船 | 哲学思想实验，探讨物体在部件逐步更换后是否保持同一性的问题 |
 | 谷堆悖论 | / | 连锁悖论，探讨模糊概念的边界问题，如多少粒谷子能构成一个谷堆 |
