@@ -3619,7 +3619,7 @@ Not Happened（未发生）：嵌入式控制器软未重置过
 
 串口 I/O IRQ（Interrupt Request，来自设备的中断请求），定义串口通信中断请求的硬件资源。
 
-参见：Linux内核开发社区. 什么是IRQ？[EB/OL]. [2026-03-26]. <https://www.kernel.org/doc/html/v6.9/translations/zh_CN/core-api/irq/concepts.html>。
+参见：Linux内核开发社区. 什么是 IRQ？[EB/OL]. [2026-03-26]. <https://www.kernel.org/doc/html/v6.9/translations/zh_CN/core-api/irq/concepts.html>。
 
 ### External FAN/PWM Settings（外部风扇 ／PWM 设置）
 
