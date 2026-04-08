@@ -14,7 +14,7 @@ Xfce 的 Logo 是一只 [老鼠 🐀](https://docs.xfce.org/faq#what_does_it_mea
 # pkg install xorg lightdm lightdm-gtk-greeter xfce wqy-fonts xdg-user-dirs xfce4-goodies lightdm-gtk-greeter-settings
 ```
 
-- 或通过 ports 安装
+- 或通过 ports 安装：
 
 ```sh
 # cd /usr/ports/x11/xorg/ && make install clean
