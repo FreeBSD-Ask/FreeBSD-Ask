@@ -4,7 +4,7 @@
 
 FreeBSD 项目对除季度报告外的实质性 PR 多采取长期搁置的处理方式。从提交数据来看，freebsd-doc 项目的活跃度在过去十余年持续走低：
 
-使用统计分析 git 项目[EB/OL]. [2026-03-26]. <https://gist.github.com/ykla/6c3df44c371d37fc3196ddf5fa87ce5f>  对 freebsd-doc 进行分析的结果参见：freebsd-doc-2025 分析报告[EB/OL]. [2026-03-26]. <https://gist.github.com/ykla/363bf922d0785d0b02dd43f8289368db>。
+使用统计分析 git 项目 [EB/OL]. [2026-03-26]. <https://gist.github.com/ykla/6c3df44c371d37fc3196ddf5fa87ce5f> 对 freebsd-doc 进行分析的结果参见：freebsd-doc-2025 分析报告 [EB/OL]. [2026-03-26]. <https://gist.github.com/ykla/363bf922d0785d0b02dd43f8289368db>。
 
 - 2005–2006 年：第一次显著下滑
 - 2015–2016 年：第二次大幅下滑
@@ -33,13 +33,13 @@ and retry with 'git restore --source=HEAD :/'
 
 若您希望将教程收录至本书，可通过以下方式提交：
 
-- 若您熟悉 GitHub 操作，可点击桌面端网页右侧的“编辑此页”按钮进入项目进行编辑。本项目采用 Markdown 语法配合 GitBook 平台，易于上手（具体操作详见项目 WiKi）；
+- 若您熟悉 GitHub 操作，可点击桌面端网页右侧的“编辑此页”按钮进入项目进行编辑。本项目采用 Markdown 语法配合 GitBook 平台，易于上手（具体操作详见项目 WiKi）。
 - 若上述方式存在困难，您也可发送 PDF、Word 或 TXT 格式的文档至电子邮箱 `yklaxds@gmail.com`（我们将在 3 个工作日内回复。若未收到回复，请更换邮箱再次发送或提交 issue）；若有视频教程，建议提供各大云盘的分享链接。
 
 本书现收录以下类型的内容：
 
-- 一切与 BSD 相关（包括但不限于 FreeBSD、OpenBSD、NetBSD）及各种体系架构的教程。您既可以扩充现有教程，也可以创建新的章节；
-- 下方的 ToDo 列表或 GitHub Project 中的任务；
+- 一切与 BSD 相关（包括但不限于 FreeBSD、OpenBSD、NetBSD）及各种体系架构的教程。您既可以扩充现有教程，也可以创建新的章节。
+- 下方的 ToDo 列表或 GitHub Project 中的任务。
 - 您亦可在文学故事章节分享您与 BSD 的故事及个人心得体会。
 
 ### 基本原则与方法论
