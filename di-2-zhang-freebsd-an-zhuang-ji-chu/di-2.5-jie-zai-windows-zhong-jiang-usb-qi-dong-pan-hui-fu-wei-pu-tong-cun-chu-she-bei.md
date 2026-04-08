@@ -1,8 +1,9 @@
 # 2.5 在 Windows 中将 USB 启动盘恢复为普通存储设备
 
-USB 存储介质在作为系统安装介质使用后，其分区表结构可能发生变化，导致操作系统无法完全识别其可用存储空间。以下提供三种在 Windows 环境下恢复 USB 存储介质的方法。
+USB 存储介质在作为系统安装介质使用后，其分区表结构可能发生变化，导致操作系统无法完全识别其可用存储空间。
 
-MBR（Master Boot Record，主引导记录）和 GPT（GUID Partition Table，全局唯一标识分区表）是两种常见的磁盘分区表格式。MBR 是传统格式，适用于老式计算机；GPT 是现代格式，支持更大容量磁盘和更多分区，与 UEFI 配合使用。
+以下提供三种在 Windows 环境下恢复 USB 存储介质的方法。
+
 
 > **警告**
 >
@@ -215,6 +216,8 @@ C:\Users\用户名\
 ## 通过命令 diskpart 恢复
 
 除了图形界面工具外，还可以使用 Windows 自带的命令行工具 diskpart 来恢复 U 盘。使用命令行工具恢复 U 盘首先需要以管理员身份打开 PowerShell，然后根据 U 盘分区表类型选择相应的操作步骤。
+
+MBR（Master Boot Record，主引导记录）和 GPT（GUID Partition Table，全局唯一标识分区表）是两种常见的磁盘分区表格式。MBR 是传统格式，适用于老式计算机；GPT 是现代格式，支持更大容量磁盘和更多分区，与 UEFI 配合使用。
 
 打开 PowerShell：右键单击 Windows 图标，选择“Windows PowerShell（管理员）”。
 

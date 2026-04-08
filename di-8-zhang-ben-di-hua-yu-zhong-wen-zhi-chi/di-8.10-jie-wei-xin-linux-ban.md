@@ -1,8 +1,8 @@
 # 8.10 微信（Linux 版）
 
-## 基于 Rocky Linux 兼容层（FreeBSD Ports）
+微信是一款在中国大陆广泛使用的即时通讯软件。与 QQ 类似，需要通过 Linux 兼容层来实现安装与运行。
 
-微信是另一款在中国大陆广泛使用的即时通讯软件。与 QQ 类似，需要通过 Linux 兼容层来实现安装与运行。
+## 基于 Rocky Linux 兼容层（FreeBSD Ports）
 
 请先参照本书其他章节，安装 Rocky Linux 兼容层（FreeBSD Ports）。
 
