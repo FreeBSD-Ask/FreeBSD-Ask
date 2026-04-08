@@ -2287,7 +2287,7 @@ LFP，Low-Voltage Differential Signaling Panel，内置显示器
 
 18 bit（18 位）
 
-24 bit（24 位)
+24 bit（24 位）
 
 说明：
 
