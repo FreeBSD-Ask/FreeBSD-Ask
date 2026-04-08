@@ -6,7 +6,7 @@
 
 ## Connectivity Configuration（连接性配置）
 
-本小节主要介绍英特尔无线网卡、蓝牙和 WWAN 模块（如 GPRS/3/4/5 G 模块）的相关配置。
+本小节主要介绍英特尔无线网卡、蓝牙和 WWAN 模块（如 GPRS/3G/4G/5G 模块）的相关配置。
 
 ### CNVi CRF Present（显示是否存在 CNVi 模块）
 
@@ -116,7 +116,7 @@ Enable（启用）
 
 说明：
 
-共存管理器可缓解英特尔 WWAN（无线广域网，如蜂窝网络 2 G/3 G/4 G/5 G）与英特尔 WLAN（Wi-Fi/蓝牙）之间的无线电共存问题。
+共存管理器可缓解英特尔 WWAN（无线广域网，如蜂窝网络 2G/3G/4G/5G）与英特尔 WLAN（Wi-Fi/蓝牙）之间的无线电共存问题。
 
 ### Preboot BLE（预启动蓝牙）
 
