@@ -66,7 +66,7 @@
 | Caddy | / | 一种支持自动 HTTPS 的 Web 服务器。 |
 | Fail2Ban | / | 一种入侵防御软件，用于保护服务器免受暴力攻击。 |
 | TCP BBR | / | TCP Bottleneck Bandwidth and RTT，一种 TCP 拥塞控制算法。 |
-| Wi-Fi | 无线局域网技术 | Wireless Fidelity，一种无线局域网技术。 |
+| Wi-Fi | 无线局域网技术 | 一种无线局域网技术，Wi-Fi 是 Wi-Fi 联盟的注册商标，无正式全称。 |
 | USB RNDIS | / | USB Remote Network Driver Interface Specification，USB 网络共享技术。 |
 | Linux 兼容层 | / | FreeBSD 系统功能，可在 FreeBSD 上运行 Linux 二进制程序，提供应用程序兼容性。 |
 | RISC-V | / | 开源指令集架构，FreeBSD 支持 RISC-V 架构的硬件平台。 |
@@ -171,7 +171,7 @@
 | FreshPorts | / | 一个 FreeBSD Ports 的搜索引擎和信息网站。 |
 | OpenBSM | / | Open Basic Security Module，FreeBSD 的安全审计系统。 |
 | CHERI | / | Capability Hardware Enhanced RISC Instructions，基于 Capsicum 项目发展而来的 CPU 架构扩展。 |
-| Linuxism | Linux 主义/Linux 歧视 | 指软件过分依赖 Linux 特有特性而难以移植到其他类 Unix 操作系统的现象。 |
+| Linuxism | Linux 主义/Linux 歧视 | 指软件过分依赖 Linux 特有特性而难以移植到其他类 Unix 操作系统的现象。该术语有双重含义：既可描述技术上的 Linux 特性依赖，也可指对非 Linux 系统的歧视态度。 |
 | POLA | 最小惊讶原则 | Principle of Least Astonishment，一种设计原则，指设计必须符合用户的习惯、期望和心智能力。 |
 | 大教堂与集市 | / | 一种软件开发模型的比喻，大教堂指集中式开发，市集指分布式开发。 |
 | KISS 原则 | / | Keep It Simple, Stupid，一种设计原则，强调保持简单。 |
