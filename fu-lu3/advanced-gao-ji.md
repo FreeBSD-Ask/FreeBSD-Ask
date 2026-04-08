@@ -1158,7 +1158,7 @@ Vsys 的输入单位为毫伏（mV），Psys 的输入单位为毫瓦（mW），
 
 断言消隐尾数 0x4F[7-3]（存储在 MSR/寄存器地址 0x4F 的第 7 至第 3 位）。断言消隐 = 2µs × 尾数 × 2^(指数)
 
-Assertion Deglitch Mantissa（断言消隐指数）
+##### Assertion Deglitch Exponent（断言消隐指数）
 
 此选项需搭配选项 Assertion Deglitch Mantissa（断言消隐尾数）使用。
 
