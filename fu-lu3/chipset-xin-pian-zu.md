@@ -1783,9 +1783,9 @@ Disabled（禁用）
 
 说明：
 
-定期运行占空比校正器（Duty‑Cycle Corrector）
+定期运行占空比校正器（Duty‑Cycle Corrector）。
 
-Periodic DCC 能在运行一段时间后自动重新校准，确保输出时钟占空比保持正确，从而提升稳定性和信号完整性
+Periodic DCC 能在运行一段时间后自动重新校准，确保输出时钟占空比保持正确，从而提升稳定性和信号完整性。
 
 #### LPMode（功能未知）
 
