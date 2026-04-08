@@ -103,4 +103,4 @@ $ ffmpeg -i 视频文件.mp4 -vf subtitles=对应字幕.ass 输出视频.mp4
 
 1. 查找 FFmpeg 的 Ports，修改其编译选项以启用更多编解码器支持，构建并用其压制一段带字幕的视频，验证输出结果。
 
-3. 使用 Ports 中的工具，重构一个 FreeBSD 小恶魔 Logo。
+2. 使用 Ports 中的工具，重构一个 FreeBSD 小恶魔 Logo。
