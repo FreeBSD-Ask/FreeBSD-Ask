@@ -1,6 +1,6 @@
 # 3.8 使用 QEMU 在 x86 架构 Windows 主机上安装 RISC-V 架构的 FreeBSD
 
-QEMU（Quick Emulator）是一款通过纯软件进行模拟的开源虚拟机监视器（VMM，Virtual Machine Monitor）。纯软件模拟指不依赖硬件虚拟化扩展，通过软件完全模拟处理器指令执行，支持多种处理器体系结构的模拟与跨架构执行，具有良好的兼容性与灵活性。
+QEMU（Quick Emulator）是一款通过纯软件进行模拟的开源虚拟机监视器（VMM，Virtual Machine Monitor）。
 
 本文实验环境基于 Windows 11 24H2（宿主机，x86-64 架构）、FreeBSD 14.2-RELEASE（虚拟机，RISC-V 架构）以及 QEMU 20241220，所有操作步骤均在此环境下验证。
 
