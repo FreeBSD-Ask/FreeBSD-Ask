@@ -151,14 +151,14 @@
 | Ventoy | / | 一种多合一启动盘制作工具。 |
 | rEFInd | / | 一种 UEFI 引导管理器。 |
 | Radxa | 瑞莎 | 一家中国的半导体公司，开发 Radxa 系列开发板。 |
-| Raspberry Pi | 树莓派 | 一款流行的单板计算机。 |
-| VisionFive 2 | 昉·星光 2 | 一款 RISC-V 开发板。 |
+| Raspberry Pi | 树莓派 | 一种流行的单板计算机。 |
+| VisionFive 2 | 昉·星光 2 | 一种 RISC-V 开发板。 |
 | TwinCAT/BSD | / | 倍福自动化控制系统的操作系统。 |
-| GhostBSD | / | 一款基于 FreeBSD 的桌面发行版。 |
-| MidnightBSD | / | 一款基于 FreeBSD 的操作系统。 |
-| NomadBSD | / | 一款基于 FreeBSD 的 Live USB 发行版。 |
-| HelloSystem | / | 一款基于 FreeBSD 的桌面操作系统，设计风格类似 macOS。 |
-| MfsBSD | / | 一款基于 FreeBSD 的内存文件系统发行版。 |
+| GhostBSD | / | 一种基于 FreeBSD 的桌面发行版。 |
+| MidnightBSD | / | 一种基于 FreeBSD 的操作系统。 |
+| NomadBSD | / | 一种基于 FreeBSD 的 Live USB 发行版。 |
+| HelloSystem | / | 一种基于 FreeBSD 的桌面操作系统，设计风格类似 macOS。 |
+| MfsBSD | / | 一种基于 FreeBSD 的内存文件系统发行版。 |
 | FreeBSD 中文社区 | / | FreeBSD 的中文用户和开发者社区。 |
 | FreeBSD 日 | / | 每年 6 月 19 日，FreeBSD 基金会和社区庆祝 FreeBSD 生日的日子。 |
 | EuroBSDCon | / | 欧洲 BSD 大会。 |
