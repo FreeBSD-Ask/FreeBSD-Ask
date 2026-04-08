@@ -79,7 +79,7 @@
 | OpenSolaris | / | Sun Microsystems 开源的 Solaris 操作系统版本，ZFS 和 DTrace 等技术的开源实现基础。 |
 | illumos | / | OpenSolaris 社区分支，在 Oracle 收购 Sun 后由社区维护的开源操作系统项目。 |
 | Oracle Solaris | / | Oracle 公司维护的 Solaris 操作系统商业版本，基于早期 OpenSolaris 代码。 |
-| LLNL | 美国劳伦斯利弗莫尔国家实验室 | Lawrence Livermore National Laboratory，OpenZFS 项目的主要贡献机构之一。 |
+| LLNL | 劳伦斯·利弗莫尔国家实验室 | Lawrence Livermore National Laboratory，OpenZFS 项目的主要贡献机构之一。 |
 | ALTQ | 交错队列 | Alternate Queuing，PF 防火墙的流量整形和队列管理功能。 |
 | NAT | 网络地址转换 | Network Address Translation。 |
 | ICMP | 互联网控制报文协议 | Internet Control Message Protocol。 |
