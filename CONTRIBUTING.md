@@ -375,7 +375,7 @@ $ git clone https://github.com/FreeBSD-Ask/FreeBSD-Ask
 - [ ] 20.10.文件系统快照（UFS）（UFS 快照？？？）
 - [ ] 21.8.通过 GEOM 实现 UFS 日志（无意义）
 
- **Just for fun**（可有可无）
+**Just for fun**（可有可无）
 
 - [ ] 20.7.创建和使用软盘（谁还有这种东西？2024，日本政府决定全面淘汰软盘）（无意义，但勉强可以写，若有光驱和软盘 *Just for fun*）
 - [ ] 20.6.创建和使用 DVD（无意义，但勉强可以写，若有光驱和光盘 *Just for fun*）
