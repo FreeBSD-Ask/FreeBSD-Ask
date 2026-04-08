@@ -364,7 +364,7 @@ Enable（启用）
 
 ### Adjacent Cache Line Prefetch（相邻的高速缓存行预先访存）
 
-选项
+选项：
 
 Disable（禁用）
 
