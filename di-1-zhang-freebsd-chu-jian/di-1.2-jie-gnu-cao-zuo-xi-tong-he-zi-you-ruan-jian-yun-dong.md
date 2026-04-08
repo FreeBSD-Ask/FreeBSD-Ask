@@ -17,7 +17,7 @@ UNIX 在后期发展中逐渐呈现封闭化趋势：从最初开放的研究项
 - 1991 年，理查德·马修·斯托曼发布了 GNU General Public License V2.0 (GPLv2, GNU 通用公共许可证第 2 版)。
 - 2007 年，自由软件基金会发布 GNU General Public License V3.0 (GPLv3, GNU 通用公共许可证第 3 版)。
 
-在 GNU 项目初期，理查德·马修·斯托曼为 UNIX 开发了大量实用程序（用户空间组件），然而 GNU 的目标操作系统始终未能形成稳定的内核。**GNU Hurd** 是 GNU 项目的内核，采用微内核架构设计，其开发始于 1990 年。即使到 2026 年，[GNU Hurd](https://hurd.gnu.org/) 项目仍处于未完成状态。Linux 内核的诞生打破了这一技术僵局。
+在 GNU 项目初期，理查德·马修·斯托曼为 UNIX 开发了大量实用程序（用户空间组件），然而 GNU 的目标操作系统始终未能形成稳定的内核。[**GNU Hurd**](https://hurd.gnu.org/) 是 GNU 项目的内核，采用微内核架构设计，其开发始于 1990 年。即使到 2026 年，[GNU Hurd](https://hurd.gnu.org/) 项目仍处于未完成状态。Linux 内核的诞生打破了这一技术僵局。
 
 作为一个由 Linux 内核与 GNU 软件组合而成的操作系统，Linux 在发展过程中不断融入 GNU 理念，最终形成了 GNU/Linux。尽管 GNU 在此过程中贡献巨大，其作用却常被忽视。这主要是因为 Linux 内核的开发由林纳斯·托瓦兹（Linus Torvalds）主导，而他本人对自由软件基金会和理查德·马修·斯托曼的理念并不完全认同。Linux 内核项目与自由软件运动乃至严格的开源理念之间，存在一定的分歧（例如，Linux 内核包含了一些不符合自由软件或严格开源定义的二进制固件模块，参见 **Linux-libre**，一款由拉丁美洲自由软件基金会（FSFLA）维护的去除所有二进制固件的 Linux 内核变体 Linux-libre[EB/OL]. [2026-03-26]. <https://www.fsfla.org/ikiwiki/selibre/linux-libre/>.）此外，Linux 内核采用的是 GPLv2 许可证，而非 GNU 所推荐的 GPLv3。
 
