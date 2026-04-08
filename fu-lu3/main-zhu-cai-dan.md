@@ -36,7 +36,7 @@ BIOS 信息子页面用于展示 BIOS 固件的详细属性，包括厂商、版
 - Compliancy（兼容性）: UEFI 2.8; PI 1.7
 - Project Version（项目版本）: X4-V004
 - Build Date and Time（构建日期和时间）: 03/05/2025 21:22:06（2025 年 03 月 05 日 21:22:06）
-- M/B Name（主板名称）: RAXDA X4
+- M/B Name（主板名称）: RADXA X4
 - Access Level（访问级别）: Administrator（管理员）
 
 ### Processor Information（处理器信息）
