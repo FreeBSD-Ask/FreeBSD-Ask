@@ -31,13 +31,13 @@ UNIX 操作系统认证查询网址：[The Open Group official register of UNIX 
 
 常见的经过认证的 UNIX 操作系统是 Apple 公司的 macOS。从商标角度看，macOS 是标准的 UNIX 操作系统。~~故，要安装 UNIX 的人可考虑 macOS。~~
 
->**技巧**
+> **技巧**
 >
->macOS/iOS 与 BSD 的关系
+> macOS/iOS 与 BSD 的关系
 >
->从历史角度看，macOS（以及由此衍生的 iOS、iPadOS 等）的核心层（Darwin）确是基于 BSD 代码，并融合了其他技术。因此 macOS 系列操作系统可被视为独立的、类 BSD 操作系统分支，与 OpenBSD、NetBSD 和 FreeBSD 等系统具有同等地位。参见：Jason Perlow. Apple’s Open Source Roots: The BSD Heritage Behind macOS and iOS[EB/OL]. (2024-07-08)[2026-03-26]. <https://thenewstack.io/apples-open-source-roots-the-bsd-heritage-behind-macos-and-ios/>.
+> 从历史角度看，macOS（以及由此衍生的 iOS、iPadOS 等）的核心层（Darwin）确是基于 BSD 代码，并融合了其他技术。因此 macOS 系列操作系统可被视为独立的、类 BSD 操作系统分支，与 OpenBSD、NetBSD 和 FreeBSD 等系统具有同等地位。参见：Jason Perlow. Apple’s Open Source Roots: The BSD Heritage Behind macOS and iOS[EB/OL]. (2024-07-08)[2026-03-26]. <https://thenewstack.io/apples-open-source-roots-the-bsd-heritage-behind-macos-and-ios/>.
 >
->看似是 Android 和 iOS 之争，实则是 Linux 与 BSD 之争。~~这也许还是大教堂与市集之争。~~
+> 看似是 Android 和 iOS 之争，实则是 Linux 与 BSD 之争。~~这也许还是大教堂与市集之争。~~
 
 ## 传统的 UNIX 哲学观（以《UNIX 编程艺术》为核心）
 
@@ -51,23 +51,23 @@ UNIX 哲学是在 UNIX 操作系统长期开发实践中逐渐形成的一套设
 - **沉默是金**：程序在正常执行时不输出多余信息，仅在出错时提示，成功操作无输出，不显示进度等。
 - **避免仅用户界面**：应提供命令行接口，确保可通过脚本实现自动化操作。
 
->**思考题**
+> **思考题**
 >
->>1. UNIX 哲学一言以蔽之，即大道至简。“keep it simple, stupid”。
+>> 1. UNIX 哲学一言以蔽之，即大道至简。“keep it simple, stupid”。
 >
->>2. 小弗雷德里克·P. 布鲁克斯. 人月神话[M]. UMLChina, 译. 纪念典藏版. 北京: 清华大学出版社, 2023. ISBN: 978-7-302-63538-3
+>> 2. 小弗雷德里克·P. 布鲁克斯. 人月神话[M]. UMLChina, 译. 纪念典藏版. 北京: 清华大学出版社, 2023. ISBN: 978-7-302-63538-3
 >
->阅读上述文本和参考文献，如何理解 UNIX 哲学的不足之处，以及背后的时代背景。
+> 阅读上述文本和参考文献，如何理解 UNIX 哲学的不足之处，以及背后的时代背景。
 
 这些原则在当时的软件设计中相互配合，帮助开发者构建出简洁、高效、可维护的系统。
 
->**思考题**
+> **思考题**
 >
 >> Those who do not understand UNIX are condemned to reinvent it, poorly.（那些不懂 UNIX 的人注定要再造一个四不像式 UNIX）
 >>
->>NASA. The Apollo Lunar Surface Journal and Apollo Flight Journal[EB/OL]. [2026-04-04]. <https://www.nasa.gov/history/alsj/henry.html>.
+>> NASA. The Apollo Lunar Surface Journal and Apollo Flight Journal[EB/OL]. [2026-04-04]. <https://www.nasa.gov/history/alsj/henry.html>.
 >
->作者亨利·斯宾塞（Henry Spencer）并未明确批评哪个操作系统，那么，现在这句话更适合哪个常见的操作系统？为什么？
+> 作者亨利·斯宾塞（Henry Spencer）并未明确批评哪个操作系统，那么，现在这句话更适合哪个常见的操作系统？为什么？
 
 ### 参考文献
 
