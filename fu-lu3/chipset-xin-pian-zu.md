@@ -1595,31 +1595,31 @@ Disabled（禁用）
 
 #### Controller 0, Channel 1 Control（控制器 0 通道 1 控制）
 
-同上。
+可用选项及说明同 Controller 0, Channel 0 Control。
 
 #### Controller 0, Channel 2 Control（控制器 0 通道 2 控制）
 
-同上。
+可用选项及说明同 Controller 0, Channel 0 Control。
 
 #### Controller 0, Channel 3 Control（控制器 0 通道 3 控制）
 
-同上。
+可用选项及说明同 Controller 0, Channel 0 Control。
 
 #### Controller 1, Channel 0 Control（控制器 1 通道 0 控制）
 
-同上。
+可用选项及说明同 Controller 0, Channel 0 Control。
 
 #### Controller 1, Channel 1 Control（控制器 1 通道 1 控制）
 
-同上。
+可用选项及说明同 Controller 0, Channel 0 Control。
 
 #### Controller 1, Channel 2 Control（控制器 1 通道 2 控制）
 
-同上。
+可用选项及说明同 Controller 0, Channel 0 Control。
 
 #### Controller 1, Channel 3 Control（控制器 1 通道 3 控制）
 
-同上。
+可用选项及说明同 Controller 0, Channel 0 Control。
 
 #### Force Single Rank（强制单 Rank）
 
