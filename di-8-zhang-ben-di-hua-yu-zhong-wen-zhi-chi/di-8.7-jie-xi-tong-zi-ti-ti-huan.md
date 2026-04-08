@@ -22,7 +22,7 @@
     └── WindowsFonts/ # Windows 字体存放目录
 ```
 
-然后设置 Windows 字体目录及其内容的权限为 755：
+设置 Windows 字体目录及其内容的权限为 755：
 
 ```sh
 # chmod -R 755 /usr/local/share/fonts/WindowsFonts

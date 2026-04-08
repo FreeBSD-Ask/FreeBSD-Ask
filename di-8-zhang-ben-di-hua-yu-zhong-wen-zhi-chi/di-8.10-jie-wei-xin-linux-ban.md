@@ -181,7 +181,7 @@ Categories=Network
 
 ### 中文输入法问题
 
-如果以 root 权限运行 Rocky Linux 兼容层中的应用，中文输入法可能会出现问题。
+如果以 root 权限运行 Rocky Linux 兼容层中的应用，中文输入法会出现问题。
 
 ![FreeBSD 微信](../.gitbook/assets/wechat4.png)
 

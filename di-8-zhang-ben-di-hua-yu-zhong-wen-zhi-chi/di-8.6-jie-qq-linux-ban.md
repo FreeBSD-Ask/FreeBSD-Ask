@@ -1,6 +1,6 @@
 # 8.6 QQ（Linux 版）
 
-QQ 是一款在中国大陆广泛使用的即时通讯软件。由于目前缺乏原生的 FreeBSD 版本，需要通过 Linux 兼容层来实现安装与运行。本节将介绍基于不同 Linux 兼容层安装 QQ 的具体方法。
+QQ 是一款在中国大陆广泛使用的即时通讯软件。由于缺乏原生的 FreeBSD 版本，需要通过 Linux 兼容层来实现安装与运行。本节介绍基于不同 Linux 兼容层安装 QQ 的具体方法。
 
 ## 基于 Rocky Linux（FreeBSD Port）
 
@@ -72,7 +72,7 @@ bash-5.1# ldd /opt/QQ/qq # 查看 /opt/QQ/qq 可执行文件的动态库依赖
 
 ### 解决 fcitx 中文输入法在 QQ 中不能使用的问题
 
-- 在兼容层中安装 `ibus-gtk3` 和 `ibus-libs`，下载安装包后执行：
+在兼容层中安装 `ibus-gtk3` 和 `ibus-libs`，下载安装包后执行：
 
 ```sh
 # fetch https://dl.rockylinux.org/pub/rocky/9/AppStream/x86_64/os/Packages/i/ibus-gtk3-1.5.25-6.el9.x86_64.rpm   # 下载 ibus-gtk3 RPM 包
@@ -99,13 +99,13 @@ $ /compat/linux/opt/QQ/qq --no-sandbox  --in-process-gpu
 
 >**注意**
 >
->此处请务必以普通用户权限运行 QQ，否则可能无法使用输入法。
+>此处请务必以普通用户权限运行 QQ，否则无法使用输入法。
 
 >**技巧**
 >
 >`--no-sandbox` 选项是关闭沙盒。否则无法运行 QQ。
 >
->`--in-process-gpu` 选项也是必要的，否则退出后可能无法重新打开 QQ，需要重启系统才能使用。
+>`--in-process-gpu` 选项也是必要的，否则退出后无法重新打开 QQ，需要重启系统才能使用。
 
 ![FreeBSD QQ](../.gitbook/assets/rlqq.png)
 
@@ -124,7 +124,7 @@ fcitx5 输入法正常：
 
 ```
 
-请新开一个终端，输入 `reboot` 重启 FreeBSD，否则新设置的密码可能无法生效。
+请新开一个终端，输入 `reboot` 重启 FreeBSD，否则新设置的密码无法生效。
 
 ```sh
 # chroot /compat/arch/ /bin/bash # 进入 Arch 兼容层
@@ -142,7 +142,7 @@ $ exit # 切换回 root
 
 >**注意**
 >
->此处必须以 root 权限运行 QQ，否则可能报错找不到 X11。
+>此处必须以 root 权限运行 QQ，否则报错找不到 X11。
 
 ![FreeBSD QQ](../.gitbook/assets/rlqq3.png)
 
@@ -181,7 +181,7 @@ $ exit # 切换回 root
 
 ### 网络错误
 
-如果系统中有多张网卡，例如一块有线网卡和一块无线网卡，打开 QQ 后可能会出现网络错误提示，此时需要为未使用的网卡随机分配一个 IP。
+如果系统中有多张网卡，例如一块有线网卡和一块无线网卡，打开 QQ 后会出现网络错误提示，此时需要为未使用的网卡随机分配一个 IP。
 
 参见其他相关章节。
 
@@ -191,7 +191,7 @@ $ exit # 切换回 root
 >
 >不应在兼容层内部安装输入法，因为此操作不会生效。
 
-若自行构建兼容层，可能需要在启动 QQ 前在兼容层内部设定以下中文环境变量（如果完全按照本书教程操作则无需此步骤，因为本书中 Fcitx 已指定以下环境变量）：
+若自行构建兼容层，需要在启动 QQ 前在兼容层内部设定以下中文环境变量（如果完全按照本书教程操作则无需此步骤，因为本书中 Fcitx 已指定以下环境变量）：
 
 ```sh
 # export LANG=zh_CN.UTF-8   # 设置系统语言为中文
