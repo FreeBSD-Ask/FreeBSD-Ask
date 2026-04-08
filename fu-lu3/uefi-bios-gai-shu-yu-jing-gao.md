@@ -48,7 +48,7 @@ UEFI（Unified Extensible Firmware Interface，统一可扩展固件接口）是
 
 ## 设置 BIOS 后无法开机怎么办（CMOS 简介）
 
-本章节介绍 CMOS 的基本概念以及在 BIOS 设置错误后如何恢复系统。
+本章介绍 CMOS 的基本概念以及在 BIOS 设置错误后如何恢复系统。
 
 CMOS（Complementary Metal-Oxide-Semiconductor，互补金属氧化物半导体）原指一种由电池供电的芯片，用于存储 BIOS 配置信息（如时间信息、BIOS 密码和硬件设置等）。该芯片采用 CMOS 工艺制造，功耗极低，可由纽扣电池维持数据数月甚至数年。在现代 UEFI 系统中，系统的相关配置信息通常存储在非易失性 RAM（NVRAM）中，但出于习惯，人们仍将这种存储 BIOS/UEFI 设置的非易失性存储称为 CMOS。
 
