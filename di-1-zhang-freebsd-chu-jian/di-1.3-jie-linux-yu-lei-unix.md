@@ -76,7 +76,7 @@ Linux 的全称为 GNU/Linux。
 
 - GNU/Linux 发行版 = Ubuntu、RHEL、Deepin、openSUSE……
   - Ubuntu = Linux kernel + apt/dpkg + Gnome（默认桌面环境）
-  - openSUSE = Linux kernel + libzypp/rpm（包管理器后端，支持 RPM 格式）+ KDE（默认的桌面环境之一）
+  - openSUSE = Linux kernel + libzypp/rpm（包管理器后端，支持 RPM 格式）+ KDE（默认桌面环境之一）
 
 > **思考题**
 >
@@ -94,13 +94,13 @@ Linux 的全称为 GNU/Linux。
 
 ## 什么是 UNIX-like？
 
-除了那些获得正式 UNIX 认证的系统，还有许多采用了类似 UNIX 设计理念的操作系统。
+除获得正式 UNIX 认证的系统外，还有许多采用类似 UNIX 设计理念的操作系统。
 
-UNIX-like 即类 UNIX，指那些基本符合 UNIX 标准，或者基本遵守 POSIX 规范但未获得相应认证、商标使用权的操作系统。
+UNIX-like 即类 UNIX，指基本符合 UNIX 标准，或基本遵守 POSIX 规范但未获得相应认证、商标使用权的操作系统。
 
-这一术语的出现，为描述那些在设计理念和技术实现上与 UNIX 高度相似但缺乏正式认证的系统提供了便捷的分类方式。
+该术语的出现，为描述在设计理念和技术实现上与 UNIX 高度相似但缺乏正式认证的系统提供了便捷的分类方式。
 
-除 Windows 外，世界上绝大多数操作系统都可称为 UNIX-like，包括 Linux 和 FreeBSD。
+除 Windows 外，世界上绝大多数操作系统均可称为 UNIX-like，包括 Linux 和 FreeBSD。
 
 ## 课后习题
 
