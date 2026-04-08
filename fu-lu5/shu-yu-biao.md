@@ -85,21 +85,21 @@
 | ICMP | 互联网控制报文协议 | Internet Control Message Protocol。 |
 | UDP | 用户数据报协议 | User Datagram Protocol。 |
 | TCP | 传输控制协议 | Transmission Control Protocol。 |
-| DNS | 域名系统 | Domain Name System |
-| HTTP | 超文本传输协议 | HyperText Transfer Protocol |
-| HTTPS | 安全超文本传输协议 | HyperText Transfer Protocol Secure |
-| SSH | 安全外壳协议 | Secure Shell，用于安全远程登录 |
-| SSHD | SSH 守护进程 | SSH Daemon |
-| PR | / | Pull Request，拉取请求，在 Git 中提交代码变更的方式；在 FreeBSD 中亦指 Bug 报告 |
-| CVS | / | Concurrent Versions System，并发版本系统，FreeBSD 早期使用的版本控制工具 |
-| SVN | / | Subversion，FreeBSD 中期使用的版本控制工具 |
-| CIS | 互联网安全中心 | Center for Internet Security，提供安全基准 |
-| SBOM | 软件物料清单 | Software Bill of Materials |
-| SSDF | 安全软件开发框架 | Secure Software Development Framework |
-| NIST | 美国国家标准及技术研究所 | National Institute of Standards and Technology |
-| W^X | 写异或执行 | Write XOR Execute，一种安全策略 |
-| PIE | 位置无关可执行文件 | Position Independent Executable，一种安全缓解技术 |
-| ASLR | 地址空间布局随机化 | Address Space Layout Randomization，一种安全缓解技术 |
+| DNS | 域名系统 | Domain Name System。 |
+| HTTP | 超文本传输协议 | HyperText Transfer Protocol。 |
+| HTTPS | 安全超文本传输协议 | HyperText Transfer Protocol Secure。 |
+| SSH | 安全外壳协议 | Secure Shell，用于安全远程登录。 |
+| SSHD | SSH 守护进程 | SSH Daemon。 |
+| PR | / | Pull Request，拉取请求，在 Git 中提交代码变更的方式；在 FreeBSD 中亦指 Bug 报告。 |
+| CVS | / | Concurrent Versions System，并发版本系统，FreeBSD 早期使用的版本控制工具。 |
+| SVN | / | Subversion，FreeBSD 中期使用的版本控制工具。 |
+| CIS | 互联网安全中心 | Center for Internet Security，提供安全基准。 |
+| SBOM | 软件物料清单 | Software Bill of Materials。 |
+| SSDF | 安全软件开发框架 | Secure Software Development Framework。 |
+| NIST | 美国国家标准及技术研究所 | National Institute of Standards and Technology。 |
+| W^X | 写异或执行 | Write XOR Execute，一种安全策略。 |
+| PIE | 位置无关可执行文件 | Position Independent Executable，一种安全缓解技术。 |
+| ASLR | 地址空间布局随机化 | Address Space Layout Randomization，一种安全缓解技术。 |
 | DAC | 自主访问控制 | Discretionary Access Control，标准 Unix 安全模型 |
 | ACL | 访问控制列表 | Access Control List |
 | TrustedBSD | / | FreeBSD 的安全扩展项目，基于 POSIX.1e 草案 |
