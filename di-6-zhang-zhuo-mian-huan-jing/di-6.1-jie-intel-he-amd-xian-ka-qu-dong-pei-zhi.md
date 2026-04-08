@@ -87,7 +87,7 @@ DRM 是 Linux 内核的子系统，负责与现代显卡的 GPU 进行交互。F
 # make BATCH=yes install clean
 ```
 
-或者使用 Ports 安装（如有问题请使用此方法）：
+或者使用 pkg 安装（如有问题请使用此方法）：
 
 ```sh
 # pkg install drm-61-kmod

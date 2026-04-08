@@ -1,90 +1,90 @@
 # 术语表
 
-本术语表汇集了本书中涉及的专业术语，涵盖操作系统、网络技术、开源社区等多个领域，为读者提供了便捷的参考。
+本术语表汇集了本书中涉及的专业术语，涵盖操作系统、网络技术、开源社区等多个领域，为读者提供便捷的参考。
 
 | 术语 | 中文 | 说明 |
 | :--- | :--- | :--- |
-| Berkeley Software Distribution, BSD | 伯克利软件发行版 | 伯克利软件发行版，这是加利福尼亚大学伯克利分校的计算机系统研究小组（CSRG）对其针对 AT&T 的 UNIX v7 进行改进和修改的成果命名，是 UNIX 技术演化史上的重要分支。从技术演化角度，BSD 构成了现代类 Unix 操作系统的重要技术谱系之一，FreeBSD 正是 CSRG 这一工作的直接延续与发展 |
-| Port | / | FreeBSD 系统中单个软件的源代码包，包含编译和安装该软件所需的配置文件和脚本 |
-| Ports | / | FreeBSD 的软件包管理系统，包含所有 Port 的集合，用于从源代码编译和安装软件 |
-| Ports Collection | / | Ports 系统的完整集合，包含软件分类目录、构建工具和依赖管理机制 |
-| Jail | / | 一种在 Chroot 基础上发展而来的操作系统级隔离技术，通过命名空间隔离、资源限制等机制实现轻量级虚拟化，是现代容器技术的重要早期实践之一，为后续容器技术的发展奠定了技术基础 |
-| copyleft | 著佐权 | Copyleft 指通过类似 GPL 的许可证条款，对衍生作品施加版权约束，例如要求源代码公开 |
-| Base System | 基本系统 | 内核与用户空间（在 FreeBSD 中称为 world）的组合，即所有来自 src 源码树的组件 |
-| CURRENT | / | FreeBSD 的主要开发分支，对应一般项目中的 head 或 main 分支，包含最新的代码变更但可能不稳定 |
-| MFC（Merge From Head） | 合并自 Head | FreeBSD 开发流程，将 CURRENT 或 main 分支中的更改合并到稳定分支的过程 |
-| XX.0-STABLE | / | FreeBSD 的固定开发分支，提供应用程序二进制接口（ABI）稳定性保证，但仍处于开发阶段 |
-| RELEASE | 稳定版 | 适用于生产环境的正式发布版本 |
-| ABI | 应用程序二进制接口 | Application Binary Interface，应用程序与操作系统之间的二进制接口标准 |
-| Unix | / | 最初由 AT&T 贝尔实验室开发的操作系统，现为一种标准规范和法律商标 |
-| ZFS | / | Zettabyte File System，一款集成了文件系统和逻辑卷管理器的先进存储系统，采用 copy-on-write（写时复制）事务模型，具有强大的数据完整性保护机制、高效的数据压缩功能与可扩展存储架构，是现代存储技术的重要创新 |
-| OpenZFS | / | ZFS 的开源社区版本，统一了 ZFS 的开源开发 |
-| CDDL | 通用开发及发行许可 | Common Development and Distribution License，ZFS 采用的开源许可证，允许商业使用和修改 |
-| PF | 包过滤器 | Packet Filter，源自 OpenBSD 的防火墙软件，在 FreeBSD 中作为可选防火墙提供，支持 ALTQ 流量整形等功能 |
-| IPFW | / | ipfirewall，FreeBSD 内置的防火墙系统，采用首次匹配规则，提供基本的包过滤功能 |
-| IPF | / | IPFilter，一款防火墙软件，在 FreeBSD 历史版本中曾作为可选防火墙组件 |
-| pkg | / | FreeBSD 的二进制包管理器，用于安装、更新和管理预编译的软件包，旧称 pkgng |
-| PkgBase | / | FreeBSD 项目方案，尝试使用 pkg 包管理器来实现用户空间和内核的更新 |
-| Poudriere | / | FreeBSD 工具，通过 jail 环境测试 port 并构建 FreeBSD 软件包镜像 |
-| freebsd-update | / | FreeBSD 基本系统更新工具，用于获取安全更新和执行系统版本升级 |
-| Chroot | / | Change Root，一种将进程及其子进程的根目录更改到文件系统中另一个位置的操作 |
-| bhyve | / | FreeBSD 内置的虚拟机管理程序 |
-| kqueue | / | FreeBSD 的事件通知接口，取代了 select/poll |
-| DTrace | / | 动态跟踪框架，可用于实时调试生产系统中的内核和应用程序问题 |
-| Capsicum | / | 轻量级的操作系统能力和沙盒框架，用于应用程序沙盒化 |
-| GEOM | / | FreeBSD 的磁盘 I/O 请求转换框架，提供了磁盘分区、加密、镜像等功能 |
-| UFS | Unix 文件系统 | Unix File System，FreeBSD 的传统文件系统 |
-| GPT | 全局唯一标识分区表 | GUID Partition Table，一种磁盘分区表标准 |
-| MBR | 主引导记录 | Master Boot Record，传统的磁盘分区表 |
-| UEFI | 统一可扩展固件接口 | Unified Extensible Firmware Interface，现代计算机的引导标准 |
-| BIOS | 基本输入输出系统 | Basic Input/Output System，传统计算机的引导标准 |
-| Wayland | / | 一种显示服务器协议，旨在替代 X11 |
-| X11 | X 窗口系统 | X Window System，一种图形用户界面的窗口系统 |
-| CDE | 通用桌面环境 | Common Desktop Environment，一款经典的 UNIX 桌面环境 |
-| OpenBSD | / | 一款注重安全的 BSD 操作系统 |
-| NetBSD | / | 一款注重可移植性的 BSD 操作系统 |
-| DragonFly BSD | / | 一款从 FreeBSD 分叉出来的 BSD 操作系统 |
-| GNU | / | GNU's Not Unix，自由软件基金会发起的操作系统项目 |
-| GPL | / | GNU General Public License，GNU 通用公共许可证，一种强 copyleft 许可证 |
-| BSD 许可证 | / | 一种宽松的开源许可证，允许商业使用和闭源衍生 |
-| LLVM | / | Low Level Virtual Machine，一组模块化和可重用的编译器和工具链技术 |
-| Clang | / | LLVM 项目的 C 语言前端和工具基础设施 |
-| NFS | / | Network File System，网络文件系统 |
-| SMB | / | Server Message Block，一种用于文件共享的协议 |
-| Samba | / | 实现 SMB 协议的开源软件，用于文件共享 |
-| Apache | / | 一款流行的 Web 服务器软件 |
-| Nginx | / | 一款高性能的 Web 服务器和反向代理软件 |
-| PHP | / | PHP: Hypertext Preprocessor，一种广泛使用的服务器端脚本语言 |
-| PostgreSQL | / | 一款功能强大的开源关系型数据库管理系统 |
-| MySQL | / | 一款流行的开源关系型数据库管理系统 |
-| MongoDB | / | 一款流行的 NoSQL 数据库 |
-| Nextcloud | / | 一款开源的云存储和协作平台 |
-| Zabbix | / | 一款开源的企业级监控系统 |
-| Prometheus | / | 一款开源的系统监控和警报工具 |
-| Grafana | / | 一款开源的数据可视化和监控平台 |
-| Tomcat | / | Apache 软件基金会的 Java Servlet 容器 |
-| Caddy | / | 一款支持自动 HTTPS 的 Web 服务器 |
-| Fail2Ban | / | 一款入侵防御软件，用于保护服务器免受暴力攻击 |
-| TCP BBR | / | TCP Bottleneck Bandwidth and RTT，一种 TCP 拥塞控制算法 |
-| Wi-Fi | 无线局域网技术 | Wireless Fidelity |
-| USB RNDIS | / | USB Remote Network Driver Interface Specification，USB 网络共享技术 |
-| Linux 兼容层 | / | FreeBSD 系统功能，可在 FreeBSD 上运行 Linux 二进制程序，提供应用程序兼容性 |
-| RISC-V | / | 开源指令集架构，FreeBSD 支持 RISC-V 架构的硬件平台 |
-| Beastie | / | BSD 操作系统家族的吉祥物，形象为红色小恶魔 |
-| FreeBSD 基金会 | / | 支持 FreeBSD 项目的非营利机构，位于美国科罗拉多州博尔德县，负责资金筹集和项目支持 |
-| FreeBSD 核心小组 | / | FreeBSD 项目的最高管理机构，由 9 名成员组成，负责项目战略决策和方向指导 |
-| 提交者 | / | FreeBSD 项目中有权限直接向代码仓库提交更改的开发者 |
-| CSRG | / | Computer Systems Research Group，加州大学伯克利分校的计算机系统研究小组 |
-| Multics | / | 多路复用信息和计算服务，一个早期的操作系统项目 |
-| OpenSolaris | / | Sun Microsystems 开源的 Solaris 操作系统版本，ZFS 和 DTrace 等技术的开源实现基础 |
-| illumos | / | OpenSolaris 社区分支，在 Oracle 收购 Sun 后由社区维护的开源操作系统项目 |
-| Oracle Solaris | / | Oracle 公司维护的 Solaris 操作系统商业版本，基于早期 OpenSolaris 代码 |
-| LLNL | 美国劳伦斯利弗莫尔国家实验室 | Lawrence Livermore National Laboratory，OpenZFS 项目的主要贡献机构之一 |
-| ALTQ | 交错队列 | Alternate Queuing，PF 防火墙的流量整形和队列管理功能 |
-| NAT | 网络地址转换 | Network Address Translation |
-| ICMP | 互联网控制报文协议 | Internet Control Message Protocol |
-| UDP | 用户数据报协议 | User Datagram Protocol |
-| TCP | 传输控制协议 | Transmission Control Protocol |
+| Berkeley Software Distribution, BSD | 伯克利软件发行版 | 伯克利软件发行版，是加利福尼亚大学伯克利分校的计算机系统研究小组（CSRG）对其针对 AT&T 的 UNIX v7 进行改进和修改的成果命名，是 UNIX 技术演化史上的重要分支。从技术演化角度，BSD 构成了现代类 Unix 操作系统的重要技术谱系之一，FreeBSD 正是 CSRG 这一工作的直接延续与发展。 |
+| Port | / | FreeBSD 系统中单个软件的源代码包，包含编译和安装该软件所需的配置文件和脚本。 |
+| Ports | / | FreeBSD 的软件包管理系统，包含所有 Port 的集合，用于从源代码编译和安装软件。 |
+| Ports Collection | / | Ports 系统的完整集合，包含软件分类目录、构建工具和依赖管理机制。 |
+| Jail | / | 一种在 Chroot 基础上发展而来的操作系统级隔离技术，通过命名空间隔离、资源限制等机制实现轻量级虚拟化，是现代容器技术的重要早期实践之一，为后续容器技术的发展奠定了技术基础。 |
+| copyleft | 著佐权 | Copyleft 指通过类似 GPL 的许可证条款，对衍生作品施加版权约束，例如要求源代码公开。 |
+| Base System | 基本系统 | 内核与用户空间（在 FreeBSD 中称为 world）的组合，即所有来自 src 源码树的组件。 |
+| CURRENT | / | FreeBSD 的主要开发分支，对应一般项目中的 head 或 main 分支，包含最新的代码变更但可能不稳定。 |
+| MFC（Merge From Head） | 合并自 Head | FreeBSD 开发流程，将 CURRENT 或 main 分支中的更改合并到稳定分支的过程。 |
+| XX.0-STABLE | / | FreeBSD 的固定开发分支，提供应用程序二进制接口（ABI）稳定性保证，但仍处于开发阶段。 |
+| RELEASE | 稳定版 | 适用于生产环境的正式发布版本。 |
+| ABI | 应用程序二进制接口 | Application Binary Interface，应用程序与操作系统之间的二进制接口标准。 |
+| Unix | / | 最初由 AT&T 贝尔实验室开发的操作系统，现为一种标准规范和法律商标。 |
+| ZFS | / | Zettabyte File System，一款集成了文件系统和逻辑卷管理器的先进存储系统，采用 copy-on-write（写时复制）事务模型，具有强大的数据完整性保护机制、高效的数据压缩功能与可扩展存储架构，是现代存储技术的重要创新。 |
+| OpenZFS | / | ZFS 的开源社区版本，统一了 ZFS 的开源开发。 |
+| CDDL | 通用开发及发行许可 | Common Development and Distribution License，ZFS 采用的开源许可证，允许商业使用和修改。 |
+| PF | 包过滤器 | Packet Filter，源自 OpenBSD 的防火墙软件，在 FreeBSD 中作为可选防火墙提供，支持 ALTQ 流量整形等功能。 |
+| IPFW | / | ipfirewall，FreeBSD 内置的防火墙系统，采用首次匹配规则，提供基本的包过滤功能。 |
+| IPF | / | IPFilter，一款防火墙软件，在 FreeBSD 历史版本中曾作为可选防火墙组件。 |
+| pkg | / | FreeBSD 的二进制包管理器，用于安装、更新和管理预编译的软件包，旧称 pkgng。 |
+| PkgBase | / | FreeBSD 项目方案，尝试使用 pkg 包管理器来实现用户空间和内核的更新。 |
+| Poudriere | / | FreeBSD 工具，通过 jail 环境测试 port 并构建 FreeBSD 软件包镜像。 |
+| freebsd-update | / | FreeBSD 基本系统更新工具，用于获取安全更新和执行系统版本升级。 |
+| Chroot | / | Change Root，一种将进程及其子进程的根目录更改到文件系统中另一个位置的操作。 |
+| bhyve | / | FreeBSD 内置的虚拟机管理程序。 |
+| kqueue | / | FreeBSD 的事件通知接口，取代了 select/poll。 |
+| DTrace | / | 动态跟踪框架，可用于实时调试生产系统中的内核和应用程序问题。 |
+| Capsicum | / | 轻量级的操作系统能力和沙盒框架，用于应用程序沙盒化。 |
+| GEOM | / | FreeBSD 的磁盘 I/O 请求转换框架，提供了磁盘分区、加密、镜像等功能。 |
+| UFS | Unix 文件系统 | Unix File System，FreeBSD 的传统文件系统。 |
+| GPT | 全局唯一标识分区表 | GUID Partition Table，一种磁盘分区表标准。 |
+| MBR | 主引导记录 | Master Boot Record，传统的磁盘分区表。 |
+| UEFI | 统一可扩展固件接口 | Unified Extensible Firmware Interface，现代计算机的引导标准。 |
+| BIOS | 基本输入输出系统 | Basic Input/Output System，传统计算机的引导标准。 |
+| Wayland | / | 一种显示服务器协议，旨在替代 X11。 |
+| X11 | X 窗口系统 | X Window System，一种图形用户界面的窗口系统。 |
+| CDE | 通用桌面环境 | Common Desktop Environment，一款经典的 UNIX 桌面环境。 |
+| OpenBSD | / | 一款注重安全的 BSD 操作系统。 |
+| NetBSD | / | 一款注重可移植性的 BSD 操作系统。 |
+| DragonFly BSD | / | 一款从 FreeBSD 分叉出来的 BSD 操作系统。 |
+| GNU | / | GNU's Not Unix，自由软件基金会发起的操作系统项目。 |
+| GPL | / | GNU General Public License，GNU 通用公共许可证，一种强 copyleft 许可证。 |
+| BSD 许可证 | / | 一种宽松的开源许可证，允许商业使用和闭源衍生。 |
+| LLVM | / | Low Level Virtual Machine，一组模块化和可重用的编译器和工具链技术。 |
+| Clang | / | LLVM 项目的 C 语言前端和工具基础设施。 |
+| NFS | / | Network File System，网络文件系统。 |
+| SMB | / | Server Message Block，一种用于文件共享的协议。 |
+| Samba | / | 实现 SMB 协议的开源软件，用于文件共享。 |
+| Apache | / | 一款流行的 Web 服务器软件。 |
+| Nginx | / | 一款高性能的 Web 服务器和反向代理软件。 |
+| PHP | / | PHP: Hypertext Preprocessor，一种广泛使用的服务器端脚本语言。 |
+| PostgreSQL | / | 一款功能强大的开源关系型数据库管理系统。 |
+| MySQL | / | 一款流行的开源关系型数据库管理系统。 |
+| MongoDB | / | 一款流行的 NoSQL 数据库。 |
+| Nextcloud | / | 一款开源的云存储和协作平台。 |
+| Zabbix | / | 一款开源的企业级监控系统。 |
+| Prometheus | / | 一款开源的系统监控和警报工具。 |
+| Grafana | / | 一款开源的数据可视化和监控平台。 |
+| Tomcat | / | Apache 软件基金会的 Java Servlet 容器。 |
+| Caddy | / | 一款支持自动 HTTPS 的 Web 服务器。 |
+| Fail2Ban | / | 一款入侵防御软件，用于保护服务器免受暴力攻击。 |
+| TCP BBR | / | TCP Bottleneck Bandwidth and RTT，一种 TCP 拥塞控制算法。 |
+| Wi-Fi | 无线局域网技术 | Wireless Fidelity。 |
+| USB RNDIS | / | USB Remote Network Driver Interface Specification，USB 网络共享技术。 |
+| Linux 兼容层 | / | FreeBSD 系统功能，可在 FreeBSD 上运行 Linux 二进制程序，提供应用程序兼容性。 |
+| RISC-V | / | 开源指令集架构，FreeBSD 支持 RISC-V 架构的硬件平台。 |
+| Beastie | / | BSD 操作系统家族的吉祥物，形象为红色小恶魔。 |
+| FreeBSD 基金会 | / | 支持 FreeBSD 项目的非营利机构，位于美国科罗拉多州博尔德县，负责资金筹集和项目支持。 |
+| FreeBSD 核心小组 | / | FreeBSD 项目的最高管理机构，由 9 名成员组成，负责项目战略决策和方向指导。 |
+| 提交者 | / | FreeBSD 项目中有权限直接向代码仓库提交更改的开发者。 |
+| CSRG | / | Computer Systems Research Group，加州大学伯克利分校的计算机系统研究小组。 |
+| Multics | / | 多路复用信息和计算服务，一个早期的操作系统项目。 |
+| OpenSolaris | / | Sun Microsystems 开源的 Solaris 操作系统版本，ZFS 和 DTrace 等技术的开源实现基础。 |
+| illumos | / | OpenSolaris 社区分支，在 Oracle 收购 Sun 后由社区维护的开源操作系统项目。 |
+| Oracle Solaris | / | Oracle 公司维护的 Solaris 操作系统商业版本，基于早期 OpenSolaris 代码。 |
+| LLNL | 美国劳伦斯利弗莫尔国家实验室 | Lawrence Livermore National Laboratory，OpenZFS 项目的主要贡献机构之一。 |
+| ALTQ | 交错队列 | Alternate Queuing，PF 防火墙的流量整形和队列管理功能。 |
+| NAT | 网络地址转换 | Network Address Translation。 |
+| ICMP | 互联网控制报文协议 | Internet Control Message Protocol。 |
+| UDP | 用户数据报协议 | User Datagram Protocol。 |
+| TCP | 传输控制协议 | Transmission Control Protocol。 |
 | DNS | 域名系统 | Domain Name System |
 | HTTP | 超文本传输协议 | HyperText Transfer Protocol |
 | HTTPS | 安全超文本传输协议 | HyperText Transfer Protocol Secure |
