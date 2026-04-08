@@ -62,11 +62,11 @@ drop database db_name;
 
 ```sql
 alter database xxx
-default character set UTF-8;
+default character set utf8mb4;
 ```
 
 - `xxx`：数据库名
-- `UTF-8`：字符集名称，指定数据库的默认字符集
+- `utf8mb4`：字符集名称，指定数据库的默认字符集
 
 ## SQL 数据类型
 
