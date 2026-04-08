@@ -190,11 +190,11 @@
 | University of California, Berkeley | 加州大学伯克利分校 | BSD 的诞生地。 |
 | Bill Joy | / | Sun Microsystems 的创始人之一，也是 BSD Unix 的关键开发者。 |
 | Ken Thompson | / | UNIX 的主要开发者之一。 |
-| Dennis Ritchie | / | UNIX 的主要开发者之一，C 语言的发明者 |
-| Marshall Kirk McKusick | / | FreeBSD 的重要开发者，《FreeBSD 操作系统设计与实现》的作者之一 |
-| Jordan Hubbard | / | FreeBSD 的创始人之一，Ports 系统的创建者 |
-| Justin Gibbs | / | FreeBSD 基金会的创始人之一 |
-| Deb Goodkin | / | FreeBSD 基金会的首位执行董事 |
+| Dennis Ritchie | / | UNIX 的主要开发者之一，C 语言的发明者。 |
+| Marshall Kirk McKusick | / | FreeBSD 的重要开发者，《FreeBSD 操作系统设计与实现》的作者之一。 |
+| Jordan Hubbard | / | FreeBSD 的创始人之一，Ports 系统的创建者。 |
+| Justin Gibbs | / | FreeBSD 基金会的创始人之一。 |
+| Deb Goodkin | / | FreeBSD 基金会的首位执行董事。 |
 | Jan Koum | / | WhatsApp 的原 CEO 及创始人，FreeBSD 的重要捐赠者 |
 | Eric S. Raymond | / | 开源运动的重要人物，《大教堂与集市》和《UNIX 编程艺术》的作者 |
 | Henry Spencer | / | UNIX 社区的重要人物，有著名言论：“那些不懂 Unix 的人注定要再造一个四不像式 Unix” |
