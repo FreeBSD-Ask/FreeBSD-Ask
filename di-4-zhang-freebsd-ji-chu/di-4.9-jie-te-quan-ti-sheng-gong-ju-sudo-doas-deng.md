@@ -43,7 +43,7 @@ needs to have the keepenv keyword specified. If keepenv is not specified then
 key elements, like the user's $HOME variable, will be reset and cause the GUI
 application to crash.
 # 注意：如果需要运行图形界面程序，配置中必须添加 keepenv 关键词。
-# 否则像 $HOME 这样的环境变量将会被清空，导致 GUI 程序崩溃。
+# 否则像 $HOME 这样的环境变量将会被清空，导致图形用户界面程序崩溃。
 
 Users who only need to run command line applications can usually get away
 without keepenv.
@@ -90,7 +90,7 @@ permit alice as root # 允许用户 alice doas
 
 # Permit user bob to run programs as root, maintaining
 # environment variables. Useful for GUI applications.
-permit keepenv bob as root  # 允许用户 bob doas，并继承用户 bob 的环境变量，GUI 程序需要，但会降低安全性（参见查看安装后信息）
+permit keepenv bob as root  # 允许用户 bob doas，并继承用户 bob 的环境变量，图形用户界面程序需要，但会降低安全性（参见查看安装后信息）
 
 # Permit user cindy to run only the pkg package manager as root
 # to perform package updates and upgrades.
