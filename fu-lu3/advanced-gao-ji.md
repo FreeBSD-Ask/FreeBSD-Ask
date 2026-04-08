@@ -3303,7 +3303,7 @@ No Spreading（无扩频）
 
 选项：
 
-150 mV / 200 mV / 250mV / 300 mV / 350 mV /400 mV / 450 mV
+150 mV / 200 mV / 250 mV / 300 mV / 350 mV / 400 mV / 450 mV
 
 说明：
 
