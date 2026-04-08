@@ -1421,7 +1421,7 @@ Enable（启用）
 - C4 - 更深度的睡眠：降低 VCC
 - DC4 - 更深度的 C4 睡眠：进一步减少 VCC
 
-参见：处理器深度和深度睡眠状态之间的差异[EB/OL]. [2026-03-26]. <https://www.intel.cn/content/www/cn/zh/support/articles/000006619/processors/intel-core-processors.html>
+参见：英特尔公司. 处理器深度和深度睡眠状态之间的差异[EB/OL]. [2026-03-26]. <https://www.intel.cn/content/www/cn/zh/support/articles/000006619/processors/intel-core-processors.html>
 
 该选项决定了以下选项：
 
