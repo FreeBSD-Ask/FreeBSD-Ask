@@ -1,12 +1,12 @@
 # 6.16 桌面主题美化
 
-FreeBSD 安装桌面环境后，默认通常采用简单朴素的色调。这种未加修饰的设定，可能一时会让新用户不太习惯。为了提升系统的美观度，将在本节尝试添加主题和图标。
+FreeBSD 安装桌面环境后，默认采用简单朴素的色调。这种未加修饰的设定，会让新用户不太习惯。为了提升系统的美观度，本节添加主题和图标。
 
 > **注意**
 >
 > 本节仅涉及 `GTK` 库的桌面主题，囊括 `GNOME`、`Xfce`、`MATE`、`Cinnamon` 和 `LXDE` 等桌面环境。
 
-以下仅收录部分图标和主题，如需获取更多资源，可访问 [FreshPorts](https://www.freshports.org)。
+以下收录部分图标和主题，如需获取更多资源，可访问 [FreshPorts](https://www.freshports.org)。
 
 ## 桌面主题
 
@@ -32,7 +32,7 @@ FreeBSD 安装桌面环境后，默认通常采用简单朴素的色调。这种
 
 ## KDE 主题美化
 
-要安装的是 [WhiteSur](https://www.pling.com/p/1398840/) 主题。
+安装的是 [WhiteSur](https://www.pling.com/p/1398840/) 主题。
 
 1. 下载主题源码包：`git clone https://github.com/vinceliuice/WhiteSur-kde`
 2. 进入主题包目录：`cd WhiteSur-kde`
@@ -41,7 +41,7 @@ FreeBSD 安装桌面环境后，默认通常采用简单朴素的色调。这种
 
 ## Gnome 主题美化
 
-同样，要安装的是 [WhiteSur](https://www.pling.com/p/1403328/) 主题。
+安装的是 [WhiteSur](https://www.pling.com/p/1403328/) 主题。
 
 1. 下载主题源码包：`git clone https://github.com/vinceliuice/WhiteSur-gtk-theme`
 2. 进入主题包目录：`cd WhiteSur-gtk-theme`
@@ -68,7 +68,7 @@ FreeBSD 安装桌面环境后，默认通常采用简单朴素的色调。这种
 
 ## 思考题
 
-试着按照下面的步骤，在终端安装 [Papirus 图标](https://www.gnome-look.org/p/1166289/) :
+按照下面的步骤，在终端安装 [Papirus 图标](https://www.gnome-look.org/p/1166289/) :
 
 ```sh
 $ git clone https://github.com/PapirusDevelopmentTeam/papirus-icon-theme  # 克隆 Papirus 图标主题仓库
@@ -114,7 +114,7 @@ hours-between-reminders     8   # 提醒间隔（小时）
 
 > **注意**
 >
-> 截图为手动执行示例，实际上程序可以在后台自动运行，无需手动验证。若无法再现，可以尝试将 `freebsd-update-notify.conf` 中两个值都改为 `0`，再手动以 `root` 权限执行 `/usr/local/libexec/freebsd-update-notify`。
+> 截图为手动执行示例，实际上程序可以在后台自动运行，无需手动验证。若无法再现，可以将 `freebsd-update-notify.conf` 中两个值都改为 `0`，再手动以 `root` 权限执行 `/usr/local/libexec/freebsd-update-notify`。
 
 freebsd-update-notify 的日志位于 `/var/log/freebsd-update-cron` 和 `/var/log/freebsd-update-notify`。若要反馈故障，请使用英文提交至 [issue](https://github.com/outpaddling/freebsd-update-notify/issues)。
 

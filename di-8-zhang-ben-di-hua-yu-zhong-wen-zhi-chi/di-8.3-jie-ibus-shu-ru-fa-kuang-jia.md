@@ -19,7 +19,7 @@ IBus 即“Intelligent Input Bus”（智能输入总线），是 Linux 及类 U
 # cd /usr/ports/chinese/ibus-libpinyin/ && make install clean
 ```
 
-可选的输入法还包括：
+可选的输入法包括：
 
 - `chinese/ibus-cangjie` 仓颉输入法
 - `chinese/ibus-chewing` 新酷音输入法
@@ -69,7 +69,7 @@ setenv XIM_ARGS "--daemonize --xim"
 
 ## 配置 IBus
 
-完成环境变量配置后，可以通过以下方式设置 IBus。
+完成环境变量配置后，通过以下方式设置 IBus。
 
 IBus 设置工具：
 

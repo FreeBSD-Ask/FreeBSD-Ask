@@ -140,7 +140,7 @@ drwxrwxrwt  2 root    wheel  3 Mar 18 17:23 .ICE-unix
 >
 > 如果不加空格，从自然语言角度，从人类视角看这句话 `Whatwelovedeclarespubliclywhoexactlyweare.` 会是怎样的体验？
 >
-> 换成：`ls-l/home/ykla/tmp`、`ls/` 呢？
+> 再看：`ls-l/home/ykla/tmp`、`ls/` 呢？
 >
 > ```sh
 > # ls-l/home/ykla/tmp

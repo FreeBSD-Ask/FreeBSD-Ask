@@ -66,7 +66,7 @@ dtspc		6112/tcp # CDE Subprocess Control Service
 # 启用并启动 rpcbind、dtcms 和 inetd 服务，这是 CDE 所依赖的组件。
 
 Finally, make sure to add /usr/local/dt/bin to your path.
-# 最后，请将 /usr/local/dt/bin 添加到你的 PATH 环境变量中。
+# 最后，请将 /usr/local/dt/bin 添加到当前 PATH 环境变量中。
 
 To start the Common Desktop Environment:
 % env LANG=C startx /usr/local/dt/bin/Xsession

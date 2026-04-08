@@ -611,7 +611,7 @@ https://mirrors.163.com/freebsd-pkg/
 
 以上表格中的时间已转换为北京时间（东八区），对应 FreeBSD 官方镜像站的发布时间。
 
-若官方源下载速度慢，可以考虑换成国内镜像。只需要替换 `https://pkg.freebsd.org` 这部分。
+若官方源下载速度慢，可以考虑改用国内镜像。只需要替换 `https://pkg.freebsd.org` 这部分。
 
 ## 参考文献
 

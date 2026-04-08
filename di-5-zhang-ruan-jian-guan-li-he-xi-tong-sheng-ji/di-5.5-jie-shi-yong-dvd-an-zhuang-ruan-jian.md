@@ -35,7 +35,7 @@
 - 直接挂载本地 ISO：
 
 ```sh
-# mdconfig /home/ykla/FreeBSD-14.2-RELEASE-amd64-dvd1.iso  # 请换成你自己的路径，可以用 pwd 命令查看当前路径
+# mdconfig /home/ykla/FreeBSD-14.2-RELEASE-amd64-dvd1.iso  # 请改为实际路径，可以用 pwd 命令查看当前路径
 md0
 # mkdir -p /dist  # 创建挂载路径，必须是此路径
 # mount -t cd9660 /dev/md0 /dist # 不能直接挂载 ISO，会报错 block device required

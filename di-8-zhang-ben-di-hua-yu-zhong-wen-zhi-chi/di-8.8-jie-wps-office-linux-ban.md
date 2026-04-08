@@ -35,7 +35,7 @@ WPS Office 官方下载地址：[WPS Office for Linux](https://linux.wps.cn/)。
 
 >**技巧**
 >
->该链接可能存在问题，目前无法通过 fetch 或 wget 下载。如有解决方案，请提交 PR 或 issue。
+>该链接存在问题，目前无法通过 fetch 或 wget 下载。如有解决方案，请提交 PR 或 issue。
 
 ### 安装 WPS Office
 
@@ -51,7 +51,7 @@ WPS Office 官方下载地址：[WPS Office for Linux](https://linux.wps.cn/)。
 # rpm2cpio < /home/ykla/Downloads/wps-office-12.1.0.17900-1.x86_64.rpm  | cpio -id
 ```
 
-读者请将路径替换为本地下载文件的实际路径。
+请将路径替换为本地下载文件的实际路径。
 
 WPS Office 文件结构：
 
@@ -108,7 +108,7 @@ $ /compat/linux/opt/kingsoft/wps-office/office6/wps
 # passwd test # 为 Arch 的 test 用户设置密码，该用户已由脚本创建
 ```
 
-请新开一个终端并输入 `reboot` 重启 FreeBSD，否则新设置的密码可能无法生效。
+请新开一个终端并输入 `reboot` 重启 FreeBSD，否则新设置的密码无法生效。
 
 ```sh
 # chroot /compat/arch/ /bin/bash # 进入 Arch 兼容层

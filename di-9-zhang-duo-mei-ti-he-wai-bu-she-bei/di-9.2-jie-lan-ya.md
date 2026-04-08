@@ -6,7 +6,7 @@
 
 ### 服务管理
 
-蓝牙功能的实现依赖于多个系统服务的协同工作。`hcsecd` 服务用于管理蓝牙设备的链路密钥和 PIN 码，负责蓝牙设备的安全认证；`bthidd` 服务用于支持 Bluetooth HID（Human Interface Device）设备，如蓝牙鼠标、键盘等。首先需要启用并启动相关服务：
+蓝牙功能的实现依赖于多个系统服务的协同工作。`hcsecd` 服务用于管理蓝牙设备的链路密钥和 PIN 码，负责蓝牙设备的安全认证；`bthidd` 服务用于支持 Bluetooth HID（Human Interface Device）设备，如蓝牙鼠标、键盘等。启用并启动相关服务：
 
 ```sh
 # service hcsecd enable  # 启用 hcsecd 服务，用于管理蓝牙设备的链路密钥和 PIN 码

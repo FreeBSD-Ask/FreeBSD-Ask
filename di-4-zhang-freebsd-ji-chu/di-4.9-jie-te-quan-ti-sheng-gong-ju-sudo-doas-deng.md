@@ -152,7 +152,7 @@ permit :wheel
 需要在 sudoers 配置文件中加入一行来解决该问题：编辑 `/usr/local/etc/sudoers` 文件，找到 `root ALL=(ALL:ALL) ALL` 这一行，通常位于第 94 行左右。在这行下面加一句：
 
 ```sh
-你的普通用户名 ALL=(ALL:ALL) ALL
+实际普通用户名 ALL=(ALL:ALL) ALL
 ```
 
 然后保存并退出即可。
@@ -236,7 +236,7 @@ Defaults!/usr/local/sbin/visudo env_keep += "SUDO_EDITOR EDITOR VISUAL"
 
 ##
 ## Use a hard-coded PATH instead of the user's to find commands.
-## 使用硬编码的 PATH 查找命令，而不是使用用户自己的 PATH。
+## 使用硬编码的 PATH 查找命令，而不是使用用户的 PATH。
 
 ## This also helps prevent poorly written scripts from running
 ## arbitrary commands under sudo.
@@ -346,7 +346,7 @@ root ALL=(ALL:ALL) ALL
 ## 取消注释可允许任意用户在知道目标用户（默认为 root）密码的情况下运行 sudo。
 
 # Defaults targetpw  # Ask for the password of the target user
-## 使用目标用户密码进行认证（而非调用者自己的密码）。
+## 使用目标用户密码进行认证（而非调用者的密码）。
 
 # ALL ALL=(ALL:ALL) ALL  # WARNING: only use this together with 'Defaults targetpw'
 ## 所有用户均可以任意身份运行任意命令（危险！仅与 `Defaults targetpw` 搭配使用）。

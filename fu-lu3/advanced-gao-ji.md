@@ -82,7 +82,7 @@ Enable（启用）
 
 说明：
 
-BT Audio Offload（A2DP），英特尔蓝牙音频分发技术，参见英特尔. 示范影片：以 Intel® Bluetooth® 音频卸除省电（A2DP） （MP4）[EB/OL]. (2022-10-27)[2026-03-26]. <https://www.intel.cn/content/www/cn/zh/content-details/751466/demo-video-power-saving-with-intel-bluetooth-audio-offload-a2dp-mp4.html>. 展示蓝牙音频卸除技术的省电效果演示。硬件卸载的音频处理允许在计算机的主 CPU 之外执行主要音频处理任务，即将蓝牙传输音频的解码放到 DSP 进行处理，可降低处理器的负载并省电。参见 Microsoft. Hardware-Offloaded 音频处理[EB/OL]. (2025-07-18)[2026-03-26]. <https://learn.microsoft.com/zh-cn/windows-hardware/drivers/audio/hardware-offloaded-audio-processing>. 介绍硬件卸载音频处理的技术原理与实现。
+BT Audio Offload（A2DP），英特尔蓝牙音频分发技术，参见英特尔. 示范影片：以 Intel® Bluetooth® 音频卸除省电（A2DP） （MP4）[EB/OL]. (2022-10-27)[2026-03-26]. <https://www.intel.cn/content/www/cn/zh/content-details/751466/demo-video-power-saving-with-intel-bluetooth-audio-offload-a2dp-mp4.html>. 展示蓝牙音频卸除技术的省电效果。硬件卸载的音频处理允许在计算机的主 CPU 之外执行主要音频处理任务，即将蓝牙传输音频的解码放到 DSP 进行处理，可降低处理器的负载并省电。参见 Microsoft. Hardware-Offloaded 音频处理[EB/OL]. (2025-07-18)[2026-03-26]. <https://learn.microsoft.com/zh-cn/windows-hardware/drivers/audio/hardware-offloaded-audio-processing>. 介绍硬件卸载音频处理的技术原理与实现。
 
 该功能可将来自蓝牙设备的 HFP 格式音频输入传送至音频 DSP，并通过 A2DP 格式以高能效方式将音频输出至蓝牙设备。
 
@@ -1335,7 +1335,7 @@ Enable（启用）
 
 此选项依赖 Platform PL1 Enable（启用平台 PL1），这是 BIOS 存储的待生效 PL1 值（可能执行）。实际执行的是 Power Limit 1（如已设置）。
 
-平台功耗限制 1（Platform Power Limit1，简称 PL1）以毫瓦（mW）为单位设置。BIOS 在编程时会将其四舍五入到最接近的 1/8 瓦。可以在由 `PACKAGE_POWER_SKU_MSR` 指定的最小功耗限制和最大功耗限制之间设置任意值。例如，如果想设置为 12.50 瓦，就输入 `12500`。该设置会成为处理器 RAPL 算法（用于监控功耗并控制频率和电压的闭环控制算法）中的新 PL1 值。
+平台功耗限制 1（Platform Power Limit1，简称 PL1）以毫瓦（mW）为单位设置。BIOS 在编程时会将其四舍五入到最接近的 1/8 瓦。可以在由 `PACKAGE_POWER_SKU_MSR` 指定的最小功耗限制和最大功耗限制之间设置任意值。例如，设置为 12.50 瓦，输入 `12500`。该设置会成为处理器 RAPL 算法（用于监控功耗并控制频率和电压的闭环控制算法）中的新 PL1 值。
 
 此值是平台平均功耗不会被超过的阈值 —— 英特尔推荐设置为等于平台的散热能力。参见：Platform Power Control[EB/OL]. [2026-03-26]. <https://edc.intel.com/content/www/us/en/design/ipla/software-development-platforms/client/platforms/alder-lake-desktop/12th-generation-intel-core-processors-datasheet-volume-1-of-2/011/platform-power-control/>
 
@@ -1368,7 +1368,7 @@ Enable（启用）
 说明：
 
 此选项依赖 Platform PL2 Enable（启用平台 PL2），这是 BIOS 存储的待生效 PL2 值（可能执行）。实际执行的是 Power Limit 2（如已设置）。
-平台功耗限制 2（Platform Power Limit2，简称 PL2）以毫瓦（mW）为单位设置。BIOS 在编程时会将其四舍五入到最接近的 1/8 瓦。可以在由 `PACKAGE_POWER_SKU_MSR` 指定的最小功耗限制和最大功耗限制之间设置任意值。例如，如果想设置为 12.50 瓦，就输入 `12500`。该设置会成为处理器 RAPL 算法（用于监控功耗并控制频率和电压的闭环控制算法）中的新 PL2 值。
+平台功耗限制 2（Platform Power Limit2，简称 PL2）以毫瓦（mW）为单位设置。BIOS 在编程时会将其四舍五入到最接近的 1/8 瓦。可以在由 `PACKAGE_POWER_SKU_MSR` 指定的最小功耗限制和最大功耗限制之间设置任意值。例如，设置为 12.50 瓦，输入 `12500`。该设置会成为处理器 RAPL 算法（用于监控功耗并控制频率和电压的闭环控制算法）中的新 PL2 值。
 
 #### Power Limit 4 Override（PL4 覆盖，功耗限制 4 覆盖）
 
@@ -2259,7 +2259,7 @@ None（无）
 
 TPM Clear（重置 TPM）
 
-为安全设备安排操作。注意：你的计算机将重启以完成安全设备状态的更改。以更改安全设备的状态。
+为安全设备安排操作。注意：计算机将重启以完成安全设备状态的更改。
 
 #### Platform Hierarchy（平台层级）
 
