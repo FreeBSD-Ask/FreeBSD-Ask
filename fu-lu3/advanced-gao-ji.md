@@ -1192,7 +1192,7 @@ AUTO (0)：使用主板 ID 自动确定主板设计。
 
 ![声学噪声设置](../.gitbook/assets/image-20250719193202-imaxam5.png)
 
-选项
+选项：
 
 Disable（禁用）
 
