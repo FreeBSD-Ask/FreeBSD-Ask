@@ -17,12 +17,12 @@
 | RELEASE | 稳定版 | 适用于生产环境的正式发布版本。 |
 | ABI | 应用程序二进制接口 | Application Binary Interface，应用程序与操作系统之间的二进制接口标准。 |
 | Unix | / | 最初由 AT&T 贝尔实验室开发的操作系统，现为一种标准规范和法律商标。 |
-| ZFS | / | Zettabyte File System，一款集成了文件系统和逻辑卷管理器的先进存储系统，采用 copy-on-write（写时复制）事务模型，具有强大的数据完整性保护机制、高效的数据压缩功能与可扩展存储架构，是现代存储技术的重要创新。 |
+| ZFS | / | Zettabyte File System，一种集成了文件系统和逻辑卷管理器的先进存储系统，采用 copy-on-write（写时复制）事务模型，具有强大的数据完整性保护机制、高效的数据压缩功能与可扩展存储架构，是现代存储技术的重要创新。 |
 | OpenZFS | / | ZFS 的开源社区版本，统一了 ZFS 的开源开发。 |
 | CDDL | 通用开发及发行许可 | Common Development and Distribution License，ZFS 采用的开源许可证，允许商业使用和修改。 |
 | PF | 包过滤器 | Packet Filter，源自 OpenBSD 的防火墙软件，在 FreeBSD 中作为可选防火墙提供，支持 ALTQ 流量整形等功能。 |
 | IPFW | / | ipfirewall，FreeBSD 内置的防火墙系统，采用首次匹配规则，提供基本的包过滤功能。 |
-| IPF | / | IPFilter，一款防火墙软件，在 FreeBSD 历史版本中曾作为可选防火墙组件。 |
+| IPF | / | IPFilter，一种防火墙软件，在 FreeBSD 历史版本中曾作为可选防火墙组件。 |
 | pkg | / | FreeBSD 的二进制包管理器，用于安装、更新和管理预编译的软件包，旧称 pkgng。 |
 | PkgBase | / | FreeBSD 项目方案，尝试使用 pkg 包管理器来实现用户空间和内核的更新。 |
 | Poudriere | / | FreeBSD 工具，通过 jail 环境测试 port 并构建 FreeBSD 软件包镜像。 |
@@ -52,19 +52,19 @@
 | NFS | / | Network File System，网络文件系统。 |
 | SMB | / | Server Message Block，一种用于文件共享的协议。 |
 | Samba | / | 实现 SMB 协议的开源软件，用于文件共享。 |
-| Apache | / | 一款流行的 Web 服务器软件。 |
-| Nginx | / | 一款高性能的 Web 服务器和反向代理软件。 |
+| Apache | / | 一种流行的 Web 服务器软件。 |
+| Nginx | / | 一种高性能的 Web 服务器和反向代理软件。 |
 | PHP | / | PHP: Hypertext Preprocessor，一种广泛使用的服务器端脚本语言。 |
-| PostgreSQL | / | 一款功能强大的开源关系型数据库管理系统。 |
-| MySQL | / | 一款流行的开源关系型数据库管理系统。 |
-| MongoDB | / | 一款流行的 NoSQL 数据库。 |
-| Nextcloud | / | 一款开源的云存储和协作平台。 |
-| Zabbix | / | 一款开源的企业级监控系统。 |
-| Prometheus | / | 一款开源的系统监控和警报工具。 |
-| Grafana | / | 一款开源的数据可视化和监控平台。 |
+| PostgreSQL | / | 一种功能强大的开源关系型数据库管理系统。 |
+| MySQL | / | 一种流行的开源关系型数据库管理系统。 |
+| MongoDB | / | 一种流行的 NoSQL 数据库。 |
+| Nextcloud | / | 一种开源的云存储和协作平台。 |
+| Zabbix | / | 一种开源的企业级监控系统。 |
+| Prometheus | / | 一种开源的系统监控和警报工具。 |
+| Grafana | / | 一种开源的数据可视化和监控平台。 |
 | Tomcat | / | Apache 软件基金会的 Java Servlet 容器。 |
-| Caddy | / | 一款支持自动 HTTPS 的 Web 服务器。 |
-| Fail2Ban | / | 一款入侵防御软件，用于保护服务器免受暴力攻击。 |
+| Caddy | / | 一种支持自动 HTTPS 的 Web 服务器。 |
+| Fail2Ban | / | 一种入侵防御软件，用于保护服务器免受暴力攻击。 |
 | TCP BBR | / | TCP Bottleneck Bandwidth and RTT，一种 TCP 拥塞控制算法。 |
 | Wi-Fi | 无线局域网技术 | Wireless Fidelity，一种无线局域网技术。 |
 | USB RNDIS | / | USB Remote Network Driver Interface Specification，USB 网络共享技术。 |
@@ -115,13 +115,13 @@
 | tcsh | / | Tenex C Shell，csh 的增强版本。 |
 | bash | / | Bourne Again Shell，GNU 的 shell。 |
 | zsh | / | Z Shell，一种功能强大的 shell。 |
-| vi | / | 一款经典的文本编辑器。 |
+| vi | / | 一种经典的文本编辑器。 |
 | Vim | / | Vi IMproved，vi 的增强版本。 |
-| Emacs | / | 一款功能强大的文本编辑器。 |
+| Emacs | / | 一种功能强大的文本编辑器。 |
 | Neovim | / | Vim 的重构版本。 |
 | gcc | / | GNU Compiler Collection，GNU 编译器集合。 |
 | gdb | / | GNU Debugger，GNU 调试器。 |
-| IDA Pro | / | Interactive Disassembler Professional，一款专业的反汇编和调试工具。 |
+| IDA Pro | / | Interactive Disassembler Professional，一种专业的反汇编和调试工具。 |
 | Java | / | 一种编程语言和计算平台。 |
 | Python | / | 一种高级编程语言。 |
 | Rust | / | 一种系统编程语言，注重安全和性能。 |
