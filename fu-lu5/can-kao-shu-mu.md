@@ -1,14 +1,14 @@
 # 参考书目
 
-本节为 FreeBSD 学习者与研究者提供了系统性的文献参考框架。
+本节为 FreeBSD 学习者与研究者提供系统性的文献参考框架。
 
-部分书籍可通过中文数字阅读平台获取，包括 [微信读书](https://weread.qq.com/)、[QQ 阅读](https://book.qq.com/)、[京东读书](https://cread.jd.com/custom/custom_pcDownload.action) 等。这些平台提供了技术类书籍的数字版本，便于读者在线阅读。
+部分书籍可通过中文数字阅读平台获取，包括 [微信读书](https://weread.qq.com/)、[QQ 阅读](https://book.qq.com/)、[京东读书](https://cread.jd.com/custom/custom_pcDownload.action) 等。这些平台提供技术类书籍的数字版本，便于读者在线阅读。
 
-部分书籍可能已经绝版，可尝试通过专业二手书交易平台进行购买，如 [多抓鱼](https://www.duozhuayu.com/)、[孔夫子旧书网](https://www.kongfz.com/) 等。
+部分书籍可能已经绝版，可尝试通过专业二手书交易平台购买，如 [多抓鱼](https://www.duozhuayu.com/)、[孔夫子旧书网](https://www.kongfz.com/) 等。
 
 ## 主要参考书目
 
-本部分列出了本书编写过程中参考的主要书籍，涵盖命令行基础、UNIX 内核、FreeBSD 技术等多个领域，读者可根据自身需求进一步查阅。
+本部分列出本书编写过程中参考的主要书籍，涵盖命令行基础、UNIX 内核、FreeBSD 技术等多个领域，读者可根据自身需求进一步查阅。
 
 ### 命令行基础
 
