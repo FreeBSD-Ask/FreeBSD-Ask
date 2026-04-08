@@ -57,7 +57,7 @@ UNIX 哲学是在 UNIX 操作系统长期开发实践中逐渐形成的一套设
 >
 >> 2. 小弗雷德里克·P. 布鲁克斯. 人月神话[M]. UMLChina, 译. 纪念典藏版. 北京: 清华大学出版社, 2023. ISBN: 978-7-302-63538-3
 >
-> 阅读上述文本和参考文献，如何理解 UNIX 哲学的不足之处，以及背后的时代背景。
+> 阅读上述文本和参考文献，如何理解 UNIX 哲学的局限性，以及背后的时代背景。
 
 这些原则在当时的软件设计中相互配合，帮助开发者构建出简洁、高效、可维护的系统。
 
@@ -81,7 +81,7 @@ UNIX 的诞生有其历史背景，这要从它的前身 Multics 开始说起。
 
 ### Multics
 
-Multics 是一个对 UNIX 产生直接影响的重要项目。1964 年，麻省理工学院（Massachusetts Institute of Technology，MIT）推出了 **兼容分时系统**（Compatible Time-Sharing System，CTSS），这是当时最具创新性的操作系统。有了 CTSS 这种高效的操作系统，研究人员决定设计一个更好的版本——**多路** 复用信息和计算服务（Multiplexed Information and Computing Service，Multics）系统。
+Multics 是一个对 UNIX 产生直接影响的重要项目。1964 年，麻省理工学院（Massachusetts Institute of Technology，MIT）推出了 **兼容分时系统**（Compatible Time-Sharing System，CTSS），这是当时最具创新性的操作系统。有了 CTSS 这种高效的操作系统，研究人员决定设计一个更好的版本——**多路复用**信息和计算服务（Multiplexed Information and Computing Service，Multics）系统。
 
 Multics 旨在创造功能强大的新软件，以及比肩 IBM 7094 功能更丰富的新硬件，麻省理工学院邀请了两家公司来协助。
 
