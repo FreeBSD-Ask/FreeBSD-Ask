@@ -380,7 +380,7 @@ Enable（启用）
 
 ### Intel (VMX) Virtualization Technology（Intel 虚拟化技术）
 
-选项
+选项：
 
 Disable（禁用）
 
