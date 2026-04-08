@@ -10,7 +10,7 @@ BIOS（基本输入输出系统，Basic Input/Output System）密码是一种固
 
 ![Security 安全菜单](../.gitbook/assets/image-20250726125813-w1cg2tq.png)
 
-密码说明（Password Description）
+## 密码说明（Password Description）
 
 若仅设置了管理员密码，则仅限制进入固件设置程序（BIOS 或 UEFI）。必须输入管理员密码才能读取和修改 BIOS 设置。
 
