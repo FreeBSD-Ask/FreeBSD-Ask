@@ -604,7 +604,7 @@ No（否）
 
 SMM 代码访问是一种特殊的操作模式，由 BIOS 用于处理电源和硬件管理功能。
 
-SMM，即 System Management Mode 系统管理模式，SMM 模式具有比内核模式更高的特权级别，是 CPU 的最高运行权限，运行在内核模式下的内核驱动程序只能通过 SMI 中断来访问运行在 SMM 模式下的 UEFI 固件运行时服务。参见：安全内参. 以Protocol为中心的UEFI固件SMM提权漏洞静态检测[EB/OL]. [2026-03-26]. <https://www.secrss.com/articles/53078>
+SMM，即 System Management Mode 系统管理模式，SMM 模式具有比内核模式更高的特权级别，是 CPU 的最高运行权限，运行在内核模式下的内核驱动程序只能通过 SMI 中断来访问运行在 SMM 模式下的 UEFI 固件运行时服务。参见：安全内参. 以 Protocol 为中心的 UEFI 固件 SMM 提权漏洞静态检测[EB/OL]. [2026-03-26]. <https://www.secrss.com/articles/53078>
 
 ![CPU SMM 增强](../.gitbook/assets/CPU-SMM.png)
 
@@ -752,7 +752,7 @@ Enable（启用）
 
 若要支持 Intel Turbo Boost Max（ITBMT，英特尔睿频加速 Max）3.0 技术，则必须开启此项。若处理器不支持 ITBMT 3.0，此项将呈现灰色，不可设定状态。
 
-ITBMT 3.0 能识别处理器上性能最佳的内核，同时通过提高利用电源和散热器空间时所必需的频率，提高这些内核的性能。由于生产差异，处理器内核的最大潜在频率各不相同。ITBMT 3.0 可识别 CPU 上最多两个速度最快的内核，称为“青睐的内核”。然后，它会对这些内核（或该内核）应用频率提升，并将关键工作负载分配到它们。ITBMT 3.0 旨在充分利用每个内核的最高频率，参见：英特尔公司. 英特尔®睿频加速Max技术3.0技术常见问题解答[EB/OL]. [2026-03-26]. <https://www.intel.cn/content/www/cn/zh/support/articles/000021587/processors.html>
+ITBMT 3.0 能识别处理器上性能最佳的内核，同时通过提高利用电源和散热器空间时所必需的频率，提高这些内核的性能。由于生产差异，处理器内核的最大潜在频率各不相同。ITBMT 3.0 可识别 CPU 上最多两个速度最快的内核，称为“青睐的内核”。然后，它会对这些内核（或该内核）应用频率提升，并将关键工作负载分配到它们。ITBMT 3.0 旨在充分利用每个内核的最高频率，参见：英特尔公司. 英特尔® 睿频加速 Max 技术 3.0 技术常见问题解答[EB/OL]. [2026-03-26]. <https://www.intel.cn/content/www/cn/zh/support/articles/000021587/processors.html>
 
 关闭该功能有助于改善实时性，此时 CPU 频率和电压不会被动态调整。
 
