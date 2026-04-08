@@ -206,7 +206,7 @@ EndSection
 # sysrc -f /boot/loader.conf acpi_video="YES"
 ```
 
-对于 ThinkPad，可以启用 IBM ACPI 支持和 ACPI 视频支持
+对于 ThinkPad，可以启用 IBM ACPI 支持和 ACPI 视频支持。
 
 - 在 `/boot/loader.conf` 文件中启用 IBM ACPI 支持：
 
