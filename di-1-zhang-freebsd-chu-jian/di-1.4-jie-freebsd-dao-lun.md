@@ -8,9 +8,9 @@ FreeBSD 作为一个持续演进的开源操作系统，其版本管理体系经
 
 > **注意**
 >
-> FreeBSD 的 ***STABLE*** 分支与一般 Linux 发行版中的"稳定版"概念不同，实际上它属于 **开发分支**，而非生产就绪的稳定版本。
+> FreeBSD 的 ***STABLE*** 分支与一般 Linux 发行版中的“稳定版”概念不同，实际上它属于 **开发分支**，而非生产就绪的稳定版本。
 >
-> FreeBSD 的 ***STABLE*** 分支名称中的"稳定"指的是该分支的 ABI（Application Binary Interface，应用程序二进制接口）保持稳定，而非指系统整体稳定性。
+> FreeBSD 的 ***STABLE*** 分支名称中的“稳定”指的是该分支的 ABI（Application Binary Interface，应用程序二进制接口）保持稳定，而非指系统整体稳定性。
 >
 > 参考文献：FreeBSD Wiki. FreeBSD Glossary STABLE[EB/OL]. [2026-03-26]. <https://wiki.freebsd.org/Glossary#STABLE>.
 
