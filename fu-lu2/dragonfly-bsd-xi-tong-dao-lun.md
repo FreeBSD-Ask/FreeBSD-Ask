@@ -2,11 +2,7 @@
 
 ## DragonFly BSD 概述
 
-DragonFly BSD 是一款具有独特设计理念的类 UNIX 操作系统，其发展历程与 FreeBSD 有着密切的技术渊源和历史联系。
-
-## DragonFly BSD 概述
-
-DragonFly BSD（蜻蜓 BSD）是一款基于 FreeBSD 4.8 衍生的类 UNIX 操作系统。该项目由曾参与开发 Amiga（上世纪重要的个人计算平台）的 Matthew Dillon（毕业于加州大学伯克利分校）于 2003 年 6 月启动，并于 2003 年 7 月正式发布于 [FreeBSD 邮件列表](https://lists.freebsd.org/pipermail/freebsd-current/2003-July/006889.html)。
+DragonFly BSD（蜻蜓 BSD）是一款基于 FreeBSD 4.8 衍生而来的类 UNIX 系统。该项目由曾参与开发 Amiga（上世纪重要的个人计算平台）的 Matthew Dillon（毕业于加州大学伯克利分校）于 2003 年 6 月启动，并于 2003 年 7 月正式发布于 [FreeBSD 邮件列表](https://lists.freebsd.org/pipermail/freebsd-current/2003-July/006889.html)。
 
 Dillon 启动 DragonFly BSD 项目的核心动因在于对 FreeBSD 5 中采用的 SMP（对称多处理）并行计算架构存在不同的技术判断。SMP 是指多个处理器共享同一个内存空间的架构设计，他认为该设计可能引入不必要的性能开销。这一技术分歧导致了与 FreeBSD 核心开发团队的讨论，并最终促成了独立项目的形成。尽管存在技术路径的差异，DragonFly BSD 与 FreeBSD 项目在错误修复和驱动程序更新等领域仍保持着协作关系。
 
