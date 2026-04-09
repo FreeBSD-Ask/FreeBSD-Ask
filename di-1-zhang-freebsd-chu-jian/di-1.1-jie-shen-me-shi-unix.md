@@ -71,7 +71,7 @@ UNIX 哲学是在 UNIX 操作系统长期开发实践中逐渐形成的一套设
 
 ### 参考文献
 
-- 埃里克·雷蒙德. 《UNIX 编程艺术》[M]. 北京：电子工业出版社，2012. ISBN：978-7-121-17665-4. 系统阐述 UNIX 哲学与软件工程实践原则。
+- 埃里克·雷蒙德. UNIX 编程艺术[M]. 北京:电子工业出版社, 2012. ISBN: 978-7-121-17665-4. 系统阐述 UNIX 哲学与软件工程实践原则。
 - 迈克·甘卡兹. Linux/Unix 设计思想[M]. 北京:人民邮电出版社, 2012. ISBN: 978-7-115-26692-7. （已绝版）提炼 UNIX 系统设计核心思想与实践方法。
 - The Open Group. The Open Group Standards Process[EB/OL]. [2026-03-25]. <https://www.opengroup.org/standardsprocess/certification.html>. 规范 UNIX 认证流程与技术标准框架。
 
