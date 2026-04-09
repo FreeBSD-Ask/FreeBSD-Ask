@@ -177,7 +177,7 @@ $ git clone https://github.com/FreeBSD-Ask/FreeBSD-Ask
 
 ### 项目简介
 
-本项目是托管在 GitBook 的主项目（即 `https://book.bsdcn.org`）；
+本项目主要托管在 GitBook（即 `https://book.bsdcn.org`）；
 
 `https://docs.bsdcn.org` 由社区自行构建，docs 网站本身的贡献指南参见：FreeBSD 从入门到跑路 VitePress 镜像项目[EB/OL]. [2026-03-26]. <https://github.com/FreeBSD-Ask/FreeBSD-Ask.github.io/blob/main/README.md>。
 
