@@ -58,7 +58,7 @@ Linux 中常见的 Shell 一般是 bash（Bourne Again Shell，即“又一个 B
 - 补全命令
 
 ```sh
-# lo # 若此时按 TAB 键，输出如下。可以再输一个字母再按一次 TAB 键看看
+# lo # 若此时按 Tab 键，输出如下。可以再输一个字母再按一次 Tab 键看看
 local                    localedef                login
 local-unbound            locate                   logins
 local-unbound-anchor     lock                     logname
@@ -71,7 +71,7 @@ locale
 - 补全文件目录或文件名
 
 ```sh
-$ cp /home/ykla/ # 此处按 TAB 键，然后再重复按一次 TAB 键，看看效果
+$ cp /home/ykla/ # 此处按 Tab 键，然后再重复按一次 Tab 键，看看效果
 $ cp /home/ykla/test/1.txt
 .cache/                 .login                  bin/                    test2
 .config/                .profile                HW_PROBE/               test3

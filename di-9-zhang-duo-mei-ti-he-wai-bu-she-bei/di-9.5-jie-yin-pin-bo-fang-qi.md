@@ -177,7 +177,7 @@ MPD 默认使用的部分目录需要自行创建：
 audio_output {
         type            "oss"
         name            "OSS Device（dop mode）"
-        device          "/dev/dsp2"     # 指定使用的设备，不需要将 dac 或声卡等设置为默认设备，dsp2 专用于播放音乐，默认设备做其他事就行
+        device          "/dev/dsp2"     # 指定使用的设备，无需将 DAC 或声卡等设置为默认设备，dsp2 可专用于音乐播放，默认设备可用于其他用途
         dop             "yes"           # 开启 dop 模式
 }
 ```

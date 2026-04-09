@@ -4,7 +4,7 @@
 
 🎉 欢迎来到 BSD 的世界！
 
-FreeBSD 是一款真正自由（Liberty）的 **操作系统**，在这波谲云诡的世界中仍然坚守 BSD UNIX 哲学——**恪守古老的法则，追寻真正的自由。**
+FreeBSD 是一款真正自由（Liberty）的 **操作系统**，在这波谲云诡的世界中仍然坚守 BSD UNIX 哲学——**恪守古老的法则，追寻真正的自由**。
 
 “入门”本是一种快乐，“跑路”亦是一种豁达。“本乘兴而行，兴尽而反，何必 FreeBSD 邪！”（化用晋书·王羲之传附王徽之传[M]//房玄龄.晋书.北京:中华书局,1974）
 
@@ -12,9 +12,9 @@ FreeBSD 是一款真正自由（Liberty）的 **操作系统**，在这波谲云
 
 >**注意**
 >
->本书还有约 60% 的章节尚待撰写（参见下文），既有章节已经通过了审阅和修订，但还不是正式版本。~~还是 EA 版呢（Early Access），或许永远都是……~~
+>本书约有 60% 的章节尚未完成（详见下文），已有的章节虽经审阅和修订，但仍非最终版本。
 
-这是一本开源的 FreeBSD 操作系统研究书籍，还包含一些关于 OpenBSD、NetBSD 等 Berkeley Unix 家族系统的导论章节。
+本书是一本关于 FreeBSD 操作系统的开源研究著作，同时包含 OpenBSD、NetBSD 等 Berkeley Unix 家族系统的导论章节。
 
 [~~FreeBSD 项目即将归档（Archived）~~，为了保护我们心爱的操作系统……我们能做的事情就是，写一本书！](https://www.bilibili.com/bangumi/media/md3068)（化用《Love Live! School Idol Project》中的经典口号）
 
@@ -30,8 +30,8 @@ FreeBSD 是一款真正自由（Liberty）的 **操作系统**，在这波谲云
 
 ![FreeBSD 中文社区 QQ 群](.gitbook/assets/2025-qq.png)
 
-- 微信群：由于微信平台的限制，须先加入 QQ 群，再联系群主获取新鲜的入群二维码。
-- Discord：<https://discord.gg/j7VhWrhp3e>（需代理，可通过网页使用）
+- 微信群：受微信平台限制，需先加入 QQ 群，再联系群主获取最新入群二维码。
+- Discord：<https://discord.gg/j7VhWrhp3e>（需代理，可通过网页访问）
 - Telegram 群组：[https://t.me/oh_my_BSD](https://t.me/oh_my_BSD)（需代理）
 
 ## 电子文档

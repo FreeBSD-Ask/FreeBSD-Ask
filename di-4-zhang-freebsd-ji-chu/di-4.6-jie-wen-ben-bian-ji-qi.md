@@ -210,7 +210,7 @@ Emacs 的用户配置文件通常为 `~/.emacs.d/init.el`。
 - `emacs filename.txt` — 直接打开文件
 - `emacs -nw` — 在终端内不启动图形界面
 
-Emacs GUI：
+Emacs 图形用户界面：
 
 ![Emacs GUI](../.gitbook/assets/di-4.6-jie-emcs-1.png)
 

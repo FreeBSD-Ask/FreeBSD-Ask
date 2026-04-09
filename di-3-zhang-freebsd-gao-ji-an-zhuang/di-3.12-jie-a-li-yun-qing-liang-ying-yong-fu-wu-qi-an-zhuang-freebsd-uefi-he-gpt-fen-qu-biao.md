@@ -645,7 +645,7 @@ TinyCorePure64 下载地址是 [x86 Pure 64](http://www.tinycorelinux.net/ports.
 
 ![启动到 TinyCorePure64](../.gitbook/assets/TinyCorePure1.png)
 
-选择最后一项“corew”，因为默认图形界面（tc）在通过 VNC 执行命令时可能出现异常。同时，其 GUI 下无法运行 Ventoy GUI，这是由于 libc 格式不兼容所致。
+选择最后一项“corew”，因为默认图形界面（tc）在通过 VNC 执行命令时可能出现异常。同时，其图形用户界面下无法运行图形界面的 Ventoy，这是由于 libc 格式不兼容所致。
 
 观察分区情况：
 

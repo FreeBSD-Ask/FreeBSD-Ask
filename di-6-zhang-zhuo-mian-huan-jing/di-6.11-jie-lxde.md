@@ -27,7 +27,7 @@ LXDE 是一款轻量级桌面环境，专注于资源利用效率和交互简洁
 
 | 包名 | 作用说明 |
 | ---- | -------- |
-| `xorg` | X Window 系统 |
+| `xorg` | X 窗口系统 |
 | `lxde-meta` | LXDE 桌面环境的元包 |
 | `lightdm` | 轻量级显示管理器 LightDM |
 | `lightdm-gtk-greeter` | LightDM 的 GTK+ 登录界面插件，缺少将无法登录 LightDM |

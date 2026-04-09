@@ -29,7 +29,7 @@ LXQt 是一款轻量级桌面环境，基于 Qt 应用框架开发。
 
 | 包名 | 功能说明 |
 | ---- | -------- |
-| `xorg` | X Window System |
+| `xorg` | X 窗口系统 |
 | `sddm` | 显示管理器 |
 | `lxqt` | LXQt 桌面环境 |
 | `gvfs` | GNOME 虚拟文件系统，LXQt 依赖此组件以打开 Computer 和 Network，否则会提示 `Operation not supported` |

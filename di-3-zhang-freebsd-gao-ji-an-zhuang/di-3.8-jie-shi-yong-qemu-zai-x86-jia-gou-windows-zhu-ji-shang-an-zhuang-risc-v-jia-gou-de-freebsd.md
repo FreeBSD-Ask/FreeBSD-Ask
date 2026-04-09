@@ -136,7 +136,7 @@ cd /d "C:\Program Files\qemu"
 
 输入用户名 `root` 并回车即可登录，默认没有密码。
 
-在 PowerShell 和 CMD 中运行都会产生乱码（例如 `ee` 命令或按 **TAB 键**）。
+在 PowerShell 和 CMD 中运行都会产生乱码（例如 `ee` 命令或按 **Tab 键**）。
 
 但该镜像默认没有为普通用户配置 SSH 服务，因此无法直接通过 SSH 连接 FreeBSD 设备。
 

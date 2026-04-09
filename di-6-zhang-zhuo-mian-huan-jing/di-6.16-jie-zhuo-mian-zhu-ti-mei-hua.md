@@ -48,14 +48,18 @@ FreeBSD 安装桌面环境后，默认采用简单朴素的色调。这种未加
 3. 修改 shebang：编辑 `install.sh` 文件，修改第一行为 `#!/usr/local/bin/bash`，然后保存。
 4. 执行安装：`bash install.sh`
 
-## [图标](https://www.pling.com/p/1405756/)
+## 图标
+
+[图标](https://www.pling.com/p/1405756/)
 
 1. 下载图标：`git clone https://github.com/vinceliuice/WhiteSur-icon-theme`
 2. 进入软件目录：`cd WhiteSur-icon-theme`
 3. 修改 shebang：编辑 `install.sh` 文件，修改第一行为 `#!/usr/local/bin/bash`，然后保存。
 4. 执行安装：`bash install.sh`
 
-## [光标](https://www.pling.com/p/1355701/)
+## 光标
+
+[光标](https://www.pling.com/p/1355701/)
 
 1. 下载光标：`git clone https://github.com/vinceliuice/McMojave-cursors`
 2. 进入软件目录：`cd McMojave-cursors`

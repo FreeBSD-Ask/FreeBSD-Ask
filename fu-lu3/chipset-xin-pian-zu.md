@@ -10,7 +10,7 @@
 
 本小节用于配置系统代理相关参数，包括内存控制器、PCIe 接口等设置。
 
-以下选项可能与 PCH-IO Configuration（平台控制器集线器 I/O 配置）中的部分南桥相关选项存在重叠。因为 System Agent（SA）Configuration（系统代理配置）用于控制由 CPU 直接引出的 PCIe 接口。
+以下选项可能与 PCH-IO Configuration（平台控制器集线器 I/O 配置）中的部分南桥相关选项存在重叠。这是因为 System Agent（SA）Configuration（系统代理配置）用于控制由 CPU 直接引出的 PCIe 接口。
 
 在 Intel CPU 架构中（第二代 Sandy Bridge 及以后），System Agent 是一个集成在 CPU 芯片内部的模块，它作为处理器与系统组件之间的核心互连单元，包含了：
 
@@ -20,7 +20,7 @@
 - 与 Ring Bus 或 Mesh 的接口，实现处理器核心间通信
 - 电源管理逻辑等，优化系统能效
 
-参见博客园. BIOS PCIe 配置里的 LTR Snoop Latency value of SA PCIE[EB/OL]. [2026-03-26]. <https://www.cnblogs.com/wanglouxiaozi/p/18946234>
+参见：博客园. BIOS PCIe 配置里的 LTR Snoop Latency value of SA PCIE[EB/OL]. [2026-03-26]. <https://www.cnblogs.com/wanglouxiaozi/p/18946234>
 
 ![系统代理配置](../.gitbook/assets/image-20250726134119-yow827m.png)
 
@@ -108,7 +108,7 @@ DDR 自刷新。
 
 范围：
 
-[64K-1；512]，单位为 DLCK800s（默认值为 512）
+[64K-1, 512]，单位为 DLCK800s（默认值为 512）
 
 DLCK800s：表示以 DDR 800 MHz 时钟周期（即 1 DLCK800 ≈ 1.25 ns）为单位的时间间隔。
 
@@ -150,7 +150,7 @@ Disabled（禁用）
 
 当设置为 Enabled 时，集成内存控制器在空闲一段时间后可能进入自刷新模式。
 
-参见戴尔科技. PowerEdge: DRAM Refresh and Opportunistic Self-Refresh[EB/OL]. [2026-03-26]. <https://infohub.delltechnologies.com/zh-cn/l/cpu-best-practices-3/poweredge-dram-refresh-and-opportunistic-self-refresh/> DRAM 刷新与机会性自刷新的最佳实践。
+参见：戴尔科技. PowerEdge: DRAM Refresh and Opportunistic Self-Refresh[EB/OL]. [2026-03-26]. <https://infohub.delltechnologies.com/zh-cn/l/cpu-best-practices-3/poweredge-dram-refresh-and-opportunistic-self-refresh/>。DRAM 刷新与机会性自刷新的最佳实践。
 
 允许在不退出低功耗状态（power down）的情况下进行机会性刷新（opportunistic refreshes）
 
@@ -178,7 +178,7 @@ Disabled（禁用）
 
 说明：
 
-Intel® Memory Thermal Management，Intel 内存热效应管理。参见英特尔公司. 12th Generation Intel® Core™ Processors[EB/OL]. [2026-03-26]. <https://edc.intel.com/content/www/tw/zh/design/ipla/software-development-platforms/client/platforms/alder-lake-desktop/12th-generation-intel-core-processors-datasheet-volume-1-of-2/011/intel-memory-thermal-management/> Intel 第 12 代处理器内存热管理的技术规范。一系列控制内存温度的措施。
+Intel® Memory Thermal Management，Intel 内存热效应管理。参见：英特尔公司. 12th Generation Intel® Core™ Processors[EB/OL]. [2026-03-26]. <https://edc.intel.com/content/www/tw/zh/design/ipla/software-development-platforms/client/platforms/alder-lake-desktop/12th-generation-intel-core-processors-datasheet-volume-1-of-2/011/intel-memory-thermal-management/>。Intel 第 12 代处理器内存热管理的技术规范。一系列控制温度的措施。
 
 ##### PECI Injected Temperature（通过 PECI 传入温度）
 
@@ -253,7 +253,7 @@ Disabled（禁用）
 - UEFI BIOS 中的总内存加密设置发生更改
 - UEFI BIOS 更新时内存参考代码（MRC）发生更改
 
-参见检测内存重新训练[EB/OL]. [2026-03-26]. <https://download.lenovo.com/manual/thinkpad_x1_carbon_gen13/user_guide/zh-cn/Detect_memory_retraining.html>
+参见：联想公司. 检测内存重新训练[EB/OL]. [2026-03-26]. <https://download.lenovo.com/manual/thinkpad_x1_carbon_gen13/user_guide/zh-cn/Detect_memory_retraining.html>
 
 ![内存训练算法](../.gitbook/assets/image-20250726153543-6lin7v1.png)
 
@@ -1595,31 +1595,31 @@ Disabled（禁用）
 
 #### Controller 0, Channel 1 Control（控制器 0 通道 1 控制）
 
-同上。
+可用选项及说明同 Controller 0, Channel 0 Control。
 
 #### Controller 0, Channel 2 Control（控制器 0 通道 2 控制）
 
-同上。
+可用选项及说明同 Controller 0, Channel 0 Control。
 
 #### Controller 0, Channel 3 Control（控制器 0 通道 3 控制）
 
-同上。
+可用选项及说明同 Controller 0, Channel 0 Control。
 
 #### Controller 1, Channel 0 Control（控制器 1 通道 0 控制）
 
-同上。
+可用选项及说明同 Controller 0, Channel 0 Control。
 
 #### Controller 1, Channel 1 Control（控制器 1 通道 1 控制）
 
-同上。
+可用选项及说明同 Controller 0, Channel 0 Control。
 
 #### Controller 1, Channel 2 Control（控制器 1 通道 2 控制）
 
-同上。
+可用选项及说明同 Controller 0, Channel 0 Control。
 
 #### Controller 1, Channel 3 Control（控制器 1 通道 3 控制）
 
-同上。
+可用选项及说明同 Controller 0, Channel 0 Control。
 
 #### Force Single Rank（强制单 Rank）
 
@@ -1783,9 +1783,9 @@ Disabled（禁用）
 
 说明：
 
-定期运行占空比校正器（Duty‑Cycle Corrector）
+定期运行占空比校正器（Duty‑Cycle Corrector）。
 
-Periodic DCC 能在运行一段时间后自动重新校准，确保输出时钟占空比保持正确，从而提升稳定性和信号完整性
+Periodic DCC 能在运行一段时间后自动重新校准，确保输出时钟占空比保持正确，从而提升稳定性和信号完整性。
 
 #### LPMode（功能未知）
 
@@ -2287,7 +2287,7 @@ LFP，Low-Voltage Differential Signaling Panel，内置显示器
 
 18 bit（18 位）
 
-24 bit（24 位)
+24 bit（24 位）
 
 说明：
 
@@ -4157,7 +4157,7 @@ Disabled（禁用）
 
 说明：
 
-硬件卸载的音频处理允许在计算机的主 CPU 之外执行主要音频处理任务。简而言之，这是一项使用声卡进行的音频硬件加速功能。音频处理的大部分工作不再交由 CPU 来完成，
+硬件卸载的音频处理允许在计算机的主 CPU 之外执行主要音频处理任务。简而言之，这是一项使用声卡进行的音频硬件加速功能。音频处理的大部分工作不再交由 CPU 来完成，而是由音频硬件进行处理。
 
 参见：Hardware-Offloaded 音频处理[EB/OL]. [2026-03-26]. <https://learn.microsoft.com/zh-cn/windows-hardware/drivers/audio/hardware-offloaded-audio-processing>
 

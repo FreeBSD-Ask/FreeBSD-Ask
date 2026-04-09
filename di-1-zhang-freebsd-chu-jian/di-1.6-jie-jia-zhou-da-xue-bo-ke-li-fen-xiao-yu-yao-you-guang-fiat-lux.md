@@ -2,15 +2,15 @@
 
 加州大学伯克利分校的校训蕴含着深刻的文化与哲学意义，这一校训不仅是学术精神的象征，更承载着技术创新与人文关怀的双重使命。下面，让我们从贝克莱的一首诗开始了解这一校训。
 
->Westward the course of empire takes its way; 帝国一路向西；
+> Westward the course of empire takes its way; 帝国一路向西；
 >
->The four first acts already past. 前四幕已经过去。
+> The four first acts already past. 前四幕已经过去。
 >
->A Fifth shall close the drama with the day; 第五幕将在日落时分结束；
+> A Fifth shall close the drama with the day; 第五幕将在日落时分结束；
 >
->Time's noblest offspring is the last. 时间最崇高的后代是最后一幕。
+> Time's noblest offspring is the last. 时间最崇高的后代是最后一幕。
 >
->BERKELEY G. Verses on the Prospect of Planting Arts and Learning in America[C]//BERKELEY G. A Miscellany, Containing Several Tracts on Various Subjects. London: Printed for J. and R. Tonson, 1752.
+> BERKELEY G. Verses on the Prospect of Planting Arts and Learning in America[C]//BERKELEY G. A Miscellany, Containing Several Tracts on Various Subjects. London: Printed for J. and R. Tonson, 1752.
 
 本文聚焦于加州大学伯克利分校的校训“Fiat Lux”（Let There Be Light，要有光）。“Fiat Lux”亦可意译为“让世界充满光明”。加州大学伯克利分校的许多奖项都以“Fiat Lux”为名。
 

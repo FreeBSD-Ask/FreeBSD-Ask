@@ -1,10 +1,10 @@
 # UEFI/BIOS 概述与警告
 
-本章节主要介绍 UEFI 和 BIOS 的基本概念、区别、警告事项以及技术信息。
+本章介绍 UEFI 和 BIOS 的基本概念、区别、警告事项以及技术信息。
 
 ## 警告与免责声明
 
-本章节包含重要的安全警告和免责声明，请务必仔细阅读。
+本章包含重要的安全警告和免责声明，请务必仔细阅读。
 
 BIOS 默认值通常经过厂商严格测试和优化，可在一般情况下确保系统稳定性和最佳性能。除非熟悉 BIOS 设置，否则请使用默认值，以避免系统损坏或启动失败。应仅在必要时更新或降级 BIOS。
 
@@ -16,19 +16,19 @@ BIOS 界面、选项和设置可能因系统不同而有所差异。
 
 ## 说明
 
-本章节的相关内容可参考华硕. NUC BIOS 概述[EB/OL]. [2026-03-26]. <https://www.asus.com.cn/support/faq/1052524/>，该文档提供了 BIOS 配置的基础说明。
+本章的相关内容可参考华硕. NUC BIOS 概述[EB/OL]. [2026-03-26]. <https://www.asus.com.cn/support/faq/1052524/>，该文档提供了 BIOS 配置的基础说明。
 
 ## 为什么选择 AMI BIOS
 
-本章节介绍 AMI BIOS 的技术特点和市场地位。AMI BIOS 是美国 Megatrends 公司开发的 BIOS 固件，广泛应用于个人计算机和服务器平台。
+本章介绍 AMI BIOS 的技术特点和市场地位。AMI BIOS 是美国安迈科技公司（American Megatrends Inc.，简称 AMI）开发的 BIOS 固件，广泛应用于个人计算机和服务器平台。
 
-根据 AMI 官方网站：美国 Megatrends 公司. The World Runs on AMI[EB/OL]. [2026-03-26]. <https://www.ami.com/about-us/> 的介绍，全球约 70% 的服务器平台采用 AMI 软件。而根据安迈信息科技（昆山）有限公司. 安迈信息科技（昆山）有限公司官网[EB/OL]. [2026-03-26]. <https://www.ami.com.cn/>. 官网介绍，AMI 为 BIOS 业界的公认领导者之一，整体市场占有率超过 65％。两个数据分别统计服务器市场和整体市场，均展示了 AMI 固件在市场中的主导地位。
+据 AMI 官方网站介绍（美国安迈科技公司. The World Runs on AMI[EB/OL]. [2026-03-26]. <https://www.ami.com/about-us/>），全球约 70% 的服务器平台采用 AMI 软件。另据安迈信息科技（昆山）有限公司官网介绍“AMI 为 BIOS 业界公认领导者之一，整体市场占有率超过 65%”两个数据分别统计服务器市场和整体市场，均展示了 AMI 固件在市场中的主导地位。（安迈信息科技（昆山）有限公司官网[EB/OL]. [2026-03-26]. <https://www.ami.com.cn/>）
 
 市场上大部分英特尔迷你主机所使用的 BIOS 均为 AMI BIOS，因此对 AMI BIOS 进行注解具有普遍意义，能够覆盖大多数实际应用场景。
 
 ## 技术信息
 
-本章节列出本注解的适用平台、版本信息以及基本符号说明。
+本章列出本注解的适用平台、版本信息以及基本符号说明。
 
 - 本注解主要面向 Intel x86 平台，对 AMD 平台仅具有一定的参考价值。
 - 此注解主要基于 AMI BIOS 5.27。
@@ -38,7 +38,7 @@ BIOS 界面、选项和设置可能因系统不同而有所差异。
 
 ## BIOS 与 UEFI 简介
 
-本章节介绍 BIOS 和 UEFI 的基本概念、发展历程及主要区别。
+本章介绍 BIOS 和 UEFI 的基本概念、发展历程及主要区别。
 
 BIOS（Basic Input/Output System，基本输入输出系统）是计算机启动时最先执行的固件程序，多采用汇编语言编写以实现硬件直接操作。BIOS 最早出现于 20 世纪 70 年代，其工作流程包括加电自检（POST）、硬件初始化、引导加载等步骤，目的是识别和初始化处理器、内存、硬盘驱动器、光驱以及其他硬件。BIOS 采用实模式运行，地址空间限制在 1 MB 以内。
 
@@ -48,13 +48,13 @@ UEFI（Unified Extensible Firmware Interface，统一可扩展固件接口）是
 
 ## 设置 BIOS 后无法开机怎么办（CMOS 简介）
 
-本章节介绍 CMOS 的基本概念以及在 BIOS 设置错误后如何恢复系统。
+本章介绍 CMOS 的基本概念以及在 BIOS 设置错误后如何恢复系统。
 
 CMOS（Complementary Metal-Oxide-Semiconductor，互补金属氧化物半导体）原指一种由电池供电的芯片，用于存储 BIOS 配置信息（如时间信息、BIOS 密码和硬件设置等）。该芯片采用 CMOS 工艺制造，功耗极低，可由纽扣电池维持数据数月甚至数年。在现代 UEFI 系统中，系统的相关配置信息通常存储在非易失性 RAM（NVRAM）中，但出于习惯，人们仍将这种存储 BIOS/UEFI 设置的非易失性存储称为 CMOS。
 
-清空 CMOS 可清除所有 BIOS 配置参数，恢复出厂默认设置。当 BIOS 设置错误导致系统无法启动时，可通过短接主板上的 CMOS 清除跳线、移除纽扣电池或使用专用按钮来清空 CMOS。具体操作方法因主板型号而异，可参考主板说明书或访问华硕. 主板如何 Clear CMOS[EB/OL]. [2026-03-26]. <https://www.asus.com.cn/support/faq/1040820/>. 获取详细指导。
+清空 CMOS 可清除所有 BIOS 配置参数，恢复出厂默认设置。当 BIOS 设置错误导致系统无法启动时，可通过短接主板上的 CMOS 清除跳线、移除纽扣电池或使用专用按钮来清空 CMOS。具体操作方法因主板型号而异，可参考主板说明书或访问华硕官网（华硕. 主板如何 Clear CMOS[EB/OL]. [2026-03-26]. <https://www.asus.com.cn/support/faq/1040820/>）获取详细指导。
 
-BIOS 是执行硬件初始化的固件程序，而 CMOS 是存储 BIOS 配置参数的硬件芯片。两者功能不同但紧密相关：BIOS 在启动时读取 CMOS 中的配置信息来初始化硬件。更多区别可参考联想. BIOS 和 CMOS 有什么不同？[EB/OL]. [2026-03-26]. <https://iknow.lenovo.com.cn/detail/043962?type=undefined&keyword=BIOS&keyWordId=>.
+BIOS 是执行硬件初始化的固件程序，而 CMOS 是存储 BIOS 配置参数的硬件芯片。两者功能不同但紧密相关：BIOS 在启动时读取 CMOS 中的配置信息来初始化硬件。更多区别可参考联想官网（联想. BIOS 和 CMOS 有什么不同？[EB/OL]. [2026-03-26]. <https://iknow.lenovo.com.cn/detail/043962?type=undefined&amp;keyword=BIOS&amp;keyWordId=>）。
 
 ## 课后习题
 
