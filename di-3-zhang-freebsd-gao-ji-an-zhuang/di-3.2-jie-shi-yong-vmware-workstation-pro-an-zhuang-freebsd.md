@@ -14,9 +14,9 @@ FreeBSD 中文社区. 001-Windows 11 安装 VMware 17[EB/OL]. [2026-04-04]. <htt
 
 > **提示**
 >
->虚拟机也可以使用 FreeBSD 官方构建的 [虚拟机镜像](https://download.freebsd.org/releases/VM-IMAGES/15.0-RELEASE/amd64/Latest/)，该类镜像经过预配置，使用时需要手动扩容，文件系统可选 UFS 与 ZFS。
+> 虚拟机也可以使用 FreeBSD 官方构建的 [虚拟机镜像](https://download.freebsd.org/releases/VM-IMAGES/15.0-RELEASE/amd64/Latest/)，该类镜像经过预配置，使用时需要手动扩容，文件系统可选 UFS 与 ZFS。
 >
->虚拟机一般使用 `FreeBSD-15.0-RELEASE-amd64-disc1.iso` 等类似文件名和后缀的 ISO 光盘镜像，但 `FreeBSD-15.0-RELEASE-amd64-memstick.img` 并非只能用于 U 盘刻录，虚拟机同样可以使用，具体使用方法可参考其他章节。
+> 虚拟机一般使用 `FreeBSD-15.0-RELEASE-amd64-disc1.iso` 等类似文件名和后缀的 ISO 光盘镜像，但 `FreeBSD-15.0-RELEASE-amd64-memstick.img` 并非只能用于 U 盘刻录，虚拟机同样可以使用，具体使用方法可参考其他章节。
 
 ## 配置虚拟机
 
@@ -36,7 +36,7 @@ FreeBSD 中文社区. 001-Windows 11 安装 VMware 17[EB/OL]. [2026-04-04]. <htt
 
 > **技巧**
 >
->在测试环境中，选择其他操作系统类型也能正常启动，但为保持配置一致性并避免潜在兼容性问题，建议选择 FreeBSD。对于低版本的 FreeBSD，虚拟机增强工具没有开源，可能会出现问题。
+> 在测试环境中，选择其他操作系统类型也能正常启动，但为保持配置一致性并避免潜在兼容性问题，建议选择 FreeBSD。对于低版本的 FreeBSD，虚拟机增强工具没有开源，可能会出现问题。
 
 ![VMware 安装 FreeBSD](../.gitbook/assets/vm5.png)
 
@@ -84,15 +84,15 @@ FreeBSD 中文社区. 001-Windows 11 安装 VMware 17[EB/OL]. [2026-04-04]. <htt
 
 > **注意**
 >
->经过测试，桥接模式的虚拟机在与主机传递文件时，网速较慢。
+> 经过测试，桥接模式的虚拟机在与主机传递文件时，网速较慢。
 
 > **技巧**
 >
->如果“还原默认设置”无效，且网络适配器列表异常（例如始终只有单个模式），可尝试根据下图所示手动配置网络。
+> 如果“还原默认设置”无效，且网络适配器列表异常（例如始终只有单个模式），可尝试根据下图所示手动配置网络。
 
 > **警告**
 >
->NAT 模式的“名称”与主机的 `控制面板\网络和 Internet\网络连接` 中的 `VMware Network Adapter VMnet8` 绑定，默认绑定的是 `8`。换言之，NAT 模式的“名称”默认必须指定为下图所示的 `VMnet8`，否则虚拟机将无法联网。
+> NAT 模式的“名称”与主机的 `控制面板\网络和 Internet\网络连接` 中的 `VMware Network Adapter VMnet8` 绑定，默认绑定的是 `8`。换言之，NAT 模式的“名称”默认必须指定为下图所示的 `VMnet8`，否则虚拟机将无法联网。
 >
 >![VMware network on FreeBSD](../.gitbook/assets/VMnat8.png)
 
@@ -124,7 +124,7 @@ FreeBSD 中文社区. 001-Windows 11 安装 VMware 17[EB/OL]. [2026-04-04]. <htt
 
 > **注意**
 >
->如果不需要图形界面支持，可以安装无 X11 依赖的版本（仍然是 Port `emulators/open-vm-tools`）：
+> 如果不需要图形界面支持，可以安装无 X11 依赖的版本（仍然是 Port `emulators/open-vm-tools`）：
 >
 >```sh
 ># pkg install open-vm-tools-nox11
@@ -134,7 +134,7 @@ FreeBSD 中文社区. 001-Windows 11 安装 VMware 17[EB/OL]. [2026-04-04]. <htt
 
 > **注意**
 >
->即使在 Wayland 环境下，也需要安装该驱动。
+> 即使在 Wayland 环境下，也需要安装该驱动。
 
 > **技巧**
 >
@@ -198,7 +198,7 @@ EndSection
 
 > **注意**
 >
->此示例中虚拟机名称显示为“Windows 11”，这是因为该虚拟机被配置为 Windows 11 与 FreeBSD 双系统，属正常情况。
+> 此示例中虚拟机名称显示为“Windows 11”，这是因为该虚拟机被配置为 Windows 11 与 FreeBSD 双系统，属正常情况。
 
 列出当前可用的 VMware 共享文件夹：
 
@@ -235,7 +235,7 @@ fusefs_load="YES"
 
 > **注意**
 >
->请将以下命令中的 `123pan` 替换为在 VMware 中设置的共享文件夹名称。
+> 请将以下命令中的 `123pan` 替换为在 VMware 中设置的共享文件夹名称。
 
 将 VMware 共享目录 `123pan` 挂载到 `/mnt/hgfs`：
 
@@ -302,7 +302,7 @@ Downloads
 
 > **警告**
 >
->博通官网可能发生变动，请以官网最新流程为准。
+> 博通官网可能发生变动，请以官网最新流程为准。
 
 ### 账号与下载说明
 
