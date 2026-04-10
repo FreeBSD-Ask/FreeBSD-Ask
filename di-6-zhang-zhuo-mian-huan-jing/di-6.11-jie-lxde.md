@@ -76,7 +76,7 @@ lightdm_env="LC_MESSAGES=zh_CN.UTF-8"
 
 设置 LightDM 环境变量，可以指定系统消息语言为中文。
 
-此外，还需要编辑 `/etc/login.conf` 文件：找到 `default:\` 这一段，将 `:lang=C.UTF-8` 修改为 `:lang=zh_CN.UTF-8`。最后根据 `/etc/login.conf` 文件生成能力数据库：
+还需要编辑 `/etc/login.conf` 文件：找到 `default:\` 这一段，将 `:lang=C.UTF-8` 修改为 `:lang=zh_CN.UTF-8`。最后根据 `/etc/login.conf` 文件生成能力数据库：
 
 ```sh
 # cap_mkdb /etc/login.conf

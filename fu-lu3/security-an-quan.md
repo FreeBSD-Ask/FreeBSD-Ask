@@ -79,7 +79,7 @@ HDD 密码说明：
 
 ## Secure Boot（安全启动）
 
-本章节用于配置安全启动参数。安全启动共有 4 种模式：Setup Mode、User Mode、Audit Mode 和 Deployed Mode。系统处于用户模式（User Mode）时，才能启用安全启动功能。
+本小节用于配置安全启动参数。安全启动共有 4 种模式：Setup Mode、User Mode、Audit Mode 和 Deployed Mode。系统处于用户模式（User Mode）时，才能启用安全启动功能。
 
 ![安全启动](../.gitbook/assets/image-20250726132029-9m99lei.png)
 

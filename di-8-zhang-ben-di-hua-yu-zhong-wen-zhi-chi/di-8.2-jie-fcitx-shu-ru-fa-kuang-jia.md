@@ -1,6 +1,6 @@
 # 8.2 Fcitx 输入法框架
 
-输入法框架与具体输入法属于两个不同的技术概念，二者不可混淆。输入法的正常运行依赖于输入法框架的支持。这种架构关系在 Windows 系统中同样存在，可参考 Microsoft. TSF 管理器[EB/OL]. [2026-04-04]. <https://learn.microsoft.com/zh-cn/windows/win32/tsf/text-services-framework>. 该文档介绍了 Windows 文本服务框架的架构与接口规范。
+输入法框架与具体输入法是两个不同的技术层次，输入法的运行依赖于框架的支持。这种架构关系在 Windows 系统中同样存在，可参考 Microsoft. TSF 管理器[EB/OL]. [2026-04-04]. <https://learn.microsoft.com/zh-cn/windows/win32/tsf/text-services-framework>. 该文档介绍了 Windows 文本服务框架的架构与接口规范。
 
 fcitx 即“小企鹅输入法”，其英文全称为“A flexible input method framework（一款灵活的输入法框架）”。关于其英文命名的历史渊源，可参见：小企鹅输入法 5. 历史[EB/OL]. [2026-03-26]. <https://fcitx-im.org/wiki/History/zh-cn>。该页面记录了 Fcitx 从创始至今的发展历程。
 

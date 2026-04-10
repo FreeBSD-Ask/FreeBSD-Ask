@@ -35,7 +35,7 @@ FreeBSD 操作系统支持多种音频播放器，本节将介绍几款常用播
 
 ## VLC
 
-VLC（VideoLAN Client，视频局域网客户端）播放器的安装等方法可参见其他相关章节。需要说明的是，FreeBSD 中的 `ffmpeg`（快速多媒体，Fast Forward MPEG）多媒体框架默认构建配置未启用对 libuavs3d（该库提供 AVS2/AVS3 解码支持）的编译支持，本文不再展开相关的重新编译配置方法。
+VLC（VideoLAN Client，视频局域网客户端）播放器的安装等方法可参见其他相关章节。需要说明的是，FreeBSD 中的 `ffmpeg`（快速多媒体，Fast Forward MPEG）多媒体框架默认构建配置未启用对 libuavs3d（该库提供 AVS2/AVS3 解码支持）的编译支持，本节不再展开相关的重新编译配置方法。
 
 经过实际测试，VLC 播放器可以正常播放 AC-4 编码的 m4a 格式音频：
 

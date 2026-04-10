@@ -1,6 +1,6 @@
 # FreeBSD 桌面发行版评述
 
-除了 FreeBSD 本身外，还有诸多基于 FreeBSD 的桌面发行版，它们为用户群体提供了更为友好和易用的桌面体验。
+除了 FreeBSD 本身外，还有诸多基于 FreeBSD 的桌面发行版，它们为用户群体提供了友好和易用的桌面体验。
 
 这些桌面发行版构成了 FreeBSD 技术生态的重要组成部分，满足了不同用户群体的使用需求。
 
@@ -40,7 +40,7 @@ NomadBSD 默认采用 Xfce 桌面。
 
 ![NomadBSD Xfce 桌面](../.gitbook/assets/nomadbsd1.png)
 
-从界面来看，系统似乎支持对默认 Shell 进行自定义配置。
+系统支持对默认 Shell 进行自定义配置。
 
 ![Shell 自定义配置](../.gitbook/assets/nomadbsd2.png)
 
