@@ -232,6 +232,7 @@ Append Key：追加密钥
 注册出厂默认值或从文件加载证书：
 
 1. 公钥证书格式包括：
+
  a）EFI_SIGNATURE_LIST
  b）EFI_CERT_X509（DER 编码）
  c）EFI_CERT_RSA2048（二进制）
