@@ -16,11 +16,15 @@ UNIX 的内涵经历了从具体技术实现到文化象征的演变过程。
 
 查询美国专利商标局 UNIX 商标注册情况。
 
+图 1.1.1 法律上的商标
+
 ![法律上的商标](../.gitbook/assets/usshangbiao.png)
 
 ---
 
 UNIX 操作系统认证查询网址：[The Open Group official register of UNIX Certified Products](http://www.opengroup.org/openbrand/register)。
+
+图 1.1.2 UNIX 认证查询
 
 ![UNIX 认证查询](../.gitbook/assets/unixrenzheng.png)
 
