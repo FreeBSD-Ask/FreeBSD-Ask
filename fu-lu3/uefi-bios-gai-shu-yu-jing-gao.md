@@ -16,7 +16,7 @@ BIOS 界面、选项和设置可能因系统不同而有所差异。
 
 ## 说明
 
-本节的相关内容可参考华硕. NUC BIOS 概述[EB/OL]. [2026-03-26]. &lt;https://www.asus.com.cn/support/faq/1052524/&gt;，该文档提供了 BIOS 配置的基础说明。
+本节的相关内容可参考华硕. NUC BIOS 概述[EB/OL]. [2026-03-26]. <https://www.asus.com.cn/support/faq/1052524/>，该文档提供了 BIOS 配置的基础说明。
 
 ## 为什么选择 AMI BIOS
 
