@@ -6,9 +6,9 @@
 >
 > 只有一级架构的 RELEASE 版本才提供该更新源。也就是说，CURRENT 和 STABLE 不提供该源。关于架构的支持等级说明请参见：FreeBSD Project. Supported Platforms[EB/OL]. [2026-03-26]. <https://www.freebsd.org/platforms>.
 
->**注意**
+> **注意**
 >
->ZFS 相关升级请参见 ZFS 章节。
+> ZFS 相关升级请参见 ZFS 章节。
 
 ## 历史
 
