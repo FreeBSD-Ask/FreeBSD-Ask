@@ -162,7 +162,7 @@ FreeBSD 中文社区未通过其他域名部署本书，唯一官方域名为 `b
 <!-- CHINESE_CHAR_COUNT_END -->
 
 <!-- commit-progress-start -->
-**第 3 版编纂进度:**   （人工提交数: 1433 / 3533）
+**第 3 版编纂进度:** （人工提交数: 1433 / 3533）
 
 ![进度徽章](.gitbook/assets/progress.svg)
 

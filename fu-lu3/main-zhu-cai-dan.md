@@ -84,35 +84,35 @@ Choose the system default language（选择系统默认语言）
 
 - →↑↓←: Select Screen / Item
 
-  →↑↓←：选择页面 / 项目
+ →↑↓←：选择页面 / 项目
 
 - Enter: Select
 
-  Enter：选择
+ Enter：选择
 
 - +/-: Change Opt.
 
-  +/-：更改选项
+ +/-：更改选项
 
 - F1: General Help
 
-  F1：常规帮助
+ F1：常规帮助
 
 - F2: Previous Values
 
-  F2：上一次的值
+ F2：上一次的值
 
 - F3: Optimized Defaults
 
-  F3：加载优化默认值
+ F3：加载优化默认值
 
 - F4: Save & Exit
 
-  F4：保存并退出
+ F4：保存并退出
 
 - ESC: Exit
 
-  ESC：退出
+ ESC：退出
 
 - K/k：对右上角的提示内容向上翻页
 - M/m：对右上角的提示内容向下翻页
