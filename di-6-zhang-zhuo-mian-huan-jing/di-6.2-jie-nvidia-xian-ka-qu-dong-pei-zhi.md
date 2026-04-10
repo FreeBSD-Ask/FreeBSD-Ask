@@ -121,9 +121,13 @@ Mon Jan 19 19:06:59 2026
 
 ![KDE 系统信息](../.gitbook/assets/nvi2.png)
 
+图 6.2-1 展示了 KDE 系统信息界面。
+
 - 使用 MPV 打开电影，可见显存使用量明显上升（从 3 MB 上升至数百兆），也可使用 SMPlayer 观看。
 
 ![MPV 显存使用](../.gitbook/assets/nvi1.jpg)
+
+图 6.2-2 展示了 MPV 显存使用情况。
 
 ## 参考文献
 
@@ -135,6 +139,8 @@ Mon Jan 19 19:06:59 2026
 ### nvidia-smi 命令报错“mismatch”
 
 ![nvidia-smi 报错](../.gitbook/assets/no-version-vo.jpg)
+
+图 6.2-3 展示了 nvidia-smi 报错界面。
 
 执行 nvidia-smi 命令时出现错误提示“API mismatch”等字样。该错误表示 API 不匹配，问题通常源于版本兼容性问题，可能存在以下几种情况：NVIDIA 驱动组件本身版本不匹配、NVIDIA 驱动与其他 NVIDIA 软件包版本不匹配、NVIDIA 驱动与当前 FreeBSD 基本系统版本不匹配。
 

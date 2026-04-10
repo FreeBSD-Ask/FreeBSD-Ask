@@ -76,15 +76,23 @@ exec mate-session
 
 ![FreeBSD 安装 MATE](../.gitbook/assets/mate4.png)
 
+图 6.5-1 展示了 FreeBSD 上安装的 MATE 桌面环境。
+
 IBus 输入法框架测试可用，请参见输入法相关章节进行具体配置。
 
 ## 桌面欣赏
 
 ![FreeBSD 安装 MATE](../.gitbook/assets/cinnamon1.png)
 
+图 6.5-2 展示了 MATE 桌面环境的界面。
+
 ![FreeBSD 安装 MATE](../.gitbook/assets/mate2.png)
 
+图 6.5-3 展示了 MATE 桌面环境的应用菜单。
+
 ![FreeBSD 安装 MATE](../.gitbook/assets/mate3.png)
+
+图 6.5-4 展示了 MATE 桌面环境的系统设置。
 
 ## 故障排除与未竟事宜
 
@@ -126,6 +134,8 @@ show-quit=true
 ```
 
 ![FreeBSD 安装 MATE](../.gitbook/assets/mate1.png)
+
+图 6.5-5 展示了配置后的 slick-greeter 登录界面。
 
 #### 参考文献
 

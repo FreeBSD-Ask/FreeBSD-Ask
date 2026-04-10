@@ -86,13 +86,15 @@ proc /proc procfs rw 0 0
 
 ![cinnamon on FreeBSD](../.gitbook/assets/cinnamon1.png)
 
+图 6.7-1 展示了 FreeBSD 上的 Cinnamon 桌面环境。
+
 ![cinnamon on FreeBSD](../.gitbook/assets/cinnamon2.png)
 
-默认壁纸为黑色，此为正常现象。
+图 6.7-2 展示了 Cinnamon 桌面环境的默认界面（默认壁纸为黑色，此为正常现象）。
 
 ![cinnamon on FreeBSD](../.gitbook/assets/cinnamon3.png)
 
-自定义壁纸。
+图 6.7-3 展示了 Cinnamon 桌面环境的自定义壁纸效果。
 
 ## 附录：Cinnamon：肉桂、桂皮、桂枝、烟桂概念辨析
 

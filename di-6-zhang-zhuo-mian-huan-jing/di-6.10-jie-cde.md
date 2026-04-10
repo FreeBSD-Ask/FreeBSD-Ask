@@ -134,13 +134,19 @@ dtspc		6112/tcp
 
 ![dtlogin](../.gitbook/assets/cde2.png)
 
+图 6.10-1 展示了 CDE 的登录界面。
+
 ![FreeBSD 安装 CDE](../.gitbook/assets/cde4.png)
 
-每次启动时都会在此处停顿数分钟。
+图 6.10-2 展示了 CDE 启动过程（每次启动时会在此处停顿数分钟）。
 
 ![FreeBSD 安装 CDE](../.gitbook/assets/cde1.png)
 
+图 6.10-3 展示了 CDE 桌面环境的主界面。
+
 ![终端](../.gitbook/assets/cde3.png)
+
+图 6.10-4 展示了 CDE 环境中的终端界面。
 
 ## 故障排除与未竟事宜
 

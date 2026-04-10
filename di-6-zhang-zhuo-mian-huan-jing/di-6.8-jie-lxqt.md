@@ -80,9 +80,15 @@ $ echo "exec ck-launch-session startlxqt" > ~/.xinitrc
 
 ![FreeBSD 安装 LXQt](../.gitbook/assets/lxqt1.png)
 
+图 6.8-1 展示了 FreeBSD 上的 LXQt 登录界面。
+
 ![FreeBSD 安装 LXQt](../.gitbook/assets/lxqt2.png)
 
+图 6.8-2 展示了 LXQt 桌面环境的主界面。
+
 ![FreeBSD 安装 LXQt](../.gitbook/assets/lxqt3.png)
+
+图 6.8-3 展示了 LXQt 桌面环境的应用菜单。
 
 ### 为 LXQt 桌面环境设置中文环境
 
@@ -90,7 +96,11 @@ $ echo "exec ck-launch-session startlxqt" > ~/.xinitrc
 
 ![FreeBSD 安装 LXQt](../.gitbook/assets/lxqt4.png)
 
+图 6.8-4 展示了 LXQt 语言设置界面。
+
 ![FreeBSD 安装 LXQt](../.gitbook/assets/lxqt5.png)
+
+图 6.8-5 展示了 LXQt 语言设置完成后的界面。
 
 ## 故障排除与未竟事宜
 
