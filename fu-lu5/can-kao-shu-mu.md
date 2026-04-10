@@ -16,8 +16,8 @@
 
 | 封面/书名 | 作者/译者 | ISBN/出版社 | 说明 |
 | --------- | --------- | ----------- | ---- |
-| ![Unix & Linux 大学教程](../.gitbook/assets/unix3.png) <br><br> 《Unix & Linux 大学教程》 | [美] Harley Hahn 著 <br><br> 张杰良 译 | 978-7-302-20956-0 <br><br> 清华大学出版社 | 命令行操作与 Shell 编程基础教程，涵盖 Unix/Linux 系统的基本命令使用和脚本编写。 |
-| ![UNIX/Linux 系统管理技术手册（第 5 版）](../.gitbook/assets/unix4.png) <br><br> 《UNIX/Linux 系统管理技术手册（第 5 版）》 | [美] Evi Nemeth、Garth Snyder、Trent R. Hein、Ben Whaley、Dan Mackin 等著 <br><br> 门佳 译 | 978-7-115-53276-3 <br><br> 人民邮电出版社 | 系统管理技术手册，涵盖 UNIX/Linux 系统运维的核心技术，包括用户管理、文件系统、网络配置等内容。 |
+| ![Unix & Linux 大学教程](../.gitbook/assets/unix3.png) <br><br> 《Unix & Linux 大学教程》 | [美] Harley Hahn 著 <br><br> 张杰良 译 | 978-7-302-20956-0 <br><br> 清华大学出版社 | 命令行操作与 Shell 编程基础教程，涵盖 Unix/Linux 系统的基本命令使用和脚本编写 |
+| ![UNIX/Linux 系统管理技术手册（第 5 版）](../.gitbook/assets/unix4.png) <br><br> 《UNIX/Linux 系统管理技术手册（第 5 版）》 | [美] Evi Nemeth、Garth Snyder、Trent R. Hein、Ben Whaley、Dan Mackin 等著 <br><br> 门佳 译 | 978-7-115-53276-3 <br><br> 人民邮电出版社 | 系统管理技术手册，涵盖 UNIX/Linux 系统运维的核心技术，包括用户管理、文件系统、网络配置等内容 |
 
 ### UNIX 基础
 
@@ -44,9 +44,9 @@
 
 以下书籍阐述了 UNIX 的设计理念，有助于读者理解其软件工程思想与技术哲学。
 
-| 封面/书名 | 作者/译者 | ISBN/出版社 |
-| --------- | --------- | ----------- |
-| ![UNIX 编程艺术](../.gitbook/assets/s11345267.png) <br><br> 《UNIX 编程艺术》（TAOUP） | [美] Eric Raymond 著 <br><br> 姜宏、何源、蔡晓骏 等译 | 978-7-121-17665-4 <br><br> 电子工业出版社 |
+| 封面/书名 | 作者/译者 | ISBN/出版社 | 说明 |
+| --------- | --------- | ----------- | ---- |
+| ![UNIX 编程艺术](../.gitbook/assets/s11345267.png) <br><br> 《UNIX 编程艺术》（TAOUP） | [美] Eric Raymond 著 <br><br> 姜宏、何源、蔡晓骏 等译 | 978-7-121-17665-4 <br><br> 电子工业出版社 | UNIX 系统设计理念书籍，阐述软件工程思想与技术哲学 |
 
 《UNIX 编程艺术》讲解 UNIX 系统的设计思路与软件工程理论，涵盖类 Unix 系统的设计原则和实践方法。该书聚焦工程实践领域，阐述许多源于特定历史背景的设计原则。
 
@@ -61,9 +61,9 @@
 
 以下是 FreeBSD 内核设计的权威著作，内容深入且专业，为高级研究者提供核心技术参考。
 
-| 封面/书名 | 作者/译者 | ISBN/出版社 |
-| --------- | --------- | ----------- |
-| ![FreeBSD 操作系统设计与实现（原书第二版）](../.gitbook/assets/freebsd2rd.png) <br><br> 《FreeBSD 操作系统设计与实现（原书第 2 版）》 | [美] Marshall McKusick、George Neville-Neil、Robert N.M. Watson 等著 <br><br> 陈向群、郭立峰、叶顺平 等译 | 978-7-111-68997-3 <br><br> 机械工业出版社 |
+| 封面/书名 | 作者/译者 | ISBN/出版社 | 说明 |
+| --------- | --------- | ----------- | ---- |
+| ![FreeBSD 操作系统设计与实现（原书第二版）](../.gitbook/assets/freebsd2rd.png) <br><br> 《FreeBSD 操作系统设计与实现（原书第 2 版）》 | [美] Marshall McKusick、George Neville-Neil、Robert N.M. Watson 等著 <br><br> 陈向群、郭立峰、叶顺平 等译 | 978-7-111-68997-3 <br><br> 机械工业出版社 | FreeBSD 内核设计权威著作，详解现代 FreeBSD 内核架构与实现细节 |
 
 《FreeBSD 操作系统设计与实现（原书第 2 版）》是 FreeBSD 技术体系中的权威学术著作，详解现代 FreeBSD 内核架构与实现细节。
 
