@@ -133,7 +133,7 @@ jobs:
           makeLatest: true
 
       - name: 📝 更新 Release 说明 (包含变更日志)
-        uses: actions/github-script@v8.0.0
+        uses: actions/github-script@v9
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
