@@ -82,15 +82,9 @@ $ echo "/usr/local/etc/xdg/xfce4/xinitrc" > ~/.xsession
 
 ![FreeBSD 安装 Xfce](../.gitbook/assets/xfce1.png)
 
-图 6.6-1 展示了 FreeBSD 上安装的 Xfce 桌面环境。
-
 ![FreeBSD 安装 Xfce](../.gitbook/assets/xfce2.png)
 
-图 6.6-2 展示了 Xfce 桌面环境的应用菜单。
-
 ![FreeBSD 安装 Xfce](../.gitbook/assets/xfce3.png)
-
-图 6.6-3 展示了 Xfce 桌面环境的系统设置。
 
 ## 全局菜单（可选）
 
