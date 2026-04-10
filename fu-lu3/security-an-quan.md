@@ -79,7 +79,7 @@ HDD 密码说明：
 
 ## Secure Boot（安全启动）
 
-本章节用于配置安全启动参数。安全启动共有 4 种模式：Setup Mode、User Mode、Audit Mode 和 Deployed Mode。系统处于用户模式（User Mode）时，才能启用安全启动功能。
+本小节用于配置安全启动参数。安全启动共有 4 种模式：Setup Mode、User Mode、Audit Mode 和 Deployed Mode。系统处于用户模式（User Mode）时，才能启用安全启动功能。
 
 ![安全启动](../.gitbook/assets/image-20250726132029-9m99lei.png)
 
@@ -232,11 +232,12 @@ Append Key：追加密钥
 注册出厂默认值或从文件加载证书：
 
 1. 公钥证书格式包括：
-  a）EFI_SIGNATURE_LIST
-  b）EFI_CERT_X509（DER 编码）
-  c）EFI_CERT_RSA2048（二进制）
-  d）EFI_CERT_SHAxxx
-  
+
+ a）EFI_SIGNATURE_LIST
+ b）EFI_CERT_X509（DER 编码）
+ c）EFI_CERT_RSA2048（二进制）
+ d）EFI_CERT_SHAxxx
+ 
 2. 经过认证的 UEFI 变量
 
 3. EFI PE/COFF 镜像（SHA256），密钥来源：出厂、外部、混合

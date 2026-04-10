@@ -49,7 +49,7 @@ BIOS 信息子页面用于展示 BIOS 固件的详细属性，包括厂商、版
 - ID（编号）: 0xB06E0 - 处理器标识符
 - Stepping（步进）: A0 - 处理器修订版本
 
-步进（Stepping）是处理器制造过程中的版本标识，当制造工艺改进或功能修复时，会创建新的步进代码。Intel 处理器步进通常由“一位字母 + 一位数字”组成，字母越靠后、数字越大，通常表示步进版本越高，处理器相对较新。根据 [英特尔® 处理器 N100](https://www.intel.cn/content/www/cn/zh/products/sku/231803/intel-processor-n100-6m-cache-up-to-3-40-ghz/ordering.html) 的官方资料，其当前步进为“N0”（一般消费者获得的均为该步进）。但上图 BIOS 显示该 N100 处理器的步进为“A0”，这通常表明其为工程样片。
+步进（Stepping）是处理器制造过程中的版本标识，当制造工艺改进或功能修复时，会创建新的步进代码。Intel 处理器步进通常由“一位字母 + 一位数字”组成，字母越靠后、数字越大，通常表示步进版本越高，处理器相对较新。根据 [英特尔® 处理器 N100](https://www.intel.cn/content/www/cn/zh/products/sku/231803/intel-processor-n100-6m-cache-up-to-3-40-ghz/ordering.html) 的官方资料，其当前步进为“N0”（一般消费者获得的均为该步进）。但该图 BIOS 显示该 N100 处理器的步进为“A0”，这通常表明其为工程样片。
 
 参考文献：
 
@@ -84,35 +84,35 @@ Choose the system default language（选择系统默认语言）
 
 - →↑↓←: Select Screen / Item
 
-  →↑↓←：选择页面 / 项目
+ →↑↓←：选择页面 / 项目
 
 - Enter: Select
 
-  Enter：选择
+ Enter：选择
 
 - +/-: Change Opt.
 
-  +/-：更改选项
+ +/-：更改选项
 
 - F1: General Help
 
-  F1：常规帮助
+ F1：常规帮助
 
 - F2: Previous Values
 
-  F2：上一次的值
+ F2：上一次的值
 
 - F3: Optimized Defaults
 
-  F3：加载优化默认值
+ F3：加载优化默认值
 
 - F4: Save & Exit
 
-  F4：保存并退出
+ F4：保存并退出
 
 - ESC: Exit
 
-  ESC：退出
+ ESC：退出
 
 - K/k：对右上角的提示内容向上翻页
 - M/m：对右上角的提示内容向下翻页

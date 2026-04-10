@@ -29,7 +29,7 @@
 # fetch https://dldir1v6.qq.com/weixin/Universal/Linux/WeChatLinux_x86_64.rpm
 ```
 
-写作本文时链接如此，请自行获取最新的微信下载链接。
+写作本节时链接如此，请自行获取最新的微信下载链接。
 
 ### 安装微信
 
