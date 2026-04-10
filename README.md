@@ -58,7 +58,7 @@ EPUB 格式文档在移动端可使用 [微信读书](https://play.google.com/st
 
 - <https://book.bsdcn.org>
 - <https://docs.bsdcn.org>
-- <https://doc.bsdcn.org>
+- <https://doc.bsdcn.org>（境内访问速度较佳）
 
 FreeBSD 中文社区未通过其他域名部署本书，唯一官方域名为 `bsdcn.org`。
 
