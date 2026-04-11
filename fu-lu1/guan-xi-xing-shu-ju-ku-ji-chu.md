@@ -78,8 +78,8 @@ default character set utf8mb4;
 
 SQL 数据类型定义了表中列可以存储的数据种类和格式。正确选择数据类型对于数据存储效率和查询性能至关重要。
 
-- `tinyint` (1B)、`smallint` (2B)、`mediumint` (3B)、`int` (4B)、`bigint` (8B)
-- `float` (4B)、`double` (8B)、`decimal(整体位数, 小数点后位数)`
+- `tinyint`（1B）、`smallint`（2B）、`mediumint`（3B）、`int`（4B）、`bigint`（8B）
+- `float`（4B）、`double`（8B）、`decimal(整体位数, 小数点后位数)`
 - `char` 是字符类型，若要存储字符串需使用 `char(字符数)`
 - `unsigned + 数据类型` 可设置为无符号的数据类型
 
