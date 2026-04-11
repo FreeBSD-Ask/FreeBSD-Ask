@@ -194,13 +194,13 @@ root 密码设置完成。
 
 ![登录 DragonFly BSD 系统](../.gitbook/assets/dragonflybsd40.png)
 
-输入用户名 `root`，输入设置的密码，回车即可登录。首次登录后，建议创建普通用户用于日常操作，以提高安全性。
+输入用户名 `root` 及设置的密码，回车即可登录。首次登录后，建议创建普通用户用于日常操作，以提高系统安全性。
 
 ![登录 DragonFly BSD 系统](../.gitbook/assets/dragonflybsd41.png)
 
 ### 故障排除与未竟事宜
 
-在安装和使用 DragonFly BSD 的过程中，可能会遇到问题。以下是已知的问题和注意事项。
+在安装和使用 DragonFly BSD 的过程中，可能会遇到各类问题。以下列出已知问题和注意事项：
 
 - 配置似乎未成功，未输入密码就登录了 root 账户。
 - VMware 17 安装失败，无论是否使用 UEFI。
