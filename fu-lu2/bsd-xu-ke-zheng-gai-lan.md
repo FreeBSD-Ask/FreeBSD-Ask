@@ -91,7 +91,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 ## BSD 三条款许可证（The 3-Clause BSD License，BSD-3-Clause）
 
-BSD 三条款许可证在两条款的基础上增加了对使用作者名义推广的限制。BSD 三条款许可证亦称为新 BSD 许可证、修改版 BSD 许可证。此许可证删除了原始 BSD 许可证（即 BSD-4-Clause）中的广告条款，并额外限制以作者名义推广衍生产品。
+BSD 三条款许可证在两条款的基础上增加了对使用作者名义推广的限制。BSD 三条款许可证亦称为新 BSD 许可证或修改版 BSD 许可证。此许可证删除了原始 BSD 许可证（即 BSD-4-Clause）中的广告条款，并额外限制以作者名义推广衍生产品。
 
 ```text
 Copyright <年份> <版权持有者>
@@ -123,7 +123,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 ## BSD 四条款许可证（BSD 4-Clause “Original” or “Old” License，BSD-4-Clause）
 
-BSD 四条款许可证是 BSD 许可证的原始版本，具有较多的限制条件。BSD 四条款许可证即原始的 BSD 许可证，目前不被 OSI 认可。此许可证带有广告条款，要求在所有提及本软件功能或用途的广告材料中声明使用了原作者的产品（参见下文第 3 条）。
+BSD 四条款许可证是 BSD 许可证的原始版本，具有较多限制条件。BSD 四条款许可证即原始的 BSD 许可证，目前不被 OSI 认可。此许可证带有广告条款，要求在所有提及本软件功能或用途的广告材料中声明使用了原作者的产品（参见下文第 3 条）。
 
 ```text
 Copyright (c) <年份> <持有者>. All rights reserved.

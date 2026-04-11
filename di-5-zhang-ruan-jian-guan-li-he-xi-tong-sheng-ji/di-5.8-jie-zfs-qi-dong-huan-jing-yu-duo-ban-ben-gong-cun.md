@@ -617,7 +617,7 @@ https://mirrors.163.com/freebsd-pkg/
 
 ## 参考文献
 
-本章介绍的内容涉及多个技术点，下面列出了一些相关的参考资料，供有兴趣的读者进一步学习。
+本节介绍的内容涉及多个技术点，下面列出了一些相关的参考资料，供有兴趣的读者进一步学习。
 
 - vermaden. ZFS Boot Environments Explained[EB/OL]. [2026-03-25]. <https://vermaden.wordpress.com/2025/11/25/zfs-boot-environments-explained/>. 详细阐释 ZFS 启动环境的原理与实践，包含跨版本 ZFS 池兼容方案
 - FreeBSD Project. BootEnvironments[EB/OL]. [2026-03-25]. <https://wiki.freebsd.org/BootEnvironments>. FreeBSD 官方关于启动环境的 Wiki
