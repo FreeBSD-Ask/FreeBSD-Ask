@@ -264,7 +264,7 @@ export LC_CTYPE="zh_CN.UTF-8"   # 设置字符类型本地化为中文 UTF-8
 
 ### Intel i915kms 显卡驱动
 
-DragonFly BSD 对 Intel 显卡有特定的支持要求。[根据硬件说明](https://www.dragonflybsd.org/docs/supportedhardware)，DragonFly BSD 6.4 显卡只支持到英特尔第八代（Coffeelake）处理器。
+DragonFly BSD 对 Intel 显卡有特定支持要求。[根据硬件说明](https://www.dragonflybsd.org/docs/supportedhardware)，DragonFly BSD 6.4 显卡仅支持到英特尔第八代（Coffeelake）处理器。
 
 ## 参考文献
 
