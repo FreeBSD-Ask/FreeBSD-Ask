@@ -14,9 +14,9 @@ FreeBSD 中文社区. 001-Windows 11 安装 VMware 17[EB/OL]. [2026-04-04]. <htt
 
 > **提示**
 >
->虚拟机也可以使用 FreeBSD 官方构建的 [虚拟机镜像](https://download.freebsd.org/releases/VM-IMAGES/15.0-RELEASE/amd64/Latest/)，该类镜像经过预配置，使用时需要手动扩容，文件系统可选 UFS 与 ZFS。
+> 虚拟机也可以使用 FreeBSD 官方构建的 [虚拟机镜像](https://download.freebsd.org/releases/VM-IMAGES/15.0-RELEASE/amd64/Latest/)，该类镜像经过预配置，使用时需要手动扩容，文件系统可选 UFS 与 ZFS。
 >
->虚拟机一般使用 `FreeBSD-15.0-RELEASE-amd64-disc1.iso` 等类似文件名和后缀的 ISO 光盘镜像，但 `FreeBSD-15.0-RELEASE-amd64-memstick.img` 并非只能用于 U 盘刻录，虚拟机同样可以使用，具体使用方法可参考其他章节。
+> 虚拟机一般使用 `FreeBSD-15.0-RELEASE-amd64-disc1.iso` 等类似文件名和后缀的 ISO 光盘镜像，但 `FreeBSD-15.0-RELEASE-amd64-memstick.img` 并非只能用于 U 盘刻录，虚拟机同样可以使用，具体使用方法可参考其他章节。
 
 ## 配置虚拟机
 
@@ -36,7 +36,7 @@ FreeBSD 中文社区. 001-Windows 11 安装 VMware 17[EB/OL]. [2026-04-04]. <htt
 
 > **技巧**
 >
->在测试环境中，选择其他操作系统类型也能正常启动，但为保持配置一致性并避免潜在兼容性问题，建议选择 FreeBSD。对于低版本的 FreeBSD，虚拟机增强工具没有开源，可能会出现问题。
+> 在测试环境中，选择其他操作系统类型也能正常启动，但为保持配置一致性并避免潜在兼容性问题，建议选择 FreeBSD。对于低版本的 FreeBSD，虚拟机增强工具没有开源，可能会出现问题。
 
 ![VMware 安装 FreeBSD](../.gitbook/assets/vm5.png)
 
@@ -84,15 +84,15 @@ FreeBSD 中文社区. 001-Windows 11 安装 VMware 17[EB/OL]. [2026-04-04]. <htt
 
 > **注意**
 >
->经过测试，桥接模式的虚拟机在与主机传递文件时，网速较慢。
+> 经过测试，桥接模式的虚拟机在与主机传递文件时，网速较慢。
 
 > **技巧**
 >
->如果“还原默认设置”无效，且网络适配器列表异常（例如始终只有单个模式），可尝试根据下图所示手动配置网络。
+> 如果“还原默认设置”无效，且网络适配器列表异常（例如始终只有单个模式），可尝试根据下图所示手动配置网络。
 
 > **警告**
 >
->NAT 模式的“名称”与主机的 `控制面板\网络和 Internet\网络连接` 中的 `VMware Network Adapter VMnet8` 绑定，默认绑定的是 `8`。换言之，NAT 模式的“名称”默认必须指定为下图所示的 `VMnet8`，否则虚拟机将无法联网。
+> NAT 模式的“名称”与主机的 `控制面板\网络和 Internet\网络连接` 中的 `VMware Network Adapter VMnet8` 绑定，默认绑定的是 `8`。换言之，NAT 模式的“名称”默认必须指定为下图所示的 `VMnet8`，否则虚拟机将无法联网。
 >
 >![VMware network on FreeBSD](../.gitbook/assets/VMnat8.png)
 
@@ -124,7 +124,7 @@ FreeBSD 中文社区. 001-Windows 11 安装 VMware 17[EB/OL]. [2026-04-04]. <htt
 
 > **注意**
 >
->如果不需要图形界面支持，可以安装无 X11 依赖的版本（仍然是 Port `emulators/open-vm-tools`）：
+> 如果不需要图形界面支持，可以安装无 X11 依赖的版本（仍然是 Port `emulators/open-vm-tools`）：
 >
 >```sh
 ># pkg install open-vm-tools-nox11
@@ -134,7 +134,7 @@ FreeBSD 中文社区. 001-Windows 11 安装 VMware 17[EB/OL]. [2026-04-04]. <htt
 
 > **注意**
 >
->即使在 Wayland 环境下，也需要安装该驱动。
+> 即使在 Wayland 环境下，也需要安装该驱动。
 
 > **技巧**
 >
@@ -198,7 +198,7 @@ EndSection
 
 > **注意**
 >
->此示例中虚拟机名称显示为“Windows 11”，这是因为该虚拟机被配置为 Windows 11 与 FreeBSD 双系统，属正常情况。
+> 此示例中虚拟机名称显示为“Windows 11”，这是因为该虚拟机被配置为 Windows 11 与 FreeBSD 双系统，属正常情况。
 
 列出当前可用的 VMware 共享文件夹：
 
@@ -235,7 +235,7 @@ fusefs_load="YES"
 
 > **注意**
 >
->请将以下命令中的 `123pan` 替换为在 VMware 中设置的共享文件夹名称。
+> 请将以下命令中的 `123pan` 替换为在 VMware 中设置的共享文件夹名称。
 
 将 VMware 共享目录 `123pan` 挂载到 `/mnt/hgfs`：
 
@@ -302,7 +302,7 @@ Downloads
 
 > **警告**
 >
->博通官网可能发生变动，请以官网最新流程为准。
+> 博通官网可能发生变动，请以官网最新流程为准。
 
 ### 账号与下载说明
 
@@ -316,28 +316,28 @@ VMware 已被博通（Broadcom）收购。从官方下载 VMware 相关产品需
 >
 >- 点击右上角的“Register”（注册）（或者直接打开 <https://profile.broadcom.com/web/registration>）
 >>
->>在页面“Email Address”（电子邮件）处输入电子邮箱。若没有电子邮箱，可以用 QQ 号，然后在 QQ 号后面加上 `@qq.com` 即可。如 QQ 号是 `1212111111`，那么 QQ 邮箱则为 `1212111111@qq.com`。
+>> 在页面“Email Address”（电子邮件）处输入电子邮箱。若没有电子邮箱，可以用 QQ 号，然后在 QQ 号后面加上 `@qq.com` 即可。如 QQ 号是 `1212111111`，那么 QQ 邮箱则为 `1212111111@qq.com`。
 >>
->>在页面“Enter text from image”（输入图片上的文本）处输入图片上的文本信息（实际上是验证码）。如果看不清或不认识，可以点 `Enter text from image` 右侧的 🔁
->>点击“Next”（继续）
+>> 在页面“Enter text from image”（输入图片上的文本）处输入图片上的文本信息（实际上是验证码）。如果看不清或不认识，可以点 `Enter text from image` 右侧的 🔁
+>> 点击“Next”（继续）
 >>
->>如果使用的是 QQ 号生成的邮箱，请打开 <https://wx.mail.qq.com/>。其他邮箱请在各自网站打开，如果不知道，请使用 QQ 邮箱。
+>> 如果使用的是 QQ 号生成的邮箱，请打开 <https://wx.mail.qq.com/>。其他邮箱请在各自网站打开，如果不知道，请使用 QQ 邮箱。
 >
 >![注册](../.gitbook/assets/Register2.png)
 >
->- 将第五步得到的“Verification Code: 972980”，中的 972980（请根据实际填写）填入“Enter text from image”中。
+> - 将第五步得到的“Verification Code: 972980”，中的 972980（请根据实际填写）填入“Enter text from image”中。
 >
 >![邮箱验证码](../.gitbook/assets/mail.png)
 >
->- 点击“Verify & Continue”（确认并继续）
+> - 点击“Verify & Continue”（确认并继续）
 >
 >![输入邮箱验证码](../.gitbook/assets/Verify.png)
 >
->- 完成注册
+> - 完成注册
 >
 >![完成注册](../.gitbook/assets/comreg.png)
 >
->- 结束注册流程
+> - 结束注册流程
 >
 >![结束注册](../.gitbook/assets/dolater.png)
 
@@ -345,25 +345,25 @@ VMware 已被博通（Broadcom）收购。从官方下载 VMware 相关产品需
 
 > **博通（Broadcom）账号登录流程**
 >
->- 打开 <https://support.broadcom.com/>
+> - 打开 <https://support.broadcom.com/>
 >>
->>点击右上角的“Login”（登录）（或者直接打开 <https://support.broadcom.com/c/portal/login>）
+>> 点击右上角的“Login”（登录）（或者直接打开 <https://support.broadcom.com/c/portal/login>）
 >
 >![登录](../.gitbook/assets/loginbcm.png)
 >
->- Username（用户名）就是注册时候的邮箱。然后点“Next”（下一步）
+> - Username（用户名）就是注册时候的邮箱。然后点“Next”（下一步）
 >
 >![登录](../.gitbook/assets/loginbcm2.png)
 >
->- 点击下一步
+> - 点击下一步
 >
 >![点击下一步](../.gitbook/assets/loginbcm3.png)
 >
->- 点击登录
+> - 点击登录
 >
 >![点击登录](../.gitbook/assets/loginbcm4.png)
 >
->- 登录完成
+> - 登录完成
 >
 >![登录后界面](../.gitbook/assets/afterlogin.png)
 
@@ -371,19 +371,19 @@ VMware 已被博通（Broadcom）收购。从官方下载 VMware 相关产品需
 
 > **VMware Workstation Pro 下载流程**
 >
->- 点击右上角对应图标（名字左侧第一个），选择“VMware Cloud Foundation”（VMware 云计算基础架构）
+> - 点击右上角对应图标（名字左侧第一个），选择“VMware Cloud Foundation”（VMware 云计算基础架构）
 >
 >![VMware 云计算基础架构](../.gitbook/assets/downbcm1.png)
 >
->- 点击右侧的“My Downloads”（我的下载）
+> - 点击右侧的“My Downloads”（我的下载）
 >
 >![我的下载](../.gitbook/assets/downbcm0.png)
 >
->- 往下翻，点击“VMware Workstation Pro“
+> - 往下翻，点击“VMware Workstation Pro“
 >
 >![点击“VMware Workstation Pro“](../.gitbook/assets/downbcm2.png)
 >
->- 点击“Release”（发行版），选择最顶部的那个，所见可能不同。
+> - 点击“Release”（发行版），选择最顶部的那个，所见可能不同。
 >
 >![点击“Release”（发行版）](../.gitbook/assets/downbcm3.png)
 >
@@ -391,15 +391,15 @@ VMware 已被博通（Broadcom）收购。从官方下载 VMware 相关产品需
 >
 >![下载主页](../.gitbook/assets/downbcm4.png)
 >
->- 将红色的 `*` 项目填写完成。
+> - 将红色的 `*` 项目填写完成。
 >
 >![补充信息](../.gitbook/assets/downbcm5.png)
 >
->- 勾选“I agree to Terms and Conditions”（我同意条款及条件）左侧的方框 ⬜，让它变成 🟦。（必须先点击“Terms and Conditions”弹窗新页面，再回来就能勾选了）
+> - 勾选“I agree to Terms and Conditions”（我同意条款及条件）左侧的方框 ⬜，让它变成 🟦。（必须先点击“Terms and Conditions”弹窗新页面，再回来就能勾选了）
 >
 >![同意许可协议](../.gitbook/assets/downbcm6.png)
 >
->- 点击右侧箭头的云朵图片 ☁️ 即可下载
+> - 点击右侧箭头的云朵图片 ☁️ 即可下载
 >
 >![下载](../.gitbook/assets/downbcm7.png)
 

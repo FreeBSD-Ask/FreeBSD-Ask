@@ -2,7 +2,7 @@
 
 ## 文献来源与基础架构
 
-本书初版架构基于 Smile_Zheng. 操作系统笔记[EB/OL]. 百度贴吧. [2026-04-04]. <https://tieba.baidu.com/p/7424071955>. 主要引用了防火墙章节、用户与权限章节。原笔记主要转引了《FreeBSD 技术内幕》（Tiemann B, Urban M. FreeBSD技术内幕(FreeBSD Unleashed)[M]. 智慧东方工作室, 译. 北京: 机械工业出版社, 2002.），以及参考了 [🎀🌸 星不萌 🌸🎀](https://tieba.baidu.com/home/main?un=%E6%98%9F%E5%85%89Re) 的博客文章。
+本书初版架构基于 Smile_Zheng. 操作系统笔记[EB/OL]. 百度贴吧. [2026-04-04]. <https://tieba.baidu.com/p/7424071955>. 主要引用了防火墙章节、用户与权限章节。原笔记主要转引了《FreeBSD 技术内幕》（Tiemann B, Urban M. FreeBSD 技术内幕(FreeBSD Unleashed)[M]. 智慧东方工作室, 译. 北京: 机械工业出版社, 2002.），以及参考了 [🎀🌸 星不萌 🌸🎀](https://tieba.baidu.com/home/main?un=%E6%98%9F%E5%85%89Re) 的博客文章。
 
 ## 致歉
 
@@ -14,7 +14,7 @@
 
 [超平和 Busters](https://github.com/banbo96)（QQ 昵称/微信名）对本社区及文档，以及 QQ 群、微信公众号、微信群发挥了重要的管理作用，并创建和维护过本社区的多个关联账号。
 
-本项目早期发起人为 [clean-master 清理大师](https://github.com/clean-master)。他自费创建了域名 `freebsdcn.org`（现已不再使用）并创建了目前仍在维护的主页 <https://bsdcn.org>。他鼓励 ykla 创建一个项目来维护相关的 FreeBSD 教程。
+本项目早期发起人为 [clean-master 清理大师](https://github.com/clean-master)。他自费创建了域名 `freebsdcn.org`（现已不再使用），并创建了目前仍在维护的主页 <https://bsdcn.org>。他鼓励 ykla 创建一个项目来维护相关的 FreeBSD 教程。
 
 [Roberta Wheeler](https://github.com/rowheel) 曾自费部署并维护本项目的服务器（现已切换至 GitBook 及 GitHub Pages 免费服务），并撰写了部分文章。
 

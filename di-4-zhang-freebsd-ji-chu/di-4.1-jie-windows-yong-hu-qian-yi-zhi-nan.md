@@ -208,7 +208,7 @@ Windows 会直接读取 RTC 的结果，并将其视为本地时间，即 Local 
 
 以下书籍可供读者进一步研究 Windows 操作系统设计与实现：
 
-- RUSSINOVICH M, SOLOMON D, IONESCU A, 等. 深入解析 Windows 操作系统：第 7 版. 卷 1[M]. 刘晖, 译. 北京:人民邮电出版社,2021. ISBN: 978-7-115-55694-3. 微软官方教材，具有权威性，系统阐述 Windows 内核架构
+- RUSSINOVICH M, SOLOMON D, IONESCU A, 等. 深入解析 Windows 操作系统：第 7 版. 卷 1[M]. 刘晖, 译. 北京:人民邮电出版社, 2021. ISBN: 978-7-115-55694-3. 微软官方教材，具有权威性，系统阐述 Windows 内核架构
 - RUSSINOVICH M, SOLOMON D, IONESCU A, 等. 深入解析 Windows 操作系统：第 7 版. 卷 2[M]. 刘晖, 译. 北京:人民邮电出版社, 2024. ISBN: 978-7-115-61974-7. 微软官方教材，具有权威性，详解 Windows 系统组件
 
 ### 天文历法
