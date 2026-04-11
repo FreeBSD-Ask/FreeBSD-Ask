@@ -278,7 +278,7 @@ FreeBSD-ports: { enabled: no }
 
 #### 中国科学技术大学开源软件镜像站
 
-编辑 `/usr/local/etc/pkg/repos/USTC.conf`，写入以下配置之一：
+编辑 `/usr/local/etc/pkg/repos/USTC.conf` 文件，写入以下配置之一：
 
 - quarterly 分支：
 
