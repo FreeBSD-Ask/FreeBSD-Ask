@@ -208,7 +208,7 @@ After verifying those files, restart the system.
 # mkdir -p /mnt/upgrade/usr/local/etc/pkg/repos/  # 创建 pkgbase 软件源目录
 ```
 
-- 编辑 `/mnt/upgrade/usr/local/etc/pkg/repos/FreeBSD-base.conf`，添加 pkgbase 源
+- 编辑 `/mnt/upgrade/usr/local/etc/pkg/repos/FreeBSD-base.conf` 文件，添加 pkgbase 源
 
 ```ini
 FreeBSD-base {
