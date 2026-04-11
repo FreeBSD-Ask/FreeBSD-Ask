@@ -1,6 +1,6 @@
 # 参考书目
 
-本附录为 FreeBSD 学习者与研究者提供系统性的文献参考框架。
+本附录为 FreeBSD 学习者与研究者提供系统性的文献参考框架，涵盖命令行基础、UNIX 内核原理、FreeBSD 技术体系及网络协议等多个领域的核心著作。
 
 部分书籍可通过中文数字阅读平台获取，包括 [微信读书](https://weread.qq.com/)、[QQ 阅读](https://book.qq.com/)、[京东读书](https://cread.jd.com/custom/custom_pcDownload.action) 等。这些平台提供技术类书籍的数字版本，便于读者在线阅读。
 
