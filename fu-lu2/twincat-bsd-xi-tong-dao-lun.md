@@ -212,7 +212,7 @@ $ doas pkg update && doas pkg upgrade
 
 ## 安装 Beckhoff 开发工具包
 
-如果需要进行开发工作，可以安装 Beckhoff 提供的开发工具包。使用 doas 安装操作系统通用用户空间开发工具包：
+如果需要进行开发工作，可安装 Beckhoff 提供的开发工具包。使用 doas 安装操作系统通用用户空间开发工具包：
 
 ```sh
 $ doas pkg install os-generic-userland-devtools
@@ -222,7 +222,7 @@ $ doas pkg install os-generic-userland-devtools
 
 ## 启用 FreeBSD 源
 
-TwinCAT/BSD 默认只提供 Beckhoff 维护的软件包。如果需要使用更多 FreeBSD 官方维护的软件包，可以手动启用相关源。
+TwinCAT/BSD 默认仅提供 Beckhoff 维护的软件包。如果需要使用更多 FreeBSD 官方维护的软件包，可手动启用相关源。
 
 ```sh
 /usr/local/
