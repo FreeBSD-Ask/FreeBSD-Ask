@@ -208,7 +208,7 @@ root 密码设置完成。
 
 ## 配置 DragonFly BSD
 
-完成系统安装后，需要对 DragonFly BSD 进行一些基本的系统配置。下面介绍 DragonFly BSD 的系统配置方法。
+完成系统安装后，需对 DragonFly BSD 进行基本系统配置。以下介绍配置方法：
 
 ### 网络
 
