@@ -54,7 +54,7 @@ Device              Size     Used    Avail Capacity
 
 可以看到交换分区的大小是所设定的 208 GB（其中 200 GB 预留给 Windows 操作系统）。
 
-编辑 `/etc/fstab`，在 swap 对应行的行首添加 `#` 字符将其注释，本例中该行是第三行，这样可以避免系统在启动时不挂载这个大的交换分区，为后续安装 Windows 作准备：
+编辑 `/etc/fstab` 文件，在 swap 对应行的行首添加 `#` 字符将其注释，本例中该行是第三行，这样可以避免系统在启动时不挂载这个大的交换分区，为后续安装 Windows 作准备：
 
 ```sh
 # Device                Mountpoint      FStype  Options         Dump    Pass#
@@ -123,7 +123,7 @@ Windows 安装完成后，需要为 FreeBSD 还原交换分区。分配了 208 G
 
 没有报错，也没有任何提示，说明正常，系统已经可以正常识别并使用这个新的交换分区。
 
-编辑 `/etc/fstab`，在 swap 一行最前面删去注释符号 `#`，并将分区改为正确的值，在本例中如下第三行：
+编辑 `/etc/fstab` 文件，在 swap 一行最前面删去注释符号 `#`，并将分区改为正确的值，在本例中如下第三行：
 
 ```sh
 # Device                Mountpoint      FStype  Options         Dump    Pass#

@@ -343,7 +343,7 @@ To update the provides database run `pkg provides -u`.
     └── pkg/ # pkg 插件目录
 ```
 
-- 编辑 `/usr/local/etc/pkg.conf`，找到空行，写入：
+- 编辑 `/usr/local/etc/pkg.conf` 文件，找到空行，写入：
 
 ```ini
 PKG_PLUGINS_DIR = "/usr/local/lib/pkg/";

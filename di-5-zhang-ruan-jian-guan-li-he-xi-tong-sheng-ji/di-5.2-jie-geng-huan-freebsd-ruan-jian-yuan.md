@@ -122,7 +122,7 @@ quarterly 分支类似于 Debian 的 Stable 版本，通过固定软件包版本
 >
 >如果提示文件不存在或打开后内容并非 `FreeBSD-base: { enabled: yes }`，则本小节不适用。请按下文内容手动配置。
 
-清空 `FreeBSD.conf` 中原有内容 `FreeBSD-base: { enabled: yes }`。
+清空 `FreeBSD.conf` 文件中原有内容 `FreeBSD-base: { enabled: yes }`。
 
 写入以下内容：
 
@@ -278,7 +278,7 @@ FreeBSD-ports: { enabled: no }
 
 #### 中国科学技术大学开源软件镜像站
 
-编辑 `/usr/local/etc/pkg/repos/USTC.conf`，写入以下配置之一：
+编辑 `/usr/local/etc/pkg/repos/USTC.conf` 文件，写入以下配置之一：
 
 - quarterly 分支：
 
