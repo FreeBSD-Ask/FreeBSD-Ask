@@ -245,7 +245,7 @@ bind = $mainMod, R, exec, wofi --show drun # 软件启动器，类似菜单
 bind = $mainMod, P, pseudo, # 允许焦点窗口（光标所在窗口）在平铺窗口原占区域内自由调节大小和位置
 bind = $mainMod, J, togglesplit, # 调整焦点窗口与相邻窗口的排列方向，可在上下或左右排列之间切换
 ### 截图
-$screen_file=${HOME}/screen_shot_$(date + "%Y-%m-%d_%H-%M-%S").png
+$screen_file=${HOME}/screen_shot_$(date +"%Y-%m-%d_%H-%M-%S").png
 bind=$shiftMod, S, exec, grim -g "$(slurp)" - | wl-copy
 bind=, Print,      exec, grim $screen_file
 bind=$shift, Print,exec, grim -g "$(slurp)" $screen_file
