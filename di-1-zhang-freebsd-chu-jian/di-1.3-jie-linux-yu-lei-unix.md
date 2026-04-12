@@ -75,7 +75,7 @@ Linux 的全称为 GNU/Linux。
 具体地：
 
 - GNU/Linux 发行版 = Ubuntu、RHEL、Deepin、openSUSE……
-  - Ubuntu = Linux kernel + apt/dpkg + Gnome（默认桌面环境）
+  - Ubuntu = Linux kernel + apt/dpkg + GNOME（默认桌面环境）
   - openSUSE = Linux kernel + libzypp/rpm（包管理器后端，支持 RPM 格式）+ KDE（默认桌面环境之一）
 
 > **思考题**
