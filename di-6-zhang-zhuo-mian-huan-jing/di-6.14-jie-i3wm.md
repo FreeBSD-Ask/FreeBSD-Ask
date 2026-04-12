@@ -15,8 +15,11 @@ i3wm 是一款轻量级平铺式窗口管理器，注重操作效率与键盘驱
 - 或者使用 Ports 安装：
 
 ```sh
-# cd /usr/ports/x11/xorg/
-# make install clean
+# cd /usr/ports/x11/xorg/ && make install clean
+# cd /usr/ports/x11-wm/i3/ && make install clean
+# cd /usr/ports/x11/i3status/ && make install clean
+# cd /usr/ports/x11/dmenu/ && make install clean
+# cd /usr/ports/deskutils/i3lock/ && make install clean
 ```
 
 ### 软件包说明
