@@ -149,7 +149,7 @@ setenv XMODIFIERS @im=fcitx
 # fcitx5-diagnose
 ```
 
-对于 Fcitx 5.x 来说，找不到 `fcitx qt 4` 的支持是正常现象。
+对于 Fcitx 5.x 来说，找不到 `fcitx Qt 4` 的支持是正常现象。
 
 ## 课后习题
 
