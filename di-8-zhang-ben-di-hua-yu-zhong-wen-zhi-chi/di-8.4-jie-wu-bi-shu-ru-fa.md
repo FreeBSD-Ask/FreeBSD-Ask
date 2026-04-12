@@ -126,7 +126,7 @@ $ libime_tabledict 98wbx.txt 98wbx.main.dict
 或者使用 Ports 安装：
 
 ```sh
-# cd /usr/ports/chinese/rime-wubi/
+# cd /usr/ports/chinese/rime-wubi/ && make install clean
 # cd /usr/ports/chinese/fcitx5-rime/ && make install clean
 # cd /usr/ports/chinese/rime-essay/ && make install clean
 ```
