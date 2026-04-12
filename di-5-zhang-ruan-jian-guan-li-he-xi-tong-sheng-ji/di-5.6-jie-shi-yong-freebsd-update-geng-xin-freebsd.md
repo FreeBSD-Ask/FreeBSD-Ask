@@ -290,7 +290,7 @@ The following files will be added as part of updating to
 /boot/firmware/iwm3168fw
 /boot/firmware/iwm7260f
 
-…………中间省略这些是新增的文件………………
+…………中间省略这些是更新的文件………………
 
 /boot/kernel/nvmf_tcp.ko
 /boot/kernel/nvmf_transport.ko
@@ -526,7 +526,7 @@ DFreeBSD/amd64 EFI loader, Revision 3.0
 # pkg bootstrap -f
 ```
 
-### FreeBSD 升级出错，导致缺少 ntp 用户
+### FreeBSD 升级出错，导致缺少 ntpd 用户
 
 终端执行命令：
 
