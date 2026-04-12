@@ -40,7 +40,7 @@ $ /usr/local/share/wine/pkg32.sh install wine mesa-dri
 >
 >如果不执行这一步，将无法支持 32 位 Windows 程序。其中，mesa-dri 提供了显卡硬件加速支持。
 
-## 配置显卡硬件解码
+## 配置显卡硬件加速
 
 请参考显卡相关章节配置硬件加速。
 
