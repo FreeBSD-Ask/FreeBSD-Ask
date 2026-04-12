@@ -8,7 +8,7 @@
 
 ## SVN 到 Git 的迁移
 
-FreeBSD 项目在 2021 年从 SVN 全面迁移到了 Git，即 <https://git.freebsd.org>
+FreeBSD 项目在 2021 年从 SVN 全面迁移到了 Git，即 <https://git.freebsd.org>。
 
 这一版本控制系统的迁移标志着 FreeBSD 项目开发流程的现代化转型，因此获取源代码的方式也相应发生了变化，不再使用 SVN。
 
@@ -164,7 +164,7 @@ Select: (p) postpone, (df) diff-full, (e) edit,
 
 ### Git：`fatal: unable to access 'https://git.FreeBSD.org/src.git/': SSL certificate problem: certificate is not yet valid`
 
-可能是系统时间不正确导致的，使用 `pool.ntp.org` 服务器同步系统时间
+可能是系统时间不正确导致的，使用 `pool.ntp.org` 服务器同步系统时间。
 
 ```sh
 # ntpdate -u pool.ntp.org  # 当时间相差较大时必须使用该命令，其他命令不会生效
