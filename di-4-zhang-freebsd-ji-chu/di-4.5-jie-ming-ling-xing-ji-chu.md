@@ -260,7 +260,7 @@ No fucks given
 # ls-l /home/ykla/ # 先输入一遍错误的试试
 -sh: ls-l: not found
 # fuck
-ls -l /home/ykla/ [enter/↑/↓/ctrl+c] # 上下箭头切换可能的命令，回车确认，ctrl c 中断
+ls -l /home/ykla/ [enter/↑/↓/ctrl+c] # 上下箭头切换可能的命令，回车确认，Ctrl+C 中断
 total 317
 ……省略一部分……
 drwxr-xr-x  2 ykla ykla        2 Mar  9 20:45 下载
@@ -415,7 +415,7 @@ drwxr-xr-x  2 ykla ykla    2B Mar  9 20:45 下载
 ……省略一部分……
 ```
 
-在 UNIX 系统中，以 `.` 开头的文件或目录（如上面的 `.XIM-unix`）都是隐藏的。Android 手机也是一样的——可以通过 [MT 文件管理器](https://mt2.cn/) 自行查看。
+在 UNIX 系统中，以 `.` 开头的文件或目录（如上面的 `.Xauthority`）都是隐藏的。Android 手机也是一样的——可以通过 [MT 文件管理器](https://mt2.cn/) 自行查看。
 
 选项 `-a` 可用于显示隐藏的目录和文件：
 
