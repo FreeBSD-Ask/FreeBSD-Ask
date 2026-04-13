@@ -290,7 +290,7 @@ The following files will be added as part of updating to
 /boot/firmware/iwm3168fw
 /boot/firmware/iwm7260f
 
-…………中间省略这些是更新的文件………………
+…………中间省略这些是新增的文件………………
 
 /boot/kernel/nvmf_tcp.ko
 /boot/kernel/nvmf_transport.ko
