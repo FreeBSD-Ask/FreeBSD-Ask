@@ -49,7 +49,7 @@ Realtek RTL8125 是一款常见的 2.5 G 以太网卡。在消费级市场中，
 - 使用 pkg 安装：
 
 ```sh
-pkg install realtek-re-kmod
+# pkg install realtek-re-kmod
 ```
 
 - 使用 Ports 安装：
@@ -94,14 +94,14 @@ if_re_name="/boot/modules/if_re.ko"   # 指定 re 网卡驱动模块路径
 默认情况下已启用巨型帧。巨型帧是指大于标准以太网帧（1500 字节）的帧，通常为 9000 字节。巨型帧可减少网络开销、提升传输效率，但在某些网络环境下可能导致兼容性问题。如需关闭以优化网速（例如网速过慢时），可执行以下操作：
 
 ```sh
-# echo hw.re.max_rx_mbuf_sz="2048" >> /boot/loader.conf # 设置 re 网卡接收缓冲区最大尺寸为 2048，以优化网络性能
+# echo 'hw.re.max_rx_mbuf_sz="2048"' >> /boot/loader.conf # 设置 re 网卡接收缓冲区最大尺寸为 2048，以优化网络性能
 ```
 
 要启用 WOL 唤醒：
 
 ```sh
-# echo hw.re.s5wol="1" >> /boot/loader.conf          # 启用 re 网卡的 S5 唤醒功能（支持休眠唤醒）
-# echo hw.re.s0_magic_packet="1" >> /boot/loader.conf  # 启用 re 网卡的魔术包唤醒功能（Magic Packet Wake-on-LAN）
+# echo 'hw.re.s5wol="1"' >> /boot/loader.conf          # 启用 re 网卡的 S5 唤醒功能（支持休眠唤醒）
+# echo 'hw.re.s0_magic_packet="1"' >> /boot/loader.conf  # 启用 re 网卡的魔术包唤醒功能（Magic Packet Wake-on-LAN）
 ```
 
 完成以上设置后，需重启系统使其生效。
