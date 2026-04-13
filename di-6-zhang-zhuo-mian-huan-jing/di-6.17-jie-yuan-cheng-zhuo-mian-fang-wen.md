@@ -275,7 +275,7 @@ your environment.
 # service dbus enable          # 设置 dbus 服务开机自启
 ```
 
-编辑 `/usr/local/etc/xrdp/startwm.sh`，找到 `#### start desktop environment`，修改如下：
+编辑 `/usr/local/etc/xrdp/startwm.sh` 文件，找到 `#### start desktop environment`，修改如下：
 
 ```ini
 #### start desktop environment
@@ -291,7 +291,7 @@ your environment.
 
 ### 配置中文环境 (用户使用默认的 sh）
 
-编辑 `/usr/local/etc/xrdp/startwm.sh`，添加或修改以下内容以设置环境变量：
+编辑 `/usr/local/etc/xrdp/startwm.sh` 文件，添加或修改以下内容以设置环境变量：
 
 ```sh
 #### set environment variables here if you want
