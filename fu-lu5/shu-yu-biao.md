@@ -87,7 +87,7 @@
 | TCP | 传输控制协议 | Transmission Control Protocol |
 | DNS | 域名系统 | Domain Name System |
 | HTTP | 超文本传输协议 | HyperText Transfer Protocol |
-| HTTPS | 安全超文本传输协议 | HyperText Transfer Protocol Secure |
+| HTTPS | 超文本传输安全协议 | HyperText Transfer Protocol Secure |
 | SSH | 安全外壳协议 | Secure Shell，用于安全远程登录 |
 | SSHD | SSH 守护进程 | SSH Daemon |
 | PR | / | Pull Request，拉取请求，在 Git 中提交代码变更的方式；在 FreeBSD 中亦指 Bug 报告 |
@@ -98,7 +98,7 @@
 | SSDF | 安全软件开发框架 | Secure Software Development Framework |
 | NIST | 美国国家标准及技术研究所 | National Institute of Standards and Technology |
 | W^X | 写异或执行 | Write XOR Execute，一种安全策略 |
-| PIE | 位置无关可执行文件 | Position Independent Executable，一种安全缓解技术 |
+| PIE | 位置无关可执行程序 | Position Independent Executable，一种安全缓解技术 |
 | ASLR | 地址空间布局随机化 | Address Space Layout Randomization，一种安全缓解技术 |
 | DAC | 自主访问控制 | Discretionary Access Control，标准 Unix 安全模型 |
 | ACL | 访问控制列表 | Access Control List |
@@ -158,7 +158,6 @@
 | MidnightBSD | / | 一种基于 FreeBSD 的操作系统 |
 | NomadBSD | / | 一种基于 FreeBSD 的 Live USB 发行版 |
 | HelloSystem | / | 一种基于 FreeBSD 的桌面操作系统，设计风格类似 macOS |
-| MfsBSD | / | 一种基于 FreeBSD 的内存文件系统发行版 |
 | FreeBSD 中文社区 | / | FreeBSD 的中文用户和开发者社区 |
 | FreeBSD 日 | / | 每年 6 月 19 日，FreeBSD 基金会和社区庆祝 FreeBSD 生日的日子 |
 | EuroBSDCon | / | 欧洲 BSD 大会 |
@@ -174,12 +173,8 @@
 | Linuxism | Linux 主义/Linux 歧视 | 指软件过分依赖 Linux 特有特性而难以移植到其他类 Unix 操作系统的现象。该术语有双重含义：既可描述技术上的 Linux 特性依赖，也可指对非 Linux 系统的歧视态度 |
 | POLA | 最小惊讶原则 | Principle of Least Astonishment，一种设计原则，指设计必须符合用户的习惯、期望和心智能力 |
 | 大教堂与集市 | / | 一种软件开发模型的比喻，大教堂指集中式开发，市集指分布式开发 |
-| KISS 原则 | / | Keep It Simple, Stupid，一种设计原则，强调保持简单 |
 | UNIX 哲学 | / | 源于 UNIX 操作系统的开发实践，是一套经过长期演化的软件工程方法论体系，传统上强调小即美、一个程序只做一件事、原型先行、可移植性先于高效率性等核心设计原则，对现代软件设计与系统架构产生了深远影响 |
 | Ship of Theseus | 忒修斯之船 | 哲学思想实验，探讨物体在部件逐步更换后是否保持同一性的问题 |
-| 谷堆悖论 | / | 连锁悖论，探讨模糊概念的边界问题，如多少粒谷子能构成一个谷堆 |
-| 秃头悖论 | / | 连锁悖论，探讨渐变过程中的分类问题，如掉多少根头发算秃头 |
-| 跨时间的同一性 | / | 哲学概念，探讨事物随时间变化如何保持自身同一性的问题 |
 | Single UNIX Specification | 单一 UNIX 规范 | SUS，UNIX 操作系统的标准规范 |
 | The Open Group | 开放组织 | 负责管理 UNIX 商标和单一 UNIX 规范的组织 |
 | 501(c)(3) | / | 美国税法中的一种非营利组织类型，可接受免税捐赠 |
@@ -201,7 +196,6 @@
 | Linus Torvalds | / | Linux 内核的创始人 |
 | Richard M. Stallman | / | 自由软件基金会的创始人，GNU 项目的发起者 |
 | Theo de Raadt | / | OpenBSD 的创始人 |
-| Matt Dillon | / | DragonFly BSD 的创始人 |
 | Red Hat | 红帽公司 | 一家重要的 Linux 发行商，控制着许多主流 Linux 项目 |
 | Netflix | 奈飞公司 | 几乎所有网络活动都使用 FreeBSD 设备进行 |
 | Sony | 索尼公司 | PlayStation 系列游戏机使用基于 FreeBSD 的操作系统 |
