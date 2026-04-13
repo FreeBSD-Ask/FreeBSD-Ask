@@ -41,7 +41,7 @@
 
 > **技巧**
 >
-> 其实这里调用的是软件 `sade`（sysadmins disk editor，系统管理员磁盘编辑器），`bsdconfig` 中的分区模块亦调用此工具。
+> 实际上此处调用的是软件 `sade`（sysadmins disk editor，系统管理员磁盘编辑器），`bsdconfig` 中的分区模块亦调用此工具。
 
 此处可查看硬盘分区情况。图中仅有一块硬盘，包含一个 300 M 的 EFI 系统分区、一个 16 M 的 MSR 分区、一个 64 G 的 Windows 系统分区（即 C 盘）以及未显示的空闲空间。直接选择 `Create`（创建）。
 
@@ -79,7 +79,7 @@ NAME  USED   AVAIL  REFER  MOUNTPOINT
 root  534M    130G   534M  none
 ```
 
-进入系统后可以看到，仅有一个 `root` 数据集。可以手动将数据集改为自动安装的样子，亦可参照下文在安装时进入 shell 进行分区。
+进入系统后可以看到，仅有一个 `root` 数据集。可手动将数据集调整为自动安装的布局，亦可参照下文在安装时进入 shell 进行分区。
 
 ## Shell 分区
 
