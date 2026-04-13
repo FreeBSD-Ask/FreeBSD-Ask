@@ -366,7 +366,7 @@ FreeBSD-base: {
 
 >**注意**
 >
->根据 FreeBSD 源代码 [usr.sbin/bsdinstall/scripts/pkgbase.in](https://github.com/freebsd/freebsd-src/blob/releng/15.0/usr.sbin/bsdinstall/scripts/pkgbase.in) 最后几段源代码，`/etc/pkg/repos/FreeBSD.conf` 中的 FreeBSD-base 源虽然是 `enabled: no`，但是那些在安装中选择了 pkgbase 的用户，会在 `/usr/local/etc/pkg/repos/FreeBSD.conf` 中写入 `FreeBSD-base: { enabled: yes }` 这行来显式覆盖默认配置，即对于那些 pkgbase 用户，FreeBSD-base 源实际上是默认启用的。
+>根据 FreeBSD 源代码 [usr.sbin/bsdinstall/scripts/pkgbase.in](https://github.com/freebsd/freebsd-src/blob/releng/15.0/usr.sbin/bsdinstall/scripts/pkgbase.in) 最后几段源代码，`/etc/pkg/repos/FreeBSD.conf` 中的 FreeBSD-base 源虽然是 `enabled: no`，但是那些在安装中选择了 pkgbase 的用户，会在 `/usr/local/etc/pkg/repos/FreeBSD.conf` 文件中写入 `FreeBSD-base: { enabled: yes }` 这行来显式覆盖默认配置，即对于那些 pkgbase 用户，FreeBSD-base 源实际上是默认启用的。
 
 #### 中国科学技术大学开源软件镜像站
 
