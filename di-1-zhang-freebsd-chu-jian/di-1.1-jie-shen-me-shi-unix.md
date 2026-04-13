@@ -37,7 +37,7 @@ UNIX 操作系统认证查询网址：[The Open Group official register of UNIX 
 >
 > 从历史角度看，macOS（以及由此衍生的 iOS、iPadOS 等）的核心层（Darwin）确实是基于 BSD 代码，并融合了其他技术。因此 macOS 系列操作系统可被视为独立的、类 BSD 操作系统分支，与 OpenBSD、NetBSD 和 FreeBSD 等系统具有同等地位。参见：Jason Perlow. Apple's Open Source Roots: The BSD Heritage Behind macOS and iOS[EB/OL]. (2024-07-08)[2026-03-26]. <https://thenewstack.io/apples-open-source-roots-the-bsd-heritage-behind-macos-and-ios/>.
 >
-> 看似是 Android 和 iOS 之争，实则是 Linux 与 BSD 之争。~~这也许还是大教堂与市集之争。~~
+> 表面观之，此为 Android 与 iOS 之争，实质则为 Linux 与 BSD 之争。~~这也许还是大教堂与市集之争。~~
 
 ## 传统的 UNIX 哲学观（以《UNIX 编程艺术》为核心）
 
@@ -67,7 +67,7 @@ UNIX 哲学是在 UNIX 操作系统长期开发实践中逐渐形成的一套设
 >>
 >> NASA. The Apollo Lunar Surface Journal and Apollo Flight Journal[EB/OL]. [2026-04-04]. <https://www.nasa.gov/history/alsj/henry.html>.
 >
-> 作者亨利·斯宾塞（Henry Spencer）并未明确批评哪个操作系统，那么，现在这句话更适合哪个常见的操作系统？为什么？
+> 亨利·斯宾塞（Henry Spencer）并未明确批评某一操作系统，试问，当前该论断更适用于何种主流操作系统？原因何在？
 
 ### 参考文献
 
@@ -77,7 +77,7 @@ UNIX 哲学是在 UNIX 操作系统长期开发实践中逐渐形成的一套设
 
 ## UNIX 的一段历史
 
-UNIX 的诞生有其历史背景，需从其前身 Multics 谈起。
+UNIX 的诞生具有特定的历史背景，需追溯至其前身 Multics。
 
 ### Multics
 
