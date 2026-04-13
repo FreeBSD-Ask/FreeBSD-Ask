@@ -81,7 +81,7 @@ UNIX 的诞生具有特定的历史背景，需追溯至其前身 Multics。
 
 ### Multics
 
-Multics 是一个对 UNIX 产生直接影响的重要项目。1964 年，麻省理工学院（Massachusetts Institute of Technology，MIT）推出了 **兼容分时系统**（Compatible Time-Sharing System，CTSS），这是当时最具创新性的操作系统。CTSS 作为当时最具创新性的操作系统出现后，研究人员决定设计更优的版本——**多路复用** 信息和计算服务（Multiplexed Information and Computing Service，Multics）系统。
+Multics 是一个对 UNIX 产生直接影响的重要项目。1964 年，麻省理工学院（Massachusetts Institute of Technology，MIT）推出了 **兼容分时系统**（Compatible Time-Sharing System，CTSS），这是当时最具创新性的操作系统。CTSS 作为当时最具创新性的操作系统问世后，研究人员决定设计更为先进的版本——**多路复用** 信息和计算服务（Multiplexed Information and Computing Service，Multics）系统。
 
 Multics 旨在创造功能强大的新软件，以及比肩 IBM 7094 功能更丰富的新硬件，麻省理工学院邀请了两家公司予以协助。
 
