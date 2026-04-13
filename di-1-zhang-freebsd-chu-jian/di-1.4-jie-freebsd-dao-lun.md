@@ -100,9 +100,9 @@ FreeBSD 具有诸多优势，但也面临着现实的挑战。
 
 - 大型技术企业对 FreeBSD 支持不足，如长久以来未提供 GitHub Actions 支持，NVIDIA CUDA 的忽视，在 AI 与 LLM 时代的全面落后；
 - FreeBSD 项目缺乏对欧洲和北美以外地区的关注与投入；
-- 相比其他开源项目中“仁慈的终身独裁者”模式，集体领导在 FreeBSD 项目中并未显现出明显优势，有时甚至可能导致责任分散、效率低下的问题（“三个和尚没水喝”）。分管 FreeBSD 子项目的核心成员对项目本身也缺乏应有的了解和关注，面对一些小问题也难以有效决策和承担责任；
-- FreeBSD 项目整体过于保守，新技术的引入往往需要数年跨越多个大版本。往往要等待已有技术轮替一到两代后才会引入；但这并不显得多么有远见，引入后也往往无人问津并且没有相关后续维护与开发；
-- FreeBSD 系统在部分方面显得不够现代化，缺乏某些现代操作系统应有的特性。尤其是在嵌入式方面表现较差。
+- 相比其他开源项目中“仁慈的终身独裁者”模式，集体领导在 FreeBSD 项目中并未显现出明显优势，有时甚至可能导致责任分散、效率低下的问题（“即集体行动困境”）。分管 FreeBSD 子项目的核心成员对项目本身亦缺乏应有的了解和关注，面对若干问题亦难以有效决策和承担责任；
+- FreeBSD 项目整体过于保守，新技术的引入往往需要数年跨越多个大版本。往往要等待已有技术轮替一到两代后才会引入；但这并非具有前瞻性，引入后亦往往缺乏后续关注与维护开发；
+- FreeBSD 系统在部分方面尚欠现代化，缺乏某些现代操作系统应有的特性。尤其是在嵌入式方面表现较差。
 - FreeBSD 未在基本系统中提供预配置的桌面环境；
 - FreeBSD 的硬件驱动支持相对有限；
 - 关于 FreeBSD 的学习资料相对较少；
@@ -118,7 +118,7 @@ FreeBSD 具有诸多优势，但也面临着现实的挑战。
 
 ## FreeBSD 怎么读
 
-FreeBSD 的正确读法是很多新用户关心的问题。目前社区共识和普遍的读法是：/ˌfriːˌbiːɛsˈdiː/，即读作“Free（/friː/）+ B（/biː/）+ S（/ɛs/）+ D（/diː/）”，即类似于“福瑞/必/哎司/地”。
+FreeBSD 的正确读法是新用户普遍关注的问题。目前社区共识和普遍的读法是：/ˌfriːˌbiːɛsˈdiː/，即读作“Free（/friː/）+ B（/biː/）+ S（/ɛs/）+ D（/diː/）”，即类似于“福瑞/必/哎司/地”。
 
 即先读 Free，再逐字母拼读 B、S、D。
 
@@ -126,7 +126,7 @@ FreeBSD 的正确读法是很多新用户关心的问题。目前社区共识和
 
 ## 什么是 FreeBSD？
 
-了解了 FreeBSD 的版本、宗旨和开发模型后，接下来将深入探讨 FreeBSD 究竟是什么。这一问题的答案涉及技术谱系、设计哲学和社区文化等多个维度。FreeBSD 不是 Linux，也不是 UNIX 的克隆。FreeBSD 是一款自由软件。
+了解了 FreeBSD 的版本、宗旨和开发模型后，下文将深入探讨 FreeBSD 的本质。这一问题的答案涉及技术谱系、设计哲学和社区文化等多个维度。FreeBSD 不是 Linux，也不是 UNIX 的克隆。FreeBSD 是一款自由软件。
 
 ![什么是 FreeBSD？](../.gitbook/assets/nolinux.png)
 
@@ -140,9 +140,9 @@ FreeBSD 日为 6 月 19 日。FreeBSD 基金会和社区在这天庆祝 FreeBSD 
 
 ### UNIX 之船：FreeBSD 是不是 UNIX？
 
-关于 FreeBSD 与 UNIX 的关系，一直是一个引人深思的话题。这个问题远没有想象中的那么清楚明白。看到不少讨论者，甚至是那段岁月的亲历者，也难以给出明确回答或澄清。或者只是简单地说，BSD 并未进行过任何 UNIX 认证，没有持有法律上的商标就草草终结话题；更有甚者只是笼统地说 FreeBSD 是 UNIX 的延续者与正统继承者，仅是“有实无名”；还有人认为，BSD 之于 UNIX，正如 Linux 之于 UNIX。
+关于 FreeBSD 与 UNIX 的关系，一直是一个引人深思的话题。该问题远非表面所见般清晰明确。诸多讨论者，甚至是那段岁月的亲历者，也难以给出明确回答或澄清。或者只是简单地说，BSD 并未进行过任何 UNIX 认证，没有持有法律上的商标便草率定论；更有甚者只是笼统地说 FreeBSD 是 UNIX 的延续者与正统继承者，仅是“有实无名”；另有观点认为，BSD 之于 UNIX，正如 Linux 之于 UNIX。
 
-之所以有上述这些不同的回答，正是因为这个问题不是能够简单地套用法律上的商标归属或者代码上继承性进行分析的纯粹技术性难题。这牵涉到了一个深刻的本体论哲学问题——究竟是不能两次踏进同一条河流，还是一次也不能踏进同一条河流？（类似的问题如谷堆问题、秃头问题，感兴趣的读者可参见 SEP 条目 Identity Over Time[EB/OL]. [2026-03-26]. <https://plato.stanford.edu/entries/identity-time>. Sorites Paradox[EB/OL]. [2026-03-26]. <https://plato.stanford.edu/entries/sorites-paradox/>.）。对这个问题的回答如何，映射着的哲学观与科学技术观。
+上述回答之所以存在分歧，原因在于该问题并非可简单套用法律商标归属或代码继承性加以分析的纯粹技术性难题。这牵涉到了一个深刻的本体论哲学问题——究竟是不能两次踏进同一条河流，还是一次也不能踏进同一条河流？（类似的问题如谷堆问题、秃头问题，感兴趣的读者可参见 SEP 条目 Identity Over Time[EB/OL]. [2026-03-26]. <https://plato.stanford.edu/entries/identity-time>. Sorites Paradox[EB/OL]. [2026-03-26]. <https://plato.stanford.edu/entries/sorites-paradox/>.）。对这个问题的回答如何，映射着的哲学观与科学技术观。
 
 >>**忒修斯之船**
 >>
@@ -181,9 +181,9 @@ FreeBSD 的稳定性和可靠性使其在许多领域得到了广泛应用。以
 图片来源 [FreeBSD 基金会宣传图](https://i.imgur.com/qW0IePB.png)
 
 - 华纳兄弟. 黑客帝国[EB/OL]. [2026-03-26]. <https://movie.douban.com/subject/1291843/>. 黑客帝国的特效就是在一组 FreeBSD 集群上制作的。另见 Michael Urban, Brian Tiemann. FreeBSD 技术内幕[M]. 北京:机械工业出版社, 2002:2. ISBN: 978-7-111-10201-0、FreeBSD Project. FreeBSD Press Release: April 22, 1999[EB/OL]. (1999-04-22)[2026-03-26]. <https://www.freebsd.org/press/press-rel-1/>.
-- The New Stack. Apple’s Open Source Roots: The BSD Heritage Behind macOS and iOS[EB/OL]. [2026-03-26]. <https://thenewstack.io/apples-open-source-roots-the-bsd-heritage-behind-macos-and-ios/>. Apple 的操作系统如 macOS、iOS 等大量复用了 BSD（不只是 FreeBSD）的技术栈。BSD 可以称得上是 macOS 的开源基石。
+- The New Stack. Apple’s Open Source Roots: The BSD Heritage Behind macOS and iOS[EB/OL]. [2026-03-26]. <https://thenewstack.io/apples-open-source-roots-the-bsd-heritage-behind-macos-and-ios/>. Apple 的操作系统如 macOS、iOS 等大量复用了 BSD（不只是 FreeBSD）的技术栈。BSD 堪称 macOS 的开源基石。
 - Sony. FreeBSD Kernel[EB/OL]. [2026-03-26]. <https://www.playstation.com/en-us/oss/ps4/freebsd-kernel/>. 索尼（Sony）的游戏机 PlayStation 3（PS3）、PlayStation Vita（PSV）、PlayStation 4（PS4）和 PlayStation 5（PS5）使用的操作系统。
-- FreeBSD Foundation. Netflix Case Study[EB/OL]. [2026-03-26]. <https://freebsdfoundation.org/netflix-case-study/>. 奈飞（Netflix）几乎所有网络活动（内容缓存/CDN）都使用 FreeBSD 设备进行。
+- FreeBSD Foundation. Netflix Case Study[EB/OL]. [2026-03-26]. <https://freebsdfoundation.org/netflix-case-study/>. 奈飞（Netflix）几乎所有网络活动（内容缓存/CDN）均基于 FreeBSD 设备运行。
 - QNX. Search Results[EB/OL]. [2026-03-26]. <https://www.qnx.com/developers/docs/8.0/search.html?searchQuery=freebsd>. QNX 操作系统。QNX 是一款实时操作系统。QNX 以前是黑莓手机的操作系统。QNX 现在被广泛应用为汽车安全操作系统（即车机， Android 是运行在 QNX 之上的操作系统，与车机系统分离）。国内新能源车辆普遍采用了 QNX 操作系统（关键领域占比超过九成）。QNX 大量复用了 FreeBSD 的技术栈。
 - Dell. PowerScale OneFS：了解基于源的路由[EB/OL]. (2024-05-28)[2026-03-26]. <https://www.dell.com/support/kbdoc/zh-cn/000020056/isilon-onefs-understanding-source-based-routing-sbr-in-isilon?lang=zh>. Dell EMC Isilon，戴尔的 Isilon（面向企业的 NAS 存储设备）设备使用的操作系统 OneFS 基于 FreeBSD。
 - Beckhoff. TwinCAT/BSD: operating system for Industrial PCs[EB/OL]. [2026-03-26]. <https://www.beckhoff.com/en-en/products/ipc/software-and-tools/twincat-bsd/>. Beckhoff 倍福自动化控制系统的操作系统 TwinCAT/BSD。
@@ -195,16 +195,16 @@ FreeBSD 的稳定性和可靠性使其在许多领域得到了广泛应用。以
 
 ## 为什么选择 FreeBSD
 
-选择一款操作系统往往是基于多方面的考虑。下文将介绍为什么选择 FreeBSD。
+选择一款操作系统往往是基于多方面的考虑。下文将阐述选择 FreeBSD 的理由。
 
 ### 一句话原因——FreeBSD 能在这流变的世界中寻求理想的中道
 
 相较于大多数主流操作系统或内核，FreeBSD 的 Kernel API/ABI 比较稳定。
 
-FreeBSD 项目相对保守。FreeBSD 项目奉行最小惊讶原则（Principle of Least Astonishment，POLA），简而言之就是设计必须符合用户的习惯、期望和心智能力。
+FreeBSD 项目相对保守。FreeBSD 项目奉行最小惊讶原则（Principle of Least Astonishment，POLA），即设计须符合用户的习惯、期望和心智能力。
 FreeBSD 配置文件和系统组件不会频繁变化，这在大版本变动时尤为突出。FreeBSD 也谨慎对待破坏性变化（Breaking change），要求在大版本内保持 ABI 的稳定。
 
-FreeBSD 不仅仅在生命周期内不变，大版本更新也具有连贯性和稳定性，可以轻松实现大版本间的迁移。FreeBSD 上的软件版本可以滚动更新，不会锁定特定版本（如 Python 等）。
+FreeBSD 不仅仅在生命周期内不变，大版本更新也具有连贯性和稳定性，可便捷实现大版本间的迁移。FreeBSD 上的软件版本可以滚动更新，不会锁定特定版本（如 Python 等）。
 
 ### 选择 FreeBSD 的一般原因
 
