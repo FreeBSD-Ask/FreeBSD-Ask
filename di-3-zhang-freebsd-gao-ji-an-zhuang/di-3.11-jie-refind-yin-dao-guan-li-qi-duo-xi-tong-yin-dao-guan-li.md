@@ -57,7 +57,7 @@ EFI/
         └── bootmgfw.efi   # Windows 启动管理器
 ```
 
-使用 [DiskGenius](https://www.diskgenius.com/) 将处理好的 `refind` 文件夹复制到 EFI 系统分区（ESP）的 `EFI` 目录下。
+使用 [DiskGenius](https://www.diskgenius.com/) 将处理后的 `refind` 文件夹复制到 EFI 系统分区（ESP）的 `EFI` 目录下。
 
 ![复制 rEFInd 到 EFI 分区](../.gitbook/assets/shaung13.png)
 
@@ -97,7 +97,7 @@ rEFInd 支持多种图形化主题。
 
 将此 `themes` 目录整体复制到 EFI 系统分区中的 `EFI\refind\` 目录下。
 
-编辑 `refind.conf` 文件（若无法直接在 ESP 中编辑，可将其复制到桌面，修改后再覆盖回去），在文件末尾添加一行：
+编辑 `refind.conf` 文件（若无法直接在 ESP 中编辑，可将其复制到桌面，修改后覆盖原文件），在文件末尾添加一行：
 
 ```ini
 include themes/Matrix-rEFInd/theme.conf
