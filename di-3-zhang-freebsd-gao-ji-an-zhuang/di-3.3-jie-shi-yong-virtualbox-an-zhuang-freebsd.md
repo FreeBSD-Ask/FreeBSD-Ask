@@ -88,7 +88,7 @@ VirtualBox 提供多种网络配置方式，以下介绍两种常用的网络设
 >
 > 与 VMware 不同，VirtualBox 的默认 NAT 模式下，主机和虚拟机无法直接互通。虚拟机可以访问主机的特殊地址 `10.0.2.2` 及其上运行的服务，但主机无法访问虚拟机的端口，各虚拟机之间网络也相互隔离。参见：Oracle. Network Address Translation (NAT)[EB/OL]. [2026-03-26]. <https://www.virtualbox.org/manual/topics/networkingdetails.html#network_nat>. 也可以按照手册中的端口转发来连通网络。
 
-网络设置比较复杂，有时桥接不一定能生效。为了达到使用宿主机（如 Windows 11）控制虚拟机里的 FreeBSD 系统的目的，需要设置两块网卡——一块是 NAT 网络模式的网卡用来上网、另一块是仅主机模式的网卡用来与宿主机互通。如图所示：
+网络设置较为复杂，桥接模式未必能够生效。为实现通过宿主机（如 Windows 11）控制虚拟机中的 FreeBSD 系统之目的，需设置两块网卡——一块为 NAT 网络模式的网卡用于连接互联网，另一块为仅主机模式的网卡用于与宿主机互通。如图所示：
 
 ![双网卡设置](../.gitbook/assets/vbnat1.png)
 
@@ -100,7 +100,7 @@ VirtualBox 提供多种网络配置方式，以下介绍两种常用的网络设
 
 使用命令 `# ifconfig` 查看状态，如果第二块网卡 `em1` 没有获取到 IP 地址，请手动通过 DHCP 获取：`# dhclient em1`（为了长期生效，可在 `/etc/rc.conf` 文件中加入 `ifconfig_em1="DHCP"`）。
 
-按这种方式设定的网络，虚拟机与主机所在的局域网无法互通。如果没有网络（互联网）请设置 DNS 为 `223.5.5.5`。如果不会，请参阅本章相关小节。
+按这种方式设定的网络，虚拟机与主机所在的局域网无法互通。如果没有网络（互联网）请设置 DNS 为 `223.5.5.5`。若不熟悉相关操作，请参阅本章相关小节。
 
 ## 显卡驱动与增强工具
 
@@ -171,7 +171,7 @@ You may ignore the yellow alert that encourages use of VMSVGA.
 
 > **技巧**
 >
-> 请使用 UEFI，Xorg 可以自动识别驱动，**无需** 手动配置 `/usr/local/etc/X11/xorg.conf`（经测试，手动配置反而更卡）。
+> 请使用 UEFI，Xorg 可以自动识别驱动，**无需** 手动配置 `/usr/local/etc/X11/xorg.conf`（经测试，手动配置反而导致性能下降）。
 
 ## 服务管理
 
