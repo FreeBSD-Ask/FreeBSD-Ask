@@ -9,7 +9,7 @@
 | ee | 基本系统 | 极其简单，像记事本，按 ESC 键进入菜单操作 |
 | vi | 基本系统 | 经典 modal（多模式）编辑器，BSD 原生 Nvi，轻量但命令多 |
 | Vim | Ports | vi 增强版，具有语法高亮、插件、宏等现代功能 |
-| NeoVim | Ports | vim 重构现代版，Lua 配置、异步插件、LazyVim 发行版 |
+| NeoVim | Ports | Vim 重构现代版，Lua 配置、异步插件、LazyVim 发行版 |
 | Emacs | Ports | 高度可扩展，几乎是“操作系统”，Lisp 配置 |
 | microsoft-edit | Ports | 微软开源，支持中文、鼠标操作、界面友好 |
 
