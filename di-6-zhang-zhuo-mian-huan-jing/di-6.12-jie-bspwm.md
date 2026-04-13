@@ -119,7 +119,7 @@ $ mkdir ~/.config/polybar                    # 创建 Polybar 配置目录
 $ cp /usr/local/etc/polybar/config.ini ~/.config/polybar   # 复制 Polybar 示例配置文件到用户目录
 ```
 
-创建 `~/.config/polybar/launch.sh`，写入：
+创建 `~/.config/polybar/launch.sh` 文件，写入：
 
 ```sh
 #!/bin/sh
