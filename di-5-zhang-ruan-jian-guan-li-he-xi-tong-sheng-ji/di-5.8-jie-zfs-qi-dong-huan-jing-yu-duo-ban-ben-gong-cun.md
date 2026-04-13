@@ -363,7 +363,7 @@ default                        R      -          10.9G 2025-01-14 20:36
 随后，读者也可以销毁不再需要的启动环境：
 
 ```sh
-# bectl destroy default
+# bectl destroy 需要的启动环境名称
 ```
 
 将参数 `启动环境` 替换为命令 `bectl list` 输出中 `BE` 列对应的启动环境名称即可将其销毁。
