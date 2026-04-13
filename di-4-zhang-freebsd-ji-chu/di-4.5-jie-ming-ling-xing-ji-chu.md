@@ -230,9 +230,8 @@ FreeBSD 默认使用的是 sh，因此将下行：
 eval $(thefuck --alias) 
 ```
 
-写入 `~/.shrc`，请勿使用 `>>` 重定向，请手动编辑加入。
 
-在 FreeBSD 默认 sh 环境中，需将以下配置写入 `~/.shrc`：
+在 FreeBSD 默认 sh 环境中，需将以下配置写入 `~/.shrc` 文件：
 
 ```sh
 # . ~/.shrc
