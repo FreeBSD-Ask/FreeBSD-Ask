@@ -84,7 +84,7 @@ FreeBSD 中文社区未通过其他域名部署本书，唯一官方域名为 `b
 
 ![捐赠 FreeBSD 基金会](.gitbook/assets/proud_donor.png)
 
-[点此捐赠 FreeBSD 基金会](https://freebsdfoundation.org/donate-to-freebsd-foundation/)
+[前往捐赠 FreeBSD 基金会](https://freebsdfoundation.org/donate-to-freebsd-foundation/)
 
 支付方式支持：VISA 信用卡（可通过 Amazon Pay 或 Google Pay）、万事达品牌借记卡。
 
