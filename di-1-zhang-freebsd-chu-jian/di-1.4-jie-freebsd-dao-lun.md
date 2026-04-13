@@ -380,7 +380,7 @@ FreeBSD 基金会是一家总部位于美国的非营利组织，注册为 501(c
 
 - 2000 年 7 月 27 日 kqueue(2)
 
-kqueue(2) 是取代 select/poll 的创新解决方案，于 2000 年 7 月 27 日随着 FreeBSD 4.1-RELEASE 引入。这一可扩展的事件通知接口后来启发了 Linux 的 epoll() 机制。
+kqueue(2) 是取代 select/poll 的创新解决方案，于 2000 年 7 月 27 日随着 FreeBSD 4.1-RELEASE 引入。这一可扩展的事件通知接口后来启发了 Linux 的 epoll 机制。
 
 - 2000 年 10 月 17 日首次核心团队选举
 
