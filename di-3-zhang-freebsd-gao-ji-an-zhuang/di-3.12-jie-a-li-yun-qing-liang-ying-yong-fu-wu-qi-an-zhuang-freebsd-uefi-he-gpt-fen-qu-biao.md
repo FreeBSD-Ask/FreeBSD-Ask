@@ -175,7 +175,7 @@ default via 172.24.63.253 dev eth0 proto dhcp src 172.24.0.80 metric 100
 
 > **警告**
 >
->将丢失所有数据，请做好备份工作再进行。经过测试，操作后，快照将可能无法正确回滚，但是自定义镜像可间接还原。
+>将丢失所有数据，请先行完成数据备份再进行操作。经过测试，操作后，快照将可能无法正确回滚，但是自定义镜像可间接还原。
 
 下载并写入 FreeBSD ZFS 镜像到 `/dev/vda`：
 
@@ -651,7 +651,7 @@ TinyCorePure64 下载地址是 [x86 Pure 64](http://www.tinycorelinux.net/ports.
 
 ![TinyCorePure64 分区情况](../.gitbook/assets/TinyCorePuredisk.png)
 
-详细看看：
+详细查看：
 
 ![TinyCorePure64 分区详情](../.gitbook/assets/TinyCorePuredisk2.png)
 
