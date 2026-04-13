@@ -102,7 +102,7 @@ FreeBSD 中文社区未通过其他域名部署本书，唯一官方域名为 `b
 
 为说明、评论或教学目的，本作品合理引用第三方内容（文字、图像、数据等），知识产权归属原始权利人。
 
-作品中涉及的第三方软件、源代码及文档，知识产权由原权利人保留。如认为您的作品被侵权，请通过电子邮件 ykla [yklaxds@gmail.com](mailto:yklaxds@gmail.com) 联系。
+作品中涉及的第三方软件、源代码及文档，知识产权由原权利人保留。如认为本作品存在侵权情形，请通过电子邮件 ykla [yklaxds@gmail.com](mailto:yklaxds@gmail.com) 联系。
 
 除特别注明外，本书中的文字、图表等内容依据 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) 协议发布。
 
