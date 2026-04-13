@@ -472,7 +472,7 @@ root@mfsbsd:~ # gpart show # 查看修复分区表后的磁盘信息
 
 ![UFS 安装](../.gitbook/assets/fb-ufs-ins.png)
 
-安装后，使用 Juice SSH 连接 FreeBSD 机器：
+安装后，使用 JuiceSSH 连接 FreeBSD 机器：
 
 ![UFS 安装](../.gitbook/assets/fb-ufs-ins2.png)
 
@@ -530,7 +530,7 @@ pid 1562 (distextract), jid 0, uid 0, was killed: failed to reclaim memory
 
 ### 文件系统不支持在线压缩
 
-EXT2、EXT3、EXT4、Btrfs 和 XFS 文件系统均不支持在线压缩。目前对此尚无解决方案。
+EXT2、EXT3、EXT4 和 XFS 文件系统均不支持在线压缩（Btrfs 支持在线缩小，但可能存在稳定性问题）。目前对此尚无通用解决方案。
 
 ### 找不到 UEFI 启动项，启动后直接进入 UEFI Shell
 
