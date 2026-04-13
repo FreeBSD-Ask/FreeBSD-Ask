@@ -6060,6 +6060,8 @@ Host owned（主机所有权）
 
 ##### DMA2（DMA2 通道）
 
+选项：
+
 None（无）
 
 PSE owned（PSE 所有权）
