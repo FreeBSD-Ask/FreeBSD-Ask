@@ -271,11 +271,11 @@ FreeBSD 不仅仅在生命周期内不变，大版本更新也具有连贯性和
 
 #### 红帽公司控制下的 Linux 歧视
 
-发现 GNOME、Xorg（X11）、DBus、Systemd、PulseAudio、Wayland、PipeWire 等主流 Linux 项目实际上受到红帽公司（Red Hat）施加的控制和影响，而且它们大多难以完全适配其他类 UNIX 操作系统。
+GNOME、Xorg（X11）、DBus、Systemd、PulseAudio、Wayland、PipeWire 等主流 Linux 项目实际上受到红帽公司（Red Hat）施加的控制和影响，而且它们大多难以完全适配其他类 UNIX 操作系统。
 
 目前 FreeBSD 上的桌面部件的缺失很大程度上是因为他们过分依赖了 Linux 特有函数库，例如包含 `ip` 命令的 `iproute2` 软件包。更多的原因则是因为这些桌面或部件和 systemd 做了深度捆绑或者根本就是强制依赖，比如 `NetworkManager`。而 Samba 开发者则说“We use Linux, we develop for Linux, all others please submit patches”（我们使用 Linux，为 Linux 开发，其他系统的用户请自行提交补丁）FreeBSD 社区将此类现象称为“Linuxism”（Linux 主义/Linux 歧视）。
 
-这种行为将导致何种后果尚不得而知，但此类程序正变得越来越多，并有成为主流的趋势。甚至许多开发者在开发程序（如 `todesk`）时也不再考虑对传统 init 系统的兼容。甚至 Java 程序也失去了可移植性，FreeBSD 上的 Eclipse 近两年未获更新，其原因亦在于此类捆绑问题（D'Pong P. Bug 562443 - SWT spams temp folder with innumerable folders[EB/OL]. (2020-05-26)[2026-04-05]. <https://gitlab.simantics.org/simantics/eclipse/eclipse.platform.swt/-/commit/19153b908d6d4cedcbd59824686717502cfde4f7>.）预计将来所有可运行在 Linux 上的程序也将失去任何可移植性。
+这种行为将导致何种后果尚不得而知，但此类程序正变得越来越多，并有成为主流的趋势。许多开发者在开发程序（如 `todesk`）时也不再考虑对传统 init 系统的兼容。Java 程序亦逐渐丧失了可移植性，FreeBSD 上的 Eclipse 近两年未获更新，其原因亦在于此类捆绑问题（D'Pong P. Bug 562443 - SWT spams temp folder with innumerable folders[EB/OL]. (2020-05-26)[2026-04-05]. <https://gitlab.simantics.org/simantics/eclipse/eclipse.platform.swt/-/commit/19153b908d6d4cedcbd59824686717502cfde4f7>.）预计将来所有可运行在 Linux 上的程序也将失去任何可移植性。
 
 目前 FreeBSD 所面临的困境，可能是未来其他系统也会遇到的。
 
