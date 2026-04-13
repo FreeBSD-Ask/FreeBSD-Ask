@@ -222,7 +222,7 @@
 
 ### 参考文献
 
-- [《提问的智慧》](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/main/README-zh_CN.md)，简体中文版本。原作者之一是大家熟悉的 Eric S. Raymond（《UNIX 编程艺术》作者，[OCI](https://opensource.org/) 开源促进会创始人）~~师出同门~~。该文档是开源社区经典的提问指南，倡导高效沟通方式。
+- [《提问的智慧》](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/main/README-zh_CN.md)，简体中文版本。原作者之一是大家熟悉的 Eric S. Raymond（《UNIX 编程艺术》作者，[OSI](https://opensource.org/) 开源促进会创始人）~~师出同门~~。该文档是开源社区经典的提问指南，倡导高效沟通方式。
 
 ## Talk 和 Code
 
