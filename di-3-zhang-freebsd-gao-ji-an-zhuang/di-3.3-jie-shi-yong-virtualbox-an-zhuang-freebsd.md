@@ -78,7 +78,7 @@ VirtualBox 提供多种网络配置方式，以下介绍两种常用的网络设
 
 ![桥接网络设置](../.gitbook/assets/VBbridge.png)
 
-设置后执行 `# dhclient em0` 即可（为了长期生效可在 `/etc/rc.conf` 中加入 `ifconfig_em0="DHCP"`）。
+设置后执行 `# dhclient em0` 即可（为了长期生效可在 `/etc/rc.conf` 文件中加入 `ifconfig_em0="DHCP"`）。
 
 如果无法访问互联网，请将 DNS 设置为 `223.5.5.5`。如不清楚具体操作，请参阅本章其他部分。
 
@@ -98,7 +98,7 @@ VirtualBox 提供多种网络配置方式，以下介绍两种常用的网络设
 
 ![仅主机模式设置](../.gitbook/assets/vbnat2.png)
 
-使用命令 `# ifconfig` 查看状态，如果第二块网卡 `em1` 没有获取到 IP 地址，请手动通过 DHCP 获取：`# dhclient em1`（为了长期生效，可在 `/etc/rc.conf` 中加入 `ifconfig_em1="DHCP"`）。
+使用命令 `# ifconfig` 查看状态，如果第二块网卡 `em1` 没有获取到 IP 地址，请手动通过 DHCP 获取：`# dhclient em1`（为了长期生效，可在 `/etc/rc.conf` 文件中加入 `ifconfig_em1="DHCP"`）。
 
 按这种方式设定的网络，虚拟机与主机所在的局域网无法互通。如果没有网络（互联网）请设置 DNS 为 `223.5.5.5`。如果不会，请参阅本章相关小节。
 
