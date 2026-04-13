@@ -520,7 +520,7 @@ pid 1562 (distextract), jid 0, uid 0, was killed: failed to reclaim memory
 
 ### 安装过程中报错 `sysctl: unknown oid 'vfs.zfs.min_auto_ashift'`
 
-分析报错信息：从字面理解，这是一个设置 zfs 4k 对齐的可调参数，报错指出该参数是未知的。因此首先将问题定位到 zfs 模块。
+分析报错信息：从字面理解，这是一个设置 zfs 4K 对齐的可调参数，报错指出该参数是未知的。因此首先将问题定位到 zfs 模块。
 
 通常是由于未预先手动加载 zfs 内核模块引发的。
 
@@ -528,7 +528,7 @@ pid 1562 (distextract), jid 0, uid 0, was killed: failed to reclaim memory
 
 这可能是一个长期存在但难以复现的 Bug，参见：FreeBSD Foundation. Bug 249157 - installer reports sysctl: unknown oid 'vfs.zfs.min_auto_ashift' when ZFS module not loaded[EB/OL]. [2026-03-26]. <https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=249157>.
 
-### 文件系统不支持在线压缩
+### 文件系统不支持在线缩小
 
 EXT2、EXT3、EXT4 和 XFS 文件系统均不支持在线压缩（Btrfs 支持在线缩小，但可能存在稳定性问题）。目前对此尚无通用解决方案。
 

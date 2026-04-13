@@ -89,7 +89,7 @@ $ cp /home/ykla/test/1.txt
 PING 163.com (59.111.160.244): 56 data bytes
 64 bytes from 59.111.160.244: icmp_seq=0 ttl=52 time=27.672 ms
 64 bytes from 59.111.160.244: icmp_seq=1 ttl=52 time=27.580 ms
-^C # 注意这里，^C 即代表你在此处按下了 ctrl + c 的组合键，随后命令被终止
+^C # 注意这里，^C 即代表你在此处按下了 Ctrl+C 的组合键，随后命令被终止
 --- 163.com ping statistics ---
 2 packets transmitted, 2 packets received, 0.0% packet loss
 round-trip min/avg/max/stddev = 27.580/27.626/27.672/0.046 ms
@@ -104,13 +104,13 @@ round-trip min/avg/max/stddev = 27.580/27.626/27.672/0.046 ms
 PING 163.com (59.111.160.244): 56 data bytes
 64 bytes from 59.111.160.244: icmp_seq=0 ttl=52 time=27.611 ms
 64 bytes from 59.111.160.244: icmp_seq=1 ttl=52 time=27.691 ms
-^Z[1] + Suspended               ping 163.com # 注意此处，按下了 ctrl + z
+^Z[1] + Suspended               ping 163.com # 注意此处，按下了 Ctrl+Z
 # fg # 返回前台
 ping 163.com
 64 bytes from 59.111.160.244: icmp_seq=3 ttl=52 time=27.465 ms
 64 bytes from 59.111.160.244: icmp_seq=4 ttl=52 time=27.586 ms
 64 bytes from 59.111.160.244: icmp_seq=5 ttl=52 time=27.522 ms
-^C # 按 ctrl + c 结束命令
+^C # 按 Ctrl+C 结束命令
 --- 163.com ping statistics ---
 6 packets transmitted, 6 packets received, 0.0% packet loss
 round-trip min/avg/max/stddev = 27.465/27.596/27.701/0.085 ms
