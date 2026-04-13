@@ -161,7 +161,7 @@ FreeBSD `-RELEASE` 历史版本下载地址：
 
 ### 建议使用 `-img` 或 `-img.xz` 格式的镜像
 
-制作 U 盘安装介质时，建议使用 `-img` 或 `-img.xz` 格式的镜像。`.iso` 镜像采用混合启动（Hybrid）模式，该模式同时支持从光驱和 U 盘启动，但可能未完全遵循 UEFI 规范，直接写入 U 盘可能导致启动错误。详见 FreeBSD Project. FreeBSD -.iso files not support written to USB drive[EB/OL]. [2026-03-25]. <https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=236786>。该 Bug 报告记录了 ISO 镜像直接写入 USB 设备的兼容性问题。建议读者仅在使用光学介质、虚拟机或云平台安装时选用 `iso` 结尾的镜像。
+制作 U 盘安装介质时，建议使用 `-img` 或 `-img.xz` 格式的镜像。`.iso` 镜像采用混合启动（Hybrid）模式，该模式同时支持从光驱和 U 盘启动，但可能未完全遵循 UEFI 规范，直接写入 U 盘可能导致启动错误。详见 FreeBSD Project. FreeBSD -.iso files not support written to USB drive[EB/OL]. [2026-03-25]. <https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=236786>. 该 Bug 报告记录了 ISO 镜像直接写入 USB 设备的兼容性问题。建议读者仅在使用光学介质、虚拟机或云平台安装时选用 `iso` 结尾的镜像。
 
 当然，也存在例外情况。部分机器的 UEFI 固件支持从 `.iso` 镜像刻录的 U 盘启动（例如一些老款神舟电脑），但并非所有机器都支持此方式（例如部分小米电脑可能无法引导）。
 
@@ -179,7 +179,7 @@ Rufus 下载地址为 <https://rufus.ie/zh>，该工具为 Windows 平台开源 
 
 ![Rufus](../.gitbook/assets/rufus.png)
 
-**不建议** 使用 FreeBSD 手册中提到的 win32diskimager，因其对某些镜像格式的处理存在缺陷，尽管实际文件校验值正确，但有时会错误地报告校验失败。类似的，**亦不建议** 使用 Ventoy. Ventoy - 多系统启动 USB 启动盘制作工具[EB/OL]. [2026-03-25]. <https://www.ventoy.net/>，该工具为多系统启动 USB 启动盘制作工具，直接加载 ISO 或 IMG 镜像文件，但 Ventoy 的启动加载机制与 FreeBSD 镜像不完全兼容，可能导致启动失败。
+**不建议** 使用 FreeBSD 手册中提到的 win32diskimager，因其对某些镜像格式的处理存在缺陷，尽管实际文件校验值正确，但有时会错误地报告校验失败。类似的，**亦不建议** 使用 Ventoy. Ventoy - 多系统启动 USB 启动盘制作工具[EB/OL]. [2026-03-25]. <https://www.ventoy.net/>. 该工具为多系统启动 USB 启动盘制作工具，直接加载 ISO 或 IMG 镜像文件，但 Ventoy 的启动加载机制与 FreeBSD 镜像不完全兼容，可能导致启动失败。
 
 **读者应仅在 Rufus 无效的情况下再使用 win32diskimager 或 Ventoy。**
 
