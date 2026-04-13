@@ -293,7 +293,7 @@ bindm = $mainMod, mouse:273, resizewindow
 
 ```
 
-## 配置 `kitty.conf`
+## 配置 `kitty.conf` 文件
 
 - 配置文件 `~/.config/kitty/kitty.conf` 示例：
 
