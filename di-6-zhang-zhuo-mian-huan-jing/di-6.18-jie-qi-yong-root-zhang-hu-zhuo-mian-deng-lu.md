@@ -32,7 +32,7 @@ GDM，即 GNOME Display Manager，GNOME 显示管理器。
 
 LightDM，即 Light Display Manager，轻量级显示管理器。
 
-编辑 `/usr/local/etc/pam.d/lightdm` 文件，注释掉 `account requisite pam_securetty.so` 这一行（往最前面加 `#`）
+编辑 `/usr/local/etc/pam.d/lightdm` 文件，注释掉 `account requisite pam_securetty.so` 这一行（往最前面加 `#`）。
 
 重启 LightDM 服务：
 

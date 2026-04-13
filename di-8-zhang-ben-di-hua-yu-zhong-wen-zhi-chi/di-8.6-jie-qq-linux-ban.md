@@ -91,7 +91,7 @@ bash-5.1# gtk-query-immodules-3.0-64 --update-cache   # 刷新缓存
 
 ### 启动 QQ
 
-在 Linux 兼容环境中启动 QQ，禁用沙箱并启用进程内 GPU：
+在 Linux 兼容环境中启动 QQ，禁用沙盒并启用进程内 GPU：
 
 ```sh
 $ /compat/linux/opt/QQ/qq --no-sandbox  --in-process-gpu
@@ -181,7 +181,7 @@ $ exit # 切换回 root
 
 ### 网络错误
 
-如果系统中有多张网卡，例如一块有线网卡和一块无线网卡，打开 QQ 后会出现网络错误提示，此时需要为未使用的网卡随机分配一个 IP。
+如果系统中有多块网卡，例如一块有线网卡和一块无线网卡，打开 QQ 后会出现网络错误提示，此时需要为未使用的网卡随机分配一个 IP。
 
 参见其他相关章节。
 
