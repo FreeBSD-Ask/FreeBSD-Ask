@@ -3491,7 +3491,7 @@ DPC，Downstream Port Containment，下行端口控制
 
 DPC 是 PCIe 标准的建议扩展，设计用于自动禁止发生非致命 (或致命) 错误后的链路以便防止可能扩散的数据损坏以及在软件支持时启动错误恢复。
 
-##### EPDC（增强型下行端口控制）
+##### EDPC（增强型下行端口控制）
 
 EDPC，Enhanced Downstream Port Containment（增强型下行端口控制）。
 
@@ -3713,7 +3713,7 @@ PCIe 物理层的发送器。如何选取输出摆幅模式的方法是特定于
 
 说明：
 
-此根桥保留的内存范围（1 到 20 MB）。
+此根桥保留的内存范围（1 到 14 MB）。
 
 ##### Reserved I/O（保留 I/O）
 
