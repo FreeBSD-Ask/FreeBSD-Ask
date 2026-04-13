@@ -30,7 +30,7 @@ fcitx 即“小企鹅输入法”，其英文全称为“A flexible input method
 # cd /usr/ports/chinese/fcitx5-chinese-addons/ && make install clean # 输入法
 ```
 
-在 SLiM 窗口管理器下会提示找不到 IBus。
+在 SLiM 登录管理器下会提示找不到 IBus。
 
 ### Fcitx 5.X 开启自启
 
