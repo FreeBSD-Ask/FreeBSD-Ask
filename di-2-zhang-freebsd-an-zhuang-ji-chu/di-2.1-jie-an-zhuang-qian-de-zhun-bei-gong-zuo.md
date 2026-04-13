@@ -137,7 +137,7 @@ FreeBSD 的所有安装介质（包括但不限于虚拟机镜像）默认均不
 
 > **技巧**
 >
-> 网络传输可能产生错误，导致下载的文件与原始镜像不一致。因此，需要一种机制来验证所获取的文件与官方发布的镜像完全一致，这就需要使用 **校验值**。Windows 10 和 11 系统自带命令行工具 `CertUtil`，可用于计算校验值，无需安装额外软件。读者还可参考 Dell Technologies. 如何确定用于安全应用程序的文件 SHA-256 哈希[EB/OL]. [2026-03-25]. <https://www.dell.com/support/kbdoc/zh-cn/000130826/%E5%A6%82%E4%BD%95%E7%A1%AE%E5%AE%9A%E7%94%A8%E4%BA%8E%E5%AE%89%E5%85%A8%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%96%87%E4%BB%B6-sha-256-%E5%93%88%E5%B8%8C>。该文档介绍 Windows 系统下文件 SHA-256 哈希值计算方法。
+> 网络传输可能产生错误，导致下载的文件与原始镜像不一致。因此，需要一种机制来验证所获取的文件与官方发布的镜像完全一致，这就需要使用 **校验值**。Windows 10 和 11 系统自带命令行工具 `CertUtil`，可用于计算校验值，无需安装额外软件。读者还可参考 Dell Technologies. 如何确定用于安全应用程序的文件 SHA-256 哈希[EB/OL]. [2026-03-25]. <https://www.dell.com/support/kbdoc/zh-cn/000130826/%E5%A6%82%E4%BD%95%E7%A1%AE%E5%AE%9A%E7%94%A8%E4%BA%8E%E5%AE%89%E5%85%A8%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%96%87%E4%BB%B6-sha-256-%E5%93%88%E5%B8%8C>. 该文档介绍 Windows 系统下文件 SHA-256 哈希值计算方法。
 
 FreeBSD 镜像 BT 种子下载地址（非官方，建议检查文件校验和后使用）：<https://fosstorrents.com/distributions/freebsd/>
 
