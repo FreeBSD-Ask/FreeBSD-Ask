@@ -82,37 +82,21 @@ Choose the system default language（选择系统默认语言）
 
 底部右侧的键盘帮助区域列出了 BIOS 界面中常用的操作快捷键，帮助用户快速导航和操作 BIOS 界面。
 
-- →↑↓←: Select Screen / Item
+- →↑↓←：Select Screen / Item（选择页面/项目）
 
- →↑↓←：选择页面 / 项目
+- Enter：Select（选择）
 
-- Enter: Select
+- +/-：Change Opt.（更改选项）
 
- Enter：选择
+- F1：General Help（常规帮助）
 
-- +/-: Change Opt.
+- F2：Previous Values（上一次的值）
 
- +/-：更改选项
+- F3：Optimized Defaults（加载优化默认值）
 
-- F1: General Help
+- F4：Save & Exit（保存并退出）
 
- F1：常规帮助
-
-- F2: Previous Values
-
- F2：上一次的值
-
-- F3: Optimized Defaults
-
- F3：加载优化默认值
-
-- F4: Save & Exit
-
- F4：保存并退出
-
-- ESC: Exit
-
- ESC：退出
+- ESC：Exit（退出）
 
 - K/k：对右上角的提示内容向上翻页
 - M/m：对右上角的提示内容向下翻页

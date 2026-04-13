@@ -242,4 +242,4 @@ Windows 会直接读取 RTC 的结果，并将其视为本地时间，即 Local 
 
 1. 在 FreeBSD 中挂载一个 Windows NTFS 分区，使用 converters/dos2unix 转换 3 个包含 Windows 换行符的文本文件，并尝试使之自动化，提交 PR 到 FreeBSD Ports。
 2. 查找 FreeBSD 内核源码中负责处理大小写敏感的 UFS/ZFS 文件系统相关代码，进行注释和分析。
-3. 尝试修改 Windows 的设置，使其支持 UTC + 8 时间。
+3. 尝试修改 Windows 的设置，使其支持 UTC+8 时间。

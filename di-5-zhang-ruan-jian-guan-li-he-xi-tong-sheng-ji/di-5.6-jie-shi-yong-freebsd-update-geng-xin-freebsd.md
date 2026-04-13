@@ -526,7 +526,7 @@ DFreeBSD/amd64 EFI loader, Revision 3.0
 # pkg bootstrap -f
 ```
 
-### FreeBSD 升级出错，导致缺少 ntp 用户
+### FreeBSD 升级出错，导致缺少 ntpd 用户
 
 终端执行命令：
 

@@ -112,7 +112,7 @@ quarterly 分支类似于 Debian 的 Stable 版本，通过固定软件包版本
 
 - FreeBSD Project. Ports/QuarterlyBranch[EB/OL]. [2026-03-25]. <https://wiki.freebsd.org/Ports/QuarterlyBranch>.
 
-## 15.0-RELEASE 快速切换 pkg 软件源到中国科学技术大学开源镜像站
+## 15.0-RELEASE 快速切换 pkg 软件源到中国科学技术大学开源软件镜像站
 
 该配置要求读者在安装过程中使用 pkgbase 方式。可以帮助读者配置 pkg 二进制包源（ports 构建而来）、pkgbase 源、内核模块源。
 
@@ -234,7 +234,7 @@ FreeBSD: { enabled: no }
 
 ### 15.0-RELEASE
 
-自 `FreeBSD 15.0-RELEASE` 以降，`FreeBSD` 源的名称，由 `FreeBSD-kmods` 变更为 `FreeBSD-ports`。
+自 `FreeBSD 15.0-RELEASE` 以降，`FreeBSD` 源的名称，由 `FreeBSD` 变更为 `FreeBSD-ports`。
 
 #### 官方源
 
@@ -308,7 +308,7 @@ USTC-kmods: {
 
 自 `FreeBSD 15.0-RELEASE` 以降，`kmods` 源的名称，由 `FreeBSD-kmods` 变更为 `FreeBSD-kmods-ports`。
 
-#### 中国科学技术大学开源镜像站
+#### 中国科学技术大学开源软件镜像站
 
 编辑 `/usr/local/etc/pkg/repos/USTC.conf` 文件，写入以下配置 **之一**：
 
@@ -325,7 +325,7 @@ USTC-ports-kmods: {
 FreeBSD-ports-kmods: { enabled: no }
 ```
 
-- latest 分支
+- latest 分支：
 
 ```sh
 USTC-ports-kmods: {
@@ -459,7 +459,7 @@ USTC-base: {
 使用 git 拉取 Ports 源代码：
 
 ```sh
-# git clone  --filter=tree:0 https://mirrors.ustc.edu.cn/freebsd-ports/ports.git /usr/ports
+# git clone --filter=tree:0 https://mirrors.ustc.edu.cn/freebsd-ports/ports.git /usr/ports
 ```
 
 > **注意**
@@ -487,7 +487,7 @@ USTC-base: {
 然后处理压缩包：
 
 ```sh
-# tar -zxvf ports.tar.gz -C /usr/ # 将解压至路径 /usr/src
+# tar -zxvf ports.tar.gz -C /usr/ # 将解压至路径 /usr/ports
 # rm ports.tar.gz # 删除存档
 ```
 

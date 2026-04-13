@@ -459,7 +459,7 @@ jbig2dec-0.20_1: /usr/local/bin/jbig2dec misses libmd.so.6
 jbig2dec-0.20_1: /usr/local/lib/libjbig2dec.so misses libmd.so.6
 ```
 
-按照上述软件列表，使用 Ports 逐个重新编译即可（RELEASE 可以直接用 `pkg` 更新。）。
+按照上述软件列表，使用 Ports 逐个重新编译即可（RELEASE 可以直接用 `pkg` 更新）。
 
 #### 附录：`bsdadminscripts2` 扩展用法及参考文献
 

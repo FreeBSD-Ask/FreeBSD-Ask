@@ -10,7 +10,7 @@
 
 本小节用于配置系统代理相关参数，包括内存控制器、PCIe 接口等设置。
 
-以下选项可能与 PCH-IO Configuration（平台控制器集线器 I/O 配置）中的部分南桥相关选项存在重叠。这是因为 System Agent（SA）Configuration（系统代理配置）用于控制由 CPU 直接引出的 PCIe 接口。
+以下选项可能与 PCH-IO Configuration（平台控制器中枢 I/O 配置）中的部分南桥相关选项存在重叠。这是因为 System Agent（SA）Configuration（系统代理配置）用于控制由 CPU 直接引出的 PCIe 接口。
 
 在 Intel CPU 架构中（第二代 Sandy Bridge 及以后），System Agent 是一个集成在 CPU 芯片内部的模块，它作为处理器与系统组件之间的核心互连单元，包含了：
 
@@ -283,7 +283,7 @@ Disabled（禁用）
 
 说明：
 
-作用未知。
+其具体作用尚不明确。
 
 ##### Early ReadMPR Timing Centering 2D（内存初始化的早期阶段时序中心化 2D）
 
@@ -297,7 +297,7 @@ Disabled（禁用）
 
 2D（Two-Dimensional）：表示训练同时作用于两个维度，例如驱动强度和终端电阻。
 
-作用未知。
+其具体作用尚不明确。
 
 ##### Read MPR Training（读多用途寄存器训练）
 
@@ -311,7 +311,7 @@ Disabled（禁用）
 
 Multi Purpose Register，多用途寄存器
 
-作用未知。
+其具体作用尚不明确。
 
 ##### Receive Enable Training（接收使能训练）
 
@@ -323,7 +323,7 @@ Disabled（禁用）
 
 说明：
 
-作用未知。
+其具体作用尚不明确。
 
 ##### Jedec Write Levelling（JEDEC 写入校准）
 
@@ -337,7 +337,7 @@ Disabled（禁用）
 
 JEDEC，Joint Electron Device Engineering Council，联合电子设备工程委员会，发布了一系列 JEDEC 标准。
 
-作用未知。
+其具体作用尚不明确。
 
 ##### Early Write Time Centering 2D（早期写入时序中心化 2D）
 
@@ -349,7 +349,7 @@ Disabled（禁用）
 
 说明：
 
-作用未知。
+其具体作用尚不明确。
 
 ##### Early Read Time Centering 2D（早期读取时序中心化 2D）
 
@@ -361,7 +361,7 @@ Disabled（禁用）
 
 说明：
 
-作用未知。
+其具体作用尚不明确。
 
 ##### Write Timing Centering 1D（写入时序中心化 1D）
 
@@ -373,7 +373,7 @@ Disabled（禁用）
 
 说明：
 
-作用未知。
+其具体作用尚不明确。
 
 ##### Write Voltage Centering 1D（写入电压中心化 1D）
 
@@ -385,7 +385,7 @@ Disabled（禁用）
 
 说明：
 
-作用未知。
+其具体作用尚不明确。
 
 ##### Read Timing Centering 1D（读取时序中心化 1D）
 
@@ -397,7 +397,7 @@ Disabled（禁用）
 
 说明：
 
-作用未知。
+其具体作用尚不明确。
 
 ##### Dimm ODT Training\*（内存模块终端电阻训练）
 
@@ -439,7 +439,7 @@ Disabled（禁用）
 
 控制内存模块（DIMM）上的 RON 终端电阻训练开关。
 
-作用未知。
+其具体作用尚不明确。
 
 ##### Write Drive Strength/Equalization 2D\*（写入驱动强度/均衡 2D\*）
 
@@ -451,7 +451,7 @@ Disabled（禁用）
 
 说明：
 
-作用未知。
+其具体作用尚不明确。
 
 ##### Write Slew Rate Training\*（写入上升/下降斜率训练\*）
 
@@ -475,7 +475,7 @@ Disabled（禁用）
 
 说明：
 
-作用未知。
+其具体作用尚不明确。
 
 ##### Read Equalization Training\*（读取均衡训练\*）
 
@@ -487,7 +487,7 @@ Disabled（禁用）
 
 说明：
 
-作用未知。
+其具体作用尚不明确。
 
 ##### Read Amplifier Training\*（读取放大器训练）
 
@@ -511,7 +511,7 @@ Disabled（禁用）
 
 说明：
 
-作用未知。
+其具体作用尚不明确。
 
 ##### Read Timing Centering 2D（读取时序中心化 2D）
 
@@ -523,7 +523,7 @@ Disabled（禁用）
 
 说明：
 
-作用未知。
+其具体作用尚不明确。
 
 ##### Command Voltage Centering（命令信号电压中心化）
 
@@ -595,7 +595,7 @@ Disabled（禁用）
 
 说明：
 
-作用未知。
+其具体作用尚不明确。
 
 ##### CMD CTL CLK Slew Rate Training（命令控制时钟上升/下降速率训练）
 
@@ -607,7 +607,7 @@ Disabled（禁用）
 
 说明：
 
-作用未知。
+其具体作用尚不明确。
 
 ##### CMD/CTL DS & E 2D（命令/控制信号驱动强度与均衡 2D）
 
@@ -713,7 +713,7 @@ Disabled（禁用）
 
 说明：
 
-作用未知。
+其具体作用尚不明确。
 
 ##### Read Vref Decap Training（读取 Vref Decap 训练）
 
@@ -915,7 +915,7 @@ Both
 
 说明：
 
-功能未知
+其具体作用尚不明确。
 
 ##### Margin Check Limit L2（边际检查限制 L2）
 
@@ -1425,7 +1425,7 @@ Disabled（禁用）
 
 这是只读设置，无法修改。
 
-启用／禁用通道哈希支持。注意：仅在内存交织（Memory Interleaving，即通过在不同内存上的交错访问来提高内存访问性能的技术）模式下有效。
+启用/禁用通道哈希支持。注意：仅在内存交织（Memory Interleaving，即通过在不同内存上的交错访问来提高内存访问性能的技术）模式下有效。
 
 #### Ch Hash Mask（通道哈希掩码）
 
@@ -1683,7 +1683,7 @@ Disabled（禁用）
 
 说明：
 
-启用／禁用 MRC 的快速通道。即关闭每次启动时的内存训练过程。
+启用/禁用 MRC 的快速通道。即关闭每次启动时的内存训练过程。
 
 #### Rank Margin Tool Per Task（每任务的边际排名）
 
@@ -1695,7 +1695,7 @@ Disabled（禁用）
 
 说明：
 
-启用／禁用在每个主要训练步骤运行 Rank Margin Tool（RMT）边际排名工具。
+启用/禁用在每个主要训练步骤运行 Rank Margin Tool（RMT）边际排名工具。
 
 #### Training Tracing（训练跟踪）
 
@@ -1707,7 +1707,7 @@ Disabled（禁用）
 
 说明：
 
-启用／禁用在每个主要训练步骤打印当前的训练状态。
+启用/禁用在每个主要训练步骤打印当前的训练状态。
 
 #### Lpddr Mem WL Set（设定内存写入延迟）
 
@@ -2069,7 +2069,7 @@ Disabled（禁用）
 
 说明：
 
-参见：使用英特尔 ® 显卡播放蓝光光盘常见问题解答[EB/OL]. [2026-03-26]. <https://www.intel.cn/content/www/cn/zh/support/articles/000006968/graphics.html>
+参见：使用英特尔® 显卡播放蓝光光盘常见问题解答[EB/OL]. [2026-03-26]. <https://www.intel.cn/content/www/cn/zh/support/articles/000006968/graphics.html>
 
 PAVP，Protected Audio Video Path，受保护的音频视频路径。
 
@@ -2167,7 +2167,7 @@ Disabled（禁用）
 
 启用专用按钮。
 
-作用未知。
+其具体作用尚不明确。
 
 #### LCD Control（LCD 液晶显示器控制）
 
@@ -2303,7 +2303,7 @@ LFP，Low-Voltage Differential Signaling Panel，内置显示器
 
 设置内置显示器的背光亮度
 
-#### Intel(R) UltraBook Event Support（Intel 超极本事件支持）
+#### Intel® UltraBook Event Support（Intel 超极本事件支持）
 
 超极本（UltraBook）是英特尔在很久以前（2010）推出的电脑品牌。
 
@@ -2435,7 +2435,7 @@ HW EQ（硬件动态均衡）
 
 说明：
 
-作用未知。
+其具体作用尚不明确。
 
 ##### DMI Gen4 TRC0 Cpre Lan0（DMI Gen4 通道 0 发射器前/后游标系数值）
 
@@ -2505,7 +2505,7 @@ DMI Gen3 TRC0 Cpre Lan0（DMI Gen3 通道 0 发射器前/后游标系数值） \
 
 DMI Gen3 通道发射器前游标和后游标系数值。
 
-作用未知。
+其具体作用尚不明确。
 
 ##### DMI Gen3 TRC0 Cpost Lan0（DMI Gen3 通道 0 发射器前/后游标系数值）
 
@@ -2599,15 +2599,15 @@ Manual（手动）
 
 当 CPU 检测到系统空闲（如操作系统空闲线程运行）时，可以通过硬件机制进入该模式以降低功耗。
 
-### VT-d（英特尔 ® 定向 I/O 架构虚拟化技术/IOMMU）
+### VT-d（英特尔® 定向 I/O 架构虚拟化技术/IOMMU）
 
 VT-d 即 Intel IOMMU 技术，虚拟化 I/O 技术。
 
-VT-d，Intel® Virtualization Technology for Directed I/O，英特尔 ® 定向 I/O 架构虚拟化技术。用于提高系统的安全性和可靠性，并改善 I/O 设备在虚拟化环境中的性能。
+VT-d，Intel® Virtualization Technology for Directed I/O，英特尔® 定向 I/O 架构虚拟化技术。用于提高系统的安全性和可靠性，并改善 I/O 设备在虚拟化环境中的性能。
 
 VT-d 是一项位于 CPU、内存和 I/O 设备之间的硬件机制，其主要功能是将 I/O 设备的 DMA 访问请求和中断请求重定向到 VMM 设定的虚拟机中。
 
-参见 Intel VT-d（1）- 简介[EB/OL]. [2026-03-26]. <https://zhuanlan.zhihu.com/p/50640466>；定向 I/O 架构规范英特尔 ® 虚拟化技术[EB/OL]. [2026-03-26]. <https://www.intel.cn/content/www/cn/zh/content-details/774206/intel-virtualization-technology-for-directed-i-o-architecture-specification.html>
+参见 Intel VT-d（1）- 简介[EB/OL]. [2026-03-26]. <https://zhuanlan.zhihu.com/p/50640466>；定向 I/O 架构规范英特尔® 虚拟化技术[EB/OL]. [2026-03-26]. <https://www.intel.cn/content/www/cn/zh/content-details/774206/intel-virtualization-technology-for-directed-i-o-architecture-specification.html>
 
 虚拟机监控器（VMM）系统可以使用 VT-d 来管理多个虚拟机对同一物理 I/O 设备的访问（即硬件直通）。
 
@@ -2669,7 +2669,7 @@ Disabled（禁用）
 
 说明：
 
-启用／禁用 SA 热管理设备。
+启用/禁用 SA 热管理设备。
 
 SA Thermal Device 是处理器内部的一个关键组件，用于监测系统代理（System Agent）的温度状态。
 
@@ -2727,11 +2727,11 @@ Disabled（禁用）
 
 系统报告最初发布的芯片组版本标识和 CPU 兼容版本标识信息。
 
-启用／禁用 SA CRID 和 TCSS CRID 控制，以支持 Intel SIPP。
+启用/禁用 SA CRID 和 TCSS CRID 控制，以支持 Intel SIPP。
 
-Intel SIPP，The Intel Stable IT Platform Program，英特尔 ® 稳定 IT 平台计划，是 vPro® platform 的一部分。参见借助英特尔 ® 稳定 IT 平台计划实现可靠的稳定性[EB/OL]. [2026-03-26]. <https://www.intel.cn/content/www/cn/zh/architecture-and-technology/vpro/stable-it-platform-program/overview.html>；什么是英特尔 ® vPro®？[EB/OL]. [2026-03-26]. <https://www.intel.cn/content/www/cn/zh/architecture-and-technology/vpro/what-is-vpro.html>
+Intel SIPP，The Intel Stable IT Platform Program，英特尔® 稳定 IT 平台计划，是 vPro® platform 的一部分。参见借助英特尔® 稳定 IT 平台计划实现可靠的稳定性[EB/OL]. [2026-03-26]. <https://www.intel.cn/content/www/cn/zh/architecture-and-technology/vpro/stable-it-platform-program/overview.html>；什么是英特尔® vPro®？[EB/OL]. [2026-03-26]. <https://www.intel.cn/content/www/cn/zh/architecture-and-technology/vpro/what-is-vpro.html>
 
-英特尔 ® 稳定 IT 平台计划（英特尔 ® SIPP）能让 IT 部门至少在 15 个月内或在下一代产品发布之前，几乎不用修改平台组件和驱动程序。
+英特尔® 稳定 IT 平台计划（英特尔® SIPP）能让 IT 部门至少在 15 个月内或在下一代产品发布之前，几乎不用修改平台组件和驱动程序。
 
 ### WRC Feature（写缓存功能）
 
@@ -2743,7 +2743,7 @@ Disabled（禁用）
 
 说明：
 
-启用／禁用 IOP 的 SA WRC（写缓存）功能。启用后，支持最多 10 个设备分配到环路并进入 LLC（最后一级缓存）。
+启用/禁用 IOP 的 SA WRC（写缓存）功能。启用后，支持最多 10 个设备分配到环路并进入 LLC（最后一级缓存）。
 
 WRC，Write Cache，写缓存。WRC 功能启用 Intel® 数据直通 I/O 技术（Intel® DDIO），使 I/O 设备能够利用最后一级缓存（LLC）作为中间缓冲区。此功能不对每个 CPU 的最后一级缓存进行分区。
 
@@ -2759,7 +2759,7 @@ Disabled（禁用）
 
 说明：
 
-启用／禁用 4 GB 以上的内存映射 I/O（Memory Mapped I/O）BIOS 分配。
+启用/禁用 4 GB 以上的内存映射 I/O（Memory Mapped I/O）BIOS 分配。
 
 当 Aperture Size（显存孔径）设置为 2048 MB 时，该功能会自动启用。
 
@@ -2785,7 +2785,7 @@ IPU，Infrastructure Processing Unit，英特尔智能处理单元。
 
 IPU 是一种专门为网络处理设计的处理器，它包含了专门的硬件加速功能，用于提升数据处理和传输效率。
 
-参见：英特尔 ® Infrastructure Processing Unit（英特尔 ® IPU）[EB/OL]. [2026-03-26]. <https://www.intel.cn/content/www/cn/zh/products/details/network-io/ipu.html>
+参见：英特尔® Infrastructure Processing Unit（英特尔® IPU）[EB/OL]. [2026-03-26]. <https://www.intel.cn/content/www/cn/zh/products/details/network-io/ipu.html>
 
 ### MIPI Camera Configuration（MIPI 摄像头配置）
 
@@ -2809,7 +2809,7 @@ Disabled（禁用）
 
 说明：
 
-启用／禁用通过本地 I/O 或 USB I/O 扩展方式的 CVF 功能。
+启用/禁用通过本地 I/O 或 USB I/O 扩展方式的 CVF 功能。
 
 CVF，Intel Clover Falls，是英特尔推出的一种 AI 协处理器。是一种英特尔集成传感器解决方案。参见：Dell Laptop Camera Not Working in Teams, Zoom, and Windows Camera Application[EB/OL]. [2026-03-26]. <https://www.dell.com/support/kbdoc/en-hk/000248760/laptop-mipi-camera-may-not-work-under-windows?lwp=rt>
 
@@ -2881,7 +2881,7 @@ IMX135, OV5693, IMX179, OV8858, OV2740-IVCAM, OV9728, IMX188, IMX208, OV5670, OV
 
 PTC, CRD-D, CRD-G, Kilshon-PPV, CRD-G2
 
-作用未知。
+其具体作用尚不明确。
 
 ##### GPIO control（GPIO 控制）
 
@@ -2925,7 +2925,7 @@ Enabled（启用）
 
 说明：
 
-作用未知。
+其具体作用尚不明确。
 
 ##### Privacy LED（隐私指示灯）
 
@@ -3146,7 +3146,7 @@ Disabled（禁用）
 
 以下是 PCH-IO 配置的相关内容。
 
-PCH，Platform Controller Hub（平台控制器集线器），即南桥。作为平台控制器集线器，PCH 负责管理各类低速和中速外设的互连，这个设置即主板 I/O 设置。
+PCH，Platform Controller Hub（平台控制器中枢），即南桥。作为平台控制器中枢，PCH 负责管理各类低速和中速外设的互连，这个设置即主板 I/O 设置。
 
 ![平台控制总线配置](../.gitbook/assets/image-20250726134142-q2c0wfy.png)
 
@@ -3517,7 +3517,7 @@ Enabled（启用）
 
 Disabled（禁用）
 
-参见：为什么使用适用于 PCI Express *的英特尔 ® FPGA P-Tile/H-Tile、Avalon® 流传输和 Avalon® 内存映射 IP 时，在高级错误报告（AER）中记录非严重 PCIe* 错误？[EB/OL]. [2026-03-26]. <https://www.intel.cn/content/www/cn/zh/support/programmable/articles/000080831.html>
+参见：为什么使用适用于 PCI Express *的英特尔® FPGA P-Tile/H-Tile、Avalon® 流传输和 Avalon® 内存映射 IP 时，在高级错误报告（AER）中记录非严重 PCIe* 错误？[EB/OL]. [2026-03-26]. <https://www.intel.cn/content/www/cn/zh/support/programmable/articles/000080831.html>
 
 - FER（PCIe 设备致命错误报告）
 
@@ -3921,7 +3921,7 @@ Unknown（未知）
 
 此项不可设置。
 
-作用未知。
+其具体作用尚不明确。
 
 #### Port x（端口 x）
 
@@ -4013,7 +4013,7 @@ Disabled（禁用）
 
 说明：
 
-启用／禁用 SATA 端口 0 的 DevSlp（设备休眠）功能。要使 DevSlp 正常工作，硬盘和 SATA 端口都必须支持 DevSlp 功能，否则可能会出现意外行为。启用前请确认主板设计是否支持此功能。
+启用/禁用 SATA 端口 0 的 DevSlp（设备休眠）功能。要使 DevSlp 正常工作，硬盘和 SATA 端口都必须支持 DevSlp 功能，否则可能会出现意外行为。启用前请确认主板设计是否支持此功能。
 
 设备睡眠（或 DevSleep / DevSlp）是某些 SATA 设备中的一种新功能，它允许设备进入低功耗的“设备睡眠”状态。例如，在 DevSleep 模式下，Intel® 固态硬盘 Pro 2500 系列（2.5 英寸）的功耗仅为 5 毫瓦，而处于空闲状态时的功耗为 55 毫瓦。
 
@@ -4173,9 +4173,9 @@ Disabled（禁用）
 
 HSII, HS Interrupt IN Alarm
 
-启用／禁用 HSII 功能。启用该功能可能会导致功耗增加。
+启用/禁用 HSII 功能。启用该功能可能会导致功耗增加。
 
-作用未知。参见：TigerLake Intel® Firmware Support Package (FSP) Integration Guide[EB/OL]. [2026-03-26]. <https://raw.githubusercontent.com/intel/FSP/master/TigerLakeFspBinPkg/Docs/TigerLake_FSP_Integration_Guide.pdf>
+其具体作用尚不明确。参见：TigerLake Intel® Firmware Support Package (FSP) Integration Guide[EB/OL]. [2026-03-26]. <https://raw.githubusercontent.com/intel/FSP/master/TigerLakeFspBinPkg/Docs/TigerLake_FSP_Integration_Guide.pdf>
 
 #### xHCI Compliance Mode（xHCI 合规模式）
 
@@ -4927,7 +4927,7 @@ Disabled（禁用）
 
 消息发送后，该字段会自动恢复为禁用状态。
 
-作用未知。
+其具体作用尚不明确。
 
 #### SPI_0
 
@@ -5097,7 +5097,7 @@ Disabled（禁用）
 
 说明：
 
-启用／禁用由热传感器发起的自动数据链路宽度协商，即 DMI 热传感器自动数据链路宽度调整功能。
+启用/禁用由热传感器发起的自动数据链路宽度协商，即 DMI 热传感器自动数据链路宽度调整功能。
 
 ##### Thermal Sensor 0 Width（热传感器 0 数据链路宽度）
 
@@ -5181,7 +5181,7 @@ Disabled（禁用）
 
 打开或关闭 SATA 端口备用快速初始化。
 
-作用未知。
+其具体作用尚不明确。
 
 ##### Tdispatch（SATA 端口备用快速初始化值）
 
@@ -5197,7 +5197,7 @@ Disabled（禁用）
 
 设置 SATA 端口备用快速初始化值。
 
-作用未知。
+其具体作用尚不明确。
 
 ##### Tinactive（SATA 端口 Tinactive 的值）
 
@@ -5211,7 +5211,7 @@ Disabled（禁用）
 
 设置 SATA 端口 Tinactive 的值。
 
-作用未知。
+其具体作用尚不明确。
 
 ### Skip VCC_AUX Configuration（跳过 VCC_AUX 辅助电源轨配置）
 
@@ -5227,7 +5227,7 @@ VCC_AUX 为辅助电源轨，用于为 FPGA 内部的各种逻辑资源模块提
 
 参见：Cyclone® V SoC 设备中使用的 VCC_AUX 和 VCC_AUX_SHARED 电源轨是什么？[EB/OL]. [2026-03-26]. <https://www.intel.cn/content/www/cn/zh/support/programmable/articles/000086743.html>
 
-作用未知。
+其具体作用尚不明确。
 
 ### FIVR Configuration（全集成电压调节模块配置）
 
@@ -5295,7 +5295,7 @@ Disabled（禁用）
 
 为外部电压轨配置 TARGET_VOLT_LEVEL。
 
-作用未知。
+其具体作用尚不明确。
 
 #### External Rails Voltage and Current Settings（外部电压轨的电压与电流设置）
 
@@ -5438,7 +5438,7 @@ Disabled（禁用）
 
 说明：
 
-功能未知
+其具体作用尚不明确。
 
 ### PCH Lan controller（PCH 局域网控制器）
 
@@ -5638,7 +5638,7 @@ Enabled（启用）
 
 Disabled（禁用）
 
-启用／禁用 S0ix 子状态。
+启用/禁用 S0ix 子状态。
 
 此设置仅用于测试目的。
 
@@ -5726,7 +5726,7 @@ Disabled（禁用）
 
 说明：
 
-在早期阶段启用／禁用 8254 时钟门控。启用 8254CGE（CGE，Clock Gating Enable，启用时钟门控）是支持 SLP_SO 所必需的。平台也可以在后期阶段禁用该策略并设置 8254CGE。
+在早期阶段启用/禁用 8254 时钟门控。启用 8254CGE（CGE，Clock Gating Enable，启用时钟门控）是支持 SLP_SO 所必需的。平台也可以在后期阶段禁用该策略并设置 8254CGE。
 
 8254 是一种 PIT（Programmable Interval Timer，可编程定时器），它利用若干个寄存器来进行定时和计时的操作。GATE 门控信号实现定时控制与事件计数功能。
 
@@ -5852,7 +5852,7 @@ Disabled（禁用）
 
 启用此项后，落入特定内存区域的内存周期（memory cycles）将被重定向到 SPI 闪存控制器。
 
-作用未知。
+其具体作用尚不明确。
 
 ### ACPI L6D PME Handling（ACPI 中 L6D（_L6D）PME 事件处理）
 
@@ -5866,7 +5866,7 @@ Disabled（禁用）
 
 BIOS 可以通过 ACPI 代码将特定方法关联到某个特定的 GPE。在本例中，\_L6D 是一个电平触发事件的方法。BIOS-ACPI 可以检查每个需要通过 GPE 唤醒的设备的 PMEENABLE 和 PMESTATUS。
 
-作用未知。
+其具体作用尚不明确。
 
 ### Beep On（蜂鸣器）
 
@@ -5886,9 +5886,9 @@ PSE，Programmable Service Engine，可编程服务引擎。
 
 参见：借助英特尔的首个物联网增强型平台，推动性能、集成和多功能性[EB/OL]. [2026-03-26]. <https://www.intel.cn/content/www/cn/zh/products/docs/processors/embedded/enhanced-for-iot-platform-brief.html>
 
-英特尔 ® 可编程服务引擎是专为物联网功能打造的卸载引擎，采用了 ARM Cortex-M7 微控制器。该引擎可为物联网应用程序提供独立的低 DMIPS 计算和低速输入输出，还能为实时计算和时间敏感型同步提供专门服务。
+英特尔® 可编程服务引擎是专为物联网功能打造的卸载引擎，采用了 ARM Cortex-M7 微控制器。该引擎可为物联网应用程序提供独立的低 DMIPS 计算和低速输入输出，还能为实时计算和时间敏感型同步提供专门服务。
 
-英特尔 ® 可编程服务引擎配备了新的功能，如远程带外设备管理、网络代理、嵌入式控制器精简版和传感器控制中心。通过开源代码或预置固件二进制，可以使用灵活的编程方式对其进行配置，从而满足应用需求，并运行基于 ARM 的实时应用程序。
+英特尔® 可编程服务引擎配备了新的功能，如远程带外设备管理、网络代理、嵌入式控制器精简版和传感器控制中心。通过开源代码或预置固件二进制，可以使用灵活的编程方式对其进行配置，从而满足应用需求，并运行基于 ARM 的实时应用程序。
 
 #### PSE Controller（可编程服务引擎控制器）
 
@@ -5900,7 +5900,7 @@ Disabled（禁用）
 
 说明：
 
-启用或禁用英特尔 ® 可编程服务引擎（PSE）。启用后，将显示以下菜单项。
+启用或禁用英特尔® 可编程服务引擎（PSE）。启用后，将显示以下菜单项。
 
 ##### LOG OUTPUT OFFSET（日志输出偏移）
 
@@ -6096,7 +6096,7 @@ Disabled（禁用）
 
 启用或禁用 PSE GBE0 的 DLL（Delay-Locked Loop，延迟锁相环）。启用此功能前，必须先启用 GBE0。
 
-##### PSE GBE0 Tx_Delay（PSE GBE0 Tx 延时）
+##### PSE GBE0 Tx_Delay（PSE GBE0 Tx 延迟）
 
 配置 DLL 从属模块中延迟元件的总数量。默认值为 16，最小值为 1，最大值为 63。
 
@@ -6126,7 +6126,7 @@ Disabled（禁用）
 
 启用或禁用 PSE GBE1 的 DLL（延迟锁相环）。要启用此功能，必须先启用 GBE1 控制器。
 
-##### PSE GBE1 Tx_Delay（PSE GBE1 Tx 延时）
+##### PSE GBE1 Tx_Delay（PSE GBE1 Tx 延迟）
 
 配置 DLL 从属模块中延迟元件的总数量。默认值为 16，最小值为 1，最大值为 63。
 
@@ -6228,7 +6228,7 @@ Disabled（禁用）
 
 说明：
 
-启用／禁用时间敏感局域网控制器。
+启用/禁用时间敏感局域网控制器。
 
 #### PCH TSN GBE Multi-Vc（平台控制器中枢的时间敏感网络千兆以太网多虚拟通道）
 
@@ -6254,7 +6254,7 @@ Disabled（禁用）
 
 SGMII：Serial Gigabit Media Independent Interface，串行千兆媒体独立接口，可促进网络设备之间的高速通信。
 
-为 PCH TSN GBE 启用／禁用 SGMII 模式。处于同一 PLL 公共通道上的 SGMII 模式端口必须使用相同的链路速度。如果 TSN 端口使用了相同的 PLL 公共通道，可能需要禁用 SATA 或 UFS。请确保 IFWI 为 SGMII 设置了正确的引导配置。确保 Flex IO 通道分配不为 NONE。
+为 PCH TSN GBE 启用/禁用 SGMII 模式。处于同一 PLL 公共通道上的 SGMII 模式端口必须使用相同的链路速度。如果 TSN 端口使用了相同的 PLL 公共通道，可能需要禁用 SATA 或 UFS。请确保 IFWI 为 SGMII 设置了正确的引导配置。确保 Flex IO 通道分配不为 NONE。
 
 #### PCH TSN Link Speed（平台控制器中枢的时间敏感网络链接速率）
 
@@ -6282,7 +6282,7 @@ Disabled（禁用）
 
 说明：
 
-启用／禁用 TSN 多虚拟通道。TSN GBE x 必须归主机所有。
+启用/禁用 TSN 多虚拟通道。TSN GBE x 必须归主机所有。
 
 #### PCH TSN GBE x SGMII Support（平台控制器中枢的时间敏感网络千兆以太网 x 的 SGMII 模式支持）
 
@@ -6294,7 +6294,7 @@ Disabled（禁用）
 
 说明：
 
-启用／禁用 PCH TSN GBE x 的 SGMII 模式。处于 SGMII 模式且使用同一 PLL 公共通道的端口必须使用相同的链路速率。由于该 TSN 端口使用相同的 PLL 公共通道，必须禁用 UFS。请确保 IFWI 已为 SGMII 正确设置了跳线。请确保 Flex IO 通道分配不为 NONE。
+启用/禁用 PCH TSN GBE x 的 SGMII 模式。处于 SGMII 模式且使用同一 PLL 公共通道的端口必须使用相同的链路速率。由于该 TSN 端口使用相同的 PLL 公共通道，必须禁用 UFS。请确保 IFWI 已为 SGMII 正确设置了跳线。请确保 Flex IO 通道分配不为 NONE。
 
 #### PCH TSN GBE x Link Speed（平台控制器中枢的时间敏感网络千兆以太网 x 的链路速率）
 
@@ -6324,7 +6324,7 @@ PLL：Phase Locked Loop，锁相环
 
 ### PinCntrl Driver GPIO Scheme（引脚控制驱动 GPIO 方案）
 
-功能未知。
+其具体作用尚不明确。
 
 ## 课后习题
 

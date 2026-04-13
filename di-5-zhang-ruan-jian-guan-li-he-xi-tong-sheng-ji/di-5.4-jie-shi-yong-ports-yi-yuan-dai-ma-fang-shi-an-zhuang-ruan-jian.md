@@ -170,7 +170,7 @@ Makefile		pkg-plist-client	pkg-plist-plpython
 
 > **注意**
 >
-> ports 和 pkg 可以同时使用，而且大部分人也是这么用的。但是要注意 pkg 的源必须是 latest，否则会存在依赖上的问题（比如 ssl）。latest 源也比 main 分支下的 Ports 发布的更晚（其软件包由 main 构建而来），因此即使使用 latest 源，也可能会出现上述问题，总之有问题出现时就卸载那个 pkg 安装的包，重新使用 ports 编译即可。
+> ports 和 pkg 可以同时使用，而且大部分人也是这么用的。但是要注意 pkg 的源必须是 latest，否则会存在依赖上的问题（比如 ssl）。latest 源也比 main 分支下的 Ports 发布得更晚（其软件包由 main 构建而来），因此即使使用 latest 源，也可能会出现上述问题，总之有问题出现时就卸载那个 pkg 安装的包，重新使用 ports 编译即可。
 
 >**警告**
 >

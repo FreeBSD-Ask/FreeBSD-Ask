@@ -246,7 +246,7 @@ EndSection
 设置 backlight0 背光亮度为 10：
 
 ```sh
-# backlight -f /dev/backlight/backlight0 -10
+# backlight -f /dev/backlight/backlight0 10
 ```
 
 ### 参考文献

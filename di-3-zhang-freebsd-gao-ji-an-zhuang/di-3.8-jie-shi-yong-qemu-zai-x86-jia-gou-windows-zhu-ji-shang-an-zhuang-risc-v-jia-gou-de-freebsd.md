@@ -103,7 +103,7 @@ root@ykla:/home/ykla # locate u-boot.bin
 
 在桌面新建一个文本文件 `qemu.bat`，写入
 
-```powershell
+```batch
 cd /d "C:\Program Files\qemu"
 .\qemu-system-riscv64.exe ^
     -machine virt ^
@@ -192,7 +192,7 @@ Goodbye!
 然后就可以在 Windows 上通过 ssh 连接了（IP 是 `localhost`）：
 
 ```powershell
-ssh ykla@localhost:8022
+ssh -p 8022 ykla@localhost
 ```
 
 即可使用端口 8022（由文件 `qemu.bat` 指定）通过 SSH 连接到本地主机的 ykla 用户。

@@ -112,7 +112,7 @@ $ xfconf-query -c xsettings -p /Gtk/Modules -n -t string -s "appmenu-gtk-module"
 
 ## 软件推荐
 
-FreeBSD 的 Xfce 邮箱客户端推荐使用 `mail/evolution` 文件，可搭配 `xfce4-mailwatch-plugin`、`security/gnome-keyring` 一并使用。
+FreeBSD 的 Xfce 邮箱客户端推荐使用 `mail/evolution` 软件，可搭配 `xfce4-mailwatch-plugin`、`security/gnome-keyring` 一并使用。
 
 还有一款桌面插件，名为 `x11/xfce4-verve-plugin`。配合设置智能书签，可以查询网页内容。可通过配置 FreeBSD 的 man 手册，实现对所需内容的搜索。
 

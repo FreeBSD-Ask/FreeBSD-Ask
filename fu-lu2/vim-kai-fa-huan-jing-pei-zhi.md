@@ -123,7 +123,7 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 CMake 默认使用系统自带的 Clang 编译器，可以通过以下方式指定使用 clang20：
 
-```ini
+```sh
 $ export CC=clang20       # 设置 C 编译器为 clang20
 $ export CXX=clang++20    # 设置 C++ 编译器为 clang++20
 ```

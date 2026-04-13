@@ -140,7 +140,7 @@ Listen IP:631
 
 ![选择打印机](../.gitbook/assets/cup3.png)
 
-本节中使用的打印机型号为 Brother HL L3228CDW。
+本节中使用的打印机型号为 Brother HL-L3228CDW。
 
 ![打印机详情](../.gitbook/assets/cup4.png)
 
