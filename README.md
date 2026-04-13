@@ -66,7 +66,7 @@ FreeBSD 中文社区未通过其他域名部署本书，唯一官方域名为 `b
 
 受编者水平所限，书中难免存在疏漏与错误。
 
-如遇内容问题或网站技术问题，请发送邮件至 ykla [yklaxds@gmail.com](mailto:yklaxds@gmail.com)。关于内容问题，欢迎通过 GitHub 提交 PR，入口位于桌面端网页当前页面的右下角或底部左下角。
+如遇内容问题或网站技术问题，请发送邮件至 ykla [yklaxds@gmail.com](mailto:yklaxds@gmail.com)。关于内容问题，亦可通过 GitHub 提交 PR，入口位于桌面端网页当前页面的右下角或底部左下角。
 
 社区相关问题请加入 QQ 群后联系群主。
 
