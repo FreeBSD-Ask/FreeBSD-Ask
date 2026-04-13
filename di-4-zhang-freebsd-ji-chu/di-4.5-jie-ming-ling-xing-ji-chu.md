@@ -482,7 +482,7 @@ ykla
 
 ```sh
 $ mkdir ykla
-mkdir: ykla: File exists # 提示已经有了该目录了！
+mkdir: ykla: File exists # 提示该目录已存在。
 ```
 
 ---
