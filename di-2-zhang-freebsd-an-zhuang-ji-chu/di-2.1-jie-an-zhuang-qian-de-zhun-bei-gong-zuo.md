@@ -157,7 +157,7 @@ FreeBSD `-RELEASE` 历史版本下载地址：
 
 ## 刻录 FreeBSD 镜像
 
-下载好 FreeBSD 镜像后，需要将其刻录到 U 盘上才能进行安装。本节将介绍如何刻录 FreeBSD 镜像到 U 盘。
+下载 FreeBSD 镜像后，需要将其刻录到 U 盘上才能进行安装。本节将介绍如何刻录 FreeBSD 镜像到 U 盘。
 
 ### 建议使用 `-img` 或 `-img.xz` 格式的镜像
 
@@ -183,7 +183,7 @@ Rufus 下载地址为 <https://rufus.ie/zh>，该工具为 Windows 平台开源 
 
 **读者应仅在 Rufus 无效的情况下再使用 win32diskimager 或 Ventoy。**
 
-win32diskimager 的下载地址是 <https://sourceforge.net/projects/win32diskimager/files/Archive/>，点击 `win32diskimager-1.0.0-install.exe` 即可下载。
+win32diskimager 的下载地址是 <https://sourceforge.net/projects/win32diskimager/files/Archive/>，选择 `win32diskimager-1.0.0-install.exe` 进行下载。
 
 > **思考题**
 >
@@ -196,7 +196,7 @@ win32diskimager 的下载地址是 <https://sourceforge.net/projects/win32diskim
 
 ## 附录：共享硬件数据到数据库
 
-如果读者也想上传自己的数据到 <https://bsd-hardware.info>，同大家共享，可参照本节进行。
+如果读者也想上传自己的数据到 <https://bsd-hardware.info>，与社区共享，可参照本节进行。
 
 ### 安装 hw-probe
 
@@ -226,7 +226,7 @@ Uploaded to DB, Thank you!
 Probe URL: https://bsd-hardware.info/?probe=f64606c4b1
 ```
 
-打开上面的链接，即可看到设备信息。这里上传的是 Radxa x4 的配置信息。
+访问上述链接即可查看设备信息。此处上传的为 Radxa x4 的配置信息。
 
 其他操作系统可参见 linuxhw. hw-probe/INSTALL.BSD.md[EB/OL]. [2026-03-25]. <https://github.com/linuxhw/hw-probe/blob/master/INSTALL.BSD.md>，该文档提供 BSD 系统上 hw-probe 工具的安装说明。
 
