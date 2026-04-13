@@ -31,7 +31,7 @@ FreeBSD 是一款真正自由（Liberty）的 **操作系统**，在这波谲云
 ![FreeBSD 中文社区 QQ 群](.gitbook/assets/2025-qq.png)
 
 - 微信群：受微信平台限制，需先加入 QQ 群，再联系群主获取最新入群二维码。
-- Discord：<https://discord.gg/j7VhWrhp3e>（需代理，可通过网页访问）
+- Discord：<https://discord.gg/j7VhWrhp3e>（需代理，可通过网页端访问）
 - Telegram 群组：[https://t.me/oh_my_BSD](https://t.me/oh_my_BSD)（需代理）
 
 ## 电子文档
