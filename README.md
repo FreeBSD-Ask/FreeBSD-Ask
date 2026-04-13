@@ -177,4 +177,4 @@ FreeBSD 中文社区未通过其他域名部署本书，唯一官方域名为 `b
 
 ![⭐ 图](https://api.star-history.com/image?repos=FreeBSD-Ask/FreeBSD-Ask&type=date&legend=top-left)
 
-若本书对您有帮助，欢迎为 [GitHub 项目存储库](https://github.com/FreeBSD-Ask/FreeBSD-Ask) 加颗 ⭐。
+若本书对您有所帮助，欢迎为 [GitHub 项目存储库](https://github.com/FreeBSD-Ask/FreeBSD-Ask) 加星标。
