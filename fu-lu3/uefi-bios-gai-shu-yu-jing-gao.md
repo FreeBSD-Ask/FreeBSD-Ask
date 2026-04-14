@@ -46,7 +46,7 @@ UEFI（Unified Extensible Firmware Interface，统一可扩展固件接口）是
 
 目前主流电脑（大约从 2013 年起）配备的都是 UEFI，而不是传统的 BIOS。由于 UEFI 在界面和操作逻辑上与 BIOS 类似，且需要向后兼容，人们仍习惯将其统称为 BIOS 或 UEFI BIOS。
 
-## 设置 BIOS 后无法开机怎么办（CMOS 简介）
+## 设置 BIOS 后无法开机的处理方法（CMOS 简介）
 
 本节介绍 CMOS 的基本概念以及在 BIOS 设置错误后如何恢复系统。
 
