@@ -139,13 +139,13 @@ permit :wheel
 
 - 文件 `wheel` 内容如下：
 
-多加一行，使用 `sudo` 时不需要输入密码：
+再添加一行，使 `sudo` 免密码：
 
 ```sh
 %wheel ALL=(ALL) NOPASSWD:ALL
 ```
 
-### 故障排除与未竟事宜
+### 故障排除与未尽事宜
 
 - `xxx Is Not in the Sudoers File. This Incident Will Be Reported`
 
