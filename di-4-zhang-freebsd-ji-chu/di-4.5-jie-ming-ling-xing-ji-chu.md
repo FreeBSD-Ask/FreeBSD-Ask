@@ -377,7 +377,7 @@ cd is a shell builtin
 /bin/ls was installed by package FreeBSD-runtime-15.snap20250313173555
 ```
 
-如果缺少了哪个命令，一般可以通过安装相应的软件包来获取，比如 `lspci` 命令，来自软件包 `sysutils/pciutils`。但是也有很多命令存在 Linux 主义问题，不兼容其他操作系统，比如 `ip` 命令，来自 GNU 软件包 iproute2。
+如果缺少了哪个命令，一般可以通过安装相应的软件包来获取，比如 `lspci` 命令，来自软件包 `sysutils/pciutils`。但是也有很多命令存在 Linux 主义问题，不兼容其他操作系统，比如 `ip` 命令，来自软件包 iproute2。
 
 ## 常用命令
 
