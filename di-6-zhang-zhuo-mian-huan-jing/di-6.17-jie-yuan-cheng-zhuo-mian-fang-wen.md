@@ -201,7 +201,7 @@ $ ps
 
 关闭服务请使用命令 `vncserver -kill :1`，必须指定端口号。
 
-- 如果启用了防火墙，以 ipfw 为例，在终端输入命令：
+- 如果启用了防火墙，以 IPFW 为例，在终端输入命令：
 
 ```sh
 # ipfw add allow tcp from any to me 5900-5910 in keep-state
