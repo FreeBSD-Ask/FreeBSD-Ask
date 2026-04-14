@@ -2,7 +2,7 @@
 
 本节介绍在 Apple M1 架构设备上，通过 VMware Fusion Pro 虚拟化平台部署 FreeBSD 操作系统的技术方案。
 
-本文基于 macOS 15.3.1、VMware Fusion Pro 13.6.2、FreeBSD 15.0 以及默认的 UEFI 设置进行测试。经实验验证，14.2-RELEASE 亦可正常工作。
+本节基于 macOS 15.3.1、VMware Fusion Pro 13.6.2、FreeBSD 15.0 以及默认的 UEFI 设置进行测试。经实验验证，14.2-RELEASE 亦可正常工作。
 
 > **注意**
 >

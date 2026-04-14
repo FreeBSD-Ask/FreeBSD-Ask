@@ -1,6 +1,6 @@
 # 3.6 基于 Apple M1 和 Parallels Desktop 20 安装 FreeBSD
 
-本文基于 Apple M1（macOS 14.7）及 Parallels Desktop 20.1.3-55743 环境进行实验与演示。
+本节基于 Apple M1（macOS 14.7）及 Parallels Desktop 20.1.3-55743 环境进行实验与演示。
 
 在 Parallels Desktop 20 中，FreeBSD 15.0-CURRENT 的图形界面（不支持自动缩放）、键盘和鼠标均可正常工作，系统整体运行情况良好。
 
@@ -30,7 +30,7 @@
 
 > **警告**
 >
-> 本文基于 Apple M1，故选择的 FreeBSD 架构应为 aarch64。
+> 本节基于 Apple M1，故选择的 FreeBSD 架构应为 aarch64。
 
 ![Parallels Desktop 20 安装 FreeBSD 15.0](../.gitbook/assets/pd5.png)
 
