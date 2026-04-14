@@ -145,7 +145,7 @@ permit :wheel
 %wheel ALL=(ALL) NOPASSWD:ALL
 ```
 
-### 故障排除与未尽事宜
+### 故障排除与未竟事宜
 
 - `xxx Is Not in the Sudoers File. This Incident Will Be Reported`
 
