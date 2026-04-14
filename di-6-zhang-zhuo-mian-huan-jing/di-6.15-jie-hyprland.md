@@ -389,7 +389,7 @@ map ctrl+0                change_font_size current 0
 
 ## 配置 waybar（任务栏）
 
-waybar 的配置文件目录位于 `~/.config/waybar`，其中包含 `config.jsonc` 和 `style.css` 文件。可参考示例配置文件进行配置，示例中需要安装软件包 `noto-emoji` 才能正常显示，可根据需要修改为想要的图标。
+waybar 的配置文件目录位于 `~/.config/waybar`，其中包含 `config.jsonc` 和 `style.css` 文件。可参考示例配置文件进行配置，示例中需要安装软件包 `noto-emoji` 才能正常显示，可根据需要修改为所需的图标。
 
 `config.jsonc` 文件示例：
 
