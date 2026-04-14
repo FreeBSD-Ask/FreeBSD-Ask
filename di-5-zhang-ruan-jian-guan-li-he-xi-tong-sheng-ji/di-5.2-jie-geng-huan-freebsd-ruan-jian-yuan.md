@@ -10,7 +10,7 @@ FreeBSD 提供了多种类型的软件源，分别服务于不同的系统组件
 | ------ | ---- | ---- |
 | pkg | 类似于传统 Linux 的包管理器，用于安装二进制软件包 | 如果不需要以二进制方式安装软件可以不配置。默认未安装 `pkg`，输入 `pkg` 回车会提示安装。**除 pkgbase 外的 pkg 包实际上都是由 Port 直接构建而来** |
 | Ports 框架 | 拉取 Port 的源代码模板（本身不含源代码，只是对第三方软件的描述文件、补丁集和 Makefile）。Ports 是这些 Port 的 **集合**，在 `freebsd-ports` 存储库中统一维护 | Gentoo 的包管理器 Portage（命令为 `emerge`）即是借鉴于此。用于帮助用户从源代码编译安装第三方软件。换言之，Ports（Port 集合）类似 Gentoo 的 [ebuild 数据库](https://mirrors.ustc.edu.cn/help/gentoo.html) |
-| ports 源 | 在 Port 中的 Makefile 文件里会定义若干软件包源码的地址，该软件源用于拉取这些源。因为有时候从官方上游拉取速度不佳 | 等同于 Gentoo 的 [Distfiles 源](https://mirrors.ustc.edu.cn/help/gentoo.html)。不需要以源代码方式编译软件可以不配置 |
+| Ports 源 | 在 Port 中的 Makefile 文件里会定义若干软件包源码的地址，该软件源用于拉取这些源。因为有时候从官方上游拉取速度不佳 | 等同于 Gentoo 的 [Distfiles 源](https://mirrors.ustc.edu.cn/help/gentoo.html)。不需要以源代码方式编译软件可以不配置 |
 | freebsd-update | 用于更新基本系统（内核 + 用户空间） | 预计将在 FreeBSD 16 中退役，转而使用 pkgbase |
 | pkgbase | 将 FreeBSD 基本系统（内核 + 用户空间）打包成 pkg 包，使用 pkg(8) 管理基本系统，取代传统的 freebsd-update 和 distribution | 从 FreeBSD 15.0 开始可选（技术预览，在整个 15.X 周期内可选），预计将在 16.0 成为默认/标准方式。14.x 为实验性支持，可使用 pkgbasify 工具转换。基本系统升级/维护使用 `pkg upgrade`。生产环境建议继续使用传统方式。需配置 FreeBSD-base 源（见下文）。参考 [PkgBase Wiki](https://wiki.freebsd.org/PkgBase)。pkgbase 实际上由存储库 `freebsd-src` 构建而来，与 Ports 完全无关。FreeBSD 基本系统始终是独立于 Ports 而自存的 |
 | kernel modules（kmods） | 内核模块源（包含无线网卡驱动、以太网卡驱动、DRM 显卡驱动等），用于解决小版本之间可能存在的 ABI 不兼容问题 | 参见：Possible solution to the drm-kmod kernel mismatch after upgrade from Bapt[EB/OL]. [2026-03-26]. <https://forums.freebsd.org/threads/possible-solution-to-the-drm-kmod-kernel-mismatch-after-upgrade-from-bapt.96058/#post-682984>、CFT: repository for kernel modules[EB/OL]. [2026-03-26]. <https://lists.freebsd.org/archives/freebsd-ports/2024-December/006997.html>。可以使用命令 `fwget` 自动安装所需驱动 |
@@ -21,7 +21,7 @@ FreeBSD 提供了多种类型的软件源，分别服务于不同的系统组件
 FreeBSD 的 pkg 分为 quarterly（季度，由 Ports 的 XXXXQY 分支构建而来）分支和 latest（实时更新，由 Ports 的 main 分支构建而来）分支两个源。quarterly 目前是 FreeBSD 默认的 pkg 软件分支。
 
 ```sh
-# git clone https://git.FreeBSD.org/ports.git /usr/ports # 克隆 FreeBSD ports 仓库到 /usr/ports 目录
+# git clone https://git.FreeBSD.org/ports.git /usr/ports # 克隆 FreeBSD Ports 仓库到 /usr/ports 目录
 正克隆到 '/usr/ports'...
 remote: Enumerating objects: 6715646, done.
 remote: Counting objects: 100% (936/936), done.
