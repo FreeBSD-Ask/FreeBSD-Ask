@@ -60,7 +60,7 @@
 
 ![非法字符](../.gitbook/assets/Windows2.png)
 
-更多要求参见：微软. 命名文件、路径和命名空间[EB/OL]. [2026-03-26]. <https://learn.microsoft.com/zh-cn/windows/win32/fileio/naming-a-file>。
+更多要求参见：微软. 命名文件、路径和命名空间[EB/OL]. [2026-03-26]. <https://learn.microsoft.com/zh-cn/windows/win32/fileio/naming-a-file>.
 
 > **技巧**
 >
