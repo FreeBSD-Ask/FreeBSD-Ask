@@ -102,11 +102,11 @@ $ git clone --branch releng/15.0 --single-branch --depth 1 https://github.com/fr
 # tar xvf src.txz -C /                                                    # 将源码解压到根目录
 ```
 
->**为何要解压到 `/`？**
+> **为何要解压到 `/`？**
 >
 >因为解压到 `/` 会将源代码解压到 `/usr/src`。如果将上面的路径改为 `/usr/src`，会将源代码解压到 `/usr/src/usr/src`。因为该压缩包是包含路径的。
 
->**技巧**
+> **技巧**
 >
 >如果速度慢可以切换到 <https://mirrors.ustc.edu.cn/freebsd/releases/amd64/15.0-RELEASE/src.txz>
 
@@ -130,7 +130,7 @@ $ git clone --branch releng/15.0 --single-branch --depth 1 https://github.com/fr
 
 需要解决冲突。
 
->**技巧**
+> **技巧**
 >
 >与绝大多数现代 Linux 不同，[FreeBSD](https://github.com/freebsd/freebsd-src/tree/main/contrib/nvi)（OpenBSD）上的 `vi` 是 *[nvi](https://sites.google.com/a/bostic.com/keithbostic/keith-bostic?authuser=0)*（原版 **ex/vi** 的再实现），并不是指向任何 *vim* 的链接符号。基本上很少有人使用，也一般没有学习的必要，因此有必要更换为其他文本编辑器。
 >
@@ -172,8 +172,8 @@ Select: (p) postpone, (df) diff-full, (e) edit,
 
 ## 参考文献
 
-- FreeBSD 中文社区. FreeBSD 手册[EB/OL]. [2026-03-25]. <https://handbook.bsdcn.org/>. FreeBSD 系统管理的完整中文参考指南
-- FreeBSD Project. etcupdate -- manage updates to system files not updated by installworld[EB/OL]. [2026-03-25]. <https://man.freebsd.org/cgi/man.cgi?etcupdate(8)>. 系统配置文件更新工具的官方技术文档
+- FreeBSD 中文社区. FreeBSD 手册[EB/OL]. [2026-03-25]. <https://handbook.bsdcn.org/>. FreeBSD 系统管理的完整中文参考指南。
+- FreeBSD Project. etcupdate -- manage updates to system files not updated by installworld[EB/OL]. [2026-03-25]. <https://man.freebsd.org/cgi/man.cgi?etcupdate(8)>. 系统配置文件更新工具的官方技术文档。
 
 ## 课后习题
 
