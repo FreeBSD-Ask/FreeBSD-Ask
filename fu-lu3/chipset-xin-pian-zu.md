@@ -5674,7 +5674,7 @@ IEH，Isolated Execution Hardening，隔离执行加固。
 
 IEH 模式，可提升系统安全性。
 
-### Enable TC0 Timer（启用 TC0 计时器）
+### Enable TCO Timer（启用 TCO 计时器）
 
 选项：
 
