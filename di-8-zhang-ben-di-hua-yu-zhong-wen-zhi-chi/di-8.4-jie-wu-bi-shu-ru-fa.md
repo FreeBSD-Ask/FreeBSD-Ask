@@ -226,7 +226,7 @@ $ rime_patch wubi86 'switches/@1/reset'
 patch applied.
 ```
 
-此处将 patch 应用于 wubi86 输入法（写入 `wubi86.custom.yaml`），大部分选项与输入法相关，少部分选项为全局设置（写入 `default.custom.yaml`）。
+此处将 patch 应用于 wubi86 输入法（写入 `wubi86.custom.yaml` 文件），大部分选项与输入法相关，少部分选项为全局设置（写入 `default.custom.yaml` 文件）。
 
 重启。
 

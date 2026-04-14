@@ -10,7 +10,7 @@
 
 下载的压缩包中，仅部分文件是必需的启动文件。只需要其中的 `refind` 文件夹，其余文件可忽略。
 
-`refind` 文件夹中也仅包含部分必须的启动文件。所有文件名中包含 `aa64` 或 `ia32` 的文件均可删除（通常仅保留 `x64` 版本）。
+`refind` 文件夹中也仅包含部分必需的启动文件。所有文件名中包含 `aa64` 或 `ia32` 的文件均可删除（通常仅保留 `x64` 版本）。
 
 最终需要保留的文件如下图所示。
 
@@ -57,7 +57,7 @@ EFI/
         └── bootmgfw.efi   # Windows 启动管理器
 ```
 
-使用 [DiskGenius](https://www.diskgenius.com/) 将处理好的 `refind` 文件夹复制到 EFI 系统分区（ESP）的 `EFI` 目录下。
+使用 [DiskGenius](https://www.diskgenius.com/) 将处理后的 `refind` 文件夹复制到 EFI 系统分区（ESP）的 `EFI` 目录下。
 
 ![复制 rEFInd 到 EFI 分区](../.gitbook/assets/shaung13.png)
 
@@ -97,7 +97,7 @@ rEFInd 支持多种图形化主题。
 
 将此 `themes` 目录整体复制到 EFI 系统分区中的 `EFI\refind\` 目录下。
 
-编辑 `refind.conf` 文件（若无法直接在 ESP 中编辑，可将其复制到桌面，修改后再覆盖回去），在文件末尾添加一行：
+编辑 `refind.conf` 文件（若无法直接在 ESP 中编辑，可将其复制到桌面，修改后覆盖原文件），在文件末尾添加一行：
 
 ```ini
 include themes/Matrix-rEFInd/theme.conf

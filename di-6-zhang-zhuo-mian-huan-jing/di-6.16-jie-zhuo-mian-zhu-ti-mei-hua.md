@@ -84,7 +84,7 @@ $ ./install.sh  # 执行脚本安装图标主题
 
 > **技巧**
 >
-> FreeBSD 下的 KDE6 自带类似功能，无需安装 `freebsd-update-notify`，本教程仅作示例。
+> FreeBSD 下的 KDE6 自带类似功能，无需安装 `freebsd-update-notify`，本节仅作示例。
 
 freebsd-update-notify 可以自动检测 FreeBSD 系统和 pkg 包的更新。
 

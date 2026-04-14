@@ -25,7 +25,7 @@ LXQt 是一款轻量级桌面环境，基于 Qt 应用框架开发。
 # cd /usr/ports/devel/xdg-user-dirs/ && make install clean 
 ```
 
-### 软件包说明：
+### 软件包说明
 
 | 包名 | 功能说明 |
 | ---- | -------- |

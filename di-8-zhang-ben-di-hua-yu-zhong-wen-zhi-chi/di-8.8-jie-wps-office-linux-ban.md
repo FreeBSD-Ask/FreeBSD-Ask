@@ -100,7 +100,7 @@ $ /compat/linux/opt/kingsoft/wps-office/office6/wps
 
 ![FreeBSD WPS](../.gitbook/assets/wps2.png)
 
-## 基于 ArchLinux 兼容层
+## 基于 Arch Linux 兼容层
 
 ```sh
 # chroot /compat/arch/ /bin/bash # 进入 Arch 兼容层

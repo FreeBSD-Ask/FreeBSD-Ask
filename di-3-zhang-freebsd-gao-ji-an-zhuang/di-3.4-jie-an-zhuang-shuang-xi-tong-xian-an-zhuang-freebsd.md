@@ -86,7 +86,7 @@ Windows 安装完成后，需要为 FreeBSD 还原交换分区。分配了 208 G
 
 ![DiskGenius 主界面](../.gitbook/assets/shuang8.png)
 
-打开 DiskGenius，压缩 C 盘，腾出 8 GB 的未分配空间。Windows 系统安装完成后，C 盘占用了之前预留的大部分空间，只需要从 C 盘末尾压缩出 8 GB 即可。
+打开 DiskGenius，压缩 C 盘，释放 8 GB 的未分配空间。Windows 系统安装完成后，C 盘占用了之前预留的大部分空间，只需要从 C 盘末尾压缩出 8 GB 即可。
 
 ![压缩 C 盘](../.gitbook/assets/shuang9.png)
 
@@ -121,7 +121,7 @@ Windows 安装完成后，需要为 FreeBSD 还原交换分区。分配了 208 G
 # swapon /dev/nda0p5
 ```
 
-没有报错，也没有任何提示，说明正常，系统已经可以正常识别并使用这个新的交换分区。
+未产生错误，亦无任何提示，表明操作成功，系统已经可以正常识别并使用这个新的交换分区。
 
 编辑 `/etc/fstab` 文件，在 swap 一行最前面删去注释符号 `#`，并将分区改为正确的值，在本例中如下第三行：
 
@@ -131,7 +131,7 @@ Windows 安装完成后，需要为 FreeBSD 还原交换分区。分配了 208 G
 /dev/nda0p5             none    swap    sw              0       0
 ```
 
-重启再查看一下既有的交换分区情况：
+重启后再次查看既有的交换分区情况：
 
 ```sh
 # swapinfo -mh

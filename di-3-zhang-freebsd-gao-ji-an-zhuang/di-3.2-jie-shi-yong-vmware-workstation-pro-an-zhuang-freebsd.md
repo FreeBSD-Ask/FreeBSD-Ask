@@ -40,7 +40,7 @@ FreeBSD 中文社区. 001-Windows 11 安装 VMware 17[EB/OL]. [2026-04-04]. <htt
 
 ![VMware 安装 FreeBSD](../.gitbook/assets/vm5.png)
 
-虚拟机通常会占用较大的磁盘空间。若不希望系统盘（如 C 盘）空间被占满，请自行调整虚拟机的存储位置。
+虚拟机通常会占用较大的磁盘空间。若不希望系统盘（如 C 盘）空间不足，请自行调整虚拟机的存储位置。
 
 ![VMware 安装 FreeBSD](../.gitbook/assets/vm6.png)
 
@@ -296,7 +296,7 @@ Downloads
 
 - 没有声音
 
-加载声卡后若仍然没有声音，请将音量调至 100% 后再进行确认，因为默认音量几乎微不可闻。
+加载声卡后若仍然没有声音，请将音量调至 100% 后再进行确认，因为默认音量极低。
 
 ## 附录：博通公司（Broadcom）账号相关
 
@@ -316,12 +316,13 @@ VMware 已被博通（Broadcom）收购。从官方下载 VMware 相关产品需
 >
 >- 点击右上角的“Register”（注册）（或者直接打开 <https://profile.broadcom.com/web/registration>）
 >>
->> 在页面“Email Address”（电子邮件）处输入电子邮箱。若没有电子邮箱，可以用 QQ 号，然后在 QQ 号后面加上 `@qq.com` 即可。如 QQ 号是 `1212111111`，那么 QQ 邮箱则为 `1212111111@qq.com`。
+>> 在页面“Email Address”（电子邮件）处输入电子邮箱。若没有电子邮箱，可使用 QQ 号，然后在 QQ 号后面加上 `@qq.com` 即可。如 QQ 号是 `1212111111`，那么 QQ 邮箱则为 `1212111111@qq.com`。
 >>
->> 在页面“Enter text from image”（输入图片上的文本）处输入图片上的文本信息（实际上是验证码）。如果看不清或不认识，可以点 `Enter text from image` 右侧的 🔁
+>> 在页面“Enter text from image”（输入图片上的文本）处输入图片上的文本信息（实际上是验证码）。若无法辨识，可选择 `Enter text from image` 右侧的刷新按钮“🔁”
+>>
 >> 点击“Next”（继续）
 >>
->> 如果使用的是 QQ 号生成的邮箱，请打开 <https://wx.mail.qq.com/>。其他邮箱请在各自网站打开，如果不知道，请使用 QQ 邮箱。
+>> 如果使用的是 QQ 号生成的邮箱，请打开 <https://wx.mail.qq.com/>。其他邮箱请在各自网站打开，若不确定邮箱操作方式，建议使用 QQ 邮箱。
 >
 >![注册](../.gitbook/assets/Register2.png)
 >
@@ -351,7 +352,7 @@ VMware 已被博通（Broadcom）收购。从官方下载 VMware 相关产品需
 >
 >![登录](../.gitbook/assets/loginbcm.png)
 >
-> - Username（用户名）就是注册时候的邮箱。然后点“Next”（下一步）
+> - Username（用户名）即注册时使用的邮箱。然后点“Next”（下一步）
 >
 >![登录](../.gitbook/assets/loginbcm2.png)
 >
@@ -383,7 +384,7 @@ VMware 已被博通（Broadcom）收购。从官方下载 VMware 相关产品需
 >
 >![点击“VMware Workstation Pro“](../.gitbook/assets/downbcm2.png)
 >
-> - 点击“Release”（发行版），选择最顶部的那个，所见可能不同。
+> - 点击“Release”（发行版），选择最顶部的版本，实际显示可能有所不同。
 >
 >![点击“Release”（发行版）](../.gitbook/assets/downbcm3.png)
 >
@@ -395,19 +396,19 @@ VMware 已被博通（Broadcom）收购。从官方下载 VMware 相关产品需
 >
 >![补充信息](../.gitbook/assets/downbcm5.png)
 >
-> - 勾选“I agree to Terms and Conditions”（我同意条款及条件）左侧的方框 ⬜，让它变成 🟦。（必须先点击“Terms and Conditions”弹窗新页面，再回来就能勾选了）
+> - 勾选“I agree to Terms and Conditions”（我同意条款及条件）左侧的方框 ⬜，使其变为 🟦。（须先点击“Terms and Conditions”打开新页面，返回后方可勾选）
 >
 >![同意许可协议](../.gitbook/assets/downbcm6.png)
 >
-> - 点击右侧箭头的云朵图片 ☁️ 即可下载
+> - 选择右侧箭头处的云朵图标 ☁️ 即可下载
 >
 >![下载](../.gitbook/assets/downbcm7.png)
 
-VMware Workstation Pro 目前对于个人用户来说是 **免费下载、免费使用、免费授权的。** **请勿从任何第三方站点下载，** 否则会造成一些未知的后果——90% 的问题都是由此产生的。
+VMware Workstation Pro 目前对个人用户而言是 **免费下载、免费使用、免费授权的。** **请勿从任何第三方站点下载，** 否则可能导致不可预期的安全风险——多数问题均源于此。
 
 ### 博通开源/社区产品
 
-博通所有开源/社区产品都被整合到了这里进行下载。
+博通所有开源/社区产品均整合至该页面进行下载。
 
 如：Community Network Driver for ESXi、ESXi Arm Edition 等。
 

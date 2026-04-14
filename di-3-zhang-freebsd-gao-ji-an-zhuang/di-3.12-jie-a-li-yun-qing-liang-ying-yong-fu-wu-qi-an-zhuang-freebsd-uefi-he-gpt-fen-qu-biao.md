@@ -175,7 +175,7 @@ default via 172.24.63.253 dev eth0 proto dhcp src 172.24.0.80 metric 100
 
 > **警告**
 >
->将丢失所有数据，请做好备份工作再进行。经过测试，操作后，快照将可能无法正确回滚，但是自定义镜像可间接还原。
+>将丢失所有数据，请先行完成数据备份再进行操作。经过测试，操作后，快照将可能无法正确回滚，但是自定义镜像可间接还原。
 
 下载并写入 FreeBSD ZFS 镜像到 `/dev/vda`：
 
@@ -472,7 +472,7 @@ root@mfsbsd:~ # gpart show # 查看修复分区表后的磁盘信息
 
 ![UFS 安装](../.gitbook/assets/fb-ufs-ins.png)
 
-安装后，使用 Juice SSH 连接 FreeBSD 机器：
+安装后，使用 JuiceSSH 连接 FreeBSD 机器：
 
 ![UFS 安装](../.gitbook/assets/fb-ufs-ins2.png)
 
@@ -498,7 +498,7 @@ root@mfsbsd:~ # gpart show # 查看修复分区表后的磁盘信息
 
 ![Distribution extract failed](../.gitbook/assets/fb-ufs-1.png)
 
-观察实际发生了什么，按 Ctrl + C 键，退回到 Shell 界面，通过以下命令观察：
+观察实际发生的现象，按 Ctrl + C 键，退回到 Shell 界面，通过以下命令观察：
 
 ```sh
 # dmesg
@@ -520,7 +520,7 @@ pid 1562 (distextract), jid 0, uid 0, was killed: failed to reclaim memory
 
 ### 安装过程中报错 `sysctl: unknown oid 'vfs.zfs.min_auto_ashift'`
 
-分析报错信息：从字面理解，这是一个设置 zfs 4k 对齐的可调参数，报错指出该参数是未知的。因此首先将问题定位到 zfs 模块。
+分析报错信息：从字面理解，这是一个设置 zfs 4K 对齐的可调参数，报错指出该参数是未知的。因此首先将问题定位到 zfs 模块。
 
 通常是由于未预先手动加载 zfs 内核模块引发的。
 
@@ -528,9 +528,9 @@ pid 1562 (distextract), jid 0, uid 0, was killed: failed to reclaim memory
 
 这可能是一个长期存在但难以复现的 Bug，参见：FreeBSD Foundation. Bug 249157 - installer reports sysctl: unknown oid 'vfs.zfs.min_auto_ashift' when ZFS module not loaded[EB/OL]. [2026-03-26]. <https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=249157>.
 
-### 文件系统不支持在线压缩
+### 文件系统不支持在线缩小
 
-EXT2、EXT3、EXT4、Btrfs 和 XFS 文件系统均不支持在线压缩。目前对此尚无解决方案。
+EXT2、EXT3、EXT4 和 XFS 文件系统均不支持在线压缩（Btrfs 支持在线缩小，但可能存在稳定性问题）。目前对此尚无通用解决方案。
 
 ### 找不到 UEFI 启动项，启动后直接进入 UEFI Shell
 
@@ -651,7 +651,7 @@ TinyCorePure64 下载地址是 [x86 Pure 64](http://www.tinycorelinux.net/ports.
 
 ![TinyCorePure64 分区情况](../.gitbook/assets/TinyCorePuredisk.png)
 
-详细看看：
+详细查看：
 
 ![TinyCorePure64 分区详情](../.gitbook/assets/TinyCorePuredisk2.png)
 

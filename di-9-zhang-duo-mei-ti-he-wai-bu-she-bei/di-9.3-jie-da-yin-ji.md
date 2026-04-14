@@ -156,7 +156,7 @@ Listen IP:631
 
 ![打印机配置](../.gitbook/assets/cup7.png)
 
-成功添加打印机！
+打印机添加成功。
 
 ![添加成功](../.gitbook/assets/cup8.png)
 

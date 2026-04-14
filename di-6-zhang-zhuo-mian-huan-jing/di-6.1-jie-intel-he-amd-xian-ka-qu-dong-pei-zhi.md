@@ -240,7 +240,7 @@ EndSection
 设置 amdgpu_bl00 背光亮度为 10：
 
 ```sh
-# backlight -f /dev/backlight/amdgpu_bl00 -10
+# backlight -f /dev/backlight/amdgpu_bl00 10
 ```
 
 设置 backlight0 背光亮度为 10：

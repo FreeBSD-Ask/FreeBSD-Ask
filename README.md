@@ -31,7 +31,7 @@ FreeBSD 是一款真正自由（Liberty）的 **操作系统**，在这波谲云
 ![FreeBSD 中文社区 QQ 群](.gitbook/assets/2025-qq.png)
 
 - 微信群：受微信平台限制，需先加入 QQ 群，再联系群主获取最新入群二维码。
-- Discord：<https://discord.gg/j7VhWrhp3e>（需代理，可通过网页访问）
+- Discord：<https://discord.gg/j7VhWrhp3e>（需代理，可通过网页端访问）
 - Telegram 群组：[https://t.me/oh_my_BSD](https://t.me/oh_my_BSD)（需代理）
 
 ## 电子文档
@@ -66,7 +66,7 @@ FreeBSD 中文社区未通过其他域名部署本书，唯一官方域名为 `b
 
 受编者水平所限，书中难免存在疏漏与错误。
 
-如遇内容问题或网站技术问题，请发送邮件至 ykla [yklaxds@gmail.com](mailto:yklaxds@gmail.com)。关于内容问题，欢迎通过 GitHub 提交 PR，入口位于桌面端网页当前页面的右下角或底部左下角。
+如遇内容问题或网站技术问题，请发送邮件至 ykla [yklaxds@gmail.com](mailto:yklaxds@gmail.com)。关于内容问题，亦可通过 GitHub 提交 PR，入口位于桌面端网页当前页面的右下角或底部左下角。
 
 社区相关问题请加入 QQ 群后联系群主。
 
@@ -84,7 +84,7 @@ FreeBSD 中文社区未通过其他域名部署本书，唯一官方域名为 `b
 
 ![捐赠 FreeBSD 基金会](.gitbook/assets/proud_donor.png)
 
-[点此捐赠 FreeBSD 基金会](https://freebsdfoundation.org/donate-to-freebsd-foundation/)
+[前往捐赠 FreeBSD 基金会](https://freebsdfoundation.org/donate-to-freebsd-foundation/)
 
 支付方式支持：VISA 信用卡（可通过 Amazon Pay 或 Google Pay）、万事达品牌借记卡。
 
@@ -102,7 +102,7 @@ FreeBSD 中文社区未通过其他域名部署本书，唯一官方域名为 `b
 
 为说明、评论或教学目的，本作品合理引用第三方内容（文字、图像、数据等），知识产权归属原始权利人。
 
-作品中涉及的第三方软件、源代码及文档，知识产权由原权利人保留。如认为您的作品被侵权，请通过电子邮件 ykla [yklaxds@gmail.com](mailto:yklaxds@gmail.com) 联系。
+作品中涉及的第三方软件、源代码及文档，知识产权由原权利人保留。如认为本作品存在侵权情形，请通过电子邮件 ykla [yklaxds@gmail.com](mailto:yklaxds@gmail.com) 联系。
 
 除特别注明外，本书中的文字、图表等内容依据 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) 协议发布。
 
@@ -177,4 +177,4 @@ FreeBSD 中文社区未通过其他域名部署本书，唯一官方域名为 `b
 
 ![⭐ 图](https://api.star-history.com/image?repos=FreeBSD-Ask/FreeBSD-Ask&type=date&legend=top-left)
 
-若本书对您有帮助，欢迎为 [GitHub 项目存储库](https://github.com/FreeBSD-Ask/FreeBSD-Ask) 加颗 ⭐。
+若本书对您有所帮助，欢迎为 [GitHub 项目存储库](https://github.com/FreeBSD-Ask/FreeBSD-Ask) 加星标 ⭐。

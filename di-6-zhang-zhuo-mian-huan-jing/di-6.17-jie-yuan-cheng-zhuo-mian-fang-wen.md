@@ -37,7 +37,7 @@
 
 x11vnc 提供屏幕镜像功能，用户的操作会同步显示在物理显示器上，显示器上的操作在 VNC 上也可以看到。
 
-如果没有物理显示器则无法使用 x11vnc（使用 HDMI 显卡欺骗器）。
+如果没有物理显示器则无法使用 x11vnc，但可使用 HDMI 显卡欺骗器代替物理显示器来解决此问题。
 
 ### 安装 x11vnc
 
@@ -275,7 +275,7 @@ your environment.
 # service dbus enable          # 设置 dbus 服务开机自启
 ```
 
-编辑 `/usr/local/etc/xrdp/startwm.sh`，找到 `#### start desktop environment`，修改如下：
+编辑 `/usr/local/etc/xrdp/startwm.sh` 文件，找到 `#### start desktop environment`，修改如下：
 
 ```ini
 #### start desktop environment
@@ -291,7 +291,7 @@ your environment.
 
 ### 配置中文环境 (用户使用默认的 sh）
 
-编辑 `/usr/local/etc/xrdp/startwm.sh`，添加或修改以下内容以设置环境变量：
+编辑 `/usr/local/etc/xrdp/startwm.sh` 文件，添加或修改以下内容以设置环境变量：
 
 ```sh
 #### set environment variables here if you want

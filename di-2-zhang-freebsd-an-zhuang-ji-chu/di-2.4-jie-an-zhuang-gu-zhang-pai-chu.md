@@ -10,16 +10,16 @@
 
 若是物理机，请依次检查如下项目：
 
-- 电脑是否为普通家用计算机？
+- 电脑是否为标准个人计算机？
 - 处理器品牌是否为 Intel 或 AMD？
 - 是否已关闭 BIOS 中的安全启动（Secure Boot）？
 - 镜像是否从 <https://www.freebsd.org> 下载？
 - 是否下载了最新版本的 RELEASE 镜像？
 - 下载的镜像文件扩展名是否为 `img`？
 - 镜像校验（SHA256）是否通过？
-- 下载的镜像是否带有 `amd64`（普通家用电脑）字样？
-  - 请确认是 `amd64`（适用于普通电脑）**而非** `arm64`（适用于开发板）。
-- U 盘是否为扩容盘（假冒产品）？
+- 下载的镜像是否带有 `amd64`（标准个人计算机）字样？
+  - 请确认是 `amd64`（适用于标准个人计算机）**而非** `arm64`（适用于开发板）。
+- U 盘是否为扩容盘（伪造容量产品）？
 - 是否使用了 Ventoy 工具？
   - 建议使用 Rufus. Rufus - Create bootable USB drives the easy way[EB/OL]. [2026-03-25]. <https://rufus.ie/zh/>，该工具为 Windows 平台开源 USB 启动盘制作工具，进行刻录，而非 Ventoy. Ventoy - 多系统启动 USB 启动盘制作工具[EB/OL]. [2026-03-25]. <https://www.ventoy.net/cn/index.html>，该工具为多系统启动 USB 启动盘制作工具。
 

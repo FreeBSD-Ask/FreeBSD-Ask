@@ -32,12 +32,12 @@ UEFI（Unified Extensible Firmware Interface）是现代计算机的固件接口
 | 无线网卡 | Intel AX 系列 | AX200 | Wi-Fi 5 速率与 Windows 11 IoT Enterprise 24H2 相当（使用 iperf2 测得） |
 | 有线网卡 | Realtek 2.5 G | RTL8125B | 需要额外安装驱动程序，参见本书附录 |
 | 有线网卡 | Intel 2.5 G | i226-V | 正常工作 |
-| 显卡 | 近十年的 Intel 及 AMD 集成/独立显卡 | 英特尔锐炬® Xe 显卡、英特尔 HD Graphics 4000 | 支持程度与 DRM 驱动程序移植进度相关；截至写作时，其代码状态约相当于 Linux 内核 6.10，最新进展参见 FreeBSD Project. drm-kmod: drm driver for FreeBSD[EB/OL]. [2026-03-25]. <https://github.com/freebsd/drm-kmod/pulls>。该仓库提供 FreeBSD 图形驱动程序内核模块更新，追踪 Linux DRM 驱动程序移植进度。 |
+| 显卡 | 近十年的 Intel 及 AMD 集成/独立显卡 | 英特尔锐炬® Xe 显卡、英特尔 HD Graphics 4000 | 支持程度与 DRM 驱动程序移植进度相关；截至写作时，其代码状态约相当于 Linux 内核 6.10，最新进展参见 FreeBSD Project. drm-kmod: drm driver for FreeBSD[EB/OL]. [2026-03-25]. <https://github.com/freebsd/drm-kmod/pulls>. 该仓库提供 FreeBSD 图形驱动程序内核模块更新，追踪 Linux DRM 驱动程序移植进度。 |
 | NVIDIA 显卡 | 近十多年的显卡 | GTX 850M | 受 NVIDIA 官方显卡驱动程序支持 |
 
 > **注意**
 >
-> FreeBSD 不支持安全启动，参见：FreeBSD Project. SecureBoot[EB/OL]. [2026-03-25]. <https://wiki.freebsd.org/SecureBoot>。该页面提供 FreeBSD 安全启动相关状态信息。在安装 FreeBSD 前，请务必关闭安全启动（Secure Boot）。此外，FreeBSD 也不支持 Fake RAID（伪 RAID），需将控制器模式修改为 AHCI。
+> FreeBSD 不支持安全启动，参见：FreeBSD Project. SecureBoot[EB/OL]. [2026-03-25]. <https://wiki.freebsd.org/SecureBoot>. 该页面提供 FreeBSD 安全启动相关状态信息。在安装 FreeBSD 前，请务必关闭安全启动（Secure Boot）。此外，FreeBSD 也不支持 Fake RAID（伪 RAID），需将控制器模式修改为 AHCI。
 >
 > Fake RAID 是由主板 BIOS/固件提供的软件 RAID 功能，依赖操作系统驱动程序支持，并非真正的硬件 RAID。AHCI（Advanced Host Controller Interface）是 SATA 控制器的标准工作模式，提供原生支持 SATA 设备的高级特性。
 >
@@ -47,7 +47,7 @@ UEFI（Unified Extensible Firmware Interface）是现代计算机的固件接口
 
 除上述实测硬件外，更多硬件的支持情况可参考以下外部资源。
 
-bsd-hardware.info. Hardware for BSD[EB/OL]. [2026-03-25]. <https://bsd-hardware.info/?view=search>。该平台提供 BSD 系统硬件兼容性数据库，可用于查询设备支持情况。
+bsd-hardware.info. Hardware for BSD[EB/OL]. [2026-03-25]. <https://bsd-hardware.info/?view=search>. 该平台提供 BSD 系统硬件兼容性数据库，可用于查询设备支持情况。
 
 ![硬件支持查询](../.gitbook/assets/h1.png)
 
@@ -69,13 +69,13 @@ bsd-hardware.info. Hardware for BSD[EB/OL]. [2026-03-25]. <https://bsd-hardware.
 
 > **技巧**
 >
-> 随着时间推移，读者进行下载时可能已无 14.2-RELEASE 版本。此时只需选择列表最顶部的 `FreeBSD-X.Y-RELEASE`（该版本推荐用于生产环境）即可。其中，`X.Y` 应为比 `14.2` 更大的版本号，如 `15.0`、`22.4` 等，但须注意其应以 `RELEASE` 结尾，而非 `CURRENT`。
+> 随着时间推移，读者进行下载时可能已无 14.2-RELEASE 版本。此时只需选择列表最顶部的 `FreeBSD-X.Y-RELEASE`（该版本推荐用于生产环境）即可。其中，`X.Y` 应为比 `14.2` 更大的版本号，如 `15.0`、`16.0` 等，但须注意其应以 `RELEASE` 结尾，而非 `CURRENT`。
 >
 > RELEASE 是 FreeBSD 的正式发布版本，经过充分测试，适合生产环境使用。CURRENT 是 FreeBSD 的开发版本，包含最新特性但不够稳定，仅适合开发者和高级用户。
 
 > **警告**
 >
-> 使用非 RELEASE 版本的用户应有时间和意愿关注开发动态，浏览邮件列表与问题追踪系统，例如 FreeBSD Project. freebsd-src/UPDATING[EB/OL]. [2026-03-25]. <https://github.com/freebsd/freebsd-src/blob/main/UPDATING>。该文件记录着系统更新重大变更，及 FreeBSD Project. freebsd-src/RELNOTES[EB/OL]. [2026-03-25]. <https://github.com/freebsd/freebsd-src/blob/main/RELNOTES>。该文件提供发行版发布说明与新特性等文档。同时要求用户具备一定的探索和动手能力。否则，建议使用 RELEASE 版本。
+> 使用非 RELEASE 版本的用户应有时间和意愿关注开发动态，浏览邮件列表与问题追踪系统，例如 FreeBSD Project. freebsd-src/UPDATING[EB/OL]. [2026-03-25]. <https://github.com/freebsd/freebsd-src/blob/main/UPDATING>. 该文件记录着系统更新重大变更，及 FreeBSD Project. freebsd-src/RELNOTES[EB/OL]. [2026-03-25]. <https://github.com/freebsd/freebsd-src/blob/main/RELNOTES>. 该文件提供发行版发布说明与新特性等文档。同时要求用户具备一定的探索和动手能力。否则，建议使用 RELEASE 版本。
 
 | Installer | VM | SD Card | Documentation |
 | --------- | -- | ------- | ------------- |
@@ -84,11 +84,11 @@ bsd-hardware.info. Hardware for BSD[EB/OL]. [2026-03-25]. <https://bsd-hardware.
 
 > **技巧**
 >
-> 若不确定选择哪种镜像，请选择 `Installer`（普通家用电脑，Apple 除外）。
+> 若不确定选择哪种镜像，请选择 `Installer`（标准个人计算机，Apple 除外）。
 
 > **技巧**
 >
-> 若不清楚 `amd64`、`i386`、`aarch64`、`armv7` 这些架构的区别，请选择 `amd64`（适用于大多数普通家用电脑，Apple 电脑除外）。
+> 若不明确 `amd64`、`i386`、`aarch64`、`armv7` 这些架构的区别，请选择 `amd64`（适用于大多数标准个人计算机，Apple 电脑除外）。
 
 选择好安装镜像的主要类型后，即可看到具体的下载列表：
 
@@ -131,24 +131,24 @@ FreeBSD-14.2-RELEASE-amd64-mini-memstick.img.xz    107445036      2024-Nov-29 13
 
 .xz 是一种高压缩比的文件压缩格式，常用于缩小软件发行包的体积。SHA256 和 SHA512 是密码散列函数，用于生成文件的唯一指纹，校验值（Checksum）则是通过这些函数计算出的固定长度字符串，用于验证文件完整性。
 
-需要注意的是，DVD 镜像并不包含所有离线软件包，仅精选了若干软件包，具体清单可参见源代码文件 FreeBSD Project. freebsd-src/release/scripts/pkg-stage.sh[EB/OL]. [2026-03-25]. <https://github.com/freebsd/freebsd-src/blob/main/release/scripts/pkg-stage.sh>，该脚本定义 DVD 镜像包含的预安装软件包清单。
+需要注意的是，DVD 镜像并不包含所有离线软件包，仅精选了若干软件包，具体清单可参见源代码文件 FreeBSD Project. freebsd-src/release/scripts/pkg-stage.sh[EB/OL]. [2026-03-25]. <https://github.com/freebsd/freebsd-src/blob/main/release/scripts/pkg-stage.sh>. 该脚本定义 DVD 镜像包含的预安装软件包清单。
 
 FreeBSD 的所有安装介质（包括但不限于虚拟机镜像）默认均不提供图形界面，需由用户自行安装和配置。DVD 镜像虽包含更多软件包，但由于图形界面依赖关系复杂，且 DVD 上的软件包版本可能较旧，在安装图形界面时仍可能遇到依赖冲突或版本不匹配问题，因此不建议使用 DVD 镜像。
 
 > **技巧**
 >
-> 网络传输可能产生错误，导致下载的文件与原始镜像不一致。因此，需要一种机制来验证所获取的文件与官方发布的镜像完全一致，这就需要使用 **校验值**。Windows 10 和 11 系统自带命令行工具 `CertUtil`，可用于计算校验值，无需安装额外软件。读者还可参考 Dell Technologies. 如何确定用于安全应用程序的文件 SHA-256 哈希[EB/OL]. [2026-03-25]. <https://www.dell.com/support/kbdoc/zh-cn/000130826/%E5%A6%82%E4%BD%95%E7%A1%AE%E5%AE%9A%E7%94%A8%E4%BA%8E%E5%AE%89%E5%85%A8%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%96%87%E4%BB%B6-sha-256-%E5%93%88%E5%B8%8C>。该文档介绍 Windows 系统下文件 SHA-256 哈希值计算方法。
+> 网络传输可能产生错误，导致下载的文件与原始镜像不一致。因此，需要一种机制来验证所获取的文件与官方发布的镜像完全一致，这就需要使用 **校验值**。Windows 10 和 11 系统自带命令行工具 `CertUtil`，可用于计算校验值，无需安装额外软件。读者还可参考 Dell Technologies. 如何确定用于安全应用程序的文件 SHA-256 哈希[EB/OL]. [2026-03-25]. <https://www.dell.com/support/kbdoc/zh-cn/000130826/%E5%A6%82%E4%BD%95%E7%A1%AE%E5%AE%9A%E7%94%A8%E4%BA%8E%E5%AE%89%E5%85%A8%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%96%87%E4%BB%B6-sha-256-%E5%93%88%E5%B8%8C>. 该文档介绍 Windows 系统下文件 SHA-256 哈希值计算方法。
 
 FreeBSD 镜像 BT 种子下载地址（非官方，建议检查文件校验和后使用）：<https://fosstorrents.com/distributions/freebsd/>
 
 - RELEASE 正式版镜像下载地址
   - 虚拟机用：<https://download.freebsd.org/ftp/releases/amd64/amd64/ISO-IMAGES/15.0/FreeBSD-15.0-RELEASE-amd64-disc1.iso>
-  - 物理机用：<https://download.freebsd.org/releases/amd64/amd64/ISO-IMAGES/15.0/FreeBSD-15.0-RELEASE-amd64-memstick.img>
+  - 物理机用：<https://download.freebsd.org/ftp/releases/amd64/amd64/ISO-IMAGES/15.0/FreeBSD-15.0-RELEASE-amd64-memstick.img>
 - CURRENT 开发版下载地址（仅限专业用户）
   - 虚拟机用：<https://download.freebsd.org/snapshots/amd64/amd64/ISO-IMAGES/16.0/>
   - 物理机下载 `-amd64-memstick.img` 或 `-amd64-memstick.img.xz` 结尾的文件
 
-当阅读至此时，情况可能已发生变化，请自行查阅，选择合适的 RELEASE 版本用于生产环境。
+由于版本迭代，实际情况可能已发生变化，请自行查阅，选择合适的 RELEASE 版本用于生产环境。
 
 FreeBSD `-RELEASE` 历史版本下载地址：
 
@@ -157,11 +157,11 @@ FreeBSD `-RELEASE` 历史版本下载地址：
 
 ## 刻录 FreeBSD 镜像
 
-下载好 FreeBSD 镜像后，需要将其刻录到 U 盘上才能进行安装。本节将介绍如何刻录 FreeBSD 镜像到 U 盘。
+下载 FreeBSD 镜像后，需要将其刻录到 U 盘上才能进行安装。本节将介绍如何刻录 FreeBSD 镜像到 U 盘。
 
 ### 建议使用 `-img` 或 `-img.xz` 格式的镜像
 
-制作 U 盘安装介质时，建议使用 `-img` 或 `-img.xz` 格式的镜像。`.iso` 镜像采用混合启动（Hybrid）模式，该模式同时支持从光驱和 U 盘启动，但可能未完全遵循 UEFI 规范，直接写入 U 盘可能导致启动错误。详见 FreeBSD Project. FreeBSD -.iso files not support written to USB drive[EB/OL]. [2026-03-25]. <https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=236786>。该 Bug 报告记录了 ISO 镜像直接写入 USB 设备的兼容性问题。建议读者仅在使用光学介质、虚拟机或云平台安装时选用 `iso` 结尾的镜像。
+制作 U 盘安装介质时，建议使用 `-img` 或 `-img.xz` 格式的镜像。`.iso` 镜像采用混合启动（Hybrid）模式，该模式同时支持从光驱和 U 盘启动，但可能未完全遵循 UEFI 规范，直接写入 U 盘可能导致启动错误。详见 FreeBSD Project. FreeBSD -.iso files not support written to USB drive[EB/OL]. [2026-03-25]. <https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=236786>. 该 Bug 报告记录了 ISO 镜像直接写入 USB 设备的兼容性问题。建议读者仅在使用光学介质、虚拟机或云平台安装时选用 `iso` 结尾的镜像。
 
 当然，也存在例外情况。部分机器的 UEFI 固件支持从 `.iso` 镜像刻录的 U 盘启动（例如一些老款神舟电脑），但并非所有机器都支持此方式（例如部分小米电脑可能无法引导）。
 
@@ -179,11 +179,11 @@ Rufus 下载地址为 <https://rufus.ie/zh>，该工具为 Windows 平台开源 
 
 ![Rufus](../.gitbook/assets/rufus.png)
 
-**不建议** 使用 FreeBSD 手册中提到的 win32diskimager，因其对某些镜像格式的处理存在缺陷，尽管实际文件校验值正确，但有时会错误地报告校验失败。类似的，**亦不建议** 使用 Ventoy. Ventoy - 多系统启动 USB 启动盘制作工具[EB/OL]. [2026-03-25]. <https://www.ventoy.net/>，该工具为多系统启动 USB 启动盘制作工具，直接加载 ISO 或 IMG 镜像文件，但 Ventoy 的启动加载机制与 FreeBSD 镜像不完全兼容，可能导致启动失败。
+**不建议** 使用 FreeBSD 手册中提到的 win32diskimager，因其对某些镜像格式的处理存在缺陷，尽管实际文件校验值正确，但有时会错误地报告校验失败。类似的，**亦不建议** 使用 Ventoy。Ventoy - 多系统启动 USB 启动盘制作工具[EB/OL]. [2026-03-25]. <https://www.ventoy.net/>. 该工具为多系统启动 USB 启动盘制作工具，直接加载 ISO 或 IMG 镜像文件，但 Ventoy 的启动加载机制与 FreeBSD 镜像不完全兼容，可能导致启动失败。
 
 **读者应仅在 Rufus 无效的情况下再使用 win32diskimager 或 Ventoy。**
 
-win32diskimager 的下载地址是 <https://sourceforge.net/projects/win32diskimager/files/Archive/>，点击 `win32diskimager-1.0.0-install.exe` 即可下载。
+win32diskimager 的下载地址是 <https://sourceforge.net/projects/win32diskimager/files/Archive/>，选择 `win32diskimager-1.0.0-install.exe` 进行下载。
 
 > **思考题**
 >
@@ -196,7 +196,7 @@ win32diskimager 的下载地址是 <https://sourceforge.net/projects/win32diskim
 
 ## 附录：共享硬件数据到数据库
 
-如果读者也想上传自己的数据到 <https://bsd-hardware.info>，同大家共享，可参照本节进行。
+若读者希望上传自己的数据到 <https://bsd-hardware.info>，与社区共享，可参照本节进行。
 
 ### 安装 hw-probe
 
@@ -226,7 +226,7 @@ Uploaded to DB, Thank you!
 Probe URL: https://bsd-hardware.info/?probe=f64606c4b1
 ```
 
-打开上面的链接，即可看到设备信息。这里上传的是 Radxa x4 的配置信息。
+访问上述链接即可查看设备信息。此处上传的为 Radxa x4 的配置信息。
 
 其他操作系统可参见 linuxhw. hw-probe/INSTALL.BSD.md[EB/OL]. [2026-03-25]. <https://github.com/linuxhw/hw-probe/blob/master/INSTALL.BSD.md>，该文档提供 BSD 系统上 hw-probe 工具的安装说明。
 
