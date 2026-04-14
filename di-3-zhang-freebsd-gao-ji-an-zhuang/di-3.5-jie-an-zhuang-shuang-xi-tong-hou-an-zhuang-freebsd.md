@@ -118,7 +118,7 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 
 > **思考题**
 >
->若使用 NVMe 硬盘，新装系统（UEFI+GPT，无 freebsd-boot 分区）的默认参数通常为 12。但 4 K 对齐究竟对齐的是什么？因为 SSD 并无传统机械硬盘的物理扇区概念。
+>若使用 NVMe 硬盘，新装系统（UEFI+GPT，无 freebsd-boot 分区）的默认参数通常为 12。但 4 K 对齐究竟对齐的对象是什么？因为 SSD 并无传统机械硬盘的物理扇区概念。
 
 ### 创建交换分区
 
