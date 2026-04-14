@@ -31,7 +31,7 @@
 
 安装完成后，对 Rime 输入法进行配置以使用五笔输入法。
 
-将 98 五笔码表（`free-bsd-98wubi-tables-master/wubi86.dict.yaml` 文件和 `free-bsd-98wubi-tables-master/wubi86.schema.yaml` 文件）复制到 `/usr/local/share/rime-data` 目录下。98 五笔码表下载地址：[FreeBSD-98wubi-tables](https://github.com/FreeBSD-Ask/98-input)。该仓库提供了适用于 FreeBSD 的 98 五笔输入法码表文件。
+将 98 五笔码表（`free-bsd-98wubi-tables-master/wubi86.dict.yaml` 文件和 `free-bsd-98wubi-tables-master/wubi86.schema.yaml` 文件——注意：文件名虽为 `wubi86`，但实际内容为 98 五笔码表）复制到 `/usr/local/share/rime-data` 目录下。98 五笔码表下载地址：[FreeBSD-98wubi-tables](https://github.com/FreeBSD-Ask/98-input)。该仓库提供了适用于 FreeBSD 的 98 五笔输入法码表文件。
 
 配置文件结构：
 

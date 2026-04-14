@@ -97,7 +97,7 @@ FreeBSD 基本系统几乎不包含任何与 BSD 协议不兼容的软件。
 | Gentoo Linux | 滚动更新 | [Portage（emerge）](https://wiki.gentoo.org/wiki/Portage) | GNU | gcc | bash | 可选 |
 | Arch Linux | 滚动更新 | [pacman](https://wiki.archlinux.org/title/pacman) | GNU | gcc | bash | 可选 |
 | RHEL | [3/最长 12 年](https://access.redhat.com/zh_CN/support/policy/updates/errata) | [RPM（yum、dnf）](https://www.redhat.com/sysadmin/how-manage-packages) | GNU | gcc | bash | Gnome |
-| FreeBSD | [约 2/4 年](https://www.freebsd.org/security/) | pkg/ports | BSD | clang | csh/sh | 可选 |
+| FreeBSD | [约 2/4 年](https://www.freebsd.org/security/) | pkg/Ports | BSD | clang | csh/sh | 可选 |
 | Windows | [不固定](https://docs.microsoft.com/zh-cn/lifecycle/faq/windows) | 可选 | 专有 | 可选 | PowerShell | Windows 桌面 |
 | macOS | 1 年/约 5 年 | 无 | [专有](https://www.apple.com/legal/sla/) | clang | zsh | Aqua |
 
@@ -124,7 +124,7 @@ FreeBSD 基本系统几乎不包含任何与 BSD 协议不兼容的软件。
 
 由于 GNU 开源运动的大规模开展和 Linux 的蓬勃发展，大部分人对于开源的理解被囿于 GPL 协议与 Linux 系统，对 FreeBSD 等 BSD 世界则接触较少。一些以开源为旗号的社区组织，其活动也主要围绕 Linux 领域展开，鲜有超越这一范畴的探索。
 
-当然，这并不是指这部分用户或团体本身有任何问题。无可指摘，“时来天地皆同力，运去英雄不自由”。李白永远无法成为盛唐的政治家，他自幼习剑道，好修仙，年少时意欲成为“十步杀一人，千里不留行”的江湖侠客；后又想成为匡扶社稷的朝廷重臣。但太白终究“剑非万人敌，文窃四海声”。操作系统的命运和时代发展的脉搏紧密相连，市场的需求也在不断地塑造着今天习以为常的那些功能和交互模式。
+需要指出的是，这并不是指这部分用户或团体本身有任何问题。无可指摘，“时来天地皆同力，运去英雄不自由”。李白永远无法成为盛唐的政治家，他自幼习剑道，好修仙，年少时意欲成为“十步杀一人，千里不留行”的江湖侠客；后又想成为匡扶社稷的朝廷重臣。但太白终究“剑非万人敌，文窃四海声”。操作系统的命运和时代发展的脉搏紧密相连，市场的需求也在不断地塑造着今天习以为常的那些功能和交互模式。
 
 > **思考题**
 >

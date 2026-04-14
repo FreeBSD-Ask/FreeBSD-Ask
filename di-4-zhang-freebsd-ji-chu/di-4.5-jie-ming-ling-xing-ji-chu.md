@@ -681,7 +681,7 @@ $ cp -v /usr/ports/editors/vscode /home/ykla
 cp: /usr/ports/editors/vscode is a directory (not copied).
 ```
 
-可见直接复制是不行的，提示是目录不是文件。
+可见直接复制是不可行的，提示是目录不是文件。
 
 因此还需要选项 `-r`。`r` 是英文 `recursively`（递归）的意思：
 

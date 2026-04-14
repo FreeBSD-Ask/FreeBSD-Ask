@@ -48,7 +48,7 @@ Xfce 的 Logo 是一只 [老鼠 🐀](https://docs.xfce.org/faq#what_does_it_mea
 $ echo "/usr/local/etc/xdg/xfce4/xinitrc" > ~/.xinitrc
 ```
 
-将 Xfce 启动脚本写入 `~/.xsession` 文件，以便通过登录管理器启动 Xfce
+将 Xfce 启动脚本写入 `~/.xsession` 文件，以便通过登录管理器启动 Xfce：
 
 ```sh
 $ echo "/usr/local/etc/xdg/xfce4/xinitrc" > ~/.xsession
@@ -203,8 +203,8 @@ fi
 
 ### 参考文献
 
-- Oracle Corporation. 6.1 动态设置标题不起作用[EB/OL]. Oracle Documentation, [2026-03-25]. <https://docs.oracle.com/cd/E19683-01/817-1951/6mhl8aiii/index.html>. bash 配置来自此处
-- Wamphyre. BSD-XFCE[EB/OL]. GitHub, [2026-03-25]. <https://web.archive.org/web/20260121072214/https://github.com/Wamphyre/BSD-XFCE>. 配置参考集合
+- Oracle Corporation. 6.1 动态设置标题不起作用[EB/OL]. Oracle Documentation, [2026-03-25]. <https://docs.oracle.com/cd/E19683-01/817-1951/6mhl8aiii/index.html>. bash 配置来自此处。
+- Wamphyre. BSD-XFCE[EB/OL]. GitHub, [2026-03-25]. <https://web.archive.org/web/20260121072214/https://github.com/Wamphyre/BSD-XFCE>. 配置参考集合。
 - Arch Linux 中文维基. Zsh[EB/OL]. [2026-03-25]. <https://wiki.archlinuxcn.org/wiki/Zsh>. Arch Linux 中文维基提供的 Zsh 配置详细教程，本文 Zsh 配置源自此。
 
 ## 故障排除与未竟事宜

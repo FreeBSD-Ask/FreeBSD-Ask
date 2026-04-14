@@ -39,7 +39,7 @@ FreeBSD 安装桌面环境后，默认采用简单朴素的色调。默认的简
 3. 修改 shebang：编辑 `install.sh` 文件，修改第一行为 `#!/usr/local/bin/bash`，然后保存。
 4. 执行安装：`bash install.sh`
 
-## Gnome 主题美化
+## GNOME 主题美化
 
 安装的是 [WhiteSur](https://www.pling.com/p/1403328/) 主题。
 

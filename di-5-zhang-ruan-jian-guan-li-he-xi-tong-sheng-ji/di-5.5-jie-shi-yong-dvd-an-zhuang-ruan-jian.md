@@ -84,7 +84,7 @@ COPYRIGHT	etc		mnt		rescue		usr
 
 存在 Bug，会报错 `No pkg(8) database found!`。
 
->**思考题**
+> **思考题**
 >
 >请读者自行阅读源代码，分析如何解决该问题。
 
@@ -152,7 +152,7 @@ Proceed with this action? [y/N]:
 
 ## 参考文献
 
-- FreeBSD Forums. HOWTO: Install binary package without internet access[EB/OL]. [2026-03-25]. <https://forums.freebsd.org/threads/howto-install-binary-package-without-internet-acces.60723/>. 无网络环境下通过 DVD 安装二进制包的方法
+- FreeBSD Forums. HOWTO: Install binary package without internet access[EB/OL]. [2026-03-25]. <https://forums.freebsd.org/threads/howto-install-binary-package-without-internet-acces.60723/>. 无网络环境下通过 DVD 安装二进制包的方法。
 
 ## 课后习题
 

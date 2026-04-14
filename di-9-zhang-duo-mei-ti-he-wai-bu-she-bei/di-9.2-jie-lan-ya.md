@@ -55,7 +55,7 @@ Set it up? [yes]:
 # iwmbtfw -d ugen1.5
 ```
 
-## 故障排除与未竟事项
+## 故障排除与未竟事宜
 
 ### Logitech M337 配对连接后会自动断开
 

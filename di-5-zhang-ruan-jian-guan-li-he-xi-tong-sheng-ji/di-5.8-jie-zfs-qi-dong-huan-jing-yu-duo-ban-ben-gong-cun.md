@@ -121,11 +121,11 @@ zroot/ROOT/15.0-RELEASE  99036272 11132688 87903584    11%    /mnt/upgrade
 
 pkgbase 的设计初衷是为了让 stable、current 和 release（包括 BETA、RC 等）都能使用统一的二进制工具进行更新。之前，stable 和 current 只能通过完整编译源代码的方式进行更新。
 
->**注意**
+> **注意**
 >
 >仅 FreeBSD 14.0-RELEASE 及更高版本才能直接转换为 pkgbase。旧版仍需要通过 `freebsd-update` 进行更新（运行时 pkgbasify 会提示 `Unsupported FreeBSD version`，即 FreeBSD 版本不受支持）。
 
->**警告**
+> **警告**
 >
 >**存在风险，可能会丢失所有数据！建议在操作前做好备份。**
 
@@ -145,7 +145,7 @@ Locking pkg-2.4.2_1
 
 - 使用 pkgbasify 进行转换
 
->**警告**
+> **警告**
 >
 >在接受 `Do you accept this risk and wish to continue? (y/n)` 这个风险提示后就没有其他二次确认了！
 
@@ -217,11 +217,11 @@ FreeBSD-base {
 }
 ```
 
->**警告**
+> **警告**
 >
 >请检查 `FreeBSD-base.conf` 的内容，尤其是 **不应该** 在其中手动硬编码写入指定任何具体的版本（如 `base_release_3`）。
 
->**技巧**
+> **技巧**
 >
 >需要切换软件源的用户可以将 `url` 这行改为 `url = "https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/base_release_${VERSION_MINOR}";`。而对于那些优先考虑安全性的读者应该维持默认设置。
 
@@ -272,7 +272,7 @@ The operation will free 100 MiB.
 Proceed with this action? [y/N]: y # 此处输入 y 后继续
 ```
 
->**技巧**
+> **技巧**
 >
 >如果检查不到任何更新，请确认当前是否已成功转换为 pkgbase，并检查软件源配置是否正确
 
@@ -376,7 +376,7 @@ default                        R      -          10.9G 2025-01-14 20:36
 
 可通过 Ports 中的 OpenZFS 实现 13、14、15 等多个系统版本的共存。
 
->**警告**
+> **警告**
 >
 >如不按照下方进行设置就强行升级 ZFS 池/特性，将无法访问旧版系统。
 
@@ -467,7 +467,7 @@ zfs-kmod-2.3.5-1
 
 随后即可更新其他存储池或启用新的特性。
 
->**警告**
+> **警告**
 >
 >考虑到基本系统中的 OpenZFS 版本不一定是最新的，所以最好对所有版本都使用 Ports 中的版本以期达到统一。换言之，建议读者也在 15.0-RELEASE 中按照相同方法替换 ZFS。
 
@@ -523,7 +523,7 @@ local function base_repo_url()
 end
 ```
 
->**警告**
+> **警告**
 >
 >请删除 `return "pkg+https://"` 这行中的 `pkg+`，否则会报错。
 
@@ -576,7 +576,7 @@ local function create_base_repo_conf(path)
 end
 ```
 
->**注意**
+> **注意**
 >
 >对于那些优先考虑安全性的读者，应该保持默认设置。
 
@@ -617,11 +617,11 @@ https://mirrors.163.com/freebsd-pkg/
 
 ## 参考文献
 
-本节介绍的内容涉及多个技术点，下面列出了一些相关的参考资料，供有兴趣的读者进一步学习。
+本节介绍的内容涉及多个技术点，下面列出了一些相关的参考文献，供有兴趣的读者进一步学习。
 
-- vermaden. ZFS Boot Environments Explained[EB/OL]. [2026-03-25]. <https://vermaden.wordpress.com/2025/11/25/zfs-boot-environments-explained/>. 详细阐释 ZFS 启动环境的原理与实践，包含跨版本 ZFS 池兼容方案
-- FreeBSD Project. BootEnvironments[EB/OL]. [2026-03-25]. <https://wiki.freebsd.org/BootEnvironments>. FreeBSD 官方关于启动环境的 Wiki
-- FreeBSD Project. bectl(8)[EB/OL]. [2026-03-25]. <https://man.freebsd.org/cgi/man.cgi?bectl>. ZFS 启动环境管理工具的官方技术规范
+- vermaden. ZFS Boot Environments Explained[EB/OL]. [2026-03-25]. <https://vermaden.wordpress.com/2025/11/25/zfs-boot-environments-explained/>. 详细阐释 ZFS 启动环境的原理与实践，包含跨版本 ZFS 池兼容方案。
+- FreeBSD Project. BootEnvironments[EB/OL]. [2026-03-25]. <https://wiki.freebsd.org/BootEnvironments>. FreeBSD 官方关于启动环境的 Wiki。
+- FreeBSD Project. bectl(8)[EB/OL]. [2026-03-25]. <https://man.freebsd.org/cgi/man.cgi?bectl>. ZFS 启动环境管理工具的官方技术规范。
 
 ## 课后习题
 

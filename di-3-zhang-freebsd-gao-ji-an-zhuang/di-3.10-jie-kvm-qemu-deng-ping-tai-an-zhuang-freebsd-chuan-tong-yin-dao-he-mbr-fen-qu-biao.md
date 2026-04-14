@@ -22,7 +22,7 @@
 
 mfsBSD 是一款完全载入内存的 FreeBSD 系统，类似于 Windows PE（Preinstallation Environment）系统。
 
-本文通过 GRUB2 借助 MEMDISK 模块将 mfsBSD 载入内存盘，并从中启动。然后通过 mfsBSD 中的 `bsdinstall` 命令安装 FreeBSD。
+本节通过 GRUB2 借助 MEMDISK 模块将 mfsBSD 载入内存盘，并从中启动。然后通过 mfsBSD 中的 `bsdinstall` 命令安装 FreeBSD。
 
 ## 获取现有网络配置
 

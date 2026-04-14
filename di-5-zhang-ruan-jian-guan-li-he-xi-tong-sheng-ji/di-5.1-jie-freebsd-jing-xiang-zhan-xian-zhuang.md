@@ -42,8 +42,8 @@
 
 参考文献：
 
-- delphij. FreeBSD.org 这次的入侵事件[EB/OL]. (2012-12-17)[2026-03-25]. <https://blog.delphij.net/posts/2012/12/freebsdorg-2/>. 中文说明
-- FreeBSD Project. FreeBSD.org intrusion announced November 17th 2012[EB/OL]. (2012-11-17)[2026-03-25]. <http://www.freebsd.org/news/2012-compromise.html>. FreeBSD 项目官方说明
+- delphij. FreeBSD.org 这次的入侵事件[EB/OL]. (2012-12-17)[2026-03-25]. <https://blog.delphij.net/posts/2012/12/freebsdorg-2/>. 中文说明。
+- FreeBSD Project. FreeBSD.org intrusion announced November 17th 2012[EB/OL]. (2012-11-17)[2026-03-25]. <http://www.freebsd.org/news/2012-compromise.html>. FreeBSD 项目官方说明。
 
 #### 传输机制因素
 
@@ -125,7 +125,7 @@ TUNA: <https://github.com/tuna/issues/issues/16>
 
 ## 官方给出的镜像站基本要求
 
-- 服务器的 root 权限，这一国内同样稀缺，开源镜像站通常不会给予；
+- 服务器的 root 权限，这一要求在国内同样稀缺，开源镜像站通常不会给予；
 - IPv6 及 CN2 网络——国内也很缺乏；
 - BGP 网络；
 - 足够的存储空间（约 50 TB）和 1 G 带宽；

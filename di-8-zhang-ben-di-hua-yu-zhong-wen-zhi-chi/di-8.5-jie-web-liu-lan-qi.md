@@ -37,7 +37,7 @@
 
 ## Chromium
 
-Chromium 不是 Chrome，但在 FreeBSD 中的启动命令为 `chrome`。
+Chromium 不是 Chrome，在 FreeBSD 中的启动命令为 `chrome`。
 
 >**技巧**
 >

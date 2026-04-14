@@ -4,11 +4,11 @@
 
 > **注意**
 >
-> 本文要求先安装 FreeBSD，再安装 Windows 或其他操作系统，请遵循此顺序进行操作。
+> 本节要求先安装 FreeBSD，再安装 Windows 或其他操作系统，请遵循此顺序进行操作。
 
 ## 安装 FreeBSD 14.2-RELEASE
 
-首先按照以下步骤安装 FreeBSD 14.2 RELEASE 系统，本文未特别说明之处，均采用默认设置与参数，以确保系统的稳定性。
+首先按照以下步骤安装 FreeBSD 14.2 RELEASE 系统，本节未特别说明之处，均采用默认设置与参数，以确保系统的稳定性。
 
 ![FreeBSD 安装界面](../.gitbook/assets/shuang1.png)
 
@@ -20,7 +20,7 @@
 
 ![分区方案选择](../.gitbook/assets/shuang3.png)
 
-这里需要设置一个大的临时交换分区，该数值表示计划中的交换分区与 Windows 系统分区容量之和。这样设置是为了后续安装 Windows 时能够直接使用这部分空间，避免额外的分区操作。在本文中，交换分区（Swap）大小为 8 GB，其余 200 GB 空间预留给 Windows。请修改 `S Swap Size` 的大小。
+这里需要设置一个大的临时交换分区，该数值表示计划中的交换分区与 Windows 系统分区容量之和。这样设置是为了后续安装 Windows 时能够直接使用这部分空间，避免额外的分区操作。在本节中，交换分区（Swap）大小为 8 GB，其余 200 GB 空间预留给 Windows。请修改 `S Swap Size` 的大小。
 
 ![交换分区大小设置](../.gitbook/assets/shuang4.png)
 

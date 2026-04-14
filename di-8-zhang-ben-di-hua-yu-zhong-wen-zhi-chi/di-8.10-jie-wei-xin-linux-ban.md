@@ -181,7 +181,7 @@ Categories=Network
 
 ### 中文输入法问题
 
-如果以 root 权限运行 Rocky Linux 兼容层中的应用，中文输入法会出现问题。
+如果以 root 权限运行 Rocky Linux 兼容层中的微信，中文输入法将无法使用（原因同 QQ：输入法框架依赖用户会话的 D-Bus 和环境变量）。请以普通用户权限运行。
 
 ![FreeBSD 微信](../.gitbook/assets/wechat4.png)
 

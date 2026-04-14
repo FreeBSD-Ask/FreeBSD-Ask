@@ -72,7 +72,7 @@ Please refer to doas.conf(5) for further details.
 
 - `/usr/local/etc/doas.conf.sample` 内容如下，相比 sudo 而言，非常简单易懂：
 
-简单注释一下：
+简要注释如下：
 
 ```ini
 # Sample file for doas
@@ -139,7 +139,7 @@ permit :wheel
 
 - 文件 `wheel` 内容如下：
 
-多加一行，使用 `sudo` 时不需要输入密码：
+再添加一行，使 `sudo` 免密码：
 
 ```sh
 %wheel ALL=(ALL) NOPASSWD:ALL
