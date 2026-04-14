@@ -3194,7 +3194,7 @@ Auto（自动）
 
 此选项同时控制了 CPU 和芯片组 DMI 链路的 ASPM。
 
-并非所有 PCIe 通道都以相同的方式工作：CPU PCIe 通道直接与 CPU 相连，而芯片组通道（即“PCH 通道”或南桥通道）通过芯片组并经由 DMI（Direct Media Interface，直接媒体接口）链路连接到 CPU。DMI 其实就是一种 PCIe 通道。
+并非所有 PCIe 通道都以相同的方式工作：CPU PCIe 通道直接与 CPU 相连，而芯片组通道（即“PCH 通道”或南桥通道）通过芯片组并经由 DMI（Direct Media Interface，直接媒体接口）链路连接到 CPU。DMI 事实上就是一种 PCIe 通道。
 
 对 DMI 链路主动状态电源管理（Active-state power management，ASPM）的控制。
 
