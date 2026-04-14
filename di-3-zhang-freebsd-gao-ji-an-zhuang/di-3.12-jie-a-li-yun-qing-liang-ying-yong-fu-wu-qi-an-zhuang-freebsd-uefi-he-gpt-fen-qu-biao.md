@@ -498,7 +498,7 @@ root@mfsbsd:~ # gpart show # 查看修复分区表后的磁盘信息
 
 ![Distribution extract failed](../.gitbook/assets/fb-ufs-1.png)
 
-观察实际发生了什么，按 Ctrl + C 键，退回到 Shell 界面，通过以下命令观察：
+观察实际发生的现象，按 Ctrl + C 键，退回到 Shell 界面，通过以下命令观察：
 
 ```sh
 # dmesg
