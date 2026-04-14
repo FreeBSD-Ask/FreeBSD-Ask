@@ -157,4 +157,4 @@ PS C:\Users\ykla> Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-H
 
 1. 查找 FreeBSD 源代码中关于 `kern.evdev.rcpt_mask` 的实现，逐行注释并分析原理。
 
-2. 探索哪些 Hyper-V 虚拟化设置能够优化虚拟化体验。
+2. 探索哪些 Hyper-V 虚拟化设置能够优化虚拟化性能。
