@@ -48,7 +48,7 @@ Xfce 的 Logo 是一只 [老鼠 🐀](https://docs.xfce.org/faq#what_does_it_mea
 $ echo "/usr/local/etc/xdg/xfce4/xinitrc" > ~/.xinitrc
 ```
 
-将 Xfce 启动脚本写入 `~/.xsession` 文件，以便通过登录管理器启动 Xfce
+将 Xfce 启动脚本写入 `~/.xsession` 文件，以便通过登录管理器启动 Xfce：
 
 ```sh
 $ echo "/usr/local/etc/xdg/xfce4/xinitrc" > ~/.xsession
