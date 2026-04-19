@@ -211,7 +211,7 @@ $ ps
 
 ### 参考文献
 
-- FreeBSD Forums. Xfce4 is not displayed correctly when I connect vncviewer (in Linux) to tightvnc-server (on FreeBSD)[EB/OL]. FreeBSD Forums, [2026-03-25]. <https://forums.freebsd.org/threads/xfce4-is-not-displayed-correctly-when-i-connect-vncviewer-in-linux-to-tightvnc-server-on-freebsd.85709/>. FreeBSD 官方论坛讨论，解决了 VNC 远程连接中 Xfce4 显示异常的问题。
+- FreeBSD Forums. Xfce4 is not displayed correctly when I connect vncviewer (in Linux) to tightvnc-server (on FreeBSD)[EB/OL]. [2026-03-25]. <https://forums.freebsd.org/threads/xfce4-is-not-displayed-correctly-when-i-connect-vncviewer-in-linux-to-tightvnc-server-on-freebsd.85709/>. FreeBSD 官方论坛讨论，解决了 VNC 远程连接中 Xfce4 显示异常的问题。
 
 ## XRDP（以 FreeBSD 为被控端）
 
