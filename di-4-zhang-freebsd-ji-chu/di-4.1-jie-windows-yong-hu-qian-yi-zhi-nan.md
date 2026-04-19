@@ -118,9 +118,9 @@ abc    ABC
 
 #### 参考文献
 
-- 微软. 调整区分大小写[EB/OL]. [2026-03-26]. <https://learn.microsoft.com/en-us/windows/wsl/case-sensitivity>. Windows 文件系统支持使用属性标志按目录设置区分大小写，提供跨平台文件兼容性支持
-- 微软. FAT32 File System[EB/OL]. [2026-04-18]. <https://learn.microsoft.com/en-us/previous-versions/aa364047(v=vs.85)>. FAT 文件系统卷不区分大小写
-- Apple. File system formats available in Disk Utility[EB/OL]. [2026-04-18]. <https://support.apple.com/guide/disk-utility/file-system-formats-dsku19ed921c/mac>. APFS 和 HFS+ 默认均不区分大小写，但可在格式化时选择区分大小写变体
+- 微软. 调整区分大小写[EB/OL]. [2026-03-26]. <https://learn.microsoft.com/en-us/windows/wsl/case-sensitivity>. Windows 文件系统支持使用属性标志按目录设置区分大小写，提供跨平台文件兼容性支持。
+- 微软. FAT32 File System[EB/OL]. [2026-04-18]. <https://learn.microsoft.com/en-us/previous-versions/aa364047(v=vs.85)>. FAT 文件系统卷不区分大小写。
+- Apple. File system formats available in Disk Utility[EB/OL]. [2026-04-18]. <https://support.apple.com/guide/disk-utility/file-system-formats-dsku19ed921c/mac>. APFS 和 HFS+ 默认均不区分大小写，但可在格式化时选择区分大小写变体。
 
 ## 换行符/回车之差异
 
