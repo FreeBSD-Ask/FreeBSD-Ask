@@ -12,7 +12,7 @@ FreeBSD 是一款真正自由（Liberty）的 **操作系统**，在这波谲云
 
 >**注意**
 >
->本书约有 60% 的章节尚未完成（详见下文），已有的章节虽经审阅和修订，但仍非最终版本。
+> 本书约有 60% 的章节尚未完成（详见下文），已有的章节虽经审阅和修订，但仍非最终版本。
 
 本书是一本关于 FreeBSD 操作系统的开源研究著作，同时包含 OpenBSD、NetBSD 等 Berkeley Unix 家族系统的导论章节。
 
@@ -44,7 +44,7 @@ FreeBSD 是一款真正自由（Liberty）的 **操作系统**，在这波谲云
 
 >**注意**
 >
->以上下载地址以 `docs.bsdcn.org` 域名开头，非 `book.bsdcn.org`。
+> 以上下载地址以 `docs.bsdcn.org` 域名开头，非 `book.bsdcn.org`。
 
 EPUB 格式文档在移动端可使用 [微信读书](https://play.google.com/store/apps/details?id=com.tencent.weread&hl=zh) 打开，格式显示完整；在桌面端可使用 [CAJViewer 9](https://cajviewer.cnki.net/download.html) 打开。
 

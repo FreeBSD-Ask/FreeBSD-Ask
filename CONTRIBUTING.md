@@ -67,7 +67,7 @@ and retry with 'git restore --source=HEAD :/'
 - 严格验证每一部分内容：
   - 参考文献：不仅要求来源可查，更要求来源可信
   - 原理性内容：
-    - 追溯至具体的 FreeBSD 源码文件、提交记录或函数
+    - 追溯至具体的 FreeBSD 源代码文件、提交记录或函数
     - 明确引用相关标准、规范或法律文件
     - 分析其设计哲学与开发思路
   - 操作性内容：应在 FreeBSD 环境中亲自测试，确保可复现
@@ -94,7 +94,7 @@ and retry with 'git restore --source=HEAD :/'
 
 >**技巧**
 >
->您完全可以通过 GitHub 在线完成所有提交。
+> 您完全可以通过 GitHub 在线完成所有提交。
 
 ![项目体积](https://img.shields.io/github/repo-size/FreeBSD-Ask/FreeBSD-Ask?style=for-the-badge&label=%E6%9C%AC%E9%A1%B9%E7%9B%AE%E5%AD%98%E5%82%A8%E5%BA%93%E4%BD%93%E7%A7%AF&color=EB0028)
 
@@ -146,7 +146,7 @@ $ git clone https://github.com/FreeBSD-Ask/FreeBSD-Ask
 	email = yklaxds@gmail.com
 	signingkey = 11B44C23A0A0B986
 [commit]
-  gpgsign = true 
+  gpgsign = true
 [core]
 	autocrlf = true
 	longpaths = true
@@ -183,12 +183,12 @@ $ git clone https://github.com/FreeBSD-Ask/FreeBSD-Ask
 
 >**技巧**
 >
->若您仅想贡献内容本身，尚无改进 docs 网站浏览体验与构建优化等意向，则仅需阅读本文即可。
+> 若您仅想贡献内容本身，尚无改进 docs 网站浏览体验与构建优化等意向，则仅需阅读本文即可。
 
 ### 项目结构概览
 
 ```sh
->FreeBSD-Ask-main
+> FreeBSD-Ask-main
 │  .gitattributes  # 用于让 GitHub 正确识别 markdown，用于在 GitHub 正确高亮，正确显示编程语言（Languages）的统计信息
 │  .gitignore # 一些规则，用于阻止 git 上传特定类型的文件或目录，如 node_modules
 │  CHANGELOG-ARCHIVE.md # 普通文件，记录既往所有重要变动
@@ -228,7 +228,7 @@ $ git clone https://github.com/FreeBSD-Ask/FreeBSD-Ask
 │          Auto-Assign.yml # 自动为 issue PR 分配人员进行处理
 │          AutoCorrect.yml # markdown 格式修正，会自动提交 PR
 │          check-images.yml # 检查图片的调用情况，有无正确引用图片，不正确会生成 issue
-│          create-pdf.yml # 用于在 GitHub release 生成电子书 PDF、EPUB 
+│          create-pdf.yml # 用于在 GitHub release 生成电子书 PDF、EPUB
 │          file-name-check.yml # 检查 SUMMARY.md 目录中的文件引用是否正确，不正确会生成 issue
 │          links.yml # 链接检查，检查文中调用的 URL 是否能正常访问
 │          markdown-lint2.yml # markdown 格式检查
