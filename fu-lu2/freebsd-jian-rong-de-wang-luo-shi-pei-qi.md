@@ -127,7 +127,7 @@ Intel 网卡也是常见的网络适配器类型，FreeBSD 对其提供了良好
 
 参考文献：
 
-- FreeBSD Project. igc -- Intel Ethernet Controller I225 driver[EB/OL]. [2026-03-25]. <https://man.freebsd.org/cgi/man.cgi?query=igc>. 手册页，详述了 Intel i225 网卡驱动的使用方法。
+- FreeBSD Project. igc: Intel Ethernet Controller I225 driver[EB/OL]. [2026-03-25]. <https://man.freebsd.org/cgi/man.cgi?query=igc>. 手册页，详述了 Intel i225 网卡驱动的使用方法。
 
 #### 千兆和百兆及其他以太网卡
 
