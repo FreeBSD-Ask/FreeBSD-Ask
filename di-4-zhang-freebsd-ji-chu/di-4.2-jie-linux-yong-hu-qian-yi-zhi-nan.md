@@ -99,10 +99,10 @@ FreeBSD 基本系统几乎不包含任何与 BSD 协议不兼容的软件。
 - FreeBSD Project. ttys -- terminal initialization information[EB/OL]. [2026-04-17]. <https://man.freebsd.org/cgi/man.cgi?query=ttys&sektion=5>. 终端初始化配置文件手册页
 - Gentoo. Comparison of init systems[EB/OL]. [2026-03-25]. <https://wiki.gentoo.org/wiki/Comparison_of_init_systems>. 各大 init 对比图，为系统选型提供参考
 - FreeBSD Project. GPL Software in FreeBSD Base[EB/OL]. [2026-03-25]. <https://wiki.freebsd.org/GPLinBase>. FreeBSD 基本系统中的 GPL 软件，系统梳理了基本系统的许可证兼容性
-- FreeBSD Project. FreeBSD 14.0-RELEASE Release Notes[EB/OL]. [2026-04-18]. <https://www.freebsd.org/releases/14.0R/relnotes/>. 该发行说明明确记载：“The default shell for the root user is now sh(1)”，确认 FreeBSD 14 起默认 root shell 由 csh/tcsh 变更为 sh
-- FreeBSD Project. Ports Quarterly Branch[EB/OL]. [2026-04-18]. <https://wiki.freebsd.org/Ports/QuarterlyBranch>. 该文档明确记载：“quarterly is the familiar name for ports branched from main”，确认 main 分支即 latest 源、季度分支按 YYYYQn 命名
+- FreeBSD Project. FreeBSD 14.0-RELEASE Release Notes[EB/OL]. [2026-04-18]. <https://www.freebsd.org/releases/14.0R/relnotes/>. 该发行说明明确记载：“The default shell for the root user is now sh(1)”，FreeBSD 14 起默认 root shell 由 csh/tcsh 变更为 sh
+- FreeBSD Project. Ports Quarterly Branch[EB/OL]. [2026-04-18]. <https://wiki.freebsd.org/Ports/QuarterlyBranch>. 该文档明确记载：“quarterly is the familiar name for ports branched from main”，main 分支即 latest 源、季度分支按 YYYYQn 命名
 - FreeBSD Core Team. Change to FreeBSD release scheduling and support period[EB/OL]. (2024-07-16)[2026-04-18]. <https://lists.freebsd.org/archives/freebsd-announce/2024-July/000143.html>. 该公告明确记载：“the FreeBSD core team has approved reducing the stable branch support duration from 5 years to 4 years starting with FreeBSD 15”
-- FreeBSD Wiki. Desktop[EB/OL]. [2026-04-18]. <https://wiki.freebsd.org/Desktop>. 该文档明确记载：“NetworkManager itself cannot be ported due to a monolithic architecture and extensive Linux syscall use”，确认 NetworkManager 无法移植的真实原因
+- FreeBSD Wiki. Desktop[EB/OL]. [2026-04-18]. <https://wiki.freebsd.org/Desktop>. 该文档明确记载：“NetworkManager itself cannot be ported due to a monolithic architecture and extensive Linux syscall use”，NetworkManager 无法移植的真实原因
 
 ## 基本对比
 
@@ -430,7 +430,7 @@ Node.js 的依赖存储在 `node_modules` 目录，而 Nix/NixOS 的所有包则
 - Gentoo Foundation. About Gentoo[EB/OL]. [2026-04-04]. <https://www.gentoo.org/get-started/about/>. Gentoo Linux 元发行版的说法来自此处。
 - Arch Linux Wiki. Arch User Repository[EB/OL]. [2026-04-04]. <https://wiki.archlinux.org/title/Arch_User_Repository>. Wiki 指出 “Warning: AUR packages are user-produced content. These PKGBUILDs are completely unofficial and have not been thoroughly vetted. Any use of the provided files is at your own risk.”，译文：“警告：AUR 中的软件包是由其他用户编写的，这些 PKGBUILD 是非官方的，未经彻底审查。使用这些文件的风险由您自行承担。”
 - Linux Uprising. Malware Found On The Arch User Repository (AUR)[EB/OL]. (2018-07-09)[2026-04-04]. <https://www.linuxuprising.com/2018/07/malware-found-on-arch-user-repository.html?m=1>. AUR 中确实曾存在恶意软件包。
-- BleepingComputer. Malware Found in Arch Linux AUR Package Repository[EB/OL]. (2018-07-07)[2026-04-18]. <https://www.bleepingcomputer.com/news/security/malware-found-in-arch-linux-aur-package-repository/>. 该报道确认 2018 年 AUR 中 acroread 等至少三个软件包被植入恶意代码。
+- BleepingComputer. Malware Found in Arch Linux AUR Package Repository[EB/OL]. (2018-07-07)[2026-04-18]. <https://www.bleepingcomputer.com/news/security/malware-found-in-arch-linux-aur-package-repository/>. 报道了 2018 年 AUR 中 acroread 等至少三个软件包被植入恶意代码。
 - LWN.net. Malware found in the Arch Linux AUR repository[EB/OL]. (2018-07-11)[2026-04-18]. <https://lwn.net/Articles/759461/>. LWN 对同一事件的独立报道，交叉验证了 AUR 恶意软件包事实。
 - openSUSE. Version naming question: 13 -> 42 -> 15 - Why?[EB/OL]. [2026-04-17]. <https://forums.opensuse.org/t/version-naming-question-13-42-15-why/131061>. openSUSE 社区对版本号从 42 降至 15 所引发升级问题的讨论。
 - The Open Group. Register of UNIX® Certified Products[EB/OL]. [2026-04-17]. <https://www.opengroup.org/openbrand/register/brand3622.htm>. EulerOS（非 openEuler 社区版）通过 UNIX 03 认证。该注册记录明确记载：“Product Name: Huawei EulerOS 2.0, Registered on: 8-Sep-2016”。
@@ -440,11 +440,11 @@ Node.js 的依赖存储在 `node_modules` 目录，而 Nix/NixOS 的所有包则
 - STROUSTRUP B. C++ 语言的设计和演化[M]. 裘宗燕, 译. 北京:人民邮电出版社, 2020. ISBN: 978-7-115-49711-6. 由 C++ 语言创始人详述该语言的设计决策与演进历程。
 - 统信安全应急响应中心. deepin-devicemanager命令注入漏洞安全公告（UTSA-2024-003941）[EB/OL]. [2026-04-04]. <https://src.uniontech.com/#/security_advisory_detail?utsa_id=UTSA-2024-003941>. 披露 deepin 设备管理器命令注入漏洞的技术细节与影响范围。
 - Fedora Project. Fedora Council Charter[EB/OL]. [2026-04-04]. <https://docs.fedoraproject.org/en-US/council/>. Fedora 项目完全由红帽控制。
-- Fedora Project. Fedora and Red Hat Enterprise Linux[EB/OL]. [2026-04-18]. <https://docs.fedoraproject.org/en-US/quick-docs/fedora-and-red-hat-enterprise-linux/>. 该文档明确记载：“Fedora is a kind of 'upstream' of Red Hat Enterprise Linux”，确认 Fedora 是 RHEL 的上游。
+- Fedora Project. Fedora and Red Hat Enterprise Linux[EB/OL]. [2026-04-18]. <https://docs.fedoraproject.org/en-US/quick-docs/fedora-and-red-hat-enterprise-linux/>. 该文档明确记载：“Fedora is a kind of 'upstream' of Red Hat Enterprise Linux”，Fedora 是 RHEL 的上游。
 - CentOS Project. CentOS Stream documentation[EB/OL]. [2026-04-18]. <https://docs-centos-org-b1e6ff.gitlab.io/stream-docs/>. 该文档阐述了 CentOS Stream 作为 RHEL 中游开发分支的定位。
 - mdd3135. deepin的开发人员都不测试的吗[EB/OL]. 深度科技论坛. (2021-04-03)[2026-04-04]. <https://bbs.deepin.org/post/218041>. 社区用户对 deepin 系统软件质量的质疑与讨论。
 - Gentoo Foundation. Gentoo offers a full range of binary packages[EB/OL]. (2023-12-29)[2026-04-04]. <https://www.gentoo.org/news/2023/12/29/Gentoo-binary.html>. Gentoo 二进制包。
-- NixOS Wiki. NixOS[EB/OL]. [2026-04-18]. <https://wiki.nixos.org/wiki/NixOS>. 该文档确认了 NixOS 的声明式配置模型及 nixos-rebuild switch 机制。
+- NixOS Wiki. NixOS[EB/OL]. [2026-04-18]. <https://wiki.nixos.org/wiki/NixOS>. NixOS 的声明式配置模型及 nixos-rebuild switch 机制。
 
 ## 课后习题
 
