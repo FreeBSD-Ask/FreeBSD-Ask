@@ -123,9 +123,9 @@
 
 ### 参考信息
 
-- FreeBSD Project. Bug 286847: If the hostname is not set for the host, the value "Amnesiac" should be written to rc.conf.[EB/OL]. [2026-03-25]. <https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=286847>。该 Bug 报告提出空主机名时应写入默认值，该 Bug 报告由笔者发现
-- FreeBSD Project. freebsd-src/libexec/getty/main.c[EB/OL]. [2026-03-25]. <https://github.com/freebsd/freebsd-src/blob/80c12959679ab203459dc20eb9ece3a7328b7de5/libexec/getty/main.c#L178>。该代码段包含登录提示符显示逻辑，`Amnesiac` 源代码
-- FreeBSD Project. bsdinstall: Warn if hostname is empty[EB/OL]. [2026-03-25]. <https://github.com/freebsd/freebsd-src/pull/1700>。该 PR 为空主机名添加警告
+- FreeBSD Project. Bug 286847: If the hostname is not set for the host, the value "Amnesiac" should be written to rc.conf.[EB/OL]. [2026-03-25]. <https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=286847>. 该 Bug 报告提出空主机名时应写入默认值，该 Bug 报告由笔者发现。
+- FreeBSD Project. freebsd-src/libexec/getty/main.c[EB/OL]. [2026-03-25]. <https://github.com/freebsd/freebsd-src/blob/80c12959679ab203459dc20eb9ece3a7328b7de5/libexec/getty/main.c#L178>. 该代码段包含登录提示符显示逻辑，`Amnesiac` 源代码。
+- FreeBSD Project. bsdinstall: Warn if hostname is empty[EB/OL]. [2026-03-25]. <https://github.com/freebsd/freebsd-src/pull/1700>. 该 PR 为空主机名添加警告。
 
 ## 选择安装类型
 
@@ -592,16 +592,16 @@ root 密码强度无强制要求，但不可为空。若密码为空，将提示
 
 ### 参考文献
 
-- FreeBSD Project. Regulatory Domain Support[EB/OL]. [2026-03-25]. <https://wiki.freebsd.org/WiFi/RegulatoryDomainSupport>。该页面介绍 FreeBSD 无线管制域支持状态
-- FreeBSD Project. freebsd-src/lib/lib80211/regdomain.xml[EB/OL]. [2026-03-25]. <https://github.com/freebsd/freebsd-src/blob/main/lib/lib80211/regdomain.xml>。该文件定义 802.11 无线管制域配置，regdomain.xml 在源代码的位置
-- FreeBSD Project. regdomain.xml -- 802.11 wireless regulatory definitions[EB/OL]. [2026-03-25]. <https://man.freebsd.org/cgi/man.cgi?query=regdomain&sektion=5>。该手册页说明无线管制域配置文件格式，对应编码请参考系统中的 `/etc/regdomain.xml` 文件
+- FreeBSD Project. Regulatory Domain Support[EB/OL]. [2026-03-25]. <https://wiki.freebsd.org/WiFi/RegulatoryDomainSupport>. 该页面介绍 FreeBSD 无线管制域支持状态。
+- FreeBSD Project. freebsd-src/lib/lib80211/regdomain.xml[EB/OL]. [2026-03-25]. <https://github.com/freebsd/freebsd-src/blob/main/lib/lib80211/regdomain.xml>. 该文件定义 802.11 无线管制域配置，regdomain.xml 在源代码的位置。
+- FreeBSD Project. regdomain.xml -- 802.11 wireless regulatory definitions[EB/OL]. [2026-03-25]. <https://man.freebsd.org/cgi/man.cgi?query=regdomain&sektion=5>. 该手册页说明无线管制域配置文件格式，对应编码请参考系统中的 `/etc/regdomain.xml` 文件。
 
 ```sh
 /etc/
 └── regdomain.xml # 无线管制域配置文件
 ```
 
-- Alibaba Cloud. 阿里公共 DNS[EB/OL]. [2026-03-25]. <https://www.alidns.com/>。该服务提供公共 DNS 解析
+- Alibaba Cloud. 阿里公共 DNS[EB/OL]. [2026-03-25]. <https://www.alidns.com/>. 该服务提供公共 DNS 解析。
 
 ## 时区设置
 
