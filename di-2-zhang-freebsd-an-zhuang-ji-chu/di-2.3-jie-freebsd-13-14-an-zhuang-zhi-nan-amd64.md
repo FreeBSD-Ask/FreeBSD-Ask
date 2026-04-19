@@ -519,10 +519,10 @@ root 密码强度无强制要求，但不可为空。若密码为空，将提示
 
 ### 参考文献
 
-- FreeBSD Project. Regulatory Domain Support[EB/OL]. [2026-03-25]. <https://wiki.freebsd.org/WiFi/RegulatoryDomainSupport>. 该页面介绍 FreeBSD 无线管制域支持状态
-- FreeBSD Project. freebsd-src/lib/lib80211/regdomain.xml[EB/OL]. [2026-03-25]. <https://github.com/freebsd/freebsd-src/blob/main/lib/lib80211/regdomain.xml>. 该文件定义 802.11 无线管制域配置，regdomain.xml 在源代码的位置
-- FreeBSD Project. regdomain.xml -- 802.11 wireless regulatory definitions[EB/OL]. [2026-03-25]. <https://man.freebsd.org/cgi/man.cgi?query=regdomain&sektion=5>. 该手册页说明无线管制域配置文件格式，对应编码请参考系统中的 `/etc/regdomain.xml` 文件
-- Alibaba Cloud. 阿里公共 DNS[EB/OL]. [2026-03-25]. <https://www.alidns.com/>. 该服务提供公共 DNS 解析
+- FreeBSD Project. Regulatory Domain Support[EB/OL]. [2026-03-25]. <https://wiki.freebsd.org/WiFi/RegulatoryDomainSupport>. 该页面介绍 FreeBSD 无线管制域支持状态。
+- FreeBSD Project. freebsd-src/lib/lib80211/regdomain.xml[EB/OL]. [2026-03-25]. <https://github.com/freebsd/freebsd-src/blob/main/lib/lib80211/regdomain.xml>. 该文件定义 802.11 无线管制域配置，regdomain.xml 在源代码的位置。
+- FreeBSD Project. regdomain.xml -- 802.11 wireless regulatory definitions[EB/OL]. [2026-03-25]. <https://man.freebsd.org/cgi/man.cgi?query=regdomain&sektion=5>. 该手册页说明无线管制域配置文件格式，对应编码请参考系统中的 `/etc/regdomain.xml` 文件。
+- Alibaba Cloud. 阿里公共 DNS[EB/OL]. [2026-03-25]. <https://www.alidns.com/>. 该服务提供公共 DNS 解析。
 
 ## 时区设置
 
@@ -700,7 +700,7 @@ adduser: INFO: Successfully added (ykla) to the user database. # 已成功将 yk
 Add another user? (yes/no) [no]: # 是否继续添加其他用户
 ```
 
-- ① 如果用户全名为空（即不设置），系统会分配一个默认值 `User &`，其中 `&` 会自动展开为首字母大写的用户名（如用户 `ykla` 的全名将显示为 `User Ykla`）。这是早期 UNIX 的 GECOS 字段行为。相关源代码见 FreeBSD Project. freebsd-src/usr.sbin/pw/pw_user.c[EB/OL]. [2026-03-25]. <https://github.com/freebsd/freebsd-src/blob/main/usr.sbin/pw/pw_user.c>，该文件包含用户管理工具 pw 的源代码，其中 `static struct passwd fakeuser` 部分实现了该行为。
+- ① 如果用户全名为空（即不设置），系统会分配一个默认值 `User &`，其中 `&` 会自动展开为首字母大写的用户名（如用户 `ykla` 的全名将显示为 `User Ykla`）。这是早期 UNIX 的 GECOS 字段行为。相关源代码见 FreeBSD Project. freebsd-src/usr.sbin/pw/pw_user.c[EB/OL]. [2026-03-25]. <https://github.com/freebsd/freebsd-src/blob/main/usr.sbin/pw/pw_user.c>. 该文件包含用户管理工具 pw 的源代码，其中 `static struct passwd fakeuser` 部分实现了该行为。
 
 - ② 如果设置使用随机密码，在最后的部分会输出：`adduser: INFO: Password for (ykla) is: D1MnujkWMv/m`（adduser：信息：用户 (ykla) 的密码是：D1MnujkWMv/m）。
 
@@ -712,7 +712,7 @@ Add another user? (yes/no) [no]: # 是否继续添加其他用户
 
 ### 参考文献
 
-- FreeBSD Project. man adduser(8)[EB/OL]. [2026-03-25]. <https://man.freebsd.org/cgi/man.cgi?adduser(8)>. 该手册页说明 FreeBSD 用户添加命令使用方法
+- FreeBSD Project. man adduser(8)[EB/OL]. [2026-03-25]. <https://man.freebsd.org/cgi/man.cgi?adduser(8)>. 该手册页说明 FreeBSD 用户添加命令使用方法。
 
 ## 完成安装
 
