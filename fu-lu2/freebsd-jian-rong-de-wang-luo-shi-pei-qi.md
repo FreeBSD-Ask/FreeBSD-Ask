@@ -135,7 +135,7 @@ Intel 网卡也是常见的网络适配器类型，FreeBSD 对其提供了良好
 
 支持列表及更多参见：
 
-- FreeBSD Project. em, lem, igb -- Intel(R) PRO/1000 Gigabit Ethernet adapter driver[EB/OL]. [2026-03-25]. <https://man.freebsd.org/cgi/man.cgi?query=em>. 手册页，涵盖 Intel PRO/1000 系列千兆网卡驱动说明。
+- FreeBSD Project. em, lem, igb: Intel(R) PRO/1000 Gigabit Ethernet adapter driver[EB/OL]. [2026-03-25]. <https://man.freebsd.org/cgi/man.cgi?query=em>. 手册页，涵盖 Intel PRO/1000 系列千兆网卡驱动说明。
 
 ## USB 网卡推荐
 
