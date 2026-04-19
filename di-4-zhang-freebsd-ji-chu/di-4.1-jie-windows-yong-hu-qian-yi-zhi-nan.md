@@ -193,7 +193,7 @@ FreeBSD 的编码在 [main/usr.bin/login/login.conf](https://github.com/freebsd/
 
 - 微软. Code pages[EB/OL]. [2026-03-26]. <https://learn.microsoft.com/en-us/globalization/encoding/code-pages>. 微软官方称，936 即是 GBK，用于中文简体字符编码；代码页 936 最初覆盖 GB 2312 字符集，后扩展为 GBK。
 - IETF. RFC 20: ASCII format for network interchange[EB/OL]. [2026-04-18]. <https://www.rfc-editor.org/rfc/rfc20.html>. ASCII 字符编码标准，定义 7 位 128 个字符的编码，其中 0x41 为大写字母 A。
-- Unicode Consortium. UTF-8, UTF-16, UTF-32 BOM[EB/OL]. [2026-04-18]. <https://www.unicode.org/faq/utf_bom.html>. UTF-8 的 BOM 为字节序列 0xEF 0xBB 0xBF
+- Unicode Consortium. UTF-8, UTF-16, UTF-32 BOM[EB/OL]. [2026-04-18]. <https://www.unicode.org/faq/utf_bom.html>. UTF-8 的 BOM 为字节序列 0xEF 0xBB 0xBF。
 - 微软. Use UTF-8 code pages in Windows apps[EB/OL]. [2026-04-18]. <https://learn.microsoft.com/en-us/windows/apps/design/globalizing/use-utf8-code-page>. Windows 10 及后续版本可通过系统区域设置启用 UTF-8 支持（Beta 功能），但可能导致旧应用程序兼容性问题。
 - FreeBSD Project. login.conf(5)[EB/OL]. [2026-04-18]. <https://man.freebsd.org/cgi/man.cgi?query=login.conf&sektion=5>. FreeBSD 登录类能力数据库，源文件位于 `usr.bin/login/login.conf`，编译后路径为 /etc/login.conf，用于设置字符编码等用户环境。
 
@@ -236,7 +236,7 @@ Windows 会直接读取 RTC 的结果，并将其视为本地时间，即 Local 
 ### 参考文献
 
 - 中国计量科学研究院. 秒的定义[EB/OL]. [2026-03-26]. <https://www.nim.ac.cn/520/node/4.html>. 秒的定义，基于铯原子超精细跃迁频率。
-- BIPM. SI base unit: second[EB/OL]. [2026-04-18]. <https://www.bipm.org/en/si-base-units/second>. 国际计量局秒的 SI 定义，铯 133 原子不受干扰的基态超精细跃迁频率取固定数值 9,192,631,770 Hz
+- BIPM. SI base unit: second[EB/OL]. [2026-04-18]. <https://www.bipm.org/en/si-base-units/second>. 国际计量局秒的 SI 定义，铯 133 原子不受干扰的基态超精细跃迁频率取固定数值 9,192,631,770 Hz。
 - IANA. Time Zone Database[EB/OL]. [2026-03-26]. <https://www.iana.org/time-zones>. 时区数据库，提供全球时区信息标准化。
 - IANA. tzdata release 2025b NEWS[EB/OL]. [2026-04-18]. <https://data.iana.org/time-zones/tzdb-2025b/NEWS>. 时区数据库 2025b 版本变更说明，Asia/Urumqi 的 1980 年向 UTC+8 的转换已被移除，现为 UTC+6；Asia/Kashgar 为 Asia/Urumqi 的向后兼容链接。
 - 微软. Why does Windows keep your BIOS clock on local time?[EB/OL]. [2026-04-18]. <https://devblogs.microsoft.com/oldnewthing/20040902-00/?p=37983>. Windows 默认将硬件时钟（RTC）视为本地时间而非 UTC 的历史原因。
