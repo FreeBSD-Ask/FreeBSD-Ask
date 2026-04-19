@@ -6328,8 +6328,4 @@ PLL：Phase Locked Loop，锁相环
 
 其具体作用尚不明确。
 
-## 课后习题
 
-1. 在 FreeBSD 中使用 pciconf 工具列出 PCH 设备，选取其中一个控制器（如 SATA、PCIe 或 USB），编写简单程序读取其配置空间寄存器。
-
-2. 修改 Flash Protection Range Registers (FPRR) 为禁用状态，验证是否可使用工具直接访问 BIOS 闪存区域。
