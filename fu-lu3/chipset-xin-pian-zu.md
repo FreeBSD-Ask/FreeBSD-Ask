@@ -3763,8 +3763,7 @@ Auto（自动）
 
 这个 BIOS 设置项不是 PCIe 设备报告的 LTR 值本身。它是系统 (具体是 SA 内的 PCIe 控制器/电源管理逻辑) 在评估 PCIe 设备 LTR 要求时，需要额外考虑的一个内部延迟补偿值。
 
-参见：博客园. BIOS PCIe 配置里的 LTR Snoop Latency value of SA PCIE[EB/OL]. [2026-03-26]. <https://www.cnblogs.com/wanglouxiaozi/p/18946234>
-
+参见：博客园. BIOS PCIe 配置里的 LTR Snoop Latency value of SA PCIE[EB/OL]. [2026-03-26]. <https://www.cnblogs.com/wanglouxiaozi/p/18946234>.
 - Non Snoop Latency Override（覆盖非侦听延迟）
 
 Disabled（禁用）
@@ -3951,7 +3950,7 @@ Hot Plug support。支持热插拔
 
 eSATA 的全称是 External Serial ATA（外部串行 ATA），它是 SATA 接口的外部扩展规范。换言之，eSATA 就是“外置”版的 SATA，它是用来连接外部而非内部 SATA 设备。
 
-参见：eSATA 接口的介绍和使用[EB/OL]. [2026-03-26]. <https://www.dell.com/support/kbdoc/zh-cn/000127522/esata-%E6%8E%A5%E5%8F%A3%E7%9A%84%E4%BB%8B%E7%BB%8D%E5%92%8C%E4%BD%BF%E7%94%A8>
+参见：eSATA 接口的介绍和使用[EB/OL]. [2026-03-26]. <https://www.dell.com/support/kbdoc/zh-cn/000127522/esata-%E6%8E%A5%E5%8F%A3%E7%9A%84%E4%BB%8B%E7%BB%8D%E5%92%8C%E4%BD%BF%E7%94%A8>.
 
 #### External（外置）
 

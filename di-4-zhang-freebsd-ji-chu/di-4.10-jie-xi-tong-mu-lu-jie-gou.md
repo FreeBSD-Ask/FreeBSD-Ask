@@ -112,7 +112,7 @@
 │   ├── mtree 用于系统的初始化和验证过程，可用于系统审计，参见 mtree(8)
 │   ├── bluetooth 蓝牙相关
 │   ├── authpf 用于认证网关用户的 shell 配置文件，参见 authpf(8)，默认为空
-│   ├── sysctl.kld.d 特定内核模块的配置文件，默认为空，参见：D40886[EB/OL]. [2026-03-26]. <https://reviews.freebsd.org/D40886>
+│   ├── sysctl.kld.d 特定内核模块的配置文件，默认为空，参见：D40886[EB/OL]. [2026-03-26]. <https://reviews.freebsd.org/D40886>.
 │   ├── pkg PKG 相关配置文件，参见 pkg(7)
 │   ├── jail.conf.d 旨在实现对 jail 配置的模块化管理，默认为空。参见 jail.conf(5)
 │   ├── syslog.d syslogd 的配置文件，参见 syslog(3)
