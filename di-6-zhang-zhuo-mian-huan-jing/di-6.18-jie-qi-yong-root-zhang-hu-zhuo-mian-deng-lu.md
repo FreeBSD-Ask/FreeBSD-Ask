@@ -40,8 +40,6 @@ LightDM，即 Light Display Manager，轻量级显示管理器。
 # service lightdm restart
 ```
 
-
-
 ## SDDM
 
 SDDM 即 Simple Desktop Display Manager，简单的桌面显示管理器。
@@ -62,6 +60,10 @@ SDDM 即 Simple Desktop Display Manager，简单的桌面显示管理器。
 
 ## 课后习题
 
-1. 查找 pam_securetty 模块的源码，分析其安全设计原理。
-2. 使用其他方法绕过 SDDM 的 root 登录限制。
-3. 使用其他方法绕过 LightDM 的 root 登录限制。
+1. 查找 pam_securetty 模块的源代码，分析其安全设计原理。
+2. 分析 SDDM 的 PAM 配置中 `include login` 与 `include system` 的差异，理解为何后者允许 root 登录。
+3. 分析 LightDM 的 PAM 配置中 `pam_securetty.so` 的作用机制。
+
+> **安全提醒**
+>
+> 课后习题 2、3 旨在理解 PAM 安全机制的设计原理，而非鼓励绕过安全限制。在生产环境中，应始终遵循最小权限原则，避免使用 root 账户登录桌面。

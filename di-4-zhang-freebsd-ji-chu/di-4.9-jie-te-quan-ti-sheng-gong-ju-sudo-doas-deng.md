@@ -123,7 +123,7 @@ permit :wheel
 - 或者使用 Ports 安装：
 
 ```sh
-# cd /usr/ports/security/sudo/ 
+# cd /usr/ports/security/sudo/
 # make install clean
 ```
 
@@ -174,7 +174,7 @@ sudo-rs 是一款采用 Rust 编写的、以安全为导向并具备内存安全
 - 或者使用 Ports 安装：
 
 ```sh
-# cd /usr/ports/security/sudo-rs/ 
+# cd /usr/ports/security/sudo-rs/
 # make install clean
 ```
 
@@ -187,13 +187,13 @@ sudo-rs 是一款采用 Rust 编写的、以安全为导向并具备内存安全
 - 使用 pkg 安装：
 
 ```sh
-# pkg ins sudo-rs-coexist
+# pkg install sudo-rs-coexist
 ```
 
 - 还可以通过 Ports 来安装：
 
 ```sh
-# cd /usr/ports/security/sudo-rs/ 
+# cd /usr/ports/security/sudo-rs/
 # make -V FLAVORS # 查看有哪些 FLAVORS
 default coexist
 # make FLAVOR=coexist install clean # 指定安装共存版本的 sudo-rs
@@ -363,15 +363,16 @@ root ALL=(ALL:ALL) ALL
 ```sh
 $ sudo su
 [sudo: authenticate] Password: # 此处同样不会显示任何输入内容，*** 这种掩码也没有
-# 
+#
 ```
 
 ## 附录：通过 mac_do 提权
 
 参考文献：
 
-- K Rin. FreeBSD MAC 簡單介紹[EB/OL]. [2026-03-26]. <https://sandb0x.tw/a/FreeBSD_MAC_%E7%B0%A1%E5%96%AE%E4%BB%8B%E7%B4%B9>
+- K Rin. FreeBSD MAC 簡單介紹[EB/OL]. [2026-03-26]. <https://sandb0x.tw/a/FreeBSD_MAC_%E7%B0%A1%E5%96%AE%E4%BB%8B%E7%B4%B9>. 以中文简要介绍 FreeBSD 强制访问控制框架的基本概念与配置方式。
 - FreeBSD Project. man mac_do(4)[EB/OL]. [2026-03-26]. <https://man.freebsd.org/cgi/man.cgi?mac_do(4)>
+- OpenBSD. doas -- execute commands as another user[EB/OL]. [2026-04-17]. <https://man.openbsd.org/doas.1>. doas 提权工具手册页
 
 ## 提权工具配置文件结构
 
@@ -390,5 +391,5 @@ $ sudo su
 ## 课后习题
 
 1. 撰写关于通过 mac_do 提权的具体实现原理与操作手册，并向本书提交 PR。
-2. 查看 FreeBSD Ports 中 doas 工具的源码实现，分析其设计如何在简单性与安全性之间做权衡。
+2. 查看 FreeBSD Ports 中 doas 工具的源代码实现，分析其设计如何在简单性与安全性之间做权衡。
 3. 修改 FreeBSD 中 doas 配置的 keepenv 选项，验证其行为变化。

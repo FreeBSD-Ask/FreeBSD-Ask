@@ -22,7 +22,7 @@ LXQt 是一款轻量级桌面环境，基于 Qt 应用框架开发。
 # cd /usr/ports/x11-fonts/wqy/ && make install clean
 # cd /usr/ports/x11/sddm/ && make install clean
 # cd /usr/ports/devel/gvfs/ && make install clean
-# cd /usr/ports/devel/xdg-user-dirs/ && make install clean 
+# cd /usr/ports/devel/xdg-user-dirs/ && make install clean
 ```
 
 ### 软件包说明

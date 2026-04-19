@@ -94,7 +94,7 @@ Add another user? (yes/no): no # 还需要创建另一个账号吗？
 Goodbye!
 ```
 
-- ①：登录名命名有一些限制，参见：passwd(5)[EB/OL]. [2026-03-26]. <https://man.freebsd.org/cgi/man.cgi?query=passwd&sektion=5&format=html>。但请注意，登录名不支持八位编码字符集，例如不支持中文（即仅支持特定 ASCII 字符）。
+- ① 登录名命名有一些限制，参见 passwd(5)[EB/OL]. [2026-03-26]. <https://man.freebsd.org/cgi/man.cgi?query=passwd&sektion=5&format=html>。但请注意，登录名不支持八位编码字符集，例如不支持中文（即仅支持特定 ASCII 字符）。
 
 ## `rmuser` 删除用户与 `passwd` 修改密码
 
@@ -148,10 +148,9 @@ root 用户可以修改所有用户的密码。
 uid=1001(ykla) gid=1001(ykla) groups=1001(ykla),0(wheel),1002(admin)
 ```
 
-- 创建 `wheel` 组，只添加 `root` 用户：
+- 将用户 `root` 添加到 `wheel` 组（`wheel` 组为系统默认组，无需创建）：
 
 ```sh
-# pw groupadd wheel
 # pw groupmod wheel -m root
 ```
 
@@ -201,7 +200,7 @@ uid=1001(ykla) gid=1001(ykla) groups=1001(ykla),0(wheel),1002(admin)
 示例：删除用户 test2 及其主目录。
 
 ```sh
-# pw userdel -r test2 
+# pw userdel -r test2
 ```
 
 ### `pw usershow` 命令

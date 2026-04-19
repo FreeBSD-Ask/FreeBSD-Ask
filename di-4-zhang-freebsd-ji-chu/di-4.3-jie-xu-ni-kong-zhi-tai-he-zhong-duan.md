@@ -70,8 +70,8 @@ To change this login announcement, see motd(5).
 ```sh
 login: root
 Password:
-Login: incorrect # 表示登录信息不正确
-login: 
+Login incorrect # 表示登录信息不正确
+login:
 ```
 
 - 若用户名和密码都不正确：
@@ -79,8 +79,8 @@ login:
 ```sh
 login: test # 当前系统中不存在该用户
 Password:
-Login: incorrect
-login: 
+Login incorrect
+login:
 ```
 
 如果读者连用户名都无从得知，建议找回 `root` 密码后，查看系统中有哪些用户账户，或者直接重装系统会更方便。
@@ -88,5 +88,5 @@ login:
 ## 课后习题
 
 1. 在 FreeBSD 中切换多个虚拟控制台（ttyv0-ttyv3），分别在不同控制台登录不同用户，使用 w 命令验证并记录结果。
-2. 查找 FreeBSD 内核中 TTY 子系统的核心源码，使其具有现代操作系统应有的功能。
+2. 查找 FreeBSD 内核中 TTY 子系统的核心源代码，使其具有现代操作系统应有的功能。
 3. 修改 FreeBSD 中 motd（Message of the Day）的默认显示行为，验证其变化。

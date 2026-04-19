@@ -15,12 +15,12 @@ LXDE 是一款轻量级桌面环境，专注于资源利用效率和交互简洁
 - 或使用 Ports 安装：
 
 ```sh
-# cd /usr/ports/x11/lxde-meta/ && make install clean 
-# cd /usr/ports/x11/xorg/ && make install clean 
-# cd /usr/ports/x11/lightdm/ && make install clean 
-# cd /usr/ports/x11/lightdm-gtk-greeter/ && make install clean 
-# cd /usr/ports/x11-fonts/wqy/ && make install clean 
-# cd /usr/ports/devel/xdg-user-dirs/ && make install clean 
+# cd /usr/ports/x11/lxde-meta/ && make install clean
+# cd /usr/ports/x11/xorg/ && make install clean
+# cd /usr/ports/x11/lightdm/ && make install clean
+# cd /usr/ports/x11/lightdm-gtk-greeter/ && make install clean
+# cd /usr/ports/x11-fonts/wqy/ && make install clean
+# cd /usr/ports/devel/xdg-user-dirs/ && make install clean
 ```
 
 ### 软件包说明
@@ -30,7 +30,7 @@ LXDE 是一款轻量级桌面环境，专注于资源利用效率和交互简洁
 | `xorg` | X 窗口系统 |
 | `lxde-meta` | LXDE 桌面环境的元包 |
 | `lightdm` | 轻量级显示管理器 LightDM |
-| `lightdm-gtk-greeter` | LightDM 的 GTK+ 登录界面插件，缺少将无法登录 LightDM |
+| `lightdm-gtk-greeter` | LightDM 的 GTK+ 登录界面插件，LightDM 需要至少一个 greeter 才能正常工作 |
 | `wqy-fonts` | 文泉驿中文字体 |
 | `xdg-user-dirs` | 管理用户目录，如“桌面”、“下载”等 |
 
@@ -46,13 +46,13 @@ exec startlxde
 
 ## 启动项
 
-设置 dbus 服务开机自启：
+设置 D-Bus 服务开机自启：
 
 ```sh
 # service dbus enable
 ```
 
-设置 LightDM 显示管理器开机自启:
+设置 LightDM 显示管理器开机自启：
 
 ```sh
 # service lightdm enable
@@ -71,7 +71,7 @@ proc           /proc       procfs  rw  0   0
 在 `/etc/rc.conf` 文件中加入：
 
 ```sh
-lightdm_env="LC_MESSAGES=zh_CN.UTF-8" 
+lightdm_env="LC_MESSAGES=zh_CN.UTF-8"
 ```
 
 设置 LightDM 环境变量，可以指定系统消息语言为中文。
