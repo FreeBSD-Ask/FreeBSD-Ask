@@ -153,7 +153,7 @@ Proceed with this action? [y/N]:
 ## 参考文献
 
 - FreeBSD Forums. HOWTO: Install binary package without internet access[EB/OL]. [2026-03-25]. <https://forums.freebsd.org/threads/howto-install-binary-package-without-internet-acces.60723/>. 无网络环境下通过 DVD 安装二进制包的方法。
-- FreeBSD Project. pkg(8) -- package manager[EB/OL]. [2026-04-17]. <https://man.freebsd.org/cgi/man.cgi?query=pkg&sektion=8>. FreeBSD 包管理器手册页
+- FreeBSD Project. pkg(8) -- package manager[EB/OL]. [2026-04-17]. <https://man.freebsd.org/cgi/man.cgi?query=pkg&sektion=8>. FreeBSD 包管理器手册页。
 
 ## 课后习题
 
