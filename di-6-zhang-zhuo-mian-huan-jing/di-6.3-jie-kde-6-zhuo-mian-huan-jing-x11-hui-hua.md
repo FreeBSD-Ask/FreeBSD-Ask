@@ -126,7 +126,7 @@ $ echo "exec ck-launch-session startplasma-x11" > ~/.xinitrc
 
 ### 参考文献
 
-- FreeBSD Forums. SDDM login screen with KDE: change language?[EB/OL]. FreeBSD Forums, [2026-03-25]. <https://forums.freebsd.org/threads/sddm-login-screen-with-kde-change-language.80535/>. 讨论 SDDM 登录界面语言设置不生效的解决方法。
+- FreeBSD Forums. SDDM login screen with KDE: change language?[EB/OL]. [2026-03-25]. <https://forums.freebsd.org/threads/sddm-login-screen-with-kde-change-language.80535/>. 讨论 SDDM 登录界面语言设置不生效的解决方法。
 - silversack. デスクトップ 環境 の 構築 - 4-7. LXQT のインストールと 設定 (LXQT 2.0.0)[EB/OL]. [2026-03-25]. <http://silversack.my.coocan.jp/bsd/fbsd11x_bde-4-7_lxqt.htm>. 日文 FreeBSD 桌面环境构建指南中 LXQt 的安装与配置部分。
 
 ## 附录：最小化 KDE 桌面安装方案
@@ -256,7 +256,7 @@ $ echo "exec ck-launch-session startplasma-x11" > ~/.xinitrc
 
 #### 参考文献
 
-- FreeBSD Forums. Missing power buttons when logged in from SDDM[EB/OL]. FreeBSD Forums, [2026-03-25]. <https://forums.freebsd.org/threads/missing-power-buttons-when-logged-in-from-sddm.88231/>. FreeBSD 官方论坛讨论，解决 SDDM 登录后电源按钮缺失的技术问题。
+- FreeBSD Forums. Missing power buttons when logged in from SDDM[EB/OL]. [2026-03-25]. <https://forums.freebsd.org/threads/missing-power-buttons-when-logged-in-from-sddm.88231/>. FreeBSD 官方论坛讨论，解决 SDDM 登录后电源按钮缺失的技术问题。
 
 ### 解除自动锁屏
 

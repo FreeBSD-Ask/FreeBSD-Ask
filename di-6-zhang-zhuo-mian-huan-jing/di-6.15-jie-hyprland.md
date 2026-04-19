@@ -834,10 +834,10 @@ text-caps-lock-color=000000FF
 
 ## 参考文献
 
-- 啊啊啊这是一个昵称. ArchLinux 下 Hyprland 配置指北[EB/OL]. Bilibili 专栏, [2026-03-25]. <https://www.bilibili.com/read/cv22707313/>. Bilibili 专栏提供的 Hyprland 窗口管理器详细配置中文教程。
-- nth233. Hyprland 的配置[EB/OL]. 个人博客, [2026-03-25]. <https://nth233.top/posts/2023-02-26-Hyprland%E9%85%8D%E7%BD%AE>. Hyprland 窗口管理器配置详解与实践指南。
-- Gentoo Wiki. Hyprland[EB/OL]. [2026-03-25]. <https://wiki.gentoo.org/wiki/Hyprland>. Gentoo 官方维基明确指出 Hyprland 启动命令应为 `dbus-run-session Hyprland`。
-- Arch Linux Wiki. Hyprland[EB/OL]. [2026-03-25]. <https://wiki.archlinux.org/title/Hyprland>. Arch Linux 官方维基指出虚拟机需 3D 加速且依赖 DRM GPU，同时所有平台 NVIDIA 显卡均不被支持。
+- 啊啊啊这是一个昵称. ArchLinux 下 Hyprland 配置指北[EB/OL]. [2026-03-25]. <https://www.bilibili.com/read/cv22707313/>. Bilibili 专栏提供的 Hyprland 窗口管理器详细配置中文教程。
+- NTH233. Hyprland 的配置[EB/OL]. [2026-03-25]. <https://nth233.top/posts/2023-02-26-Hyprland%E9%85%8D%E7%BD%AE>. Hyprland 窗口管理器配置详解与实践指南。
+- Gentoo Foundation. Hyprland[EB/OL]. [2026-03-25]. <https://wiki.gentoo.org/wiki/Hyprland>. Gentoo 官方维基明确指出 Hyprland 启动命令应为 `dbus-run-session Hyprland`。
+- Arch Linux Project. Hyprland[EB/OL]. [2026-03-25]. <https://wiki.archlinux.org/title/Hyprland>. Arch Linux 官方维基指出虚拟机需 3D 加速且依赖 DRM GPU，同时所有平台 NVIDIA 显卡均不被支持。
 
 ## 课后习题
 

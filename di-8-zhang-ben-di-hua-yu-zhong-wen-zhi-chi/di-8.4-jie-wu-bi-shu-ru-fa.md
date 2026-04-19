@@ -242,9 +242,9 @@ patch applied.
 
 ## 参考文献
 
-- catfishjones. 请问 ibus-rime 如何设置输入框横排显示[EB/OL]. [2026-03-25]. <https://github.com/rime/ibus-rime/issues/52>. 该 Issue 提供了 ibus-rime 横排显示的配置方案。
-- LEOYoon-Tsaw. Rime_collections/Rime_description.md[EB/OL]. [2026-03-25]. <https://github.com/LEOYoon-Tsaw/Rime_collections/blob/master/Rime_description.md>. 该文档详细介绍了 Rime 输入法的配置格式与选项。
-- rime 项目. CustomizationGuide[EB/OL]. [2026-03-25]. <https://github.com/rime/home/wiki/CustomizationGuide>. 该指南阐述了 Rime 输入法的定制方法与技巧。
+- CATFISHJONES. 请问 ibus-rime 如何设置输入框横排显示[EB/OL]. [2026-03-25]. <https://github.com/rime/ibus-rime/issues/52>. 该 Issue 提供了 ibus-rime 横排显示的配置方案。
+- YOON-TSAW L. Rime_collections/Rime_description.md[EB/OL]. [2026-03-25]. <https://github.com/LEOYoon-Tsaw/Rime_collections/blob/master/Rime_description.md>. 该文档详细介绍了 Rime 输入法的配置格式与选项。
+- Rime Project. CustomizationGuide[EB/OL]. [2026-03-25]. <https://github.com/rime/home/wiki/CustomizationGuide>. 该指南阐述了 Rime 输入法的定制方法与技巧。
 
 ## 课后习题
 

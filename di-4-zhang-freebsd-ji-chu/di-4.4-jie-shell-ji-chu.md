@@ -124,8 +124,8 @@ round-trip min/avg/max/stddev = 27.465/27.596/27.701/0.085 ms
 
 ## 参考文献
 
-- Almquist K. ash (Almquist Shell)[EB/OL]. (1989-05-30)[2026-04-18]. <https://github.com/dsipher/ash>. FreeBSD 的 `/bin/sh` 基于 ash，而非 Stephen R. Bourne 的原始 Bourne shell。
-- Fox B, Ramey C. Bash Reference Manual[M]. Boston: Free Software Foundation, 2022. “Bourne Again Shell”是对“Born Again”的双关。
+- ALMQUIST K. ash (Almquist Shell)[EB/OL]. (1989-05-30)[2026-04-18]. <https://github.com/dsipher/ash>. FreeBSD 的 `/bin/sh` 基于 ash，而非 Stephen R. Bourne 的原始 Bourne shell。
+- FOX B, RAMEY C. Bash Reference Manual[M]. Boston: Free Software Foundation, 2022. “Bourne Again Shell”是对“Born Again”的双关。
 
 ## 课后习题
 

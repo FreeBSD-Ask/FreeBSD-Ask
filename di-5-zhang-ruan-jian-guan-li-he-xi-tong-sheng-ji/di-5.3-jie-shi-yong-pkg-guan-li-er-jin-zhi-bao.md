@@ -252,7 +252,7 @@ Proceed with deinstalling packages? [y/N]: # 输入 y 按回车键就卸载了
 #### 参考文献
 
 - FreeBSD Project. pkg delete -- deletes packages from the database and the system[EB/OL]. [2026-03-25]. <https://man.freebsd.org/cgi/man.cgi?query=pkg-delete>. 提供了 pkg 命令删除软件包的详细规范与参数说明。
-- FreeBSD Project. pkg(7) -- a framework for managing packages[EB/OL]. [2026-04-17]. <https://man.freebsd.org/cgi/man.cgi?query=pkg&sektion=7>. FreeBSD 包管理框架概述手册页
+- FreeBSD Project. pkg(7) -- a framework for managing packages[EB/OL]. [2026-04-17]. <https://man.freebsd.org/cgi/man.cgi?query=pkg&sektion=7>. FreeBSD 包管理框架概述手册页。
 
 ## 列出 pkg 包安装的文件
 

@@ -193,7 +193,7 @@ FreeBSD 的编码在 [main/usr.bin/login/login.conf](https://github.com/freebsd/
 
 - 微软. Code pages[EB/OL]. [2026-03-26]. <https://learn.microsoft.com/en-us/globalization/encoding/code-pages>. 微软官方称，936 即是 GBK，用于中文简体字符编码；代码页 936 最初覆盖 GB 2312 字符集，后扩展为 GBK。
 - IETF. RFC 20: ASCII format for network interchange[EB/OL]. [2026-04-18]. <https://www.rfc-editor.org/rfc/rfc20.html>. ASCII 字符编码标准，定义 7 位 128 个字符的编码，其中 0x41 为大写字母 A。
-- Unicode Consortium. UTF-8, UTF-16, UTF-32 BOM[EB/OL]. [2026-04-18]. <https://www.unicode.org/faq/utf_bom.html>. UTF-8 的 BOM 为字节序列 0xEF 0xBB 0xBF
+- Unicode Consortium. UTF-8, UTF-16, UTF-32 BOM[EB/OL]. [2026-04-18]. <https://www.unicode.org/faq/utf_bom.html>. UTF-8 的 BOM 为字节序列 0xEF 0xBB 0xBF。
 - 微软. Use UTF-8 code pages in Windows apps[EB/OL]. [2026-04-18]. <https://learn.microsoft.com/en-us/windows/apps/design/globalizing/use-utf8-code-page>. Windows 10 及后续版本可通过系统区域设置启用 UTF-8 支持（Beta 功能），但可能导致旧应用程序兼容性问题。
 - FreeBSD Project. login.conf(5)[EB/OL]. [2026-04-18]. <https://man.freebsd.org/cgi/man.cgi?query=login.conf&sektion=5>. FreeBSD 登录类能力数据库，源文件位于 `usr.bin/login/login.conf`，编译后路径为 /etc/login.conf，用于设置字符编码等用户环境。
 
@@ -236,7 +236,7 @@ Windows 会直接读取 RTC 的结果，并将其视为本地时间，即 Local 
 ### 参考文献
 
 - 中国计量科学研究院. 秒的定义[EB/OL]. [2026-03-26]. <https://www.nim.ac.cn/520/node/4.html>. 秒的定义，基于铯原子超精细跃迁频率。
-- BIPM. SI base unit: second[EB/OL]. [2026-04-18]. <https://www.bipm.org/en/si-base-units/second>. 国际计量局秒的 SI 定义，铯 133 原子不受干扰的基态超精细跃迁频率取固定数值 9,192,631,770 Hz
+- BIPM. SI base unit: second[EB/OL]. [2026-04-18]. <https://www.bipm.org/en/si-base-units/second>. 国际计量局秒的 SI 定义，铯 133 原子不受干扰的基态超精细跃迁频率取固定数值 9,192,631,770 Hz。
 - IANA. Time Zone Database[EB/OL]. [2026-03-26]. <https://www.iana.org/time-zones>. 时区数据库，提供全球时区信息标准化。
 - IANA. tzdata release 2025b NEWS[EB/OL]. [2026-04-18]. <https://data.iana.org/time-zones/tzdb-2025b/NEWS>. 时区数据库 2025b 版本变更说明，Asia/Urumqi 的 1980 年向 UTC+8 的转换已被移除，现为 UTC+6；Asia/Kashgar 为 Asia/Urumqi 的向后兼容链接。
 - 微软. Why does Windows keep your BIOS clock on local time?[EB/OL]. [2026-04-18]. <https://devblogs.microsoft.com/oldnewthing/20040902-00/?p=37983>. Windows 默认将硬件时钟（RTC）视为本地时间而非 UTC 的历史原因。
@@ -251,17 +251,17 @@ Windows 会直接读取 RTC 的结果，并将其视为本地时间，即 Local 
 
 以下书籍可供读者进一步研究 Windows 操作系统设计与实现：
 
-- RUSSINOVICH M, SOLOMON D, IONESCU A, 等. 深入解析 Windows 操作系统：第 7 版. 卷 1[M]. 刘晖, 译. 北京:人民邮电出版社, 2021. ISBN: 978-7-115-55694-3. 微软官方教材，具有权威性，系统阐述 Windows 内核架构
-- RUSSINOVICH M, SOLOMON D, IONESCU A, 等. 深入解析 Windows 操作系统：第 7 版. 卷 2[M]. 刘晖, 译. 北京:人民邮电出版社, 2024. ISBN: 978-7-115-61974-7. 微软官方教材，具有权威性，详解 Windows 系统组件
+- RUSSINOVICH M, SOLOMON D, IONESCU A, 等. 深入解析 Windows 操作系统:第7版. 卷1[M]. 刘晖,译. 北京:人民邮电出版社,2021. ISBN: 978-7-115-55694-3. 微软官方教材，具有权威性，系统阐述 Windows 内核架构。
+- RUSSINOVICH M, SOLOMON D, IONESCU A, 等. 深入解析 Windows 操作系统:第7版. 卷2[M]. 刘晖,译. 北京:人民邮电出版社,2024. ISBN: 978-7-115-61974-7. 微软官方教材，具有权威性，详解 Windows 系统组件。
 
 ### 天文历法
 
-- 中国科学院紫金山天文台. 2026 年中国天文年历[M]. 北京: 科学出版社，2025. ISBN: 978-7-03-082584-1. 注：每年一版。一般日历会写潮起潮落太阳东升西落的时间，该书则是大全，提供精确的天文数据
-- 胡中为. 天文学教程（上）[M]. 上海: 上海交通大学出版社，2019. ISBN: 978-7-3132-1655-7. 天文学历史悠久，这是本现代天文学入门书籍，本科生教材，系统介绍天文学基础
-- 胡中为. 天文学教程（下）[M]. 上海: 上海交通大学出版社，2020. ISBN: 978-7-3132-3572-5. 天文学是一级学科，深入讲解天体物理与宇宙学
-- DODELSON S, SCHMIDT F. 现代宇宙学[M]. 于浩然，译. 第 2 版. 北京: 科学出版社，2024. ISBN: 978-7-03-078693-7. 该书用数学和物理学描述宇宙宏观整体而非具体天体行星，提供现代宇宙学理论框架
-- 卢央. 中国古代星占学[M]. 北京: 中国科学技术出版社，2013. ISBN: 978-7-5046-6140-1. 中国古代天文学入门，星占学即用哲学或神秘学解释天文学，梳理古代星占文化
-- CARROLL B W, OSTLIE D A. 当代天体物理学导论[M]. 姜碧沩，李庆康，高健，等，译. 2 版. 北京: 科学出版社，2023. ISBN: 978-7-03-076666-3. 天体物理学即用物理学解释天文学，是现代天文学的核心（还有一些测量、分类、天文历法等不属于此范畴），提供天体物理系统介绍
+- 中国科学院紫金山天文台. 2026 年中国天文年历[M]. 北京:科学出版社,2025. ISBN: 978-7-03-082584-1. 注：每年一版。一般日历会写潮起潮落太阳东升西落的时间，该书则是大全，提供精确的天文数据。
+- 胡中为. 天文学教程(上)[M]. 上海:上海交通大学出版社,2019. ISBN: 978-7-3132-1655-7. 天文学历史悠久，这是本现代天文学入门书籍，本科生教材，系统介绍天文学基础。
+- 胡中为. 天文学教程(下)[M]. 上海:上海交通大学出版社,2020. ISBN: 978-7-3132-3572-5. 天文学是一级学科，深入讲解天体物理与宇宙学。
+- DODELSON S, SCHMIDT F. 现代宇宙学[M]. 于浩然,译. 第2版. 北京:科学出版社,2024. ISBN: 978-7-03-078693-7. 该书用数学和物理学描述宇宙宏观整体而非具体天体行星，提供现代宇宙学理论框架。
+- 卢央. 中国古代星占学[M]. 北京:中国科学技术出版社,2013. ISBN: 978-7-5046-6140-1. 中国古代天文学入门，星占学即用哲学或神秘学解释天文学，梳理古代星占文化。
+- CARROLL B W, OSTLIE D A. 当代天体物理学导论[M]. 姜碧沩,李庆康,高健,等,译. 第2版. 北京:科学出版社,2023. ISBN: 978-7-03-076666-3. 天体物理学即用物理学解释天文学，是现代天文学的核心（还有一些测量、分类、天文历法等不属于此范畴），提供天体物理系统介绍。
 
 > **思考题**
 >

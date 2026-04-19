@@ -165,7 +165,7 @@ $ unrar x archive.rar /home/ykla/桌面/test/ # 解压缩到指定目录
 
 ## zstd
 
-基本系统内置 zstd，无需安装。参见：FreeBSD Project. Add support for zstd-compressed user and kernel core dumps.[EB/OL]. [2026-03-26]. <https://svnweb.freebsd.org/base?view=revision&revision=329240>。该修订记录了 zstd 压缩转储支持的实现细节。
+基本系统内置 zstd，无需安装。参见：FreeBSD Project. Add support for zstd-compressed user and kernel core dumps.[EB/OL]. [2026-03-26]. <https://svnweb.freebsd.org/base?view=revision&revision=329240>. 该修订记录了 zstd 压缩转储支持的实现细节。
 
 ### zstd 压缩
 

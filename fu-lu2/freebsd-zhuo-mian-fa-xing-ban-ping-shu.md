@@ -95,6 +95,6 @@ helloSystem 运行时通常需要 4-8 GB 内存。helloSystem 在界面设计和
 ## 参考文献
 
 - The Register. Say helloSystem: Mac-like FreeBSD project emits 0.5 release[EB/OL]. (2021-06-16)[2026-04-18]. <https://www.theregister.com/2021/06/16/hellosystem_maclike_freebsd_project_05/>. 报道 helloSystem 0.5 版本发布及其打造类 macOS 桌面体验的目标。
-- TURGEON E. GhostBSD: From Usability to Stability[EB/OL]. FreeBSD Foundation, 2025. [2026-04-18]. <https://freebsdfoundation.org/wp-content/uploads/2025/04/turgeon.pdf>. GhostBSD 项目创始人的官方演讲，项目首个测试版本发布于 2009 年。
+- TURGEON E. GhostBSD: From Usability to Stability[EB/OL]. (2025)[2026-04-18]. <https://freebsdfoundation.org/wp-content/uploads/2025/04/turgeon.pdf>. GhostBSD 项目创始人的官方演讲，项目首个测试版本发布于 2009 年。
 - MidnightBSD Project. About MidnightBSD[EB/OL]. [2026-04-18]. <https://www.midnightbsd.org/about/>. MidnightBSD 官方关于页面，项目以创始人 Lucas Holt 的第一只猫 Midnight 命名。
 - PHORONIX. helloSystem Wants To Be The “macOS of BSDs” With A Polished Desktop Experience[EB/OL]. (2021-02-12)[2026-04-18]. <https://www.phoronix.com/news/helloSystem-BSD>. helloSystem 由 AppImage 创始人 Simon Peter 发起。

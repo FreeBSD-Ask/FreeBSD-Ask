@@ -48,23 +48,23 @@ Fiat Lux!
 
 - University of California, Berkeley. Fiat Lux Scholarship[EB/OL]. [2026-03-25]. <https://financialaid.berkeley.edu/types-of-aid-at-berkeley/scholarships/fiat-lux-scholarship/>. 为加州大学伯克利学生提供经济资助的奖学金项目。
 - 北京大学校史馆. 蔡元培像[EB/OL]. [2026-03-25]. <https://www.xsg.pku.edu.cn/details/1893.html>. 展示蔡元培先生塑像。
-- （日）山本四郎. 小川又次稿：《清国征讨策案》[J]. 日本史研究, 1964(75). 随着明治维新，国力渐增，日本逐步迈上了对外侵略扩张的军国主义道路，1887 年，日本参谋本部制定了所谓“清国征讨策略”，逐渐演化为以侵略中国为中心的“大陆政策”。
-- 蔡元培. 蔡元培：言有物，行有伦[M]. 北京:中国文史出版社, 2023. ISBN: 978-7-5205-3816-9. 阐述蔡元培教育思想与文化理念。
+- (日)山本四郎. 小川又次稿:清国征讨策案[J]. 日本史研究,1964(75). 随着明治维新，国力渐增，日本逐步迈上了对外侵略扩张的军国主义道路，1887 年，日本参谋本部制定了所谓“清国征讨策略”，逐渐演化为以侵略中国为中心的“大陆政策”。
+- 蔡元培. 蔡元培：言有物，行有伦[M]. 北京:中国文史出版社,2023. ISBN: 978-7-5205-3816-9. 阐述蔡元培教育思想与文化理念。
 - PIAZZA L, LUMMEN T T A, QUIÑONEZ E, et al. Simultaneous observation of the quantization and the interference pattern of a plasmonic near-field[J]. Nature Communications, 2015, 6: 6407. 揭示等离子体近场的量子化与干涉现象。
-- 伊曼努尔·康德. 历史理性批判文集[M]. 何兆武, 译. 天津:天津人民出版社, 2014:22. 《答复这个问题：“什么是启蒙运动？”》. ISBN: 978-7-201-08641-5. 系统阐述启蒙运动的哲学内涵与历史意义。
+- 伊曼努尔·康德. 历史理性批判文集[M]. 何兆武,译. 天津:天津人民出版社,2014:22. 答复这个问题:"什么是启蒙运动？". ISBN: 978-7-201-08641-5. 系统阐述启蒙运动的哲学内涵与历史意义。
 - University of California, Berkeley Library. Portrait of UC Berkeley namesake no longer on display in Doe Library[EB/OL]. [2026-03-25]. <https://www.lib.berkeley.edu/about/news/george-berkeley-portrait>. 记录大学校园历史争议与文化反思。
-- 尼采. 善恶的彼岸[M]. 赵千帆, 译. 北京:商务印书馆, 2015. ISBN: 978-7-100-11749-4. 探讨道德哲学与价值重估的核心命题。
-- 松原信吾，村石宏实，川崎乡太，等，导演. 迪迦奥特曼[V]. 日本：圆谷株式会社，1996. 第 47 集《告别黑暗》，梅塔莫尔加登场，第 21 分钟，沙耶香。通过特摄作品探讨光明与黑暗的辩证关系。
+- 尼采. 善恶的彼岸[M]. 赵千帆,译. 北京:商务印书馆,2015. ISBN: 978-7-100-11749-4. 探讨道德哲学与价值重估的核心命题。
+- 松原信吾,村石宏实,川崎乡太,等,导演. 迪迦奥特曼[V]. 日本:圆谷株式会社,1996. 第 47 集《告别黑暗》，梅塔莫尔加登场，第 21 分钟，沙耶香。通过特摄作品探讨光明与黑暗的辩证关系。
 - 清华大学. 国立西南联合大学纪念碑碑文[EB/OL]. [2026-03-25]. <https://www.tsinghua.org.cn/info/1952/17852.htm>. 记载西南联大历史使命与学术精神。
-- 闻黎明. 西南联大与现代中国（1937~1946）[M]. 北京:社会科学文献出版社, 2023. ISBN: 978-7-5201-9805-9. 全面研究西南联大历史地位与文化影响。
-- 大冢雅彦，高桥正典，清水久敏，等，导演. 日常系的异能战斗（異能バトルは日常系のなかで）[V]. 日本：泉光高中文艺部，2014. 以校园日常为背景的动画作品，其中角色对正义与邪恶的质问构成了本节讨论的引用来源。
+- 闻黎明. 西南联大与现代中国(1937~1946)[M]. 北京:社会科学文献出版社,2023. ISBN: 978-7-5201-9805-9. 全面研究西南联大历史地位与文化影响。
+- 大冢雅彦,高桥正典,清水久敏,等,导演. 日常系的异能战斗(異能バトルは日常系のなかで)[V]. 日本:泉光高中文艺部,2014. 以校园日常为背景的动画作品，其中角色对正义与邪恶的质问构成了本节讨论的引用来源。
 - ABRAHAO R A, MORIN H P N, PAGÉ J T R, et al. Shadow of a laser beam[J]. Optica, 2024, 11(11): 1549-1555. 实验证明激光束存在阴影的光学现象（论文指出，光也有影子）。
 - University of California, Berkeley. Nobelists[EB/OL]. [2026-04-16]. <https://inspire.berkeley.edu/get-inspired/nobels/>. 记载“By our count, there are 63 Berkeley Nobelists”。
 - University of California, Berkeley. History & discoveries[EB/OL]. [2026-04-18]. <https://www.berkeley.edu/about/history/>. 加州大学伯克利分校官方校史，1868 年建校。
 - University of California. Tuition & financial aid[EB/OL]. [2026-04-18]. <https://admission.universityofcalifornia.edu/tuition-financial-aid/>. 加州大学系统官方学费与资助信息，54% 加州籍本科生免学费。
 - University of California, Berkeley. Cost[EB/OL]. [2026-04-18]. <https://admissions.berkeley.edu/cost/>. 伯克利分校官方招生页面，38% 本科生无需自付学费。
-- Patterson D A, Gibson G, Katz R H. A Case for Redundant Arrays of Inexpensive Disks (RAID)[R]. Berkeley: University of California, EECS Department, 1987. CSD-87-391. 加州大学伯克利分校技术报告，首次提出 RAID 概念。
-- Asanović K, Waterman A, Lee Y. RISC-V ISA[EB/OL]. RISC-V International, [2026-04-18]. <https://riscv.org/about/>. RISC-V 指令集架构始于 2010 年加州大学伯克利分校 Par Lab 项目。
+- PATTERSON D A, GIBSON G, KATZ R H. A Case for Redundant Arrays of Inexpensive Disks (RAID)[R]. Berkeley: University of California, EECS Department, 1987. CSD-87-391. 加州大学伯克利分校技术报告，首次提出 RAID 概念。
+- ASANOVIĆ K, WATERMAN A, LEE Y. RISC-V ISA[EB/OL]. RISC-V International, [2026-04-18]. <https://riscv.org/about/>. RISC-V 指令集架构始于 2010 年加州大学伯克利分校 Par Lab 项目。
 - 北京大学. 北京大学简介[EB/OL]. [2026-04-18]. <https://www.pku.edu.cn/about.html>. 北京大学官方页面，1898 年建校，初名京师大学堂。
 
 ## 课后习题

@@ -94,15 +94,15 @@ FreeBSD 基本系统几乎不包含任何与 BSD 协议不兼容的软件。
 
 ### 参考文献
 
-- MYSQLZOUQI. 浅析 Linux 初始化 init 系统，第 1 部分：sysvinit 第 2 部分：UpStart 第 3 部分：Systemd[EB/OL]. [2026-03-25]. <https://www.cnblogs.com/MYSQLZOUQI/p/5250336.html>. 是存档，原文已佚，系统介绍了各初始化系统
-- FreeBSD Project. init -- process control initialization[EB/OL]. [2026-03-25]. <https://man.freebsd.org/cgi/man.cgi?query=init>. FreeBSD init 手册页。BSD init 无 SysV 风格运行级别与 /etc/inittab，以及以用户进程身份运行 init 时的运行级别-信号对应关系
-- FreeBSD Project. ttys -- terminal initialization information[EB/OL]. [2026-04-17]. <https://man.freebsd.org/cgi/man.cgi?query=ttys&sektion=5>. 终端初始化配置文件手册页
-- Gentoo. Comparison of init systems[EB/OL]. [2026-03-25]. <https://wiki.gentoo.org/wiki/Comparison_of_init_systems>. 各大 init 对比图，为系统选型提供参考
-- FreeBSD Project. GPL Software in FreeBSD Base[EB/OL]. [2026-03-25]. <https://wiki.freebsd.org/GPLinBase>. FreeBSD 基本系统中的 GPL 软件，系统梳理了基本系统的许可证兼容性
-- FreeBSD Project. FreeBSD 14.0-RELEASE Release Notes[EB/OL]. [2026-04-18]. <https://www.freebsd.org/releases/14.0R/relnotes/>. “The default shell for the root user is now sh(1)”，FreeBSD 14 起默认 root shell 由 csh/tcsh 变更为 sh
-- FreeBSD Project. Ports Quarterly Branch[EB/OL]. [2026-04-18]. <https://wiki.freebsd.org/Ports/QuarterlyBranch>. “quarterly is the familiar name for ports branched from main”，main 分支即 latest 源、季度分支按 YYYYQn 命名
-- FreeBSD Core Team. Change to FreeBSD release scheduling and support period[EB/OL]. (2024-07-16)[2026-04-18]. <https://lists.freebsd.org/archives/freebsd-announce/2024-July/000143.html>. “the FreeBSD core team has approved reducing the stable branch support duration from 5 years to 4 years starting with FreeBSD 15”
-- FreeBSD Wiki. Desktop[EB/OL]. [2026-04-18]. <https://wiki.freebsd.org/Desktop>. “NetworkManager itself cannot be ported due to a monolithic architecture and extensive Linux syscall use”，NetworkManager 无法移植的真实原因
+- MYSQLZOUQI. 浅析 Linux 初始化 init 系统，第 1 部分：sysvinit 第 2 部分：UpStart 第 3 部分：Systemd[EB/OL]. [2026-03-25]. <https://www.cnblogs.com/MYSQLZOUQI/p/5250336.html>. 是存档，原文已佚，系统介绍了各初始化系统。
+- FreeBSD Project. init -- process control initialization[EB/OL]. [2026-03-25]. <https://man.freebsd.org/cgi/man.cgi?query=init>. FreeBSD init 手册页。BSD init 无 SysV 风格运行级别与 /etc/inittab，以及以用户进程身份运行 init 时的运行级别-信号对应关系。
+- FreeBSD Project. ttys -- terminal initialization information[EB/OL]. [2026-04-17]. <https://man.freebsd.org/cgi/man.cgi?query=ttys&sektion=5>. 终端初始化配置文件手册页。
+- Gentoo. Comparison of init systems[EB/OL]. [2026-03-25]. <https://wiki.gentoo.org/wiki/Comparison_of_init_systems>. 各大 init 对比图，为系统选型提供参考。
+- FreeBSD Project. GPL Software in FreeBSD Base[EB/OL]. [2026-03-25]. <https://wiki.freebsd.org/GPLinBase>. FreeBSD 基本系统中的 GPL 软件，系统梳理了基本系统的许可证兼容性。
+- FreeBSD Project. FreeBSD 14.0-RELEASE Release Notes[EB/OL]. [2026-04-18]. <https://www.freebsd.org/releases/14.0R/relnotes/>. “The default shell for the root user is now sh(1)”，FreeBSD 14 起默认 root shell 由 csh/tcsh 变更为 sh。
+- FreeBSD Project. Ports Quarterly Branch[EB/OL]. [2026-04-18]. <https://wiki.freebsd.org/Ports/QuarterlyBranch>. “quarterly is the familiar name for ports branched from main”，main 分支即 latest 源、季度分支按 YYYYQn 命名。
+- FreeBSD Core Team. Change to FreeBSD release scheduling and support period[EB/OL]. (2024-07-16)[2026-04-18]. <https://lists.freebsd.org/archives/freebsd-announce/2024-July/000143.html>. “the FreeBSD core team has approved reducing the stable branch support duration from 5 years to 4 years starting with FreeBSD 15”。
+- FreeBSD Wiki. Desktop[EB/OL]. [2026-04-18]. <https://wiki.freebsd.org/Desktop>. “NetworkManager itself cannot be ported due to a monolithic architecture and extensive Linux syscall use”，NetworkManager 无法移植的真实原因。
 
 ## 基本对比
 
@@ -437,8 +437,8 @@ Node.js 的依赖存储在 `node_modules` 目录，而 Nix/NixOS 的所有包则
 - Gentoo. Benefits of Gentoo[EB/OL]. [2026-03-25]. <https://wiki.gentoo.org/wiki/Benefits_of_Gentoo>. 阐述 Gentoo 源码编译模式在灵活性与性能优化方面的优势。
 - Gentoo. The philosophy of Gentoo[EB/OL]. [2026-03-25]. <https://www.gentoo.org/get-started/philosophy/>. 介绍 Gentoo 以用户选择自由和编译定制为核心的设计理念。
 - Arch Linux. Arch compared to other distributions[EB/OL]. [2026-03-25]. <https://wiki.archlinux.org/title/Arch_compared_to_other_distributions>. 对比 Arch Linux 与其他发行版在包管理和滚动更新策略上的差异。
-- STROUSTRUP B. C++ 语言的设计和演化[M]. 裘宗燕, 译. 北京:人民邮电出版社, 2020. ISBN: 978-7-115-49711-6. 由 C++ 语言创始人详述该语言的设计决策与演进历程。
-- 统信安全应急响应中心. deepin-devicemanager命令注入漏洞安全公告（UTSA-2024-003941）[EB/OL]. [2026-04-04]. <https://src.uniontech.com/#/security_advisory_detail?utsa_id=UTSA-2024-003941>. 披露 deepin 设备管理器命令注入漏洞的技术细节与影响范围。
+- STROUSTRUP B. C++ 语言的设计和演化[M]. 裘宗燕,译. 北京:人民邮电出版社,2020. ISBN: 978-7-115-49711-6. 由 C++ 语言创始人详述该语言的设计决策与演进历程。
+- 统信安全应急响应中心. deepin-devicemanager命令注入漏洞安全公告(UTSA-2024-003941)[EB/OL]. [2026-04-04]. <https://src.uniontech.com/#/security_advisory_detail?utsa_id=UTSA-2024-003941>. 披露 deepin 设备管理器命令注入漏洞的技术细节与影响范围。
 - Fedora Project. Fedora Council Charter[EB/OL]. [2026-04-04]. <https://docs.fedoraproject.org/en-US/council/>. Fedora 项目完全由红帽控制。
 - Fedora Project. Fedora and Red Hat Enterprise Linux[EB/OL]. [2026-04-18]. <https://docs.fedoraproject.org/en-US/quick-docs/fedora-and-red-hat-enterprise-linux/>.“Fedora is a kind of 'upstream' of Red Hat Enterprise Linux”，Fedora 是 RHEL 的上游。
 - CentOS Project. CentOS Stream documentation[EB/OL]. [2026-04-18]. <https://docs-centos-org-b1e6ff.gitlab.io/stream-docs/>. 该文档阐述了 CentOS Stream 作为 RHEL 中游开发分支的定位。

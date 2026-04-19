@@ -263,7 +263,7 @@ cwd=<root>
 
 参考文献：
 
-- asynctasks.vim - 现代化的构建任务系统[EB/OL]. [2026-03-25]. <https://github.com/skywind3000/asynctasks.vim/blob/master/README-cn.md>. 该插件为 Vim 提供了类似 VSCode 的任务系统，统一管理编译、运行等工作流程。
+- skywind3000. asynctasks.vim: 现代化的构建任务系统[EB/OL]. [2026-03-25]. <https://github.com/skywind3000/asynctasks.vim/blob/master/README-cn.md>. 该插件为 Vim 提供了类似 VSCode 的任务系统，统一管理编译、运行等工作流程。
 
 ## 最后以最简单的 C++ hello world 项目为例
 
