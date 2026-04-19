@@ -250,8 +250,3 @@ microSD 通常也称为 TF 卡（TF 是 SanDisk 最初的商品名 TransFlash，
 - 参见 SD Association. Capacity SD/SDHC/SDXC/SDUC[EB/OL]. [2026-04-16]. <https://www.sdcard.org/developers/sd-standard-overview/capacity-sd-sdhc-sdxc-sduc/>。该页面定义 SD/SDHC/SDXC/SDUC 容量标准。
 - Lexar. Lexar Professional 667x microSDXC UHS-I 产品规格[EB/OL]. [2026-04-16]. <https://resources.lexar.com/download/236/667x-microsdxc/1963/lexar-productsheet-pro-667x-microsd-en-201911.pdf>。该文档为雷克沙 667x microSD 卡产品规格表。雷克沙官方 667x 存储卡标称读取速度为 100 MB/s。
 
-## 课后习题
-
-1. 在 FreeBSD 系统上使用 `diskinfo` 或 `fio` 测试不同接口（USB 3.0、NVMe PCIe 3.0）的存储设备，并对比其理论与实际性能差异。
-2. 选取 PCIe 协议与 SATA 协议的设计差异，重构一个简化的总线协议模拟程序，用于衡量不同设计对性能与延迟的影响。
-3. 修改 NVMe 硬盘的 ASPM 电源管理策略，观察系统功耗与性能的变化。

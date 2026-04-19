@@ -273,8 +273,3 @@ DragonFly BSD 对 Intel 显卡有特定支持要求。[根据硬件说明](https
 - DILLON M. DragonFly BSD Project[EB/OL]. [2026-04-18]. <https://www.dragonflybsd.org/team/>. DragonFly BSD 开发团队页面，Matthew Dillon 为项目创始人及 Amiga 开发背景。
 - DILLON M. Announcing DragonFly BSD[EB/OL]. (2003-07-16)[2026-04-18]. <https://lists.freebsd.org/pipermail/freebsd-current/2003-July/006889.html>. DragonFly BSD 项目在 FreeBSD 邮件列表上的正式发布公告。
 
-## 课后习题
-
-1. 在 QEMU 或 VirtualBox 中安装 DragonFly BSD 并使用 HAMMER2 文件系统，查找 HAMMER2 的相关文档，尝试创建一个快照并验证其功能。
-
-2. 查找 DragonFly BSD 中与 SMP 相关的内核源代码或文档，对比其与 FreeBSD 的并行计算架构设计差异，分析技术分歧会导致社区分裂的原因。
