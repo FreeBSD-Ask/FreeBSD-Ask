@@ -330,7 +330,7 @@ VMware 已被博通（Broadcom）收购。从官方下载 VMware 相关产品需
 >
 > ![注册](../.gitbook/assets/Register2.png)
 >
-> - 将第五步得到的“Verification Code: 972980”，中的 972980（请根据实际填写）填入“Enter text from image”中。
+> - 将第五步中得到的“Verification Code: 972980”中的 972980（请根据实际填写）填入“Enter text from image”中。
 >
 > ![邮箱验证码](../.gitbook/assets/mail.png)
 >
