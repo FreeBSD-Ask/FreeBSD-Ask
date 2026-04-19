@@ -244,7 +244,7 @@ microSD 通常也称为 TF 卡（TF 是 SanDisk 最初的商品名 TransFlash，
 - SilentNocturne. 移速这个卡虚标了，速度只有标注的二分之一[EB/OL]. [2026-03-25]. <https://post.smzdm.com/talk/p/az6o8zkr/>. 指出移速存储卡实测速度与标称值存在较大差距。
 - 远航的加菲猫. Mvespeed 移速 400G 内存卡简单测评[EB/OL]. [2026-03-25]. <https://post.smzdm.com/p/arq759g7/>. 对大容量移速存储卡的容量与性能进行实测。
 - 尼奥叔叔. 移速 TF 卡翻不翻车？看来没翻（附游戏测试）[EB/OL]. [2026-03-25]. <https://post.smzdm.com/p/awzqn9z4/>. 从游戏加载角度验证移速 TF 卡的实际使用体验。
-- Western Digital. 闪迪至尊超极速移动 ™ microSDXC™ UHS-I 存储卡 - 128GB[EB/OL]. [2026-03-25]. <https://www.westerndigital.com/zh-cn/products/memory-cards/sandisk-extreme-pro-uhs-i-microsd?sku=SDSQXCY-128G-ZN6MA>. 参见注释 8：“采用专利技术”。
+- Western Digital. 闪迪至尊超极速移动 ™ microSDXC™ UHS-I 存储卡: 128GB[EB/OL]. [2026-03-25]. <https://www.westerndigital.com/zh-cn/products/memory-cards/sandisk-extreme-pro-uhs-i-microsd?sku=SDSQXCY-128G-ZN6MA>. 参见注释 8：“采用专利技术”。
 - 滕飞et. 存储卡也超频？实测结果非常意外[EB/OL]. [2026-03-25]. <https://mp.weixin.qq.com/s/CMioVrUx0YJbF_v7zvQMRA>. 实测发现部分存储卡在特定条件下可超出标称速度运行。
 - Samsung. BAR 升级版 + USB3.1 闪存盘[EB/OL]. [2026-03-25]. <https://www.samsung.com.cn/memory-storage/usb-flash-drive/usb-3-1-flash-drive-bar-plus-64gb-titanium-gray-muf-64be4-cn/>. 三星 USB 3.1 闪存盘产品规格与性能参数。
 - 参见 SD Association. Capacity SD/SDHC/SDXC/SDUC[EB/OL]. [2026-04-16]. <https://www.sdcard.org/developers/sd-standard-overview/capacity-sd-sdhc-sdxc-sduc/>。该页面定义 SD/SDHC/SDXC/SDUC 容量标准。
