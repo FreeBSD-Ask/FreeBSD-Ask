@@ -7,10 +7,10 @@ IBus 即“Intelligent Input Bus”（智能输入总线），是 Linux 及类 U
 - 使用 pkg 安装：
 
 ```sh
-# pkg install ibus zh-ibus-pinyin
+# pkg install ibus zh-ibus-libpinyin
 ```
 
-其中 `zh-ibus-pinyin` 是拼音输入法。
+其中 `zh-ibus-libpinyin` 是智能拼音输入法。
 
 - 或者使用 Ports 安装：
 

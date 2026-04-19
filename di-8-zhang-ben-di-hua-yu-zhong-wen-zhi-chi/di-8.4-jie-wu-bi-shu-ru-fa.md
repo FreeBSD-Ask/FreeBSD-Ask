@@ -90,15 +90,15 @@ Fcitx 5 的具体配置步骤本节不做详细说明。
 /usr/local/share/
 ├── fcitx5/
 │   └── inputmethod/
-│       └── 98wbx.conf # Fcitx5 98五笔配置文件
+│       └── 98wbx.conf # Fcitx5 98 五笔配置文件
 ├── icons/
 │   └── hicolor/
 │       └── 48x48/
 │           └── apps/
-│               ├── fcitx-98wubi.png # 98五笔图标
-│               └── org.fcitx.Fcitx5.fcitx-98wubi.png # 98五笔图标
+│               ├── fcitx-98wubi.png # 98 五笔图标
+│               └── org.fcitx.Fcitx5.fcitx-98wubi.png # 98 五笔图标
 └── libime/
-    └── wbx.main.dict # 98五笔词库
+    └── wbx.main.dict # 98 五笔词库
 ```
 
 ![Fcitx 5 配置界面](../.gitbook/assets/wubi1.png)
@@ -238,7 +238,7 @@ patch applied.
 
 ## 故障排除
 
-上述操作涉及基本系统文件，建议仅修改用户配置，否则会影响全局设置，且在系统更新时容易被覆盖。
+上述操作涉及基本系统文件，建议仅修改用户配置，否则会影响全局设置，且在系统更新时容易遭覆盖。
 
 ## 参考文献
 

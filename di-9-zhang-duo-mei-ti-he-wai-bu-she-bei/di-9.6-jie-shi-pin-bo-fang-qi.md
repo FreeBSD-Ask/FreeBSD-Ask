@@ -12,7 +12,7 @@ FreeBSD 操作系统提供了多种视频播放器选择，本节将介绍几款
 # pkg install vlc
 ```
 
-- 或者使用 Ports（源码包管理器）编译安装：
+- 或者使用 Ports（源代码包管理器）编译安装：
 
 ```sh
 # cd /usr/ports/multimedia/vlc/
@@ -39,7 +39,7 @@ SMPlayer 是 MPlayer（一款功能强大的纯命令行视频播放器）的 Qt
 # pkg install smplayer
 ```
 
-- 或者使用 Ports 源码编译安装：
+- 或者使用 Ports 源代码编译安装：
 
 ```sh
 # cd /usr/ports/multimedia/smplayer/
@@ -68,7 +68,7 @@ Kodi 是一款知名的开源媒体中心软件，其曾用名为 XBMC（Xbox Me
 # pkg install kodi
 ```
 
-- 或者使用 Ports 源码编译安装：
+- 或者使用 Ports 源代码编译安装：
 
 ```sh
 # cd /usr/ports/multimedia/kodi/
@@ -109,7 +109,7 @@ Kodi 是一款知名的开源媒体中心软件，其曾用名为 XBMC（Xbox Me
 # pkg install mpv
 ```
 
-- 还可以通过 Ports 源码编译安装：
+- 还可以通过 Ports 源代码编译安装：
 
 ```sh
 # cd /usr/ports/multimedia/mpv/

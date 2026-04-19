@@ -1,10 +1,8 @@
 # 8.7 系统字体替换
 
-
 良好的字体配置对于多语言环境（特别是中文）的正确显示至关重要。本节将介绍如何在 FreeBSD 系统中配置系统字体，包括图形界面字体和控制台字体的配置方法。
 
 ## GUI 图形界面字体
-
 
 首先提取 Windows `C:\Windows\Fonts` 目录下的所有 `.ttf` 和 `.ttc` 字体文件。对于 macOS 的字体，需要进行特殊处理，尽管其文件格式也为 `.ttf`。
 
@@ -40,7 +38,7 @@
 
 FreeBSD 的新型终端 VT 原生支持 CJK 字符集（CJK 指中文、日文、韩文三国文字的统称，即中日韩统一表意文字），只需加载字体即可显示中文。
 
-本节基于 FreeBSD 14.2 RELEASE。
+本节基于 FreeBSD 14.2-RELEASE。
 
 字体格式为 `.fnt`（不是码表加 PNG 图片，而是二进制字体文件），使用命令切换控制台字体为 test.fnt：
 
@@ -51,7 +49,7 @@ $ vidcontrol -f test.fnt
 FreeBSD 基本系统提供了一款工具，可将 bdf 或 hex 格式转换为 fnt 文件：
 
 ```sh
-$ vtfontcvt [ -h 高度 ] [ -v ] [ -w 宽度] [字体路径]
+$ vtfontcvt [ -h 高度 ] [ -v ] [ -w 宽度] 字体路径
 ```
 
 - 示例：
@@ -66,9 +64,9 @@ fetch https://people.freebsd.org/~emaste/newcons/b16.fnt
 vidcontrol -f b16.fnt
 ```
 
->**技巧**
+> **技巧**
 >
->若上述链接失效，请访问 <https://github.com/FreeBSD-Ask/fnt-fonts> 下载字体。
+> 若上述链接失效，请访问 <https://github.com/FreeBSD-Ask/fnt-fonts> 下载字体。
 
 ![设置完成后的 tty](../.gitbook/assets/tty1.png)
 

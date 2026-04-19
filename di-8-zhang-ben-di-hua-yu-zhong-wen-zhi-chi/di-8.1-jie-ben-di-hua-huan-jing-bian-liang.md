@@ -2,7 +2,7 @@
 
 ## 本地化环境变量配置文件路径
 
-在 FreeBSD 系统中，本地化环境变量的生效路径取决于所使用的登录管理器（Display Manager）和用户 Shell 环境。
+在 FreeBSD 系统中，本地化环境变量的生效路径取决于所使用的显示管理器（Display Manager）和用户 Shell 环境。
 
 ### 显示管理器配置路径
 
@@ -19,7 +19,7 @@
 
 ## 本地化相关的环境变量
 
-`LC_*` 系列变量是 UNIX 及类 UNIX 操作系统中用于实现国际化（Internationalization，i18n）与本地化（Localization，l10n）的核心环境变量，由 POSIX 标准规范定义。这些变量控制文本字符编码、日期时间格式、货币符号、界面语言等多个维度的本地化行为。
+`LC_*` 系列变量是 UNIX 及类 UNIX 操作系统中用于实现国际化（Internationalization，i18n）与本地化（Localization，l10n）的核心环境变量。其中 `LC_COLLATE`、`LC_CTYPE`、`LC_MESSAGES`、`LC_MONETARY`、`LC_NUMERIC`、`LC_TIME` 以及 `LC_ALL` 和 `LANG` 由 POSIX（IEEE Std 1003.1）标准定义；`LC_ADDRESS`、`LC_NAME`、`LC_PAPER`、`LC_TELEPHONE`、`LC_MEASUREMENT`、`LC_IDENTIFICATION` 为 glibc 的 GNU 扩展（自 glibc 2.2 起引入），ISO/IEC 30112 标准在制定时参考了这些既有实践（参见 Debian manpages. locale(7)[EB/OL]. [2026-04-17]. <https://manpages.debian.org/unstable/manpages/locale.7.en.html>）。这些变量控制文本字符编码、日期时间格式、货币符号、界面语言等多个维度的本地化行为。
 
 - `LC_COLLATE`：定义字符串排序的规则
 - `LC_CTYPE`：定义字符集和字符类型判断规则，例如字母、数字、标点符号等
@@ -96,9 +96,9 @@ $ date
 - `LC_TIME` 环境变量值设置为 `zh_CN.UTF-8`
 - `date` 命令输出为 `2023年 4月21日 星期五 21时15分07秒 UTC`
 
->**注意**
+> **注意**
 >
->保持 `date` 命令的英文输出在某些脚本中可能非常重要。类似情况也存在于其他由 `LC_*` 变量控制的信息中。
+> 保持 `date` 命令的英文输出在某些脚本中可能非常重要。类似情况也存在于其他由 `LC_*` 变量控制的信息中。
 
 ## 课后习题
 

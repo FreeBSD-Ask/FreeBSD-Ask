@@ -34,7 +34,7 @@ Set it up? [yes]:
 
 ## 附录：英特尔蓝牙
 
-由 iwm 驱动的 Intel 无线网卡可通过安装 `comms/iwmbt-firmware` 固件包来启用蓝牙功能，该固件为蓝牙硬件提供必要的微码支持。
+由 iwm 驱动的 Intel 无线网卡通常集成了蓝牙功能，可通过安装 `comms/iwmbt-firmware` 固件包来加载蓝牙硬件所需的微码，该固件主要支持 Intel 7260/8260/8265 等芯片组的蓝牙 USB 设备。
 
 - 使用 pkg（二进制包管理器）安装：
 
@@ -45,7 +45,7 @@ Set it up? [yes]:
 - 使用 Ports 安装：
 
 ```sh
-# cd /usr/ports/comms/iwmbt-firmware/ 
+# cd /usr/ports/comms/iwmbt-firmware/
 # make install clean
 ```
 
