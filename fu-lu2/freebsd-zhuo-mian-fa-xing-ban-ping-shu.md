@@ -98,9 +98,3 @@ helloSystem 运行时通常需要 4-8 GB 内存。helloSystem 在界面设计和
 - TURGEON E. GhostBSD: From Usability to Stability[EB/OL]. FreeBSD Foundation, 2025. [2026-04-18]. <https://freebsdfoundation.org/wp-content/uploads/2025/04/turgeon.pdf>. GhostBSD 项目创始人的官方演讲，项目首个测试版本发布于 2009 年。
 - MidnightBSD Project. About MidnightBSD[EB/OL]. [2026-04-18]. <https://www.midnightbsd.org/about/>. MidnightBSD 官方关于页面，项目以创始人 Lucas Holt 的第一只猫 Midnight 命名。
 - PHORONIX. helloSystem Wants To Be The “macOS of BSDs” With A Polished Desktop Experience[EB/OL]. (2021-02-12)[2026-04-18]. <https://www.phoronix.com/news/helloSystem-BSD>. helloSystem 由 AppImage 创始人 Simon Peter 发起。
-
-## 课后习题
-
-1. 在 VirtualBox 或 QEMU 中安装 GhostBSD，尝试使用其默认的 Linux 兼容层运行一个简单的 Linux 程序（如 busybox）。
-
-2. 研究 NomadBSD 的 LiveCD 机制，查看其 `/etc/rc.d/firstboot` 等启动脚本，分析它如何实现 U 盘即插即用的设计。

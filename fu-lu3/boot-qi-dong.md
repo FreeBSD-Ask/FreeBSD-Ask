@@ -246,8 +246,3 @@ Disabled（禁用）
 
 指定来自可用 UEFI SD 驱动的启动设备优先顺序。
 
-## 课后习题
-
-1. 在 FreeBSD 中配置 PXE 网络启动环境，制作网络启动镜像，设置 Network Stack Driver Support 为启用，验证从网络启动 FreeBSD 的完整流程。
-
-2. 分析启动顺序（Boot Option #1-#9）机制的设计。

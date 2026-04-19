@@ -106,10 +106,3 @@ Choose the system default language（选择系统默认语言）
 
 底部版本信息区域显示了 BIOS 固件的版本号和版权声明，用于标识固件的发布信息，例如“Version 2.22.1289 Copyright (C) 2025 AMI（版本 2.22.1289 版权所有 (C) AMI 2025）”。
 
-## 课后习题
-
-1. 使用 FreeBSD 的 dmidecode 工具提取 BIOS 信息。
-
-2. 恢复 BIOS 优化默认值，保存并重启后记录系统启动行为。观察启动时间、硬件初始化过程和操作系统加载的变化。
-
-3. 修改 BIOS 语言和时间设置，在 FreeBSD 中验证这些设置的影响。使用 date 命令检查系统时间，分析 BIOS 时间与操作系统时间的同步机制。

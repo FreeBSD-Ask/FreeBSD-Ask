@@ -337,8 +337,3 @@ $ cmake ..                   # 运行 CMake 配置上级目录的项目
 
 感兴趣者可参与上述内容的撰写，并通过 Pull Request 方式贡献。
 
-## 课后习题
-
-1. 为 Vim 配置调试支持，集成 GDB 或 LLDB 插件，在 hello world 项目中设置断点并验证调试器行为。
-
-2. 修改 asynctasks.vim 构建任务系统，新增测试任务并验证运行。

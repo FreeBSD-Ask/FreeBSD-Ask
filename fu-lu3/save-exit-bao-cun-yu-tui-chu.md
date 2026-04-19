@@ -25,11 +25,3 @@
 | Restore User Defaults | 将用户默认值恢复到所有设置项 |
 | List of EFI boot managers available | 可用的 EFI 启动管理器列表 |
 | Boot override to selected boot manager | 启动时覆盖为选定的启动管理器 |
-
-## 课后习题
-
-1. 在 FreeBSD 中使用工具读取并备份当前 BIOS 设置，修改几项核心配置后保存并重启，验证修改是否生效，然后使用 Restore Defaults 恢复。
-
-2. 分析保存与退出机制的设计，探讨为什么需要区分“保存更改并退出”、“保存更改并重启”等多个选项。
-
-3. 配置 Save as User Defaults 保存自定义设置，修改多项配置后使用 Restore User Defaults 恢复。

@@ -128,7 +128,7 @@
 
 对于一本自诩应归类于“TP316.81”的书籍，书中大量可复制粘贴的内容，可能在撰写时便已过时。但笔者相信，无论读者反对抑或支持，其实都不重要。我们必须承认，我们对世界唯一确知的事情，便是我们一无所知。
 
-对于那些希冀从本书中获得具体计算机原理、实现或类似词典的工具书的读者，可能会感到失望或认为本书毫无价值。这都在预料之中。因为笔者亦不擅长，更毫无兴致。在漫漫时间长河与人类文明中，即便你是科举状元，也难留下痕迹。哪怕你是统一大陆的征服者，也将深埋地下，甚至被后人怀疑你与你的帝国是否真实存在。古埃及人认为死亡并非终结，而是通往来世（Duat）的门户，亡者将与冥界之主奥西里斯（Osiris）合而为一，追随太阳神拉（Ra）夜行冥界的轨迹，期冀如朝阳般重获新生。你看地球是多么巨大的一个球体，再看银河系全景，看目前科技所能拍摄的可见宇宙，你会发现，一切都如北岛《一切》（北岛.履历[M].生活·读书·新知三联书店:北京,2015:16）诗言：
+对于那些希冀从本书中获得具体计算机原理、实现或类似词典的工具书的读者，可能会感到失望或认为本书毫无价值。这都在预料之中。因为笔者亦不擅长，更毫无兴致。在漫漫时间长河与人类文明中，即便你是科举状元，也难留下痕迹。哪怕你是统一大陆的征服者，也将深埋地下，甚至被后人怀疑你与你的帝国是否真实存在。古埃及人认为死亡并非终结，而是通往来世（Duat）的门户，亡者将与冥界之主奥西里斯（Osiris）合而为一，追随太阳神拉（Ra）夜行冥界的轨迹，期冀如朝阳般重获新生。你看地球是多么巨大的一个球体，再看银河系全景，看目前科技所能拍摄的可见宇宙，你会发现，一切都如北岛《一切》诗言：
 
 > 一切都是命运
 >
@@ -157,8 +157,6 @@
 > 一切爆发都有片刻的宁静
 >
 > 一切死亡都有冗长的回声
-
-
 
 ## 简要评价《提问的智慧》《如何提问》《XX 提问》之类的文档
 
@@ -211,10 +209,6 @@
 以往的体育哲学中，认为观众是无关紧要的，计分板上永远也不会出现观众的名字。事实上，他们忽视了一个真理：没有观众，比赛本身根本不可能成立。他们得到的荣誉完全无法和观众剥离开，甚至荣耀应该完全属于观众。真正使项目得以成立的，不是代码，而是这些外围的形式主义的东西。因为在根本上，这些代码没有几年就完全没用了，甚至过几天就不行了。
 
 真正的开源和社区很简单，大家一起玩，以快乐为导向，只不过是把玩的对象从其他东西转移到了计算机。
-
-### 参考文献
-
-- [《提问的智慧》](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/main/README-zh_CN.md)，简体中文版本。原作者之一是大家熟悉的 Eric S. Raymond（《UNIX 编程艺术》作者，[OSI](https://opensource.org/) 开源促进会创始人）~~师出同门~~。该文档是开源社区经典的提问指南，倡导高效沟通方式。
 
 ## Talk 和 Code
 
@@ -359,6 +353,7 @@ English
 
 ## 参考文献
 
+- GitHub用户ryanhanwu. 提问的智慧（How To Ask Questions The Smart Way）[EB/OL]. [2026-04-19]. <https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/main/README-zh_CN.md>. 原作者之一是大家熟悉的 Eric S. Raymond（《UNIX 编程艺术》作者，[OSI](https://opensource.org/) 开源促进会创始人）~~师出同门~~。该文档是开源社区经典的提问指南，倡导高效沟通方式。
 - 李征. 何积丰：以“积”累迎来“丰”收[EB/OL]. (2014-04-02)[2026-03-25]. <https://www.whb.cn/zhuzhan/kandian/20140402/5053.html>. 和年轻人一样，71 岁的何院士现在也在使用智能手机。该文介绍中国科学院院士何积丰的科研历程与育人理念。
 - SKINNER B F. New Methods and New Aims in Teaching[J]. New Scientist, 1964, 22(392): 483-484. <https://www.bfskinner.org/wp-content/uploads/2014/02/New-Methods-aims-in-Teach.pdf> “教育就是当一个人把在学校所学全部忘光之后剩下的东西”这句话并非爱因斯坦所述。现在以讹传讹，人们获取的知识，真的是那么正确无误吗？Skinner 论述行为主义教育理论，澄清教育名言归属。
 - 谢延龙. 庄子“忘”的教育图景阐释[J]. 大学教育科学, 2022(1): 105-112. 该文从庄子哲学视角探讨“忘”在教育中的积极意义。
@@ -370,6 +365,7 @@ English
 - Fédération Internationale de l’Automobile. Formula 1 technical regulations 2020[EB/OL]. 2020[2026-04-17]. <https://api.fia.com/sites/default/files/2021_formula_1_technical_regulations_-_iss_6_-_2020-10-30.pdf>. 技术规范。
 - Fédération Internationale de l'Automobile. FIA Formula Regional technical regulations 2024[EB/OL]. 2024[2026-04-17]. <https://api.fia.com/sites/default/files/2025_fia_formula_regional_technical_regulations_-_issue_2_-_2024.12.11.pdf>. 技术规范。
 - 金寿福 译注. 古埃及《亡灵书》[M]. 北京: 商务印书馆, 2020. 古埃及人来世信仰中，亡者在 Duat 与奥西里斯合而为一，并追随太阳神拉夜行冥界以期重生。
+- 北岛.履历[M].生活·读书·新知三联书店:北京,2015:16. 北岛的《一切》。
 - 中国奥林匹克委员会. 职业选手何时进入奥运会？[EB/OL]. (2004-08-05)[2026-04-18]. <https://www.olympic.cn/olympic/know/2004/0805/25385.html>. 回顾奥运会从业余原则向允许职业运动员参赛转变的历史过程。
 - International Olympic Committee. “Faster, Higher, Stronger – Together”: IOC Session approves historic change in Olympic motto [EB/OL]. (2021-07-20)[2026-04-19]. <https://www.olympics.com/ioc/news/-faster-higher-stronger-together-ioc-session-approves-historic-change-in-olympic-motto>. 2021 年 7 月 20 日国际奥委会第 138 次全会表决通过，在奥林匹克格言“更快、更高、更强”之后加入“更团结”（Together），系 108 年来首次修改格言。
 - IUPAC. New Notations in the Periodic Table[J]. Pure and Applied Chemistry, 1988, 60(3): 431-436. <https://www.iupac.org/publications/pac/1988/pdf/6003x0431.pdf>. IUPAC 于 1988 年发布元素周期表新族编号体系，此后持续修订周期表（包括 1997 年超锕元素命名、2016 年确认第 113、115、117、118 号元素等）。

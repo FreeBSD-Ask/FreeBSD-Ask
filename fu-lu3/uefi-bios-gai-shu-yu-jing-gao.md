@@ -62,10 +62,3 @@ BIOS 是执行硬件初始化的固件程序，而 CMOS 是存储 BIOS 配置参
 - Intel Corporation. Intel Boot Initiative (IBI) and UEFI Forum Formation[EB/OL]. [2026-04-18]. <https://www.intel.com/content/www/us/en/developer/articles/tool/unified-extensible-firmware-interface.html>. 记载 Intel 启动倡议计划及 UEFI 论坛的成立过程。
 - National Institute of Standards and Technology. FIPS 140-3: Security Requirements for Cryptographic Modules[S]. Gaithersburg: NIST, 2019. 参见 Chainguard. FIPS 140-3: Everything You Need to Know[EB/OL]. [2026-04-18]. <https://www.chainguard.dev/supply-chain-security-101/fips-140-3-everything-you-need-to-know>. 规定密码模块的安全要求与认证标准。
 
-## 课后习题
-
-1. 查找一个早期 BIOS（如 1980 年代 IBM PC 或 1990 年代 Award BIOS）的源代码或技术文档，对比其与现代 UEFI 的架构差异，并在 QEMU 中尝试启动一个 BIOS 系统镜像。建议参考开源项目如 [SeaBIOS](https://www.seabios.org/) 或 [Coreboot](https://www.coreboot.org/) 的相关文档。
-
-2. 分析 CMOS 存储机制的设计，重构其最小功能模型，探讨为什么系统配置权限被委托给由电池维持的非易失性存储，而非完全由操作系统控制。考虑启动顺序依赖、安全隔离和硬件初始化时序等因素。
-
-3. 在实验环境中修改 BIOS 中一项核心配置（如启动顺序或内存频率）导致无法启动，使用 CMOS 清空方法恢复系统，并分析这种“恢复机制”如何塑造用户对 BIOS 修改的风险认知。操作前请确保已备份重要数据，并在不影响生产系统的环境中进行。
