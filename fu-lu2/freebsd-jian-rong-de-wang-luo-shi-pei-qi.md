@@ -108,7 +108,7 @@ if_re_name="/boot/modules/if_re.ko"   # 指定 re 网卡驱动模块路径
 
 参考文献：
 
-- FreshPorts. realtek-re-kmod Kernel driver for Realtek PCIe Ethernet Controllers[EB/OL]. [2026-03-25]. <https://www.freshports.org/net/realtek-re-kmod>. FreshPorts 上的 Realtek 网卡驱动页面，提供安装信息与版本更新。
+- FreshPorts. realtek-re-kmod: Kernel driver for Realtek PCIe Ethernet Controllers[EB/OL]. [2026-03-25]. <https://www.freshports.org/net/realtek-re-kmod>. FreshPorts 上的 Realtek 网卡驱动页面，提供安装信息与版本更新。
 
 ### Intel 网卡
 
