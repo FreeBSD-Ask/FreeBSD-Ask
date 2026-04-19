@@ -94,7 +94,7 @@ FreeBSD 中文社区. 001-Windows 11 安装 VMware 17[EB/OL]. [2026-04-04]. <htt
 >
 > NAT 模式的“名称”与主机的 `控制面板\网络和 Internet\网络连接` 中的 `VMware Network Adapter VMnet8` 绑定，默认绑定的是 `8`。换言之，NAT 模式的“名称”默认必须指定为下图所示的 `VMnet8`，否则虚拟机将无法联网。
 >
->![VMware network on FreeBSD](../.gitbook/assets/VMnat8.png)
+> ![VMware network on FreeBSD](../.gitbook/assets/VMnat8.png)
 
 ![VMware network on FreeBSD](../.gitbook/assets/net1.png)
 
@@ -117,9 +117,9 @@ FreeBSD 中文社区. 001-Windows 11 安装 VMware 17[EB/OL]. [2026-04-04]. <htt
 或者使用 Ports 系统编译安装：
 
 ```sh
-# cd /usr/ports/x11-drivers/xf86-video-vmware/  && make install clean
+# cd /usr/ports/x11-drivers/xf86-video-vmware/ && make install clean
 # cd /usr/ports/emulators/open-vm-tools/ && make install clean
-# cd /usr/ports/x11-drivers/xf86-input-vmmouse/  && make install clean
+# cd /usr/ports/x11-drivers/xf86-input-vmmouse/ && make install clean
 ```
 
 > **注意**
@@ -127,7 +127,7 @@ FreeBSD 中文社区. 001-Windows 11 安装 VMware 17[EB/OL]. [2026-04-04]. <htt
 > 如果不需要图形界面支持，可以安装无 X11 依赖的版本（仍然是 Port `emulators/open-vm-tools`）：
 >
 >```sh
-># pkg install open-vm-tools-nox11
+> # pkg install open-vm-tools-nox11
 >```
 
 安装完成后，通常无需额外配置即可实现虚拟机屏幕的自动缩放功能。
@@ -282,6 +282,8 @@ Downloads
 
 ## 故障排除与未竟事宜
 
+在使用 VMware 安装和运行 FreeBSD 的过程中，可能会遇到以下问题。
+
 > **注意**
 >
 > 在使用 Windows 远程桌面或其他 XRDP 工具远程另一台 Windows 桌面，并使用其上面运行的 VMware 虚拟机操作 FreeBSD 时，鼠标通常会变得难以控制。这是正常现象。
@@ -292,13 +294,15 @@ Downloads
 
 ![VMware 安装 FreeBSD](../.gitbook/assets/vm16.png)
 
-硬件→显示→监视器→指定监视器设置→任意监视器的最大分辨率 (M)，将其由默认最大的 `2560 x 1600`（2 K）改为其他较小值即可，亦可自定义数值。
+硬件→显示→监视器→指定监视器设置→任意监视器的最大分辨率 (M)，将其由默认最大的 `2560 x 1600`（2.5 K / WQXGA）改为其他较小值即可，亦可自定义数值。
 
 - 没有声音
 
 加载声卡后若仍然没有声音，请将音量调至 100% 后再进行确认，因为默认音量极低。
 
 ## 附录：博通公司（Broadcom）账号相关
+
+下载 VMware Workstation Pro 需要注册博通公司账号，以下为相关注意事项。
 
 > **警告**
 >
@@ -324,23 +328,23 @@ VMware 已被博通（Broadcom）收购。从官方下载 VMware 相关产品需
 >>
 >> 如果使用的是 QQ 号生成的邮箱，请打开 <https://wx.mail.qq.com/>。其他邮箱请在各自网站打开，若不确定邮箱操作方式，建议使用 QQ 邮箱。
 >
->![注册](../.gitbook/assets/Register2.png)
+> ![注册](../.gitbook/assets/Register2.png)
 >
-> - 将第五步得到的“Verification Code: 972980”，中的 972980（请根据实际填写）填入“Enter text from image”中。
+> - 将第五步中得到的“Verification Code: 972980”中的 972980（请根据实际填写）填入“Enter text from image”中。
 >
->![邮箱验证码](../.gitbook/assets/mail.png)
+> ![邮箱验证码](../.gitbook/assets/mail.png)
 >
 > - 点击“Verify & Continue”（确认并继续）
 >
->![输入邮箱验证码](../.gitbook/assets/Verify.png)
+> ![输入邮箱验证码](../.gitbook/assets/Verify.png)
 >
 > - 完成注册
 >
->![完成注册](../.gitbook/assets/comreg.png)
+> ![完成注册](../.gitbook/assets/comreg.png)
 >
 > - 结束注册流程
 >
->![结束注册](../.gitbook/assets/dolater.png)
+> ![结束注册](../.gitbook/assets/dolater.png)
 
 ### 博通（Broadcom）账号登录
 
@@ -350,23 +354,23 @@ VMware 已被博通（Broadcom）收购。从官方下载 VMware 相关产品需
 >>
 >> 点击右上角的“Login”（登录）（或者直接打开 <https://support.broadcom.com/c/portal/login>）
 >
->![登录](../.gitbook/assets/loginbcm.png)
+> ![登录](../.gitbook/assets/loginbcm.png)
 >
 > - Username（用户名）即注册时使用的邮箱。然后点“Next”（下一步）
 >
->![登录](../.gitbook/assets/loginbcm2.png)
+> ![登录](../.gitbook/assets/loginbcm2.png)
 >
 > - 点击下一步
 >
->![点击下一步](../.gitbook/assets/loginbcm3.png)
+> ![点击下一步](../.gitbook/assets/loginbcm3.png)
 >
 > - 点击登录
 >
->![点击登录](../.gitbook/assets/loginbcm4.png)
+> ![点击登录](../.gitbook/assets/loginbcm4.png)
 >
 > - 登录完成
 >
->![登录后界面](../.gitbook/assets/afterlogin.png)
+> ![登录后界面](../.gitbook/assets/afterlogin.png)
 
 ### VMware Workstation Pro 下载（推荐）
 
@@ -374,35 +378,35 @@ VMware 已被博通（Broadcom）收购。从官方下载 VMware 相关产品需
 >
 > - 点击右上角对应图标（名字左侧第一个），选择“VMware Cloud Foundation”（VMware 云计算基础架构）
 >
->![VMware 云计算基础架构](../.gitbook/assets/downbcm1.png)
+> ![VMware 云计算基础架构](../.gitbook/assets/downbcm1.png)
 >
 > - 点击右侧的“My Downloads”（我的下载）
 >
->![我的下载](../.gitbook/assets/downbcm0.png)
+> ![我的下载](../.gitbook/assets/downbcm0.png)
 >
-> - 往下翻，点击“VMware Workstation Pro“
+> - 往下翻，点击“VMware Workstation Pro”
 >
->![点击“VMware Workstation Pro“](../.gitbook/assets/downbcm2.png)
+> ![点击“VMware Workstation Pro”](../.gitbook/assets/downbcm2.png)
 >
 > - 点击“Release”（发行版），选择最顶部的版本，实际显示可能有所不同。
 >
->![点击“Release”（发行版）](../.gitbook/assets/downbcm3.png)
+> ![点击“Release”（发行版）](../.gitbook/assets/downbcm3.png)
 >
 >**或者跳过上述步骤，直接打开 <https://support.broadcom.com/group/ecx/free-downloads>**
 >
->![下载主页](../.gitbook/assets/downbcm4.png)
+> ![下载主页](../.gitbook/assets/downbcm4.png)
 >
 > - 将红色的 `*` 项目填写完成。
 >
->![补充信息](../.gitbook/assets/downbcm5.png)
+> ![补充信息](../.gitbook/assets/downbcm5.png)
 >
 > - 勾选“I agree to Terms and Conditions”（我同意条款及条件）左侧的方框 ⬜，使其变为 🟦。（须先点击“Terms and Conditions”打开新页面，返回后方可勾选）
 >
->![同意许可协议](../.gitbook/assets/downbcm6.png)
+> ![同意许可协议](../.gitbook/assets/downbcm6.png)
 >
 > - 选择右侧箭头处的云朵图标 ☁️ 即可下载
 >
->![下载](../.gitbook/assets/downbcm7.png)
+> ![下载](../.gitbook/assets/downbcm7.png)
 
 VMware Workstation Pro 目前对个人用户而言是 **免费下载、免费使用、免费授权的。** **请勿从任何第三方站点下载，** 否则可能导致不可预期的安全风险——多数问题均源于此。
 

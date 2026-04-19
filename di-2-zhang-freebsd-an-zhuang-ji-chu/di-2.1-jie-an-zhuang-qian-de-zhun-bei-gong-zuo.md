@@ -27,17 +27,17 @@ UEFI（Unified Extensible Firmware Interface）是现代计算机的固件接口
 
 | 硬件类别 | 系列 | 实测型号 | 备注 |
 | -------- | ---- | -------- | ---- |
-| CPU | Intel 混合架构（异构大小核） | i7-1260P、N100 | 可正常启动运行，但调度机制尚不完善，睿频功能受限 |
+| CPU | Intel Alder Lake（含混合架构与纯 E-core 架构） | i7-1260P、N100 | 可正常启动运行，但调度机制尚不完善，睿频功能受限。i7-1260P 为混合架构（P-core + E-core），N100 为纯 E-core 架构（4 个 Gracemont 核心） |
 | NVMe 固态硬盘 | M.2 接口 | 英睿达 P310、Intel 600P、梵想 S530Q、S500Pro、S542PRO | 正常工作 |
 | 无线网卡 | Intel AX 系列 | AX200 | Wi-Fi 5 速率与 Windows 11 IoT Enterprise 24H2 相当（使用 iperf2 测得） |
 | 有线网卡 | Realtek 2.5 G | RTL8125B | 需要额外安装驱动程序，参见本书附录 |
 | 有线网卡 | Intel 2.5 G | i226-V | 正常工作 |
-| 显卡 | 近十年的 Intel 及 AMD 集成/独立显卡 | 英特尔锐炬® Xe 显卡、英特尔 HD Graphics 4000 | 支持程度与 DRM 驱动程序移植进度相关；截至写作时，其代码状态约相当于 Linux 内核 6.10，最新进展参见 FreeBSD Project. drm-kmod: drm driver for FreeBSD[EB/OL]. [2026-03-25]. <https://github.com/freebsd/drm-kmod/pulls>. 该仓库提供 FreeBSD 图形驱动程序内核模块更新，追踪 Linux DRM 驱动程序移植进度。 |
+| 显卡 | 近十年的 Intel 及 AMD 集成/独立显卡 | 英特尔锐炬® Xe 显卡、英特尔 HD Graphics 4000 | 支持程度与 DRM 驱动程序移植进度相关；截至写作时，FreeBSD 14.x 使用 drm-61-kmod（基于 Linux 6.1），FreeBSD 15.0+ 使用 drm-66-kmod（基于 Linux 6.6），最新非 LTS 版本 drm-latest-kmod 基于 Linux 6.9，最新进展参见 FreeBSD Project. drm-kmod: drm driver for FreeBSD[EB/OL]. [2026-03-25]. <https://github.com/freebsd/drm-kmod/pulls>. 该仓库提供 FreeBSD 图形驱动程序内核模块更新，追踪 Linux DRM 驱动程序移植进度。 |
 | NVIDIA 显卡 | 近十多年的显卡 | GTX 850M | 受 NVIDIA 官方显卡驱动程序支持 |
 
 > **注意**
 >
-> FreeBSD 不支持安全启动，参见：FreeBSD Project. SecureBoot[EB/OL]. [2026-03-25]. <https://wiki.freebsd.org/SecureBoot>. 该页面提供 FreeBSD 安全启动相关状态信息。在安装 FreeBSD 前，请务必关闭安全启动（Secure Boot）。此外，FreeBSD 也不支持 Fake RAID（伪 RAID），需将控制器模式修改为 AHCI。
+> FreeBSD 尚未完全支持安全启动，参见：FreeBSD Project. SecureBoot[EB/OL]. [2026-03-25]. <https://wiki.freebsd.org/SecureBoot>. 该页面提供 FreeBSD 安全启动相关状态信息。在安装 FreeBSD 前，请务必关闭安全启动（Secure Boot）。此外，FreeBSD 也不支持 Fake RAID（伪 RAID），需将控制器模式修改为 AHCI。
 >
 > Fake RAID 是由主板 BIOS/固件提供的软件 RAID 功能，依赖操作系统驱动程序支持，并非真正的硬件 RAID。AHCI（Advanced Host Controller Interface）是 SATA 控制器的标准工作模式，提供原生支持 SATA 设备的高级特性。
 >
@@ -95,41 +95,41 @@ bsd-hardware.info. Hardware for BSD[EB/OL]. [2026-03-25]. <https://bsd-hardware.
 ![FreeBSD 镜像](../.gitbook/assets/do3.png)
 
 ```sh
-File Name                                          File Size      Date                 
-Parent directory/                                  -              -                     
-CHECKSUM.SHA256-FreeBSD-14.2-RELEASE-amd64         1171           2024-Nov-29 14:11     
-CHECKSUM.SHA512-FreeBSD-14.2-RELEASE-amd64         1811           2024-Nov-29 14:09     
-FreeBSD-14.2-RELEASE-amd64-bootonly.iso            459491328      2024-Nov-29 13:04     
-FreeBSD-14.2-RELEASE-amd64-bootonly.iso.xz         100595956      2024-Nov-29 13:04     
-FreeBSD-14.2-RELEASE-amd64-disc1.iso               1310040064     2024-Nov-29 13:05     
-FreeBSD-14.2-RELEASE-amd64-disc1.iso.xz            855850608      2024-Nov-29 13:05     
-FreeBSD-14.2-RELEASE-amd64-dvd1.iso                4826406912     2024-Nov-29 13:05     
-FreeBSD-14.2-RELEASE-amd64-dvd1.iso.xz             3812250832     2024-Nov-29 13:05     
-FreeBSD-14.2-RELEASE-amd64-memstick.img            1559351808     2024-Nov-29 13:05     
-FreeBSD-14.2-RELEASE-amd64-memstick.img.xz         867177260      2024-Nov-29 13:05     
-FreeBSD-14.2-RELEASE-amd64-mini-memstick.img       564220416      2024-Nov-29 13:04     
-FreeBSD-14.2-RELEASE-amd64-mini-memstick.img.xz    107445036      2024-Nov-29 13:04     
+File Name                                          File Size      Date
+Parent directory/                                  -              -
+CHECKSUM.SHA256-FreeBSD-14.2-RELEASE-amd64         1171           2024-Nov-29 14:11
+CHECKSUM.SHA512-FreeBSD-14.2-RELEASE-amd64         1811           2024-Nov-29 14:09
+FreeBSD-14.2-RELEASE-amd64-bootonly.iso            459491328      2024-Nov-29 13:04
+FreeBSD-14.2-RELEASE-amd64-bootonly.iso.xz         100595956      2024-Nov-29 13:04
+FreeBSD-14.2-RELEASE-amd64-disc1.iso               1310040064     2024-Nov-29 13:05
+FreeBSD-14.2-RELEASE-amd64-disc1.iso.xz            855850608      2024-Nov-29 13:05
+FreeBSD-14.2-RELEASE-amd64-dvd1.iso                4826406912     2024-Nov-29 13:05
+FreeBSD-14.2-RELEASE-amd64-dvd1.iso.xz             3812250832     2024-Nov-29 13:05
+FreeBSD-14.2-RELEASE-amd64-memstick.img            1559351808     2024-Nov-29 13:05
+FreeBSD-14.2-RELEASE-amd64-memstick.img.xz         867177260      2024-Nov-29 13:05
+FreeBSD-14.2-RELEASE-amd64-mini-memstick.img       564220416      2024-Nov-29 13:04
+FreeBSD-14.2-RELEASE-amd64-mini-memstick.img.xz    107445036      2024-Nov-29 13:04
 ```
 
-上述列表中，第一列为文件名，第二列为文件大小，第三列为发布日期。
+上述列表中，第一列为文件名，第二列为文件大小，第三列为文件构建日期（非发行日期）。
 
 | 首列 | 说明 |
 | :--- | :--- |
 | Parent directory/	-	- | 指向上级目录 |
-| CHECKSUM.SHA256-FreeBSD-14.2-RELEASE-amd64 | 本页所有镜像的 SHA256 校验值 |
-| CHECKSUM.SHA512-FreeBSD-14.2-RELEASE-amd64 | 本页所有镜像的 SHA512 校验值 |
+| CHECKSUM.SHA256-FreeBSD-14.2-RELEASE-amd64 | 本页所有镜像的 SHA256 校验和 |
+| CHECKSUM.SHA512-FreeBSD-14.2-RELEASE-amd64 | 本页所有镜像的 SHA512 校验和 |
 | FreeBSD-14.2-RELEASE-amd64-bootonly.iso | 网络安装镜像，安装时需要联网 |
 | FreeBSD-14.2-RELEASE-amd64-bootonly.iso.xz | 压缩的网络安装镜像，安装时需要联网 |
-| FreeBSD-14.2-RELEASE-amd64-disc1.iso | CD 镜像 |
-| FreeBSD-14.2-RELEASE-amd64-disc1.iso.xz | 压缩的 CD 镜像 |
-| FreeBSD-14.2-RELEASE-amd64-dvd1.iso | DVD 镜像，相比 CD 镜像包含了更多软件包（pkg） |
-| FreeBSD-14.2-RELEASE-amd64-dvd1.iso.xz | 压缩的 DVD 镜像，相比 CD 镜像包含了更多软件包（pkg） |
+| FreeBSD-14.2-RELEASE-amd64-disc1.iso | 标准安装镜像 |
+| FreeBSD-14.2-RELEASE-amd64-disc1.iso.xz | 压缩的标准安装镜像 |
+| FreeBSD-14.2-RELEASE-amd64-dvd1.iso | DVD 镜像，相比标准安装镜像包含了更多软件包（pkg） |
+| FreeBSD-14.2-RELEASE-amd64-dvd1.iso.xz | 压缩的 DVD 镜像，相比标准安装镜像包含了更多软件包（pkg） |
 | FreeBSD-14.2-RELEASE-amd64-memstick.img | U 盘用的镜像（可以使用 Rufus 制作 U 盘启动盘） |
 | FreeBSD-14.2-RELEASE-amd64-memstick.img.xz | 压缩的 U 盘用的镜像（无需解压缩，可以使用 Rufus 制作 U 盘启动盘） |
 | FreeBSD-14.2-RELEASE-amd64-mini-memstick.img | U 盘用的网络安装镜像，安装时需要联网 |
 | FreeBSD-14.2-RELEASE-amd64-mini-memstick.img.xz | 压缩的 U 盘用的网络安装镜像，安装时需要联网 |
 
-.xz 是一种高压缩比的文件压缩格式，常用于缩小软件发行包的体积。SHA256 和 SHA512 是密码散列函数，用于生成文件的唯一指纹，校验值（Checksum）则是通过这些函数计算出的固定长度字符串，用于验证文件完整性。
+.xz 是一种高压缩比的文件压缩格式，常用于缩小软件发行包的体积。SHA256 和 SHA512 是密码散列函数，用于生成文件的唯一指纹，校验和（Checksum）则是通过这些函数计算出的固定长度字符串，用于验证文件完整性。
 
 需要注意的是，DVD 镜像并不包含所有离线软件包，仅精选了若干软件包，具体清单可参见源代码文件 FreeBSD Project. freebsd-src/release/scripts/pkg-stage.sh[EB/OL]. [2026-03-25]. <https://github.com/freebsd/freebsd-src/blob/main/release/scripts/pkg-stage.sh>. 该脚本定义 DVD 镜像包含的预安装软件包清单。
 
@@ -137,7 +137,7 @@ FreeBSD 的所有安装介质（包括但不限于虚拟机镜像）默认均不
 
 > **技巧**
 >
-> 网络传输可能产生错误，导致下载的文件与原始镜像不一致。因此，需要一种机制来验证所获取的文件与官方发布的镜像完全一致，这就需要使用 **校验值**。Windows 10 和 11 系统自带命令行工具 `CertUtil`，可用于计算校验值，无需安装额外软件。读者还可参考 Dell Technologies. 如何确定用于安全应用程序的文件 SHA-256 哈希[EB/OL]. [2026-03-25]. <https://www.dell.com/support/kbdoc/zh-cn/000130826/%E5%A6%82%E4%BD%95%E7%A1%AE%E5%AE%9A%E7%94%A8%E4%BA%8E%E5%AE%89%E5%85%A8%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%96%87%E4%BB%B6-sha-256-%E5%93%88%E5%B8%8C>. 该文档介绍 Windows 系统下文件 SHA-256 哈希值计算方法。
+> 网络传输可能产生错误，导致下载的文件与原始镜像不一致。因此，需要一种机制来验证所获取的文件与官方发布的镜像完全一致，这就需要使用 **校验和**。Windows 10 和 11 系统自带命令行工具 `CertUtil`，可用于计算校验和，无需安装额外软件。读者还可参考 Dell Technologies. 如何确定用于安全应用程序的文件 SHA-256 哈希[EB/OL]. [2026-03-25]. <https://www.dell.com/support/kbdoc/zh-cn/000130826/%E5%A6%82%E4%BD%95%E7%A1%AE%E5%AE%9A%E7%94%A8%E4%BA%8E%E5%AE%89%E5%85%A8%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%96%87%E4%BB%B6-sha-256-%E5%93%88%E5%B8%8C>. 该文档介绍 Windows 系统下文件 SHA-256 哈希值计算方法。
 
 FreeBSD 镜像 BT 种子下载地址（非官方，建议检查文件校验和后使用）：<https://fosstorrents.com/distributions/freebsd/>
 
@@ -179,7 +179,7 @@ Rufus 下载地址为 <https://rufus.ie/zh>，该工具为 Windows 平台开源 
 
 ![Rufus](../.gitbook/assets/rufus.png)
 
-**不建议** 使用 FreeBSD 手册中提到的 win32diskimager，因其对某些镜像格式的处理存在缺陷，尽管实际文件校验值正确，但有时会错误地报告校验失败。类似地，**亦不建议** 使用 Ventoy。Ventoy - 多系统启动 USB 启动盘制作工具[EB/OL]. [2026-03-25]. <https://www.ventoy.net/>. 该工具为多系统启动 USB 启动盘制作工具，直接加载 ISO 或 IMG 镜像文件，但 Ventoy 的启动加载机制与 FreeBSD 镜像不完全兼容，可能导致启动失败。
+**不建议** 使用 FreeBSD 手册中提到的 win32diskimager，因其对某些镜像格式的处理存在缺陷，尽管实际文件校验和正确，但有时会错误地报告校验失败。类似地，**亦不建议** 使用 Ventoy。Ventoy - 多系统启动 USB 启动盘制作工具[EB/OL]. [2026-03-25]. <https://www.ventoy.net/>. 该工具为多系统启动 USB 启动盘制作工具，直接加载 ISO 或 IMG 镜像文件，但 Ventoy 的启动加载机制与 FreeBSD 镜像不完全兼容，可能导致启动失败。
 
 **读者应仅在 Rufus 无效的情况下再使用 win32diskimager 或 Ventoy。**
 
@@ -187,7 +187,7 @@ win32diskimager 的下载地址是 <https://sourceforge.net/projects/win32diskim
 
 > **思考题**
 >
-> > 有时候绕远路是必须的，人生是片森林，人们终究会再次迷路，短暂相遇。正所谓“念念不忘，必有回响”。然而，人们清醒地意识到，没有什么“必有回响”，有的只是“没有结局的开始”或者“稍纵即逝的追寻”。没有任何人许诺回响，这只是苦难哲学的鸦片，让人们与这种现实“和解”。“念念不忘，必有回响”的完整说明并非李叔同所述，而是源于当代人的《李叔同〈晚晴集〉人生解读》（王少农. 李叔同《晚晴集》人生解读[M]. 线装书局, 2008.）其中上半句“念念不忘”亦非李叔同原作，而是看似引用了南宋王龙舒《龙舒净土文卷第四》“蓋欲念念不忘也。如此久久念心成熟。”其中在清俞行敏重辑《净土全书》一书的“净土起信”中同样有类似描述“净土指归云：欲了生死，修行净业，当发十种信心，念念不忘，决生净土。”，再次索引到《净土指归集》，实际上是绕回了《佛说四谛经》，载“亦观持宿命，亦从得道行，念世间行不可悔，摄、止、度世、无为、寂然、止见、一德、无所著、如解脱意观念想念，从念念、念不忘、少言、念不离，是名为直正念，是名为道德谛。”由于这是汉传佛教，在历史上被记载为安世高的翻译贡献，我们需要看看原本可能的样子。查《佛说四谛经》，实际对应于中阿含经《分别圣谛经》，即对应《巴利三藏》的《中部》的《一四一分别谛经》（段晴，范晶晶，等译。汉译巴利三藏·经藏·中部[M]. 上海:中西书局, 2022:963–965.）。是这样写的：“众仁友，何为正念？此谓比丘于身循观身，精勤，正知，具念，于世间戒除贪与忧；于诸受（……）于心（……）于诸法循观法，精勤，正知，具念，于世间断除贪与忧。这被称为正念。”可以清晰地看出，“念念不忘”实际上对应的是“具念”（巴利语 sati），在文献中往往又被翻译为“念”“正念”。实际上我们知道，在任何早期人类宗教活动中，传递的思想都是当时最合适不过的道德思想和伦理行为，也是最质朴，最清楚明白的，任何过于复杂的理论绝不可能流传数千年。因此，我们有必要怀疑这种“念念不忘”说法的合理性。在不同的学术观点中对此看法存在较大差异，但是无可辩驳的是，在佛教最早期的发展中，不可能有任何超越当时信众知识结构、道德伦理、认知能力的理论被普遍认可。因此，我们无需考察任何文本，越是从经验出发的理解，却往往是最接近合理性的存在。念念不忘实质上接近这种说法：“厨师一定要会做饭、垃圾桶里一定要有垃圾”，即，xx 就是 xx。可以看到，“念念不忘”与当代欧陆哲学产生了深切共鸣，不是让事情回到本身，而是认识到，有些时候，事情就是本身。“大音希声”。“一切真历史都是当代史”（克罗齐. 历史学的理论和历史[M]. 田时纲译. 北京: 中国社会科学出版社, 2018），但无论是玄奘短命的“法相唯识宗”，还是“念念不忘”的本义，都向我们启示着一个深邃的事实，“一切真历史都是古代史”。“谁试图诠释历史，谁就在篡改历史。讨论真假无非是在争夺自己的话语权。”历史学是一种解释学。佛经和道教经文的文言文呈现方式仍是绝对主流，且无定本；而与此同时，基督教两会甚至出版了官方的《拼音版圣经》。但在过去，甚至如今的天主教，保守也是常态。形式上的精致化现代化与内在的理论嬗变的平衡是大多数理论发展的痛点。后人对前人的经典论述究竟是形成了一层又一层的遮蔽，还是使其精致化顺应时代发展？我们现在看到的，持有的意见，究竟有几分是最初作者的面貌？后人往往通过注解经典来阐发自己的观点，甚至托名作书。念念不忘，恰巧就是指出一个道理，“没有回响才是常态”，这不是固执的坚持和重复，而是理解到一个无数人提及的话语，我们本就一无所有，唯一重要的事情只有生或死。念念不忘，不是执着于铭记，而是发现，我们感知到什么，那就是什么。与其说我们一生都在选择，不如说我们一生都在等待，等待回响。
+> > 有时候绕远路是必须的，人生是片森林，人们终究会再次迷路，短暂相遇。正所谓“念念不忘，必有回响”。然而，人们清醒地意识到，没有什么“必有回响”，有的只是“没有结局的开始”或者“稍纵即逝的追寻”。没有任何人许诺回响，这只是某种哲学层面的寄托，让人们与这种现实“和解”。“念念不忘，必有回响”的完整说明并非李叔同所述，而是源于当代人的《李叔同〈晚晴集〉人生解读》（王少农. 李叔同《晚晴集》人生解读[M]. 线装书局, 2008.）其中上半句“念念不忘”亦非李叔同原作，而是看似引用了南宋王龙舒《龙舒净土文卷第四》“蓋欲念念不忘也。如此久久念心成熟。”其中在清俞行敏重辑《净土全书》一书的“净土起信”中同样有类似描述“净土指归云：欲了生死，修行净业，当发十种信心，念念不忘，决生净土。”，再次索引到《净土指归集》，实际上是绕回了《佛说四谛经》，载“亦观持宿命，亦从得道行，念世间行不可悔，摄、止、度世、无为、寂然、止见、一德、无所著、如解脱意观念想念，从念念、念不忘、少言、念不离，是名为直正念，是名为道德谛。”由于这是汉传佛教，在历史上被记载为安世高的翻译贡献，我们需要看看原本可能的样子。查《佛说四谛经》，实际对应于中阿含经《分别圣谛经》，即对应《巴利三藏》的《中部》的《一四一分别谛经》（段晴，范晶晶，等译。汉译巴利三藏·经藏·中部[M]. 上海:中西书局, 2022:963–965.）。是这样写的：“众仁友，何为正念？此谓比丘于身循观身，精勤，正知，具念，于世间戒除贪与忧；于诸受（……）于心（……）于诸法循观法，精勤，正知，具念，于世间断除贪与忧。这被称为正念。”可以清晰地看出，“念念不忘”实际上对应的是“具念”（巴利语 sati），在文献中往往又被翻译为“念”“正念”。实际上我们知道，在任何早期人类宗教活动中，传递的思想都是当时最合适不过的道德思想和伦理行为，也是最质朴，最清楚明白的，任何过于复杂的理论绝不可能流传数千年。因此，我们有必要怀疑这种“念念不忘”说法的合理性。在不同的学术观点中对此看法存在较大差异，但是无可辩驳的是，在佛教最早期的发展中，不可能有任何超越当时信众知识结构、道德伦理、认知能力的理论被普遍认可。因此，我们无需考察任何文本，越是从经验出发的理解，却往往是最接近合理性的存在。念念不忘实质上接近这种说法：“厨师一定要会做饭、水一定往低处流”，即，xx 就是 xx。可以看到，“念念不忘”与当代欧陆哲学产生了深切共鸣，不是让事情回到本身，而是认识到，有些时候，事情就是本身。“大音希声”。“一切真历史都是当代史”（克罗齐. 历史学的理论和历史[M]. 田时纲译. 北京: 中国社会科学出版社, 2018），但无论是玄奘短命的“法相唯识宗”，还是“念念不忘”的本义，都向我们启示着一个深邃的事实，“一切真历史都是古代史”。“谁试图诠释历史，谁就在篡改历史。讨论真假无非是在争夺自己的话语权。”历史学是一种解释学。佛经和道教经文的文言文呈现方式仍是绝对主流，且无定本；而与此同时，基督教两会甚至出版了官方的《拼音版圣经》。但在过去，甚至如今的天主教，保守也是常态。形式上的精致化现代化与内在的理论嬗变的平衡是大多数理论发展的痛点。后人对前人的经典论述究竟是形成了一层又一层的遮蔽，还是使其精致化顺应时代发展？我们现在看到的，持有的意见，究竟有几分是最初作者的面貌？后人往往通过注解经典来阐发自己的观点，甚至托名作书。念念不忘，恰巧就是指出一个道理，“没有回响才是常态”，这不是固执的坚持和重复，而是理解到一个无数人提及的话语，我们本就一无所有，唯一重要的事情只有生或死。念念不忘，不是执着于铭记，而是发现，我们感知到什么，那就是什么。与其说我们一生都在选择，不如说我们一生都在等待，等待回响。
 >
 >
 > 如何理解“念念不忘”与“必有回响”的关系？
@@ -232,6 +232,6 @@ Probe URL: https://bsd-hardware.info/?probe=f64606c4b1
 
 ## 课后习题
 
-1. 下载最新版本 FreeBSD -RELEASE 的 memstick 镜像，使用 CertUtil 计算其 SHA256 校验值，同官方 CHECKSUM 文件进行比对验证。
+1. 下载最新版本 FreeBSD -RELEASE 的 memstick 镜像，使用 CertUtil 计算其 SHA256 校验和，同官方 CHECKSUM 文件进行比对验证。
 
 2. 查阅 bsd-hardware.info 网站，查找当前设备的硬件兼容性信息，如果可以安装 FreeBSD，则使用 hw-probe 工具将自己的硬件数据上传到该平台。

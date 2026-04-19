@@ -37,6 +37,10 @@
 
 此时可尝试按下 **Ctrl** + **C** 组合键中断该服务，从而继续启动系统。
 
+## 参考文献
+
+- FreeBSD Project. FreeBSD 14.0-RELEASE Release Notes[EB/OL]. [2026-04-17]. <https://www.freebsd.org/releases/14.0R/relnotes/>. FreeBSD 14.0 起移除了 sendmail 默认启动配置，解决了旧版本启动卡顿问题。
+
 ## 课后习题
 
 1. 故意制造一个安装故障（如使用错误的镜像格式或未关闭安全启动），记录错误信息并使用本节提供的方法排查问题。
