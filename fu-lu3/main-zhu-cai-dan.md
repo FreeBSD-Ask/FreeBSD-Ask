@@ -53,8 +53,9 @@ BIOS 信息子页面用于展示 BIOS 固件的详细属性，包括厂商、版
 
 参考文献：
 
-- 英特尔公司. 英特尔® 处理器步进意味着什么？[EB/OL]. [2024-01-15]. <https://www.intel.cn/content/www/cn/zh/support/articles/000057218/processors.html>.
-- CPU“步进”介绍[EB/OL]. [2024-01-15]. <https://iknow.lenovo.com.cn/detail/320528>.
+- 英特尔公司. 英特尔® 处理器步进意味着什么？[EB/OL]. [2024-01-15]. <https://www.intel.cn/content/www/cn/zh/support/articles/000057218/processors.html>. 解释处理器步进版本的含义及其与硬件修订的关系。
+- 联想. CPU“步进”介绍[EB/OL]. [2024-01-15]. <https://iknow.lenovo.com.cn/detail/320528>. 通俗介绍 CPU 步进概念及不同步进版本间的差异。
+- 英特尔公司. 英特尔® 处理器 N100 规格与订购信息[EB/OL]. [2026-04-17]. <https://www.intel.cn/content/www/cn/zh/products/sku/231803/intel-processor-n100-6m-cache-up-to-3-40-ghz/specifications.html>（确认步进 N0、4 核 4 线程、6 MB 缓存、800 MHz 基础频率）。
 
 ### Memory Information（内存信息）
 
