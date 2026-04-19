@@ -48,7 +48,7 @@ Fiat Lux!
 
 - University of California, Berkeley. Fiat Lux Scholarship[EB/OL]. [2026-03-25]. <https://financialaid.berkeley.edu/types-of-aid-at-berkeley/scholarships/fiat-lux-scholarship/>. 为加州大学伯克利学生提供经济资助的奖学金项目。
 - 北京大学校史馆. 蔡元培像[EB/OL]. [2026-03-25]. <https://www.xsg.pku.edu.cn/details/1893.html>. 展示蔡元培先生塑像。
-- （日）山本四郎. 小川又次稿：《清国征讨策案》[J]. 日本史研究, 1964(75). 随着明治维新，国力渐增，日本逐步迈上了对外侵略扩张的军国主义道路，1887 年，日本参谋本部制定了所谓“清国征讨策略”，逐渐演化为以侵略中国为中心的“大陆政策”。
+- (日)山本四郎. 小川又次稿:清国征讨策案[J]. 日本史研究,1964(75). 随着明治维新，国力渐增，日本逐步迈上了对外侵略扩张的军国主义道路，1887 年，日本参谋本部制定了所谓“清国征讨策略”，逐渐演化为以侵略中国为中心的“大陆政策”。
 - 蔡元培. 蔡元培：言有物，行有伦[M]. 北京:中国文史出版社, 2023. ISBN: 978-7-5205-3816-9. 阐述蔡元培教育思想与文化理念。
 - PIAZZA L, LUMMEN T T A, QUIÑONEZ E, et al. Simultaneous observation of the quantization and the interference pattern of a plasmonic near-field[J]. Nature Communications, 2015, 6: 6407. 揭示等离子体近场的量子化与干涉现象。
 - 伊曼努尔·康德. 历史理性批判文集[M]. 何兆武, 译. 天津:天津人民出版社, 2014:22. 《答复这个问题：“什么是启蒙运动？”》. ISBN: 978-7-201-08641-5. 系统阐述启蒙运动的哲学内涵与历史意义。
