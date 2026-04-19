@@ -71,7 +71,7 @@
 
 该书阅读难度较高，属于高级技术专著范畴，需要具备一定的操作系统理论基础方能深入理解。
 
-主要作者 MCKUSICK M K 在其网站上提供多款 BSD 相关的录制课程，参见 MCKUSICK M K. BSD related courses[EB/OL]. [2026-03-26]. <https://www.mckusick.com/buylist.html>. 目前正在撰写推出第三版（由 No Starch Press 出版），相关信息可参见 MCKUSICK M K. The History of the BSD Daemon: BSDCan 2025[EB/OL]. [2026-04-18]. <https://www.bsdcan.org/2025/talks/daemon.pdf>，这一信息对于追踪 FreeBSD 技术演进具有重要的文献价值。
+主要作者 MCKUSICK M K 在其网站上提供多款 BSD 相关的录制课程，参见 MCKUSICK M K. BSD related courses[EB/OL]. [2026-03-26]. <https://www.mckusick.com/buylist.html>. 目前正在撰写推出第三版（由 No Starch Press 出版），相关信息可参见 MCKUSICK M K. The History of the BSD Daemon: BSDCan 2025[EB/OL]. [2026-04-18]. <https://www.bsdcan.org/2025/talks/daemon.pdf>. 这一信息对于追踪 FreeBSD 技术演进具有重要的文献价值。
 
 ### IPv6 网络堆栈
 
@@ -125,7 +125,7 @@
 
 ### 《莱昂氏 UNIX 源代码分析》
 
-LIONS J. 莱昂氏 UNIX 源代码分析[M]. 尤晋元, 译. 北京: 机械工业出版社, 2000. ISBN: 978-7-111-08018-3. UNIX 早期教学核心文献，带注释的 UNIX v6 源代码汇编。
+LIONS J. 莱昂氏 UNIX 源代码分析[M]. 尤晋元,译. 北京:机械工业出版社,2000. ISBN: 978-7-111-08018-3. UNIX 早期教学核心文献，带注释的 UNIX v6 源代码汇编。
 
 该书原作名为 *Lion's Commentary on UNIX with Source Code*，由 LIONS J 撰写，最初作为澳大利亚新南威尔士大学的课程讲义，是 UNIX 早期教学的核心文献。该书的中文翻译历程颇具历史意义，反映了中国开源社区对经典技术文献的重视（参见：中华读书报.“地下出版物” 浮出水面[EB/OL]. (2000-08-02)[2026-03-26]. <https://www.gmw.cn/01ds/2000-08/02/GB/2000%5E311%5E0%5EDS1418.htm>）。
 
@@ -133,7 +133,7 @@ LIONS J. 莱昂氏 UNIX 源代码分析[M]. 尤晋元, 译. 北京: 机械工业
 
 ### 早期中文 FreeBSD 文献（2000 年代）
 
-- 王波. FreeBSD 使用大全[M]. 北京: 机械工业出版社, 1999. ISBN: 978-7-111-07482-3. 国内最早的 FreeBSD 中文入门书籍之一，出版于 1999 年。作者王波是早期 FreeBSD 中文社区的重要推动者。
+- 王波. FreeBSD 使用大全[M]. 北京:机械工业出版社,1999. ISBN: 978-7-111-07482-3. 国内最早的 FreeBSD 中文入门书籍之一，出版于 1999 年。作者王波是早期 FreeBSD 中文社区的重要推动者。
 - 王波. FreeBSD 使用大全[M]. 第2版. 北京:机械工业出版社,2002. ISBN: 978-7-111-10286-1. FreeBSD 中文入门书籍修订版，技术内容更新并在台湾地区发行。
 - 冯宝坤,陈子鸿. FreeBSD 完全攻略[M]. 北京:中国物资出版社;北京:北京希望电子出版社,2004. ISBN: 978-7-5047-2160-0. 早期 FreeBSD 中文入门文献。
 
