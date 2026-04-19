@@ -17,7 +17,7 @@
 
 ### 参考文献
 
-- FreeBSDFoundation. FreeBSD: The Torchbearer of the Original Operating System Distribution[EB/OL]. [2026-04-04]. <https://freebsdfoundation.org/blog/freebsd-the-torchbearer-of-the-original-operating-system-distribution/>. BSD 最早提出并实践了“发行版”概念框架。
+- FreeBSD Foundation. FreeBSD: The Torchbearer of the Original Operating System Distribution[EB/OL]. [2026-04-04]. <https://freebsdfoundation.org/blog/freebsd-the-torchbearer-of-the-original-operating-system-distribution/>. BSD 最早提出并实践了“发行版”概念框架。
 - Linux Foundation. A Brief Look at the Roots of Linux Containers[EB/OL]. [2026-04-18]. <https://www.linuxfoundation.org/blog/blog/a-brief-look-at-the-roots-of-linux-containers>. 该文明确指出：“In 2000, FreeBSD extended chroot to FreeBSD Jails”，容器技术原型可追溯至 FreeBSD Jail。
 - Phull R, Bhatt D. Portage: Bringing Hackers' Wisdom to Science[EB/OL]. arXiv preprint arXiv:1610.02742, 2016. [2026-04-18]. <https://arxiv.org/abs/1610.02742>. 该论文明确指出：“Portage, written in Python and inspired by the ports system from FreeBSD”及“Portage is a GPLv2 package management system based on FreeBSD's ports collection”，Gentoo Portage 技术渊源可追溯至 BSD Ports。
 - FreeBSD Project. Why you should use a BSD style license for your Open Source Project[EB/OL]. [2026-04-18]. <https://docs.freebsd.org/en/articles/bsdl-gpl/>. 该文记载了 BSD 许可证自 20 世纪 70 年代末起即以源代码自由分发的方式实践开源理念，早于 1985 年的 GNU Emacs 许可证和 1989 年的 GPL。
