@@ -375,7 +375,7 @@ root     syslogd     1021 7   udp4   *:514                 *:*
 
 由微软官方开发的手机 RDP 软件：Remote Desktop
 
-- Microsoft Corporation. Remote Desktop[EB/OL]. Google Play, [2026-03-25]. <https://play.google.com/store/apps/details?id=com.microsoft.rdc.androidx&hl=zh_CN>. 微软官方开发的 Android 远程桌面客户端，支持 RDP 协议连接。
+- Microsoft Corporation. Remote Desktop[EB/OL]. [2026-03-25]. <https://play.google.com/store/apps/details?id=com.microsoft.rdc.androidx&hl=zh_CN>. 微软官方开发的 Android 远程桌面客户端，支持 RDP 协议连接。
 
 该软件操作便捷。
 
