@@ -60,7 +60,7 @@ $ echo 'exec VBoxClient-all' >> ~/.config/i3/config
 
 ## 参考文献
 
-- FreeBSD Project. i3(1)[EB/OL]. FreeBSD Manual Pages, [2026-03-25]. <https://man.freebsd.org/cgi/man.cgi?query=i3>. FreeBSD 官方提供的 i3 窗口管理器使用手册，包含完整的命令与配置说明。
+- FreeBSD Project. i3(1)[EB/OL]. [2026-03-25]. <https://man.freebsd.org/cgi/man.cgi?query=i3>. FreeBSD 官方提供的 i3 窗口管理器使用手册，包含完整的命令与配置说明。
 - Bottlenix Wiki. Installing i3wm on FreeBSD[EB/OL]. [2026-03-25]. <http://bottlenix.wikidot.com/installing-i3wm>. 在 FreeBSD 上安装 i3wm 的详细指南。
 - Unixsheikh. How to setup FreeBSD with a riced desktop - part 3 - i3[EB/OL]. Unix Digest, [2026-03-25]. <https://unixsheikh.com/tutorials/how-to-setup-freebsd-with-a-riced-desktop-part-3-i3.html#xterm>. Unix Digest 提供的 FreeBSD i3 桌面美化与配置完整教程。
 - FreeBSD Forums. How to install i3?[EB/OL]. FreeBSD Forums, [2026-03-25]. <https://forums.freebsd.org/threads/how-to-install-i3.62305/>. FreeBSD 官方论坛讨论，解答 i3 窗口管理器的安装与配置问题。
