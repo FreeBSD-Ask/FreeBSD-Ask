@@ -2,11 +2,11 @@
 
 输入法框架与具体输入法是两个不同的技术层次，输入法的运行依赖于框架的支持。这种架构关系在 Windows 系统中同样存在，可参考 Microsoft. TSF 管理器[EB/OL]. [2026-04-04]. <https://learn.microsoft.com/zh-cn/windows/win32/tsf/text-services-framework>. 该文档介绍了 Windows 文本服务框架的架构与接口规范。
 
-fcitx 即“小企鹅输入法”，其英文全称为“A flexible input method framework（一款灵活的输入法框架）”。关于其英文命名的历史渊源，可参见：小企鹅输入法 5. 历史[EB/OL]. [2026-03-26]. <https://fcitx-im.org/wiki/History/zh-cn>。该页面记录了 Fcitx 从创始至今的发展历程。
+Fcitx 即“小企鹅输入法”，其原始英文全称为“Free Chinese Input Tool of X”（X 窗口系统的自由中文输入工具）。Fcitx 5 时代，该缩写不再对应单一全称，官方提供了多种释义（如“Flexible Context-aware Input Tool with eXtension”等），以反映 Fcitx 的发展方向已不限于中文输入。关于其英文命名的历史渊源，可参见：小企鹅输入法 5. 历史[EB/OL]. [2026-04-16]. <https://fcitx-im.org/wiki/History/zh-cn>。该页面记录了 Fcitx 从创始至今的发展历程及名称演变。
 
 >**技巧**
 >
->视频教程见 FreeBSD 中文社区. 006-FreeBSD 14.2 安装 fcitx5 及其输入法[EB/OL]. [2026-04-04]. <https://www.bilibili.com/video/BV13ji2YLE3m>.
+> 视频教程见 FreeBSD 中文社区. 006-FreeBSD 14.2 安装 fcitx5 及其输入法[EB/OL]. [2026-04-04]. <https://www.bilibili.com/video/BV13ji2YLE3m>.
 
 > **注意**
 >
@@ -30,7 +30,7 @@ fcitx 即“小企鹅输入法”，其英文全称为“A flexible input method
 # cd /usr/ports/chinese/fcitx5-chinese-addons/ && make install clean # 输入法
 ```
 
-在 SLiM 登录管理器下会提示找不到 IBus。
+在 SLiM 显示管理器下会提示找不到 IBus。
 
 ### Fcitx 5.X 开启自启
 
@@ -62,9 +62,9 @@ $ cp /usr/local/share/applications/org.fcitx.Fcitx5.desktop ~/.config/autostart/
 3. zsh: 在 `~/.zprofile` 文件写入 A 组配置
 4. csh: 在 `~/.cshrc` 文件写入 B 组配置
 
->**注意**
+> **注意**
 >
->如果登录桌面的用户账户不是 root，则不能使用 root 身份进行设置：必须切换到该普通用户，并在不使用 sudo 的情况下进行配置。
+> 如果登录桌面的用户账户不是 root，则不能使用 root 身份进行设置：必须切换到该普通用户，并在不使用 sudo 的情况下进行配置。
 
 - A 组（sh/bash/zsh）
 
@@ -129,11 +129,11 @@ setenv XMODIFIERS @im=fcitx
 # cd /usr/ports/chinese/rime-essay/ && make install clean
 ```
 
->**注意**
+> **注意**
 >
 >`chinese/rime-essay` 是必要的，是 Rime 的共享词汇与语言模型，没有这个 Port，RIME 输入法只会显示乱码。
 
-如果 rime 未被自动添加到输入法，请手动添加完成初始化。
+如果 rime 未自动添加到输入法，请手动添加完成初始化。
 
 对于普通用户，如果配置未生效，请检查所使用的 shell 是否按照教程进行了设置，同时确保该用户已加入 wheel 组。
 

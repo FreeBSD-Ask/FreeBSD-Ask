@@ -1,6 +1,5 @@
 # 8.5 Web 浏览器
 
-
 浏览器是计算机日常使用中最为频繁的应用软件之一。本节介绍如何在 FreeBSD 系统上安装和配置常用的浏览器，包括火狐浏览器（Firefox）和 Chromium 等。
 
 ## 火狐浏览器
@@ -39,9 +38,9 @@
 
 Chromium 不是 Chrome，在 FreeBSD 中的启动命令为 `chrome`。
 
->**技巧**
+> **技巧**
 >
->有些项目认为目前移除的组件仍不够彻底，因此提供了 Port `www/ungoogled-chromium`。该软件移除了更多与谷歌相关的不透明组件。
+> 有些项目认为目前移除的组件仍不够彻底，因此提供了 Port `www/ungoogled-chromium`。该软件移除了更多与谷歌相关的不透明组件。
 
 - 使用 pkg 安装 Chromium
 
@@ -77,7 +76,7 @@ Chromium 不是 Chrome，在 FreeBSD 中的启动命令为 `chrome`。
 
 ## 附录：让 Chromium 使用 Google 账号同步
 
-由于是开源产物，Chromium 与 Google Chrome 的关系类似于 AOSP 与 Pixel UI 的关系。Chromium 无法直接从 Google Chrome 的在线插件商店下载安装插件，只能手动从本地安装 crx（同步启用后可自动同步浏览器插件）。Chromium 也不自带 Google 翻译插件等功能。更多差异可参见：The Chromium Project. 此网页[EB/OL]. [2026-03-26]. <https://chromium.googlesource.com/chromium/src/+/master/docs/chromium_browser_vs_google_chrome.md>。该文档比较了 Chromium 与 Google Chrome 在功能和授权上的差异。
+由于是开源产物，Chromium 与 Google Chrome 的关系类似于 AOSP 与 Pixel UI 的关系。Chromium 无法直接从 Google Chrome 的在线插件商店下载安装插件，只能手动从本地安装 crx（同步启用后可自动同步浏览器插件）。Chromium 也不自带 Google 翻译插件等功能。更多差异可参见：The Chromium Project. Chromium Browser vs Google Chrome[EB/OL]. [2026-03-26]. <https://chromium.googlesource.com/chromium/src/+/master/docs/chromium_browser_vs_google_chrome.md>。该文档比较了 Chromium 与 Google Chrome 在功能和授权上的差异。
 
 `Chromium` 并非 `Google Chrome`，前者是 The Chromium Project 在 [BSD 3-Clause "New" or "Revised" License](https://github.com/chromium/chromium/blob/main/LICENSE) 下发布的开源与自由软件，后者是 Google LLC 的专有软件。该许可证允许自由使用、修改与再分发。
 
@@ -98,13 +97,13 @@ Chromium 不是 Chrome，在 FreeBSD 中的启动命令为 `chrome`。
 
 加入 Google browser sign-in test account 群组后，会看到：“您无权访问此内容”之类的提示，这很正常，无需担心。
 
-![join-mail-list-for-google-api-error2](../.gitbook/assets/join-chromium--list-2error.png)
+![join-mail-list-for-google-api-error2](../.gitbook/assets/join-chromium-mail-list-2error.png)
 
 用浏览器打开 [谷歌云控制台网站](https://console.cloud.google.com/)
 
->**注意**
+> **注意**
 >
->登录控制台时使用的谷歌账户必须与之前加入邮件列表的账户一致。
+> 登录控制台时使用的谷歌账户必须与之前加入邮件列表的账户一致。
 
 ![谷歌云控制台首页](../.gitbook/assets/chromium-use-google-api-guide-0.png)
 
@@ -124,7 +123,7 @@ Chromium 不是 Chrome，在 FreeBSD 中的启动命令为 `chrome`。
 
 ![启用 API 和服务](../.gitbook/assets/chromium-use-google-api-guide-04-1.png)
 
-搜索 “chrome-sync” 找到下列内容。
+搜索“chrome-sync”找到下列内容。
 
 ![搜索 Chrome Sync](../.gitbook/assets/chromium-use-google-api-guide-06.png)
 
@@ -191,9 +190,9 @@ export GOOGLE_DEFAULT_CLIENT_ID=502882456359-okloi0a7k6vjodss69so97tmqmv0jjj5.ap
 export GOOGLE_DEFAULT_CLIENT_SECRET=GoCSPX-iKHEKZmP4w_zdq0Z8nwOqz6SF2_M  # 这里填客户端密钥
 ```
 
->**注意**
+> **注意**
 >
->本节仅在默认 shell sh 和 KDE 6 下测试通过。如果使用的环境不同，欢迎提交 PR。
+> 本节仅在默认 shell sh 和 KDE 6 下测试通过。如果使用的环境不同，欢迎提交 PR。
 
 重启系统，再启动 Chromium。
 

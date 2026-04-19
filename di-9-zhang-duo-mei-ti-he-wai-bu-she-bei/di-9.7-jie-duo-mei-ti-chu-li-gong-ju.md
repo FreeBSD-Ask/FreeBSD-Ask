@@ -14,7 +14,7 @@ FreeBSD 操作系统支持多种多媒体处理工具，本节将介绍音频剪
 # pkg install audacity
 ```
 
-或者使用 Ports（源码包管理器）编译安装：
+或者使用 Ports（源代码包管理器）编译安装：
 
 ```sh
 # cd /usr/ports/audio/audacity/
@@ -33,7 +33,7 @@ Olive 视频编辑器（Olive Video Editor）安装方法：
 # pkg install olive-video-editor
 ```
 
-或者使用 Ports（源码包管理器）编译安装：
+或者使用 Ports（源代码包管理器）编译安装：
 
 ```sh
 # cd /usr/ports/multimedia/olive/
@@ -52,7 +52,7 @@ FFmpeg 安装方法：
 # pkg install ffmpeg
 ```
 
-或者使用 Ports（源码包管理器）编译安装：
+或者使用 Ports（源代码包管理器）编译安装：
 
 ```sh
 # cd /usr/ports/multimedia/ffmpeg/
@@ -79,7 +79,7 @@ $ ffmpeg -i 视频文件.mp4 -vf subtitles=对应字幕.ass 输出视频.mp4
 # pkg install inkscape
 ```
 
-- 或者使用 Ports 源码编译安装：
+- 或者使用 Ports 源代码编译安装：
 
 ```sh
 # cd /usr/ports/graphics/inkscape/
@@ -90,10 +90,9 @@ $ ffmpeg -i 视频文件.mp4 -vf subtitles=对应字幕.ass 输出视频.mp4
 
 1. 使用快捷键 `Ctrl` + `O`（字母 `o`）打开待处理的图片文件；
 2. 用鼠标点击选中图片；
-3. 按快捷键 `Alt` + `I` 将图片切换到矢量模式；
-4. 使用快捷键 `Shift` + `F6` 切换到贝塞尔曲线和直线绘制模式；
-5. 使用快捷键 `Ctrl` + `A` 全选相关对象；
-6. 在菜单栏中选择 **路径** → **交集** 选项，以实现抠图效果；
+3. 使用快捷键 `Shift` + `F6` 切换到贝塞尔曲线和直线绘制模式；
+4. 使用快捷键 `Ctrl` + `A` 全选相关对象；
+5. 在菜单栏中选择 **路径** → **交集** 选项，以实现抠图效果；
 
 ### 参考文献
 
