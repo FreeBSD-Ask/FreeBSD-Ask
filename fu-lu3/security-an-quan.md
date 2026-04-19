@@ -4,6 +4,8 @@
 
 参见：华硕. 如何设置或解决忘记 BIOS 密码/UEFI 密码/开机密码[EB/OL]. [2026-03-26]. <https://www.asus.com.cn/support/faq/1046347/> 提供 BIOS/UEFI 密码设置与重置的详细指导。
 
+参见：UEFI Forum. UEFI Specification[EB/OL]. [2026-04-17]. <https://uefi.org/specifications>. UEFI 规范是安全启动、密钥管理和平台安全机制的权威技术标准。
+
 BIOS（基本输入输出系统，Basic Input/Output System）密码是一种固件层面的安全功能，用于阻止计算机在预启动阶段遭到未经授权的访问。BIOS 密码也常被称为系统设置密码、UEFI 密码、开机密码或安全密码。
 
 当设备启动时，系统会提示用户输入 BIOS 密码，只有在输入正确密码后，才能访问和修改 BIOS 设置，并进入操作系统。这提供了一层额外的物理安全屏障，防止未经授权的人员更改硬件配置或篡改启动流程。
@@ -95,7 +97,7 @@ Disabled（禁用）
 
 说明：
 
-对于非 Windows 操作系统（如 Linux、FreeBSD 等），通常需要关闭此项才能被引导。
+对于部分非 Windows 操作系统（如 FreeBSD 等），通常需要关闭此项才能被引导。不过，许多主流 Linux 发行版（如 Ubuntu、Fedora、Debian 等）已通过 Microsoft UEFI CA 签名的 shim 引导器支持安全启动，无需关闭即可正常引导。参见：Ubuntu 文档. UEFI Secure Boot[EB/OL]. [2026-04-17]. <https://documentation.ubuntu.com/security/docs/security-features/platform-protections/secure-boot/>。
 
 当启用此选项、平台密钥（Platform Key，PK）已注册且系统处于用户模式时，安全启动功能将处于激活状态。更改模式需要重启。平台密钥（Platform Key，PK）用于在平台所有者与平台固件之间建立信任关系，平台所有者会将密钥的一部分注册到平台固件中。
 
@@ -207,7 +209,7 @@ No（否）
 
 文件系统中的映像文件。
 
-允许该映像在安全启动模式下运行。将 PE 镜像的 SHA256 哈希值注册到授权签名数据库（db）中。
+允许该映像在安全启动模式下运行。将 PE 映像的 SHA256 哈希值注册到授权签名数据库（db）中。
 
 #### Remove 'UEFI CA' from DB（从数据库中删除 UEFI CA）
 
@@ -219,7 +221,7 @@ No（否）
 
 本选项用于将授权签名数据库恢复到出厂默认值。
 
-将授权签名数据库（DB）变量恢复到出厂默认值。
+将授权签名数据库（db）变量恢复到出厂默认值。
 
 #### PK（平台密钥）
 
@@ -237,7 +239,7 @@ Append Key：追加密钥
  b）EFI_CERT_X509（DER 编码）
  c）EFI_CERT_RSA2048（二进制）
  d）EFI_CERT_SHAxxx
- 
+
 2. 经过认证的 UEFI 变量
 
 3. EFI PE/COFF 镜像（SHA256），密钥来源：出厂、外部、混合
