@@ -111,7 +111,7 @@ quarterly 分支类似于 Debian 的 Stable 版本，通过固定软件包版本
 关于 quarterly 分支的更多信息，可以参考以下官方文档。
 
 - FreeBSD Project. Ports/QuarterlyBranch[EB/OL]. [2026-03-25]. <https://wiki.freebsd.org/Ports/QuarterlyBranch>. 说明 Ports 季度分支的创建规则与维护策略。
-- FreeBSD Project. pkg -- package manager[EB/OL]. [2026-04-17]. <https://man.freebsd.org/cgi/man.cgi?query=pkg&sektion=8>. FreeBSD 包管理器手册页
+- FreeBSD Project. pkg -- package manager[EB/OL]. [2026-04-17]. <https://man.freebsd.org/cgi/man.cgi?query=pkg&sektion=8>. FreeBSD 包管理器手册页。
 
 ## 15.0-RELEASE 快速切换 pkg 软件源到中国科学技术大学开源软件镜像站
 
