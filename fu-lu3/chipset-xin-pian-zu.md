@@ -1919,7 +1919,7 @@ Enabled（启用）
 
 用于设置显存大小，将系统内存映射到 GPU 的虚拟地址空间。
 
-参考文献：freelancer-leon. Linux-Graphic.md[EB/OL]. (2024-01-15)[2024-01-15]. <https://github.com/freelancer-leon/notes/blob/master/kernel/graphic/Linux-Graphic.md>
+参考文献：freelancer-leon. Linux-Graphic.md[EB/OL]. (2024-01-15)[2024-01-15]. <https://github.com/freelancer-leon/notes/blob/master/kernel/graphic/Linux-Graphic.md>.
 
 动态显存技术（Dynamic Video Memory Technology）不再是在内存中为 GPU 开辟专用显存，而是显存和系统按需动态共享整个主存。
 
@@ -1977,7 +1977,7 @@ PSMI 是一个用于管理和监控电源供应器状态的接口。它允许主
 
 DVMT，Dynamic Video Memory，动态视频内存技术。DVMT 动态分配系统内存以用作视频内存。
 
-参考文献：英特尔公司. 关于旧型英特尔® 图形产品内存的常见问题解答[EB/OL]. (2024-01-15)[2024-01-15]. <https://www.intel.cn/content/www/cn/zh/support/articles/000006532/graphics/legacy-graphics.html>
+参考文献：英特尔公司. 关于旧型英特尔® 图形产品内存的常见问题解答[EB/OL]. (2024-01-15)[2024-01-15]. <https://www.intel.cn/content/www/cn/zh/support/articles/000006532/graphics/legacy-graphics.html>.
 
 #### DVMT Total Gfx Mem（DVMT 总计显存）
 
@@ -4771,7 +4771,7 @@ Disabled（禁用）
 
 LPSS，Low Power Subsystem，低功率子系统。
 
-参考文献：Microsoft. 设备低功率状态[EB/OL]. (2024-01-15)[2024-01-15]. <https://learn.microsoft.com/zh-cn/windows-hardware/drivers/kernel/device-sleeping-states>
+参考文献：Microsoft. 设备低功率状态[EB/OL]. (2024-01-15)[2024-01-15]. <https://learn.microsoft.com/zh-cn/windows-hardware/drivers/kernel/device-sleeping-states>.
 
 #### Additional Serial IO devices（附加串行 IO 设备）
 
