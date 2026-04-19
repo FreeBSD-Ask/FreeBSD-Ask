@@ -1,6 +1,6 @@
 # 6.3 KDE 6 桌面环境（X11 会话）
 
-KDE 项目致力于开发一套现代化的桌面环境。KDE 桌面环境的设计理念早于 Windows 部分界面设计，二者在交互范式上存在一定相似性。
+KDE 项目致力于开发一套现代化的桌面环境。KDE 桌面环境借鉴了包括 Windows 在内的多种桌面环境的交互范式，二者在界面设计上存在一定相似性。~~也许是 Windows 借鉴了 KDE 桌面比较多。~~
 
 > **技巧**
 >
@@ -25,10 +25,10 @@ KDE 项目致力于开发一套现代化的桌面环境。KDE 桌面环境的设
 - 或者使用 Ports 安装：
 
 ```sh
-# cd /usr/ports/x11/xorg/ && make install clean 
-# cd /usr/ports/x11/kde/ && make install clean 
-# cd /usr/ports/x11/sddm/ && make install clean 
-# cd /usr/ports/x11-fonts/wqy/ && make install clean 
+# cd /usr/ports/x11/xorg/ && make install clean
+# cd /usr/ports/x11/kde/ && make install clean
+# cd /usr/ports/x11/sddm/ && make install clean
+# cd /usr/ports/x11-fonts/wqy/ && make install clean
 ```
 
 ### 软件包说明
@@ -81,7 +81,7 @@ $ echo "exec ck-launch-session startplasma-x11" > ~/.xinitrc
 
 ## 配置中文环境
 
-### 设置 SDDM 登录管理器的语言为简体中文
+### 设置 SDDM 显示管理器的语言为简体中文
 
 执行命令：
 
@@ -126,8 +126,8 @@ $ echo "exec ck-launch-session startplasma-x11" > ~/.xinitrc
 
 ### 参考文献
 
-- FreeBSD Forums. SDDM login screen with KDE: change language?[EB/OL]. FreeBSD Forums, [2026-03-25]. <https://forums.freebsd.org/threads/sddm-login-screen-with-kde-change-language.80535/>.
-- silversack. デスクトップ 環境 の 構築 - 4-7. LXQT のインストールと 設定 (LXQT 2.0.0)[EB/OL]. [2026-03-25]. <http://silversack.my.coocan.jp/bsd/fbsd11x_bde-4-7_lxqt.htm>.
+- FreeBSD Forums. SDDM login screen with KDE: change language?[EB/OL]. FreeBSD Forums, [2026-03-25]. <https://forums.freebsd.org/threads/sddm-login-screen-with-kde-change-language.80535/>. 讨论 SDDM 登录界面语言设置不生效的解决方法。
+- silversack. デスクトップ 環境 の 構築 - 4-7. LXQT のインストールと 設定 (LXQT 2.0.0)[EB/OL]. [2026-03-25]. <http://silversack.my.coocan.jp/bsd/fbsd11x_bde-4-7_lxqt.htm>. 日文 FreeBSD 桌面环境构建指南中 LXQt 的安装与配置部分。
 
 ## 附录：最小化 KDE 桌面安装方案
 
@@ -173,9 +173,9 @@ $ echo "exec ck-launch-session startplasma-x11" > ~/.xinitrc
 基础桌面安装方案。
 
 ```sh
-# cd /usr/ports/x11/xorg/ && make install clean 
+# cd /usr/ports/x11/xorg/ && make install clean
 # cd /usr/ports/x11/plasma6-plasma-desktop/ && make install clean
-# cd /usr/ports/deskutils/plasma6-sddm-kcm/ && make install clean 
+# cd /usr/ports/deskutils/plasma6-sddm-kcm/ && make install clean
 # cd /usr/ports/x11/sddm/ && make install clean
 # cd /usr/ports/x11-fonts/wqy/ && make install clean
 # cd /usr/ports/x11/plasma6-kscreen/ && make install clean
@@ -186,7 +186,7 @@ $ echo "exec ck-launch-session startplasma-x11" > ~/.xinitrc
 可选 Ports：
 
 ```sh
-# cd /usr/ports/x11/konsole/ && make install clean # 终端 
+# cd /usr/ports/x11/konsole/ && make install clean # 终端
 # cd /usr/ports/x11-fm/dolphin/ && make install clean # 文件管理器
 # cd /usr/ports/editors/kate/ && make install clean # 文本编辑器
 # cd /usr/ports/sysutils/plasma6-plasma-systemmonitor/ && make install clean # 系统监视器
@@ -194,7 +194,7 @@ $ echo "exec ck-launch-session startplasma-x11" > ~/.xinitrc
 # cd /usr/ports/sysutils/plasma6-discover/ && make install clean # 软件管理器
 # cd /usr/ports/deskutils/kdeconnect-kde/ && make install clean # 手机电脑互联
 # cd /usr/ports/x11-themes/plasma6-plasma-workspace-wallpapers/ && make install clean # 桌面壁纸
-# cd /usr/ports/sysutils/plasma6-plasma-disks/ && make install clean # 磁盘健康（S.M.A.R.T.）监测 
+# cd /usr/ports/sysutils/plasma6-plasma-disks/ && make install clean # 磁盘健康（S.M.A.R.T.）监测
 # cd /usr/ports/archivers/ark/ && make install clean # 解压缩软件
 ```
 

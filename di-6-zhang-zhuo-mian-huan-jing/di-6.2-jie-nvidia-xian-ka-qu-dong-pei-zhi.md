@@ -41,6 +41,8 @@
 
 ### 启动 NVIDIA 相关内核模块
 
+执行以下命令加载 NVIDIA 相关内核模块：
+
 ```sh
 # echo 'hw.nvidiadrm.modeset="1"' >> /boot/loader.conf  # 启用 NVIDIA DRM 模式设置
 # sysrc -f /etc/rc.conf kld_list+=nvidia-modeset       # 添加 nvidia-modeset 内核模块以便启动时加载
@@ -88,7 +90,7 @@
 列出所有 NVIDIA GPU 及其详细信息：
 
 ```sh
-$ nvidia-smi 
+$ nvidia-smi
 ```
 
 `nvidia-smi` 命令示例输出：
@@ -125,11 +127,6 @@ Mon Jan 19 19:06:59 2026
 
 ![MPV 显存使用](../.gitbook/assets/nvi1.jpg)
 
-## 参考文献
-
-- Intel Corporation. 关于我们的最新处理器和命名更新的简要指南[EB/OL]. Intel 中国, [2026-03-25]. <https://www.intel.cn/content/www/cn/zh/processors/processor-numbers.html>. 英特尔官方关于 CPU 命名规则与型号标识的权威说明文档。
-- NVIDIA Corporation. NVIDIA Driver Documentation[EB/OL]. NVIDIA, [2026-03-25]. <https://www.nvidia.com/Download/index.aspx>. NVIDIA 官方驱动程序下载与技术文档。
-
 ## 故障排除
 
 ### nvidia-smi 命令报错“mismatch”
@@ -162,6 +159,11 @@ Mon Jan 19 19:06:59 2026
 但若运行 `freebsd-update` 命令，或执行 pkgbase 对系统打补丁或更新补丁，也可能影响驱动。
 
 因此需要自行平衡安全需求与日常使用。
+
+## 参考文献
+
+- Intel Corporation. 关于我们的最新处理器和命名更新的简要指南[EB/OL]. Intel 中国, [2026-03-25]. <https://www.intel.cn/content/www/cn/zh/processors/processor-numbers.html>. 英特尔官方关于 CPU 命名规则与型号标识的权威说明文档。
+- NVIDIA Corporation. NVIDIA Driver Documentation[EB/OL]. NVIDIA, [2026-03-25]. <https://www.nvidia.com/Download/index.aspx>. NVIDIA 官方驱动程序下载与技术文档。
 
 ## 课后习题
 

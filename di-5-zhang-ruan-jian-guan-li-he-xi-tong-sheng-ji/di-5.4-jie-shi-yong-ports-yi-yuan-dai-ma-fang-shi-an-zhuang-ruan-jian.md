@@ -162,7 +162,7 @@ Makefile		pkg-plist-client	pkg-plist-plpython
 ```
 
 - ① `/usr/ports` 这个文件夹整体称作 Ports，包括几十种不同的分类目录，每个目录下有若干 Port。
-- ② `/usr/ports/databases/postgresql18-server` 这个文件夹整体称作一个 Port，由 `distinfo`（校验和文件）、`pkg-descr`（软件描述文件）、`Makefile` （主文件，包含构建方法、版本号及下载方式等）、`pkg-plist`（安装文件列表及其权限和属组信息）、`files`（一般为补丁文件，该 Port 下还包含安装后的说明文件 `pkg-message`）等文件构成。
+- ② `/usr/ports/databases/postgresql18-server` 这个文件夹整体称作一个 Port，由 `distinfo`（校验和文件）、`pkg-descr`（软件描述文件）、`Makefile`（主文件，包含构建方法、版本号及下载方式等）、`pkg-plist`（安装文件列表及其权限和属组信息）、`files`（一般为补丁文件，该 Port 下还包含安装后的说明文件 `pkg-message`）等文件构成。
 
 之所以称为“Ports Collection”，移植集合（不应理解为“端口集合”）是因为这些软件绝大部分并不由 FreeBSD 控制、管理和维护。Port 提交者主要做的事情是将 FreeBSD 上 Port 更新到上游开发者提供的最新版本，删除上游不再维护的软件 Port。在上游不接受 BSD 特有的 PR 补丁或难以直接通过既有 Ports 框架实现构建的情况下，Port 维护者也需要自行复刻一个分支出来维护（如 [editors/vscode](https://github.com/tagattie/FreeBSD-VSCode)）。
 
@@ -170,11 +170,11 @@ Makefile		pkg-plist-client	pkg-plist-plpython
 
 > **注意**
 >
-> Ports 和 pkg 可以同时使用，而且大部分人也是这么用的。但是要注意 pkg 的源必须是 latest，否则会存在依赖上的问题（比如 ssl）。latest 源也比 main 分支下的 Ports 发布得更晚（其软件包由 main 构建而来），因此即使使用 latest 源，也可能会出现上述问题，总之有问题出现时就卸载那个 pkg 安装的包，重新使用 ports 编译即可。
+> Ports 和 pkg 可以同时使用，而且大部分人也是这么用的。但是要注意 Ports 和 pkg 应使用同一分支：如果 Ports 使用 main 分支，则 pkg 应使用 latest 源；如果 Ports 使用 quarterly 分支，则 pkg 使用 quarterly 源即可。分支不一致会导致依赖问题（比如 ssl）。latest 源也比 main 分支下的 Ports 发布得更晚（其软件包由 main 构建而来），因此即使使用 latest 源，也可能会出现上述问题，总之有问题出现时就卸载那个 pkg 安装的包，重新使用 ports 编译即可。
 
 > **警告**
 >
->需要对上面的“注意”进行补充说明的是：一旦使用 `make config` 修改了 Port 的默认构建参数（进行了自定义），那么如果仍然想保留该设置，后续的软件更新是不能通过 pkg 进行管理的，否则通过 pkg 安装的软件包会完全取代之前自定义的 Port（即 Port 开发者默认设定的构建参数将覆盖自定义的 Port 参数）。
+> 需要对上面的“注意”进行补充说明的是：一旦使用 `make config` 修改了 Port 的默认构建参数（进行了自定义），那么如果仍然想保留该设置，后续的软件更新是不能通过 pkg 进行管理的，否则通过 pkg 安装的软件包会完全取代之前自定义的 Port（即 Port 开发者默认设定的构建参数将覆盖自定义的 Port 参数）。
 
 了解了注意事项后，可以通过流程图直观地理解 Ports 构建 pkg 软件包的完整流程。
 
@@ -182,7 +182,7 @@ Makefile		pkg-plist-client	pkg-plist-plpython
 
 > **技巧**
 >
->Ports 的下载路径是 `/usr/ports/distfiles/`。
+> Ports 的下载路径是 `/usr/ports/distfiles/`。
 
 ```sh
 /usr/ports/
@@ -335,12 +335,7 @@ fatal: unable to access 'https://mirrors.ustc.edu.cn/freebsd-ports/ports.git/': 
 Fri May 31 12:09:26 UTC 2024
 ```
 
-时间错误。使用 `pool.ntp.org` 服务器同步系统时间：
-
-```sh
-# ntpdate -u pool.ntp.org
- 5 Oct 08:39:16 ntpdate[3276]: step time server 202.112.29.82 offset +10960053.088901 sec
-```
+时间错误。使用 `ntpd -q -g -p pool.ntp.org` 命令同步系统时间：
 
 检查时间：
 
@@ -448,7 +443,7 @@ Number of packages to be installed: 2
 
 94 KiB to be downloaded.
 
-Proceed with this action? [y/N]: 
+Proceed with this action? [y/N]:
 ```
 
 ## 如何删除当前 port 及其依赖的配置文件
@@ -589,7 +584,7 @@ kern.smp.cpus: 16
 或者查看系统可用的 CPU 核心数：
 
 ```sh
-# sysctl hw.ncpu 
+# sysctl hw.ncpu
 hw.ncpu: 16
 ```
 
@@ -629,7 +624,7 @@ ccache 是一个编译缓存工具，可以加速重复编译的过程。
 
 >**警告**
 >
->使用 ccache 可能会导致编译失败。它仅在重复编译时才有效，首次编译不仅不会加速，反而可能更慢，是一种以空间换时间的手段。
+> 使用 ccache 可能会导致编译失败。它仅在重复编译时才有效，首次编译不仅不会加速，反而可能更慢，是一种以空间换时间的手段。
 
 ### ccache3
 
@@ -811,7 +806,7 @@ Local storage:
 显示 ccache 的当前配置参数：
 
 ```sh
-# ccache -p 
+# ccache -p
 (default) absolute_paths_in_stderr = false
 (default) base_dir =
 (default) cache_dir = /root/.cache/ccache
@@ -822,7 +817,7 @@ Local storage:
 
 关于 ccache 的更多详细信息和使用方法，可以参考以下资料。
 
-- FreeBSD Project. ccache-howto-freebsd.txt.in[EB/OL]. [2026-03-25]. <https://github.com/freebsd/freebsd-ports/blob/main/devel/ccache/files/ccache-howto-freebsd.txt.in>.
+- FreeBSD Project. ccache-howto-freebsd.txt.in[EB/OL]. [2026-03-25]. <https://github.com/freebsd/freebsd-ports/blob/main/devel/ccache/files/ccache-howto-freebsd.txt.in>. FreeBSD Ports 中 ccache 的配置指南，说明如何在编译时启用缓存加速。
 - FreeBSD Project. ccache - a fast C/C++ compiler cache[EB/OL]. [2026-03-25]. <https://man.freebsd.org/cgi/man.cgi?query=ccache&sektion=1&n=1>.
 
 ## 多线程下载
@@ -835,7 +830,7 @@ axel 是一个轻量级的多线程下载工具，可以显著提高下载速度
 
 使用 pkg 安装：
 
-```sh  
+```sh
 # pkg install axel
 ```
 
@@ -882,7 +877,7 @@ wget2 参数说明：
 
 >**技巧**
 >
->很多服务器不支持较多线程同时下载。这会给服务器带来较大压力，也可能会触发服务器的反制措施，如将下载的 IP 加入黑名单。
+> 很多服务器不支持较多线程同时下载。这会给服务器带来较大压力，也可能会触发服务器的反制措施，如将下载的 IP 加入黑名单。
 
 ### 参考文献
 

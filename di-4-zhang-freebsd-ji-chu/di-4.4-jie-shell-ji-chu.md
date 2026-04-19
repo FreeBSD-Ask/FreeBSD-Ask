@@ -6,19 +6,19 @@
 
 Shell 是用户与操作系统内核进行交互的命令解释器（command interpreter），它接受用户输入的命令并将其传递给内核执行。用户的命令运行在 Shell 中，并通过 Shell 与系统进行交互。
 
-FreeBSD 系统默认采用的 Shell 是 sh，即 Bourne shell，其原始作者为 Stephen R. Bourne。当前 FreeBSD 中的 sh 实现已经过重写，在功能上基本符合 [POSIX.1-2024](https://pubs.opengroup.org/onlinepubs/9799919799/utilities/V3_chap02.html) 标准中关于 Shell 的规范要求。
+FreeBSD 系统默认采用的 Shell 是 sh。需要指出的是，FreeBSD 的 `/bin/sh` 并非 Stephen R. Bourne 在贝尔实验室为 Unix V7 编写的原始 Bourne shell，而是基于 Kenneth Almquist 于 1989 年发布的 Almquist Shell（ash），后者是作为 Bourne shell 的更紧凑、更高效的替代品而设计的。BSD 系列自 4.4BSD 起便采用 ash 衍生的 sh，在功能上基本符合 [POSIX.1-2024](https://pubs.opengroup.org/onlinepubs/9799919799/utilities/V3_chap02.html) 标准中关于 Shell 的规范要求。
 
-Linux 中常见的 Shell 一般是 bash（Bourne Again Shell，即“又一个 Bourne shell”）。而 macOS 中的默认 Shell 通常是 zsh（Z Shell）。
+Linux 中常见的 Shell 一般是 bash（Bourne Again Shell，是对“Born Again”即“重生”的双关，意为“重生的 Bourne shell”）。而 macOS 中的默认 Shell 通常是 zsh（Z Shell）。
 
 > **注意**
 >
-> Linux 中也存在 sh，但通常被软链接到 bash 或其他 Shell，它们并不是真正的 sh。
+> Linux 中也存在 sh，但通常被软链接到其他 Shell（如 Debian/Ubuntu 中链接到 dash，部分发行版链接到 bash），它们并不是真正的 sh。
 >
 >- Ubuntu 24.04 LTS 默认的 Shell：
 >
 >```bash
->lrwxrwxrwx 1 root root 4  2 月 25 23:19 /bin/sh -> dash
->$ ls -l /bin/sh # 以长格式查看 /bin/sh 这个文件的详细信息
+> lrwxrwxrwx 1 root root 4  2 月 25 23:19 /bin/sh -> dash
+> $ ls -l /bin/sh # 以长格式查看 /bin/sh 这个文件的详细信息
 >```
 
 ## 快捷键
@@ -122,8 +122,13 @@ round-trip min/avg/max/stddev = 27.465/27.596/27.701/0.085 ms
 - **Ctrl**+**A**：将光标移动到命令行首
 - **Ctrl**+**E**：将光标移动到命令行尾
 
+## 参考文献
+
+- Almquist K. ash (Almquist Shell)[EB/OL]. (1989-05-30)[2026-04-18]. <https://github.com/dsipher/ash>. FreeBSD 的 `/bin/sh` 基于 ash，而非 Stephen R. Bourne 的原始 Bourne shell。
+- Fox B, Ramey C. Bash Reference Manual[M]. Boston: Free Software Foundation, 2022. “Bourne Again Shell”是对“Born Again”的双关。
+
 ## 课后习题
 
 1. 在 FreeBSD 中编写一个简单的 sh 脚本，实现命令补全的最小示例脚本，测试其功能并记录结果。
-2. 查看 FreeBSD sh 源码中处理快捷键绑定的实现部分，使其更现代化。
+2. 查看 FreeBSD sh 源代码中处理快捷键绑定的实现部分，使其更现代化。
 3. 修改 FreeBSD 中 shell 的默认提示符配置，验证其行为变化。

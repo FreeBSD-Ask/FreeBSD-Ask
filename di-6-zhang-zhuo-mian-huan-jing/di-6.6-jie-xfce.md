@@ -2,7 +2,7 @@
 
 ## Xfce 桌面环境概述
 
-Xfce 项目旨在开发一款轻量级但功能完备的桌面环境。作为类 Unix 系统中广受欢迎的轻量级桌面环境之一，Xfce 以其资源占用率低、响应速度快而著称。
+Xfce 项目旨在开发一款轻量级但功能完备的桌面环境。作为类 UNIX 系统中广受欢迎的轻量级桌面环境之一，Xfce 以其资源占用率低、响应速度快而著称。
 
 Xfce 的 Logo 是一只 [老鼠 🐀](https://docs.xfce.org/faq#what_does_it_mean)。曾有用户反馈趣事，称因 Xfce 的默认壁纸是一只老鼠 🐀，导致自己的电脑屏幕被猫 🐈 抓坏（SanjaytheToilet. [joke] The default desktop startup screen causes damage to monitor![EB/OL]. (2015-08-04)[2026-04-04]. <https://bugzilla.xfce.org/show_bug.cgi?id=12117>.）。
 
@@ -24,7 +24,7 @@ Xfce 的 Logo 是一只 [老鼠 🐀](https://docs.xfce.org/faq#what_does_it_mea
 # cd /usr/ports/x11/lightdm/ && make install clean
 # cd /usr/ports/x11/lightdm-gtk-greeter/ && make install clean
 # cd /usr/ports/x11/lightdm-gtk-greeter-settings/ && make install clean
-# cd /usr/ports/devel/xdg-user-dirs/ && make install clean 
+# cd /usr/ports/devel/xdg-user-dirs/ && make install clean
 ```
 
 ### 软件包说明
@@ -48,7 +48,7 @@ Xfce 的 Logo 是一只 [老鼠 🐀](https://docs.xfce.org/faq#what_does_it_mea
 $ echo "/usr/local/etc/xdg/xfce4/xinitrc" > ~/.xinitrc
 ```
 
-将 Xfce 启动脚本写入 `~/.xsession` 文件，以便通过登录管理器启动 Xfce：
+将 Xfce 启动脚本写入 `~/.xsession` 文件，以便通过显示管理器启动 Xfce：
 
 ```sh
 $ echo "/usr/local/etc/xdg/xfce4/xinitrc" > ~/.xsession
@@ -123,9 +123,9 @@ FreeBSD 的 Xfce 邮箱客户端推荐使用 `mail/evolution` 软件，可搭配
 编辑 `~/.shrc` 文件，写入：
 
 ```sh
-if [ -t 1 ]; then       
+if [ -t 1 ]; then
   while :; do
-    printf '\033]0;%s\007' "$PWD"   
+    printf '\033]0;%s\007' "$PWD"
     printf '\n$ '
     if ! IFS= read -r cmd; then
       break
@@ -143,7 +143,7 @@ fi
 
 ```sh
 if ( $?TERM && $TERM =~ xterm* ) then
-    set host = `hostname`      
+    set host = `hostname`
     alias postcmd 'rehash; printf -- "\033]2;%s\007" "${user}@${host}: ${cwd}"
 endif
 ```
@@ -160,7 +160,7 @@ case xterm*:
 default:
     set prompt="%# "
     breaksw
-endsw 
+endsw
 ```
 
 ### bash
@@ -205,7 +205,7 @@ fi
 
 - Oracle Corporation. 6.1 动态设置标题不起作用[EB/OL]. Oracle Documentation, [2026-03-25]. <https://docs.oracle.com/cd/E19683-01/817-1951/6mhl8aiii/index.html>. bash 配置来自此处。
 - Wamphyre. BSD-XFCE[EB/OL]. GitHub, [2026-03-25]. <https://web.archive.org/web/20260121072214/https://github.com/Wamphyre/BSD-XFCE>. 配置参考集合。
-- Arch Linux 中文维基. Zsh[EB/OL]. [2026-03-25]. <https://wiki.archlinuxcn.org/wiki/Zsh>. Arch Linux 中文维基提供的 Zsh 配置详细教程，本文 Zsh 配置源自此。
+- Arch Linux 中文维基. Zsh[EB/OL]. [2026-03-25]. <https://wiki.archlinuxcn.org/wiki/Zsh>. Arch Linux 中文维基提供的 Zsh 配置详细教程，本节 Zsh 配置源自此。
 
 ## 故障排除与未竟事宜
 

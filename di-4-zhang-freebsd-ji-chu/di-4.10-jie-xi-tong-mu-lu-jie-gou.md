@@ -2,7 +2,7 @@
 
 ## 目录结构概览
 
-为了方便说明，仅列出三级目录和重要文件。这一目录结构遵循文件系统层次标准（Filesystem Hierarchy Standard, FHS）的基本设计理念：
+为便于说明，仅列出三级目录和重要文件。
 
 ```sh
 /
@@ -14,7 +14,7 @@
 │   ├── firmware pkg kmod 会安装至此，以及通过 fwget 下载的固件
 │   ├── loader.conf loader 配置文件
 │   ├── loader.conf.d loader 配置文件的子项
-│   ├── lua 启动加载器的 lua 脚本，包含启动时显示的 ASCII 艺术字（图）等，参见 loader_lua(8) 
+│   ├── lua 引导加载程序的 lua 脚本，包含启动时显示的 ASCII 艺术字（图）等，参见 loader_lua(8)
 │   ├── zfs 存放 ZFS 存储池（Zpool）的缓存文件
 │   │    └── zpool.cache，硬编码的磁盘驱动器路径，参见 zpool(8)
 │   ├── kernel 内核及内核模块
@@ -23,7 +23,7 @@
 │   ├── efi EFI 系统分区挂载至此
 │   ├── dtb 设备树 DTB 文件，x86 架构下应为空
 │   └── defaults 存放默认内核的默认引导配置文件
-│       └── loader.conf 详细的示例说明文件，参见 loader.conf(5) 
+│       └── loader.conf 详细的示例说明文件，参见 loader.conf(5)
 ├── media 媒体文件挂载点，如 U 盘，光盘
 ├── mnt 用作临时挂载点的空目录
 ├── tmp 通常在系统重启后仍会保留的临时文件
@@ -46,7 +46,7 @@
 │   ├── backups 用于存放系统的备份文件，如用户名和密钥、pkg 数据库。由 /etc/periodic/daily 下的 200、210 等文件生成
 │   ├── spool 存放等待处理的任务文件，如待打印机打印的文件
 │   ├── cron 存放 cron 定时任务相关文件，参见 cron(8)
-│   ├── crash 存放崩溃转储文件 
+│   ├── crash 存放崩溃转储文件
 │   ├── rwho 存储由 rwhod 收集的网络中其他计算机的用户登录信息，参见 rwhod(8)。默认为空
 │   ├── log 各种系统日志文件
 │   ├── unbound Unbound 服务器的相关文件
@@ -57,8 +57,8 @@
 ├── dev 存放设备文件和特殊文件，参见 devfs(5)
 │   ├── reroot reboot -r 使用
 │   ├── input 存放输入设备相关的设备文件
-│   ├── nvd0 NVMe 第一块固态硬盘
-│   ├── nvd0p1 第一块固态硬盘的第一个分区
+│   ├── nda0 NVMe 第一块固态硬盘
+│   ├── nda0p1 第一块固态硬盘的第一个分区
 │   ├── mmcsd0 第一张存储卡
 │   ├── dri 显卡字符设备节点，参见 drm(7)
 │   ├── drm 显卡节点，参见 drm(7)
@@ -108,7 +108,7 @@
 │   │    └── mailer.conf mailwrapper(8) 配置文件
 │   ├── kyua Kyua 测试框架的全局配置文件。参见 kyua(1)、kyua.conf(5)
 │   ├── unbound Unbound 配置文件
-│   ├── ntp NTP 相关，参见 ntp.conf(5)、ntpd(8) 
+│   ├── ntp NTP 相关，参见 ntp.conf(5)、ntpd(8)
 │   ├── mtree 用于系统的初始化和验证过程，可用于系统审计，参见 mtree(8)
 │   ├── bluetooth 蓝牙相关
 │   ├── authpf 用于认证网关用户的 shell 配置文件，参见 authpf(8)，默认为空
@@ -135,9 +135,9 @@
 │   ├── bin 用户实用程序
 │   ├── tests FreeBSD 测试套件，参见 tests(7)
 │   ├── libdata 杂项实用数据文件
-│   ├── src FreeBSD 源代码，参见 ports(7)
+│   ├── src FreeBSD 源代码，参见 src(1)
 │   ├── ports FreeBSD Ports
-│   │    └── distfiles 下载的源码包存放的地方
+│   │    └── distfiles 下载的源代码包存放的地方
 │   ├── lib 用户库文件
 │   └── sbin 用户系统管理实用程序
 ├── lib /bin、/sbin 的库文件
@@ -149,15 +149,20 @@
 ①：目录 `/var/empty` 加注了 schg 权限，即系统不可变标志。
 
 ```sh
-dr-xr-xr-x   2 root    wheel   schg,uarch  2 Feb 21 10:26 empty
+# ls -lod /var/empty
+dr-xr-xr-x   2 root    wheel   schg  2 Apr 13 12:38 /var/empty
 ```
+
+参数解释：在长格式（`-l`）输出中包含文件标志（`-o`），并且将目录视为普通文件列出而不递归（`-d`）。
 
 ### 参考文献
 
-- FreeBSD Project. hier(7)[EB/OL]. [2026-03-26]. <https://man.freebsd.org/cgi/man.cgi?query=hier&sektion=7&manpath=freebsd-release-ports>. 系统阐述 FreeBSD 文件系统层次结构
+- FreeBSD Project. hier(7)[EB/OL]. [2026-03-26]. <https://man.freebsd.org/cgi/man.cgi?query=hier&sektion=7&manpath=freebsd-release-ports>. 系统阐述 FreeBSD 文件系统层次结构。
+- FreeBSD Project. chflags(1)[EB/OL]. [2026-04-17]. <https://man.freebsd.org/cgi/man.cgi?query=chflags>.
+- FreeBSD Project. ls(1)[EB/OL]. [2026-04-17]. <https://man.freebsd.org/cgi/man.cgi?query=ls>.
 
 ## 课后习题
 
 1. 在 FreeBSD 中遍历整个目录树结构，并与 Ubuntu 最新 LTS 版本进行比较。
-2. 分析 FreeBSD 源码中有关文件结构的设计。
+2. 分析 FreeBSD 源代码中有关文件结构的设计。
 3. 修改 FreeBSD 中 `/tmp` 目录的默认权限配置，验证其行为变化。

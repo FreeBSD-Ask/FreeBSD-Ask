@@ -33,7 +33,7 @@ seatd 是一个 seat 管理守护进程，用于在非 systemd 环境下管理 W
 - 或通过 Ports 安装：
 
 ```sh
-# cd /usr/ports/sysutils/seatd/ 
+# cd /usr/ports/sysutils/seatd/
 # make install clean
 ```
 
@@ -56,7 +56,7 @@ seatd 是一个 seat 管理守护进程，用于在非 systemd 环境下管理 W
 # service sddm enable
 ```
 
-通过使用 SDDM 登录管理器启动 KDE，在登录界面选择“Wayland”会话。
+通过使用 SDDM 显示管理器启动 KDE，在登录界面选择“Wayland”会话。
 
 ### 方法 ②：通过脚本启动
 
@@ -95,7 +95,7 @@ $ sh ~/kde.sh
 
 > **技巧**
 >
-> 上图显示为“Intel UHD Graphics”而非“Iris Xe Graphics”，这是因为系统未启用某些硬件加速特性（与内存配置有关）~~无力购买第二根 DDR5 内存条~~。参见：Intel® Iris® Xe Graphics Shows As Intel® UHD Graphics in the Intel® Graphics Command Center and Device Manager[EB/OL]. [2026-03-26]. <https://www.intel.com/content/www/us/en/support/articles/000059744/graphics.html> （网站对应页面的中文翻译不正确）。
+> 上图显示为“Intel UHD Graphics”而非“Iris Xe Graphics”，这是因为系统未启用某些硬件加速特性（与内存配置有关）~~无力购买第二根 DDR5 内存条~~。参见：Intel® Iris® Xe Graphics Shows As Intel® UHD Graphics in the Intel® Graphics Command Center and Device Manager[EB/OL]. [2026-03-26]. <https://www.intel.com/content/www/us/en/support/articles/000059744/graphics.html>（网站对应页面的中文翻译不正确）。
 
 - 显示当前会话类型（如 X11 或 Wayland）
 

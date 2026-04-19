@@ -45,7 +45,7 @@ md0
 
 - 直接使用 DVD 设备（如通过虚拟机直接挂载的 ISO 镜像）：
 
-观察 ISO 映像的挂载情况：
+观察 ISO 镜像的挂载情况：
 
 ```sh
 # gpart show  # 显示系统中所有磁盘分区表信息
@@ -86,7 +86,7 @@ COPYRIGHT	etc		mnt		rescue		usr
 
 > **思考题**
 >
->请读者自行阅读源代码，分析如何解决该问题。
+> 请读者自行阅读源代码，分析如何解决该问题。
 
 ## 使用环境变量直接安装 DVD 软件
 
@@ -153,6 +153,7 @@ Proceed with this action? [y/N]:
 ## 参考文献
 
 - FreeBSD Forums. HOWTO: Install binary package without internet access[EB/OL]. [2026-03-25]. <https://forums.freebsd.org/threads/howto-install-binary-package-without-internet-acces.60723/>. 无网络环境下通过 DVD 安装二进制包的方法。
+- FreeBSD Project. pkg(8) -- package manager[EB/OL]. [2026-04-17]. <https://man.freebsd.org/cgi/man.cgi?query=pkg&sektion=8>. FreeBSD 包管理器手册页
 
 ## 课后习题
 

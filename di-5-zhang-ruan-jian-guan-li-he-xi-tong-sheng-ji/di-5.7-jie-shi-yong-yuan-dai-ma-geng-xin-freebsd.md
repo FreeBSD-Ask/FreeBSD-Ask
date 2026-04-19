@@ -8,7 +8,7 @@
 
 ## SVN 到 Git 的迁移
 
-FreeBSD 项目在 2021 年从 SVN 全面迁移到了 Git，即 <https://git.freebsd.org>。
+FreeBSD 项目在 2020 至 2021 年间从 SVN 迁移到了 Git，即 <https://git.freebsd.org>。其中 src 仓库于 2020 年底完成迁移，ports 仓库于 2021 年初完成迁移（参见 FreeBSD Foundation. 2021 in Review: Software Development[EB/OL]. [2026-04-16]. <https://freebsdfoundation.org/blog/2021-in-review-software-development/>。该博文回顾了 FreeBSD 2021 年的软件开发进展，包括 SVN 到 Git 的迁移完成情况）。
 
 这一版本控制系统的迁移标志着 FreeBSD 项目开发流程的现代化转型，因此获取源代码的方式也相应发生了变化，不再使用 SVN。
 
@@ -51,7 +51,7 @@ FreeBSD 项目在 2021 年从 SVN 全面迁移到了 Git，即 <https://git.free
 
 #### 拉取 CURRENT
 
-通过 FreeBSD 官方存储库拉取。克隆 FreeBSD 源码仓库到 `/usr/src`，使用浅克隆减少下载量：
+通过 FreeBSD 官方存储库拉取。克隆 FreeBSD 源代码仓库到 `/usr/src`，使用浅克隆减少下载量：
 
 ```sh
 $ git clone --depth 1 https://git.FreeBSD.org/src.git /usr/src
@@ -72,7 +72,7 @@ $ git clone --depth 1 https://github.com/freebsd/freebsd-src /usr/src
 
 #### 拉取某 RELEASE
 
-通过 FreeBSD 官方存储库拉取。克隆 FreeBSD 15.0 发布分支源码到 `/usr/src`，使用浅克隆并仅包含该分支：
+通过 FreeBSD 官方存储库拉取。克隆 FreeBSD 15.0 发布分支源代码到 `/usr/src`，使用浅克隆并仅包含该分支：
 
 ```sh
 $ git clone --branch releng/15.0 --single-branch --depth 1 https://git.freebsd.org/src.git /usr/src
@@ -81,7 +81,7 @@ $ git clone --branch releng/15.0 --single-branch --depth 1 https://git.freebsd.o
 - `--branch releng/15.0`：指定拉取分支（FreeBSD RELEASE 的版本）
 - `--single-branch`：仅克隆一个分支，除该已克隆的单一分支外不含任何其他引用（refs）。
 
-或者通过 GitHub 拉取。从 GitHub 克隆 FreeBSD 15.0 发布分支源码到 `/usr/src`，使用浅克隆并仅包含该分支：
+或者通过 GitHub 拉取。从 GitHub 克隆 FreeBSD 15.0 发布分支源代码到 `/usr/src`，使用浅克隆并仅包含该分支：
 
 ```sh
 $ git clone --branch releng/15.0 --single-branch --depth 1 https://github.com/freebsd/freebsd-src /usr/src
@@ -89,7 +89,7 @@ $ git clone --branch releng/15.0 --single-branch --depth 1 https://github.com/fr
 
 ### 参考文献
 
-- Warner Losh. Submitting GitHub Pull Requests to FreeBSD[EB/OL]. [2026-03-25]. <https://freebsdfoundation.org/our-work/journal/browser-based-edition/configuration-management-2/submitting-github-pull-requests-to-freebsd/>.
+- Warner Losh. Submitting GitHub Pull Requests to FreeBSD[EB/OL]. [2026-03-25]. <https://freebsdfoundation.org/our-work/journal/browser-based-edition/configuration-management-2/submitting-github-pull-requests-to-freebsd/>. 详解通过 GitHub 向 FreeBSD 提交拉取请求的工作流程与注意事项。
 
 ## 从压缩包获取源代码（方便但非最新）
 
@@ -98,17 +98,17 @@ $ git clone --branch releng/15.0 --single-branch --depth 1 https://github.com/fr
 以 FreeBSD 15.0-RELEASE 为例：
 
 ```sh
-# fetch https://download.freebsd.org/ftp/releases/amd64/15.0-RELEASE/src.txz  # 下载 FreeBSD 15.0-RELEASE 的源码压缩包
-# tar xvf src.txz -C /                                                    # 将源码解压到根目录
+# fetch https://download.freebsd.org/ftp/releases/amd64/15.0-RELEASE/src.txz  # 下载 FreeBSD 15.0-RELEASE 的源代码压缩包
+# tar xvf src.txz -C /                                                    # 将源代码解压到根目录
 ```
 
 > **为何要解压到 `/`？**
 >
->因为解压到 `/` 会将源代码解压到 `/usr/src`。如果将上面的路径改为 `/usr/src`，会将源代码解压到 `/usr/src/usr/src`。因为该压缩包是包含路径的。
+> 因为解压到 `/` 会将源代码解压到 `/usr/src`。如果将上面的路径改为 `/usr/src`，会将源代码解压到 `/usr/src/usr/src`。因为该压缩包是包含路径的。
 
 > **技巧**
 >
->如果速度慢可以切换到 <https://mirrors.ustc.edu.cn/freebsd/releases/amd64/15.0-RELEASE/src.txz>
+> 如果速度慢可以切换到 <https://mirrors.ustc.edu.cn/freebsd/releases/amd64/15.0-RELEASE/src.txz>
 
 ## 开始编译
 
@@ -118,8 +118,8 @@ $ git clone --branch releng/15.0 --single-branch --depth 1 https://github.com/fr
 # make -j4 kernel      # 编译并安装内核
 # reboot               # 重启以使用新内核
 # cd /usr/src          # 切回工作目录
-# etcupdate -p         # 进行必要的配置文件合并  
-# make installworld    # 安装世界 
+# etcupdate -p         # 进行必要的配置文件合并
+# make installworld    # 安装世界
 # etcupdate -B         # 合并更新
 # reboot               # 重启以完成更新流程
 ```
@@ -132,17 +132,17 @@ $ git clone --branch releng/15.0 --single-branch --depth 1 https://github.com/fr
 
 > **技巧**
 >
->与绝大多数现代 Linux 不同，[FreeBSD](https://github.com/freebsd/freebsd-src/tree/main/contrib/nvi)（OpenBSD）上的 `vi` 是 *[nvi](https://sites.google.com/a/bostic.com/keithbostic/keith-bostic?authuser=0)*（原版 **ex/vi** 的再实现），并不是指向任何 *vim* 的链接符号。基本上很少有人使用，也一般没有学习的必要，因此有必要更换为其他文本编辑器。
+> 与绝大多数现代 Linux 不同，[FreeBSD](https://github.com/freebsd/freebsd-src/tree/main/contrib/nvi)（OpenBSD）上的 `vi` 是 *[nvi](https://sites.google.com/a/bostic.com/keithbostic/keith-bostic?authuser=0)*（原版 **ex/vi** 的再实现），并不是指向任何 *vim* 的链接符号。基本上很少有人使用，也一般没有学习的必要，因此有必要更换为其他文本编辑器。
 >
 >```sh
->export EDITOR=/usr/bin/ee # 切换 vi 为 ee。针对 FreeBSD 14 之前的版本或 csh 使用：setenv EDITOR /usr/bin/ee
->export VISUAL=/usr/bin/ee # 切换 vi 为 ee。针对 FreeBSD 14 之前的版本或 csh 使用：setenv VISUAL /usr/bin/ee
+> export EDITOR=/usr/bin/ee # 切换 vi 为 ee。针对 FreeBSD 14 之前的版本或 csh 使用：setenv EDITOR /usr/bin/ee
+> export VISUAL=/usr/bin/ee # 切换 vi 为 ee。针对 FreeBSD 14 之前的版本或 csh 使用：setenv VISUAL /usr/bin/ee
 >```
 
 合并冲突。使用 `etcupdate` 执行备份模式，以便在更新配置文件前备份现有文件：
 
 ```sh
-# etcupdate -B     
+# etcupdate -B
 Conflicts remain from previous update, aborting.
 ```
 
@@ -153,7 +153,7 @@ Conflicts remain from previous update, aborting.
 Resolving conflict in '/etc/group':
 Select: (p) postpone, (df) diff-full, (e) edit,
         (h) help for more options: e # 输入 e 解决冲突
-# etcupdate -B 
+# etcupdate -B
 ```
 
 ## 故障排除与未竟事宜
@@ -167,7 +167,7 @@ Select: (p) postpone, (df) diff-full, (e) edit,
 可能是系统时间不正确导致的，使用 `pool.ntp.org` 服务器同步系统时间。
 
 ```sh
-# ntpdate -u pool.ntp.org  # 当时间相差较大时必须使用该命令，其他命令不会生效
+# ntpd -q -g -p pool.ntp.org # 当时间相差较大时必须使用该命令
 ```
 
 ## 参考文献
