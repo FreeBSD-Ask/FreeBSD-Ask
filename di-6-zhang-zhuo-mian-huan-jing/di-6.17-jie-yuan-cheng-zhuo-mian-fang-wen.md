@@ -723,7 +723,7 @@ $ anydesk
 ### 参考文献
 
 - FreshPorts. rustdesk-server Self hosted RustDesk server[EB/OL]. [2026-03-25]. <https://www.freshports.org/net/rustdesk-server/>. FreshPorts 提供的 RustDesk 中继服务器 port 详情与安装指南。
-- Safe Rabbit. 远程控制软件 RustDesk 自建服务器全平台部署及使用教程[EB/OL]. 博客园, (2024-02-20)[2026-03-25]. <https://www.cnblogs.com/safe-rabbit/p/18020812>. 博客园提供的 RustDesk 自建中继服务器全平台部署与使用详细教程。
+- Safe Rabbit. 远程控制软件 RustDesk 自建服务器全平台部署及使用教程[EB/OL]. (2024-02-20)[2026-03-25]. <https://www.cnblogs.com/safe-rabbit/p/18020812>. 博客园提供的 RustDesk 自建中继服务器全平台部署与使用详细教程。
 
 ## 课后习题
 
