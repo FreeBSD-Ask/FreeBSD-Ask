@@ -94,15 +94,15 @@ FreeBSD 基本系统几乎不包含任何与 BSD 协议不兼容的软件。
 
 ### 参考文献
 
-- MYSQLZOUQI. 浅析 Linux 初始化 init 系统，第 1 部分：sysvinit 第 2 部分：UpStart 第 3 部分：Systemd[EB/OL]. [2026-03-25]. <https://www.cnblogs.com/MYSQLZOUQI/p/5250336.html>. 是存档，原文已佚，系统介绍了各初始化系统
-- FreeBSD Project. init -- process control initialization[EB/OL]. [2026-03-25]. <https://man.freebsd.org/cgi/man.cgi?query=init>. FreeBSD init 手册页。BSD init 无 SysV 风格运行级别与 /etc/inittab，以及以用户进程身份运行 init 时的运行级别-信号对应关系
-- FreeBSD Project. ttys -- terminal initialization information[EB/OL]. [2026-04-17]. <https://man.freebsd.org/cgi/man.cgi?query=ttys&sektion=5>. 终端初始化配置文件手册页
-- Gentoo. Comparison of init systems[EB/OL]. [2026-03-25]. <https://wiki.gentoo.org/wiki/Comparison_of_init_systems>. 各大 init 对比图，为系统选型提供参考
-- FreeBSD Project. GPL Software in FreeBSD Base[EB/OL]. [2026-03-25]. <https://wiki.freebsd.org/GPLinBase>. FreeBSD 基本系统中的 GPL 软件，系统梳理了基本系统的许可证兼容性
-- FreeBSD Project. FreeBSD 14.0-RELEASE Release Notes[EB/OL]. [2026-04-18]. <https://www.freebsd.org/releases/14.0R/relnotes/>. “The default shell for the root user is now sh(1)”，FreeBSD 14 起默认 root shell 由 csh/tcsh 变更为 sh
-- FreeBSD Project. Ports Quarterly Branch[EB/OL]. [2026-04-18]. <https://wiki.freebsd.org/Ports/QuarterlyBranch>. “quarterly is the familiar name for ports branched from main”，main 分支即 latest 源、季度分支按 YYYYQn 命名
-- FreeBSD Core Team. Change to FreeBSD release scheduling and support period[EB/OL]. (2024-07-16)[2026-04-18]. <https://lists.freebsd.org/archives/freebsd-announce/2024-July/000143.html>. “the FreeBSD core team has approved reducing the stable branch support duration from 5 years to 4 years starting with FreeBSD 15”
-- FreeBSD Wiki. Desktop[EB/OL]. [2026-04-18]. <https://wiki.freebsd.org/Desktop>. “NetworkManager itself cannot be ported due to a monolithic architecture and extensive Linux syscall use”，NetworkManager 无法移植的真实原因
+- MYSQLZOUQI. 浅析 Linux 初始化 init 系统，第 1 部分：sysvinit 第 2 部分：UpStart 第 3 部分：Systemd[EB/OL]. [2026-03-25]. <https://www.cnblogs.com/MYSQLZOUQI/p/5250336.html>. 是存档，原文已佚，系统介绍了各初始化系统。
+- FreeBSD Project. init -- process control initialization[EB/OL]. [2026-03-25]. <https://man.freebsd.org/cgi/man.cgi?query=init>. FreeBSD init 手册页。BSD init 无 SysV 风格运行级别与 /etc/inittab，以及以用户进程身份运行 init 时的运行级别-信号对应关系。
+- FreeBSD Project. ttys -- terminal initialization information[EB/OL]. [2026-04-17]. <https://man.freebsd.org/cgi/man.cgi?query=ttys&sektion=5>. 终端初始化配置文件手册页。
+- Gentoo. Comparison of init systems[EB/OL]. [2026-03-25]. <https://wiki.gentoo.org/wiki/Comparison_of_init_systems>. 各大 init 对比图，为系统选型提供参考。
+- FreeBSD Project. GPL Software in FreeBSD Base[EB/OL]. [2026-03-25]. <https://wiki.freebsd.org/GPLinBase>. FreeBSD 基本系统中的 GPL 软件，系统梳理了基本系统的许可证兼容性。
+- FreeBSD Project. FreeBSD 14.0-RELEASE Release Notes[EB/OL]. [2026-04-18]. <https://www.freebsd.org/releases/14.0R/relnotes/>. “The default shell for the root user is now sh(1)”，FreeBSD 14 起默认 root shell 由 csh/tcsh 变更为 sh。
+- FreeBSD Project. Ports Quarterly Branch[EB/OL]. [2026-04-18]. <https://wiki.freebsd.org/Ports/QuarterlyBranch>. “quarterly is the familiar name for ports branched from main”，main 分支即 latest 源、季度分支按 YYYYQn 命名。
+- FreeBSD Core Team. Change to FreeBSD release scheduling and support period[EB/OL]. (2024-07-16)[2026-04-18]. <https://lists.freebsd.org/archives/freebsd-announce/2024-July/000143.html>. “the FreeBSD core team has approved reducing the stable branch support duration from 5 years to 4 years starting with FreeBSD 15”。
+- FreeBSD Wiki. Desktop[EB/OL]. [2026-04-18]. <https://wiki.freebsd.org/Desktop>. “NetworkManager itself cannot be ported due to a monolithic architecture and extensive Linux syscall use”，NetworkManager 无法移植的真实原因。
 
 ## 基本对比
 
