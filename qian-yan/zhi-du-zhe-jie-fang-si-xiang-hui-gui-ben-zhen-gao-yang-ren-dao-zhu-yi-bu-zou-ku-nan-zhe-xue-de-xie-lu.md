@@ -354,10 +354,10 @@ English
 ## 参考文献
 
 - 李征. 何积丰：以“积”累迎来“丰”收[EB/OL]. (2014-04-02)[2026-03-25]. <https://www.whb.cn/zhuzhan/kandian/20140402/5053.html>. 和年轻人一样，71 岁的何院士现在也在使用智能手机。该文介绍中国科学院院士何积丰的科研历程与育人理念。
-- GitHub用户ryanhanwu. 提问的智慧(How To Ask Questions The Smart Way)[EB/OL]. [2026-04-19]. <https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/main/README-zh_CN.md>. 原作者之一是大家熟悉的 Eric S. Raymond（《UNIX 编程艺术》作者，[OSI](https://opensource.org/) 开源促进会创始人）~~师出同门~~。该文档是开源社区经典的提问指南，倡导高效沟通方式。
+- RYANHANWU. 提问的智慧(How To Ask Questions The Smart Way)[EB/OL]. [2026-04-19]. <https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/main/README-zh_CN.md>. 原作者之一是大家熟悉的 Eric S. Raymond（《UNIX 编程艺术》作者，[OSI](https://opensource.org/) 开源促进会创始人）~~师出同门~~。该文档是开源社区经典的提问指南，倡导高效沟通方式。
 - SKINNER B F. New Methods and New Aims in Teaching[J]. New Scientist, 1964, 22(392): 483-484. <https://www.bfskinner.org/wp-content/uploads/2014/02/New-Methods-aims-in-Teach.pdf>. “教育就是当一个人把在学校所学全部忘光之后剩下的东西”这句话并非爱因斯坦所述。现在以讹传讹，人们获取的知识，真的是那么正确无误吗？Skinner 论述行为主义教育理论，澄清教育名言归属。
 - 谢延龙. 庄子“忘”的教育图景阐释[J]. 大学教育科学, 2022(1): 105-112. 该文从庄子哲学视角探讨“忘”在教育中的积极意义。
-- 卡斯 J P. 有限与无限的游戏: 一个哲学家眼中的竞技世界[M]. 马小悟, 余倩, 译. 北京: 电子工业出版社, 2019. ISBN 978-7-121-36425-9. 该书以游戏视角重新审视人类社会活动与文化现象。（无修改）
+- CARSE J P. 有限与无限的游戏: 一个哲学家眼中的竞技世界[M]. 马小悟, 余倩, 译. 北京: 电子工业出版社, 2019. ISBN 978-7-121-36425-9. 该书以游戏视角重新审视人类社会活动与文化现象。（无修改）
 - 尼采. 善恶的彼岸[M]. 赵千帆, 译. 北京:商务印书馆, 2015: 146. ISBN: 978-7-100-11749-4. “与恶龙缠斗过久，自身亦成为恶龙；凝视深渊过久，深渊将回以凝视”出自第 146 节（§146）
 - Sudo Project. Legacy Releases of sudo[EB/OL]. (n.d.)[2026-04-17]. <https://www.sudo.ws/releases/legacy/>. 记载 sudo 1.7.1 于 2009 年 4 月 19 日发布，首次引入 pwfeedback 选项。
 - Ferrari S.p.A. Great Ferrari Innovations: The F1 semi-automatic gearbox[EB/OL]. 2022-02-04[2026-04-17]. <https://www.ferrari.com/en-EN/magazine/articles/great-ferrari-innovations-the-f1-semi-automatic-gearbox>. 1989 年 Ferrari 640 赛车首次搭载半自动序列式变速箱（由 John Barnard 设计），终结了 F1 手动换挡时代。

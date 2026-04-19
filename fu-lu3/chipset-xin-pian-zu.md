@@ -3799,7 +3799,7 @@ Disabled（禁用）
 
 Peer Memory Write，PCIe Peer-to-Peer(PCIe P2P) DMA，PCIe 点对点 DMA。
 
-参见：Peer Memory Write Enable[EB/OL]. [2026-03-26]. <https://jasonyychiu.blogspot.com/2021/03/peer-memory-write-enable.html>
+参见：Peer Memory Write Enable[EB/OL]. [2026-03-26]. <https://jasonyychiu.blogspot.com/2021/03/peer-memory-write-enable.html>.
 
 P2P（点对点）通信可使 PCIe 设备之间无需经过内存，直接将数据传输给对方（例如 NVMe SSD ↔️ PCIe GPU），从而实现 PCIe 总线上不同设备之间的数据共享。
 
@@ -3827,7 +3827,7 @@ Platform-POR：时钟根据主板布局分配给 PCIe 接口或 LAN。
 
 禁用 clock1 会禁用 LAN 控制器，但不会禁用其根端口。
 
-参见：What is “clock0 assignment” and “ClkReq for clock0” BIOS options?[EB/OL]. [2026-03-26]. <https://winraid.level1techs.com/t/what-is-clock0-assignment-and-clkreq-for-clock0-bios-options/104666>
+参见：What is "clock0 assignment" and "ClkReq for clock0" BIOS options?[EB/OL]. [2026-03-26]. <https://winraid.level1techs.com/t/what-is-clock0-assignment-and-clkreq-for-clock0-bios-options/104666>.
 
 ##### ClkReq for Clock0（时钟 0 的时钟请求引脚）
 
@@ -3883,7 +3883,7 @@ IDE（Integrated Drive Electronics，集成驱动电子接口）
 
 并且该 RAID，一般称作 Fake-RAID/hardware-assisted software RAID，伪 RAID，不是真正的硬 RAID。这种情况下可能需要英特尔快速存储技术（RST）驱动才能正常使用。
 
-参见：Install Arch Linux with Fake RAID[EB/OL]. [2026-03-26]. <https://wiki.archlinuxcn.org/wiki/Install_Arch_Linux_with_Fake_RAID>
+参见：Install Arch Linux with Fake RAID[EB/OL]. [2026-03-26]. <https://wiki.archlinuxcn.org/wiki/Install_Arch_Linux_with_Fake_RAID>.
 
 #### SATA Test Mode(SATA 测试模式)
 
@@ -4019,7 +4019,7 @@ Disabled（禁用）
 
 设备睡眠是 SATA 标准的一部分，理论上所有 SATA 设备（无论固态硬盘还是机械硬盘）均应支持该功能。
 
-参见：什麼是 dev 睡眠功能以及如何禁用 dev 睡眠功能[EB/OL]. [2026-03-26]. <https://www.intel.com.tw/content/www/tw/zh/support/articles/000024170/memory-and-storage.html>
+参见：什麼是 dev 睡眠功能以及如何禁用 dev 睡眠功能[EB/OL]. [2026-03-26]. <https://www.intel.com.tw/content/www/tw/zh/support/articles/000024170/memory-and-storage.html>.
 
 #### DITO Configuration（驱动空闲超时配置）
 
@@ -4035,7 +4035,7 @@ DITO，Drive Idle Timeout（驱动空闲超时配置）。
 
 DITO 是指某个端口在硬件可以自动进入 DevSleep 状态之前必须保持空闲的时间。
 
-参见：AHCI 1.3.1 Device Sleep Technical Proposal[EB/OL]. [2026-03-26]. <https://www.intel.com/content/dam/www/public/us/en/documents/technical-specifications/serial-ata-ahci-tech-proposal-rev1_3_1.pdf>
+参见：AHCI 1.3.1 Device Sleep Technical Proposal[EB/OL]. [2026-03-26]. <https://www.intel.com/content/dam/www/public/us/en/documents/technical-specifications/serial-ata-ahci-tech-proposal-rev1_3_1.pdf>.
 
 #### DTIO Value（驱动空闲超时时间）
 
@@ -4073,7 +4073,7 @@ xDCI 控制器支持的最大链路速率为 USB 3.2 Gen 1x1（5 Gbps）。
 
 注意：这些控制器作为独立的 PCI 功能集成在处理器芯片内部，用于支持具备 USB-C\* 功能的端口。
 
-参见：12th Generation Intel® Core™ Processors[EB/OL]. [2026-03-26]. <https://edc.intel.com/content/www/tw/zh/design/ipla/software-development-platforms/client/platforms/alder-lake-desktop/12th-generation-intel-core-processors-datasheet-volume-1-of-2/011/extensible-device-controller-interface-xdci/>
+参见：12th Generation Intel® Core™ Processors[EB/OL]. [2026-03-26]. <https://edc.intel.com/content/www/tw/zh/design/ipla/software-development-platforms/client/platforms/alder-lake-desktop/12th-generation-intel-core-processors-datasheet-volume-1-of-2/011/extensible-device-controller-interface-xdci/>.
 
 #### USB2 PHY Sus Well Power Gating（USB 2.0 物理层的 Sus Well 电源门控）
 
@@ -4159,7 +4159,7 @@ Disabled（禁用）
 
 硬件卸载的音频处理允许在计算机的主 CPU 之外执行主要音频处理任务。简而言之，这是一项使用声卡进行的音频硬件加速功能。音频处理的大部分工作不再交由 CPU 来完成，而是由音频硬件进行处理。
 
-参见：Hardware-Offloaded 音频处理[EB/OL]. [2026-03-26]. <https://learn.microsoft.com/zh-cn/windows-hardware/drivers/audio/hardware-offloaded-audio-processing>
+参见：Hardware-Offloaded 音频处理[EB/OL]. [2026-03-26]. <https://learn.microsoft.com/zh-cn/windows-hardware/drivers/audio/hardware-offloaded-audio-processing>.
 
 #### Enable HSII on xHCI（对 xHCI 启用 HSII）
 
@@ -4175,7 +4175,7 @@ HSII, HS Interrupt IN Alarm
 
 启用/禁用 HSII 功能。启用该功能可能会导致功耗增加。
 
-其具体作用尚不明确。参见：TigerLake Intel® Firmware Support Package (FSP) Integration Guide[EB/OL]. [2026-03-26]. <https://raw.githubusercontent.com/intel/FSP/master/TigerLakeFspBinPkg/Docs/TigerLake_FSP_Integration_Guide.pdf>
+其具体作用尚不明确。参见：TigerLake Intel® Firmware Support Package (FSP) Integration Guide[EB/OL]. [2026-03-26]. <https://raw.githubusercontent.com/intel/FSP/master/TigerLakeFspBinPkg/Docs/TigerLake_FSP_Integration_Guide.pdf>.
 
 #### xHCI Compliance Mode（xHCI 合规模式）
 
@@ -4543,7 +4543,7 @@ THC，Touch Host Controller，触控主机控制器
 
 触控主机控制器（Touch Host Controller）是芯片组（PCH）中的一个 IP 模块，用于与触控设备（例如：触控屏、触控板等）进行通信。
 
-参见：Intel Touch Host Controller (THC)[EB/OL]. [2026-03-26]. <https://docs.kernel.org/hid/intel-thc-hid.html>
+参见：Intel Touch Host Controller (THC)[EB/OL]. [2026-03-26]. <https://docs.kernel.org/hid/intel-thc-hid.html>.
 
 ![触控主机控制器配置](../.gitbook/assets/image-20250729183212-xea4on7.png)
 
@@ -4681,7 +4681,7 @@ Disabled（禁用）
 
 启用后，将额外配置两个 GPIO 引脚，用作 UART 的 RTS/CTS 信号支持 UART 硬件流控。流控本身可以控制数据传输的进度，进而防止数据丢失。
 
-参见：什么是硬件流控制[EB/OL]. [2026-03-26]. <https://www.cnblogs.com/liyu925/p/4671911.html>
+参见：什么是硬件流控制[EB/OL]. [2026-03-26]. <https://www.cnblogs.com/liyu925/p/4671911.html>.
 
 ##### DMA Enable（启用 DMA）
 
@@ -4785,7 +4785,7 @@ Disabled（禁用）
 
 启用后，ACPI 将报告连接到串行 IO 的附加设备。
 
-启用该设置后，BIOS 会在操作系统启动之前将 LPSS（Serial IO）总线上的控制器（如 I²C、SPI、UART、GPIO 等）通过 ACPI 表（如 DSDT、SSDT）枚举并报告。这样操作系统在启动时能识别并管理这些设备。参见：ACPI Specification 概述 (基于 ACPI_Spec_6_4_Jan22)[EB/OL]. [2026-03-26]. <https://blog.csdn.net/anqi8955/article/details/120162679>
+启用该设置后，BIOS 会在操作系统启动之前将 LPSS（Serial IO）总线上的控制器（如 I²C、SPI、UART、GPIO 等）通过 ACPI 表（如 DSDT、SSDT）枚举并报告。这样操作系统在启动时能识别并管理这些设备。参见：ACPI Specification 概述 (基于 ACPI_Spec_6_4_Jan22)[EB/OL]. [2026-03-26]. <https://blog.csdn.net/anqi8955/article/details/120162679>.
 
 #### SerialIO timing parameters（串行 IO 时序参数）
 
@@ -4887,7 +4887,7 @@ Disabled（禁用）
 
 ISH，Integrated Sensor Hub，整合传感器中枢。ISH 内置于 PCH 中，且依赖 PCI 总线。
 
-参见：Intel Integrated Sensor Hub[EB/OL]. [2026-03-26]. <https://edc.intel.com/content/www/us/en/design/products/platforms/processor-and-core-i3-n-series-datasheet-volume-1-of-2/002/ish-micro-controller/>
+参见：Intel Integrated Sensor Hub[EB/OL]. [2026-03-26]. <https://edc.intel.com/content/www/us/en/design/products/platforms/processor-and-core-i3-n-series-datasheet-volume-1-of-2/002/ish-micro-controller/>.
 
 ISH（集成传感器 Hub）由一个微控制器驱动运行。
 
@@ -5225,7 +5225,7 @@ Disabled（禁用）
 
 VCC_AUX 为辅助电源轨，用于为 FPGA 内部的各种逻辑资源模块提供电源。
 
-参见：Cyclone® V SoC 设备中使用的 VCC_AUX 和 VCC_AUX_SHARED 电源轨是什么？[EB/OL]. [2026-03-26]. <https://www.intel.cn/content/www/cn/zh/support/programmable/articles/000086743.html>
+参见：Cyclone® V SoC 设备中使用的 VCC_AUX 和 VCC_AUX_SHARED 电源轨是什么？[EB/OL]. [2026-03-26]. <https://www.intel.cn/content/www/cn/zh/support/programmable/articles/000086743.html>.
 
 其具体作用尚不明确。
 
@@ -5237,7 +5237,7 @@ FIVR，Fully Integrated Voltage Regulator，全集成电压调节模块。
 
 PCH 上集成了 FIVR，包括 VNN、V1P05 等电压轨，这些电压由 VCCIN_Aux 提供电源。VCCIN_Aux 还为 CPU 内的 VCCSA 电压轨供电。除了 VCCSA 的 FIVR 外，计算芯片（compute die）还集成了另外 4 个 FIVR，分别为 VCCCORE、VCCSA、VCCL2、VCCGT 和 VCCRING 供电，这些电压均从平台上的 VCCIN VR 衍生而来。每个 FIVR 都能控制特定的电压轨。
 
-参见：Fully Integrated Voltage Regulator (FIVR)[EB/OL]. [2026-03-26]. <https://edc.intel.com/content/www/us/en/design/ipla/software-development-platforms/servers/platforms/intel-pentium-silver-and-intel-celeron-processors-datasheet-volume-1-of-2/fully-integrated-voltage-regulator-fivr/>
+参见：Fully Integrated Voltage Regulator (FIVR)[EB/OL]. [2026-03-26]. <https://edc.intel.com/content/www/us/en/design/ipla/software-development-platforms/servers/platforms/intel-pentium-silver-and-intel-celeron-processors-datasheet-volume-1-of-2/fully-integrated-voltage-regulator-fivr/>.
 
 ![全集成电压调节模块配置](../.gitbook/assets/image-20250730154029-f83b8pi.png)
 
@@ -5311,7 +5311,7 @@ Disabled（禁用）
 
 指定 VCCAUX 电源轨的电压。有关当前器件系列的详细信息，请参阅该器件的数据手册。
 
-参见：Altera® Quartus® Prime Standard Edition Settings File Reference Manual[EB/OL]. [2026-03-26]. <https://www.intel.com/content/www/us/en/docs/programmable/683084/current/vccaux-user-voltage.html>
+参见：Altera® Quartus® Prime Standard Edition Settings File Reference Manual[EB/OL]. [2026-03-26]. <https://www.intel.com/content/www/us/en/docs/programmable/683084/current/vccaux-user-voltage.html>.
 
 ##### Retention to Low Current Mode（Retention 从关闭状态到低功耗模式的时间）
 
@@ -5766,7 +5766,7 @@ False（禁用）
 
 说明：
 
-参见：What is SPD?[EB/OL]. [2026-03-26]. <https://www.lenovo.com/us/en/glossary/spd/>
+参见：What is SPD?[EB/OL]. [2026-03-26]. <https://www.lenovo.com/us/en/glossary/spd/>.
 
 BIOS 提示：出于安全考虑，必须设置 SPD 写保护位。
 
@@ -5802,7 +5802,7 @@ Disabled（禁用）
 
 eSPI，Enhanced Serial Peripheral Interface，增强型串行外设接口
 
-参见：增强型串行外设接口（eSPI）接口基本规格（适用于客户端和服务器平台）[EB/OL]. [2026-03-26]. <https://www.intel.cn/content/www/cn/zh/content-details/841685/enhanced-serial-peripheral-interface-espi-interface-base-specification-for-client-and-server-platforms.html>
+参见：增强型串行外设接口（eSPI）接口基本规格（适用于客户端和服务器平台）[EB/OL]. [2026-03-26]. <https://www.intel.cn/content/www/cn/zh/content-details/841685/enhanced-serial-peripheral-interface-espi-interface-base-specification-for-client-and-server-platforms.html>.
 
 ### OS IDLE Mode（系统待机状态）
 
@@ -5884,7 +5884,7 @@ Disabled（禁用）
 
 PSE，Programmable Service Engine，可编程服务引擎。
 
-参见：借助英特尔的首个物联网增强型平台，推动性能、集成和多功能性[EB/OL]. [2026-03-26]. <https://www.intel.cn/content/www/cn/zh/products/docs/processors/embedded/enhanced-for-iot-platform-brief.html>
+参见：借助英特尔的首个物联网增强型平台，推动性能、集成和多功能性[EB/OL]. [2026-03-26]. <https://www.intel.cn/content/www/cn/zh/products/docs/processors/embedded/enhanced-for-iot-platform-brief.html>.
 
 英特尔® 可编程服务引擎是专为物联网功能打造的卸载引擎，采用了 ARM Cortex-M7 微控制器。该引擎可为物联网应用程序提供独立的低 DMIPS 计算和低速输入输出，还能为实时计算和时间敏感型同步提供专门服务。
 
@@ -5932,7 +5932,7 @@ Disabled（禁用）
 
 说明：
 
-PSE Eclite 服务。嵌入式控制器替代方案。参见：Intel ISHTP eclite controller Driver[EB/OL]. [2026-03-26]. <https://www.kernelconfig.io/config_intel_ishtp_eclite>
+PSE Eclite 服务。嵌入式控制器替代方案。参见：Intel ISHTP eclite controller Driver[EB/OL]. [2026-03-26]. <https://www.kernelconfig.io/config_intel_ishtp_eclite>.
 
 用于访问 PSE（可编程服务引擎）——一种类似嵌入式控制器的 IP，通过 ISHTP（集成传感器集线器传输协议）从平台获取电池、温度和 UCSI（USB Type-C 连接器系统软件接口）相关数据。
 

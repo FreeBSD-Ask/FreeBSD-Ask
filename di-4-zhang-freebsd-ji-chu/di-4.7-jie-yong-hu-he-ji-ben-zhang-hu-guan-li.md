@@ -269,7 +269,7 @@ test5:*:1202:test1
 
 ## 参考文献
 
-- FreeBSD Project. pw(8)[EB/OL]. [2026-03-26]. <https://man.freebsd.org/cgi/man.cgi?pw>. man 页，介绍了用户和组管理命令
+- FreeBSD Project. pw(8)[EB/OL]. [2026-03-26]. <https://man.freebsd.org/cgi/man.cgi?pw>. man 页，介绍了用户和组管理命令。
 
 ## 课后习题
 

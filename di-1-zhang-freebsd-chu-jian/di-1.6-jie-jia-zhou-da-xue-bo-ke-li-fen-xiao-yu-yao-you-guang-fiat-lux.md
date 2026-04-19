@@ -63,8 +63,8 @@ Fiat Lux!
 - University of California, Berkeley. History & discoveries[EB/OL]. [2026-04-18]. <https://www.berkeley.edu/about/history/>. 加州大学伯克利分校官方校史，1868 年建校。
 - University of California. Tuition & financial aid[EB/OL]. [2026-04-18]. <https://admission.universityofcalifornia.edu/tuition-financial-aid/>. 加州大学系统官方学费与资助信息，54% 加州籍本科生免学费。
 - University of California, Berkeley. Cost[EB/OL]. [2026-04-18]. <https://admissions.berkeley.edu/cost/>. 伯克利分校官方招生页面，38% 本科生无需自付学费。
-- Patterson D A, Gibson G, Katz R H. A Case for Redundant Arrays of Inexpensive Disks (RAID)[R]. Berkeley: University of California, EECS Department, 1987. CSD-87-391. 加州大学伯克利分校技术报告，首次提出 RAID 概念。
-- Asanović K, Waterman A, Lee Y. RISC-V ISA[EB/OL]. RISC-V International, [2026-04-18]. <https://riscv.org/about/>. RISC-V 指令集架构始于 2010 年加州大学伯克利分校 Par Lab 项目。
+- PATTERSON D A, GIBSON G, KATZ R H. A Case for Redundant Arrays of Inexpensive Disks (RAID)[R]. Berkeley: University of California, EECS Department, 1987. CSD-87-391. 加州大学伯克利分校技术报告，首次提出 RAID 概念。
+- ASANOVIĆ K, WATERMAN A, LEE Y. RISC-V ISA[EB/OL]. RISC-V International, [2026-04-18]. <https://riscv.org/about/>. RISC-V 指令集架构始于 2010 年加州大学伯克利分校 Par Lab 项目。
 - 北京大学. 北京大学简介[EB/OL]. [2026-04-18]. <https://www.pku.edu.cn/about.html>. 北京大学官方页面，1898 年建校，初名京师大学堂。
 
 ## 课后习题
