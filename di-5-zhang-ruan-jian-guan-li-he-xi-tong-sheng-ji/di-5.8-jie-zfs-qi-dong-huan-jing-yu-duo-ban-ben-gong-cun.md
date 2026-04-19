@@ -622,8 +622,8 @@ https://mirrors.163.com/freebsd-pkg/
 - vermaden. ZFS Boot Environments Explained[EB/OL]. [2026-03-25]. <https://vermaden.wordpress.com/2025/11/25/zfs-boot-environments-explained/>. 详细阐释 ZFS 启动环境的原理与实践，包含跨版本 ZFS 池兼容方案。
 - FreeBSD Project. BootEnvironments[EB/OL]. [2026-03-25]. <https://wiki.freebsd.org/BootEnvironments>. FreeBSD 官方关于启动环境的 Wiki。
 - FreeBSD Project. bectl(8)[EB/OL]. [2026-03-25]. <https://man.freebsd.org/cgi/man.cgi?bectl>. ZFS 启动环境管理工具的官方技术规范。
-- FreeBSD Project. freebsd-version -- print the version and patch level of the installed FreeBSD[EB/OL]. [2026-04-17]. <https://man.freebsd.org/cgi/man.cgi?query=freebsd-version&sektion=1>. 系统版本查询命令手册页
-- FreeBSD Project. uname -- print operating system name[EB/OL]. [2026-04-17]. <https://man.freebsd.org/cgi/man.cgi?query=uname&sektion=1>. 系统信息查询命令手册页
+- FreeBSD Project. freebsd-version -- print the version and patch level of the installed FreeBSD[EB/OL]. [2026-04-17]. <https://man.freebsd.org/cgi/man.cgi?query=freebsd-version&sektion=1>. 系统版本查询命令手册页。
+- FreeBSD Project. uname -- print operating system name[EB/OL]. [2026-04-17]. <https://man.freebsd.org/cgi/man.cgi?query=uname&sektion=1>. 系统信息查询命令手册页。
 
 ## 课后习题
 
