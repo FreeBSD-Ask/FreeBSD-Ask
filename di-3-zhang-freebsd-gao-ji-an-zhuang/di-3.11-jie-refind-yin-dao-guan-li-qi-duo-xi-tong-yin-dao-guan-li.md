@@ -24,15 +24,15 @@
 
 ```ini
 menuentry "FreeBSD" {
-	icon \EFI\refind\icons\os_freebsd.png 
+	icon \EFI\refind\icons\os_freebsd.png
 	volume "FreeBSD"
-	loader \EFI\freebsd\loader.efi 
+	loader \EFI\freebsd\loader.efi
 }
 
-menuentry "Windows 10" { 
+menuentry "Windows 10" {
 	icon \EFI\refind\icons\os_win.png
-	volume "Windows 10"  
-	loader \EFI\Microsoft\Boot\bootmgfw.efi 
+	volume "Windows 10"
+	loader \EFI\Microsoft\Boot\bootmgfw.efi
 }
 ```
 
@@ -43,7 +43,7 @@ EFI/
 ├── refind/
 │   ├── refind.conf        # rEFInd 主配置文件
 │   ├── refind.conf-sample # rEFInd 示例配置文件
-│   ├── refind_x64.efi     # rEFInd 64位启动文件
+│   ├── refind_x64.efi     # rEFInd 64 位启动文件
 │   ├── icons/
 │   │   ├── os_freebsd.png # FreeBSD 图标
 │   │   └── os_win.png    # Windows 图标
@@ -51,7 +51,7 @@ EFI/
 │       └── Matrix-rEFInd/
 │           └── theme.conf  # Matrix 主题配置
 ├── freebsd/
-│   └── loader.efi        # FreeBSD 启动加载器
+│   └── loader.efi        # FreeBSD 引导加载程序
 └── Microsoft/
     └── Boot/
         └── bootmgfw.efi   # Windows 启动管理器
@@ -59,7 +59,7 @@ EFI/
 
 使用 [DiskGenius](https://www.diskgenius.com/) 将处理后的 `refind` 文件夹复制到 EFI 系统分区（ESP）的 `EFI` 目录下。
 
-![复制 rEFInd 到 EFI 分区](../.gitbook/assets/shaung13.png)
+![复制 rEFInd 到 EFI 分区](../.gitbook/assets/shuang13.png)
 
 ## 添加启动项
 
@@ -73,7 +73,7 @@ EFI/
 
 在新窗口中点击“添加”，然后浏览并选中 `refind` 文件夹内的 `refind_x64.efi` 文件。
 
-![选择 rEFInd 启动文件](../.gitbook/assets/shaung16.png)
+![选择 rEFInd 启动文件](../.gitbook/assets/shuang16.png)
 
 将该启动项移动至列表顶部，设为第一启动项。保存设置并重启电脑以测试效果。
 
@@ -111,7 +111,11 @@ include themes/Matrix-rEFInd/theme.conf
 
 > **技巧**
 >
->如果在虚拟机（如 VMware、VirtualBox）中操作，由于其 UEFI 固件的屏幕分辨率限制，rEFInd 界面可能无法同时显示所有操作系统选项，需通过方向键切换查看，这与上图所示的效果可能不同。
+> 如果在虚拟机（如 VMware、VirtualBox）中操作，由于其 UEFI 固件的屏幕分辨率限制，rEFInd 界面可能无法同时显示所有操作系统选项，需通过方向键切换查看，这与上图所示的效果可能不同。
+
+## 参考文献
+
+- Smith R W. rEFInd Boot Manager[EB/OL]. [2026-04-17]. <https://www.rodsbooks.com/refind/>. rEFInd 官方网站，该引导管理器派生自 rEFIt 项目，用于管理 UEFI 环境下的多系统启动。
 
 ## 课后习题
 

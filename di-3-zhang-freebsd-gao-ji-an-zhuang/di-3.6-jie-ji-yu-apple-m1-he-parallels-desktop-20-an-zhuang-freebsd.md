@@ -6,7 +6,7 @@
 
 > **注意**
 >
-> 由于补丁 FreeBSD Project. acpi_ged: Handle events directly[EB/OL]. [2026-03-26]. <https://reviews.freebsd.org/D42158>. 未合入 FreeBSD 14，因此版本 14 无法安装，会在安装界面报错（参见 FreeBSD Forums. Virtualizing FreeBSD 14 CURRENT on macOS M2 via Parallels 19[EB/OL]. [2026-03-26]. <https://forums.freebsd.org/threads/virtualizing-freebsd-14-current-on-macos-m2-via-parallels-19.93266/>. ），故只能安装 15 及以上版本。
+> 由于补丁 FreeBSD Project. acpi_ged: Handle events directly[EB/OL]. [2026-03-26]. <https://reviews.freebsd.org/D42158>. 未合入 FreeBSD 14，因此版本 14 无法安装，会在安装界面报错（参见 FreeBSD Forums. Virtualizing FreeBSD 14 CURRENT on macOS M2 via Parallels 19[EB/OL]. [2026-03-26]. <https://forums.freebsd.org/threads/virtualizing-freebsd-14-current-on-macos-m2-via-parallels-19.93266/>.），故只能安装 15 及以上版本。
 
 ## 安装
 
@@ -81,14 +81,13 @@ ums_load="YES"
 若提示找不到软件包，可通过 Ports 编译安装虚拟机工具：
 
 ```sh
-# cd /usr/ports/emulators/parallels-tools/ 
+# cd /usr/ports/emulators/parallels-tools/
 # make install clean
 ```
 
 > **注意**
 >
->若通过 Ports 编译安装，需确保当前系统的源代码位于 `/usr/src` 目录下。
-
+> 若通过 Ports 编译安装，需确保当前系统的源代码位于 `/usr/src` 目录下。
 
 ### 参考文献
 

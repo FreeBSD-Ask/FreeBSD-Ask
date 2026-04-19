@@ -57,7 +57,7 @@ boot # 输入 boot 后回车即可继续启动
 
 > **技巧**
 >
->分区标识不一定是 `(hd0,msdos1)`，请以实际情况为准。注意不要误删过多内容导致无法辨识。
+> 分区标识不一定是 `(hd0,msdos1)`，请以实际情况为准。注意不要误删过多内容导致无法辨识。
 
 ![GRUB 命令行界面](../.gitbook/assets/2.png)
 
@@ -76,7 +76,7 @@ mfsBSD 和 mfsLinux 镜像的默认 `root` 密码均为 `mfsroot`。
 
 > **技巧**
 >
->建议在此处使用服务器的“快照”功能进行备份，以防后续操作失误导致重装，造成时间损失。
+> 建议在此处使用服务器的“快照”功能进行备份，以防后续操作失误导致重装，造成时间损失。
 
 ## 安装 FreeBSD
 
@@ -139,7 +139,7 @@ mfsBSD 和 mfsLinux 镜像的默认 `root` 密码均为 `mfsroot`。
 set iso=(hd0,gpt2)/bsd.iso          # 指定 ISO 文件路径
 loopback loop $iso                  # 将 ISO 文件挂载为 loop 设备
 set root=(loop)                     # 设置 GRUB 根目录为 loop 设备
-chainloader /boot/loader.efi        # 加载 EFI 启动加载程序
+chainloader /boot/loader.efi        # 加载 EFI 引导加载程序
 boot # 输入 boot 后回车即可继续启动
 ```
 
@@ -161,7 +161,7 @@ boot # 输入 boot 后回车即可继续启动
 
 > **警告**
 >
->GRUB2 自带的 `memdisk.mod` 模块并非 MEMDISK。必须安装 syslinux 包才能获得 MEMDISK 工具。
+> GRUB2 自带的 `memdisk.mod` 模块并非 MEMDISK。必须安装 syslinux 包才能获得 MEMDISK 工具。
 
 - 复制到 `/boot`
 

@@ -74,7 +74,7 @@ VirtualBox 提供多种网络配置方式，以下介绍两种常用的网络设
 >
 > VirtualBox 中的桥接模式可以使各方向的网络互通。
 
-桥接是最简单的实现主机与虚拟机互通的方法，虚拟机可以获得一个与宿主机在同一网段的 IP 地址。例如，若主机 IP 为 192.168.31.123，则虚拟机 IP 可能为 192.168.31.x。
+桥接是实现主机与虚拟机互通的简单方法，虚拟机可以获得一个与宿主机在同一网段的 IP 地址。例如，若主机 IP 为 192.168.31.123，则虚拟机 IP 可能为 192.168.31.x。
 
 ![桥接网络设置](../.gitbook/assets/VBbridge.png)
 
@@ -106,6 +106,8 @@ VirtualBox 提供多种网络配置方式，以下介绍两种常用的网络设
 
 ### 安装工具
 
+VirtualBox 增强工具可通过 pkg 或 Ports 两种方式安装。
+
 - 使用 pkg 安装：
 
 ```sh
@@ -120,6 +122,8 @@ VirtualBox 提供多种网络配置方式，以下介绍两种常用的网络设
 ```
 
 ## 查看安装说明
+
+安装完成后，可通过以下命令查看增强工具的配置说明。
 
 ```sh
 root@ykla:/home/ykla # pkg info -D virtualbox-ose-additions-72
@@ -174,6 +178,8 @@ You may ignore the yellow alert that encourages use of VMSVGA.
 > 请使用 UEFI，Xorg 可以自动识别驱动，**无需** 手动配置 `/usr/local/etc/X11/xorg.conf`（经测试，手动配置反而导致性能下降）。
 
 ## 服务管理
+
+安装增强工具后，需启用相关服务并设置开机自启。
 
 - 启用服务并开机自启：
 

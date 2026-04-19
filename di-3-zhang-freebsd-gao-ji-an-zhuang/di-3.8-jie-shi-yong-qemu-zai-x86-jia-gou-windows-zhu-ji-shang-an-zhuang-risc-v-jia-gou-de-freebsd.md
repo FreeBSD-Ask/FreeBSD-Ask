@@ -18,13 +18,15 @@ QEMU 下载地址：
 
 QEMU 安装完成后，需要下载 RISC-V 架构的 FreeBSD 磁盘镜像。
 
-RISC-V FreeBSD 磁盘镜像（以 FreeBSD 14.2 RELEASE 为例）：
+RISC-V FreeBSD 磁盘镜像（以 FreeBSD 14.2-RELEASE 为例）：
 
 <https://download.freebsd.org/releases/VM-IMAGES/14.2-RELEASE/riscv64/Latest/FreeBSD-14.2-RELEASE-riscv-riscv64-zfs.raw.xz>
 
 下载后解压缩备用。
 
 ## 相关文件结构
+
+安装完成后，相关文件分布在以下目录结构中。
 
 ```sh
 /usr/
@@ -37,7 +39,7 @@ RISC-V FreeBSD 磁盘镜像（以 FreeBSD 14.2 RELEASE 为例）：
         │               └── fw_jump.elf # OpenSBI 固件
         └── u-boot/
             └── u-boot-qemu-riscv64/
-                └── u-boot.bin # U-Boot 引导加载器
+                └── u-boot.bin # U-Boot 引导加载程序
 ```
 
 ## OpenSBI
@@ -46,7 +48,7 @@ RISC-V FreeBSD 磁盘镜像（以 FreeBSD 14.2 RELEASE 为例）：
 
 ### 安装 OpenSBI
 
-使用 pkg 安装
+使用 pkg 安装：
 
 ```sh
 # pkg install opensbi
@@ -55,7 +57,7 @@ RISC-V FreeBSD 磁盘镜像（以 FreeBSD 14.2 RELEASE 为例）：
 或者使用 Ports 安装：
 
 ```sh
-# cd /usr/ports/sysutils/opensbi/ 
+# cd /usr/ports/sysutils/opensbi/
 # make install clean
 ```
 
@@ -75,7 +77,7 @@ RISC-V FreeBSD 磁盘镜像（以 FreeBSD 14.2 RELEASE 为例）：
 
 ### 安装 U-Boot
 
-使用 pkg 安装
+使用 pkg 安装：
 
 ```sh
 # pkg install u-boot-qemu-riscv64
@@ -84,7 +86,7 @@ RISC-V FreeBSD 磁盘镜像（以 FreeBSD 14.2 RELEASE 为例）：
 或者使用 Ports 安装：
 
 ```sh
-# cd /usr/ports/sysutils/u-boot-qemu-riscv64/ 
+# cd /usr/ports/sysutils/u-boot-qemu-riscv64/
 # make install clean
 ```
 
@@ -93,7 +95,6 @@ RISC-V FreeBSD 磁盘镜像（以 FreeBSD 14.2 RELEASE 为例）：
 ```sh
 # /etc/periodic/weekly/310.locate # 刷新数据库
 # locate u-boot.bin
-root@ykla:/home/ykla # locate u-boot.bin
 /usr/local/share/u-boot/u-boot-qemu-riscv64/u-boot.bin
 ```
 
@@ -145,7 +146,7 @@ cd /d "C:\Program Files\qemu"
 先创建一个普通用户（注意加入 wheel 组）：
 
 ```sh
-# adduser 
+# adduser
 Username: ykla
 Full name:
 Uid (Leave empty for default):
@@ -206,7 +207,7 @@ ssh -p 8022 ykla@localhost
 ## 参考文献
 
 - zg. Create FreeBSD virtual machine using qemu. Run the VM using xhyve.[EB/OL]. [2026-03-26]. <https://gist.github.com/zg/38a3afa112ddf7de4912aafc249ec82f>. 提供了 QEMU 下 FreeBSD 虚拟机扩容的技术方法。
-- Nativus . 在 QEMU for Windows x64 上搭建 RISC-V 环境（Debian Linux）[EB/OL]. (2022-10-12)[2026-03-26]. <https://naiv.fun/Ops/83.html>. 提供了 RISC-V 环境搭建的概念解释与整体框架。
+- Nativus. 在 QEMU for Windows x64 上搭建 RISC-V 环境（Debian Linux）[EB/OL]. (2022-10-12)[2026-03-26]. <https://naiv.fun/Ops/83.html>. 提供了 RISC-V 环境搭建的概念解释与整体框架。
 - smist08. RISC-V Emulation Revisited[EB/OL]. (2023-04-28)[2026-03-26]. <https://smist08.wordpress.com/2023/04/28/risc-v-emulation-revisited>. 详细介绍了 QEMU 中 RISC-V 虚拟化的各种配置参数与实现细节。
 
 ## 课后习题

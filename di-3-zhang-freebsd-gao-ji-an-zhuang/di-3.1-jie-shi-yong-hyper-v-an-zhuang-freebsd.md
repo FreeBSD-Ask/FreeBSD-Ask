@@ -21,7 +21,7 @@ Gen 1 与 Gen 2 的区别如下表所示：
 
 > **注意**
 >
-> 使用 Gen 2 时请关闭安全启动，否则系统无法启动。具体操作步骤为：点击“设置”，选择“安全”，取消勾选“启用安全启动”。截至 2025 年 12 月 20 日，FreeBSD 尚不支持安全启动。
+> 使用 Gen 2 时请关闭安全启动，否则系统无法启动。具体操作步骤为：点击“设置”，选择“安全”，取消勾选“启用安全启动”。FreeBSD 自 14.0 起已支持 UEFI 安全启动，但其引导加载程序未经 Microsoft 签名，因此在 Hyper-V 默认的安全启动配置（使用“Microsoft UEFI 证书颁发机构”模板）下无法通过验证。
 
 | Hyper-V 代系 | FreeBSD 版本 | 鼠标 | 键盘 | 备注 |
 | ------------ | ------------ | ---- | ---- | ---- |
@@ -51,9 +51,9 @@ Gen 1 与 Gen 2 的区别如下表所示：
 右键单击 Windows 徽标，在弹出的菜单中选择“终端（管理员）”。启用 Hyper-V 需要使用 `Enable-WindowsOptionalFeature` 命令，该命令将启用 Windows 的 Hyper-V 可选功能组件，包括虚拟机管理程序、管理工具等核心模块。输入以下命令：
 
 ```powershell
-PS C:\Users\ykla> Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All 
+PS C:\Users\ykla> Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All
 是否立即重启计算机以完成此操作?
-[Y] Yes  [N] No  [?] 帮助 (默认值为“Y”): 
+[Y] Yes  [N] No  [?] 帮助 (默认值为“Y”):
 # 此处按回车键确认重启以完成 Hyper-V 的安装
 ```
 
@@ -107,7 +107,7 @@ PS C:\Users\ykla> Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-H
 
 ![Hyper-V](../.gitbook/assets/hp11.png)
 
-由于 FreeBSD 尚未支持安全启动，请务必关闭安全启动，否则将无法从安装介质启动安装程序。
+由于 FreeBSD 的引导加载程序未经 Microsoft 签名，在 Hyper-V 默认安全启动配置下无法通过验证，请务必关闭安全启动，否则将无法从安装介质启动安装程序。
 
 ![Hyper-V](../.gitbook/assets/hp12.png)
 
@@ -152,6 +152,7 @@ PS C:\Users\ykla> Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-H
 - 微软. 使用检查点将虚拟机恢复到以前的状态[EB/OL]. [2026-03-26]. <https://learn.microsoft.com/zh-cn/virtualization/hyper-v-on-windows/user-guide/checkpoints?source=recommendations&tabs=hyper-v-manager%2Cpowershell>. 介绍了 Hyper-V 检查点的创建与使用方法。
 - 微软. 在 Hyper-V 中在标准检查点与生产检查点之间进行选择[EB/OL]. [2026-03-26]. <https://learn.microsoft.com/zh-cn/windows-server/virtualization/hyper-v/manage/choose-between-standard-or-production-checkpoints-in-hyper-v>. 对比了标准检查点与生产检查点的差异与适用场景。
 - nanorkyo. FreeBSD13 を Hyper-V 環境 にインストールしてみた 所感[EB/OL]. [2026-03-26]. <https://qiita.com/nanorkyo/items/d33e1befd4eb9c004fcd>. 提供了 FreeBSD 在 Hyper-V 环境下的安装经验与技巧。
+- FreeBSD Foundation. FreeBSD UEFI Secure Boot[EB/OL]. [2026-04-17]. <https://freebsdfoundation.org/freebsd-uefi-secure-boot/>. FreeBSD 安全启动的技术说明，阐述了引导加载程序签名与 UEFI 固件验证的关系。
 
 ## 课后习题
 

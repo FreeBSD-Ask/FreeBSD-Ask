@@ -8,7 +8,7 @@
 
 ## 安装 FreeBSD 14.2-RELEASE
 
-首先按照以下步骤安装 FreeBSD 14.2 RELEASE 系统，本节未特别说明之处，均采用默认设置与参数，以确保系统的稳定性。
+首先按照以下步骤安装 FreeBSD 14.2-RELEASE 系统，本节未特别说明之处，均采用默认设置与参数，以确保系统的稳定性。
 
 ![FreeBSD 安装界面](../.gitbook/assets/shuang1.png)
 
@@ -41,7 +41,7 @@
      534528  436207616    3  freebsd-swap  (208G)
   436742144  192401408    4  freebsd-zfs  (92G)
   629143552       2008       - free -  (1.0M)
-  
+
 ```
 
 显示交换分区和交换文件的使用情况（单位为 MB/GB）：
@@ -94,7 +94,7 @@ Windows 安装完成后，需要为 FreeBSD 还原交换分区。分配了 208 G
 
 ![格式化交换分区](../.gitbook/assets/shuang10.png)
 
-![保存分区更改](../.gitbook/assets/shaung11.png)
+![保存分区更改](../.gitbook/assets/shuang11.png)
 
 回到 FreeBSD，查看磁盘分区情况：
 
