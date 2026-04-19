@@ -437,8 +437,8 @@ Node.js 的依赖存储在 `node_modules` 目录，而 Nix/NixOS 的所有包则
 - Gentoo. Benefits of Gentoo[EB/OL]. [2026-03-25]. <https://wiki.gentoo.org/wiki/Benefits_of_Gentoo>. 阐述 Gentoo 源码编译模式在灵活性与性能优化方面的优势。
 - Gentoo. The philosophy of Gentoo[EB/OL]. [2026-03-25]. <https://www.gentoo.org/get-started/philosophy/>. 介绍 Gentoo 以用户选择自由和编译定制为核心的设计理念。
 - Arch Linux. Arch compared to other distributions[EB/OL]. [2026-03-25]. <https://wiki.archlinux.org/title/Arch_compared_to_other_distributions>. 对比 Arch Linux 与其他发行版在包管理和滚动更新策略上的差异。
-- STROUSTRUP B. C++ 语言的设计和演化[M]. 裘宗燕, 译. 北京:人民邮电出版社, 2020. ISBN: 978-7-115-49711-6. 由 C++ 语言创始人详述该语言的设计决策与演进历程。
-- 统信安全应急响应中心. deepin-devicemanager命令注入漏洞安全公告（UTSA-2024-003941）[EB/OL]. [2026-04-04]. <https://src.uniontech.com/#/security_advisory_detail?utsa_id=UTSA-2024-003941>. 披露 deepin 设备管理器命令注入漏洞的技术细节与影响范围。
+- STROUSTRUP B. C++ 语言的设计和演化[M]. 裘宗燕,译. 北京:人民邮电出版社,2020. ISBN: 978-7-115-49711-6. 由 C++ 语言创始人详述该语言的设计决策与演进历程。
+- 统信安全应急响应中心. deepin-devicemanager命令注入漏洞安全公告(UTSA-2024-003941)[EB/OL]. [2026-04-04]. <https://src.uniontech.com/#/security_advisory_detail?utsa_id=UTSA-2024-003941>. 披露 deepin 设备管理器命令注入漏洞的技术细节与影响范围。
 - Fedora Project. Fedora Council Charter[EB/OL]. [2026-04-04]. <https://docs.fedoraproject.org/en-US/council/>. Fedora 项目完全由红帽控制。
 - Fedora Project. Fedora and Red Hat Enterprise Linux[EB/OL]. [2026-04-18]. <https://docs.fedoraproject.org/en-US/quick-docs/fedora-and-red-hat-enterprise-linux/>.“Fedora is a kind of 'upstream' of Red Hat Enterprise Linux”，Fedora 是 RHEL 的上游。
 - CentOS Project. CentOS Stream documentation[EB/OL]. [2026-04-18]. <https://docs-centos-org-b1e6ff.gitlab.io/stream-docs/>. 该文档阐述了 CentOS Stream 作为 RHEL 中游开发分支的定位。
