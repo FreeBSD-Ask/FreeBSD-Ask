@@ -570,7 +570,7 @@ Do you trust this certificate (yes/no)? # 输入 yes，按回车键
 
 #### 参考文献
 
-- Microsoft Corporation. 使用 RDP 连接到 Azure VM 时排查身份验证错误[EB/OL]. Microsoft Learn, [2026-03-25]. <https://learn.microsoft.com/zh-cn/troubleshoot/azure/virtual-machines/windows/cannot-connect-rdp-azure-vm>. Microsoft 官方文档提供的 RDP 网络级身份验证（NLA）配置方法与故障排除指南。
+- Microsoft Corporation. 使用 RDP 连接到 Azure VM 时排查身份验证错误[EB/OL]. [2026-03-25]. <https://learn.microsoft.com/zh-cn/troubleshoot/azure/virtual-machines/windows/cannot-connect-rdp-azure-vm>. Microsoft 官方文档提供的 RDP 网络级身份验证（NLA）配置方法与故障排除指南。
 
 ## AnyDesk
 
