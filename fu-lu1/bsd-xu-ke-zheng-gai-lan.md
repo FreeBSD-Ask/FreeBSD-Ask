@@ -175,8 +175,6 @@ THIS SOFTWARE IS PROVIDED BY COPYRIGHT HOLDER "AS IS" AND ANY EXPRESS OR IMPLIED
 
 - Open Source Initiative. OSI Approved Licenses[EB/OL]. [2026-04-17]. <https://opensource.org/licenses>. OSI 是开源软件许可证的官方认证机构，提供最权威的许可证审批与分类信息。
 
-- Open Source Initiative. OSI Approved Licenses[EB/OL]. [2026-04-17]. <https://opensource.org/licenses>. OSI 是开源软件许可证的官方认证机构，提供最权威的许可证审批与分类信息。此处是 OSI 认证的所有许可证。
-
 - Open Source Initiative. OSI Approved Licenses[EB/OL]. [2026-03-25]. <https://opensource.org/licenses?ls=BSD> 更多 BSD 许可证信息参见此处。
 
 - SPDX. SPDX License List[EB/OL]. [2026-03-25]. <https://spdx.org/licenses/>. SPDX 提供标准化的许可证标识列表。
