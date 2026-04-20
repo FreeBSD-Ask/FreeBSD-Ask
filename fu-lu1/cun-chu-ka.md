@@ -122,8 +122,6 @@ microSD 通常也称为 TF 卡（TF 是 SanDisk 最初的商品名 TransFlash，
 
 ## 参考文献
 
-- FreeBSD 中文社区. Raspberry Pi 树莓派中文文档[EB/OL]. [2026-03-25]. <https://rpicn.bsdcn.org>. 树莓派中文社区维护的文档站点，涵盖系统安装与外设配置等内容。
-- Heath N. Inside the Raspberry Pi: The story of the $35 computer that changed the world[EB/OL]. [2026-03-25]. <https://www.techrepublic.com/article/inside-the-raspberry-pi-the-story-of-the-35-computer-that-changed-the-world/>. 讲述树莓派从教育项目成长为全球畅销单板计算机的发展历程。
 - Kingston Technology. SD 卡和 microSD 卡类型指南[EB/OL]. [2026-03-25]. <https://www.kingston.com/cn/blog/personal-storage/microsd-sd-memory-card-guide>. 介绍各类 SD 卡的规格分类与适用场景。
 - Kingston Technology. SD 卡和 microSD 卡速度等级指南[EB/OL]. [2026-03-25]. <https://www.kingston.com/cn/blog/personal-storage/memory-card-speed-classes>. 解读速度等级标识的含义与选购参考。
 - Kingston Technology. 了解 SD 卡和 microSD 卡的命名惯例和标签[EB/OL]. [2026-03-25]. <https://www.kingston.com/cn/blog/personal-storage/microsd-sd-memory-card-naming-conventions>. 说明存储卡产品标签中各字段所代表的性能参数。
