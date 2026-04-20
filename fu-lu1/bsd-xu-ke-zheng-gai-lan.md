@@ -159,7 +159,7 @@ THIS SOFTWARE IS PROVIDED BY COPYRIGHT HOLDER "AS IS" AND ANY EXPRESS OR IMPLIED
 非官方译文：
 
 ```text
-版权所有 <年份> <所有者>. 保留所有权利.
+版权所有 <年份> <所有者>。保留所有权利。
 
 在满足以下条件的前提下，允许在源代码和二进制形式中重新分发和使用本软件，无论是否经过修改：
 
