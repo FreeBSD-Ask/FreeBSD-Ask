@@ -293,7 +293,7 @@
 * [FreeBSD 桌面发行版评述](fu-lu1/freebsd-zhuo-mian-fa-xing-ban-ping-shu.md)
 * [BSD 许可证概览](fu-lu1/bsd-xu-ke-zheng-gai-lan.md)
 * [Vim 开发环境配置](fu-lu1/vim-kai-fa-huan-jing-pei-zhi.md)
-* [microSD 卡参数简介](cun-chu-ka.md)
+* [microSD 卡参数简介](fu-lu1/cun-chu-ka.md)
 
 ## 附录 II UEFI/BIOS 注解（AMI BIOS）
 
