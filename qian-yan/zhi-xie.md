@@ -2,7 +2,7 @@
 
 ## 文献来源与基础架构
 
-本书初版架构基于 Smile_Zheng. 操作系统笔记[EB/OL]. 百度贴吧. [2026-04-04]. <https://tieba.baidu.com/p/7424071955>. 主要引用了防火墙章节、用户与权限章节。原笔记主要转引了《FreeBSD 技术内幕》（Tiemann B, Urban M. FreeBSD 技术内幕(FreeBSD Unleashed)[M]. 智慧东方工作室, 译. 北京: 机械工业出版社, 2002.），以及参考了 [🎀🌸 星不萌 🌸🎀](https://tieba.baidu.com/home/main?un=%E6%98%9F%E5%85%89Re) 的博客文章。
+本书初版架构基于 Smile_Zheng. 操作系统笔记[EB/OL]. 百度贴吧. [2026-04-04]. <https://tieba.baidu.com/p/7424071955>. 主要引用了防火墙章节、用户与权限章节。原笔记主要转引了《FreeBSD 技术内幕》（Tiemann B, Urban M. FreeBSD 技术内幕（FreeBSD Unleashed）[M]. 智慧东方工作室，译. 北京：机械工业出版社，2002.），以及参考了 [🎀🌸 星不萌 🌸🎀](https://tieba.baidu.com/home/main?un=%E6%98%9F%E5%85%89Re) 的博客文章。
 
 ## 致歉
 

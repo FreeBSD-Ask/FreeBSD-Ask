@@ -23,7 +23,7 @@
 - FreeBSD Project. Why you should use a BSD style license for your Open Source Project[EB/OL]. [2026-04-18]. <https://docs.freebsd.org/en/articles/bsdl-gpl/>. 该文记载了 BSD 许可证自 20 世纪 70 年代末起即以源代码自由分发的方式实践开源理念，早于 1985 年的 GNU Emacs 许可证和 1989 年的 GPL。
 - Red Hat. 什么是 Linux 容器？[EB/OL]. [2026-04-04]. <https://www.redhat.com/zh/topics/containers/whats-a-linux-container>. 介绍 Linux 容器的基本概念与技术原理。
 - Open Source Initiative. The Open Source Definition[EB/OL]. [2026-04-17]. <https://opensource.org/osd>. 虽然“开源”（Open Source）一词直到 1998 年才由 Christine Peterson 正式提出，但 BSD 许可证自 20 世纪 80 年代起便以源代码自由分发的方式实践了这一理念。
-- 克罗齐. 历史学的理论和历史[M]. 田时纲,译. 北京:中国社会科学出版社,2018. 提出一切真历史都是当代史的核心命题，探讨历史认识的当代性。
+- Croce B. 历史学的理论和历史[M]. 田时纲，译. 北京：中国社会科学出版社，2018. 提出一切真历史都是当代史的核心命题，探讨历史认识的当代性。
 
 ## FreeBSD 与 Linux 的不同之处
 
@@ -437,7 +437,7 @@ Node.js 的依赖存储在 `node_modules` 目录，而 Nix/NixOS 的所有包则
 - Gentoo. Benefits of Gentoo[EB/OL]. [2026-03-25]. <https://wiki.gentoo.org/wiki/Benefits_of_Gentoo>. 阐述 Gentoo 源码编译模式在灵活性与性能优化方面的优势。
 - Gentoo. The philosophy of Gentoo[EB/OL]. [2026-03-25]. <https://www.gentoo.org/get-started/philosophy/>. 介绍 Gentoo 以用户选择自由和编译定制为核心的设计理念。
 - Arch Linux. Arch compared to other distributions[EB/OL]. [2026-03-25]. <https://wiki.archlinux.org/title/Arch_compared_to_other_distributions>. 对比 Arch Linux 与其他发行版在包管理和滚动更新策略上的差异。
-- STROUSTRUP B. C++ 语言的设计和演化[M]. 裘宗燕,译. 北京:人民邮电出版社,2020. ISBN: 978-7-115-49711-6. 由 C++ 语言创始人详述该语言的设计决策与演进历程。
+- Stroustrup B. C++ 语言的设计和演化[M]. 裘宗燕，译. 北京：人民邮电出版社，2020. ISBN: 978-7-115-49711-6. 由 C++ 语言创始人详述该语言的设计决策与演进历程。
 - 统信安全应急响应中心. deepin-devicemanager命令注入漏洞安全公告(UTSA-2024-003941)[EB/OL]. [2026-04-04]. <https://src.uniontech.com/#/security_advisory_detail?utsa_id=UTSA-2024-003941>. 披露 deepin 设备管理器命令注入漏洞的技术细节与影响范围。
 - Fedora Project. Fedora Council Charter[EB/OL]. [2026-04-04]. <https://docs.fedoraproject.org/en-US/council/>. Fedora 项目完全由红帽控制。
 - Fedora Project. Fedora and Red Hat Enterprise Linux[EB/OL]. [2026-04-18]. <https://docs.fedoraproject.org/en-US/quick-docs/fedora-and-red-hat-enterprise-linux/>.“Fedora is a kind of 'upstream' of Red Hat Enterprise Linux”，Fedora 是 RHEL 的上游。

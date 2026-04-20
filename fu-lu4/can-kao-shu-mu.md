@@ -71,14 +71,14 @@
 
 该书阅读难度较高，属于高级技术专著范畴，需要具备一定的操作系统理论基础方能深入理解。
 
-主要作者 MCKUSICK M K 在其网站上提供多款 BSD 相关的录制课程，参见 MCKUSICK M K. BSD related courses[EB/OL]. [2026-03-26]. <https://www.mckusick.com/buylist.html>. 目前正在撰写推出第三版（由 No Starch Press 出版），相关信息可参见 MCKUSICK M K. The History of the BSD Daemon: BSDCan 2025[EB/OL]. [2026-04-18]. <https://www.bsdcan.org/2025/talks/daemon.pdf>. 这一信息对于追踪 FreeBSD 技术演进具有重要的文献价值。
+主要作者 McKusick M K 在其网站上提供多款 BSD 相关的录制课程，参见 McKusick M K. BSD related courses[EB/OL]. [2026-03-26]. <https://www.mckusick.com/buylist.html>. 目前正在撰写推出第三版（由 No Starch Press 出版），相关信息可参见 McKusick M K. The History of the BSD Daemon: BSDCan 2025[EB/OL]. [2026-04-18]. <https://www.bsdcan.org/2025/talks/daemon.pdf>. 这一信息对于追踪 FreeBSD 技术演进具有重要的文献价值。
 
 ### IPv6 网络堆栈
 
 以下书籍逐行讲解 FreeBSD IPv6 网络堆栈（KAME 项目）的设计与实现，是网络协议领域的深度技术专著，适合深入学习网络协议的读者进行系统性研读。
 
-- LI Q, JINMEI T, SHIMA K. IPv6 详解:卷 1,核心协议实现[M]. 陈涓,赵振平,译. 北京:人民邮电出版社,2009:846. ISBN: 978-7-115-18950-9(英文影印版本 ISBN: 978-7-115-19551-7). 详解 IPv6 核心协议实现，基于 FreeBSD KAME 项目代码分析。
-- LI Q, JINMEI T, SHIMA K. IPv6 详解:卷 2,高级协议实现[M]. 王嘉祯,等,译. 北京:人民邮电出版社,2009:869. ISBN: 978-7-115-20891-0(英文影印版本 ISBN: 978-7-115-19519-7). 详解 IPv6 高级协议与扩展机制，包含移动 IPv6 等关键技术。
+- Li Q, Jinmei T, Shima K. IPv6 详解：卷 1，核心协议实现[M]. 陈涓，赵振平，译. 北京：人民邮电出版社，2009：846. ISBN: 978-7-115-18950-9(英文影印版本 ISBN: 978-7-115-19551-7). 详解 IPv6 核心协议实现，基于 FreeBSD KAME 项目代码分析。
+- Li Q, Jinmei T, Shima K. IPv6 详解：卷 2，高级协议实现[M]. 王嘉祯，等，译. 北京：人民邮电出版社，2009：869. ISBN: 978-7-115-20891-0(英文影印版本 ISBN: 978-7-115-19519-7). 详解 IPv6 高级协议与扩展机制，包含移动 IPv6 等关键技术。
 
 ### ZFS
 
@@ -121,21 +121,21 @@
 | --------- | ---- | ----------- |
 | ![Absolute FreeBSD, 3rd Edition: The Complete Guide to FreeBSD](../.gitbook/assets/AbsoluteBSD.png) <br><br> ***Absolute FreeBSD, 3rd Edition: The Complete Guide to FreeBSD*** | Michael W. Lucas | 978-1-59327-892-2 <br><br> No Starch Press |
 
-*Absolute FreeBSD* 系列的前身 *Absolute BSD: The Ultimate Guide to FreeBSD*（ISBN 1-886411-74-3）初版于 2002 年，第二版起更名为 *Absolute FreeBSD*，第三版出版于 2018 年。该书作为 FreeBSD 入门综合指南，内容覆盖系统安装、配置管理、基本运维等主题。参见：LUCAS M W. Absolute BSD: The Ultimate Guide to FreeBSD[M]. San Francisco: No Starch Press, 2002. ISBN: 1-886411-74-3.
+*Absolute FreeBSD* 系列的前身 *Absolute BSD: The Ultimate Guide to FreeBSD*（ISBN 1-886411-74-3）初版于 2002 年，第二版起更名为 *Absolute FreeBSD*，第三版出版于 2018 年。该书作为 FreeBSD 入门综合指南，内容覆盖系统安装、配置管理、基本运维等主题。参见：Lucas M W. Absolute BSD：The Ultimate Guide to FreeBSD[M]. San Francisco：No Starch Press，2002. ISBN: 1-886411-74-3.
 
 ### 《莱昂氏 UNIX 源代码分析》
 
-LIONS J. 莱昂氏 UNIX 源代码分析[M]. 尤晋元,译. 北京:机械工业出版社,2000. ISBN: 978-7-111-08018-3. UNIX 早期教学核心文献，带注释的 UNIX v6 源代码汇编。
+Lions J. 莱昂氏 UNIX 源代码分析[M]. 尤晋元，译. 北京：机械工业出版社，2000. ISBN: 978-7-111-08018-3. UNIX 早期教学核心文献，带注释的 UNIX v6 源代码汇编。
 
-该书原作名为 *Lion's Commentary on UNIX with Source Code*，由 LIONS J 撰写，最初作为澳大利亚新南威尔士大学的课程讲义，是 UNIX 早期教学的核心文献。该书的中文翻译历程颇具历史意义，反映了中国开源社区对经典技术文献的重视（参见：中华读书报.“地下出版物” 浮出水面[EB/OL]. (2000-08-02)[2026-03-26]. <https://www.gmw.cn/01ds/2000-08/02/GB/2000%5E311%5E0%5EDS1418.htm>）。
+该书原作名为 *Lion's Commentary on UNIX with Source Code*，由 Lions J 撰写，最初作为澳大利亚新南威尔士大学的课程讲义，是 UNIX 早期教学的核心文献。该书的中文翻译历程颇具历史意义，反映了中国开源社区对经典技术文献的重视（参见：中华读书报. “地下出版物”浮出水面[N/OL]. (2000-08-02)[2026-03-26]. <https://www.gmw.cn/01ds/2000-08/02/GB/2000%5E311%5E0%5EDS1418.htm>）。
 
 从学术文献分类的角度看，该书更接近“带注释的源代码汇编”而非系统的理论分析，其价值在于提供 UNIX 早期实现的原始文本。它在 UNIX 教学史上具有重要地位，但随着技术演进，其直接技术参考价值已让位于历史研究价值，成为技术史研究的重要文献。
 
 ### 早期中文 FreeBSD 文献（2000 年代）
 
-- 王波. FreeBSD 使用大全[M]. 北京:机械工业出版社,1999. ISBN: 978-7-111-07482-3. 国内最早的 FreeBSD 中文入门书籍之一，出版于 1999 年。作者王波是早期 FreeBSD 中文社区的重要推动者。
-- 王波. FreeBSD 使用大全[M]. 第2版. 北京:机械工业出版社,2002. ISBN: 978-7-111-10286-1. FreeBSD 中文入门书籍修订版，技术内容更新并在台湾地区发行。
-- 冯宝坤,陈子鸿. FreeBSD 完全攻略[M]. 北京:中国物资出版社;北京:北京希望电子出版社,2004. ISBN: 978-7-5047-2160-0. 早期 FreeBSD 中文入门文献。
+- 王波. FreeBSD 使用大全[M]. 北京：机械工业出版社，1999. ISBN: 978-7-111-07482-3. 国内最早的 FreeBSD 中文入门书籍之一，出版于 1999 年。作者王波是早期 FreeBSD 中文社区的重要推动者。
+- 王波. FreeBSD 使用大全[M]. 第2版. 北京：机械工业出版社，2002. ISBN: 978-7-111-10286-1. FreeBSD 中文入门书籍修订版，技术内容更新并在台湾地区发行。
+- 冯宝坤，陈子鸿. FreeBSD 完全攻略[M]. 北京：中国物资出版社；北京：北京希望电子出版社，2004. ISBN: 978-7-5047-2160-0. 早期 FreeBSD 中文入门文献。
 
 这些书籍反映了二十一世纪初中文世界对 FreeBSD 操作系统的早期探索，具有历史研究价值。由于技术快速迭代，书中的具体技术内容可能已过时。
 

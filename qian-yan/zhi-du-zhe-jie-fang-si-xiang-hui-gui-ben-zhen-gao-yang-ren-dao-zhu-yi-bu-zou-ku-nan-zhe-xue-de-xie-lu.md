@@ -104,7 +104,7 @@
 >
 > > “撰写简洁的程序—不要耍小聪明”。
 > >
-> > ——Brian W. Kernighan, P. J. Plauger. 编程格调[M]. 北京:人民邮电出版社, 2015: 2. ISBN: 978-7-115-37952-8.
+> > ——Kernighan B W, Plauger P J. 编程格调[M]. 北京：人民邮电出版社，2015：2. ISBN: 978-7-115-37952-8.
 > >
 > 这称得上一种用户友好设计吗？人工智能编程有无必要遵守此种风格？请读者进行思考。
 
@@ -229,7 +229,7 @@
 >
 > Linus
 >
-> ——引自 Linus Torvalds. Re: SCO: "thread creation is about a thousand times faster than onnative[EB/OL]. (2000-08-25)[2026-04-04]. <https://lkml.org/lkml/2000/8/25/132>.
+> ——Torvalds L. Re: SCO: "thread creation is about a thousand times faster than onnative[EB/OL]. (2000-08-25)[2026-04-04]. <https://lkml.org/lkml/2000/8/25/132>.
 
 >**思考题**
 >
@@ -250,11 +250,11 @@
 
 > “提出一个问题往往比解决一个问题更重要。”
 >
-> ——爱因斯坦 A, 英费尔德 L. 物理学的进化[M]. 北京: 中信出版集团, 2019: 88. ISBN 978-7-5217-0141-8. 该书从相对论视角阐述科学哲学，强调问题意识的重要性。
+> ——爱因斯坦 A，英费尔德 L. 物理学的进化[M]. 北京：中信出版集团，2019：88. ISBN 978-7-5217-0141-8. 该书从相对论视角阐述科学哲学，强调问题意识的重要性。
 
 > “哲学家们只是用不同的方式解释世界，问题在于改变世界。”
 >
-> ——《关于费尔巴哈的提纲》第十一条，马克思 1845 年稿本（马克思, 恩格斯. 马克思恩格斯选集: 第 1 卷[M]. 北京: 人民出版社, 1995: 57.）
+> ——《关于费尔巴哈的提纲》第十一条，马克思 1845 年稿本（马克思，恩格斯. 马克思恩格斯选集：第 1 卷[M]. 北京：人民出版社，1995：57.）
 
 > 夫国者人之积也，人者心之器也，而国事者一人群心理之现象也。是故政治之隆污，系乎人心之振靡。吾心信其可行，则移山填海之难，终有成功之日；吾心信其不可行，则反掌折枝之易，亦无收效之期也。心之为用大矣哉！夫心也者，万事之本源也。满清之颠覆者，此心成之也；民国之建设者，此心败之也。夫革命党之心理，于成功之始，则被“知之非艰，行之惟艰”之说所奴，而视吾策为空言，遂放弃建设之责任。如是则以后之建设责任，非革命党所得而专也。迨夫民国成立之后，则建设之责任当为国民所共负矣，然七年以来，犹未睹建设事业之进行，而国事则日形纠纷，人民则日增痛苦。午夜思维，不胜痛心疾首！夫民国之建设事业，实不容一刻视为缓图者也。
 >
@@ -262,11 +262,11 @@
 >
 > ……予之所以不惮其烦，连篇累牍以求发明“行易知难”之理者，盖以此为救中国必由之道也。夫中国近代之积弱不振、奄奄待毙者，实为“知之非艰，行之惟艰”一说误之也。此说深中于学者之心理，由学者而传于群众，则以难为易，以易为难。遂使暮气畏难之中国，畏其所不当畏，而不畏其所当畏。由是易者则避而远之，而难者又趋而近之。始则欲求知而后行，及其知之不可得也，则惟有望洋兴叹，而放去一切而已。间有不屈不挠之士，费尽生平之力以求得一知者，而又以行之为尤难，则虽知之而仍不敢行之。如是不知固不欲行，而知之又不敢行，则天下事无可为者矣。此中国积弱衰败之原因也。夫畏难本无害也，正以有畏难之心，乃适足导人于节劳省事，以取效呈功。此为经济之原理，亦人生之利便也。惟有难易倒置，使欲趋避者无所适从，斯为害矣。
 >
-> ——孙中山. 建国方略[M]. 北京: 生活·读书·新知三联书店, 2014: 建国方略之一孙文学说——行易知难（心理建设）自序、第五章知行总论. ISBN 978-7-108-04074-9. 该书系统阐述“知难行易”学说，为中国现代化提供了理论依据。
+> ——孙中山. 建国方略[M]. 北京：生活·读书·新知三联书店，2014： 建国方略之一孙文学说——行易知难（心理建设）自序、第五章知行总论. ISBN 978-7-108-04074-9. 该书系统阐述“知难行易”学说，为中国现代化提供了理论依据。
 
 > 人们争论马克思理论的可信性，但对其影响毫无争议。历史上没有任何哲学家能宣称有如此大比例的、国际性的、有组织的积极追随者。然而，这个哲学家的光环和他的生活之间的差别是一个惊人的讽刺。卡尔·马克思的名字实际上成了革命的符号。然而，马克思很少把时间花在直接的街头政治运动上。相反，构成他生活的是在大英博物馆图书室里无休无止的研究和写作，他每天在那里的同一张书桌前从早上 9 点工作到晚上 7 点闭馆。他在家里继续这一天的工作达几个小时之久，直到精疲力竭，需要睡觉来结束这一天为止。讽刺的是，虽然他的思想塑造了 20 世纪的很大一部分，马克思却过着一种相对隐秘和孤独的生活。如果不是因为他的家庭和一小群密友与政治朋友陪伴，隐居在书籍和手稿世界中的他很难与中世纪僧侣区分开来。更讽刺的是，尽管他经常轻视文字和观念的力量（他称之为“哲学家头脑中的幻影”），他却表明了它们可以是多么可怕的武器。作为他理论的成果，政府被推翻，地图被改写，他的名字成了 20 世纪家喻户晓的词。
 >
-> ——劳黑德 W F. 哲学的历程[M]. 第 4 版. 北京: 中国轻工业出版社, 2017: 448. ISBN 978-7-5184-1260-0. 该书是西方哲学史入门教材，全面梳理了哲学思想发展脉络。
+> ——劳黑德 W F. 哲学的历程[M]. 第4版. 北京：中国轻工业出版社，2017：448. ISBN 978-7-5184-1260-0. 该书是西方哲学史入门教材，全面梳理了哲学思想发展脉络。
 
 >**思考题**
 >
@@ -338,7 +338,7 @@ English
 
 我们需要解决的从来不是“任意键在哪”“文件夹叫什么”“电脑如何关机”。而是解决“为何要按键”“为何不支持中文”“为何关机需多次操作”等问题。这才是真正的边界，或曰结构性限制。我们为何如此？计算机起初便是如此吗？不，那时更为麻烦。为何到了现在，不知晓、不理解这些反而成了部分人的“错误”？这种“权力”究竟由谁定义？
 
-若我们一开始便选择“从入门到跑路”，避免被此结构框住后又反遭指责，岂不快哉！中国社会科学院语言研究所词典编辑室 编. 现代汉语词典[M]. 第 7 版. 北京: 商务印书馆, 2016: 982. 对“跑路”的定义是“1. 走路；2. 逃跑，出逃。”从字面看，“跑路”未尝不是从预设的知识牢笼中挣脱？
+若我们一开始便选择“从入门到跑路”，避免被此结构框住后又反遭指责，岂不快哉！中国社会科学院语言研究所词典编辑室，编. 现代汉语词典[M]. 第7版. 北京：商务印书馆，2016：982. 对“跑路”的定义是“1. 走路；2. 逃跑，出逃。”从字面看，“跑路”未尝不是从预设的知识牢笼中挣脱？
 
 如今翻开当年的甲种本、乙种本，甚至在你正学习的那一刻，知识便已过时。例如，国际纯粹与应用化学联合会（IUPAC）对元素周期表的修订已持续数十年（自 1988 年起），但课本仍沿用主族、副族划分。实际上，对许多学科或专业而言，学生直至博士毕业，也不过刚刚叩开 20 世纪的大门。但他们似乎对一切都能指点一二，并直接中止与自认为无共识者的对话。笔者认为并无必要。有人来自大山，毕业后又回到大山；正如我们在城市化，而他国在逆城市化。这均属合理。问题在于，我们终将把这些注定过时的、被称为知识的东西完全抛弃。那时，是否会有人指责我们：“你为何连‘按任意键’都不懂？”而不愿简单地将空间留给乐于助人者，或只说一句“按回车键就行”。
 
@@ -355,17 +355,17 @@ English
 
 - 李征. 何积丰：以“积”累迎来“丰”收[EB/OL]. (2014-04-02)[2026-03-25]. <https://www.whb.cn/zhuzhan/kandian/20140402/5053.html>. 和年轻人一样，71 岁的何院士现在也在使用智能手机。该文介绍中国科学院院士何积丰的科研历程与育人理念。
 - RYANHANWU. 提问的智慧(How To Ask Questions The Smart Way)[EB/OL]. [2026-04-19]. <https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/main/README-zh_CN.md>. 原作者之一是大家熟悉的 Eric S. Raymond（《UNIX 编程艺术》作者，[OSI](https://opensource.org/) 开源促进会创始人）~~师出同门~~。该文档是开源社区经典的提问指南，倡导高效沟通方式。
-- SKINNER B F. New Methods and New Aims in Teaching[J]. New Scientist, 1964, 22(392): 483-484. <https://www.bfskinner.org/wp-content/uploads/2014/02/New-Methods-aims-in-Teach.pdf>. “教育就是当一个人把在学校所学全部忘光之后剩下的东西”这句话并非爱因斯坦所述。现在以讹传讹，人们获取的知识，真的是那么正确无误吗？Skinner 论述行为主义教育理论，澄清教育名言归属。
-- 谢延龙. 庄子“忘”的教育图景阐释[J]. 大学教育科学, 2022(1): 105-112. 该文从庄子哲学视角探讨“忘”在教育中的积极意义。
-- CARSE J P. 有限与无限的游戏: 一个哲学家眼中的竞技世界[M]. 马小悟, 余倩, 译. 北京: 电子工业出版社, 2019. ISBN 978-7-121-36425-9. 该书以游戏视角重新审视人类社会活动与文化现象。（无修改）
-- 尼采. 善恶的彼岸[M]. 赵千帆, 译. 北京:商务印书馆, 2015: 146. ISBN: 978-7-100-11749-4. “与恶龙缠斗过久，自身亦成为恶龙；凝视深渊过久，深渊将回以凝视”出自第 146 节（§146）
-- Sudo Project. Legacy Releases of sudo[EB/OL]. (n.d.)[2026-04-17]. <https://www.sudo.ws/releases/legacy/>. 记载 sudo 1.7.1 于 2009 年 4 月 19 日发布，首次引入 pwfeedback 选项。
-- Ferrari S.p.A. Great Ferrari Innovations: The F1 semi-automatic gearbox[EB/OL]. 2022-02-04[2026-04-17]. <https://www.ferrari.com/en-EN/magazine/articles/great-ferrari-innovations-the-f1-semi-automatic-gearbox>. 1989 年 Ferrari 640 赛车首次搭载半自动序列式变速箱（由 John Barnard 设计），终结了 F1 手动换挡时代。
-- Fédération Internationale de l’Automobile. Formula One technical regulations 1995[EB/OL]. 1995[2026-04-17]. <https://historicdb.fia.com/sites/default/files/regulations/1728484024/formula_one_techical_regulations_1995.pdf>. 技术规范。
-- Fédération Internationale de l’Automobile. Formula 1 technical regulations 2020[EB/OL]. 2020[2026-04-17]. <https://api.fia.com/sites/default/files/2021_formula_1_technical_regulations_-_iss_6_-_2020-10-30.pdf>. 技术规范。
-- Fédération Internationale de l'Automobile. FIA Formula Regional technical regulations 2024[EB/OL]. 2024[2026-04-17]. <https://api.fia.com/sites/default/files/2025_fia_formula_regional_technical_regulations_-_issue_2_-_2024.12.11.pdf>. 技术规范。
-- 金寿福 译注. 古埃及《亡灵书》[M]. 北京: 商务印书馆, 2020. 古埃及人来世信仰中，亡者在 Duat 与奥西里斯合而为一，并追随太阳神拉夜行冥界以期重生。
-- 北岛. 履历[M]. 北京:生活·读书·新知三联书店,2015:16. 北岛的《一切》。
+- Skinner B F. New Methods and New Aims in Teaching[J]. New Scientist，1964，22(392)：483-484. <https://www.bfskinner.org/wp-content/uploads/2014/02/New-Methods-aims-in-Teach.pdf>. “教育就是当一个人把在学校所学全部忘光之后剩下的东西”这句话并非爱因斯坦所述。现在以讹传讹，人们获取的知识，真的是那么正确无误吗？Skinner 论述行为主义教育理论，澄清教育名言归属。
+- 谢延龙. 庄子“忘”的教育图景阐释[J]. 大学教育科学，2022(1)：105-112. 该文从庄子哲学视角探讨“忘”在教育中的积极意义。
+- Carse J P. 有限与无限的游戏：一个哲学家眼中的竞技世界[M]. 马小悟，余倩，译. 北京：电子工业出版社，2019. ISBN 978-7-121-36425-9. 该书以游戏视角重新审视人类社会活动与文化现象。（无修改）
+- 尼采. 善恶的彼岸[M]. 赵千帆，译. 北京：商务印书馆，2015：146. ISBN: 978-7-100-11749-4. “与恶龙缠斗过久，自身亦成为恶龙；凝视深渊过久，深渊将回以凝视”出自第 146 节（§146）
+- Sudo Project. Legacy Releases of sudo[EB/OL]. [2026-04-17]. <https://www.sudo.ws/releases/legacy/>. 记载 sudo 1.7.1 于 2009 年 4 月 19 日发布，首次引入 pwfeedback 选项。
+- Ferrari S.p.A. Great Ferrari Innovations：The F1 semi-automatic gearbox[EB/OL]. (2022-02-04)[2026-04-17]. <https://www.ferrari.com/en-EN/magazine/articles/great-ferrari-innovations-the-f1-semi-automatic-gearbox>. 1989 年 Ferrari 640 赛车首次搭载半自动序列式变速箱（由 John Barnard 设计），终结了 F1 手动换挡时代。
+- Fédération Internationale de l'Automobile. Formula One technical regulations 1995[EB/OL]. (1995)[2026-04-17]. <https://historicdb.fia.com/sites/default/files/regulations/1728484024/formula_one_techical_regulations_1995.pdf>. 技术规范。
+- Fédération Internationale de l'Automobile. Formula 1 technical regulations 2020[EB/OL]. (2020)[2026-04-17]. <https://api.fia.com/sites/default/files/2021_formula_1_technical_regulations_-_iss_6_-_2020-10-30.pdf>. 技术规范。
+- Fédération Internationale de l'Automobile. FIA Formula Regional technical regulations 2024[EB/OL]. (2024)[2026-04-17]. <https://api.fia.com/sites/default/files/2025_fia_formula_regional_technical_regulations_-_issue_2_-_2024.12.11.pdf>. 技术规范。
+- 金寿福，译注. 古埃及《亡灵书》[M]. 北京：商务印书馆，2020. 古埃及人来世信仰中，亡者在 Duat 与奥西里斯合而为一，并追随太阳神拉夜行冥界以期重生。
+- 北岛. 履历[M]. 北京：生活·读书·新知三联书店，2015：16. 北岛的《一切》。
 - 中国奥林匹克委员会. 职业选手何时进入奥运会？[EB/OL]. (2004-08-05)[2026-04-18]. <https://www.olympic.cn/olympic/know/2004/0805/25385.html>. 回顾奥运会从业余原则向允许职业运动员参赛转变的历史过程。
 - International Olympic Committee. “Faster, Higher, Stronger – Together”: IOC Session approves historic change in Olympic motto [EB/OL]. (2021-07-20)[2026-04-19]. <https://www.olympics.com/ioc/news/-faster-higher-stronger-together-ioc-session-approves-historic-change-in-olympic-motto>. 2021 年 7 月 20 日国际奥委会第 138 次全会表决通过，在奥林匹克格言“更快、更高、更强”之后加入“更团结”（Together），系 108 年来首次修改格言。
-- IUPAC. New Notations in the Periodic Table[J]. Pure and Applied Chemistry, 1988, 60(3): 431-436. <https://www.iupac.org/publications/pac/1988/pdf/6003x0431.pdf>. IUPAC 于 1988 年发布元素周期表新族编号体系，此后持续修订周期表（包括 1997 年超锕元素命名、2016 年确认第 113、115、117、118 号元素等）。
+- IUPAC. New Notations in the Periodic Table[J]. Pure and Applied Chemistry，1988，60(3)：431-436. <https://www.iupac.org/publications/pac/1988/pdf/6003x0431.pdf>. IUPAC 于 1988 年发布元素周期表新族编号体系，此后持续修订周期表（包括 1997 年超锕元素命名、2016 年确认第 113、115、117、118 号元素等）。
