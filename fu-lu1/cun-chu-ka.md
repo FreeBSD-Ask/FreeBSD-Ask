@@ -1,116 +1,4 @@
-# 计算机系统结构
-
-## 总线、接口与协议概念辨析
-
-总线、接口与协议是现代计算机系统中实现数据传输的核心要素。三者共同构成计算机硬件之间的通信基础设施。正确理解它们之间的关系，有助于认识计算机的硬件架构和数据传输机制。
-
-M.2 是一种物理接口，其设计理念可视为 Mini PCIe 的后继者。该接口可直接连接物理引脚而无需额外芯片。
-
-根据 M.2 规范，M.2 接口最大支持 3.3V、3A（约 10W）。
-
----
-
-需要区分三个概念：物理接口、总线协议（或总线通道）以及通道（或协议）。
-
-上述概念可简化为两类。因为通道或协议等同于总线协议（或总线通道）与物理总线（例如 PCIe、RJ45、Type-C 等物理接口、连接器、连接线）之和。通道或协议是一个泛指术语：既可以指二者之和，也可以单独指其中之一。
-
-- 通道 ≈ 协议；
-- 物理总线 ≈ 物理接口；
-- **物理接口**：指实际的物理连接形式和传输介质，例如 M.2、USB Type-C 接口、SATA 接口、以太网线、USB 数据线等；
-- **总线协议（或总线通道）**：指用于数据传输的规则和标准，例如 PCIe 协议、USB 协议、SATA 协议、TCP/IP 协议；
-- **总线/通道**：总线/通道 = 物理总线/物理介质 + 总线协议/总线通道。
-
-> **注意**
->
-> **总线是指整个数据传输路径，是物理总线（即物理连接和传输介质）和总线协议（即数据传输的规则和标准）的组合。**
-
-> 例如，可以使用以太网线缆传输 HDMI 数字信号。这展示了物理总线的可复用性。
->
-> 使用以太网线来延长 HDMI 信号，其传输的物理介质是以太网线，接头是 RJ45。
->
-> 从设计上讲，以太网线通常使用以太网协议传输数据，物理介质是以太网线，接头是 RJ45。然而，该产品的存在表明，物理总线可以承载不同的信号类型。以太网线作为物理介质，既可以用于传输以太网协议下的 TCP/IP 数据，也可以通过不同的信号编码和转换器传输 HDMI 的数据。
->
-> 并且该产品在实际传输 HDMI 数据时，并未使用以太网协议，而是采用 HDMI 协议下的信号编码方式（TMDS）进行传输。
-
-
-物理接口在理论上决定了其承载上限和电气性能。例如可承受的电压、电流和功率、IP 等级，以及尺寸规格（如具体的长宽尺寸）。常见的物理接口包括 M.2、U.2、SATA、USB（包括 Type-C）、HDMI、DP 和 RJ45。
-
-在大多数情况下，讨论的是物理接口。但严格来说，将物理接口与其所承载的协议混为一谈是不准确的。因为在理论上，任何物理接口都可以通过适配器进行相互转换。
-
-USB Type-C 接口可以支持 USB 2.0、USB 3.x、DisplayPort、HDMI、Thunderbolt 和 USB Power Delivery 等多种协议。因此，M.2 接口在理论上既可以连接 NVMe 硬盘，也可以连接 SATA 硬盘，还可以连接显卡、声卡以及主板上的 PCIe 设备，而无需任何驱动，但可能需要额外的 12 V 电源供应。
-
-总线协议（本节将直接连接到 CPU 的通道称为总线，而总线在本质上也是一种通道）。现代 x86 计算机中，CPU 直接提供的通道主要有 **PCIe** 和 **DMI**（Direct Media Interface，直接媒体接口）。
-
-例如，现代消费级英特尔处理器直接提供 PCIe 通道和 DMI 互连，而 USB 和 SATA 等总线则由芯片组（PCH）通过 DMI 转接提供。
-
-SATA 协议或 SATA 硬盘性能较低，主要是由协议设计所限制的，与 SATA 这一物理接口本身关系不大。SATA-IO 组织已基本停止对 SATA 协议的性能演进，其倾向于引导用户转向 PCIe 硬盘，或通过桥接方式将 SATA 设备连接到 PCIe 总线上。目前已有通过桥接方式在 PCIe 总线上使用 SATA 设备的实现方案。
-
-由于直接连接到 CPU 的通道被称为总线，因此其他通道通常被称为普通协议或普通通道。对于现代处理器而言，PCIe 和 DMI 是直接连接到 CPU 的总线，而 USB、SATA 等则由芯片组（PCH）提供，通过 DMI 与 CPU 通信。大多数其他设备（如网卡、显卡、声卡和摄像头）通常连接到 PCIe 接口。
-
-这些设备连接到了 PCIe 总线，但并非所有设备都直接连接到 CPU（通常是通过主板上的 DMI 通道转接的）。
-
-下面介绍 2008 年以前大多数 x86 计算机（即 Core 2 及更早时代）的典型架构：
-
-- CPU→前端总线 FSB→北桥→IHA/DMI→南桥→PCI/PCIe→其他设备。
-
-> IHA（Intel Hub Architecture）是 Intel 自 1999 年起采用的南北桥互连架构，取代了更早期的 PCI 互连。2008 年后演进为 DMI。
-
-但在 PCIe 和新一代酷睿处理器大规模应用之后，北桥芯片逐渐从主板上消失。曾经的北桥负责高速设备（如内存、集显），南桥负责低速设备（如网卡、声卡、摄像头等）。南桥与北桥之间的互连经历了从 PCI（1999 年以前）到 Intel Hub Interface/IHA（1999-2008 年）再到 DMI（2008 年至今）的演进。
-
-> 以前的 PS/2 鼠标、PS/2 键盘并非直连 CPU（北桥），而是通过 Super I/O 芯片（或 8042 键盘控制器）连接到南桥的 LPC 总线上，再经 Hub Interface/DMI 到达北桥。PS/2 的低延迟优势来自其中断机制（IRQ 1/IRQ 12），而非物理直连。
->
-> 但是现在仍然有直连 CPU 的 USB 总线，一样可以接入键盘和鼠标。因此，用是否直连 CPU 来论证 PS/2 接口的优越性是缺乏依据的。
-
-在现代 x86 处理器中，主板上已不再独立存在北桥芯片。但其功能被集成进 CPU 内部，并由相关逻辑单元负责处理。同时 PCIe 总线也从 CPU 中引出。
-
-直连到 CPU 的 PCIe，本质上就是之前直连北桥的 PCI。现代 CPU 通过引脚连接到主板。CPU 与芯片组之间的互连在英特尔平台上称为 DMI（Direct Media Interface，直接媒体接口），而在 AMD 平台上则采用 PCIe 互连。DMI 3.0x4 相当于 PCIe 3.0x4。
-
-主板上的设备要么直连到 CPU，要么通过主板上的 DMI 总线转接到 CPU。
-
-由于北桥已经集成到 CPU 中，因此有两种方式连接 CPU：
-
-- ① CPU → PCIe（处理器上的 PCIe）→ 设备（任何设备），称之为直连 CPU 的 PCIe；
-
-- ② CPU → PCIe（DMI，芯片组/PCH 上的 PCIe）→ 主板 → PCIe（或转换成其他接口，如 SATA、USB、M.2）→ 设备。
-
-因此，从理论上讲，要获得最大带宽应采用方式 ①，但在实际应用中可能会受到平台稳定性和资源分配的限制。
-
-同时需要注意，PCIe 通道并不是无限的，这由 CPU 的规格决定。英特尔处理器提供的 PCIe 通道数量是有限的，例如消费级处理器通常提供 16 条直连 PCIe 通道（如 PCIe 5.0 ×16），12 代及以后的消费级处理器额外提供 4 条 PCIe 4.0 通道，共计 20 条。
-
-> 因此，DMI 的上限也不是无穷大的，如果在主板上安装了很多 PCIe x16 插槽，由于 DMI 通道的限制，这只是看上去很好，但实际上不能达到预期效果（如果插满，肯定不会符合预期）。
-
-> **除了直连到 CPU 的设备外，其他设备都共享主板上的 DMI 总线。**
-
-> 从体系结构角度来看，北桥是否集成在 CPU 中在本质上并无根本区别。这是由冯·诺依曼架构所决定的。但在性能和效率上有所提升。
-
-设备之间的转换不仅需要在物理层面进行连接，还需要在软件层面（即驱动程序层面）进行适配。例如，所谓 NVMe 转 USB 的正确说法应该是 USB 3.1 Gen 2 到 PCIe Gen3 x2 桥接控制器。这种转换并不是将 NVMe 转换为 USB，而是将 PCIe 转换为 USB。
-
-不需要单独安装驱动程序，并不意味着设备内部没有控制芯片，因为这类驱动通常已内置于操作系统中。
-
-总线、接口与协议这三者在严格意义上应该是分开的。因此，当谈论 M.2 转换为 PCIe 时，只是物理上将它们连接起来，不需要额外的芯片（因此也不需要驱动程序）。但是，如果要将 M.2 支持 SATA，就需要进行协议转换。
-
-> 例如，虽然 M.2 物理接口相同，但要连接 SATA 硬盘，就必须通过转换芯片进行连接。
-
-> 同样，严格来说并不是 SATA 转换为 M.2，而是 SATA 转换为 PCIe，即使用的是 PCIe Gen3 x1 转 2xSATA 桥接控制器。
-
-因此，当提及 M.2 NVMe SSD 时，应该明确它是一种 PCIe 硬盘，NVMe 则是基于 PCIe 的应用层协议。就像英特尔连接主板与 CPU 的通道的 DMI 在本质上也是 PCIe 一样。
-
-M.2 在物理连接层面上与 PCIe 通道直接对应（无 12V 供电）。无需任何芯片或电平转换。M.2 接口在设计理念上可视为 Mini PCIe 的后继者，历史上二者也存在一定的继承关系。但是 M.2 没有 12V（U.2 接口支持，可以视为增强型的 M.2）。
-
-标准的 PCIe 接口同时供电 3.3V、12V，最大支持 75W。而标准的 M.2 最高支持 3.3V 3A，即 10W。
-
-从抽象层面看，总线可以视为一种协议，其特点在于作为公共通道，被多个设备直接或间接共享。真正存在的只有两种类别，物理的接口和软件的协议。这与协议分层无关。硬件信号可以通过电气和逻辑转换进行适配，但在实际应用中仍受成本、性能和稳定性等因素限制。
-
-### 参考文献
-
-- 绿联. HDMI 延长器（单网线传输）[EB/OL]. [2026-04-19]. <https://item.jd.com/100053619301.html>.
-- CN101572074A. 将 HDMI 信号通过单条网线传输的方法[P]. 2009-11-04.
-- Intel Corporation. 第 12 代英特尔® 酷睿™ 台式机处理器产品简介[EB/OL]. (2021)[2026-04-16]. <https://simplecore-prc.intel.cn/intel-china-newsroom/wp-content/uploads/sites/2/12th-generation-intel-core-desktop-processor-product-brief-cn.pdf>. 该文档指出“第 12 代英特尔® 酷睿™ 台式机处理器可提供多达 20 个通道（16 个 PCIe 5.0 和 4 个 PCIe 4.0）”。
-- Intel Corporation. Intel Introduces New Microprocessors And Chipset For Mainstream PCs[EB/OL]. (1999-09-27)[2026-04-18]. <https://www.intel.com/pressroom/archive/releases/1999/dp092799.htm>. Intel Accelerated Hub Architecture 于 1999 年随 i810 芯片组推出。
-- SD Association. SD Specifications[EB/OL]. [2026-04-18]. <https://www.sdcard.org/developers/sd-standard-overview/>. SD 卡容量标准与速度等级定义。
-- B&H Photo Video. UHS-II microSDXC Memory Cards[EB/OL]. [2026-04-18]. <https://www.bhphotovideo.com/c/buy/micro-sd-cards/ci/39505/cp/13296+3496+23730+39505>. UHS-II microSD 产品存在。
-
-## microSD 卡（存储卡/TF 卡/SD 卡/内存卡）参数简介
+# microSD 卡参数简介
 
 除总线、接口与协议的概念辨析外，了解存储设备的参数也是计算机系统结构的重要组成部分。本节将以 microSD 卡为例，详细介绍其各项参数的含义与选购要点。
 
@@ -140,7 +28,7 @@ microSD 通常也称为 TF 卡（TF 是 SanDisk 最初的商品名 TransFlash，
 - `1`（位于 XC 右侧、U1 下方）：表示使用 UHS-I 总线，理论最高速率为 104 MB/s；UHS-II 的理论速率为 312 MB/s。该总线规格决定了存储卡的理论速度上限。
 - `A1`：表示应用性能等级，主要反映随机读写能力。目前仅有 A1 和 A2 两个等级；未标注则表示未达到 A1。树莓派官方建议使用 A2 等级的存储卡。
 
-### 其他参数说明
+## 其他参数说明
 
 - `667x`、`1066x`：雷克沙会标 667x 或 1066x。这种标识方法主要源自光驱倍速体系，目前仅在光盘设备等领域沿用，属于较为古老的标注方式（起源于 20 世纪 80 年代）。
 
@@ -154,11 +42,11 @@ microSD 通常也称为 TF 卡（TF 是 SanDisk 最初的商品名 TransFlash，
 
 这块闪迪 microSD 存储卡上标注了 7 项参数，其中有 4 项在实际使用中的参考价值较低。从参数来看，这款存储卡整体性能较为普通，并无明显优势。
 
-### 存储卡挑选总结
+## 存储卡挑选总结
 
 对于树莓派，主要关注容量（推荐至少 32 GB）、连续读写性能（至少 V30）以及随机读写性能（A2）。但目前市面上的存储卡普遍采用这一标注方式。而且除树莓派 5 之外，其他设备（如 Switch）本身大多无法达到 SD 卡设计的总线速率，**因此在实际选购时，主要关注 A1 或 A2 这一参数即可。**
 
-#### 是否符合标称参数？
+## 是否符合标称参数？
 
 **扩容卡似乎已不再是常态**
 
@@ -182,7 +70,7 @@ microSD 通常也称为 TF 卡（TF 是 SanDisk 最初的商品名 TransFlash，
 
 ![移速 128 G A2 U3 V30 128 G 存储卡掉盘](../.gitbook/assets/yisusd2.png)
 
-### 如何测试存储卡和硬盘？
+## 如何测试存储卡和硬盘？
 
 可以用 `CrystalDiskInfo` 查看硬盘的 S.M.A.R.T. 信息及基本参数；还可以用 `CrystalDiskMark` 测试硬盘和存储卡的读写（请使用 USB 3.0 及以上规格的读卡器）。
 
@@ -200,17 +88,17 @@ microSD 通常也称为 TF 卡（TF 是 SanDisk 最初的商品名 TransFlash，
 
 而一些小众品牌固态硬盘，因为无法很好地适配，开启后就会掉盘，于是主动在固态硬盘的固件中关闭该技术。还有一些小众品牌固态硬盘仍在使用 NVMe 1.4 协议版本。甚至存在多块硬盘使用相同序列号的情况——而硬盘序列号的重要性不亚于网卡的 MAC 地址，原则上不应重复，否则可能导致系统无法正确识别多块硬盘。
 
-#### 使用 CrystalDiskInfo 查看梵想 S690（1 TB）NVMe SSD PCIe 4.0 硬盘参数
+### 使用 CrystalDiskInfo 查看梵想 S690（1 TB）NVMe SSD PCIe 4.0 硬盘参数
 
 ![梵想 S690（1 TB）NVMe SSD PCIe4.0](../.gitbook/assets/pciessd3.png)
 
-#### 使用 CrystalDiskMark 测试梵想 S690（1 TB）NVMe SSD PCIe 4.0 读写速率
+### 使用 CrystalDiskMark 测试梵想 S690（1 TB）NVMe SSD PCIe 4.0 读写速率
 
 ![梵想 S690（1 TB）NVMe SSD PCIe4.0 读写速率](../.gitbook/assets/pcie4ssd2.png)
 
 ![梵想 S690（1 TB）NVMe SSD PCIe4.0 读写速率](../.gitbook/assets/pcie4ssd1.png)
 
-#### 使用 CrystalDiskMark 测试雷克沙 1066x A2 U3 128 GB 存储卡读写速率（使用 USB 3.0 读卡器）
+### 使用 CrystalDiskMark 测试雷克沙 1066x A2 U3 128 GB 存储卡读写速率（使用 USB 3.0 读卡器）
 
 ![雷克沙 1066x A2 U3 128 GB 存储卡读写速率](../.gitbook/assets/lkssd2.png)
 
@@ -218,13 +106,13 @@ microSD 通常也称为 TF 卡（TF 是 SanDisk 最初的商品名 TransFlash，
 
 雷克沙 1066x A2 U3 128 GB 存储卡实际测试与页面标称严重不符：标称 A2，应达到读 4000 IOPS，写 2000 IOPS。实际上，无论随机读还是随机写都只有一半。这是为什么？
 
-#### 标称速度超过 104 MB/s 的 microSD 存储卡在常规使用场景下意义有限
+### 标称速度超过 104 MB/s 的 microSD 存储卡在常规使用场景下意义有限
 
 一方面因为使用的不是超频读卡器（即雷克沙配套的读卡器，用于支持其自定义协议）；另一方面，因为 UHS-I 协议的理论速度上限为 104 MB/s（SDR104）。任何存储卡在理论上无法超越这个速度，除非使用 UHS-II（两排金手指）。但是 microSD 极少使用 UHS-II（虽然市场上有少量 UHS-II microSD 产品，如至誉 Catalyst 系列和 Sabrent Rocket 系列，但价格较高且选择有限），UHS-II 主要用于标准大小的 SD 卡（相机使用）。
 
 因此，市面上无论是三星还是闪迪，只要其标称速度超过 UHS-I 的理论上限且并非 UHS-II 产品，通常都是通过非标准协议实现的。**这种非标准协议只有他们的官方读卡器才能支持（售价极高且一般捆绑销售）。其他设备都不支持这种速率，故没有意义。**
 
-#### 使用 CrystalDiskMark 测试三星 BAR 升级版 + USB 3.1 闪存盘 64 G 读写速率
+### 使用 CrystalDiskMark 测试三星 BAR 升级版 + USB 3.1 闪存盘 64 G 读写速率
 
 即金属款。
 
@@ -232,7 +120,7 @@ microSD 通常也称为 TF 卡（TF 是 SanDisk 最初的商品名 TransFlash，
 
 ![三星 BAR 升级版 + USB3.1 闪存盘 64 G 读写速率](../.gitbook/assets/san2.png)
 
-### 参考文献
+## 参考文献
 
 - FreeBSD 中文社区. Raspberry Pi 树莓派中文文档[EB/OL]. [2026-03-25]. <https://rpicn.bsdcn.org>. 树莓派中文社区维护的文档站点，涵盖系统安装与外设配置等内容。
 - Heath N. Inside the Raspberry Pi: The story of the $35 computer that changed the world[EB/OL]. [2026-03-25]. <https://www.techrepublic.com/article/inside-the-raspberry-pi-the-story-of-the-35-computer-that-changed-the-world/>. 讲述树莓派从教育项目成长为全球畅销单板计算机的发展历程。
@@ -249,4 +137,5 @@ microSD 通常也称为 TF 卡（TF 是 SanDisk 最初的商品名 TransFlash，
 - Samsung. BAR 升级版 + USB3.1 闪存盘[EB/OL]. [2026-03-25]. <https://www.samsung.com.cn/memory-storage/usb-flash-drive/usb-3-1-flash-drive-bar-plus-64gb-titanium-gray-muf-64be4-cn/>. 三星 USB 3.1 闪存盘产品规格与性能参数。
 - 参见 SD Association. Capacity SD/SDHC/SDXC/SDUC[EB/OL]. [2026-04-16]. <https://www.sdcard.org/developers/sd-standard-overview/capacity-sd-sdhc-sdxc-sduc/>. 该页面定义 SD/SDHC/SDXC/SDUC 容量标准。
 - Lexar. Lexar Professional 667x microSDXC UHS-I 产品规格[EB/OL]. [2026-04-16]. <https://resources.lexar.com/download/236/667x-microsdxc/1963/lexar-productsheet-pro-667x-microsd-en-201911.pdf>. 该文档为雷克沙 667x microSD 卡产品规格表。雷克沙官方 667x 存储卡标称读取速度为 100 MB/s。
-
+- SD Association. SD Specifications[EB/OL]. [2026-04-18]. <https://www.sdcard.org/developers/sd-standard-overview/>. SD 卡容量标准与速度等级定义。
+- B&H Photo Video. UHS-II microSDXC Memory Cards[EB/OL]. [2026-04-18]. <https://www.bhphotovideo.com/c/buy/micro-sd-cards/ci/39505/cp/13296+3496+23730+39505>. UHS-II microSD 产品存在。
