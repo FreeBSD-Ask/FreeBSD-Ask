@@ -287,35 +287,35 @@
 
 ## 附录 Ⅰ 工具与资源
 
-* [DragonFly BSD 系统导论](fu-lu2/dragonfly-bsd-xi-tong-dao-lun.md)
-* [TwinCAT/BSD 系统导论](fu-lu2/twincat-bsd-xi-tong-dao-lun.md)
-* [FreeBSD 兼容的网络适配器](fu-lu2/freebsd-jian-rong-de-wang-luo-shi-pei-qi.md)
-* [FreeBSD 桌面发行版评述](fu-lu2/freebsd-zhuo-mian-fa-xing-ban-ping-shu.md)
-* [BSD 许可证概览](fu-lu2/bsd-xu-ke-zheng-gai-lan.md)
-* [Vim 开发环境配置](fu-lu2/vim-kai-fa-huan-jing-pei-zhi.md)
+* [DragonFly BSD 系统导论](fu-lu1/dragonfly-bsd-xi-tong-dao-lun.md)
+* [TwinCAT/BSD 系统导论](fu-lu1/twincat-bsd-xi-tong-dao-lun.md)
+* [FreeBSD 兼容的网络适配器](fu-lu1/freebsd-jian-rong-de-wang-luo-shi-pei-qi.md)
+* [FreeBSD 桌面发行版评述](fu-lu1/freebsd-zhuo-mian-fa-xing-ban-ping-shu.md)
+* [BSD 许可证概览](fu-lu1/bsd-xu-ke-zheng-gai-lan.md)
+* [Vim 开发环境配置](fu-lu1/vim-kai-fa-huan-jing-pei-zhi.md)
 * [microSD 卡参数简介](cun-chu-ka.md)
 
 ## 附录 II UEFI/BIOS 注解（AMI BIOS）
 
-* [UEFI/BIOS 概述与警告](fu-lu3/uefi-bios-gai-shu-yu-jing-gao.md)
-* [Main 主菜单](fu-lu3/main-zhu-cai-dan.md)
-* [Advanced 高级](fu-lu3/advanced-gao-ji.md)
-* [Chipset 芯片组](fu-lu3/chipset-xin-pian-zu.md)
-* [Security 安全](fu-lu3/security-an-quan.md)
-* [Boot 启动](fu-lu3/boot-qi-dong.md)
-* [Save & Exit 保存与退出](fu-lu3/save-exit-bao-cun-yu-tui-chu.md)
+* [UEFI/BIOS 概述与警告](fu-lu2/uefi-bios-gai-shu-yu-jing-gao.md)
+* [Main 主菜单](fu-lu2/main-zhu-cai-dan.md)
+* [Advanced 高级](fu-lu2/advanced-gao-ji.md)
+* [Chipset 芯片组](fu-lu2/chipset-xin-pian-zu.md)
+* [Security 安全](fu-lu2/security-an-quan.md)
+* [Boot 启动](fu-lu2/boot-qi-dong.md)
+* [Save & Exit 保存与退出](fu-lu2/save-exit-bao-cun-yu-tui-chu.md)
 
 ## 附录 III 文学故事
 
-* [我与 FreeBSD 的故事](fu-lu4/wo-yu-freebsd-de-gu-shi.md)
-* [两次告别](fu-lu4/liang-ci-gao-bie.md)
-* [小说：《青其正色》](fu-lu4/xiao-shuo-qing-qi-zheng-se.md)
-* [小说：《吾乡何处》](fu-lu4/xiao-shuo-wu-xiang-he-chu.md)
-* [小说：《你与暗》](fu-lu4/xiao-shuo-ni-yu-an.md)
-* [诗歌选](fu-lu4/shi-ge-xuan.md)
-* [手记](fu-lu4/shou-ji.md)
+* [我与 FreeBSD 的故事](fu-lu3/wo-yu-freebsd-de-gu-shi.md)
+* [两次告别](fu-lu3/liang-ci-gao-bie.md)
+* [小说：《青其正色》](fu-lu3/xiao-shuo-qing-qi-zheng-se.md)
+* [小说：《吾乡何处》](fu-lu3/xiao-shuo-wu-xiang-he-chu.md)
+* [小说：《你与暗》](fu-lu3/xiao-shuo-ni-yu-an.md)
+* [诗歌选](fu-lu3/shi-ge-xuan.md)
+* [手记](fu-lu3/shou-ji.md)
 
 ## 附录 IV 参考文献与术语表
 
-* [参考书目](fu-lu5/can-kao-shu-mu.md)
-* [术语表](fu-lu5/shu-yu-biao.md)
+* [参考书目](fu-lu4/can-kao-shu-mu.md)
+* [术语表](fu-lu4/shu-yu-biao.md)
