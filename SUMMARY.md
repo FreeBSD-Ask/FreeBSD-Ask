@@ -54,8 +54,9 @@
 * [4.7 文本编辑器](di-4-zhang-freebsd-ji-chu/di-4.7-jie-wen-ben-bian-ji-qi.md)
 * [4.8 压缩解压工具](di-4-zhang-freebsd-ji-chu/di-4.8-jie-ya-suo-jie-ya-gong-ju.md)
 * [4.9 用户和基本账户管理](di-4-zhang-freebsd-ji-chu/di-4.9-jie-yong-hu-he-ji-ben-zhang-hu-guan-li.md)
-* [4.10 启用 root 账户桌面登录](di-4-zhang-freebsd-ji-chu/di-4.10-jie-qi-yong-root-zhang-hu-zhuo-mian-deng-lu.md)
-* [4.11 权限提升工具（sudo、doas 等）](di-4-zhang-freebsd-ji-chu/di-4.11-jie-te-quan-ti-sheng-gong-ju-sudo-doas-deng.md)
+* [4.10 权限](di-4-zhang-freebsd-ji-chu/di-4.10-jie-quan-xian.md)
+* [4.11 启用 root 账户桌面登录](di-4-zhang-freebsd-ji-chu/di-4.11-jie-qi-yong-root-zhang-hu-zhuo-mian-deng-lu.md)
+* [4.12 权限提升工具（sudo、doas 等）](di-4-zhang-freebsd-ji-chu/di-4.12-jie-te-quan-ti-sheng-gong-ju-sudo-doas-deng.md)
 
 ## 第 5 章 系统管理
 
@@ -130,7 +131,6 @@
 * [10.14 i3wm](di-10-zhang-zhuo-mian-huan-jing/di-10.14-jie-i3wm.md)
 * [10.15 Hyprland](di-10-zhang-zhuo-mian-huan-jing/di-10.15-jie-hyprland.md)
 * [10.16 桌面主题美化](di-10-zhang-zhuo-mian-huan-jing/di-10.16-jie-zhuo-mian-zhu-ti-mei-hua.md)
-* [10.17 权限](di-10-zhang-zhuo-mian-huan-jing/di-10.17-jie-quan-xian.md)
 
 ## 第 11 章 人工智能（AI）
 
