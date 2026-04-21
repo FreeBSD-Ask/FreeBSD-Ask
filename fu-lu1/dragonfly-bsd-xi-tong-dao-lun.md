@@ -272,4 +272,3 @@ DragonFly BSD 对 Intel 显卡有特定支持要求。[根据硬件说明](https
 - DragonFly BSD Digest. Booting, UEFI, and text consoles[EB/OL]. (2017-09-14)[2026-03-25]. <https://www.dragonflydigest.com/2017/09/14/booting-uefi-and-text-consoles/>. 详述了 DragonFly BSD 的 UEFI 启动机制与文本控制台配置方法。
 - DILLON M. DragonFly BSD Project[EB/OL]. [2026-04-18]. <https://www.dragonflybsd.org/team/>. DragonFly BSD 开发团队页面，Matthew Dillon 为项目创始人及 Amiga 开发背景。
 - DILLON M. Announcing DragonFly BSD[EB/OL]. (2003-07-16)[2026-04-18]. <https://lists.freebsd.org/pipermail/freebsd-current/2003-July/006889.html>. DragonFly BSD 项目在 FreeBSD 邮件列表上的正式发布公告。
-
