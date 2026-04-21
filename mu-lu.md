@@ -50,9 +50,9 @@
 * [4.3 系统目录结构](di-4-zhang-freebsd-ji-chu/di-4.3-jie-xi-tong-mu-lu-jie-gou.md)
 * [4.4 虚拟控制台和终端](di-4-zhang-freebsd-ji-chu/di-4.4-jie-xu-ni-kong-zhi-tai-he-zhong-duan.md)
 * [4.5 Shell 基础](di-4-zhang-freebsd-ji-chu/di-4.5-jie-shell-ji-chu.md)
-* [4.6 压缩解压工具](di-4-zhang-freebsd-ji-chu/di-4.6-jie-ya-suo-jie-ya-gong-ju.md)
-* [4.7 命令行基础](di-4-zhang-freebsd-ji-chu/di-4.7-jie-ming-ling-xing-ji-chu.md)
-* [4.8 文本编辑器](di-4-zhang-freebsd-ji-chu/di-4.8-jie-wen-ben-bian-ji-qi.md)
+* [4.6 命令行基础](di-4-zhang-freebsd-ji-chu/di-4.6-jie-ming-ling-xing-ji-chu.md)
+* [4.7 文本编辑器](di-4-zhang-freebsd-ji-chu/di-4.7-jie-wen-ben-bian-ji-qi.md)
+* [4.8 压缩解压工具](di-4-zhang-freebsd-ji-chu/di-4.8-jie-ya-suo-jie-ya-gong-ju.md)
 * [4.9 用户和基本账户管理](di-4-zhang-freebsd-ji-chu/di-4.9-jie-yong-hu-he-ji-ben-zhang-hu-guan-li.md)
 * [4.10 权限](di-4-zhang-freebsd-ji-chu/di-4.10-jie-quan-xian.md)
 * [4.11 启用 root 账户桌面登录](di-4-zhang-freebsd-ji-chu/di-4.11-jie-qi-yong-root-zhang-hu-zhuo-mian-deng-lu.md)
@@ -72,6 +72,7 @@
 * [5.10 crontab 及定时任务文件（periodic.conf）](di-5-zhang-xi-tong-guan-li/di-5.10-jie-crontab-ji-ding-shi-ren-wu-wen-jian-periodic-conf.md)
 * [5.11 内核状态默认配置文件（sysctl.conf）](di-5-zhang-xi-tong-guan-li/di-5.11-jie-nei-he-zhuang-tai-mo-ren-pei-zhi-wen-jian-sysctl-conf.md)
 * [5.12 系统更新检测工具](di-5-zhang-xi-tong-guan-li/di-5.12-jie-update.md)
+* [5.13 时间同步服务](di-5-zhang-xi-tong-guan-li/di-5.13-jie-shi-jian-tong-bu-fu-wu.md)
 
 ## 第 6 章 网络管理
 
@@ -96,10 +97,10 @@
 * [8.1 ZFS 概述](di-8-zhang-zfs-wen-jian-xi-tong/di-8.1-jie-zfs-gai-shu.md)
 * [8.2 ZFS 磁盘扩容](di-8-zhang-zfs-wen-jian-xi-tong/di-8.2-jie-zfs-ci-pan-kuo-rong.md)
 * [8.3 ZFS 快照与还原](di-8-zhang-zfs-wen-jian-xi-tong/di-8.3-jie-zfs-kuai-zhao-yu-huan-yuan.md)
-* [8.4 ZFS 启动环境](di-8-zhang-zfs-wen-jian-xi-tong/di-8.4-jie-zfs-qi-dong-huan-jing.md)
-* [8.5 ZFS 存储池更新](di-8-zhang-zfs-wen-jian-xi-tong/di-8.5-jie-zfs-cun-chu-chi-geng-xin.md)
-* [8.6 ZFS 委托管理](di-8-zhang-zfs-wen-jian-xi-tong/di-8.6-jie-zfs-wei-tuo-guan-li.md)
-* [8.7 ZFS 数据压缩](di-8-zhang-zfs-wen-jian-xi-tong/di-8.7-jie-zfs-shu-ju-ya-suo.md)
+* [8.4 ZFS 数据压缩](di-8-zhang-zfs-wen-jian-xi-tong/di-8.4-jie-zfs-shu-ju-ya-suo.md)
+* [8.5 ZFS 启动环境](di-8-zhang-zfs-wen-jian-xi-tong/di-8.5-jie-zfs-qi-dong-huan-jing.md)
+* [8.6 ZFS 存储池更新](di-8-zhang-zfs-wen-jian-xi-tong/di-8.6-jie-zfs-cun-chu-chi-geng-xin.md)
+* [8.7 ZFS 委托管理](di-8-zhang-zfs-wen-jian-xi-tong/di-8.7-jie-zfs-wei-tuo-guan-li.md)
 
 ## 第 9 章 软件管理和系统升级
 
@@ -181,14 +182,11 @@
 
 ## 第 17 章 服务器
 
-* [17.1 时间同步服务](di-17-zhang-fu-wu-qi/di-17.1-jie-shi-jian-tong-bu-fu-wu.md)
-* [17.2 FTP 服务器](di-17-zhang-fu-wu-qi/di-17.2-jie-ftp-fu-wu-qi.md)
-* [17.3 Webmin 管理平台](di-17-zhang-fu-wu-qi/di-17.3-jie-webmin-guan-li-ping-tai.md)
-* [17.4 GitLab Enterprise Edition 部署](di-17-zhang-fu-wu-qi/di-17.4-jie-gitlab-enterprise-edition-bu-shu.md)
-* [17.5 WildFly 应用服务器](di-17-zhang-fu-wu-qi/di-17.5-jie-wildfly-ying-yong-fu-wu-qi.md)
-* [17.6 Rsync 数据同步](di-17-zhang-fu-wu-qi/di-17.6-jie-rsync-shu-ju-tong-bu.md)
-* [17.7 Samba 文件共享](di-17-zhang-fu-wu-qi/di-17.7-jie-samba-wen-jian-gong-xiang.md)
-* [17.8 NFS 服务器](di-17-zhang-fu-wu-qi/di-17.8-jie-nfs-fu-wu-qi.md)
+* [17.1 FTP 服务器](di-17-zhang-fu-wu-qi/di-17.1-jie-ftp-fu-wu-qi.md)
+* [17.2 Webmin 管理平台](di-17-zhang-fu-wu-qi/di-17.2-jie-webmin-guan-li-ping-tai.md)
+* [17.3 Rsync 数据同步](di-17-zhang-fu-wu-qi/di-17.3-jie-rsync-shu-ju-tong-bu.md)
+* [17.4 Samba 文件共享](di-17-zhang-fu-wu-qi/di-17.4-jie-samba-wen-jian-gong-xiang.md)
+* [17.5 NFS 服务器](di-17-zhang-fu-wu-qi/di-17.5-jie-nfs-fu-wu-qi.md)
 
 ## 第 18 章 Web 服务器与监控系统
 
@@ -197,12 +195,14 @@
 * [18.3 Caddy Web 服务器](di-18-zhang-web-fu-wu-qi-yu-jian-kong-xi-tong/di-18.3-jie-caddy-web-fu-wu-qi.md)
 * [18.4 PHP 8.x 配置](di-18-zhang-web-fu-wu-qi-yu-jian-kong-xi-tong/di-18.4-jie-php-8-x-pei-zhi.md)
 * [18.5 Tomcat 应用服务器](di-18-zhang-web-fu-wu-qi-yu-jian-kong-xi-tong/di-18.5-jie-tomcat-ying-yong-fu-wu-qi.md)
-* [18.6 Zabbix 监控系统（基于 PostgreSQL）](di-18-zhang-web-fu-wu-qi-yu-jian-kong-xi-tong/di-18.6-jie-zabbix-jian-kong-xi-tong-ji-yu-postgresql.md)
-* [18.7 Prometheus 监控部署](di-18-zhang-web-fu-wu-qi-yu-jian-kong-xi-tong/di-18.7-jie-prometheus-jian-kong-bu-shu.md)
-* [18.8 Telegraf、InfluxDB 与 Grafana 监控平台架构](di-18-zhang-web-fu-wu-qi-yu-jian-kong-xi-tong/di-18.8-jie-telegraf-influxdb-yu-grafana-jian-kong-ping-tai-jia-gou.md)
-* [18.9 Nextcloud 云服务（基于 PostgreSQL）](di-18-zhang-web-fu-wu-qi-yu-jian-kong-xi-tong/di-18.9-jie-nextcloud-yun-fu-wu-ji-yu-postgresql.md)
-* [18.10 OnlyOffice 部署（基于 PostgreSQL）](di-18-zhang-web-fu-wu-qi-yu-jian-kong-xi-tong/di-18.10-jie-onlyoffice-bu-shu-ji-yu-postgresql.md)
-* [18.11 OpenList 部署](di-18-zhang-web-fu-wu-qi-yu-jian-kong-xi-tong/di-18.11-jie-openlist-bu-shu.md)
+* [18.6 WildFly 应用服务器](di-18-zhang-web-fu-wu-qi-yu-jian-kong-xi-tong/di-18.6-jie-wildfly-ying-yong-fu-wu-qi.md)
+* [18.7 GitLab Enterprise Edition 部署](di-18-zhang-web-fu-wu-qi-yu-jian-kong-xi-tong/di-18.7-jie-gitlab-enterprise-edition-bu-shu.md)
+* [18.8 Zabbix 监控系统（基于 PostgreSQL）](di-18-zhang-web-fu-wu-qi-yu-jian-kong-xi-tong/di-18.8-jie-zabbix-jian-kong-xi-tong-ji-yu-postgresql.md)
+* [18.9 Prometheus 监控部署](di-18-zhang-web-fu-wu-qi-yu-jian-kong-xi-tong/di-18.9-jie-prometheus-jian-kong-bu-shu.md)
+* [18.10 Telegraf、InfluxDB 与 Grafana 监控平台架构](di-18-zhang-web-fu-wu-qi-yu-jian-kong-xi-tong/di-18.10-jie-telegraf-influxdb-yu-grafana-jian-kong-ping-tai-jia-gou.md)
+* [18.11 Nextcloud 云服务（基于 PostgreSQL）](di-18-zhang-web-fu-wu-qi-yu-jian-kong-xi-tong/di-18.11-jie-nextcloud-yun-fu-wu-ji-yu-postgresql.md)
+* [18.12 OnlyOffice 部署（基于 PostgreSQL）](di-18-zhang-web-fu-wu-qi-yu-jian-kong-xi-tong/di-18.12-jie-onlyoffice-bu-shu-ji-yu-postgresql.md)
+* [18.13 OpenList 部署](di-18-zhang-web-fu-wu-qi-yu-jian-kong-xi-tong/di-18.13-jie-openlist-bu-shu.md)
 
 ## 第 19 章 嵌入式平台
 
