@@ -79,7 +79,7 @@
 * [6.7 Cinnamon](di-6-zhang-zhuo-mian-huan-jing/di-6.7-jie-cinnamon.md)
 * [6.8 LXQt](di-6-zhang-zhuo-mian-huan-jing/di-6.8-jie-lxqt.md)
 * [6.9 GNOME](di-6-zhang-zhuo-mian-huan-jing/di-6.9-jie-gnome.md)
-* [6.10 CDE](di-6-zhang-zhuo-mian-huan-jing/di-6.1-jie-cde.md)
+* [6.10 CDE](di-6-zhang-zhuo-mian-huan-jing/di-6.10-jie-cde.md)
 * [6.11 LXDE](di-6-zhang-zhuo-mian-huan-jing/di-6.11-jie-lxde.md)
 * [6.12 bspwm](di-6-zhang-zhuo-mian-huan-jing/di-6.12-jie-bspwm.md)
 * [6.13 IceWM](di-6-zhang-zhuo-mian-huan-jing/di-6.13-jie-icewm.md)
@@ -253,7 +253,7 @@
 * [24.1 FreeBSD 内核文件结构](di-24-zhang-freebsd-nei-he-jia-gou/di-24.1-jie-freebsd-nei-he-wen-jian-jie-gou.md)
 * [24.2 机器相关的内核选项注解](di-24-zhang-freebsd-nei-he-jia-gou/di-24.2-jie-ji-qi-xiang-guan-de-nei-he-xuan-xiang-zhu-jie.md)
 * [24.3 机器无关的内核选项注解](di-24-zhang-freebsd-nei-he-jia-gou/di-24.3-jie-ji-qi-wu-guan-de-nei-he-xuan-xiang-zhu-jie.md)
-* [24.4 GENERIC 内核选项注解（amd64）](di-24-zhang-freebsd-nei-he-jia-gou/di-24.4-jie-generic-nei-he-xuan-xiang-zhu-jie-amd64.md)
+* [24.4 GENERIC 内核选项注解（AMD64）](di-24-zhang-freebsd-nei-he-jia-gou/di-24.4-jie-generic-nei-he-xuan-xiang-zhu-jie-amd64.md)
 * [24.5 在 Linux 系统上交叉构建 FreeBSD](di-24-zhang-freebsd-nei-he-jia-gou/di-24.5-jie-zai-linux-xi-tong-shang-jiao-cha-gou-jian-freebsd.md)
 * [24.6 FreeBSD 源代码目录结构](di-24-zhang-freebsd-nei-he-jia-gou/di-24.6-jie-freebsd-yuan-dai-ma-mu-lu-jie-gou.md)
 
