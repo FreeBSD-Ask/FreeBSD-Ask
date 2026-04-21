@@ -1,4 +1,4 @@
-# 4.9 权限提升工具（sudo、doas 等）
+# 4.10 权限提升工具（sudo、doas 等）
 
 ![权限示意图](../.gitbook/assets/qie-su.png)
 
