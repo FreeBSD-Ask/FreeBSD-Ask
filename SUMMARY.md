@@ -54,7 +54,8 @@
 * [4.7 文本编辑器](di-4-zhang-freebsd-ji-chu/di-4.7-jie-wen-ben-bian-ji-qi.md)
 * [4.8 用户和基本账户管理](di-4-zhang-freebsd-ji-chu/di-4.8-jie-yong-hu-he-ji-ben-zhang-hu-guan-li.md)
 * [4.9 权限](di-4-zhang-freebsd-ji-chu/di-4.9-jie-quan-xian.md)
-* [4.10 权限提升工具（sudo、doas 等）](di-4-zhang-freebsd-ji-chu/di-4.10-jie-te-quan-ti-sheng-gong-ju-sudo-doas-deng.md)
+* [4.10 启用 root 账户桌面登录](di-4-zhang-freebsd-ji-chu/di-4.10-jie-qi-yong-root-zhang-hu-zhuo-mian-deng-lu.md)
+* [4.11 权限提升工具（sudo、doas 等）](di-4-zhang-freebsd-ji-chu/di-4.11-jie-te-quan-ti-sheng-gong-ju-sudo-doas-deng.md)
 
 ## 第 5 章 软件管理和系统升级
 
@@ -84,8 +85,6 @@
 * [6.14 i3wm](di-6-zhang-zhuo-mian-huan-jing/di-6.14-jie-i3wm.md)
 * [6.15 Hyprland](di-6-zhang-zhuo-mian-huan-jing/di-6.15-jie-hyprland.md)
 * [6.16 桌面主题美化](di-6-zhang-zhuo-mian-huan-jing/di-6.16-jie-zhuo-mian-zhu-ti-mei-hua.md)
-* [6.17 远程桌面访问](di-6-zhang-zhuo-mian-huan-jing/di-6.17-jie-yuan-cheng-zhuo-mian-fang-wen.md)
-* [6.18 启用 root 账户桌面登录](di-6-zhang-zhuo-mian-huan-jing/di-6.18-jie-qi-yong-root-zhang-hu-zhuo-mian-deng-lu.md)
 
 ## 第 7 章 人工智能（AI）
 
@@ -141,13 +140,14 @@
 * [13.2 init.rc 服务管理](di-13-zhang-xi-tong-guan-li/di-13.2-jie-init-rc-fu-wu-guan-li.md)
 * [13.3 bsdconfig 系统配置工具](di-13-zhang-xi-tong-guan-li/di-13.3-jie-bsdconfig-xi-tong-pei-zhi-gong-ju.md)
 * [13.4 SSH 服务与工具](di-13-zhang-xi-tong-guan-li/di-13.4-jie-ssh-fu-wu-yu-gong-ju.md)
-* [13.5 Live 镜像与系统恢复](di-13-zhang-xi-tong-guan-li/di-13.5-jie-live-jing-xiang-yu-xi-tong-hui-fu.md)
-* [13.6 引导管理器与 UEFI 固件](di-13-zhang-xi-tong-guan-li/di-13.6-jie-yin-dao-guan-li-qi-yu-uefi-gu-jian.md)
-* [13.7 用户分级文件（login.conf）](di-13-zhang-xi-tong-guan-li/di-13.7-jie-yong-hu-fen-ji-wen-jian-login-conf.md)
-* [13.8 设备资源提示文件（device.hints）](di-13-zhang-xi-tong-guan-li/di-13.8-jie-she-bei-zi-yuan-ti-shi-wen-jian-device-hints.md)
-* [13.9 crontab 及定时任务文件（periodic.conf）](di-13-zhang-xi-tong-guan-li/di-13.9-jie-crontab-ji-ding-shi-ren-wu-wen-jian-periodic-conf.md)
-* [13.10 内核状态默认配置文件（sysctl.conf）](di-13-zhang-xi-tong-guan-li/di-13.10-jie-nei-he-zhuang-tai-mo-ren-pei-zhi-wen-jian-sysctl-conf.md)
-* [13.11 系统更新检测工具](di-13-zhang-xi-tong-guan-li/di-13.11-jie-update.md)
+* [13.5 远程桌面访问](di-13-zhang-xi-tong-guan-li/di-13.5-jie-yuan-cheng-zhuo-mian-fang-wen.md)
+* [13.6 Live 镜像与系统恢复](di-13-zhang-xi-tong-guan-li/di-13.6-jie-live-jing-xiang-yu-xi-tong-hui-fu.md)
+* [13.7 引导管理器与 UEFI 固件](di-13-zhang-xi-tong-guan-li/di-13.7-jie-yin-dao-guan-li-qi-yu-uefi-gu-jian.md)
+* [13.8 用户分级文件（login.conf）](di-13-zhang-xi-tong-guan-li/di-13.8-jie-yong-hu-fen-ji-wen-jian-login-conf.md)
+* [13.9 设备资源提示文件（device.hints）](di-13-zhang-xi-tong-guan-li/di-13.9-jie-she-bei-zi-yuan-ti-shi-wen-jian-device-hints.md)
+* [13.10 crontab 及定时任务文件（periodic.conf）](di-13-zhang-xi-tong-guan-li/di-13.10-jie-crontab-ji-ding-shi-ren-wu-wen-jian-periodic-conf.md)
+* [13.11 内核状态默认配置文件（sysctl.conf）](di-13-zhang-xi-tong-guan-li/di-13.11-jie-nei-he-zhuang-tai-mo-ren-pei-zhi-wen-jian-sysctl-conf.md)
+* [13.12 系统更新检测工具](di-13-zhang-xi-tong-guan-li/di-13.12-jie-update.md)
 
 ## 第 14 章 网络管理
 
