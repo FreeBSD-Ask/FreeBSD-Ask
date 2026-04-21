@@ -45,25 +45,6 @@ Ports 框架可以将源代码编译并打包成 pkg 格式的二进制包，这
 
 一般来说，如果 Ports 中有该 Port，但 pkg 中暂时没有，等待 7–14 天通常即可（构建失败的包系统会自动向维护者报告错误）。如要立刻安装使用，请使用 Ports。
 
-### 附录：FreeBSD 软件包原子更新的困难与现状分析
-
-FreeBSD 镜像站（无论是官方的还是非官方的）的软件源存在以下典型现象，这些现象直接反映了当前软件包更新机制的技术特点：
-
-- 一旦某个 Port 发生更新，就会立即从软件源中撤销由该 Port 衍生的 pkg 二进制包，直到下次构建出新的 pkg 软件包，而非保留旧版本软件包；
-- 只要开始一次新的构建，旧版本软件包会立即从 pkg 软件源中删除，直到构建出新版本的 pkg 软件包。
-
-针对上述现象，理论上的一种解决方案是：保持软件包处于某一固定版本阶段（如季度分支），暂不进行更新，直接进行版本轮替。
-
-问题在于 Port 更新是不定时的。复杂的依赖会破坏一切。有能力者可尝试提出新的看法和建议，并反馈至下方或 [FreeBSD 论坛](https://forums.freebsd.org/)。
-
-> **思考题**
->
-> - 相关讨论 [the disappearing pkg issue](https://www.reddit.com/r/freebsd/comments/1nlnwtd/the_disappearing_pkg_issue/)
-> - pkg 项目位于 [freebsd/pkg](https://github.com/freebsd/pkg)
-> - pkg 软件包的构建系统位于 [Poudriere](https://github.com/freebsd/poudriere)
->
-> 试一试：帮助 FreeBSD 项目实现 pkg 二进制软件包的原子更新？
-
 ## 安装 pkg 包管理器
 
 > **技巧**
@@ -509,6 +490,25 @@ Ignore the mismatch and continue? [y/N]:
 以 root 权限执行 `certctl rehash` 刷新证书即可。
 
 参见：pkg(8): An error occured while fetching package: No error[EB/OL]. [2026-03-26]. <https://forums.freebsd.org/threads/pkg-8-an-error-occured-while-fetching-package-no-error.96761/>.
+
+## 附录：FreeBSD 软件包原子更新的困难与现状分析
+
+FreeBSD 镜像站（无论是官方的还是非官方的）的软件源存在以下典型现象，这些现象直接反映了当前软件包更新机制的技术特点：
+
+- 一旦某个 Port 发生更新，就会立即从软件源中撤销由该 Port 衍生的 pkg 二进制包，直到下次构建出新的 pkg 软件包，而非保留旧版本软件包；
+- 只要开始一次新的构建，旧版本软件包会立即从 pkg 软件源中删除，直到构建出新版本的 pkg 软件包。
+
+针对上述现象，理论上的一种解决方案是：保持软件包处于某一固定版本阶段（如季度分支），暂不进行更新，直接进行版本轮替。
+
+问题在于 Port 更新是不定时的。复杂的依赖会破坏一切。有能力者可尝试提出新的看法和建议，并反馈至下方或 [FreeBSD 论坛](https://forums.freebsd.org/)。
+
+> **思考题**
+>
+> - 相关讨论 [the disappearing pkg issue](https://www.reddit.com/r/freebsd/comments/1nlnwtd/the_disappearing_pkg_issue/)
+> - pkg 项目位于 [freebsd/pkg](https://github.com/freebsd/pkg)
+> - pkg 软件包的构建系统位于 [Poudriere](https://github.com/freebsd/poudriere)
+>
+> 试一试：帮助 FreeBSD 项目实现 pkg 二进制软件包的原子更新？
 
 ## 课后习题
 
