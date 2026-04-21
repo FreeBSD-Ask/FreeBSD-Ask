@@ -1,4 +1,4 @@
-# 3.13 基于 Apple M1 和 UTM 安装 FreeBSD
+# 3.8 基于 Apple M1 和 UTM 安装 FreeBSD
 
 ## 概述
 
