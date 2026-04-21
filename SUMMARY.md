@@ -58,8 +58,8 @@
 
 ## 第 5 章 软件管理和系统升级
 
-* [5.1 FreeBSD 镜像站现状](di-5-zhang-ruan-jian-guan-li-he-xi-tong-sheng-ji/di-5.1-jie-freebsd-jing-xiang-zhan-xian-zhuang.md)
-* [5.2 更换 FreeBSD 软件源](di-5-zhang-ruan-jian-guan-li-he-xi-tong-sheng-ji/di-5.2-jie-geng-huan-freebsd-ruan-jian-yuan.md)
+* [5.1 更换 FreeBSD 软件源](di-5-zhang-ruan-jian-guan-li-he-xi-tong-sheng-ji/di-5.1-jie-geng-huan-freebsd-ruan-jian-yuan.md)
+* [5.2 FreeBSD 镜像站现状](di-5-zhang-ruan-jian-guan-li-he-xi-tong-sheng-ji/di-5.2-jie-freebsd-jing-xiang-zhan-xian-zhuang.md)
 * [5.3 使用 pkg 管理二进制包](di-5-zhang-ruan-jian-guan-li-he-xi-tong-sheng-ji/di-5.3-jie-shi-yong-pkg-guan-li-er-jin-zhi-bao.md)
 * [5.4 使用 Ports 以源代码方式安装软件](di-5-zhang-ruan-jian-guan-li-he-xi-tong-sheng-ji/di-5.4-jie-shi-yong-ports-yi-yuan-dai-ma-fang-shi-an-zhuang-ruan-jian.md)
 * [5.5 使用 DVD 安装软件](di-5-zhang-ruan-jian-guan-li-he-xi-tong-sheng-ji/di-5.5-jie-shi-yong-dvd-an-zhuang-ruan-jian.md)
