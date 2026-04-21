@@ -382,70 +382,6 @@ root@ykla:/usr/ports/sysutils/htop # make all-depends-list
 ……省略一部分……
 ```
 
-## 查看 python 的 ports 在哪个位置
-
-可以再次使用 `whereis` 命令来确认 python 的具体位置。
-
-查找 python 可执行文件、源代码及手册页所在路径：
-
-```sh
-# whereis python
-python: /usr/ports/lang/python
-```
-
-## 安装 python3
-
-现在以安装 python3 为例，演示如何使用 Ports 编译安装软件。
-
-```sh
-# cd /usr/ports/lang/python
-# make BATCH=yes clean
-```
-
-其中 `BATCH=yes`（批处理）意味着使用默认参数进行构建。
-
-## 如何设置所有必需的依赖
-
-在编译软件前，有时需要先设置所有依赖项的配置选项。
-
-```sh
-# make config-recursive
-```
-
-## 如何使用 pkg 安装依赖
-
-为了节省编译时间，可以使用 pkg 来安装所需的依赖，仅使用 Ports 来编译软件包本体。
-
-不使用 Ports 来编译依赖，仅使用 Ports 来编译软件包本体：
-
-```sh
-# make install-missing-packages
-```
-
-以 `chinese/fcitx` 为示例：
-
-```sh
-# cd /usr/ports/chinese/fcitx
-# make install-missing-packages
-Updating FreeBSD repository catalogue...
-FreeBSD repository is up to date.
-Updating FreeBSD-base repository catalogue...
-FreeBSD-base repository is up to date.
-All repositories are up to date.
-Updating database digests format: 100%
-The following 2 package(s) will be affected (of 0 checked):
-
-New packages to be INSTALLED:
-	e2fsprogs-libuuid: 1.47.1 [FreeBSD]
-	enchant2: 2.2.15_5 [FreeBSD]
-
-Number of packages to be installed: 2
-
-94 KiB to be downloaded.
-
-Proceed with this action? [y/N]:
-```
-
 ## 如何删除当前 port 及其依赖的配置文件
 
 如果需要清理之前配置的选项，可以使用以下命令删除当前 port 及其所有依赖的配置文件。
@@ -882,6 +818,72 @@ wget2 参数说明：
 ### 参考文献
 
 - FreeBSD Project. ports -- contributed applications[EB/OL]. [2026-03-25]. <https://man.freebsd.org/cgi/man.cgi?query=ports&sektion=7>. Ports 框架的官方文档，包含 FETCH_CMD 与 BATCH 等参数说明。
+
+## 附录：Port 安装示例
+
+### 查看 python 的 ports 在哪个位置
+
+可以再次使用 `whereis` 命令来确认 python 的具体位置。
+
+查找 python 可执行文件、源代码及手册页所在路径：
+
+```sh
+# whereis python
+python: /usr/ports/lang/python
+```
+
+### 安装 python3
+
+现在以安装 python3 为例，演示如何使用 Ports 编译安装软件。
+
+```sh
+# cd /usr/ports/lang/python
+# make BATCH=yes clean
+```
+
+其中 `BATCH=yes`（批处理）意味着使用默认参数进行构建。
+
+### 如何设置所有必需的依赖
+
+在编译软件前，有时需要先设置所有依赖项的配置选项。
+
+```sh
+# make config-recursive
+```
+
+### 如何使用 pkg 安装依赖
+
+为了节省编译时间，可以使用 pkg 来安装所需的依赖，仅使用 Ports 来编译软件包本体。
+
+不使用 Ports 来编译依赖，仅使用 Ports 来编译软件包本体：
+
+```sh
+# make install-missing-packages
+```
+
+以 `chinese/fcitx` 为示例：
+
+```sh
+# cd /usr/ports/chinese/fcitx
+# make install-missing-packages
+Updating FreeBSD repository catalogue...
+FreeBSD repository is up to date.
+Updating FreeBSD-base repository catalogue...
+FreeBSD-base repository is up to date.
+All repositories are up to date.
+Updating database digests format: 100%
+The following 2 package(s) will be affected (of 0 checked):
+
+New packages to be INSTALLED:
+	e2fsprogs-libuuid: 1.47.1 [FreeBSD]
+	enchant2: 2.2.15_5 [FreeBSD]
+
+Number of packages to be installed: 2
+
+94 KiB to be downloaded.
+
+Proceed with this action? [y/N]:
+```
 
 ## 故障排除与未竟事宜
 
