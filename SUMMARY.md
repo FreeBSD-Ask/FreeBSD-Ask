@@ -289,7 +289,6 @@
 * [GNU/Linux 发行版比较](fu-lu1/gnu-linux.md)
 * [DragonFly BSD 系统导论](fu-lu1/dragonfly-bsd-xi-tong-dao-lun.md)
 * [TwinCAT/BSD 系统导论](fu-lu1/twincat-bsd-xi-tong-dao-lun.md)
-* [FreeBSD 兼容的网络适配器](fu-lu1/freebsd-jian-rong-de-wang-luo-shi-pei-qi.md)
 * [FreeBSD 桌面发行版评述](fu-lu1/freebsd-zhuo-mian-fa-xing-ban-ping-shu.md)
 * [BSD 许可证概览](fu-lu1/bsd-xu-ke-zheng-gai-lan.md)
 * [microSD 卡参数简介](fu-lu1/cun-chu-ka.md)
