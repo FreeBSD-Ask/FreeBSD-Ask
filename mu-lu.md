@@ -38,12 +38,10 @@
 * [3.5 安装双系统（后安装 FreeBSD）](di-3-zhang-freebsd-gao-ji-an-zhuang/di-3.5-jie-an-zhuang-shuang-xi-tong-hou-an-zhuang-freebsd.md)
 * [3.6 基于 Apple M1 和 Parallels Desktop 20 安装 FreeBSD](di-3-zhang-freebsd-gao-ji-an-zhuang/di-3.6-jie-ji-yu-apple-m1-he-parallels-desktop-20-an-zhuang-freebsd.md)
 * [3.7 基于 Apple M1 和 VMware Fusion Pro 安装 FreeBSD](di-3-zhang-freebsd-gao-ji-an-zhuang/di-3.7-jie-ji-yu-apple-m1-he-vmware-fusion-pro-an-zhuang-freebsd.md)
-* [3.8 使用 QEMU 在 x86 架构 Windows 主机上安装 RISC-V 架构的 FreeBSD](di-3-zhang-freebsd-gao-ji-an-zhuang/di-3.8-jie-shi-yong-qemu-zai-x86-jia-gou-windows-zhu-ji-shang-an-zhuang-risc-v-jia-gou-de-freebsd.md)
+* [3.8 基于 Apple M1 和 UTM 安装 FreeBSD](di-3-zhang-freebsd-gao-ji-an-zhuang/di-3.8-jie-ji-yu-apple-m1-he-utm-an-zhuang-freebsd.md)
 * [3.9 腾讯云轻量云安装 FreeBSD（传统引导和 MBR 分区表）](di-3-zhang-freebsd-gao-ji-an-zhuang/di-3.9-jie-teng-xun-yun-qing-liang-yun-an-zhuang-freebsd-chuan-tong-yin-dao-he-mbr-fen-qu-biao.md)
 * [3.10 KVM、QEMU 等平台安装 FreeBSD（传统引导和 MBR 分区表）](di-3-zhang-freebsd-gao-ji-an-zhuang/di-3.10-jie-kvm-qemu-deng-ping-tai-an-zhuang-freebsd-chuan-tong-yin-dao-he-mbr-fen-qu-biao.md)
-* [3.11 rEFInd 引导管理器（多系统引导管理）](di-3-zhang-freebsd-gao-ji-an-zhuang/di-3.11-jie-refind-yin-dao-guan-li-qi-duo-xi-tong-yin-dao-guan-li.md)
-* [3.12 阿里云轻量应用服务器安装 FreeBSD（UEFI 和 GPT 分区表）](di-3-zhang-freebsd-gao-ji-an-zhuang/di-3.12-jie-a-li-yun-qing-liang-ying-yong-fu-wu-qi-an-zhuang-freebsd-uefi-he-gpt-fen-qu-biao.md)
-* [3.13 基于 Apple M1 和 UTM 安装 FreeBSD](di-3-zhang-freebsd-gao-ji-an-zhuang/di-3.13-jie-ji-yu-apple-m1-he-utm-an-zhuang-freebsd.md)
+* [3.11 阿里云轻量应用服务器安装 FreeBSD（UEFI 和 GPT 分区表）](di-3-zhang-freebsd-gao-ji-an-zhuang/di-3.11-jie-a-li-yun-qing-liang-ying-yong-fu-wu-qi-an-zhuang-freebsd-uefi-he-gpt-fen-qu-biao.md)
 
 ## 第 4 章 FreeBSD 基础
 
@@ -197,6 +195,7 @@
 * [18.3 树莓派 Linux 兼容层](di-18-zhang-qian-ru-shi-ping-tai/di-18.3-jie-shu-mei-pai-linux-jian-rong-ceng.md)
 * [18.4 Radxa X4（x86）开发板](di-18-zhang-qian-ru-shi-ping-tai/di-18.4-jie-radxa-x4-x86-kai-fa-ban.md)
 * [18.5 通用嵌入式开发环境](di-18-zhang-qian-ru-shi-ping-tai/di-18.5-jie-tong-yong-qian-ru-shi-kai-fa-huan-jing.md)
+* [18.6 使用 QEMU 在 x86 架构 Windows 主机上安装 RISC-V 架构的 FreeBSD](di-18-zhang-qian-ru-shi-ping-taidi-3-zhang-freebsd-gao-ji-an-zhuang/di-18.6-jie-shi-yong-qemu-zai-x86-jia-gou-windows-zhu-ji-shang-an-zhuang-risc-v-jia-gou-de-freebsd.md)
 
 ## 第 19 章 数据库管理
 
@@ -287,6 +286,8 @@
 
 ## 附录 Ⅰ 工具与资源
 
+* [自由软件与开源软件的常见误解辨析](fu-lu1/zi-you-ruan-jian.md)
+* [GNU/Linux 发行版比较](fu-lu1/gnu-linux.md)
 * [DragonFly BSD 系统导论](fu-lu1/dragonfly-bsd-xi-tong-dao-lun.md)
 * [TwinCAT/BSD 系统导论](fu-lu1/twincat-bsd-xi-tong-dao-lun.md)
 * [FreeBSD 兼容的网络适配器](fu-lu1/freebsd-jian-rong-de-wang-luo-shi-pei-qi.md)
