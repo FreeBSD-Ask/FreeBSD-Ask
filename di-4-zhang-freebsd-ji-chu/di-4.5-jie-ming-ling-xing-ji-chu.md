@@ -193,89 +193,6 @@ usage: ls [-ABCFGHILPRSTUWZabcdfghiklmnopqrstuvwxy1,] [--color=when] [-D format]
 >
 > 命令前面的 `#` 表示什么意思？`#` 在 shell 当中一般是起注释作用（由 [POSIX.1-2024](https://pubs.opengroup.org/onlinepubs/9799919799/utilities/V3_chap02.html) 规定），相当于 C 语言中的 `//`。意味着后边的文字只起到说明作用，不起实际作用。
 >
-### 拼写自动纠正工具（可选）
-
-#### 安装与配置
-
-FreeBSD 可使用 `sysutils/thefuck` 工具实现命令拼写自动纠正功能。该工具可自动检测并纠正命令输入错误。
-
-使用 pkg 安装：
-
-```sh
-# pkg install thefuck
-```
-
-或使用 Ports 构建：
-
-```sh
-# cd /usr/ports/misc/thefuck/
-# make install clean
-```
-
-#### 配置 thefuck
-
-查看安装后的配置信息
-
-```sh
-# fuck
-Seems like fuck alias isn't configured!
-More details - https://github.com/nvbn/thefuck#manual-installation
-```
-
-打开网页浏览。发现要将 `eval $(thefuck --alias)` 加入到 `~/.bash_profile`（bash shell）、`~/.bashrc`（bash shell）或 `~/.zshrc`（zsh shell）。
-
-FreeBSD 默认使用的是 sh，因此将下行：
-
-```sh
-eval $(thefuck --alias)
-```
-
-在 FreeBSD 默认 sh 环境中，需将以下配置写入 `~/.shrc` 文件：
-
-```sh
-# . ~/.shrc
-# fuck
-No fucks given
-```
-
-> **技巧**
->
-> 根据作者信息，若不喜欢输入 `fuck`，还可以使用其他别名：若更改为 `eval $(thefuck --alias abc)`，则下方所有 `fuck` 命令都会被换为 `abc`。
->
->```sh
-> # abc
-> Nothing found
-> # plg install gimp
->-sh: plg: not found
-> # abc
-> pkg install gimp [enter/↑/↓/ctrl+c]
-> ……省略一部分……
->```
-
-#### 使用示例
-
-```sh
-# ls-l /home/ykla/ # 先输入一遍错误的试试
--sh: ls-l: not found
-# fuck
-ls -l /home/ykla/ [enter/↑/↓/ctrl+c] # 上下箭头切换可能的命令，回车确认，Ctrl+C 中断
-total 317
-……省略一部分……
-drwxr-xr-x  2 ykla ykla        2 Mar  9 20:45 下载
-drwxr-xr-x  2 ykla ykla        2 Mar  9 20:45 桌面
-```
-
-再试试：
-
-```sh
-# plg install gimp
--sh: plg: not found
-# fuck
-pkg install gimp [enter/↑/↓/ctrl+c]
-Updating FreeBSD repository catalogue...
-FreeBSD repository is up to date.
-……省略一部分……
-```
 
 ## 命令的执行与中断
 
@@ -787,6 +704,91 @@ FreeBSD 的设计更接近传统 UNIX 的行为。
 > **注意**
 >
 > 在 FreeBSD 下，关机与重启操作都需要 root 权限才能执行。
+
+## 附录：拼写自动纠正工具
+
+### 安装与配置
+
+FreeBSD 可使用 `sysutils/thefuck` 工具实现命令拼写自动纠正功能。该工具可自动检测并纠正命令输入错误。
+
+使用 pkg 安装：
+
+```sh
+# pkg install thefuck
+```
+
+或使用 Ports 构建：
+
+```sh
+# cd /usr/ports/misc/thefuck/
+# make install clean
+```
+
+### 配置 thefuck
+
+查看安装后的配置信息
+
+```sh
+# fuck
+Seems like fuck alias isn't configured!
+More details - https://github.com/nvbn/thefuck#manual-installation
+```
+
+打开网页浏览。发现要将 `eval $(thefuck --alias)` 加入到 `~/.bash_profile`（bash shell）、`~/.bashrc`（bash shell）或 `~/.zshrc`（zsh shell）。
+
+FreeBSD 默认使用的是 sh，因此将下行：
+
+```sh
+eval $(thefuck --alias)
+```
+
+在 FreeBSD 默认 sh 环境中，需将以下配置写入 `~/.shrc` 文件：
+
+```sh
+# . ~/.shrc
+# fuck
+No fucks given
+```
+
+> **技巧**
+>
+> 根据作者信息，若不喜欢输入 `fuck`，还可以使用其他别名：若更改为 `eval $(thefuck --alias abc)`，则下方所有 `fuck` 命令都会被换为 `abc`。
+>
+>```sh
+> # abc
+> Nothing found
+> # plg install gimp
+>-sh: plg: not found
+> # abc
+> pkg install gimp [enter/↑/↓/ctrl+c]
+> ……省略一部分……
+>```
+
+### 使用示例
+
+```sh
+# ls-l /home/ykla/ # 先输入一遍错误的试试
+-sh: ls-l: not found
+# fuck
+ls -l /home/ykla/ [enter/↑/↓/ctrl+c] # 上下箭头切换可能的命令，回车确认，Ctrl+C 中断
+total 317
+……省略一部分……
+drwxr-xr-x  2 ykla ykla        2 Mar  9 20:45 下载
+drwxr-xr-x  2 ykla ykla        2 Mar  9 20:45 桌面
+```
+
+再试试：
+
+```sh
+# plg install gimp
+-sh: plg: not found
+# fuck
+pkg install gimp [enter/↑/↓/ctrl+c]
+Updating FreeBSD repository catalogue...
+FreeBSD repository is up to date.
+……省略一部分……
+```
+
 
 ## 参考文献
 
