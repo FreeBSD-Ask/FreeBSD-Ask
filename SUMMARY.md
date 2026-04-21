@@ -62,10 +62,9 @@
 * [5.2 FreeBSD 镜像站现状](di-5-zhang-ruan-jian-guan-li-he-xi-tong-sheng-ji/di-5.2-jie-freebsd-jing-xiang-zhan-xian-zhuang.md)
 * [5.3 使用 pkg 管理二进制包](di-5-zhang-ruan-jian-guan-li-he-xi-tong-sheng-ji/di-5.3-jie-shi-yong-pkg-guan-li-er-jin-zhi-bao.md)
 * [5.4 使用 Ports 以源代码方式安装软件](di-5-zhang-ruan-jian-guan-li-he-xi-tong-sheng-ji/di-5.4-jie-shi-yong-ports-yi-yuan-dai-ma-fang-shi-an-zhuang-ruan-jian.md)
-* [5.5 使用 DVD 安装软件](di-5-zhang-ruan-jian-guan-li-he-xi-tong-sheng-ji/di-5.5-jie-shi-yong-dvd-an-zhuang-ruan-jian.md)
-* [5.6 使用 freebsd-update 更新 FreeBSD](di-5-zhang-ruan-jian-guan-li-he-xi-tong-sheng-ji/di-5.6-jie-shi-yong-freebsd-update-geng-xin-freebsd.md)
-* [5.7 使用源代码更新 FreeBSD](di-5-zhang-ruan-jian-guan-li-he-xi-tong-sheng-ji/di-5.7-jie-shi-yong-yuan-dai-ma-geng-xin-freebsd.md)
-* [5.8 ZFS 启动环境与多版本共存](di-5-zhang-ruan-jian-guan-li-he-xi-tong-sheng-ji/di-5.8-jie-zfs-qi-dong-huan-jing-yu-duo-ban-ben-gong-cun.md)
+* [5.5 使用 freebsd-update 更新 FreeBSD](di-5-zhang-ruan-jian-guan-li-he-xi-tong-sheng-ji/di-5.5-jie-shi-yong-freebsd-update-geng-xin-freebsd.md)
+* [5.6 使用源代码更新 FreeBSD](di-5-zhang-ruan-jian-guan-li-he-xi-tong-sheng-ji/di-5.6-jie-shi-yong-yuan-dai-ma-geng-xin-freebsd.md)
+* [5.7 使用 DVD 安装软件](di-5-zhang-ruan-jian-guan-li-he-xi-tong-sheng-ji/di-5.7-jie-shi-yong-dvd-an-zhuang-ruan-jian.md)
 
 ## 第 6 章 桌面环境
 
@@ -148,6 +147,7 @@
 * [13.8 设备资源提示文件（device.hints）](di-13-zhang-xi-tong-guan-li/di-13.8-jie-she-bei-zi-yuan-ti-shi-wen-jian-device-hints.md)
 * [13.9 crontab 及定时任务文件（periodic.conf）](di-13-zhang-xi-tong-guan-li/di-13.9-jie-crontab-ji-ding-shi-ren-wu-wen-jian-periodic-conf.md)
 * [13.10 内核状态默认配置文件（sysctl.conf）](di-13-zhang-xi-tong-guan-li/di-13.10-jie-nei-he-zhuang-tai-mo-ren-pei-zhi-wen-jian-sysctl-conf.md)
+* [13.11 系统更新检测工具](di-13-zhang-xi-tong-guan-li/di-13.11-jie-update.md)
 
 ## 第 14 章 网络管理
 
