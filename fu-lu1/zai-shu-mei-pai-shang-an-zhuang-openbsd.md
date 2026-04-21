@@ -1,4 +1,4 @@
-# 25.7 在树莓派上安装 OpenBSD
+# 在树莓派上安装 OpenBSD
 
 本节介绍如何在树莓派（Raspberry Pi）上安装 OpenBSD 系统，以树莓派 4B 为例提供详细的安装流程与技术要点。
 
