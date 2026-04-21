@@ -266,54 +266,54 @@
 * [24.5 GENERIC 内核选项注解（AMD64）](di-24-zhang-freebsd-nei-he-jia-gou/di-24.5-jie-generic-nei-he-xuan-xiang-zhu-jie-amd64.md)
 * [24.6 在 Linux 系统上交叉构建 FreeBSD](di-24-zhang-freebsd-nei-he-jia-gou/di-24.6-jie-zai-linux-xi-tong-shang-jiao-cha-gou-jian-freebsd.md)
 
-## 第 25 章 OpenBSD 系统入门
+## 附录 I OpenBSD 系统入门
 
-* [25.1 OpenBSD 项目概述](di-25-zhang-openbsd-xi-tong-ru-men/di-25.1-jie-openbsd-xiang-mu-gai-shu.md)
-* [25.2 OpenBSD 系统安装](di-25-zhang-openbsd-xi-tong-ru-men/di-25.2-jie-openbsd-xi-tong-an-zhuang.md)
-* [25.3 OpenBSD 系统配置](di-25-zhang-openbsd-xi-tong-ru-men/di-25.3-jie-openbsd-xi-tong-pei-zhi.md)
-* [25.4 OpenBSD 包管理器](di-25-zhang-openbsd-xi-tong-ru-men/di-25.4-jie-openbsd-bao-guan-li-qi.md)
-* [25.5 桌面和其他软件](di-25-zhang-openbsd-xi-tong-ru-men/di-25.5-jie-zhuo-mian-he-qi-ta-ruan-jian.md)
-* [25.6 在昉·星光 2 开发板（RISC-V）上安装 OpenBSD](di-25-zhang-openbsd-xi-tong-ru-men/di-25.6-jie-zai-fang-xing-guang-2-kai-fa-ban-risc-v-shang-an-zhuang-openbsd.md)
-* [25.7 在树莓派上安装 OpenBSD](di-25-zhang-openbsd-xi-tong-ru-men/di-25.7-jie-zai-shu-mei-pai-shang-an-zhuang-openbsd.md)
+* [OpenBSD 项目概述](fu-lu1/openbsd-xiang-mu-gai-shu.md)
+* [OpenBSD 系统安装](fu-lu1/openbsd-xi-tong-an-zhuang.md)
+* [OpenBSD 系统配置](fu-lu1/openbsd-xi-tong-pei-zhi.md)
+* [OpenBSD 包管理器](fu-lu1/openbsd-bao-guan-li-qi.md)
+* [桌面和其他软件](fu-lu1/zhuo-mian-he-qi-ta-ruan-jian.md)
+* [在昉·星光 2 开发板（RISC-V）上安装 OpenBSD](fu-lu1/zai-fang-xing-guang-2-kai-fa-ban-risc-v-shang-an-zhuang-openbsd.md)
+* [在树莓派上安装 OpenBSD](fu-lu1/zai-shu-mei-pai-shang-an-zhuang-openbsd.md)
 
-## 第 26 章 NetBSD 系统入门
+## 附录 II NetBSD 系统入门
 
-* [26.1 NetBSD 项目概述](di-26-zhang-netbsd-xi-tong-ru-men/di-26.1-jie-netbsd-xiang-mu-gai-shu.md)
-* [26.2 NetBSD 安装示例](di-26-zhang-netbsd-xi-tong-ru-men/di-26.2-jie-netbsd-an-zhuang-shi-li.md)
-* [26.3 NetBSD 软件源与包管理器](di-26-zhang-netbsd-xi-tong-ru-men/di-26.3-jie-netbsd-ruan-jian-yuan-yu-bao-guan-li-qi.md)
-* [26.4 桌面及中文软件配置](di-26-zhang-netbsd-xi-tong-ru-men/di-26.4-jie-zhuo-mian-ji-zhong-wen-ruan-jian-pei-zhi.md)
+* [NetBSD 项目概述](fu-lu2/netbsd-xiang-mu-gai-shu.md)
+* [NetBSD 安装示例](fu-lu2/netbsd-an-zhuang-shi-li.md)
+* [NetBSD 软件源与包管理器](fu-lu2/netbsd-ruan-jian-yuan-yu-bao-guan-li-qi.md)
+* [桌面及中文软件配置](fu-lu2/zhuo-mian-ji-zhong-wen-ruan-jian-pei-zhi.md)
 
-## 附录 Ⅰ 工具与资源
+## 附录 III 工具与资源
 
-* [自由软件与开源软件的常见误解辨析](fu-lu1/zi-you-ruan-jian.md)
-* [GNU/Linux 发行版比较](fu-lu1/gnu-linux.md)
-* [DragonFly BSD 系统导论](fu-lu1/dragonfly-bsd-xi-tong-dao-lun.md)
-* [TwinCAT/BSD 系统导论](fu-lu1/twincat-bsd-xi-tong-dao-lun.md)
-* [FreeBSD 桌面发行版评述](fu-lu1/freebsd-zhuo-mian-fa-xing-ban-ping-shu.md)
-* [BSD 许可证概览](fu-lu1/bsd-xu-ke-zheng-gai-lan.md)
-* [microSD 卡参数简介](fu-lu1/cun-chu-ka.md)
+* [自由软件与开源软件的常见误解辨析](fu-lu3/zi-you-ruan-jian.md)
+* [GNU/Linux 发行版比较](fu-lu3/gnu-linux.md)
+* [DragonFly BSD 系统导论](fu-lu3/dragonfly-bsd-xi-tong-dao-lun.md)
+* [TwinCAT/BSD 系统导论](fu-lu3/twincat-bsd-xi-tong-dao-lun.md)
+* [FreeBSD 桌面发行版评述](fu-lu3/freebsd-zhuo-mian-fa-xing-ban-ping-shu.md)
+* [BSD 许可证概览](fu-lu3/bsd-xu-ke-zheng-gai-lan.md)
+* [microSD 卡参数简介](fu-lu3/cun-chu-ka.md)
 
-## 附录 II UEFI/BIOS 注解（AMI BIOS）
+## 附录 IV UEFI/BIOS 注解（AMI BIOS）
 
-* [UEFI/BIOS 概述与警告](fu-lu2/uefi-bios-gai-shu-yu-jing-gao.md)
-* [Main 主菜单](fu-lu2/main-zhu-cai-dan.md)
-* [Advanced 高级](fu-lu2/advanced-gao-ji.md)
-* [Chipset 芯片组](fu-lu2/chipset-xin-pian-zu.md)
-* [Security 安全](fu-lu2/security-an-quan.md)
-* [Boot 启动](fu-lu2/boot-qi-dong.md)
-* [Save & Exit 保存与退出](fu-lu2/save-exit-bao-cun-yu-tui-chu.md)
+* [UEFI/BIOS 概述与警告](fu-lu4/uefi-bios-gai-shu-yu-jing-gao.md)
+* [Main 主菜单](fu-lu4/main-zhu-cai-dan.md)
+* [Advanced 高级](fu-lu4/advanced-gao-ji.md)
+* [Chipset 芯片组](fu-lu4/chipset-xin-pian-zu.md)
+* [Security 安全](fu-lu4/security-an-quan.md)
+* [Boot 启动](fu-lu4/boot-qi-dong.md)
+* [Save & Exit 保存与退出](fu-lu4/save-exit-bao-cun-yu-tui-chu.md)
 
-## 附录 III 文学故事
+## 附录 V 文学故事
 
-* [我与 FreeBSD 的故事](fu-lu3/wo-yu-freebsd-de-gu-shi.md)
-* [两次告别](fu-lu3/liang-ci-gao-bie.md)
-* [小说：《青其正色》](fu-lu3/xiao-shuo-qing-qi-zheng-se.md)
-* [小说：《吾乡何处》](fu-lu3/xiao-shuo-wu-xiang-he-chu.md)
-* [小说：《你与暗》](fu-lu3/xiao-shuo-ni-yu-an.md)
-* [诗歌选](fu-lu3/shi-ge-xuan.md)
-* [手记](fu-lu3/shou-ji.md)
+* [我与 FreeBSD 的故事](fu-lu5/wo-yu-freebsd-de-gu-shi.md)
+* [两次告别](fu-lu5/liang-ci-gao-bie.md)
+* [小说：《青其正色》](fu-lu5/xiao-shuo-qing-qi-zheng-se.md)
+* [小说：《吾乡何处》](fu-lu5/xiao-shuo-wu-xiang-he-chu.md)
+* [小说：《你与暗》](fu-lu5/xiao-shuo-ni-yu-an.md)
+* [诗歌选](fu-lu5/shi-ge-xuan.md)
+* [手记](fu-lu5/shou-ji.md)
 
-## 附录 IV 参考文献与术语表
+## 附录 VI 参考文献与术语表
 
-* [参考书目](fu-lu4/can-kao-shu-mu.md)
-* [术语表](fu-lu4/shu-yu-biao.md)
+* [参考书目](fu-lu6/can-kao-shu-mu.md)
+* [术语表](fu-lu6/shu-yu-biao.md)

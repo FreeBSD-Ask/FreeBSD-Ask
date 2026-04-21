@@ -1,6 +1,6 @@
-# 26.1 NetBSD 项目概述
+# NetBSD 项目概述
 
-在前述章节介绍 FreeBSD 系统的基础上，本章转向 BSD 家族的另一重要成员 NetBSD。NetBSD 是一个开源、可移植的类 UNIX 操作系统，作为 BSD 家族的重要成员，它起源于 4.3BSD NET/2 和 386BSD，其首个版本 0.8 发布于 1993 年 4 月 19 日（此后也引入了 4.4BSD-Lite 的变更）。
+在前述章节介绍 FreeBSD 系统的基础上，本附录转向 BSD 家族的另一重要成员 NetBSD。NetBSD 是一个开源、可移植的类 UNIX 操作系统，作为 BSD 家族的重要成员，它起源于 4.3BSD NET/2 和 386BSD，其首个版本 0.8 发布于 1993 年 4 月 19 日（此后也引入了 4.4BSD-Lite 的变更）。
 
 NetBSD 的学术渊源可追溯至加州大学伯克利分校（UC Berkeley）的 Berkeley Software Distribution（BSD）项目，在操作系统可移植性研究领域具有重要地位。
 
