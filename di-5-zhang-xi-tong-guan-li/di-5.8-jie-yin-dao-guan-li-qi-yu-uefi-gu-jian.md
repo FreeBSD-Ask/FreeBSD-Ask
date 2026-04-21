@@ -239,7 +239,6 @@ grub-install: error: unknown filesystem.
 
 加上参数 `-vvv` 可以查看详细错误信息，输出内容较长，可在 <https://gist.github.com/ykla/9b6de6c8d4eee524840acb9981bf850a> 查看。
 
-
 ## rEFInd 引导管理器（多系统引导管理）
 
 在多系统环境下，频繁通过 BIOS 固件界面切换操作系统存在效率低下的问题。

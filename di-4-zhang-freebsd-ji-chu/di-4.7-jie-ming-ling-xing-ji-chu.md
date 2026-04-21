@@ -789,7 +789,6 @@ FreeBSD repository is up to date.
 ……省略一部分……
 ```
 
-
 ## 参考文献
 
 - FreeBSD Project. make -- maintain program groups[EB/OL]. [2026-04-17]. <https://man.freebsd.org/cgi/man.cgi?query=make&sektion=1>. BSD make 手册页，描述构建工具语法与用法。
