@@ -3764,6 +3764,7 @@ Auto（自动）
 这个 BIOS 设置项不是 PCIe 设备报告的 LTR 值本身。它是系统 (具体是 SA 内的 PCIe 控制器/电源管理逻辑) 在评估 PCIe 设备 LTR 要求时，需要额外考虑的一个内部延迟补偿值。
 
 参见：博客园. BIOS PCIe 配置里的 LTR Snoop Latency value of SA PCIE[EB/OL]. [2026-03-26]. <https://www.cnblogs.com/wanglouxiaozi/p/18946234>.
+
 - Non Snoop Latency Override（覆盖非侦听延迟）
 
 Disabled（禁用）
@@ -6326,5 +6327,3 @@ PLL：Phase Locked Loop，锁相环
 ### PinCntrl Driver GPIO Scheme（引脚控制驱动 GPIO 方案）
 
 其具体作用尚不明确。
-
-

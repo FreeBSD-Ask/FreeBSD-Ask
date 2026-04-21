@@ -105,4 +105,3 @@ Choose the system default language（选择系统默认语言）
 ## 底部版本信息
 
 底部版本信息区域显示了 BIOS 固件的版本号和版权声明，用于标识固件的发布信息，例如“Version 2.22.1289 Copyright (C) 2025 AMI（版本 2.22.1289 版权所有 (C) AMI 2025）”。
-
