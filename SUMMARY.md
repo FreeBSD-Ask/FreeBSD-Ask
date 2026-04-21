@@ -47,14 +47,14 @@
 
 * [4.1 Windows 用户迁移指南](di-4-zhang-freebsd-ji-chu/di-4.1-jie-windows-yong-hu-qian-yi-zhi-nan.md)
 * [4.2 Linux 用户迁移指南](di-4-zhang-freebsd-ji-chu/di-4.2-jie-linux-yong-hu-qian-yi-zhi-nan.md)
-* [4.3 虚拟控制台和终端](di-4-zhang-freebsd-ji-chu/di-4.3-jie-xu-ni-kong-zhi-tai-he-zhong-duan.md)
-* [4.4 Shell 基础](di-4-zhang-freebsd-ji-chu/di-4.4-jie-shell-ji-chu.md)
-* [4.5 命令行基础](di-4-zhang-freebsd-ji-chu/di-4.5-jie-ming-ling-xing-ji-chu.md)
-* [4.6 文本编辑器](di-4-zhang-freebsd-ji-chu/di-4.6-jie-wen-ben-bian-ji-qi.md)
-* [4.7 用户和基本账户管理](di-4-zhang-freebsd-ji-chu/di-4.7-jie-yong-hu-he-ji-ben-zhang-hu-guan-li.md)
-* [4.8 权限](di-4-zhang-freebsd-ji-chu/di-4.8-jie-quan-xian.md)
-* [4.9 权限提升工具（sudo、doas 等）](di-4-zhang-freebsd-ji-chu/di-4.9-jie-te-quan-ti-sheng-gong-ju-sudo-doas-deng.md)
-* [4.10 系统目录结构](di-4-zhang-freebsd-ji-chu/di-4.10-jie-xi-tong-mu-lu-jie-gou.md)
+* [4.3 系统目录结构](di-4-zhang-freebsd-ji-chu/di-4.3-jie-xi-tong-mu-lu-jie-gou.md)
+* [4.4 虚拟控制台和终端](di-4-zhang-freebsd-ji-chu/di-4.4-jie-xu-ni-kong-zhi-tai-he-zhong-duan.md)
+* [4.5 Shell 基础](di-4-zhang-freebsd-ji-chu/di-4.5-jie-shell-ji-chu.md)
+* [4.6 命令行基础](di-4-zhang-freebsd-ji-chu/di-4.6-jie-ming-ling-xing-ji-chu.md)
+* [4.7 文本编辑器](di-4-zhang-freebsd-ji-chu/di-4.7-jie-wen-ben-bian-ji-qi.md)
+* [4.8 用户和基本账户管理](di-4-zhang-freebsd-ji-chu/di-4.8-jie-yong-hu-he-ji-ben-zhang-hu-guan-li.md)
+* [4.9 权限](di-4-zhang-freebsd-ji-chu/di-4.9-jie-quan-xian.md)
+* [4.10 权限提升工具（sudo、doas 等）](di-4-zhang-freebsd-ji-chu/di-4.10-jie-te-quan-ti-sheng-gong-ju-sudo-doas-deng.md)
 
 ## 第 5 章 软件管理和系统升级
 
