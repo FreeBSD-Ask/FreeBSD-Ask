@@ -50,12 +50,13 @@
 * [4.3 系统目录结构](di-4-zhang-freebsd-ji-chu/di-4.3-jie-xi-tong-mu-lu-jie-gou.md)
 * [4.4 虚拟控制台和终端](di-4-zhang-freebsd-ji-chu/di-4.4-jie-xu-ni-kong-zhi-tai-he-zhong-duan.md)
 * [4.5 Shell 基础](di-4-zhang-freebsd-ji-chu/di-4.5-jie-shell-ji-chu.md)
-* [4.6 命令行基础](di-4-zhang-freebsd-ji-chu/di-4.6-jie-ming-ling-xing-ji-chu.md)
-* [4.7 文本编辑器](di-4-zhang-freebsd-ji-chu/di-4.7-jie-wen-ben-bian-ji-qi.md)
-* [4.8 用户和基本账户管理](di-4-zhang-freebsd-ji-chu/di-4.8-jie-yong-hu-he-ji-ben-zhang-hu-guan-li.md)
-* [4.9 权限](di-4-zhang-freebsd-ji-chu/di-4.9-jie-quan-xian.md)
-* [4.10 启用 root 账户桌面登录](di-4-zhang-freebsd-ji-chu/di-4.10-jie-qi-yong-root-zhang-hu-zhuo-mian-deng-lu.md)
-* [4.11 权限提升工具（sudo、doas 等）](di-4-zhang-freebsd-ji-chu/di-4.11-jie-te-quan-ti-sheng-gong-ju-sudo-doas-deng.md)
+* [4.6 压缩解压工具](di-4-zhang-freebsd-ji-chu/di-4.6-jie-ya-suo-jie-ya-gong-ju.md)
+* [4.7 命令行基础](di-4-zhang-freebsd-ji-chu/di-4.7-jie-ming-ling-xing-ji-chu.md)
+* [4.8 文本编辑器](di-4-zhang-freebsd-ji-chu/di-4.8-jie-wen-ben-bian-ji-qi.md)
+* [4.9 用户和基本账户管理](di-4-zhang-freebsd-ji-chu/di-4.9-jie-yong-hu-he-ji-ben-zhang-hu-guan-li.md)
+* [4.10 权限](di-4-zhang-freebsd-ji-chu/di-4.10-jie-quan-xian.md)
+* [4.11 启用 root 账户桌面登录](di-4-zhang-freebsd-ji-chu/di-4.11-jie-qi-yong-root-zhang-hu-zhuo-mian-deng-lu.md)
+* [4.12 权限提升工具（sudo、doas 等）](di-4-zhang-freebsd-ji-chu/di-4.12-jie-te-quan-ti-sheng-gong-ju-sudo-doas-deng.md)
 
 ## 第 5 章 软件管理和系统升级
 
@@ -96,13 +97,12 @@
 * [8.2 Fcitx 输入法框架](di-8-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-8.2-jie-fcitx-shu-ru-fa-kuang-jia.md)
 * [8.3 IBus 输入法框架](di-8-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-8.3-jie-ibus-shu-ru-fa-kuang-jia.md)
 * [8.4 五笔输入法](di-8-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-8.4-jie-wu-bi-shu-ru-fa.md)
-* [8.5 Web 浏览器](di-8-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-8.5-jie-web-liu-lan-qi.md)
-* [8.6 QQ（Linux 版）](di-8-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-8.6-jie-qq-linux-ban.md)
-* [8.7 系统字体替换](di-8-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-8.7-jie-xi-tong-zi-ti-ti-huan.md)
+* [8.5 系统字体替换](di-8-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-8.5-jie-xi-tong-zi-ti-ti-huan.md)
+* [8.6 Web 浏览器](di-8-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-8.6-jie-web-liu-lan-qi.md)
+* [8.7 QQ（Linux 版）](di-8-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-8.7-jie-qq-linux-ban.md)
 * [8.8 WPS Office（Linux 版）](di-8-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-8.8-jie-wps-office-linux-ban.md)
-* [8.9 压缩解压工具](di-8-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-8.9-jie-ya-suo-jie-ya-gong-ju.md)
-* [8.10 微信（Linux 版）](di-8-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-8.10-jie-wei-xin-linux-ban.md)
-* [8.11 Wine 配置](di-8-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-8.11-jie-wine-pei-zhi.md)
+* [8.9 微信（Linux 版）](di-8-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-8.9-jie-wei-xin-linux-ban.md)
+* [8.10 Wine 配置](di-8-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-8.10-jie-wine-pei-zhi.md)
 
 ## 第 9 章 多媒体和外部设备
 
@@ -138,12 +138,12 @@
 
 * [13.1 启动引导器及配置文件（loader.conf）](di-13-zhang-xi-tong-guan-li/di-13.1-jie-qi-dong-yin-dao-qi-ji-pei-zhi-wen-jian-loader-conf.md)
 * [13.2 init.rc 服务管理](di-13-zhang-xi-tong-guan-li/di-13.2-jie-init-rc-fu-wu-guan-li.md)
-* [13.3 bsdconfig 系统配置工具](di-13-zhang-xi-tong-guan-li/di-13.3-jie-bsdconfig-xi-tong-pei-zhi-gong-ju.md)
-* [13.4 SSH 服务与工具](di-13-zhang-xi-tong-guan-li/di-13.4-jie-ssh-fu-wu-yu-gong-ju.md)
-* [13.5 远程桌面访问](di-13-zhang-xi-tong-guan-li/di-13.5-jie-yuan-cheng-zhuo-mian-fang-wen.md)
-* [13.6 Live 镜像与系统恢复](di-13-zhang-xi-tong-guan-li/di-13.6-jie-live-jing-xiang-yu-xi-tong-hui-fu.md)
-* [13.7 引导管理器与 UEFI 固件](di-13-zhang-xi-tong-guan-li/di-13.7-jie-yin-dao-guan-li-qi-yu-uefi-gu-jian.md)
-* [13.8 用户分级文件（login.conf）](di-13-zhang-xi-tong-guan-li/di-13.8-jie-yong-hu-fen-ji-wen-jian-login-conf.md)
+* [13.3 用户分级文件（login.conf）](di-13-zhang-xi-tong-guan-li/di-13.3-jie-yong-hu-fen-ji-wen-jian-login-conf.md)
+* [13.4 bsdconfig 系统配置工具](di-13-zhang-xi-tong-guan-li/di-13.4-jie-bsdconfig-xi-tong-pei-zhi-gong-ju.md)
+* [13.5 SSH 服务与工具](di-13-zhang-xi-tong-guan-li/di-13.5-jie-ssh-fu-wu-yu-gong-ju.md)
+* [13.6 远程桌面访问](di-13-zhang-xi-tong-guan-li/di-13.6-jie-yuan-cheng-zhuo-mian-fang-wen.md)
+* [13.7 Live 镜像与系统恢复](di-13-zhang-xi-tong-guan-li/di-13.7-jie-live-jing-xiang-yu-xi-tong-hui-fu.md)
+* [13.8 引导管理器与 UEFI 固件](di-13-zhang-xi-tong-guan-li/di-13.8-jie-yin-dao-guan-li-qi-yu-uefi-gu-jian.md)
 * [13.9 设备资源提示文件（device.hints）](di-13-zhang-xi-tong-guan-li/di-13.9-jie-she-bei-zi-yuan-ti-shi-wen-jian-device-hints.md)
 * [13.10 crontab 及定时任务文件（periodic.conf）](di-13-zhang-xi-tong-guan-li/di-13.10-jie-crontab-ji-ding-shi-ren-wu-wen-jian-periodic-conf.md)
 * [13.11 内核状态默认配置文件（sysctl.conf）](di-13-zhang-xi-tong-guan-li/di-13.11-jie-nei-he-zhuang-tai-mo-ren-pei-zhi-wen-jian-sysctl-conf.md)
@@ -158,17 +158,17 @@
 
 ## 第 15 章 防火墙
 
-* [15.1 Fail2Ban 配置（基于 IPFW、PF 与 IPF）](di-15-zhang-fang-huo-qiang/di-15.1-jie-fail2ban-pei-zhi-ji-yu-ipfw-pf-yu-ipf.md)
-* [15.2 Packet Filter（PF）](di-15-zhang-fang-huo-qiang/di-15.2-jie-packet-filter-pf.md)
-* [15.3 IPFilter（IPF）](di-15-zhang-fang-huo-qiang/di-15.3-jie-ipfilter-ipf.md)
-* [15.4 ipfirewall（IPFW）](di-15-zhang-fang-huo-qiang/di-15.4-jie-ipfirewall-ipfw.md)
+* [15.1 Packet Filter（PF）](di-15-zhang-fang-huo-qiang/di-15.1-jie-packet-filter-pf.md)
+* [15.2 IPFilter（IPF）](di-15-zhang-fang-huo-qiang/di-15.2-jie-ipfilter-ipf.md)
+* [15.3 ipfirewall（IPFW）](di-15-zhang-fang-huo-qiang/di-15.3-jie-ipfirewall-ipfw.md)
+* [15.4 Fail2Ban 配置（基于 IPFW、PF 与 IPF）](di-15-zhang-fang-huo-qiang/di-15.4-jie-fail2ban-pei-zhi-ji-yu-ipfw-pf-yu-ipf.md)
 
 ## 第 16 章 服务器
 
-* [16.1 FTP 服务器](di-16-zhang-fu-wu-qi/di-16.1-jie-ftp-fu-wu-qi.md)
-* [16.2 Webmin 管理平台](di-16-zhang-fu-wu-qi/di-16.2-jie-webmin-guan-li-ping-tai.md)
-* [16.3 GitLab Enterprise Edition 部署](di-16-zhang-fu-wu-qi/di-16.3-jie-gitlab-enterprise-edition-bu-shu.md)
-* [16.4 时间同步服务](di-16-zhang-fu-wu-qi/di-16.4-jie-shi-jian-tong-bu-fu-wu.md)
+* [16.1 时间同步服务](di-16-zhang-fu-wu-qi/di-16.1-jie-shi-jian-tong-bu-fu-wu.md)
+* [16.2 FTP 服务器](di-16-zhang-fu-wu-qi/di-16.2-jie-ftp-fu-wu-qi.md)
+* [16.3 Webmin 管理平台](di-16-zhang-fu-wu-qi/di-16.3-jie-webmin-guan-li-ping-tai.md)
+* [16.4 GitLab Enterprise Edition 部署](di-16-zhang-fu-wu-qi/di-16.4-jie-gitlab-enterprise-edition-bu-shu.md)
 * [16.5 WildFly 应用服务器](di-16-zhang-fu-wu-qi/di-16.5-jie-wildfly-ying-yong-fu-wu-qi.md)
 * [16.6 Rsync 数据同步](di-16-zhang-fu-wu-qi/di-16.6-jie-rsync-shu-ju-tong-bu.md)
 * [16.7 Samba 文件共享](di-16-zhang-fu-wu-qi/di-16.7-jie-samba-wen-jian-gong-xiang.md)
@@ -253,7 +253,7 @@
 * [24.1 FreeBSD 内核文件结构](di-24-zhang-freebsd-nei-he-jia-gou/di-24.1-jie-freebsd-nei-he-wen-jian-jie-gou.md)
 * [24.2 机器相关的内核选项注解](di-24-zhang-freebsd-nei-he-jia-gou/di-24.2-jie-ji-qi-xiang-guan-de-nei-he-xuan-xiang-zhu-jie.md)
 * [24.3 机器无关的内核选项注解](di-24-zhang-freebsd-nei-he-jia-gou/di-24.3-jie-ji-qi-wu-guan-de-nei-he-xuan-xiang-zhu-jie.md)
-* [24.4 GENERIC 内核选项注解（amd64）](di-24-zhang-freebsd-nei-he-jia-gou/di-24.4-jie-generic-nei-he-xuan-xiang-zhu-jie-amd64.md)
+* [24.4 GENERIC 内核选项注解（AMD64）](di-24-zhang-freebsd-nei-he-jia-gou/di-24.4-jie-generic-nei-he-xuan-xiang-zhu-jie-amd64.md)
 * [24.5 在 Linux 系统上交叉构建 FreeBSD](di-24-zhang-freebsd-nei-he-jia-gou/di-24.5-jie-zai-linux-xi-tong-shang-jiao-cha-gou-jian-freebsd.md)
 * [24.6 FreeBSD 源代码目录结构](di-24-zhang-freebsd-nei-he-jia-gou/di-24.6-jie-freebsd-yuan-dai-ma-mu-lu-jie-gou.md)
 
