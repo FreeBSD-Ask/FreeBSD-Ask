@@ -76,10 +76,10 @@
 
 ## 第 6 章 网络管理
 
-* [6.1 网络基础配置](di-6-zhang-wang-luo-guan-li/di-6.1-jie-wang-luo-ji-chu-pei-zhi.md)
-* [6.2 无线网络（Wi-Fi）配置](di-6-zhang-wang-luo-guan-li/di-6.2-jie-wu-xian-wang-luo-wi-fi-pei-zhi.md)
-* [6.3 USB 网络共享（USB tethering）](di-6-zhang-wang-luo-guan-li/di-6.3-jie-usb-wang-luo-gong-xiang-usb-tethering.md)
-* [6.4 TCP/IP 协议栈](di-6-zhang-wang-luo-guan-li/di-6.4-jie-tcp-ip-xie-yi-zhan.md)
+* [6.1 TCP/IP 协议栈](di-6-zhang-wang-luo-guan-li/di-6.1-jie-tcp-ip-xie-yi-zhan.md)
+* [6.2 网络基础配置](di-6-zhang-wang-luo-guan-li/di-6.2-jie-wang-luo-ji-chu-pei-zhi.md)
+* [6.3 无线网络（Wi-Fi）配置](di-6-zhang-wang-luo-guan-li/di-6.3-jie-wu-xian-wang-luo-wi-fi-pei-zhi.md)
+* [6.4 USB 网络共享（USB tethering）](di-6-zhang-wang-luo-guan-li/di-6.4-jie-usb-wang-luo-gong-xiang-usb-tethering.md)
 * [6.5 系统代理](di-6-zhang-wang-luo-guan-li/di-6.5-jie-xi-tong-dai-li.md)
 * [6.6 V2Ray 配置](di-6-zhang-wang-luo-guan-li/di-6.6-jie-v2ray-pei-zhi.md)
 * [6.7 Mihomo 配置](di-6-zhang-wang-luo-guan-li/di-6.7-jie-mihomo-pei-zhi.md)
@@ -143,21 +143,21 @@
 * [12.3 IBus 输入法框架](di-12-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-12.3-jie-ibus-shu-ru-fa-kuang-jia.md)
 * [12.4 五笔输入法](di-12-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-12.4-jie-wu-bi-shu-ru-fa.md)
 * [12.5 系统字体替换](di-12-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-12.5-jie-xi-tong-zi-ti-ti-huan.md)
-* [12.6 Web 浏览器](di-12-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-12.6-jie-web-liu-lan-qi.md)
-* [12.7 QQ（Linux 版）](di-12-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-12.7-jie-qq-linux-ban.md)
-* [12.8 WPS Office（Linux 版）](di-12-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-12.8-jie-wps-office-linux-ban.md)
-* [12.9 微信（Linux 版）](di-12-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-12.9-jie-wei-xin-linux-ban.md)
-* [12.10 Wine 配置](di-12-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-12.10-jie-wine-pei-zhi.md)
+* [12.6 QQ（Linux 版）](di-12-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-12.6-jie-qq-linux-ban.md)
+* [12.7 WPS Office（Linux 版）](di-12-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-12.7-jie-wps-office-linux-ban.md)
+* [12.8 微信（Linux 版）](di-12-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-12.8-jie-wei-xin-linux-ban.md)
+* [12.9 Wine 配置](di-12-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-12.9-jie-wine-pei-zhi.md)
 
 ## 第 13 章 多媒体和外部设备
 
-* [13.1 音频设备配置](di-13-zhang-duo-mei-ti-he-wai-bu-she-bei/di-13.1-jie-yin-pin-she-bei-pei-zhi.md)
-* [13.2 蓝牙](di-13-zhang-duo-mei-ti-he-wai-bu-she-bei/di-13.2-jie-lan-ya.md)
-* [13.3 打印机](di-13-zhang-duo-mei-ti-he-wai-bu-she-bei/di-13.3-jie-da-yin-ji.md)
-* [13.4 人机输入设备](di-13-zhang-duo-mei-ti-he-wai-bu-she-bei/di-13.4-jie-ren-ji-shu-ru-she-bei.md)
-* [13.5 音频播放器](di-13-zhang-duo-mei-ti-he-wai-bu-she-bei/di-13.5-jie-yin-pin-bo-fang-qi.md)
-* [13.6 视频播放器](di-13-zhang-duo-mei-ti-he-wai-bu-she-bei/di-13.6-jie-shi-pin-bo-fang-qi.md)
-* [13.7 多媒体处理工具](di-13-zhang-duo-mei-ti-he-wai-bu-she-bei/di-13.7-jie-duo-mei-ti-chu-li-gong-ju.md)
+* [13.1 Web 浏览器](di-13-zhang-duo-mei-ti-he-wai-bu-she-bei/di-13.1-jie-web-liu-lan-qi.md)
+* [13.2 音频设备配置](di-13-zhang-duo-mei-ti-he-wai-bu-she-bei/di-13.2-jie-yin-pin-she-bei-pei-zhi.md)
+* [13.3 蓝牙](di-13-zhang-duo-mei-ti-he-wai-bu-she-bei/di-13.3-jie-lan-ya.md)
+* [13.4 打印机](di-13-zhang-duo-mei-ti-he-wai-bu-she-bei/di-13.4-jie-da-yin-ji.md)
+* [13.5 人机输入设备](di-13-zhang-duo-mei-ti-he-wai-bu-she-bei/di-13.5-jie-ren-ji-shu-ru-she-bei.md)
+* [13.6 音频播放器](di-13-zhang-duo-mei-ti-he-wai-bu-she-bei/di-13.6-jie-yin-pin-bo-fang-qi.md)
+* [13.7 视频播放器](di-13-zhang-duo-mei-ti-he-wai-bu-she-bei/di-13.7-jie-shi-pin-bo-fang-qi.md)
+* [13.8 多媒体处理工具](di-13-zhang-duo-mei-ti-he-wai-bu-she-bei/di-13.8-jie-duo-mei-ti-chu-li-gong-ju.md)
 
 ## 第 14 章 Jail 容器管理
 
