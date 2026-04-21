@@ -1,0 +1,263 @@
+# 8.5 ZFS 存储池更新
+
+本节阐述 ZFS 存储池版本升级的技术原理、操作流程与风险控制。
+
+## 更新 zpool
+
+ZFS 存储池采用功能标记（feature flags）机制进行版本管理，这是一种区别于传统单一版本号的精细版本控制方式，每个功能特性可以独立启用或禁用，实现了向后兼容与新功能引入的平衡。
+
+在 FreeBSD 大版本更新时，ZFS 版本通常会相应升级，例如从 14.3 升级到 15.0 时，zpool 的功能集也会随之扩展。本节介绍如何更新 ZFS 存储池以支持新的功能。
+
+> **警告**
+>
+> 请准备好备份和应急 CD 以应对意外情况，因为旧版本系统内置的 ZFS 无法兼容新版 ZFS 文件系统的功能集。
+
+### 验证版本
+
+需要首先对当前系统和 ZFS 版本进行验证。
+
+- 查看当前系统版本
+
+```sh
+# freebsd-version -kru
+15.0-RELEASE
+15.0-RELEASE
+15.0-RELEASE
+```
+
+- 查看 ZFS/zpool 相关版本
+
+```sh
+# zpool version
+2.4.0-rc4-FreeBSD_g099f69ff5
+zfs-kmod-2.4.0-rc4-FreeBSD_g099f69ff5
+```
+
+> **警告**
+>
+> 这意味着任何 ZFS 版本低于 2.4.0-rc4 的操作系统在升级后可能无法启动。
+
+### 进行更新
+
+由于在升级前无法充分利用 ZFS 的新功能，下面将进行升级操作：
+
+```sh
+# zpool status  # 显示所有 ZFS 池的状态及详细信息
+  pool: zroot
+ state: ONLINE
+status: Some supported and requested features are not enabled on the pool.
+        The pool can still be used, but some features are unavailable.
+action: Enable all features using 'zpool upgrade'. Once this is done,
+        the pool may no longer be accessible by software that does not support
+        the features. See zpool-features(7) for details.
+  scan: scrub repaired 0B in 00:01:08 with 0 errors on Sun Dec  7 20:34:48 2025
+config:
+
+        NAME        STATE     READ WRITE CKSUM
+        zroot       ONLINE       0     0     0
+          nda0p4    ONLINE       0     0     0
+
+errors: No known data errors
+```
+
+根据系统提示信息：
+
+> 状态：存储池上有一些支持且被请求的功能尚未启用。存储池仍然可以使用，但部分功能不可用。
+>
+> 操作：使用 `zpool upgrade` 启用所有功能。在完成后，未支持这些功能的软件可能无法再访问该存储池。详细信息请参见 `zpool-features(7)`。
+
+确实需要进行更新，但更新后旧系统可能无法启动。
+
+先预览一下有哪些功能会被更新：
+
+```sh
+# zpool upgrade  # 查看所有 ZFS 池可升级的特性
+This system supports ZFS pool feature flags.
+
+All pools are formatted using feature flags.
+
+
+Some supported features are not enabled on the following pools. Once a
+feature is enabled the pool may become incompatible with software
+that does not support the feature. See zpool-features(7) for details.
+
+Note that the pool 'compatibility' feature can be used to inhibit
+feature upgrades.
+
+Features marked with (*) are not applied automatically on upgrade, and
+must be applied explicitly with zpool-set(7).
+
+POOL  FEATURE
+---------------
+zroot
+      redaction_list_spill
+      raidz_expansion
+      fast_dedup
+      longname
+      large_microzap
+      dynamic_gang_header(*)
+      block_cloning_endian
+      physical_rewrite
+```
+
+可以看到，除了带有 `*` 的功能需要手动启用外，其余功能在升级后将默认启用。
+
+> **警告**
+>
+> `zpool upgrade` 并不能实际启用这些特性，仅用于预览可启用的功能。要执行更新，必须同时指定存储池名称，例如 `zpool upgrade zroot`。参见：'zpool status' gives confusing suggestion with 'zpool upgrade'[EB/OL]. [2026-03-26]. <https://github.com/openzfs/zfs/issues/17910>. OpenZFS 项目关于 zpool upgrade 命令的问题讨论。
+
+> **思考题**
+>
+> 有贡献者认为上面 issue 关联的修补 PR 是琐碎的，无关紧要的细枝末节，甚至以每行不得超出 80 字符的客观理由予以拒绝，可问题在于无数人都被这种“小事”浪费了不止一个小时的时间。怎样理解对于文字力量的忽视，其代价究竟是什么？
+
+现在来实际升级看看：
+
+```sh
+# zpool upgrade zroot  # 将指定的 ZFS 池 zroot 升级到当前系统支持的最新特性版本
+This system supports ZFS pool feature flags.
+
+Enabled the following features on 'zroot':
+  redaction_list_spill
+  raidz_expansion
+  fast_dedup
+  longname
+  large_microzap
+  block_cloning_endian
+  physical_rewrite
+
+Pool 'zroot' has the bootfs property set, you might need to update
+the boot code. See gptzfsboot(8) and loader.efi(8) for details.
+```
+
+- 显示所有 ZFS 池的当前状态及健康信息：
+
+```sh
+# zpool status
+  pool: zroot
+ state: ONLINE
+  scan: scrub repaired 0B in 00:01:08 with 0 errors on Sun Dec  7 20:34:48 2025
+config:
+
+        NAME        STATE     READ WRITE CKSUM
+        zroot       ONLINE       0     0     0
+          nda0p4    ONLINE       0     0     0
+
+errors: No known data errors
+```
+
+升级成功完成，ZFS 池状态正常。
+
+### 附录：需要手动启用的特性
+
+本附录介绍如何启用需要手动启用的 ZFS 特性。如果还希望手动启用功能：
+
+```sh
+# zpool upgrade  # 查看可升级的 ZFS 池及其支持的特性
+This system supports ZFS pool feature flags.
+
+All pools are formatted using feature flags.
+
+
+Some supported features are not enabled on the following pools. Once a
+feature is enabled the pool may become incompatible with software
+that does not support the feature. See zpool-features(7) for details.
+
+Note that the pool 'compatibility' feature can be used to inhibit
+feature upgrades.
+
+Features marked with (*) are not applied automatically on upgrade, and
+must be applied explicitly with zpool-set(7).
+
+POOL  FEATURE
+---------------
+zroot
+      dynamic_gang_header(*)
+```
+
+这说明可以手动启用 `dynamic_gang_header`，接下来查询 ZFS 池中该特性的状态：
+
+```sh
+# zpool get feature@dynamic_gang_header
+NAME   PROPERTY                     VALUE                        SOURCE
+zroot  feature@dynamic_gang_header  disabled                     local
+```
+
+该特性确实未启用，下面在 zroot 池上启用 `dynamic_gang_header` 特性：
+
+```sh
+# zpool set feature@dynamic_gang_header=enabled zroot
+```
+
+再看看 zroot 池中 dynamic_gang_header 特性的当前状态：
+
+```sh
+# zpool get feature@dynamic_gang_header
+NAME   PROPERTY                     VALUE                        SOURCE
+zroot  feature@dynamic_gang_header  enabled                      local
+```
+
+检查当前可升级的 ZFS 池及其支持的特性：
+
+```sh
+# zpool upgrade
+This system supports ZFS pool feature flags.
+
+All pools are formatted using feature flags.
+
+Every feature flags pool has all supported and requested features enabled.
+```
+
+## 重写引导（仅 BIOS 传统引导需要）
+
+本节介绍 BIOS 传统引导模式下重写引导代码的操作。
+
+> **警告**
+>
+> `bootfs` 属性是在 ZFS 上引导 FreeBSD 的关键标志，忽略此提示可能不会立即出现问题，但一旦出现问题将导致系统无法启动，因此建议按照提示重写 `boot code`。根据实践经验，未及时更新引导代码可能在后续系统更新中引发启动故障。如果系统中不存在 **freebsd-boot** 分区，则无需执行以下操作。
+
+列出系统中所有磁盘及其分区表信息：
+
+```sh
+# gpart show
+
+=>      40  33554352  ada0  GPT  (16G)
+        40      1024     1  freebsd-boot  (512K)
+      1064       984        - free -  (492K)
+      2048   4194304     2  freebsd-swap  (2.0G)
+   4196352  29356032     3  freebsd-zfs  (14G)
+  33552384      2008        - free -  (1.0M)
+```
+
+找到类型为 `freebsd-boot` 的分区，这里分区序号为 `1`，对应以下命令中的 `-i` 选项，然后进行 `bootcode` 重写：
+
+```sh
+# gpart bootcode -p /boot/gptzfsboot -i 1 ada0  # 为 ada0 磁盘的第 1 个分区安装 GPT ZFS 启动代码
+partcode written to ada0p1
+```
+
+再次列出所有 ZFS 池的状态及详细信息：
+
+```sh
+# zpool status
+
+  pool: zroot
+ state: ONLINE
+config:
+
+NAME        STATE     READ WRITE CKSUM
+zroot       ONLINE       0     0     0
+  ada0p3    ONLINE       0     0     0
+
+errors: No known data errors
+```
+
+## 参考文献
+
+- FreeBSD Project. zpool-features(7) -- ZFS pool feature descriptions[EB/OL]. [2026-04-17]. <https://man.freebsd.org/cgi/man.cgi?query=zpool-features&sektion=7>. ZFS 存储池特性描述手册页。
+- FreeBSD Project. zpool(8) -- configure ZFS storage pools[EB/OL]. [2026-04-17]. <https://man.freebsd.org/cgi/man.cgi?query=zpool&sektion=8>. ZFS 存储池管理命令手册页。
+
+## 课后习题
+
+1. 在 FreeBSD 14.3 虚拟机中创建一个 ZFS 池，不启用任何新特性，然后升级到 FreeBSD 15.0 并执行 zpool upgrade，验证新旧系统的兼容性。
+2. 选取 OpenZFS 中 zpool upgrade 命令的实现，重构其最小功能集。
+3. 修改 ZFS 池的 compatibility 特性，禁用所有可能影响兼容性的新功能，验证旧版 FreeBSD 仍能访问该池。

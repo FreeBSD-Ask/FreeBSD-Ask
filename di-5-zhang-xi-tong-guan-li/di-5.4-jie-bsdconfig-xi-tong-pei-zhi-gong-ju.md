@@ -1,0 +1,867 @@
+# 5.4 bsdconfig 系统配置工具
+
+## bsdconfig 系统配置工具概述
+
+`bsdconfig` 是 FreeBSD 系统的文本界面配置工具，用于在系统安装完成后进行系统配置。与 `bsdinstall`（安装过程中使用）不同，`bsdconfig` 专注于已安装系统的配置管理。
+
+`bsdconfig` 的源代码托管在 <https://github.com/freebsd/freebsd-src/tree/main/usr.sbin/bsdconfig>
+
+> **技巧**
+>
+> `bsdconfig` 也支持纯字符命令行，参见：FreeBSD Project. bsdconfig(8)[EB/OL]. [2026-03-26]. <https://man.freebsd.org/cgi/man.cgi?bsdconfig(8)>。
+
+## bsdconfig 主菜单的功能与操作
+
+`bsdconfig` 主菜单提供了系统配置的各个功能模块。如已安装 FreeBSD，可使用此菜单对系统进行一定程度的自定义配置。可使用 pkg 工具安装额外的第三方软件，这些软件不包含在基本系统中。
+
+执行命令：
+
+```sh
+# bsdconfig
+```
+
+将输出如下：
+
+```sh
+┌--------------------┤Main Menu├-------------------┐
+│ If you've already installed FreeBSD, you may use │
+│ this menu to customize it somewhat to suit your  │
+│ particular configuration.  Most importantly, you │
+│ can use the Packages utility to load extra '3rd  │
+│ party' software not provided in the base         │
+│ distributions.                                   │
+│ ┌----------------------------------------------┐ │
+│ │         X Exit                               │ │
+│ │         1 Usage                              │ │
+│ │         2 Documentation installation         │ │
+│ │         3 Packages                           │ │
+│ │         4 Root Password                      │ │
+│ │         5 Disk Management                    │ │
+│ │         6 Login/Group Management             │ │
+│ │         7 Console                            │ │
+│ │         8 Timezone                           │ │
+│ │         9 Mouse                              │ │
+│ │         A Networking Management              │ │
+│ │         B Security                           │ │
+│ │         C Startup                            │ │
+│ │         D Ttys                               │ │
+│ └----------------------------------------------┘ │
+├--------------------------------------------------┤
+│[      OK      ] [Exit bsdconfig] [     Help     ]│
+└--------------------------------------------------┘
+```
+
+快捷键说明：选项名称前的编号或字母表示按相应键即可选择该项，例如按 `1` 键选择 `1 Usage`，按大写 `A` 键选择 `A Networking Management`。
+
+| 选项 | 解释 |
+| ---- | ---- |
+| X Exit | 退出 |
+| 1 Usage | `bsdconfig` 使用说明 |
+| 2 Documentation installation | 安装文档 |
+| 3 Packages | 软件包 |
+| 4 Root Password | root 密码 |
+| 5 Disk Management | 磁盘管理 |
+| 6 Login/Group Management | 登录管理/组管理 |
+| 7 Console | 终端 |
+| 8 Timezone | 时区 |
+| 9 Mouse | 鼠标 |
+| A Networking Management | 网络管理 |
+| B Security | 安全 |
+| C Startup | 启动项 |
+| D Ttys | TTY |
+| OK | 确认 |
+| Exit bsdconfig | 退出 |
+| Help | 帮助 |
+
+## 1 Usage 使用说明
+
+选中该项会弹出窗口，展示详细的使用指引，内容如下：
+
+**如何使用此系统**
+
+======================
+
+\[阅读完本屏幕内容后，按 PageDown 键进入下一屏\]
+
+在本次安装过程中，以下遇到的大多数对话框都支持以下按键操作：
+
+| 按键 | 操作 |
+| ---- | ---- |
+| 空格键 | 选择或切换当前项目。 |
+| 回车键 | 完成菜单或项目的操作。 |
+| ↑（上箭头） | 移动到上一个项目（或在文本显示框中向上移动）。 |
+| ↓（下箭头） | 移动到下一个项目（或在文本显示框中向下移动）。 |
+| Tab | 移动到下一个项目或分组。 |
+| →（右箭头） | 移动到下一个项目或分组（与 Tab 相同）。 |
+| SHIFT + Tab | 移动到上一个项目或分组。 |
+| ←（左箭头） | 移动到上一个项目或分组（与 SHIFT + Tab 相同）。 |
+| PAGE UP | 在文本显示框中向上滚动一页。 |
+| PAGE DOWN | 在文本显示框中向下滚动一页。 |
+| F1 | 显示相关的帮助文本。 |
+
+如果在菜单的边缘看到小的 `^(-)` 或 `v(+)` 符号，则表示由于屏幕空间不足，当前项目的上/下方还有更多未显示的内容。在文本显示框中，当前位置以上的文本数量会以百分比形式显示在右下角。使用 **上 ↑ / 下 ↓ 箭头键** 可逐行滚动，**PageUp/PageDown** 键可整页滚动。
+
+在菜单中选择 **OK** 将确认其控制的操作。选择 **Cancel** 将取消操作，然后通常会返回上一级菜单。使用 **Tab** 可移动光标并选择按钮。
+
+大多数界面都有 **Help** 按钮——建议充分利用该功能，其通常提供有用的上下文相关提示；若在某个配置菜单中不确定操作方式，请选择 **Help**。
+
+**特殊功能**
+
+======================
+
+如菜单项名称的首字母是唯一的，可通过输入该字母来选择菜单项。通常它是项目的编号。
+
+控制台驱动程序包含回滚缓冲区，用于查看已滚动出屏幕的内容。要使用回滚功能，请按键盘上的 **Scroll Lock** 键，然后使用箭头键或 **Page Up/Page Down** 键滚动查看保存的文本。要退出回滚模式，再次按 **Scroll Lock** 键。此功能对于查看启动信息非常有用（快试试吧！），同时也适用于处理不使用菜单且输出往往滚动到屏幕顶部的子 Shell 或其他“专家模式”。
+
+FreeBSD 还支持多个“虚拟控制台”，可以使用它们同时进行多个活动会话。使用 **ALT + F<数字>** 切换屏幕，其中 `F<数字>` 是对应希望查看的屏幕的功能键。默认情况下，系统启用了 8 个虚拟控制台：可以通过编辑 `/etc/ttys` 文件，将相关 vty 条目的 “off” 字段改为 “on” 来启用更多虚拟控制台（多达 12 个）。
+
+## 2 Documentation installation 安装文档
+
+可通过 `bsdconfig` 安装 FreeBSD 文档。
+
+```sh
+┌---------------┤FreeBSD Documentation Installation├---------------┐
+│ This menu allows you to install the whole documentation set from │
+│ the FreeBSD Documentation Project: Handbook, FAQ, and articles.  │
+│                                                                  │
+│ Please select the language versions you wish to install. At      │
+│ minimum, you should install the English version, the original    │
+│ version of the documentation.                                    │
+│ ┌--------------------------------------------------------------┐ │
+│ │         [ ] bn    Bengali Documentation                      │ │
+│ │         [ ] da    Danish Documentation                       │ │
+│ │         [ ] de    German Documentation                       │ │
+│ │         [ ] el    Greek Documentation                        │ │
+│ │         [X] en    English Documentation (recommended)        │ │
+│ │         [ ] es    Spanish Documentation                      │ │
+│ │         [ ] fr    French Documentation                       │ │
+│ │         [ ] hu    Hungarian Documentation                    │ │
+│ │         [ ] id    Indonesian Documentation                   │ │
+│ │         [ ] it    Italian Documentation                      │ │
+│ │         [ ] ja    Japanese Documentation                     │ │
+│ │         [ ] ko    Korean Documentation                       │ │
+│ │         [ ] mn    Mongolian Documentation                    │ │
+│ │         [ ] nl    Dutch Documentation                        │ │
+│ │         [ ] pl    Polish Documentation                       │ │
+│ │         [ ] pt    Portuguese Documentation                   │ │
+│ │         [ ] ru    Russian Documentation                      │ │
+│ │         [ ] tr    Turkish Documentation                      │ │
+│ └-↓↓↓----------------------------------------------------- 90%-┘ │
+├------------------------------------------------------------------┤
+│                       [  OK  ]     [Cancel]                      │
+└----------------- Use arrows, SPACE, TAB or ENTER ----------------┘
+```
+
+选择并安装所需语言的文档即可。
+
+> **注意**
+>
+> 不建议安装中文文档（无论简体或繁体），其内容更新远落后于英文文档。
+
+## 3 Packages 软件包
+
+`3 Packages` 菜单用于设置 FreeBSD 软件包的安装方式。
+
+```sh
+
+┌-----------------------┤Choose Installation Media├-----------------------┐
+│ FreeBSD can be installed from a variety of different installation       │
+│ media, ranging from floppies to an Internet FTP server.  If you're      │
+│ installing FreeBSD from a supported CD/DVD drive then this is generally │
+│ the best media to use if you have no overriding reason for using other  │
+│ media.                                                                  │
+│ ┌---------------------------------------------------------------------┐ │
+│ │   1 CD/DVD      Install from a FreeBSD CD/DVD                       │ │
+│ │   2 HTTP Proxy  Install from an FTP server through an HTTP proxy    │ │
+│ │   3 HTTP Direct Install from an HTTP server                         │ │
+│ │   4 Directory   Install from the existing filesystem                │ │
+│ │   5 NFS         Install over NFS                                    │ │
+│ │   6 DOS         Install from a DOS partition                        │ │
+│ │   7 UFS         Install from a UFS partition                        │ │
+│ │   8 USB         Install from a USB drive                            │ │
+│ │   X Options     View/Set various media options                      │ │
+│ └---------------------------------------------------------------------┘ │
+├-------------------------------------------------------------------------┤
+│                   [  OK  ]     [Cancel]     [ Help ]                    │
+└------ Choose Help for more information on the various media types ------┘
+
+```
+
+| 选项 | 说明 |
+| ---- | ---- |
+| CD/DVD | 从 FreeBSD CD/DVD 安装 |
+| HTTP Proxy | 通过 HTTP 代理从 FTP 服务器安装 |
+| HTTP Direct | 从 HTTP 服务器直接安装 |
+| Directory | 从现有文件系统安装 |
+| NFS | 通过 NFS 安装 |
+| DOS | 从 DOS 分区安装 |
+| UFS | 从 UFS 分区安装 |
+| USB | 从 USB 设备安装 |
+| Options | 查看/设置各种媒体选项 |
+
+### 3 HTTP Direct
+
+选择最适合的站点，或选择“其他”以指定不同站点。“Main Site”会通过 GeoDNS 将用户引导至最近的官方镜像站（提供完整分发文件并支持 IPv4 和 IPv6）。其他站点称为“社区镜像”，并非所有站点都提供基础分发包之外的内容。选择一个站点。
+
+```sh
+┌-------------┤Please select a FreeBSD HTTP distribution site├-------------┐
+│ Please select the best suitable site for you or "other" if you want to   │
+│ specify a different choice. The "Main Site" directs users to the nearest │
+│ project managed mirror via GeoDNS (they carry the full range of possible │
+│ distributions and support both IPv4 and IPv6). All other sites are known │
+│ as "Community Mirrors"; not every site listed here carries more than the │
+│ base distribution kits. Select a site!                                   │
+│ ┌----------------------------------------------------------------------┐ │
+│ │      pkg Main Site (GeoDNS) pkg.freebsd.org                          │ │
+│ │      URL                    Specify some other http site by URL      │ │
+│ └----------------------------------------------------------------------┘ │
+├--------------------------------------------------------------------------┤
+│                           [  OK  ]     [Cancel]                          │
+└----------------------------- Select a site! ------------------------------
+```
+
+如选择“pkg Main Site (GeoDNS) pkg.freebsd.org”，将会还原到 FreeBSD 官方镜像站；
+
+如选择“URL                    Specify some other http site by URL”：
+
+```sh
+┌------------------┤Package Selection├------------------┐
+│ Please specify the URL of a FreeBSD distribution on a │
+│ remote http site.                                     │
+│ A URL looks like this: http://<hostname>/<path>       │
+│ ┌---------------------------------------------------┐ │
+│ │                                                   │ │
+│ └---------------------------------------------------┘ │
+├-------------------------------------------------------┤
+│                 [  OK  ]     [Cancel]                 │
+└-------------------------------------------------------┘
+```
+
+指定国内镜像站可能无法使用。
+
+### Options
+
+```sh
+----------┤Options Editor├-----------┐
+│ ┌---------------------------------┐ │
+│ │  NFS Secure      NO             │ │
+│ │  NFS Slow        NO             │ │
+│ │  NFS TCP         NO             │ │
+│ │  NFS version 3   YES            │ │
+│ │  Debugging       NO             │ │
+│ │  Yes to All      NO             │ │
+│ │  DHCP            NO             │ │
+│ │  IPv6            NO             │ │
+│ │  Editor          /usr/bin/ee    │ │
+│ │  Release Name    15.0-CURRENT   │ │
+│ │  Media Type      <not yet set>  │ │
+│ │  Media Timeout   300            │ │
+│ │  Package Temp    /var/tmp       │ │
+│ │  Re-scan Devices <*>            │ │
+│ │  Use Defaults    [RESET!]       │ │
+│ └---------------------------------┘ │
+├-------------------------------------┤
+│   [  OK  ]   [ Done ]   [ Help ]    │
+└---- Press arrows, TAB or ENTER -----┘
+```
+
+| 选项 | 说明 |
+| ---- | ---- |
+| NFS Secure | NFS 安全 |
+| NFS Slow | NFS Slow，作用待研判 |
+| NFS TCP | NFS TCP |
+| NFS version 3 | NFS 版本 3 |
+| Debugging | 调试 |
+| Yes to All | 全部选是 |
+| DHCP | DHCP |
+| IPv6 | IPv6 |
+| Editor | 编辑器 |
+| Release Name | RELEASE 版本 |
+| Media Type | 介质类型 |
+| Media Timeout | 介质超时 |
+| Package Temp | 软件包缓存 |
+| Re-scan Devices | 重新扫描设备 |
+| Use Defaults | 还原默认配置 |
+
+## 4 Root Password root 密码
+
+此菜单用于修改 root 用户密码。输入的密码在屏幕上会显示为 `***` 这种类型。
+
+```sh
+┌--------------------┤Root Password├-------------------┐
+│ Enter New Password                                   │
+│ ┌--------------------------------------------------┐ │
+│ │                                                  │ │
+│ └--------------------------------------------------┘ │
+├------------------------------------------------------┤
+│                 [  OK  ]     [Cancel]                │
+└---- Use alpha-numeric, punctuation, TAB or ENTER ----┘
+```
+
+## 5 Disk Management 磁盘管理
+
+```sh
+┌--------------------┤Partition Editor├---------------┐
+│ Create partitions for FreeBSD, F1 for help.         │
+│ No changes will be made until you select Finish.    │
+│                                                     │
+│                                                     │
+├-----------------------------------------------------┤
+│  mmcsd0          116 GB    GPT                      │
+│    mmcsd0p1      260 MB    efi                      │
+│    mmcsd0p2      116 GB    freebsd-zfs              │
+│  mmcsd0boot0     4.0 MB                             │
+│  mmcsd0boot1     4.0 MB                             │
+│  nda0            466 GB    GPT                      │
+│    nda0p1        277 MB    efi                      │
+│    nda0p2        200 GB    ms-basic-data            │
+│    nda0p3        148 GB    ms-basic-data            │
+│    nda0p4        85 GB     ms-basic-data            │
+├---vvv----------------------------------------83%----┤
+├-----------------------------------------------------┤
+│[Create] [Delete] [Modify] [Revert] [ Auto ] [Finish]│
+```
+
+此界面与 `bsdinstall` 中的分区管理界面相同，操作方法也一致。
+
+## 6 Login/Group Management 登录管理/组管理
+
+```sh
+┌------┤Login/Group Management├------┐
+│ ┌--------------------------------┐ │
+│ │        X Exit                  │ │
+│ │        1 Add Login             │ │
+│ │        2 Edit/View Login       │ │
+│ │        3 Delete Login          │ │
+│ │        - -                     │ │
+│ │        4 Add Group             │ │
+│ │        5 Edit/View Group       │ │
+│ │        6 Delete Group          │ │
+│ └--------------------------------┘ │
+├------------------------------------┤
+│   [  OK  ]   [Cancel]   [ Help ]   │
+└---- Press arrows, TAB or ENTER ----┘
+```
+
+| 操作 | 说明 |
+| ---- | ---- |
+| X Exit | 退出 |
+| Add Login | 添加登录 |
+| Edit/View Login | 编辑登录用户/查看登录用户 |
+| Delete Login | 删除登录用户 |
+| - - | 分隔符 |
+| Add Group | 添加组 |
+| Edit/View Group | 编辑组/查看组 |
+| Delete Group | 删除组 |
+
+### “Edit/View Login” 编辑登录用户
+
+以创建的用户账户 ykla 为例：
+
+```sh
+┌----------┤Edit/View User: ykla├-----------┐
+│ Choose Save/Exit when finished or Cancel. │
+│ ┌---------------------------------------┐ │
+│ │     X Save/Exit                       │ │
+│ │     1 Login: ykla                     │ │
+│ │     2 Full Name: User &               │ │
+│ │     3 Password: -----                 │ │
+│ │     4 UID: 1001                       │ │
+│ │     5 Group ID: 1001 (ykla)           │ │
+│ │     6 Member of Groups: wheel         │ │
+│ │     7 Login Class:                    │ │
+│ │     8 Password Expires on:            │ │
+│ │     9 Account Expires on:             │ │
+│ │     A Home Directory: /home/ykla      │ │
+│ │     B Shell: /bin/sh                  │ │
+│ │     - Create Home Directory: N/A      │ │
+│ │     D Create Dotfiles: No             │ │
+│ └---------------------------------------┘ │
+├-------------------------------------------┤
+│           [  OK  ]     [Cancel]           │
+└------- Press arrows, TAB or ENTER --------┘
+```
+
+可修改 ykla 的以下信息：
+
+| 项目 | 说明 |
+| ---- | ---- |
+| X Save/Exit | 保存并退出 |
+| Login: ykla | 登录名：ykla |
+| Full Name: User & | 姓名：User & |
+| Password: ----- | 密码：-----，可以修改密码 |
+| UID: 1001 | 用户 ID：1001 |
+| Group ID: 1001 (ykla) | 组 ID：1001（ykla） |
+| Member of Groups: wheel | 所属组：wheel |
+| Login Class: | 登录类别： |
+| Password Expires on: | 密码过期日期： |
+| Account Expires on: | 账户过期日期： |
+| Home Directory: /home/ykla | 主目录：/home/ykla |
+| Shell: /bin/sh | Shell：/bin/sh |
+| Create Home Directory: N/A | 创建主目录：N/A |
+| Create Dotfiles: No | 创建点文件：否 |
+
+### “Edit/View Group” 编辑组/查看组
+
+以创建的用户账户 ykla 所在 ykla 组为例：
+
+```sh
+┌----------┤Edit/View Group: ykla├----------┐
+│ Choose Save/Exit when finished or Cancel. │
+│ ┌---------------------------------------┐ │
+│ │           X Save/Exit                 │ │
+│ │           1 Group: ykla               │ │
+│ │           2 Password: -----           │ │
+│ │           3 Group ID: 1001            │ │
+│ │           4 Group Members:            │ │
+│ └---------------------------------------┘ │
+├-------------------------------------------┤
+│           [  OK  ]     [Cancel]           │
+└------- Press arrows, TAB or ENTER --------┘
+```
+
+| 项目 | 内容 |
+| ---- | ---- |
+| X Save/Exit | 保存并退出 |
+| Group: ykla | 组：ykla |
+| Password: ----- | 密码：----- |
+| Group ID: 1001 | 组 ID：1001 |
+| Group Members: | 组成员： |
+
+## 7 Console 终端
+
+```sh
+┌-------------------┤System Console Configuration├--------------------┐
+│ The system console driver for FreeBSD has a number of configuration │
+│ options which may be set according to your preference.              │
+│                                                                     │
+│ When you are done setting configuration options, select Cancel.     │
+│ ┌-----------------------------------------------------------------┐ │
+│ │          X Exit      Exit this menu                             │ │
+│ │          2 Font      Choose an alternate screen font            │ │
+│ │          3 Keymap    Choose an alternate keyboard map           │ │
+│ │          4 Repeat    Set the rate at which keys repeat          │ │
+│ │          5 Saver     Configure the screen saver                 │ │
+│ │          6 Screenmap Choose an alternate screenmap              │ │
+│ │          7 Ttys      Choose console terminal type               │ │
+│ └-----------------------------------------------------------------┘ │
+├---------------------------------------------------------------------┤
+│                        [  OK  ]     [Cancel]                        │
+└-------------- Configure your system console settings ---------------┘
+```
+
+| 菜单 | 说明 |
+| ---- | ---- |
+| X Exit | 退出此菜单 |
+| 2 Font | 选择备用屏幕字体 |
+| 3 Keymap | 选择备用键盘布局 |
+| 4 Repeat | 设置按键重复速率 |
+| 5 Saver | 配置屏幕保护程序 |
+| 6 Screenmap | 选择备用屏幕映射 |
+| 7 Ttys | 选择控制台终端类型 |
+
+- “2 Font” 主要针对西欧字符集配置。
+- “5 Saver” 配置屏幕保护程序参见其他章节。
+- “6 Screenmap” 主要针对西欧字符集配置。
+- “7 Ttys” 主要针对西欧或俄罗斯等区域配置。
+
+## 8 Timezone 时区
+
+配置同 `bsdinstall`，不再赘述。
+
+## 9 Mouse 鼠标
+
+可运行 mouse 守护进程以在文本控制台中进行剪切和粘贴。需指定端口和鼠标协议类型后启用守护进程，如不使用此功能，可选择 6 禁用守护进程。
+
+启用鼠标守护进程后，在运行 X 配置工具时可将 `/dev/sysmouse` 设置为鼠标设备，并选择 `SysMouse` 或 `MouseSystems` 作为鼠标协议（参见配置菜单）。
+
+```sh
+┌----------------------┤Please configure your mouse├---------------------┐
+│ You can cut and paste text in the text console by running the mouse    │
+│ daemon.  Specify a port and a protocol type of your mouse and enable   │
+│ the mouse daemon.  If you don't want this feature, select 6 to disable │
+│ the daemon.                                                            │
+│ Once you've enabled the mouse daemon, you can specify "/dev/sysmouse"  │
+│ as your mouse device and "SysMouse" or "MouseSystems" as mouse         │
+│ protocol when running the X configuration utility (see Configuration   │
+│ menu).                                                                 │
+│ ┌--------------------------------------------------------------------┐ │
+│ │               X Exit    Exit this menu                             │ │
+│ │               2 Enable  Test and run the mouse daemon              │ │
+│ │               3 Type    Select mouse protocol type                 │ │
+│ │               4 Port    Select mouse port                          │ │
+│ │               5 Flags   Set additional flags                       │ │
+│ │               6 Disable Disable the mouse daemon                   │ │
+│ └--------------------------------------------------------------------┘ │
+├------------------------------------------------------------------------┤
+│                          [  OK  ]     [Cancel]                         │
+└------------------------------------------------------------------------┘
+```
+
+| 菜单 | 说明 |
+| ---- | ---- |
+| X Exit | 退出此菜单 |
+| 2 Enable | 启用测试并运行鼠标守护进程 |
+| 3 Type | 选择鼠标协议类型 |
+| 4 Port | 选择鼠标端口 |
+| 5 Flags | 设置附加参数 |
+| 6 Disable | 禁用鼠标守护进程 |
+
+### 2 Enable 启用测试并运行鼠标守护进程
+
+```sh
+┌------------┤User Confirmation Requested├-----------┐
+│ Now move the mouse and see if it works.            │
+│ (Note that buttons don't have any effect for now.) │
+│                                                    │
+│          Is the mouse cursor moving?               │
+│                                                    │
+├----------------------------------------------------┤
+│                [ Yes  ]     [  No  ]               │
+└------------ Press arrows, TAB or ENTER ------------┘
+
+
+现在移动鼠标，看看鼠标是否能动。
+（注意，鼠标的按钮目前无效。）
+鼠标光标是否在移动？
+```
+
+### 3 Type 选择鼠标协议类型
+
+如鼠标连接到 PS/2 鼠标端口和总线鼠标端口，应始终选择“Auto”，无论鼠标的型号和品牌是什么。所有其他协议类型适用于串口鼠标，不应与 PS/2 端口鼠标或总线鼠标一起使用。如有串口鼠标，且不确定它的协议，也应尝试选择“Auto”。如鼠标不支持即插即用（PnP）标准，可能无法正常工作，但也不会有坏处。许多 2 按钮（左键和右键）串口鼠标与“Microsoft”或“MouseMan”兼容，3 按钮串口鼠标（左右键、中间按钮）可能与“MouseSystems”或“MouseMan”兼容。如串口鼠标有滚轮，可能与“IntelliMouse”兼容。
+
+```sh
+┌------------------┤Select a protocol type for your mouse├------------------┐
+│ If your mouse is attached to the PS/2 mouse port or the bus mouse port,   │
+│ you should always choose "Auto", regardless of the model and the brand    │
+│ of the mouse.  All other protocol types are for serial mice and should    │
+│ not be used with the PS/2 port mouse or the bus mouse.  If you have       │
+│ a serial mouse and are not sure about its protocol, you should also try   │
+│ "Auto".  It may not work for the serial mouse if the mouse does not       │
+│ support the PnP standard.  But, it won't hurt.  Many 2-button serial mice │
+│ are compatible with "Microsoft" or "MouseMan". 3-button serial mice       │
+│ may be compatible with "MouseSystems" or "MouseMan".  If the serial       │
+│ mouse has a wheel, it may be compatible with "IntelliMouse".              │
+│ ┌-----------------------------------------------------------------------┐ │
+│ │    1 Auto          Bus mouse, PS/2 style mouse or PnP serial mouse    │ │
+│ │    2 GlidePoint    ALPS GlidePoint pad (serial)                       │ │
+│ │    3 Hitachi       Hitachi tablet (serial)                            │ │
+│ │    4 IntelliMouse  Microsoft IntelliMouse (serial)                    │ │
+│ │    5 Logitech      Logitech protocol (old models) (serial)            │ │
+│ │    6 Microsoft     Microsoft protocol (serial)                        │ │
+│ │    7 MM Series     MM Series protocol (serial)                        │ │
+│ │    8 MouseMan      Logitech MouseMan/TrackMan models (serial)         │ │
+│ │    9 MouseSystems  MouseSystems protocol (serial)                     │ │
+│ │    A ThinkingMouse Kensington ThinkingMouse (serial)                  │ │
+│ └-----------------------------------------------------------------------┘ │
+├---------------------------------------------------------------------------┤
+│                           [  OK  ]     [Cancel]                           │
+└---------------------------------------------------------------------------┘
+```
+
+| 菜单 | 说明 |
+| ---- | ---- |
+| 1 Auto | 总线鼠标，PS/2 风格鼠标、PnP 串口鼠标 |
+| 2 GlidePoint | ALPS GlidePoint 触摸板（串口） |
+| 3 Hitachi | 日立平板（串口） |
+| 4 IntelliMouse | 微软 IntelliMouse（串口） |
+| 5 Logitech | 罗技协议（旧款）（串口） |
+| 6 Microsoft | 微软协议（串口） |
+| 7 MM Series | MM 系列协议（串口） |
+| 8 MouseMan | 罗技 MouseMan/TrackMan（串口） |
+| 9 MouseSystems | MouseSystems 协议（串口） |
+| A ThinkingMouse | Kensington ThinkingMouse（串口） |
+
+## A Networking Management 网络管理
+
+```sh
+
+┌--------┤Network Management├--------┐
+│ ┌--------------------------------┐ │
+│ │    X Exit                      │ │
+│ │    1 Hostname/Domain           │ │
+│ │    2 Network Interfaces        │ │
+│ │    3 Wireless Networks         │ │
+│ │    4 Default Router/Gateway    │ │
+│ │    5 DNS nameservers           │ │
+│ └--------------------------------┘ │
+├------------------------------------┤
+│        [  OK  ]     [Cancel]       │
+└---- Press arrows, TAB or ENTER ----┘
+```
+
+> **注意**
+>
+> 该界面无法连接 WiFi，因为无法输入密码，此问题已报告到 Bug——[Cannot select any wifi or input password in bsdconfig](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=229883)。
+
+| 菜单 | 说明 |
+| ---- | ---- |
+| X Exit | 退出 |
+| 1 Hostname/Domain | 主机名/域名 |
+| 2 Network Interfaces | 网络接口 |
+| 3 Wireless Networks | 无线网络 |
+| 4 Default Router/Gateway | 默认路由/默认网关 |
+| 5 DNS nameservers | DNS 域名服务器 |
+
+## B Security 安全
+
+此菜单用于配置操作系统安全策略。修改设置前，请仔细阅读系统文档，以免操作不当导致服务中断。大多数设置只有在系统重启后才会生效。
+
+```sh
+┌-----------------------┤System Security Options Menu├-----------------------┐
+│ This menu allows you to configure aspects of the operating system security │
+│ policy.  Please read the system documentation carefully before modifying   │
+│ these settings, as they may cause service disruption if used improperly.   │
+│                                                                            │
+│ Most settings will take effect only following a system reboot.             │
+│ ┌------------------------------------------------------------------------┐ │
+│ │    X Exit            Exit this menu                                    │ │
+│ │    2 [ ] Securelevel Configure securelevels for the system             │ │
+│ │    3 [X] NFS port    Require that the NFS clients use reserved ports   │ │
+│ └------------------------------------------------------------------------┘ │
+├----------------------------------------------------------------------------┤
+│                            [  OK  ]     [Cancel]                           │
+└------------------------ Press arrows, TAB or ENTER ------------------------┘
+```
+
+| 菜单 | 解释 |
+| ---- | ---- |
+| X Exit | 退出此菜单 |
+| 2 [ ] Securelevel | 配置系统的安全级别 |
+| 3 [X] NFS port | 要求 NFS 客户端使用保留端口 |
+
+### `2 [ ] Securelevel` 配置系统的安全级别
+
+此菜单可选择系统运行的安全级别。
+
+在 securelevel 安全级别下，某些 root 权限会被禁用，这可能增加对攻击的抵抗力并保护系统完整性。
+
+```sh
+┌---------------------┤Securelevel Configuration Menu├---------------------┐
+│ This menu allows you to select the securelevel your system runs with.    │
+│ When operating at a securelevel, certain root privileges are disabled,   │
+│ which may increase resistance to exploits and protect system integrity.  │
+│ In secure mode system flags may not be overridden by the root user,      │
+│ access to direct kernel memory is limited, and kernel modules may not    │
+│ be changed.  In highly secure mode, mounted file systems may not be      │
+│ modified on-disk, tampering with the system clock is prohibited.  In     │
+│ network secure mode configuration changes to firewalling are prohibited. │
+│                                                                          │
+│ ┌----------------------------------------------------------------------┐ │
+│ │                  Disabled       Disable securelevels                 │ │
+│ │                  Secure         Secure mode                          │ │
+│ │                  Highly Secure  Highly secure mode                   │ │
+│ │                  Network Secure Network secure mode                  │ │
+│ └----------------------------------------------------------------------┘ │
+├--------------------------------------------------------------------------┤
+│                    [  OK  ]     [Cancel]     [ Help ]                    │
+└------------------- Select a securelevel to operate at -------------------┘
+```
+
+安全模式说明：
+
+- 在 Secure 安全模式下，root 用户无法覆盖系统标志（参数或配置），访问内核内存受限，且不能更改内核模块。
+- 在 Highly Secure 高安全模式下，挂载的文件系统无法直接修改，系统时钟也无法更改。
+- 在 Network Secure 网络安全模式下，不允许修改防火墙配置。
+
+## C Startup 启动项
+
+```sh
+┌----------------┤Startup├---------------┐
+│ ┌------------------------------------┐ │
+│ │  X Exit                            │ │
+│ │  1 Toggle Startup Services         │ │
+│ │  2 View/Edit Startup Configuration │ │
+│ │  3 Miscellaneous Startup Services  │ │
+│ └------------------------------------┘ │
+├----------------------------------------┤
+│          [  OK  ]     [Cancel]         │
+└------ Press arrows, TAB or ENTER ------┘
+```
+
+| 菜单 | 说明 |
+| ---- | ---- |
+| X Exit | X 退出 |
+| 1 Toggle Startup Services | 1 切换启动服务 |
+| 2 View/Edit Startup Configuration | 2 查看启动配置/编辑启动配置 |
+| 3 Miscellaneous Startup Services | 3 其他启动服务 |
+
+### 1 Toggle Startup Services 1 切换启动服务
+
+```sh
+┌------------------------------┤Toggle Startup Services├------------------------------┐
+│ ┌---------------------------------------------------------------------------------┐ │
+│ │ X Exit                     Exit this menu                                       │ │
+│ │ accounting_enable          [ ] /etc/rc.d/accounting; Default: NO                │ │
+│ │  apm_enable                [ ] /etc/rc.d/apm; Default: NO                       │ │
+│ │  auditd_enable             [ ] /etc/rc.d/auditd; Default: NO                    │ │
+│ │  auditdistd_enable         [ ] /etc/rc.d/auditdistd; Default: NO                │ │
+│ │  autofs_enable             [ ] /etc/rc.d/automount; Default: NO                 │ │
+│ │  autofs_enable             [ ] /etc/rc.d/automountd; Default: NO                │ │
+│ │  autofs_enable             [ ] /etc/rc.d/autounmountd; Default: NO              │ │
+│ │  avahi_daemon_enable       [ ] /usr/local/etc/rc.d/avahi-daemon; Default: NO    │ │
+│ │  avahi_dnsconfd_enable     [ ] /usr/local/etc/rc.d/avahi-dnsconfd; Default: NO  │ │
+│ │ background_fsck            [X] /etc/rc.d/bgfsck; Default: YES                   │ │
+│ │  blacklistd_enable         [ ] /etc/rc.d/blacklistd; Default: NO                │ │
+│ │  bootparamd_enable         [ ] /etc/rc.d/bootparams; Default: NO                │ │
+│ │  bsnmpd_enable             [ ] /etc/rc.d/bsnmpd; Default: NO                    │ │
+│ │  bthidd_enable             [ ] /etc/rc.d/bthidd; Default: NO                    │ │
+│ │ cfumass_enable             [ ] /etc/rc.d/cfumass; Default: NO                   │ │
+│ │  cleanvar_enable           [X] /etc/rc.d/cleanvar; Default: YES                 │ │
+│ │  cron_enable               [X] /etc/rc.d/cron; Default: YES                     │ │
+│ │  ctld_enable               [ ] /etc/rc.d/ctld; Default: NO                      │ │
+│ │  cupsd_enable              [ ] /usr/local/etc/rc.d/cupsd; Default: NO           │ │
+│ │ dbus_enable                [X] /usr/local/etc/rc.d/dbus; Default: YES           │ │
+│ │  ddb_enable                [ ] /etc/rc.d/ddb; Default: NO                       │ │
+│ │  devd_enable               [X] /etc/rc.d/devd; Default: YES                     │ │
+│ │  devmatch_enable           [X] /etc/rc.d/devmatch; Default: YES                 │ │
+│ └-↓↓↓------------------------------------------------------------------------ 17%-┘ │
+├-------------------------------------------------------------------------------------┤
+│                                [  OK  ]     [Cancel]                                │
+└---------------------------- Press arrows, TAB or ENTER -----------------------------┘
+```
+
+可开关当前所有可能的系统启动项。
+
+### 2 View/Edit Startup Configuration 2 查看启动配置/编辑启动配置
+
+```sh
+┌---------┤View/Edit Startup Configuration├--------┐
+│ ┌----------------------------------------------┐ │
+│ │  X Exit              Return to previous menu │ │
+│ │  > Add New           Add new directive       │ │
+│ │  > Delete            Delete directive(s)     │ │
+│ │  blanktime           300                     │ │
+│ │  dbus_enable         YES                     │ │
+│ │   dumpdev            AUTO                    │ │
+│ │  firewall_enable     NO                      │ │
+│ │  gateway_enable      YES                     │ │
+│ │  hostname            ykla                    │ │
+│ │  ifconfig_igc0       DHCP                    │ │
+│ │   ifconfig_igc0_ipv6 inet6 accept_rtadv      │ │
+│ │  kld_list            i915kms fusefs          │ │
+│ │  lightdm_enable      YES                     │ │
+│ │  moused_enable       YES                     │ │
+│ │  ntpd_enable         YES                     │ │
+│ │   ntpd_sync_on_start YES                     │ │
+│ │  powerd_enable       YES                     │ │
+│ │  resolv_enable       NO                      │ │
+│ │  saver               beastie                 │ │
+│ │   sshd_enable        YES                     │ │
+│ │  xrdp_enable         YES                     │ │
+│ │   xrdp_sesman_enable YES                     │ │
+│ │  zfs_enable          YES                     │ │
+│ └----------------------------------------------┘ │
+├--------------------------------------------------┤
+│       [  OK   ]     [Cancel ]     [Details]      │
+└----------- Press arrows, TAB or ENTER -----------┘
+```
+
+| 菜单 | 说明 |
+| ---- | ---- |
+| X Exit Return to previous menu | 退出 返回上一级菜单 |
+| > Add New Add new directive | 添加 新增指令 |
+| > Delete Delete directive(s) | 删除 删除指令 |
+
+查看配置当前正在使用的启动项。
+
+#### Details 详情
+
+```sh
+┌--------------------------┤Choose View Details├-------------------------┐
+│ ┌--------------------------------------------------------------------┐ │
+│ │  R Reset                  Reset to default view settings           │ │
+│ │  D [X] Description        Toggle display of system description     │ │
+│ │  1 (*) Show Value         Show configured startup value (fast)     │ │
+│ │  2 ( ) Show Default/Value Show default/configured values (slow)    │ │
+│ │  3 ( ) Show Configured    Calculate rc.conf(5) locations (slowest) │ │
+│ └--------------------------------------------------------------------┘ │
+├------------------------------------------------------------------------┤
+│                          [  OK  ]     [Cancel]                         │
+└---------------------- Press arrows, TAB or ENTER ----------------------┘
+```
+
+| 菜单 | 解释 |
+| ---- | ---- |
+| R Reset Reset to default view settings | R 重置 恢复默认视图设置 |
+| D [X] Description Toggle display of system description | D [X] 描述 切换显示系统描述 |
+| 1 (*) Show Value Show configured startup value (fast) | 1 (*) 显示值 显示已配置的启动值（加载速度快速） |
+| 2 ( ) Show Default/Value Show default/configured values (slow) | 2 ( ) 显示默认/值 显示默认值/已配置的值（加载速度较慢） |
+| 3 ( ) Show Configured Calculate rc.conf(5) locations (slowest) | 3 ( ) 显示配置 计算 rc.conf(5) 的位置（加载速度最慢） |
+
+### 3 Miscellaneous Startup Services 3 其他启动服务
+
+此菜单能配置系统启动配置的各个方面。
+
+```sh
+┌----------------------┤Miscellaneous Startup Services├----------------------┐
+│ This menu allows you to configure various aspects of your system's         │
+│ startup configuration.  Use [SPACE] or [ENTER] to select items, and        │
+│ [TAB] to move to the buttons.  Select Exit to leave this menu.             │
+│ ┌------------------------------------------------------------------------┐ │
+│ │  X Exit               Exit this menu                                   │ │
+│ │                        --                                              │ │
+│ │  1 [X] Startup dirs   Set the list of dirs to look for startup scripts │ │
+│ │  2 [ ] named          Run a local name server on this host             │ │
+│ │  3 [ ] named flags    Set default flags to named (if enabled)          │ │
+│ │  4 [ ] NIS client     This host wishes to be an NIS client.            │ │
+│ │  5 [ ] NIS domainname Set NIS domainname (if enabled)                  │ │
+│ │  6 [ ] NIS Server     This host wishes to be an NIS server.            │ │
+│ │                        --                                              │ │
+│ │  7 [ ] Accounting     This host wishes to run process accounting.      │ │
+│ │  8 [ ] lpd            This host has a printer and wants to run lpd.    │ │
+│ └------------------------------------------------------------------------┘ │
+├----------------------------------------------------------------------------┤
+│                            [  OK  ]     [Cancel]                           │
+└------------------------ Press arrows, TAB or ENTER ------------------------┘
+```
+
+使用 [空格键] 或 [回车键] 选择项目，使用 [Tab] 移动到按钮。选择 Exit 以离开此菜单。
+
+| 菜单 | 解释 |
+| ---- | ---- |
+| X Exit Exit this menu | X 退出 退出此菜单 |
+| -- | -- |
+| 1 [X] Startup dirs Set the list of dirs to look for startup scripts | 1 [X] 启动目录 设置查找启动脚本的目录列表 |
+| 2 [ ] named Run a local name server on this host | 2 [ ] named 在此主机上运行本地域名服务器 |
+| 3 [ ] named flags Set default flags to named (if enabled) | 3 [ ] named 参数 设置默认的 named 参数（如果启用） |
+| 4 [ ] NIS client This host will be an NIS client | 4 [ ] NIS 客户端 此主机将作为 NIS 客户端 |
+| 5 [ ] NIS domainname Set NIS domainname (if enabled) | 5 [ ] NIS 域名 设置 NIS 域名（如启用） |
+| 6 [ ] NIS Server This host will be an NIS server | 6 [ ] NIS 服务器 此主机将作为 NIS 服务器 |
+| -- | 分割线 |
+| 7 [ ] Accounting This host will run process accounting | 7 [ ] 记账 此主机将运行进程记账 |
+| 8 [ ] lpd This host has a printer and will run lpd | 8 [ ] lpd 此主机有打印机且需运行 lpd |
+
+## D Ttys TTY
+
+```sh
+┌-------------------┤User Confirmation Requested├-------------------┐
+│ Configuration of system TTYs requires editing the /etc/ttys file. │
+│ Typical configuration activities might include enabling getty(8)  │
+│ on the first serial port to allow login via serial console after  │
+│ reboot, or to enable xdm.  The default ttys file enables normal   │
+│ virtual consoles, and most sites will not need to perform manual  │
+│ configuration.                                                    │
+│                                                                   │
+│ To load /etc/ttys in the editor, select [Yes], otherwise, [No].   │
+├-------------------------------------------------------------------┤
+│                       [ Yes  ]     [  No  ]                       │
+└------------------- Press arrows, TAB or ENTER --------------------┘
+
+
+系统 TTY 的配置需要编辑 /etc/ttys 文件。典型的配置活动可能包括启用第一个串口上的 getty(8)，以允许在重启后通过串口控制台登录，或者启用 xdm。默认的 ttys 文件启用了正常的虚拟控制台，大多数站点无需进行手动配置。
+
+要在编辑器中加载 /etc/ttys 文件，选择 [Yes]，否则选择 [No]。
+```
+
+如选择 `[Yes]`，会使用文本编辑器打开 `/etc/ttys` 文件。
+
+## 参考文献
+
+- FreeBSD Project. bsdconfig(8)[EB/OL]. [2026-04-17]. <https://man.freebsd.org/cgi/man.cgi?query=bsdconfig&sektion=8>. FreeBSD 系统配置工具手册页。
+
+## 课后习题
+
+1. 通过 bsdconfig 的“View/Edit Startup Configuration”添加自定义 sysctl 配置，追踪该配置如何写入 rc.conf 文件并最终生效。
+
+2. 使用 bsdconfig 的命令行模式配置网络接口，对比图形界面与命令行两种方式的操作路径差异。

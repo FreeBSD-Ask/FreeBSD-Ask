@@ -217,12 +217,12 @@
 
 * [21.1 Linux 兼容层架构](di-21-zhang-linux-er-jin-zhi-jian-rong-ceng/di-21.1-jie-linux-jian-rong-ceng-jia-gou.md)
 * [21.2 通过 FreeBSD Ports 安装 Rocky Linux 兼容层](di-21-zhang-linux-er-jin-zhi-jian-rong-ceng/di-21.2-jie-tong-guo-freebsd-ports-an-zhuang-rocky-linux-jian-rong-ceng.md)
-* [21.3 Ubuntu/Debian 兼容层](di-21-zhang-linux-er-jin-zhi-jian-rong-ceng/di-21.3-jie-ubuntu-debian-jian-rong-ceng.md)
-* [21.4 Arch Linux 兼容层（基于 Arch Linux bootstrap）](di-21-zhang-linux-er-jin-zhi-jian-rong-ceng/di-21.4-jie-arch-linux-jian-rong-ceng-ji-yu-arch-linux-bootstrap.md)
-* [21.5 Slackware Linux 兼容层](di-21-zhang-linux-er-jin-zhi-jian-rong-ceng/di-21.5-jie-slackware-linux-jian-rong-ceng.md)
-* [21.6 openSUSE 兼容层](di-21-zhang-linux-er-jin-zhi-jian-rong-ceng/di-21.6-jie-opensuse-jian-rong-ceng.md)
-* [21.7 Gentoo Linux 兼容层](di-21-zhang-linux-er-jin-zhi-jian-rong-ceng/di-21.7-jie-gentoo-linux-jian-rong-ceng.md)
-* [21.8 Rocky Linux 兼容层](di-21-zhang-linux-er-jin-zhi-jian-rong-ceng/di-21.8-jie-rocky-linux-jian-rong-ceng.md)
+* [21.3 Rocky Linux 兼容层](di-21-zhang-linux-er-jin-zhi-jian-rong-ceng/di-21.3-jie-rocky-linux-jian-rong-ceng.md)
+* [21.4 Ubuntu/Debian 兼容层](di-21-zhang-linux-er-jin-zhi-jian-rong-ceng/di-21.4-jie-ubuntu-debian-jian-rong-ceng.md)
+* [21.5 Arch Linux 兼容层（基于 Arch Linux bootstrap）](di-21-zhang-linux-er-jin-zhi-jian-rong-ceng/di-21.5-jie-arch-linux-jian-rong-ceng-ji-yu-arch-linux-bootstrap.md)
+* [21.6 Slackware Linux 兼容层](di-21-zhang-linux-er-jin-zhi-jian-rong-ceng/di-21.6-jie-slackware-linux-jian-rong-ceng.md)
+* [21.7 openSUSE 兼容层](di-21-zhang-linux-er-jin-zhi-jian-rong-ceng/di-21.7-jie-opensuse-jian-rong-ceng.md)
+* [21.8 Gentoo Linux 兼容层](di-21-zhang-linux-er-jin-zhi-jian-rong-ceng/di-21.8-jie-gentoo-linux-jian-rong-ceng.md)
 * [21.9 故障排除与未竟事宜](di-21-zhang-linux-er-jin-zhi-jian-rong-ceng/di-21.9-jie-gu-zhang-pai-chu-yu-wei-jing-shi-yi.md)
 
 ## 第 22 章 FreeBSD 开发与社区贡献
@@ -230,32 +230,32 @@
 * [22.1 Bug 报告流程](di-22-zhang-freebsd-kai-fa-yu-she-qu-gong-xian/di-22.1-jie-bug-bao-gao-liu-cheng.md)
 * [22.2 FreeBSD 邮件列表订阅](di-22-zhang-freebsd-kai-fa-yu-she-qu-gong-xian/di-22.2-jie-freebsd-you-jian-lie-biao-ding-yue.md)
 * [22.3 FreeBSD 开发参与指南](di-22-zhang-freebsd-kai-fa-yu-she-qu-gong-xian/di-22.3-jie-freebsd-kai-fa-can-yu-zhi-nan.md)
-* [22.4 C/C++ 开发环境](di-22-zhang-freebsd-kai-fa-yu-she-qu-gong-xian/di-22.4-jie-c-c-kai-fa-huan-jing.md)
-* [22.5 Java 开发环境](di-22-zhang-freebsd-kai-fa-yu-she-qu-gong-xian/di-22.5-jie-java-kai-fa-huan-jing.md)
-* [22.6 Qt 开发环境](di-22-zhang-freebsd-kai-fa-yu-she-qu-gong-xian/di-22.6-jie-qt-kai-fa-huan-jing.md)
-* [22.7 Python 开发环境](di-22-zhang-freebsd-kai-fa-yu-she-qu-gong-xian/di-22.7-jie-python-kai-fa-huan-jing.md)
-* [22.8 Rust/Go 开发环境](di-22-zhang-freebsd-kai-fa-yu-she-qu-gong-xian/di-22.8-jie-rust-go-kai-fa-huan-jing.md)
-* [22.9 Shell 配置](di-22-zhang-freebsd-kai-fa-yu-she-qu-gong-xian/di-22.9-jie-shell-pei-zhi.md)
+* [22.4 Shell 配置](di-22-zhang-freebsd-kai-fa-yu-she-qu-gong-xian/di-22.4-jie-shell-pei-zhi.md)
+* [22.5 C/C++ 开发环境](di-22-zhang-freebsd-kai-fa-yu-she-qu-gong-xian/di-22.5-jie-c-c-kai-fa-huan-jing.md)
+* [22.6 Java 开发环境](di-22-zhang-freebsd-kai-fa-yu-she-qu-gong-xian/di-22.6-jie-java-kai-fa-huan-jing.md)
+* [22.7 Qt 开发环境](di-22-zhang-freebsd-kai-fa-yu-she-qu-gong-xian/di-22.7-jie-qt-kai-fa-huan-jing.md)
+* [22.8 Python 开发环境](di-22-zhang-freebsd-kai-fa-yu-she-qu-gong-xian/di-22.8-jie-python-kai-fa-huan-jing.md)
+* [22.9 Rust/Go 开发环境](di-22-zhang-freebsd-kai-fa-yu-she-qu-gong-xian/di-22.9-jie-rust-go-kai-fa-huan-jing.md)
 * [22.10 IDA Pro 调试 FreeBSD](di-22-zhang-freebsd-kai-fa-yu-she-qu-gong-xian/di-22.10-jie-ida-pro-diao-shi-freebsd.md)
 * [22.11 Node.js 环境](di-22-zhang-freebsd-kai-fa-yu-she-qu-gong-xian/di-22.11-jie-node-js-huan-jing.md)
 * [22.12 code-server 和 clangd 开发配置](di-22-zhang-freebsd-kai-fa-yu-she-qu-gong-xian/di-22.12-jie-code-server-he-clangd-kai-fa-pei-zhi.md)
 
 ## 第 23 章 存储与文件系统管理
 
-* [23.1 自动挂载文件系统](di-23-zhang-cun-chu-yu-wen-jian-xi-tong-guan-li/di-23.1-jie-zi-dong-gua-zai-wen-jian-xi-tong.md)
-* [23.2 Linux 文件系统](di-23-zhang-cun-chu-yu-wen-jian-xi-tong-guan-li/di-23.2-jie-linux-wen-jian-xi-tong.md)
-* [23.3 UFS 文件系统](di-23-zhang-cun-chu-yu-wen-jian-xi-tong-guan-li/di-23.3-jie-ufs-wen-jian-xi-tong.md)
+* [23.1 UFS 文件系统](di-23-zhang-cun-chu-yu-wen-jian-xi-tong-guan-li/di-23.1-jie-ufs-wen-jian-xi-tong.md)
+* [23.2 自动挂载文件系统](di-23-zhang-cun-chu-yu-wen-jian-xi-tong-guan-li/di-23.2-jie-zi-dong-gua-zai-wen-jian-xi-tong.md)
+* [23.3 Linux 文件系统](di-23-zhang-cun-chu-yu-wen-jian-xi-tong-guan-li/di-23.3-jie-linux-wen-jian-xi-tong.md)
 * [23.4 Windows 文件系统](di-23-zhang-cun-chu-yu-wen-jian-xi-tong-guan-li/di-23.4-jie-windows-wen-jian-xi-tong.md)
 * [23.5 Swap 分区](di-23-zhang-cun-chu-yu-wen-jian-xi-tong-guan-li/di-23.5-jie-swap-fen-qu.md)
 
 ## 第 24 章 FreeBSD 内核架构
 
-* [24.1 FreeBSD 内核文件结构](di-24-zhang-freebsd-nei-he-jia-gou/di-24.1-jie-freebsd-nei-he-wen-jian-jie-gou.md)
-* [24.2 机器相关的内核选项注解](di-24-zhang-freebsd-nei-he-jia-gou/di-24.2-jie-ji-qi-xiang-guan-de-nei-he-xuan-xiang-zhu-jie.md)
-* [24.3 机器无关的内核选项注解](di-24-zhang-freebsd-nei-he-jia-gou/di-24.3-jie-ji-qi-wu-guan-de-nei-he-xuan-xiang-zhu-jie.md)
-* [24.4 GENERIC 内核选项注解（AMD64）](di-24-zhang-freebsd-nei-he-jia-gou/di-24.4-jie-generic-nei-he-xuan-xiang-zhu-jie-amd64.md)
-* [24.5 在 Linux 系统上交叉构建 FreeBSD](di-24-zhang-freebsd-nei-he-jia-gou/di-24.5-jie-zai-linux-xi-tong-shang-jiao-cha-gou-jian-freebsd.md)
-* [24.6 FreeBSD 源代码目录结构](di-24-zhang-freebsd-nei-he-jia-gou/di-24.6-jie-freebsd-yuan-dai-ma-mu-lu-jie-gou.md)
+* [24.1 FreeBSD 源代码目录结构](di-24-zhang-freebsd-nei-he-jia-gou/di-24.1-jie-freebsd-yuan-dai-ma-mu-lu-jie-gou.md)
+* [24.2 FreeBSD 内核文件结构](di-24-zhang-freebsd-nei-he-jia-gou/di-24.2-jie-freebsd-nei-he-wen-jian-jie-gou.md)
+* [24.3 机器相关的内核选项注解](di-24-zhang-freebsd-nei-he-jia-gou/di-24.3-jie-ji-qi-xiang-guan-de-nei-he-xuan-xiang-zhu-jie.md)
+* [24.4 机器无关的内核选项注解](di-24-zhang-freebsd-nei-he-jia-gou/di-24.4-jie-ji-qi-wu-guan-de-nei-he-xuan-xiang-zhu-jie.md)
+* [24.5 GENERIC 内核选项注解（AMD64）](di-24-zhang-freebsd-nei-he-jia-gou/di-24.5-jie-generic-nei-he-xuan-xiang-zhu-jie-amd64.md)
+* [24.6 在 Linux 系统上交叉构建 FreeBSD](di-24-zhang-freebsd-nei-he-jia-gou/di-24.6-jie-zai-linux-xi-tong-shang-jiao-cha-gou-jian-freebsd.md)
 
 ## 第 25 章 ZFS 文件系统
 
