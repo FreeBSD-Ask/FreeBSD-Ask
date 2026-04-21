@@ -291,7 +291,3 @@ Section "InputDevice"
 EndSection
 
 ```
-
-## 课后习题
-
-1. 在 VMware 或 VirtualBox 中复现 KDE 4 在 UEFI 模式下的黑屏问题，尝试解决。

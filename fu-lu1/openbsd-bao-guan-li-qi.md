@@ -149,11 +149,3 @@ pkgsrc 目录结构：
 └── pkg/
     └── bin/
 ```
-
-## 课后习题
-
-1. 使用 OpenBSD 的 ports 系统从源代码编译 Firefox ESR，记录编译时间与系统资源占用，并比较使用 pkg_add 安装预编译二进制包的差异。
-
-2. 配置 OpenBSD 使用清华大学镜像源，安装常用软件包（如 firefox-esr、mate），测试下载速度。
-
-3. 在 OpenBSD 上安装并配置 NetBSD 的 pkgsrc 系统，安装一个 pkgsrc 独有的软件包，验证其可用性。

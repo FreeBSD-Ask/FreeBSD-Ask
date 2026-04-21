@@ -297,9 +297,3 @@ $ export no_proxy=localhost,127.0.0.1
 - OpenBSD Project. OpenBSD FAQ[EB/OL]. (2024-03-25)[2026-03-25]. <https://www.openbsd.org/faq/>. 官方系统配置与使用指南，提供完整参考。
 - Lucas M W. Absolute OpenBSD, 2nd Edition: Unix for the Practical Paranoid[M]. San Francisco: No Starch Press, 2013. OpenBSD 技术参考书，讲解 OpenBSD 系统基础。
 - K58. Installing OpenBSD 7.3 on your laptop is really hard (not)[EB/OL]. (2024-03-25)[2026-03-25]. <https://www.k58.uk/openbsd.html>. 笔记本电脑安装 OpenBSD 的实践指南。
-
-## 课后习题
-
-1. 在 OpenBSD 最新的 -RELEASE 版本中配置 Wi-Fi 自动连接，使用 `hostname.if` 文件，并测试网络连接。
-
-2. 修改 `/etc/doas.conf` 文件，实现仅允许特定用户执行特定命令（如仅允许用户 ykla 执行 pkg_add），并验证该权限控制机制的有效性。

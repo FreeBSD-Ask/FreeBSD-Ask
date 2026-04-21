@@ -8,9 +8,9 @@
 ## 前言
 
 * [前言](qian-yan/qian-yan.md)
+* [绪论](qian-yan/xu-lun.md)
 * [致读者：解放思想，回归本真，高扬人道主义，不走苦难哲学的邪路](qian-yan/zhi-du-zhe-jie-fang-si-xiang-hui-gui-ben-zhen-gao-yang-ren-dao-zhu-yi-bu-zou-ku-nan-zhe-xue-de-xie-lu.md)
 * [致谢](qian-yan/zhi-xie.md)
-* [绪论](qian-yan/xu-lun.md)
 
 ## 第 1 章 FreeBSD 初见
 
@@ -24,10 +24,10 @@
 ## 第 2 章 FreeBSD 安装基础
 
 * [2.1 安装前的准备工作](di-2-zhang-freebsd-an-zhuang-ji-chu/di-2.1-jie-an-zhuang-qian-de-zhun-bei-gong-zuo.md)
-* [2.2 FreeBSD 15 安装指南（AMD64）](di-2-zhang-freebsd-an-zhuang-ji-chu/di-2.2-jie-freebsd-15-an-zhuang-zhi-nan-amd64.md)
-* [2.3 FreeBSD 13/14 安装指南（AMD64）](di-2-zhang-freebsd-an-zhuang-ji-chu/di-2.3-jie-freebsd-13-14-an-zhuang-zhi-nan-amd64.md)
-* [2.4 安装故障排除](di-2-zhang-freebsd-an-zhuang-ji-chu/di-2.4-jie-an-zhuang-gu-zhang-pai-chu.md)
-* [2.5 在 Windows 中将 USB 启动盘恢复为普通存储设备](di-2-zhang-freebsd-an-zhuang-ji-chu/di-2.5-jie-zai-windows-zhong-jiang-usb-qi-dong-pan-hui-fu-wei-pu-tong-cun-chu-she-bei.md)
+* [2.2 在 Windows 中将 USB 启动盘恢复为普通存储设备](di-2-zhang-freebsd-an-zhuang-ji-chu/di-2.2-jie-zai-windows-zhong-jiang-usb-qi-dong-pan-hui-fu-wei-pu-tong-cun-chu-she-bei.md)
+* [2.3 FreeBSD 15 安装指南（AMD64）](di-2-zhang-freebsd-an-zhuang-ji-chu/di-2.3-jie-freebsd-15-an-zhuang-zhi-nan-amd64.md)
+* [2.4 FreeBSD 13/14 安装指南（AMD64）](di-2-zhang-freebsd-an-zhuang-ji-chu/di-2.4-jie-freebsd-13-14-an-zhuang-zhi-nan-amd64.md)
+* [2.5 安装故障排除](di-2-zhang-freebsd-an-zhuang-ji-chu/di-2.5-jie-an-zhuang-gu-zhang-pai-chu.md)
 
 ## 第 3 章 FreeBSD 高级安装
 
@@ -52,26 +52,25 @@
 * [4.5 Shell 基础](di-4-zhang-freebsd-ji-chu/di-4.5-jie-shell-ji-chu.md)
 * [4.6 命令行基础](di-4-zhang-freebsd-ji-chu/di-4.6-jie-ming-ling-xing-ji-chu.md)
 * [4.7 文本编辑器](di-4-zhang-freebsd-ji-chu/di-4.7-jie-wen-ben-bian-ji-qi.md)
-* [4.8 压缩解压工具](di-4-zhang-freebsd-ji-chu/di-4.8-jie-ya-suo-jie-ya-gong-ju.md)
-* [4.9 用户和基本账户管理](di-4-zhang-freebsd-ji-chu/di-4.9-jie-yong-hu-he-ji-ben-zhang-hu-guan-li.md)
-* [4.10 权限](di-4-zhang-freebsd-ji-chu/di-4.10-jie-quan-xian.md)
-* [4.11 权限提升工具（sudo、doas 等）](di-4-zhang-freebsd-ji-chu/di-4.11-jie-te-quan-ti-sheng-gong-ju-sudo-doas-deng.md)
+* [4.8 用户和基本账户管理](di-4-zhang-freebsd-ji-chu/di-4.8-jie-yong-hu-he-ji-ben-zhang-hu-guan-li.md)
+* [4.9 权限](di-4-zhang-freebsd-ji-chu/di-4.9-jie-quan-xian.md)
+* [4.10 权限提升工具（sudo、doas 等）](di-4-zhang-freebsd-ji-chu/di-4.10-jie-te-quan-ti-sheng-gong-ju-sudo-doas-deng.md)
+* [4.11 压缩解压工具](di-4-zhang-freebsd-ji-chu/di-4.11-jie-ya-suo-jie-ya-gong-ju.md)
 
 ## 第 5 章 系统管理
 
 * [5.1 启动引导器及配置文件（loader.conf）](di-5-zhang-xi-tong-guan-li/di-5.1-jie-qi-dong-yin-dao-qi-ji-pei-zhi-wen-jian-loader-conf.md)
-* [5.2 init.rc 服务管理](di-5-zhang-xi-tong-guan-li/di-5.2-jie-init-rc-fu-wu-guan-li.md)
-* [5.3 用户分级文件（login.conf）](di-5-zhang-xi-tong-guan-li/di-5.3-jie-yong-hu-fen-ji-wen-jian-login-conf.md)
-* [5.4 bsdconfig 系统配置工具](di-5-zhang-xi-tong-guan-li/di-5.4-jie-bsdconfig-xi-tong-pei-zhi-gong-ju.md)
-* [5.5 SSH 服务与工具](di-5-zhang-xi-tong-guan-li/di-5.5-jie-ssh-fu-wu-yu-gong-ju.md)
-* [5.6 远程桌面访问](di-5-zhang-xi-tong-guan-li/di-5.6-jie-yuan-cheng-zhuo-mian-fang-wen.md)
-* [5.7 Live 镜像与系统恢复](di-5-zhang-xi-tong-guan-li/di-5.7-jie-live-jing-xiang-yu-xi-tong-hui-fu.md)
-* [5.8 引导管理器与 UEFI 固件](di-5-zhang-xi-tong-guan-li/di-5.8-jie-yin-dao-guan-li-qi-yu-uefi-gu-jian.md)
-* [5.9 设备资源提示文件（device.hints）](di-5-zhang-xi-tong-guan-li/di-5.9-jie-she-bei-zi-yuan-ti-shi-wen-jian-device-hints.md)
-* [5.10 crontab 及定时任务文件（periodic.conf）](di-5-zhang-xi-tong-guan-li/di-5.10-jie-crontab-ji-ding-shi-ren-wu-wen-jian-periodic-conf.md)
-* [5.11 内核状态默认配置文件（sysctl.conf）](di-5-zhang-xi-tong-guan-li/di-5.11-jie-nei-he-zhuang-tai-mo-ren-pei-zhi-wen-jian-sysctl-conf.md)
-* [5.12 系统更新检测工具](di-5-zhang-xi-tong-guan-li/di-5.12-jie-update.md)
-* [5.13 时间同步服务](di-5-zhang-xi-tong-guan-li/di-5.13-jie-shi-jian-tong-bu-fu-wu.md)
+* [5.2 引导管理器与 UEFI 固件](di-5-zhang-xi-tong-guan-li/di-5.2-jie-yin-dao-guan-li-qi-yu-uefi-gu-jian.md)
+* [5.3 init.rc 服务管理](di-5-zhang-xi-tong-guan-li/di-5.3-jie-init-rc-fu-wu-guan-li.md)
+* [5.4 用户分级文件（login.conf）](di-5-zhang-xi-tong-guan-li/di-5.4-jie-yong-hu-fen-ji-wen-jian-login-conf.md)
+* [5.5 bsdconfig 系统配置工具](di-5-zhang-xi-tong-guan-li/di-5.5-jie-bsdconfig-xi-tong-pei-zhi-gong-ju.md)
+* [5.6 SSH 服务与工具](di-5-zhang-xi-tong-guan-li/di-5.6-jie-ssh-fu-wu-yu-gong-ju.md)
+* [5.7 远程桌面访问](di-5-zhang-xi-tong-guan-li/di-5.7-jie-yuan-cheng-zhuo-mian-fang-wen.md)
+* [5.8 设备资源提示文件（device.hints）](di-5-zhang-xi-tong-guan-li/di-5.8-jie-she-bei-zi-yuan-ti-shi-wen-jian-device-hints.md)
+* [5.9 crontab 及定时任务文件（periodic.conf）](di-5-zhang-xi-tong-guan-li/di-5.9-jie-crontab-ji-ding-shi-ren-wu-wen-jian-periodic-conf.md)
+* [5.10 内核状态默认配置文件（sysctl.conf）](di-5-zhang-xi-tong-guan-li/di-5.10-jie-nei-he-zhuang-tai-mo-ren-pei-zhi-wen-jian-sysctl-conf.md)
+* [5.11 时间同步服务](di-5-zhang-xi-tong-guan-li/di-5.11-jie-shi-jian-tong-bu-fu-wu.md)
+* [5.12 Live 镜像与系统恢复](di-5-zhang-xi-tong-guan-li/di-5.12-jie-live-jing-xiang-yu-xi-tong-hui-fu.md)
 
 ## 第 6 章 网络管理
 
@@ -103,14 +102,15 @@
 
 ## 第 9 章 软件管理和系统升级
 
-* [9.1 更换 FreeBSD 软件源](di-9-zhang-ruan-jian-guan-li-he-xi-tong-sheng-ji/di-9.1-jie-geng-huan-freebsd-ruan-jian-yuan.md)
-* [9.2 FreeBSD 镜像站现状](di-9-zhang-ruan-jian-guan-li-he-xi-tong-sheng-ji/di-9.2-jie-freebsd-jing-xiang-zhan-xian-zhuang.md)
-* [9.3 使用 pkg 管理二进制包](di-9-zhang-ruan-jian-guan-li-he-xi-tong-sheng-ji/di-9.3-jie-shi-yong-pkg-guan-li-er-jin-zhi-bao.md)
-* [9.4 使用 Ports 以源代码方式安装软件](di-9-zhang-ruan-jian-guan-li-he-xi-tong-sheng-ji/di-9.4-jie-shi-yong-ports-yi-yuan-dai-ma-fang-shi-an-zhuang-ruan-jian.md)
-* [9.5 使用 freebsd-update 更新 FreeBSD](di-9-zhang-ruan-jian-guan-li-he-xi-tong-sheng-ji/di-9.5-jie-shi-yong-freebsd-update-geng-xin-freebsd.md)
-* [9.6 使用源代码更新 FreeBSD](di-9-zhang-ruan-jian-guan-li-he-xi-tong-sheng-ji/di-9.6-jie-shi-yong-yuan-dai-ma-geng-xin-freebsd.md)
-* [9.7 使用 DVD 安装软件](di-9-zhang-ruan-jian-guan-li-he-xi-tong-sheng-ji/di-9.7-jie-shi-yong-dvd-an-zhuang-ruan-jian.md)
-* [9.8 ZFS 启动环境与多版本共存](di-9-zhang-ruan-jian-guan-li-he-xi-tong-sheng-ji/di-9.8-jie-zfs-qi-dong-huan-jing-yu-duo-ban-ben-gong-cun.md)
+* [9.1 系统更新检测工具](di-9-zhang-ruan-jian-guan-li-he-xi-tong-sheng-ji/di-9.1-jie-update.md)
+* [9.2 更换 FreeBSD 软件源](di-9-zhang-ruan-jian-guan-li-he-xi-tong-sheng-ji/di-9.2-jie-geng-huan-freebsd-ruan-jian-yuan.md)
+* [9.3 FreeBSD 镜像站现状](di-9-zhang-ruan-jian-guan-li-he-xi-tong-sheng-ji/di-9.3-jie-freebsd-jing-xiang-zhan-xian-zhuang.md)
+* [9.4 使用 pkg 管理二进制包](di-9-zhang-ruan-jian-guan-li-he-xi-tong-sheng-ji/di-9.4-jie-shi-yong-pkg-guan-li-er-jin-zhi-bao.md)
+* [9.5 使用 Ports 以源代码方式安装软件](di-9-zhang-ruan-jian-guan-li-he-xi-tong-sheng-ji/di-9.5-jie-shi-yong-ports-yi-yuan-dai-ma-fang-shi-an-zhuang-ruan-jian.md)
+* [9.6 使用 freebsd-update 更新 FreeBSD](di-9-zhang-ruan-jian-guan-li-he-xi-tong-sheng-ji/di-9.6-jie-shi-yong-freebsd-update-geng-xin-freebsd.md)
+* [9.7 使用源代码更新 FreeBSD](di-9-zhang-ruan-jian-guan-li-he-xi-tong-sheng-ji/di-9.7-jie-shi-yong-yuan-dai-ma-geng-xin-freebsd.md)
+* [9.8 使用 DVD 安装软件](di-9-zhang-ruan-jian-guan-li-he-xi-tong-sheng-ji/di-9.8-jie-shi-yong-dvd-an-zhuang-ruan-jian.md)
+* [9.9 ZFS 启动环境与多版本共存](di-9-zhang-ruan-jian-guan-li-he-xi-tong-sheng-ji/di-9.9-jie-zfs-qi-dong-huan-jing-yu-duo-ban-ben-gong-cun.md)
 
 ## 第 10 章 桌面环境
 
@@ -123,13 +123,13 @@
 * [10.7 Cinnamon](di-10-zhang-zhuo-mian-huan-jing/di-10.7-jie-cinnamon.md)
 * [10.8 LXQt](di-10-zhang-zhuo-mian-huan-jing/di-10.8-jie-lxqt.md)
 * [10.9 GNOME](di-10-zhang-zhuo-mian-huan-jing/di-10.9-jie-gnome.md)
-* [10.10 CDE](di-10-zhang-zhuo-mian-huan-jing/di-10.10-jie-cde.md)
-* [10.11 LXDE](di-10-zhang-zhuo-mian-huan-jing/di-10.11-jie-lxde.md)
-* [10.12 bspwm](di-10-zhang-zhuo-mian-huan-jing/di-10.12-jie-bspwm.md)
-* [10.13 IceWM](di-10-zhang-zhuo-mian-huan-jing/di-10.13-jie-icewm.md)
-* [10.14 i3wm](di-10-zhang-zhuo-mian-huan-jing/di-10.14-jie-i3wm.md)
-* [10.15 Hyprland](di-10-zhang-zhuo-mian-huan-jing/di-10.15-jie-hyprland.md)
-* [10.16 桌面主题美化](di-10-zhang-zhuo-mian-huan-jing/di-10.16-jie-zhuo-mian-zhu-ti-mei-hua.md)
+* [10.10 LXDE](di-10-zhang-zhuo-mian-huan-jing/di-10.10-jie-lxde.md)
+* [10.11 bspwm](di-10-zhang-zhuo-mian-huan-jing/di-10.11-jie-bspwm.md)
+* [10.12 IceWM](di-10-zhang-zhuo-mian-huan-jing/di-10.12-jie-icewm.md)
+* [10.13 i3wm](di-10-zhang-zhuo-mian-huan-jing/di-10.13-jie-i3wm.md)
+* [10.14 Hyprland](di-10-zhang-zhuo-mian-huan-jing/di-10.14-jie-hyprland.md)
+* [10.15 桌面主题美化](di-10-zhang-zhuo-mian-huan-jing/di-10.15-jie-zhuo-mian-zhu-ti-mei-hua.md)
+* [10.16 CDE](di-10-zhang-zhuo-mian-huan-jing/di-10.16-jie-cde.md)
 * [10.17 启用 root 账户桌面登录](di-10-zhang-zhuo-mian-huan-jing/di-10.17-jie-qi-yong-root-zhang-hu-zhuo-mian-deng-lu.md)
 
 ## 第 11 章 人工智能（AI）
@@ -155,9 +155,9 @@
 * [13.3 蓝牙](di-13-zhang-duo-mei-ti-he-wai-bu-she-bei/di-13.3-jie-lan-ya.md)
 * [13.4 打印机](di-13-zhang-duo-mei-ti-he-wai-bu-she-bei/di-13.4-jie-da-yin-ji.md)
 * [13.5 人机输入设备](di-13-zhang-duo-mei-ti-he-wai-bu-she-bei/di-13.5-jie-ren-ji-shu-ru-she-bei.md)
-* [13.6 音频播放器](di-13-zhang-duo-mei-ti-he-wai-bu-she-bei/di-13.6-jie-yin-pin-bo-fang-qi.md)
-* [13.7 视频播放器](di-13-zhang-duo-mei-ti-he-wai-bu-she-bei/di-13.7-jie-shi-pin-bo-fang-qi.md)
-* [13.8 多媒体处理工具](di-13-zhang-duo-mei-ti-he-wai-bu-she-bei/di-13.8-jie-duo-mei-ti-chu-li-gong-ju.md)
+* [13.6 视频播放器](di-13-zhang-duo-mei-ti-he-wai-bu-she-bei/di-13.6-jie-shi-pin-bo-fang-qi.md)
+* [13.7 多媒体处理工具](di-13-zhang-duo-mei-ti-he-wai-bu-she-bei/di-13.7-jie-duo-mei-ti-chu-li-gong-ju.md)
+* [13.8 音频播放器](di-13-zhang-duo-mei-ti-he-wai-bu-she-bei/di-13.8-jie-yin-pin-bo-fang-qi.md)
 
 ## 第 14 章 Jail 容器管理
 
@@ -168,8 +168,8 @@
 
 ## 第 15 章 虚拟化与容器管理
 
-* [15.1 使用 BVCP 通过 Web 界面管理 bhyve 虚拟机](di-15-zhang-xu-ni-hua-yu-rong-qi-guan-li/di-15.1-jie-shi-yong-bvcp-tong-guo-web-jie-mian-guan-li-bhyve-xu-ni-ji.md)
-* [15.2 使用 bhyve 及 vm-bhyve 工具安装 Windows 11](di-15-zhang-xu-ni-hua-yu-rong-qi-guan-li/di-15.2-jie-shi-yong-bhyve-ji-vm-bhyve-gong-ju-an-zhuang-windows-11.md)
+* [15.1 使用 bhyve 及 vm-bhyve 工具安装 Windows 11](di-15-zhang-xu-ni-hua-yu-rong-qi-guan-li/di-15.1-jie-shi-yong-bhyve-ji-vm-bhyve-gong-ju-an-zhuang-windows-11.md)
+* [15.2 使用 BVCP 通过 Web 界面管理 bhyve 虚拟机](di-15-zhang-xu-ni-hua-yu-rong-qi-guan-li/di-15.2-jie-shi-yong-bvcp-tong-guo-web-jie-mian-guan-li-bhyve-xu-ni-ji.md)
 * [15.3 Podman 容器管理](di-15-zhang-xu-ni-hua-yu-rong-qi-guan-li/di-15.3-jie-podman-rong-qi-guan-li.md)
 * [15.4 在 FreeBSD 上安装 VirtualBox](di-15-zhang-xu-ni-hua-yu-rong-qi-guan-li/di-15.4-jie-zai-freebsd-shang-an-zhuang-virtualbox.md)
 
@@ -196,11 +196,11 @@
 * [18.4 PHP 8.x 配置](di-18-zhang-web-fu-wu-qi-yu-jian-kong-xi-tong/di-18.4-jie-php-8-x-pei-zhi.md)
 * [18.5 Tomcat 应用服务器](di-18-zhang-web-fu-wu-qi-yu-jian-kong-xi-tong/di-18.5-jie-tomcat-ying-yong-fu-wu-qi.md)
 * [18.6 WildFly 应用服务器](di-18-zhang-web-fu-wu-qi-yu-jian-kong-xi-tong/di-18.6-jie-wildfly-ying-yong-fu-wu-qi.md)
-* [18.7 GitLab Enterprise Edition 部署](di-18-zhang-web-fu-wu-qi-yu-jian-kong-xi-tong/di-18.7-jie-gitlab-enterprise-edition-bu-shu.md)
-* [18.8 Zabbix 监控系统（基于 PostgreSQL）](di-18-zhang-web-fu-wu-qi-yu-jian-kong-xi-tong/di-18.8-jie-zabbix-jian-kong-xi-tong-ji-yu-postgresql.md)
-* [18.9 Prometheus 监控部署](di-18-zhang-web-fu-wu-qi-yu-jian-kong-xi-tong/di-18.9-jie-prometheus-jian-kong-bu-shu.md)
-* [18.10 Telegraf、InfluxDB 与 Grafana 监控平台架构](di-18-zhang-web-fu-wu-qi-yu-jian-kong-xi-tong/di-18.10-jie-telegraf-influxdb-yu-grafana-jian-kong-ping-tai-jia-gou.md)
-* [18.11 Nextcloud 云服务（基于 PostgreSQL）](di-18-zhang-web-fu-wu-qi-yu-jian-kong-xi-tong/di-18.11-jie-nextcloud-yun-fu-wu-ji-yu-postgresql.md)
+* [18.7 Zabbix 监控系统（基于 PostgreSQL）](di-18-zhang-web-fu-wu-qi-yu-jian-kong-xi-tong/di-18.7-jie-zabbix-jian-kong-xi-tong-ji-yu-postgresql.md)
+* [18.8 Prometheus 监控部署](di-18-zhang-web-fu-wu-qi-yu-jian-kong-xi-tong/di-18.8-jie-prometheus-jian-kong-bu-shu.md)
+* [18.9 Telegraf、InfluxDB 与 Grafana 监控平台架构](di-18-zhang-web-fu-wu-qi-yu-jian-kong-xi-tong/di-18.9-jie-telegraf-influxdb-yu-grafana-jian-kong-ping-tai-jia-gou.md)
+* [18.10 Nextcloud 云服务（基于 PostgreSQL）](di-18-zhang-web-fu-wu-qi-yu-jian-kong-xi-tong/di-18.10-jie-nextcloud-yun-fu-wu-ji-yu-postgresql.md)
+* [18.11 GitLab Enterprise Edition 部署](di-18-zhang-web-fu-wu-qi-yu-jian-kong-xi-tong/di-18.11-jie-gitlab-enterprise-edition-bu-shu.md)
 * [18.12 OnlyOffice 部署（基于 PostgreSQL）](di-18-zhang-web-fu-wu-qi-yu-jian-kong-xi-tong/di-18.12-jie-onlyoffice-bu-shu-ji-yu-postgresql.md)
 * [18.13 OpenList 部署](di-18-zhang-web-fu-wu-qi-yu-jian-kong-xi-tong/di-18.13-jie-openlist-bu-shu.md)
 

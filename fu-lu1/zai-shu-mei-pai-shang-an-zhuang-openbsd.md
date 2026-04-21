@@ -54,9 +54,3 @@ Limit RAM to 3 GB        --->  "Disabled"
 - Reddit. OpenBSD 7.1 on Raspberry PI 4B 8GB[EB/OL]. (2024-03-25)[2026-03-25]. <https://www.reddit.com/r/openbsd/comments/xcudgr/openbsd_71_on_raspberry_pi_4b_8gb/>. 社区实践经验，记录树莓派 4B 上 OpenBSD 的安装过程。
 - MTSAPV. OpenBSD On A Raspberry Pi 4[EB/OL]. (2024-03-25)[2026-03-25]. <https://www.mtsapv.com/rpi4obsd/>. 树莓派 4 上 OpenBSD 安装与配置的技术指南。
 - Raspberry Pi Foundation. 树莓派官方文档简体中文版[EB/OL]. (2024-03-25)[2026-03-25]. <https://rpicn.bsdcn.org>. 树莓派硬件与使用的中文参考文档。
-
-## 课后习题
-
-1. 比较树莓派 4B 在 FreeBSD、NetBSD 和 OpenBSD 下的硬件支持情况（如 Wi-Fi、USB 3.0、GPIO 等）。
-
-2. 修改树莓派 UEFI 固件配置，编写自动化脚本在启动时自动加载 OpenBSD 内核，无需手动干预。

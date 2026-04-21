@@ -367,11 +367,3 @@ CheriBSD 基于 FreeBSD 实现了 Capability（能力式指针），提供内存
 [FuguIta 官网](https://fuguita.org/)
 
 FuguIta 是一款基于 OpenBSD 开发的 Live 系统，同时支持部分型号的树莓派（Raspberry Pi）。
-
-## 课后习题
-
-1. 查找 OpenBSD 7.7 源代码树中的 `sbin/disklabel/editor.c`，分析其自动分区算法，编写脚本为 500 GB 硬盘生成更合理的分区策略并验证在 QEMU 中的安装效果。
-
-2. 从 OpenBSD anoncvs 仓库检出 7.7-stable 版本的 src 源代码，编译内核并启动，对比默认禁用超线程与启用超线程两种模式下的系统启动时间差异。
-
-3. 修改 OpenBSD 安装脚本 `distrib/miniroot/install.sub`，添加自定义分区大小预设功能，尝试通过邮件列表向 OpenBSD 项目提交改进建议并记录社区反馈过程。
