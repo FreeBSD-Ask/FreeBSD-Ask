@@ -1,4 +1,4 @@
-# 9.6 使用 freebsd-update 更新 FreeBSD
+# 9.5 使用 freebsd-update 更新 FreeBSD
 
 本节详细阐述 freebsd-update 工具的使用方法，包括常规补丁更新、大版本升级及相关注意事项。
 
