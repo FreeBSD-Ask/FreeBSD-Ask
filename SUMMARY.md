@@ -93,8 +93,8 @@
 ## 第 8 章 ZFS 文件系统
 
 * [8.1 ZFS 概述](di-8-zhang-zfs-wen-jian-xi-tong/di-8.1-jie-zfs-gai-shu.md)
-* [8.2 ZFS 磁盘扩容](di-8-zhang-zfs-wen-jian-xi-tong/di-8.2-jie-zfs-ci-pan-kuo-rong.md)
-* [8.3 ZFS 快照与还原](di-8-zhang-zfs-wen-jian-xi-tong/di-8.3-jie-zfs-kuai-zhao-yu-huan-yuan.md)
+* [8.2 ZFS 快照与还原](di-8-zhang-zfs-wen-jian-xi-tong/di-8.2-jie-zfs-kuai-zhao-yu-huan-yuan.md)
+* [8.3 ZFS 磁盘扩容](di-8-zhang-zfs-wen-jian-xi-tong/di-8.3-jie-zfs-ci-pan-kuo-rong.md)
 * [8.4 ZFS 数据压缩](di-8-zhang-zfs-wen-jian-xi-tong/di-8.4-jie-zfs-shu-ju-ya-suo.md)
 * [8.5 ZFS 启动环境](di-8-zhang-zfs-wen-jian-xi-tong/di-8.5-jie-zfs-qi-dong-huan-jing.md)
 * [8.6 ZFS 存储池更新](di-8-zhang-zfs-wen-jian-xi-tong/di-8.6-jie-zfs-cun-chu-chi-geng-xin.md)
@@ -102,15 +102,15 @@
 
 ## 第 9 章 软件管理和系统升级
 
-* [9.1 系统更新检测工具](di-9-zhang-ruan-jian-guan-li-he-xi-tong-sheng-ji/di-9.1-jie-update.md)
-* [9.2 更换 FreeBSD 软件源](di-9-zhang-ruan-jian-guan-li-he-xi-tong-sheng-ji/di-9.2-jie-geng-huan-freebsd-ruan-jian-yuan.md)
-* [9.3 FreeBSD 镜像站现状](di-9-zhang-ruan-jian-guan-li-he-xi-tong-sheng-ji/di-9.3-jie-freebsd-jing-xiang-zhan-xian-zhuang.md)
-* [9.4 使用 pkg 管理二进制包](di-9-zhang-ruan-jian-guan-li-he-xi-tong-sheng-ji/di-9.4-jie-shi-yong-pkg-guan-li-er-jin-zhi-bao.md)
-* [9.5 使用 Ports 以源代码方式安装软件](di-9-zhang-ruan-jian-guan-li-he-xi-tong-sheng-ji/di-9.5-jie-shi-yong-ports-yi-yuan-dai-ma-fang-shi-an-zhuang-ruan-jian.md)
-* [9.6 使用 freebsd-update 更新 FreeBSD](di-9-zhang-ruan-jian-guan-li-he-xi-tong-sheng-ji/di-9.6-jie-shi-yong-freebsd-update-geng-xin-freebsd.md)
-* [9.7 使用源代码更新 FreeBSD](di-9-zhang-ruan-jian-guan-li-he-xi-tong-sheng-ji/di-9.7-jie-shi-yong-yuan-dai-ma-geng-xin-freebsd.md)
-* [9.8 使用 DVD 安装软件](di-9-zhang-ruan-jian-guan-li-he-xi-tong-sheng-ji/di-9.8-jie-shi-yong-dvd-an-zhuang-ruan-jian.md)
-* [9.9 ZFS 启动环境与多版本共存](di-9-zhang-ruan-jian-guan-li-he-xi-tong-sheng-ji/di-9.9-jie-zfs-qi-dong-huan-jing-yu-duo-ban-ben-gong-cun.md)
+* [9.1 更换 FreeBSD 软件源](di-9-zhang-ruan-jian-guan-li-he-xi-tong-sheng-ji/di-9.1-jie-geng-huan-freebsd-ruan-jian-yuan.md)
+* [9.2 使用 pkg 管理二进制包](di-9-zhang-ruan-jian-guan-li-he-xi-tong-sheng-ji/di-9.2-jie-shi-yong-pkg-guan-li-er-jin-zhi-bao.md)
+* [9.3 使用 Ports 以源代码方式安装软件](di-9-zhang-ruan-jian-guan-li-he-xi-tong-sheng-ji/di-9.3-jie-shi-yong-ports-yi-yuan-dai-ma-fang-shi-an-zhuang-ruan-jian.md)
+* [9.4 系统更新检测工具](di-9-zhang-ruan-jian-guan-li-he-xi-tong-sheng-ji/di-9.4-jie-update.md)
+* [9.5 使用 freebsd-update 更新 FreeBSD](di-9-zhang-ruan-jian-guan-li-he-xi-tong-sheng-ji/di-9.5-jie-shi-yong-freebsd-update-geng-xin-freebsd.md)
+* [9.6 使用源代码更新 FreeBSD](di-9-zhang-ruan-jian-guan-li-he-xi-tong-sheng-ji/di-9.6-jie-shi-yong-yuan-dai-ma-geng-xin-freebsd.md)
+* [9.7 使用 DVD 安装软件](di-9-zhang-ruan-jian-guan-li-he-xi-tong-sheng-ji/di-9.7-jie-shi-yong-dvd-an-zhuang-ruan-jian.md)
+* [9.8 ZFS 启动环境与多版本共存](di-9-zhang-ruan-jian-guan-li-he-xi-tong-sheng-ji/di-9.8-jie-zfs-qi-dong-huan-jing-yu-duo-ban-ben-gong-cun.md)
+* [9.9 FreeBSD 镜像站现状](di-9-zhang-ruan-jian-guan-li-he-xi-tong-sheng-ji/di-9.9-jie-freebsd-jing-xiang-zhan-xian-zhuang.md)
 
 ## 第 10 章 桌面环境
 
@@ -152,12 +152,12 @@
 
 * [13.1 Web 浏览器](di-13-zhang-duo-mei-ti-he-wai-bu-she-bei/di-13.1-jie-web-liu-lan-qi.md)
 * [13.2 音频设备配置](di-13-zhang-duo-mei-ti-he-wai-bu-she-bei/di-13.2-jie-yin-pin-she-bei-pei-zhi.md)
-* [13.3 蓝牙](di-13-zhang-duo-mei-ti-he-wai-bu-she-bei/di-13.3-jie-lan-ya.md)
-* [13.4 打印机](di-13-zhang-duo-mei-ti-he-wai-bu-she-bei/di-13.4-jie-da-yin-ji.md)
-* [13.5 人机输入设备](di-13-zhang-duo-mei-ti-he-wai-bu-she-bei/di-13.5-jie-ren-ji-shu-ru-she-bei.md)
-* [13.6 视频播放器](di-13-zhang-duo-mei-ti-he-wai-bu-she-bei/di-13.6-jie-shi-pin-bo-fang-qi.md)
-* [13.7 多媒体处理工具](di-13-zhang-duo-mei-ti-he-wai-bu-she-bei/di-13.7-jie-duo-mei-ti-chu-li-gong-ju.md)
-* [13.8 音频播放器](di-13-zhang-duo-mei-ti-he-wai-bu-she-bei/di-13.8-jie-yin-pin-bo-fang-qi.md)
+* [13.3 音频播放器](di-13-zhang-duo-mei-ti-he-wai-bu-she-bei/di-13.3-jie-yin-pin-bo-fang-qi.md)
+* [13.4 蓝牙](di-13-zhang-duo-mei-ti-he-wai-bu-she-bei/di-13.4-jie-lan-ya.md)
+* [13.5 打印机](di-13-zhang-duo-mei-ti-he-wai-bu-she-bei/di-13.5-jie-da-yin-ji.md)
+* [13.6 人机输入设备](di-13-zhang-duo-mei-ti-he-wai-bu-she-bei/di-13.6-jie-ren-ji-shu-ru-she-bei.md)
+* [13.7 视频播放器](di-13-zhang-duo-mei-ti-he-wai-bu-she-bei/di-13.7-jie-shi-pin-bo-fang-qi.md)
+* [13.8 多媒体处理工具](di-13-zhang-duo-mei-ti-he-wai-bu-she-bei/di-13.8-jie-duo-mei-ti-chu-li-gong-ju.md)
 
 ## 第 14 章 Jail 容器管理
 
