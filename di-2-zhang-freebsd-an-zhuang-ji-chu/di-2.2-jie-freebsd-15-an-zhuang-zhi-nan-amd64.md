@@ -1,4 +1,4 @@
-# 2.3 FreeBSD 15 安装指南（AMD64）
+# 2.2 FreeBSD 15 安装指南（AMD64）
 
 本节聚焦于 FreeBSD 15.0-RELEASE 在 AMD64 架构下的标准化安装流程。以下介绍基于 bsdinstall 安装工具，提供从系统启动到首次登录的完整操作指南。
 

@@ -1,4 +1,4 @@
-# 6.1 TCP/IP 协议栈
+# 6.2 TCP/IP 协议栈
 
 传输控制协议（Transmission Control Protocol，TCP）是互联网协议套件（Internet Protocol Suite）中的核心传输层协议之一，其软件实现体系被称为 TCP 堆栈（因采用层次化结构组织，故称为“栈”）。
 

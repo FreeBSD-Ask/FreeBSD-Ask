@@ -24,9 +24,9 @@
 ## 第 2 章 FreeBSD 安装基础
 
 * [2.1 安装前的准备工作](di-2-zhang-freebsd-an-zhuang-ji-chu/di-2.1-jie-an-zhuang-qian-de-zhun-bei-gong-zuo.md)
-* [2.2 在 Windows 中将 USB 启动盘恢复为普通存储设备](di-2-zhang-freebsd-an-zhuang-ji-chu/di-2.2-jie-zai-windows-zhong-jiang-usb-qi-dong-pan-hui-fu-wei-pu-tong-cun-chu-she-bei.md)
-* [2.3 FreeBSD 15 安装指南（AMD64）](di-2-zhang-freebsd-an-zhuang-ji-chu/di-2.3-jie-freebsd-15-an-zhuang-zhi-nan-amd64.md)
-* [2.4 FreeBSD 13/14 安装指南（AMD64）](di-2-zhang-freebsd-an-zhuang-ji-chu/di-2.4-jie-freebsd-13-14-an-zhuang-zhi-nan-amd64.md)
+* [2.2 FreeBSD 15 安装指南（AMD64）](di-2-zhang-freebsd-an-zhuang-ji-chu/di-2.2-jie-freebsd-15-an-zhuang-zhi-nan-amd64.md)
+* [2.3 FreeBSD 13/14 安装指南（AMD64）](di-2-zhang-freebsd-an-zhuang-ji-chu/di-2.3-jie-freebsd-13-14-an-zhuang-zhi-nan-amd64.md)
+* [2.4 在 Windows 中将 USB 启动盘恢复为普通存储设备](di-2-zhang-freebsd-an-zhuang-ji-chu/di-2.4-jie-zai-windows-zhong-jiang-usb-qi-dong-pan-hui-fu-wei-pu-tong-cun-chu-she-bei.md)
 * [2.5 安装故障排除](di-2-zhang-freebsd-an-zhuang-ji-chu/di-2.5-jie-an-zhuang-gu-zhang-pai-chu.md)
 
 ## 第 3 章 FreeBSD 高级安装
@@ -74,8 +74,8 @@
 
 ## 第 6 章 网络管理
 
-* [6.1 TCP/IP 协议栈](di-6-zhang-wang-luo-guan-li/di-6.1-jie-tcp-ip-xie-yi-zhan.md)
-* [6.2 网络基础配置](di-6-zhang-wang-luo-guan-li/di-6.2-jie-wang-luo-ji-chu-pei-zhi.md)
+* [6.1 网络基础配置](di-6-zhang-wang-luo-guan-li/di-6.1-jie-wang-luo-ji-chu-pei-zhi.md)
+* [6.2 TCP/IP 协议栈](di-6-zhang-wang-luo-guan-li/di-6.2-jie-tcp-ip-xie-yi-zhan.md)
 * [6.3 无线网络（Wi-Fi）配置](di-6-zhang-wang-luo-guan-li/di-6.3-jie-wu-xian-wang-luo-wi-fi-pei-zhi.md)
 * [6.4 USB 网络共享（USB tethering）](di-6-zhang-wang-luo-guan-li/di-6.4-jie-usb-wang-luo-gong-xiang-usb-tethering.md)
 * [6.5 系统代理](di-6-zhang-wang-luo-guan-li/di-6.5-jie-xi-tong-dai-li.md)
@@ -143,10 +143,6 @@
 * [12.3 IBus 输入法框架](di-12-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-12.3-jie-ibus-shu-ru-fa-kuang-jia.md)
 * [12.4 五笔输入法](di-12-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-12.4-jie-wu-bi-shu-ru-fa.md)
 * [12.5 系统字体替换](di-12-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-12.5-jie-xi-tong-zi-ti-ti-huan.md)
-* [12.6 QQ（Linux 版）](di-12-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-12.6-jie-qq-linux-ban.md)
-* [12.7 WPS Office（Linux 版）](di-12-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-12.7-jie-wps-office-linux-ban.md)
-* [12.8 微信（Linux 版）](di-12-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-12.8-jie-wei-xin-linux-ban.md)
-* [12.9 Wine 配置](di-12-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-12.9-jie-wine-pei-zhi.md)
 
 ## 第 13 章 多媒体和外部设备
 
@@ -241,30 +237,37 @@
 * [22.8 Gentoo Linux 兼容层](di-22-zhang-linux-er-jin-zhi-jian-rong-ceng/di-22.8-jie-gentoo-linux-jian-rong-ceng.md)
 * [22.9 故障排除与未竟事宜](di-22-zhang-linux-er-jin-zhi-jian-rong-ceng/di-22.9-jie-gu-zhang-pai-chu-yu-wei-jing-shi-yi.md)
 
-## 第 23 章 FreeBSD 开发与社区贡献
+## 第 23 章 基于 Linux 兼容层的应用
 
-* [23.1 Bug 报告流程](di-23-zhang-freebsd-kai-fa-yu-she-qu-gong-xian/di-23.1-jie-bug-bao-gao-liu-cheng.md)
-* [23.2 FreeBSD 邮件列表订阅](di-23-zhang-freebsd-kai-fa-yu-she-qu-gong-xian/di-23.2-jie-freebsd-you-jian-lie-biao-ding-yue.md)
-* [23.3 FreeBSD 开发参与指南](di-23-zhang-freebsd-kai-fa-yu-she-qu-gong-xian/di-23.3-jie-freebsd-kai-fa-can-yu-zhi-nan.md)
-* [23.4 Shell 配置](di-23-zhang-freebsd-kai-fa-yu-she-qu-gong-xian/di-23.4-jie-shell-pei-zhi.md)
-* [23.5 C/C++ 开发环境](di-23-zhang-freebsd-kai-fa-yu-she-qu-gong-xian/di-23.5-jie-c-c-kai-fa-huan-jing.md)
-* [23.6 Java 开发环境](di-23-zhang-freebsd-kai-fa-yu-she-qu-gong-xian/di-23.6-jie-java-kai-fa-huan-jing.md)
-* [23.7 Qt 开发环境](di-23-zhang-freebsd-kai-fa-yu-she-qu-gong-xian/di-23.7-jie-qt-kai-fa-huan-jing.md)
-* [23.8 Python 开发环境](di-23-zhang-freebsd-kai-fa-yu-she-qu-gong-xian/di-23.8-jie-python-kai-fa-huan-jing.md)
-* [23.9 Rust/Go 开发环境](di-23-zhang-freebsd-kai-fa-yu-she-qu-gong-xian/di-23.9-jie-rust-go-kai-fa-huan-jing.md)
-* [23.10 IDA Pro 调试 FreeBSD](di-23-zhang-freebsd-kai-fa-yu-she-qu-gong-xian/di-23.10-jie-ida-pro-diao-shi-freebsd.md)
-* [23.11 Node.js 环境](di-23-zhang-freebsd-kai-fa-yu-she-qu-gong-xian/di-23.11-jie-node-js-huan-jing.md)
-* [23.12 code-server 和 clangd 开发配置](di-23-zhang-freebsd-kai-fa-yu-she-qu-gong-xian/di-23.12-jie-code-server-he-clangd-kai-fa-pei-zhi.md)
-* [23.13 Vim 开发环境配置](di-23-zhang-freebsd-kai-fa-yu-she-qu-gong-xian/di-23.13-jie-vim-kai-fa-huan-jing-pei-zhi.md)
+* [23.1 QQ（Linux 版）](di-23-zhang-ji-yu-linux-jian-rong-ceng-de-ying-yong/di-23.1-jie-qq-linux-ban.md)
+* [23.2 WPS Office（Linux 版）](di-23-zhang-ji-yu-linux-jian-rong-ceng-de-ying-yong/di-23.2-jie-wps-office-linux-ban.md)
+* [23.3 微信（Linux 版）](di-23-zhang-ji-yu-linux-jian-rong-ceng-de-ying-yong/di-23.3-jie-wei-xin-linux-ban.md)
+* [23.4 Wine 配置](di-23-zhang-ji-yu-linux-jian-rong-ceng-de-ying-yong/di-23.4-jie-wine-pei-zhi.md)
 
-## 第 24 章 FreeBSD 内核架构
+## 第 24 章 FreeBSD 开发与社区贡献
 
-* [24.1 FreeBSD 源代码目录结构](di-24-zhang-freebsd-nei-he-jia-gou/di-24.1-jie-freebsd-yuan-dai-ma-mu-lu-jie-gou.md)
-* [24.2 FreeBSD 内核文件结构](di-24-zhang-freebsd-nei-he-jia-gou/di-24.2-jie-freebsd-nei-he-wen-jian-jie-gou.md)
-* [24.3 机器相关的内核选项注解](di-24-zhang-freebsd-nei-he-jia-gou/di-24.3-jie-ji-qi-xiang-guan-de-nei-he-xuan-xiang-zhu-jie.md)
-* [24.4 机器无关的内核选项注解](di-24-zhang-freebsd-nei-he-jia-gou/di-24.4-jie-ji-qi-wu-guan-de-nei-he-xuan-xiang-zhu-jie.md)
-* [24.5 GENERIC 内核选项注解（AMD64）](di-24-zhang-freebsd-nei-he-jia-gou/di-24.5-jie-generic-nei-he-xuan-xiang-zhu-jie-amd64.md)
-* [24.6 在 Linux 系统上交叉构建 FreeBSD](di-24-zhang-freebsd-nei-he-jia-gou/di-24.6-jie-zai-linux-xi-tong-shang-jiao-cha-gou-jian-freebsd.md)
+* [24.1 Bug 报告流程](di-24-zhang-freebsd-kai-fa-yu-she-qu-gong-xian/di-24.1-jie-bug-bao-gao-liu-cheng.md)
+* [24.2 FreeBSD 邮件列表订阅](di-24-zhang-freebsd-kai-fa-yu-she-qu-gong-xian/di-24.2-jie-freebsd-you-jian-lie-biao-ding-yue.md)
+* [24.3 FreeBSD 开发参与指南](di-24-zhang-freebsd-kai-fa-yu-she-qu-gong-xian/di-24.3-jie-freebsd-kai-fa-can-yu-zhi-nan.md)
+* [24.4 Shell 配置](di-24-zhang-freebsd-kai-fa-yu-she-qu-gong-xian/di-24.4-jie-shell-pei-zhi.md)
+* [24.5 C/C++ 开发环境](di-24-zhang-freebsd-kai-fa-yu-she-qu-gong-xian/di-24.5-jie-c-c-kai-fa-huan-jing.md)
+* [24.6 Java 开发环境](di-24-zhang-freebsd-kai-fa-yu-she-qu-gong-xian/di-24.6-jie-java-kai-fa-huan-jing.md)
+* [24.7 Qt 开发环境](di-24-zhang-freebsd-kai-fa-yu-she-qu-gong-xian/di-24.7-jie-qt-kai-fa-huan-jing.md)
+* [24.8 Python 开发环境](di-24-zhang-freebsd-kai-fa-yu-she-qu-gong-xian/di-24.8-jie-python-kai-fa-huan-jing.md)
+* [24.9 Rust/Go 开发环境](di-24-zhang-freebsd-kai-fa-yu-she-qu-gong-xian/di-24.9-jie-rust-go-kai-fa-huan-jing.md)
+* [24.10 IDA Pro 调试 FreeBSD](di-24-zhang-freebsd-kai-fa-yu-she-qu-gong-xian/di-24.10-jie-ida-pro-diao-shi-freebsd.md)
+* [24.11 Node.js 环境](di-24-zhang-freebsd-kai-fa-yu-she-qu-gong-xian/di-24.11-jie-node-js-huan-jing.md)
+* [24.12 code-server 和 clangd 开发配置](di-24-zhang-freebsd-kai-fa-yu-she-qu-gong-xian/di-24.12-jie-code-server-he-clangd-kai-fa-pei-zhi.md)
+* [24.13 Vim 开发环境配置](di-24-zhang-freebsd-kai-fa-yu-she-qu-gong-xian/di-24.13-jie-vim-kai-fa-huan-jing-pei-zhi.md)
+
+## 第 25 章 FreeBSD 内核架构
+
+* [25.1 FreeBSD 源代码目录结构](di-25-zhang-freebsd-nei-he-jia-gou/di-25.1-jie-freebsd-yuan-dai-ma-mu-lu-jie-gou.md)
+* [25.2 FreeBSD 内核文件结构](di-25-zhang-freebsd-nei-he-jia-gou/di-25.2-jie-freebsd-nei-he-wen-jian-jie-gou.md)
+* [25.3 机器相关的内核选项注解](di-25-zhang-freebsd-nei-he-jia-gou/di-25.3-jie-ji-qi-xiang-guan-de-nei-he-xuan-xiang-zhu-jie.md)
+* [25.4 机器无关的内核选项注解](di-25-zhang-freebsd-nei-he-jia-gou/di-25.4-jie-ji-qi-wu-guan-de-nei-he-xuan-xiang-zhu-jie.md)
+* [25.5 GENERIC 内核选项注解（AMD64）](di-25-zhang-freebsd-nei-he-jia-gou/di-25.5-jie-generic-nei-he-xuan-xiang-zhu-jie-amd64.md)
+* [25.6 在 Linux 系统上交叉构建 FreeBSD](di-25-zhang-freebsd-nei-he-jia-gou/di-25.6-jie-zai-linux-xi-tong-shang-jiao-cha-gou-jian-freebsd.md)
 
 ## 附录 I OpenBSD 系统入门
 
