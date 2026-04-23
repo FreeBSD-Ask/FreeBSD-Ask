@@ -14,7 +14,7 @@ FreeBSD 是一款真正自由（Liberty）的 **操作系统**，在这波谲云
 >
 > 本书约有 60% 的章节尚未完成（详见下文），已有的章节虽经审阅和修订，但仍非最终版本。
 
-本书是一本关于 FreeBSD 操作系统的开源研究著作，同时包含 OpenBSD、NetBSD 等 Berkeley Unix 家族系统的导论章节。
+本书是一本关于 FreeBSD 操作系统的开源研究著作。
 
 [~~FreeBSD 项目即将归档（Archived）~~，为了保护我们心爱的操作系统……我们能做的事情就是，写一本书！](https://www.bilibili.com/bangumi/media/md3068)（化用 Love Live! School Idol Project[Z]. 日本: SUNRISE, 2013-01-06. 中的经典口号）
 
