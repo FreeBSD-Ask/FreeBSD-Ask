@@ -276,11 +276,6 @@
 
 * [我与 FreeBSD 的故事](fu-lu2/wo-yu-freebsd-de-gu-shi.md)
 * [两次告别](fu-lu2/liang-ci-gao-bie.md)
-* [小说：《青其正色》](fu-lu2/xiao-shuo-qing-qi-zheng-se.md)
-* [小说：《吾乡何处》](fu-lu2/xiao-shuo-wu-xiang-he-chu.md)
-* [小说：《你与暗》](fu-lu2/xiao-shuo-ni-yu-an.md)
-* [诗歌选](fu-lu2/shi-ge-xuan.md)
-* [手记](fu-lu2/shou-ji.md)
 
 ## 附录 III 参考文献与术语表
 
