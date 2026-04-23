@@ -1,4 +1,4 @@
-﻿# 8.4 Windows 文件系统
+# 8.4 Windows 文件系统
 
 本节介绍 NTFS 和 FAT32 文件系统在 FreeBSD 上的挂载、格式化与自动配置方法。
 
