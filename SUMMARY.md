@@ -228,14 +228,13 @@
 ## 第 22 章 Linux 二进制兼容层
 
 * [22.1 Linux 兼容层架构](di-22-zhang-linux-er-jin-zhi-jian-rong-ceng/di-22.1-jie-linux-jian-rong-ceng-jia-gou.md)
-* [22.2 通过 FreeBSD Ports 安装 Rocky Linux 兼容层](di-22-zhang-linux-er-jin-zhi-jian-rong-ceng/di-22.2-jie-tong-guo-freebsd-ports-an-zhuang-rocky-linux-jian-rong-ceng.md)
-* [22.3 Rocky Linux 兼容层](di-22-zhang-linux-er-jin-zhi-jian-rong-ceng/di-22.3-jie-rocky-linux-jian-rong-ceng.md)
-* [22.4 Ubuntu/Debian 兼容层](di-22-zhang-linux-er-jin-zhi-jian-rong-ceng/di-22.4-jie-ubuntu-debian-jian-rong-ceng.md)
-* [22.5 Arch Linux 兼容层（基于 Arch Linux bootstrap）](di-22-zhang-linux-er-jin-zhi-jian-rong-ceng/di-22.5-jie-arch-linux-jian-rong-ceng-ji-yu-arch-linux-bootstrap.md)
-* [22.6 Slackware Linux 兼容层](di-22-zhang-linux-er-jin-zhi-jian-rong-ceng/di-22.6-jie-slackware-linux-jian-rong-ceng.md)
-* [22.7 openSUSE 兼容层](di-22-zhang-linux-er-jin-zhi-jian-rong-ceng/di-22.7-jie-opensuse-jian-rong-ceng.md)
-* [22.8 Gentoo Linux 兼容层](di-22-zhang-linux-er-jin-zhi-jian-rong-ceng/di-22.8-jie-gentoo-linux-jian-rong-ceng.md)
-* [22.9 故障排除与未竟事宜](di-22-zhang-linux-er-jin-zhi-jian-rong-ceng/di-22.9-jie-gu-zhang-pai-chu-yu-wei-jing-shi-yi.md)
+* [22.2 Rocky Linux 兼容层](di-22-zhang-linux-er-jin-zhi-jian-rong-ceng/di-22.2-jie-rocky-linux-jian-rong-ceng.md)
+* [22.3 Ubuntu/Debian 兼容层](di-22-zhang-linux-er-jin-zhi-jian-rong-ceng/di-22.3-jie-ubuntu-debian-jian-rong-ceng.md)
+* [22.4 Arch Linux 兼容层（基于 Arch Linux bootstrap）](di-22-zhang-linux-er-jin-zhi-jian-rong-ceng/di-22.4-jie-arch-linux-jian-rong-ceng-ji-yu-arch-linux-bootstrap.md)
+* [22.5 Slackware Linux 兼容层](di-22-zhang-linux-er-jin-zhi-jian-rong-ceng/di-22.5-jie-slackware-linux-jian-rong-ceng.md)
+* [22.6 openSUSE 兼容层](di-22-zhang-linux-er-jin-zhi-jian-rong-ceng/di-22.6-jie-opensuse-jian-rong-ceng.md)
+* [22.7 Gentoo Linux 兼容层](di-22-zhang-linux-er-jin-zhi-jian-rong-ceng/di-22.7-jie-gentoo-linux-jian-rong-ceng.md)
+* [22.8 故障排除与未竟事宜](di-22-zhang-linux-er-jin-zhi-jian-rong-ceng/di-22.8-jie-gu-zhang-pai-chu-yu-wei-jing-shi-yi.md)
 
 ## 第 23 章 基于 Linux 兼容层的应用
 
