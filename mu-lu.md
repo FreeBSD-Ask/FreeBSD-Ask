@@ -296,17 +296,7 @@
 * [BSD 许可证概览](fu-lu3/bsd-xu-ke-zheng-gai-lan.md)
 * [microSD 卡参数简介](fu-lu3/cun-chu-ka.md)
 
-## 附录 IV UEFI/BIOS 注解（AMI BIOS）
-
-* [UEFI/BIOS 概述与警告](fu-lu4/uefi-bios-gai-shu-yu-jing-gao.md)
-* [Main 主菜单](fu-lu4/main-zhu-cai-dan.md)
-* [Advanced 高级](fu-lu4/advanced-gao-ji.md)
-* [Chipset 芯片组](fu-lu4/chipset-xin-pian-zu.md)
-* [Security 安全](fu-lu4/security-an-quan.md)
-* [Boot 启动](fu-lu4/boot-qi-dong.md)
-* [Save & Exit 保存与退出](fu-lu4/save-exit-bao-cun-yu-tui-chu.md)
-
-## 附录 V 文学故事
+## 附录 IV 文学故事
 
 * [我与 FreeBSD 的故事](fu-lu5/wo-yu-freebsd-de-gu-shi.md)
 * [两次告别](fu-lu5/liang-ci-gao-bie.md)
@@ -316,7 +306,7 @@
 * [诗歌选](fu-lu5/shi-ge-xuan.md)
 * [手记](fu-lu5/shou-ji.md)
 
-## 附录 VI 参考文献与术语表
+## 附录 V 参考文献与术语表
 
 * [参考书目](fu-lu6/can-kao-shu-mu.md)
 * [术语表](fu-lu6/shu-yu-biao.md)
