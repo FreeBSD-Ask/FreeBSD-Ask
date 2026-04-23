@@ -1,0 +1,219 @@
+# 7.2 V2Ray 配置
+
+V2Ray 是一款代理软件，支持多种代理协议和流量路由功能。
+
+Xray-core 是 V2Ray 的一个分支，在保持核心功能的基础上进行了性能优化和功能扩展。二者配置基本相同，Xray 可参考 V2Ray 的配置方法。
+
+## 安装 V2Ray
+
+### 安装 V2Ray
+
+V2Ray 可通过 pkg 或 Ports 两种方式安装。
+
+- 使用 pkg 安装 V2Ray，这是最便捷的二进制安装方式：
+
+```sh
+# pkg install v2ray
+```
+
+- 或者使用 Ports 安装 V2Ray，适用于需要自定义编译选项的场景：
+
+```sh
+# cd /usr/ports/net/v2ray/
+# make install clean
+```
+
+### 安装 Xray-core
+
+使用 pkg 安装 Xray-core：
+
+```sh
+# pkg install xray-core
+```
+
+或者使用 Ports 安装 Xray-core：
+
+```sh
+# cd /usr/ports/security/xray-core/
+# make install clean
+```
+
+## 启动代理软件
+
+安装完成后，需要启动代理软件。如果已有代理客户端，可以将客户端节点配置导出并复制到 FreeBSD 系统中，例如使用 Windows 版本的 V2RayN 导出配置文件，假设导出的文件名为 config.json。
+
+使用指定的配置文件启动 V2Ray：
+
+```sh
+# v2ray run -c /path/to/config.json
+```
+
+使用指定的配置文件启动 Xray：
+
+```sh
+# xray run -c /path/to/config.json
+```
+
+此时，代理软件应已成功启动，可通过日志或进程状态进行验证。
+
+## 配置代理参数
+
+代理软件启动后，需要对相关软件进行代理参数配置。V2Ray/Xray 采用 inbounds（入站）和 outbounds（出站）的架构设计：inbounds 定义代理软件如何接收流量，outbounds 定义代理软件如何转发流量。
+
+编辑 config.json 文件，找到对应的 inbounds 属性。inbounds 是一个数组，其中的每个元素表示一项入站接口配置，包括监听地址、端口号和代理协议类型。在需要使用代理的软件中，将代理服务器地址和端口号设置为此处对应的值。
+
+### 配置浏览器使用代理（以 Firefox 为例）
+
+**1. 查找端口：**
+
+打开配置文件 config.json，在 inbounds 字段下确认端口号。通常 Windows 导出的配置中，SOCKS5 端口为 10808，HTTP 端口为 10809。
+
+例如，其中一个入站接口的 `protocol` 为 `http`，`listen` 为 `127.0.0.1`，`port` 为 10809，这表示该入站接口在本地环回地址的 10809 端口监听 HTTP 代理请求。
+
+**2. Firefox 设置：**
+
+- 打开设置 → 网络设置 → 代理服务器。
+- 选择“手动代理配置”。
+- 对于 HTTP 代理：将地址设置为 `127.0.0.1`，端口设置为 10809。
+- 对于 SOCKS 代理：将 SOCKS 主机填写为 `127.0.0.1`，端口填写为 10808。
+- **重要：** 勾选底部的“使用 SOCKS v5 时代理 DNS”（Proxy DNS when using SOCKS v5），这一步对绕过 DNS 污染至关重要，因为它将域名解析请求也通过代理服务器转发。
+
+### 配置终端命令行程序
+
+大多数终端命令会读取环境变量 `HTTP_PROXY`、`HTTPS_PROXY` 和 `ALL_PROXY`，并根据其取值自动使用相应的代理。
+
+下面的命令适用于 sh、bash、zsh：
+
+```sh
+$ export HTTP_PROXY="http://127.0.0.1:10809" # 设置 HTTP 代理
+$ export HTTPS_PROXY="http://127.0.0.1:10809" # 设置 HTTPS 代理
+$ export ALL_PROXY="socks5://127.0.0.1:10808" # 设置 SOCKS5 代理
+```
+
+设置完成后，可在 Firefox 浏览器中访问网页，并观察 V2Ray 输出的日志，即可确认浏览器流量已通过代理转发。终端命令同样会通过代理访问网络，但部分命令对环境变量的支持方式不同，请根据具体软件查阅其代理配置方法。
+
+## 代理流量分流
+
+为了提高网络访问效率，部分网址不需要通过代理服务器访问，例如境内网站或本地网络资源。此时需要对网络流量进行分流处理。
+
+打开 config.json 文件，找到对应的 routing 属性，其中的 rules 子属性用于配置 V2Ray 的流量分流规则。在 rules 中可以配置多条分流规则，每条规则通常包含 ip 或 domain 等匹配条件。当 IP 或域名匹配到某条规则时，V2Ray 会根据 outboundTag 属性，将流量转发到对应的 outbounds 出站配置中，例如标签为 proxy（代理）、direct（直连）或 block（拦截）的出站。只需将需要分流处理的域名或 IP 地址配置到相应的规则中即可。相关配置细节可参考 V2Ray 官方文档。实际上，在 V2Ray 客户端中导出配置文件时，通常已包含默认的流量分流规则。
+
+V2Ray 还预置了 geosite.dat 和 geoip.dat 两个资源文件：geosite.dat 按分类保存各类域名信息，geoip.dat 按分类保存各类 IP 地址信息。资源文件路径可通过设置环境变量 V2RAY_LOCATION_ASSET 指定，V2Ray 会自动在该路径下查找 geosite.dat 和 geoip.dat 文件。对于 Xray，则使用 XRAY_LOCATION_ASSET 环境变量来指定资源文件路径。注意：如果使用 Xray，请确保正确设置 XRAY_LOCATION_ASSET 环境变量，否则可能导致资源文件加载失败。
+
+例如，在直连规则中可以配置 geosite 中的 cn 域名走直连：
+
+```json
+      {
+        "domain": [
+          "geosite:cn"
+        ],
+        "outboundTag": "direct",
+        "type": "field"
+      },
+```
+
+V2Ray 社区提供的 cn 域名直连规则可根据实际需求进行扩展。也可在 GitHub 上查找由社区维护的 geosite 和 geoip 文件，其中通常对“白名单模式”和“黑名单模式”的配置方式也有较为详细的说明。
+
+## 故障排除与未竟事宜
+
+### 解决 Xray 资源文件加载失败（geosite.dat/geoip.dat）
+
+在使用 Xray 时，可能会遇到资源文件加载失败的问题。FreeBSD 系统中，xray-core 的 pkg 安装的资源文件位于 `/usr/local/share/xray-core/`，但程序默认会在可执行文件同级目录 `/usr/local/bin/` 查找。若启动时报 `open /usr/local/bin/geosite.dat: no such file or directory` 错误，可采用以下两种方案：
+
+相关目录文件结构：
+
+```sh
+/usr/local/
+├── bin/
+│   ├── v2ray # V2Ray 可执行文件
+│   └── xray # Xray 可执行文件
+├── etc/
+│   └── xray-core/
+│       └── config.json # Xray 配置文件
+└── share/
+    └── xray-core/
+        ├── geosite.dat # 域名分类资源文件
+        └── geoip.dat # IP 地址分类资源文件
+```
+
+#### 方案一：终端临时运行或用户级配置
+
+**临时运行：**
+
+通过环境变量指定资源路径，这种方式适用于单次运行或测试场景：
+
+```sh
+# env XRAY_LOCATION_ASSET=/usr/local/share/xray-core/ xray run -c /path/to/config.json
+```
+
+注意：若想在后台运行，可在命令末尾添加 `&` 符号。但此方式不能使进程脱离当前终端会话；若需终端关闭后仍持续运行，请使用 nohup 或 disown。
+
+**持久化配置：**
+
+根据所使用的 Shell，选择适合的方式进行持久化配置，使环境变量在每次登录时自动生效：
+
+**Shell 配置路径**
+
+1. sh：在 `~/.profile` 文件写入 A 组配置
+2. bash：在 `~/.bash_profile` 文件或 `~/.profile` 文件写入 A 组配置
+3. csh：在 `~/.cshrc` 文件写入 B 组配置
+
+**A 组（sh/bash）**
+
+```sh
+export XRAY_LOCATION_ASSET=/usr/local/share/xray-core/      # 指定 Xray 资源文件路径
+```
+
+**B 组（csh）**
+
+```sh
+setenv XRAY_LOCATION_ASSET /usr/local/share/xray-core/
+```
+
+配置完成后，请重新加载配置文件以使更改立即生效，例如，对于 sh 或 bash：`source ~/.profile`；对于 csh：`source ~/.cshrc`，或注销并重新登录。对于系统服务运行方式，如 rc.conf，无需此配置，因为它通过 sysrc 注入环境变量。
+
+建立软链接，使 Xray 无论从何处启动都能找到资源文件：
+
+```sh
+# ln -s /usr/local/share/xray-core/geosite.dat /usr/local/bin/geosite.dat
+# ln -s /usr/local/share/xray-core/geoip.dat /usr/local/bin/geoip.dat
+```
+
+#### 方案二：系统服务运行
+
+这是最符合 FreeBSD 规范的方法，支持开机自启和统一管理。
+
+**1. 放置配置文件：**
+
+首先，将配置移动到系统默认目录并修正权限：
+
+```sh
+# cp /path/to/config.json /usr/local/etc/xray-core/config.json
+# chown -R v2ray:v2ray /usr/local/etc/xray-core/      # 将 /usr/local/etc/xray-core/ 目录（及 config.json 等文件）的所有权递归修改为 v2ray 用户和组。
+```
+
+- FreeBSD 的 `security/xray-core` 没有创建独立的 `xray` 用户/组，而是沿用 `net/v2ray` 的 `v2ray:v2ray`，这是为了保持用户权限管理的一致性。
+
+注意：若 `/usr/local/etc/xray-core/` 目录下存在其他 `.json` 样例文件，建议将其移走或删除，避免配置冲突，因为 Xray 可能会扫描目录下的所有 JSON 文件。
+
+**2. 配置 rc.conf 文件：**
+
+执行以下命令开启服务并注入环境：
+
+```sh
+# sysrc xray_enable="YES"
+# sysrc xray_config="/usr/local/etc/xray-core"      # 指向 xray-core 的代理配置目录，该目录在安装 xray-core 时自动生成
+# sysrc xray_env="XRAY_LOCATION_ASSET=/usr/local/share/xray-core"      # 指向的是 xray-core 的资源文件目录
+```
+
+**3. 服务管理：**
+
+- 启动：`service xray start`
+- 停止：`service xray stop`
+- 临时禁用自启：在 `/etc/rc.conf` 文件中注释掉 `xray_enable="YES"`
+- 永久禁用自启：使用 `service xray disable`
+- 重新启用自启：使用 `service xray enable`
+
+## 课后习题
+
+1. 在 FreeBSD 上安装 Xray-core 并通过系统服务方式运行，使用社区维护的 geosite/geoip 文件配置完整的分流规则，验证 geosite:cn 域名是否真的走直连，并将其作为补丁贡献到 Ports。
