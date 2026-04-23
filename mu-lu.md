@@ -298,15 +298,15 @@
 
 ## 附录 IV 文学故事
 
-* [我与 FreeBSD 的故事](fu-lu5/wo-yu-freebsd-de-gu-shi.md)
-* [两次告别](fu-lu5/liang-ci-gao-bie.md)
-* [小说：《青其正色》](fu-lu5/xiao-shuo-qing-qi-zheng-se.md)
-* [小说：《吾乡何处》](fu-lu5/xiao-shuo-wu-xiang-he-chu.md)
-* [小说：《你与暗》](fu-lu5/xiao-shuo-ni-yu-an.md)
-* [诗歌选](fu-lu5/shi-ge-xuan.md)
-* [手记](fu-lu5/shou-ji.md)
+* [我与 FreeBSD 的故事](fu-lu4/wo-yu-freebsd-de-gu-shi.md)
+* [两次告别](fu-lu4/liang-ci-gao-bie.md)
+* [小说：《青其正色》](fu-lu4/xiao-shuo-qing-qi-zheng-se.md)
+* [小说：《吾乡何处》](fu-lu4/xiao-shuo-wu-xiang-he-chu.md)
+* [小说：《你与暗》](fu-lu4/xiao-shuo-ni-yu-an.md)
+* [诗歌选](fu-lu4/shi-ge-xuan.md)
+* [手记](fu-lu4/shou-ji.md)
 
 ## 附录 V 参考文献与术语表
 
-* [参考书目](fu-lu6/can-kao-shu-mu.md)
-* [术语表](fu-lu6/shu-yu-biao.md)
+* [参考书目](fu-lu5/can-kao-shu-mu.md)
+* [术语表](fu-lu5/shu-yu-biao.md)
