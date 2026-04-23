@@ -265,44 +265,24 @@
 * [24.5 GENERIC 内核选项注解（AMD64）](di-24-zhang-freebsd-nei-he-jia-gou/di-24.5-jie-generic-nei-he-xuan-xiang-zhu-jie-amd64.md)
 * [24.6 在 Linux 系统上交叉构建 FreeBSD](di-24-zhang-freebsd-nei-he-jia-gou/di-24.6-jie-zai-linux-xi-tong-shang-jiao-cha-gou-jian-freebsd.md)
 
-## 附录 I OpenBSD 系统入门
+## 附录 I 工具与资源
 
-* [OpenBSD 项目概述](fu-lu1/openbsd-xiang-mu-gai-shu.md)
-* [OpenBSD 系统安装](fu-lu1/openbsd-xi-tong-an-zhuang.md)
-* [OpenBSD 系统配置](fu-lu1/openbsd-xi-tong-pei-zhi.md)
-* [OpenBSD 包管理器](fu-lu1/openbsd-bao-guan-li-qi.md)
-* [桌面和其他软件](fu-lu1/zhuo-mian-he-qi-ta-ruan-jian.md)
-* [在昉·星光 2 开发板（RISC-V）上安装 OpenBSD](fu-lu1/zai-fang-xing-guang-2-kai-fa-ban-risc-v-shang-an-zhuang-openbsd.md)
-* [在树莓派上安装 OpenBSD](fu-lu1/zai-shu-mei-pai-shang-an-zhuang-openbsd.md)
+* [自由软件与开源软件的常见误解辨析](fu-lu1/zi-you-ruan-jian.md)
+* [GNU/Linux 发行版比较](fu-lu1/gnu-linux.md)
+* [BSD 许可证概览](fu-lu1/bsd-xu-ke-zheng-gai-lan.md)
+* [microSD 卡参数简介](fu-lu1/cun-chu-ka.md)
 
-## 附录 II NetBSD 系统入门
+## 附录 II 文学故事
 
-* [NetBSD 项目概述](fu-lu2/netbsd-xiang-mu-gai-shu.md)
-* [NetBSD 安装示例](fu-lu2/netbsd-an-zhuang-shi-li.md)
-* [NetBSD 软件源与包管理器](fu-lu2/netbsd-ruan-jian-yuan-yu-bao-guan-li-qi.md)
-* [桌面及中文软件配置](fu-lu2/zhuo-mian-ji-zhong-wen-ruan-jian-pei-zhi.md)
+* [我与 FreeBSD 的故事](fu-lu2/wo-yu-freebsd-de-gu-shi.md)
+* [两次告别](fu-lu2/liang-ci-gao-bie.md)
+* [小说：《青其正色》](fu-lu2/xiao-shuo-qing-qi-zheng-se.md)
+* [小说：《吾乡何处》](fu-lu2/xiao-shuo-wu-xiang-he-chu.md)
+* [小说：《你与暗》](fu-lu2/xiao-shuo-ni-yu-an.md)
+* [诗歌选](fu-lu2/shi-ge-xuan.md)
+* [手记](fu-lu2/shou-ji.md)
 
-## 附录 III 工具与资源
+## 附录 III 参考文献与术语表
 
-* [自由软件与开源软件的常见误解辨析](fu-lu3/zi-you-ruan-jian.md)
-* [GNU/Linux 发行版比较](fu-lu3/gnu-linux.md)
-* [DragonFly BSD 系统导论](fu-lu3/dragonfly-bsd-xi-tong-dao-lun.md)
-* [TwinCAT/BSD 系统导论](fu-lu3/twincat-bsd-xi-tong-dao-lun.md)
-* [FreeBSD 桌面发行版评述](fu-lu3/freebsd-zhuo-mian-fa-xing-ban-ping-shu.md)
-* [BSD 许可证概览](fu-lu3/bsd-xu-ke-zheng-gai-lan.md)
-* [microSD 卡参数简介](fu-lu3/cun-chu-ka.md)
-
-## 附录 IV 文学故事
-
-* [我与 FreeBSD 的故事](fu-lu4/wo-yu-freebsd-de-gu-shi.md)
-* [两次告别](fu-lu4/liang-ci-gao-bie.md)
-* [小说：《青其正色》](fu-lu4/xiao-shuo-qing-qi-zheng-se.md)
-* [小说：《吾乡何处》](fu-lu4/xiao-shuo-wu-xiang-he-chu.md)
-* [小说：《你与暗》](fu-lu4/xiao-shuo-ni-yu-an.md)
-* [诗歌选](fu-lu4/shi-ge-xuan.md)
-* [手记](fu-lu4/shou-ji.md)
-
-## 附录 V 参考文献与术语表
-
-* [参考书目](fu-lu5/can-kao-shu-mu.md)
-* [术语表](fu-lu5/shu-yu-biao.md)
+* [参考书目](fu-lu3/can-kao-shu-mu.md)
+* [术语表](fu-lu3/shu-yu-biao.md)
