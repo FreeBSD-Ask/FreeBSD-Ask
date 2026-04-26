@@ -222,167 +222,203 @@ mihomo_enable="YES" # 开机启用/服务项
 
 - 如何指定订阅链接中代理组的某个代理？（比如仅使用位于美国的某个代理 A）这涉及代理节点的精细化选择。
 
-## Clash for FreeBSD
+# Clash for FreeBSD
 
-除了 Mihomo 之外，还有 Clash for FreeBSD 项目可以使用，这为用户提供了另一种代理解决方案。
+> 本 README 已切换为 **FreeBSD 部署与运维主文档**。  
+> 推荐内核：`mihomo`（`KERNEL_TYPE=mihomo`）。
 
-> **警告**
->
-> 目前该项目尚不支持某些订阅类型，这是当前的局限性。
+## ✨ 核心特性
 
-遇到此类问题时，程序会输出以下错误信息，这是订阅格式不兼容的典型表现：
-
-```sh
-判断订阅内容是否符合clash配置文件标准:
-解码后的内容不符合clash标准，尝试将其转换为标准格式
-ELF binary type "0" not known.
-配置文件转换标准格式失败
-```
-
-如果遇到类似问题，建议使用其他解决方案，如上述 Mihomo 方案。
-
-### 下载项目
-
-克隆 Clash for FreeBSD 仓库到本地，通过 Git 版本控制系统获取项目代码：
-
-```bash
-$ git clone https://github.com/wenyinos/clash-for-freebsd
-```
-
-相关文件结构：
-
-```sh
-clash-for-freebsd/
-├── start.sh # 启动脚本
-├── shutdown.sh # 停止脚本
-├── restart.sh # 重启脚本
-├── .env # 环境变量配置文件
-└── conf/
-    └── config.yaml # Clash 配置文件
-/etc/
-└── profile.d/
-    └── clash.sh # Clash 环境变量配置脚本
-```
-
-### 启动程序
-
-仓库克隆完成后，可直接运行脚本文件 start.sh 启动程序，该脚本封装了复杂的启动流程。
-
-- 进入项目目录：
-
-```bash
-$ cd clash-for-freebsd                                  # 进入 Clash for FreeBSD 目录
-$ chmod +x start.sh shutdown.sh restart.sh             # 设置启动、停止和重启脚本为可执行权限，这是 Unix 脚本执行的前置条件
-```
-
-- 编辑 `.env` 文件，修改变量 `CLASH_URL` 的值（即放入 Clash 订阅链接），`.env` 文件是环境变量配置的常用方式。
-
-> **注意**
->
-> `.env` 文件中的变量 `CLASH_SECRET` 为自定义 Clash 的 Secret，当值为空时，脚本将自动生成随机字符串，Secret 用于 Web 管理界面的身份验证。
-
-- 安装 bash，并将其设置为 root 用户及当前登录用户的 Shell，具体步骤请参见相关文档，这是当前脚本的依赖限制。
-
-- 运行启动脚本：
-
-```bash
-# bash start.sh
-
-正在检测订阅地址...
-Clash订阅地址可访问！                                      [  OK  ]
-
-正在下载Clash配置文件...
-配置文件config.yaml下载成功！                              [  OK  ]
-
-正在启动Clash服务...
-服务启动成功！                                             [  OK  ]
-
-Clash Dashboard 访问地址：http://<ip>:9090/ui
-Secret：xxxxxxxxxxxxx
-
-请执行以下命令加载环境变量: source /etc/profile.d/clash.sh
-
-请执行以下命令开启系统代理: proxy_on
-
-若要临时关闭系统代理，请执行: proxy_off
+- 自动识别架构并下载对应运行依赖
+- 多订阅管理与节点切换
+- Tun 模式与路由诊断
+- Mixin 补丁机制
+- `clashctl doctor` 一键诊断
+- FreeBSD `rc.d` 服务托管（`freebsd-rc` 后端）
+## ⌨️ 命令一览
 
 ```
-
-- 加载环境变量并启用系统代理：
-
-```bash
-$ source /etc/profile.d/clash.sh   # 加载 Clash 环境变量配置
-$ proxy_on                         # 启用 Clash 代理
+clashon / clashoff
+clashctl add|use|select|ls
+clashctl status|doctor|logs
+clashctl tun on|off|doctor
+clashctl autostart on|off|status
+clashctl config regen
+clashctl update|upgrade
 ```
 
-- 列出本地监听的端口中包含 9090 或 789 的套接字，通过 sockstat 工具检查网络端口监听状态，这是 FreeBSD 中查看网络套接字的标准方法：
+---
 
-```bash
-# sockstat -l | egrep '9090|789'
-root     clash-free  2706 7   tcp46  *:9090                *:*
-root     clash-free  2706 8   tcp46  *:7890                *:*
-root     clash-free  2706 9   tcp46  *:7891                *:*
-root     clash-free  2706 10  udp46  *:7891                *:*
-root     clash-free  2706 11  tcp46  *:7892                *:*
-root     clash-free  2706 12  udp46  *:7892                *:*
+## 1. 环境准备
+
+FreeBSD 默认登录 Shell 可能不是 `bash`，执行以下命令前请先切换到 `bash`：
+
+```shell
+bash
 ```
 
-- 查看环境中设置的 HTTP 和 HTTPS 代理变量，验证环境变量配置是否正确：
+建议使用 `root` 或具备 `sudo` 权限账号。
 
-```bash
-$ env | grep -E 'http_proxy|https_proxy'
-http_proxy=http://127.0.0.1:7890
-https_proxy=http://127.0.0.1:7890
+```shell
+pkg update
+pkg install -y bash curl unzip gtar gzip
 ```
 
-如果以上步骤的输出结果类似，且能够正常访问 <https://google.com>，则说明 Clash 程序已成功启动，这是验证代理工作状态的有效方法。
+说明：
 
-### 重启程序
+- 当前脚本通过 `bash` 执行。
+- `freebsd-rc` 后端依赖 `service` 与 `/usr/local/etc/rc.d`。
 
-如果需要对 Clash 配置进行修改，请修改 `conf/config.yaml` 文件。然后运行 `restart.sh` 脚本进行重启，使新配置生效。
+### 1.1 sudo 找不到 clashctl（PATH 差异）
 
-> **注意**
->
-> 重启脚本 `restart.sh` 不会更新订阅信息，仅重启服务进程。
-
-### 访问 Web 端
-
-程序启动后，可以通过 Web 界面进行管理，这提供了直观的图形化管理方式。访问 <http://127.0.0.1:9090/ui> 在网页中输入上面输出的 Secret 值即可。
-
-### 停止程序
-
-如果需要停止 Clash for FreeBSD 服务，请按以下步骤操作，确保服务和系统代理都正确关闭：
-
-- 进入项目目录：
-
-```bash
-$ cd clash-for-freebsd
-```
-
-- 关闭服务：
-
-```bash
-# bash shutdown.sh
-
-服务关闭成功，请执行以下命令关闭系统代理：`proxy_off`
+现象：
 
 ```
-
-```bash
-$ proxy_off
+sudo: clashctl：找不到命令
 ```
 
-随后检查程序端口、进程以及环境变量 `http_proxy|https_proxy`，若均不存在，则说明服务已正常关闭，这是确保清理工作的完整性检查。
+原因：`sudo` 默认使用 `secure_path`，通常不包含用户目录（如 `/home/zemin/.local/bin`）。
+
+临时用法（直接可用）：
+
+```shell
+sudo /home/zemin/.local/bin/clashctl autostart on
+sudo /home/zemin/.local/bin/clashctl autostart status
+```
+
+永久修复（推荐）：
+
+```shell
+sudo visudo
+```
+
+找到并修改（或新增）：
+
+```
+Defaults secure_path="/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin:/home/zemin/.local/bin"
+```
+
+保存后即可直接使用：
+
+```shell
+sudo clashctl autostart on
+sudo clashctl autostart status
+```
+
+### 1.2 sudo 导致文件属主漂移（.env / runtime）
+
+现象（示例）：
+
+```
+touch: /home/zemin/clash-freebsd/runtime/runtime-events.env: Permission denied
+override rw-r--r--  root/zemin for /home/zemin/clash-freebsd/.env? (y/n [n])
+```
+
+原因：使用 `sudo clashctl ...` 执行会把 `.env` 或 `runtime/*` 写成 `root` 属主，后续普通用户执行会权限不足。
+
+建议：
+
+- 仅对必须 root 的命令使用 `sudo`（如 `service`、`autostart`、`tun on/off`）。
+- 其他命令（如 `clashctl config regen`、`clashctl secret`、`clashctl logs`）优先使用普通用户执行。
+
+修复属主（一次性）：
+
+```shell
+sudo chown zemin:zemin /home/zemin/clash-freebsd/.env
+sudo chown -R zemin:zemin /home/zemin/clash-freebsd/runtime
+```
+
+## 2. 安装与初始化
+
+```shell
+git clone --branch master --depth 1 https://github.com/wenyinos/clash-freebsd.git
+cd clash-freebsd
+export KERNEL_TYPE=mihomo
+bash install.sh
+```
+
+首次配置：
+
+```shell
+clashctl add <订阅链接> <名称>
+clashctl use
+clashctl select
+clashon
+clashctl status
+```
+
+## 3. FreeBSD 服务管理（rc.d）
+
+系统安装默认使用 `freebsd-rc` 后端，服务名：`clash_freebsd`。
+
+```shell
+sudo service clash_freebsd status
+sudo service clash_freebsd start
+sudo service clash_freebsd stop
+sudo service clash_freebsd restart
+```
+
+管理内核服务开机自启：
+
+```shell
+sudo clashctl autostart on
+sudo clashctl autostart status
+sudo clashctl autostart off
+```
+
+说明：
+
+- `clashctl autostart on` 只影响 rc.d 服务是否随系统启动。
+- `service` 与 `autostart` 命令需要 root 权限（请使用 root 或 `sudo`）。
+- FreeBSD 自启配置文件：`/etc/rc.conf.d/clash_freebsd`。
+
+## 4. Tun 与路由诊断（FreeBSD）
+
+Tun 设备通常为 `/dev/tun*`。
+
+```shell
+sudo clashctl tun on
+sudo clashctl tun off
+clashctl tun doctor
+route -n get default
+netstat -rn -f inet
+```
+
+Tun 未生效时优先检查：
+
+- `tun on/off` 需要 root 权限（请使用 root 或 `sudo`）。
+- `ls -l /dev/tun*`
+- 当前用户权限（建议 root）
+- 默认路由是否已接管到 tun 接口
+
+## 5. 常用排障命令
+
+```shell
+clashctl doctor
+clashctl logs
+clashctl logs mihomo
+clashctl config regen
+```
+
+## 6. 卸载
+
+```shell
+bash uninstall.sh
+```
+
+彻底清理运行时数据：
+
+```shell
+bash uninstall.sh --purge-runtime
+```
 
 ### 参考文献
 
-- wenyinos. clash-for-freebsd: freebsd command-line proxy tool[EB/OL]. [2026-03-25]. <https://github.com/wenyinos/clash-for-freebsd>. 提供了 FreeBSD 下 Clash 代理的完整部署方案，支持订阅链接管理。
+- wenyinos. 一个更完整、更优雅的 FreeBSD Clash / Mihomo 运行平台[EB/OL]. [2026-04-26]. <https://github.com/wenyinos/clash-freebsd>. 提供了 FreeBSD 下 Clash 代理的完整部署方案，支持订阅链接管理。
 
 ### 未竟事宜
 
-以下是 Clash for FreeBSD 项目有待改进的地方，这些改进方向有助于提高项目的通用性和易用性：
-
-- 需要更新以支持所有类型的订阅链接，扩大项目的适用范围。
+以下是 Clash  FreeBSD 项目有待改进的地方，这些改进方向有助于提高项目的通用性和易用性：
 
 - 与 bash 解耦，支持默认的 sh，使其更符合 FreeBSD 的默认环境。
 
@@ -392,4 +428,4 @@ $ proxy_off
 
 2. 重构 Mihomo RC 脚本，将其与 bash 解耦并移植到 FreeBSD 默认的 sh 环境，验证功能完整性并对比与原脚本的差异。
 
-3. 修改 Clash for FreeBSD 项目，使其支持多种订阅链接格式，或实现 TUN 虚拟网卡代理功能，验证修改后的系统行为。
+3. 修改 Clash for FreeBSD 项目，实现 TUN 虚拟网卡代理功能，验证修改后的系统行为。
