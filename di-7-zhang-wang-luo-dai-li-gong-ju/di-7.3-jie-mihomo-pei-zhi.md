@@ -236,7 +236,7 @@ $ bash
 
 ```shell
 # pkg update
-# pkg install -y bash curl unzip gtar gzip
+# pkg install -y bash curl gtar gzip
 ```
 
 说明：
