@@ -224,44 +224,19 @@ mihomo_enable="YES" # 开机启用/服务项
 
 # Clash for FreeBSD
 
-> 本 README 已切换为 **FreeBSD 部署与运维主文档**。  
-> 推荐内核：`mihomo`（`KERNEL_TYPE=mihomo`）。
-
-## ✨ 核心特性
-
-- 自动识别架构并下载对应运行依赖
-- 多订阅管理与节点切换
-- Tun 模式与路由诊断
-- Mixin 补丁机制
-- `clashctl doctor` 一键诊断
-- FreeBSD `rc.d` 服务托管（`freebsd-rc` 后端）
-## ⌨️ 命令一览
-
-```
-clashon / clashoff
-clashctl add|use|select|ls
-clashctl status|doctor|logs
-clashctl tun on|off|doctor
-clashctl autostart on|off|status
-clashctl config regen
-clashctl update|upgrade
-```
-
----
-
 ## 1. 环境准备
 
 FreeBSD 默认登录 Shell 可能不是 `bash`，执行以下命令前请先切换到 `bash`：
 
 ```shell
-bash
+$ bash
 ```
 
-建议使用 `root` 或具备 `sudo` 权限账号。
+建议使用 `root` 权限账号。
 
 ```shell
-pkg update
-pkg install -y bash curl unzip gtar gzip
+# pkg update
+# pkg install -y bash curl unzip gtar gzip
 ```
 
 说明：
@@ -269,82 +244,25 @@ pkg install -y bash curl unzip gtar gzip
 - 当前脚本通过 `bash` 执行。
 - `freebsd-rc` 后端依赖 `service` 与 `/usr/local/etc/rc.d`。
 
-### 1.1 sudo 找不到 clashctl（PATH 差异）
 
-现象：
-
-```
-sudo: clashctl：找不到命令
-```
-
-原因：`sudo` 默认使用 `secure_path`，通常不包含用户目录（如 `/home/zemin/.local/bin`）。
-
-临时用法（直接可用）：
-
-```shell
-sudo /home/zemin/.local/bin/clashctl autostart on
-sudo /home/zemin/.local/bin/clashctl autostart status
-```
-
-永久修复（推荐）：
-
-```shell
-sudo visudo
-```
-
-找到并修改（或新增）：
-
-```
-Defaults secure_path="/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin:/home/zemin/.local/bin"
-```
-
-保存后即可直接使用：
-
-```shell
-sudo clashctl autostart on
-sudo clashctl autostart status
-```
-
-### 1.2 sudo 导致文件属主漂移（.env / runtime）
-
-现象（示例）：
-
-```
-touch: /home/zemin/clash-freebsd/runtime/runtime-events.env: Permission denied
-override rw-r--r--  root/zemin for /home/zemin/clash-freebsd/.env? (y/n [n])
-```
-
-原因：使用 `sudo clashctl ...` 执行会把 `.env` 或 `runtime/*` 写成 `root` 属主，后续普通用户执行会权限不足。
-
-建议：
-
-- 仅对必须 root 的命令使用 `sudo`（如 `service`、`autostart`、`tun on/off`）。
-- 其他命令（如 `clashctl config regen`、`clashctl secret`、`clashctl logs`）优先使用普通用户执行。
-
-修复属主（一次性）：
-
-```shell
-sudo chown zemin:zemin /home/zemin/clash-freebsd/.env
-sudo chown -R zemin:zemin /home/zemin/clash-freebsd/runtime
-```
 
 ## 2. 安装与初始化
 
 ```shell
-git clone --branch master --depth 1 https://github.com/wenyinos/clash-freebsd.git
-cd clash-freebsd
-export KERNEL_TYPE=mihomo
-bash install.sh
+$ git clone --branch master --depth 1 https://github.com/wenyinos/clash-freebsd.git
+$ cd clash-freebsd
+$ export KERNEL_TYPE=mihomo
+# bash install.sh
 ```
 
 首次配置：
 
 ```shell
-clashctl add <订阅链接> <名称>
-clashctl use
-clashctl select
-clashon
-clashctl status
+$ clashctl add <订阅链接> <名称>
+$ clashctl use
+$ clashctl select
+$ clashon
+$ clashctl status
 ```
 
 ## 3. FreeBSD 服务管理（rc.d）
@@ -352,18 +270,18 @@ clashctl status
 系统安装默认使用 `freebsd-rc` 后端，服务名：`clash_freebsd`。
 
 ```shell
-sudo service clash_freebsd status
-sudo service clash_freebsd start
-sudo service clash_freebsd stop
-sudo service clash_freebsd restart
+# service clash_freebsd status
+# service clash_freebsd start
+# service clash_freebsd stop
+# service clash_freebsd restart
 ```
 
 管理内核服务开机自启：
 
 ```shell
-sudo clashctl autostart on
-sudo clashctl autostart status
-sudo clashctl autostart off
+# clashctl autostart on
+# clashctl autostart status
+# clashctl autostart off
 ```
 
 说明：
@@ -377,16 +295,16 @@ sudo clashctl autostart off
 Tun 设备通常为 `/dev/tun*`。
 
 ```shell
-sudo clashctl tun on
-sudo clashctl tun off
-clashctl tun doctor
+# clashctl tun on
+# clashctl tun off
+# clashctl tun doctor
 route -n get default
 netstat -rn -f inet
 ```
 
 Tun 未生效时优先检查：
 
-- `tun on/off` 需要 root 权限（请使用 root 或 `sudo`）。
+- `tun on/off` 需要 root 权限
 - `ls -l /dev/tun*`
 - 当前用户权限（建议 root）
 - 默认路由是否已接管到 tun 接口
@@ -394,22 +312,22 @@ Tun 未生效时优先检查：
 ## 5. 常用排障命令
 
 ```shell
-clashctl doctor
-clashctl logs
-clashctl logs mihomo
-clashctl config regen
+$ clashctl doctor
+$ clashctl logs
+$ clashctl logs mihomo
+$ clashctl config regen
 ```
 
 ## 6. 卸载
 
 ```shell
-bash uninstall.sh
+# bash uninstall.sh
 ```
 
 彻底清理运行时数据：
 
 ```shell
-bash uninstall.sh --purge-runtime
+# bash uninstall.sh --purge-runtime
 ```
 
 ### 参考文献
@@ -424,8 +342,4 @@ bash uninstall.sh --purge-runtime
 
 ## 课后习题
 
-1. 安装并配置 Mihomo，使用自定义 RC 脚本实现系统服务，配置完整的分流规则（直连、代理、全局），验证不同模式下的网络流量走向。
-
-2. 重构 Mihomo RC 脚本，将其与 bash 解耦并移植到 FreeBSD 默认的 sh 环境，验证功能完整性并对比与原脚本的差异。
-
-3. 修改 Clash for FreeBSD 项目，实现 TUN 虚拟网卡代理功能，验证修改后的系统行为。
+1. 重构 Mihomo RC 脚本，将其与 bash 解耦并移植到 FreeBSD 默认的 sh 环境，验证功能完整性并对比与原脚本的差异。
