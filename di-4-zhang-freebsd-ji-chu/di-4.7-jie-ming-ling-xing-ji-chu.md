@@ -12,7 +12,7 @@ $ whoami
 ykla
 ```
 
->**技巧**
+> **技巧**
 >
 >`whoami` 已被 id(1) 替代，等价于 `id -un`。
 
@@ -95,15 +95,15 @@ login:
 >
 > ⑥、⑦ 分别切换到了哪些用户或执行了哪些操作？
 
-`su` 命令只能切换到在 `/etc/shells` 中列出的 shell。`su -` 或 `su -l` 不仅切换用户，还会将工作目录切换到目标用户的主目录，并重置环境变量。
+`su` 命令只能切换到在 `/etc/shells` 中列出的 Shell。`su -` 或 `su -l` 不仅切换用户，还会将工作目录切换到目标用户的主目录，并重置环境变量。
 
 BSD 与 GNU `su` 行为比较：
 
 | 项目 | FreeBSD `su` 行为 | Linux `su` 行为 |
 | ---- | ----------------- | --------------- |
 | `-c` | 指定 login class（登录类） | 执行指定命令（command） |
-| `-s` | 设置 MAC label（强制访问控制标签） | 指定登录 shell |
-| 执行命令方式 | 将命令作为参数传递给目标用户 shell 执行 | 使用 `-c` 直接执行命令 |
+| `-s` | 设置 MAC label（强制访问控制标签） | 指定登录 Shell |
+| 执行命令方式 | 将命令作为参数传递给目标用户 Shell 执行 | 使用 `-c` 直接执行命令 |
 
 ## 我要去哪里？
 
@@ -129,7 +129,7 @@ ykla@ykla:/ $ pwd
 
 根据上面的输出，请读者思考：上面的 `.` 和 `..` 分别代表什么？
 
->**技巧**
+> **技巧**
 >
 >在 FreeBSD 的 sh(1) 中，`cd` 的行为由 POSIX 标准规定。
 
@@ -159,7 +159,7 @@ drwxrwxrwt  2 root    wheel  3 Mar 18 17:23 .ICE-unix
 
 选项用于修改命令的行为；参数（argument）是命令操作的对象。
 
->**技巧**
+> **技巧**
 >
 >命令执行后返回退出状态码（exit status）：0 表示成功，非 0 表示失败。
 
@@ -180,7 +180,7 @@ drwxrwxrwt  2 root    wheel  3 Mar 18 17:23 .ICE-unix
 > -sh: ls/: not found
 > ```
 >
-> 可以看到，shell 会将整个字符串当作一个可执行命令来解析和执行。
+> 可以看到，Shell 会将整个字符串当作一个可执行命令来解析和执行。
 
 还需要注意，命令行本身不具备自动纠错功能，即使仅拼错一个字母或少输入一个字符，命令也无法正确执行。
 
@@ -222,7 +222,7 @@ usage: ls [-ABCFGHILPRSTUWZabcdfghiklmnopqrstuvwxy1,] [--color=when] [-D format]
 
 > **技巧**
 >
-> 命令前面的 `#` 表示什么意思？`#` 在 shell 当中一般是起注释作用（由 [POSIX.1-2024](https://pubs.opengroup.org/onlinepubs/9799919799/utilities/V3_chap02.html) 规定），相当于 C 语言中的 `//`。意味着后边的文字只起到说明作用，不起实际作用。
+> 命令前面的 `#` 表示什么意思？`#` 在 Shell 当中一般是起注释作用（由 [POSIX.1-2024](https://pubs.opengroup.org/onlinepubs/9799919799/utilities/V3_chap02.html) 规定），相当于 C 语言中的 `//`。意味着后边的文字只起到说明作用，不起实际作用。
 >
 
 ## 命令的执行与中断
@@ -248,7 +248,7 @@ cp: test9: No such file or directory
 
 可以看到，只有当执行中断时，命令行才会有提示；若执行完毕，是不会有任何提示的。这种 UNIX 设计哲学旨在保证终端输出的简洁性。
 
-## shell 命令的来源
+## Shell 命令的来源
 
 ### Linux
 
@@ -277,14 +277,14 @@ util-linux: /bin/su
 
 可见在 Linux 中，这些常见命令一般出自 GNU 软件 coreutils、util-linux 或 procps。这些软件在历史上是 GNU 计划对 UNIX 软件的再实现。
 
-同时，shell 本身也内置了一些命令：
+同时，Shell 本身也内置了一些命令：
 
 ```bash
 $ type cd
 cd 是 shell 内建
 ```
 
-列出所有 shell 内置命令：
+列出所有 Shell 内置命令：
 
 ```bash
 $ compgen -b
@@ -315,7 +315,7 @@ $ type cd
 cd is a shell builtin
 ```
 
-在 FreeBSD 中，除了上述 shell 内置命令外（参见：sh(1)[EB/OL]. [2026-03-26]. <https://man.freebsd.org/cgi/man.cgi?sh(1)>），常用命令都是基本系统自带的，不属于任何一个包。比如 `ls` 命令，其源代码位于 `freebsd-src/bin/ls/`[EB/OL]. [2026-03-26]. <https://github.com/freebsd/freebsd-src/tree/main/bin/ls>。可见 FreeBSD 系统是一个有机整体，而非由不同人员或团队维护的软件包简单拼凑而成。
+在 FreeBSD 中，除了上述 Shell 内置命令外（参见：sh(1)[EB/OL]. [2026-03-26]. <https://man.freebsd.org/cgi/man.cgi?sh(1)>），常用命令都是基本系统自带的，不属于任何一个包。比如 `ls` 命令，其源代码位于 `freebsd-src/bin/ls/`[EB/OL]. [2026-03-26]. <https://github.com/freebsd/freebsd-src/tree/main/bin/ls>。可见 FreeBSD 系统是一个有机整体，而非由不同人员或团队维护的软件包简单拼凑而成。
 
 如果配置了 pkgbase，则输出类似：
 
@@ -385,7 +385,7 @@ ykla@ykla:~ $ ls
 
 > **技巧**
 >
-> 请以普通用户进行测试，因为 FreeBSD 的 root shell 总是显示隐藏文件。
+> 请以普通用户进行测试，因为 FreeBSD 的 root Shell 总是显示隐藏文件。
 
 ### `touch` 创建文件命令
 
@@ -411,8 +411,6 @@ $ touch test
 >```
 
 `file` 命令通过三组测试依次判定文件类型：文件系统测试（基于 stat(2)）、幻数测试（基于 `/usr/share/misc/magic.mgc` 中的固定格式标识）和语言测试（基于文本模式匹配）。其中“幻数”（magic number）概念源于 UNIX 可执行文件格式，文件头部特定偏移量处存储的固定标识用于指示文件类型。
-
-FreeBSD 的 `file` 来自 file 软件包（与 GNU/Linux 采用相同的上游源码），因此基本兼容。主要差异在于魔法数据库文件路径可能不同。
 
 可以一次性使用多个参数创建多个文件（类似用法几乎是通用的，不再赘述）：
 
@@ -729,7 +727,7 @@ FreeBSD 的 make（bmake）与 GNU make（gmake）在语法和内置变量上有
 
 FreeBSD sed 基于 4.4BSD lite sed，与 GNU sed 在正则表达式语法、一些扩展命令（如 `\l`、`\u`、`\L`、`\U`）、地址范围语法上存在差异。GNU sed 支持 `\w`、`\W`、`\b`、`\B` 等字符类，而 FreeBSD sed 需要使用 `[[:alnum:]]` 等 POSIX 类。
 
-sed(1) 命令命令选项：
+sed(1) 命令选项：
 
 | 选项 | 说明 | 备注 |
 | ---- | ---- | ---- |
@@ -738,7 +736,7 @@ sed(1) 命令命令选项：
 | `-n` | 不自动打印行 | 仅在使用 `p` 命令时输出 |
 | `-f <文件>` | 从文件读取脚本 | 替代 `-e` |
 | `-E` | 使用扩展正则表达式 | 同 GNU sed 的 `-r` 选项 |
-| `-r` | 同上，兼容性别名 | |
+| `-r` | 同上，兼容别名 | |
 
 与 GNU sed 最显著的差异是 `-i` 选项语法：FreeBSD sed 的 `-i` 必须有后缀参数，即使是空字符串（`-i ''`），而 GNU sed 的 `-i` 后缀是可选的（`-i[SUFFIX]`）。这是最常见的跨平台兼容性问题。
 
@@ -796,9 +794,9 @@ FreeBSD 的设计更接近传统 UNIX 的行为。
 - 重启命令和 Linux 一致，都是 `reboot`，但是参数不通用。
 - 在 FreeBSD 下 `reboot` 等同于 `shutdown -r now`
 
->**技巧**
+> **技巧**
 >
-> 当使用上述命令关闭 FreeBSD 时，系统将调用 shell 脚本 `/etc/rc.shutdown`。该脚本按 *rc.d* 脚本列表的逆序依次执行，以关闭系统服务。（参见 FreeBSD Project. rc.shutdown[EB/OL]. (2026-04-09)[2026-04-09]. <https://github.com/freebsd/freebsd-src/blob/main/libexec/rc/rc.shutdown>）
+> 当使用上述命令关闭 FreeBSD 时，系统将调用 Shell 脚本 `/etc/rc.shutdown`。该脚本按 *rc.d* 脚本列表的逆序依次执行，以关闭系统服务。（参见 FreeBSD Project. rc.shutdown[EB/OL]. (2026-04-09)[2026-04-09]. <https://github.com/freebsd/freebsd-src/blob/main/libexec/rc/rc.shutdown>）
 
 > **注意**
 >
@@ -833,7 +831,7 @@ Seems like fuck alias isn't configured!
 More details - https://github.com/nvbn/thefuck#manual-installation
 ```
 
-打开网页浏览。发现要将 `eval $(thefuck --alias)` 加入到 `~/.bash_profile`（bash shell）、`~/.bashrc`（bash shell）或 `~/.zshrc`（zsh shell）。
+打开网页浏览。发现要将 `eval $(thefuck --alias)` 加入到 `~/.bash_profile`（Bash Shell）、`~/.bashrc`（Bash Shell）或 `~/.zshrc`（Zsh Shell）。
 
 FreeBSD 默认使用的是 sh，因此将下行：
 

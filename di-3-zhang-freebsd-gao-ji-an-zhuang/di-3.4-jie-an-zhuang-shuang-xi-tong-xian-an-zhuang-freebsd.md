@@ -16,7 +16,7 @@
 
 > **技巧**
 >
-> 如果在此处设置 `P Partition Scheme` 为 `GPT (UEFI)` 而非其他（只有老电脑才需要 `GPT (BIOS+UEFI)` 等选项），后续分区与系统更新过程会更加简单，也能实现 4 K 对齐。
+> 如果在此处设置 `P Partition Scheme` 为 `GPT (UEFI)` 而非其他（只有老电脑才需要 `GPT (BIOS+UEFI)` 等选项），后续分区与系统更新过程会更加简单，也能实现 4K 对齐。
 
 ![分区方案选择](../.gitbook/assets/shuang3.png)
 
@@ -76,7 +76,7 @@ FreeBSD 安装完成后，接下来安装 Windows 系统。
 
 然后点击创建分区（Create Partition），如果提示出错，点击刷新（Refresh）即可。Windows 安装程序会自动在未分配空间上创建它需要的分区，包括 MSR 分区、系统分区和恢复分区。
 
-然后选中 208 G 的“磁盘 0 未分配空间”，点击“下一步”进行安装。
+然后选中 208 GB 的“磁盘 0 未分配空间”，点击“下一步”进行安装。
 
 ![选择未分配空间安装 Windows](../.gitbook/assets/shuang7.png)
 

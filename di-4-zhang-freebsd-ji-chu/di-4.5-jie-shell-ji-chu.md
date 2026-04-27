@@ -1,6 +1,6 @@
 # 4.5 Shell 基础
 
-## 什么是 Shell
+## Shell 的概念与定位
 
 ![什么是 Shell](../.gitbook/assets/you-shell.png)
 
@@ -12,7 +12,7 @@ Shell 是用户与操作系统内核进行交互的命令解释器（command int
 
 - **命令解释**：解析用户输入的命令行，将其分解为命令名、选项和参数，然后通过系统调用（如 `execve(2)`）请求内核创建新进程执行相应程序。
 - **进程控制**：管理进程的创建、前台/后台调度、信号传递和作业控制。Shell 是用户管理进程生命周期的首要工具。
-- **环境管理**：维护环境变量（如 `PATH`、`HOME`、`TERM`），这些变量构成了进程的执行上下文。环境变量是存储在 Shell 环境中的变量/键对，任何由 Shell 调用的程序都可以读取该环境，因此其中包含大量程序配置信息。
+- **环境管理**：维护环境变量（如 `PATH`、`HOME`、`TERM`），这些变量构成了进程的执行上下文。环境变量是存储在 Shell 环境中的键值对，任何由 Shell 调用的程序都可以读取该环境，因此其中包含大量程序配置信息。
 - **I/O 重定向与管道**：通过文件描述符操作实现标准输入（stdin）、标准输出（stdout）和标准错误（stderr）的重定向，以及通过管道（pipe）机制将一个进程的输出直接传递给另一个进程的输入。UNIX 管道操作符 `|` 允许将一个命令的输出直接传递给另一个程序，管道将一个命令的标准输出作为另一个命令的标准输入传递。
 - **脚本编程**：Shell 本身也是一种编程语言，支持变量、条件判断、循环、函数等控制结构，可用于编写自动化脚本。
 
@@ -20,8 +20,8 @@ Shell 是用户与操作系统内核进行交互的命令解释器（command int
 
 Shell 的演化反映了 UNIX 系统半个多世纪的发展历程。按语法族系划分，Shell 可分为两大谱系：
 
-- **Bourne Shell 谱系**：以 Stephen R. Bourne 于 1977 年为 Unix V7 编写的 Bourne shell（sh）为始祖。该谱系的 Shell 采用较为简洁的语法，以 `$` 作为默认提示符。后续演化包括 Almquist Shell（ash，1989 年）、KornShell（ksh，1983 年）、Bourne Again Shell（bash，1989 年）、Z Shell（zsh，1990 年）等。
-- **C Shell 谱系**：以 Bill Joy 于 1978 年为 2BSD 编写的 C shell（csh）为始祖。该谱系的 Shell 语法更接近 C 语言，以 `%` 作为默认提示符。后续演化包括 TENEX C Shell（tcsh，1983 年）等。
+- **Bourne Shell 谱系**：以 Stephen R. Bourne 于 1977 年为 Unix V7 编写的 Bourne Shell（sh）为始祖。该谱系的 Shell 采用较为简洁的语法，以 `$` 作为默认提示符。后续演化包括 Almquist Shell（ash，1989 年）、KornShell（ksh，1983 年）、Bourne Again Shell（bash，1989 年）、Z Shell（zsh，1990 年）等。
+- **C Shell 谱系**：以 Bill Joy 于 1978 年为 2BSD 编写的 C Shell（csh）为始祖。该谱系的 Shell 语法更接近 C 语言，以 `%` 作为默认提示符。后续演化包括 TENEX C Shell（tcsh，1983 年）等。
 
 ### POSIX Shell 规范
 
@@ -36,9 +36,9 @@ POSIX Shell 规范的核心要求包括：
 - **条件与循环**：支持 `if`、`while`、`for`、`case` 等控制结构。
 - **内置命令**：必须实现 `cd`、`echo`、`exit`、`export`、`read`、`return`、`set`、`shift`、`trap`、`unset` 等内置命令。
 
-FreeBSD 系统默认采用的 Shell 是 sh。需要指出的是，FreeBSD 的 `/bin/sh` 并非 Stephen R. Bourne 在贝尔实验室为 Unix V7 编写的原始 Bourne shell，而是基于 Kenneth Almquist 于 1989 年发布的 Almquist Shell（ash），后者是作为 Bourne shell 的更紧凑、更高效的替代品而设计的。BSD 系列自 4.4BSD 起便采用 ash 衍生的 sh，在功能上基本符合 POSIX.1-2024 标准中关于 Shell 的规范要求。
+FreeBSD 系统默认采用的 Shell 是 sh。需要指出的是，FreeBSD 的 `/bin/sh` 并非 Stephen R. Bourne 在贝尔实验室为 Unix V7 编写的原始 Bourne Shell，而是基于 Kenneth Almquist 于 1989 年发布的 Almquist Shell（ash），后者是作为 Bourne Shell 的更紧凑、更高效的替代品而设计的。BSD 系列自 4.4BSD 起便采用 ash 衍生的 sh，在功能上基本符合 POSIX.1-2024 标准中关于 Shell 的规范要求。
 
-Linux 中常见的 Shell 一般是 bash（Bourne Again Shell，是对“Born Again”即“重生”的双关，意为“重生的 Bourne shell”）。而 macOS 中的默认 Shell 通常是 zsh（Z Shell）。
+Linux 中常见的 Shell 一般是 bash（Bourne Again Shell，是对“Born Again”即“重生”的双关，意为“重生的 Bourne Shell”）。而 macOS 中的默认 Shell 通常是 zsh（Z Shell）。
 
 > **注意**
 >
@@ -138,11 +138,11 @@ FreeBSD 的 `ping` 自 15.0 起合并了原 `ping6` 的功能，通过 `-4`/`-6`
 
 ## 参考文献
 
-- Almquist K. ash (Almquist Shell)[EB/OL]. (1989-05-30)[2026-04-18]. <https://github.com/dsipher/ash>. FreeBSD 的 `/bin/sh` 基于 ash，而非 Stephen R. Bourne 的原始 Bourne shell。
+- Almquist K. ash (Almquist Shell)[EB/OL]. (1989-05-30)[2026-04-18]. <https://github.com/dsipher/ash>. FreeBSD 的 `/bin/sh` 基于 ash，而非 Stephen R. Bourne 的原始 Bourne Shell。
 - Fox B, Ramey C. Bash Reference Manual[M]. Boston: Free Software Foundation, 2022. “Bourne Again Shell”是对“Born Again”的双关。
 
 ## 课后习题
 
 1. 在 FreeBSD 中编写一个简单的 sh 脚本，实现命令补全的最小示例脚本，测试其功能并记录结果。
 2. 查看 FreeBSD sh 源代码中处理快捷键绑定的实现部分，使其更现代化。
-3. 修改 FreeBSD 中 shell 的默认提示符配置，验证其行为变化。
+3. 修改 FreeBSD 中 Shell 的默认提示符配置，验证其行为变化。

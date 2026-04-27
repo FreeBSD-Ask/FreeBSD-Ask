@@ -337,8 +337,8 @@ virtio_pci0: <VirtIO PCI (legacy) Console adapter> port 0xc020-0xc03f mem 0x8200
 virtio_pci1: <VirtIO PCI (legacy) Block adapter> mem 0x800000000-0x800000fff,0x800001000-0x800001fff at device 4.0 on pci0
 vtblk0: <VirtIO Block Adapter> on virtio_pci1
 vtblk0: 30720MB (62914560 512 byte sectors)
-virtio_pci2: <VirtIO PCI (legacy) Network adapter> mem 0x800002000GEOM: vtbd0: the secondary GPT header is not in the last LBA.
--0x800002fff,0x800003000-0x800003fff at device 5.0 on pci0
+virtio_pci2: <VirtIO PCI (legacy) Network adapter> mem 0x800002000-0x800002fff,0x800003000-0x800003fff at device 5.0 on pci0
+GEOM: vtbd0: the secondary GPT header is not in the last LBA.
 vtnet0: <VirtIO Networking Adapter> on virtio_pci2
 vtnet0: Ethernet address: 00:16:3e:45:bc:81
 vtnet0: netmap queues/slots: TX 1/4096, RX 1/2048
@@ -496,7 +496,7 @@ root@mfsbsd:~ # gpart show # 查看修复分区表后的磁盘信息
 
 如果有相关输出，则可以继续输入命令 `bsdinstall`，继续正常的安装流程。
 
-本次实验的机器仅有 1 G 内存，在 mfsBSD 占用约 100 M 后，可用内存只有不到 800 M。因此指定 ZFS 安装会报错“Distribution extract failed”（分发文件解压失败）：
+本次实验的机器仅有 1 GB 内存，在 mfsBSD 占用约 100 MB 后，可用内存只有不到 800 MB。因此指定 ZFS 安装会报错“Distribution extract failed”（分发文件解压失败）：
 
 ![Distribution extract failed](../.gitbook/assets/fb-ufs-1.png)
 

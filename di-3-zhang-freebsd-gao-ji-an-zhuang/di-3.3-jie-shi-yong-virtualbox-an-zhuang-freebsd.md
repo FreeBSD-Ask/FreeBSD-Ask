@@ -2,7 +2,7 @@
 
 本节介绍在 Oracle VirtualBox 开源虚拟化平台上部署 FreeBSD 操作系统的技术方案与配置细节。
 
-Oracle VirtualBox 是一款 Type-2 虚拟机监控器（Hypervisor），通过虚拟设备模拟（device emulation）和半虚拟化（paravirtualization）技术为虚拟机提供计算、存储和网络资源。VirtualBox 支持多种虚拟磁盘映像格式，默认使用 VDI（Virtual Disk Image），也兼容 VMDK（VMware）、VHD（Microsoft）等格式。
+Oracle VirtualBox 是一款 Type-2 虚拟机监视器（Hypervisor），通过虚拟设备模拟（device emulation）和半虚拟化（paravirtualization）技术为虚拟机提供计算、存储和网络资源。VirtualBox 支持多种虚拟磁盘映像格式，默认使用 VDI（Virtual Disk Image），也兼容 VMDK（VMware）、VHD（Microsoft）等格式。
 
 ## 下载 VirtualBox
 
@@ -70,13 +70,13 @@ VirtualBox 安装完成后，按照以下步骤创建并配置虚拟机。以下
 
 在虚拟网络方面，VirtualBox 提供 NAT、桥接（Bridged）、内部网络（Internal）、仅主机（Host-Only）等多种网络模式，每种模式对应不同的网络拓扑和连通性。
 
-### 方法 ① 桥接
+### 方法一：桥接模式
 
 > **技巧**
 >
 > VirtualBox 中的桥接模式可以使各方向的网络互通。
 
-桥接是实现主机与虚拟机互通的简单方法，虚拟机可以获得一个与宿主机在同一网段的 IP 地址。例如，若主机 IP 为 192.168.31.123，则虚拟机 IP 可能为 192.168.31.x。
+桥接是实现宿主机与虚拟机互通的简单方法，虚拟机可以获得一个与宿主机在同一网段的 IP 地址。例如，若宿主机 IP 为 192.168.31.123，则虚拟机 IP 可能为 192.168.31.x。
 
 ![桥接网络设置](../.gitbook/assets/VBbridge.png)
 
@@ -84,11 +84,11 @@ VirtualBox 安装完成后，按照以下步骤创建并配置虚拟机。以下
 
 如果无法访问互联网，请将 DNS 设置为 `223.5.5.5`。如不清楚具体操作，请参阅本章其他部分。
 
-### 方法 ② NAT + 仅主机模式
+### 方法二：NAT 与仅主机模式
 
 > **注意**
 >
-> 与 VMware 不同，VirtualBox 的默认 NAT 模式下，主机和虚拟机无法直接互通。虚拟机可以访问主机的特殊地址 `10.0.2.2` 及其上运行的服务，但主机无法访问虚拟机的端口，各虚拟机之间网络也相互隔离。参见：Oracle. Network Address Translation (NAT)[EB/OL]. [2026-03-26]. <https://www.virtualbox.org/manual/topics/networkingdetails.html#network_nat>. 也可以按照手册中的端口转发来连通网络。
+> 与 VMware 不同，VirtualBox 的默认 NAT 模式下，宿主机和虚拟机无法直接互通。虚拟机可以访问宿主机的特殊地址 `10.0.2.2` 及其上运行的服务，但宿主机无法访问虚拟机的端口，各虚拟机之间网络也相互隔离。参见：Oracle. Network Address Translation (NAT)[EB/OL]. [2026-03-26]. <https://www.virtualbox.org/manual/topics/networkingdetails.html#network_nat>. 也可以按照手册中的端口转发来连通网络。
 
 网络设置较为复杂，桥接模式未必能够生效。为实现通过宿主机（如 Windows 11）控制虚拟机中的 FreeBSD 系统之目的，需设置两块网卡——一块为 NAT 网络模式的网卡用于连接互联网，另一块为仅主机模式的网卡用于与宿主机互通。如图所示：
 
@@ -102,7 +102,7 @@ VirtualBox 安装完成后，按照以下步骤创建并配置虚拟机。以下
 
 使用命令 `# ifconfig` 查看状态，如果第二块网卡 `em1` 没有获取到 IP 地址，请手动通过 DHCP 获取：`# dhclient em1`（为了长期生效，可在 `/etc/rc.conf` 文件中加入 `ifconfig_em1="DHCP"`）。
 
-按这种方式设定的网络，虚拟机与主机所在的局域网无法互通。如果没有网络（互联网）请设置 DNS 为 `223.5.5.5`。若不熟悉相关操作，请参阅本章相关小节。
+按这种方式设定的网络，虚拟机与宿主机所在的局域网无法互通。如果没有网络（互联网）请设置 DNS 为 `223.5.5.5`。若不熟悉相关操作，请参阅本章相关小节。
 
 ## 显卡驱动与增强工具
 

@@ -48,11 +48,11 @@ PSPath
 >
 > 阅读《深入解析 Windows 操作系统（第 7 版）（卷 2）》（978-7-115-61974-7，人民邮电出版社）及其他相关文献资料，回答问题：在传统的 BIOS + MBR 引导下，Windows 如何识别 `C` 盘？
 
-### 如何理解挂载
+### 挂载的概念与机制
 
 ![如何理解挂载](../.gitbook/assets/jiajie.png)
 
-小时候住在花木场的人们都知道，经常需要从树 A 上剪裁一段枝条，将其斜插到树 B 上，并加以包裹，愈合后就会成为一体：比如在苹果树（UNIX）上可以长出桃子（挂载 Windows 的 `C` 盘）。
+小时候住在花木场的人们都知道，经常需要从树 A 上剪取一段枝条，将其斜插到树 B 上，并加以包裹，愈合后就会成为一体：比如在苹果树（UNIX）上可以长出桃子（挂载 Windows 的 `C` 盘）。
 
 这种方法称为“嫁接”。实际上，这就是将树 A 的枝条（文件系统）挂载到树 B 上（嫁接点即某个挂载点，归根结底依赖于根目录 `/`）。
 
@@ -60,11 +60,11 @@ PSPath
 
 工具 mount 调用 nmount(2) 系统调用，将一个特殊设备或远程节点（rhost:path）准备并嫁接到文件系统树中的节点（node）位置。系统维护一个当前已挂载文件系统的列表。如果不带任何参数调用 mount，将打印此列表。
 
->**注意**
+> **注意**
 >
 >FreeBSD 的 `mount` 源于 4.4BSD，与 Linux 的 `mount` 在选项语法上基本兼容，但 FreeBSD 使用的是 nmount(2) 系统调用而非 Linux 的 mount(2)。FreeBSD 的 `mount` 会根据文件系统类型自动调用 `/sbin/mount_type` 程序（如 `mount_nfs`、`mount_msdosfs`）。
 
-### 如何理解卸载
+### 卸载的概念与机制
 
 ![如何理解卸载](../.gitbook/assets/qiancha.png)
 
@@ -105,7 +105,7 @@ PSPath
 >
 > 可在 Windows 下使用 git 工具拉取 [freebsd-doc](https://github.com/freebsd/freebsd-doc) 项目验证兼容性问题。相关 Bug 报告：[The colon in the file name of the security report of the FreeBSD doc is not compatible with Microsoft Windows](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=267636)
 
-### 大小写敏感
+### 大小写敏感性
 
 FreeBSD 的 ZFS 和 UFS 都是 **区分大小写（大小写敏感）** 的文件系统。而 macOS 的 HFS+（默认不区分大小写）、APFS（默认不区分大小写）以及 Windows 的 FAT32 文件系统都是 **不区分大小写（大小写不敏感）** 的。NTFS 本身是大小写保留的文件系统，但 Windows 的 Win32 子系统默认以大小写不敏感方式处理文件名（Windows 10 1803 以后可通过 `fsutil.exe file queryCaseSensitiveInfo <路径>` 按目录启用大小写敏感，主要用于 WSL 兼容）。
 
@@ -136,7 +136,7 @@ abc    ABC
 - 微软. FAT32 File System[EB/OL]. [2026-04-18]. <https://learn.microsoft.com/en-us/previous-versions/aa364047(v=vs.85)>. FAT 文件系统卷不区分大小写。
 - Apple. File system formats available in Disk Utility[EB/OL]. [2026-04-18]. <https://support.apple.com/guide/disk-utility/file-system-formats-dsku19ed921c/mac>. APFS 和 HFS+ 默认均不区分大小写，但可在格式化时选择区分大小写变体。
 
-## 换行符/回车之差异
+## 换行符差异
 
 回车（Carriage Return，CR）和换行（Line Feed，LF）是不同的概念，均起源于电传打字机（真实 TTY）时代。
 
@@ -173,7 +173,7 @@ b.txt: Unicode text, UTF-8 text, with very long lines (314), with CRLF line term
 - IETF. RFC 20: ASCII format for network interchange[EB/OL]. [2026-04-18]. <https://www.rfc-editor.org/rfc/rfc20.html>. ASCII 标准定义 CR 为 0x0D（第 13 号控制字符），LF 为 0x0A（第 10 号控制字符），二者均源自电传打字机时代的物理操作。
 - Wasserburger E. dos2unix / unix2dos - Text file format converters[EB/OL]. [2026-04-18]. <https://dos2unix.sourceforge.io/>. dos2unix 与 unix2dos 命令行工具，用于在 CRLF（Windows）与 LF（UNIX）换行格式之间转换；FreeBSD Port 路径为 converters/dos2unix。基本系统版本与 Port 版本为不同程序。Port 为增强版本，支持更多选项。
 
-## 字符编码的差异
+## 字符编码差异
 
 由于计算机只识别 `0` 和 `1`，故字符编码是一种用于将字符转换为数字表示的规则体系。字符可以是屏幕上可见的文字，也可以是不可见的控制标记，如换行符（LF）、回车符（CR）等，涵盖文本中常见的元素，如数字、Emoji 表情符号、汉字、拉丁字母等。编码方式则是为这些字符分配唯一数字标识（通常是整数），即代码点（code point）的过程。
 
@@ -211,7 +211,7 @@ FreeBSD 的编码在 [main/usr.bin/login/login.conf](https://github.com/freebsd/
 - 微软. Use UTF-8 code pages in Windows apps[EB/OL]. [2026-04-18]. <https://learn.microsoft.com/en-us/windows/apps/design/globalizing/use-utf8-code-page>. Windows 10 及后续版本可通过系统区域设置启用 UTF-8 支持（Beta 功能），但可能导致旧应用程序兼容性问题。
 - FreeBSD Project. login.conf(5)[EB/OL]. [2026-04-18]. <https://man.freebsd.org/cgi/man.cgi?query=login.conf&sektion=5>. FreeBSD 登录类能力数据库，源文件位于 `usr.bin/login/login.conf`，编译后路径为 /etc/login.conf，用于设置字符编码等用户环境。
 
-## 时间与时区的差异
+## 时间与时区差异
 
 中国统一使用一个时区，东八区，即 UTC+8，UTC（Coordinated Universal Time，协调世界时）在日常使用中几乎等同于 GMT（Greenwich Mean Time，格林尼治时间）。UTC 以国际原子时（temps atomique international，TAI）的秒长为基础（并不完全一致）：当铯（Cs）频率 ΔνCs，也就是铯 133 原子不受干扰的基态超精细跃迁频率，以单位 Hz 即 s⁻¹ 表示时，取其固定数值为 9,192,631,770 来定义秒——后续又对国际原子时进行了各种修正。
 
@@ -324,7 +324,7 @@ FreeBSD 上最全面的文档以手册页的形式存在。系统上几乎每个
 
 > **思考题**
 >
-> > 对于描述世界，我们有太多种方法。正如马克思所述，“哲学家们只是用不同的方式解释世界……”（《关于费尔巴哈的提纲》第十一条：马克思主义哲学的使命）
+>> 对于描述世界，我们有太多种方法。正如马克思所述，“哲学家们只是用不同的方式解释世界……”（《关于费尔巴哈的提纲》第十一条：马克思主义哲学的使命）
 >
 > 你认为通过数学和物理学解释世界的优点是什么？如果排除实用主义、实证主义和经验主义，那么还能剩下什么？
 >

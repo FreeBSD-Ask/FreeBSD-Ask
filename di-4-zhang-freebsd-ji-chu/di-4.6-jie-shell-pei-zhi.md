@@ -24,10 +24,10 @@ Shell 的配置体系通过一系列初始化文件（initialization files）实
 
 | 程序 | 说明 |
 | ---- | ---- |
-| `zsh` | Zsh shell |
+| `zsh` | Zsh Shell |
 | `zsh-completions` | 自动补全 |
-| `zsh-autosuggestions` | 类 Fish shell 的 Zsh 自动补全 |
-| `zsh-syntax-highlighting` | 类 Fish shell 的 Zsh 语法高亮 |
+| `zsh-autosuggestions` | 类 Fish Shell 的 Zsh 自动补全 |
+| `zsh-syntax-highlighting` | 类 Fish Shell 的 Zsh 语法高亮 |
 
 - 使用 ports 安装：
 
@@ -94,13 +94,13 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 chsh: user information updated
 ```
 
->**注意**
+> **注意**
 >
 >`chsh`、`chfn`、`chpass` 是同一个程序，通过不同名称调用。非超级用户只能将 Shell 更改为 `/etc/shells` 中列出的标准 Shell；从非标准 Shell 更改或更改为非标准 Shell 均被拒绝。编辑器由 `EDITOR` 环境变量决定，默认使用 vi(1)。修改完成后需要通过 pwd_mkdb(8) 更新用户数据库。
 
 编辑 `~/.zshrc` 文件，添加下面几行：
 
-```ini
+```sh
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh   # 加载 Zsh 自动建议插件
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh   # 加载 Zsh 语法高亮插件
 fpath+=/usr/local/share/zsh/site-functions/   # 将自定义函数目录添加到 Zsh 函数搜索路径
@@ -178,7 +178,7 @@ Bash（Bourne Again SHell）是 GNU 项目开发的 Shell 程序，作为 Bourne
 
 | 程序 | 说明 |
 | ---- | ---- |
-| `bash` | Bash shell 主程序 |
+| `bash` | Bash Shell 主程序 |
 | `bash-completion-freebsd` | 针对 FreeBSD 的 Bash 补全库扩展，安装时会自动安装 shells/bash-completion 作为依赖 |
 | `bash-completion-zfs` | 针对 OpenZFS 的 Bash 补全库扩展 |
 
@@ -216,7 +216,7 @@ See /usr/local/share/doc/bash-completion/README.md for more information.
 
 安装完 Bash 及相关补全库后，需要进行配置才能正常使用。
 
-```bash
+```sh
 chsh -s /usr/local/bin/bash   # 将当前用户的默认登录 Shell 切换为 Bash
 touch ~/.bash_profile         # 创建 ~/.bash_profile 文件，用于配置 Bash 环境变量
 ```
@@ -248,7 +248,7 @@ touch ~/.bash_profile         # 创建 ~/.bash_profile 文件，用于配置 Bas
 
 ## 配置 csh/tcsh
 
-除了 Zsh 和 Bash 外，FreeBSD 基本系统还内置了 csh 和 tcsh。csh（C shell，灵感来自 C 语言，语法也类似，作者是 Bill Joy）是 FreeBSD 基本系统内置的 shell，以前是 root 用户的默认 shell。FreeBSD 默认 Shell 为 sh（自 FreeBSD 14 起），但基本系统同时提供 csh/tcsh 作为替代选择。
+除了 Zsh 和 Bash 外，FreeBSD 基本系统还内置了 csh 和 tcsh。csh（C Shell，灵感来自 C 语言，语法也类似，作者是 Bill Joy）是 FreeBSD 基本系统内置的 Shell，以前是 root 用户的默认 Shell。FreeBSD 默认 Shell 为 sh（自 FreeBSD 14 起），但基本系统同时提供 csh/tcsh 作为替代选择。
 
 > **技巧**
 >
@@ -262,7 +262,7 @@ touch ~/.bash_profile         # 创建 ~/.bash_profile 文件，用于配置 Bas
 
 > **注意**
 >
-> [FreeBSD 14 中的 shell 被统一为 sh](https://github.com/freebsd/freebsd-src/commit/d410b585b6f00a26c2de7724d6576a3ea7d548b7)，记录 FreeBSD 14 默认 shell 变更的提交记录。
+> [FreeBSD 14 中的 Shell 被统一为 sh](https://github.com/freebsd/freebsd-src/commit/d410b585b6f00a26c2de7724d6576a3ea7d548b7)，记录 FreeBSD 14 默认 Shell 变更的提交记录。
 
 - 在 `~/.cshrc` 文件中加入下行，为 `ls` 命令设置彩色输出。
 
@@ -274,12 +274,12 @@ alias ls ls -G
 
 - 如何让 FreeBSD 的 csh 像 Bash 那样按 Tab 列出无法补全的候选文件？在 `~/.cshrc` 文件中加入：
 
-```ini
+```sh
 set filec              # 启用命令行文件名补全
 set autolist           # 自动显示补全列表
 ```
 
-重新加载 C shell 配置文件，刷新别名和环境设置：
+重新加载 C Shell 配置文件，刷新别名和环境设置：
 
 ```sh
 # source ~/.cshrc
@@ -289,7 +289,7 @@ set autolist           # 自动显示补全列表
 
 例如，当使用 emacs 编写 C 语言程序时，输入 `emacs ma` 并按 `Tab` 键再按回车键，会匹配所有以 `ma` 开头的文件。此配置可以忽略部分匹配的文件，即按 `Tab` 时不会列出被忽略的文件，便于编程，不会匹配二进制 `.o` 文件等。
 
-```ini
+```sh
 set correct = cmd        # 启用命令拼写自动纠正功能，提示输入正确命令
 # 例：lz/usr/bin tcsh>ls /usr/bin (y|n|e|a)?  # 当检测到命令拼写错误时的提示示例
 

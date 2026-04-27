@@ -1,6 +1,6 @@
 # 4.4 虚拟控制台和终端
 
-虚拟控制台（Virtual Console）是 FreeBSD 提供的多终端机制，允许用户在同一物理显示器和键盘上同时使用多个独立的登录会话。每个虚拟控制台拥有自己的登录提示符和 shell，用户可通过 Alt+F1 至 Alt+F8 键组合在它们之间切换。
+虚拟控制台（Virtual Console）是 FreeBSD 提供的多终端机制，允许用户在同一物理显示器和键盘上同时使用多个独立的登录会话。每个虚拟控制台拥有自己的登录提示符和 Shell，用户可通过 Alt+F1 至 Alt+F8 键组合在它们之间切换。
 
 终端（Terminal）的概念源于早期计算机系统中用于与主机通信的物理设备（电传打字机 TTY），在现代系统中演变为软件模拟的终端设备。FreeBSD 的虚拟控制台设备名称为 ttyv0 至 ttyv7，其中 ttyv0 为系统控制台（System Console），系统消息默认输出到该控制台。虚拟控制台的数量由 `/etc/ttys` 文件配置。
 
@@ -30,7 +30,7 @@ login:
 FreeBSD/amd64 (ykla) (ttyv0)
 
 login: root # 此处输入用户名，然后按回车键 ①
-Password: 	# 此处输入密码，然后按回车键
+Password: # 此处输入密码，然后按回车键
 Last login: Tue Mar 18 17:24:48 2025 from 3413e8b6b43f
 FreeBSD 15.0-CURRENT (GENERIC) main-n275981-b0375f78e32a
 
@@ -88,7 +88,7 @@ login:
 
 ### 参考文献
 
-- ItsFOSS. What is TTY in Linux?[EB/OL]. [2026-03-25]. <https://itsfoss.com/what-is-tty-in-linux/>. 详细介绍 TTY 概念与历史
+- ItsFOSS. What is TTY in Linux?[EB/OL]. [2026-03-25]. <https://itsfoss.com/what-is-tty-in-linux/>. 详细介绍 TTY 概念与历史。
 
 ## 虚拟控制台
 
@@ -138,9 +138,9 @@ ttyv8	"/usr/local/bin/xdm -nodaemon"	xterm	off secure
 ……其他省略……
 ```
 
->**技巧**
+> **技巧**
 >
->如果操作失误，但是配置了 SHHD 服务，仍可通过 SSH 远程链接 FreeBSD 系统，将生成一个 pts(4) 伪终端 `/dev/pts/n`。
+>如果操作失误，但是配置了 SSHD 服务，仍可通过 SSH 远程连接 FreeBSD 系统，将生成一个 pts(4) 伪终端 `/dev/pts/n`。
 >
 >```sh
 >$ w

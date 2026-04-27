@@ -4,9 +4,9 @@
 
 ## Hyper-V 简介
 
-虚拟化管理程序是一种创建和运行虚拟机的软件，可以在单个物理主机上同时运行独立的操作系统，即虚拟化软件允许多个操作系统同时运行在同一台计算机上。从虚拟化技术的理论分类来看，Hypervisor 分为 Type-1（裸金属型）和 Type-2（宿主型）两类：Type-1 直接运行于物理硬件之上。Hyper-V 属于 Type-1 架构，其虚拟化层直接管理硬件资源，提供更高的隔离性和性能。
+虚拟机监视器是一种创建和运行虚拟机的软件，可以在单个物理主机上同时运行独立的操作系统，即虚拟化软件允许多个操作系统同时运行在同一台计算机上。从虚拟化技术的理论分类来看，Hypervisor 分为 Type-1（裸金属型）和 Type-2（宿主型）两类：Type-1 直接运行于物理硬件之上。Hyper-V 属于 Type-1 架构，其虚拟化层直接管理硬件资源，提供更高的隔离性和性能。
 
-Hyper-V 是微软公司（Microsoft）为 Windows 和 Windows Server 开发的企业级虚拟化管理程序，属于系统内置组件。
+Hyper-V 是微软公司（Microsoft）为 Windows 和 Windows Server 开发的企业级虚拟机监视器，属于系统内置组件。
 
 Hyper-V 分为 Gen 1（第一代）和 Gen 2（第二代）两种虚拟机架构，两种架构在硬件支持和启动方式上存在技术差异。
 
@@ -57,7 +57,7 @@ FreeBSD 对 Hyper-V 的集成支持通过内核模块实现：
 
 ![Hyper-V](../.gitbook/assets/hp1.png)
 
-右键单击 Windows 徽标，在弹出的菜单中选择“终端（管理员）”。启用 Hyper-V 需要使用 `Enable-WindowsOptionalFeature` 命令，该命令将启用 Windows 的 Hyper-V 可选功能组件，包括虚拟机管理程序、管理工具等核心模块。输入以下命令：
+右键单击 Windows 徽标，在弹出的菜单中选择“终端（管理员）”。启用 Hyper-V 需要使用 `Enable-WindowsOptionalFeature` 命令，该命令将启用 Windows 的 Hyper-V 可选功能组件，包括虚拟机监视器、管理工具等核心模块。输入以下命令：
 
 ```powershell
 PS C:\Users\ykla> Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All
@@ -106,7 +106,7 @@ PS C:\Users\ykla> Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-H
 
 点击“完成”。
 
-## 调整虚拟机
+## 虚拟机配置调整
 
 虚拟机创建完成后，需要对部分设置进行调整。
 
@@ -142,7 +142,7 @@ PS C:\Users\ykla> Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-H
 
 安装完成。
 
-## 测试桌面
+## 桌面环境验证
 
 安装完成后，可对虚拟机进行基本功能测试。
 

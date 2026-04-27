@@ -2,7 +2,7 @@
 
 ## loader.conf 的功能定位与文件结构
 
-根据 [loader.conf(5)](https://man.freebsd.org/cgi/man.cgi?query=loader.conf) 手册页所述，loader.conf 是 FreeBSD 系统引导过程中的核心配置文件。该文件在引导加载程序 loader(8) 阶段被读取，用于指定要启动的内核、传递给内核的参数以及需要加载的附加模块，同时可设置 loader(8) 支持的所有变量。
+loader.conf 是 FreeBSD 系统引导过程中的核心配置文件，参见 [loader.conf(5)](https://man.freebsd.org/cgi/man.cgi?query=loader.conf)。该文件在引导加载程序 loader(8) 阶段被读取，用于指定要启动的内核、传递给内核的参数以及需要加载的附加模块，同时可设置 loader(8) 支持的所有变量。
 
 loader.conf(5) 相关的文件结构如下：
 
@@ -179,7 +179,7 @@ module_blacklist="${module_blacklist} nvidia nvidia-drm nvidia-modeset"        #
 #init_chroot=""		# init(8) 要 chroot 的目录
 
 ###  内核可调参数  ########################################
-#hw.physmem="1G"		# 限制物理内存大小。参见 loader(8)
+#hw.physmem="1G"		# 限制物理内存大小（loader(8)）
 #kern.dfldsiz=""		# 设置初始数据段大小限制
 #kern.dflssiz=""		# 设置初始堆栈大小限制
 #kern.hz="100"			# 设置内核时间间隔定时器频率

@@ -4,7 +4,7 @@
 
 FreeBSD 提供了多种用户管理工具。`adduser` 命令以交互方式添加新用户，自动完成创建 passwd 条目、构建新用户主目录、从 `/usr/share/skel` 复制默认配置文件等操作。
 
-adduser(8) 是一个 Bourne shell 脚本，内部调用 pw(8) 完成实际的用户数据库操作。adduser(8) 是 FreeBSD 特有工具。
+adduser(8) 是一个 Bourne Shell 脚本，内部调用 pw(8) 完成实际的用户数据库操作。adduser(8) 是 FreeBSD 特有工具。
 
 `pw` 命令是更底层的用户和组管理工具，支持非交互式批量操作，可直接修改系统用户数据库文件。
 
@@ -91,7 +91,7 @@ FreeBSD 中主要有三类账户：系统账户、普通用户账户，以及超
 ykla2:*:1002:
 ```
 
-在此示例中，1100 是 ykla2 的 GID。此时，ykla2 没有成员。
+在此示例中，1002 是 ykla2 的 GID。此时，ykla2 没有成员。
 
 ### 向组中添加用户
 
@@ -135,7 +135,7 @@ uid=1001(ykla) gid=1001(ykla) groups=1001(ykla),0(wheel),1002(ykla2)
 # Username: ykla
 ```
 
-示例：创建一个名为 test 的用户，并将其添加到 wheel 组，设置其默认 shell 为 sh：
+示例：创建一个名为 test 的用户，并将其添加到 wheel 组，设置其默认 Shell 为 sh：
 
 ```sh
 # adduser
@@ -154,7 +154,7 @@ Use an empty password? (yes/no) [no]:   # 是否空密码
 Use a random password? (yes/no) [no]:   # 是否随机密码
 Enter password: # 输入密码
 Enter password again: # 重复输入密码
-Lock out the account after creation? [no]: # 锁定账号？
+Lock out the account after creation? [no]: # 锁定账户？
 Username   : test
 Password   : *****
 Full Name  :
@@ -169,7 +169,7 @@ Locked     : no
 OK? (yes/no): yes # 检查是否有错误
 adduser: INFO: Successfully created ZFS dataset (zroot/home/test).
 adduser: INFO: Successfully added (test) to the user database.
-Add another user? (yes/no): no # 还需要创建另一个账号吗？
+Add another user? (yes/no): no # 还需要创建另一个账户吗？
 Goodbye!
 ```
 
@@ -197,7 +197,7 @@ Removing user (test2): home passwd.
 >
 > `export EDITOR=/usr/bin/ee` 可将编辑器改为更简单的 `ee`。
 
-常用参数：`-s`，用于修改登录 shell
+常用参数：`-s`，用于修改登录 Shell
 
 示例：
 
@@ -256,7 +256,7 @@ uid=1001(ykla) gid=1001(ykla) groups=1001(ykla),0(wheel),1002(admin)
 ```sh
 # pw useradd test1 # 创建用户 test1，uid 系统默认，test1 组，登录环境 /bin/sh，未创建主目录
 # pw groupadd test2 # 创建主组 test2
-# pw useradd test2 -u 1200 -m -d /tmp/test -g test2 -G wheel -s sh -c test2 # 创建用户 test2，uid 为 1200，创建主目录，主目录为 /tmp/test，主组为 test2，有管理员权限（Wheel），登录环境 /bin/sh，全名 test2
+# pw useradd test2 -u 1200 -m -d /tmp/test -g test2 -G wheel -s sh -c test2 # 创建用户 test2，uid 为 1200，创建主目录，主目录为 /tmp/test，主组为 test2，有管理员权限（wheel），登录环境 /bin/sh，全名 test2
 # echo password | pw useradd test3 -h 0 # 创建用户 test3，同时设置密码为 password
 ```
 
