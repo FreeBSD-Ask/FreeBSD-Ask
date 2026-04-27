@@ -10,7 +10,7 @@
 
 ## 自主访问控制（DAC）模型
 
-FreeBSD 采用的传统 UNIX 权限模型属于自主访问控制（Discretionary Access Control，DAC）范畴。DAC 的核心特征是：客体的所有者（owner）有权自主决定将访问权限授予或撤销给其他主体。在 UNIX 系统中，文件的所有者可以自行修改文件的权限位，决定其他用户对该文件的访问能力。这种模型被称为“自主的”（discretionary），因为访问控制决策由客体所有者而非系统管理员集中做出。
+FreeBSD 采用的传统 UNIX 权限模型属于自主访问控制（Discretionary Access Control，DAC）范畴。DAC 的核心特征是：客体的所有者（owner）有权自主决定将访问权限授予其他主体，或撤销其他主体的访问权限。在 UNIX 系统中，文件的所有者可以自行修改文件的权限位，决定其他用户对该文件的访问能力。这种模型被称为“自主的”（discretionary），因为访问控制决策由客体所有者而非系统管理员集中做出。
 
 DAC 模型的理论基础可追溯至 20 世纪 60—70 年代的多用户操作系统安全研究。美国国防部于 1985 年发布的《可信计算机系统评估准则》（Trusted Computer System Evaluation Criteria，TCSEC，又称“橘皮书”）将 DAC 定义为：一种基于主体身份和/或所属组来限制对客体访问的访问控制机制，客体的所有者可以自行指定或修改访问权限（来源：Department of Defense. DoD 5200.28-STD: Trusted Computer System Evaluation Criteria[S]. Washington, D.C.: Department of Defense, 1985.）。
 
