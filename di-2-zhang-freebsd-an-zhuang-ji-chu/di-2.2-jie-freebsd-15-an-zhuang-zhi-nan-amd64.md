@@ -9,7 +9,6 @@
 > - Bilibili. FreeBSD 14.2 基础安装配置教程[EB/OL]. [2026-03-25]. <https://www.bilibili.com/video/BV1STExzEEhh>（物理机）
 > - Bilibili. 002-VMware17 安装 FreeBSD 14.2[EB/OL]. [2026-03-25]. <https://www.bilibili.com/video/BV1gji2YLEoC>（虚拟机）
 
----
 
 以下安装说明基于 `FreeBSD-15.0-RELEASE-amd64-disc1.iso`。`-dvd1.iso` 和 `-memstick.img` 的安装流程与之类似。
 
