@@ -301,19 +301,6 @@ FreeBSD 上最全面的文档以手册页的形式存在。系统上几乎每个
 
 此命令显示描述中包含关键词“mail”的命令列表。这等效于使用 apropos(1)。
 
-要阅读 `/usr/sbin` 中所有命令的描述，输入：
-
-```sh
-% cd /usr/sbin
-% man -f * | more
-```
-
-或：
-
-```sh
-% cd /usr/sbin
-% whatis * | more
-```
 
 ## 深入阅读
 
