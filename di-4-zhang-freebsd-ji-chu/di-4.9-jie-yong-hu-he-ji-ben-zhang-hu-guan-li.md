@@ -91,7 +91,7 @@ FreeBSD 中主要有三类账户：系统账户、普通用户账户，以及超
 ykla2:*:1002:
 ```
 
-在此示例中，1100 是 ykla2 的 GID。此时，ykla2 没有成员。
+在此示例中，1002 是 ykla2 的 GID。此时，ykla2 没有成员。
 
 ### 向组中添加用户
 
@@ -256,7 +256,7 @@ uid=1001(ykla) gid=1001(ykla) groups=1001(ykla),0(wheel),1002(admin)
 ```sh
 # pw useradd test1 # 创建用户 test1，uid 系统默认，test1 组，登录环境 /bin/sh，未创建主目录
 # pw groupadd test2 # 创建主组 test2
-# pw useradd test2 -u 1200 -m -d /tmp/test -g test2 -G wheel -s sh -c test2 # 创建用户 test2，uid 为 1200，创建主目录，主目录为 /tmp/test，主组为 test2，有管理员权限（Wheel），登录环境 /bin/sh，全名 test2
+# pw useradd test2 -u 1200 -m -d /tmp/test -g test2 -G wheel -s sh -c test2 # 创建用户 test2，uid 为 1200，创建主目录，主目录为 /tmp/test，主组为 test2，有管理员权限（wheel），登录环境 /bin/sh，全名 test2
 # echo password | pw useradd test3 -h 0 # 创建用户 test3，同时设置密码为 password
 ```
 
