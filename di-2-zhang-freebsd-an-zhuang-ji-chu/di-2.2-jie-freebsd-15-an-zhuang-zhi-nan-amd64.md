@@ -123,7 +123,7 @@
 >
 > 官方手册中关于“Amnesiac”的说法有误。若不设置主机名，系统不会自动分配任何值（包括“Amnesiac”），因为 FreeBSD 源代码默认假设将通过 DHCP 获取主机名。根据当前源代码逻辑，使用 DHCP 时不会有空主机名提示；仅当无网络连接时，登录信息中才会显示“Amnesiac”并伴随一条错误提示。
 
-### 参考信息
+### 参考文献
 
 - FreeBSD Project. Bug 286847: If the hostname is not set for the host, the value "Amnesiac" should be written to rc.conf.[EB/OL]. [2026-03-25]. <https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=286847>. 该 Bug 报告提出空主机名时应写入默认值，该 Bug 报告由笔者发现。
 - FreeBSD Project. freebsd-src/libexec/getty/main.c[EB/OL]. [2026-03-25]. <https://github.com/freebsd/freebsd-src/blob/80c12959679ab203459dc20eb9ece3a7328b7de5/libexec/getty/main.c#L178>. 该代码段包含登录提示符显示逻辑，`Amnesiac` 源代码。
