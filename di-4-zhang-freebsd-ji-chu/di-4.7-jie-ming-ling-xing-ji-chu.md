@@ -129,7 +129,7 @@ ykla@ykla:/ $ pwd
 
 根据上面的输出，请读者思考：上面的 `.` 和 `..` 分别代表什么？
 
->**技巧**
+> **技巧**
 >
 >在 FreeBSD 的 sh(1) 中，`cd` 的行为由 POSIX 标准规定。
 
@@ -159,7 +159,7 @@ drwxrwxrwt  2 root    wheel  3 Mar 18 17:23 .ICE-unix
 
 选项用于修改命令的行为；参数（argument）是命令操作的对象。
 
->**技巧**
+> **技巧**
 >
 >命令执行后返回退出状态码（exit status）：0 表示成功，非 0 表示失败。
 
@@ -796,7 +796,7 @@ FreeBSD 的设计更接近传统 UNIX 的行为。
 - 重启命令和 Linux 一致，都是 `reboot`，但是参数不通用。
 - 在 FreeBSD 下 `reboot` 等同于 `shutdown -r now`
 
->**技巧**
+> **技巧**
 >
 > 当使用上述命令关闭 FreeBSD 时，系统将调用 shell 脚本 `/etc/rc.shutdown`。该脚本按 *rc.d* 脚本列表的逆序依次执行，以关闭系统服务。（参见 FreeBSD Project. rc.shutdown[EB/OL]. (2026-04-09)[2026-04-09]. <https://github.com/freebsd/freebsd-src/blob/main/libexec/rc/rc.shutdown>）
 
