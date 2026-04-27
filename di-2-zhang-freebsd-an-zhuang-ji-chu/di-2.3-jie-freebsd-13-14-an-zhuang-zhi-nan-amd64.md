@@ -704,7 +704,7 @@ Add another user? (yes/no) [no]: # 是否继续添加其他用户
 
 - ② 如果设置使用随机密码，在最后的部分会输出：`adduser: INFO: Password for (ykla) is: D1MnujkWMv/m`（adduser：信息：用户 (ykla) 的密码是：D1MnujkWMv/m）。
 
-其他参数可以保持默认设置不变。在 FreeBSD 14 及以后，所有用户的默认 shell 统一为 `sh`。
+其他参数可以保持默认设置不变。在 FreeBSD 14 及以后，所有用户的默认 Shell 统一为 `sh`。
 
 最后会询问 `Add another user? (yes/no) [no]`，按 **回车键** 可结束用户添加流程；
 
