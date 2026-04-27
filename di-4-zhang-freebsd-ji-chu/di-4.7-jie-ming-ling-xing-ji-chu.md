@@ -284,7 +284,7 @@ $ type cd
 cd 是 shell 内建
 ```
 
-列出所有 shell 内置命令：
+列出所有 Shell 内置命令：
 
 ```bash
 $ compgen -b
