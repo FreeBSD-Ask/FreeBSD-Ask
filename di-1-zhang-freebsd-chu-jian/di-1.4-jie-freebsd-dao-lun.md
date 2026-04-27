@@ -4,8 +4,7 @@
 
 FreeBSD 作为一个持续演进的开源操作系统，其版本管理体系经过精心设计，以满足不同用户群体的多样化需求。FreeBSD 有以下版本类型（或开发阶段）：ALPHA、BETA、RC、RELEASE、CURRENT、STABLE。
 
-**RELEASE** 版本适用于生产环境。**STABLE** 和 **CURRENT** 则属于开发分支——其中 FreeBSD 的 ***STABLE*** 分支与一般 Linux 发行版中的“稳定版”概念不同，其名称中的“稳定”指的是该分支的 ABI（Application Binary Interface，应用程序二进制接口）保持稳定，而非指系统整体稳定性，或可理解为“固定”。（
-FreeBSD Wiki. FreeBSD Glossary STABLE[EB/OL]. [2026-03-26]. <https://wiki.freebsd.org/Glossary#STABLE>.）
+**RELEASE** 版本适用于生产环境。**STABLE** 和 **CURRENT** 则属于开发分支——其中 FreeBSD 的 ***STABLE*** 分支与一般 Linux 发行版中的“稳定版”概念不同，其名称中的“稳定”指的是该分支的 ABI（Application Binary Interface，应用程序二进制接口）保持稳定，而非指系统整体稳定性，或可理解为“固定”。（FreeBSD Wiki. FreeBSD Glossary STABLE[EB/OL]. [2026-03-26]. <https://wiki.freebsd.org/Glossary#STABLE>.）
 
 ALPHA 是 CURRENT 进入 RELEASE 的第一步。具体流程是：CURRENT → ALPHA（进入 STABLE 分支）→ BETA → RC → RELEASE。
 
