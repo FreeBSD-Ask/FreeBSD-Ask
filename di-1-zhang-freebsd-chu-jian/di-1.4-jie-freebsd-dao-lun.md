@@ -202,7 +202,9 @@ GNOME、Xorg（X11）、D-Bus、systemd、PulseAudio、Wayland、PipeWire 等主
 
 - 王波. FreeBSD 在中国的未来[M]//王波. FreeBSD 使用大全. 第2版. 北京：机械工业出版社，2002：前言. ISBN: 978-7-111-10286-1. 探讨了 FreeBSD 在中国的发展前景与应用前景。
 
-### 存储库
+## FreeBSD 项目治理结构
+
+### 源代码存储库
 
 FreeBSD 项目历史悠久，其使用的版本控制工具历经了 CVS、SVN、Git。多年来，FreeBSD 的中央源代码树由 CVS（Concurrent Versions System）维护，这是一款免费提供的源代码控制工具。2008 年 6 月，项目切换至 SVN（Subversion），因为随着源代码树的快速扩张和已存储历史记录的大量增加，CVS 的技术局限性日益明显。文档项目和 Ports 集合的存储库也分别于 2012 年 5 月和 2012 年 7 月从 CVS 迁移至 SVN。2020 年 12 月，项目将源代码和文档存储库迁移至 Git，Ports 集合随后于 2021 年 4 月完成迁移。目前使用 Git 进行协作开发。
 
