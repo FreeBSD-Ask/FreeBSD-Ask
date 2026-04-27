@@ -379,7 +379,7 @@ root     syslogd     1021 7   udp4   *:514                 *:*
 
 该软件操作便捷。
 
-将左上 🖱️ 改为 👆。默认的鼠标操作很不方便：或者也可以选择手机通过 OTG 鼠标和键盘来操控。
+将左上 🖱 改为 👆。默认的鼠标操作很不方便：或者也可以选择手机通过 OTG 鼠标和键盘来操控。
 
 ![Remote Desktop FreeBSD](../.gitbook/assets/wrdp3.png)
 

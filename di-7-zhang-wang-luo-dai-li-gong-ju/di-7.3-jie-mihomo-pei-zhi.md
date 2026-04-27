@@ -244,8 +244,6 @@ $ bash
 - 当前脚本通过 `bash` 执行。
 - `freebsd-rc` 后端依赖 `service` 与 `/usr/local/etc/rc.d`。
 
-
-
 ### 安装与初始化
 
 ```shell

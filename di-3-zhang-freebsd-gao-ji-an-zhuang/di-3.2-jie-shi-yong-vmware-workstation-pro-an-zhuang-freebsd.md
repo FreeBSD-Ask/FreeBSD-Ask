@@ -408,7 +408,7 @@ VMware 已被博通（Broadcom）收购。从官方下载 VMware 相关产品需
 >
 > ![同意许可协议](../.gitbook/assets/downbcm6.png)
 >
-> - 选择右侧箭头处的云朵图标 ☁️ 即可下载
+> - 选择右侧箭头处的云朵图标 ☁ 即可下载
 >
 > ![下载](../.gitbook/assets/downbcm7.png)
 
