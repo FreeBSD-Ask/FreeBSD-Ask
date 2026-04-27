@@ -521,7 +521,7 @@ root 密码强度无强制要求，但不可为空。若密码为空，将提示
 
 > **警告**
 >
-> 由于 FreeBSD Project. Bug 287538: Installer error on setting regdomain[EB/OL]. [2026-03-25]. <https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=287538>。该 Bug 报告记录安装程序设置无线管制域错误，目前选择任何无线电区域，都会报错如下：
+> 由于 FreeBSD Project. Bug 287538: Installer error on setting regdomain[EB/OL]. [2026-03-25]. <https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=287538>。该 Bug 报告记录安装程序设置无线管制域错误，目前选择任何无线管制域，都会报错如下：
 >
 > ```sh
 > Error while applying chosen settings
