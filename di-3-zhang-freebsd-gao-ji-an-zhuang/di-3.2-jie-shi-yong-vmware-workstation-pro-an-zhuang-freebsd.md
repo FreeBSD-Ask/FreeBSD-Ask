@@ -396,7 +396,7 @@ VMware 已被博通（Broadcom）收购。从官方下载 VMware 相关产品需
 >
 > ![点击“Release”（发行版）](../.gitbook/assets/downbcm3.png)
 >
->**或者跳过上述步骤，直接打开 <https://support.broadcom.com/group/ecx/free-downloads>**
+> **或者跳过上述步骤，直接打开 <https://support.broadcom.com/group/ecx/free-downloads>**
 >
 > ![下载主页](../.gitbook/assets/downbcm4.png)
 >
