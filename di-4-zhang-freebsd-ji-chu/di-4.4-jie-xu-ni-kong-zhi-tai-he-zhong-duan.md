@@ -96,23 +96,41 @@ ttyv8   "/usr/X11R6/bin/xdm -nodaemon"  xterm   off secure
 
 ## 单用户模式
 
-FreeBSD 启动菜单提供了一个标记为\u201cBoot Single User\u201d的选项。如果选择此选项，系统将启动进入一种称为\u201c单用户模式\u201d的特殊模式。此模式通常用于修复无法启动的系统，或在不知道 root 密码时重置 root 密码。
+FreeBSD 启动菜单提供了一个标记为“Boot Single User”的选项。如果选择此选项，系统将启动进入一种称为“单用户模式”的特殊模式。此模式通常用于修复无法启动的系统，或在不知道 root 密码时重置 root 密码。
 
 在单用户模式下，网络和其他虚拟控制台不可用。但是，可以获得完整的 root 访问权限，并且默认情况下不需要 root 密码。由于这些原因，需要物理访问键盘才能启动进入此模式，因此在保护 FreeBSD 系统安全时，确定谁拥有键盘的物理访问权是需要考虑的重要因素。
 
 控制单用户模式的设置位于 `/etc/ttys` 文件的以下部分：
 
-```sh
-# name  getty                           type  status  comments
+```ini
+……以上省略……
+
+# name	getty				type	status		comments
 #
-# If console is marked "insecure", then init will ask for the root password
+# If console is marked "insecure", init will ask for the root password
 # when going to single-user mode.
-console none                            unknown  off  secure
+console	none				unknown	off secure	# 注意此行
+#
+
+……以下省略……
 ```
 
-默认情况下，状态设置为 `secure`。这假设谁拥有键盘的物理访问权要么不重要，要么由物理安全策略控制。如果将此设置更改为 `insecure`，则假设环境本身是不安全的，因为任何人都可以访问键盘。当此行更改为 `insecure` 时，FreeBSD 将在用户选择启动进入单用户模式时提示输入 root 密码。
+默认情况下，状态设置为 `secure`（安全）。这假设谁拥有键盘的物理访问权要么不重要，要么由物理安全策略控制。
 
-将此设置更改为 `insecure` 时要小心！如果忘记了 root 密码，仍然可以启动进入单用户模式，但对于不熟悉 FreeBSD 启动过程的人来说可能会比较困难。
+如果将此设置更改为 `insecure`（不安全），则假设物理环境本身是不安全的，因为任何人都可以访问键盘。当此行中的 `secure` 更改为 `insecure` 后，即：
+
+```ini
+console	none				unknown	off insecure
+```
+
+FreeBSD 将在用户选择启动进入单用户模式时提示输入 root 密码：
+
+```sh
+Enter root password, or ^D to go multi-user
+Password:
+```
+
+将此设置更改为 `insecure` 时要小心！如果忘记了 root 密码，仍然可以借助安装介质启动进入单用户模式，但对于不熟悉 FreeBSD 启动过程的人来说可能会比较困难。
 
 ## 调整引导界面和 TTY 分辨率
 
