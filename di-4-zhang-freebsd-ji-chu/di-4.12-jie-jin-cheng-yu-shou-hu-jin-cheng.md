@@ -35,8 +35,7 @@ $ htop
 
 有些程序不设计为持续接收用户输入，并在第一次机会时与终端断开连接。例如，Web 服务器响应 Web 请求而非用户输入，邮件服务器是此类应用程序的另一个例子。这些类型的程序被称为守护进程（daemon）。术语“daemon”来自希腊神话，代表一种非善非恶的实体，它无形中执行有用的任务。这就是 BSD 吉祥物是那个穿着运动鞋和拿着草叉的快乐守护进程的原因。
 
-有一种命名约定，即通常作为守护进程运行的程序名称以字母“d”结尾。例如，BIND 是 Berkeley Internet Name Domain，但实际执行的程序名为 named。Apache Web 服务器程序是 httpd，数据同步 Rsync 进程是 rsyncd 。这只是一个命名约定，例如数据库应用程序 MySQL 的守护进程是 mysql-server，而不是 mysqld。
-
+有一种命名约定，即通常作为守护进程运行的程序名称以字母“d”结尾。例如，BIND 是 Berkeley Internet Name Domain，但实际执行的程序名为 named。Apache Web 服务器程序是 httpd，数据同步 Rsync 进程是 rsyncd。这只是一个命名约定，例如数据库应用程序 MySQL 的守护进程是 mysql-server，而不是 mysqld。
 
 ## 查看进程
 
@@ -201,7 +200,7 @@ show_cpu_temperature=1   # 启用 CPU 温度显示
 
 ### 参考文献
 
-- ioogithub. Settings are not saved[EB/OL]. [2026-03-25]. <https://github.com/htop-dev/htop/issues/949>. 讨论了 htop 配置保存的常见问题与解决方案。
+- htop-dev. Settings are not saved[EB/OL]. [2026-03-25]. <https://github.com/htop-dev/htop/issues/949>. 讨论了 htop 配置保存的常见问题与解决方案。
 
 ## 课后习题
 
