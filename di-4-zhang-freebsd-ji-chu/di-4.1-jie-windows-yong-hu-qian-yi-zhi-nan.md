@@ -259,6 +259,62 @@ Windows 会直接读取 RTC 的结果，并将其视为本地时间，即 Local 
 - IETF. RFC 5246: The Transport Layer Security (TLS) Protocol Version 1.2[EB/OL]. [2026-04-18]. <https://www.rfc-editor.org/rfc/rfc5246>. TLS 协议规定证书包含 notBefore 与 notAfter 有效期字段，客户端验证时将系统时间与证书有效期比对，时钟偏移可导致握手失败。
 - IETF. RFC 6557: Procedures for Maintaining the Time Zone Database[EB/OL]. [2026-04-18]. <https://www.rfc-editor.org/rfc/rfc6557>. IANA 时区数据库维护程序（BCP 175），该数据库自 20 世纪 70 年代末由 Arthur David Olson 开发，2011 年起由 IANA 维护。
 
+## 手册页
+
+FreeBSD 上最全面的文档以手册页的形式存在。系统上几乎每个程序都附带一份简短的参考手册，解释基本操作和可用参数。这些手册可以使用 man 命令查看：
+
+```sh
+% man command
+```
+
+其中 `command` 是要了解的命令名称。例如，要了解更多关于 ls(1) 的信息，输入：
+
+```sh
+% man ls
+```
+
+手册页分为多个节，代表主题的类型。在 FreeBSD 中，以下章节可用：
+
+1. 用户命令。
+2. 系统调用和错误编号。
+3. C 库中的函数。
+4. 设备驱动程序。
+5. 文件格式。
+6. 游戏和其他娱乐。
+7. 杂项信息。
+8. 系统维护和操作命令。
+9. 系统内核接口。
+
+在某些情况下，同一主题可能出现在在线手册的多个节中。例如，既有 chmod 用户命令，也有 chmod() 系统调用。要告诉 man(1) 显示哪个节，指定节号：
+
+```sh
+% man 1 chmod
+```
+
+这将显示用户命令 chmod(1) 的手册页。在书面文档中，对在线手册特定节的引用传统上放在括号中，因此 chmod(1) 指的是用户命令，chmod(2) 指的是系统调用。
+
+如果不知道手册页的名称，使用 `man -k` 搜索手册页描述中的关键词：
+
+```sh
+% man -k mail
+```
+
+此命令显示描述中包含关键词“mail”的命令列表。这等效于使用 apropos(1)。
+
+要阅读 `/usr/sbin` 中所有命令的描述，输入：
+
+```sh
+% cd /usr/sbin
+% man -f * | more
+```
+
+或：
+
+```sh
+% cd /usr/sbin
+% whatis * | more
+```
+
 ## 深入阅读
 
 ### Windows
