@@ -235,14 +235,14 @@ $ tar --zstd -cvf 输出文件 -C 起点目录 相对路径
 
 示例：
 
-```
+```sh
 $ tar --zstd -cvf test.tar.zst -C /home/ykla/ test # 打包并压缩成 zstd 格式
 a test
 ```
 
 看看结果：
 
-```
+```sh
 $ ykla@ykla:~ $ ls -al
 drwxr-xr-x  2 ykla ykla     2 Apr 16 11:53 test
 -rw-r--r--  1 ykla ykla    98 Apr 16 11:58 test.tar.zst
