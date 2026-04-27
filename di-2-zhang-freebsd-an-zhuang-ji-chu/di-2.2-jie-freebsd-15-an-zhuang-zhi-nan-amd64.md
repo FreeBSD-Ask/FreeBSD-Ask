@@ -15,7 +15,7 @@
 
 > **注意**
 >
-> 本节基于 VMware 17 进行演示（使用 UEFI）。在 VMware 25H2u1 版本测试通过。
+> 本节基于 VMware Workstation Pro 17 进行演示（使用 UEFI），在 25H2u1 版本测试通过。
 >
 > 若为物理机安装，可考虑使用 Rufus. Rufus - Create bootable USB drives the easy way[EB/OL]. [2026-03-25]. <https://rufus.ie/zh/> 工具配合 FreeBSD Project. FreeBSD-15.0-RELEASE-amd64-memstick.img[EB/OL]. [2026-03-25]. <https://download.freebsd.org/ftp/releases/amd64/amd64/ISO-IMAGES/15.0/FreeBSD-15.0-RELEASE-amd64-memstick.img>。该文件为 FreeBSD 15.0-RELEASE amd64 架构的 U 盘安装镜像。
 
