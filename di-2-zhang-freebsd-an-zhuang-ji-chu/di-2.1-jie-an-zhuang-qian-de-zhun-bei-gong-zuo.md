@@ -49,9 +49,9 @@ UEFI（Unified Extensible Firmware Interface）是现代计算机的固件接口
 
 bsd-hardware.info. Hardware for BSD[EB/OL]. [2026-03-25]. <https://bsd-hardware.info/?view=search>. 该平台提供 BSD 系统硬件兼容性数据库，可用于查询设备支持情况。
 
-![硬件支持查询](../.gitbook/assets/h1.png)
+![硬件支持查询](../.gitbook/assets/hardware-support-query-1.png)
 
-![硬件支持查询](../.gitbook/assets/h2.png)
+![硬件支持查询](../.gitbook/assets/hardware-support-query-2.png)
 
 > **注意**
 >
@@ -61,11 +61,11 @@ bsd-hardware.info. Hardware for BSD[EB/OL]. [2026-03-25]. <https://bsd-hardware.
 
 了解硬件支持情况后，即可开始下载 FreeBSD 镜像。首先访问 FreeBSD 项目官网：<https://www.freebsd.org/>。
 
-![FreeBSD 项目官网](../.gitbook/assets/do1.png)
+![FreeBSD 项目官网](../.gitbook/assets/freebsd-official-site.png)
 
 点击黄底红字的 `Download FreeBSD`，页面将跳转至下载页面：
 
-![下载 FreeBSD](../.gitbook/assets/do2.png)
+![下载 FreeBSD](../.gitbook/assets/download-freebsd.png)
 
 > **技巧**
 >
@@ -90,7 +90,7 @@ bsd-hardware.info. Hardware for BSD[EB/OL]. [2026-03-25]. <https://bsd-hardware.
 
 选择好安装镜像的主要类型后，即可看到具体的下载列表：
 
-![FreeBSD 镜像](../.gitbook/assets/do3.png)
+![FreeBSD 镜像](../.gitbook/assets/freebsd-mirror-list.png)
 
 ```sh
 File Name                                          File Size      Date
@@ -175,7 +175,7 @@ Rufus 下载地址为 <https://rufus.ie/zh>，该工具为 Windows 平台开源 
 
 当使用 Rufus 刻录镜像时，无需解压缩文件，直接选择 `-img.xz` 即可制作启动盘。
 
-![Rufus](../.gitbook/assets/rufus.png)
+![Rufus](../.gitbook/assets/rufus-tool.png)
 
 **不建议** 使用 FreeBSD 手册中提到的 win32diskimager，因其对某些镜像格式的处理存在缺陷，尽管实际文件校验和正确，但有时会错误地报告校验失败。类似地，**亦不建议** 使用 Ventoy。Ventoy - 多系统启动 USB 启动盘制作工具[EB/OL]. [2026-03-25]. <https://www.ventoy.net/>. 该工具为多系统启动 USB 启动盘制作工具，直接加载 ISO 或 IMG 镜像文件，但 Ventoy 的启动加载机制与 FreeBSD 镜像不完全兼容，可能导致启动失败。
 
@@ -200,7 +200,7 @@ win32diskimager 的下载地址是 <https://sourceforge.net/projects/win32diskim
 
 Realtek RTL8125 是一款常见的 2.5 G 以太网卡。在消费级市场中，常见的 2.5 G 网卡多采用该型号芯片。在安装 FreeBSD 前，可在 Windows 设备管理器中查看硬件标识，确认网卡型号是否为 RTL8125。
 
-![Realtek RTL8125 2.5 G](../.gitbook/assets/rtl8125.png)
+![Realtek RTL8125 2.5 G](../.gitbook/assets/realtek-rtl8125.png)
 
 > **技巧**
 >

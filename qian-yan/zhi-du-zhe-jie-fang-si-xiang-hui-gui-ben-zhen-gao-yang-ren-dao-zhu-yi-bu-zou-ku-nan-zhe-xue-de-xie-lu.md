@@ -8,7 +8,7 @@
 
 1. “Vi 究竟如何退出？”
 
-![Nvi 主界面](../.gitbook/assets/nviz.png)
+![Nvi 主界面](../.gitbook/assets/nvi-interface.png)
 
 一眼望去，Vi 界面没有任何操作提示或帮助信息。
 
@@ -60,7 +60,7 @@
 
 2. “我的密码为什么一直输入不了？”
 
-![sudo 和 su](../.gitbook/assets/sudoz.png)
+![sudo 和 su](../.gitbook/assets/sudo-su-prompt.png)
 
 因为屏幕上的密码输入区域始终是空白的，连 **** 这样的掩码都不会显示，即无任何视觉反馈，其设计便是如此。
 

@@ -378,7 +378,7 @@ loader_logo="fbsdbw"
 
 ![beastiebw](../.gitbook/assets/beastiebw.png)
 
-![orb](../.gitbook/assets/ins1.png)
+![orb](../.gitbook/assets/boot-screen.png)
 
 ![orbbw](../.gitbook/assets/orbbw.png)
 

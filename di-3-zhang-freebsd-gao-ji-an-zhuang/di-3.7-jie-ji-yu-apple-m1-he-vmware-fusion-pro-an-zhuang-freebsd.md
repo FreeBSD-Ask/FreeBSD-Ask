@@ -16,37 +16,37 @@
 
 镜像下载完成后，开始配置虚拟机。
 
-![VMware Fusion 主界面](../.gitbook/assets/Fusion1.png)
+![VMware Fusion 主界面](../.gitbook/assets/vmware-fusion-1.png)
 
 选择下载的 FreeBSD 镜像。
 
-![选择 FreeBSD 镜像](../.gitbook/assets/Fusion2.png)
+![选择 FreeBSD 镜像](../.gitbook/assets/vmware-fusion-2.png)
 
 默认的内存大小可能不足，请点击“自定设置”。
 
-![自定义设置](../.gitbook/assets/Fusion3.png)
+![自定义设置](../.gitbook/assets/vmware-fusion-3.png)
 
 点击“处理器和内存”。
 
-![处理器和内存设置](../.gitbook/assets/Fusion4.png)
+![处理器和内存设置](../.gitbook/assets/vmware-fusion-4.png)
 
 修改处理器数量和内存大小。`4096 MB` 即 4 GB。
 
 ## 开始安装
 
-![安装界面](../.gitbook/assets/Fusion5.png)
+![安装界面](../.gitbook/assets/vmware-fusion-5.png)
 
-![安装界面](../.gitbook/assets/Fusion6.png)
+![安装界面](../.gitbook/assets/vmware-fusion-6.png)
 
 ## 配置桌面
 
 无需安装任何虚拟机增强工具即可使用。
 
-![桌面界面](../.gitbook/assets/Fusion7.png)
+![桌面界面](../.gitbook/assets/vmware-fusion-7.png)
 
-![桌面界面](../.gitbook/assets/Fusion8.png)
+![桌面界面](../.gitbook/assets/vmware-fusion-8.png)
 
-![桌面界面](../.gitbook/assets/Fusion9.png)
+![桌面界面](../.gitbook/assets/vmware-fusion-9.png)
 
 窗口大小无法自由调整。
 
