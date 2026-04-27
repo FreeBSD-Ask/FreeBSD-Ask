@@ -298,8 +298,8 @@ Tun 设备通常为 `/dev/tun*`。
 # clashctl tun on
 # clashctl tun off
 # clashctl tun doctor
-route -n get default
-netstat -rn -f inet
+$ route -n get default
+$ netstat -rn -f inet
 ```
 
 Tun 未生效时优先检查：
