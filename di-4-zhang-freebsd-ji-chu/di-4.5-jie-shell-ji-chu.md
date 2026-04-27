@@ -129,26 +129,6 @@ FreeBSD 的 `ping` 自 15.0 起合并了原 `ping6` 的功能，通过 `-4`/`-6`
 
 `ping` 使用 ICMP 协议的 ECHO_REQUEST 数据报来触发主机的 ECHO_RESPONSE。IPv4 目标使用 ICMP，IPv6 目标使用 ICMPv6（RFC 2463）。默认数据大小为 56 字节，加上 8 字节 ICMP 头共 64 字节。若数据空间至少 8 字节，前 8 字节用于时间戳以计算往返时间。
 
-### 让命令位于前台和后台
-
-**Ctrl**+**Z**：将当前进程挂起（暂停），随后可使用 `fg` 命令将其恢复到前台：
-
-```sh
-# ping 163.com  # 测试与 163.com 的网络连通性
-PING 163.com (59.111.160.244): 56 data bytes
-64 bytes from 59.111.160.244: icmp_seq=0 ttl=52 time=27.611 ms
-64 bytes from 59.111.160.244: icmp_seq=1 ttl=52 time=27.691 ms
-^Z[1] + Suspended               ping 163.com # 注意此处，按下了 Ctrl+Z
-# fg # 返回前台
-ping 163.com
-64 bytes from 59.111.160.244: icmp_seq=3 ttl=52 time=27.465 ms
-64 bytes from 59.111.160.244: icmp_seq=4 ttl=52 time=27.586 ms
-64 bytes from 59.111.160.244: icmp_seq=5 ttl=52 time=27.522 ms
-^C # 按 Ctrl+C 结束命令
---- 163.com ping statistics ---
-6 packets transmitted, 6 packets received, 0.0% packet loss
-round-trip min/avg/max/stddev = 27.465/27.596/27.701/0.085 ms
-```
 
 ### 其他
 
