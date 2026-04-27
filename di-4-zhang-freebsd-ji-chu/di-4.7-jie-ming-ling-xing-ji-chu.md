@@ -8,7 +8,7 @@
 命令 [选项] [参数]
 ```
 
-其中，选项（option）通常以 `-`（短选项）或 `--`（长选项）开头，用于修改命令的行为；参数（argument）是命令操作的对象。多个短选项可合并书写，如 `-a -l` 等价于 `-al`。命令执行后返回退出状态码（exit status）：0 表示成功，非 0 表示失败，可通过 `$?` 变量查看（IEEE. POSIX.1-2017, Shell Command Language[EB/OL]. [2026-04-26]. ，https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html>.）
+其中，选项（option）通常以 `-`（短选项）或 `--`（长选项）开头，用于修改命令的行为；参数（argument）是命令操作的对象。多个短选项可合并书写，如 `-a -l` 等价于 `-al`。命令执行后返回退出状态码（exit status）：0 表示成功，非 0 表示失败，可通过 `$?` 变量查看（IEEE. POSIX.1-2017, Shell Command Language[EB/OL]. [2026-04-26]. ，<https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html>.）>
 
 Shell 还提供了管道（pipe）、重定向（redirection）和通配符（globbing）三种核心组合机制：管道通过 `|` 将一个命令的输出连接到另一个命令的输入；重定向通过 `>`、`<`、`>>` 改变命令的标准输入/输出方向；通配符通过 `*`、`?`、`[]` 匹配文件名模式。
 
@@ -495,7 +495,6 @@ $ rm /home/ykla/test
 $
 ```
 
-
 还可以用命令 `rmdir`（remove directory，即删除目录，且只能删除空目录）：
 
 ```sh
@@ -795,7 +794,6 @@ FreeBSD 中的大多数设备必须通过称为设备节点的特殊文件访问
 
 设备命名遵循一定的约定：SATA 硬盘以 `ada` 开头（如 `ada0`、`ada1`），SCSI 硬盘和 USB 存储设备以 `da` 开头（如 `da0`），NVMe 存储以 `nvd` 或 `nda` 开头，CD-ROM 驱动器以 `cd` 开头。编号从 0 开始。GPT 分区在设备名后附加 `p` 加分区号（如 `ada0p1`），MBR 切片附加 `s` 加切片号（如 `ada0s1`）。
 
-
 `dmesg` 显示的是内核消息缓冲区的内容，该缓冲区大小有限，旧消息可能被新消息覆盖。系统启动时的 `dmesg` 输出副本自动保存至 `/var/run/dmesg.boot`。可通过 sysctl 变量 `kern.msgbuf_show_timestamp` 控制时间戳显示：`0` 为不显示，`1` 为秒级精度，`2` 为微秒级精度。
 
 ## 手册页
@@ -876,7 +874,6 @@ FreeBSD 的 make（bmake）与 GNU make（gmake）在语法和内置变量上有
 FreeBSD sed 基于 4.4BSD lite sed，与 GNU sed 在正则表达式语法、一些扩展命令（如 `\l`、`\u`、`\L`、`\U`）、地址范围语法上存在差异。GNU sed 支持 `\w`、`\W`、`\b`、`\B` 等字符类，而 FreeBSD sed 需要使用 `[[:alnum:]]` 等 POSIX 类。
 
 sed(1) 命令命令选项：
-
 
 | 选项 | 说明 | 备注 |
 |------|------|------|
