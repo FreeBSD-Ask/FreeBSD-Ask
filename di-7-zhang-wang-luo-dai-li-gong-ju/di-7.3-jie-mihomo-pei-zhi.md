@@ -224,7 +224,7 @@ mihomo_enable="YES" # 开机启用/服务项
 
 # Clash for FreeBSD
 
-## 1. 环境准备
+## 环境准备
 
 FreeBSD 默认登录 Shell 可能不是 `bash`，执行以下命令前请先切换到 `bash`：
 
@@ -246,7 +246,7 @@ $ bash
 
 
 
-## 2. 安装与初始化
+## 安装与初始化
 
 ```shell
 $ git clone --branch master --depth 1 https://github.com/wenyinos/clash-freebsd.git
@@ -265,7 +265,7 @@ $ clashon
 $ clashctl status
 ```
 
-## 3. FreeBSD 服务管理（rc.d）
+## FreeBSD 服务管理（rc.d）
 
 系统安装默认使用 `freebsd-rc` 后端，服务名：`clash_freebsd`。
 
@@ -290,7 +290,7 @@ $ clashctl status
 - `service` 与 `autostart` 命令需要 root 权限（请使用 root 或 `sudo`）。
 - FreeBSD 自启配置文件：`/etc/rc.conf.d/clash_freebsd`。
 
-## 4. Tun 与路由诊断（FreeBSD）
+## Tun 与路由诊断（FreeBSD）
 
 Tun 设备通常为 `/dev/tun*`。
 
@@ -309,7 +309,7 @@ Tun 未生效时优先检查：
 - 当前用户权限（建议 root）
 - 默认路由是否已接管到 tun 接口
 
-## 5. 常用排障命令
+## 常用排障命令
 
 ```shell
 $ clashctl doctor
@@ -318,7 +318,7 @@ $ clashctl logs mihomo
 $ clashctl config regen
 ```
 
-## 6. 卸载
+## 卸载
 
 ```shell
 # bash uninstall.sh
