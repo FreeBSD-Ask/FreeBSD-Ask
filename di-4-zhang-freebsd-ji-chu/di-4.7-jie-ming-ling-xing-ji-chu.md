@@ -467,7 +467,7 @@ FreeBSD 的 `mkdir` 与 GNU/Linux 的 `mkdir` 基本兼容。
 >
 > FreeBSD 命令行界面是没有回收站的，所有命令一经执行不可撤销。命令行操作 `rm` 是比较危险的。
 
-`rm` 即英文 `remove` 的缩写，意为删除。FreeBSD 的 `rmdir` 与 POSIX 标准兼容；与 GNU/Linux 的 `rmdir` 基本兼容。
+`rm` 即英文 `remove` 的缩写，意为删除。
 
 ---
 
