@@ -4,6 +4,7 @@
 
 - 2026.4.27
   - 使用手册增补前言、1-4 章
+  - 更新 7.3 Clash for FreeBSD
 - 2026.4.23
   - 独立“UEFI/BIOS 注解（AMI BIOS）”
   - 独立非 FreeBSD 的其他 BSD 章节
