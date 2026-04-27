@@ -61,7 +61,7 @@
 
 > **注意**
 >
-> 请将 Windows 创建的 300 M EFI 系统分区的挂载点设置为 `/boot/efi`，这样 FreeBSD 就能正确找到并使用已有的 EFI 分区，避免创建多个 EFI 分区带来的混乱。
+> 请将 Windows 创建的 300 MB EFI 系统分区的挂载点设置为 `/boot/efi`，这样 FreeBSD 就能正确找到并使用已有的 EFI 分区，避免创建多个 EFI 分区带来的混乱。
 
 选择 `Finish`（完成）
 
