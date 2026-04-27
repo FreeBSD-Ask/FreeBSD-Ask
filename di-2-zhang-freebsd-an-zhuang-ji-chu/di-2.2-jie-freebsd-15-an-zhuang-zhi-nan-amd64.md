@@ -600,7 +600,7 @@ root 密码强度无强制要求，但不可为空。若密码为空，将提示
 └── regdomain.xml # 无线管制域配置文件
 ```
 
-- Alibaba Cloud. 阿里公共 DNS[EB/OL]. [2026-03-25]. <https://www.alidns.com/>. 该服务提供公共 DNS 解析。
+- Alibaba Cloud. 阿里云公共 DNS[EB/OL]. [2026-03-25]. <https://www.alidns.com/>. 该服务提供公共 DNS 解析。
 
 ## 时区设置
 

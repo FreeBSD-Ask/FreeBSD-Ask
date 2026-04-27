@@ -304,7 +304,6 @@ DISKPART> list disk # 当前选中的磁盘前会有标记 *
   磁盘 0    联机              931 GB    41 MB        *
 * 磁盘 1    联机               57 GB      0 B
 
-
 DISKPART> clean # 清空磁盘
 
 DiskPart 成功地清除了磁盘。
