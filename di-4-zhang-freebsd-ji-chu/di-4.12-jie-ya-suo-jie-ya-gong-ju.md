@@ -92,9 +92,8 @@ $ tar -xvf test.tar -C /home/ykla/mytest # 解压 test.tar 到指定路径
 
 基本系统自带 `xz`、`unxz`，同样无需安装。 xz 格式是当前压缩率最高的格式之一，特别适合大文件归档.
 
-
 ### `xz` 压缩
- 
+
  默认压缩后会删除原文件，建议加 `-k` 选项保留原文件。
 
 ```sh
@@ -199,7 +198,6 @@ $ unrar x archive.rar /home/ykla/桌面/test/ # 解压缩到指定目录
 zstd 是 Facebook 开发的快速压缩算法，兼顾压缩速度和压缩率，是现代系统首选的压缩格式。
 
 zstd 是 FreeBSD 12+ 基本系统内置的压缩工具，Linux 发行版通常也预装 zstd；zstd 支持多种预设级别，从最快（`-1`）到极限压缩（`--ultra -22`）。参见：FreeBSD Project. Add support for zstd-compressed user and kernel core dumps.[EB/OL]. [2026-03-26]. <https://svnweb.freebsd.org/base?view=revision&revision=329240>. 该修订记录了 zstd 压缩转储支持的实现细节。
-
 
 ### zstd 压缩
 

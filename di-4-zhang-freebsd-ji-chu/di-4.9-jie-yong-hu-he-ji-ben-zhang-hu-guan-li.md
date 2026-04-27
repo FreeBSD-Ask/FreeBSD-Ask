@@ -188,7 +188,6 @@ Goodbye!
 
 ## `rmuser` 删除用户与 `passwd` 修改密码
 
-
 - `rmuser` 用于删除用户。与 `adduser` 命令一样，也是交互式的。
 
 示例：
@@ -224,7 +223,6 @@ chpass: user information updated
 root 用户可以修改所有用户的密码。FreeBSD 的 `passwd` 选项与 Linux 不同。FreeBSD 没有 `-u`（解锁）、`-e`（过期）、`-d`（删除密码）等选项。锁定/解锁账户请使用 `pw lock/unlock`。
 
 ## `pw` 命令
-
 
 在 FreeBSD 中，可以使用 `pw` 命令管理用户和组：
 
