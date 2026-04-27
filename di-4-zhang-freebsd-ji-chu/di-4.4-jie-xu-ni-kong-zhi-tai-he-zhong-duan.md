@@ -63,6 +63,33 @@ To change this login announcement, see motd(5).
 
 - ①：root 是 UNIX 系统中的超级用户账户，拥有最高权限。常说的 Android root、Apple 越狱、Kindle 越狱等，都是为了获取这一 root 权限。
 
+
+### 故障排除与未竟事宜
+
+- 若用户名正确，但密码不正确：
+
+```sh
+login: root
+Password:
+Login incorrect # 表示登录信息不正确
+login:
+```
+
+- 若用户名和密码都不正确：
+
+```sh
+login: test # 当前系统中不存在该用户
+Password:
+Login incorrect
+login:
+```
+
+如果读者连用户名都无从得知，建议找回 `root` 密码后，查看系统中有哪些用户账户，或者直接重装系统会更方便。
+
+### 参考文献
+
+- ItsFOSS. What is TTY in Linux?[EB/OL]. [2026-03-25]. <https://itsfoss.com/what-is-tty-in-linux/>. 详细介绍 TTY 概念与历史
+
 ## 虚拟控制台
 
 虽然系统控制台可用于与系统交互，但在 FreeBSD 系统键盘前使用命令行工作的用户通常会登录到虚拟控制台而非系统控制台。这是因为系统消息默认配置为在系统控制台上显示，这些消息会覆盖在用户正在处理的命令或文件之上，影响用户集中注意力。
@@ -228,31 +255,7 @@ exec="gop set 0"
 - FreeBSD Forums. gop set < mode > being ignored in /boot/loader.conf[EB/OL]. [2026-03-26]. <https://forums.freebsd.org/threads/gop-set-mode-being-ignored-in-boot-loader-conf.77779/>. 讨论 loader.conf 中 GOP 模式设置未生效的原因与解决思路。
 - FreeBSD Forums. How to find the valid values of efi_max_resolution[EB/OL]. [2026-03-26]. <https://forums.freebsd.org/threads/how-to-find-the-valid-values-of-efi_max_resolution.84840/>. 探讨查询 efi_max_resolution 有效取值的方法。
 
-### 参考文献
 
-- ItsFOSS. What is TTY in Linux?[EB/OL]. [2026-03-25]. <https://itsfoss.com/what-is-tty-in-linux/>. 详细介绍 TTY 概念与历史
-
-### 故障排除与未竟事宜
-
-- 若用户名正确，但密码不正确：
-
-```sh
-login: root
-Password:
-Login incorrect # 表示登录信息不正确
-login:
-```
-
-- 若用户名和密码都不正确：
-
-```sh
-login: test # 当前系统中不存在该用户
-Password:
-Login incorrect
-login:
-```
-
-如果读者连用户名都无从得知，建议找回 `root` 密码后，查看系统中有哪些用户账户，或者直接重装系统会更方便。
 
 ## 课后习题
 
