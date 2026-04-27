@@ -777,8 +777,6 @@ SIGKILL 不能被进程忽略。向进程发送 SIGKILL 通常会立即停止该
 
 杀死系统上的随机进程是一个坏主意。特别是 init(8)，PID 1，是特殊的。运行 `/bin/kill -s KILL 1` 是一种快速但不推荐的关闭系统的方法。在按下回车键之前，务必仔细检查 kill(1) 的参数。
 
-
-
 `dmesg` 显示的是内核消息缓冲区的内容，该缓冲区大小有限，旧消息可能被新消息覆盖。系统启动时的 `dmesg` 输出副本自动保存至 `/var/run/dmesg.boot`。可通过 sysctl 变量 `kern.msgbuf_show_timestamp` 控制时间戳显示：`0` 为不显示，`1` 为秒级精度，`2` 为微秒级精度。
 
 ## BSD 风格的 make/grep/sed/awk
