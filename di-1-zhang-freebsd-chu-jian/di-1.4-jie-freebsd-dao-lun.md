@@ -351,7 +351,7 @@ BSDi 很快就陷入了与 AT&T 的 Unix System Laboratories（USL，Unix 系统
 
 - 1993 年 6 月 FreeBSD 的创建
 
-FreeBSD 项目诞生于 1993 年初，部分源于非官方 386BSD 补丁包（Unofficial 386BSD Patchkit）的最后三位协调人 Nate Williams、Rod Grimes 和 Jordan Hubbard 的努力。该补丁包的原始目标是生成 386BSD 的一个中间快照，以修复补丁包机制本身无法解决的诸多问题。项目早期的工作标题为“386BSD 0.5”或“386BSD Interim”（临时版），以反映其定位。386BSD 是 Bill Jolitz 的操作系统，但当时已遭受近一年的忽视，补丁包日益膨胀。当 Bill Jolitz 突然撤回对项目的许可且未给出明确替代方案时，三位协调人认为目标仍然值得坚持，遂采用了 David Greenman 提出的“FreeBSD”名称。Jordan Hubbard 随后联系了 Walnut Creek CDROM，以改善 FreeBSD 的发行渠道。Walnut Creek CDROM 不仅支持在 CD 上发行 FreeBSD，还为项目提供了一台工作用机和高速互联网连接。若无 Walnut Creek CDROM 对这一当时完全未知项目的近乎前所未有的信任，FreeBSD 很可能无法如此迅速地发展到今天的程度。1993 年 6 月 19 日，该项目正式选择了“FreeBSD”这个名字。首个 FreeBSD RELEASE（FreeBSD 1.0）发布于 1993 年 12 月，基于 4.3BSD-Lite（“Net/2”）磁带，并包含 386BSD 和自由软件基金会提供的许多组件。
+FreeBSD 项目诞生于 1993 年初，部分源于非官方 386BSD 补丁包（Unofficial 386BSD Patchkit）的最后三位协调人 Nate Williams、Rod Grimes 和 Jordan Hubbard 的努力。该补丁包的原始目标是生成 386BSD 的一个中间快照，以修复补丁包机制本身无法解决的诸多问题。项目早期的工作标题为“386BSD 0.5”或“386BSD Interim”（临时版），以反映其定位。386BSD 是 Bill Jolitz 的操作系统，但当时已被无视了近一年，补丁包的体积日益膨胀。当 Bill Jolitz 突然撤回对项目的许可且未给出明确替代方案时，三位协调人认为目标仍然值得坚持，遂采用了 David Greenman 提出的“FreeBSD”名称。为了改善 FreeBSD 的发行渠道，Jordan Hubbard 随后联系了 Walnut Creek CDROM。Walnut Creek CDROM 不仅支持在 CD 上发行 FreeBSD，还为此项目提供了一台工作用机和高速互联网连接。若无 Walnut Creek CDROM 对这一当时完全未知项目的近乎前所未有的信任，FreeBSD 很可能无法如此迅速地发展到今天的程度。1993 年 6 月 19 日，该项目正式选择了“FreeBSD”这个名字。首个 FreeBSD RELEASE（FreeBSD 1.0）发布于 1993 年 12 月，基于 4.3BSD-Lite（“Net/2”）磁带，并包含 386BSD 和自由软件基金会提供的许多组件。
 
 - 1994 年 8 月 FreeBSD Ports
 
