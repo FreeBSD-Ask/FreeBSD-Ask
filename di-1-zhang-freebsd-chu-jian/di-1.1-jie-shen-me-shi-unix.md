@@ -65,8 +65,6 @@ FreeBSD 的手册页系统是 UNIX 哲学的典型体现。
 >
 > 阅读上述文本和参考文献，如何理解 UNIX 哲学的局限性，以及背后的时代背景。
 
-这些原则在当时的软件设计中相互配合，帮助开发者构建出简洁、高效、可维护的系统。
-
 > **思考题**
 >
 >> Those who do not understand UNIX are condemned to reinvent it, poorly.（那些不懂 UNIX 的人注定要再造一个四不像式 UNIX。）
