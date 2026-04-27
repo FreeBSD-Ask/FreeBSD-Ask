@@ -8,14 +8,13 @@
 
 ## zip
 
-zip 格式是 PKZIP 归档格式的实现，由 Info-ZIP 项目维护。根据 zip(1) 手册页，zip 是一种压缩和文件打包工具，兼容 PKZIP（Phil Katz 的 ZIP for MSDOS 系统），zip 3.0 版本兼容 PKZIP 2.04 并支持 Zip64 扩展（允许归档和文件超过 2 GB 限制）。zip 使用 deflation 作为默认压缩方法，也可存储不压缩的文件，并自动为每个文件选择更优的方式。
-
-在使用 zip 压缩中文或非英文字符时出现乱码是正常现象，因为编码方式不同。zip 3.0 在支持 Unicode 的平台上编译时，会额外存储路径的 UTF-8 翻译，以改善跨平台文件名兼容性。一般国产操作系统（如 UOS、Ubuntu Kylin）通过打补丁解决了此问题。关于该补丁未提交到上游的原因，如有了解者可提交 PR。
-
-zip 3.0 不兼容 PKUNZIP 1.10；使用标准加密的流式归档或分卷归档可能与 PKZIP 不兼容，因为使用了数据描述符（data descriptors），而 PKZIP 目前不支持该格式。
+zip 格式是 PKZIP 归档格式的实现，由 Info-ZIP 项目维护。zip 是一种压缩和文件打包工具，兼容 PKZIP（Phil Katz 的 ZIP for MSDOS 系统），zip 3.0 版本兼容 PKZIP 2.04 并支持 Zip64 扩展（允许归档和文件超过 2 GB 限制）。zip 使用 deflation 作为默认压缩方法，也可存储不压缩的文件，并自动为每个文件选择更优的方式。
 
 zip 格式是 Windows 上最常用的格式，但对 Unicode 文件名支持有限（取决于 zip 工具版本和压缩设置）。在跨平台交换文件时建议使用 tar.xz 或 tar.zst 格式。
 
+>**技巧**
+>
+>在使用 zip 压缩中文或非英文字符时出现乱码是正常现象，因为编码方式不同。zip 3.0 在支持 Unicode 的平台上编译时，会额外存储路径的 UTF-8 翻译，以改善跨平台文件名兼容性。一般国产操作系统（如 UOS、Ubuntu Kylin）通过打补丁解决了此问题。关于该补丁未提交到上游的原因，如有了解者可提交 PR。
 
 ### 安装 zip
 
