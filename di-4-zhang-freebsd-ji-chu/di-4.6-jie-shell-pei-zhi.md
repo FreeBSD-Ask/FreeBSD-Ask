@@ -24,10 +24,10 @@ Shell 的配置体系通过一系列初始化文件（initialization files）实
 
 | 程序 | 说明 |
 | ---- | ---- |
-| `zsh` | Zsh shell |
+| `zsh` | Zsh Shell |
 | `zsh-completions` | 自动补全 |
-| `zsh-autosuggestions` | 类 Fish shell 的 Zsh 自动补全 |
-| `zsh-syntax-highlighting` | 类 Fish shell 的 Zsh 语法高亮 |
+| `zsh-autosuggestions` | 类 Fish Shell 的 Zsh 自动补全 |
+| `zsh-syntax-highlighting` | 类 Fish Shell 的 Zsh 语法高亮 |
 
 - 使用 ports 安装：
 
@@ -248,7 +248,7 @@ touch ~/.bash_profile         # 创建 ~/.bash_profile 文件，用于配置 Bas
 
 ## 配置 csh/tcsh
 
-除了 Zsh 和 Bash 外，FreeBSD 基本系统还内置了 csh 和 tcsh。csh（C shell，灵感来自 C 语言，语法也类似，作者是 Bill Joy）是 FreeBSD 基本系统内置的 shell，以前是 root 用户的默认 shell。FreeBSD 默认 Shell 为 sh（自 FreeBSD 14 起），但基本系统同时提供 csh/tcsh 作为替代选择。
+除了 Zsh 和 Bash 外，FreeBSD 基本系统还内置了 csh 和 tcsh。csh（C Shell，灵感来自 C 语言，语法也类似，作者是 Bill Joy）是 FreeBSD 基本系统内置的 Shell，以前是 root 用户的默认 Shell。FreeBSD 默认 Shell 为 sh（自 FreeBSD 14 起），但基本系统同时提供 csh/tcsh 作为替代选择。
 
 > **技巧**
 >
@@ -279,7 +279,7 @@ set filec              # 启用命令行文件名补全
 set autolist           # 自动显示补全列表
 ```
 
-重新加载 C shell 配置文件，刷新别名和环境设置：
+重新加载 C Shell 配置文件，刷新别名和环境设置：
 
 ```sh
 # source ~/.cshrc
