@@ -97,21 +97,21 @@ FreeBSD 中主要有三类账户：系统账户、普通用户账户，以及超
 使用 pw(8) 添加组：
 
 ```sh
-# pw groupadd teamtwo
-# pw groupshow teamtwo
-teamtwo:*:1100:
+# pw groupadd ykla2
+# pw groupshow ykla2
+ykla2:*:1002:
 ```
 
-在此示例中，1100 是 teamtwo 的 GID。此时，teamtwo 没有成员。
+在此示例中，1100 是 ykla2 的 GID。此时，ykla2 没有成员。
 
 ### 向组中添加用户
 
 使用 pw(8) 将用户添加到组中：
 
 ```sh
-# pw groupmod teamtwo -M jru
-# pw groupshow teamtwo
-teamtwo:*:1100:jru
+# pw groupmod ykla2 -M ykla
+# pw groupshow ykla2
+ykla2:*:1002:ykla
 ```
 
 `-M` 的参数是要添加到新（空）组或替换现有组成员的以逗号分隔的用户列表。对用户而言，此组成员身份与密码文件中列出的用户主组不同且是额外的。这意味着当使用 pw(8) 的 groupshow 时，用户不会显示为成员，但当通过 id(1) 或类似工具查询信息时会显示。当 pw(8) 用于将用户添加到组时，它仅操作 `/etc/group`，不会尝试从 `/etc/passwd` 读取额外数据。
@@ -119,9 +119,9 @@ teamtwo:*:1100:jru
 向现有组追加新成员：
 
 ```sh
-# pw groupmod teamtwo -m db
-# pw groupshow teamtwo
-teamtwo:*:1100:jru,db
+# pw groupmod ykla2 -m root
+# pw groupshow root
+ykla2:*:1002:ykla,root
 ```
 
 在此示例中，`-m` 的参数是要添加到组中的以逗号分隔的用户列表。与上一个示例不同，这些用户被追加到组中，不会替换组中的现有用户。
@@ -129,11 +129,11 @@ teamtwo:*:1100:jru,db
 使用 id(1) 确定组成员身份：
 
 ```sh
-% id jru
-uid=1001(jru) gid=1001(jru) groups=1001(jru), 1100(teamtwo)
+% id ykla
+uid=1001(ykla) gid=1001(ykla) groups=1001(ykla),0(wheel),1002(ykla2)
 ```
 
-在此示例中，jru 是组 jru 和 teamtwo 的成员。
+在此示例中，ykla 是组 ykla、wheel 和 ykla2 的成员。
 
 有关此命令和 `/etc/group` 格式的更多信息，请参阅 pw(8) 和 group(5)。
 
@@ -348,16 +348,6 @@ test2:$6$FkxPcs2y.Y8cxyuj$kVDoV1LC.IWKGlSitll3oLArF18aHQYID0JYE.TUuD0YFgba.c7MbG
 # pw groupdel test5
 ```
 
-### `pw groupshow` 命令
-
-用于显示组信息。
-
-示例：
-
-```sh
-# pw groupshow test5
-test5:*:1202:test1
-```
 
 ## 参考文献
 
