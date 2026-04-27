@@ -332,9 +332,23 @@ umask 在 shell 启动文件（如 `~/.profile` 或 `~/.cshrc`）中设置。在
 
 当可执行文件设置了 setuid 位后，无论哪个用户执行该文件，进程的有效用户 ID（EUID）都将被设置为文件所有者的 UID，而非执行者的 UID。这一机制使得普通用户可以临时获得文件所有者的权限来执行特定操作。
 
-setuid 最典型的应用场景是 `passwd(1)` 命令。普通用户修改密码时需要更新 `/etc/master.passwd` 文件，而该文件只有 root 才有写权限。通过 setuid 机制，`passwd` 命令以 root 的 EUID 运行，从而获得了修改密码文件的权限。`passwd(1)` 以普通用户的实际用户 ID 运行，但为了更新密码数据库，该命令以 root 用户的有效 ID 运行，这允许用户更改密码而不会看到“Permission Denied”错误。
+setuid 位在权限表达式中以所有者执行位上的 `s` 表示（如 `-r-sr-xr-x`）。
 
-setuid 位在权限表达式中以所有者执行位上的 `s` 表示（如 `-rwsr-xr-x`），数字表示法中在三位权限码前加 `4`（如 `4755`）。
+setuid 最典型的应用场景是 `passwd(1)` 命令。
+
+```sh
+# ls -al /usr/bin/passwd
+-r-sr-xr-x  1 root wheel 8368 Apr 13 12:38 /usr/bin/passwd
+```
+
+普通用户修改密码时需要更新 `/etc/master.passwd` 文件，而该文件只有 root 才有写权限。通过 setuid 机制，`passwd` 命令以 root 的 EUID 运行，从而获得了修改密码文件的权限。`passwd(1)` 以普通用户的实际用户 ID 运行，但为了更新密码数据库，该命令以 root 用户的有效 ID 运行，这允许用户更改密码而不会看到“Permission Denied”错误。
+
+setuid 位数字表示法中在三位权限码前加 `4`（如 `4555`），使用命令显示完整权限（含类型和特殊位，八进制）：
+
+```sh
+# stat -f "%p" /usr/bin/passwd
+104555
+```
 
 > **注意**
 >
@@ -344,7 +358,19 @@ setuid 位在权限表达式中以所有者执行位上的 `s` 表示（如 `-rw
 
 setgid 的作用与 setuid 类似，但作用于组而非用户。当可执行文件设置了 setgid 位后，进程的有效组 ID（EGID）将被设置为文件所属组的 GID。当目录设置了 setgid 位后，在该目录中创建的新文件将继承目录的所属组，而非创建者的主组。
 
-setgid 位在权限表达式中以所属组执行位上的 `s` 表示（如 `-rwxr-sr-x`），数字表示法中在三位权限码前加 `2`（如 `2755`）。
+setgid 位在权限表达式中以所属组执行位上的 `s` 表示（如 `-r-xr-sr-x`）：
+
+```sh
+# stat -f "%Sp" /usr/libexec/dma
+-r-xr-sr-x
+```
+
+数字表示法中在三位权限码前加 `2`（如 `2555`）:
+
+```sh
+# stat -f "%p" /usr/libexec/dma
+102555
+```
 
 ### sticky bit（粘滞位）
 
@@ -352,7 +378,19 @@ sticky bit 最初用于将可执行文件的代码段“粘滞”在交换空间
 
 sticky bit 最常见的应用场景是 `/tmp` 目录。该目录对所有用户开放写权限，但通过 sticky bit 防止用户删除他人的临时文件。当目录设置了 sticky bit 时，它仅允许文件所有者删除文件，这对于防止公共目录（如 `/tmp`）中非文件所有者删除文件非常有用。
 
-sticky bit 在权限表达式中以其他用户执行位上的 `t` 表示（如 `drwxrwxrwt`），数字表示法中在三位权限码前加 `1`（如 `1777`）。
+sticky bit 在权限表达式中以其他用户执行位上的 `t` 表示（如 `drwxrwxrwt`），
+
+```sh
+# ls -ald /tmp
+drwxrwxrwt  6 root wheel 6 Apr 27 21:55 /tmp
+```
+
+数字表示法中在三位权限码前加 `1`（如 `1777`）:
+
+```sh
+# stat -f "%p" /tmp
+41777
+```
 
 ## FreeBSD 文件标志
 
