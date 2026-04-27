@@ -1,15 +1,42 @@
 # 4.12 进程与守护进程
 
-
 ## 进程与守护进程概述
 
 FreeBSD 是一个多任务操作系统。每个在任何时刻运行的程序都称为进程。每个运行的命令至少启动一个新进程，此外还有许多由 FreeBSD 运行的系统进程。
 
-每个进程都由一个称为进程 ID（PID）的数字唯一标识。与文件类似，每个进程都有一个所有者和组，所有者和组权限用于确定进程可以打开哪些文件和设备。大多数进程还有一个启动它们的父进程。例如，Shell 是一个进程，在 Shell 中启动的任何命令都是以 Shell 为父进程的进程。例外是一个名为 init(8) 的特殊进程，它始终是启动时第一个启动的进程，并且始终具有 PID 1。
+每个进程都由一个称为进程 ID（PID）的数字唯一标识。与文件类似，每个进程都有一个所有者和组，所有者和组权限用于确定进程可以打开哪些文件和设备。大多数进程还有一个启动它们的父进程。例如，Shell 是一个进程，在 Shell 中启动的任何命令都是以 Shell 为父进程的进程。例外是一个名为 init(8) 的特殊进程，它始终是启动时第一个启动的进程，并且始终具有 PID 1。在 FreeBSD 中，所有进程都是以某个账户的名义启动的。
 
-有些程序不设计为持续接收用户输入，并在第一次机会时与终端断开连接。例如，Web 服务器响应 Web 请求而非用户输入，邮件服务器是此类应用程序的另一个例子。这些类型的程序被称为守护进程（daemon）。术语“daemon”来自希腊神话，代表一种既非善也非恶的实体，它无形中执行有用的任务。这就是 BSD 吉祥物是那个穿着运动鞋和拿着草叉的快乐守护进程的原因。
+Port `sysutils/htop` 能够直观地呈现这一点（注意 `△USER` 这列）：
 
-有一种命名约定，即通常作为守护进程运行的程序名称以字母“d”结尾。例如，BIND 是 Berkeley Internet Name Domain，但实际执行的程序名为 named。Apache Web 服务器程序是 httpd，行式打印机假脱机守护进程是 lpd。这只是一个命名约定，例如 Sendmail 应用程序的主要邮件守护进程是 sendmail，而不是 maild。
+```sh
+$ htop
+  PID△USER       PRI  NI  VIRT   RES S   CPU% MEM%   TIME+  Command
+    1 root        20   0 12724  1324 S    0.0  0.0  0:00.08 /sbin/init
+  216 root        20   0 36172  7308 S    0.0  0.1  0:00.77 ├─ /usr/local/bin/vmtoolsd -c /usr/local/share/vmware-tools/to
+  400 root        48   0 14188  2684 S    0.0  0.0  0:00.00 ├─ dhclient: system.syslog
+  403 root         4   0 14188  2760 S    0.0  0.0  0:00.00 ├─ dhclient: em0 [priv]
+  481 _dhcp       20   0 14192  2808 S    0.0  0.0  0:00.01 ├─ dhclient: em0
+  596 root        20   0 15444  4204 S    0.0  0.1  0:00.05 ├─ /sbin/devd
+  800 root        20   0 13904  2792 S    0.0  0.0  0:00.02 ├─ /usr/sbin/syslogd -s
+  867 messagebus  20   0 15188  4492 S    0.0  0.1  0:00.29 ├─ /usr/local/bin/dbus-daemon --system
+  870 root        20   0 14120  2456 S    0.0  0.0  0:00.06 ├─ /usr/sbin/moused -p /dev/psm0 -t auto
+  898 ntpd        20   0 24564  5848 S    0.0  0.1  0:00.06 ├─ /usr/sbin/ntpd -p /var/db/ntp/ntpd.pid -c /etc/ntp.conf -f
+  944 root        68   0 23508  9560 S    0.0  0.1  0:00.00 ├─ sshd: /usr/sbin/sshd [listener] 0 of 10-100 startups
+  947 root        20   0 13944  2576 S    0.0  0.0  0:00.02 ├─ /usr/sbin/cron -s
+  952 root        20   0 56736 23700 S    0.0  0.3  0:00.04 ├─ /usr/local/bin/sddm
+  980 root        20   0  257M  124M S    1.0  1.5  0:04.83 │  ├─ /usr/local/libexec/Xorg -nolisten tcp -background none -
+  993 root        23   0 50208 27572 S    0.0  0.3  0:00.02 │  └─ /usr/local/libexec/sddm-helper --socket /tmp/sddm-auth-4
+  994 ykla        68   0 19992  4620 S    0.0  0.1  0:00.01 │     └─ /usr/local/bin/ck-launch-session /usr/local/bin/start
+ 1005 ykla        68   0  128M 67736 S    0.0  0.8  0:00.13 │        └─ /usr/local/bin/startplasma-x11
+ 1010 ykla        68   0  128M 68184 S    0.0  0.8  0:00.25 │           └─ /usr/local/bin/plasma_session
+ 1017 ykla        20   0  773M  190M S    0.0  2.3  0:01.33 │              ├─ /usr/local/bin/kded6
+ 1018 ykla        20   0  676M  262M S    0.0  3.2  0:30.96 │              ├─ /usr/local/bin/kwin_x11
+```
+
+有些程序不设计为持续接收用户输入，并在第一次机会时与终端断开连接。例如，Web 服务器响应 Web 请求而非用户输入，邮件服务器是此类应用程序的另一个例子。这些类型的程序被称为守护进程（daemon）。术语“daemon”来自希腊神话，代表一种非善非恶的实体，它无形中执行有用的任务。这就是 BSD 吉祥物是那个穿着运动鞋和拿着草叉的快乐守护进程的原因。
+
+有一种命名约定，即通常作为守护进程运行的程序名称以字母“d”结尾。例如，BIND 是 Berkeley Internet Name Domain，但实际执行的程序名为 named。Apache Web 服务器程序是 httpd，数据同步 Rsync 进程是 rsyncd 。这只是一个命名约定，例如数据库应用程序 MySQL 的守护进程是 mysql-server，而不是 mysqld。
+
 
 ## 查看进程
 
@@ -19,11 +46,9 @@ FreeBSD 的 `ps` 基于 4.4BSD。特别注意：FreeBSD 的 `-u` 是显示格式
 
 用户只能向自己拥有的进程发送信号，root 用户可以向任何进程发送信号。SIGKILL 和 SIGSTOP 信号不可被捕获或忽略。特殊 PID：`0` 发送到同组所有进程，`-1` 发送到所有进程（root）或自己的所有进程。
 
-要查看系统上运行的进程，使用 ps(1) 或 top(1)。
+要查看系统上运行的进程，可以使用 ps(1) 或 top(1)。
 
-要显示当前运行进程的静态列表（包括它们的 PID、内存使用量和启动命令），使用 ps(1)。
-
-要以交互方式显示所有运行进程并每隔几秒更新显示以查看计算机正在做什么，使用 top(1)。
+要显示当前运行进程的静态列表（包括它们的 PID、内存使用量和启动命令），使用 ps(1)。要以交互方式显示所有运行进程并每隔几秒更新显示以查看计算机正在做什么，使用 top(1)。
 
 默认情况下，ps(1) 仅显示由当前用户拥有且正在运行的命令：
 
@@ -143,6 +168,40 @@ ping 163.com
 6 packets transmitted, 6 packets received, 0.0% packet loss
 round-trip min/avg/max/stddev = 27.465/27.596/27.701/0.085 ms
 ```
+
+## 附录：系统监控工具 htop 
+
+### 安装与配置
+
+htop 是一款功能丰富的交互式系统监控工具，能够以直观的方式实时显示系统资源使用情况。本节介绍 htop 的安装与配置方法。
+
+**使用 pkg 二进制包管理器安装：**
+
+```sh
+# pkg install htop
+```
+
+**或使用 Port 从源代码构建安装：**
+
+```sh
+# cd /usr/ports/sysutils/htop/
+# make install clean
+```
+
+### htop 配置持久化
+
+htop 的配置可通过界面或配置文件进行持久化设置。需注意：在默认配置下，使用 F10 保存后无法通过 `Ctrl + C` 退出，必须选择 `quit` 选项才能确保配置保存；也可直接通过编辑配置文件进行设置。
+
+编辑用户目录下的 `~/.config/htop/htoprc` 配置文件，添加以下内容以启用 CPU 频率和温度显示功能：
+
+```ini
+show_cpu_frequency=1     # 启用 CPU 当前频率显示
+show_cpu_temperature=1   # 启用 CPU 温度显示
+```
+
+### 参考文献
+
+- ioogithub. Settings are not saved[EB/OL]. [2026-03-25]. <https://github.com/htop-dev/htop/issues/949>. 讨论了 htop 配置保存的常见问题与解决方案。
 
 ## 课后习题
 

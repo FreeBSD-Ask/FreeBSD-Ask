@@ -14,34 +14,23 @@ adduser(8) 是一个 Bourne shell 脚本，内部调用 pw(8) 完成实际的用
 
 要想登录 FreeBSD，必须有一个账户。
 
-在 FreeBSD 中，所有进程都是以某个账户的名义启动的。`sysutils/htop` 能够直观地呈现这一点（注意 `△USER` 这列）：
+让我们直接通过密码文件 `/etc/master.passwd` 观察用户：
 
-```sh
-$ htop
-  PID△USER       PRI  NI  VIRT   RES S   CPU% MEM%   TIME+  Command
-    1 root        20   0 12724  1324 S    0.0  0.0  0:00.08 /sbin/init
-  216 root        20   0 36172  7308 S    0.0  0.1  0:00.77 ├─ /usr/local/bin/vmtoolsd -c /usr/local/share/vmware-tools/to
-  400 root        48   0 14188  2684 S    0.0  0.0  0:00.00 ├─ dhclient: system.syslog
-  403 root         4   0 14188  2760 S    0.0  0.0  0:00.00 ├─ dhclient: em0 [priv]
-  481 _dhcp       20   0 14192  2808 S    0.0  0.0  0:00.01 ├─ dhclient: em0
-  596 root        20   0 15444  4204 S    0.0  0.1  0:00.05 ├─ /sbin/devd
-  800 root        20   0 13904  2792 S    0.0  0.0  0:00.02 ├─ /usr/sbin/syslogd -s
-  867 messagebus  20   0 15188  4492 S    0.0  0.1  0:00.29 ├─ /usr/local/bin/dbus-daemon --system
-  870 root        20   0 14120  2456 S    0.0  0.0  0:00.06 ├─ /usr/sbin/moused -p /dev/psm0 -t auto
-  898 ntpd        20   0 24564  5848 S    0.0  0.1  0:00.06 ├─ /usr/sbin/ntpd -p /var/db/ntp/ntpd.pid -c /etc/ntp.conf -f
-  944 root        68   0 23508  9560 S    0.0  0.1  0:00.00 ├─ sshd: /usr/sbin/sshd [listener] 0 of 10-100 startups
-  947 root        20   0 13944  2576 S    0.0  0.0  0:00.02 ├─ /usr/sbin/cron -s
-  952 root        20   0 56736 23700 S    0.0  0.3  0:00.04 ├─ /usr/local/bin/sddm
-  980 root        20   0  257M  124M S    1.0  1.5  0:04.83 │  ├─ /usr/local/libexec/Xorg -nolisten tcp -background none -
-  993 root        23   0 50208 27572 S    0.0  0.3  0:00.02 │  └─ /usr/local/libexec/sddm-helper --socket /tmp/sddm-auth-4
-  994 ykla        68   0 19992  4620 S    0.0  0.1  0:00.01 │     └─ /usr/local/bin/ck-launch-session /usr/local/bin/start
- 1005 ykla        68   0  128M 67736 S    0.0  0.8  0:00.13 │        └─ /usr/local/bin/startplasma-x11
- 1010 ykla        68   0  128M 68184 S    0.0  0.8  0:00.25 │           └─ /usr/local/bin/plasma_session
- 1017 ykla        20   0  773M  190M S    0.0  2.3  0:01.33 │              ├─ /usr/local/bin/kded6
- 1018 ykla        20   0  676M  262M S    0.0  3.2  0:30.96 │              ├─ /usr/local/bin/kwin_x11
+```ini
+root:$6$huh5iMfeueumGM3B$ycd9HsGOzKfFq6hbWMxceNBRCLibbSj5Ofjv/ed6Kq60M2F.syaGaxfdfYMqB79DZzqyhQlIiRZ4.D9ST90Gv/:0:0::0:0:Charlie &:/root:/bin/sh
+toor:*:0:0::0:0:Bourne-again Superuser:/root:
+daemon:*:1:1::0:0:Owner of many system processes:/root:/usr/sbin/nologin
+operator:*:2:5::0:0:System &:/:/usr/sbin/nologin
+
+……省略一部分……
+
+www:*:80:80::0:0:World Wide Web Owner:/nonexistent:/usr/sbin/nologin
+ntpd:*:123:123::0:0:NTP Daemon:/var/db/ntp:/usr/sbin/nologin
+nobody:*:65534:65534::0:0:Unprivileged user:/nonexistent:/usr/sbin/nologin
+ykla:$6$SqMJXrv5aC6Wq.by$nmbZs078aHNBVyh9noLFouJsGHyFSvQIzH0W4zpdfXuPtGtt.FHgWfXDHVBa.g9P0eZ32UwfByzRKdVnTaO7W.:1001:1001::0:0:User &:/home/ykla:/bin/sh
 ```
 
-可以看到系统中存在 `ykla`、`root`、`_dhcp`、`messagebus`、`ntpd` 这几个用户账户。
+可以看到系统中存在若干用户账户。
 
 FreeBSD 中主要有三类账户：系统账户、普通用户账户，以及超级用户账户。
 
@@ -57,7 +46,7 @@ FreeBSD 中主要有三类账户：系统账户、普通用户账户，以及超
 
 普通用户账户分配给真实的人，用于登录和使用系统。每个访问系统的人都应拥有唯一的用户账户。这使管理员能够了解谁在做什么，并防止用户互相干扰彼此的设置。
 
-`ykla` 是在安装系统时创建的普通用户账户。如果希望通过 `su` 命令切换为 `root` 用户，必须将该用户加入 `wheel` 用户组。而 `messagebus` 是 Port `devel/dbus` 自动创建的系统用户。
+`ykla` 是在安装系统时创建的普通用户账户。如果希望通过 `su` 命令切换为 `root` 用户，必须将该用户加入 `wheel` 用户组。而部分用户账户是 Port 自动创建的系统用户。
 
 每个用户账户在 FreeBSD 系统上都关联着若干属性信息：
 
