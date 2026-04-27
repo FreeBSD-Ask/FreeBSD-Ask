@@ -262,7 +262,7 @@ $ chmod 750 test.sh
 
 对于目录，通常的请求模式为 `0777`，在 umask `0022` 下结果为 `0755`。
 
-FreeBSD 的默认 umask 为 `0022`，可通过 [umask(2)](https://man.freebsd.org/cgi/man.cgi?query=umask&sektion=2) 系统调用或 shell 内建的 `umask` 命令查看和设置：
+FreeBSD 的默认 umask 为 `0022`，可通过 [umask(2)](https://man.freebsd.org/cgi/man.cgi?query=umask&sektion=2) 系统调用或 Shell 内建的 `umask` 命令查看和设置：
 
 ```sh
 % umask      # 显示当前 umask（八进制）
@@ -278,7 +278,7 @@ u=rwx,g=rx,o=rx
 | `0027` | `0640`（rw-r-----） | `0750`（rwxr-x---） | 更严格，禁止其他用户访问 |
 | `0077` | `0600`（rw-------） | `0700`（rwx------） | 最严格，仅所有者可访问 |
 
-umask 在 shell 启动文件（如 `~/.profile` 或 `~/.cshrc`）中设置。在 csh/tcsh 中使用 `umask 022`，在 sh/bash 中同样使用 `umask 022`。
+umask 在 Shell 启动文件（如 `~/.profile` 或 `~/.cshrc`）中设置。在 csh/tcsh 中使用 `umask 022`，在 sh/bash 中同样使用 `umask 022`。
 
 > **注意**
 >
