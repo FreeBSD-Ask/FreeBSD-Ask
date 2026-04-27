@@ -262,7 +262,7 @@ touch ~/.bash_profile         # 创建 ~/.bash_profile 文件，用于配置 Bas
 
 > **注意**
 >
-> [FreeBSD 14 中的 shell 被统一为 sh](https://github.com/freebsd/freebsd-src/commit/d410b585b6f00a26c2de7724d6576a3ea7d548b7)，记录 FreeBSD 14 默认 shell 变更的提交记录。
+> [FreeBSD 14 中的 Shell 被统一为 sh](https://github.com/freebsd/freebsd-src/commit/d410b585b6f00a26c2de7724d6576a3ea7d548b7)，记录 FreeBSD 14 默认 Shell 变更的提交记录。
 
 - 在 `~/.cshrc` 文件中加入下行，为 `ls` 命令设置彩色输出。
 
