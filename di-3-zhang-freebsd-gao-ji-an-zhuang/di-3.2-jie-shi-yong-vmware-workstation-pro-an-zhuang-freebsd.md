@@ -223,7 +223,7 @@ fusefs_load="YES"
 
 相关文件结构：
 
-```text
+```sh
 /
 ├── boot/
 │   └── loader.conf    # 系统启动加载配置文件
