@@ -25,9 +25,8 @@
 
 * [2.1 安装前的准备工作](di-2-zhang-freebsd-an-zhuang-ji-chu/di-2.1-jie-an-zhuang-qian-de-zhun-bei-gong-zuo.md)
 * [2.2 FreeBSD 15 安装指南（AMD64）](di-2-zhang-freebsd-an-zhuang-ji-chu/di-2.2-jie-freebsd-15-an-zhuang-zhi-nan-amd64.md)
-* [2.3 FreeBSD 13/14 安装指南（AMD64）](di-2-zhang-freebsd-an-zhuang-ji-chu/di-2.3-jie-freebsd-13-14-an-zhuang-zhi-nan-amd64.md)
-* [2.4 安装故障排除](di-2-zhang-freebsd-an-zhuang-ji-chu/di-2.4-jie-an-zhuang-gu-zhang-pai-chu.md)
-* [2.5 在 Windows 中将 USB 启动盘恢复为普通存储设备](di-2-zhang-freebsd-an-zhuang-ji-chu/di-2.5-jie-zai-windows-zhong-jiang-usb-qi-dong-pan-hui-fu-wei-pu-tong-cun-chu-she-bei.md)
+* [2.3 安装故障排除](di-2-zhang-freebsd-an-zhuang-ji-chu/di-2.3-jie-an-zhuang-gu-zhang-pai-chu.md)
+* [2.4 在 Windows 中将 USB 启动盘恢复为普通存储设备](di-2-zhang-freebsd-an-zhuang-ji-chu/di-2.4-jie-zai-windows-zhong-jiang-usb-qi-dong-pan-hui-fu-wei-pu-tong-cun-chu-she-bei.md)
 
 ## 第 3 章 FreeBSD 高级安装
 
