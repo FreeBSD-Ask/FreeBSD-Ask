@@ -105,7 +105,7 @@ ZFS 支持并不在内核中，而是作为可加载模块提供。
 
 ### 配置 ZFS 对齐方式（仅影响新创建的硬盘分区）
 
-强制 ZFS 文件系统使用 4 K 对齐，这样可以更好地适配现代硬盘的物理扇区大小，提高读写性能：
+强制 ZFS 文件系统使用 4K 对齐，这样可以更好地适配现代硬盘的物理扇区大小，提高读写性能：
 
 ```sh
 # sysctl vfs.zfs.vdev.min_auto_ashift=12
@@ -118,11 +118,11 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 
 > **思考题**
 >
-> 若使用 NVMe 硬盘，新装系统（UEFI+GPT，无 freebsd-boot 分区）的默认参数通常为 12。但 4 K 对齐究竟对齐的对象是什么？因为 SSD 并无传统机械硬盘的物理扇区概念。
+> 若使用 NVMe 硬盘，新装系统（UEFI+GPT，无 freebsd-boot 分区）的默认参数通常为 12。但 4K 对齐究竟对齐的对象是什么？因为 SSD 并无传统机械硬盘的物理扇区概念。
 
 ### 创建交换分区
 
-在 nda0 磁盘上创建 4 GB、4 K 对齐的 FreeBSD 交换分区，并将其标记为 swap：
+在 nda0 磁盘上创建 4 GB、4K 对齐的 FreeBSD 交换分区，并将其标记为 swap：
 
 ```sh
 # gpart add -a 4k -l swap -s 4G -t freebsd-swap nda0
@@ -139,7 +139,7 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 
 ### 创建 ZFS 分区
 
-在 nda0 磁盘上创建 4 K 对齐的 FreeBSD ZFS 分区，并标记为 zroot：
+在 nda0 磁盘上创建 4K 对齐的 FreeBSD ZFS 分区，并标记为 zroot：
 
 ```sh
 # gpart add -a 4k -l zroot -t freebsd-zfs nda0
