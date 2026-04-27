@@ -30,7 +30,7 @@ login:
 FreeBSD/amd64 (ykla) (ttyv0)
 
 login: root # 此处输入用户名，然后按回车键 ①
-Password: 	# 此处输入密码，然后按回车键
+Password: # 此处输入密码，然后按回车键
 Last login: Tue Mar 18 17:24:48 2025 from 3413e8b6b43f
 FreeBSD 15.0-CURRENT (GENERIC) main-n275981-b0375f78e32a
 
@@ -140,7 +140,7 @@ ttyv8	"/usr/local/bin/xdm -nodaemon"	xterm	off secure
 
 >**技巧**
 >
->如果操作失误，但是配置了 SHHD 服务，仍可通过 SSH 远程链接 FreeBSD 系统，将生成一个 pts(4) 伪终端 `/dev/pts/n`。
+>如果操作失误，但是配置了 SSHD 服务，仍可通过 SSH 远程连接 FreeBSD 系统，将生成一个 pts(4) 伪终端 `/dev/pts/n`。
 >
 >```sh
 >$ w
