@@ -191,7 +191,7 @@ FreeBSD 是一款开源的类 UNIX 操作系统，直接继承自 BSD UNIX，被
 ## 参考文献
 
 - Knuth D E. Ancient Babylonian algorithms[J]. Communications of the ACM，1972，15(7)：671-677. <https://doi.org/10.1145/361454.361514>. 冯·诺伊曼名言“If people do not believe that mathematics is simple, it is only because they do not realize how complicated life is”出自 1947 年 9 月 15 日在哥伦比亚大学举行的 ACM 首届全国会议上的主题演讲，由 Franz L. Alt 在下文中引述：Alt F L. Archaeology of computers—Reminiscences, 1945–1947[J]. Communications of the ACM，1972，15(7)：693-694. <https://doi.org/10.1145/361454.361528>.
-- 洞真太上太霄琅书[M]//道藏：第 33 册. 北京：文物出版社；上海：上海书店；天津：天津古籍出版社，1988：690b. 人行大道，号为道士。
+- 洞真太上太霄琅书[M]//道藏：第 33 册. 北京：文物出版社；上海：上海书店；天津：天津古籍出版社，1988：690b. 人行大道，号曰道士。
 - CIA. The World Factbook: Area Rankings[EB/OL]. [2026-04-17]. <https://www.cia.gov/the-world-factbook/field/area-rankings/>. 俄罗斯面积约 17,098,242 km²。格陵兰面积约 2,166,086 km²，非洲面积约 30,370,000 km²。二者面积之和约 19,264,328 km²，不及非洲面积（约 30,370,000 km²）的三分之二（约 20,246,667 km²）。
 - 龙七（龙榆生），词；黄自，曲. 玫瑰三愿[Z]. 1932. 歌词全文为“玫瑰花/玫瑰花/烂开在碧栏杆下/玫瑰花/玫瑰花/烂开在碧栏杆下/我愿那妒我的无情风雨莫吹打/我愿那爱我的多情游客莫攀摘/我愿那红颜常好不凋谢/好教我留住芳华”。详见龙榆生先生新体歌曲作品选 <https://longyusheng.org/xintigequ/lys-meiguisanyuan.html>。
 - Husserl E. Logische Untersuchungen：Zweiter Band[M]. Halle：Niemeyer，1901. 原文为“zu den Sachen selbst”（面向事情本身），“Zurück zu den Sachen selbst”（回到事物本身）为后世现象学运动口号化表述。见中国社会科学网 <https://www.cssn.cn/zx/wgzx/202210/t20221027_5555580.shtml>。
