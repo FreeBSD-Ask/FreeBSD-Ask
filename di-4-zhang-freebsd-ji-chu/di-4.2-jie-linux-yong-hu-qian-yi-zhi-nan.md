@@ -139,7 +139,7 @@ FreeBSD 基本系统几乎不包含任何与 BSD 协议不兼容的软件。
 
 ### 参考文献
 
-- FreeBSD Foundation. Navigating FreeBSD's New Quarterly and Biennial Release Schedule[EB/OL]. [2026-04-16]. <https://freebsdfoundation.org/blog/navigating-freebsds-new-quarterly-and-biennial-release-schedule/>. 该博文说明 FreeBSD 发布周期变更）
+- FreeBSD Foundation. Navigating FreeBSD's New Quarterly and Biennial Release Schedule[EB/OL]. [2026-04-16]. <https://freebsdfoundation.org/blog/navigating-freebsds-new-quarterly-and-biennial-release-schedule/>. 该博文说明 FreeBSD 发布周期变更。
 
 ## 课后习题
 
