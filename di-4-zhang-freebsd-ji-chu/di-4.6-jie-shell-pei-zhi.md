@@ -100,7 +100,7 @@ chsh: user information updated
 
 编辑 `~/.zshrc` 文件，添加下面几行：
 
-```ini
+```sh
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh   # 加载 Zsh 自动建议插件
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh   # 加载 Zsh 语法高亮插件
 fpath+=/usr/local/share/zsh/site-functions/   # 将自定义函数目录添加到 Zsh 函数搜索路径
@@ -216,7 +216,7 @@ See /usr/local/share/doc/bash-completion/README.md for more information.
 
 安装完 Bash 及相关补全库后，需要进行配置才能正常使用。
 
-```bash
+```sh
 chsh -s /usr/local/bin/bash   # 将当前用户的默认登录 Shell 切换为 Bash
 touch ~/.bash_profile         # 创建 ~/.bash_profile 文件，用于配置 Bash 环境变量
 ```
