@@ -196,7 +196,7 @@ EndSection
 
 请先安装虚拟机增强工具（Open VM Tools）。
 
-#### 在物理机设置共享文件夹
+#### 在物理机中设置共享文件夹
 
 ![FreeBSD VMware 共享文件夹](../.gitbook/assets/hgfs1.png)
 
