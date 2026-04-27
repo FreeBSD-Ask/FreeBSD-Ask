@@ -154,7 +154,7 @@ Use an empty password? (yes/no) [no]:   # 是否空密码
 Use a random password? (yes/no) [no]:   # 是否随机密码
 Enter password: # 输入密码
 Enter password again: # 重复输入密码
-Lock out the account after creation? [no]: # 锁定账号？
+Lock out the account after creation? [no]: # 锁定账户？
 Username   : test
 Password   : *****
 Full Name  :
