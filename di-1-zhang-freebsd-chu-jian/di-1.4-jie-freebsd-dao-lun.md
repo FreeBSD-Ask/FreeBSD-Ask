@@ -151,7 +151,7 @@ FreeBSD 不仅仅在生命周期内不变，大版本更新也具有连贯性和
 - 安全事件审计。
 - Robert Watson, Stacey Son. TrustedBSD - FreeBSD Wiki[EB/OL]. (2022-09-15)[2026-03-26]. <https://wiki.freebsd.org/TrustedBSD/>. FreeBSD 集成了标准 UNIX DAC、ACL、TrustedBSD MAC 安全框架（基于 POSIX®.1e 草案的安全扩展）
 - 集成 W^X 策略，参见 D28050 代码审查：kib. Implement enforcing write XOR execute mapping policy[EB/OL]. (2021-01-08)[2026-03-26]. <https://reviews.freebsd.org/D28050>.
-- 默认启用了内核和用户空间的 PIE 和 ASLR。ASLR 最初由 D27666 代码审查提出(2020-12-18)，PIE 默认启用由 D28328 实现，二者合并至 HEAD 后，自 FreeBSD 13.2-RELEASE(2023 年 4 月 11 日)起 ASLR 对 64 位可执行文件默认启用。参见 D27666 代码审查:mw. Enable ASLR by default for 64-bit executables[EB/OL]. (2020-12-18)[2026-04-17]. <https://reviews.freebsd.org/D27666>; D28328 代码审查:mw. Enable PIE by default on 64-bit architectures[EB/OL]. [2026-04-17]. <https://reviews.freebsd.org/D28328>; FreeBSD 13.2-RELEASE 公告:FreeBSD Project. FreeBSD 13.2-RELEASE Announcement[EB/OL]. (2023-04-11)[2026-04-17]. <https://www.freebsd.org/releases/13.2R/announce/>.
+- 默认启用了内核和用户空间的 PIE 和 ASLR。ASLR 最初由 D27666 代码审查提出（2020-12-18），PIE 默认启用由 D28328 实现，二者合并至 HEAD 后，自 FreeBSD 13.2-RELEASE（2023 年 4 月 11 日）起 ASLR 对 64 位可执行文件默认启用。参见 D27666 代码审查:mw. Enable ASLR by default for 64-bit executables[EB/OL]. (2020-12-18)[2026-04-17]. <https://reviews.freebsd.org/D27666>; D28328 代码审查:mw. Enable PIE by default on 64-bit architectures[EB/OL]. [2026-04-17]. <https://reviews.freebsd.org/D28328>; FreeBSD 13.2-RELEASE 公告:FreeBSD Project. FreeBSD 13.2-RELEASE Announcement[EB/OL]. (2023-04-11)[2026-04-17]. <https://www.freebsd.org/releases/13.2R/announce/>.
 - FreeBSD 通过了 National Institute of Standards and Technology（NIST，美国国家标准及技术研究所）安全软件开发框架（SSDF）认证，参见 FreeBSD 基金会 SSDF 认证新闻：FreeBSD Foundation. FreeBSD Foundation Announces SSDF Attestation[EB/OL]. (2023-11-03)[2026-03-26]. <https://freebsdfoundation.org/news-and-events/latest-news/freebsd-foundation-announces-ssdf-attestation/>.
 - 实现了 FreeBSD 14 CIS 基准。参见 FreeBSD 基金会 CIS 基准博客：FreeBSD Foundation. New CIS® FreeBSD 14 Benchmark: Secure Your Systems with Expert-Guided Best Practices[EB/OL]. (2024-08-19)[2026-03-26]. <https://freebsdfoundation.org/blog/new-cis-freebsd-14-benchmark-secure-your-systems-with-expert-guided-best-practices/>.
 - 正在实现 FreeBSD 的零信任构建，参见 Sovereign Tech Agency 相关赞助。
@@ -310,7 +310,7 @@ FreeBSD 具有诸多优势，但也面临着现实的挑战。
 
 在 20 世纪 60 年代初，分时操作系统诞生了。1961 年 11 月，麻省理工学院的 Fernando Corbató 在 IBM 709 上首次演示了兼容分时系统（CTSS），这是最早的分时系统之一。同期，英国曼彻斯特项目（Manchester Project in England）设计的 Atlas 计算机上也实现了 Atlas 监控程序，该系统于 1962 年 12 月正式投入运行，首次将虚拟内存投入实际使用——虚拟内存的概念则由德国物理学家 Fritz-Rudolf Güntsch 于 1956 年在其博士论文中率先提出（参见：Denning P J. Virtual Memory[J]. ACM Computing Surveys, 1970, 2(3): 153-189）。在那个时代，分时共享系统意味着两个人共用同一台计算机，通常需要安排一张小时时间表来规划他们使用计算机的时间。
 
-- 1964 年 MULTICS（**多路复用** 信息与计算服务）
+- 1964 年 MULTICS（**多路复用** 信息和计算服务）
 
 Multics 最初的规划与开发始于 1964 年，地点位于马萨诸塞州的剑桥市。一开始，Multics 是由麻省理工学院（Fernando Corbató 领导的 MAC 项目）主导的项目；1965 年，通用电气公司和贝尔实验室加入，形成三方合作。开发于专为操作系统设计的通用电气 645 计算机上；首个完整的系统于 1967 年 1 月交付给麻省理工学院。
 
@@ -356,7 +356,7 @@ BSDi 很快就陷入了与 AT&T 的 Unix System Laboratories（USL，Unix 系统
 
 - 1993 年 6 月 FreeBSD 的创建
 
-FreeBSD 项目诞生于 1993 年初，部分源于非官方 386BSD 补丁包（Unofficial 386BSD Patchkit）的最后三位协调人 Nate Williams、Rod Grimes 和 Jordan Hubbard 的努力。该补丁包的原始目标是生成 386BSD 的一个中间快照，以修复补丁包机制本身无法解决的诸多问题。项目早期的工作标题为“386BSD 0.5”或“386BSD Interim”（临时版），以反映其定位。386BSD 是 Bill Jolitz 的操作系统，但当时已被无视了近一年，补丁包的体积日益膨胀。当 Bill Jolitz 突然撤回对项目的许可且未给出明确替代方案时，三位协调人认为目标仍然值得坚持，遂采用了 David Greenman 提出的“FreeBSD”名称。为了改善 FreeBSD 的发行渠道，Jordan Hubbard 随后联系了 Walnut Creek CDROM。Walnut Creek CDROM 不仅支持在 CD 上发行 FreeBSD，还为此项目提供了一台工作用机和高速互联网连接。若无 Walnut Creek CDROM 对这一当时完全未知项目的近乎前所未有的信任，FreeBSD 很可能无法如此迅速地发展到今天的程度。1993 年 6 月 19 日，该项目正式选择了“FreeBSD”这个名字。首个 FreeBSD RELEASE（FreeBSD 1.0）发布于 1993 年 12 月，基于 4.3BSD-Lite（“Net/2”）磁带，并包含 386BSD 和自由软件基金会提供的许多组件。
+FreeBSD 项目诞生于 1993 年初，部分源于非官方 386BSD 补丁包（Unofficial 386BSD Patchkit）的最后三位协调人 Nate Williams、Rod Grimes 和 Jordan Hubbard 的努力。该补丁包的原始目标是生成 386BSD 的一个中间快照，以修复补丁包机制本身无法解决的诸多问题。项目早期的工作标题为“386BSD 0.5”或“386BSD Interim”（临时版），以反映其定位。386BSD 是 Bill Jolitz 的操作系统，但当时已被忽视了近一年，补丁包的体积日益膨胀。当 Bill Jolitz 突然撤回对项目的许可且未给出明确替代方案时，三位协调人认为目标仍然值得坚持，遂采用了 David Greenman 提出的“FreeBSD”名称。为了改善 FreeBSD 的发行渠道，Jordan Hubbard 随后联系了 Walnut Creek CDROM。Walnut Creek CDROM 不仅支持在 CD 上发行 FreeBSD，还为此项目提供了一台工作用机和高速互联网连接。若无 Walnut Creek CDROM 对这一当时完全未知项目的近乎前所未有的信任，FreeBSD 很可能无法如此迅速地发展到今天的程度。1993 年 6 月 19 日，该项目正式选择了“FreeBSD”这个名字。首个 FreeBSD RELEASE（FreeBSD 1.0）发布于 1993 年 12 月，基于 4.3BSD-Lite（“Net/2”）磁带，并包含 386BSD 和自由软件基金会提供的许多组件。
 
 - 1994 年 8 月 FreeBSD Ports
 
