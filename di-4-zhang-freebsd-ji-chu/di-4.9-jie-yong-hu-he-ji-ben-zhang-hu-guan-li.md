@@ -169,7 +169,7 @@ Locked     : no
 OK? (yes/no): yes # 检查是否有错误
 adduser: INFO: Successfully created ZFS dataset (zroot/home/test).
 adduser: INFO: Successfully added (test) to the user database.
-Add another user? (yes/no): no # 还需要创建另一个账号吗？
+Add another user? (yes/no): no # 还需要创建另一个账户吗？
 Goodbye!
 ```
 
