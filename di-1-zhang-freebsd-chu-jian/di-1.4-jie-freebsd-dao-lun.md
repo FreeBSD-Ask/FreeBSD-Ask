@@ -184,7 +184,7 @@ GNOME、Xorg（X11）、D-Bus、systemd、PulseAudio、Wayland、PipeWire 等主
 - 选择 FreeBSD，即选择保留自由软件的根基。
 - 选择 FreeBSD，即选择保留一份真正自由的操作系统。能够使开源事业继续坚持下去，并践行真正的 UNIX 哲学。
 
-#### 旧闻：FreeBSD 基金会收到史上最大一笔捐款
+#### FreeBSD 基金会重大捐赠事件
 
 > 上周，我向 FreeBSD 基金会捐赠了 100 万美元，FreeBSD 基金会支持着开源操作系统 FreeBSD。FreeBSD 帮助了数百万程序员追随他们的热情、实现创意。我自己就是受益者。在 90 年代末，我开始使用 FreeBSD，那时我经济拮据，住在政府提供的住房中。在某种程度上，FreeBSD 帮助我摆脱了贫困——我能进入 Yahoo!（雅虎）工作的重要原因是他们使用 FreeBSD，而这正是我首选的操作系统。多年后，当 Brian 和我开始创建 WhatsApp 时，我们依然使用 FreeBSD 来支撑我们的服务器运营，直到今天亦如此。
 >
