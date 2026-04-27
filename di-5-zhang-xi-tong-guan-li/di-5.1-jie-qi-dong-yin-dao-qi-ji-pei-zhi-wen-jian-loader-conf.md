@@ -179,7 +179,7 @@ module_blacklist="${module_blacklist} nvidia nvidia-drm nvidia-modeset"        #
 #init_chroot=""		# init(8) 要 chroot 的目录
 
 ###  内核可调参数  ########################################
-#hw.physmem="1G"		# 限制物理内存大小。参见 loader(8)
+#hw.physmem="1G"		# 限制物理内存大小（loader(8)）
 #kern.dfldsiz=""		# 设置初始数据段大小限制
 #kern.dflssiz=""		# 设置初始堆栈大小限制
 #kern.hz="100"			# 设置内核时间间隔定时器频率
