@@ -135,7 +135,7 @@ uid=1001(ykla) gid=1001(ykla) groups=1001(ykla),0(wheel),1002(ykla2)
 # Username: ykla
 ```
 
-示例：创建一个名为 test 的用户，并将其添加到 wheel 组，设置其默认 shell 为 sh：
+示例：创建一个名为 test 的用户，并将其添加到 wheel 组，设置其默认 Shell 为 sh：
 
 ```sh
 # adduser
