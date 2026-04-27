@@ -1,6 +1,8 @@
 # 1.5 乔治·贝克莱（George Berkeley）与 BSD 的命名渊源
 
-BSD（Berkeley Software Distribution，伯克利软件发行版）的命名源于其发源地——美国加州大学伯克利分校（University of California, Berkeley）。该校及其所在城市伯克利市（Berkeley）的名称，均来自爱尔兰近代经验论哲学家乔治·贝克莱（George Berkeley，1685—1753）。在诸多著作与文献中，他常被称为克洛因主教（Bishop of Cloyne）或贝克莱主教。
+BSD（Berkeley Software Distribution，伯克利软件发行版）的命名源于其发源地——美国加州大学伯克利分校（University of California, Berkeley）。BSD 是加州大学伯克利分校计算机系统研究小组（Computer Systems Research Group，CSRG）对其在 AT&T 32V UNIX 基础上所做的改进和修改的统称，FreeBSD 即为 CSRG 工作的衍生成果。
+
+加州大学伯克利分校及其所在城市伯克利市（Berkeley）的名称，均来自爱尔兰近代经验论哲学家乔治·贝克莱（George Berkeley，1685—1753）。在诸多著作与文献中，他常被称为克洛因主教（Bishop of Cloyne）或贝克莱主教。
 
 “Berkeley”在中文音译上存在不同写法，其美式与英式发音也不同（英 /ˈbɑːkli, ˈbəːkli/ 美 /ˈbɚkli/），但英文拼写保持一致。
 
