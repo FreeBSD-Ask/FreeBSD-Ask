@@ -169,7 +169,7 @@ ping 163.com
 round-trip min/avg/max/stddev = 27.465/27.596/27.701/0.085 ms
 ```
 
-## 附录：系统监控工具 htop 
+## 附录：系统监控工具 htop
 
 ### 安装与配置
 
