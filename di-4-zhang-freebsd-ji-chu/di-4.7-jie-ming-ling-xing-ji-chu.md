@@ -21,6 +21,10 @@ $ whoami
 ykla
 ```
 
+>**技巧**
+>
+>`whoami` 已被 id(1) 替代，等价于 `id -un`。
+
 - 查看当前登录用户所属用户组的信息。
 
 ```sh
@@ -329,7 +333,7 @@ cd is a shell builtin
 
 ### `cd` 命令
 
-`cd`（change working directory，更改工作目录），与 GNU/Linux 的 `whoami` 完全兼容。已被 id(1) 替代，等价于 `id -un`。
+`cd`（change working directory，更改工作目录）
 
 切换到 `/home`：
 
