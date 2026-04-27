@@ -822,7 +822,7 @@ Add another user? (yes/no) [no]: # 是否继续添加其他用户
 
 按 **回车键** 确认重启。
 
-## 欢迎进入 FreeBSD 世界
+## 欢迎来到 FreeBSD 世界
 
 安装完成后重启，进入 FreeBSD 新系统：
 
