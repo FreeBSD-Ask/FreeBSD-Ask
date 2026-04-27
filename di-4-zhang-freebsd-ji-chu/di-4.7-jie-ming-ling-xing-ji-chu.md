@@ -385,7 +385,7 @@ ykla@ykla:~ $ ls
 
 > **技巧**
 >
-> 请以普通用户进行测试，因为 FreeBSD 的 root shell 总是显示隐藏文件。
+> 请以普通用户进行测试，因为 FreeBSD 的 root Shell 总是显示隐藏文件。
 
 ### `touch` 创建文件命令
 
