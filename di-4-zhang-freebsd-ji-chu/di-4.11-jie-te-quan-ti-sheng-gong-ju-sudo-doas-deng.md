@@ -120,7 +120,7 @@ permit :wheel
 
 sudo 的初始作者是 Bob Coggeshall 和 Cliff Spencer（原始版本，1986 年），主要重写和维护者是 Todd C. Miller。
 
-sudo 的 `sudoers` 配置语法极其复杂，手册页逾 1000 行，容易配置错误导致安全漏洞；时间戳文件位于 `/var/run/sudo/ts/`，若文件系统已满可能无法正常工作；`sudo -i` 在某些 shell 环境下可能不会完整加载环境变量。
+sudo 的 `sudoers` 配置语法极其复杂，手册页逾 1000 行，容易配置错误导致安全漏洞；时间戳文件位于 `/var/run/sudo/ts/`，若文件系统已满可能无法正常工作；`sudo -i` 在某些 Shell 环境下可能不会完整加载环境变量。
 
 ### 安装 sudo
 
