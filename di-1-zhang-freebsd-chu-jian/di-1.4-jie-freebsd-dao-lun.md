@@ -2,9 +2,9 @@
 
 ## FreeBSD 版本概述
 
-FreeBSD 作为一个持续演进的开源操作系统，其版本管理体系经过精心设计，以满足不同用户群体的多样化需求。FreeBSD 有以下版本类型（或开发阶段）：ALPHA、BETA、RC、RELEASE、CURRENT、STABLE。FreeBSD 的开发遵循特定的流程：所有变更首先提交到 main 分支，经过合理测试期后方可合并到 stable/ 分支。
+FreeBSD 作为一个持续演进的开源操作系统，其版本管理体系经过精心设计，以满足不同用户群体的多样化需求。FreeBSD 有以下版本类型（或开发阶段）：ALPHA、BETA、RC、RELEASE、CURRENT、STABLE。
 
-**RELEASE** 版本适用于生产环境，通常被视为 **稳定版** 或长期支持（LTS）版本。而 ***STABLE*** 和 ***CURRENT*** 则属于 **开发分支**，**通常不建议用于生产环境**（“稳定”与“不稳定”是相对概念，例如 Netflix 几乎所有节点都运行着 **CURRENT**，FreeBSD Foundation. Maintaining the World’s Fastest Content Delivery Network at Netflix on FreeBSD[EB/OL]. (2024-11-01)[2026-04-04]. <https://freebsdfoundation.org/netflix-case-study/>.）。
+**RELEASE** 版本适用于生产环境，**STABLE** 和 **CURRENT** 则属于开发分支。
 
 > **注意**
 >
