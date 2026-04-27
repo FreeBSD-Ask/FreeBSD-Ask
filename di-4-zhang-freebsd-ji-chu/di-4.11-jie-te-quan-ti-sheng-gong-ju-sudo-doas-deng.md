@@ -4,7 +4,7 @@
 
 FreeBSD 基本系统提供了 su(1) 命令用于切换用户身份，但 su 要求用户知道目标账户的密码。sudo 和 doas 等工具通过配置文件定义权限规则，允许特定用户在无需知道 root 密码的情况下执行特权操作，同时提供审计日志功能。
 
-![权限示意图](../.gitbook/assets/qie-su.png)
+![权限示意图](../.gitbook/assets/switch-user-su.png)
 
 ## doas
 

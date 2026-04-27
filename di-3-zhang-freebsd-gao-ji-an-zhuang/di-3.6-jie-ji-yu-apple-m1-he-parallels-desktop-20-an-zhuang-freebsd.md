@@ -12,19 +12,19 @@
 
 环境准备完成后，按照以下步骤安装 FreeBSD。
 
-![Parallels Desktop 20 安装 FreeBSD 15.0](../.gitbook/assets/pd1.png)
+![Parallels Desktop 20 安装 FreeBSD 15.0](../.gitbook/assets/parallels-1.png)
 
 选择“通过映像文件安装 Windows、Linux 或 macOS”，然后点击“继续”。
 
-![Parallels Desktop 20 安装 FreeBSD 15.0](../.gitbook/assets/pd2.png)
+![Parallels Desktop 20 安装 FreeBSD 15.0](../.gitbook/assets/parallels-2.png)
 
 点击“手动选择”，然后继续。
 
-![Parallels Desktop 20 安装 FreeBSD 15.0](../.gitbook/assets/pd3.png)
+![Parallels Desktop 20 安装 FreeBSD 15.0](../.gitbook/assets/parallels-3.png)
 
 点击“选择文件……”。
 
-![Parallels Desktop 20 安装 FreeBSD 15.0](../.gitbook/assets/pd4.png)
+![Parallels Desktop 20 安装 FreeBSD 15.0](../.gitbook/assets/parallels-4.png)
 
 选中 FreeBSD 镜像。
 
@@ -32,29 +32,29 @@
 >
 > 本节基于 Apple M1，故选择的 FreeBSD 架构应为 aarch64。
 
-![Parallels Desktop 20 安装 FreeBSD 15.0](../.gitbook/assets/pd5.png)
+![Parallels Desktop 20 安装 FreeBSD 15.0](../.gitbook/assets/parallels-5.png)
 
 界面会提示“未能检测操作系统”，可忽略此提示，直接点击“继续”。
 
-![Parallels Desktop 20 安装 FreeBSD 15.0](../.gitbook/assets/pd6.png)
+![Parallels Desktop 20 安装 FreeBSD 15.0](../.gitbook/assets/parallels-6.png)
 
 在操作系统类型中选择“其他”。
 
-![Parallels Desktop 20 安装 FreeBSD 15.0](../.gitbook/assets/pd7.png)
+![Parallels Desktop 20 安装 FreeBSD 15.0](../.gitbook/assets/parallels-7.png)
 
 > **技巧**
 >
 > Parallels Desktop 20 的默认设置通常已足够，且默认使用 UEFI 引导，一般无需调整硬件配置。
 
-![Parallels Desktop 20 安装 FreeBSD 15.0](../.gitbook/assets/pd8.png)
+![Parallels Desktop 20 安装 FreeBSD 15.0](../.gitbook/assets/parallels-8.png)
 
 开始安装 FreeBSD 系统。
 
-![Parallels Desktop 20 安装 FreeBSD 15.0](../.gitbook/assets/pd9.png)
+![Parallels Desktop 20 安装 FreeBSD 15.0](../.gitbook/assets/parallels-9.png)
 
 开机后进入 FreeBSD。
 
-![Parallels Desktop 20 安装 FreeBSD 15.0](../.gitbook/assets/pd10.png)
+![Parallels Desktop 20 安装 FreeBSD 15.0](../.gitbook/assets/parallels-10.png)
 
 手动安装桌面环境后，桌面正常运行。
 

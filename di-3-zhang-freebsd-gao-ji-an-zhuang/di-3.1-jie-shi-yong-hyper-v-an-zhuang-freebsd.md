@@ -55,7 +55,7 @@ FreeBSD 对 Hyper-V 的集成支持通过内核模块实现：
 
 在 Windows 系统中启用 Hyper-V 功能组件，需以管理员权限执行相关命令，以确保操作的合法性与系统配置的正确性。
 
-![Hyper-V](../.gitbook/assets/hp1.png)
+![Hyper-V](../.gitbook/assets/hyperv-1.png)
 
 右键单击 Windows 徽标，在弹出的菜单中选择“终端（管理员）”。启用 Hyper-V 需要使用 `Enable-WindowsOptionalFeature` 命令，该命令将启用 Windows 的 Hyper-V 可选功能组件，包括虚拟机监视器、管理工具等核心模块。输入以下命令：
 
@@ -70,39 +70,39 @@ PS C:\Users\ykla> Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-H
 
 安装完成 Hyper-V 后，按照以下步骤创建虚拟机。
 
-![Hyper-V](../.gitbook/assets/hp2.png)
+![Hyper-V](../.gitbook/assets/hyperv-2.png)
 
 右键单击 Hyper-V 管理器中的主机名，选择“新建”→“虚拟机”。
 
-![Hyper-V](../.gitbook/assets/hp3.png)
+![Hyper-V](../.gitbook/assets/hyperv-3.png)
 
 点击“下一页”。
 
-![Hyper-V](../.gitbook/assets/hp4.png)
+![Hyper-V](../.gitbook/assets/hyperv-4.png)
 
 为虚拟机设置名称，然后点击“下一页”。
 
-![Hyper-V](../.gitbook/assets/hp.png)
+![Hyper-V](../.gitbook/assets/hyperv-generation-select.png)
 
 选择“第二代”。然后点击“下一页”。
 
-![Hyper-V](../.gitbook/assets/hp5.png)
+![Hyper-V](../.gitbook/assets/hyperv-5.png)
 
 设置内存大小，然后点击“下一页”。
 
-![Hyper-V](../.gitbook/assets/hp6.png)
+![Hyper-V](../.gitbook/assets/hyperv-6.png)
 
 设置网络，然后点击“下一页”。
 
-![Hyper-V](../.gitbook/assets/hp7.png)
+![Hyper-V](../.gitbook/assets/hyperv-7.png)
 
 指定虚拟硬盘的名称、大小及存储位置，然后点击“下一页”。
 
-![Hyper-V](../.gitbook/assets/hp8.png)
+![Hyper-V](../.gitbook/assets/hyperv-8.png)
 
 点击“浏览”，找到并选中已下载的 `FreeBSD-14.1-RELEASE-amd64-disc1.iso` 文件，然后点击“下一页”。
 
-![Hyper-V](../.gitbook/assets/hp9.png)
+![Hyper-V](../.gitbook/assets/hyperv-9.png)
 
 点击“完成”。
 
@@ -110,19 +110,19 @@ PS C:\Users\ykla> Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-H
 
 虚拟机创建完成后，需要对部分设置进行调整。
 
-![Hyper-V](../.gitbook/assets/hp10.png)
+![Hyper-V](../.gitbook/assets/hyperv-10.png)
 
 点击“设置”。
 
-![Hyper-V](../.gitbook/assets/hp11.png)
+![Hyper-V](../.gitbook/assets/hyperv-11.png)
 
 请务必关闭安全启动（见上文注意事项），否则将无法从安装介质启动安装程序。
 
-![Hyper-V](../.gitbook/assets/hp12.png)
+![Hyper-V](../.gitbook/assets/hyperv-12.png)
 
 请勾选“来宾服务”。来宾服务是 Hyper-V 集成服务的一部分，提供宿主机与虚拟机之间的文件交换、时间同步等集成功能。其作用详见参考文献。
 
-![Hyper-V](../.gitbook/assets/hp16.jpg)
+![Hyper-V](../.gitbook/assets/hyperv-16.jpg)
 
 可选择关闭“使用自动检查点”（即关闭自动快照功能），其作用详见参考文献。
 
@@ -130,15 +130,15 @@ PS C:\Users\ykla> Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-H
 
 虚拟机设置调整完成后，即可开始安装 FreeBSD 系统。
 
-![Hyper-V](../.gitbook/assets/hp13.png)
+![Hyper-V](../.gitbook/assets/hyperv-13.png)
 
 启动该虚拟机。
 
-![Hyper-V](../.gitbook/assets/hp14.png)
+![Hyper-V](../.gitbook/assets/hyperv-14.png)
 
 按提示开始安装 FreeBSD。
 
-![Hyper-V](../.gitbook/assets/hp15.jpg)
+![Hyper-V](../.gitbook/assets/hyperv-15.jpg)
 
 安装完成。
 
@@ -148,7 +148,7 @@ PS C:\Users\ykla> Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-H
 
 鼠标和键盘均可正常工作，可在宿主机和虚拟机间无缝切换，但虚拟机桌面分辨率无法自适应调整。建议检查 Hyper-V 集成服务安装并参考 FreeBSD 文档以获取显示配置指南。
 
-![Hyper-V](../.gitbook/assets/hp.jpg)
+![Hyper-V](../.gitbook/assets/hyperv-summary.jpg)
 
 删除虚拟机前，必须先将其关闭。
 

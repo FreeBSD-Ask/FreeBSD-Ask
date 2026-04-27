@@ -24,15 +24,15 @@ FreeBSD 中文社区. 001-Windows 11 安装 VMware 17[EB/OL]. [2026-04-04]. <htt
 
 镜像下载完成后，在 VMware Workstation Pro 中创建新的虚拟机，按照以下步骤进行配置。
 
-![VMware 安装 FreeBSD](../.gitbook/assets/vm1.png)
+![VMware 安装 FreeBSD](../.gitbook/assets/vmware-1.png)
 
-![VMware 安装 FreeBSD](../.gitbook/assets/vm2.png)
+![VMware 安装 FreeBSD](../.gitbook/assets/vmware-2.png)
 
-![VMware 安装 FreeBSD](../.gitbook/assets/vm3.png)
+![VMware 安装 FreeBSD](../.gitbook/assets/vmware-3.png)
 
 请务必选择“稍后安装操作系统”，否则可能导致启动问题。
 
-![VMware 安装 FreeBSD](../.gitbook/assets/vm4.png)
+![VMware 安装 FreeBSD](../.gitbook/assets/vmware-4.png)
 
 请选择“其他”，然后选择 FreeBSD。
 
@@ -40,31 +40,31 @@ FreeBSD 中文社区. 001-Windows 11 安装 VMware 17[EB/OL]. [2026-04-04]. <htt
 >
 > 在测试环境中，选择其他操作系统类型也能正常启动，但为保持配置一致性并避免潜在兼容性问题，建议选择 FreeBSD。对于低版本的 FreeBSD，虚拟机增强工具没有开源，可能会出现问题。
 
-![VMware 安装 FreeBSD](../.gitbook/assets/vm5.png)
+![VMware 安装 FreeBSD](../.gitbook/assets/vmware-5.png)
 
 虚拟机通常会占用较大的磁盘空间。若不希望系统盘（如 C 盘）空间不足，请自行调整虚拟机的存储位置。
 
-![VMware 安装 FreeBSD](../.gitbook/assets/vm6.png)
+![VMware 安装 FreeBSD](../.gitbook/assets/vmware-6.png)
 
 请根据实际需要调整虚拟磁盘的最大大小。默认值可能偏小。若要安装图形化桌面环境，建议分配至少 20 GB 的磁盘空间。
 
-![VMware 安装 FreeBSD](../.gitbook/assets/vm7.png)
+![VMware 安装 FreeBSD](../.gitbook/assets/vmware-7.png)
 
-![VMware 安装 FreeBSD](../.gitbook/assets/vm8.png)
+![VMware 安装 FreeBSD](../.gitbook/assets/vmware-8.png)
 
-![VMware 安装 FreeBSD](../.gitbook/assets/vm9.png)
+![VMware 安装 FreeBSD](../.gitbook/assets/vmware-9.png)
 
 默认的 256 MB 内存可以启动系统，但不建议用于实际使用。最低建议配置为 512 MB。
 
-![VMware 安装 FreeBSD](../.gitbook/assets/vm10.png)
+![VMware 安装 FreeBSD](../.gitbook/assets/vmware-10.png)
 
 默认的 1 个 CPU 核心可以启动，但为了获得更好的性能，建议根据宿主机资源情况进行调整。
 
-![VMware 安装 FreeBSD](../.gitbook/assets/vm11.png)
+![VMware 安装 FreeBSD](../.gitbook/assets/vmware-11.png)
 
 在“使用 ISO 映像文件”处，点击“浏览”，找到并选中下载的 `FreeBSD-15.0-RELEASE-amd64-disc1.iso` 文件。
 
-![VMware 安装 FreeBSD](../.gitbook/assets/vm12.png)
+![VMware 安装 FreeBSD](../.gitbook/assets/vmware-12.png)
 
 > **技巧**
 >
@@ -74,11 +74,11 @@ FreeBSD 中文社区. 001-Windows 11 安装 VMware 17[EB/OL]. [2026-04-04]. <htt
 >
 > 由于 FreeBSD Bug 250580 – VMware UEFI guests crash in virtual hardware after r366691[EB/OL]. (2020-10-24)[2026-04-04]. <https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=250580>. 的存在，FreeBSD 11-RELEASE/12-RELEASE 在 VMware 的 UEFI 环境下可能无法启动。经测试，FreeBSD 13.0-RELEASE 可正常启动。
 
-![VMware 安装 FreeBSD](../.gitbook/assets/vm13.png)
+![VMware 安装 FreeBSD](../.gitbook/assets/vmware-13.png)
 
-![VMware 安装 FreeBSD](../.gitbook/assets/vm14.png)
+![VMware 安装 FreeBSD](../.gitbook/assets/vmware-14.png)
 
-![VMware 安装 FreeBSD](../.gitbook/assets/vm15.png)
+![VMware 安装 FreeBSD](../.gitbook/assets/vmware-15.png)
 
 ## 网络设置
 
@@ -96,9 +96,9 @@ FreeBSD 中文社区. 001-Windows 11 安装 VMware 17[EB/OL]. [2026-04-04]. <htt
 >
 > NAT 模式的“名称”与宿主机的 `控制面板\网络和 Internet\网络连接` 中的 `VMware Network Adapter VMnet8` 绑定，默认绑定的是 `8`。换言之，NAT 模式的“名称”默认必须指定为下图所示的 `VMnet8`，否则虚拟机将无法联网。
 >
-> ![VMware network on FreeBSD](../.gitbook/assets/VMnat8.png)
+> ![VMware network on FreeBSD](../.gitbook/assets/vmware-nat-vmnet8.png)
 
-![VMware network on FreeBSD](../.gitbook/assets/net1.png)
+![VMware network on FreeBSD](../.gitbook/assets/vmware-network-1.png)
 
 通常情况下无需进行手动设置。如果虚拟机内网络接口一直提示 `no link`，请尝试重启宿主机，然后打开 VMware 的虚拟网络编辑器，再次执行“还原默认设置”操作（不推荐手动配置，可能无效）。
 
@@ -106,7 +106,7 @@ FreeBSD 中文社区. 001-Windows 11 安装 VMware 17[EB/OL]. [2026-04-04]. <htt
 
 如果配置为桥接模式后始终无法通过 DHCP 获取 IP 地址，可尝试将网络适配器的“桥接到”选项从“自动”改为宿主机当前正在使用的物理网卡。
 
-![VMware network on FreeBSD](../.gitbook/assets/net2.png)
+![VMware network on FreeBSD](../.gitbook/assets/vmware-network-2.png)
 
 ## 虚拟机增强工具与显卡驱动
 
@@ -198,7 +198,7 @@ EndSection
 
 #### 在物理机中设置共享文件夹
 
-![FreeBSD VMware 共享文件夹](../.gitbook/assets/hgfs1.png)
+![FreeBSD VMware 共享文件夹](../.gitbook/assets/vmware-shared-folder-1.png)
 
 > **注意**
 >
@@ -274,7 +274,7 @@ Downloads
 零跑
 ```
 
-![FreeBSD VMware 共享文件夹](../.gitbook/assets/hgfs2.png)
+![FreeBSD VMware 共享文件夹](../.gitbook/assets/vmware-shared-folder-2.png)
 
 文件内容一致。
 
@@ -296,7 +296,7 @@ Downloads
 
 调整虚拟机的最大分辨率即可解决该问题。
 
-![VMware 安装 FreeBSD](../.gitbook/assets/vm16.png)
+![VMware 安装 FreeBSD](../.gitbook/assets/vmware-16.png)
 
 硬件→显示→监视器→指定监视器设置→任意监视器的最大分辨率 (M)，将其由默认最大的 `2560 x 1600`（2.5K / WQXGA）改为其他较小值即可，亦可自定义数值。
 

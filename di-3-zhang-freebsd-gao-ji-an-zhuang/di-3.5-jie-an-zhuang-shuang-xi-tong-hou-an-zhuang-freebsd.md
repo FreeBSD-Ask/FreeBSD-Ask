@@ -35,7 +35,7 @@
 
 应关闭安全启动和快速启动。安全启动会阻止未签名的引导加载程序运行，而 FreeBSD 的引导加载程序目前未被微软签名，因此必须关闭。快速启动会让 Windows 在关机时处于一种特殊的休眠状态，导致其他系统无法正常访问 NTFS 分区。或者，也可通过 Windows 设置 → 更新与安全 → 恢复 → 高级启动，选择从 U 盘设备启动。然后正常引导 FreeBSD 安装程序，直至进入分区选择界面。
 
-![分区选择界面](../.gitbook/assets/shuangxitong1.png)
+![分区选择界面](../.gitbook/assets/dual-system-1.png)
 
 此处选择 `Manual`。
 
@@ -45,19 +45,19 @@
 
 此处可查看硬盘分区情况。图中仅有一块硬盘，包含一个 300 MB 的 EFI 系统分区、一个 16 MB 的 MSR 分区、一个 64 GB 的 Windows 系统分区（即 C 盘）以及未显示的空闲空间。直接选择 `Create`（创建）。
 
-![硬盘分区情况](../.gitbook/assets/shuangxitong2.png)
+![硬盘分区情况](../.gitbook/assets/dual-system-2.png)
 
 此处在第一行输入分区类型（即下方会列出的 `Filesystem type`）。如需添加 swap 分区，请在此步骤首先添加，后添加难以控制分区大小，因为分区会从空闲空间的开头或结尾分配，先添加 swap 可以更好地控制其位置。在添加 UFS 或 ZFS 分区时，需在 `Mountpoint` 处填写 `/`，表示将该分区挂载到根目录。`Label` 是 FreeBSD 的卷标（gptlabel），用于方便识别分区，可根据需要填写或留空。此处使用 ZFS，不添加 swap 分区，并且填入卷标 `zroot`。
 
-![创建分区](../.gitbook/assets/shuangxitong3.png)
+![创建分区](../.gitbook/assets/dual-system-3.png)
 
 使用 **Tab 键** 将焦点移动到 `OK`，然后按回车键确认。
 
-![确认分区创建](../.gitbook/assets/shuangxitong4.png)
+![确认分区创建](../.gitbook/assets/dual-system-4.png)
 
 此处会警告 ZFS 分区可能无法启动，但经实测可以正常启动。这个警告是安装程序的通用提示，对于 UEFI 环境下的配置并不适用。选择 `Yes` 忽略此警告：
 
-![ZFS 分区警告](../.gitbook/assets/shuangxitong5.png)
+![ZFS 分区警告](../.gitbook/assets/dual-system-5.png)
 
 > **注意**
 >
@@ -65,11 +65,11 @@
 
 选择 `Finish`（完成）
 
-![完成分区设置](../.gitbook/assets/shuangxitong6.png)
+![完成分区设置](../.gitbook/assets/dual-system-6.png)
 
 选择 `Commit`（确认）
 
-![确认分区变更](../.gitbook/assets/shuangxitong7.png)
+![确认分区变更](../.gitbook/assets/dual-system-7.png)
 
 之后会进入正常安装流程。安装完成后，列出系统中所有 ZFS 池及其状态：
 
@@ -85,11 +85,11 @@ root  534M    130G   534M  none
 
 仍停留在分区选择界面，此时选择 `Shell`
 
-![选择 Shell 分区](../.gitbook/assets/shuangxitong9.png)
+![选择 Shell 分区](../.gitbook/assets/dual-system-9.png)
 
 之后将进入终端（TTY）：
 
-![Shell 终端界面](../.gitbook/assets/shuangxitong10.png)
+![Shell 终端界面](../.gitbook/assets/dual-system-10.png)
 
 执行以下命令。
 

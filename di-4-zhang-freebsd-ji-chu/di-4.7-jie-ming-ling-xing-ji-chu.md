@@ -543,7 +543,7 @@ $ rm -rf /home/ykla/test/
 > #
 >```
 >
-> ![引导错误](../.gitbook/assets/noefi.png)
+> ![引导错误](../.gitbook/assets/no-efi-partition.png)
 >
 > 重启后即可发现引导项丢失。
 >
