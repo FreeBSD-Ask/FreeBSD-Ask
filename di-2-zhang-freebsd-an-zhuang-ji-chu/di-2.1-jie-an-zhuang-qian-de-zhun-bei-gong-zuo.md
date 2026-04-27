@@ -70,8 +70,6 @@ bsd-hardware.info. Hardware for BSD[EB/OL]. [2026-03-25]. <https://bsd-hardware.
 > **技巧**
 >
 > 随着时间推移，读者进行下载时可能已无 14.2-RELEASE 版本。此时只需选择列表最顶部的 `FreeBSD-X.Y-RELEASE`（该版本推荐用于生产环境）即可。其中，`X.Y` 应为比 `14.2` 更大的版本号，如 `15.0`、`16.0` 等，但须注意其应以 `RELEASE` 结尾，而非 `CURRENT`。
->
-> RELEASE 是 FreeBSD 的正式发布版本，经过充分测试，适合生产环境使用。CURRENT 是 FreeBSD 的开发版本，包含最新特性但不够稳定，仅适合开发者和高级用户。
 
 > **警告**
 >
@@ -200,8 +198,6 @@ win32diskimager 的下载地址是 <https://sourceforge.net/projects/win32diskim
 
 ### Realtek（螃蟹卡）
 
-#### Realtek RTL8125 2.5 G
-
 Realtek RTL8125 是一款常见的 2.5 G 以太网卡。在消费级市场中，常见的 2.5 G 网卡多采用该型号芯片。在安装 FreeBSD 前，可在 Windows 设备管理器中查看硬件标识，确认网卡型号是否为 RTL8125。
 
 ![Realtek RTL8125 2.5 G](../.gitbook/assets/rtl8125.png)
@@ -210,13 +206,7 @@ Realtek RTL8125 是一款常见的 2.5 G 以太网卡。在消费级市场中，
 >
 > RTL8125 在 FreeBSD 下默认没有驱动，需手动安装。最简单的方法是通过手机 USB 共享网络临时上网，具体方法见本书其他部分。安装网卡驱动后需重启系统。
 
-安装方法如下。
-
-#### Realtek（螃蟹卡）网卡通用安装方法
-
-除特定型号的安装方法外，Realtek 网卡还有通用的安装方式。以下介绍 Realtek 网卡的通用安装方法。
-
-##### 支持列表
+#### 支持列表
 
 在安装驱动之前，需确认当前网卡型号是否在支持列表中。
 

@@ -1,6 +1,6 @@
 # 4.7 命令行基础
 
-命令行界面（Command Line Interface, CLI）作为类 UNIX 系统的核心交互方式，提供了直接、高效的系统操作手段。在 FreeBSD 系统中，用户通过 Shell 程序与内核交互，Shell 负责解释用户输入的命令并将其转化为系统调用。
+命令行界面（Command Line Interface, CLI）作为类 UNIX 系统的核心交互方式，提供了直接、高效的系统操作手段。
 
 命令行的基本语法结构遵循 POSIX Shell Command Language 规范（IEEE Std 1003.1），其一般形式为：
 

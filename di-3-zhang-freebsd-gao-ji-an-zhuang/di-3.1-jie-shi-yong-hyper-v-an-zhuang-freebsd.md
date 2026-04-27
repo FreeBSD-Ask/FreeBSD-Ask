@@ -116,7 +116,7 @@ PS C:\Users\ykla> Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-H
 
 ![Hyper-V](../.gitbook/assets/hp11.png)
 
-由于 FreeBSD 的引导加载程序未经 Microsoft 签名，在 Hyper-V 默认安全启动配置下无法通过验证，请务必关闭安全启动，否则将无法从安装介质启动安装程序。
+请务必关闭安全启动（见上文注意事项），否则将无法从安装介质启动安装程序。
 
 ![Hyper-V](../.gitbook/assets/hp12.png)
 
