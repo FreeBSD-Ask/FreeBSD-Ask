@@ -60,7 +60,7 @@ PSPath
 
 工具 mount 调用 nmount(2) 系统调用，将一个特殊设备或远程节点（rhost:path）准备并嫁接到文件系统树中的节点（node）位置。系统维护一个当前已挂载文件系统的列表。如果不带任何参数调用 mount，将打印此列表。
 
->**注意**
+> **注意**
 >
 >FreeBSD 的 `mount` 源于 4.4BSD，与 Linux 的 `mount` 在选项语法上基本兼容，但 FreeBSD 使用的是 nmount(2) 系统调用而非 Linux 的 mount(2)。FreeBSD 的 `mount` 会根据文件系统类型自动调用 `/sbin/mount_type` 程序（如 `mount_nfs`、`mount_msdosfs`）。
 

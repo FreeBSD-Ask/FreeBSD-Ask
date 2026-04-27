@@ -94,7 +94,7 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 chsh: user information updated
 ```
 
->**注意**
+> **注意**
 >
 >`chsh`、`chfn`、`chpass` 是同一个程序，通过不同名称调用。非超级用户只能将 Shell 更改为 `/etc/shells` 中列出的标准 Shell；从非标准 Shell 更改或更改为非标准 Shell 均被拒绝。编辑器由 `EDITOR` 环境变量决定，默认使用 vi(1)。修改完成后需要通过 pwd_mkdb(8) 更新用户数据库。
 
