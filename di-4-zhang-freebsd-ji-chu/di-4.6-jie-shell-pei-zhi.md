@@ -99,8 +99,6 @@ chsh: user information updated
 >**注意**
 >
 >`chsh`、`chfn`、`chpass` 是同一个程序，通过不同名称调用。非超级用户只能将 Shell 更改为 `/etc/shells` 中列出的标准 Shell；从非标准 Shell 更改或更改为非标准 Shell 均被拒绝。编辑器由 `EDITOR` 环境变量决定，默认使用 vi(1)。修改完成后需要通过 pwd_mkdb(8) 更新用户数据库。
->
->BSD chsh 与 POSIX 标准兼容；与 GNU/Linux 的 `chsh` 基本兼容。Linux `chsh` 支持 `--list-shells` 列出可用 Shell，FreeBSD 不支持（可用 `cat /etc/shells` 替代）。
 
 编辑 `~/.zshrc` 文件，添加下面几行：
 

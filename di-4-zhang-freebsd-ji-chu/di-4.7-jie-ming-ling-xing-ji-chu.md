@@ -136,7 +136,7 @@ ykla@ykla:/ $ pwd
 
 >**技巧**
 >
->在 FreeBSD 的 sh(1) 中，`cd` 的行为由 POSIX 标准规定。FreeBSD sh(1) 的 `cd` 不支持 bash 的 `cd -P`/`cd -L` 选项（这些选项在 bash 中用于控制符号链接解析），但 sh(1) 默认行为等同于 `cd -P`（解析符号链接）。
+>在 FreeBSD 的 sh(1) 中，`cd` 的行为由 POSIX 标准规定。
 
 ## 命令行格式
 
