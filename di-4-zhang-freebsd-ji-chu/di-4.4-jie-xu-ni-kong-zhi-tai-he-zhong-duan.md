@@ -138,7 +138,7 @@ ttyv8	"/usr/local/bin/xdm -nodaemon"	xterm	off secure
 ……其他省略……
 ```
 
->**技巧**
+> **技巧**
 >
 >如果操作失误，但是配置了 SSHD 服务，仍可通过 SSH 远程连接 FreeBSD 系统，将生成一个 pts(4) 伪终端 `/dev/pts/n`。
 >
