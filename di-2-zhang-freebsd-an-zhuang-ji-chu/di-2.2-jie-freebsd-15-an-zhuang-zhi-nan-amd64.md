@@ -131,6 +131,10 @@
 
 设定主机名后，接下来需要选择系统的安装类型。FreeBSD 15 提供了两种安装方式，分别是传统的发行组件安装和新型的软件包安装。
 
+> **注意**
+>
+> 在 FreeBSD 14 中，安装程序不提供软件包（pkgbase）安装方式，仅支持传统的发行组件（Distribution Sets）安装。此时安装界面标题为“选择安装组件”，直接进入组件选择步骤。
+
 ![选择安装类型](../.gitbook/assets/select-components-15.png)
 
 `您希望使用传统的发行组件（Distribution Sets）还是软件包（Packages，技术预览）来安装基本系统？`
@@ -473,6 +477,10 @@ root 密码强度无强制要求，但不可为空。若密码为空，将提示
 
 此处选择要配置的网卡。使用 **方向键** 可切换，按 **回车键** 可确认选择。
 
+> **注意**
+>
+> 在 FreeBSD 14 中，网络接口选择界面仅提示“请选择一个网络接口进行配置”，不提供 Auto/Manual/Cancel 选项，直接选择网卡后进入 IPv4 配置步骤。
+
 #### 自动（`Auto`）
 
 ![自动配置网络](../.gitbook/assets/auto-config-network-15.png)
@@ -527,6 +535,8 @@ root 密码强度无强制要求，但不可为空。若密码为空，将提示
 > Error while applying chosen settings
 > (unknown regdomain Expected eval: Use: not found)
 > ```
+>
+> 该问题在 FreeBSD 15.0 中已修复。
 
 ![更改无线管制域](../.gitbook/assets/wifi-regulatory-domain.png)
 
@@ -659,6 +669,10 @@ CST 为中国标准时间（China Standard Time）的缩写，确认无误后按
 | `moused` | 在文本控制台（tty）中启用鼠标支持 |
 | `dumpdev` | 启用内核崩溃转储功能，便于系统调试 |
 
+> **注意**
+>
+> 在 FreeBSD 14 中，服务列表的显示顺序不同：`local_unbound` 位于列表首位，其后依次为 `sshd`、`moused`、`ntpd`、`ntpd_sync_on_start`、`powerd`、`dumpdev`。
+
 ## 安全加固
 
 启动服务设置完成后，接下来需要配置系统安全加固选项，以增强系统的安全性。
@@ -668,6 +682,10 @@ CST 为中国标准时间（China Standard Time）的缩写，确认无误后按
 `请选择系统安全加固方案`
 
 此处为系统安全加固选项，可根据实际需求选择启用。
+
+> **技巧**
+>
+> 在 FreeBSD 14 以前版本的安装中，此步骤会出现 `disable_sendmail` 选项，建议选定。若不禁止该服务，每次开机时可能会延迟数分钟，且该服务主要用于邮件发送，一般用户无需使用。
 
 | 选项 | 解释 |
 | ---- | ---- |
@@ -699,6 +717,8 @@ CST 为中国标准时间（China Standard Time）的缩写，确认无误后按
 > **警告**
 >
 > 建议在此步骤取消所有勾选，即不安装任何固件（在线安装可能因网络问题失败或耗时过长）。如需安装固件，可在系统安装完成后使用 `fwget` 命令另行获取。
+>
+> 在 FreeBSD 14 的物理机安装中，此步骤可能会显示需要安装的固件列表（如显卡固件等），请同样取消勾选，待安装完成后使用 `fwget` 命令获取。
 
 ## 创建普通用户
 
@@ -734,7 +754,7 @@ Login class [default]: # 用户分级
 Shell (sh csh tcsh nologin) [sh]: # 用户默认 shell，默认是 sh
 Home directory [/home/ykla]: # 用户家目录路径，普通用户默认在 /home 下面
 Home directory permissions (Leave empty for default): # 用户家目录权限，留空使用默认值
-Enable ZFS encryption? (yes/no) [no]: # 是否启用 ZFS 加密
+Enable ZFS encryption? (yes/no) [no]: # 是否启用 ZFS 加密（15.0 新增）
 Use password-based authentication? [yes]:  # 是否启用密码验证
 Use an empty password? (yes/no) [no]:  # 是否使用空密码，即密码为空
 Use a random password? (yes/no) [no]:  # 是否使用随机密码。若设置 yes 将生成随机字符串用作密码。该密码会回显到标准输出。②
@@ -745,7 +765,7 @@ Username    : ykla # 设定的用户名
 Password    : ***** # 设定的用户密码
 Full Name   : # 设定的用户全名
 Uid         : 1001 # 设定的用户 UID
-ZFS dataset : zroot/home/ykla # 家目录对应的 ZFS 数据集（15.0 新增）
+ZFS dataset : zroot/home/ykla # 家目录对应的 ZFS 数据集（自 14.1 引入）
 Class       :  # 设定的用户分级
 Groups      : ykla wheel video # 所属的用户组
 Home        : /home/ykla # 设定的用户主（家）目录路径
