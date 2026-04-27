@@ -4,7 +4,7 @@
 
 FreeBSD 提供了多种用户管理工具。`adduser` 命令以交互方式添加新用户，自动完成创建 passwd 条目、构建新用户主目录、从 `/usr/share/skel` 复制默认配置文件等操作。
 
-adduser(8) 是一个 Bourne shell 脚本，内部调用 pw(8) 完成实际的用户数据库操作。adduser(8) 是 FreeBSD 特有工具。
+adduser(8) 是一个 Bourne Shell 脚本，内部调用 pw(8) 完成实际的用户数据库操作。adduser(8) 是 FreeBSD 特有工具。
 
 `pw` 命令是更底层的用户和组管理工具，支持非交互式批量操作，可直接修改系统用户数据库文件。
 
