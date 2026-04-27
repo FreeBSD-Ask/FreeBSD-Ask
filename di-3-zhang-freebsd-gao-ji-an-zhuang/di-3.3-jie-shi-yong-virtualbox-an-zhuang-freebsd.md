@@ -2,6 +2,10 @@
 
 本节介绍在 Oracle VirtualBox 开源虚拟化平台上部署 FreeBSD 操作系统的技术方案与配置细节。
 
+Oracle VirtualBox 是一款 Type-2 虚拟机监控器（Hypervisor），通过虚拟设备模拟（device emulation）和半虚拟化（paravirtualization）技术为虚拟机提供计算、存储和网络资源。VirtualBox 支持多种虚拟磁盘映像格式，默认使用 VDI（Virtual Disk Image），也兼容 VMDK（VMware）、VHD（Microsoft）等格式。
+
+VirtualBox 的 Guest Additions 是一组运行在虚拟机内部的驱动程序和系统服务，提供共享文件夹、鼠标指针集成、自动调整客户机显示分辨率、无缝窗口模式等功能。在 FreeBSD 虚拟机中，Guest Additions 通过 Port  `emulators/virtualbox-ose-additions` 安装。
+
 ## 下载 VirtualBox
 
 首先需要下载并安装 VirtualBox 虚拟机软件，这是后续操作的必要前提。
@@ -66,7 +70,7 @@ VirtualBox 安装完成后，按照以下步骤创建并配置虚拟机。以下
 
 ## 网络设置
 
-VirtualBox 提供多种网络配置方式，以下介绍两种常用的网络设置方法。
+在虚拟网络方面，VirtualBox 提供 NAT、桥接（Bridged）、内部网络（Internal）、仅主机（Host-Only）等多种网络模式，每种模式对应不同的网络拓扑和连通性。
 
 ### 方法 ① 桥接
 

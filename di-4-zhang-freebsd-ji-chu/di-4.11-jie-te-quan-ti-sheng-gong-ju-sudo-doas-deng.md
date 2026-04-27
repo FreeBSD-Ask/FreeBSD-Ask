@@ -1,12 +1,18 @@
 # 4.11 权限提升工具（sudo、doas 等）
 
+权限提升工具允许普通用户以超级用户（root）或其他用户身份执行命令，是 UNIX 系统权限管理的重要补充机制。
+
+FreeBSD 基本系统提供了 su(1) 命令用于切换用户身份，但 su 要求用户知道目标账户的密码。sudo 和 doas 等工具通过配置文件定义权限规则，允许特定用户在无需知道 root 密码的情况下执行特权操作，同时提供审计日志功能。
+
 ![权限示意图](../.gitbook/assets/qie-su.png)
 
 ## doas
 
-对于大部分用户来说，掌握 `sudo su` 这一基础命令即可满足日常需求。在使用时可以将 `sudo` 直接替换为 `doas`，二者在基本使用场景下具有功能等价性。
+对于大部分用户来说，掌握 `sudo su` 这一基础命令即可满足日常需求。doas 是 OpenBSD 原生工具，设计目标是替代 sudo 的最常用功能子集，配置语法远比 sudoers 简洁。
 
-OpenBSD 项目认为 sudo 软件配置复杂、代码质量较差、漏洞较多，故自行开发了 [doas](https://man.openbsd.org/doas)。因此，FreeBSD 也可以使用。
+doas 的作者是 Ted Unangst，首次出现于 OpenBSD 5.8
+
+在使用时可以将 `sudo` 直接替换为 `doas`，二者在基本使用场景下具有功能等价性。但是 doas 不支持 sudo 的 `NOPASSWD` 标签之外的细粒度权限控制（如时间戳超时、命令参数限制、插件架构等）。
 
 ### 安装 doas
 
@@ -112,6 +118,10 @@ permit :wheel
 
 ## sudo
 
+sudo 的初始作者是 Bob Coggeshall 和 Cliff Spencer（原始版本，1986 年），主要重写和维护者是 Todd C. Miller。
+
+sudo 的 `sudoers` 配置语法极其复杂，手册页逾 1000 行，容易配置错误导致安全漏洞；时间戳文件位于 `/var/run/sudo/ts/`，若文件系统已满可能无法正常工作；`sudo -i` 在某些 shell 环境下可能不会完整加载环境变量。
+
 ### 安装 sudo
 
 - 使用 pkg 安装：
@@ -179,6 +189,10 @@ sudo-rs 是一款采用 Rust 编写的、以安全为导向并具备内存安全
 ```
 
 提供了命令 `sudo`、`visudo` 和 `sudoedit`。
+
+`visudo` 以安全方式编辑 sudoers 文件，类似于 vipw(8)。它锁定 sudoers 文件防止同时编辑，执行基本有效性检查，并在安装前检查语法错误。若发现语法错误，会显示行号并提示“What now?”，用户可选择 `e`（重新编辑）、`x`（退出不保存）或 `Q`（强制保存，有风险）。编辑器选择由 `SUDO_EDITOR`、`VISUAL`、`EDITOR` 环境变量决定，默认为 `/usr/bin/vi`。
+
+FreeBSD 的 `visudo` 来自 sudo 软件包（非基本系统），与 Linux 版本来自同一上游源码，基本兼容。
 
 ### 与 sudo 共存的安装方案
 

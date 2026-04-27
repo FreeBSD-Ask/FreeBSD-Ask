@@ -1,5 +1,7 @@
 # 4.2 Linux 用户迁移指南
 
+Linux 与 FreeBSD 同属类 UNIX 操作系统，但二者在内核架构、包管理哲学、系统设计理念等方面存在根本差异。Linux 采用宏内核架构，发行版众多且各自维护独立的用户空间；FreeBSD 则采用整体式开发模型，内核与基本系统由同一团队统一维护，形成完整的操作系统而非仅内核。在包管理方面，Linux 发行版多采用各自独立的包管理器（如 apt、dnf、pacman），而 FreeBSD 则使用 pkg(8) 管理二进制包、Ports 框架管理源代码编译安装，两者互补。本节旨在帮助 Linux 用户理解这些差异，并顺利完成迁移。
+
 ## 遗失的世界
 
 许多 Linux 体系的核心概念与技术实践，其最初提出者与实践者是 BSD 系统，包括：
@@ -18,8 +20,8 @@
 ### 参考文献
 
 - FreeBSD Foundation. FreeBSD: The Torchbearer of the Original Operating System Distribution[EB/OL]. [2026-04-04]. <https://freebsdfoundation.org/blog/freebsd-the-torchbearer-of-the-original-operating-system-distribution/>. BSD 最早提出并实践了“发行版”概念框架。
-- Linux Foundation. A Brief Look at the Roots of Linux Containers[EB/OL]. [2026-04-18]. <https://www.linuxfoundation.org/blog/blog/a-brief-look-at-the-roots-of-linux-containers>. 该文明确指出：“In 2000, FreeBSD extended chroot to FreeBSD Jails”，容器技术原型可追溯至 FreeBSD Jail。
-- Phull R, Bhatt D. Portage: Bringing Hackers' Wisdom to Science[EB/OL]. arXiv preprint arXiv:1610.02742, 2016. [2026-04-18]. <https://arxiv.org/abs/1610.02742>. 该论文明确指出：“Portage, written in Python and inspired by the ports system from FreeBSD”及“Portage is a GPLv2 package management system based on FreeBSD's ports collection”，Gentoo Portage 技术渊源可追溯至 BSD Ports。
+- Linux Foundation. A Brief Look at the Roots of Linux Containers[EB/OL]. [2026-04-18]. <https://www.linuxfoundation.org/blog/blog/a-brief-look-at-the-roots-of-linux-containers>. 该文指出：“In 2000, FreeBSD extended chroot to FreeBSD Jails”，容器技术原型可追溯至 FreeBSD Jail。
+- Phull R, Bhatt D. Portage: Bringing Hackers' Wisdom to Science[EB/OL]. arXiv preprint arXiv:1610.02742, 2016. [2026-04-18]. <https://arxiv.org/abs/1610.02742>. 该论文指出：“Portage, written in Python and inspired by the ports system from FreeBSD”及“Portage is a GPLv2 package management system based on FreeBSD's ports collection”，Gentoo Portage 技术渊源可追溯至 BSD Ports。
 - FreeBSD Project. Why you should use a BSD style license for your Open Source Project[EB/OL]. [2026-04-18]. <https://docs.freebsd.org/en/articles/bsdl-gpl/>. 该文记载了 BSD 许可证自 20 世纪 70 年代末起即以源代码自由分发的方式实践开源理念，早于 1985 年的 GNU Emacs 许可证和 1989 年的 GPL。
 - Red Hat. 什么是 Linux 容器？[EB/OL]. [2026-04-04]. <https://www.redhat.com/zh/topics/containers/whats-a-linux-container>. 介绍 Linux 容器的基本概念与技术原理。
 - Open Source Initiative. The Open Source Definition[EB/OL]. [2026-04-17]. <https://opensource.org/osd>. 虽然“开源”（Open Source）一词直到 1998 年才由 Christine Peterson 正式提出，但 BSD 许可证自 20 世纪 80 年代起便以源代码自由分发的方式实践了这一理念。

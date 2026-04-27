@@ -2,6 +2,16 @@
 
 Shell 作为用户与操作系统内核之间的交互界面，既是命令解释器，也是编程环境，其设计演化反映了 UNIX 系统半个多世纪的发展历程。
 
+Shell 的配置体系通过一系列初始化文件（initialization files）实现。
+
+不同 Shell 的初始化文件加载顺序存在差异：
+
+对于 Bourne Shell 及其兼容 Shell（sh、bash、zsh），登录 Shell 依次读取 `/etc/profile`、`~/.profile`（或 `~/.bash_profile`、`~/.zprofile`），交互式非登录 Shell 读取 `~/.bashrc`（bash）或 `~/.zshrc`（zsh）；
+
+对于 C Shell（csh/tcsh），登录 Shell 读取 `/etc/csh.cshrc`、`/etc/csh.login`、`~/.cshrc`、`~/.login`。
+
+理解这一加载顺序对于正确配置环境变量和 Shell 别名至关重要。
+
 ## Zsh
 
 ### 安装 Zsh
@@ -86,6 +96,12 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 chsh: user information updated
 ```
 
+>**注意**
+>
+>`chsh`、`chfn`、`chpass` 是同一个程序，通过不同名称调用。非超级用户只能将 Shell 更改为 `/etc/shells` 中列出的标准 Shell；从非标准 Shell 更改或更改为非标准 Shell 均被拒绝。编辑器由 `EDITOR` 环境变量决定，默认使用 vi(1)。修改完成后需要通过 pwd_mkdb(8) 更新用户数据库。
+>
+>BSD chsh 与 POSIX 标准兼容；与 GNU/Linux 的 `chsh` 基本兼容。Linux `chsh` 支持 `--list-shells` 列出可用 Shell，FreeBSD 不支持（可用 `cat /etc/shells` 替代）。
+
 编辑 `~/.zshrc` 文件，添加下面几行：
 
 ```ini
@@ -151,6 +167,8 @@ $ echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc              
 - FreeBSD Project. csh -- a shell with C-like syntax[EB/OL]. [2026-04-17]. <https://man.freebsd.org/cgi/man.cgi?query=csh&sektion=1>. C 风格语法 Shell 手册页。
 
 ## Bash
+
+Bash（Bourne Again SHell）是 GNU 项目开发的 Shell 程序，作为 Bourne Shell（sh）的增强替代品。Bash 兼容 sh 语法，并集成了 csh 和 ksh 的有用特性，包括命令行编辑、命令历史、可编程补全和作业控制等功能。Bash 是多数 Linux 发行版的默认 Shell，但在 FreeBSD 中并非基本系统组件。
 
 ### 安装 Bash
 
@@ -234,7 +252,7 @@ touch ~/.bash_profile         # 创建 ~/.bash_profile 文件，用于配置 Bas
 
 ## 配置 csh/tcsh
 
-除了 Zsh 和 Bash 外，FreeBSD 基本系统还内置了 csh 和 tcsh。csh（C shell，灵感来自 C 语言，语法也类似，作者是 Bill Joy）是 FreeBSD 基本系统内置的 shell，以前是 root 用户的默认 shell。
+除了 Zsh 和 Bash 外，FreeBSD 基本系统还内置了 csh 和 tcsh。csh（C shell，灵感来自 C 语言，语法也类似，作者是 Bill Joy）是 FreeBSD 基本系统内置的 shell，以前是 root 用户的默认 shell。FreeBSD 默认 Shell 为 sh（自 FreeBSD 14 起），但基本系统同时提供 csh/tcsh 作为替代选择。
 
 > **技巧**
 >
