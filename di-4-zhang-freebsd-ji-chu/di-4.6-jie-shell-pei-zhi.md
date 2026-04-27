@@ -178,7 +178,7 @@ Bash（Bourne Again SHell）是 GNU 项目开发的 Shell 程序，作为 Bourne
 
 | 程序 | 说明 |
 | ---- | ---- |
-| `bash` | Bash shell 主程序 |
+| `bash` | Bash Shell 主程序 |
 | `bash-completion-freebsd` | 针对 FreeBSD 的 Bash 补全库扩展，安装时会自动安装 shells/bash-completion 作为依赖 |
 | `bash-completion-zfs` | 针对 OpenZFS 的 Bash 补全库扩展 |
 
