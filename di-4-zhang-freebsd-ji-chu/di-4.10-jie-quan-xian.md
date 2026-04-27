@@ -377,7 +377,7 @@ sticky bit 在权限表达式中以其他用户执行位上的 `t` 表示（如 
 
 ```sh
 # ls -lo file1
--rw-r--r--  1 trhodes  trhodes  sunlnk 0 Mar  1 05:54 file1
+-rw-r--r--  1 trhodes  trhodes  sunlink 0 Mar  1 05:54 file1
 ```
 
 多个文件标志只能由 root 用户添加或移除。在其他情况下，文件所有者可以设置其文件标志。更多信息请参阅 chflags(1) 和 chflags(2)。
