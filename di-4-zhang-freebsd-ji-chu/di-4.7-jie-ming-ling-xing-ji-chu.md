@@ -729,7 +729,7 @@ FreeBSD 的 make（bmake）与 GNU make（gmake）在语法和内置变量上有
 
 FreeBSD sed 基于 4.4BSD lite sed，与 GNU sed 在正则表达式语法、一些扩展命令（如 `\l`、`\u`、`\L`、`\U`）、地址范围语法上存在差异。GNU sed 支持 `\w`、`\W`、`\b`、`\B` 等字符类，而 FreeBSD sed 需要使用 `[[:alnum:]]` 等 POSIX 类。
 
-sed(1) 命令命令选项：
+sed(1) 命令选项：
 
 | 选项 | 说明 | 备注 |
 | ---- | ---- | ---- |
