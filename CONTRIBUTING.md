@@ -385,11 +385,3 @@ $ git clone https://github.com/FreeBSD-Ask/FreeBSD-Ask
 **需要重写** 的内容（请撰写这些内容）：
 
 参见：Projects[EB/OL]. [2026-03-26]. <https://github.com/FreeBSD-Ask/FreeBSD-Ask/projects>。
-
-### NetBSD ToDo
-
-参见：Projects[EB/OL]. [2026-03-26]. <https://github.com/FreeBSD-Ask/FreeBSD-Ask/projects>。
-
-### DragonFlyBSD ToDo
-
-参见：Projects[EB/OL]. [2026-03-26]. <https://github.com/FreeBSD-Ask/FreeBSD-Ask/projects>。
