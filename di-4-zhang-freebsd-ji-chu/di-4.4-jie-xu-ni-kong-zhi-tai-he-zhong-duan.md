@@ -114,35 +114,67 @@ console none                            unknown  off  secure
 
 将此设置更改为 `insecure` 时要小心！如果忘记了 root 密码，仍然可以启动进入单用户模式，但对于不熟悉 FreeBSD 启动过程的人来说可能会比较困难。
 
-## 更改控制台显示模式
+## 调整引导界面和 TTY 分辨率
 
-FreeBSD 控制台的默认显示模式可以调整为 1024x768、1280x1024 或图形芯片和显示器支持的任何其他大小。要使用不同的显示模式，加载 VESA 模块：
+### 修改“gop”（通用方法）
 
-```sh
-# kldload vesa
-```
-
-要确定硬件支持哪些显示模式，使用 vidcontrol(1)。
-
-`vidcontrol` 用于设置 syscons(4) 或 vt(4) 控制台驱动的选项。
-
-不同行数模式需要不同尺寸的字体文件。
+在出现 FreeBSD 菜单时，按 **ESC** 键退出引导，出现提示符 `OK`。输入 `gop list` 可查看所有支持的分辨率列表：
 
 ```sh
-# vidcontrol -i mode
+OK gop list
+mode 0: 1920x1080x32, stride=1920   # 显示模式 0，分辨率 1920x1080，颜色深度 32 位，行跨度 1920
+mode 1: 640x480x32, stride=640       # 显示模式 1，分辨率 640x480，颜色深度 32 位，行跨度 640
+mode 2: 800x600x32, stride=800       # 显示模式 2，分辨率 800x600，颜色深度 32 位，行跨度 800
+mode 3: 1024x768x32, stride=1024     # 显示模式 3，分辨率 1024x768，颜色深度 32 位，行跨度 1024
+mode 4: 1280x720x32, stride=1280     # 显示模式 4，分辨率 1280x720，颜色深度 32 位，行跨度 1280
+mode 5: 1280x1024x32, stride=1280    # 显示模式 5，分辨率 1280x1024，颜色深度 32 位，行跨度 1280
 ```
 
-此命令的输出列出了硬件支持的显示模式。要选择新的显示模式，以 root 用户身份使用 vidcontrol(1) 指定模式：
+此处选择 `mode 0` 进行效果测试：
 
 ```sh
-# vidcontrol MODE_279
+OK gop set 0
 ```
 
-如果新的显示模式可以接受，可以通过将其添加到 `/etc/rc.conf` 来在启动时永久设置：
+效果会立即显示。
+
+确认效果合适后，继续引导：
 
 ```sh
-allscreens_flags="MODE_279"
+OK menu
 ```
+
+该命令表示操作确认或进入菜单界面。
+
+将该配置写入 `/boot/loader.conf` 文件，设置 GOP 模式为 0：
+
+```ini
+exec="gop set 0"
+```
+
+### `efi_max_resolution`（UEFI）或 `vbe_max_resolution`（BIOS）
+
+也可以通过配置文件设置 UEFI 或 BIOS 下的分辨率。根据文档 [LOADER.CONF(5)](https://man.freebsd.org/cgi/man.cgi?loader.conf(5))，这两个变量可接受以下值：
+
+```sh
+值	           分辨率
+480p	        640x480
+720p	        1280x720
+1080p	       1920x1080
+1440p	       2560x1440
+2160p	       3840x2160
+4k	          3840x2160
+5k	          5120x2880
+宽 x 高        宽 x 高
+```
+
+本节测试使用 `efi_max_resolution` 变量：将 `efi_max_resolution="1080p"` 写入 `/boot/loader.conf` 文件，重启后效果与 gop 方法一致。
+
+### 参考文献
+
+- FreeBSD Project. loader.conf(5)[EB/OL]. [2026-04-17]. <https://man.freebsd.org/cgi/man.cgi?loader.conf(5)>.
+- FreeBSD Forums. gop set < mode > being ignored in /boot/loader.conf[EB/OL]. [2026-03-26]. <https://forums.freebsd.org/threads/gop-set-mode-being-ignored-in-boot-loader-conf.77779/>. 讨论 loader.conf 中 GOP 模式设置未生效的原因与解决思路。
+- FreeBSD Forums. How to find the valid values of efi_max_resolution[EB/OL]. [2026-03-26]. <https://forums.freebsd.org/threads/how-to-find-the-valid-values-of-efi_max_resolution.84840/>. 探讨查询 efi_max_resolution 有效取值的方法。
 
 ### 参考文献
 
