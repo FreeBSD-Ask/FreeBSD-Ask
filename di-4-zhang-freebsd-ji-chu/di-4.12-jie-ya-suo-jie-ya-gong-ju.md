@@ -54,7 +54,7 @@ unzip 的 `-d` 选项后面跟目录名，可以有空格（如 `-d /path`），
 
 tar 是“tape archive”（磁带归档）的缩写，最初用于在磁带上进行文件存储。FreeBSD 的 tar 实现基于 libarchive 库（即 bsdtar），首次随 FreeBSD 5.4 发布（2005 年 5 月），替代了早期版本中使用的 GNU tar。该实现可从 tar、pax、cpio、zip、jar、ar、xar、rar、rpm、7-zip 及 ISO 9660 光盘镜像中提取文件，并可创建 tar、pax、cpio、ar、zip、7-zip 和 shar 格式的归档。
 
-GNU tar 和 bsdtar 两者在处理某些扩展属性和 ACL 时行为不同；bsdtar 的 `-l` 选项遵循 ISO/IEC 9945-1:1996（“POSIX.1”）的定义（检查链接），而 GNU tar 1.15 之前的版本将 `-l` 作为 `--one-file-system` 的同义词。使用 `@-` 约定在不同归档格式之间转换时，可能导致硬链接信息丢失，这是不同归档格式存储硬链接信息的方式不兼容所致。
+bsdtar 的 `-l` 选项遵循 ISO/IEC 9945-1:1996（“POSIX.1”）的定义（检查链接）。
 
 GNU tar 支持自动识别多种压缩格式；bsdtar 支持 tar、pax、cpio、zip 等多种格式，GNU tar 仅支持 tar 相关格式。
 
