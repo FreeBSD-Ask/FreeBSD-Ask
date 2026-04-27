@@ -19,41 +19,93 @@ FreeBSD 的 `ps` 基于 4.4BSD。特别注意：FreeBSD 的 `-u` 是显示格式
 
 用户只能向自己拥有的进程发送信号，root 用户可以向任何进程发送信号。SIGKILL 和 SIGSTOP 信号不可被捕获或忽略。特殊 PID：`0` 发送到同组所有进程，`-1` 发送到所有进程（root）或自己的所有进程。
 
-要查看系统上运行的进程，使用 ps(1) 或 top(1)。要显示当前运行进程的静态列表（包括它们的 PID、内存使用量和启动命令），使用 ps(1)。要以交互方式显示所有运行进程并每隔几秒更新显示以查看计算机正在做什么，使用 top(1)。
+要查看系统上运行的进程，使用 ps(1) 或 top(1)。
+
+要显示当前运行进程的静态列表（包括它们的 PID、内存使用量和启动命令），使用 ps(1)。
+
+要以交互方式显示所有运行进程并每隔几秒更新显示以查看计算机正在做什么，使用 top(1)。
 
 默认情况下，ps(1) 仅显示由当前用户拥有且正在运行的命令：
 
 ```sh
-% ps
+$ ps
  PID TT  STAT    TIME COMMAND
-8203  0  Ss   0:00.59 /bin/csh
-8895  0  R+   0:00.00 ps
+1971  0  Is   0:00.03 -sh (sh)
+2183  1  Ss   0:00.05 -sh (sh)
+2186  1  R+   0:00.00 ps
 ```
 
-ps(1) 的输出组织为多个列。PID 列显示进程 ID。PID 从 1 开始分配，上升到 99999，然后回到开头。但是，如果 PID 已在使用中，则不会重新分配。TT 列显示程序运行所在的 tty，STAT 显示程序的状态。TIME 是程序在 CPU 上运行的时间量，这通常不是程序启动以来的经过时间，因为大多数程序在需要花费 CPU 时间之前会花大量时间等待事情发生。最后，COMMAND 是用于启动程序的命令。
+ps(1) 的输出由多列构成：
 
-有许多不同的选项可用于更改显示的信息。最有用的选项集之一是 `auxww`，其中 `a` 显示所有用户的所有运行进程的信息，`u` 显示进程所有者的用户名和内存使用量，`x` 显示守护进程的信息，`ww` 使 ps(1) 显示每个进程的完整命令行，而不是在太长无法适应屏幕时截断。
+- PID 列显示进程 ID。PID 从 1 开始分配，上升到 99999，然后回到开头。但是，如果 PID 已被占用，则不会再分配。
+- TT 列显示程序运行所在的 tty，STAT 显示程序的状态。
+- TIME 是程序在 CPU 上运行的时间量，这通常不是程序启动以来的经过时间，因为大多数程序在需要花费 CPU 时间之前会花大量时间等待事情发生。
+- COMMAND 是用于启动程序的命令。
 
-top(1) 的输出类似：
+有许多不同的选项可用于更改显示的信息。最有用的选项集之一是 `auxww`，其中：
+
+- `a` 显示所有用户的所有运行进程的信息
+- `u` 显示进程所有者的用户名和内存使用量
+- `x` 显示守护进程的信息
+- `ww` 使 ps(1) 显示每个进程的完整命令行，而不是在太长无法适应屏幕时截断
+
+ps -auxww 示例：
 
 ```sh
-% top
-last pid:  9609;  load averages:  0.56,  0.45,  0.36              up 0+00:20:03  10:21:46
-107 processes: 2 running, 104 sleeping, 1 zombie
-CPU:  6.2% user,  0.1% nice,  8.2% system,  0.4% interrupt, 85.1% idle
-Mem: 541M Active, 450M Inact, 1333M Wired, 4064K Cache, 1498M Free
-ARC: 992M Total, 377M MFU, 589M MRU, 250K Anon, 5280K Header, 21M Other
-Swap: 2048M Total, 2048M Free
+$ ps -auxww
+USER   PID   %CPU %MEM   VSZ   RSS TT  STAT STARTED      TIME COMMAND
+root    11 1592.5  0.0     0   256  -  RNL  11:51   648:25.89 [idle]
+root     0    0.0  0.1     0  4240  -  DLs  11:51     0:05.08 [kernel]
 
-  PID USERNAME    THR PRI NICE   SIZE    RES STATE   C   TIME   WCPU COMMAND
-  557 root          1 -21  r31   136M 42296K select  0   2:20  9.96% Xorg
- 8198 dru           2  52    0   449M 82736K select  3   0:08  5.96% kdeinit4
- 8311 dru          27  30    0  1150M   187M uwait   1   1:37  0.98% firefox
+……省略部分输出……
+
+_dhcp  792    0.0  0.1 14656  3532  -  ICs  11:51     0:00.04 dhclient: em0 (dhclient)
+root  1211    0.0  0.1 14652  3156  -  Is   11:51     0:00.00 /usr/sbin/moused -p /dev/input/event5 -t evdev -I /var/run/moused.event5.pid
+
+……省略部分输出……
+
+root  1974    0.0  0.1 14816  3532  0  I    12:04     0:00.01 su
+root  1975    0.0  0.1 14872  3728  0  I+   12:04     0:00.03 su (sh)
+ykla  2183    0.0  0.1 14872  3728  1  Ss   12:28     0:00.05 -sh (sh)
+ykla  2191    0.0  0.1 14956  3576  1  R+   12:31     0:00.00 ps -auxww
 ```
 
-输出分为两个部分。头部（前五六行）显示最后运行的进程的 PID、系统负载平均值（衡量系统繁忙程度的指标）、系统正常运行时间（自上次重启以来的时间）和当前时间。头部中的其他数字与运行中的进程数量、已使用的内存和交换空间数量，以及系统在不同 CPU 状态下花费的时间有关。如果已加载 ZFS 文件系统模块，ARC 行指示从内存缓存而非磁盘读取了多少数据。
 
-头部下方是一系列列，包含与 ps(1) 输出类似的信息，如 PID、用户名、CPU 时间量和启动进程的命令。默认情况下，top(1) 还显示进程占用的内存空间量，分为两列：一列用于总大小，一列用于驻留大小。总大小是应用程序需要的内存量，驻留大小是它当前实际使用的量。top(1) 默认每两秒自动更新显示，可以使用 `-s` 指定不同的间隔。
+top(1) 的输出如下：
+
+```sh
+$ top
+last pid:  2189;  load averages:    0.24,    0.13,    0.04        up 0+00:39:10  12:30:35
+30 processes:  1 running, 29 sleeping
+CPU:  0.0% user,  0.0% nice,  0.0% system,  0.0% interrupt,  100% idle
+Mem: 26M Active, 21M Inact, 260M Wired, 2056K Buf, 3617M Free
+ARC: 35M Total, 6321K MFU, 27M MRU, 128K Anon, 407K Header, 1467K Other
+     19M Compressed, 52M Uncompressed, 2.76:1 Ratio
+Swap: 8192M Total, 8192M Free
+
+  PID USERNAME    THR PRI NICE   SIZE    RES STATE    C   TIME    WCPU COMMAND
+ 2183 ykla          1   0    0    15M  3728K wait     9   0:00   0.10% sh
+ 1623 ntpd          2   0    0    26M  7072K select  12   0:00   0.00% ntpd
+ 1783 root          1   0    0    15M  3708K ttyin    5   0:00   0.00% sh
+ 2179 root          1   3    0    25M    12M select  12   0:00   0.00% sshd-session
+ 1714 root          1   0    0    25M    11M select   5   0:00   0.00% sshd
+ 1756 root          1   1    0    14M  3076K nanslp  14   0:00   0.00% cron
+ 1496 root          1   0    0    14M  3456K kqread  15   0:00   0.00% syslogd
+ 1224 root          1   0    0    16M  4668K select   0   0:00   0.00% devd
+ 1967 root          1   1    0    25M    12M select  11   0:00   0.00% sshd-session
+  792 _dhcp         1   0    0    14M  3532K select   1   0:00   0.00% dhclient
+ 2182 ykla          1   0    0    25M    12M select   4   0:00   0.00% sshd-session
+ 1970 ykla          1   0    0    25M    12M select   5   0:00   0.00% sshd-session
+ 1975 root          1   1    0    15M  3728K ttyin    1   0:00   0.00% sh
+ 1971 ykla          1   9    0    15M  3720K wait     9   0:00   0.00% sh
+ 1499 root          1   0    0    14M  3276K select  15   0:00   0.00% syslogd
+ 1638 root          1   0    0    14M  3160K kqread   8   0:00   0.00% moused
+ 1974 ykla          1   7    0    14M  3532K wait    15   0:00   0.00% su
+```
+
+输出分为两个部分。头部（示例命令为前 7 行）显示最后运行的进程的 PID、系统负载平均值（衡量系统繁忙程度的指标）、系统正常运行时间（自上次重启以来的时间）和当前时间。头部中的其他数字与运行中的进程数量、已使用的内存和交换空间数量，以及系统在不同 CPU 状态下花费的时间有关。如果加载了 ZFS 文件系统模块，ARC 行指示从内存缓存而非磁盘读取了多少数据。
+
+头部下方是一系列列，包含与 ps(1) 输出类似的信息，如 PID、用户名、CPU 时间量和启动进程的命令。默认情况下，top(1) 还显示进程占用的内存空间量，分为两列：一列用于总大小，一列用于驻留大小。总大小是应用程序需要的内存量，驻留大小是它当前实际使用的量。top(1) 默认每两秒自动更新显示，可以使用 `-s` 指定不同的间隔，如 `-s4` 将每隔 4 秒刷新一次。
 
 在非常繁忙的系统上，top 可能显示略过时的信息，因为采样需要时间。
 
