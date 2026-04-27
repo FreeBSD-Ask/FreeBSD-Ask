@@ -106,7 +106,7 @@ PS C:\Users\ykla> Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-H
 
 点击“完成”。
 
-## 调整虚拟机
+## 虚拟机配置调整
 
 虚拟机创建完成后，需要对部分设置进行调整。
 
@@ -142,7 +142,7 @@ PS C:\Users\ykla> Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-H
 
 安装完成。
 
-## 测试桌面
+## 桌面环境验证
 
 安装完成后，可对虚拟机进行基本功能测试。
 
