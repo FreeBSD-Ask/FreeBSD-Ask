@@ -4,7 +4,7 @@
 
 ## Hyper-V 简介
 
-虚拟化管理程序是一种创建和运行虚拟机的软件，可以在单个物理主机上同时运行多个独立的操作系统。
+虚拟化管理程序是一种创建和运行虚拟机的软件，可以在单个物理主机上同时运行独立的操作系统，即虚拟化软件允许多个操作系统同时运行在同一台计算机上。从虚拟化技术的理论分类来看，Hypervisor 分为 Type-1（裸金属型）和 Type-2（宿主型）两类：Type-1 直接运行于物理硬件之上。Hyper-V 属于 Type-1 架构，其虚拟化层直接管理硬件资源，提供更高的隔离性和性能。
 
 Hyper-V 是微软公司（Microsoft）为 Windows 和 Windows Server 开发的企业级虚拟化管理程序，属于系统内置组件。
 
@@ -28,6 +28,15 @@ Gen 1 与 Gen 2 的区别如下表所示：
 | Gen 1 | 13.0 | 支持 | 不支持 | / |
 | Gen 2 | 13.0 | [不支持](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=221074) | 支持 | 需修改参数 `sysctl kern.evdev.rcpt_mask=6`（启用 evdev，让 Xorg 正确检测 PS/2 设备） |
 | Gen 2 | 14.0 | 支持 | 支持 | 参见：FreeBSD Project. src[EB/OL]. [2026-03-26]. <https://cgit.FreeBSD.org/src/commit/?id=21f4e817fde79d5de79bfbdf180d358ca5f48bf9>. |
+
+FreeBSD 对 Hyper-V 的集成支持通过内核模块实现：
+
+| 模块 | 功能 |
+| ---- | ---- |
+| `hv_utils` | 提供时间同步、心跳检测、关机通知等集成功能 |
+| `hv_vmbus` | 实现 Hyper-V 虚拟总线，是其他 Hyper-V 设备驱动的基础 |
+| `hv_netvsc` | 提供网络半虚拟化驱动（高性能网络通信） |
+| `hv_storvsc` | 提供存储半虚拟化驱动（虚拟磁盘 I/O 支持） |
 
 ## 测试环境
 
@@ -107,7 +116,7 @@ PS C:\Users\ykla> Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-H
 
 ![Hyper-V](../.gitbook/assets/hp11.png)
 
-由于 FreeBSD 的引导加载程序未经 Microsoft 签名，在 Hyper-V 默认安全启动配置下无法通过验证，请务必关闭安全启动，否则将无法从安装介质启动安装程序。
+请务必关闭安全启动（见上文注意事项），否则将无法从安装介质启动安装程序。
 
 ![Hyper-V](../.gitbook/assets/hp12.png)
 

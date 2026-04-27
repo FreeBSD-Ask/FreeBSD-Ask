@@ -2,6 +2,8 @@
 
 本节介绍在 VMware Workstation Pro 虚拟化平台上部署 FreeBSD 操作系统的完整流程与关键配置细节。
 
+VMware Workstation Pro 是一款 Type-2 虚拟机监控器（Hypervisor），运行在宿主操作系统之上，通过二进制翻译（binary translation）和硬件辅助虚拟化（hardware-assisted virtualization，基于 Intel VT-x 或 AMD-V 技术）实现 x86 指令集的虚拟化。
+
 ## 视频教程
 
 以下视频教程演示了在 Windows 11 上安装 VMware Workstation Pro 17 的过程，具有直观的操作演示，可供读者参考：
@@ -108,7 +110,9 @@ FreeBSD 中文社区. 001-Windows 11 安装 VMware 17[EB/OL]. [2026-04-04]. <htt
 
 ## 虚拟机增强工具与显卡驱动
 
-为实现虚拟机与宿主机的良好集成，需安装 VMware 显卡驱动和虚拟机增强工具。Open VM Tools 是 VMware 提供的开源虚拟机增强工具套件，提供屏幕自动缩放、鼠标集成、文件共享等功能；xf86-video-vmware 是 VMware 显卡驱动；xf86-input-vmmouse 是 VMware 虚拟鼠标驱动。使用 pkg 的命令如下：
+VMware 的半虚拟化驱动程序（VMware Tools，亦称 Open VM Tools）通过 HGFS（Host-Guest File System）等专有协议提供图形加速、共享文件夹、剪贴板共享等功能，显著提升虚拟机的 I/O 性能和用户体验。
+
+为实现虚拟机与宿主机的良好集成，需安装 xf86-video-vmware（VMware 显卡驱动）和 xf86-input-vmmouse（VMware 虚拟鼠标驱动）。pkg 命令如下：
 
 ```sh
 # pkg install xf86-video-vmware open-vm-tools xf86-input-vmmouse
@@ -404,7 +408,7 @@ VMware 已被博通（Broadcom）收购。从官方下载 VMware 相关产品需
 >
 > ![同意许可协议](../.gitbook/assets/downbcm6.png)
 >
-> - 选择右侧箭头处的云朵图标 ☁️ 即可下载
+> - 选择右侧箭头处的云朵图标 ☁ 即可下载
 >
 > ![下载](../.gitbook/assets/downbcm7.png)
 
@@ -412,7 +416,7 @@ VMware Workstation Pro 目前对个人用户而言是 **免费下载、免费使
 
 ### 博通开源/社区产品
 
-博通所有开源/社区产品均整合至该页面进行下载。
+博通所有开源/社区产品均整合至博通官网进行下载。
 
 如：Community Network Driver for ESXi、ESXi Arm Edition 等。
 

@@ -2,6 +2,7 @@
 
 命令行界面（Command Line Interface, CLI）作为类 UNIX 系统的核心交互方式，提供了直接、高效的系统操作手段。
 
+
 ## 我是谁？
 
 - 查看当前登录系统的用户名：
@@ -10,6 +11,10 @@
 $ whoami
 ykla
 ```
+
+>**技巧**
+>
+>`whoami` 已被 id(1) 替代，等价于 `id -un`。
 
 - 查看当前登录用户所属用户组的信息。
 
@@ -25,6 +30,8 @@ $ who
 root             pts/0        Mar 19 15:00 (3413e8b6b43f)
 ```
 
+BSD who 与 GNU/Linux 的 `who` 差异较大；FreeBSD 的 `who` 不支持 Linux 的 `-d`（死进程）、`-p`（init 活动进程）、`--lookup`、`--ips` 等选项。
+
 ## 我从哪里来？
 
 展示当前有哪些用户已登录，以及他们正在做什么：
@@ -36,6 +43,8 @@ USER       TTY      FROM           LOGIN@  IDLE WHAT
 root       pts/0    3413e8b6b43f   3:00PM     - w
 ```
 
+BSD `w` 与 GNU/Linux 的 `w` 差异较大；FreeBSD 的 `w` 不支持 Linux `w` 的 `-f`（省略 FROM 列）、`-s`（短格式）、`-u`（省略 USER 列）等选项。
+
 ## 我在哪？
 
 - 查看当前所在路径。
@@ -46,6 +55,8 @@ root       pts/0    3413e8b6b43f   3:00PM     - w
 $ pwd
 /usr/ports/editors/vscode
 ```
+
+BSD `pwd` 与 POSIX 标准兼容；与 GNU/Linux 的 `pwd` 基本兼容。
 
 ## 我究竟是谁？
 
@@ -76,13 +87,23 @@ login:
   - `ykla`：这里是主机名，和用户 ykla 无关。可以随便起不一样的主机名
   - `:/`：代表当前位于 `/` 路径下
 - ② 注意到提示符号的变化没有？root 是 `#`，普通用户是 `$`（csh 是 `%`）
-- ③ 如果仅输入 `su` 并回车，命令的含义是从当前用户切换到 root 账户（如果已经是 root，则不会有任何变化）。但必须是 wheel 组的成员才能进行此操作，否则会报错 `sorry`。
+- ③ 如果仅输入 `su` 并回车，命令的含义是从当前用户切换到 root 账户（如果已经是 root，则不会有任何变化）。非 wheel 组成员不能直接 `su` 到 root，否则会报错 `sorry`，但可以 `su` 到其他用户。
 - ④ 从普通用户切换到 root，需要 root 账户的登录密码。
 - ⑤ 输入 `exit` 可退出当前用户，如果是唯一登录的用户，将退出登录到 TTY。
 
 > **思考题**
 >
 > ⑥、⑦ 分别切换到了哪些用户或执行了哪些操作？
+
+`su` 命令只能切换到在 `/etc/shells` 中列出的 shell。`su -` 或 `su -l` 不仅切换用户，还会将工作目录切换到目标用户的主目录，并重置环境变量。
+
+BSD 与 GNU `su` 行为比较：
+
+| 项目 | FreeBSD `su` 行为 | Linux `su` 行为 |
+| ---- | ----------------- | --------------- |
+| `-c` | 指定 login class（登录类） | 执行指定命令（command） |
+| `-s` | 设置 MAC label（强制访问控制标签） | 指定登录 shell |
+| 执行命令方式 | 将命令作为参数传递给目标用户 shell 执行 | 使用 `-c` 直接执行命令 |
 
 ## 我要去哪里？
 
@@ -108,9 +129,15 @@ ykla@ykla:/ $ pwd
 
 根据上面的输出，请读者思考：上面的 `.` 和 `..` 分别代表什么？
 
+>**技巧**
+>
+>在 FreeBSD 的 sh(1) 中，`cd` 的行为由 POSIX 标准规定。
+
 ## 命令行格式
 
 大部分命令行命令的名称都具有明确含义，例如 `ls` 即 `list`（列出）、`wget` 即通过 web（网络）来 `get`（下载）；也存在少量见名不知义的命令，例如 `thefuck` 命令（用于自动纠正拼写错误）。
+
+命令行的基本语法结构遵循 POSIX Shell Command Language 规范（[IEEE Std 1003.1](https://pubs.opengroup.org/onlinepubs/9799919799/)）。其一般格式如下：
 
 ```sh
 # 命令 选项  参数 1       参数 2
@@ -128,9 +155,13 @@ drwxrwxrwt  2 root    wheel  3 Mar 18 17:23 .ICE-unix
 -r--r--r--  1 root    wheel 11 Mar 18 17:10 .X0-lock
 ```
 
-其中，`ls`（L 小写）意味着列出当前目录或指定目录下的文件；选项 `-l`（L 小写）意味着打印详细信息，输出长（*long*）格式。
+其中，`ls`（L 小写）意味着列出当前目录或指定目录下的文件；选项 `-l`（L 小写）意味着打印详细信息，输出长（*long*）格式。多个短选项可合并书写，如 `-a -l` 等价于 `-al`。
 
-目前，大多数命令均遵循上述形式（细节有所省略）。这是 [POSIX.1-2024](https://pubs.opengroup.org/onlinepubs/9799919799/) 规范所规定的。
+选项用于修改命令的行为；参数（argument）是命令操作的对象。
+
+>**技巧**
+>
+>命令执行后返回退出状态码（exit status）：0 表示成功，非 0 表示失败。
 
 需要注意中英文书写习惯的差异：中文行文不使用空格分隔，而英文单词必须使用空格加以区分。因此，命令行中各个组成部分之间应使用空格分隔 ` `。空格的数量一般不受限制，但最少应该为一个，即 ` `。
 
@@ -360,6 +391,8 @@ ykla@ykla:~ $ ls
 
 `touch` 的字面含义为“触碰”，表示对文件时间戳进行轻微变动。
 
+FreeBSD 的 `touch` 与 POSIX 标准兼容，来源于 4.3BSD。
+
 创建一个文件，命名为 `test`：
 
 ```sh
@@ -376,6 +409,10 @@ $ touch test
 > $ file book
 > book: PDF document, version 1.7
 >```
+
+`file` 命令通过三组测试依次判定文件类型：文件系统测试（基于 stat(2)）、幻数测试（基于 `/usr/share/misc/magic.mgc` 中的固定格式标识）和语言测试（基于文本模式匹配）。其中“幻数”（magic number）概念源于 UNIX 可执行文件格式，文件头部特定偏移量处存储的固定标识用于指示文件类型。
+
+FreeBSD 的 `file` 来自 file 软件包（与 GNU/Linux 采用相同的上游源码），因此基本兼容。主要差异在于魔法数据库文件路径可能不同。
 
 可以一次性使用多个参数创建多个文件（类似用法几乎是通用的，不再赘述）：
 
@@ -419,6 +456,8 @@ ykla/ykla1/ykla2
 ykla/ykla1/ykla2/ykla3
 ```
 
+FreeBSD 的 `mkdir` 与 GNU/Linux 的 `mkdir` 基本兼容。
+
 ### `rm` 删除命令
 
 > **警告**
@@ -456,7 +495,7 @@ $
 还可以用命令 `rmdir`（remove directory，即删除目录，且只能删除空目录）：
 
 ```sh
-$  rmdir /home/ykla/test
+$ rmdir /home/ykla/test
 $
 ```
 
@@ -668,9 +707,40 @@ make BATCH=yes install || make BATCH=yes install || make BATCH=yes install || ma
 >
 > 如果 `touch a.txt` 失败会执行后面的哪个操作？
 
+
 ## BSD 风格的 make/grep/sed/awk
 
-FreeBSD 的 [make](https://www.freebsd.org/cgi/man.cgi?query=make&apropos=0&sektion=0&manpath=FreeBSD+13.1-RELEASE+and+Ports&arch=default&format=html) /[grep](https://www.freebsd.org/cgi/man.cgi?query=grep&sektion=&n=1) /[sed](https://www.freebsd.org/cgi/man.cgi?query=sed&apropos=0&sektion=0&manpath=FreeBSD+13.1-RELEASE+and+Ports&arch=default&format=html) /[awk](https://www.freebsd.org/cgi/man.cgi?query=awk&apropos=0&sektion=0&manpath=FreeBSD+13.1-RELEASE+and+Ports&arch=default&format=html) 与 GNU 那套有所不同。详见 man 手册。
+### make(1) 命令
+
+make(1) 命令选项：
+
+| 选项 | 说明 | 备注 |
+| ---- | ---- | ---- |
+| `-f <Makefile>` | 指定 Makefile 文件名 | 默认查找 makefile 或 Makefile |
+| `-j <作业数>` | 并行执行的作业数 | 并行构建；指定 CPU 核心数 |
+| `-n` | 不执行，仅打印命令 | 显示会执行什么但不实际执行 |
+| `-k` | 出错时继续构建其他目标 | 即使某个目标失败也尽可能继续 |
+| `-s` | 静默模式，不打印命令 | 简洁输出 |
+| `-C <目录>` | 切换到目录后执行 | 先进入指定目录 |
+
+FreeBSD 的 make（bmake）与 GNU make（gmake）在语法和内置变量上有显著差异。FreeBSD make 不支持 GNU make 的许多高级特性，如 `$(wildcard ...)` 的某些用法、条件语句语法等。FreeBSD make 使用 `.include` 而 GNU make 使用 `include`；变量赋值语法 `?=`、`:=` 的行为也不同。在 FreeBSD 上，可安装 devel/gmake 以获得 GNU make。
+
+### sed(1) 命令
+
+FreeBSD sed 基于 4.4BSD lite sed，与 GNU sed 在正则表达式语法、一些扩展命令（如 `\l`、`\u`、`\L`、`\U`）、地址范围语法上存在差异。GNU sed 支持 `\w`、`\W`、`\b`、`\B` 等字符类，而 FreeBSD sed 需要使用 `[[:alnum:]]` 等 POSIX 类。
+
+sed(1) 命令命令选项：
+
+| 选项 | 说明 | 备注 |
+| ---- | ---- | ---- |
+| `-i <后缀>` | 原地编辑文件 | 备份文件使用指定后缀；空后缀不备份 |
+| `-e <脚本>` | 添加脚本到执行列表 | 可多次使用，按顺序执行 |
+| `-n` | 不自动打印行 | 仅在使用 `p` 命令时输出 |
+| `-f <文件>` | 从文件读取脚本 | 替代 `-e` |
+| `-E` | 使用扩展正则表达式 | 同 GNU sed 的 `-r` 选项 |
+| `-r` | 同上，兼容性别名 | |
+
+与 GNU sed 最显著的差异是 `-i` 选项语法：FreeBSD sed 的 `-i` 必须有后缀参数，即使是空字符串（`-i ''`），而 GNU sed 的 `-i` 后缀是可选的（`-i[SUFFIX]`）。这是最常见的跨平台兼容性问题。
 
 示例：
 
@@ -680,9 +750,38 @@ sed -i '' 's/quarterly/latest/g' /etc/pkg/FreeBSD.conf
 
 必须提供一个空参数 `''`，且不能省略。
 
+### awk(1) 命令
+
+awk(1) 命令选项：
+
+| 选项 | 说明 | 备注 |
+| ---- | ---- | ---- |
+| `-F <分隔符>` | 指定字段分隔符 | 可以是正则表达式；同 `FS` 变量 |
+| `-v <var>=<val>` | 在执行前设置变量 | 可多次使用 |
+| `-f <文件>` | 从文件读取脚本 | 替代命令行脚本 |
+| `-W <选项>` | 扩展选项（兼容 GNU awk） | FreeBSD awk 部分支持 |
+
+FreeBSD 默认的 awk 是 nawk（New AWK），基于 Aho、Kernighan、Weinberger 的原始实现，与 GNU awk（gawk）有许多差异。GNU awk 有大量扩展，如：多维数组、网络操作、时间函数、`length(array)`、`gensub()`、`strftime()` 等，这些在 FreeBSD nawk 中不可用。在 FreeBSD 上，可安装 lang/gawk 获得 GNU awk。
+
+### grep(1) 命令
+
+grep(1) 命令选项：
+
+| 选项 | 说明 | 备注 |
+| ---- | ---- | ---- |
+| `-r` | 递归搜索目录 | |
+| `-i` | 忽略大小写 | |
+| `-n` | 显示行号 | |
+| `-l` | 仅显示包含匹配的文件名 | 不显示匹配内容 |
+| `-v` | 反转匹配，显示不匹配的行 | |
+| `-E` | 使用扩展正则表达式 | 等同于 `egrep` |
+| `-c` | 仅显示匹配行数 | |
+
+FreeBSD 基本系统的 grep 是 BSD grep（基于 GNU grep 2.0 的旧版分支），与 Linux 上的 GNU grep 在正则表达式语法和选项上基本兼容；但 BSD grep 不支持 GNU grep 的 `-P`（Perl 正则表达式）选项，需安装 `textproc/gnugrep` 以获得 PCRE 支持。
+
 ## 关机与重启
 
-FreeBSD 和 Linux 的 shutdown 命令在语法和行为上有差异，如果有使用 Linux 的经验，那么是不能照搬的。
+`reboot`、`halt`、`poweroff` 在 FreeBSD 中是同一个程序的不同名称，行为不同；而在 Linux 中，这些命令可能是 systemd 的符号链接，行为也不同。
 
 FreeBSD 的设计更接近传统 UNIX 的行为。
 
@@ -703,7 +802,7 @@ FreeBSD 的设计更接近传统 UNIX 的行为。
 
 > **注意**
 >
-> 在 FreeBSD 下，关机与重启操作都需要 root 权限才能执行。
+> 在 FreeBSD 下，关机与重启操作都只有 root 用户和 operator 组成员可以执行。
 
 ## 附录：拼写自动纠正工具
 

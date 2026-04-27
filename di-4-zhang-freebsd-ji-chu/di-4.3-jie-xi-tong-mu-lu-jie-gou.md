@@ -2,6 +2,47 @@
 
 ## 目录结构概览
 
+FreeBSD 的文件系统层次结构是理解系统整体架构的基础。根目录（/）是文件系统的最顶层目录，在系统启动时第一个被挂载，包含操作系统进入多用户模式所需的基本系统。根目录还包含其他文件系统的挂载点。挂载点是附加文件系统可以嫁接到父文件系统（通常是根文件系统）上的目录。标准挂载点包括 `/usr/`、`/var/`、`/tmp/`、`/mnt/` 和 `/media/`。完整的文件系统层次结构描述参见 hier(7)。
+
+## 文件系统层次结构的设计哲学
+
+类 UNIX 操作系统的目录结构设计遵循若干核心原则，这些原则源于 UNIX 早期开发实践并经长期演化而成：
+
+- **单一根目录原则**：与 Windows 等系统采用多根（多盘符）的设计不同，UNIX 系统采用单一根目录（`/`）作为整个文件系统的起点。所有存储设备、分区和网络文件系统均以挂载（mount）的方式接入统一的目录树中。这一设计使得文件路径具有全局唯一性，避免了盘符分配的不确定性。文件系统最好被可视化为以 `/` 为根的树形结构，`/dev`、`/usr` 等目录是根目录的分支，这些分支还可以拥有自己的分支。
+
+- **功能分离原则**：将不同功能的文件分配到不同的目录中，使得各文件系统可以独立管理、挂载和备份。例如，将系统二进制文件（`/bin`、`/sbin`）与用户应用程序（`/usr/local`）分离，将配置文件（`/etc`）与日志数据（`/var/log`）分离。将 `/var` 与 `/` 分离是有利的，因为 `/var` 包含日志目录、假脱机目录和各种临时文件，可能会被填满，而填满根文件系统是不好的做法。
+
+- **基本系统与第三方软件分离原则**：FreeBSD 将基本系统（base system）与第三方软件严格分离。基本系统的组件安装在 `/bin`、`/sbin`、`/usr/bin`、`/usr/sbin`、`/usr/lib` 等目录中，而通过 Ports 或 pkg 安装的第三方软件则统一安装到 `/usr/local/` 下的对应子目录中（如 `/usr/local/bin`、`/usr/local/lib`、`/usr/local/etc`）。这种分离确保了基本系统的独立性和完整性，使得系统升级不会影响第三方软件，反之亦然。
+
+- **静态与动态数据分离原则**：静态数据（如二进制文件、库文件、文档）与动态数据（如日志、临时文件、运行时数据）分别存储于不同的目录树中。`/usr` 主要存放静态的只读数据，`/var` 则存放可变的运行时数据，`/tmp` 存放临时文件。
+
+## 设备与设备节点
+
+设备是系统中主要用于与硬件相关活动的术语，包括磁盘、打印机、显卡和键盘。当 FreeBSD 启动时，大多数启动消息都与正在检测的设备有关。启动消息的副本保存在 `/var/run/dmesg.boot` 中。
+
+每个设备都有一个设备名称和编号。例如，`ada0` 是第一个 SATA 硬盘，而 `kbd0` 代表键盘。
+
+FreeBSD 中的大多数设备必须通过称为设备节点的特殊文件访问，这些文件位于 `/dev` 目录中。
+
+在 FreeBSD 中，设备节点由 devfs(5) 文件系统自动管理。devfs 是一个虚拟文件系统，在系统启动时由内核自动挂载到 `/dev`，并根据当前系统中存在的硬件设备动态创建和删除设备节点。这与传统 UNIX 系统需要手动使用 `mknod` 命令创建设备节点的做法不同。devfs 确保了 `/dev` 目录中只包含当前系统实际存在的设备节点，避免了设备节点的冗余。
+
+设备节点分为两种类型：字符设备（character device）和块设备（block device）。字符设备以字节流方式访问数据，如终端（`/dev/ttyv0`）和串口；块设备以固定大小的块为单位访问数据，如磁盘（`/dev/ada0`）。在 `ls -l` 的输出中，字符设备的类型标识为 `c`，块设备的类型标识为 `b`。
+
+设备命名遵循一定的约定：SATA 硬盘以 `ada` 开头（如 `ada0`、`ada1`），SCSI 硬盘和 USB 存储设备以 `da` 开头（如 `da0`），NVMe 存储以 `nvd` 或 `nda` 开头，CD-ROM 驱动器以 `cd` 开头。编号从 0 开始。GPT 分区在设备名后附加 `p` 加分区号（如 `ada0p1`），MBR 切片附加 `s` 加切片号（如 `ada0s1`）。
+
+## FHS 与 FreeBSD 目录结构
+
+文件系统层次标准（Filesystem Hierarchy Standard，FHS）由 Linux 基金会维护，旨在定义类 UNIX 操作系统中目录结构和目录内容的规范。FHS 的目标是使软件开发者能够预测已安装文件和目录的位置，从而编写更具可移植性的软件。当前版本为 FHS 3.0，发布于 2015 年（来源：Linux Foundation. Filesystem Hierarchy Standard 3.0[EB/OL]. (2015-06-03)[2026-04-23]. <https://refspecs.linuxfoundation.org/fhs.shtml>.）
+
+FreeBSD 的目录结构遵循了 FHS 的核心设计理念，但并非 FHS 的严格实现。FreeBSD 的目录层次由 `hier(7)` 手册页定义，是 FreeBSD 项目的权威规范。与 Linux 发行版相比，FreeBSD 的目录结构存在若干显著差异：
+
+| 项目 | FHS（文件系统层次标准） | FreeBSD |
+| ---- | ----------------------- | ------- |
+| `/usr/local` 的角色 | 保留给系统管理员本地安装软件 | Ports 与 pkg 安装第三方软件的默认目标路径；用于本地可执行文件与库 |
+| 配置文件位置 | 通常位于 `/etc` 或 `/etc/opt`（第三方软件） | 第三方软件配置位于 `/usr/local/etc`；系统配置位于 `/etc`，严格分离 |
+| `/libexec` 目录 | 非标准或不强制规定 | 用于存放系统级辅助可执行程序 |
+| `/rescue` 目录 | 不存在标准定义 | 存放静态链接的紧急修复工具，用于系统恢复 |
+
 为便于说明，仅列出三级目录和重要文件。
 
 ```sh
@@ -102,11 +143,11 @@
 │   ├── ssh SSH 和 SSHD 相关配置文件
 │   ├── autofs 存放自动挂载相关的配置文件，参见 autofs(5)
 │   ├── gss GSSAPI 相关文件、含 Kerberos 5
-│   ├── periodic 存放定期执行的维护脚本，由 cron 调用。参见 periodic.conf(5)
+│   ├── periodic 存放定期执行的维护脚本，由 cron 调用（periodic.conf(5)）
 │   ├── mail Sendmail 相关文件
 │   │    ├── aliases 用于投递系统邮件的地址
 │   │    └── mailer.conf mailwrapper(8) 配置文件
-│   ├── kyua Kyua 测试框架的全局配置文件。参见 kyua(1)、kyua.conf(5)
+│   ├── kyua Kyua 测试框架的全局配置文件（kyua(1)、kyua.conf(5)）
 │   ├── unbound Unbound 配置文件
 │   ├── ntp NTP 相关，参见 ntp.conf(5)、ntpd(8)
 │   ├── mtree 用于系统的初始化和验证过程，可用于系统审计，参见 mtree(8)
@@ -114,7 +155,7 @@
 │   ├── authpf 用于认证网关用户的 shell 配置文件，参见 authpf(8)，默认为空
 │   ├── sysctl.kld.d 特定内核模块的配置文件，默认为空，参见：D40886[EB/OL]. [2026-03-26]. <https://reviews.freebsd.org/D40886>.
 │   ├── pkg PKG 相关配置文件，参见 pkg(7)
-│   ├── jail.conf.d 旨在实现对 jail 配置的模块化管理，默认为空。参见 jail.conf(5)
+│   ├── jail.conf.d 旨在实现对 jail 配置的模块化管理，默认为空（jail.conf(5)）
 │   ├── syslog.d syslogd 的配置文件，参见 syslog(3)
 │   ├── newsyslog.conf.d newsyslog 的配置文件，参见 newsyslog.conf(5)
 │   └── security OpenBSM 审计配置文件
@@ -155,7 +196,18 @@ dr-xr-xr-x   2 root    wheel   schg  2 Apr 13 12:38 /var/empty
 
 参数解释：在长格式（`-l`）输出中包含文件标志（`-o`），并且将目录视为普通文件列出而不递归（`-d`）。
 
-### 参考文献
+FreeBSD ls 与 GNU ls 比较：
+
+| 参数 | FreeBSD `ls` 行为 | GNU `ls` 行为 |
+| ---- | ----------------- | ------------- |
+| `-o` | 显示长格式 + 文件 flags（文件标志） | 等同 `-l`，但不显示属组（group） |
+| `-l` | 长格式（权限 / 属主 / 属组 / 时间等） | 长格式（权限 / 属主 / 属组 / 时间等） |
+| `-G` | 启用彩色输出 | 不支持该参数 |
+| `--color` | 不支持 | 启用彩色输出 |
+| `--group-directories-first` | 不支持 | 目录优先排序（目录排在文件前） |
+| 文件 flags（flags） | 支持（如 `schg`, `uchg` 等） | 不支持 |
+
+## 参考文献
 
 - FreeBSD Project. hier(7)[EB/OL]. [2026-03-26]. <https://man.freebsd.org/cgi/man.cgi?query=hier&sektion=7&manpath=freebsd-release-ports>. 系统阐述 FreeBSD 文件系统层次结构。
 - FreeBSD Project. chflags(1)[EB/OL]. [2026-04-17]. <https://man.freebsd.org/cgi/man.cgi?query=chflags>.

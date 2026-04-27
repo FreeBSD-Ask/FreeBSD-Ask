@@ -1,5 +1,9 @@
 # 4.1 Windows 用户迁移指南
 
+操作系统迁移是用户从一种操作系统平台转向另一种平台时面临的系统性挑战，涉及文件系统概念、字符编码、换行符规范、时区处理等多维度差异。对于从 Windows 迁移至 FreeBSD 的用户而言，理解这些差异是顺利过渡的前提。
+
+本节从文件系统基础概念入手，逐步阐述 Windows 与 FreeBSD 在文件系统组织、文件名规范、文本编码和时区配置等方面的关键差异。
+
 ## 文件系统基础
 
 首先，观察以下两幅图像：
@@ -52,6 +56,14 @@ PSPath
 
 这种方法称为“嫁接”。实际上，这就是将树 A 的枝条（文件系统）挂载到树 B 上（嫁接点即某个挂载点，归根结底依赖于根目录 `/`）。
 
+从操作系统的技术视角看，挂载（mount）是将一个文件系统附加到系统目录树中某个已有目录（即挂载点）上的过程。文件系统最好被可视化为以 `/` 为根的树形结构，一个文件系统必须挂载到另一个文件系统中的某个目录上。当文件系统 B 挂载到目录 A 上时，B 的根目录将替换 A，B 中的目录将相应地出现；而 A 中原有的文件将被临时隐藏，直到 B 从 A 上卸载后才会重新出现。
+
+工具 mount 调用 nmount(2) 系统调用，将一个特殊设备或远程节点（rhost:path）准备并嫁接到文件系统树中的节点（node）位置。系统维护一个当前已挂载文件系统的列表。如果不带任何参数调用 mount，将打印此列表。
+
+>**注意**
+>
+>FreeBSD 的 `mount` 源于 4.4BSD，与 Linux 的 `mount` 在选项语法上基本兼容，但 FreeBSD 使用的是 nmount(2) 系统调用而非 Linux 的 mount(2)。FreeBSD 的 `mount` 会根据文件系统类型自动调用 `/sbin/mount_type` 程序（如 `mount_nfs`、`mount_msdosfs`）。
+
 ### 如何理解卸载
 
 ![如何理解卸载](../.gitbook/assets/qiancha.png)
@@ -61,6 +73,8 @@ PSPath
 将一棵树新发的侧枝掰下来，插到土里。精心照料一段时间，就会得到一株新的幼苗。
 
 实际上，这与“卸载”的原理有异曲同工之妙：将某个文件系统（如 `/mnt/test`）从完整的根（`/`）上“掰”下来（卸载）。
+
+从技术角度看，卸载（unmount）是挂载的逆操作，将一个已挂载的文件系统从系统目录树中分离。当文件系统 B 从 A 上卸载后，A 中原有的文件将重新出现。
 
 #### 参考文献
 
@@ -157,7 +171,7 @@ b.txt: Unicode text, UTF-8 text, with very long lines (314), with CRLF line term
 
 - IETF. RFC 2046: Multipurpose Internet Mail Extensions (MIME) Part Two: Media Types[EB/OL]. [2026-04-18]. <https://datatracker.ietf.org/doc/html/rfc2046>. 规定文本类型的规范行结束符为 CRLF（0x0D 0x0A）。
 - IETF. RFC 20: ASCII format for network interchange[EB/OL]. [2026-04-18]. <https://www.rfc-editor.org/rfc/rfc20.html>. ASCII 标准定义 CR 为 0x0D（第 13 号控制字符），LF 为 0x0A（第 10 号控制字符），二者均源自电传打字机时代的物理操作。
-- Wasserburger E. dos2unix / unix2dos - Text file format converters[EB/OL]. [2026-04-18]. <https://dos2unix.sourceforge.io/>. dos2unix 与 unix2dos 命令行工具，用于在 CRLF（Windows）与 LF（UNIX）换行格式之间转换；FreeBSD Port 路径为 converters/dos2unix。
+- Wasserburger E. dos2unix / unix2dos - Text file format converters[EB/OL]. [2026-04-18]. <https://dos2unix.sourceforge.io/>. dos2unix 与 unix2dos 命令行工具，用于在 CRLF（Windows）与 LF（UNIX）换行格式之间转换；FreeBSD Port 路径为 converters/dos2unix。基本系统版本与 Port 版本为不同程序。Port 为增强版本，支持更多选项。
 
 ## 字符编码的差异
 
@@ -244,6 +258,51 @@ Windows 会直接读取 RTC 的结果，并将其视为本地时间，即 Local 
 - 新华网. “北京时间”是怎么来的[EB/OL]. [2026-04-18]. <http://www.xinhuanet.com/politics/2015-10/28/c_1116958394.htm>. 北京时间并非北京（东经 116.4°）地方时，而是东经 120° 经线的区时；中国曾于 1986—1991 年实行夏令时。
 - IETF. RFC 5246: The Transport Layer Security (TLS) Protocol Version 1.2[EB/OL]. [2026-04-18]. <https://www.rfc-editor.org/rfc/rfc5246>. TLS 协议规定证书包含 notBefore 与 notAfter 有效期字段，客户端验证时将系统时间与证书有效期比对，时钟偏移可导致握手失败。
 - IETF. RFC 6557: Procedures for Maintaining the Time Zone Database[EB/OL]. [2026-04-18]. <https://www.rfc-editor.org/rfc/rfc6557>. IANA 时区数据库维护程序（BCP 175），该数据库自 20 世纪 70 年代末由 Arthur David Olson 开发，2011 年起由 IANA 维护。
+
+## 手册页
+
+FreeBSD 上最全面的文档以手册页的形式存在。系统上几乎每个程序都附带一份简短的参考手册，解释基本操作和可用参数。这些手册可以使用 man 命令查看：
+
+```sh
+% man command
+```
+
+按回车键继续浏览，输入 `q` 则退出 man 手册。
+
+其中 `command` 是要了解的命令名称。例如，要了解更多关于 ls(1) 的信息，输入：
+
+```sh
+% man ls
+```
+
+手册页分为多个节，代表主题的类型。在 FreeBSD 中，以下章节可用：
+
+1. 用户命令。
+2. 系统调用和错误编号。
+3. C 库中的函数。
+4. 设备驱动程序。
+5. 文件格式。
+6. 游戏和其他娱乐。
+7. 杂项信息。
+8. 系统维护和操作命令。
+9. 系统内核接口。
+
+在某些情况下，同一主题可能出现在在线手册的多个节中。例如，既有 chmod 用户命令，也有 chmod() 系统调用。要告诉 man(1) 显示哪个节，指定节号：
+
+```sh
+% man 1 chmod
+```
+
+这将显示用户命令 chmod(1) 的手册页。在书面文档中，对在线手册特定节的引用传统上放在括号中，因此 chmod(1) 指的是用户命令，chmod(2) 指的是系统调用。
+
+如果不知道手册页的名称，使用 `man -k` 搜索手册页描述中的关键词：
+
+```sh
+% man -k mail
+```
+
+此命令显示描述中包含关键词“mail”的命令列表。这等效于使用 apropos(1)。
+
 
 ## 深入阅读
 
