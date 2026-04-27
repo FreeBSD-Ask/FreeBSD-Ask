@@ -1,6 +1,6 @@
 # 4.5 Shell 基础
 
-## 什么是 Shell
+## Shell 的概念与定位
 
 ![什么是 Shell](../.gitbook/assets/you-shell.png)
 
