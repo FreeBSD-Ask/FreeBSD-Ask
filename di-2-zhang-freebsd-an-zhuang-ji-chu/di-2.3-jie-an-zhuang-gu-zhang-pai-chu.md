@@ -23,7 +23,7 @@
 - 是否使用了 Ventoy 工具？
   - 建议使用 Rufus. Rufus - Create bootable USB drives the easy way[EB/OL]. [2026-03-25]. <https://rufus.ie/zh/>，该工具为 Windows 平台开源 USB 启动盘制作工具，进行刻录，而非 Ventoy. Ventoy - 多系统启动 USB 启动盘制作工具[EB/OL]. [2026-03-25]. <https://www.ventoy.net/cn/index.html>，该工具为多系统启动 USB 启动盘制作工具。
 
-若仍出现问题，请先在 FreeBSD Project. FreeBSD 官方论坛[EB/OL]. [2026-03-25]. <https://forums.freebsd.org/>，该论坛为 FreeBSD 官方用户社区，使用英语询问；若无果，可按其他章节指引提交 Bug。
+若仍出现问题，请先在 FreeBSD Project. FreeBSD 官方论坛[EB/OL]. [2026-03-25]. <https://forums.freebsd.org/>，该论坛为 FreeBSD 官方用户社区，使用英语询问；若未获解答，可按其他章节指引提交 Bug。
 
 ## 重启后又进入了安装界面
 
@@ -33,7 +33,7 @@
 
 ## 卡在某项服务
 
-在旧版本安装过程中，系统启动时可能长时间卡在 sendmail 等服务，或者在需要配置静态 IP 地址时，系统却持续尝试 DHCP。
+在旧版本安装过程中，系统启动时可能长时间停留在 sendmail 等服务，或者在需要配置静态 IP 地址时，系统却持续尝试 DHCP。
 
 此时可尝试按下 **Ctrl** + **C** 组合键中断该服务，从而继续启动系统。
 
