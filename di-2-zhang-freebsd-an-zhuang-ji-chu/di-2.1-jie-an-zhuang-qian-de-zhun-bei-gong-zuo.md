@@ -181,7 +181,7 @@ Rufus 下载地址为 <https://rufus.ie/zh>，该工具为 Windows 平台开源 
 
 **读者应仅在 Rufus 无效的情况下再使用 win32diskimager 或 Ventoy。**
 
-win32diskimager 的下载地址是 <https://sourceforge.net/projects/win32diskimager/files/Archive/>，选择 `win32diskimager-1.0.0-install.exe` 进行下载。
+win32diskimager 的下载地址为 <https://sourceforge.net/projects/win32diskimager/files/Archive/>，选择 `win32diskimager-1.0.0-install.exe` 进行下载。
 
 > **思考题**
 >
