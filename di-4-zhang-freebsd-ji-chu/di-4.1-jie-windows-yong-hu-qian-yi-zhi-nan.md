@@ -179,7 +179,7 @@ b.txt: Unicode text, UTF-8 text, with very long lines (314), with CRLF line term
 
 例如，ASCII（American Standard Code for Information Interchange，ANSI X3.4）编码中，`0x41`（二进制 `0100 0001`）代表大写字母 `A`。ASCII 仅支持英文字母、数字和常见标点，共 128 个字符。
 
-而在 Unicode 编码体系中，“你”这个汉字的代码点是 U+4F60。在 UTF-8（8-bit Unicode Transformation Format，8 位 Unicode 转换格式）编码方式下，它被编码为字节序列 `0xE4 0xBD 0xA0`（二进制为 `11100100 10111101 10100000`）。UTF-8 编码涵盖的字符范围远超 GBK（国标扩展），当中甚至含有埃及圣书体，如果现在你的屏幕上能看到“𓀀”“𓃕”“𓌊”这三个字符，那么你很可能正在使用 UTF-8 编码（如果你使用的是 UTF-8 编码但仍无法显示这些字符，很可能是字体不支持这些字符集，而非编码问题）。
+而在 Unicode 编码体系中，“你”这个汉字的代码点是 U+4F60。在 UTF-8（8-bit Unicode Transformation Format，8 位 Unicode 转换格式）编码方式下，它被编码为字节序列 `0xE4 0xBD 0xA0`（二进制为 `11100100 10111101 10100000`）。UTF-8 编码涵盖的字符范围远超 GBK（国标扩展），当中甚至含有埃及圣书体，如果当前屏幕上能看到"𓀀""𓃕""𓌊"这三个字符，那么很可能正在使用 UTF-8 编码（若使用 UTF-8 编码但仍无法显示这些字符，很可能是字体不支持这些字符集，而非编码问题）。
 
 那么程序如何识别文本的编码呢？通常，有些文件会在开头使用特定的字节序列（即 BOM，byte order mark，字节顺序标记）来标明编码。例如 UTF-8 的 BOM 是 `0xEF 0xBB 0xBF`。但在实际中，很多文本文件并没有 BOM，因此读取程序需要通过上下文猜测编码格式，这往往导致乱码。虽然可以通过程序分析文本内容（如统计字符分布或抽取字符计算）来猜测编码，但这种方法并不总是可靠。编码问题本质上源于系统间默认编码不同或未明确指定编码。
 
@@ -215,7 +215,7 @@ FreeBSD 的编码在 [main/usr.bin/login/login.conf](https://github.com/freebsd/
 
 中国统一使用一个时区，东八区，即 UTC+8，UTC（Coordinated Universal Time，协调世界时）在日常使用中几乎等同于 GMT（Greenwich Mean Time，格林尼治时间）。UTC 以国际原子时（temps atomique international，TAI）的秒长为基础（并不完全一致）：当铯（Cs）频率 ΔνCs，也就是铯 133 原子不受干扰的基态超精细跃迁频率，以单位 Hz 即 s⁻¹ 表示时，取其固定数值为 9,192,631,770 来定义秒——后续又对国际原子时进行了各种修正。
 
-有过 Windows 和 UNIX 双系统安装经验的人会发现，Windows 和 UNIX 的时间总是差 8 个小时。在现代计算机上（一般在主板上），都有一颗由纽扣电池供电的 RTC（Real-time clock，实时时钟芯片）芯片，用来维护系统断电后的计时。
+有过 Windows 和 UNIX 双系统安装经验的用户会发现，Windows 和 UNIX 的时间总是差 8 个小时。在现代计算机上（一般在主板上），都有一颗由纽扣电池供电的 RTC（Real-time clock，实时时钟芯片）芯片，用来维护系统断电后的计时。
 
 计算机操作系统在开机时会读取 RTC 的时间来设定系统的时间。RTC 的时间并未标注时区。
 
