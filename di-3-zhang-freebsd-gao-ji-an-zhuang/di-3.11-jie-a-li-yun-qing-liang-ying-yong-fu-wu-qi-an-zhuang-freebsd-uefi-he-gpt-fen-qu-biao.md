@@ -443,7 +443,7 @@ root@mfsbsd:~ # gpart show
     208896  62705631                                 3  linux-data  (30G)
 ```
 
-注意到，大部分分区都被标记为了 `[CORRUPT]`，这会影响系统的安装。因此必须先修复 GPT 分区表：
+注意到，大部分分区都被标记为 `[CORRUPT]`，这会影响系统的安装。因此必须先修复 GPT 分区表：
 
 ```sh
 root@mfsbsd:~ # gpart recover vtbd0	# 恢复 vtbd0 磁盘的分区表信息
