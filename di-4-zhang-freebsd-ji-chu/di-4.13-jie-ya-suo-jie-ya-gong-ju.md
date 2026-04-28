@@ -240,7 +240,7 @@ $ tar --zstd -cvf test.tar.zst -C /home/ykla/ test # 打包并压缩成 zstd 格
 a test
 ```
 
-看看结果：
+查看结果：
 
 ```sh
 $ ykla@ykla:~ $ ls -al

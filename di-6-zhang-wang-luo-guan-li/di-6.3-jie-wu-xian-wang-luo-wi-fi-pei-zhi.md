@@ -123,7 +123,7 @@ test_5G                           50:d6:c5:93:d7:64   36   54M  -78:-95   100 EP
 
 ### 使用 WPA2 认证
 
-对于加密的无线网络，需要使用 Wi-Fi 保护访问（Wi-Fi Protected Access，WPA）配置文件进行连接。WPA 2/3 是目前主流的无线网络安全协议，提供了数据加密与身份认证功能。
+对于加密的无线网络，需要使用 Wi-Fi 保护访问（Wi-Fi Protected Access，WPA）配置文件进行连接。WPA2/3 是目前主流的无线网络安全协议，提供了数据加密与身份认证功能。
 
 无线网络中的认证过程由 wpa_supplicant(8) 管理。创建 `/etc/wpa_supplicant.conf` 配置文件，内容如下：
 
