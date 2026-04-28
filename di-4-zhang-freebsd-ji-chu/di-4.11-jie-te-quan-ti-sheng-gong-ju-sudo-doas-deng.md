@@ -76,7 +76,7 @@ Please refer to doas.conf(5) for further details.
 
 需要将配置文件放在 `/usr/local/etc/doas.conf`，该文件默认不存在，需要自行创建。
 
-- `/usr/local/etc/doas.conf.sample` 内容如下，相比 sudo 而言，非常简单易懂：
+- `/usr/local/etc/doas.conf.sample` 内容如下，相比 sudo 而言，较为简洁明了：
 
 简要注释如下：
 
@@ -254,7 +254,7 @@ Defaults!/usr/local/sbin/visudo env_keep += "SUDO_EDITOR EDITOR VISUAL"
 
 ## This also helps prevent poorly written scripts from running
 ## arbitrary commands under sudo.
-## 这也有助于防止写得不好的脚本在 sudo 下执行任意命令。
+## 这也有助于防止编写不当的脚本在 sudo 下执行任意命令。
 
 Defaults secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
 ## 为 sudo 指定固定的安全 PATH 路径。
@@ -278,7 +278,7 @@ Defaults secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/b
 ##
 ## You may wish to keep some of the following environment variables
 ## when running commands via sudo.
-## 通过 sudo 运行命令时，你可能希望保留以下某些环境变量。
+## 通过 sudo 运行命令时，可能需要保留以下某些环境变量。
 
 ##
 ## Locale settings
@@ -376,7 +376,7 @@ root ALL=(ALL:ALL) ALL
 
 ```sh
 $ sudo su
-[sudo: authenticate] Password: # 此处同样不会显示任何输入内容，*** 这种掩码也没有
+[sudo: authenticate] Password: # 此处同样不会显示任何输入内容，亦无 `***` 等掩码提示
 #
 ```
 
