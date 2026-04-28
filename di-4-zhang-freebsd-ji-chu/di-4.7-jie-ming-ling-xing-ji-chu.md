@@ -1,6 +1,6 @@
 # 4.7 命令行基础
 
-命令行界面（Command Line Interface, CLI）作为类 UNIX 系统的核心交互方式，提供了直接、高效的系统操作手段。
+命令行界面（Command Line Interface, CLI）是类 UNIX 系统的主要交互方式，提供了直接操作系统的方法。
 
 ## 我是谁？
 
