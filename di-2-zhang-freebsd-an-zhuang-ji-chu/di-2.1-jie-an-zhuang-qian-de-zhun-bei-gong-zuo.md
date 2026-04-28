@@ -88,7 +88,7 @@ bsd-hardware.info. Hardware for BSD[EB/OL]. [2026-03-25]. <https://bsd-hardware.
 >
 > 若不明确 `amd64`、`i386`、`aarch64`、`armv7` 这些架构的区别，请选择 `amd64`（适用于大多数标准个人计算机，Apple 电脑除外）。
 
-选择好安装镜像的主要类型后，即可看到具体的下载列表：
+选择好安装镜像的主要类型后，将显示具体的下载列表：
 
 ![FreeBSD 镜像](../.gitbook/assets/freebsd-mirror-list.png)
 
