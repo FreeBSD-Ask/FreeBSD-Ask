@@ -235,7 +235,7 @@ Xshell 下载地址（输入用户名和邮件即可）：
 
 ### MobaXterm
 
-MobaXterm 是一款集成了 SCP 功能和多种网络工具的终端软件。
+MobaXterm 作为一款集成了 SCP 功能和多种网络工具的终端软件。
 
 MobaXterm 目前不支持中文，下载地址 <https://mobaxterm.mobatek.net/download-home-edition.html>，任选其一。
 
