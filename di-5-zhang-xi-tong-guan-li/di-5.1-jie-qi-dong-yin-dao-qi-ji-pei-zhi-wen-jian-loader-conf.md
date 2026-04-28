@@ -528,7 +528,7 @@ autoboot_delay="2"
 | d Warp A "stars warping" effect | d 扭曲 星星扭曲效果 |
 | Timeout Set the screen saver timeout interval | 超时 设置屏幕保护程序超时时间 |
 
-选择屏保图片：在主菜单中选择 `7 Console`，然后选择 `5 Saver     Configure the screen saver`，此处选择 `3 Beastie "BSD Daemon" animated screen saver (graphics)`。
+选择屏保样式：在主菜单中选择 `7 Console`，然后选择 `5 Saver     Configure the screen saver`，此处选择 `3 Beastie "BSD Daemon" animated screen saver (graphics)`。
 
 设定屏幕超时时间：在主菜单中选择 `7 Console`，然后选择 `5 Saver     Configure the screen saver`，再选择 `Timeout   Set the screen saver timeout interval`，单位是秒。
 
@@ -537,11 +537,11 @@ autoboot_delay="2"
 也可以通过手动编辑配置文件来设置屏幕保护程序。编辑 `/etc/rc.conf` 文件，添加以下配置：
 
 ```ini
-saver="beastie" # 选择屏保图片
+saver="beastie" # 选择屏保样式
 blanktime="300" # 屏幕超时时间
 ```
 
-可选的屏幕保护图片模块如下：
+可选的屏幕保护程序模块如下：
 
 ```sh
 # ls /boot/kernel/*saver*
