@@ -214,10 +214,10 @@ setenv XRAY_LOCATION_ASSET /usr/local/share/xray-core/
 
 - 启动：`service xray start`
 - 停止：`service xray stop`
-- 临时禁用自启：在 `/etc/rc.conf` 文件中注释掉 `xray_enable="YES"`
-- 永久禁用自启：使用 `service xray disable`
-- 重新启用自启：使用 `service xray enable`
+- 临时禁用自启动：在 `/etc/rc.conf` 文件中注释掉 `xray_enable="YES"`
+- 永久禁用自启动：使用 `service xray disable`
+- 重新启用自启动：使用 `service xray enable`
 
 ## 课后习题
 
-1. 在 FreeBSD 上安装 Xray-core 并通过系统服务方式运行，使用社区维护的 geosite/geoip 文件配置完整的分流规则，验证 geosite:cn 域名是否真的走直连，并将其作为补丁贡献到 Ports。
+1. 在 FreeBSD 上安装 Xray-core 并通过系统服务方式运行，使用社区维护的 geosite/geoip 文件配置完整的分流规则，验证 geosite:cn 域名是否确实走直连，并将其作为补丁贡献到 Ports。
