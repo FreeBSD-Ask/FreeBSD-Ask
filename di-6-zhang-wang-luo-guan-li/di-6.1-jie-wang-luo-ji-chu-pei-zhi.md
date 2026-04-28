@@ -86,7 +86,7 @@ lo0: flags=8049<UP,LOOPBACK,RUNNING,MULTICAST> metric 0 mtu 16384
 
 ### 配置动态 IPv4 地址
 
-如果网络有 DHCP 服务器，配置网络接口使用 DHCP 非常简单。FreeBSD 使用 dhclient(8) 作为 DHCP 客户端。dhclient(8) 将自动提供 IP 地址、子网掩码和默认路由器。
+如果网络有 DHCP 服务器，配置网络接口使用 DHCP 较为简便。FreeBSD 使用 dhclient(8) 作为 DHCP 客户端。dhclient(8) 将自动提供 IP 地址、子网掩码和默认路由器。
 
 >**注意**
 >
@@ -107,7 +107,7 @@ DHCPACK from 192.168.1.1
 bound to 192.168.1.19 -- renewal in 43200 seconds.
 ```
 
-可以在后台启动 dhclient(8) 客户端。这可能会导致依赖网络的程序出现问题，但在许多情况下能提供更快的启动速度。
+可在后台启动 dhclient(8) 客户端。这可能导致依赖网络的程序出现问题，但在许多情况下可提供更快的启动速度。
 
 要在后台执行 dhclient(8)，执行以下命令：
 
@@ -123,7 +123,7 @@ bound to 192.168.1.19 -- renewal in 43200 seconds.
 
 ### 配置静态 IPv4 地址
 
-也可以在命令行通过 ifconfig(8) 执行网络接口卡配置。但是，除非同时将这些配置添加到 `/etc/rc.conf` 文件，否则重启后将丢失记录。
+亦可在命令行通过 ifconfig(8) 执行网络接口卡配置。然除非同时将这些配置添加到 `/etc/rc.conf` 文件，否则重启后将丢失记录。
 
 可以通过执行以下命令设置 IP 地址：
 
