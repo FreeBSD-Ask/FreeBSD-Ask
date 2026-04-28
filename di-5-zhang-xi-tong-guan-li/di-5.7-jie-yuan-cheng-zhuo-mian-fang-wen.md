@@ -383,11 +383,11 @@ root     syslogd     1021 7   udp4   *:514                 *:*
 
 将左上 🖱️ 改为 👆。默认的鼠标操作不够便捷，亦可选择通过 OTG 连接鼠标和键盘来操控。
 
-![Remote Desktop FreeBSD](../.gitbook/assets/wrdp3.png)
+![Remote Desktop FreeBSD](../.gitbook/assets/windows-rdp-1.png)
 
 连接示意图（后台正在编译 Chromium，故占用会很高）：
 
-![Remote Desktop FreeBSD](../.gitbook/assets/wrdp4.png)
+![Remote Desktop FreeBSD](../.gitbook/assets/windows-rdp-2.png)
 
 ## 通过 FreeBSD 使用 XRDP 远程访问 Windows
 

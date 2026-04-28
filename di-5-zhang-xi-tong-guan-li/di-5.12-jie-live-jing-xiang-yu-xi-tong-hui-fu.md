@@ -32,7 +32,7 @@ FreeBSD 系统恢复可根据故障严重程度选择不同的方法，按侵入
 >
 > 如遇此类问题，可尝试使用 Ubuntu 24.04 或更高版本的 Live 模式对 ZFS 磁盘进行操作，例如还原快照等。
 >
-> ![Ubuntu ZFS](../.gitbook/assets/Ubuntu-zfs.png)
+> ![Ubuntu ZFS](../.gitbook/assets/ubuntu-zfs.png)
 
 将根文件系统挂载为可写：
 
