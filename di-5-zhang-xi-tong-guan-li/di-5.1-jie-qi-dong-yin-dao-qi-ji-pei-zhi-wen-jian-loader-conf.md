@@ -47,7 +47,7 @@ FreeBSD 安装程序安装的 MBR 基于 `/boot/boot0`。由于 MBR 末尾的分
 
 >**技巧**
 >
->在MBR的末端还有一直为 0x55AA 值大小为两个字节的扇区标记（Sector Marker）的签名字段。这个字通常还标注了扩展启动记录（EBR, extend boot record）和启动扇区（boot sector）的结束。
+>在MBR的末端还有一个值为 0x55AA 值大小为两个字节的扇区标记（Sector Marker）的签名字段。这个字通常还标注了扩展启动记录（EBR, Extended Boot Record）和启动扇区（boot sector）的结束。
 
 如果安装了 boot0 和多个操作系统，启动时将显示类似以下的消息：
 
