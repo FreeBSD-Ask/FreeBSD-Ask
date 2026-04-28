@@ -20,7 +20,7 @@
 
 ![分区方案选择](../.gitbook/assets/dual-boot-3.png)
 
-这里需要设置一个大的临时交换分区，该数值表示计划中的交换分区与 Windows 系统分区容量之和。这样设置是为了后续安装 Windows 时能够直接使用这部分空间，避免额外的分区操作。在本节中，交换分区（Swap）大小为 8 GB，其余 200 GB 空间预留给 Windows。请修改 `S Swap Size` 的大小。
+这里需要设置一个大的临时交换分区，该数值表示计划中的交换分区与 Windows 系统分区容量之和。如此设置是为了后续安装 Windows 时能够直接使用这部分空间，避免额外的分区操作。在本节中，交换分区（Swap）大小为 8 GB，其余 200 GB 空间预留给 Windows。请修改 `S Swap Size` 的大小。
 
 ![交换分区大小设置](../.gitbook/assets/dual-boot-4.png)
 
@@ -54,7 +54,7 @@ Device              Size     Used    Avail Capacity
 
 可以看到交换分区的大小是所设定的 208 GB（其中 200 GB 预留给 Windows 操作系统）。
 
-编辑 `/etc/fstab` 文件，在 swap 对应行的行首添加 `#` 字符将其注释，本例中该行是第三行，这样可以避免系统在启动时不挂载这个大的交换分区，为后续安装 Windows 作准备：
+编辑 `/etc/fstab` 文件，在 swap 对应行的行首添加 `#` 字符将其注释，本例中该行是第三行，以此避免系统在启动时挂载这个大的交换分区，为后续安装 Windows 作准备：
 
 ```sh
 # Device                Mountpoint      FStype  Options         Dump    Pass#
@@ -74,7 +74,7 @@ FreeBSD 安装完成后，接下来安装 Windows 系统。
 
 ![删除交换分区](../.gitbook/assets/dual-boot-6.png)
 
-然后点击创建分区（Create Partition），如果提示出错，点击刷新（Refresh）即可。Windows 安装程序会自动在未分配空间上创建它需要的分区，包括 MSR 分区、系统分区和恢复分区。
+然后点击创建分区（Create Partition），如果提示出错，点击刷新（Refresh）。Windows 安装程序会自动在未分配空间上创建它需要的分区，包括 MSR 分区、系统分区和恢复分区。
 
 然后选中 208 GB 的“磁盘 0 未分配空间”，点击“下一步”进行安装。
 
@@ -82,7 +82,7 @@ FreeBSD 安装完成后，接下来安装 Windows 系统。
 
 ## 还原交换分区（Swap）
 
-Windows 安装完成后，需要为 FreeBSD 还原交换分区。分配了 208 GB 空间，其中有 8 GB 是为交换分区预留的。现在需要将其还原。需要用到工具 [DiskGenius](https://www.diskgenius.com/)。
+Windows 安装完成后，需要为 FreeBSD 还原交换分区。分配了 208 GB 空间，其中有 8 GB 是为交换分区预留的。现在需要将其还原。需要使用工具 [DiskGenius](https://www.diskgenius.com/)。
 
 ![DiskGenius 主界面](../.gitbook/assets/dual-boot-8.png)
 
