@@ -2,7 +2,7 @@
 
 ## GNU 操作系统与自由软件运动的缘起
 
-可以从 Linux 内核文档入手理解 GNU 与自由软件运动。根据 Linux Kernel Documentation. 1. Introduction — The Linux Kernel documentation[EB/OL]. [2026-03-26]. <https://www.kernel.org/doc/html/latest/process/1.Intro.html>（另见 Linux Kernel Documentation. Linux kernel licensing rules — The Linux Kernel documentation[EB/OL]. [2026-03-26]. <https://www.kernel.org/doc/html/latest/process/license-rules.html>）：
+可以从 Linux 内核文档切入理解 GNU 与自由软件运动。根据 Linux Kernel Documentation. 1. Introduction — The Linux Kernel documentation[EB/OL]. [2026-03-26]. <https://www.kernel.org/doc/html/latest/process/1.Intro.html>（另见 Linux Kernel Documentation. Linux kernel licensing rules — The Linux Kernel documentation[EB/OL]. [2026-03-26]. <https://www.kernel.org/doc/html/latest/process/license-rules.html>）：
 
 > Code is contributed to the Linux kernel under a number of licenses, but all code must be compatible with version 2 of the GNU General Public License (GPLv2), which is the license covering the kernel distribution as a whole. In practice, that means that all code contributions are covered either by GPLv2 (with, optionally, language allowing distribution under later versions of the GPL) or the three-clause BSD license. Any contributions which are not covered by a compatible license will not be accepted into the kernel.（Linux 内核中贡献的代码是由多种许可证授权的，但所有代码都必须与 GNU 通用公共许可证第 2 版（GPLv2）兼容，因为 GPLv2 捆绑了所有内核发行文件。实际上这意味着，一切贡献的代码要么受 GPLv2 约束（可选地包含允许在 GPL 后续版本下发布的条款），要么受三条款 BSD 许可证约束。那些由非兼容许可证授权的贡献都不会被内核接纳）
 
