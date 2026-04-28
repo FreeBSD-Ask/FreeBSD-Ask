@@ -80,7 +80,7 @@ VirtualBox 安装完成后，按照以下步骤创建并配置虚拟机。以下
 
 ![桥接网络设置](../.gitbook/assets/virtualbox-bridge-network.png)
 
-设置后执行 `# dhclient em0` 即可（为了长期生效可在 `/etc/rc.conf` 文件中加入 `ifconfig_em0="DHCP"`）。
+设置后执行 `# dhclient em0`（为了长期生效可在 `/etc/rc.conf` 文件中加入 `ifconfig_em0="DHCP"`）。
 
 如果无法访问互联网，请将 DNS 设置为 `223.5.5.5`。如不清楚具体操作，请参阅本章其他部分。
 
