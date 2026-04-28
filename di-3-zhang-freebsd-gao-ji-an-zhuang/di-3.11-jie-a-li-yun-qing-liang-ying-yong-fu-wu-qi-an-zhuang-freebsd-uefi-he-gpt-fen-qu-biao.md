@@ -213,9 +213,9 @@ default via 172.24.63.253 dev eth0 proto dhcp src 172.24.0.80 metric 100
 
 ![调整可调参数](../.gitbook/assets/cloud-zfs-tunables.png)
 
-请在该界面输入 `set kern.maxphys=65536`，设置内核最大物理 I/O 大小为 65536 字节，大块 I/O 有时会触发驱动或缓存问题，并按回车键进行确认，再输入 `boot` 按回车键方可正常启动。
+请在该界面输入 `set kern.maxphys=65536`，设置内核最大物理 I/O 大小为 65536 字节（大块 I/O 有时会触发驱动或缓存问题），按回车键确认，再输入 `boot` 并按回车键方可正常启动。
 
-随后正常执行安装流程即可，选择 ZFS 分区方式。
+随后正常执行安装流程，选择 ZFS 分区方式。
 
 ![安装 FreeBSD 系统](../.gitbook/assets/cloud-zfs-install.png)
 
