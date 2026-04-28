@@ -6,35 +6,21 @@
 >
 >Wi-Fi 并不是任何单词的缩写。这只是 [Wi-Fi 联盟](https://www.wi-fi.org/)（Wi-Fi Alliance）持有的注册商标，并无任何引申义，如“Wireless Fidelity”。（Doctorow C. WiFi isn’t short for “Wireless Fidelity”[EB/OL]. (2005-11-08)[2026-04-21]. <https://boingboing.net/2005/11/08/wifi-isnt-short-for.html>.）
 
-## 附录：更新系统版本后无法使用无线网络
+## 快速连接（基于 COMFAST CF-912AC 1200M 802.11AC）
 
-### 固件与系统更新的兼容性问题
+### 无线网络配置
 
-在 FreeBSD 中，固件（Firmware）是硬件设备正常工作所需的底层软件，它提供了硬件设备与操作系统内核之间的通信接口。
+基本的无线网络由多个站点组成，这些站点通过在 2.4GHz、5GHz 或 6GHz 频段广播的无线电进行通信。配置无线网络有三个基本步骤：
 
-固件与内核版本之间存在紧密的耦合关系，这是因为固件接口可能随内核版本更新而发生变化，系统版本更新后可能导致原有固件与新内核不兼容。因此，在更新 FreeBSD 系统后，如果遇到无线网络问题，应首先检查固件兼容性。
+1. 扫描并选择接入点
+2. 认证站点
+3. 配置 IP 地址或使用 DHCP
 
-### 固件重新获取方法
-
-如果在更新系统版本后无法使用无线网络，需要重新获取与当前内核版本兼容的固件。FreeBSD 提供了 `fwget` 工具用于自动获取和安装所需固件：
-
-```sh
-# fwget
-```
-
-如果当前系统没有网络连接，可以通过 USB 网络共享等方式临时获得网络连接后再执行上述命令；也可手动从 [https://mirrors.ustc.edu.cn/freebsd-pkg/FreeBSD%3A14%3Aamd64/kmods_latest_3/All/](https://mirrors.ustc.edu.cn/freebsd-pkg/FreeBSD%3A14%3Aamd64/kmods_latest_3/All/) 等镜像站点下载所需固件包，然后使用以下命令进行安装：
-
-```sh
-# pkg add /path/to/firmware.pkg
-```
-
-## 一般无线网卡驱动方式（基于 COMFAST CF-912AC 1200M 802.11AC）
-
-### 示例网卡选择说明
+### 示例网卡
 
 本节以 COMFAST CF-912AC 1200M 802.11AC 无线网卡为例，介绍一般无线网卡的驱动配置方法。该网卡采用 Realtek 芯片组，在 FreeBSD 中具有较好的兼容性。请注意，其他采用 Realtek 芯片的网卡配置方法类似。
 
-### 硬件识别方法
+### 识别无线网卡
 
 在配置无线网络前，需要确认系统是否能够识别无线网卡。可通过查询内核无线设备列表来确认硬件识别状态，该命令会显示系统中可用的无线网络接口设备：
 
@@ -79,9 +65,9 @@ wlan0: flags=8802<BROADCAST,SIMPLEX,MULTICAST> metric 0 mtu 1500
 
 正常情况下，输出中应包含 `wlan0` 接口。
 
-### 扫描 WiFi
+### 扫描无线网络
 
-在连接到无线网络之前，需要先扫描周围可用的无线网络。启用 `wlan0` 接口并执行扫描操作：
+在连接到无线网络之前，需要先扫描周围可用的无线网络。可以使用 ifconfig(8) 扫描可用的无线网络：
 
 ```sh
 # ifconfig wlan0 up scan
@@ -92,7 +78,17 @@ SSID/MESH ID                      BSSID              CHAN RATE    S:N     INT CA
 test_5G                           50:d6:c5:93:d7:64   36   54M  -78:-95   100 EP   APCHANREP WPA RSN WPS BSSLOAD HTCAP VHTCAP VHTOPMODE WME
 ```
 
-扫描结果会显示可用的无线网络列表，包括 SSID、BSSID、信道、信号强度等信息。
+参数说明：
+
+- **SSID/MESH ID** 标识网络名称。
+- **BSSID** 标识接入点的 MAC 地址。
+- **CHAN** 信道。
+- **RATE** 速率。
+- **S:N** 信号强度和质量。
+- **INT** 信标间隔。
+- **CAPS** 字段标识每个网络的类型和运行站点的功能。
+
+扫描结果会显示可用的无线网络列表。
 
 ### SSID 的定义与作用
 
@@ -125,13 +121,15 @@ test_5G                           50:d6:c5:93:d7:64   36   54M  -78:-95   100 EP
 
 第一条命令重启网络接口服务，第二条命令为 `wlan0` 接口获取动态 IP 地址。
 
-### WPA 安全机制概述
+### 使用 WPA2 认证
 
-对于加密的无线网络，需要使用 Wi-Fi 保护访问（Wi-Fi Protected Access，WPA）配置文件进行连接。WPA 是目前主流的无线网络安全协议，提供了数据加密与身份认证功能。
+对于加密的无线网络，需要使用 Wi-Fi 保护访问（Wi-Fi Protected Access，WPA）配置文件进行连接。WPA 2/3 是目前主流的无线网络安全协议，提供了数据加密与身份认证功能。
 
-创建 `/etc/wpa_supplicant.conf` 配置文件，内容如下：
+无线网络中的认证过程由 wpa_supplicant(8) 管理。创建 `/etc/wpa_supplicant.conf` 配置文件，内容如下：
 
 ```ini
+ctrl_interface=/var/run/wpa_supplicant   # 可选，控制接口路径，用于 wpa_supplicant 与 wpa_cli 等工具通信
+fast_reauth=1                             # 可选，启用快速重新认证，加快已认证网络的重连速度
 network={
 ssid="test_5G"
 psk="freebsdcn"
@@ -143,7 +141,21 @@ psk="freebsdcn"
 - `ssid` 指定要连接的无线网络 SSID（WiFi 名称），此处示例为 `test_5G`
 - `psk` 指定无线网络的密码，此处示例为 `freebsdcn`
 
-在 `/etc/rc.conf` 文件中添加或修改相关配置条目：
+如果您无法获得无线网络的服务集标识符（SSID）和预共享密钥（PSK），请尝试联系产品客服或在确认稳妥后重置网络设备。
+
+下一步在 `/etc/rc.conf` 文件中配置无线连接。使用动态地址：
+
+```sh
+# sysrc ifconfig_wlan0="WPA DHCP"
+```
+
+然后重启网络：
+
+```sh
+# service netif restart
+```
+
+如果网络连接正常再进行永久性配置。在 `/etc/rc.conf` 文件中添加或修改相关配置条目：
 
 ```ini
 wlans_rtwn0="wlan0"                      # 将物理无线设备 rtwn0 绑定到 wlan0 接口
@@ -306,6 +318,29 @@ if_bwn_load="YES"
 ```ini
 wlans_bwn0="wlan0"
 ```
+
+## 附录：更新系统版本后无法使用无线网络
+
+### 固件与系统更新的兼容性问题
+
+在 FreeBSD 中，固件（Firmware）是硬件设备正常工作所需的底层软件，它提供了硬件设备与操作系统内核之间的通信接口。
+
+固件与内核版本之间存在紧密的耦合关系，这是因为固件接口可能随内核版本更新而发生变化，系统版本更新后可能导致原有固件与新内核不兼容。因此，在更新 FreeBSD 系统后，如果遇到无线网络问题，应首先检查固件兼容性。
+
+### 固件重新获取方法
+
+如果在更新系统版本后无法使用无线网络，需要重新获取与当前内核版本兼容的固件。FreeBSD 提供了 `fwget` 工具用于自动获取和安装所需固件：
+
+```sh
+# fwget
+```
+
+如果当前系统没有网络连接，可以通过 USB 网络共享等方式临时获得网络连接后再执行上述命令；也可手动从 [https://mirrors.ustc.edu.cn/freebsd-pkg/FreeBSD%3A14%3Aamd64/kmods_latest_3/All/](https://mirrors.ustc.edu.cn/freebsd-pkg/FreeBSD%3A14%3Aamd64/kmods_latest_3/All/) 等镜像站点下载所需固件包，然后使用以下命令进行安装：
+
+```sh
+# pkg add /path/to/firmware.pkg
+```
+
 
 ## 附录：特殊型号需要编译内核
 
