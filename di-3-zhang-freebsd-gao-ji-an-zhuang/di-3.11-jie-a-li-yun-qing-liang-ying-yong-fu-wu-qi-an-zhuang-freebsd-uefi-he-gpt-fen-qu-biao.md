@@ -4,7 +4,7 @@
 
 ## 服务器环境
 
-本节首先介绍服务器环境的准备工作，这是后续操作的基础。
+本节首先介绍服务器环境的准备工作。
 
 ![Rocky Linux 9](../.gitbook/assets/cloud-rocky-linux-1.png)
 
