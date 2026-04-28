@@ -308,7 +308,7 @@ FreeBSD 具有诸多优势，但也面临着现实的挑战。
 
 - 1961 年分时操作系统（Timesharing OS）
 
-在 20 世纪 60 年代初，分时操作系统诞生了。1961 年 11 月，麻省理工学院的 Fernando Corbató 在 IBM 709 上首次演示了兼容分时系统（CTSS），这是最早的分时系统之一。同期，英国曼彻斯特项目（Manchester Project in England）设计的 Atlas 计算机上也实现了 Atlas 监控程序，该系统于 1962 年 12 月正式投入运行，首次将虚拟内存投入实际使用——虚拟内存的概念则由德国物理学家 Fritz-Rudolf Güntsch 于 1956 年在其博士论文中率先提出（参见：Denning P J. Virtual Memory[J]. ACM Computing Surveys, 1970, 2(3): 153-189）。在那个时代，分时共享系统意味着两个人共用同一台计算机，通常需要安排一张小时时间表来规划他们使用计算机的时间。
+在 20 世纪 60 年代初，分时操作系统诞生了。1961 年 11 月，麻省理工学院的 Fernando Corbató 在 IBM 709 上首次演示了兼容分时系统（CTSS），这是最早的分时系统之一。同期，英国曼彻斯特项目（Manchester Project in England）设计的 Atlas 计算机上也实现了 Atlas 监控程序，该系统于 1962 年 12 月正式投入运行，首次将虚拟存储器投入实际使用——虚拟存储器的概念则由德国物理学家 Fritz-Rudolf Güntsch 于 1956 年在其博士论文中率先提出（参见：Denning P J. Virtual Memory[J]. ACM Computing Surveys, 1970, 2(3): 153-189）。在那个时代，分时共享系统意味着两个人共用同一台计算机，通常需要安排一张小时时间表来规划他们使用计算机的时间。
 
 - 1964 年 MULTICS（**多路复用** 信息和计算服务）
 
