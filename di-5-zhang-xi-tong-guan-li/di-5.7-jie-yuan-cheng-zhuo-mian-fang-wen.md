@@ -272,9 +272,9 @@ your environment.
 配置守护进程
 
 ```sh
-# service xrdp enable          # 设置 xrdp 服务开机自启
-# service xrdp-sesman enable   # 设置 xrdp-sesman 服务开机自启
-# service dbus enable          # 设置 D-Bus 服务开机自启
+# service xrdp enable          # 设置 xrdp 服务开机自启动
+# service xrdp-sesman enable   # 设置 xrdp-sesman 服务开机自启动
+# service dbus enable          # 设置 D-Bus 服务开机自启动
 ```
 
 编辑 `/usr/local/etc/xrdp/startwm.sh` 文件，找到 `#### start desktop environment`，修改如下：
