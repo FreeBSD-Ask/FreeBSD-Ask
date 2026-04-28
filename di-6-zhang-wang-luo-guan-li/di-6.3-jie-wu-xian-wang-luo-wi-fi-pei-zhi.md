@@ -349,7 +349,6 @@ wlans_bwn0="wlan0"
 # pkg add /path/to/firmware.pkg
 ```
 
-
 ## 附录：特殊型号需要编译内核
 
 对于特殊型号的博通无线网卡，可能需要重新编译内核才能获得完整支持。
