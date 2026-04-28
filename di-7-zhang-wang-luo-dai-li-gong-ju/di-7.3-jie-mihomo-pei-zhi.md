@@ -340,4 +340,4 @@ $ clashctl config regen
 
 ## 课后习题
 
-1. 重构 Mihomo RC 脚本，将其与 bash 解耦并移植到 FreeBSD 默认的 sh 环境，验证功能完整性并对比与原脚本的差异。
+1. 分析 Mihomo RC 脚本对 bash 的依赖点（如数组语法、字符串处理等），将其改写为兼容 FreeBSD 默认 sh 的版本，记录改写过程中遇到的语法差异与替代方案。
