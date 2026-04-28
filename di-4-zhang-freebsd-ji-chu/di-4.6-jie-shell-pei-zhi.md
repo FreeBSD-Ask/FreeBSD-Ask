@@ -272,7 +272,7 @@ alias ls ls -G
 
 并重新登录。
 
-- 如何让 FreeBSD 的 csh 像 Bash 那样按 Tab 列出无法补全的候选文件？在 `~/.cshrc` 文件中加入：
+- 如何使 FreeBSD 的 csh 像 Bash 那样按 Tab 列出无法补全的候选文件？在 `~/.cshrc` 文件中加入：
 
 ```sh
 set filec              # 启用命令行文件名补全
