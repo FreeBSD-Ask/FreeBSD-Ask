@@ -112,7 +112,7 @@ FreeBSD-14.2-RELEASE-amd64-mini-memstick.img.xz    107445036      2024-Nov-29 13
 上述列表中，第一列为文件名，第二列为文件大小，第三列为文件构建日期（非发行日期）。
 
 | 首列 | 说明 |
-| :--- | :--- |
+| ---- | ---- |
 | Parent directory/ - - | 指向上级目录 |
 | CHECKSUM.SHA256-FreeBSD-14.2-RELEASE-amd64 | 本页所有镜像的 SHA256 校验和 |
 | CHECKSUM.SHA512-FreeBSD-14.2-RELEASE-amd64 | 本页所有镜像的 SHA512 校验和 |
