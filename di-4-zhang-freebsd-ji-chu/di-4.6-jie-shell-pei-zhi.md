@@ -270,7 +270,7 @@ touch ~/.bash_profile         # 创建 ~/.bash_profile 文件，用于配置 Bas
 alias ls ls -G
 ```
 
-并重新登录即可。
+并重新登录。
 
 - 如何让 FreeBSD 的 csh 像 Bash 那样按 Tab 列出无法补全的候选文件？在 `~/.cshrc` 文件中加入：
 
