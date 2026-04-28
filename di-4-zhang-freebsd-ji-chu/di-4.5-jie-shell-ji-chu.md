@@ -88,7 +88,7 @@ Linux 中常见的 Shell 通常是 bash（Bourne Again Shell，是对“Born Aga
 - 补全命令
 
 ```sh
-# lo # 若此时按 Tab 键，输出如下。可以再输一个字母再按一次 Tab 键以查看更多匹配项
+# lo # 若此时按 Tab 键，输出如下。可继续输入一个字母后再次按 Tab 键以查看更多匹配项
 local                    localedef                login
 local-unbound            locate                   logins
 local-unbound-anchor     lock                     logname
