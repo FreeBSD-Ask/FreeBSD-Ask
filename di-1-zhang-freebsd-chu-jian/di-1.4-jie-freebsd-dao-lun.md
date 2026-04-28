@@ -443,7 +443,7 @@ CHERI（Capability Hardware Enhanced RISC Instructions）项目源于 DARPA 的 
 
 - 2012 年 Poudriere
 
-Poudriere 作为一款通过 Jail 测试 port，并构建 FreeBSD 镜像的工具，它被添加到了 Ports 中。
+Poudriere 是一款通过 Jail 测试 port，并构建 FreeBSD 镜像的工具，它被添加到了 Ports 中。
 
 - 2012 年 4 月 12 日 Clang/LLVM
 
