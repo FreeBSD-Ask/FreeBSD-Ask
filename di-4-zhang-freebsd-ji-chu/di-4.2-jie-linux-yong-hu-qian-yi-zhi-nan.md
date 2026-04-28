@@ -120,7 +120,7 @@ FreeBSD 基本系统几乎不包含任何与 BSD 协议不兼容的软件。
 | `free` | `sysutils/freecolor` | 显示内存使用情况 | FreeBSD 未提供 `free` 命令，因为该命令依赖 Linux 特性，通常由 `procps` 包提供。如确实需要 `free`，可使用 <https://github.com/j-keck/free>，其他替代命令包括 `vmstat` |
 | `lscpu` | `sysutils/lscpu` | 显示处理器信息 | / |
 | glibc | FreeBSD libc | C 库 | / |
-| GCC | LLVM + Clang | 编译器、编译链工具 | 非要用也可以安装 `devel/gcc` |
+| GCC | LLVM + Clang | 编译器、编译链工具 | 如有特殊需要也可以安装 `devel/gcc` |
 | `vim` | `editors/vim` | 文本编辑器 | FreeBSD 的 `vi` 不是软链接到 `vim`，而是早期的 `nvi` |
 | `wget` | `ftp/wget` | 下载器 | 系统默认的下载工具是 `fetch` |
 | bash | `shells/bash` | Shell | 系统默认的 Shell 是 `sh`（非软链接）。可以自行修改。 |
