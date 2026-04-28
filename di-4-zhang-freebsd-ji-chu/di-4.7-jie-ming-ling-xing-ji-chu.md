@@ -83,9 +83,9 @@ login:
   - `root@ykla:/`：
   - `root`：当前用户是 root
   - `@`：“谁”在“xx”主机上
-  - `ykla`：这里是主机名，和用户 ykla 无关。可以随便起不一样的主机名
+  - `ykla`：这里是主机名，和用户 ykla 无关。主机名可自行设定
   - `:/`：代表当前位于 `/` 路径下
-- ② 注意到提示符号的变化没有？root 是 `#`，普通用户是 `$`（csh 是 `%`）
+- ② 注意提示符号的变化：root 是 `#`，普通用户是 `$`（csh 是 `%`）
 - ③ 如果仅输入 `su` 并回车，命令的含义是从当前用户切换到 root 账户（如果已经是 root，则不会有任何变化）。非 wheel 组成员不能直接 `su` 到 root，否则会报错 `sorry`，但可以 `su` 到其他用户。
 - ④ 从普通用户切换到 root，需要 root 账户的登录密码。
 - ⑤ 输入 `exit` 可退出当前用户，如果是唯一登录的用户，将退出登录到 TTY。
@@ -324,7 +324,7 @@ $ type cd
 cd is a shell builtin
 ```
 
-在 FreeBSD 中，除了上述 Shell 内置命令外（参见：sh(1)[EB/OL]. [2026-03-26]. <https://man.freebsd.org/cgi/man.cgi?sh(1)>），常用命令都是基本系统自带的，不属于任何一个包。比如 `ls` 命令，其源代码位于 `freebsd-src/bin/ls/`[EB/OL]. [2026-03-26]. <https://github.com/freebsd/freebsd-src/tree/main/bin/ls>。可见 FreeBSD 系统是一个有机整体，而非由不同人员或团队维护的软件包简单拼凑而成。
+在 FreeBSD 中，除了上述 Shell 内置命令外（参见：sh(1)[EB/OL]. [2026-03-26]. <https://man.freebsd.org/cgi/man.cgi?sh(1)>），常用命令都是基本系统自带的，不属于任何一个包。例如 `ls` 命令，其源代码位于 `freebsd-src/bin/ls/`[EB/OL]. [2026-03-26]. <https://github.com/freebsd/freebsd-src/tree/main/bin/ls>。可见 FreeBSD 系统是一个有机整体，而非由不同人员或团队维护的软件包简单拼凑而成。
 
 如果配置了 pkgbase，则输出类似：
 
@@ -333,7 +333,7 @@ cd is a shell builtin
 /bin/ls was installed by package FreeBSD-runtime-15.snap20250313173555
 ```
 
-如果缺少了哪个命令，一般可以通过安装相应的软件包来获取，比如 `lspci` 命令，来自软件包 `sysutils/pciutils`。但是也有很多命令存在 Linux 主义问题，不兼容其他操作系统，比如 `ip` 命令，来自软件包 iproute2。
+如果缺少了哪个命令，一般可以通过安装相应的软件包来获取，比如 `lspci` 命令，来自软件包 `sysutils/pciutils`。然而也有很多命令存在 Linux 主义问题，不兼容其他操作系统，比如 `ip` 命令，来自软件包 iproute2。
 
 ## 常用命令
 
@@ -383,7 +383,7 @@ $ ls -a
 .config		.local		.mozilla	下载		模板
 ```
 
-试试不加选项 `-a` 呢？
+若不加选项 `-a`：
 
 ```sh
 ykla@ykla:~ $ ls
