@@ -569,7 +569,7 @@ $ rm -rf /home/ykla/test/
 将文件 `test` 移动到 `/home/ykla`：
 
 ```sh
-$ mv -v test /home/ykla # -v 选项可以帮我们看到文件的变动，是 verbose 的缩写，即“啰嗦”一些，意为输出详细信息
+$ mv -v test /home/ykla # -v 选项用于显示文件变动详情，是 verbose 的缩写，意为输出详细信息
 test -> /home/ykla/test
 ```
 
