@@ -4,7 +4,7 @@
 
 >**技巧**
 >
->Wi-Fi 并不是任何单词的缩写。这只是 [Wi-Fi 联盟](https://www.wi-fi.org/)（Wi-Fi Alliance）持有的注册商标，并无任何引申义，如“Wireless Fidelity”。（Doctorow C. WiFi isn’t short for “Wireless Fidelity”[EB/OL]. (2005-11-08)[2026-04-21]. <https://boingboing.net/2005/11/08/wifi-isnt-short-for.html>.）
+>Wi-Fi 并不是任何单词的缩写。该词仅为 [Wi-Fi 联盟](https://www.wi-fi.org/)（Wi-Fi Alliance）持有的注册商标，并无任何引申义，如“Wireless Fidelity”。（Doctorow C. WiFi isn’t short for “Wireless Fidelity”[EB/OL]. (2005-11-08)[2026-04-21]. <https://boingboing.net/2005/11/08/wifi-isnt-short-for.html>.）
 
 ## 快速连接（基于 COMFAST CF-912AC 1200M 802.11AC）
 
@@ -321,7 +321,7 @@ wlans_bwn0="wlan0"
 
 ## 无线网络故障排除
 
-如果扫描时未列出接入点，检查配置是否未将无线设备限制在有限的信道集合中。
+如果扫描时未列出接入点，可以尝试切换路由器的信道，或者将协议降级到 WiFi 4。
 
 如果设备无法与接入点关联，验证配置是否与接入点上的设置匹配。这包括认证方案和任何安全协议。尽可能简化配置。如果使用 WPA2 或 WPA 等安全协议，将接入点配置为开放认证和无安全性，查看流量是否可以通过。
 
