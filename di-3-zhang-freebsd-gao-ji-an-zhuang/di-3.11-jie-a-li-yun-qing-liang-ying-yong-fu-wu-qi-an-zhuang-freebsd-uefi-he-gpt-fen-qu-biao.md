@@ -240,7 +240,7 @@ root@freebsd:~ # gpart show
 
 观察发现，系统已自动扩展磁盘容量。
 
-再查看 FreeBSD 系统网络接口信息：
+接下来查看 FreeBSD 系统网络接口信息：
 
 ```sh
 root@freebsd:~ # ifconfig
