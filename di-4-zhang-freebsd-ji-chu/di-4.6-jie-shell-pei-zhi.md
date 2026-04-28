@@ -8,7 +8,7 @@ Shell 的配置体系通过一系列初始化文件（initialization files）实
 
 对于 C Shell（csh/tcsh），登录 Shell 读取 `/etc/csh.cshrc`、`/etc/csh.login`、`~/.cshrc`、`~/.login`。
 
-理解这一加载顺序对于正确配置环境变量和 Shell 别名至关重要。
+理解这一加载顺序有助于正确配置环境变量和 Shell 别名。
 
 ## Zsh
 
