@@ -174,8 +174,6 @@ twm: created fontset with 2 fonts (15 missing) for "fixed"
 
 ## 课后习题
 
-1. 研究 `virtio_gpu` 和 `vtgpu` 驱动在 FreeBSD ARM64 上的实现状态，分析为什么禁用它们可以让 Xorg 启动但失去画面输出，尝试寻找一个两全其美的配置。
-
-2. 分析 UTM 与 QEMU 的关系，研究 UTM 如何封装 QEMU 并提供图形化界面，尝试直接使用 QEMU 命令行启动 FreeBSD 并对比差异。
-
-3. 比较 UTM 在 App Store 收费版与 GitHub 免费版的功能差异。
+1. 查阅 FreeBSD ARM64 上 `virtio_gpu` 和 `vtgpu` 驱动的实现，分析禁用它们后 Xorg 启动但失去画面输出的技术原因，探讨可行的配置方案。
+2. 分析 UTM 对 QEMU 的封装机制，比较直接使用 QEMU 命令行与通过 UTM 图形界面启动 FreeBSD 在设备配置和性能表现上的差异。
+3. 比较 UTM 在 App Store 收费版与 GitHub 免费版的功能差异，分析其商业模式对开源项目可持续发展的影响。
