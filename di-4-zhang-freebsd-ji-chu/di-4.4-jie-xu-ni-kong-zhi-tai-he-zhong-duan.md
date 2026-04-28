@@ -83,7 +83,7 @@ Login incorrect
 login:
 ```
 
-如果读者连用户名都无从得知，建议找回 `root` 密码后，查看系统中有哪些用户账户，或者直接重装系统会更方便。
+如果读者连用户名都无从得知，建议找回 `root` 密码后，查看系统中有哪些用户账户，或者直接重装系统更为便捷。
 
 ### 参考文献
 
@@ -139,7 +139,7 @@ ttyv8	"/usr/local/bin/xdm -nodaemon"	xterm	off secure
 
 > **技巧**
 >
->如果操作失误，但是配置了 SSHD 服务，仍可通过 SSH 远程连接 FreeBSD 系统，将生成一个 pts(4) 伪终端 `/dev/pts/n`。
+>如果操作失误，但若配置了 SSHD 服务，仍可通过 SSH 远程连接 FreeBSD 系统，将生成一个 pts(4) 伪终端 `/dev/pts/n`。
 >
 >```sh
 >$ w
@@ -189,7 +189,7 @@ Enter root password, or ^D to go multi-user
 Password:
 ```
 
-将此设置更改为 `insecure` 时要小心！如果忘记了 root 密码，仍然可以借助安装介质启动进入单用户模式，但对于不熟悉 FreeBSD 启动过程的人来说可能会比较困难。
+将此设置更改为 `insecure` 时需谨慎。如果忘记了 root 密码，仍然可以借助安装介质启动进入单用户模式，但对于不熟悉 FreeBSD 启动过程的人来说可能会比较困难。
 
 ## 调整引导界面和 TTY 分辨率
 
