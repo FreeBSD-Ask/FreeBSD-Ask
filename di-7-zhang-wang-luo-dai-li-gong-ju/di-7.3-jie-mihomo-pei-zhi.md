@@ -142,7 +142,7 @@ service mihomo status
 sysrc mihomo_config="https://xxxx.yyy"
 ```
 
-- GeoIP 数据用于地理位置判断，主要根据 IP 地址的地理归属进行流量分流或规则匹配，此为实现智能分流的基础数据：
+- GeoIP 数据用于地理位置判断，主要根据 IP 地址的地理归属进行流量分流或规则匹配，是实现智能分流的基础数据：
 
 ```sh
 sysrc mihomo_geoip="https://ghfast.top/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip.dat" # 可选，但建议使用
@@ -156,7 +156,7 @@ sysrc mihomo_extra_flags="-m" # 可选，但建议使用
 
 - `-m`：启用 geodata 模式，使 Mihomo 使用 geosite.dat 和 geoip.dat 文件进行规则匹配，而非默认的 site.dat 和 ip.dat。
 
-- 指定运行 Mihomo 服务的用户身份，此为安全实践的重要组成部分：
+- 指定运行 Mihomo 服务的用户身份，此系安全实践的重要组成部分：
 
 ```sh
 sysrc mihomo_user="mihomo"  # 默认用户是 root
