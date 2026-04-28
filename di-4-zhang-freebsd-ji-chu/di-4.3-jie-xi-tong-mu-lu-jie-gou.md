@@ -196,16 +196,9 @@ dr-xr-xr-x   2 root    wheel   schg  2 Apr 13 12:38 /var/empty
 
 参数解释：在长格式（`-l`）输出中包含文件标志（`-o`），并且将目录视为普通文件列出而不递归（`-d`）。
 
-FreeBSD ls 与 GNU ls 比较：
-
-| 参数 | FreeBSD `ls` 行为 | GNU `ls` 行为 |
-| ---- | ----------------- | ------------- |
-| `-o` | 显示长格式 + 文件 flags（文件标志） | 等同 `-l`，但不显示属组（group） |
-| `-l` | 长格式（权限 / 属主 / 属组 / 时间等） | 长格式（权限 / 属主 / 属组 / 时间等） |
-| `-G` | 启用彩色输出 | 不支持该参数 |
-| `--color` | 不支持 | 启用彩色输出 |
-| `--group-directories-first` | 不支持 | 目录优先排序（目录排在文件前） |
-| 文件 flags（flags） | 支持（如 `schg`, `uchg` 等） | 不支持 |
+>**技巧**
+>
+>OpenSSH 使用特权分离（privilege separation）架构，预认证阶段的 chroot 目录为 `/var/empty`，该目录必须为空且仅 root 可写。
 
 ## 参考文献
 

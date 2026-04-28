@@ -223,7 +223,17 @@ usage: ls [-ABCFGHILPRSTUWZabcdfghiklmnopqrstuvwxy1,] [--color=when] [-D format]
 > **技巧**
 >
 > 命令前面的 `#` 表示什么意思？`#` 在 Shell 当中一般是起注释作用（由 [POSIX.1-2024](https://pubs.opengroup.org/onlinepubs/9799919799/utilities/V3_chap02.html) 规定），相当于 C 语言中的 `//`。意味着后边的文字只起到说明作用，不起实际作用。
->
+
+FreeBSD ls 与 GNU ls 比较：
+
+| 参数 | FreeBSD `ls` 行为 | GNU `ls` 行为 |
+| ---- | ----------------- | ------------- |
+| `-o` | 显示长格式 + 文件 flags（文件标志） | 等同 `-l`，但不显示属组（group） |
+| `-l` | 长格式（权限 / 属主 / 属组 / 时间等） | 长格式（权限 / 属主 / 属组 / 时间等） |
+| `-G` | 启用彩色输出 | 不支持该参数 |
+| `--color` | 不支持 | 启用彩色输出 |
+| `--group-directories-first` | 不支持 | 目录优先排序（目录排在文件前） |
+| 文件 flags（flags） | 支持（如 `schg`, `uchg` 等） | 不支持 |
 
 ## 命令的执行与中断
 
