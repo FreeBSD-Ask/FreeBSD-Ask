@@ -515,8 +515,8 @@ autoboot_delay="2"
 | ---- | ---- |
 | 1 None Disable the screensaver | 1 无 禁用屏幕保护程序 |
 | 2 Blank Blank screen | 2 空白 显示空白屏幕 |
-| 3 Beastie "BSD Daemon" animated screen saver (graphics) | 3 Beastie "BSD Daemon" 动画屏幕保护程序（图形） |
-| 4 Daemon "BSD Daemon" animated screen saver (text) | 4 Daemon "BSD Daemon" 动画屏幕保护程序（文字） |
+| 3 Beastie "BSD Daemon" animated screen saver (graphics) | 3 Beastie “BSD Daemon” 动画屏幕保护程序（图形） |
+| 4 Daemon "BSD Daemon" animated screen saver (text) | 4 Daemon “BSD Daemon” 动画屏幕保护程序（文字） |
 | 5 Dragon Dragon screensaver (graphics) | 5 龙 动画屏幕保护程序（图形） |
 | 6 Fade Fade out effect screen saver | 6 淡出 屏幕保护程序淡出效果 |
 | 7 Fire Flames effect screen saver | 7 火焰 火焰效果屏幕保护程序 |
