@@ -50,7 +50,7 @@ C:\Users\用户名\
 
 下载并解压完成后，启动 DiskGenius。只需找到并运行解压后的可执行文件。
 
-启动 DiskGenius 时，双击 `DiskGenius.exe` 即可（路径如 `C:\Users\用户名\Desktop\1\DiskGenius\DiskGenius.exe`，具体路径因解压位置而异）。
+启动 DiskGenius 时，双击 `DiskGenius.exe`（路径如 `C:\Users\用户名\Desktop\1\DiskGenius\DiskGenius.exe`，具体路径因解压位置而异）。
 
 ![DiskGenius](../.gitbook/assets/diskgenius-4.png)
 
