@@ -136,7 +136,7 @@ service mihomo stop
 service mihomo status
 ```
 
-- 指定订阅链接地址（示例地址仅作演示之用，须替换为有效链接），订阅链接是获取代理节点配置的标准方式：
+- 指定订阅链接地址（示例地址仅作演示之用，须替换为有效链接）。订阅链接是获取代理节点配置的标准方式：
 
 ```sh
 sysrc mihomo_config="https://xxxx.yyy"
