@@ -106,7 +106,7 @@ OpenSSH_10.0p2, OpenSSL 3.5.6 7 Apr 2026
 ```sh
 # ssh-keygen
 Generating public/private ed25519 key pair.
-Enter file in which to save the key (/root/.ssh/id_ed25519): # 此处按回车键，使用默认存储位置即可
+Enter file in which to save the key (/root/.ssh/id_ed25519): # 此处按回车键，使用默认存储位置
 Created directory '/root/.ssh'.
 Enter passphrase for "/root/.ssh/id_ed25519" (empty for no passphrase):	# 此处输入密码，按回车键将不设置密码（为了安全建议设置密码）
 Enter same passphrase again: # 此处重复输入密码
@@ -171,7 +171,7 @@ PermitEmptyPasswords no                      # 禁止空密码的用户进行登
 # service sshd restart
 ```
 
-使用 Xshell 登录，输入密钥密码，导入私钥 `id_rsa`，即可登录。
+使用 Xshell 登录，输入密钥密码，导入私钥 `id_rsa`，便可登录。
 
 如使用其他 SSH 软件无法登录，请转换密钥格式。
 
@@ -286,7 +286,7 @@ screen 使用方法：
 
 使用 `-S` 可指定 `xxx` 为名称，便于查找。
 
-然后可进行 ssh 连接，后续可关闭这个窗口或软件，不影响 ssh。
+然后可进行 ssh 连接，后续可关闭该窗口或软件，不影响 SSH 连接。
 
 查看有哪些正在运行的 screen 会话？
 
@@ -301,7 +301,7 @@ There are screens on:
 3 Sockets in /tmp/screens/S-root.
 ```
 
-`Detached` 可直接用 `-r` 恢复。
+`Detached` 可直接使用 `-r` 恢复。
 
 ```sh
 screen -r xxx	# 重新附着（恢复）名为或 ID 为 xxx 的 screen 会话
@@ -320,7 +320,7 @@ screen -r xxx	# 重新附着（恢复）名为或 ID 为 xxx 的 screen 会话
 
 `mosh` 即 `Mobile Shell`，移动的 Shell。Mosh 适合在移动设备（如手机、平板）通过移动网络远程控制服务器时使用。
 
-Mosh 不支持多窗口、分屏模式，也不支持多个客户端连接同一服务器。客户端重启或切换设备时无法自动重新连接。若需实现这些功能，可在 Mosh 会话中使用 GNU Screen、OpenBSD tmux 等终端多路复用器。——[Mosh: A State-of-the-Art Good Old-Fashioned Mobile Shell](https://www.usenix.org/system/files/login/articles/winstein.pdf)
+Mosh 不支持多窗口、分屏模式，也不支持多个客户端连接同一服务器。客户端重启或切换设备时无法自动重新连接。若需实现这些功能，可在 Mosh 会话中使用 GNU Screen、OpenBSD tmux 等终端多路复用器，参见 [Mosh: A State-of-the-Art Good Old-Fashioned Mobile Shell](https://www.usenix.org/system/files/login/articles/winstein.pdf)
 
 要使用 mosh：① 服务端和客户端都需要配置相同的 UTF-8 编码，② 双方都需要安装 mosh。
 
@@ -400,7 +400,7 @@ root     syslogd     1017 7   udp4   *:514                 *:*
 
 ![juicessh 的 mosh 再次恢复连接 WiFi](../.gitbook/assets/juicessh6.png)
 
-可以看到，断开后会有提示，重连网络后会自动恢复，如同未断开一般（已结合 `screen` 使用）。
+断开后会有提示，重连网络后会自动恢复，如同未断开一般（已结合 `screen` 使用）。
 
 ## 附录：OpenSSH 服务端配置详解
 
