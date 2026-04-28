@@ -454,7 +454,7 @@ $ mkdir ykla/ykla1/ykla2/ykla3
 mkdir: ykla/ykla1/ykla2: No such file or directory
 ```
 
-报错如上，此时需要参数 `-p`，`p` 是英文 `parents`（父）的意思，即若上级目录不存在，则一并创建之。
+系统返回上述错误，此时需要参数 `-p`，`p` 是英文 `parents`（父）的意思，即若上级目录不存在，则一并创建之。
 
 ```sh
 $ mkdir -vp  ykla/ykla1/ykla2/ykla3
@@ -539,7 +539,7 @@ $ rm -rf /home/ykla/test/
 
 > **警告**
 >
-> 网上经常有人说使用 `sudo rm -rf /*` 是某某命令可以 xxx，误导他人对系统造成不可挽回的灾难性破坏。该命令实质上是以 root 权限（~~还好 FreeBSD 默认没有 sudo~~），删除 `/` 及其子目录下的一切存在。现在展示一下结果：
+> 互联网上常有说法称使用 `sudo rm -rf /*` 是某某命令可以 xxx，误导他人对系统造成不可挽回的灾难性破坏。该命令实质上是以 root 权限（~~还好 FreeBSD 默认没有 sudo~~），删除 `/` 及其子目录下的一切存在。现在展示一下结果：
 >
 >```sh
 > # rm -rf /*
