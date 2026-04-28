@@ -1,17 +1,29 @@
 # 5.2 引导管理器与 UEFI 固件
 
+统一可扩展固件接口（Unified Extensible Firmware Interface，UEFI）是现代计算机的固件接口标准，旨在取代传统的基本输入输出系统（BIOS）。
+
+UEFI 规范定义了操作系统与平台固件之间的接口，提供了启动服务（Boot Services）和运行时服务（Runtime Services），以及用于存储启动变量的非易失性存储空间。
+
+FreeBSD 同时支持传统的 MBR 标准和较新的 GUID 分区表（GPT）引导方式。GPT 分区通常出现在使用 UEFI 固件的计算机上，但 FreeBSD 亦可通过 gptboot(8) 在仅有传统 BIOS 的机器上从 GPT 分区引导。
+
+UEFI 引导过程与传统 BIOS 引导过程在架构上存在本质差异。
+
+在传统 BIOS 系统中，固件读取主引导记录（MBR）中的引导代码并执行。
+
+在 UEFI 系统中，固件直接从 EFI 系统分区（ESP）上的 FAT32 文件系统中加载 EFI 应用程序。ESP 是一个专用分区，其分区类型 GUID 为 `C12A7328-F81F-11D2-BA4B-00A0C93EC93B`，通常挂载于 `/boot/efi`。FreeBSD 的 UEFI 引导加载程序为 `loader.efi`，安装至 ESP 后由固件直接加载执行。
+
 ## UEFI 系统检测方法
 
-`efibootmgr` 是 FreeBSD 系统中用于查看和管理 EFI 启动项的工具，通过与 UEFI 固件交互来操作启动项配置。
+efibootmgr 是 FreeBSD 基本系统中（自 11.2 起）用于查看和管理 EFI 启动项的工具，通过与 UEFI 固件交互来操作启动项配置。
 
-- 如果是非 UEFI 将输出如下：
+非 UEFI 环境下运行会报错“efi variables not supported on this system”，需加载 `efirt` 内核模块（`kldload efirt`）：
 
 ```sh
-# efibootmgr # 基本系统默认内置，无需额外安装
+# efibootmgr
 efibootmgr: efi variables not supported on this system. root? kldload efirt?
 ```
 
-- 如果当前系统是 UEFI，efibootmgr 会输出类似于：
+如果当前系统是 UEFI，efibootmgr 会输出类似于：
 
 ```sh
 # efibootmgr
@@ -93,7 +105,7 @@ EFI 分区的目录结构如下：
 检测 `ada0p1`（硬盘的第一个分区）是否是将要挂载的 EFI 分区，输入命令：
 
 ```sh
-# fstyp /dev/ada0p1 # 检测 /dev/ada0p1 分区的文件系统类型
+# fstyp /dev/ada0p1 # 检测 /dev/ada0p1 分区的文件系统类型，但不修改
 ```
 
 上述输出是 `NTFS`，可见这不是 EFI 分区；
@@ -149,7 +161,7 @@ EFI 分区的目录结构如下：
 Boot to FW : false
 BootCurrent: 0004
 BootOrder  : 0004, 0000, 0001, 0002, 0003
-+Boot0004* FreeBSD HD(1,GPT,f83a9e2f-bd87-11ef-95b7-000c29761cd2,0x28,0x82000)/File(\efi\freebsd\loader.efi) # 就是这条
++Boot0004* FreeBSD HD(1,GPT,f83a9e2f-bd87-11ef-95b7-000c29761cd2,0x28,0x82000)/File(\efi\freebsd\loader.efi) # 注意此行
                       nda0p1:/efi/freebsd/loader.efi (null)
  Boot0000* EFI VMware Virtual NVME Namespace (NSID 1) PciRoot(0x0)/Pci(0x15,0x0)/Pci(0x0,0x0)/NVMe(0x1,00-00-00-00-00-00-00-00)
  Boot0001* EFI VMware Virtual IDE CDROM Drive (IDE 1:0) PciRoot(0x0)/Pci(0x7,0x1)/Ata(Secondary,Master,0x0)
@@ -356,6 +368,7 @@ include themes/Matrix-rEFInd/theme.conf
 
 ## 参考文献
 
+- Microsoft. set id (Diskpart)[EB/OL]. Microsoft Learn, 2024-11-01[2026-04-28]. <https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/set-id>. EFI 系统分区的 GUID 是 c12a7328-f81f-11d2-ba4b-00a0c93ec93b。
 - Smith R W. rEFInd Boot Manager[EB/OL]. [2026-04-17]. <https://www.rodsbooks.com/refind/>. rEFInd 官方网站，该引导管理器派生自 rEFIt 项目，用于管理 UEFI 环境下的多系统启动。
 - archlinuxcn. efibootmgr 无法添加 UEFI 启动项[EB/OL]. [2026-03-26]. <https://bbs.archlinuxcn.org/viewtopic.php?id=12914>. 讨论 efibootmgr 在部分固件上无法写入启动项的原因与替代方案。
 - FreeBSD Project. efibootmgr(8)[EB/OL]. [2026-03-26]. <https://man.freebsd.org/cgi/man.cgi?efibootmgr(8)>.
