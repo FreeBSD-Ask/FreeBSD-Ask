@@ -334,7 +334,7 @@ $ clashctl config regen
 
 ### 未竟事宜
 
-以下是 Clash  FreeBSD 项目有待改进的地方，这些改进方向有助于提高项目的通用性和易用性：
+以下是 Clash FreeBSD 项目有待改进的地方，这些改进方向有助于提高项目的通用性和易用性：
 
 - 与 bash 解耦，支持默认的 sh，使其更符合 FreeBSD 的默认环境。
 
