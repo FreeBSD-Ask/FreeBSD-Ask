@@ -92,8 +92,6 @@ hint.atkbdc.0.at="isa"
 
 ## 课后习题
 
-1. 查找并分析 device.hints 中某个已禁用设备（如 hint.acpi_throttle.0.disabled）的源代码实现。
-
-2. 创建一个自定义 device.hints 文件，为某个虚拟设备设置资源提示，验证其是否被内核正确读取。
-
-3. 对比 device.hints 文件和 loader.conf 文件中内核可调参数的加载时机差异，尝试在两个文件中设置同一参数并观察哪个生效。
+1. 查阅 `device.hints` 中某个已禁用设备（如 `hint.acpi_throttle.0.disabled`）的源代码实现，分析 `disabled` 标志在设备探测流程中的作用机制。
+2. 创建一个自定义 `device.hints` 文件，为某个虚拟设备设置资源提示，验证其是否被内核正确读取，记录提示参数的传递路径。
+3. 对比 `device.hints` 文件与 `loader.conf` 文件中内核可调参数的加载时机差异，在两个文件中设置同一参数并观察哪个生效，分析加载顺序的优先级规则。

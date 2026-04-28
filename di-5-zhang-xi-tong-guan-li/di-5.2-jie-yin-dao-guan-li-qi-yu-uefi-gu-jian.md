@@ -378,10 +378,6 @@ include themes/Matrix-rEFInd/theme.conf
 
 ## 课后习题
 
-1. 使用 efibootmgr 添加、删除和修改 EFI 启动项，追踪这些操作如何影响 UEFI 固件中的变量。
-
-2. 尝试配置 GRUB 通过 chainload 方式引导 FreeBSD，如遇到文中提到的错误则分析错误信息。
-
-3. 使 [Clover](https://github.com/cloverhackycolor/cloverbootloader/) 等更多类似软件适配 FreeBSD。
-
-4. 尝试创建一个 FreeBSD 特色主题。
+1. 使用 efibootmgr 添加、删除和修改 EFI 启动项，追踪这些操作对 UEFI 固件变量的影响，分析 EFI 变量的持久化机制。
+2. 配置 GRUB 通过 chainload 方式引导 FreeBSD，记录配置过程，如遇到错误则从 GRUB 与 FreeBSD 引导协议的兼容性角度分析原因。
+3. 分析 Clover 引导加载器适配 FreeBSD 所需的引导协议支持，评估其技术可行性。

@@ -862,6 +862,5 @@ FreeBSD 还支持多个“虚拟控制台”，可以使用它们同时进行多
 
 ## 课后习题
 
-1. 通过 bsdconfig 的“View/Edit Startup Configuration”添加自定义 sysctl 配置，追踪该配置如何写入 rc.conf 文件并最终生效。
-
-2. 使用 bsdconfig 的命令行模式配置网络接口，对比图形界面与命令行两种方式的操作路径差异。
+1. 通过 bsdconfig 的"View/Edit Startup Configuration"添加自定义 sysctl 配置，追踪该配置如何写入 `rc.conf` 文件并最终通过启动脚本生效。
+2. 使用 bsdconfig 的命令行模式配置网络接口，对比图形界面与命令行两种方式的操作路径差异，分析 bsdconfig 对 `rc.conf` 的修改粒度。
