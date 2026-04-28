@@ -488,7 +488,7 @@ root@mfsbsd:~ # gpart show # 查看修复分区表后的磁盘信息
 
 无任何信息输出则加载成功。
 
-还可以用以下命令验证 zfs 模块的加载情况：
+还可通过以下命令验证 zfs 模块的加载情况：
 
 ```sh
 # kldstat | grep zfs
