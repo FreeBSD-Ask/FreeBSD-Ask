@@ -208,7 +208,7 @@ mihomo_geoip="https://ghfast.top/https://github.com/MetaCubeX/meta-rules-dat/rel
 mihomo_enable="YES" # 开机启用/服务项
 ```
 
-可根据实际需求自行调整配置，通过组合上述参数实现个性化设置。
+可根据实际需求自行调整配置，通过组合上述参数实现定制化设置。
 
 ### 未竟事宜
 
