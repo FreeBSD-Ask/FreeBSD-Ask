@@ -325,7 +325,7 @@ zroot/
 
 ### 修改文件夹权限
 
-将 `/mnt/tmp` 和 `/mnt/var/tmp` 的权限设置为 `1777`（粘滞位），以确保临时目录权限正确，这样任何用户都可以在这些目录中创建文件，但只能删除自己创建的文件：
+将 `/mnt/tmp` 和 `/mnt/var/tmp` 的权限设置为 `1777`（粘滞位），以确保临时目录权限正确，使得任何用户都可以在这些目录中创建文件，但只能删除自己创建的文件：
 
 ```sh
 # chmod 1777 /mnt/tmp        # 设置 /mnt/tmp 目录为粘滞位，可读写
@@ -372,7 +372,7 @@ Windows 文本文件的行尾通常是 `\r\n`（回车 + 换行）。
 
 此命令效果等同于使用 `ee /tmp/bsdinstall_etc/rc.conf` 编辑该文件并添加一行 `zfs_enable="YES"`。
 
-- 挂载现有的 EFI 系统分区，这样便可以在其中添加 FreeBSD 的启动文件：
+- 挂载现有的 EFI 系统分区，以便在其中添加 FreeBSD 的启动文件：
 
 ```sh
 # mount -t msdosfs /dev/nda0p1 /media
@@ -392,7 +392,7 @@ Windows 文本文件的行尾通常是 `\r\n`（回车 + 换行）。
 # cp /boot/loader.efi /media/efi/freebsd/
 ```
 
-- 使用 efibootmgr 工具向主板 UEFI 固件添加启动项 `FreeBSD`，这样在开机时就能在 UEFI 启动菜单中看到 FreeBSD 选项。
+- 使用 efibootmgr 工具向主板 UEFI 固件添加启动项 `FreeBSD`，使得开机时能在 UEFI 启动菜单中看到 FreeBSD 选项。
 
 ```sh
 # efibootmgr --create --activate --label "FreeBSD" --loader "/media/efi/freebsd/loader.efi"
