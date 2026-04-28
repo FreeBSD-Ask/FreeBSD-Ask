@@ -46,7 +46,7 @@ default:\
 	:openfiles=unlimited:\  # 限制每个进程允许打开的最大文件数。类型为数字。数字类型可以是十六进制（`0x` 开头）或八进制（`0` 开头），每次只能指定一个值，也可以用字符串格式。数据库中所有记录必须统一使用同一表示方法。
 	:maxproc=unlimited:\  # 限制最大进程数。类型为数字。
 	:sbsize=unlimited:\  # 最大的套接字缓冲区大小。类型为数值。
-	:vmemoryuse=unlimited:\  # 每个进程允许的最大虚拟内存使用量。类型为数值。
+	:vmemoryuse=unlimited:\  # 每个进程允许的最大虚拟存储器使用量。类型为数值。
 	:swapuse=unlimited:\  # 最大交换空间大小限制。类型为数值。
 	:pseudoterminals=unlimited:\  # 最大伪终端数量。类型为数字。
 	:kqueues=unlimited:\  # 每个进程可创建的 kqueue 数量。类型为数字。
