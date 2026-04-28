@@ -36,7 +36,7 @@ POSIX Shell 规范的核心要求包括：
 - **条件与循环**：支持 `if`、`while`、`for`、`case` 等控制结构。
 - **内置命令**：必须实现 `cd`、`echo`、`exit`、`export`、`read`、`return`、`set`、`shift`、`trap`、`unset` 等内置命令。
 
-FreeBSD 系统默认采用的 Shell 是 sh。需要指出的是，FreeBSD 的 `/bin/sh` 并非 Stephen R. Bourne 在贝尔实验室为 Unix V7 编写的原始 Bourne Shell，而是基于 Kenneth Almquist 于 1989 年发布的 Almquist Shell（ash），后者是作为 Bourne Shell 的更紧凑、更高效的替代品而设计的。BSD 系列自 4.4BSD 起便采用 ash 衍生的 sh，在功能上基本符合 POSIX.1-2024 标准中关于 Shell 的规范要求。
+FreeBSD 系统默认采用的 Shell 是 sh。FreeBSD 的 `/bin/sh` 并非 Stephen R. Bourne 在贝尔实验室为 Unix V7 编写的原始 Bourne Shell，而是基于 Kenneth Almquist 于 1989 年发布的 Almquist Shell（ash），后者是作为 Bourne Shell 的更紧凑、更高效的替代品而设计的。BSD 系列自 4.4BSD 起便采用 ash 衍生的 sh，在功能上基本符合 POSIX.1-2024 标准中关于 Shell 的规范要求。
 
 Linux 中常见的 Shell 通常是 bash（Bourne Again Shell，是对“Born Again”即“重生”的双关，意为“重生的 Bourne Shell”）。而 macOS 中的默认 Shell 通常是 zsh（Z Shell）。
 
