@@ -197,7 +197,7 @@ FreeBSD 还支持多个“虚拟控制台”，可以使用它们同时进行多
 | DOS | 从 DOS 分区安装 |
 | UFS | 从 UFS 分区安装 |
 | USB | 从 USB 设备安装 |
-| Options | 查看/设置各种媒体选项 |
+| Options | 查看/设置多项媒体选项 |
 
 ### 3 HTTP Direct
 
