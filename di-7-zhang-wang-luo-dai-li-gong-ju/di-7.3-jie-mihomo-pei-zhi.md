@@ -61,10 +61,10 @@ rcvar="mihomo_enable"    # 服务开关变量，控制服务是否开机自启
 : ${mihomo_user:="root"}    # 默认用户；如使用其他用户，请确保 /etc/mihomo 目录及 $pidfile 和 log 文件可写
 : ${mihomo_extra_flags:=""}	# mihomo 的额外参数，用于传递自定义启动选项
 
-procname="/usr/local/bin/mihomo"    # 与 pidfile 配合，用于检测服务进程，这是 rc.d 框架识别服务进程的关键
+procname="/usr/local/bin/mihomo"    # 与 pidfile 配合，用于检测服务进程
 pidfile="${mihomo_datadir}/mihomo.pid"    # 用于检测服务进程，存储主进程的进程标识符（Process ID，PID）
 logfile="${mihomo_datadir}/mihomo.log"
-start_cmd="mihomo_start"    # 设置 start 命令调用 mihomo_start 函数，stop 等命令由 rc.d 框架默认实现，这种设计能自定义启动逻辑
+start_cmd="mihomo_start"    # 设置 start 命令调用 mihomo_start 函数，stop 等命令由 rc.d 框架默认实现
 extra_commands="init reconfig regeoip"    # 设置其他的自定义命令，扩展 rc.d 框架的标准命令集
 reconfig_cmd="mihomo_reconfig"    # 指定 reconfig 命令调用 mihomo_reconfig 函数，用于下载 config.yaml 文件
 regeoip_cmd="mihomo_regeoip"    # 指定 regeoip 命令调用 mihomo_regeoip 函数，用于下载 geoip.dat 文件，可通过 mihomo_extra_flags="-m" 指定使用该文件
