@@ -74,8 +74,6 @@ sysctl 的默认源代码在 [/sbin/sysctl/](https://github.com/freebsd/freebsd-
 
 ## 课后习题
 
-1. 创建 `/etc/sysctl.conf.local` 文件并设置几个自定义 sysctl 参数，验证其是否覆盖系统默认值。
-
-2. 查找一个 sysctl 参数的源代码实现（如通过 SYSCTL_INT 宏定义），尝试修改该参数并观察系统行为变化。
-
-3. 启用 `security.bsd.see_other_uids=0` 和 `security.bsd.see_other_gids=0`，对比启用前后普通用户能看到的进程信息差异，自行实现一个更为细粒度的 sysctl 选项，将其提交到 FreeBSD 项目。
+1. 创建 `/etc/sysctl.conf.local` 文件并设置几个自定义 sysctl 参数，验证其是否覆盖系统默认值，分析 sysctl 配置文件的加载顺序。
+2. 查阅一个 sysctl 参数的源代码实现（如通过 `SYSCTL_INT` 宏定义），分析其读写权限控制与值域校验的实现机制。
+3. 启用 `security.bsd.see_other_uids=0` 和 `security.bsd.see_other_gids=0`，对比启用前后普通用户能看到的进程信息差异，分析该安全策略在进程可见性控制层面的实现原理。
