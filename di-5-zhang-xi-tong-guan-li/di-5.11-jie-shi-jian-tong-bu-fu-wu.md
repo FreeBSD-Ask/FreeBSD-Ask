@@ -111,7 +111,7 @@ FreeBSD 与 Linux 时间服务比较：
 
 ### 设置并启动 NTP 服务
 
-设置 NTP 服务在系统启动时自动启动：
+设置 NTP 服务开机自启动：
 
 ```sh
 # service ntpd enable
