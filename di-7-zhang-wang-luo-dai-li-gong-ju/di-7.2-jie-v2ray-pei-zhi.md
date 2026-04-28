@@ -196,7 +196,7 @@ setenv XRAY_LOCATION_ASSET /usr/local/share/xray-core/
 # chown -R v2ray:v2ray /usr/local/etc/xray-core/      # 将 /usr/local/etc/xray-core/ 目录（及 config.json 等文件）的所有权递归修改为 v2ray 用户和组。
 ```
 
-- FreeBSD 的 `security/xray-core` 没有创建独立的 `xray` 用户/组，而是沿用 `net/v2ray` 的 `v2ray:v2ray`，这是为了保持用户权限管理的一致性。
+- FreeBSD 的 `security/xray-core` 没有创建独立的 `xray` 用户/组，而是沿用 `net/v2ray` 的 `v2ray:v2ray`，此举旨在保持用户权限管理的一致性。
 
 注意：若 `/usr/local/etc/xray-core/` 目录下存在其他 `.json` 样例文件，建议将其移除或删除，避免配置冲突，因 Xray 可能扫描目录下的所有 JSON 文件。
 
