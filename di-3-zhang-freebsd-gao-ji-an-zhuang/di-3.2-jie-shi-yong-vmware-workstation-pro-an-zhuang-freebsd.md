@@ -306,6 +306,6 @@ Downloads
 
 ## 课后习题
 
-3. 解释为什么人们往往对“官方网站”分发的软件持有一种天然的信任感（例如“只从官方网站下载软件”这种说法），这种信任是正确可靠的吗？（参见 DMkiIIer. Warning: HWMonitor 1.63 download on the official site may contain malware? [EB/OL]. r/pcmasterrace, Reddit, (2026-04-10)[2026-04-11]. <https://www.reddit.com/r/pcmasterrace/comments/1sh4e5l/warning_hwmonitor_163_download_on_the_official/>）
-1. 在博通官网下载最新版本的 VMware Workstation Pro，记录下载与许可证获取的完整流程。
-2. 分别就境内软件和境外软件，归纳辨别官方分发网站的方法论（如域名验证、数字签名校验、哈希比对），分析各方法的可靠性与局限。
+1. 解释为什么人们往往对“官方网站”分发的软件持有一种天然的信任感（例如“只从官方网站下载软件”这种说法），这种信任是正确可靠的吗？（参见 DMkiIIer. Warning: HWMonitor 1.63 download on the official site may contain malware? [EB/OL]. r/pcmasterrace, Reddit, (2026-04-10)[2026-04-11]. <https://www.reddit.com/r/pcmasterrace/comments/1sh4e5l/warning_hwmonitor_163_download_on_the_official/>）
+2. 在博通官网下载最新版本的 VMware Workstation Pro，记录下载与许可证获取的完整流程。
+3. 分别就境内软件和境外软件，归纳辨别官方分发网站的方法论（如域名验证、数字签名校验、哈希比对），分析各方法的可靠性与局限。
