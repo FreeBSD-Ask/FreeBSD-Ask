@@ -461,8 +461,6 @@ zroot/var/tmp         96K  91.6G    96K  /var/tmp
 
 ## 课后习题
 
-1. 尝试完全脱离 bsdinstall 安装 FreeBSD。
-
-2. 重构一套图形化的安装界面。
-
-3. 在 UFS 文件系统下重构本文，并发起 PR。
+1. 脱离 bsdinstall，通过手动分区、格式化、挂载和安装基本系统完成 FreeBSD 的安装，记录每个步骤中 bsdinstall 自动完成但需手动操作的具体环节。
+2. 查阅 FreeBSD 源代码中 GPT 分区对齐参数的实现逻辑，分析 NVMe SSD 上 4K 对齐的对齐对象及其对 I/O 性能的影响。
+3. 在 UFS 文件系统下重复本节双系统安装流程，记录 ZFS 与 UFS 在分区布局和引导配置上的差异。
