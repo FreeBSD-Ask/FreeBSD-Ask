@@ -58,7 +58,7 @@ desc="mihomo server"    # 服务描述，用于提供服务的简要说明
 rcvar="mihomo_enable"    # 服务开关变量，控制服务是否开机自启
 
 : ${mihomo_datadir:="/var/run/mihomo"}
-: ${mihomo_user:="root"}    # 默认用户；如使用其他用户，请确保 /etc/mihomo 目录及 $pidfile 和 log 文件可写，这是权限安全的基本要求
+: ${mihomo_user:="root"}    # 默认用户；如使用其他用户，请确保 /etc/mihomo 目录及 $pidfile 和 log 文件可写
 : ${mihomo_extra_flags:=""}	# mihomo 的额外参数，用于传递自定义启动选项
 
 procname="/usr/local/bin/mihomo"    # 与 pidfile 配合，用于检测服务进程，这是 rc.d 框架识别服务进程的关键
@@ -110,9 +110,9 @@ run_rc_command "$1"
 
 ### 可用参数及选项
 
-RC 脚本提供了多个命令行参数和配置选项，以下列举常用参数。这些命令会直接将配置写入 `/etc/rc.conf` 文件，若配置有误可直接修改对应行。`/etc/rc.conf` 文件是 FreeBSD 系统配置的核心文件。
+RC 脚本提供了多个命令行参数和配置选项，以下列举常用参数。这些命令会直接将配置写入 `/etc/rc.conf` 文件，若配置有误可直接修改对应行。
 
-- 启用 Mihomo 服务并设置开机自启动，将服务注册至系统启动流程：
+- 启用 Mihomo 服务并设置开机自启动：
 
 ```sh
 service mihomo enable
@@ -136,13 +136,13 @@ service mihomo stop
 service mihomo status
 ```
 
-- 指定订阅链接地址（示例地址仅作演示之用，须替换为有效链接）。订阅链接是获取代理节点配置的标准方式：
+- 指定订阅链接地址（示例地址仅作演示之用，须替换为有效链接）：
 
 ```sh
 sysrc mihomo_config="https://xxxx.yyy"
 ```
 
-- GeoIP 数据用于地理位置判断，主要根据 IP 地址的地理归属进行流量分流或规则匹配，是实现智能分流的基础数据：
+- GeoIP 数据用于地理位置判断，主要根据 IP 地址的地理归属进行流量分流或规则匹配：
 
 ```sh
 sysrc mihomo_geoip="https://ghfast.top/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip.dat" # 可选，但建议使用
@@ -156,7 +156,7 @@ sysrc mihomo_extra_flags="-m" # 可选，但建议使用
 
 - `-m`：启用 geodata 模式，使 Mihomo 使用 geosite.dat 和 geoip.dat 文件进行规则匹配，而非默认的 site.dat 和 ip.dat。
 
-- 指定运行 Mihomo 服务的用户身份，此系安全实践的重要组成部分：
+- 指定运行 Mihomo 服务的用户身份：
 
 ```sh
 sysrc mihomo_user="mihomo"  # 默认用户是 root
@@ -214,11 +214,11 @@ mihomo_enable="YES" # 开机启用/服务项
 
 以下为若干有待探索的问题，可自行研究解决方案：
 
-- 如何实现“直连”“代理”“全局”的分流？此三种模式为代理系统的基础功能模式。
+- 如何实现“直连”“代理”“全局”的分流？
 
 - 如何实现 TUN 虚拟网卡代理？TUN 模式可实现更底层的网络流量拦截。
 
-- 如何根据订阅链接进行测速？测速功能对选择最优代理节点至关重要。
+- 如何根据订阅链接进行测速？
 
 - 如何指定订阅链接中代理组的特定代理（例如仅使用位于美国的某个代理节点）？此涉及代理节点的精细化选择。
 
