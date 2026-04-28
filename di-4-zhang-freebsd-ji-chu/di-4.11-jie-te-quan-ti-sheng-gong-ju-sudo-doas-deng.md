@@ -386,7 +386,7 @@ $ sudo su
 
 - K Rin. FreeBSD MAC 簡單介紹[EB/OL]. [2026-03-26]. <https://sandb0x.tw/a/FreeBSD_MAC_%E7%B0%A1%E5%96%AE%E4%BB%8B%E7%B4%B9>. 以中文简要介绍 FreeBSD 强制访问控制框架的基本概念与配置方式。
 - FreeBSD Project. man mac_do(4)[EB/OL]. [2026-03-26]. <https://man.freebsd.org/cgi/man.cgi?mac_do(4)>.
-- OpenBSD. doas -- execute commands as another user[EB/OL]. [2026-04-17]. <https://man.openbsd.org/doas.1>. doas 提权工具手册页
+- OpenBSD. doas -- execute commands as another user[EB/OL]. [2026-04-17]. <https://man.openbsd.org/doas.1>. doas 提权工具手册页。
 
 ## 提权工具配置文件结构
 
