@@ -53,7 +53,7 @@ FreeBSD 中文社区. 08-腾讯云轻量云及其他服务器安装 FreeBSD[EB/O
 ```sh
 linux (hd0,msdos1)/vmlinuz       # 指定内核文件路径
 initrd (hd0,msdos1)/initramfs.igz  # 指定初始 RAM 磁盘映像文件路径
-boot # 输入 boot 后回车即可继续启动
+boot # 输入 boot 后按回车继续启动
 ```
 
 > **技巧**
@@ -144,7 +144,7 @@ chainloader /boot/loader.efi        # 加载 EFI 引导加载程序
 boot # 输入 boot 后回车即可继续启动
 ```
 
-此方法失败。该操作并非将镜像挂载为内存盘，虽可引导，但 FreeBSD 在启动过程中会报错，无法找到启动文件。
+此方法失败。该操作并非将镜像挂载为内存盘，虽可引导，但 FreeBSD 在启动过程中将提示错误，无法找到启动文件。
 
 此外，在 UEFI 模式下，GRUB2 不提供 `linux16`、`kfreebsd` 等命令。
 
