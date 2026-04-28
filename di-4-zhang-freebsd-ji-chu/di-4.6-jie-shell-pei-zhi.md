@@ -70,7 +70,7 @@ Add the line below to your .zshrc to enable auto suggestions.
 
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 安装时：
-将以下行添加到你的 .zshrc 文件中以启用自动建议。
+将以下行添加到用户的 .zshrc 文件中以启用自动建议。
 
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
@@ -80,7 +80,7 @@ Add the line below to *the end of* your .zshrc to enable highlighting.
 
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 安装时：
-将以下行添加到你的 .zshrc 文件 *末尾* 以启用语法高亮。
+将以下行添加到用户的 .zshrc 文件 *末尾* 以启用语法高亮。
 
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 ```
