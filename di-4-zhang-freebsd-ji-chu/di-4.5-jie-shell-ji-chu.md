@@ -101,7 +101,7 @@ locale
 - 补全文件目录或文件名
 
 ```sh
-$ cp /home/ykla/ # 此处按 Tab 键，然后再重复按一次 Tab 键，看看效果
+$ cp /home/ykla/ # 此处按 Tab 键，然后再重复按一次 Tab 键，观察效果
 $ cp /home/ykla/test/1.txt
 .cache/                 .login                  bin/                    test2
 .config/                .profile                HW_PROBE/               test3
