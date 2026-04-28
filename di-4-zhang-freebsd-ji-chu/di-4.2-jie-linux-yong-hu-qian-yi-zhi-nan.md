@@ -135,6 +135,6 @@ FreeBSD 基本系统几乎不包含任何与 BSD 协议不兼容的软件。
 
 ## 课后习题
 
-1. 在 FreeBSD 中构建一个简单的 Port，编写 Makefile，使其能下载、编译并安装一个最小化的 hello world 程序，验证 Ports 框架。
-2. 查看 FreeBSD init 系统源代码中 rc 脚本的最小实现，尝试使其具有类似 systemd 的现代化功能。
-3. 当比较 Linux 发行版时，Linux 发行版是真实存在的吗？
+1. 在 FreeBSD 中构建一个简单的 Port，编写 Makefile 使其能下载、编译并安装一个最小化程序，验证 Ports 框架的完整构建流程。
+2. 查阅 FreeBSD rc 脚本的最小实现（`/etc/rc.subr`），分析其服务依赖声明机制，并与 systemd 的 unit 文件依赖模型进行比较。
+3. 从技术本体论角度分析：当 Linux 发行版的各组件（内核、包管理器、桌面环境等）均可独立替换时，“发行版”这一概念的同一性依据是什么？
