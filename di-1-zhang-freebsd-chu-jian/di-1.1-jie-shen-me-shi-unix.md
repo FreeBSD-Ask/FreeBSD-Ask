@@ -12,7 +12,7 @@ UNIX 的内涵经历了从具体技术实现到文化象征的演变过程。UNI
 
 在当今的大部分场景下，UNIX 不仅意味着法律上的 **[商标](https://www.opengroup.org/openbrand/register/index2.html)**，更是一种 **哲学思想** 和一系列 **软件工程原则** 的集合。
 
-根据当前 UNIX 商标持有者开放组织（The Open Group）官网 [UNIX® Certification](https://www.opengroup.org/openbrand/register/) 所述，“Only systems that are fully compliant and certified according to the Single UNIX Specification are qualified to use the UNIX® trademark.”（只有完全符合并经过《单一 UNIX 规范》认证的系统，才有资格使用 UNIX® 商标。）
+根据当前 UNIX 商标持有者开放组织（The Open Group）官网 [UNIX® Certification](https://www.opengroup.org/openbrand/register/) 所述，“Only systems that are fully compliant and certified according to the Single UNIX Specification are qualified to use the UNIX® trademark.”（只有完全符合并经过《单一 UNIX 规范》认证的系统，才有资格使用 UNIX® 商标）
 
 ---
 
