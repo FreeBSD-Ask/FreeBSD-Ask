@@ -1,8 +1,8 @@
 # 6.2 TCP/IP 协议栈
 
-传输控制协议（Transmission Control Protocol，TCP）是互联网协议套件（Internet Protocol Suite）中的核心传输层协议之一，其软件实现体系被称为 TCP 堆栈（因采用层次化结构组织，故称为“栈”）。TCP 协议最初由 Vint Cerf 和 Bob Kahn 于 1974 年设计，其规范定义于 RFC 793。
+传输控制协议（Transmission Control Protocol，TCP）是互联网协议套件（Internet Protocol Suite）中的核心传输层协议之一，其软件实现体系被称为 TCP 栈（因采用层次化结构组织，故称为“栈”）。 协议最初由 Vint Cerf 和 Bob Kahn 于 1974 年设计，其规范定义于 RFC 793。
 
-TCP 堆栈负责端到端的可靠数据传输、拥塞控制、流量控制等关键功能。
+TCP 栈负责端到端的可靠数据传输、拥塞控制、流量控制等关键功能。
 
 不同于其他主流操作系统，FreeBSD 创新性地实现了多 TCP 栈共存架构，该架构允许系统同时加载多个 TCP 协议栈实现，并允许为不同的网络连接或系统全局选择使用不同的 TCP 栈。
 
