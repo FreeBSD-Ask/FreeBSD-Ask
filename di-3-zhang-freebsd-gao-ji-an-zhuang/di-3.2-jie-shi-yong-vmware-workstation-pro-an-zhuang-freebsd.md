@@ -2,7 +2,7 @@
 
 本节介绍在 VMware Workstation Pro 虚拟化平台上部署 FreeBSD 操作系统的完整流程与关键配置细节。
 
-VMware Workstation Pro 是一款 Type-2 虚拟机监视器（Hypervisor），运行在宿主操作系统之上，通过二进制翻译（binary translation）和硬件辅助虚拟化（hardware-assisted virtualization，基于 Intel VT-x 或 AMD-V 技术）实现 x86 指令集的虚拟化。
+VMware Workstation Pro 作为一款 Type-2 虚拟机监视器（Hypervisor），运行在宿主操作系统之上，通过二进制翻译（binary translation）和硬件辅助虚拟化（hardware-assisted virtualization，基于 Intel VT-x 或 AMD-V 技术）实现 x86 指令集的虚拟化。
 
 ## 视频教程
 
