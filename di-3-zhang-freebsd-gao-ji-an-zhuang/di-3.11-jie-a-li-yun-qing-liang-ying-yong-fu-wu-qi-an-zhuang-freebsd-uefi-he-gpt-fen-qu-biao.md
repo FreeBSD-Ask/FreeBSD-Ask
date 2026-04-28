@@ -209,7 +209,7 @@ default via 172.24.63.253 dev eth0 proto dhcp src 172.24.0.80 metric 100
 
 ![初次启动的 FreeBSD 系统](../.gitbook/assets/cloud-zfs-first-boot.png)
 
-此时，需在 FreeBSD 系统启动时，在启动器菜单界面（上图所示界面），按下 **ESC** 键。进入命令提示符“OK”。
+此时，需在 FreeBSD 系统启动时，在启动器菜单界面（上图所示界面），按下 **ESC** 键进入命令提示符“OK”。
 
 ![调整可调参数](../.gitbook/assets/cloud-zfs-tunables.png)
 
