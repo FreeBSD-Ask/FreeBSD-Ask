@@ -83,7 +83,7 @@ root  534M    130G   534M  none
 
 ## Shell 分区
 
-仍停留在分区选择界面，此时选择 `Shell`
+仍停留在分区选择界面，此时选择 `Shell`：
 
 ![选择 Shell 分区](../.gitbook/assets/dual-system-9.png)
 
