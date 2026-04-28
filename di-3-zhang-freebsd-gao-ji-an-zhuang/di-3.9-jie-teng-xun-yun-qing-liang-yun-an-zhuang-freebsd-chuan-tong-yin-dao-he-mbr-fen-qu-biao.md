@@ -141,7 +141,7 @@ set iso=(hd0,gpt2)/bsd.iso          # 指定 ISO 文件路径
 loopback loop $iso                  # 将 ISO 文件挂载为 loop 设备
 set root=(loop)                     # 设置 GRUB 根目录为 loop 设备
 chainloader /boot/loader.efi        # 加载 EFI 引导加载程序
-boot # 输入 boot 后回车即可继续启动
+boot # 输入 boot 后按回车继续启动
 ```
 
 此方法失败。该操作并非将镜像挂载为内存盘，虽可引导，但 FreeBSD 在启动过程中将提示错误，无法找到启动文件。
