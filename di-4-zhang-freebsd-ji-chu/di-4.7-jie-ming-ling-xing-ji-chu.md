@@ -882,7 +882,7 @@ drwxr-xr-x  2 ykla ykla        2 Mar  9 20:45 下载
 drwxr-xr-x  2 ykla ykla        2 Mar  9 20:45 桌面
 ```
 
-再试试：
+再试一例：
 
 ```sh
 # plg install gimp
