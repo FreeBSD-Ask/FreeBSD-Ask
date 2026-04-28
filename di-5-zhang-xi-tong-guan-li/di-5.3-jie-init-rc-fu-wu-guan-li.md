@@ -2,9 +2,11 @@
 
 ## 概述
 
-FreeBSD 使用传统的 BSD init（初始化系统）来管理系统服务。与 systemd 等现代初始化系统不同，BSD init 采用基于脚本的服务管理方式。
+FreeBSD 使用传统的 BSD init（初始化系统）来管理系统服务。与 systemd 等现代初始化系统不同，BSD init 采用基于脚本的服务管理方式。所有其他进程都是由 init 直接或间接启动的。
 
-长期在后台运行的服务通常命名为 `xxxd`，例如 `sshd`、`ntpd`，其中的 `d` 表示守护进程（[daemon](https://www.freebsd.org/copyright/daemon/)），这是 UNIX 系统的通用命名约定。在 Windows 系统中，这类程序被称为“服务”，可在任务管理器中查看。
+FreeBSD 提供了两个核心的服务管理命令。`service` 命令用于控制 rc.d 系统中的服务启动脚本，支持 `start`、`stop`、`restart`、`status` 等操作，并可列出可用服务。
+
+`sysrc` 命令用于安全地修改 rc.conf(5) 中的系统配置值，自动处理 `/etc/rc.conf`、`/etc/rc.conf.local` 和 `/etc/defaults/rc.conf` 之间的优先级关系，避免手动编辑可能导致的语法错误。
 
 ## 服务管理配置文件与目录结构
 
