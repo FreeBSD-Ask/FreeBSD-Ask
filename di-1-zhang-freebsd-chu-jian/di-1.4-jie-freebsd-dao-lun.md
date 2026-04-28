@@ -2,7 +2,7 @@
 
 ## FreeBSD 版本概述
 
-FreeBSD 作为一个持续演进的开源操作系统，其版本管理体系经过精心设计，以满足不同用户群体的多样化需求。FreeBSD 有以下版本类型（或开发阶段）：ALPHA、BETA、RC、RELEASE、CURRENT、STABLE。
+FreeBSD 作为一个持续演进的开源操作系统，其版本管理体系经过精心设计，以适应不同用户群体的需求。FreeBSD 有以下版本类型（或开发阶段）：ALPHA、BETA、RC、RELEASE、CURRENT、STABLE。
 
 **RELEASE** 版本适用于生产环境。**STABLE** 和 **CURRENT** 则属于开发分支，其中 FreeBSD 的 ***STABLE*** 分支与一般 Linux 发行版中的“稳定版”概念不同，其名称中的“稳定”指的是该分支的 ABI（Application Binary Interface，应用程序二进制接口）保持稳定，而非指系统整体稳定性，亦可理解为“固定”。（FreeBSD Wiki. FreeBSD Glossary STABLE[EB/OL]. [2026-03-26]. <https://wiki.freebsd.org/Glossary#STABLE>.）
 
@@ -375,7 +375,7 @@ ipfirewall（IPFW）随 FreeBSD 2.0-RELEASE 引入，这种采用“首次匹配
 
 - 2000 年 3 月 14 日 FreeBSD Jail
 
-FreeBSD Jail 随 2000 年初发布的 FreeBSD 4.0 引入。Jail 是一种操作系统级虚拟化机制，允许管理员将 FreeBSD 系统划分为多个独立的子系统。这使得系统管理员能够更好地保护和优化他们的 FreeBSD 系统。
+FreeBSD Jail 随 2000 年初发布的 FreeBSD 4.0 引入。Jail 是一种操作系统级虚拟化机制，允许管理员将 FreeBSD 系统划分为多个独立的子系统，各子系统之间相互隔离。
 
 - 2000 年 3 月 28 日 FreeBSD 基金会成立
 
