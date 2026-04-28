@@ -71,7 +71,7 @@ regeoip_cmd="mihomo_regeoip"    # 指定 regeoip 命令调用 mihomo_regeoip 函
 init_cmd="mihomo_init"    # 指定 init 命令调用 mihomo_init 函数。创建数据文件目录，指定属主，避免普通用户身份执行时的读写权限问题
 
 mihomo_start()
-{    # 使用 daemon 启动 mihomo，指定 -p 参数使用 pidfile，使 mihomo 成为 daemon 的子进程，由 daemon 自动管理 pidfile，从而在 mihomo 进程退出时自动清理 pidfile，这是 Unix 守护进程管理的标准实践
+{    # 使用 daemon 启动 mihomo，指定 -p 参数使用 pidfile，使 mihomo 成为 daemon 的子进程，由 daemon 自动管理 pidfile，从而在 mihomo 进程退出时自动清理 pidfile
 	daemon -u ${mihomo_user} -p "$pidfile" -o "${logfile}" $procname -d "${mihomo_datadir}" -f "${mihomo_datadir}/config.yaml" ${mihomo_extra_flags}
 }
 mihomo_reconfig()
@@ -79,7 +79,7 @@ mihomo_reconfig()
 	startmsg "begin to refresh config.yaml"
 	startmsg "config.yaml : ${mihomo_config}"
 	if ( fetch -o ${mihomo_datadir}/config.yaml.new "${mihomo_config}" );then
-		mv ${mihomo_datadir}/config.yaml.new ${mihomo_datadir}/config.yaml    # 下载成功将覆盖原有配置，下载失败保留原有配置，这种原子操作保证了配置更新的安全性
+		mv ${mihomo_datadir}/config.yaml.new ${mihomo_datadir}/config.yaml    # 下载成功将覆盖原有配置，下载失败保留原有配置
         startmsg "rename config.yaml.new to config.yaml"
 	else
 		err "fetch config.yaml failed! check $$mihomo_config!"
