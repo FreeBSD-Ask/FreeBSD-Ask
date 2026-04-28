@@ -193,7 +193,7 @@ GNOME、Xorg（X11）、D-Bus、systemd、PulseAudio、Wayland、PipeWire 等主
 
 #### 诚实与可信
 
-像 FreeBSD 这样默默地在后台工作以至于快被用户遗忘的系统，堪称老古董。如果每日不时出现一些蓝屏报错、Kernel Panic 抑或"内部错误"、`You are in emergency mode`、`BusyBox (initramfs)`、`grub rescue>` 等，反而能提醒用户自己的存在。
+像 FreeBSD 这样默默地在后台工作以至于几近被用户遗忘的系统，堪称老古董。如果每日不时出现一些蓝屏报错、Kernel Panic 抑或"内部错误"、`You are in emergency mode`、`BusyBox (initramfs)`、`grub rescue>` 等，反而能提醒用户自己的存在。
 
 目前，大多数将 Linux 用作专用设备操作系统，或基于其他 GPL 软件构建商业产品的公司，并未严格遵守 GPL 协议发布其修改后的代码。部分国内企业对 GPL 的含义认识不足，仅将“免费”视为唯一考量。那些为规避 GPL 强制开源规定而采取规避措施的企业产品，其合规性与技术可信度均存疑。抢注开源软件商标的现象亦时有发生。相较而言，采用 FreeBSD 的公司在许可证合规方面更为规范、可靠，亦切实推动了 BSD 代码的广泛复用。纵然有人认为 FreeBSD 已趋衰落，事实上，大量用户可能始终受益于 FreeBSD 技术的支撑。
 
