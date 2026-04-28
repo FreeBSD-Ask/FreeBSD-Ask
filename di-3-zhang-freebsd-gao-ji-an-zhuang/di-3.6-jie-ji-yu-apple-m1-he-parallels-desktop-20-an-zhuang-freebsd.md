@@ -95,8 +95,6 @@ ums_load="YES"
 
 ## 课后习题
 
-1. 查找 FreeBSD 源代码中关于 `acpi_ged` 的提交记录，逐行注释并分析其实现原理。
-
-2. 分析 Parallels Desktop 虚拟机工具的 Port 源代码，研究其长期未更新的技术原因，尝试更新。
-
-3. 比较 `ums` 与 `usbhid` 两种 USB 鼠标驱动的实现差异。
+1. 查阅 FreeBSD 源代码中 `acpi_ged` 驱动的提交记录，分析其在 ARM64 平台上处理 ACPI 通用事件的核心逻辑。
+2. 分析 Parallels Desktop 虚拟机工具的 Port 源代码（`emulators/parallels-tools/`），梳理其长期未更新的技术原因。
+3. 查阅 FreeBSD 源代码中 `ums` 与 `usbhid` 两种 USB 鼠标驱动的实现，比较其在设备探测、事件报告和电源管理方面的差异。
