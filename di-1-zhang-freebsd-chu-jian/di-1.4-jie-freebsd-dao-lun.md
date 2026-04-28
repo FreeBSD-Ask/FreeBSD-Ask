@@ -542,8 +542,6 @@ FreeBSD 的正确读法是新用户普遍关注的问题。目前社区共识和
 
 ## 课后习题
 
-1. 试图在 QEMU 中运行 FreeBSD 1.0 版本。
-
-2. 分析 FreeBSD 的提交者（Committer）机制，并任意选取一个开源项目，比较其领导形式。
-
-3. 观看纪录片，了解千禧年代计算机历史（如 Moore J T S, 导演. 操作系统革命[V]. 美国: Seventh Art Releasing, 2002.）
+1. 在 QEMU 中运行 FreeBSD 1.0 版本，记录启动过程中与当代 FreeBSD 的显著差异，并分析这些差异所反映的系统设计演进。
+2. 分析 FreeBSD 的提交者（Committer）机制与核心小组选举制度，选取另一个开源项目（如 Linux 内核或 OpenBSD），从治理结构、代码审查流程和决策机制三个维度进行比较。
+3. 观看纪录片《操作系统革命》（Moore J T S, 导演. 操作系统革命[V]. 美国: Seventh Art Releasing, 2002.），结合影片内容与本章所述 UNIX/BSD 历史，分析开源运动对传统软件商业模式的冲击。
