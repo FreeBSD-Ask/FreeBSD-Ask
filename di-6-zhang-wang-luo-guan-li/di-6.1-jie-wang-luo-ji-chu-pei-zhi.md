@@ -125,7 +125,7 @@ bound to 192.168.1.19 -- renewal in 43200 seconds.
 
 亦可在命令行通过 ifconfig(8) 执行网络接口卡配置。然除非同时将这些配置添加到 `/etc/rc.conf` 文件，否则重启后将丢失记录。
 
-可以通过执行以下命令设置 IP 地址：
+可通过执行以下命令设置 IP 地址：
 
 ```sh
 # ifconfig em0 inet 192.168.1.150/24
@@ -163,7 +163,7 @@ nameserver 223.6.6.6   # 指定备用 DNS 服务器为阿里云公共 DNS 备选
 # service routing restart
 ```
 
-可以使用 ping(8) 测试连接：
+可使用 ping(8) 测试连接：
 
 ```sh
 $ ping -c2 www.FreeBSD.org
