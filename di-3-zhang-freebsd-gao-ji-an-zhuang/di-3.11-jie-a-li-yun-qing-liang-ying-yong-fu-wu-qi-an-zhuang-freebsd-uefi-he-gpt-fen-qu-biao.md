@@ -500,7 +500,7 @@ root@mfsbsd:~ # gpart show # 查看修复分区表后的磁盘信息
 
 ![Distribution extract failed](../.gitbook/assets/cloud-ufs-extract-failed.png)
 
-观察实际发生的现象，按 Ctrl + C 键，退回到 Shell 界面，通过以下命令观察：
+查看实际错误信息，按 Ctrl + C 键退回到 Shell 界面，通过以下命令观察：
 
 ```sh
 # dmesg
