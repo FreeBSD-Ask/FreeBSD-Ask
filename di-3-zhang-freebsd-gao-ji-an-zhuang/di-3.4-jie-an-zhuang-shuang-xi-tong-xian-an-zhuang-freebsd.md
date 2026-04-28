@@ -86,7 +86,7 @@ Windows 安装完成后，需要为 FreeBSD 还原交换分区。分配了 208 G
 
 ![DiskGenius 主界面](../.gitbook/assets/dual-boot-8.png)
 
-打开 DiskGenius，压缩 C 盘，释放 8 GB 的未分配空间。Windows 系统安装完成后，C 盘占用了之前预留的大部分空间，只需要从 C 盘末尾压缩出 8 GB 即可。
+打开 DiskGenius，压缩 C 盘，释放 8 GB 的未分配空间。Windows 系统安装完成后，C 盘占用了之前预留的大部分空间，只需要从 C 盘末尾压缩出 8 GB。
 
 ![压缩 C 盘](../.gitbook/assets/dual-boot-9.png)
 
