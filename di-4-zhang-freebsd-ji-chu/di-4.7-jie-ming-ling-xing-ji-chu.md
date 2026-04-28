@@ -134,7 +134,7 @@ ykla@ykla:/ $ pwd
 
 ## 命令行格式
 
-大部分命令行命令的名称都具有明确含义，例如 `ls` 即 `list`（列出）、`wget` 即通过 web（网络）来 `get`（下载）；也存在少量见名不知义的命令，例如 `thefuck` 命令（用于自动纠正拼写错误）。
+大部分命令行命令的名称都具有明确含义，例如 `ls` 即 `list`（列出）、`wget` 即通过 web（网络）来 `get`（下载）；也存在少量难以从名称推断功能的命令，例如 `thefuck` 命令（用于自动纠正拼写错误）。
 
 命令行的基本语法结构遵循 POSIX Shell Command Language 规范（[IEEE Std 1003.1](https://pubs.opengroup.org/onlinepubs/9799919799/)）。其一般格式如下：
 
@@ -333,7 +333,7 @@ cd is a shell builtin
 /bin/ls was installed by package FreeBSD-runtime-15.snap20250313173555
 ```
 
-如果缺少某个命令，一般可以通过安装相应的软件包来获取，比如 `lspci` 命令，来自软件包 `sysutils/pciutils`。然而也有很多命令存在 Linux 主义问题，不兼容其他操作系统，比如 `ip` 命令，来自软件包 iproute2。
+如果缺少某个命令，一般可以通过安装相应的软件包来获取，比如 `lspci` 命令，来自软件包 `sysutils/pciutils`。然而也有许多命令存在 Linux 专有性问题，不兼容其他操作系统，比如 `ip` 命令，来自软件包 iproute2。
 
 ## 常用命令
 
@@ -605,7 +605,7 @@ test2 -> test2.pdf
 $ cp test /home/ykla/
 ```
 
-末尾的 `/` 很重要，如果缺少了末尾的 `/`，且子目录 ykla 不存在，`test` 将被重命名为 `ykla`（ykla 在设想中本应是个目录）：
+末尾的 `/` 很重要，如果缺少了末尾的 `/`，且子目录 ykla 不存在，`test` 将被重命名为 `ykla`（ykla 本应为一个目录）：
 
 ```sh
 $ cp test /home/ykla/
@@ -902,5 +902,5 @@ FreeBSD repository is up to date.
 
 ## 课后习题
 
-1. 尝试进行对 BSD 风格的 sed/awk/grep 命令选项进行优化，使其兼容 GNU 语法。
+1. 尝试对 BSD 风格的 sed/awk/grep 命令选项进行优化，使其兼容 GNU 语法。
 2. 查看 FreeBSD 中 ls 命令的源代码实现，并与 GNU 的实现进行比较。
