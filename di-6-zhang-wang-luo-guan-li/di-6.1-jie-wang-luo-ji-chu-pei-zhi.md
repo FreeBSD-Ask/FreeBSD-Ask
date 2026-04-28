@@ -1,31 +1,64 @@
 # 6.1 网络基础配置
 
-网络基础配置是指对 FreeBSD 操作系统网络通信基础设施进行设置的过程，包括 DNS 配置、网络接口管理、IP 地址设置等内容。
+FreeBSD 是一款理想的互联网或内网服务器，能够在最重的负载下提供稳健的网络服务，并高效使用内存以维持数千个并发用户进程的良好响应时间。
 
-## 手动设置 `resolv.conf` 文件
+FreeBSD 网络配置涉及多个核心命令和配置文件：
 
-### DNS 配置文件的动态特性
+- `ifconfig` 命令用于配置网络接口参数；
+- `route` 命令用于手动操作网络路由表；
+- `/etc/rc.conf` 是系统启动配置的核心文件，网络接口的持久化配置均存储于此；
+- `/etc/resolv.conf` 文件用于配置 DNS 解析器信息；
+- `/etc/hosts` 文件提供本地主机名到 IP 地址的静态映射。
 
-手动编辑 `/etc/resolv.conf` 文件后，重启系统时该文件可能被重置，因为动态主机配置协议（Dynamic Host Configuration Protocol，DHCP）客户端在获取网络配置时会通过 resolvconf 服务重写该文件。resolvconf 是一个管理系统 DNS 配置的框架，它协调多个来源（如 DHCP、PPP、静态配置等）对 `resolv.conf` 文件的修改，确保 DNS 配置的一致性。
+## 网络模型基础
 
-### 防止 DNS 配置遭覆盖的方法
+计算机网络是将地理位置不同、具有独立功能的多台计算机及其外部设备，通过通信线路连接起来，在网络操作系统、网络管理软件及网络通信协议的管理和协调下，实现资源共享和信息传递的系统。
 
-如需使用手动配置的 DNS 服务器而不被系统自动更新覆盖，可通过禁用 resolvconf 服务实现。编辑 `/etc/resolvconf.conf` 文件（如不存在则创建），写入 `resolvconf=NO` 一行，该配置将禁用系统对 DNS 配置文件的自动更新功能。
+FreeBSD 的网络子系统基于 TCP/IP 协议族实现，该协议族遵循互联网协议套件的分层架构。理解网络分层模型有助于把握 FreeBSD 网络配置的内在逻辑。
+
+TCP/IP 协议族采用四层模型组织网络功能：
+
+- **网络接口层（Link Layer）**：负责在物理网络介质上发送和接收数据帧，处理硬件地址（MAC 地址）解析。在 FreeBSD 中，该层对应网络接口驱动程序和 `ifconfig` 命令管理的配置。以太网帧的发送与接收、ARP（Address Resolution Protocol）地址解析均在此层完成。
+- **互联网层（Internet Layer）**：负责数据包的路由和转发，核心协议为 IP（Internet Protocol）。该层处理逻辑寻址（IP 地址）、分片与重组、路由选择等功能。在 FreeBSD 中，路由表管理和 `route` 命令操作属于此层范畴。
+- **传输层（Transport Layer）**：提供端到端的通信服务，主要协议为 TCP（Transmission Control Protocol）和 UDP（User Datagram Protocol）。TCP 提供可靠的面向连接的传输，UDP 提供无连接的不可靠传输。FreeBSD 创新性地实现了多 TCP 栈共存架构，允许系统同时加载多个 TCP 协议栈实现。
+- **应用层（Application Layer）**：包含各种面向用户的网络应用协议，如 HTTP、SSH、DNS、SMTP 等。FreeBSD 通过 Ports 和 pkg 提供了丰富的网络服务软件。
 
 ### 参考文献
 
-- FreeBSD Project. resolvconf[EB/OL]. [2026-03-26]. <https://man.freebsd.org/cgi/man.cgi?query=resolvconf>. man 手册，提供 resolvconf 工具的完整技术文档，为 DNS 配置管理提供重要参考。
-- FreeBSD Forums. 8.8.8.8 or 1.1.1.1 if set in etc resolv conf doesn't stay as an entry in the file after a network restart[EB/OL]. [2026-03-26]. <https://forums.freebsd.org/threads/8-8-8-8-or-1-1-1-1-if-set-in-etc-resolv-conf-doesnt-stay-as-an-entry-in-the-file-after-a-network-restart.85951/>. 实际案例分析，提供防止 DNS 配置被覆写的解决方案。
+- Kurose J F, Ross K W. 计算机网络：自顶向下方法（原书第 8 版）[M]. 陈鸣，译. 北京：机械工业出版社，2022. ISBN 978-7-111-71236-7.
 
-## `ifconfig` 命令
+## 识别网络适配器
 
-### 网络接口配置工具概述
+FreeBSD 支持多种有线和无线网络适配器。查看所用 FreeBSD 版本的硬件兼容性列表，确认网络适配器是否受支持。
 
-`ifconfig` 是用于配置和显示网络接口状态的常用命令，该命令是 FreeBSD 网络配置的核心工具之一，通过与内核网络子系统交互，实现对网络接口的参数配置和状态查询。用户可使用该命令设置 IP 地址、子网掩码、广播地址等网络参数。
+### 识别网络适配器方法一
 
-### 网络接口识别
+要获取系统使用的网络适配器，执行以下命令：
 
-在进行网络配置前，需确认系统已识别并加载了网卡驱动。使用 `ifconfig` 命令可查看系统中的网络接口列表及其状态。
+```sh
+% pciconf -lv | grep -A1 -B3 network
+```
+
+输出类似如下：
+
+```sh
+em0@pci0:2:1:0:	class=0x020000 rev=0x01 hdr=0x00 vendor=0x8086 device=0x100f subvendor=0x15ad subdevice=0x0750
+    vendor     = 'Intel Corporation'
+    device     = '82545EM Gigabit Ethernet Controller (Copper)'
+    class      = network
+    subclass   = ethernet
+
+iwm0@pci0:3:0:0: class=0x028000 rev=0x00 hdr=0x00 vendor=0x8086 device=0x4237 subvendor=0x8086 subdevice=0x1211
+    vendor     = 'Intel Corporation'
+    device     = 'PRO/Wireless 5100 AGN [Shiloh] Network Connection'
+    class      = network
+```
+
+`@` 符号前的文本是控制设备的驱动程序名称。在此示例中，分别是 em(4) 和 iwm(4)。
+
+### 识别网络适配器方法二
+
+使用 `ifconfig` 命令可查看系统中的网络接口列表及其状态。
 
 示例输出：
 
@@ -49,71 +82,199 @@ lo0: flags=8049<UP,LOOPBACK,RUNNING,MULTICAST> metric 0 mtu 16384
 
 `lo0` 是本地回环接口，用于本机内部通信，不属于物理网卡。如 `ifconfig` 输出中仅包含 `lo0` 接口，说明系统未识别物理网卡，此时需检查网卡硬件连接和驱动加载情况。可通过 `dmesg | grep ether` 命令查看网卡驱动加载日志。
 
-## 配置 DNS 文件
+## 配置 IPv4
 
-### DNS 解析服务器配置
+### 配置动态 IPv4 地址
 
-DNS 配置文件用于指定域名解析服务器，该文件定义了系统进行域名解析时使用的递归 DNS 服务器列表。编辑 `/etc/resolv.conf` 文件，可根据需要清空原有内容或保留现有配置，然后添加 DNS 服务器条目：
+如果网络有 DHCP 服务器，配置网络接口使用 DHCP 非常简单。FreeBSD 使用 dhclient(8) 作为 DHCP 客户端。dhclient(8) 将自动提供 IP 地址、子网掩码和默认路由器。
 
-```ini
-nameserver 223.5.5.5   # 指定首选 DNS 服务器为阿里公共 DNS
-nameserver 223.6.6.6   # 指定备用 DNS 服务器为阿里公共 DNS 备选
-nameserver 8.8.8.8     # 指定备用 DNS 服务器（Google 公共 DNS）
+>**注意**
+>
+> dhclient(8) **不支持 DHCPv6**（RFC 3315/RFC 8415），IPv6 动态地址需使用 `rtsold(8)`（SLAAC）或第三方 DHCPv6 客户端（如 `dhcp6c`）。
+
+要使接口使用 DHCP，执行以下命令：
+
+```sh
+# sysrc ifconfig_em0="DHCP"
 ```
 
-修改 DNS 配置后，需重启网络服务以使配置生效。重启网络服务将重新加载 `/etc/rc.conf` 中的网络配置参数：
+可以手动运行 dhclient(8)：
+
+```sh
+# dhclient em0
+DHCPREQUEST on em0 to 255.255.255.255 port 67
+DHCPACK from 192.168.1.1
+bound to 192.168.1.19 -- renewal in 43200 seconds.
+```
+
+可以在后台启动 dhclient(8) 客户端。这可能会导致依赖网络的程序出现问题，但在许多情况下能提供更快的启动速度。
+
+要在后台执行 dhclient(8)，执行以下命令：
+
+```sh
+# sysrc background_dhclient="YES"
+```
+
+然后重启网络接口：
 
 ```sh
 # service netif restart
 ```
 
-配置完成后，可使用 `ping` 命令测试与目标域名的连通性（按 Ctrl + C 可中断测试），示例输出如下：
+### 配置静态 IPv4 地址
+
+也可以在命令行通过 ifconfig(8) 执行网络接口卡配置。但是，除非同时将这些配置添加到 `/etc/rc.conf`文件，否则重启后将丢失记录。
+
+可以通过执行以下命令设置 IP 地址：
 
 ```sh
-# ping 163.com
-PING 163.com (123.58.180.7): 56 data bytes
-64 bytes from 123.58.180.7: icmp_seq=0 ttl=55 time=30.617 ms
-64 bytes from 123.58.180.7: icmp_seq=1 ttl=55 time=30.608 ms
-64 bytes from 123.58.180.7: icmp_seq=2 ttl=55 time=30.633 ms
-Ctrl+C
---- 163.com ping statistics ---
-3 packets transmitted, 3 packets received, 0.0% packet loss
-round-trip min/avg/max/stddev = 30.608/30.619/30.633/0.010 ms
+# ifconfig em0 inet 192.168.1.150/24
+```
+
+要使更改在重启后持久化，执行以下命令：
+
+```sh
+# sysrc ifconfig_em0="inet 192.168.1.150 netmask 255.255.255.0"
+```
+
+一次性设置默认路由：
+
+```sh
+# route add default 192.168.1.1
+```
+
+永久性添加默认路由器：
+
+```sh
+# sysrc defaultrouter="192.168.1.1"
+```
+
+将 DNS 记录添加到 `/etc/resolv.conf` 文件：
+
+```ini
+nameserver 223.5.5.5   # 指定首选 DNS 服务器为阿里云公共 DNS
+nameserver 223.6.6.6   # 指定备用 DNS 服务器为阿里云公共 DNS 备选
+```
+
+然后重启网络接口和路由：
+
+```sh
+# service netif restart
+# service routing restart
+```
+
+可以使用 ping(8) 测试连接：
+
+```sh
+$ ping -c2 www.FreeBSD.org
+PING www.FreeBSD.org (198.18.0.7): 56 data bytes
+64 bytes from 198.18.0.7: icmp_seq=0 ttl=128 time=0.776 ms
+64 bytes from 198.18.0.7: icmp_seq=1 ttl=128 time=0.635 ms
+
+--- www.FreeBSD.org ping statistics ---
+2 packets transmitted, 2 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 0.635/0.705/0.776/0.071 ms
 ```
 
 如能正常收到 ICMP 响应报文，则说明网络已连通。
 
-## 混杂模式
+>**注意**
+>
+>Jail 内默认不允许使用 ping（需设置 sysctl `allow.raw_sockets`）。
 
-### 混杂模式的技术原理
+## IPv6 配置
 
-混杂模式（Promiscuous Mode）是一种网络接口工作模式。在该模式下，网络接口控制器（NIC）不再仅过滤目标 MAC 地址与本机地址匹配的帧，而是接收网络链路层上传输的所有数据帧，无论其目标媒体访问控制（Media Access Control，MAC）地址是否为本机。
+IPv6 是 IP 协议的新版本，也称为 IPv4 的后继。IPv6 相对于 IPv4 提供了多项优势和新功能：
 
-### 应用场景
+- 其 128 位地址空间允许 340,282,366,920,938,463,463,374,607,431,768,211,456 个地址。这解决了 IPv4 地址短缺和最终的 IPv4 地址耗尽问题。
+- 路由器仅在路由表中存储网络聚合地址，从而将路由表的平均空间减少到 8192 个条目。
+- 地址自动配置（RFC4862）。
+- 强制多播地址。
+- 内置 IPsec（IP 安全）。
+- 简化的头部结构。
+- 对移动 IP 的支持。
+- IPv6 到 IPv4 的过渡机制。
 
-这种工作模式在网络协议分析、网络流量监控、安全审计、虚拟化网络环境与容器网络等场景中具有重要应用价值。
+FreeBSD 包括 KAME 项目 IPv6 参考实现，并附带使用 IPv6 所需的一切。
 
-如需在系统启动时为指定网络接口配置 IPv4 地址、子网掩码并启用混杂模式，可在 `/etc/rc.conf` 文件中添加以下配置：
+IPv6 地址有三种不同类型：
 
-```ini
-ifconfig_igc0="inet 192.168.31.77 netmask 255.255.255.0 promisc"
+- **单播（Unicast）**：发送到单播地址的数据包到达属于该地址的接口。
+- **任播（Anycast）**：这些地址在语法上与单播地址无法区分，但它们寻址一组接口。发往任播地址的数据包将到达最近的接口。
+- **多播（Multicast）**：这些地址标识一组接口。发往多播地址的数据包将到达属于多播组的所有接口。IPv4 广播地址（通常为 xxx.xxx.xxx.255）在 IPv6 中由多播地址表示。
+
+读取 IPv6 地址时，规范形式表示为 `x:x:x:x:x:x:x:x`，其中每个 x 代表一个 16 位十六进制值。例如 `FEBC:A574:382B:23C1:AA49:4592:4EFE:9982`。
+
+通常，地址会有很长的全零子字符串。`::`（双冒号）可用于替换每个地址中的一个子字符串。此外，每个十六进制值最多可以省略三个前导零。例如，`fe80::1` 对应规范形式 `fe80:0000:0000:0000:0000:0000:0000:0001`。
+
+一些 IPv6 地址是保留的：
+
+| IPv6 地址 | 描述 | 说明 |
+|-----------|------|------|
+| `::/128` | 未指定地址 | 等同于 IPv4 中的 0.0.0.0 |
+| `::1/128` | 回环地址 | 等同于 IPv4 中的 127.0.0.1 |
+| `::ffff:0.0.0.0/96` | IPv4 映射的 IPv6 地址 | 低 32 位是 IPv4 地址 |
+| `fe80::/10` | 链路本地单播 | 等同于 IPv4 中的 169.254.0.0/16 |
+| `fc00::/7` | 唯一本地 | 仅在协作站点集合内可路由 |
+| `ff00::/8` | 多播 | — |
+| `2000::/3` | 全局单播 | 所有全局单播地址从此池分配 |
+| `2001:db8::/32` | 文档用途 | 用于文档中的 IPv6 地址前缀 |
+
+### 配置动态 IPv6 地址
+
+要使用 SLAAC 动态配置接口的 IPv6 地址：
+
+```sh
+# sysrc ifconfig_em0_ipv6="inet6 accept_rtadv"
+# sysrc rtsold_enable="YES"
 ```
 
-### 参考文献
+注意，当启用 IPv6 数据包转发（即 `ipv6_gateway_enable=YES`）时，除非将 `net.inet6.ip6.rfc6204w3` sysctl(8) 变量设置为 1，否则系统不会配置 SLAAC 地址。
 
-- FreeBSD Project. ifconfig(8)[EB/OL]. [2026-03-26]. <https://man.freebsd.org/cgi/man.cgi?ifconfig(8)>. 提供 ifconfig 命令的完整技术文档，为网络接口配置提供重要参考。
+### 配置静态 IPv6 地址
 
-## 使 `/etc/rc.conf` 网络配置持久化
+要将 FreeBSD 系统配置为具有静态 IPv6 地址的 IPv6 客户端，需要设置 IPv6 地址：
 
-### 系统启动配置文件概述
+```sh
+# sysrc ifconfig_em0_ipv6="inet6 2001:db8:4672:6565:2026:5043:2d42:5344 prefixlen 64"
+```
 
-`/etc/rc.conf` 是 FreeBSD 系统启动配置文件，用于存储各种系统和服务的启动参数。该文件是系统初始化过程中的核心配置文件之一。
+要分配默认路由器：
 
-### 网络配置的持久化机制
+```sh
+# sysrc ipv6_defaultrouter="2001:db8:4672:6565::1"
+```
 
-使用 `ifconfig` 命令进行的网络配置多为一次性配置，系统重启后配置将失效。与一次性配置不同，将网络配置写入 `/etc/rc.conf` 文件可实现配置的持久化，系统启动时会自动读取并应用该文件中的配置参数。
 
-### 网络配置相关文件结构
+## 主机名
+
+主机名代表主机在网络上的完全限定域名（FQDN）。
+
+检查当前主机名：
+
+```sh
+$ hostname
+ykla
+```
+
+临时更改主机名：
+
+```sh
+root@ykla:/home/ykla # hostname f	# 将主机名由 ykla 临时修改为 f
+root@f:/home/ykla #
+```
+
+更改主机名并使其在重启后持久化：
+
+```sh
+# sysrc hostname="f"
+```
+
+## DNS 配置详解
+
+可以将 DNS 理解为电话簿，其中 IP 地址与主机名相互对应。除非 `/etc/nsswitch.conf` 文件中另有说明，FreeBSD 将首先查看 `/etc/hosts` 文件中的地址，然后查看 `/etc/resolv.conf` 文件中的 DNS 信息。
+
+相关文件结构：
 
 ```sh
 /etc/
@@ -122,9 +283,64 @@ ifconfig_igc0="inet 192.168.31.77 netmask 255.255.255.0 promisc"
 └── resolvconf.conf      # resolvconf 服务配置文件
 ```
 
+### 本地地址 hosts 文件
+
+`/etc/hosts` 文件是一个简单的文本数据库，提供主机名到 IP 地址的映射。可以通过 LAN 连接的本地计算机的条目可以添加到此文件中，用于简单的命名目的，而无需设置 DNS 服务器。此外，`/etc/hosts` 文件可用于提供 Internet 名称的本地记录，减少查询外部 DNS 服务器的需要。
+
+例如，在本地环境中有 www/gitlab-ce 的本地实例，可以如下行添加到 `/etc/hosts` 文件：
+
+```ini
+192.168.1.150 git.example.com git
+```
+
+### 配置 DNS 名称服务器
+
+FreeBSD 系统访问 Internet 域名系统（DNS）的方式由 resolv.conf(5) 控制。`/etc/resolv.conf` 文件中最常见的条目是：
+
+- **nameserver**：解析器应查询的名称服务器的 IP 地址。服务器按列出的顺序查询，最多三个。
+- **search**：主机名查找的搜索列表。通常由本地主机名的域确定。
+- **domain**：本地域名。
+
+典型的 `/etc/resolv.conf` 文件如下：
+
+```ini
+search example.com
+nameserver 223.5.5.5
+nameserver 223.6.6.6
+```
+
+search 和 domain 选项只能使用其中一个。使用 DHCP 时，dhclient(8) 通常会用从 DHCP 服务器接收的信息重写 `/etc/resolv.conf` 文件。
+
+手动编辑 `/etc/resolv.conf` 文件后，重启系统时该文件可能被重置，因为动态主机配置协议（Dynamic Host Configuration Protocol，DHCP）客户端在获取网络配置时会通过 resolvconf 服务重写该文件。
+
+如需使用手动配置的 DNS 服务器而不被系统自动更新覆盖，可通过禁用 resolvconf 服务实现。编辑 `/etc/resolvconf.conf` 文件（如不存在则创建），写入 `resolvconf=NO` 一行，该配置将禁用系统对 DNS 配置文件的自动更新功能。
+
+### 参考文献
+
+- FreeBSD Project. resolvconf[EB/OL]. [2026-03-26]. <https://man.freebsd.org/cgi/man.cgi?query=resolvconf>. man 手册，提供 resolvconf 工具的完整技术文档，为 DNS 配置管理提供重要参考。
+- FreeBSD Forums. 8.8.8.8 or 1.1.1.1 if set in etc resolv conf doesn't stay as an entry in the file after a network restart[EB/OL]. [2026-03-26]. <https://forums.freebsd.org/threads/8-8-8-8-or-1-1-1-1-if-set-in-etc-resolv-conf-doesnt-stay-as-an-entry-in-the-file-after-a-network-restart.85951/>. 实际案例分析，提供防止覆写 DNS 配置的解决方案。
+
+## 网络故障排除
+
+在排除硬件和软件配置故障时，首先检查简单的事情：
+
+- 网线是否插好？
+- 网络服务是否正确配置？
+- 防火墙是否正确配置？
+- 网卡是否受 FreeBSD 支持？
+- 路由器是否正常工作？
+
+如果网卡工作正常但性能不佳，请阅读 tuning(7)。同时检查网络配置，因为不正确的网络设置可能导致连接缓慢。
+
+“No route to host”消息发生在系统无法将数据包路由到目标主机时。这可能是因为没有指定默认路由或网线未插入。检查 `netstat -rn` 的输出，确保有到主机的有效路由。
+
+“ping: sendto: Permission denied”错误消息通常由防火墙配置错误引起。如果在 FreeBSD 上启用了防火墙但未定义规则，默认策略是拒绝所有流量，甚至是 ping(8)。
+
+## 附录：网络配置 rc.conf 示例
+
 > **注意**：
 >
-> 修改 `rc.conf` 文件后，需重启系统或运行命令 `/etc/rc.d/netif restart` 来应用网络更改。
+> 修改 `/etc/rc.conf` 文件后，需重启系统或运行命令 `/etc/rc.d/netif restart` 来应用网络更改。
 
 ```ini
 hostname="ykla"  # 主机名，不能为空，否则无法使用 Xorg
@@ -181,43 +397,10 @@ ABC_XYZ="ddd"
 
 按字母 d 可切换流量显示格式，按 h 可查阅更多使用方法。
 
-## 附录：计算机网络
-
-计算机网络是将地理位置不同、具有独立功能的多台计算机及其外部设备，通过通信线路连接起来，在网络操作系统、网络管理软件及网络通信协议的管理和协调下，实现资源共享和信息传递的系统。
-
-计算机网络基于分层架构设计，遵循 OSI 七层模型或 TCP/IP 四层模型。各层通过协议栈协同工作，实现从物理传输到应用服务的完整通信功能。
-
-从系统论的视角审视，网络系统的组成包括：
-
-- 网络终端（用户端，在拓扑图中通常不再向下延伸）
-- 网络设备（如防火墙、交换机）
-- 网络介质（如光纤、双绞线等）
-
-计算机网络的核心目标是提供高效、可靠的数据通信服务。
-
-### 网线
-
-网线是计算机网络中最常见的传输介质之一。它通过物理连接实现设备之间的数据传输。网线基于双绞线技术，通过将两根绝缘铜导线按一定密度互相绞合，减少电磁干扰，提高信号传输质量。
-
-常见的网线类型包括 Cat5e、Cat6、Cat6a 等，支持不同的传输速率和距离。网线的选择和使用对网络性能有着直接影响。
-
-#### 网线拓扑
-
-网络拓扑描述了网络中各节点和连接的物理或逻辑布局。不同的拓扑结构在可靠性、扩展性、成本与性能等方面具有不同特点，适用于不同的应用场景。拓扑结构决定了数据在网络中的传输路径和故障恢复机制。
-
-- **星形拓扑**：呈放射状结构，两个或以上的终端连接到同一台交换机上。该拓扑结构具有故障隔离容易、扩展性好的优点，但存在单点故障风险。中心节点（交换机）故障会导致整个网络瘫痪；而终端设备故障不影响其他设备。
-- **树形拓扑**：由两个或以上的星形拓扑组合而成的分层网络结构。该结构适用于大规模网络，便于分级管理。树形拓扑结合了星形拓扑的优点，通过层次化设计支持网络扩展。但高层节点故障会影响其下所有子网。
-- **网状拓扑**：任意两个节点之间均通过网络介质相连，通信介质数量较多。所需网线数量为 `n*(n-1)/2`。该拓扑具有高可靠性，但成本较高。网状拓扑提供多条冗余路径，单个链路故障不影响整体连通性，常用于对可靠性要求高的核心网络。
-- **部分网状（混合型）拓扑**：核心网络采用网状拓扑，分支网络采用树形或星形拓扑。该结构在可靠性与成本之间取得平衡。关键节点之间建立网状连接以确保可靠性；边缘节点采用星形连接控制成本。这是现代企业网络的常见设计。
-
-网线线芯标识依次为：橙白、橙、绿白、蓝、蓝白、绿、棕白、棕。这是 T568B 标准的线序排列，用于以太网连接。
-
-记忆技巧可概括为：橙、绿、蓝、棕四对，蓝色线芯位于中间位置。带白色条纹的线芯通常位于对应纯色线芯的左侧，但蓝色对例外（纯蓝在前，蓝白在后）。正确的线序确保信号正确传输，避免串扰和数据错误。
-
 ## 课后习题
 
 1. 在 FreeBSD 系统上配置双静态 IP 地址，分别设置不同的 DNS 服务器，然后使用 `dig` 命令验证每个 DNS 服务器的解析行为，分析为什么系统允许同时配置多个 DNS 服务器而不产生冲突。
 
-2. 修改网络接口的 MTU 值为 9000（巨型帧），使用 `ping -M do -s 8972` 命令测试连通性。
+2. 修改网络接口的 MTU 值为 9000（巨型帧），使用 `ping -D -s 8972` 命令测试连通性。
 
 3. 禁用 `resolvconf` 服务，然后手动修改 `/etc/resolv.conf` 文件并重启网络服务，验证配置是否持久化。
