@@ -534,7 +534,7 @@ $ rm -rf /home/ykla/test/
 >```sh
 > # rm -rf /home/ykla /test
 > # ls /home/ykla
-> ls: /home/ykla: No such file or directory # 发现已经不存在 ykla 这个目录了
+> ls: /home/ykla: No such file or directory # 表明 ykla 目录已不存在
 >```
 
 > **警告**
