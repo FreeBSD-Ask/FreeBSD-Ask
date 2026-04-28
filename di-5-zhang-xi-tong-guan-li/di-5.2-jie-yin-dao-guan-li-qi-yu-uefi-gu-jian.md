@@ -253,7 +253,7 @@ grub-install: error: unknown filesystem.
 
 ## rEFInd 引导管理器（多系统引导管理）
 
-在多系统环境下，频繁通过 BIOS 固件界面切换操作系统存在效率低下的问题。
+在多系统环境下，频繁通过 BIOS 固件界面切换操作系统效率较低。
 
 可借助 [rEFInd](https://www.rodsbooks.com/refind/) 实现类似于 Clover 的可视化启动菜单效果，在开机时直观地选择要进入的操作系统。
 
