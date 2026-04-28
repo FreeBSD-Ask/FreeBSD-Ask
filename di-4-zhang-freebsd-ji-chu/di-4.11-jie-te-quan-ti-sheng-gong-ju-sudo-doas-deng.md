@@ -404,6 +404,6 @@ $ sudo su
 
 ## 课后习题
 
-1. 撰写关于通过 mac_do 提权的具体实现原理与操作手册，并向本书提交 PR。
-2. 查看 FreeBSD Ports 中 doas 工具的源代码实现，分析其设计如何在简单性与安全性之间做权衡。
-3. 修改 FreeBSD 中 doas 配置的 keepenv 选项，验证其行为变化。
+1. 查阅 FreeBSD 中 `mac_do` 模块的源代码，分析其通过 Mandatory Access Control 实现提权的机制，梳理其与 `sudo`/`doas` 在权限模型上的本质差异。
+2. 查阅 FreeBSD Ports 中 `doas` 工具的源代码实现，分析其配置解析、规则匹配和环境变量处理的设计，评估其在简单性与安全性之间的权衡策略。
+3. 修改 `doas` 配置中的 `keepenv` 选项，记录其对环境变量继承行为的影响，分析不同环境变量（如 `PATH`、`HOME`）在提权场景下的安全风险。
