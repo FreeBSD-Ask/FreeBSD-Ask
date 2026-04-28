@@ -526,7 +526,7 @@ pid 1562 (distextract), jid 0, uid 0, was killed: failed to reclaim memory
 
 通常是由于未预先手动加载 zfs 内核模块引发的。
 
-解决方法，按照上文所述，执行命令 `kldload zfs` 手动加载内核模块。
+解决方法为按照上文所述，执行命令 `kldload zfs` 手动加载内核模块。
 
 这可能是一个长期存在但难以复现的 Bug，参见：FreeBSD Foundation. Bug 249157 - installer reports sysctl: unknown oid 'vfs.zfs.min_auto_ashift' when ZFS module not loaded[EB/OL]. [2026-03-26]. <https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=249157>.
 
