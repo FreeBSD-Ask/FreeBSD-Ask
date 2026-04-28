@@ -56,7 +56,7 @@ FreeBSD 采用了一套完整而独特的开发模型。该开发模型是一个
 
 ## 什么是 FreeBSD？
 
-了解了 FreeBSD 的版本、宗旨和开发模型后，下文将深入探讨 FreeBSD 的本质。这一问题的答案涉及技术谱系、设计哲学和社区文化等多个维度。FreeBSD 不是 Linux，也不是 UNIX 的克隆。FreeBSD 是一款自由软件。
+了解了 FreeBSD 的版本、宗旨和开发模型后，下文将深入探讨 FreeBSD 的本质。这一问题的答案涉及技术谱系、设计哲学和社区文化等多个维度。FreeBSD 不是 Linux，也不是 UNIX 的克隆。FreeBSD 作为一款自由软件，其源代码公开且可自由使用、修改和分发。
 
 ![什么是 FreeBSD？](../.gitbook/assets/freebsd-not-linux.png)
 
@@ -80,7 +80,7 @@ FreeBSD 的稳定性和可靠性使其在许多领域得到了广泛应用。以
 - The New Stack. Apple’s Open Source Roots: The BSD Heritage Behind macOS and iOS[EB/OL]. [2026-03-26]. <https://thenewstack.io/apples-open-source-roots-the-bsd-heritage-behind-macos-and-ios/>. Apple 的操作系统如 macOS、iOS 等大量复用了 BSD（不只是 FreeBSD）的技术栈。BSD 堪称 macOS 的开源基石。
 - Sony. FreeBSD Kernel[EB/OL]. [2026-03-26]. <https://www.playstation.com/en-us/oss/ps4/freebsd-kernel/>. 索尼（Sony）的游戏机 PlayStation 4（PS4）和 PlayStation 5（PS5）使用的操作系统基于 FreeBSD。PlayStation 3（PS3）的 CellOS 和 PlayStation Vita（PSV）的操作系统也以 FreeBSD 和 NetBSD 为基础构建。
 - FreeBSD Foundation. Netflix Case Study[EB/OL]. [2026-03-26]. <https://freebsdfoundation.org/netflix-case-study/>. 奈飞（Netflix）几乎所有网络活动（内容缓存/CDN）均基于 FreeBSD 设备运行。
-- QNX. Search Results[EB/OL]. [2026-03-26]. <https://www.qnx.com/developers/docs/8.0/search.html?searchQuery=freebsd>. QNX 操作系统。QNX 是一款微内核实时操作系统（RTOS），其内核为自主研发，并非基于 FreeBSD。QNX 以前是黑莓手机的操作系统。QNX 现在广泛应用为汽车安全操作系统——在主流座舱架构中，QNX Hypervisor 负责安全关键域（如仪表盘、ADAS），同时将 Android Automotive 作为客户操作系统运行于虚拟机中，以实现信息娱乐功能（参见：BlackBerry QNX. QNX Hypervisor 8.0[EB/OL]. [2026-04-17]. <https://blackberry.qnx.com/en/products/foundation-software/qnx-hypervisor>）。国内新能源车辆广泛采用了 QNX 操作系统，QNX 在汽车安全关键系统中占据重要市场份额。QNX 在网络子系统和部分用户空间组件中复用了 FreeBSD 的代码。
+- QNX. Search Results[EB/OL]. [2026-03-26]. <https://www.qnx.com/developers/docs/8.0/search.html?searchQuery=freebsd>. QNX 操作系统。QNX 作为一款微内核实时操作系统（RTOS），其内核为自主研发，并非基于 FreeBSD。QNX 以前是黑莓手机的操作系统。QNX 现在广泛应用为汽车安全操作系统——在主流座舱架构中，QNX Hypervisor 负责安全关键域（如仪表盘、ADAS），同时将 Android Automotive 作为客户操作系统运行于虚拟机中，以实现信息娱乐功能（参见：BlackBerry QNX. QNX Hypervisor 8.0[EB/OL]. [2026-04-17]. <https://blackberry.qnx.com/en/products/foundation-software/qnx-hypervisor>）。国内新能源车辆广泛采用了 QNX 操作系统，QNX 在汽车安全关键系统中占据重要市场份额。QNX 在网络子系统和部分用户空间组件中复用了 FreeBSD 的代码。
 - Dell. PowerScale OneFS：了解基于源的路由[EB/OL]. (2024-05-28)[2026-03-26]. <https://www.dell.com/support/kbdoc/zh-cn/000020056/isilon-onefs-understanding-source-based-routing-sbr-in-isilon?lang=zh>. Dell EMC Isilon，戴尔的 Isilon（面向企业的 NAS 存储设备）设备使用的操作系统 OneFS 基于 FreeBSD。
 - Beckhoff. TwinCAT/BSD: operating system for Industrial PCs[EB/OL]. [2026-03-26]. <https://www.beckhoff.com/en-en/products/ipc/software-and-tools/twincat-bsd/>. Beckhoff 倍福自动化控制系统的操作系统 TwinCAT/BSD。
 - OpenHarmony. kernel_liteos_a[EB/OL]. [2026-03-26]. <https://gitee.com/openharmony/kernel_liteos_a/tree/master>. OpenHarmony LiteOS 内核引入了 FreeBSD 代码用于驱动程序等方面。
