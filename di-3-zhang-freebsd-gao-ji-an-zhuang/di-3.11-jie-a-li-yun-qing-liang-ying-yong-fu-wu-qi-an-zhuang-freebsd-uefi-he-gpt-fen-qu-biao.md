@@ -470,7 +470,7 @@ root@mfsbsd:~ # gpart show # 查看修复分区表后的磁盘信息
 
 ### UFS 安装
 
-执行 `bsdinstall` 开始安装即可，流程可参见本节其他相关文章。
+执行 `bsdinstall` 开始安装，流程可参见本节其他相关内容。
 
 ![UFS 安装](../.gitbook/assets/cloud-ufs-install-1.png)
 
