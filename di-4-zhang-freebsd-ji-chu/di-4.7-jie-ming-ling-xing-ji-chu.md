@@ -434,7 +434,7 @@ $ touch test test1 test2 test3
 创建一个目录，命名为 ykla。
 
 ```sh
-$ mkdir -v ykla # -v 选项可以帮我们看到文件的变动，是 verbose 的缩写，即“啰嗦”一些，意为输出详细信息
+$ mkdir -v ykla # -v 选项用于显示文件变动详情，是 verbose 的缩写，意为输出详细信息
 ykla
 ```
 
