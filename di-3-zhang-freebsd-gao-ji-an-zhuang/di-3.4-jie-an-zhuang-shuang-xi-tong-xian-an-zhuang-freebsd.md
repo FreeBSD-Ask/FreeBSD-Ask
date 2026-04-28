@@ -123,7 +123,7 @@ Windows 安装完成后，需要为 FreeBSD 还原交换分区。分配了 208 G
 
 未产生错误，亦无任何提示，表明操作成功，系统已经可以正常识别并使用这个新的交换分区。
 
-编辑 `/etc/fstab` 文件，在 swap 一行最前面删去注释符号 `#`，并将分区改为正确的值，在本例中如下第三行：
+编辑 `/etc/fstab` 文件，在 swap 对应行的行首删去注释符号 `#`，并将分区改为正确的值，在本例中如下第三行：
 
 ```sh
 # Device                Mountpoint      FStype  Options         Dump    Pass#
