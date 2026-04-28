@@ -67,8 +67,6 @@ usbhid_load="YES"           # 配置系统启动时自动加载 USB HID 驱动
 
 ## 课后习题
 
-1. 研究 USB HID 子系统在 FreeBSD 中的实现，分析 `hw.usb.usbhid.enable` 参数如何改变内核对 USB 输入设备的处理方式，尝试在不同版本 FreeBSD 上验证该参数的行为差异。
-
-2. 在 VMware Fusion 中尝试配置屏幕自动缩放功能，分析该功能缺失的技术障碍。
-
-3. 对比 macOS 14 与 macOS 15 中 VMware Fusion 的键盘支持差异，查找相关内核变更记录。
+1. 查阅 FreeBSD 源代码中 USB HID 子系统的实现，分析 `hw.usb.usbhid.enable` 参数如何改变内核对 USB 输入设备的处理路径，并在不同版本 FreeBSD 上对比该参数的行为差异。
+2. 分析 VMware Fusion 中屏幕自动缩放功能缺失的技术障碍，查阅 VMware Tools 的图形驱动实现以定位关键限制。
+3. 对比 macOS 14 与 macOS 15 中 VMware Fusion 的键盘支持差异，查阅 Apple 修订的 HID 驱动变更记录以解释兼容性变化。
