@@ -457,7 +457,7 @@ htcaps=207002d<LDPC,SHORTGI20>
 
 第一条命令创建 `wlan0` 接口，绑定到 `rtwn0` 并设置为 Host AP 模式；第二条命令配置 `wlan0` 的 IP 地址、SSID、无线模式和信道。
 
-![创建无线热点](../.gitbook/assets/wifi1.png)
+![创建无线热点](../.gitbook/assets/wifi-hotspot.png)
 
 ## 附录：图形化网络配置工具
 

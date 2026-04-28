@@ -239,9 +239,9 @@ MobaXterm 是一款集成了 SCP 功能和多种网络工具的终端软件。
 
 MobaXterm 目前不支持中文，下载地址 <https://mobaxterm.mobatek.net/download-home-edition.html>，任选其一。
 
-![MobaXterm](../.gitbook/assets/MobaXterm1.jpg)
+![MobaXterm](../.gitbook/assets/mobaxterm-1.jpg)
 
-![MobaXterm](../.gitbook/assets/MobaXterm2.jpg)
+![MobaXterm](../.gitbook/assets/mobaxterm-2.jpg)
 
 鼠标操作方式与 Xshell 类似。
 
@@ -253,7 +253,7 @@ PuTTY 界面操作相对不便，不支持多语言（i18n）（[中文版注入
 
 ### Termius
 
-![Termius](../.gitbook/assets/Termius.jpg)
+![Termius](../.gitbook/assets/termius.jpg)
 
 Termius 下载地址：<https://termius.com/download/>
 
@@ -359,7 +359,7 @@ me:\
 
 客户端也需进行相同的配置。由于 Mosh 是为移动终端设计的，本例使用 Android 设备上的 [JuiceSSH](https://play.google.com/store/apps/details?id=com.sonelli.juicessh) 软件进行测试。
 
-![juicessh](../.gitbook/assets/juicessh1.png)
+![juicessh](../.gitbook/assets/juicessh-1.png)
 
 点击“服务端命令”，设置如下：
 
@@ -388,17 +388,17 @@ root     syslogd     1017 7   udp4   *:514                 *:*
 
 测试连接：
 
-![juicessh 的 mosh](../.gitbook/assets/juicessh2.png)
+![juicessh 的 mosh](../.gitbook/assets/juicessh-mosh-1.png)
 
-![juicessh 的 mosh](../.gitbook/assets/juicessh3.png)
+![juicessh 的 mosh](../.gitbook/assets/juicessh-mosh-2.png)
 
-![juicessh 的 mosh](../.gitbook/assets/juicessh4.png)
+![juicessh 的 mosh](../.gitbook/assets/juicessh-mosh-3.png)
 
 断开测试：
 
-![juicessh 的 mosh 断开 WiFi](../.gitbook/assets/juicessh5.png)
+![juicessh 的 mosh 断开 WiFi](../.gitbook/assets/juicessh-mosh-disconnect.png)
 
-![juicessh 的 mosh 再次恢复连接 WiFi](../.gitbook/assets/juicessh6.png)
+![juicessh 的 mosh 再次恢复连接 WiFi](../.gitbook/assets/juicessh-mosh-reconnect.png)
 
 可以看到，断开后会有提示，重连网络后会自动恢复，如同未断开一般（已结合 `screen` 使用）。
 
