@@ -47,7 +47,7 @@
 
 ![硬盘分区情况](../.gitbook/assets/dual-system-2.png)
 
-此处在第一行输入分区类型（即下方会列出的 `Filesystem type`）。如需添加 swap 分区，请在此步骤首先添加，后添加难以控制分区大小，因为分区会从空闲空间的开头或结尾分配，先添加 swap 可以更好地控制其位置。在添加 UFS 或 ZFS 分区时，需在 `Mountpoint` 处填写 `/`，表示将该分区挂载到根目录。`Label` 是 FreeBSD 的卷标（gptlabel），用于方便识别分区，可根据需要填写或留空。此处使用 ZFS，不添加 swap 分区，并且填入卷标 `zroot`。
+此处在第一行输入分区类型（即下方会列出的 `Filesystem type`）。如需添加 swap 分区，请在此步骤首先添加，后续添加则难以控制分区大小，因为分区会从空闲空间的开头或结尾分配，先添加 swap 可以更好地控制其位置。在添加 UFS 或 ZFS 分区时，需在 `Mountpoint` 处填写 `/`，表示将该分区挂载到根目录。`Label` 是 FreeBSD 的卷标（gptlabel），用于方便识别分区，可根据需要填写或留空。此处使用 ZFS，不添加 swap 分区，并且填入卷标 `zroot`。
 
 ![创建分区](../.gitbook/assets/dual-system-3.png)
 
