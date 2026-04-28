@@ -100,7 +100,7 @@ $ export ALL_PROXY="socks5://127.0.0.1:10808" # 设置 SOCKS5 代理
 
 为了提高网络访问效率，部分网址不需要通过代理服务器访问，例如境内网站或本地网络资源。此时需要对网络流量进行分流处理。
 
-打开 config.json 文件，找到对应的 routing 属性，其中的 rules 子属性用于配置 V2Ray 的流量分流规则。在 rules 中可以配置多条分流规则，每条规则通常包含 ip 或 domain 等匹配条件。当 IP 或域名匹配到某条规则时，V2Ray 会根据 outboundTag 属性，将流量转发到对应的 outbounds 出站配置中，例如标签为 proxy（代理）、direct（直连）或 block（拦截）的出站。只需将需要分流处理的域名或 IP 地址配置到相应的规则中即可。相关配置细节可参考 V2Ray 官方文档。实际上，在 V2Ray 客户端中导出配置文件时，通常已包含默认的流量分流规则。
+打开 config.json 文件，找到对应的 routing 属性。其中的 rules 子属性用于配置 V2Ray 的流量分流规则。在 rules 中可以配置多条分流规则，每条规则通常包含 ip 或 domain 等匹配条件。当 IP 或域名匹配到某条规则时，V2Ray 会根据 outboundTag 属性，将流量转发到对应的 outbounds 出站配置中，例如标签为 proxy（代理）、direct（直连）或 block（拦截）的出站。将需要分流处理的域名或 IP 地址配置至相应的规则中便可。相关配置细节可参考 V2Ray 官方文档。实际上，通过 V2Ray 客户端导出的配置文件通常已包含默认的流量分流规则。
 
 V2Ray 还预置了 geosite.dat 和 geoip.dat 两个资源文件：geosite.dat 按分类保存各类域名信息，geoip.dat 按分类保存各类 IP 地址信息。资源文件路径可通过设置环境变量 V2RAY_LOCATION_ASSET 指定，V2Ray 会自动在该路径下查找 geosite.dat 和 geoip.dat 文件。对于 Xray，则使用 XRAY_LOCATION_ASSET 环境变量来指定资源文件路径。注意：如果使用 Xray，请确保正确设置 XRAY_LOCATION_ASSET 环境变量，否则可能导致资源文件加载失败。
 
@@ -174,7 +174,7 @@ export XRAY_LOCATION_ASSET=/usr/local/share/xray-core/      # 指定 Xray 资源
 setenv XRAY_LOCATION_ASSET /usr/local/share/xray-core/
 ```
 
-配置完成后，请重新加载配置文件以使更改立即生效，例如，对于 sh 或 bash：`source ~/.profile`；对于 csh：`source ~/.cshrc`，或注销并重新登录。对于系统服务运行方式，如 rc.conf，无需此配置，因其通过 sysrc 注入环境变量。
+配置完成后，请重新加载配置文件以使更改立即生效，例如，sh 或 bash 须执行 `source ~/.profile`，csh 须执行 `source ~/.cshrc`，亦可注销并重新登录。对于系统服务运行方式，如 rc.conf，无需此配置，因其通过 sysrc 注入环境变量。
 
 建立软链接，使 Xray 无论从何处启动都能找到资源文件：
 
@@ -198,11 +198,11 @@ setenv XRAY_LOCATION_ASSET /usr/local/share/xray-core/
 
 - FreeBSD 的 `security/xray-core` 没有创建独立的 `xray` 用户/组，而是沿用 `net/v2ray` 的 `v2ray:v2ray`，此举旨在保持用户权限管理的一致性。
 
-注意：若 `/usr/local/etc/xray-core/` 目录下存在其他 `.json` 样例文件，建议将其移除或删除，避免配置冲突，因 Xray 可能扫描目录下的所有 JSON 文件。
+注意：若 `/usr/local/etc/xray-core/` 目录下存在其他 `.json` 样例文件，建议将其移除，避免配置冲突，因 Xray 可能扫描目录下的所有 JSON 文件。
 
 **2. 配置 rc.conf 文件：**
 
-执行以下命令开启服务并注入环境：
+执行以下命令开启服务并注入环境变量：
 
 ```sh
 # sysrc xray_enable="YES"
