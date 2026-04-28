@@ -155,7 +155,7 @@ psk="freebsdcn"
 # service netif restart
 ```
 
-如果网络连接正常再行永久性配置。在 `/etc/rc.conf` 文件中添加或修改相关配置条目：
+如果网络连接正常，再行永久性配置。在 `/etc/rc.conf` 文件中添加或修改相关配置条目：
 
 ```ini
 wlans_rtwn0="wlan0"                      # 将物理无线设备 rtwn0 绑定到 wlan0 接口
