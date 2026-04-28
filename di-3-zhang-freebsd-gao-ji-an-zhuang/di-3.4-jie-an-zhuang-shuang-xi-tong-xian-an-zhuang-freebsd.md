@@ -2,10 +2,6 @@
 
 本节介绍在同一物理设备上部署 FreeBSD 与 Windows 多操作系统的技术方案，本小节聚焦于先安装 FreeBSD、再安装其他操作系统的场景。
 
-> **注意**
->
-> 本节要求先安装 FreeBSD，再安装 Windows 或其他操作系统，请遵循此顺序进行操作。
-
 ## 安装 FreeBSD 14.2-RELEASE
 
 首先按照以下步骤安装 FreeBSD 14.2-RELEASE 系统，本节未特别说明之处，均采用默认设置与参数，以确保系统的稳定性。
@@ -20,7 +16,7 @@
 
 ![分区方案选择](../.gitbook/assets/dual-boot-3.png)
 
-这里需要设置一个大的临时交换分区，该数值表示计划中的交换分区与 Windows 系统分区容量之和。这样设置是为了后续安装 Windows 时能够直接使用这部分空间，避免额外的分区操作。在本节中，交换分区（Swap）大小为 8 GB，其余 200 GB 空间预留给 Windows。请修改 `S Swap Size` 的大小。
+这里需要设置一个大的临时交换分区，该数值表示计划中的交换分区与 Windows 系统分区容量之和。如此设置是为了后续安装 Windows 时能够直接使用这部分空间，避免额外的分区操作。在本节中，交换分区（Swap）大小为 8 GB，其余 200 GB 空间预留给 Windows。请修改 `S Swap Size` 的大小。
 
 ![交换分区大小设置](../.gitbook/assets/dual-boot-4.png)
 
@@ -54,7 +50,7 @@ Device              Size     Used    Avail Capacity
 
 可以看到交换分区的大小是所设定的 208 GB（其中 200 GB 预留给 Windows 操作系统）。
 
-编辑 `/etc/fstab` 文件，在 swap 对应行的行首添加 `#` 字符将其注释，本例中该行是第三行，这样可以避免系统在启动时不挂载这个大的交换分区，为后续安装 Windows 作准备：
+编辑 `/etc/fstab` 文件，在 swap 对应行的行首添加 `#` 字符将其注释，本例中该行是第三行，以此避免系统在启动时挂载这个大的交换分区，为后续安装 Windows 作准备：
 
 ```sh
 # Device                Mountpoint      FStype  Options         Dump    Pass#
@@ -74,7 +70,7 @@ FreeBSD 安装完成后，接下来安装 Windows 系统。
 
 ![删除交换分区](../.gitbook/assets/dual-boot-6.png)
 
-然后点击创建分区（Create Partition），如果提示出错，点击刷新（Refresh）即可。Windows 安装程序会自动在未分配空间上创建它需要的分区，包括 MSR 分区、系统分区和恢复分区。
+然后点击创建分区（Create Partition），如果提示出错，点击刷新（Refresh）。Windows 安装程序会自动在未分配空间上创建它需要的分区，包括 MSR 分区、系统分区和恢复分区。
 
 然后选中 208 GB 的“磁盘 0 未分配空间”，点击“下一步”进行安装。
 
@@ -82,11 +78,11 @@ FreeBSD 安装完成后，接下来安装 Windows 系统。
 
 ## 还原交换分区（Swap）
 
-Windows 安装完成后，需要为 FreeBSD 还原交换分区。分配了 208 GB 空间，其中有 8 GB 是为交换分区预留的。现在需要将其还原。需要用到工具 [DiskGenius](https://www.diskgenius.com/)。
+Windows 安装完成后，需要为 FreeBSD 还原交换分区。分配了 208 GB 空间，其中有 8 GB 是为交换分区预留的。现在需要将其还原。需要使用工具 [DiskGenius](https://www.diskgenius.com/)。
 
 ![DiskGenius 主界面](../.gitbook/assets/dual-boot-8.png)
 
-打开 DiskGenius，压缩 C 盘，释放 8 GB 的未分配空间。Windows 系统安装完成后，C 盘占用了之前预留的大部分空间，只需要从 C 盘末尾压缩出 8 GB 即可。
+打开 DiskGenius，压缩 C 盘，释放 8 GB 的未分配空间。Windows 系统安装完成后，C 盘占用了之前预留的大部分空间，只需要从 C 盘末尾压缩出 8 GB。
 
 ![压缩 C 盘](../.gitbook/assets/dual-boot-9.png)
 
@@ -115,7 +111,7 @@ Windows 安装完成后，需要为 FreeBSD 还原交换分区。分配了 208 G
 
 ```
 
-可以看到，`nda0p5`（分区 5）即是新建的交换分区。测试立刻启用指定交换分区 `/dev/nda0p5`：
+可以看到，`nda0p5`（分区 5）即为新建的交换分区。接下来测试启用指定交换分区 `/dev/nda0p5`：
 
 ```sh
 # swapon /dev/nda0p5
@@ -123,7 +119,7 @@ Windows 安装完成后，需要为 FreeBSD 还原交换分区。分配了 208 G
 
 未产生错误，亦无任何提示，表明操作成功，系统已经可以正常识别并使用这个新的交换分区。
 
-编辑 `/etc/fstab` 文件，在 swap 一行最前面删去注释符号 `#`，并将分区改为正确的值，在本例中如下第三行：
+编辑 `/etc/fstab` 文件，在 swap 对应行的行首删去注释符号 `#`，并将分区改为正确的值，在本例中如下第三行：
 
 ```sh
 # Device                Mountpoint      FStype  Options         Dump    Pass#
@@ -166,6 +162,5 @@ zroot/var/tmp         96K  87.8G    96K  /var/tmp
 
 ## 课后习题
 
-1. 在 UFS 文件系统下重构本文，并提交 PR。
-
-2. 分析源代码，比较 freebsd-swap 与 Linux swap 分区的实现差异。
+1. 在 UFS 文件系统下重复本节双系统安装流程，记录 ZFS 与 UFS 在分区布局和引导配置上的差异。
+2. 查阅 FreeBSD 源代码中 swap 分区的实现（`sys/dev/swap/`），比较 freebsd-swap 与 Linux swap 在磁盘格式和内核接口层面的差异。

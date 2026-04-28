@@ -2,9 +2,11 @@
 
 ## 概述
 
-FreeBSD 使用传统的 BSD init（初始化系统）来管理系统服务。与 systemd 等现代初始化系统不同，BSD init 采用基于脚本的服务管理方式。
+FreeBSD 使用传统的 BSD init（初始化系统）来管理系统服务。与 systemd 等现代初始化系统不同，BSD init 采用基于脚本的服务管理方式。所有其他进程都是由 init 直接或间接启动的。
 
-长期在后台运行的服务通常命名为 `xxxd`，例如 `sshd`、`ntpd`，其中的 `d` 表示守护进程（[daemon](https://www.freebsd.org/copyright/daemon/)），这是 UNIX 系统的通用命名约定。在 Windows 系统中，这类程序被称为“服务”，可在任务管理器中查看。
+FreeBSD 提供了两个核心的服务管理命令：`service` 命令用于控制 rc.d 系统中的服务启动脚本，支持 `start`、`stop`、`restart`、`status` 等操作，并可列出可用服务。
+
+`sysrc` 命令用于安全地修改 rc.conf(5) 中的系统配置值，自动处理 `/etc/rc.conf`、`/etc/rc.conf.local` 和 `/etc/defaults/rc.conf` 之间的优先级关系，避免手动编辑可能导致的语法错误。
 
 ## 服务管理配置文件与目录结构
 
@@ -39,11 +41,11 @@ FreeBSD 使用传统的 BSD init（初始化系统）来管理系统服务。与
 
 > **注意**
 >
->`/etc/rc.conf` 文件的优先级高于 `/etc/defaults/rc.conf` 文件。即 `/etc/rc.conf` 文件将覆盖 `/etc/defaults/rc.conf` 文件中的同名条目的配置。
+>`/etc/rc.conf` 文件的优先级高于 `/etc/defaults/rc.conf` 文件。也就是说，`/etc/rc.conf` 文件将覆盖 `/etc/defaults/rc.conf` 文件中的同名配置项。
 
 ## 系统服务管理常用命令集
 
-BSD init 系统提供了 `service` 命令作为服务管理的统一接口，配合 `sysrc` 命令实现服务的启动、停止和开机自启配置。以下是常用命令集。
+BSD init 系统提供了 `service` 命令作为服务管理的统一接口，配合 `sysrc` 命令实现服务的启动、停止和开机自启动配置。以下是常用命令集。
 
 启动服务：
 
@@ -84,7 +86,7 @@ BSD init 系统提供了 `service` 命令作为服务管理的统一接口，配
 
 > **注意**
 >
->`service xxx enable` 该方法并非适用于所有服务，仍有局限，参见：FreeBSD Project. rc keywords: enable, disable, delete cannot manage certain built-in rc startup items.[EB/OL]. [2026-03-26]. <https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=285543>. 下同。
+>`service xxx enable` 命令并非适用于所有服务，仍有局限，参见：FreeBSD Project. rc keywords: enable, disable, delete cannot manage certain built-in rc startup items.[EB/OL]. [2026-03-26]. <https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=285543>. 下同。
 
 禁用开机启动：
 
@@ -120,7 +122,7 @@ XXX_enable="YES"
 >
 > 上述命令中的 `"YES"` 的双引号可省略，系统会自动添加（FreeBSD 15.0-RELEASE 起如此）。`"NO"` 亦同理。
 
-服务对应的脚本路径为 `/usr/local/etc/rc.d/`。可直接调用 `/etc/rc.d/` 和 `/usr/local/etc/rc.d/` 下的脚本。
+基本系统服务的脚本路径为 `/etc/rc.d/`，第三方应用服务的脚本路径为 `/usr/local/etc/rc.d/`。可直接调用这两个目录下的脚本。
 
 重新加载服务配置：
 
@@ -136,7 +138,7 @@ XXX_enable="YES"
 
 ## 默认 rc.conf 配置文件的内容与结构
 
-默认 rc.conf 配置文件的源代码位于 [libexec/rc/rc.conf](https://github.com/freebsd/freebsd-src/blob/main/libexec/rc/rc.conf)，版本 [Set virtual_oss_enable="NO" in /etc/defaults/rc.conf](https://github.com/freebsd/freebsd-src/commit/1b2d495a24c36d81b14178a2f898025946bff2d8)。
+默认 rc.conf 配置文件的源代码位于 [libexec/rc/rc.conf](https://github.com/freebsd/freebsd-src/blob/main/libexec/rc/rc.conf)，对应提交为 [Set virtual_oss_enable="NO" in /etc/defaults/rc.conf](https://github.com/freebsd/freebsd-src/commit/1b2d495a24c36d81b14178a2f898025946bff2d8)。
 
 ```sh
 #!/bin/sh
@@ -885,8 +887,6 @@ fi
 
 ## 课后习题
 
-1. 创建一个自定义服务脚本放入 `/usr/local/etc/rc.d/` 目录，分析 rc.subr 中依赖关系检查的实现是否有可优化之处。
-
-2. 修改 `rc_debug` 为 YES，追踪一次服务启动的完整流程，对比正常启动与调试启动的输出差异。
-
-3. 禁用 `rc_startmsgs` 并修改几个关键服务的启动顺序，观察系统行为变化。
+1. 创建一个自定义服务脚本放入 `/usr/local/etc/rc.d/` 目录，分析 `rc.subr` 中依赖关系检查的实现逻辑，评估其与 systemd unit 依赖模型的差异。
+2. 修改 `rc_debug` 为 YES，追踪一次服务启动的完整流程，对比正常启动与调试启动的输出差异，分析调试输出中各阶段的执行顺序。
+3. 禁用 `rc_startmsgs` 并修改关键服务的启动顺序（通过 `REQUIRE` 和 `BEFORE` 关键字），记录系统启动行为的变化。

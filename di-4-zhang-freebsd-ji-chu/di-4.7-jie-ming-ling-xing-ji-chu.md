@@ -1,7 +1,6 @@
 # 4.7 命令行基础
 
-命令行界面（Command Line Interface, CLI）作为类 UNIX 系统的核心交互方式，提供了直接、高效的系统操作手段。
-
+命令行界面（Command Line Interface, CLI）是类 UNIX 系统的主要交互方式，提供了直接操作系统的方法。
 
 ## 我是谁？
 
@@ -84,10 +83,10 @@ login:
   - `root@ykla:/`：
   - `root`：当前用户是 root
   - `@`：“谁”在“xx”主机上
-  - `ykla`：这里是主机名，和用户 ykla 无关。可以随便起不一样的主机名
+  - `ykla`：这里是主机名，和用户 ykla 无关。主机名可自行设定
   - `:/`：代表当前位于 `/` 路径下
-- ② 注意到提示符号的变化没有？root 是 `#`，普通用户是 `$`（csh 是 `%`）
-- ③ 如果仅输入 `su` 并回车，命令的含义是从当前用户切换到 root 账户（如果已经是 root，则不会有任何变化）。非 wheel 组成员不能直接 `su` 到 root，否则会报错 `sorry`，但可以 `su` 到其他用户。
+- ② 注意提示符号的变化：root 是 `#`，普通用户是 `$`（csh 是 `%`）
+- ③ 如果仅输入 `su` 并回车，命令的含义是从当前用户切换到 root 账户（如果已经是 root，则不会有任何变化）。非 wheel 组成员不能直接 `su` 到 root，否则系统将返回 `sorry` 错误提示，但可以 `su` 到其他用户。
 - ④ 从普通用户切换到 root，需要 root 账户的登录密码。
 - ⑤ 输入 `exit` 可退出当前用户，如果是唯一登录的用户，将退出登录到 TTY。
 
@@ -135,7 +134,7 @@ ykla@ykla:/ $ pwd
 
 ## 命令行格式
 
-大部分命令行命令的名称都具有明确含义，例如 `ls` 即 `list`（列出）、`wget` 即通过 web（网络）来 `get`（下载）；也存在少量见名不知义的命令，例如 `thefuck` 命令（用于自动纠正拼写错误）。
+大部分命令行命令的名称都具有明确含义，例如 `ls` 即 `list`（列出）、`wget` 即通过 web（网络）来 `get`（下载）；也存在少量难以从名称推断功能的命令，例如 `thefuck` 命令（用于自动纠正拼写错误）。
 
 命令行的基本语法结构遵循 POSIX Shell Command Language 规范（[IEEE Std 1003.1](https://pubs.opengroup.org/onlinepubs/9799919799/)）。其一般格式如下：
 
@@ -222,8 +221,18 @@ usage: ls [-ABCFGHILPRSTUWZabcdfghiklmnopqrstuvwxy1,] [--color=when] [-D format]
 
 > **技巧**
 >
-> 命令前面的 `#` 表示什么意思？`#` 在 Shell 当中一般是起注释作用（由 [POSIX.1-2024](https://pubs.opengroup.org/onlinepubs/9799919799/utilities/V3_chap02.html) 规定），相当于 C 语言中的 `//`。意味着后边的文字只起到说明作用，不起实际作用。
->
+> 命令前面的 `#` 表示什么意思？`#` 在 Shell 当中通常是起注释作用（由 [POSIX.1-2024](https://pubs.opengroup.org/onlinepubs/9799919799/utilities/V3_chap02.html) 规定），相当于 C 语言中的 `//`。意味着后边的文字只起到说明作用，不起实际作用。
+
+FreeBSD ls 与 GNU ls 比较：
+
+| 参数 | FreeBSD `ls` 行为 | GNU `ls` 行为 |
+| ---- | ----------------- | ------------- |
+| `-o` | 显示长格式 + 文件 flags（文件标志） | 等同 `-l`，但不显示属组（group） |
+| `-l` | 长格式（权限 / 属主 / 属组 / 时间等） | 长格式（权限 / 属主 / 属组 / 时间等） |
+| `-G` | 启用彩色输出 | 不支持该参数 |
+| `--color` | 不支持 | 启用彩色输出 |
+| `--group-directories-first` | 不支持 | 目录优先排序（目录排在文件前） |
+| 文件 flags（flags） | 支持（如 `schg`, `uchg` 等） | 不支持 |
 
 ## 命令的执行与中断
 
@@ -246,7 +255,7 @@ cp: test9: No such file or directory
 
 执行中断有很多可能的情形，以上只是其中一种（指定的文件或目录不存在）。
 
-可以看到，只有当执行中断时，命令行才会有提示；若执行完毕，是不会有任何提示的。这种 UNIX 设计哲学旨在保证终端输出的简洁性。
+可以看到，只有当执行中断时，命令行才会有提示；若执行完毕，则不会产生任何提示。这种 UNIX 设计哲学旨在保证终端输出的简洁性。
 
 ## Shell 命令的来源
 
@@ -315,7 +324,7 @@ $ type cd
 cd is a shell builtin
 ```
 
-在 FreeBSD 中，除了上述 Shell 内置命令外（参见：sh(1)[EB/OL]. [2026-03-26]. <https://man.freebsd.org/cgi/man.cgi?sh(1)>），常用命令都是基本系统自带的，不属于任何一个包。比如 `ls` 命令，其源代码位于 `freebsd-src/bin/ls/`[EB/OL]. [2026-03-26]. <https://github.com/freebsd/freebsd-src/tree/main/bin/ls>。可见 FreeBSD 系统是一个有机整体，而非由不同人员或团队维护的软件包简单拼凑而成。
+在 FreeBSD 中，除了上述 Shell 内置命令外（参见：sh(1)[EB/OL]. [2026-03-26]. <https://man.freebsd.org/cgi/man.cgi?sh(1)>），常用命令都是基本系统自带的，不属于任何一个包。例如 `ls` 命令，其源代码位于 `freebsd-src/bin/ls/`[EB/OL]. [2026-03-26]. <https://github.com/freebsd/freebsd-src/tree/main/bin/ls>。可见 FreeBSD 系统是一个有机整体，而非由不同人员或团队维护的软件包简单拼凑而成。
 
 如果配置了 pkgbase，则输出类似：
 
@@ -324,7 +333,7 @@ cd is a shell builtin
 /bin/ls was installed by package FreeBSD-runtime-15.snap20250313173555
 ```
 
-如果缺少了哪个命令，一般可以通过安装相应的软件包来获取，比如 `lspci` 命令，来自软件包 `sysutils/pciutils`。但是也有很多命令存在 Linux 主义问题，不兼容其他操作系统，比如 `ip` 命令，来自软件包 iproute2。
+如果缺少某个命令，一般可以通过安装相应的软件包来获取，比如 `lspci` 命令，来自软件包 `sysutils/pciutils`。然而也有许多命令存在 Linux 专有性问题，不兼容其他操作系统，比如 `ip` 命令，来自软件包 iproute2。
 
 ## 常用命令
 
@@ -336,7 +345,7 @@ cd is a shell builtin
 
 ```sh
 $ cd /home # 切换到 `/home`
-$ pwd # 看看现在在哪
+$ pwd # 查看当前路径
 /home
 ```
 
@@ -374,7 +383,7 @@ $ ls -a
 .config		.local		.mozilla	下载		模板
 ```
 
-试试不加选项 `-a` 呢？
+若不加选项 `-a`：
 
 ```sh
 ykla@ykla:~ $ ls
@@ -425,7 +434,7 @@ $ touch test test1 test2 test3
 创建一个目录，命名为 ykla。
 
 ```sh
-$ mkdir -v ykla # -v 选项可以帮我们看到文件的变动，是 verbose 的缩写，即“啰嗦”一些，意为输出详细信息
+$ mkdir -v ykla # -v 选项用于显示文件变动详情，是 verbose 的缩写，意为输出详细信息
 ykla
 ```
 
@@ -445,7 +454,7 @@ $ mkdir ykla/ykla1/ykla2/ykla3
 mkdir: ykla/ykla1/ykla2: No such file or directory
 ```
 
-报错如上，此时需要参数 `-p`，`p` 是英文 `parents`（父）的意思，即若上级目录不存在，则一并创建之。
+系统返回上述错误，此时需要参数 `-p`，`p` 是英文 `parents`（父）的意思，即若上级目录不存在，则一并创建之。
 
 ```sh
 $ mkdir -vp  ykla/ykla1/ykla2/ykla3
@@ -525,12 +534,12 @@ $ rm -rf /home/ykla/test/
 >```sh
 > # rm -rf /home/ykla /test
 > # ls /home/ykla
-> ls: /home/ykla: No such file or directory # 发现已经不存在 ykla 这个目录了
+> ls: /home/ykla: No such file or directory # 表明 ykla 目录已不存在
 >```
 
 > **警告**
 >
-> 网上经常有人说使用 `sudo rm -rf /*` 是某某命令可以 xxx，误导他人对系统造成不可挽回的灾难性破坏。该命令实质上是以 root 权限（~~还好 FreeBSD 默认没有 sudo~~），删除 `/` 及其子目录下的一切存在。现在展示一下结果：
+> 互联网上常有说法称使用 `sudo rm -rf /*` 是某某命令可以 xxx，误导他人对系统造成不可挽回的灾难性破坏。该命令实质上是以 root 权限（~~还好 FreeBSD 默认没有 sudo~~），删除 `/` 及其子目录下的一切存在。现在展示一下结果：
 >
 >```sh
 > # rm -rf /*
@@ -560,7 +569,7 @@ $ rm -rf /home/ykla/test/
 将文件 `test` 移动到 `/home/ykla`：
 
 ```sh
-$ mv -v test /home/ykla # -v 选项可以帮我们看到文件的变动，是 verbose 的缩写，即“啰嗦”一些，意为输出详细信息
+$ mv -v test /home/ykla # -v 选项用于显示文件变动详情，是 verbose 的缩写，意为输出详细信息
 test -> /home/ykla/test
 ```
 
@@ -596,7 +605,7 @@ test2 -> test2.pdf
 $ cp test /home/ykla/
 ```
 
-末尾的 `/` 很重要，如果缺少了末尾的 `/`，且子目录 ykla 不存在，`test` 将被重命名为 `ykla`（ykla 在设想中本应是个目录）：
+末尾的 `/` 很重要，如果缺少了末尾的 `/`，且子目录 ykla 不存在，`test` 将被重命名为 `ykla`（ykla 本应为一个目录）：
 
 ```sh
 $ cp test /home/ykla/
@@ -606,7 +615,7 @@ cp: directory /home/ykla does not exist # 若加上 /，会提示目录不存在
 若缺少了末尾的 `/`：
 
 ```sh
-$ cp -v test /home/ykla # -v 选项可以帮我们看到文件的变动，是 verbose 的缩写，即“啰嗦”一些，意为输出详细信息
+$ cp -v test /home/ykla # -v 选项用于显示文件变动详情，是 verbose 的缩写，意为输出详细信息
 test -> /home/ykla
 ```
 
@@ -677,17 +686,17 @@ $ rm -rf *
 
 `&&`（逻辑与，AND）：只有 `&&` 之前的命令执行成功了，才会执行后续的命令；否则如果 `&&` 之前的命令执行失败，后面的命令就不会执行。
 
-简单理解：得先做饭才能吃饭，然后才能刷锅 → 做饭 `&&` 吃饭 `&&` 刷锅。如果没有做饭，自然谈不上吃饭，更遑论刷锅了。
+简而言之：得先做饭才能吃饭，然后才能刷锅 → 做饭 `&&` 吃饭 `&&` 刷锅。如果没有做饭，自然谈不上吃饭，更遑论刷锅了。
 
-使用场景：执行一连串有依赖关系的命令。比如得先刷新软件源才能更新系统，然后才能重启。以 Ubuntu 为例：`sudo apt update -y && sudo apt upgrade -y && sudo reboot`。只有前面的命令执行成功，才会执行后面的命令。
+使用场景：执行一连串有依赖关系的命令。例如得先刷新软件源才能更新系统，然后才能重启。以 Ubuntu 为例：`sudo apt update -y && sudo apt upgrade -y && sudo reboot`。只有前面的命令执行成功，才会执行后面的命令。
 
 ### 逻辑运算符 `||`
 
 `||`（逻辑或，OR）：只有 `||` 之前的命令执行失败时，后边的命令才会执行；如果 `||` 之前的命令执行成功，后面的命令就不会执行。
 
-简单理解：要么做饭，要么点外卖，要么出去吃——> 做饭 `||` 点外卖 `||` 出去吃。如果不会做饭，就只能点外卖，如果外卖没有好吃的，就只能出去吃。
+简而言之：要么做饭，要么点外卖，要么出去吃 → 做饭 `||` 点外卖 `||` 出去吃。如果不会做饭，就只能点外卖，如果外卖没有好吃的，就只能出去吃。
 
-使用场景：如果一个命令一直执行失败，但偏要它一直执行。就可以写很多 `||`，防止一次失败后反复手动再次执行该命令，比如：
+使用场景：如果一个命令一直执行失败，但需要反复执行，则可连续使用多个 `||`，防止一次失败后反复手动再次执行该命令，例如：
 
 ```sh
 make BATCH=yes install || make BATCH=yes install || make BATCH=yes install || make BATCH=yes install
@@ -704,7 +713,6 @@ make BATCH=yes install || make BATCH=yes install || make BATCH=yes install || ma
 > `touch a.txt && touch b.txt || touch c.txt || reboot` 是什么意思？
 >
 > 如果 `touch a.txt` 失败会执行后面的哪个操作？
-
 
 ## BSD 风格的 make/grep/sed/awk
 
@@ -791,7 +799,7 @@ FreeBSD 的设计更接近传统 UNIX 的行为。
 
 重启：
 
-- 重启命令和 Linux 一致，都是 `reboot`，但是参数不通用。
+- 重启命令和 Linux 一致，都是 `reboot`，但参数不通用。
 - 在 FreeBSD 下 `reboot` 等同于 `shutdown -r now`
 
 > **技巧**
@@ -864,7 +872,7 @@ No fucks given
 ### 使用示例
 
 ```sh
-# ls-l /home/ykla/ # 先输入一遍错误的试试
+# ls-l /home/ykla/ # 首先输入一条错误命令
 -sh: ls-l: not found
 # fuck
 ls -l /home/ykla/ [enter/↑/↓/ctrl+c] # 上下箭头切换可能的命令，回车确认，Ctrl+C 中断
@@ -874,7 +882,7 @@ drwxr-xr-x  2 ykla ykla        2 Mar  9 20:45 下载
 drwxr-xr-x  2 ykla ykla        2 Mar  9 20:45 桌面
 ```
 
-再试试：
+再试一例：
 
 ```sh
 # plg install gimp
@@ -894,5 +902,5 @@ FreeBSD repository is up to date.
 
 ## 课后习题
 
-1. 尝试进行对 BSD 风格的 sed/awk/grep 命令选项进行优化，使其兼容 GNU 语法。
-2. 查看 FreeBSD 中 ls 命令的源代码实现，并与 GNU 的实现进行比较。
+1. 对比 BSD 风格的 sed/awk/grep 与 GNU 版本在常用选项上的差异，编写兼容性对照表，并给出在 FreeBSD 上实现跨平台脚本的策略。
+2. 查阅 FreeBSD 中 `ls` 命令的源代码实现（`bin/ls/`），与 GNU coreutils 中的 `ls` 在选项解析和输出格式化方面的实现进行比较。

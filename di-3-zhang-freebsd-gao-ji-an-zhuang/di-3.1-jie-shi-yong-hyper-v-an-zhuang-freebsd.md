@@ -4,7 +4,7 @@
 
 ## Hyper-V 简介
 
-虚拟机监视器是一种创建和运行虚拟机的软件，可以在单个物理主机上同时运行独立的操作系统，即虚拟化软件允许多个操作系统同时运行在同一台计算机上。从虚拟化技术的理论分类来看，Hypervisor 分为 Type-1（裸金属型）和 Type-2（宿主型）两类：Type-1 直接运行于物理硬件之上。Hyper-V 属于 Type-1 架构，其虚拟化层直接管理硬件资源，提供更高的隔离性和性能。
+虚拟机监视器是一种创建和运行虚拟机的软件，可以在单个物理主机上同时运行独立的操作系统，即虚拟化软件允许多个操作系统同时运行在同一台计算机上。从虚拟化技术的理论分类来看，Hypervisor 分为 Type-1（裸金属型）和 Type-2（宿主型）两类。Type-1 直接运行于物理硬件之上，Type-2 则运行于宿主操作系统之上。Hyper-V 属于 Type-1 架构，其虚拟化层直接管理硬件资源，提供更高的隔离性和性能。
 
 Hyper-V 是微软公司（Microsoft）为 Windows 和 Windows Server 开发的企业级虚拟机监视器，属于系统内置组件。
 
@@ -128,7 +128,7 @@ PS C:\Users\ykla> Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-H
 
 ## 安装 FreeBSD
 
-虚拟机设置调整完成后，即可开始安装 FreeBSD 系统。
+虚拟机设置调整完成后，开始安装 FreeBSD 系统。
 
 ![Hyper-V](../.gitbook/assets/hyperv-13.png)
 
@@ -165,6 +165,5 @@ PS C:\Users\ykla> Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-H
 
 ## 课后习题
 
-1. 查找 FreeBSD 源代码中关于 `kern.evdev.rcpt_mask` 的实现，逐行注释并分析原理。
-
-2. 探索哪些 Hyper-V 虚拟化设置能够优化虚拟化性能。
+1. 查阅 FreeBSD 源代码中 `kern.evdev.rcpt_mask` 的实现（`sys/dev/evdev/`），分析该参数控制输入事件分发路径的机制，注释关键函数的执行逻辑。
+2. 查阅 Hyper-V 文档，列举并测试至少三项虚拟化性能优化设置（如动态内存、SR-IOV、虚拟机队列），量化其对 FreeBSD 虚拟机 I/O 吞吐量的影响。

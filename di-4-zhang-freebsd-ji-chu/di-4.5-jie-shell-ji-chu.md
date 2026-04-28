@@ -30,19 +30,19 @@ POSIX（Portable Operating System Interface）是由 IEEE 和 The Open Group 制
 POSIX Shell 规范的核心要求包括：
 
 - **命令执行**：支持简单命令、管道、列表和复合命令的执行。
-- **变量与参数扩展**：支持位置参数、特殊参数和各种变量扩展形式。
+- **变量与参数扩展**：支持位置参数、特殊参数和多种变量扩展形式。
 - **引号机制**：支持单引号（保留字面值）、双引号（允许变量扩展和命令替换）和反斜杠转义。
 - **模式匹配**：支持文件名通配（globbing），包括 `*`、`?` 和方括号表达式。
 - **条件与循环**：支持 `if`、`while`、`for`、`case` 等控制结构。
 - **内置命令**：必须实现 `cd`、`echo`、`exit`、`export`、`read`、`return`、`set`、`shift`、`trap`、`unset` 等内置命令。
 
-FreeBSD 系统默认采用的 Shell 是 sh。需要指出的是，FreeBSD 的 `/bin/sh` 并非 Stephen R. Bourne 在贝尔实验室为 Unix V7 编写的原始 Bourne Shell，而是基于 Kenneth Almquist 于 1989 年发布的 Almquist Shell（ash），后者是作为 Bourne Shell 的更紧凑、更高效的替代品而设计的。BSD 系列自 4.4BSD 起便采用 ash 衍生的 sh，在功能上基本符合 POSIX.1-2024 标准中关于 Shell 的规范要求。
+FreeBSD 系统默认采用的 Shell 是 sh。FreeBSD 的 `/bin/sh` 并非 Stephen R. Bourne 在贝尔实验室为 Unix V7 编写的原始 Bourne Shell，而是基于 Kenneth Almquist 于 1989 年发布的 Almquist Shell（ash），后者是作为 Bourne Shell 的更紧凑、更高效的替代品而设计的。BSD 系列自 4.4BSD 起便采用 ash 衍生的 sh，在功能上基本符合 POSIX.1-2024 标准中关于 Shell 的规范要求。
 
-Linux 中常见的 Shell 一般是 bash（Bourne Again Shell，是对“Born Again”即“重生”的双关，意为“重生的 Bourne Shell”）。而 macOS 中的默认 Shell 通常是 zsh（Z Shell）。
+Linux 中常见的 Shell 通常是 bash（Bourne Again Shell，是对“Born Again”即“重生”的双关，意为“重生的 Bourne Shell”）。而 macOS 中的默认 Shell 通常是 zsh（Z Shell）。
 
 > **注意**
 >
-> Linux 中也存在 sh，但通常被软链接到其他 Shell（如 Debian/Ubuntu 中链接到 dash，部分发行版链接到 bash），它们并不是真正的 sh。
+> Linux 中同样提供 sh，但通常被软链接到其他 Shell（如 Debian/Ubuntu 中链接到 dash，部分发行版链接到 bash），它们并不是真正的 sh。
 >
 >- Ubuntu 24.04 LTS 默认的 Shell：
 >
@@ -88,7 +88,7 @@ Linux 中常见的 Shell 一般是 bash（Bourne Again Shell，是对“Born Aga
 - 补全命令
 
 ```sh
-# lo # 若此时按 Tab 键，输出如下。可以再输一个字母再按一次 Tab 键看看
+# lo # 若此时按 Tab 键，输出如下。可继续输入一个字母后再次按 Tab 键以查看更多匹配项
 local                    localedef                login
 local-unbound            locate                   logins
 local-unbound-anchor     lock                     logname
@@ -101,7 +101,7 @@ locale
 - 补全文件目录或文件名
 
 ```sh
-$ cp /home/ykla/ # 此处按 Tab 键，然后再重复按一次 Tab 键，看看效果
+$ cp /home/ykla/ # 此处按 Tab 键，然后再重复按一次 Tab 键，观察效果
 $ cp /home/ykla/test/1.txt
 .cache/                 .login                  bin/                    test2
 .config/                .profile                HW_PROBE/               test3
@@ -119,7 +119,7 @@ $ cp /home/ykla/test/1.txt
 PING 163.com (59.111.160.244): 56 data bytes
 64 bytes from 59.111.160.244: icmp_seq=0 ttl=52 time=27.672 ms
 64 bytes from 59.111.160.244: icmp_seq=1 ttl=52 time=27.580 ms
-^C # 注意这里，^C 即代表你在此处按下了 Ctrl+C 的组合键，随后命令被终止
+^C # 注意这里，^C 表示此处按下了 Ctrl+C 的组合键，随后命令被终止
 --- 163.com ping statistics ---
 2 packets transmitted, 2 packets received, 0.0% packet loss
 round-trip min/avg/max/stddev = 27.580/27.626/27.672/0.046 ms
@@ -127,8 +127,7 @@ round-trip min/avg/max/stddev = 27.580/27.626/27.672/0.046 ms
 
 FreeBSD 的 `ping` 自 15.0 起合并了原 `ping6` 的功能，通过 `-4`/`-6` 选项区分协议版本（Google Summer of Code 2019 项目）。（如 Linux 支持 `-O` 报告未收到回复，FreeBSD 不支持）。FreeBSD 特有 `ping -y`（ICMPv6 Node Information DNS Name 查询）和 `ping -k`（Node Information Node Addresses 查询）。
 
-`ping` 使用 ICMP 协议的 ECHO_REQUEST 数据报来触发主机的 ECHO_RESPONSE。IPv4 目标使用 ICMP，IPv6 目标使用 ICMPv6（RFC 2463）。默认数据大小为 56 字节，加上 8 字节 ICMP 头共 64 字节。若数据空间至少 8 字节，前 8 字节用于时间戳以计算往返时间。
-
+`ping` 使用 ICMP 协议的 ECHO_REQUEST 数据报来触发主机的 ECHO_RESPONSE。IPv4 目标使用 ICMP，IPv6 目标使用 ICMPv6（RFC 2463）。默认数据大小为 56 字节，加上 8 字节 ICMP 头共 64 字节。若数据空间不小于 8 字节，前 8 字节用于时间戳以计算往返时间。
 
 ### 其他
 
@@ -143,6 +142,6 @@ FreeBSD 的 `ping` 自 15.0 起合并了原 `ping6` 的功能，通过 `-4`/`-6`
 
 ## 课后习题
 
-1. 在 FreeBSD 中编写一个简单的 sh 脚本，实现命令补全的最小示例脚本，测试其功能并记录结果。
-2. 查看 FreeBSD sh 源代码中处理快捷键绑定的实现部分，使其更现代化。
-3. 修改 FreeBSD 中 Shell 的默认提示符配置，验证其行为变化。
+1. 在 FreeBSD 中编写一个 sh 脚本，实现文件名补全的最小示例，记录 sh 内建补全机制与 Bash 补全的功能差异。
+2. 查阅 FreeBSD sh 源代码（`bin/sh/`），分析其行编辑和快捷键处理的实现方式，比较其与 Bash 在交互功能上的差距。
+3. 修改 Shell 的默认提示符配置（如通过 `PS1` 或 `set prompt`），记录不同 Shell（sh、csh、zsh）中提示符定制的语法差异。

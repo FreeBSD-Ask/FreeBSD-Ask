@@ -14,7 +14,7 @@
 
 > **注意**
 >
-> 以此部分所述方法，在使用 ZFS 时，只会创建一个名为 `zroot` 的存储池（zpool），并在其中创建一个直接挂载到 `/` 的名为 `root` 的数据集。不会像自动安装那样创建 `zroot/ROOT/default` 以及众多的数据集。可以在安装后创建数据集并进行替换操作，但若希望初始布局就与自动安装相同，请跳转至本节“Shell 分区”部分。
+> 按照本部分所述方法，在使用 ZFS 时，只会创建一个名为 `zroot` 的存储池（zpool），并在其中创建一个直接挂载到 `/` 的名为 `root` 的数据集。不同于自动安装，不会创建 `zroot/ROOT/default` 及众多数据集。可以在安装后创建数据集并进行替换操作，但若希望初始布局就与自动安装相同，请跳转至本节“Shell 分区”部分。
 
 使用简单方法安装 FreeBSD，按照以下步骤进行操作。
 
@@ -33,7 +33,7 @@
   419426304       4063        - free -  (100G)
 ```
 
-应关闭安全启动和快速启动。安全启动会阻止未签名的引导加载程序运行，而 FreeBSD 的引导加载程序目前未被微软签名，因此必须关闭。快速启动会让 Windows 在关机时处于一种特殊的休眠状态，导致其他系统无法正常访问 NTFS 分区。或者，也可通过 Windows 设置 → 更新与安全 → 恢复 → 高级启动，选择从 U 盘设备启动。然后正常引导 FreeBSD 安装程序，直至进入分区选择界面。
+应关闭安全启动和快速启动。安全启动会阻止未签名的引导加载程序运行，而 FreeBSD 的引导加载程序目前未被微软签名，因此必须关闭。快速启动会让 Windows 在关机时处于一种特殊的休眠状态，导致其他系统无法正常访问 NTFS 分区。也可通过 Windows 设置 → 更新与安全 → 恢复 → 高级启动，选择从 U 盘设备启动。随后正常引导 FreeBSD 安装程序，直至进入分区选择界面。
 
 ![分区选择界面](../.gitbook/assets/dual-system-1.png)
 
@@ -47,7 +47,7 @@
 
 ![硬盘分区情况](../.gitbook/assets/dual-system-2.png)
 
-此处在第一行输入分区类型（即下方会列出的 `Filesystem type`）。如需添加 swap 分区，请在此步骤首先添加，后添加难以控制分区大小，因为分区会从空闲空间的开头或结尾分配，先添加 swap 可以更好地控制其位置。在添加 UFS 或 ZFS 分区时，需在 `Mountpoint` 处填写 `/`，表示将该分区挂载到根目录。`Label` 是 FreeBSD 的卷标（gptlabel），用于方便识别分区，可根据需要填写或留空。此处使用 ZFS，不添加 swap 分区，并且填入卷标 `zroot`。
+此处在第一行输入分区类型（即下方会列出的 `Filesystem type`）。如需添加 swap 分区，请在此步骤首先添加，后续添加则难以控制分区大小，因为分区会从空闲空间的开头或结尾分配，先添加 swap 可以更好地控制其位置。在添加 UFS 或 ZFS 分区时，需在 `Mountpoint` 处填写 `/`，表示将该分区挂载到根目录。`Label` 是 FreeBSD 的卷标（gptlabel），用于方便识别分区，可根据需要填写或留空。此处使用 ZFS，不添加 swap 分区，并且填入卷标 `zroot`。
 
 ![创建分区](../.gitbook/assets/dual-system-3.png)
 
@@ -55,7 +55,7 @@
 
 ![确认分区创建](../.gitbook/assets/dual-system-4.png)
 
-此处会警告 ZFS 分区可能无法启动，但经实测可以正常启动。这个警告是安装程序的通用提示，对于 UEFI 环境下的配置并不适用。选择 `Yes` 忽略此警告：
+此处会警告 ZFS 分区可能无法启动，但实际测试表明可以正常启动。这个警告是安装程序的通用提示，对于 UEFI 环境下的配置并不适用。选择 `Yes` 忽略此警告：
 
 ![ZFS 分区警告](../.gitbook/assets/dual-system-5.png)
 
@@ -83,7 +83,7 @@ root  534M    130G   534M  none
 
 ## Shell 分区
 
-仍停留在分区选择界面，此时选择 `Shell`
+仍停留在分区选择界面，此时选择 `Shell`：
 
 ![选择 Shell 分区](../.gitbook/assets/dual-system-9.png)
 
@@ -192,7 +192,7 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 
 ### 创建 ZFS 数据集
 
-以下数据集的设置参照 FreeBSD 源代码中的 [usr.sbin/bsdinstall/scripts/zfsboot](https://github.com/freebsd/freebsd-src/blob/main/usr.sbin/bsdinstall/scripts/zfsboot) 进行创建，因为 FreeBSD 本身的开发是持续不断的，所以 FreeBSD 不同版本间的 ZFS 数据集也有所差异。读者在创建数据集时若希望创建与默认安装相同的数据集结构，应参照对应分支的 `usr.sbin/bsdinstall/scripts/zfsboot` 文件。
+以下数据集的设置参照 FreeBSD 源代码中的 [usr.sbin/bsdinstall/scripts/zfsboot](https://github.com/freebsd/freebsd-src/blob/main/usr.sbin/bsdinstall/scripts/zfsboot) 进行创建，由于 FreeBSD 本身的开发是持续不断的，因此 FreeBSD 不同版本间的 ZFS 数据集也有所差异。读者在创建数据集时若希望创建与默认安装相同的数据集结构，应参照对应分支的 `usr.sbin/bsdinstall/scripts/zfsboot` 文件。
 
 - 创建根数据集
 
@@ -325,7 +325,7 @@ zroot/
 
 ### 修改文件夹权限
 
-将 `/mnt/tmp` 和 `/mnt/var/tmp` 的权限设置为 `1777`（粘滞位），以确保临时目录权限正确，这样任何用户都可以在这些目录中创建文件，但只能删除自己创建的文件：
+将 `/mnt/tmp` 和 `/mnt/var/tmp` 的权限设置为 `1777`（粘滞位），以确保临时目录权限正确，使得任何用户都可以在这些目录中创建文件，但只能删除自己创建的文件：
 
 ```sh
 # chmod 1777 /mnt/tmp        # 设置 /mnt/tmp 目录为粘滞位，可读写
@@ -372,7 +372,7 @@ Windows 文本文件的行尾通常是 `\r\n`（回车 + 换行）。
 
 此命令效果等同于使用 `ee /tmp/bsdinstall_etc/rc.conf` 编辑该文件并添加一行 `zfs_enable="YES"`。
 
-- 挂载现有的 EFI 系统分区，这样便可以在其中添加 FreeBSD 的启动文件：
+- 挂载现有的 EFI 系统分区，以便在其中添加 FreeBSD 的启动文件：
 
 ```sh
 # mount -t msdosfs /dev/nda0p1 /media
@@ -392,7 +392,7 @@ Windows 文本文件的行尾通常是 `\r\n`（回车 + 换行）。
 # cp /boot/loader.efi /media/efi/freebsd/
 ```
 
-- 使用 efibootmgr 工具向主板 UEFI 固件添加启动项 `FreeBSD`，这样在开机时就能在 UEFI 启动菜单中看到 FreeBSD 选项。
+- 使用 efibootmgr 工具向主板 UEFI 固件添加启动项 `FreeBSD`，使得开机时能在 UEFI 启动菜单中看到 FreeBSD 选项。
 
 ```sh
 # efibootmgr --create --activate --label "FreeBSD" --loader "/media/efi/freebsd/loader.efi"
@@ -461,8 +461,6 @@ zroot/var/tmp         96K  91.6G    96K  /var/tmp
 
 ## 课后习题
 
-1. 尝试完全脱离 bsdinstall 安装 FreeBSD。
-
-2. 重构一套图形化的安装界面。
-
-3. 在 UFS 文件系统下重构本文，并发起 PR。
+1. 脱离 bsdinstall，通过手动分区、格式化、挂载和安装基本系统完成 FreeBSD 的安装，记录每个步骤中 bsdinstall 自动完成但需手动操作的具体环节。
+2. 查阅 FreeBSD 源代码中 GPT 分区对齐参数的实现逻辑，分析 NVMe SSD 上 4K 对齐的对齐对象及其对 I/O 性能的影响。
+3. 在 UFS 文件系统下重复本节双系统安装流程，记录 ZFS 与 UFS 在分区布局和引导配置上的差异。

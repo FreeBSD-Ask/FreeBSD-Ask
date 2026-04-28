@@ -2,6 +2,8 @@
 
 ## login.conf 的概念与文件结构
 
+[/etc/login.conf](https://man.freebsd.org/cgi/man.cgi?login.conf(5)) 文件是登录类能力数据库（最早引入自 FreeBSD 2.1.5），该文件用于控制资源配额、计量配额以及默认用户环境设置。系统中的多种程序利用它建立用户的登录环境，并执行策略、计数和管理限制。它还提供了用户认证以及可用认证类型的配置方式。
+
 ```sh
 /
 ├── etc/
@@ -10,15 +12,13 @@
     └── .login_conf          # 用户本地覆盖文件，可覆盖 /etc/login.conf 的设置
 ```
 
-[/etc/login.conf](https://man.freebsd.org/cgi/man.cgi?login.conf(5)) 文件是登录类能力数据库（最早引入自 FreeBSD 2.1.5），该文件用于控制资源配额、计量配额以及默认用户环境设置。系统中的各种程序利用它建立用户的登录环境，并执行策略、计数和管理限制。它还提供了用户认证以及可用认证类型的配置方式。
-
 对于普通用户，可通过家目录下的 `~/.login_conf` 文件覆盖系统级配置。记录 ID 为“me”的条目只能覆盖该用户部分的用户分级配置，系统级配置文件 `/etc/login.conf` 的优先级低于用户本地配置。
 
-`login.conf` 文件在 FreeBSD 源代码中的位置为 [usr.bin/login/login.conf](https://github.com/freebsd/freebsd-src/blob/main/usr.bin/login/login.conf)，该文件即为默认配置，默认设置实际上禁用了资源配额，以便用户开箱即用并便于进一步配置。
+`login.conf` 文件在 FreeBSD 源代码中的位置为 [usr.bin/login/login.conf](https://github.com/freebsd/freebsd-src/blob/main/usr.bin/login/login.conf)，该文件即为默认配置，默认设置禁用了资源配额。
 
 > **注意**
 >
-> 每次修改该文件后，必须手动运行 `cap_mkdb /etc/login.conf` 来刷新数据库。`cap_mkdb` 将文本格式的 login.conf 编译为二进制数据库格式，以提高查询性能。只有在将文件编译为数据库后，修改才会生效。该数据库文件的扩展名为 `.db`，可通过 cgetent(3) 等函数调用。
+> 每次修改该文件后，必须手动运行 `cap_mkdb /etc/login.conf` 来刷新数据库。`cap_mkdb` 将文本格式的 login.conf 编译为哈希数据库格式，以提高查询性能。只有在将文件编译为数据库后，修改才会生效。该数据库文件的扩展名为 `.db`，可通过 cgetent(3) 等函数调用。
 
 ## 默认配置文件解读
 
@@ -46,7 +46,7 @@ default:\
 	:openfiles=unlimited:\  # 限制每个进程允许打开的最大文件数。类型为数字。数字类型可以是十六进制（`0x` 开头）或八进制（`0` 开头），每次只能指定一个值，也可以用字符串格式。数据库中所有记录必须统一使用同一表示方法。
 	:maxproc=unlimited:\  # 限制最大进程数。类型为数字。
 	:sbsize=unlimited:\  # 最大的套接字缓冲区大小。类型为数值。
-	:vmemoryuse=unlimited:\  # 每个进程允许的最大虚拟内存使用量。类型为数值。
+	:vmemoryuse=unlimited:\  # 每个进程允许的最大虚拟存储器使用量。类型为数值。
 	:swapuse=unlimited:\  # 最大交换空间大小限制。类型为数值。
 	:pseudoterminals=unlimited:\  # 最大伪终端数量。类型为数字。
 	:kqueues=unlimited:\  # 每个进程可创建的 kqueue 数量。类型为数字。
@@ -334,8 +334,6 @@ russian|Russian Users Accounts:\
 
 ## 课后习题
 
-1. 修改用户的 `~/.login_conf` 文件覆盖系统级 `login.conf` 文件的部分设置，观察两种配置的优先级关系。
-
-2. 修改 default 类的 umask 和 passwd_format 设置，对比修改前后新建文件权限和密码加密方式的变化。
-
-3. 创建一个自定义登录类，设置特定的资源限制（如 cputime 和 maxproc），分配给测试用户并验证限制是否生效。
+1. 修改用户的 `~/.login_conf` 文件覆盖系统级 `login.conf` 的部分设置，记录两种配置的优先级关系，分析 `cgetent()` 函数的数据库检索顺序。
+2. 修改 default 类的 `umask` 和 `passwd_format` 设置，对比修改前后新建文件权限和密码加密方式的变化。
+3. 创建一个自定义登录类，设置特定的资源限制（如 `cputime` 和 `maxproc`），分配给测试用户并验证限制是否生效，分析资源限制在内核层面的实现机制。

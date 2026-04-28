@@ -32,7 +32,7 @@
         └── tabs/                   # 个人 crontab 文件目录
 ```
 
-[periodic.conf(5)](https://man.freebsd.org/cgi/man.cgi?periodic.conf) 文件位于 `/etc/defaults` 目录下，其部分内容可以被 `/etc` 目录下同名文件覆盖，而 `/etc` 下的文件又可以被 `/etc/periodic.conf.local` 文件所覆盖。
+[periodic.conf(5)](https://man.freebsd.org/cgi/man.cgi?periodic.conf) 文件位于 `/etc/defaults` 目录下，其部分内容可被 `/etc` 目录下同名文件覆盖，而 `/etc` 下的文件又可被 `/etc/periodic.conf.local` 文件所覆盖。
 
 源代码路径结构：
 
@@ -60,7 +60,7 @@ Rebuilding locate database:
 /var/db/locate.database
 ```
 
-crontab: `cron` 配置，位于 `/etc/crontab`，请参考 [crontab(5)](https://man.freebsd.org/cgi/man.cgi?crontab(5))。
+crontab: `cron` 配置，位于 `/etc/crontab`，可参阅 [crontab(5)](https://man.freebsd.org/cgi/man.cgi?crontab(5))。
 
 ## 参考文献
 
@@ -69,8 +69,6 @@ crontab: `cron` 配置，位于 `/etc/crontab`，请参考 [crontab(5)](https://
 
 ## 课后习题
 
-1. 创建一个自定义 periodic 脚本放入 `/usr/local/etc/periodic/daily/`，配置 periodic.conf 文件使其运行并观察输出。
-
-2. 修改 `/etc/crontab` 文件中 periodic 任务的执行时间，对比修改前后的系统行为。
-
-3. 禁用某个默认的 periodic 任务（如 weekly 的 310.locate），观察其对 locate 命令可用性的影响。
+1. 创建一个自定义 periodic 脚本放入 `/usr/local/etc/periodic/daily/`，配置 `periodic.conf` 使其运行，分析 periodic 脚本的命名规则与执行顺序机制。
+2. 修改 `/etc/crontab` 文件中 periodic 任务的执行时间，对比修改前后系统日志中任务执行时间的变化。
+3. 禁用某个默认的 periodic 任务（如 weekly 的 `310.locate`），观察其对 `locate` 命令数据库更新频率的影响。

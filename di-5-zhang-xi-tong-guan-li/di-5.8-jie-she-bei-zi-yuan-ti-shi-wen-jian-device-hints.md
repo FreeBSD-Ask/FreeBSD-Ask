@@ -1,5 +1,7 @@
 # 5.8 设备资源提示文件（device.hints）
 
+设备资源提示文件（device.hints）是 FreeBSD 引导过程中的配置文件。该文件在系统启动时由 boot loader(8) 读取，其内容传递给内核，用于控制内核的引导行为，但也可包含任何内核可调参数值。设备提示变量主要用于设备驱动程序设置设备，最常用于 ISA 设备驱动程序指定探测位置和所需资源。
+
 ## device.hints 的功能与结构
 
 [device.hints(5)](https://man.freebsd.org/cgi/man.cgi?device.hints) 相关文件结构：
@@ -16,10 +18,6 @@
 ```
 
 根据源代码分析，[sys/amd64/conf/GENERIC.hints](https://github.com/freebsd/freebsd-src/blob/main/sys/amd64/conf/GENERIC.hints) 即为 amd64 架构默认的 device.hints 文件。
-
-根据 [device.hints(5)](https://man.freebsd.org/cgi/man.cgi?device.hints) 所述：
-
-device.hints 文件包含设备提示信息，用于在内核启动前为设备驱动提供资源配置。当系统即将启动时，启动引导器 loader(8) 会读取 device.hints 文件，并将其内容传递给内核。device.hints 中的变量通常是设备提示，但也可以是内核可调参数值。设备提示在内核驱动探测设备时发挥作用，为驱动提供必要的硬件资源信息。
 
 该文件的默认内容根据架构的不同而变化，其每条格式为（`#` 代表注释）：
 
@@ -94,8 +92,6 @@ hint.atkbdc.0.at="isa"
 
 ## 课后习题
 
-1. 查找并分析 device.hints 中某个已禁用设备（如 hint.acpi_throttle.0.disabled）的源代码实现。
-
-2. 创建一个自定义 device.hints 文件，为某个虚拟设备设置资源提示，验证其是否被内核正确读取。
-
-3. 对比 device.hints 文件和 loader.conf 文件中内核可调参数的加载时机差异，尝试在两个文件中设置同一参数并观察哪个生效。
+1. 查阅 `device.hints` 中某个已禁用设备（如 `hint.acpi_throttle.0.disabled`）的源代码实现，分析 `disabled` 标志在设备探测流程中的作用机制。
+2. 创建一个自定义 `device.hints` 文件，为某个虚拟设备设置资源提示，验证其是否被内核正确读取，记录提示参数的传递路径。
+3. 对比 `device.hints` 文件与 `loader.conf` 文件中内核可调参数的加载时机差异，在两个文件中设置同一参数并观察哪个生效，分析加载顺序的优先级规则。

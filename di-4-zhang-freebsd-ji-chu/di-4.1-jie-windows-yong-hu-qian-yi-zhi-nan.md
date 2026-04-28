@@ -1,8 +1,8 @@
 # 4.1 Windows 用户迁移指南
 
-操作系统迁移是用户从一种操作系统平台转向另一种平台时面临的系统性挑战，涉及文件系统概念、字符编码、换行符规范、时区处理等多维度差异。对于从 Windows 迁移至 FreeBSD 的用户而言，理解这些差异是顺利过渡的前提。
+操作系统迁移涉及文件系统概念、字符编码、换行符规范、时区处理等多维度差异。对于从 Windows 迁移至 FreeBSD 的用户而言，理解这些差异是顺利过渡的前提。
 
-本节从文件系统基础概念入手，逐步阐述 Windows 与 FreeBSD 在文件系统组织、文件名规范、文本编码和时区配置等方面的关键差异。
+本节以文件系统基础概念为切入点，逐步阐述 Windows 与 FreeBSD 在文件系统组织、文件名规范、文本编码和时区配置等方面的关键差异。
 
 ## 文件系统基础
 
@@ -14,11 +14,11 @@
 
 前一幅图像展示的是竹子（Bambusoideae），后一幅图像展示的是若干棵行道树。
 
-亚里士多德认为种子之所以能长成大树，是因为种子暗含着一种潜能，并且在环境满足的情况下，有实现为长成一棵树的可能性（参见《形而上学》IX.7, 1049b）。而人和器物的不同就在于人没有固定不变的潜能，这也契合了儒家学说“君子不器”（何晏，注；邢昺，疏. 论语注疏[M]. 北京：中国致公出版社，2016. ISBN: 978-7-5145-0846-8.）和萨特的“存在先于本质”理论（参见Sartre J P. 萨特哲学论文集[M]. 潘培庆，等，译. 合肥：安徽文艺出版社，1998. ISBN: 7-5396-1632-6.）理解 UNIX 目录与 Windows 目录的异同，对于深入理解操作系统的设计与实现非常重要。
+亚里士多德认为种子之所以能长成大树，是因为种子暗含着一种潜能，并且在环境满足的情况下，有实现为长成一棵树的可能性（参见《形而上学》IX.7, 1049b）。而人和器物的不同就在于人没有固定不变的潜能，这也契合了儒家学说“君子不器”（何晏，注；邢昺，疏. 论语注疏[M]. 北京：中国致公出版社，2016. ISBN: 978-7-5145-0846-8.）和萨特的“存在先于本质”理论（参见 Sartre J P. 萨特哲学论文集[M]. 潘培庆，等，译. 合肥：安徽文艺出版社，1998. ISBN: 7-5396-1632-6.）理解 UNIX 目录与 Windows 目录的异同，有助于理解操作系统的设计与实现。
 
 ![文件系统基础](../.gitbook/assets/filesystem-bamboo.png)
 
-我们都听说过一个故事，竹子（Bambusoideae）开花意味着大片竹林的死亡。这是因为，大部分看似茂密繁盛的竹林，极有可能到头来只有一棵竹子真实存活。这些竹子都是从相同的地下根系生长出来的，虽然看起来是多棵竹子，它们事实上是一个整体——这在植物学上称为**克隆生长**（clonal growth）。这也是“雨后春笋”的来历。无论它们相隔多远，仍旧一荣俱荣，一损俱损。这就是 UNIX 的目录——系统中的所有目录都依赖于根（root）。根（`/`）是一切目录的起点，构成了一个**单一层次的目录树结构**（single-rooted directory hierarchy）。例如 `/home/ykla/nihao`、`/bin/sh`、`/etc/fstab`，它们追根溯源，都是从根出发的。换言之，如果删除 `/`，就等于删除了整个系统，所有设备上的目录都会被删除。
+我们都听说过一个故事，竹子（Bambusoideae）开花意味着大片竹林的死亡。这是因为，大部分看似茂密繁盛的竹林，极有可能到头来只有一棵竹子真实存活。这些竹子都是从相同的地下根系生长出来的，虽然看起来是多棵竹子，它们事实上是一个整体，这在植物学上称为**克隆生长**（clonal growth）。这也是“雨后春笋”的来历。无论它们相隔多远，仍旧一荣俱荣，一损俱损。这就是 UNIX 的目录，系统中的所有目录都依赖于根（root）。根（`/`）是一切目录的起点，构成了一个**单一层次的目录树结构**（single-rooted directory hierarchy）。例如 `/home/ykla/nihao`、`/bin/sh`、`/etc/fstab`，它们追根溯源，都是从根出发的。换言之，如果删除 `/`，就等于删除了整个系统，所有设备上的目录都会被删除。
 
 ![文件系统基础](../.gitbook/assets/windows-file-explorer.png)
 
@@ -42,7 +42,7 @@ PSPath
 ……省略其他输出……
 ```
 
-盘符是抽象出来的，实际上没有意义。这也就是为什么在其他操作系统上（包括 Windows 自身，如双系统环境）都看不到 `C` 盘的根本原因，因为不存在一个硬编码并写入文件系统的 `C` 盘标识。只有在真正启动系统时，Windows 才会知道到底谁是 `C` 盘，并写入注册表。至于其他盘符的分配，则具有不确定性，出现 `D` 盘变为 `E` 盘的问题也屡见不鲜，例如某虚拟光驱可能在开机时被自动加载等。
+盘符是一种抽象映射，本身并不具备固定不变的物理意义。这也是在其他操作系统上（包括 Windows 自身，如双系统环境）都看不到 `C` 盘的根本原因，因为不存在一个硬编码并写入文件系统的 `C` 盘标识。只有在真正启动系统时，Windows 方能确定哪个分区对应 `C` 盘，并写入注册表。至于其他盘符的分配，则具有不确定性，出现 `D` 盘变为 `E` 盘的问题也屡见不鲜，例如某虚拟光驱可能在开机时被自动加载等。
 
 > **思考题**
 >
@@ -52,7 +52,7 @@ PSPath
 
 ![如何理解挂载](../.gitbook/assets/mount-concept.png)
 
-小时候住在花木场的人们都知道，经常需要从树 A 上剪取一段枝条，将其斜插到树 B 上，并加以包裹，愈合后就会成为一体：比如在苹果树（UNIX）上可以长出桃子（挂载 Windows 的 `C` 盘）。
+从事园艺的人员通常了解，需要从树 A 上剪取一段枝条，将其斜插到树 B 上，并加以包裹，愈合后就会成为一体：例如在苹果树（UNIX）上可以长出桃子（挂载 Windows 的 `C` 盘）。
 
 这种方法称为“嫁接”。实际上，这就是将树 A 的枝条（文件系统）挂载到树 B 上（嫁接点即某个挂载点，归根结底依赖于根目录 `/`）。
 
@@ -68,7 +68,7 @@ PSPath
 
 ![如何理解卸载](../.gitbook/assets/unmount-concept.png)
 
-对园艺有所了解的人们想必对“扦插”这种培育植物的方法并不陌生：
+对园艺有所了解的读者想必对“扦插”这种培育植物的方法并不陌生：
 
 将一棵树新发的侧枝掰下来，插到土里。精心照料一段时间，就会得到一株新的幼苗。
 
@@ -151,7 +151,7 @@ Windows 操作系统默认的文本换行符为 CRLF（即 \\r\\n，0x0D 0x0A，
 
 二者互不兼容，如果将使用 Windows 换行符的文件放到 UNIX 系统上，可能会导致每行末尾多出一个 `^M` 字符；对于某些工具会造成识别错误，对于 FreeBSD Port 相关文件来说，则可能将多行识别为一行。
 
-但是两种换行符可以互相转换。在 FreeBSD 下可以用 Port `converters/dos2unix` 来实现，该软件包含 2 个命令：`dos2unix`（Windows 换行符到 UNIX）、`unix2dos`（UNIX 换行符到 Windows）。基本用法是 `$ dos2unix -n a.txt b.txt`，如果不需要保留源文件，可以直接 `$ dos2unix a.txt b.txt c.txt`（一次转换多个文件）。可以用命令 `file a.txt` 来判断文件的换行符类型：
+然而两种换行符可以互相转换。在 FreeBSD 下可以用 Port `converters/dos2unix` 来实现，该软件包含 2 个命令：`dos2unix`（Windows 换行符到 UNIX）、`unix2dos`（UNIX 换行符到 Windows）。基本用法是 `$ dos2unix -n a.txt b.txt`，如果不需要保留源文件，可以直接 `$ dos2unix a.txt b.txt c.txt`（一次转换多个文件）。可以用命令 `file a.txt` 来判断文件的换行符类型：
 
 - 使用普通的 UNIX 换行符文本文件
 
@@ -170,7 +170,7 @@ b.txt: Unicode text, UTF-8 text, with very long lines (314), with CRLF line term
 ### 参考文献
 
 - IETF. RFC 2046: Multipurpose Internet Mail Extensions (MIME) Part Two: Media Types[EB/OL]. [2026-04-18]. <https://datatracker.ietf.org/doc/html/rfc2046>. 规定文本类型的规范行结束符为 CRLF（0x0D 0x0A）。
-- IETF. RFC 20: ASCII format for network interchange[EB/OL]. [2026-04-18]. <https://www.rfc-editor.org/rfc/rfc20.html>. ASCII 标准定义 CR 为 0x0D（第 13 号控制字符），LF 为 0x0A（第 10 号控制字符），二者均源自电传打字机时代的物理操作。
+- IETF. RFC 20: ASCII format for network interchange[EB/OL]. [2026-04-18]. <https://www.rfc-editor.org/rfc/rfc20.html>. ASCII 字符编码标准，定义 7 位 128 个字符的编码，其中 0x41 为大写字母 A；标准定义 CR 为 0x0D（第 13 号控制字符），LF 为 0x0A（第 10 号控制字符），二者均源自电传打字机时代的物理操作。
 - Wasserburger E. dos2unix / unix2dos - Text file format converters[EB/OL]. [2026-04-18]. <https://dos2unix.sourceforge.io/>. dos2unix 与 unix2dos 命令行工具，用于在 CRLF（Windows）与 LF（UNIX）换行格式之间转换；FreeBSD Port 路径为 converters/dos2unix。基本系统版本与 Port 版本为不同程序。Port 为增强版本，支持更多选项。
 
 ## 字符编码差异
@@ -179,7 +179,7 @@ b.txt: Unicode text, UTF-8 text, with very long lines (314), with CRLF line term
 
 例如，ASCII（American Standard Code for Information Interchange，ANSI X3.4）编码中，`0x41`（二进制 `0100 0001`）代表大写字母 `A`。ASCII 仅支持英文字母、数字和常见标点，共 128 个字符。
 
-而在 Unicode 编码体系中，“你”这个汉字的代码点是 U+4F60。在 UTF-8（8-bit Unicode Transformation Format，8 位 Unicode 转换格式）编码方式下，它被编码为字节序列 `0xE4 0xBD 0xA0`（二进制为 `11100100 10111101 10100000`）。UTF-8 编码涵盖的字符范围远超 GBK（国标扩展），当中甚至含有埃及圣书体——如果现在你的屏幕上能看到“𓀀”“𓃕”“𓌊”这三个字符，那么你很可能正在使用 UTF-8 编码（如果你使用的是 UTF-8 编码但仍无法显示这些字符，很可能是字体不支持这些字符集，而非编码问题）。
+而在 Unicode 编码体系中，“你”这个汉字的代码点是 U+4F60。在 UTF-8（8-bit Unicode Transformation Format，8 位 Unicode 转换格式）编码方式下，它被编码为字节序列 `0xE4 0xBD 0xA0`（二进制为 `11100100 10111101 10100000`）。UTF-8 编码涵盖的字符范围远超 GBK（国标扩展），当中甚至含有埃及圣书体，如果当前屏幕上能看到 𓀀 𓃕 𓌊 这三个字符，那么很可能正在使用 UTF-8 编码（若使用 UTF-8 编码但仍无法显示这些字符，很可能是字体不支持这些字符集，而非编码问题）。
 
 那么程序如何识别文本的编码呢？通常，有些文件会在开头使用特定的字节序列（即 BOM，byte order mark，字节顺序标记）来标明编码。例如 UTF-8 的 BOM 是 `0xEF 0xBB 0xBF`。但在实际中，很多文本文件并没有 BOM，因此读取程序需要通过上下文猜测编码格式，这往往导致乱码。虽然可以通过程序分析文本内容（如统计字符分布或抽取字符计算）来猜测编码，但这种方法并不总是可靠。编码问题本质上源于系统间默认编码不同或未明确指定编码。
 
@@ -199,37 +199,36 @@ root@ykla:/home/ykla# locale charmap
 UTF-8
 ```
 
-当然，也可以将 Windows 10 及后续版本的系统字符编码设置为 UTF-8。但这种做法往往除了引入更多编码问题外，并不能有效解决问题。
+此外，也可将 Windows 10 及后续版本的系统字符编码设置为 UTF-8。然而这种做法往往除了引入更多编码问题外，并不能有效解决问题。
 
 FreeBSD 的编码在 [main/usr.bin/login/login.conf](https://github.com/freebsd/freebsd-src/blob/main/usr.bin/login/login.conf) 文件中设置，编译后路径为 `/etc/login.conf`。
 
 ### 参考文献
 
 - 微软. Code pages[EB/OL]. [2026-03-26]. <https://learn.microsoft.com/en-us/globalization/encoding/code-pages>. 微软官方称，936 即是 GBK，用于中文简体字符编码；代码页 936 最初覆盖 GB 2312 字符集，后扩展为 GBK。
-- IETF. RFC 20: ASCII format for network interchange[EB/OL]. [2026-04-18]. <https://www.rfc-editor.org/rfc/rfc20.html>. ASCII 字符编码标准，定义 7 位 128 个字符的编码，其中 0x41 为大写字母 A。
 - Unicode Consortium. UTF-8, UTF-16, UTF-32 BOM[EB/OL]. [2026-04-18]. <https://www.unicode.org/faq/utf_bom.html>. UTF-8 的 BOM 为字节序列 0xEF 0xBB 0xBF。
 - 微软. Use UTF-8 code pages in Windows apps[EB/OL]. [2026-04-18]. <https://learn.microsoft.com/en-us/windows/apps/design/globalizing/use-utf8-code-page>. Windows 10 及后续版本可通过系统区域设置启用 UTF-8 支持（Beta 功能），但可能导致旧应用程序兼容性问题。
 - FreeBSD Project. login.conf(5)[EB/OL]. [2026-04-18]. <https://man.freebsd.org/cgi/man.cgi?query=login.conf&sektion=5>. FreeBSD 登录类能力数据库，源文件位于 `usr.bin/login/login.conf`，编译后路径为 /etc/login.conf，用于设置字符编码等用户环境。
 
 ## 时间与时区差异
 
-中国统一使用一个时区，东八区，即 UTC+8，UTC（Coordinated Universal Time，协调世界时）在日常使用中几乎等同于 GMT（Greenwich Mean Time，格林尼治时间）。UTC 以国际原子时（temps atomique international，TAI）的秒长为基础（并不完全一致）：当铯（Cs）频率 ΔνCs，也就是铯 133 原子不受干扰的基态超精细跃迁频率，以单位 Hz 即 s⁻¹ 表示时，取其固定数值为 9,192,631,770 来定义秒——后续又对国际原子时进行了各种修正。
+中国统一使用一个时区，东八区，即 UTC+8，UTC（Coordinated Universal Time，协调世界时）在日常使用中几乎等同于 GMT（Greenwich Mean Time，格林尼治时间）。UTC 以国际原子时（temps atomique international，TAI）的秒长为基础（并不完全一致）：当铯（Cs）频率 ΔνCs，也就是铯 133 原子不受干扰的基态超精细跃迁频率，以单位 Hz 即 s⁻¹ 表示时，取其固定数值为 9,192,631,770 来定义秒——后续又对国际原子时进行了多项修正。
 
-有过 Windows 和 UNIX 双系统安装经验的人会发现，Windows 和 UNIX 的时间总是差 8 个小时。在现代计算机上（一般在主板上），都有一颗由纽扣电池供电的 RTC（Real-time clock，实时时钟芯片）芯片，用来维护系统断电后的计时。
+有过 Windows 和 UNIX 双系统安装经验的用户会发现，Windows 和 UNIX 的时间总是差 8 个小时。在现代计算机上（一般在主板上），都有一颗由纽扣电池供电的 RTC（Real-time clock，实时时钟芯片）芯片，用来维护系统断电后的计时。
 
 计算机操作系统在开机时会读取 RTC 的时间来设定系统的时间。RTC 的时间并未标注时区。
 
-Windows 会直接读取 RTC 的结果，并将其视为本地时间，即 Local Time（地方时，当地太阳运行的时间）；UNIX 则会将 RTC 的数据视为 UTC 时间：于是会发现双系统的时间相差了 8 个小时。
+Windows 会直接读取 RTC 的结果，并将其视为本地时间，即 Local Time（地方时，当地太阳运行的时间）；UNIX 则会将 RTC 的数据视为 UTC 时间，由此导致双系统时间相差 8 小时。
 
-例如，如果 RTC 时间是“2025 年 6 月 6 日中午 12:00（即 UTC+8）”，那么在 Windows 下仍显示为“2025 年 6 月 6 日中午 12:00”（即 UTC+8）；但在 UNIX 下，时间会变为“2025 年 6 月 6 日晚上 20:00”（即把 RTC 中的 12:00 视为 UTC 后再加上 UTC+8 的偏移量，12+8=20）。因为 UNIX 将 RTC 视为 UTC 而非本地时间，所以显示的时间会比 Windows 快 8 小时。
+例如，如果 RTC 时间是“2025 年 6 月 6 日中午 12:00（即 UTC+8）”，那么在 Windows 下仍显示为“2025 年 6 月 6 日中午 12:00”（即 UTC+8）；但在 UNIX 下，时间会变为“2025 年 6 月 6 日晚上 20:00”（即把 RTC 中的 12:00 视为 UTC 后再加上 UTC+8 的偏移量，12+8=20）。由于 UNIX 将 RTC 视为 UTC 而非本地时间，因此显示的时间会比 Windows 快 8 小时。
 
-对于现代计算机网络来说，时间至关重要。可以做个小实验：将时间调慢 5 分钟，打开浏览器，会发现绝大部分网站都打不开了（HTTPS）。
+对于现代计算机网络来说，时间准确性至关重要——通过一个简单实验可验证：将时间调慢 5 分钟，打开浏览器，即可发现绝大部分网站无法访问（HTTPS）。
 
 计算机中的时区是由 IANA 时区数据库规范的，历史悠久。
 
 中华民国二十八年（1939），民国政府将中国划分为五个时区，当时称为长白时区（UTC+8:30）、中原标准时区（UTC+8）、陇蜀时区（UTC+7）、新藏时区（UTC+6）和昆仑时区（UTC+5:30）。在 IANA 时区数据库中，这些时区分别对应 `Asia/Harbin`、`Asia/Shanghai`、`Asia/Chongqing`、`Asia/Urumqi` 和 `Asia/Kashgar`。
 
-从实际的地理时区来看，新疆属于东六区（虽然全国统一使用北京时间）。从地理上看，新疆与北京时间实际上相差了两个小时。如果在燕赵大地太阳在北京时间五点出来，那么对于新疆，北京时间七点才能看到日出。
+从实际的地理时区来看，新疆属于东六区（虽然全国统一使用北京时间）。从地理上看，新疆与北京时间实际上相差了两个小时。如果在燕赵大地太阳在北京时间五点升起，那么对于新疆，北京时间七点才能看到日出。
 
 在时区数据库 2025b 中，`Asia/Harbin`、`Asia/Chongqing`、`Asia/Shanghai` 均等同于北京时间。`Asia/Urumqi` 和 `Asia/Kashgar` 则均为 `UTC+6`（东六区时间）。
 
@@ -241,7 +240,7 @@ Windows 会直接读取 RTC 的结果，并将其视为本地时间，即 Local 
 
 > **技巧**
 >
-> 中国也曾实行过夏令时（在夏天将表调快一个小时，因为天亮得早）。
+> 中国也曾实行过夏令时（在夏季将时钟调快一个小时，因夏季日出较早）。
 
 > **思考题**
 >
@@ -303,7 +302,6 @@ FreeBSD 上最全面的文档以手册页的形式存在。系统上几乎每个
 
 此命令显示描述中包含关键词“mail”的命令列表。这等效于使用 apropos(1)。
 
-
 ## 深入阅读
 
 ### Windows
@@ -342,6 +340,6 @@ FreeBSD 上最全面的文档以手册页的形式存在。系统上几乎每个
 
 ## 课后习题
 
-1. 在 FreeBSD 中挂载一个 Windows NTFS 分区，使用 converters/dos2unix 转换 3 个包含 Windows 换行符的文本文件，并尝试使之自动化，提交 PR 到 FreeBSD Ports。
-2. 查找 FreeBSD 内核源代码中负责处理大小写敏感的 UFS/ZFS 文件系统相关代码，进行注释和分析。
-3. 尝试修改 Windows 的设置，使其支持 UTC+8 时间。
+1. 在 FreeBSD 中挂载一个 Windows NTFS 分区，使用 `converters/dos2unix` 批量转换包含 Windows 换行符的文本文件，编写 Shell 脚本实现自动化处理。
+2. 查阅 FreeBSD 内核源代码中 UFS/ZFS 文件系统处理大小写敏感的逻辑，分析其实现机制与 Windows NTFS 大小写不敏感设计的差异。
+3. 修改 Windows 注册表使其将硬件时钟视为 UTC，记录修改前后 FreeBSD 与 Windows 双系统时间显示的差异。
