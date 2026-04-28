@@ -42,7 +42,7 @@ VirtualBox 安装完成后，按照以下步骤创建并配置虚拟机。以下
 
 ![虚拟机设置](../.gitbook/assets/virtualbox-5.png)
 
-显卡控制器使用 `VBoxSVGA` 即可。
+显卡控制器使用 `VBoxSVGA`。
 
 > **警告**
 >
