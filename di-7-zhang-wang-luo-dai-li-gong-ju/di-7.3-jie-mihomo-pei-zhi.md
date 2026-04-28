@@ -220,13 +220,13 @@ mihomo_enable="YES" # 开机启用/服务项
 
 - 如何根据订阅链接进行测速？测速功能对选择最优代理节点至关重要。
 
-- 如何指定订阅链接中代理组的某个代理？（比如仅使用位于美国的某个代理 A）这涉及代理节点的精细化选择。
+- 如何指定订阅链接中代理组的特定代理（例如仅使用位于美国的某个代理节点）？此涉及代理节点的精细化选择。
 
 ## Clash for FreeBSD
 
 ### 环境准备
 
-FreeBSD 默认登录 Shell 可能不是 `bash`，执行以下命令前请先切换到 `bash`：
+FreeBSD 的默认登录 Shell 未必为 `bash`，执行以下命令前须先切换至 `bash`：
 
 ```shell
 $ bash
@@ -334,7 +334,7 @@ $ clashctl config regen
 
 ### 未竟事宜
 
-以下是 Clash for FreeBSD 项目有待改进的地方，这些改进方向有助于提高项目的通用性和易用性：
+以下为 Clash for FreeBSD 项目有待改进之处：
 
 - 与 bash 解耦，支持默认的 sh，使其更符合 FreeBSD 的默认环境。
 
