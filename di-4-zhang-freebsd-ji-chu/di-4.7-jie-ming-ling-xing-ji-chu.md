@@ -902,5 +902,5 @@ FreeBSD repository is up to date.
 
 ## 课后习题
 
-1. 尝试对 BSD 风格的 sed/awk/grep 命令选项进行优化，使其兼容 GNU 语法。
-2. 查看 FreeBSD 中 ls 命令的源代码实现，并与 GNU 的实现进行比较。
+1. 对比 BSD 风格的 sed/awk/grep 与 GNU 版本在常用选项上的差异，编写兼容性对照表，并给出在 FreeBSD 上实现跨平台脚本的策略。
+2. 查阅 FreeBSD 中 `ls` 命令的源代码实现（`bin/ls/`），与 GNU coreutils 中的 `ls` 在选项解析和输出格式化方面的实现进行比较。
