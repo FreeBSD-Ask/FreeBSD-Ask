@@ -155,7 +155,7 @@ $ echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc              
 # source ~/.zshrc
 ```
 
-回答几个问题即可完成配置。重启后完成配置。
+按照提示回答若干问题以完成配置，重启后生效。
 
 ##### 参考文献
 
