@@ -227,7 +227,7 @@ default via 172.24.63.253 dev eth0 proto dhcp src 172.24.0.80 metric 100
 
 如果不进行上述设置，系统下次开机时仍可能停留在引导界面。
 
-再列出 FreeBSD 系统磁盘分区表及分区信息：
+接下来列出 FreeBSD 系统磁盘分区表及分区信息：
 
 ```sh
 root@freebsd:~ # gpart show
