@@ -289,7 +289,7 @@ your environment.
 # exec xterm                      # 启动 XTerm，需删除开头的 #
 ```
 
-重启系统即可。
+重启系统后生效。
 
 ### 配置中文环境（用户使用默认的 sh）
 
