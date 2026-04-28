@@ -67,7 +67,7 @@ wlan0: flags=8802<BROADCAST,SIMPLEX,MULTICAST> metric 0 mtu 1500
 
 ### 扫描无线网络
 
-在连接到无线网络之前，需要先扫描周围可用的无线网络。可以使用 ifconfig(8) 扫描可用的无线网络：
+在连接到无线网络之前，需要先扫描周围可用的无线网络。可使用 ifconfig(8) 扫描可用的无线网络：
 
 ```sh
 # ifconfig wlan0 up scan
