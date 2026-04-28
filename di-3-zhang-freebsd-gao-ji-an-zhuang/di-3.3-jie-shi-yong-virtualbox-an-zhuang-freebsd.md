@@ -90,7 +90,7 @@ VirtualBox 安装完成后，按照以下步骤创建并配置虚拟机。以下
 >
 > 与 VMware 不同，VirtualBox 的默认 NAT 模式下，宿主机和虚拟机无法直接互通。虚拟机可以访问宿主机的特殊地址 `10.0.2.2` 及其上运行的服务，但宿主机无法访问虚拟机的端口，各虚拟机之间网络也相互隔离。参见：Oracle. Network Address Translation (NAT)[EB/OL]. [2026-03-26]. <https://www.virtualbox.org/manual/topics/networkingdetails.html#network_nat>. 也可以按照手册中的端口转发来连通网络。
 
-网络设置较为复杂，桥接模式未必能够生效。为实现通过宿主机（如 Windows 11）控制虚拟机中的 FreeBSD 系统之目的，需设置两块网卡——一块为 NAT 网络模式的网卡用于连接互联网，另一块为仅主机模式的网卡用于与宿主机互通。如图所示：
+网络设置较为复杂，桥接模式未必能够生效。为实现通过宿主机（如 Windows 11）控制虚拟机中的 FreeBSD 系统之目的，需设置两块网卡：一块为 NAT 网络模式的网卡用于连接互联网，另一块为仅主机模式的网卡用于与宿主机互通。如图所示：
 
 ![双网卡设置](../.gitbook/assets/virtualbox-dual-nic-1.png)
 
@@ -204,7 +204,7 @@ You may ignore the yellow alert that encourages use of VMSVGA.
 
 ### EFI 下无法正常关机
 
-编辑 `/etc/sysctl.conf` 文件，添加
+编辑 `/etc/sysctl.conf` 文件，添加以下内容：
 
 ```ini
 hw.efi.poweroff=0	# 禁用 EFI 电源关闭功能，使系统通过 ACPI 正常关机
