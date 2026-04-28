@@ -336,7 +336,7 @@ search 和 domain 选项只能使用其中一个。使用 DHCP 时，dhclient(8)
 
 如果网卡工作正常但性能不佳，可参阅 tuning(7)。同时检查网络配置，因不正确的网络设置可能导致连接缓慢。
 
-“No route to host”消息发生在系统无法将数据包路由到目标主机时。这可能因没有指定默认路由或网线未插入。检查 `netstat -rn` 的输出，确保有到主机的有效路由。
+“No route to host”消息发生在系统无法将数据包路由到目标主机时。这可能由于未指定默认路由或网线未插入所致。检查 `netstat -rn` 的输出，确保有到主机的有效路由。
 
 “ping: sendto: Permission denied”错误消息通常由防火墙配置错误引起。如果在 FreeBSD 上启用了防火墙但未定义规则，默认策略是拒绝所有流量，甚至是 ping(8)。
 
@@ -348,7 +348,7 @@ search 和 domain 选项只能使用其中一个。使用 DHCP 时，dhclient(8)
 
 ```ini
 hostname="ykla"  # 主机名，不能为空，否则无法使用 Xorg
-ifconfig_igc0="DHCP"  # 让网卡 igc0 使用 DHCP
+ifconfig_igc0="DHCP"  # 使网卡 igc0 使用 DHCP
 ifconfig_igc0="inet 192.168.31.77 netmask 255.255.255.0"  # 设置网卡 igc0 的 IPv4 为 192.168.31.77，子网掩码为 255.255.255.0（静态 IP）
 defaultrouter="192.168.31.1"  # 默认网关/默认路由，通常为路由器 IP 地址
 ifconfig_igc0_alias0="inet 192.168.1.33 netmask 255.255.255.0"  # 设置网卡 igc0 别名 IPv4 192.168.1.33，子网掩码为 255.255.255.0 即拥有额外的 IPv4 地址
