@@ -165,6 +165,5 @@ PS C:\Users\ykla> Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-H
 
 ## 课后习题
 
-1. 查找 FreeBSD 源代码中关于 `kern.evdev.rcpt_mask` 的实现，逐行注释并分析原理。
-
-2. 探索哪些 Hyper-V 虚拟化设置能够优化虚拟化性能。
+1. 查阅 FreeBSD 源代码中 `kern.evdev.rcpt_mask` 的实现（`sys/dev/evdev/`），分析该参数控制输入事件分发路径的机制，注释关键函数的执行逻辑。
+2. 查阅 Hyper-V 文档，列举并测试至少三项虚拟化性能优化设置（如动态内存、SR-IOV、虚拟机队列），量化其对 FreeBSD 虚拟机 I/O 吞吐量的影响。
