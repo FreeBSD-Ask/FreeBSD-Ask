@@ -162,6 +162,5 @@ zroot/var/tmp         96K  87.8G    96K  /var/tmp
 
 ## 课后习题
 
-1. 在 UFS 文件系统下重构本文，并提交 PR。
-
-2. 分析源代码，比较 freebsd-swap 与 Linux swap 分区的实现差异。
+1. 在 UFS 文件系统下重复本节双系统安装流程，记录 ZFS 与 UFS 在分区布局和引导配置上的差异。
+2. 查阅 FreeBSD 源代码中 swap 分区的实现（`sys/dev/swap/`），比较 freebsd-swap 与 Linux swap 在磁盘格式和内核接口层面的差异。
