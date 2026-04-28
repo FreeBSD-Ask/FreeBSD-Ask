@@ -102,12 +102,12 @@ machdep.wall_cmos_clock: 1
 
 FreeBSD 与 Linux 时间服务比较：
 
-| 特性       | FreeBSD                              | Linux                          |
-| ---- | ----------- | ------------------ |
-| 默认 NTP 客户端                    | NTP Classic（ISC ntpd 分支）             | chrony 或 systemd-timesyncd     |
-| NTS（Network Time Security） 支持 | 不支持，需安装 Port `net/chrony`       | 支持（chrony 或 systemd-timesyncd） |
-| 启动时同步                         | 通过 rc.conf 变量 `ntpd_sync_on_start` 控制 | chrony 默认在启动时同步                |
-| 内核时钟调整                        | 使用 sysctl `kern.ntp`                  | 使用系统调用 `adjtimex()` |
+| 特性 | FreeBSD | Linux |
+| ---- | ------- | ----- |
+| 默认 NTP 客户端 | NTP Classic（ISC ntpd 分支） | chrony 或 systemd-timesyncd |
+| NTS（Network Time Security） 支持 | 不支持，需安装 Port `net/chrony` | 支持（chrony 或 systemd-timesyncd） |
+| 启动时同步 | 通过 rc.conf 变量 `ntpd_sync_on_start` 控制 | chrony 默认在启动时同步 |
+| 内核时钟调整 | 使用 sysctl `kern.ntp` | 使用系统调用 `adjtimex()` |
 
 ### 设置并启动 NTP 服务
 

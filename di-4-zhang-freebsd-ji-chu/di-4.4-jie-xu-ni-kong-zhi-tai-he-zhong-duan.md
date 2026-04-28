@@ -63,7 +63,6 @@ To change this login announcement, see motd(5).
 
 - ①：root 是 UNIX 系统中的超级用户账户，拥有最高权限。常说的 Android root、Apple 越狱、Kindle 越狱等，都是为了获取这一 root 权限。
 
-
 ### 故障排除与未竟事宜
 
 - 若用户名正确，但密码不正确：
@@ -149,7 +148,6 @@ ttyv8	"/usr/local/bin/xdm -nodaemon"	xterm	off secure
 >ykla       pts/0    192.168.179.1   9:55PM     4 su (sh)
 >ykla       pts/1    192.168.179.1  10:22PM     - w
 >```
-
 
 注意，最后一个虚拟控制台（ttyv8）用于访问图形环境（如果已安装并配置了 Xorg）。
 
@@ -254,8 +252,6 @@ exec="gop set 0"
 - FreeBSD Project. loader.conf(5)[EB/OL]. [2026-04-17]. <https://man.freebsd.org/cgi/man.cgi?loader.conf(5)>.
 - FreeBSD Forums. gop set < mode > being ignored in /boot/loader.conf[EB/OL]. [2026-03-26]. <https://forums.freebsd.org/threads/gop-set-mode-being-ignored-in-boot-loader-conf.77779/>. 讨论 loader.conf 中 GOP 模式设置未生效的原因与解决思路。
 - FreeBSD Forums. How to find the valid values of efi_max_resolution[EB/OL]. [2026-03-26]. <https://forums.freebsd.org/threads/how-to-find-the-valid-values-of-efi_max_resolution.84840/>. 探讨查询 efi_max_resolution 有效取值的方法。
-
-
 
 ## 课后习题
 

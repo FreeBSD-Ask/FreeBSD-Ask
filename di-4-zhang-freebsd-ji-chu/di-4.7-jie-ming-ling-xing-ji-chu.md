@@ -2,7 +2,6 @@
 
 命令行界面（Command Line Interface, CLI）作为类 UNIX 系统的核心交互方式，提供了直接、高效的系统操作手段。
 
-
 ## 我是谁？
 
 - 查看当前登录系统的用户名：
@@ -714,7 +713,6 @@ make BATCH=yes install || make BATCH=yes install || make BATCH=yes install || ma
 > `touch a.txt && touch b.txt || touch c.txt || reboot` 是什么意思？
 >
 > 如果 `touch a.txt` 失败会执行后面的哪个操作？
-
 
 ## BSD 风格的 make/grep/sed/awk
 

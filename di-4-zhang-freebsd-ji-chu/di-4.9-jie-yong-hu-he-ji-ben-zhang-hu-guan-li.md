@@ -337,7 +337,6 @@ test2:$6$FkxPcs2y.Y8cxyuj$kVDoV1LC.IWKGlSitll3oLArF18aHQYID0JYE.TUuD0YFgba.c7MbG
 # pw groupdel test5
 ```
 
-
 ## 参考文献
 
 - FreeBSD Project. pw(8)[EB/OL]. [2026-03-26]. <https://man.freebsd.org/cgi/man.cgi?pw>. man 页，介绍了用户和组管理命令。

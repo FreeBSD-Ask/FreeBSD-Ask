@@ -129,7 +129,6 @@ FreeBSD 的 `ping` 自 15.0 起合并了原 `ping6` 的功能，通过 `-4`/`-6`
 
 `ping` 使用 ICMP 协议的 ECHO_REQUEST 数据报来触发主机的 ECHO_RESPONSE。IPv4 目标使用 ICMP，IPv6 目标使用 ICMPv6（RFC 2463）。默认数据大小为 56 字节，加上 8 字节 ICMP 头共 64 字节。若数据空间至少 8 字节，前 8 字节用于时间戳以计算往返时间。
 
-
 ### 其他
 
 - **Ctrl**+**L**（字母 L）：清空屏幕
