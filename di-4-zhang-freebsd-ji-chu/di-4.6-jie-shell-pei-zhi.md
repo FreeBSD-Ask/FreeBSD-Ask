@@ -248,7 +248,7 @@ touch ~/.bash_profile         # 创建 ~/.bash_profile 文件，用于配置 Bas
 
 ## 配置 csh/tcsh
 
-除了 Zsh 和 Bash 外，FreeBSD 基本系统还内置了 csh 和 tcsh。csh（C Shell，灵感来自 C 语言，语法也类似，作者是 Bill Joy）是 FreeBSD 基本系统内置的 Shell，以前是 root 用户的默认 Shell。FreeBSD 默认 Shell 为 sh（自 FreeBSD 14 起），但基本系统同时提供 csh/tcsh 作为替代选择。
+除了 Zsh 和 Bash 外，FreeBSD 基本系统还内置了 csh 和 tcsh。csh（C Shell，灵感来自 C 语言，语法也类似，作者是 Bill Joy）是 FreeBSD 基本系统内置的 Shell，曾是 root 用户的默认 Shell。FreeBSD 默认 Shell 为 sh（自 FreeBSD 14 起），但基本系统同时提供 csh/tcsh 作为替代选择。
 
 > **技巧**
 >
