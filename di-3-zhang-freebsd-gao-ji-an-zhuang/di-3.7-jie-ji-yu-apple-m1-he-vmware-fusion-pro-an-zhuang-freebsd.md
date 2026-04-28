@@ -40,7 +40,7 @@
 
 ## 配置桌面
 
-无需安装任何虚拟机增强工具即可使用。
+无需安装任何虚拟机增强工具便可正常使用。
 
 ![桌面界面](../.gitbook/assets/vmware-fusion-7.png)
 
@@ -54,7 +54,7 @@
 
 ### 鼠标无法移动
 
-编辑 `/boot/loader.conf` 文件，加入以下内容即可：
+编辑 `/boot/loader.conf` 文件，加入以下内容：
 
 ```sh
 hw.usb.usbhid.enable="1"    # 启用 USB HID 设备支持
