@@ -189,8 +189,8 @@ $ rar a archive.rar test
 ### rar 解压
 
 ```sh
-$ unrar x archive.rar # 解压到当前路径。命令 `x` 即 Extract，解压的意思
-$ unrar x archive.rar /home/ykla/桌面/test/ # 解压缩到指定目录
+$ unrar x archive.rar # 解压到当前路径。命令 `x` 即 Extract，解压
+$ unrar x archive.rar /home/ykla/桌面/test/ # 解压到指定目录
 ```
 
 ## zstd
