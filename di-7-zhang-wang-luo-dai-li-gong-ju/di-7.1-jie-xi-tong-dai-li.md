@@ -143,7 +143,7 @@ Exec=chrome %U --proxy-server="192.168.2.163:20172"
 
 Firefox 浏览器在设置页面的网络设置选项卡中提供了图形化代理配置模块。
 
-![Firefox 代理设置](../.gitbook/assets/firefox-proxy-settings.png)
+![Firefox 代理设置](../.gitbook/assets/FF-Proxy.png)
 
 ### 参考文献
 

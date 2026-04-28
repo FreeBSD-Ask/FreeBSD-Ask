@@ -460,7 +460,7 @@ autoboot_delay="2"
 
 如下图所示，设置后可看到 FreeBSD 启动 Logo。
 
-![FreeBSD 启动 Logo](../.gitbook/assets/freebsd-boot-logo.png)
+![FreeBSD 启动 Logo](../.gitbook/assets/bootlogo.png)
 
 参考文献：
 
@@ -572,17 +572,17 @@ loader_logo="fbsdbw"
 
 重启后效果如下：
 
-![fbsdbw](../.gitbook/assets/freebsd-bw-logo.png)
+![fbsdbw](../.gitbook/assets/fbsdbw.png)
 
-![beastie](../.gitbook/assets/freebsd-beastie-logo.png)
+![beastie](../.gitbook/assets/beastie.png)
 
-![beastiebw](../.gitbook/assets/freebsd-beastie-bw-logo.png)
+![beastiebw](../.gitbook/assets/beastiebw.png)
 
 ![orb](../.gitbook/assets/boot-screen.png)
 
-![orbbw](../.gitbook/assets/freebsd-orb-bw-logo.png)
+![orbbw](../.gitbook/assets/orbbw.png)
 
-![none](../.gitbook/assets/boot-logo-none.png)
+![none](../.gitbook/assets/none.png)
 
 ### 参考文献
 
