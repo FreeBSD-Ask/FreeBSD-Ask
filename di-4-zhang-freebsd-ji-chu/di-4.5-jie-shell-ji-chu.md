@@ -119,7 +119,7 @@ $ cp /home/ykla/test/1.txt
 PING 163.com (59.111.160.244): 56 data bytes
 64 bytes from 59.111.160.244: icmp_seq=0 ttl=52 time=27.672 ms
 64 bytes from 59.111.160.244: icmp_seq=1 ttl=52 time=27.580 ms
-^C # 注意这里，^C 即代表你在此处按下了 Ctrl+C 的组合键，随后命令被终止
+^C # 注意这里，^C 表示此处按下了 Ctrl+C 的组合键，随后命令被终止
 --- 163.com ping statistics ---
 2 packets transmitted, 2 packets received, 0.0% packet loss
 round-trip min/avg/max/stddev = 27.580/27.626/27.672/0.046 ms
