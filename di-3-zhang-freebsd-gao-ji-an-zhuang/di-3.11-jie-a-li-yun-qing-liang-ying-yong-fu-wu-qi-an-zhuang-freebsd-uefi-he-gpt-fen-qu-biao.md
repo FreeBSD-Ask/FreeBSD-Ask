@@ -695,7 +695,7 @@ $ tce-load -wi exfat-utils parted dosfstools util-linux openssl ca-certificates
 
 磁盘处于只读状态，无法进行任何操作，包括删除分区表、格式化或使用 dd 写零。
 
-上述操作均报错如下：
+上述操作均提示错误如下：
 
 ![只读磁盘报错](../.gitbook/assets/ventoy-readonly-disk-error.png)
 
