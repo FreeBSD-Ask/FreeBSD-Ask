@@ -9,7 +9,6 @@
 > - Bilibili. FreeBSD 14.2 基础安装配置教程[EB/OL]. [2026-03-25]. <https://www.bilibili.com/video/BV1STExzEEhh>（物理机）
 > - Bilibili. 002-VMware17 安装 FreeBSD 14.2[EB/OL]. [2026-03-25]. <https://www.bilibili.com/video/BV1gji2YLEoC>（虚拟机）
 
-
 以下安装说明基于 `FreeBSD-15.0-RELEASE-amd64-disc1.iso`。`-dvd1.iso` 和 `-memstick.img` 的安装流程与之类似。
 
 > **注意**
@@ -778,7 +777,6 @@ OK? (yes/no) [yes]: #  确认上述设置是否正确
 adduser: INFO: Successfully added (ykla) to the user database. # 用户 ykla 已成功添加至数据库
 Add another user? (yes/no) [no]: # 是否继续添加其他用户
 ```
-
 
 - ① 如果用户全名为空（即不设置），系统会分配一个默认值 `User &`。这是早期 UNIX 系统 GECOS 字段的遗留行为。相关代码位于 FreeBSD Project. freebsd-src/usr.sbin/pw/pw_user.c[EB/OL]. [2026-03-25]. <https://github.com/freebsd/freebsd-src/blob/main/usr.sbin/pw/pw_user.c> 的 `static struct passwd fakeuser` 结构中。
 
