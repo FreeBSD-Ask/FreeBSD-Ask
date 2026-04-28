@@ -32,7 +32,7 @@
         └── tabs/                   # 个人 crontab 文件目录
 ```
 
-[periodic.conf(5)](https://man.freebsd.org/cgi/man.cgi?periodic.conf) 文件位于 `/etc/defaults` 目录下，其部分内容可以被 `/etc` 目录下同名文件覆盖，而 `/etc` 下的文件又可以被 `/etc/periodic.conf.local` 文件所覆盖。
+[periodic.conf(5)](https://man.freebsd.org/cgi/man.cgi?periodic.conf) 文件位于 `/etc/defaults` 目录下，其部分内容可被 `/etc` 目录下同名文件覆盖，而 `/etc` 下的文件又可被 `/etc/periodic.conf.local` 文件所覆盖。
 
 源代码路径结构：
 
@@ -60,7 +60,7 @@ Rebuilding locate database:
 /var/db/locate.database
 ```
 
-crontab: `cron` 配置，位于 `/etc/crontab`，请参考 [crontab(5)](https://man.freebsd.org/cgi/man.cgi?crontab(5))。
+crontab: `cron` 配置，位于 `/etc/crontab`，可参阅 [crontab(5)](https://man.freebsd.org/cgi/man.cgi?crontab(5))。
 
 ## 参考文献
 
