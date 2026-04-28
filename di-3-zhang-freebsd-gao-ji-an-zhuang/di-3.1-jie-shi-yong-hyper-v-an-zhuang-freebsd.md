@@ -128,7 +128,7 @@ PS C:\Users\ykla> Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-H
 
 ## 安装 FreeBSD
 
-虚拟机设置调整完成后，即可开始安装 FreeBSD 系统。
+虚拟机设置调整完成后，开始安装 FreeBSD 系统。
 
 ![Hyper-V](../.gitbook/assets/hyperv-13.png)
 
