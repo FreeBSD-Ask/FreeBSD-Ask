@@ -77,9 +77,9 @@ Linux 在不同语境下具有不同含义。从狭义上讲，Linux 指的是 L
 
 Linux 的全称为 GNU/Linux。
 
-从 GNU 这一递归缩写（GNU's Not Unix，意为“GNU 不是 UNIX”）可以看出，Linux 与 UNIX 并无直接的血缘关系。
+从 GNU 这一递归缩写（GNU's Not Unix，意为“GNU 不是 UNIX”）可以看出，Linux 与 UNIX 并无直接的源流关系。
 
-具体地：
+具体而言：
 
 - GNU/Linux 发行版 = Ubuntu、RHEL、Deepin、openSUSE……
   - Ubuntu = Linux kernel + apt/dpkg + GNOME（默认桌面环境）
