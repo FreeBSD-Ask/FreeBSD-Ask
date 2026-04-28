@@ -76,7 +76,7 @@ V2Ray 可通过 pkg 或 Ports 两种方式安装。
 
 打开配置文件 config.json，在 inbounds 字段下确认端口号。通常 Windows 导出的配置中，SOCKS5 端口为 10808，HTTP 端口为 10809。
 
-例如，其中一个入站接口的 `protocol` 为 `http`，`listen` 为 `127.0.0.1`，`port` 为 10809，这表示该入站接口在本地环回地址的 10809 端口监听 HTTP 代理请求。
+例如，其中一个入站接口的 `protocol` 为 `http`，`listen` 为 `127.0.0.1`，`port` 为 10809，这表示该入站接口在本地回环地址的 10809 端口监听 HTTP 代理请求。
 
 **2. Firefox 设置：**
 
