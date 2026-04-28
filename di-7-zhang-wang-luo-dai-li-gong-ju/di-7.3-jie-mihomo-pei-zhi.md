@@ -42,7 +42,7 @@ Mihomo 的文件结构如下：
 
 ## RC 脚本
 
-已向 Ports 维护者提交了合并请求（[Bug 291295 - net/mihomo: Add rc.conf and some Post-installation](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=291295)），该请求旨在为 Mihomo 添加系统服务管理支持，然目前尚未获得回应。在官方集成完成前，可使用下文提供的自定义 RC 脚本以实现服务化管理。
+已向 Ports 维护者提交了合并请求（[Bug 291295 - net/mihomo: Add rc.conf and some Post-installation](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=291295)），该请求旨在为 Mihomo 添加系统服务管理支持，然目前尚未获得回应。在官方集成完成之前，可使用下文提供的自定义 RC 脚本以实现服务化管理。
 
 ### RC 脚本
 
@@ -110,9 +110,9 @@ run_rc_command "$1"
 
 ### 可用参数及选项
 
-RC 脚本提供了多个命令行参数和配置选项，以下列举常用参数。这些命令会直接将配置写入 `/etc/rc.conf` 文件，若配置有误，可直接修改对应行，`/etc/rc.conf` 文件是 FreeBSD 系统配置的核心文件。
+RC 脚本提供了多个命令行参数和配置选项，以下列举常用参数。这些命令会直接将配置写入 `/etc/rc.conf` 文件，若配置有误可直接修改对应行。`/etc/rc.conf` 文件是 FreeBSD 系统配置的核心文件。
 
-- 启用 Mihomo 服务并设置开机自启，将服务注册至系统启动流程：
+- 启用 Mihomo 服务并设置开机自启动，将服务注册至系统启动流程：
 
 ```sh
 service mihomo enable
