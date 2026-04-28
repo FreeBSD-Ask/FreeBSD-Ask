@@ -225,7 +225,7 @@ default via 172.24.63.253 dev eth0 proto dhcp src 172.24.0.80 metric 100
 # echo "kern.maxphys=65536" >> /boot/loader.conf
 ```
 
-如果不进行上述设置，系统下次开机时仍可能卡在引导界面。
+如果不进行上述设置，系统下次开机时仍可能停留在引导界面。
 
 再列出 FreeBSD 系统磁盘分区表及分区信息：
 
