@@ -239,7 +239,7 @@ FreeBSD 核心小组成员并不直接从中获取任何利益，同样也都是
 
 关于 FreeBSD 与 UNIX 的关系，始终是一个引人深思的话题。该问题远非表面所见般清晰明确。诸多讨论者，甚至是那段岁月的亲历者，也难以给出明确回答或澄清。或者只是简单地说，BSD 并未进行过任何 UNIX 认证，没有持有法律上的商标便简单定论；更有甚者只是笼统地说 FreeBSD 是 UNIX 的延续者与正统继承者，仅是“有实无名”；另有观点认为，BSD 之于 UNIX，正如 Linux 之于 UNIX。
 
-上述回答之所以存在分歧，原因在于该问题并非可简单套用法律商标归属或代码继承性加以分析的纯粹技术性难题。这牵涉一个深刻的本体论哲学问题，究竟是不能两次踏进同一条河流，还是一次也不能踏进同一条河流？（类似的问题如谷堆问题、秃头问题，感兴趣的读者可参见 SEP 条目 Identity Over Time[EB/OL]. [2026-03-26]. <https://plato.stanford.edu/entries/identity-time>. Sorites Paradox[EB/OL]. [2026-03-26]. <https://plato.stanford.edu/entries/sorites-paradox/>.）。对这个问题的回答如何，映射着的哲学观与科学技术观。
+上述回答之所以存在分歧，原因在于该问题并非可简单套用法律商标归属或代码继承性加以分析的纯粹技术性难题。这牵涉一个深刻的本体论哲学问题，究竟是不能两次踏进同一条河流，还是一次也不能踏进同一条河流？（类似的问题如谷堆问题、秃头问题，感兴趣的读者可参见 SEP 条目 Identity Over Time[EB/OL]. [2026-03-26]. <https://plato.stanford.edu/entries/identity-time>. Sorites Paradox[EB/OL]. [2026-03-26]. <https://plato.stanford.edu/entries/sorites-paradox/>.）。对这个问题的回答如何，映射着哲学观与科学技术观。
 
 >> **忒修斯之船**
 >>
