@@ -496,7 +496,7 @@ root@mfsbsd:~ # gpart show # 查看修复分区表后的磁盘信息
 
 如果有相关输出，则可继续输入命令 `bsdinstall` 以进入正常安装流程。
 
-本次实验的机器仅有 1 GB 内存，在 mfsBSD 占用约 100 MB 后，可用内存只有不到 800 MB。因此指定 ZFS 安装会报错“Distribution extract failed”（分发文件解压失败）：
+本次实验的机器仅有 1 GB 内存，在 mfsBSD 占用约 100 MB 后，可用内存不足 800 MB。因此指定 ZFS 安装会报错“Distribution extract failed”（分发文件解压失败）：
 
 ![Distribution extract failed](../.gitbook/assets/cloud-ufs-extract-failed.png)
 
