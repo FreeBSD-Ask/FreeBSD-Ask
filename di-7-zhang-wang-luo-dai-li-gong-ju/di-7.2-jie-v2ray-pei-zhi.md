@@ -2,7 +2,7 @@
 
 V2Ray 是一款代理软件，支持多种代理协议和流量路由功能。
 
-Xray-core 是 V2Ray 的一个分支，在保持核心功能的基础上进行了性能优化和功能扩展。二者配置基本相同，Xray 可参考 V2Ray 的配置方法。与 Xray 相比，V2Ray 对某些新协议的支持更新较慢。
+Xray-core 是 V2Ray 的一个分支，在保持核心功能的基础上进行了性能优化和功能扩展。二者配置基本兼容，Xray 可参照 V2Ray 的配置方法。相较于 Xray，V2Ray 对部分新协议的支持更新较慢。
 
 V2Ray 支持 VMess、VLESS、Shadowsocks 等多种代理协议，并提供基于规则的路由功能，可根据目标地址、端口等条件将流量分发至不同的出站代理。在 FreeBSD 系统中，V2Ray 可通过 pkg(8) 或 Ports 安装。
 
@@ -95,7 +95,7 @@ $ export HTTPS_PROXY="http://127.0.0.1:10809" # 设置 HTTPS 代理
 $ export ALL_PROXY="socks5://127.0.0.1:10808" # 设置 SOCKS5 代理
 ```
 
-设置完成后，可在 Firefox 浏览器中访问网页，并观察 V2Ray 输出的日志，即可确认浏览器流量已通过代理转发。终端命令同样会通过代理访问网络，但部分命令对环境变量的支持方式不同，请根据具体软件查阅其代理配置方法。
+设置完成后，可在 Firefox 浏览器中访问网页，并观察 V2Ray 输出的日志，即可确认浏览器流量已通过代理转发。终端命令同样会通过代理访问网络，但部分命令对环境变量的支持方式不同，须根据具体软件查阅其代理配置方法。
 
 ## 代理流量分流
 
@@ -190,7 +190,7 @@ setenv XRAY_LOCATION_ASSET /usr/local/share/xray-core/
 
 **1. 放置配置文件：**
 
-首先，将配置移动到系统默认目录并修正权限：
+首先，将配置移至系统默认目录并修正权限：
 
 ```sh
 # cp /path/to/config.json /usr/local/etc/xray-core/config.json
@@ -199,7 +199,7 @@ setenv XRAY_LOCATION_ASSET /usr/local/share/xray-core/
 
 - FreeBSD 的 `security/xray-core` 没有创建独立的 `xray` 用户/组，而是沿用 `net/v2ray` 的 `v2ray:v2ray`，这是为了保持用户权限管理的一致性。
 
-注意：若 `/usr/local/etc/xray-core/` 目录下存在其他 `.json` 样例文件，建议将其移走或删除，避免配置冲突，因为 Xray 可能会扫描目录下的所有 JSON 文件。
+注意：若 `/usr/local/etc/xray-core/` 目录下存在其他 `.json` 样例文件，建议将其移除或删除，避免配置冲突，因 Xray 可能扫描目录下的所有 JSON 文件。
 
 **2. 配置 rc.conf 文件：**
 
