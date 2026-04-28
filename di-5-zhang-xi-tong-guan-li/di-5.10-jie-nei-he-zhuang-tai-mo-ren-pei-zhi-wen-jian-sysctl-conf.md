@@ -61,7 +61,7 @@ sysctl 的默认源代码在 [/sbin/sysctl/](https://github.com/freebsd/freebsd-
 
 > **技巧**
 >
-> 建议启用 `security.bsd.see_other_uids=0` 和 `security.bsd.see_other_gids=0` 配置，可降低信息泄露风险，限制用户查看其他用户的进程信息，增强系统安全审计能力。
+> 建议启用 `security.bsd.see_other_uids=0` 和 `security.bsd.see_other_gids=0` 配置，可限制用户查看其他用户的进程信息。
 
 > **警告**
 >
