@@ -286,7 +286,7 @@ $ clashctl status
 
 - `clashctl autostart on` 只影响 rc.d 服务是否随系统启动。
 - `service` 与 `autostart` 命令需要 root 权限（请使用 root 或 `sudo`）。
-- FreeBSD 自启配置文件：`/etc/rc.conf.d/clash_freebsd`。
+- FreeBSD 自启动配置文件：`/etc/rc.conf.d/clash_freebsd`。
 
 ### Tun 与路由诊断（FreeBSD）
 
