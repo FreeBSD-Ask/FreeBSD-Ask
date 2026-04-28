@@ -294,7 +294,7 @@ Downloads
 
 - 每次进入图形界面，窗口都会异常扩大。
 
-调整虚拟机的最大分辨率即可解决该问题。
+调整虚拟机的最大分辨率可解决该问题。
 
 ![VMware 安装 FreeBSD](../.gitbook/assets/vmware-16.png)
 
