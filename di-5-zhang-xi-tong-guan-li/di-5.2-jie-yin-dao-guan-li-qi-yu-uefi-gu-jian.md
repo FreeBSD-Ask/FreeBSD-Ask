@@ -267,7 +267,7 @@ grub-install: error: unknown filesystem.
 
 最终需要保留的文件如下图所示。
 
-![rEFInd 文件结构](../.gitbook/assets/shuang12.png)
+![rEFInd 文件结构](../.gitbook/assets/refind-file-structure.png)
 
 将 `refind.conf-sample` 文件复制一份，并重命名为 `refind.conf`。
 
@@ -312,27 +312,27 @@ EFI/
 
 使用 [DiskGenius](https://www.diskgenius.com/) 将处理后的 `refind` 文件夹复制到 EFI 系统分区（ESP）的 `EFI` 目录下。
 
-![复制 rEFInd 到 EFI 分区](../.gitbook/assets/shuang13.png)
+![复制 rEFInd 到 EFI 分区](../.gitbook/assets/refind-copy-to-efi.png)
 
 ### 添加启动项
 
 使用 [DiskGenius](https://www.diskgenius.com/) 添加 UEFI 引导项。
 
-![添加 UEFI 引导项](../.gitbook/assets/shuang14.png)
+![添加 UEFI 引导项](../.gitbook/assets/refind-add-boot-entry.png)
 
 点击菜单栏的“工具”，选择“设置 UEFI BIOS 启动项”。
 
-![设置 UEFI BIOS 启动项](../.gitbook/assets/shuang15.png)
+![设置 UEFI BIOS 启动项](../.gitbook/assets/uefi-bios-boot-order.png)
 
 在新窗口中点击“添加”，然后浏览并选中 `refind` 文件夹内的 `refind_x64.efi` 文件。
 
-![选择 rEFInd 启动文件](../.gitbook/assets/shuang16.png)
+![选择 rEFInd 启动文件](../.gitbook/assets/refind-select-boot-file.png)
 
 将该启动项移动至列表顶部，设为第一启动项。保存设置并重启电脑以测试效果。
 
-![移动启动项至顶部](../.gitbook/assets/shuang16-2.png)
+![移动启动项至顶部](../.gitbook/assets/refind-move-boot-top.png)
 
-![rEFInd 启动界面](../.gitbook/assets/shuang17.png)
+![rEFInd 启动界面](../.gitbook/assets/refind-boot-menu.png)
 
 重启后，在 rEFInd 界面中选择任一操作系统选项，应可正常进入。
 
@@ -360,7 +360,7 @@ include themes/Matrix-rEFInd/theme.conf
 
 重启之后观察效果：
 
-![rEFInd Matrix 主题](../.gitbook/assets/shuang18.jpg)
+![rEFInd Matrix 主题](../.gitbook/assets/refind-matrix-theme.jpg)
 
 > **技巧**
 >

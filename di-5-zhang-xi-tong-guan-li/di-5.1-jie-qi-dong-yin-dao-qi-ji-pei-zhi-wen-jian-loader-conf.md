@@ -572,17 +572,17 @@ loader_logo="fbsdbw"
 
 重启后效果如下：
 
-![fbsdbw](../.gitbook/assets/fbsdbw.png)
+![fbsdbw](../.gitbook/assets/freebsd-logo-bw.png)
 
 ![beastie](../.gitbook/assets/beastie.png)
 
-![beastiebw](../.gitbook/assets/beastiebw.png)
+![beastiebw](../.gitbook/assets/beastie-logo-bw.png)
 
-![orb](../.gitbook/assets/boot-screen.png)
+![orb](../.gitbook/assets/orb-boot-screen.png)
 
-![orbbw](../.gitbook/assets/orbbw.png)
+![orbbw](../.gitbook/assets/orb-logo-bw.png)
 
-![none](../.gitbook/assets/none.png)
+![none](../.gitbook/assets/boot-menu-plain.png)
 
 ### 参考文献
 
