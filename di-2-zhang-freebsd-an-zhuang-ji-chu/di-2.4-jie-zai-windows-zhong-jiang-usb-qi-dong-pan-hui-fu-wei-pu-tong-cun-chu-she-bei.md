@@ -196,7 +196,7 @@ C:\Users\用户名\
 
 ![傲梅分区助手](../.gitbook/assets/aomei-partition-12.png)
 
-然后点击左上角的“提交”。
+随后点击左上角的“提交”。
 
 ![傲梅分区助手](../.gitbook/assets/aomei-partition-13.png)
 
