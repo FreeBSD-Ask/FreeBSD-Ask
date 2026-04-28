@@ -276,7 +276,7 @@ root@f:/home/ykla #
 
 ## DNS 配置详解
 
-可将 DNS 理解为电话簿，其中 IP 地址与主机名相互对应。除非 `/etc/nsswitch.conf` 文件中另有说明，FreeBSD 将首先查看 `/etc/hosts` 文件中的地址，然后查看 `/etc/resolv.conf` 文件中的 DNS 信息。
+可以将 DNS 理解为电话簿，其中 IP 地址与主机名相互对应。除非 `/etc/nsswitch.conf` 文件中另有说明，FreeBSD 将首先查看 `/etc/hosts` 文件中的地址，然后查看 `/etc/resolv.conf` 文件中的 DNS 信息。
 
 相关文件结构：
 
