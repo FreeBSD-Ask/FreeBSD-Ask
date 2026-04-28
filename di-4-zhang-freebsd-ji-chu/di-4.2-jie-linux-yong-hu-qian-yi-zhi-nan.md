@@ -114,8 +114,8 @@ FreeBSD 基本系统几乎不包含任何与 BSD 协议不兼容的软件。
 
 | Linux 命令/GNU 软件 | BSD Port/命令 | 作用说明 | 备注 |
 | ------------------- | ------------- | -------- | ---- |
-| `lsusb` | `sysutils/usbutils` | 显示 USB 信息 | 粗略地可以用 `cat /var/run/dmesg` |
-| `lspci` | `sysutils/pciutils` | 显示 PCI 信息 | 粗略地可以用 `cat /var/run/dmesg` |
+| `lsusb` | `sysutils/usbutils` | 显示 USB 信息 | 亦可粗略使用 `cat /var/run/dmesg` |
+| `lspci` | `sysutils/pciutils` | 显示 PCI 信息 | 亦可粗略使用 `cat /var/run/dmesg` |
 | `lsblk` | `sysutils/lsblk` | 显示磁盘使用情况 | / |
 | `free` | `sysutils/freecolor` | 显示内存使用情况 | FreeBSD 未提供 `free` 命令，因为该命令依赖 Linux 特性，通常由 `procps` 包提供。如确实需要 `free`，可使用 <https://github.com/j-keck/free>，其他替代命令包括 `vmstat` |
 | `lscpu` | `sysutils/lscpu` | 显示处理器信息 | / |
