@@ -247,7 +247,6 @@ chpass: user information updated
 >.endif
 > ```
 
-
 ### passwd 更改用户密码
 
 修改用户密码，如不指定用户则默认为当前用户。普通用户只能修改自己的密码，否则将报错如下：
