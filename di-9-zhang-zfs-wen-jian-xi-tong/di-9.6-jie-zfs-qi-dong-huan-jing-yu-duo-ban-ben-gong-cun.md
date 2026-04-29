@@ -188,7 +188,7 @@ After verifying those files, restart the system.
 14.3-RELEASE-p6
 ```
 
-可以看到，pkgbasify 已将系统更新到最新的补丁版本，并完成了向 pkgbase 的转换。
+由输出可知，pkgbasify 已将系统更新到最新的补丁版本，并完成了向 pkgbase 的转换。
 
 ### 使用 pkgbase 将启动环境中的系统版本更新到 15.0-RELEASE
 
