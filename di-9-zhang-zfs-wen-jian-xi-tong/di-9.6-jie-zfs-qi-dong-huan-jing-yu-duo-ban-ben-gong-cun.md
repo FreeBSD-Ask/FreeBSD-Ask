@@ -346,7 +346,7 @@ BE                             Active Mountpoint Space Created
 default                        R      -          10.9G 2025-01-14 20:36
 ```
 
-可以看到，已经成功将启动环境 15.0-RELEASE 中的 FreeBSD 系统升级到了 15.0-RELEASE。现在名副其实了。
+由输出可知，已经成功将启动环境 15.0-RELEASE 中的 FreeBSD 系统升级到了 15.0-RELEASE，此时启动环境名称与实际版本一致。
 
 并且 `R` 意味着再次重启就会回到启动环境 `default`（14.3-RELEASE）。
 
@@ -399,7 +399,7 @@ $ freebsd-version -kru
 14.3-RELEASE
 ```
 
-可以看到，已经回来了。
+由输出可知，已回到默认启动环境。
 
 ### 查看内置的 OpenZFS 版本
 
