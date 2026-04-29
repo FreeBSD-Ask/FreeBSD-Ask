@@ -78,10 +78,10 @@ FreeBSD 提供了多种不同的命令来管理用户账户。
 **管理用户账户的工具**
 
 | 命令 | 概要 |
-| ---------------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
-| [adduser(8)](https://man.freebsd.org/cgi/man.cgi?query=adduser&sektion=8&format=html)   | 推荐用于添加新用户的命令行应用程序。 |
-| [rmuser(8)](https://man.freebsd.org/cgi/man.cgi?query=rmuser&sektion=8&format=html)     | 推荐用于删除用户的命令行应用程序。 |
-| [chpass(1)](https://man.freebsd.org/cgi/man.cgi?query=chpass&sektion=1&format=html)     | 用于更改用户数据库信息的灵活工具。 |
+| ---- | ---- |
+| [adduser(8)](https://man.freebsd.org/cgi/man.cgi?query=adduser&sektion=8&format=html) | 推荐用于添加新用户的命令行应用程序。 |
+| [rmuser(8)](https://man.freebsd.org/cgi/man.cgi?query=rmuser&sektion=8&format=html) | 推荐用于删除用户的命令行应用程序。 |
+| [chpass(1)](https://man.freebsd.org/cgi/man.cgi?query=chpass&sektion=1&format=html) | 用于更改用户数据库信息的灵活工具。 |
 | [passwd(1)](https://man.freebsd.org/cgi/man.cgi?query=passwd&sektion=1&format=html)     | 用于更改用户密码的命令行工具。 |
 | [pw(8)](https://man.freebsd.org/cgi/man.cgi?query=pw&sektion=8&format=html)             | 可修改用户账户所有方面的强大灵活工具。 |
 | [bsdconfig(8)](https://man.freebsd.org/cgi/man.cgi?query=bsdconfig&sektion=8&format=html) | 带有账户管理支持的系统配置工具。 |
@@ -160,7 +160,7 @@ adduser: ERROR: you must be the super-user (uid 0) to use this utility.
 
 ### rmuser 删除用户
 
-`rmuser` 用于删除用户。与 `adduser` 命令一样，也是交互式的脚本。`adduser` 源代码路径是 `usr.sbin/adduser/rmuser.sh`。
+`rmuser` 用于删除用户。与 `adduser` 命令一样，也是交互式的脚本。`rmuser` 源代码路径是 `usr.sbin/adduser/rmuser.sh`。
 
 示例：删除用户 test1 test2。
 
@@ -250,7 +250,7 @@ chpass: user information updated
 
 ### passwd 更改用户密码
 
-修改用户密码，如不指定用户则默认为当前用户。普通用户只能修改自己的用户，否则将报错如下：
+修改用户密码，如不指定用户则默认为当前用户。普通用户只能修改自己的密码，否则将报错如下：
 
 ```sh
 $ passwd test
@@ -350,7 +350,7 @@ uid=1001(ykla) gid=1001(ykla) groups=1001(ykla),0(wheel),1002(ykla2)
 # pw groupmod wheel -m test
 ```
 
-在这个例子中，传递给 `-m` 的参数是用户列表（逗号分隔），这些用户将被追增进组中，并不会替换已有用户。
+在这个例子中，传递给 `-m` 的参数是用户列表（逗号分隔），这些用户将被追加进组中，并不会替换已有用户。
 
 ### 删除组
 
