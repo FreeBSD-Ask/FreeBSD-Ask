@@ -780,9 +780,7 @@ Add another user? (yes/no) [no]: # 是否继续添加其他用户
 
 其余参数通常可保持默认。自 FreeBSD 14 起，所有新用户的默认 Shell 已统一为 `/bin/sh`。
 
-最后会询问 `Add another user? (yes/no) [no]`，按 **回车键** 可结束用户添加流程；
-
-若输入 `yes` 并按 **回车键**，则可继续添加第二个用户。
+最后会询问 `Add another user? (yes/no) [no]`，按 **回车键** 可结束用户添加流程；输入 `yes` 并按 **回车键**，则可继续添加第二个用户。
 
 ### 参考文献
 
