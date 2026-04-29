@@ -177,8 +177,6 @@ BERKELEY G. Verses on the Prospect of Planting Arts and Learning in America[C]//
 
 20 世纪 70 年代，加州大学伯克利分校的计算机科学研究人员开始对 AT&T 贝尔实验室开发的 UNIX 操作系统进行修改与扩展。由于这些修改与扩展最初以软件发行包的形式发布，因此被称为伯克利软件发行版（Berkeley Software Distribution，BSD）。
 
-BSD 项目在计算机操作系统发展史上具有重要地位，它不仅引入了许多关键的技术创新，还成为了包括 FreeBSD、OpenBSD、NetBSD 等现代开源操作系统的基石。
-
 ## 参考文献
 
 - Berkeley G. 人类知识原理和三篇对话[M]. 张桂权，译. 北京：人民出版社，2022. ISBN: 978-7-01-023684-1. 系统阐述贝克莱唯心主义哲学体系与存在感知理论。
