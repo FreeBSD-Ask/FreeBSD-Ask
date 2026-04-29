@@ -821,7 +821,7 @@ FreeBSD 还支持多个“虚拟控制台”，可以使用它们同时进行多
 | 菜单 | 解释 |
 | ---- | ---- |
 | X Exit Exit this menu | X 退出 退出此菜单 |
-| -- | -- |
+| \-\- | \-\- |
 | 1 [X] Startup dirs Set the list of dirs to look for startup scripts | 1 [X] 启动目录 设置查找启动脚本的目录列表 |
 | 2 [ ] named Run a local name server on this host | 2 [ ] named 在此主机上运行本地域名服务器 |
 | 3 [ ] named flags Set default flags to named (if enabled) | 3 [ ] named 参数 设置默认的 named 参数（如果启用） |

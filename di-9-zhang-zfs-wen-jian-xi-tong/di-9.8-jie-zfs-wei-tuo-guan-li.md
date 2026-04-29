@@ -291,7 +291,7 @@ Key load error: Permission denied.
 - OpenZFS Project. man zfs-allow[EB/OL]. [2026-04-02]. <https://openzfs.github.io/openzfs-docs/man/master/8/zfs-allow.8.html>. OpenZFS 官方 zfs-allow 命令手册。
 - FreeBSD Project. zfs-allow -- delegate ZFS administration permissions to unprivileged users[EB/OL]. [2026-04-02]. <https://man.freebsd.org/cgi/man.cgi?zfs-allow>. FreeBSD 官方 zfs-allow 命令手册。
 - FreeBSD Project. zfs-create -- create ZFS dataset[EB/OL]. [2026-04-02]. <https://man.freebsd.org/cgi/man.cgi?zfs-create>. FreeBSD 官方 zfs-create 命令手册。
-- FreeBSD 中文社区. FreeBSD 手册[EB/OL]. [2026-04-02]. <https://handbook.bsdcn.org>. FreeBSD 中文手册。
+- FreeBSD Project. FreeBSD Handbook, Chapter 21 The Z File System (ZFS)[EB/OL]. [2026-04-24]. <https://docs.freebsd.org/en/books/handbook/zfs/>. FreeBSD 手册中关于 ZFS 的章节。
 - FreeBSD Foundation. OpenZFS Encryption Arrives on FreeBSD[EB/OL]. (2020-07)[2026-04-02]. <https://freebsdfoundation.org/wp-content/uploads/2020/07/OpenZFS-Encryption-Arrives-on-FreeBSD.pdf>. 说明 GELI 加密与 ZFS 加密的异同点。
 - FreeBSD Project. Merge OpenZFS support in to HEAD[EB/OL]. [2026-04-02]. <https://cgit.freebsd.org/src/commit/?id=9e5787d2284e>. FreeBSD 13.0 转向 OpenZFS 的提交记录。
 

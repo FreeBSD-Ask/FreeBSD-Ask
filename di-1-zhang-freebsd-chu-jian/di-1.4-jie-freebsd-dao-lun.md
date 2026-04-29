@@ -56,7 +56,7 @@ FreeBSD 采用了一套完整而独特的开发模型。该开发模型是一个
 
 ## 什么是 FreeBSD？
 
-了解了 FreeBSD 的版本、宗旨和开发模型后，下文将深入探讨 FreeBSD 的本质。这一问题的答案涉及技术谱系、设计哲学和社区文化等多个维度。FreeBSD 不是 Linux，也不是 UNIX 的克隆。FreeBSD 作为一款自由软件，其源代码公开且可自由使用、修改和分发。
+了解了 FreeBSD 的版本、宗旨和开发模型后，下文将深入探讨 FreeBSD 的本质。FreeBSD 不是 Linux，也不是 UNIX 的克隆。FreeBSD 作为一款自由软件，其源代码公开且可自由使用、修改和分发。
 
 ![什么是 FreeBSD？](../.gitbook/assets/freebsd-not-linux.png)
 
