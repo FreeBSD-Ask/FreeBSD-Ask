@@ -36,7 +36,7 @@ FreeBSD 中主要有三类账户：系统账户、普通用户账户，以及超
 
 ### 系统账户
 
-系统账户用于运行 DNS、邮件和 Web 服务器等服务。使用系统账户的原因在于安全性：如果所有服务都以超级用户身份运行，它们将不受限制地操作。
+系统账户用于运行 DNS、邮件和 Web 服务器等服务。使用系统账户的原因在于安全性：如果所有服务均以超级用户身份运行，其操作将不受限制。
 
 系统账户由源代码中的 [main/etc/master.passwd](https://github.com/freebsd/freebsd-src/blob/main/etc/master.passwd) 文件定义，截至写作时共计 27 个。因此，`_dhcp`、`ntpd` 都属于系统账户。系统账户是具有受限权限的专用账户，通常用于运行系统服务和守护进程。
 
@@ -44,7 +44,7 @@ FreeBSD 中主要有三类账户：系统账户、普通用户账户，以及超
 
 ### 普通用户账户
 
-普通用户账户分配给实际使用者，用于登录和使用系统。每个访问系统的人都应拥有唯一的用户账户。这使管理员能够追踪用户操作，并防止用户互相干扰彼此的设置。
+普通用户账户分配给实际使用者，用于登录和使用系统。每个访问系统的人都应拥有唯一的用户账户，这使管理员能够追踪用户操作，并防止用户互相干扰彼此的设置。
 
 `ykla` 是在安装系统时创建的普通用户账户。如果希望通过 `su` 命令切换为 `root` 用户，必须将该用户加入 `wheel` 用户组。而部分用户账户是 Port 自动创建的系统用户。
 
@@ -232,7 +232,7 @@ chpass: user information updated
 >
 > [chfn(1)](https://man.freebsd.org/cgi/man.cgi?query=chfn&sektion=1&format=html) 与 [chsh(1)](https://man.freebsd.org/cgi/man.cgi?query=chsh&sektion=1&format=html) 是 [chpass(1)](https://man.freebsd.org/cgi/man.cgi?query=chpass&sektion=1&format=html) 的链接命令，[ypchpass(1)](https://man.freebsd.org/cgi/man.cgi?query=ypchpass&sektion=1&format=html)、[ypchfn(1)](https://man.freebsd.org/cgi/man.cgi?query=ypchfn&sektion=1&format=html) 和 [ypchsh(1)](https://man.freebsd.org/cgi/man.cgi?query=ypchsh&sektion=1&format=html) 也是。由于 NIS 支持是自动的，无需在命令前加 `yp`。这一点可以从源代码 `usr.bin/chpass/Makefile` 进行推断：
 >
->```makefile
+> ```makefile
 >SYMLINKS=	chpass ${BINDIR}/chfn
 >SYMLINKS+=	chpass ${BINDIR}/chsh
 >.if ${MK_NIS} != "no"	# 如果系统启用了 NIS
@@ -245,7 +245,7 @@ chpass: user information updated
 >.if ${MK_NIS} != "no"
 >MLINKS+= chpass.1 ypchpass.1 chpass.1 ypchfn.1 chpass.1 ypchsh.1
 >.endif
->```
+> ```
 
 
 ### passwd 更改用户密码
