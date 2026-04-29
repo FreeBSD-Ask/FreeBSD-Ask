@@ -116,7 +116,7 @@ Device              Size     Used    Avail Capacity
 
 选项 `-h` 表示以人类可读格式（human-readable）输出。参见 FreeBSD Project. man swapinfo(8)[EB/OL]. [2026-03-26]. <https://man.freebsd.org/cgi/man.cgi?swapinfo(8)>。
 
-从输出可以看出，`/dev/nda0p3` 为交换分区，其大小为 2 GB，当前已使用量为 0。
+从输出可知，`/dev/nda0p3` 为交换分区，其大小为 2 GB，当前已使用量为 0。
 
 ## 课后习题
 
