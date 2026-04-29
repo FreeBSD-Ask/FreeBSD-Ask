@@ -577,19 +577,19 @@ root 密码强度无强制要求，但不可为空。若密码为空，将提示
 
 `想要为此接口配置 IPv4 吗？`
 
-配置 IPv4。按 **回车键** 可选定。
+配置 IPv4，按 **回车键** 可选定。
 
 ![使用 DHCP](../.gitbook/assets/use-dhcp.png)
 
 `希望使用 DHCP 配置此接口吗？`
 
-配置使用 DHCP。按 **回车键** 可选定。
+配置使用 DHCP，按 **回车键** 可选定。
 
 ![配置 IPv6](../.gitbook/assets/config-ipv6.png)
 
 `希望为此接口配置 IPv6 吗？`
 
-配置 IPv6。因本书未使用 IPv6，故选 `No`，按 **回车键** 可选定。如有需要可自行配置 IPv6。
+配置 IPv6，因本书未使用 IPv6，故选 `No`，按 **回车键** 可选定。如有需要可自行配置 IPv6。
 
 ![配置 DNS](../.gitbook/assets/config-dns.png)
 
