@@ -15,7 +15,7 @@
 >
 > 本节基于 VMware Workstation Pro 17 进行演示（使用 UEFI），在 25H2u1 版本测试通过。
 >
-> 若为物理机安装，可考虑使用 Rufus <https://rufus.ie/zh/> 工具配合 <https://download.freebsd.org/ftp/releases/amd64/amd64/ISO-IMAGES/15.0/FreeBSD-15.0-RELEASE-amd64-memstick.img> 镜像使用。该文件为 FreeBSD 15.0-RELEASE amd64 架构的 U 盘安装镜像。
+> 若为物理机安装，可考虑使用 Rufus <https://rufus.ie/zh/> 工具配合 <https://download.freebsd.org/ftp/releases/amd64/amd64/ISO-IMAGES/15.0/FreeBSD-15.0-RELEASE-amd64-memstick.img> 镜像进行刻录。该文件为 FreeBSD 15.0-RELEASE amd64 架构的 U 盘安装镜像。
 
 ## 启动安装盘
 
