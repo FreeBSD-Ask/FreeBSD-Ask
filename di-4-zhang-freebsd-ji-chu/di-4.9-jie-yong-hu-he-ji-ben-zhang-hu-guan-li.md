@@ -83,7 +83,7 @@ FreeBSD 提供了多种不同的命令来管理用户账户。
 | [rmuser(8)](https://man.freebsd.org/cgi/man.cgi?query=rmuser&sektion=8&format=html) | 推荐用于删除用户的命令行应用程序。 |
 | [chpass(1)](https://man.freebsd.org/cgi/man.cgi?query=chpass&sektion=1&format=html) | 用于更改用户数据库信息的灵活工具。 |
 | [passwd(1)](https://man.freebsd.org/cgi/man.cgi?query=passwd&sektion=1&format=html) | 用于更改用户密码的命令行工具。 |
-| [pw(8)](https://man.freebsd.org/cgi/man.cgi?query=pw&sektion=8&format=html)             | 可修改用户账户所有方面的强大灵活工具。 |
+| [pw(8)](https://man.freebsd.org/cgi/man.cgi?query=pw&sektion=8&format=html) | 可修改用户账户所有方面的强大灵活工具。 |
 | [bsdconfig(8)](https://man.freebsd.org/cgi/man.cgi?query=bsdconfig&sektion=8&format=html) | 带有账户管理支持的系统配置工具。 |
 
 ### adduser 创建用户
@@ -228,9 +228,9 @@ chpass: user information updated
 
 常用参数：`-s`，用于修改登录 Shell。
 
->**技巧**
+> **技巧**
 >
->[chfn(1)](https://man.freebsd.org/cgi/man.cgi?query=chfn&sektion=1&format=html) 与 [chsh(1)](https://man.freebsd.org/cgi/man.cgi?query=chsh&sektion=1&format=html) 是 [chpass(1)](https://man.freebsd.org/cgi/man.cgi?query=chpass&sektion=1&format=html) 的链接命令，[ypchpass(1)](https://man.freebsd.org/cgi/man.cgi?query=ypchpass&sektion=1&format=html)、[ypchfn(1)](https://man.freebsd.org/cgi/man.cgi?query=ypchfn&sektion=1&format=html) 和 [ypchsh(1)](https://man.freebsd.org/cgi/man.cgi?query=ypchsh&sektion=1&format=html) 也是。由于 NIS 支持是自动的，无需在命令前加 `yp`。这一点可以从源代码 `usr.bin/chpass/Makefile` 进行推断：
+> [chfn(1)](https://man.freebsd.org/cgi/man.cgi?query=chfn&sektion=1&format=html) 与 [chsh(1)](https://man.freebsd.org/cgi/man.cgi?query=chsh&sektion=1&format=html) 是 [chpass(1)](https://man.freebsd.org/cgi/man.cgi?query=chpass&sektion=1&format=html) 的链接命令，[ypchpass(1)](https://man.freebsd.org/cgi/man.cgi?query=ypchpass&sektion=1&format=html)、[ypchfn(1)](https://man.freebsd.org/cgi/man.cgi?query=ypchfn&sektion=1&format=html) 和 [ypchsh(1)](https://man.freebsd.org/cgi/man.cgi?query=ypchsh&sektion=1&format=html) 也是。由于 NIS 支持是自动的，无需在命令前加 `yp`。这一点可以从源代码 `usr.bin/chpass/Makefile` 进行推断：
 >
 >```makefile
 >SYMLINKS=	chpass ${BINDIR}/chfn
@@ -278,9 +278,9 @@ New Password:	# 输入新密码
 Retype New Password:	# 再次输入新密码
 ```
 
->**技巧**
+> **技巧**
 >
->FreeBSD 的 `passwd` 选项与 Linux 不同，锁定/解锁账户请使用 `pw lock/unlock`。
+> FreeBSD 的 `passwd` 选项与 Linux 不同，锁定/解锁账户请使用 `pw lock/unlock`。
 
 ## 组管理
 
