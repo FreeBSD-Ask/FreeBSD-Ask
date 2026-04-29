@@ -132,7 +132,7 @@ UBLIO（User space Block I/O）是一个用户空间块 I/O 库，用于提升 F
 
 ## FAT32 文件系统
 
-在使用 `gpart show` 命令时，FAT32 文件系统通常被显示为 `ms-basic-data` 类型。
+在使用 `gpart show` 命令时，FAT32 文件系统通常显示为 `ms-basic-data` 类型。
 
 以下命令显示 `nda1` 磁盘及其分区的详细信息，包括起始位置、大小和类型：
 
