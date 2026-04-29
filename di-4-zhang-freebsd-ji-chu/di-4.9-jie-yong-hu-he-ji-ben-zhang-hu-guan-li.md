@@ -1,6 +1,6 @@
 # 4.9 用户和基本账户管理
 
-FreeBSD 系统的所有访问均通过账户实现，所有进程均由用户运行，因此用户和账户管理是系统安全的基础。
+FreeBSD 系统的所有访问均通过账户实现，所有进程均由用户运行，因此用户与账户管理是系统安全的基础。
 
 FreeBSD 提供了多种用户管理工具。`adduser` 命令以交互方式添加新用户，自动完成创建 passwd 条目、构建新用户主目录、从 `/usr/share/skel` 复制默认配置文件等操作。
 
@@ -278,9 +278,9 @@ New Password:	# 输入新密码
 Retype New Password:	# 再次输入新密码
 ```
 
->**技巧**
+> **技巧**
 >
->FreeBSD 的 `passwd` 选项与 Linux 不同，锁定/解锁账户请使用 `pw lock/unlock`。
+> FreeBSD 的 `passwd` 选项与 Linux 不同，锁定/解锁账户请使用 `pw lock/unlock`。
 
 ## 组管理
 
