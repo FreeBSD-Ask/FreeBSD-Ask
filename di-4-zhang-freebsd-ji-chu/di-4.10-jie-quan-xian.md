@@ -352,7 +352,7 @@ umask 在 Shell 启动文件（如 `~/.profile` 或 `~/.cshrc`）中设置。在
 
 ## 特殊权限位：setuid、setgid 与 sticky bit
 
-除基本的读、写、执行权限外，UNIX 系统还定义了三种特殊权限位。这些设置提供了通常不授予普通用户的功能。要理解它们，必须注意实际用户 ID（real user ID）与有效用户 ID（effective user ID）之间的区别：实际用户 ID 是拥有或启动进程的 UID，而有效 UID 是进程运行时所采用的 UID。
+除基本的读、写、执行权限外，UNIX 系统还定义了三种特殊权限位，这些设置提供了通常不授予普通用户的功能。要理解这些权限位，必须注意实际用户 ID（real user ID）与有效用户 ID（effective user ID）之间的区别：实际用户 ID 是拥有或启动进程的 UID，而有效 UID 是进程运行时所采用的 UID。
 
 ### setuid（设置用户 ID）
 
