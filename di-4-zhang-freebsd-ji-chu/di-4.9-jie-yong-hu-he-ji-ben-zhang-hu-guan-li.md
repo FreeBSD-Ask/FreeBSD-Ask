@@ -278,9 +278,9 @@ New Password:	# 输入新密码
 Retype New Password:	# 再次输入新密码
 ```
 
-> **技巧**
+>**技巧**
 >
-> FreeBSD 的 `passwd` 选项与 Linux 不同，锁定/解锁账户请使用 `pw lock/unlock`。
+>FreeBSD 的 `passwd` 选项与 Linux 不同，锁定/解锁账户请使用 `pw lock/unlock`。
 
 ## 组管理
 
@@ -353,7 +353,6 @@ uid=1001(ykla) gid=1001(ykla) groups=1001(ykla),0(wheel),1002(ykla2)
 在这个例子中，传递给 `-m` 的参数是用户列表（逗号分隔），这些用户将被追加进组中，并不会替换已有用户。
 
 ### 删除组
-
 
 示例：删除 `admin` 组：
 
