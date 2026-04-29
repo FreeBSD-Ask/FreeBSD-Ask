@@ -114,7 +114,7 @@ UBLIO（User space Block I/O）是一个用户空间块 I/O 库，用于提升 F
 # fstyp /dev/da0s1
 ```
 
-3. 若在挂载过程中出现报错，可尝试删除休眠文件：
+3. 若在挂载过程中出现错误，可尝试删除休眠文件：
 
 ```sh
 # ntfs-3g  /dev/da0s1 /mnt/NTFS -o remove_hiberfile
