@@ -516,7 +516,7 @@ $ freebsd-version -kru
 14.3-RELEASE
 ```
 
-可以看到，已经回来了。
+由输出可知，已回到默认启动环境。
 
 #### 查看内置的 OpenZFS 版本
 
