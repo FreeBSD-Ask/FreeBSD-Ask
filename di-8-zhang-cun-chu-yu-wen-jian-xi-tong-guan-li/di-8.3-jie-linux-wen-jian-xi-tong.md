@@ -59,7 +59,7 @@ fusefs-ext2 可以通过两种方式安装：
 
 ### 加载内核模块
 
-首先，确保加载 FUSE 内核模块，它为所有基于 FUSE 的文件系统提供底层支持。将 ext2fs 和 fusefs 内核模块添加至开机加载列表：
+首先，确保已加载 FUSE 内核模块，该模块为所有基于 FUSE 的文件系统提供底层支持。将 ext2fs 和 fusefs 内核模块添加至开机加载列表：
 
 ```sh
 # sysrc kld_list+="fusefs"
@@ -121,7 +121,7 @@ fusefs-lkl 可以通过两种方式安装：
 
 ### 加载 FUSE 内核模块
 
-fusefs 是 FreeBSD 的 FUSE 框架内核模块，为所有基于 FUSE 的文件系统提供底层支持。在安装 fusefs-ext2 时已经加载了该模块，如果尚未加载，可以执行以下命令：
+fusefs 是 FreeBSD 的 FUSE 框架内核模块，为所有基于 FUSE 的文件系统提供底层支持。在安装 fusefs-ext2 时已加载该模块，如果尚未加载，可执行以下命令：
 
 ```sh
 # sysrc kld_list+="fusefs"
@@ -153,7 +153,7 @@ cfc	test1	test2
 
 ### 文件系统的卸载方法
 
-文件系统卸载操作可通过 `umount` 命令完成。卸载前应确保没有进程正在访问挂载点，否则卸载会失败。其基本语法为：
+文件系统卸载操作可通过 `umount` 命令完成，卸载前应确保没有进程正在访问挂载点，否则卸载将失败。其基本语法为：
 
 ```sh
 # umount /home/ykla/test    # 卸载指定挂载点的文件系统
