@@ -399,7 +399,7 @@ Proceed with this action? [y/N]: y # 此处输入 y 后继续
 15.0-RELEASE
 ```
 
-这里 `r` 显示为 14.3-RELEASE 并无异常，说明当前运行的仍是 14.3。结合其他参数，可知重启后才会变成 15.0-RELEASE。
+这里 `r` 显示为 14.3-RELEASE 并无异常，说明当前运行的仍是 14.3-RELEASE。结合其他参数，可知重启后才会变为 15.0-RELEASE。
 
 - 解锁 pkg
 
@@ -462,7 +462,7 @@ default                        R      -          10.9G 2025-01-14 20:36
 
 由输出可知，已经成功将启动环境 15.0-RELEASE 中的 FreeBSD 系统升级到了 15.0-RELEASE，此时启动环境名称与实际版本一致。
 
-并且 `R` 意味着再次重启就会回到启动环境 `default`（14.3-RELEASE）。
+并且 `R` 意味着再次重启将回到启动环境 `default`（14.3-RELEASE）。
 
 ### 附录：永久性使用 15.0-RELEASE
 
