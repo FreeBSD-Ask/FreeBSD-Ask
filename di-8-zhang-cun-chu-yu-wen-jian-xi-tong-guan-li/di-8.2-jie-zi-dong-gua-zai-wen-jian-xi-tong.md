@@ -162,7 +162,7 @@ vfs.usermount=1
 allow_groups = operator, wheel
 ```
 
-通过修改 `allow_users` 和 `allow_groups` 配置项可以管理自动挂载功能的授权用户。
+通过修改 `allow_users` 和 `allow_groups` 配置项，可以管理自动挂载功能的授权用户。
 
 #### 修改挂载点及其下文件目录访问权限（以 NTFS 为例）
 
