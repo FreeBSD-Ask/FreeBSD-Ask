@@ -68,7 +68,7 @@ Default: F2
 
 #### 参考文献
 
-- 联想知识库文章：硬盘扇区标记相关说明. 联想集团 知识库. <https://iknow.lenovo.com.cn/detail/111710>.
+- 联想知识库文章：硬盘扇区标记相关说明. 联想集团知识库. <https://iknow.lenovo.com.cn/detail/111710>.
 
 ### 阶段 1 和阶段 2
 
