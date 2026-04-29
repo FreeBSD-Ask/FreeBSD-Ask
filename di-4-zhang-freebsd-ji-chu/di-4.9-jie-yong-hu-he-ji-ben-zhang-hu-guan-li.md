@@ -82,7 +82,7 @@ FreeBSD 提供了多种不同的命令来管理用户账户。
 | [adduser(8)](https://man.freebsd.org/cgi/man.cgi?query=adduser&sektion=8&format=html) | 推荐用于添加新用户的命令行应用程序。 |
 | [rmuser(8)](https://man.freebsd.org/cgi/man.cgi?query=rmuser&sektion=8&format=html) | 推荐用于删除用户的命令行应用程序。 |
 | [chpass(1)](https://man.freebsd.org/cgi/man.cgi?query=chpass&sektion=1&format=html) | 用于更改用户数据库信息的灵活工具。 |
-| [passwd(1)](https://man.freebsd.org/cgi/man.cgi?query=passwd&sektion=1&format=html)     | 用于更改用户密码的命令行工具。 |
+| [passwd(1)](https://man.freebsd.org/cgi/man.cgi?query=passwd&sektion=1&format=html) | 用于更改用户密码的命令行工具。 |
 | [pw(8)](https://man.freebsd.org/cgi/man.cgi?query=pw&sektion=8&format=html)             | 可修改用户账户所有方面的强大灵活工具。 |
 | [bsdconfig(8)](https://man.freebsd.org/cgi/man.cgi?query=bsdconfig&sektion=8&format=html) | 带有账户管理支持的系统配置工具。 |
 
