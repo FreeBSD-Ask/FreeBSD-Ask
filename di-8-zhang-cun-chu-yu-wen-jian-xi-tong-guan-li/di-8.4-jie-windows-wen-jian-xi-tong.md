@@ -100,7 +100,7 @@ UBLIO（User space Block I/O）是一个用户空间块 I/O 库，用于提升 F
 
 ### NTFS 的手动挂载操作
 
-手动挂载 NTFS 分区可以通过以下方式：
+手动挂载 NTFS 分区可通过以下方式：
 
 1. 使用 ntfs-3g 将 `/dev/da0s1` 挂载至 `/media/NTFS`，设置读写权限，并指定文件所有者和权限掩码：
 
