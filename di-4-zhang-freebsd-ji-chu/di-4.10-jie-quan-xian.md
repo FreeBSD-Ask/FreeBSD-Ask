@@ -440,9 +440,7 @@ drwxrwxrwt  6 root wheel 6 Apr 27 21:55 /tmp
 > - 某些标志的修改能力取决于当前内核安全级别（securelevel），参见 security(7)。
 > - 仅有限数量的工具支持 chflags 标志，包括 ls(1)、cp(1)、find(1)、install(1)、dump(8)、restore(8)；目前 pax(1) 不支持 chflags。
 
-使用 chflags(1) 可修改文件标志。chflags(1) 首次出现于 4.4BSD，是 BSD 系统特有的功能，Linux 不原生支持（需通过 `chattr` 命令和 `lsattr` 命令实现类似功能）。
-
-要查看文件的标志，使用 ls(1) 的 `-lo` 选项：
+使用 chflags(1) 可修改文件标志。chflags(1) 首次出现于 4.4BSD，是 BSD 系统特有的功能，Linux 不原生支持（需通过 `chattr` 命令和 `lsattr` 命令实现类似功能）。查看文件的标志可使用 ls(1) 的 `-lo` 选项：
 
 ```sh
 # ls -lo test
