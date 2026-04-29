@@ -51,7 +51,7 @@ UFS 全称为 Unix File System（UNIX 文件系统），FreeBSD 中使用的 UFS
 da0p4 resized
 ```
 
-选项 `-i` 用于指定要扩容的分区编号，此处指扩展 `freebsd-ufs` 分区。
+选项 `-i` 用于指定要扩容的分区编号，此处用于扩展 `freebsd-ufs` 分区。
 
 ### 扩展文件系统
 
