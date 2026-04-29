@@ -41,7 +41,7 @@ Swap 空间是操作系统中内存管理的组成部分。
 # chmod 0600 /usr/swap0
 ```
 
-若要立即启用，需将交换文件通过 mdconfig 配置为内存磁盘设备，再使用 swapon 激活交换空间。mdconfig 用于将文件映射为内存磁盘，swapon 用于激活交换设备：
+若要立即启用，需将交换文件通过 mdconfig 配置为内存磁盘设备，再使用 swapon 激活交换空间，其中 mdconfig 用于将文件映射为内存磁盘，swapon 用于激活交换设备：
 
 ```sh
 # mdconfig -a -t vnode -f /usr/swap0 -u 0 && swapon /dev/md0
