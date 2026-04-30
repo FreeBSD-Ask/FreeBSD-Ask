@@ -8,26 +8,81 @@ FreeBSD 提供了多种自动挂载技术方案供用户选择。
 >
 > `automount` 对普通用户的权限控制能力有限，主要以 root 身份执行挂载操作；若需要更精细的权限控制机制，建议使用 DSBMD。
 
-automount 是一个基于 FreeBSD 的第三方自动挂载工具，通过监控设备插入事件实现文件系统的自动挂载，该工具支持的文件系统类型涵盖 NTFS、FAT、exFAT、EXT2/3/4、UFS、HFS、XFS 及 ISO9660 等。
+automount 会自动监控设备插入事件并执行挂载操作，默认挂载点位于 `/media` 目录。基本系统已内置。
 
-### 安装 automount
+`/etc/auto_master` 文件控制着 automount 的行为，查看该文件：
 
-automount 可通过以下两种方式进行安装：
-
-- 使用 pkg 包管理器进行二进制安装：
-
-```sh
-# pkg install automount
+```ini
+#
+# Automounter master map, see auto_master(5) for details.
+#
+/net		-hosts		-nobrowse,nosuid,intr
+#/media		-media		-nosuid,noatime,autoro
+#/-		-noauto
 ```
 
-- 或通过 Ports 系统进行源代码编译安装：
+文件说明：
+
+* **-hosts**
+  查询远程 NFS 服务器并映射其导出的共享。
+
+* **-media**
+  查询尚未挂载但包含有效文件系统的设备。通常用于访问可移动媒体上的文件。
+
+* **-noauto**
+  按照在 `fstab(5)` 中配置为 `noauto` 的文件系统进行挂载。
+
+* **-null**
+  禁止 `automountd(8)` 挂载任何内容。
+
+因此，为了自动挂载可移动媒体，需要将文件 `/etc/auto_master` 中 `/media` 行首的注释符号移除，如下：
 
 ```sh
-# cd /usr/ports/filesystems/automount/
-# make install clean
+/media		-media		-nosuid,noatime
 ```
 
-安装完成后，automount 会自动监控设备插入事件并执行挂载操作，默认挂载点位于 `/media` 目录。
+然后，将以下内容添加到设备状态监测进程文件 **/etc/devd.conf** 中：
+
+```ini
+notify 100 {
+	match "system" "GEOM";
+	match "subsystem" "DEV";
+	action "/usr/sbin/automount -c";
+};
+```
+
+>**注意**
+>
+>不要添加到注释符号 `/* */` 中间。
+
+通过将以下行添加到 **/etc/rc.conf** 文件中，可以设置 [autofs(5)](https://man.freebsd.org/cgi/man.cgi?query=autofs&sektion=5&format=html) 在启动时启动：
+
+```ini
+autofs_enable="YES"
+```
+
+每个可以自动挂载的文件系统都会作为 `/media/` 下的一个目录出现。该目录的名称是文件系统标签。如果标签缺失，目录名称将以设备节点命名。查看挂载文件：
+
+```sh
+# ls /media/da0p1/
+SpaceSniffer.exe
+```
+
+文件系统会在首次访问时自动挂载，并在一段时间的非活动后自动卸载。也可以手动卸载自动挂载的设备：
+
+```sh
+# automount -fu
+```
+
+### 未竟事项
+
+#### 中文乱码
+
+在`/etc/auto_master` 中 `/media` 行末尾追加 `-L=zh_CN.UTF-8`。注意挂载 FAT32 文件系统时，实际调用的是 mount_msdosfs(8)，因此其他文件系统并不识别该参数，将导致其他设备无法挂载。
+
+参考文献：
+
+- FreeBSD Forums. Autofs. Share your experience[EB/OL]. (2017-06-09) [2026-04-30]. <https://forums.freebsd.org/threads/autofs-share-your-experience.61251/>.
 
 ## DSBMD 自动挂载
 
@@ -194,7 +249,7 @@ ntfs_mount_cmd_usr = "/sbin/mount_fusefs auto \"${DSBMD_MNTPT}\" ntfs-3g -o fmas
 # …………以下配置内容省略…………
 ```
 
-这里为 `ntfs-3g` 指定了挂载选项中的文件权限掩码 `fmask=137` 和目录权限掩码 `dmask=027`，用于控制挂载后文件和目录的权限设置。
+此处为 `ntfs-3g` 指定了挂载选项中的文件权限掩码 `fmask=137` 和目录权限掩码 `dmask=027`，用于控制挂载后文件和目录的权限设置。
 
 ![改变挂载权限](../.gitbook/assets/dsbmd_customperm.png)
 

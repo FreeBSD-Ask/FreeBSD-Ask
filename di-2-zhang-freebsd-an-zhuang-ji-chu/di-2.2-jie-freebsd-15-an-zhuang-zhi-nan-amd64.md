@@ -66,7 +66,7 @@
 >
 > 此界面由 `bsdinstall` 工具提供。
 >
-> 本节将指导用户如何使用该工具进行 FreeBSD 安装。该工具不仅存在于安装镜像中，安装完成后在新系统中依然可以找到，并且还可用于执行普通的安装流程（此要点在高级安装方式中具有重要参考价值）。
+> 本节指导用户如何使用该工具进行 FreeBSD 安装。该工具不仅存在于安装镜像中，安装完成后在新系统中依然可以找到，并且还可用于执行普通的安装流程（此要点在高级安装方式中具有重要参考价值）。
 >
 > `bsdinstall` 工具本质上是由一系列 sh 脚本构成的，其源代码位于 FreeBSD Project. freebsd-src/usr.sbin/bsdinstall[EB/OL]. [2026-03-25]. <https://github.com/freebsd/freebsd-src/tree/main/usr.sbin/bsdinstall>。该仓库提供 FreeBSD 系统安装工具源代码，脚本位于“scripts”文件夹下。
 

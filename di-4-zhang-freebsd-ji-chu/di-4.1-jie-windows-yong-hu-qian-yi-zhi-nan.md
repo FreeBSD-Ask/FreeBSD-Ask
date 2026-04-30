@@ -14,7 +14,7 @@
 
 前一幅图像展示的是竹子（Bambusoideae），后一幅图像展示的是若干棵行道树。
 
-亚里士多德认为种子之所以能长成大树，是因为种子暗含着一种潜能，并且在环境满足的情况下，有实现为长成一棵树的可能性（参见《形而上学》IX.7, 1049b）。而人和器物的不同就在于人没有固定不变的潜能，这也契合了儒家学说“君子不器”（何晏，注；邢昺，疏. 论语注疏[M]. 北京：中国致公出版社，2016. ISBN: 978-7-5145-0846-8.）和萨特的“存在先于本质”理论（参见 Sartre J P. 萨特哲学论文集[M]. 潘培庆，等，译. 合肥：安徽文艺出版社，1998. ISBN: 7-5396-1632-6.）理解 UNIX 目录与 Windows 目录的异同，有助于理解操作系统的设计与实现。
+亚里士多德认为种子之所以能长成大树，是因为种子暗含着一种潜能，并且在环境满足的情况下，有长成一棵树的可能性（参见《形而上学》IX.7, 1049b）。而人和器物的不同就在于人没有固定不变的潜能，这也契合了儒家学说“君子不器”（何晏，注；邢昺，疏. 论语注疏[M]. 北京：中国致公出版社，2016. ISBN: 978-7-5145-0846-8.）和萨特的“存在先于本质”理论（参见 Sartre J P. 萨特哲学论文集[M]. 潘培庆，等，译. 合肥：安徽文艺出版社，1998. ISBN: 7-5396-1632-6.）以此观之，理解 UNIX 目录与 Windows 目录的异同，有助于理解操作系统的设计与实现。
 
 ![文件系统基础](../.gitbook/assets/filesystem-bamboo.png)
 
@@ -22,9 +22,9 @@
 
 ![文件系统基础](../.gitbook/assets/windows-file-explorer.png)
 
-行道树则不然，每棵普通的行道树都是独立生长的。无论它们靠得多么紧密，它们仍然是独立的。行道树与 Windows 目录类似，都是独立的——`C:\Program Files (x86)\Google\Update`、`D:\BaiduNetdiskDownload\工具列表`、`E:\123\app`：`C`、`D`、`E` 盘都是独立的，互不干扰。格式化 `D` 盘，并不会影响 `E` 盘存储的文件。即使在 PE 中格式化了 `C` 盘（可能不会显示为 `C` 盘），也不会影响 `E` 盘中的文件。
+行道树则不然，每棵普通的行道树都是独立生长的。无论它们距离多么接近，它们仍然是独立的。行道树与 Windows 目录类似，都是独立的，例如 `C:\Program Files (x86)\Google\Update`、`D:\BaiduNetdiskDownload\工具列表`、`E:\123\app`：`C`、`D`、`E` 盘都是独立的，互不干扰。格式化 `D` 盘，并不会影响 `E` 盘存储的文件。即使在 PE 中格式化了 `C` 盘（可能不会显示为 `C` 盘），也不会影响 `E` 盘中的文件。
 
-事实上，Windows 的“盘符”并非固定存在，有经验的装机人员会发现，在 PE 环境中，`C` 盘可能会变成诸如 `X` 等其他盘符。正在使用中的 Windows，其盘符也可以随意分配。
+事实上，Windows 的“盘符”并非固定存在，经验丰富的系统维护人员会发现，在 PE 环境中，`C` 盘可能会变成诸如 `X` 等其他盘符。运行中的 Windows，其盘符也可以随意分配。
 
 Windows 下判断一个分区属于哪个盘符，依赖的是 GPT 分区类型的 UUID（如 Windows 数据分区类型 UUID 为 `EBD0A0A2-B9E5-4433-87C0-68B6B72699C7`，即 Microsoft Basic Data 类型，适用于所有 Windows 数据分区，而非仅限 C 盘）以及分区的唯一 GUID（相关配置由 Windows 装入管理器 Mount Manager 写入注册表 `HKLM\SYSTEM\MountedDevices`），而不是依靠盘符。
 
@@ -42,7 +42,7 @@ PSPath
 ……省略其他输出……
 ```
 
-盘符是一种抽象映射，本身并不具备固定不变的物理意义。这也是在其他操作系统上（包括 Windows 自身，如双系统环境）都看不到 `C` 盘的根本原因，因为不存在一个硬编码并写入文件系统的 `C` 盘标识。只有在真正启动系统时，Windows 方能确定哪个分区对应 `C` 盘，并写入注册表。至于其他盘符的分配，则具有不确定性，出现 `D` 盘变为 `E` 盘的问题也屡见不鲜，例如某虚拟光驱可能在开机时被自动加载等。
+盘符是一种抽象映射，本身并不具备固定不变的物理意义。这也是在其他操作系统上（包括 Windows 自身，如双系统环境）都看不到 `C` 盘的根本原因，因为不存在一个硬编码并写入文件系统的 `C` 盘标识。只有在实际启动系统时，Windows 方能确定哪个分区对应 `C` 盘，并写入注册表。至于其他盘符的分配，则具有不确定性，出现 `D` 盘变为 `E` 盘的问题也屡见不鲜，例如某虚拟光驱可能在开机时被自动加载等。
 
 > **思考题**
 >
@@ -52,13 +52,13 @@ PSPath
 
 ![如何理解挂载](../.gitbook/assets/mount-concept.png)
 
-从事园艺的人员通常了解，需要从树 A 上剪取一段枝条，将其斜插到树 B 上，并加以包裹，愈合后就会成为一体：例如在苹果树（UNIX）上可以长出桃子（挂载 Windows 的 `C` 盘）。
+从事园艺的人员通常了解，需要从树 A 上剪取一段枝条，将其斜插到树 B 上，并加以包裹，愈合后即成为一体：例如在苹果树（UNIX）上可以长出桃子（挂载 Windows 的 `C` 盘）。
 
-这种方法称为“嫁接”。实际上，这就是将树 A 的枝条（文件系统）挂载到树 B 上（嫁接点即某个挂载点，归根结底依赖于根目录 `/`）。
+这种方法称为"嫁接"。这实质上是将树 A 的枝条（文件系统）挂载到树 B 上（嫁接点即某个挂载点，归根结底依赖于根目录 `/`）。
 
-从操作系统的技术视角看，挂载（mount）是将一个文件系统附加到系统目录树中某个已有目录（即挂载点）上的过程。文件系统最好被可视化为以 `/` 为根的树形结构，一个文件系统必须挂载到另一个文件系统中的某个目录上。当文件系统 B 挂载到目录 A 上时，B 的根目录将替换 A，B 中的目录将相应地出现；而 A 中原有的文件将被临时隐藏，直到 B 从 A 上卸载后才会重新出现。
+从操作系统的技术视角看，挂载（mount）是将一个文件系统附加到系统目录树中某个已有目录（即挂载点）上的过程。文件系统可视为以 `/` 为根的树形结构，一个文件系统必须挂载到另一个文件系统中的某个目录上。当文件系统 B 挂载到目录 A 上时，B 的根目录将替换 A，B 中的目录将相应地出现；而 A 中原有的文件将被临时隐藏，直到 B 从 A 上卸载后才会重新出现。
 
-工具 mount 调用 nmount(2) 系统调用，将一个特殊设备或远程节点（rhost:path）准备并嫁接到文件系统树中的节点（node）位置。系统维护一个当前已挂载文件系统的列表。如果不带任何参数调用 mount，将打印此列表。
+工具 mount 调用 nmount(2) 系统调用，将一个特殊设备或远程节点（rhost:path）映射并嫁接到文件系统树中的节点（node）位置。系统维护一个当前已挂载文件系统的列表。如果不带任何参数调用 mount，将打印此列表。
 
 > **注意**
 >
@@ -68,15 +68,55 @@ PSPath
 
 ![如何理解卸载](../.gitbook/assets/unmount-concept.png)
 
-对园艺有所了解的读者想必对“扦插”这种培育植物的方法并不陌生：
+对园艺有所了解的读者对“扦插”这种培育植物的方法应不陌生：
 
-将一棵树新发的侧枝掰下来，插到土里。精心照料一段时间，就会得到一株新的幼苗。
+将一棵树新发的侧枝掰下来，插到土里。精心照料一段时间后，即可获得一株新的幼苗。
 
-实际上，这与“卸载”的原理有异曲同工之妙：将某个文件系统（如 `/mnt/test`）从完整的根（`/`）上“掰”下来（卸载）。
+这与“卸载”的原理有异曲同工之妙：将某个文件系统（如 `/mnt/test`）从完整的根（`/`）上“掰”下来（卸载）。
 
 从技术角度看，卸载（unmount）是挂载的逆操作，将一个已挂载的文件系统从系统目录树中分离。当文件系统 B 从 A 上卸载后，A 中原有的文件将重新出现。
 
-#### 参考文献
+### fstab 文件
+
+在启动过程中，系统将自动挂载 `/etc/fstab` 文件中列出的文件系统（标注 `noauto` 选项的条目除外）。
+
+该文件中的条目格式如下：
+
+```sh
+设备       /挂载点 文件系统     选项      转储     fsck 检查顺序
+```
+
+说明：
+
+- `设备`：现有设备名。
+- `挂载点`：现有的目录，用于挂载文件系统。
+- `文件系统`：传递给 [mount(8)](https://man.freebsd.org/cgi/man.cgi?query=mount&sektion=8&format=html) 的文件系统类型。
+- `选项`：`rw` 表示读写文件系统，`ro` 表示只读文件系统，可跟其他选项。常用选项包括 `noauto`，表示启动时不挂载此文件系统。
+- `转储`：供 [dump(8)](https://man.freebsd.org/cgi/man.cgi?query=dump&sektion=8&format=html) 判断哪些文件系统需要备份。缺省时视为 0。
+- `fsck 检查顺序`：决定在重启后，哪些文件系统应由 [fsck(8)](https://man.freebsd.org/cgi/man.cgi?query=fsck&sektion=8&format=html) 检查，以及检查顺序。应跳过的文件系统设置为 0。根文件系统应优先检查，设为 1，其他文件系统应设为大于 1 的值。若多个文件系统具有相同的 `passno`，[fsck(8)](https://man.freebsd.org/cgi/man.cgi?query=fsck&sektion=8&format=html) 会尝试并行检查。
+
+示例：标准 ZFS 安装下的 `/etc/fstab` 文件。
+
+```sh
+# Device		Mountpoint	FStype	Options		Dump	Pass#
+/dev/gpt/efiboot0		/boot/efi	msdosfs	rw		2	2	# EFI 分区
+/dev/nda0p2		none	swap	sw		0	0	# 交换分区
+```
+
+>**注意**
+>
+>ZFS 并不使用 `/etc/fstab` 文件。因此如果在该文件中不存在任何 ZFS 文件系统（`/`），是符合预期的。
+
+示例：标准 UFS 安装下的 `/etc/fstab` 文件。
+
+```sh
+# Device	Mountpoint	FStype	Options	Dump	Pass#
+/dev/nda0p2	/		ufs	rw	1	1	# 根分区
+/dev/nda0p1	/boot/efi		msdosfs	rw	2	2	# EFI 分区
+/dev/nda0p3	none		swap	sw	0	0	# 交换分区
+```
+
+### 参考文献
 
 - 微软. PARTITION_INFORMATION_GPT[EB/OL]. [2026-04-18]. <https://learn.microsoft.com/en-us/windows/win32/api/winioctl/ns-winioctl-partition_information_gpt>. GPT 分区类型 GUID 定义，其中 Microsoft Basic Data 类型为 EBD0A0A2-B9E5-4433-87C0-68B6B72699C7。
 - 微软. Supporting Mount Manager Requests in a Storage Class Driver[EB/OL]. [2026-04-18]. <https://learn.microsoft.com/en-us/windows-hardware/drivers/storage/supporting-mount-manager-requests-in-a-storage-class-driver>. Windows 装入管理器将盘符与分区的映射关系持久化存储于注册表 `HKLM\SYSTEM\MountedDevices`。
@@ -87,9 +127,9 @@ PSPath
 
 ### 非法字符
 
-许多在 FreeBSD 中可用的文件名或路径在 Windows 中都是不被允许的，即包含非法字符。如果在 Windows 上使用 Git 拉取项目，这种情况经常会遇到。
+许多在 FreeBSD 中可用的文件名或路径在 Windows 中均不被允许，即包含非法字符。如果在 Windows 上使用 Git 拉取项目，此类情况较为常见。
 
-这里只列出一些笔者遇到过的情况：
+以下仅列举部分典型情况：
 
 - 文件或文件夹名称中不能包含英文冒号 `:`。
 
@@ -143,7 +183,7 @@ abc    ABC
 - 回车 CR：将光标移动到当前行开头；
 - 换行 LF：将光标移动到下一行。
 
-可以看到，在早期二者是独立的，否则 CRLF 会导致当前行“下沉”一行。
+由此可见，在早期二者是独立的，否则 CRLF 会导致当前行“下沉”一行。
 
 Windows 操作系统默认的文本换行符为 CRLF（即 \\r\\n，0x0D 0x0A，`^M$`），而 UNIX（Classic Mac OS 使用 \\r，0x0D）默认使用 LF（即 \\n，0x0A，`$`）。
 
@@ -151,7 +191,7 @@ Windows 操作系统默认的文本换行符为 CRLF（即 \\r\\n，0x0D 0x0A，
 
 二者互不兼容，如果将使用 Windows 换行符的文件放到 UNIX 系统上，可能会导致每行末尾多出一个 `^M` 字符；对于某些工具会造成识别错误，对于 FreeBSD Port 相关文件来说，则可能将多行识别为一行。
 
-然而两种换行符可以互相转换。在 FreeBSD 下可以用 Port `converters/dos2unix` 来实现，该软件包含 2 个命令：`dos2unix`（Windows 换行符到 UNIX）、`unix2dos`（UNIX 换行符到 Windows）。基本用法是 `$ dos2unix -n a.txt b.txt`，如果不需要保留源文件，可以直接 `$ dos2unix a.txt b.txt c.txt`（一次转换多个文件）。可以用命令 `file a.txt` 来判断文件的换行符类型：
+然而两种换行符可以互相转换。在 FreeBSD 下可使用 Port `converters/dos2unix` 来实现，该软件包含 2 个命令：`dos2unix`（Windows 换行符到 UNIX）、`unix2dos`（UNIX 换行符到 Windows）。基本用法是 `$ dos2unix -n a.txt b.txt`，如果不需要保留源文件，可直接 `$ dos2unix a.txt b.txt c.txt`（一次转换多个文件）。可使用命令 `file a.txt` 来判断文件的换行符类型：
 
 - 使用普通的 UNIX 换行符文本文件
 
@@ -179,9 +219,9 @@ b.txt: Unicode text, UTF-8 text, with very long lines (314), with CRLF line term
 
 例如，ASCII（American Standard Code for Information Interchange，ANSI X3.4）编码中，`0x41`（二进制 `0100 0001`）代表大写字母 `A`。ASCII 仅支持英文字母、数字和常见标点，共 128 个字符。
 
-而在 Unicode 编码体系中，“你”这个汉字的代码点是 U+4F60。在 UTF-8（8-bit Unicode Transformation Format，8 位 Unicode 转换格式）编码方式下，它被编码为字节序列 `0xE4 0xBD 0xA0`（二进制为 `11100100 10111101 10100000`）。UTF-8 编码涵盖的字符范围远超 GBK（国标扩展），当中甚至含有埃及圣书体，如果当前屏幕上能看到 𓀀 𓃕 𓌊 这三个字符，那么很可能正在使用 UTF-8 编码（若使用 UTF-8 编码但仍无法显示这些字符，很可能是字体不支持这些字符集，而非编码问题）。
+而在 Unicode 编码体系中，“你”这个汉字的代码点是 U+4F60。在 UTF-8（8-bit Unicode Transformation Format，8 位 Unicode 转换格式）编码方式下，它被编码为字节序列 `0xE4 0xBD 0xA0`（二进制为 `11100100 10111101 10100000`）。UTF-8 编码涵盖的字符范围远超 GBK（国标扩展），其中甚至含有埃及圣书体，如果当前屏幕上能看到 𓀀 𓃕 𓌊 这三个字符，则很可能正在使用 UTF-8 编码（若使用 UTF-8 编码但仍无法显示这些字符，很可能是字体不支持这些字符集，而非编码问题）。
 
-那么程序如何识别文本的编码呢？通常，有些文件会在开头使用特定的字节序列（即 BOM，byte order mark，字节顺序标记）来标明编码。例如 UTF-8 的 BOM 是 `0xEF 0xBB 0xBF`。但在实际中，很多文本文件并没有 BOM，因此读取程序需要通过上下文猜测编码格式，这往往导致乱码。虽然可以通过程序分析文本内容（如统计字符分布或抽取字符计算）来猜测编码，但这种方法并不总是可靠。编码问题本质上源于系统间默认编码不同或未明确指定编码。
+程序如何识别文本的编码？通常，有些文件会在开头使用特定的字节序列（即 BOM，byte order mark，字节顺序标记）来标明编码。例如 UTF-8 的 BOM 是 `0xEF 0xBB 0xBF`。但在实际中，很多文本文件并没有 BOM，因此读取程序需要通过上下文猜测编码格式，这往往导致乱码。虽然可以通过程序分析文本内容（如统计字符分布或抽取字符计算）来猜测编码，但这种方法并不总是可靠。编码问题本质上源于系统间默认编码不同或未明确指定编码。
 
 Windows 默认使用 GBK（在简体中文环境下，为 GB2312 的超集），而 Linux 或 UNIX 通常使用 UTF-8。
 
@@ -212,9 +252,9 @@ FreeBSD 的编码在 [main/usr.bin/login/login.conf](https://github.com/freebsd/
 
 ## 时间与时区差异
 
-中国统一使用一个时区，东八区，即 UTC+8，UTC（Coordinated Universal Time，协调世界时）在日常使用中几乎等同于 GMT（Greenwich Mean Time，格林尼治时间）。UTC 以国际原子时（temps atomique international，TAI）的秒长为基础（并不完全一致）：当铯（Cs）频率 ΔνCs，也就是铯 133 原子不受干扰的基态超精细跃迁频率，以单位 Hz 即 s⁻¹ 表示时，取其固定数值为 9,192,631,770 来定义秒——后续又对国际原子时进行了多项修正。
+中国统一使用一个时区，东八区，即 UTC+8，UTC（Coordinated Universal Time，协调世界时）在日常使用中几乎等同于 GMT（Greenwich Mean Time，格林尼治时间）。UTC 以国际原子时（temps atomique international，TAI）的秒长为基础（并不完全一致）：当铯（Cs）频率 ΔνCs，也就是铯 133 原子不受干扰的基态超精细跃迁频率，以单位 Hz 即 s⁻¹ 表示时，取其固定数值为 9,192,631,770 来定义秒，此后又对国际原子时进行了多项修正。
 
-有过 Windows 和 UNIX 双系统安装经验的用户会发现，Windows 和 UNIX 的时间总是差 8 个小时。在现代计算机上（一般在主板上），都有一颗由纽扣电池供电的 RTC（Real-time clock，实时时钟芯片）芯片，用来维护系统断电后的计时。
+有过 Windows 和 UNIX 双系统安装经验的用户会发现，Windows 和 UNIX 的时间总是差 8 个小时。在现代计算机上（一般在主板上），均配备一颗由纽扣电池供电的 RTC（Real-time clock，实时时钟芯片）芯片，用来维护系统断电后的计时。
 
 计算机操作系统在开机时会读取 RTC 的时间来设定系统的时间。RTC 的时间并未标注时区。
 
@@ -222,7 +262,7 @@ Windows 会直接读取 RTC 的结果，并将其视为本地时间，即 Local 
 
 例如，如果 RTC 时间是“2025 年 6 月 6 日中午 12:00（即 UTC+8）”，那么在 Windows 下仍显示为“2025 年 6 月 6 日中午 12:00”（即 UTC+8）；但在 UNIX 下，时间会变为“2025 年 6 月 6 日晚上 20:00”（即把 RTC 中的 12:00 视为 UTC 后再加上 UTC+8 的偏移量，12+8=20）。由于 UNIX 将 RTC 视为 UTC 而非本地时间，因此显示的时间会比 Windows 快 8 小时。
 
-对于现代计算机网络来说，时间准确性至关重要——通过一个简单实验可验证：将时间调慢 5 分钟，打开浏览器，即可发现绝大部分网站无法访问（HTTPS）。
+对于现代计算机网络来说，时间准确性至关重要，通过一个简单实验可验证：将时间调慢 5 分钟，打开浏览器，即可发现绝大部分网站无法访问（HTTPS）。
 
 计算机中的时区是由 IANA 时区数据库规范的，历史悠久。
 
@@ -257,50 +297,6 @@ Windows 会直接读取 RTC 的结果，并将其视为本地时间，即 Local 
 - 新华网. “北京时间”是怎么来的[EB/OL]. [2026-04-18]. <http://www.xinhuanet.com/politics/2015-10/28/c_1116958394.htm>. 北京时间并非北京（东经 116.4°）地方时，而是东经 120° 经线的区时；中国曾于 1986—1991 年实行夏令时。
 - IETF. RFC 5246: The Transport Layer Security (TLS) Protocol Version 1.2[EB/OL]. [2026-04-18]. <https://www.rfc-editor.org/rfc/rfc5246>. TLS 协议规定证书包含 notBefore 与 notAfter 有效期字段，客户端验证时将系统时间与证书有效期比对，时钟偏移可导致握手失败。
 - IETF. RFC 6557: Procedures for Maintaining the Time Zone Database[EB/OL]. [2026-04-18]. <https://www.rfc-editor.org/rfc/rfc6557>. IANA 时区数据库维护程序（BCP 175），该数据库自 20 世纪 70 年代末由 Arthur David Olson 开发，2011 年起由 IANA 维护。
-
-## 手册页
-
-FreeBSD 上最全面的文档以手册页的形式存在。系统上几乎每个程序都附带一份简短的参考手册，解释基本操作和可用参数。这些手册可以使用 man 命令查看：
-
-```sh
-% man command
-```
-
-按回车键继续浏览，输入 `q` 则退出 man 手册。
-
-其中 `command` 是要了解的命令名称。例如，要了解更多关于 ls(1) 的信息，输入：
-
-```sh
-% man ls
-```
-
-手册页分为多个节，代表主题的类型。在 FreeBSD 中，以下章节可用：
-
-1. 用户命令。
-2. 系统调用和错误编号。
-3. C 库中的函数。
-4. 设备驱动程序。
-5. 文件格式。
-6. 游戏和其他娱乐。
-7. 杂项信息。
-8. 系统维护和操作命令。
-9. 系统内核接口。
-
-在某些情况下，同一主题可能出现在在线手册的多个节中。例如，既有 chmod 用户命令，也有 chmod() 系统调用。要告诉 man(1) 显示哪个节，指定节号：
-
-```sh
-% man 1 chmod
-```
-
-这将显示用户命令 chmod(1) 的手册页。在书面文档中，对在线手册特定节的引用传统上放在括号中，因此 chmod(1) 指的是用户命令，chmod(2) 指的是系统调用。
-
-如果不知道手册页的名称，使用 `man -k` 搜索手册页描述中的关键词：
-
-```sh
-% man -k mail
-```
-
-此命令显示描述中包含关键词“mail”的命令列表。这等效于使用 apropos(1)。
 
 ## 深入阅读
 

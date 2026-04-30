@@ -714,37 +714,72 @@ make BATCH=yes install || make BATCH=yes install || make BATCH=yes install || ma
 >
 > 如果 `touch a.txt` 失败会执行后面的哪个操作？
 
+## 重定向输入输出
+
+UNIX Shell 还能使用户执行命令、重定向其输出、重定向其输入，并将多个命令组合在一起以优化最终输出。
+
+Shell 重定向是将命令的输出或输入发送到另一个命令或文件中的操作。例如，将 [ls(1)](https://man.freebsd.org/cgi/man.cgi?query=ls&sektion=1&format=html) 命令的输出捕获到一个文件中，可以这样重定向输出：
+
+```sh
+$ ls -l > test.txt
+```
+
+查看 `test.txt` 文件内容：
+
+```sh
+total 1
+drw-------  2 ykla ykla 2 Apr 28 00:24 test
+-rw-r--r--  1 ykla ykla 0 Apr 28 00:43 test.txt
+
+```
+
+此时会先清空 `test.txt` 文件原有内容（如文件存在），随后执行命令 `ls` 将目录内容列出的内容直接保存到 `test.txt` 文件中。
+
+>**技巧**
+>
+>有些命令可以读取输入，比如 [sort(1)](https://man.freebsd.org/cgi/man.cgi?query=sort&sektion=1&format=html)。要对该列表进行排序，可以这样重定向输入：
+
+```sh
+$ sort < test.txt
+-rw-r--r--  1 ykla ykla 0 Apr 28 00:43 test.txt
+drw-------  2 ykla ykla 2 Apr 28 00:24 test
+total 1
+```
+
+输入会被排序并显示在屏幕上。要将该输入重定向到另一个文件，可以将 [sort(1)](https://man.freebsd.org/cgi/man.cgi?query=sort&sektion=1&format=html) 的输出重定向出去，操作如下：
+
+```sh
+$ sort < test.txt > sorted.txt
+$ cat sorted.txt
+-rw-r--r--  1 ykla ykla 0 Apr 28 00:43 test.txt
+drw-------  2 ykla ykla 2 Apr 28 00:24 test
+total 1
+```
+
+在上述所有示例中，命令通过文件描述符进行重定向。每个 UNIX® 系统都有文件描述符，包括标准输入（stdin）、标准输出（stdout）和标准错误（stderr）。每种描述符都有其用途，例如输入可以是键盘或鼠标，用于提供输入；输出可以是屏幕或打印机中的纸张；错误则用于诊断或错误信息。这三者都被视为基于 I/O 的文件描述符，有时也被称为流（streams）。
+
+通过使用这些描述符，shell 允许将输出和输入在多个命令之间传递，并重定向到文件或从文件中读取。另一种重定向方法是管道操作符。
+
+UNIX® 的管道操作符 `|` 允许将一个命令的输出直接传递或重定向到另一个程序。简单来说，管道允许一个命令的标准输出被作为标准输入传递给另一个命令，例如：
+
+```sh
+$ cat test.txt | sort | less
+-rw-r--r--  1 ykla ykla 0 Apr 28 00:43 test.txt
+drw-------  2 ykla ykla 2 Apr 28 00:24 test
+total 1
+```
+
+在此示例中，`directory_listing.txt` 的内容将被排序，然后输出传递给 [less(1)](https://man.freebsd.org/cgi/man.cgi?query=less&sektion=1&format=html)。这使用户可以按自己的节奏浏览输出内容，防止其在屏幕上滚动消失。
+
 ## BSD 风格的 make/grep/sed/awk
 
 ### make(1) 命令
-
-make(1) 命令选项：
-
-| 选项 | 说明 | 备注 |
-| ---- | ---- | ---- |
-| `-f <Makefile>` | 指定 Makefile 文件名 | 默认查找 makefile 或 Makefile |
-| `-j <作业数>` | 并行执行的作业数 | 并行构建；指定 CPU 核心数 |
-| `-n` | 不执行，仅打印命令 | 显示会执行什么但不实际执行 |
-| `-k` | 出错时继续构建其他目标 | 即使某个目标失败也尽可能继续 |
-| `-s` | 静默模式，不打印命令 | 简洁输出 |
-| `-C <目录>` | 切换到目录后执行 | 先进入指定目录 |
 
 FreeBSD 的 make（bmake）与 GNU make（gmake）在语法和内置变量上有显著差异。FreeBSD make 不支持 GNU make 的许多高级特性，如 `$(wildcard ...)` 的某些用法、条件语句语法等。FreeBSD make 使用 `.include` 而 GNU make 使用 `include`；变量赋值语法 `?=`、`:=` 的行为也不同。在 FreeBSD 上，可安装 devel/gmake 以获得 GNU make。
 
 ### sed(1) 命令
 
 FreeBSD sed 基于 4.4BSD lite sed，与 GNU sed 在正则表达式语法、一些扩展命令（如 `\l`、`\u`、`\L`、`\U`）、地址范围语法上存在差异。GNU sed 支持 `\w`、`\W`、`\b`、`\B` 等字符类，而 FreeBSD sed 需要使用 `[[:alnum:]]` 等 POSIX 类。
-
-sed(1) 命令选项：
-
-| 选项 | 说明 | 备注 |
-| ---- | ---- | ---- |
-| `-i <后缀>` | 原地编辑文件 | 备份文件使用指定后缀；空后缀不备份 |
-| `-e <脚本>` | 添加脚本到执行列表 | 可多次使用，按顺序执行 |
-| `-n` | 不自动打印行 | 仅在使用 `p` 命令时输出 |
-| `-f <文件>` | 从文件读取脚本 | 替代 `-e` |
-| `-E` | 使用扩展正则表达式 | 同 GNU sed 的 `-r` 选项 |
-| `-r` | 同上，兼容别名 | |
 
 与 GNU sed 最显著的差异是 `-i` 选项语法：FreeBSD sed 的 `-i` 必须有后缀参数，即使是空字符串（`-i ''`），而 GNU sed 的 `-i` 后缀是可选的（`-i[SUFFIX]`）。这是最常见的跨平台兼容性问题。
 
@@ -758,30 +793,9 @@ sed -i '' 's/quarterly/latest/g' /etc/pkg/FreeBSD.conf
 
 ### awk(1) 命令
 
-awk(1) 命令选项：
-
-| 选项 | 说明 | 备注 |
-| ---- | ---- | ---- |
-| `-F <分隔符>` | 指定字段分隔符 | 可以是正则表达式；同 `FS` 变量 |
-| `-v <var>=<val>` | 在执行前设置变量 | 可多次使用 |
-| `-f <文件>` | 从文件读取脚本 | 替代命令行脚本 |
-| `-W <选项>` | 扩展选项（兼容 GNU awk） | FreeBSD awk 部分支持 |
-
 FreeBSD 默认的 awk 是 nawk（New AWK），基于 Aho、Kernighan、Weinberger 的原始实现，与 GNU awk（gawk）有许多差异。GNU awk 有大量扩展，如：多维数组、网络操作、时间函数、`length(array)`、`gensub()`、`strftime()` 等，这些在 FreeBSD nawk 中不可用。在 FreeBSD 上，可安装 lang/gawk 获得 GNU awk。
 
 ### grep(1) 命令
-
-grep(1) 命令选项：
-
-| 选项 | 说明 | 备注 |
-| ---- | ---- | ---- |
-| `-r` | 递归搜索目录 | |
-| `-i` | 忽略大小写 | |
-| `-n` | 显示行号 | |
-| `-l` | 仅显示包含匹配的文件名 | 不显示匹配内容 |
-| `-v` | 反转匹配，显示不匹配的行 | |
-| `-E` | 使用扩展正则表达式 | 等同于 `egrep` |
-| `-c` | 仅显示匹配行数 | |
 
 FreeBSD 基本系统的 grep 是 BSD grep（基于 GNU grep 2.0 的旧版分支），与 Linux 上的 GNU grep 在正则表达式语法和选项上基本兼容；但 BSD grep 不支持 GNU grep 的 `-P`（Perl 正则表达式）选项，需安装 `textproc/gnugrep` 以获得 PCRE 支持。
 
@@ -809,90 +823,6 @@ FreeBSD 的设计更接近传统 UNIX 的行为。
 > **注意**
 >
 > 在 FreeBSD 下，关机与重启操作都只有 root 用户和 operator 组成员可以执行。
-
-## 附录：拼写自动纠正工具
-
-### 安装与配置
-
-FreeBSD 可使用 `sysutils/thefuck` 工具实现命令拼写自动纠正功能。该工具可自动检测并纠正命令输入错误。
-
-使用 pkg 安装：
-
-```sh
-# pkg install thefuck
-```
-
-或使用 Ports 构建：
-
-```sh
-# cd /usr/ports/misc/thefuck/
-# make install clean
-```
-
-### 配置 thefuck
-
-查看安装后的配置信息
-
-```sh
-# fuck
-Seems like fuck alias isn't configured!
-More details - https://github.com/nvbn/thefuck#manual-installation
-```
-
-打开网页浏览。发现要将 `eval $(thefuck --alias)` 加入到 `~/.bash_profile`（Bash Shell）、`~/.bashrc`（Bash Shell）或 `~/.zshrc`（Zsh Shell）。
-
-FreeBSD 默认使用的是 sh，因此将下行：
-
-```sh
-eval $(thefuck --alias)
-```
-
-在 FreeBSD 默认 sh 环境中，需将以下配置写入 `~/.shrc` 文件：
-
-```sh
-# . ~/.shrc
-# fuck
-No fucks given
-```
-
-> **技巧**
->
-> 根据作者信息，若不喜欢输入 `fuck`，还可以使用其他别名：若更改为 `eval $(thefuck --alias abc)`，则下方所有 `fuck` 命令都会被换为 `abc`。
->
->```sh
-> # abc
-> Nothing found
-> # plg install gimp
->-sh: plg: not found
-> # abc
-> pkg install gimp [enter/↑/↓/ctrl+c]
-> ……省略一部分……
->```
-
-### 使用示例
-
-```sh
-# ls-l /home/ykla/ # 首先输入一条错误命令
--sh: ls-l: not found
-# fuck
-ls -l /home/ykla/ [enter/↑/↓/ctrl+c] # 上下箭头切换可能的命令，回车确认，Ctrl+C 中断
-total 317
-……省略一部分……
-drwxr-xr-x  2 ykla ykla        2 Mar  9 20:45 下载
-drwxr-xr-x  2 ykla ykla        2 Mar  9 20:45 桌面
-```
-
-再试一例：
-
-```sh
-# plg install gimp
--sh: plg: not found
-# fuck
-pkg install gimp [enter/↑/↓/ctrl+c]
-Updating FreeBSD repository catalogue...
-FreeBSD repository is up to date.
-……省略一部分……
-```
 
 ## 参考文献
 
