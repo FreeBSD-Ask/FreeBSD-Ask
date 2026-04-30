@@ -192,7 +192,7 @@ After verifying those files, restart the system.
 
 ### 使用 pkgbase 将启动环境中的系统版本更新到 15.0-RELEASE
 
-成功转换为 pkgbase 后，即可使用 pkg 包管理器来升级系统版本了。下面将配置 pkgbase 源并执行升级操作。
+成功转换为 pkgbase 后，就可以使用 pkg 包管理器来升级系统版本了。下面将配置 pkgbase 源并执行升级操作。
 
 软件源结构：
 
@@ -616,8 +616,6 @@ https://mirrors.163.com/freebsd-pkg/
 若官方源下载速度慢，可以考虑改用国内镜像。只需要替换 `https://pkg.freebsd.org` 这部分。
 
 ## 参考文献
-
-本节介绍的内容涉及多个技术点，下面列出了一些相关的参考文献，供有兴趣的读者进一步学习。
 
 - vermaden. ZFS Boot Environments Explained[EB/OL]. [2026-03-25]. <https://vermaden.wordpress.com/2025/11/25/zfs-boot-environments-explained/>. 详细阐释 ZFS 启动环境的原理与实践，包含跨版本 ZFS 池兼容方案。
 - FreeBSD Project. BootEnvironments[EB/OL]. [2026-03-25]. <https://wiki.freebsd.org/BootEnvironments>. FreeBSD 官方关于启动环境的 Wiki。
