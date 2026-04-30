@@ -190,7 +190,100 @@ $ sysctl kern.features.ufs_quota
 kern.features.ufs_quota: 1
 ```
 
+如果以上输出为 0，意味着当前可能正在使用自定义内核，未支持磁盘配额模块。请加入内核选项 `options QUOTA` 到内核配置文件，然后重新编译内核。
 
+设置开机启用磁盘配额：
+
+
+```sh
+# service quota enable
+```
+
+立刻启用磁盘配额：
+
+```
+# service quota start
+```
+
+通常，在启动时，系统会通过 [quotacheck(8)](https://man.freebsd.org/cgi/man.cgi?query=quotacheck&sektion=8&format=html) 检查每个文件系统的配额完整性。此程序确保配额数据库中的数据正确反映文件系统中的数据。此过程过程比较耗时，会显著影响系统的启动时间。要跳过此步骤，可以在 **/etc/rc.conf** 中添加以下变量：
+
+```ini
+check_quotas="NO"
+```
+
+最后，编辑 **/etc/fstab** 文件，在每个文件系统的配置行中启用磁盘配额。要启用每个用户的配额，可以在文件系统的 **/etc/fstab** 配置行的选项字段中添加 `userquota`。例如：
+
+```ini
+/dev/nda0p2     /               ufs     rw,userquota      1       1
+```
+
+要启用组配额，请使用 `groupquota`。要启用用户和组配额，可以用逗号分隔选项：
+
+```ini
+/dev/nda0p2     /               ufs     rw,userquota,groupquota      1       1
+```
+
+配置完成后，重新启动系统，**/etc/rc** 将自动运行适当的命令，为 **/etc/fstab** 中启用的所有配额创建初始配额文件。
+
+默认情况下，配额文件存储在文件系统的根目录中，名为 **quota.user** 和 **quota.group**。
+
+```sh
+-rw-r-----   1 root operator -                             64192 May  1 02:34 quota.group
+-rw-r-----   1 root operator -                             64192 May  1 02:34 quota.user
+```
+
+### 设置配额限制
+
+要验证配额是否已启用，可以运行以下命令：
+
+```sh
+$ quota -v
+Disk quotas for user ykla (uid 1001):
+Filesystem        usage    quota   limit   grace  files   quota  limit   grace
+/                    32        0       0              9       0      0
+```
+
+这将显示每个启用了配额的文件系统的磁盘使用情况和当前的配额限制的摘要。
+
+系统现在已准备好使用 `edquota` 设置配额限制。
+
+有几个选项可以强制限制用户或组可以分配的磁盘空间数量，以及它们可以创建的文件数量。分配可以基于磁盘空间（块配额）、文件数量（inode 配额）或两者的组合进行限制。每个限制进一步细分为两个类别：硬限制和软限制。
+
+硬限制是不可超过的。待用户达到硬限制，该用户在该文件系统上将无法再进行任何分配。例如，如果用户在文件系统上的硬限制为 500 KB，并且当前使用了 490 KB，则该用户只能分配额外的 10 KB。尝试分配额外的 11 KB 将失败。
+
+软限制可以在一定时间内超出，称为宽限期，默认情况下为一周。如果用户超出了软限制并且宽限期已过，软限制将变为硬限制，并且不允许进一步的分配。当用户重新低于软限制时，宽限期将被重置。
+
+在以下示例中，正在编辑 `ykla` 账户的配额。当调用 `edquota` 时，将打开由环境变量 `EDITOR` 指定的编辑器以编辑配额限制。默认编辑器是 nvi。
+
+```sh
+# edquota -u ykla
+Quotas for user ykla:
+/: in use: 32k, limits (soft = 0k, hard = 0k)	# 块配额限制
+        inodes in use: 9, limits (soft = 0, hard = 0)	# inode 配额限制
+```
+
+可以更改块配额和 inode 配额来配置配额限制。例如，要将 **/** 的块限制提高到软限制 `100` 和硬限制 `120`，请将该行的值更改为：
+
+```sh
+/: in use: 32k, limits (soft = 100k, hard = 120k)
+```
+
+退出编辑器后，新配额限制将生效。用户只能检查自己的配额和自己所属组的配额。只有超级用户才能查看所有用户和组的配额。
+
+```sh
+# quota -v ykla
+Disk quotas for user ykla (uid 1001):
+Filesystem        usage    quota   limit   grace  files   quota  limit   grace
+/                    32      100     120              9       0      0
+```
+
+通常，用户未使用任何磁盘空间的文件系统不会出现在 `quota` 的输出中，即使该用户已为该文件系统分配了配额限制。
+
+有时可能希望在一系列用户上设置配额限制。可以通过首先为一个用户分配所需的配额限制来实现。然后，使用 `-p` 将该配额复制到指定范围的用户 ID（UID）。以下命令将为 UID `10000` 到 `19999` 的用户复制配额限制：
+
+```sh
+# edquota -p ykla 10000-19999
+```
 
 ## 课后习题
 
