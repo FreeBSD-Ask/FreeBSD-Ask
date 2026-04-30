@@ -55,7 +55,7 @@ da0p4 resized
 
 ### 扩展文件系统
 
-使用 growfs 服务扩展文件系统（该操作仅需执行一次，完成后无需重复运行）：
+使用 growfs 服务扩展文件系统，该操作仅需执行一次，完成后无需重复运行：
 
 ```sh
 # service growfs onestart
