@@ -99,14 +99,22 @@ PSPath
 
 ```sh
 # Device		Mountpoint	FStype	Options		Dump	Pass#
-/dev/gpt/efiboot0		/boot/efi	msdosfs	rw		2	2	# 这是 EFI 分区
-/dev/nda0p2		none	swap	sw		0	0	# 这是交换分区
+/dev/gpt/efiboot0		/boot/efi	msdosfs	rw		2	2	# EFI 分区
+/dev/nda0p2		none	swap	sw		0	0	# 交换分区
 ```
 
 >**注意**
 >
 >ZFS 并不使用 `/etc/fstab` 文件。因此如果在该文件中不存在任何 ZFS 文件系统（`/`），是符合预期的。
 
+示例：标准 UFS 安装下的 `/etc/fstab` 文件。
+
+```sh
+# Device	Mountpoint	FStype	Options	Dump	Pass#
+/dev/nda0p2	/		ufs	rw	1	1	# 根分区
+/dev/nda0p1	/boot/efi		msdosfs	rw	2	2	# EFI 分区
+/dev/nda0p3	none		swap	sw	0	0	# 交换分区
+```
 
 ### 参考文献
 
