@@ -185,6 +185,7 @@
 * [18.3 Rsync 数据同步](di-18-zhang-fu-wu-qi/di-18.3-jie-rsync-shu-ju-tong-bu.md)
 * [18.4 Samba 文件共享](di-18-zhang-fu-wu-qi/di-18.4-jie-samba-wen-jian-gong-xiang.md)
 * [18.5 NFS 服务器](di-18-zhang-fu-wu-qi/di-18.5-jie-nfs-fu-wu-qi.md)
+* [18.6 零配置网络（mDNS/DNS-SD）](di-18-zhang-fu-wu-qi/di-18.6-jie-mdns.md)
 
 ## 第 19 章 Web 服务器与监控系统
 
