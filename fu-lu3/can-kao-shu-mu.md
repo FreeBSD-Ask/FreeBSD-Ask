@@ -71,11 +71,11 @@
 
 该书阅读难度较高，属于高级技术专著范畴，需要具备一定的操作系统理论基础方能理解。
 
-主要作者 McKusick M K 在其网站上提供多款 BSD 相关的录制课程，参见 McKusick M K. BSD related courses[EB/OL]. [2026-03-26]. <https://www.mckusick.com/buylist.html>. 目前正在撰写推出第三版（由 No Starch Press 出版），相关信息可参见 McKusick M K. The History of the BSD Daemon: BSDCan 2025[EB/OL]. [2026-04-18]. <https://www.bsdcan.org/2025/talks/daemon.pdf>. 这一信息对于追踪 FreeBSD 技术演进具有文献价值。
+主要作者 McKusick M K 在其网站上提供多门 BSD 相关的录制课程，参见 McKusick M K. BSD related courses[EB/OL]. [2026-03-26]. <https://www.mckusick.com/buylist.html>. 目前正在撰写第三版（由 No Starch Press 出版），相关信息可参见 McKusick M K. The History of the BSD Daemon: BSDCan 2025[EB/OL]. [2026-04-18]. <https://www.bsdcan.org/2025/talks/daemon.pdf>. 这一信息对于追踪 FreeBSD 技术演进具有文献价值。
 
 ### IPv6 网络堆栈
 
-以下书籍逐行讲解 FreeBSD IPv6 网络堆栈（KAME 项目）的设计与实现，是网络协议领域的深度技术专著，适合深入学习网络协议的读者进行系统性研读。
+以下书籍逐行解析 FreeBSD IPv6 网络堆栈（KAME 项目）的设计与实现，是网络协议领域的深度技术专著，适合深入学习网络协议的读者系统研读。
 
 - Li Q, Jinmei T, Shima K. IPv6 详解：卷 1，核心协议实现[M]. 陈涓，赵振平，译. 北京：人民邮电出版社，2009：846. ISBN: 978-7-115-18950-9(英文影印版本 ISBN: 978-7-115-19551-7). 详解 IPv6 核心协议实现，基于 FreeBSD KAME 项目代码分析。
 - Li Q, Jinmei T, Shima K. IPv6 详解：卷 2，高级协议实现[M]. 王嘉祯，等，译. 北京：人民邮电出版社，2009：869. ISBN: 978-7-115-20891-0(英文影印版本 ISBN: 978-7-115-19519-7). 详解 IPv6 高级协议与扩展机制，包含移动 IPv6 等关键技术。
