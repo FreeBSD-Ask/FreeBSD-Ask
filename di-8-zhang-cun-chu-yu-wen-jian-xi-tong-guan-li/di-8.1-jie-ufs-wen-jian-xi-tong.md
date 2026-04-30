@@ -2,7 +2,7 @@
 
 ## 概述
 
-UFS 全称为 Unix File System（UNIX 文件系统），FreeBSD 中使用的 UFS 实际上是伯克利快速文件系统（Berkeley Fast File System，FFS），由 Kirk McKusick、Bill Joy 等人于 1983 年随 4.2BSD 首次引入，其设计理念可追溯至更早的 Unix 文件系统。历史上，macOS 也曾使用该文件系统作为根文件系统。
+UFS 全称为 Unix File System（UNIX 文件系统），FreeBSD 中使用的 UFS 实际上是伯克利快速文件系统（Berkeley Fast File System，FFS），由 Kirk McKusick、Bill Joy 等人于 1983 年随 4.2BSD 首次引入。历史上，macOS 也曾使用该文件系统作为根文件系统。
 
 需要明确区分，本节所述的 UFS 文件系统与手机等设备中使用的 UFS 存储属于完全不同的技术范畴。后者全称为 Universal Flash Storage（通用闪存存储），是一种硬件存储标准，目前已发展至 4.1 版本。FreeBSD 在 10.4 版本中支持 eMMC，FreeBSD 15.0 已通过 `ufshci` 驱动支持 UFS 存储。
 
@@ -68,7 +68,7 @@ super-block backups (for fsck_ffs -b #) at:
  25653952, 26936640, 28219328, 29502016, 30784704, 32067392, 33350080, 34632768, 35915456, 37198144, 38480832
 ```
 
-growfs 是 FreeBSD 用于扩展 UFS 文件系统的工具，通过调整文件系统的柱面组和超级块，使文件系统能够利用新增的分区空间。
+growfs 是 FreeBSD 用于扩展 UFS 文件系统的工具，通过调整柱面组和超级块来利用新增的分区空间。
 
 ### 验证扩容结果
 
@@ -88,8 +88,6 @@ tmpfs               32M    156K     32M     0%    /var
 
 - `-h`：以人类可读格式显示，单位为 KB、MB、GB 等。
 - `-l`：仅显示本地文件系统。
-
-上述输出表明，分区扩展操作已完成，文件系统已成功调整至新的大小。
 
 ### 参考文献
 
@@ -252,7 +250,7 @@ Filesystem        usage    quota   limit   grace  files   quota  limit   grace
 
 软限制允许在一定时间内超出，该时间段称为宽限期，默认为一周。若用户超出软限制且宽限期已过，软限制将转变为硬限制，不再允许进一步分配。当用户重新降至软限制以下时，宽限期将重置。
 
-在以下示例中，正在编辑 `ykla` 账户的配额。当调用 `edquota` 时，将打开由环境变量 `EDITOR` 指定的编辑器以编辑配额限制。默认编辑器是 nvi。
+在以下示例中，编辑 `ykla` 账户的配额。调用 `edquota` 时，将打开由环境变量 `EDITOR` 指定的编辑器以编辑配额限制，默认编辑器为 nvi。
 
 ```sh
 # edquota -u ykla
