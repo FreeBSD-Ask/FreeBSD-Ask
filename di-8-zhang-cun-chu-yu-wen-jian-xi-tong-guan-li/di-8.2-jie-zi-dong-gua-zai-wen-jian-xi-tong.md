@@ -57,7 +57,7 @@ notify 100 {
 
 >**注意**
 >
->不要添加到注释符号 `/* *\` 中间。
+>不要添加到注释符号 `/* */` 中间。
 
 通过将以下行添加到 **/etc/rc.conf** 文件中，可以设置 [autofs(5)](https://man.freebsd.org/cgi/man.cgi?query=autofs&sektion=5&format=html) 在启动时启动：
 
