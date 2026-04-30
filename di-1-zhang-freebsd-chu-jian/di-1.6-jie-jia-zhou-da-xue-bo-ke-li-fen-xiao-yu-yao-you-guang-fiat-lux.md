@@ -51,7 +51,7 @@ Fiat Lux!
 - Piazza L, Lummen T T A, Quiñonez E, et al. Simultaneous observation of the quantization and the interference pattern of a plasmonic near-field[J]. Nature Communications，2015，6：6407. 揭示等离子体近场的量子化与干涉现象。
 - Kant I. 历史理性批判文集[M]. 何兆武，译. 天津：天津人民出版社，2014：22. 答复这个问题：“什么是启蒙运动？”. ISBN: 978-7-201-08641-5. 系统阐述启蒙运动的哲学内涵与历史意义。
 - University of California, Berkeley Library. Portrait of UC Berkeley namesake no longer on display in Doe Library[EB/OL]. [2026-03-25]. <https://www.lib.berkeley.edu/about/news/george-berkeley-portrait>. 记录大学校园历史争议与文化反思。
-- 尼采. 善恶的彼岸[M]. 赵千帆,译. 北京:商务印书馆,2015. ISBN: 978-7-100-11749-4. 探讨道德哲学与价值重估的核心命题。
+- 尼采. 善恶的彼岸[M]. 赵千帆，译. 北京：商务印书馆，2015. ISBN: 978-7-100-11749-4. 探讨道德哲学与价值重估的核心命题。
 - 松原信吾,村石宏实,川崎乡太,等,导演. 迪迦奥特曼[V]. 日本:圆谷株式会社,1996. 第 47 集《告别黑暗》，梅塔莫尔加登场，第 21 分钟，沙耶香。通过特摄作品探讨光明与黑暗的辩证关系。
 - 清华大学. 国立西南联合大学纪念碑碑文[EB/OL]. [2026-03-25]. <https://www.tsinghua.org.cn/info/1952/17852.htm>. 记载西南联大历史使命与学术精神。
 - 闻黎明. 西南联大与现代中国（1937~1946）[M]. 北京：社会科学文献出版社，2023. ISBN: 978-7-5201-9805-9. 全面研究西南联大历史地位与文化影响。
