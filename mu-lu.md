@@ -130,10 +130,9 @@
 * [11.10 LXDE](di-11-zhang-zhuo-mian-huan-jing/di-11.10-jie-lxde.md)
 * [11.11 bspwm](di-11-zhang-zhuo-mian-huan-jing/di-11.11-jie-bspwm.md)
 * [11.12 IceWM](di-11-zhang-zhuo-mian-huan-jing/di-11.12-jie-icewm.md)
-* [11.13 i3wm](di-11-zhang-zhuo-mian-huan-jing/di-11.13-jie-i3wm.md)
-* [11.14 Hyprland](di-11-zhang-zhuo-mian-huan-jing/di-11.14-jie-hyprland.md)
-* [11.15 CDE](di-11-zhang-zhuo-mian-huan-jing/di-11.15-jie-cde.md)
-* [11.16 启用 root 账户桌面登录](di-11-zhang-zhuo-mian-huan-jing/di-11.16-jie-qi-yong-root-zhang-hu-zhuo-mian-deng-lu.md)
+* [11.13 Hyprland](di-11-zhang-zhuo-mian-huan-jing/di-11.13-jie-hyprland.md)
+* [11.14 CDE](di-11-zhang-zhuo-mian-huan-jing/di-11.14-jie-cde.md)
+* [11.15 启用 root 账户桌面登录](di-11-zhang-zhuo-mian-huan-jing/di-11.15-jie-qi-yong-root-zhang-hu-zhuo-mian-deng-lu.md)
 
 ## 第 12 章 人工智能（AI）
 
