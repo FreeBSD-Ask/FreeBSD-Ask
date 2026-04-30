@@ -100,7 +100,7 @@ UBLIO（User space Block I/O）是一个用户空间块 I/O 库，用于提升 F
 
 ### NTFS 的手动挂载操作
 
-手动挂载 NTFS 分区可以通过以下方式：
+手动挂载 NTFS 分区可通过以下方式：
 
 1. 使用 ntfs-3g 将 `/dev/da0s1` 挂载至 `/media/NTFS`，设置读写权限，并指定文件所有者和权限掩码：
 
@@ -114,7 +114,7 @@ UBLIO（User space Block I/O）是一个用户空间块 I/O 库，用于提升 F
 # fstyp /dev/da0s1
 ```
 
-3. 若在挂载过程中出现报错，可尝试删除休眠文件：
+3. 若在挂载过程中出现错误，可尝试删除休眠文件：
 
 ```sh
 # ntfs-3g  /dev/da0s1 /mnt/NTFS -o remove_hiberfile
@@ -132,7 +132,7 @@ UBLIO（User space Block I/O）是一个用户空间块 I/O 库，用于提升 F
 
 ## FAT32 文件系统
 
-在使用 `gpart show` 命令时，FAT32 文件系统通常被显示为 `ms-basic-data` 类型。
+在使用 `gpart show` 命令时，FAT32 文件系统通常显示为 `ms-basic-data` 类型。
 
 以下命令显示 `nda1` 磁盘及其分区的详细信息，包括起始位置、大小和类型：
 

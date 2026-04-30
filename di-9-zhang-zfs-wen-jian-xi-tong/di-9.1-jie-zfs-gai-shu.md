@@ -22,7 +22,7 @@ ZFS 于 2007 年导入 FreeBSD 源代码树，在 FreeBSD 7.0-RELEASE（2008 年
 
 在 OpenSolaris 关停 3 年后（2013 年），OpenZFS 项目正式成立，统一了 ZFS 的开源开发（此前 ZFS on Linux 原生内核模块项目已于 2010 年启动，而基于 FUSE 的 ZFS-FUSE 项目则始于 2008 年）。由于 Oracle Solaris ZFS 的闭源开发，OpenZFS 很难再兼容 Oracle Solaris ZFS。
 
-“时来天地皆同力，运去英雄不自由。”（[唐] 罗隐《筹笔驿》）OpenZFS 新功能的主要开发商 Delphix 公司（Delphix 于 2024 年 3 月被 Perforce Software 收购）将其设备的操作系统从 illumos 迁移到了 Linux，基本上放弃了对前者的投入。其理由是几乎所有云平台厂商和虚拟机平台仅支持 Linux，因此 illumos 几乎再难得到投入。甚至 Oracle Solaris 本身也进入了维护模式（版本 11.4 的生命周期可延续至 2037 年）。Oracle ZFS 迁移到了企业级存储解决方案 [Oracle 存储](https://www.oracle.com/cn/storage/#zfs-storage-appliance)。
+“时来天地皆同力，运去英雄不自由。”（[唐] 罗隐《筹笔驿》）OpenZFS 新功能的主要开发商 Delphix 公司（Delphix 于 2024 年 3 月被 Perforce Software 收购）将其设备的操作系统从 illumos 迁移到了 Linux，基本上放弃了对前者的投入。其理由是几乎所有云平台厂商和虚拟机平台仅支持 Linux，因此 illumos 几乎再难得到支持。甚至 Oracle Solaris 本身也进入了维护模式（版本 11.4 的生命周期可延续至 2037 年）。Oracle ZFS 迁移到了企业级存储解决方案 [Oracle 存储](https://www.oracle.com/cn/storage/#zfs-storage-appliance)。
 
 illumos 版本的 ZFS（其主要开发仍由 OpenZFS 推动）得到的功能更新日趋减少，FreeBSD 对该版本 ZFS 的维护难度也不断上升，当 ZFS 出现新功能时，往往要先等待其合并到 illumos，再回溯到 FreeBSD 中。但 illumos 的开发已基本停滞。2018 年 8 月，FreeBSD 项目开始研究如何将 FreeBSD ZFS 由 illumos 迁移到直接上游 OpenZFS。
 

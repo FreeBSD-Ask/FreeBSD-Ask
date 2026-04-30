@@ -1,6 +1,6 @@
 # 4.9 用户和基本账户管理
 
-FreeBSD 系统的所有访问均通过账户实现，所有进程均由用户运行，因此用户和账户管理是系统安全的基础。
+FreeBSD 系统的所有访问均通过账户实现，所有进程均由用户运行，因此用户与账户管理是系统安全的基础。
 
 FreeBSD 提供了多种用户管理工具。`adduser` 命令以交互方式添加新用户，自动完成创建 passwd 条目、构建新用户主目录、从 `/usr/share/skel` 复制默认配置文件等操作。
 
@@ -36,7 +36,7 @@ FreeBSD 中主要有三类账户：系统账户、普通用户账户，以及超
 
 ### 系统账户
 
-系统账户用于运行 DNS、邮件和 Web 服务器等服务。使用系统账户的原因在于安全性：如果所有服务都以超级用户身份运行，它们将不受限制地操作。
+系统账户用于运行 DNS、邮件和 Web 服务器等服务。使用系统账户的原因在于安全性：如果所有服务均以超级用户身份运行，其操作将不受限制。
 
 系统账户由源代码中的 [main/etc/master.passwd](https://github.com/freebsd/freebsd-src/blob/main/etc/master.passwd) 文件定义，截至写作时共计 27 个。因此，`_dhcp`、`ntpd` 都属于系统账户。系统账户是具有受限权限的专用账户，通常用于运行系统服务和守护进程。
 
@@ -44,9 +44,9 @@ FreeBSD 中主要有三类账户：系统账户、普通用户账户，以及超
 
 ### 普通用户账户
 
-普通用户账户分配给实际使用者，用于登录和使用系统。每个访问系统的人都应拥有唯一的用户账户。这使管理员能够追踪用户操作，并防止用户互相干扰彼此的设置。
+普通用户账户分配给实际使用者，用于登录和使用系统。每个访问系统的人都应拥有唯一的用户账户，这使管理员能够追踪用户操作，并防止用户互相干扰彼此的设置。
 
-`ykla` 是在安装系统时创建的普通用户账户。如果希望通过 `su` 命令切换为 `root` 用户，必须将该用户加入 `wheel` 用户组。而部分用户账户是 Port 自动创建的系统用户。
+`ykla` 是在安装系统时创建的普通用户账户。如果希望通过 `su` 命令切换为 `root` 用户，必须将该用户加入 `wheel` 用户组。此外，部分用户账户是 Port 自动创建的系统用户。
 
 每个用户账户在 FreeBSD 系统上都关联着若干属性信息：
 
@@ -65,80 +65,50 @@ FreeBSD 中主要有三类账户：系统账户、普通用户账户，以及超
 
 ### 超级用户账户
 
-超级用户账户，通常称为 root，用于无限制地管理系统。超级用户与普通用户账户不同，可以不受限制地操作，超级用户账户的误用可能导致灾难性的后果。普通用户账户无法因误操作而破坏操作系统，因此建议以用户账户登录，仅在命令需要额外特权时方切换为超级用户。
+超级用户账户，通常称为 root，用于无限制地管理系统。超级用户与普通用户账户不同，可以不受限制地操作，超级用户账户的误用可能导致灾难性的后果。普通用户账户无法因误操作而破坏操作系统，因此建议以普通用户账户登录，仅在命令需要额外特权时方切换为超级用户。
 
-实际上是内核根据账户的 EUID（有效用户 ID）是否为 `0` 来判定某账户是否拥有 root 权限。参见：main/sys/kern/kern_priv.c[EB/OL]. [2026-03-26]. <https://github.com/freebsd/freebsd-src/blob/main/sys/kern/kern_priv.c> 中的 `if (suser_enabled(cred))` 代码块部分。
+实际上，内核根据账户的 EUID（有效用户 ID）是否为 `0` 来判定某账户是否拥有 root 权限。参见：main/sys/kern/kern_priv.c[EB/OL]. [2026-03-26]. <https://github.com/freebsd/freebsd-src/blob/main/sys/kern/kern_priv.c> 中的 `if (suser_enabled(cred))` 代码块部分。
 
-获取超级用户特权有多种方式。虽然可以直接以 root 登录，但这种做法极不推荐。推荐使用 `su(1)` 命令切换为超级用户。
+获取超级用户特权有多种方式。虽然可以直接以 root 登录，但这种做法极不推荐，推荐使用 `su(1)` 命令切换为超级用户。
 
-## 组管理
+## 账户管理
 
-组是用户的列表。组由其组名和 GID 标识。在 FreeBSD 中，内核使用进程的 UID 和其所属的组列表来确定进程可执行的操作范围。大多数情况下，用户或进程的 GID 通常指列表中的第一个组。
+FreeBSD 提供了多种不同的命令来管理用户账户。
 
-组名到 GID 的映射列在 `/etc/group` 中。这是一个纯文本文件，有四个以冒号分隔的字段。第一个字段是组名，第二个是加密密码，第三个是 GID，第四个是以逗号分隔的成员列表。有关语法的完整描述，请参阅 group(5)。
+**管理用户账户的工具**
 
-超级用户可以使用文本编辑器修改 `/etc/group`，但首选使用 vigr(8) 编辑组文件，因为它可以捕获一些常见错误。或者，可以使用 pw(8) 添加和编辑组。
+| 命令 | 概要 |
+| ---- | ---- |
+| [adduser(8)](https://man.freebsd.org/cgi/man.cgi?query=adduser&sektion=8&format=html) | 推荐用于添加新用户的命令行应用程序。 |
+| [rmuser(8)](https://man.freebsd.org/cgi/man.cgi?query=rmuser&sektion=8&format=html) | 推荐用于删除用户的命令行应用程序。 |
+| [chpass(1)](https://man.freebsd.org/cgi/man.cgi?query=chpass&sektion=1&format=html) | 用于更改用户数据库信息的灵活工具。 |
+| [passwd(1)](https://man.freebsd.org/cgi/man.cgi?query=passwd&sektion=1&format=html) | 用于更改用户密码的命令行工具。 |
+| [pw(8)](https://man.freebsd.org/cgi/man.cgi?query=pw&sektion=8&format=html) | 可修改用户账户所有方面的强大灵活工具。 |
+| [bsdconfig(8)](https://man.freebsd.org/cgi/man.cgi?query=bsdconfig&sektion=8&format=html) | 带有账户管理支持的系统配置工具。 |
 
-使用 `operator` 组时必须小心，因为可能会授予意外的类似超级用户的访问权限，包括但不限于关机、重启和访问 `/dev` 中的所有项目。
+### adduser 创建用户
 
-### 添加组
+推荐使用的添加新用户的程序是脚本文件 [adduser(8)](https://man.freebsd.org/cgi/man.cgi?query=adduser&sektion=8&format=html)。添加新用户时，此程序会自动更新 `/etc/passwd` 和 `/etc/group`。
 
-使用 pw(8) 添加组：
+adduser 还会为新用户创建 home 目录，从 `/usr/share/skel` （源代码路径为 `share/skel`）复制默认配置文件。`adduser` 的源代码路径为 `usr.sbin/adduser/adduser.sh`。
 
-```sh
-# pw groupadd ykla2
-# pw groupshow ykla2
-ykla2:*:1002:
-```
+[adduser(8)](https://man.freebsd.org/cgi/man.cgi?query=adduser&sektion=8&format=html) 是交互式的，会逐步引导创建新用户账户。如下所示，输入所需信息或按 **回车键** 接受方括号中的默认值。
 
-在此示例中，1002 是 ykla2 的 GID。此时，ykla2 没有成员。
+在此示例中，用户被邀请加入 `wheel` 组，使其可以通过 [su(1)](https://man.freebsd.org/cgi/man.cgi?query=su&sektion=1&format=html) 成为超级用户。
 
-### 向组中添加用户
+完成后，该工具会提示是创建另一个用户还是退出。
 
-使用 pw(8) 将用户添加到组中：
-
-```sh
-# pw groupmod ykla2 -M ykla
-# pw groupshow ykla2
-ykla2:*:1002:ykla
-```
-
-`-M` 的参数是要添加到新（空）组或替换现有组成员的以逗号分隔的用户列表。对用户而言，此组成员身份与密码文件中列出的用户主组不同且是额外的。这意味着当使用 pw(8) 的 groupshow 时，用户不会显示为成员，但当通过 id(1) 或类似工具查询信息时会显示。当 pw(8) 用于将用户添加到组时，它仅操作 `/etc/group`，不会尝试从 `/etc/passwd` 读取额外数据。
-
-向现有组追加新成员：
-
-```sh
-# pw groupmod ykla2 -m root
-# pw groupshow root
-ykla2:*:1002:ykla,root
-```
-
-在此示例中，`-m` 的参数是要添加到组中的以逗号分隔的用户列表。与上一个示例不同，这些用户被追加到组中，不会替换组中的现有用户。
-
-使用 id(1) 确定组成员身份：
-
-```sh
-% id ykla
-uid=1001(ykla) gid=1001(ykla) groups=1001(ykla),0(wheel),1002(ykla2)
-```
-
-在此示例中，ykla 是组 ykla、wheel 和 ykla2 的成员。
-
-有关此命令和 `/etc/group` 格式的更多信息，请参阅 pw(8) 和 group(5)。
-
-## `adduser` 创建用户
-
-- 创建一个普通用户（用户名为 `ykla`），并将其添加到 `video` 组：
+示例：创建普通用户 `ykla`，并将其添加到 `video` 组：
 
 ```sh
 # adduser -g video -s sh -w yes
 # Username: ykla
 ```
 
-示例：创建一个名为 test 的用户，并将其添加到 wheel 组，设置其默认 Shell 为 sh：
+示例：创建用户 test，并将其添加到 wheel 组，设置其默认 Shell 为 sh：
 
 ```sh
-# adduser
+# adduser # 此工具必须由超级用户运行
 Username: test # 用户名 ①
 Full name:  # 全名，可留空
 Uid (Leave empty for default): # UID 设置，可留空
@@ -173,13 +143,26 @@ Add another user? (yes/no): no # 还需要创建另一个账户吗？
 Goodbye!
 ```
 
+> **注意**
+>
+> 由于输入密码时不会打印在屏幕上也不会显示为掩码 `*`，请在创建用户账户时小心不要输错密码。
+
 - ① 登录名命名有一些限制，参见 passwd(5)[EB/OL]. [2026-03-26]. <https://man.freebsd.org/cgi/man.cgi?query=passwd&sektion=5&format=html>。但请注意，登录名不支持八位编码字符集，例如不支持中文（即仅支持特定 ASCII 字符）。
 
-## `rmuser` 删除用户与 `passwd` 修改密码
+只有 root 才能使用此命令，否则将报错如下：
 
-- `rmuser` 用于删除用户。与 `adduser` 命令一样，也是交互式的。
+```sh
+$ adduser test
+adduser: ERROR: you must be the super-user (uid 0) to use this utility.
+```
 
-示例：
+提示只有 UID 0 的用户（通常是 root）才能调用 adduser 命令。
+
+### rmuser 删除用户
+
+`rmuser` 用于删除用户，与 `adduser` 命令一样，也是交互式的脚本。`rmuser` 源代码路径是 `usr.sbin/adduser/rmuser.sh`。
+
+示例：删除用户 test1 test2。
 
 ```sh
 # rmuser -y test1 test2 # 同时删除用户 test1 和 test2
@@ -189,82 +172,220 @@ Removing user (test2): home passwd.
 
 参数 `-y` 用于跳过确认步骤。
 
-删除用户时，若主目录为 ZFS 数据集且已清空，pw(8) 会自动销毁该数据集，但不处理数据集内的子数据集和快照。
+### chpass 更改用户信息
 
-- `chpass` 命令以 `vi` 编辑器方式打开并修改指定用户信息，如不指定用户则默认为当前用户。
+所有用户都可以使用 [chpass(1)](https://man.freebsd.org/cgi/man.cgi?query=chpass&sektion=1&format=html) 更改其默认 shell 和账户的个人信息。chpass 源代码位于 `usr.bin/chpass`。
+
+示例：普通用户使用 nvi 文本编辑器打开当前用户信息进行修改。
+
+```sh
+$ chpass ykla	# 修改 ykla 的账户信息数据库
+#Changing user information for ykla.
+Shell: /bin/sh	# 用户 Shell
+Full Name: User &	# 用户全名
+Office Location:	# 办公地点
+Office Phone:	# 办公电话
+Home Phone:	# 家庭电话
+Other information:	# 其他信息
+~
+~
+~
+/etc/pw.ogzb33: unmodified: line 1
+```
+
+root 可以用此工具更改任意用户的额外账户信息。
+
+```sh
+# chpass ykla	# 修改 ykla 的账户信息数据库
+#Changing user information for ykla.
+Login: ykla	# 指定 ykla 
+Password: $6$SqMJXrv5aC6Wq.by$nmbZs078aHNBVyh9noLFouJsGHyFSvQIzH0W4zpdfXuPtGtt.FHgWfXDHVBa
+.g9P0eZ32UwfByzRKdVnTaO7W.	# 用户密码
+Uid [#]: 1001
+Gid [# or name]: 1001
+Change [month day year]:	# 密码更改日期
+Expire [month day year]:	# 账户过期日期
+Class:	# 用户分级
+Home directory: /home/ykla	# 用户家目录
+Shell: /bin/sh
+Full Name: User &
+Office Location:
+Office Phone:
+Home Phone:
+Other information:
+~
+~
+~
+/etc/pw.mDp9q3: unmodified: line 1
+```
+
+示例：修改用户 test1 的登录环境为 `/bin/sh`。
+
+```sh
+# chpass -s sh test1 # 
+chpass: user information updated
+```
+
+常用参数：`-s`，用于修改登录 Shell。
 
 > **技巧**
 >
-> `export EDITOR=/usr/bin/ee` 可将编辑器改为更简单的 `ee`。
+> [chfn(1)](https://man.freebsd.org/cgi/man.cgi?query=chfn&sektion=1&format=html) 与 [chsh(1)](https://man.freebsd.org/cgi/man.cgi?query=chsh&sektion=1&format=html) 是 [chpass(1)](https://man.freebsd.org/cgi/man.cgi?query=chpass&sektion=1&format=html) 的链接命令，[ypchpass(1)](https://man.freebsd.org/cgi/man.cgi?query=ypchpass&sektion=1&format=html)、[ypchfn(1)](https://man.freebsd.org/cgi/man.cgi?query=ypchfn&sektion=1&format=html) 和 [ypchsh(1)](https://man.freebsd.org/cgi/man.cgi?query=ypchsh&sektion=1&format=html) 也是。由于 NIS 支持是自动的，无需在命令前加 `yp`。这一点可以从源代码 `usr.bin/chpass/Makefile` 进行推断：
+>
+> ```makefile
+>SYMLINKS=	chpass ${BINDIR}/chfn
+>SYMLINKS+=	chpass ${BINDIR}/chsh
+>.if ${MK_NIS} != "no"	# 如果系统启用了 NIS
+>SYMLINKS+=	chpass ${BINDIR}/ypchfn
+>SYMLINKS+=	chpass ${BINDIR}/ypchpass
+>SYMLINKS+=	chpass ${BINDIR}/ypchsh
+>.endif
+>
+>MLINKS=	chpass.1 chfn.1 chpass.1 chsh.1
+>.if ${MK_NIS} != "no"
+>MLINKS+= chpass.1 ypchpass.1 chpass.1 ypchfn.1 chpass.1 ypchsh.1
+>.endif
+> ```
 
-常用参数：`-s`，用于修改登录 Shell
+### passwd 更改用户密码
 
-示例：
+修改用户密码，如不指定用户则默认为当前用户。普通用户只能修改自己的密码，否则将报错如下：
 
 ```sh
-# chpass -s sh test1 # 修改用户 test1 的登录环境为 /bin/sh
-chpass: user information updated
-# export EDITOR=/usr/bin/ee  # 将编辑器改为更简单的 `ee` 编辑器
-# chpass # 使用 ee 编辑器打开当前用户信息进行修改
-# passwd # 修改用户密码，如不指定用户则默认为当前用户。
+$ passwd test
+passwd: permission denied
 ```
 
-root 用户可以修改所有用户的密码。FreeBSD 的 `passwd` 选项与 Linux 不同。FreeBSD 没有 `-u`（解锁）、`-e`（过期）、`-d`（删除密码）等选项。锁定/解锁账户请使用 `pw lock/unlock`。
-
-## `pw` 命令
-
-在 FreeBSD 中，可以使用 `pw` 命令管理用户和组：
-
-- 创建 `admin` 组，并将用户 `ykla` 同时添加到 `admin` 和 `wheel` 组：
+示例：使用 ykla 更改自己的密码。
 
 ```sh
-# pw groupadd admin
-# pw usermod ykla -G admin,wheel
+$ passwd ykla
+Changing local password for ykla
+Old Password:	# 输入旧密码
+New Password:	# 输入新密码
+Retype New Password:	# 再次输入新密码
 ```
+
+root 用户可以修改所有用户的密码，且无需旧密码。
+
+示例：使用 root 更改用户 ykla 的密码。
+
+```sh
+# passwd ykla
+Changing local password for ykla
+New Password:	# 输入新密码
+Retype New Password:	# 再次输入新密码
+```
+
+> **技巧**
+>
+> FreeBSD 的 `passwd` 选项与 Linux 不同，锁定/解锁账户请使用 `pw lock/unlock`。
+
+## 组管理
+
+组是用户的列表。组由其组名和 GID 标识。在 FreeBSD 中，内核使用进程的 UID 和其所属的组列表来确定进程可执行的操作范围。大多数情况下，用户或进程的 GID 通常指列表中的第一个组。
+
+组名到 GID 的映射列在 `/etc/group` 中。`/etc/group` 是纯文本文件，有四个以冒号分隔的字段。
+
+```sh
+# cat /etc/group
+wheel:*:0:root,ykla	# 
+operator:*:5:root
+
+……省略部分输出……
+
+ykla:*:1001:
+test:*:1002:
+```
+
+可以看到 `/etc/group` 的格式形如 `组名:加密后的密码:GID:成员列表`，通过英文冒号分隔。
+
+超级用户可以使用文本编辑器修改 `/etc/group`，但不建议这样做，因为可能会因编辑错误导致严重后果。建议使用 pw(8) 添加和编辑组。
+
+在使用 `operator` 组时请务必小心，因为该组可能授予意外的类似超级用户的访问权限，包括但不限于关机、重启和访问 `/dev` 中的所有项目。
+
+在 FreeBSD 中，可以使用 `pw` 命令管理用户和组：它是系统用户和组文件的前端。[pw(8)](https://man.freebsd.org/cgi/man.cgi?query=pw&sektion=8&format=html) 提供了非常强大的命令行选项，适合用于 shell 脚本，但对于新用户来说可能比本节中的其他命令更复杂。
+
+### 添加组
+
+使用 pw(8) 添加组：
+
+```sh
+# pw groupadd ykla2
+# pw groupshow ykla2
+ykla2:*:1002:
+```
+
+在此示例中，1002 是 ykla2 的 GID。此时，ykla2 没有成员。
+
+### 向组中添加用户
+
+使用 pw(8) 将用户添加到组中。
+
+示例：设置组 test5 的成员为 test1。
+
+```sh
+# pw groupmod test5 -M test1 # 原有成员会被删除！
+```
+
+示例：将用户 `ykla` 同时添加到 `ykla2` 和 `wheel` 组：
+
+```sh
+# pw usermod ykla -G ykla2,wheel
+```
+
+`-G` 组列表，逗号分隔。
 
 验证如下：
 
 ```sh
 # id ykla
-uid=1001(ykla) gid=1001(ykla) groups=1001(ykla),0(wheel),1002(admin)
+uid=1001(ykla) gid=1001(ykla) groups=1001(ykla),0(wheel),1002(ykla2)
 ```
 
-- 将用户 `root` 添加到 `wheel` 组（`wheel` 组为系统默认组，无需创建）：
+示例：将用户 `test` 添加到 `wheel` 组（`wheel` 组为系统默认组，无需创建）：
 
 ```sh
-# pw groupmod wheel -m root
+# pw groupmod wheel -m test
 ```
 
-- 从 `admin` 组里移除用户 `ykla`：
+在此示例中，传递给 `-m` 的参数是用户列表（逗号分隔），这些用户将被追加进组中，并不会替换已有用户。
 
-```sh
-# pw groupmod admin -d ykla
-```
+### 删除组
 
-- 删除 `admin` 组：
+示例：删除 `admin` 组：
 
 ```sh
 # pw groupdel admin
 ```
 
-### `pw useradd` 命令
+### 删除组中的用户
 
-用于新建用户。
-
-示例：
+示例：从 `admin` 组里移除用户 `ykla`：
 
 ```sh
-# pw useradd test1 # 创建用户 test1，uid 系统默认，test1 组，登录环境 /bin/sh，未创建主目录
-# pw groupadd test2 # 创建主组 test2
-# pw useradd test2 -u 1200 -m -d /tmp/test -g test2 -G wheel -s sh -c test2 # 创建用户 test2，uid 为 1200，创建主目录，主目录为 /tmp/test，主组为 test2，有管理员权限（wheel），登录环境 /bin/sh，全名 test2
-# echo password | pw useradd test3 -h 0 # 创建用户 test3，同时设置密码为 password
+# pw groupmod admin -d ykla
 ```
 
-### `pw usermod` 命令
+### 添加用户
 
-用于修改用户信息，常用参数：
+`pw useradd` 命令用于新建用户。
 
-`-l`，为用户改名；其他参数参考 `useradd` 子命令。
+示例：创建用户 test1。
+
+```sh
+# pw useradd test1 # uid 系统默认，test1 组，登录环境 /bin/sh，未创建主目录
+```
+
+示例：创建用户 test2。
+
+```sh
+# pw useradd test2 -u 1200 -m -d /tmp/test -g test2 -G wheel -s sh -c test2 # 创建用户 test2，uid 为 1200，创建主目录，主目录为 /tmp/test，主组为 test2，有 wheel 权限，登录环境 /bin/sh，全名 test2
+```
+
+### 修改用户信息
+
+`pw usermod` 命令用于修改用户信息。
 
 示例：
 
@@ -272,11 +393,11 @@ uid=1001(ykla) gid=1001(ykla) groups=1001(ykla),0(wheel),1002(admin)
 # pw usermod test1 -l test2 # 将用户 test1 重命名为 test2
 ```
 
-### `pw userdel` 命令
+选项 `-l` 修改用户名。
 
-用于删除用户，常用参数：
+### 删除用户
 
-`-r`，删除用户同时删除用户主目录及所有相关信息；若不使用该参数则信息保留，仅删除用户。
+`pw userdel` 命令用于删除用户。
 
 示例：删除用户 test2 及其主目录。
 
@@ -284,57 +405,33 @@ uid=1001(ykla) gid=1001(ykla) groups=1001(ykla),0(wheel),1002(admin)
 # pw userdel -r test2
 ```
 
-### `pw usershow` 命令
+常用参数：`-r` 删除用户同时删除用户主目录及所有相关信息；若不使用该参数则信息保留，仅删除用户。若主目录为 ZFS 数据集且已清空，pw(8) 会自动销毁该数据集，但不会处理数据集内的子数据集和快照。
 
-用于显示用户信息，示例：
+### 显示用户信息
+
+`pw usershow` 命令用于显示用户信息。
+
+示例：显示用户 test2 的详细信息。
 
 ```sh
-# pw usershow test2  # 显示用户 test2 的详细信息
+# pw usershow test2
 test2:$6$FkxPcs2y.Y8cxyuj$kVDoV1LC.IWKGlSitll3oLArF18aHQYID0JYE.TUuD0YFgba.c7MbGs3xLnmpCZyu1nVKHhNqW2X7a57qN0xg/:1201:1201::0:0:User &:/home/test2:/bin/sh
 ```
 
-### `pw groupadd` 命令
+### 修改组信息
 
-用于新建组。
+`pw groupmod` 命令用于修改组信息。
 
-示例：
+示例：修改 test 组的 gid 为 1300。
 
 ```sh
-# pw groupadd test -g 1200 # 创建组 test。gid 为 1200；gid 与 uid 不同
-# pw groupadd test5 -M test1,test2 # 创建组 test5。成员有 test1 和 test2
+# pw groupmod test -g 1300
 ```
 
-### `pw groupmod` 命令
-
-用于修改组信息，常用参数：
-
-`-g`，指定新的 `gid`
-
-`-l`，重命名组名
-
-`-M`，替换现有组成员列表，多个用逗号隔开
-
-`-m`，为现有组成员列表增加新的成员
-
-其他参数参考 `groupadd` 命令。
-
-示例：
+示例：将 test 组重命名为 test2。
 
 ```sh
-# pw groupmod test -g 1300 # 修改 test 组的 gid 为 1300
-# pw groupmod test -l test2 # test 组重命名为 test2
-# pw groupmod test5 -M test1 # 设置组 test5 的成员为 test1，原有成员会被删除！
-# pw groupmod test5 -m test3 # 为组 test5 新增成员 test3
-```
-
-### `pw groupdel` 命令
-
-用于删除组。
-
-示例：
-
-```sh
-# pw groupdel test5
+# pw groupmod test -l test2
 ```
 
 ## 参考文献

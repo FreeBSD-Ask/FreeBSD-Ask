@@ -185,8 +185,6 @@ setenv XRAY_LOCATION_ASSET /usr/local/share/xray-core/
 
 #### 方案二：系统服务运行
 
-此为最符合 FreeBSD 规范的方法，支持开机自启动和统一管理。
-
 **1. 放置配置文件：**
 
 首先，将配置移至系统默认目录并修正权限：

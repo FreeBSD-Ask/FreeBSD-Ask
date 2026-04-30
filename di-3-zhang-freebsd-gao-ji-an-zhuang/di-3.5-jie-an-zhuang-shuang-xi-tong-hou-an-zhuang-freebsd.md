@@ -2,7 +2,7 @@
 
 本节研究在已预装 Windows 等操作系统的 UEFI 环境下，部署 FreeBSD 作为第二操作系统的技术方案。
 
-本节以 `FreeBSD-14.2-RELEASE-amd64-disc1.iso` 为例，演示了如何在 UEFI 环境下，安装 FreeBSD 14.2-RELEASE 与 Windows 11 24H2 双系统，具有典型的参考价值。
+本节以 `FreeBSD-14.2-RELEASE-amd64-disc1.iso` 为例，演示了如何在 UEFI 环境下，安装 FreeBSD 14.2-RELEASE 与 Windows 11 24H2 双系统。
 
 > **技巧**
 >

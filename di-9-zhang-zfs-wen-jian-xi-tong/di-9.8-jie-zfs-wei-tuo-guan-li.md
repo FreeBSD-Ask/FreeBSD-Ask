@@ -61,11 +61,11 @@ Local+Descendent permissions:
         user safreya create,destroy,mount,snapshot
 ```
 
-可以看到，系统在创建用户时，会默认为其数据集授予 create、destroy、mount 和 snapshot 四项权限。
+由输出可知，系统在创建用户时，会默认为其数据集授予 create、destroy、mount 和 snapshot 四项权限。
 
 ZFS 委托权限存储在数据集的元数据中。“Local+Descendent permissions”表示该权限设置既适用于当前数据集，也会继承到其子数据集。
 
-所以，对于这两个数据集，普通用户亦可使用快照功能：
+因此，对于这两个数据集，普通用户也可使用快照功能：
 
 ```sh
 % zfs snapshot zroot/home/safreya@snap1   # 为 zroot/home/safreya 文件系统创建名为 snap1 的快照
@@ -108,7 +108,7 @@ zroot/home/safreya/dataset_2                    96K   396G    96K  /home/safreya
 % zfs destroy zroot/home/safreya/dataset_2        # 删除 ZFS 数据集 zroot/home/safreya/dataset_2
 ```
 
-可以看到，创建和销毁权限可以正常使用，而挂载权限需要通过开启内核参数 `vfs.usermount` 来允许用户级挂载。
+由输出可知，创建和销毁权限可以正常使用，而挂载权限需要通过开启内核参数 `vfs.usermount` 来允许用户级挂载。
 
 至此，用户级 ZFS 管理的基本需求已经满足。但仔细观察会发现 `rollback` 权限默认不可用，需要由 root 用户为普通用户授予该权限。
 

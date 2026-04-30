@@ -2,9 +2,9 @@
 
 FreeBSD 支持多种无线网卡和认证方式。
 
->**技巧**
+> **技巧**
 >
->Wi-Fi 并不是任何单词的缩写。该词仅为 [Wi-Fi 联盟](https://www.wi-fi.org/)（Wi-Fi Alliance）持有的注册商标，并无任何引申义，如“Wireless Fidelity”。（Doctorow C. WiFi isn’t short for “Wireless Fidelity”[EB/OL]. (2005-11-08)[2026-04-21]. <https://boingboing.net/2005/11/08/wifi-isnt-short-for.html>.）
+> Wi-Fi 并不是任何单词的缩写。该词仅为 [Wi-Fi 联盟](https://www.wi-fi.org/)（Wi-Fi Alliance）持有的注册商标，并无任何引申义，如“Wireless Fidelity”。（Doctorow C. WiFi isn’t short for “Wireless Fidelity”[EB/OL]. (2005-11-08)[2026-04-21]. <https://boingboing.net/2005/11/08/wifi-isnt-short-for.html>.）
 
 ## 快速连接（基于 COMFAST CF-912AC 1200M 802.11AC）
 

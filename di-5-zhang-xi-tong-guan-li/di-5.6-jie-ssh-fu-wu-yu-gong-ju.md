@@ -225,7 +225,7 @@ OpenSSH_9.7p1, OpenSSL 3.0.14 4 Jun 2024
 
 ### Xshell
 
-Xshell 是 Windows 平台上的一款功能完善的终端工具，支持串口、SSH 和 Telnet 协议。
+Xshell 是 Windows 平台上的一款终端工具，支持串口、SSH 和 Telnet 协议。
 
 Xshell 下载地址（输入用户名和邮件即可）：
 

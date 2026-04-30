@@ -4,7 +4,7 @@ Swap 空间是操作系统中内存管理的组成部分。
 
 在 FreeBSD 中，Swap 可通过传统分区、交换文件或 ZFS 卷（ZVOL）等多种方式实现。本节重点阐述在系统安装后如何添加 Swap 空间的技术方案。
 
-若在系统安装阶段未配置 Swap（交换分区），则仅能通过 dd 命令创建交换文件或 ZFS 卷的方式实现；这是因为 UFS 及 ZFS 文件系统均不支持分区收缩操作。
+若在系统安装阶段未配置 Swap（交换分区），则仅能通过 dd 命令创建交换文件或 ZFS 卷的方式实现，这是因为 UFS 及 ZFS 文件系统均不支持分区收缩操作。
 
 ## 目录结构
 
@@ -41,7 +41,7 @@ Swap 空间是操作系统中内存管理的组成部分。
 # chmod 0600 /usr/swap0
 ```
 
-若要立即启用，需将交换文件通过 mdconfig 配置为内存磁盘设备，再使用 swapon 激活交换空间。mdconfig 用于将文件映射为内存磁盘，swapon 用于激活交换设备：
+若要立即启用，需将交换文件通过 mdconfig 配置为内存磁盘设备，再使用 swapon 激活交换空间，其中 mdconfig 用于将文件映射为内存磁盘，swapon 用于激活交换设备：
 
 ```sh
 # mdconfig -a -t vnode -f /usr/swap0 -u 0 && swapon /dev/md0
@@ -74,7 +74,7 @@ swapfile="/usr/swap0"
 对上述命令的参数说明如下：
 
 - `$(getconf PAGESIZE)`：可返回系统页面大小（固态硬盘通常返回值为 `4096`），从而使 Swap 卷与系统页面对齐，以期提高性能
-- `-o`：用于指定选项，意为“option”，语法为 `-o 属性名=属性值`
+- `-o`：用于指定选项（option），语法为 `-o 属性名=属性值`
 - `-o logbias=throughput`：ZFS 将优化同步操作，提高池的全局吞吐量并有效利用资源，可提升文件写入性能
 - `-o sync=always`：强制所有写入操作实时同步
 - `-o primarycache=metadata`：控制 ARC 的缓存策略，仅缓存元数据，不缓存实际数据块，避免 ARC 将 Swap 数据缓存到内存
@@ -116,7 +116,7 @@ Device              Size     Used    Avail Capacity
 
 选项 `-h` 表示以人类可读格式（human-readable）输出。参见 FreeBSD Project. man swapinfo(8)[EB/OL]. [2026-03-26]. <https://man.freebsd.org/cgi/man.cgi?swapinfo(8)>。
 
-从输出可以看出，`/dev/nda0p3` 为交换分区，其大小为 2 GB，当前已使用量为 0。
+从输出可知，`/dev/nda0p3` 为交换分区，其大小为 2 GB，当前已使用量为 0。
 
 ## 课后习题
 

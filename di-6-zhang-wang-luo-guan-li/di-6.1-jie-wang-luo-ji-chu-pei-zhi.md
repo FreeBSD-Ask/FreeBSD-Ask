@@ -88,7 +88,7 @@ lo0: flags=8049<UP,LOOPBACK,RUNNING,MULTICAST> metric 0 mtu 16384
 
 如果网络有 DHCP 服务器，配置网络接口使用 DHCP 较为简便。FreeBSD 使用 dhclient(8) 作为 DHCP 客户端。dhclient(8) 将自动提供 IP 地址、子网掩码和默认路由器。
 
->**注意**
+> **注意**
 >
 > dhclient(8) **不支持 DHCPv6**（RFC 3315/RFC 8415），IPv6 动态地址需使用 `rtsold(8)`（SLAAC）或第三方 DHCPv6 客户端（如 `dhcp6c`）。
 
@@ -178,9 +178,9 @@ round-trip min/avg/max/stddev = 0.635/0.705/0.776/0.071 ms
 
 如能正常收到 ICMP 响应报文，则说明网络已连通。
 
->**注意**
+> **注意**
 >
->Jail 内默认不允许使用 ping（需设置 sysctl `allow.raw_sockets`）。
+> Jail 内默认不允许使用 ping（需设置 sysctl `allow.raw_sockets`）。
 
 ## IPv6 配置
 
@@ -291,7 +291,7 @@ root@f:/home/ykla #
 
 `/etc/hosts` 文件是一个简单的文本数据库，提供主机名到 IP 地址的映射。通过 LAN 连接的本地计算机条目可添加至此文件中，用于简单的命名目的，而无须设置 DNS 服务器。此外，`/etc/hosts` 文件可用于提供 Internet 名称的本地记录，减少对外部 DNS 服务器的查询需求。
 
-例如，在本地环境中有 www/gitlab-ce 的本地实例，可以如下行添加到 `/etc/hosts` 文件：
+例如，在本地环境中有 www/gitlab-ce 的本地实例，可以将如下行添加到 `/etc/hosts` 文件：
 
 ```ini
 192.168.1.150 git.example.com git

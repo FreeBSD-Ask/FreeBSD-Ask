@@ -4,9 +4,9 @@
 
 UFS 全称为 Unix File System（UNIX 文件系统），FreeBSD 中使用的 UFS 实际上是伯克利快速文件系统（Berkeley Fast File System，FFS），由 Kirk McKusick、Bill Joy 等人于 1983 年随 4.2BSD 首次引入，其设计理念可追溯至更早的 Unix 文件系统。历史上，macOS 也曾使用该文件系统作为根文件系统。
 
-需要明确区分的是，本节所述的 UFS 文件系统与手机等设备中使用的 UFS 存储属于完全不同的技术范畴。后者全称为 Universal Flash Storage（通用闪存存储），是一种硬件存储标准，目前已发展至 4.1 版本（FreeBSD 在 10.4 版本中支持 eMMC；FreeBSD 15.0 已通过 `ufshci` 驱动支持 UFS 存储）。
+需要明确区分，本节所述的 UFS 文件系统与手机等设备中使用的 UFS 存储属于完全不同的技术范畴。后者全称为 Universal Flash Storage（通用闪存存储），是一种硬件存储标准，目前已发展至 4.1 版本（FreeBSD 在 10.4 版本中支持 eMMC；FreeBSD 15.0 已通过 `ufshci` 驱动支持 UFS 存储）。
 
-作为文件系统的 UFS，其当前版本号为 2。基于 Linux 的 Android 系统不支持 UFS 文件系统，此类设备的根文件系统通常为 ext4（部分新设备采用 F2FS）。Linux 对 UFS 的读写支持尚不完整。
+作为文件系统的 UFS，其当前版本号为 2。基于 Linux 的 Android 系统不支持 UFS 文件系统，此类设备的根文件系统通常为 ext4（部分新设备采用 F2FS），而 Linux 对 UFS 的读写支持尚不完整。
 
 > **警告**
 >
@@ -30,13 +30,13 @@ UFS 全称为 Unix File System（UNIX 文件系统），FreeBSD 中使用的 UFS
   12650494  29292544       - free -  (14G)
 ```
 
-系统盘初始大小为 5 GB，输出显示 `da0` 磁盘仅包含此一个 UFS 分区。
+系统盘初始大小为 5 GB，输出显示 `da0` 磁盘仅包含一个 UFS 分区。
 
 ### 执行扩容命令序列
 
 > **警告**
 >
-> 若使用的是 GPT 分区表，此处的扩容操作在虚拟机或云服务器环境中可能会破坏 GPT 分区表，这是因为虚拟机或云平台在调整磁盘大小时可能未正确更新 GPT 分区表的备份副本。因此需首先恢复 `da0` 磁盘的分区表：
+> 若使用的是 GPT 分区表，此处的扩容操作在虚拟机或云服务器环境中可能会破坏 GPT 分区表，原因是虚拟机或云平台在调整磁盘大小时可能未正确更新 GPT 分区表的备份副本，因此需首先恢复 `da0` 磁盘的分区表：
 >
 > ```sh
 > # gpart recover da0
@@ -51,7 +51,7 @@ UFS 全称为 Unix File System（UNIX 文件系统），FreeBSD 中使用的 UFS
 da0p4 resized
 ```
 
-选项 `-i` 用于指定要扩容的分区编号，此处指扩展 `freebsd-ufs` 分区。
+选项 `-i` 用于指定要扩容的分区编号，此处用于扩展 `freebsd-ufs` 分区。
 
 ### 扩展文件系统
 

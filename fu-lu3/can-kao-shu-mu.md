@@ -113,7 +113,7 @@
 - *FreeBSD Mastery: Advanced ZFS*
 - *FreeBSD Mastery: Jails*
 
-该系列书籍类似非计算机专业的计算机导论课程，注重 **基础** 操作。该书的历史意义重于实践价值。
+该系列书籍类似于非计算机专业的计算机导论课程，注重 **基础** 操作。该书的历史意义重于实践价值。
 
 ### *Absolute FreeBSD, 3rd Edition: The Complete Guide to FreeBSD*
 
