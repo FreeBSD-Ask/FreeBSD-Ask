@@ -235,7 +235,7 @@ Xshell 下载地址（输入用户名和邮件即可）：
 
 ### MobaXterm
 
-MobaXterm 作为一款集成了 SCP 功能和多种网络工具的终端软件。
+MobaXterm 是一款集成了 SCP 功能和多种网络工具的终端软件。
 
 MobaXterm 目前不支持中文，下载地址 <https://mobaxterm.mobatek.net/download-home-edition.html>，任选其一。
 
@@ -401,6 +401,80 @@ root     syslogd     1017 7   udp4   *:514                 *:*
 ![juicessh 的 mosh 再次恢复连接 WiFi](../.gitbook/assets/juicessh6.png)
 
 断开后会有提示，重连网络后会自动恢复，如同未断开一般（已结合 `screen` 使用）。
+
+## SSH 高级技巧
+
+### 限制登录用户
+
+可以通过 **AllowUsers** 或 **AllowGroups** 指令来限制允许登录的用户。即使本地用户尝试登录并输入正确的密码，只要他们不在这些指令中列出的名单中，登录依然会被拒绝。可以使用通配符来匹配用户名：
+
+```ini
+AllowUsers abc*
+```
+
+在重新启动守护进程以使这些更改生效之前，请使用 `sshd -t` 或者 `sshd -T`（用于更多测试）来检查 `sshd_config` 文件的有效性。**AllowGroups** 指令对一组用户执行相同的限制。用户组在集中管理方面更为方便。
+
+分别使用 **DenyUsers** 或 **DenyGroups** 命令也可以拒绝某些用户或用户组的登录。处理这些混合条目时，指令的处理顺序为：**DenyUsers**、**AllowUsers**、**DenyGroups**，然后是 **AllowGroups**。
+
+### 使用 Match 语句限制登录方式
+
+可以使用 match 语句限制单个用户的登录方式。这在功能上类似于 if 语句，待匹配发生，它们就会覆盖全局的 `sshd_config` 设置。例如，限制 monitoring 用户只能使用公钥认证：
+
+```ini
+Match User monitoring
+ AuthenticationMethods publickey
+```
+
+其他用户仍然使用全局设置，但待出现 monitoring 用户，针对该情况的 AuthenticationMethods 设置就会被覆盖。match 语句的其他匹配条件包括 Group、Host、LocalAddress、LocalPort、RDomain 和 Address。请注意，并非 sshd_config 中的所有关键字都可以在 match 语句中进行更改，但很多是可以的。完整的列表可参见 sshd_config(5)。
+
+### 断开挂起的 SSH 会话
+
+当远程登录到一台服务器正在工作，突然终端冻结，无法发送任何命令时，可以在冻结的终端上输入以下命令序列：
+
+```sh
+Enter ~ .
+```
+
+这会发送一个特殊的中断命令，使服务器立即断开会话，将控制权返回给你的本地 shell 会话。在一个正在运行的会话中，按下回车键，然后输入波浪号字符（`~`）紧跟句点（`.`）。
+
+其他转义序列记录在 ssh(1) 的"ESCAPE CHARACTERS"部分。输入回车、`~` 和 `?` 的序列会显示出一个转义序列列表。
+
+### 隐藏的登录脚本
+
+每次用户成功通过 SSH 登录系统时，都可以让一个脚本自动运行。默认情况下，实现这一功能的文件 `/etc/ssh/sshrc` 并不存在。当该文件被创建并设置为可执行后，SSH 守护进程会执行其中列出的命令。这个过程发生在读取完环境文件之后、用户的 shell（或指定命令）启动之前。
+
+例如，一个确保用户主目录权限正确的脚本：
+
+```sh
+#!/bin/sh
+HOMEDIR="/home/${USER}"
+if [ -d ${HOMEDIR} ]; then
+ chmod 0700 ${HOMEDIR}
+ chown ${USER}: ${HOMEDIR}
+else
+  echo "Home directory ${HOMEDIR} does not exist" >&2
+fi
+```
+
+请注意，这个脚本会在每次用户登录时运行——即便是通过 scp/sftp 进行文件传输时也会运行。所以不要放入那些执行时间较长的复杂代码。
+
+### 使用 SSH 作为 SOCKS 代理
+
+SSH 可以作为一个简易的 SOCKS 代理使用，在不信任的网络中加密浏览流量：
+
+```sh
+$ ssh -vD8080 -fCN sshproxyhost.example.com
+```
+
+各选项说明：
+
+- **-v**：让 SSH 输出详细信息，调试时有用
+- **-D 8080**：定义用于转发的本地动态端口，在本地机器上打开指定端口为本地套接字
+- **-f**：将 SSH 进程放到后台运行
+- **-C**：对数据进行压缩
+- **-N**：不打开终端，仅转发端口
+
+然后在浏览器中配置 SOCKS5 代理，将 socks 主机设置为 `127.0.0.1`，端口设置为 8080。只要 SSH 连接保持与目标系统的开放，代理隧道就处于建立状态。
 
 ## 附录：OpenSSH 服务端配置详解
 

@@ -2,7 +2,7 @@
 
 Mihomo 是 Clash 系列的衍生版本，已收录于 FreeBSD Ports 树中。
 
-本节将介绍 Mihomo 的安装与配置方法。
+本节介绍 Mihomo 的安装与配置方法。
 
 ## 安装 Mihomo
 
@@ -42,7 +42,7 @@ Mihomo 的文件结构如下：
 
 ## RC 脚本
 
-已向 Ports 维护者提交了合并请求（[Bug 291295 - net/mihomo: Add rc.conf and some Post-installation](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=291295)），该请求旨在为 Mihomo 添加系统服务管理支持，然目前尚未获得回应。在官方集成完成之前，可使用下文提供的自定义 RC 脚本以实现服务化管理。
+已向 Ports 维护者提交了合并请求（[Bug 291295 - net/mihomo: Add rc.conf and some Post-installation](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=291295)），该请求是为 Mihomo 添加系统服务管理支持，然目前尚未获得回应。在官方集成完成之前，可使用下文提供的自定义 RC 脚本以实现服务化管理。
 
 ### RC 脚本
 

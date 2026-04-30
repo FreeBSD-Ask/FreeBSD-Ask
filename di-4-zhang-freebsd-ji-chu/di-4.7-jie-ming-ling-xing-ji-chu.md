@@ -83,7 +83,7 @@ login:
   - `root@ykla:/`：
   - `root`：当前用户是 root
   - `@`：“谁”在“xx”主机上
-  - `ykla`：这里是主机名，和用户 ykla 无关。主机名可自行设定
+  - `ykla`：此处是主机名，和用户 ykla 无关。主机名可自行设定
   - `:/`：代表当前位于 `/` 路径下
 - ② 注意提示符号的变化：root 是 `#`，普通用户是 `$`（csh 是 `%`）
 - ③ 如果仅输入 `su` 并回车，命令的含义是从当前用户切换到 root 账户（如果已经是 root，则不会有任何变化）。非 wheel 组成员不能直接 `su` 到 root，否则系统将返回 `sorry` 错误提示，但可以 `su` 到其他用户。
@@ -499,7 +499,7 @@ $ rm /home/ykla/test
 $
 ```
 
-还可以用命令 `rmdir`（remove directory，即删除目录，且只能删除空目录）：
+还可使用命令 `rmdir`（remove directory，即删除目录，且只能删除空目录）：
 
 ```sh
 $ rmdir /home/ykla/test

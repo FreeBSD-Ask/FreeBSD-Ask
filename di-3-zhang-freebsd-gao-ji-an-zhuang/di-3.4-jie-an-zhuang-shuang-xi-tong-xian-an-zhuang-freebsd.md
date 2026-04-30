@@ -1,10 +1,10 @@
 # 3.4 安装双系统（先安装 FreeBSD）
 
-本节介绍在同一物理设备上部署 FreeBSD 与 Windows 多操作系统的技术方案，本小节聚焦于先安装 FreeBSD、再安装其他操作系统的场景。
+本节介绍在同一物理设备上部署 FreeBSD 与 Windows 双系统，先安装 FreeBSD、再安装 Windows。
 
 ## 安装 FreeBSD 14.2-RELEASE
 
-首先按照以下步骤安装 FreeBSD 14.2-RELEASE 系统，本节未特别说明之处，均采用默认设置与参数，以确保系统的稳定性。
+首先安装 FreeBSD 14.2-RELEASE 系统，未特别说明之处均采用默认设置与参数。
 
 ![FreeBSD 安装界面](../.gitbook/assets/dual-boot-1.png)
 
@@ -16,7 +16,7 @@
 
 ![分区方案选择](../.gitbook/assets/dual-boot-3.png)
 
-这里需要设置一个大的临时交换分区，该数值表示计划中的交换分区与 Windows 系统分区容量之和。如此设置是为了后续安装 Windows 时能够直接使用这部分空间，避免额外的分区操作。在本节中，交换分区（Swap）大小为 8 GB，其余 200 GB 空间预留给 Windows。请修改 `S Swap Size` 的大小。
+此处需要设置一个大的临时交换分区，该数值表示计划中的交换分区与 Windows 系统分区容量之和。如此设置是为了后续安装 Windows 时能够直接使用这部分空间，避免额外的分区操作。在本节中，交换分区（Swap）大小为 8 GB，其余 200 GB 空间预留给 Windows。请修改 `S Swap Size` 的大小。
 
 ![交换分区大小设置](../.gitbook/assets/dual-boot-4.png)
 
@@ -60,7 +60,7 @@ Device              Size     Used    Avail Capacity
 
 ## 安装 Windows 11
 
-FreeBSD 安装完成后，接下来安装 Windows 系统。
+FreeBSD 安装完成后，安装 Windows 系统。
 
 插入 Windows 启动盘，设置 BIOS 从该启动盘启动，开始安装 Windows。此时系统会识别到这块硬盘上的现有分区结构，只需要使用之前预留的空间。
 
@@ -78,7 +78,7 @@ FreeBSD 安装完成后，接下来安装 Windows 系统。
 
 ## 还原交换分区（Swap）
 
-Windows 安装完成后，需要为 FreeBSD 还原交换分区。分配了 208 GB 空间，其中有 8 GB 是为交换分区预留的。现在需要将其还原。需要使用工具 [DiskGenius](https://www.diskgenius.com/)。
+Windows 安装完成后，为 FreeBSD 还原交换分区。分配了 208 GB 空间，其中有 8 GB 是为交换分区预留的。需要使用工具 [DiskGenius](https://www.diskgenius.com/)。
 
 ![DiskGenius 主界面](../.gitbook/assets/dual-boot-8.png)
 

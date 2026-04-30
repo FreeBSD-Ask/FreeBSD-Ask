@@ -1,7 +1,5 @@
 # 3.1 使用 Hyper-V 安装 FreeBSD
 
-本节介绍 FreeBSD 操作系统在 Microsoft Hyper-V 虚拟化平台上的部署方法。
-
 ## Hyper-V 简介
 
 虚拟机监视器是一种创建和运行虚拟机的软件，可以在单个物理主机上同时运行独立的操作系统，即虚拟化软件允许多个操作系统同时运行在同一台计算机上。从虚拟化技术的理论分类来看，Hypervisor 分为 Type-1（裸金属型）和 Type-2（宿主型）两类。Type-1 直接运行于物理硬件之上，Type-2 则运行于宿主操作系统之上。Hyper-V 属于 Type-1 架构，其虚拟化层直接管理硬件资源，提供更高的隔离性和性能。
@@ -53,11 +51,11 @@ FreeBSD 对 Hyper-V 的集成支持通过内核模块实现：
 >
 > Windows 家庭版和家庭中文版不支持 Hyper-V。
 
-在 Windows 系统中启用 Hyper-V 功能组件，需以管理员权限执行相关命令，以确保操作的合法性与系统配置的正确性。
+在 Windows 系统中启用 Hyper-V 功能组件，需以管理员权限执行以下命令。
 
 ![Hyper-V](../.gitbook/assets/hyperv-1.png)
 
-右键单击 Windows 徽标，在弹出的菜单中选择“终端（管理员）”。启用 Hyper-V 需要使用 `Enable-WindowsOptionalFeature` 命令，该命令将启用 Windows 的 Hyper-V 可选功能组件，包括虚拟机监视器、管理工具等核心模块。输入以下命令：
+右键单击 Windows 徽标，在弹出的菜单中选择"终端（管理员）"。输入以下命令：
 
 ```powershell
 PS C:\Users\ykla> Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All
@@ -68,7 +66,7 @@ PS C:\Users\ykla> Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-H
 
 ## 创建虚拟机
 
-安装完成 Hyper-V 后，按照以下步骤创建虚拟机。
+安装完成 Hyper-V 后，创建虚拟机。
 
 ![Hyper-V](../.gitbook/assets/hyperv-2.png)
 
@@ -108,7 +106,7 @@ PS C:\Users\ykla> Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-H
 
 ## 虚拟机配置调整
 
-虚拟机创建完成后，需要对部分设置进行调整。
+虚拟机创建完成后，调整部分设置。
 
 ![Hyper-V](../.gitbook/assets/hyperv-10.png)
 
@@ -128,7 +126,7 @@ PS C:\Users\ykla> Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-H
 
 ## 安装 FreeBSD
 
-虚拟机设置调整完成后，开始安装 FreeBSD 系统。
+虚拟机设置调整完成后，安装 FreeBSD 系统。
 
 ![Hyper-V](../.gitbook/assets/hyperv-13.png)
 
@@ -144,7 +142,7 @@ PS C:\Users\ykla> Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-H
 
 ## 桌面环境验证
 
-安装完成后，可对虚拟机进行基本功能测试。
+安装完成后，测试虚拟机基本功能。
 
 鼠标和键盘均可正常工作，可在宿主机和虚拟机间无缝切换，但虚拟机桌面分辨率无法自适应调整。建议检查 Hyper-V 集成服务安装并参考 FreeBSD 文档以获取显示配置指南。
 

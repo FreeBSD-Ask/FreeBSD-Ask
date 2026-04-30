@@ -6,8 +6,6 @@
 
 > Code is contributed to the Linux kernel under a number of licenses, but all code must be compatible with version 2 of the GNU General Public License (GPLv2), which is the license covering the kernel distribution as a whole. In practice, that means that all code contributions are covered either by GPLv2 (with, optionally, language allowing distribution under later versions of the GPL) or the three-clause BSD license. Any contributions which are not covered by a compatible license will not be accepted into the kernel.（Linux 内核中贡献的代码是由多种许可证授权的，但所有代码都必须与 GNU 通用公共许可证第 2 版（GPLv2）兼容，因为 GPLv2 捆绑了所有内核发行文件。实际上这意味着，一切贡献的代码要么受 GPLv2 约束（可选地包含允许在 GPL 后续版本下发布的条款），要么受三条款 BSD 许可证约束。那些由非兼容许可证授权的贡献都不会被内核接纳）
 
-了解 GPL 许可证的历史背景有助于理解其设计初衷。
-
 UNIX 在后期发展中逐渐呈现封闭化趋势，从最初开放的研究项目（受当时美国法律要求）转变为商业产品。普通用户无法自由获取和修改其源代码，许可证价格高昂且使用权受到商业公司严格限制。理查德·马修·斯托曼（Richard Matthew Stallman，RMS）希望创造一款自由且与 UNIX 兼容的操作系统，这一愿景直接推动了自由软件运动的兴起。
 
 - 1983 年，理查德·马修·斯托曼发表了 GNU 项目初始公告；其中 GNU 即“GNU's Not Unix”（GNU 不是 UNIX）的递归缩写。GNU 是一款旨在完全替代 UNIX 的操作系统。

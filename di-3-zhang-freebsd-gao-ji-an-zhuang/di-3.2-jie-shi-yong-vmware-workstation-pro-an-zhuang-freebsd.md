@@ -1,12 +1,10 @@
 # 3.2 使用 VMware Workstation Pro 安装 FreeBSD
 
-本节介绍在 VMware Workstation Pro 虚拟化平台上部署 FreeBSD 操作系统的完整流程与关键配置细节。
-
-VMware Workstation Pro 作为一款 Type-2 虚拟机监视器（Hypervisor），运行在宿主操作系统之上，通过二进制翻译（binary translation）和硬件辅助虚拟化（hardware-assisted virtualization，基于 Intel VT-x 或 AMD-V 技术）实现 x86 指令集的虚拟化。
+VMware Workstation Pro 是 Type-2 虚拟机监视器（Hypervisor），运行在宿主操作系统之上，通过二进制翻译（binary translation）和硬件辅助虚拟化（hardware-assisted virtualization，基于 Intel VT-x 或 AMD-V 技术）实现 x86 指令集的虚拟化。
 
 ## 视频教程
 
-以下视频教程演示了在 Windows 11 上安装 VMware Workstation Pro 17 的过程，具有直观的操作演示，可供读者参考：
+以下视频教程演示了在 Windows 11 上安装 VMware Workstation Pro 17 的过程：
 
 FreeBSD 中文社区. 001-Windows 11 安装 VMware 17[EB/OL]. [2026-04-04]. <https://www.bilibili.com/video/BV1Qji2YLEgS>.
 
@@ -22,7 +20,7 @@ FreeBSD 中文社区. 001-Windows 11 安装 VMware 17[EB/OL]. [2026-04-04]. <htt
 
 ## 配置虚拟机
 
-镜像下载完成后，在 VMware Workstation Pro 中创建新的虚拟机，按照以下步骤进行配置。
+镜像下载完成后，在 VMware Workstation Pro 中创建新的虚拟机。
 
 ![VMware 安装 FreeBSD](../.gitbook/assets/vmware-1.png)
 
@@ -280,7 +278,7 @@ Downloads
 
 #### 参考文献
 
-- MaRcOGO. 解决 vmware 上 Ubuntu 共享文件夹[EB/OL]. (2022-07)[2026-03-26]. <https://www.cnblogs.com/MaRcOGO/p/16463460.html>. 提供了 VMware 共享文件夹配置的整体方法框架。
+- MaRcOGO. 解决 vmware 上 Ubuntu 共享文件夹[EB/OL]. (2022-07)[2026-03-26]. <https://www.cnblogs.com/MaRcOGO/p/16463460.html>. 介绍 VMware 共享文件夹配置方法。
 - FreeBSD Forums. fuse: failed to open fuse device[EB/OL]. [2026-03-26]. <https://forums.freebsd.org/threads/fuse-failed-to-open-fuse-device.44544/>. 解决了 fuse 设备无法打开的问题（如 `fuse: failed to open fuse device: No such file or directory`），为共享文件夹配置提供了关键参考。
 - FreeBSD Forums. VMware shared folders[EB/OL]. [2026-03-26]. <https://forums.freebsd.org/threads/vmware-shared-folders.10318/>. 详细介绍了 FreeBSD 下 VMware 共享文件夹的具体挂载方法。
 

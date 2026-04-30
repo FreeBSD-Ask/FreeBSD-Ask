@@ -1,10 +1,8 @@
 # 3.11 阿里云轻量应用服务器安装 FreeBSD（UEFI 和 GPT 分区表）
 
-本节介绍在阿里云轻量应用服务器上，通过 UEFI 和 GPT 分区表方式部署 FreeBSD 操作系统的技术方案。
+本节介绍在阿里云轻量应用服务器上，通过 UEFI 和 GPT 分区表方式安装 FreeBSD。
 
 ## 服务器环境
-
-本节首先介绍服务器环境的准备工作。
 
 ![Rocky Linux 9](../.gitbook/assets/cloud-rocky-linux-1.png)
 
@@ -12,7 +10,7 @@
 
 ### 救援登录
 
-环境准备完成后，开始配置救援登录。
+环境准备完成后，配置救援登录。
 
 ![Rocky Linux 9](../.gitbook/assets/cloud-rocky-linux-3.png)
 
@@ -629,7 +627,7 @@ Ventoy 目前不支持在线下载 ISO 镜像文件。
 
 #### 使用 TinyCorePure64 写入 Ventoy
 
-TinyCorePure64 属于 [Core 项目](http://www.tinycorelinux.net/welcome.html)，该项目旨在提供高度模块化的系统，同时支持社区自定义构建。
+TinyCorePure64 属于 [Core 项目](http://www.tinycorelinux.net/welcome.html)，该系统高度模块化，支持社区自定义构建。
 
 TinyCorePure64 能够在启动后完全载入内存，同时重启后亦将丢失所有数据。
 

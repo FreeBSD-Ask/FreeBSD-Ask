@@ -193,7 +193,7 @@ Other information:	# 其他信息
 /etc/pw.ogzb33: unmodified: line 1
 ```
 
-root 可以用此工具更改任意用户的额外账户信息。
+root 可使用此工具更改任意用户的额外账户信息。
 
 ```sh
 # chpass ykla	# 修改 ykla 的账户信息数据库
