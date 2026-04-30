@@ -88,7 +88,7 @@ lo0: flags=8049<UP,LOOPBACK,RUNNING,MULTICAST> metric 0 mtu 16384
 
 如果网络有 DHCP 服务器，配置网络接口使用 DHCP 较为简便。FreeBSD 使用 dhclient(8) 作为 DHCP 客户端。dhclient(8) 将自动提供 IP 地址、子网掩码和默认路由器。
 
->**注意**
+> **注意**
 >
 > dhclient(8) **不支持 DHCPv6**（RFC 3315/RFC 8415），IPv6 动态地址需使用 `rtsold(8)`（SLAAC）或第三方 DHCPv6 客户端（如 `dhcp6c`）。
 
