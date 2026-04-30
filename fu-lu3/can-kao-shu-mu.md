@@ -67,7 +67,7 @@
 
 该书是 FreeBSD 技术体系中的权威学术著作，详解现代 FreeBSD 内核架构与实现细节。
 
-该书采用轻型纸印刷，且部分章节需要读者自行通过 [网络](https://course.cmpreading.com/web/refbook/detail/9661/215) 下载获取。
+该书采用轻型纸印刷，部分章节须由读者自行通过 [网络](https://course.cmpreading.com/web/refbook/detail/9661/215) 下载。
 
 该书阅读难度较高，属于高级技术专著范畴，需要具备一定的操作系统理论基础方能理解。
 
