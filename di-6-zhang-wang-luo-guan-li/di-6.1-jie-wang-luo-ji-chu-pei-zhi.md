@@ -178,9 +178,9 @@ round-trip min/avg/max/stddev = 0.635/0.705/0.776/0.071 ms
 
 如能正常收到 ICMP 响应报文，则说明网络已连通。
 
->**注意**
+> **注意**
 >
->Jail 内默认不允许使用 ping（需设置 sysctl `allow.raw_sockets`）。
+> Jail 内默认不允许使用 ping（需设置 sysctl `allow.raw_sockets`）。
 
 ## IPv6 配置
 
