@@ -291,7 +291,7 @@ root@f:/home/ykla #
 
 `/etc/hosts` 文件是一个简单的文本数据库，提供主机名到 IP 地址的映射。通过 LAN 连接的本地计算机条目可添加至此文件中，用于简单的命名目的，而无须设置 DNS 服务器。此外，`/etc/hosts` 文件可用于提供 Internet 名称的本地记录，减少对外部 DNS 服务器的查询需求。
 
-例如，在本地环境中有 www/gitlab-ce 的本地实例，可以如下行添加到 `/etc/hosts` 文件：
+例如，在本地环境中有 www/gitlab-ce 的本地实例，可以将如下行添加到 `/etc/hosts` 文件：
 
 ```ini
 192.168.1.150 git.example.com git
