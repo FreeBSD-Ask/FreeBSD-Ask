@@ -91,8 +91,6 @@ FreeBSD 日为 6 月 19 日。FreeBSD 基金会和社区在这天庆祝 FreeBSD 
 
 ## 为什么选择 FreeBSD
 
-选择一款操作系统往往是基于多方面的考虑。下文将阐述选择 FreeBSD 的理由。
-
 ### 一句话原因：FreeBSD 能在这流变的世界中寻求理想的中道
 
 相较于大多数主流操作系统或内核，FreeBSD 的 Kernel API/ABI 比较稳定。
