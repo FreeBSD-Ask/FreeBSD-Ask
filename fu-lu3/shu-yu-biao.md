@@ -48,8 +48,8 @@
 | freebsd-update | / | FreeBSD 基本系统更新工具，用于获取安全更新和执行系统版本升级 |
 | Poudriere | / | FreeBSD 工具，通过 Jail 环境测试 port 并构建 FreeBSD 软件包镜像 |
 | 安全启动 | / | Secure Boot，基于 UEFI 固件的安全机制，通过数字签名验证引导加载程序和操作系统内核的完整性 |
-| Linuxism | / | 指软件过分依赖 Linux 特有特性而难以移植到其他类 UNIX 操作系统的现象 |
-| POLA | 最小惊讶原则 | Principle of Least Astonishment，一种设计原则，指设计必须符合用户的习惯、期望和心智能力 |
+| Linuxism | / | 指软件过度依赖 Linux 特有特性而难以移植到其他类 UNIX 操作系统的现象 |
+| POLA | 最小惊讶原则 | Principle of Least Astonishment，一种设计原则，指设计必须符合用户的习惯、期望与认知习惯 |
 | Unix | / | 最初由 AT&T 贝尔实验室开发的操作系统，现为一种标准规范和法律商标 |
 | Single UNIX Specification | 单一 UNIX 规范 | SUS，UNIX 操作系统的标准规范 |
 | CDDL | 通用开发及发行许可 | Common Development and Distribution License，由 Sun Microsystems 为 OpenSolaris 创建的开源许可证，ZFS 等项目采用此许可证，允许商业使用和修改 |
@@ -187,7 +187,7 @@
 | mac_bsdextended | / | FreeBSD 的强制访问控制（MAC）策略模块 |
 | devd | / | Device Daemon，FreeBSD 的设备状态守护进程，响应硬件事件 |
 | powerd | / | Power Daemon，FreeBSD 的电源管理守护进程 |
-| cron | / | 名称来源存在争议。Unix 系统的定时任务执行守护进程 |
+| cron | / | Unix 系统的定时任务执行守护进程，其名称来源存在争议 |
 | DMA | / | ① Direct Memory Access，直接内存访问，一种允许设备直接读写系统内存的技术；② DragonFly Mail Agent，FreeBSD 14.0 起基本系统内置的本地邮件传输代理（非功能完整的 MTA），FreeBSD 13 及更早版本的默认 MTA 为 Sendmail |
 | mtree | / | FreeBSD 的目录树规范和验证工具 |
 | authpf | / | Authenticating Gateway Shell，PF 防火墙的认证网关 Shell |
