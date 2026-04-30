@@ -20,7 +20,7 @@ FreeBSD 中文社区. 001-Windows 11 安装 VMware 17[EB/OL]. [2026-04-04]. <htt
 
 ## 配置虚拟机
 
-镜像下载完成后，在 VMware Workstation Pro 中创建新的虚拟机，按照以下步骤进行配置。
+镜像下载完成后，在 VMware Workstation Pro 中创建新的虚拟机。
 
 ![VMware 安装 FreeBSD](../.gitbook/assets/vmware-1.png)
 
