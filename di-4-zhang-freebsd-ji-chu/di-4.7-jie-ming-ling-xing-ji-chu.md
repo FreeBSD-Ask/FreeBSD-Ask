@@ -714,6 +714,40 @@ make BATCH=yes install || make BATCH=yes install || make BATCH=yes install || ma
 >
 > 如果 `touch a.txt` 失败会执行后面的哪个操作？
 
+## 高级 Shell 技巧
+
+UNIX Shell 还能使用户执行命令、重定向其输出、重定向其输入，并将多个命令组合在一起以优化最终输出。
+
+Shell 重定向是将命令的输出或输入发送到另一个命令或文件中的操作。例如，将 [ls(1)](https://man.freebsd.org/cgi/man.cgi?query=ls&sektion=1&format=html) 命令的输出捕获到一个文件中，可以这样重定向输出：
+
+```sh
+% ls > test.txt
+```
+
+此时目录内容会被列出并保存到 `directory_listing.txt` 中。有些命令可以读取输入，比如 [sort(1)](https://man.freebsd.org/cgi/man.cgi?query=sort&sektion=1&format=html)。要对该列表进行排序，可以这样重定向输入：
+
+```sh
+% sort < directory_listing.txt
+```
+
+输入会被排序并显示在屏幕上。要将该输入重定向到另一个文件，可以将 [sort(1)](https://man.freebsd.org/cgi/man.cgi?query=sort&sektion=1&format=html) 的输出重定向出去，操作如下：
+
+```sh
+% sort < directory_listing.txt > sorted.txt
+```
+
+在上述所有示例中，命令通过文件描述符进行重定向。每个 UNIX® 系统都有文件描述符，包括标准输入（stdin）、标准输出（stdout）和标准错误（stderr）。每种描述符都有其用途，例如输入可以是键盘或鼠标，用于提供输入；输出可以是屏幕或打印机中的纸张；错误则用于诊断或错误信息。这三者都被视为基于 I/O 的文件描述符，有时也被称为流（streams）。
+
+通过使用这些描述符，shell 允许将输出和输入在多个命令之间传递，并重定向到文件或从文件中读取。另一种重定向方法是管道操作符。
+
+UNIX® 的管道操作符 `|` 允许将一个命令的输出直接传递或重定向到另一个程序。简单来说，管道允许一个命令的标准输出被作为标准输入传递给另一个命令，例如：
+
+```sh
+% cat directory_listing.txt | sort | less
+```
+
+在此示例中，`directory_listing.txt` 的内容将被排序，然后输出传递给 [less(1)](https://man.freebsd.org/cgi/man.cgi?query=less&sektion=1&format=html)。这使用户可以按自己的节奏浏览输出内容，防止其在屏幕上滚动消失。
+
 ## BSD 风格的 make/grep/sed/awk
 
 ### make(1) 命令
@@ -810,89 +844,6 @@ FreeBSD 的设计更接近传统 UNIX 的行为。
 >
 > 在 FreeBSD 下，关机与重启操作都只有 root 用户和 operator 组成员可以执行。
 
-## 附录：拼写自动纠正工具
-
-### 安装与配置
-
-FreeBSD 可使用 `sysutils/thefuck` 工具实现命令拼写自动纠正功能。该工具可自动检测并纠正命令输入错误。
-
-使用 pkg 安装：
-
-```sh
-# pkg install thefuck
-```
-
-或使用 Ports 构建：
-
-```sh
-# cd /usr/ports/misc/thefuck/
-# make install clean
-```
-
-### 配置 thefuck
-
-查看安装后的配置信息
-
-```sh
-# fuck
-Seems like fuck alias isn't configured!
-More details - https://github.com/nvbn/thefuck#manual-installation
-```
-
-打开网页浏览。发现要将 `eval $(thefuck --alias)` 加入到 `~/.bash_profile`（Bash Shell）、`~/.bashrc`（Bash Shell）或 `~/.zshrc`（Zsh Shell）。
-
-FreeBSD 默认使用的是 sh，因此将下行：
-
-```sh
-eval $(thefuck --alias)
-```
-
-在 FreeBSD 默认 sh 环境中，需将以下配置写入 `~/.shrc` 文件：
-
-```sh
-# . ~/.shrc
-# fuck
-No fucks given
-```
-
-> **技巧**
->
-> 根据作者信息，若不喜欢输入 `fuck`，还可以使用其他别名：若更改为 `eval $(thefuck --alias abc)`，则下方所有 `fuck` 命令都会被换为 `abc`。
->
->```sh
-> # abc
-> Nothing found
-> # plg install gimp
->-sh: plg: not found
-> # abc
-> pkg install gimp [enter/↑/↓/ctrl+c]
-> ……省略一部分……
->```
-
-### 使用示例
-
-```sh
-# ls-l /home/ykla/ # 首先输入一条错误命令
--sh: ls-l: not found
-# fuck
-ls -l /home/ykla/ [enter/↑/↓/ctrl+c] # 上下箭头切换可能的命令，回车确认，Ctrl+C 中断
-total 317
-……省略一部分……
-drwxr-xr-x  2 ykla ykla        2 Mar  9 20:45 下载
-drwxr-xr-x  2 ykla ykla        2 Mar  9 20:45 桌面
-```
-
-再试一例：
-
-```sh
-# plg install gimp
--sh: plg: not found
-# fuck
-pkg install gimp [enter/↑/↓/ctrl+c]
-Updating FreeBSD repository catalogue...
-FreeBSD repository is up to date.
-……省略一部分……
-```
 
 ## 参考文献
 
