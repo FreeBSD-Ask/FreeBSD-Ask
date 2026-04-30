@@ -76,7 +76,39 @@ PSPath
 
 从技术角度看，卸载（unmount）是挂载的逆操作，将一个已挂载的文件系统从系统目录树中分离。当文件系统 B 从 A 上卸载后，A 中原有的文件将重新出现。
 
-#### 参考文献
+### fstab 文件
+
+在启动过程中，系统将自动挂载 `/etc/fstab` 文件中列出的文件系统（包含 `noauto` 的条目除外）。
+
+该文件中的条目格式如下：
+
+```sh
+设备       /挂载点 文件系统     选项      转储     fsck 检查顺序
+```
+
+说明：
+
+- `设备`：现有设备名。
+- `挂载点`：现有的目录，用于挂载文件系统。
+- `文件系统`：传递给 [mount(8)](https://man.freebsd.org/cgi/man.cgi?query=mount&sektion=8&format=html) 的文件系统类型。
+- `选项`：`rw` 表示读写文件系统，`ro` 表示只读文件系统，可跟其他选项。常用选项包括 `noauto`，表示启动时不挂载此文件系统。
+- `转储`：供 [dump(8)](https://man.freebsd.org/cgi/man.cgi?query=dump&sektion=8&format=html) 判断哪些文件系统需要备份。缺省时视为 0。
+- `fsck 检查顺序`：决定在重启后，哪些文件系统应由 [fsck(8)](https://man.freebsd.org/cgi/man.cgi?query=fsck&sektion=8&format=html) 检查，以及检查顺序。应跳过的文件系统设置为 0。根文件系统应优先检查，设为 1，其他文件系统应设为大于 1 的值。若多个文件系统具有相同的 `passno`，[fsck(8)](https://man.freebsd.org/cgi/man.cgi?query=fsck&sektion=8&format=html) 会尝试并行检查。
+
+示例：标准 ZFS 安装下的 `/etc/fstab` 文件。
+
+```sh
+# Device		Mountpoint	FStype	Options		Dump	Pass#
+/dev/gpt/efiboot0		/boot/efi	msdosfs	rw		2	2	# 这是 EFI 分区
+/dev/nda0p2		none	swap	sw		0	0	# 这是交换分区
+```
+
+>**注意**
+>
+>ZFS 并不使用 `/etc/fstab` 文件。因此如果在该文件中不存在任何 ZFS 文件系统（`/`），是符合预期的。
+
+
+### 参考文献
 
 - 微软. PARTITION_INFORMATION_GPT[EB/OL]. [2026-04-18]. <https://learn.microsoft.com/en-us/windows/win32/api/winioctl/ns-winioctl-partition_information_gpt>. GPT 分区类型 GUID 定义，其中 Microsoft Basic Data 类型为 EBD0A0A2-B9E5-4433-87C0-68B6B72699C7。
 - 微软. Supporting Mount Manager Requests in a Storage Class Driver[EB/OL]. [2026-04-18]. <https://learn.microsoft.com/en-us/windows-hardware/drivers/storage/supporting-mount-manager-requests-in-a-storage-class-driver>. Windows 装入管理器将盘符与分区的映射关系持久化存储于注册表 `HKLM\SYSTEM\MountedDevices`。
