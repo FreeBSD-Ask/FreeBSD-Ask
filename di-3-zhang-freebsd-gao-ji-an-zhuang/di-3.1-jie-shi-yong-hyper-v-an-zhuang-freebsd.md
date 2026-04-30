@@ -51,7 +51,7 @@ FreeBSD 对 Hyper-V 的集成支持通过内核模块实现：
 >
 > Windows 家庭版和家庭中文版不支持 Hyper-V。
 
-在 Windows 系统中启用 Hyper-V 功能组件，需以管理员权限执行相关命令，以确保操作的合法性与系统配置的正确性。
+在 Windows 系统中启用 Hyper-V 功能组件，需以管理员权限执行以下命令。
 
 ![Hyper-V](../.gitbook/assets/hyperv-1.png)
 
