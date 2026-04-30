@@ -177,11 +177,11 @@ boot		lib		proc		usr
 
 ### 参考文献
 
-- McKusick, M. McKusick.com[EB/OL]. [2026-04-30]. <http://www.mckusick.com/>. 有关 softupdates 和文件系统快照的更多信息，包括技术论文，请访问 Marshall Kirk McKusick 的网站。
+- McKusick, M. McKusick.com[EB/OL]. [2026-04-30]. <http://www.mckusick.com/>. 有关 softupdates 和文件系统快照的更多信息，包括技术论文，可访问 Kirk McKusick 的网站：
 
 ## UFS 文件系统磁盘配额
 
-磁盘配额可用于限制用户或用户组在每个 UFS 文件系统上可分配的磁盘空间或文件数量。这可以防止某个用户或用户组消耗掉所有可用的磁盘空间。
+磁盘配额可用于限制用户或用户组在每个 UFS 文件系统上可分配的磁盘空间或文件数量。以此防止某个用户或用户组消耗掉所有可用的磁盘空间。
 
 FreeBSD 默认内核提供了对磁盘配额的支持，可以运行以下命令进行验证：
 
