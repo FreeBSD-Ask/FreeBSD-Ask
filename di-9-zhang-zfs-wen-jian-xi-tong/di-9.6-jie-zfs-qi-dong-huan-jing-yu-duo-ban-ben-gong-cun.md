@@ -192,7 +192,7 @@ After verifying those files, restart the system.
 
 ### 使用 pkgbase 将启动环境中的系统版本更新到 15.0-RELEASE
 
-成功转换为 pkgbase 后，就可以使用 pkg 包管理器来升级系统版本了。下面将配置 pkgbase 源并执行升级操作。
+成功转换为 pkgbase 后，即可使用 pkg 包管理器来升级系统版本了。下面将配置 pkgbase 源并执行升级操作。
 
 软件源结构：
 
