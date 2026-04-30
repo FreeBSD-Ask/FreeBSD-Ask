@@ -70,7 +70,7 @@ FreeBSD 日为 6 月 19 日。FreeBSD 基金会和社区在这天庆祝 FreeBSD 
 
 ## 谁在使用 FreeBSD
 
-FreeBSD 的稳定性和可靠性使其在许多领域得到了广泛应用。以下是一些典型的应用案例。
+以下是一些典型的应用案例。
 
 ![谁在使用 FreeBSD](../.gitbook/assets/who-uses-freebsd.png)
 
