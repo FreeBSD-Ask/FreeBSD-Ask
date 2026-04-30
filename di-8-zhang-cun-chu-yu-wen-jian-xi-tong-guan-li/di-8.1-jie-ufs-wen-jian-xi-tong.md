@@ -183,12 +183,14 @@ boot		lib		proc		usr
 
 磁盘配额可用于限制用户或用户组在每个 UFS 文件系统上可分配的磁盘空间或文件数量。这可以防止某个用户或用户组消耗掉所有可用的磁盘空间。
 
-要确定 FreeBSD 内核是否提供对磁盘配额的支持，可以运行以下命令：
+FreeBSD 默认内核提供了对磁盘配额的支持，可以运行以下命令进行验证：
 
 ```sh
 $ sysctl kern.features.ufs_quota
 kern.features.ufs_quota: 1
 ```
+
+
 
 ## 课后习题
 
