@@ -12,7 +12,7 @@ UFS 全称为 Unix File System（UNIX 文件系统），FreeBSD 中使用的 UFS
 >
 > UFS 文件系统只能扩大，不能缩小。
 
-## 磁盘扩容操作
+## UFS 文件系统磁盘扩容
 
 > **注意**
 >
@@ -91,17 +91,68 @@ tmpfs               32M    156K     32M     0%    /var
 
 上述输出表明，分区扩展操作已完成，且文件系统已成功调整至新的大小。
 
-## 参考文献
+### 参考文献
 
 - FreeBSD Project. ffs -- Berkeley fast file system[EB/OL]. [2026-04-14]. <https://man.freebsd.org/cgi/man.cgi?ffs(7)>. UFS/FFS 文件系统概述手册页，描述伯克利快速文件系统的设计与实现。
 - FreeBSD Project. mount_ufs -- mount a UFS file system[EB/OL]. [2026-04-14]. <https://man.freebsd.org/cgi/man.cgi?mount_ufs(8)>. UFS 文件系统挂载命令手册页。
-- FreeBSD Project. newfs -- install a UFS file system[EB/OL]. [2026-04-14]. <https://man.freebsd.org/cgi/man.cgi?newfs(8)>. UFS 文件系统创建工具手册页。
-- FreeBSD Project. gpart -- control utility for the disk partitioning GEOM class[EB/OL]. [2026-04-14]. <https://man.freebsd.org/cgi/man.cgi?gpart(8)>. 磁盘分区管理工具手册页。
 - FreeBSD Project. growfs -- expand a UFS file system[EB/OL]. [2026-04-14]. <https://man.freebsd.org/cgi/man.cgi?growfs(8)>. UFS 文件系统扩容工具手册页。
 - FreeBSD Project. fsck_ffs -- file system consistency check and interactive repair[EB/OL]. [2026-04-14]. <https://man.freebsd.org/cgi/man.cgi?fsck_ffs(8)>. UFS 文件系统一致性检查与修复工具手册页。
 - Jaeyoon Choi. Universal Flash Storage on FreeBSD[EB/OL]. [2026-04-16]. <https://freebsdfoundation.org/our-work/journal/browser-based-edition/freebsd-15-0/universal-flash-storage-on-freebsd/>。该文介绍了 FreeBSD UFS 驱动的开发过程及当前状态。
 - McKusick M K. 4.4BSD 操作系统设计与实现[M]. 李善平，刘文峰，马天驰，译. 北京：机械工业出版社，2012. 该书第 7 章详细描述了 FFS 的设计与历史。
 - McKusick M K, Joy W N, Leffler S J, et al. A Fast File System for UNIX[J]. ACM Transactions on Computer Systems，1984，2(3)：181-197. FFS 原始论文，首次系统阐述了伯克利快速文件系统的设计与实现。
+
+
+## UFS 文件系统快照
+
+FreeBSD 提供了一项与 [软更新（Soft Updates）](https://docs.freebsd.org/en/books/handbook/config/#soft-updates) 结合使用的功能：文件系统快照。
+
+UFS 快照允许用户创建指定文件系统的镜像，并将其作为文件处理。如果你使用的是 [Z 文件系统（ZFS）](https://docs.freebsd.org/en/books/handbook/zfs/#)，请参考 [管理快照](https://docs.freebsd.org/en/books/handbook/zfs/#zfs-zfs-snapshot) 以了解如何使用快照。
+
+快照文件必须在执行操作的文件系统中创建，每个文件系统最多可以创建 20 个快照。活动快照会记录在超级块中，因此它们在卸载和重新挂载操作以及系统重启后会保持持久性。当不再需要某个快照时，可以使用 [rm(1)](https://man.freebsd.org/cgi/man.cgi?query=rm&sektion=1&format=html) 删除它。尽管可以按任意顺序删除快照，但可能无法完全回收所有使用的空间，因为另一个快照可能会占用一些已释放的块。
+
+不可更改的 `snapshot` 文件标志由 [mksnap_ffs(8)](https://man.freebsd.org/cgi/man.cgi?query=mksnap_ffs&sektion=8&format=html) 在快照文件初始创建时设置。对于快照文件，[unlink(1)](https://man.freebsd.org/cgi/man.cgi?query=unlink&sektion=1&format=html) 例外，允许它们被删除。
+
+快照是通过 [mount(8)](https://man.freebsd.org/cgi/man.cgi?query=mount&sektion=8&format=html) 创建的。要将 **/var** 的快照放入文件 **/var/snapshot/snap** 中，请使用以下命令：
+
+```sh
+# mount -u -o snapshot /var/snapshot/snap /var
+```
+
+或者，使用 [mksnap_ffs(8)](https://man.freebsd.org/cgi/man.cgi?query=mksnap_ffs&sektion=8&format=html) 创建快照：
+
+```sh
+# mksnap_ffs /var /var/snapshot/snap
+```
+
+可以使用 [find(1)](https://man.freebsd.org/cgi/man.cgi?query=find&sektion=1&format=html) 查找文件系统中的快照文件，例如 **/var**：
+
+```sh
+# find /var -flags snapshot
+```
+
+创建快照后，它有多个用途：
+
+* 一些管理员会使用快照文件进行备份，因为快照可以被传输到 CD 或磁带。
+* 可以在快照上运行文件系统完整性检查工具 [fsck(8)](https://man.freebsd.org/cgi/man.cgi?query=fsck&sektion=8&format=html)。假设文件系统在挂载时是干净的，这将始终提供一个干净且不变的结果。
+* 在快照上运行 [dump(8)](https://man.freebsd.org/cgi/man.cgi?query=dump&sektion=8&format=html) 会生成一个与文件系统和快照时间戳一致的转储文件。`dump(8)` 也可以使用 `-L` 选项在创建转储镜像后直接删除快照。
+* 快照可以作为文件系统的冻结镜像进行挂载。要挂载快照 **/var/snapshot/snap**，可以执行以下命令：
+
+  ```sh
+  # mdconfig -a -t vnode -o readonly -f /var/snapshot/snap -u 4
+  # mount -r /dev/md4 /mnt
+  ```
+
+现在，冻结的 **/var** 可以通过 **/mnt** 访问。一切都会保持快照创建时的状态。唯一的例外是，任何早期的快照将显示为空文件。要卸载快照，请执行：
+
+```sh
+# umount /mnt
+# mdconfig -d -u 4
+```
+
+### 参考文献
+
+
+- McKusick, M. McKusick.com[EB/OL]. [2026-04-30]. <http://www.mckusick.com/>. 有关 softupdates 和文件系统快照的更多信息，包括技术论文，请访问 Marshall Kirk McKusick 的网站。
 
 ## 课后习题
 
