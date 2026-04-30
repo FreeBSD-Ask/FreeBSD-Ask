@@ -72,7 +72,7 @@ microSD 通常也称为 TF 卡（TF 是 SanDisk 最初的商品名 TransFlash，
 
 ## 如何测试存储卡和硬盘？
 
-可以用 `CrystalDiskInfo` 查看硬盘的 S.M.A.R.T. 信息及基本参数；还可以用 `CrystalDiskMark` 测试硬盘和存储卡的读写（请使用 USB 3.0 及以上规格的读卡器）。
+可使用 `CrystalDiskInfo` 查看硬盘的 S.M.A.R.T. 信息及基本参数；还可使用 `CrystalDiskMark` 测试硬盘和存储卡的读写（请使用 USB 3.0 及以上规格的读卡器）。
 
 上述两款软件由同一位开发者开发，但其[官方网站](https://crystalmark.info/en/)包含较多广告内容，可能导致用户误下载非官方文件。
 
