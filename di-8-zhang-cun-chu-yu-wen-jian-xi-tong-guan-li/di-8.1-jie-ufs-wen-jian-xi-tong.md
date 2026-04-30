@@ -164,7 +164,7 @@ boot		lib		proc		usr
 | ---- | ---- |
 | `-a` | 创建 md 设备 |
 | `-t vnode` | 用文件作为磁盘 |
-| `-o readonly` | 只读挂载 |
+| `-o readonly` | 创建只读 vnode 磁盘设备 |
 | `-f file` | 指定快照文件 |
 | `-u 4` | 指定至 md4，防止冲突 |
 
