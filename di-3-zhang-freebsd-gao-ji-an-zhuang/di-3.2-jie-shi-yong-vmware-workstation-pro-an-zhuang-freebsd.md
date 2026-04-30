@@ -66,7 +66,7 @@ FreeBSD 中文社区. 001-Windows 11 安装 VMware 17[EB/OL]. [2026-04-04]. <htt
 
 > **技巧**
 >
-> 经过测试，FreeBSD 亦支持 UEFI 下 VMware 的显卡驱动。（2025 年 3 月 24 日）
+> 经过测试，FreeBSD 亦支持 UEFI 下 VMware 的显卡驱动。
 
 > **警告**
 >
