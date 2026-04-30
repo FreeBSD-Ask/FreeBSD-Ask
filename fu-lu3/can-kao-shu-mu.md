@@ -65,7 +65,7 @@
 | --------- | --------- | ----------- | ---- |
 | ![FreeBSD 操作系统设计与实现（原书第二版）](../.gitbook/assets/freebsd2rd.png) <br><br> 《FreeBSD 操作系统设计与实现（原书第 2 版）》 | [美] Marshall McKusick、George V. Neville-Neil、Robert N.M. Watson 等著 <br><br> 陈向群、郭立峰、叶顺平 等译 | 978-7-111-68997-3 <br><br> 机械工业出版社 | FreeBSD 内核设计权威著作，详解现代 FreeBSD 内核架构与实现细节 |
 
-《FreeBSD 操作系统设计与实现（原书第 2 版）》是 FreeBSD 技术体系中的权威学术著作，详解现代 FreeBSD 内核架构与实现细节。
+该书是 FreeBSD 技术体系中的权威学术著作，详解现代 FreeBSD 内核架构与实现细节。
 
 该书采用轻型纸印刷，且部分章节需要读者自行通过 [网络](https://course.cmpreading.com/web/refbook/detail/9661/215) 下载获取。
 
