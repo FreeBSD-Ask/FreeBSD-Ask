@@ -55,7 +55,7 @@ FreeBSD 对 Hyper-V 的集成支持通过内核模块实现：
 
 ![Hyper-V](../.gitbook/assets/hyperv-1.png)
 
-右键单击 Windows 徽标，在弹出的菜单中选择“终端（管理员）”。启用 Hyper-V 需要使用 `Enable-WindowsOptionalFeature` 命令，该命令将启用 Windows 的 Hyper-V 可选功能组件，包括虚拟机监视器、管理工具等核心模块。输入以下命令：
+右键单击 Windows 徽标，在弹出的菜单中选择"终端（管理员）"。输入以下命令：
 
 ```powershell
 PS C:\Users\ykla> Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All
