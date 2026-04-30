@@ -4,7 +4,7 @@
 
 > **技巧**
 >
-> 相关视频教程可参考：
+> 相关视频教程参见：
 >
 > - Bilibili. FreeBSD 14.2 基础安装配置教程[EB/OL]. [2026-03-25]. <https://www.bilibili.com/video/BV1STExzEEhh>（物理机）
 > - Bilibili. 002-VMware17 安装 FreeBSD 14.2[EB/OL]. [2026-03-25]. <https://www.bilibili.com/video/BV1gji2YLEoC>（虚拟机）
@@ -120,7 +120,7 @@
 
 ### 参考文献
 
-- FreeBSD Project. Bug 286847: If the hostname is not set for the host, the value "Amnesiac" should be written to rc.conf.[EB/OL]. [2026-03-25]. <https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=286847>. 该 Bug 报告提出空主机名时应写入默认值，该 Bug 报告由笔者发现。
+- FreeBSD Project. Bug 286847: If the hostname is not set for the host, the value "Amnesiac" should be written to rc.conf.[EB/OL]. [2026-03-25]. <https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=286847>. 该 Bug 报告提出空主机名时应写入默认值，该 Bug 报告由作者发现。
 - FreeBSD Project. freebsd-src/libexec/getty/main.c[EB/OL]. [2026-03-25]. <https://github.com/freebsd/freebsd-src/blob/80c12959679ab203459dc20eb9ece3a7328b7de5/libexec/getty/main.c#L178>. 该代码段包含登录提示符显示逻辑，`Amnesiac` 源代码。
 - FreeBSD Project. bsdinstall: Warn if hostname is empty[EB/OL]. [2026-03-25]. <https://github.com/freebsd/freebsd-src/pull/1700>. 该 PR 为空主机名添加警告。
 
