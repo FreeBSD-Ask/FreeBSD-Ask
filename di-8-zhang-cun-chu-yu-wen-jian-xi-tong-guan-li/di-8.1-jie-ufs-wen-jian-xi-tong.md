@@ -242,8 +242,6 @@ Filesystem        usage    quota   limit   grace  files   quota  limit   grace
 /                    32        0       0              9       0      0
 ```
 
-此命令将显示每个启用了配额的文件系统的磁盘使用情况和当前的配额限制的摘要。
-
 系统至此已具备使用 `edquota` 设置配额限制的条件。
 
 配额限制可基于磁盘空间（块配额）、文件数量（inode 配额）或两者的组合进行设定。每种限制进一步细分为两个类别：硬限制和软限制。
@@ -278,7 +276,7 @@ Filesystem        usage    quota   limit   grace  files   quota  limit   grace
 
 通常，用户未使用任何磁盘空间的文件系统不会出现在 [quota(1)](https://man.freebsd.org/cgi/man.cgi?query=quota&sektion=1&format=html) 的输出中，即使该用户对该文件系统拥有配额。
 
-有时可能希望在一系列用户上设置配额限制。可以通过首先为一个用户分配所需的配额限制来实现。然后，使用 `-p` 将该配额复制到指定范围的用户 ID（UID）。以下命令将为 UID `10000` 到 `19999` 的用户复制配额限制：
+某些场景下需要为一批用户设置相同的配额限制。可先为某个用户分配所需的配额限制，再使用 `-p` 选项将该配额复制到指定范围的用户 ID（UID）。以下命令将 UID `10000` 至 `19999` 的用户复制配额限制：
 
 ```sh
 # edquota -p ykla 10000-19999
