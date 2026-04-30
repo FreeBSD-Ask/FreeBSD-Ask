@@ -166,7 +166,7 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 
 ### 挂载临时文件系统准备安装
 
-挂载一个临时文件系统（tmpfs），这样可以在内存中临时存储安装过程中需要的文件，避免频繁写入磁盘：
+挂载一个临时文件系统（tmpfs），如此可在内存中临时存储安装过程中需要的文件，避免频繁写入磁盘：
 
 ```sh
 # mount -t tmpfs tmpfs /mnt
@@ -234,7 +234,7 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 # zfs create -o mountpoint=/usr -o canmount=off zroot/usr
 ```
 
-将创建 `zroot/usr` 数据集，设置 `canmount=off` 即禁止自动挂载，这样可以将相关的子数据集组织在一起，但不会单独挂载这个父数据集。
+将创建 `zroot/usr` 数据集，设置 `canmount=off` 即禁止自动挂载，如此可将相关的子数据集组织在一起，但不会单独挂载这个父数据集。
 
 - 创建 `/usr/ports` 数据集
 
@@ -334,7 +334,7 @@ zroot/
 
 ### 配置交换分区到 `fstab`
 
-将交换分区 `/dev/nda0p5` 添加到临时的 fstab 文件，这样系统启动时就能自动挂载这个交换分区：
+将交换分区 `/dev/nda0p5` 添加到临时的 fstab 文件，如此系统启动时即可自动挂载这个交换分区：
 
 ```sh
 # printf "/dev/nda0p5\tnone\tswap\tsw\t0\t0\n" >> /tmp/bsdinstall_etc/fstab
@@ -354,7 +354,7 @@ zroot/
 
 ### 设置启动项与 UEFI
 
-- 设置 ZFS 池的引导文件系统（bootfs）为 `zroot/ROOT/default`，这样系统启动时会自动从这个数据集引导：
+- 设置 ZFS 池的引导文件系统（bootfs）为 `zroot/ROOT/default`，如此系统启动时会自动从这个数据集引导：
 
 ```sh
 # zpool set bootfs=zroot/ROOT/default zroot
