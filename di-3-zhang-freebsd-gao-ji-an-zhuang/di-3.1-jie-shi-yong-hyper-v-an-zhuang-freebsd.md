@@ -66,7 +66,7 @@ PS C:\Users\ykla> Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-H
 
 ## 创建虚拟机
 
-安装完成 Hyper-V 后，按照以下步骤创建虚拟机。
+安装完成 Hyper-V 后，创建虚拟机。
 
 ![Hyper-V](../.gitbook/assets/hyperv-2.png)
 
