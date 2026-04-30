@@ -89,6 +89,8 @@ tmpfs               32M    156K     32M     0%    /var
 - `-h`：以人类可读格式显示，单位为 KB、MB、GB 等。
 - `-l`：仅显示本地文件系统。
 
+上述输出表明，分区扩展操作已完成，文件系统已成功调整至新的大小。
+
 ### 参考文献
 
 - FreeBSD Project. ffs -- Berkeley fast file system[EB/OL]. [2026-04-14]. <https://man.freebsd.org/cgi/man.cgi?ffs(7)>. UFS/FFS 文件系统概述手册页，描述伯克利快速文件系统的设计与实现。
@@ -274,7 +276,7 @@ Filesystem        usage    quota   limit   grace  files   quota  limit   grace
 /                    32      100     120              9       0      0
 ```
 
-通常，用户未使用任何磁盘空间的文件系统不会出现在 `quota` 的输出中，即使该用户已为该文件系统分配了配额限制。
+通常，用户未使用任何磁盘空间的文件系统不会出现在 [quota(1)](https://man.freebsd.org/cgi/man.cgi?query=quota&sektion=1&format=html) 的输出中，即使该用户对该文件系统拥有配额。
 
 有时可能希望在一系列用户上设置配额限制。可以通过首先为一个用户分配所需的配额限制来实现。然后，使用 `-p` 将该配额复制到指定范围的用户 ID（UID）。以下命令将为 UID `10000` 到 `19999` 的用户复制配额限制：
 
