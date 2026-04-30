@@ -16,7 +16,7 @@
 
 ![分区方案选择](../.gitbook/assets/dual-boot-3.png)
 
-这里需要设置一个大的临时交换分区，该数值表示计划中的交换分区与 Windows 系统分区容量之和。如此设置是为了后续安装 Windows 时能够直接使用这部分空间，避免额外的分区操作。在本节中，交换分区（Swap）大小为 8 GB，其余 200 GB 空间预留给 Windows。请修改 `S Swap Size` 的大小。
+此处需要设置一个大的临时交换分区，该数值表示计划中的交换分区与 Windows 系统分区容量之和。如此设置是为了后续安装 Windows 时能够直接使用这部分空间，避免额外的分区操作。在本节中，交换分区（Swap）大小为 8 GB，其余 200 GB 空间预留给 Windows。请修改 `S Swap Size` 的大小。
 
 ![交换分区大小设置](../.gitbook/assets/dual-boot-4.png)
 
