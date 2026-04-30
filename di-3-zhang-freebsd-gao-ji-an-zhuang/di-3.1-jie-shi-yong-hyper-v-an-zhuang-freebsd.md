@@ -106,7 +106,7 @@ PS C:\Users\ykla> Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-H
 
 ## 虚拟机配置调整
 
-虚拟机创建完成后，需要对部分设置进行调整。
+虚拟机创建完成后，调整部分设置。
 
 ![Hyper-V](../.gitbook/assets/hyperv-10.png)
 
