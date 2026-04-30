@@ -142,7 +142,7 @@ PS C:\Users\ykla> Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-H
 
 ## 桌面环境验证
 
-安装完成后，可对虚拟机进行基本功能测试。
+安装完成后，测试虚拟机基本功能。
 
 鼠标和键盘均可正常工作，可在宿主机和虚拟机间无缝切换，但虚拟机桌面分辨率无法自适应调整。建议检查 Hyper-V 集成服务安装并参考 FreeBSD 文档以获取显示配置指南。
 
