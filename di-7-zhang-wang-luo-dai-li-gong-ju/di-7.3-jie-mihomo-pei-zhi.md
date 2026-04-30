@@ -93,7 +93,7 @@ mihomo_regeoip()
 		mv ${mihomo_datadir}/geoip.new ${mihomo_datadir}/geoip.dat
         startmsg "rename geoip.new to geoip.dat"
 	else
-		err "fetch geoip.dat failed! check $$mihomo_geoip"
+		err "fetch geoip.dat failed! check $mihomo_geoip"
 	fi
 }
 mihomo_init()
