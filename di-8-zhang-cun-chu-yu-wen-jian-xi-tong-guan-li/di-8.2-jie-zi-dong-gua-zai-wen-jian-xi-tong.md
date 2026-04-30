@@ -8,10 +8,6 @@ FreeBSD 提供了多种自动挂载技术方案供用户选择。
 >
 > `automount` 对普通用户的权限控制能力有限，主要以 root 身份执行挂载操作；若需要更精细的权限控制机制，建议使用 DSBMD。
 
-automount 是一个基于 FreeBSD 的第三方自动挂载工具，通过监控设备插入事件实现文件系统的自动挂载，该工具支持的文件系统类型涵盖 NTFS、FAT、exFAT、EXT2/3/4、UFS、HFS、XFS 及 ISO9660 等。
-
-### 安装 automount
-
 automount 会自动监控设备插入事件并执行挂载操作，默认挂载点位于 `/media` 目录。基本系统已内置。
 
 `/etc/auto_master` 文件控制着 automount 的行为，查看该文件：
