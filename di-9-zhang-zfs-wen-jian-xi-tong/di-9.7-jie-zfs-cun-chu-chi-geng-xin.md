@@ -226,7 +226,7 @@ Every feature flags pool has all supported and requested features enabled.
   33552384      2008        - free -  (1.0M)
 ```
 
-找到类型为 `freebsd-boot` 的分区，这里分区序号为 `1`，对应以下命令中的 `-i` 选项，然后进行 `bootcode` 重写：
+找到类型为 `freebsd-boot` 的分区，此处分区序号为 `1`，对应以下命令中的 `-i` 选项，然后进行 `bootcode` 重写：
 
 ```sh
 # gpart bootcode -p /boot/gptzfsboot -i 1 ada0  # 为 ada0 磁盘的第 1 个分区安装 GPT ZFS 启动代码
