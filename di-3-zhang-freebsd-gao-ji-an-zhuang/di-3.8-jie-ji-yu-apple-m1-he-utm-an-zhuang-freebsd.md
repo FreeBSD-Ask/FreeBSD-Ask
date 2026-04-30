@@ -170,7 +170,7 @@ twm: created fontset with 2 fonts (15 missing) for "fixed"
 
 ## 参考文献
 
-- utmapp. UTM — Virtual machines for macOS[EB/OL]. [2026-04-17]. <https://github.com/utmapp/UTM>. UTM 作为一款基于 QEMU 的开源虚拟机软件，面向 Apple 设备，支持 ARM 和 x86 架构。
+- utmapp. UTM — Virtual machines for macOS[EB/OL]. [2026-04-17]. <https://github.com/utmapp/UTM>. UTM 项目主页。
 
 ## 课后习题
 
