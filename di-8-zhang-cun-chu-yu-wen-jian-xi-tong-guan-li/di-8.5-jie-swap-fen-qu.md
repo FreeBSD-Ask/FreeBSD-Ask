@@ -47,7 +47,7 @@ Swap 空间是操作系统中内存管理的组成部分。
 # mdconfig -a -t vnode -f /usr/swap0 -u 0 && swapon /dev/md0
 ```
 
-为确保在系统重启后仍能生效，还需在 `/etc/rc.conf` 配置文件中添加以下内容：
+若要在系统重启后仍能生效，还需在 `/etc/rc.conf` 配置文件中添加以下内容：
 
 ```ini
 swapfile="/usr/swap0"
