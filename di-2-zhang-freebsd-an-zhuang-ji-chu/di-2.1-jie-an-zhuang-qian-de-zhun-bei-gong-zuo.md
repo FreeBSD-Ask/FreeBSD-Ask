@@ -153,7 +153,7 @@ FreeBSD `-RELEASE` 历史版本下载地址：
 
 ## 刻录 FreeBSD 镜像
 
-下载 FreeBSD 镜像后，需要将其刻录到 U 盘上才能进行安装。本节将介绍如何刻录 FreeBSD 镜像到 U 盘。
+下载 FreeBSD 镜像后，需要将其刻录到 U 盘上才能进行安装。
 
 ### 推荐镜像格式
 
