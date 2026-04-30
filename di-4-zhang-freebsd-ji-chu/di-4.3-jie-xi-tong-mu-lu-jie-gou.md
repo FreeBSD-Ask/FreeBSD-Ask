@@ -337,9 +337,9 @@ dr-xr-xr-x   2 root    wheel   schg  2 Apr 13 12:38 /var/empty
 
 参数解释：在长格式（`-l`）输出中包含文件标志（`-o`），且将目录视为普通文件列出而不递归（`-d`）。
 
->**技巧**
+> **技巧**
 >
->OpenSSH 使用特权分离（privilege separation）架构，预认证阶段的 chroot 目录为 `/var/empty`，该目录必须为空且仅 root 可写。
+> OpenSSH 使用特权分离（privilege separation）架构，预认证阶段的 chroot 目录为 `/var/empty`，该目录必须为空且仅 root 可写。
 
 ## 参考文献
 
