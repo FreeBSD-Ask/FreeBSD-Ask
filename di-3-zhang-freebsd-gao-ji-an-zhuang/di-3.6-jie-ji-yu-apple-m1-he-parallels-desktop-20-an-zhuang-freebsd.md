@@ -10,7 +10,7 @@
 
 ## 安装
 
-环境准备完成后，按照以下步骤安装 FreeBSD。
+环境准备完成后，安装 FreeBSD。
 
 ![Parallels Desktop 20 安装 FreeBSD 15.0](../.gitbook/assets/parallels-1.png)
 
