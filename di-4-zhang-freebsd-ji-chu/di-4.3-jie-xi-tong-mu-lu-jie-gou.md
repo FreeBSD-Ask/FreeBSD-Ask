@@ -733,7 +733,7 @@ igc0: EEPROM V2.17-0 eTrack 0x80000303
 
 igc0: Using 1024 TX descriptors and 1024 RX descriptors
 # TX/RX 描述符环形缓冲区（ring descriptor）大小。描述符=硬件DMA传输的元数据结构，
-# 每个描述符描述一个待发送/接收的数据包缓冲区。1024个描述符→最多1024个未处理的数据包排队。
+# 每个描述符对应一个待发送/接收的数据包缓冲区。1024 个描述符 → 最多 1024 个未处理的数据包。
 
 igc0: Using 4 RX queues 4 TX queues
 # 多队列（multi-queue）RSS 配置：4 个 CPU→4 个队列，每个 CPU 独立处理自己的数据包流。
