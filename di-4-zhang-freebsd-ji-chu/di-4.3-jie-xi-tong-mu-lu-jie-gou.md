@@ -813,7 +813,7 @@ Timecounter "TSC" frequency 806401362 Hz quality 1000
 # Time Stamp Counter（TSC）频率 = 806.4 MHz = N100 CPU 基础频率（base clock）。
 # quality 1000 是最高优先级——内核最终选择 TSC 为系统主 timecounter。
 # TSC 在每个 CPU 时钟（base clock）递增一次，是最细粒度的时间源。
-# 该 CPU 的 TSC 为 Invariant（不随 P-state/C-state 变化），可完全信任为单调时钟源。
+# 该 CPU 的 TSC 为 Invariant（不随 P-state/C-state 变化），可作为可靠的单调时钟源。
 
 Timecounters tick every 1.000 msec
 # 内核 timecounter 子系统以 1ms（1000 Hz）的频率更新系统时间基准。
@@ -851,7 +851,7 @@ mmcsd0rpmb: 17MB partition 3 at mmcsd0
 # 用于防回滚密钥存储等安全用途。大小 17 MB。
 
 uhub1: 2 ports with 2 removable, self powered
-# uhub1 具有 2 个可移除（external-facing）端口，自供电（意味不从上游端口取电）。
+# uhub1 具有 2 个可移除（external-facing）端口，自供电（意味着不从上游端口取电）。
 
 # ===== NVMe 控制器初始化 =====
 nvme0: Allocated 16MB host memory buffer
