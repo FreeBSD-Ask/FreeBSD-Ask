@@ -1,10 +1,12 @@
 # 9.6 ZFS 启动环境与多版本共存
 
+本节系统介绍 ZFS 启动环境（Boot Environment，BE）的创建与管理，以及基于 pkgbase 的系统版本升级方法。
+
 ZFS 启动环境为 FreeBSD 提供了安全、灵活的系统更新与多版本共存机制。
 
 ## 创建启动环境 15.0-RELEASE
 
-下面将创建一个名为 15.0-RELEASE 的启动环境。
+ZFS 启动环境（Boot Environment，BE）是 FreeBSD 的一个重要特性，它能在系统中创建多个独立的系统环境，从而实现不同系统版本的共存与安全切换。下面将创建一个名为 15.0-RELEASE 的启动环境。
 
 - 使用工具 bectl 创建启动环境 `15.0-RELEASE`：
 
@@ -91,8 +93,6 @@ zroot/ROOT/15.0-RELEASE  99036272 11132688 87903584    11%    /mnt/upgrade
 
 ……其他省略……
 ```
-
-由输出可知，已经成功将启动环境 15.0-RELEASE 挂载到了指定路径。
 
 ### 验证当前 FreeBSD 版本
 
@@ -185,8 +185,6 @@ After verifying those files, restart the system.
 14.3-RELEASE
 14.3-RELEASE-p6
 ```
-
-由输出可知，pkgbasify 已将系统更新到最新的补丁版本，并完成了向 pkgbase 的转换。
 
 ### 使用 pkgbase 将启动环境中的系统版本更新到 15.0-RELEASE
 
