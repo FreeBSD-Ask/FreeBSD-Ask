@@ -16,20 +16,6 @@ FreeBSD 的文件系统层次结构是理解系统整体架构的基础。根目
 
 - **静态与动态数据分离原则**：静态数据（如二进制文件、库文件、文档）与动态数据（如日志、临时文件、运行时数据）分别存储于不同的目录树中。`/usr` 主要存放静态的只读数据，`/var` 则存放可变的运行时数据，`/tmp` 存放临时文件。
 
-## 设备与设备节点
-
-设备是系统中主要用于与硬件相关活动的术语，包括磁盘、打印机、显卡和键盘。当 FreeBSD 启动时，大多数启动消息都与正在检测的设备有关。启动消息的副本保存在 `/var/run/dmesg.boot` 中。
-
-每个设备都有一个设备名称和编号。例如，`ada0` 是第一个 SATA 硬盘，而 `kbd0` 代表键盘。
-
-FreeBSD 中的大多数设备必须通过称为设备节点的特殊文件访问，这些文件位于 `/dev` 目录中。
-
-在 FreeBSD 中，设备节点由 devfs(5) 文件系统自动管理。devfs 是一个虚拟文件系统，在系统启动时由内核自动挂载到 `/dev`，并根据当前系统中存在的硬件设备动态创建和删除设备节点。这与传统 UNIX 系统需要手动使用 `mknod` 命令创建设备节点的做法不同。devfs 确保了 `/dev` 目录中只包含当前系统实际存在的设备节点，避免了设备节点的冗余。
-
-设备节点分为两种类型：字符设备（character device）和块设备（block device）。字符设备以字节流方式访问数据，如终端（`/dev/ttyv0`）和串口；块设备以固定大小的块为单位访问数据，如磁盘（`/dev/ada0`）。在 `ls -l` 的输出中，字符设备的类型标识为 `c`，块设备的类型标识为 `b`。
-
-设备命名遵循一定的约定：SATA 硬盘以 `ada` 开头（如 `ada0`、`ada1`），SCSI 硬盘和 USB 存储设备以 `da` 开头（如 `da0`），NVMe 存储以 `nvd` 或 `nda` 开头，CD-ROM 驱动器以 `cd` 开头。编号从 0 开始。GPT 分区在设备名后附加 `p` 加分区号（如 `ada0p1`），MBR 切片附加 `s` 加切片号（如 `ada0s1`）。
-
 ## FHS 与 FreeBSD 目录结构
 
 文件系统层次标准（Filesystem Hierarchy Standard，FHS）由 Linux 基金会维护，旨在定义类 UNIX 操作系统中目录结构和目录内容的规范。FHS 的目标是使软件开发者能够预测已安装文件和目录的位置，从而编写更具可移植性的软件。当前版本为 FHS 3.0，发布于 2015 年（来源：Linux Foundation. Filesystem Hierarchy Standard 3.0[EB/OL]. (2015-06-03)[2026-04-23]. <https://refspecs.linuxfoundation.org/fhs.shtml>.）
@@ -340,6 +326,220 @@ dr-xr-xr-x   2 root    wheel   schg  2 Apr 13 12:38 /var/empty
 > **技巧**
 >
 > OpenSSH 使用特权分离（privilege separation）架构，预认证阶段的 chroot 目录为 `/var/empty`，该目录必须为空且仅 root 可写。
+
+## 设备与设备节点
+
+设备是系统中主要用于与硬件相关活动的术语，包括磁盘、打印机、显卡和键盘。
+
+每个设备都有一个设备名称和编号。例如，`ada0` 是第一个 SATA 硬盘，而 `kbd0` 代表键盘。
+
+FreeBSD 中的大多数设备必须通过称为设备节点的特殊文件访问，这些文件位于 `/dev` 目录中。
+
+在 FreeBSD 中，设备节点由 devfs(5) 文件系统自动管理。devfs 是一个虚拟文件系统，在系统启动时由内核自动挂载到 `/dev`，并根据当前系统中存在的硬件设备动态创建和删除设备节点。这与传统 UNIX 系统需要手动使用 `mknod` 命令创建设备节点的做法不同。devfs 确保了 `/dev` 目录中只包含当前系统实际存在的设备节点，避免了设备节点的冗余。
+
+设备节点分为两种类型：字符设备（character device）和块设备（block device）。字符设备以字节流方式访问数据，如终端（`/dev/ttyv0`）和串口；块设备以固定大小的块为单位访问数据，如磁盘（`/dev/ada0`）。在 `ls -l` 的输出中，字符设备的类型标识为 `c`，块设备的类型标识为 `b`。
+
+设备命名遵循一定的约定：SATA 硬盘以 `ada` 开头（如 `ada0`、`ada1`），SCSI 硬盘和 USB 存储设备以 `da` 开头（如 `da0`），NVMe 存储以 `nvd` 或 `nda` 开头，CD-ROM 驱动器以 `cd` 开头。编号从 0 开始。GPT 分区在设备名后附加 `p` 加分区号（如 `ada0p1`），MBR 切片附加 `s` 加切片号（如 `ada0s1`）。
+
+## 启动消息 dmesg
+
+当 FreeBSD 启动时，大多数启动消息都与正在检测的设备有关。启动消息的副本保存在 `/var/run/dmesg.boot` 中。
+
+以下示例是 Radxa X4 16G 128G eMMC 款在 15.0-CURRENT 下完整的启动消息内容。
+
+```sh
+---<<BOOT>>---
+Copyright (c) 1992-2025 The FreeBSD Project.
+Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
+	The Regents of the University of California. All rights reserved.
+FreeBSD is a registered trademark of The FreeBSD Foundation.
+FreeBSD 15.0-CURRENT #0 main-n275588-045a4c108fcf: Fri Feb 21 02:25:56 UTC 2025
+    root@releng3.nyi.freebsd.org:/usr/obj/usr/src/amd64.amd64/sys/GENERIC amd64
+FreeBSD clang version 19.1.7 (https://github.com/llvm/llvm-project.git llvmorg-19.1.7-0-gcd708029e0b2)
+WARNING: WITNESS option enabled, expect reduced performance.
+VT(efifb): resolution 800x600
+CPU: Intel(R) N100 (806.40-MHz K8-class CPU)
+  Origin="GenuineIntel"  Id=0xb06e0  Family=0x6  Model=0xbe  Stepping=0
+  Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
+  Features2=0x7ffafbbf<SSE3,PCLMULQDQ,DTES64,MON,DS_CPL,VMX,EST,TM2,SSSE3,SDBG,FMA,CX16,xTPR,PDCM,PCID,SSE4.1,SSE4.2,x2APIC,MOVBE,POPCNT,TSCDLT,AESNI,XSAVE,OSXSAVE,AVX,F16C,RDRAND>
+  AMD Features=0x2c100800<SYSCALL,NX,Page1GB,RDTSCP,LM>
+  AMD Features2=0x121<LAHF,ABM,Prefetch>
+  Structured Extended Features=0x239ca7eb<FSGSBASE,TSCADJ,BMI1,AVX2,FDPEXC,SMEP,BMI2,ERMS,INVPCID,NFPUSG,PQE,RDSEED,ADX,SMAP,CLFLUSHOPT,CLWB,PROCTRACE,SHA>
+  Structured Extended Features2=0x98c007bc<UMIP,PKU,OSPKE,WAITPKG,GFNI,VAES,VPCLMULQDQ,RDPID,MOVDIRI,MOVDIR64B>
+  Structured Extended Features3=0xfc184410<FSRM,MD_CLEAR,IBT,IBPB,STIBP,L1DFL,ARCH_CAP,CORE_CAP,SSBD>
+  XSAVE Features=0xf<XSAVEOPT,XSAVEC,XINUSE,XSAVES>
+  IA32_ARCH_CAPS=0x180fd6b<RDCL_NO,IBRS_ALL,SKIP_L1DFL_VME,MDS_NO,TAA_NO>
+  VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID,VID,PostIntr
+  TSC: P-state invariant, performance statistics
+real memory  = 17179869184 (16384 MB)
+avail memory = 16318308352 (15562 MB)
+Event timer "LAPIC" quality 600
+ACPI APIC Table: <ALASKA A M I >
+WARNING: L3 data cache covers more APIC IDs than a package (7 > 3)
+FreeBSD/SMP: Multiprocessor System Detected: 4 CPUs
+FreeBSD/SMP: 1 package(s) x 4 core(s)
+random: registering fast source Intel Secure Key RNG
+random: fast provider: "Intel Secure Key RNG"
+random: unblocking device.
+ioapic0 <Version 2.0> irqs 0-119
+Launching APs: 2 1 3
+random: entropy device external interface
+kbd0 at kbdmux0
+efirtc0: <EFI Realtime Clock>
+efirtc0: registered as a time-of-day clock, resolution 1.000000s
+smbios0: <System Management BIOS> at iomem 0x75ca6000-0x75ca6017
+smbios0: Version: 3.6
+aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS,SHA1,SHA256>
+acpi0: <ALASKA A M I >
+Firmware Error (ACPI): Could not resolve symbol [\134_SB.PC00.TXHC.RHUB.SS01], AE_NOT_FOUND (20241212/dswload2-315)
+ACPI Error: AE_NOT_FOUND, During name lookup/catalog (20241212/psobject-372)
+Firmware Error (ACPI): Could not resolve symbol [\134_SB.PC00.TXHC.RHUB.SS02], AE_NOT_FOUND (20241212/dswload2-315)
+ACPI Error: AE_NOT_FOUND, During name lookup/catalog (20241212/psobject-372)
+acpi0: Power Button (fixed)
+hpet0: <High Precision Event Timer> iomem 0xfed00000-0xfed003ff on acpi0
+Timecounter "HPET" frequency 19200000 Hz quality 950
+Event timer "HPET" frequency 19200000 Hz quality 550
+Event timer "HPET1" frequency 19200000 Hz quality 440
+Event timer "HPET2" frequency 19200000 Hz quality 440
+Event timer "HPET3" frequency 19200000 Hz quality 440
+Event timer "HPET4" frequency 19200000 Hz quality 440
+atrtc1: <AT realtime clock> on acpi0
+atrtc1: Warning: Couldn't map I/O.
+atrtc1: registered as a time-of-day clock, resolution 1.000000s
+Event timer "RTC" frequency 32768 Hz quality 0
+attimer0: <AT timer> port 0x40-0x43,0x50-0x53 irq 0 on acpi0
+Timecounter "i8254" frequency 1193182 Hz quality 0
+Event timer "i8254" frequency 1193182 Hz quality 100
+Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
+acpi_timer0: <24-bit timer at 3.579545MHz> port 0x1808-0x180b on acpi0
+pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
+pci0: <ACPI PCI bus> on pcib0
+vgapci0: <VGA-compatible display> port 0x4000-0x403f mem 0x6000000000-0x6000ffffff,0x4000000000-0x400fffffff at device 2.0 on pci0
+vgapci0: Boot video device
+xhci0: <XHCI (generic) USB 3.0 controller> mem 0x6001120000-0x600112ffff at device 13.0 on pci0
+xhci0: 32 bytes context size, 64-bit DMA
+usbus0 on xhci0
+usbus0: 5.0Gbps Super Speed USB v3.0
+pci0: <simple comms, UART> at device 18.0 (no driver attached)
+xhci1: <XHCI (generic) USB 3.0 controller> mem 0x6001100000-0x600110ffff at device 20.0 on pci0
+xhci1: 32 bytes context size, 64-bit DMA
+usbus1 on xhci1
+usbus1: 5.0Gbps Super Speed USB v3.0
+pci0: <memory, RAM> at device 20.2 (no driver attached)
+pci0: <simple comms> at device 22.0 (no driver attached)
+sdhci_pci0: <Generic SD HCI> mem 0x6001149000-0x6001149fff at device 26.0 on pci0
+sdhci_pci0: 1 slot(s) allocated
+uma_zalloc_debug: zone "malloc-16" with the following non-sleepable locks held:
+exclusive sleep mutex SD slot mtx (sdhci) r = 0 (0xfffff80001ad9020) locked @ /usr/src/sys/dev/sdhci/sdhci.c:688
+stack backtrace:
+#0 0xffffffff80bcc76c at witness_debugger+0x6c
+#1 0xffffffff80bcd980 at witness_warn+0x430
+#2 0xffffffff80f05784 at uma_zalloc_debug+0x34
+#3 0xffffffff80f052d7 at uma_zalloc_arg+0x27
+#4 0xffffffff80b27bdd at malloc+0x7d
+#5 0xffffffff80b28592 at reallocf+0x12
+#6 0xffffffff80b9367d at devclass_add_device+0x1cd
+#7 0xffffffff80b91c2b at make_device+0x10b
+#8 0xffffffff80b91a6d at device_add_child_ordered+0x2d
+#9 0xffffffff8086f42c at sdhci_card_task+0x1fc
+#10 0xffffffff80875021 at sdhci_pci_attach+0x491
+#11 0xffffffff80b93e8b at device_attach+0x45b
+#12 0xffffffff80b951fa at bus_attach_children+0x4a
+#13 0xffffffff8082ba77 at pci_attach+0xd7
+#14 0xffffffff80f52775 at acpi_pci_attach+0x15
+#15 0xffffffff80b93e8b at device_attach+0x45b
+#16 0xffffffff80b951fa at bus_attach_children+0x4a
+#17 0xffffffff80f55ad8 at acpi_pcib_acpi_attach+0x428
+mmc0: <MMC/SD bus> on sdhci_pci0
+pcib1: <ACPI PCI-PCI bridge> at device 28.0 on pci0
+pci1: <ACPI PCI bus> on pcib1
+pci1: <network> at device 0.0 (no driver attached)
+pcib2: <ACPI PCI-PCI bridge> at device 28.6 on pci0
+pci2: <ACPI PCI bus> on pcib2
+igc0: <Intel(R) Ethernet Controller I226-V> mem 0x80500000-0x805fffff,0x80600000-0x80603fff at device 0.0 on pci2
+igc0: EEPROM V2.17-0 eTrack 0x80000303
+igc0: Using 1024 TX descriptors and 1024 RX descriptors
+igc0: Using 4 RX queues 4 TX queues
+igc0: Using MSI-X interrupts with 5 vectors
+igc0: Ethernet address: 10:02:b5:86:0e:f9
+igc0: netmap queues/slots: TX 4/1024, RX 4/1024
+pcib3: <ACPI PCI-PCI bridge> at device 29.0 on pci0
+pci3: <ACPI PCI bus> on pcib3
+nvme0: <Generic NVMe Device> mem 0x80700000-0x80703fff at device 0.0 on pci3
+isab0: <PCI-ISA bridge> at device 31.0 on pci0
+isa0: <ISA bus> on isab0
+hdac0: <Intel Alder Lake-N HDA Controller> mem 0x6001140000-0x6001143fff,0x6001000000-0x60010fffff at device 31.3 on pci0
+pci0: <serial bus> at device 31.5 (no driver attached)
+acpi_button0: <Sleep Button> on acpi0
+cpu0: <ACPI CPU> on acpi0
+acpi_button1: <Power Button> on acpi0
+acpi_tz0: <Thermal Zone> on acpi0
+acpi_syscontainer0: <System Container> on acpi0
+acpi_syscontainer1: <System Container> on acpi0
+atrtc0: <AT realtime clock> at port 0x70 irq 8 on isa0
+atrtc0: Warning: Couldn't map I/O.
+atrtc0: registered as a time-of-day clock, resolution 1.000000s
+atrtc0: Can't map interrupt.
+atrtc0: non-PNP ISA device will be removed from GENERIC in FreeBSD 15.
+hwpstate_intel0: <Intel Speed Shift> on cpu0
+cpufreq0: <CPU frequency control> on cpu0
+hwpstate_intel1: <Intel Speed Shift> on cpu1
+cpufreq1: <CPU frequency control> on cpu1
+hwpstate_intel2: <Intel Speed Shift> on cpu2
+cpufreq2: <CPU frequency control> on cpu2
+hwpstate_intel3: <Intel Speed Shift> on cpu3
+cpufreq3: <CPU frequency control> on cpu3
+Timecounter "TSC" frequency 806401362 Hz quality 1000
+Timecounters tick every 1.000 msec
+ugen1.1: <Intel XHCI root HUB> at usbus1
+ugen0.1: <Intel XHCI root HUB> at usbus0
+uhub0 on usbus1
+uhub0: <Intel XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus1
+uhub1 on usbus0
+uhub1: <Intel XHCI root HUB, class 9/0, rev 3.00/1.00, addr 1> on usbus0
+ZFS filesystem version: 5
+ZFS storage pool version: features support (5000)
+mmcsd0: 125GB <MMCHC Y2P128 0.0 SN F034273C MFG 04/2023 by 155 0x0000> at mmc0 200.0MHz/8bit/8192-block
+mmcsd0boot0: 4MB partition 1 at mmcsd0
+mmcsd0boot1: 4MB partition 2 at mmcsd0
+mmcsd0rpmb: 17MB partition 3 at mmcsd0
+uhub1: 2 ports with 2 removable, self powered
+nvme0: Allocated 16MB host memory buffer
+hdacc0: <Realtek ALC269 HDA CODEC> at cad 0 on hdac0
+hdaa0: <Realtek ALC269 Audio Function Group> at nid 1 on hdacc0
+pcm0: <Realtek ALC269 (Right Analog)> at nid 21 and 24 on hdaa0
+nda0 at nvme0 bus 0 scbus0 target 0 lun 1
+nda0: <Fanxiang S530Q 500GB SN14243 FX240960178>
+nda0: Serial Number FX240960178
+nda0: nvme version 1.4
+nda0: 476940MB (976773168 512 byte sectors)
+Trying to mount root from zfs:zroot/ROOT/default []...
+WARNING: WITNESS option enabled, expect reduced performance.
+uhub0: 16 ports with 16 removable, self powered
+Root mount waiting for: usbus1
+ugen1.2: <Realtek Bluetooth Radio> at usbus1
+ichsmb0: <Intel Alder Lake SMBus controller> port 0xefa0-0xefbf mem 0x6001148000-0x60011480ff at device 31.4 on pci0
+smbus0: <System Management Bus> on ichsmb0
+rtw890: <rtw89_8852be> port 0x3000-0x30ff mem 0x80800000-0x808fffff at device 0.0 on pci1
+rtw890: successfully loaded firmware image 'rtw89/rtw8852b_fw-1.bin'
+rtw890: loaded firmware rtw89/rtw8852b_fw-1.bin
+rtw890: Firmware version 0.29.29.5 (da87cccd), cmd version 0, type 5
+rtw890: Firmware version 0.29.29.5 (da87cccd), cmd version 0, type 3
+rtw890: chip rfe_type is 5
+acpi_wmi0: <ACPI-WMI mapping> on acpi0
+acpi_wmi0: cannot find EC device
+acpi_wmi0: Embedded MOF found
+ACPI: \134_SB.WFDE.WQCC: 1 arguments were passed to a non-method ACPI object (Buffer) (20241212/nsarguments-361)
+acpi_wmi1: <ACPI-WMI mapping> on acpi0
+acpi_wmi1: cannot find EC device
+acpi_wmi1: Embedded MOF found
+ACPI: \134_SB.WFTE.WQCC: 1 arguments were passed to a non-method ACPI object (Buffer) (20241212/nsarguments-361)
+lo0: link state changed to UP
+igc0: link state changed to UP
+ubt0 on uhub0
+ubt0: <Realtek Bluetooth Radio, class 224/1, rev 1.00/0.00, addr 1> on usbus1
+Security policy loaded: MAC/ntpd (mac_ntpd)
+```
 
 ## 参考文献
 
