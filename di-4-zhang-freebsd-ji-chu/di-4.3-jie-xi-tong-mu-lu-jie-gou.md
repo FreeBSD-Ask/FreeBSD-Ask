@@ -25,21 +25,22 @@ FreeBSD 的目录层次由 `hier(7)` 手册页定义。与 FHS 相比，FreeBSD 
 | 项目 | FHS | FreeBSD |
 | ---- | --- | ------- |
 | `/usr/local` | 管理员本地安装，初始为空 | pkg/ports 安装第三方软件默认路径 |
-| 配置文件位置 | 第三方 `/etc/opt`，推荐使用子目录 | 第三方 `/usr/local/etc`，系统 `/etc` |
+| 配置文件 | 第三方 `/etc/opt`，建议使用子目录 | 第三方 `/usr/local/etc`，系统 `/etc` |
+| `/bin`、`/sbin`、`/lib` | 独立目录，与 `/usr` 分离 | 独立目录，与 `/usr` 分离 |
 | `/libexec` | 可选，与 `/usr/lib` 二选一存放内部二进制 | 根和 `/usr` 下均有，系统辅助程序 |
 | `/rescue` | 未定义 | 静态链接紧急修复工具 |
 | `/srv` | 必选，服务数据（ftp、www 等） | 未定义 |
-| `/opt` | 必选，附加软件包 `/opt/<package>` | 未定义，统一用 `/usr/local` |
-| `/media` | 可移动介质挂载点 | 由 automount(8) 或 bsdisks(8) 管理 |
+| `/opt` | 必选，`/opt/<package>` | 未定义，统一用 `/usr/local` |
+| `/media` | 可移动介质挂载点 | automount(8) 或 bsdisks(8) 管理 |
 | `/mnt` | 临时挂载点 | 临时挂载点 |
-| `/run` | 必选（3.0），替代 `/var/run` 部分功能 | 无，沿用 `/var/run` |
-| `/sys` | Linux sysfs | 无，用 sysctl(8) |
-| `/proc` | Linux procfs | procfs(4)，默认不用 |
-| 共享库 | `/lib` 关键库，`/usr/lib` 非关键，`/lib<qual>` 兼容 | `/lib` 关键库，`/usr/lib` 共享/ar 库，`/usr/lib32` |
+| `/run` | 必选（3.0），PID 文件及 UNIX 域套接字 | 无，沿用 `/var/run` |
+| `/sys` | Linux sysfs（§6.1.7） | 无，用 sysctl(8) |
+| `/proc` | Linux procfs（§6.1.5） | procfs(4)，默认不用 |
+| 共享库 | `/lib` 关键库，`/usr/lib` 非关键及编程库，`/lib<qual>` 兼容 | `/lib` 关键库，`/usr/lib` 共享/ar 库，`/usr/lib32` |
 | 内核 | `/` 或 `/boot` | `/boot/kernel/`，备用 `/boot/kernel.old/` |
 | `/home` | 可选 | 用户家目录 |
 | `/var/empty` | 未定义 | sshd(8) 特权分离 chroot |
-| `/nonexistent` | 未定义 | 无家目录账户的占位符 |
+| `/nonexistent` | 未定义 | 无家目录账户占位符 |
 
 FHS 按可共享/不可共享、静态/可变两个维度将文件分层：`/usr` 可共享只读，`/var` 可变，根文件系统仅需满足引导、恢复、修复的最低需求。FreeBSD 遵循此原则，基本系统限定在 `hier(7)` 定义目录，第三方软件限定在 `/usr/local`。
 
