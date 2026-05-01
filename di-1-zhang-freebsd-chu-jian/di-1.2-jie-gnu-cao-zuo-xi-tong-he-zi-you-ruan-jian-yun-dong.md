@@ -1,5 +1,7 @@
 # 1.2 GNU 操作系统和自由软件运动
 
+GNU 项目由理查德·斯托曼于 1983 年发起，目标是创建一款完全自由的、与 UNIX 兼容的操作系统。本节梳理从 GNU 项目初始公告、自由软件基金会成立到 GPL 许可证体系建立的关键节点，并说明 GNU 用户空间与 Linux 内核如何结合为 GNU/Linux。
+
 ## GNU 操作系统与自由软件运动的缘起
 
 GNU 项目与自由软件运动的渊源，可从 Linux 内核文档切入理解。根据 Linux Kernel Documentation 的相关说明（参见 Linux Kernel Documentation. 1. Introduction — The Linux Kernel documentation[EB/OL]. [2026-03-26]. <https://www.kernel.org/doc/html/latest/process/1.Intro.html> 及 Linux Kernel Documentation. Linux kernel licensing rules — The Linux Kernel documentation[EB/OL]. [2026-03-26]. <https://www.kernel.org/doc/html/latest/process/license-rules.html>）：
