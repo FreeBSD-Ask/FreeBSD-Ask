@@ -703,7 +703,7 @@ stack backtrace:
 # witness_warn：WARN 级别——非严重的锁顺序警告（非死锁）。
 # uma_zalloc_debug → uma_zalloc_arg → malloc → reallocf：内存分配器检测路径。
 # devclass_add_device → make_device：设备类中添加新设备实例。
-# sdhci_card_task：SD 卡检测任务（在sdhci(4) attach上下文内执行）。
+# sdhci_card_task：SD 卡检测任务（在 sdhci(4) attach 上下文内执行）。
 # sdhci_pci_attach → device_attach：设备驱动 attach 入口。
 # bus_attach_children → ... → acpi_pcib_acpi_attach：遍历总线子设备的递归attach调用链，层层向上经ACPI层回到PCI桥顶的ACPI attach入口。
 # 此 LOR 不影响 SD 卡正常读写，仅为 CURRENT 调试用途（RELEASE 版不启用 WITNESS）。
