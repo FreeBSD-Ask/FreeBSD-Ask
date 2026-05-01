@@ -744,7 +744,7 @@ igc0: Ethernet address: 10:02:b5:86:0e:f9
 # MAC 地址。永久存储在 EEPROM 中，系统启动时由 igc(4) 读出。
 
 igc0: netmap queues/slots: TX 4/1024, RX 4/1024
-# netmap(4) 高性能零拷贝网络框架兼容信息：支持 4 个硬件队列，每队列 1024 个 buffer 槽位。
+# netmap(4) 高性能零拷贝网络框架兼容信息：支持 4 个硬件队列，每队列 1024 个缓冲区槽位。
 
 # ----- PCIe 根端口 7 -----
 pcib3: <ACPI PCI-PCI bridge> at device 29.0 on pci0
@@ -791,7 +791,7 @@ atrtc0: Warning: Couldn't map I/O.
 atrtc0: registered as a time-of-day clock, resolution 1.000000s
 atrtc0: Can't map interrupt.
 atrtc0: non-PNP ISA device will be removed from GENERIC in FreeBSD 15.
-# atrtc(4) 在 ISA 总线侧的探测。两个 Warning 均无害——ISA I/O 和中断在UEFI平台上经常不可映射。
+# atrtc(4) 在 ISA 总线侧的探测。两个 Warning 不影响系统运行——ISA I/O 和中断在 UEFI 平台上通常不可映射。
 # FreeBSD 15 计划将 atrtc 从 GENERIC 内核配置中移除（以 efirtc 和 ACPI 时钟替代）。
 
 # ===== Intel Speed Shift (HWP) =====
@@ -804,7 +804,7 @@ cpufreq2: <CPU frequency control> on cpu2
 hwpstate_intel3: <Intel Speed Shift> on cpu3
 cpufreq3: <CPU frequency control> on cpu3
 # Intel Speed Shift（HWP = Hardware P-state）——Intel 从 Skylake 起引入的 
-# CPU 自动频率调节机制：CPU 自身硬件根据负载实时、快速地调整核心频率，
+# CPU 自动频率调节机制：CPU 自身硬件根据负载实时调整核心频率，
 # 无需操作系统干预。传统方式（cpufreq）需要 OS 通过 ACPI _PSS 表选择 P-state（被动调速）。
 # HWP 的延迟和粒度远优于传统 cpufreq，这是 FreeBSD 供电管理和性能的关键组件。
 
