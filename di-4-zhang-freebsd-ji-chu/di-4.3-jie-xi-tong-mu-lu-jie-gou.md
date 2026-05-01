@@ -125,7 +125,7 @@ POSIX（IEEE 1003.1）/SUS（UNIX 03）对目录结构无类似要求。POSIX.1-
 │   │   ├── aliases 用于投递系统邮件的地址
 │   │   └── mailer.conf mailwrapper(8) 配置文件
 │   ├── motd.template TTY 登录后显示的信息，参见 motd(5)
-│   ├── mtree 用于系统的初始化和验证过程，可用于系统审计，参见 mtree(8)
+│   ├── mtree 系统初始化与验证，可用于系统审计，参见 mtree(8)
 │   ├── newsyslog.conf.d newsyslog 的配置文件，参见 newsyslog.conf(5)
 │   ├── ntp NTP 相关，参见 ntp.conf(5)、ntpd(8)
 │   ├── ntp.conf NTP 客户端配置文件，参见 ntpd(8)
