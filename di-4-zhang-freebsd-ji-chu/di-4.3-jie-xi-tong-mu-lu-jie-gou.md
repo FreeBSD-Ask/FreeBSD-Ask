@@ -1,5 +1,7 @@
 # 4.3 系统目录结构
 
+FreeBSD 遵循 hier(7) 规范组织文件系统层次结构，根目录 / 在系统启动时首个被挂载，包含进入多用户模式所需的基本系统。本节逐级解释根目录下各子目录的功能与设计原则。
+
 ## 目录结构概览
 
 根目录（/）是文件系统的最顶层目录，在系统启动时第一个被挂载，包含操作系统进入多用户模式所需的基本系统。根目录还包含其他文件系统的挂载点。挂载点是附加文件系统可以挂载到父文件系统（通常是根文件系统）上的目录。标准挂载点包括 `/usr/`、`/var/`、`/tmp/`、`/mnt/` 和 `/media/`。完整的文件系统层次结构描述参见 hier(7)。
@@ -860,7 +862,7 @@ nvme0: Allocated 16MB host memory buffer
 
 # ===== HD Audio Codec 探测 =====
 hdacc0: <Realtek ALC269 HDA CODEC> at cad 0 on hdac0
-# HD Audio Codec（Realtek ALC269）位于 codec address 0。ALC269 常见于笔记本/小主机。
+# HD Audio Codec（Realtek ALC269）位于 codec address 0。ALC269 常见于笔记本电脑与小主机。
 
 hdaa0: <Realtek ALC269 Audio Function Group> at nid 1 on hdacc0
 # AFG（Audio Function Group），HDA 规范术语——包含 DAC/ADC/混音/插孔等功能节点。
@@ -916,10 +918,10 @@ rtw890: successfully loaded firmware image 'rtw89/rtw8852b_fw-1.bin'
 rtw890: loaded firmware rtw89/rtw8852b_fw-1.bin
 rtw890: Firmware version 0.29.29.5 (da87cccd), cmd version 0, type 5
 rtw890: Firmware version 0.29.29.5 (da87cccd), cmd version 0, type 3
-# 固件加载流程：首先加载固件映像文件 .bin，然后验证 firmware version。
-# firmware version 0.29.29.5（GIT 提交 da87cccd），cmd version = 0（命令接口版本），
-# type 5 和 type 3 分别是 WiFi MAC 层 firmware 和 Bluetooth 共存/PHY 子固件。
-# 大部分现代 WiFi 芯片都需要运行时加载闭源 firmware——卡本身是无固件的ROM+通用DSP。
+# 固件加载流程：首先加载固件映像文件 .bin，然后验证固件版本。
+# 固件版本 0.29.29.5（GIT 提交 da87cccd），cmd version = 0（命令接口版本），
+# type 5 和 type 3 分别是 WiFi MAC 层固件和 Bluetooth 共存/PHY 子固件。
+# 大部分现代 WiFi 芯片都需要运行时加载闭源固件——卡本身是无固件的 ROM+通用 DSP。
 
 rtw890: chip rfe_type is 5
 # RFE（RF Front-End）类型 = 5。前端类型决定了驱动如何进行射频校准和天线选择。
@@ -944,7 +946,7 @@ acpi_wmi1: cannot find EC device
 acpi_wmi1: Embedded MOF found
 ACPI: \134_SB.WFTE.WQCC: 1 arguments were passed to a non-method ACPI object (Buffer) (20241212/nsarguments-361)
 # 第二个 ACPI WMI 映射实例。某些主板通过两个 WMI GUID 提供不同类别的功能。
-# 这里类似，无 EC 设备导致无法处理 WMI 事件。
+# 此处类似，无 EC 设备导致无法处理 WMI 事件。
 
 # ===== 网络接口就绪 =====
 lo0: link state changed to UP
