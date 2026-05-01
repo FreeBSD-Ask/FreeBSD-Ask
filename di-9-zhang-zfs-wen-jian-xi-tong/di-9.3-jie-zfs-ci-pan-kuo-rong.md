@@ -159,7 +159,7 @@ zroot  77.5G  2.20G  75.3G        -         -     2%     2%  1.00x    ONLINE  -	
 
 ## 故障排除
 
-本节介绍 ZFS 磁盘扩容过程中可能遇到的常见问题及解决方案。
+扩容过程中可能遇到分区表损坏、GPT 分区未对齐等问题，以下逐一给出解决方法。
 
 ### `gpart: table 'ada0' is corrupt: Operation not permitted`
 
