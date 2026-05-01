@@ -732,11 +732,11 @@ igc0: EEPROM V2.17-0 eTrack 0x80000303
 # 网卡 EEPROM 版本及 Intel 内部版本追踪号。EEPROM 存储 MAC 地址和PHY校准数据。
 
 igc0: Using 1024 TX descriptors and 1024 RX descriptors
-# TX/RX 描述符环形缓冲区（ring descriptor）大小。描述符=硬件DMA传输的元数据结构，
+# TX/RX 描述符环形缓冲区（ring descriptor）大小。描述符是硬件 DMA 传输的元数据结构，
 # 每个描述符对应一个待发送/接收的数据包缓冲区。1024 个描述符 → 最多 1024 个未处理的数据包。
 
 igc0: Using 4 RX queues 4 TX queues
-# 多队列（multi-queue）RSS 配置：4 个 CPU→4 个队列，每个 CPU 独立处理自己的数据包流。
+# 多队列（multi-queue）RSS 配置：4 个 CPU 对应 4 个队列，每个 CPU 独立处理自己的数据包流。
 
 igc0: Using MSI-X interrupts with 5 vectors
 # MSI-X（Message Signaled Interrupts Extended）：每队列 1 个中断向量 + 1 个管理向量 = 5。
