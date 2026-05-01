@@ -331,7 +331,7 @@ dr-xr-xr-x   2 root    wheel   schg  2 Apr 13 12:38 /var/empty
 
 设备是系统中主要用于与硬件相关活动的术语，包括磁盘、打印机、显卡和键盘。
 
-每个设备都有一个设备名称和编号。例如，`ada0` 是第一个 SATA 硬盘，而 `kbd0` 代表键盘。
+每个设备都有一个设备名称和编号。例如，`ada0` 是第一块 SATA 硬盘，而 `kbd0` 代表键盘。
 
 FreeBSD 中的大多数设备必须通过称为设备节点的特殊文件访问，这些文件位于 `/dev` 目录中。
 
@@ -353,11 +353,21 @@ Copyright (c) 1992-2025 The FreeBSD Project.
 Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
 	The Regents of the University of California. All rights reserved.
 FreeBSD is a registered trademark of The FreeBSD Foundation.
+# FreeBSD 的版权信息
+
 FreeBSD 15.0-CURRENT #0 main-n275588-045a4c108fcf: Fri Feb 21 02:25:56 UTC 2025
     root@releng3.nyi.freebsd.org:/usr/obj/usr/src/amd64.amd64/sys/GENERIC amd64
+# 当前系统版本
+
 FreeBSD clang version 19.1.7 (https://github.com/llvm/llvm-project.git llvmorg-19.1.7-0-gcd708029e0b2)
+# Clang 版本
+
 WARNING: WITNESS option enabled, expect reduced performance.
+# CURRENT 系统内核默认启用了若干调试功能
+
 VT(efifb): resolution 800x600
+# EFI TTY 分辨率
+
 CPU: Intel(R) N100 (806.40-MHz K8-class CPU)
   Origin="GenuineIntel"  Id=0xb06e0  Family=0x6  Model=0xbe  Stepping=0
   Features=0xbfebfbff<FPU,VME,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,CLFLUSH,DTS,ACPI,MMX,FXSR,SSE,SSE2,SS,HTT,TM,PBE>
@@ -371,22 +381,36 @@ CPU: Intel(R) N100 (806.40-MHz K8-class CPU)
   IA32_ARCH_CAPS=0x180fd6b<RDCL_NO,IBRS_ALL,SKIP_L1DFL_VME,MDS_NO,TAA_NO>
   VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID,VID,PostIntr
   TSC: P-state invariant, performance statistics
+# CPU 相关信息
+
 real memory  = 17179869184 (16384 MB)
 avail memory = 16318308352 (15562 MB)
+# 内存相关信息
+
 Event timer "LAPIC" quality 600
+# 事件计时器
+
 ACPI APIC Table: <ALASKA A M I >
 WARNING: L3 data cache covers more APIC IDs than a package (7 > 3)
+# ACPI 相关信息
+
 FreeBSD/SMP: Multiprocessor System Detected: 4 CPUs
 FreeBSD/SMP: 1 package(s) x 4 core(s)
+# 处理器 SMP 信息
+
 random: registering fast source Intel Secure Key RNG
 random: fast provider: "Intel Secure Key RNG"
 random: unblocking device.
+# 随机数生成器
+
 ioapic0 <Version 2.0> irqs 0-119
 Launching APs: 2 1 3
 random: entropy device external interface
 kbd0 at kbdmux0
 efirtc0: <EFI Realtime Clock>
 efirtc0: registered as a time-of-day clock, resolution 1.000000s
+# RTC 时钟
+
 smbios0: <System Management BIOS> at iomem 0x75ca6000-0x75ca6017
 smbios0: Version: 3.6
 aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS,SHA1,SHA256>
