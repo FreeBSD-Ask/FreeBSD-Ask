@@ -22,25 +22,26 @@ FreeBSD 的文件系统层次结构是理解系统整体架构的基础。根目
 
 FreeBSD 的目录结构遵循了 FHS 的核心设计理念，但并非 FHS 的严格实现。FreeBSD 的目录层次由 `hier(7)` 手册页定义，是 FreeBSD 项目的权威规范。与 Linux 发行版相比，FreeBSD 的目录结构存在若干显著差异：
 
-| 项目 | FHS（文件系统层次标准） | FreeBSD |
-| ---- | ----------------------- | ------- |
-| `/usr/local` 的角色 | 保留给系统管理员本地安装软件；FHS 明确规定 `/usr/local` 在初始安装后必须为空 | Ports 与 pkg 安装第三方软件的默认目标路径；用于本地可执行文件与库 |
-| 配置文件位置 | 通常位于 `/etc` 或 `/etc/opt`（第三方软件）；FHS 推荐尽量使用 `/etc` 的子目录而非直接在 `/etc` 下放置文件 | 第三方软件配置位于 `/usr/local/etc`；系统配置位于 `/etc`，严格分离 |
-| `/libexec` 目录 | 可选目录；FHS 允许应用程序在 `/usr/libexec` 和 `/usr/lib` 之间二选一来存放内部二进制文件 | 根目录和 `/usr` 下均设有 `libexec`，用于存放系统级辅助可执行程序 |
-| `/rescue` 目录 | 不存在标准定义 | 存放静态链接的紧急修复工具，用于系统恢复 |
-| `/srv` 目录 | FHS 规定为必选目录，用于存放本系统提供的服务数据（如 ftp、www） | `hier(7)` 未定义此目录；FreeBSD 基本系统不创建 `/srv` |
-| `/opt` 目录 | FHS 规定为必选目录，用于附加应用软件包；包文件必须位于 `/opt/<package>` 或 `/opt/<provider>` 子树中 | `hier(7)` 未定义此目录；第三方软件统一使用 `/usr/local`，不使用 `/opt` |
-| `/media` vs `/mnt` | `/media` 为可移动介质挂载点（必选），`/mnt` 为临时挂载点（必选），两者角色严格分离 | 两者均存在，但 `/media` 通常由 automount(8) 或桌面环境的 bsdisks(8) 管理 |
-| `/run` 目录 | FHS 3.0 新增的必选目录，用于运行时变量数据，替代了 `/var/run` 的部分功能 | FreeBSD 同时存在 `/var/run`，未单独设立 `/run`；系统启动信息通过 `/var/run/dmesg.boot` 访问 |
-| `/sys` 目录 | Linux 专属，用于内核与系统信息虚拟文件系统（sysfs） | FreeBSD 无此目录；内核状态通过 sysctl(8) 接口访问 |
-| `/proc` 目录 | Linux 上为进程和内核信息虚拟文件系统（procfs），实际广泛使用 | `hier(7)` 定义为进程文件系统（procfs(4)），但现代 FreeBSD 默认不使用，通常为空 |
-| 共享库位置 | `/lib` 存放根文件系统关键共享库；`/usr/lib` 存放非关键库；可选 `/lib<qual>` 用于 32/64 位兼容 | `/lib` 存放 `/bin` 和 `/sbin` 关键库；`/usr/lib` 存放共享库和 ar(1) 类型库；`/usr/lib32` 存放 32 位兼容库 |
-| 内核位置 | 必须位于 `/` 或 `/boot` 中 | 内核及模块位于 `/boot/kernel/`，备用内核位于 `/boot/kernel.old/` |
-| `/home` 目录 | 可选目录；用户特定应用配置应存储在用户家目录中以 `.` 开头的文件或子目录中 | 普通用户家目录默认位于 `/home/`；root 家目录为 `/root/` |
-| `/var/empty` | 未在 FHS 中明确定义 | 为需要空目录的程序提供始终为空的目录；sshd(8) 特权分离使用此目录作为 chroot 环境 |
-| `/nonexistent` | 未在 FHS 中定义 | 不存在的目录；作为无需家目录的用户账户（如守护进程账户）的家目录占位符 |
+| 项目 | FHS | FreeBSD |
+| ---- | --- | ------- |
+| `/usr/local` | 管理员本地安装，初始为空 | pkg/ports 安装第三方软件默认路径 |
+| 配置文件位置 | 第三方 `/etc/opt`，推荐使用子目录 | 第三方 `/usr/local/etc`，系统 `/etc` |
+| `/libexec` | 可选，与 `/usr/lib` 二选一存放内部二进制 | 根和 `/usr` 下均有，系统辅助程序 |
+| `/rescue` | 未定义 | 静态链接紧急修复工具 |
+| `/srv` | 必选，服务数据（ftp、www 等） | 未定义 |
+| `/opt` | 必选，附加软件包 `/opt/<package>` | 未定义，统一用 `/usr/local` |
+| `/media` | 可移动介质挂载点 | 由 automount(8) 或 bsdisks(8) 管理 |
+| `/mnt` | 临时挂载点 | 临时挂载点 |
+| `/run` | 必选（3.0），替代 `/var/run` 部分功能 | 无，沿用 `/var/run` |
+| `/sys` | Linux sysfs | 无，用 sysctl(8) |
+| `/proc` | Linux procfs | procfs(4)，默认不用 |
+| 共享库 | `/lib` 关键库，`/usr/lib` 非关键，`/lib<qual>` 兼容 | `/lib` 关键库，`/usr/lib` 共享/ar 库，`/usr/lib32` |
+| 内核 | `/` 或 `/boot` | `/boot/kernel/`，备用 `/boot/kernel.old/` |
+| `/home` | 可选 | 用户家目录 |
+| `/var/empty` | 未定义 | sshd(8) 特权分离 chroot |
+| `/nonexistent` | 未定义 | 无家目录账户的占位符 |
 
-FHS 将文件按两个独立维度分类：**可共享/不可共享**（shareable/unshareable）和**静态/可变**（static/variable）。`/usr` 被设计为可共享、只读的静态数据，`/var` 则存放可变数据。FHS 规定应用程序不得在根目录下创建特殊文件或子目录，根文件系统内容仅需满足引导、恢复和修复系统的最低需求。FreeBSD 同样遵循这一原则，基本系统的所有文件严格限定在 `hier(7)` 定义的目录中，第三方软件则限定在 `/usr/local` 层次下。
+FHS 按可共享/不可共享、静态/可变两个维度将文件分层。`/usr` 可共享只读，`/var` 可变，根文件系统仅需满足引导、恢复、修复的最低需求。FreeBSD 遵循此原则，基本系统限定在 `hier(7)` 定义的目录，第三方软件限定在 `/usr/local` 下。
 
 为便于说明，仅列出前三级目录及重要文件。
 
