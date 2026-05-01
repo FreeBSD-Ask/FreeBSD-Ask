@@ -1,5 +1,7 @@
 # 1.4 FreeBSD 导论
 
+本节介绍 FreeBSD 从 CURRENT 开发分支经 ALPHA、BETA、RC 到 RELEASE 的完整版本迭代周期，以及 STABLE 分支的 ABI 固定语义与各版本类型的适用场景。
+
 ## FreeBSD 版本概述
 
 FreeBSD 的版本管理体系分为以下类型（或开发阶段）：ALPHA、BETA、RC、RELEASE、CURRENT、STABLE。
