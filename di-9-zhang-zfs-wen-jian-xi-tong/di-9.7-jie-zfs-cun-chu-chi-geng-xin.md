@@ -207,7 +207,7 @@ Every feature flags pool has all supported and requested features enabled.
 
 ## 重写引导（仅 BIOS 传统引导需要）
 
-本节介绍 BIOS 传统引导模式下重写引导代码的操作。
+BIOS 传统引导模式下，存储池升级后引导代码可能需要手动重写，否则系统可能无法正常启动。
 
 > **警告**
 >
