@@ -617,7 +617,7 @@ Timecounter "ACPI-fast" frequency 3579545 Hz quality 900
 acpi_timer0: <24-bit timer at 3.579545MHz> port 0x1808-0x180b on acpi0
 # ACPI Power Management Timer（PM Timer），频率 3.579545 MHz。24 位计数器意味着
 # 约 4.7 秒计数器溢出回绕一次（2^24 / 3579545 ≈ 4.69 s），内核需在溢出前读值并累积，
-# 方可作为高精度 timecounter 使用。quality 900 表示其作为粒度中等偏高的通用选择。
+# 方可作为高精度 timecounter 使用。quality 900，为中等偏高的时间计数器选择。
 
 # ===== PCI 总线枚举 =====
 pcib0: <ACPI Host-PCI bridge> port 0xcf8-0xcff on acpi0
