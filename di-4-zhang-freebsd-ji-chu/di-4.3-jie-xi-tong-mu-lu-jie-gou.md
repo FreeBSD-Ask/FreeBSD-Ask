@@ -150,7 +150,7 @@ POSIX（IEEE 1003.1）/SUS（UNIX 03）对目录结构无类似要求。POSIX.1-
 │   ├── sysctl.conf 内核状态默认值，参见 sysctl.conf(5)
 │   ├── sysctl.kld.d 特定内核模块的配置文件，默认为空，参见：D40886[EB/OL]. [2026-03-26]. <https://reviews.freebsd.org/D40886>.
 │   ├── syslog.conf 系统日志配置文件
-│   ├── syslog.d syslogd 的配置文件，参见 syslog(3)
+│   ├── syslog.d syslogd 的配置文件，参见 syslogd(8)
 │   ├── ttys 创建 TTY 的规则文件，参见 getty(8)
 │   ├── unbound Unbound 配置文件
 │   ├── wpa_supplicant.conf 连接 WiFi 的配置文件，参见 wpa_supplicant.conf(5)
@@ -158,10 +158,10 @@ POSIX（IEEE 1003.1）/SUS（UNIX 03）对目录结构无类似要求。POSIX.1-
 │   └── zfs ZFS 相关配置文件，参见 zfs(8)
 ├── home 普通用户家目录；典型用户 beastie 的家目录为 /home/beastie/
 │   └── ykla 普通用户 ykla 的家目录
-├── lib /bin、/sbin 的库文件，对 /bin 和 /sbin 中的二进制文件至关重要的系统库
+├── lib /bin、/sbin 所需的关键库文件
 │   ├── geom GEOM 库，参见 geom(8)
 │   └── nvmecontrol NVMe 相关工具，参见 nvmecontrol(8)
-├── libexec 系统级辅助可执行程序，对 /bin 和 /sbin 中的二进制文件至关重要的系统实用程序
+├── libexec 系统辅助程序，供 /bin、/sbin 中的二进制文件调用
 │   └── resolvconf 管理 DNS 解析配置的程序，参见 resolvconf.conf(5)
 ├── media 媒体文件挂载点，如 U 盘、光盘；参见 automount(8)，或使用桌面环境时参见 bsdisks(8)
 ├── mnt 用作临时挂载点的空目录
@@ -284,7 +284,7 @@ POSIX（IEEE 1003.1）/SUS（UNIX 03）对目录结构无类似要求。POSIX.1-
 │   ├── heimdal Kerberos 5 用，默认为空，参见 kdc(8)
 │   ├── lib 移植的 Linux 应用程序的状态信息
 │   ├── log 各种系统日志文件
-│   │   ├── Xorg.0.log X 服务器日志（若安装了 X(7)），轮替为 Xorg.0.log.old
+│   │   ├── Xorg.0.log X 服务器日志（若安装 X(7)），轮替为 Xorg.0.log.old
 │   │   ├── aculog 串行线路访问日志，参见 cu(1)
 │   │   ├── auth.log 系统认证日志
 │   │   ├── bsdinstall_log 系统安装日志
