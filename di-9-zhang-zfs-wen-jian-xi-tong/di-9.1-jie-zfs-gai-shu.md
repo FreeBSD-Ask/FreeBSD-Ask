@@ -12,7 +12,7 @@ ZFS 于 2007 年导入 FreeBSD 源代码树，在 FreeBSD 7.0-RELEASE（2008 年
 
 2009 年 4 月 Oracle 宣布收购 Sun（2010 年 1 月收购完成）之后，Solaris 项目（易名为 Oracle Solaris）及 ZFS（易名为 Oracle Solaris ZFS）进入闭源开发模式，OpenSolaris 社区管理委员会于 2010 年 8 月自行解散（revision 13149，在解散时 ZFS pool 为 [v28](https://github.com/freebsd/freebsd-src/commit/572e285762521df27fe5b026f409ba1a21abb7ac)）。OpenSolaris 的主要社区开发力量迁移到了新分支 [illumos 项目](https://github.com/illumos/illumos-gate)。从此以后（v28），Oracle Solaris ZFS 与社区版本开始分道扬镳。
 
-目前 illumos 采用类似 Linux 内核的开发模式，衍生出了 OpenIndiana、OmniOS 等十余款发行版。但从实际的代码提交量来看，年平均约 150 次，illumos 的开发已陷入停滞状态。
+目前 illumos 采用类似 Linux 内核的开发模式，衍生出了 OpenIndiana、OmniOS 等十余款发行版。但从代码提交量的角度来看，年平均约 150 次，illumos 的开发活跃度已显著降低。
 
 2011 年 2 月，FreeBSD 采用了 ZFS pool v15，这是 2009 年 10 月随 Solaris 10 update 8（Solaris 10 10/09）分发的版本。
 
