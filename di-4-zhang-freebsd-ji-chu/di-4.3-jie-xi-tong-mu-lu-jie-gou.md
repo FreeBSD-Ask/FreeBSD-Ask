@@ -65,7 +65,7 @@ POSIX（IEEE 1003.1）/SUS（UNIX 03）对目录结构无类似要求。POSIX.1-
 │   ├── kernel 内核及内核模块，参见 kldstat(8)
 │   ├── kernel.old 备用内核及内核模块
 │   ├── loader.conf loader 配置文件，参见 loader.conf(5)
-│   ├── loader.conf.d loader 配置文件的子项，参见 loader.conf(5)
+│   ├── loader.conf.d loader 补充配置目录，参见 loader.conf(5)
 │   ├── lua 引导加载程序的 Lua 脚本，包含启动时显示的 ASCII 艺术字（图）等，参见 loader_lua(8)
 │   ├── modules 第三方可加载内核模块，如通过 pkg(8) 或 ports(7) 安装的模块
 │   ├── uboot 空目录
@@ -95,7 +95,7 @@ POSIX（IEEE 1003.1）/SUS（UNIX 03）对目录结构无类似要求。POSIX.1-
 │   ├── nvd0 第一块 NVMe 存储设备（使用 NVMe 命名空间）
 │   ├── pts 伪终端设备，参见 pts(4)
 │   ├── random 弱随机性来源，参见 random(4)
-│   ├── reroot reboot -r 使用
+│   ├── reroot `reboot -r` 使用的重引导设备
 │   ├── sa0 第一块磁带驱动器
 │   ├── usb USB 总线
 │   ├── vmm 活跃的 bhyve(8) 虚拟机
