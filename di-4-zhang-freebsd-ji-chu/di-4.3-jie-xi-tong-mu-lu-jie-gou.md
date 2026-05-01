@@ -806,7 +806,7 @@ cpufreq3: <CPU frequency control> on cpu3
 # Intel Speed Shift（HWP = Hardware P-state）——Intel 从 Skylake 起引入的 
 # CPU 自动频率调节机制：CPU 自身硬件根据负载实时调整核心频率，
 # 无需操作系统干预。传统方式（cpufreq）需要 OS 通过 ACPI _PSS 表选择 P-state（被动调速）。
-# HWP 的延迟和粒度远优于传统 cpufreq，这是 FreeBSD 供电管理和性能的关键组件。
+# HWP 的延迟和粒度优于传统 cpufreq，是 FreeBSD 供电管理和性能的重要组成。
 
 # ===== 最终 Timecounter 选择 =====
 Timecounter "TSC" frequency 806401362 Hz quality 1000
