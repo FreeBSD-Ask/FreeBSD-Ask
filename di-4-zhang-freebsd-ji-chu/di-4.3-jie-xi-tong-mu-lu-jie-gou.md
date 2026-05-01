@@ -18,7 +18,7 @@ FreeBSD 的文件系统层次结构是理解系统整体架构的基础。根目
 
 ## FHS 与 FreeBSD 目录结构
 
-文件系统层次标准（Filesystem Hierarchy Standard，FHS）由 Linux 基金会维护，旨在定义类 UNIX 操作系统中目录结构和目录内容的规范。FHS 的目标是使软件开发者能够预测已安装文件和目录的位置，从而编写更具可移植性的软件。当前版本为 FHS 3.0，发布于 2015 年（来源：Linux Foundation. Filesystem Hierarchy Standard 3.0[EB/OL]. (2015-06-03)[2026-04-23]. <https://refspecs.linuxfoundation.org/fhs.shtml>.）
+文件系统层次标准（Filesystem Hierarchy Standard，FHS）由 Linux 基金会维护，旨在定义类 UNIX 操作系统中目录结构和目录内容的规范。FHS 的目标是使软件开发者能够预测已安装文件和目录的位置，从而编写更具可移植性的软件。当前版本为 FHS 3.0，发布于 2015 年。
 
 FreeBSD 的目录结构遵循了 FHS 的核心设计理念，但并非 FHS 的严格实现。FreeBSD 的目录层次由 `hier(7)` 手册页定义，是 FreeBSD 项目的权威规范。与 Linux 发行版相比，FreeBSD 的目录结构存在若干显著差异：
 
@@ -543,6 +543,7 @@ Security policy loaded: MAC/ntpd (mac_ntpd)
 
 ## 参考文献
 
+- Linux Foundation. Filesystem Hierarchy Standard 3.0[EB/OL]. (2015-06-03)[2026-04-23]. <https://refspecs.linuxfoundation.org/fhs.shtml>.
 - FreeBSD Project. hier(7)[EB/OL]. [2026-03-26]. <https://man.freebsd.org/cgi/man.cgi?query=hier&sektion=7&manpath=freebsd-release-ports>. 系统阐述 FreeBSD 文件系统层次结构。
 - FreeBSD Project. chflags(1)[EB/OL]. [2026-04-17]. <https://man.freebsd.org/cgi/man.cgi?query=chflags>.
 - FreeBSD Project. ls(1)[EB/OL]. [2026-04-17]. <https://man.freebsd.org/cgi/man.cgi?query=ls>.
