@@ -303,7 +303,7 @@ POSIX（IEEE 1003.1）/SUS（UNIX 03）对目录结构无类似要求。POSIX.1-
 │   │   ├── pf.today 包过滤防火墙日志，参见 pf(4)
 │   │   ├── pflog pflogd(8) 捕获的已保存数据包
 │   │   ├── ppp.log 参见 ppp(8)
-│   │   ├── security 标记有安全标志的事件转录
+│   │   ├── security 安全事件日志
 │   │   ├── setuid.today 以提升权限运行的可执行文件列表，轮替为 setuid.yesterday
 │   │   ├── userlog 用户或组变更日志
 │   │   ├── utx.lastlogin 最后登录日志，参见 getutxent(3)
