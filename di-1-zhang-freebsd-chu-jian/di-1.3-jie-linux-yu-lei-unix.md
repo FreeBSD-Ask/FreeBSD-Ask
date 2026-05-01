@@ -1,5 +1,7 @@
 # 1.3 Linux 与类 UNIX
 
+本节以 Linux 内核官方文档的定义为起点，阐述 Linux 作为 UNIX 克隆操作系统的技术架构与许可证体系，并说明其"类 UNIX"属性的法律与功能依据。
+
 ## 何谓 Linux？
 
 Linux 是当今世界上广泛使用的开源操作系统之一。Linux 在不同语境下具有不同含义：狭义上指 Linux 内核，广义上通常指完整的操作系统，即 GNU/Linux。参见 Linux Kernel Organization. What is Linux?[EB/OL]. [2026-04-04]. <https://www.kernel.org/doc/html/latest/admin-guide/README.html>，该组织对这一问题的回答如下：
