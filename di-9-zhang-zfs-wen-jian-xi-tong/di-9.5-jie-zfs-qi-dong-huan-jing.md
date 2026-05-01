@@ -2,11 +2,9 @@
 
 ## 概述
 
-本节介绍 ZFS 启动环境（ZFS Boot Environments, BE）的基本概念和使用方法。
+ZFS 启动环境（ZFS Boot Environments, BE）是基于 ZFS 快照与克隆技术构建的系统版本管理机制。
 
-ZFS 启动环境是基于 ZFS 快照与克隆技术构建的系统版本管理机制。
-
-从技术定义而言，“ZFS 启动环境是由某个时间点创建的 ZFS 快照克隆出的可写 ZFS 克隆文件系统”（参见：ZFS Boot Environments Explained[EB/OL]. [2026-03-26]. <https://vermaden.wordpress.com/2025/11/25/zfs-boot-environments-explained/>）。该技术实现了原子更新、多系统并存与快速回滚等核心功能。
+从技术定义而言，"ZFS 启动环境是由某个时间点创建的 ZFS 快照克隆出的可写 ZFS 克隆文件系统"（参见：ZFS Boot Environments Explained[EB/OL]. [2026-03-26]. <https://vermaden.wordpress.com/2025/11/25/zfs-boot-environments-explained/>），可实现原子更新、多系统并存与快速回滚。
 
 启动环境与 Android 系统的 A/B 分区具有相似的设计理念，本质上是原子更新、双系统以及快照与回滚功能的集合。
 
