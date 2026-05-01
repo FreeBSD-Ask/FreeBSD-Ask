@@ -134,7 +134,7 @@ POSIX（IEEE 1003.1）/SUS（UNIX 03）对目录结构无类似要求。POSIX.1-
 │   ├── pf.conf PF 防火墙配置文件，参见 pf(4)
 │   ├── pkg PKG 相关配置文件，参见 pkg(8)
 │   ├── ppp PPP 相关配置，参见 ppp(8)
-│   ├── profile.d 存放脚本文件，这些脚本可在用户登录时由 Shell 执行，但不会自动加载
+│   ├── profile.d 存放用户登录时可执行的 Shell 脚本，不会自动加载
 │   ├── rc.conf 系统 RC，参见 rc.conf(5)
 │   ├── rc.conf.d 存放特定服务的配置文件，默认为空
 │   ├── rc.d 用于启动和管理系统服务的 RC 脚本，参见 rc(8)
