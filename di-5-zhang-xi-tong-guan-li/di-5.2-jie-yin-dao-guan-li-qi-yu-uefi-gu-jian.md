@@ -4,7 +4,7 @@
 
 UEFI 规范定义了操作系统与平台固件之间的接口，提供了启动服务（Boot Services）和运行时服务（Runtime Services），以及用于存储启动变量的非易失性存储空间。
 
-FreeBSD 同时支持传统的 MBR 标准和较新的 GUID 分区表（GPT）引导方式。GPT 分区通常出现在使用 UEFI 固件的计算机上，但 FreeBSD 亦可通过 gptboot(8) 在仅有传统 BIOS 的机器上从 GPT 分区引导。
+FreeBSD 同时支持传统的 MBR 标准和 GUID 分区表（GUID Partition Table，GPT）引导方式。GPT 分区通常出现在使用 UEFI 固件的计算机上，但 FreeBSD 亦可通过 gptboot(8) 在仅有传统 BIOS 的机器上从 GPT 分区引导。
 
 UEFI 引导过程与传统 BIOS 引导过程在架构上不同。
 
