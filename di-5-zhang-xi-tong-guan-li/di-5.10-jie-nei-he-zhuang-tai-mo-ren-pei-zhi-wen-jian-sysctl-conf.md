@@ -1,6 +1,8 @@
 # 5.10 内核状态默认配置文件（sysctl.conf）
 
-sysctl 是 FreeBSD 用于查看和修改内核运行时参数的工具。sysctl 命令支持读取和写入内核状态变量，其状态信息使用管理信息库（MIB）风格的 ASCII 名称标识。
+sysctl 是 FreeBSD 查看和修改内核运行时参数的工具，基于管理信息库（MIB）风格的 ASCII 名称标识。本节覆盖 sysctl 命令用法与 sysctl.conf 的配置方法。
+
+sysctl 命令支持读取和写入内核状态变量。
 
 `sysctl` 命令的关键选项如下：
 
