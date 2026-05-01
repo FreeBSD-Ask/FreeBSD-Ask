@@ -120,7 +120,7 @@ POSIX（IEEE 1003.1）/SUS（UNIX 03）对目录结构无类似要求。POSIX.1-
 │   ├── kyua Kyua 测试框架的全局配置文件（kyua(1)、kyua.conf(5)）
 │   ├── localtime 本地时区文件，参见 ctime(3)。在测试系统中，localtime 被链接到了 /usr/share/zoneinfo/Asia/Shanghai
 │   ├── login.conf 登录类功能数据库，参见 login.conf(5)
-│   ├── machine-id 系统的 UUID，D-Bus 用
+│   ├── machine-id 系统的 UUID，供 D-Bus 使用
 │   ├── mail Sendmail 相关文件，参见 sendmail(8)
 │   │   ├── aliases 用于投递系统邮件的地址
 │   │   └── mailer.conf mailwrapper(8) 配置文件
