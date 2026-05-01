@@ -2,7 +2,7 @@
 
 ## 用户级 ZFS 管理
 
-ZFS 委托管理（ZFS delegation）是一种细粒度的权限控制机制，能让系统管理员将特定的 ZFS 管理权限授予非特权用户，而无需提供完整的 root 访问权限。
+ZFS 委托管理（ZFS delegation）是一种细粒度的权限控制机制，能让系统管理员将特定的 ZFS 管理权限授予非特权用户，而无需提供完整的 root 访问权限。本节介绍其基本用法与用户级操作。
 
 自 FreeBSD 14.1 起，请参阅发行说明，由 [此变更](https://cgit.freebsd.org/src/commit/?id=516009ce8d38) 实现，`bsdinstall(8)` 使用的工具 `adduser(8)` 会在用户主目录的父目录位于 ZFS 数据集上时自动为用户主目录创建一个 ZFS 数据集，例如，当 `/home` 是 ZFS 数据集时，`/home/xxx` 也会是独立的数据集。`adduser` 的参数 `-Z` 可以禁用这一行为。`adduser` 现已支持为非特权用户的 ZFS 主目录启用加密功能。
 
