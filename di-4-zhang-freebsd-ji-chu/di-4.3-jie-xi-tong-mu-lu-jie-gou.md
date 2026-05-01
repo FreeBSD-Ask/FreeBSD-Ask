@@ -461,7 +461,7 @@ CPU: Intel(R) N100 (806.40-MHz K8-class CPU)
   IA32_ARCH_CAPS=0x180fd6b<RDCL_NO,IBRS_ALL,SKIP_L1DFL_VME,MDS_NO,TAA_NO>
 # IA32_ARCH_CAPABILITIES（MSR 0x10A）：Intel 架构能力 MSR，硬件报告自身安全特性。
 # RDCL_NO：不受 RIDL / MDS 漏洞影响。MDS_NO/TAA_NO：不受微架构数据采样攻击影响。
-# 这些标志位对系统安全评估至关重要——它们表示该 CPU 不需要对应安全缓解措施。
+# 这些标志位影响系统安全评估——它们表示该 CPU 不需要对应安全缓解措施。
 
   VT-x: PAT,HLT,MTF,PAUSE,EPT,UG,VPID,VID,PostIntr
 # VT-x（Intel 虚拟化技术）子特性集：
@@ -520,8 +520,8 @@ ioapic0 <Version 2.0> irqs 0-119
 # 负责将 PCI 设备中断请求分发至对应 CPU 核心（LAPIC）。
 
 Launching APs: 2 1 3
-# AP（Application Processor，应用处理器）启动顺序。BSP（Bootstrap Processor）是 CPU 0，
-# 它已运行，然后逐核启动：CPU 2 → CPU 1 → CPU 3。
+# AP（Application Processor，应用处理器）启动顺序。BSP（Bootstrap Processor）为 CPU 0，
+# 在 AP 启动前已经运行，后续逐核启动：CPU 2 → CPU 1 → CPU 3。
 # 启动顺序由 APIC ID 和拓扑算法决定，通常先启动与 BSP 不在同一物理核心的 AP。
 
 random: entropy device external interface
@@ -560,7 +560,7 @@ Firmware Error (ACPI): Could not resolve symbol [\134_SB.PC00.TXHC.RHUB.SS02], A
 ACPI Error: AE_NOT_FOUND, During name lookup/catalog (20241212/psobject-372)
 # BIOS/UEFI 固件 ACPI DSDT/SSDT 表中引用了不存在的 USB SuperSpeed（SS）端口符号：
 # \134 是反斜杠 ACPI 名称路径转义（ACPI namespace root \），RHUB.SS01/SS02 
-# 是 xHCI 的 Root Hub 下的 SuperSpeed 端口对象。AE_NOT_FOUND 表明确实找不到。
+# 是 xHCI 的 Root Hub 下的 SuperSpeed 端口对象。AE_NOT_FOUND 表明找不到。
 # 这通常是固件（BIOS/UEFI）编写的 Bug：定义了 USB 3.0 控制器的 SS 端口引用，
 # 但实际的 DSDT/SSDT 表中并未声明对应设备节点。
 # 影响：这两个 USB SS 端口无法使用（该平台物理上可能仅支持 USB 2.0 或无对应 USB 3.0 插槽）。
@@ -592,7 +592,7 @@ atrtc1: <AT realtime clock> on acpi0
 atrtc1: Warning: Couldn't map I/O.
 atrtc1: registered as a time-of-day clock, resolution 1.000000s
 # 传统的 AT RTC（Motorola MC146818A 兼容），提供 date/time 设置/获取。
-# Warning 表明无法映射 I/O 端口（可能 UEFI 模式下固件未分配 I/O 空间），但不影响工作。
+# Warning 表明无法映射 I/O 端口（可能 UEFI 模式下固件未分配 I/O 空间），但无实际影响。
 # 现代 UEFI 平台更推荐使用 efiRTC；AT RTC 被计划在 FreeBSD 15 中从 GENERIC 移除。
 
 Event timer "RTC" frequency 32768 Hz quality 0
@@ -662,7 +662,7 @@ pci0: <memory, RAM> at device 20.2 (no driver attached)
 
 pci0: <simple comms> at device 22.0 (no driver attached)
 # 可能为 Intel Management Engine Interface（MEI/HECI）。FreeBSD 无 MEI 驱动（大部分 MEI 功能
-# 是管理引擎交互，服务器/工作站使用场景居多）。
+# 是管理引擎交互（多见于服务器/工作站）。
 
 # ----- SD/MMC 控制器 -----
 sdhci_pci0: <Generic SD HCI> mem 0x6001149000-0x6001149fff at device 26.0 on pci0
@@ -674,7 +674,7 @@ uma_zalloc_debug: zone "malloc-16" with the following non-sleepable locks held:
 exclusive sleep mutex SD slot mtx (sdhci) r = 0 (0xfffff80001ad9020) locked @ /usr/src/sys/dev/sdhci/sdhci.c:688
 # WITNESS 检测到在持有非可睡眠锁（sleep mutex）"SD slot mtx"的情况下，
 # 内核内存分配器 UMA 试图从 zone "malloc-16" 分配内存且可能挂起（sleepable）——
-# 这是个潜在的锁顺序问题（lock order reversal, LOR）。
+# 这是一个潜在的锁顺序问题（lock order reversal, LOR）。
 # r = 0 = 递归计数为 0，表示非递归锁的单次获取。
 
 stack backtrace:
@@ -724,7 +724,7 @@ pci2: <ACPI PCI bus> on pcib2
 # ----- Intel I226-V 有线网卡 -----
 igc0: <Intel(R) Ethernet Controller I226-V> mem 0x80500000-0x805fffff,0x80600000-0x80603fff at device 0.0 on pci2
 # igc(4) 驱动为 Intel I225/I226 系列 2.5 Gbps 以太网控制器。
-# 注意 I226-V 是 Intel 最新的桌面/嵌入式千兆+（2.5G）控制器。
+# I226-V 是 Intel 的桌面/嵌入式千兆+（2.5G）控制器。
 
 igc0: EEPROM V2.17-0 eTrack 0x80000303
 # 网卡 EEPROM 版本及 Intel 内部版本追踪号。EEPROM 存储 MAC 地址和PHY校准数据。
@@ -738,7 +738,7 @@ igc0: Using 4 RX queues 4 TX queues
 
 igc0: Using MSI-X interrupts with 5 vectors
 # MSI-X（Message Signaled Interrupts Extended）：每队列 1 个中断向量 + 1 个管理向量 = 5。
-# 相比传统 pin-based INTx 中断，MSI-X 无中断共享、无优先级冲突、可直接绑 CPU。
+# 相比传统 pin-based INTx 中断，MSI-X 无中断共享、无优先级冲突、可绑定至特定 CPU。
 
 igc0: Ethernet address: 10:02:b5:86:0e:f9
 # MAC 地址。永久存储在 EEPROM 中，系统启动时由 igc(4) 读出。
