@@ -142,7 +142,7 @@ POSIX（IEEE 1003.1）/SUS（UNIX 03）对目录结构无类似要求。POSIX.1-
 │   ├── resolvconf.conf DNS 配置管理器配置，通常由 local-unbound 生成，参见 local-unbound(8) 或 resolvconf(8)
 │   ├── security OpenBSM 审计配置文件，参见 audit(8)
 │   ├── ssh SSH 和 SSHD 相关配置文件，参见 ssh(1)
-│   ├── ssl 存储与 SSL/TLS 相关的文件，如证书、密钥
+│   ├── ssl SSL/TLS 证书、密钥等
 │   │   ├── cert.pem 系统信任库的捆绑形式，参见 certctl(8)
 │   │   ├── certs 系统信任库的 OpenSSL 哈希目录形式，参见 certctl(8)
 │   │   ├── openssl.cnf OpenSSL 配置文件，参见 openssl.cnf(5)
