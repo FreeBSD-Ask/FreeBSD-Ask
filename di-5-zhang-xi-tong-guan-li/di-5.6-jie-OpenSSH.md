@@ -1,10 +1,12 @@
-# 5.6 SSH 服务与工具
+# 5.6 OpenSSH
 
 ## SSH 与 OpenSSH 概述
 
 SSH 即 Secure Shell（安全 Shell），是一种通过加密方式安全使用 Shell 的方法，通常用于远程登录和管理系统。OpenSSH（Open Secure Shell）是 SSH 协议的一种实现。OpenSSH 用于通过加密连接远程访问系统。
 
 OpenSSH 是 FreeBSD 基本系统内置的 SSH 实现。OpenSSH 位于 [/crypto/openssh](https://github.com/freebsd/freebsd-src/tree/main/crypto/openssh)，通过 `ChangeLog` 可获取当前内置的版本号。
+
+本节涉及的是基础系统自带的 OpenSSH。Ports 中另有 security/openssh-portable，提供了额外配置选项，且更新更为频繁。
 
 sshd 是 OpenSSH 的服务端守护进程，负责监听来自客户端的连接请求、执行认证并建立安全会话。sshd 的运行时配置由 [sshd_config(5)](https://man.freebsd.org/cgi/man.cgi?query=sshd_config&sektion=5) 文件控制，该文件定义了服务端的所有行为参数，包括监听端口、认证方式、加密算法、日志级别等。客户端配置则由 [ssh_config(5)](https://man.freebsd.org/cgi/man.cgi?query=ssh_config&sektion=5) 文件控制。
 
