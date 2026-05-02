@@ -4,8 +4,6 @@
 
 常见的无损压缩算法包括：DEFLATE（结合 LZ77 与 Huffman 编码，用于 zip/gzip）、LZMA/LZMA2（用于 xz）、LZ4（高速压缩）、Zstandard（兼顾速度与压缩率，用于 zstd）以及 bzip2（基于 Burrows-Wheeler 变换）。这些算法在压缩率与压缩/解压速度之间存在不同的权衡点，用户可根据实际场景选择。
 
-本节介绍 FreeBSD 系统上常用的压缩解压工具的安装和使用方法。
-
 ## zip
 
 zip 格式是 PKZIP 归档格式的实现，由 Info-ZIP 项目维护。zip 是一种压缩和文件打包工具，兼容 PKZIP（Phil Katz 的 ZIP for MSDOS 系统），zip 3.0 版本兼容 PKZIP 2.04 并支持 Zip64 扩展（允许归档和文件超过 2 GB 限制）。zip 使用 deflation 作为默认压缩方法，也可存储不压缩的文件，并自动为每个文件选择更优的方式。
@@ -52,7 +50,7 @@ unzip 的 `-d` 选项后面跟目录名，可以有空格（如 `-d /path`），
 
 基本系统自带 `tar`，无需安装。
 
-tar 是“tape archive”（磁带归档）的缩写，最初用于在磁带上进行文件存储。FreeBSD 的 tar 实现基于 libarchive 库（即 bsdtar），首次随 FreeBSD 5.3 发布（2004 年 11 月），替代了早期版本中使用的 GNU tar。该实现可从 tar、pax、cpio、zip、jar、ar、xar、rar、rpm、7-zip 及 ISO 9660 光盘镜像中提取文件，并可创建 tar、pax、cpio、ar、zip、7-zip 和 shar 格式的归档。
+tar 是“tape archive”（磁带归档）的缩写，最初用于在磁带上进行文件存储。FreeBSD 的 tar 实现基于 libarchive 库（即 bsdtar），首次随 FreeBSD 5.4 发布（2005 年 5 月），替代了早期版本中使用的 GNU tar。该实现可从 tar、pax、cpio、zip、jar、ar、xar、rar、rpm、7-zip 及 ISO 9660 光盘镜像中提取文件，并可创建 tar、pax、cpio、ar、zip、7-zip 和 shar 格式的归档。
 
 bsdtar 的 `-l` 选项遵循 ISO/IEC 9945-1:1996（“POSIX.1”）的定义（检查链接）。
 
