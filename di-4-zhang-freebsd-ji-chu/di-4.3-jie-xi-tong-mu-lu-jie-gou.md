@@ -18,6 +18,36 @@ FreeBSD 的目录结构设计遵循以下原则：
 
 - **静态与动态数据分离原则**：静态数据（如二进制文件、库文件、文档）与动态数据（如日志、临时文件、运行时数据）分别存储于不同的目录树中。`/usr` 主要存放静态的只读数据，`/var` 则存放可变的运行时数据，`/tmp` 存放临时文件。
 
+## FHS 与 FreeBSD 目录结构
+
+文件系统层次标准（FHS）由 Linux 基金会维护，定义类 UNIX 操作系统中目录结构和目录内容的规范，当前版本为 FHS 3.0，发布于 2015 年。
+
+FreeBSD 的目录层次由 `hier(7)` 手册页定义。与 FHS 相比，FreeBSD 的目录结构存在以下差异：
+
+| 项目 | FHS | FreeBSD |
+| ---- | --- | ------- |
+| `/usr/local` | 管理员本地安装，初始为空 | pkg/ports 安装第三方软件默认路径 |
+| 配置文件 | 第三方 `/etc/opt`，建议使用子目录 | 第三方 `/usr/local/etc`，系统 `/etc` |
+| `/bin`、`/sbin`、`/lib` | 独立目录，与 `/usr` 分离 | 独立目录，与 `/usr` 分离 |
+| `/libexec` | 可选，与 `/usr/lib` 二选一存放内部二进制 | 根和 `/usr` 下均有，系统辅助程序 |
+| `/rescue` | 未定义 | 静态链接紧急修复工具 |
+| `/srv` | 必选，服务数据（ftp、www 等） | 未定义 |
+| `/opt` | 必选，`/opt/<package>` | 未定义，统一用 `/usr/local` |
+| `/media` | 可移动介质挂载点 | automount(8) 或 bsdisks(8) 管理 |
+| `/mnt` | 临时挂载点 | 临时挂载点 |
+| `/run` | 必选（3.0），PID 文件及 UNIX 域套接字 | 无，沿用 `/var/run` |
+| `/sys` | Linux sysfs（§6.1.7） | 无，用 sysctl(8) |
+| `/proc` | Linux procfs（§6.1.5） | procfs(4)，默认不用 |
+| 共享库 | `/lib` 关键库，`/usr/lib` 非关键及编程库，`/lib<qual>` 兼容 | `/lib` 关键库，`/usr/lib` 共享/ar 库，`/usr/lib32` |
+| 内核 | `/` 或 `/boot` | `/boot/kernel/`，备用 `/boot/kernel.old/` |
+| `/home` | 可选 | 用户家目录 |
+| `/var/empty` | 未定义 | sshd(8) 特权分离 chroot |
+| `/nonexistent` | 未定义 | 无家目录账户占位符 |
+
+FHS 按可共享/不可共享、静态/可变两个维度将文件分层：`/usr` 可共享只读，`/var` 可变，根文件系统仅需满足引导、恢复、修复的最低需求。FreeBSD 遵循此原则，基本系统限定在 `hier(7)` 定义目录，第三方软件限定在 `/usr/local`。
+
+POSIX（IEEE 1003.1）/SUS（UNIX 03）对目录结构无类似要求。POSIX.1-2008 明确删除了 `/bin`、`/usr/bin`、`/lib`、`/usr/lib` 等描述——理由是对应用程序没有用处。POSIX 仅要求 `/`、`/dev`（含 `/dev/null`、`/dev/tty`、`/dev/console`）、`/tmp` 存在，临时文件建议通过 `TMPDIR` 环境变量定位。FHS 仅在个别条目中注明与 POSIX 一致（如 `/tmp` 行为、`[`/`test` 路径、手册页 locale 命名），其余目录规范均属 FHS 自身定义，不在 POSIX 范围内。
+
 为便于说明，仅列出前三级目录及重要文件。
 
 ```sh
@@ -370,13 +400,14 @@ FreeBSD clang version 19.1.7 (https://github.com/llvm/llvm-project.git llvmorg-1
 WARNING: WITNESS option enabled, expect reduced performance.
 # WITNESS 是内核死锁检测和锁顺序验证机制。启用后会令每次锁获取都进行验证，
 # 带来显著的性能开销（通常 10%-30% 的吞吐量损失）。CURRENT 分支内核默认启用，
-# 用于在开发过程中捕获锁顺序错误（lock order reversal）。RELEASE/STABLE 版本禁用此选项。
+# 用于在开发过程中捕获锁顺序错误（lock order reversal）。RELEASE 版本禁用此选项。
 
 # ----- 控制台与显示设备 -----
 VT(efifb): resolution 800x600
 # VT（Virtual Terminal，Newcons）：FreeBSD 新一代系统控制台驱动（替代了 syscons）。
 # efifb：通过 EFI 固件提供的帧缓冲区（framebuffer）驱动来显示。
-# UEFI 固件默认将显示分辨率设为 800x600。若 drm（Direct Rendering Manager）驱动加载后，分辨率可升至显示器原生分辨率。
+# UEFI 固件默认将显示分辨率设为 800x600。若 drm（Direct Rendering Manager）驱动加载后，
+# 分辨率可升至显示器原生分辨率。
 
 # ===== CPU 检测与特性枚举 =====
 CPU: Intel(R) N100 (806.40-MHz K8-class CPU)
@@ -441,7 +472,8 @@ CPU: Intel(R) N100 (806.40-MHz K8-class CPU)
 # VID（Virtual Interrupt Delivery）：硬件直通中断分发。PostIntr：Posted Interrupt 支持。
 
   TSC: P-state invariant, performance statistics
-# TSC（时间戳计数器）特性：Invariant TSC 意味着不受 P-state（频率调节）和 C-state（休眠）影响，内核可将其用作高精度单调时钟源（timecounter）。
+# TSC（时间戳计数器）特性：Invariant TSC 意味着不受 P-state（频率调节）和 C-state（休眠）影响，
+# 内核可将其用作高精度单调时钟源（timecounter）。
 
 # ===== 物理内存检测 =====
 real memory  = 17179869184 (16384 MB)
@@ -937,6 +969,7 @@ Security policy loaded: MAC/ntpd (mac_ntpd)
 
 ## 参考文献
 
+- Linux Foundation. Filesystem Hierarchy Standard 3.0[EB/OL]. (2015-06-03)[2026-04-23]. <https://refspecs.linuxfoundation.org/fhs.shtml>.
 - FreeBSD Project. hier(7)[EB/OL]. [2026-03-26]. <https://man.freebsd.org/cgi/man.cgi?query=hier&sektion=7&manpath=freebsd-release-ports>. 系统阐述 FreeBSD 文件系统层次结构。
 - FreeBSD Project. chflags(1)[EB/OL]. [2026-04-17]. <https://man.freebsd.org/cgi/man.cgi?query=chflags>.
 - FreeBSD Project. ls(1)[EB/OL]. [2026-04-17]. <https://man.freebsd.org/cgi/man.cgi?query=ls>.
