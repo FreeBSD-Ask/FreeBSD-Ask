@@ -127,7 +127,7 @@ sudo 配置文件由若干小节组成，支持深度自定义。
 
 未配置的普通用户执行 sudo 将报错 `xxx Is Not in the Sudoers File. This Incident Will Be Reported`。
 
-需要在 sudoers 配置文件中加入一行来解决该问题。编辑 `/usr/local/etc/sudoers` 文件，找到 `root ALL=(ALL:ALL) ALL` 这一行，通常位于第 94 行。在其下方添加一行：行。在其下方添加：
+需要在 sudoers 配置文件中加入一行来解决该问题。编辑 `/usr/local/etc/sudoers` 文件，找到 `root ALL=(ALL:ALL) ALL` 这一行，通常位于第 94 行。在其下方添加一行：
 
 ```sh
 实际普通用户 ALL=(ALL:ALL) ALL
