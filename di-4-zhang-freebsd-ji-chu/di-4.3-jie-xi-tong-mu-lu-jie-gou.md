@@ -970,7 +970,7 @@ Security policy loaded: MAC/ntpd (mac_ntpd)
 
 ## 参考文献
 
-- Linux Foundation. Filesystem Hierarchy Standard 3.0[EB/OL]. (2015-06-03)[2026-04-23]. <https://refspecs.linuxfoundation.org/fhs.shtml>.
+- Linux Foundation. Filesystem Hierarchy Standard 3.0[EB/OL]. (2015-06-03)[2026-04-23]. <https://refspecs.linuxfoundation.org/fhs.shtml>. Filesystem Hierarchy Standard, 文件层次标准包含一套关于类 UNIX 操作系统文件和目录放置的要求和指南。这些指南旨在支持应用程序、系统管理工具、开发工具和脚本之间的互操作性，增强上述系统文档的一致性。
 - FreeBSD Project. hier(7)[EB/OL]. [2026-03-26]. <https://man.freebsd.org/cgi/man.cgi?query=hier&sektion=7&manpath=freebsd-release-ports>. 系统阐述 FreeBSD 文件系统层次结构。
 - FreeBSD Project. chflags(1)[EB/OL]. [2026-04-17]. <https://man.freebsd.org/cgi/man.cgi?query=chflags>.
 - FreeBSD Project. ls(1)[EB/OL]. [2026-04-17]. <https://man.freebsd.org/cgi/man.cgi?query=ls>.
