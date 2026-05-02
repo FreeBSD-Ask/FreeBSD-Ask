@@ -86,7 +86,7 @@ lo0: flags=8049<UP,LOOPBACK,RUNNING,MULTICAST> metric 0 mtu 16384
 
 ### 配置动态 IPv4 地址
 
-如果网络有 DHCP 服务器，配置网络接口使用 DHCP 较为简便。FreeBSD 使用 dhclient(8) 作为 DHCP 客户端。dhclient(8) 将自动提供 IP 地址、子网掩码和默认路由器。
+如果网络有 DHCP 服务器，可使用 DHCP 动态获取 IP 地址。FreeBSD 使用 dhclient(8) 作为 DHCP 客户端。dhclient(8) 将自动提供 IP 地址、子网掩码和默认路由器。
 
 > **注意**
 >
@@ -176,7 +176,7 @@ PING www.FreeBSD.org (198.18.0.7): 56 data bytes
 round-trip min/avg/max/stddev = 0.635/0.705/0.776/0.071 ms
 ```
 
-如能正常收到 ICMP 响应报文，则说明网络已连通。
+如能正常收到 ICMP 响应报文，则表明网络已连通。
 
 > **注意**
 >

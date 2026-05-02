@@ -162,6 +162,14 @@ $ date
 
 ntpd 是 FreeBSD 系统的默认 NTP 守护进程，用于持续同步系统时间。
 
+首先临时结束现有的 ntpd 服务，以防止阻止时间同步。
+
+```sh
+# service ntpd onestop
+```
+
+重启后服务会继续运行。
+
 使用 Windows 时间服务器同步系统：
 
 ```sh

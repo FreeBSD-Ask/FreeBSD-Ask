@@ -1,6 +1,6 @@
 # 3.10 KVM、QEMU 等平台安装 FreeBSD（传统引导和 MBR 分区表）
 
-本节介绍在 KVM/QEMU 等硬件辅助虚拟化平台上，通过传统 BIOS + MBR 方式安装 FreeBSD，适用于不直接提供 FreeBSD 镜像的云服务环境。
+在 KVM/QEMU 等硬件辅助虚拟化平台上，通过传统 BIOS + MBR 方式安装 FreeBSD 适用于不直接提供 FreeBSD 镜像的云服务环境。此方法不支持 UEFI 引导，亦不适用于 OpenVZ、LXC 等容器化平台。
 
 > **注意**
 >
@@ -50,7 +50,7 @@ mfsBSD 是一款完全载入内存的 FreeBSD 系统，类似于 Windows PE（Pr
 # wget https://mfsbsd.vx.sk/files/iso/14/amd64/mfsbsd-mini-14.1-RELEASE-amd64.iso
 ```
 
-校验码（官网链接指向错误，已反馈但未获回复）：[checksums](https://mfsbsd.vx.sk/files/iso/14/amd64/mfsbsd-mini-14.1-RELEASE-amd64.iso.sums.txt)
+校验和（官网链接指向错误，已反馈但未获回复）：[checksums](https://mfsbsd.vx.sk/files/iso/14/amd64/mfsbsd-mini-14.1-RELEASE-amd64.iso.sums.txt)
 
 > **技巧**
 >
@@ -68,7 +68,7 @@ mfsBSD 是一款完全载入内存的 FreeBSD 系统，类似于 Windows PE（Pr
 # wget https://mfsbsd.vx.sk/files/iso/14/amd64/mfsbsd-14.2-RELEASE-amd64.iso
 ```
 
-校验码：[checksums](https://mfsbsd.vx.sk/files/iso/14/amd64/mfsbsd-14.2-RELEASE-amd64.iso.sums.txt)
+校验和：[checksums](https://mfsbsd.vx.sk/files/iso/14/amd64/mfsbsd-14.2-RELEASE-amd64.iso.sums.txt)
 
 ### 准备 mfsBSD.iso
 

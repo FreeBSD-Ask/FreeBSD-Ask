@@ -12,7 +12,7 @@ adduser(8) 是一个 Bourne Shell 脚本，内部调用 pw(8) 完成实际的用
 
 ## 账户类型
 
-要登录 FreeBSD，必须有一个账户。
+登录 FreeBSD 系统需具备有效的用户账户。
 
 以下直接通过密码文件 `/etc/master.passwd` 观察用户：
 

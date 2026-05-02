@@ -250,6 +250,7 @@
 * [24.7 Node.js 环境](di-24-zhang-kai-fa-huan-jing/di-24.7-jie-node-js-huan-jing.md)
 * [24.8 code-server 和 clangd 开发配置](di-24-zhang-kai-fa-huan-jing/di-24.8-jie-code-server-he-clangd-kai-fa-pei-zhi.md)
 * [24.9 Vim 开发环境配置](di-24-zhang-kai-fa-huan-jing/di-24.9-jie-vim-kai-fa-huan-jing-pei-zhi.md)
+* [24.10 DTrace](di-24-zhang-kai-fa-huan-jing/di-24.10-jie-dTrace.md)
 
 ## 第 25 章 社区参与
 
@@ -272,6 +273,7 @@
 * [27.4 机器无关的内核选项注解](di-27-zhang-freebsd-nei-he-jia-gou/di-27.4-jie-ji-qi-wu-guan-de-nei-he-xuan-xiang-zhu-jie.md)
 * [27.5 GENERIC 内核选项注解（AMD64）](di-27-zhang-freebsd-nei-he-jia-gou/di-27.5-jie-generic-nei-he-xuan-xiang-zhu-jie-amd64.md)
 * [27.6 在 Linux 系统上交叉构建 FreeBSD](di-27-zhang-freebsd-nei-he-jia-gou/di-27.6-jie-zai-linux-xi-tong-shang-jiao-cha-gou-jian-freebsd.md)
+* [27.7 构建定制内核](di-27-zhang-freebsd-nei-he-jia-gou/di-27.7-jie-gou-jian-ding-zhi-nei-he.md)
 
 ## 附录 I 工具与资源
 

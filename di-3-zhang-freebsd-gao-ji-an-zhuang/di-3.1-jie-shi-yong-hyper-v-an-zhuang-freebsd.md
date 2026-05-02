@@ -1,8 +1,10 @@
 # 3.1 使用 Hyper-V 安装 FreeBSD
 
+Hyper-V 是微软为 Windows 开发的企业级 Type-1 虚拟机监视器，分 Gen 1 与 Gen 2 两种架构。本节介绍在 Hyper-V 中安装与配置 FreeBSD 的完整流程。
+
 ## Hyper-V 简介
 
-虚拟机监视器是一种创建和运行虚拟机的软件，可以在单个物理主机上同时运行独立的操作系统，即虚拟化软件允许多个操作系统同时运行在同一台计算机上。从虚拟化技术的理论分类来看，Hypervisor 分为 Type-1（裸金属型）和 Type-2（宿主型）两类。Type-1 直接运行于物理硬件之上，Type-2 则运行于宿主操作系统之上。Hyper-V 属于 Type-1 架构，其虚拟化层直接管理硬件资源，提供更高的隔离性和性能。
+虚拟机监视器是一种创建和运行虚拟机的软件，允许多个操作系统同时运行在同一台计算机上。从虚拟化技术的理论分类来看，Hypervisor 分为 Type-1（裸金属型）和 Type-2（宿主型）两类。Type-1 直接运行于物理硬件之上，Type-2 则运行于宿主操作系统之上。Hyper-V 属于 Type-1 架构，其虚拟化层直接管理硬件资源，提供更高的隔离性和性能。
 
 Hyper-V 是微软公司（Microsoft）为 Windows 和 Windows Server 开发的企业级虚拟机监视器，属于系统内置组件。
 
@@ -55,7 +57,7 @@ FreeBSD 对 Hyper-V 的集成支持通过内核模块实现：
 
 ![Hyper-V](../.gitbook/assets/hyperv-1.png)
 
-右键单击 Windows 徽标，在弹出的菜单中选择"终端（管理员）"。输入以下命令：
+右键单击 Windows 徽标，在弹出的菜单中选择“终端（管理员）”。输入以下命令：
 
 ```powershell
 PS C:\Users\ykla> Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All
@@ -163,5 +165,6 @@ PS C:\Users\ykla> Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-H
 
 ## 课后习题
 
-1. 查阅 FreeBSD 源代码中 `kern.evdev.rcpt_mask` 的实现（`sys/dev/evdev/`），分析该参数控制输入事件分发路径的机制，注释关键函数的执行逻辑。
-2. 查阅 Hyper-V 文档，列举并测试至少三项虚拟化性能优化设置（如动态内存、SR-IOV、虚拟机队列），量化其对 FreeBSD 虚拟机 I/O 吞吐量的影响。
+1. 分析 FreeBSD 中 kern.evdev.rcpt_mask 参数控制输入事件分发的机制。
+2. 测试 Hyper-V 虚拟化性能优化设置对 FreeBSD 虚拟机 I/O 吞吐量的影响。
+3. 比较 Hyper-V 与 bhyve 在 I/O 半虚拟化驱动模型上的设计差异。

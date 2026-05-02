@@ -1,5 +1,7 @@
 # 5.1 启动引导器及配置文件（loader.conf）
 
+FreeBSD 的启动过程分为三个核心阶段：固件初始化（BIOS 或 UEFI）→ boot0/boot1 链式引导 → loader 引导，其中 loader 阶段通过 loader.conf 实现可配置化。本节解析启动流程并逐一说明 loader.conf 的关键配置项。
+
 ## FreeBSD 启动过程概述
 
 FreeBSD 的启动过程是一个多阶段的有序流程，从硬件加电自检（POST）开始，经过固件初始化、引导加载程序执行、内核加载，最终到达用户空间初始化。loader 是启动过程的最终阶段。

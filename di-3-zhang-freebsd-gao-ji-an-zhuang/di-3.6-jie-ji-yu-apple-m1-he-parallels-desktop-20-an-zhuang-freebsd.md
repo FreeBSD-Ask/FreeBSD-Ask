@@ -1,8 +1,6 @@
 # 3.6 基于 Apple M1 和 Parallels Desktop 20 安装 FreeBSD
 
-本节基于 Apple M1（macOS 14.7）及 Parallels Desktop 20.1.3-55743 环境进行实验与演示。
-
-在 Parallels Desktop 20 中，FreeBSD 15.0-CURRENT 的图形界面（不支持自动缩放）、键盘和鼠标均可正常工作，系统整体运行情况良好。
+基于 macOS 14.7 与 Parallels Desktop 20.1.3 环境，FreeBSD 15.0-CURRENT 的图形界面、键盘和鼠标均可正常运作。因补丁 D42158 未合入 FreeBSD 14，本节仅支持 15 及以上版本。
 
 > **注意**
 >
@@ -44,7 +42,7 @@
 
 > **技巧**
 >
-> Parallels Desktop 20 的默认设置通常已足够，且默认使用 UEFI 引导，一般无需调整硬件配置。
+> Parallels Desktop 20 的默认设置通常已足够，且默认使用 UEFI 引导，通常无需调整硬件配置。
 
 ![Parallels Desktop 20 安装 FreeBSD 15.0](../.gitbook/assets/parallels-8.png)
 

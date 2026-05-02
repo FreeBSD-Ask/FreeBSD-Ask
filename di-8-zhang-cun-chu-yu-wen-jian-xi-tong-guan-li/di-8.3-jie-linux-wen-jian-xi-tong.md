@@ -1,6 +1,6 @@
 # 8.3 Linux 文件系统
 
-本节介绍 Linux 原生文件系统在 FreeBSD 上的挂载方法与技术要点，包括安装、配置和故障排除。
+FreeBSD 对 ext2/ext3/ext4、XFS、Btrfs 等 Linux 原生文件系统提供只读或读写挂载支持，但内核模块需单独加载，且不同文件系统的兼容程度差异较大。
 
 为便于演示挂载操作，本节预设一个包含多种 Linux 文件系统分区的示例环境，用于验证各挂载方法的正确性。
 
@@ -42,15 +42,13 @@ fusefs-ext2 是一个基于 FUSE 的文件系统实现，尽管名称为 ext2，
 
 ### 安装 fusefs-ext2
 
-fusefs-ext2 可以通过两种方式安装：
-
-- 使用 pkg 包管理器进行二进制安装：
+- 使用 pkg 安装：
 
 ```sh
 # pkg install fusefs-ext2
 ```
 
-- 或通过 Ports 系统进行源代码编译安装：
+- 或使用 Ports 安装：
 
 ```sh
 # cd /usr/ports/filesystems/ext2/
@@ -104,15 +102,13 @@ fusefs-lkl 是基于 Linux 内核库（LKL，Linux Kernel Library）的 FUSE 实
 
 ### 安装 fusefs-lkl
 
-fusefs-lkl 可以通过两种方式安装：
-
-- 使用 pkg 包管理器进行二进制安装：
+- 使用 pkg 安装：
 
 ```sh
 # pkg install fusefs-lkl
 ```
 
-- 或通过 Ports 系统进行源代码编译安装：
+- 或使用 Ports 安装：
 
 ```sh
 # cd /usr/ports/filesystems/lkl/

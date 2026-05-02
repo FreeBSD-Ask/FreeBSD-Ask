@@ -4,7 +4,7 @@
 
 UEFI 规范定义了操作系统与平台固件之间的接口，提供了启动服务（Boot Services）和运行时服务（Runtime Services），以及用于存储启动变量的非易失性存储空间。
 
-FreeBSD 同时支持传统的 MBR 标准和较新的 GUID 分区表（GPT）引导方式。GPT 分区通常出现在使用 UEFI 固件的计算机上，但 FreeBSD 亦可通过 gptboot(8) 在仅有传统 BIOS 的机器上从 GPT 分区引导。
+FreeBSD 同时支持传统的 MBR 标准和 GUID 分区表（GUID Partition Table，GPT）引导方式。GPT 分区通常出现在使用 UEFI 固件的计算机上，但 FreeBSD 亦可通过 gptboot(8) 在仅有传统 BIOS 的机器上从 GPT 分区引导。
 
 UEFI 引导过程与传统 BIOS 引导过程在架构上不同。
 
@@ -261,7 +261,7 @@ grub-install: error: unknown filesystem.
 
 首先需要下载 rEFInd 软件。打开下载页面 [Getting rEFInd from Sourceforge](https://www.rodsbooks.com/refind/getting.html)，点击 `A binary zip file` 链接开始下载。本节撰写时使用的版本为 `refind-bin-0.14.2.zip`。
 
-下载的压缩包中，仅部分文件是必需的启动文件。仅需保留其中的 `refind` 文件夹，其余文件可忽略。
+下载的压缩包中，仅部分文件是必需的启动文件。仅需保留其中的 `refind` 文件夹，其余文件无需使用。
 
 `refind` 文件夹中也仅包含部分必需的启动文件。所有文件名中包含 `aa64` 或 `ia32` 的文件均可删除（通常仅保留 `x64` 版本）。
 
@@ -334,7 +334,7 @@ EFI/
 
 ![rEFInd 启动界面](../.gitbook/assets/refind-boot-menu.png)
 
-重启后，在 rEFInd 界面中选择任一操作系统选项，应可正常进入。
+重启后，在 rEFInd 界面中选择任一操作系统选项，应可进入。
 
 ### 附录：rEFInd 主题
 
@@ -356,7 +356,7 @@ rEFInd 支持多种图形化主题。
 include themes/Matrix-rEFInd/theme.conf
 ```
 
-便可调用主题 Matrix-rEFInd。
+即可调用主题 Matrix-rEFInd。
 
 重启之后观察效果：
 

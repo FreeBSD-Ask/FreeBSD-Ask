@@ -72,7 +72,7 @@ Linux 中常见的 Shell 通常是 bash（Bourne Again Shell，是对“Born Aga
 >
 > SL 键在 **HOME** 键的上方，PS 截图键 **Print Screen** 的右侧，PB 键 **Pause/Break** 的左侧。
 
-事实上，从历史角度来看，**Scroll Lock** 键正是为此类用途而设计的，它能在文本界面中滚动而不影响光标位置。
+从历史角度来看，**Scroll Lock** 键即为此类用途而设计，它能在文本界面中滚动而不影响光标位置。
 
 ### 使用 Shift 组合键在 TTY 界面上下翻页/翻行
 
@@ -83,7 +83,7 @@ Linux 中常见的 Shell 通常是 bash（Bourne Again Shell，是对“Born Aga
 
 ### 补全命令或目录
 
-一般可以使用 **Tab** 键补全命令或目录；上箭头 **↑** 用于查看上一条命令，下箭头 **↓** 用于查看下一条命令。
+可使用 **Tab** 键补全命令或目录；上箭头 **↑** 用于查看上一条命令，下箭头 **↓** 用于查看下一条命令。
 
 - 补全命令
 

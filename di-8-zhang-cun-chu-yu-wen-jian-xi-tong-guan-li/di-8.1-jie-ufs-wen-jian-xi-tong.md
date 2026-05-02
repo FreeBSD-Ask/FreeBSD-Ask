@@ -4,7 +4,7 @@
 
 UFS 全称为 Unix File System（UNIX 文件系统），FreeBSD 中使用的 UFS 实际上是伯克利快速文件系统（Berkeley Fast File System，FFS），由 Kirk McKusick、Bill Joy 等人于 1983 年随 4.2BSD 首次引入。历史上，macOS 也曾使用该文件系统作为根文件系统。
 
-需要明确区分，本节所述的 UFS 文件系统与手机等设备中使用的 UFS 存储属于完全不同的技术范畴。后者全称为 Universal Flash Storage（通用闪存存储），是一种硬件存储标准，目前已发展至 4.1 版本。FreeBSD 在 10.4 版本中支持 eMMC，FreeBSD 15.0 已通过 `ufshci` 驱动支持 UFS 存储。
+须明确区分，本节所述的 UFS 文件系统与手机等设备中使用的 UFS 存储属于完全不同的技术范畴。后者全称为 Universal Flash Storage（通用闪存存储），是一种硬件存储标准，目前已发展至 4.1 版本。FreeBSD 在 10.4 版本中支持 eMMC，FreeBSD 15.0 已通过 `ufshci` 驱动支持 UFS 存储。
 
 作为文件系统的 UFS，其当前版本号为 2。基于 Linux 的 Android 系统不支持 UFS 文件系统，此类设备的根文件系统通常为 ext4，部分新设备采用 F2FS，而 Linux 对 UFS 的读写支持尚不完整。
 
@@ -190,7 +190,7 @@ $ sysctl kern.features.ufs_quota
 kern.features.ufs_quota: 1
 ```
 
-如果以上输出为 0，意味着当前可能正在使用自定义内核，未支持磁盘配额模块。请加入内核选项 `options QUOTA` 到内核配置文件，然后重新编译内核。
+如果以上输出为 0，意味着当前可能正在使用自定义内核，未支持磁盘配额模块。应在内核配置文件中加入内核选项 `options QUOTA`，然后重新编译内核。
 
 设置开机启用磁盘配额：
 
@@ -259,7 +259,7 @@ Quotas for user ykla:
         inodes in use: 9, limits (soft = 0, hard = 0)	# inode 配额限制
 ```
 
-可以更改块配额和 inode 配额来配置配额限制。例如，要将 **/** 的块限制提高到软限制 `100` 和硬限制 `120`，请将该行的值更改为：
+可以更改块配额和 inode 配额来配置配额限制。例如，要将 **/** 的块限制提高到软限制 `100` 和硬限制 `120`，将该行的值更改为：
 
 ```sh
 /: in use: 32k, limits (soft = 100k, hard = 120k)

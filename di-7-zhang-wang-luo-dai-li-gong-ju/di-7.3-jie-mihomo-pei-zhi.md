@@ -1,8 +1,6 @@
 # 7.3 Mihomo 配置
 
-Mihomo 是 Clash 系列的衍生版本，已收录于 FreeBSD Ports 树中。
-
-本节介绍 Mihomo 的安装与配置方法。
+Mihomo 是 Clash 系列的衍生版本，已收录于 FreeBSD Ports 树中（net/mihomo）。本节给出安装与基本配置步骤。
 
 ## 安装 Mihomo
 
@@ -340,4 +338,6 @@ $ clashctl config regen
 
 ## 课后习题
 
-1. 分析 Mihomo RC 脚本对 bash 的依赖点（如数组语法、字符串处理等），将其改写为兼容 FreeBSD 默认 sh 的版本，记录改写过程中遇到的语法差异与替代方案。
+1. 将 Mihomo RC 脚本中 bash 特有语法改写为 FreeBSD sh 兼容版本，记录语法差异。
+2. 对比 Mihomo 与 Sing-Box 规则匹配引擎的数据结构与算法在万级节点下的性能差异。
+3. 分析代理工具与防火墙在内容过滤逻辑上的知情同意伦理差异。
