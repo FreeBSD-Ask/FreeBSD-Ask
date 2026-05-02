@@ -65,7 +65,7 @@
 * [5.3 init.rc 服务管理](di-5-zhang-xi-tong-guan-li/di-5.3-jie-init-rc-fu-wu-guan-li.md)
 * [5.4 用户分级文件（login.conf）](di-5-zhang-xi-tong-guan-li/di-5.4-jie-yong-hu-fen-ji-wen-jian-login-conf.md)
 * [5.5 bsdconfig 系统配置工具](di-5-zhang-xi-tong-guan-li/di-5.5-jie-bsdconfig-xi-tong-pei-zhi-gong-ju.md)
-* [5.6 OpenSSH](di-5-zhang-xi-tong-guan-li/di-5.6-jie-OpenSSH.md)
+* [5.6 SSH 服务与工具](di-5-zhang-xi-tong-guan-li/di-5.6-jie-ssh-fu-wu-yu-gong-ju.md)
 * [5.7 远程桌面访问](di-5-zhang-xi-tong-guan-li/di-5.7-jie-yuan-cheng-zhuo-mian-fang-wen.md)
 * [5.8 设备资源提示文件（device.hints）](di-5-zhang-xi-tong-guan-li/di-5.8-jie-she-bei-zi-yuan-ti-shi-wen-jian-device-hints.md)
 * [5.9 crontab 及定时任务文件（periodic.conf）](di-5-zhang-xi-tong-guan-li/di-5.9-jie-crontab-ji-ding-shi-ren-wu-wen-jian-periodic-conf.md)
