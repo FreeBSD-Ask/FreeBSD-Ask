@@ -10,15 +10,13 @@ V2Ray 支持 VMess、VLESS、Shadowsocks 等多种代理协议，并提供基于
 
 ### 安装 V2Ray
 
-V2Ray 可通过 pkg 或 Ports 两种方式安装。
-
-- 使用 pkg 安装 V2Ray，这是最便捷的二进制安装方式：
+- 使用 pkg 安装：
 
 ```sh
 # pkg install v2ray
 ```
 
-- 或者使用 Ports 安装 V2Ray，适用于需要自定义编译选项的场景：
+- 或者使用 Ports 安装：
 
 ```sh
 # cd /usr/ports/net/v2ray/
