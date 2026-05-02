@@ -352,7 +352,7 @@ PermitEmptyPasswords no                      # 禁止空密码的用户进行登
 >
 >不应将 `/etc/ssh/sshd_config` 与 `/etc/ssh/ssh_config` 混淆（注意第一个文件名中多了一个 `d`）。前者配置的是服务器端，后者配置的是客户端。
 
-一个好做法是使用可使用 OpenSSH 服务器配置文件中的 `AllowUsers` 关键字限制哪些用户可以从何处登录 SSH 服务器。例如，要仅允许 `user` 从 `192.168.1.32` 登录，在 `/etc/ssh/sshd_config` 中添加以下行：
+可使用 OpenSSH 服务器配置文件中的 `AllowUsers` 关键字限制哪些用户可以从何处登录 SSH 服务器。例如，要仅允许 `user` 从 `192.168.1.32` 登录，在 `/etc/ssh/sshd_config` 中添加以下行：
 
 ```ini
 AllowUsers user@192.168.1.32
@@ -491,7 +491,7 @@ me:\
 
 ![juicessh](../.gitbook/assets/juicessh1.png)
 
-点击“服务端命令”，设置如下：
+选择“服务端命令”，设置如下：
 
 ```sh
 mosh-server new -s -l LANG=zh_CN.UTF-8
