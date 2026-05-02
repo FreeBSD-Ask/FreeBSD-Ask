@@ -108,7 +108,7 @@ fusefs-lkl 是基于 Linux 内核库（LKL，Linux Kernel Library）的 FUSE 实
 # pkg install fusefs-lkl
 ```
 
-- 或通过 Ports 系统进行源代码编译安装：
+- 或使用 Ports 安装：
 
 ```sh
 # cd /usr/ports/filesystems/lkl/
