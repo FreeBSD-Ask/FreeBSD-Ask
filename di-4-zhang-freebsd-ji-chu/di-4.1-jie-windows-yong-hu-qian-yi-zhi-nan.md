@@ -24,7 +24,7 @@
 
 行道树则不然，每棵普通的行道树都是独立生长的。无论它们距离多么接近，它们仍然是独立的。行道树与 Windows 目录类似，都是独立的，例如 `C:\Program Files (x86)\Google\Update`、`D:\BaiduNetdiskDownload\工具列表`、`E:\123\app`：`C`、`D`、`E` 盘都是独立的，互不干扰。格式化 `D` 盘，并不会影响 `E` 盘存储的文件。即使在 PE 中格式化了 `C` 盘（可能不会显示为 `C` 盘），也不会影响 `E` 盘中的文件。
 
-Windows 的"盘符"并非固定存在。在 PE 环境中，`C` 盘可能显示为其他盘符（如 `X`）；运行中的 Windows 亦可任意分配盘符。
+Windows 的“盘符”并非固定存在。在 PE 环境中，`C` 盘可能显示为其他盘符（如 `X`）；运行中的 Windows 亦可任意分配盘符。
 
 Windows 下判断一个分区属于哪个盘符，依赖的是 GPT 分区类型的 UUID（如 Windows 数据分区类型 UUID 为 `EBD0A0A2-B9E5-4433-87C0-68B6B72699C7`，即 Microsoft Basic Data 类型，适用于所有 Windows 数据分区，而非仅限 C 盘）以及分区的唯一 GUID（相关配置由 Windows 装入管理器 Mount Manager 写入注册表 `HKLM\SYSTEM\MountedDevices`），而非依靠盘符。
 
