@@ -165,6 +165,6 @@ PS C:\Users\ykla> Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-H
 
 ## 课后习题
 
-1. 查阅 FreeBSD 源代码中 `kern.evdev.rcpt_mask` 的实现（`sys/dev/evdev/`），分析该参数控制输入事件分发路径的机制，注释关键函数的执行逻辑。
-2. 查阅 Hyper-V 文档，列举并测试至少三项虚拟化性能优化设置（如动态内存、SR-IOV、虚拟机队列），量化其对 FreeBSD 虚拟机 I/O 吞吐量的影响。
-3. Hyper-V 作为 Type-1 虚拟机管理程序与 FreeBSD 的 bhyve 同属裸金属虚拟化架构。比较二者在 I/O 半虚拟化驱动模型上的设计选择差异，并分析 FreeBSD 在 Hyper-V 上运行时的设备仿真层开销来源。
+1. 分析 FreeBSD 中 kern.evdev.rcpt_mask 参数控制输入事件分发的机制。
+2. 测试 Hyper-V 虚拟化性能优化设置对 FreeBSD 虚拟机 I/O 吞吐量的影响。
+3. 比较 Hyper-V 与 bhyve 在 I/O 半虚拟化驱动模型上的设计差异。
