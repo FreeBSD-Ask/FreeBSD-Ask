@@ -42,15 +42,13 @@ fusefs-ext2 是一个基于 FUSE 的文件系统实现，尽管名称为 ext2，
 
 ### 安装 fusefs-ext2
 
-fusefs-ext2 可以通过两种方式安装：
-
-- 使用 pkg 包管理器进行二进制安装：
+- 使用 pkg 安装：
 
 ```sh
 # pkg install fusefs-ext2
 ```
 
-- 或通过 Ports 系统进行源代码编译安装：
+- 或使用 Ports 安装：
 
 ```sh
 # cd /usr/ports/filesystems/ext2/
@@ -104,9 +102,7 @@ fusefs-lkl 是基于 Linux 内核库（LKL，Linux Kernel Library）的 FUSE 实
 
 ### 安装 fusefs-lkl
 
-fusefs-lkl 可以通过两种方式安装：
-
-- 使用 pkg 包管理器进行二进制安装：
+- 使用 pkg 安装：
 
 ```sh
 # pkg install fusefs-lkl
