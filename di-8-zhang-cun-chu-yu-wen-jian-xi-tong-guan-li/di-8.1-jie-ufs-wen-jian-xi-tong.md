@@ -190,7 +190,7 @@ $ sysctl kern.features.ufs_quota
 kern.features.ufs_quota: 1
 ```
 
-如果以上输出为 0，意味着当前可能正在使用自定义内核，未支持磁盘配额模块。请加入内核选项 `options QUOTA` 到内核配置文件，然后重新编译内核。
+如果以上输出为 0，意味着当前可能正在使用自定义内核，未支持磁盘配额模块。应在内核配置文件中加入内核选项 `options QUOTA`，然后重新编译内核。
 
 设置开机启用磁盘配额：
 
@@ -259,7 +259,7 @@ Quotas for user ykla:
         inodes in use: 9, limits (soft = 0, hard = 0)	# inode 配额限制
 ```
 
-可以更改块配额和 inode 配额来配置配额限制。例如，要将 **/** 的块限制提高到软限制 `100` 和硬限制 `120`，请将该行的值更改为：
+可以更改块配额和 inode 配额来配置配额限制。例如，要将 **/** 的块限制提高到软限制 `100` 和硬限制 `120`，将该行的值更改为：
 
 ```sh
 /: in use: 32k, limits (soft = 100k, hard = 120k)
