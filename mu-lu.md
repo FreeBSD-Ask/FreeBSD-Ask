@@ -250,6 +250,7 @@
 * [24.7 Node.js 环境](di-24-zhang-kai-fa-huan-jing/di-24.7-jie-node-js-huan-jing.md)
 * [24.8 code-server 和 clangd 开发配置](di-24-zhang-kai-fa-huan-jing/di-24.8-jie-code-server-he-clangd-kai-fa-pei-zhi.md)
 * [24.9 Vim 开发环境配置](di-24-zhang-kai-fa-huan-jing/di-24.9-jie-vim-kai-fa-huan-jing-pei-zhi.md)
+* [24.10 DTrace](di-24-zhang-kai-fa-huan-jing/di-24.10-jie-dTrace.md)
 
 ## 第 25 章 社区参与
 
