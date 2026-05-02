@@ -90,7 +90,7 @@ permit nopass user2 as root
 permit nopass :wheel
 ```
 
-安装并配置好 `doas` 之后，即可像下面这样以提升的权限执行命令：
+安装并配置好 `doas` 之后，即可执行特权命令：
 
 ```su
 $ doas ee /etc/rc.conf
