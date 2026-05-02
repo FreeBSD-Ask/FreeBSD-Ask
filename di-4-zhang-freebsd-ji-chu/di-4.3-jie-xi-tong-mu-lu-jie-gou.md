@@ -964,8 +964,8 @@ ubt0: <Realtek Bluetooth Radio, class 224/1, rev 1.00/0.00, addr 1> on usbus1
 # ===== MAC 安全策略加载 =====
 Security policy loaded: MAC/ntpd (mac_ntpd)
 # mac_ntpd(4)：MAC（强制访问控制/TrustedBSD）框架的 ntpd 隔离策略。
-# 此策略允许 ntpd 进程调节系统时钟，但限制其只能以受限权限运行，
-# 即使 ntpd 被利用也无法修改除时间外的其他系统配置。这是 FreeBSD 默认安全策略之一。
+# 授予 ntpd 用户（uid 123）调节系统时钟和绑定 NTP 端口（123）的权限，
+# 使 ntpd 能够以非 root 用户身份运行。这是 FreeBSD 默认安全策略之一。
 ```
 
 ## 参考文献
