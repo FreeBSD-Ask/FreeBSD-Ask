@@ -42,7 +42,7 @@
 
 > **技巧**
 >
-> Parallels Desktop 20 的默认设置通常已足够，且默认使用 UEFI 引导，一般无需调整硬件配置。
+> Parallels Desktop 20 的默认设置通常已足够，且默认使用 UEFI 引导，通常无需调整硬件配置。
 
 ![Parallels Desktop 20 安装 FreeBSD 15.0](../.gitbook/assets/parallels-8.png)
 
