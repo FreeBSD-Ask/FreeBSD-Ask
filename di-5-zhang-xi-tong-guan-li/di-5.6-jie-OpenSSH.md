@@ -80,101 +80,6 @@ sshd 首次在 FreeBSD 系统上启动时，会自动生成主机密钥并将指
 
 至此，sshd 已对系统上所有拥有用户名与密码的账户开放。
 
-## 基于密钥的认证
-
-除密码方式外，客户端也可配置为通过密钥连接远程机器。从安全角度出发，这是更推荐的做法。
-
-将 OpenSSH 配置为使用公钥认证，可借助非对称加密技术增强安全性。这种方式能消除密码带来的诸多风险——如弱密码、传输中被拦截等，同时也能挫败各类基于密码的攻击。不过，务必妥善保护私钥，以防未授权访问。
-
-### 生成密钥
-
-ssh-keygen 可用于生成认证密钥。指定密钥类型并按提示操作，即可产生公钥和私钥对。建议设置一个易记但难以猜解的密码短语来保护私钥。
-
-```sh
-# ssh-keygen
-```
-
-FreeBSD 13.1 及后续版本内置的 OpenSSH 版本均不低于 8.8。查看当前 OpenSSH 版本：
-
-```sh
-# ssh -V
-OpenSSH_10.0p2, OpenSSL 3.5.6 7 Apr 2026
-```
-
-可直接使用默认值生成密钥：
-
-```sh
-# ssh-keygen
-Generating public/private ed25519 key pair.
-Enter file in which to save the key (/root/.ssh/id_ed25519): # 此处按回车键，使用默认存储位置
-Created directory '/root/.ssh'.
-Enter passphrase for "/root/.ssh/id_ed25519" (empty for no passphrase):	# 此处输入密码，按回车键将不设置密码（为了安全建议设置密码）
-Enter same passphrase again: # 此处重复输入密码
-Your identification has been saved in /root/.ssh/id_ed25519
-Your public key has been saved in /root/.ssh/id_ed25519.pub
-The key fingerprint is:
-SHA256:7qHl6mBUpoGFhWowFkACTPjL08FVOmR4I5ZppEWKThI root@ykla
-The key's randomart image is:
-+--[ED25519 256]--+
-|E+.**+o..        |
-|==o*Bo+.         |
-|==++.+=.         |
-|=.. o= .         |
-|.o oo.  S        |
-|  +..  .         |
-|   .o   +        |
-|   . . = .       |
-|     .+.o        |
-+----[SHA256]-----+
-```
-
-### 配置密钥
-
-检查权限（默认创建的权限如下）：
-
-```sh
-drwx------  2 root  wheel   512 Mar 22 18:27 /root/.ssh # 权限为 700
--rw-------  1 root  wheel  1856 Mar 22 18:27 /root/.ssh/id_rsa  # 私钥，权限为 600
--rw-r--r--  1 root  wheel  391 Mar 22 18:27 /root/.ssh/id_rsa.pub # 公钥，权限为 644
-```
-
-生成验证公钥：
-
-```sh
-# cat /root/.ssh/id_rsa.pub >> /root/.ssh/authorized_keys # 将公钥存储到 /root/.ssh/authorized_keys
--rw-r--r--  1 root  wheel  391 Mar 22 18:39 /root/.ssh/authorized_keys # 检查权限是否为 644，若不是需要手动修改权限
-```
-
-使用 WinSCP 将私钥和公钥保存到本地后，可删除服务器上的多余文件：
-
-```sh
-# rm /root/.ssh/id_rsa*
-```
-
-### 配置 sshd 采用预期的认证方式
-
-编辑 `/etc/ssh/sshd_config` 文件。在 `sshd_config` 文件中找到对应配置项并按需修改，去掉行首 `#`，并将参数设置为 `yes` 或 `no`，如下所示：
-
-```ini
-PermitRootLogin yes                          # 允许 root 用户直接登录系统
-AuthorizedKeysFile     .ssh/authorized_keys  # 修改使用用户目录下密钥文件，默认已经正确配置，可再检查
-PasswordAuthentication no                    # 不允许用户使用密码方式登录，仅通过公钥认证
-ChallengeResponseAuthentication no           # 禁止密码登录验证
-PermitEmptyPasswords no                      # 禁止空密码的用户进行登录
-```
-
-### 重启 sshd 服务
-
-重启 SSH 服务以应用配置更改：
-
-```sh
-# service sshd restart
-```
-
-使用 Xshell 登录，输入密钥密码，导入私钥 `id_rsa`，便可登录。
-
-如使用其他 SSH 软件无法登录，请转换密钥格式。
-
 ## 远程登录客户端
 
 `ssh` 是 OpenSSH 远程登录客户端，用于通过加密连接登录远程主机并执行命令。
@@ -345,6 +250,101 @@ PuTTY 界面操作相对不便，不支持多语言（i18n）（[中文版注入
 Termius 下载地址：<https://termius.com/download/>
 
 目前不支持中文，使用需要登录和注册。Termius 的鼠标操作方式与 PuTTY 类似，但右键操作与 Xshell 不同。
+
+## 基于密钥的认证
+
+除密码方式外，客户端也可配置为通过密钥连接远程机器。从安全角度出发，这是更推荐的做法。
+
+将 OpenSSH 配置为使用公钥认证，可借助非对称加密技术增强安全性。这种方式能消除密码带来的诸多风险——如弱密码、传输中被拦截等，同时也能挫败各类基于密码的攻击。不过，务必妥善保护私钥，以防未授权访问。
+
+### 生成密钥
+
+ssh-keygen 可用于生成认证密钥。指定密钥类型并按提示操作，即可产生公钥和私钥对。建议设置一个易记但难以猜解的密码短语来保护私钥。
+
+```sh
+# ssh-keygen
+```
+
+FreeBSD 13.1 及后续版本内置的 OpenSSH 版本均不低于 8.8。查看当前 OpenSSH 版本：
+
+```sh
+# ssh -V
+OpenSSH_10.0p2, OpenSSL 3.5.6 7 Apr 2026
+```
+
+可直接使用默认值生成密钥：
+
+```sh
+# ssh-keygen
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (/root/.ssh/id_ed25519): # 此处按回车键，使用默认存储位置
+Created directory '/root/.ssh'.
+Enter passphrase for "/root/.ssh/id_ed25519" (empty for no passphrase):	# 此处输入密码，按回车键将不设置密码（为了安全建议设置密码）
+Enter same passphrase again: # 此处重复输入密码
+Your identification has been saved in /root/.ssh/id_ed25519
+Your public key has been saved in /root/.ssh/id_ed25519.pub
+The key fingerprint is:
+SHA256:7qHl6mBUpoGFhWowFkACTPjL08FVOmR4I5ZppEWKThI root@ykla
+The key's randomart image is:
++--[ED25519 256]--+
+|E+.**+o..        |
+|==o*Bo+.         |
+|==++.+=.         |
+|=.. o= .         |
+|.o oo.  S        |
+|  +..  .         |
+|   .o   +        |
+|   . . = .       |
+|     .+.o        |
++----[SHA256]-----+
+```
+
+### 配置密钥
+
+检查权限（默认创建的权限如下）：
+
+```sh
+drwx------  2 root  wheel   512 Mar 22 18:27 /root/.ssh # 权限为 700
+-rw-------  1 root  wheel  1856 Mar 22 18:27 /root/.ssh/id_rsa  # 私钥，权限为 600
+-rw-r--r--  1 root  wheel  391 Mar 22 18:27 /root/.ssh/id_rsa.pub # 公钥，权限为 644
+```
+
+生成验证公钥：
+
+```sh
+# cat /root/.ssh/id_rsa.pub >> /root/.ssh/authorized_keys # 将公钥存储到 /root/.ssh/authorized_keys
+-rw-r--r--  1 root  wheel  391 Mar 22 18:39 /root/.ssh/authorized_keys # 检查权限是否为 644，若不是需要手动修改权限
+```
+
+使用 WinSCP 将私钥和公钥保存到本地后，可删除服务器上的多余文件：
+
+```sh
+# rm /root/.ssh/id_rsa*
+```
+
+### 配置 sshd 采用预期的认证方式
+
+编辑 `/etc/ssh/sshd_config` 文件。在 `sshd_config` 文件中找到对应配置项并按需修改，去掉行首 `#`，并将参数设置为 `yes` 或 `no`，如下所示：
+
+```ini
+PermitRootLogin yes                          # 允许 root 用户直接登录系统
+AuthorizedKeysFile     .ssh/authorized_keys  # 修改使用用户目录下密钥文件，默认已经正确配置，可再检查
+PasswordAuthentication no                    # 不允许用户使用密码方式登录，仅通过公钥认证
+ChallengeResponseAuthentication no           # 禁止密码登录验证
+PermitEmptyPasswords no                      # 禁止空密码的用户进行登录
+```
+
+### 重启 sshd 服务
+
+重启 SSH 服务以应用配置更改：
+
+```sh
+# service sshd restart
+```
+
+使用 Xshell 登录，输入密钥密码，导入私钥 `id_rsa`，便可登录。
+
+如使用其他 SSH 软件无法登录，请转换密钥格式。
 
 ## SSH 服务器安全选项
 
