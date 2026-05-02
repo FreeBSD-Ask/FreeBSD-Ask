@@ -442,4 +442,3 @@ test2:$6$FkxPcs2y.Y8cxyuj$kVDoV1LC.IWKGlSitll3oLArF18aHQYID0JYE.TUuD0YFgba.c7MbG
 
 1. 修改 FreeBSD 源代码，使操作的用户名支持 UTF-8 编码。
 2. 查看 FreeBSD 中 pw 命令的源代码实现，使其更加现代化。
-3. POSIX 用户标识以纯数字 UID 为核心，而现代身份系统（如 OAuth 2.0、LDAP、WebAuthn）以抽象令牌为基础。分析 FreeBSD 的 getpwnam/getpwuid 接口在面向外部身份提供者时的适配障碍，讨论操作系统身份模型是否需要从数字 UID 向通用主体标识符迁移。
