@@ -21,7 +21,7 @@ UNIX 在后期发展中逐渐呈现封闭化趋势，从最初开放的研究项
 
 Linux 由 Linux 内核与 GNU 软件组合而成，在发展过程中不断融入 GNU 理念，最终形成 GNU/Linux 操作系统。尽管 GNU 的贡献巨大，其作用却常被低估。这一现象的部分原因在于 Linux 内核的开发由林纳斯·托瓦兹（Linus Torvalds）主导，而托瓦兹对自由软件基金会及理查德·马修·斯托曼的理念并不完全认同。Linux 内核项目与自由软件运动乃至严格的开源理念之间，存在一定的分歧（例如，Linux 内核包含了一些不符合自由软件或严格开源定义的二进制固件模块，参见 **Linux-libre**，一款由拉丁美洲自由软件基金会（FSFLA）维护的去除所有二进制固件的 Linux 内核变体 Linux-libre[EB/OL]. [2026-03-26]. <https://www.fsfla.org/ikiwiki/selibre/linux-libre/>.）此外，Linux 内核采用的是 GPLv2 许可证，而非 GNU 所推荐的 GPLv3。
 
-在 Linux 诞生之前，软件自由领域的代表性运动是"自由软件运动"（代表人物为理查德·马修·斯托曼）。Linux 的流行促成了另一种理念的兴起，即"开源运动"，代表人物包括开放源代码促进会（Open Source Initiative，OSI）的创始人、《UNIX 编程艺术》与《大教堂与集市》的作者埃里克·斯蒂芬·雷蒙德（Eric S. Raymond），以及 Debian 项目前领导人布鲁斯·佩伦斯（Bruce Perens）。OSI 所定义的开源标准源于 Debian 自由软件指导方针（Debian Free Software Guidelines，DFSG）。
+在 Linux 诞生之前，软件自由领域的代表性运动是“自由软件运动”（代表人物为理查德·马修·斯托曼）。Linux 的流行促成了另一种理念的兴起，即“开源运动”，代表人物包括开放源代码促进会（Open Source Initiative，OSI）的创始人、《UNIX 编程艺术》与《大教堂与集市》的作者埃里克·斯蒂芬·雷蒙德（Eric S. Raymond），以及 Debian 项目前领导人布鲁斯·佩伦斯（Bruce Perens）。OSI 所定义的开源标准源于 Debian 自由软件指导方针（Debian Free Software Guidelines，DFSG）。
 
 自由软件运动与开源运动之间的理念分歧，至今仍是软件许可领域的重要议题。
 
