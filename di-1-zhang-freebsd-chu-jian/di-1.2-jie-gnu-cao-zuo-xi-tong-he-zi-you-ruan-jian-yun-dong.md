@@ -19,17 +19,17 @@ UNIX 在后期发展中逐渐呈现封闭化趋势，从最初开放的研究项
 
 在 GNU 项目初期，理查德·马修·斯托曼为 UNIX 开发了大量实用程序（用户空间组件），然而 GNU 的目标操作系统始终未能形成稳定的内核。[**GNU Hurd**](https://hurd.gnu.org/) 是 GNU 项目的内核，采用微内核架构设计，其开发始于 1990 年。尽管 GNU Hurd 已于 2025 年随 Debian GNU/Hurd 发布，但其硬件支持和软件生态仍远未达到生产就绪水平。Linux 内核的诞生打破了这一技术僵局。
 
-作为一个由 Linux 内核与 GNU 软件组合而成的操作系统，Linux 在发展过程中不断融入 GNU 理念，最终形成了 GNU/Linux。尽管 GNU 在此过程中贡献巨大，其作用却常被忽视。这主要是因为 Linux 内核的开发由林纳斯·托瓦兹（Linus Torvalds）主导，而他本人对自由软件基金会和理查德·马修·斯托曼的理念并不完全认同。Linux 内核项目与自由软件运动乃至严格的开源理念之间，存在一定的分歧（例如，Linux 内核包含了一些不符合自由软件或严格开源定义的二进制固件模块，参见 **Linux-libre**，一款由拉丁美洲自由软件基金会（FSFLA）维护的去除所有二进制固件的 Linux 内核变体 Linux-libre[EB/OL]. [2026-03-26]. <https://www.fsfla.org/ikiwiki/selibre/linux-libre/>.）此外，Linux 内核采用的是 GPLv2 许可证，而非 GNU 所推荐的 GPLv3。
+Linux 由 Linux 内核与 GNU 软件组合而成，在发展过程中不断融入 GNU 理念，最终形成 GNU/Linux 操作系统。尽管 GNU 的贡献巨大，其作用却常被低估。这一现象的部分原因在于 Linux 内核的开发由林纳斯·托瓦兹（Linus Torvalds）主导，而托瓦兹对自由软件基金会及理查德·马修·斯托曼的理念并不完全认同。Linux 内核项目与自由软件运动乃至严格的开源理念之间，存在一定的分歧（例如，Linux 内核包含了一些不符合自由软件或严格开源定义的二进制固件模块，参见 **Linux-libre**，一款由拉丁美洲自由软件基金会（FSFLA）维护的去除所有二进制固件的 Linux 内核变体 Linux-libre[EB/OL]. [2026-03-26]. <https://www.fsfla.org/ikiwiki/selibre/linux-libre/>.）此外，Linux 内核采用的是 GPLv2 许可证，而非 GNU 所推荐的 GPLv3。
 
-Linux 诞生之前的这段时期通常被称为“自由软件运动”（代表人物为理查德·马修·斯托曼）。Linux 的流行促成了另一种理念的兴起，即“开源运动”，代表人物包括开放源代码促进会（Open Source Initiative，OSI）的创始人、《UNIX 编程艺术》与《大教堂与集市》的作者埃里克·斯蒂芬·雷蒙德（Eric S. Raymond），以及 Debian 项目前领导人布鲁斯·佩伦斯（Bruce Perens）。下文提及的开源定义源自 Debian 自由软件指导方针（Debian Free Software Guidelines，DFSG）。
+在 Linux 诞生之前，软件自由领域的代表性运动是"自由软件运动"（代表人物为理查德·马修·斯托曼）。Linux 的流行促成了另一种理念的兴起，即"开源运动"，代表人物包括开放源代码促进会（Open Source Initiative，OSI）的创始人、《UNIX 编程艺术》与《大教堂与集市》的作者埃里克·斯蒂芬·雷蒙德（Eric S. Raymond），以及 Debian 项目前领导人布鲁斯·佩伦斯（Bruce Perens）。OSI 所定义的开源标准源于 Debian 自由软件指导方针（Debian Free Software Guidelines，DFSG）。
 
-自由软件运动并未停止，但公众对开源的误解却日益加深。
+自由软件运动与开源运动之间的理念分歧，至今仍是软件许可领域的重要议题。
 
 ## 自由软件运动与开源运动的张力
 
 自由软件运动与开源运动之间存在一定的理念差异。理查德·马修·斯托曼在私人通信中强调，GNU 与自由软件运动并不强调“开源”（甚至是反对使用这一术语），而是强调“Free”所代表的自由。部分观点认为“开源”仅仅是 OSI 所定义（Open Source Initiative. The Open Source Definition[EB/OL]. (2024-02-16)[2026-03-26]. <https://opensource.org/osd>.）的那样，这是一种片面的观点。
 
-以下为私人通信引用，不涉及隐私话题。
+以下引用自理查德·马修·斯托曼的私人通信，内容不涉及隐私信息。
 
 > 致所有阅读我邮件的美国国家安全局（National Security Agency，NSA）和联邦调查局（Federal Bureau of Investigation，FBI）特工：请考虑一下，捍卫美国宪法以抵御一切敌人，无论是外国的还是本国的，是否需要你效仿爱德华·斯诺登（Edward Snowden）的做法。
 >
