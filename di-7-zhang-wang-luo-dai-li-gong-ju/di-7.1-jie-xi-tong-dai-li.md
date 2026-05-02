@@ -26,7 +26,7 @@ $ echo $SHELL
 
 ## 配置 HTTP_PROXY 代理
 
-本节介绍通过环境变量配置系统代理的方法。多数命令行工具会读取 HTTP_PROXY、HTTPS_PROXY、ALL_PROXY 等环境变量来确定是否使用代理。
+通过设置 HTTP_PROXY、HTTPS_PROXY、ALL_PROXY 等环境变量，可让多数命令行工具走代理。以下为配置方法。
 
 ### 若使用 sh、bash 或 zsh
 
@@ -77,8 +77,6 @@ $ echo $SHELL
 Git 的代理配置方法，请参见本书其他章节。
 
 ## 为浏览器配置代理
-
-本节介绍 Chromium 和 Firefox 浏览器的代理配置方法。
 
 ### chrome 命令选项
 

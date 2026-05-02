@@ -2,7 +2,7 @@
 
 ## 概述
 
-本节介绍在 Apple M1 设备上使用 UTM 安装 FreeBSD。
+UTM 是基于 QEMU 的开源虚拟机软件，面向 Apple 设备，支持 ARM 与 x86 架构。在 M1（aarch64）设备上建议使用 aarch64 版 UTM 以获得最佳性能，本节给出安装 FreeBSD 的完整步骤。
 
 UTM 官方网站为 <https://getutm.app>。
 

@@ -1,6 +1,6 @@
 # 9.1 ZFS 概述
 
-本节阐述 ZFS 文件系统的发展历程、技术特性与实践应用。
+ZFS 源于 Sun Solaris，2005 年以 CDDL 许可证开源，2007 年导入 FreeBSD。Oracle 收购 Sun 后 ZFS 分叉为 OpenZFS，2020 年 OpenZFS 2.0 统一了 FreeBSD 与 Linux 的 ZFS 代码库，提供写时复制、快照、端到端校验与自愈等存储特性。
 
 ## ZFS 发展历程：从 Solaris 到 OpenZFS
 

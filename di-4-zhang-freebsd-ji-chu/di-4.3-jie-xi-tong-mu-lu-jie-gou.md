@@ -55,15 +55,15 @@ POSIX（IEEE 1003.1）/SUS（UNIX 03）对目录结构无类似要求。POSIX.1-
 ├── COPYRIGHT FreeBSD 版权信息文件
 ├── bin 基本的 BSD 用户工具，参见 intro(1)
 ├── boot 操作系统引导过程中使用的程序和配置文件，参见 boot(8)
-│   ├── defaults 存放默认内核的默认引导配置文件
-│   │   └── loader.conf 详细的示例说明文件，参见 loader.conf(5)
+│   ├── defaults 存放默认引导配置文件，参见 loader.conf(5)
+│   │   └── loader.conf 引导加载程序配置文件，参见 loader.conf(5)
 │   ├── device.hints 用于控制驱动程序的内核变量，参见 device.hints(5)
 │   ├── dtb 编译的扁平化设备树（FDT）文件，参见 fdt(4) 和 dtc(1)；x86 架构下应为空
 │   │   └── overlays 编译的 FDT 覆盖层，参见 loader.conf(5) 中的 fdt_overlays
 │   ├── efi EFI 系统分区（ESP）挂载点，参见 uefi(8)
 │   ├── firmware 可加载的二进制固件内核模块；pkg kmod 会安装至此，以及通过 fwget 下载的固件
 │   ├── fonts 二进制位图控制台字体，参见 loader.conf(5) 和 vtfontcvt(8)
-│   ├── images 启动时显示的 FreeBSD Logo 等，参见 loader_lua(8)
+│   ├── images beastie 启动菜单图像，参见 loader_lua(8)
 │   ├── kernel 内核及内核模块，参见 kldstat(8)
 │   ├── kernel.old 备用内核及内核模块
 │   ├── loader.conf loader 配置文件，参见 loader.conf(5)
@@ -75,7 +75,7 @@ POSIX（IEEE 1003.1）/SUS（UNIX 03）对目录结构无类似要求。POSIX.1-
 │       └── zpool.cache 硬编码的磁盘驱动器路径，参见 zpool(8)
 ├── compat 支持与其他操作系统二进制兼容的文件
 │   └── linux Linux 兼容层运行时的默认位置，参见 linux(4)
-├── dev 存放设备文件和特殊文件，参见 intro(4) 和 devfs(5)
+├── dev 设备文件和特殊文件，参见 intro(4) 和 devfs(4)
 │   ├── ada0 第一块 ATA 存储设备
 │   ├── ada0p1 第一块 ATA 存储设备的第一个分区
 │   ├── cd0 第一块光盘驱动器
@@ -111,7 +111,7 @@ POSIX（IEEE 1003.1）/SUS（UNIX 03）对目录结构无类似要求。POSIX.1-
 │   ├── crontab root 用户的 crontab 文件
 │   ├── defaults 存放了一组默认配置文件，如 rc.conf、periodic.conf，参见 rc(8)
 │   ├── devd 存放设备管理器（devd）的配置文件，如监控蓝牙、鼠标插拔，参见 devd(8)
-│   ├── devfs.conf 启动时的 devfs 设备规则配置
+│   ├── devfs.conf 启动时 devfs 设备规则配置，参见 devfs.conf(5)
 │   ├── dma DMA 邮件代理相关，参见 dma(8)
 │   ├── freebsd-update.conf 基本系统更新工具 freebsd-update 的配置文件，参见 freebsd-update(8)
 │   ├── fstab 文件分区表，参见 fstab(5)
