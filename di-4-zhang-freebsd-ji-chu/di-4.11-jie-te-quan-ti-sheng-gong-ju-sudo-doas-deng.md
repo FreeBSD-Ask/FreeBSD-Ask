@@ -187,7 +187,7 @@ user1   ALL=(ALL)       NOPASSWD:ALL
 %wheel   ALL=(ALL)       NOPASSWD:ALL
 ```
 
-注意到，百分号 `%` 代表组，不带 `%` 则为普通用户。
+百分号 `%` 表示组，不加 `%` 表示普通用户。
 
 ## sudo-rs
 
