@@ -372,7 +372,7 @@ AllowUsers root@192.168.1.32 user
 
 完成所有修改后，在重启服务之前，建议先执行以下命令验证配置是否正确：
 
-```ini
+```sh
 # sshd -t
 ```
 
@@ -437,7 +437,7 @@ There are screens on:
 screen -r xxx	# 重新附着（恢复）名为或 ID 为 xxx 的 screen 会话
 ```
 
-`Attached` 必须先离线再恢复：
+`Attached` 必须先分离再重新附着：
 
 ```sh
 # screen -d 18380 # 将 ID 为 18380 的 screen 会话从当前终端分离（detach），保持会话在后台运行
@@ -499,7 +499,7 @@ mosh-server new -s -l LANG=zh_CN.UTF-8
 
 将 mosh 服务器新会话的语言环境设置为 zh_CN.UTF-8。
 
-其他不需要变更：用户名、密码和 SSH 的相同。验证仍需端口 22。
+其余配置（用户名、密码）与 SSH 相同，仍通过端口 22 验证。
 
 列出系统中所有监听的 IPv4 套接字：
 
