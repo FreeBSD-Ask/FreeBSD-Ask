@@ -84,13 +84,11 @@ permit nopass user2 as root
 
 即可允许用户 `user2` 在执行 doas 时无需输入密码即可获取 `root` 权限。如果不需要 doas 免密码，移除 `nopass` 即可。
 
-对于 wheel 组用户，则写入：
+对于 wheel 组用户，则写入以下行即可：
 
 ```ini
 permit nopass :wheel
 ```
-
-即可满足需求。
 
 安装并配置好 `doas` 之后，即可像下面这样以提升的权限执行命令：
 
@@ -129,7 +127,7 @@ sudo 配置文件由若干小节组成，支持深度自定义。
 
 未配置的普通用户执行 sudo 将报错 `xxx Is Not in the Sudoers File. This Incident Will Be Reported`。
 
-需要在 sudoers 配置文件中添加一行来解决该问题。编辑 `/usr/local/etc/sudoers` 文件，找到 `root ALL=(ALL:ALL) ALL` 这一行，通常位于第 94 行。在其下方添加：
+需要在 sudoers 配置文件中加入一行来解决该问题。编辑 `/usr/local/etc/sudoers` 文件，找到 `root ALL=(ALL:ALL) ALL` 这一行，通常位于第 94 行。在其下方添加一行：行。在其下方添加：
 
 ```sh
 实际普通用户 ALL=(ALL:ALL) ALL
