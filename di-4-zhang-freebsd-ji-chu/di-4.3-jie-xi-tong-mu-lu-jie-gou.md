@@ -20,29 +20,29 @@ FreeBSD 的目录结构设计遵循以下原则：
 
 ## FHS 与 FreeBSD 目录结构
 
-文件系统层次标准（FHS）由 Linux 基金会维护，定义类 UNIX 操作系统中目录结构和目录内容的规范，当前版本为 FHS 3.0，发布于 2015 年。
+文件系统层次标准（FHS）由 Linux 基金会 Linux 标准基础工作组（Linux Standard Base, LSB）维护，定义了类 UNIX 操作系统中目录结构和目录内容的规范，当前版本为 FHS 3.0，发布于 2015 年。
 
 FreeBSD 的目录层次由 `hier(7)` 手册页定义。与 FHS 相比，FreeBSD 的目录结构存在以下差异：
 
 | 项目 | FHS | FreeBSD |
 | ---- | --- | ------- |
-| `/usr/local` | 管理员本地安装，初始为空 | pkg/ports 安装第三方软件默认路径 |
+| `/usr/local` | 供管理员本地安装软件时使用，初始为空 | pkg/ports 安装第三方软件默认路径 |
 | 配置文件 | 第三方 `/etc/opt`，建议使用子目录 | 第三方 `/usr/local/etc`，系统 `/etc` |
 | `/bin`、`/sbin`、`/lib` | 独立目录，与 `/usr` 分离 | 独立目录，与 `/usr` 分离 |
-| `/libexec` | 可选，与 `/usr/lib` 二选一存放内部二进制 | 根和 `/usr` 下均有，系统辅助程序 |
+| `/libexec` | 可选，与 `/usr/lib` 二选一，存放内部二进制 | `/` 和 `/usr` 下均有，系统辅助程序 |
 | `/rescue` | 未定义 | 静态链接紧急修复工具 |
-| `/srv` | 必选，服务数据（ftp、www 等） | 未定义 |
-| `/opt` | 必选，`/opt/<package>` | 未定义，统一用 `/usr/local` |
-| `/media` | 可移动介质挂载点 | automount(8) 或 bsdisks(8) 管理 |
+| `/srv` | 系统提供的服务数据（ftp、www 等） | 未定义 |
+| `/opt` | `/opt/<package>` | 未定义，统一用 `/usr/local` |
+| `/media` | 可移动介质挂载点 | 由 automount(8) 或 bsdisks(8) 管理 |
 | `/mnt` | 临时挂载点 | 临时挂载点 |
 | `/run` | 必选（3.0），PID 文件及 UNIX 域套接字 | 无，沿用 `/var/run` |
 | `/sys` | Linux sysfs（§6.1.7） | 无，用 sysctl(8) |
-| `/proc` | Linux procfs（§6.1.5） | procfs(4)，默认不用 |
+| `/proc` | Linux procfs（§6.1.5） | procfs(4) 已废弃，仅出于兼容目的保留，默认不使用 |
 | 共享库 | `/lib` 关键库，`/usr/lib` 非关键及编程库，`/lib<qual>` 兼容 | `/lib` 关键库，`/usr/lib` 共享/ar 库，`/usr/lib32` |
 | 内核 | `/` 或 `/boot` | `/boot/kernel/`，备用 `/boot/kernel.old/` |
-| `/home` | 可选 | 用户家目录 |
-| `/var/empty` | 未定义 | sshd(8) 特权分离 chroot |
-| `/nonexistent` | 未定义 | 无家目录账户占位符 |
+| `/home` | 可选，用户家目录 | 用户家目录 |
+| `/var/empty` | 未定义 | 由 sshd(8) 特权分离 chroot 使用 |
+| `/nonexistent` | 未定义 | 无家目录账户的占位符 |
 
 FHS 按可共享/不可共享、静态/可变两个维度将文件分层：`/usr` 可共享只读，`/var` 可变，根文件系统仅需满足引导、恢复、修复的最低需求。FreeBSD 遵循此原则，基本系统限定在 `hier(7)` 定义目录，第三方软件限定在 `/usr/local`。
 
@@ -370,7 +370,7 @@ FreeBSD 中的大多数设备必须通过称为设备节点的特殊文件访问
 # ----- 内核启动标记 -----
 ---<<BOOT>>---
 # 此行标记内核开始输出启动消息。此前的引导加载程序（loader）输出不会出现在 dmesg 缓冲区中，
-# 因为 dmesg 缓冲区由内核在初始化时创建。引导加载程序消息只能通过串口控制台或屏幕查看。
+# 因为 dmesg 缓冲区由内核在初始化时创建。引导加载程序消息（启动菜单）只能通过串口控制台或屏幕查看。
 
 # ----- 版权声明 -----
 Copyright (c) 1992-2025 The FreeBSD Project.
@@ -379,13 +379,13 @@ Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
 FreeBSD is a registered trademark of The FreeBSD Foundation.
 # 第一行声明 FreeBSD 项目的版权（FreeBSD 独有的代码，始于 1992 年）。
 # 第二行声明加州大学董事会（The Regents）的版权——这是 4.3BSD Net/2 及之前 BSD 版本的版权持有者。
-# 年份跨度 1979-1994 代表了 BSD 从 3BSD 到 4.4BSD-Lite2 的整个历史。
-# 第三行声明 FreeBSD Foundation 持有 "FreeBSD" 注册商标。
+# 年份跨度 1979-1994 代表了 BSD 从 3BSD 到 4.4BSD-Lite2 的完整历史。
+# 第三行声明 FreeBSD Foundation 持有“FreeBSD”注册商标。
 
 # ----- 内核版本标识 -----
 FreeBSD 15.0-CURRENT #0 main-n275588-045a4c108fcf: Fri Feb 21 02:25:56 UTC 2025
     root@releng3.nyi.freebsd.org:/usr/obj/usr/src/amd64.amd64/sys/GENERIC amd64
-# 格式：<系统名称> <版本>-<分支> #<构建号> <Git提交哈希>: <构建日期时间>
+# 格式：<系统名称> <版本>-<分支> #<构建号> <Git 提交哈希>: <构建日期时间>
 # 15.0-CURRENT：开发分支（非正式发行版）。
 # #0：该内核配置的第 0 次构建（config(8) 构建计数）。
 # main-n275588-045a4c108fcf：Git main 分支的快照标识。
@@ -393,21 +393,20 @@ FreeBSD 15.0-CURRENT #0 main-n275588-045a4c108fcf: Fri Feb 21 02:25:56 UTC 2025
 
 # ----- 编译器信息 -----
 FreeBSD clang version 19.1.7 (https://github.com/llvm/llvm-project.git llvmorg-19.1.7-0-gcd708029e0b2)
-# FreeBSD 基本系统编译器版本。该项目当前版本的内核由 Clang 19.1.7 编译。
+# FreeBSD 基本系统编译器版本。FreeBSD 当前版本的内核由 Clang 19.1.7 编译。
 # FreeBSD 从 10.0 起将 Clang 作为默认系统编译器，替代了 GCC。
 
 # ----- 调试选项警告 -----
 WARNING: WITNESS option enabled, expect reduced performance.
 # WITNESS 是内核死锁检测和锁顺序验证机制。启用后会令每次锁获取都进行验证，
 # 带来显著的性能开销（通常 10%-30% 的吞吐量损失）。CURRENT 分支内核默认启用，
-# 用于在开发过程中捕获锁顺序错误（lock order reversal）。RELEASE 版本禁用此选项。
+# 用于在开发过程中捕获锁顺序错误（lock order reversal）。RELEASE/STABLE 版本禁用此选项。
 
 # ----- 控制台与显示设备 -----
 VT(efifb): resolution 800x600
 # VT（Virtual Terminal，Newcons）：FreeBSD 新一代系统控制台驱动（替代了 syscons）。
 # efifb：通过 EFI 固件提供的帧缓冲区（framebuffer）驱动来显示。
-# UEFI 固件默认将显示分辨率设为 800x600。若 drm（Direct Rendering Manager）驱动加载后，
-# 分辨率可升至显示器原生分辨率。
+# UEFI 固件默认将显示分辨率设为 800x600。若 drm（Direct Rendering Manager）驱动加载后，分辨率可升至显示器原生分辨率。
 
 # ===== CPU 检测与特性枚举 =====
 CPU: Intel(R) N100 (806.40-MHz K8-class CPU)
@@ -472,8 +471,7 @@ CPU: Intel(R) N100 (806.40-MHz K8-class CPU)
 # VID（Virtual Interrupt Delivery）：硬件直通中断分发。PostIntr：Posted Interrupt 支持。
 
   TSC: P-state invariant, performance statistics
-# TSC（时间戳计数器）特性：Invariant TSC 意味着不受 P-state（频率调节）和 C-state（休眠）影响，
-# 内核可将其用作高精度单调时钟源（timecounter）。
+# TSC（时间戳计数器）特性：Invariant TSC 意味着不受 P-state（频率调节）和 C-state（休眠）影响，内核可将其用作高精度单调时钟源（timecounter）。
 
 # ===== 物理内存检测 =====
 real memory  = 17179869184 (16384 MB)
@@ -595,7 +593,7 @@ atrtc1: Warning: Couldn't map I/O.
 atrtc1: registered as a time-of-day clock, resolution 1.000000s
 # 传统的 AT RTC（Motorola MC146818A 兼容），提供 date/time 设置/获取。
 # Warning 表明无法映射 I/O 端口（可能 UEFI 模式下固件未分配 I/O 空间），但无实际影响。
-# 现代 UEFI 平台更推荐使用 efiRTC；AT RTC 被计划在 FreeBSD 15 中从 GENERIC 移除。
+# 现代 UEFI 平台更推荐使用 efiRTC；计划在 FreeBSD 15 中从 GENERIC 移除 AT RTC 。
 
 Event timer "RTC" frequency 32768 Hz quality 0
 # RTC 的周期性中断频率 32768 Hz（2^15 Hz），quality 0（最低优先级，仅做最后备选）。
@@ -705,8 +703,8 @@ stack backtrace:
 # devclass_add_device → make_device：设备类中添加新设备实例。
 # sdhci_card_task：SD 卡检测任务（在 sdhci(4) attach 上下文内执行）。
 # sdhci_pci_attach → device_attach：设备驱动 attach 入口。
-# bus_attach_children → ... → acpi_pcib_acpi_attach：遍历总线子设备的递归attach调用链，层层向上经ACPI层回到PCI桥顶的ACPI attach入口。
-# 此 LOR 不影响 SD 卡正常读写，仅为 CURRENT 调试用途（RELEASE 版不启用 WITNESS）。
+# bus_attach_children → ... → acpi_pcib_acpi_attach：遍历总线子设备的递归 attach 调用链，层层向上经ACPI层回到PCI桥顶的ACPI attach入口。
+# 此 LOR 不影响 SD 卡正常读写，仅为 CURRENT 调试用途。
 
 mmc0: <MMC/SD bus> on sdhci_pci0
 # mmc0 总线绑定在 sd/mmc 主控制器上，后续可识别 eMMC 或 SD 卡设备。
@@ -726,10 +724,9 @@ pci2: <ACPI PCI bus> on pcib2
 # ----- Intel I226-V 有线网卡 -----
 igc0: <Intel(R) Ethernet Controller I226-V> mem 0x80500000-0x805fffff,0x80600000-0x80603fff at device 0.0 on pci2
 # igc(4) 驱动为 Intel I225/I226 系列 2.5 Gbps 以太网控制器。
-# I226-V 是 Intel 的桌面/嵌入式千兆+（2.5G）控制器。
 
 igc0: EEPROM V2.17-0 eTrack 0x80000303
-# 网卡 EEPROM 版本及 Intel 内部版本追踪号。EEPROM 存储 MAC 地址和PHY校准数据。
+# 网卡 EEPROM 版本及 Intel 内部版本追踪号。EEPROM 存储 MAC 地址和 PHY 校准数据。
 
 igc0: Using 1024 TX descriptors and 1024 RX descriptors
 # TX/RX 描述符环形缓冲区（ring descriptor）大小。描述符是硬件 DMA 传输的元数据结构，
@@ -874,7 +871,7 @@ pcm0: <Realtek ALC269 (Right Analog)> at nid 21 and 24 on hdaa0
 # ===== NVMe 磁盘设备（nda/CAM 路径）=====
 nda0 at nvme0 bus 0 scbus0 target 0 lun 1
 # nda(4)：通过 CAM(4) 框架连接的 NVMe 磁盘设备。
-# nda0：500GB 梵想（Fanxiang）S530Q NVMe SSD。
+# nda0：500GB 梵想 S530Q NVMe SSD。
 # scbus0 target 0 lun 1：SCSI 中层总线的模拟寻址。
 # （FreeBSD 的 CAM 层统一了 nvme(4)→nda(4) 和 ahci(4)→ada(4) 等不同传输协议）
 

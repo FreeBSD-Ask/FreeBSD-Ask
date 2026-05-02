@@ -398,3 +398,4 @@ Probe URL: https://bsd-hardware.info/?probe=f64606c4b1
 
 1. 下载最新版本 FreeBSD -RELEASE 的 memstick 镜像，使用 CertUtil（Windows）或 `sha256`（FreeBSD/macOS）计算其 SHA256 校验和，与官方 CHECKSUM 文件进行比对，记录校验流程与结果。
 2. 查阅 bsd-hardware.info 网站，检索当前设备的硬件兼容性信息，使用 hw-probe 工具采集硬件数据并上传至该平台，分析硬件兼容性数据库对安装决策的参考价值。
+3. 校验和验证的信任链始于对官方 CHECKSUM 文件真实性的假定。分析下载页面、邮件列表存档与第三方镜像三种渠道提供的 CHECKSUM 信息可靠性差异，讨论安装前验证为何无法消除所有信任假设。

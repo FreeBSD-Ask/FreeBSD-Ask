@@ -489,3 +489,4 @@ chflags: test: Operation not permitted
 
 1. 查看 FreeBSD 内核中权限检查的核心源代码，尝试使其更加细粒度。
 2. 修改一个系统目录（如 `/var/tmp`）的默认权限配置，记录修改后对该目录下文件创建和进程访问行为的影响。
+3. Unix 的 rwx 三级权限模型自 1970 年代沿用至今。比较此模型与 SELinux 的类型强制（Type Enforcement）和 AppArmor 的路径名限制在表达力上的差异，分析在单一系统上混合使用三种机制是否会引入策略冲突。

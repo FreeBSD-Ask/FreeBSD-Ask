@@ -343,3 +343,5 @@ DiskPart 成功地分配了驱动器号或装载点。
 ## 课后习题
 
 1. DiskPart 中 `ass`（`assign`）、`cre`（`create`）等三字母缩写属于命令前缀匹配机制。查阅 Windows DiskPart 技术文档，分析该前缀匹配规则的实现逻辑，并解释为何此类缩写在多数教程与 AI 辅助工具中未被广泛采纳。
+2. 比较 Linux `dd`、macOS `dd` 与 Windows DiskPart 在清理磁盘元数据时的底层行为差异，设计一套跨平台验证脚本，确保三种环境下的清理操作在逻辑上等价。
+3. 在确保数据安全的前提下，编写一个 PowerShell 脚本，自动检测 USB 设备分区表类型（MBR 或 GPT）并执行对应的全盘清零与格式化为 FAT32 的操作。

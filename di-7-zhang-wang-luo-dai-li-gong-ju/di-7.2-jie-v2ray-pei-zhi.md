@@ -217,3 +217,5 @@ setenv XRAY_LOCATION_ASSET /usr/local/share/xray-core/
 ## 课后习题
 
 1. 在 FreeBSD 上安装 Xray-core 并通过系统服务方式运行，使用社区维护的 geosite/geoip 文件配置完整的分流规则，验证 geosite:cn 域名是否确实走直连，并将其作为补丁贡献到 Ports。
+2. 比较 V2Ray 路由模块与 Xray 路由模块在 `domainStrategy` 实现上的差异，分析不同 DNS 解析策略（AsIs、IPIfNonMatch、IPOnDemand）对流量分流准确性的影响。
+3. 在境内服务器的语境下，检验代理工具"连接失败即阻断"（fail closed）与"连接失败即放行"（fail open）两种策略的安全后果，讨论二者在信息泄露风险与可用性权衡中的哲学前提。

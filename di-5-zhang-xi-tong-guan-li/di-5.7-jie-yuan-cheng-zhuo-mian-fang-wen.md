@@ -731,3 +731,4 @@ $ anydesk
 
 1. 适配更多 VNC Server 到 Ports。
 2. 适配 Wayland。
+3. 远程桌面协议的多样性（RDP、VNC、SPICE、X11 Forwarding）反映了图形栈的不同抽象层次。比较各协议在带宽效率、安全性与会话持久性上的设计取舍，并分析 FreeBSD 作为远程桌面服务端时在协议选择上的技术制约。

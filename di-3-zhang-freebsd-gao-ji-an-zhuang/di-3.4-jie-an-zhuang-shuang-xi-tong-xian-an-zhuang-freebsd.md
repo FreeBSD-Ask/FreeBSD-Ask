@@ -164,3 +164,4 @@ zroot/var/tmp         96K  87.8G    96K  /var/tmp
 
 1. 在 UFS 文件系统下重复本节双系统安装流程，记录 ZFS 与 UFS 在分区布局和引导配置上的差异。
 2. 查阅 FreeBSD 源代码中 swap 分区的实现（`sys/dev/swap/`），比较 freebsd-swap 与 Linux swap 在磁盘格式和内核接口层面的差异。
+3. 双系统环境中引导加载程序（如 rEFInd、GRUB 或 FreeBSD loader）必须在不同操作系统的启动约定间做出仲裁。分析当 Windows 更新覆盖 UEFI 启动顺序后 FreeBSD 引导链被破坏的恢复路径，并设计一套自动修复脚本。
