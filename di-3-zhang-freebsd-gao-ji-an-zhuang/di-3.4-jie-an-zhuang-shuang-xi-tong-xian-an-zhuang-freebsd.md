@@ -1,6 +1,6 @@
 # 3.4 安装双系统（先安装 FreeBSD）
 
-在同一物理设备上部署 FreeBSD 与 Windows 双系统时，若先安装 FreeBSD，分区阶段需预留 Windows 所需空间并选定兼容的引导方式。
+本节介绍在同一物理设备上部署 FreeBSD 与 Windows 双系统，先安装 FreeBSD、再安装 Windows。
 
 ## 安装 FreeBSD 14.2-RELEASE
 
