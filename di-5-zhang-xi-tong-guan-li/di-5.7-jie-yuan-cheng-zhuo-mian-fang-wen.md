@@ -347,7 +347,7 @@ root     syslogd     1021 7   udp4   *:514                 *:*
 
 #### 通过 VNC 远程访问 FreeBSD 时无声音输出
 
-该问题在本节中尚未涉及，有待进一步研究。
+该问题在本节中尚未解决。
 
 ## 通过 Windows 自带的远程桌面连接（RDP）远程访问 FreeBSD
 
@@ -367,7 +367,7 @@ root     syslogd     1021 7   udp4   *:514                 *:*
 
 #### 如果 Windows 的远程桌面窗口既不在左上角也未全屏显示，则显示会模糊
 
-请 **取消** 勾选“智能调整大小”。
+应取消勾选"智能调整大小"。
 
 ![智能调整大小](../.gitbook/assets/xrdp6.png)
 
@@ -379,7 +379,7 @@ root     syslogd     1021 7   udp4   *:514                 *:*
 
 - Microsoft Corporation. Remote Desktop[EB/OL]. [2026-03-25]. <https://play.google.com/store/apps/details?id=com.microsoft.rdc.androidx&hl=zh_CN>. 微软官方开发的 Android 远程桌面客户端，支持 RDP 协议连接。
 
-该软件操作便捷。
+该软件支持 Android 平台 RDP 连接。
 
 将左上 🖱️ 改为 👆。默认的鼠标操作不够便捷，亦可选择通过 OTG 连接鼠标和键盘来操控。
 
@@ -478,9 +478,7 @@ Password: # 输入密码，密码不会显示出来 ***。
 
 #### 故障排除与未竟事宜
 
-测试过程中未输入用户名也成功连接。
-
-这可能是由于 FreeBSD 用户名与 Windows 用户名相同。
+测试过程中未输入用户名即成功连接，可能由于 FreeBSD 用户名与 Windows 用户名相同。
 
 ### rdesktop（不支持 NLA）
 
@@ -516,7 +514,7 @@ $ rdesktop 192.168.31.213
 Failed to connect, CredSSP required by server (check if server has disabled old TLS versions, if yes use -V option).
 ```
 
-根据 rdesktop team. CredSSP does not work[EB/OL]. [2026-04-04]. <https://github.com/rdesktop/rdesktop/issues/71>. 这是一个老问题。
+根据 rdesktop team. CredSSP does not work[EB/OL]. [2026-04-04]. <https://github.com/rdesktop/rdesktop/issues/71>. 此问题由来已久。
 
 影响安全的解决方案是禁用网络级身份验证（NLA），在需要远程连接的 Windows 上操作：
 
@@ -568,7 +566,7 @@ Do you trust this certificate (yes/no)? # 输入 yes，按回车键
 
 ##### 视频播放无声音
 
-待解决
+尚未解决。
 
 #### 参考文献
 
