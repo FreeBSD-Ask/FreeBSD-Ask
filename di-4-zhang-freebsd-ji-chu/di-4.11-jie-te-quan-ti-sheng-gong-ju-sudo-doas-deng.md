@@ -92,7 +92,7 @@ permit nopass :wheel
 
 安装并配置好 `doas` 之后，即可执行特权命令：
 
-```su
+```sh
 $ doas ee /etc/rc.conf
 ```
 
