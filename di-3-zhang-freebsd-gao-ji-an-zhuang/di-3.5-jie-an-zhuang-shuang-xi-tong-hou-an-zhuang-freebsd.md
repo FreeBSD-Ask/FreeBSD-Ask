@@ -256,41 +256,41 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 # zfs create -o mountpoint=/var -o canmount=off zroot/var
 ```
 
-将创建 `/var` 数据集，设置 `canmount=off` 意味着不会自动挂载。
+将创建 **/var** 数据集，设置 `canmount=off` 意味着不会自动挂载。
 
-- 创建 `/var/audit` 数据集
+- 创建 **/var/audit** 数据集
 
 ```sh
 # zfs create -o exec=off -o setuid=off zroot/var/audit
 ```
 
-将创建 `/var/audit` 数据集，禁用执行（`exec=off`），同时禁用 setuid（`setuid=off`）。
+将创建 **/var/audit** 数据集，禁用执行（`exec=off`），同时禁用 setuid（`setuid=off`）。
 
-- 创建 `/var/crash` 数据集
+- 创建 **/var/crash** 数据集
 
 ```sh
 # zfs create -o exec=off -o setuid=off zroot/var/crash
 ```
 
-将创建 `/var/crash` 数据集，禁用执行（`exec=off`），同时禁用 setuid（`setuid=off`）。
+将创建 **/var/crash** 数据集，禁用执行（`exec=off`），同时禁用 setuid（`setuid=off`）。
 
-- 创建 `/var/log` 数据集
+- 创建 **/var/log** 数据集
 
 ```sh
 # zfs create -o exec=off -o setuid=off zroot/var/log
 ```
 
-将创建 `/var/log` 数据集，禁用执行（`exec=off`），同时禁用 setuid（`setuid=off`）。
+将创建 **/var/log** 数据集，禁用执行（`exec=off`），同时禁用 setuid（`setuid=off`）。
 
-- 创建 `/var/tmp` 数据集
+- 创建 **/var/tmp** 数据集
 
 ```sh
 # zfs create -o setuid=off zroot/var/tmp
 ```
 
-将创建 `/var/tmp` 数据集，同时禁用 setuid（`setuid=off`）。
+将创建 **/var/tmp** 数据集，同时禁用 setuid（`setuid=off`）。
 
-- 创建 `/var/mail` 数据集
+- 创建 **/var/mail** 数据集
 
 ```sh
 # zfs create -o atime=on zroot/var/mail
