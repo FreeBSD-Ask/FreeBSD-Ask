@@ -115,7 +115,7 @@ FreeBSD Ports 中的 Vim 默认编译为 console 版本，如需 GUI 支持（gv
 :set norelativenumber " 关闭相对行号
 ```
 
-要永久启用行号，编辑用户配置文件 `~/.vimrc`（如果不存在则创建）：
+要永久启用行号，编辑用户配置文件 **~/.vimrc**（如果不存在则创建）：
 
 ```vim
 set number              " 或 set nu
