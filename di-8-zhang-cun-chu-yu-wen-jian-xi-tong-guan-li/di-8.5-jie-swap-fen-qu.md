@@ -89,7 +89,7 @@ swapfile="/usr/swap0"
 # swapon /dev/zvol/zroot/swap
 ```
 
-在 `/etc/fstab` 文件中添加 ZFS zvol 交换分区的挂载项，以实现开机时自动挂载：
+在 **/etc/fstab** 文件中添加 ZFS zvol 交换分区的挂载项，以实现开机时自动挂载：
 
 ```ini
 /dev/zvol/zroot/swap none swap sw 0 0
