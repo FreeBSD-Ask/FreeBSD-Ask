@@ -131,7 +131,7 @@ FreeBSD 基本系统几乎不包含任何与 BSD 协议不兼容的软件。
 
 文件系统层次标准（FHS）由 Linux 基金会 Linux 标准基础工作组（Linux Standard Base, LSB）维护，定义了类 UNIX 操作系统中目录结构和目录内容的规范，当前版本为 FHS 3.0，发布于 2015 年。
 
-FreeBSD 的目录层次由 `hier(7)` 手册页定义。与 FHS 相比，FreeBSD 的目录结构存在以下差异：
+FreeBSD 的目录层次由 `hier(7)` 定义。与 FHS 相比，FreeBSD 的目录结构存在以下差异：
 
 | 项目 | FHS | FreeBSD |
 | ---- | --- | ------- |
