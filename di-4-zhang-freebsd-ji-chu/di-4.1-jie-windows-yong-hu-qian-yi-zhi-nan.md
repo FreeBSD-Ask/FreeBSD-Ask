@@ -90,10 +90,10 @@ PSPath
 
 - `设备`：现有设备名。
 - `挂载点`：现有的目录，用于挂载文件系统。
-- `文件系统`：传递给 [mount(8)](https://man.freebsd.org/cgi/man.cgi?query=mount&sektion=8&format=html) 的文件系统类型。
+- `文件系统`：传递给 mount(8) 的文件系统类型。
 - `选项`：`rw` 表示读写文件系统，`ro` 表示只读文件系统，可跟其他选项。常用选项包括 `noauto`，表示启动时不挂载此文件系统。
-- `转储`：供 [dump(8)](https://man.freebsd.org/cgi/man.cgi?query=dump&sektion=8&format=html) 判断哪些文件系统需要备份。缺省时视为 0。
-- `fsck 检查顺序`：决定在重启后，哪些文件系统应由 [fsck(8)](https://man.freebsd.org/cgi/man.cgi?query=fsck&sektion=8&format=html) 检查，以及检查顺序。应跳过的文件系统设置为 0。根文件系统应优先检查，设为 1，其他文件系统应设为大于 1 的值。若多个文件系统具有相同的 `passno`，[fsck(8)](https://man.freebsd.org/cgi/man.cgi?query=fsck&sektion=8&format=html) 会尝试并行检查。
+- `转储`：供 dump(8) 判断哪些文件系统需要备份。缺省时视为 0。
+- `fsck 检查顺序`：决定在重启后，哪些文件系统应由 fsck(8) 检查，以及检查顺序。应跳过的文件系统设置为 0。根文件系统应优先检查，设为 1，其他文件系统应设为大于 1 的值。若多个文件系统具有相同的 `passno`，fsck(8) 会尝试并行检查。
 
 示例：标准 ZFS 安装下的 `/etc/fstab` 文件。
 
