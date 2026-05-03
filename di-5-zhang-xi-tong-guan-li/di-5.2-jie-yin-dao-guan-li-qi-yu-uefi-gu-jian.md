@@ -210,7 +210,7 @@ FreeBSD/amd64 EFI loader, Revision 1.1
 FreeBSD/amd64 EFI loader, Revision 3.0
 ```
 
-此处命令参考了手册 [loader.efi](https://man.freebsd.org/cgi/man.cgi?query=loader.efi) 中的例子。`/boot/efi/efi/freebsd/loader.efi` 为当前正在使用的 loader（版本确实较旧）。
+此处命令参考了手册 loader.efi 中的例子。`/boot/efi/efi/freebsd/loader.efi` 为当前正在使用的 loader（版本确实较旧）。
 
 将 `/boot/loader.efi` 复制到 EFI 系统分区的 FreeBSD 目录下进行更新：
 
