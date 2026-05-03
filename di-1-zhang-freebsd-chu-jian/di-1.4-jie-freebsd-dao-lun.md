@@ -1,4 +1,4 @@
-﻿# 1.4 FreeBSD 导论
+# 1.4 FreeBSD 导论
 
 FreeBSD 的版本发布遵循 CURRENT → ALPHA → BETA → RC → RELEASE 的迭代周期，STABLE 分支则以 ABI 固定为特征，各有明确的适用场景。
 
