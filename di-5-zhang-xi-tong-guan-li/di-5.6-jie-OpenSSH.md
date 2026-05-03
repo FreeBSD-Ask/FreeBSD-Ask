@@ -489,13 +489,13 @@ Termius 下载地址：<https://termius.com/download/>
 
 ## SSH 服务器安全选项
 
-虽然 sshd 是 FreeBSD 中使用最广泛的远程管理工具，但暴露在公网上的系统通常面临暴力破解与路过式攻击。本节将介绍几项附加参数，用以阻断此类攻击。所有配置均写入 `/etc/ssh/sshd_config`。
+虽然 sshd 是 FreeBSD 中使用最广泛的远程管理工具，但暴露在公网上的系统通常面临暴力破解与路过式攻击。本节将介绍几项附加参数，用以阻断此类攻击。所有配置均写入 **/etc/ssh/sshd_config**。
 
 >**注意**
 >
->不应将 `/etc/ssh/sshd_config` 与 `/etc/ssh/ssh_config` 混淆（注意第一个文件名中多了一个 `d`）。前者配置的是服务器端，后者配置的是客户端。
+>不应将 **/etc/ssh/sshd_config** 与 **/etc/ssh/ssh_config** 混淆（注意第一个文件名中多了一个 `d`）。前者配置的是服务器端，后者配置的是客户端。
 
-可使用 OpenSSH 服务器配置文件中的 `AllowUsers` 关键字限制哪些用户可以从何处登录 SSH 服务器。例如，要仅允许 `user` 从 `192.168.1.32` 登录，在 `/etc/ssh/sshd_config` 中添加以下行：
+可使用 OpenSSH 服务器配置文件中的 `AllowUsers` 关键字限制哪些用户可以从何处登录 SSH 服务器。例如，要仅允许 `user` 从 `192.168.1.32` 登录，在 **/etc/ssh/sshd_config** 中添加以下行：
 
 ```ini
 AllowUsers user@192.168.1.32
