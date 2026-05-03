@@ -1,10 +1,8 @@
 # 7.2 V2Ray 配置
 
-V2Ray 作为一款代理软件，支持多种代理协议和流量路由功能。
+V2Ray 是一款支持多种代理协议（VMess、VLESS、Shadowsocks 等）和流量路由功能的代理软件。其路由模块可根据目标地址、端口等条件将流量分发至不同的出站代理，实现灵活的流量分流。在 FreeBSD 系统中，V2Ray 可通过 pkg(8) 或 Ports 安装。
 
 Xray-core 是 V2Ray 的一个分支，在保持核心功能的基础上进行了性能优化和功能扩展。二者配置基本兼容，Xray 可参照 V2Ray 的配置方法。相较于 Xray，V2Ray 对部分新协议的支持更新较慢。
-
-V2Ray 支持 VMess、VLESS、Shadowsocks 等多种代理协议，并提供基于规则的路由功能，可根据目标地址、端口等条件将流量分发至不同的出站代理。在 FreeBSD 系统中，V2Ray 可通过 pkg(8) 或 Ports 安装。
 
 ## 安装 V2Ray
 
