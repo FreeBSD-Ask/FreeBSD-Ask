@@ -4,9 +4,9 @@ Shell 的配置体系通过一系列初始化文件（initialization files）实
 
 不同 shell 的初始化文件加载顺序存在差异：
 
-对于 Bourne Shell 及其兼容 shell（sh、bash、zsh），登录 shell 依次读取 `/etc/profile`、`~/.profile`（或 `~/.bash_profile`、`~/.zprofile`），交互式非登录 shell 读取 `~/.bashrc`（bash）或 `~/.zshrc`（zsh）；
+对于 Bourne Shell 及其兼容 shell（sh、bash、zsh），登录 shell 依次读取 **/etc/profile**、**~/.profile**（或 **~/.bash_profile**、**~/.zprofile**），交互式非登录 shell 读取 **~/.bashrc**（bash）或 **~/.zshrc**（zsh）；
 
-对于 C Shell（csh/tcsh），登录 shell 读取 `/etc/csh.cshrc`、`/etc/csh.login`、`~/.cshrc`、`~/.login`。
+对于 C Shell（csh/tcsh），登录 shell 读取 **/etc/csh.cshrc**、**/etc/csh.login**、**~/.cshrc**、**~/.login**。
 
 理解这一加载顺序有助于正确配置环境变量和 shell 别名。
 
