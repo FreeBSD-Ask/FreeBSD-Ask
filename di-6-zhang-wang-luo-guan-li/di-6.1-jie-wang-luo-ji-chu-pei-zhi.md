@@ -252,7 +252,7 @@ IPv6 地址有三种不同类型：
 
 ## 主机名
 
-主机名代表主机在网络上的完全限定域名（FQDN）。
+主机名代表主机在网络上的完全限定域名（FQDN，Fully Qualified Domain Name）。
 
 检查当前主机名：
 
@@ -408,5 +408,5 @@ ABC_XYZ="ddd"
 ## 课后习题
 
 1. 在 FreeBSD 系统上配置双静态 IP 地址，分别设置不同的 DNS 服务器，使用 `dig` 命令验证每个 DNS 服务器的解析行为，分析 `/etc/resolv.conf` 中多 DNS 服务器条目的查询顺序与容错机制。
-2. 修改网络接口的 MTU 值为 9000（巨型帧），使用 `ping` 测试连通性，记录 MTU 变化对大包传输的影响，分析巨型帧在局域网与广域网中的适用场景。
+2. 修改网络接口的 MTU（Maximum Transmission Unit）值为 9000（巨型帧），使用 `ping` 测试连通性，记录 MTU 变化对大包传输的影响，分析巨型帧在局域网与广域网中的适用场景。
 3. 禁用 `resolvconf` 服务，手动修改 `/etc/resolv.conf` 文件并重启网络服务，验证配置是否持久化，分析 `resolvconf` 对 DNS 配置动态管理的机制。
