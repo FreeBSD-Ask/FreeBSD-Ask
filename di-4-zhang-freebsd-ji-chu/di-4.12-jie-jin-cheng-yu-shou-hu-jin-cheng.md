@@ -188,7 +188,7 @@ round-trip min/avg/max/stddev = 27.465/27.596/27.701/0.085 ms
 
 htop 的配置可通过界面或配置文件进行持久化设置。需注意：在默认配置下，使用 F10 保存后无法通过 `Ctrl + C` 退出，必须选择 `quit` 选项才能确保配置保存；也可直接通过编辑配置文件进行设置。
 
-编辑用户目录下的 `~/.config/htop/htoprc` 配置文件，添加以下内容以启用 CPU 频率和温度显示功能：
+编辑用户目录下的 **~/.config/htop/htoprc** 配置文件，添加以下内容以启用 CPU 频率和温度显示功能：
 
 ```ini
 show_cpu_frequency=1     # 启用 CPU 当前频率显示
