@@ -743,7 +743,7 @@ FreeBSD Installer # FreeBSD 安装程序
 Add Users # 添加用户
 
 Username: ykla # 输入用户名。只能使用小写字母（不支持非拉丁字符）或数字，不能以连字符开头。最大长度 16 个字符（历史原因）。
-Full name: # 输入用户全名 ①。可留空。不能包含英文冒号 `:`。
+Full name: # 输入用户全名 ①。可留空。不能包含英文冒号 :。
 Uid (Leave empty for default):  # 用户 UID，留空则使用默认值。手动设置需小于 32000。
 Login group [ykla]: # 用户主组
 Login group is ykla. Invite ykla into other groups? []: wheel video # 邀请用户加入其他组，输入“wheel video”（用空格分隔）
