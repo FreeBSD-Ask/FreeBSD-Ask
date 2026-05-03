@@ -23,14 +23,14 @@ FreeBSD 对 NTFS 的原生支持仅限只读，读写操作需借助用户态驱
 │   └── NTFS                           # NTFS 挂载点
 └── mnt
     ├── NTFS                           # NTFS 挂载点（备用）
-    └──                                 # 通用挂载点
+    └── (通用挂载点)
 ```
 
 ## NTFS 文件系统
 
 ### 安装 ntfs-3g
 
-UBLIO（User space Block I/O）是一个用户空间块 I/O 库，用于提升 FUSE 文件系统的性能。然而，由于 UBLIO 在 FreeBSD 环境下与 ntfs-3g 协同工作时可能引发文件系统损坏及数据丢失风险（[Bug 206978 - sysutils/fusefs-ntfs: Disable UBLIO as it breaks mkntfs](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=206978)、[Bug 194526 - sysutils/fusefs-ntfs: ntfs-3g with libublio lost files](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=194526)），因此不建议采用 pkg 二进制安装方式，而应通过 Ports 系统进行源代码编译：
+UBLIO（User space Block I/O）是一个用户空间块 I/O 库，用于提升 FUSE 文件系统的性能。然而，UBLIO 在 FreeBSD 环境下与 ntfs-3g 协同工作时，可能引发文件系统损坏及数据丢失风险（参见 [Bug 206978](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=206978) 与 [Bug 194526](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=194526)）。因此，不建议采用 pkg 二进制安装方式，而应通过 Ports 系统进行源代码编译：
 
 ```sh
 # cd /usr/ports/filesystems/ntfs
