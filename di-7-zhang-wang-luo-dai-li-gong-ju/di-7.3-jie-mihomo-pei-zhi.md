@@ -224,7 +224,7 @@ mihomo_enable="YES" # 开机启用/服务项
 
 ### 环境准备
 
-FreeBSD 的默认登录 Shell 未必为 `bash`，执行以下命令前须先切换至 `bash`：
+FreeBSD 的默认登录 Shell 不一定是 `bash`，执行以下命令前须先切换至 `bash`：
 
 ```shell
 $ bash
