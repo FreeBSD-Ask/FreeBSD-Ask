@@ -1,4 +1,4 @@
-# 5.1 启动引导器及配置文件（loader.conf）
+﻿# 5.1 启动引导器及配置文件（loader.conf）
 
 FreeBSD 的启动过程分为三个核心阶段：固件初始化（BIOS 或 UEFI）→ boot0/boot1 链式引导 → loader 引导，其中 loader 阶段通过 loader.conf 实现可配置化。本节解析启动流程并逐一说明 loader.conf 的关键配置项。
 
@@ -204,7 +204,7 @@ Enter full pathname of shell or RETURN for /bin/sh:
 
 ## loader.conf 的功能定位与文件结构
 
-loader.conf 是 FreeBSD 系统引导过程中的核心配置文件，参见 [loader.conf(5)](https://man.freebsd.org/cgi/man.cgi?query=loader.conf)。该文件在引导加载程序 loader(8) 阶段被读取，用于指定要启动的内核、传递给内核的参数以及需要加载的附加模块，同时可设置 loader(8) 支持的所有变量。
+loader.conf 是 FreeBSD 系统引导过程中的核心配置文件，参见 loader.conf(5)。该文件在引导加载程序 loader(8) 阶段被读取，用于指定要启动的内核、传递给内核的参数以及需要加载的附加模块，同时可设置 loader(8) 支持的所有变量。
 
 loader.conf(5) 相关的文件结构如下：
 
@@ -221,7 +221,7 @@ loader.conf(5) 相关的文件结构如下：
           └── loader.conf 默认设置文件（请勿直接修改），参见 loader.conf(5)
 ```
 
-loader.conf 是系统启动配置的核心文件，位于 `/boot/loader.conf`。写入此处的配置比 `rc.conf` 文件更早生效，但不当配置可能会妨碍系统正常启动。详细说明请参考 [loader.conf](https://man.freebsd.org/cgi/man.cgi?query=loader.conf) 手册页。
+loader.conf 是系统启动配置的核心文件，位于 `/boot/loader.conf`。写入此处的配置比 `rc.conf` 文件更早生效，但不当配置可能会妨碍系统正常启动。详细说明请参考 loader.conf 手册页。
 
 > **技巧**
 >
