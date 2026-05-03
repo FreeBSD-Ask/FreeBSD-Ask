@@ -1,4 +1,4 @@
-# 8.2 自动挂载文件系统
+﻿# 8.2 自动挂载文件系统
 
 FreeBSD 提供了多种自动挂载方式供用户选择。
 
@@ -55,7 +55,7 @@ notify 100 {
 >
 >不要添加到注释符号 `/* */` 中间。
 
-通过将以下行添加到 **/etc/rc.conf** 文件中，可以设置 [autofs(5)](https://man.freebsd.org/cgi/man.cgi?query=autofs&sektion=5&format=html) 在启动时启动：
+通过将以下行添加到 **/etc/rc.conf** 文件中，可以设置 autofs(5) 在启动时启动：
 
 ```ini
 autofs_enable="YES"
