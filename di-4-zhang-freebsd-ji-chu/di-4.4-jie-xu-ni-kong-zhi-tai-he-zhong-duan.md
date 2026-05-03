@@ -1,4 +1,4 @@
-# 4.4 虚拟控制台和终端
+﻿# 4.4 虚拟控制台和终端
 
 虚拟控制台（Virtual Console）是 FreeBSD 提供的多终端机制，允许用户在同一物理显示器和键盘上同时使用多个独立的登录会话。每个虚拟控制台拥有自己的登录提示符和 Shell，用户可通过 Alt+F1 至 Alt+F8 键组合在它们之间切换。
 
@@ -231,7 +231,7 @@ exec="gop set 0"
 
 ### `efi_max_resolution`（UEFI）或 `vbe_max_resolution`（BIOS）
 
-也可以通过配置文件设置 UEFI 或 BIOS 下的分辨率。根据文档 [LOADER.CONF(5)](https://man.freebsd.org/cgi/man.cgi?loader.conf(5))，这两个变量可接受以下值：
+也可以通过配置文件设置 UEFI 或 BIOS 下的分辨率。根据文档 LOADER.CONF(5))，这两个变量可接受以下值：
 
 ```sh
 值	           分辨率
