@@ -58,7 +58,7 @@ setenv TZ "Asia/Shanghai"   # 在 Shell 环境中设置时区为上海
 
 在 crontab 配置文件中，设置 `CRON_TZ` 变量即可。
 
-在每天 08:00（CST-8 时区）执行 `date` 命令并将输出追加到 `~/date.log` 文件：
+在每天 08:00（CST-8 时区）执行 `date` 命令并将输出追加到 **~/date.log** 文件：
 
 ```sh
 CRON_TZ=CST-8
