@@ -27,7 +27,7 @@ BE           Active Mountpoint Space Created
 default      NR     /          10.6G 2025-01-14 20:36
 ```
 
-Active 字段解释（来自 bectl(8) 手册页）：
+Active 字段解释：
 
 - “N”：表示该启动环境当前是否处于活动状态（当前是否位于此环境中）
 - “R”：在重启时是否处于活动状态（下次是否选中，用于固定选项）
@@ -107,7 +107,7 @@ zroot/ROOT/15.0-RELEASE  99036272 11132688 87903584    11%    /mnt/upgrade
 14.3-RELEASE
 ```
 
-`freebsd-version` 参数解释（摘自手册页 freebsd-version(1)）：
+`freebsd-version` 参数解释：
 
 - `-k`：打印已安装内核的版本和补丁级别。与 uname(1)) 不同的是，如果新的内核已经安装但系统尚未重启，`freebsd-version` 会打印新内核的版本和补丁级别。
 - `-r`：打印正在运行中的内核的版本和补丁级别。与 uname(1)) 不同的是，`freebsd-version` 不受环境变量影响。
