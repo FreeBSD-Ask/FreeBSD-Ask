@@ -336,6 +336,6 @@ russian|Russian Users Accounts:\
 
 ## 课后习题
 
-1. 修改用户的 `~/.login_conf` 文件覆盖系统级 `login.conf` 的部分设置，记录两种配置的优先级关系，分析 `cgetent()` 函数的数据库检索顺序。
+1. 修改用户的 **~/.login_conf** 文件覆盖系统级 `login.conf` 的部分设置，记录两种配置的优先级关系，分析 `cgetent()` 函数的数据库检索顺序。
 2. 修改 default 类的 `umask` 和 `passwd_format` 设置，对比修改前后新建文件权限和密码加密方式的变化。
 3. 创建一个自定义登录类，设置特定的资源限制（如 `cputime` 和 `maxproc`），分配给测试用户并验证限制是否生效，分析资源限制在内核层面的实现机制。
