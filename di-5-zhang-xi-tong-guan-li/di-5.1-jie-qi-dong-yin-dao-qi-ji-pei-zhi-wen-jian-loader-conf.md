@@ -556,7 +556,7 @@ blanktime="300" # 屏幕超时时间
 
 ## 自定义引导加载程序 Logo
 
-可以自定义引导加载程序的 Logo 以个性化系统启动界面。根据 man 页面 [BEASTIE.4TH(8)](https://man.freebsd.org/cgi/man.cgi?query=beastie.4th&sektion=8&manpath=FreeBSD)，默认有几种 Logo 可选：
+可以自定义引导加载程序的 Logo 以个性化系统启动界面。根据 man 页面 BEASTIE.4TH(8)，默认有几种 Logo 可选：
 
 - `fbsdbw`
 - `beastie`
