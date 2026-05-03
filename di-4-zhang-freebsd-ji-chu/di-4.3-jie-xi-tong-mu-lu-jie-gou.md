@@ -548,7 +548,7 @@ smbios0: Version: 3.6
 
 # ===== AES-NI 加速引擎 =====
 aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS,SHA1,SHA256>
-# aesni(4) 驱动加载，提供 AES 各模式（CBC/CCM/GCM等）以及 SHA1/SHA256 硬件加速。
+# aesni(4) 驱动加载，提供 AES 各模式（CBC/CCM/GCM等）以及 SHA-1/SHA-256 硬件加速。
 # GELI 全盘加密、ZFS 原生加密、IPsec、OpenSSL 等都可利用此驱动实现线速加密。
 
 # ===== ACPI 根设备 -----
