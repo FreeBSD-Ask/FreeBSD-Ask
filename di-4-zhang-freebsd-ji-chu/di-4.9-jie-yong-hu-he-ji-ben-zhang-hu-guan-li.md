@@ -8,7 +8,7 @@ adduser(8) 是一个 Bourne Shell 脚本，内部调用 pw(8) 完成实际的用
 
 `pw` 命令是更底层的用户和组管理工具，支持非交互式批量操作，可直接修改系统用户数据库文件。
 
-用户账户信息存储于 master.passwd(5) 文件中，该文件包含用户名、加密密码、UID、GID、登录类、密码过期时间、账户过期时间、GECOS 信息、主目录和登录 Shell 等字段。
+用户账户信息存储于 master.passwd(5) 文件中，该文件包含用户名、加密密码、UID、GID、登录类、密码过期时间、账户过期时间、GECOS 信息、主目录和登录 shell 等字段。
 
 ## 账户类型
 
@@ -105,7 +105,7 @@ adduser(8) 是交互式的，会逐步引导创建新用户账户。如下所示
 # Username: ykla
 ```
 
-示例：创建用户 test，并将其添加到 wheel 组，设置其默认 Shell 为 sh：
+示例：创建用户 test，并将其添加到 wheel 组，设置其默认 shell 为 sh：
 
 ```sh
 # adduser # 此工具必须由超级用户运行
@@ -115,7 +115,7 @@ Uid (Leave empty for default): # UID 设置，可留空
 Login group [test]: # 登录组
 Login group is test. Invite test into other groups? []: wheel # 设置要加入的组，多个用空格隔开，可留空
 Login class [default]: # 登录分类，可留空
-Shell (sh csh tcsh git-shell bash rbash nologin) [sh]: sh  # 除非手动设置默认 Shell，否则 Shell 为 sh
+Shell (sh csh tcsh git-shell bash rbash nologin) [sh]: sh  # 除非手动设置默认 shell，否则 shell 为 sh
 Home directory [/home/test]: # 指定家目录
 Home directory permissions (Leave empty for default): # 指定家目录权限
 Enable ZFS encryption? (yes/no) [no]: # 是否使用 ZFS 加密
