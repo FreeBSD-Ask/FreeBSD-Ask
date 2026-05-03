@@ -344,7 +344,7 @@ cd is a shell builtin
 切换到 **/home**：
 
 ```sh
-$ cd /home # 切换到 `/home`
+$ cd /home # 切换到 /home
 $ pwd # 查看当前路径
 /home
 ```
@@ -605,14 +605,14 @@ test2 -> test2.pdf
 $ cp test /home/ykla/
 ```
 
-末尾的 `/` 不可省略，如果缺少了末尾的 `/`，且子目录 ykla 不存在，`test` 将被重命名为 `ykla`（ykla 本应为一个目录）：
+末尾的 **/** 不可省略，如果缺少了末尾的 **/**，且子目录 ykla 不存在，`test` 将被重命名为 `ykla`（ykla 本应为一个目录）：
 
 ```sh
 $ cp test /home/ykla/
 cp: directory /home/ykla does not exist # 若加上 /，会提示目录不存在
 ```
 
-若缺少了末尾的 `/`：
+若缺少了末尾的 **/**：
 
 ```sh
 $ cp -v test /home/ykla # -v 选项用于显示文件变动详情，是 verbose 的缩写，意为输出详细信息
