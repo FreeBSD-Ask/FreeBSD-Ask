@@ -8,7 +8,7 @@
 
 > **技巧**
 >
-> `bsdconfig` 也支持纯字符命令行，参见：FreeBSD Project. bsdconfig(8)[EB/OL]. [2026-03-26]. <https://man.freebsd.org/cgi/man.cgi?bsdconfig(8)>。
+> `bsdconfig` 也支持纯字符命令行。
 
 ## bsdconfig 主菜单的功能与操作
 
