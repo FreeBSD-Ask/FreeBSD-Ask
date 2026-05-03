@@ -2,7 +2,7 @@
 
 ## SSH 与 OpenSSH 概述
 
-OpenSSH 是一套网络连接工具集，专为安全访问远程机器而设计。此外，TCP/IP 连接也可经 SSH 隧道安全地转发或封装。OpenSSH 会对全部流量进行加密，因而能杜绝窃听、连接劫持及其他网络层攻击。
+OpenSSH 是一套网络连接工具集，专为安全访问远程机器而设计，TCP/IP 连接也可经 SSH 隧道安全地转发或封装。OpenSSH 会对全部流量进行加密，因而能杜绝窃听、连接劫持及其他网络层攻击。
 
 如果数据以明文形式在网络上传输，处于客户端与服务器之间任一位置的网络嗅探器都能窃取用户名/密码或在会话中传输的数据。OpenSSH 则提供多种认证与加密机制来规避此类风险。
 
@@ -374,7 +374,7 @@ me:\
         :setenv=LC_COLLATE=C:
 ```
 
-- 已中文化的系统（配置 locale 设置）：
+- 支持中文的系统（配置 locale 设置）：
 
 ```ini
 me:\
@@ -434,7 +434,7 @@ root     syslogd     1017 7   udp4   *:514                 *:*
 
 SCP 即 Secure Copy（安全复制），是一种用于在不同设备间安全传输文件的工具，其功能类似于安全版的 `cp` 命令。
 
-WinSCP 是对 `scp` 命令的图形化封装软件，同时支持 FTP 等多种协议，可方便地在 Windows 系统与 Linux 或 BSD 系统之间传输文件。
+WinSCP 是对 `scp` 命令的图形化封装软件，同时支持 FTP 等多种协议，可在 Windows 系统与 Linux 或 BSD 系统之间传输文件。
 
 WinSCP 官方下载地址：[https://winscp.net/eng/download.php](https://winscp.net/eng/download.php)
 
@@ -463,7 +463,7 @@ Xshell 下载地址（输入用户名和邮件即可）：
 
 ### MobaXterm
 
-MobaXterm 是集成了 SCP 功能和多种网络工具的终端软件。
+MobaXterm 是集成了 `scp` 功能和多种网络工具的终端软件。
 
 MobaXterm 目前不支持中文，下载地址 <https://mobaxterm.mobatek.net/download-home-edition.html>，任选其一。
 
