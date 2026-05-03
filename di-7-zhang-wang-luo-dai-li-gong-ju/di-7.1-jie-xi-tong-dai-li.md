@@ -82,7 +82,7 @@ Git 支持通过 `http.proxy` 和 `core.gitProxy` 等配置项设置代理，详
 
 [chromium](https://www.chromium.org/) 是 Google Chrome 浏览器的开源版本，支持多种命令行参数。
 
-Chromium 浏览器在 **~/.config** 等目录下并无专门的代理配置文件，也不支持通过环境变量指定默认代理服务器，但可通过启动参数设置代理。
+Chromium 浏览器在 **~/.config** 等目录下并无代理配置文件，也不支持通过环境变量指定默认代理服务器，但可通过启动参数设置代理。
 
 可通过以下格式指定代理服务器和端口：
 
@@ -108,7 +108,7 @@ $ chrome --proxy-server="127.0.0.1:1234"
 --proxy-server="socks4://<IP 地址>:<端口>"
 ```
 
-在图形界面下使 Chromium 默认使用代理打开，可通过修改桌面启动文件实现持久化配置。
+在图形界面下使 Chromium 默认通过代理启动，可通过修改桌面启动文件实现持久化配置。
 
 找到桌面环境为 Chromium 创建的桌面（desktop）文件，通常位于 **~/.local/share/applications/** 目录下：
 
