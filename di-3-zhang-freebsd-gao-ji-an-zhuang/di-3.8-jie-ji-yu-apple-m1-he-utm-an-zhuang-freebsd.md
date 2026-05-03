@@ -118,7 +118,7 @@ xinit: server error
 voosk@BSDVM:~ $
 ```
 
-在 `/boot/loader.conf` 文件中加入下面两行可启动 TWM，但虚拟机将失去画面输出（ssh 仍然可以连接，表明这仅为显示问题）。
+在 **/boot/loader.conf** 文件中加入下面两行可启动 TWM，但虚拟机将失去画面输出（ssh 仍然可以连接，表明这仅为显示问题）。
 
 ```sh
 hint.virtio_gpu.0.disabled="1"
