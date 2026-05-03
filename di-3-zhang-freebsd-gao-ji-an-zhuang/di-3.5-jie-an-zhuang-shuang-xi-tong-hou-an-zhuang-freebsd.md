@@ -1,4 +1,4 @@
-# 3.5 安装双系统（后安装 FreeBSD）
+﻿# 3.5 安装双系统（后安装 FreeBSD）
 
 本节以 FreeBSD-14.2-RELEASE-amd64-disc1.iso 为例，演示在已预装 Windows 11 24H2 的 UEFI 设备上追加安装 FreeBSD 双系统，重点处理 ESP 分区空间与引导管理。
 
@@ -300,7 +300,7 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 
 > **技巧**
 >
-> 上述参数参考自 [bsdinstall(8)](https://man.freebsd.org/cgi/man.cgi?bsdinstall(8)) 的默认配置。安装后，也可通过命令 `zfs get exec,setuid,mountpoint` 查看相关属性。具体代码位于 [usr.sbin/bsdinstall/scripts/zfsboot](https://github.com/freebsd/freebsd-src/blob/main/usr.sbin/bsdinstall/scripts/zfsboot)。
+> 上述参数参考自 bsdinstall(8)) 的默认配置。安装后，也可通过命令 `zfs get exec,setuid,mountpoint` 查看相关属性。具体代码位于 [usr.sbin/bsdinstall/scripts/zfsboot](https://github.com/freebsd/freebsd-src/blob/main/usr.sbin/bsdinstall/scripts/zfsboot)。
 
 相关文件结构：
 
