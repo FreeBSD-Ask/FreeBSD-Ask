@@ -239,7 +239,7 @@ Realtek RTL8125 是一款常见的 2.5 G 以太网卡。在消费级市场中，
 # make install clean
 ```
 
-在编译安装时，需确保 `/usr/src` 目录下有源代码。
+在编译安装时，需确保 **/usr/src** 目录下有源代码。
 
 ```sh
 /usr/
@@ -262,7 +262,7 @@ Realtek RTL8125 是一款常见的 2.5 G 以太网卡。在消费级市场中，
     └── if_re.ko       # re 网卡驱动内核模块
 ```
 
-编辑 `/boot/loader.conf` 文件，写入以下两行：
+编辑 **/boot/loader.conf** 文件，写入以下两行：
 
 ```ini
 if_re_load="YES"                 # 设置开机自动加载 re 网卡驱动模块
