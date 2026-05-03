@@ -250,7 +250,7 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 
 将创建 **/usr/src** 数据集。
 
-- 创建 `/var` 数据集
+- 创建 **/var** 数据集
 
 ```sh
 # zfs create -o mountpoint=/var -o canmount=off zroot/var
