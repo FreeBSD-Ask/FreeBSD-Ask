@@ -565,7 +565,7 @@ blanktime="300" # 屏幕超时时间
 - `orbbw`（默认）
 - `none`（无 Logo）
 
-以 `fbsdbw` 为例，在 `/boot/loader.conf` 文件中写入：
+以 `fbsdbw` 为例，在 **/boot/loader.conf** 文件中写入：
 
 ```ini
 # 设置引导加载程序使用的 logo 名称为 fbsdbw
@@ -595,5 +595,5 @@ loader_logo="fbsdbw"
 ## 课后习题
 
 1. 修改 `autoboot_delay` 为 0 并启用 `boot_mute`，对比两次系统启动的输出差异，分析引导器在用户体验与调试需求之间的设计权衡。
-2. 查阅 `/boot/loader.conf.d/` 目录的加载机制源代码，创建一个自定义配置文件并验证其与主配置文件的优先级关系，分析分散配置设计对系统管理的影响。
+2. 查阅 **/boot/loader.conf.d/** 目录的加载机制源代码，创建一个自定义配置文件并验证其与主配置文件的优先级关系，分析分散配置设计对系统管理的影响。
 3. 自定义一张 BMP 格式的启动 Logo，替代默认 Logo 并记录加载过程与格式要求。
