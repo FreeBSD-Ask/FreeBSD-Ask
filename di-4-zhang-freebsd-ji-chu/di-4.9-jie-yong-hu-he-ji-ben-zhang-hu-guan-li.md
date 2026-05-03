@@ -1,4 +1,4 @@
-# 4.9 用户和基本账户管理
+﻿# 4.9 用户和基本账户管理
 
 FreeBSD 系统的所有访问均通过账户实现，所有进程均由用户运行，因此用户与账户管理是系统安全的基础。
 
@@ -230,7 +230,7 @@ chpass: user information updated
 
 > **技巧**
 >
-> [chfn(1)](https://man.freebsd.org/cgi/man.cgi?query=chfn&sektion=1&format=html) 与 [chsh(1)](https://man.freebsd.org/cgi/man.cgi?query=chsh&sektion=1&format=html) 是 [chpass(1)](https://man.freebsd.org/cgi/man.cgi?query=chpass&sektion=1&format=html) 的链接命令，[ypchpass(1)](https://man.freebsd.org/cgi/man.cgi?query=ypchpass&sektion=1&format=html)、[ypchfn(1)](https://man.freebsd.org/cgi/man.cgi?query=ypchfn&sektion=1&format=html) 和 [ypchsh(1)](https://man.freebsd.org/cgi/man.cgi?query=ypchsh&sektion=1&format=html) 也是。由于 NIS 支持是自动的，无需在命令前加 `yp`。这一点可以从源代码 `usr.bin/chpass/Makefile` 进行推断：
+> chfn(1) 与 chsh(1) 是 chpass(1) 的链接命令，ypchpass(1)、ypchfn(1) 和 ypchsh(1) 也是。由于 NIS 支持是自动的，无需在命令前加 `yp`。这一点可以从源代码 `usr.bin/chpass/Makefile` 进行推断：
 >
 > ```makefile
 >SYMLINKS=	chpass ${BINDIR}/chfn
