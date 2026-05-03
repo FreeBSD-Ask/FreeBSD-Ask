@@ -1,10 +1,10 @@
-# 5.8 设备资源提示文件（device.hints）
+﻿# 5.8 设备资源提示文件（device.hints）
 
 设备资源提示文件（device.hints）是 FreeBSD 引导过程中的配置文件。该文件在系统启动时由 boot loader(8) 读取，其内容传递给内核，用于控制内核的引导行为，但也可包含任何内核可调参数值。设备提示变量主要用于设备驱动程序设置设备，最常用于 ISA 设备驱动程序指定探测位置和所需资源。
 
 ## device.hints 的功能与结构
 
-[device.hints(5)](https://man.freebsd.org/cgi/man.cgi?device.hints) 相关文件结构：
+device.hints(5) 相关文件结构：
 
 ```sh
 /
@@ -82,7 +82,7 @@ hint.p4tcc.0.disabled="1"
 hint.atkbdc.0.at="isa"
 ```
 
-将驱动 [atkbdc](https://man.freebsd.org/cgi/man.cgi?query=atkbdc&sektion=4)（AT 键盘控制器）的设备实例号 0 附加（attach）到 ISA 总线上，即指定第 0 个 atkbdc 设备位于 ISA 总线上。
+将驱动 atkbdc（AT 键盘控制器）的设备实例号 0 附加（attach）到 ISA 总线上，即指定第 0 个 atkbdc 设备位于 ISA 总线上。
 
 ## 参考文献
 
