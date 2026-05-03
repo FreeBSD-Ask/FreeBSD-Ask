@@ -1,12 +1,10 @@
 # 9.6 ZFS 启动环境与多版本共存
 
-借助 ZFS 启动环境，可以在同一台机器上保留多个独立的系统版本，升级失败时无需重新安装即可回退到先前状态。
-
-ZFS 启动环境为 FreeBSD 提供了安全、灵活的系统更新与多版本共存机制。
+借助 ZFS 启动环境，可在同一台机器上保留多个独立的系统版本，升级失败时无需重新安装即可回退到先前状态，为 FreeBSD 提供了安全、灵活的系统更新与多版本共存机制。
 
 ## 创建启动环境 15.0-RELEASE
 
-ZFS 启动环境（Boot Environment，BE）是 FreeBSD 的一个重要特性，它能在系统中创建多个独立的系统环境，从而实现不同系统版本的共存与安全切换。下面将创建一个名为 15.0-RELEASE 的启动环境。
+ZFS 启动环境（Boot Environment，BE）允许在系统中创建多个独立的系统环境，实现不同版本的共存与安全切换。以下创建一个名为 15.0-RELEASE 的启动环境。
 
 - 使用工具 bectl 创建启动环境 `15.0-RELEASE`：
 
@@ -51,11 +49,11 @@ zroot/ROOT/15.0-RELEASE     8K  83.8G  10.6G  /
 
 ## 将启动环境中的系统版本更新到 15.0-RELEASE
 
-创建好启动环境后，需要在其中进行系统版本的更新操作。整个过程分为挂载启动环境、验证版本、转换为 pkgbase 以及升级到目标版本等步骤。
+创建启动环境后，需要将其更新到目标版本。操作分为挂载、验证版本、转换为 pkgbase、升级四个步骤。
 
 ### 挂载启动环境 15.0-RELEASE
 
-要对启动环境进行操作，首先需要将其挂载到文件系统中的某个目录。下面将创建一个临时目录并挂载启动环境。
+操作启动环境前，需先将其挂载到文件系统中。创建临时目录并执行挂载：
 
 - 创建一个临时目录，用于更新启动环境 15.0-RELEASE 中的系统
 
@@ -96,7 +94,7 @@ zroot/ROOT/15.0-RELEASE  99036272 11132688 87903584    11%    /mnt/upgrade
 
 ### 验证当前 FreeBSD 版本
 
-目前 15.0-RELEASE 实际上仍是 14.3-RELEASE。虽然这是已知事实，但仍可使用命令 `freebsd-version` 进行验证。
+目前 15.0-RELEASE 实际仍是 14.3-RELEASE，可使用 `freebsd-version` 验证：
 
 在 **/mnt/upgrade** 环境中运行 `freebsd-version`：
 
@@ -115,9 +113,9 @@ zroot/ROOT/15.0-RELEASE  99036272 11132688 87903584    11%    /mnt/upgrade
 
 ### 使用 pkgbase 将启动环境中的 14.3-RELEASE（系统版本）转换为 pkgbase
 
-在开始升级之前，需要将传统的 FreeBSD 系统转换为 pkgbase 格式。pkgbase 是 FreeBSD 官方提供的一种新的基本系统打包方式，它使用 pkg 包管理器来管理系统组件。
+升级之前，需将传统的 FreeBSD 系统转换为 pkgbase 格式。pkgbase 是 FreeBSD 官方提供的基本系统打包方式，使用 pkg 包管理器管理系统组件。
 
-pkgbase 的设计初衷是为了让 stable、current 和 release（包括 BETA、RC 等）都能使用统一的二进制工具进行更新。之前，stable 和 current 只能通过完整编译源代码的方式进行更新。
+pkgbase 的设计初衷是让 stable、current 和 release（包括 BETA、RC 等）都能使用统一的二进制工具进行更新。此前，stable 和 current 只能通过编译源代码的方式更新。
 
 > **注意**
 >
@@ -188,7 +186,7 @@ After verifying those files, restart the system.
 
 ### 使用 pkgbase 将启动环境中的系统版本更新到 15.0-RELEASE
 
-成功转换为 pkgbase 后，就可以使用 pkg 包管理器来升级系统版本了。下面将配置 pkgbase 源并执行升级操作。
+转换为 pkgbase 后，即可使用 pkg 包管理器升级系统。下面配置 pkgbase 源并执行升级。
 
 软件源结构：
 
@@ -219,7 +217,7 @@ FreeBSD-base {
 
 > **技巧**
 >
-> 需要切换软件源的用户可以将 `url` 这行改为 `url = "https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/base_release_${VERSION_MINOR}";`。而对于那些优先考虑安全性的读者应该维持默认设置。
+> 需要切换软件源的用户可将 `url` 这行改为 `url = "https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/base_release_${VERSION_MINOR}";`。注重安全性的读者应维持默认设置。
 
 - 刷新软件源
 
@@ -302,7 +300,7 @@ Unlocking pkg-2.4.2_1
 
 ### 启动到启动环境 15.0-RELEASE
 
-完成所有更新操作后，可以尝试启动到新的启动环境中验证更新结果。
+完成所有更新操作后，启动到新的启动环境验证结果。
 
 - 在下次启动时进入启动环境 15.0-RELEASE
 
@@ -465,7 +463,7 @@ zfs-kmod-2.3.5-1
 
 > **警告**
 >
-> 考虑到基本系统中的 OpenZFS 版本不一定是最新的，因此建议对所有版本都使用 Ports 中的版本以期达到统一。换言之，建议读者也在 15.0-RELEASE 中按照相同方法替换 ZFS。
+> 考虑到基本系统中的 OpenZFS 版本不一定是最新的，建议所有版本均使用 Ports 中的 OpenZFS 以保持版本统一，包括 15.0-RELEASE 也应按照相同方法替换 ZFS。
 
 ## 附录：给 pkgbasify 脚本切换软件源
 
@@ -574,7 +572,7 @@ end
 
 > **注意**
 >
-> 对于那些优先考虑安全性的读者，应该保持默认设置。
+> 注重安全性的读者应保持默认设置。
 
 ### 南京大学开源镜像站 NJU
 
