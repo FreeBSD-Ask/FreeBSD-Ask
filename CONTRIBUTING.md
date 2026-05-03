@@ -234,7 +234,7 @@ $ git clone https://github.com/FreeBSD-Ask/FreeBSD-Ask
 │          markdown-lint2.yml # markdown 格式检查
 │          md-padding.yml # markdown 空格检查与修复
 │          mulu.yml # 从 SUMMARY.md 生成的镜像文件
-│          sync-headers.yml # 从 SUMMARY.md 更新所有 markdown 文件的一级标题。如果你要修改 `#` 标题，必须在此处进行修改，否则会被其覆盖
+│          sync-headers.yml # 从 SUMMARY.md 更新所有 markdown 文件的一级标题。如果你要修改 # 标题，必须在此处进行修改，否则会被其覆盖
 │          Update-commit-progress.yml # 进度检查工具，每 3533 次提交为一个版本，用于插入到 README.md
 │          update-ga4.yml # 谷歌统计数据，用于插入到 README.md
 │
