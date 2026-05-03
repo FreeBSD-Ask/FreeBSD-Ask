@@ -390,7 +390,7 @@ root ALL=(ALL:ALL) ALL
 
 ```sh
 $ sudo su
-[sudo: authenticate] Password: # 此处同样不会显示任何输入内容，无 `***` 等掩码提示
+[sudo: authenticate] Password: # 此处同样不会显示任何输入内容，无 *** 等掩码提示
 #
 ```
 
