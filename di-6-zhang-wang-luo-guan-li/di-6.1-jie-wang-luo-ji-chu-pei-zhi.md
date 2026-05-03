@@ -348,7 +348,7 @@ search 和 domain 选项只能使用其中一个。使用 DHCP 时，dhclient(8)
 
 > **注意**：
 >
-> 修改 **/etc/rc.conf** 文件后，需重启系统或运行命令 `/etc/rc.d/netif restart` 来应用网络更改。
+> 修改 **/etc/rc.conf** 文件后，需重启系统或运行命令 **/etc/rc.d/netif restart** 来应用网络更改。
 
 ```ini
 hostname="ykla"  # 主机名，不能为空，否则无法使用 Xorg
