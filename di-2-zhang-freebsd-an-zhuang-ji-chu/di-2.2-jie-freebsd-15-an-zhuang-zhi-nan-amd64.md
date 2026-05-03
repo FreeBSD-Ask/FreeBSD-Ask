@@ -565,13 +565,13 @@ root 密码强度无强制要求，但不可为空。若密码为空，将提示
 
 在列表中找到您的 Wi-Fi 网络。若未找到，可尝试更改无线路由器的信道后重试。
 
-![选择 WiFi 网络](../.gitbook/assets/wifi-select-network.png)
+![选择 Wi-Fi 网络](../.gitbook/assets/wifi-select-network.png)
 
 `请选择要连接的无线网络`
 
 输入 Wi-Fi 密码以连接：
 
-![输入 WiFi 密码](../.gitbook/assets/wifi-enter-password.png)
+![输入 Wi-Fi 密码](../.gitbook/assets/wifi-enter-password.png)
 
 ![配置 IPv4](../.gitbook/assets/config-ipv4.png)
 
