@@ -1,8 +1,8 @@
-# 5.9 crontab 及定时任务文件（periodic.conf）
+﻿# 5.9 crontab 及定时任务文件（periodic.conf）
 
 ## periodic.conf 的功能与目录结构
 
-[periodic.conf(5)](https://man.freebsd.org/cgi/man.cgi?periodic.conf) 文件包含了每日、每周和每月系统维护任务应如何运行的说明。`periodic` 是 FreeBSD 的系统维护任务框架，负责执行定期的系统维护工作，如日志轮转、安全检查等。这些任务通过 `periodic` 命令执行，由 `cron` 守护进程按预设时间表自动调用。
+periodic.conf(5) 文件包含了每日、每周和每月系统维护任务应如何运行的说明。`periodic` 是 FreeBSD 的系统维护任务框架，负责执行定期的系统维护工作，如日志轮转、安全检查等。这些任务通过 `periodic` 命令执行，由 `cron` 守护进程按预设时间表自动调用。
 
 与 `periodic`、`cron` 有关的配置和路径如下：
 
@@ -32,7 +32,7 @@
         └── tabs/                   # 个人 crontab 文件目录
 ```
 
-[periodic.conf(5)](https://man.freebsd.org/cgi/man.cgi?periodic.conf) 文件位于 `/etc/defaults` 目录下，其部分内容可被 `/etc` 目录下同名文件覆盖，而 `/etc` 下的文件又可被 `/etc/periodic.conf.local` 文件所覆盖。
+periodic.conf(5) 文件位于 `/etc/defaults` 目录下，其部分内容可被 `/etc` 目录下同名文件覆盖，而 `/etc` 下的文件又可被 `/etc/periodic.conf.local` 文件所覆盖。
 
 源代码路径结构：
 
@@ -60,7 +60,7 @@ Rebuilding locate database:
 /var/db/locate.database
 ```
 
-crontab: `cron` 配置，位于 `/etc/crontab`，可参阅 [crontab(5)](https://man.freebsd.org/cgi/man.cgi?crontab(5))。
+crontab: `cron` 配置，位于 `/etc/crontab`，可参阅 crontab(5))。
 
 ## 参考文献
 
