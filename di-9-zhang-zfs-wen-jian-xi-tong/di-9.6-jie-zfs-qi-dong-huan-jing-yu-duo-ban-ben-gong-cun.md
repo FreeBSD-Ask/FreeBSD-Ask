@@ -108,9 +108,10 @@ zroot/ROOT/15.0-RELEASE  99036272 11132688 87903584    11%    /mnt/upgrade
 ```
 
 `freebsd-version` 参数解释（摘自手册页 [freebsd-version(1)](https://man.freebsd.org/cgi/man.cgi?freebsd-version)）：
+`freebsd-version` 参数解释（摘自手册页 freebsd-version(1)）：
 
-- `-k`：打印已安装内核的版本和补丁级别。与 [uname(1)](https://man.freebsd.org/uname(1)) 不同的是，如果新的内核已经安装但系统尚未重启，`freebsd-version` 会打印新内核的版本和补丁级别。
-- `-r`：打印正在运行中的内核的版本和补丁级别。与 [uname(1)](https://man.freebsd.org/uname(1)) 不同的是，`freebsd-version` 不受环境变量影响。
+- `-k`：打印已安装内核的版本和补丁级别。与 uname(1)) 不同的是，如果新的内核已经安装但系统尚未重启，`freebsd-version` 会打印新内核的版本和补丁级别。
+- `-r`：打印正在运行中的内核的版本和补丁级别。与 uname(1)) 不同的是，`freebsd-version` 不受环境变量影响。
 - `-u`：打印已安装用户态的版本和补丁级别。这些信息在构建过程中会被写入程序 `freebsd-version` 中。
 
 ### 使用 pkgbase 将启动环境中的 14.3-RELEASE（系统版本）转换为 pkgbase
