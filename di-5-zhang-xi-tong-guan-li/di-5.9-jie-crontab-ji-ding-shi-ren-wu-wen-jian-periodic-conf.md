@@ -32,7 +32,7 @@ periodic.conf(5) 文件包含了每日、每周和每月系统维护任务应如
         └── tabs/                   # 个人 crontab 文件目录
 ```
 
-periodic.conf(5) 文件位于 `/etc/defaults` 目录下，其部分内容可被 `/etc` 目录下同名文件覆盖，而 `/etc` 下的文件又可被 `/etc/periodic.conf.local` 文件所覆盖。
+periodic.conf(5) 文件位于 **/etc/defaults** 目录下，其部分内容可被 **/etc** 目录下同名文件覆盖，而 **/etc** 下的文件又可被 **/etc/periodic.conf.local** 文件所覆盖。
 
 源代码路径结构：
 
@@ -42,7 +42,7 @@ periodic.conf(5) 文件位于 `/etc/defaults` 目录下，其部分内容可被 
 
 ## 附录：示例分析
 
-以 `locate` 命令所依赖的路径数据库 `/var/db/locate.database` 文件为例，该数据库由 `/etc/periodic/weekly/310.locate` 脚本每周自动更新一次。
+以 `locate` 命令所依赖的路径数据库 **/var/db/locate.database** 文件为例，该数据库由 **/etc/periodic/weekly/310.locate** 脚本每周自动更新一次。
 
 如需立即更新数据库，可直接执行该脚本：
 
@@ -60,7 +60,7 @@ Rebuilding locate database:
 /var/db/locate.database
 ```
 
-crontab: `cron` 配置，位于 `/etc/crontab`，可参阅 crontab(5))。
+crontab: `cron` 配置，位于 **/etc/crontab**，可参阅 crontab(5))。
 
 ## 参考文献
 
