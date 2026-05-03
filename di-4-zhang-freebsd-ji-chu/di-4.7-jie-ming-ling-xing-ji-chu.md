@@ -718,7 +718,7 @@ make BATCH=yes install || make BATCH=yes install || make BATCH=yes install || ma
 
 UNIX Shell 还能使用户执行命令、重定向其输出、重定向其输入，并将多个命令组合在一起以优化最终输出。
 
-Shell 重定向是将命令的输出或输入发送到另一个命令或文件中的操作。例如，将 [ls(1)](https://man.freebsd.org/cgi/man.cgi?query=ls&sektion=1&format=html) 命令的输出捕获到一个文件中，可以这样重定向输出：
+Shell 重定向是将命令的输出或输入发送到另一个命令或文件中的操作。例如，将 ls(1) 命令的输出捕获到一个文件中，可以这样重定向输出：
 
 ```sh
 $ ls -l > test.txt
@@ -737,7 +737,7 @@ drw-------  2 ykla ykla 2 Apr 28 00:24 test
 
 >**技巧**
 >
->有些命令可以读取输入，比如 [sort(1)](https://man.freebsd.org/cgi/man.cgi?query=sort&sektion=1&format=html)。要对该列表进行排序，可以这样重定向输入：
+>有些命令可以读取输入，比如 sort(1)。要对该列表进行排序，可以这样重定向输入：
 
 ```sh
 $ sort < test.txt
@@ -746,7 +746,7 @@ drw-------  2 ykla ykla 2 Apr 28 00:24 test
 total 1
 ```
 
-输入会被排序并显示在屏幕上。要将该输入重定向到另一个文件，可以将 [sort(1)](https://man.freebsd.org/cgi/man.cgi?query=sort&sektion=1&format=html) 的输出重定向出去，操作如下：
+输入会被排序并显示在屏幕上。要将该输入重定向到另一个文件，可以将 sort(1) 的输出重定向出去，操作如下：
 
 ```sh
 $ sort < test.txt > sorted.txt
@@ -769,7 +769,7 @@ drw-------  2 ykla ykla 2 Apr 28 00:24 test
 total 1
 ```
 
-在此示例中，`directory_listing.txt` 的内容将被排序，然后输出传递给 [less(1)](https://man.freebsd.org/cgi/man.cgi?query=less&sektion=1&format=html)。这使用户可以按自己的节奏浏览输出内容，防止其在屏幕上滚动消失。
+在此示例中，`directory_listing.txt` 的内容将被排序，然后输出传递给 less(1)。这使用户可以按自己的节奏浏览输出内容，防止其在屏幕上滚动消失。
 
 ## BSD 风格的 make/grep/sed/awk
 
