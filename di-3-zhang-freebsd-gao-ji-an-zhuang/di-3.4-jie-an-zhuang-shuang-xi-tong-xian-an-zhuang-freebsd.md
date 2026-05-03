@@ -12,7 +12,7 @@
 
 > **技巧**
 >
-> 如果在此处设置 `P Partition Scheme` 为 `GPT (UEFI)` 而非其他（仅较早的计算机才需选择 `GPT (BIOS+UEFI)` 等选项），后续分区与系统更新过程会更加简单，也能实现 4K 对齐。
+> 如果在此处设置 `P Partition Scheme` 为 `GPT (UEFI)` 而非其他（仅较早的计算机才需选择 `GPT (BIOS+UEFI)` 等选项），后续分区与系统更新过程更为简便，同时可实现 4K 对齐。
 
 ![分区方案选择](../.gitbook/assets/dual-boot-3.png)
 
