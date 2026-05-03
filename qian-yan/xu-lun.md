@@ -55,25 +55,27 @@
 
 **第 17 章 防火墙**：介绍 FreeBSD 内置防火墙系统，包括 PF、IPFW 和 IPFilter 的配置。
 
-**第 18 章 服务器**：介绍 FTP 服务器、Samba 文件共享、NFS 服务器、零配置网络（mDNS/DNS-SD）等服务的搭建。
+**第 18 章 安全**：介绍账户认证安全、资源限制、安全等级、安全事件审计、OpenSSL、入侵检测系统及第三方漏洞与安全公告。
 
-**第 19 章 Web 服务器与监控系统**：介绍 Apache、Nginx、Caddy、Prometheus、Grafana、Nextcloud 等 Web 服务与监控平台的部署。
+**第 19 章 服务器**：介绍 FTP 服务器、Samba 文件共享、NFS 服务器、零配置网络（mDNS/DNS-SD）等服务的搭建。
 
-**第 20 章 嵌入式平台**：介绍在树莓派等 ARM 设备以及 RISC-V 和 x86 嵌入式开发板上运行 FreeBSD 的方法。
+**第 20 章 Web 服务器与监控系统**：介绍 Apache、Nginx、Caddy、Prometheus、Grafana、Nextcloud 等 Web 服务与监控平台的部署。
 
-**第 21 章 数据库管理**：介绍 PostgreSQL、MySQL、MongoDB 等数据库的安装与配置。
+**第 21 章 嵌入式平台**：介绍在树莓派等 ARM 设备以及 RISC-V 和 x86 嵌入式开发板上运行 FreeBSD 的方法。
 
-**第 22 章 游戏、科学计算和专业工具**：介绍游戏引擎、科学计算及专业软件在 FreeBSD 上的使用方法。
+**第 22 章 数据库管理**：介绍 PostgreSQL、MySQL、MongoDB 等数据库的安装与配置。
 
-**第 23 章 Linux 二进制兼容层**：介绍在 FreeBSD 上运行各类 Linux 发行版的方法。
+**第 23 章 游戏、科学计算和专业工具**：介绍游戏引擎、科学计算及专业软件在 FreeBSD 上的使用方法。
 
-**第 24 章 开发环境**：介绍 C/C++、Java、Python、Rust 等语言开发环境的搭建，以及 DTrace 动态追踪工具的使用。
+**第 24 章 Linux 二进制兼容层**：介绍在 FreeBSD 上运行各类 Linux 发行版的方法。
 
-**第 25 章 社区参与**：介绍 Bug 报告流程、邮件列表订阅及 FreeBSD 开发参与方式。
+**第 25 章 开发环境**：介绍 C/C++、Java、Python、Rust 等语言开发环境的搭建，以及 DTrace 动态追踪工具的使用。
 
-**第 26 章 基于 Linux 兼容层的应用**：介绍基于 Linux 兼容层运行 QQ、WPS Office、微信及 Wine 等应用。
+**第 26 章 社区参与**：介绍 Bug 报告流程、邮件列表订阅及 FreeBSD 开发参与方式。
 
-**第 27 章 FreeBSD 内核架构**：介绍 FreeBSD 内核选项与定制内核的构建。
+**第 27 章 基于 Linux 兼容层的应用**：介绍基于 Linux 兼容层运行 QQ、WPS Office、微信及 Wine 等应用。
+
+**第 28 章 FreeBSD 内核架构**：介绍 FreeBSD 内核选项与定制内核的构建。
 
 **附录 I 工具与资源**：包括硬件挑选建议及开源常识。
 
