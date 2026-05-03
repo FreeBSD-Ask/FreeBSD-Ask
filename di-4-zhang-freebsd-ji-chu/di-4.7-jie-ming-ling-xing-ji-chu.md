@@ -818,7 +818,7 @@ FreeBSD 的设计更接近传统 UNIX 的行为。
 
 > **技巧**
 >
-> 当使用上述命令关闭 FreeBSD 时，系统将调用 Shell 脚本 **/etc/rc.shutdown**。该脚本按 *rc.d* 脚本列表的逆序依次执行，以关闭系统服务。（参见 FreeBSD Project. rc.shutdown[EB/OL]. (2026-04-09)[2026-04-09]. <https://github.com/freebsd/freebsd-src/blob/main/libexec/rc/rc.shutdown>）
+> 当使用上述命令关闭 FreeBSD 时，系统将调用 shell 脚本 **/etc/rc.shutdown**。该脚本按 *rc.d* 脚本列表的逆序依次执行，以关闭系统服务。（参见 FreeBSD Project. rc.shutdown[EB/OL]. (2026-04-09)[2026-04-09]. <https://github.com/freebsd/freebsd-src/blob/main/libexec/rc/rc.shutdown>）
 
 > **注意**
 >
