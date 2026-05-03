@@ -107,7 +107,6 @@ zroot/ROOT/15.0-RELEASE  99036272 11132688 87903584    11%    /mnt/upgrade
 14.3-RELEASE
 ```
 
-`freebsd-version` 参数解释（摘自手册页 [freebsd-version(1)](https://man.freebsd.org/cgi/man.cgi?freebsd-version)）：
 `freebsd-version` 参数解释（摘自手册页 freebsd-version(1)）：
 
 - `-k`：打印已安装内核的版本和补丁级别。与 uname(1)) 不同的是，如果新的内核已经安装但系统尚未重启，`freebsd-version` 会打印新内核的版本和补丁级别。
