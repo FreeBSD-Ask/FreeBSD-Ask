@@ -116,13 +116,13 @@ $ x11vnc -display :0 -rfbauth ~/.vnc/passwd -auth /var/lib/gdm/:0.Xauth # 或 /r
 
 ### 设置
 
-创建 `~/.vnc/` 路径：
+创建 **~/.vnc/** 路径：
 
 ```sh
 $ mkdir -p ~/.vnc/
 ```
 
-编辑 `~/.vnc/xstartup` 文件，新增以下行：
+编辑 **~/.vnc/xstartup** 文件，新增以下行：
 
 ```sh
 #!/bin/sh
