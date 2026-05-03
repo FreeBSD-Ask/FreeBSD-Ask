@@ -221,11 +221,11 @@ loader.conf(5) 相关的文件结构如下：
           └── loader.conf 默认设置文件（请勿直接修改），参见 loader.conf(5)
 ```
 
-loader.conf 是系统启动配置的核心文件，位于 `/boot/loader.conf`。写入此处的配置比 `rc.conf` 文件更早生效，但不当配置可能会妨碍系统正常启动。
+loader.conf 是系统启动配置的核心文件，位于 **/boot/loader.conf**。写入此处的配置比 `rc.conf` 文件更早生效，但不当配置可能会妨碍系统正常启动。
 
 > **技巧**
 >
-> 不建议直接修改 `/boot/defaults/loader.conf` 文件。如需自定义配置，应使用 `/boot/loader.conf` 文件或 `/boot/loader.conf.local` 文件进行本地配置扩展。其中 `/boot/loader.conf.local` 文件优先级最高，专门用于机器特定设置。
+> 不建议直接修改 **/boot/defaults/loader.conf** 文件。如需自定义配置，应使用 **/boot/loader.conf** 文件或 **/boot/loader.conf.local** 文件进行本地配置扩展。其中 **/boot/loader.conf.local** 文件优先级最高，专门用于机器特定设置。
 
 ## ZFS 标准安装场景下的 loader.conf 配置内容
 
