@@ -182,7 +182,7 @@ Bash（Bourne Again SHell）是 GNU 项目开发的 Shell 程序，作为 Bourne
 | `bash-completion-freebsd` | 针对 FreeBSD 的 Bash 补全库扩展，安装时会自动安装 shells/bash-completion 作为依赖 |
 | `bash-completion-zfs` | 针对 OpenZFS 的 Bash 补全库扩展 |
 
-- 使用 ports 安装：
+- 使用 Ports 安装：
 
 ```sh
 # cd /usr/ports/shells/bash/ && make install clean
