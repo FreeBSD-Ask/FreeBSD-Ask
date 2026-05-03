@@ -15,7 +15,7 @@ FreeBSD 的启动过程可分为以下阶段：
 - 在 BIOS 模式下，固件读取磁盘主引导记录（MBR）或卷引导记录（VBR）中的引导代码；
 - 在 UEFI 模式下，固件从 EFI 系统分区（ESP）加载 EFI 应用程序。FreeBSD 的 UEFI 引导程序位于 `/EFI/freebsd/loader.efi`。
 
-3. **引导加载程序阶段（Boot Loader）**：FreeBSD 的引导加载程序分为三个阶段（在 BIOS 模式下为 `boot0`/`boot1`/`loader`，在 UEFI 模式下为 `loader.efi`）。最终阶段的 `loader(8)` 是一个交互式引导加载程序，它读取 `/boot/loader.conf` 配置文件，加载内核和模块，然后将控制权转移给内核。
+3. **引导加载程序阶段（Boot Loader）**：FreeBSD 的引导加载程序分为三个阶段（在 BIOS 模式下为 `boot0`/`boot1`/`loader`，在 UEFI 模式下为 `loader.efi`）。最终阶段的 `loader(8)` 是一个交互式引导加载程序，它读取 **/boot/loader.conf** 配置文件，加载内核和模块，然后将控制权转移给内核。
 
 4. **内核初始化阶段**：内核被加载后，首先进行硬件探测和设备初始化，然后挂载根文件系统，启动 `init(8)` 进程。`init(8)` 始终是内核启动的第一个用户空间进程，其进程 ID（PID）始终为 1。
 
