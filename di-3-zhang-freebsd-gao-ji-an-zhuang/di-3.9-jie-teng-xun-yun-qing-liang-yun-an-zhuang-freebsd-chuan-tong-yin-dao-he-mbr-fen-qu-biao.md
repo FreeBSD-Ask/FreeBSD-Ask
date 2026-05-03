@@ -101,7 +101,7 @@ mfsBSD 和 mfsLinux 镜像的默认 `root` 密码均为 `mfsroot`。
 
 在正常的 Linux 系统中，若直接将 mfsBSD 的 img 镜像通过 `dd` 写入硬盘，重启后虽能正常加载引导程序，但可能因系统对硬盘的后续写入操作而导致无法正常挂载内存盘。
 
-下载 mfsBSD 镜像并写入 `/dev/vda`：
+下载 mfsBSD 镜像并写入 **/dev/vda**：
 
 ```sh
 # wget https://mfsbsd.vx.sk/files/images/13/amd64/mfsbsd-se-13.1-RELEASE-amd64.img -O- | dd of=/dev/vda
@@ -118,7 +118,7 @@ mfsBSD 和 mfsLinux 镜像的默认 `root` 密码均为 `mfsroot`。
 
 ### LVM 逻辑卷
 
-如果云服务器使用了 LVM，需要将所有与引导相关的文件放置于 `/boot` 分区内，否则可能无法被正确识别。
+如果云服务器使用了 LVM，需要将所有与引导相关的文件放置于 **/boot** 分区内，否则可能无法被正确识别。
 
 ### 腾讯云轻量应用服务器可能无法获取 IPv6 地址
 
@@ -160,7 +160,7 @@ boot # 输入 boot 后按回车继续启动
 >
 > GRUB2 自带的 `memdisk.mod` 模块并非 MEMDISK。必须安装 syslinux 包才能获得 MEMDISK 工具。
 
-- 复制到 `/boot`
+- 复制到 **/boot**
 
 ```sh
 # cp /usr/share/syslinux/memdisk /boot/
@@ -180,7 +180,7 @@ boot                               # 输入 boot 后回车以启动系统
 
 #### 方案三
 
-缩小 Linux 的根分区（`/`），直接将 FreeBSD 的 img 镜像通过 `dd` 写入新分区。
+缩小 Linux 的根分区（**/**），直接将 FreeBSD 的 img 镜像通过 `dd` 写入新分区。
 
 此方案不可行，因为 XFS 文件系统不支持在线缩小（红帽系列发行版通常采用 XFS 搭配逻辑卷管理）。
 
