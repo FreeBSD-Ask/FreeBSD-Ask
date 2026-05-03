@@ -231,7 +231,7 @@ exec="gop set 0"
 
 ### `efi_max_resolution`（UEFI）或 `vbe_max_resolution`（BIOS）
 
-也可以通过配置文件设置 UEFI 或 BIOS 下的分辨率。根据文档 LOADER.CONF(5))，这两个变量可接受以下值：
+也可以通过配置文件设置 UEFI 或 BIOS 下的分辨率。根据文档 LOADER.CONF(5)，这两个变量可接受以下值：
 
 ```sh
 值	           分辨率
