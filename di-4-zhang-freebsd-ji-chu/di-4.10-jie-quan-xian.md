@@ -1,4 +1,4 @@
-# 4.10 权限
+﻿# 4.10 权限
 
 文件系统权限机制是类 UNIX 系统安全架构的基石。
 
@@ -26,7 +26,7 @@ DAC 模型的理论基础可追溯至 20 世纪 60—70 年代的多用户操作
 
 - **访问控制列表（ACL）**：基于 POSIX.1e 草案标准的 ACL 机制，允许对单个用户或组设置细粒度的访问权限，突破了传统 DAC 仅支持三类主体的限制。
 - **强制访问控制（MAC）**：TrustedBSD MAC 框架提供了基于安全策略的强制访问控制能力，包括 Biba 完整性模型、MLS 多级安全模型等。与 DAC 不同，MAC 的访问控制决策由系统安全策略强制执行，客体所有者无法自行修改。
-- **文件标志（File Flags）**：FreeBSD 支持通过 [chflags(1)](https://man.freebsd.org/cgi/man.cgi?query=chflags&sektion=1) 设置文件标志，如 `schg`（系统不可变标志）和 `sappnd`（系统仅追加标志），即使 root 用户也无法修改带有这些标志的文件（除非先移除标志）。文件标志增加了额外的安全和控制层级，即使 root 也可以被阻止删除或修改文件。
+- **文件标志（File Flags）**：FreeBSD 支持通过 chflags(1) 设置文件标志，如 `schg`（系统不可变标志）和 `sappnd`（系统仅追加标志），即使 root 用户也无法修改带有这些标志的文件（除非先移除标志）。文件标志增加了额外的安全和控制层级，即使 root 也可以被阻止删除或修改文件。
 - **Capsicum 沙盒框架**：通过能力（capability）机制限制进程可访问的系统资源范围，实现最小权限原则。
 
 ## 权限表达式
@@ -299,7 +299,7 @@ $ chmod 750 test.sh
 
 对于目录，通常的请求模式为 `0777`，在 umask 为 `0022` 时结果为 `0755`。
 
-FreeBSD 的默认 umask 为 `0022`，可通过 [umask(2)](https://man.freebsd.org/cgi/man.cgi?query=umask&sektion=2) 系统调用或 Shell 内建的 `umask` 命令查看和设置：
+FreeBSD 的默认 umask 为 `0022`，可通过 umask(2) 系统调用或 Shell 内建的 `umask` 命令查看和设置：
 
 ```sh
 % umask      # 显示当前 umask（八进制）
@@ -324,7 +324,7 @@ umask 在 Shell 启动文件（如 `~/.profile` 或 `~/.cshrc`）中设置。在
 
 ## `chown` 命令
 
-[chown(8)](https://man.freebsd.org/cgi/man.cgi?query=chown&sektion=8) 命令用于修改文件的属主，包括所属用户和所属组。只有文件所有者或超级用户（root）才能修改文件的属主。
+chown(8) 命令用于修改文件的属主，包括所属用户和所属组。只有文件所有者或超级用户（root）才能修改文件的属主。
 
 > **注意**
 >
