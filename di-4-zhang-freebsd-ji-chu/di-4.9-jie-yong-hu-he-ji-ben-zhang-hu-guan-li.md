@@ -88,7 +88,6 @@ FreeBSD 提供了多种不同的命令来管理用户账户。
 
 ### adduser 创建用户
 
-推荐使用的添加新用户的程序是脚本文件 [adduser(8)](https://man.freebsd.org/cgi/man.cgi?query=adduser&sektion=8&format=html)。添加新用户时，此程序会自动更新 `/etc/passwd` 和 `/etc/group`。
 推荐使用的添加新用户的程序是脚本文件 adduser(8)。添加新用户时，此程序会自动更新 `/etc/passwd` 和 `/etc/group`。
 
 adduser 还会为新用户创建 home 目录，从 `/usr/share/skel` （源代码路径为 `share/skel`）复制默认配置文件。`adduser` 的源代码路径为 `usr.sbin/adduser/adduser.sh`。
