@@ -363,7 +363,7 @@ Mosh 不支持多窗口、分屏模式，也不支持多个客户端连接同一
 # make install clean
 ```
 
-编辑 `~/.login_conf` 文件，加入：
+编辑 **~/.login_conf** 文件，加入：
 
 - 默认的系统：
 
