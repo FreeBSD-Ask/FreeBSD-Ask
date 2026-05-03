@@ -239,11 +239,11 @@ default coexist
 
 ##
 ## This file MUST be edited with the 'visudo' command as root.
-## 此文件必须通过 root 身份使用 `visudo` 命令编辑。
+## 此文件必须通过 root 身份使用 visudo 命令编辑。
 
 ## Failure to use 'visudo' may result in syntax or file permission errors
 ## that prevent sudo from running.
-## 不使用 `visudo` 可能导致语法或权限错误，从而使 sudo 无法运行。
+## 不使用 visudo 可能导致语法或权限错误，从而使 sudo 无法运行。
 
 ##
 ## See the sudoers man page for the details on how to write a sudoers file.
@@ -377,13 +377,13 @@ root ALL=(ALL:ALL) ALL
 ## 使用目标用户密码进行认证（而非调用者的密码）。
 
 # ALL ALL=(ALL:ALL) ALL  # WARNING: only use this together with 'Defaults targetpw'
-## 所有用户均可以任意身份运行任意命令（危险！仅与 `Defaults targetpw` 搭配使用）。
+## 所有用户均可以任意身份运行任意命令（危险！仅与 Defaults targetpw 搭配使用）。
 
 ## Read drop-in files from /usr/local/etc/sudoers.d
 ## 从 /usr/local/etc/sudoers.d 读取附加配置片段（drop-in）。
 
 @includedir sudoers.d
-## 包含相对目录 `sudoers.d`（相对于 /usr/local/etc），读取其中的配置文件。
+## 包含相对目录 sudoers.d（相对于 /usr/local/etc），读取其中的配置文件。
 ```
 
 ### 测试
