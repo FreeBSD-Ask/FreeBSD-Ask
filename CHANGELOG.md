@@ -245,7 +245,7 @@
 - 2025.12.4
   - “9.4 触摸板与键鼠”新增“附录：解决 15.0 及更高版本键鼠无法驱动”
 - 2025.12.3
-  - 改进“7.4 Hyprland”格式，修正启动命令为 `dbus-run-session Hyprland`，声明其不支持在任何虚拟机及 Nvidia GPU 上运行
+  - 改进“7.4 Hyprland”格式，修正启动命令为 `dbus-run-session Hyprland`，声明其不支持在任何虚拟机及 NVIDIA GPU 上运行
 - 2025.11.30
   - 将不具有实质性内容的“第 25 章 TwinCAT/BSD 入门”压缩到附录 Ⅱ“TwinCAT/BSD 导论”
   - 将“23.2 ZFS 文件系统”拆分为“第 25 章 ZFS 文件系统”
@@ -428,7 +428,7 @@
 ## 2025 年第二季度
 
 - 2025.6.24
-  - freebsd 14.3 的 Wi-Fi country select 有问题。选哪个都是这个报错：`Error while applying chosen settings  (unknown regdomain Expected  eval: Use: not found)` 参见：Bug 287538 - Installer error on setting regdomain[EB/OL]. [2026-03-26]. <https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=287538>。替代方法是手动写，参照无线网络章节。
+  - FreeBSD 14.3 的 Wi-Fi country select 有问题。选哪个都是这个报错：`Error while applying chosen settings  (unknown regdomain Expected  eval: Use: not found)` 参见：Bug 287538 - Installer error on setting regdomain[EB/OL]. [2026-03-26]. <https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=287538>。替代方法是手动写，参照无线网络章节。
 - 2025.6.23
   - 3.6 文本编辑器新增：microsoft-edit
 - 2025.6.21
