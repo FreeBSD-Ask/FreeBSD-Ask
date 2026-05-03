@@ -80,7 +80,7 @@ microSD 通常也称为 TF 卡（TF 是 SanDisk 最初的商品名 TransFlash，
 
 不建议直接访问其官方网站，因为最终下载链接仍会跳转至上述页面。
 
-在撰写本节时，下载使用的是 `CrystalDiskInfo9_3_2Shizuku.exe` 和 `CrystalDiskMark8_0_5Shizuku.exe`。由于界面配色不同，如不需要额外的视觉效果，可分别选择“CrystalDiskInfo9_3_2.exe”、“CrystalDiskMark8_0_5.exe”代替。
+本节撰写时，下载使用的是 `CrystalDiskInfo9_3_2Shizuku.exe` 和 `CrystalDiskMark8_0_5Shizuku.exe`。如无特殊视觉效果需求，可分别选择“CrystalDiskInfo9_3_2.exe”、“CrystalDiskMark8_0_5.exe”替代。
 
 在选购固态硬盘时，不能仅关注读写速度，更需关注固态硬盘的主控、NVMe 协议版本及支持状态。
 
@@ -110,7 +110,7 @@ microSD 通常也称为 TF 卡（TF 是 SanDisk 最初的商品名 TransFlash，
 
 一方面因为使用的不是超频读卡器（即雷克沙配套的读卡器，用于支持其自定义协议）；另一方面，因为 UHS-I 协议的理论速度上限为 104 MB/s（SDR104）。任何存储卡在理论上无法超越这个速度，除非使用 UHS-II（两排金手指）。但是 microSD 极少使用 UHS-II（虽然市场上有少量 UHS-II microSD 产品，如至誉 Catalyst 系列和 Sabrent Rocket 系列，但价格较高且选择有限），UHS-II 主要用于标准大小的 SD 卡（相机使用）。
 
-因此，市面上无论是三星还是闪迪，只要其标称速度超过 UHS-I 的理论上限且并非 UHS-II 产品，通常都是通过非标准协议实现的。**这种非标准协议只有他们的官方读卡器才能支持（售价极高且一般捆绑销售）。其他设备都不支持这种速率，故没有意义。**
+因此，市面上无论是三星还是闪迪，只要其标称速度超过 UHS-I 的理论上限且并非 UHS-II 产品，通常都是通过非标准协议实现的。**这种非标准协议仅能通过配套的官方读卡器支持（售价较高且通常捆绑销售），其他设备均不支持该速率，因此不具备实际意义。**
 
 ### 使用 CrystalDiskMark 测试三星 BAR 升级版 + USB 3.1 闪存盘 64 G 读写速率
 
