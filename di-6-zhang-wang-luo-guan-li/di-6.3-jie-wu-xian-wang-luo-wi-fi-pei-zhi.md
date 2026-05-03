@@ -141,7 +141,7 @@ psk="freebsdcn"
 - `ssid` 指定要连接的无线网络 SSID（Wi-Fi 名称），此处示例为 `test_5G`
 - `psk` 指定无线网络的密码，此处示例为 `freebsdcn`
 
-若无法获取无线网络的服务集标识符（SSID）和预共享密钥（PSK），可联系产品客服或重置网络设备以获取凭据。
+若无法获取无线网络的服务集标识符（SSID）和预共享密钥（PSK，Pre-Shared Key），可联系产品客服或重置网络设备以获取凭据。
 
 下一步在 `/etc/rc.conf` 文件中配置无线连接。使用动态地址：
 
@@ -248,7 +248,7 @@ psk="WIFI 密码"
 if_bwi_load="YES"
 ```
 
-然后使用 ports 安装 Broadcom 无线设备的固件（该固件未提供二进制包）：
+然后使用 Ports 安装 Broadcom 无线设备的固件（该固件未提供二进制包）：
 
 ```sh
 # cd /usr/ports/net/bwi-firmware-kmod/
