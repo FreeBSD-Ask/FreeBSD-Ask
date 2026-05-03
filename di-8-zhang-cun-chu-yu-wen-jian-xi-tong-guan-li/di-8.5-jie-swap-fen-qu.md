@@ -1,6 +1,6 @@
 # 8.5 swap 分区
 
-swap 空间是操作系统中内存管理的组成部分。
+swap 空间是操作系统内存管理的重要组成部分。
 
 在 FreeBSD 中，swap 可通过传统分区、交换文件或 ZFS 卷（ZVOL）等多种方式实现。本节重点阐述在系统安装后如何添加 swap 空间的技术方案。
 
@@ -25,7 +25,7 @@ swap 空间是操作系统中内存管理的组成部分。
 
 ## 基于 dd 命令的传统交换文件方案
 
-创建一个大小为 8 GB（1 GB = 1024 MB，如需更大容量，请读者进行简单的容量计算）的交换文件 **/usr/swap0**：
+创建一个大小为 8 GB 的交换文件 **/usr/swap0**（1 GB = 1024 MB，如需更大容量，可按此比例换算）：
 
 ```sh
 # dd if=/dev/zero of=/usr/swap0 bs=1M count=8192 status=progress  # bs=1M 表示使用 1MB 块写入零；status=progress 用于显示写入进度
@@ -41,7 +41,7 @@ swap 空间是操作系统中内存管理的组成部分。
 # chmod 0600 /usr/swap0
 ```
 
-若要立即启用，需将交换文件通过 mdconfig 配置为内存磁盘设备，再使用 swapon 激活交换空间，其中 mdconfig 用于将文件映射为内存磁盘，swapon 用于激活交换设备：
+若要立即启用，需先将交换文件通过 `mdconfig` 配置为内存磁盘设备，再使用 `swapon` 激活交换空间。其中，`mdconfig` 用于将文件映射为内存磁盘，`swapon` 用于激活交换设备：
 
 ```sh
 # mdconfig -a -t vnode -f /usr/swap0 -u 0 && swapon /dev/md0
@@ -73,7 +73,7 @@ swapfile="/usr/swap0"
 
 对上述命令的参数说明如下：
 
-- `$(getconf PAGESIZE)`：可返回系统页面大小（固态硬盘通常返回值为 `4096`），从而使 swap 卷与系统页面对齐，以期提高性能
+- `$(getconf PAGESIZE)`：返回系统页面大小（固态硬盘通常返回 `4096`），使 swap 卷与系统页面对齐，以提高性能
 - `-o`：用于指定选项（option），语法为 `-o 属性名=属性值`
 - `-o logbias=throughput`：ZFS 将优化同步操作，提高池的全局吞吐量并有效利用资源，可提升文件写入性能
 - `-o sync=always`：强制所有写入操作实时同步
@@ -116,7 +116,7 @@ Device              Size     Used    Avail Capacity
 
 选项 `-h` 表示以人类可读格式（human-readable）输出。参见 FreeBSD Project. man swapinfo(8)[EB/OL]. [2026-03-26]. <https://man.freebsd.org/cgi/man.cgi?swapinfo(8)>。
 
-从输出可知，`/dev/nda0p3` 为交换分区，其大小为 2 GB，当前已使用量为 0。
+从输出可知，**/dev/nda0p3** 为交换分区，其大小为 2 GB，当前已使用量为 0。
 
 ## 课后习题
 
