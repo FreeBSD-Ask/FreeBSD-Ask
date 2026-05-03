@@ -142,7 +142,7 @@ EFI 分区的目录结构如下：
 # efibootmgr -c -l /mnt/efi/EFI/freebsd/bootx64.efi -L "FreeBSD 15.0"
 ```
 
-重启进入 Windows，使用 easyuefi 激活 `FreeBSD 15.0` 启动项。
+重启进入 Windows，使用 EasyUEFI 激活 `FreeBSD 15.0` 启动项。
 
 确认 FreeBSD 可正常启动后，方可使用 [DiskGenius](https://www.diskgenius.cn/) 或其他分区工具删除 nda0 磁盘的 EFI 分区及其文件。
 
@@ -239,7 +239,7 @@ chainloader /boot/boot1.efi # 指定 FreeBSD 的 EFI 引导文件
 
 ### 故障排除
 
-目前配置的报错（`grub2-efi` FBSD 15.0）：
+目前配置的报错（`grub2-efi` FreeBSD 15.0）：
 
 ```sh
 # grub-install --target=x86_64-efi --efi-directory=/boot/efi/efi/ --bootloader-id=grub --boot-directory=/boot/ --modules="part_gpt part_msdos bsd zfs"
