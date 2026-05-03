@@ -59,7 +59,7 @@ FreeBSD 中主要有三类账户：系统账户、普通用户账户，以及超
 - **账户过期时间**：默认情况下 FreeBSD 不会使账户过期。
 - **用户全名**：用户名唯一标识 FreeBSD 的账户，但不一定反映用户的真实姓名。
 - **家目录**：用户登录时的起始目录。常见约定是将所有用户家目录放在 **/home/username** 或 **/usr/home/username** 下。
-- **用户 Shell**：Shell 提供用户与系统交互的默认环境。
+- **用户 shell**：shell 提供用户与系统交互的默认环境。
 
 需要注意的是，虽然普通用户权限受限，但其运行的软件越多，系统暴露的攻击面也会增加，从而带来潜在的提权风险。用户本身的权限是固定的，不会因为运行进程增加而直接获得更多权限；然而，运行更多软件意味着存在更多可能被攻击者利用的漏洞入口，因此提权风险确实会随之增大。只有在程序存在漏洞或配置不当的情况下，攻击者才可能利用这些进程实现权限提升。
 
@@ -105,7 +105,7 @@ adduser(8) 是交互式的，会逐步引导创建新用户账户。如下所示
 # Username: ykla
 ```
 
-示例：创建用户 test，并将其添加到 wheel 组，设置其默认 shell 为 sh：
+示例：创建用户 test，并将其添加到 wheel 组，设置其默认 Shell 为 sh：
 
 ```sh
 # adduser # 此工具必须由超级用户运行
@@ -115,7 +115,7 @@ Uid (Leave empty for default): # UID 设置，可留空
 Login group [test]: # 登录组
 Login group is test. Invite test into other groups? []: wheel # 设置要加入的组，多个用空格隔开，可留空
 Login class [default]: # 登录分类，可留空
-Shell (sh csh tcsh git-shell bash rbash nologin) [sh]: sh  # 除非手动设置默认 shell，否则 shell 为 sh
+Shell (sh csh tcsh git-shell bash rbash nologin) [sh]: sh  # 除非手动设置默认 Shell，否则 Shell 为 sh
 Home directory [/home/test]: # 指定家目录
 Home directory permissions (Leave empty for default): # 指定家目录权限
 Enable ZFS encryption? (yes/no) [no]: # 是否使用 ZFS 加密
@@ -174,14 +174,14 @@ Removing user (test2): home passwd.
 
 ### chpass 更改用户信息
 
-所有用户都可以使用 chpass(1) 更改其默认 Shell 和账户的个人信息。chpass 源代码位于 `usr.bin/chpass`。
+所有用户都可以使用 chpass(1) 更改其默认 shell 和账户的个人信息。chpass 源代码位于 `usr.bin/chpass`。
 
 示例：普通用户使用 nvi 文本编辑器打开当前用户信息进行修改。
 
 ```sh
 $ chpass ykla	# 修改 ykla 的账户信息数据库
 #Changing user information for ykla.
-Shell: /bin/sh	# 用户 Shell
+Shell: /bin/sh	# 用户 shell
 Full Name: User &	# 用户全名
 Office Location:	# 办公地点
 Office Phone:	# 办公电话
@@ -226,7 +226,7 @@ Other information:
 chpass: user information updated
 ```
 
-常用参数：`-s`，用于修改登录 Shell。
+常用参数：`-s`，用于修改登录 shell。
 
 > **技巧**
 >
@@ -304,7 +304,7 @@ test:*:1002:
 
 在使用 `operator` 组时请务必小心，因为该组可能授予意外的类似超级用户的访问权限，包括但不限于关机、重启和访问 **/dev** 中的所有项目。
 
-在 FreeBSD 中，可以使用 `pw` 命令管理用户和组：它是系统用户和组文件的前端。pw(8) 提供了非常强大的命令行选项，适合用于 Shell 脚本，但对于新用户来说可能比本节中的其他命令更复杂。
+在 FreeBSD 中，可以使用 `pw` 命令管理用户和组：它是系统用户和组文件的前端。pw(8) 提供了非常强大的命令行选项，适合用于 shell 脚本，但对于新用户来说可能比本节中的其他命令更复杂。
 
 ### 添加组
 
