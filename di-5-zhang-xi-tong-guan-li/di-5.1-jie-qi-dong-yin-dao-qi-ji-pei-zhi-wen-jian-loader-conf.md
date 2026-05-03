@@ -221,7 +221,7 @@ loader.conf(5) 相关的文件结构如下：
           └── loader.conf 默认设置文件（请勿直接修改），参见 loader.conf(5)
 ```
 
-loader.conf 是系统启动配置的核心文件，位于 `/boot/loader.conf`。写入此处的配置比 `rc.conf` 文件更早生效，但不当配置可能会妨碍系统正常启动。详细说明请参考 loader.conf 手册页。
+loader.conf 是系统启动配置的核心文件，位于 `/boot/loader.conf`。写入此处的配置比 `rc.conf` 文件更早生效，但不当配置可能会妨碍系统正常启动。
 
 > **技巧**
 >
@@ -556,7 +556,7 @@ blanktime="300" # 屏幕超时时间
 
 ## 自定义引导加载程序 Logo
 
-可以自定义引导加载程序的 Logo 以个性化系统启动界面。根据 man 页面 BEASTIE.4TH(8)，默认有几种 Logo 可选：
+可以自定义引导加载程序的 Logo 以个性化系统启动界面。默认有几种 Logo 可选：
 
 - `fbsdbw`
 - `beastie`
