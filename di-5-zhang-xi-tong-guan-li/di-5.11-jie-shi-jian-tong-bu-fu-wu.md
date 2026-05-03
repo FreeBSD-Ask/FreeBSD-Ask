@@ -49,9 +49,9 @@ export TZ=Asia/Shanghai      # 设置时区为上海
 #### 对于 csh
 
 ```sh
-setenv TZ CST-8             # 在 shell 环境中设置时区为中国标准时间（CST-8）
+setenv TZ CST-8             # 在 Shell 环境中设置时区为中国标准时间（CST-8）
 # 或
-setenv TZ "Asia/Shanghai"   # 在 shell 环境中设置时区为上海
+setenv TZ "Asia/Shanghai"   # 在 Shell 环境中设置时区为上海
 ```
 
 ### 定时计划
