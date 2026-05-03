@@ -92,7 +92,7 @@ root:\
 #
 # 为俄罗斯用户账户配置正确的环境变量
 #
-# russian 登录类。可使用命令 `pw usermod XXX -L russian` 指定用户 XXX 使用该登录类。
+# russian 登录类。可使用命令 pw usermod XXX -L russian 指定用户 XXX 使用该登录类。
 #
 russian|Russian Users Accounts:\
 	:charset=UTF-8:\
