@@ -60,7 +60,7 @@ Rebuilding locate database:
 /var/db/locate.database
 ```
 
-crontab: `cron` 配置，位于 **/etc/crontab**，可参阅 crontab(5))。
+crontab: `cron` 配置，位于 **/etc/crontab**，可参阅 crontab(5)。
 
 ## 参考文献
 
