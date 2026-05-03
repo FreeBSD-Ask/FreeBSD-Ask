@@ -260,7 +260,7 @@ default coexist
 ## 若希望对所有命令都保留这些变量，请移除“!visudo”限定。
 
 Defaults!/usr/local/sbin/visudo env_keep += "SUDO_EDITOR EDITOR VISUAL"
-## 仅对 `/usr/local/sbin/visudo` 命令保留环境变量 SUDO_EDITOR、EDITOR、VISUAL。
+## 仅对 /usr/local/sbin/visudo 命令保留环境变量 SUDO_EDITOR、EDITOR、VISUAL。
 
 ##
 ## Use a hard-coded PATH instead of the user's to find commands.
