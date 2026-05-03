@@ -97,7 +97,7 @@ POSIX（IEEE 1003.1）/SUS（UNIX 03）对目录结构无类似要求。POSIX.1-
 │   ├── nvd0 第一块 NVMe 存储设备（使用 NVMe 命名空间）
 │   ├── pts 伪终端设备，参见 pts(4)
 │   ├── random 弱随机性来源，参见 random(4)
-│   ├── reroot `reboot -r` 使用的重引导设备
+│   ├── reroot reboot -r 使用的重引导设备
 │   ├── sa0 第一块磁带驱动器
 │   ├── usb USB 总线
 │   ├── vmm 活跃的 bhyve(8) 虚拟机
@@ -330,7 +330,7 @@ POSIX（IEEE 1003.1）/SUS（UNIX 03）对目录结构无类似要求。POSIX.1-
 │   │   └── vi.recover vi(1) 编辑器的恢复文件
 │   ├── unbound Unbound 服务器的相关文件和配置，参见 unbound(8)
 │   └── yp NIS 的配置等文件，参见 yp(8)
-└── zroot 由 ZFS 在创建名为 "zroot" 的存储池时自动生成的挂载点目录；`zroot` 是 FreeBSD 安装程序默认的根池名称（参见 zpool(8) 和 zfs(8) 的 `mountpoint` 属性）。该目录自身通常为空，其子文件系统（如 zroot/ROOT、zroot/usr、zroot/var 等）分别挂载到对应路径；仅当直接在 zpool 根数据集下创建文件时，内容才会出现在此目录中
+└── zroot 由 ZFS 在创建名为 "zroot" 的存储池时自动生成的挂载点目录；zroot 是 FreeBSD 安装程序默认的根池名称（参见 zpool(8) 和 zfs(8) 的 mountpoint 属性）。该目录自身通常为空，其子文件系统（如 zroot/ROOT、zroot/usr、zroot/var 等）分别挂载到对应路径；仅当直接在 zpool 根数据集下创建文件时，内容才会出现在此目录中
 ```
 
 ①：目录 **/var/empty** 设置了 schg 标志，即系统不可变标志。
