@@ -69,6 +69,6 @@ crontab: `cron` 配置，位于 **/etc/crontab**，可参阅 crontab(5))。
 
 ## 课后习题
 
-1. 创建一个自定义 periodic 脚本放入 `/usr/local/etc/periodic/daily/`，配置 `periodic.conf` 使其运行，分析 periodic 脚本的命名规则与执行顺序机制。
-2. 修改 `/etc/crontab` 文件中 periodic 任务的执行时间，对比修改前后系统日志中任务执行时间的变化。
+1. 创建一个自定义 periodic 脚本放入 **/usr/local/etc/periodic/daily/**，配置 `periodic.conf` 使其运行，分析 periodic 脚本的命名规则与执行顺序机制。
+2. 修改 **/etc/crontab** 文件中 periodic 任务的执行时间，对比修改前后系统日志中任务执行时间的变化。
 3. 禁用某个默认的 periodic 任务（如 weekly 的 `310.locate`），观察其对 `locate` 命令数据库更新频率的影响。
