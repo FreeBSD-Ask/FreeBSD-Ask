@@ -65,7 +65,7 @@ C:\Users\用户名\
 判断哪个是目标 U 盘，通常可通过 U 盘容量进行判断。若不确定 U 盘容量，可查询购买记录或拔下 U 盘查看其外壳上标注的容量。
 
 - 通过容量判断：64 GB 的 U 盘在 Windows/Linux 中通常显示为约 59.6 GB（因操作系统使用二进制单位 GiB 但标注为 GB，64×10⁹÷1024³≈59.6），在 macOS 中显示为 64 GB（macOS 使用十进制单位）；
-- 通过盘符判断：在下图中，可通过"EFISYS(E:)"来判断（E 盘），此为使用 Rufus 制作的 U 盘启动盘；
+- 通过盘符判断：在下图中，可通过“EFISYS(E:)”来判断（E 盘），此为使用 Rufus 制作的 U 盘启动盘；
 - 通过 DiskGenius 显示的接口判断：顶部显示的“硬盘 1 接口:USB”标识表明这是 USB 设备，即目标 U 盘。
 
 ![DiskGenius](../.gitbook/assets/diskgenius-6.png)
