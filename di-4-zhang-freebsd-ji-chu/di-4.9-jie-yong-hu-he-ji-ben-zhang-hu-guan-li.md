@@ -115,7 +115,7 @@ Uid (Leave empty for default): # UID 设置，可留空
 Login group [test]: # 登录组
 Login group is test. Invite test into other groups? []: wheel # 设置要加入的组，多个用空格隔开，可留空
 Login class [default]: # 登录分类，可留空
-Shell (sh csh tcsh git-shell bash rbash nologin) [sh]: sh  # 除非手动设置默认 shell，否则 shell 为 sh
+Shell (sh csh tcsh git-shell bash rbash nologin) [sh]: sh  # 除非手动设置默认 Shell，否则 Shell 为 sh
 Home directory [/home/test]: # 指定家目录
 Home directory permissions (Leave empty for default): # 指定家目录权限
 Enable ZFS encryption? (yes/no) [no]: # 是否使用 ZFS 加密
