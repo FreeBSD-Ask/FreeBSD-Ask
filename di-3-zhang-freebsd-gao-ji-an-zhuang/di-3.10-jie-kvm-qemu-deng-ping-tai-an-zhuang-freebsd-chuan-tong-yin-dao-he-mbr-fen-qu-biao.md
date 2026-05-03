@@ -72,7 +72,7 @@ mfsBSD 是一款完全载入内存的 FreeBSD 系统，类似于 Windows PE（Pr
 
 ### 准备 mfsBSD.iso
 
-将下载的 mfsBSD 重命名为 `mfsbsd.iso`，并放置在 `/boot` 目录下（否则可能因 LVM 导致硬盘分区无法识别）。
+将下载的 mfsBSD 重命名为 `mfsbsd.iso`，并放置在 **/boot** 目录下（否则可能因 LVM 导致硬盘分区无法识别）。
 
 ## 获取 memdisk
 
@@ -102,7 +102,7 @@ memdisk 是 syslinux 软件提供的工具，用于将 ISO 镜像加载到内存
 
 ### 提取 memdisk
 
-从已安装的 syslinux 包中提取 memdisk 文件到 `/boot`：
+从已安装的 syslinux 包中提取 memdisk 文件到 **/boot**：
 
 ```sh
 # cp /usr/lib/syslinux/memdisk /boot/
