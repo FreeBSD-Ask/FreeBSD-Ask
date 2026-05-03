@@ -44,7 +44,7 @@ Mihomo 也可借助 FreeBSD 的 Linux 二进制兼容层运行，其网络流量
 
 ### RC 脚本
 
-为便于管理 Mihomo 服务，可使用以下脚本。将以下脚本保存为名为 mihomo 的文件，并存放至路径 `/usr/local/etc/rc.d/` 下。使用 root 账户为该文件赋予可执行权限：`chmod +x /usr/local/etc/rc.d/mihomo`。
+为便于管理 Mihomo 服务，可使用以下脚本。将以下脚本保存为 mihomo，存放至 `/usr/local/etc/rc.d/`，然后使用 root 账户赋予可执行权限：`chmod +x /usr/local/etc/rc.d/mihomo`。
 
 ```sh
 #!/bin/sh
@@ -52,7 +52,7 @@ Mihomo 也可借助 FreeBSD 的 Linux 二进制兼容层运行，其网络流量
 . /etc/rc.subr   # 引入 rc.d 脚本框架，这是 FreeBSD 服务脚本的标准前置依赖
 
 name="mihomo"    # 定义服务名，用于标识和管理该服务
-desc="mihomo server"    # 服务描述，用于提供服务的简要说明
+desc="mihomo server"    # 服务描述信息
 rcvar="mihomo_enable"    # 服务开关变量，控制服务是否开机自启
 
 : ${mihomo_datadir:="/var/run/mihomo"}
@@ -140,7 +140,7 @@ service mihomo status
 sysrc mihomo_config="https://xxxx.yyy"
 ```
 
-- GeoIP 数据用于地理位置判断，主要根据 IP 地址的地理归属进行流量分流或规则匹配：
+- GeoIP 数据根据 IP 地址的地理归属进行流量分流或规则匹配：
 
 ```sh
 sysrc mihomo_geoip="https://ghfast.top/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip.dat" # 可选，但建议使用
@@ -210,15 +210,15 @@ mihomo_enable="YES" # 开机启用/服务项
 
 ### 未竟事宜
 
-以下为若干有待探索的问题，可自行研究解决方案：
+以下为若干待研究的问题，可自行探索解决方案：
 
-- 如何实现“直连”“代理”“全局”的分流？
+- 如何实现"直连""代理""全局"三种模式的分流？
 
 - 如何实现 TUN 虚拟网卡代理？TUN 模式可实现更底层的网络流量拦截。
 
-- 如何根据订阅链接进行测速？
+- 如何根据订阅链接进行节点测速？
 
-- 如何指定订阅链接中代理组的特定代理（例如仅使用位于美国的某个代理节点）？此涉及代理节点的精细化选择。
+- 如何指定订阅链接中代理组的特定节点（例如仅使用位于美国的某个代理节点）？此涉及代理节点的精细化选择。
 
 ## Clash for FreeBSD
 
