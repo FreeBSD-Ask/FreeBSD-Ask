@@ -234,21 +234,21 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 
 将创建 `zroot/usr` 数据集，设置 `canmount=off` 即禁止自动挂载，如此可将相关的子数据集组织在一起，但不会单独挂载这个父数据集。
 
-- 创建 `/usr/ports` 数据集
+- 创建 **/usr/ports** 数据集
 
 ```sh
 # zfs create -o setuid=off zroot/usr/ports
 ```
 
-将创建 `/usr/ports` 数据集，禁用 setuid（`setuid=off`）。
+将创建 **/usr/ports** 数据集，禁用 setuid（`setuid=off`）。
 
-- 创建 `/usr/src` 数据集
+- 创建 **/usr/src** 数据集
 
 ```sh
 # zfs create zroot/usr/src
 ```
 
-将创建 `/usr/src` 数据集。
+将创建 **/usr/src** 数据集。
 
 - 创建 `/var` 数据集
 
