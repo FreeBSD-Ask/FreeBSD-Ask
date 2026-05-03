@@ -192,7 +192,7 @@ FreeBSD 不仅在生命周期内不变，大版本更新也具有连贯性和稳
 - FreeBSD 通过了 National Institute of Standards and Technology（NIST，美国国家标准及技术研究所）安全软件开发框架（SSDF）认证，参见 FreeBSD 基金会 SSDF 认证新闻：FreeBSD Foundation. FreeBSD Foundation Announces SSDF Attestation[EB/OL]. (2023-11-03)[2026-03-26]. <https://freebsdfoundation.org/news-and-events/latest-news/freebsd-foundation-announces-ssdf-attestation/>.
 - 实现了 FreeBSD 14 CIS 基准。参见 FreeBSD 基金会 CIS 基准博客：FreeBSD Foundation. New CIS® FreeBSD 14 Benchmark: Secure Your Systems with Expert-Guided Best Practices[EB/OL]. (2024-08-19)[2026-03-26]. <https://freebsdfoundation.org/blog/new-cis-freebsd-14-benchmark-secure-your-systems-with-expert-guided-best-practices/>.
 - 正在实现 FreeBSD 的零信任构建，参见 Sovereign Tech Agency 相关赞助。
-- 基于 GEOM 框架的全盘加密（含 ZFS、Swap）方案。
+- 基于 GEOM 框架的全盘加密（含 ZFS、swap）方案。
 - 正在改进软件物料清单（Software Bill of Materials，SBOM），参见 Sovereign Tech Agency 相关赞助。
 - Capsicum 框架，并且已经对基本系统中大量工具进行了能力化加固。参见 Capsicum Wiki：FreeBSD Project. Capsicum - FreeBSD Wiki[EB/OL]. [2026-03-26]. <https://wiki.freebsd.org/Capsicum>.
 - FreeBSD 内核拥有五种不同的安全级别（securelevel）可以自由选择，参见 mitigations 手册页：FreeBSD Project. mitigations - FreeBSD Security Vulnerability Mitigations[EB/OL]. [2026-03-26]. <https://man.freebsd.org/cgi/man.cgi?query=mitigations>. 手册页还介绍了 FreeBSD 上若干安全漏洞缓解手段。
