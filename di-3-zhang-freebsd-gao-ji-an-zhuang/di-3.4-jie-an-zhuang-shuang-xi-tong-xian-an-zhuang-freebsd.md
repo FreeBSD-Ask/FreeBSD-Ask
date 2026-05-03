@@ -16,7 +16,7 @@
 
 ![分区方案选择](../.gitbook/assets/dual-boot-3.png)
 
-此处需要设置一个大的临时交换分区，该数值表示计划中的交换分区与 Windows 系统分区容量之和。如此设置是为了后续安装 Windows 时能够直接使用这部分空间，避免额外的分区操作。在本节中，交换分区（Swap）大小为 8 GB，其余 200 GB 空间预留给 Windows。请修改 `S Swap Size` 的大小。
+此处需要设置一个大的临时交换分区，该数值表示计划中的交换分区与 Windows 系统分区容量之和。如此设置是为了后续安装 Windows 时能够直接使用这部分空间，避免额外的分区操作。在本节中，交换分区（swap）大小为 8 GB，其余 200 GB 空间预留给 Windows。请修改 `S Swap Size` 的大小。
 
 ![交换分区大小设置](../.gitbook/assets/dual-boot-4.png)
 
@@ -76,7 +76,7 @@ FreeBSD 安装完成后，安装 Windows 系统。
 
 ![选择未分配空间安装 Windows](../.gitbook/assets/dual-boot-7.png)
 
-## 还原交换分区（Swap）
+## 还原交换分区（swap）
 
 Windows 安装完成后，为 FreeBSD 还原交换分区。分配了 208 GB 空间，其中有 8 GB 是为交换分区预留的。需要使用工具 [DiskGenius](https://www.diskgenius.com/)。
 
