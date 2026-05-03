@@ -136,7 +136,7 @@ POSIX（IEEE 1003.1）/SUS（UNIX 03）对目录结构无类似要求。POSIX.1-
 │   ├── pf.conf PF 防火墙配置文件，参见 pf(4)
 │   ├── pkg PKG 相关配置文件，参见 pkg(8)
 │   ├── ppp PPP 相关配置，参见 ppp(8)
-│   ├── profile.d 存放用户登录时可执行的 Shell 脚本，不会自动加载
+│   ├── profile.d 存放用户登录时可执行的 shell 脚本，不会自动加载
 │   ├── rc.conf 系统启动配置文件，参见 rc.conf(5)
 │   ├── rc.conf.d 存放特定服务的配置文件，默认为空
 │   ├── rc.d 用于启动和管理系统服务的 RC 脚本，参见 rc(8)
@@ -198,7 +198,7 @@ POSIX（IEEE 1003.1）/SUS（UNIX 03）对目录结构无类似要求。POSIX.1-
 │   │   ├── hyperv 与 Hyper-V 虚拟机管理程序通信的脚本
 │   │   ├── lpr 行式打印机系统的实用程序和过滤器，参见 lpr(1)
 │   │   ├── sendmail sendmail(8) 二进制文件，参见 mailwrapper(8)
-│   │   ├── sm.bin sendmail(8) 的受限 Shell，参见 smrsh(8)
+│   │   ├── sm.bin sendmail(8) 的受限 shell，参见 smrsh(8)
 │   │   └── zfs Z 文件系统实用程序
 │   ├── local 本地可执行文件、库等，由 pkg(7) 或 ports(7) 安装
 │   │   ├── bin 本地用户实用程序，参见 intro(1)
@@ -269,7 +269,7 @@ POSIX（IEEE 1003.1）/SUS（UNIX 03）对目录结构无类似要求。POSIX.1-
 │   │   ├── jobs 作业文件
 │   │   └── spool 输出假脱机文件
 │   ├── audit 存储安全审计日志文件，属于 audit 组，参见 audit(8)
-│   ├── authpf 用于认证网关用户的 Shell，参见 authpf(8)，默认为空
+│   ├── authpf 用于认证网关用户的 shell，参见 authpf(8)，默认为空
 │   ├── backups 用于存放系统的备份文件，如用户名和密钥、pkg 数据库。由 /etc/periodic/daily 下的 200、210 等文件生成
 │   ├── cache 缓存文件
 │   │   ├── cups CUPS 的缓存打印机，参见 cups(1)
