@@ -26,7 +26,7 @@ FreeBSD 的目录层次由 `hier(7)` 手册页定义。与 FHS 相比，FreeBSD 
 
 | 项目 | FHS | FreeBSD |
 | ---- | --- | ------- |
-| `/usr/local` | 管理员本地安装，初始为空 | pkg/ports 安装第三方软件默认路径 |
+| `/usr/local` | 管理员本地安装，初始为空 | pkg/Ports 安装第三方软件默认路径 |
 | 配置文件 | 第三方 `/etc/opt`，建议使用子目录 | 第三方 `/usr/local/etc`，系统 `/etc` |
 | `/bin`、`/sbin`、`/lib` | 独立目录，与 `/usr` 分离 | 独立目录，与 `/usr` 分离 |
 | `/libexec` | 可选，与 `/usr/lib` 二选一存放内部二进制 | 根和 `/usr` 下均有，系统辅助程序 |
