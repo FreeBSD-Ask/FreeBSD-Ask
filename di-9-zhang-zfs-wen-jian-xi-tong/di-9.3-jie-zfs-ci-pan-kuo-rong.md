@@ -173,7 +173,7 @@ zroot  77.5G  2.20G  75.3G        -         -     2%     2%  1.00x    ONLINE  -	
 >
 > 此方法不正确，请勿在生产环境中使用。
 
-如果使用 ZFS 作为 `/` 根文件系统：
+如果使用 ZFS 作为 **/** 根文件系统：
 
 ```sh
 # gpart add -t freebsd-zfs -a 4k -s 210751598 -l add100G diskid/DISK-FXS690MQ233011234   # 在指定磁盘上添加 FreeBSD ZFS 分区，4K 对齐，大小为 210751598 个扇区，标签为 add100G
