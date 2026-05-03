@@ -200,7 +200,7 @@ Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
 Warning: Permanently added '192.168.179.128' (ED25519) to the list of known hosts.
 ```
 
-SSH 通过密钥指纹机制在客户端连接时验证服务器的真实性。首次连接输入 `yes` 接受指纹后，其指纹将存入文件 `~/.ssh/known_hosts`。此后的每次登录都会与已保存的密钥进行比对。若服务器密钥与记录不符，ssh 将发出警告。遇到这种情况，应先查清密钥变更的原因，再决定是否继续连接。
+SSH 通过密钥指纹机制在客户端连接时验证服务器的真实性。首次连接输入 `yes` 接受指纹后，其指纹将存入文件 **~/.ssh/known_hosts**。此后的每次登录都会与已保存的密钥进行比对。若服务器密钥与记录不符，ssh 将发出警告。遇到这种情况，应先查清密钥变更的原因，再决定是否继续连接。
 
 密钥变更的排查方法不在本章讨论范围之内。
 
