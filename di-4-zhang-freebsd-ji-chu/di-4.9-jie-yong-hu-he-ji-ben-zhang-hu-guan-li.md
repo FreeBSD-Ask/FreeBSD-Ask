@@ -174,7 +174,7 @@ Removing user (test2): home passwd.
 
 ### chpass 更改用户信息
 
-所有用户都可以使用 [chpass(1)](https://man.freebsd.org/cgi/man.cgi?query=chpass&sektion=1&format=html) 更改其默认 shell 和账户的个人信息。chpass 源代码位于 `usr.bin/chpass`。
+所有用户都可以使用 [chpass(1)](https://man.freebsd.org/cgi/man.cgi?query=chpass&sektion=1&format=html) 更改其默认 Shell 和账户的个人信息。chpass 源代码位于 `usr.bin/chpass`。
 
 示例：普通用户使用 nvi 文本编辑器打开当前用户信息进行修改。
 
@@ -304,7 +304,7 @@ test:*:1002:
 
 在使用 `operator` 组时请务必小心，因为该组可能授予意外的类似超级用户的访问权限，包括但不限于关机、重启和访问 `/dev` 中的所有项目。
 
-在 FreeBSD 中，可以使用 `pw` 命令管理用户和组：它是系统用户和组文件的前端。[pw(8)](https://man.freebsd.org/cgi/man.cgi?query=pw&sektion=8&format=html) 提供了非常强大的命令行选项，适合用于 shell 脚本，但对于新用户来说可能比本节中的其他命令更复杂。
+在 FreeBSD 中，可以使用 `pw` 命令管理用户和组：它是系统用户和组文件的前端。[pw(8)](https://man.freebsd.org/cgi/man.cgi?query=pw&sektion=8&format=html) 提供了非常强大的命令行选项，适合用于 Shell 脚本，但对于新用户来说可能比本节中的其他命令更复杂。
 
 ### 添加组
 
