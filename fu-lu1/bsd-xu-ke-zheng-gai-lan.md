@@ -123,7 +123,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 非官方译文：
 
-``` text
+```text
 版权所有 <年份> <版权持有者>
 
 在满足以下条件的前提下，允许在源代码和二进制形式中重新分发和使用本软件，无论是否经过修改：
