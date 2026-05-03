@@ -8,7 +8,7 @@ FreeBSD 提供了多种自动挂载方式供用户选择。
 >
 > `automount` 对普通用户的权限控制能力有限，主要以 root 身份执行挂载操作；若需要更精细的权限控制机制，建议使用 DSBMD。
 
-automount 会自动监控设备插入事件并执行挂载操作，默认挂载点位于 **/media** 目录。基本系统已内置。
+automount 会自动监控设备插入事件并执行挂载操作，默认挂载点位于 **/media** 目录。该功能已内置于 FreeBSD 基本系统。
 
 **/etc/auto_master** 文件控制着 automount 的行为，查看该文件：
 
@@ -55,7 +55,7 @@ notify 100 {
 >
 >不要添加到注释符号 `/* */` 中间。
 
-通过将以下行添加到 **/etc/rc.conf** 文件中，可以设置 autofs(5) 在启动时启动：
+通过将以下行添加到 **/etc/rc.conf** 文件中，可使 autofs(5) 在系统启动时自动运行：
 
 ```ini
 autofs_enable="YES"
