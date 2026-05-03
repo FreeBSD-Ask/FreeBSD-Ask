@@ -6,9 +6,9 @@ FreeBSD 网络配置涉及多个核心命令和配置文件：
 
 - `ifconfig` 命令用于配置网络接口参数；
 - `route` 命令用于手动操作网络路由表；
-- `/etc/rc.conf` 是系统启动配置的核心文件，网络接口的持久化配置均存储于此；
-- `/etc/resolv.conf` 文件用于配置 DNS 解析器信息；
-- `/etc/hosts` 文件提供本地主机名到 IP 地址的静态映射。
+- **/etc/rc.conf** 是系统启动配置的核心文件，网络接口的持久化配置均存储于此；
+- **/etc/resolv.conf** 文件用于配置 DNS 解析器信息；
+- **/etc/hosts** 文件提供本地主机名到 IP 地址的静态映射。
 
 ## 网络模型基础
 
@@ -123,7 +123,7 @@ bound to 192.168.1.19 -- renewal in 43200 seconds.
 
 ### 配置静态 IPv4 地址
 
-也可在命令行通过 ifconfig(8) 执行网络接口卡配置。然而，除非同时将这些配置添加到 `/etc/rc.conf` 文件，否则重启后配置将丢失。
+也可在命令行通过 ifconfig(8) 执行网络接口卡配置。然而，除非同时将这些配置添加到 **/etc/rc.conf** 文件，否则重启后配置将丢失。
 
 可通过以下命令设置 IP 地址：
 
@@ -149,7 +149,7 @@ bound to 192.168.1.19 -- renewal in 43200 seconds.
 # sysrc defaultrouter="192.168.1.1"
 ```
 
-将 DNS 记录添加到 `/etc/resolv.conf` 文件：
+将 DNS 记录添加到 **/etc/resolv.conf** 文件：
 
 ```ini
 nameserver 223.5.5.5   # 指定首选 DNS 服务器为阿里云公共 DNS
@@ -276,7 +276,7 @@ root@f:/home/ykla #
 
 ## DNS 配置详解
 
-可将 DNS 理解为电话簿，其中 IP 地址与主机名相互对应。除非 `/etc/nsswitch.conf` 文件中另有说明，FreeBSD 将首先查看 `/etc/hosts` 文件中的地址，然后查看 `/etc/resolv.conf` 文件中的 DNS 信息。
+可将 DNS 理解为电话簿，其中 IP 地址与主机名相互对应。除非 **/etc/nsswitch.conf** 文件中另有说明，FreeBSD 将首先查看 **/etc/hosts** 文件中的地址，然后查看 **/etc/resolv.conf** 文件中的 DNS 信息。
 
 相关文件结构：
 
