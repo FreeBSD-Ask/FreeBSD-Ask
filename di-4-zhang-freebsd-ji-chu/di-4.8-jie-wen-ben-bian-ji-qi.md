@@ -143,9 +143,9 @@ NeoVim 是 Vim 的重构分支，更加模块化，支持 Lua 脚本，插件生
 
 ### NeoVim 基础配置
 
-NeoVim 的配置文件位于 `~/.config/nvim/init.lua`（推荐使用 Lua）。
+NeoVim 的配置文件位于 **~/.config/nvim/init.lua**（推荐使用 Lua）。
 
-临时启用行号的命令与 Vim 相同，如需永久启用，编辑 `~/.config/nvim/init.lua` 文件（如果不存在则创建）：
+临时启用行号的命令与 Vim 相同，如需永久启用，编辑 **~/.config/nvim/init.lua** 文件（如果不存在则创建）：
 
 ```lua
 vim.opt.number = true          -- 显示绝对行号
