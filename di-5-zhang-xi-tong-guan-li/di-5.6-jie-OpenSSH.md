@@ -477,7 +477,7 @@ MobaXterm 目前不支持中文，下载地址 <https://mobaxterm.mobatek.net/do
 
 下载地址：<https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html>
 
-PuTTY 界面操作相对不便，不支持多语言（i18n）（[中文版注入木马等](https://safe.it168.com/a2012/0201/1305/000001305829.shtml)），其安全性存在已知漏洞（[CVE-2024-31497](https://nvd.nist.gov/vuln/detail/CVE-2024-31497)），通常作为其他软件的组件间接使用。
+PuTTY 界面操作相对不便，不支持国际化（i18n），存在已知安全漏洞（[CVE-2024-31497](https://nvd.nist.gov/vuln/detail/CVE-2024-31497)），通常作为其他软件的组件间接使用。历史上有中文修改版被发现注入恶意代码（[参考](https://safe.it168.com/a2012/0201/1305/000001305829.shtml)），建议用户仅从官方渠道获取。
 
 ### Termius
 
