@@ -356,7 +356,7 @@ Mosh 不支持多窗口、分屏模式，也不支持多个客户端连接同一
 # pkg install mosh
 ```
 
-或者使用 ports 安装：
+或者使用 Ports 安装：
 
 ```sh
 # cd /usr/ports/net/mosh/
