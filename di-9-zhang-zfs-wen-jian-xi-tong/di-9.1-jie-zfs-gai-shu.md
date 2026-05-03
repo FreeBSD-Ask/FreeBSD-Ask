@@ -1,10 +1,10 @@
 # 9.1 ZFS 概述
 
-ZFS 源于 Sun Solaris，2005 年以 CDDL 许可证开源，2007 年导入 FreeBSD。Oracle 收购 Sun 后 ZFS 分叉为 OpenZFS，2020 年 OpenZFS 2.0 统一了 FreeBSD 与 Linux 的 ZFS 代码库，提供写时复制、快照、端到端校验与自愈等存储特性。
+ZFS 源于 Sun Solaris，2005 年以 CDDL 许可证开源，2007 年导入 FreeBSD。Oracle 收购 Sun 后 ZFS 转为闭源开发，开源社区于 2013 年发起 OpenZFS 项目延续其发展。2020 年 OpenZFS 2.0 统一了 FreeBSD 与 Linux 的 ZFS 代码库，提供写时复制、快照、端到端校验与自愈等存储特性。
 
 ## ZFS 发展历程：从 Solaris 到 OpenZFS
 
-ZFS 最早源于 Sun 公司，是为取代 Solaris（早期曾用名 SunOS）上的 UFS 文件系统而开发的。SunOS 和 BSD Unix 的关键开发者之一是 Bill Joy，他同时也是 Sun 的创始人之一。SunOS 早期基于 BSD Unix 开发，随后转向 SVR4（Unix System V Release 4，即与 AT&T 合作开发）。
+ZFS 最早由 Sun 公司开发，旨在取代 Solaris（早期曾用名 SunOS）上的 UFS 文件系统。SunOS 和 BSD Unix 的关键开发者之一是 Bill Joy，他同时也是 Sun 的创始人之一。SunOS 早期基于 BSD Unix 开发，随后转向 SVR4（Unix System V Release 4，即与 AT&T 合作开发）。
 
 ZFS 源代码于 2005 年 10 月 31 日集成到 Solaris 开发主干（revision 789），随后于 2005 年 11 月 16 日作为 OpenSolaris build 27 以 CDDL（Common Development and Distribution License，通用开发及发行许可）开源发布。
 
@@ -12,7 +12,7 @@ ZFS 于 2007 年导入 FreeBSD 源代码树，在 FreeBSD 7.0-RELEASE（2008 年
 
 2009 年 4 月 Oracle 宣布收购 Sun（2010 年 1 月收购完成）之后，Solaris 项目（易名为 Oracle Solaris）及 ZFS（易名为 Oracle Solaris ZFS）进入闭源开发模式，OpenSolaris 社区管理委员会于 2010 年 8 月自行解散（revision 13149，在解散时 ZFS pool 为 [v28](https://github.com/freebsd/freebsd-src/commit/572e285762521df27fe5b026f409ba1a21abb7ac)）。OpenSolaris 的主要社区开发力量迁移到了新分支 [illumos 项目](https://github.com/illumos/illumos-gate)。从此以后（v28），Oracle Solaris ZFS 与社区版本开始分道扬镳。
 
-目前 illumos 采用类似 Linux 内核的开发模式，衍生出了 OpenIndiana、OmniOS 等十余款发行版。但从代码提交量的角度来看，年平均约 150 次，illumos 的开发活跃度已显著降低。
+目前 illumos 采用类似 Linux 内核的开发模式，衍生出 OpenIndiana、OmniOS 等十余款发行版。但其年平均代码提交量约 150 次，开发活跃度已显著降低。
 
 2011 年 2 月，FreeBSD 采用了 ZFS pool v15，这是 2009 年 10 月随 Solaris 10 update 8（Solaris 10 10/09）分发的版本。
 
@@ -79,7 +79,7 @@ OpenZFS 项目的官方文档可作为参考来源。
 
 ## 附录
 
-本附录介绍 ZFS 与传统文件系统挂载方式的差异。ZFS 并不使用 `/etc/fstab` 管理文件系统挂载，而是通过 `zfs mount` 命令和 ZFS 数据集的 `mountpoint` 属性进行管理。但 EFI 系统分区和 swap 分区仍然需要使用 `/etc/fstab`。
+本附录介绍 ZFS 与传统文件系统挂载方式的差异。ZFS 并不使用 **/etc/fstab** 管理文件系统挂载，而是通过 `zfs mount` 命令和 ZFS 数据集的 `mountpoint` 属性进行管理。但 EFI 系统分区和 swap 分区仍然需要使用 **/etc/fstab**。
 
 ## 课后习题
 
