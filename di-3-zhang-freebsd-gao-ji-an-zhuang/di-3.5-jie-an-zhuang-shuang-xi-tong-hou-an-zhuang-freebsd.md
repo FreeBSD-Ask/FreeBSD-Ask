@@ -1,4 +1,4 @@
-﻿# 3.5 安装双系统（后安装 FreeBSD）
+# 3.5 安装双系统（后安装 FreeBSD）
 
 本节以 FreeBSD-14.2-RELEASE-amd64-disc1.iso 为例，演示在已预装 Windows 11 24H2 的 UEFI 设备上追加安装 FreeBSD 双系统，重点处理 ESP 分区空间与引导管理。
 
