@@ -288,7 +288,7 @@ Downloads
 
 > **注意**
 >
-> 在使用 Windows 远程桌面或其他 XRDP 工具远程另一台 Windows 桌面，并使用其上面运行的 VMware 虚拟机操作 FreeBSD 时，鼠标通常会变得难以控制。这是正常现象。
+> 在使用 Windows 远程桌面或其他 XRDP 工具远程另一台 Windows 桌面，并通过其上运行的 VMware 虚拟机操作 FreeBSD 时，鼠标可能出现异常。此为正常现象。
 
 - 每次进入图形界面，窗口都会异常扩大。
 
