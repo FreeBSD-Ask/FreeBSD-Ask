@@ -185,7 +185,7 @@ abc    ABC
 
 由此可知，在早期二者是独立的，否则 CRLF 会导致当前行“下沉”一行。
 
-Windows 操作系统默认的文本换行符为 CRLF（即 \\r\\n，0x0D 0x0A，`^M$`），而 UNIX（Classic Mac OS 使用 \\r，0x0D）默认使用 LF（即 \\n，0x0A，`$`）。
+Windows 操作系统默认的文本换行符为 CRLF（即 \\r\\n，0x0D 0x0A，`^M$`），而 UNIX（Classic MAC OS 使用 \\r，0x0D）默认使用 LF（即 \\n，0x0A，`$`）。
 
 诚然，现在这些符号通常都出现在每行文本的末尾处（即每行都存在）。
 
