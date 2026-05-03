@@ -1,10 +1,10 @@
 # 8.5 Swap 分区
 
-Swap 空间是操作系统中内存管理的组成部分。
+swap 空间是操作系统中内存管理的组成部分。
 
-在 FreeBSD 中，Swap 可通过传统分区、交换文件或 ZFS 卷（ZVOL）等多种方式实现。本节重点阐述在系统安装后如何添加 Swap 空间的技术方案。
+在 FreeBSD 中，swap 可通过传统分区、交换文件或 ZFS 卷（ZVOL）等多种方式实现。本节重点阐述在系统安装后如何添加 swap 空间的技术方案。
 
-若在系统安装阶段未配置 Swap（交换分区），则仅能通过 dd 命令创建交换文件或 ZFS 卷的方式实现，这是因为 UFS 及 ZFS 文件系统均不支持分区收缩操作。
+若在系统安装阶段未配置 swap（交换分区），则仅能通过 dd 命令创建交换文件或 ZFS 卷的方式实现，这是因为 UFS 及 ZFS 文件系统均不支持分区收缩操作。
 
 ## 目录结构
 
@@ -55,7 +55,7 @@ swapfile="/usr/swap0"
 
 该配置用于定义交换文件的路径。
 
-## 使用 ZFS 卷作为 Swap 空间
+## 使用 ZFS 卷作为 swap 空间
 
 > **警告**
 >
@@ -77,8 +77,6 @@ swapfile="/usr/swap0"
 - `-o`：用于指定选项（option），语法为 `-o 属性名=属性值`
 - `-o logbias=throughput`：ZFS 将优化同步操作，提高池的全局吞吐量并有效利用资源，可提升文件写入性能
 - `-o sync=always`：强制所有写入操作实时同步
-- `-o primarycache=metadata`：控制 ARC 的缓存策略，仅缓存元数据，不缓存实际数据块，避免 ARC 将 Swap 数据缓存到内存
-- `-o com.sun:auto-snapshot=false`：禁用自动快照功能，因为通常无需对 Swap 进行快照
 - 参数 `-V`：用于创建 ZFS 卷（zvol）而非 ZFS 文件系统
 - 在 FreeBSD 中，ZFS 默认的池名称为 `zroot`
 - 本次创建的卷名称为 `swap`
@@ -104,7 +102,7 @@ swapfile="/usr/swap0"
 - FreeBSD Project. swapon(8) -- specify additional devices for paging and swapping[EB/OL]. [2026-04-17]. <https://man.freebsd.org/cgi/man.cgi?query=swapon&sektion=8>. 交换空间管理工具手册页。
 - FreeBSD Project. swapinfo(8) -- display system swap space usage[EB/OL]. [2026-04-17]. <https://man.freebsd.org/cgi/man.cgi?query=swapinfo&sektion=8>. 交换空间使用信息查询工具手册页。
 
-## 查看 Swap 使用量
+## 查看 swap 使用量
 
 以更易读的单位显示系统交换空间信息：
 
