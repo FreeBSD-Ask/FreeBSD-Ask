@@ -62,7 +62,7 @@ errors: No known data errors
 >
 > 操作：使用 `zpool upgrade` 启用所有功能。在完成后，未支持这些功能的软件可能无法再访问该存储池。详细信息请参见 `zpool-features(7)`。
 
-确实需要进行更新，但更新后旧系统可能无法启动。先预览有哪些功能会被更新：
+系统提示需要进行更新，但更新后旧系统可能无法启动。先预览会被更新的功能：
 
 ```sh
 # zpool upgrade  # 查看所有 ZFS 池可升级的特性
@@ -176,13 +176,13 @@ NAME   PROPERTY                     VALUE                        SOURCE
 zroot  feature@dynamic_gang_header  disabled                     local
 ```
 
-该特性确实未启用，下面在 zroot 池上启用 `dynamic_gang_header` 特性：
+该特性未启用，下面在 zroot 池上启用 `dynamic_gang_header` 特性：
 
 ```sh
 # zpool set feature@dynamic_gang_header=enabled zroot
 ```
 
-再看看 zroot 池中 dynamic_gang_header 特性的当前状态：
+再检查 zroot 池中 dynamic_gang_header 特性的当前状态：
 
 ```sh
 # zpool get feature@dynamic_gang_header
