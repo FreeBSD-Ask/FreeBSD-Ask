@@ -46,7 +46,7 @@ sysctl 的默认源代码在 [/sbin/sysctl/](https://github.com/freebsd/freebsd-
 
 ## 默认读取的配置文件 `/etc/sysctl.conf`
 
-[sysctl.conf(5)](https://man.freebsd.org/sysctl.conf) 用于配置内核的默认参数，位于 `/etc/sysctl.conf` 文件，对应源代码 [/sbin/sysctl/sysctl.conf](https://github.com/freebsd/freebsd-src/blob/main/sbin/sysctl/sysctl.conf)。
+sysctl.conf(5) 用于配置内核的默认参数，位于 `/etc/sysctl.conf` 文件，对应源代码 [/sbin/sysctl/sysctl.conf](https://github.com/freebsd/freebsd-src/blob/main/sbin/sysctl/sysctl.conf)。
 
 默认的 `/etc/sysctl.conf` 文件实际上是空文件：
 
