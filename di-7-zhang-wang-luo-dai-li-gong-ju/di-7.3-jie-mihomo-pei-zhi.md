@@ -36,7 +36,7 @@ Mihomo 的文件结构如下：
     └── rc.conf # 系统服务配置文件
 ```
 
-若认为配置过程较为复杂，也可借助 Linux 兼容层运行。FreeBSD 的网络流量同样可由其管控，这是 FreeBSD 的 Linux 二进制兼容能力所致。
+Mihomo 也可借助 FreeBSD 的 Linux 二进制兼容层运行，其网络流量管控能力在兼容层下同样可用。
 
 ## RC 脚本
 
