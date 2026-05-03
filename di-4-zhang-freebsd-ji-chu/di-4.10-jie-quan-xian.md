@@ -315,7 +315,7 @@ u=rwx,g=rx,o=rx
 | `0027` | `0640`（rw-r-----） | `0750`（rwxr-x---） | 更严格，禁止其他用户访问 |
 | `0077` | `0600`（rw-------） | `0700`（rwx------） | 最严格，仅所有者可访问 |
 
-umask 在 shell 启动文件（如 `~/.profile` 或 `~/.cshrc`）中设置。在 csh/tcsh 中使用 `umask 022`，在 sh/bash 中同样使用 `umask 022`。
+umask 在 shell 启动文件（如 **~/.profile** 或 **~/.cshrc**）中设置。在 csh/tcsh 中使用 `umask 022`，在 sh/bash 中同样使用 `umask 022`。
 
 > **注意**
 >
