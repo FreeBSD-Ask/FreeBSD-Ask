@@ -4,7 +4,7 @@
 
 ![什么是 Shell](../.gitbook/assets/what-is-shell.png)
 
-Shell 是用户与操作系统内核进行交互的命令解释器（command interpreter），它接受用户输入的命令并将其传递给内核执行。用户的命令运行在 Shell 中，并通过 Shell 与系统进行交互。Shell 提供命令行界面用于与操作系统交互，从输入通道接收命令并执行。许多 Shell 提供内置功能以辅助日常任务，如文件管理、文件名通配、命令行编辑、命令宏和环境变量。FreeBSD 基本系统内置多种 Shell，包括扩展 POSIX Shell（sh(1)）和扩展 C Shell（tcsh(1)）。其它 shell 可通过 FreeBSD Ports 获得，例如 zsh 和 bash。
+Shell 是用户与操作系统内核进行交互的命令解释器（command interpreter），它接受用户输入的命令并将其传递给内核执行。用户的命令运行在 Shell 中，并通过 Shell 与系统进行交互。Shell 提供命令行界面用于与操作系统交互，从输入通道接收命令并执行。许多 Shell 提供内置功能以辅助日常任务，如文件管理、文件名通配、命令行编辑、命令宏和环境变量。FreeBSD 基本系统内置多种 Shell，包括扩展 POSIX Shell（sh(1)）和扩展 C Shell（tcsh(1)）。其它 Shell 可通过 FreeBSD Ports 获得，例如 zsh 和 bash。
 
 ### Shell 的架构角色
 
