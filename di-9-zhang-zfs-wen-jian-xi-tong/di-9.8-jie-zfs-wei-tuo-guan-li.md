@@ -276,7 +276,7 @@ Local+Descendent permissions:
 切换到普通用户 `test` 尝试挂载：
 
 ```sh
-# su test        # 切换到普通用户 `test`
+# su test        # 切换到普通用户 test
 $ zfs load-key zroot/home/test        # 加载 zroot/home/test 数据集的加密密钥
 Enter passphrase for 'zroot/home/test':
 Key load error: Permission denied.
