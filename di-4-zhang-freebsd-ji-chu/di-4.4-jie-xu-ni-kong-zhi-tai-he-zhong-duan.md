@@ -223,7 +223,7 @@ OK menu
 
 该命令表示操作确认或进入菜单界面。
 
-将该配置写入 `/boot/loader.conf` 文件，设置 GOP 模式为 0：
+将该配置写入 **/boot/loader.conf** 文件，设置 GOP 模式为 0：
 
 ```ini
 exec="gop set 0"
@@ -245,7 +245,7 @@ exec="gop set 0"
 宽 x 高        宽 x 高
 ```
 
-本节测试使用 `efi_max_resolution` 变量：将 `efi_max_resolution="1080p"` 写入 `/boot/loader.conf` 文件，重启后效果与 gop 方法一致。
+本节测试使用 `efi_max_resolution` 变量：将 `efi_max_resolution="1080p"` 写入 **/boot/loader.conf** 文件，重启后效果与 gop 方法一致。
 
 ### 参考文献
 
@@ -257,4 +257,4 @@ exec="gop set 0"
 
 1. 在 FreeBSD 中切换多个虚拟控制台（ttyv0—ttyv3），分别以不同用户登录，使用 `w` 命令记录各终端的会话信息，分析虚拟控制台与伪终端的会话管理差异。
 2. 查阅 FreeBSD 内核中 TTY 子系统的核心源代码（`sys/tty/`），分析其输入输出缓冲区管理和行规程的实现机制。
-3. 修改 `/etc/motd` 的内容与显示行为（如通过 `/etc/login.conf` 控制），记录修改前后用户登录时的信息输出差异。
+3. 修改 **/etc/motd** 的内容与显示行为（如通过 **/etc/login.conf** 控制），记录修改前后用户登录时的信息输出差异。
