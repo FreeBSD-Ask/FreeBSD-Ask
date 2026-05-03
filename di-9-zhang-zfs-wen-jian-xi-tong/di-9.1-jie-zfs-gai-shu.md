@@ -79,7 +79,7 @@ OpenZFS 项目的官方文档可作为参考来源。
 
 ## 附录
 
-本附录介绍 ZFS 与传统文件系统挂载方式的差异。ZFS 并不使用 `/etc/fstab` 管理文件系统挂载，而是通过 `zfs mount` 命令和 ZFS 数据集的 `mountpoint` 属性进行管理。但 EFI 系统分区和 Swap 分区仍然需要使用 `/etc/fstab`。
+本附录介绍 ZFS 与传统文件系统挂载方式的差异。ZFS 并不使用 `/etc/fstab` 管理文件系统挂载，而是通过 `zfs mount` 命令和 ZFS 数据集的 `mountpoint` 属性进行管理。但 EFI 系统分区和 swap 分区仍然需要使用 `/etc/fstab`。
 
 ## 课后习题
 
