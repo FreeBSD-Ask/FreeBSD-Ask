@@ -94,7 +94,7 @@ login:
 >
 > ⑥、⑦ 分别切换到了哪些用户或执行了哪些操作？
 
-`su` 命令只能切换到在 `/etc/shells` 中列出的 Shell。`su -` 或 `su -l` 不仅切换用户，还会将工作目录切换到目标用户的主目录，并重置环境变量。
+`su` 命令只能切换到在 **/etc/shells** 中列出的 Shell。`su -` 或 `su -l` 不仅切换用户，还会将工作目录切换到目标用户的主目录，并重置环境变量。
 
 BSD 与 GNU `su` 行为比较：
 
@@ -341,7 +341,7 @@ cd is a shell builtin
 
 `cd`（change working directory，更改工作目录）
 
-切换到 `/home`：
+切换到 **/home**：
 
 ```sh
 $ cd /home # 切换到 `/home`
@@ -419,7 +419,7 @@ $ touch test
 > book: PDF document, version 1.7
 >```
 
-`file` 命令通过三组测试依次判定文件类型：文件系统测试（基于 stat(2)）、幻数测试（基于 `/usr/share/misc/magic.mgc` 中的固定格式标识）和语言测试（基于文本模式匹配）。其中“幻数”（magic number）概念源于 UNIX 可执行文件格式，文件头部特定偏移量处存储的固定标识用于指示文件类型。
+`file` 命令通过三组测试依次判定文件类型：文件系统测试（基于 stat(2)）、幻数测试（基于 **/usr/share/misc/magic.mgc** 中的固定格式标识）和语言测试（基于文本模式匹配）。其中“幻数”（magic number）概念源于 UNIX 可执行文件格式，文件头部特定偏移量处存储的固定标识用于指示文件类型。
 
 可以一次性使用多个参数创建多个文件（类似用法几乎是通用的，不再赘述）：
 
@@ -490,7 +490,7 @@ rm: test: No such file or directory # 报错指定的文件或目录不存在
 
 ---
 
-删除路径 `/home/ykla/test`
+删除路径 **/home/ykla/test**
 
 - 若目录为空（不含任何文件，只是空目录）
 
@@ -521,7 +521,7 @@ rm: /home/ykla/test/: is a directory # 提示 /home/ykla/test/ 为目录
 >
 > “从前有座山，山上有座庙，庙里有个老和尚在给小和尚讲故事。老和尚说：‘从前有座山，山上有座庙……’”这就是递归的实例。
 >
-> 在该操作中，其含义是先进入 `/home/ykla/test/` 下最深层的子目录（如存在），删除其中的文件和子目录本身，然后向上逐层重复该过程。直至删除 `/home/ykla/test/`。即使用深度优先搜索算法（Depth-First-Search，DFS）。
+> 在该操作中，其含义是先进入 **/home/ykla/test/** 下最深层的子目录（如存在），删除其中的文件和子目录本身，然后向上逐层重复该过程。直至删除 **/home/ykla/test/**。即使用深度优先搜索算法（Depth-First-Search，DFS）。
 
 ```sh
 $ rm -rf /home/ykla/test/
@@ -529,7 +529,7 @@ $ rm -rf /home/ykla/test/
 
 > **警告**
 >
-> 使用 `rm -rf` 是相当危险的操作，是不可撤销的。若命令中误输入空格，如将 `/home/ykla/test/` 打错成 `/home/ykla /test/`，会导致删除路径错误：
+> 使用 `rm -rf` 是相当危险的操作，是不可撤销的。若命令中误输入空格，如将 **/home/ykla/test/** 打错成 **/home/ykla /test/**，会导致删除路径错误：
 >
 >```sh
 > # rm -rf /home/ykla /test
@@ -539,7 +539,7 @@ $ rm -rf /home/ykla/test/
 
 > **警告**
 >
-> 互联网上常有说法称使用 `sudo rm -rf /*` 是某某命令可以 xxx，误导他人对系统造成不可挽回的灾难性破坏。该命令实质上是以 root 权限（~~还好 FreeBSD 默认没有 sudo~~），删除 `/` 及其子目录下的一切存在。现在展示一下结果：
+> 互联网上常有说法称使用 `sudo rm -rf /*` 是某某命令可以 xxx，误导他人对系统造成不可挽回的灾难性破坏。该命令实质上是以 root 权限（~~还好 FreeBSD 默认没有 sudo~~），删除 **/** 及其子目录下的一切存在。现在展示一下结果：
 >
 >```sh
 > # rm -rf /*
@@ -566,14 +566,14 @@ $ rm -rf /home/ykla/test/
 
 ---
 
-将文件 `test` 移动到 `/home/ykla`：
+将文件 `test` 移动到 **/home/ykla**：
 
 ```sh
 $ mv -v test /home/ykla # -v 选项用于显示文件变动详情，是 verbose 的缩写，意为输出详细信息
 test -> /home/ykla/test
 ```
 
-将目录及子目录移动到 `/home/ykla`
+将目录及子目录移动到 **/home/ykla**
 
 ---
 
@@ -599,7 +599,7 @@ test2 -> test2.pdf
 
 ---
 
-将文件 `test` 复制到 `/home/ykla`
+将文件 `test` 复制到 **/home/ykla**
 
 ```sh
 $ cp test /home/ykla/
@@ -818,7 +818,7 @@ FreeBSD 的设计更接近传统 UNIX 的行为。
 
 > **技巧**
 >
-> 当使用上述命令关闭 FreeBSD 时，系统将调用 Shell 脚本 `/etc/rc.shutdown`。该脚本按 *rc.d* 脚本列表的逆序依次执行，以关闭系统服务。（参见 FreeBSD Project. rc.shutdown[EB/OL]. (2026-04-09)[2026-04-09]. <https://github.com/freebsd/freebsd-src/blob/main/libexec/rc/rc.shutdown>）
+> 当使用上述命令关闭 FreeBSD 时，系统将调用 Shell 脚本 **/etc/rc.shutdown**。该脚本按 *rc.d* 脚本列表的逆序依次执行，以关闭系统服务。（参见 FreeBSD Project. rc.shutdown[EB/OL]. (2026-04-09)[2026-04-09]. <https://github.com/freebsd/freebsd-src/blob/main/libexec/rc/rc.shutdown>）
 
 > **注意**
 >

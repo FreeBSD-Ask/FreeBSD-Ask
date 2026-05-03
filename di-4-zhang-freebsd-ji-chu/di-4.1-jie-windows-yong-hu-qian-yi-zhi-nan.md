@@ -16,7 +16,7 @@
 
 ![文件系统基础](../.gitbook/assets/filesystem-bamboo.png)
 
-竹子的生长常被引为一个经典的生物学案例：竹子（Bambusoideae）开花往往意味着大片竹林的死亡。这是因为，大部分看似茂密繁盛的竹林，极有可能到头来只有一棵竹子真实存活。这些竹子都是从相同的地下根系生长出来的，虽然看起来是多棵竹子，它们事实上是一个整体，这在植物学上称为**克隆生长**（clonal growth）。这也是“雨后春笋”的来历。无论它们相隔多远，仍旧一荣俱荣，一损俱损。这就是 UNIX 的目录，系统中的所有目录都依赖根（root）。根（`/`）是一切目录的起点，构成了一个**单一层次的目录树结构**（single-rooted directory hierarchy）。例如 `/home/ykla/nihao`、`/bin/sh`、`/etc/fstab`，它们追根溯源，都是从根出发的。换言之，如果删除 `/`，就等于删除了整个系统，所有设备上的目录都会被删除。
+竹子的生长常被引为一个经典的生物学案例：竹子（Bambusoideae）开花往往意味着大片竹林的死亡。这是因为，大部分看似茂密繁盛的竹林，极有可能到头来只有一棵竹子真实存活。这些竹子都是从相同的地下根系生长出来的，虽然看起来是多棵竹子，它们事实上是一个整体，这在植物学上称为**克隆生长**（clonal growth）。这也是“雨后春笋”的来历。无论它们相隔多远，仍旧一荣俱荣，一损俱损。这就是 UNIX 的目录，系统中的所有目录都依赖根（root）。根（**/**）是一切目录的起点，构成了一个**单一层次的目录树结构**（single-rooted directory hierarchy）。例如 **/home/ykla/nihao**、**/bin/sh**、**/etc/fstab**，它们追根溯源，都是从根出发的。换言之，如果删除 **/**，就等于删除了整个系统，所有设备上的目录都会被删除。
 
 ![文件系统基础](../.gitbook/assets/windows-file-explorer.png)
 
@@ -60,7 +60,7 @@ PSPath
 
 > **注意**
 >
->FreeBSD 的 `mount` 源于 4.4BSD，与 Linux 的 `mount` 在选项语法上基本兼容，但 FreeBSD 使用的是 nmount(2) 系统调用而非 Linux 的 mount(2)。FreeBSD 的 `mount` 会根据文件系统类型自动调用 `/sbin/mount_type` 程序（如 `mount_nfs`、`mount_msdosfs`）。
+>FreeBSD 的 `mount` 源于 4.4BSD，与 Linux 的 `mount` 在选项语法上基本兼容，但 FreeBSD 使用的是 nmount(2) 系统调用而非 Linux 的 mount(2)。FreeBSD 的 `mount` 会根据文件系统类型自动调用 **/sbin/mount_type** 程序（如 `mount_nfs`、`mount_msdosfs`）。
 
 ### 卸载的概念与机制
 
@@ -70,13 +70,13 @@ PSPath
 
 将一棵树新发的侧枝掰下来，插到土里。精心照料一段时间后，即可获得一株新的幼苗。
 
-这与“卸载”的原理相通：将某个文件系统（如 `/mnt/test`）从完整的根（`/`）上卸载，即卸除其与目录树的关联。
+这与“卸载”的原理相通：将某个文件系统（如 **/mnt/test**）从完整的根（**/**）上卸载，即卸除其与目录树的关联。
 
 从技术角度看，卸载（unmount）是挂载的逆操作，将一个已挂载的文件系统从系统目录树中分离。当文件系统 B 从 A 上卸载后，A 中原有的文件将重新出现。
 
 ### fstab 文件
 
-在启动过程中，系统将自动挂载 `/etc/fstab` 文件中列出的文件系统（标注 `noauto` 选项的条目除外）。
+在启动过程中，系统将自动挂载 **/etc/fstab** 文件中列出的文件系统（标注 `noauto` 选项的条目除外）。
 
 该文件中的条目格式如下：
 
@@ -93,7 +93,7 @@ PSPath
 - `转储`：供 dump(8) 判断哪些文件系统需要备份。缺省时视为 0。
 - `fsck 检查顺序`：决定在重启后，哪些文件系统应由 fsck(8) 检查，以及检查顺序。应跳过的文件系统设置为 0。根文件系统应优先检查，设为 1，其他文件系统应设为大于 1 的值。若多个文件系统具有相同的 `passno`，fsck(8) 会尝试并行检查。
 
-示例：标准 ZFS 安装下的 `/etc/fstab` 文件。
+示例：标准 ZFS 安装下的 **/etc/fstab** 文件。
 
 ```sh
 # Device		Mountpoint	FStype	Options		Dump	Pass#
@@ -103,9 +103,9 @@ PSPath
 
 >**注意**
 >
->ZFS 并不使用 `/etc/fstab` 文件。因此如果在该文件中不存在任何 ZFS 文件系统（`/`），是符合预期的。
+>ZFS 并不使用 **/etc/fstab** 文件。因此如果在该文件中不存在任何 ZFS 文件系统（**/**），是符合预期的。
 
-示例：标准 UFS 安装下的 `/etc/fstab` 文件。
+示例：标准 UFS 安装下的 **/etc/fstab** 文件。
 
 ```sh
 # Device	Mountpoint	FStype	Options	Dump	Pass#
@@ -239,14 +239,14 @@ UTF-8
 
 此外，也可将 Windows 10 及后续版本的系统字符编码设置为 UTF-8。然而这种做法往往除了引入更多编码问题外，并不能有效解决问题。
 
-FreeBSD 的编码在 [main/usr.bin/login/login.conf](https://github.com/freebsd/freebsd-src/blob/main/usr.bin/login/login.conf) 文件中设置，编译后路径为 `/etc/login.conf`。
+FreeBSD 的编码在 [main/usr.bin/login/login.conf](https://github.com/freebsd/freebsd-src/blob/main/usr.bin/login/login.conf) 文件中设置，编译后路径为 **/etc/login.conf**。
 
 ### 参考文献
 
 - 微软. Code pages[EB/OL]. [2026-03-26]. <https://learn.microsoft.com/en-us/globalization/encoding/code-pages>. 微软官方称，936 即是 GBK，用于中文简体字符编码；代码页 936 最初覆盖 GB 2312 字符集，后扩展为 GBK。
 - Unicode Consortium. UTF-8, UTF-16, UTF-32 BOM[EB/OL]. [2026-04-18]. <https://www.unicode.org/faq/utf_bom.html>. UTF-8 的 BOM 为字节序列 0xEF 0xBB 0xBF。
 - 微软. Use UTF-8 code pages in Windows apps[EB/OL]. [2026-04-18]. <https://learn.microsoft.com/en-us/windows/apps/design/globalizing/use-utf8-code-page>. Windows 10 及后续版本可通过系统区域设置启用 UTF-8 支持（Beta 功能），但可能导致旧应用程序兼容性问题。
-- FreeBSD Project. login.conf(5)[EB/OL]. [2026-04-18]. <https://man.freebsd.org/cgi/man.cgi?query=login.conf&sektion=5>. FreeBSD 登录类能力数据库，源文件位于 `usr.bin/login/login.conf`，编译后路径为 `/etc/login.conf`，用于设置字符编码等用户环境。
+- FreeBSD Project. login.conf(5)[EB/OL]. [2026-04-18]. <https://man.freebsd.org/cgi/man.cgi?query=login.conf&sektion=5>. FreeBSD 登录类能力数据库，源文件位于 `usr.bin/login/login.conf`，编译后路径为 **/etc/login.conf**，用于设置字符编码等用户环境。
 
 ## 时间与时区差异
 
