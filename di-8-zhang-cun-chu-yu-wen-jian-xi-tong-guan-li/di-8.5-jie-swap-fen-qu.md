@@ -25,7 +25,7 @@ swap 空间是操作系统中内存管理的组成部分。
 
 ## 基于 dd 命令的传统交换文件方案
 
-创建一个大小为 8 GB（1 GB = 1024 MB，如需更大容量，请读者进行简单的容量计算）的交换文件 `/usr/swap0`：
+创建一个大小为 8 GB（1 GB = 1024 MB，如需更大容量，请读者进行简单的容量计算）的交换文件 **/usr/swap0**：
 
 ```sh
 # dd if=/dev/zero of=/usr/swap0 bs=1M count=8192 status=progress  # bs=1M 表示使用 1MB 块写入零；status=progress 用于显示写入进度
@@ -47,7 +47,7 @@ swap 空间是操作系统中内存管理的组成部分。
 # mdconfig -a -t vnode -f /usr/swap0 -u 0 && swapon /dev/md0
 ```
 
-若要在系统重启后仍能生效，还需在 `/etc/rc.conf` 配置文件中添加以下内容：
+若要在系统重启后仍能生效，还需在 **/etc/rc.conf** 配置文件中添加以下内容：
 
 ```ini
 swapfile="/usr/swap0"
@@ -95,7 +95,7 @@ swapfile="/usr/swap0"
 /dev/zvol/zroot/swap none swap sw 0 0
 ```
 
-写入配置后，可使用命令 `swapon -a` 进行检查（`-a` 表示激活 `/etc/fstab` 中所有 swap 条目），确保无错误输出。
+写入配置后，可使用命令 `swapon -a` 进行检查（`-a` 表示激活 **/etc/fstab** 中所有 swap 条目），确保无错误输出。
 
 ### 参考文献
 
@@ -120,7 +120,7 @@ Device              Size     Used    Avail Capacity
 
 ## 课后习题
 
-1. 使用 dd 命令创建一个 4 GB 的交换文件，配置 `/etc/rc.conf` 文件实现开机自动启用，重启后使用 swapinfo 验证交换空间是否正常工作。
+1. 使用 dd 命令创建一个 4 GB 的交换文件，配置 **/etc/rc.conf** 文件实现开机自动启用，重启后使用 swapinfo 验证交换空间是否正常工作。
 
 2. 对比传统交换文件和 ZFS 卷作为 swap 的实现机制，重构一个最小化的 swap 配置脚本，分析两者在性能、可靠性和系统崩溃转储支持上的权衡。
 
