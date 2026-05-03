@@ -85,7 +85,7 @@ permit cindy as root cmd pkg args update  # 仅允许用户 cindy 执行 pkg upd
 permit cindy as root cmd pkg args upgrade # 仅允许用户 cindy 执行 pkg upgrade
 
 # Allow david to run id command as root without logging it
-permit nolog david as root cmd id # 允许 david 以 root 身份运行 `id` 命令且不记录日志
+permit nolog david as root cmd id # 允许 david 以 root 身份运行 id 命令且不记录日志
 ```
 
 ## sudo
