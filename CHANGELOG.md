@@ -386,7 +386,7 @@
   - 重写“9.1 音频设备配置”
   - 新增“6.16 KDE6（Wayland）”
 - 2025.8.31
-  - 目前将无线电（WiFi）区域码设置为 `CN NONE`（`create_args_wlan0="country CN regdomain NONE"`）是不正确的，因为 FreeBSD 的文件没有得到维护，实际上会导致无法协商到 WiFi5（FreeBSD 为 VHT40），速率始终是 11a，不是应有的 11ac；并且对于 DFS，配置写的也不正确。已经报告 Bug 至 [Missing CN regulatory domain and 11ac/DFS support in regdomain.xml](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=289202)。临时解决方案：如果你的信道 > 48，需要专门在 `/etc/rc.conf` 中修改或写入 `create_args_wlan0="country HR regdomain ETSI"`；如果你的信道 <= 48，且存在 `create_args_wlan0="country CN regdomain NONE"`，请将其删除，因为默认的 FCC US 配置可支持其 WiFi5 协议。经过测试，即使是 WiFi 6 路由器，开启 WPA3、160MHz，也是受支持的。按照以上临时方案进行配置，Intel AX200 网卡在 FreeBSD 14.3-RELEASE 上可成功协商至 11ac。
+  - 目前将无线电（Wi-Fi）区域码设置为 `CN NONE`（`create_args_wlan0="country CN regdomain NONE"`）是不正确的，因为 FreeBSD 的文件没有得到维护，实际上会导致无法协商到 Wi-Fi 5（FreeBSD 为 VHT40），速率始终是 11a，不是应有的 11ac；并且对于 DFS，配置写的也不正确。已经报告 Bug 至 [Missing CN regulatory domain and 11ac/DFS support in regdomain.xml](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=289202)。临时解决方案：如果你的信道 > 48，需要专门在 `/etc/rc.conf` 中修改或写入 `create_args_wlan0="country HR regdomain ETSI"`；如果你的信道 <= 48，且存在 `create_args_wlan0="country CN regdomain NONE"`，请将其删除，因为默认的 FCC US 配置可支持其 Wi-Fi 5 协议。经过测试，即使是 Wi-Fi 6 路由器，开启 WPA3、160MHz，也是受支持的。按照以上临时方案进行配置，Intel AX200 网卡在 FreeBSD 14.3-RELEASE 上可成功协商至 11ac。
   - 因 budgie 主要维护者 Olivier Duchateau 称已对此项目不感兴趣，放弃维护。且无人主动维护，目前核心组件 Port `sysutils/budgie-control-center` [被标记为](https://www.freshports.org/sysutils/budgie-control-center/) `broken`（破损）。考虑在日后删除 6.10 Budgie。如果 6 个月内仍未得到修复将建议上游删除此项目，并从本书中移除此节。
 - 2025.8.24
   - 新增：“12.5 无线网络环境下使用 bhyve”
@@ -428,7 +428,7 @@
 ## 2025 年第二季度
 
 - 2025.6.24
-  - freebsd 14.3 的 wifi country select 有问题。选哪个都是这个报错：`Error while applying chosen settings  (unknown regdomain Expected  eval: Use: not found)` 参见：Bug 287538 - Installer error on setting regdomain[EB/OL]. [2026-03-26]. <https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=287538>。替代方法是手动写，参照无线网络章节。
+  - freebsd 14.3 的 Wi-Fi country select 有问题。选哪个都是这个报错：`Error while applying chosen settings  (unknown regdomain Expected  eval: Use: not found)` 参见：Bug 287538 - Installer error on setting regdomain[EB/OL]. [2026-03-26]. <https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=287538>。替代方法是手动写，参照无线网络章节。
 - 2025.6.23
   - 3.6 文本编辑器新增：microsoft-edit
 - 2025.6.21
@@ -549,7 +549,7 @@
   - 重写：第 16.7 节 Samba 服务器中的安装 Samba 部分，其余部分无条件测试
   - 重写：第 16.6 节 rsync 同步服务
 - 2025.4.16
-  - 格式化：第 14.2 节 WiFi
+  - 格式化：第 14.2 节 Wi-Fi
   - “第 27.4 节 桌面与中文环境常用软件”：重写引入：KDE 4。因为物理机测试成功。
   - 从“第 1.1 节 操作系统的历程：UNIX、Unix-like、Linux & FreeBSD”拆分出“第 1.2 节 FreeBSD 简史”
   - 重写：第 2.6 节 云服务器安装 FreeBSD（基于腾讯云轻量云）
@@ -617,14 +617,14 @@
 - 2025.3.30
   - 部署了镜像站点，临时位于 <https://freebsd-ask.github.io>，使用 VitePress
 - 2025.3.29
-  - 从现在起每天在 Github release 生成一个 PDF 文档
-  - 生成新的 Windows 24H2 字体包用于 Github Action
+  - 从现在起每天在 GitHub release 生成一个 PDF 文档
+  - 生成新的 Windows 24H2 字体包用于 GitHub Actions
   - 重写 PDF 导出工具
 - 2025.3.27
   - “第 16.1 节 FTP 服务器”新增“vsftpd”
-  - 引入 Github Action：🔗 从 SUMMARY.md 更新目录
-  - 引入 Github Action：🔗 检查 SUMMARY.md 目录
-  - 引入 Github Action：🔗 创建并发布 PDF 文档，从现在起每 5 天在 Github release 生成一个 PDF 文档
+  - 引入 GitHub Actions：🔗 从 SUMMARY.md 更新目录
+  - 引入 GitHub Actions：🔗 检查 SUMMARY.md 目录
+  - 引入 GitHub Actions：🔗 创建并发布 PDF 文档，从现在起每 5 天在 GitHub release 生成一个 PDF 文档
 - 2025.3.26
   - 重写“Pure-FTPd（基于 MySQL）”
   - 重写“ProFTPD（基于 MySQL）”
@@ -659,7 +659,7 @@
   - 删除“第 10.1 节 FreeBSD 安装 Virtual Box”，无实质性内容
   - “第 6.1 节 UFS”合并入“第 6.3 节 磁盘扩容”，因为无实质性内容
   - “第 1.5 节 FreeBSD 开发计划”移动至网络文章集锦
-  - 删除“第 18.4 节 USB 网卡与 WiFi”，与其他章节重复
+  - 删除“第 18.4 节 USB 网卡与 Wi-Fi”，与其他章节重复
   - “第 18.6 节 树莓派 5”合并入“第 18.2 节 树莓派安装 FreeBSD”，并删除了冗余输出
   - 重写“第 17.7 节 Telegraf+InfluxDB+Grafana 监控平台”
   - 重写“第 6.6 节 Linux 文件系统”
@@ -884,9 +884,9 @@
 ## 2024 年第三季度
 
 - 2024.9.30
-  - “第 2.0 节 图解安装”新增“无线网卡/ WiFi 设置”一节
-  - 将全文的 WIFI 区域码调整为 FreeBSD 参考配置文件中设定的 `country CN regdomain NONE`
-  - 完全重写：“第 14.2 节 WiFi”
+  - “第 2.0 节 图解安装”新增“无线网卡/ Wi-Fi 设置”一节
+  - 将全文的 Wi-Fi 区域码调整为 FreeBSD 参考配置文件中设定的 `country CN regdomain NONE`
+  - 完全重写：“第 14.2 节 Wi-Fi”
 - 2024.9.27
   - 将“第 1.2 节 FreeBSD 与哲学家 George Berkeley”中有关 FreeBSD 的内容移动至“第 1.1 节 UNIX、Unix-like、Linux 和 FreeBSD 简介”
   - 改写“第 1.2 节 BSD 与哲学家 George Berkeley”，并补充参考文献
@@ -1194,7 +1194,7 @@
   - 新增“第 30.4 节 Linux 兼容层——基于 ArchLinux”
   - 新增“第 30.5 节 高级教程：Linux 兼容层与 Jail”
 - 2023.2.8
-  - “第 14.2 节 WIFI”新增“博通（Broadcom）网卡驱动”
+  - “第 14.2 节 Wi-Fi”新增“博通（Broadcom）网卡驱动”
 - 2023.1.24
   - 实质性填充“第 22.3 节 如何参与 FreeBSD 协作”
 - 2023.1.13
@@ -1293,7 +1293,7 @@
   - 实质性填充“第一节 FTP 服务器”
 - 2022.3.21
   - 重写“第三节 安装 Gnome”
-  - 增补“第二节 WiFi”
+  - 增补“第二节 Wi-Fi”
   - 增补“第九节 物理机下显卡的配置”
 - 2022.3.19
   - 新增“第三节 Node.js 相关”
