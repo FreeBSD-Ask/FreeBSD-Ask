@@ -28,13 +28,13 @@ $ echo $SHELL
 
 通过设置 HTTP_PROXY、HTTPS_PROXY、ALL_PROXY 等环境变量，可让多数命令行工具走代理。以下为配置方法。
 
-### 若使用 sh、bash 或 zsh
+### 若使用 sh、Bash 或 Zsh
 
-在 sh、bash 或 zsh 中配置代理时，需注意以下事项。
+在 sh、Bash 或 Zsh 中配置代理时，需注意以下事项。
 
 > **注意**
 >
-> 在 sh、bash 或 zsh 中，环境变量 `HTTP_PROXY` 通常使用大写形式。部分应用程序（如 curl、wget）也会识别小写形式 `http_proxy`，但不同程序的行为不一致，建议统一使用大写形式以确保兼容性。
+> 在 sh、Bash 或 Zsh 中，环境变量 `HTTP_PROXY` 通常使用大写形式。部分应用程序（如 curl、wget）也会识别小写形式 `http_proxy`，但不同程序的行为不一致，建议统一使用大写形式以确保兼容性。
 
 设置 HTTP 代理环境变量，该变量将被当前 Shell 及其子进程继承：
 
@@ -78,7 +78,7 @@ Git 的代理配置方法，请参见本书其他章节。
 
 ## 为浏览器配置代理
 
-### chrome 命令选项
+### Chrome 命令选项
 
 [chromium](https://www.chromium.org/) 是 Google Chrome 浏览器的开源版本，支持多种命令行参数。
 
