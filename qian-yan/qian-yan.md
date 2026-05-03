@@ -136,7 +136,7 @@
 
 ## 初版前言：好望角与塔式起重机
 
-FreeBSD 是一款开源的类 UNIX 操作系统，直接继承自 BSD UNIX，被广泛应用于 Apple 产品（XNU 内核的 BSD 子系统派生自 FreeBSD）、Netflix 内容分发基础设施（Open Connect CDN 节点运行 FreeBSD）等，QNX 等实时操作系统也在部分用户空间组件（如 ppp 工具）中复用了 FreeBSD 的代码，其网络子系统（io-pkt）则主要派生自 NetBSD。
+FreeBSD 是一款开源的类 UNIX 操作系统，直接继承自 BSD UNIX，被广泛应用于 Apple 产品（XNU 内核的 BSD 子系统派生自 FreeBSD）、Netflix 内容分发基础设施（Open Connect CDN 节点运行 FreeBSD）等，QNX 等实时操作系统也在部分用户空间组件（如 PPP 工具）中复用了 FreeBSD 的代码，其网络子系统（io-pkt）则主要派生自 NetBSD。
 
 自 2004 年 9 月后，中文世界就再也没有一本 FreeBSD 的入门和基础教程了（此前最后一本为冯宝坤，陈子鸿. FreeBSD 完全攻略[M]. 北京：中国物资出版社；北京：北京希望电子出版社，2004. ISBN: 978-7-5047-2160-0；此前尚有 McKusick M. K, Bostic K, Karels M. J, Quarterman J. S. 4.4BSD 操作系统设计与实现（中文版）[M]. 李善平，等，译. 北京：中国电力出版社，2003.）。知网上的硕博论文（需要说明的是，许多大学如清华大学、复旦大学等，并不会将其硕博论文上传到知网，但仍能说明一种趋势），有关 FreeBSD 的论文仅有 10 篇，均为硕士论文；而 Linux 则有 2 万余篇，其中百余篇为博士论文。在国内招聘网站上几乎找不到任何与 FreeBSD 相关的工作岗位，学校也不会开设相关课程。看起来市场完全不需要了，是这样吗？
 
