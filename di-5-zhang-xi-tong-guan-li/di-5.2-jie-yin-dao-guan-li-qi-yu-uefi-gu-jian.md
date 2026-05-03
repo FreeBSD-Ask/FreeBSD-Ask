@@ -57,7 +57,7 @@ BootOrder  : 0002, 0003, 0000, 0001
 >
 > 使用 `efibootmgr -v` 可查看详细信息。
 
-设置 rEFInd 优先启动（这并不意味着它是默认启动项，仅是改变 BIOS/UEFI 中的启动顺序）：
+设置 rEFInd 优先启动（这并非将其设为默认启动项，仅改变 BIOS/UEFI 中的启动顺序）：
 
 设置 EFI 启动顺序为 0000, 0001, 0002, 0003：
 
@@ -174,7 +174,7 @@ Unreferenced Variables:
 
 ESP 通常已经挂载到了 **/boot/efi**。如果没有，可手动挂载，使用 `efibootmgr` 输出中列出的分区（本例为 `nda0p1`）：`mount_msdosfs /dev/nda0p1 /boot/efi`。另一示例请参阅 [loader.efi(8)](https://man.freebsd.org/cgi/man.cgi?query=loader.efi&sektion=8&format=html)。
 
-在 `efibootmgr -v` 输出的 `File` 字段中的值，如 `\efi\freebsd\loader.efi`，是 EFI 上正在使用的引导加载程序的位置。若挂载点是 **/boot/efi**，则此文件为 **/boot/efi/efi/freebsd/loader.efi**。（在 FAT32 文件系统上大小写不敏感；FreeBSD 使用小写）`File` 的另一个常见值可能是 `\EFI\boot\bootXXX.efi`，其中 `XXX` 是 amd64（即 `x64`）、aarch64（即 `aa64`）或 riscv64（即 `riscv64`）；如未配置，则为默认引导加载程序。应将 **/boot/loader.efi** 复制到 **/boot/efi** 中的正确路径来更新已配置及默认的引导加载程序。
+在 `efibootmgr -v` 输出的 `File` 字段中的值，如 `\efi\freebsd\loader.efi`，是 EFI 系统分区上正在使用的引导加载程序的位置。若挂载点是 **/boot/efi**，则此文件为 **/boot/efi/efi/freebsd/loader.efi**。（在 FAT32 文件系统上大小写不敏感；FreeBSD 使用小写）`File` 的另一个常见值可能是 `\EFI\boot\bootXXX.efi`，其中 `XXX` 是 amd64（即 `x64`）、aarch64（即 `aa64`）或 riscv64（即 `riscv64`）；如未配置，则为默认引导加载程序。应将 **/boot/loader.efi** 复制到 **/boot/efi** 中的正确路径来更新已配置及默认的引导加载程序。
 
 ### 更新方法
 
@@ -228,7 +228,7 @@ FreeBSD/amd64 EFI loader, Revision 3.0
 
 ## Grub
 
-目前测试显示，在 UEFI + ZFS 环境下，GRUB 无法直接引导 FreeBSD 内核启动系统，只能通过 GRUB 的 chainload 机制（例如使用 `chainloader +1` 配置）间接引导。在传统 BIOS 启动 + UFS 根文件系统的环境下，GRUB 可通过 `kfreebsd` 命令直接引导 FreeBSD 内核。
+经测试，在 UEFI + ZFS 环境下，GRUB 无法直接引导 FreeBSD 内核，只能通过 chainload 机制（如配置 `chainloader +1`）间接引导。在传统 BIOS 启动 + UFS 根文件系统的环境下，GRUB 可通过 `kfreebsd` 命令直接引导 FreeBSD 内核。
 
 ```ini
 menuentry "FreeBSD-13.0 Release" { # 指定 GRUB 条目名称
@@ -253,9 +253,7 @@ grub-install: error: unknown filesystem.
 
 ## rEFInd 引导管理器（多系统引导管理）
 
-在多系统环境下，频繁通过 BIOS 固件界面切换操作系统效率较低。
-
-可借助 [rEFInd](https://www.rodsbooks.com/refind/) 实现类似于 Clover 的可视化启动菜单效果，在开机时直观地选择要进入的操作系统。
+在多系统环境下，频繁进入 BIOS 固件界面切换操作系统效率较低。可借助 [rEFInd](https://www.rodsbooks.com/refind/) 实现类似于 Clover 的可视化启动菜单效果，在开机时直观地选择要进入的操作系统。
 
 `rEFInd` 派生自 `rEFIt`，其名称结合了“refind”（意为“重新发现”或“改进”）与“EFI”（Extensible Firmware Interface，可扩展固件接口），主要用于管理 UEFI 启动，具有良好的图形化界面与可配置性。
 
