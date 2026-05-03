@@ -96,7 +96,7 @@ root@ykla:/home/ykla/test # ls # 列出挂载目录内容
 lost+found	my.txt		test		test.pdf
 ```
 
-## Btrfs、XFS 和 Ext4 文件系统
+## Btrfs、XFS 和 ext4 文件系统
 
 fusefs-lkl 是基于 Linux 内核库（LKL，Linux Kernel Library）的 FUSE 实现，通过在用户空间运行 Linux 内核代码，提供对 Btrfs、XFS 等更多 Linux 文件系统的完整支持。与 fusefs-ext2 相比，fusefs-lkl 支持的文件系统类型更广泛，但性能可能略低。
 
@@ -170,8 +170,8 @@ cfc	test1	test2
 
 ## 课后习题
 
-1. 在 FreeBSD 上配置 EXT4 分区的持久化挂载，修改 `/etc/fstab` 文件添加延迟挂载选项，重启系统后验证挂载是否正常，并测试文件读写操作。
+1. 在 FreeBSD 上配置 ext4 分区的持久化挂载，修改 `/etc/fstab` 文件添加延迟挂载选项，重启系统后验证挂载是否正常，并测试文件读写操作。
 
 2. 对比 fusefs-ext2 和 fusefs-lkl 的实现机制，重构一个最小化的 FUSE 文件系统挂载脚本。
 
-3. 将一个 EXT4 分区从只读挂载模式切换为读写挂载模式，创建并修改文件后验证数据一致性。
+3. 将一个 ext4 分区从只读挂载模式切换为读写挂载模式，创建并修改文件后验证数据一致性。
