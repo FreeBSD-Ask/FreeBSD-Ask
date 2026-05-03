@@ -92,7 +92,7 @@
 * [8.2 自动挂载文件系统](di-8-zhang-cun-chu-yu-wen-jian-xi-tong-guan-li/di-8.2-jie-zi-dong-gua-zai-wen-jian-xi-tong.md)
 * [8.3 Linux 文件系统](di-8-zhang-cun-chu-yu-wen-jian-xi-tong-guan-li/di-8.3-jie-linux-wen-jian-xi-tong.md)
 * [8.4 Windows 文件系统](di-8-zhang-cun-chu-yu-wen-jian-xi-tong-guan-li/di-8.4-jie-windows-wen-jian-xi-tong.md)
-* [8.5 Swap 分区](di-8-zhang-cun-chu-yu-wen-jian-xi-tong-guan-li/di-8.5-jie-swap-fen-qu.md)
+* [8.5 swap 分区](di-8-zhang-cun-chu-yu-wen-jian-xi-tong-guan-li/di-8.5-jie-swap-fen-qu.md)
 
 ## 第 9 章 ZFS 文件系统
 
