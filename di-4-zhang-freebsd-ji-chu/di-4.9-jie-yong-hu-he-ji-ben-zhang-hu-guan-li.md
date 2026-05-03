@@ -8,7 +8,7 @@ adduser(8) 是一个 Bourne Shell 脚本，内部调用 pw(8) 完成实际的用
 
 `pw` 命令是更底层的用户和组管理工具，支持非交互式批量操作，可直接修改系统用户数据库文件。
 
-用户账户信息存储于 [master.passwd(5)](https://man.freebsd.org/cgi/man.cgi?query=master.passwd&sektion=5) 文件中，该文件包含用户名、加密密码、UID、GID、登录类、密码过期时间、账户过期时间、GECOS 信息、主目录和登录 Shell 等字段。
+用户账户信息存储于 master.passwd(5) 文件中，该文件包含用户名、加密密码、UID、GID、登录类、密码过期时间、账户过期时间、GECOS 信息、主目录和登录 Shell 等字段。
 
 ## 账户类型
 
@@ -79,22 +79,23 @@ FreeBSD 提供了多种不同的命令来管理用户账户。
 
 | 命令 | 概要 |
 | ---- | ---- |
-| [adduser(8)](https://man.freebsd.org/cgi/man.cgi?query=adduser&sektion=8&format=html) | 推荐用于添加新用户的命令行应用程序。 |
-| [rmuser(8)](https://man.freebsd.org/cgi/man.cgi?query=rmuser&sektion=8&format=html) | 推荐用于删除用户的命令行应用程序。 |
-| [chpass(1)](https://man.freebsd.org/cgi/man.cgi?query=chpass&sektion=1&format=html) | 用于更改用户数据库信息的灵活工具。 |
-| [passwd(1)](https://man.freebsd.org/cgi/man.cgi?query=passwd&sektion=1&format=html) | 用于更改用户密码的命令行工具。 |
-| [pw(8)](https://man.freebsd.org/cgi/man.cgi?query=pw&sektion=8&format=html) | 可修改用户账户所有方面的强大灵活工具。 |
-| [bsdconfig(8)](https://man.freebsd.org/cgi/man.cgi?query=bsdconfig&sektion=8&format=html) | 带有账户管理支持的系统配置工具。 |
+| adduser(8) | 推荐用于添加新用户的命令行应用程序。 |
+| rmuser(8) | 推荐用于删除用户的命令行应用程序。 |
+| chpass(1) | 用于更改用户数据库信息的灵活工具。 |
+| passwd(1) | 用于更改用户密码的命令行工具。 |
+| pw(8) | 可修改用户账户所有方面的强大灵活工具。 |
+| bsdconfig(8) | 带有账户管理支持的系统配置工具。 |
 
 ### adduser 创建用户
 
 推荐使用的添加新用户的程序是脚本文件 [adduser(8)](https://man.freebsd.org/cgi/man.cgi?query=adduser&sektion=8&format=html)。添加新用户时，此程序会自动更新 `/etc/passwd` 和 `/etc/group`。
+推荐使用的添加新用户的程序是脚本文件 adduser(8)。添加新用户时，此程序会自动更新 `/etc/passwd` 和 `/etc/group`。
 
 adduser 还会为新用户创建 home 目录，从 `/usr/share/skel` （源代码路径为 `share/skel`）复制默认配置文件。`adduser` 的源代码路径为 `usr.sbin/adduser/adduser.sh`。
 
-[adduser(8)](https://man.freebsd.org/cgi/man.cgi?query=adduser&sektion=8&format=html) 是交互式的，会逐步引导创建新用户账户。如下所示，输入所需信息或按 **回车键** 接受方括号中的默认值。
+adduser(8) 是交互式的，会逐步引导创建新用户账户。如下所示，输入所需信息或按 **回车键** 接受方括号中的默认值。
 
-在此示例中，用户被邀请加入 `wheel` 组，使其可以通过 [su(1)](https://man.freebsd.org/cgi/man.cgi?query=su&sektion=1&format=html) 成为超级用户。
+在此示例中，用户被邀请加入 `wheel` 组，使其可以通过 su(1) 成为超级用户。
 
 完成后，该工具会提示是创建另一个用户还是退出。
 
@@ -174,7 +175,7 @@ Removing user (test2): home passwd.
 
 ### chpass 更改用户信息
 
-所有用户都可以使用 [chpass(1)](https://man.freebsd.org/cgi/man.cgi?query=chpass&sektion=1&format=html) 更改其默认 Shell 和账户的个人信息。chpass 源代码位于 `usr.bin/chpass`。
+所有用户都可以使用 chpass(1) 更改其默认 Shell 和账户的个人信息。chpass 源代码位于 `usr.bin/chpass`。
 
 示例：普通用户使用 nvi 文本编辑器打开当前用户信息进行修改。
 
@@ -304,7 +305,7 @@ test:*:1002:
 
 在使用 `operator` 组时请务必小心，因为该组可能授予意外的类似超级用户的访问权限，包括但不限于关机、重启和访问 `/dev` 中的所有项目。
 
-在 FreeBSD 中，可以使用 `pw` 命令管理用户和组：它是系统用户和组文件的前端。[pw(8)](https://man.freebsd.org/cgi/man.cgi?query=pw&sektion=8&format=html) 提供了非常强大的命令行选项，适合用于 Shell 脚本，但对于新用户来说可能比本节中的其他命令更复杂。
+在 FreeBSD 中，可以使用 `pw` 命令管理用户和组：它是系统用户和组文件的前端。pw(8) 提供了非常强大的命令行选项，适合用于 Shell 脚本，但对于新用户来说可能比本节中的其他命令更复杂。
 
 ### 添加组
 
