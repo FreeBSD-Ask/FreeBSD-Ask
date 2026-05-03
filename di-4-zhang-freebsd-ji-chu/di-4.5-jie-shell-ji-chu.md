@@ -44,7 +44,7 @@ Linux 中常见的 shell 通常是 bash（Bourne Again Shell，是对"Born Again
 >
 > Linux 中同样提供 sh，但通常被软链接到其他 shell（如 Debian/Ubuntu 中链接到 dash，部分发行版链接到 bash），它们并不是真正的 sh。
 >
->- Ubuntu 24.04 LTS 默认的 Shell：
+>- Ubuntu 24.04 LTS 默认的 shell：
 >
 >```bash
 > lrwxrwxrwx 1 root root 4  2 月 25 23:19 /bin/sh -> dash
@@ -144,4 +144,4 @@ FreeBSD 的 `ping` 自 15.0 起合并了原 `ping6` 的功能，通过 `-4`/`-6`
 
 1. 在 FreeBSD 中编写一个 sh 脚本，实现文件名补全的最小示例，记录 sh 内建补全机制与 Bash 补全的功能差异。
 2. 查阅 FreeBSD sh 源代码（`bin/sh/`），分析其行编辑和快捷键处理的实现方式，比较其与 Bash 在交互功能上的差距。
-3. 修改 shell 的默认提示符配置（如通过 `PS1` 或 `set prompt`），记录不同 Shell（sh、csh、zsh）中提示符定制的语法差异。
+3. 修改 shell 的默认提示符配置（如通过 `PS1` 或 `set prompt`），记录不同 shell（sh、csh、zsh）中提示符定制的语法差异。
