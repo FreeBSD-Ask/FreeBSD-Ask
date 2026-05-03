@@ -1,4 +1,4 @@
-﻿# 5.9 crontab 及定时任务文件（periodic.conf）
+# 5.9 crontab 及定时任务文件（periodic.conf）
 
 ## periodic.conf 的功能与目录结构
 
