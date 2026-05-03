@@ -10,7 +10,7 @@ UEFI 引导过程与传统 BIOS 引导过程在架构上不同。
 
 在传统 BIOS 系统中，固件读取主引导记录（MBR）中的引导代码并执行。
 
-在 UEFI 系统中，固件直接从 EFI 系统分区（ESP）上的 FAT32 文件系统中加载 EFI 应用程序。ESP 是一个专用分区，其分区类型 GUID 为 `C12A7328-F81F-11D2-BA4B-00A0C93EC93B`，通常挂载于 `/boot/efi`。FreeBSD 的 UEFI 引导加载程序为 `loader.efi`，安装至 ESP 后由固件直接加载执行。
+在 UEFI 系统中，固件直接从 EFI 系统分区（ESP）上的 FAT32 文件系统中加载 EFI 应用程序。ESP 是一个专用分区，其分区类型 GUID 为 `C12A7328-F81F-11D2-BA4B-00A0C93EC93B`，通常挂载于 **/boot/efi**。FreeBSD 的 UEFI 引导加载程序为 `loader.efi`，安装至 ESP 后由固件直接加载执行。
 
 ## UEFI 系统检测方法
 
@@ -118,7 +118,7 @@ EFI 分区的目录结构如下：
 
 输出 `msdosfs`，表明这是 Windows 磁盘上的 EFI 分区。
 
-接下来挂载 ada0 磁盘上的 EFI 分区到 FreeBSD 的 `/mnt/efi`：
+接下来挂载 ada0 磁盘上的 EFI 分区到 FreeBSD 的 **/mnt/efi**：
 
 ```sh
 # mount -t msdosfs /dev/ada0p2 /mnt/efi
@@ -174,7 +174,7 @@ Unreferenced Variables:
 
 ESP 通常已经挂载到了 **/boot/efi**。如果没有，可手动挂载，使用 `efibootmgr` 输出中列出的分区（本例为 `nda0p1`）：`mount_msdosfs /dev/nda0p1 /boot/efi`。另一示例请参阅 [loader.efi(8)](https://man.freebsd.org/cgi/man.cgi?query=loader.efi&sektion=8&format=html)。
 
-在 `efibootmgr -v` 输出的 `File` 字段中的值，如 `\efi\freebsd\loader.efi`，是 EFI 上正在使用的引导加载程序的位置。若挂载点是 **/boot/efi**，则此文件为 `/boot/efi/efi/freebsd/loader.efi`。（在 FAT32 文件系统上大小写不敏感；FreeBSD 使用小写）`File` 的另一个常见值可能是 `\EFI\boot\bootXXX.efi`，其中 `XXX` 是 amd64（即 `x64`）、aarch64（即 `aa64`）或 riscv64（即 `riscv64`）；如未配置，则为默认引导加载程序。应将 **/boot/loader.efi** 复制到 **/boot/efi** 中的正确路径来更新已配置及默认的引导加载程序。
+在 `efibootmgr -v` 输出的 `File` 字段中的值，如 `\efi\freebsd\loader.efi`，是 EFI 上正在使用的引导加载程序的位置。若挂载点是 **/boot/efi**，则此文件为 **/boot/efi/efi/freebsd/loader.efi**。（在 FAT32 文件系统上大小写不敏感；FreeBSD 使用小写）`File` 的另一个常见值可能是 `\EFI\boot\bootXXX.efi`，其中 `XXX` 是 amd64（即 `x64`）、aarch64（即 `aa64`）或 riscv64（即 `riscv64`）；如未配置，则为默认引导加载程序。应将 **/boot/loader.efi** 复制到 **/boot/efi** 中的正确路径来更新已配置及默认的引导加载程序。
 
 ### 更新方法
 
@@ -210,9 +210,9 @@ FreeBSD/amd64 EFI loader, Revision 1.1
 FreeBSD/amd64 EFI loader, Revision 3.0
 ```
 
-此处命令参考了手册 loader.efi 中的例子。`/boot/efi/efi/freebsd/loader.efi` 为当前正在使用的 loader（版本确实较旧）。
+此处命令参考了手册 loader.efi 中的例子。**/boot/efi/efi/freebsd/loader.efi** 为当前正在使用的 loader（版本确实较旧）。
 
-将 `/boot/loader.efi` 复制到 EFI 系统分区的 FreeBSD 目录下进行更新：
+将 **/boot/loader.efi** 复制到 EFI 系统分区的 FreeBSD 目录下进行更新：
 
 ```sh
 # cp /boot/loader.efi /boot/efi/efi/freebsd/
