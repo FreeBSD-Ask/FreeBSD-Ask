@@ -2,7 +2,7 @@
 
 FreeBSD 系统的所有访问均通过账户实现，所有进程均由用户运行，因此用户与账户管理是系统安全的基础。
 
-FreeBSD 提供了多种用户管理工具。`adduser` 命令以交互方式添加新用户，自动完成创建 passwd 条目、构建新用户主目录、从 `/usr/share/skel` 复制默认配置文件等操作。
+FreeBSD 提供了多种用户管理工具。`adduser` 命令以交互方式添加新用户，自动完成创建 passwd 条目、构建新用户主目录、从 **/usr/share/skel** 复制默认配置文件等操作。
 
 adduser(8) 是一个 Bourne Shell 脚本，内部调用 pw(8) 完成实际的用户数据库操作。adduser(8) 是 FreeBSD 特有工具。
 
@@ -14,7 +14,7 @@ adduser(8) 是一个 Bourne Shell 脚本，内部调用 pw(8) 完成实际的用
 
 登录 FreeBSD 系统需具备有效的用户账户。
 
-以下直接通过密码文件 `/etc/master.passwd` 观察用户：
+以下直接通过密码文件 **/etc/master.passwd** 观察用户：
 
 ```ini
 root:$6$huh5iMfeueumGM3B$ycd9HsGOzKfFq6hbWMxceNBRCLibbSj5Ofjv/ed6Kq60M2F.syaGaxfdfYMqB79DZzqyhQlIiRZ4.D9ST90Gv/:0:0::0:0:Charlie &:/root:/bin/sh
@@ -58,7 +58,7 @@ FreeBSD 中主要有三类账户：系统账户、普通用户账户，以及超
 - **密码更改时间**：默认情况下密码不会过期，但可以按用户启用密码过期。
 - **账户过期时间**：默认情况下 FreeBSD 不会使账户过期。
 - **用户全名**：用户名唯一标识 FreeBSD 的账户，但不一定反映用户的真实姓名。
-- **家目录**：用户登录时的起始目录。常见约定是将所有用户家目录放在 `/home/username` 或 `/usr/home/username` 下。
+- **家目录**：用户登录时的起始目录。常见约定是将所有用户家目录放在 **/home/username** 或 **/usr/home/username** 下。
 - **用户 Shell**：Shell 提供用户与系统交互的默认环境。
 
 需要注意的是，虽然普通用户权限受限，但其运行的软件越多，系统暴露的攻击面也会增加，从而带来潜在的提权风险。用户本身的权限是固定的，不会因为运行进程增加而直接获得更多权限；然而，运行更多软件意味着存在更多可能被攻击者利用的漏洞入口，因此提权风险确实会随之增大。只有在程序存在漏洞或配置不当的情况下，攻击者才可能利用这些进程实现权限提升。
@@ -88,9 +88,9 @@ FreeBSD 提供了多种不同的命令来管理用户账户。
 
 ### adduser 创建用户
 
-推荐使用的添加新用户的程序是脚本文件 adduser(8)。添加新用户时，此程序会自动更新 `/etc/passwd` 和 `/etc/group`。
+推荐使用的添加新用户的程序是脚本文件 adduser(8)。添加新用户时，此程序会自动更新 **/etc/passwd** 和 **/etc/group**。
 
-adduser 还会为新用户创建 home 目录，从 `/usr/share/skel` （源代码路径为 `share/skel`）复制默认配置文件。`adduser` 的源代码路径为 `usr.sbin/adduser/adduser.sh`。
+adduser 还会为新用户创建 home 目录，从 **/usr/share/skel** （源代码路径为 `share/skel`）复制默认配置文件。`adduser` 的源代码路径为 `usr.sbin/adduser/adduser.sh`。
 
 adduser(8) 是交互式的，会逐步引导创建新用户账户。如下所示，输入所需信息或按 **回车键** 接受方括号中的默认值。
 
@@ -219,7 +219,7 @@ Other information:
 /etc/pw.mDp9q3: unmodified: line 1
 ```
 
-示例：修改用户 test1 的登录环境为 `/bin/sh`。
+示例：修改用户 test1 的登录环境为 **/bin/sh**。
 
 ```sh
 # chpass -s sh test1 # 
@@ -285,7 +285,7 @@ Retype New Password:	# 再次输入新密码
 
 组是用户的列表。组由其组名和 GID 标识。在 FreeBSD 中，内核使用进程的 UID 和其所属的组列表来确定进程可执行的操作范围。大多数情况下，用户或进程的 GID 通常指列表中的第一个组。
 
-组名到 GID 的映射列在 `/etc/group` 中。`/etc/group` 是纯文本文件，有四个以冒号分隔的字段。
+组名到 GID 的映射列在 **/etc/group** 中。**/etc/group** 是纯文本文件，有四个以冒号分隔的字段。
 
 ```sh
 # cat /etc/group
@@ -298,11 +298,11 @@ ykla:*:1001:
 test:*:1002:
 ```
 
-可以看到 `/etc/group` 的格式形如 `组名:加密后的密码:GID:成员列表`，通过英文冒号分隔。
+可以看到 **/etc/group** 的格式形如 `组名:加密后的密码:GID:成员列表`，通过英文冒号分隔。
 
-超级用户可以使用文本编辑器修改 `/etc/group`，但不建议这样做，因为可能会因编辑错误导致严重后果。建议使用 pw(8) 添加和编辑组。
+超级用户可以使用文本编辑器修改 **/etc/group**，但不建议这样做，因为可能会因编辑错误导致严重后果。建议使用 pw(8) 添加和编辑组。
 
-在使用 `operator` 组时请务必小心，因为该组可能授予意外的类似超级用户的访问权限，包括但不限于关机、重启和访问 `/dev` 中的所有项目。
+在使用 `operator` 组时请务必小心，因为该组可能授予意外的类似超级用户的访问权限，包括但不限于关机、重启和访问 **/dev** 中的所有项目。
 
 在 FreeBSD 中，可以使用 `pw` 命令管理用户和组：它是系统用户和组文件的前端。pw(8) 提供了非常强大的命令行选项，适合用于 Shell 脚本，但对于新用户来说可能比本节中的其他命令更复杂。
 
