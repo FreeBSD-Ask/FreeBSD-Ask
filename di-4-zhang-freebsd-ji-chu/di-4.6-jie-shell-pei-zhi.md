@@ -29,7 +29,7 @@ Shell 的配置体系通过一系列初始化文件（initialization files）实
 | `zsh-autosuggestions` | 类 Fish Shell 的 Zsh 自动补全 |
 | `zsh-syntax-highlighting` | 类 Fish Shell 的 Zsh 语法高亮 |
 
-- 使用 ports 安装：
+- 使用 Ports 安装：
 
 ```sh
 # cd /usr/ports/shells/zsh/ && make install clean
