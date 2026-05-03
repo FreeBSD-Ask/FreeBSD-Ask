@@ -6,7 +6,7 @@ FreeBSD 使用传统的 BSD init（初始化系统）来管理系统服务。与
 
 FreeBSD 提供了两个核心的服务管理命令：`service` 命令用于控制 rc.d 系统中的服务启动脚本，支持 `start`、`stop`、`restart`、`status` 等操作，并可列出可用服务。
 
-`sysrc` 命令用于安全地修改 rc.conf(5) 中的系统配置值，自动处理 `/etc/rc.conf`、`/etc/rc.conf.local` 和 `/etc/defaults/rc.conf` 之间的优先级关系，避免手动编辑可能导致的语法错误。
+`sysrc` 命令用于安全地修改 rc.conf(5) 中的系统配置值，自动处理 **/etc/rc.conf**、**/etc/rc.conf.local** 和 **/etc/defaults/rc.conf** 之间的优先级关系，避免手动编辑可能导致的语法错误。
 
 ## 服务管理配置文件与目录结构
 
