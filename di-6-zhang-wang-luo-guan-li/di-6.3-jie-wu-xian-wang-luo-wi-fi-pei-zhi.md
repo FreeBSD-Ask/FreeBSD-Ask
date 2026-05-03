@@ -141,7 +141,7 @@ psk="freebsdcn"
 - `ssid` 指定要连接的无线网络 SSID（Wi-Fi 名称），此处示例为 `test_5G`
 - `psk` 指定无线网络的密码，此处示例为 `freebsdcn`
 
-若无法获取无线网络的服务集标识符（SSID）和预共享密钥（PSK，Pre-Shared Key），可联系产品客服或重置网络设备以获取凭据。
+若无法获取无线网络的服务集标识符（SSID）和预共享密钥（PSK，Pre-Shared Key），可联系网络管理员或重置网络设备以获取凭据。
 
 下一步在 **/etc/rc.conf** 文件中配置无线连接。使用动态地址：
 
@@ -198,7 +198,7 @@ wlan0: flags=8843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST> metric 0 mtu 1500
 
 ## 英特尔无线网卡驱动概况
 
-英特尔（Intel）网卡是目前使用较为广泛的无线网卡之一。iwlwifi 驱动 [适用于](https://wiki.freebsd.org/WiFi/Iwlwifi/Chipsets) `AC 8265、AC 9260、AC 9560、AX200、AX201、AX210、AX211`，iwm 驱动 [适用于](https://wiki.freebsd.org/WiFi/Iwm) `AC 3160、AC 3165、AC 3168、AC 7260、AC 7265、AC 8260、AC 8265、AC 9260、AC 9270、AC 946X` 等型号。两者覆盖的芯片范围有部分重叠但不完全包含，见 [英特尔 ® 无线适配器的 Linux* 支持](https://www.intel.cn/content/www/cn/zh/support/articles/000005511/wireless.html)。
+英特尔（Intel）网卡是目前使用广泛的无线网卡之一。iwlwifi 驱动 [适用于](https://wiki.freebsd.org/WiFi/Iwlwifi/Chipsets) `AC 8265、AC 9260、AC 9560、AX200、AX201、AX210、AX211`，iwm 驱动 [适用于](https://wiki.freebsd.org/WiFi/Iwm) `AC 3160、AC 3165、AC 3168、AC 7260、AC 7265、AC 8260、AC 8265、AC 9260、AC 9270、AC 946X` 等型号。两者覆盖的芯片范围有部分重叠但不完全包含，见 [英特尔 ® 无线适配器的 Linux* 支持](https://www.intel.cn/content/www/cn/zh/support/articles/000005511/wireless.html)。
 
 在 **/etc/rc.conf** 文件中添加以下配置：
 
@@ -310,7 +310,7 @@ wlans_bwn0="wlan0"
 
 ## 无线网络故障排除
 
-如果扫描时未列出接入点，可以尝试切换路由器的信道，或者将协议降级到 Wi-Fi 4。
+如果扫描时未列出接入点，可尝试切换路由器的信道，或者将协议降级到 Wi-Fi 4。
 
 如果设备无法与接入点关联，验证配置是否与接入点上的设置匹配。这包括认证方案和任何安全协议。尽可能简化配置。如果使用 WPA2 或 WPA 等安全协议，将接入点配置为开放认证和无安全性，以验证流量是否可以通过。
 
