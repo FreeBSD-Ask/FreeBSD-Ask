@@ -112,8 +112,8 @@ FreeBSD-14.2-RELEASE-amd64-mini-memstick.img.xz    107445036      2024-Nov-29 13
 | 首列 | 说明 |
 | ---- | ---- |
 | Parent directory/ - - | 指向上级目录 |
-| CHECKSUM.SHA256-FreeBSD-14.2-RELEASE-amd64 | 本页所有镜像的 SHA256 校验和 |
-| CHECKSUM.SHA512-FreeBSD-14.2-RELEASE-amd64 | 本页所有镜像的 SHA512 校验和 |
+| CHECKSUM.SHA256-FreeBSD-14.2-RELEASE-amd64 | 本页所有镜像的 SHA-256 校验和 |
+| CHECKSUM.SHA512-FreeBSD-14.2-RELEASE-amd64 | 本页所有镜像的 SHA-512 校验和 |
 | FreeBSD-14.2-RELEASE-amd64-bootonly.iso | 网络安装镜像，安装时需要联网 |
 | FreeBSD-14.2-RELEASE-amd64-bootonly.iso.xz | 压缩的网络安装镜像，安装时需要联网 |
 | FreeBSD-14.2-RELEASE-amd64-disc1.iso | 标准安装镜像 |

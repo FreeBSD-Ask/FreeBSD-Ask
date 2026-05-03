@@ -59,7 +59,7 @@
 
 > **注意**
 >
-> 请将 Windows 创建的 300 MB EFI 系统分区的挂载点设置为 `/boot/efi`，这样 FreeBSD 就能正确找到并使用已有的 EFI 分区，避免创建多个 EFI 分区带来的混乱。
+> 请将 Windows 创建的 300 MB EFI 系统分区的挂载点设置为 **/boot/efi**，这样 FreeBSD 就能正确找到并使用已有的 EFI 分区，避免创建多个 EFI 分区带来的混乱。
 
 选择 `Finish`（完成）
 
@@ -178,11 +178,11 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 # zpool create -f -o altroot=/mnt -O compress=lz4 -O atime=off -m none zroot /dev/gpt/zroot
 ```
 
-该命令将设置 zroot 池的挂载点为 `/mnt`，启用 LZ4 压缩以节省空间并提高读写性能，关闭访问时间记录以减少磁盘写入。
+该命令将设置 zroot 池的挂载点为 **/mnt**，启用 LZ4 压缩以节省空间并提高读写性能，关闭访问时间记录以减少磁盘写入。
 
 选项说明如下：
 
-- `-o altroot=/mnt` 将其临时挂载至 `/mnt`；
+- `-o altroot=/mnt` 将其临时挂载至 **/mnt**；
 - `-O compress=lz4` 启用 lz4 压缩（可换为 zstd 等）；
 - `-O atime=off` 关闭访问时间记录；
 - `-m none` 不设置挂载点；
@@ -323,7 +323,7 @@ zroot/
 
 ### 修改文件夹权限
 
-将 `/mnt/tmp` 和 `/mnt/var/tmp` 的权限设置为 `1777`（粘滞位），以确保临时目录权限正确，使得任何用户都可以在这些目录中创建文件，但只能删除自己创建的文件：
+将 **/mnt/tmp** 和 **/mnt/var/tmp** 的权限设置为 `1777`（粘滞位），以确保临时目录权限正确，使得任何用户都可以在这些目录中创建文件，但只能删除自己创建的文件：
 
 ```sh
 # chmod 1777 /mnt/tmp        # 设置 /mnt/tmp 目录为粘滞位，可读写
@@ -332,13 +332,13 @@ zroot/
 
 ### 配置交换分区到 `fstab`
 
-将交换分区 `/dev/nda0p5` 添加到临时的 fstab 文件，如此系统启动时即可自动挂载这个交换分区：
+将交换分区 **/dev/nda0p5** 添加到临时的 fstab 文件，如此系统启动时即可自动挂载这个交换分区：
 
 ```sh
 # printf "/dev/nda0p5\tnone\tswap\tsw\t0\t0\n" >> /tmp/bsdinstall_etc/fstab
 ```
 
-注意将 `/dev/nda0p5` 替换为实际的交换分区设备名，可使用 `gpart show nda0` 命令进行确认。
+注意将 **/dev/nda0p5** 替换为实际的交换分区设备名，可使用 `gpart show nda0` 命令进行确认。
 
 > **技巧**
 >
@@ -376,7 +376,7 @@ Windows 文本文件的行尾通常是 `\r\n`（回车 + 换行）。
 # mount -t msdosfs /dev/nda0p1 /media
 ```
 
-注意将 `/dev/nda0p1` 替换为实际的 EFI 分区设备名。
+注意将 **/dev/nda0p1** 替换为实际的 EFI 分区设备名。
 
 - 在 EFI 系统分区中为 FreeBSD 创建启动目录
 
@@ -428,7 +428,7 @@ Windows 文本文件的行尾通常是 `\r\n`（回车 + 换行）。
 
 ### 完成
 
-至此，已手动创建了一套与自动安装程序基本相同的 ZFS 数据集结构（自动安装通常还会创建独立的 `/home/用户名` 数据集，此处未包含）。
+至此，已手动创建了一套与自动安装程序基本相同的 ZFS 数据集结构（自动安装通常还会创建独立的 **/home/用户名** 数据集，此处未包含）。
 
 显示安装后系统的 ZFS 文件系统状态：
 
