@@ -1,4 +1,4 @@
-# 编辑日志
+﻿# 编辑日志
 
 ## 2026 年第二季度
 
@@ -252,7 +252,7 @@
   - 将“23.3 磁盘扩容和分区调整”中的 ZFS 部分拆分到“第 25 章 ZFS 文件系统”，原有章节调整为“23.3 UFS 文件系统”
   - “24.2 机器相关的内核选项”引入“powerpc（32/64 位）机器相关配置”“64 位 RISC-V 机器相关配置”“arm64（aarch64）机器相关配置”
   - 新增“24.4 GENERIC 内核选项（amd64）”
-  - “24.1 FreeBSD 内核选项概述”新增“附录：man config(5) 中文”“附录：man [device.hints(5)](https://man.freebsd.org/cgi/man.cgi?query=device.hints) 中文”
+  - “24.1 FreeBSD 内核选项概述”新增“附录：man config(5) 中文”“附录：man device.hints(5) 中文”
   - 将“22.15 在 Linux 上构建 FreeBSD”移动到“第 24 章 FreeBSD 内核”
   - 将“2.1-2.9”压缩归档至附录 Ⅱ“FreeBSD 13/14 安装指南”
   - 新增“2.2 安装 FreeBSD 15”
