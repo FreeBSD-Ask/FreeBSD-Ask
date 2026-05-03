@@ -592,7 +592,7 @@ FreeBSD 还支持多个“虚拟控制台”，可以使用它们同时进行多
 
 > **注意**
 >
-> 该界面无法连接 WiFi，因为无法输入密码，此问题已报告至 Bug，参见 [Cannot select any wifi or input password in bsdconfig](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=229883)。
+> 该界面无法连接 Wi-Fi，因为无法输入密码，此问题已报告至 Bug，参见 [Cannot select any wifi or input password in bsdconfig](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=229883)。
 
 | 菜单 | 说明 |
 | ---- | ---- |
