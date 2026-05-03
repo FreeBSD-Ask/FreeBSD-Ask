@@ -14,7 +14,7 @@
     └── .login_conf          # 用户本地覆盖文件，可覆盖 /etc/login.conf 的设置
 ```
 
-对于普通用户，可通过家目录下的 `~/.login_conf` 文件覆盖系统级配置。记录 ID 为“me”的条目只能覆盖该用户部分的用户分级配置，系统级配置文件 `/etc/login.conf` 的优先级低于用户本地配置。
+对于普通用户，可通过家目录下的 **~/.login_conf** 文件覆盖系统级配置。记录 ID 为“me”的条目只能覆盖该用户部分的用户分级配置，系统级配置文件 **/etc/login.conf** 的优先级低于用户本地配置。
 
 `login.conf` 文件在 FreeBSD 源代码中的位置为 [usr.bin/login/login.conf](https://github.com/freebsd/freebsd-src/blob/main/usr.bin/login/login.conf)，该文件即为默认配置，默认设置禁用了资源配额。
 
@@ -26,7 +26,7 @@
 
 ```ini
 # 请注意，像 "cputime" 这样的条目会同时设置 "cputime-cur" 和 "cputime-max"。
-# "default" 登录类会自动（由 login(1) 实现）应用于所有在 `/etc/master.passwd` 中未设置有效登录类的非 root 用户。
+# "default" 登录类会自动（由 login(1) 实现）应用于所有在 **/etc/master.passwd** 中未设置有效登录类的非 root 用户。
 # 请注意，由于冒号 ':' 用于分隔能力条目，因此在能力的值或名称中嵌入字面冒号时必须使用 `\c` 转义序列（有关更多转义序列，请参见 getcap(3) 的 “CGETNUM AND CGETSTR SYNTAX AND SEMANTICS” 部分）。
 # UID 为 0 的用户（root）如果没有有效登录类，则使用 root 记录（若有），否则使用 default。
 # default 登录类
