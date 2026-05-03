@@ -1,4 +1,4 @@
-# 9.6 ZFS 启动环境与多版本共存
+﻿# 9.6 ZFS 启动环境与多版本共存
 
 借助 ZFS 启动环境，可以在同一台机器上保留多个独立的系统版本，升级失败时无需重新安装即可回退到先前状态。
 
@@ -27,7 +27,7 @@ BE           Active Mountpoint Space Created
 default      NR     /          10.6G 2025-01-14 20:36
 ```
 
-Active 字段解释（来自 [bectl(8) 手册页](https://man.freebsd.org/cgi/man.cgi?bectl)）：
+Active 字段解释（来自 bectl(8) 手册页）：
 
 - “N”：表示该启动环境当前是否处于活动状态（当前是否位于此环境中）
 - “R”：在重启时是否处于活动状态（下次是否选中，用于固定选项）
