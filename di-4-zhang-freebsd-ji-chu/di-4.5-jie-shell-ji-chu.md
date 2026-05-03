@@ -14,14 +14,14 @@ shell 是用户与操作系统内核进行交互的命令解释器（command int
 - **进程控制**：管理进程的创建、前台/后台调度、信号传递和作业控制。shell 是用户管理进程生命周期的首要工具。
 - **环境管理**：维护环境变量（如 `PATH`、`HOME`、`TERM`），这些变量构成了进程的执行上下文。环境变量是存储在 shell 环境中的键值对，任何由 shell 调用的程序都可以读取该环境，因此其中包含大量程序配置信息。
 - **I/O 重定向与管道**：通过文件描述符操作实现标准输入（stdin）、标准输出（stdout）和标准错误（stderr）的重定向，以及通过管道（pipe）机制将一个进程的输出直接传递给另一个进程的输入。UNIX 管道操作符 `|` 允许将一个命令的输出直接传递给另一个程序，管道将一个命令的标准输出作为另一个命令的标准输入传递。
-- **脚本编程**：Shell 本身也是一种编程语言，支持变量、条件判断、循环、函数等控制结构，可用于编写自动化脚本。
+- **脚本编程**：shell 本身也是一种编程语言，支持变量、条件判断、循环、函数等控制结构，可用于编写自动化脚本。
 
 ### Shell 的历史演化与分类
 
-Shell 的演化反映了 UNIX 系统半个多世纪的发展历程。按语法族系划分，Shell 可分为两大谱系：
+shell 的演化反映了 UNIX 系统半个多世纪的发展历程。按语法族系划分，shell 可分为两大谱系：
 
-- **Bourne Shell 谱系**：以 Stephen R. Bourne 于 1977 年为 Unix V7 编写的 Bourne Shell（sh）为始祖。该谱系的 Shell 采用较为简洁的语法，以 `$` 作为默认提示符。后续演化包括 Almquist Shell（ash，1989 年）、KornShell（ksh，1983 年）、Bourne Again Shell（bash，1989 年）、Z Shell（zsh，1990 年）等。
-- **C Shell 谱系**：以 Bill Joy 于 1978 年为 2BSD 编写的 C Shell（csh）为始祖。该谱系的 Shell 语法更接近 C 语言，以 `%` 作为默认提示符。后续演化包括 TENEX C Shell（tcsh，1983 年）等。
+- **Bourne Shell 谱系**：以 Stephen R. Bourne 于 1977 年为 Unix V7 编写的 Bourne Shell（sh）为始祖。该谱系的 shell 采用较为简洁的语法，以 `$` 作为默认提示符。后续演化包括 Almquist Shell（ash，1989 年）、KornShell（ksh，1983 年）、Bourne Again Shell（bash，1989 年）、Z Shell（zsh，1990 年）等。
+- **C Shell 谱系**：以 Bill Joy 于 1978 年为 2BSD 编写的 C Shell（csh）为始祖。该谱系的 shell 语法更接近 C 语言，以 `%` 作为默认提示符。后续演化包括 TENEX C Shell（tcsh，1983 年）等。
 
 ### POSIX Shell 规范
 
