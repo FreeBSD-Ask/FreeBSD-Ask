@@ -182,7 +182,7 @@
 
 * [18.1 账户认证安全](di-18-zhang-an-quan/di-18.1-jie-zhang-hu-ren-zheng-an-quan.md)
 * [18.2 资源限制](di-18-zhang-an-quan/di-18.2-jie-zi-yuan-xian-zhi.md)
-* [18.3 安全级别](di-18-zhang-an-quan/di-18.3-jie-an-quan-ji-bie.md)
+* [18.3 安全等级](di-18-zhang-an-quan/di-18.3-jie-an-quan-ji-bie.md)
 * [18.4 安全事件审计](di-18-zhang-an-quan/di-18.4-jie-an-quan-shi-jian-shen-ji.md)
 * [18.5 OpenSSL](di-18-zhang-an-quan/di-18.5-jie-openssl.md)
 * [18.6 入侵检测系统（IDS）](di-18-zhang-an-quan/di-18.6-jie-ru-qin-jian-ce-xi-tong.md)
