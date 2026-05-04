@@ -141,13 +141,13 @@ FreeBSD 的目录层次由 `hier(7)` 定义。与 FHS 相比，FreeBSD 的目录
 | **/libexec** | 可选，与 **/usr/lib** 二选一，存放内部二进制 | **/** 和 **/usr** 下均有，系统辅助程序 |
 | **/rescue** | 未定义 | 静态链接紧急修复工具 |
 | **/srv** | 系统提供的服务数据（ftp、www 等） | 未定义 |
-| **/opt** | **/opt/<package>** | 未定义，统一用 **/usr/local** |
 | **/media** | 可移动介质挂载点 | 由 automount(8) 或 bsdisks(8) 管理 |
+| **/opt** | 必选，**/opt/软件包** | 未定义，统一用 **/usr/local** |
 | **/mnt** | 临时挂载点 | 临时挂载点 |
 | **/run** | 必选（3.0），PID 文件及 UNIX 域套接字 | 无，沿用 **/var/run** |
 | **/sys** | Linux sysfs（§6.1.7） | 无，用 sysctl(8) |
 | **/proc** | Linux procfs（§6.1.5） | procfs(4) 已废弃，仅出于兼容目的保留，默认不使用 |
-| 共享库 | **/lib** 关键库，**/usr/lib** 非关键及编程库，**/lib<qual>** 兼容 | **/lib** 关键库，**/usr/lib** 共享/ar 库，**/usr/lib32** |
+| 共享库 | **/lib** 关键库，**/usr/lib** 非关键及编程库，**/lib** 兼容 | **/lib** 关键库，**/usr/lib** 共享/ar 库，**/usr/lib32** |
 | 内核 | **/** 或 **/boot** | **/boot/kernel/**，备用 **/boot/kernel.old/** |
 | **/home** | 可选，用户家目录 | 用户家目录 |
 | **/var/empty** | 未定义 | 由 sshd(8) 特权分离 chroot 使用 |
@@ -155,7 +155,7 @@ FreeBSD 的目录层次由 `hier(7)` 定义。与 FHS 相比，FreeBSD 的目录
 
 FHS 按可共享/不可共享、静态/可变两个维度将文件分层：**/usr** 可共享只读，**/var** 可变，根文件系统仅需满足引导、恢复、修复的最低需求。FreeBSD 遵循此原则，基本系统限定在 `hier(7)` 定义目录，第三方软件限定在 **/usr/local**。
 
-POSIX（IEEE 1003.1）/SUS（UNIX 03）对目录结构无类似要求。POSIX.1-2008 明确删除了 **/bin**、**/usr/bin**、**/lib**、**/usr/lib** 等描述——理由是对应用程序没有用处。POSIX 仅要求 **/**、**/dev**（含 **/dev/null**、**/dev/tty**、**/dev/console**）、**/tmp** 存在，临时文件建议通过 `TMPDIR` 环境变量定位。FHS 仅在个别条目中注明与 POSIX 一致（如 **/tmp** 行为、`[`/`test` 路径、手册页 locale 命名），其余目录规范均属 FHS 自身定义，不在 POSIX 范围内。
+POSIX（IEEE 1003.1）/SUS（UNIX 03）对目录结构无类似要求。POSIX.1-2008 明确删除了 **/bin**、**/usr/bin**、**/lib**、**/usr/lib** 等描述——理由是对应用程序没有用处。POSIX 仅要求 **/**、**/dev**（含 **/dev/null**、**/dev/tty**、**/dev/console**）、**/tmp** 存在，临时文件建议通过 `TMPDIR` 环境变量定位。FHS 仅在个别条目中注明与 POSIX 一致，其余目录规范均属 FHS 自身定义，不在 POSIX 范围内。
 
 ### 参考文献
 
