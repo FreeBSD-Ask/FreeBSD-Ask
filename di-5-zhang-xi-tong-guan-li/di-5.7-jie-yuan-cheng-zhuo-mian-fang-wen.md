@@ -92,7 +92,6 @@ $ x11vnc -display :0 -rfbauth ~/.vnc/passwd -auth /var/lib/gdm/:0.Xauth # 或 /r
 
 ### 参考文献
 
-- FreeBSD Project. x11vnc(1)[EB/OL]. [2026-03-25]. <https://man.freebsd.org/cgi/man.cgi?query=x11vnc>. FreeBSD 手册页，详细说明远程桌面镜像配置参数。
 - Arch Linux Wiki. X11vnc[EB/OL]. [2026-03-25]. <https://wiki.archlinux.org/title/X11vnc>. Arch Linux 官方维基提供的 X11vnc 配置与使用详细指南。
 
 ## TigerVNC（FreeBSD 作为被控端）
