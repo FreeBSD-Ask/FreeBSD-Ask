@@ -1,6 +1,6 @@
 # 5.10 sysctl 工具
 
-sysctl(8) 实用程序用于修改正在运行的 FreeBSD 系统。本节覆盖 sysctl 命令用法与 sysctl.conf 的配置方法。
+sysctl(8) 实用程序用于修改正在运行的 FreeBSD 系统。本节涵盖 sysctl 命令用法与 sysctl.conf 的配置方法。
 
 sysctl(8) 工具可以检索内核状态，并为具有适当权限的进程设置内核状态。
 
@@ -109,7 +109,7 @@ sysctl.conf 的源代码位于 [/sbin/sysctl/sysctl.conf](https://github.com/fre
 
 ## 配置文件
 
-在系统进入多用户模式时将读取 **/etc/sysctl.conf** 文件，用于设置内核的默认配置。格式看起来类似于 `/etc/rc.conf`。
+在系统进入多用户模式时将读取 **/etc/sysctl.conf** 文件，用于设置内核的默认配置。格式看起来类似于 **/etc/rc.conf**。
 
 基本系统默认的 **/etc/sysctl.conf** 文件实际上是空文件：
 
