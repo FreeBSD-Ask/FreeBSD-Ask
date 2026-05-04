@@ -221,7 +221,7 @@ usage: ls [-ABCFGHILPRSTUWZabcdfghiklmnopqrstuvwxy1,] [--color=when] [-D format]
 
 > **技巧**
 >
-> 命令前面的 `#` 表示什么意思？`#` 在 Shell 当中通常是起注释作用（由 [POSIX.1-2024](https://pubs.opengroup.org/onlinepubs/9799919799/utilities/V3_chap02.html) 规定），相当于 C 语言中的 `//`。意味着后边的文字只起到说明作用，不起实际作用。
+> 命令前面的 `#` 表示什么意思？`#` 在 shell 当中通常是起注释作用（由 [POSIX.1-2024](https://pubs.opengroup.org/onlinepubs/9799919799/utilities/V3_chap02.html) 规定），相当于 C 语言中的 `//`。意味着后边的文字只起到说明作用，不起实际作用。
 
 FreeBSD ls 与 GNU ls 比较：
 
@@ -257,7 +257,7 @@ cp: test9: No such file or directory
 
 可以看到，只有当执行中断时，命令行才会有提示；若执行完毕，则不会产生任何提示。这种 UNIX 设计哲学旨在保证终端输出的简洁性。
 
-## Shell 命令的来源
+## shell 命令的来源
 
 ### Linux
 
@@ -834,4 +834,4 @@ FreeBSD 的设计更接近传统 UNIX 的行为。
 
 1. 对比 BSD 风格的 sed/awk/grep 与 GNU 版本在常用选项上的差异，编写兼容性对照表，并给出在 FreeBSD 上实现跨平台脚本的策略。
 2. 查阅 FreeBSD 中 `ls` 命令的源代码实现（`bin/ls/`），与 GNU coreutils 中的 `ls` 在选项解析和输出格式化方面的实现进行比较。
-3. Unix 命令行的设计哲学强调“每个程序只做一件事并将其做好”。分析这一原则在大语言模型辅助 Shell 编程场景下的适用性变化，讨论 AI 辅助代码生成是否改变了对命令行工具设计原则的需求。
+3. Unix 命令行的设计哲学强调"每个程序只做一件事并将其做好"。分析这一原则在大语言模型辅助 shell 编程场景下的适用性变化，讨论 AI 辅助代码生成是否改变了对命令行工具设计原则的需求。
