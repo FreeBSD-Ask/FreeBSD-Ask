@@ -97,7 +97,7 @@ net.local.taskcount: 9
     └── sysctl.kld.d/            # 内核模块特定设置，用于通过 rc.subr(8) 加载的模块（默认为空目录）
 ```
 
-在系统启动过程中，**/etc/sysctl.conf** 文件将由 **/etc/rc.d/sysctl** 脚本加载
+在系统启动过程中，**/etc/sysctl.conf** 文件将由 **/etc/rc.d/sysctl** 脚本加载。
 
 sysctl 的默认源代码在 [/sbin/sysctl/](https://github.com/freebsd/freebsd-src/tree/main/sbin/sysctl)。
 
