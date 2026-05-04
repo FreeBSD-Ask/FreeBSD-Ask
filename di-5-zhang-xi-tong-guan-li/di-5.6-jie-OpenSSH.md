@@ -6,7 +6,7 @@ OpenSSH 是一套网络连接工具集，专为安全访问远程机器而设计
 
 如果数据以明文形式在网络上传输，处于客户端与服务器之间任一位置的网络嗅探器都能窃取用户名/密码或在会话中传输的数据。OpenSSH 则提供多种认证与加密机制来规避此类风险。
 
-SSH 即 Secure Shell（安全 Shell），是一种通过加密方式安全使用 Shell 的方法，通常用于远程登录和管理系统。OpenSSH（Open Secure Shell）是 SSH 协议的一种实现。OpenSSH 用于通过加密连接远程访问系统。
+SSH 即 Secure Shell（安全 shell），是一种通过加密方式安全使用 shell 的方法，通常用于远程登录和管理系统。OpenSSH（Open Secure Shell）是 SSH 协议的一种实现。OpenSSH 用于通过加密连接远程访问系统。
 
 OpenSSH 由 OpenBSD 项目维护，并默认随 FreeBSD 安装。OpenSSH 位于 [/crypto/openssh](https://github.com/freebsd/freebsd-src/tree/main/crypto/openssh)，通过 `ChangeLog` 可获取当前内置的版本号。
 
