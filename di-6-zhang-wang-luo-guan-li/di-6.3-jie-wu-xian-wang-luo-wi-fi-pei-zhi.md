@@ -361,7 +361,7 @@ hw.bwn_pci.preferred="1"        # 设置首选使用 BWN PCI 无线设备
 if_bwn_pci_load="YES"           # 在启动时加载 bwn_pci 驱动
 bwn_v4_ucode_load="YES"         # 加载 BWN V4 无线固件
 bwn_v4_n_ucode_load="YES"       # 加载 BWN V4 N 模式无线固件
-bwn_v4_lp_ucode_load="YES"     # 加载 BWN V4 低功耗模式无线固件
+bwn_v4_lp_ucode_load="YES"      # 加载 BWN V4 低功耗模式无线固件
 ```
 
 完成后重启系统，使用 `ifconfig` 检查是否存在 `wlan0` 接口，然后按照前文所述方法进行配置。
