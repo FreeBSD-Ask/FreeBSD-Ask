@@ -18,7 +18,7 @@ FreeBSD 的环境变量代理机制属于正向代理范畴。应用程序在发
 
 在 V2Ray 或 Clash 等代理软件已开启局域网连接功能的前提下，可按本节所述方法进行环境变量代理配置。
 
-在配置系统代理前，需要查看当前用户正在使用的 Shell 类型，因不同 Shell 对环境变量的设置方式存在差异。执行以下命令可查看当前 Shell：
+在配置系统代理前，需要查看当前用户正在使用的 shell 类型，因不同 shell 对环境变量的设置方式存在差异。执行以下命令可查看当前 shell：
 
 ```sh
 $ echo $SHELL
@@ -36,7 +36,7 @@ $ echo $SHELL
 >
 > 在 sh、Bash 或 Zsh 中，环境变量 `HTTP_PROXY` 通常使用大写形式。部分应用程序（如 curl、wget）也会识别小写形式 `http_proxy`，但不同程序的行为不一致，建议统一使用大写形式以确保兼容性。
 
-设置 HTTP 代理环境变量，该变量将被当前 Shell 及其子进程继承：
+设置 HTTP 代理环境变量，该变量将被当前 shell 及其子进程继承：
 
 ```sh
 # export HTTP_PROXY=http://192.168.X.X:7890
@@ -60,7 +60,7 @@ $ echo $SHELL
 >
 > 在 csh 或 tcsh 中，环境变量 `http_proxy` 必须使用小写形式，大写形式不会生效。
 
-在 csh 或 tcsh 中设置 HTTP 代理环境变量，需使用该 Shell 特有的 `setenv` 命令：
+在 csh 或 tcsh 中设置 HTTP 代理环境变量，需使用该 shell 特有的 `setenv` 命令：
 
 ```sh
 # setenv http_proxy http://192.168.X.X:7890
