@@ -288,8 +288,6 @@
 
 ## 附录 I 工具与资源
 
-* [自由软件与开源软件的常见误解辨析](fu-lu1/zi-you-ruan-jian.md)
-* [GNU/Linux 发行版比较](fu-lu1/gnu-linux.md)
 * [BSD 许可证概览](fu-lu1/bsd-xu-ke-zheng-gai-lan.md)
 * [microSD 卡参数简介](fu-lu1/cun-chu-ka.md)
 
