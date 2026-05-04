@@ -187,6 +187,7 @@
 * [18.5 OpenSSL](di-18-zhang-an-quan/di-18.5-jie-openssl.md)
 * [18.6 入侵检测系统（IDS）](di-18-zhang-an-quan/di-18.6-jie-ru-qin-jian-ce-xi-tong.md)
 * [18.7 第三方漏洞与安全公告](di-18-zhang-an-quan/di-18.7-jie-di-san-fang-lou-dong-yu-an-quan-gong-gao.md)
+* [18.8 强制访问控制框架（MAC 框架）](di-18-zhang-an-quan/di-18.8-jie-fang-wen-kong-zhi-kuang-jia-mac-kuang-jia.md)
 
 ## 第 19 章 服务器
 
