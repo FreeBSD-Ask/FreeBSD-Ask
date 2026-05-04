@@ -1,13 +1,8 @@
 # 9.2 ZFS 快照与还原
 
-ZFS 快照基于写时复制机制，创建过程瞬时完成且不占用额外磁盘空间，是 ZFS 数据保护体系的核心功能之一。
+ZFS 快照采用写时复制（Copy-on-Write, CoW）机制，创建过程瞬时完成且不占用额外磁盘空间。快照创建后，当原文件系统中的数据块被修改时，ZFS 将新数据写入新位置，旧数据块原地保留，快照继续指向旧数据块，从而捕获文件系统在快照创建时刻的时间点状态。与虚拟机快照相比，ZFS 快照在文件系统层面实现，具有更轻量、更高效的特性，是数据备份、版本控制与灾难恢复的核心技术手段。
 
-ZFS 快照采用写时复制（Copy-on-Write, CoW）机制，能够在不中断系统运行的情况下捕获文件系统的时间点状态，是数据备份、版本控制与灾难恢复的核心技术手段。与虚拟机快照相比，ZFS 快照在文件系统层面实现，具有更轻量、更高效的特性。
-
-写时复制机制使 ZFS 快照创建时几乎不占用额外空间。快照创建后，当原文件系统中的数据块被修改时，ZFS 会将新数据写入新的位置，而旧数据块保留在原位不动，快照继续指向这些旧数据块，从而实现数据的时间点保留。
-
-- 目前 FreeBSD 中文社区（CFC）提供了 ZFS 脚本，可用于查看、创建、删除和恢复 ZFS 快照（ZFS snapshot）。[ZFS 脚本项目地址](https://github.com/FreeBSD-Ask/zfs-snap)。
-- 同时，已将该 ZFS 脚本部署至 [https://docs.bsdcn.org/zfs.sh](https://docs.bsdcn.org/zfs.sh)，可以在 FreeBSD 系统上直接使用 `fetch` 命令进行下载。
+FreeBSD 中文社区（CFC）提供了 ZFS 脚本，可用于查看、创建、删除和恢复 ZFS 快照（ZFS snapshot）。[ZFS 脚本项目地址](https://github.com/FreeBSD-Ask/zfs-snap)。该脚本已部署至 [https://docs.bsdcn.org/zfs.sh](https://docs.bsdcn.org/zfs.sh)，可在 FreeBSD 系统上直接使用 `fetch` 命令下载。
 
 ## 创建快照
 
@@ -82,15 +77,13 @@ zroot/var/log@test          0B      -      444K  -
 
 可以通过增删文件来验证快照的有效性。在测试环境中，如果事先创建了快照，即使执行 `rm -rf /*` 命令也可以顺利恢复；若系统使用 UEFI，则需要根据其他章节的说明自行恢复 EFI 引导。注意，此操作仅应在测试环境中进行。
 
-在还原快照时，不能一次性递归还原，需要对每个子文件系统单独还原。
-
 ## 快照还原测试
 
 > **思考题**
 >
 > 探索更优的快照回滚方案；已知网络上存在相关脚本，可考虑将其作为功能请求或提交 Pull Request（PR）至 OpenZFS 项目。或者使用中文社区的 [ZFS 脚本项目](https://github.com/FreeBSD-Ask/zfs-snap)。
 
-与虚拟机快照不同，在默认状态下，`zfs rollback` 命令无法回滚到除最新快照之外的快照（[参考手册](https://docs.oracle.com/cd/E19253-01/819-7065/gbcxk/index.html)，Oracle 官方 ZFS 回滚命令文档）；使用 `-r` 参数可以销毁比目标快照更新的所有快照，从而允许回滚到非最新的快照。ZFS 不支持一次性递归回滚所有子数据集，需要对每个子文件系统单独执行回滚操作。
+与虚拟机快照不同，在默认状态下，`zfs rollback` 命令只能回滚到最新快照（[参考手册](https://docs.oracle.com/cd/E19253-01/819-7065/gbcxk/index.html)，Oracle 官方 ZFS 回滚命令文档）；使用 `-r` 参数可以销毁比目标快照更新的所有快照，从而允许回滚到非最新的快照。ZFS 不支持一次性递归回滚所有子数据集，需要对每个子文件系统单独执行回滚操作。
 
 ```sh
 # zfs rollback -r zroot@test             # 递归回滚 zroot 池及其所有子文件系统到 test 快照

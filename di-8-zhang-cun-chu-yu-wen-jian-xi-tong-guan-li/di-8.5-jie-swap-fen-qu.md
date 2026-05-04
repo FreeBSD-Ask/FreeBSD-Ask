@@ -1,10 +1,10 @@
-# 8.5 Swap 分区
+# 8.5 swap 分区
 
-Swap 空间是操作系统中内存管理的组成部分。
+swap 空间是操作系统内存管理的重要组成部分。
 
-在 FreeBSD 中，Swap 可通过传统分区、交换文件或 ZFS 卷（ZVOL）等多种方式实现。本节重点阐述在系统安装后如何添加 Swap 空间的技术方案。
+在 FreeBSD 中，swap 可通过传统分区、交换文件或 ZFS 卷（ZVOL）等多种方式实现。本节重点阐述在系统安装后如何添加 swap 空间的技术方案。
 
-若在系统安装阶段未配置 Swap（交换分区），则仅能通过 dd 命令创建交换文件或 ZFS 卷的方式实现，这是因为 UFS 及 ZFS 文件系统均不支持分区收缩操作。
+若在系统安装阶段未配置 swap（交换分区），则仅能通过 dd 命令创建交换文件或 ZFS 卷的方式实现，这是因为 UFS 及 ZFS 文件系统均不支持分区收缩操作。
 
 ## 目录结构
 
@@ -25,7 +25,7 @@ Swap 空间是操作系统中内存管理的组成部分。
 
 ## 基于 dd 命令的传统交换文件方案
 
-创建一个大小为 8 GB（1 GB = 1024 MB，如需更大容量，请读者进行简单的容量计算）的交换文件 `/usr/swap0`：
+创建一个大小为 8 GB 的交换文件 **/usr/swap0**（1 GB = 1024 MB，如需更大容量，可按此比例换算）：
 
 ```sh
 # dd if=/dev/zero of=/usr/swap0 bs=1M count=8192 status=progress  # bs=1M 表示使用 1MB 块写入零；status=progress 用于显示写入进度
@@ -41,13 +41,13 @@ Swap 空间是操作系统中内存管理的组成部分。
 # chmod 0600 /usr/swap0
 ```
 
-若要立即启用，需将交换文件通过 mdconfig 配置为内存磁盘设备，再使用 swapon 激活交换空间，其中 mdconfig 用于将文件映射为内存磁盘，swapon 用于激活交换设备：
+若要立即启用，需先将交换文件通过 `mdconfig` 配置为内存磁盘设备，再使用 `swapon` 激活交换空间。其中，`mdconfig` 用于将文件映射为内存磁盘，`swapon` 用于激活交换设备：
 
 ```sh
 # mdconfig -a -t vnode -f /usr/swap0 -u 0 && swapon /dev/md0
 ```
 
-若要在系统重启后仍能生效，还需在 `/etc/rc.conf` 配置文件中添加以下内容：
+若要在系统重启后仍能生效，还需在 **/etc/rc.conf** 配置文件中添加以下内容：
 
 ```ini
 swapfile="/usr/swap0"
@@ -55,7 +55,7 @@ swapfile="/usr/swap0"
 
 该配置用于定义交换文件的路径。
 
-## 使用 ZFS 卷作为 Swap 空间
+## 使用 ZFS 卷作为 swap 空间
 
 > **警告**
 >
@@ -73,12 +73,12 @@ swapfile="/usr/swap0"
 
 对上述命令的参数说明如下：
 
-- `$(getconf PAGESIZE)`：可返回系统页面大小（固态硬盘通常返回值为 `4096`），从而使 Swap 卷与系统页面对齐，以期提高性能
+- `$(getconf PAGESIZE)`：返回系统页面大小（固态硬盘通常返回 `4096`），使 swap 卷与系统页面对齐，以提高性能
 - `-o`：用于指定选项（option），语法为 `-o 属性名=属性值`
 - `-o logbias=throughput`：ZFS 将优化同步操作，提高池的全局吞吐量并有效利用资源，可提升文件写入性能
 - `-o sync=always`：强制所有写入操作实时同步
-- `-o primarycache=metadata`：控制 ARC 的缓存策略，仅缓存元数据，不缓存实际数据块，避免 ARC 将 Swap 数据缓存到内存
-- `-o com.sun:auto-snapshot=false`：禁用自动快照功能，因为通常无需对 Swap 进行快照
+- `-o primarycache=metadata`：控制 ARC 的缓存策略，仅缓存元数据，不缓存实际数据块，避免 ARC 将 swap 数据缓存到内存
+- `-o com.sun:auto-snapshot=false`：禁用自动快照功能，因为通常无需对 swap 进行快照
 - 参数 `-V`：用于创建 ZFS 卷（zvol）而非 ZFS 文件系统
 - 在 FreeBSD 中，ZFS 默认的池名称为 `zroot`
 - 本次创建的卷名称为 `swap`
@@ -89,13 +89,13 @@ swapfile="/usr/swap0"
 # swapon /dev/zvol/zroot/swap
 ```
 
-在 `/etc/fstab` 文件中添加 ZFS zvol 交换分区的挂载项，以实现开机时自动挂载：
+在 **/etc/fstab** 文件中添加 ZFS zvol 交换分区的挂载项，以实现开机时自动挂载：
 
 ```ini
 /dev/zvol/zroot/swap none swap sw 0 0
 ```
 
-写入配置后，可使用命令 `swapon -a` 进行检查（`-a` 表示激活 `/etc/fstab` 中所有 swap 条目），确保无错误输出。参见 FreeBSD Project. man swapon(8)[EB/OL]. [2026-03-26]. <https://man.freebsd.org/cgi/man.cgi?swapon(8)>.
+写入配置后，可使用命令 `swapon -a` 进行检查（`-a` 表示激活 **/etc/fstab** 中所有 swap 条目），确保无错误输出。
 
 ### 参考文献
 
@@ -104,7 +104,7 @@ swapfile="/usr/swap0"
 - FreeBSD Project. swapon(8) -- specify additional devices for paging and swapping[EB/OL]. [2026-04-17]. <https://man.freebsd.org/cgi/man.cgi?query=swapon&sektion=8>. 交换空间管理工具手册页。
 - FreeBSD Project. swapinfo(8) -- display system swap space usage[EB/OL]. [2026-04-17]. <https://man.freebsd.org/cgi/man.cgi?query=swapinfo&sektion=8>. 交换空间使用信息查询工具手册页。
 
-## 查看 Swap 使用量
+## 查看 swap 使用量
 
 以更易读的单位显示系统交换空间信息：
 
@@ -116,11 +116,11 @@ Device              Size     Used    Avail Capacity
 
 选项 `-h` 表示以人类可读格式（human-readable）输出。参见 FreeBSD Project. man swapinfo(8)[EB/OL]. [2026-03-26]. <https://man.freebsd.org/cgi/man.cgi?swapinfo(8)>。
 
-从输出可知，`/dev/nda0p3` 为交换分区，其大小为 2 GB，当前已使用量为 0。
+从输出可知，**/dev/nda0p3** 为交换分区，其大小为 2 GB，当前已使用量为 0。
 
 ## 课后习题
 
-1. 使用 dd 命令创建一个 4 GB 的交换文件，配置 `/etc/rc.conf` 文件实现开机自动启用，重启后使用 swapinfo 验证交换空间是否正常工作。
+1. 使用 dd 命令创建一个 4 GB 的交换文件，配置 **/etc/rc.conf** 文件实现开机自动启用，重启后使用 swapinfo 验证交换空间是否正常工作。
 
 2. 对比传统交换文件和 ZFS 卷作为 swap 的实现机制，重构一个最小化的 swap 配置脚本，分析两者在性能、可靠性和系统崩溃转储支持上的权衡。
 

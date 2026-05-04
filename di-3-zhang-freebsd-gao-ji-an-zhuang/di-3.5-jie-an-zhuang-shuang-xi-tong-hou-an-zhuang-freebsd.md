@@ -12,7 +12,7 @@
 
 > **注意**
 >
-> 按照本部分所述方法，在使用 ZFS 时，只会创建一个名为 `zroot` 的存储池（zpool），并在其中创建一个直接挂载到 `/` 的名为 `root` 的数据集。不同于自动安装，不会创建 `zroot/ROOT/default` 及众多数据集。可以在安装后创建数据集并进行替换操作，但若希望初始布局就与自动安装相同，请跳转至本节“Shell 分区”部分。
+> 按照本部分所述方法，在使用 ZFS 时，只会创建一个名为 `zroot` 的存储池（zpool），并在其中创建一个直接挂载到 **/** 的名为 `root` 的数据集。不同于自动安装，不会创建 `zroot/ROOT/default` 及众多数据集。可以在安装后创建数据集并进行替换操作，但若希望初始布局就与自动安装相同，请跳转至本节“Shell 分区”部分。
 
 使用简单方法安装 FreeBSD，按照以下步骤进行操作。
 
@@ -45,7 +45,7 @@
 
 ![硬盘分区情况](../.gitbook/assets/dual-system-2.png)
 
-此处在第一行输入分区类型（即下方会列出的 `Filesystem type`）。如需添加 swap 分区，请在此步骤首先添加，后续添加则难以控制分区大小，因为分区会从空闲空间的开头或结尾分配，先添加 swap 可以更好地控制其位置。在添加 UFS 或 ZFS 分区时，需在 `Mountpoint` 处填写 `/`，表示将该分区挂载到根目录。`Label` 是 FreeBSD 的卷标（gptlabel），用于方便识别分区，可根据需要填写或留空。此处使用 ZFS，不添加 swap 分区，并且填入卷标 `zroot`。
+此处在第一行输入分区类型（即下方会列出的 `Filesystem type`）。如需添加 swap 分区，请在此步骤首先添加，后续添加则难以控制分区大小，因为分区会从空闲空间的开头或结尾分配，先添加 swap 可以更好地控制其位置。在添加 UFS 或 ZFS 分区时，需在 `Mountpoint` 处填写 **/**，表示将该分区挂载到根目录。`Label` 是 FreeBSD 的卷标（gptlabel），用于方便识别分区，可根据需要填写或留空。此处使用 ZFS，不添加 swap 分区，并且填入卷标 `zroot`。
 
 ![创建分区](../.gitbook/assets/dual-system-3.png)
 
@@ -59,7 +59,7 @@
 
 > **注意**
 >
-> 请将 Windows 创建的 300 MB EFI 系统分区的挂载点设置为 `/boot/efi`，这样 FreeBSD 就能正确找到并使用已有的 EFI 分区，避免创建多个 EFI 分区带来的混乱。
+> 请将 Windows 创建的 300 MB EFI 系统分区的挂载点设置为 **/boot/efi**，这样 FreeBSD 就能正确找到并使用已有的 EFI 分区，避免创建多个 EFI 分区带来的混乱。
 
 选择 `Finish`（完成）
 
@@ -178,15 +178,15 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 # zpool create -f -o altroot=/mnt -O compress=lz4 -O atime=off -m none zroot /dev/gpt/zroot
 ```
 
-该命令将设置 zroot 池的挂载点为 `/mnt`，启用 LZ4 压缩以节省空间并提高读写性能，关闭访问时间记录以减少磁盘写入。
+该命令将设置 zroot 池的挂载点为 **/mnt**，启用 LZ4 压缩以节省空间并提高读写性能，关闭访问时间记录以减少磁盘写入。
 
 选项说明如下：
 
-- `-o altroot=/mnt` 将其临时挂载至 /mnt；
+- `-o altroot=/mnt` 将其临时挂载至 **/mnt**；
 - `-O compress=lz4` 启用 lz4 压缩（可换为 zstd 等）；
 - `-O atime=off` 关闭访问时间记录；
 - `-m none` 不设置挂载点；
-- `/dev/gpt/zroot` 为刚创建的分区。
+- **/dev/gpt/zroot** 为刚创建的分区。
 
 ### 创建 ZFS 数据集
 
@@ -208,23 +208,23 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 # zfs create -o mountpoint=/ zroot/ROOT/default
 ```
 
-将创建数据集 `zroot/ROOT/default`，将其挂载到根目录 `/`。此数据集将作为系统的默认根文件系统。
+将创建数据集 `zroot/ROOT/default`，将其挂载到根目录 **/**。此数据集将作为系统的默认根文件系统。
 
-- 创建 `/home` 数据集
+- 创建 **/home** 数据集
 
 ```sh
 # zfs create -o mountpoint=/home zroot/home
 ```
 
-将创建数据集 `zroot/home`，并将其挂载到 `/home`，通常用于存储用户主目录。
+将创建数据集 `zroot/home`，并将其挂载到 **/home**，通常用于存储用户主目录。
 
-- 创建 `/tmp` 数据集
+- 创建 **/tmp** 数据集
 
 ```sh
 # zfs create -o mountpoint=/tmp -o exec=on -o setuid=off zroot/tmp
 ```
 
-创建数据集 `zroot/tmp`，并将其挂载到 `/tmp`，允许执行文件（`exec=on`），但禁用 setuid（`setuid=off`）防止该目录中的文件使用 setuid 提升权限。
+创建数据集 `zroot/tmp`，并将其挂载到 **/tmp**，允许执行文件（`exec=on`），但禁用 setuid（`setuid=off`）防止该目录中的文件使用 setuid 提升权限。
 
 - 创建 `zroot/usr` 数据集
 
@@ -234,63 +234,63 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 
 将创建 `zroot/usr` 数据集，设置 `canmount=off` 即禁止自动挂载，如此可将相关的子数据集组织在一起，但不会单独挂载这个父数据集。
 
-- 创建 `/usr/ports` 数据集
+- 创建 **/usr/ports** 数据集
 
 ```sh
 # zfs create -o setuid=off zroot/usr/ports
 ```
 
-将创建 `/usr/ports` 数据集，禁用 setuid（`setuid=off`）。
+将创建 **/usr/ports** 数据集，禁用 setuid（`setuid=off`）。
 
-- 创建 `/usr/src` 数据集
+- 创建 **/usr/src** 数据集
 
 ```sh
 # zfs create zroot/usr/src
 ```
 
-将创建 `/usr/src` 数据集。
+将创建 **/usr/src** 数据集。
 
-- 创建 `/var` 数据集
+- 创建 **/var** 数据集
 
 ```sh
 # zfs create -o mountpoint=/var -o canmount=off zroot/var
 ```
 
-将创建 `/var` 数据集，设置 `canmount=off` 意味着不会自动挂载。
+将创建 **/var** 数据集，设置 `canmount=off` 意味着不会自动挂载。
 
-- 创建 `/var/audit` 数据集
+- 创建 **/var/audit** 数据集
 
 ```sh
 # zfs create -o exec=off -o setuid=off zroot/var/audit
 ```
 
-将创建 `/var/audit` 数据集，禁用执行（`exec=off`），同时禁用 setuid（`setuid=off`）。
+将创建 **/var/audit** 数据集，禁用执行（`exec=off`），同时禁用 setuid（`setuid=off`）。
 
-- 创建 `/var/crash` 数据集
+- 创建 **/var/crash** 数据集
 
 ```sh
 # zfs create -o exec=off -o setuid=off zroot/var/crash
 ```
 
-将创建 `/var/crash` 数据集，禁用执行（`exec=off`），同时禁用 setuid（`setuid=off`）。
+将创建 **/var/crash** 数据集，禁用执行（`exec=off`），同时禁用 setuid（`setuid=off`）。
 
-- 创建 `/var/log` 数据集
+- 创建 **/var/log** 数据集
 
 ```sh
 # zfs create -o exec=off -o setuid=off zroot/var/log
 ```
 
-将创建 `/var/log` 数据集，禁用执行（`exec=off`），同时禁用 setuid（`setuid=off`）。
+将创建 **/var/log** 数据集，禁用执行（`exec=off`），同时禁用 setuid（`setuid=off`）。
 
-- 创建 `/var/tmp` 数据集
+- 创建 **/var/tmp** 数据集
 
 ```sh
 # zfs create -o setuid=off zroot/var/tmp
 ```
 
-将创建 `/var/tmp` 数据集，同时禁用 setuid（`setuid=off`）。
+将创建 **/var/tmp** 数据集，同时禁用 setuid（`setuid=off`）。
 
-- 创建 `/var/mail` 数据集
+- 创建 **/var/mail** 数据集
 
 ```sh
 # zfs create -o atime=on zroot/var/mail
@@ -300,7 +300,7 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 
 > **技巧**
 >
-> 上述参数参考自 [bsdinstall(8)](https://man.freebsd.org/cgi/man.cgi?bsdinstall(8)) 的默认配置。安装后，也可通过命令 `zfs get exec,setuid,mountpoint` 查看相关属性。具体代码位于 [usr.sbin/bsdinstall/scripts/zfsboot](https://github.com/freebsd/freebsd-src/blob/main/usr.sbin/bsdinstall/scripts/zfsboot)。
+> 上述参数参考自 bsdinstall(8) 的默认配置。安装后，也可通过命令 `zfs get exec,setuid,mountpoint` 查看相关属性。具体代码位于 [usr.sbin/bsdinstall/scripts/zfsboot](https://github.com/freebsd/freebsd-src/blob/main/usr.sbin/bsdinstall/scripts/zfsboot)。
 
 相关文件结构：
 
@@ -323,7 +323,7 @@ zroot/
 
 ### 修改文件夹权限
 
-将 `/mnt/tmp` 和 `/mnt/var/tmp` 的权限设置为 `1777`（粘滞位），以确保临时目录权限正确，使得任何用户都可以在这些目录中创建文件，但只能删除自己创建的文件：
+将 **/mnt/tmp** 和 **/mnt/var/tmp** 的权限设置为 `1777`（粘滞位），以确保临时目录权限正确，使得任何用户都可以在这些目录中创建文件，但只能删除自己创建的文件：
 
 ```sh
 # chmod 1777 /mnt/tmp        # 设置 /mnt/tmp 目录为粘滞位，可读写
@@ -332,13 +332,13 @@ zroot/
 
 ### 配置交换分区到 `fstab`
 
-将交换分区 `/dev/nda0p5` 添加到临时的 fstab 文件，如此系统启动时即可自动挂载这个交换分区：
+将交换分区 **/dev/nda0p5** 添加到临时的 fstab 文件，如此系统启动时即可自动挂载这个交换分区：
 
 ```sh
 # printf "/dev/nda0p5\tnone\tswap\tsw\t0\t0\n" >> /tmp/bsdinstall_etc/fstab
 ```
 
-注意将 `/dev/nda0p5` 替换为实际的交换分区设备名，可使用 `gpart show nda0` 命令进行确认。
+注意将 **/dev/nda0p5** 替换为实际的交换分区设备名，可使用 `gpart show nda0` 命令进行确认。
 
 > **技巧**
 >
@@ -376,7 +376,7 @@ Windows 文本文件的行尾通常是 `\r\n`（回车 + 换行）。
 # mount -t msdosfs /dev/nda0p1 /media
 ```
 
-注意将 `/dev/nda0p1` 替换为实际的 EFI 分区设备名。
+注意将 **/dev/nda0p1** 替换为实际的 EFI 分区设备名。
 
 - 在 EFI 系统分区中为 FreeBSD 创建启动目录
 
@@ -428,7 +428,7 @@ Windows 文本文件的行尾通常是 `\r\n`（回车 + 换行）。
 
 ### 完成
 
-至此，已手动创建了一套与自动安装程序基本相同的 ZFS 数据集结构（自动安装通常还会创建独立的 `/home/用户名` 数据集，此处未包含）。
+至此，已手动创建了一套与自动安装程序基本相同的 ZFS 数据集结构（自动安装通常还会创建独立的 **/home/用户名** 数据集，此处未包含）。
 
 显示安装后系统的 ZFS 文件系统状态：
 

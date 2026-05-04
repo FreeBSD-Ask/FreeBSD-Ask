@@ -1,10 +1,6 @@
 # 5.7 远程桌面访问
 
-远程桌面协议主要分为两类：基于帧缓冲区的 VNC（RFC 6143）和基于指令流的 RDP（ITU-T T.128）。本节覆盖两种协议在 FreeBSD 下的配置。
-
-## 概述
-
-远程桌面访问技术能让用户通过网络从一台设备远程控制另一台设备的桌面环境。远程桌面协议主要分为两类：基于帧缓冲区的协议（如 VNC，定义于 RFC 6143）和基于指令流的协议（如 RDP，定义于 ITU-T T.128）。
+远程桌面访问技术能让用户通过网络从一台设备远程控制另一台设备的桌面环境。远程桌面协议主要分为两类：基于帧缓冲区的协议（如 VNC，定义于 RFC 6143）和基于指令流的协议（如 RDP，定义于 ITU-T T.128）。本节覆盖两种协议在 FreeBSD 下的配置。
 
 ## 目录结构
 
@@ -120,13 +116,13 @@ $ x11vnc -display :0 -rfbauth ~/.vnc/passwd -auth /var/lib/gdm/:0.Xauth # 或 /r
 
 ### 设置
 
-创建 `~/.vnc/` 路径：
+创建 **~/.vnc/** 路径：
 
 ```sh
 $ mkdir -p ~/.vnc/
 ```
 
-编辑 `~/.vnc/xstartup` 文件，新增以下行：
+编辑 **~/.vnc/xstartup** 文件，新增以下行：
 
 ```sh
 #!/bin/sh
@@ -277,7 +273,7 @@ your environment.
 # service dbus enable          # 设置 D-Bus 服务开机自启动
 ```
 
-编辑 `/usr/local/etc/xrdp/startwm.sh` 文件，找到 `#### start desktop environment`，修改如下：
+编辑 **/usr/local/etc/xrdp/startwm.sh** 文件，找到 `#### start desktop environment`，修改如下：
 
 ```ini
 #### start desktop environment
@@ -293,7 +289,7 @@ your environment.
 
 ### 配置中文环境（用户使用默认的 sh）
 
-编辑 `/usr/local/etc/xrdp/startwm.sh` 文件，添加或修改以下内容以设置环境变量：
+编辑 **/usr/local/etc/xrdp/startwm.sh** 文件，添加或修改以下内容以设置环境变量：
 
 ```sh
 #### set environment variables here if you want

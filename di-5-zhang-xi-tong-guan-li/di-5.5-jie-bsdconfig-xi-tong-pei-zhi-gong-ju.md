@@ -8,7 +8,7 @@
 
 > **技巧**
 >
-> `bsdconfig` 也支持纯字符命令行，参见：FreeBSD Project. bsdconfig(8)[EB/OL]. [2026-03-26]. <https://man.freebsd.org/cgi/man.cgi?bsdconfig(8)>。
+> `bsdconfig` 也支持纯字符命令行。
 
 ## bsdconfig 主菜单的功能与操作
 
@@ -111,9 +111,9 @@
 
 如菜单项名称的首字母是唯一的，可通过输入该字母来选择菜单项。通常它是项目的编号。
 
-控制台驱动程序包含回滚缓冲区，用于查看已滚动出屏幕的内容。要使用回滚功能，请按键盘上的 **Scroll Lock** 键，然后使用箭头键或 **Page Up/Page Down** 键滚动查看保存的文本。要退出回滚模式，再次按 **Scroll Lock** 键。此功能对于查看启动信息非常有用，同时也适用于处理不使用菜单且输出往往滚动到屏幕顶部的子 Shell 或其他“专家模式”。
+控制台驱动程序包含回滚缓冲区，用于查看已滚动出屏幕的内容。要使用回滚功能，请按键盘上的 **Scroll Lock** 键，然后使用箭头键或 **Page Up/Page Down** 键滚动查看保存的文本。要退出回滚模式，再次按 **Scroll Lock** 键。此功能对于查看启动信息非常有用，同时也适用于处理不使用菜单且输出往往滚动到屏幕顶部的子 shell 或其他“专家模式”。
 
-FreeBSD 还支持多个“虚拟控制台”，可以使用它们同时进行多个活动会话。使用 **ALT + F<数字>** 切换屏幕，其中 `F<数字>` 是对应希望查看的屏幕的功能键。默认情况下，系统启用了 8 个虚拟控制台：可以通过编辑 `/etc/ttys` 文件，将相关 vty 条目的 “off” 字段改为 “on” 来启用更多虚拟控制台（多达 12 个）。
+FreeBSD 还支持多个“虚拟控制台”，可以使用它们同时进行多个活动会话。使用 **ALT + F<数字>** 切换屏幕，其中 `F<数字>` 是对应希望查看的屏幕的功能键。默认情况下，系统启用了 8 个虚拟控制台：可以通过编辑 **/etc/ttys** 文件，将相关 vty 条目的 “off” 字段改为 “on” 来启用更多虚拟控制台（多达 12 个）。
 
 ## 2 Documentation installation 安装文档
 
@@ -473,7 +473,7 @@ FreeBSD 还支持多个“虚拟控制台”，可以使用它们同时进行多
 
 可运行 mouse 守护进程以在文本控制台中进行剪切和粘贴。需指定端口和鼠标协议类型后启用守护进程，如不使用此功能，可选择 6 禁用守护进程。
 
-启用鼠标守护进程后，在运行 X 配置工具时可将 `/dev/sysmouse` 设置为鼠标设备，并选择 `SysMouse` 或 `MouseSystems` 作为鼠标协议（参见配置菜单）。
+启用鼠标守护进程后，在运行 X 配置工具时可将 **/dev/sysmouse** 设置为鼠标设备，并选择 `SysMouse` 或 `MouseSystems` 作为鼠标协议（参见配置菜单）。
 
 ```sh
 ┌----------------------┤Please configure your mouse├---------------------┐
@@ -592,7 +592,7 @@ FreeBSD 还支持多个“虚拟控制台”，可以使用它们同时进行多
 
 > **注意**
 >
-> 该界面无法连接 WiFi，因为无法输入密码，此问题已报告至 Bug，参见 [Cannot select any wifi or input password in bsdconfig](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=229883)。
+> 该界面无法连接 Wi-Fi，因为无法输入密码，此问题已报告至 Bug，参见 [Cannot select any wifi or input password in bsdconfig](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=229883)。
 
 | 菜单 | 说明 |
 | ---- | ---- |
@@ -854,7 +854,7 @@ FreeBSD 还支持多个“虚拟控制台”，可以使用它们同时进行多
 要在编辑器中加载 /etc/ttys 文件，选择 [Yes]，否则选择 [No]。
 ```
 
-如选择 `[Yes]`，会使用文本编辑器打开 `/etc/ttys` 文件。
+如选择 `[Yes]`，会使用文本编辑器打开 **/etc/ttys** 文件。
 
 ## 参考文献
 

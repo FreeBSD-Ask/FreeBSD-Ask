@@ -1,12 +1,8 @@
 # 9.7 ZFS 存储池更新
 
-ZFS 存储池采用功能标记（feature flags）机制管理版本，每个功能特性可独立启用或禁用。FreeBSD 大版本升级时 zpool 功能集随之扩展，但升级后旧版系统无法识别新功能集，操作不可逆。
+ZFS 存储池采用功能标记（feature flags）机制管理版本，每个功能特性可独立启用或禁用，兼顾向后兼容与新功能引入。FreeBSD 大版本升级时 zpool 功能集随之扩展，但升级后旧版系统无法识别新功能集，操作不可逆。
 
 ## 更新 zpool
-
-ZFS 存储池采用功能标记（feature flags）机制进行版本管理，这是一种区别于传统单一版本号的精细版本控制方式，每个功能特性可以独立启用或禁用，实现了向后兼容与新功能引入的平衡。
-
-在 FreeBSD 大版本更新时，ZFS 版本通常会相应升级，例如从 14.3 升级到 15.0 时，zpool 的功能集也会随之扩展。
 
 > **警告**
 >
@@ -14,7 +10,7 @@ ZFS 存储池采用功能标记（feature flags）机制进行版本管理，这
 
 ### 验证版本
 
-需要首先对当前系统和 ZFS 版本进行验证。
+首先验证当前系统与 ZFS 版本：
 
 - 查看当前系统版本
 
@@ -39,7 +35,7 @@ zfs-kmod-2.4.0-rc4-FreeBSD_g099f69ff5
 
 ### 进行更新
 
-由于在升级前无法充分利用 ZFS 的新功能，下面将进行升级操作：
+升级前无法使用 ZFS 的新功能，执行升级操作：
 
 ```sh
 # zpool status  # 显示所有 ZFS 池的状态及详细信息
@@ -66,7 +62,7 @@ errors: No known data errors
 >
 > 操作：使用 `zpool upgrade` 启用所有功能。在完成后，未支持这些功能的软件可能无法再访问该存储池。详细信息请参见 `zpool-features(7)`。
 
-确实需要进行更新，但更新后旧系统可能无法启动。先预览有哪些功能会被更新：
+系统提示需要进行更新，但更新后旧系统可能无法启动。先预览会被更新的功能：
 
 ```sh
 # zpool upgrade  # 查看所有 ZFS 池可升级的特性
@@ -180,13 +176,13 @@ NAME   PROPERTY                     VALUE                        SOURCE
 zroot  feature@dynamic_gang_header  disabled                     local
 ```
 
-该特性确实未启用，下面在 zroot 池上启用 `dynamic_gang_header` 特性：
+该特性未启用，下面在 zroot 池上启用 `dynamic_gang_header` 特性：
 
 ```sh
 # zpool set feature@dynamic_gang_header=enabled zroot
 ```
 
-再看看 zroot 池中 dynamic_gang_header 特性的当前状态：
+再检查 zroot 池中 dynamic_gang_header 特性的当前状态：
 
 ```sh
 # zpool get feature@dynamic_gang_header

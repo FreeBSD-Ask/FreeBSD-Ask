@@ -94,15 +94,15 @@ login:
 >
 > ⑥、⑦ 分别切换到了哪些用户或执行了哪些操作？
 
-`su` 命令只能切换到在 `/etc/shells` 中列出的 Shell。`su -` 或 `su -l` 不仅切换用户，还会将工作目录切换到目标用户的主目录，并重置环境变量。
+`su` 命令只能切换到在 **/etc/shells** 中列出的 shell。`su -` 或 `su -l` 不仅切换用户，还会将工作目录切换到目标用户的主目录，并重置环境变量。
 
 BSD 与 GNU `su` 行为比较：
 
 | 项目 | FreeBSD `su` 行为 | Linux `su` 行为 |
 | ---- | ----------------- | --------------- |
 | `-c` | 指定 login class（登录类） | 执行指定命令（command） |
-| `-s` | 设置 MAC label（强制访问控制标签） | 指定登录 Shell |
-| 执行命令方式 | 将命令作为参数传递给目标用户 Shell 执行 | 使用 `-c` 直接执行命令 |
+| `-s` | 设置 MAC label（强制访问控制标签） | 指定登录 shell |
+| 执行命令方式 | 将命令作为参数传递给目标用户 shell 执行 | 使用 `-c` 直接执行命令 |
 
 ## 我要去哪里？
 
@@ -179,7 +179,7 @@ drwxrwxrwt  2 root    wheel  3 Mar 18 17:23 .ICE-unix
 > -sh: ls/: not found
 > ```
 >
-> 可以看到，Shell 会将整个字符串当作一个可执行命令来解析和执行。
+> 可以看到，shell 会将整个字符串当作一个可执行命令来解析和执行。
 
 还需要注意，命令行本身不具备自动纠错功能，即使仅拼错一个字母或少输入一个字符，命令也无法正确执行。
 
@@ -221,7 +221,7 @@ usage: ls [-ABCFGHILPRSTUWZabcdfghiklmnopqrstuvwxy1,] [--color=when] [-D format]
 
 > **技巧**
 >
-> 命令前面的 `#` 表示什么意思？`#` 在 Shell 当中通常是起注释作用（由 [POSIX.1-2024](https://pubs.opengroup.org/onlinepubs/9799919799/utilities/V3_chap02.html) 规定），相当于 C 语言中的 `//`。意味着后边的文字只起到说明作用，不起实际作用。
+> 命令前面的 `#` 表示什么意思？`#` 在 shell 当中通常是起注释作用（由 [POSIX.1-2024](https://pubs.opengroup.org/onlinepubs/9799919799/utilities/V3_chap02.html) 规定），相当于 C 语言中的 `//`。意味着后边的文字只起到说明作用，不起实际作用。
 
 FreeBSD ls 与 GNU ls 比较：
 
@@ -257,7 +257,7 @@ cp: test9: No such file or directory
 
 可以看到，只有当执行中断时，命令行才会有提示；若执行完毕，则不会产生任何提示。这种 UNIX 设计哲学旨在保证终端输出的简洁性。
 
-## Shell 命令的来源
+## shell 命令的来源
 
 ### Linux
 
@@ -286,14 +286,14 @@ util-linux: /bin/su
 
 可见在 Linux 中，这些常见命令一般出自 GNU 软件 coreutils、util-linux 或 procps。这些软件在历史上是 GNU 计划对 UNIX 软件的再实现。
 
-同时，Shell 本身也内置了一些命令：
+同时，shell 本身也内置了一些命令：
 
 ```bash
 $ type cd
 cd 是 shell 内建
 ```
 
-列出所有 Shell 内置命令：
+列出所有 shell 内置命令：
 
 ```bash
 $ compgen -b
@@ -324,7 +324,7 @@ $ type cd
 cd is a shell builtin
 ```
 
-在 FreeBSD 中，除了上述 Shell 内置命令外（参见：sh(1)[EB/OL]. [2026-03-26]. <https://man.freebsd.org/cgi/man.cgi?sh(1)>），常用命令都是基本系统自带的，不属于任何一个包。例如 `ls` 命令，其源代码位于 `freebsd-src/bin/ls/`[EB/OL]. [2026-03-26]. <https://github.com/freebsd/freebsd-src/tree/main/bin/ls>。可见 FreeBSD 系统是一个有机整体，而非由不同人员或团队维护的软件包简单拼凑而成。
+在 FreeBSD 中，除了上述 shell 内置命令外（参见：sh(1)[EB/OL]. [2026-03-26]. <https://man.freebsd.org/cgi/man.cgi?sh(1)>），常用命令都是基本系统自带的，不属于任何一个包。例如 `ls` 命令，其源代码位于 `freebsd-src/bin/ls/`[EB/OL]. [2026-03-26]. <https://github.com/freebsd/freebsd-src/tree/main/bin/ls>。可见 FreeBSD 系统是一个有机整体，而非由不同人员或团队维护的软件包简单拼凑而成。
 
 如果配置了 pkgbase，则输出类似：
 
@@ -341,10 +341,10 @@ cd is a shell builtin
 
 `cd`（change working directory，更改工作目录）
 
-切换到 `/home`：
+切换到 **/home**：
 
 ```sh
-$ cd /home # 切换到 `/home`
+$ cd /home # 切换到 /home
 $ pwd # 查看当前路径
 /home
 ```
@@ -394,7 +394,7 @@ ykla@ykla:~ $ ls
 
 > **技巧**
 >
-> 请以普通用户进行测试，因为 FreeBSD 的 root Shell 总是显示隐藏文件。
+> 请以普通用户进行测试，因为 FreeBSD 的 root shell 总是显示隐藏文件。
 
 ### `touch` 创建文件命令
 
@@ -419,7 +419,7 @@ $ touch test
 > book: PDF document, version 1.7
 >```
 
-`file` 命令通过三组测试依次判定文件类型：文件系统测试（基于 stat(2)）、幻数测试（基于 `/usr/share/misc/magic.mgc` 中的固定格式标识）和语言测试（基于文本模式匹配）。其中“幻数”（magic number）概念源于 UNIX 可执行文件格式，文件头部特定偏移量处存储的固定标识用于指示文件类型。
+`file` 命令通过三组测试依次判定文件类型：文件系统测试（基于 stat(2)）、幻数测试（基于 **/usr/share/misc/magic.mgc** 中的固定格式标识）和语言测试（基于文本模式匹配）。其中“幻数”（magic number）概念源于 UNIX 可执行文件格式，文件头部特定偏移量处存储的固定标识用于指示文件类型。
 
 可以一次性使用多个参数创建多个文件（类似用法几乎是通用的，不再赘述）：
 
@@ -490,7 +490,7 @@ rm: test: No such file or directory # 报错指定的文件或目录不存在
 
 ---
 
-删除路径 `/home/ykla/test`
+删除路径 **/home/ykla/test**
 
 - 若目录为空（不含任何文件，只是空目录）
 
@@ -521,7 +521,7 @@ rm: /home/ykla/test/: is a directory # 提示 /home/ykla/test/ 为目录
 >
 > “从前有座山，山上有座庙，庙里有个老和尚在给小和尚讲故事。老和尚说：‘从前有座山，山上有座庙……’”这就是递归的实例。
 >
-> 在该操作中，其含义是先进入 `/home/ykla/test/` 下最深层的子目录（如存在），删除其中的文件和子目录本身，然后向上逐层重复该过程。直至删除 `/home/ykla/test/`。即使用深度优先搜索算法（Depth-First-Search，DFS）。
+> 在该操作中，其含义是先进入 **/home/ykla/test/** 下最深层的子目录（如存在），删除其中的文件和子目录本身，然后向上逐层重复该过程。直至删除 **/home/ykla/test/**。即使用深度优先搜索算法（Depth-First-Search，DFS）。
 
 ```sh
 $ rm -rf /home/ykla/test/
@@ -529,7 +529,7 @@ $ rm -rf /home/ykla/test/
 
 > **警告**
 >
-> 使用 `rm -rf` 是相当危险的操作，是不可撤销的。若命令中误输入空格，如将 `/home/ykla/test/` 打错成 `/home/ykla /test/`，会导致删除路径错误：
+> 使用 `rm -rf` 是相当危险的操作，是不可撤销的。若命令中误输入空格，如将 **/home/ykla/test/** 打错成 **/home/ykla /test/**，会导致删除路径错误：
 >
 >```sh
 > # rm -rf /home/ykla /test
@@ -539,7 +539,7 @@ $ rm -rf /home/ykla/test/
 
 > **警告**
 >
-> 互联网上常有说法称使用 `sudo rm -rf /*` 是某某命令可以 xxx，误导他人对系统造成不可挽回的灾难性破坏。该命令实质上是以 root 权限（~~还好 FreeBSD 默认没有 sudo~~），删除 `/` 及其子目录下的一切存在。现在展示一下结果：
+> 互联网上常有说法称使用 `sudo rm -rf /*` 是某某命令可以 xxx，误导他人对系统造成不可挽回的灾难性破坏。该命令实质上是以 root 权限（~~还好 FreeBSD 默认没有 sudo~~），删除 **/** 及其子目录下的一切存在。现在展示一下结果：
 >
 >```sh
 > # rm -rf /*
@@ -566,14 +566,14 @@ $ rm -rf /home/ykla/test/
 
 ---
 
-将文件 `test` 移动到 `/home/ykla`：
+将文件 `test` 移动到 **/home/ykla**：
 
 ```sh
 $ mv -v test /home/ykla # -v 选项用于显示文件变动详情，是 verbose 的缩写，意为输出详细信息
 test -> /home/ykla/test
 ```
 
-将目录及子目录移动到 `/home/ykla`
+将目录及子目录移动到 **/home/ykla**
 
 ---
 
@@ -599,20 +599,20 @@ test2 -> test2.pdf
 
 ---
 
-将文件 `test` 复制到 `/home/ykla`
+将文件 `test` 复制到 **/home/ykla**
 
 ```sh
 $ cp test /home/ykla/
 ```
 
-末尾的 `/` 不可省略，如果缺少了末尾的 `/`，且子目录 ykla 不存在，`test` 将被重命名为 `ykla`（ykla 本应为一个目录）：
+末尾的 **/** 不可省略，如果缺少了末尾的 **/**，且子目录 ykla 不存在，`test` 将被重命名为 `ykla`（ykla 本应为一个目录）：
 
 ```sh
 $ cp test /home/ykla/
 cp: directory /home/ykla does not exist # 若加上 /，会提示目录不存在
 ```
 
-若缺少了末尾的 `/`：
+若缺少了末尾的 **/**：
 
 ```sh
 $ cp -v test /home/ykla # -v 选项用于显示文件变动详情，是 verbose 的缩写，意为输出详细信息
@@ -716,9 +716,9 @@ make BATCH=yes install || make BATCH=yes install || make BATCH=yes install || ma
 
 ## 重定向输入输出
 
-UNIX Shell 还能使用户执行命令、重定向其输出、重定向其输入，并将多个命令组合在一起以优化最终输出。
+UNIX shell 还能使用户执行命令、重定向其输出、重定向其输入，并将多个命令组合在一起以优化最终输出。
 
-Shell 重定向是将命令的输出或输入发送到另一个命令或文件中的操作。例如，将 [ls(1)](https://man.freebsd.org/cgi/man.cgi?query=ls&sektion=1&format=html) 命令的输出捕获到一个文件中，可以这样重定向输出：
+shell 重定向是将命令的输出或输入发送到另一个命令或文件中的操作。例如，将 ls(1) 命令的输出捕获到一个文件中，可以这样重定向输出：
 
 ```sh
 $ ls -l > test.txt
@@ -737,7 +737,7 @@ drw-------  2 ykla ykla 2 Apr 28 00:24 test
 
 >**技巧**
 >
->有些命令可以读取输入，比如 [sort(1)](https://man.freebsd.org/cgi/man.cgi?query=sort&sektion=1&format=html)。要对该列表进行排序，可以这样重定向输入：
+>有些命令可以读取输入，比如 sort(1)。要对该列表进行排序，可以这样重定向输入：
 
 ```sh
 $ sort < test.txt
@@ -746,7 +746,7 @@ drw-------  2 ykla ykla 2 Apr 28 00:24 test
 total 1
 ```
 
-输入会被排序并显示在屏幕上。要将该输入重定向到另一个文件，可以将 [sort(1)](https://man.freebsd.org/cgi/man.cgi?query=sort&sektion=1&format=html) 的输出重定向出去，操作如下：
+输入会被排序并显示在屏幕上。要将该输入重定向到另一个文件，可以将 sort(1) 的输出重定向出去，操作如下：
 
 ```sh
 $ sort < test.txt > sorted.txt
@@ -769,7 +769,7 @@ drw-------  2 ykla ykla 2 Apr 28 00:24 test
 total 1
 ```
 
-在此示例中，`directory_listing.txt` 的内容将被排序，然后输出传递给 [less(1)](https://man.freebsd.org/cgi/man.cgi?query=less&sektion=1&format=html)。这使用户可以按自己的节奏浏览输出内容，防止其在屏幕上滚动消失。
+在此示例中，`directory_listing.txt` 的内容将被排序，然后输出传递给 less(1)。这使用户可以按自己的节奏浏览输出内容，防止其在屏幕上滚动消失。
 
 ## BSD 风格的 make/grep/sed/awk
 
@@ -818,7 +818,7 @@ FreeBSD 的设计更接近传统 UNIX 的行为。
 
 > **技巧**
 >
-> 当使用上述命令关闭 FreeBSD 时，系统将调用 Shell 脚本 `/etc/rc.shutdown`。该脚本按 *rc.d* 脚本列表的逆序依次执行，以关闭系统服务。（参见 FreeBSD Project. rc.shutdown[EB/OL]. (2026-04-09)[2026-04-09]. <https://github.com/freebsd/freebsd-src/blob/main/libexec/rc/rc.shutdown>）
+> 当使用上述命令关闭 FreeBSD 时，系统将调用 shell 脚本 **/etc/rc.shutdown**。该脚本按 *rc.d* 脚本列表的逆序依次执行，以关闭系统服务。（参见 FreeBSD Project. rc.shutdown[EB/OL]. (2026-04-09)[2026-04-09]. <https://github.com/freebsd/freebsd-src/blob/main/libexec/rc/rc.shutdown>）
 
 > **注意**
 >
@@ -834,4 +834,4 @@ FreeBSD 的设计更接近传统 UNIX 的行为。
 
 1. 对比 BSD 风格的 sed/awk/grep 与 GNU 版本在常用选项上的差异，编写兼容性对照表，并给出在 FreeBSD 上实现跨平台脚本的策略。
 2. 查阅 FreeBSD 中 `ls` 命令的源代码实现（`bin/ls/`），与 GNU coreutils 中的 `ls` 在选项解析和输出格式化方面的实现进行比较。
-3. Unix 命令行的设计哲学强调“每个程序只做一件事并将其做好”。分析这一原则在大语言模型辅助 Shell 编程场景下的适用性变化，讨论 AI 辅助代码生成是否改变了对命令行工具设计原则的需求。
+3. Unix 命令行的设计哲学强调“每个程序只做一件事并将其做好”。分析这一原则在大语言模型辅助 shell 编程场景下的适用性变化，讨论 AI 辅助代码生成是否改变了对命令行工具设计原则的需求。

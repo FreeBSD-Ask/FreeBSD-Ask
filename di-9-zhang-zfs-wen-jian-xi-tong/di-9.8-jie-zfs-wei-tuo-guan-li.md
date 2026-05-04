@@ -4,11 +4,11 @@
 
 ZFS 委托管理（ZFS delegation）是一种细粒度的权限控制机制，能让系统管理员将特定的 ZFS 管理权限授予非特权用户，而无需提供完整的 root 访问权限。自 FreeBSD 14.1 起，adduser 会自动为非特权用户的 ZFS 主目录创建独立数据集并支持加密。
 
-该变更（commit 516009ce8d38）使 `adduser(8)` 在用户主目录的父目录为 ZFS 数据集时，自动为用户创建独立 ZFS 数据集，例如 `/home/xxx` 继承自 `/home`。`adduser` 的 `-Z` 参数可禁用此行为，同时现已支持为非特权用户的 ZFS 主目录启用加密。
+该变更（commit 516009ce8d38）使 `adduser(8)` 在用户主目录的父目录为 ZFS 数据集时，自动为用户创建独立 ZFS 数据集，例如 **/home/xxx** 继承自 **/home**。`adduser` 的 `-Z` 参数可禁用此行为，同时支持为非特权用户的 ZFS 主目录启用加密。
 
 ## 基础用户级 ZFS 管理
 
-首先介绍非特权用户的 ZFS 数据集。在安装系统时，手动创建了两个普通用户 aria2 和 safreya。
+以非特权用户的 ZFS 数据集为例。安装系统时手动创建了两个普通用户 aria2 和 safreya。
 
 列出系统中所有 ZFS 文件系统及其属性：
 
@@ -106,9 +106,9 @@ zroot/home/safreya/dataset_2                    96K   396G    96K  /home/safreya
 % zfs destroy zroot/home/safreya/dataset_2        # 删除 ZFS 数据集 zroot/home/safreya/dataset_2
 ```
 
-由输出可知，创建和销毁权限可以正常使用，而挂载权限需要通过开启内核参数 `vfs.usermount` 来允许用户级挂载。
+由输出可知，创建和销毁权限可正常使用，而挂载权限需开启内核参数 `vfs.usermount` 才能支持用户级挂载。
 
-至此，用户级 ZFS 管理的基本需求已经满足。但仔细观察会发现 `rollback` 权限默认不可用，需要由 root 用户为普通用户授予该权限。
+至此，用户级 ZFS 管理的基本功能已就绪。但 `rollback` 权限默认不可用，需由 root 用户为普通用户单独授予。
 
 将 zroot/home/safreya 文件系统回滚到 snap1 快照状态：
 
@@ -215,7 +215,7 @@ Local+Descendent permissions:
 
 ## adduser 与用户主目录加密
 
-adduser 命令中可以直接使用加密的用户主目录数据集，但默认给出的权限不足，一经卸载就无法由普通用户直接挂载。
+adduser 命令中可直接使用加密的用户主目录数据集，但默认授予的权限不足，卸载后无法由普通用户直接挂载。
 
 ```sh
 # adduser        # 在系统中添加新用户，按照提示输入用户名、密码及其他信息
@@ -276,7 +276,7 @@ Local+Descendent permissions:
 切换到普通用户 `test` 尝试挂载：
 
 ```sh
-# su test        # 切换到普通用户 `test`
+# su test        # 切换到普通用户 test
 $ zfs load-key zroot/home/test        # 加载 zroot/home/test 数据集的加密密钥
 Enter passphrase for 'zroot/home/test':
 Key load error: Permission denied.

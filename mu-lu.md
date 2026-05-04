@@ -92,7 +92,7 @@
 * [8.2 自动挂载文件系统](di-8-zhang-cun-chu-yu-wen-jian-xi-tong-guan-li/di-8.2-jie-zi-dong-gua-zai-wen-jian-xi-tong.md)
 * [8.3 Linux 文件系统](di-8-zhang-cun-chu-yu-wen-jian-xi-tong-guan-li/di-8.3-jie-linux-wen-jian-xi-tong.md)
 * [8.4 Windows 文件系统](di-8-zhang-cun-chu-yu-wen-jian-xi-tong-guan-li/di-8.4-jie-windows-wen-jian-xi-tong.md)
-* [8.5 Swap 分区](di-8-zhang-cun-chu-yu-wen-jian-xi-tong-guan-li/di-8.5-jie-swap-fen-qu.md)
+* [8.5 swap 分区](di-8-zhang-cun-chu-yu-wen-jian-xi-tong-guan-li/di-8.5-jie-swap-fen-qu.md)
 
 ## 第 9 章 ZFS 文件系统
 
@@ -182,7 +182,7 @@
 
 * [18.1 账户认证安全](di-18-zhang-an-quan/di-18.1-jie-zhang-hu-ren-zheng-an-quan.md)
 * [18.2 资源限制](di-18-zhang-an-quan/di-18.2-jie-zi-yuan-xian-zhi.md)
-* [18.3 安全级别](di-18-zhang-an-quan/di-18.3-jie-an-quan-ji-bie.md)
+* [18.3 安全等级](di-18-zhang-an-quan/di-18.3-jie-an-quan-ji-bie.md)
 * [18.4 安全事件审计](di-18-zhang-an-quan/di-18.4-jie-an-quan-shi-jian-shen-ji.md)
 * [18.5 OpenSSL](di-18-zhang-an-quan/di-18.5-jie-openssl.md)
 * [18.6 入侵检测系统（IDS）](di-18-zhang-an-quan/di-18.6-jie-ru-qin-jian-ce-xi-tong.md)

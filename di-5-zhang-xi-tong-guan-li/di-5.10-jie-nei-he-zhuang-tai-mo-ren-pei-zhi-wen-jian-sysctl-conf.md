@@ -15,9 +15,9 @@ sysctl 命令支持读取和写入内核状态变量。
 | `-n` | 仅输出变量值，不输出名称 | 适用于设置 Shell 变量，如 `set psize=$(sysctl -n hw.pagesize)` |
 | `-j jail` | 在指定 Jail 中执行操作 | |
 
-在系统进入多用户模式时将读取 `/etc/sysctl.conf` 文件，用于设置内核的默认配置。
+在系统进入多用户模式时将读取 **/etc/sysctl.conf** 文件，用于设置内核的默认配置。
 
-在系统启动过程中，`/etc/sysctl.conf` 文件将由 `/etc/rc.d/sysctl` 脚本加载，采用 sysctl(8) 命令的格式，即：
+在系统启动过程中，**/etc/sysctl.conf** 文件将由 **/etc/rc.d/sysctl** 脚本加载，采用 sysctl(8) 命令的格式，即：
 
 ```ini
 sysctl_管理信息标识符=值
@@ -42,13 +42,13 @@ sysctl 的默认源代码在 [/sbin/sysctl/](https://github.com/freebsd/freebsd-
 
 > **技巧**
 >
-> 不建议直接修改 `/etc/sysctl.conf` 文件，如需自定义配置，应使用 `/etc/sysctl.conf.local` 文件进行本地配置扩展，避免系统更新时配置被覆盖。
+> 不建议直接修改 **/etc/sysctl.conf** 文件，如需自定义配置，应使用 **/etc/sysctl.conf.local** 文件进行本地配置扩展，避免系统更新时配置被覆盖。
 
-## 默认读取的配置文件 `/etc/sysctl.conf`
+## 默认读取的配置文件 **/etc/sysctl.conf**
 
-[sysctl.conf(5)](https://man.freebsd.org/sysctl.conf) 用于配置内核的默认参数，位于 `/etc/sysctl.conf` 文件，对应源代码 [/sbin/sysctl/sysctl.conf](https://github.com/freebsd/freebsd-src/blob/main/sbin/sysctl/sysctl.conf)。
+sysctl.conf(5) 用于配置内核的默认参数，位于 **/etc/sysctl.conf** 文件，对应源代码 [/sbin/sysctl/sysctl.conf](https://github.com/freebsd/freebsd-src/blob/main/sbin/sysctl/sysctl.conf)。
 
-默认的 `/etc/sysctl.conf` 文件实际上是空文件：
+默认的 **/etc/sysctl.conf** 文件实际上是空文件：
 
 ```sh
 #  此文件在系统进入多用户模式时读取，其内容通过 sysctl 管道传递以调整内核值
@@ -67,7 +67,7 @@ sysctl 的默认源代码在 [/sbin/sysctl/](https://github.com/freebsd/freebsd-
 
 > **警告**
 >
-> 虽然 `/etc/sysctl.conf` 文件实质上为空，但这不代表系统默认的 sysctl 参数为空！它们是通过不同的宏（如 `SYSCTL_INT`）注入到系统中的！使用命令 `sysctl -a` 可列出当前系统所有默认的参数值。
+> 虽然 **/etc/sysctl.conf** 文件实质上为空，但这不代表系统默认的 sysctl 参数为空！它们是通过不同的宏（如 `SYSCTL_INT`）注入到系统中的！使用命令 `sysctl -a` 可列出当前系统所有默认的参数值。
 
 ## 参考文献
 
@@ -76,6 +76,6 @@ sysctl 的默认源代码在 [/sbin/sysctl/](https://github.com/freebsd/freebsd-
 
 ## 课后习题
 
-1. 创建 `/etc/sysctl.conf.local` 文件并设置几个自定义 sysctl 参数，验证其是否覆盖系统默认值，分析 sysctl 配置文件的加载顺序。
+1. 创建 **/etc/sysctl.conf.local** 文件并设置几个自定义 sysctl 参数，验证其是否覆盖系统默认值，分析 sysctl 配置文件的加载顺序。
 2. 查阅一个 sysctl 参数的源代码实现（如通过 `SYSCTL_INT` 宏定义），分析其读写权限控制与值域校验的实现机制。
 3. 启用 `security.bsd.see_other_uids=0` 和 `security.bsd.see_other_gids=0`，对比启用前后普通用户能看到的进程信息差异，分析该安全策略在进程可见性控制层面的实现原理。

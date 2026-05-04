@@ -6,9 +6,9 @@ USB 网络共享（USB tethering）是一种通过通用串行总线（Universal
 
 以下配置方法已在红米 Note 12 5G 上完成测试验证，从技术原理而言可同时支持 Android 和 iOS 设备。
 
-### WiFi 共享的流量特性
+### Wi-Fi 共享的流量特性
 
-对于大多数新款 Android 手机，可在开启 WiFi 并关闭移动数据的同时将网络共享给 FreeBSD。该功能通过将手机已建立的 WiFi 连接经由 USB 接口转发给 FreeBSD 实现，不会产生移动数据流量消耗。
+对于大多数新款 Android 手机，可在开启 Wi-Fi 并关闭移动数据的同时将网络共享给 FreeBSD。该功能通过将手机已建立的 Wi-Fi 连接经由 USB 接口转发给 FreeBSD 实现，不会产生移动数据流量消耗。
 
 ![USB 网络共享](../.gitbook/assets/tethering.png)
 
@@ -50,7 +50,7 @@ Android 设备使用通信设备类以太网控制模型/网络控制模型（Co
 
 ## 持久化驱动加载机制
 
-若需要系统启动时自动加载上述模块，可根据设备类型选择相应条目写入到 `/boot/loader.conf` 文件：
+若需要系统启动时自动加载上述模块，可根据设备类型选择相应条目写入 **/boot/loader.conf** 文件：
 
 ```ini
 if_urndis_load="YES"  # 设置系统启动时自动加载 USB RNDIS 网络驱动

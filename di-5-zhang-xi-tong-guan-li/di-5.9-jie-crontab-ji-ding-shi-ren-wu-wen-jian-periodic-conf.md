@@ -2,7 +2,7 @@
 
 ## periodic.conf 的功能与目录结构
 
-[periodic.conf(5)](https://man.freebsd.org/cgi/man.cgi?periodic.conf) 文件包含了每日、每周和每月系统维护任务应如何运行的说明。`periodic` 是 FreeBSD 的系统维护任务框架，负责执行定期的系统维护工作，如日志轮转、安全检查等。这些任务通过 `periodic` 命令执行，由 `cron` 守护进程按预设时间表自动调用。
+periodic.conf(5) 文件包含了每日、每周和每月系统维护任务应如何运行的说明。`periodic` 是 FreeBSD 的系统维护任务框架，负责执行定期的系统维护工作，如日志轮转、安全检查等。这些任务通过 `periodic` 命令执行，由 `cron` 守护进程按预设时间表自动调用。
 
 与 `periodic`、`cron` 有关的配置和路径如下：
 
@@ -32,7 +32,7 @@
         └── tabs/                   # 个人 crontab 文件目录
 ```
 
-[periodic.conf(5)](https://man.freebsd.org/cgi/man.cgi?periodic.conf) 文件位于 `/etc/defaults` 目录下，其部分内容可被 `/etc` 目录下同名文件覆盖，而 `/etc` 下的文件又可被 `/etc/periodic.conf.local` 文件所覆盖。
+periodic.conf(5) 文件位于 **/etc/defaults** 目录下，其部分内容可被 **/etc** 目录下同名文件覆盖，而 **/etc** 下的文件又可被 **/etc/periodic.conf.local** 文件所覆盖。
 
 源代码路径结构：
 
@@ -42,7 +42,7 @@
 
 ## 附录：示例分析
 
-以 `locate` 命令所依赖的路径数据库 `/var/db/locate.database` 文件为例，该数据库由 `/etc/periodic/weekly/310.locate` 脚本每周自动更新一次。
+以 `locate` 命令所依赖的路径数据库 **/var/db/locate.database** 文件为例，该数据库由 **/etc/periodic/weekly/310.locate** 脚本每周自动更新一次。
 
 如需立即更新数据库，可直接执行该脚本：
 
@@ -60,7 +60,7 @@ Rebuilding locate database:
 /var/db/locate.database
 ```
 
-crontab: `cron` 配置，位于 `/etc/crontab`，可参阅 [crontab(5)](https://man.freebsd.org/cgi/man.cgi?crontab(5))。
+crontab: `cron` 配置，位于 **/etc/crontab**，可参阅 crontab(5)。
 
 ## 参考文献
 
@@ -69,6 +69,6 @@ crontab: `cron` 配置，位于 `/etc/crontab`，可参阅 [crontab(5)](https://
 
 ## 课后习题
 
-1. 创建一个自定义 periodic 脚本放入 `/usr/local/etc/periodic/daily/`，配置 `periodic.conf` 使其运行，分析 periodic 脚本的命名规则与执行顺序机制。
-2. 修改 `/etc/crontab` 文件中 periodic 任务的执行时间，对比修改前后系统日志中任务执行时间的变化。
+1. 创建一个自定义 periodic 脚本放入 **/usr/local/etc/periodic/daily/**，配置 `periodic.conf` 使其运行，分析 periodic 脚本的命名规则与执行顺序机制。
+2. 修改 **/etc/crontab** 文件中 periodic 任务的执行时间，对比修改前后系统日志中任务执行时间的变化。
 3. 禁用某个默认的 periodic 任务（如 weekly 的 `310.locate`），观察其对 `locate` 命令数据库更新频率的影响。

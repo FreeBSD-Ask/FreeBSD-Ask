@@ -58,7 +58,7 @@
 
 ## 鼠标无法移动
 
-若在 Parallels Desktop 中遇到 FreeBSD 鼠标无法移动的问题，可在 `/boot/loader.conf.local`（推荐使用本地配置扩展文件，避免直接修改系统默认配置 `/boot/loader.conf`）中添加如下配置：
+若在 Parallels Desktop 中遇到 FreeBSD 鼠标无法移动的问题，可在 **/boot/loader.conf.local**（推荐使用本地配置扩展文件，避免直接修改系统默认配置 **/boot/loader.conf**）中添加如下配置：
 
 ```sh
 ums_load="YES"
@@ -85,7 +85,7 @@ ums_load="YES"
 
 > **注意**
 >
-> 若通过 Ports 编译安装，需确保当前系统的源代码位于 `/usr/src` 目录下。
+> 若通过 Ports 编译安装，需确保当前系统的源代码位于 **/usr/src** 目录下。
 
 ### 参考文献
 

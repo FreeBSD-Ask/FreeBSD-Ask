@@ -10,7 +10,7 @@ UEFI 引导过程与传统 BIOS 引导过程在架构上不同。
 
 在传统 BIOS 系统中，固件读取主引导记录（MBR）中的引导代码并执行。
 
-在 UEFI 系统中，固件直接从 EFI 系统分区（ESP）上的 FAT32 文件系统中加载 EFI 应用程序。ESP 是一个专用分区，其分区类型 GUID 为 `C12A7328-F81F-11D2-BA4B-00A0C93EC93B`，通常挂载于 `/boot/efi`。FreeBSD 的 UEFI 引导加载程序为 `loader.efi`，安装至 ESP 后由固件直接加载执行。
+在 UEFI 系统中，固件直接从 EFI 系统分区（ESP）上的 FAT32 文件系统中加载 EFI 应用程序。ESP 是一个专用分区，其分区类型 GUID 为 `C12A7328-F81F-11D2-BA4B-00A0C93EC93B`，通常挂载于 **/boot/efi**。FreeBSD 的 UEFI 引导加载程序为 `loader.efi`，安装至 ESP 后由固件直接加载执行。
 
 ## UEFI 系统检测方法
 
@@ -57,7 +57,7 @@ BootOrder  : 0002, 0003, 0000, 0001
 >
 > 使用 `efibootmgr -v` 可查看详细信息。
 
-设置 rEFInd 优先启动（这并不意味着它是默认启动项，仅是改变 BIOS/UEFI 中的启动顺序）：
+设置 rEFInd 优先启动（这并非将其设为默认启动项，仅改变 BIOS/UEFI 中的启动顺序）：
 
 设置 EFI 启动顺序为 0000, 0001, 0002, 0003：
 
@@ -118,7 +118,7 @@ EFI 分区的目录结构如下：
 
 输出 `msdosfs`，表明这是 Windows 磁盘上的 EFI 分区。
 
-接下来挂载 ada0 磁盘上的 EFI 分区到 FreeBSD 的 `/mnt/efi`：
+接下来挂载 ada0 磁盘上的 EFI 分区到 FreeBSD 的 **/mnt/efi**：
 
 ```sh
 # mount -t msdosfs /dev/ada0p2 /mnt/efi
@@ -142,7 +142,7 @@ EFI 分区的目录结构如下：
 # efibootmgr -c -l /mnt/efi/EFI/freebsd/bootx64.efi -L "FreeBSD 15.0"
 ```
 
-重启进入 Windows，使用 easyuefi 激活 `FreeBSD 15.0` 启动项。
+重启进入 Windows，使用 EasyUEFI 激活 `FreeBSD 15.0` 启动项。
 
 确认 FreeBSD 可正常启动后，方可使用 [DiskGenius](https://www.diskgenius.cn/) 或其他分区工具删除 nda0 磁盘的 EFI 分区及其文件。
 
@@ -174,7 +174,7 @@ Unreferenced Variables:
 
 ESP 通常已经挂载到了 **/boot/efi**。如果没有，可手动挂载，使用 `efibootmgr` 输出中列出的分区（本例为 `nda0p1`）：`mount_msdosfs /dev/nda0p1 /boot/efi`。另一示例请参阅 [loader.efi(8)](https://man.freebsd.org/cgi/man.cgi?query=loader.efi&sektion=8&format=html)。
 
-在 `efibootmgr -v` 输出的 `File` 字段中的值，如 `\efi\freebsd\loader.efi`，是 EFI 上正在使用的引导加载程序的位置。若挂载点是 **/boot/efi**，则此文件为 `/boot/efi/efi/freebsd/loader.efi`。（在 FAT32 文件系统上大小写不敏感；FreeBSD 使用小写）`File` 的另一个常见值可能是 `\EFI\boot\bootXXX.efi`，其中 `XXX` 是 amd64（即 `x64`）、aarch64（即 `aa64`）或 riscv64（即 `riscv64`）；如未配置，则为默认引导加载程序。应将 **/boot/loader.efi** 复制到 **/boot/efi** 中的正确路径来更新已配置及默认的引导加载程序。
+在 `efibootmgr -v` 输出的 `File` 字段中的值，如 `\efi\freebsd\loader.efi`，是 EFI 系统分区上正在使用的引导加载程序的位置。若挂载点是 **/boot/efi**，则此文件为 **/boot/efi/efi/freebsd/loader.efi**。（在 FAT32 文件系统上大小写不敏感；FreeBSD 使用小写）`File` 的另一个常见值可能是 `\EFI\boot\bootXXX.efi`，其中 `XXX` 是 amd64（即 `x64`）、aarch64（即 `aa64`）或 riscv64（即 `riscv64`）；如未配置，则为默认引导加载程序。应将 **/boot/loader.efi** 复制到 **/boot/efi** 中的正确路径来更新已配置及默认的引导加载程序。
 
 ### 更新方法
 
@@ -210,9 +210,9 @@ FreeBSD/amd64 EFI loader, Revision 1.1
 FreeBSD/amd64 EFI loader, Revision 3.0
 ```
 
-此处命令参考了手册 [loader.efi](https://man.freebsd.org/cgi/man.cgi?query=loader.efi) 中的例子。`/boot/efi/efi/freebsd/loader.efi` 为当前正在使用的 loader（版本确实较旧）。
+此处命令参考了手册 loader.efi 中的例子。**/boot/efi/efi/freebsd/loader.efi** 为当前正在使用的 loader（版本确实较旧）。
 
-将 `/boot/loader.efi` 复制到 EFI 系统分区的 FreeBSD 目录下进行更新：
+将 **/boot/loader.efi** 复制到 EFI 系统分区的 FreeBSD 目录下进行更新：
 
 ```sh
 # cp /boot/loader.efi /boot/efi/efi/freebsd/
@@ -228,7 +228,7 @@ FreeBSD/amd64 EFI loader, Revision 3.0
 
 ## Grub
 
-目前测试显示，在 UEFI + ZFS 环境下，GRUB 无法直接引导 FreeBSD 内核启动系统，只能通过 GRUB 的 chainload 机制（例如使用 `chainloader +1` 配置）间接引导。在传统 BIOS 启动 + UFS 根文件系统的环境下，GRUB 可通过 `kfreebsd` 命令直接引导 FreeBSD 内核。
+经测试，在 UEFI + ZFS 环境下，GRUB 无法直接引导 FreeBSD 内核，只能通过 chainload 机制（如配置 `chainloader +1`）间接引导。在传统 BIOS 启动 + UFS 根文件系统的环境下，GRUB 可通过 `kfreebsd` 命令直接引导 FreeBSD 内核。
 
 ```ini
 menuentry "FreeBSD-13.0 Release" { # 指定 GRUB 条目名称
@@ -239,7 +239,7 @@ chainloader /boot/boot1.efi # 指定 FreeBSD 的 EFI 引导文件
 
 ### 故障排除
 
-目前配置的报错（`grub2-efi` FBSD 15.0）：
+目前配置的报错（`grub2-efi` FreeBSD 15.0）：
 
 ```sh
 # grub-install --target=x86_64-efi --efi-directory=/boot/efi/efi/ --bootloader-id=grub --boot-directory=/boot/ --modules="part_gpt part_msdos bsd zfs"
@@ -253,9 +253,7 @@ grub-install: error: unknown filesystem.
 
 ## rEFInd 引导管理器（多系统引导管理）
 
-在多系统环境下，频繁通过 BIOS 固件界面切换操作系统效率较低。
-
-可借助 [rEFInd](https://www.rodsbooks.com/refind/) 实现类似于 Clover 的可视化启动菜单效果，在开机时直观地选择要进入的操作系统。
+在多系统环境下，频繁进入 BIOS 固件界面切换操作系统效率较低。可借助 [rEFInd](https://www.rodsbooks.com/refind/) 实现类似于 Clover 的可视化启动菜单效果，在开机时直观地选择要进入的操作系统。
 
 `rEFInd` 派生自 `rEFIt`，其名称结合了“refind”（意为“重新发现”或“改进”）与“EFI”（Extensible Firmware Interface，可扩展固件接口），主要用于管理 UEFI 启动，具有良好的图形化界面与可配置性。
 

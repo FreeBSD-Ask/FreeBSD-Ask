@@ -1,52 +1,52 @@
 # 4.3 系统目录结构
 
-FreeBSD 遵循 hier(7) 规范组织文件系统层次结构，根目录 / 在系统启动时首个被挂载，包含进入多用户模式所需的基本系统。本节逐级解释根目录下各子目录的功能与设计原则。
+FreeBSD 遵循 hier(7) 规范组织文件系统层次结构，根目录 **/** 在系统启动时首个被挂载，包含进入多用户模式所需的基本系统。本节逐级解释根目录下各子目录的功能与设计原则。
 
 ## 目录结构概览
 
-根目录（/）是文件系统的最顶层目录，在系统启动时第一个被挂载，包含操作系统进入多用户模式所需的基本系统。根目录还包含其他文件系统的挂载点。挂载点是附加文件系统可以挂载到父文件系统（通常是根文件系统）上的目录。标准挂载点包括 `/usr/`、`/var/`、`/tmp/`、`/mnt/` 和 `/media/`。完整的文件系统层次结构描述参见 hier(7)。
+根目录（**/**）是文件系统的最顶层目录，在系统启动时第一个被挂载，包含操作系统进入多用户模式所需的基本系统。根目录还包含其他文件系统的挂载点。挂载点是附加文件系统可以挂载到父文件系统（通常是根文件系统）上的目录。标准挂载点包括 **/usr/**、**/var/**、**/tmp/**、**/mnt/** 和 **/media/**。完整的文件系统层次结构描述参见 hier(7)。
 
 ## FreeBSD 目录结构的设计原则
 
 FreeBSD 的目录结构设计遵循以下原则：
 
-- **单一根目录原则**：与 Windows 等系统采用多根（多盘符）的设计不同，UNIX 系统采用单一根目录（`/`）作为整个文件系统的起点。所有存储设备、分区和网络文件系统均以挂载的方式接入统一的目录树中。
+- **单一根目录原则**：与 Windows 等系统采用多根（多盘符）的设计不同，UNIX 系统采用单一根目录（**/**）作为整个文件系统的起点。所有存储设备、分区和网络文件系统均以挂载的方式接入统一的目录树中。
 
-- **功能分离原则**：将不同功能的文件分配到不同的目录中，各文件系统可独立管理、挂载和备份。例如，将系统二进制文件（`/bin`、`/sbin`）与用户应用程序（`/usr/local`）分离，将配置文件（`/etc`）与日志数据（`/var/log`）分离。`/var` 包含日志目录、假脱机目录和临时文件，可能被填满，因此应与 `/` 分离。
+- **功能分离原则**：将不同功能的文件分配到不同的目录中，各文件系统可独立管理、挂载和备份。例如，将系统二进制文件（**/bin**、**/sbin**）与用户应用程序（**/usr/local**）分离，将配置文件（**/etc**）与日志数据（**/var/log**）分离。**/var** 包含日志目录、假脱机目录和临时文件，可能被填满，因此应与 **/** 分离。
 
-- **基本系统与第三方软件分离原则**：FreeBSD 将基本系统与第三方软件严格分离。基本系统组件安装在 `/bin`、`/sbin`、`/usr/bin`、`/usr/sbin`、`/usr/lib` 等目录中，通过 Ports 或 pkg 安装的第三方软件统一安装到 `/usr/local/` 下的对应子目录中（如 `/usr/local/bin`、`/usr/local/lib`、`/usr/local/etc`）。
+- **基本系统与第三方软件分离原则**：FreeBSD 将基本系统与第三方软件严格分离。基本系统组件安装在 **/bin**、**/sbin**、**/usr/bin**、**/usr/sbin**、**/usr/lib** 等目录中，通过 Ports 或 pkg 安装的第三方软件统一安装到 **/usr/local/** 下的对应子目录中（如 **/usr/local/bin**、**/usr/local/lib**、**/usr/local/etc**）。
 
-- **静态与动态数据分离原则**：静态数据（如二进制文件、库文件、文档）与动态数据（如日志、临时文件、运行时数据）分别存储于不同的目录树中。`/usr` 主要存放静态的只读数据，`/var` 则存放可变的运行时数据，`/tmp` 存放临时文件。
+- **静态与动态数据分离原则**：静态数据（如二进制文件、库文件、文档）与动态数据（如日志、临时文件、运行时数据）分别存储于不同的目录树中。**/usr** 主要存放静态的只读数据，**/var** 则存放可变的运行时数据，**/tmp** 存放临时文件。
 
 ## FHS 与 FreeBSD 目录结构
 
 文件系统层次标准（FHS）由 Linux 基金会维护，定义类 UNIX 操作系统中目录结构和目录内容的规范，当前版本为 FHS 3.0，发布于 2015 年。
 
-FreeBSD 的目录层次由 `hier(7)` 手册页定义。与 FHS 相比，FreeBSD 的目录结构存在以下差异：
+FreeBSD 的目录层次由 `hier(7)` 定义。与 FHS 相比，FreeBSD 的目录结构存在以下差异：
 
 | 项目 | FHS | FreeBSD |
 | ---- | --- | ------- |
-| `/usr/local` | 管理员本地安装，初始为空 | pkg/ports 安装第三方软件默认路径 |
-| 配置文件 | 第三方 `/etc/opt`，建议使用子目录 | 第三方 `/usr/local/etc`，系统 `/etc` |
-| `/bin`、`/sbin`、`/lib` | 独立目录，与 `/usr` 分离 | 独立目录，与 `/usr` 分离 |
-| `/libexec` | 可选，与 `/usr/lib` 二选一存放内部二进制 | 根和 `/usr` 下均有，系统辅助程序 |
-| `/rescue` | 未定义 | 静态链接紧急修复工具 |
-| `/srv` | 必选，服务数据（ftp、www 等） | 未定义 |
-| `/opt` | 必选，`/opt/<package>` | 未定义，统一用 `/usr/local` |
-| `/media` | 可移动介质挂载点 | automount(8) 或 bsdisks(8) 管理 |
-| `/mnt` | 临时挂载点 | 临时挂载点 |
-| `/run` | 必选（3.0），PID 文件及 UNIX 域套接字 | 无，沿用 `/var/run` |
-| `/sys` | Linux sysfs（§6.1.7） | 无，用 sysctl(8) |
-| `/proc` | Linux procfs（§6.1.5） | procfs(4)，默认不用 |
-| 共享库 | `/lib` 关键库，`/usr/lib` 非关键及编程库，`/lib<qual>` 兼容 | `/lib` 关键库，`/usr/lib` 共享/ar 库，`/usr/lib32` |
-| 内核 | `/` 或 `/boot` | `/boot/kernel/`，备用 `/boot/kernel.old/` |
-| `/home` | 可选 | 用户家目录 |
-| `/var/empty` | 未定义 | sshd(8) 特权分离 chroot |
-| `/nonexistent` | 未定义 | 无家目录账户占位符 |
+| **/usr/local** | 管理员本地安装，初始为空 | pkg/Ports 安装第三方软件默认路径 |
+| 配置文件 | 第三方 **/etc/opt**，建议使用子目录 | 第三方 **/usr/local/etc**，系统 **/etc** |
+| **/bin**、**/sbin**、**/lib** | 独立目录，与 **/usr** 分离 | 独立目录，与 **/usr** 分离 |
+| **/libexec** | 可选，与 **/usr/lib** 二选一存放内部二进制 | 根和 **/usr** 下均有，系统辅助程序 |
+| **/rescue** | 未定义 | 静态链接紧急修复工具 |
+| **/srv** | 必选，服务数据（ftp、www 等） | 未定义 |
+| **/opt** | 必选，**/opt/<package>** | 未定义，统一用 **/usr/local** |
+| **/media** | 可移动介质挂载点 | automount(8) 或 bsdisks(8) 管理 |
+| **/mnt** | 临时挂载点 | 临时挂载点 |
+| **/run** | 必选（3.0），PID 文件及 UNIX 域套接字 | 无，沿用 **/var/run** |
+| **/sys** | Linux sysfs（§6.1.7） | 无，用 sysctl(8) |
+| **/proc** | Linux procfs（§6.1.5） | procfs(4)，默认不用 |
+| 共享库 | **/lib** 关键库，**/usr/lib** 非关键及编程库，**/lib<qual>** 兼容 | **/lib** 关键库，**/usr/lib** 共享/ar 库，**/usr/lib32** |
+| 内核 | **/** 或 **/boot** | **/boot/kernel/**，备用 **/boot/kernel.old/** |
+| **/home** | 可选 | 用户家目录 |
+| **/var/empty** | 未定义 | sshd(8) 特权分离 chroot |
+| **/nonexistent** | 未定义 | 无家目录账户占位符 |
 
-FHS 按可共享/不可共享、静态/可变两个维度将文件分层：`/usr` 可共享只读，`/var` 可变，根文件系统仅需满足引导、恢复、修复的最低需求。FreeBSD 遵循此原则，基本系统限定在 `hier(7)` 定义目录，第三方软件限定在 `/usr/local`。
+FHS 按可共享/不可共享、静态/可变两个维度将文件分层：**/usr** 可共享只读，**/var** 可变，根文件系统仅需满足引导、恢复、修复的最低需求。FreeBSD 遵循此原则，基本系统限定在 `hier(7)` 定义目录，第三方软件限定在 **/usr/local**。
 
-POSIX（IEEE 1003.1）/SUS（UNIX 03）对目录结构无类似要求。POSIX.1-2008 明确删除了 `/bin`、`/usr/bin`、`/lib`、`/usr/lib` 等描述——理由是对应用程序没有用处。POSIX 仅要求 `/`、`/dev`（含 `/dev/null`、`/dev/tty`、`/dev/console`）、`/tmp` 存在，临时文件建议通过 `TMPDIR` 环境变量定位。FHS 仅在个别条目中注明与 POSIX 一致（如 `/tmp` 行为、`[`/`test` 路径、手册页 locale 命名），其余目录规范均属 FHS 自身定义，不在 POSIX 范围内。
+POSIX（IEEE 1003.1）/SUS（UNIX 03）对目录结构无类似要求。POSIX.1-2008 明确删除了 **/bin**、**/usr/bin**、**/lib**、**/usr/lib** 等描述——理由是对应用程序没有用处。POSIX 仅要求 **/**、**/dev**（含 **/dev/null**、**/dev/tty**、**/dev/console**）、**/tmp** 存在，临时文件建议通过 `TMPDIR` 环境变量定位。FHS 仅在个别条目中注明与 POSIX 一致（如 **/tmp** 行为、`[`/`test` 路径、手册页 locale 命名），其余目录规范均属 FHS 自身定义，不在 POSIX 范围内。
 
 为便于说明，仅列出前三级目录及重要文件。
 
@@ -97,7 +97,7 @@ POSIX（IEEE 1003.1）/SUS（UNIX 03）对目录结构无类似要求。POSIX.1-
 │   ├── nvd0 第一块 NVMe 存储设备（使用 NVMe 命名空间）
 │   ├── pts 伪终端设备，参见 pts(4)
 │   ├── random 弱随机性来源，参见 random(4)
-│   ├── reroot `reboot -r` 使用的重引导设备
+│   ├── reroot reboot -r 使用的重引导设备
 │   ├── sa0 第一块磁带驱动器
 │   ├── usb USB 总线
 │   ├── vmm 活跃的 bhyve(8) 虚拟机
@@ -136,7 +136,7 @@ POSIX（IEEE 1003.1）/SUS（UNIX 03）对目录结构无类似要求。POSIX.1-
 │   ├── pf.conf PF 防火墙配置文件，参见 pf(4)
 │   ├── pkg PKG 相关配置文件，参见 pkg(8)
 │   ├── ppp PPP 相关配置，参见 ppp(8)
-│   ├── profile.d 存放用户登录时可执行的 Shell 脚本，不会自动加载
+│   ├── profile.d 存放用户登录时可执行的 shell 脚本，不会自动加载
 │   ├── rc.conf 系统启动配置文件，参见 rc.conf(5)
 │   ├── rc.conf.d 存放特定服务的配置文件，默认为空
 │   ├── rc.d 用于启动和管理系统服务的 RC 脚本，参见 rc(8)
@@ -198,7 +198,7 @@ POSIX（IEEE 1003.1）/SUS（UNIX 03）对目录结构无类似要求。POSIX.1-
 │   │   ├── hyperv 与 Hyper-V 虚拟机管理程序通信的脚本
 │   │   ├── lpr 行式打印机系统的实用程序和过滤器，参见 lpr(1)
 │   │   ├── sendmail sendmail(8) 二进制文件，参见 mailwrapper(8)
-│   │   ├── sm.bin sendmail(8) 的受限 Shell，参见 smrsh(8)
+│   │   ├── sm.bin sendmail(8) 的受限 shell，参见 smrsh(8)
 │   │   └── zfs Z 文件系统实用程序
 │   ├── local 本地可执行文件、库等，由 pkg(7) 或 ports(7) 安装
 │   │   ├── bin 本地用户实用程序，参见 intro(1)
@@ -269,7 +269,7 @@ POSIX（IEEE 1003.1）/SUS（UNIX 03）对目录结构无类似要求。POSIX.1-
 │   │   ├── jobs 作业文件
 │   │   └── spool 输出假脱机文件
 │   ├── audit 存储安全审计日志文件，属于 audit 组，参见 audit(8)
-│   ├── authpf 用于认证网关用户的 Shell，参见 authpf(8)，默认为空
+│   ├── authpf 用于认证网关用户的 shell，参见 authpf(8)，默认为空
 │   ├── backups 用于存放系统的备份文件，如用户名和密钥、pkg 数据库。由 /etc/periodic/daily 下的 200、210 等文件生成
 │   ├── cache 缓存文件
 │   │   ├── cups CUPS 的缓存打印机，参见 cups(1)
@@ -330,10 +330,10 @@ POSIX（IEEE 1003.1）/SUS（UNIX 03）对目录结构无类似要求。POSIX.1-
 │   │   └── vi.recover vi(1) 编辑器的恢复文件
 │   ├── unbound Unbound 服务器的相关文件和配置，参见 unbound(8)
 │   └── yp NIS 的配置等文件，参见 yp(8)
-└── zroot 由 ZFS 在创建名为 "zroot" 的存储池时自动生成的挂载点目录；`zroot` 是 FreeBSD 安装程序默认的根池名称（参见 zpool(8) 和 zfs(8) 的 `mountpoint` 属性）。该目录自身通常为空，其子文件系统（如 zroot/ROOT、zroot/usr、zroot/var 等）分别挂载到对应路径；仅当直接在 zpool 根数据集下创建文件时，内容才会出现在此目录中
+└── zroot 由 ZFS 在创建名为 "zroot" 的存储池时自动生成的挂载点目录；zroot 是 FreeBSD 安装程序默认的根池名称（参见 zpool(8) 和 zfs(8) 的 mountpoint 属性）。该目录自身通常为空，其子文件系统（如 zroot/ROOT、zroot/usr、zroot/var 等）分别挂载到对应路径；仅当直接在 zpool 根数据集下创建文件时，内容才会出现在此目录中
 ```
 
-①：目录 `/var/empty` 设置了 schg 标志，即系统不可变标志。
+①：目录 **/var/empty** 设置了 schg 标志，即系统不可变标志。
 
 ```sh
 # ls -lod /var/empty
@@ -344,7 +344,7 @@ dr-xr-xr-x   2 root    wheel   schg  2 Apr 13 12:38 /var/empty
 
 > **技巧**
 >
-> OpenSSH 使用特权分离（privilege separation）架构，预认证阶段的 chroot 目录为 `/var/empty`，该目录必须为空且仅 root 可写。
+> OpenSSH 使用特权分离（privilege separation）架构，预认证阶段的 chroot 目录为 **/var/empty**，该目录必须为空且仅 root 可写。
 
 ## 设备与设备节点
 
@@ -352,17 +352,17 @@ dr-xr-xr-x   2 root    wheel   schg  2 Apr 13 12:38 /var/empty
 
 每个设备都有一个设备名称和编号。例如，`ada0` 是第一块 SATA 硬盘，而 `kbd0` 代表键盘。
 
-FreeBSD 中的大多数设备必须通过称为设备节点的特殊文件访问，这些文件位于 `/dev` 目录中。
+FreeBSD 中的大多数设备必须通过称为设备节点的特殊文件访问，这些文件位于 **/dev** 目录中。
 
-在 FreeBSD 中，设备节点由 devfs(5) 文件系统自动管理。devfs 是一个虚拟文件系统，在系统启动时由内核自动挂载到 `/dev`，并根据当前系统中存在的硬件设备动态创建和删除设备节点。这与传统 UNIX 系统需要手动使用 `mknod` 命令创建设备节点的做法不同。devfs 确保了 `/dev` 目录中只包含当前系统实际存在的设备节点。
+在 FreeBSD 中，设备节点由 devfs(5) 文件系统自动管理。devfs 是一个虚拟文件系统，在系统启动时由内核自动挂载到 **/dev**，并根据当前系统中存在的硬件设备动态创建和删除设备节点。这与传统 UNIX 系统需要手动使用 `mknod` 命令创建设备节点的做法不同。devfs 确保了 **/dev** 目录中只包含当前系统实际存在的设备节点。
 
-设备节点分为两种类型：字符设备（character device）和块设备（block device）。字符设备以字节流方式访问数据，如终端（`/dev/ttyv0`）和串口；块设备以固定大小的块为单位访问数据，如磁盘（`/dev/ada0`）。在 `ls -l` 的输出中，字符设备的类型标识为 `c`，块设备的类型标识为 `b`。
+设备节点分为两种类型：字符设备（character device）和块设备（block device）。字符设备以字节流方式访问数据，如终端（**/dev/ttyv0**）和串口；块设备以固定大小的块为单位访问数据，如磁盘（**/dev/ada0**）。在 `ls -l` 的输出中，字符设备的类型标识为 `c`，块设备的类型标识为 `b`。
 
 设备命名遵循一定的约定：SATA 硬盘以 `ada` 开头（如 `ada0`、`ada1`），SCSI 硬盘和 USB 存储设备以 `da` 开头（如 `da0`），NVMe 存储以 `nvd` 或 `nda` 开头，CD-ROM 驱动器以 `cd` 开头。编号从 0 开始。GPT 分区在设备名后附加 `p` 加分区号（如 `ada0p1`），MBR 切片附加 `s` 加切片号（如 `ada0s1`）。
 
 ## 启动消息 dmesg
 
-当 FreeBSD 启动时，大多数启动消息都与正在检测的设备有关。启动消息的副本保存在 `/var/run/dmesg.boot` 中。
+当 FreeBSD 启动时，大多数启动消息都与正在检测的设备有关。启动消息的副本保存在 **/var/run/dmesg.boot** 中。
 
 以下示例是 Radxa X4 16G 128G eMMC 款在 15.0-CURRENT 下完整的启动消息内容。
 
@@ -548,7 +548,7 @@ smbios0: Version: 3.6
 
 # ===== AES-NI 加速引擎 =====
 aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS,SHA1,SHA256>
-# aesni(4) 驱动加载，提供 AES 各模式（CBC/CCM/GCM等）以及 SHA1/SHA256 硬件加速。
+# aesni(4) 驱动加载，提供 AES 各模式（CBC/CCM/GCM等）以及 SHA-1/SHA-256 硬件加速。
 # GELI 全盘加密、ZFS 原生加密、IPsec、OpenSSL 等都可利用此驱动实现线速加密。
 
 # ===== ACPI 根设备 -----
@@ -977,4 +977,4 @@ Security policy loaded: MAC/ntpd (mac_ntpd)
 ## 课后习题
 
 1. 查阅 FreeBSD 源代码中 `hier(7)` 的定义，分析其目录结构设计所遵循的层次化原则。
-2. 修改 `/tmp` 目录的默认权限配置（如将权限从 `1777` 改为 `1755`），记录修改后对临时文件创建和系统服务运行的影响。
+2. 修改 **/tmp** 目录的默认权限配置（如将权限从 `1777` 改为 `1755`），记录修改后对临时文件创建和系统服务运行的影响。

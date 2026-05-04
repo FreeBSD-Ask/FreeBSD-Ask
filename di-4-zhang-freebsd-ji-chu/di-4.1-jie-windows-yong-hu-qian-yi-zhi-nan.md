@@ -2,8 +2,6 @@
 
 操作系统迁移涉及文件系统概念、字符编码、换行符规范、时区处理等多维度差异。对于从 Windows 迁移至 FreeBSD 的用户而言，理解这些差异是顺利过渡的前提。
 
-本节以文件系统基础概念为切入点，逐步阐述 Windows 与 FreeBSD 在文件系统组织、文件名规范、文本编码和时区配置等方面的关键差异。
-
 ## 文件系统基础
 
 首先，观察以下两幅图像：
@@ -18,7 +16,7 @@
 
 ![文件系统基础](../.gitbook/assets/filesystem-bamboo.png)
 
-竹子的生长常被引为一个经典的生物学案例：竹子（Bambusoideae）开花往往意味着大片竹林的死亡。这是因为，大部分看似茂密繁盛的竹林，极有可能到头来只有一棵竹子真实存活。这些竹子都是从相同的地下根系生长出来的，虽然看起来是多棵竹子，它们事实上是一个整体，这在植物学上称为**克隆生长**（clonal growth）。这也是“雨后春笋”的来历。无论它们相隔多远，仍旧一荣俱荣，一损俱损。这就是 UNIX 的目录，系统中的所有目录都依赖于根（root）。根（`/`）是一切目录的起点，构成了一个**单一层次的目录树结构**（single-rooted directory hierarchy）。例如 `/home/ykla/nihao`、`/bin/sh`、`/etc/fstab`，它们追根溯源，都是从根出发的。换言之，如果删除 `/`，就等于删除了整个系统，所有设备上的目录都会被删除。
+竹子的生长常被引为一个经典的生物学案例：竹子（Bambusoideae）开花往往意味着大片竹林的死亡。这是因为，大部分看似茂密繁盛的竹林，极有可能到头来只有一棵竹子真实存活。这些竹子都是从相同的地下根系生长出来的，虽然看起来是多棵竹子，它们事实上是一个整体，这在植物学上称为**克隆生长**（clonal growth）。这也是“雨后春笋”的来历。无论它们相隔多远，仍旧一荣俱荣，一损俱损。这就是 UNIX 的目录，系统中的所有目录都依赖根（root）。根（**/**）是一切目录的起点，构成了一个**单一层次的目录树结构**（single-rooted directory hierarchy）。例如 **/home/ykla/nihao**、**/bin/sh**、**/etc/fstab**，它们追根溯源，都是从根出发的。换言之，如果删除 **/**，就等于删除了整个系统，所有设备上的目录都会被删除。
 
 ![文件系统基础](../.gitbook/assets/windows-file-explorer.png)
 
@@ -54,15 +52,15 @@ PSPath
 
 从事园艺的人员通常了解，需要从树 A 上剪取一段枝条，将其斜插到树 B 上，并加以包裹，愈合后即成为一体：例如在苹果树（UNIX）上可以长出桃子（挂载 Windows 的 `C` 盘）。
 
-这种方法称为“嫁接”。这实质上是将树 A 的枝条（文件系统）挂载到树 B 上（嫁接点即某个挂载点，归根结底依赖于根目录 `/`）。
+这种方法称为“嫁接”。这实质上是将树 A 的枝条（文件系统）挂载到树 B 上（嫁接点即某个挂载点，归根结底依赖根目录 **/**）。
 
-从操作系统的技术视角看，挂载（mount）是将一个文件系统附加到系统目录树中某个已有目录（即挂载点）上的过程。文件系统可视为以 `/` 为根的树形结构，一个文件系统必须挂载到另一个文件系统中的某个目录上。当文件系统 B 挂载到目录 A 上时，B 的根目录将替换 A，B 中的目录将相应地出现；而 A 中原有的文件将被临时隐藏，直到 B 从 A 上卸载后才会重新出现。
+从操作系统的技术视角看，挂载（mount）是将一个文件系统附加到系统目录树中某个已有目录（即挂载点）上的过程。文件系统可视为以 **/** 为根的树形结构，一个文件系统必须挂载到另一个文件系统中的某个目录上。当文件系统 B 挂载到目录 A 上时，B 的根目录将替换 A，B 中的目录将相应地出现；而 A 中原有的文件将被临时隐藏，直到 B 从 A 上卸载后才会重新出现。
 
 工具 mount 调用 nmount(2) 系统调用，将一个特殊设备或远程节点（rhost:path）映射并嫁接到文件系统树中的节点（node）位置。系统维护一个当前已挂载文件系统的列表。如果不带任何参数调用 mount，将打印此列表。
 
 > **注意**
 >
->FreeBSD 的 `mount` 源于 4.4BSD，与 Linux 的 `mount` 在选项语法上基本兼容，但 FreeBSD 使用的是 nmount(2) 系统调用而非 Linux 的 mount(2)。FreeBSD 的 `mount` 会根据文件系统类型自动调用 `/sbin/mount_type` 程序（如 `mount_nfs`、`mount_msdosfs`）。
+>FreeBSD 的 `mount` 源于 4.4BSD，与 Linux 的 `mount` 在选项语法上基本兼容，但 FreeBSD 使用的是 nmount(2) 系统调用而非 Linux 的 mount(2)。FreeBSD 的 `mount` 会根据文件系统类型自动调用 **/sbin/mount_type** 程序（如 `mount_nfs`、`mount_msdosfs`）。
 
 ### 卸载的概念与机制
 
@@ -72,13 +70,13 @@ PSPath
 
 将一棵树新发的侧枝掰下来，插到土里。精心照料一段时间后，即可获得一株新的幼苗。
 
-这与“卸载”的原理相通：将某个文件系统（如 `/mnt/test`）从完整的根（`/`）上卸载，即卸除其与目录树的关联。
+这与“卸载”的原理相通：将某个文件系统（如 **/mnt/test**）从完整的根（**/**）上卸载，即卸除其与目录树的关联。
 
 从技术角度看，卸载（unmount）是挂载的逆操作，将一个已挂载的文件系统从系统目录树中分离。当文件系统 B 从 A 上卸载后，A 中原有的文件将重新出现。
 
 ### fstab 文件
 
-在启动过程中，系统将自动挂载 `/etc/fstab` 文件中列出的文件系统（标注 `noauto` 选项的条目除外）。
+在启动过程中，系统将自动挂载 **/etc/fstab** 文件中列出的文件系统（标注 `noauto` 选项的条目除外）。
 
 该文件中的条目格式如下：
 
@@ -90,12 +88,12 @@ PSPath
 
 - `设备`：现有设备名。
 - `挂载点`：现有的目录，用于挂载文件系统。
-- `文件系统`：传递给 [mount(8)](https://man.freebsd.org/cgi/man.cgi?query=mount&sektion=8&format=html) 的文件系统类型。
+- `文件系统`：传递给 mount(8) 的文件系统类型。
 - `选项`：`rw` 表示读写文件系统，`ro` 表示只读文件系统，可跟其他选项。常用选项包括 `noauto`，表示启动时不挂载此文件系统。
-- `转储`：供 [dump(8)](https://man.freebsd.org/cgi/man.cgi?query=dump&sektion=8&format=html) 判断哪些文件系统需要备份。缺省时视为 0。
-- `fsck 检查顺序`：决定在重启后，哪些文件系统应由 [fsck(8)](https://man.freebsd.org/cgi/man.cgi?query=fsck&sektion=8&format=html) 检查，以及检查顺序。应跳过的文件系统设置为 0。根文件系统应优先检查，设为 1，其他文件系统应设为大于 1 的值。若多个文件系统具有相同的 `passno`，[fsck(8)](https://man.freebsd.org/cgi/man.cgi?query=fsck&sektion=8&format=html) 会尝试并行检查。
+- `转储`：供 dump(8) 判断哪些文件系统需要备份。缺省时视为 0。
+- `fsck 检查顺序`：决定在重启后，哪些文件系统应由 fsck(8) 检查，以及检查顺序。应跳过的文件系统设置为 0。根文件系统应优先检查，设为 1，其他文件系统应设为大于 1 的值。若多个文件系统具有相同的 `passno`，fsck(8) 会尝试并行检查。
 
-示例：标准 ZFS 安装下的 `/etc/fstab` 文件。
+示例：标准 ZFS 安装下的 **/etc/fstab** 文件。
 
 ```sh
 # Device		Mountpoint	FStype	Options		Dump	Pass#
@@ -105,9 +103,9 @@ PSPath
 
 >**注意**
 >
->ZFS 并不使用 `/etc/fstab` 文件。因此如果在该文件中不存在任何 ZFS 文件系统（`/`），是符合预期的。
+>ZFS 并不使用 **/etc/fstab** 文件。因此如果在该文件中不存在任何 ZFS 文件系统（**/**），是符合预期的。
 
-示例：标准 UFS 安装下的 `/etc/fstab` 文件。
+示例：标准 UFS 安装下的 **/etc/fstab** 文件。
 
 ```sh
 # Device	Mountpoint	FStype	Options	Dump	Pass#
@@ -185,7 +183,7 @@ abc    ABC
 
 由此可知，在早期二者是独立的，否则 CRLF 会导致当前行“下沉”一行。
 
-Windows 操作系统默认的文本换行符为 CRLF（即 \\r\\n，0x0D 0x0A，`^M$`），而 UNIX（Classic Mac OS 使用 \\r，0x0D）默认使用 LF（即 \\n，0x0A，`$`）。
+Windows 操作系统默认的文本换行符为 CRLF（即 \\r\\n，0x0D 0x0A，`^M$`），而 UNIX（Classic MAC OS 使用 \\r，0x0D）默认使用 LF（即 \\n，0x0A，`$`）。
 
 诚然，现在这些符号通常都出现在每行文本的末尾处（即每行都存在）。
 
@@ -241,14 +239,14 @@ UTF-8
 
 此外，也可将 Windows 10 及后续版本的系统字符编码设置为 UTF-8。然而这种做法往往除了引入更多编码问题外，并不能有效解决问题。
 
-FreeBSD 的编码在 [main/usr.bin/login/login.conf](https://github.com/freebsd/freebsd-src/blob/main/usr.bin/login/login.conf) 文件中设置，编译后路径为 `/etc/login.conf`。
+FreeBSD 的编码在 [main/usr.bin/login/login.conf](https://github.com/freebsd/freebsd-src/blob/main/usr.bin/login/login.conf) 文件中设置，编译后路径为 **/etc/login.conf**。
 
 ### 参考文献
 
 - 微软. Code pages[EB/OL]. [2026-03-26]. <https://learn.microsoft.com/en-us/globalization/encoding/code-pages>. 微软官方称，936 即是 GBK，用于中文简体字符编码；代码页 936 最初覆盖 GB 2312 字符集，后扩展为 GBK。
 - Unicode Consortium. UTF-8, UTF-16, UTF-32 BOM[EB/OL]. [2026-04-18]. <https://www.unicode.org/faq/utf_bom.html>. UTF-8 的 BOM 为字节序列 0xEF 0xBB 0xBF。
 - 微软. Use UTF-8 code pages in Windows apps[EB/OL]. [2026-04-18]. <https://learn.microsoft.com/en-us/windows/apps/design/globalizing/use-utf8-code-page>. Windows 10 及后续版本可通过系统区域设置启用 UTF-8 支持（Beta 功能），但可能导致旧应用程序兼容性问题。
-- FreeBSD Project. login.conf(5)[EB/OL]. [2026-04-18]. <https://man.freebsd.org/cgi/man.cgi?query=login.conf&sektion=5>. FreeBSD 登录类能力数据库，源文件位于 `usr.bin/login/login.conf`，编译后路径为 /etc/login.conf，用于设置字符编码等用户环境。
+- FreeBSD Project. login.conf(5)[EB/OL]. [2026-04-18]. <https://man.freebsd.org/cgi/man.cgi?query=login.conf&sektion=5>. FreeBSD 登录类能力数据库，源文件位于 `usr.bin/login/login.conf`，编译后路径为 **/etc/login.conf**，用于设置字符编码等用户环境。
 
 ## 时间与时区差异
 
@@ -304,8 +302,8 @@ Windows 会直接读取 RTC 的结果，并将其视为本地时间，即 Local 
 
 以下书籍可供读者进一步研究 Windows 操作系统设计与实现：
 
-- Russinovich M, Solomon D, Ionescu A, 等. 深入解析 Windows 操作系统：第7版. 卷1[M]. 刘晖，译. 北京：人民邮电出版社，2021. ISBN: 978-7-115-55694-3. 微软官方教材，具有权威性，系统阐述 Windows 内核架构。
-- Russinovich M, Solomon D, Ionescu A, 等. 深入解析 Windows 操作系统：第7版. 卷2[M]. 刘晖，译. 北京：人民邮电出版社，2024. ISBN: 978-7-115-61974-7. 微软官方教材，具有权威性，详解 Windows 系统组件。
+- Russinovich M, Solomon D, Ionescu A, 等. 深入解析 Windows 操作系统：第7版. 卷1[M]. 刘晖，译. 北京：人民邮电出版社，2021. ISBN: 978-7-115-55694-3. 微软官方教材，系统阐述 Windows 内核架构。
+- Russinovich M, Solomon D, Ionescu A, 等. 深入解析 Windows 操作系统：第7版. 卷2[M]. 刘晖，译. 北京：人民邮电出版社，2024. ISBN: 978-7-115-61974-7. 微软官方教材，详解 Windows 系统组件。
 
 ### 天文历法
 
@@ -336,6 +334,6 @@ Windows 会直接读取 RTC 的结果，并将其视为本地时间，即 Local 
 
 ## 课后习题
 
-1. 在 FreeBSD 中挂载一个 Windows NTFS 分区，使用 `converters/dos2unix` 批量转换包含 Windows 换行符的文本文件，编写 Shell 脚本实现自动化处理。
+1. 在 FreeBSD 中挂载一个 Windows NTFS 分区，使用 `converters/dos2unix` 批量转换包含 Windows 换行符的文本文件，编写 shell 脚本实现自动化处理。
 2. 查阅 FreeBSD 内核源代码中 UFS/ZFS 文件系统处理大小写敏感的逻辑，分析其实现机制与 Windows NTFS 大小写不敏感设计的差异。
 3. 修改 Windows 注册表使其将硬件时钟视为 UTC，记录修改前后 FreeBSD 与 Windows 双系统时间显示的差异。

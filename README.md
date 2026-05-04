@@ -88,7 +88,7 @@ FreeBSD 中文社区未通过其他域名部署本书，唯一官方域名为 `b
 
 支付方式支持：VISA 信用卡（可通过 Amazon Pay 或 Google Pay）、万事达品牌借记卡。
 
-此外，可通过 Bing Rewards 积分 [对 FreeBSD 基金会进行捐赠](https://rewards.bing.com/redeem/000999036000?causeId=840-841545163&&PC=EMMX01)。Bing Rewards 是微软必应搜索提供的积分计划。同方式亦可 [捐赠 NetBSD 基金会](https://rewards.bing.com/redeem/000999036000?causeId=840-134134071&PC=EMMX01)。
+可通过 Bing Rewards 积分 [对 FreeBSD 基金会进行捐赠](https://rewards.bing.com/redeem/000999036000?causeId=840-841545163&&PC=EMMX01)。Bing Rewards 是微软必应搜索提供的积分计划。同方式亦可 [捐赠 NetBSD 基金会](https://rewards.bing.com/redeem/000999036000?causeId=840-134134071&PC=EMMX01)。
 
 ## 贡献者
 

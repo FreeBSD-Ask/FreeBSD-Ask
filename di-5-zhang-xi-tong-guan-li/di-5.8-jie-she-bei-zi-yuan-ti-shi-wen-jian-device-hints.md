@@ -4,7 +4,7 @@
 
 ## device.hints 的功能与结构
 
-[device.hints(5)](https://man.freebsd.org/cgi/man.cgi?device.hints) 相关文件结构：
+device.hints(5) 相关文件结构：
 
 ```sh
 /
@@ -82,7 +82,7 @@ hint.p4tcc.0.disabled="1"
 hint.atkbdc.0.at="isa"
 ```
 
-将驱动 [atkbdc](https://man.freebsd.org/cgi/man.cgi?query=atkbdc&sektion=4)（AT 键盘控制器）的设备实例号 0 附加（attach）到 ISA 总线上，即指定第 0 个 atkbdc 设备位于 ISA 总线上。
+将驱动 atkbdc（AT 键盘控制器）的设备实例号 0 附加（attach）到 ISA 总线上，即指定第 0 个 atkbdc 设备位于 ISA 总线上。
 
 ## 参考文献
 

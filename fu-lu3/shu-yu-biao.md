@@ -92,7 +92,7 @@
 | SGID | 设置组 ID | Set Group ID，一种文件权限位，使执行该文件的用户临时获得文件属组的权限 |
 | 设备文件 | / | Device File，操作系统中代表硬件设备或虚拟设备的特殊文件 |
 | procfs | / | Process File System，进程文件系统，以文件系统形式呈现内核进程信息 |
-| devfs | / | Device File System，设备文件系统，自动管理 /dev 目录下的设备节点 |
+| devfs | / | Device File System，设备文件系统，自动管理 **/dev** 目录下的设备节点 |
 | fdescfs | / | File Descriptor File System，文件描述符文件系统，提供对进程文件描述符的文件系统访问 |
 | 伪终端 | / | Pseudo-Terminal，在软件中模拟的终端设备，用于远程登录和窗口系统中的终端模拟 |
 | PAM | 可插拔认证模块 | Pluggable Authentication Modules，最初由 Sun Microsystems 于 1995 年开发的灵活系统认证框架 |
@@ -190,7 +190,7 @@
 | cron | / | Unix 系统的定时任务执行守护进程，其名称来源存在争议 |
 | DMA | / | ① Direct Memory Access，直接内存访问，一种允许设备直接读写系统内存的技术；② DragonFly Mail Agent，FreeBSD 14.0 起基本系统内置的本地邮件传输代理（非功能完整的 MTA），FreeBSD 13 及更早版本的默认 MTA 为 Sendmail |
 | mtree | / | FreeBSD 的目录树规范和验证工具 |
-| authpf | / | Authenticating Gateway Shell，PF 防火墙的认证网关 Shell |
+| authpf | / | Authenticating Gateway Shell，PF 防火墙的认证网关 shell |
 | Unbound | / | 一种验证型递归 DNS 服务器 |
 | Kyua | / | FreeBSD 的自动化测试框架 |
 | 内存盘 | / | RAM Disk / mfsBSD，将内存模拟为磁盘设备的技术，数据存储在内存中，断电后丢失 |

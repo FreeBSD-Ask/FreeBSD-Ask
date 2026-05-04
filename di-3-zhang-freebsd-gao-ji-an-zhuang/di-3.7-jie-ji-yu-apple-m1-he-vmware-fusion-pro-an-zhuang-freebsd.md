@@ -52,7 +52,7 @@
 
 ### 鼠标无法移动
 
-编辑 `/boot/loader.conf` 文件，加入以下内容：
+编辑 **/boot/loader.conf** 文件，加入以下内容：
 
 ```sh
 hw.usb.usbhid.enable="1"    # 启用 USB HID 设备支持

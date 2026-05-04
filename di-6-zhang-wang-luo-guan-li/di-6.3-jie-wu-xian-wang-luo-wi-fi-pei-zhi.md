@@ -100,9 +100,9 @@ test_5G                           50:d6:c5:93:d7:64   36   54M  -78:-95   100 EP
 # ifconfig wlan0 ssid test_5G
 ```
 
-上述命令中，`test_5G` 为示例 WiFi 名称（SSID），需替换为实际网络名称。
+上述命令中，`test_5G` 为示例 Wi-Fi 名称（SSID），需替换为实际网络名称。
 
-若无法扫描到 WiFi 网络，可能需要修改无线区域设置或路由器信道。此时可按以下步骤重新配置：
+若无法扫描到 Wi-Fi 网络，可能需要修改无线区域设置或路由器信道。此时可按以下步骤重新配置：
 
 ```sh
 # ifconfig wlan0 destroy
@@ -112,7 +112,7 @@ test_5G                           50:d6:c5:93:d7:64   36   54M  -78:-95   100 EP
 
 第一条命令销毁现有 `wlan0` 接口并释放其占用的资源，避免出现 `ifconfig: SIOCS80211: Device busy` 错误；第二条命令重新创建无线接口并绑定到物理设备；第三条命令设置无线国家码为 HR 并使用 ETSI 无线频段规范，当目标网络使用大于 48 的信道（DFS 信道）时需要进行此设置，如信道小于 48，可省略该步骤。
 
-完成上述配置后，重启网络服务以接入 WiFi：
+完成上述配置后，重启网络服务以接入 Wi-Fi：
 
 ```sh
 # service netif restart
@@ -125,7 +125,7 @@ test_5G                           50:d6:c5:93:d7:64   36   54M  -78:-95   100 EP
 
 对于加密的无线网络，需要使用 Wi-Fi 保护访问（Wi-Fi Protected Access，WPA）配置文件进行连接。WPA2/3 是目前主流的无线网络安全协议，提供了数据加密与身份认证功能。
 
-无线网络中的认证过程由 wpa_supplicant(8) 管理。创建 `/etc/wpa_supplicant.conf` 配置文件，内容如下：
+无线网络中的认证过程由 wpa_supplicant(8) 管理。创建 **/etc/wpa_supplicant.conf** 配置文件，内容如下：
 
 ```ini
 ctrl_interface=/var/run/wpa_supplicant   # 可选，控制接口路径，用于 wpa_supplicant 与 wpa_cli 等工具通信
@@ -138,12 +138,12 @@ psk="freebsdcn"
 
 配置说明：
 
-- `ssid` 指定要连接的无线网络 SSID（WiFi 名称），此处示例为 `test_5G`
+- `ssid` 指定要连接的无线网络 SSID（Wi-Fi 名称），此处示例为 `test_5G`
 - `psk` 指定无线网络的密码，此处示例为 `freebsdcn`
 
-若无法获取无线网络的服务集标识符（SSID）和预共享密钥（PSK），可联系产品客服或重置网络设备以获取凭据。
+若无法获取无线网络的服务集标识符（SSID）和预共享密钥（PSK，Pre-Shared Key），可联系网络管理员或重置网络设备以获取凭据。
 
-下一步在 `/etc/rc.conf` 文件中配置无线连接。使用动态地址：
+下一步在 **/etc/rc.conf** 文件中配置无线连接。使用动态地址：
 
 ```sh
 # sysrc ifconfig_wlan0="WPA DHCP"
@@ -155,7 +155,7 @@ psk="freebsdcn"
 # service netif restart
 ```
 
-如果网络连接正常，再行永久性配置。在 `/etc/rc.conf` 文件中添加或修改相关配置条目：
+如果网络连接正常，再行永久性配置。在 **/etc/rc.conf** 文件中添加或修改相关配置条目：
 
 ```ini
 wlans_rtwn0="wlan0"                      # 将物理无线设备 rtwn0 绑定到 wlan0 接口
@@ -198,16 +198,16 @@ wlan0: flags=8843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST> metric 0 mtu 1500
 
 ## 英特尔无线网卡驱动概况
 
-英特尔（Intel）网卡是目前使用较为广泛的无线网卡之一。iwlwifi 驱动 [适用于](https://wiki.freebsd.org/WiFi/Iwlwifi/Chipsets) `AC 8265、AC 9260、AC 9560、AX200、AX201、AX210、AX211`，iwm 驱动 [适用于](https://wiki.freebsd.org/WiFi/Iwm) `AC 3160、AC 3165、AC 3168、AC 7260、AC 7265、AC 8260、AC 8265、AC 9260、AC 9270、AC 946X` 等型号。两者覆盖的芯片范围有部分重叠但不完全包含，见 [英特尔 ® 无线适配器的 Linux* 支持](https://www.intel.cn/content/www/cn/zh/support/articles/000005511/wireless.html)。
+英特尔（Intel）网卡是目前使用广泛的无线网卡之一。iwlwifi 驱动 [适用于](https://wiki.freebsd.org/WiFi/Iwlwifi/Chipsets) `AC 8265、AC 9260、AC 9560、AX200、AX201、AX210、AX211`，iwm 驱动 [适用于](https://wiki.freebsd.org/WiFi/Iwm) `AC 3160、AC 3165、AC 3168、AC 7260、AC 7265、AC 8260、AC 8265、AC 9260、AC 9270、AC 946X` 等型号。两者覆盖的芯片范围有部分重叠但不完全包含，见 [英特尔 ® 无线适配器的 Linux* 支持](https://www.intel.cn/content/www/cn/zh/support/articles/000005511/wireless.html)。
 
-在 `/etc/rc.conf` 文件中添加以下配置：
+在 **/etc/rc.conf** 文件中添加以下配置：
 
 ```ini
 wlans_iwlwifi0="wlan0"        # 将物理无线设备 iwlwifi0 绑定到 wlan0 接口
 ifconfig_wlan0="WPA SYNCDHCP"  # 配置 wlan0 使用 WPA 并通过 DHCP 自动获取 IP 地址
 ```
 
-创建 `/etc/wpa_supplicant.conf` 配置文件：
+创建 **/etc/wpa_supplicant.conf** 配置文件：
 
 ```sh
 network={
@@ -216,7 +216,7 @@ psk="WIFI 密码"
 }
 ```
 
-完成配置后，执行以下命令启动 WiFi 进行测试：
+完成配置后，执行以下命令启动 Wi-Fi 进行测试：
 
 ```sh
 # ifconfig wlan0 create wlandev iwlwifi0
@@ -242,13 +242,13 @@ psk="WIFI 密码"
 
 根据参考文献，上述型号的网卡只能使用 `bwi` 驱动。
 
-首先，在 `/boot/loader.conf` 文件中添加以下配置，设置系统在启动时加载 `bwi` 驱动：
+首先，在 **/boot/loader.conf** 文件中添加以下配置，设置系统在启动时加载 `bwi` 驱动：
 
 ```sh
 if_bwi_load="YES"
 ```
 
-然后使用 ports 安装 Broadcom 无线设备的固件（该固件未提供二进制包）：
+然后使用 Ports 安装 Broadcom 无线设备的固件（该固件未提供二进制包）：
 
 ```sh
 # cd /usr/ports/net/bwi-firmware-kmod/
@@ -257,7 +257,7 @@ if_bwi_load="YES"
 
 可先通过 USB 或以太网共享网络来安装，也可以提前将所需依赖下载到指定目录。
 
-在 `/etc/rc.conf` 文件中添加以下配置，将物理无线设备 `bwi0` 绑定到 `wlan0` 接口：
+在 **/etc/rc.conf** 文件中添加以下配置，将物理无线设备 `bwi0` 绑定到 `wlan0` 接口：
 
 ```ini
 wlans_bwi0="wlan0"
@@ -296,13 +296,13 @@ wlans_bwi0="wlan0"
         └── wifi-firmware-iwlwifi-kmod-20241017.1403000_2.pkg  # 英特尔无线网卡固件包
 ```
 
-编辑 `/boot/loader.conf` 文件添加以下配置，设置系统在启动时加载 `bwn` 驱动：
+编辑 **/boot/loader.conf** 文件添加以下配置，设置系统在启动时加载 `bwn` 驱动：
 
 ```ini
 if_bwn_load="YES"
 ```
 
-在 `/etc/rc.conf` 文件中添加以下配置，将物理无线设备 `bwn0` 绑定到 `wlan0` 接口：
+在 **/etc/rc.conf** 文件中添加以下配置，将物理无线设备 `bwn0` 绑定到 `wlan0` 接口：
 
 ```ini
 wlans_bwn0="wlan0"
@@ -310,7 +310,7 @@ wlans_bwn0="wlan0"
 
 ## 无线网络故障排除
 
-如果扫描时未列出接入点，可以尝试切换路由器的信道，或者将协议降级到 WiFi 4。
+如果扫描时未列出接入点，可尝试切换路由器的信道，或者将协议降级到 Wi-Fi 4。
 
 如果设备无法与接入点关联，验证配置是否与接入点上的设置匹配。这包括认证方案和任何安全协议。尽可能简化配置。如果使用 WPA2 或 WPA 等安全协议，将接入点配置为开放认证和无安全性，以验证流量是否可以通过。
 
@@ -352,9 +352,9 @@ wlans_bwn0="wlan0"
 # make -j4 installkernel KERNCONF=MYKERNEL  # 安装使用 MYKERNEL 配置编译的内核，并启用 4 个并行任务
 ```
 
-上述命令中，`/usr/src/` 为 FreeBSD 内核源代码安装目录，需注意根据实际架构选择相应的配置文件目录。
+上述命令中，**/usr/src/** 为 FreeBSD 内核源代码安装目录，需注意根据实际架构选择相应的配置文件目录。
 
-然后在 `/boot/loader.conf` 文件中添加以下配置：
+然后在 **/boot/loader.conf** 文件中添加以下配置：
 
 ```ini
 hw.bwn_pci.preferred="1"        # 设置首选使用 BWN PCI 无线设备
@@ -376,11 +376,11 @@ bwn_v4_lp_ucode_load="YES"     # 加载 BWN V4 低功耗模式无线固件
 
 ## 故障排除概述
 
-### 如果连不上或者搜不到特定信道
+### 若无法连接或无法搜索到特定信道
 
 无线网络的区域码设置会影响可用的信道列表。可以尝试调整无线区域码设置。
 
-在 `/etc/rc.conf` 文件中添加以下配置：
+在 **/etc/rc.conf** 文件中添加以下配置：
 
 ```ini
 create_args_wlan0="country CN regdomain NONE"
@@ -390,7 +390,7 @@ create_args_wlan0="country CN regdomain NONE"
 
 完成配置后，重启系统。
 
-### 断开 WiFi
+### 断开 Wi-Fi
 
 禁用 `wlan0` 接口：
 
@@ -400,7 +400,7 @@ create_args_wlan0="country CN regdomain NONE"
 
 ### WPA 验证
 
-在 `/etc/rc.conf` 文件中配置 `wlan0` 接口使用 WPA，并设置静态 IP 地址和子网掩码：
+在 **/etc/rc.conf** 文件中配置 `wlan0` 接口使用 WPA，并设置静态 IP 地址和子网掩码：
 
 ```ini
 ifconfig_wlan0="WPA inet 192.168.1.100 netmask 255.255.255.0"

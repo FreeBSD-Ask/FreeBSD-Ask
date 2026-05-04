@@ -4,7 +4,7 @@
 
 ## login.conf 的概念与文件结构
 
-[/etc/login.conf](https://man.freebsd.org/cgi/man.cgi?login.conf(5)) 文件是登录类能力数据库（最早引入自 FreeBSD 2.1.5），该文件用于控制资源配额、计量配额以及默认用户环境设置。系统中的多种程序利用它建立用户的登录环境，并执行策略、计数和管理限制。它还提供了用户认证以及可用认证类型的配置方式。
+/etc/login.conf 文件是登录类能力数据库（最早引入自 FreeBSD 2.1.5），该文件用于控制资源配额、计量配额以及默认用户环境设置。系统中的多种程序利用它建立用户的登录环境，并执行策略、计数和管理限制。它还提供了用户认证以及可用认证类型的配置方式。
 
 ```sh
 /
@@ -14,7 +14,7 @@
     └── .login_conf          # 用户本地覆盖文件，可覆盖 /etc/login.conf 的设置
 ```
 
-对于普通用户，可通过家目录下的 `~/.login_conf` 文件覆盖系统级配置。记录 ID 为“me”的条目只能覆盖该用户部分的用户分级配置，系统级配置文件 `/etc/login.conf` 的优先级低于用户本地配置。
+对于普通用户，可通过家目录下的 **~/.login_conf** 文件覆盖系统级配置。记录 ID 为“me”的条目只能覆盖该用户部分的用户分级配置，系统级配置文件 **/etc/login.conf** 的优先级低于用户本地配置。
 
 `login.conf` 文件在 FreeBSD 源代码中的位置为 [usr.bin/login/login.conf](https://github.com/freebsd/freebsd-src/blob/main/usr.bin/login/login.conf)，该文件即为默认配置，默认设置禁用了资源配额。
 
@@ -26,26 +26,26 @@
 
 ```ini
 # 请注意，像 "cputime" 这样的条目会同时设置 "cputime-cur" 和 "cputime-max"。
-# "default" 登录类会自动（由 login(1) 实现）应用于所有在 `/etc/master.passwd` 中未设置有效登录类的非 root 用户。
-# 请注意，由于冒号 ':' 用于分隔能力条目，因此在能力的值或名称中嵌入字面冒号时必须使用 `\c` 转义序列（有关更多转义序列，请参见 getcap(3) 的 “CGETNUM AND CGETSTR SYNTAX AND SEMANTICS” 部分）。
+# "default" 登录类会自动（由 login(1) 实现）应用于所有在 /etc/master.passwd 中未设置有效登录类的非 root 用户。
+# 请注意，由于冒号 ':' 用于分隔能力条目，因此在能力的值或名称中嵌入字面冒号时必须使用 \c 转义序列（有关更多转义序列，请参见 getcap(3) 的 "CGETNUM AND CGETSTR SYNTAX AND SEMANTICS" 部分）。
 # UID 为 0 的用户（root）如果没有有效登录类，则使用 root 记录（若有），否则使用 default。
 # default 登录类
 
 default:\
-	:passwd_format=sha512:\ # 新建或更改密码将使用的加密格式。类型为字符串。有效值为 `"des"`、`"md5"`、`"blf"`、`"sha256"` 和 `"sha512"`；详细信息请参见 `crypt(3)`。使用非 FreeBSD NIS 服务器的 NIS 客户端通常应使用 `"des"`。
+	:passwd_format=sha512:\ # 新建或更改密码将使用的加密格式。类型为字符串。有效值为 "des"、"md5"、"blf"、"sha256" 和 "sha512"；详细信息请参见 crypt(3)。使用非 FreeBSD NIS 服务器的 NIS 客户端通常应使用 "des"。
 	:welcome=/var/run/motd:\  # 登录后会看到的信息
-	:setenv=BLOCKSIZE=K:\  # 由逗号分隔的环境变量及其对应值的列表。包含逗号的值必须加引号。`BLOCKSIZE=K` 即让命令以 KB 大小格式显示
-	:mail=/var/mail/$:\  # 将环境变量 `$MAIL` 设置为指定的值。
+	:setenv=BLOCKSIZE=K:\  # 由逗号分隔的环境变量及其对应值的列表。包含逗号的值必须加引号。BLOCKSIZE=K 即让命令以 KB 大小格式显示
+	:mail=/var/mail/$:\  # 将环境变量 $MAIL 设置为指定的值。
 	:path=/sbin /bin /usr/sbin /usr/bin /usr/local/sbin /usr/local/bin ~/bin:\  # 默认的 PATH 环境变量路径，会在其中查找可执行文件
 	:nologin=/var/run/nologin:\  # 若该文件存在，将打印该文件到屏幕上，并且对应用户的登录会话将被终止。
-	:cputime=unlimited:\  # 限制进程可使用的 CPU 时间量。类型为时间，默认单位为秒。时间值可以使用不同单位表示：`y` 表示年（365 天）、`w` 表示周、`d` 表示天、`h` 表示小时、`m` 表示分钟、`s` 表示秒。单位可以连写，其值会累加。例如，2 小时 40 分钟可以写作 9600s、160m 或 2h40m。
+	:cputime=unlimited:\  # 限制进程可使用的 CPU 时间量。类型为时间，默认单位为秒。时间值可以使用不同单位表示：y 表示年（365 天）、w 表示周、d 表示天、h 表示小时、m 表示分钟、s 表示秒。单位可以连写，其值会累加。例如，2 小时 40 分钟可以写作 9600s、160m 或 2h40m。
 	:datasize=unlimited:\  # 限制数据段（属于静态内存分配）的最大大小。类型为数值，默认单位为字节。常用单位包括 b、k、m、g、t，分别表示 512 字节、KB、MB、GB 和 TB，大小写不敏感。多个值可以连写，其数值会累加。例如 2g512M 表示总大小为 2.5GB。
 	:stacksize=unlimited:\  # 最大栈大小限制。类型为数值。
 	:memorylocked=64K:\  # 最大核心锁定内存大小限制。类型为数值。
 	:memoryuse=unlimited:\  # 最大核心内存使用量限制。类型为数值。
 	:filesize=unlimited:\  # 限制进程可以创建的文件的最大大小。类型为数值。
 	:coredumpsize=unlimited:\ # 最大 coredump 大小限制。类型为数值。
-	:openfiles=unlimited:\  # 限制每个进程允许打开的最大文件数。类型为数字。数字类型可以是十六进制（`0x` 开头）或八进制（`0` 开头），每次只能指定一个值，也可以用字符串格式。数据库中所有记录必须统一使用同一表示方法。
+	:openfiles=unlimited:\  # 限制每个进程允许打开的最大文件数。类型为数字。数字类型可以是十六进制（0x 开头）或八进制（0 开头），每次只能指定一个值，也可以用字符串格式。数据库中所有记录必须统一使用同一表示方法。
 	:maxproc=unlimited:\  # 限制最大进程数。类型为数字。
 	:sbsize=unlimited:\  # 最大的套接字缓冲区大小。类型为数值。
 	:vmemoryuse=unlimited:\  # 每个进程允许的最大虚拟存储器使用量。类型为数值。
@@ -56,8 +56,8 @@ default:\
 	:pipebuf=unlimited:\  # 管道缓冲区的最大大小。类型为数字。
 	:priority=0:\  # 初始进程优先级等级。类型为数字。用于设置进程的初始优先级：既可使用普通 nice 范围（-20 到 20），也可映射到实时或空闲优先级；若设置特殊值 “inherit” 表示继承原有优先级，不进行重置。0 代表正常优先级。
 	:umask=022:\  # 设置初始 umask。类型为数字，应以 0 开头以确保按八进制识别。特殊值 "inherit" 表示保持原有 umask 不变。022 表示文件默认权限为 644，目录默认权限为 755。
-	:charset=UTF-8:\  # 指定环境变量 `$MM_CHARSET`（邮件相关程序会使用）的值。类型为字符串。
-	:lang=C.UTF-8:  # 指定环境变量 `$LANG` 的值。类型为字符串。修改此处即可实现整个操作系统的全局 i18n 配置。
+	:charset=UTF-8:\  # 指定环境变量 $MM_CHARSET（邮件相关程序会使用）的值。类型为字符串。
+	:lang=C.UTF-8:  # 指定环境变量 $LANG 的值。类型为字符串。修改此处即可实现整个操作系统的全局 i18n 配置。
 
 #
 # 一组常见的类别名称——将它们全部转发到 'default'（login 通常也会这么做，但在这里有类别名称会抑制诊断信息）。
@@ -92,7 +92,7 @@ root:\
 #
 # 为俄罗斯用户账户配置正确的环境变量
 #
-# russian 登录类。可使用命令 `pw usermod XXX -L russian` 指定用户 XXX 使用该登录类。
+# russian 登录类。可使用命令 pw usermod XXX -L russian 指定用户 XXX 使用该登录类。
 #
 russian|Russian Users Accounts:\
 	:charset=UTF-8:\
@@ -336,6 +336,6 @@ russian|Russian Users Accounts:\
 
 ## 课后习题
 
-1. 修改用户的 `~/.login_conf` 文件覆盖系统级 `login.conf` 的部分设置，记录两种配置的优先级关系，分析 `cgetent()` 函数的数据库检索顺序。
+1. 修改用户的 **~/.login_conf** 文件覆盖系统级 `login.conf` 的部分设置，记录两种配置的优先级关系，分析 `cgetent()` 函数的数据库检索顺序。
 2. 修改 default 类的 `umask` 和 `passwd_format` 设置，对比修改前后新建文件权限和密码加密方式的变化。
 3. 创建一个自定义登录类，设置特定的资源限制（如 `cputime` 和 `maxproc`），分配给测试用户并验证限制是否生效，分析资源限制在内核层面的实现机制。

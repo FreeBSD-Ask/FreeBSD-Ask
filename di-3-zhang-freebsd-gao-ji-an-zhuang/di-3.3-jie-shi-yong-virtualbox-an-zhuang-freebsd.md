@@ -78,7 +78,7 @@ VirtualBox 安装完成后，创建并配置虚拟机。以下演示基于 Virtu
 
 ![桥接网络设置](../.gitbook/assets/virtualbox-bridge-network.png)
 
-设置后执行 `# dhclient em0`（为了长期生效可在 `/etc/rc.conf` 文件中加入 `ifconfig_em0="DHCP"`）。
+设置后执行 `# dhclient em0`（为了长期生效可在 **/etc/rc.conf** 文件中加入 `ifconfig_em0="DHCP"`）。
 
 如果无法访问互联网，请将 DNS 设置为 `223.5.5.5`。如不清楚具体操作，请参阅本章其他部分。
 
@@ -98,7 +98,7 @@ VirtualBox 安装完成后，创建并配置虚拟机。以下演示基于 Virtu
 
 ![仅主机模式设置](../.gitbook/assets/virtualbox-dual-nic-2.png)
 
-使用命令 `# ifconfig` 查看状态，如果第二块网卡 `em1` 没有获取到 IP 地址，请手动通过 DHCP 获取：`# dhclient em1`（为了长期生效，可在 `/etc/rc.conf` 文件中加入 `ifconfig_em1="DHCP"`）。
+使用命令 `# ifconfig` 查看状态，如果第二块网卡 `em1` 没有获取到 IP 地址，请手动通过 DHCP 获取：`# dhclient em1`（为了长期生效，可在 **/etc/rc.conf** 文件中加入 `ifconfig_em1="DHCP"`）。
 
 按这种方式设定的网络，虚拟机与宿主机所在的局域网无法互通。若无法连接互联网，请设置 DNS 为 `223.5.5.5`。若不熟悉相关操作，请参阅本章相关小节。
 
@@ -175,7 +175,7 @@ You may ignore the yellow alert that encourages use of VMSVGA.
 
 > **技巧**
 >
-> 请使用 UEFI，Xorg 可以自动识别驱动，**无需** 手动配置 `/usr/local/etc/X11/xorg.conf`（经测试，手动配置反而导致性能下降）。
+> 请使用 UEFI，Xorg 可以自动识别驱动，**无需** 手动配置 **/usr/local/etc/X11/xorg.conf**（经测试，手动配置反而导致性能下降）。
 
 ## 服务管理
 
@@ -200,7 +200,7 @@ You may ignore the yellow alert that encourages use of VMSVGA.
 
 ### EFI 下无法正常关机
 
-编辑 `/etc/sysctl.conf` 文件，添加以下内容：
+编辑 **/etc/sysctl.conf** 文件，添加以下内容：
 
 ```ini
 hw.efi.poweroff=0	# 禁用 EFI 电源关闭功能，使系统通过 ACPI 正常关机
