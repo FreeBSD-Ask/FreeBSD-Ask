@@ -1,4 +1,4 @@
-# 5.10 内核状态默认配置文件（sysctl.conf）
+# 5.10 sysctl 工具
 
 sysctl 是 FreeBSD 查看和修改内核运行时参数的工具，基于管理信息库（MIB）风格的 ASCII 名称标识。本节覆盖 sysctl 命令用法与 sysctl.conf 的配置方法。
 
