@@ -368,7 +368,6 @@ bwn_v4_lp_ucode_load="YES"     # 加载 BWN V4 低功耗模式无线固件
 
 ### 参考文献
 
-- FreeBSD Project. FreeBSD Handbook, Section 13.4 Configuring the FreeBSD Kernel[EB/OL]. [2026-04-24]. <https://docs.freebsd.org/en/books/handbook/kernelconfig/>. FreeBSD 手册中关于编译定制内核的章节，涵盖配置与构建流程。
 - FreeBSD Foundation. Broadcom Wi-Fi Modernization[EB/OL]. [2026-03-26]. <https://freebsdfoundation.org/project/broadcom-wi-fi-modernization/>. FreeBSD 基金会资助的博通 Wi-Fi 驱动现代化项目概述。
 - FreeBSD Project. Revision 326841[EB/OL]. [2026-03-26]. <https://svnweb.freebsd.org/base?view=revision&revision=326841>. 将博通无线驱动纳入 FreeBSD 基本系统的代码提交记录。
 - FreeBSD Forums. Installing Broadcom BCM43236 WiFi on 11.3 missing firmware error[EB/OL]. [2026-03-26]. <https://forums.freebsd.org/threads/installing-broadcom-bcm43236-wifi-on-11-3-missing-firmware-error.76470/>. 博通无线网卡固件缺失导致无法使用的论坛讨论。
