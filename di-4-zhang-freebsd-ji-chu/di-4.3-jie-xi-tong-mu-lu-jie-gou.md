@@ -77,7 +77,7 @@ FreeBSD 的目录结构设计遵循以下原则：
 ├── entropy 为随机数生成器提供初始状态，参见 save-entropy(8)
 ├── etc 基本系统配置文件和脚本，参见 intro(5)
 │   ├── auto_master autofs 配置文件，参见 automount(8)
-│   ├── autofs 存放自动挂载相关的配置文件，参见 autofs(5)
+│   ├── autofs 存放自动挂载相关的配置文件，参见 autofs(4)
 │   ├── bluetooth 蓝牙相关配置文件
 │   ├── cron.d 存放系统级的定时任务配置文件，参见 crontab(5)
 │   ├── crontab root 用户的 crontab 文件
