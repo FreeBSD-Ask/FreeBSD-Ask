@@ -344,7 +344,7 @@ screen -r xxx	# 重新附着（恢复）名为或 ID 为 xxx 的 screen 会话
 
 ### mosh
 
-`mosh` 即 `Mobile Shell`，移动的 Shell。Mosh 适合在移动设备（如手机、平板）通过移动网络远程控制服务器时使用。
+`mosh` 即 `Mobile Shell`，移动的 shell。Mosh 适合在移动设备（如手机、平板）通过移动网络远程控制服务器时使用。
 
 Mosh 不支持多窗口、分屏模式，也不支持多个客户端连接同一服务器。客户端重启或切换设备时无法自动重新连接。若需实现这些功能，可在 Mosh 会话中使用 GNU Screen、OpenBSD tmux 等终端多路复用器，参见 [Mosh: A State-of-the-Art Good Old-Fashioned Mobile Shell](https://www.usenix.org/system/files/login/articles/winstein.pdf)
 
