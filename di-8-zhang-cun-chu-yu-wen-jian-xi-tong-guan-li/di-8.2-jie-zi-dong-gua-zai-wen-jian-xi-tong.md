@@ -55,7 +55,7 @@ notify 100 {
 >
 >不应添加到注释符号 `/* */` 之间。
 
-通过将以下行添加到 **/etc/rc.conf** 文件中，可使 autofs(5) 在系统启动时自动运行：
+通过将以下行添加到 **/etc/rc.conf** 文件中，可使 autofs(4) 在系统启动时自动运行：
 
 ```ini
 autofs_enable="YES"
@@ -74,7 +74,7 @@ SpaceSniffer.exe
 # automount -fu
 ```
 
-### 未竟事项
+### 未竟事宜
 
 #### 中文乱码
 
@@ -278,7 +278,7 @@ ntfs_mount_cmd_usr = "/sbin/mount_fusefs auto \"${DSBMD_MNTPT}\" ntfs-3g -o fmas
 
 ## 参考文献
 
-- FreeBSD Project. autofs -- filesystem automounter[EB/OL]. [2026-04-14]. <https://man.freebsd.org/cgi/man.cgi?autofs(5)>. autofs 文件系统手册页，描述自动挂载机制。
+- FreeBSD Project. autofs -- filesystem automounter[EB/OL]. [2026-04-14]. <https://man.freebsd.org/cgi/man.cgi?autofs(4)>. autofs 文件系统手册页，描述自动挂载机制。
 - FreeBSD Project. auto_master -- auto_master database[EB/OL]. [2026-04-14]. <https://man.freebsd.org/cgi/man.cgi?auto_master(5)>. 自动挂载主配置文件格式手册页。
 - FreeBSD Project. automountd -- daemon handling autofs mount requests[EB/OL]. [2026-04-14]. <https://man.freebsd.org/cgi/man.cgi?automountd(8)>. 自动挂载守护进程手册页。
 - FreeBSD Project. mount -- mount file systems[EB/OL]. [2026-04-14]. <https://man.freebsd.org/cgi/man.cgi?mount(8)>. 文件系统挂载命令手册页。
