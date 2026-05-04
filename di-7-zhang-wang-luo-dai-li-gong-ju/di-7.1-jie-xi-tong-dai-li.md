@@ -145,7 +145,6 @@ Firefox 浏览器在设置页面的网络设置选项卡中提供了图形化代
 
 ### 参考文献
 
-- FreeBSD Project. chromium(1) -- the web browser from Google[EB/OL]. [2026-03-25]. <https://man.freebsd.org/cgi/man.cgi?query=chrome>. 阐述 Chromium 命令行代理参数配置。
 - Owynn, graudeejs, rjohn, olli@, Sevendogsbsd, kpedersen. chromium proxy settings page doesn't exist[EB/OL]. [2026-03-25]. <https://forums.freebsd.org/threads/chromium-proxy-settings-page-doesnt-exist.31927/>. 提供了 FreeBSD 下 Chromium 代理配置的实践解决方案。
 
 ## 课后习题
