@@ -62,14 +62,14 @@
 
 * [5.1 启动引导器及配置文件（loader.conf）](di-5-zhang-xi-tong-guan-li/di-5.1-jie-qi-dong-yin-dao-qi-ji-pei-zhi-wen-jian-loader-conf.md)
 * [5.2 引导管理器与 UEFI 固件](di-5-zhang-xi-tong-guan-li/di-5.2-jie-yin-dao-guan-li-qi-yu-uefi-gu-jian.md)
-* [5.3 init.rc 服务管理](di-5-zhang-xi-tong-guan-li/di-5.3-jie-init-rc-fu-wu-guan-li.md)
+* [5.3 管理 FreeBSD 中的服务](di-5-zhang-xi-tong-guan-li/di-5.3-jie-init-rc-fu-wu-guan-li.md)
 * [5.4 用户分级文件（login.conf）](di-5-zhang-xi-tong-guan-li/di-5.4-jie-yong-hu-fen-ji-wen-jian-login-conf.md)
 * [5.5 bsdconfig 系统配置工具](di-5-zhang-xi-tong-guan-li/di-5.5-jie-bsdconfig-xi-tong-pei-zhi-gong-ju.md)
 * [5.6 OpenSSH](di-5-zhang-xi-tong-guan-li/di-5.6-jie-OpenSSH.md)
 * [5.7 远程桌面访问](di-5-zhang-xi-tong-guan-li/di-5.7-jie-yuan-cheng-zhuo-mian-fang-wen.md)
 * [5.8 设备资源提示文件（device.hints）](di-5-zhang-xi-tong-guan-li/di-5.8-jie-she-bei-zi-yuan-ti-shi-wen-jian-device-hints.md)
 * [5.9 Cron 和 Periodic](di-5-zhang-xi-tong-guan-li/di-5.9-jie-crontab-ji-ding-shi-ren-wu-wen-jian-periodic-conf.md)
-* [5.10 内核状态默认配置文件（sysctl.conf）](di-5-zhang-xi-tong-guan-li/di-5.10-jie-nei-he-zhuang-tai-mo-ren-pei-zhi-wen-jian-sysctl-conf.md)
+* [5.10 sysctl 工具](di-5-zhang-xi-tong-guan-li/di-5.10-jie-nei-he-zhuang-tai-mo-ren-pei-zhi-wen-jian-sysctl-conf.md)
 * [5.11 时间同步服务](di-5-zhang-xi-tong-guan-li/di-5.11-jie-shi-jian-tong-bu-fu-wu.md)
 * [5.12 Live 镜像与系统恢复](di-5-zhang-xi-tong-guan-li/di-5.12-jie-live-jing-xiang-yu-xi-tong-hui-fu.md)
 
@@ -149,7 +149,7 @@
 ## 第 14 章 多媒体和外部设备
 
 * [14.1 Web 浏览器](di-14-zhang-duo-mei-ti-he-wai-bu-she-bei/di-14.1-jie-web-liu-lan-qi.md)
-* [14.2 音频设备配置](di-14-zhang-duo-mei-ti-he-wai-bu-she-bei/di-14.2-jie-yin-pin-she-bei-pei-zhi.md)
+* [14.2 声卡配置](di-14-zhang-duo-mei-ti-he-wai-bu-she-bei/di-14.2-jie-yin-pin-she-bei-pei-zhi.md)
 * [14.3 音频播放器](di-14-zhang-duo-mei-ti-he-wai-bu-she-bei/di-14.3-jie-yin-pin-bo-fang-qi.md)
 * [14.4 蓝牙](di-14-zhang-duo-mei-ti-he-wai-bu-she-bei/di-14.4-jie-lan-ya.md)
 * [14.5 打印机](di-14-zhang-duo-mei-ti-he-wai-bu-she-bei/di-14.5-jie-da-yin-ji.md)
