@@ -66,7 +66,7 @@ Default: F2
 # fdisk -B -b /boot/boot0 设备
 ```
 
-其中 `设备` 是启动磁盘，例如 `ada0` 表示第一块 SATA 磁盘，`ada2` 表示第三块 SATA 磁盘，`ad0` 表示第一块 IDE 磁盘，`nvd0` 表示第一块 NVMe 磁盘。要创建 MBR 的自定义配置，请参阅 boot0cfg(8)。
+其中 `设备` 是启动磁盘，例如 `ada0` 表示第一块 SATA 磁盘，`ada2` 表示第三块 SATA 磁盘，`nvd0` 表示第一块 NVMe 磁盘。要创建 MBR 的自定义配置，请参阅 boot0cfg(8)。
 
 #### 参考文献
 
@@ -86,17 +86,17 @@ Default: F2
 
 ```sh
 >> FreeBSD/i386 BOOT
-Default: 0:ad(0,a)/boot/loader
+Default: 0:ada(0,a)/boot/loader
 boot:
 ```
 
-要替换已安装的 boot1 和 boot2，使用 bsdlabel，其中 `diskslice` 是要启动的磁盘和分区，例如 `ad0s1` 表示第一个 IDE 磁盘上的第一个分区：
+要替换已安装的 boot1 和 boot2，使用 bsdlabel，其中 `diskslice` 是要启动的磁盘和分区，例如 `ada0s1` 表示第一个 SATA 磁盘上的第一个分区：
 
 ```sh
 # bsdlabel -B diskslice
 ```
 
-如果只使用磁盘名称（如 `ad0`），bsdlabel 将以“危险专用模式”创建磁盘，不使用分区。这可能并非预期行为，因此在按回车键之前仔细检查 diskslice。
+如果只使用磁盘名称（如 `ada0`），bsdlabel 将以"危险专用模式"创建磁盘，不使用分区。这可能并非预期行为，因此在按回车键之前仔细检查 diskslice。
 
 ### 阶段 3（loader）
 
