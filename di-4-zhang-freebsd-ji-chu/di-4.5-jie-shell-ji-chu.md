@@ -1,14 +1,14 @@
-# 4.5 Shell 基础
+# 4.5 shell 基础
 
-## Shell 的概念与定位
+## shell 的概念与定位
 
-![什么是 Shell](../.gitbook/assets/what-is-shell.png)
+![什么是 shell](../.gitbook/assets/what-is-shell.png)
 
-shell 是用户与操作系统内核进行交互的命令解释器（command interpreter），它接受用户输入的命令并将其传递给内核执行。用户的命令运行在 shell 中，并通过 shell 与系统进行交互。shell 提供命令行界面用于与操作系统交互，从输入通道接收命令并执行。许多 shell 提供内置功能以辅助日常任务，如文件管理、文件名通配、命令行编辑、命令宏和环境变量。FreeBSD 基本系统内置多种 shell，包括扩展 POSIX Shell（sh(1)）和扩展 C Shell（tcsh(1)）。其它 shell 可通过 FreeBSD Ports 获得，例如 Zsh 和 Bash。
+shell 是用户与操作系统内核进行交互的命令解释器（command interpreter），它接受用户输入的命令并将其传递给内核执行。用户的命令运行在 shell 中，并通过 shell 与系统进行交互。shell 提供命令行界面用于与操作系统交互，从输入通道接收命令并执行。许多 shell 提供内置功能以辅助日常任务，如文件管理、文件名通配、命令行编辑、命令宏和环境变量。FreeBSD 基本系统内置多种 shell，包括扩展 POSIX shell（sh(1)）和扩展 C shell（tcsh(1)）。其它 shell 可通过 FreeBSD Ports 获得，例如 Zsh 和 Bash。
 
-### Shell 的架构角色
+### shell 的架构角色
 
-从操作系统架构的角度看，Shell 位于用户空间与内核空间之间，充当命令解释与进程管理的中间层。shell 的核心功能包括：
+从操作系统架构的角度看，shell 位于用户空间与内核空间之间，充当命令解释与进程管理的中间层。shell 的核心功能包括：
 
 - **命令解释**：解析用户输入的命令行，将其分解为命令名、选项和参数，然后通过系统调用（如 `execve(2)`）请求内核创建新进程执行相应程序。
 - **进程控制**：管理进程的创建、前台/后台调度、信号传递和作业控制。shell 是用户管理进程生命周期的首要工具。
