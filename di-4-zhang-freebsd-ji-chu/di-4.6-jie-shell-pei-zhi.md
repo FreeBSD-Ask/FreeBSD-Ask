@@ -1,12 +1,12 @@
 # 4.6 shell 配置
 
-Shell 的配置体系通过一系列初始化文件（initialization files）实现。
+shell 的配置体系通过一系列初始化文件（initialization files）实现。
 
 不同 shell 的初始化文件加载顺序存在差异：
 
-对于 Bourne Shell 及其兼容 shell（sh、bash、zsh），登录 shell 依次读取 **/etc/profile**、**~/.profile**（或 **~/.bash_profile**、**~/.zprofile**），交互式非登录 shell 读取 **~/.bashrc**（bash）或 **~/.zshrc**（zsh）；
+对于 Bourne shell 及其兼容 shell（sh、bash、zsh），登录 shell 依次读取 **/etc/profile**、**~/.profile**（或 **~/.bash_profile**、**~/.zprofile**），交互式非登录 shell 读取 **~/.bashrc**（bash）或 **~/.zshrc**（zsh）；
 
-对于 C Shell（csh/tcsh），登录 shell 读取 **/etc/csh.cshrc**、**/etc/csh.login**、**~/.cshrc**、**~/.login**。
+对于 C shell（csh/tcsh），登录 shell 读取 **/etc/csh.cshrc**、**/etc/csh.login**、**~/.cshrc**、**~/.login**。
 
 理解这一加载顺序有助于正确配置环境变量和 shell 别名。
 
@@ -24,10 +24,10 @@ Shell 的配置体系通过一系列初始化文件（initialization files）实
 
 | 程序 | 说明 |
 | ---- | ---- |
-| `zsh` | Zsh Shell |
+| `zsh` | Zsh shell |
 | `zsh-completions` | 自动补全 |
-| `zsh-autosuggestions` | 类 Fish Shell 的 Zsh 自动补全 |
-| `zsh-syntax-highlighting` | 类 Fish Shell 的 Zsh 语法高亮 |
+| `zsh-autosuggestions` | 类 Fish shell 的 Zsh 自动补全 |
+| `zsh-syntax-highlighting` | 类 Fish shell 的 Zsh 语法高亮 |
 
 - 使用 Ports 安装：
 
@@ -96,7 +96,7 @@ chsh: user information updated
 
 > **注意**
 >
->`chsh`、`chfn`、`chpass` 是同一个程序，通过不同名称调用。非超级用户只能将 Shell 更改为 **/etc/shells** 中列出的标准 Shell；从非标准 Shell 更改或更改为非标准 Shell 均被拒绝。编辑器由 `EDITOR` 环境变量决定，默认使用 vi(1)。修改完成后需要通过 pwd_mkdb(8) 更新用户数据库。
+>`chsh`、`chfn`、`chpass` 是同一个程序，通过不同名称调用。非超级用户只能将 shell 更改为 **/etc/shells** 中列出的标准 shell；从非标准 shell 更改或更改为非标准 shell 均被拒绝。编辑器由 `EDITOR` 环境变量决定，默认使用 vi(1)。修改完成后需要通过 pwd_mkdb(8) 更新用户数据库。
 
 编辑 **~/.zshrc** 文件，添加下面几行：
 
@@ -160,11 +160,11 @@ $ echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc              
 ##### 参考文献
 
 - romkatv. Powerlevel10k[EB/OL]. [2026-03-26]. <https://github.com/romkatv/powerlevel10k?tab=readme-ov-file#installation>. 主题项目官网。
-- FreeBSD Project. csh -- a shell with C-like syntax[EB/OL]. [2026-04-17]. <https://man.freebsd.org/cgi/man.cgi?query=csh&sektion=1>. C 风格语法 Shell 手册页。
+- FreeBSD Project. csh -- a shell with C-like syntax[EB/OL]. [2026-04-17]. <https://man.freebsd.org/cgi/man.cgi?query=csh&sektion=1>. C 风格语法 shell 手册页。
 
 ## Bash
 
-Bash（Bourne Again SHell）是 GNU 项目开发的 shell 程序，作为 Bourne Shell（sh）的增强替代品。Bash 兼容 sh 语法，并集成了 csh 和 ksh 的有用特性，包括命令行编辑、命令历史、可编程补全和作业控制等功能。Bash 是多数 Linux 发行版的默认 shell，但在 FreeBSD 中并非基本系统组件。
+Bash（Bourne Again shell）是 GNU 项目开发的 shell 程序，作为 Bourne shell（sh）的增强替代品。Bash 兼容 sh 语法，并集成了 csh 和 ksh 的有用特性，包括命令行编辑、命令历史、可编程补全和作业控制等功能。Bash 是多数 Linux 发行版的默认 shell，但在 FreeBSD 中并非基本系统组件。
 
 ### 安装 Bash
 
@@ -178,7 +178,7 @@ Bash（Bourne Again SHell）是 GNU 项目开发的 shell 程序，作为 Bourne
 
 | 程序 | 说明 |
 | ---- | ---- |
-| `bash` | Bash Shell 主程序 |
+| `bash` | Bash shell 主程序 |
 | `bash-completion-freebsd` | 针对 FreeBSD 的 Bash 补全库扩展，安装时会自动安装 shells/bash-completion 作为依赖 |
 | `bash-completion-zfs` | 针对 OpenZFS 的 Bash 补全库扩展 |
 
@@ -248,7 +248,7 @@ touch ~/.bash_profile         # 创建 ~/.bash_profile 文件，用于配置 Bas
 
 ## 配置 csh/tcsh
 
-除了 Zsh 和 Bash 外，FreeBSD 基本系统还内置了 csh 和 tcsh。csh（C Shell，语法受 C 语言影响，作者为 Bill Joy）是 FreeBSD 基本系统内置的 shell，曾是 root 用户的默认 shell。FreeBSD 默认 shell 为 sh（自 FreeBSD 14 起），但基本系统同时提供 csh/tcsh 作为替代选择。
+除了 Zsh 和 Bash 外，FreeBSD 基本系统还内置了 csh 和 tcsh。csh（C shell，语法受 C 语言影响，作者为 Bill Joy）是 FreeBSD 基本系统内置的 shell，曾是 root 用户的默认 shell。FreeBSD 默认 shell 为 sh（自 FreeBSD 14 起），但基本系统同时提供 csh/tcsh 作为替代选择。
 
 > **技巧**
 >
@@ -262,7 +262,7 @@ touch ~/.bash_profile         # 创建 ~/.bash_profile 文件，用于配置 Bas
 
 > **注意**
 >
-> [FreeBSD 14 中的 Shell 被统一为 sh](https://github.com/freebsd/freebsd-src/commit/d410b585b6f00a26c2de7724d6576a3ea7d548b7)，记录 FreeBSD 14 默认 Shell 变更的提交记录。
+> [FreeBSD 14 中的 shell 被统一为 sh](https://github.com/freebsd/freebsd-src/commit/d410b585b6f00a26c2de7724d6576a3ea7d548b7)，记录 FreeBSD 14 默认 shell 变更的提交记录。
 
 - 在 **~/.cshrc** 文件中加入下行，为 `ls` 命令设置彩色输出。
 
@@ -279,7 +279,7 @@ set filec              # 启用命令行文件名补全
 set autolist           # 自动显示补全列表
 ```
 
-重新加载 C Shell 配置文件，刷新别名和环境设置：
+重新加载 C shell 配置文件，刷新别名和环境设置：
 
 ```sh
 # source ~/.cshrc
