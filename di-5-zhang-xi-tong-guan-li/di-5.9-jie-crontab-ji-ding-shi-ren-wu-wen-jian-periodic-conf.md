@@ -81,7 +81,7 @@ PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin
 ```
 
 - ① 在此示例中，它用于定义 `SHELL` 和 `PATH`。如果省略 `SHELL`，cron 将使用默认的 Bourne shell。如果省略 `PATH`，则必须提供命令或脚本的完整路径。
-- ② 这一行定义了系统 crontab 中使用的七个字段：`minute`、`hour`、`mday`、`month`、`wday`、`who` 和 `command`。`minute` 字段是指定命令运行的分钟数，`hour` 是命令运行的小时数，`mday` 是日期，`month` 是月份，`wday` 是星期几。这些字段必须是数字值，表示24小时制，或者是 `*`，表示该字段的所有值。`who` 字段仅存在于系统 crontab 中，指定命令应该以哪个用户身份运行。最后一个字段是要执行的命令。 |
+- ② 这一行定义了系统 crontab 中使用的七个字段：`minute`、`hour`、`mday`、`month`、`wday`、`who` 和 `command`。`minute` 字段是指定命令运行的分钟数，`hour` 是命令运行的小时数，`mday` 是日期，`month` 是月份，`wday` 是星期几。这些字段必须是数字值，表示 24 小时制，或者是 `*`，表示该字段的所有值。`who` 字段仅存在于系统 crontab 中，指定命令应该以哪个用户身份运行。最后一个字段是要执行的命令。
 - ③ 这个条目定义了这个 cron 作业的值。`*/11` 后面跟着多个 `*` 字符，表示 `/usr/libexec/save-entropy` 将由 `operator` 在每小时中的第 11 分钟执行一次，每天、每周、每月都如此。命令可以包含多个选项。如果命令跨越多行，必须使用反斜杠 `\` 延续字符。
 
 ### 创建用户 Crontab
@@ -94,7 +94,7 @@ $ crontab -e
 
 这将使用默认文本编辑器打开用户的 crontab。用户第一次运行此命令时，会打开一个空文件。待用户创建了 crontab，此命令将打开该文件进行编辑。
 
-将以下行添加到 crontab 文件的顶部以设置环境变量，并记住 crontab 字段的含义是非常有用的：
+将以下行添加到 crontab 文件顶部以设置环境变量，同时建议保留 crontab 字段说明注释以便参考：
 
 ```ini
 SHELL=/bin/sh
@@ -103,7 +103,7 @@ PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin
 # 分钟 小时 日期 月份 星期 命令
 ```
 
-然后为每个要运行的命令或脚本添加一行，指定运行命令的时间。此示例每天在下午两点运行指定的自定义 Bourne shell 脚本。由于 `PATH` 中未指定脚本的路径，因此给出脚本的完整路径：
+为每个要运行的命令或脚本添加一行，指定运行命令的时间。此示例每天在下午两点运行指定的自定义 Bourne shell 脚本。由于 `PATH` 中未指定脚本的路径，因此给出脚本的完整路径：
 
 ```ini
 0 14 * * * /home/ykla/bin/自定义脚本.sh
@@ -119,7 +119,7 @@ PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin
 >
 > 检查脚本在 cron 环境下是否正常运行尤其重要，特别是当脚本包含任何使用通配符删除文件的命令时。
 
-编辑完 crontab 后，保存文件。将自动进行，cron 会读取 crontab 并在指定时间运行 cron 作业。要列出 crontab 中的 cron 作业，可以使用以下命令：
+编辑完 crontab 后，保存文件。crontab 将自动安装生效，cron 会读取 crontab 并在指定时间运行 cron 作业。要列出 crontab 中的 cron 作业，可以使用以下命令：
 
 ```sh
 $ crontab -l
@@ -167,9 +167,9 @@ daily_status_zfs_enable="YES"
 
 在 **/etc/periodic.conf** 文件中，变量 `daily_output`、`weekly_output` 和 `monthly_output` 指定了脚本执行结果的发送位置。
 
-默认情况下，周期性脚本的输出会发送到 root 用户的邮件，因此最好阅读 root 的邮件，或者将 root 的邮件别名为一个被监控的邮箱。
+默认情况下，周期性脚本的输出会发送到 root 用户的邮件，因此建议阅读 root 的邮件，或者将 root 的邮件别名为一个被监控的邮箱。
 
-要将结果发送到另一个邮件地址或其他邮件地址，可以在 **/etc/periodic.conf** 文件中添加以空格分隔的邮件地址：
+要将结果发送到其他邮件地址，可以在 **/etc/periodic.conf** 文件中添加以空格分隔的邮件地址：
 
 ```ini
 daily_output="email1@example.com email2@example.com"
