@@ -147,7 +147,7 @@ remove crontab for ykla? y
 
 FreeBSD 提供了一组系统管理脚本，用于检查各种子系统的状态，执行与安全相关的检查，轮换日志文件等。这些脚本按周期执行：每日、每周或每月。这些任务的管理由 periodic(8) 执行，其配置位于 periodic.conf(5) 中。周期性任务由系统 crontab 中的条目启动，如上所示。
 
-periodic(8)] 执行的脚本位于 **/etc/periodic/**（基本工具）和 **/usr/local/etc/periodic/**（第三方软件）中。
+periodic(8) 执行的脚本位于 **/etc/periodic/**（基本工具）和 **/usr/local/etc/periodic/**（第三方软件）中。
 
 它们被组织在 4 个子目录中：**daily**、**weekly**、**monthly** 和 **security**。
 
