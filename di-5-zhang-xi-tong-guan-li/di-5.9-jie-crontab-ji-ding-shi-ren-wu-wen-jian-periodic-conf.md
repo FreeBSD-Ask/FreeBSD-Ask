@@ -82,7 +82,7 @@ PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin
 
 - ① 在此示例中，它用于定义 `SHELL` 和 `PATH`。如果省略 `SHELL`，cron 将使用默认的 Bourne shell。如果省略 `PATH`，则必须提供命令或脚本的完整路径。
 - ② 这一行定义了系统 crontab 中使用的七个字段：`minute`、`hour`、`mday`、`month`、`wday`、`who` 和 `command`。`minute` 字段是指定命令运行的分钟数，`hour` 是命令运行的小时数，`mday` 是日期，`month` 是月份，`wday` 是星期几。这些字段必须是数字值，表示 24 小时制，或者是 `*`，表示该字段的所有值。`who` 字段仅存在于系统 crontab 中，指定命令应该以哪个用户身份运行。最后一个字段是要执行的命令。
-- ③ 这个条目定义了这个 cron 作业的值。`*/11` 后面跟着多个 `*` 字符，表示 `/usr/libexec/save-entropy` 将由 `operator` 在每小时中的第 11 分钟执行一次，每天、每周、每月都如此。命令可以包含多个选项。如果命令跨越多行，必须使用反斜杠 `\` 延续字符。
+- ③ 这个条目定义了这个 cron 作业的值。`*/11` 后面跟着多个 `*` 字符，表示 **/usr/libexec/save-entropy** 将由 `operator` 在每小时中的第 11 分钟执行一次，每天、每周、每月都如此。命令可以包含多个选项。如果命令跨越多行，必须使用反斜杠 `\` 延续字符。
 
 ### 创建用户 Crontab
 

@@ -149,7 +149,7 @@
 ## 第 14 章 多媒体和外部设备
 
 * [14.1 Web 浏览器](di-14-zhang-duo-mei-ti-he-wai-bu-she-bei/di-14.1-jie-web-liu-lan-qi.md)
-* [14.2 音频设备配置](di-14-zhang-duo-mei-ti-he-wai-bu-she-bei/di-14.2-jie-yin-pin-she-bei-pei-zhi.md)
+* [14.2 声卡配置](di-14-zhang-duo-mei-ti-he-wai-bu-she-bei/di-14.2-jie-yin-pin-she-bei-pei-zhi.md)
 * [14.3 音频播放器](di-14-zhang-duo-mei-ti-he-wai-bu-she-bei/di-14.3-jie-yin-pin-bo-fang-qi.md)
 * [14.4 蓝牙](di-14-zhang-duo-mei-ti-he-wai-bu-she-bei/di-14.4-jie-lan-ya.md)
 * [14.5 打印机](di-14-zhang-duo-mei-ti-he-wai-bu-she-bei/di-14.5-jie-da-yin-ji.md)
