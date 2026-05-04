@@ -1,4 +1,4 @@
-# 4.6 Shell 配置
+# 4.6 shell 配置
 
 Shell 的配置体系通过一系列初始化文件（initialization files）实现。
 
