@@ -86,15 +86,15 @@ zroot/var/log@test          0B      -      444K  -
 与虚拟机快照不同，在默认状态下，`zfs rollback` 命令只能回滚到最新快照（[参考手册](https://docs.oracle.com/cd/E19253-01/819-7065/gbcxk/index.html)，Oracle 官方 ZFS 回滚命令文档）；使用 `-r` 参数可以销毁比目标快照更新的所有快照，从而允许回滚到非最新的快照。ZFS 不支持一次性递归回滚所有子数据集，需要对每个子文件系统单独执行回滚操作。
 
 ```sh
-# zfs rollback -r zroot@test             # 递归回滚 zroot 池及其所有子文件系统到 test 快照
-# zfs rollback -r zroot/ROOT@test        # 递归回滚 zroot/ROOT 文件系统到 test 快照
-# zfs rollback -r zroot/ROOT/default@test # 递归回滚 zroot/ROOT/default 文件系统到 test 快照
-# zfs rollback -r zroot/tmp@test         # 递归回滚 zroot/tmp 文件系统到 test 快照
-# zfs rollback -r zroot/usr@test         # 递归回滚 zroot/usr 文件系统到 test 快照
-# zfs rollback -r zroot/usr/home@test    # 递归回滚 zroot/usr/home 文件系统到 test 快照
-# zfs rollback -r zroot/usr/ports@test   # 递归回滚 zroot/usr/ports 文件系统到 test 快照
-# zfs rollback -r zroot/var@test         # 递归回滚 zroot/var 文件系统到 test 快照
-# zfs rollback -r zroot/var/log@test     # 递归回滚 zroot/var/log 文件系统到 test 快照
+# zfs rollback -r zroot@test             # 回滚 zroot 到 test 快照并销毁更新的快照
+# zfs rollback -r zroot/ROOT@test        # 回滚 zroot/ROOT 到 test 快照并销毁更新的快照
+# zfs rollback -r zroot/ROOT/default@test # 回滚 zroot/ROOT/default 到 test 快照并销毁更新的快照
+# zfs rollback -r zroot/tmp@test         # 回滚 zroot/tmp 到 test 快照并销毁更新的快照
+# zfs rollback -r zroot/usr@test         # 回滚 zroot/usr 到 test 快照并销毁更新的快照
+# zfs rollback -r zroot/usr/home@test    # 回滚 zroot/usr/home 到 test 快照并销毁更新的快照
+# zfs rollback -r zroot/usr/ports@test   # 回滚 zroot/usr/ports 到 test 快照并销毁更新的快照
+# zfs rollback -r zroot/var@test         # 回滚 zroot/var 到 test 快照并销毁更新的快照
+# zfs rollback -r zroot/var/log@test     # 回滚 zroot/var/log 到 test 快照并销毁更新的快照
 ```
 
 ## 销毁快照
