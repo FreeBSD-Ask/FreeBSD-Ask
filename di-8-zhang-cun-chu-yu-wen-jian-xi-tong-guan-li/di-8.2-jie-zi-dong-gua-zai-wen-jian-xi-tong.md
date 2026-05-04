@@ -169,7 +169,7 @@ $ dsbmc-cli
 - `-m`：挂载设备
 - `-u`：卸载设备
 
-可在 Shell 启动配置文件或桌面启动文件（例如 **~/.xinitrc** 文件、**~/.xprofile** 文件）中添加以下命令：
+可在 shell 启动配置文件或桌面启动文件（例如 **~/.xinitrc** 文件、**~/.xprofile** 文件）中添加以下命令：
 
 ```ini
 dsbmc-cli -a &
