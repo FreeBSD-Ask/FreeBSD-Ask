@@ -96,14 +96,6 @@
    │      │ 推荐使用整盘 │   │             │   │             │                │
    │      └────────────┘   └────────────┘   └────────────┘                │
    └──────────────────────────────────────────────────────────────────────┘
-
-  手册依据: zfsconcepts.7 says "Clones can only be created from a snapshot"
-           zfsconcepts.7 says "Bookmarks are initially tied to a snapshot"
-           写路径: 写入 → ZIL → [Log VDEV] → TXG → 数据 VDEV → 磁盘
-           读路径: 读取 → ARC(RAM) → [miss] → L2ARC(Cache VDEV) → [miss] → 数据 VDEV
-           校验:  Checksum 验证 → 损坏 → Mirror/RAID-Z 冗余自动修复
-           快照:  数据集 ──创建──► 快照(只读) ──派生──► 克隆(可写)
-           书签:  快照(只读) ──轻量引用──► 书签
 ```
 
 ZFS 源于 Sun Solaris，2005 年以 CDDL 许可证开源，2007 年导入 FreeBSD。Oracle 收购 Sun 后 ZFS 转为闭源开发，开源社区于 2013 年发起 OpenZFS 项目延续其发展。2020 年 OpenZFS 2.0 统一了 FreeBSD 与 Linux 的 ZFS 代码库，提供写时复制、快照、端到端校验与自愈等存储特性。
