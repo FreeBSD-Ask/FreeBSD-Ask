@@ -96,7 +96,7 @@
 
 ## 第 9 章 ZFS 文件系统
 
-* [9.1 ZFS 概述](di-9-zhang-zfs-wen-jian-xi-tong/di-9.1-jie-zfs-gai-shu.md)
+* [9.1 ZFS 历史与现实](di-9-zhang-zfs-wen-jian-xi-tong/di-9.1-jie-zfs-gai-shu.md)
 * [9.2 ZFS 快照与还原](di-9-zhang-zfs-wen-jian-xi-tong/di-9.2-jie-zfs-kuai-zhao-yu-huan-yuan.md)
 * [9.3 ZFS 磁盘扩容](di-9-zhang-zfs-wen-jian-xi-tong/di-9.3-jie-zfs-ci-pan-kuo-rong.md)
 * [9.4 ZFS 数据压缩](di-9-zhang-zfs-wen-jian-xi-tong/di-9.4-jie-zfs-shu-ju-ya-suo.md)
