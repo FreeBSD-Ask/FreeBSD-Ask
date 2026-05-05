@@ -718,7 +718,7 @@ make BATCH=yes install || make BATCH=yes install || make BATCH=yes install || ma
 
 UNIX shell 还能使用户执行命令、重定向其输出、重定向其输入，并将多个命令组合在一起以优化最终输出。
 
-shell 重定向是将命令的输出或输入发送到另一个命令或文件中的操作。例如，将 ls(1) 命令的输出捕获到一个文件中，可以这样重定向输出：
+shell 重定向是将命令的输出或输入发送到另一条命令或文件中的操作。例如，将 ls(1) 命令的输出捕获到一份文件中，可以这样重定向输出：
 
 ```sh
 $ ls -l > test.txt
