@@ -4,7 +4,7 @@
 
 ## 何谓 Linux？
 
-Linux 是当今世界上广泛使用的开源操作系统之一。Linux 在不同语境下具有不同含义：狭义上指 Linux 内核，广义上通常指完整的操作系统，即 GNU/Linux。参见 Linux Kernel Organization. What is Linux?[EB/OL]. [2026-04-04]. <https://www.kernel.org/doc/html/latest/admin-guide/README.html>，该组织对这一问题的回答如下：
+Linux 是当今世界上广泛使用的开源操作系统之一。Linux 在不同语境下含义不同：狭义上指 Linux 内核，广义上通常指完整的操作系统，即 GNU/Linux。参见 Linux Kernel Organization. What is Linux?[EB/OL]. [2026-04-04]. <https://www.kernel.org/doc/html/latest/admin-guide/README.html>，该组织对这一问题的回答如下：
 
 > What is Linux?（什么是 Linux？）
 >
@@ -65,7 +65,7 @@ UNIX 标准 SUS 包含 POSIX 标准，前者是后者的超集。Single UNIX Spe
 
 ## 狭义 Linux：操作系统内核
 
-Linux 在不同语境下具有不同含义。从狭义上讲，Linux 指的是 Linux 内核。[Linux kernel](https://www.kernel.org/) 项目始于 1991 年。
+Linux 在不同语境下含义不同。从狭义上讲，Linux 指的是 Linux 内核。[Linux kernel](https://www.kernel.org/) 项目始于 1991 年。
 
 ## 广义 Linux：GNU/Linux 操作系统
 
