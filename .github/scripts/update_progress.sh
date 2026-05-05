@@ -105,6 +105,7 @@ $MARKER_START
 $msg
 
 提交统计（历史）:
+
 - 人工提交: $human_commits
 - 机器人提交: $bot_commits
 $MARKER_END
