@@ -144,7 +144,7 @@ FreeBSD 不仅在生命周期内不变，大版本更新也具有连贯性和稳
 - 追求软件的稳定性与新颖性，既需具备二进制源，又须支持编译安装。除了 FreeBSD 之外难以找到这样的开源系统（~~Void Linux 还是算了吧~~）。
 - BSD 赋予了更纯粹的自由：不以限制自由来保障自由，而以信任与开放成就真正的自由。
 - FreeBSD 是学院派工程实践的成果，也是 UNIX 哲学的现代延续。
-- 当其他操作系统生态愈发碎片化的同时，FreeBSD 的一体化设计避免了持续的选择困境，但这并非限制，若有需求，亦可便捷地进行修改。
+- 其他操作系统生态愈发碎片化，而 FreeBSD 的一体化设计避免了持续的选择困境，但这并非限制，若有需求，亦可便捷修改。
 - BSD 是一款完整的操作系统，而不是内核。内核和基本系统作为一个项目整体维护。缺乏基本系统的概念，将带来持续的混乱与违背直觉的行为。
 - FreeBSD 社区是由核心小组领导的。
 - FreeBSD 无论社区还是开发者都秉持着“慢就是快，快就是慢”的哲学思想。~~我们的确需要花些时间慢下来，审视自己的一切，无论知识还是自我。花些时间在路旁的花朵石子上面，也许并不是浪费时间，无所事事。~~
@@ -212,7 +212,7 @@ FreeBSD 不仅在生命周期内不变，大版本更新也具有连贯性和稳
 
 GNOME、Xorg（X11）、D-Bus、systemd、PulseAudio、Wayland、PipeWire 等主流 Linux 项目实际上受到红帽公司（Red Hat）的显著影响，且大多难以完全适配其他类 UNIX 操作系统。
 
-目前 FreeBSD 上的桌面部件的缺失很大程度上是因为它们对 Linux 特有函数库存在较强依赖，例如包含 `ip` 命令的 `iproute2` 软件包。更主要的原因则是这些桌面或部件与 systemd 存在深度捆绑或强制依赖关系，比如 `NetworkManager`。而 Samba 开发者则说“We use Linux, we develop for Linux, all others please submit patches”（我们使用 Linux，为 Linux 开发，其他系统的用户请自行提交补丁）FreeBSD 社区将此类现象称为“Linuxism”（Linux 主义/Linux 偏向）。
+目前 FreeBSD 桌面部件的缺失，很大程度上源于其对 Linux 特有函数库的较强依赖，例如包含 `ip` 命令的 `iproute2` 软件包。更主要的原因则是这些桌面或部件与 systemd 存在深度捆绑或强制依赖关系，比如 `NetworkManager`。而 Samba 开发者则说“We use Linux, we develop for Linux, all others please submit patches”（我们使用 Linux，为 Linux 开发，其他系统的用户请自行提交补丁）FreeBSD 社区将此类现象称为“Linuxism”（Linux 主义/Linux 偏向）。
 
 这种行为将导致何种后果尚不得而知，但此类程序正变得越来越多，并有成为主流的趋势。许多开发者在开发程序（如 `todesk`）时也不再考虑对传统 init 系统的兼容。Java 程序亦逐渐丧失了可移植性，FreeBSD 上的 Eclipse 近两年未获更新，其原因亦在于此类捆绑问题（D'Pong P. Bug 562443 - SWT spams temp folder with innumerable folders[EB/OL]. (2020-05-26)[2026-04-05]. <https://gitlab.simantics.org/simantics/eclipse/eclipse.platform.swt/-/commit/19153b908d6d4cedcbd59824686717502cfde4f7>.）若此趋势持续，可运行在 Linux 上的程序的可移植性可能进一步降低。
 
@@ -277,7 +277,7 @@ FreeBSD 核心小组成员并不直接从中获取任何利益，均为志愿者
 
 关于 FreeBSD 与 UNIX 的关系，该问题远非表面所见般清晰明确。诸多讨论者，甚至是那段岁月的亲历者，也难以给出明确回答或澄清。或者只是简单地说，BSD 并未进行过任何 UNIX 认证，没有持有法律上的商标便简单定论；更有甚者只是笼统地说 FreeBSD 是 UNIX 的延续者与正统继承者，仅是“有实无名”；另有观点认为，BSD 之于 UNIX，正如 Linux 之于 UNIX。
 
-上述回答之所以存在分歧，原因在于该问题并非可简单套用法律商标归属或代码继承性加以分析的纯粹技术性难题。这牵涉一个深刻的本体论哲学问题，究竟是不能两次踏进同一条河流，还是一次也不能踏进同一条河流？（类似的问题如谷堆问题、秃头问题，感兴趣的读者可参见 SEP 条目 Identity Over Time[EB/OL]. [2026-03-26]. <https://plato.stanford.edu/entries/identity-time>. Sorites Paradox[EB/OL]. [2026-03-26]. <https://plato.stanford.edu/entries/sorites-paradox/>.）。对这个问题的回答如何，映射着哲学观与科学技术观。
+上述回答存在分歧，原因在于该问题并非可简单套用法律商标归属或代码继承性加以分析的纯粹技术性难题。这牵涉一个深刻的本体论哲学问题，究竟是不能两次踏进同一条河流，还是一次也不能踏进同一条河流？（类似的问题如谷堆问题、秃头问题，感兴趣的读者可参见 SEP 条目 Identity Over Time[EB/OL]. [2026-03-26]. <https://plato.stanford.edu/entries/identity-time>. Sorites Paradox[EB/OL]. [2026-03-26]. <https://plato.stanford.edu/entries/sorites-paradox/>.）。对这个问题的回答如何，映射着哲学观与科学技术观。
 
 >> **忒修斯之船**
 >>
