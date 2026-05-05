@@ -10,7 +10,7 @@ FreeBSD 支持多种无线网卡和认证方式。
 
 ### 无线网络配置
 
-基本的无线网络由多个站点组成，这些站点通过在 2.4GHz、5GHz 或 6GHz 频段广播的无线电进行通信。配置无线网络包含三个基本步骤：
+基本的无线网络由多个站点组成，这些站点通过在 2.4GHz、5GHz 或 6GHz 频段广播的无线电通信。配置无线网络包含三个基本步骤：
 
 1. 扫描并选择接入点
 2. 认证站点
@@ -63,7 +63,7 @@ wlan0: flags=8802<BROADCAST,SIMPLEX,MULTICAST> metric 0 mtu 1500
 	nd6 options=29<PERFORMNUD,IFDISABLED,AUTO_LINKLOCAL>
 ```
 
-正常情况下，输出中应包含 `wlan0` 接口。
+在正常情况下，输出中应包含 `wlan0` 接口。
 
 ### 扫描无线网络
 
@@ -175,7 +175,7 @@ FreeBSD 无线网络涉及以下配置文件。
 
 完成上述配置后，重启系统或者网络服务以使所有配置生效。
 
-重启后，使用 `ifconfig` 查看连接情况，正常情况下可看到已成功连接（示例输出中 IP 为 192.168.31.178）：
+重启后，使用 `ifconfig` 查看连接情况，在正常情况下可看到已成功连接（示例输出中 IP 为 192.168.31.178）：
 
 ```sh
 ……省略一部分输出……
@@ -234,7 +234,7 @@ psk="WIFI 密码"
 
 ## 博通（Broadcom）网卡驱动
 
-博通（Broadcom）是另一家常用的无线网卡厂商。FreeBSD 内置的 Broadcom（博通）网卡驱动主要有两种：`bwi` 和 `bwn`，其中 `bwi` 支持较旧型号，`bwn` 支持较新型号。两者的支持范围部分重叠，但 `bwn` 对硬件的兼容性更好。
+博通（Broadcom）是另一家常用的无线网卡厂商。FreeBSD 内置的 Broadcom（博通）网卡驱动主要有两种：`bwi` 和 `bwn`，`bwi` 支持较旧型号，`bwn` 支持较新型号。两者的支持范围部分重叠，但 `bwn` 对硬件的兼容性更好。
 
 关于驱动选择的详细信息，请参考 Fuller L. Broadcom WiFi Improvements for FreeBSD[EB/OL]. (2018-01-22)[2026-04-05]. <https://web.archive.org/web/20240203102135/https://www.landonf.org/code/freebsd/Broadcom_WiFi_Improvements.20180122.html>.
 
@@ -255,7 +255,7 @@ if_bwi_load="YES"
 # make install clean
 ```
 
-可先通过 USB 或以太网共享网络来安装，也可以提前将所需依赖下载到指定目录。
+可先通过 USB 或以太网共享网络安装，也可以提前将所需依赖下载到指定目录。
 
 在 **/etc/rc.conf** 文件中添加以下配置，将物理无线设备 `bwi0` 绑定到 `wlan0` 接口：
 
@@ -361,14 +361,13 @@ hw.bwn_pci.preferred="1"        # 设置首选使用 BWN PCI 无线设备
 if_bwn_pci_load="YES"           # 在启动时加载 bwn_pci 驱动
 bwn_v4_ucode_load="YES"         # 加载 BWN V4 无线固件
 bwn_v4_n_ucode_load="YES"       # 加载 BWN V4 N 模式无线固件
-bwn_v4_lp_ucode_load="YES"     # 加载 BWN V4 低功耗模式无线固件
+bwn_v4_lp_ucode_load="YES"      # 加载 BWN V4 低功耗模式无线固件
 ```
 
 完成后重启系统，使用 `ifconfig` 检查是否存在 `wlan0` 接口，然后按照前文所述方法进行配置。
 
 ### 参考文献
 
-- FreeBSD Project. FreeBSD Handbook, Section 13.4 Configuring the FreeBSD Kernel[EB/OL]. [2026-04-24]. <https://docs.freebsd.org/en/books/handbook/kernelconfig/>. FreeBSD 手册中关于编译定制内核的章节，涵盖配置与构建流程。
 - FreeBSD Foundation. Broadcom Wi-Fi Modernization[EB/OL]. [2026-03-26]. <https://freebsdfoundation.org/project/broadcom-wi-fi-modernization/>. FreeBSD 基金会资助的博通 Wi-Fi 驱动现代化项目概述。
 - FreeBSD Project. Revision 326841[EB/OL]. [2026-03-26]. <https://svnweb.freebsd.org/base?view=revision&revision=326841>. 将博通无线驱动纳入 FreeBSD 基本系统的代码提交记录。
 - FreeBSD Forums. Installing Broadcom BCM43236 WiFi on 11.3 missing firmware error[EB/OL]. [2026-03-26]. <https://forums.freebsd.org/threads/installing-broadcom-bcm43236-wifi-on-11-3-missing-firmware-error.76470/>. 博通无线网卡固件缺失导致无法使用的论坛讨论。
@@ -416,7 +415,7 @@ ifconfig_wlan0="WPA inet 192.168.1.100 netmask 255.255.255.0"
 
 ### 开启无线热点
 
-在配置无线热点前，需要确认网卡是否支持 hostap 模式。可通过以下命令列出 `wlan0` 接口支持的无线功能和能力：
+配置无线热点前，需要确认网卡是否支持 hostap 模式。可通过以下命令列出 `wlan0` 接口支持的无线功能和能力：
 
 ```sh
 # ifconfig wlan0 list caps

@@ -164,7 +164,7 @@ cfc	test1	test2
 - FreeBSD Forums. mount linux ext4 drives on Freebsd[EB/OL]. (2020-03-10)[2026-03-25]. <https://forums.freebsd.org/threads/mount-linux-ext4-drives-on-freebsd.74414/>. FreeBSD 论坛讨论文章，详述 fusefs-ext2 在 FreeBSD 上挂载 EXT4 文件系统的实践方案。
 - FreeBSD Forums. XFS support[EB/OL]. [2026-03-25]. <https://forums.freebsd.org/threads/xfs-support.61449/>. FreeBSD 论坛 XFS 支持讨论，探讨 XFS 文件系统在 FreeBSD 上的兼容性与挂载方法。
 - FreeBSD Project. fusefs -- Filesystem in Userspace[EB/OL]. [2026-04-14]. <https://man.freebsd.org/cgi/man.cgi?fusefs(4)>. FUSE 内核接口手册页，描述用户空间文件系统框架。
-- FreeBSD Project. ext2fs -- ext2fs file system[EB/OL]. [2026-04-14]. <https://man.freebsd.org/cgi/man.cgi?ext2fs(5)>. ext2/ext3/ext4 文件系统手册页，描述 Linux 文件系统在 FreeBSD 上的挂载支持。
+- FreeBSD Project. ext2fs -- ext2/ext3/ext4 file system[EB/OL]. [2026-04-14]. <https://man.freebsd.org/cgi/man.cgi?ext2fs(4)>. ext2/ext3/ext4 文件系统手册页，描述 Linux 文件系统在 FreeBSD 上的挂载支持。
 - FreeBSD Project. mount -- mount file systems[EB/OL]. [2026-04-14]. <https://man.freebsd.org/cgi/man.cgi?mount(8)>. 文件系统挂载命令手册页。
 - FreeBSD Project. fstab -- static information about the filesystems[EB/OL]. [2026-04-14]. <https://man.freebsd.org/cgi/man.cgi?fstab(5)>. 文件系统表配置文件格式手册页。
 

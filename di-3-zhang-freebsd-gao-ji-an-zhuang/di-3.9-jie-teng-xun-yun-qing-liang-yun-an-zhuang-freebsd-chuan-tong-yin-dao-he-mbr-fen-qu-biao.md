@@ -22,7 +22,7 @@ FreeBSD 中文社区. 08-腾讯云轻量云及其他服务器安装 FreeBSD[EB/O
 >
 > 请注意数据安全。本节操作具有一定风险，且要求具备相应的操作能力。
 
-上述服务器的管理面板未提供 FreeBSD 镜像，因此需要采用变通方法进行安装。由于 FreeBSD 与 Linux 在内核及可执行文件格式上不兼容，无法通过 `chroot` 后删除原系统的方式进行安装。安装方法为：首先在内存盘中启动 FreeBSD 系统（即先引导 [mfsBSD](https://mfsbsd.vx.sk)），然后格式化硬盘并安装新系统。mfsBSD 是完全载入内存的 FreeBSD 系统，类似于 Windows PE（Preinstallation Environment）环境。
+上述服务器的管理面板未提供 FreeBSD 镜像，因此需要采用变通方法进行安装。由于 FreeBSD 与 Linux 在内核及可执行文件格式上不兼容，无法通过 `chroot` 后删除原系统来安装。安装方法为：首先在内存盘中启动 FreeBSD 系统（即先引导 [mfsBSD](https://mfsbsd.vx.sk)），然后格式化硬盘并安装新系统。mfsBSD 是完全载入内存的 FreeBSD 系统，类似于 Windows PE（Preinstallation Environment）环境。
 
 需要下载 [img 格式的 mfsBSD 镜像](https://mfsbsd.vx.sk/files/images/14/amd64/mfsbsd-se-14.2-RELEASE-amd64.img)，可提前下载后通过 WinSCP 上传至服务器；若直接在服务器上下载，可能耗时较长（约两小时）。
 
@@ -109,7 +109,7 @@ mfsBSD 和 mfsLinux 镜像的默认 `root` 密码均为 `mfsroot`。
 
 解释：
 
-- `|` 是管道符号，将上一个命令的标准输出作为下一个命令的标准输入。
+- `|` 是管道符号，将上一条命令的标准输出作为下一条命令的标准输入。
 - `-O-` 选项指示 wget 将文件下载并输出到标准输出；`dd` 在未指定 `if` 参数时会自动从标准输入读取数据。
 
 直接执行此 `dd` 命令将提示错误，如图所示：

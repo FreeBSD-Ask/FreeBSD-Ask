@@ -54,7 +54,7 @@ either move them to /usr/local/etc or rebuild zsh with the
 ETCDIR option enabled.
 
 ==========================================================
-默认情况下，zsh 会在 /usr/local/etc 中查找系统范围的默认设置。
+在默认情况下，zsh 会在 /usr/local/etc 中查找系统范围的默认设置。
 
 如果你之前设置了 /etc/zprofile、/etc/zshenv 等，
 要么将它们移到 /usr/local/etc，要么在启用 ETCDIR 选项的情况下重新构建 zsh。
@@ -80,7 +80,7 @@ Add the line below to *the end of* your .zshrc to enable highlighting.
 
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 安装时：
-将以下行添加到用户的 .zshrc 文件 *末尾* 以启用语法高亮。
+将以下行添加到用户的 .zshrc 文件末尾以启用语法高亮。
 
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 ```

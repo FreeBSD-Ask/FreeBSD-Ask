@@ -2,7 +2,7 @@
 
 ## 用户级 ZFS 管理
 
-ZFS 委托管理（ZFS delegation）是一种细粒度的权限控制机制，能让系统管理员将特定的 ZFS 管理权限授予非特权用户，而无需提供完整的 root 访问权限。自 FreeBSD 14.1 起，adduser 会自动为非特权用户的 ZFS 主目录创建独立数据集并支持加密。
+ZFS 委托管理（ZFS delegation）是一种细粒度的权限控制机制，能让系统管理员将特定的 ZFS 管理权限授予非特权用户。自 FreeBSD 14.1 起，adduser 会自动为非特权用户的 ZFS 主目录创建独立数据集并支持加密。
 
 该变更（commit 516009ce8d38）使 `adduser(8)` 在用户主目录的父目录为 ZFS 数据集时，自动为用户创建独立 ZFS 数据集，例如 **/home/xxx** 继承自 **/home**。`adduser` 的 `-Z` 参数可禁用此行为，同时支持为非特权用户的 ZFS 主目录启用加密。
 
@@ -163,7 +163,7 @@ NAME                       PROPERTY  VALUE    SOURCE
 zroot/home/safreya/secret  mounted   yes      -
 ```
 
-查看 `mounted` 属性，加密数据集创建即挂载，现在创建一个文件，然后卸载加密数据集：
+查看 `mounted` 属性，加密数据集创建即挂载，现在创建一份文件，然后卸载加密数据集：
 
 ```sh
 % cd secret                                      # 进入 secret 数据集目录

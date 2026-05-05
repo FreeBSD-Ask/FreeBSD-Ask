@@ -324,7 +324,7 @@ $ type cd
 cd is a shell builtin
 ```
 
-在 FreeBSD 中，除了上述 shell 内置命令外（参见：sh(1)[EB/OL]. [2026-03-26]. <https://man.freebsd.org/cgi/man.cgi?sh(1)>），常用命令都是基本系统自带的，不属于任何一个包。例如 `ls` 命令，其源代码位于 `freebsd-src/bin/ls/`[EB/OL]. [2026-03-26]. <https://github.com/freebsd/freebsd-src/tree/main/bin/ls>。可见 FreeBSD 系统是一个有机整体，而非由不同人员或团队维护的软件包简单拼凑而成。
+在 FreeBSD 中，除了上述 shell 内置命令外（参见：sh(1)[EB/OL]. [2026-03-26]. <https://man.freebsd.org/cgi/man.cgi?sh(1)>），常用命令都是基本系统自带的，不属于任何一个包。例如 `ls` 命令，其源代码位于 `freebsd-src/bin/ls/`[EB/OL]. [2026-03-26]. <https://github.com/freebsd/freebsd-src/tree/main/bin/ls>。可见 FreeBSD 系统是有机整体，而非由不同人员或团队维护的软件包简单拼接而成。
 
 如果配置了 pkgbase，则输出类似：
 
@@ -696,7 +696,7 @@ $ rm -rf *
 
 其语义为：仅当前一条命令执行失败（返回非零退出状态码）时，才执行后一条命令；否则跳过后续命令。
 
-使用场景：如果一个命令一直执行失败，但需要反复执行，则可连续使用多个 `||`，防止一次失败后反复手动再次执行该命令，例如：
+使用场景：如果一条命令一直执行失败，但需要反复执行，则可连续使用多个 `||`，防止一次失败后反复手动再次执行该命令，例如：
 
 ```sh
 make BATCH=yes install || make BATCH=yes install || make BATCH=yes install || make BATCH=yes install
@@ -718,7 +718,7 @@ make BATCH=yes install || make BATCH=yes install || make BATCH=yes install || ma
 
 UNIX shell 还能使用户执行命令、重定向其输出、重定向其输入，并将多个命令组合在一起以优化最终输出。
 
-shell 重定向是将命令的输出或输入发送到另一个命令或文件中的操作。例如，将 ls(1) 命令的输出捕获到一个文件中，可以这样重定向输出：
+shell 重定向是将命令的输出或输入发送到另一条命令或文件中的操作。例如，将 ls(1) 命令的输出捕获到一份文件中，可以这样重定向输出：
 
 ```sh
 $ ls -l > test.txt
@@ -746,7 +746,7 @@ drw-------  2 ykla ykla 2 Apr 28 00:24 test
 total 1
 ```
 
-输入会被排序并显示在屏幕上。要将该输入重定向到另一个文件，可以将 sort(1) 的输出重定向出去，操作如下：
+输入会被排序并显示在屏幕上。要将该输入重定向到另一份文件，可以将 sort(1) 的输出重定向出去，操作如下：
 
 ```sh
 $ sort < test.txt > sorted.txt
@@ -760,7 +760,7 @@ total 1
 
 通过使用这些描述符，shell 允许将输出和输入在多个命令之间传递，并重定向到文件或从文件中读取。另一种重定向方法是管道操作符。
 
-UNIX® 的管道操作符 `|` 允许将一个命令的输出直接传递或重定向到另一个程序。简单来说，管道允许一个命令的标准输出被作为标准输入传递给另一个命令，例如：
+UNIX® 的管道操作符 `|` 允许将一条命令的输出直接传递或重定向到另一款程序。简单来说，管道允许一条命令的标准输出被作为标准输入传递给另一条命令，例如：
 
 ```sh
 $ cat test.txt | sort | less

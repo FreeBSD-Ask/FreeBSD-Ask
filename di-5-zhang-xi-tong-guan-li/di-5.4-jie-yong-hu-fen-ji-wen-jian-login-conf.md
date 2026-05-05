@@ -14,7 +14,7 @@
     └── .login_conf          # 用户本地覆盖文件，可覆盖 /etc/login.conf 的设置
 ```
 
-对于普通用户，可通过家目录下的 **~/.login_conf** 文件覆盖系统级配置。记录 ID 为“me”的条目只能覆盖该用户部分的用户分级配置，系统级配置文件 **/etc/login.conf** 的优先级低于用户本地配置。
+普通用户可通过家目录下的 **~/.login_conf** 文件覆盖系统级配置。记录 ID 为“me”的条目只能覆盖该用户部分的用户分级配置，系统级配置文件 **/etc/login.conf** 的优先级低于用户本地配置。
 
 `login.conf` 文件在 FreeBSD 源代码中的位置为 [usr.bin/login/login.conf](https://github.com/freebsd/freebsd-src/blob/main/usr.bin/login/login.conf)，该文件即为默认配置，默认设置禁用了资源配额。
 

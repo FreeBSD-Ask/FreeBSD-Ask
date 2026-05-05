@@ -6,7 +6,7 @@
 
 ## 代理工作原理
 
-代理的工作流程可概括为：客户端发起请求 → 请求被重定向至代理服务器 → 代理服务器将请求转发至目标服务器 → 目标服务器响应代理服务器 → 代理服务器将响应返回客户端。在此过程中，目标服务器看到的是代理服务器的地址，而非客户端的真实地址。
+代理的工作流程可概括为：客户端发起请求 → 请求被重定向至代理服务器 → 代理服务器将请求转发至目标服务器 → 目标服务器响应代理服务器 → 代理服务器将响应返回客户端。在此过程中，目标服务器见到的是代理服务器的地址，而非客户端的真实地址。
 
 代理按部署模式可分为三类：
 
@@ -145,7 +145,6 @@ Firefox 浏览器在设置页面的网络设置选项卡中提供了图形化代
 
 ### 参考文献
 
-- FreeBSD Project. chromium(1) -- the web browser from Google[EB/OL]. [2026-03-25]. <https://man.freebsd.org/cgi/man.cgi?query=chrome>. 阐述 Chromium 命令行代理参数配置。
 - Owynn, graudeejs, rjohn, olli@, Sevendogsbsd, kpedersen. chromium proxy settings page doesn't exist[EB/OL]. [2026-03-25]. <https://forums.freebsd.org/threads/chromium-proxy-settings-page-doesnt-exist.31927/>. 提供了 FreeBSD 下 Chromium 代理配置的实践解决方案。
 
 ## 课后习题

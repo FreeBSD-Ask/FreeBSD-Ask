@@ -36,7 +36,7 @@ Mihomo 的文件结构如下：
     └── rc.conf # 系统服务配置文件
 ```
 
-Mihomo 也可通过 FreeBSD 的 Linux 二进制兼容层运行，其网络流量管控能力在兼容层下同样可用。
+Mihomo 也可通过 FreeBSD 的 Linux 二进制兼容层运行，其网络流量管控能力在兼容层中同样可用。
 
 ## RC 脚本
 
@@ -152,7 +152,7 @@ sysrc mihomo_geoip="https://ghfast.top/https://github.com/MetaCubeX/meta-rules-d
 sysrc mihomo_extra_flags="-m" # 可选，但建议使用
 ```
 
-- `-m`：启用 geodata 模式，使 Mihomo 使用 geosite.dat 和 geoip.dat 文件进行规则匹配，而非默认的 site.dat 和 ip.dat。
+- `-m`：启用 geodata 模式，使 Mihomo 使用 geosite.dat 和 geoip.dat 文件匹配规则，而非默认的 site.dat 和 ip.dat。
 
 - 指定运行 Mihomo 服务的用户身份：
 
@@ -184,7 +184,7 @@ sysrc mihomo_datadir="/var/run/mihomo"
 service mihomo init
 ```
 
-- 更新订阅配置。在执行 `start` 前先行更新，便可使用最新的订阅信息，确保配置文件为最新版本：
+- 更新订阅配置。执行 `start` 前先行更新，便可使用最新的订阅信息，确保配置文件为最新版本：
 
 ```sh
 service mihomo reconfig

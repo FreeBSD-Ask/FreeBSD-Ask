@@ -62,14 +62,14 @@
 
 * [5.1 启动引导器及配置文件（loader.conf）](di-5-zhang-xi-tong-guan-li/di-5.1-jie-qi-dong-yin-dao-qi-ji-pei-zhi-wen-jian-loader-conf.md)
 * [5.2 引导管理器与 UEFI 固件](di-5-zhang-xi-tong-guan-li/di-5.2-jie-yin-dao-guan-li-qi-yu-uefi-gu-jian.md)
-* [5.3 init.rc 服务管理](di-5-zhang-xi-tong-guan-li/di-5.3-jie-init-rc-fu-wu-guan-li.md)
+* [5.3 管理 FreeBSD 中的服务](di-5-zhang-xi-tong-guan-li/di-5.3-jie-init-rc-fu-wu-guan-li.md)
 * [5.4 用户分级文件（login.conf）](di-5-zhang-xi-tong-guan-li/di-5.4-jie-yong-hu-fen-ji-wen-jian-login-conf.md)
 * [5.5 bsdconfig 系统配置工具](di-5-zhang-xi-tong-guan-li/di-5.5-jie-bsdconfig-xi-tong-pei-zhi-gong-ju.md)
 * [5.6 OpenSSH](di-5-zhang-xi-tong-guan-li/di-5.6-jie-OpenSSH.md)
 * [5.7 远程桌面访问](di-5-zhang-xi-tong-guan-li/di-5.7-jie-yuan-cheng-zhuo-mian-fang-wen.md)
 * [5.8 设备资源提示文件（device.hints）](di-5-zhang-xi-tong-guan-li/di-5.8-jie-she-bei-zi-yuan-ti-shi-wen-jian-device-hints.md)
-* [5.9 crontab 及定时任务文件（periodic.conf）](di-5-zhang-xi-tong-guan-li/di-5.9-jie-crontab-ji-ding-shi-ren-wu-wen-jian-periodic-conf.md)
-* [5.10 内核状态默认配置文件（sysctl.conf）](di-5-zhang-xi-tong-guan-li/di-5.10-jie-nei-he-zhuang-tai-mo-ren-pei-zhi-wen-jian-sysctl-conf.md)
+* [5.9 Cron 和 Periodic](di-5-zhang-xi-tong-guan-li/di-5.9-jie-crontab-ji-ding-shi-ren-wu-wen-jian-periodic-conf.md)
+* [5.10 sysctl 工具](di-5-zhang-xi-tong-guan-li/di-5.10-jie-nei-he-zhuang-tai-mo-ren-pei-zhi-wen-jian-sysctl-conf.md)
 * [5.11 时间同步服务](di-5-zhang-xi-tong-guan-li/di-5.11-jie-shi-jian-tong-bu-fu-wu.md)
 * [5.12 Live 镜像与系统恢复](di-5-zhang-xi-tong-guan-li/di-5.12-jie-live-jing-xiang-yu-xi-tong-hui-fu.md)
 
@@ -96,7 +96,7 @@
 
 ## 第 9 章 ZFS 文件系统
 
-* [9.1 ZFS 概述](di-9-zhang-zfs-wen-jian-xi-tong/di-9.1-jie-zfs-gai-shu.md)
+* [9.1 ZFS 历史与现实](di-9-zhang-zfs-wen-jian-xi-tong/di-9.1-jie-zfs-gai-shu.md)
 * [9.2 ZFS 快照与还原](di-9-zhang-zfs-wen-jian-xi-tong/di-9.2-jie-zfs-kuai-zhao-yu-huan-yuan.md)
 * [9.3 ZFS 磁盘扩容](di-9-zhang-zfs-wen-jian-xi-tong/di-9.3-jie-zfs-ci-pan-kuo-rong.md)
 * [9.4 ZFS 数据压缩](di-9-zhang-zfs-wen-jian-xi-tong/di-9.4-jie-zfs-shu-ju-ya-suo.md)
@@ -149,7 +149,7 @@
 ## 第 14 章 多媒体和外部设备
 
 * [14.1 Web 浏览器](di-14-zhang-duo-mei-ti-he-wai-bu-she-bei/di-14.1-jie-web-liu-lan-qi.md)
-* [14.2 音频设备配置](di-14-zhang-duo-mei-ti-he-wai-bu-she-bei/di-14.2-jie-yin-pin-she-bei-pei-zhi.md)
+* [14.2 声卡配置](di-14-zhang-duo-mei-ti-he-wai-bu-she-bei/di-14.2-jie-yin-pin-she-bei-pei-zhi.md)
 * [14.3 音频播放器](di-14-zhang-duo-mei-ti-he-wai-bu-she-bei/di-14.3-jie-yin-pin-bo-fang-qi.md)
 * [14.4 蓝牙](di-14-zhang-duo-mei-ti-he-wai-bu-she-bei/di-14.4-jie-lan-ya.md)
 * [14.5 打印机](di-14-zhang-duo-mei-ti-he-wai-bu-she-bei/di-14.5-jie-da-yin-ji.md)
@@ -187,7 +187,7 @@
 * [18.5 OpenSSL](di-18-zhang-an-quan/di-18.5-jie-openssl.md)
 * [18.6 入侵检测系统（IDS）](di-18-zhang-an-quan/di-18.6-jie-ru-qin-jian-ce-xi-tong.md)
 * [18.7 第三方漏洞与安全公告](di-18-zhang-an-quan/di-18.7-jie-di-san-fang-lou-dong-yu-an-quan-gong-gao.md)
-* [18.9 访问控制框架（MAC 框架）](di-18-zhang-an-quan/di-18.9-jie-fang-wen-kong-zhi-kuang-jia-mac-kuang-jia.md)
+* [18.8 强制访问控制框架（MAC 框架）](di-18-zhang-an-quan/di-18.8-jie-fang-wen-kong-zhi-kuang-jia-mac-kuang-jia.md)
 
 ## 第 19 章 服务器
 
@@ -288,8 +288,6 @@
 
 ## 附录 I 工具与资源
 
-* [自由软件与开源软件的常见误解辨析](fu-lu1/zi-you-ruan-jian.md)
-* [GNU/Linux 发行版比较](fu-lu1/gnu-linux.md)
 * [BSD 许可证概览](fu-lu1/bsd-xu-ke-zheng-gai-lan.md)
 * [microSD 卡参数简介](fu-lu1/cun-chu-ka.md)
 
