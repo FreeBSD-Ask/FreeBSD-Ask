@@ -105,7 +105,7 @@ sysctl.conf 的源代码位于 [/sbin/sysctl/sysctl.conf](https://github.com/fre
 
 > **技巧**
 >
-> 不建议直接修改 **/etc/sysctl.conf** 文件，如需自定义配置，应使用 **/etc/sysctl.conf.local** 文件进行本地配置扩展，避免系统更新时配置被覆盖。
+> 不建议直接修改 **/etc/sysctl.conf** 文件，如需自定义配置，应使用 **/etc/sysctl.conf.local** 文件扩展本地配置，避免系统更新时配置被覆盖。
 
 ## 配置文件
 
