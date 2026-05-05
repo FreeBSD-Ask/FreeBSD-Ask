@@ -396,6 +396,6 @@ Probe URL: https://bsd-hardware.info/?probe=f64606c4b1
 
 ## 课后习题
 
-3. 校验和验证的信任链始于对官方 CHECKSUM 文件真实性的假定。分析下载页面、邮件列表存档与第三方镜像三种渠道提供的 CHECKSUM 信息可靠性差异，讨论安装前验证为何无法消除所有信任假设。
-1. 计算 FreeBSD -RELEASE memstick 镜像的 SHA-256 校验和，与官方 CHECKSUM 比对。
+1. 计算 FreeBSD RELEASE memstick 镜像的 SHA-256 校验和，与官方 CHECKSUM 文件比对。
 2. 使用 hw-probe 采集硬件数据并上传至 bsd-hardware.info，分析其对安装决策的参考价值。
+3. 校验和验证的信任链依赖于官方 CHECKSUM 文件的真实性。分析通过下载页面、邮件列表存档和第三方镜像三种渠道获取的 CHECKSUM 信息可靠性差异，讨论安装前验证为何无法消除所有信任假设。
