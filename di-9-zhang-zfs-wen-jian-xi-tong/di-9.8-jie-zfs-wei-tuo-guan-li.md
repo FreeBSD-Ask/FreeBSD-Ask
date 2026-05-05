@@ -163,7 +163,7 @@ NAME                       PROPERTY  VALUE    SOURCE
 zroot/home/safreya/secret  mounted   yes      -
 ```
 
-查看 `mounted` 属性，加密数据集创建即挂载，现在创建一个文件，然后卸载加密数据集：
+查看 `mounted` 属性，加密数据集创建即挂载，现在创建一份文件，然后卸载加密数据集：
 
 ```sh
 % cd secret                                      # 进入 secret 数据集目录
