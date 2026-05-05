@@ -98,7 +98,7 @@ machdep.wall_cmos_clock: 1
 
 ## 时间服务
 
-时区设置完成后，需要配置和启用时间同步服务。网络时间协议（Network Time Protocol，NTP）是常用的时间同步协议，用于通过网络同步计算机系统时间。
+时区设置完成后，需要配置和启用时间同步服务。网络时间协议（Network Time Protocol，NTP）用于通过网络同步计算机系统时间。
 
 FreeBSD 与 Linux 时间服务比较：
 
