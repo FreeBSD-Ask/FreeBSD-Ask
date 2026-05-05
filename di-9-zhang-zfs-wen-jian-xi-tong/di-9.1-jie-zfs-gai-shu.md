@@ -1,4 +1,4 @@
-# 9.1 ZFS 概述
+# 9.1 ZFS 历史与现实
 
 ZFS 源于 Sun Solaris，2005 年以 CDDL 许可证开源，2007 年导入 FreeBSD。Oracle 收购 Sun 后 ZFS 转为闭源开发，开源社区于 2013 年发起 OpenZFS 项目延续其发展。2020 年 OpenZFS 2.0 统一了 FreeBSD 与 Linux 的 ZFS 代码库，提供写时拷贝、快照、端到端校验与自愈等存储特性。
 
