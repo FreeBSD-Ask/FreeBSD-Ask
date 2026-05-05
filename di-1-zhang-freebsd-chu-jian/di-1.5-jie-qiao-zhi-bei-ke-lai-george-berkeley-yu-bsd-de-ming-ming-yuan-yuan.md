@@ -173,7 +173,7 @@ BERKELEY G. Verses on the Prospect of Planting Arts and Learning in America[C]//
 
 伯克利市（Berkeley）的命名可以追溯至 1866 年。当时，加州学院（College of California）的受托人弗雷德里克·比林斯（Frederick Billings）援引贝克莱的诗句“Westward the course of empire takes its way”（帝国之路向西延伸），建议将新校址所在城镇命名为 Berkeley。1868 年，加利福尼亚州的立法机构决定在该土地上建立加州大学。
 
-20 世纪 70 年代，加州大学伯克利分校的计算机科学研究人员开始对 AT&T 贝尔实验室开发的 UNIX 操作系统进行修改与扩展。由于这些修改与扩展最初以软件发行包的形式发布，因此被称为伯克利软件发行版（Berkeley Software Distribution，BSD）。
+20 世纪 70 年代，加州大学伯克利分校的计算机科学研究人员开始对 AT&T 贝尔实验室开发的 UNIX 操作系统进行修改与扩展。由于这些修改与扩展最初以软件发行包的形式发布，故称伯克利软件发行版（Berkeley Software Distribution，BSD）。
 
 ## 参考文献
 
