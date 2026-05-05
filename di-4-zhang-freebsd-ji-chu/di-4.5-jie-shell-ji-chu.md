@@ -59,7 +59,7 @@ Linux 中常见的 shell 通常是 bash（Bourne Again shell，是对“Born Aga
 
 ### 使用 Scroll Lock 键在 TTY 界面上下翻页/翻行
 
-使用 **Scroll Lock** 键（滚动锁定键）：按下 **Scroll Lock** 键后，可以使用上 ↑/下 ↓ 方向键以及 **Page Up**/**Page Down** 键对屏幕进行操作。
+使用 **Scroll Lock** 键（滚动锁定键）：按下 **Scroll Lock** 键后，可以使用上 ↑/下 ↓ 方向键以及 **Page Up**/**Page Down** 键滚动屏幕。
 
 不同点：
 
