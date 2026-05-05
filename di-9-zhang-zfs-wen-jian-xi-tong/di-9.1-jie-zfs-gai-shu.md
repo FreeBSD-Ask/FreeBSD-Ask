@@ -106,17 +106,8 @@
    │      └────────────┘   └────────────┘   └────────────┘                │
    └──────────────────────────────────────────────────────────────────────┘
 
-  手册依据　zfsprops.7:      type ∈ {filesystem, volume, snapshot, bookmark}
-           zfs.8:          "file system — Can be mounted... behaves like other
-                           file systems" (ZFS 文件系统 = ZFS 原生格式)
-           zfs.8:          "volume — A logical volume exported as a raw or
-                           block device" (ZFS 卷 = 块设备, 可格式化任意 FS)
-           zfs-create.8:   zfs create filesystem   → 创建 ZFS 文件系统
-           zfs-create.8:   zfs create -V size volume → 创建块设备 /dev/zvol/...
-           zfsconcepts.7:  "Clones can only be created from a snapshot"
-           zfsconcepts.7:  "Bookmarks are initially tied to a snapshot"
            写路径: 写入 → ZIL → [Log VDEV] → TXG → 数据 VDEV → 磁盘
-           读路径: 读取 → ARC(RAM) → [miss] → L2ARC(Cache VDEV) → [miss] → 数据 VDEV
+           读路径: 读取 → ARC(RAM) → L2ARC(Cache VDEV) → 数据 VDEV
            校验:  Checksum 验证 → 损坏 → Mirror/RAID-Z 冗余自动修复
 ```
 
