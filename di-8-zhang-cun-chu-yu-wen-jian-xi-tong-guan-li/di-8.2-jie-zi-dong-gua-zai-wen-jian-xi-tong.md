@@ -74,7 +74,7 @@ SpaceSniffer.exe
 # automount -fu
 ```
 
-### 未竟事宜
+### 未竟事项
 
 #### 中文乱码
 
