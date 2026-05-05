@@ -290,7 +290,7 @@ if_re_name="/boot/modules/if_re.ko"   # 指定 re 网卡驱动模块路径
 
 ### Intel 网卡
 
-Intel 网卡也是常见的网络适配器类型，FreeBSD 对其提供了良好支持。
+Intel 网卡也是常见的网络适配器类型，FreeBSD 对其支持良好。
 
 #### 2.5 G
 
