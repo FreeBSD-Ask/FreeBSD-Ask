@@ -37,7 +37,7 @@ rack                            * rack                             0
 
 ## BBR 拥塞控制算法原理
 
-TCP BBR（Bottleneck Bandwidth and Round-trip propagation time）是 Google 公司开发的一种基于模型的拥塞控制算法。与传统基于丢包的拥塞控制算法（如 CUBIC、NewReno）不同，BBR 通过主动探测网络路径的瓶颈带宽和往返传播时间来构建网络性能模型，其核心优化目标包括：
+TCP BBR（Bottleneck Bandwidth and Round-trip propagation time）是 Google 公司开发的一种基于模型的拥塞控制算法。与传统基于丢包的拥塞控制算法（如 CUBIC、NewReno）不同，BBR 通过主动探测网络路径的瓶颈带宽和往返传播时间构建网络性能模型，其核心优化目标包括：
 
 - 充分利用可用网络带宽。
 - 最小化网络传输延迟。
