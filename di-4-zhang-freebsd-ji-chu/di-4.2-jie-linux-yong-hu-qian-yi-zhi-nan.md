@@ -155,7 +155,7 @@ FreeBSD 的目录层次由 `hier(7)` 定义。与 FHS 相比，FreeBSD 的目录
 
 FHS 按可共享/不可共享、静态/可变两个维度将文件分层：**/usr** 可共享只读，**/var** 可变，根文件系统仅需满足引导、恢复、修复的最低需求。FreeBSD 遵循此原则，基本系统限定在 `hier(7)` 定义目录，第三方软件限定在 **/usr/local**。
 
-POSIX（IEEE 1003.1）/SUS（UNIX 03）对目录结构无类似要求。POSIX.1-2008 明确删除了 **/bin**、**/usr/bin**、**/lib**、**/usr/lib** 等描述——理由是对应用程序没有用处。POSIX 仅要求 **/**、**/dev**（含 **/dev/null**、**/dev/tty**、**/dev/console**）、**/tmp** 存在，临时文件建议通过 `TMPDIR` 环境变量定位。FHS 仅在个别条目中注明与 POSIX 一致，其余目录规范均属 FHS 自身定义，不在 POSIX 范围内。
+POSIX（IEEE 1003.1）/SUS（UNIX 03）对目录结构无类似要求。POSIX.1-2008 明确删除了 **/bin**、**/usr/bin**、**/lib**、**/usr/lib** 等描述——理由是对应用程序并无用处。POSIX 仅要求 **/**、**/dev**（含 **/dev/null**、**/dev/tty**、**/dev/console**）、**/tmp** 存在，临时文件建议通过 `TMPDIR` 环境变量定位。FHS 仅在个别条目中注明与 POSIX 一致，其余目录规范均属 FHS 自身定义，不在 POSIX 范围内。
 
 ### 参考文献
 
