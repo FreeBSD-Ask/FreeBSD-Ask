@@ -226,7 +226,7 @@ check_quotas="NO"
 
 配置完成后，重新启动系统，**/etc/rc** 将自动运行相应的命令，为 **/etc/fstab** 中启用的所有配额创建初始配额文件。
 
-默认情况下，配额文件存储在文件系统的根目录中，名为 **quota.user** 和 **quota.group**。
+在默认情况下，配额文件存储在文件系统的根目录中，名为 **quota.user** 和 **quota.group**。
 
 ```sh
 -rw-r-----   1 root operator -                             64192 May  1 02:34 quota.group

@@ -167,7 +167,7 @@ daily_status_zfs_enable="YES"
 
 在 **/etc/periodic.conf** 文件中，变量 `daily_output`、`weekly_output` 和 `monthly_output` 指定了脚本执行结果的发送位置。
 
-默认情况下，周期性脚本的输出会发送到 root 用户的邮件，因此建议阅读 root 的邮件，或者将 root 的邮件别名为一个被监控的邮箱。
+在默认情况下，周期性脚本的输出会发送到 root 用户的邮件，因此建议阅读 root 的邮件，或者将 root 的邮件别名为一个被监控的邮箱。
 
 要将结果发送到其他邮件地址，可以在 **/etc/periodic.conf** 文件中添加以空格分隔的邮件地址：
 

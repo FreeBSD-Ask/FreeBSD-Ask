@@ -143,7 +143,7 @@ To start the services, restart the system.
 
 In some situations, a panic will occur when the kernel module loads.
 Having no more than one virtual CPU might mitigate the issue.
-# 某些情况下，加载内核模块时可能发生 panic。限制为单核虚拟 CPU 有可能缓解该问题。
+# 在某些情况下，加载内核模块时可能发生 panic。限制为单核虚拟 CPU 有可能缓解该问题。
 
 For features such as window scaling and clipboard sharing, membership of
 the wheel group is required. With username "jerry" as an example:

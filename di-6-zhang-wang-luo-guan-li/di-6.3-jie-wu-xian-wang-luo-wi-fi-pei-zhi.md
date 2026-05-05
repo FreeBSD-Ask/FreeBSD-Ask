@@ -63,7 +63,7 @@ wlan0: flags=8802<BROADCAST,SIMPLEX,MULTICAST> metric 0 mtu 1500
 	nd6 options=29<PERFORMNUD,IFDISABLED,AUTO_LINKLOCAL>
 ```
 
-正常情况下，输出中应包含 `wlan0` 接口。
+在正常情况下，输出中应包含 `wlan0` 接口。
 
 ### 扫描无线网络
 
@@ -175,7 +175,7 @@ FreeBSD 无线网络涉及以下配置文件。
 
 完成上述配置后，重启系统或者网络服务以使所有配置生效。
 
-重启后，使用 `ifconfig` 查看连接情况，正常情况下可看到已成功连接（示例输出中 IP 为 192.168.31.178）：
+重启后，使用 `ifconfig` 查看连接情况，在正常情况下可看到已成功连接（示例输出中 IP 为 192.168.31.178）：
 
 ```sh
 ……省略一部分输出……
