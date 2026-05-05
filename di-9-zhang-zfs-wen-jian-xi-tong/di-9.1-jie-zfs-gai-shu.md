@@ -1,41 +1,47 @@
 # 9.1 ZFS 历史与现实
 
 ```
-                              ┌──────────────────────────────────────────────┐
-                              │              数据集 (Dataset)                  │
-                              │                                              │
-                              │  zfsprops.7: type 属性只有四种值:              │
-                              │                                              │
-                              │  ┌──────────────────┐  ┌──────────────────┐  │
-                              │  │   文件系统         │  │   卷 (Volume)     │  │
-                              │  │   filesystem      │  │   ZVOL           │  │
-                              │  │                  │  │                  │  │
-                              │  │  挂载为目录树      │  │  暴露为块设备      │  │
-                              │  │  POSIX 文件接口   │  │  /dev/zvol/...   │  │
-                              │  │  层次化命名        │  │  可运行其他 FS    │  │
-                              │  └────────┬─────────┘  └────────┬─────────┘  │
-                              │           └──────────┬──────────┘             │
-                              │                      │                        │
-                              │           均可创建快照/书签 ▼                   │
-                              │                      │                        │
-                              │           ┌──────────┴──────────┐              │
-                              │           ▼                     ▼             │
-                              │   ┌──────────────┐    ┌───────────────┐      │
-                              │   │ 快照 (Snapshot)│    │ 书签 (Bookmark) │      │
-                              │   │ pool/ds@snap  │    │ pool/ds#bkmk  │      │
-                              │   │ 只读时间点      │    │ 轻量引用        │      │
-                              │   │ 可回滚,可派生   │    │ 不占额外空间    │      │
-                              │   └──────────────┘    └───────────────┘      │
-                              │                                              │
-                              │  克隆 (Clone): 非独立 type,本质仍是文件系统或卷  │
-                              │  (从快照创建,origin 属性指向源快照)              │
-                              │                                              │
-                              │  共有属性: COW(写时复制) Checksum(校验)         │
-                              │            Compression Encryption             │
-                              │            Dedup(去重) copies(复制)            │
-                              │            Block Cloning                      │
-                              └──────────────────────┬───────────────────────┘
-                                                    │
+                              ┌────────────────────────────────────────────────────────┐
+                              │                       数据集 (Dataset)                   │
+                              │                                                        │
+                              │     zfsprops.7: type ∈ {filesystem, volume,             │
+                              │                    snapshot, bookmark}                  │
+                              │                                                        │
+                              │     Dataset 创建时二选一, 互不包含:                       │
+                              │                                                        │
+                              │  ┌──────────────────────┐  ┌──────────────────────┐     │
+                              │  │  ZFS 文件系统         │  │  ZFS 卷 (Volume)     │     │
+                              │  │  type=filesystem     │  │  type=volume         │     │
+                              │  │                      │  │                      │     │
+                              │  │  ZFS 原生文件系统      │  │  原始块设备 (ZVOL)    │     │
+                              │  │  自动挂载为目录树     │  │  /dev/zvol/pool/vol  │     │
+                              │  │  POSIX 文件语义      │  │  无自带文件系统       │     │
+                              │  │  不可格式化为其他 FS  │  │  可格式化为任意FS     │     │
+                              │  │  ≠FAT32/NTFS/ext4    │  │  FAT32,NTFS,UFS..    │     │
+                              │  │                      │  │                      │     │
+                              │  │  zfs create pool/fs  │  │  zfs create -V 10G   │     │
+                              │  └───────────┬──────────┘  └───────────┬──────────┘     │
+                              │              └─────────┬──────────────┘                 │
+                              │                        │                                │
+                              │    均可创建快照/书签/克隆 ▼                                │
+                              │                        │                                │
+                              │             ┌──────────┴──────────┐                     │
+                              │             ▼                     ▼                     │
+                              │  ┌─────────────────────┐ ┌─────────────────────┐        │
+                              │  │  快照 (Snapshot)     │ │  书签 (Bookmark)    │        │
+                              │  │  pool/ds@snap       │ │  pool/ds#bkmk       │        │
+                              │  │  只读时间点副本       │ │  轻量级发送源        │        │
+                              │  │  可回滚,可克隆        │ │  不阻止数据删除      │        │
+                              │  └─────────────────────┘ └─────────────────────┘        │
+                              │                                                        │
+                              │  克隆 (Clone): 非独立 type, 从快照创建 (zfs clone),        │
+                              │  本质仍是文件系统或卷, origin 属性指向源快照                │
+                              │                                                        │
+                              │  共有属性: COW(写时复制) Checksum(校验) Compression(压缩)    │
+                              │            Encryption(加密) Dedup(去重) copies(多副本)    │
+                              │            Block Cloning(块克隆)                        │
+                              └───────────────────────────┬────────────────────────────┘
+                                                          │
               数据集(Dataset) ──属于──► 存储池(Pool) — 共享全部空闲空间
                            ┌─────────────────────────┴─────────────────────────┐
                            │     存储池 (zpool / Pool) — 为数据集提供存储空间     │
@@ -101,6 +107,12 @@
    └──────────────────────────────────────────────────────────────────────┘
 
   手册依据　zfsprops.7:      type ∈ {filesystem, volume, snapshot, bookmark}
+           zfs.8:          "file system — Can be mounted... behaves like other
+                           file systems" (ZFS 文件系统 = ZFS 原生格式)
+           zfs.8:          "volume — A logical volume exported as a raw or
+                           block device" (ZFS 卷 = 块设备, 可格式化任意 FS)
+           zfs-create.8:   zfs create filesystem   → 创建 ZFS 文件系统
+           zfs-create.8:   zfs create -V size volume → 创建块设备 /dev/zvol/...
            zfsconcepts.7:  "Clones can only be created from a snapshot"
            zfsconcepts.7:  "Bookmarks are initially tied to a snapshot"
            写路径: 写入 → ZIL → [Log VDEV] → TXG → 数据 VDEV → 磁盘
