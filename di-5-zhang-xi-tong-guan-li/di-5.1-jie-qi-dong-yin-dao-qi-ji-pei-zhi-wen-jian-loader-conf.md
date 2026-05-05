@@ -96,7 +96,7 @@ boot:
 # bsdlabel -B diskslice
 ```
 
-如果只使用磁盘名称（如 `ada0`），bsdlabel 将以"危险专用模式"创建磁盘，不使用分区。这可能并非预期行为，因此在按回车键之前仔细检查 diskslice。
+如果只使用磁盘名称（如 `ada0`），bsdlabel 将以“危险专用模式”创建磁盘，不使用分区。这可能并非预期行为，因此在按回车键之前仔细检查 diskslice。
 
 ### 阶段 3（loader）
 
