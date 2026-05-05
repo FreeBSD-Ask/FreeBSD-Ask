@@ -97,7 +97,7 @@ dRAID         Spare            Cache          Dedup
 ────────────────────────────────────────────────────────────────────────────
 
 物理磁盘                磁盘分区                文件 VDEV
-/dev/da0               /dev/ada0p3            /tmp/vdev
+/dev/ada0              /dev/ada0p3            /tmp/vdev
 推荐整盘                一般不推荐              测试用途
                         GEOM 保证一致性        无掉电保护
 
