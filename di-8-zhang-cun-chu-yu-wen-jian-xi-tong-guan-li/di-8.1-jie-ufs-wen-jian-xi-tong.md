@@ -1,6 +1,6 @@
 # 8.1 UFS 文件系统
 
-UFS（Unix File System）是 FreeBSD 的原生文件系统，基于伯克利快速文件系统（FFS），由 Kirk McKusick 等人于 1983 年随 4.2BSD 引入，当前版本为 UFS2。
+UFS（Unix File System）是 FreeBSD 的原生文件系统，基于伯克利快速文件系统（FFS），由 Kirk McKusick 等人于 1983 年随 4.2BSD 引入，当前版本为 UFS2。本节涵盖磁盘扩容、快照创建与挂载及配额管理三类操作。
 
 ## 概述
 
