@@ -10,7 +10,7 @@ FreeBSD 支持多种无线网卡和认证方式。
 
 ### 无线网络配置
 
-基本的无线网络由多个站点组成，这些站点通过在 2.4GHz、5GHz 或 6GHz 频段广播的无线电进行通信。配置无线网络包含三个基本步骤：
+基本的无线网络由多个站点组成，这些站点通过在 2.4GHz、5GHz 或 6GHz 频段广播的无线电通信。配置无线网络包含三个基本步骤：
 
 1. 扫描并选择接入点
 2. 认证站点
@@ -234,7 +234,7 @@ psk="WIFI 密码"
 
 ## 博通（Broadcom）网卡驱动
 
-博通（Broadcom）是另一家常用的无线网卡厂商。FreeBSD 内置的 Broadcom（博通）网卡驱动主要有两种：`bwi` 和 `bwn`，其中 `bwi` 支持较旧型号，`bwn` 支持较新型号。两者的支持范围部分重叠，但 `bwn` 对硬件的兼容性更好。
+博通（Broadcom）是另一家常用的无线网卡厂商。FreeBSD 内置的 Broadcom（博通）网卡驱动主要有两种：`bwi` 和 `bwn`，`bwi` 支持较旧型号，`bwn` 支持较新型号。两者的支持范围部分重叠，但 `bwn` 对硬件的兼容性更好。
 
 关于驱动选择的详细信息，请参考 Fuller L. Broadcom WiFi Improvements for FreeBSD[EB/OL]. (2018-01-22)[2026-04-05]. <https://web.archive.org/web/20240203102135/https://www.landonf.org/code/freebsd/Broadcom_WiFi_Improvements.20180122.html>.
 
@@ -255,7 +255,7 @@ if_bwi_load="YES"
 # make install clean
 ```
 
-可先通过 USB 或以太网共享网络来安装，也可以提前将所需依赖下载到指定目录。
+可先通过 USB 或以太网共享网络安装，也可以提前将所需依赖下载到指定目录。
 
 在 **/etc/rc.conf** 文件中添加以下配置，将物理无线设备 `bwi0` 绑定到 `wlan0` 接口：
 
@@ -415,7 +415,7 @@ ifconfig_wlan0="WPA inet 192.168.1.100 netmask 255.255.255.0"
 
 ### 开启无线热点
 
-在配置无线热点前，需要确认网卡是否支持 hostap 模式。可通过以下命令列出 `wlan0` 接口支持的无线功能和能力：
+配置无线热点前，需要确认网卡是否支持 hostap 模式。可通过以下命令列出 `wlan0` 接口支持的无线功能和能力：
 
 ```sh
 # ifconfig wlan0 list caps
