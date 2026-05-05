@@ -122,7 +122,7 @@
 | releng | / | Release Engineering，FreeBSD 的发布工程分支 |
 | Linux 兼容层 | / | FreeBSD 系统功能，可在 FreeBSD 上运行 Linux 二进制程序，提供应用程序兼容性 |
 | Linuxulator | / | FreeBSD 内核中的 Linux 系统调用转换层，实现 Linux 二进制兼容性 |
-| RISC-V | / | 基于 RISC 原则的开源指令集架构，于 2010 年由加州大学伯克利分校发起，FreeBSD 支持 RISC-V 架构的硬件平台 |
+| RISC-V | / | 基于 RISC 原则的开源指令集架构，2010 年由加州大学伯克利分校发起，FreeBSD 支持 RISC-V 架构的硬件平台 |
 | kqueue | / | FreeBSD 的事件通知接口，提供了比 select/poll 更高效和可扩展的事件通知机制 |
 | TrustedBSD | / | FreeBSD 的安全扩展项目，基于 POSIX.1e 草案 |
 | W^X | 写异或执行 | Write XOR Execute，一种安全策略，内存页不可同时具有写入和执行权限 |
@@ -149,7 +149,7 @@
 | CDE | 通用桌面环境 | Common Desktop Environment，一款经典的 UNIX 桌面环境 |
 | 驱动程序 | / | Driver，操作系统与硬件设备之间的接口软件，负责将操作系统的请求转换为硬件可执行的操作 |
 | 人工智能 | / | Artificial Intelligence，研究如何使计算机模拟人类智能行为的学科与技术领域 |
-| OpenBSD | / | 于 1995 年由 Theo de Raadt 从 NetBSD 分叉创立的注重安全的 BSD 操作系统 |
+| OpenBSD | / | 1995 年由 Theo de Raadt 从 NetBSD 分叉创立的注重安全的 BSD 操作系统 |
 | NetBSD | / | 于 1993 年创立的注重可移植性的 BSD 操作系统 |
 | DragonFly BSD | / | 于 2003 年由 Matthew Dillon 从 FreeBSD 4.8 分叉出来的 BSD 操作系统 |
 | LLVM | / | 指一组模块化和可重用的编译器和工具链技术项目（参见 LLVM Project. LLVM FAQ[EB/OL]. [2026-04-16]. <https://llvm.org/>。该页面为 LLVM 官方概览页） |
