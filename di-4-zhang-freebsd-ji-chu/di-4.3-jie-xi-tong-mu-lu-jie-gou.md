@@ -475,7 +475,7 @@ WARNING: L3 data cache covers more APIC IDs than a package (7 > 3)
 # ===== SMP（对称多处理）初始化 =====
 FreeBSD/SMP: Multiprocessor System Detected: 4 CPUs
 FreeBSD/SMP: 1 package(s) x 4 core(s)
-# SMP 检测结果。1 颗物理插槽（package）× 4 颗核心（core）。
+# SMP 检测结果。1 个物理插槽（package）× 4 颗核心（core）。
 # Intel N100 为 4 核 4 线程（不支持超线程），因此逻辑 CPU 数 = 物理核心数。
 
 # ===== 随机数子系统初始化 =====
