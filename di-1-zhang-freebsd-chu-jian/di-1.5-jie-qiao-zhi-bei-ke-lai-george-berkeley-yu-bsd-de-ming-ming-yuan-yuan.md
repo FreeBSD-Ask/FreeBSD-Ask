@@ -202,4 +202,4 @@ BERKELEY G. Verses on the Prospect of Planting Arts and Learning in America[C]//
 
 1. 将 *The analyst; or, a discourse addressed to an infidel mathematician. Wherein it is examined whether the object, principles, and inferences of the modern analysis are more distinctly conceived, or more evidently deduced, than religious mysteries and points of faith*（《分析学家；或一篇致一位不信神数学家的论文，其中审查一下近代分析学的对象、原则及论断是不是比宗教的神秘、信仰的要点有更清晰的表达，或更明显的推理》）翻译为中文，并尝试将之公理化。
 2. 比较贝克莱《人类知识原理》的原始文本与中文译本，复现其中关于存在与感知关系的核心论证，并用一阶逻辑符号重构其推理结构。
-3. 查阅历史资料，选取加州大学伯克利分校计算机科学研究中的一个重要技术创新（如 BSD、RAID、RISC-V 等），分析其产生的技术背景与学术影响。
+3. 查阅历史资料，选取加州大学伯克利分校计算机科学领域的一项重要技术创新（如 BSD、RAID、RISC-V 等），分析其技术背景与学术影响。
