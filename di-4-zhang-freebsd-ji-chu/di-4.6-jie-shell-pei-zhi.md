@@ -80,7 +80,7 @@ Add the line below to *the end of* your .zshrc to enable highlighting.
 
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 安装时：
-将以下行添加到用户的 .zshrc 文件 *末尾* 以启用语法高亮。
+将以下行添加到用户的 .zshrc 文件末尾以启用语法高亮。
 
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 ```
