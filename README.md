@@ -10,7 +10,7 @@ FreeBSD 是一款真正自由（Liberty）的 **操作系统**，在这波谲云
 
 ## 内容提要
 
->**注意**
+> **注意**
 >
 > 本书约有 60% 的章节尚未完成（详见下文），已有的章节虽经审阅和修订，但仍非最终版本。
 
@@ -42,7 +42,7 @@ FreeBSD 是一款真正自由（Liberty）的 **操作系统**，在这波谲云
 
 - EPUB（适用于移动端离线阅读）下载地址：<https://docs.bsdcn.org/bsdbook.epub> ![EPUB 文件状态](https://img.shields.io/website?url=https%3A%2F%2Fdocs.bsdcn.org%2Fbsdbook.epub&up_message=%E6%96%87%E4%BB%B6%E5%8F%AF%E7%94%A8&down_message=%E6%96%87%E4%BB%B6%E4%B8%8D%E5%8F%AF%E7%94%A8&style=for-the-badge&label=%E6%96%87%E6%A1%A3%E7%8A%B6%E6%80%81)
 
->**注意**
+> **注意**
 >
 > 以上下载地址以 `docs.bsdcn.org` 域名开头，非 `book.bsdcn.org`。
 
