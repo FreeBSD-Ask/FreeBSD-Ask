@@ -4,7 +4,7 @@
 
 SD 卡的标准较为复杂。即使与 USB-IF 协会制定的 USB 标准相比，其复杂程度也难分伯仲。
 
-SD 卡标准显得复杂，原因在于：随着技术发展，SD 卡协会既不会弃用既有旧标准（如放弃英制单位、改用公制单位），也很少升级原有标准（如提升版本号），而是另行制定更高等级的新标准。**SD 卡存在多种并行的度量衡体系，其量程各有重叠和差异。**
+SD 卡标准显得复杂，原因在于：随着技术发展，SD 卡协会既不会弃用既有旧标准（如放弃英制单位、改用公制单位），也很少升级原有标准（如提升版本号），而是另行制定更高等级的新标准。**SD 卡存在多种并行的度量衡体系，量程各有重叠和差异。**
 
 ![闪迪 microSD 卡](../.gitbook/assets/SD.png)
 
@@ -72,7 +72,7 @@ microSD 通常也称为 TF 卡（TF 是 SanDisk 最初的商品名 TransFlash，
 
 可使用 `CrystalDiskInfo` 查看硬盘的 S.M.A.R.T. 信息及基本参数；还可使用 `CrystalDiskMark` 测试硬盘和存储卡的读写（请使用 USB 3.0 及以上规格的读卡器）。
 
-上述两款软件由同一位开发者开发，但其[官方网站](https://crystalmark.info/en/)包含较多广告内容，可能导致用户误下载非官方文件。
+上述两款软件由同一位开发者开发，但[官方网站](https://crystalmark.info/en/)包含较多广告内容，可能导致用户误下载非官方文件。
 
 请从 **[这里](https://sourceforge.net/projects/crystaldiskinfo)** 下载 CrystalDiskInfo；请从 **[这里](https://sourceforge.net/projects/crystaldiskmark/files/)** 下载 CrystalDiskMark。
 
