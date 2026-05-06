@@ -92,11 +92,11 @@ machdep.wall_cmos_clock: 1
 
 时区设置完成后，需要配置和启用时间同步服务。
 
-ntpd 与其网络对等方通过 UDP 数据包通信。在计算机与 NTP 对等方之间的任何防火墙必须配置为允许端口 123 上的 UDP 数据包进出。
+ntpd 与其网络对等方通过 UDP 数据包通信。计算机与 NTP 对等方之间的任何防火墙，均须配置为允许 UDP 数据包在端口 123 上进出。
 
 >**注意**
 >
->一些互联网接入提供商和网络设备会阻止较低编号的端口通信，从而导致 NTP 无法正常工作，因为回复无法到达机器。
+>一些互联网接入提供商和网络设备会阻止较低编号的端口通信，回复因此无法到达机器，导致 NTP 无法正常工作。
 
 ### 设置 NTP 服务启动时同步
 
@@ -104,7 +104,7 @@ ntpd 读取 **/etc/ntp.conf** 文件来确定要查询的 NTP 服务器。建议
 
 查询的 `server` 可以是本地网络中的服务器，ISP 提供的服务器，或者从 [公开可访问的 NTP 服务器列表](https://support.ntp.org/Servers/WebHome) 中选择。选择公共 NTP 服务器时，应选择一个地理位置接近的服务器，并查看其使用政策。此外，FreeBSD 提供了一个自身维护的服务器池，`0.freebsd.pool.ntp.org`。
 
-关键字 `pool` 配置从服务器池中选择一个或多个服务器。可以参考 [公开的 NTP 服务器池列表]（https://support.ntp.org/Servers/NTPPoolServers），按地理区域组织。
+关键字 `pool` 配置从服务器池中选择一个或多个服务器。可以参考 [公开的 NTP 服务器池列表](<https://support.ntp.org/Servers/NTPPoolServers>)，按地理区域组织。
 
 编辑 **/etc/ntp.conf** 文件，添加附加时钟服务器：
 
@@ -157,7 +157,9 @@ $ date
 
 ### 设置并启动 NTP 服务
 
-设置 ntpd_enable=YES 以在启动时启动 ntpd。将 ntpd_enable=YES 添加到 /etc/rc.conf 后，可以通过以下命令立即启动 ntpd，而无需重启系统：
+在启动时启动 ntpd。
+
+可以通过以下命令立即启动 ntpd，而无需重启系统：
 
 ```sh
 # service ntpd enable
