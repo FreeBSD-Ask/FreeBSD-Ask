@@ -153,7 +153,7 @@
 | NetBSD | / | 于 1993 年创立的注重可移植性的 BSD 操作系统 |
 | DragonFly BSD | / | 于 2003 年由 Matthew Dillon 从 FreeBSD 4.8 分叉出来的 BSD 操作系统 |
 | LLVM | / | 指一组模块化和可重用的编译器和工具链技术项目（参见 LLVM Project. LLVM FAQ[EB/OL]. [2026-04-16]. <https://llvm.org/>。该页面为 LLVM 官方概览页） |
-| 编译器 | / | Compiler，将高级编程语言源代码翻译为机器码或中间代码的程序 |
+| 编译程序 | / | Compiler，又称编译器，将高级编程语言源代码翻译为机器码或中间代码的程序 |
 | Clang | / | LLVM 项目的 C/C++ 语言前端和工具基础设施 |
 | NFS | 网络文件系统 | Network File System，一种分布式文件系统协议 |
 | SMB | 服务器消息块 | Server Message Block，一种用于文件共享的协议 |
