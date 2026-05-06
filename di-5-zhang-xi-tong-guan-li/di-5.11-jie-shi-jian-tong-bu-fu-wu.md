@@ -94,7 +94,7 @@ machdep.wall_cmos_clock: 1
 
 ntpd 与其网络对等方通过 UDP 数据包通信。计算机与 NTP 对等方之间的任何防火墙，均须配置为允许 UDP 数据包在端口 123 上进出。
 
->**注意**
+> **注意**
 >
 >一些互联网接入提供商和网络设备会阻止较低编号的端口通信，导致 NTP 无法正常工作，因为回复无法到达机器。
 
@@ -104,7 +104,7 @@ ntpd 读取 **/etc/ntp.conf** 文件来确定要查询的 NTP 服务器。建议
 
 查询的 `server` 可以是本地网络中的服务器，ISP 提供的服务器，或者从 [公开可访问的 NTP 服务器列表](https://support.ntp.org/Servers/WebHome) 中选择。选择公共 NTP 服务器时，应选择一个地理位置接近的服务器，并查看其使用政策。此外，FreeBSD 提供了一个自身维护的服务器池，`0.freebsd.pool.ntp.org`。
 
-关键字 `pool` 配置从服务器池中选择一个或多个服务器。可以参考 [公开的 NTP 服务器池列表]（https://support.ntp.org/Servers/NTPPoolServers），按地理区域组织。
+关键字 `pool` 配置从服务器池中选择一个或多个服务器。可以参考 [公开的 NTP 服务器池列表](https://support.ntp.org/Servers/NTPPoolServers)，按地理区域组织。
 
 编辑 **/etc/ntp.conf** 文件，添加附加时钟服务器：
 
