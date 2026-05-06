@@ -1,6 +1,6 @@
 # 3.10 KVM、QEMU 等平台安装 FreeBSD（传统引导和 MBR 分区表）
 
-在 KVM/QEMU 等硬件辅助虚拟化平台上，通过传统 BIOS + MBR 方式安装 FreeBSD 适用于不直接提供 FreeBSD 镜像的云服务环境。此方法不支持 UEFI 引导，亦不适用于 OpenVZ、LXC 等容器化平台。
+在 KVM/QEMU 等硬件辅助虚拟化平台上，通过传统 BIOS + MBR 方式安装 FreeBSD 适用于不直接提供 FreeBSD 镜像的云服务环境。此方法不支持 UEFI 引导，也不适用于 OpenVZ、LXC 等容器化平台。
 
 > **注意**
 >
