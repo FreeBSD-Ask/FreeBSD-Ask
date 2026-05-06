@@ -26,10 +26,6 @@ $ echo $SHELL
 
 在 sh、Bash 或 Zsh 中配置代理时，需注意以下事项。
 
-> **注意**
->
-> 在 sh、Bash 或 Zsh 中，环境变量 `HTTP_PROXY` 通常使用大写形式。部分应用程序（如 curl、wget）也会识别小写形式 `http_proxy`，但不同程序的行为不一致，建议统一使用大写形式以确保兼容性。
-
 设置 HTTP 代理环境变量，该变量将被当前 shell 及其子进程继承：
 
 ```sh
@@ -49,10 +45,6 @@ $ echo $SHELL
 ### 若使用 csh
 
 在 csh 或 tcsh 中配置代理时，需注意以下事项。
-
-> **注意**
->
-> 在 csh 或 tcsh 中，环境变量 `http_proxy` 必须使用小写形式，大写形式不会生效。
 
 在 csh 或 tcsh 中设置 HTTP 代理环境变量，需使用该 shell 特有的 `setenv` 命令：
 
