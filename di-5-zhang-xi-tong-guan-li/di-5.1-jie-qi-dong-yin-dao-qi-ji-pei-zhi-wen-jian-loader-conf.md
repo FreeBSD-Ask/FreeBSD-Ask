@@ -294,7 +294,7 @@ hostuuid_type="hostuuid"   # 指定模块类型为 hostuuid
 
 ###  随机数生成配置  ##################
 # 适用于密码模块，随机数生成
-# 参见 rc.conf(5)。rc.conf 中 entropy_boot_file 配置变量必须与下面的设置相同
+# 参见 rc.conf(5)。rc.conf 中 entropy_boot_file 配置变量必需要与下面的设置相同
 # rc.conf 中的 entropy_boot_file 和 loader.conf 中的 entropy_cache_name 必须指定同一个文件
 entropy_cache_load="YES"		# 设置为 NO 将禁用在启动时加载缓存的熵
 entropy_cache_name="/boot/entropy"	# 设置为该文件的名称
