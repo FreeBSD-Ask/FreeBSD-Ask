@@ -276,7 +276,7 @@ Defaults secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/b
 ##
 ## Uncomment if needed to preserve environmental variables related to the
 ## FreeBSD pkg utility and fetch.
-## 若需要保留与 FreeBSD pkg 工具和 fetch 相关的环境变量，请取消注释。
+## 如果需要要保留与 FreeBSD pkg 工具和 fetch 相关的环境变量，请取消注释。
 
 # Defaults     env_keep += "PKG_CACHEDIR PKG_DBDIR FTP_PASSIVE_MODE"
 ## 示例：保留 pkg 缓存/数据库路径与 FTP 被动模式变量。
