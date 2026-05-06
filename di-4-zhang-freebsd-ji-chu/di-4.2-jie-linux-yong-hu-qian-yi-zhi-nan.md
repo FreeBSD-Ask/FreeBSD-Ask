@@ -201,12 +201,12 @@ GNU 本身并无独立内核，而以 Linux 为其内核——GNU Hurd 是例外
 
 常见的 Linux 发行版及若干基于 Linux 的国产操作系统，其维护工作的重心何在？它们通常并非文件系统、Linux 内核、GNU C 库（glibc）、systemd、桌面环境等上游项目的原始维护者，对大量第三方软件包，通常以集成和适配为主。即便是包管理器和软件源，也大多在上游工具和社区资源的基础上配置与管理。
 
-在长期支持与稳定性方面，红帽企业 Linux（Red Hat Enterprise Linux，RHEL）投入了大量资源，这是其区别于许多其他发行版的重要特征。RHEL 通过保证应用二进制接口（Application Binary Interface，ABI）和内核应用二进制接口（Kernel Application Binary Interface，kABI）的长期稳定性，提供了最长可达十年的支持周期，这与许多其他发行版的支持策略存在明显差异。相关参考如下：
+在长期支持与稳定性方面，红帽企业 Linux（Red Hat Enterprise Linux，RHEL）投入了大量资源，这是其区别于许多其他发行版的重要特征。RHEL 保证应用二进制接口（Application Binary Interface，ABI）和内核应用二进制接口（Kernel Application Binary Interface，kABI）的长期稳定性，提供最长可达十年的支持周期，这与许多其他发行版的支持策略存在明显差异。相关参考如下：
 
 - Red Hat. Red Hat Enterprise Linux 10: Application Compatibility Guide[EB/OL]. [2026-03-25]. <https://access.redhat.com/articles/rhel10-abi-compatibility>.
 - Red Hat. What is Kernel Application Binary Interface (kABI)?[EB/OL]. [2026-03-25]. <https://access.redhat.com/solutions/444773>.
 
-许多发行版并不直接维护或对上述软件和工具进行全面测试，也不一定为其持续编写补丁或文档。直接将修改回溯并贡献至上游的发行版相对较少，Ubuntu 是其中典型的例子。同时，即使发行版维护者有意向上游贡献代码，也可能面临补丁难以获上游接受的挑战，因为其对上游项目并无直接决策权。
+许多发行版并不直接维护或对上述软件和工具进行全面测试，也不一定持续编写补丁或文档。直接将修改回溯并贡献至上游的发行版相对较少，Ubuntu 是其中典型的例子。同时，即使发行版维护者有意向上游贡献代码，也可能面临补丁难以获上游接受的挑战，因为其对上游项目并无直接决策权。
 
 许多商业发行版（如 RHEL）确实向上游项目（例如 Linux 内核）贡献了大量代码，这是客观事实。然而，这并未完全解决基础工具维护资源不足的广泛问题。同时，基于提交量的分析表明，商业公司在代码贡献中占据较大比重，红帽是其中的重要贡献者之一。这反映出社区与商业组织在项目贡献与治理上的结构性变化，也揭示了开源社区对开源项目主导权的实质性转移。这一现象常以 Xorg 项目作为讨论案例，目前其维护和发展方向主要由少数核心维护者和相关组织主导，项目整体重心逐步转向 Wayland 等新的显示技术路线。商业发行版对 Linux 生态的影响并非在所有情况下都具有积极效果，其商业目标与部分开源项目的发展方向之间可能存在张力——在这一背景下，GPL 的制度设计产生了自我消解的效果。
 
