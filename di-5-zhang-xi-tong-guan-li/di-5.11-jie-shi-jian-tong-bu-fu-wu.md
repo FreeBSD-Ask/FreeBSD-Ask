@@ -209,25 +209,9 @@ $ date
 
 ## 非特权用户 ntpd
 
-在 FreeBSD 上，可以以非特权用户启动并运行 `ntpd` 服务。
+在 FreeBSD 上，可以以非特权用户启动并运行 `ntpd` 服务。这依赖策略模块 mac_ntpd(4)。
 
-这依赖策略模块 mac_ntpd(4)。启动脚本 **/etc/rc.d/ntpd** 首先检查 NTP 配置。如果可能，它会加载 mac_ntpd 模块，然后以非特权用户 ntpd（用户 ID 123）启动 ntpd。
-
-为了避免文件和目录访问问题，当配置包含与文件相关的选项时，启动脚本不会自动以 ntpd 用户身份启动 ntpd。
-
-要手动配置以 ntpd 用户运行 ntpd 服务，必须：
-
-- 确保 ntpd 用户对配置中指定的所有文件和目录具有访问权限。
-
-- 安排加载或将模块 mac_ntpd 编译到内核中。
-
-- 在 **/etc/rc.conf** 中设置 ntpd_user="ntpd"。
-
-## 非特权用户 ntpd
-
-在 FreeBSD 上，`ntpd` 可以作为非特权用户启动并运行。这需要策略模块 mac_ntpd(4)。
-
-启动脚本 **/etc/rc.d/ntpd** 首先检查 NTP 配置。如果可能，它会加载 mac_ntpd 模块，然后以非特权用户 ntpd（用户 ID 123）启动 ntpd。
+启动脚本 **/etc/rc.d/ntpd** 将首先检查 NTP 配置。如果可能，它会加载模块 mac_ntpd ，然后以非特权用户 ntpd（用户 ID 123）启动 ntpd。
 
 为了避免文件和目录访问问题，当配置包含与文件相关的选项时，启动脚本不会自动以 ntpd 用户身份启动 ntpd。
 
@@ -238,6 +222,7 @@ $ date
 - 加载 mac_ntpd 模块或将其编译到内核中。
 
 - 在 **/etc/rc.conf** 中设置 `ntpd_user="ntpd"`。
+
 
 ## 参考文献
 
