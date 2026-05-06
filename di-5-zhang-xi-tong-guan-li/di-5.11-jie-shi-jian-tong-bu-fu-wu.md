@@ -144,7 +144,7 @@ leapfile "/var/db/ntpd.leap-seconds.list"
 
 关键字 `iburst` 指示 ntpd 在首次建立联系时与服务器进行八次快速数据包交换，以帮助快速同步系统时间。
 
-关键字 `leapfile` 指定一个文件的位置，该文件包含关于闰秒的信息。该文件会通过 periodic(8) 自动更新。此关键字指定的文件位置必须与 **/etc/rc.conf** 文件中的变量 `ntp_db_leapfile` 所设置的路径匹配。
+关键字 `leapfile` 指定一个文件的位置，该文件包含关于闰秒的信息。该文件会通过 periodic(8) 自动更新。
 
 ### 时间信息查看
 
