@@ -130,7 +130,7 @@ sysctl.conf 的源代码位于 [/sbin/sysctl/sysctl.conf](https://github.com/fre
 
 > **警告**
 >
-> 虽然 **/etc/sysctl.conf** 文件实质上为空，但这不代表系统默认的 sysctl 参数为空！它们是通过不同的宏（如 `SYSCTL_INT`）注入到系统中的！使用命令 `sysctl -a` 可列出当前系统所有默认的参数值。
+> 虽然 **/etc/sysctl.conf** 文件实质上为空，但这不代表系统默认的 sysctl 参数为空。它们是通过不同的宏（如 `SYSCTL_INT`）注入到系统中的！使用命令 `sysctl -a` 可列出当前系统所有默认的参数值。
 
 ## 设置内核状态变量
 
