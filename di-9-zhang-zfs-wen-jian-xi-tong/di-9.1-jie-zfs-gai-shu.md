@@ -41,7 +41,7 @@ pool
 类型：filesystem | volume | snapshot | bookmark | clone
 
 文件系统 (filesystem)            卷 (volume / zvol)
-──────────────────────            
+──────────────────────
 * POSIX 目录树                   * 原始块设备
 * 空间动态分配                   * 固定大小 (refreservation)
 * 属性可继承                     * 可构建 UFS / ext4 / NTFS
@@ -49,7 +49,7 @@ pool
                 ───────────────┬───────────────
                       ─────────▼────────
                ───────▼───────    ───────▼───────      克隆 (Clone)
-               快照 Snapshot      书签 Bookmark        
+               快照 Snapshot      书签 Bookmark
                ─────────────                           从快照派生可写数据集
                @snap (只读)       #bkmk (元数据) ◄──── 共享数据块 (COW)
                回滚 / 克隆源      Send 增量参照
@@ -181,7 +181,7 @@ dRAID         Spare            Cache          Dedup
 - **卷 (volume / ZVOL)**：ZFS 卷是数据集的另一主要类型。卷本身不含文件系统——它是以原始块设备形式暴露的裸设备，位于 `/dev/zvol/pool/path`。正因其为裸块设备，可被格式化为任意文件系统（FAT32、NTFS、UFS、ext4 等），也可直接用作虚拟机磁盘或 iSCSI target 等需要块设备的场景。默认情况下创建卷会建立等量空间预留（`refreservation`）；使用 `-s` 参数可创建稀疏卷而不预留空间。卷同样支持快照、克隆、回滚等 ZFS 特性，但无法像文件系统那样独立挂载，且不支持配额（其 `volsize` 属性本身即作为隐式配额）。
 
   **ZFS 文件系统可以通过卷在内部承载其他文件系统**
-  
+
   ```sh
   物理硬盘（disk）
    └── vdev（镜像 / RAIDZ / 条带）
