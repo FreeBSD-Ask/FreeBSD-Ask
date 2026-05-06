@@ -198,7 +198,7 @@ FreeBSD 的目录结构设计遵循以下原则：
 │   │   │   ├── freebsd FreeBSD 特有的术语、专有名词和行话
 │   │   │   └── web2 韦氏第二版国际词典的词汇
 │   │   ├── doc 杂项文档
-│   │   ├── dtrace 动态跟踪编译器脚本，参见 dtrace(1)
+│   │   ├── dtrace 动态跟踪编译程序脚本，参见 dtrace(1)
 │   │   ├── examples 用户和程序员的各种示例
 │   │   ├── firmware 用户态程序加载的固件映像
 │   │   ├── games BSD 传统游戏使用的 ASCII 文本文件，参见 intro(6)
@@ -223,7 +223,7 @@ FreeBSD 的目录结构设计遵循以下原则：
 │   │   │   ├── fonts 控制台字体，参见 vidcontrol(1) 和 vidfont(1)
 │   │   │   ├── keymaps 控制台键盘映射，参见 kbdcontrol(1) 和 kbdmap(1)
 │   │   │   └── scrnmaps 控制台屏幕映射
-│   │   ├── sysroot -sysroot 编译器/链接器参数构建非本机二进制文件所需的文件
+│   │   ├── sysroot -sysroot 编译程序/链接器参数构建非本机二进制文件所需的文件
 │   │   │   └── VERSION FreeBSD 发行版 VERSION 的文件；"VERSION" 匹配 uname(1) -r
 │   │   │       └── MACHINE.MACHINE_ARCH 表示这些文件的二进制 ABI；"MACHINE" 匹配 uname(1) -m；"MACHINE_ARCH" 匹配 uname(1) -p
 │   │   ├── tabset 各种终端的制表符描述文件，用于 termcap 文件，参见 termcap(5)
@@ -363,10 +363,10 @@ FreeBSD 15.0-CURRENT #0 main-n275588-045a4c108fcf: Fri Feb 21 02:25:56 UTC 2025
 # main-n275588-045a4c108fcf：Git main 分支的快照标识。
 # 第二行：构建主机（root@releng3.nyi.freebsd.org）、构建目录路径、内核配置文件（GENERIC）、目标架构（amd64）。
 
-# ----- 编译器信息 -----
+# ----- 编译程序信息 -----
 FreeBSD clang version 19.1.7 (https://github.com/llvm/llvm-project.git llvmorg-19.1.7-0-gcd708029e0b2)
-# FreeBSD 基本系统编译器版本。FreeBSD 当前版本的内核由 Clang 19.1.7 编译。
-# FreeBSD 从 10.0 起将 Clang 作为默认系统编译器，替代了 GCC。
+# FreeBSD 基本系统编译程序版本。FreeBSD 当前版本的内核由 Clang 19.1.7 编译。
+# FreeBSD 从 10.0 起将 Clang 作为默认系统编译程序，替代了 GCC。
 
 # ----- 调试选项警告 -----
 WARNING: WITNESS option enabled, expect reduced performance.
