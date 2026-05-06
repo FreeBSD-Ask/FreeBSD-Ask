@@ -13,9 +13,9 @@ UNIX 在后期发展中渐趋封闭，最初是开放的研究项目（受当时
 - 1983 年，理查德·马修·斯托曼发表了 GNU 项目初始公告；其中 GNU 即“GNU's Not Unix”（GNU 不是 UNIX）的递归缩写。GNU 是一款旨在完全替代 UNIX 的操作系统。
 - 1984 年，理查德·马修·斯托曼正式创建了 [GNU 项目](https://www.gnu.org/)。
 - 1985 年，理查德·马修·斯托曼撰写了 GNU 宣言（Stallman R. The GNU Manifesto[EB/OL]. [2026-03-26]. <https://www.gnu.org/gnu/manifesto.html>）；同年创建了自由软件基金会（Free Software Foundation，FSF）。
-- 1989 年，自由软件基金会发布了 GNU General Public License V1.0 (GPLv1, GNU 通用公共许可证第 1 版)。
-- 1991 年，理查德·马修·斯托曼发布了 GNU General Public License V2.0 (GPLv2, GNU 通用公共许可证第 2 版)。
-- 2007 年，自由软件基金会发布 GNU General Public License V3.0 (GPLv3, GNU 通用公共许可证第 3 版)。
+- 1989 年，自由软件基金会发布了 GNU General Public License V1.0（GPLv1，GNU 通用公共许可证第 1 版）。
+- 1991 年，理查德·马修·斯托曼发布了 GNU General Public License V2.0（GPLv2，GNU 通用公共许可证第 2 版）。
+- 2007 年，自由软件基金会发布 GNU General Public License V3.0（GPLv3，GNU 通用公共许可证第 3 版）。
 
 在 GNU 项目初期，理查德·马修·斯托曼为 UNIX 开发了大量实用程序（用户空间组件），然而 GNU 始终未能产出稳定的内核。[**GNU Hurd**](https://hurd.gnu.org/) 是 GNU 项目的内核，采用微内核架构设计，开发始于 1990 年。尽管 GNU Hurd 已于 2025 年随 Debian GNU/Hurd 发布，但其硬件支持和软件生态仍不成熟。Linux 内核的诞生打破了这一技术僵局。
 
