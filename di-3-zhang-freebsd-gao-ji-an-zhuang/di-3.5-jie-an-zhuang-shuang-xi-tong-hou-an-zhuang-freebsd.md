@@ -77,7 +77,7 @@ NAME  USED   AVAIL  REFER  MOUNTPOINT
 root  534M    130G   534M  none
 ```
 
-进入系统后可以看到，仅有一个 `root` 数据集。可手动将数据集调整为自动安装的布局，亦可参照下文在安装时进入 Shell 进行分区。
+进入系统后可以看到，仅有一个 `root` 数据集。可手动将数据集调整为自动安装的布局，也可以参照下文在安装时进入 Shell 进行分区。
 
 ## Shell 分区
 
@@ -116,7 +116,7 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 
 > **思考题**
 >
-> 若使用 NVMe 硬盘，新装系统（UEFI+GPT，无 freebsd-boot 分区）的默认参数通常为 12。但 4K 对齐究竟对齐的对象是什么？因为 SSD 并无传统机械硬盘的物理扇区概念。
+> 如果使用 NVMe 硬盘，新装系统（UEFI+GPT，无 freebsd-boot 分区）的默认参数通常为 12。但 4K 对齐究竟对齐的对象是什么？因为 SSD 并无传统机械硬盘的物理扇区概念。
 
 ### 创建交换分区
 
@@ -342,7 +342,7 @@ zroot/
 
 > **技巧**
 >
-> `\t` 是制表符（Tab）的转义字符（意味着按一下 **Tab** 键），用于对齐字段，使用空格亦可达到相同效果。也可使用 `ee /tmp/bsdinstall_etc/fstab` 命令手动编辑该文件并写入如下格式的行：
+> `\t` 是制表符（Tab）的转义字符（意味着按一下 **Tab** 键），用于对齐字段，使用空格也可以达到相同效果。也可使用 `ee /tmp/bsdinstall_etc/fstab` 命令手动编辑该文件并写入如下格式的行：
 >
 > ```sh
 > /dev/nda0p5  none  swap  sw  0  0
