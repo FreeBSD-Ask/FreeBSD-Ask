@@ -384,7 +384,7 @@ VT(efifb): resolution 800x600
 # ===== CPU 检测与特性枚举 =====
 CPU: Intel(R) N100 (806.40-MHz K8-class CPU)
 # CPU 型号名称。Intel N100 是 Alder Lake-N 架构的低功耗处理器。
-# 806.40 MHz 是启动时 CPU 的基础频率（base frequency），加载 hwpstate_intel(4) 
+# 806.40 MHz 是启动时 CPU 的基础频率（base frequency），加载 hwpstate_intel(4)
 # 后内核会通过 Intel Speed Shift 动态调整频率（N100 最高睿频可达 ~3.4 GHz）。
 # "K8-class" 表示该 CPU 支持 AMD64 指令集（AMD K8 是首个 x86-64 处理器）；
 # 内核代码以 AMD K8 为 AMD64 功能基线进行分类。
@@ -533,7 +533,7 @@ ACPI Error: AE_NOT_FOUND, During name lookup/catalog (20241212/psobject-372)
 Firmware Error (ACPI): Could not resolve symbol [\134_SB.PC00.TXHC.RHUB.SS02], AE_NOT_FOUND (20241212/dswload2-315)
 ACPI Error: AE_NOT_FOUND, During name lookup/catalog (20241212/psobject-372)
 # BIOS/UEFI 固件 ACPI DSDT/SSDT 表中引用了不存在的 USB SuperSpeed（SS）端口符号：
-# \134 是反斜杠 ACPI 名称路径转义（ACPI namespace root \），RHUB.SS01/SS02 
+# \134 是反斜杠 ACPI 名称路径转义（ACPI namespace root \），RHUB.SS01/SS02
 # 是 xHCI 的 Root Hub 下的 SuperSpeed 端口对象。AE_NOT_FOUND 表明找不到。
 # 这通常是固件（BIOS/UEFI）编写的 Bug：定义了 USB 3.0 控制器的 SS 端口引用，
 # 但实际的 DSDT/SSDT 表中并未声明对应设备节点。
@@ -574,7 +574,7 @@ Event timer "RTC" frequency 32768 Hz quality 0
 
 # ===== 传统 AT 定时器（i8254 PIT）=====
 attimer0: <AT timer> port 0x40-0x43,0x50-0x53 irq 0 on acpi0
-# i8254 可编程间隔定时器（Programmable Interval Timer, PIT）。端口 0x40-0x43 
+# i8254 可编程间隔定时器（Programmable Interval Timer, PIT）。端口 0x40-0x43
 # 为 PIT 数据/命令端口，irq 0 为 PIT 中断。
 
 Timecounter "i8254" frequency 1193182 Hz quality 0
@@ -776,7 +776,7 @@ hwpstate_intel2: <Intel Speed Shift> on cpu2
 cpufreq2: <CPU frequency control> on cpu2
 hwpstate_intel3: <Intel Speed Shift> on cpu3
 cpufreq3: <CPU frequency control> on cpu3
-# Intel Speed Shift（HWP = Hardware P-state）——Intel 从 Skylake 起引入的 
+# Intel Speed Shift（HWP = Hardware P-state）——Intel 从 Skylake 起引入的
 # CPU 自动频率调节机制：CPU 自身硬件根据负载实时调整核心频率，
 # 无需操作系统干预。传统方式（cpufreq）需要 OS 通过 ACPI _PSS 表选择 P-state（被动调速）。
 # HWP 的延迟和粒度优于传统 cpufreq，是 FreeBSD 供电管理和性能的重要组成。
@@ -839,7 +839,7 @@ hdaa0: <Realtek ALC269 Audio Function Group> at nid 1 on hdacc0
 # AFG（Audio Function Group），HDA 规范术语——包含 DAC/ADC/混音/插孔等功能节点。
 
 pcm0: <Realtek ALC269 (Right Analog)> at nid 21 and 24 on hdaa0
-# pcm(4) 音频设备实例。nid 21（Pin Complex）/ nid 24（Pin Complex）代表 
+# pcm(4) 音频设备实例。nid 21（Pin Complex）/ nid 24（Pin Complex）代表
 # 右声道模拟输出引脚——可能是 3.5mm 耳机/音箱输出。系统至此具备音频输出能力。
 
 # ===== NVMe 磁盘设备（nda/CAM 路径）=====
