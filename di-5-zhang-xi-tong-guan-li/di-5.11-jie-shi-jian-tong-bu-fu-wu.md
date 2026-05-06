@@ -209,7 +209,7 @@ $ date
 
 ## 非特权用户 ntpd
 
-在 FreeBSD 上，可以以非特权用户启动并运行 `ntpd` 服务。这依赖策略模块 mac_ntpd(4)。
+在 FreeBSD 上，可以以非特权用户启动并运行 `ntpd` 服务，该功能依赖策略模块 mac_ntpd(4)。
 
 启动脚本 **/etc/rc.d/ntpd** 将首先检查 NTP 配置。如果可能，它会加载模块 mac_ntpd ，然后以非特权用户 ntpd（用户 ID 123）启动 ntpd。
 
