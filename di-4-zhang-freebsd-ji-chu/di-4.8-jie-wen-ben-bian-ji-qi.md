@@ -55,7 +55,7 @@ FreeBSD 还内置了一款编辑器 `vi`。FreeBSD 的 `vi` 实际上是 nex/nvi
 
 > **技巧**
 >
->`view` 命令相当于使用 vi 的 -R（只读）选项。
+> `view` 命令相当于使用 vi 的 -R（只读）选项。
 
 空行会显示为 `~`。
 
@@ -83,7 +83,7 @@ ABC
 
 ## Vim（增强版 vi）
 
-Vim（vi IMproved）是 vi 的增强版本，提供了语法高亮、插件支持、多窗口等现代功能。Vim 由 Bram Moolenaar 于 1991 年开发，基于 vi 的操作模型并大幅扩展了其功能。Vim 采用模态编辑（modal editing）设计：在普通模式下按键执行命令，在插入模式下输入文本，在可视模式下选择文本，在命令行模式下执行 Ex 命令。
+Vim（vi IMproved）是 vi 的增强版本，提供了语法高亮、插件支持、多窗口等现代功能。Bram Moolenaar 于 1991 年开发了 Vim，基于 vi 的操作模型并大幅扩展了其功能。Vim 采用模态编辑（modal editing）设计：在普通模式下按键执行命令，在插入模式下输入文本，在可视模式下选择文本，在命令行模式下执行 Ex 命令。
 
 FreeBSD Ports 中的 Vim 默认编译为 console 版本，如需 GUI 支持（gvim）需安装 Port `editors/vim` 的 GTK 或 Motif 变体；Vim 在处理超大文件时可能消耗大量内存。
 
@@ -124,7 +124,7 @@ set number              " 或 set nu
 
 ## NeoVim（现代 vi 改进版）
 
-NeoVim 是 Vim 的重构分支，更加模块化，支持 Lua 脚本，插件生态更活跃，性能更好。NeoVim 于 2014 年由 Thiago de Arruda 发起，旨在解决 Vim 的技术债务并引入现代扩展机制。其核心改进包括：内置 LSP（Language Server Protocol）支持、基于 Lua 的配置与插件系统、异步 I/O 架构，以及通过 msgpack-rpc 提供的 GUI/编辑器集成接口。
+NeoVim 是 Vim 的重构分支，更加模块化，支持 Lua 脚本，插件生态更活跃，性能更好。Thiago de Arruda 于 2014 年发起了 NeoVim，旨在解决 Vim 的技术债务并引入现代扩展机制。其核心改进包括：内置 LSP（Language Server Protocol）支持、基于 Lua 的配置与插件系统、异步 I/O 架构，以及通过 msgpack-rpc 提供的 GUI/编辑器集成接口。
 
 ### 安装 NeoVim
 
@@ -185,7 +185,7 @@ NeoVim 和 Vim 共享大部分命令，上述 `:q :q! :wq :wq! :/` 等在 LazyVi
 
 ## Emacs 编辑器
 
-Emacs 是历史悠久、功能极其强大的文本编辑器，以“可扩展性”闻名（几乎所有功能都可以通过 Emacs Lisp 扩展）。Emacs 由 Richard Stallman 于 1976 年开发，是 GNU 项目的核心组件之一。Emacs 的设计哲学是“编辑器即操作系统”——通过 Emacs Lisp 语言，Emacs 提供了文件管理器、邮件客户端、终端仿真器、调试器前端等超越文本编辑的功能。
+Emacs 是历史悠久、功能极其强大的文本编辑器，以“可扩展性”闻名（几乎所有功能都可以通过 Emacs Lisp 扩展）。Richard Stallman 于 1976 年开发了 Emacs，是 GNU 项目的核心组件之一。Emacs 的设计哲学是“编辑器即操作系统”——通过 Emacs Lisp 语言，Emacs 提供了文件管理器、邮件客户端、终端仿真器、调试器前端等超越文本编辑的功能。
 
 ### 安装 Emacs
 
@@ -236,7 +236,7 @@ Emacs CLI:
 
 ## microsoft-edit
 
-microsoft-edit 是由微软开源的文本编辑器，原生支持中文，交互界面简单，并支持鼠标操作。该编辑器基于 Rust 编写，设计目标为提供一个轻量级、现代化的终端文本编辑器，支持语法高亮和 UTF-8 编码。
+microsoft-edit 是由微软开源的文本编辑器，原生支持中文，交互界面简单，并支持鼠标操作。该编辑器用 Rust 编写，设计目标为提供一个轻量级、现代化的终端文本编辑器，支持语法高亮和 UTF-8 编码。
 
 ### 安装 microsoft-edit
 

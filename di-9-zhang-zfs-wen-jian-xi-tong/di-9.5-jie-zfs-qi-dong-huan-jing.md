@@ -107,7 +107,7 @@ devfs                       1        1         0   100%    /dev
 fdescfs                     1        1         0   100%    /dev/fd
 ```
 
-若需切换回 `zroot/ROOT/default` 启动环境，可在启动菜单中选择 `default`，或使用 `bectl activate default` 切换到 `default` 启动环境。
+如果需要切换回 `zroot/ROOT/default` 启动环境，可在启动菜单中选择 `default`，或使用 `bectl activate default` 切换到 `default` 启动环境。
 
 ## 参考文献
 

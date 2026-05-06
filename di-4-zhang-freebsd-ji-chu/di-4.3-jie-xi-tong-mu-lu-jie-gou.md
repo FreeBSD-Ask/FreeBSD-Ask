@@ -151,7 +151,7 @@ FreeBSD 的目录结构设计遵循以下原则：
 │   ├── freebsd-dist 发行文件（如 base.txz），参见 release(7) 和 bsdinstall(8)
 │   ├── include 标准 C 头文件
 │   ├── lib 共享库和 ar(1) 类型库，参见 intro(3)
-│   │   ├── clang 系统编译器 clang(1) 的共享库
+│   │   ├── clang 系统编译程序 clang(1) 的共享库
 │   │   ├── compat 兼容性共享库
 │   │   ├── debug 内核和基本系统库及二进制文件的独立调试数据
 │   │   ├── dtrace dtrace(1) 库脚本
@@ -161,7 +161,7 @@ FreeBSD 的目录结构设计遵循以下原则：
 │   ├── lib32 32 位兼容库
 │   ├── libdata 杂项实用数据文件
 │   │   ├── ldscripts 链接器脚本，参见 ld(1)
-│   │   └── pkgconfig 编译器和链接器标志集合，用于 pkgconf(1) 开发工具
+│   │   └── pkgconfig 编译程序和链接器标志集合，用于 pkgconf(1) 开发工具
 │   ├── libexec 由程序执行的系统守护进程和实用程序
 │   │   ├── bsdconfig ncurses FreeBSD 配置向导调用的实用程序
 │   │   ├── bsdinstall bsdinstall(8) 的实用程序
@@ -198,7 +198,7 @@ FreeBSD 的目录结构设计遵循以下原则：
 │   │   │   ├── freebsd FreeBSD 特有的术语、专有名词和行话
 │   │   │   └── web2 韦氏第二版国际词典的词汇
 │   │   ├── doc 杂项文档
-│   │   ├── dtrace 动态跟踪编译器脚本，参见 dtrace(1)
+│   │   ├── dtrace 动态跟踪编译程序脚本，参见 dtrace(1)
 │   │   ├── examples 用户和程序员的各种示例
 │   │   ├── firmware 用户态程序加载的固件映像
 │   │   ├── games BSD 传统游戏使用的 ASCII 文本文件，参见 intro(6)
@@ -223,7 +223,7 @@ FreeBSD 的目录结构设计遵循以下原则：
 │   │   │   ├── fonts 控制台字体，参见 vidcontrol(1) 和 vidfont(1)
 │   │   │   ├── keymaps 控制台键盘映射，参见 kbdcontrol(1) 和 kbdmap(1)
 │   │   │   └── scrnmaps 控制台屏幕映射
-│   │   ├── sysroot -sysroot 编译器/链接器参数构建非本机二进制文件所需的文件
+│   │   ├── sysroot -sysroot 编译程序/链接器参数构建非本机二进制文件所需的文件
 │   │   │   └── VERSION FreeBSD 发行版 VERSION 的文件；"VERSION" 匹配 uname(1) -r
 │   │   │       └── MACHINE.MACHINE_ARCH 表示这些文件的二进制 ABI；"MACHINE" 匹配 uname(1) -m；"MACHINE_ARCH" 匹配 uname(1) -p
 │   │   ├── tabset 各种终端的制表符描述文件，用于 termcap 文件，参见 termcap(5)
@@ -324,7 +324,7 @@ dr-xr-xr-x   2 root    wheel   schg  2 Apr 13 12:38 /var/empty
 
 每个设备都有一个设备名称和编号。例如，`ada0` 是第一块 SATA 硬盘，而 `kbd0` 代表键盘。
 
-FreeBSD 中的大多数设备必须通过称为设备节点的特殊文件访问，这些文件位于 **/dev** 目录中。
+FreeBSD 中的大多数设备通过称为设备节点的特殊文件访问，这些文件位于 **/dev** 目录中。
 
 在 FreeBSD 中，设备节点由 devfs(5) 文件系统自动管理。devfs 是一个虚拟文件系统，在系统启动时由内核自动挂载到 **/dev**，并根据当前系统中存在的硬件设备动态创建和删除设备节点。这与传统 UNIX 系统需要手动使用 `mknod` 命令创建设备节点的做法不同。devfs 确保了 **/dev** 目录中只包含当前系统实际存在的设备节点。
 
@@ -363,10 +363,10 @@ FreeBSD 15.0-CURRENT #0 main-n275588-045a4c108fcf: Fri Feb 21 02:25:56 UTC 2025
 # main-n275588-045a4c108fcf：Git main 分支的快照标识。
 # 第二行：构建主机（root@releng3.nyi.freebsd.org）、构建目录路径、内核配置文件（GENERIC）、目标架构（amd64）。
 
-# ----- 编译器信息 -----
+# ----- 编译程序信息 -----
 FreeBSD clang version 19.1.7 (https://github.com/llvm/llvm-project.git llvmorg-19.1.7-0-gcd708029e0b2)
-# FreeBSD 基本系统编译器版本。FreeBSD 当前版本的内核由 Clang 19.1.7 编译。
-# FreeBSD 从 10.0 起将 Clang 作为默认系统编译器，替代了 GCC。
+# FreeBSD 基本系统编译程序版本。FreeBSD 当前版本的内核由 Clang 19.1.7 编译。
+# FreeBSD 从 10.0 起将 Clang 作为默认系统编译程序，替代了 GCC。
 
 # ----- 调试选项警告 -----
 WARNING: WITNESS option enabled, expect reduced performance.
@@ -384,7 +384,7 @@ VT(efifb): resolution 800x600
 # ===== CPU 检测与特性枚举 =====
 CPU: Intel(R) N100 (806.40-MHz K8-class CPU)
 # CPU 型号名称。Intel N100 是 Alder Lake-N 架构的低功耗处理器。
-# 806.40 MHz 是启动时 CPU 的基础频率（base frequency），加载 hwpstate_intel(4) 
+# 806.40 MHz 是启动时 CPU 的基础频率（base frequency），加载 hwpstate_intel(4)
 # 后内核会通过 Intel Speed Shift 动态调整频率（N100 最高睿频可达 ~3.4 GHz）。
 # "K8-class" 表示该 CPU 支持 AMD64 指令集（AMD K8 是首个 x86-64 处理器）；
 # 内核代码以 AMD K8 为 AMD64 功能基线进行分类。
@@ -465,7 +465,7 @@ Event timer "LAPIC" quality 600
 
 # ===== ACPI 子系统 =====
 ACPI APIC Table: <ALASKA A M I >
-# ACPI APIC（MADT）表供应商信息。"ALASKA A M I" 表明 BIOS 由 AMI（American Megatrends Inc.）
+# ACPI APIC（MADT）表供应商信息。“ALASKA A M I” 表明 BIOS 由 AMI（American Megatrends Inc.）
 # 提供，主板厂商为 ASRock（Alaska 是其产品线内部代号）。
 
 WARNING: L3 data cache covers more APIC IDs than a package (7 > 3)
@@ -484,7 +484,7 @@ random: fast provider: "Intel Secure Key RNG"
 random: unblocking device.
 # FreeBSD 随机数子系统（random(4)）初始化流程：
 # 1) 注册快速的 Intel Secure Key RNG（RDRAND 指令）作为硬件熵源。
-# 2) 标记 fast provider（快速提供者）为 "Intel Secure Key RNG"。
+# 2) 标记 fast provider（快速提供者）为 “Intel Secure Key RNG”。
 # 3) unblocking device：当内核收集到足够早期熵后，/dev/random 解除阻塞，
 #    用户态程序从此可正常读取随机数。CURRENT 版本使用 FenestrasX 算法。
 
@@ -510,7 +510,7 @@ kbd0 at kbdmux0
 efirtc0: <EFI Realtime Clock>
 efirtc0: registered as a time-of-day clock, resolution 1.000000s
 # efiRTC：通过 EFI 运行时服务（Runtime Services）获取/设置时间的时钟驱动。
-# "time-of-day clock"：系统时间的硬件时钟源注册。1s 粒度说明 EFI RTC 只能精确到秒级，
+# “time-of-day clock”：系统时间的硬件时钟源注册。1s 粒度说明 EFI RTC 只能精确到秒级，
 # 在启动早期为内核提供初始时间基准。后续会使用更高精度的 TSC/HPET 作为 timecounter。
 
 # ===== SMBIOS =====
@@ -533,7 +533,7 @@ ACPI Error: AE_NOT_FOUND, During name lookup/catalog (20241212/psobject-372)
 Firmware Error (ACPI): Could not resolve symbol [\134_SB.PC00.TXHC.RHUB.SS02], AE_NOT_FOUND (20241212/dswload2-315)
 ACPI Error: AE_NOT_FOUND, During name lookup/catalog (20241212/psobject-372)
 # BIOS/UEFI 固件 ACPI DSDT/SSDT 表中引用了不存在的 USB SuperSpeed（SS）端口符号：
-# \134 是反斜杠 ACPI 名称路径转义（ACPI namespace root \），RHUB.SS01/SS02 
+# \134 是反斜杠 ACPI 名称路径转义（ACPI namespace root \），RHUB.SS01/SS02
 # 是 xHCI 的 Root Hub 下的 SuperSpeed 端口对象。AE_NOT_FOUND 表明找不到。
 # 这通常是固件（BIOS/UEFI）编写的 Bug：定义了 USB 3.0 控制器的 SS 端口引用，
 # 但实际的 DSDT/SSDT 表中并未声明对应设备节点。
@@ -574,7 +574,7 @@ Event timer "RTC" frequency 32768 Hz quality 0
 
 # ===== 传统 AT 定时器（i8254 PIT）=====
 attimer0: <AT timer> port 0x40-0x43,0x50-0x53 irq 0 on acpi0
-# i8254 可编程间隔定时器（Programmable Interval Timer, PIT）。端口 0x40-0x43 
+# i8254 可编程间隔定时器（Programmable Interval Timer, PIT）。端口 0x40-0x43
 # 为 PIT 数据/命令端口，irq 0 为 PIT 中断。
 
 Timecounter "i8254" frequency 1193182 Hz quality 0
@@ -646,7 +646,7 @@ sdhci_pci0: 1 slot(s) allocated
 # ----- WITNESS 调试报告（非致命）-----
 uma_zalloc_debug: zone "malloc-16" with the following non-sleepable locks held:
 exclusive sleep mutex SD slot mtx (sdhci) r = 0 (0xfffff80001ad9020) locked @ /usr/src/sys/dev/sdhci/sdhci.c:688
-# WITNESS 检测到在持有非可睡眠锁（sleep mutex）"SD slot mtx"的情况下，
+# WITNESS 检测到在持有非可睡眠锁（sleep mutex）“SD slot mtx”的情况下，
 # 内核内存分配器 UMA 试图从 zone "malloc-16" 分配内存且可能挂起（sleepable）——
 # 这是一个潜在的锁顺序问题（lock order reversal, LOR）。
 # r = 0 = 递归计数为 0，表示非递归锁的单次获取。
@@ -749,7 +749,7 @@ cpu0: <ACPI CPU> on acpi0
 
 acpi_button1: <Power Button> on acpi0
 # ACPI 电源按钮——与前面的 fixed Power Button 的区别在于：
-# "fixed" = ACPI FADT 固定硬件事件，"acpi_button1" = ACPI 命名空间中的控制方法（Control Method）电源设备。
+# “fixed” = ACPI FADT 固定硬件事件，“acpi_button1” = ACPI 命名空间中的控制方法（Control Method）电源设备。
 
 acpi_tz0: <Thermal Zone> on acpi0
 # ACPI 温控区域（temperature sensor），用于 CPU/主板的温度监测与风扇调速。
@@ -776,7 +776,7 @@ hwpstate_intel2: <Intel Speed Shift> on cpu2
 cpufreq2: <CPU frequency control> on cpu2
 hwpstate_intel3: <Intel Speed Shift> on cpu3
 cpufreq3: <CPU frequency control> on cpu3
-# Intel Speed Shift（HWP = Hardware P-state）——Intel 从 Skylake 起引入的 
+# Intel Speed Shift（HWP = Hardware P-state）——Intel 从 Skylake 起引入的
 # CPU 自动频率调节机制：CPU 自身硬件根据负载实时调整核心频率，
 # 无需操作系统干预。传统方式（cpufreq）需要 OS 通过 ACPI _PSS 表选择 P-state（被动调速）。
 # HWP 的延迟和粒度优于传统 cpufreq，是 FreeBSD 供电管理和性能的重要组成。
@@ -839,7 +839,7 @@ hdaa0: <Realtek ALC269 Audio Function Group> at nid 1 on hdacc0
 # AFG（Audio Function Group），HDA 规范术语——包含 DAC/ADC/混音/插孔等功能节点。
 
 pcm0: <Realtek ALC269 (Right Analog)> at nid 21 and 24 on hdaa0
-# pcm(4) 音频设备实例。nid 21（Pin Complex）/ nid 24（Pin Complex）代表 
+# pcm(4) 音频设备实例。nid 21（Pin Complex）/ nid 24（Pin Complex）代表
 # 右声道模拟输出引脚——可能是 3.5mm 耳机/音箱输出。系统至此具备音频输出能力。
 
 # ===== NVMe 磁盘设备（nda/CAM 路径）=====
@@ -859,7 +859,7 @@ nda0: 476940MB (976773168 512 byte sectors)
 # ===== 挂载根文件系统 =====
 Trying to mount root from zfs:zroot/ROOT/default []...
 # 内核尝试从 ZFS 池 "zroot" 的数据集 "zroot/ROOT/default" 挂载根文件系统。
-# [] 中是传递给 mountroot 的可选参数（通常有 "rw" 或 "ro"），CURRENT 启动为空。
+# [] 中是传递给 mountroot 的可选参数（通常有 “rw” 或 “ro”），CURRENT 启动为空。
 # 这是引导过程的最后一个内核阶段——根系统挂载成功后内核执行 init(8)。
 
 WARNING: WITNESS option enabled, expect reduced performance.

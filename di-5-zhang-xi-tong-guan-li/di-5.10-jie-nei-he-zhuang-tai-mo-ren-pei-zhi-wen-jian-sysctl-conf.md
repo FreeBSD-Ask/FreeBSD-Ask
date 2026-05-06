@@ -54,7 +54,7 @@ sysctl 基于管理信息库（MIB）风格的 ASCII 名称标识。
 | sysctl | 说明 |
 | ------ | ---- |
 | kern | 内核功能和特性 |
-| vm | 虚拟内存 |
+| vm | 虚拟存储器 |
 | vfs | 文件系统 |
 | net | 网络 |
 | debug | 调试参数 |
@@ -130,7 +130,7 @@ sysctl.conf 的源代码位于 [/sbin/sysctl/sysctl.conf](https://github.com/fre
 
 > **警告**
 >
-> 虽然 **/etc/sysctl.conf** 文件实质上为空，但这不代表系统默认的 sysctl 参数为空！它们是通过不同的宏（如 `SYSCTL_INT`）注入到系统中的！使用命令 `sysctl -a` 可列出当前系统所有默认的参数值。
+> 虽然 **/etc/sysctl.conf** 文件实质上为空，但这不代表系统默认的 sysctl 参数为空。它们是通过不同的宏（如 `SYSCTL_INT`）注入到系统中的！使用命令 `sysctl -a` 可列出当前系统所有默认的参数值。
 
 ## 设置内核状态变量
 

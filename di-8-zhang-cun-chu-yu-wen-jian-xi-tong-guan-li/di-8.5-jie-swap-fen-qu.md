@@ -41,13 +41,13 @@ swap 空间是操作系统内存管理的重要组成部分。
 # chmod 0600 /usr/swap0
 ```
 
-若要立即启用，需先将交换文件通过 `mdconfig` 配置为内存磁盘设备，再使用 `swapon` 激活交换空间。其中，`mdconfig` 用于将文件映射为内存磁盘，`swapon` 用于激活交换设备：
+如果要立即启用，需先将交换文件通过 `mdconfig` 配置为内存磁盘设备，再使用 `swapon` 激活交换空间。其中，`mdconfig` 用于将文件映射为内存磁盘，`swapon` 用于激活交换设备：
 
 ```sh
 # mdconfig -a -t vnode -f /usr/swap0 -u 0 && swapon /dev/md0
 ```
 
-若要在系统重启后仍能生效，还需在 **/etc/rc.conf** 配置文件中添加以下内容：
+如果要在系统重启后仍能生效，还需在 **/etc/rc.conf** 配置文件中添加以下内容：
 
 ```ini
 swapfile="/usr/swap0"
@@ -63,7 +63,7 @@ swapfile="/usr/swap0"
 
 > **警告**
 >
-> 根据 OpenZFS Project. OpenZFS 文档[EB/OL]. [2026-03-26]. <https://openzfs.github.io/openzfs-docs/Getting%20Started/Ubuntu/Ubuntu%2022.04%20Root%20on%20ZFS.html> 所述，在内存压力极高的系统上，无论 swap 空间剩余多少，使用 zvol 作为 swap 设备都可能导致系统锁死。参见：OpenZFS Project. Swap deadlock in 0.7.9[EB/OL]. [2026-03-26]. <https://github.com/openzfs/zfs/issues/7734>。而将 swap 放置在其他分区上又可能会影响 ZFS 对 swap 的数据校验，因此上游文档建议弃用 swap。需要注意的是，swap 对于系统休眠功能至关重要，若需要该功能，需至少保证 swap 的容量不小于系统内存容量。
+> 根据 OpenZFS Project. OpenZFS 文档[EB/OL]. [2026-03-26]. <https://openzfs.github.io/openzfs-docs/Getting%20Started/Ubuntu/Ubuntu%2022.04%20Root%20on%20ZFS.html> 所述，在内存压力极高的系统上，无论 swap 空间剩余多少，使用 zvol 作为 swap 设备都可能导致系统锁死。参见：OpenZFS Project. Swap deadlock in 0.7.9[EB/OL]. [2026-03-26]. <https://github.com/openzfs/zfs/issues/7734>。而将 swap 放置在其他分区上又可能会影响 ZFS 对 swap 的数据校验，因此上游文档建议弃用 swap。需要注意的是，swap 对于系统休眠功能至关重要，如果需要要该功能，需至少保证 swap 的容量不小于系统内存容量。
 
 在 ZFS 池 zroot 下创建大小为 8 GB 的 zvol（ZFS 块设备卷）用作交换空间：
 

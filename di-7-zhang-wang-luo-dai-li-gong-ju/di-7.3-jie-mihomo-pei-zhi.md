@@ -134,7 +134,7 @@ service mihomo stop
 service mihomo status
 ```
 
-- 指定订阅链接地址（示例地址仅作演示之用，须替换为有效链接）：
+- 指定订阅链接地址（示例地址仅作演示之用，需要替换为有效链接）：
 
 ```sh
 sysrc mihomo_config="https://xxxx.yyy"

@@ -10,7 +10,7 @@ FreeBSD 是一款真正自由（Liberty）的 **操作系统**，在这波谲云
 
 ## 内容提要
 
->**注意**
+> **注意**
 >
 > 本书约有 60% 的章节尚未完成（详见下文），已有的章节虽经审阅和修订，但仍非最终版本。
 
@@ -42,7 +42,7 @@ FreeBSD 是一款真正自由（Liberty）的 **操作系统**，在这波谲云
 
 - EPUB（适用于移动端离线阅读）下载地址：<https://docs.bsdcn.org/bsdbook.epub> ![EPUB 文件状态](https://img.shields.io/website?url=https%3A%2F%2Fdocs.bsdcn.org%2Fbsdbook.epub&up_message=%E6%96%87%E4%BB%B6%E5%8F%AF%E7%94%A8&down_message=%E6%96%87%E4%BB%B6%E4%B8%8D%E5%8F%AF%E7%94%A8&style=for-the-badge&label=%E6%96%87%E6%A1%A3%E7%8A%B6%E6%80%81)
 
->**注意**
+> **注意**
 >
 > 以上下载地址以 `docs.bsdcn.org` 域名开头，非 `book.bsdcn.org`。
 
@@ -66,7 +66,7 @@ FreeBSD 中文社区未通过其他域名部署本书，唯一官方域名为 `b
 
 受编者水平所限，书中难免存在疏漏与错误。
 
-如遇内容问题或网站技术问题，请发送邮件至 ykla [yklaxds@gmail.com](mailto:yklaxds@gmail.com)。关于内容问题，亦可通过 GitHub 提交 PR，入口位于桌面端网页当前页面的右下角或底部左下角。
+如遇内容问题或网站技术问题，请发送邮件至 ykla [yklaxds@gmail.com](mailto:yklaxds@gmail.com)。关于内容问题，也可以通过 GitHub 提交 PR，入口位于桌面端网页当前页面的右下角或底部左下角。
 
 社区相关问题请加入 QQ 群后联系群主。
 
@@ -88,7 +88,7 @@ FreeBSD 中文社区未通过其他域名部署本书，唯一官方域名为 `b
 
 支付方式支持：VISA 信用卡（可通过 Amazon Pay 或 Google Pay）、万事达品牌借记卡。
 
-可通过 Bing Rewards 积分 [对 FreeBSD 基金会进行捐赠](https://rewards.bing.com/redeem/000999036000?causeId=840-841545163&&PC=EMMX01)。Bing Rewards 是微软必应搜索提供的积分计划。同方式亦可 [捐赠 NetBSD 基金会](https://rewards.bing.com/redeem/000999036000?causeId=840-134134071&PC=EMMX01)。
+可通过 Bing Rewards 积分 [对 FreeBSD 基金会进行捐赠](https://rewards.bing.com/redeem/000999036000?causeId=840-841545163&&PC=EMMX01)。Bing Rewards 是微软必应搜索提供的积分计划。同方式也可以 [捐赠 NetBSD 基金会](https://rewards.bing.com/redeem/000999036000?causeId=840-134134071&PC=EMMX01)。
 
 ## 贡献者
 

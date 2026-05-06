@@ -1,6 +1,6 @@
 # 5.4 用户分级文件（login.conf）
 
-/etc/login.conf 是登录类能力数据库（最早引入自 FreeBSD 2.1.5），用于控制资源配额、计量配额及默认用户环境设置。本节涵盖其文件结构、class 定义语法与用户本地覆盖方法。
+/etc/login.conf 是登录类能力数据库（最早引入自 FreeBSD 2.1.5），用于控制资源配额、计量配额及默认用户环境设置。本节介绍其文件结构、class 定义语法与用户本地覆盖方法。
 
 ## login.conf 的概念与文件结构
 
@@ -28,7 +28,7 @@
 # 请注意，像 "cputime" 这样的条目会同时设置 "cputime-cur" 和 "cputime-max"。
 # "default" 登录类会自动（由 login(1) 实现）应用于所有在 /etc/master.passwd 中未设置有效登录类的非 root 用户。
 # 请注意，由于冒号 ':' 用于分隔能力条目，因此在能力的值或名称中嵌入字面冒号时必须使用 \c 转义序列（有关更多转义序列，请参见 getcap(3) 的 "CGETNUM AND CGETSTR SYNTAX AND SEMANTICS" 部分）。
-# UID 为 0 的用户（root）如果没有有效登录类，则使用 root 记录（若有），否则使用 default。
+# UID 为 0 的用户（root）如果没有有效登录类，则使用 root 记录（如果有），否则使用 default。
 # default 登录类
 
 default:\
@@ -37,7 +37,7 @@ default:\
 	:setenv=BLOCKSIZE=K:\  # 由逗号分隔的环境变量及其对应值的列表。包含逗号的值必须加引号。BLOCKSIZE=K 即让命令以 KB 大小格式显示
 	:mail=/var/mail/$:\  # 将环境变量 $MAIL 设置为指定的值。
 	:path=/sbin /bin /usr/sbin /usr/bin /usr/local/sbin /usr/local/bin ~/bin:\  # 默认的 PATH 环境变量路径，会在其中查找可执行文件
-	:nologin=/var/run/nologin:\  # 若该文件存在，将打印该文件到屏幕上，并且对应用户的登录会话将被终止。
+	:nologin=/var/run/nologin:\  # 如果该文件存在，将打印该文件到屏幕上，并且对应用户的登录会话将被终止。
 	:cputime=unlimited:\  # 限制进程可使用的 CPU 时间量。类型为时间，默认单位为秒。时间值可以使用不同单位表示：y 表示年（365 天）、w 表示周、d 表示天、h 表示小时、m 表示分钟、s 表示秒。单位可以连写，其值会累加。例如，2 小时 40 分钟可以写作 9600s、160m 或 2h40m。
 	:datasize=unlimited:\  # 限制数据段（属于静态内存分配）的最大大小。类型为数值，默认单位为字节。常用单位包括 b、k、m、g、t，分别表示 512 字节、KB、MB、GB 和 TB，大小写不敏感。多个值可以连写，其数值会累加。例如 2g512M 表示总大小为 2.5GB。
 	:stacksize=unlimited:\  # 最大栈大小限制。类型为数值。
@@ -54,7 +54,7 @@ default:\
 	:kqueues=unlimited:\  # 每个进程可创建的 kqueue 数量。类型为数字。
 	:umtxp=unlimited:\  # 最大进程间共享的 pthread 锁数量。类型为数字。
 	:pipebuf=unlimited:\  # 管道缓冲区的最大大小。类型为数字。
-	:priority=0:\  # 初始进程优先级等级。类型为数字。用于设置进程的初始优先级：既可使用普通 nice 范围（-20 到 20），也可映射到实时或空闲优先级；若设置特殊值 “inherit” 表示继承原有优先级，不进行重置。0 代表正常优先级。
+	:priority=0:\  # 初始进程优先级等级。类型为数字。用于设置进程的初始优先级：既可使用普通 nice 范围（-20 到 20），也可映射到实时或空闲优先级；如果设置特殊值 “inherit” 表示继承原有优先级，不进行重置。0 代表正常优先级。
 	:umask=022:\  # 设置初始 umask。类型为数字，应以 0 开头以确保按八进制识别。特殊值 "inherit" 表示保持原有 umask 不变。022 表示文件默认权限为 644，目录默认权限为 755。
 	:charset=UTF-8:\  # 指定环境变量 $MM_CHARSET（邮件相关程序会使用）的值。类型为字符串。
 	:lang=C.UTF-8:  # 指定环境变量 $LANG 的值。类型为字符串。修改此处即可实现整个操作系统的全局 i18n 配置。

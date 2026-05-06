@@ -38,7 +38,7 @@ sshd 是 OpenSSH 的服务端守护进程，负责监听来自客户端的连接
 
 ## 启用 SSH 服务器
 
-除内置的 SSH 客户端工具外，亦可将 FreeBSD 系统配置为 SSH 服务器，接受来自其他 SSH 客户端的连接。
+除内置的 SSH 客户端工具外，也可将 FreeBSD 系统配置为 SSH 服务器，接受来自其他 SSH 客户端的连接。
 
 要让 SSH 服务器在系统重启后自动运行，执行以下命令启用 sshd 服务：
 
@@ -66,7 +66,7 @@ sshd 首次在 FreeBSD 系统启动时，会自动生成主机密钥并将指纹
 
 ### 生成密钥
 
-`ssh-keygen` 可用于生成认证密钥。指定密钥类型并按提示操作，即可产生公钥和私钥对。宜设置易记且难以猜解的密码短语来保护私钥。
+`ssh-keygen` 可用于生成认证密钥。指定密钥类型并按提示操作，即可产生公钥和私钥对。建议设置易记且难以猜解的密码短语来保护私钥。
 
 ```sh
 # ssh-keygen
@@ -120,7 +120,7 @@ drwx------  2 root  wheel   512 Mar 22 18:27 /root/.ssh # 权限为 700
 
 ```sh
 # cat /root/.ssh/id_rsa.pub >> /root/.ssh/authorized_keys # 将公钥存储到 /root/.ssh/authorized_keys
--rw-r--r--  1 root  wheel  391 Mar 22 18:39 /root/.ssh/authorized_keys # 检查权限是否为 644，若不是需要手动修改权限
+-rw-r--r--  1 root  wheel  391 Mar 22 18:39 /root/.ssh/authorized_keys # 检查权限是否为 644，如果不是需要手动修改权限
 ```
 
 使用 WinSCP 将私钥和公钥保存到本地后，可删除服务器上的密钥文件：
@@ -346,7 +346,7 @@ screen -r xxx	# 重新附着（恢复）名为或 ID 为 xxx 的 screen 会话
 
 `mosh` 即 `Mobile Shell`，移动的 shell。Mosh 适合在移动设备（如手机、平板）通过移动网络远程控制服务器时使用。
 
-Mosh 不支持多窗口、分屏模式，也不支持多个客户端连接同一服务器。客户端重启或切换设备时无法自动重新连接。若需实现这些功能，可在 Mosh 会话中使用 GNU Screen、OpenBSD tmux 等终端多路复用器，参见 [Mosh: A State-of-the-Art Good Old-Fashioned Mobile Shell](https://www.usenix.org/system/files/login/articles/winstein.pdf)
+Mosh 不支持多窗口、分屏模式，也不支持多个客户端连接同一服务器。客户端重启或切换设备时无法自动重新连接。如果需实现这些功能，可在 Mosh 会话中使用 GNU Screen、OpenBSD tmux 等终端多路复用器，参见 [Mosh: A State-of-the-Art Good Old-Fashioned Mobile Shell](https://www.usenix.org/system/files/login/articles/winstein.pdf)
 
 要使用 mosh：① 服务端和客户端都需要配置相同的 UTF-8 编码，② 双方都需要安装 mosh。
 
@@ -501,7 +501,7 @@ Termius 下载地址：<https://termius.com/download/>
 AllowUsers user@192.168.1.32
 ```
 
-若要允许 `user` 从任意位置登录，则单独列出用户名，无需附带 IP 地址：
+如果要允许 `user` 从任意位置登录，则单独列出用户名，无需附带 IP 地址：
 
 ```ini
 AllowUsers user
@@ -519,7 +519,7 @@ AllowUsers root@192.168.1.32 user
 # sshd -t
 ```
 
-若配置无误，将不会有任何输出；若有误，则会显示类似：
+若配置无误，将不会有任何输出；如果有误，则会显示类似：
 
 ```sh
 /etc/ssh/sshd_config: line 3: Bad configuration option: sdadasdasdasads
@@ -538,7 +538,7 @@ AllowUsers root@192.168.1.32 user
 
 在 OpenSSH 默认分发的 `sshd_config` 中，选项采用以下策略：
 
-- 尽可能写出选项及其默认值，但保持为注释状态。（把默认值写出来供参考，但故意注释掉，若不显式覆盖，实际生效的仍将是这些值）。
+- 尽可能写出选项及其默认值，但保持为注释状态。（把默认值写出来供参考，但故意注释掉，如果不显式覆盖，实际生效的仍将是这些值）。
 - 未被注释的选项将覆盖默认值（即通过显式覆盖来生效）。
 
 FreeBSD 的某些默认值与 OpenBSD 不同，并且 FreeBSD 还有一些额外的选项。

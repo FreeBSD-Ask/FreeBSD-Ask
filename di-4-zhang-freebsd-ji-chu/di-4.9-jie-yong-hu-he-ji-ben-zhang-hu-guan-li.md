@@ -1,6 +1,6 @@
 # 4.9 用户和基本账户管理
 
-FreeBSD 系统的所有访问均通过账户实现，所有进程皆由用户运行，故用户与账户管理是系统安全的基础。
+FreeBSD 系统的所有访问均通过账户实现，所有进程都由用户运行，故用户与账户管理是系统安全的基础。
 
 FreeBSD 提供了多种用户管理工具。`adduser` 命令以交互方式添加新用户，自动完成创建 passwd 条目、构建新用户主目录、从 **/usr/share/skel** 复制默认配置文件等操作。
 
@@ -61,11 +61,11 @@ FreeBSD 中主要有三类账户：系统账户、普通用户账户，以及超
 - **家目录**：用户登录时的起始目录。常见约定是将所有用户家目录放在 **/home/username** 或 **/usr/home/username** 下。
 - **用户 shell**：shell 提供用户与系统交互的默认环境。
 
-须注意，普通用户权限虽有限，但其运行的软件越多，系统暴露的攻击面也越大，提权风险随之增加。用户本身权限固定，不会因进程增多而直接获得更多权限；但运行软件越多，可被攻击者利用的漏洞入口便越多，提权风险确实随之增大。攻击者仅在程序存在漏洞或配置不当的情况下，方可利用这些进程实现权限提升。
+需要注意，普通用户权限虽有限，但其运行的软件越多，系统暴露的攻击面也越大——可被攻击者利用的漏洞入口随之增多。攻击者仅在程序存在漏洞或配置不当的情况下，才能利用这些进程实现权限提升。
 
 ### 超级用户账户
 
-超级用户账户，通常称为 root，用于无限制地管理系统。超级用户与普通用户账户不同，其操作不受限制，误用可能导致灾难性后果。普通用户账户无法因误操作而破坏操作系统，因此建议以普通用户账户登录，仅在命令需要额外特权时方切换为超级用户。
+超级用户账户，通常称为 root，用于无限制地管理系统。超级用户与普通用户账户不同，其操作不受限制，误用可能导致灾难性后果。普通用户账户无法因误操作而破坏操作系统，因此建议以普通用户账户登录，仅在命令需要额外特权时才切换为超级用户。
 
 实际上，内核根据账户的 EUID（有效用户 ID）是否为 `0` 来判定某账户是否拥有 root 权限。参见：main/sys/kern/kern_priv.c[EB/OL]. [2026-03-26]. <https://github.com/freebsd/freebsd-src/blob/main/sys/kern/kern_priv.c> 中的 `if (suser_enabled(cred))` 代码块部分。
 
@@ -90,7 +90,7 @@ FreeBSD 提供了多种不同的命令来管理用户账户。
 
 推荐使用的添加新用户的程序是脚本文件 adduser(8)。添加新用户时，此程序会自动更新 **/etc/passwd** 和 **/etc/group**。
 
-adduser 还会为新用户创建 home 目录，从 **/usr/share/skel** （源代码路径为 `share/skel`）复制默认配置文件。`adduser` 的源代码路径为 `usr.sbin/adduser/adduser.sh`。
+adduser 还会为新用户创建家目录，从 **/usr/share/skel** （源代码路径为 `share/skel`）复制默认配置文件。`adduser` 的源代码路径为 `usr.sbin/adduser/adduser.sh`。
 
 adduser(8) 是交互式的，会逐步引导创建新用户账户。如下所示，输入所需信息或按 **回车键** 接受方括号中的默认值。
 
@@ -198,7 +198,7 @@ root 可使用此工具更改任意用户的额外账户信息。
 ```sh
 # chpass ykla	# 修改 ykla 的账户信息数据库
 #Changing user information for ykla.
-Login: ykla	# 指定 ykla 
+Login: ykla	# 指定 ykla
 Password: $6$SqMJXrv5aC6Wq.by$nmbZs078aHNBVyh9noLFouJsGHyFSvQIzH0W4zpdfXuPtGtt.FHgWfXDHVBa
 .g9P0eZ32UwfByzRKdVnTaO7W.	# 用户密码
 Uid [#]: 1001
@@ -222,7 +222,7 @@ Other information:
 示例：修改用户 test1 的登录环境为 **/bin/sh**。
 
 ```sh
-# chpass -s sh test1 # 
+# chpass -s sh test1 #
 chpass: user information updated
 ```
 
@@ -233,18 +233,18 @@ chpass: user information updated
 > chfn(1) 与 chsh(1) 是 chpass(1) 的链接命令，ypchpass(1)、ypchfn(1) 和 ypchsh(1) 也是。由于 NIS 支持是自动的，无需在命令前加 `yp`。这一点可以从源代码 `usr.bin/chpass/Makefile` 进行推断：
 >
 > ```makefile
->SYMLINKS=	chpass ${BINDIR}/chfn
->SYMLINKS+=	chpass ${BINDIR}/chsh
->.if ${MK_NIS} != "no"	# 如果系统启用了 NIS
->SYMLINKS+=	chpass ${BINDIR}/ypchfn
->SYMLINKS+=	chpass ${BINDIR}/ypchpass
->SYMLINKS+=	chpass ${BINDIR}/ypchsh
->.endif
+> SYMLINKS=	chpass ${BINDIR}/chfn
+> SYMLINKS+=	chpass ${BINDIR}/chsh
+> .if ${MK_NIS} != "no"	# 如果系统启用了 NIS
+> SYMLINKS+=	chpass ${BINDIR}/ypchfn
+> SYMLINKS+=	chpass ${BINDIR}/ypchpass
+> SYMLINKS+=	chpass ${BINDIR}/ypchsh
+> .endif
 >
->MLINKS=	chpass.1 chfn.1 chpass.1 chsh.1
->.if ${MK_NIS} != "no"
->MLINKS+= chpass.1 ypchpass.1 chpass.1 ypchfn.1 chpass.1 ypchsh.1
->.endif
+> MLINKS=	chpass.1 chfn.1 chpass.1 chsh.1
+> .if ${MK_NIS} != "no"
+> MLINKS+= chpass.1 ypchpass.1 chpass.1 ypchfn.1 chpass.1 ypchsh.1
+> .endif
 > ```
 
 ### passwd 更改用户密码
@@ -289,7 +289,7 @@ Retype New Password:	# 再次输入新密码
 
 ```sh
 # cat /etc/group
-wheel:*:0:root,ykla	# 
+wheel:*:0:root,ykla	#
 operator:*:5:root
 
 ……省略部分输出……
@@ -405,7 +405,7 @@ uid=1001(ykla) gid=1001(ykla) groups=1001(ykla),0(wheel),1002(ykla2)
 # pw userdel -r test2
 ```
 
-常用参数：`-r` 删除用户同时删除用户主目录及所有相关信息；若不使用该参数则信息保留，仅删除用户。若主目录为 ZFS 数据集且已清空，pw(8) 会自动销毁该数据集，但不会处理数据集内的子数据集和快照。
+常用参数：`-r` 删除用户同时删除用户主目录及所有相关信息；如果不使用该参数则信息保留，仅删除用户。若主目录为 ZFS 数据集且已清空，pw(8) 会自动销毁该数据集，但不会处理数据集内的子数据集和快照。
 
 ### 显示用户信息
 

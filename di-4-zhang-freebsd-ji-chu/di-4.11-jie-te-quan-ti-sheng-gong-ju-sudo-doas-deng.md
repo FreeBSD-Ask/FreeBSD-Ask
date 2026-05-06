@@ -1,12 +1,12 @@
 # 4.11 权限提升工具（sudo、doas 等）
 
-权限提升工具允许普通用户以 root 或其他用户身份执行命令。sudo 和 doas 通过配置文件定义权限规则，使特定用户无需 root 密码即可执行特权操作，并提供操作日志。本节涵盖 doas、sudo 及 sudo-rs 的安装与常用配置。
+sudo 和 doas 通过配置文件定义权限规则，使特定用户无需 root 密码即可执行特权操作，并提供操作日志。
 
->**思考题**
+> **思考题**
 >
 >>即使是管理员，在无需特权操作时也应当限制自己的权限。
 >
->你认为这种限制权限的设计思路的缺点是什么？
+> 你认为这种限制权限的设计思路的缺点是什么？
 
 ![权限示意图](../.gitbook/assets/switch-user-su.png)
 
@@ -276,7 +276,7 @@ Defaults secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/b
 ##
 ## Uncomment if needed to preserve environmental variables related to the
 ## FreeBSD pkg utility and fetch.
-## 若需要保留与 FreeBSD pkg 工具和 fetch 相关的环境变量，请取消注释。
+## 如果需要要保留与 FreeBSD pkg 工具和 fetch 相关的环境变量，请取消注释。
 
 # Defaults     env_keep += "PKG_CACHEDIR PKG_DBDIR FTP_PASSIVE_MODE"
 ## 示例：保留 pkg 缓存/数据库路径与 FTP 被动模式变量。

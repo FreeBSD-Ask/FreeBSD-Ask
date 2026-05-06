@@ -1,6 +1,6 @@
 # 3.2 使用 VMware Workstation Pro 安装 FreeBSD
 
-VMware Workstation Pro 是 Type-2 虚拟机监视器（Hypervisor），运行在宿主操作系统之上，通过二进制翻译（binary translation）和硬件辅助虚拟化（hardware-assisted virtualization，基于 Intel VT-x 或 AMD-V 技术）实现 x86 指令集的虚拟化。
+VMware Workstation Pro 是 Type-2 虚拟机监视器（Hypervisor），运行在宿主操作系统之上，借助二进制翻译（binary translation）和硬件辅助虚拟化（hardware-assisted virtualization，基于 Intel VT-x 或 AMD-V 技术）完成 x86 指令集的虚拟化。
 
 ## 视频教程
 
@@ -40,11 +40,11 @@ FreeBSD 中文社区. 001-Windows 11 安装 VMware 17[EB/OL]. [2026-04-04]. <htt
 
 ![VMware 安装 FreeBSD](../.gitbook/assets/vmware-5.png)
 
-虚拟机通常会占用较大的磁盘空间。若不希望系统盘（如 C 盘）空间不足，请自行调整虚拟机的存储位置。
+虚拟机通常会占用较大的磁盘空间。如果不希望系统盘（如 C 盘）空间不足，请自行调整虚拟机的存储位置。
 
 ![VMware 安装 FreeBSD](../.gitbook/assets/vmware-6.png)
 
-请根据实际需要调整虚拟磁盘的最大大小。默认值可能偏小。若要安装图形化桌面环境，建议分配至少 20 GB 的磁盘空间。
+请根据实际需要调整虚拟磁盘的最大大小。默认值可能偏小。如果要安装图形化桌面环境，建议分配至少 20 GB 的磁盘空间。
 
 ![VMware 安装 FreeBSD](../.gitbook/assets/vmware-7.png)
 
@@ -110,7 +110,7 @@ FreeBSD 中文社区. 001-Windows 11 安装 VMware 17[EB/OL]. [2026-04-04]. <htt
 
 VMware 的半虚拟化驱动程序（VMware Tools，亦称 Open VM Tools）通过 HGFS（Host-Guest File System）等专有协议提供图形加速、共享文件夹、剪贴板共享等功能，可改善虚拟机的 I/O 性能和用户体验。
 
-为实现虚拟机与宿主机的良好集成，需安装 xf86-video-vmware（VMware 显卡驱动）和 xf86-input-vmmouse（VMware 虚拟鼠标驱动）。pkg 命令如下：
+要实现虚拟机与宿主机的良好集成，需安装 xf86-video-vmware（VMware 显卡驱动）和 xf86-input-vmmouse（VMware 虚拟鼠标驱动）。pkg 命令如下：
 
 ```sh
 # pkg install xf86-video-vmware open-vm-tools xf86-input-vmmouse
@@ -255,7 +255,7 @@ fusefs_load="YES"
 
 系统将自动挂载 VMware 共享目录。
 
-挂载 fstab 中所有未挂载的文件系统，检查有无错误（若无错误输出则正常），错误的配置可能导致系统无法正常启动：
+挂载 fstab 中所有未挂载的文件系统，检查有无错误（如果没有错误输出则正常），错误的配置可能导致系统无法正常启动：
 
 ```sh
 # mount -al
@@ -296,7 +296,7 @@ Downloads
 
 ![VMware 安装 FreeBSD](../.gitbook/assets/vmware-16.png)
 
-硬件→显示→监视器→指定监视器设置→任意监视器的最大分辨率 (M)，将其由默认最大的 `2560 x 1600`（2.5K / WQXGA）改为其他较小值，亦可自定义数值。
+硬件→显示→监视器→指定监视器设置→任意监视器的最大分辨率 (M)，将其由默认最大的 `2560 x 1600`（2.5K / WQXGA）改为其他较小值，也可以自定义数值。
 
 - 没有声音
 

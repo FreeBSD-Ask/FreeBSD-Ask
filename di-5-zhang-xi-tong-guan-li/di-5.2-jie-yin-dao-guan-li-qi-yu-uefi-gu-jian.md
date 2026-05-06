@@ -4,7 +4,7 @@
 
 UEFI 规范定义了操作系统与平台固件之间的接口，提供了启动服务（Boot Services）和运行时服务（Runtime Services），以及用于存储启动变量的非易失性存储空间。
 
-FreeBSD 同时支持传统的 MBR 标准和 GUID 分区表（GUID Partition Table，GPT）引导方式。GPT 分区通常出现在使用 UEFI 固件的计算机上，但 FreeBSD 亦可通过 gptboot(8) 在仅有传统 BIOS 的机器上从 GPT 分区引导。
+FreeBSD 同时支持传统的 MBR 标准和 GUID 分区表（GUID Partition Table，GPT）引导方式。GPT 分区通常出现在使用 UEFI 固件的计算机上，但 FreeBSD 也可以通过 gptboot(8) 在仅有传统 BIOS 的机器上从 GPT 分区引导。
 
 UEFI 引导过程与传统 BIOS 引导过程在架构上不同。
 
@@ -14,7 +14,7 @@ UEFI 引导过程与传统 BIOS 引导过程在架构上不同。
 
 ## UEFI 系统检测方法
 
-efibootmgr 是 FreeBSD 基本系统中（自 11.2 起）用于查看和管理 EFI 启动项的工具，通过与 UEFI 固件交互来操作启动项配置。
+efibootmgr 是 FreeBSD 基本系统中（自 11.2 起）用于查看和管理 EFI 启动项的工具，与 UEFI 固件交互以操作启动项配置。
 
 在非 UEFI 环境下运行 efibootmgr 会报错 `efi variables not supported on this system`，需加载 `efirt` 内核模块（`kldload efirt`）：
 
@@ -144,7 +144,7 @@ EFI 分区的目录结构如下：
 
 重启进入 Windows，使用 EasyUEFI 激活 `FreeBSD 15.0` 启动项。
 
-确认 FreeBSD 可正常启动后，方可使用 [DiskGenius](https://www.diskgenius.cn/) 或其他分区工具删除 nda0 磁盘的 EFI 分区及其文件。
+确认 FreeBSD 可正常启动后，才能使用 [DiskGenius](https://www.diskgenius.cn/) 或其他分区工具删除 nda0 磁盘的 EFI 分区及其文件。
 
 ## 更新 EFI 引导
 
@@ -152,7 +152,7 @@ EFI 分区的目录结构如下：
 
 > **警告**
 >
-> 对于使用 EFI 引导的系统，EFI 系统分区（ESP）上有引导加载程序的副本，用于固件引导内核。如果根文件系统是 ZFS，则引导加载程序必须能读取 ZFS 引导文件系统。在系统升级后，且执行 `zpool upgrade` 前，必须先更新 ESP 上的引导加载程序，否则系统可能无法引导。虽然不是强制性的，但在 UFS 作为根文件系统时亦应如此。
+> 对于使用 EFI 引导的系统，EFI 系统分区（ESP）上有引导加载程序的副本，用于固件引导内核。如果根文件系统是 ZFS，则引导加载程序必须能读取 ZFS 引导文件系统。在系统升级后，且执行 `zpool upgrade` 前，必须先更新 ESP 上的引导加载程序，否则系统可能无法引导。虽然不是强制性的，但在 UFS 作为根文件系统时也应如此。
 
 可以使用命令 `efibootmgr -v` 来确定当前引导加载程序的位置。`BootCurrent` 显示的值是用于引导系统的当前引导项配置的编号。输出的相应条目以 `+` 开头，如下所示：
 
@@ -228,7 +228,7 @@ FreeBSD/amd64 EFI loader, Revision 3.0
 
 ## Grub
 
-经测试，在 UEFI + ZFS 环境下，GRUB 无法直接引导 FreeBSD 内核，只能通过 chainload 机制（如配置 `chainloader +1`）间接引导。在传统 BIOS 启动 + UFS 根文件系统的环境下，GRUB 可通过 `kfreebsd` 命令直接引导 FreeBSD 内核。
+经测试，UEFI + ZFS 环境中，GRUB 无法直接引导 FreeBSD 内核，只能借助 chainload 机制（如配置 `chainloader +1`）间接引导。传统 BIOS 启动 + UFS 根文件系统环境中，GRUB 可通过 `kfreebsd` 命令直接引导 FreeBSD 内核。
 
 ```ini
 menuentry "FreeBSD-13.0 Release" { # 指定 GRUB 条目名称
@@ -348,7 +348,7 @@ rEFInd 支持多种图形化主题。
 
 将此 `themes` 目录整体复制到 EFI 系统分区中的 `EFI\refind\` 目录下。
 
-编辑 `refind.conf` 文件（若无法直接在 ESP 中编辑，可将其复制到桌面，修改后覆盖原文件），在文件末尾添加一行：
+编辑 `refind.conf` 文件（如果无法直接在 ESP 中编辑，可将其复制到桌面，修改后覆盖原文件），在文件末尾添加一行：
 
 ```ini
 include themes/Matrix-rEFInd/theme.conf

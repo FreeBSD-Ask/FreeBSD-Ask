@@ -67,10 +67,10 @@
 * [5.5 bsdconfig 系统配置工具](di-5-zhang-xi-tong-guan-li/di-5.5-jie-bsdconfig-xi-tong-pei-zhi-gong-ju.md)
 * [5.6 OpenSSH](di-5-zhang-xi-tong-guan-li/di-5.6-jie-OpenSSH.md)
 * [5.7 远程桌面访问](di-5-zhang-xi-tong-guan-li/di-5.7-jie-yuan-cheng-zhuo-mian-fang-wen.md)
-* [5.8 设备资源提示文件（device.hints）](di-5-zhang-xi-tong-guan-li/di-5.8-jie-she-bei-zi-yuan-ti-shi-wen-jian-device-hints.md)
+* [5.8 设备资源提示文件](di-5-zhang-xi-tong-guan-li/di-5.8-jie-she-bei-zi-yuan-ti-shi-wen-jian-device-hints.md)
 * [5.9 Cron 和 Periodic](di-5-zhang-xi-tong-guan-li/di-5.9-jie-crontab-ji-ding-shi-ren-wu-wen-jian-periodic-conf.md)
 * [5.10 sysctl 工具](di-5-zhang-xi-tong-guan-li/di-5.10-jie-nei-he-zhuang-tai-mo-ren-pei-zhi-wen-jian-sysctl-conf.md)
-* [5.11 时间同步服务](di-5-zhang-xi-tong-guan-li/di-5.11-jie-shi-jian-tong-bu-fu-wu.md)
+* [5.11 NTP 时间同步与时区](di-5-zhang-xi-tong-guan-li/di-5.11-jie-shi-jian-tong-bu-fu-wu.md)
 * [5.12 Live 镜像与系统恢复](di-5-zhang-xi-tong-guan-li/di-5.12-jie-live-jing-xiang-yu-xi-tong-hui-fu.md)
 
 ## 第 6 章 网络管理
@@ -173,10 +173,11 @@
 
 ## 第 17 章 防火墙
 
-* [17.1 Packet Filter（PF）](di-17-zhang-fang-huo-qiang/di-17.1-jie-packet-filter-pf.md)
-* [17.2 IPFilter（IPF）](di-17-zhang-fang-huo-qiang/di-17.2-jie-ipfilter-ipf.md)
-* [17.3 ipfirewall（IPFW）](di-17-zhang-fang-huo-qiang/di-17.3-jie-ipfirewall-ipfw.md)
-* [17.4 Fail2Ban 配置（基于 IPFW、PF 与 IPF）](di-17-zhang-fang-huo-qiang/di-17.4-jie-fail2ban-pei-zhi-ji-yu-ipfw-pf-yu-ipf.md)
+* [17.1 防火墙概述](di-17-zhang-fang-huo-qiang/di-17.1-jie-fang-huo-qiang-gai-shu.md)
+* [17.2 Packet Filter（PF）](di-17-zhang-fang-huo-qiang/di-17.2-jie-packet-filter-pf.md)
+* [17.3 IPFilter（IPF）](di-17-zhang-fang-huo-qiang/di-17.3-jie-ipfilter-ipf.md)
+* [17.4 ipfirewall（IPFW）](di-17-zhang-fang-huo-qiang/di-17.4-jie-ipfirewall-ipfw.md)
+* [17.5 Fail2Ban 配置（基于 IPFW、PF 与 IPF）](di-17-zhang-fang-huo-qiang/di-17.5-jie-fail2ban-pei-zhi-ji-yu-ipfw-pf-yu-ipf.md)
 
 ## 第 18 章 安全
 

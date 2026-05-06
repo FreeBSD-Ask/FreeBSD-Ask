@@ -13,7 +13,7 @@ ykla
 
 > **技巧**
 >
->`whoami` 已被 id(1) 替代，等价于 `id -un`。
+> `whoami` 已被 id(1) 替代，等价于 `id -un`。
 
 - 查看当前登录用户所属用户组的信息。
 
@@ -130,7 +130,7 @@ ykla@ykla:/ $ pwd
 
 > **技巧**
 >
->在 FreeBSD 的 sh(1) 中，`cd` 的行为由 POSIX 标准规定。
+> 在 FreeBSD 的 sh(1) 中，`cd` 的行为由 POSIX 标准规定。
 
 ## 命令行格式
 
@@ -160,7 +160,7 @@ drwxrwxrwt  2 root    wheel  3 Mar 18 17:23 .ICE-unix
 
 > **技巧**
 >
->命令执行后返回退出状态码（exit status）：0 表示成功，非 0 表示失败。
+> 命令执行后返回退出状态码（exit status）：0 表示成功，非 0 表示失败。
 
 需要注意中英文书写习惯的差异：中文行文不使用空格分隔，而英文单词必须使用空格加以区分。因此，命令行中各个组成部分之间应使用空格分隔 ` `。空格的数量一般不受限制，但最少应该为一个，即 ` `。
 
@@ -199,13 +199,13 @@ usage: ls [-ABCFGHILPRSTUWZabcdfghiklmnopqrstuvwxy1,] [--color=when] [-D format]
 >
 > Windows 不仅对文件名大小写不敏感，对命令名称的大小写也不敏感。
 >
->```powershell
+> ```powershell
 > PS C:\Users\ykla> cd C:\ # 这里 cd 是小写
 > PS C:\> CD D:\ # 这里 CD 是大写
 > PS D:\> CD c:\ # 这里 C 盘是小写
 > PS C:\> dir # 小写 dir，列出目录，等于 ls
 >
->     目录：C:\
+>    目录：C:\
 >
 > ……省略一部分……
 >
@@ -217,7 +217,7 @@ usage: ls [-ABCFGHILPRSTUWZabcdfghiklmnopqrstuvwxy1,] [--color=when] [-D format]
 > ├─.cache
 > │ ├─selenium
 > ……省略一部分……
->```
+> ```
 
 > **技巧**
 >
@@ -353,7 +353,7 @@ $ pwd # 查看当前路径
 
 `ls`（list，列出）命令的基本用法前文已经介绍，下面演示如何让 `ls` 以人类易读的方式显示文件大小：
 
-选项 `-h`，即 `human`（人类），须与 `-l`（`long` 长输出）结合使用。
+选项 `-h`，即 `human`（人类），需要与 `-l`（`long` 长输出）结合使用。
 
 ```sh
 # ls -hl /home/ykla
@@ -383,7 +383,7 @@ $ ls -a
 .config		.local		.mozilla	下载		模板
 ```
 
-若不加选项 `-a`：
+如果不加选项 `-a`：
 
 ```sh
 ykla@ykla:~ $ ls
@@ -410,14 +410,14 @@ $ touch test
 
 > **技巧**
 >
-> 可以看到上述命令创建的是 `test`，而非 `test.txt`、`test.word`、`test.pdf` 之类的。事实上，`.txt` 这一部分称为文件后缀名，主要用于提示用户文件类型，而非供系统识别。许多我们以为，清楚明白的事物真的如我们所认为的那般吗？
+> 可以看到上述命令创建的是 `test`，而非 `test.txt`、`test.word`、`test.pdf` 之类的。事实上，`.txt` 这一部分称为文件后缀名，主要用于提示用户文件类型，而非供系统识别。许多我们以为清楚明白的事物，真的如我们所认为的那般吗？
 >
 > 即使去掉相应的后缀名，在类 UNIX 系统中也可以识别文件的类型，这是根据文件幻数（magic numbers）确定的：
 >
->```sh
+> ```sh
 > $ file book
 > book: PDF document, version 1.7
->```
+> ```
 
 `file` 命令通过三组测试依次判定文件类型：文件系统测试（基于 stat(2)）、幻数测试（基于 **/usr/share/misc/magic.mgc** 中的固定格式标识）和语言测试（基于文本模式匹配）。其中“幻数”（magic number）概念源于 UNIX 可执行文件格式，文件头部特定偏移量处存储的固定标识用于指示文件类型。
 
@@ -481,7 +481,7 @@ FreeBSD 的 `mkdir` 与 GNU/Linux 的 `mkdir` 基本兼容。
 $ rm test
 ```
 
-若不存在一个名称为 `test` 的文件：
+如果不存在文件 `test`：
 
 ```sh
 $ rm test
@@ -531,17 +531,17 @@ $ rm -rf /home/ykla/test/
 >
 > 使用 `rm -rf` 是相当危险的操作，是不可撤销的。若命令中误输入空格，如将 **/home/ykla/test/** 打错成 **/home/ykla /test/**，会导致删除路径错误：
 >
->```sh
+> ```sh
 > # rm -rf /home/ykla /test
 > # ls /home/ykla
 > ls: /home/ykla: No such file or directory # 表明 ykla 目录已不存在
->```
+> ```
 
 > **警告**
 >
 > 互联网上常有说法称使用 `sudo rm -rf /*` 是某某命令可以 xxx，误导他人对系统造成不可挽回的灾难性破坏。该命令实质上是以 root 权限（~~还好 FreeBSD 默认没有 sudo~~），删除 **/** 及其子目录下的一切存在。现在展示一下结果：
 >
->```sh
+> ```sh
 > # rm -rf /*
 > rm: /boot/efi: Device busy
 > rm: /boot: Directory not empty
@@ -550,7 +550,7 @@ $ rm -rf /home/ykla/test/
 > rm: /dev/fd: Operation not supported
 > ……省略一部分……
 > #
->```
+> ```
 >
 > ![引导错误](../.gitbook/assets/no-efi-partition.png)
 >
@@ -735,9 +735,9 @@ drw-------  2 ykla ykla 2 Apr 28 00:24 test
 
 此时会先清空 `test.txt` 文件原有内容（如文件存在），随后执行命令 `ls` 将目录内容列出的内容直接保存到 `test.txt` 文件中。
 
->**技巧**
+> **技巧**
 >
->有些命令可以读取输入，比如 sort(1)。要对该列表进行排序，可以这样重定向输入：
+> 有些命令可以读取输入，比如 sort(1)。要对该列表进行排序，可以这样重定向输入：
 
 ```sh
 $ sort < test.txt
@@ -769,7 +769,7 @@ drw-------  2 ykla ykla 2 Apr 28 00:24 test
 total 1
 ```
 
-在此示例中，`directory_listing.txt` 的内容将被排序，然后输出传递给 less(1)。这使用户可以按自己的节奏浏览输出内容，防止其在屏幕上滚动消失。
+在此示例中，`test.txt` 的内容将被排序，然后输出传递给 less(1)。这使用户可以按自己的节奏浏览输出内容，防止其在屏幕上滚动消失。
 
 ## BSD 风格的 make/grep/sed/awk
 

@@ -1,12 +1,10 @@
 # microSD 卡参数简介
 
-除总线、接口与协议的概念辨析外，了解存储设备参数也是计算机系统知识的重要组成部分。本节将以 microSD 卡为例，详细介绍其各项参数的含义与选购要点。
-
 存储卡规范是由 [SD 协会](https://www.sdcard.org/) 制定的。
 
 SD 卡的标准较为复杂。即使与 USB-IF 协会制定的 USB 标准相比，其复杂程度也难分伯仲。
 
-SD 卡标准显得复杂，原因在于：随着技术发展，SD 卡协会既不会弃用既有旧标准（如放弃英制单位、改用公制单位），也很少对原有标准进行升级（如提升版本号），而是另行制定更高等级的新标准。**SD 卡存在多种并行的度量衡体系，其量程各有重叠和差异。**
+SD 卡标准显得复杂，原因在于：随着技术发展，SD 卡协会既不会弃用既有旧标准（如放弃英制单位、改用公制单位），也很少升级原有标准（如提升版本号），而是另行制定更高等级的新标准。**SD 卡存在多种并行的度量衡体系，量程各有重叠和差异。**
 
 ![闪迪 microSD 卡](../.gitbook/assets/SD.png)
 
@@ -30,7 +28,7 @@ microSD 通常也称为 TF 卡（TF 是 SanDisk 最初的商品名 TransFlash，
 
 ## 其他参数说明
 
-- `667x`、`1066x`：雷克沙会标 667x 或 1066x。这种标识方法主要源自光驱倍速体系，目前仅在光盘设备等领域沿用，属于较为古老的标注方式（起源于 20 世纪 80 年代）。
+- `667x`、`1066x`：雷克沙会标注 667x 或 1066x。这种标识方法主要源自光驱倍速体系，目前仅在光盘设备等领域沿用，属于较为古老的标注方式（起源于 20 世纪 80 年代）。
 
 ① 667x = 150 KB/s × 667 ≈ 100 MB/s；
 
@@ -58,23 +56,23 @@ microSD 通常也称为 TF 卡（TF 是 SanDisk 最初的商品名 TransFlash，
 
 **移速（MOVE SPEED）**
 
-![移速 128 G A2 U3 V30 128 G 存储卡速度测试](../.gitbook/assets/ys1.png)
+![移速 128 GB A2 U3 V30 存储卡速度测试](../.gitbook/assets/ys1.png)
 
-![移速 128 G A2 U3 V30 128 G 存储卡速度测试](../.gitbook/assets/ys2.png)
+![移速 128 GB A2 U3 V30 存储卡速度测试](../.gitbook/assets/ys2.png)
 
-移速（MOVE SPEED）这张卡的测试速度甚至高于部分三星产品。~~这是用空间换时间了吗？~~ 某些 A2 存储卡，实测 4K 读写不足 1.5 MB/s，此已不仅是参数虚标的问题。
+移速（MOVE SPEED）这张卡的测试速度甚至高于部分三星产品。~~这是用空间换时间了吗？~~ 某些 A2 存储卡，实测 4K 读写不足 1.5 MB/s，这已不仅是参数虚标的问题。
 
-经过实测，移速 128 G A2 U3 V30 128 G 存储卡仅写入约 60 GB 即出现掉盘现象。
+经过实测，移速 128 GB A2 U3 V30 存储卡仅写入约 60 GB 即出现掉盘现象。
 
-![移速 128 G A2 U3 V30 128 G 存储卡掉盘](../.gitbook/assets/yisusd.png)
+![移速 128 GB A2 U3 V30 存储卡掉盘](../.gitbook/assets/yisusd.png)
 
-![移速 128 G A2 U3 V30 128 G 存储卡掉盘](../.gitbook/assets/yisusd2.png)
+![移速 128 GB A2 U3 V30 存储卡掉盘](../.gitbook/assets/yisusd2.png)
 
 ## 如何测试存储卡和硬盘？
 
 可使用 `CrystalDiskInfo` 查看硬盘的 S.M.A.R.T. 信息及基本参数；还可使用 `CrystalDiskMark` 测试硬盘和存储卡的读写（请使用 USB 3.0 及以上规格的读卡器）。
 
-上述两款软件由同一位开发者开发，但其[官方网站](https://crystalmark.info/en/)包含较多广告内容，可能导致用户误下载非官方文件。
+上述两款软件由同一位开发者开发，但[官方网站](https://crystalmark.info/en/)包含较多广告内容，可能导致用户误下载非官方文件。
 
 请从 **[这里](https://sourceforge.net/projects/crystaldiskinfo)** 下载 CrystalDiskInfo；请从 **[这里](https://sourceforge.net/projects/crystaldiskmark/files/)** 下载 CrystalDiskMark。
 
@@ -84,9 +82,9 @@ microSD 通常也称为 TF 卡（TF 是 SanDisk 最初的商品名 TransFlash，
 
 在选购固态硬盘时，不能仅关注读写速度，更需关注固态硬盘的主控、NVMe 协议版本及支持状态。
 
-多数小众品牌固态硬盘不支持 ASPM（Active State Power Management，活动状态电源管理）技术。此技术能在保证固态硬盘运行效率的同时对其进行降温，实测可使硬盘温度降低约 20℃。
+多数小众品牌固态硬盘不支持 ASPM（Active State Power Management，活动状态电源管理）技术。此技术能在保证固态硬盘运行效率的同时为其降温，实测可使硬盘温度降低约 20℃。
 
-部分小众品牌固态硬盘因无法良好适配，开启 ASPM 后即出现掉盘，故在固件中主动关闭该技术。另有部分小众品牌固态硬盘仍在使用 NVMe 1.4 协议版本。甚至存在多块硬盘使用相同序列号的情况——硬盘序列号的重要性不亚于网卡的 MAC 地址，原则上不应重复，否则可能导致系统无法正确识别多块硬盘。
+部分小众品牌固态硬盘因无法良好适配，开启 ASPM 后即出现掉盘，故在固件中主动关闭该技术。另有部分小众品牌固态硬盘仍在使用 NVMe 1.4 协议版本。甚至存在多块硬盘使用相同序列号的情况。硬盘序列号的重要性不亚于网卡的 MAC 地址，原则上不应重复，否则可能导致系统无法正确识别多块硬盘。
 
 ### 使用 CrystalDiskInfo 查看梵想 S690（1 TB）NVMe SSD PCIe 4.0 硬盘参数
 
@@ -116,9 +114,9 @@ microSD 通常也称为 TF 卡（TF 是 SanDisk 最初的商品名 TransFlash，
 
 即金属款。
 
-![三星 BAR 升级版 + USB3.1 闪存盘 64 G 读写速率](../.gitbook/assets/san1.png)
+![三星 BAR 升级版 + USB3.1 闪存盘 64 GB 读写速率](../.gitbook/assets/san1.png)
 
-![三星 BAR 升级版 + USB3.1 闪存盘 64 G 读写速率](../.gitbook/assets/san2.png)
+![三星 BAR 升级版 + USB3.1 闪存盘 64 GB 读写速率](../.gitbook/assets/san2.png)
 
 ## 参考文献
 

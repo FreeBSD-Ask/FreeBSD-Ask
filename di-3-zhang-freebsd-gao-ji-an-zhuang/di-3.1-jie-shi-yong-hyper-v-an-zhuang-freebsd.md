@@ -1,6 +1,6 @@
 # 3.1 使用 Hyper-V 安装 FreeBSD
 
-Hyper-V 是微软为 Windows 开发的企业级 Type-1 虚拟机监视器，分 Gen 1 与 Gen 2 两种架构。本节介绍在 Hyper-V 中安装与配置 FreeBSD 的完整流程。
+Hyper-V 是微软为 Windows 开发的企业级 Type-1 虚拟机监视器，分为 Gen 1 与 Gen 2 两种架构。本节介绍在 Hyper-V 中安装与配置 FreeBSD 的完整流程。
 
 ## Hyper-V 简介
 
@@ -29,7 +29,7 @@ Gen 1 与 Gen 2 的区别如下表所示：
 | Gen 2 | 13.0 | [不支持](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=221074) | 支持 | 需修改参数 `sysctl kern.evdev.rcpt_mask=6`（启用 evdev，让 Xorg 正确检测 PS/2 设备） |
 | Gen 2 | 14.0 | 支持 | 支持 | 参见：FreeBSD Project. src[EB/OL]. [2026-03-26]. <https://cgit.FreeBSD.org/src/commit/?id=21f4e817fde79d5de79bfbdf180d358ca5f48bf9>. |
 
-FreeBSD 对 Hyper-V 的集成支持通过内核模块实现：
+FreeBSD 对 Hyper-V 的集成支持借助内核模块完成：
 
 | 模块 | 功能 |
 | ---- | ---- |

@@ -4,7 +4,7 @@
 
 ![什么是 shell](../.gitbook/assets/what-is-shell.png)
 
-shell 是用户与操作系统内核交互的命令解释器（command interpreter），接受用户输入的命令并传递给内核执行。用户命令在 shell 中运行，通过 shell 与系统交互。shell 提供命令行界面，从输入通道接收命令并执行。许多 shell 提供内置功能以辅助日常任务，如文件管理、文件名通配、命令行编辑、命令宏和环境变量。FreeBSD 基本系统内置多种 shell，包括扩展 POSIX shell（sh(1)）和扩展 C shell（tcsh(1)）。其他 shell 可通过 FreeBSD Ports 获得，例如 Zsh 和 Bash。
+shell 是用户与操作系统内核交互的命令解释程序（command interpreter），接受用户输入的命令并传递给内核执行。用户命令在 shell 中运行，通过 shell 与系统交互。shell 提供命令行界面，从输入通道接收命令并执行。许多 shell 提供内置功能以辅助日常任务，如文件管理、文件名通配、命令行编辑、命令宏和环境变量。FreeBSD 基本系统内置多种 shell，包括扩展 POSIX shell（sh(1)）和扩展 C shell（tcsh(1)）。其他 shell 可通过 FreeBSD Ports 获得，例如 Zsh 和 Bash。
 
 ### shell 的架构角色
 
@@ -38,18 +38,18 @@ POSIX shell 规范的核心要求包括：
 
 FreeBSD 系统默认采用的 shell 是 sh。FreeBSD 的 **/bin/sh** 并非 Stephen R. Bourne 在贝尔实验室为 Unix V7 编写的原始 Bourne shell，而是基于 Kenneth Almquist 于 1989 年发布的 Almquist shell（ash），后者旨在作为 Bourne shell 更紧凑、更高效的替代品。BSD 系列自 4.4BSD 起便采用 ash 衍生的 sh，在功能上基本符合 POSIX.1-2024 标准中关于 shell 的规范要求。
 
-Linux 中常见的 shell 通常是 bash（Bourne Again shell，是对“Born Again”即“重生”的双关，意为“重生的 Bourne shell”）。而 macOS 中的默认 shell 通常是 zsh（Z shell）。
+Linux 中常见的 shell 是 bash（Bourne Again shell，是对“Born Again”即“重生”的双关，意为“重生的 Bourne shell”）。而 macOS 中的默认 shell 通常是 zsh（Z shell）。
 
 > **注意**
 >
 > Linux 中同样提供 sh，但通常被软链接到其他 shell（如 Debian/Ubuntu 中链接到 dash，部分发行版链接到 bash），它们并不是真正的 sh。
 >
->- Ubuntu 24.04 LTS 默认的 shell：
+> - Ubuntu 24.04 LTS 默认的 shell：
 >
->```bash
+> ```bash
 > lrwxrwxrwx 1 root root 4  2 月 25 23:19 /bin/sh -> dash
 > $ ls -l /bin/sh # 以长格式查看 /bin/sh 这个文件的详细信息
->```
+> ```
 
 ## 快捷键
 
@@ -112,7 +112,7 @@ $ cp /home/ykla/test/1.txt
 
 ### 终止命令
 
-若要终止命令，可以使用 **Ctrl**+**C**：
+如果要终止命令，可以使用 **Ctrl**+**C**：
 
 ```sh
 # ping 163.com  # 测试与 163.com 的网络连通性
@@ -125,7 +125,7 @@ PING 163.com (59.111.160.244): 56 data bytes
 round-trip min/avg/max/stddev = 27.580/27.626/27.672/0.046 ms
 ```
 
-FreeBSD 的 `ping` 自 15.0 起合并了原 `ping6` 的功能，通过 `-4`/`-6` 选项区分协议版本（Google Summer of Code 2019 项目）。（如 Linux 支持 `-O` 报告未收到回复，FreeBSD 不支持）。FreeBSD 特有 `ping -y`（ICMPv6 Node Information DNS Name 查询）和 `ping -k`（Node Information Node Addresses 查询）。
+FreeBSD 的 `ping` 自 15.0 起合并了原 `ping6` 的功能，通过 `-4`/`-6` 选项区分协议版本（Google Summer of Code 2019 项目）。Linux 支持 `-O` 报告未收到回复，FreeBSD 则不支持。FreeBSD 特有 `ping -y`（ICMPv6 Node Information DNS Name 查询）和 `ping -k`（Node Information Node Addresses 查询）。
 
 `ping` 使用 ICMP 协议的 ECHO_REQUEST 数据报来触发主机的 ECHO_RESPONSE。IPv4 目标使用 ICMP，IPv6 目标使用 ICMPv6（RFC 2463）。默认数据大小为 56 字节，加上 8 字节 ICMP 头共 64 字节。若数据空间不小于 8 字节，前 8 字节用于时间戳以计算往返时间。
 

@@ -34,13 +34,13 @@ and retry with 'git restore --source=HEAD :/'
 若您希望将教程收录至本书，可通过以下方式提交：
 
 - 若您熟悉 GitHub 操作，可点击桌面端网页右侧的“编辑此页”按钮进入项目进行编辑。本项目采用 Markdown 语法配合 GitBook 平台，易于上手（具体操作详见项目 WiKi）。
-- 若上述方式存在困难，您也可发送 PDF、Word 或 TXT 格式的文档至电子邮箱 `yklaxds@gmail.com`（我们将在 3 个工作日内回复。若未收到回复，请更换邮箱再次发送或提交 issue）；若有视频教程，建议提供各大云盘的分享链接。
+- 若上述方式存在困难，您也可发送 PDF、Word 或 TXT 格式的文档至电子邮箱 `yklaxds@gmail.com`（我们将在 3 个工作日内回复。如果没有收到回复，请更换邮箱再次发送或提交 issue）；如果有视频教程，建议提供各大云盘的分享链接。
 
 本书现收录以下类型的内容：
 
 - 一切与 BSD 相关（包括但不限于 FreeBSD、OpenBSD、NetBSD）及各种体系架构的教程。您既可以扩充现有教程，也可以创建新的章节。
 - 下方的 ToDo 列表或 GitHub Project 中的任务。
-- 您亦可在文学故事章节分享您与 BSD 的故事及个人心得体会。
+- 您也可以在文学故事章节分享您与 BSD 的故事及个人心得体会。
 
 ### 基本原则与方法论
 
@@ -92,7 +92,7 @@ and retry with 'git restore --source=HEAD :/'
 
 ### 如何使用 Git 拉取本项目
 
->**技巧**
+> **技巧**
 >
 > 您完全可以通过 GitHub 在线完成所有提交。
 
@@ -125,7 +125,7 @@ and retry with 'git restore --source=HEAD :/'
 名词解释：
 
 - `autocrlf`：配置 Git 自动处理（转换）行结束符的默认行为。参见：配置 Git 处理行结束符 - GitHub Docs[EB/OL]. [2026-03-26]. <https://docs.github.com/zh/get-started/git-basics/configuring-git-to-handle-line-endings>.
-- `signingkey`：指设置带签名提交时默认使用的签名密钥。signingkey 既可指 GPG Key，亦可指 SSH Key。自 Git 2.34 起，Git 支持了 SSH 签名验证功能。参见：关于提交签名验证 - GitHub Docs[EB/OL]. [2026-03-26]. <https://docs.github.com/zh/authentication/managing-commit-signature-verification/about-commit-signature-verification>.
+- `signingkey`：指设置带签名提交时默认使用的签名密钥。signingkey 既可指 GPG Key，也可以指 SSH Key。自 Git 2.34 起，Git 支持了 SSH 签名验证功能。参见：关于提交签名验证 - GitHub Docs[EB/OL]. [2026-03-26]. <https://docs.github.com/zh/authentication/managing-commit-signature-verification/about-commit-signature-verification>.
 
 拉取命令：
 
@@ -181,7 +181,7 @@ $ git clone https://github.com/FreeBSD-Ask/FreeBSD-Ask
 
 `https://docs.bsdcn.org` 由社区自行构建，docs 网站本身的贡献指南参见：FreeBSD 从入门到跑路 VitePress 镜像项目[EB/OL]. [2026-03-26]. <https://github.com/FreeBSD-Ask/FreeBSD-Ask.github.io/blob/main/README.md>。
 
->**技巧**
+> **技巧**
 >
 > 若您仅想贡献内容本身，尚无改进 docs 网站浏览体验与构建优化等意向，则仅需阅读本文即可。
 
@@ -271,7 +271,7 @@ $ git clone https://github.com/FreeBSD-Ask/FreeBSD-Ask
 
 自行操作时参见操作实例 Commit 6023cc8[EB/OL]. [2026-03-26]. <https://github.com/FreeBSD-Ask/FreeBSD-Ask/commit/6023cc8d58f3a1b9849ff11fa63bf3980177c370> 和下方 `SUMMARY.md` 结构说明。
 
-若有困难可发邮件联系 ykla 协助操作。
+如果有困难可发邮件联系 ykla 协助操作。
 
 #### `SUMMARY.md` 目录结构
 
@@ -320,7 +320,7 @@ $ git clone https://github.com/FreeBSD-Ask/FreeBSD-Ask
 
 - 第一行 `# Table of contents` 绝对不允许变更，否则 GitBook 将无法识别，导致失去同步。
 - 要求格式应为 `* [2.2 使用 bsdinstall 开始安装](di-2-zhang-an-zhuang-freebsd/di-2.2-jie-start-install.md)`，不允许出现 `* [2.2 使用 bsdinstall 开始安装](di-3-zhang-ni-hao/di-2.2-jie-start-install.md)` 这种情况，即目录结构与文件放置位置必须一致（不一致虽不会报错，但本项目要求保持一致）。
-- 通过 `sync-headers.yml`，将自动同步 `SUMMARY.md` 中的章节标题到具体的 Markdown 文件中。因此若需修改 `di-2.2-jie-start-install.md` 的一级标题 `# 2.2 使用 bsdinstall 开始安装`，必须仅修改 `SUMMARY.md` 中的 `2.2 使用 bsdinstall 开始安装`，否则会被 `sync-headers.yml` 覆盖。当二者不一致时，若提交时未触发脚本构建，则 GitBook 将以 `SUMMARY.md` 中的目录为准。
+- 通过 `sync-headers.yml`，将自动同步 `SUMMARY.md` 中的章节标题到具体的 Markdown 文件中。因此如果需要修改 `di-2.2-jie-start-install.md` 的一级标题 `# 2.2 使用 bsdinstall 开始安装`，必须仅修改 `SUMMARY.md` 中的 `2.2 使用 bsdinstall 开始安装`，否则会被 `sync-headers.yml` 覆盖。当二者不一致时，若提交时未触发脚本构建，则 GitBook 将以 `SUMMARY.md` 中的目录为准。
 
 ### 预览页面
 
@@ -377,9 +377,9 @@ $ git clone https://github.com/FreeBSD-Ask/FreeBSD-Ask
 
 **Just for fun**（可有可无）
 
-- [ ] 20.7.创建和使用软盘（谁还有这种东西？2024，日本政府决定全面淘汰软盘）（无意义，但勉强可以写，若有光驱和软盘 *Just for fun*）
-- [ ] 20.6.创建和使用 DVD（无意义，但勉强可以写，若有光驱和光盘 *Just for fun*）
-- [ ] 20.5.创建和使用 CD（无意义，但勉强可以写，若有光驱和光盘 *Just for fun*）
+- [ ] 20.7.创建和使用软盘（谁还有这种东西？2024，日本政府决定全面淘汰软盘）（无意义，但勉强可以写，如果有光驱和软盘 *Just for fun*）
+- [ ] 20.6.创建和使用 DVD（无意义，但勉强可以写，如果有光驱和光盘 *Just for fun*）
+- [ ] 20.5.创建和使用 CD（无意义，但勉强可以写，如果有光驱和光盘 *Just for fun*）
 - [ ] 16.9.Kerberos（谁在用？）
 
 **需要重写** 的内容（请撰写这些内容）：
