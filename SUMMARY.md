@@ -70,7 +70,7 @@
 * [5.8 设备资源提示文件（device.hints）](di-5-zhang-xi-tong-guan-li/di-5.8-jie-she-bei-zi-yuan-ti-shi-wen-jian-device-hints.md)
 * [5.9 Cron 和 Periodic](di-5-zhang-xi-tong-guan-li/di-5.9-jie-crontab-ji-ding-shi-ren-wu-wen-jian-periodic-conf.md)
 * [5.10 sysctl 工具](di-5-zhang-xi-tong-guan-li/di-5.10-jie-nei-he-zhuang-tai-mo-ren-pei-zhi-wen-jian-sysctl-conf.md)
-* [5.11 时间同步服务](di-5-zhang-xi-tong-guan-li/di-5.11-jie-shi-jian-tong-bu-fu-wu.md)
+* [5.11 NTP 时间同步与时区](di-5-zhang-xi-tong-guan-li/di-5.11-jie-shi-jian-tong-bu-fu-wu.md)
 * [5.12 Live 镜像与系统恢复](di-5-zhang-xi-tong-guan-li/di-5.12-jie-live-jing-xiang-yu-xi-tong-hui-fu.md)
 
 ## 第 6 章 网络管理
