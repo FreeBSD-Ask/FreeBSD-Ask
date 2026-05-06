@@ -1,6 +1,6 @@
 # 5.2 引导管理器与 UEFI 固件
 
-统一可扩展固件接口（Unified Extensible Firmware Interface，UEFI）是现代计算机的固件接口标准，旨在取代传统的基本输入输出系统（BIOS）。
+统一可扩展固件接口（Unified Extensible Firmware Interface，UEFI）是现代计算机的固件接口标准，目的是取代传统的基本输入输出系统（BIOS）。
 
 UEFI 规范定义了操作系统与平台固件之间的接口，提供了启动服务（Boot Services）和运行时服务（Runtime Services），以及用于存储启动变量的非易失性存储空间。
 
@@ -14,7 +14,7 @@ UEFI 引导过程与传统 BIOS 引导过程在架构上不同。
 
 ## UEFI 系统检测方法
 
-efibootmgr 是 FreeBSD 基本系统中（自 11.2 起）用于查看和管理 EFI 启动项的工具，通过与 UEFI 固件交互来操作启动项配置。
+efibootmgr 是 FreeBSD 基本系统中（自 11.2 起）用于查看和管理 EFI 启动项的工具，与 UEFI 固件交互以操作启动项配置。
 
 在非 UEFI 环境下运行 efibootmgr 会报错 `efi variables not supported on this system`，需加载 `efirt` 内核模块（`kldload efirt`）：
 
@@ -228,7 +228,7 @@ FreeBSD/amd64 EFI loader, Revision 3.0
 
 ## Grub
 
-经测试，在 UEFI + ZFS 环境下，GRUB 无法直接引导 FreeBSD 内核，只能通过 chainload 机制（如配置 `chainloader +1`）间接引导。在传统 BIOS 启动 + UFS 根文件系统的环境下，GRUB 可通过 `kfreebsd` 命令直接引导 FreeBSD 内核。
+经测试，UEFI + ZFS 环境中，GRUB 无法直接引导 FreeBSD 内核，只能借助 chainload 机制（如配置 `chainloader +1`）间接引导。传统 BIOS 启动 + UFS 根文件系统环境中，GRUB 可通过 `kfreebsd` 命令直接引导 FreeBSD 内核。
 
 ```ini
 menuentry "FreeBSD-13.0 Release" { # 指定 GRUB 条目名称
