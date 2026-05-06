@@ -223,7 +223,7 @@ $ date
 
 - 在 **/etc/rc.conf** 中设置 ntpd_user="ntpd"。
 
-## 参考文献非特权用户 ntpd
+## 非特权用户 ntpd
 
 在 FreeBSD 上，`ntpd` 可以作为非特权用户启动并运行。这需要策略模块 mac_ntpd(4)。
 
