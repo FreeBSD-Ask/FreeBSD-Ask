@@ -191,7 +191,7 @@ $ date
 # service ntpd onestop
 ```
 
-系统重启后服务将继续运行，亦可手动重新启用 ntpd 服务。
+系统重启后服务将继续运行，也可以手动重新启用 ntpd 服务。
 
 使用 `time.windows.com` 服务器更新系统时间。
 
