@@ -75,7 +75,7 @@ FreeBSD 的手册页系统是 UNIX 哲学的典型体现：每个命令、系统
 
 ## UNIX 的一段历史
 
-UNIX 的诞生有其特定的历史背景，需追溯至其前身 Multics。
+UNIX 的诞生有特定的历史背景，需追溯至前身 Multics。
 
 ### Multics 项目
 
