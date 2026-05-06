@@ -107,7 +107,7 @@ DHCPACK from 192.168.1.1
 bound to 192.168.1.19 -- renewal in 43200 seconds.
 ```
 
-可在后台启动 dhclient(8) 客户端。这可能导致依赖网络的程序出现问题，但在许多情况下可提供更快的启动速度。
+可在后台启动 dhclient(8) 客户端。后台运行可能导致依赖网络的程序出现问题，但在许多情况下可提供更快的启动速度。
 
 要在后台执行 dhclient(8)，执行以下命令：
 
@@ -276,7 +276,7 @@ root@f:/home/ykla #
 
 ## DNS 配置详解
 
-可将 DNS 理解为电话簿，IP 地址与主机名相互对应。除非 **/etc/nsswitch.conf** 文件中另有说明，FreeBSD 将首先查看 **/etc/hosts** 文件中的地址，然后查看 **/etc/resolv.conf** 文件中的 DNS 信息。
+可将 DNS 理解为电话簿，其中 IP 地址与主机名相互对应。除非 **/etc/nsswitch.conf** 文件中另有说明，FreeBSD 将首先查看 **/etc/hosts** 文件中的地址，然后查看 **/etc/resolv.conf** 文件中的 DNS 信息。
 
 相关文件结构：
 
