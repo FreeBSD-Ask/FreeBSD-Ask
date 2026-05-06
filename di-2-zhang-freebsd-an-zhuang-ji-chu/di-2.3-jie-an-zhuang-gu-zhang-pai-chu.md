@@ -4,7 +4,7 @@
 
 ## 无法进入安装界面
 
-若无法进入安装界面，首先区分虚拟机环境与物理机环境，而后分别排查。
+如果无法进入安装界面，首先区分虚拟机环境与物理机环境，而后分别排查。
 
 若是虚拟机，请检查虚拟机配置。
 
@@ -23,7 +23,7 @@
 - 是否使用了 Ventoy 工具？
   - 建议使用 Rufus - Create bootable USB drives the easy way <https://rufus.ie/zh/> 进行刻录，而非 Ventoy - 多系统启动 USB 启动盘制作工具 <https://www.ventoy.net/cn/index.html>.
 
-若仍出现问题，请先在 FreeBSD 官方论坛 <https://forums.freebsd.org/> 以英语提问；若未获解答，可按其他章节指引提交 Bug。
+若仍出现问题，请先在 FreeBSD 官方论坛 <https://forums.freebsd.org/> 以英语提问；如果没有获解答，可按其他章节指引提交 Bug。
 
 ## 重启后又进入了安装界面
 
