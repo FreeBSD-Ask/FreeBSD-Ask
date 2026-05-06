@@ -344,9 +344,9 @@ zroot/
 >
 > `\t` 是制表符（Tab）的转义字符（意味着按一下 **Tab** 键），用于对齐字段，使用空格亦可达到相同效果。也可使用 `ee /tmp/bsdinstall_etc/fstab` 命令手动编辑该文件并写入如下格式的行：
 >
->```sh
+> ```sh
 > /dev/nda0p5  none  swap  sw  0  0
->```
+> ```
 >
 > 下同。
 
