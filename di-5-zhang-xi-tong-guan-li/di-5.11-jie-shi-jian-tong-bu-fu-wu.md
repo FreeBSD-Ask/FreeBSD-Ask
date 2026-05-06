@@ -193,7 +193,7 @@ $ date
 
 重启系统后服务会继续运行，也可手动再次启用 ntpd 服务。
 
-使用 Windows 时间服务器同步系统：
+使用 `time.windows.com` 服务器更新系统时间。
 
 ```sh
 # ntpd -q -g -p time.windows.com
@@ -205,7 +205,7 @@ $ date
 | `-g` | 允许一次性进行大幅度时间调整 |
 | `-p` | 指定 NTP 服务器（例如 `time.windows.com`） |
 
-使用 `time.windows.com` 服务器更新系统时间。
+当系统时间与 NTP 服务器偏差超过 1000 秒时，ntpd 默认拒绝修正并退出，必须使用 `-g` 选项强制修正。
 
 ## 非特权用户 ntpd
 
