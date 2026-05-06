@@ -151,7 +151,7 @@ FreeBSD 的目录结构设计遵循以下原则：
 │   ├── freebsd-dist 发行文件（如 base.txz），参见 release(7) 和 bsdinstall(8)
 │   ├── include 标准 C 头文件
 │   ├── lib 共享库和 ar(1) 类型库，参见 intro(3)
-│   │   ├── clang 系统编译器 clang(1) 的共享库
+│   │   ├── clang 系统编译程序 clang(1) 的共享库
 │   │   ├── compat 兼容性共享库
 │   │   ├── debug 内核和基本系统库及二进制文件的独立调试数据
 │   │   ├── dtrace dtrace(1) 库脚本
@@ -161,7 +161,7 @@ FreeBSD 的目录结构设计遵循以下原则：
 │   ├── lib32 32 位兼容库
 │   ├── libdata 杂项实用数据文件
 │   │   ├── ldscripts 链接器脚本，参见 ld(1)
-│   │   └── pkgconfig 编译器和链接器标志集合，用于 pkgconf(1) 开发工具
+│   │   └── pkgconfig 编译程序和链接器标志集合，用于 pkgconf(1) 开发工具
 │   ├── libexec 由程序执行的系统守护进程和实用程序
 │   │   ├── bsdconfig ncurses FreeBSD 配置向导调用的实用程序
 │   │   ├── bsdinstall bsdinstall(8) 的实用程序
@@ -465,7 +465,7 @@ Event timer "LAPIC" quality 600
 
 # ===== ACPI 子系统 =====
 ACPI APIC Table: <ALASKA A M I >
-# ACPI APIC（MADT）表供应商信息。"ALASKA A M I" 表明 BIOS 由 AMI（American Megatrends Inc.）
+# ACPI APIC（MADT）表供应商信息。“ALASKA A M I” 表明 BIOS 由 AMI（American Megatrends Inc.）
 # 提供，主板厂商为 ASRock（Alaska 是其产品线内部代号）。
 
 WARNING: L3 data cache covers more APIC IDs than a package (7 > 3)
@@ -484,7 +484,7 @@ random: fast provider: "Intel Secure Key RNG"
 random: unblocking device.
 # FreeBSD 随机数子系统（random(4)）初始化流程：
 # 1) 注册快速的 Intel Secure Key RNG（RDRAND 指令）作为硬件熵源。
-# 2) 标记 fast provider（快速提供者）为 "Intel Secure Key RNG"。
+# 2) 标记 fast provider（快速提供者）为 “Intel Secure Key RNG”。
 # 3) unblocking device：当内核收集到足够早期熵后，/dev/random 解除阻塞，
 #    用户态程序从此可正常读取随机数。CURRENT 版本使用 FenestrasX 算法。
 
@@ -510,7 +510,7 @@ kbd0 at kbdmux0
 efirtc0: <EFI Realtime Clock>
 efirtc0: registered as a time-of-day clock, resolution 1.000000s
 # efiRTC：通过 EFI 运行时服务（Runtime Services）获取/设置时间的时钟驱动。
-# "time-of-day clock"：系统时间的硬件时钟源注册。1s 粒度说明 EFI RTC 只能精确到秒级，
+# “time-of-day clock”：系统时间的硬件时钟源注册。1s 粒度说明 EFI RTC 只能精确到秒级，
 # 在启动早期为内核提供初始时间基准。后续会使用更高精度的 TSC/HPET 作为 timecounter。
 
 # ===== SMBIOS =====
@@ -646,7 +646,7 @@ sdhci_pci0: 1 slot(s) allocated
 # ----- WITNESS 调试报告（非致命）-----
 uma_zalloc_debug: zone "malloc-16" with the following non-sleepable locks held:
 exclusive sleep mutex SD slot mtx (sdhci) r = 0 (0xfffff80001ad9020) locked @ /usr/src/sys/dev/sdhci/sdhci.c:688
-# WITNESS 检测到在持有非可睡眠锁（sleep mutex）"SD slot mtx"的情况下，
+# WITNESS 检测到在持有非可睡眠锁（sleep mutex）“SD slot mtx”的情况下，
 # 内核内存分配器 UMA 试图从 zone "malloc-16" 分配内存且可能挂起（sleepable）——
 # 这是一个潜在的锁顺序问题（lock order reversal, LOR）。
 # r = 0 = 递归计数为 0，表示非递归锁的单次获取。
@@ -749,7 +749,7 @@ cpu0: <ACPI CPU> on acpi0
 
 acpi_button1: <Power Button> on acpi0
 # ACPI 电源按钮——与前面的 fixed Power Button 的区别在于：
-# "fixed" = ACPI FADT 固定硬件事件，"acpi_button1" = ACPI 命名空间中的控制方法（Control Method）电源设备。
+# “fixed” = ACPI FADT 固定硬件事件，“acpi_button1” = ACPI 命名空间中的控制方法（Control Method）电源设备。
 
 acpi_tz0: <Thermal Zone> on acpi0
 # ACPI 温控区域（temperature sensor），用于 CPU/主板的温度监测与风扇调速。
@@ -859,7 +859,7 @@ nda0: 476940MB (976773168 512 byte sectors)
 # ===== 挂载根文件系统 =====
 Trying to mount root from zfs:zroot/ROOT/default []...
 # 内核尝试从 ZFS 池 "zroot" 的数据集 "zroot/ROOT/default" 挂载根文件系统。
-# [] 中是传递给 mountroot 的可选参数（通常有 "rw" 或 "ro"），CURRENT 启动为空。
+# [] 中是传递给 mountroot 的可选参数（通常有 “rw” 或 “ro”），CURRENT 启动为空。
 # 这是引导过程的最后一个内核阶段——根系统挂载成功后内核执行 init(8)。
 
 WARNING: WITNESS option enabled, expect reduced performance.
