@@ -178,7 +178,7 @@ XXX_enable="YES"
 > # sysrc XXX_enable="YES"
 > ```
 >
-> 上述命令中的 `"YES"` 的双引号可省略，系统会自动添加（FreeBSD 15.0-RELEASE 起如此）。`"NO"` 亦同理。
+> 上述命令中的 `"YES"` 的双引号可省略，系统会自动添加（FreeBSD 15.0-RELEASE 起如此）。`"NO"` 也同理。
 
 基本系统服务的脚本路径为 **/etc/rc.d/**，第三方应用服务的脚本路径为 **/usr/local/etc/rc.d/**。可直接调用这两个目录下的脚本。
 
