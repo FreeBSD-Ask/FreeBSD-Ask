@@ -55,7 +55,7 @@
 | CDDL | 通用开发及发行许可 | Common Development and Distribution License，由 Sun Microsystems 为 OpenSolaris 创建的开源许可证，ZFS 等项目采用此许可证，允许商业使用和修改 |
 | TCP/IP | 传输控制协议/网际协议 | Transmission Control Protocol/Internet Protocol，互联网的基础协议族 |
 | 校验和 | / | Checksum，通过对数据序列进行特定算法运算得到的固定长度值，用于检测数据在传输或存储过程中是否发生错误 |
-| 散列函数 | / | Hash Function，将任意长度的数据映射为固定长度值的函数，用于数据完整性校验和数字签名等 |
+| 哈希函数 | / | Hash Function，又称散列函数，将任意长度的数据映射为固定长度值的函数，用于数据完整性校验和数字签名等 |
 | 内核恐慌 | / | Kernel Panic，操作系统内核遇到无法恢复的致命错误时采取的自我保护机制，系统将停止运行并显示错误信息 |
 | 分发文件 | / | Distribution Set，FreeBSD 安装介质中按功能划分的压缩包集合，如 base、kernel、src、lib32 等 |
 | 无线管制域 | / | Regulatory Domain，各国或地区对无线设备使用的频率、功率等参数的法律规定区域 |
@@ -152,8 +152,9 @@
 | OpenBSD | / | 1995 年由 Theo de Raadt 从 NetBSD 分叉创立的注重安全的 BSD 操作系统 |
 | NetBSD | / | 于 1993 年创立的注重可移植性的 BSD 操作系统 |
 | DragonFly BSD | / | 于 2003 年由 Matthew Dillon 从 FreeBSD 4.8 分叉出来的 BSD 操作系统 |
-| LLVM | / | 指一组模块化和可重用的编译器和工具链技术项目（参见 LLVM Project. LLVM FAQ[EB/OL]. [2026-04-16]. <https://llvm.org/>。该页面为 LLVM 官方概览页） |
+| LLVM | / | 指一组模块化和可重用的编译程序和工具链技术项目（参见 LLVM Project. LLVM FAQ[EB/OL]. [2026-04-16]. <https://llvm.org/>。该页面为 LLVM 官方概览页） |
 | 编译程序 | / | Compiler，又称编译器，将高级编程语言源代码翻译为机器码或中间代码的程序 |
+| 解释程序 | / | Interpreter，又称解释器，逐条读取并执行高级编程语言源代码的程序 |
 | Clang | / | LLVM 项目的 C/C++ 语言前端和工具基础设施 |
 | NFS | 网络文件系统 | Network File System，一种分布式文件系统协议 |
 | SMB | 服务器消息块 | Server Message Block，一种用于文件共享的协议 |
@@ -172,7 +173,7 @@
 | ACID | / | Atomicity, Consistency, Isolation, Durability，数据库事务的四个基本特性：原子性、一致性、隔离性、持久性 |
 | SSL/TLS | 安全套接层/传输层安全 | Secure Sockets Layer / Transport Layer Security，为网络通信提供安全及数据完整性的协议 |
 | FastCGI | / | Fast Common Gateway Interface，一种改进的 CGI 协议，通过持久进程处理请求以提高性能 |
-| JIT 编译器 | 即时编译器 | Just-In-Time Compiler，在程序运行时将字节码编译为机器码的编译器 |
+| JIT 编译程序 | 即时编译程序 | Just-In-Time Compiler，在程序运行时将字节码编译为机器码的编译程序 |
 | Java Servlet | / | Java 平台上用于处理 HTTP 请求的服务器端组件 |
 | SPICE | / | Simple Protocol for Independent Computing Environments，一种远程显示协议 |
 | VNC | 虚拟网络计算 | Virtual Network Computing，一种远程桌面协议 |
