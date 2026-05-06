@@ -198,7 +198,7 @@ root 可使用此工具更改任意用户的额外账户信息。
 ```sh
 # chpass ykla	# 修改 ykla 的账户信息数据库
 #Changing user information for ykla.
-Login: ykla	# 指定 ykla 
+Login: ykla	# 指定 ykla
 Password: $6$SqMJXrv5aC6Wq.by$nmbZs078aHNBVyh9noLFouJsGHyFSvQIzH0W4zpdfXuPtGtt.FHgWfXDHVBa
 .g9P0eZ32UwfByzRKdVnTaO7W.	# 用户密码
 Uid [#]: 1001
@@ -222,7 +222,7 @@ Other information:
 示例：修改用户 test1 的登录环境为 **/bin/sh**。
 
 ```sh
-# chpass -s sh test1 # 
+# chpass -s sh test1 #
 chpass: user information updated
 ```
 
@@ -233,18 +233,18 @@ chpass: user information updated
 > chfn(1) 与 chsh(1) 是 chpass(1) 的链接命令，ypchpass(1)、ypchfn(1) 和 ypchsh(1) 也是。由于 NIS 支持是自动的，无需在命令前加 `yp`。这一点可以从源代码 `usr.bin/chpass/Makefile` 进行推断：
 >
 > ```makefile
->SYMLINKS=	chpass ${BINDIR}/chfn
->SYMLINKS+=	chpass ${BINDIR}/chsh
->.if ${MK_NIS} != "no"	# 如果系统启用了 NIS
->SYMLINKS+=	chpass ${BINDIR}/ypchfn
->SYMLINKS+=	chpass ${BINDIR}/ypchpass
->SYMLINKS+=	chpass ${BINDIR}/ypchsh
->.endif
+> SYMLINKS=	chpass ${BINDIR}/chfn
+> SYMLINKS+=	chpass ${BINDIR}/chsh
+> .if ${MK_NIS} != "no"	# 如果系统启用了 NIS
+> SYMLINKS+=	chpass ${BINDIR}/ypchfn
+> SYMLINKS+=	chpass ${BINDIR}/ypchpass
+> SYMLINKS+=	chpass ${BINDIR}/ypchsh
+> .endif
 >
->MLINKS=	chpass.1 chfn.1 chpass.1 chsh.1
->.if ${MK_NIS} != "no"
->MLINKS+= chpass.1 ypchpass.1 chpass.1 ypchfn.1 chpass.1 ypchsh.1
->.endif
+> MLINKS=	chpass.1 chfn.1 chpass.1 chsh.1
+> .if ${MK_NIS} != "no"
+> MLINKS+= chpass.1 ypchpass.1 chpass.1 ypchfn.1 chpass.1 ypchsh.1
+> .endif
 > ```
 
 ### passwd 更改用户密码
@@ -289,7 +289,7 @@ Retype New Password:	# 再次输入新密码
 
 ```sh
 # cat /etc/group
-wheel:*:0:root,ykla	# 
+wheel:*:0:root,ykla	#
 operator:*:5:root
 
 ……省略部分输出……
