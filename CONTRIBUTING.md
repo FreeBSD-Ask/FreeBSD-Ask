@@ -92,7 +92,7 @@ and retry with 'git restore --source=HEAD :/'
 
 ### 如何使用 Git 拉取本项目
 
->**技巧**
+> **技巧**
 >
 > 您完全可以通过 GitHub 在线完成所有提交。
 
@@ -181,7 +181,7 @@ $ git clone https://github.com/FreeBSD-Ask/FreeBSD-Ask
 
 `https://docs.bsdcn.org` 由社区自行构建，docs 网站本身的贡献指南参见：FreeBSD 从入门到跑路 VitePress 镜像项目[EB/OL]. [2026-03-26]. <https://github.com/FreeBSD-Ask/FreeBSD-Ask.github.io/blob/main/README.md>。
 
->**技巧**
+> **技巧**
 >
 > 若您仅想贡献内容本身，尚无改进 docs 网站浏览体验与构建优化等意向，则仅需阅读本文即可。
 
