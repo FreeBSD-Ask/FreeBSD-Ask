@@ -1,6 +1,6 @@
 # 4.1 Windows 用户迁移指南
 
-操作系统迁移涉及文件系统概念、字符编码、换行符规范、时区处理等多维度差异。从 Windows 迁移至 FreeBSD 的用户，须先理解这些差异，方可顺利过渡。
+操作系统迁移涉及文件系统概念、字符编码、换行符规范、时区处理等多维度差异。从 Windows 迁移至 FreeBSD 的用户，需要先理解这些差异，方可顺利过渡。
 
 ## 文件系统基础
 
@@ -22,9 +22,9 @@
 
 ![文件系统基础](../.gitbook/assets/windows-file-explorer.png)
 
-行道树则不同，每棵均独立生长。即便两树紧邻而立，也仍然是独立的个体。行道树正如 Windows 目录，盘符各自独立——`C:\Program Files (x86)\Google\Update`、`D:\BaiduNetdiskDownload\工具列表`、`E:\123\app`：`C`、`D`、`E` 盘彼此隔离、互不干扰。格式化 `D` 盘，不影响 `E` 盘中存储的文件。即便在 PE 中格式化 `C` 盘（可能不会显示为 `C` 盘），`E` 盘文件亦不受影响。
+行道树则不同，每棵均独立生长。即便两树紧邻而立，也仍然是独立的个体。行道树正如 Windows 目录，盘符各自独立——`C:\Program Files (x86)\Google\Update`、`D:\BaiduNetdiskDownload\工具列表`、`E:\123\app`：`C`、`D`、`E` 盘彼此隔离、互不干扰。格式化 `D` 盘，不影响 `E` 盘中存储的文件。即便在 PE 中格式化 `C` 盘（可能不会显示为 `C` 盘），`E` 盘文件也不受影响。
 
-Windows 的“盘符”并非固定存在。在 PE 环境中，`C` 盘可能显示为其他盘符（如 `X`）；运行中的 Windows 亦可任意分配盘符。
+Windows 的“盘符”并非固定存在。在 PE 环境中，`C` 盘可能显示为其他盘符（如 `X`）；运行中的 Windows 也可以任意分配盘符。
 
 Windows 判断分区与盘符的对应关系，依据的是 GPT 分区类型 UUID（如 Windows 数据分区类型 UUID 为 `EBD0A0A2-B9E5-4433-87C0-68B6B72699C7`，即 Microsoft Basic Data 类型，适用于所有 Windows 数据分区，而非仅限 C 盘）以及分区的唯一 GUID（相关配置由 Windows 装入管理器 Mount Manager 写入注册表 `HKLM\SYSTEM\MountedDevices`），而非依靠盘符自身。
 
@@ -219,7 +219,7 @@ b.txt: Unicode text, UTF-8 text, with very long lines (314), with CRLF line term
 
 例如，ASCII（American Standard Code for Information Interchange，ANSI X3.4）编码中，`0x41`（二进制 `0100 0001`）代表大写字母 `A`。ASCII 仅支持英文字母、数字和常见标点，共 128 个字符。
 
-而在 Unicode 编码体系中，“你”这个汉字的代码点是 U+4F60。在 UTF-8（8-bit Unicode Transformation Format，8 位 Unicode 转换格式）编码方式下，其编码后为字节序列 `0xE4 0xBD 0xA0`（二进制为 `11100100 10111101 10100000`）。UTF-8 编码所含字符范围远超 GBK（国标扩展），其中甚至含有埃及圣书体，如果当前屏幕上能看到 𓀀 𓃕 𓌊 这三个字符，则很可能正在使用 UTF-8 编码（若使用 UTF-8 编码但仍无法显示这些字符，很可能是字体不支持这些字符集，而非编码问题）。
+而在 Unicode 编码体系中，“你”这个汉字的代码点是 U+4F60。在 UTF-8（8-bit Unicode Transformation Format，8 位 Unicode 转换格式）编码方式下，其编码后为字节序列 `0xE4 0xBD 0xA0`（二进制为 `11100100 10111101 10100000`）。UTF-8 编码所含字符范围远超 GBK（国标扩展），其中甚至含有埃及圣书体，如果当前屏幕上能看到 𓀀 𓃕 𓌊 这三个字符，则很可能正在使用 UTF-8 编码（如果使用 UTF-8 编码但仍无法显示这些字符，很可能是字体不支持这些字符集，而非编码问题）。
 
 程序如何识别文本编码？某些文件会在开头使用特定字节序列（即 BOM，byte order mark，字节顺序标记）标明编码。例如 UTF-8 的 BOM 是 `0xEF 0xBB 0xBF`。但许多文本文件并无 BOM，读取程序需通过上下文猜测编码格式，这往往导致乱码。虽然通过程序分析文本内容（如统计字符分布或抽取字符计算）可猜测编码，但此法未必可靠。编码问题，根本原因在于系统间默认编码不同或未明确指定编码。
 
