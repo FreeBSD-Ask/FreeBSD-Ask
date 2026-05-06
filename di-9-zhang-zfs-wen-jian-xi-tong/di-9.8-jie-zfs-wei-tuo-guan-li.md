@@ -127,7 +127,7 @@ Password:
 
 ## 用户级 ZFS 加密功能
 
-在 FreeBSD 14.1 中，若要在用户级使用 ZFS 加密功能，必须为用户授予特定权限。
+在 FreeBSD 14.1 中，如果要在用户级使用 ZFS 加密功能，必须为用户授予特定权限。
 
 授权用户 safreya 对 zroot/home/safreya 文件系统执行密钥管理和加密操作：
 
