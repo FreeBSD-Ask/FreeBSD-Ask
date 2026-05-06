@@ -143,7 +143,7 @@ PSPath
 
 > **技巧**
 >
-> 可在 Windows 下使用 git 工具拉取 [freebsd-doc](https://github.com/freebsd/freebsd-doc) 项目验证兼容性问题。相关 Bug 报告：[The colon in the file name of the security report of the FreeBSD doc is not compatible with Microsoft Windows](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=267636)
+> 可在 Windows 下使用 Git 工具拉取 [freebsd-doc](https://github.com/freebsd/freebsd-doc) 项目验证兼容性问题。相关 Bug 报告：[The colon in the file name of the security report of the FreeBSD doc is not compatible with Microsoft Windows](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=267636)
 
 ### 大小写敏感性
 
@@ -239,7 +239,7 @@ root@ykla:/home/ykla# locale charmap
 UTF-8
 ```
 
-此外，也可将 Windows 10 及后续版本的系统字符编码设置为 UTF-8。然而，如此设置往往只会引入更多编码问题，无助于解决问题。
+此外，也可将 Windows 10 及后续版本的系统字符编码设置为 UTF-8。然而，如此设置往往只会引入更多编码问题，难以从根本上解决问题。
 
 FreeBSD 的编码在 [main/usr.bin/login/login.conf](https://github.com/freebsd/freebsd-src/blob/main/usr.bin/login/login.conf) 文件中设置，编译后路径为 **/etc/login.conf**。
 
