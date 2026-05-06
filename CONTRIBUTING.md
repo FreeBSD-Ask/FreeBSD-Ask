@@ -53,7 +53,7 @@ and retry with 'git restore --source=HEAD :/'
 - 请提交至 main 分支
 - 请避免学术不端行为，参见：高等学校预防与处理学术不端行为办法[EB/OL]. [2026-03-26]. <https://www.gov.cn/zhengce/2016-07/19/content_5713390.htm> （AIGC 相关规定除外）
 - 请遵守 [FreeBSD 中文社区行为规范](https://docs.bsdcn.org/CODE_OF_CONDUCT)
-- 所有 AIGC（AI-Generated Content，人工智能生成内容）必需要经过人工二次确认，核实其原始出处与来源的可靠性，不得直接提交。但纯粹翻译可作为例外绕过本规定。任何人对所提交内容自行负责，无论其是否由 AIGC 生成
+- 所有 AIGC（AI-Generated Content，人工智能生成内容）必须经过人工二次确认，核实其原始出处与来源的可靠性，不得直接提交。但纯粹翻译可作为例外绕过本规定。任何人对所提交内容自行负责，无论其是否由 AIGC 生成
 
 #### 使之成为“一本书”，而不仅是字典或手册
 
