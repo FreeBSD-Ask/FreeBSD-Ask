@@ -1,6 +1,6 @@
 # 7.3 Mihomo 配置
 
-Mihomo 是 Clash 系列的衍生版本，已收录于 FreeBSD Ports 树中（net/mihomo）。本节给出安装与基本配置步骤。
+Mihomo 是 Clash 系列的衍生版本，已收录于 FreeBSD Ports 树中（net/mihomo）。
 
 ## 安装 Mihomo
 
