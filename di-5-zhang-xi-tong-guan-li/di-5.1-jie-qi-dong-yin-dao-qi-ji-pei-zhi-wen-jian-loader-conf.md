@@ -102,9 +102,9 @@ boot:
 
 loader 是阶段 3 引导过程的最后阶段。它位于文件系统上，通常为 **/boot/loader**。
 
-loader 提供一种交互式配置方式，使用内置命令集，并由具有更复杂命令集的更强大解释器支持。
+loader 提供一种交互式配置方式，使用内置命令集，并由具有更复杂命令集的更强大解释程序支持。
 
-在初始化期间，loader 将探测控制台和磁盘，并确定从哪块磁盘启动。它将相应地设置变量，并启动一个解释器，用户可以通过脚本或交互式方式传递命令。
+在初始化期间，loader 将探测控制台和磁盘，并确定从哪块磁盘启动。它将相应地设置变量，并启动一个解释程序，用户可以通过脚本或交互式方式传递命令。
 
 随后 loader 读取 **/boot/loader.rc**，该文件默认读取 **/boot/defaults/loader.conf**（为变量设置合理的默认值）和 **/boot/loader.conf**（用于对这些变量进行本地更改）。loader.rc 接下来根据这些变量操作，加载选定的模块和内核。
 
@@ -288,7 +288,7 @@ screensave_name="green_saver"	# 设置要使用的屏幕保护程序模块名称
 
 ###  早期 hostid 配置 ############################
 # 这台机器的唯一标识
-hostuuid_load="YES"        # 设置为 YES 来加载 hostuuid 模块
+hostuuid_load="YES"        # 设置为 YES 以加载 hostuuid 模块
 hostuuid_name="/etc/hostid" # 指定 hostid 文件路径
 hostuuid_type="hostuuid"   # 指定模块类型为 hostuuid
 
