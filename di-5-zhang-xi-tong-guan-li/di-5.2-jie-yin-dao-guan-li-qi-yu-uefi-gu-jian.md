@@ -144,7 +144,7 @@ EFI 分区的目录结构如下：
 
 重启进入 Windows，使用 EasyUEFI 激活 `FreeBSD 15.0` 启动项。
 
-确认 FreeBSD 可正常启动后，方可使用 [DiskGenius](https://www.diskgenius.cn/) 或其他分区工具删除 nda0 磁盘的 EFI 分区及其文件。
+确认 FreeBSD 可正常启动后，才能使用 [DiskGenius](https://www.diskgenius.cn/) 或其他分区工具删除 nda0 磁盘的 EFI 分区及其文件。
 
 ## 更新 EFI 引导
 
