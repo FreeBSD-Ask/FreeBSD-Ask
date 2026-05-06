@@ -88,7 +88,7 @@ UBLIO（User space Block I/O）是一个用户空间块 I/O 库，用于提升 F
 
 ### NTFS 的自动挂载配置
 
-若要开机自动挂载，需修改 **/etc/fstab** 配置文件，添加如下内容：
+如果要开机自动挂载，需修改 **/etc/fstab** 配置文件，添加如下内容：
 
 ```sh
 /dev/da0s1  /media/NTFS ntfs  rw,mountprog=/usr/local/bin/ntfs-3g,late  0  0
@@ -108,7 +108,7 @@ UBLIO（User space Block I/O）是一个用户空间块 I/O 库，用于提升 F
 # ntfs-3g  /dev/da0s1  /media/NTFS   -o  rw,uid=1000,gid=1000,umask=0
 ```
 
-2. 若不确定哪块磁盘分区为 NTFS 格式，可使用以下命令检测 **/dev/da0s1** 分区的文件系统类型：
+2. 如果不确定哪块磁盘分区为 NTFS 格式，可使用以下命令检测 **/dev/da0s1** 分区的文件系统类型：
 
 ```sh
 # fstyp /dev/da0s1
