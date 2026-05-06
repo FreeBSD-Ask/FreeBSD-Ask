@@ -1,6 +1,6 @@
 # 3.2 使用 VMware Workstation Pro 安装 FreeBSD
 
-VMware Workstation Pro 是 Type-2 虚拟机监视器（Hypervisor），运行在宿主操作系统之上，通过二进制翻译（binary translation）和硬件辅助虚拟化（hardware-assisted virtualization，基于 Intel VT-x 或 AMD-V 技术）实现 x86 指令集的虚拟化。
+VMware Workstation Pro 是 Type-2 虚拟机监视器（Hypervisor），运行在宿主操作系统之上，借助二进制翻译（binary translation）和硬件辅助虚拟化（hardware-assisted virtualization，基于 Intel VT-x 或 AMD-V 技术）完成 x86 指令集的虚拟化。
 
 ## 视频教程
 
@@ -110,7 +110,7 @@ FreeBSD 中文社区. 001-Windows 11 安装 VMware 17[EB/OL]. [2026-04-04]. <htt
 
 VMware 的半虚拟化驱动程序（VMware Tools，亦称 Open VM Tools）通过 HGFS（Host-Guest File System）等专有协议提供图形加速、共享文件夹、剪贴板共享等功能，可改善虚拟机的 I/O 性能和用户体验。
 
-为实现虚拟机与宿主机的良好集成，需安装 xf86-video-vmware（VMware 显卡驱动）和 xf86-input-vmmouse（VMware 虚拟鼠标驱动）。pkg 命令如下：
+若要实现虚拟机与宿主机的良好集成，需安装 xf86-video-vmware（VMware 显卡驱动）和 xf86-input-vmmouse（VMware 虚拟鼠标驱动）。pkg 命令如下：
 
 ```sh
 # pkg install xf86-video-vmware open-vm-tools xf86-input-vmmouse

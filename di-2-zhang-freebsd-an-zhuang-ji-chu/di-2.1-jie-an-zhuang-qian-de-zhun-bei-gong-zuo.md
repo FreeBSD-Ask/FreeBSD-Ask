@@ -53,7 +53,7 @@ bsd-hardware.info. Hardware for BSD[EB/OL]. [2026-03-25]. <https://bsd-hardware.
 
 > **注意**
 >
-> 建议进行实际测试，因为该网站也可能出现错误，例如将 LPDDR5 误识别为 LPDDR4。
+> 建议实际测试，因为该网站也可能出现错误，例如将 LPDDR5 误识别为 LPDDR4。
 
 ## 下载 FreeBSD 镜像
 
@@ -167,7 +167,7 @@ FreeBSD `-RELEASE` 历史版本下载地址：
 
 不同操作系统平台上有不同的镜像刻录工具推荐。
 
-Windows 平台建议优先使用 **Rufus**，Linux 平台可直接使用 `dd` 命令进行镜像刻录。
+Windows 平台建议优先使用 **Rufus**，Linux 平台可直接使用 `dd` 命令刻录镜像。
 
 Rufus 下载地址为 <https://rufus.ie/zh>，该工具为 Windows 平台开源 USB 启动盘制作工具。
 
