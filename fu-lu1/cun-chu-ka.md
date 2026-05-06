@@ -66,9 +66,9 @@ microSD 通常也称为 TF 卡（TF 是 SanDisk 最初的商品名 TransFlash，
 
 经过实测，移速 128 GB A2 U3 V30 存储卡仅写入约 60 GB 即出现掉盘现象。
 
-![移速 128 G A2 U3 V30 128 G 存储卡掉盘](../.gitbook/assets/yisusd.png)
+![移速 128 GB A2 U3 V30 存储卡掉盘](../.gitbook/assets/yisusd.png)
 
-![移速 128 G A2 U3 V30 128 G 存储卡掉盘](../.gitbook/assets/yisusd2.png)
+![移速 128 GB A2 U3 V30 存储卡掉盘](../.gitbook/assets/yisusd2.png)
 
 ## 如何测试存储卡和硬盘？
 
@@ -116,9 +116,9 @@ microSD 通常也称为 TF 卡（TF 是 SanDisk 最初的商品名 TransFlash，
 
 即金属款。
 
-![三星 BAR 升级版 + USB3.1 闪存盘 64 G 读写速率](../.gitbook/assets/san1.png)
+![三星 BAR 升级版 + USB3.1 闪存盘 64 GB 读写速率](../.gitbook/assets/san1.png)
 
-![三星 BAR 升级版 + USB3.1 闪存盘 64 G 读写速率](../.gitbook/assets/san2.png)
+![三星 BAR 升级版 + USB3.1 闪存盘 64 GB 读写速率](../.gitbook/assets/san2.png)
 
 ## 参考文献
 
