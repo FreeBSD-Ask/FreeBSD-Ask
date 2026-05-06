@@ -383,7 +383,7 @@ $ ls -a
 .config		.local		.mozilla	下载		模板
 ```
 
-若不加选项 `-a`：
+如果不加选项 `-a`：
 
 ```sh
 ykla@ykla:~ $ ls
@@ -481,7 +481,7 @@ FreeBSD 的 `mkdir` 与 GNU/Linux 的 `mkdir` 基本兼容。
 $ rm test
 ```
 
-若不存在一个名称为 `test` 的文件：
+如果不存在文件 `test`：
 
 ```sh
 $ rm test
