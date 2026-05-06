@@ -37,7 +37,7 @@ default:\
 	:setenv=BLOCKSIZE=K:\  # 由逗号分隔的环境变量及其对应值的列表。包含逗号的值必须加引号。BLOCKSIZE=K 即让命令以 KB 大小格式显示
 	:mail=/var/mail/$:\  # 将环境变量 $MAIL 设置为指定的值。
 	:path=/sbin /bin /usr/sbin /usr/bin /usr/local/sbin /usr/local/bin ~/bin:\  # 默认的 PATH 环境变量路径，会在其中查找可执行文件
-	:nologin=/var/run/nologin:\  # 若该文件存在，将打印该文件到屏幕上，并且对应用户的登录会话将被终止。
+	:nologin=/var/run/nologin:\  # 如果该文件存在，将打印该文件到屏幕上，并且对应用户的登录会话将被终止。
 	:cputime=unlimited:\  # 限制进程可使用的 CPU 时间量。类型为时间，默认单位为秒。时间值可以使用不同单位表示：y 表示年（365 天）、w 表示周、d 表示天、h 表示小时、m 表示分钟、s 表示秒。单位可以连写，其值会累加。例如，2 小时 40 分钟可以写作 9600s、160m 或 2h40m。
 	:datasize=unlimited:\  # 限制数据段（属于静态内存分配）的最大大小。类型为数值，默认单位为字节。常用单位包括 b、k、m、g、t，分别表示 512 字节、KB、MB、GB 和 TB，大小写不敏感。多个值可以连写，其数值会累加。例如 2g512M 表示总大小为 2.5GB。
 	:stacksize=unlimited:\  # 最大栈大小限制。类型为数值。
