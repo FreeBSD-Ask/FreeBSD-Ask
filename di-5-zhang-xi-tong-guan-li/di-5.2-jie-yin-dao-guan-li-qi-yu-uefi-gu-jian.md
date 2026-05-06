@@ -1,6 +1,6 @@
 # 5.2 引导管理器与 UEFI 固件
 
-统一可扩展固件接口（Unified Extensible Firmware Interface，UEFI）是现代计算机的固件接口标准，目的是取代传统的基本输入输出系统（BIOS）。
+统一可扩展固件接口（Unified Extensible Firmware Interface，UEFI）是现代计算机的固件接口标准，旨在取代传统的基本输入输出系统（BIOS）。
 
 UEFI 规范定义了操作系统与平台固件之间的接口，提供了启动服务（Boot Services）和运行时服务（Runtime Services），以及用于存储启动变量的非易失性存储空间。
 
