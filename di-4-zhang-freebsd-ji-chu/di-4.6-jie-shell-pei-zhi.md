@@ -254,7 +254,7 @@ touch ~/.bash_profile         # 创建 ~/.bash_profile 文件，用于配置 Bas
 >
 > csh 与 tcsh 的关系
 >
-> 需要注意的是，FreeBSD 中 csh 和 tcsh 是同一个二进制程序，但以不同名称调用时行为有所差异。可以通过查看源代码 [https://github.com/freebsd/freebsd-src/blame/main/bin/csh/Makefile](https://github.com/freebsd/freebsd-src/blame/main/bin/csh/Makefile) 以及执行 man csh 来验证，都会重定向至 tcsh，提供 csh 与 tcsh 关系的源代码佐证。
+> 需要注意的是，FreeBSD 中 csh 和 tcsh 是同一个二进制程序，但以不同名称调用时行为有所差异。可通过查看源代码 [https://github.com/freebsd/freebsd-src/blame/main/bin/csh/Makefile](https://github.com/freebsd/freebsd-src/blame/main/bin/csh/Makefile) 及执行 man csh 验证：两者均重定向至 tcsh。
 
 > **注意**
 >
