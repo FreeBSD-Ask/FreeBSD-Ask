@@ -92,7 +92,7 @@ machdep.wall_cmos_clock: 1
 
 时区设置完成后，需要配置和启用时间同步服务。
 
-ntpd 与其网络对等方通过 UDP 数据包通信。计算机与 NTP 对等方之间的任何防火墙，均须配置为允许 UDP 数据包在端口 123 上进出。
+ntpd 与其网络对等方通过 UDP 数据包通信。计算机与 NTP 对等方之间的任何防火墙，必须配置为允许 UDP 数据包在端口 123 上进出。
 
 > **注意**
 >
@@ -191,33 +191,35 @@ $ date
 # service ntpd onestop
 ```
 
-重启后服务会继续运行。
+重启系统后服务会继续运行，也可手动再次启用 ntpd 服务。
 
 使用 Windows 时间服务器同步系统：
 
 ```sh
-# ntpd -q -p time.windows.com
+# ntpd -q -g -p time.windows.com
 ```
 
 | 选项 | 作用 |
 | ---- | ---- |
 | `-q` | 同步一次并退出 |
 | `-g` | 允许一次性进行大幅度时间调整 |
-| `-p` | 指定 NTP 服务器（例如 `pool.ntp.org`） |
+| `-p` | 指定 NTP 服务器（例如 `time.windows.com`） |
 
-当系统时间与 NTP 服务器偏差超过 1000 秒时，ntpd 默认拒绝修正并退出，必须使用 `-g` 选项强制修正：
-
-```sh
-# ntpd -q -g -p pool.ntp.org
-```
-
-| 选项 | 作用 |
-| ---- | ---- |
-| `-g` | 允许大时间偏差修正 |
-
-使用 pool.ntp.org 服务器更新系统时间。
+使用 `time.windows.com` 服务器更新系统时间。
 
 ## 非特权用户 ntpd
+
+在 FreeBSD 上，`ntpd` 可以作为非特权用户启动并运行。这需要策略模块 mac_ntpd(4)。启动脚本 **/etc/rc.d/ntpd** 首先检查 NTP 配置。如果可能，它会加载 mac_ntpd 模块，然后以非特权用户 ntpd（用户 ID 123）启动 ntpd。为了避免文件和目录访问问题，当配置包含任何与文件相关的选项时，启动脚本不会自动以 ntpd 用户身份启动 ntpd。
+
+要手动配置 ntpd 作为 ntpd 用户运行，必须：
+
+- 确保 ntpd 用户对配置中指定的所有文件和目录具有访问权限。
+
+- 安排加载或将 mac_ntpd 模块编译到内核中。有关详细信息，请参见 mac_ntpd(4)。
+
+- 在 /etc/rc.conf 中设置 ntpd_user="ntpd"。
+
+## 参考文献非特权用户 ntpd
 
 在 FreeBSD 上，`ntpd` 可以作为非特权用户启动并运行。这需要策略模块 mac_ntpd(4)。
 
