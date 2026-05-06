@@ -629,7 +629,7 @@ Ventoy 目前不支持在线下载 ISO 镜像文件。
 
 TinyCorePure64 属于 [Core 项目](http://www.tinycorelinux.net/welcome.html)，该系统高度模块化，支持社区自定义构建。
 
-TinyCorePure64 能够在启动后完全载入内存，同时重启后亦将丢失所有数据。
+TinyCorePure64 能够在启动后完全载入内存，同时重启后也将丢失所有数据。
 
 TinyCorePure64 下载地址为 [x86 Pure 64](http://www.tinycorelinux.net/ports.html)，进入页面后点击“Core Pure 64 Latest Build”选择“TinyCorePure64-16.2.iso”或类似版本进行下载。
 
