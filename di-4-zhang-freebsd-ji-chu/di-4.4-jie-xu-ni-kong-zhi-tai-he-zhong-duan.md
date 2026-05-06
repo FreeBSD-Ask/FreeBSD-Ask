@@ -139,15 +139,15 @@ ttyv8	"/usr/local/bin/xdm -nodaemon"	xterm	off secure
 
 > **技巧**
 >
->若操作失误但已配置 SSHD 服务，仍可通过 SSH 远程连接 FreeBSD 系统，将生成一个 pts(4) 伪终端 **/dev/pts/n**。
+> 若操作失误但已配置 SSHD 服务，仍可通过 SSH 远程连接 FreeBSD 系统，将生成一个 pts(4) 伪终端 **/dev/pts/n**。
 >
->```sh
->$ w
->10:22PM  up 27 mins, 3 users, load averages: 0.03, 0.04, 0.00
->USER       TTY      FROM            LOGIN@  IDLE WHAT
->ykla       pts/0    192.168.179.1   9:55PM     4 su (sh)
->ykla       pts/1    192.168.179.1  10:22PM     - w
->```
+> ```sh
+> $ w
+> 10:22PM  up 27 mins, 3 users, load averages: 0.03, 0.04, 0.00
+> USER       TTY      FROM            LOGIN@  IDLE WHAT
+> ykla       pts/0    192.168.179.1   9:55PM     4 su (sh)
+> ykla       pts/1    192.168.179.1  10:22PM     - w
+> ```
 
 注意，最后一个虚拟控制台（ttyv8）用于访问图形环境（如果已安装并配置了 Xorg）。
 
