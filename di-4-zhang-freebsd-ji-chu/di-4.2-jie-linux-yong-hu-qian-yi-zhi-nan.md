@@ -228,7 +228,7 @@ GNU 本身并无独立内核，而以 Linux 为其内核——GNU Hurd 是例外
 
 ### Ubuntu
 
-部分用户反馈 Ubuntu 系统中会出现“[内部错误（internal error）](https://www.google.com/search?q=internal+error+ubuntu+site:askubuntu.com)”提示。有观点认为这是 Ubuntu 对错误信息的统一提示方式。须注意，Ubuntu 在开发过程中会阶段性引入 Debian SID（不稳定分支）的软件包，这可能导致其稳定性在特定阶段出现波动（无论普通版本还是 LTS）。例如，跨大版本或小版本升级时，部分用户反馈存在升级失败的风险，即便初始环境干净也仍有可能发生。
+部分用户反馈 Ubuntu 系统中会出现“[内部错误（internal error）](https://www.google.com/search?q=internal+error+ubuntu+site:askubuntu.com)”提示。有观点认为这是 Ubuntu 对错误信息的统一提示方式。需要注意，Ubuntu 在开发过程中会阶段性引入 Debian SID（不稳定分支）的软件包，这可能导致其稳定性在特定阶段出现波动（无论普通版本还是 LTS）。例如，跨大版本或小版本升级时，部分用户反馈存在升级失败的风险，即便初始环境干净也仍有可能发生。
 
 以下命令可用于查询 Ubuntu 24.04 与 Debian 版本的关联信息：
 
