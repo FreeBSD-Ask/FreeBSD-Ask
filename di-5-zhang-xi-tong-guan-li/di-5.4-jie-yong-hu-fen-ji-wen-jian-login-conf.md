@@ -28,7 +28,7 @@
 # 请注意，像 "cputime" 这样的条目会同时设置 "cputime-cur" 和 "cputime-max"。
 # "default" 登录类会自动（由 login(1) 实现）应用于所有在 /etc/master.passwd 中未设置有效登录类的非 root 用户。
 # 请注意，由于冒号 ':' 用于分隔能力条目，因此在能力的值或名称中嵌入字面冒号时必须使用 \c 转义序列（有关更多转义序列，请参见 getcap(3) 的 "CGETNUM AND CGETSTR SYNTAX AND SEMANTICS" 部分）。
-# UID 为 0 的用户（root）如果没有有效登录类，则使用 root 记录（若有），否则使用 default。
+# UID 为 0 的用户（root）如果没有有效登录类，则使用 root 记录（如果有），否则使用 default。
 # default 登录类
 
 default:\
