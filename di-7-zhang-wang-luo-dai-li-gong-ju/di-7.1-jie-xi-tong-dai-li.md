@@ -22,7 +22,7 @@ $ echo $SHELL
 
 通过设置 HTTP_PROXY、HTTPS_PROXY、ALL_PROXY 等环境变量，可让多数命令行工具通过代理转发流量。以下为配置方法。
 
-### 若使用 sh、Bash 或 Zsh
+### 如果使用 sh、Bash 或 Zsh
 
 在 sh、Bash 或 Zsh 中配置代理时，需注意以下事项。
 
@@ -42,7 +42,7 @@ $ echo $SHELL
 # unset HTTP_PROXY
 ```
 
-### 若使用 csh
+### 如果使用 csh
 
 在 csh 或 tcsh 中配置代理时，需注意以下事项。
 
