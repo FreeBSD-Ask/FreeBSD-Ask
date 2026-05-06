@@ -62,7 +62,7 @@ PSPath
 
 > **注意**
 >
->FreeBSD 的 `mount` 源于 4.4BSD，与 Linux 的 `mount` 在选项语法上基本兼容，但 FreeBSD 使用的是 nmount(2) 系统调用而非 Linux 的 mount(2)。FreeBSD 的 `mount` 会根据文件系统类型自动调用 **/sbin/mount_type** 程序（如 `mount_nfs`、`mount_msdosfs`）。
+> FreeBSD 的 `mount` 源于 4.4BSD，与 Linux 的 `mount` 在选项语法上基本兼容，但 FreeBSD 使用的是 nmount(2) 系统调用而非 Linux 的 mount(2)。FreeBSD 的 `mount` 会根据文件系统类型自动调用 **/sbin/mount_type** 程序（如 `mount_nfs`、`mount_msdosfs`）。
 
 ### 卸载的概念与机制
 
@@ -103,9 +103,9 @@ PSPath
 /dev/nda0p2		none	swap	sw		0	0	# 交换分区
 ```
 
->**注意**
+> **注意**
 >
->ZFS 并不使用 **/etc/fstab** 文件。因此如果在该文件中不存在任何 ZFS 文件系统（**/**），是符合预期的。
+> ZFS 并不使用 **/etc/fstab** 文件。因此如果在该文件中不存在任何 ZFS 文件系统（**/**），是符合预期的。
 
 示例：标准 UFS 安装下的 **/etc/fstab** 文件。
 
