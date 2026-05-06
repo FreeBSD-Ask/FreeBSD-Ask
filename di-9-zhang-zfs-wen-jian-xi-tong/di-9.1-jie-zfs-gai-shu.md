@@ -195,7 +195,7 @@ dRAID         Spare            Cache          Dedup
                 │
                 └── 卷（zvol，块设备）
                      ├── 其他文件系统（UFS / ext4 / FAT32 等）
-                     │			└── 文件 / 目录				
+                     │			└── 文件 / 目录
                      ├── 快照（snapshot）
                      ├── 克隆（clone）
                      └── 书签（bookmark）
