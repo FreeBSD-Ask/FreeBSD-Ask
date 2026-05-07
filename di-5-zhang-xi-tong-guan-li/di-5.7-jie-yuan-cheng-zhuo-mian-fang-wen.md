@@ -301,7 +301,7 @@ export LANG=zh_CN.UTF-8
 
 #### XRDP 下没有声音
 
-此问题可通过使用火狐浏览器缓解。
+此问题可通过火狐浏览器缓解。
 
 ## 通过 Windows 使用 TigerVNC 远程访问 FreeBSD
 
