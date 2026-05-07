@@ -227,7 +227,7 @@ FreeBSD 平台上的 TCP BBR 实现由 Netflix 技术团队完成，作为 `tcp_
 - Cheng Y, Cardwell N, Dukkipati N, et al. The RACK-TLP Loss Detection Algorithm for TCP: RFC 8985[S/OL]. (2021-02)[2026-04-17]. <https://www.rfc-editor.org/rfc/rfc8985>. RACK-TLP 丢包检测算法的 IETF 标准文档，由 Google 的 Yuchung Cheng、Neal Cardwell 等人撰写。
 - FreeBSD Project. tcp -- Internet Transmission Control Protocol[EB/OL]. [2026-04-14]. <https://man.freebsd.org/cgi/man.cgi?tcp(4)>. TCP 协议栈手册页，描述传输控制协议实现与套接字选项。
 - FreeBSD Project. ip -- Internet Protocol[EB/OL]. [2026-04-14]. <https://man.freebsd.org/cgi/man.cgi?ip(4)>. IP 协议手册页，描述网际协议实现与套接字选项。
-- FreeBSD Project. FreeBSD Handbook, Chapter 32: Advanced Networking[EB/OL]. [2026-04-14]. <https://docs.freebsd.org/en/books/handbook/advanced-networking/>. FreeBSD 手册中关于高级网络配置的指南。
+- FreeBSD Project. FreeBSD Handbook, Chapter 34: Advanced Networking[EB/OL]. [2026-04-14]. <https://docs.freebsd.org/en/books/handbook/advanced-networking/>. FreeBSD 手册中关于高级网络配置的指南。
 
 ## 课后习题
 
