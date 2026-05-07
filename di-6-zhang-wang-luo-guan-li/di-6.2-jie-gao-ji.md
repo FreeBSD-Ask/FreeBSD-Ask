@@ -15,7 +15,7 @@ $ netstat -r
 Routing tables
 
 Internet:	# IPv4
-# 路径				网关			  标志			接口	TTL
+# 路径				网关			  标志			接口  过期时间
 Destination        Gateway            Flags         Netif Expire
 default            192.168.179.2      UGS             em0   # 默认路由，通过 em0 接口
 localhost          link#3             UH              lo0   # 回环地址，使用 lo0 接口
