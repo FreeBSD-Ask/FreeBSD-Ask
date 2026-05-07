@@ -149,7 +149,7 @@ bound to 192.168.1.19 -- renewal in 43200 seconds.
 # sysrc defaultrouter="192.168.1.1"
 ```
 
-将 DNS 记录添加到 **/etc/resolv.conf** 文件：
+将 DNS 服务器地址添加到 **/etc/resolv.conf** 文件：
 
 ```ini
 nameserver 223.5.5.5   # 指定首选 DNS 服务器为阿里云公共 DNS
