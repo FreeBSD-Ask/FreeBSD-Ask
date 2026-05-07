@@ -1,6 +1,6 @@
 # 5.10 sysctl 工具
 
-sysctl(8) 实用程序用于修改正在运行的 FreeBSD 系统。本节涵盖 sysctl 命令用法与 sysctl.conf 的配置方法。
+sysctl(8) 实用程序用于检索和设置正在运行的 FreeBSD 系统的内核状态。本节涵盖 sysctl 命令用法与 sysctl.conf 的配置方法。
 
 sysctl(8) 工具可以检索内核状态，并为具有适当权限的进程设置内核状态。
 
