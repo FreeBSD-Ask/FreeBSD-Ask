@@ -161,7 +161,7 @@ $ sudo /usr/sbin/service webservice start
 
 #### sudo 普通用户和组免密码
 
-被授权使用 sudo 的用户只需输入自身密码即可完成认证。相比 `su`，sudo 的优点在于：`su` 需要输入 `root` 密码并授予完整的 `root` 权限，而 sudo 可按用户或组进行细粒度权限控制。要允许 webteam 组成员免密码管理该服务，可改为：
+授权使用 sudo 的用户只需输入自身密码即可完成认证。相比 `su`，sudo 的优点在于：`su` 需要输入 `root` 密码并授予完整的 `root` 权限，而 sudo 可按用户或组进行细粒度权限控制。要允许 webteam 组成员免密码管理该服务，可改为：
 
 ```ini
 %webteam   ALL=(ALL)       NOPASSWD: /usr/sbin/service webservice *
