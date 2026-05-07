@@ -24,8 +24,6 @@ $ echo $SHELL
 
 ### 如果使用 sh、Bash 或 Zsh
 
-在 sh、Bash 或 Zsh 中配置代理时，需注意以下事项。
-
 设置 HTTP 代理环境变量，该变量将被当前 shell 及其子进程继承：
 
 ```sh
@@ -43,8 +41,6 @@ $ echo $SHELL
 ```
 
 ### 如果使用 csh
-
-在 csh 或 tcsh 中配置代理时，需注意以下事项。
 
 在 csh 或 tcsh 中设置 HTTP 代理环境变量，需使用该 shell 特有的 `setenv` 命令：
 
