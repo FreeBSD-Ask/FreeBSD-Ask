@@ -78,7 +78,7 @@ SpaceSniffer.exe
 
 #### 中文乱码
 
-在 **/etc/auto_master** 中 **/media** 行末尾追加 `-L=zh_CN.UTF-8`。注意挂载 FAT32 文件系统时，实际调用的是 mount_msdosfs(8)，因此其他文件系统并不识别该参数，将导致其他设备无法挂载。
+在 **/etc/auto_master** 中 **/media** 行末尾追加 `-L=zh_CN.UTF-8`。注意 `-L=zh_CN.UTF-8` 是 mount_msdosfs(8) 的专有参数，而其他文件系统的挂载程序并不识别该参数，将导致其他设备无法挂载。
 
 参考文献：
 
