@@ -169,9 +169,9 @@ default via 172.24.63.253 dev eth0 proto dhcp src 172.24.0.80 metric 100
 00:06.0 Unclassified device [00ff]: Red Hat, Inc. Virtio memory balloon
 ```
 
-## 通过裸磁盘映像安装 FreeBSD
+## 通过裸磁盘镜像安装 FreeBSD
 
-阿里云轻量应用服务器支持通过裸磁盘映像方式安装 FreeBSD，操作前请务必注意以下警告。
+阿里云轻量应用服务器支持通过裸磁盘镜像方式安装 FreeBSD，操作前请务必注意以下警告。
 
 > **警告**
 >
@@ -385,7 +385,7 @@ vtnet0: link state changed to UP
 
 ## 通过 mfsBSD 间接安装 FreeBSD
 
-mfsBSD 作为一款精简的 FreeBSD 内存盘映像，支持 UEFI 和 ZFS 环境。可用于安装 FreeBSD，充当急救盘等。mfsBSD 的下载地址为：[mfsBSD and mfslinux](https://mfsbsd.vx.sk/)。
+mfsBSD 作为一款精简的 FreeBSD 内存盘镜像，支持 UEFI 和 ZFS 环境。可用于安装 FreeBSD，充当急救盘等。mfsBSD 的下载地址为：[mfsBSD and mfslinux](https://mfsbsd.vx.sk/)。
 
 > **警告**
 >
@@ -601,7 +601,7 @@ Ventoy2Disk.sh 参数说明：
 
 Ventoy LiveCD 下载地址为 [安装包](https://www.ventoy.net/cn/download.html)。
 
-Ventoy LiveCD 并非 Ventoy 本体，而是一种用于安装 Ventoy 的内存盘系统映像。参见：Ventoy 团队. Ventoy LiveCD 使用说明[EB/OL]. [2026-03-26]. <https://www.ventoy.net/cn/doc_livecd.html>.
+Ventoy LiveCD 并非 Ventoy 本体，而是一种用于安装 Ventoy 的内存盘系统镜像。参见：Ventoy 团队. Ventoy LiveCD 使用说明[EB/OL]. [2026-03-26]. <https://www.ventoy.net/cn/doc_livecd.html>.
 
 在使用 dd 将镜像写入整块硬盘后，强制重启实例，Ventoy LiveCD 可以正常启动。
 
