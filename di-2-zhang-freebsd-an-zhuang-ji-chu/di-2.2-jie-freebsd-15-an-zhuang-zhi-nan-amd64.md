@@ -761,8 +761,8 @@ Login group [ykla]: # 用户主组
 Login group is ykla. Invite ykla into other groups? []: wheel video # 邀请用户加入其他组，输入“wheel video”（用空格分隔）
 Login class [default]: # 用户分级
 Shell (sh csh tcsh nologin) [sh]: # 用户默认 shell，默认是 sh
-Home directory [/home/ykla]: # 用户家目录路径，普通用户默认在 /home 下面
-Home directory permissions (Leave empty for default): # 用户家目录权限，留空使用默认值
+Home directory [/home/ykla]: # 用户主目录路径，普通用户默认在 /home 下面
+Home directory permissions (Leave empty for default): # 用户主目录权限，留空使用默认值
 Enable ZFS encryption? (yes/no) [no]: # 是否启用 ZFS 加密（15.0 新增，相关解密操作见上文“附录：ZFS 加密根分区的挂载与解密”）
 Use password-based authentication? [yes]:  # 是否启用密码验证
 Use an empty password? (yes/no) [no]:  # 是否使用空密码，即密码为空
@@ -774,7 +774,7 @@ Username    : ykla # 设定的用户名
 Password    : ***** # 设定的用户密码
 Full Name   : # 设定的用户全名
 Uid         : 1001 # 设定的用户 UID
-ZFS dataset : zroot/home/ykla # 家目录对应的 ZFS 数据集（自 14.1 引入）
+ZFS dataset : zroot/home/ykla # 主目录对应的 ZFS 数据集（自 14.1 引入）
 Class       :  # 设定的用户分级
 Groups      : ykla wheel video # 所属的用户组
 Home        : /home/ykla # 设定的用户主（家）目录路径
