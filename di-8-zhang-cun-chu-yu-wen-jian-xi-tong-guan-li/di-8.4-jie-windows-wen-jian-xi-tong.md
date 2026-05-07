@@ -114,7 +114,7 @@ UBLIO（User space Block I/O）是一个用户空间块 I/O 库，用于提升 F
 # fstyp /dev/da0s1
 ```
 
-3. 若在挂载过程中出现错误，可尝试删除休眠文件：
+3. 如果在挂载过程中出现错误，可尝试删除休眠文件：
 
 ```sh
 # ntfs-3g  /dev/da0s1 /mnt/NTFS -o remove_hiberfile
@@ -122,7 +122,7 @@ UBLIO（User space Block I/O）是一个用户空间块 I/O 库，用于提升 F
 
 该命令使用 ntfs-3g 将 **/dev/da0s1** 挂载至 **/mnt/NTFS**，并删除休眠文件以解除文件系统锁定。
 
-4. 若上述方法仍无法解决问题，可尝试修复 **/dev/da0s1** 上的 NTFS 文件系统错误（轻量级修复，功能类似 Windows 系统的 chkdsk）：
+4. 如果上述方法仍无法解决问题，可尝试修复 **/dev/da0s1** 上的 NTFS 文件系统错误（轻量级修复，功能类似 Windows 系统的 chkdsk）：
 
 ```sh
 # ntfsfix /dev/da0s1

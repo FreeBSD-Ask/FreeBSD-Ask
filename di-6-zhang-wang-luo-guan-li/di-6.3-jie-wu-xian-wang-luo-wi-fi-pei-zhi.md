@@ -424,7 +424,7 @@ cryptocaps=b<WEP,TKIP,AES_CCM>
 htcaps=207002d<LDPC,SHORTGI20>
 ```
 
-若输出中包含 `HOSTAP`，则表明该网卡支持 hostap 功能。
+如果输出中包含 `HOSTAP`，则表明该网卡支持 hostap 功能。
 
 确认网卡支持后，销毁现有 `wlan0` 接口并释放其占用的资源：
 

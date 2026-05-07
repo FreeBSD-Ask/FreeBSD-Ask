@@ -72,7 +72,7 @@ FreeBSD 平台上的 TCP BBR 实现由 Netflix 技术团队完成，作为 `tcp_
 # sysctl net.inet.tcp.functions_default
 ```
 
-若输出结果为 `net.inet.tcp.functions_default: bbr`，则 TCP BBR 启用成功。
+如果输出结果为 `net.inet.tcp.functions_default: bbr`，则 TCP BBR 启用成功。
 
 ## 故障排除与未竟事宜
 

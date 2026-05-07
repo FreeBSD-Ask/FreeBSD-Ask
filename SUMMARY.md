@@ -178,6 +178,7 @@
 * [17.3 IPFilter（IPF）](di-17-zhang-fang-huo-qiang/di-17.3-jie-ipfilter-ipf.md)
 * [17.4 ipfirewall（IPFW）](di-17-zhang-fang-huo-qiang/di-17.4-jie-ipfirewall-ipfw.md)
 * [17.5 Fail2Ban 配置（基于 IPFW、PF 与 IPF）](di-17-zhang-fang-huo-qiang/di-17.5-jie-fail2ban-pei-zhi-ji-yu-ipfw-pf-yu-ipf.md)
+* [17.6 blocklistd](di-17-zhang-fang-huo-qiang/di-17.6-jie-blocklistd.md)
 
 ## 第 18 章 安全
 
