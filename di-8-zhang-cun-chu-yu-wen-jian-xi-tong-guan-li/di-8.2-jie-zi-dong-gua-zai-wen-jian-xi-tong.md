@@ -86,7 +86,7 @@ SpaceSniffer.exe
 
 ## DSBMD 自动挂载
 
-DSBMD（Desktop Scriptable Block Device Manager Daemon）是 FreeBSD 的介质和文件系统类型检测守护进程，采用客户端-服务器架构设计，允许客户端以受控方式挂载存储设备。其默认配置即可实现基本功能。
+DSBMD（Desktop Scriptable Block Device Manager Daemon）是 FreeBSD 的介质和文件系统类型检测守护进程，采用客户端-服务器架构设计，允许客户端以受控方式挂载存储设备。其默认配置即可自动检测并挂载可移动介质。
 
 ### 安装 DSBMD
 
@@ -196,8 +196,6 @@ usermount = true
 ```sh
 vfs.usermount=1
 ```
-
-该配置允许普通用户执行文件系统挂载操作。
 
 - 启用 `usermount` 时，挂载程序将以普通用户身份执行；未启用 `usermount` 时，挂载程序以 `root` 特权用户身份执行。
 - 无论是否启用 `usermount`，挂载点的属主均为发起请求的客户端用户。
