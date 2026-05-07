@@ -29,7 +29,7 @@
 | ![UNIX 网络编程 卷 1：套接字联网 API（第 3 版）](../.gitbook/assets/unix1.png) <br><br> 《UNIX 网络编程 卷 1：套接字联网 API（第 3 版）》 | [美] W. Richard Stevens、Bill Fenner、Andrew M. Rudoff 等著 | 978-7-115-51779-1 <br><br> 人民邮电出版社 | 网络编程技术书籍，系统讲解套接字 API、TCP/IP 协议栈实现等网络编程技术 |
 | ![UNIX 网络编程 卷 2：进程间通信（第 2 版）](../.gitbook/assets/unix2.png) <br><br> 《UNIX 网络编程 卷 2：进程间通信（第 2 版）》 | [美] W. Richard Stevens 著 | 978-7-115-51780-7 <br><br> 人民邮电出版社 | 进程间通信技术书籍，详细讲解管道、消息队列、共享内存、信号量等 IPC 机制 |
 | ![深入理解 UNIX 系统内核](../.gitbook/assets/unixinternals.png) <br><br> 《深入理解 UNIX 系统内核》 | [美] Uresh Vahalia 著<br><br>李雨、薛磊、黄庆新 等译 | 978-7-111-49145-3 <br><br> 机械工业出版社 | UNIX 内核技术书籍，讲解进程管理、内存管理、文件系统等内核设计原理 |
-| ![4.4BSD 操作系统设计与实现](../.gitbook/assets/4BSD.png) <br><br> 《4.4BSD 操作系统设计与实现》 | [美] Marshall Kirk McKusick 等著 <br><br>李善平、刘文峰、马天驰 等译 | 978-7-111-36647-8 <br><br> 机械工业出版社 | 4.4BSD 操作系统技术书籍，讲解 BSD 系统的设计与实现细节 |
+| ![4.4BSD 操作系统设计与实现](../.gitbook/assets/4bsd.png) <br><br> 《4.4BSD 操作系统设计与实现》 | [美] Marshall Kirk McKusick 等著 <br><br>李善平、刘文峰、马天驰 等译 | 978-7-111-36647-8 <br><br> 机械工业出版社 | 4.4BSD 操作系统技术书籍，讲解 BSD 系统的设计与实现细节 |
 
 ### 开源与自由软件运动
 
@@ -56,7 +56,7 @@
 
 | 封面/书名 | 作者/译者 | ISBN/出版社 | 说明 |
 | --------- | --------- | ----------- | ---- |
-| ![FreeBSD 技术内幕](../.gitbook/assets/Unleashed.png) <br><br> 《FreeBSD 技术内幕》 | [美] Michael Urban、Brian Tiemann 等著 <br><br> 智慧东方工作室 译 | 978-7-111-10201-4 <br><br> 机械工业出版社 | FreeBSD 技术书籍，出版于 2002 年，系统讲解 FreeBSD 系统架构与核心组件。部分内容如系统架构概述仍具参考价值，适合了解 FreeBSD 的发展脉络 |
+| ![FreeBSD 技术内幕](../.gitbook/assets/unleashed.png) <br><br> 《FreeBSD 技术内幕》 | [美] Michael Urban、Brian Tiemann 等著 <br><br> 智慧东方工作室 译 | 978-7-111-10201-4 <br><br> 机械工业出版社 | FreeBSD 技术书籍，出版于 2002 年，系统讲解 FreeBSD 系统架构与核心组件。部分内容如系统架构概述仍具参考价值，适合了解 FreeBSD 的发展脉络 |
 | ![深入理解 FreeBSD 设备驱动程序开发](../.gitbook/assets/qudong.png) <br><br> 《深入理解 FreeBSD 设备驱动程序开发》 | [加] Joseph Kong 著 <br><br> 陈毅东 译 | 978-7-111-41157-4 <br><br> 机械工业出版社 | FreeBSD 驱动开发技术书籍，详细讲解内核模块编程、设备驱动架构和驱动程序开发技术 |
 
 以下是 FreeBSD 内核设计的权威著作，内容深入且专业，为高级研究者提供核心技术参考。
@@ -94,7 +94,7 @@
 
 | 封面/书名 | 作者/译者 | ISBN/出版社 | 说明 |
 | --------- | --------- | ----------- | ---- |
-| ![Solaris 性能与工具](../.gitbook/assets/Solaris.png) <br><br> 《Solaris 性能与工具》 | [美] Richard McDougall、Jim Mauro、Brendan Gregg 等著 <br><br> Sun 中国工程研究院 译 | 978-7-111-21403-8 <br><br> 机械工业出版社 | 介绍常用性能监测工具及 DTrace 使用方法。本书基于 Solaris 10，同时适用于 FreeBSD。系统性能调优权威指南，详解性能分析工具与 DTrace 动态跟踪技术 |
+| ![Solaris 性能与工具](../.gitbook/assets/solaris.png) <br><br> 《Solaris 性能与工具》 | [美] Richard McDougall、Jim Mauro、Brendan Gregg 等著 <br><br> Sun 中国工程研究院 译 | 978-7-111-21403-8 <br><br> 机械工业出版社 | 介绍常用性能监测工具及 DTrace 使用方法。本书基于 Solaris 10，同时适用于 FreeBSD。系统性能调优权威指南，详解性能分析工具与 DTrace 动态跟踪技术 |
 
 | 封面/书名 | 作者/译者 | ISBN/出版社 | 说明 |
 | --------- | --------- | ----------- | ---- |
@@ -119,7 +119,7 @@
 
 | 封面/书名 | 作者 | ISBN/出版社 |
 | --------- | ---- | ----------- |
-| ![Absolute FreeBSD, 3rd Edition: The Complete Guide to FreeBSD](../.gitbook/assets/AbsoluteBSD.png) <br><br> ***Absolute FreeBSD, 3rd Edition: The Complete Guide to FreeBSD*** | Michael W. Lucas | 978-1-59327-892-2 <br><br> No Starch Press |
+| ![Absolute FreeBSD, 3rd Edition: The Complete Guide to FreeBSD](../.gitbook/assets/absolutebsd.png) <br><br> ***Absolute FreeBSD, 3rd Edition: The Complete Guide to FreeBSD*** | Michael W. Lucas | 978-1-59327-892-2 <br><br> No Starch Press |
 
 *Absolute FreeBSD* 系列的前身 *Absolute BSD: The Ultimate Guide to FreeBSD*（ISBN 1-886411-74-3）初版于 2002 年，第二版起更名为 *Absolute FreeBSD*，第三版出版于 2018 年。该书作为 FreeBSD 入门综合指南，内容覆盖系统安装、配置管理、基本运维等主题。参见：Lucas M W. Absolute BSD：The Ultimate Guide to FreeBSD[M]. San Francisco：No Starch Press，2002. ISBN: 1-886411-74-3.
 
