@@ -176,7 +176,7 @@ Removing user (test2): home passwd.
 
 所有用户都可以使用 chpass(1) 更改其默认 shell 和账户的个人信息。chpass 源代码位于 `usr.bin/chpass`。
 
-示例：普通用户使用 nvi 文本编辑器打开当前用户信息进行修改。
+示例：普通用户使用 nvi 文本编辑器打开当前用户信息并修改。
 
 ```sh
 $ chpass ykla	# 修改 ykla 的账户信息数据库
