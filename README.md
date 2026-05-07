@@ -82,7 +82,7 @@ FreeBSD 中文社区未通过其他域名部署本书，唯一官方域名为 `b
 
 请优先考虑向 FreeBSD 基金会捐赠。
 
-![捐赠 FreeBSD 基金会](.gitbook/assets/proud_donor.png)
+![捐赠 FreeBSD 基金会](.gitbook/assets/proud-donor.png)
 
 [前往捐赠 FreeBSD 基金会](https://freebsdfoundation.org/donate-to-freebsd-foundation/)
 
