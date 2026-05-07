@@ -72,7 +72,7 @@ zroot/ROOT/15.0-RELEASE     8K  83.8G  10.6G  /
                         └── FreeBSD-base.conf # pkgbase 源配置文件
 ```
 
-- 将启动环境（实际上是一个数据集）15.0-RELEASE 挂载到下面的路径中
+- 将启动环境（实际上是一个数据集）15.0-RELEASE 挂载到指定路径
 
 ```sh
 # bectl mount 15.0-RELEASE /mnt/upgrade
@@ -143,7 +143,7 @@ Locking pkg-2.4.2_1
 
 > **警告**
 >
-> 在接受 `Do you accept this risk and wish to continue? (y/n)` 这个风险提示后就没有其他二次确认了！
+> 在接受 `Do you accept this risk and wish to continue? (y/n)` 该风险提示后便无二次确认步骤！
 
 ```sh
 # chroot /mnt/upgrade /usr/libexec/flua pkgbasify.lua  # 使用 pkgbasify 进行转换
