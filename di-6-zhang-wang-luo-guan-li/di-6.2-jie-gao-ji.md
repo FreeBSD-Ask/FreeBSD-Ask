@@ -20,13 +20,13 @@ Destination        Gateway            Flags         Netif Expire
 default            192.168.179.2      UGS             em0   # 默认路由，通过 em0 接口
 localhost          link#3             UH              lo0   # 回环地址，使用 lo0 接口
 192.168.5.0/24     link#2             U               em1   # 192.168.5.0/24 子网
-192.168.5.16       link#3             UHS             lo0   # 本地主机地址 192.168.5.16，回环接口 lo0
+192.168.5.16       link#3             UHS             lo0   # 本地主机地址 192.168.5.16
 192.168.179.0/24   link#1             U               em0   # 192.168.179.0/24 子网
-192.168.179.128    link#3             UHS             lo0   # 本地主机地址 192.168.179.128，回环接口 lo0
+192.168.179.128    link#3             UHS             lo0   # 本地主机地址 192.168.179.128
 
 Internet6:	# IPv6
 Destination        Gateway            Flags         Netif Expire
-::/96              link#3             URS             lo0   # IPv4 映射 IPv6 地址块，回环接口 lo0
+::/96              link#3             URS             lo0   # IPv4 映射 IPv6 地址块
 default            fe80::5%em1        UG              em1   # 默认 IPv6 路由，下一跳是链路本地地址 fe80::5，标志 UG 表示可达且为网关
 localhost          link#3             UHS             lo0   # IPv6 本地回环地址 ::1
 ::ffff:0.0.0.0/96  link#3             URS             lo0   # IPv4 映射 IPv6 地址
