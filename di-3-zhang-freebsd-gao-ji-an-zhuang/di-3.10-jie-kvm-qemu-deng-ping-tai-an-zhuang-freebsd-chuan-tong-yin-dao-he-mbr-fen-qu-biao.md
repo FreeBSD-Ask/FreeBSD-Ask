@@ -144,7 +144,7 @@ boot # 输入 boot 后按回车从 mfsBSD 继续启动
 
 ## 为 mfsBSD 配置网络
 
-mfsBSD 的 `root` 默认密码为 `mfsroot`。可以使用 SSH 工具连接后进行安装。
+mfsBSD 的 `root` 默认密码为 `mfsroot`。可以使用 SSH 工具连接后安装。
 
 > **技巧**
 >
