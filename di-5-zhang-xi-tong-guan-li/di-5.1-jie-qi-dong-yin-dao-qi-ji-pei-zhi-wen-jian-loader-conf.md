@@ -1,4 +1,4 @@
-# 5.1 启动引导器及配置文件（loader.conf）
+﻿# 5.1 启动引导器及配置文件（loader.conf）
 
 FreeBSD 的启动过程分为三个核心阶段：固件初始化（BIOS 或 UEFI）→ boot0/boot1 链式引导 → loader 引导，其中 loader 阶段通过 loader.conf 实现参数化配置。本节解析启动流程并逐一说明 loader.conf 的关键配置项。
 
@@ -590,7 +590,7 @@ loader_logo="fbsdbw"
 
 - FreeBSD Forums. customize boot loader logo[EB/OL]. [2026-03-26]. <https://forums.freebsd.org/threads/customize-boot-loader-logo.72903/>. 讨论如何更换引导加载程序默认 Logo 的方法。
 - FreeBSD Forums. How to change the FreeBSD logo which appears as soon it boots with that of the little devil[EB/OL]. [2026-03-26]. <https://forums.freebsd.org/threads/how-to-change-the-freebsd-logo-which-appears-as-soon-it-boots-with-that-of-the-little-devil.85934/>. 询问将启动 Logo 替换为小恶魔图标的具体操作。
-- FreeBSD Project. loader: Load a splash screen if "splash" variable is defined[EB/OL]. [2026-03-26]. <https://reviews.freebsd.org/D45932>. 为引导加载程序添加 splash 画面加载功能的代码审查。
+- FreeBSD Project. loader: Load a splash screen if “splash” variable is defined[EB/OL]. [2026-03-26]. <https://reviews.freebsd.org/D45932>. 为引导加载程序添加 splash 画面加载功能的代码审查。
 
 ## 课后习题
 
