@@ -234,7 +234,7 @@ psk="WIFI 密码"
 
 ## 博通（Broadcom）网卡驱动
 
-博通（Broadcom）是另一家常用的无线网卡厂商。FreeBSD 内置的 Broadcom（博通）网卡驱动主要有两种：`bwi` 和 `bwn`，`bwi` 支持较旧型号，`bwn` 支持较新型号。两者的支持范围部分重叠，但 `bwn` 对硬件的兼容性更好。
+博通（Broadcom）是另一家常用的无线网卡厂商。FreeBSD 内置的 Broadcom（博通）网卡驱动主要有两种：`bwi` 和 `bwn`，`bwi` 支持较旧型号，`bwn` 支持较新型号。两者的支持范围部分重叠，但 `bwn` 对硬件的兼容性更好。需要注意的是，这两个驱动仅支持 802.11b/g，现代 802.11ac/ax 博通网卡在 FreeBSD 上尚无原生驱动支持。
 
 关于驱动选择的详细信息，请参考 Fuller L. Broadcom WiFi Improvements for FreeBSD[EB/OL]. (2018-01-22)[2026-04-05]. <https://web.archive.org/web/20240203102135/https://www.landonf.org/code/freebsd/Broadcom_WiFi_Improvements.20180122.html>.
 
