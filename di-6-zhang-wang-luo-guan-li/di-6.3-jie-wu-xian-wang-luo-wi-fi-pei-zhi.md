@@ -445,7 +445,7 @@ htcaps=207002d<LDPC,SHORTGI20>
 
 ## 附录：图形化网络配置工具
 
-FreeBSD 提供了图形化网络管理工具，功能类似于 Linux 的 Plasma NetworkManager 或 NetworkManager。
+FreeBSD 也提供了图形化网络管理工具，功能类似于 Linux 的 NetworkManager：
 
 使用 pkg 安装：
 
