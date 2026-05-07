@@ -159,7 +159,7 @@ zroot  77.5G  2.20G  75.3G        -         -     2%     2%  1.00x    ONLINE  -	
 
 ### `gpart: table 'ada0' is corrupt: Operation not permitted`
 
-提示分区表错误，需要重置 GPT 分区表。`gpart recover` 命令会从备份的 GPT 表头恢复主分区表信息。此问题多发生在直接导入的裸磁盘映像上。
+提示分区表错误，需要重置 GPT 分区表。`gpart recover` 命令会从备份的 GPT 表头恢复主分区表信息。此问题多发生在直接导入的裸磁盘镜像上。
 
 ```sh
 # gpart recover ada0
