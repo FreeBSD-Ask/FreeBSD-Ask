@@ -490,9 +490,9 @@ LLVM 项目是一组模块化和可重用的编译程序和工具链技术。Cla
 
 FreeBSD 项目集群检测到黑客入侵，虽然未发现明显破坏，但仍然花费数月进行审计与还原。
 
-- 2013 年 2 月 28 日从 CVS 迁移到 Subversion
+- 2013 年 2 月 28 日完成 Ports 从 CVS 到 Subversion 的迁移
 
-由于大多数 port 已经在 Subversion 中进行开发，项目于 2013 年 2 月 28 日正式完成了从 CVS 到 Subversion 的迁移。此后，FreeBSD Ports 不再使用 CVS。
+Ports 集合自 2012 年 7 月起进入 CVS 与 SVN 双轨运行期，项目于 2013 年 2 月 28 日正式关闭 CVS 访问，彻底完成了向 Subversion 的过渡。此后，FreeBSD Ports 不再使用 CVS。
 
 - 2013 年 9 月 17 日 OpenZFS 项目启动
 
