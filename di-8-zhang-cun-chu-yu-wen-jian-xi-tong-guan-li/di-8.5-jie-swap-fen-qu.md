@@ -35,7 +35,7 @@ swap 空间是操作系统内存管理的重要组成部分。
 8589934592 bytes transferred in 4.071005 secs (2110028088 bytes/sec)
 ```
 
-设置交换文件的访问权限，仅允许所有者进行读写操作：
+设置交换文件的访问权限，仅允许所有者读写：
 
 ```sh
 # chmod 0600 /usr/swap0
@@ -95,7 +95,7 @@ swapfile="/usr/swap0"
 /dev/zvol/zroot/swap none swap sw 0 0
 ```
 
-写入配置后，可使用命令 `swapon -a` 进行检查（`-a` 表示激活 **/etc/fstab** 中所有 swap 条目），确保无错误输出。
+写入配置后，可使用命令 `swapon -a` 检查（`-a` 表示激活 **/etc/fstab** 中所有 swap 条目），确保无错误输出。
 
 ### 参考文献
 
