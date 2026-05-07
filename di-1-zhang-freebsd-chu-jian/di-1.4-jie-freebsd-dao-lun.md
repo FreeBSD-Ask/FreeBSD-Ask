@@ -396,7 +396,7 @@ FreeBSD 项目诞生于 1993 年初，部分源于非官方 386BSD 补丁包（U
 
 - 1994 年 8 月 FreeBSD Ports
 
-FreeBSD 的 Ports 和软件包为用户和管理员提供了一种简便的安装应用程序的方式。Ports 现在提供了多达 34,000 个 port。它们首次现身于 1994 年，当时 Jordan Hubbard 将“port make macros”提交到 FreeBSD 的 CVS 存储库中，目的是给他的软件包安装套件“Makefile”打补丁。
+FreeBSD 的 Ports 和软件包为用户和管理员提供了一种简便的安装应用程序的方式。Ports 现在提供了多达 34,000 个 port。它们首次现身于 1994 年，当时 Jordan Hubbard 将“port make macros”提交到 FreeBSD 的 CVS 存储库中，目的是给他的软件包安装套件 **Makefile** 打补丁。
 
 - 1994 年 11 月 22 日 IPFW
 
