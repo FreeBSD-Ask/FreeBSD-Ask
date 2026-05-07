@@ -149,9 +149,9 @@ FreeBSD 的目录层次由 `hier(7)` 定义。与 FHS 相比，FreeBSD 的目录
 | **/proc** | Linux procfs（§6.1.5） | procfs(4) 已废弃，仅出于兼容目的保留，默认不使用 |
 | 共享库 | **/lib** 关键库，**/usr/lib** 非关键及编程库，**/lib** 兼容 | **/lib** 关键库，**/usr/lib** 共享/ar 库，**/usr/lib32** |
 | 内核 | **/** 或 **/boot** | **/boot/kernel/**，备用 **/boot/kernel.old/** |
-| **/home** | 可选，用户家目录 | 用户家目录 |
+| **/home** | 可选，用户主目录 | 用户主目录 |
 | **/var/empty** | 未定义 | 由 sshd(8) 特权分离 chroot 使用 |
-| **/nonexistent** | 未定义 | 无家目录账户的占位符 |
+| **/nonexistent** | 未定义 | 无主目录账户的占位符 |
 
 FHS 按可共享/不可共享、静态/可变两个维度将文件分层：**/usr** 可共享只读，**/var** 可变，根文件系统仅需满足引导、恢复、修复的最低需求。FreeBSD 遵循此原则，基本系统限定在 `hier(7)` 定义目录，第三方软件限定在 **/usr/local**。
 
