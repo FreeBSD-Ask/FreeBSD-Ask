@@ -14,7 +14,7 @@ sudo 和 doas 通过配置文件定义权限规则，使特定用户无需 root 
 
 doas 是一款从 OpenBSD 移植的命令行工具，可作为类 Unix 系统中广泛使用的 sudo 的替代方案。
 
-doas 的作者是 Ted Unangst，首次出现于 OpenBSD 5.8。借助 doas，用户可借助提升的权限（通常以 root 身份）执行命令，兼顾简便与安全。与 sudo 不同，doas 强调配置简洁与安全性，专注于精简的权限委派，摒弃了庞杂的配置选项。
+doas 的作者是 Ted Unangst，首次出现于 OpenBSD 5.8。借助 doas，用户可以提升的权限（通常以 root 身份）执行命令，兼顾简便与安全。与 sudo 不同，doas 强调配置简洁与安全性，专注于精简的权限委派，摒弃了庞杂的配置选项。
 
 使用时可将 `sudo` 直接替换为 `doas`，二者在基本使用场景下功能等价。但 doas 不支持 sudo 的 `NOPASSWD` 标签之外的细粒度权限控制（如时间戳超时、命令参数限制、插件架构等）。
 
@@ -173,7 +173,7 @@ $ sudo /usr/sbin/service webservice start
 user1   ALL=(ALL)       NOPASSWD:ALL
 ```
 
-如果希望 `wheel` 组中的用户名也免密码，则如下：
+如果希望 `wheel` 组中的用户也免密码，则如下：
 
 ```sh
 %wheel   ALL=(ALL)       NOPASSWD:ALL
