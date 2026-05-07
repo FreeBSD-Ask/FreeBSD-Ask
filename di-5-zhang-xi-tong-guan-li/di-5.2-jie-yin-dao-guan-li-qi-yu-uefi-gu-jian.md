@@ -255,7 +255,7 @@ grub-install: error: unknown filesystem.
 
 在多系统环境下，频繁进入 BIOS 固件界面切换操作系统效率较低。可借助 [rEFInd](https://www.rodsbooks.com/refind/) 实现类似于 Clover 的可视化启动菜单效果，在开机时直观地选择要进入的操作系统。
 
-`rEFInd` 派生自 `rEFIt`，其名称结合了"refind"（意为"重新发现"或"改进"）与"EFI"（Extensible Firmware Interface，可扩展固件接口），主要用于管理 UEFI 启动，提供图形化界面与灵活的配置选项。
+`rEFInd` 派生自 `rEFIt`，其名称结合了“refind”（意为“重新发现”或“改进”）与“EFI”（Extensible Firmware Interface，可扩展固件接口），主要用于管理 UEFI 启动，提供图形化界面与灵活的配置选项。
 
 首先需要下载 rEFInd 软件。打开下载页面 [Getting rEFInd from Sourceforge](https://www.rodsbooks.com/refind/getting.html)，点击 `A binary zip file` 链接开始下载。本节撰写时使用的版本为 `refind-bin-0.14.2.zip`。
 
