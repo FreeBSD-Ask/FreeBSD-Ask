@@ -214,7 +214,7 @@ See /usr/local/share/doc/bash-completion/README.md for more information.
 
 ### 配置 Bash
 
-安装完 Bash 及相关补全库后，需要进行配置才能正常使用。
+安装完 Bash 及相关补全库后，需要配置才能正常使用。
 
 ```sh
 chsh -s /usr/local/bin/bash   # 将当前用户的默认登录 Shell 切换为 Bash
