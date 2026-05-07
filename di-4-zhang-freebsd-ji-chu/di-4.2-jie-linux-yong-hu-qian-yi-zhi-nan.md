@@ -246,7 +246,7 @@ DISTRIB_DESCRIPTION="Ubuntu 24.04 LTS"
 
 ![Ubuntu 24.04 内部错误](../.gitbook/assets/nbcw.jpg)
 
-![Ubuntu 24.10](../.gitbook/assets/ubuntu24-10.png)
+![Ubuntu 24.10](../.gitbook/assets/ubuntu24.10.png)
 
 ### Fedora Linux
 
