@@ -853,7 +853,7 @@ nda0: <Fanxiang S530Q 500GB SN14243 FX240960178>
 nda0: Serial Number FX240960178
 nda0: nvme version 1.4
 nda0: 476940MB (976773168 512 byte sectors)
-# NVMe 规范版本 1.4。476940 MB = 500 GB × 1000 / 1024 ≈ 476.9 GiB。
+# NVMe 规范版本 1.4。476940 MiB ÷ 1024 ≈ 465.76 GiB。
 # 976773168 × 512 B = 500.107 GB（多出 107 MB 用于固件/bad block 映射）。
 
 # ===== 挂载根文件系统 =====
