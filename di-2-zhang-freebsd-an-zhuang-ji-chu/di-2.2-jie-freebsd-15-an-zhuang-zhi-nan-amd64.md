@@ -264,7 +264,7 @@ ada0 recovered
 ```
 
 请根据实际硬盘设备确定 `ada0` 参数（如可能是 `da0`、`nda0` 等）。
->
+
 > 如果不明确当前硬盘设备名，可参考图示命令进行查看。
 >
 > ![查看硬盘设备](../.gitbook/assets/view-disk-devices.png)
