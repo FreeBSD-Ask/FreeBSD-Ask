@@ -217,7 +217,6 @@ FreeBSD 平台上的 TCP BBR 实现由 Netflix 技术团队完成，作为 `tcp_
 
 使用 RACK 或 BBR 栈时可能遇到以下问题：
 
-#### 局域网速度良好但互联网速度不佳
 
 在测试环境中观察到，RACK 和 BBR 栈在局域网环境中的性能表现良好，均优于默认 TCP 栈；但在互联网环境中的性能表现存在一定局限性：测试数据显示，RACK 栈的互联网传输速度约为默认栈的三分之一，BBR 栈约为默认栈的六分之一。该测试在特定网络条件下完成，实际性能可能因网络环境、硬件配置和流量特征等因素而异。
 
@@ -229,8 +228,6 @@ FreeBSD 平台上的 TCP BBR 实现由 Netflix 技术团队完成，作为 `tcp_
 - Cheng Y, Cardwell N, Dukkipati N, et al. The RACK-TLP Loss Detection Algorithm for TCP: RFC 8985[S/OL]. (2021-02)[2026-04-17]. <https://www.rfc-editor.org/rfc/rfc8985>. RACK-TLP 丢包检测算法的 IETF 标准文档，由 Google 的 Yuchung Cheng、Neal Cardwell 等人撰写。
 - FreeBSD Project. tcp -- Internet Transmission Control Protocol[EB/OL]. [2026-04-14]. <https://man.freebsd.org/cgi/man.cgi?tcp(4)>. TCP 协议栈手册页，描述传输控制协议实现与套接字选项。
 - FreeBSD Project. ip -- Internet Protocol[EB/OL]. [2026-04-14]. <https://man.freebsd.org/cgi/man.cgi?ip(4)>. IP 协议手册页，描述网际协议实现与套接字选项。
-- FreeBSD Project. sysctl -- get or set kernel state[EB/OL]. [2026-04-14]. <https://man.freebsd.org/cgi/man.cgi?sysctl(8)>. 内核状态管理工具手册页，描述 MIB 变量的读取与设置。
-- FreeBSD Project. sysctl.conf -- kernel state defaults[EB/OL]. [2026-04-14]. <https://man.freebsd.org/cgi/man.cgi?sysctl.conf(5)>. 内核状态默认配置文件格式手册页。
 - FreeBSD Project. FreeBSD Handbook, Chapter 32: Advanced Networking[EB/OL]. [2026-04-14]. <https://docs.freebsd.org/en/books/handbook/advanced-networking/>. FreeBSD 手册中关于高级网络配置的指南。
 
 ## 课后习题
