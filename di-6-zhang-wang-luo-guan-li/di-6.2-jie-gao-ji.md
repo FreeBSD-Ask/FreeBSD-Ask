@@ -125,11 +125,11 @@ traceroute6 to freebsd.org (2610:1c1:1:606c::50:15) from 240e:341:22b:ae00:f534:
 | ---- | ---- | ---- |
 | 1 | `*` | 本地网络第一跳无响应 |
 | 2 | `240e:c::201 (240e:c::201)` | 家庭路由器/光猫的 WAN 接口 |
-| 3、4 | `*` | 骨干网前级节点无响应，可能丢弃 ICMPv6 |
+| 3、4 | `*` | 骨干网前级节点无响应，可能丢弃了 ICMPv6 |
 | 5 | `240e::1:11:46:5c02 (240e::1:11:46:5c02)` | 中国电信核心骨干路由器，国内长途汇聚节点 |
 | 6 | `240e::f:1:6601:503 (240e::f:1:6601:503)` | 中国电信国际出口前的骨干节点，部分探测包丢失 |
 | 7 | `240e:0:a::c9:360d (240e:0:a::c9:360d), 240e:0:a::c9:3649 (240e:0:a::c9:3649)` | 中国电信向海外出口的跨洲骨干路由器 |
-| 8 | `*` | 无响应节点，可能 ICMPv6 被丢弃 |
+| 8 | `*` | 无响应节点，可能丢弃了 ICMPv6 |
 | 9 | `zayo.ae10.mpr4.sjc7.us.zip.zayo.com (2001:438:ffff::407e:2f9)` | Zayo 美国加州圣何塞骨干网（Zip Zayo）入口节点 |
 | 10 | `ae34.mpr1.ewr4.us.zip.zayo.com (2001:438:ffff::407d:1455)` | Zayo 美国纽瓦克骨干网节点，负责东海岸流量汇聚 |
 | 11 | `2001:438:fffe::24ba (2001:438:fffe::24ba)` | Zayo 美国骨干网最后一跳，接近 NYInternet 入口 |
@@ -139,13 +139,13 @@ traceroute6 to freebsd.org (2610:1c1:1:606c::50:15) from 240e:341:22b:ae00:f534:
 
 ## TCP/IP 协议栈
 
-传输控制协议（Transmission Control Protocol，TCP）是互联网协议族（Internet Protocol Suite）中的核心传输层协议，其软件实现体系称为 TCP 栈（因采用层次化结构组织，因此称"栈"）。Vint Cerf 和 Bob Kahn 于 1974 年设计了 TCP 协议，规范定义在 RFC 793。
+传输控制协议（Transmission Control Protocol，TCP）是互联网协议族（Internet Protocol Suite）中的核心传输层协议，其软件实现体系称作 TCP 栈（因采用层次化结构组织，因此称"栈"）。Vint Cerf 和 Bob Kahn 于 1974 年设计了 TCP 协议，RFC 793 定义了该规范。
 
 TCP 栈提供端到端的可靠数据传输、拥塞控制、流量控制等关键功能。
 
 不同于其他主流操作系统，FreeBSD 创新性地实现了多 TCP 栈共存架构，该架构允许系统同时加载多个 TCP 协议栈实现，并可为不同的网络连接或系统全局选用不同的 TCP 栈。
 
-当前主要开发与维护工作集中于 RACK 栈（RACK 算法最初由 Google 开发，FreeBSD 的 tcp_rack 栈实现由 Netflix 的 Randall Stewart 完成）和基础栈（基于 4.4BSD 经典栈实现演化而来）。
+当前主要开发与维护工作集中于 RACK 栈（RACK 算法最初出自 Google，FreeBSD 的 tcp_rack 栈实现出自 Netflix 的 Randall Stewart）和基础栈（基于 4.4BSD 经典栈实现演化而来）。
 
 ### 使用 RACK 栈
 
