@@ -2,7 +2,7 @@
 
 ## bsdconfig 系统配置工具概述
 
-`bsdconfig` 是 FreeBSD 系统的文本界面配置工具，用于在系统安装完成后进行系统配置。与 `bsdinstall`（安装过程中使用）不同，`bsdconfig` 专注于已安装系统的配置管理。
+`bsdconfig` 是 FreeBSD 系统的文本界面配置工具，用于在系统安装完成后配置系统。与 `bsdinstall`（安装过程中使用）不同，`bsdconfig` 专注于已安装系统的配置管理。
 
 `bsdconfig` 的源代码托管在 <https://github.com/freebsd/freebsd-src/tree/main/usr.sbin/bsdconfig>
 
@@ -12,7 +12,7 @@
 
 ## bsdconfig 主菜单的功能与操作
 
-`bsdconfig` 主菜单提供了系统配置的各个功能模块。如已安装 FreeBSD，可使用此菜单对系统进行一定程度的自定义配置。可使用 pkg 工具安装额外的第三方软件，这些软件不包含在基本系统中。
+`bsdconfig` 主菜单提供了系统配置的各个功能模块。如已安装 FreeBSD，可使用此菜单对系统做一定程度的自定义配置。可使用 pkg 工具安装额外的第三方软件，这些软件不包含在基本系统中。
 
 执行命令：
 
