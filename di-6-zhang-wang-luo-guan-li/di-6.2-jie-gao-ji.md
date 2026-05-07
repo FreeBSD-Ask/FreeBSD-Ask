@@ -139,7 +139,7 @@ traceroute6 to freebsd.org (2610:1c1:1:606c::50:15) from 240e:341:22b:ae00:f534:
 
 ## TCP/IP 协议栈
 
-传输控制协议（Transmission Control Protocol，TCP）是互联网协议族（Internet Protocol Suite）中的核心传输层协议，其软件实现体系称作 TCP 栈（因采用层次化结构组织，因此称"栈"）。Vint Cerf 和 Bob Kahn 于 1974 年设计了 TCP 协议，RFC 793 定义了该规范。
+传输控制协议（Transmission Control Protocol，TCP）是互联网协议族（Internet Protocol Suite）中的核心传输层协议，其软件实现体系称作 TCP 栈（因采用层次化结构组织，因此称"栈"）。TCP 的概念可追溯至 1974 年 Vint Cerf 和 Bob Kahn 的网络互联协议构想，TCP 与 IP 于 1978 年左右完成分离并独立演进，最终规范由 1981 年的 RFC 793 定义。
 TCP 栈提供端到端的可靠数据传输、拥塞控制、流量控制等关键功能。
 
 不同于其他主流操作系统，FreeBSD 创新性地实现了多 TCP 栈共存架构，该架构允许系统同时加载多个 TCP 协议栈实现，并可为不同的网络连接或系统全局选用不同的 TCP 栈。
