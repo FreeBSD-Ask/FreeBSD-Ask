@@ -200,7 +200,7 @@ FreeBSD 的目录结构设计遵循以下原则：
 │   │   ├── doc 杂项文档
 │   │   ├── dtrace 动态跟踪编译程序脚本，参见 dtrace(1)
 │   │   ├── examples 用户和程序员的各种示例
-│   │   ├── firmware 用户态程序加载的固件映像
+│   │   ├── firmware 用户态程序加载的固件镜像
 │   │   ├── games BSD 传统游戏使用的 ASCII 文本文件，参见 intro(6)
 │   │   ├── keys 已知可信和已撤销的密钥
 │   │   │   └── pkg pkg(7) 和 pkg(8) 的指纹
