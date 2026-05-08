@@ -111,6 +111,7 @@
 * [9.3 我的世界（Minecraft）](di-9-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-9.3-jie-wo-de-shi-jie-minecraft.md)
 * [9.4 科研和专业计算工具](di-9-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-9.4-jie-ke-yan-he-zhuan-ye-ji-suan-gong-ju.md)
 * [9.5 Steam 客户端](di-9-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-9.5-jie-steam-ke-hu-duan.md)
+* [9.6 Wine 配置](di-9-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-9.6-jie-wine-pei-zhi.md)
 
 ## 第 10 章 系统管理
 
@@ -150,14 +151,14 @@
 * [13.5 Slackware Linux 兼容层](di-13-zhang-linux-er-jin-zhi-jian-rong-ceng/di-13.5-jie-slackware-linux-jian-rong-ceng.md)
 * [13.6 openSUSE 兼容层](di-13-zhang-linux-er-jin-zhi-jian-rong-ceng/di-13.6-jie-opensuse-jian-rong-ceng.md)
 * [13.7 Gentoo Linux 兼容层](di-13-zhang-linux-er-jin-zhi-jian-rong-ceng/di-13.7-jie-gentoo-linux-jian-rong-ceng.md)
-* [13.8 故障排除与未竟事宜](di-13-zhang-linux-er-jin-zhi-jian-rong-ceng/di-13.8-jie-gu-zhang-pai-chu-yu-wei-jing-shi-yi.md)
+* [13.8 Linux Jail](di-13-zhang-linux-er-jin-zhi-jian-rong-ceng/di-13.8-jie-linux-jail.md)
+* [13.9 故障排除与未竟事宜](di-13-zhang-linux-er-jin-zhi-jian-rong-ceng/di-13.9-jie-gu-zhang-pai-chu-yu-wei-jing-shi-yi.md)
 
 ## 第 14 章 基于 Linux 兼容层的应用
 
 * [14.1 QQ（Linux 版）](di-14-zhang-ji-yu-linux-jian-rong-ceng-de-ying-yong/di-14.1-jie-qq-linux-ban.md)
 * [14.2 WPS Office（Linux 版）](di-14-zhang-ji-yu-linux-jian-rong-ceng-de-ying-yong/di-14.2-jie-wps-office-linux-ban.md)
 * [14.3 微信（Linux 版）](di-14-zhang-ji-yu-linux-jian-rong-ceng-de-ying-yong/di-14.3-jie-wei-xin-linux-ban.md)
-* [14.4 Wine 配置](di-14-zhang-ji-yu-linux-jian-rong-ceng-de-ying-yong/di-14.4-jie-wine-pei-zhi.md)
 
 ## 第 15 章 人工智能（AI）
 
@@ -168,7 +169,6 @@
 * [16.1 Jail 基础配置](di-16-zhang-jail-rong-qi-guan-li/di-16.1-jie-jail-ji-chu-pei-zhi.md)
 * [16.2 Jail 系统更新](di-16-zhang-jail-rong-qi-guan-li/di-16.2-jie-jail-xi-tong-geng-xin.md)
 * [16.3 Qjail 管理工具](di-16-zhang-jail-rong-qi-guan-li/di-16.3-jie-qjail-guan-li-gong-ju.md)
-* [16.4 Linux Jail](di-16-zhang-jail-rong-qi-guan-li/di-16.4-jie-linux-jail.md)
 
 ## 第 17 章 虚拟化与容器管理
 
