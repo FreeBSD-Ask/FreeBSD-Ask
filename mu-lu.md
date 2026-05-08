@@ -94,71 +94,71 @@
 * [7.14 CDE](di-7-zhang-zhuo-mian-huan-jing/di-7.14-jie-cde.md)
 * [7.15 启用 root 账户桌面登录](di-7-zhang-zhuo-mian-huan-jing/di-7.15-jie-qi-yong-root-zhang-hu-zhuo-mian-deng-lu.md)
 
-## 第 8 章 本地化与中文支持
+## 第 8 章 多媒体和外部设备
 
-* [8.1 本地化环境变量](di-8-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-8.1-jie-ben-di-hua-huan-jing-bian-liang.md)
-* [8.2 Fcitx 输入法框架](di-8-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-8.2-jie-fcitx-shu-ru-fa-kuang-jia.md)
-* [8.3 IBus 输入法框架](di-8-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-8.3-jie-ibus-shu-ru-fa-kuang-jia.md)
-* [8.4 五笔输入法](di-8-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-8.4-jie-wu-bi-shu-ru-fa.md)
-* [8.5 系统字体替换](di-8-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-8.5-jie-xi-tong-zi-ti-ti-huan.md)
+* [8.1 Web 浏览器](di-8-zhang-duo-mei-ti-he-wai-bu-she-bei/di-8.1-jie-web-liu-lan-qi.md)
+* [8.2 声卡配置](di-8-zhang-duo-mei-ti-he-wai-bu-she-bei/di-8.2-jie-yin-pin-she-bei-pei-zhi.md)
+* [8.3 音频播放器](di-8-zhang-duo-mei-ti-he-wai-bu-she-bei/di-8.3-jie-yin-pin-bo-fang-qi.md)
+* [8.4 打印机](di-8-zhang-duo-mei-ti-he-wai-bu-she-bei/di-8.4-jie-da-yin-ji.md)
+* [8.5 人机输入设备](di-8-zhang-duo-mei-ti-he-wai-bu-she-bei/di-8.5-jie-ren-ji-shu-ru-she-bei.md)
+* [8.6 视频播放器](di-8-zhang-duo-mei-ti-he-wai-bu-she-bei/di-8.6-jie-shi-pin-bo-fang-qi.md)
+* [8.7 多媒体处理工具](di-8-zhang-duo-mei-ti-he-wai-bu-she-bei/di-8.7-jie-duo-mei-ti-chu-li-gong-ju.md)
 
-## 第 9 章 多媒体和外部设备
+## 第 9 章 本地化与中文支持
 
-* [9.1 Web 浏览器](di-9-zhang-duo-mei-ti-he-wai-bu-she-bei/di-9.1-jie-web-liu-lan-qi.md)
-* [9.2 声卡配置](di-9-zhang-duo-mei-ti-he-wai-bu-she-bei/di-9.2-jie-yin-pin-she-bei-pei-zhi.md)
-* [9.3 音频播放器](di-9-zhang-duo-mei-ti-he-wai-bu-she-bei/di-9.3-jie-yin-pin-bo-fang-qi.md)
-* [9.4 打印机](di-9-zhang-duo-mei-ti-he-wai-bu-she-bei/di-9.4-jie-da-yin-ji.md)
-* [9.5 人机输入设备](di-9-zhang-duo-mei-ti-he-wai-bu-she-bei/di-9.5-jie-ren-ji-shu-ru-she-bei.md)
-* [9.6 视频播放器](di-9-zhang-duo-mei-ti-he-wai-bu-she-bei/di-9.6-jie-shi-pin-bo-fang-qi.md)
-* [9.7 多媒体处理工具](di-9-zhang-duo-mei-ti-he-wai-bu-she-bei/di-9.7-jie-duo-mei-ti-chu-li-gong-ju.md)
+* [9.1 本地化环境变量](di-9-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-9.1-jie-ben-di-hua-huan-jing-bian-liang.md)
+* [9.2 Fcitx 输入法框架](di-9-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-9.2-jie-fcitx-shu-ru-fa-kuang-jia.md)
+* [9.3 IBus 输入法框架](di-9-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-9.3-jie-ibus-shu-ru-fa-kuang-jia.md)
+* [9.4 五笔输入法](di-9-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-9.4-jie-wu-bi-shu-ru-fa.md)
+* [9.5 系统字体替换](di-9-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-9.5-jie-xi-tong-zi-ti-ti-huan.md)
 
-## 第 10 章 游戏、科学计算和专业工具
+## 第 10 章 Linux 二进制兼容层
 
-* [10.1 Ren'Py 视觉小说引擎](di-10-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-10.1-jie-ren-py-shi-jue-xiao-shuo-yin-qing.md)
-* [10.2 Godot 开源游戏引擎](di-10-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-10.2-jie-godot-kai-yuan-you-xi-yin-qing.md)
-* [10.3 我的世界（Minecraft）](di-10-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-10.3-jie-wo-de-shi-jie-minecraft.md)
-* [10.4 科研和专业计算工具](di-10-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-10.4-jie-ke-yan-he-zhuan-ye-ji-suan-gong-ju.md)
-* [10.5 Steam 客户端](di-10-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-10.5-jie-steam-ke-hu-duan.md)
-* [10.6 Wine 配置](di-10-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-10.6-jie-wine-pei-zhi.md)
+* [10.1 Linux 兼容层架构](di-10-zhang-linux-er-jin-zhi-jian-rong-ceng/di-10.1-jie-linux-jian-rong-ceng-jia-gou.md)
+* [10.2 Rocky Linux 兼容层](di-10-zhang-linux-er-jin-zhi-jian-rong-ceng/di-10.2-jie-rocky-linux-jian-rong-ceng.md)
+* [10.3 Ubuntu/Debian 兼容层](di-10-zhang-linux-er-jin-zhi-jian-rong-ceng/di-10.3-jie-ubuntu-debian-jian-rong-ceng.md)
+* [10.4 Arch Linux 兼容层（基于 Arch Linux bootstrap）](di-10-zhang-linux-er-jin-zhi-jian-rong-ceng/di-10.4-jie-arch-linux-jian-rong-ceng-ji-yu-arch-linux-bootstrap.md)
+* [10.5 Slackware Linux 兼容层](di-10-zhang-linux-er-jin-zhi-jian-rong-ceng/di-10.5-jie-slackware-linux-jian-rong-ceng.md)
+* [10.6 openSUSE 兼容层](di-10-zhang-linux-er-jin-zhi-jian-rong-ceng/di-10.6-jie-opensuse-jian-rong-ceng.md)
+* [10.7 Gentoo Linux 兼容层](di-10-zhang-linux-er-jin-zhi-jian-rong-ceng/di-10.7-jie-gentoo-linux-jian-rong-ceng.md)
+* [10.8 Linux Jail](di-10-zhang-linux-er-jin-zhi-jian-rong-ceng/di-10.8-jie-linux-jail.md)
+* [10.9 故障排除与未竟事宜](di-10-zhang-linux-er-jin-zhi-jian-rong-ceng/di-10.9-jie-gu-zhang-pai-chu-yu-wei-jing-shi-yi.md)
 
-## 第 11 章 系统管理
+## 第 11 章 基于 Linux 兼容层的应用
 
-* [11.1 启动引导器](di-11-zhang-xi-tong-guan-li/di-11.1-jie-qi-dong-yin-dao-qi-ji-pei-zhi-wen-jian-loader-conf.md)
-* [11.2 引导管理器与 UEFI 固件](di-11-zhang-xi-tong-guan-li/di-11.2-jie-yin-dao-guan-li-qi-yu-uefi-gu-jian.md)
-* [11.3 管理 FreeBSD 中的服务](di-11-zhang-xi-tong-guan-li/di-11.3-jie-init-rc-fu-wu-guan-li.md)
-* [11.4 用户分级](di-11-zhang-xi-tong-guan-li/di-11.4-jie-yong-hu-fen-ji-wen-jian-login-conf.md)
-* [11.5 bsdconfig 系统配置工具](di-11-zhang-xi-tong-guan-li/di-11.5-jie-bsdconfig-xi-tong-pei-zhi-gong-ju.md)
-* [11.6 OpenSSH](di-11-zhang-xi-tong-guan-li/di-11.6-jie-OpenSSH.md)
-* [11.7 远程桌面访问](di-11-zhang-xi-tong-guan-li/di-11.7-jie-yuan-cheng-zhuo-mian-fang-wen.md)
-* [11.8 设备资源提示](di-11-zhang-xi-tong-guan-li/di-11.8-jie-she-bei-zi-yuan-ti-shi-wen-jian-device-hints.md)
-* [11.9 Cron 和 Periodic](di-11-zhang-xi-tong-guan-li/di-11.9-jie-crontab-ji-ding-shi-ren-wu-wen-jian-periodic-conf.md)
-* [11.10 sysctl 工具](di-11-zhang-xi-tong-guan-li/di-11.10-jie-nei-he-zhuang-tai-mo-ren-pei-zhi-wen-jian-sysctl-conf.md)
-* [11.11 NTP 时间同步与时区](di-11-zhang-xi-tong-guan-li/di-11.11-jie-shi-jian-tong-bu-fu-wu.md)
-* [11.12 Live 镜像与系统恢复](di-11-zhang-xi-tong-guan-li/di-11.12-jie-live-jing-xiang-yu-xi-tong-hui-fu.md)
+* [11.1 QQ（Linux 版）](di-11-zhang-ji-yu-linux-jian-rong-ceng-de-ying-yong/di-11.1-jie-qq-linux-ban.md)
+* [11.2 WPS Office（Linux 版）](di-11-zhang-ji-yu-linux-jian-rong-ceng-de-ying-yong/di-11.2-jie-wps-office-linux-ban.md)
+* [11.3 微信（Linux 版）](di-11-zhang-ji-yu-linux-jian-rong-ceng-de-ying-yong/di-11.3-jie-wei-xin-linux-ban.md)
 
-## 第 12 章 网络代理工具
+## 第 12 章 游戏、科学计算和专业工具
 
-* [12.1 系统代理](di-12-zhang-wang-luo-dai-li-gong-ju/di-12.1-jie-xi-tong-dai-li.md)
-* [12.2 V2Ray 配置](di-12-zhang-wang-luo-dai-li-gong-ju/di-12.2-jie-v2ray-pei-zhi.md)
-* [12.3 Mihomo 配置](di-12-zhang-wang-luo-dai-li-gong-ju/di-12.3-jie-mihomo-pei-zhi.md)
+* [12.1 Ren'Py 视觉小说引擎](di-12-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-12.1-jie-ren-py-shi-jue-xiao-shuo-yin-qing.md)
+* [12.2 Godot 开源游戏引擎](di-12-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-12.2-jie-godot-kai-yuan-you-xi-yin-qing.md)
+* [12.3 我的世界（Minecraft）](di-12-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-12.3-jie-wo-de-shi-jie-minecraft.md)
+* [12.4 科研和专业计算工具](di-12-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-12.4-jie-ke-yan-he-zhuan-ye-ji-suan-gong-ju.md)
+* [12.5 Steam 客户端](di-12-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-12.5-jie-steam-ke-hu-duan.md)
+* [12.6 Wine 配置](di-12-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-12.6-jie-wine-pei-zhi.md)
 
-## 第 13 章 Linux 二进制兼容层
+## 第 13 章 系统管理
 
-* [13.1 Linux 兼容层架构](di-13-zhang-linux-er-jin-zhi-jian-rong-ceng/di-13.1-jie-linux-jian-rong-ceng-jia-gou.md)
-* [13.2 Rocky Linux 兼容层](di-13-zhang-linux-er-jin-zhi-jian-rong-ceng/di-13.2-jie-rocky-linux-jian-rong-ceng.md)
-* [13.3 Ubuntu/Debian 兼容层](di-13-zhang-linux-er-jin-zhi-jian-rong-ceng/di-13.3-jie-ubuntu-debian-jian-rong-ceng.md)
-* [13.4 Arch Linux 兼容层（基于 Arch Linux bootstrap）](di-13-zhang-linux-er-jin-zhi-jian-rong-ceng/di-13.4-jie-arch-linux-jian-rong-ceng-ji-yu-arch-linux-bootstrap.md)
-* [13.5 Slackware Linux 兼容层](di-13-zhang-linux-er-jin-zhi-jian-rong-ceng/di-13.5-jie-slackware-linux-jian-rong-ceng.md)
-* [13.6 openSUSE 兼容层](di-13-zhang-linux-er-jin-zhi-jian-rong-ceng/di-13.6-jie-opensuse-jian-rong-ceng.md)
-* [13.7 Gentoo Linux 兼容层](di-13-zhang-linux-er-jin-zhi-jian-rong-ceng/di-13.7-jie-gentoo-linux-jian-rong-ceng.md)
-* [13.8 Linux Jail](di-13-zhang-linux-er-jin-zhi-jian-rong-ceng/di-13.8-jie-linux-jail.md)
-* [13.9 故障排除与未竟事宜](di-13-zhang-linux-er-jin-zhi-jian-rong-ceng/di-13.9-jie-gu-zhang-pai-chu-yu-wei-jing-shi-yi.md)
+* [13.1 启动引导器](di-13-zhang-xi-tong-guan-li/di-13.1-jie-qi-dong-yin-dao-qi-ji-pei-zhi-wen-jian-loader-conf.md)
+* [13.2 引导管理器与 UEFI 固件](di-13-zhang-xi-tong-guan-li/di-13.2-jie-yin-dao-guan-li-qi-yu-uefi-gu-jian.md)
+* [13.3 管理 FreeBSD 中的服务](di-13-zhang-xi-tong-guan-li/di-13.3-jie-init-rc-fu-wu-guan-li.md)
+* [13.4 用户分级](di-13-zhang-xi-tong-guan-li/di-13.4-jie-yong-hu-fen-ji-wen-jian-login-conf.md)
+* [13.5 bsdconfig 系统配置工具](di-13-zhang-xi-tong-guan-li/di-13.5-jie-bsdconfig-xi-tong-pei-zhi-gong-ju.md)
+* [13.6 OpenSSH](di-13-zhang-xi-tong-guan-li/di-13.6-jie-OpenSSH.md)
+* [13.7 远程桌面访问](di-13-zhang-xi-tong-guan-li/di-13.7-jie-yuan-cheng-zhuo-mian-fang-wen.md)
+* [13.8 设备资源提示](di-13-zhang-xi-tong-guan-li/di-13.8-jie-she-bei-zi-yuan-ti-shi-wen-jian-device-hints.md)
+* [13.9 Cron 和 Periodic](di-13-zhang-xi-tong-guan-li/di-13.9-jie-crontab-ji-ding-shi-ren-wu-wen-jian-periodic-conf.md)
+* [13.10 sysctl 工具](di-13-zhang-xi-tong-guan-li/di-13.10-jie-nei-he-zhuang-tai-mo-ren-pei-zhi-wen-jian-sysctl-conf.md)
+* [13.11 NTP 时间同步与时区](di-13-zhang-xi-tong-guan-li/di-13.11-jie-shi-jian-tong-bu-fu-wu.md)
+* [13.12 Live 镜像与系统恢复](di-13-zhang-xi-tong-guan-li/di-13.12-jie-live-jing-xiang-yu-xi-tong-hui-fu.md)
 
-## 第 14 章 基于 Linux 兼容层的应用
+## 第 14 章 网络代理工具
 
-* [14.1 QQ（Linux 版）](di-14-zhang-ji-yu-linux-jian-rong-ceng-de-ying-yong/di-14.1-jie-qq-linux-ban.md)
-* [14.2 WPS Office（Linux 版）](di-14-zhang-ji-yu-linux-jian-rong-ceng-de-ying-yong/di-14.2-jie-wps-office-linux-ban.md)
-* [14.3 微信（Linux 版）](di-14-zhang-ji-yu-linux-jian-rong-ceng-de-ying-yong/di-14.3-jie-wei-xin-linux-ban.md)
+* [14.1 系统代理](di-14-zhang-wang-luo-dai-li-gong-ju/di-14.1-jie-xi-tong-dai-li.md)
+* [14.2 V2Ray 配置](di-14-zhang-wang-luo-dai-li-gong-ju/di-14.2-jie-v2ray-pei-zhi.md)
+* [14.3 Mihomo 配置](di-14-zhang-wang-luo-dai-li-gong-ju/di-14.3-jie-mihomo-pei-zhi.md)
 
 ## 第 15 章 人工智能（AI）
 
