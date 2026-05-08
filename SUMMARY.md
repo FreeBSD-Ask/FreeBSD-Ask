@@ -79,6 +79,7 @@
 * [6.2 高级网络管理](di-6-zhang-wang-luo-guan-li/di-6.2-jie-gao-ji.md)
 * [6.3 无线网络（Wi-Fi）配置](di-6-zhang-wang-luo-guan-li/di-6.3-jie-wu-xian-wang-luo-wi-fi-pei-zhi.md)
 * [6.4 USB 网络共享（USB tethering）](di-6-zhang-wang-luo-guan-li/di-6.4-jie-usb-wang-luo-gong-xiang-usb-tethering.md)
+* [6.5 蓝牙](di-6-zhang-wang-luo-guan-li/di-6.5-jie-lan-ya.md)
 
 ## 第 7 章 网络代理工具
 
@@ -151,11 +152,10 @@
 * [14.1 Web 浏览器](di-14-zhang-duo-mei-ti-he-wai-bu-she-bei/di-14.1-jie-web-liu-lan-qi.md)
 * [14.2 声卡配置](di-14-zhang-duo-mei-ti-he-wai-bu-she-bei/di-14.2-jie-yin-pin-she-bei-pei-zhi.md)
 * [14.3 音频播放器](di-14-zhang-duo-mei-ti-he-wai-bu-she-bei/di-14.3-jie-yin-pin-bo-fang-qi.md)
-* [14.4 蓝牙](di-14-zhang-duo-mei-ti-he-wai-bu-she-bei/di-14.4-jie-lan-ya.md)
-* [14.5 打印机](di-14-zhang-duo-mei-ti-he-wai-bu-she-bei/di-14.5-jie-da-yin-ji.md)
-* [14.6 人机输入设备](di-14-zhang-duo-mei-ti-he-wai-bu-she-bei/di-14.6-jie-ren-ji-shu-ru-she-bei.md)
-* [14.7 视频播放器](di-14-zhang-duo-mei-ti-he-wai-bu-she-bei/di-14.7-jie-shi-pin-bo-fang-qi.md)
-* [14.8 多媒体处理工具](di-14-zhang-duo-mei-ti-he-wai-bu-she-bei/di-14.8-jie-duo-mei-ti-chu-li-gong-ju.md)
+* [14.4 打印机](di-14-zhang-duo-mei-ti-he-wai-bu-she-bei/di-14.4-jie-da-yin-ji.md)
+* [14.5 人机输入设备](di-14-zhang-duo-mei-ti-he-wai-bu-she-bei/di-14.5-jie-ren-ji-shu-ru-she-bei.md)
+* [14.6 视频播放器](di-14-zhang-duo-mei-ti-he-wai-bu-she-bei/di-14.6-jie-shi-pin-bo-fang-qi.md)
+* [14.7 多媒体处理工具](di-14-zhang-duo-mei-ti-he-wai-bu-she-bei/di-14.7-jie-duo-mei-ti-chu-li-gong-ju.md)
 
 ## 第 15 章 Jail 容器管理
 
