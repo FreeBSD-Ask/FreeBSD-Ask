@@ -1,4 +1,4 @@
-# 7.11 bspwm
+# 8.9 bspwm
 
 ## bspwm 窗口管理器概述
 

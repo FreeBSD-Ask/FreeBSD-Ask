@@ -1,4 +1,4 @@
-# 7.9 GNOME
+# 8.7 GNOME
 
 ## GNOME 桌面环境概述
 
