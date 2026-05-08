@@ -84,8 +84,7 @@
 * [7.1 Intel 和 AMD 显卡驱动配置](di-7-zhang-x-window-xi-tong/di-7.1-jie-intel-he-amd-xian-ka-qu-dong-pei-zhi.md)
 * [7.2 NVIDIA 显卡驱动配置](di-7-zhang-x-window-xi-tong/di-7.2-jie-nvidia-xian-ka-qu-dong-pei-zhi.md)
 * [7.3 系统字体替换](di-7-zhang-x-window-xi-tong/di-7.3-jie-xi-tong-zi-ti-ti-huan.md)
-* [7.4 启用 root 账户桌面登录](di-7-zhang-x-window-xi-tong/di-7.4-jie-qi-yong-root-zhang-hu-zhuo-mian-deng-lu.md)
-* [7.5 远程桌面访问](di-7-zhang-x-window-xi-tong/di-7.5-jie-yuan-cheng-zhuo-mian-fang-wen.md)
+* [7.4 远程桌面访问](di-7-zhang-x-window-xi-tong/di-7.4-jie-yuan-cheng-zhuo-mian-fang-wen.md)
 
 ## 第 8 章 桌面环境
 
@@ -139,9 +138,9 @@
 * [12.1 Ren'Py 视觉小说引擎](di-12-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-12.1-jie-ren-py-shi-jue-xiao-shuo-yin-qing.md)
 * [12.2 Godot 开源游戏引擎](di-12-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-12.2-jie-godot-kai-yuan-you-xi-yin-qing.md)
 * [12.3 我的世界（Minecraft）](di-12-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-12.3-jie-wo-de-shi-jie-minecraft.md)
-* [12.4 科研和专业计算工具](di-12-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-12.4-jie-ke-yan-he-zhuan-ye-ji-suan-gong-ju.md)
-* [12.5 Steam 客户端](di-12-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-12.5-jie-steam-ke-hu-duan.md)
-* [12.6 Wine 配置](di-12-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-12.6-jie-wine-pei-zhi.md)
+* [12.4 Steam 客户端](di-12-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-12.4-jie-steam-ke-hu-duan.md)
+* [12.5 Wine 配置](di-12-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-12.5-jie-wine-pei-zhi.md)
+* [12.6 科研和专业计算工具](di-12-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-12.6-jie-ke-yan-he-zhuan-ye-ji-suan-gong-ju.md)
 
 ## 第 13 章 人工智能（AI）
 
@@ -185,11 +184,12 @@
 * [17.1 账户认证安全](di-17-zhang-an-quan/di-17.1-jie-zhang-hu-ren-zheng-an-quan.md)
 * [17.2 资源限制](di-17-zhang-an-quan/di-17.2-jie-zi-yuan-xian-zhi.md)
 * [17.3 安全等级](di-17-zhang-an-quan/di-17.3-jie-an-quan-ji-bie.md)
-* [17.4 安全事件审计](di-17-zhang-an-quan/di-17.4-jie-an-quan-shi-jian-shen-ji.md)
-* [17.5 OpenSSL](di-17-zhang-an-quan/di-17.5-jie-openssl.md)
-* [17.6 入侵检测系统（IDS）](di-17-zhang-an-quan/di-17.6-jie-ru-qin-jian-ce-xi-tong.md)
-* [17.7 第三方漏洞与安全公告](di-17-zhang-an-quan/di-17.7-jie-di-san-fang-lou-dong-yu-an-quan-gong-gao.md)
-* [17.8 强制访问控制框架（MAC 框架）](di-17-zhang-an-quan/di-17.8-jie-fang-wen-kong-zhi-kuang-jia-mac-kuang-jia.md)
+* [17.4 启用 root 账户桌面登录](di-17-zhang-an-quan/di-17.4-jie-qi-yong-root-zhang-hu-zhuo-mian-deng-lu.md)
+* [17.5 安全事件审计](di-17-zhang-an-quan/di-17.5-jie-an-quan-shi-jian-shen-ji.md)
+* [17.6 OpenSSL](di-17-zhang-an-quan/di-17.6-jie-openssl.md)
+* [17.7 入侵检测系统（IDS）](di-17-zhang-an-quan/di-17.7-jie-ru-qin-jian-ce-xi-tong.md)
+* [17.8 第三方漏洞与安全公告](di-17-zhang-an-quan/di-17.8-jie-di-san-fang-lou-dong-yu-an-quan-gong-gao.md)
+* [17.9 强制访问控制框架（MAC 框架）](di-17-zhang-an-quan/di-17.9-jie-fang-wen-kong-zhi-kuang-jia-mac-kuang-jia.md)
 
 ## 第 18 章 防火墙
 
@@ -217,11 +217,11 @@
 ## 第 21 章 服务器
 
 * [21.1 FTP 服务器](di-21-zhang-fu-wu-qi/di-21.1-jie-ftp-fu-wu-qi.md)
-* [21.2 Webmin 管理平台](di-21-zhang-fu-wu-qi/di-21.2-jie-webmin-guan-li-ping-tai.md)
-* [21.3 Rsync 数据同步](di-21-zhang-fu-wu-qi/di-21.3-jie-rsync-shu-ju-tong-bu.md)
-* [21.4 Samba 文件共享](di-21-zhang-fu-wu-qi/di-21.4-jie-samba-wen-jian-gong-xiang.md)
-* [21.5 NFS 服务器](di-21-zhang-fu-wu-qi/di-21.5-jie-nfs-fu-wu-qi.md)
-* [21.6 零配置网络（mDNS/DNS-SD）](di-21-zhang-fu-wu-qi/di-21.6-jie-mdns.md)
+* [21.2 Rsync 数据同步](di-21-zhang-fu-wu-qi/di-21.2-jie-rsync-shu-ju-tong-bu.md)
+* [21.3 Samba 文件共享](di-21-zhang-fu-wu-qi/di-21.3-jie-samba-wen-jian-gong-xiang.md)
+* [21.4 NFS 服务器](di-21-zhang-fu-wu-qi/di-21.4-jie-nfs-fu-wu-qi.md)
+* [21.5 零配置网络（mDNS/DNS-SD）](di-21-zhang-fu-wu-qi/di-21.5-jie-mdns.md)
+* [21.6 Webmin 管理平台](di-21-zhang-fu-wu-qi/di-21.6-jie-webmin-guan-li-ping-tai.md)
 
 ## 第 22 章 Web 服务器
 
