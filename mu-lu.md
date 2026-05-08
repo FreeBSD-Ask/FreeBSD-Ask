@@ -48,7 +48,7 @@
 * [4.2 Linux 用户迁移指南](di-4-zhang-freebsd-ji-chu/di-4.2-jie-linux-yong-hu-qian-yi-zhi-nan.md)
 * [4.3 系统目录结构](di-4-zhang-freebsd-ji-chu/di-4.3-jie-xi-tong-mu-lu-jie-gou.md)
 * [4.4 虚拟控制台和终端](di-4-zhang-freebsd-ji-chu/di-4.4-jie-xu-ni-kong-zhi-tai-he-zhong-duan.md)
-* [4.5 shell 基础](di-4-zhang-freebsd-ji-chu/di-4.5-jie-shell-ji-chu.md)
+* [4.5 shell](di-4-zhang-freebsd-ji-chu/di-4.5-jie-shell-ji-chu.md)
 * [4.6 shell 配置](di-4-zhang-freebsd-ji-chu/di-4.6-jie-shell-pei-zhi.md)
 * [4.7 命令行基础](di-4-zhang-freebsd-ji-chu/di-4.7-jie-ming-ling-xing-ji-chu.md)
 * [4.8 文本编辑器](di-4-zhang-freebsd-ji-chu/di-4.8-jie-wen-ben-bian-ji-qi.md)
@@ -115,14 +115,14 @@
 
 ## 第 10 章 系统管理
 
-* [10.1 启动引导器及配置文件（loader.conf）](di-10-zhang-xi-tong-guan-li/di-10.1-jie-qi-dong-yin-dao-qi-ji-pei-zhi-wen-jian-loader-conf.md)
+* [10.1 启动引导器](di-10-zhang-xi-tong-guan-li/di-10.1-jie-qi-dong-yin-dao-qi-ji-pei-zhi-wen-jian-loader-conf.md)
 * [10.2 引导管理器与 UEFI 固件](di-10-zhang-xi-tong-guan-li/di-10.2-jie-yin-dao-guan-li-qi-yu-uefi-gu-jian.md)
 * [10.3 管理 FreeBSD 中的服务](di-10-zhang-xi-tong-guan-li/di-10.3-jie-init-rc-fu-wu-guan-li.md)
-* [10.4 用户分级文件（login.conf）](di-10-zhang-xi-tong-guan-li/di-10.4-jie-yong-hu-fen-ji-wen-jian-login-conf.md)
+* [10.4 用户分级](di-10-zhang-xi-tong-guan-li/di-10.4-jie-yong-hu-fen-ji-wen-jian-login-conf.md)
 * [10.5 bsdconfig 系统配置工具](di-10-zhang-xi-tong-guan-li/di-10.5-jie-bsdconfig-xi-tong-pei-zhi-gong-ju.md)
 * [10.6 OpenSSH](di-10-zhang-xi-tong-guan-li/di-10.6-jie-OpenSSH.md)
 * [10.7 远程桌面访问](di-10-zhang-xi-tong-guan-li/di-10.7-jie-yuan-cheng-zhuo-mian-fang-wen.md)
-* [10.8 设备资源提示文件](di-10-zhang-xi-tong-guan-li/di-10.8-jie-she-bei-zi-yuan-ti-shi-wen-jian-device-hints.md)
+* [10.8 设备资源提示](di-10-zhang-xi-tong-guan-li/di-10.8-jie-she-bei-zi-yuan-ti-shi-wen-jian-device-hints.md)
 * [10.9 Cron 和 Periodic](di-10-zhang-xi-tong-guan-li/di-10.9-jie-crontab-ji-ding-shi-ren-wu-wen-jian-periodic-conf.md)
 * [10.10 sysctl 工具](di-10-zhang-xi-tong-guan-li/di-10.10-jie-nei-he-zhuang-tai-mo-ren-pei-zhi-wen-jian-sysctl-conf.md)
 * [10.11 NTP 时间同步与时区](di-10-zhang-xi-tong-guan-li/di-10.11-jie-shi-jian-tong-bu-fu-wu.md)
