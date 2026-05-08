@@ -85,6 +85,7 @@
 * [7.2 NVIDIA 显卡驱动配置](di-7-zhang-x-window-xi-tong/di-7.2-jie-nvidia-xian-ka-qu-dong-pei-zhi.md)
 * [7.3 系统字体替换](di-7-zhang-x-window-xi-tong/di-7.3-jie-xi-tong-zi-ti-ti-huan.md)
 * [7.4 启用 root 账户桌面登录](di-7-zhang-x-window-xi-tong/di-7.4-jie-qi-yong-root-zhang-hu-zhuo-mian-deng-lu.md)
+* [7.5 远程桌面访问](di-7-zhang-x-window-xi-tong/di-7.5-jie-yuan-cheng-zhuo-mian-fang-wen.md)
 
 ## 第 8 章 桌面环境
 
@@ -154,12 +155,11 @@
 * [14.4 用户分级](di-14-zhang-xi-tong-guan-li/di-14.4-jie-yong-hu-fen-ji-wen-jian-login-conf.md)
 * [14.5 bsdconfig 系统配置工具](di-14-zhang-xi-tong-guan-li/di-14.5-jie-bsdconfig-xi-tong-pei-zhi-gong-ju.md)
 * [14.6 OpenSSH](di-14-zhang-xi-tong-guan-li/di-14.6-jie-OpenSSH.md)
-* [14.7 远程桌面访问](di-14-zhang-xi-tong-guan-li/di-14.7-jie-yuan-cheng-zhuo-mian-fang-wen.md)
-* [14.8 设备资源提示](di-14-zhang-xi-tong-guan-li/di-14.8-jie-she-bei-zi-yuan-ti-shi-wen-jian-device-hints.md)
-* [14.9 Cron 和 Periodic](di-14-zhang-xi-tong-guan-li/di-14.9-jie-crontab-ji-ding-shi-ren-wu-wen-jian-periodic-conf.md)
-* [14.10 sysctl 工具](di-14-zhang-xi-tong-guan-li/di-14.10-jie-nei-he-zhuang-tai-mo-ren-pei-zhi-wen-jian-sysctl-conf.md)
-* [14.11 NTP 时间同步与时区](di-14-zhang-xi-tong-guan-li/di-14.11-jie-shi-jian-tong-bu-fu-wu.md)
-* [14.12 Live 镜像与系统恢复](di-14-zhang-xi-tong-guan-li/di-14.12-jie-live-jing-xiang-yu-xi-tong-hui-fu.md)
+* [14.7 设备资源提示](di-14-zhang-xi-tong-guan-li/di-14.7-jie-she-bei-zi-yuan-ti-shi-wen-jian-device-hints.md)
+* [14.8 Cron 和 Periodic](di-14-zhang-xi-tong-guan-li/di-14.8-jie-crontab-ji-ding-shi-ren-wu-wen-jian-periodic-conf.md)
+* [14.9 sysctl 工具](di-14-zhang-xi-tong-guan-li/di-14.9-jie-nei-he-zhuang-tai-mo-ren-pei-zhi-wen-jian-sysctl-conf.md)
+* [14.10 NTP 时间同步与时区](di-14-zhang-xi-tong-guan-li/di-14.10-jie-shi-jian-tong-bu-fu-wu.md)
+* [14.11 Live 镜像与系统恢复](di-14-zhang-xi-tong-guan-li/di-14.11-jie-live-jing-xiang-yu-xi-tong-hui-fu.md)
 
 ## 第 15 章 存储与文件系统管理
 
