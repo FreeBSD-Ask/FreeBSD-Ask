@@ -49,14 +49,13 @@
 * [4.3 系统目录结构](di-4-zhang-freebsd-ji-chu/di-4.3-jie-xi-tong-mu-lu-jie-gou.md)
 * [4.4 虚拟控制台和终端](di-4-zhang-freebsd-ji-chu/di-4.4-jie-xu-ni-kong-zhi-tai-he-zhong-duan.md)
 * [4.5 shell](di-4-zhang-freebsd-ji-chu/di-4.5-jie-shell-ji-chu.md)
-* [4.6 shell 配置](di-4-zhang-freebsd-ji-chu/di-4.6-jie-shell-pei-zhi.md)
-* [4.7 命令行基础](di-4-zhang-freebsd-ji-chu/di-4.7-jie-ming-ling-xing-ji-chu.md)
-* [4.8 文本编辑器](di-4-zhang-freebsd-ji-chu/di-4.8-jie-wen-ben-bian-ji-qi.md)
-* [4.9 用户和基本账户管理](di-4-zhang-freebsd-ji-chu/di-4.9-jie-yong-hu-he-ji-ben-zhang-hu-guan-li.md)
-* [4.10 权限](di-4-zhang-freebsd-ji-chu/di-4.10-jie-quan-xian.md)
-* [4.11 权限提升工具（sudo、doas 等）](di-4-zhang-freebsd-ji-chu/di-4.11-jie-te-quan-ti-sheng-gong-ju-sudo-doas-deng.md)
-* [4.12 进程与守护进程](di-4-zhang-freebsd-ji-chu/di-4.12-jie-jin-cheng-yu-shou-hu-jin-cheng.md)
-* [4.13 压缩解压工具](di-4-zhang-freebsd-ji-chu/di-4.13-jie-ya-suo-jie-ya-gong-ju.md)
+* [4.6 命令行基础](di-4-zhang-freebsd-ji-chu/di-4.6-jie-ming-ling-xing-ji-chu.md)
+* [4.7 文本编辑器](di-4-zhang-freebsd-ji-chu/di-4.7-jie-wen-ben-bian-ji-qi.md)
+* [4.8 用户和基本账户管理](di-4-zhang-freebsd-ji-chu/di-4.8-jie-yong-hu-he-ji-ben-zhang-hu-guan-li.md)
+* [4.9 权限](di-4-zhang-freebsd-ji-chu/di-4.9-jie-quan-xian.md)
+* [4.10 权限提升工具（sudo、doas 等）](di-4-zhang-freebsd-ji-chu/di-4.10-jie-te-quan-ti-sheng-gong-ju-sudo-doas-deng.md)
+* [4.11 进程与守护进程](di-4-zhang-freebsd-ji-chu/di-4.11-jie-jin-cheng-yu-shou-hu-jin-cheng.md)
+* [4.12 压缩解压工具](di-4-zhang-freebsd-ji-chu/di-4.12-jie-ya-suo-jie-ya-gong-ju.md)
 
 ## 第 5 章 软件管理和系统升级
 
