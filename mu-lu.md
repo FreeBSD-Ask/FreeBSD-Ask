@@ -68,73 +68,73 @@
 * [5.7 使用 DVD 安装软件](di-5-zhang-ruan-jian-guan-li-he-xi-tong-sheng-ji/di-5.7-jie-shi-yong-dvd-an-zhuang-ruan-jian.md)
 * [5.8 FreeBSD 镜像站现状](di-5-zhang-ruan-jian-guan-li-he-xi-tong-sheng-ji/di-5.8-jie-freebsd-jing-xiang-zhan-xian-zhuang.md)
 
-## 第 6 章 桌面环境
+## 第 6 章 网络管理
 
-* [6.1 Intel 和 AMD 显卡驱动配置](di-6-zhang-zhuo-mian-huan-jing/di-6.1-jie-intel-he-amd-xian-ka-qu-dong-pei-zhi.md)
-* [6.2 NVIDIA 显卡驱动配置](di-6-zhang-zhuo-mian-huan-jing/di-6.2-jie-nvidia-xian-ka-qu-dong-pei-zhi.md)
-* [6.3 KDE 6 桌面环境（X11 会话）](di-6-zhang-zhuo-mian-huan-jing/di-6.3-jie-kde-6-zhuo-mian-huan-jing-x11-hui-hua.md)
-* [6.4 KDE 6 桌面环境（Wayland 会话）](di-6-zhang-zhuo-mian-huan-jing/di-6.4-jie-kde-6-zhuo-mian-huan-jing-wayland-hui-hua.md)
-* [6.5 MATE](di-6-zhang-zhuo-mian-huan-jing/di-6.5-jie-mate.md)
-* [6.6 Xfce](di-6-zhang-zhuo-mian-huan-jing/di-6.6-jie-xfce.md)
-* [6.7 Cinnamon](di-6-zhang-zhuo-mian-huan-jing/di-6.7-jie-cinnamon.md)
-* [6.8 LXQt](di-6-zhang-zhuo-mian-huan-jing/di-6.8-jie-lxqt.md)
-* [6.9 GNOME](di-6-zhang-zhuo-mian-huan-jing/di-6.9-jie-gnome.md)
-* [6.10 LXDE](di-6-zhang-zhuo-mian-huan-jing/di-6.10-jie-lxde.md)
-* [6.11 bspwm](di-6-zhang-zhuo-mian-huan-jing/di-6.11-jie-bspwm.md)
-* [6.12 IceWM](di-6-zhang-zhuo-mian-huan-jing/di-6.12-jie-icewm.md)
-* [6.13 Hyprland](di-6-zhang-zhuo-mian-huan-jing/di-6.13-jie-hyprland.md)
-* [6.14 CDE](di-6-zhang-zhuo-mian-huan-jing/di-6.14-jie-cde.md)
-* [6.15 启用 root 账户桌面登录](di-6-zhang-zhuo-mian-huan-jing/di-6.15-jie-qi-yong-root-zhang-hu-zhuo-mian-deng-lu.md)
+* [6.1 基础网络配置](di-6-zhang-wang-luo-guan-li/di-6.1-jie-wang-luo-ji-chu-pei-zhi.md)
+* [6.2 高级网络管理](di-6-zhang-wang-luo-guan-li/di-6.2-jie-gao-ji.md)
+* [6.3 无线网络（Wi-Fi）配置](di-6-zhang-wang-luo-guan-li/di-6.3-jie-wu-xian-wang-luo-wi-fi-pei-zhi.md)
+* [6.4 USB 网络共享（USB tethering）](di-6-zhang-wang-luo-guan-li/di-6.4-jie-usb-wang-luo-gong-xiang-usb-tethering.md)
+* [6.5 蓝牙](di-6-zhang-wang-luo-guan-li/di-6.5-jie-lan-ya.md)
 
-## 第 7 章 本地化与中文支持
+## 第 7 章 桌面环境
 
-* [7.1 本地化环境变量](di-7-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-7.1-jie-ben-di-hua-huan-jing-bian-liang.md)
-* [7.2 Fcitx 输入法框架](di-7-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-7.2-jie-fcitx-shu-ru-fa-kuang-jia.md)
-* [7.3 IBus 输入法框架](di-7-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-7.3-jie-ibus-shu-ru-fa-kuang-jia.md)
-* [7.4 五笔输入法](di-7-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-7.4-jie-wu-bi-shu-ru-fa.md)
-* [7.5 系统字体替换](di-7-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-7.5-jie-xi-tong-zi-ti-ti-huan.md)
+* [7.1 Intel 和 AMD 显卡驱动配置](di-7-zhang-zhuo-mian-huan-jing/di-7.1-jie-intel-he-amd-xian-ka-qu-dong-pei-zhi.md)
+* [7.2 NVIDIA 显卡驱动配置](di-7-zhang-zhuo-mian-huan-jing/di-7.2-jie-nvidia-xian-ka-qu-dong-pei-zhi.md)
+* [7.3 KDE 6 桌面环境（X11 会话）](di-7-zhang-zhuo-mian-huan-jing/di-7.3-jie-kde-6-zhuo-mian-huan-jing-x11-hui-hua.md)
+* [7.4 KDE 6 桌面环境（Wayland 会话）](di-7-zhang-zhuo-mian-huan-jing/di-7.4-jie-kde-6-zhuo-mian-huan-jing-wayland-hui-hua.md)
+* [7.5 MATE](di-7-zhang-zhuo-mian-huan-jing/di-7.5-jie-mate.md)
+* [7.6 Xfce](di-7-zhang-zhuo-mian-huan-jing/di-7.6-jie-xfce.md)
+* [7.7 Cinnamon](di-7-zhang-zhuo-mian-huan-jing/di-7.7-jie-cinnamon.md)
+* [7.8 LXQt](di-7-zhang-zhuo-mian-huan-jing/di-7.8-jie-lxqt.md)
+* [7.9 GNOME](di-7-zhang-zhuo-mian-huan-jing/di-7.9-jie-gnome.md)
+* [7.10 LXDE](di-7-zhang-zhuo-mian-huan-jing/di-7.10-jie-lxde.md)
+* [7.11 bspwm](di-7-zhang-zhuo-mian-huan-jing/di-7.11-jie-bspwm.md)
+* [7.12 IceWM](di-7-zhang-zhuo-mian-huan-jing/di-7.12-jie-icewm.md)
+* [7.13 Hyprland](di-7-zhang-zhuo-mian-huan-jing/di-7.13-jie-hyprland.md)
+* [7.14 CDE](di-7-zhang-zhuo-mian-huan-jing/di-7.14-jie-cde.md)
+* [7.15 启用 root 账户桌面登录](di-7-zhang-zhuo-mian-huan-jing/di-7.15-jie-qi-yong-root-zhang-hu-zhuo-mian-deng-lu.md)
 
-## 第 8 章 多媒体和外部设备
+## 第 8 章 本地化与中文支持
 
-* [8.1 Web 浏览器](di-8-zhang-duo-mei-ti-he-wai-bu-she-bei/di-8.1-jie-web-liu-lan-qi.md)
-* [8.2 声卡配置](di-8-zhang-duo-mei-ti-he-wai-bu-she-bei/di-8.2-jie-yin-pin-she-bei-pei-zhi.md)
-* [8.3 音频播放器](di-8-zhang-duo-mei-ti-he-wai-bu-she-bei/di-8.3-jie-yin-pin-bo-fang-qi.md)
-* [8.4 打印机](di-8-zhang-duo-mei-ti-he-wai-bu-she-bei/di-8.4-jie-da-yin-ji.md)
-* [8.5 人机输入设备](di-8-zhang-duo-mei-ti-he-wai-bu-she-bei/di-8.5-jie-ren-ji-shu-ru-she-bei.md)
-* [8.6 视频播放器](di-8-zhang-duo-mei-ti-he-wai-bu-she-bei/di-8.6-jie-shi-pin-bo-fang-qi.md)
-* [8.7 多媒体处理工具](di-8-zhang-duo-mei-ti-he-wai-bu-she-bei/di-8.7-jie-duo-mei-ti-chu-li-gong-ju.md)
+* [8.1 本地化环境变量](di-8-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-8.1-jie-ben-di-hua-huan-jing-bian-liang.md)
+* [8.2 Fcitx 输入法框架](di-8-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-8.2-jie-fcitx-shu-ru-fa-kuang-jia.md)
+* [8.3 IBus 输入法框架](di-8-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-8.3-jie-ibus-shu-ru-fa-kuang-jia.md)
+* [8.4 五笔输入法](di-8-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-8.4-jie-wu-bi-shu-ru-fa.md)
+* [8.5 系统字体替换](di-8-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-8.5-jie-xi-tong-zi-ti-ti-huan.md)
 
-## 第 9 章 游戏、科学计算和专业工具
+## 第 9 章 多媒体和外部设备
 
-* [9.1 Ren'Py 视觉小说引擎](di-9-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-9.1-jie-ren-py-shi-jue-xiao-shuo-yin-qing.md)
-* [9.2 Godot 开源游戏引擎](di-9-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-9.2-jie-godot-kai-yuan-you-xi-yin-qing.md)
-* [9.3 我的世界（Minecraft）](di-9-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-9.3-jie-wo-de-shi-jie-minecraft.md)
-* [9.4 科研和专业计算工具](di-9-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-9.4-jie-ke-yan-he-zhuan-ye-ji-suan-gong-ju.md)
-* [9.5 Steam 客户端](di-9-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-9.5-jie-steam-ke-hu-duan.md)
-* [9.6 Wine 配置](di-9-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-9.6-jie-wine-pei-zhi.md)
+* [9.1 Web 浏览器](di-9-zhang-duo-mei-ti-he-wai-bu-she-bei/di-9.1-jie-web-liu-lan-qi.md)
+* [9.2 声卡配置](di-9-zhang-duo-mei-ti-he-wai-bu-she-bei/di-9.2-jie-yin-pin-she-bei-pei-zhi.md)
+* [9.3 音频播放器](di-9-zhang-duo-mei-ti-he-wai-bu-she-bei/di-9.3-jie-yin-pin-bo-fang-qi.md)
+* [9.4 打印机](di-9-zhang-duo-mei-ti-he-wai-bu-she-bei/di-9.4-jie-da-yin-ji.md)
+* [9.5 人机输入设备](di-9-zhang-duo-mei-ti-he-wai-bu-she-bei/di-9.5-jie-ren-ji-shu-ru-she-bei.md)
+* [9.6 视频播放器](di-9-zhang-duo-mei-ti-he-wai-bu-she-bei/di-9.6-jie-shi-pin-bo-fang-qi.md)
+* [9.7 多媒体处理工具](di-9-zhang-duo-mei-ti-he-wai-bu-she-bei/di-9.7-jie-duo-mei-ti-chu-li-gong-ju.md)
 
-## 第 10 章 系统管理
+## 第 10 章 游戏、科学计算和专业工具
 
-* [10.1 启动引导器](di-10-zhang-xi-tong-guan-li/di-10.1-jie-qi-dong-yin-dao-qi-ji-pei-zhi-wen-jian-loader-conf.md)
-* [10.2 引导管理器与 UEFI 固件](di-10-zhang-xi-tong-guan-li/di-10.2-jie-yin-dao-guan-li-qi-yu-uefi-gu-jian.md)
-* [10.3 管理 FreeBSD 中的服务](di-10-zhang-xi-tong-guan-li/di-10.3-jie-init-rc-fu-wu-guan-li.md)
-* [10.4 用户分级](di-10-zhang-xi-tong-guan-li/di-10.4-jie-yong-hu-fen-ji-wen-jian-login-conf.md)
-* [10.5 bsdconfig 系统配置工具](di-10-zhang-xi-tong-guan-li/di-10.5-jie-bsdconfig-xi-tong-pei-zhi-gong-ju.md)
-* [10.6 OpenSSH](di-10-zhang-xi-tong-guan-li/di-10.6-jie-OpenSSH.md)
-* [10.7 远程桌面访问](di-10-zhang-xi-tong-guan-li/di-10.7-jie-yuan-cheng-zhuo-mian-fang-wen.md)
-* [10.8 设备资源提示](di-10-zhang-xi-tong-guan-li/di-10.8-jie-she-bei-zi-yuan-ti-shi-wen-jian-device-hints.md)
-* [10.9 Cron 和 Periodic](di-10-zhang-xi-tong-guan-li/di-10.9-jie-crontab-ji-ding-shi-ren-wu-wen-jian-periodic-conf.md)
-* [10.10 sysctl 工具](di-10-zhang-xi-tong-guan-li/di-10.10-jie-nei-he-zhuang-tai-mo-ren-pei-zhi-wen-jian-sysctl-conf.md)
-* [10.11 NTP 时间同步与时区](di-10-zhang-xi-tong-guan-li/di-10.11-jie-shi-jian-tong-bu-fu-wu.md)
-* [10.12 Live 镜像与系统恢复](di-10-zhang-xi-tong-guan-li/di-10.12-jie-live-jing-xiang-yu-xi-tong-hui-fu.md)
+* [10.1 Ren'Py 视觉小说引擎](di-10-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-10.1-jie-ren-py-shi-jue-xiao-shuo-yin-qing.md)
+* [10.2 Godot 开源游戏引擎](di-10-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-10.2-jie-godot-kai-yuan-you-xi-yin-qing.md)
+* [10.3 我的世界（Minecraft）](di-10-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-10.3-jie-wo-de-shi-jie-minecraft.md)
+* [10.4 科研和专业计算工具](di-10-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-10.4-jie-ke-yan-he-zhuan-ye-ji-suan-gong-ju.md)
+* [10.5 Steam 客户端](di-10-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-10.5-jie-steam-ke-hu-duan.md)
+* [10.6 Wine 配置](di-10-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-10.6-jie-wine-pei-zhi.md)
 
-## 第 11 章 网络管理
+## 第 11 章 系统管理
 
-* [11.1 基础网络配置](di-11-zhang-wang-luo-guan-li/di-11.1-jie-wang-luo-ji-chu-pei-zhi.md)
-* [11.2 高级网络管理](di-11-zhang-wang-luo-guan-li/di-11.2-jie-gao-ji.md)
-* [11.3 无线网络（Wi-Fi）配置](di-11-zhang-wang-luo-guan-li/di-11.3-jie-wu-xian-wang-luo-wi-fi-pei-zhi.md)
-* [11.4 USB 网络共享（USB tethering）](di-11-zhang-wang-luo-guan-li/di-11.4-jie-usb-wang-luo-gong-xiang-usb-tethering.md)
-* [11.5 蓝牙](di-11-zhang-wang-luo-guan-li/di-11.5-jie-lan-ya.md)
+* [11.1 启动引导器](di-11-zhang-xi-tong-guan-li/di-11.1-jie-qi-dong-yin-dao-qi-ji-pei-zhi-wen-jian-loader-conf.md)
+* [11.2 引导管理器与 UEFI 固件](di-11-zhang-xi-tong-guan-li/di-11.2-jie-yin-dao-guan-li-qi-yu-uefi-gu-jian.md)
+* [11.3 管理 FreeBSD 中的服务](di-11-zhang-xi-tong-guan-li/di-11.3-jie-init-rc-fu-wu-guan-li.md)
+* [11.4 用户分级](di-11-zhang-xi-tong-guan-li/di-11.4-jie-yong-hu-fen-ji-wen-jian-login-conf.md)
+* [11.5 bsdconfig 系统配置工具](di-11-zhang-xi-tong-guan-li/di-11.5-jie-bsdconfig-xi-tong-pei-zhi-gong-ju.md)
+* [11.6 OpenSSH](di-11-zhang-xi-tong-guan-li/di-11.6-jie-OpenSSH.md)
+* [11.7 远程桌面访问](di-11-zhang-xi-tong-guan-li/di-11.7-jie-yuan-cheng-zhuo-mian-fang-wen.md)
+* [11.8 设备资源提示](di-11-zhang-xi-tong-guan-li/di-11.8-jie-she-bei-zi-yuan-ti-shi-wen-jian-device-hints.md)
+* [11.9 Cron 和 Periodic](di-11-zhang-xi-tong-guan-li/di-11.9-jie-crontab-ji-ding-shi-ren-wu-wen-jian-periodic-conf.md)
+* [11.10 sysctl 工具](di-11-zhang-xi-tong-guan-li/di-11.10-jie-nei-he-zhuang-tai-mo-ren-pei-zhi-wen-jian-sysctl-conf.md)
+* [11.11 NTP 时间同步与时区](di-11-zhang-xi-tong-guan-li/di-11.11-jie-shi-jian-tong-bu-fu-wu.md)
+* [11.12 Live 镜像与系统恢复](di-11-zhang-xi-tong-guan-li/di-11.12-jie-live-jing-xiang-yu-xi-tong-hui-fu.md)
 
 ## 第 12 章 网络代理工具
 
@@ -219,25 +219,25 @@
 * [21.12 OnlyOffice 部署（基于 PostgreSQL）](di-21-zhang-web-fu-wu-qi-yu-jian-kong-xi-tong/di-21.12-jie-onlyoffice-bu-shu-ji-yu-postgresql.md)
 * [21.13 OpenList 部署](di-21-zhang-web-fu-wu-qi-yu-jian-kong-xi-tong/di-21.13-jie-openlist-bu-shu.md)
 
-## 第 22 章 嵌入式平台
+## 第 22 章 安全
 
-* [22.1 树莓派 FreeBSD 安装](di-22-zhang-qian-ru-shi-ping-tai/di-22.1-jie-shu-mei-pai-freebsd-an-zhuang.md)
-* [22.2 树莓派 FreeBSD 使用](di-22-zhang-qian-ru-shi-ping-tai/di-22.2-jie-shu-mei-pai-freebsd-shi-yong.md)
-* [22.3 树莓派 Linux 兼容层](di-22-zhang-qian-ru-shi-ping-tai/di-22.3-jie-shu-mei-pai-linux-jian-rong-ceng.md)
-* [22.4 Radxa X4（x86）开发板](di-22-zhang-qian-ru-shi-ping-tai/di-22.4-jie-radxa-x4-x86-kai-fa-ban.md)
-* [22.5 通用嵌入式开发环境](di-22-zhang-qian-ru-shi-ping-tai/di-22.5-jie-tong-yong-qian-ru-shi-kai-fa-huan-jing.md)
-* [22.6 使用 QEMU 在 x86 架构 Windows 主机上安装 RISC-V 架构的 FreeBSD](di-22-zhang-qian-ru-shi-ping-tai/di-22.6-jie-shi-yong-qemu-zai-x86-jia-gou-windows-zhu-ji-shang-an-zhuang-risc-v-jia-gou-de-freebsd.md)
+* [22.1 账户认证安全](di-22-zhang-an-quan/di-22.1-jie-zhang-hu-ren-zheng-an-quan.md)
+* [22.2 资源限制](di-22-zhang-an-quan/di-22.2-jie-zi-yuan-xian-zhi.md)
+* [22.3 安全等级](di-22-zhang-an-quan/di-22.3-jie-an-quan-ji-bie.md)
+* [22.4 安全事件审计](di-22-zhang-an-quan/di-22.4-jie-an-quan-shi-jian-shen-ji.md)
+* [22.5 OpenSSL](di-22-zhang-an-quan/di-22.5-jie-openssl.md)
+* [22.6 入侵检测系统（IDS）](di-22-zhang-an-quan/di-22.6-jie-ru-qin-jian-ce-xi-tong.md)
+* [22.7 第三方漏洞与安全公告](di-22-zhang-an-quan/di-22.7-jie-di-san-fang-lou-dong-yu-an-quan-gong-gao.md)
+* [22.8 强制访问控制框架（MAC 框架）](di-22-zhang-an-quan/di-22.8-jie-fang-wen-kong-zhi-kuang-jia-mac-kuang-jia.md)
 
-## 第 23 章 安全
+## 第 23 章 嵌入式平台
 
-* [23.1 账户认证安全](di-23-zhang-an-quan/di-23.1-jie-zhang-hu-ren-zheng-an-quan.md)
-* [23.2 资源限制](di-23-zhang-an-quan/di-23.2-jie-zi-yuan-xian-zhi.md)
-* [23.3 安全等级](di-23-zhang-an-quan/di-23.3-jie-an-quan-ji-bie.md)
-* [23.4 安全事件审计](di-23-zhang-an-quan/di-23.4-jie-an-quan-shi-jian-shen-ji.md)
-* [23.5 OpenSSL](di-23-zhang-an-quan/di-23.5-jie-openssl.md)
-* [23.6 入侵检测系统（IDS）](di-23-zhang-an-quan/di-23.6-jie-ru-qin-jian-ce-xi-tong.md)
-* [23.7 第三方漏洞与安全公告](di-23-zhang-an-quan/di-23.7-jie-di-san-fang-lou-dong-yu-an-quan-gong-gao.md)
-* [23.8 强制访问控制框架（MAC 框架）](di-23-zhang-an-quan/di-23.8-jie-fang-wen-kong-zhi-kuang-jia-mac-kuang-jia.md)
+* [23.1 树莓派 FreeBSD 安装](di-23-zhang-qian-ru-shi-ping-tai/di-23.1-jie-shu-mei-pai-freebsd-an-zhuang.md)
+* [23.2 树莓派 FreeBSD 使用](di-23-zhang-qian-ru-shi-ping-tai/di-23.2-jie-shu-mei-pai-freebsd-shi-yong.md)
+* [23.3 树莓派 Linux 兼容层](di-23-zhang-qian-ru-shi-ping-tai/di-23.3-jie-shu-mei-pai-linux-jian-rong-ceng.md)
+* [23.4 Radxa X4（x86）开发板](di-23-zhang-qian-ru-shi-ping-tai/di-23.4-jie-radxa-x4-x86-kai-fa-ban.md)
+* [23.5 通用嵌入式开发环境](di-23-zhang-qian-ru-shi-ping-tai/di-23.5-jie-tong-yong-qian-ru-shi-kai-fa-huan-jing.md)
+* [23.6 使用 QEMU 在 x86 架构 Windows 主机上安装 RISC-V 架构的 FreeBSD](di-23-zhang-qian-ru-shi-ping-tai/di-23.6-jie-shi-yong-qemu-zai-x86-jia-gou-windows-zhu-ji-shang-an-zhuang-risc-v-jia-gou-de-freebsd.md)
 
 ## 第 24 章 存储与文件系统管理
 
