@@ -33,7 +33,7 @@
 
 **第 6 章 网络管理**：介绍基础与高级网络配置、无线网络（Wi-Fi）配置、USB 网络共享、蓝牙、系统代理及 V2Ray、Mihomo 等代理工具的配置。
 
-**第 7 章 X Window 系统**：介绍 Intel、AMD 和 NVIDIA 显卡驱动的安装与配置，系统字体的替换方法，以及 root 账户桌面登录与远程桌面访问。
+**第 7 章 X Window 系统**：介绍 Intel、AMD 和 NVIDIA 显卡驱动的安装与配置，系统字体的替换方法，以及远程桌面访问。
 
 **第 8 章 桌面环境**：介绍在 FreeBSD 上运行的各类桌面环境与窗口管理器，包括 KDE 6（X11 与 Wayland 会话）、MATE、Xfce、Cinnamon、LXQt、GNOME、LXDE、bspwm、IceWM、Hyprland 及 CDE。
 
@@ -53,21 +53,21 @@
 
 **第 16 章 ZFS 文件系统**：涵盖 ZFS 的历史与现实、快照与还原、磁盘扩容、数据压缩、启动环境与多版本共存、存储池更新及委托管理。
 
-**第 17 章 安全**：介绍账户认证安全、资源限制、安全等级、安全事件审计、OpenSSL、入侵检测系统（IDS）、第三方漏洞与安全公告，以及强制访问控制框架（MAC 框架）。
+**第 17 章 安全**：介绍账户认证安全、资源限制、安全等级、root 账户桌面登录、安全事件审计、OpenSSL、入侵检测系统（IDS）、第三方漏洞与安全公告，以及强制访问控制框架（MAC 框架）。
 
 **第 18 章 防火墙**：介绍 FreeBSD 内置防火墙系统，包括 Packet Filter（PF）、IPFilter（IPF）、IPFW 的配置，以及 Fail2Ban 和 blocklistd 工具的使用。
 
 **第 19 章 Jail 容器管理**：介绍 FreeBSD 原生轻量级虚拟化技术 Jail 的基础配置、系统更新及 Qjail 管理工具的使用。
 
-**第 20 章 数据库管理**：介绍 PostgreSQL、MySQL 5.x/8.x 系列及 MongoDB 8.0 在 FreeBSD 上的安装与配置，以及 pgAdmin4 管理工具的使用。
+**第 20 章 虚拟化与容器管理**：介绍使用 bhyve 及 vm-bhyve 工具安装 Windows 11、通过 BVCP 的 Web 界面管理 bhyve 虚拟机，以及 Podman 容器管理和在 FreeBSD 上安装 VirtualBox。
 
-**第 21 章 服务器**：介绍 FTP 服务器、Webmin 管理平台、Rsync 数据同步、Samba 文件共享、NFS 服务器及零配置网络（mDNS/DNS-SD）等服务的搭建。
+**第 21 章 数据库管理**：介绍 PostgreSQL、MySQL 5.x/8.x 系列及 MongoDB 8.0 在 FreeBSD 上的安装与配置，以及 pgAdmin4 管理工具的使用。
 
-**第 22 章 Web 服务器**：介绍 Apache、Nginx、Caddy Web 服务器的部署，以及 PHP、Tomcat、WildFly 应用服务器的配置，同时涵盖 Nextcloud、GitLab、OnlyOffice 和 OpenList 等应用的部署。
+**第 22 章 服务器**：介绍 FTP 服务器、Rsync 数据同步、Samba 文件共享、NFS 服务器、零配置网络（mDNS/DNS-SD）及 Webmin 管理平台等服务的搭建。
 
-**第 23 章 监控系统**：介绍 Zabbix、Prometheus 监控系统的部署，以及 Telegraf、InfluxDB 与 Grafana 组成的监控平台架构。
+**第 23 章 Web 服务器**：介绍 Apache、Nginx、Caddy Web 服务器的部署，以及 PHP、Tomcat、WildFly 应用服务器的配置，同时涵盖 Nextcloud、GitLab、OnlyOffice 和 OpenList 等应用的部署。
 
-**第 24 章 虚拟化与容器管理**：介绍使用 bhyve 及 vm-bhyve 工具安装 Windows 11、通过 BVCP 的 Web 界面管理 bhyve 虚拟机，以及 Podman 容器管理和在 FreeBSD 上安装 VirtualBox。
+**第 24 章 监控系统**：介绍 Zabbix、Prometheus 监控系统的部署，以及 Telegraf、InfluxDB 与 Grafana 组成的监控平台架构。
 
 **第 25 章 嵌入式平台**：介绍树莓派上 FreeBSD 的安装与使用、Linux 兼容层配置，以及 Radxa X4 x86 开发板、通用嵌入式开发环境和 QEMU 模拟 RISC-V 架构的方法。
 
