@@ -58,94 +58,94 @@
 * [4.12 进程与守护进程](di-4-zhang-freebsd-ji-chu/di-4.12-jie-jin-cheng-yu-shou-hu-jin-cheng.md)
 * [4.13 压缩解压工具](di-4-zhang-freebsd-ji-chu/di-4.13-jie-ya-suo-jie-ya-gong-ju.md)
 
-## 第 5 章 系统管理
+## 第 5 章 软件管理和系统升级
 
-* [5.1 启动引导器及配置文件（loader.conf）](di-5-zhang-xi-tong-guan-li/di-5.1-jie-qi-dong-yin-dao-qi-ji-pei-zhi-wen-jian-loader-conf.md)
-* [5.2 引导管理器与 UEFI 固件](di-5-zhang-xi-tong-guan-li/di-5.2-jie-yin-dao-guan-li-qi-yu-uefi-gu-jian.md)
-* [5.3 管理 FreeBSD 中的服务](di-5-zhang-xi-tong-guan-li/di-5.3-jie-init-rc-fu-wu-guan-li.md)
-* [5.4 用户分级文件（login.conf）](di-5-zhang-xi-tong-guan-li/di-5.4-jie-yong-hu-fen-ji-wen-jian-login-conf.md)
-* [5.5 bsdconfig 系统配置工具](di-5-zhang-xi-tong-guan-li/di-5.5-jie-bsdconfig-xi-tong-pei-zhi-gong-ju.md)
-* [5.6 OpenSSH](di-5-zhang-xi-tong-guan-li/di-5.6-jie-OpenSSH.md)
-* [5.7 远程桌面访问](di-5-zhang-xi-tong-guan-li/di-5.7-jie-yuan-cheng-zhuo-mian-fang-wen.md)
-* [5.8 设备资源提示文件](di-5-zhang-xi-tong-guan-li/di-5.8-jie-she-bei-zi-yuan-ti-shi-wen-jian-device-hints.md)
-* [5.9 Cron 和 Periodic](di-5-zhang-xi-tong-guan-li/di-5.9-jie-crontab-ji-ding-shi-ren-wu-wen-jian-periodic-conf.md)
-* [5.10 sysctl 工具](di-5-zhang-xi-tong-guan-li/di-5.10-jie-nei-he-zhuang-tai-mo-ren-pei-zhi-wen-jian-sysctl-conf.md)
-* [5.11 NTP 时间同步与时区](di-5-zhang-xi-tong-guan-li/di-5.11-jie-shi-jian-tong-bu-fu-wu.md)
-* [5.12 Live 镜像与系统恢复](di-5-zhang-xi-tong-guan-li/di-5.12-jie-live-jing-xiang-yu-xi-tong-hui-fu.md)
+* [5.1 更换 FreeBSD 软件源](di-5-zhang-ruan-jian-guan-li-he-xi-tong-sheng-ji/di-5.1-jie-geng-huan-freebsd-ruan-jian-yuan.md)
+* [5.2 使用 pkg 管理二进制包](di-5-zhang-ruan-jian-guan-li-he-xi-tong-sheng-ji/di-5.2-jie-shi-yong-pkg-guan-li-er-jin-zhi-bao.md)
+* [5.3 使用 Ports 以源代码方式安装软件](di-5-zhang-ruan-jian-guan-li-he-xi-tong-sheng-ji/di-5.3-jie-shi-yong-ports-yi-yuan-dai-ma-fang-shi-an-zhuang-ruan-jian.md)
+* [5.4 系统更新检测工具](di-5-zhang-ruan-jian-guan-li-he-xi-tong-sheng-ji/di-5.4-jie-update.md)
+* [5.5 使用 freebsd-update 更新 FreeBSD](di-5-zhang-ruan-jian-guan-li-he-xi-tong-sheng-ji/di-5.5-jie-shi-yong-freebsd-update-geng-xin-freebsd.md)
+* [5.6 使用源代码更新 FreeBSD](di-5-zhang-ruan-jian-guan-li-he-xi-tong-sheng-ji/di-5.6-jie-shi-yong-yuan-dai-ma-geng-xin-freebsd.md)
+* [5.7 使用 DVD 安装软件](di-5-zhang-ruan-jian-guan-li-he-xi-tong-sheng-ji/di-5.7-jie-shi-yong-dvd-an-zhuang-ruan-jian.md)
+* [5.8 FreeBSD 镜像站现状](di-5-zhang-ruan-jian-guan-li-he-xi-tong-sheng-ji/di-5.8-jie-freebsd-jing-xiang-zhan-xian-zhuang.md)
 
-## 第 6 章 网络管理
+## 第 6 章 桌面环境
 
-* [6.1 基础网络配置](di-6-zhang-wang-luo-guan-li/di-6.1-jie-wang-luo-ji-chu-pei-zhi.md)
-* [6.2 高级网络管理](di-6-zhang-wang-luo-guan-li/di-6.2-jie-gao-ji.md)
-* [6.3 无线网络（Wi-Fi）配置](di-6-zhang-wang-luo-guan-li/di-6.3-jie-wu-xian-wang-luo-wi-fi-pei-zhi.md)
-* [6.4 USB 网络共享（USB tethering）](di-6-zhang-wang-luo-guan-li/di-6.4-jie-usb-wang-luo-gong-xiang-usb-tethering.md)
-* [6.5 蓝牙](di-6-zhang-wang-luo-guan-li/di-6.5-jie-lan-ya.md)
+* [6.1 Intel 和 AMD 显卡驱动配置](di-6-zhang-zhuo-mian-huan-jing/di-6.1-jie-intel-he-amd-xian-ka-qu-dong-pei-zhi.md)
+* [6.2 NVIDIA 显卡驱动配置](di-6-zhang-zhuo-mian-huan-jing/di-6.2-jie-nvidia-xian-ka-qu-dong-pei-zhi.md)
+* [6.3 KDE 6 桌面环境（X11 会话）](di-6-zhang-zhuo-mian-huan-jing/di-6.3-jie-kde-6-zhuo-mian-huan-jing-x11-hui-hua.md)
+* [6.4 KDE 6 桌面环境（Wayland 会话）](di-6-zhang-zhuo-mian-huan-jing/di-6.4-jie-kde-6-zhuo-mian-huan-jing-wayland-hui-hua.md)
+* [6.5 MATE](di-6-zhang-zhuo-mian-huan-jing/di-6.5-jie-mate.md)
+* [6.6 Xfce](di-6-zhang-zhuo-mian-huan-jing/di-6.6-jie-xfce.md)
+* [6.7 Cinnamon](di-6-zhang-zhuo-mian-huan-jing/di-6.7-jie-cinnamon.md)
+* [6.8 LXQt](di-6-zhang-zhuo-mian-huan-jing/di-6.8-jie-lxqt.md)
+* [6.9 GNOME](di-6-zhang-zhuo-mian-huan-jing/di-6.9-jie-gnome.md)
+* [6.10 LXDE](di-6-zhang-zhuo-mian-huan-jing/di-6.10-jie-lxde.md)
+* [6.11 bspwm](di-6-zhang-zhuo-mian-huan-jing/di-6.11-jie-bspwm.md)
+* [6.12 IceWM](di-6-zhang-zhuo-mian-huan-jing/di-6.12-jie-icewm.md)
+* [6.13 Hyprland](di-6-zhang-zhuo-mian-huan-jing/di-6.13-jie-hyprland.md)
+* [6.14 CDE](di-6-zhang-zhuo-mian-huan-jing/di-6.14-jie-cde.md)
+* [6.15 启用 root 账户桌面登录](di-6-zhang-zhuo-mian-huan-jing/di-6.15-jie-qi-yong-root-zhang-hu-zhuo-mian-deng-lu.md)
 
-## 第 7 章 网络代理工具
+## 第 7 章 本地化与中文支持
 
-* [7.1 系统代理](di-7-zhang-wang-luo-dai-li-gong-ju/di-7.1-jie-xi-tong-dai-li.md)
-* [7.2 V2Ray 配置](di-7-zhang-wang-luo-dai-li-gong-ju/di-7.2-jie-v2ray-pei-zhi.md)
-* [7.3 Mihomo 配置](di-7-zhang-wang-luo-dai-li-gong-ju/di-7.3-jie-mihomo-pei-zhi.md)
+* [7.1 本地化环境变量](di-7-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-7.1-jie-ben-di-hua-huan-jing-bian-liang.md)
+* [7.2 Fcitx 输入法框架](di-7-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-7.2-jie-fcitx-shu-ru-fa-kuang-jia.md)
+* [7.3 IBus 输入法框架](di-7-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-7.3-jie-ibus-shu-ru-fa-kuang-jia.md)
+* [7.4 五笔输入法](di-7-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-7.4-jie-wu-bi-shu-ru-fa.md)
+* [7.5 系统字体替换](di-7-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-7.5-jie-xi-tong-zi-ti-ti-huan.md)
 
-## 第 8 章 存储与文件系统管理
+## 第 8 章 系统管理
 
-* [8.1 UFS 文件系统](di-8-zhang-cun-chu-yu-wen-jian-xi-tong-guan-li/di-8.1-jie-ufs-wen-jian-xi-tong.md)
-* [8.2 自动挂载文件系统](di-8-zhang-cun-chu-yu-wen-jian-xi-tong-guan-li/di-8.2-jie-zi-dong-gua-zai-wen-jian-xi-tong.md)
-* [8.3 Linux 文件系统](di-8-zhang-cun-chu-yu-wen-jian-xi-tong-guan-li/di-8.3-jie-linux-wen-jian-xi-tong.md)
-* [8.4 Windows 文件系统](di-8-zhang-cun-chu-yu-wen-jian-xi-tong-guan-li/di-8.4-jie-windows-wen-jian-xi-tong.md)
-* [8.5 swap 分区](di-8-zhang-cun-chu-yu-wen-jian-xi-tong-guan-li/di-8.5-jie-swap-fen-qu.md)
+* [8.1 启动引导器及配置文件（loader.conf）](di-8-zhang-xi-tong-guan-li/di-8.1-jie-qi-dong-yin-dao-qi-ji-pei-zhi-wen-jian-loader-conf.md)
+* [8.2 引导管理器与 UEFI 固件](di-8-zhang-xi-tong-guan-li/di-8.2-jie-yin-dao-guan-li-qi-yu-uefi-gu-jian.md)
+* [8.3 管理 FreeBSD 中的服务](di-8-zhang-xi-tong-guan-li/di-8.3-jie-init-rc-fu-wu-guan-li.md)
+* [8.4 用户分级文件（login.conf）](di-8-zhang-xi-tong-guan-li/di-8.4-jie-yong-hu-fen-ji-wen-jian-login-conf.md)
+* [8.5 bsdconfig 系统配置工具](di-8-zhang-xi-tong-guan-li/di-8.5-jie-bsdconfig-xi-tong-pei-zhi-gong-ju.md)
+* [8.6 OpenSSH](di-8-zhang-xi-tong-guan-li/di-8.6-jie-OpenSSH.md)
+* [8.7 远程桌面访问](di-8-zhang-xi-tong-guan-li/di-8.7-jie-yuan-cheng-zhuo-mian-fang-wen.md)
+* [8.8 设备资源提示文件](di-8-zhang-xi-tong-guan-li/di-8.8-jie-she-bei-zi-yuan-ti-shi-wen-jian-device-hints.md)
+* [8.9 Cron 和 Periodic](di-8-zhang-xi-tong-guan-li/di-8.9-jie-crontab-ji-ding-shi-ren-wu-wen-jian-periodic-conf.md)
+* [8.10 sysctl 工具](di-8-zhang-xi-tong-guan-li/di-8.10-jie-nei-he-zhuang-tai-mo-ren-pei-zhi-wen-jian-sysctl-conf.md)
+* [8.11 NTP 时间同步与时区](di-8-zhang-xi-tong-guan-li/di-8.11-jie-shi-jian-tong-bu-fu-wu.md)
+* [8.12 Live 镜像与系统恢复](di-8-zhang-xi-tong-guan-li/di-8.12-jie-live-jing-xiang-yu-xi-tong-hui-fu.md)
 
-## 第 9 章 ZFS 文件系统
+## 第 9 章 网络管理
 
-* [9.1 ZFS 历史与现实](di-9-zhang-zfs-wen-jian-xi-tong/di-9.1-jie-zfs-gai-shu.md)
-* [9.2 ZFS 快照与还原](di-9-zhang-zfs-wen-jian-xi-tong/di-9.2-jie-zfs-kuai-zhao-yu-huan-yuan.md)
-* [9.3 ZFS 磁盘扩容](di-9-zhang-zfs-wen-jian-xi-tong/di-9.3-jie-zfs-ci-pan-kuo-rong.md)
-* [9.4 ZFS 数据压缩](di-9-zhang-zfs-wen-jian-xi-tong/di-9.4-jie-zfs-shu-ju-ya-suo.md)
-* [9.5 ZFS 启动环境](di-9-zhang-zfs-wen-jian-xi-tong/di-9.5-jie-zfs-qi-dong-huan-jing.md)
-* [9.6 ZFS 启动环境与多版本共存](di-9-zhang-zfs-wen-jian-xi-tong/di-9.6-jie-zfs-qi-dong-huan-jing-yu-duo-ban-ben-gong-cun.md)
-* [9.7 ZFS 存储池更新](di-9-zhang-zfs-wen-jian-xi-tong/di-9.7-jie-zfs-cun-chu-chi-geng-xin.md)
-* [9.8 ZFS 委托管理](di-9-zhang-zfs-wen-jian-xi-tong/di-9.8-jie-zfs-wei-tuo-guan-li.md)
+* [9.1 基础网络配置](di-9-zhang-wang-luo-guan-li/di-9.1-jie-wang-luo-ji-chu-pei-zhi.md)
+* [9.2 高级网络管理](di-9-zhang-wang-luo-guan-li/di-9.2-jie-gao-ji.md)
+* [9.3 无线网络（Wi-Fi）配置](di-9-zhang-wang-luo-guan-li/di-9.3-jie-wu-xian-wang-luo-wi-fi-pei-zhi.md)
+* [9.4 USB 网络共享（USB tethering）](di-9-zhang-wang-luo-guan-li/di-9.4-jie-usb-wang-luo-gong-xiang-usb-tethering.md)
+* [9.5 蓝牙](di-9-zhang-wang-luo-guan-li/di-9.5-jie-lan-ya.md)
 
-## 第 10 章 软件管理和系统升级
+## 第 10 章 网络代理工具
 
-* [10.1 更换 FreeBSD 软件源](di-10-zhang-ruan-jian-guan-li-he-xi-tong-sheng-ji/di-10.1-jie-geng-huan-freebsd-ruan-jian-yuan.md)
-* [10.2 使用 pkg 管理二进制包](di-10-zhang-ruan-jian-guan-li-he-xi-tong-sheng-ji/di-10.2-jie-shi-yong-pkg-guan-li-er-jin-zhi-bao.md)
-* [10.3 使用 Ports 以源代码方式安装软件](di-10-zhang-ruan-jian-guan-li-he-xi-tong-sheng-ji/di-10.3-jie-shi-yong-ports-yi-yuan-dai-ma-fang-shi-an-zhuang-ruan-jian.md)
-* [10.4 系统更新检测工具](di-10-zhang-ruan-jian-guan-li-he-xi-tong-sheng-ji/di-10.4-jie-update.md)
-* [10.5 使用 freebsd-update 更新 FreeBSD](di-10-zhang-ruan-jian-guan-li-he-xi-tong-sheng-ji/di-10.5-jie-shi-yong-freebsd-update-geng-xin-freebsd.md)
-* [10.6 使用源代码更新 FreeBSD](di-10-zhang-ruan-jian-guan-li-he-xi-tong-sheng-ji/di-10.6-jie-shi-yong-yuan-dai-ma-geng-xin-freebsd.md)
-* [10.7 使用 DVD 安装软件](di-10-zhang-ruan-jian-guan-li-he-xi-tong-sheng-ji/di-10.7-jie-shi-yong-dvd-an-zhuang-ruan-jian.md)
-* [10.8 FreeBSD 镜像站现状](di-10-zhang-ruan-jian-guan-li-he-xi-tong-sheng-ji/di-10.8-jie-freebsd-jing-xiang-zhan-xian-zhuang.md)
+* [10.1 系统代理](di-10-zhang-wang-luo-dai-li-gong-ju/di-10.1-jie-xi-tong-dai-li.md)
+* [10.2 V2Ray 配置](di-10-zhang-wang-luo-dai-li-gong-ju/di-10.2-jie-v2ray-pei-zhi.md)
+* [10.3 Mihomo 配置](di-10-zhang-wang-luo-dai-li-gong-ju/di-10.3-jie-mihomo-pei-zhi.md)
 
-## 第 11 章 桌面环境
+## 第 11 章 存储与文件系统管理
 
-* [11.1 Intel 和 AMD 显卡驱动配置](di-11-zhang-zhuo-mian-huan-jing/di-11.1-jie-intel-he-amd-xian-ka-qu-dong-pei-zhi.md)
-* [11.2 NVIDIA 显卡驱动配置](di-11-zhang-zhuo-mian-huan-jing/di-11.2-jie-nvidia-xian-ka-qu-dong-pei-zhi.md)
-* [11.3 KDE 6 桌面环境（X11 会话）](di-11-zhang-zhuo-mian-huan-jing/di-11.3-jie-kde-6-zhuo-mian-huan-jing-x11-hui-hua.md)
-* [11.4 KDE 6 桌面环境（Wayland 会话）](di-11-zhang-zhuo-mian-huan-jing/di-11.4-jie-kde-6-zhuo-mian-huan-jing-wayland-hui-hua.md)
-* [11.5 MATE](di-11-zhang-zhuo-mian-huan-jing/di-11.5-jie-mate.md)
-* [11.6 Xfce](di-11-zhang-zhuo-mian-huan-jing/di-11.6-jie-xfce.md)
-* [11.7 Cinnamon](di-11-zhang-zhuo-mian-huan-jing/di-11.7-jie-cinnamon.md)
-* [11.8 LXQt](di-11-zhang-zhuo-mian-huan-jing/di-11.8-jie-lxqt.md)
-* [11.9 GNOME](di-11-zhang-zhuo-mian-huan-jing/di-11.9-jie-gnome.md)
-* [11.10 LXDE](di-11-zhang-zhuo-mian-huan-jing/di-11.10-jie-lxde.md)
-* [11.11 bspwm](di-11-zhang-zhuo-mian-huan-jing/di-11.11-jie-bspwm.md)
-* [11.12 IceWM](di-11-zhang-zhuo-mian-huan-jing/di-11.12-jie-icewm.md)
-* [11.13 Hyprland](di-11-zhang-zhuo-mian-huan-jing/di-11.13-jie-hyprland.md)
-* [11.14 CDE](di-11-zhang-zhuo-mian-huan-jing/di-11.14-jie-cde.md)
-* [11.15 启用 root 账户桌面登录](di-11-zhang-zhuo-mian-huan-jing/di-11.15-jie-qi-yong-root-zhang-hu-zhuo-mian-deng-lu.md)
+* [11.1 UFS 文件系统](di-11-zhang-cun-chu-yu-wen-jian-xi-tong-guan-li/di-11.1-jie-ufs-wen-jian-xi-tong.md)
+* [11.2 自动挂载文件系统](di-11-zhang-cun-chu-yu-wen-jian-xi-tong-guan-li/di-11.2-jie-zi-dong-gua-zai-wen-jian-xi-tong.md)
+* [11.3 Linux 文件系统](di-11-zhang-cun-chu-yu-wen-jian-xi-tong-guan-li/di-11.3-jie-linux-wen-jian-xi-tong.md)
+* [11.4 Windows 文件系统](di-11-zhang-cun-chu-yu-wen-jian-xi-tong-guan-li/di-11.4-jie-windows-wen-jian-xi-tong.md)
+* [11.5 swap 分区](di-11-zhang-cun-chu-yu-wen-jian-xi-tong-guan-li/di-11.5-jie-swap-fen-qu.md)
 
-## 第 12 章 人工智能（AI）
+## 第 12 章 ZFS 文件系统
 
-* [12.1 人工智能（AI）概述](di-12-zhang-ren-gong-zhi-neng-ai/di-12.1-jie-ren-gong-zhi-neng-ai-gai-shu.md)
+* [12.1 ZFS 历史与现实](di-12-zhang-zfs-wen-jian-xi-tong/di-12.1-jie-zfs-gai-shu.md)
+* [12.2 ZFS 快照与还原](di-12-zhang-zfs-wen-jian-xi-tong/di-12.2-jie-zfs-kuai-zhao-yu-huan-yuan.md)
+* [12.3 ZFS 磁盘扩容](di-12-zhang-zfs-wen-jian-xi-tong/di-12.3-jie-zfs-ci-pan-kuo-rong.md)
+* [12.4 ZFS 数据压缩](di-12-zhang-zfs-wen-jian-xi-tong/di-12.4-jie-zfs-shu-ju-ya-suo.md)
+* [12.5 ZFS 启动环境](di-12-zhang-zfs-wen-jian-xi-tong/di-12.5-jie-zfs-qi-dong-huan-jing.md)
+* [12.6 ZFS 启动环境与多版本共存](di-12-zhang-zfs-wen-jian-xi-tong/di-12.6-jie-zfs-qi-dong-huan-jing-yu-duo-ban-ben-gong-cun.md)
+* [12.7 ZFS 存储池更新](di-12-zhang-zfs-wen-jian-xi-tong/di-12.7-jie-zfs-cun-chu-chi-geng-xin.md)
+* [12.8 ZFS 委托管理](di-12-zhang-zfs-wen-jian-xi-tong/di-12.8-jie-zfs-wei-tuo-guan-li.md)
 
-## 第 13 章 本地化与中文支持
+## 第 13 章 人工智能（AI）
 
-* [13.1 本地化环境变量](di-13-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-13.1-jie-ben-di-hua-huan-jing-bian-liang.md)
-* [13.2 Fcitx 输入法框架](di-13-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-13.2-jie-fcitx-shu-ru-fa-kuang-jia.md)
-* [13.3 IBus 输入法框架](di-13-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-13.3-jie-ibus-shu-ru-fa-kuang-jia.md)
-* [13.4 五笔输入法](di-13-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-13.4-jie-wu-bi-shu-ru-fa.md)
-* [13.5 系统字体替换](di-13-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-13.5-jie-xi-tong-zi-ti-ti-huan.md)
+* [13.1 人工智能（AI）概述](di-13-zhang-ren-gong-zhi-neng-ai/di-13.1-jie-ren-gong-zhi-neng-ai-gai-shu.md)
 
 ## 第 14 章 多媒体和外部设备
 
