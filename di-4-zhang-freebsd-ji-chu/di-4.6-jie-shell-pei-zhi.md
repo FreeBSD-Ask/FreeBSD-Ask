@@ -8,7 +8,6 @@ shell 的配置体系通过一系列初始化文件（initialization files）实
 
 对于 C shell（csh/tcsh），登录 shell 读取 **/etc/csh.cshrc**、**/etc/csh.login**、**~/.cshrc**、**~/.login**。
 
-
 ## Zsh
 
 ### 安装 Zsh

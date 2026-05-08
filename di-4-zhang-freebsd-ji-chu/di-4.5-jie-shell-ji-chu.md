@@ -48,7 +48,6 @@ $ ls -l /bin/sh # 以长格式查看 /bin/sh 这个文件的详细信息
 
 DASH 是 NetBSD 版本 ash（Almquist SHell）的直接后裔。
 
-
 ## 快捷键
 
 > **注意**
