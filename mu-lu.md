@@ -187,16 +187,13 @@
 * [18.5 Fail2Ban 配置（基于 IPFW、PF 与 IPF）](di-18-zhang-fang-huo-qiang/di-18.5-jie-fail2ban-pei-zhi-ji-yu-ipfw-pf-yu-ipf.md)
 * [18.6 blocklistd](di-18-zhang-fang-huo-qiang/di-18.6-jie-blocklistd.md)
 
-## 第 19 章 安全
+## 第 19 章 数据库管理
 
-* [19.1 账户认证安全](di-19-zhang-an-quan/di-19.1-jie-zhang-hu-ren-zheng-an-quan.md)
-* [19.2 资源限制](di-19-zhang-an-quan/di-19.2-jie-zi-yuan-xian-zhi.md)
-* [19.3 安全等级](di-19-zhang-an-quan/di-19.3-jie-an-quan-ji-bie.md)
-* [19.4 安全事件审计](di-19-zhang-an-quan/di-19.4-jie-an-quan-shi-jian-shen-ji.md)
-* [19.5 OpenSSL](di-19-zhang-an-quan/di-19.5-jie-openssl.md)
-* [19.6 入侵检测系统（IDS）](di-19-zhang-an-quan/di-19.6-jie-ru-qin-jian-ce-xi-tong.md)
-* [19.7 第三方漏洞与安全公告](di-19-zhang-an-quan/di-19.7-jie-di-san-fang-lou-dong-yu-an-quan-gong-gao.md)
-* [19.8 强制访问控制框架（MAC 框架）](di-19-zhang-an-quan/di-19.8-jie-fang-wen-kong-zhi-kuang-jia-mac-kuang-jia.md)
+* [19.1 PostgreSQL 数据库](di-19-zhang-shu-ju-ku-guan-li/di-19.1-jie-postgresql-shu-ju-ku.md)
+* [19.2 pgAdmin4 管理工具](di-19-zhang-shu-ju-ku-guan-li/di-19.2-jie-pgadmin4-guan-li-gong-ju.md)
+* [19.3 MySQL 5.x 系列](di-19-zhang-shu-ju-ku-guan-li/di-19.3-jie-mysql-5-x-xi-lie.md)
+* [19.4 MySQL 8.x 系列](di-19-zhang-shu-ju-ku-guan-li/di-19.4-jie-mysql-8-x-xi-lie.md)
+* [19.5 MongoDB 8.0](di-19-zhang-shu-ju-ku-guan-li/di-19.5-jie-mongodb-8-0.md)
 
 ## 第 20 章 服务器
 
@@ -232,13 +229,16 @@
 * [22.5 通用嵌入式开发环境](di-22-zhang-qian-ru-shi-ping-tai/di-22.5-jie-tong-yong-qian-ru-shi-kai-fa-huan-jing.md)
 * [22.6 使用 QEMU 在 x86 架构 Windows 主机上安装 RISC-V 架构的 FreeBSD](di-22-zhang-qian-ru-shi-ping-tai/di-22.6-jie-shi-yong-qemu-zai-x86-jia-gou-windows-zhu-ji-shang-an-zhuang-risc-v-jia-gou-de-freebsd.md)
 
-## 第 23 章 数据库管理
+## 第 23 章 安全
 
-* [23.1 PostgreSQL 数据库](di-23-zhang-shu-ju-ku-guan-li/di-23.1-jie-postgresql-shu-ju-ku.md)
-* [23.2 pgAdmin4 管理工具](di-23-zhang-shu-ju-ku-guan-li/di-23.2-jie-pgadmin4-guan-li-gong-ju.md)
-* [23.3 MySQL 5.x 系列](di-23-zhang-shu-ju-ku-guan-li/di-23.3-jie-mysql-5-x-xi-lie.md)
-* [23.4 MySQL 8.x 系列](di-23-zhang-shu-ju-ku-guan-li/di-23.4-jie-mysql-8-x-xi-lie.md)
-* [23.5 MongoDB 8.0](di-23-zhang-shu-ju-ku-guan-li/di-23.5-jie-mongodb-8-0.md)
+* [23.1 账户认证安全](di-23-zhang-an-quan/di-23.1-jie-zhang-hu-ren-zheng-an-quan.md)
+* [23.2 资源限制](di-23-zhang-an-quan/di-23.2-jie-zi-yuan-xian-zhi.md)
+* [23.3 安全等级](di-23-zhang-an-quan/di-23.3-jie-an-quan-ji-bie.md)
+* [23.4 安全事件审计](di-23-zhang-an-quan/di-23.4-jie-an-quan-shi-jian-shen-ji.md)
+* [23.5 OpenSSL](di-23-zhang-an-quan/di-23.5-jie-openssl.md)
+* [23.6 入侵检测系统（IDS）](di-23-zhang-an-quan/di-23.6-jie-ru-qin-jian-ce-xi-tong.md)
+* [23.7 第三方漏洞与安全公告](di-23-zhang-an-quan/di-23.7-jie-di-san-fang-lou-dong-yu-an-quan-gong-gao.md)
+* [23.8 强制访问控制框架（MAC 框架）](di-23-zhang-an-quan/di-23.8-jie-fang-wen-kong-zhi-kuang-jia-mac-kuang-jia.md)
 
 ## 第 24 章 Linux 二进制兼容层
 
