@@ -271,26 +271,23 @@
 * [26.9 Vim 开发环境配置](di-26-zhang-kai-fa-huan-jing/di-26.9-jie-vim-kai-fa-huan-jing-pei-zhi.md)
 * [26.10 DTrace](di-26-zhang-kai-fa-huan-jing/di-26.10-jie-dTrace.md)
 
-## 第 27 章 社区参与
+## 第 27 章 FreeBSD 内核架构
 
-* [27.1 Bug 报告流程](di-27-zhang-she-qu-can-yu/di-27.1-jie-bug-bao-gao-liu-cheng.md)
-* [27.2 FreeBSD 邮件列表订阅](di-27-zhang-she-qu-can-yu/di-27.2-jie-freebsd-you-jian-lie-biao-ding-yue.md)
-* [27.3 FreeBSD 开发参与指南](di-27-zhang-she-qu-can-yu/di-27.3-jie-freebsd-kai-fa-can-yu-zhi-nan.md)
-
-## 第 28 章 FreeBSD 内核架构
-
-* [28.1 FreeBSD 源代码目录结构](di-28-zhang-freebsd-nei-he-jia-gou/di-28.1-jie-freebsd-yuan-dai-ma-mu-lu-jie-gou.md)
-* [28.2 FreeBSD 内核文件结构](di-28-zhang-freebsd-nei-he-jia-gou/di-28.2-jie-freebsd-nei-he-wen-jian-jie-gou.md)
-* [28.3 机器相关的内核选项注解](di-28-zhang-freebsd-nei-he-jia-gou/di-28.3-jie-ji-qi-xiang-guan-de-nei-he-xuan-xiang-zhu-jie.md)
-* [28.4 机器无关的内核选项注解](di-28-zhang-freebsd-nei-he-jia-gou/di-28.4-jie-ji-qi-wu-guan-de-nei-he-xuan-xiang-zhu-jie.md)
-* [28.5 GENERIC 内核选项注解（AMD64）](di-28-zhang-freebsd-nei-he-jia-gou/di-28.5-jie-generic-nei-he-xuan-xiang-zhu-jie-amd64.md)
-* [28.6 在 Linux 系统上交叉构建 FreeBSD](di-28-zhang-freebsd-nei-he-jia-gou/di-28.6-jie-zai-linux-xi-tong-shang-jiao-cha-gou-jian-freebsd.md)
-* [28.7 构建定制内核](di-28-zhang-freebsd-nei-he-jia-gou/di-28.7-jie-gou-jian-ding-zhi-nei-he.md)
+* [27.1 FreeBSD 源代码目录结构](di-27-zhang-freebsd-nei-he-jia-gou/di-27.1-jie-freebsd-yuan-dai-ma-mu-lu-jie-gou.md)
+* [27.2 FreeBSD 内核文件结构](di-27-zhang-freebsd-nei-he-jia-gou/di-27.2-jie-freebsd-nei-he-wen-jian-jie-gou.md)
+* [27.3 机器相关的内核选项注解](di-27-zhang-freebsd-nei-he-jia-gou/di-27.3-jie-ji-qi-xiang-guan-de-nei-he-xuan-xiang-zhu-jie.md)
+* [27.4 机器无关的内核选项注解](di-27-zhang-freebsd-nei-he-jia-gou/di-27.4-jie-ji-qi-wu-guan-de-nei-he-xuan-xiang-zhu-jie.md)
+* [27.5 GENERIC 内核选项注解（AMD64）](di-27-zhang-freebsd-nei-he-jia-gou/di-27.5-jie-generic-nei-he-xuan-xiang-zhu-jie-amd64.md)
+* [27.6 在 Linux 系统上交叉构建 FreeBSD](di-27-zhang-freebsd-nei-he-jia-gou/di-27.6-jie-zai-linux-xi-tong-shang-jiao-cha-gou-jian-freebsd.md)
+* [27.7 构建定制内核](di-27-zhang-freebsd-nei-he-jia-gou/di-27.7-jie-gou-jian-ding-zhi-nei-he.md)
 
 ## 附录 I 工具与资源
 
 * [BSD 许可证概览](fu-lu1/bsd-xu-ke-zheng-gai-lan.md)
 * [microSD 卡参数简介](fu-lu1/cun-chu-ka.md)
+* [Bug 报告流程](fu-lu1/bug-bao-gao-liu-cheng.md)
+* [FreeBSD 邮件列表订阅](fu-lu1/freebsd-you-jian-lie-biao-ding-yue.md)
+* [FreeBSD 开发参与指南](fu-lu1/freebsd-kai-fa-can-yu-zhi-nan.md)
 
 ## 附录 II 文学故事
 
