@@ -223,7 +223,7 @@
 * [21.5 NFS 服务器](di-21-zhang-fu-wu-qi/di-21.5-jie-nfs-fu-wu-qi.md)
 * [21.6 零配置网络（mDNS/DNS-SD）](di-21-zhang-fu-wu-qi/di-21.6-jie-mdns.md)
 
-## 第 22 章 Web 服务器与监控系统
+## 第 22 章 Web 服务器
 
 * [22.1 Apache Web 服务器](di-22-zhang-web-fu-wu-qi-yu-jian-kong-xi-tong/di-22.1-jie-apache-web-fu-wu-qi.md)
 * [22.2 Nginx Web 服务器](di-22-zhang-web-fu-wu-qi-yu-jian-kong-xi-tong/di-22.2-jie-nginx-web-fu-wu-qi.md)
