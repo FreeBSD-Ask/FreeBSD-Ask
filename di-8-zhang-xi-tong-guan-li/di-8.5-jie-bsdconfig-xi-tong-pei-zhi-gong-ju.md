@@ -1,4 +1,4 @@
-# 5.5 bsdconfig 系统配置工具
+# 8.5 bsdconfig 系统配置工具
 
 ## bsdconfig 系统配置工具概述
 

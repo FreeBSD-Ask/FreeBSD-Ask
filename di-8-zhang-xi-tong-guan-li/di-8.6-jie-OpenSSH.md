@@ -1,4 +1,4 @@
-# 5.6 OpenSSH
+# 8.6 OpenSSH
 
 ## SSH 与 OpenSSH 概述
 

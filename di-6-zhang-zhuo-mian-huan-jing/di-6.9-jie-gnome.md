@@ -1,4 +1,4 @@
-# 11.9 GNOME
+# 6.9 GNOME
 
 ## GNOME 桌面环境概述
 
