@@ -25,22 +25,22 @@
 
 * [2.1 安装前的准备工作](di-2-zhang-freebsd-an-zhuang-ji-chu/di-2.1-jie-an-zhuang-qian-de-zhun-bei-gong-zuo.md)
 * [2.2 FreeBSD 15 安装指南（AMD64）](di-2-zhang-freebsd-an-zhuang-ji-chu/di-2.2-jie-freebsd-15-an-zhuang-zhi-nan-amd64.md)
-* [2.3 安装故障排除](di-2-zhang-freebsd-an-zhuang-ji-chu/di-2.3-jie-an-zhuang-gu-zhang-pai-chu.md)
-* [2.4 在 Windows 中将 USB 启动盘恢复为普通存储设备](di-2-zhang-freebsd-an-zhuang-ji-chu/di-2.4-jie-zai-windows-zhong-jiang-usb-qi-dong-pan-hui-fu-wei-pu-tong-cun-chu-she-bei.md)
+* [2.3 使用 VMware Workstation Pro 安装 FreeBSD](di-2-zhang-freebsd-an-zhuang-ji-chu/di-2.3-jie-shi-yong-vmware-workstation-pro-an-zhuang-freebsd.md)
+* [2.4 使用 VirtualBox 安装 FreeBSD](di-2-zhang-freebsd-an-zhuang-ji-chu/di-2.4-jie-shi-yong-virtualbox-an-zhuang-freebsd.md)
+* [2.5 使用 Hyper-V 安装 FreeBSD](di-2-zhang-freebsd-an-zhuang-ji-chu/di-2.5-jie-shi-yong-hyper-v-an-zhuang-freebsd.md)
+* [2.6 安装故障排除](di-2-zhang-freebsd-an-zhuang-ji-chu/di-2.6-jie-an-zhuang-gu-zhang-pai-chu.md)
+* [2.7 在 Windows 中将 USB 启动盘恢复为普通存储设备](di-2-zhang-freebsd-an-zhuang-ji-chu/di-2.7-jie-zai-windows-zhong-jiang-usb-qi-dong-pan-hui-fu-wei-pu-tong-cun-chu-she-bei.md)
 
 ## 第 3 章 FreeBSD 高级安装
 
-* [3.1 使用 Hyper-V 安装 FreeBSD](di-3-zhang-freebsd-gao-ji-an-zhuang/di-3.1-jie-shi-yong-hyper-v-an-zhuang-freebsd.md)
-* [3.2 使用 VMware Workstation Pro 安装 FreeBSD](di-3-zhang-freebsd-gao-ji-an-zhuang/di-3.2-jie-shi-yong-vmware-workstation-pro-an-zhuang-freebsd.md)
-* [3.3 使用 VirtualBox 安装 FreeBSD](di-3-zhang-freebsd-gao-ji-an-zhuang/di-3.3-jie-shi-yong-virtualbox-an-zhuang-freebsd.md)
-* [3.4 安装双系统（先安装 FreeBSD）](di-3-zhang-freebsd-gao-ji-an-zhuang/di-3.4-jie-an-zhuang-shuang-xi-tong-xian-an-zhuang-freebsd.md)
-* [3.5 安装双系统（后安装 FreeBSD）](di-3-zhang-freebsd-gao-ji-an-zhuang/di-3.5-jie-an-zhuang-shuang-xi-tong-hou-an-zhuang-freebsd.md)
-* [3.6 基于 Apple M1 和 Parallels Desktop 20 安装 FreeBSD](di-3-zhang-freebsd-gao-ji-an-zhuang/di-3.6-jie-ji-yu-apple-m1-he-parallels-desktop-20-an-zhuang-freebsd.md)
-* [3.7 基于 Apple M1 和 VMware Fusion Pro 安装 FreeBSD](di-3-zhang-freebsd-gao-ji-an-zhuang/di-3.7-jie-ji-yu-apple-m1-he-vmware-fusion-pro-an-zhuang-freebsd.md)
-* [3.8 基于 Apple M1 和 UTM 安装 FreeBSD](di-3-zhang-freebsd-gao-ji-an-zhuang/di-3.8-jie-ji-yu-apple-m1-he-utm-an-zhuang-freebsd.md)
-* [3.9 腾讯云轻量云安装 FreeBSD（传统引导和 MBR 分区表）](di-3-zhang-freebsd-gao-ji-an-zhuang/di-3.9-jie-teng-xun-yun-qing-liang-yun-an-zhuang-freebsd-chuan-tong-yin-dao-he-mbr-fen-qu-biao.md)
-* [3.10 KVM、QEMU 等平台安装 FreeBSD（传统引导和 MBR 分区表）](di-3-zhang-freebsd-gao-ji-an-zhuang/di-3.10-jie-kvm-qemu-deng-ping-tai-an-zhuang-freebsd-chuan-tong-yin-dao-he-mbr-fen-qu-biao.md)
-* [3.11 阿里云轻量应用服务器安装 FreeBSD（UEFI 和 GPT 分区表）](di-3-zhang-freebsd-gao-ji-an-zhuang/di-3.11-jie-a-li-yun-qing-liang-ying-yong-fu-wu-qi-an-zhuang-freebsd-uefi-he-gpt-fen-qu-biao.md)
+* [3.1 安装双系统（先安装 FreeBSD）](di-3-zhang-freebsd-gao-ji-an-zhuang/di-3.1-jie-an-zhuang-shuang-xi-tong-xian-an-zhuang-freebsd.md)
+* [3.2 安装双系统（后安装 FreeBSD）](di-3-zhang-freebsd-gao-ji-an-zhuang/di-3.2-jie-an-zhuang-shuang-xi-tong-hou-an-zhuang-freebsd.md)
+* [3.3 基于 Apple M1 和 Parallels Desktop 20 安装 FreeBSD](di-3-zhang-freebsd-gao-ji-an-zhuang/di-3.3-jie-ji-yu-apple-m1-he-parallels-desktop-20-an-zhuang-freebsd.md)
+* [3.4 基于 Apple M1 和 VMware Fusion Pro 安装 FreeBSD](di-3-zhang-freebsd-gao-ji-an-zhuang/di-3.4-jie-ji-yu-apple-m1-he-vmware-fusion-pro-an-zhuang-freebsd.md)
+* [3.5 基于 Apple M1 和 UTM 安装 FreeBSD](di-3-zhang-freebsd-gao-ji-an-zhuang/di-3.5-jie-ji-yu-apple-m1-he-utm-an-zhuang-freebsd.md)
+* [3.6 腾讯云轻量云安装 FreeBSD（传统引导和 MBR 分区表）](di-3-zhang-freebsd-gao-ji-an-zhuang/di-3.6-jie-teng-xun-yun-qing-liang-yun-an-zhuang-freebsd-chuan-tong-yin-dao-he-mbr-fen-qu-biao.md)
+* [3.7 KVM、QEMU 等平台安装 FreeBSD（传统引导和 MBR 分区表）](di-3-zhang-freebsd-gao-ji-an-zhuang/di-3.7-jie-kvm-qemu-deng-ping-tai-an-zhuang-freebsd-chuan-tong-yin-dao-he-mbr-fen-qu-biao.md)
+* [3.8 阿里云轻量应用服务器安装 FreeBSD（UEFI 和 GPT 分区表）](di-3-zhang-freebsd-gao-ji-an-zhuang/di-3.8-jie-a-li-yun-qing-liang-ying-yong-fu-wu-qi-an-zhuang-freebsd-uefi-he-gpt-fen-qu-biao.md)
 
 ## 第 4 章 FreeBSD 基础
 
