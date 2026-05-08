@@ -1,4 +1,4 @@
-# 6.12 IceWM
+# 7.12 IceWM
 
 ## IceWM 窗口管理器概述
 

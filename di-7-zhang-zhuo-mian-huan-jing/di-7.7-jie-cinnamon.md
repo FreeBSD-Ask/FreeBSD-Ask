@@ -1,4 +1,4 @@
-# 6.7 Cinnamon
+# 7.7 Cinnamon
 
 ## Cinnamon 桌面环境概述
 
