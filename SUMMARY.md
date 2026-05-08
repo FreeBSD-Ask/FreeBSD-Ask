@@ -255,8 +255,8 @@
 * [25.2 树莓派 FreeBSD 使用](di-25-zhang-qian-ru-shi-ping-tai/di-25.2-jie-shu-mei-pai-freebsd-shi-yong.md)
 * [25.3 树莓派 Linux 兼容层](di-25-zhang-qian-ru-shi-ping-tai/di-25.3-jie-shu-mei-pai-linux-jian-rong-ceng.md)
 * [25.4 Radxa X4 x86 开发板](di-25-zhang-qian-ru-shi-ping-tai/di-25.4-jie-radxa-x4-x86-kai-fa-ban.md)
-* [25.5 通用嵌入式开发环境](di-25-zhang-qian-ru-shi-ping-tai/di-25.5-jie-tong-yong-qian-ru-shi-kai-fa-huan-jing.md)
-* [25.6 使用 QEMU 在 x86 架构 Windows 主机上安装 RISC-V 架构的 FreeBSD](di-25-zhang-qian-ru-shi-ping-tai/di-25.6-jie-shi-yong-qemu-zai-x86-jia-gou-windows-zhu-ji-shang-an-zhuang-risc-v-jia-gou-de-freebsd.md)
+* [25.5 使用 QEMU 在 x86 架构 Windows 主机上安装 RISC-V 架构的 FreeBSD](di-25-zhang-qian-ru-shi-ping-tai/di-25.5-jie-shi-yong-qemu-zai-x86-jia-gou-windows-zhu-ji-shang-an-zhuang-risc-v-jia-gou-de-freebsd.md)
+* [25.6 通用嵌入式开发环境](di-25-zhang-qian-ru-shi-ping-tai/di-25.6-jie-tong-yong-qian-ru-shi-kai-fa-huan-jing.md)
 
 ## 第 26 章 开发环境
 
