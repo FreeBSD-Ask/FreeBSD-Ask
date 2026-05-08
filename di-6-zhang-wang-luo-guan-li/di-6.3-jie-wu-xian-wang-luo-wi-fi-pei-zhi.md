@@ -10,7 +10,7 @@ FreeBSD 支持多种无线网卡和认证方式。
 
 ### 无线网络配置
 
-基本的无线网络由多个站点组成，这些站点通过在 2.4GHz、5GHz 或 6GHz 频段广播的无线电通信。配置无线网络包含三个基本步骤：
+基本的无线网络由多个站点组成，这些站点通过在 2.4GHz、5GHz 频段广播的无线电通信（6GHz 频段在 FreeBSD 上尚处于实验性支持阶段，需要特定硬件和驱动）。配置无线网络包含三个基本步骤：
 
 1. 扫描并选择接入点
 2. 认证站点
@@ -155,7 +155,7 @@ psk="freebsdcn"
 # service netif restart
 ```
 
-如果网络连接正常，再行永久性配置。在 **/etc/rc.conf** 文件中添加或修改相关配置条目：
+如果网络连接正常，再进行永久性配置。在 **/etc/rc.conf** 文件中添加或修改相关配置条目：
 
 ```ini
 wlans_rtwn0="wlan0"                      # 将物理无线设备 rtwn0 绑定到 wlan0 接口
@@ -198,7 +198,7 @@ wlan0: flags=8843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST> metric 0 mtu 1500
 
 ## 英特尔无线网卡驱动概况
 
-英特尔（Intel）网卡是目前使用广泛的无线网卡之一。iwlwifi 驱动 [适用于](https://wiki.freebsd.org/WiFi/Iwlwifi/Chipsets) `AC 8265、AC 9260、AC 9560、AX200、AX201、AX210、AX211`，iwm 驱动 [适用于](https://wiki.freebsd.org/WiFi/Iwm) `AC 3160、AC 3165、AC 3168、AC 7260、AC 7265、AC 8260、AC 8265、AC 9260、AC 9270、AC 946X` 等型号。两者覆盖的芯片范围有部分重叠但不完全包含，见 [英特尔 ® 无线适配器的 Linux* 支持](https://www.intel.cn/content/www/cn/zh/support/articles/000005511/wireless.html)。
+英特尔（Intel）网卡是目前使用广泛的无线网卡之一。iwlwifi 驱动 [适用于](https://wiki.freebsd.org/WiFi/Iwlwifi/Chipsets) `AC 8265、AC 9260、AC 9560、AX200、AX201、AX210、AX211`，iwm 驱动 [适用于](https://wiki.freebsd.org/WiFi/Iwm) `AC 3160、AC 3165、AC 3168、AC 7260、AC 7265、AC 8260、AC 8265、AC 9260、AC 9270、AC 946X、AC 9560` 等型号。两者覆盖的芯片范围有部分重叠但不完全包含，见 [英特尔 ® 无线适配器的 Linux* 支持](https://www.intel.cn/content/www/cn/zh/support/articles/000005511/wireless.html)。
 
 在 **/etc/rc.conf** 文件中添加以下配置：
 
@@ -234,7 +234,7 @@ psk="WIFI 密码"
 
 ## 博通（Broadcom）网卡驱动
 
-博通（Broadcom）是另一家常用的无线网卡厂商。FreeBSD 内置的 Broadcom（博通）网卡驱动主要有两种：`bwi` 和 `bwn`，`bwi` 支持较旧型号，`bwn` 支持较新型号。两者的支持范围部分重叠，但 `bwn` 对硬件的兼容性更好。
+博通（Broadcom）是另一家常用的无线网卡厂商。FreeBSD 内置的 Broadcom（博通）网卡驱动主要有两种：`bwi` 和 `bwn`，`bwi` 支持较旧型号，`bwn` 支持较新型号。两者的支持范围部分重叠，但 `bwn` 对硬件的兼容性更好。需要注意的是，这两个驱动仅支持 802.11b/g，现代 802.11ac/ax 博通网卡在 FreeBSD 上尚无原生驱动支持。
 
 关于驱动选择的详细信息，请参考 Fuller L. Broadcom WiFi Improvements for FreeBSD[EB/OL]. (2018-01-22)[2026-04-05]. <https://web.archive.org/web/20240203102135/https://www.landonf.org/code/freebsd/Broadcom_WiFi_Improvements.20180122.html>.
 
@@ -340,7 +340,7 @@ wlans_bwn0="wlan0"
 
 对于特殊型号的博通无线网卡，可能需要重新编译内核才能获得完整支持。
 
-在 FULLER L. FreeBSD Broadcom Wi-Fi Improvements[EB/OL]. [2026-03-26]. <https://web.archive.org/web/20240203102135/https://www.landonf.org/code/freebsd/Broadcom_WiFi_Improvements.20180122.html>. 中列出的部分型号带有 `$` 注释：`The optional bwn(4) PHY driver is derived from b43 GPL code, and must be explicitly enabled.`，表示需要使用基于 GNU 通用公共许可证（GNU General Public License，GPL）协议的代码。由于 FreeBSD 基本系统及内核默认不包含 GPL 许可证下的代码，因此需要重新编译内核以启用该选项。
+FULLER L. FreeBSD Broadcom Wi-Fi Improvements[EB/OL]. [2026-03-26]. <https://web.archive.org/web/20240203102135/https://www.landonf.org/code/freebsd/Broadcom_WiFi_Improvements.20180122.html> 中列出的部分型号带有 `$` 注释：`The optional bwn(4) PHY driver is derived from b43 GPL code, and must be explicitly enabled.`，表示需要使用基于 GNU 通用公共许可证（GNU General Public License，GPL）协议的代码。由于 FreeBSD 基本系统及内核默认不包含 GPL 许可证下的代码，因此需要重新编译内核以启用该选项。
 
 ```sh
 # cd /usr/src/  # 此处是 FreeBSD 内核源代码安装目录
@@ -445,7 +445,7 @@ htcaps=207002d<LDPC,SHORTGI20>
 
 ## 附录：图形化网络配置工具
 
-FreeBSD 提供了图形化网络管理工具，功能类似于 Linux 的 Plasma NetworkManager 或 NetworkManager。
+FreeBSD 也提供了图形化网络管理工具，功能类似于 Linux 的 NetworkManager：
 
 使用 pkg 安装：
 

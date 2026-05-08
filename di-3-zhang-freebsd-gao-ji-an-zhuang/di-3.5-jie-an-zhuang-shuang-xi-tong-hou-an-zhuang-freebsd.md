@@ -12,7 +12,7 @@
 
 > **注意**
 >
-> 按照本部分所述方法，在使用 ZFS 时，只会创建一个名为 `zroot` 的存储池（zpool），并在其中创建一个直接挂载到 **/** 的名为 `root` 的数据集。不同于自动安装，不会创建 `zroot/ROOT/default` 及众多数据集。可以在安装后创建数据集并进行替换操作，但若希望初始布局就与自动安装相同，请跳转至本节“Shell 分区”部分。
+> 按照本部分所述方法，在使用 ZFS 时，只会创建一个名为 `zroot` 的存储池（zpool），并在其中创建一个直接挂载到 **/** 的名为 `root` 的数据集。不同于自动安装，不会创建 `zroot/ROOT/default` 及众多数据集。可以在安装后创建数据集并替换，但若希望初始布局就与自动安装相同，请跳转至本节“Shell 分区”部分。
 
 使用简单方法安装 FreeBSD，按照以下步骤操作。
 
@@ -323,7 +323,7 @@ zroot/
 
 ### 修改文件夹权限
 
-将 **/mnt/tmp** 和 **/mnt/var/tmp** 的权限设置为 `1777`（粘滞位），以确保临时目录权限正确，使得任何用户都可以在这些目录中创建文件，但只能删除自己创建的文件：
+将 **/mnt/tmp** 和 **/mnt/var/tmp** 的权限设置为 `1777`（粘滞位），以确保临时目录权限正确，这样任何用户都可以在这些目录中创建文件，但只能删除自己创建的文件：
 
 ```sh
 # chmod 1777 /mnt/tmp        # 设置 /mnt/tmp 目录为粘滞位，可读写
@@ -390,7 +390,7 @@ Windows 文本文件的行尾通常是 `\r\n`（回车 + 换行）。
 # cp /boot/loader.efi /media/efi/freebsd/
 ```
 
-- 使用 efibootmgr 工具向主板 UEFI 固件添加启动项 `FreeBSD`，使得开机时能在 UEFI 启动菜单中看到 FreeBSD 选项。
+- 使用 efibootmgr 工具向主板 UEFI 固件添加启动项 `FreeBSD`，这样开机时便能在 UEFI 启动菜单中看到 FreeBSD 选项。
 
 ```sh
 # efibootmgr --create --activate --label "FreeBSD" --loader "/media/efi/freebsd/loader.efi"

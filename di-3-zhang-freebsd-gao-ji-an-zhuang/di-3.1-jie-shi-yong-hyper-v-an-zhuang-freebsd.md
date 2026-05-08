@@ -40,7 +40,7 @@ FreeBSD 对 Hyper-V 的集成支持借助内核模块完成：
 
 ## 测试环境
 
-本节基于以下软硬件环境进行测试与演示，实验结果受环境影响。
+本节基于以下软硬件环境测试与演示，实验结果受环境影响。
 
 - Windows 11 23H2 专业版
 - FreeBSD 14.1-RELEASE（`FreeBSD-14.1-RELEASE-amd64-disc1.iso`）

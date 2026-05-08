@@ -75,7 +75,7 @@ UBLIO（User space Block I/O）是一个用户空间块 I/O 库，用于提升 F
 
 ### 格式化 NTFS 分区
 
-在 **/dev/da0s1** 分区下创建 NTFS 文件系统：
+在 **/dev/da0s1** 分区上创建 NTFS 文件系统：
 
 ```sh
 # mkntfs -vf /dev/da0s1
@@ -83,7 +83,7 @@ UBLIO（User space Block I/O）是一个用户空间块 I/O 库，用于提升 F
 
 参数说明：
 
-- `-f`：表示执行快速格式化操作
+- `-f`：表示快速格式化
 - `-v`：表示显示详细输出信息
 
 ### NTFS 的自动挂载配置
@@ -102,7 +102,7 @@ UBLIO（User space Block I/O）是一个用户空间块 I/O 库，用于提升 F
 
 手动挂载 NTFS 分区可通过以下方式：
 
-1. 使用 ntfs-3g 将 **/dev/da0s1** 挂载至 **/media/NTFS**，设置读写权限，并指定文件所有者和权限掩码：
+1. 使用 ntfs-3g 将 **/dev/da0s1** 挂载至 **/media/NTFS**，设置读写权限，并指定文件属主和权限掩码：
 
 ```sh
 # ntfs-3g  /dev/da0s1  /media/NTFS   -o  rw,uid=1000,gid=1000,umask=0

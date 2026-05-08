@@ -301,7 +301,7 @@ export LANG=zh_CN.UTF-8
 
 #### XRDP 下没有声音
 
-此问题可通过使用火狐浏览器缓解。
+此问题可通过火狐浏览器缓解。
 
 ## 通过 Windows 使用 TigerVNC 远程访问 FreeBSD
 
@@ -376,7 +376,7 @@ root     syslogd     1021 7   udp4   *:514                 *:*
 
 该软件支持 Android 平台 RDP 连接。
 
-将左上 🖱️ 改为 👆。默认的鼠标操作不够便捷，也可以选择通过 OTG 连接鼠标和键盘来操控。
+将左上鼠标操作改为触摸操作。默认的鼠标操作不够便捷，也可以选择通过 OTG 连接鼠标和键盘来操控。
 
 ![Remote Desktop FreeBSD](../.gitbook/assets/windows-rdp-1.png)
 

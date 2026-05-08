@@ -75,8 +75,8 @@
 
 ## 第 6 章 网络管理
 
-* [6.1 网络基础配置](di-6-zhang-wang-luo-guan-li/di-6.1-jie-wang-luo-ji-chu-pei-zhi.md)
-* [6.2 TCP/IP 协议栈](di-6-zhang-wang-luo-guan-li/di-6.2-jie-tcp-ip-xie-yi-zhan.md)
+* [6.1 基础网络配置](di-6-zhang-wang-luo-guan-li/di-6.1-jie-wang-luo-ji-chu-pei-zhi.md)
+* [6.2 高级网络管理](di-6-zhang-wang-luo-guan-li/di-6.2-jie-gao-ji.md)
 * [6.3 无线网络（Wi-Fi）配置](di-6-zhang-wang-luo-guan-li/di-6.3-jie-wu-xian-wang-luo-wi-fi-pei-zhi.md)
 * [6.4 USB 网络共享（USB tethering）](di-6-zhang-wang-luo-guan-li/di-6.4-jie-usb-wang-luo-gong-xiang-usb-tethering.md)
 

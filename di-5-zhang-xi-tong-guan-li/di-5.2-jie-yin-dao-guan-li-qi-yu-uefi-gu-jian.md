@@ -6,7 +6,7 @@ UEFI 规范定义了操作系统与平台固件之间的接口，提供了启动
 
 FreeBSD 同时支持传统的 MBR 标准和 GUID 分区表（GUID Partition Table，GPT）引导方式。GPT 分区通常出现在使用 UEFI 固件的计算机上，但 FreeBSD 也可以通过 gptboot(8) 在仅有传统 BIOS 的机器上从 GPT 分区引导。
 
-UEFI 引导过程与传统 BIOS 引导过程在架构上不同。
+UEFI 引导过程与传统 BIOS 引导过程架构不同。
 
 在传统 BIOS 系统中，固件读取主引导记录（MBR）中的引导代码并执行。
 
@@ -152,7 +152,7 @@ EFI 分区的目录结构如下：
 
 > **警告**
 >
-> 对于使用 EFI 引导的系统，EFI 系统分区（ESP）上有引导加载程序的副本，用于固件引导内核。如果根文件系统是 ZFS，则引导加载程序必须能读取 ZFS 引导文件系统。在系统升级后，且执行 `zpool upgrade` 前，必须先更新 ESP 上的引导加载程序，否则系统可能无法引导。虽然不是强制性的，但在 UFS 作为根文件系统时也应如此。
+> 对于使用 EFI 引导的系统，EFI 系统分区（ESP）上有引导加载程序的副本，用于固件引导内核。如果根文件系统是 ZFS，则引导加载程序必须能读取 ZFS 引导文件系统。系统升级后、执行 `zpool upgrade` 前，必须先更新 ESP 上的引导加载程序，否则系统可能无法引导。虽然不是强制性的，但在 UFS 作为根文件系统时也应如此。
 
 可以使用命令 `efibootmgr -v` 来确定当前引导加载程序的位置。`BootCurrent` 显示的值是用于引导系统的当前引导项配置的编号。输出的相应条目以 `+` 开头，如下所示：
 
@@ -255,7 +255,7 @@ grub-install: error: unknown filesystem.
 
 在多系统环境下，频繁进入 BIOS 固件界面切换操作系统效率较低。可借助 [rEFInd](https://www.rodsbooks.com/refind/) 实现类似于 Clover 的可视化启动菜单效果，在开机时直观地选择要进入的操作系统。
 
-`rEFInd` 派生自 `rEFIt`，其名称结合了“refind”（意为“重新发现”或“改进”）与“EFI”（Extensible Firmware Interface，可扩展固件接口），主要用于管理 UEFI 启动，具有良好的图形化界面与可配置性。
+`rEFInd` 派生自 `rEFIt`，其名称结合了“refind”（意为“重新发现”或“改进”）与“EFI”（Extensible Firmware Interface，可扩展固件接口），主要用于管理 UEFI 启动，提供图形化界面与灵活的配置选项。
 
 首先需要下载 rEFInd 软件。打开下载页面 [Getting rEFInd from Sourceforge](https://www.rodsbooks.com/refind/getting.html)，点击 `A binary zip file` 链接开始下载。本节撰写时使用的版本为 `refind-bin-0.14.2.zip`。
 

@@ -2,11 +2,7 @@
 
 ## SSH 与 OpenSSH 概述
 
-OpenSSH 是一套网络连接工具集，专门用于安全访问远程机器，TCP/IP 连接也可经 SSH 隧道安全地转发或封装。OpenSSH 会对全部流量加密，因而能杜绝窃听、连接劫持及其他网络层攻击。
-
-如果数据以明文形式通过网络传输，位于客户端与服务器之间任一位置的网络嗅探器都能窃取用户名/密码或会话传输的数据。OpenSSH 则提供多种认证与加密机制来规避此类风险。
-
-SSH 即 Secure Shell（安全 shell），是一种通过加密方式安全使用 shell 的方法，通常用于远程登录和管理系统。OpenSSH（Open Secure Shell）是 SSH 协议的一种实现。OpenSSH 用于通过加密连接远程访问系统。
+OpenSSH 是一套网络连接工具集，专门用于安全访问远程机器，TCP/IP 连接也可经 SSH 隧道安全地转发或封装。OpenSSH 会对全部流量加密，因而能杜绝窃听、连接劫持及其他网络层攻击。如果数据以明文形式通过网络传输，客户端与服务器之间任一位置的网络嗅探器都能窃取用户名/密码或会话传输的数据，OpenSSH 则提供多种认证与加密机制来防范此类风险。
 
 OpenSSH 由 OpenBSD 项目维护，并默认随 FreeBSD 安装。OpenSSH 位于 [/crypto/openssh](https://github.com/freebsd/freebsd-src/tree/main/crypto/openssh)，通过 `ChangeLog` 可获取当前内置的版本号。
 
@@ -62,7 +58,7 @@ sshd 首次在 FreeBSD 系统启动时，会自动生成主机密钥并将指纹
 
 除密码方式外，客户端也可配置为通过密钥连接远程机器。从安全角度出发，推荐使用密钥认证。
 
-将 OpenSSH 配置为使用公钥认证，可借助非对称加密技术增强安全性。这种方式能消除密码带来的诸多风险——如弱密码、传输遭拦截等，同时也能挫败各类基于密码的攻击。不过，务必妥善保护私钥，以防未授权访问。
+将 OpenSSH 配置为使用公钥认证，可借助非对称加密技术增强安全性。这种方式能消除密码带来的诸多风险——如弱密码、传输遭拦截等，同时也能抵御各类基于密码的攻击。不过，务必妥善保护私钥，以防未授权访问。
 
 ### 生成密钥
 
@@ -261,8 +257,8 @@ sftp> put  FreeBSD-16.0-CURRENT-amd64-20260413-e9fc0c538264-285005-disc1.iso
 Uploading FreeBSD-16.0-CURRENT-amd64-20260413-e9fc0c538264-285005-disc1.iso to /home/ykla/FreeBSD-16.0-CURRENT-amd64-20260413-e9fc0c538264-285005-disc1.iso
 FreeBSD-16.0-CURRENT-amd64-20260413-e9fc0c538264-285005-disc1.iso                     100% 1313MB  13.9MB/s   01:34
 sftp> ls # 列出远程路径的所有文件
-FreeBSD-16.0-CURRENT-amd64-20260413-e9fc0c538264-285005-disc1.iso  
-sftp> exit # 退出                                                     
+FreeBSD-16.0-CURRENT-amd64-20260413-e9fc0c538264-285005-disc1.iso
+sftp> exit # 退出
 ```
 
 ## SSH 隧道
@@ -279,7 +275,7 @@ $ ssh -D 8080 用户@主机
 
 选项 `-D` 指定一个本地“动态”应用层端口转发。
 
-`用户@主机` 将在指定的远程 SSH 服务器上使用的登录名。
+`用户@主机` 是在指定的远程 SSH 服务器上使用的登录名。
 
 SSH 隧道的工作原理是在 `localhost` 的 `localport` 端口上创建一个侦听套接字。
 

@@ -56,7 +56,7 @@ FreeBSD 中文社区. 001-Windows 11 安装 VMware 17[EB/OL]. [2026-04-04]. <htt
 
 ![VMware 安装 FreeBSD](../.gitbook/assets/vmware-10.png)
 
-默认的 1 个 CPU 核心可以启动，但为了获得更好的性能，建议根据宿主机资源情况进行调整。
+默认的 1 个 CPU 核心可以启动，但为了获得更好的性能，建议根据宿主机资源情况调整。
 
 ![VMware 安装 FreeBSD](../.gitbook/assets/vmware-11.png)
 
@@ -200,7 +200,7 @@ EndSection
 
 > **注意**
 >
-> 此示例中虚拟机名称显示为“Windows 11”，这是因为该虚拟机被配置为 Windows 11 与 FreeBSD 双系统，属正常情况。
+> 此示例中虚拟机名称显示为“Windows 11”，这是因为该虚拟机配置为 Windows 11 与 FreeBSD 双系统，属正常情况。
 
 列出当前可用的 VMware 共享文件夹：
 

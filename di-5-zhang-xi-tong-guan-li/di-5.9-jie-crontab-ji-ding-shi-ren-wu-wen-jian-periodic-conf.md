@@ -2,7 +2,7 @@
 
 ## Cron 和 Periodic 的目录结构
 
-periodic.conf(5) 文件包含了每日、每周和每月系统维护任务应如何运行的说明。`periodic` 是 FreeBSD 的系统维护任务框架，负责执行定期的系统维护工作，如日志轮转、安全检查等。这些任务通过 `periodic` 命令执行，由 `cron` 守护进程按预设时间表自动调用。
+periodic.conf(5) 文件包含了每日、每周和每月系统维护任务应如何运行的说明。`periodic` 是 FreeBSD 的系统维护任务框架，负责执行定期的系统维护工作，如日志轮转、安全检查等。这些任务通过 `periodic` 命令执行，`cron` 守护进程按预设时间表自动调用。
 
 与 `periodic`、`cron` 有关的配置和路径如下：
 
@@ -92,7 +92,7 @@ PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin
 $ crontab -e
 ```
 
-这将使用默认文本编辑器打开用户的 crontab。用户第一次运行此命令时，会打开一个空文件。待用户创建了 crontab，此命令将打开该文件进行编辑。
+这将使用默认文本编辑器打开用户的 crontab。用户第一次运行此命令时，会打开一个空文件。待用户创建了 crontab，此命令将打开该文件编辑。
 
 将以下行添加到 crontab 文件顶部以设置环境变量，同时建议保留 crontab 字段说明注释以便参考：
 
@@ -117,7 +117,7 @@ PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin
 > $ env -i SHELL=/bin/sh PATH=/etc:/bin:/sbin:/usr/bin:/usr/sbin HOME=/home/user LOGNAME=user /home/user/bin/自定义脚本.sh
 > ```
 >
-> 检查脚本在 cron 环境下是否正常运行尤其重要，特别是当脚本包含任何使用通配符删除文件的命令时。
+> 检查脚本在 cron 环境下是否正常运行尤其重要，尤其是脚本中包含使用通配符删除文件的命令时。
 
 编辑完 crontab 后，保存文件。crontab 将自动安装生效，cron 会读取 crontab 并在指定时间运行 cron 作业。要列出 crontab 中的 cron 作业，可以使用以下命令：
 

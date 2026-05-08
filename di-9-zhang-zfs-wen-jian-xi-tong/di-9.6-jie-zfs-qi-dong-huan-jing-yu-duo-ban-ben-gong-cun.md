@@ -1,6 +1,6 @@
 # 9.6 ZFS 启动环境与多版本共存
 
-借助 ZFS 启动环境，可在同一台机器上保留多个独立的系统版本，升级失败时无需重新安装即可回退到先前状态，为 FreeBSD 提供了安全、灵活的系统更新与多版本共存机制。
+借助 ZFS 启动环境，可在同一台机器上保留多个独立的系统版本，升级失败时无需重新安装即可回退到先前状态，从而实现系统更新的原子回退。
 
 ## 创建启动环境 15.0-RELEASE
 
@@ -72,7 +72,7 @@ zroot/ROOT/15.0-RELEASE     8K  83.8G  10.6G  /
                         └── FreeBSD-base.conf # pkgbase 源配置文件
 ```
 
-- 将启动环境（实际上是一个数据集）15.0-RELEASE 挂载到下面的路径中
+- 将启动环境（实际上是一个数据集）15.0-RELEASE 挂载到指定路径
 
 ```sh
 # bectl mount 15.0-RELEASE /mnt/upgrade
@@ -143,7 +143,7 @@ Locking pkg-2.4.2_1
 
 > **警告**
 >
-> 在接受 `Do you accept this risk and wish to continue? (y/n)` 这个风险提示后就没有其他二次确认了！
+> 在接受 `Do you accept this risk and wish to continue? (y/n)` 该风险提示后便无二次确认步骤！
 
 ```sh
 # chroot /mnt/upgrade /usr/libexec/flua pkgbasify.lua  # 使用 pkgbasify 进行转换
@@ -378,9 +378,7 @@ default                        R      -          10.9G 2025-01-14 20:36
 
 ### 验证当前的系统版本
 
-在开始操作之前，需要确认已经回到了默认的启动环境中。
-
-需要确认确实在启动环境 `default`（14.3-RELEASE）中。
+在开始操作之前，需确认已回到启动环境 `default`（14.3-RELEASE）中。
 
 ```sh
 $ bectl list
@@ -397,7 +395,7 @@ $ freebsd-version -kru
 
 ### 查看内置的 OpenZFS 版本
 
-首先，查看一下当前系统内置的 ZFS 版本信息，以便了解要替换的是什么。
+首先，查看一下当前系统内置的 ZFS 版本信息，以便确认待替换的版本。
 
 显示当前 ZFS 工具和内核模块的版本信息：
 

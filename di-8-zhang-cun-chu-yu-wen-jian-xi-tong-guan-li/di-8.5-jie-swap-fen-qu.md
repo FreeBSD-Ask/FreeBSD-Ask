@@ -4,7 +4,7 @@ swap 空间是操作系统内存管理的重要组成部分。
 
 在 FreeBSD 中，swap 可通过传统分区、交换文件或 ZFS 卷（ZVOL）等多种方式实现。本节重点阐述在系统安装后如何添加 swap 空间的技术方案。
 
-如果在系统安装阶段未配置 swap（交换分区），则仅能通过 dd 命令创建交换文件或 ZFS 卷的方式实现，这是因为 UFS 及 ZFS 文件系统均不支持分区收缩操作。
+如果在系统安装阶段未配置 swap（交换分区），则仅能通过 dd 命令创建交换文件或 ZFS 卷来实现，这是因为 UFS 及 ZFS 文件系统均不支持分区收缩操作。
 
 ## 目录结构
 
@@ -35,7 +35,7 @@ swap 空间是操作系统内存管理的重要组成部分。
 8589934592 bytes transferred in 4.071005 secs (2110028088 bytes/sec)
 ```
 
-设置交换文件的访问权限，仅允许所有者进行读写操作：
+设置交换文件的访问权限，仅允许属主读写：
 
 ```sh
 # chmod 0600 /usr/swap0
@@ -63,7 +63,7 @@ swapfile="/usr/swap0"
 
 > **警告**
 >
-> 根据 OpenZFS Project. OpenZFS 文档[EB/OL]. [2026-03-26]. <https://openzfs.github.io/openzfs-docs/Getting%20Started/Ubuntu/Ubuntu%2022.04%20Root%20on%20ZFS.html> 所述，在内存压力极高的系统上，无论 swap 空间剩余多少，使用 zvol 作为 swap 设备都可能导致系统锁死。参见：OpenZFS Project. Swap deadlock in 0.7.9[EB/OL]. [2026-03-26]. <https://github.com/openzfs/zfs/issues/7734>。而将 swap 放置在其他分区上又可能会影响 ZFS 对 swap 的数据校验，因此上游文档建议弃用 swap。需要注意的是，swap 对于系统休眠功能至关重要，如果需要该功能，需至少保证 swap 的容量不小于系统内存容量。
+> 根据 OpenZFS Project. OpenZFS 文档[EB/OL]. [2026-03-26]. <https://openzfs.github.io/openzfs-docs/Getting%20Started/Ubuntu/Ubuntu%2022.04%20Root%20on%20ZFS.html> 所述，在内存压力极高的系统上，无论 swap 空间剩余多少，使用 zvol 作为 swap 设备都可能导致系统锁死。参见：OpenZFS Project. Swap deadlock in 0.7.9[EB/OL]. [2026-03-26]. <https://github.com/openzfs/zfs/issues/7734>。而将 swap 放置在其他分区上又可能会影响 ZFS 对 swap 的数据校验，因此上游文档建议弃用 swap。此外，swap 对于系统休眠功能至关重要，如果需要该功能，需至少保证 swap 的容量不小于系统内存容量。
 
 在 ZFS 池 zroot 下创建大小为 8 GB 的 zvol（ZFS 块设备卷）用作交换空间：
 
@@ -73,7 +73,7 @@ swapfile="/usr/swap0"
 
 对上述命令的参数说明如下：
 
-- `$(getconf PAGESIZE)`：返回系统页面大小（固态硬盘通常返回 `4096`），使 swap 卷与系统页面对齐，以提高性能
+- `$(getconf PAGESIZE)`：返回系统页面大小（FreeBSD/amd64 下固定为 `4096`），使 swap 卷与系统页面对齐，以提高性能
 - `-o`：用于指定选项（option），语法为 `-o 属性名=属性值`
 - `-o logbias=throughput`：ZFS 将优化同步操作，提高池的全局吞吐量并有效利用资源，可提升文件写入性能
 - `-o sync=always`：强制所有写入操作实时同步
@@ -95,7 +95,7 @@ swapfile="/usr/swap0"
 /dev/zvol/zroot/swap none swap sw 0 0
 ```
 
-写入配置后，可使用命令 `swapon -a` 进行检查（`-a` 表示激活 **/etc/fstab** 中所有 swap 条目），确保无错误输出。
+写入配置后，可使用命令 `swapon -a` 检查（`-a` 表示激活 **/etc/fstab** 中所有 swap 条目），确保无错误输出。
 
 ### 参考文献
 

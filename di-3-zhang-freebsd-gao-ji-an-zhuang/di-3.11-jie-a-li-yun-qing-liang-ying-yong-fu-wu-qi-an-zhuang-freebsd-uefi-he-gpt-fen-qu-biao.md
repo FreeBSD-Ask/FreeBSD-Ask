@@ -169,13 +169,13 @@ default via 172.24.63.253 dev eth0 proto dhcp src 172.24.0.80 metric 100
 00:06.0 Unclassified device [00ff]: Red Hat, Inc. Virtio memory balloon
 ```
 
-## 通过裸磁盘映像安装 FreeBSD
+## 通过裸磁盘镜像安装 FreeBSD
 
-阿里云轻量应用服务器支持通过裸磁盘映像方式安装 FreeBSD，操作前请务必注意以下警告。
+阿里云轻量应用服务器支持通过裸磁盘镜像方式安装 FreeBSD，操作前请务必注意以下警告。
 
 > **警告**
 >
-> 此操作将丢失所有数据，请先行完成数据备份再进行操作。经过测试，操作后，快照将可能无法正确回滚，但自定义镜像可间接还原。
+> 此操作将丢失所有数据，请先行完成数据备份再操作。经过测试，操作后，快照将可能无法正确回滚，但自定义镜像可间接还原。
 
 下载并写入 FreeBSD ZFS 镜像到 **/dev/vda**：
 
@@ -187,7 +187,7 @@ default via 172.24.63.253 dev eth0 proto dhcp src 172.24.0.80 metric 100
 
 - `wget -qO- URL`：`-q` 静默模式，不显示下载过程；`-O-` 将下载内容输出到标准输出（stdout）
 - `xzcat`：解压 xz 格式文件，并将解压后的内容输出到标准输出
-- `dd of=/dev/vda`：将输入写入 **/dev/vda** 设备，注意不是某个分区，是对整块磁盘进行写入。
+- `dd of=/dev/vda`：将输入写入 **/dev/vda** 设备，注意不是某个分区，是写入整块磁盘。
 - `bs=4M`：设置块大小为 4MB，提高写入效率
 - `status=progress`：显示 dd 的写入进度
 
@@ -385,7 +385,7 @@ vtnet0: link state changed to UP
 
 ## 通过 mfsBSD 间接安装 FreeBSD
 
-mfsBSD 作为一款精简的 FreeBSD 内存盘映像，支持 UEFI 和 ZFS 环境。可用于安装 FreeBSD，充当急救盘等。mfsBSD 的下载地址为：[mfsBSD and mfslinux](https://mfsbsd.vx.sk/)。
+mfsBSD 作为一款精简的 FreeBSD 内存盘镜像，支持 UEFI 和 ZFS 环境。可用于安装 FreeBSD，充当急救盘等。mfsBSD 的下载地址为：[mfsBSD and mfslinux](https://mfsbsd.vx.sk/)。
 
 > **警告**
 >
@@ -601,7 +601,7 @@ Ventoy2Disk.sh 参数说明：
 
 Ventoy LiveCD 下载地址为 [安装包](https://www.ventoy.net/cn/download.html)。
 
-Ventoy LiveCD 并非 Ventoy 本体，而是一种用于安装 Ventoy 的内存盘系统映像。参见：Ventoy 团队. Ventoy LiveCD 使用说明[EB/OL]. [2026-03-26]. <https://www.ventoy.net/cn/doc_livecd.html>.
+Ventoy LiveCD 并非 Ventoy 本体，而是一种用于安装 Ventoy 的内存盘系统镜像。参见：Ventoy 团队. Ventoy LiveCD 使用说明[EB/OL]. [2026-03-26]. <https://www.ventoy.net/cn/doc_livecd.html>.
 
 在使用 dd 将镜像写入整块硬盘后，强制重启实例，Ventoy LiveCD 可以正常启动。
 
