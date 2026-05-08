@@ -225,16 +225,16 @@
 
 ## 第 22 章 Web 服务器
 
-* [22.1 Apache Web 服务器](di-22-zhang-web-fu-wu-qi-yu-jian-kong-xi-tong/di-22.1-jie-apache-web-fu-wu-qi.md)
-* [22.2 Nginx Web 服务器](di-22-zhang-web-fu-wu-qi-yu-jian-kong-xi-tong/di-22.2-jie-nginx-web-fu-wu-qi.md)
-* [22.3 Caddy Web 服务器](di-22-zhang-web-fu-wu-qi-yu-jian-kong-xi-tong/di-22.3-jie-caddy-web-fu-wu-qi.md)
-* [22.4 PHP 8.x 配置](di-22-zhang-web-fu-wu-qi-yu-jian-kong-xi-tong/di-22.4-jie-php-8-x-pei-zhi.md)
-* [22.5 Tomcat 应用服务器](di-22-zhang-web-fu-wu-qi-yu-jian-kong-xi-tong/di-22.5-jie-tomcat-ying-yong-fu-wu-qi.md)
-* [22.6 WildFly 应用服务器](di-22-zhang-web-fu-wu-qi-yu-jian-kong-xi-tong/di-22.6-jie-wildfly-ying-yong-fu-wu-qi.md)
-* [22.7 Nextcloud 云服务（基于 PostgreSQL）](di-22-zhang-web-fu-wu-qi-yu-jian-kong-xi-tong/di-22.7-jie-nextcloud-yun-fu-wu-ji-yu-postgresql.md)
-* [22.8 GitLab Enterprise Edition 部署](di-22-zhang-web-fu-wu-qi-yu-jian-kong-xi-tong/di-22.8-jie-gitlab-enterprise-edition-bu-shu.md)
-* [22.9 OnlyOffice 部署（基于 PostgreSQL）](di-22-zhang-web-fu-wu-qi-yu-jian-kong-xi-tong/di-22.9-jie-onlyoffice-bu-shu-ji-yu-postgresql.md)
-* [22.10 OpenList 部署](di-22-zhang-web-fu-wu-qi-yu-jian-kong-xi-tong/di-22.10-jie-openlist-bu-shu.md)
+* [22.1 Apache Web 服务器](di-22-zhang-web-fu-wu-qi/di-22.1-jie-apache-web-fu-wu-qi.md)
+* [22.2 Nginx Web 服务器](di-22-zhang-web-fu-wu-qi/di-22.2-jie-nginx-web-fu-wu-qi.md)
+* [22.3 Caddy Web 服务器](di-22-zhang-web-fu-wu-qi/di-22.3-jie-caddy-web-fu-wu-qi.md)
+* [22.4 PHP 8.x 配置](di-22-zhang-web-fu-wu-qi/di-22.4-jie-php-8-x-pei-zhi.md)
+* [22.5 Tomcat 应用服务器](di-22-zhang-web-fu-wu-qi/di-22.5-jie-tomcat-ying-yong-fu-wu-qi.md)
+* [22.6 WildFly 应用服务器](di-22-zhang-web-fu-wu-qi/di-22.6-jie-wildfly-ying-yong-fu-wu-qi.md)
+* [22.7 Nextcloud 云服务（基于 PostgreSQL）](di-22-zhang-web-fu-wu-qi/di-22.7-jie-nextcloud-yun-fu-wu-ji-yu-postgresql.md)
+* [22.8 GitLab Enterprise Edition 部署](di-22-zhang-web-fu-wu-qi/di-22.8-jie-gitlab-enterprise-edition-bu-shu.md)
+* [22.9 OnlyOffice 部署（基于 PostgreSQL）](di-22-zhang-web-fu-wu-qi/di-22.9-jie-onlyoffice-bu-shu-ji-yu-postgresql.md)
+* [22.10 OpenList 部署](di-22-zhang-web-fu-wu-qi/di-22.10-jie-openlist-bu-shu.md)
 
 ## 第 23 章 监控系统
 
