@@ -235,7 +235,7 @@
 * [23.1 树莓派 FreeBSD 安装](di-23-zhang-qian-ru-shi-ping-tai/di-23.1-jie-shu-mei-pai-freebsd-an-zhuang.md)
 * [23.2 树莓派 FreeBSD 使用](di-23-zhang-qian-ru-shi-ping-tai/di-23.2-jie-shu-mei-pai-freebsd-shi-yong.md)
 * [23.3 树莓派 Linux 兼容层](di-23-zhang-qian-ru-shi-ping-tai/di-23.3-jie-shu-mei-pai-linux-jian-rong-ceng.md)
-* [23.4 Radxa X4（x86）开发板](di-23-zhang-qian-ru-shi-ping-tai/di-23.4-jie-radxa-x4-x86-kai-fa-ban.md)
+* [23.4 Radxa X4 x86 开发板](di-23-zhang-qian-ru-shi-ping-tai/di-23.4-jie-radxa-x4-x86-kai-fa-ban.md)
 * [23.5 通用嵌入式开发环境](di-23-zhang-qian-ru-shi-ping-tai/di-23.5-jie-tong-yong-qian-ru-shi-kai-fa-huan-jing.md)
 * [23.6 使用 QEMU 在 x86 架构 Windows 主机上安装 RISC-V 架构的 FreeBSD](di-23-zhang-qian-ru-shi-ping-tai/di-23.6-jie-shi-yong-qemu-zai-x86-jia-gou-windows-zhu-ji-shang-an-zhuang-risc-v-jia-gou-de-freebsd.md)
 
