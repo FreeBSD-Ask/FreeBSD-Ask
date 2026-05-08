@@ -141,24 +141,23 @@
 * [12.2 V2Ray 配置](di-12-zhang-wang-luo-dai-li-gong-ju/di-12.2-jie-v2ray-pei-zhi.md)
 * [12.3 Mihomo 配置](di-12-zhang-wang-luo-dai-li-gong-ju/di-12.3-jie-mihomo-pei-zhi.md)
 
-## 第 13 章 存储与文件系统管理
+## 第 13 章 Linux 二进制兼容层
 
-* [13.1 UFS 文件系统](di-13-zhang-cun-chu-yu-wen-jian-xi-tong-guan-li/di-13.1-jie-ufs-wen-jian-xi-tong.md)
-* [13.2 自动挂载文件系统](di-13-zhang-cun-chu-yu-wen-jian-xi-tong-guan-li/di-13.2-jie-zi-dong-gua-zai-wen-jian-xi-tong.md)
-* [13.3 Linux 文件系统](di-13-zhang-cun-chu-yu-wen-jian-xi-tong-guan-li/di-13.3-jie-linux-wen-jian-xi-tong.md)
-* [13.4 Windows 文件系统](di-13-zhang-cun-chu-yu-wen-jian-xi-tong-guan-li/di-13.4-jie-windows-wen-jian-xi-tong.md)
-* [13.5 swap 分区](di-13-zhang-cun-chu-yu-wen-jian-xi-tong-guan-li/di-13.5-jie-swap-fen-qu.md)
+* [13.1 Linux 兼容层架构](di-13-zhang-linux-er-jin-zhi-jian-rong-ceng/di-13.1-jie-linux-jian-rong-ceng-jia-gou.md)
+* [13.2 Rocky Linux 兼容层](di-13-zhang-linux-er-jin-zhi-jian-rong-ceng/di-13.2-jie-rocky-linux-jian-rong-ceng.md)
+* [13.3 Ubuntu/Debian 兼容层](di-13-zhang-linux-er-jin-zhi-jian-rong-ceng/di-13.3-jie-ubuntu-debian-jian-rong-ceng.md)
+* [13.4 Arch Linux 兼容层（基于 Arch Linux bootstrap）](di-13-zhang-linux-er-jin-zhi-jian-rong-ceng/di-13.4-jie-arch-linux-jian-rong-ceng-ji-yu-arch-linux-bootstrap.md)
+* [13.5 Slackware Linux 兼容层](di-13-zhang-linux-er-jin-zhi-jian-rong-ceng/di-13.5-jie-slackware-linux-jian-rong-ceng.md)
+* [13.6 openSUSE 兼容层](di-13-zhang-linux-er-jin-zhi-jian-rong-ceng/di-13.6-jie-opensuse-jian-rong-ceng.md)
+* [13.7 Gentoo Linux 兼容层](di-13-zhang-linux-er-jin-zhi-jian-rong-ceng/di-13.7-jie-gentoo-linux-jian-rong-ceng.md)
+* [13.8 故障排除与未竟事宜](di-13-zhang-linux-er-jin-zhi-jian-rong-ceng/di-13.8-jie-gu-zhang-pai-chu-yu-wei-jing-shi-yi.md)
 
-## 第 14 章 ZFS 文件系统
+## 第 14 章 基于 Linux 兼容层的应用
 
-* [14.1 ZFS 历史与现实](di-14-zhang-zfs-wen-jian-xi-tong/di-14.1-jie-zfs-gai-shu.md)
-* [14.2 ZFS 快照与还原](di-14-zhang-zfs-wen-jian-xi-tong/di-14.2-jie-zfs-kuai-zhao-yu-huan-yuan.md)
-* [14.3 ZFS 磁盘扩容](di-14-zhang-zfs-wen-jian-xi-tong/di-14.3-jie-zfs-ci-pan-kuo-rong.md)
-* [14.4 ZFS 数据压缩](di-14-zhang-zfs-wen-jian-xi-tong/di-14.4-jie-zfs-shu-ju-ya-suo.md)
-* [14.5 ZFS 启动环境](di-14-zhang-zfs-wen-jian-xi-tong/di-14.5-jie-zfs-qi-dong-huan-jing.md)
-* [14.6 ZFS 启动环境与多版本共存](di-14-zhang-zfs-wen-jian-xi-tong/di-14.6-jie-zfs-qi-dong-huan-jing-yu-duo-ban-ben-gong-cun.md)
-* [14.7 ZFS 存储池更新](di-14-zhang-zfs-wen-jian-xi-tong/di-14.7-jie-zfs-cun-chu-chi-geng-xin.md)
-* [14.8 ZFS 委托管理](di-14-zhang-zfs-wen-jian-xi-tong/di-14.8-jie-zfs-wei-tuo-guan-li.md)
+* [14.1 QQ（Linux 版）](di-14-zhang-ji-yu-linux-jian-rong-ceng-de-ying-yong/di-14.1-jie-qq-linux-ban.md)
+* [14.2 WPS Office（Linux 版）](di-14-zhang-ji-yu-linux-jian-rong-ceng-de-ying-yong/di-14.2-jie-wps-office-linux-ban.md)
+* [14.3 微信（Linux 版）](di-14-zhang-ji-yu-linux-jian-rong-ceng-de-ying-yong/di-14.3-jie-wei-xin-linux-ban.md)
+* [14.4 Wine 配置](di-14-zhang-ji-yu-linux-jian-rong-ceng-de-ying-yong/di-14.4-jie-wine-pei-zhi.md)
 
 ## 第 15 章 人工智能（AI）
 
@@ -240,23 +239,24 @@
 * [23.7 第三方漏洞与安全公告](di-23-zhang-an-quan/di-23.7-jie-di-san-fang-lou-dong-yu-an-quan-gong-gao.md)
 * [23.8 强制访问控制框架（MAC 框架）](di-23-zhang-an-quan/di-23.8-jie-fang-wen-kong-zhi-kuang-jia-mac-kuang-jia.md)
 
-## 第 24 章 Linux 二进制兼容层
+## 第 24 章 存储与文件系统管理
 
-* [24.1 Linux 兼容层架构](di-24-zhang-linux-er-jin-zhi-jian-rong-ceng/di-24.1-jie-linux-jian-rong-ceng-jia-gou.md)
-* [24.2 Rocky Linux 兼容层](di-24-zhang-linux-er-jin-zhi-jian-rong-ceng/di-24.2-jie-rocky-linux-jian-rong-ceng.md)
-* [24.3 Ubuntu/Debian 兼容层](di-24-zhang-linux-er-jin-zhi-jian-rong-ceng/di-24.3-jie-ubuntu-debian-jian-rong-ceng.md)
-* [24.4 Arch Linux 兼容层（基于 Arch Linux bootstrap）](di-24-zhang-linux-er-jin-zhi-jian-rong-ceng/di-24.4-jie-arch-linux-jian-rong-ceng-ji-yu-arch-linux-bootstrap.md)
-* [24.5 Slackware Linux 兼容层](di-24-zhang-linux-er-jin-zhi-jian-rong-ceng/di-24.5-jie-slackware-linux-jian-rong-ceng.md)
-* [24.6 openSUSE 兼容层](di-24-zhang-linux-er-jin-zhi-jian-rong-ceng/di-24.6-jie-opensuse-jian-rong-ceng.md)
-* [24.7 Gentoo Linux 兼容层](di-24-zhang-linux-er-jin-zhi-jian-rong-ceng/di-24.7-jie-gentoo-linux-jian-rong-ceng.md)
-* [24.8 故障排除与未竟事宜](di-24-zhang-linux-er-jin-zhi-jian-rong-ceng/di-24.8-jie-gu-zhang-pai-chu-yu-wei-jing-shi-yi.md)
+* [24.1 UFS 文件系统](di-24-zhang-cun-chu-yu-wen-jian-xi-tong-guan-li/di-24.1-jie-ufs-wen-jian-xi-tong.md)
+* [24.2 自动挂载文件系统](di-24-zhang-cun-chu-yu-wen-jian-xi-tong-guan-li/di-24.2-jie-zi-dong-gua-zai-wen-jian-xi-tong.md)
+* [24.3 Linux 文件系统](di-24-zhang-cun-chu-yu-wen-jian-xi-tong-guan-li/di-24.3-jie-linux-wen-jian-xi-tong.md)
+* [24.4 Windows 文件系统](di-24-zhang-cun-chu-yu-wen-jian-xi-tong-guan-li/di-24.4-jie-windows-wen-jian-xi-tong.md)
+* [24.5 swap 分区](di-24-zhang-cun-chu-yu-wen-jian-xi-tong-guan-li/di-24.5-jie-swap-fen-qu.md)
 
-## 第 25 章 基于 Linux 兼容层的应用
+## 第 25 章 ZFS 文件系统
 
-* [25.1 QQ（Linux 版）](di-25-zhang-ji-yu-linux-jian-rong-ceng-de-ying-yong/di-25.1-jie-qq-linux-ban.md)
-* [25.2 WPS Office（Linux 版）](di-25-zhang-ji-yu-linux-jian-rong-ceng-de-ying-yong/di-25.2-jie-wps-office-linux-ban.md)
-* [25.3 微信（Linux 版）](di-25-zhang-ji-yu-linux-jian-rong-ceng-de-ying-yong/di-25.3-jie-wei-xin-linux-ban.md)
-* [25.4 Wine 配置](di-25-zhang-ji-yu-linux-jian-rong-ceng-de-ying-yong/di-25.4-jie-wine-pei-zhi.md)
+* [25.1 ZFS 历史与现实](di-25-zhang-zfs-wen-jian-xi-tong/di-25.1-jie-zfs-gai-shu.md)
+* [25.2 ZFS 快照与还原](di-25-zhang-zfs-wen-jian-xi-tong/di-25.2-jie-zfs-kuai-zhao-yu-huan-yuan.md)
+* [25.3 ZFS 磁盘扩容](di-25-zhang-zfs-wen-jian-xi-tong/di-25.3-jie-zfs-ci-pan-kuo-rong.md)
+* [25.4 ZFS 数据压缩](di-25-zhang-zfs-wen-jian-xi-tong/di-25.4-jie-zfs-shu-ju-ya-suo.md)
+* [25.5 ZFS 启动环境](di-25-zhang-zfs-wen-jian-xi-tong/di-25.5-jie-zfs-qi-dong-huan-jing.md)
+* [25.6 ZFS 启动环境与多版本共存](di-25-zhang-zfs-wen-jian-xi-tong/di-25.6-jie-zfs-qi-dong-huan-jing-yu-duo-ban-ben-gong-cun.md)
+* [25.7 ZFS 存储池更新](di-25-zhang-zfs-wen-jian-xi-tong/di-25.7-jie-zfs-cun-chu-chi-geng-xin.md)
+* [25.8 ZFS 委托管理](di-25-zhang-zfs-wen-jian-xi-tong/di-25.8-jie-zfs-wei-tuo-guan-li.md)
 
 ## 第 26 章 开发环境
 
