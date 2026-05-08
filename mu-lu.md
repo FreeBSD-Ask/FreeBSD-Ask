@@ -125,10 +125,10 @@
 * [10.6 openSUSE 兼容层](di-10-zhang-linux-er-jin-zhi-jian-rong-ceng/di-10.6-jie-opensuse-jian-rong-ceng.md)
 * [10.7 Gentoo Linux 兼容层](di-10-zhang-linux-er-jin-zhi-jian-rong-ceng/di-10.7-jie-gentoo-linux-jian-rong-ceng.md)
 * [10.8 Linux Jail](di-10-zhang-linux-er-jin-zhi-jian-rong-ceng/di-10.8-jie-linux-jail.md)
-* [10.9 故障排除与未竟事宜](di-10-zhang-linux-er-jin-zhi-jian-rong-ceng/di-10.9-jie-gu-zhang-pai-chu-yu-wei-jing-shi-yi.md)
+* [10.9 微信（Linux 版）](di-10-zhang-linux-er-jin-zhi-jian-rong-ceng/di-10.9-jie-wei-xin-linux-ban.md)
 * [10.10 QQ（Linux 版）](di-10-zhang-linux-er-jin-zhi-jian-rong-ceng/di-10.10-jie-qq-linux-ban.md)
 * [10.11 WPS Office（Linux 版）](di-10-zhang-linux-er-jin-zhi-jian-rong-ceng/di-10.11-jie-wps-office-linux-ban.md)
-* [10.12 微信（Linux 版）](di-10-zhang-linux-er-jin-zhi-jian-rong-ceng/di-10.12-jie-wei-xin-linux-ban.md)
+* [10.12 故障排除与未竟事宜](di-10-zhang-linux-er-jin-zhi-jian-rong-ceng/di-10.12-jie-gu-zhang-pai-chu-yu-wei-jing-shi-yi.md)
 
 ## 第 11 章 游戏、科学计算和专业工具
 
