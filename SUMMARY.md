@@ -111,7 +111,7 @@
 * [9.6 视频播放器](di-9-zhang-duo-mei-ti-he-wai-bu-she-bei/di-9.6-jie-shi-pin-bo-fang-qi.md)
 * [9.7 多媒体处理工具](di-9-zhang-duo-mei-ti-he-wai-bu-she-bei/di-9.7-jie-duo-mei-ti-chu-li-gong-ju.md)
 
-## 第 10 章 本地化与中文支持
+## 第 10 章 本地化与输入法
 
 * [10.1 本地化环境变量](di-10-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-10.1-jie-ben-di-hua-huan-jing-bian-liang.md)
 * [10.2 Fcitx 输入法框架](di-10-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-10.2-jie-fcitx-shu-ru-fa-kuang-jia.md)
