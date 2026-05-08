@@ -1,4 +1,4 @@
-# 14.1 Web 浏览器
+# 8.1 Web 浏览器
 
 FreeBSD 通过 pkg 和 Ports 提供 Firefox 与 Chromium 两种主流浏览器。
 
