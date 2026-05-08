@@ -2,7 +2,7 @@
 
 ## SSH 与 OpenSSH 概述
 
-OpenSSH 是一套网络连接工具集，专门用于安全访问远程机器，TCP/IP 连接也可经 SSH 隧道安全地转发或封装。OpenSSH 会对全部流量加密，因而能杜绝窃听、连接劫持及其他网络层攻击。如果数据以明文形式通过网络传输，客户端与服务器之间任一位置的网络嗅探器都能窃取用户名/密码或会话传输的数据，OpenSSH 则提供多种认证与加密机制来规避此类风险。
+OpenSSH 是一套网络连接工具集，专门用于安全访问远程机器，TCP/IP 连接也可经 SSH 隧道安全地转发或封装。OpenSSH 会对全部流量加密，因而能杜绝窃听、连接劫持及其他网络层攻击。如果数据以明文形式通过网络传输，客户端与服务器之间任一位置的网络嗅探器都能窃取用户名/密码或会话传输的数据，OpenSSH 则提供多种认证与加密机制来防范此类风险。
 
 OpenSSH 由 OpenBSD 项目维护，并默认随 FreeBSD 安装。OpenSSH 位于 [/crypto/openssh](https://github.com/freebsd/freebsd-src/tree/main/crypto/openssh)，通过 `ChangeLog` 可获取当前内置的版本号。
 
