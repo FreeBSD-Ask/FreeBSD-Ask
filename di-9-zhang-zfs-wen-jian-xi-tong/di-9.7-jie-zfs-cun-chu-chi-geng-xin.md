@@ -143,7 +143,7 @@ errors: No known data errors
 
 ### 附录：需要手动启用的特性
 
-本附录介绍如何启用需要手动启用的 ZFS 特性。如果还希望手动启用功能：
+本附录介绍需要手动启用的 ZFS 特性及其启用方法：
 
 ```sh
 # zpool upgrade  # 查看可升级的 ZFS 池及其支持的特性
