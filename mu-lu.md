@@ -139,24 +139,24 @@
 * [11.5 Steam 客户端](di-11-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-11.5-jie-steam-ke-hu-duan.md)
 * [11.6 Wine 配置](di-11-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-11.6-jie-wine-pei-zhi.md)
 
-## 第 12 章 系统管理
+## 第 12 章 人工智能（AI）
 
-* [12.1 启动引导器](di-12-zhang-xi-tong-guan-li/di-12.1-jie-qi-dong-yin-dao-qi-ji-pei-zhi-wen-jian-loader-conf.md)
-* [12.2 引导管理器与 UEFI 固件](di-12-zhang-xi-tong-guan-li/di-12.2-jie-yin-dao-guan-li-qi-yu-uefi-gu-jian.md)
-* [12.3 管理 FreeBSD 中的服务](di-12-zhang-xi-tong-guan-li/di-12.3-jie-init-rc-fu-wu-guan-li.md)
-* [12.4 用户分级](di-12-zhang-xi-tong-guan-li/di-12.4-jie-yong-hu-fen-ji-wen-jian-login-conf.md)
-* [12.5 bsdconfig 系统配置工具](di-12-zhang-xi-tong-guan-li/di-12.5-jie-bsdconfig-xi-tong-pei-zhi-gong-ju.md)
-* [12.6 OpenSSH](di-12-zhang-xi-tong-guan-li/di-12.6-jie-OpenSSH.md)
-* [12.7 远程桌面访问](di-12-zhang-xi-tong-guan-li/di-12.7-jie-yuan-cheng-zhuo-mian-fang-wen.md)
-* [12.8 设备资源提示](di-12-zhang-xi-tong-guan-li/di-12.8-jie-she-bei-zi-yuan-ti-shi-wen-jian-device-hints.md)
-* [12.9 Cron 和 Periodic](di-12-zhang-xi-tong-guan-li/di-12.9-jie-crontab-ji-ding-shi-ren-wu-wen-jian-periodic-conf.md)
-* [12.10 sysctl 工具](di-12-zhang-xi-tong-guan-li/di-12.10-jie-nei-he-zhuang-tai-mo-ren-pei-zhi-wen-jian-sysctl-conf.md)
-* [12.11 NTP 时间同步与时区](di-12-zhang-xi-tong-guan-li/di-12.11-jie-shi-jian-tong-bu-fu-wu.md)
-* [12.12 Live 镜像与系统恢复](di-12-zhang-xi-tong-guan-li/di-12.12-jie-live-jing-xiang-yu-xi-tong-hui-fu.md)
+* [12.1 人工智能（AI）概述](di-12-zhang-ren-gong-zhi-neng-ai/di-12.1-jie-ren-gong-zhi-neng-ai-gai-shu.md)
 
-## 第 13 章 人工智能（AI）
+## 第 13 章 系统管理
 
-* [13.1 人工智能（AI）概述](di-13-zhang-ren-gong-zhi-neng-ai/di-13.1-jie-ren-gong-zhi-neng-ai-gai-shu.md)
+* [13.1 启动引导器](di-13-zhang-xi-tong-guan-li/di-13.1-jie-qi-dong-yin-dao-qi-ji-pei-zhi-wen-jian-loader-conf.md)
+* [13.2 引导管理器与 UEFI 固件](di-13-zhang-xi-tong-guan-li/di-13.2-jie-yin-dao-guan-li-qi-yu-uefi-gu-jian.md)
+* [13.3 管理 FreeBSD 中的服务](di-13-zhang-xi-tong-guan-li/di-13.3-jie-init-rc-fu-wu-guan-li.md)
+* [13.4 用户分级](di-13-zhang-xi-tong-guan-li/di-13.4-jie-yong-hu-fen-ji-wen-jian-login-conf.md)
+* [13.5 bsdconfig 系统配置工具](di-13-zhang-xi-tong-guan-li/di-13.5-jie-bsdconfig-xi-tong-pei-zhi-gong-ju.md)
+* [13.6 OpenSSH](di-13-zhang-xi-tong-guan-li/di-13.6-jie-OpenSSH.md)
+* [13.7 远程桌面访问](di-13-zhang-xi-tong-guan-li/di-13.7-jie-yuan-cheng-zhuo-mian-fang-wen.md)
+* [13.8 设备资源提示](di-13-zhang-xi-tong-guan-li/di-13.8-jie-she-bei-zi-yuan-ti-shi-wen-jian-device-hints.md)
+* [13.9 Cron 和 Periodic](di-13-zhang-xi-tong-guan-li/di-13.9-jie-crontab-ji-ding-shi-ren-wu-wen-jian-periodic-conf.md)
+* [13.10 sysctl 工具](di-13-zhang-xi-tong-guan-li/di-13.10-jie-nei-he-zhuang-tai-mo-ren-pei-zhi-wen-jian-sysctl-conf.md)
+* [13.11 NTP 时间同步与时区](di-13-zhang-xi-tong-guan-li/di-13.11-jie-shi-jian-tong-bu-fu-wu.md)
+* [13.12 Live 镜像与系统恢复](di-13-zhang-xi-tong-guan-li/di-13.12-jie-live-jing-xiang-yu-xi-tong-hui-fu.md)
 
 ## 第 14 章 Jail 容器管理
 
