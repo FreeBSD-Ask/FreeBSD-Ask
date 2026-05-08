@@ -33,13 +33,13 @@
 
 **第 6 章 网络管理**：介绍基础与高级网络配置、无线网络（Wi-Fi）配置、USB 网络共享、蓝牙、系统代理及 V2Ray、Mihomo 等代理工具的配置。
 
-**第 7 章 X Window 系统**：介绍 Intel、AMD 和 NVIDIA 显卡驱动的安装与配置，以及系统字体的替换方法。
+**第 7 章 X Window 系统**：介绍 Intel、AMD 和 NVIDIA 显卡驱动的安装与配置，系统字体的替换方法，以及 root 账户桌面登录与远程桌面访问。
 
 **第 8 章 桌面环境**：介绍在 FreeBSD 上运行的各类桌面环境与窗口管理器，包括 KDE 6（X11 与 Wayland 会话）、MATE、Xfce、Cinnamon、LXQt、GNOME、LXDE、bspwm、IceWM、Hyprland 及 CDE。
 
 **第 9 章 多媒体和外部设备**：介绍 Web 浏览器、声卡配置、音频与视频播放器、打印机、人机输入设备及多媒体处理工具的使用方法。
 
-**第 10 章 本地化与中文支持**：介绍本地化环境变量配置，以及 Fcitx、IBus 输入法框架和五笔输入法的安装与设置。
+**第 10 章 本地化与输入法**：介绍本地化环境变量配置，以及 Fcitx、IBus 输入法框架和五笔输入法的安装与设置。
 
 **第 11 章 Linux 二进制兼容层**：介绍 FreeBSD 的 Linux 兼容层架构，涵盖 Rocky Linux、Ubuntu/Debian、Arch Linux、Slackware、openSUSE、Gentoo 等多种 Linux 发行版的兼容环境搭建，以及微信、QQ、WPS Office 等 Linux 应用的运行方法。
 
@@ -47,7 +47,7 @@
 
 **第 13 章 人工智能（AI）**：介绍在 FreeBSD 上运行人工智能相关工具的方法。
 
-**第 14 章 系统管理**：讲解启动引导器、UEFI 固件管理、服务管理、用户分级、bsdconfig 配置工具、OpenSSH、远程桌面、设备资源提示、定时任务、sysctl 工具、NTP 时间同步及 Live 镜像与系统恢复等系统管理功能。
+**第 14 章 系统管理**：讲解启动引导器、UEFI 固件管理、服务管理、用户分级、bsdconfig 配置工具、OpenSSH、设备资源提示、定时任务、sysctl 工具、NTP 时间同步及 Live 镜像与系统恢复等系统管理功能。
 
 **第 15 章 存储与文件系统管理**：介绍 UFS 文件系统、自动挂载机制、Linux 与 Windows 文件系统的使用，以及 swap 分区配置。
 
