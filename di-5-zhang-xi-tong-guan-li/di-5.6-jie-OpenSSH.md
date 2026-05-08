@@ -257,8 +257,8 @@ sftp> put  FreeBSD-16.0-CURRENT-amd64-20260413-e9fc0c538264-285005-disc1.iso
 Uploading FreeBSD-16.0-CURRENT-amd64-20260413-e9fc0c538264-285005-disc1.iso to /home/ykla/FreeBSD-16.0-CURRENT-amd64-20260413-e9fc0c538264-285005-disc1.iso
 FreeBSD-16.0-CURRENT-amd64-20260413-e9fc0c538264-285005-disc1.iso                     100% 1313MB  13.9MB/s   01:34
 sftp> ls # 列出远程路径的所有文件
-FreeBSD-16.0-CURRENT-amd64-20260413-e9fc0c538264-285005-disc1.iso  
-sftp> exit # 退出                                                     
+FreeBSD-16.0-CURRENT-amd64-20260413-e9fc0c538264-285005-disc1.iso
+sftp> exit # 退出
 ```
 
 ## SSH 隧道
