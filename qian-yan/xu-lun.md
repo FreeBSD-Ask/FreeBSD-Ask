@@ -55,9 +55,9 @@
 
 **第 17 章 安全**：介绍账户认证安全、资源限制、安全等级、安全事件审计、OpenSSL、入侵检测系统（IDS）、第三方漏洞与安全公告，以及强制访问控制框架（MAC 框架）。
 
-**第 18 章 Jail 容器管理**：介绍 FreeBSD 原生轻量级虚拟化技术 Jail 的基础配置、系统更新及 Qjail 管理工具的使用。
+**第 18 章 防火墙**：介绍 FreeBSD 内置防火墙系统，包括 Packet Filter（PF）、IPFilter（IPF）、IPFW 的配置，以及 Fail2Ban 和 blocklistd 工具的使用。
 
-**第 19 章 防火墙**：介绍 FreeBSD 内置防火墙系统，包括 Packet Filter（PF）、IPFilter（IPF）、IPFW 的配置，以及 Fail2Ban 和 blocklistd 工具的使用。
+**第 19 章 Jail 容器管理**：介绍 FreeBSD 原生轻量级虚拟化技术 Jail 的基础配置、系统更新及 Qjail 管理工具的使用。
 
 **第 20 章 数据库管理**：介绍 PostgreSQL、MySQL 5.x/8.x 系列及 MongoDB 8.0 在 FreeBSD 上的安装与配置，以及 pgAdmin4 管理工具的使用。
 
