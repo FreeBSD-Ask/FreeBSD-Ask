@@ -1,4 +1,4 @@
-# 3.3 使用 VirtualBox 安装 FreeBSD
+# 2.4 使用 VirtualBox 安装 FreeBSD
 
 Oracle VirtualBox 是 Type-2 虚拟机监视器（Hypervisor），通过虚拟设备模拟（device emulation）和半虚拟化（paravirtualization）技术为虚拟机提供计算、存储和网络资源。VirtualBox 支持多种虚拟磁盘镜像格式，默认使用 VDI（Virtual Disk Image），也兼容 VMDK（VMware）、VHD（Microsoft）等格式。
 

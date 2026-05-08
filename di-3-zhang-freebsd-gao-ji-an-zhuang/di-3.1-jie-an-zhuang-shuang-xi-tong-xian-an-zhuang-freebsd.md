@@ -1,4 +1,4 @@
-# 3.4 安装双系统（先安装 FreeBSD）
+# 3.1 安装双系统（先安装 FreeBSD）
 
 本节介绍在同一物理设备上部署 FreeBSD 与 Windows 双系统，先安装 FreeBSD、再安装 Windows。
 

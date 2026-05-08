@@ -1,4 +1,4 @@
-# 3.6 基于 Apple M1 和 Parallels Desktop 20 安装 FreeBSD
+# 3.3 基于 Apple M1 和 Parallels Desktop 20 安装 FreeBSD
 
 基于 macOS 14.7 与 Parallels Desktop 20.1.3 环境，FreeBSD 15.0-CURRENT 的图形界面、键盘和鼠标均可正常运作。因补丁 D42158 未合入 FreeBSD 14，本节仅支持 15 及以上版本。
 

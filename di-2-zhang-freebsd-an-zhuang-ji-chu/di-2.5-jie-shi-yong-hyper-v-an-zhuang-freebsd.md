@@ -1,4 +1,4 @@
-# 3.1 使用 Hyper-V 安装 FreeBSD
+# 2.5 使用 Hyper-V 安装 FreeBSD
 
 Hyper-V 是微软为 Windows 开发的企业级 Type-1 虚拟机监视器，分为 Gen 1 与 Gen 2 两种架构。本节介绍在 Hyper-V 中安装与配置 FreeBSD 的完整流程。
 
