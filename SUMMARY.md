@@ -84,6 +84,7 @@
 * [7.1 Intel 和 AMD 显卡驱动配置](di-7-zhang-x-window-xi-tong/di-7.1-jie-intel-he-amd-xian-ka-qu-dong-pei-zhi.md)
 * [7.2 NVIDIA 显卡驱动配置](di-7-zhang-x-window-xi-tong/di-7.2-jie-nvidia-xian-ka-qu-dong-pei-zhi.md)
 * [7.3 系统字体替换](di-7-zhang-x-window-xi-tong/di-7.3-jie-xi-tong-zi-ti-ti-huan.md)
+* [7.4 启用 root 账户桌面登录](di-7-zhang-x-window-xi-tong/di-7.4-jie-qi-yong-root-zhang-hu-zhuo-mian-deng-lu.md)
 
 ## 第 8 章 桌面环境
 
@@ -99,7 +100,6 @@
 * [8.10 IceWM](di-8-zhang-zhuo-mian-huan-jing/di-8.10-jie-icewm.md)
 * [8.11 Hyprland](di-8-zhang-zhuo-mian-huan-jing/di-8.11-jie-hyprland.md)
 * [8.12 CDE](di-8-zhang-zhuo-mian-huan-jing/di-8.12-jie-cde.md)
-* [8.13 启用 root 账户桌面登录](di-8-zhang-zhuo-mian-huan-jing/di-8.13-jie-qi-yong-root-zhang-hu-zhuo-mian-deng-lu.md)
 
 ## 第 9 章 多媒体和外部设备
 
