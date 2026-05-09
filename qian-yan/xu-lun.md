@@ -27,7 +27,7 @@
 
 **第 3 章 FreeBSD 高级安装**：介绍双系统配置、基于 Apple M1 平台的安装方案，以及腾讯云、阿里云、KVM/QEMU 等云平台和虚拟化环境中的安装方法。
 
-**第 4 章 FreeBSD 基础**：面向 Windows 和 Linux 用户提供迁移指南，涵盖系统目录结构、虚拟控制台、shell 使用、命令行基础、文本编辑器、用户与权限管理、进程管理及压缩工具等基础操作。
+**第 4 章 FreeBSD 基础**：面向 Windows 和 Linux 用户提供迁移指南，涵盖系统目录结构、虚拟控制台、shell 使用、命令行基础、文本编辑器、用户与权限管理及压缩工具等基础操作。
 
 **第 5 章 软件管理和系统升级**：介绍 FreeBSD 软件源的更换方法，使用 pkg 管理二进制包、使用 Ports 以源代码方式安装软件，以及通过 freebsd-update 或源代码方式进行系统更新。
 
@@ -47,7 +47,7 @@
 
 **第 13 章 人工智能（AI）**：介绍在 FreeBSD 上运行人工智能相关工具的方法。
 
-**第 14 章 系统管理**：讲解启动引导器、UEFI 固件管理、服务管理、用户分级、bsdconfig 配置工具、OpenSSH、设备资源提示、定时任务、sysctl 工具、NTP 时间同步及 Live 镜像与系统恢复等系统管理功能。
+**第 14 章 系统管理**：讲解启动引导器、UEFI 固件管理、服务管理、进程与守护进程、用户分级、权限提升工具（sudo、doas 等）、bsdconfig 配置工具、OpenSSH、设备资源提示、定时任务、sysctl 工具、NTP 时间同步及 Live 镜像与系统恢复等系统管理功能。
 
 **第 15 章 存储与文件系统管理**：介绍 UFS 文件系统、自动挂载机制、Linux 与 Windows 文件系统的使用，以及 swap 分区配置。
 
@@ -69,11 +69,11 @@
 
 **第 24 章 监控系统**：介绍 Zabbix、Prometheus 监控系统的部署，以及 Telegraf、InfluxDB 与 Grafana 组成的监控平台架构。
 
-**第 25 章 嵌入式平台**：介绍树莓派上 FreeBSD 的安装与使用、Linux 兼容层配置，以及 Radxa X4 x86 开发板、通用嵌入式开发环境和 QEMU 模拟 RISC-V 架构的方法。
+**第 25 章 嵌入式平台**：介绍树莓派上 FreeBSD 的安装与使用、Linux 兼容层配置，以及 Radxa X4 x86 开发板、Linux 系统上交叉构建 FreeBSD、QEMU 模拟 RISC-V 架构及通用嵌入式开发环境的方法。
 
 **第 26 章 开发环境**：介绍 C/C++、Java、Qt、Python、Rust/Go、Node.js 等语言开发环境的搭建，以及 IDA Pro 调试、code-server 与 clangd 配置、Vim 开发环境和 DTrace 动态追踪工具的使用。
 
-**第 27 章 FreeBSD 内核架构**：介绍 FreeBSD 源代码目录结构、内核文件结构、机器相关与无关的内核选项注解、GENERIC 内核选项、Linux 系统上的交叉构建及定制内核的构建方法。
+**第 27 章 FreeBSD 内核架构**：介绍 FreeBSD 源代码目录结构、内核文件结构、机器相关与无关的内核选项注解、GENERIC 内核选项及定制内核的构建方法。
 
 **附录 I 工具与资源**：包括 BSD 许可证概览、microSD 卡参数简介、Bug 报告流程、FreeBSD 邮件列表订阅及 FreeBSD 开发参与指南。
 
