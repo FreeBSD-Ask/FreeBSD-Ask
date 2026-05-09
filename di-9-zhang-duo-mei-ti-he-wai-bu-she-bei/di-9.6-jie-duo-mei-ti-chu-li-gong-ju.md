@@ -98,6 +98,96 @@ Inkscape 是矢量制图程序，以下演示基本抠图操作。
 
 - Inkscape. Inkscape Tutorials[EB/OL]. [2026-03-25]. <https://inkscape.org/zh-hans/learn/tutorials/>. 提供 Inkscape 矢量绘图软件的详细中文教程，涵盖基础操作与高级功能。
 
+## 艺术创作
+
+本小节介绍艺术创作领域的相关工具。包括音乐创作、三维建模、数字绘画等工具。
+
+### 音乐
+
+#### MIDI 编曲软件 `LMMS`
+
+LMMS 是一款数字音频工作站软件，用于音乐创作和 MIDI 编曲。LMMS 早期全称为 Linux MultiMedia Studio，后因跨平台发展而去除了全称，现仅以缩写 LMMS 作为项目名称。
+
+使用 pkg 安装：
+
+```sh
+# pkg install lmms
+```
+
+或使用 Ports 安装：
+
+```sh
+# cd /usr/ports/audio/lmms/
+# make install clean
+```
+
+软件支持中文，设置后需要重启才能生效。
+
+![LMMS 界面](../.gitbook/assets/lmms.png)
+
+#### 制谱软件 `MuseScore`
+
+MuseScore 是一款开源的音乐制谱软件，支持乐谱创作、编辑和播放。
+
+使用 pkg 安装：
+
+```sh
+# pkg install musescore
+```
+
+或者使用 Ports 安装：
+
+```sh
+# cd /usr/ports/audio/musescore/
+# make install clean
+```
+
+![MuseScore 界面](../.gitbook/assets/musescore.png)
+
+### 三维图像
+
+#### 3D 建模 `Blender`
+
+Blender 是一款开源的 3D 建模和动画制作软件，支持建模、渲染、动画等功能。
+
+使用 pkg 安装：
+
+```sh
+# pkg install blender
+```
+
+或者使用 Ports 安装：
+
+```sh
+# cd /usr/ports/graphics/blender/
+# make install clean
+```
+
+软件支持简体中文。如果无法直接显示简体中文，可先切换为繁体中文，再切换回简体中文。
+
+![Blender 界面](../.gitbook/assets/blender.png)
+
+### 绘画
+
+#### Krita
+
+Krita 是一款开源的数字绘画软件，专为插画师和概念艺术家设计。
+
+使用 pkg 安装：
+
+```sh
+# pkg install krita
+```
+
+或者使用 Ports 安装：
+
+```sh
+# cd /usr/ports/graphics/krita/
+# make install clean
+```
+
+![Krita 界面](../.gitbook/assets/krita.png)
+
 ## 课后习题
 
 1. 查找 FFmpeg 的 Ports，修改其编译选项以启用更多编解码器支持，构建并用其压制一段带字幕的视频，验证输出结果。
