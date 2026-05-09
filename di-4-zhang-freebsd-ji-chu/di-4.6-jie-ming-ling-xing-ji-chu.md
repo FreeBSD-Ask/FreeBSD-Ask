@@ -223,17 +223,6 @@ usage: ls [-ABCFGHILPRSTUWZabcdfghiklmnopqrstuvwxy1,] [--color=when] [-D format]
 >
 > 命令前面的 `#` 表示什么意思？`#` 在 shell 当中通常是起注释作用（由 [POSIX.1-2024](https://pubs.opengroup.org/onlinepubs/9799919799/utilities/V3_chap02.html) 规定），相当于 C 语言中的 `//`。意味着后边的文字只起到说明作用，不起实际作用。
 
-FreeBSD ls 与 GNU ls 比较：
-
-| 参数 | FreeBSD `ls` 行为 | GNU `ls` 行为 |
-| ---- | ----------------- | ------------- |
-| `-o` | 显示长格式 + 文件 flags（文件标志） | 等同 `-l`，但不显示属组（group） |
-| `-l` | 长格式（权限 / 属主 / 属组 / 时间等） | 长格式（权限 / 属主 / 属组 / 时间等） |
-| `-G` | 启用彩色输出 | 不支持该参数 |
-| `--color` | 不支持 | 启用彩色输出 |
-| `--group-directories-first` | 不支持 | 目录优先排序（目录排在文件前） |
-| 文件 flags（flags） | 支持（如 `schg`, `uchg` 等） | 不支持 |
-
 ## 命令的执行与中断
 
 与 Windows 及图形化界面软件不同，绝大多数命令行程序在执行过程中不会显示进度提示。通常只有以下两种结果：
@@ -337,32 +326,6 @@ cd is a shell builtin
 
 ## 常用命令
 
-### dc（Desk Calculator）桌面计算器
-
-FreeBSD 自 13 版起采用 Gavin D. Howard 开发的 bc/dc 实现，该实现将 `bc` 和 `dc` 集成在同一二进制文件中，`dc` 通过符号链接访问，不再沿用传统的预处理器架构。
-
-#### 后缀表示法（逆波兰表示法，Reverse Polish Notation，RPN）
-
-理解后缀表示法是使用 dc 计算器的基础。
-
-从接触数学伊始，常用的计算表达方式就是中缀表示法。例如，要计算 3 和 4 的和，写作 `3 + 4`，操作符处于操作数的中间，这是人类最习惯的数学表达式书写方式。
-
-后缀表示法中，操作符置于操作数之后。如上式若改用后缀表示法，则写作 `3 4 +`。如果有多个操作符，操作符置于第二个操作数的后面，常规中缀表示法的 `3 - 4 + 5` 在后缀表示法里写作 `3 4 - 5 +`。
-
-后缀表示法更容易被计算机处理，并可利用栈结构减少内存访问，在编译程序设计与计算器实现中被广泛采用。
-
-例如，中缀表达式 `5 + ((1 + 2) * 4) - 3` 改用后缀表示法为 `5 1 2 + 4 * + 3 -`。
-
-上述示例可使用 `dc` 计算，在终端输入以下命令：
-
-```sh
-$ dc -e '5 1 2 + 4 * + 3 - p'
-```
-
-使用 dc 计算表达式 `5 + ((1 + 2) * 4) - 3`，并输出计算结果。
-
-计算结果为 `14`。
-
 ### `cd` 命令
 
 `cd`（change working directory，更改工作目录）
@@ -421,6 +384,17 @@ ykla@ykla:~ $ ls
 > **技巧**
 >
 > 请以普通用户测试，因为 FreeBSD 的 root shell 总是显示隐藏文件。
+
+FreeBSD ls 与 GNU ls 比较：
+
+| 参数 | FreeBSD `ls` 行为 | GNU `ls` 行为 |
+| ---- | ----------------- | ------------- |
+| `-o` | 显示长格式 + 文件 flags（文件标志） | 等同 `-l`，但不显示属组（group） |
+| `-l` | 长格式（权限 / 属主 / 属组 / 时间等） | 长格式（权限 / 属主 / 属组 / 时间等） |
+| `-G` | 启用彩色输出 | 不支持该参数 |
+| `--color` | 不支持 | 启用彩色输出 |
+| `--group-directories-first` | 不支持 | 目录优先排序（目录排在文件前） |
+| 文件 flags（flags） | 支持（如 `schg`, `uchg` 等） | 不支持 |
 
 ### `touch` 创建文件命令
 
@@ -740,6 +714,32 @@ make BATCH=yes install || make BATCH=yes install || make BATCH=yes install || ma
 >
 > 如果 `touch a.txt` 失败会执行后面的哪个操作？
 
+### dc（Desk Calculator）桌面计算器
+
+FreeBSD 自 13 版起采用 Gavin D. Howard 开发的 bc/dc 实现，该实现将 `bc` 和 `dc` 集成在同一二进制文件中，`dc` 通过符号链接访问，不再沿用传统的预处理器架构。
+
+#### 后缀表示法（逆波兰表示法，Reverse Polish Notation，RPN）
+
+理解后缀表示法是使用 dc 计算器的基础。
+
+从接触数学伊始，常用的计算表达方式就是中缀表示法。例如，要计算 3 和 4 的和，写作 `3 + 4`，操作符处于操作数的中间，这是人类最习惯的数学表达式书写方式。
+
+后缀表示法中，操作符置于操作数之后。如上式若改用后缀表示法，则写作 `3 4 +`。如果有多个操作符，操作符置于第二个操作数的后面，常规中缀表示法的 `3 - 4 + 5` 在后缀表示法里写作 `3 4 - 5 +`。
+
+后缀表示法更容易被计算机处理，并可利用栈结构减少内存访问，在编译程序设计与计算器实现中被广泛采用。
+
+例如，中缀表达式 `5 + ((1 + 2) * 4) - 3` 改用后缀表示法为 `5 1 2 + 4 * + 3 -`。
+
+上述示例可使用 `dc` 计算，在终端输入以下命令：
+
+```sh
+$ dc -e '5 1 2 + 4 * + 3 - p'
+```
+
+使用 dc 计算表达式 `5 + ((1 + 2) * 4) - 3`，并输出计算结果。
+
+计算结果为 `14`。
+
 ## 重定向输入输出
 
 UNIX shell 还能使用户执行命令、重定向其输出、重定向其输入，并将多个命令组合在一起以优化最终输出。
@@ -797,39 +797,7 @@ total 1
 
 在此示例中，`test.txt` 的内容将被排序，然后输出传递给 less(1)。这使用户可以按自己的节奏浏览输出内容，防止其在屏幕上滚动消失。
 
-## BSD 风格的 make/grep/sed/awk
-
-### make(1) 命令
-
-FreeBSD 的 make（bmake）与 GNU make（gmake）在语法和内置变量上有显著差异。FreeBSD make 不支持 GNU make 的许多高级特性，如 `$(wildcard ...)` 的某些用法、条件语句语法等。FreeBSD make 使用 `.include` 而 GNU make 使用 `include`；变量赋值语法 `?=`、`:=` 的行为也不同。在 FreeBSD 上，可安装 devel/gmake 以获得 GNU make。
-
-### sed(1) 命令
-
-FreeBSD sed 基于 4.4BSD lite sed，与 GNU sed 在正则表达式语法、一些扩展命令（如 `\l`、`\u`、`\L`、`\U`）、地址范围语法上存在差异。GNU sed 支持 `\w`、`\W`、`\b`、`\B` 等字符类，而 FreeBSD sed 需要使用 `[[:alnum:]]` 等 POSIX 类。
-
-与 GNU sed 最显著的差异是 `-i` 选项语法：FreeBSD sed 的 `-i` 必须有后缀参数，即使是空字符串（`-i ''`），而 GNU sed 的 `-i` 后缀是可选的（`-i[SUFFIX]`）。这是最常见的跨平台兼容性问题。
-
-示例：
-
-```sh
-sed -i '' 's/quarterly/latest/g' /etc/pkg/FreeBSD.conf
-```
-
-必须提供一个空参数 `''`，且不能省略。
-
-### awk(1) 命令
-
-FreeBSD 默认的 awk 是 nawk（New AWK），基于 Aho、Kernighan、Weinberger 的原始实现，与 GNU awk（gawk）有许多差异。GNU awk 有大量扩展，如：多维数组、网络操作、时间函数、`length(array)`、`gensub()`、`strftime()` 等，这些在 FreeBSD nawk 中不可用。在 FreeBSD 上，可安装 lang/gawk 获得 GNU awk。
-
-### grep(1) 命令
-
-FreeBSD 基本系统的 grep 是 BSD grep（基于 GNU grep 2.0 的旧版分支），与 Linux 上的 GNU grep 在正则表达式语法和选项上基本兼容；但 BSD grep 不支持 GNU grep 的 `-P`（Perl 正则表达式）选项，需安装 `textproc/gnugrep` 以获得 PCRE 支持。
-
 ## 关机与重启
-
-`reboot`、`halt`、`poweroff` 在 FreeBSD 中是同一个程序的不同名称，行为不同；而在 Linux 中，这些命令可能是 systemd 的符号链接，行为也不同。
-
-FreeBSD 的设计更接近传统 UNIX 的行为。
 
 关机：
 
@@ -842,13 +810,13 @@ FreeBSD 的设计更接近传统 UNIX 的行为。
 - 重启命令和 Linux 一致，都是 `reboot`，但参数不通用。
 - 在 FreeBSD 下 `reboot` 等同于 `shutdown -r now`
 
-> **技巧**
->
-> 当使用上述命令关闭 FreeBSD 时，系统将调用 shell 脚本 **/etc/rc.shutdown**。该脚本按 *rc.d* 脚本列表的逆序依次执行，以关闭系统服务。（参见 FreeBSD Project. rc.shutdown[EB/OL]. (2026-04-09)[2026-04-09]. <https://github.com/freebsd/freebsd-src/blob/main/libexec/rc/rc.shutdown>）
-
 > **注意**
 >
 > 在 FreeBSD 下，关机与重启操作都只有 root 用户和 operator 组成员可以执行。
+
+> **技巧**
+>
+> 关于 `reboot`、`halt`、`poweroff` 在 FreeBSD 与 Linux 中的行为差异，以及关机时 **/etc/rc.shutdown** 脚本的执行流程，详见第 14.3 节。
 
 ## 参考文献
 
