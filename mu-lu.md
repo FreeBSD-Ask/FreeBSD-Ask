@@ -53,9 +53,7 @@
 * [4.7 文本编辑器](di-4-zhang-freebsd-ji-chu/di-4.7-jie-wen-ben-bian-ji-qi.md)
 * [4.8 用户和基本账户管理](di-4-zhang-freebsd-ji-chu/di-4.8-jie-yong-hu-he-ji-ben-zhang-hu-guan-li.md)
 * [4.9 权限](di-4-zhang-freebsd-ji-chu/di-4.9-jie-quan-xian.md)
-* [4.10 权限提升工具（sudo、doas 等）](di-4-zhang-freebsd-ji-chu/di-4.10-jie-te-quan-ti-sheng-gong-ju-sudo-doas-deng.md)
-* [4.11 进程与守护进程](di-4-zhang-freebsd-ji-chu/di-4.11-jie-jin-cheng-yu-shou-hu-jin-cheng.md)
-* [4.12 压缩解压工具](di-4-zhang-freebsd-ji-chu/di-4.12-jie-ya-suo-jie-ya-gong-ju.md)
+* [4.10 压缩解压工具](di-4-zhang-freebsd-ji-chu/di-4.10-jie-ya-suo-jie-ya-gong-ju.md)
 
 ## 第 5 章 软件管理和系统升级
 
@@ -151,14 +149,16 @@
 * [14.1 启动引导器](di-14-zhang-xi-tong-guan-li/di-14.1-jie-qi-dong-yin-dao-qi-ji-pei-zhi-wen-jian-loader-conf.md)
 * [14.2 引导管理器与 UEFI 固件](di-14-zhang-xi-tong-guan-li/di-14.2-jie-yin-dao-guan-li-qi-yu-uefi-gu-jian.md)
 * [14.3 管理 FreeBSD 中的服务](di-14-zhang-xi-tong-guan-li/di-14.3-jie-init-rc-fu-wu-guan-li.md)
-* [14.4 用户分级](di-14-zhang-xi-tong-guan-li/di-14.4-jie-yong-hu-fen-ji-wen-jian-login-conf.md)
-* [14.5 bsdconfig 系统配置工具](di-14-zhang-xi-tong-guan-li/di-14.5-jie-bsdconfig-xi-tong-pei-zhi-gong-ju.md)
-* [14.6 OpenSSH](di-14-zhang-xi-tong-guan-li/di-14.6-jie-OpenSSH.md)
-* [14.7 设备资源提示](di-14-zhang-xi-tong-guan-li/di-14.7-jie-she-bei-zi-yuan-ti-shi-wen-jian-device-hints.md)
-* [14.8 Cron 和 Periodic](di-14-zhang-xi-tong-guan-li/di-14.8-jie-crontab-ji-ding-shi-ren-wu-wen-jian-periodic-conf.md)
-* [14.9 sysctl 工具](di-14-zhang-xi-tong-guan-li/di-14.9-jie-nei-he-zhuang-tai-mo-ren-pei-zhi-wen-jian-sysctl-conf.md)
-* [14.10 NTP 时间同步与时区](di-14-zhang-xi-tong-guan-li/di-14.10-jie-shi-jian-tong-bu-fu-wu.md)
-* [14.11 Live 镜像与系统恢复](di-14-zhang-xi-tong-guan-li/di-14.11-jie-live-jing-xiang-yu-xi-tong-hui-fu.md)
+* [14.4 进程与守护进程](di-14-zhang-xi-tong-guan-li/di-14.4-jie-jin-cheng-yu-shou-hu-jin-cheng.md)
+* [14.5 用户分级](di-14-zhang-xi-tong-guan-li/di-14.5-jie-yong-hu-fen-ji-wen-jian-login-conf.md)
+* [14.6 权限提升工具（sudo、doas 等）](di-14-zhang-xi-tong-guan-li/di-14.6-jie-te-quan-ti-sheng-gong-ju-sudo-doas-deng.md)
+* [14.7 bsdconfig 系统配置工具](di-14-zhang-xi-tong-guan-li/di-14.7-jie-bsdconfig-xi-tong-pei-zhi-gong-ju.md)
+* [14.8 OpenSSH](di-14-zhang-xi-tong-guan-li/di-14.8-jie-OpenSSH.md)
+* [14.9 设备资源提示](di-14-zhang-xi-tong-guan-li/di-14.9-jie-she-bei-zi-yuan-ti-shi-wen-jian-device-hints.md)
+* [14.10 Cron 和 Periodic](di-14-zhang-xi-tong-guan-li/di-14.10-jie-crontab-ji-ding-shi-ren-wu-wen-jian-periodic-conf.md)
+* [14.11 sysctl 工具](di-14-zhang-xi-tong-guan-li/di-14.11-jie-nei-he-zhuang-tai-mo-ren-pei-zhi-wen-jian-sysctl-conf.md)
+* [14.12 NTP 时间同步与时区](di-14-zhang-xi-tong-guan-li/di-14.12-jie-shi-jian-tong-bu-fu-wu.md)
+* [14.13 Live 镜像与系统恢复](di-14-zhang-xi-tong-guan-li/di-14.13-jie-live-jing-xiang-yu-xi-tong-hui-fu.md)
 
 ## 第 15 章 存储与文件系统管理
 
