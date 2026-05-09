@@ -103,13 +103,13 @@
 
 ## 第 9 章 多媒体和外部设备
 
-* [9.1 Web 浏览器](di-9-zhang-duo-mei-ti-he-wai-bu-she-bei/di-9.1-jie-web-liu-lan-qi.md)
-* [9.2 声卡配置](di-9-zhang-duo-mei-ti-he-wai-bu-she-bei/di-9.2-jie-yin-pin-she-bei-pei-zhi.md)
-* [9.3 音频播放器](di-9-zhang-duo-mei-ti-he-wai-bu-she-bei/di-9.3-jie-yin-pin-bo-fang-qi.md)
-* [9.4 打印机](di-9-zhang-duo-mei-ti-he-wai-bu-she-bei/di-9.4-jie-da-yin-ji.md)
-* [9.5 人机输入设备](di-9-zhang-duo-mei-ti-he-wai-bu-she-bei/di-9.5-jie-ren-ji-shu-ru-she-bei.md)
-* [9.6 视频播放器](di-9-zhang-duo-mei-ti-he-wai-bu-she-bei/di-9.6-jie-shi-pin-bo-fang-qi.md)
-* [9.7 多媒体处理工具](di-9-zhang-duo-mei-ti-he-wai-bu-she-bei/di-9.7-jie-duo-mei-ti-chu-li-gong-ju.md)
+* [9.1 声卡配置](di-9-zhang-duo-mei-ti-he-wai-bu-she-bei/di-9.1-jie-yin-pin-she-bei-pei-zhi.md)
+* [9.2 打印机](di-9-zhang-duo-mei-ti-he-wai-bu-she-bei/di-9.2-jie-da-yin-ji.md)
+* [9.3 人机输入设备](di-9-zhang-duo-mei-ti-he-wai-bu-she-bei/di-9.3-jie-ren-ji-shu-ru-she-bei.md)
+* [9.4 音频播放器](di-9-zhang-duo-mei-ti-he-wai-bu-she-bei/di-9.4-jie-yin-pin-bo-fang-qi.md)
+* [9.5 视频播放器](di-9-zhang-duo-mei-ti-he-wai-bu-she-bei/di-9.5-jie-shi-pin-bo-fang-qi.md)
+* [9.6 多媒体处理工具](di-9-zhang-duo-mei-ti-he-wai-bu-she-bei/di-9.6-jie-duo-mei-ti-chu-li-gong-ju.md)
+* [9.7 Web 浏览器](di-9-zhang-duo-mei-ti-he-wai-bu-she-bei/di-9.7-jie-web-liu-lan-qi.md)
 
 ## 第 10 章 本地化与输入法
 
@@ -284,10 +284,10 @@
 ## 附录 I 工具与资源
 
 * [BSD 许可证概览](fu-lu1/bsd-xu-ke-zheng-gai-lan.md)
-* [microSD 卡参数简介](fu-lu1/cun-chu-ka.md)
 * [Bug 报告流程](fu-lu1/bug-bao-gao-liu-cheng.md)
 * [FreeBSD 邮件列表订阅](fu-lu1/freebsd-you-jian-lie-biao-ding-yue.md)
 * [FreeBSD 开发参与指南](fu-lu1/freebsd-kai-fa-can-yu-zhi-nan.md)
+* [microSD 卡参数简介](fu-lu1/cun-chu-ka.md)
 
 ## 附录 II 文学故事
 
