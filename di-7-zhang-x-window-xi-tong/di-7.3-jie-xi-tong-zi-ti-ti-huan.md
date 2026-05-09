@@ -77,6 +77,17 @@ vidcontrol -f b16.fnt
 allscreens_flags="-f /root/b16.fnt"
 ```
 
+## 附录：安装 Windows 11 字体（自制包）
+
+同时兼容 Debian 和低版本 Ubuntu 兼容层。安装方法：
+
+```sh
+# apt install git                          # 安装 Git
+# git clone https://github.com/ykla/ttf-mswin11-zh-deb   # 克隆字体包仓库
+# cd ttf-mswin11-zh-deb                    # 进入字体包目录
+# dpkg -i ttf-ms-win11-*.deb               # 安装 Windows 11 中文字体包
+```
+
 ### 故障排除与未竟事宜
 
 #### 如何手动生成中文字体的 fnt 文件
