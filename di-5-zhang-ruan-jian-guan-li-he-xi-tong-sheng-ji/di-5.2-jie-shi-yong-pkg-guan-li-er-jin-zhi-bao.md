@@ -67,7 +67,7 @@ For more information on available commands and options see 'pkg help'.
 
 > **技巧**
 >
-> 如果长时间卡在 `Bootstrapping pkg from ……, please wait...`，请按 **Ctrl + C** 中断这一过程，换境内源后再进行。
+> 如果长时间卡在 `Bootstrapping pkg from ……, please wait...`，请按 **Ctrl + C** 中断这一过程，换境内源后再操作。
 
 > **技巧**
 >
