@@ -338,7 +338,7 @@ zroot/
 # printf "/dev/nda0p5\tnone\tswap\tsw\t0\t0\n" >> /tmp/bsdinstall_etc/fstab
 ```
 
-注意将 **/dev/nda0p5** 替换为实际的交换分区设备名，可使用 `gpart show nda0` 命令进行确认。
+注意将 **/dev/nda0p5** 替换为实际的交换分区设备名，可使用 `gpart show nda0` 命令确认。
 
 > **技巧**
 >
