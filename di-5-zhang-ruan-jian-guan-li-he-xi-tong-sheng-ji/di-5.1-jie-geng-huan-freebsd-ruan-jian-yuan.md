@@ -516,7 +516,7 @@ MASTER_SITE_OVERRIDE?=https://mirrors.ustc.edu.cn/freebsd-ports/distfiles/${DIST
 
 ### 平衡安全与便利
 
-在配置软件源时，安全性与便利性难以兼顾。使用非官方镜像站虽然提升了下载速度，但引入了中间人攻击的风险——镜像站管理员理论上可以在软件包中注入恶意代码。FreeBSD 官方要求镜像站使用 `zfs send/receive` 而非 rsync 来同步数据，部分原因正是为了降低此类风险。对于安全要求较高的生产环境，建议使用官方源或自行搭建 Poudriere 构建服务器，以完全控制软件包。
+使用非官方镜像站虽然提升了下载速度，但引入了中间人攻击的风险——镜像站管理员理论上可以在软件包中注入恶意代码。FreeBSD 官方要求镜像站使用 `zfs send/receive` 而非 rsync 来同步数据，部分原因正是为了降低此类风险。对于安全要求较高的生产环境，建议使用官方源或自行搭建 Poudriere 构建服务器，以完全控制软件包。
 
 ### 为什么 pkg 配置文件中要写完整选项（mirror_type / signature_type / fingerprints）
 
