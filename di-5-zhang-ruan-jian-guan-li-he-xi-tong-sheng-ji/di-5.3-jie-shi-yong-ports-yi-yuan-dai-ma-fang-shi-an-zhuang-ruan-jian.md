@@ -479,9 +479,9 @@ portupgrade 是另一个常用的 Ports 更新工具。
 - FreeBSD Project. portmaster -- manage your ports without external databases or languages[EB/OL]. [2026-03-25]. <https://man.freebsd.org/cgi/man.cgi?portmaster(8)>. 无需外部数据库的 Ports 管理工具完整说明。
 - FreeBSD Project. portupgrade, portinstall -- tools to upgrade installed packages or install new ones via ports or packages[EB/OL]. [2026-03-25]. <https://man.freebsd.org/cgi/man.cgi?portupgrade(1)>. Ports 升级与安装工具的官方技术文档。
 
-## FreeBSD USE
+## 全局设置 Ports 构建选项
 
-FreeBSD USE 是 Ports 框架中控制构建选项和依赖的机制。
+FreeBSD Ports 框架支持在 **/etc/make.conf** 中全局控制构建选项和依赖。
 
 ### 如何全局屏蔽 MySQL
 
