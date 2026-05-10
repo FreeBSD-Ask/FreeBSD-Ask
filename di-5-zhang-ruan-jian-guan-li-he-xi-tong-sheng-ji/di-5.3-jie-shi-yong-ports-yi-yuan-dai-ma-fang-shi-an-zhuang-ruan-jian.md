@@ -819,17 +819,6 @@ wget2 参数说明：
 
 ## 附录：Port 安装示例
 
-### 查看 python 的 ports 在哪个位置
-
-可以再次使用 `whereis` 命令来确认 python 的具体位置。
-
-查找 python 可执行文件、源代码及手册页所在路径：
-
-```sh
-# whereis python
-python: /usr/ports/lang/python
-```
-
 ### 安装 python3
 
 现在以安装 python3 为例，演示如何使用 Ports 编译安装软件。
