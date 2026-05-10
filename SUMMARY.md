@@ -68,14 +68,14 @@
 
 ## 第 6 章 网络管理
 
-* [6.1 基础网络配置](di-6-zhang-wang-luo-guan-li/di-6.1-jie-wang-luo-ji-chu-pei-zhi.md)
-* [6.2 高级网络管理](di-6-zhang-wang-luo-guan-li/di-6.2-jie-gao-ji.md)
-* [6.3 无线网络（Wi-Fi）配置](di-6-zhang-wang-luo-guan-li/di-6.3-jie-wu-xian-wang-luo-wi-fi-pei-zhi.md)
+* [6.1 基础网络](di-6-zhang-wang-luo-guan-li/di-6.1-jie-wang-luo-ji-chu-pei-zhi.md)
+* [6.2 高级网络](di-6-zhang-wang-luo-guan-li/di-6.2-jie-gao-ji.md)
+* [6.3 无线网络（Wi-Fi）](di-6-zhang-wang-luo-guan-li/di-6.3-jie-wu-xian-wang-luo-wi-fi-pei-zhi.md)
 * [6.4 USB 网络共享（USB tethering）](di-6-zhang-wang-luo-guan-li/di-6.4-jie-usb-wang-luo-gong-xiang-usb-tethering.md)
 * [6.5 蓝牙](di-6-zhang-wang-luo-guan-li/di-6.5-jie-lan-ya.md)
 * [6.6 系统代理](di-6-zhang-wang-luo-guan-li/di-6.6-jie-xi-tong-dai-li.md)
-* [6.7 V2Ray 配置](di-6-zhang-wang-luo-guan-li/di-6.7-jie-v2ray-pei-zhi.md)
-* [6.8 Mihomo 配置](di-6-zhang-wang-luo-guan-li/di-6.8-jie-mihomo-pei-zhi.md)
+* [6.7 V2Ray](di-6-zhang-wang-luo-guan-li/di-6.7-jie-v2ray-pei-zhi.md)
+* [6.8 Mihomo](di-6-zhang-wang-luo-guan-li/di-6.8-jie-mihomo-pei-zhi.md)
 
 ## 第 7 章 X Window 系统
 
@@ -84,7 +84,7 @@
 * [7.3 AMD 显卡驱动](di-7-zhang-x-window-xi-tong/di-7.3-jie-amd-xian-ka-qu-dong-pei-zhi.md)
 * [7.4 NVIDIA 显卡驱动](di-7-zhang-x-window-xi-tong/di-7.4-jie-nvidia-xian-ka-qu-dong-pei-zhi.md)
 * [7.5 系统字体](di-7-zhang-x-window-xi-tong/di-7.5-jie-xi-tong-zi-ti-ti-huan.md)
-* [7.6 远程桌面访问](di-7-zhang-x-window-xi-tong/di-7.6-jie-yuan-cheng-zhuo-mian-fang-wen.md)
+* [7.6 远程桌面](di-7-zhang-x-window-xi-tong/di-7.6-jie-yuan-cheng-zhuo-mian-fang-wen.md)
 
 ## 第 8 章 桌面环境
 
