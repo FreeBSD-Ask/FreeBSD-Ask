@@ -173,13 +173,14 @@
 ## 第 16 章 ZFS 文件系统
 
 * [16.1 ZFS 历史与现实](di-16-zhang-zfs-wen-jian-xi-tong/di-16.1-jie-zfs-gai-shu.md)
-* [16.2 ZFS 快照与还原](di-16-zhang-zfs-wen-jian-xi-tong/di-16.2-jie-zfs-kuai-zhao-yu-huan-yuan.md)
-* [16.3 ZFS 磁盘扩容](di-16-zhang-zfs-wen-jian-xi-tong/di-16.3-jie-zfs-ci-pan-kuo-rong.md)
-* [16.4 ZFS 数据压缩](di-16-zhang-zfs-wen-jian-xi-tong/di-16.4-jie-zfs-shu-ju-ya-suo.md)
-* [16.5 ZFS 启动环境](di-16-zhang-zfs-wen-jian-xi-tong/di-16.5-jie-zfs-qi-dong-huan-jing.md)
-* [16.6 ZFS 启动环境与多版本共存](di-16-zhang-zfs-wen-jian-xi-tong/di-16.6-jie-zfs-qi-dong-huan-jing-yu-duo-ban-ben-gong-cun.md)
-* [16.7 ZFS 存储池更新](di-16-zhang-zfs-wen-jian-xi-tong/di-16.7-jie-zfs-cun-chu-chi-geng-xin.md)
-* [16.8 ZFS 委托管理](di-16-zhang-zfs-wen-jian-xi-tong/di-16.8-jie-zfs-wei-tuo-guan-li.md)
+* [16.2 ZFS 磁盘扩容](di-16-zhang-zfs-wen-jian-xi-tong/di-16.2-jie-zfs-ci-pan-kuo-rong.md)
+* [16.3 ZFS 存储池管理](di-16-zhang-zfs-wen-jian-xi-tong/di-16.3-jie-zfs-cun-chu-chi-geng-xin.md)
+* [16.4 ZFS 管理](di-16-zhang-zfs-wen-jian-xi-tong/di-16.4-jie-zfs-guan-li.md)
+* [16.5 ZFS 委托管理](di-16-zhang-zfs-wen-jian-xi-tong/di-16.5-jie-zfs-wei-tuo-guan-li.md)
+* [16.6 ZFS 快照与还原](di-16-zhang-zfs-wen-jian-xi-tong/di-16.6-jie-zfs-kuai-zhao-yu-huan-yuan.md)
+* [16.7 ZFS 数据压缩](di-16-zhang-zfs-wen-jian-xi-tong/di-16.7-jie-zfs-shu-ju-ya-suo.md)
+* [16.8 ZFS 启动环境](di-16-zhang-zfs-wen-jian-xi-tong/di-16.8-jie-zfs-qi-dong-huan-jing.md)
+* [16.9 ZFS 启动环境与多版本共存](di-16-zhang-zfs-wen-jian-xi-tong/di-16.9-jie-zfs-qi-dong-huan-jing-yu-duo-ban-ben-gong-cun.md)
 
 ## 第 17 章 安全
 
