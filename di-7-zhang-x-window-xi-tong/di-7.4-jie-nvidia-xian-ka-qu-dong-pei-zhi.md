@@ -1,4 +1,4 @@
-# 7.3 NVIDIA 显卡驱动
+# 7.4 NVIDIA 显卡驱动
 
 ## NVIDIA 显卡驱动概述
 
