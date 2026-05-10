@@ -328,9 +328,30 @@ FreeBSD 中的大多数设备通过称为设备节点的特殊文件访问，这
 
 在 FreeBSD 中，设备节点由 devfs(5) 文件系统自动管理。devfs 是一个虚拟文件系统，在系统启动时由内核自动挂载到 **/dev**，并根据当前系统中存在的硬件设备动态创建和删除设备节点。这与传统 UNIX 系统需要手动使用 `mknod` 命令创建设备节点的做法不同。devfs 确保了 **/dev** 目录中只包含当前系统实际存在的设备节点。
 
-传统 UNIX 中，设备节点分为字符设备（character device）和块设备（block device）两种类型。字符设备以字节流方式访问数据，如终端（**/dev/ttyv0**）和串口；块设备以固定大小的块为单位访问数据，通过操作系统的缓冲缓存访问。然而，在现代 FreeBSD 中，块设备已被移除，所有设备节点均为字符设备。在 `ls -l /dev/` 的输出中，所有设备均显示为 `c`（字符设备），不会出现 `b`（块设备）标识。例如，磁盘 **/dev/ada0** 在现代 FreeBSD 上是字符设备，而非块设备。
+传统 UNIX 中，设备节点分为字符设备（character device）和块设备（block device）两种类型。字符设备以字节流方式访问数据，如终端（**/dev/ttyv0**）和串口；块设备以固定大小的块为单位访问数据，通过操作系统的缓冲缓存访问。然而，在现代 FreeBSD 中，块设备已被移除，所有设备节点均为字符设备。
+
+在 `ls -l /dev/` 的输出中，所有设备均显示为 `c`（字符设备），不会出现 `b`（块设备）标识。
+
+例如，磁盘 **/dev/ada0** 在现代 FreeBSD 上是字符设备，而非块设备。
+
+```sh
+crw-r-----  1 root operator 0x69 May 10 09:49 ada0
+```
 
 设备命名遵循一定的约定：SATA 硬盘以 `ada` 开头（如 `ada0`、`ada1`），SCSI 硬盘和 USB 存储设备以 `da` 开头（如 `da0`），NVMe 存储以 `nda`（通过 CAM 框架，默认）或 `nvd`（非 CAM）开头，CD-ROM 驱动器以 `cd` 开头。编号从 0 开始。GPT 分区在设备名后附加 `p` 加分区号（如 `ada0p1`），MBR 切片附加 `s` 加切片号（如 `ada0s1`）。
+
+如下行所述：
+
+```sh
+crw-r-----  1 root operator 0x69 May 10 09:49 ada0	# SATA 硬盘
+crw-r-----  1 root operator 0x7c May 10 09:56 ada0s1	# SATA 硬盘 MBR 分区的首个切片
+crw-r-----  1 root operator 0x6b May 10 09:49 da0	# SCSI 硬盘
+crw-r-----  1 root operator 0x60 May 10 09:49 nda0	# NVMe 硬盘
+crw-r-----  1 root operator 0x62 May 10 09:49 nda0p1	# GPT 分区的首个分区
+lrwxr-xr-x  1 root wheel       4 May 10 09:49 nvd0 -> nda0	# 软连接到 NVMe 硬盘
+lrwxr-xr-x  1 root wheel       6 May 10 09:49 nvd0p1 -> nda0p1	# 软连接到 NVMe 硬盘 GPT 分区的首个分区
+crw-r-----  1 root operator 0x68 May 10 09:49 cd0	# 光学介质
+```
 
 ## 启动消息 dmesg
 

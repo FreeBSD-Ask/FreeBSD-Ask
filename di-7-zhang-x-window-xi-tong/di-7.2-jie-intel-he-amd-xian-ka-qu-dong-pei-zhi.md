@@ -1,0 +1,106 @@
+# 7.2 Intel 显卡驱动
+
+本节涵盖 Intel 核芯显卡（i915 DRM 模块）的驱动安装与配置。读者应先阅读显卡驱动概述。
+
+## 安装 Intel 核芯显卡
+
+### FreeBSD 14.x
+
+> **技巧**
+>
+> 若要使用 pkg 安装，可参照本书其他章节配置的 kernel modules（kmods）内核模块源。
+
+```sh
+# cd /usr/ports/graphics/drm-61-kmod
+# make BATCH=yes install clean
+```
+
+或者使用 pkg 安装（如 Ports 安装有问题则使用此方法）：
+
+```sh
+# pkg install drm-61-kmod
+```
+
+### FreeBSD 15.0
+
+使用 Ports 安装：
+
+```sh
+# cd /usr/ports/graphics/drm-66-kmod
+# make BATCH=yes install clean
+```
+
+> **注意**
+>
+> 对于英特尔三代处理器的 HD 4000 等较早期的核芯显卡，在传统 BIOS 模式下无需额外安装显卡驱动，但在 UEFI 模式下可能出现花屏现象（FreeBSD 13.0 及以后版本无此问题），此时需要安装此 DRM 显卡驱动。
+
+## 配置 Intel 核芯显卡
+
+在 **/etc/rc.conf** 文件中添加 `i915kms` 内核模块到 `kld_list`，以便系统启动时加载：
+
+```sh
+# sysrc -f /etc/rc.conf kld_list+=i915kms
+```
+
+## 视频硬解
+
+> **警告**
+>
+> 如果忽略此部分，Blender 等软件将无法运行，并会直接产生“段错误”。
+
+### 安装 Intel VA-API 媒体驱动
+
+- 使用 pkg 安装：
+
+```sh
+# pkg install libva-intel-media-driver
+```
+
+- 或使用 Ports 安装：
+
+```sh
+# cd /usr/ports/multimedia/libva-intel-media-driver/
+# make install clean
+```
+
+### 安装 Mesa 的 Gallium VA-API 和 VDPAU 支持包
+
+- 使用 pkg 安装：
+
+```sh
+# pkg install mesa-gallium-va mesa-gallium-vdpau
+```
+
+- 或使用 Ports 安装：
+
+```sh
+# cd /usr/ports/graphics/mesa-gallium-va/ && make install clean
+# cd /usr/ports/graphics/mesa-gallium-vdpau/ && make install clean
+```
+
+## 附录：Intel 显卡电源管理
+
+某些显卡的功耗可能过高，FreeBSD 可以通过特定的配置来降低功耗。
+
+如果使用 graphics/drm-kmod 驱动的 Intel 显卡，可以将以下选项添加到 **/boot/loader.conf** 文件中：
+
+```ini
+compat.linuxkpi.fastboot=1  	# ①
+compat.linuxkpi.enable_dc=2 	# ②
+compat.linuxkpi.enable_fbc=1	# ③
+```
+
+功能说明：
+
+* ① 尝试跳过启动时不必要的模式设置。
+* ② 启用省电显示 C 状态。
+* ③ 启用帧缓冲压缩以节省电力。
+
+## 参考文献
+
+- FreeBSD Project. Graphics[EB/OL]. [2026-03-25]. <https://wiki.freebsd.org/Graphics>. FreeBSD 官方维基，是图形硬件兼容性详细列表与配置指南。
+
+## 课后习题
+
+1. 尝试自动化 FreeBSD 上的 DRM 移植流程。
+2. 尝试从 OpenBSD 重新移植 DRM 实现。
