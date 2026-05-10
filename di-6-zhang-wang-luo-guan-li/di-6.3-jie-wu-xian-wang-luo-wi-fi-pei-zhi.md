@@ -364,7 +364,7 @@ bwn_v4_n_ucode_load="YES"       # 加载 BWN V4 N 模式无线固件
 bwn_v4_lp_ucode_load="YES"      # 加载 BWN V4 低功耗模式无线固件
 ```
 
-完成后重启系统，使用 `ifconfig` 检查是否存在 `wlan0` 接口，然后按照前文所述方法进行配置。
+完成后重启系统，使用 `ifconfig` 检查是否存在 `wlan0` 接口，然后按照前文所述方法配置。
 
 ### 参考文献
 
