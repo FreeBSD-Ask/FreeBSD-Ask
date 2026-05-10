@@ -4,7 +4,7 @@
 >
 > 请勿使用 `sysutils/desktop-installer`，该工具在当前环境下可能引发错误和配置冲突。
 
-本节涵盖 Intel 集成显卡（i915 DRM 模块）和 AMD Radeon（amdgpu DRM 模块）的驱动安装、DRM-KMOD 内核模块加载与故障排查。
+本节涵盖 Intel 核芯显卡（i915 DRM 模块）和 AMD Radeon（amdgpu DRM 模块）的驱动安装、DRM-KMOD 内核模块加载与故障排查。
 
 ## 未安装显卡驱动的设备图片示例
 
@@ -26,10 +26,7 @@ DRM 是 Linux 内核的子系统，负责与现代显卡的 GPU 进行交互。F
 >
 > DG2 Arc 显卡尚不受支持（截至 DRM 6.1 版本），相关技术细节可参见：Intel Arc A770: Kernel panic on kldload i915kms.ko #315[EB/OL]. [2026-03-26]. <https://github.com/freebsd/drm-kmod/issues/315>。可能需要等到 6.12 的移植才能提供支持。
 
-| FreeBSD 版本 | 对应 DRM 驱动版本 | GPU 支持范围（AMD / Intel） | 备注 |
-| ------------ | ----------------- | --------------------------- | ---- |
-| **FreeBSD 14.3-RELEASE** | **drm-61-kmod（基于 Linux 6.1 DRM）** | - **AMD：** <br>**GCN 1（Southern Islands）** <br>**GCN 2（Sea Islands）** <br>**GCN 3（Volcanic Islands）** <br>**GCN 4（Polaris）** <br>**GCN 5（Vega）** <br> **RDNA 1 / RDNA 2 / RDNA 3（Radeon RX 7000 系列）**<br>- **Intel：** <br>**Gen 4（GMA X3000 / 965）**<br>**Gen 5（Ironlake）**<br>**Gen 6（Sandy Bridge）**<br>**Gen 7（Ivy / Haswell）**<br>**Gen 8（Broadwell）**<br>**Gen 9（Skylake / Kaby Lake / Coffee Lake）**<br>**Gen 10（Cannon Lake – 已废弃）**<br>**Gen 11（Ice Lake / Jasper Lake）**<br>**Gen 12（Tiger Lake / Alder Lake）** | 理论支持 Intel Gen 4 ～ Gen 12 核芯显卡 |
-| **FreeBSD 15.0/16.0-CURRENT** | **drm-66-kmod（基于 Linux 6.6 DRM）** | - **AMD：** 自 **GCN 1** 起至 **RDNA 3（Radeon RX 7000 系列）**，并包含 **Instinct MI300 加速卡** 支持。<br>- **Intel：** <br> **Gen 4–8：** 旧核芯显卡（GMA、HD Graphics 4000 等）<br> **Gen 9：** Skylake / Kaby Lake / Coffee Lake<br> **Gen 10：** Cannon Lake（已废弃）<br> **Gen 11：** Ice Lake / Jasper Lake<br> **Gen 12：** Tiger Lake / Alder Lake <br> **Gen 12.7：** Raptor Lake（基本兼容 Alder Lake 驱动）<br> **Xe-LPG：** Meteor Lake（实验性，已合入 drm-66） | 实测 **Intel Alder Lake-N (N100)、i7-1260P** 显卡驱动加载正常，显示与视频加速功能稳定；<br><br>理论支持 Intel Gen 4 ～ Xe-LPG 核芯显卡（含 Meteor Lake），但 Raptor Lake 及以后缺乏充分实测 |
+支持情况：
 
 - 非 LTS 版本（Port graphics/drm-latest-kmod，仅 15.0/16.0，目前为 6.9）：
   - Intel：Meteor Lake 图形在 6.7 后默认启用；
