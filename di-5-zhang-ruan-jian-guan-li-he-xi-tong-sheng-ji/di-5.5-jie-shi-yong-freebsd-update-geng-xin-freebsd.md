@@ -151,7 +151,7 @@ usr/lib/clang/18.1.8/include
 
 接下来：更新到最新的点版本及该点版本上最新的补丁版本（如 `X.Z-RELEASE-pN`）
 >
-> 最后：进行大版本（`X.Z-RELEASE-pN`——>`A.0-RELEASE`）的更迭。
+> 最后：完成大版本（`X.Z-RELEASE-pN`——>`A.0-RELEASE`）的更迭。
 >
 > 参见：libsys.so.7 not found when upgrading userland with legacy freebsd-update[EB/OL]. [2026-03-26]. <https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=289769>。
 
