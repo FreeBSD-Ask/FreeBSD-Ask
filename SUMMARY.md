@@ -83,7 +83,7 @@
 * [7.2 Intel 显卡驱动](di-7-zhang-x-window-xi-tong/di-7.2-jie-intel-he-amd-xian-ka-qu-dong-pei-zhi.md)
 * [7.3 AMD 显卡驱动](di-7-zhang-x-window-xi-tong/di-7.3-jie-amd-xian-ka-qu-dong-pei-zhi.md)
 * [7.4 NVIDIA 显卡驱动](di-7-zhang-x-window-xi-tong/di-7.4-jie-nvidia-xian-ka-qu-dong-pei-zhi.md)
-* [7.5 系统字体替换](di-7-zhang-x-window-xi-tong/di-7.5-jie-xi-tong-zi-ti-ti-huan.md)
+* [7.5 系统字体](di-7-zhang-x-window-xi-tong/di-7.5-jie-xi-tong-zi-ti-ti-huan.md)
 * [7.6 远程桌面访问](di-7-zhang-x-window-xi-tong/di-7.6-jie-yuan-cheng-zhuo-mian-fang-wen.md)
 
 ## 第 8 章 桌面环境
