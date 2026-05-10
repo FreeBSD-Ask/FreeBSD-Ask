@@ -382,7 +382,7 @@ root@ykla:/usr/ports/sysutils/htop # make all-depends-list
 
 ## 如何删除当前 Port 及其依赖的配置文件
 
-如果需要清理之前配置的选项，可以使用以下命令删除当前 Port 及其所有依赖的配置文件。
+如果需要清理之前配置的选项，可以使用以下命令删除当前 Port 及其所有依赖的配置文件。该命令会递归遍历依赖树，逐一清除每个 Port 的 `make config` 设置，恢复为默认构建参数。
 
 ```sh
 # make rmconfig-recursive
@@ -390,7 +390,7 @@ root@ykla:/usr/ports/sysutils/htop # make all-depends-list
 
 ## 如何一次性下载所有需要的软件包
 
-为了避免在编译过程中因网络问题中断，可以先一次性下载所有需要的软件包。
+为了避免在编译过程中因网络问题中断，可以先一次性下载所有需要的软件包。`fetch-recursive` 会递归获取主 Port 及其全部依赖的源代码包，配合 `BATCH=yes` 跳过交互式选项。
 
 ```sh
 # make BATCH=yes fetch-recursive
@@ -398,7 +398,7 @@ root@ykla:/usr/ports/sysutils/htop # make all-depends-list
 
 ## Ports 编译的软件也可以打包为 pkg 包
 
-使用 Ports 编译安装的软件也可以打包为 pkg 格式的二进制包，方便在其他机器上安装。
+使用 Ports 编译安装的软件也可以打包为 pkg 格式的二进制包，方便在其他机器上部署，避免重复编译。打包后的文件默认输出至当前目录，可拷贝到目标机器后用 `pkg add` 安装。
 
 ```sh
 # pkg create nginx
