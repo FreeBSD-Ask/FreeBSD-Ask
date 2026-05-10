@@ -144,7 +144,7 @@
 
 ## 第 13 章 人工智能（AI）
 
-* [13.1 人工智能（AI）概述](di-13-zhang-ren-gong-zhi-neng-ai/di-13.1-jie-ren-gong-zhi-neng-ai-gai-shu.md)
+* [13.1 人工智能哲学](di-13-zhang-ren-gong-zhi-neng-ai/di-13.1-jie-ren-gong-zhi-neng-ai-gai-shu.md)
 * [13.2 AI 大模型本地部署](di-13-zhang-ren-gong-zhi-neng-ai/di-13.2-jie-ai-da-mo-xing-ben-di-bu-shu.md)
 
 ## 第 14 章 系统管理
