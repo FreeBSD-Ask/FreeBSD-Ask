@@ -1,6 +1,6 @@
 # 参考书目
 
-本附录涵盖命令行基础、UNIX 内核原理、FreeBSD 技术体系及网络协议等多个领域的核心著作。
+本附录列出命令行基础、UNIX 内核原理、FreeBSD 技术体系及网络协议等领域的参考书目。
 
 部分书籍可通过中文数字阅读平台获取，包括 [微信读书](https://weread.qq.com/)、[QQ 阅读](https://book.qq.com/)、[京东读书](https://cread.jd.com/custom/custom_pcDownload.action) 等。这些平台提供技术类书籍的数字版本，便于读者在线阅读。
 
@@ -62,8 +62,6 @@
 | 封面/书名 | 作者/译者 | ISBN/出版社 | 说明 |
 | --------- | --------- | ----------- | ---- |
 | ![FreeBSD 操作系统设计与实现（原书第二版）](../.gitbook/assets/freebsd2rd.png) <br><br> 《FreeBSD 操作系统设计与实现（原书第 2 版）》 | [美] Marshall McKusick、George V. Neville-Neil、Robert N.M. Watson 等著 <br><br> 陈向群、郭立峰、叶顺平 等译 | 978-7-111-68997-3 <br><br> 机械工业出版社 | FreeBSD 内核设计权威著作，详解现代 FreeBSD 内核架构与实现细节 |
-
-该书是 FreeBSD 技术体系中的核心学术著作。
 
 该书采用轻型纸印刷，部分章节需要由读者自行通过 [网络](https://course.cmpreading.com/web/refbook/detail/9661/215) 下载。
 
