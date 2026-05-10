@@ -263,15 +263,15 @@
 
 ## 第 26 章 开发环境
 
-* [26.1 C/C++ 开发](di-26-zhang-kai-fa-huan-jing/di-26.1-jie-c-c-kai-fa-huan-jing.md)
-* [26.2 Java 开发](di-26-zhang-kai-fa-huan-jing/di-26.2-jie-java-kai-fa-huan-jing.md)
-* [26.3 Qt 开发](di-26-zhang-kai-fa-huan-jing/di-26.3-jie-qt-kai-fa-huan-jing.md)
-* [26.4 Python 开发](di-26-zhang-kai-fa-huan-jing/di-26.4-jie-python-kai-fa-huan-jing.md)
-* [26.5 Rust/Go 开发](di-26-zhang-kai-fa-huan-jing/di-26.5-jie-rust-go-kai-fa-huan-jing.md)
-* [26.6 Node.js 环境](di-26-zhang-kai-fa-huan-jing/di-26.6-jie-node-js-huan-jing.md)
-* [26.7 code-server 和 clangd 开发](di-26-zhang-kai-fa-huan-jing/di-26.7-jie-code-server-he-clangd-kai-fa-pei-zhi.md)
-* [26.8 Vim 开发](di-26-zhang-kai-fa-huan-jing/di-26.8-jie-vim-kai-fa-huan-jing-pei-zhi.md)
-* [26.9 IDA Pro 调试 FreeBSD](di-26-zhang-kai-fa-huan-jing/di-26.9-jie-ida-pro-diao-shi-freebsd.md)
+* [26.1 C/C++ 开发环境](di-26-zhang-kai-fa-huan-jing/di-26.1-jie-c-c-kai-fa-huan-jing.md)
+* [26.2 Java 开发环境](di-26-zhang-kai-fa-huan-jing/di-26.2-jie-java-kai-fa-huan-jing.md)
+* [26.3 Qt 开发环境](di-26-zhang-kai-fa-huan-jing/di-26.3-jie-qt-kai-fa-huan-jing.md)
+* [26.4 Python 开发环境](di-26-zhang-kai-fa-huan-jing/di-26.4-jie-python-kai-fa-huan-jing.md)
+* [26.5 Rust/Go 开发环境](di-26-zhang-kai-fa-huan-jing/di-26.5-jie-rust-go-kai-fa-huan-jing.md)
+* [26.6 Node.js 开发环境](di-26-zhang-kai-fa-huan-jing/di-26.6-jie-node-js-huan-jing.md)
+* [26.7 code-server 和 clangd 开发环境](di-26-zhang-kai-fa-huan-jing/di-26.7-jie-code-server-he-clangd-kai-fa-pei-zhi.md)
+* [26.8 Vim 开发环境](di-26-zhang-kai-fa-huan-jing/di-26.8-jie-vim-kai-fa-huan-jing-pei-zhi.md)
+* [26.9 使用 IDA Pro 调试 FreeBSD](di-26-zhang-kai-fa-huan-jing/di-26.9-jie-ida-pro-diao-shi-freebsd.md)
 * [26.10 DTrace](di-26-zhang-kai-fa-huan-jing/di-26.10-jie-dTrace.md)
 
 ## 第 27 章 FreeBSD 内核架构
