@@ -61,7 +61,7 @@
 
 **第 20 章 虚拟化与容器管理**：介绍使用 bhyve 及 vm-bhyve 工具安装 Windows 11、通过 BVCP 的 Web 界面管理 bhyve 虚拟机，以及 Podman 容器管理和在 FreeBSD 上安装 VirtualBox。
 
-**第 21 章 数据库管理**：介绍 PostgreSQL、MySQL 5.x/8.x 系列及 MongoDB 8.0 在 FreeBSD 上的安装与配置，以及 pgAdmin4 管理工具的使用。
+**第 21 章 数据库管理**：介绍数据库概论，以及 PostgreSQL、MySQL 5.x/8.x 系列及 MongoDB 8.0 在 FreeBSD 上的安装与配置，同时涵盖 pgAdmin4 管理工具的使用。
 
 **第 22 章 服务器**：介绍 FTP 服务器、Rsync 数据同步、Samba 文件共享、NFS 服务器、零配置网络（mDNS/DNS-SD）及 Webmin 管理平台等服务的搭建。
 
