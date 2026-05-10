@@ -216,7 +216,7 @@ psk="WIFI 密码"
 }
 ```
 
-完成配置后，执行以下命令启动 Wi-Fi 进行测试：
+完成配置后，执行以下命令启动 Wi-Fi 测试：
 
 ```sh
 # ifconfig wlan0 create wlandev iwlwifi0
@@ -330,7 +330,7 @@ wlans_bwn0="wlan0"
 # fwget
 ```
 
-如果当前系统没有网络连接，可以通过 USB 网络共享等方式临时获得网络连接后再执行上述命令；也可手动从 [https://mirrors.ustc.edu.cn/freebsd-pkg/FreeBSD%3A14%3Aamd64/kmods_latest_3/All/](https://mirrors.ustc.edu.cn/freebsd-pkg/FreeBSD%3A14%3Aamd64/kmods_latest_3/All/) 等镜像站点下载所需固件包，然后使用以下命令进行安装：
+如果当前系统没有网络连接，可以通过 USB 网络共享等方式临时获得网络连接后再执行上述命令；也可手动从 [https://mirrors.ustc.edu.cn/freebsd-pkg/FreeBSD%3A14%3Aamd64/kmods_latest_3/All/](https://mirrors.ustc.edu.cn/freebsd-pkg/FreeBSD%3A14%3Aamd64/kmods_latest_3/All/) 等镜像站点下载所需固件包，然后使用以下命令安装：
 
 ```sh
 # pkg add /path/to/firmware.pkg
