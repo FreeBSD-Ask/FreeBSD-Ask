@@ -1,4 +1,4 @@
-# 7.2 NVIDIA 显卡驱动配置
+# 7.2 NVIDIA 显卡驱动
 
 ## NVIDIA 显卡驱动概述
 
