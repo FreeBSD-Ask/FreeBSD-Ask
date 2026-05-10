@@ -79,11 +79,12 @@
 
 ## 第 7 章 X Window 系统
 
-* [7.1 Intel 和 AMD 显卡驱动](di-7-zhang-x-window-xi-tong/di-7.1-jie-intel-he-amd-xian-ka-qu-dong-pei-zhi.md)
-* [7.2 AMD 显卡驱动](di-7-zhang-x-window-xi-tong/di-7.2-jie-amd-xian-ka-qu-dong-pei-zhi.md)
-* [7.3 NVIDIA 显卡驱动](di-7-zhang-x-window-xi-tong/di-7.3-jie-nvidia-xian-ka-qu-dong-pei-zhi.md)
-* [7.4 系统字体替换](di-7-zhang-x-window-xi-tong/di-7.4-jie-xi-tong-zi-ti-ti-huan.md)
-* [7.5 远程桌面访问](di-7-zhang-x-window-xi-tong/di-7.5-jie-yuan-cheng-zhuo-mian-fang-wen.md)
+* [7.1 显卡驱动概述](di-7-zhang-x-window-xi-tong/di-7.1-jie-xian-ka-qu-dong-gai-shu.md)
+* [7.2 Intel 和 AMD 显卡驱动](di-7-zhang-x-window-xi-tong/di-7.2-jie-intel-he-amd-xian-ka-qu-dong-pei-zhi.md)
+* [7.3 AMD 显卡驱动](di-7-zhang-x-window-xi-tong/di-7.3-jie-amd-xian-ka-qu-dong-pei-zhi.md)
+* [7.4 NVIDIA 显卡驱动](di-7-zhang-x-window-xi-tong/di-7.4-jie-nvidia-xian-ka-qu-dong-pei-zhi.md)
+* [7.5 系统字体替换](di-7-zhang-x-window-xi-tong/di-7.5-jie-xi-tong-zi-ti-ti-huan.md)
+* [7.6 远程桌面访问](di-7-zhang-x-window-xi-tong/di-7.6-jie-yuan-cheng-zhuo-mian-fang-wen.md)
 
 ## 第 8 章 桌面环境
 
