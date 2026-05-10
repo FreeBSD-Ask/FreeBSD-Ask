@@ -53,7 +53,7 @@
 * [4.7 文本编辑器](di-4-zhang-freebsd-ji-chu/di-4.7-jie-wen-ben-bian-ji-qi.md)
 * [4.8 用户和基本账户管理](di-4-zhang-freebsd-ji-chu/di-4.8-jie-yong-hu-he-ji-ben-zhang-hu-guan-li.md)
 * [4.9 权限](di-4-zhang-freebsd-ji-chu/di-4.9-jie-quan-xian.md)
-* [4.10 压缩解压工具](di-4-zhang-freebsd-ji-chu/di-4.10-jie-ya-suo-jie-ya-gong-ju.md)
+* [4.10 压缩和解压缩](di-4-zhang-freebsd-ji-chu/di-4.10-jie-ya-suo-jie-ya-gong-ju.md)
 
 ## 第 5 章 软件管理和系统升级
 
