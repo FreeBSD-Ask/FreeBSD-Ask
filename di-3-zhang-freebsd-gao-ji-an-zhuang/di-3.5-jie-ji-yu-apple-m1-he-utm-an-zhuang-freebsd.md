@@ -14,7 +14,7 @@ UTM（逆构词为 Universal Turing Machine）是开源、基于 QEMU、面向 A
 
 首先下载 FreeBSD 的安装镜像。
 
-出于性能考虑，此处使用 aarch64 镜像进行展示。
+出于性能考虑，此处使用 aarch64 镜像展示。
 
 ![下载安装镜像](../.gitbook/assets/install_bsd_on_utm/utm-download-mirror.png)
 
