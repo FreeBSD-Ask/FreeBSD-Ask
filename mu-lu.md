@@ -53,14 +53,14 @@
 * [4.7 文本编辑器](di-4-zhang-freebsd-ji-chu/di-4.7-jie-wen-ben-bian-ji-qi.md)
 * [4.8 用户和基本账户管理](di-4-zhang-freebsd-ji-chu/di-4.8-jie-yong-hu-he-ji-ben-zhang-hu-guan-li.md)
 * [4.9 权限](di-4-zhang-freebsd-ji-chu/di-4.9-jie-quan-xian.md)
-* [4.10 压缩解压工具](di-4-zhang-freebsd-ji-chu/di-4.10-jie-ya-suo-jie-ya-gong-ju.md)
+* [4.10 压缩和解压缩](di-4-zhang-freebsd-ji-chu/di-4.10-jie-ya-suo-jie-ya-gong-ju.md)
 
 ## 第 5 章 软件管理和系统升级
 
-* [5.1 更换 FreeBSD 软件源](di-5-zhang-ruan-jian-guan-li-he-xi-tong-sheng-ji/di-5.1-jie-geng-huan-freebsd-ruan-jian-yuan.md)
+* [5.1 FreeBSD 软件源](di-5-zhang-ruan-jian-guan-li-he-xi-tong-sheng-ji/di-5.1-jie-geng-huan-freebsd-ruan-jian-yuan.md)
 * [5.2 使用 pkg 管理二进制包](di-5-zhang-ruan-jian-guan-li-he-xi-tong-sheng-ji/di-5.2-jie-shi-yong-pkg-guan-li-er-jin-zhi-bao.md)
 * [5.3 使用 Ports 以源代码方式安装软件](di-5-zhang-ruan-jian-guan-li-he-xi-tong-sheng-ji/di-5.3-jie-shi-yong-ports-yi-yuan-dai-ma-fang-shi-an-zhuang-ruan-jian.md)
-* [5.4 系统更新检测工具](di-5-zhang-ruan-jian-guan-li-he-xi-tong-sheng-ji/di-5.4-jie-update.md)
+* [5.4 系统更新检测](di-5-zhang-ruan-jian-guan-li-he-xi-tong-sheng-ji/di-5.4-jie-update.md)
 * [5.5 使用 freebsd-update 更新 FreeBSD](di-5-zhang-ruan-jian-guan-li-he-xi-tong-sheng-ji/di-5.5-jie-shi-yong-freebsd-update-geng-xin-freebsd.md)
 * [5.6 使用源代码更新 FreeBSD](di-5-zhang-ruan-jian-guan-li-he-xi-tong-sheng-ji/di-5.6-jie-shi-yong-yuan-dai-ma-geng-xin-freebsd.md)
 * [5.7 使用 DVD 安装软件](di-5-zhang-ruan-jian-guan-li-he-xi-tong-sheng-ji/di-5.7-jie-shi-yong-dvd-an-zhuang-ruan-jian.md)
@@ -68,14 +68,14 @@
 
 ## 第 6 章 网络管理
 
-* [6.1 基础网络配置](di-6-zhang-wang-luo-guan-li/di-6.1-jie-wang-luo-ji-chu-pei-zhi.md)
-* [6.2 高级网络管理](di-6-zhang-wang-luo-guan-li/di-6.2-jie-gao-ji.md)
-* [6.3 无线网络（Wi-Fi）配置](di-6-zhang-wang-luo-guan-li/di-6.3-jie-wu-xian-wang-luo-wi-fi-pei-zhi.md)
+* [6.1 基础网络](di-6-zhang-wang-luo-guan-li/di-6.1-jie-wang-luo-ji-chu-pei-zhi.md)
+* [6.2 高级网络](di-6-zhang-wang-luo-guan-li/di-6.2-jie-gao-ji.md)
+* [6.3 无线网络（Wi-Fi）](di-6-zhang-wang-luo-guan-li/di-6.3-jie-wu-xian-wang-luo-wi-fi-pei-zhi.md)
 * [6.4 USB 网络共享（USB tethering）](di-6-zhang-wang-luo-guan-li/di-6.4-jie-usb-wang-luo-gong-xiang-usb-tethering.md)
 * [6.5 蓝牙](di-6-zhang-wang-luo-guan-li/di-6.5-jie-lan-ya.md)
 * [6.6 系统代理](di-6-zhang-wang-luo-guan-li/di-6.6-jie-xi-tong-dai-li.md)
-* [6.7 V2Ray 配置](di-6-zhang-wang-luo-guan-li/di-6.7-jie-v2ray-pei-zhi.md)
-* [6.8 Mihomo 配置](di-6-zhang-wang-luo-guan-li/di-6.8-jie-mihomo-pei-zhi.md)
+* [6.7 V2Ray](di-6-zhang-wang-luo-guan-li/di-6.7-jie-v2ray-pei-zhi.md)
+* [6.8 Mihomo](di-6-zhang-wang-luo-guan-li/di-6.8-jie-mihomo-pei-zhi.md)
 
 ## 第 7 章 X Window 系统
 
@@ -84,7 +84,7 @@
 * [7.3 AMD 显卡驱动](di-7-zhang-x-window-xi-tong/di-7.3-jie-amd-xian-ka-qu-dong-pei-zhi.md)
 * [7.4 NVIDIA 显卡驱动](di-7-zhang-x-window-xi-tong/di-7.4-jie-nvidia-xian-ka-qu-dong-pei-zhi.md)
 * [7.5 系统字体](di-7-zhang-x-window-xi-tong/di-7.5-jie-xi-tong-zi-ti-ti-huan.md)
-* [7.6 远程桌面访问](di-7-zhang-x-window-xi-tong/di-7.6-jie-yuan-cheng-zhuo-mian-fang-wen.md)
+* [7.6 远程桌面](di-7-zhang-x-window-xi-tong/di-7.6-jie-yuan-cheng-zhuo-mian-fang-wen.md)
 
 ## 第 8 章 桌面环境
 
@@ -103,12 +103,12 @@
 
 ## 第 9 章 多媒体和外部设备
 
-* [9.1 声卡配置](di-9-zhang-duo-mei-ti-he-wai-bu-she-bei/di-9.1-jie-yin-pin-she-bei-pei-zhi.md)
+* [9.1 声卡](di-9-zhang-duo-mei-ti-he-wai-bu-she-bei/di-9.1-jie-yin-pin-she-bei-pei-zhi.md)
 * [9.2 打印机](di-9-zhang-duo-mei-ti-he-wai-bu-she-bei/di-9.2-jie-da-yin-ji.md)
 * [9.3 人机输入设备](di-9-zhang-duo-mei-ti-he-wai-bu-she-bei/di-9.3-jie-ren-ji-shu-ru-she-bei.md)
 * [9.4 音频播放器](di-9-zhang-duo-mei-ti-he-wai-bu-she-bei/di-9.4-jie-yin-pin-bo-fang-qi.md)
 * [9.5 视频播放器](di-9-zhang-duo-mei-ti-he-wai-bu-she-bei/di-9.5-jie-shi-pin-bo-fang-qi.md)
-* [9.6 多媒体处理工具](di-9-zhang-duo-mei-ti-he-wai-bu-she-bei/di-9.6-jie-duo-mei-ti-chu-li-gong-ju.md)
+* [9.6 多媒体处理](di-9-zhang-duo-mei-ti-he-wai-bu-she-bei/di-9.6-jie-duo-mei-ti-chu-li-gong-ju.md)
 * [9.7 Web 浏览器](di-9-zhang-duo-mei-ti-he-wai-bu-she-bei/di-9.7-jie-web-liu-lan-qi.md)
 
 ## 第 10 章 本地化与输入法
@@ -140,7 +140,7 @@
 * [12.3 我的世界（Minecraft）](di-12-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-12.3-jie-wo-de-shi-jie-minecraft.md)
 * [12.4 Steam 客户端](di-12-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-12.4-jie-steam-ke-hu-duan.md)
 * [12.5 Wine 配置](di-12-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-12.5-jie-wine-pei-zhi.md)
-* [12.6 科研和专业计算工具](di-12-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-12.6-jie-ke-yan-he-zhuan-ye-ji-suan-gong-ju.md)
+* [12.6 科研和专业计算](di-12-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-12.6-jie-ke-yan-he-zhuan-ye-ji-suan-gong-ju.md)
 
 ## 第 13 章 人工智能（AI）
 
@@ -154,7 +154,7 @@
 * [14.4 进程与守护进程](di-14-zhang-xi-tong-guan-li/di-14.4-jie-jin-cheng-yu-shou-hu-jin-cheng.md)
 * [14.5 用户分级](di-14-zhang-xi-tong-guan-li/di-14.5-jie-yong-hu-fen-ji-wen-jian-login-conf.md)
 * [14.6 权限提升工具（sudo、doas 等）](di-14-zhang-xi-tong-guan-li/di-14.6-jie-te-quan-ti-sheng-gong-ju-sudo-doas-deng.md)
-* [14.7 bsdconfig 系统配置工具](di-14-zhang-xi-tong-guan-li/di-14.7-jie-bsdconfig-xi-tong-pei-zhi-gong-ju.md)
+* [14.7 bsdconfig](di-14-zhang-xi-tong-guan-li/di-14.7-jie-bsdconfig-xi-tong-pei-zhi-gong-ju.md)
 * [14.8 OpenSSH](di-14-zhang-xi-tong-guan-li/di-14.8-jie-OpenSSH.md)
 * [14.9 设备资源提示](di-14-zhang-xi-tong-guan-li/di-14.9-jie-she-bei-zi-yuan-ti-shi-wen-jian-device-hints.md)
 * [14.10 Cron 和 Periodic](di-14-zhang-xi-tong-guan-li/di-14.10-jie-crontab-ji-ding-shi-ren-wu-wen-jian-periodic-conf.md)
@@ -165,7 +165,7 @@
 ## 第 15 章 存储与文件系统管理
 
 * [15.1 UFS 文件系统](di-15-zhang-cun-chu-yu-wen-jian-xi-tong-guan-li/di-15.1-jie-ufs-wen-jian-xi-tong.md)
-* [15.2 自动挂载文件系统](di-15-zhang-cun-chu-yu-wen-jian-xi-tong-guan-li/di-15.2-jie-zi-dong-gua-zai-wen-jian-xi-tong.md)
+* [15.2 文件系统自动挂载](di-15-zhang-cun-chu-yu-wen-jian-xi-tong-guan-li/di-15.2-jie-zi-dong-gua-zai-wen-jian-xi-tong.md)
 * [15.3 Linux 文件系统](di-15-zhang-cun-chu-yu-wen-jian-xi-tong-guan-li/di-15.3-jie-linux-wen-jian-xi-tong.md)
 * [15.4 Windows 文件系统](di-15-zhang-cun-chu-yu-wen-jian-xi-tong-guan-li/di-15.4-jie-windows-wen-jian-xi-tong.md)
 * [15.5 swap 分区](di-15-zhang-cun-chu-yu-wen-jian-xi-tong-guan-li/di-15.5-jie-swap-fen-qu.md)
@@ -199,14 +199,14 @@
 * [18.2 Packet Filter（PF）](di-18-zhang-fang-huo-qiang/di-18.2-jie-packet-filter-pf.md)
 * [18.3 IPFilter（IPF）](di-18-zhang-fang-huo-qiang/di-18.3-jie-ipfilter-ipf.md)
 * [18.4 ipfirewall（IPFW）](di-18-zhang-fang-huo-qiang/di-18.4-jie-ipfirewall-ipfw.md)
-* [18.5 Fail2Ban 配置（基于 IPFW、PF 与 IPF）](di-18-zhang-fang-huo-qiang/di-18.5-jie-fail2ban-pei-zhi-ji-yu-ipfw-pf-yu-ipf.md)
+* [18.5 Fail2Ban（基于 IPFW、PF 与 IPF）](di-18-zhang-fang-huo-qiang/di-18.5-jie-fail2ban-pei-zhi-ji-yu-ipfw-pf-yu-ipf.md)
 * [18.6 blocklistd](di-18-zhang-fang-huo-qiang/di-18.6-jie-blocklistd.md)
 
 ## 第 19 章 Jail 容器管理
 
-* [19.1 Jail 基础配置](di-19-zhang-jail-rong-qi-guan-li/di-19.1-jie-jail-ji-chu-pei-zhi.md)
+* [19.1 Jail 基础](di-19-zhang-jail-rong-qi-guan-li/di-19.1-jie-jail-ji-chu-pei-zhi.md)
 * [19.2 Jail 系统更新](di-19-zhang-jail-rong-qi-guan-li/di-19.2-jie-jail-xi-tong-geng-xin.md)
-* [19.3 Qjail 管理工具](di-19-zhang-jail-rong-qi-guan-li/di-19.3-jie-qjail-guan-li-gong-ju.md)
+* [19.3 Qjail](di-19-zhang-jail-rong-qi-guan-li/di-19.3-jie-qjail-guan-li-gong-ju.md)
 
 ## 第 20 章 虚拟化与容器管理
 
@@ -217,8 +217,8 @@
 
 ## 第 21 章 数据库管理
 
-* [21.1 PostgreSQL 数据库](di-21-zhang-shu-ju-ku-guan-li/di-21.1-jie-postgresql-shu-ju-ku.md)
-* [21.2 pgAdmin4 管理工具](di-21-zhang-shu-ju-ku-guan-li/di-21.2-jie-pgadmin4-guan-li-gong-ju.md)
+* [21.1 PostgreSQL](di-21-zhang-shu-ju-ku-guan-li/di-21.1-jie-postgresql-shu-ju-ku.md)
+* [21.2 pgAdmin4](di-21-zhang-shu-ju-ku-guan-li/di-21.2-jie-pgadmin4-guan-li-gong-ju.md)
 * [21.3 MySQL 5.x 系列](di-21-zhang-shu-ju-ku-guan-li/di-21.3-jie-mysql-5-x-xi-lie.md)
 * [21.4 MySQL 8.x 系列](di-21-zhang-shu-ju-ku-guan-li/di-21.4-jie-mysql-8-x-xi-lie.md)
 * [21.5 MongoDB 8.0](di-21-zhang-shu-ju-ku-guan-li/di-21.5-jie-mongodb-8-0.md)
@@ -263,14 +263,14 @@
 
 ## 第 26 章 开发环境
 
-* [26.1 C/C++ 开发环境](di-26-zhang-kai-fa-huan-jing/di-26.1-jie-c-c-kai-fa-huan-jing.md)
-* [26.2 Java 开发环境](di-26-zhang-kai-fa-huan-jing/di-26.2-jie-java-kai-fa-huan-jing.md)
-* [26.3 Qt 开发环境](di-26-zhang-kai-fa-huan-jing/di-26.3-jie-qt-kai-fa-huan-jing.md)
-* [26.4 Python 开发环境](di-26-zhang-kai-fa-huan-jing/di-26.4-jie-python-kai-fa-huan-jing.md)
-* [26.5 Rust/Go 开发环境](di-26-zhang-kai-fa-huan-jing/di-26.5-jie-rust-go-kai-fa-huan-jing.md)
+* [26.1 C/C++ 开发](di-26-zhang-kai-fa-huan-jing/di-26.1-jie-c-c-kai-fa-huan-jing.md)
+* [26.2 Java 开发](di-26-zhang-kai-fa-huan-jing/di-26.2-jie-java-kai-fa-huan-jing.md)
+* [26.3 Qt 开发](di-26-zhang-kai-fa-huan-jing/di-26.3-jie-qt-kai-fa-huan-jing.md)
+* [26.4 Python 开发](di-26-zhang-kai-fa-huan-jing/di-26.4-jie-python-kai-fa-huan-jing.md)
+* [26.5 Rust/Go 开发](di-26-zhang-kai-fa-huan-jing/di-26.5-jie-rust-go-kai-fa-huan-jing.md)
 * [26.6 Node.js 环境](di-26-zhang-kai-fa-huan-jing/di-26.6-jie-node-js-huan-jing.md)
-* [26.7 code-server 和 clangd 开发配置](di-26-zhang-kai-fa-huan-jing/di-26.7-jie-code-server-he-clangd-kai-fa-pei-zhi.md)
-* [26.8 Vim 开发环境配置](di-26-zhang-kai-fa-huan-jing/di-26.8-jie-vim-kai-fa-huan-jing-pei-zhi.md)
+* [26.7 code-server 和 clangd 开发](di-26-zhang-kai-fa-huan-jing/di-26.7-jie-code-server-he-clangd-kai-fa-pei-zhi.md)
+* [26.8 Vim 开发](di-26-zhang-kai-fa-huan-jing/di-26.8-jie-vim-kai-fa-huan-jing-pei-zhi.md)
 * [26.9 IDA Pro 调试 FreeBSD](di-26-zhang-kai-fa-huan-jing/di-26.9-jie-ida-pro-diao-shi-freebsd.md)
 * [26.10 DTrace](di-26-zhang-kai-fa-huan-jing/di-26.10-jie-dTrace.md)
 
