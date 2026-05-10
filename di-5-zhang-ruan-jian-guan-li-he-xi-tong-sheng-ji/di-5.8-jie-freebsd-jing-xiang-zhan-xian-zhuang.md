@@ -121,7 +121,7 @@ TUNA: <https://github.com/tuna/issues/issues/16>
 
 来搭建非官方镜像站。赠人玫瑰，手有余香。
 
-优先建议高校学生使用校内资源搭建，或者直接从 USTC 的 `rsync` 服务来同步。建议同步前先咨询 USTCLUG，以免带来不必要的麻烦，联系方式：[lug@ustc.edu.cn](mailto:lug@ustc.edu.cn)。参考 [科大源同步方法与注意事项](https://mirrors.ustc.edu.cn/help/rsync-guide.html) 来进行同步。
+优先建议高校学生使用校内资源搭建，或者直接从 USTC 的 `rsync` 服务来同步。建议同步前先咨询 USTCLUG，以免带来不必要的麻烦，联系方式：[lug@ustc.edu.cn](mailto:lug@ustc.edu.cn)。参考 [科大源同步方法与注意事项](https://mirrors.ustc.edu.cn/help/rsync-guide.html) 同步。
 
 ## 官方给出的镜像站基本要求
 
@@ -148,7 +148,7 @@ FreeBSD 在中国大陆境内为数不多且能正常同步的镜像站，均未
 
 > **注意**
 >
-> 呼吁有余力者对上述两个脚本进行维护修订，以减轻 USTC 镜像站的压力，同时为境内提供更好的 FreeBSD 镜像服务。
+> 呼吁有余力者维护修订上述两个脚本，以减轻 USTC 镜像站的压力，同时为境内提供更好的 FreeBSD 镜像服务。
 
 FreeBSD 目前在大陆有若干个非官方镜像站：
 
@@ -178,7 +178,7 @@ FreeBSD 官方联系方式：
 
 ## 其他思路或解决方案
 
-自行使用 Poudriere 进行构建并分发。如 [RISC-V FreeBSD-pkg 软件源上线！11619+ 预编译包助力快速构建 FreeBSD 环境](https://mp.weixin.qq.com/s/ngv3eZh1TEVgk3Pn3XfRBg)（项目已停止维护）
+自行使用 Poudriere 构建并分发。如 [RISC-V FreeBSD-pkg 软件源上线！11619+ 预编译包助力快速构建 FreeBSD 环境](https://mp.weixin.qq.com/s/ngv3eZh1TEVgk3Pn3XfRBg)（项目已停止维护）
 
 ## 课后习题
 
