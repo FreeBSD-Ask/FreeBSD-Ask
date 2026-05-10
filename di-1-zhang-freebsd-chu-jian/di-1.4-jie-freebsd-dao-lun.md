@@ -182,7 +182,7 @@ FreeBSD 不仅在生命周期内不变，大版本更新也具有连贯性和稳
 
 #### 安全原因
 
-- Leidinger 博客：Leidinger, J. FreeBSD Security Hardening with Compiler Options[EB/OL]. (2025-05-24)[2026-03-26]. <https://www.leidinger.net/blog/2025/05/24/freebsd-security-hardening-with-compiler-options/>. FreeBSD 项目对部分 Port 进行了加固。另见 Bug 284270：FreeBSD Project. Bug 284270 - Security: FreeBSD Security Hardening[EB/OL]. [2026-03-26]. <https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=284270>.
+- Leidinger 博客：Leidinger, J. FreeBSD Security Hardening with Compiler Options[EB/OL]. (2025-05-24)[2026-03-26]. <https://www.leidinger.net/blog/2025/05/24/freebsd-security-hardening-with-compiler-options/>. FreeBSD 项目已对部分 Port 实施加固。另见 Bug 284270：FreeBSD Project. Bug 284270 - Security: FreeBSD Security Hardening[EB/OL]. [2026-03-26]. <https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=284270>.
 - 披露的安全漏洞少于其他主流操作系统（尽管可能存在样本数量较少的客观因素）。截至 2025 年 9 月，FreeBSD 基本系统（用户空间与内核）的 CVE 漏洞数量约为 Linux 内核的二十分之一（根据 CVEdetails.com. CVE security vulnerability database. Security vulnerabilities, exploits, references and more[EB/OL]. [2026-03-26]. <https://www.cvedetails.com/>. 统计），而 Linux 内核的 CVE 数量远超 Windows（二者并非同一维度：Linux 内核仅为内核，而 Windows 通常指全部组件）。同期，OpenBSD 的 CVE 漏洞数量约为 FreeBSD 的 40%。
 - 可以避免在产品和架构中出现单点故障。
 - 安全事件审计。
@@ -275,9 +275,9 @@ FreeBSD 核心小组成员并不直接从中获取任何利益，均为志愿者
 
 ## UNIX 之船：FreeBSD 是不是 UNIX？
 
-关于 FreeBSD 与 UNIX 的关系，该问题远非表面所见般清晰明确。诸多讨论者，甚至是那段岁月的亲历者，也难以给出明确回答或澄清。或者只是简单地说，BSD 并未进行过任何 UNIX 认证，没有持有法律上的商标便简单定论；更有甚者只是笼统地说 FreeBSD 是 UNIX 的延续者与正统继承者，仅是“有实无名”；另有观点认为，BSD 之于 UNIX，正如 Linux 之于 UNIX。
+关于 FreeBSD 与 UNIX 的关系，该问题远非表面所见般清晰明确。诸多讨论者，甚至是那段岁月的亲历者，也难以给出明确回答或澄清。有观点认为，BSD 并未进行过任何 UNIX 认证，没有持有法律上的商标便简单定论；更有甚者只是笼统地说 FreeBSD 是 UNIX 的延续者与正统继承者，仅是“有实无名”；另有观点认为，BSD 之于 UNIX，正如 Linux 之于 UNIX。
 
-上述回答存在分歧，原因在于该问题并非可简单套用法律商标归属或代码继承性加以分析的纯粹技术性难题。这牵涉一个深刻的本体论哲学问题，究竟是不能两次踏进同一条河流，还是一次也不能踏进同一条河流？（类似的问题如谷堆问题、秃头问题，感兴趣的读者可参见 SEP 条目 Identity Over Time[EB/OL]. [2026-03-26]. <https://plato.stanford.edu/entries/identity-time>. Sorites Paradox[EB/OL]. [2026-03-26]. <https://plato.stanford.edu/entries/sorites-paradox/>.）。对这个问题的回答如何，映射着哲学观与科学技术观。
+上述回答存在分歧，原因在于该问题并非可简单套用法律商标归属或代码继承性来分析的纯粹技术性难题。这牵涉一个深刻的本体论哲学问题，究竟是不能两次踏进同一条河流，还是一次也不能踏进同一条河流？（类似的问题如谷堆问题、秃头问题，感兴趣的读者可参见 SEP 条目 Identity Over Time[EB/OL]. [2026-03-26]. <https://plato.stanford.edu/entries/identity-time>. Sorites Paradox[EB/OL]. [2026-03-26]. <https://plato.stanford.edu/entries/sorites-paradox/>.）。对这个问题的回答如何，映射着哲学观与科学技术观。
 
 >> **忒修斯之船**
 >>
@@ -544,7 +544,7 @@ FreeBSD 的正确读法是新用户普遍关注的问题。目前社区共识和
 
 即先读 Free，再逐字母拼读 B、S、D。
 
-通常不会将 BSD 或 FreeBSD 视为一个词语进行连读。不会读作“百思得”或“福瑞百思德”。~~FreeBSD 基金会在中国大陆注册商标的机构中文译名为“福瑞百思德基金会”。~~
+通常不会将 BSD 或 FreeBSD 视为一个词语连读。不会读作“百思得”或“福瑞百思德”。~~FreeBSD 基金会在中国大陆注册商标的机构中文译名为“福瑞百思德基金会”。~~
 
 ### 参考文献
 
