@@ -18,7 +18,7 @@
 
 这些服务商虽然在部分机型上提供 FreeBSD 系统镜像，但支持并不完善，例如自带镜像默认未启用 `BBR`，而部分机型则完全不提供 FreeBSD 支持。
 
-本方法无需使用 mfsLinux 作为安装介质，也无需通过 `dd` 命令进行安装。
+本方法无需使用 mfsLinux 作为安装介质，也无需通过 `dd` 命令安装。
 
 mfsBSD 是一款完全载入内存的 FreeBSD 系统，类似于 Windows PE（Preinstallation Environment）系统。
 
