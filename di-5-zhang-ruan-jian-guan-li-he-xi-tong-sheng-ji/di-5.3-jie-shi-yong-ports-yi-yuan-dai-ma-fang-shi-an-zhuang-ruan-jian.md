@@ -661,7 +661,7 @@ max cache size                      10.0 GB
 
 ### ccache4
 
-ccache4 是目前的最新版本，提供了更好的性能和功能。
+ccache4 是更新的主要版本，安装与配置方式与 ccache3 相同，仅包名不同。
 
 使用 pkg 安装：
 
@@ -676,39 +676,7 @@ ccache4 是目前的最新版本，提供了更好的性能和功能。
 # make install clean
 ```
 
-安装完成后，同样可以查看软链接情况。
-
-- 查看软链接情况：
-
-```sh
-# ls -al /usr/local/libexec/ccache  # 查看 /usr/local/libexec/ccache 目录下的详细文件信息
-total 55
-drwxr-xr-x   3 root wheel 13  9月 20 02:29 .
-drwxr-xr-x  20 root wheel 54  9月 20 02:29 ..
-lrwxr-xr-x   1 root wheel 21  9月 20 02:29 c++ -> /usr/local/bin/ccache
-lrwxr-xr-x   1 root wheel 21  9月 20 02:29 cc -> /usr/local/bin/ccache
-lrwxr-xr-x   1 root wheel 21  9月 20 02:29 CC -> /usr/local/bin/ccache
-lrwxr-xr-x   1 root wheel 21  9月 20 02:29 clang -> /usr/local/bin/ccache
-lrwxr-xr-x   1 root wheel 21  9月 20 02:29 clang++ -> /usr/local/bin/ccache
-lrwxr-xr-x   1 root wheel 21  9月 20 02:29 clang++15 -> /usr/local/bin/ccache
-lrwxr-xr-x   1 root wheel 21  9月 20 02:29 clang15 -> /usr/local/bin/ccache
-lrwxr-xr-x   1 root wheel 21  9月 20 02:29 cpp13 -> /usr/local/bin/ccache
-lrwxr-xr-x   1 root wheel 21  9月 20 02:29 g++13 -> /usr/local/bin/ccache
-lrwxr-xr-x   1 root wheel 21  9月 20 02:29 gcc13 -> /usr/local/bin/ccache
-drwxr-xr-x   2 root wheel 13  9月 20 02:29 world
-```
-
----
-
-ccache4 的配置方式与 ccache3 类似。
-
-- 修改 **/etc/make.conf** 文件，加入下面一行启用 ccache 加速编译：
-
-```ini
-WITH_CCACHE_BUILD=yes
-```
-
-同样，建议为 ccache4 设置缓存大小上限。
+软链接与 **/etc/make.conf** 配置均与 ccache3 一致，不再赘述。ccache4 的输出格式略有不同：
 
 - 设置编译缓存最大为 20 GB：
 
@@ -716,8 +684,6 @@ WITH_CCACHE_BUILD=yes
 # ccache -M 20G
 Set cache size limit to 20.0 GB
 ```
-
-在使用一段时间后，可以查看 ccache4 的编译缓存统计信息。
 
 - 在 Ports 编译一段时间后，查看编译缓存：
 
@@ -735,9 +701,7 @@ Local storage:
   Misses:          448 /  558 (80.29%)
 ```
 
-如果需要查看 ccache 的详细配置参数，可以使用以下命令。
-
-显示 ccache 的当前配置参数：
+显示 ccache4 的当前配置参数：
 
 ```sh
 # ccache -p
@@ -905,6 +869,6 @@ make: stopped in /usr/ports/java/openjdk21
 
 ## 课后习题
 
-1. 尝试复活 Gentoo BSD 项目。
+1. 使用 Ports 编译安装 nginx，并通过 `make config` 添加第三方模块支持（如 brotli）。
 2. 修改 pkg 包管理器源代码，使其支持并行下载和安装。
 3. Ports 的源代码编译模型与 pkg 的二进制分发模型代表两种对立的软件交付哲学：编译时定制与运行时效率。分析这两种模型在安全审计、依赖管理与用户体验方面的结构性差异，并讨论二者能否在一个统一的构建与分发管道中共存。
