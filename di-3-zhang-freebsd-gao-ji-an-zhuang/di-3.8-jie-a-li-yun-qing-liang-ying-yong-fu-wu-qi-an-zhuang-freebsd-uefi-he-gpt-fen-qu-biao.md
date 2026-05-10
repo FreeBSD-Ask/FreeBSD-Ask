@@ -14,7 +14,7 @@
 
 ![Rocky Linux 9](../.gitbook/assets/cloud-rocky-linux-3.png)
 
-本节描述的大部分操作通过 VNC 连接（救援登录）进行。
+本节描述的大部分操作通过 VNC 连接（救援登录）完成。
 
 ![Rocky Linux 9](../.gitbook/assets/cloud-rocky-linux-4.png)
 
