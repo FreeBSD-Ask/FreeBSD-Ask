@@ -1,1 +1,152 @@
 # 7.1 显卡驱动概述
+
+使用 bsdinstall 安装的 FreeBSD 系统不会自动安装图形用户界面。本节介绍如何为图形处理器（GPU）选择和安装驱动程序。
+
+## 何时需要安装显卡驱动？
+
+![未安装显卡驱动的报错图](../.gitbook/assets/noqudong.png)
+
+上图展示了未安装显卡驱动时可能出现的报错界面。
+
+> **警告**
+>
+> 请勿使用 `sysutils/desktop-installer`，该工具在当前环境下可能引发错误和配置冲突。
+
+## 显卡支持情况
+
+FreeBSD 的 i915 和 AMD 显卡驱动与基本系统分离，以 Port 形式提供，这些驱动移植自 Linux 内核的 DRM（Direct Rendering Manager，直接渲染管理器），版本为长期支持（Long Term Support，LTS）版本。不同系统版本对应的 Linux 内核版本有所不同。
+
+> **注意**
+>
+> 使用 Ports 安装时，drm 驱动需要在 **/usr/src** 中有一份当前版本的系统源代码，具体可参考系统更新章节。若已参考本书其他章节进行安装，系统中通常已有一份源代码，无需再次获取。
+
+DRM 是 Linux 内核的子系统，负责与现代显卡的 GPU 进行交互。FreeBSD 在内核中实现了 Linux 内核编程接口（LinuxKPI，Linux Kernel Programming Interface），并移植了 Linux DRM，类似地，还有一些无线网卡驱动也采用了这种移植方式。
+
+> **技巧**
+>
+> 这种移植并不覆盖 Linux 现有的全部 DRM GPU 驱动，目前仅包括 i915、amdgpu 和 radeon，其他如 vmwgfx、xe、virtio 等均未移植。因此，上述未移植的 GPU 通常无法在 Wayland 上运行，只能使用 X11 显示协议。
+
+> **注意**
+>
+> DG2 Arc 显卡尚不受支持（截至 DRM 6.1 版本），相关技术细节可参见：Intel Arc A770: Kernel panic on kldload i915kms.ko #315[EB/OL]. [2026-03-26]. <https://github.com/freebsd/drm-kmod/issues/315>。可能需要等到 6.12 的移植才能提供支持。
+
+显卡支持情况：
+
+- 非 LTS 版本（Port graphics/drm-latest-kmod，仅 15.0/16.0，目前为 6.9）：
+  - Intel：Meteor Lake 图形在 6.7 后默认启用；
+  - AMD：覆盖 GCN 到 RDNA 3 全部架构。RDNA 4 驱动需等待更新的 Linux 内核版本移植。
+
+> **技巧**
+>
+> 可在 port 开发者手册的最后一章中查询 OSVERSION 对应的版本和 Git 提交。
+>
+> 查看本机 `OSVERSION`，显示系统版本构建标识符：
+>
+> ```sh
+> # uname -U
+> 1500019
+> ```
+
+> **警告**
+>
+> 每次点版本或大版本升级时，可能需要重新获取系统源代码并重新编译安装显卡驱动模块，方可顺利完成升级，避免卡在黑屏界面；或者使用“模块源”。
+
+## 加入 video 组
+
+video 组是负责访问 DRM 和 DRI 视频设备的用户组。只有加入该组的用户才能正常使用显卡的硬件加速功能以及 Wayland 会话功能。
+
+需将指定用户添加到 video 用户组：
+
+```sh
+# pw groupmod video -m 实际用户名
+```
+
+> **警告**
+>
+> 即使已加入 `wheel` 组，也应再加入 `video` 组，否则硬件解码功能可能出现异常，且 Wayland 下普通用户将无权限调用显卡。
+
+## 亮度调节
+
+### 通用设置
+
+对于一般计算机，需要在 **/boot/loader.conf** 文件中启用 ACPI 视频支持：
+
+```sh
+# sysrc -f /boot/loader.conf acpi_video_load="YES"
+```
+
+对于 ThinkPad，可以启用 IBM ACPI 支持和 ACPI 视频支持。
+
+- 在 **/boot/loader.conf** 文件中启用 IBM ACPI 支持：
+
+```sh
+# sysrc -f /boot/loader.conf acpi_ibm_load="YES"
+```
+
+- 在 **/boot/loader.conf** 文件中启用 ACPI 视频支持：
+
+```sh
+# sysrc -f /boot/loader.conf acpi_video_load="YES"
+```
+
+### 英特尔/AMD 显卡
+
+`backlight` 工具自 FreeBSD 13 引入。
+
+```sh
+# backlight          # 打印当前亮度
+# backlight decr 20  # 降低 20% 亮度
+# backlight +        # 默认调整亮度增加 10%
+# backlight -        # 默认调整亮度减少 10%
+```
+
+如果上述操作不起作用，可检查 **/dev/backlight** 路径下的可用设备。
+
+- 示例（使用 `ls /dev/backlight` 命令查看实际设备）：
+
+设置 amdgpu_bl00 背光亮度为 10：
+
+```sh
+# backlight -f /dev/backlight/amdgpu_bl00 10
+```
+
+设置 backlight0 背光亮度为 10：
+
+```sh
+# backlight -f /dev/backlight/backlight0 10
+```
+
+### 参考文献
+
+- Vadot E. backlight -- configure backlight hardware[EB/OL]. (2022-07-19)[2026-03-25]. <https://man.freebsd.org/cgi/man.cgi?backlight>. 经测试，此部分教程适用于 renoir 显卡。
+
+## 状态检查
+
+判断显卡是否成功驱动：
+
+```sh
+$ ls -al /dev/dri/card0
+lrwxr-xr-x  1 root wheel 8 Jul  2 19:39 /dev/dri/card0 -> ../drm/0
+
+$ ls -al /dev/backlight/backlight0
+crw-rw---- 1 root video 1, 177 2025年 8月22日 /dev/backlight/backlight0  # 台式机 HDMI 等输出可能没有
+```
+
+显卡驱动成功后，系统中将出现名为 `card0` 的设备（一般编号为 `0`，如果有第二块显卡，则为 `card1`），同时可能还会出现名为 `backlight0` 的设备（HDMI 输出下通常不存在该设备）。
+
+## 故障排除与未竟事宜
+
+
+> **注意**
+>
+> 遇到任何问题时，请先使用 Ports 重新编译安装，尤其是在版本升级时。
+
+- 如果显卡驱动使用有问题，请直接联系维护者：<https://github.com/freebsd/drm-kmod/issues>。
+- 如果笔记本出现唤醒时屏幕点不亮的问题，可在 **/boot/loader.conf** 文件中添加 `hw.acpi.reset_video="1"` 以在唤醒时重置显示适配器。
+- 普通用户可能未加入 `wheel` 组或 `video` 组。如果普通用户未加入 video 组（仅加入 wheel 组不够），KDE 设置中将始终显示显卡驱动为"llvmpipe"，这会影响 Wayland 下普通用户的显示或硬解调用。
+
+### KLD XXX.ko depends on kernel - not available or version mismatch.
+
+提示内核版本不符，请先升级系统或使用 ports 编译安装。14.3-RELEASE 及以上版本可使用内置的内核模块源（参见其他章节），应不会出现类似问题。
+
+![AMD 驱动错误提示](../.gitbook/assets/amd-error.png)
