@@ -10,7 +10,7 @@ FreeBSD 支持多种无线网卡和认证方式。
 
 ### 无线网络配置
 
-基本的无线网络由多个站点组成，这些站点通过在 2.4GHz、5GHz 频段广播的无线电通信（6GHz 频段在 FreeBSD 上尚处于实验性支持阶段，需要特定硬件和驱动）。配置无线网络包含三个基本步骤：
+基本无线网络由多个站点组成，这些站点通过 2.4GHz、5GHz 频段广播的无线电通信（6GHz 频段在 FreeBSD 上处于实验性支持阶段，需特定硬件和驱动）。配置无线网络包含三个步骤：
 
 1. 扫描并选择接入点
 2. 认证站点
@@ -22,14 +22,14 @@ FreeBSD 支持多种无线网卡和认证方式。
 
 ### 识别无线网卡
 
-在配置无线网络前，需要确认系统是否能够识别无线网卡。可通过查询内核无线设备列表来确认硬件识别状态，该命令会显示系统中可用的无线网络接口设备：
+在配置无线网络前，需确认系统是否识别了无线网卡。可查询内核无线设备列表来确认硬件识别状态：
 
 ```sh
 # sysctl net.wlan.devices
 net.wlan.devices: rtwn0
 ```
 
-上述输出中的 `rtwn0` 是示例网卡（COMFAST CF-912AC）的设备名称，实际输出可能因硬件而异。如果输出中冒号 `:` 后没有内容，则说明无线网卡未被识别，此时可能需要检查硬件连接或更换兼容性更好的无线网卡。
+上述输出中的 `rtwn0` 是示例网卡（COMFAST CF-912AC）的设备名称，实际输出可能因硬件而异。如果输出中冒号 `:` 后没有内容，说明无线网卡未被识别，此时需检查硬件连接或更换兼容性更好的无线网卡。
 
 ### 虚拟无线接口机制
 
@@ -123,7 +123,7 @@ test_5G                           50:d6:c5:93:d7:64   36   54M  -78:-95   100 EP
 
 ### 使用 WPA2 认证
 
-对于加密的无线网络，需要使用 Wi-Fi 保护访问（Wi-Fi Protected Access，WPA）配置文件连接。WPA2/3 是目前主流的无线网络安全协议，提供了数据加密与身份认证功能。
+加密无线网络需要使用 Wi-Fi 保护访问（Wi-Fi Protected Access，WPA）配置文件连接。WPA2/3 是当前主流的无线网络安全协议，提供数据加密和身份认证功能。
 
 无线网络中的认证过程由 wpa_supplicant(8) 管理。创建 **/etc/wpa_supplicant.conf** 配置文件，内容如下：
 
@@ -155,7 +155,7 @@ psk="freebsdcn"
 # service netif restart
 ```
 
-如果网络连接正常，再做永久性配置。在 **/etc/rc.conf** 文件中添加或修改相关配置条目：
+如果网络连接正常，再做永久配置。在 **/etc/rc.conf** 文件中添加或修改相关配置：
 
 ```ini
 wlans_rtwn0="wlan0"                      # 将物理无线设备 rtwn0 绑定到 wlan0 接口
@@ -276,7 +276,7 @@ wlans_bwi0="wlan0"
 
 ### 博通网卡驱动相关的文件结构
 
-博通网卡驱动涉及以下文件。
+博通网卡驱动涉及以下文件：
 
 ```sh
 /
@@ -320,11 +320,11 @@ wlans_bwn0="wlan0"
 
 ### 固件与系统更新的兼容性问题
 
-在 FreeBSD 中，固件（Firmware）是硬件设备正常工作所需的底层软件，它提供了硬件设备与操作系统内核之间的通信接口。固件接口可能随内核版本更新而发生变化。
+FreeBSD 中，固件（Firmware）是硬件设备正常工作所需的底层软件，提供硬件设备与操作系统内核之间的通信接口。固件接口可能随内核版本更新而变化。
 
 ### 固件重新获取方法
 
-如果在更新系统版本后无法使用无线网络，需要重新获取与当前内核版本兼容的固件。FreeBSD 提供了 `fwget` 工具用于自动获取和安装所需固件：
+系统版本更新后若无法使用无线网络，需重新获取与当前内核版本兼容的固件。FreeBSD 提供 `fwget` 工具用于自动获取和安装所需固件：
 
 ```sh
 # fwget
@@ -338,9 +338,9 @@ wlans_bwn0="wlan0"
 
 ## 附录：特殊型号需要编译内核
 
-对于特殊型号的博通无线网卡，可能需要重新编译内核才能获得完整支持。
+特殊型号的博通无线网卡可能需要重新编译内核才能获得完整支持。
 
-FULLER L. FreeBSD Broadcom Wi-Fi Improvements[EB/OL]. [2026-03-26]. <https://web.archive.org/web/20240203102135/https://www.landonf.org/code/freebsd/Broadcom_WiFi_Improvements.20180122.html> 中列出的部分型号带有 `$` 注释：`The optional bwn(4) PHY driver is derived from b43 GPL code, and must be explicitly enabled.`，表示需要使用基于 GNU 通用公共许可证（GNU General Public License，GPL）协议的代码。由于 FreeBSD 基本系统及内核默认不包含 GPL 许可证下的代码，因此需要重新编译内核以启用该选项。
+FULLER L. FreeBSD Broadcom Wi-Fi Improvements[EB/OL]. [2026-03-26]. <https://web.archive.org/web/20240203102135/https://www.landonf.org/code/freebsd/Broadcom_WiFi_Improvements.20180122.html> 中列出的部分型号带有 `$` 注释：`The optional bwn(4) PHY driver is derived from b43 GPL code, and must be explicitly enabled.`，表示需使用基于 GNU 通用公共许可证（GNU General Public License，GPL）协议的代码。FreeBSD 基本系统及内核默认不包含 GPL 许可证下的代码，需重新编译内核以启用该选项。
 
 ```sh
 # cd /usr/src/  # 此处是 FreeBSD 内核源代码安装目录
