@@ -881,7 +881,7 @@
   - “第 1.1 节 UNIX、Unix-like、Linux 和 FreeBSD 简介”：补充“macOS/iOS 等与 BSD 的关系”
 - 2024.11.7
   - “第 6.4 节 NTFS 的挂载”：新建“格式化”、挂载部分。
-  - 针对“[Add new category fs for file systems](https://github.com/freebsd/freebsd-ports/pull/302) ” 进行修改
+  - 针对“[Add new category fs for file systems](https://github.com/freebsd/freebsd-ports/pull/302)” 进行修改
 - 2024.11.2
   - “第 19.2 节 Linux 败局与 FreeBSD 败局” 补充思考题
   - 新建“第 19.3 节 驳《还有人记得 Linux 之前，那个理想又骄傲的 BSD 吗？》”
@@ -907,7 +907,7 @@
   - USTC、163、NJU pkg-freebsd 源故障，已经反馈
   - 同步上游：“第 1.6 节 FreeBSD 开发计划”
 - 2024.10.5
-  - 添加贡献者“[dongdigua](https://github.com/dongdigua) ”
+  - 添加贡献者“[dongdigua](https://github.com/dongdigua)”
   - “第 3.4 节 软件包管理器 pkg 的用法”：重写故障排除。
   - 新增一节：“第 2.2 节 安装 FreeBSD——基于 Hyper-V”，原章节拆分到各个子章节。
   - 将“参考资料与贡献者名单”拆分成独立的两个小节
