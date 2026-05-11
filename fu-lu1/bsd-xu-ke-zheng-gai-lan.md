@@ -8,9 +8,9 @@ BSD 许可证条款编号用于表征附加义务和限制条件的复杂度。0
 
 ## BSD 零条款许可证（Zero-Clause BSD，0BSD）
 
-BSD 零条款许可证是 BSD 许可证系列中限制最少的一种，尽管其名称包含“BSD”，但它并非来自传统的 BSD 家族。
+BSD 零条款许可证是 BSD 许可证系列中限制最少的一种。该许可证虽以"BSD"命名，实则并非源自传统 BSD 家族。
 
-此许可证是 ISC 许可证的变体。ISC 许可证源自 Internet Systems Consortium，是一种简洁的宽松许可证。0BSD 是一种类似公共领域的宽松许可证。
+此许可证为 ISC 许可证的变体。ISC 许可证源自 Internet Systems Consortium，属简洁型宽松许可证；0BSD 则近似于公共领域许可证。
 
 全文如下：
 
@@ -71,7 +71,7 @@ THIS SOFTWARE IS PROVIDED BY [Name of Organization] "AS IS" AND ANY EXPRESS OR I
 
 ## BSD 两条款许可证（The 2-Clause BSD License，BSD-2-Clause）
 
-BSD 两条款许可证是应用较为广泛的一种 BSD 许可证。BSD 两条款许可证即 FreeBSD 许可证，亦称为简化版 BSD 许可证，是 FreeBSD 项目优先选用的许可证。该许可证删除了原始 BSD 许可证（即 BSD-4-Clause）中的广告条款和背书条款，要求在源代码和二进制再发布中保留版权声明、条件列表及免责声明。广告条款要求在宣传材料中提及原作者，该条款因实际使用不便而被移除。
+BSD 两条款许可证应用较为广泛，即 FreeBSD 许可证，亦称简化版 BSD 许可证，为 FreeBSD 项目优先选用。该许可证删除了原始 BSD 许可证（BSD-4-Clause）中的广告条款与背书条款，仅要求在源代码和二进制再发布中保留版权声明、条件列表及免责声明。广告条款本要求在所有宣传材料中提及原作者，因其实际使用不便而被移除。
 
 全文如下：
 
