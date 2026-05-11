@@ -40,7 +40,7 @@ Mihomo 也可通过 FreeBSD 的 Linux 二进制兼容层运行，其网络流量
 
 ## RC 脚本
 
-已向 Ports 维护者提交了合并请求（[Bug 291295 - net/mihomo: Add rc.conf and some Post-installation](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=291295)），该请求旨在为 Mihomo 添加系统服务管理支持，截至撰稿时尚未收到回应。在官方集成完成之前，可使用下文提供的自定义 RC 脚本以实现服务化管理。
+已向 Ports 维护者提交了合并请求（[Bug 291295 - net/mihomo: Add rc.conf and some Post-installation](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=291295)），旨在为 Mihomo 添加系统服务管理支持，截至撰稿时尚未收到回应。官方集成完成前，可使用下文提供的自定义 RC 脚本实现服务化管理。
 
 ### RC 脚本
 
@@ -208,7 +208,7 @@ mihomo_enable="YES" # 开机启用/服务项
 
 ### 未竟事宜
 
-以下为若干待研究的问题：
+以下为待研究的问题：
 
 - 如何实现“直连”“代理”“全局”三种模式的分流？
 
@@ -332,7 +332,7 @@ $ clashctl config regen
 
 以下为 Clash for FreeBSD 项目有待改进之处：
 
-- 与 Bash 解耦，支持默认的 sh，使其更符合 FreeBSD 的默认环境。
+- 与 Bash 解耦，支持默认 sh，更好适配 FreeBSD 默认环境。
 
 ## 课后习题
 

@@ -2,15 +2,15 @@
 
 默认情况下，FreeBSD 会自动检测系统使用的声卡。
 
-FreeBSD 内核可以通过 snd_hda 模块支持 Intel HDA 规范声卡，本节说明声音设备检测与音量控制方法。
+FreeBSD 内核通过 snd_hda 模块支持 Intel HDA 规范声卡，本节说明声音设备检测与音量控制方法。
 
-FreeBSD 的声音支持始于 1993 年，Jordan K. Hubbard 将通用 Linux 声卡驱动移植到了 FreeBSD，该驱动后来被称为 VoxWare 声卡驱动。1997 年，Luigi Rizzo 构建了现代 FreeBSD 声音系统的基础。1999 年，Cameron Grant 为 FreeBSD 4.0 重写了声卡系统，利用 newbus 接口支持大量硬件。2005 年，Ariff Abdullah 接管了 FreeBSD 声音代码的维护工作，此后声音支持经历了显著变化和多项设备驱动重构。
+FreeBSD 的声音支持始于 1993 年，Jordan K. Hubbard 将通用 Linux 声卡驱动移植到 FreeBSD，该驱动后来被称为 VoxWare 声卡驱动。1997 年，Luigi Rizzo 构建了现代 FreeBSD 声音系统的基础。1999 年，Cameron Grant 为 FreeBSD 4.0 重写了声卡系统，利用 newbus 接口支持大量硬件。2005 年，Ariff Abdullah 接管了 FreeBSD 声音代码的维护工作，此后声音支持经历了重大变化和多项设备驱动重构。
 
 FreeBSD 的声音 API 被称为 OSS，即“Open Sound System”（开放声音系统）。它曾经也是 Linux 的默认声音 API，后被 ALSA 取代。FreeBSD 仍在使用 OSS，它通过标准设备文件提供了简单清晰的接口（**/dev/dsp\*** 对应声卡，**/dev/mixer\*** 对应混音器），并通过少量常用 POSIX 系统调用进行操作：
 
 > **警告**
 >
-> KDE 6 桌面环境的 Ports 构建默认配置使用 PulseAudio（脉冲音频，PA）作为音频后端。PulseAudio 作为音频服务器会接管系统音频输出管理，形成全局音频路由。若未充分了解配置细节，请勿手动切换到其他音频后端（如 PipeWire），以免造成音频系统工作异常。
+> KDE 6 桌面环境的 Ports 构建默认配置使用 PulseAudio（脉冲音频，PA）作为音频后端。PulseAudio 作为音频服务器会接管系统音频输出管理，形成全局音频路由。如果不充分了解配置细节，请勿手动切换到其他音频后端（如 PipeWire），以免造成音频系统工作异常。
 
 ## 显卡音频
 
@@ -110,7 +110,7 @@ pcm0: <Realtek ALC897 (Analog)> at nid 27 and 26 on hdaa0
 - `seq=0`：主输出（扬声器）。
 - `seq=15`：耳机，插入耳机时会自动静音扬声器。
 
-此时音频输出已恢复正常，编辑 **/boot/device.hints** 文件，加入以下若干行，将其固化为永久设置：
+此时音频输出已恢复正常，编辑 **/boot/device.hints** 文件，加入以下行，将其固化为永久设置：
 
 ```ini
 hint.hdaa.0.nid26.config="as=1 seq=0"    # 配置 HDA 声卡节点 26 的音频流为通道 1，序列号 0

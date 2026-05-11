@@ -104,7 +104,7 @@ FreeBSD 基本系统几乎不含任何与 BSD 协议不兼容的软件。
 | Windows | [不固定](https://docs.microsoft.com/zh-cn/lifecycle/faq/windows) | 可选 | 专有 | 可选 | PowerShell | Windows 桌面 |
 | macOS | 1 年/约 3 年 | 无 | [专有](https://www.apple.com/legal/sla/) | clang | Zsh | Aqua |
 
-Linux 广泛使用 GNU 工具，故理论上，凡不依赖特定 Linux 函数库者，均可在 FreeBSD 上运行。
+Linux 广泛使用 GNU 工具，因此理论上，凡不依赖特定 Linux 函数库者，均可在 FreeBSD 上运行。
 
 | Linux 命令/GNU 软件 | BSD Port/命令 | 作用说明 | 备注 |
 | ------------------- | ------------- | -------- | ---- |
@@ -270,7 +270,7 @@ DISTRIB_CODENAME=noble
 DISTRIB_DESCRIPTION="Ubuntu 24.04 LTS"
 ```
 
-在 VMware Workstation 17 Pro 虚拟机上测试 Ubuntu 24.04 LTS 版本（发布于伦敦当地时间 2024 年 4 月 25 日）时，发现其整体使用体验相较于之前版本有所下降。安装过程中即出现错误提示，且后续使用中遇到了窗口显示异常、鼠标光标消失、输入框无法获取焦点等问题。安装完成后，系统在开机后频繁弹出“内部错误”提示。
+在 VMware Workstation 17 Pro 虚拟机上测试 Ubuntu 24.04 LTS 版本（发布于伦敦当地时间 2024 年 4 月 25 日），发现其整体使用体验相较于之前版本有所下降。安装过程中即出现错误提示，且后续使用中遇到了窗口显示异常、鼠标光标消失、输入框无法获取焦点等问题。安装完成后，系统在开机后频繁弹出“内部错误”提示。
 
 ![Ubuntu 24.04 内部错误](../.gitbook/assets/nbcw.jpg)
 

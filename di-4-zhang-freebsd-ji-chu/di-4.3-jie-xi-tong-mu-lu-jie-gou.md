@@ -355,7 +355,7 @@ crw-r-----  1 root operator 0x68 May 10 09:49 cd0	# 光学介质
 
 ## 启动消息 dmesg
 
-当 FreeBSD 启动时，大多数启动消息都与正在检测的设备有关。启动消息的副本保存在 **/var/run/dmesg.boot** 中。
+FreeBSD 启动时，大多数启动消息都与正在检测的设备有关。启动消息的副本保存在 **/var/run/dmesg.boot** 中。
 
 以下示例是 Radxa X4 16G 128G eMMC 款在 15.0-CURRENT 下完整的启动消息内容。
 
@@ -588,7 +588,7 @@ atrtc1: Warning: Couldn't map I/O.
 atrtc1: registered as a time-of-day clock, resolution 1.000000s
 # 传统的 AT RTC（Motorola MC146818A 兼容），提供 date/time 设置/获取。
 # Warning 表明无法映射 I/O 端口（可能 UEFI 模式下固件未分配 I/O 空间），但无实际影响。
-# 现代 UEFI 平台更推荐使用 efiRTC；计划在 FreeBSD 15 中从 GENERIC 移除 AT RTC 。
+# 现代 UEFI 平台更推荐使用 efiRTC；计划在 FreeBSD 15 中从 GENERIC 移除 AT RTC。
 
 Event timer "RTC" frequency 32768 Hz quality 0
 # RTC 的周期性中断频率 32768 Hz（2^15 Hz），quality 0（最低优先级，仅做最后备选）。

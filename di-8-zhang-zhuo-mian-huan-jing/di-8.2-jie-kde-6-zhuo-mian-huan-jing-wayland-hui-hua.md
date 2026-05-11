@@ -2,9 +2,9 @@
 
 ## 概述
 
-Wayland 是取代 X11 的显示服务器协议，KDE 6 自 Plasma 5.27 起逐步完善 Wayland 支持。
+Wayland 是取代 X11 的显示服务器协议，KDE 6 自 Plasma 5.27 起逐步完善了 Wayland 支持。
 
-由于 FreeBSD DRM 驱动移植仅覆盖了 Intel、AMD 和 NVIDIA 等 GPU，vmwgfx 和 virtio 等虚拟化 GPU 驱动尚不支持（参见：freebsd/drm-kmod. Request to restore support for vboxvideo and vmwgfx DRM drivers #356[EB/OL]. [2026-04-04]. <https://github.com/freebsd/drm-kmod/issues/356>），因此在 VMware、VirtualBox 或任何基于 Virtio 的虚拟机中均无法复现本节内容，需要在真实物理机上操作。
+由于 FreeBSD DRM 驱动移植仅覆盖了 Intel、AMD 和 NVIDIA 等 GPU，vmwgfx 和 virtio 等虚拟化 GPU 驱动尚不支持（参见：freebsd/drm-kmod. Request to restore support for vboxvideo and vmwgfx DRM drivers #356[EB/OL]. [2026-04-04]. <https://github.com/freebsd/drm-kmod/issues/356>），因此在 VMware、VirtualBox 或基于 Virtio 的虚拟机中无法复现本节内容，需在真实物理机上操作。
 
 NVIDIA 显卡尚未测试。本节使用 Intel 第 12 代处理器（i7-1260P）的集成显卡测试。
 
@@ -146,6 +146,6 @@ $ cp /usr/local/share/applications/org.fcitx.Fcitx5.desktop ~/.config/autostart/
 
 ## 课后习题
 
-1. 测试 IBus 输入法框架在基于 Wayland 的 KDE 上使用体验，提交 PR。
+1. 在基于 Wayland 的 KDE 上测试 IBus 输入法框架的使用体验，记录输入法切换与候选词显示的稳定性。
 2. 适配 PipeWire 音频。
-3. Wayland 协议将合成器与显示服务器合并为单一进程，取消了 X11 的网络透明性。分析这一架构简化对远程桌面与屏幕共享场景的副作用，并讨论 FreeBSD 上 Wayland 合成器的安全隔离策略是否需要 jail 层面的补充。
+3. 在 FreeBSD 上测试 Wayland 合成器的远程屏幕共享功能（如通过 RDP 或 VNC），记录延迟与带宽占用情况。

@@ -1,12 +1,12 @@
 # 7.5 系统字体
 
-FreeBSD 默认字体对中文的显示效果有限。本节介绍图形界面引入 Windows TrueType 字体的方法，以及控制台字体的替换配置。
+FreeBSD 默认字体对中文显示效果欠佳。本节介绍图形界面引入 Windows TrueType 字体的方法及控制台字体的替换配置。
 
 ## GUI 图形界面字体
 
 首先提取 Windows `C:\Windows\Fonts` 目录下的所有 `.ttf` 和 `.ttc` 字体文件。macOS 字体文件格式虽同为 `.ttf`，仍需特殊处理。
 
-为便于管理新字体，创建一个目录存放 Windows 字体：
+为管理新字体，创建一个目录存放 Windows 字体：
 
 ```sh
 # mkdir -p /usr/local/share/fonts/WindowsFonts
@@ -36,7 +36,7 @@ FreeBSD 默认字体对中文的显示效果有限。本节介绍图形界面引
 
 ## TTY 中文控制台
 
-FreeBSD 的新型终端 VT 原生支持 CJK 字符集（CJK 指中文、日文、韩文三种文字的统称，即中日韩统一表意文字），只需加载字体即可显示中文。
+FreeBSD 新型终端 VT 原生支持 CJK 字符集（指中文、日文、韩文的中日韩统一表意文字），加载字体即可显示中文。
 
 本节基于 FreeBSD 14.2-RELEASE。
 
@@ -70,7 +70,7 @@ vidcontrol -f b16.fnt
 
 ![设置完成后的 tty](../.gitbook/assets/tty1.png)
 
-上述命令为临时生效，如果需永久生效，应加入 **/etc/rc.conf** 文件：
+上述命令为临时生效，如需永久生效，应加入 **/etc/rc.conf** 文件：
 
 ```ini
 # 设置控制台所有屏幕使用 b16 字体
@@ -92,7 +92,7 @@ allscreens_flags="-f /root/b16.fnt"
 
 #### 如何手动生成中文字体的 fnt 文件
 
-[https://github.com/usonianhorizon/vt-fnt](https://github.com/usonianhorizon/vt-fnt) 提供的方法较为复杂，可生成 bdf 文件，但会出现与文中相同的报错。该项目探索了 FreeBSD 控制台字体的生成方法。文中提及的 FontForge 软件提供 Windows 版本，下载地址为 [https://fontforge.org/en-US/downloads/windows-dl/](https://fontforge.org/en-US/downloads/windows-dl/)，该页面提供 FontForge 字体编辑工具的 Windows 版本下载。
+[https://github.com/usonianhorizon/vt-fnt](https://github.com/usonianhorizon/vt-fnt) 提供的方法较为复杂，可生成 bdf 文件，但会出现与文中相同的报错。该项目探索了 FreeBSD 控制台字体的生成方法。文中提及的 FontForge 软件提供 Windows 版本，下载地址为 [https://fontforge.org/en-US/downloads/windows-dl/](https://fontforge.org/en-US/downloads/windows-dl/)。
 
 ### 参考文献
 

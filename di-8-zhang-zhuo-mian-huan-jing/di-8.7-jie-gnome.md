@@ -8,7 +8,7 @@
 >
 > 在虚拟机中可正常使用。
 
-GNOME 曾是 GNU 项目的组成部分，旨在构建功能完备的桌面环境，目前主要由 Red Hat 主导开发与维护。GNOME 是 Linux 与类 UNIX 系统中的主流桌面环境，设计简洁现代。需注意的是，在英语发音中，GNOME 的首字母 `G` 不发音（音标为 /ˈnoʊm/）。
+GNOME 曾是 GNU 项目的组成部分，旨在构建功能完备的桌面环境，目前主要由 Red Hat 主导开发维护。GNOME 是 Linux 和类 UNIX 系统中的主流桌面环境，设计简洁现代。在英语发音中，GNOME 首字母 `G` 不发音（音标为 /ˈnoʊm/）。
 
 ## 安装完整的 GNOME 桌面环境
 
@@ -271,5 +271,5 @@ $ ./install.sh
 
 1. 查找 GNOME 桌面环境的 Port 构建过程，分析其与 systemd 环境的历史关联，在 QEMU 中验证其在 FreeBSD 非 systemd 环境下的适配实现。
 2. 分析 GNOME 的 IBus 输入法框架集成机制，去除该默认的强制依赖项。
-3. 移植若干主题到 Ports。
-4. 移植若干图标到 Ports。
+3. 移植一些主题到 Ports。
+4. 移植一些图标到 Ports。

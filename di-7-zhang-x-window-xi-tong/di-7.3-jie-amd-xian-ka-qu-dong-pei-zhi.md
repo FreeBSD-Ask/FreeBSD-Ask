@@ -1,6 +1,6 @@
 # 7.3 AMD 显卡驱动
 
-本节涵盖 AMD 显卡驱动（i915 DRM 模块）的驱动安装与配置。读者应先阅读显卡驱动概述。
+本节涵盖 AMD 显卡驱动的安装与配置。读者应先阅读显卡驱动概述。
 
 ## 安装 AMD 显卡驱动
 
@@ -10,7 +10,7 @@
 
 > **注意**
 >
-> 使用 Ports 安装时，drm 驱动需要在 **/usr/src** 中有一份当前版本的系统源代码，具体可参考系统更新章节。若已参考本书其他章节安装，系统中通常已有一份源代码，无需再次获取。
+> 使用 Ports 安装时，drm 驱动需要在 **/usr/src** 中有一份当前版本的系统源代码，具体可参考系统更新章节。如果已参考本书其他章节安装，系统中通常已有一份源代码，无需再次获取。
 
 ### FreeBSD 14.x
 
@@ -36,13 +36,13 @@
 
 ## AMD 显卡配置
 
-- 对于 HD 7000 以后的 AMD 显卡，在 **/etc/rc.conf** 文件中添加 `amdgpu` 内核模块（多数用户应使用此驱动，如果未生效再修改为 `radeonkms`）到 `kld_list`，以便系统启动时加载：
+- 对于 HD 7000 以后 AMD 显卡，在 **/etc/rc.conf** 文件中添加 `amdgpu` 内核模块到 `kld_list`，以便系统启动时加载（多数用户应使用此驱动，如未生效再修改为 `radeonkms`）：
 
 ```sh
 # sysrc -f /etc/rc.conf kld_list+=amdgpu
 ```
 
-- 对于 HD 7000 以前的 AMD 显卡，在 **/etc/rc.conf** 文件中添加 `radeonkms` 内核模块（较早期的显卡驱动）到 `kld_list`，以便系统启动时加载：
+- 对于 HD 7000 以前 AMD 显卡，在 **/etc/rc.conf** 文件中添加 `radeonkms` 内核模块到 `kld_list`：
 
 ```sh
 # sysrc -f /etc/rc.conf kld_list+=radeonkms

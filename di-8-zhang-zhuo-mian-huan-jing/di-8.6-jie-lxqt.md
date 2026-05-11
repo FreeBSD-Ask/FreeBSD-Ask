@@ -2,7 +2,7 @@
 
 ## LXQt 桌面环境概述
 
-LXQt 是一款基于 Qt 的轻量级桌面环境。本节通过 pkg 安装 xorg、sddm、lxqt 及输入法、字体等配套组件。
+LXQt 是一款基于 Qt 的轻量级桌面环境。本节通过 pkg 安装 xorg、sddm、lxqt 及输入法、字体等组件。
 
 ## 安装 LXQt 桌面环境
 
@@ -94,10 +94,10 @@ $ echo "exec ck-launch-session startlxqt" > ~/.xinitrc
 
 ### 桌面图标不显示
 
-需事先安装所需图标主题。然后：菜单 -> “Preferences” -> “LXQt Settings” -> “Appearance” -> “Icons Theme”，选择已安装的图标主题，点击 “Apply” 后重新登录。
+需事先安装所需图标主题。然后：菜单 -> “Preferences” -> “LXQt Settings” -> “Appearance” -> “Icons Theme”，选择已安装的图标主题，点击“Apply”后重新登录。
 
 ## 课后习题
 
-1. 验证 LXQt 的 gvfs 依赖机制是否真正有效。
+1. 验证 LXQt 的 gvfs 依赖机制是否有效。
 2. 安装中文输入法进行体验。
-3. 修改 LXQt 桌面的默认图标主题加载机制，验证其界面显示行为变化，并记录到本节。
+3. 修改 LXQt 桌面的默认图标主题，验证其界面显示效果。

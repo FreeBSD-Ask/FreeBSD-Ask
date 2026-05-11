@@ -231,7 +231,7 @@ GNOME、Xorg（X11）、D-Bus、systemd、PulseAudio、Wayland、PipeWire 等主
 
 #### 诚实与可信
 
-像 FreeBSD 这样默默地在后台工作以至于几近被用户遗忘的系统，堪称老古董。如果每日不时出现一些蓝屏报错、Kernel Panic 抑或“内部错误”、`You are in emergency mode`、`BusyBox (initramfs)`、`grub rescue>` 等，反而能提醒用户自己的存在。
+像 FreeBSD 这样默默地在后台工作以至于几近被用户遗忘的系统，堪称久经考验。如果每日不时出现蓝屏报错、Kernel Panic 抑或“内部错误”、`You are in emergency mode`、`BusyBox (initramfs)`、`grub rescue>` 等，反而能提醒用户自己的存在。
 
 目前，大多数将 Linux 用作专用设备操作系统，或基于其他 GPL 软件构建商业产品的公司，并未严格遵守 GPL 协议发布其修改后的代码。部分国内企业对 GPL 的含义认识不足，仅将“免费”视为唯一考量。那些为规避 GPL 强制开源规定而采取规避措施的企业产品，其合规性与技术可信度均存疑。抢注开源软件商标的现象也时有发生。相较而言，采用 FreeBSD 的公司在许可证合规方面更为规范、可靠，也切实推动了 BSD 代码的广泛复用。纵然有人认为 FreeBSD 已趋衰落，事实上，大量用户可能始终受益于 FreeBSD 技术的支撑。
 
@@ -275,7 +275,7 @@ FreeBSD 核心小组成员并不直接从中获取任何利益，均为志愿者
 
 ## UNIX 之船：FreeBSD 是不是 UNIX？
 
-关于 FreeBSD 与 UNIX 的关系，该问题远非表面所见般清晰明确。诸多讨论者，甚至是那段岁月的亲历者，也难以给出明确回答或澄清。有观点认为，BSD 并未进行过任何 UNIX 认证，没有持有法律上的商标便简单定论；更有甚者只是笼统地说 FreeBSD 是 UNIX 的延续者与正统继承者，仅是“有实无名”；另有观点认为，BSD 之于 UNIX，正如 Linux 之于 UNIX。
+该问题远非表面所见那般清晰明确。诸多讨论者，甚至是那段岁月的亲历者，也难以给出明确回答或澄清。有观点认为，BSD 并未进行过任何 UNIX 认证，没有持有法律上的商标便简单定论；更有甚者只是笼统地说 FreeBSD 是 UNIX 的延续者与正统继承者，仅是“有实无名”；另有观点认为，BSD 之于 UNIX，正如 Linux 之于 UNIX。
 
 上述回答存在分歧，原因在于该问题并非可简单套用法律商标归属或代码继承性来分析的纯粹技术性难题。这牵涉一个深刻的本体论哲学问题，究竟是不能两次踏进同一条河流，还是一次也不能踏进同一条河流？（类似的问题如谷堆问题、秃头问题，感兴趣的读者可参见 SEP 条目 Identity Over Time[EB/OL]. [2026-03-26]. <https://plato.stanford.edu/entries/identity-time>. Sorites Paradox[EB/OL]. [2026-03-26]. <https://plato.stanford.edu/entries/sorites-paradox/>.）。对这个问题的回答如何，映射着哲学观与科学技术观。
 
@@ -554,7 +554,7 @@ FreeBSD 的正确读法是新用户普遍关注的问题。目前社区共识和
 - SeaGL. 25+ Years of FreeBSD and Why You Should Get Involved![EB/OL]. (2019-11-15)[2026-04-16]. <https://osem.seagl.org/conferences/seagl2019/program/proposals/611>. 记载 Deb Goodkin “joining as the first employee back in August 2005”。
 - FreeBSD Wiki. Jails[EB/OL]. [2026-04-16]. <https://wiki.freebsd.org/Jails>. 记载“Jails were introduced by Poul-Henning Kamp in March 2000 with FreeBSD 4.0-RELEASE”。
 - Watson R N M, et al. CHERI: A Hybrid Capability-System Architecture for Scalable Software Compartmentalization[C]//ISCA. 2015. CHERI 原始论文，阐述硬件能力架构扩展的设计与实现。
-- ACM. Fernando J ("Corby") Corbato[EB/OL]. [2026-04-17]. <https://amturing.acm.org/award_winners/corbato_1009471.cfm>. 记载 CTSS 于 1961 年 11 月在 IBM 709 上首次演示。
+- ACM. Fernando J (“Corby”) Corbato[EB/OL]. [2026-04-17]. <https://amturing.acm.org/award_winners/corbato_1009471.cfm>. 记载 CTSS 于 1961 年 11 月在 IBM 709 上首次演示。
 - Tom Van Vleck. The Multicians web site[EB/OL]. (2026-04-08)[2026-04-17]. <https://multicians.org/history.html>. 记载 Multics 项目历史，贝尔实验室与通用电气于 1965 年加入。
 - FreeBSD Project. Core Bylaws[EB/OL]. [2026-04-17]. <https://www.freebsd.org/internal/bylaws/>. 记载首次核心团队选举于 2000 年 9 月举行。
 - FreeBSD Foundation. Resolutions Document[EB/OL]. [2026-04-17]. <https://freebsdfoundation.org/wp-content/uploads/2015/12/ResolutionsDocument-1.pdf>. 记载 FreeBSD 基金会成立文件签署日期为 2000 年 3 月 28 日。

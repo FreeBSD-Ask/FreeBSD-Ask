@@ -2,7 +2,7 @@
 
 ## bspwm 窗口管理器概述
 
-bspwm 是一款平铺式窗口管理器，按二叉空间分区方式组织窗口。其设计理念契合 UNIX 哲学原则（参见：赤赤的象牙塔. bspwm 入门[EB/OL]. [2026-03-26]. <https://zerovip.vercel.app/zh/63233/>. 7.2 UNIX 哲学）。
+bspwm 是一款平铺式窗口管理器，按二叉空间分区方式组织窗口。设计理念契合 UNIX 哲学原则（参见：赤赤的象牙塔. bspwm 入门[EB/OL]. [2026-03-26]. <https://zerovip.vercel.app/zh/63233/>. 7.2 UNIX 哲学）。
 
 ## 安装 bspwm 窗口管理器
 
@@ -211,5 +211,5 @@ $HOME/.fehbg &
 
 ## 课后习题
 
-1. 为 bspwm 适配更多显卡支持。
-2. 设计几套 bspwm 默认配置，提交 PR 到 bspwm 项目。
+1. 在 FreeBSD 上完整配置 bspwm 桌面环境，验证快捷键绑定与应用启动器的功能。
+2. 设计一套 bspwm 的默认配置方案，编写对应的 bspwmrc 与 sxhkdrc 配置文件。

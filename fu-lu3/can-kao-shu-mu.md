@@ -38,7 +38,7 @@
 | ![Unix 四分之一世纪](../.gitbook/assets/unix25.png) <br><br> 《Unix 四分之一世纪》 | Peter H. Salus | 978-0201547771 <br><br> Addison-Wesley Professional | UNIX 发展历史书籍，详细记录了 Unix 从诞生到普及的技术演进历程 |
 | ![Unix 痛恨者手册](../.gitbook/assets/unixno.png) <br><br> 《Unix 痛恨者手册》 | Simson Garfinkel、Daniel Weise、Steven Strassmann | 978-1-56884-203-5 <br><br> IDG Books Worldwide, Inc. | Unix 技术批评书籍，从批评视角分析 Unix 系统的设计缺陷和技术局限性 |
 | ![大教堂与集市](../.gitbook/assets/dajiaotang.png) <br><br> 《大教堂与集市》 | [美] Eric S. Raymond <br><br> 卫剑钒 译 | 978-7-111-45247-8 <br><br> 机械工业出版社 | 开源运动历史书籍，阐释集中式与分布式两种软件开发模式的差异 |
-| ![UNIX 传奇：历史与回忆](../.gitbook/assets/unixchuanqi.png) <br><br> 《UNIX 传奇——历史与回忆》 | [美] Brian W. Kernighan 著 <br><br> 韩磊 译 | 978-7-115-55717-9 <br><br> 人民邮电出版社 | UNIX 发展历史书籍，记录 Unix 技术发展的关键节点和历史背景 |
+| ![UNIX 传奇：历史与回忆](../.gitbook/assets/unixchuanqi.png) <br><br> 《UNIX 传奇：历史与回忆》 | [美] Brian W. Kernighan 著 <br><br> 韩磊 译 | 978-7-115-55717-9 <br><br> 人民邮电出版社 | UNIX 发展历史书籍，记录 Unix 技术发展的关键节点和历史背景 |
 
 以下书籍阐述了 UNIX 的设计理念，有助于读者理解其软件工程思想与技术哲学。
 
@@ -65,7 +65,7 @@
 
 该书采用轻型纸印刷，部分章节需要由读者自行通过 [网络](https://course.cmpreading.com/web/refbook/detail/9661/215) 下载。
 
-该书阅读难度较高，属于高级技术专著范畴，需要具备一定的操作系统理论基础方能理解。
+该书阅读难度较高，属于高级技术专著范畴，需要具备一定的操作系统理论基础才能理解。
 
 主要作者 McKusick M K 在其网站上提供多门 BSD 相关的录制课程，参见 McKusick M K. BSD related courses[EB/OL]. [2026-03-26]. <https://www.mckusick.com/buylist.html>. 目前正在撰写第三版（由 No Starch Press 出版），相关信息可参见 McKusick M K. The History of the BSD Daemon: BSDCan 2025[EB/OL]. [2026-04-18]. <https://www.bsdcan.org/2025/talks/daemon.pdf>.
 
@@ -109,7 +109,7 @@
 - *FreeBSD Mastery: Advanced ZFS*
 - *FreeBSD Mastery: Jails*
 
-该系列书籍侧重基础操作，类似面向非计算机专业的计算机导论课程。该系列书籍的历史意义重于实践价值。
+该系列书籍内容侧重基础操作，定位类似于面向非计算机专业的计算机导论课程，其历史意义大于实践价值。
 
 ### *Absolute FreeBSD, 3rd Edition: The Complete Guide to FreeBSD*
 
@@ -123,9 +123,9 @@
 
 Lions J. 莱昂氏 UNIX 源代码分析[M]. 尤晋元，译. 北京：机械工业出版社，2000. ISBN: 978-7-111-08018-3. UNIX 早期教学核心文献，带注释的 UNIX v6 源代码汇编。
 
-该书原作名为 *Lion's Commentary on UNIX with Source Code*，由 Lions J 撰写，最初作为澳大利亚新南威尔士大学的课程讲义，是 UNIX 早期教学的核心文献。该书的中文翻译历程颇具历史意义，反映了中国开源社区对经典技术文献的重视（参见：中华读书报. “地下出版物”浮出水面[N/OL]. (2000-08-02)[2026-03-26]. <https://www.gmw.cn/01ds/2000-08/02/GB/2000%5E311%5E0%5EDS1418.htm>）。
+该书原作名为 *Lion's Commentary on UNIX with Source Code*，由 Lions J 撰写，最初作为澳大利亚新南威尔士大学的课程讲义，是 UNIX 早期教学的核心文献。该书的中文翻译历程具有历史意义，反映了中国开源社区对经典技术文献的重视（参见：中华读书报. “地下出版物”浮出水面[N/OL]. (2000-08-02)[2026-03-26]. <https://www.gmw.cn/01ds/2000-08/02/GB/2000%5E311%5E0%5EDS1418.htm>）。
 
-就学术文献分类而言，该书更接近“带注释的源代码汇编”而非系统的理论分析，其价值在于提供 UNIX 早期实现的原始文本。随着技术演进，其直接技术参考价值已让位于历史研究价值。
+就学术文献分类而言，该书更接近“带注释的源代码汇编”而非系统的理论分析，其价值在于提供 UNIX 早期实现的原始文本。随着技术演进，其直接技术参考价值已转变为历史研究价值。
 
 ### 早期中文 FreeBSD 文献（2000 年代）
 

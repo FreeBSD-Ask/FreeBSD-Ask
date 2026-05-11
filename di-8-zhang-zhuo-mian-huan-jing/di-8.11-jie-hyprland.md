@@ -8,9 +8,9 @@
 >
 > 除软件包安装和系统重启操作外，本节中的所有命令应在非 root 用户权限下执行。
 
-Hyprland 是基于 Wayland 的动态平铺式合成器（compositor），支持窗口透明、模糊、圆角等视觉特效，以及窗口切换、工作区切换等动画效果。
+Hyprland 是基于 Wayland 的动态平铺式合成器（compositor），支持窗口透明、模糊、圆角等视觉特效以及窗口切换、工作区切换等动画效果。
 
-Hyprland 的窗口焦点切换机制与传统桌面环境不同：鼠标光标停留在哪个窗口上，该窗口即获得焦点（无需点击），通常不使用 Alt+Tab 等快捷键切换。
+Hyprland 窗口焦点切换机制与传统桌面环境不同：鼠标光标停留在哪个窗口上，该窗口即获得焦点（无需点击），通常不使用 Alt+Tab 等快捷键切换。
 
 ![hyprland on FreeBSD](../.gitbook/assets/hyprland.png)
 
@@ -841,5 +841,5 @@ text-caps-lock-color=000000FF
 
 ## 课后习题
 
-1. 查找 Hyprland 合成器的 Port 源代码，分析其与 wlroots 的技术关联。
-2. 重构本节，进行全面增补和重写。
+1. 分析 Hyprland 与 wlroots 的技术关联，说明 wlroots 库在 Hyprland 合成器中承担的功能。
+2. 在 Hyprland 的 hyprland.conf 中配置自定义窗口规则，为特定应用（如终端、浏览器）设置默认悬浮或平铺行为。

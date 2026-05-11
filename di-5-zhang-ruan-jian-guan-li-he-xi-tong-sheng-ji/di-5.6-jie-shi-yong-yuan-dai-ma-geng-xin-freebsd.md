@@ -177,8 +177,8 @@ Select: (p) postpone, (df) diff-full, (e) edit,
 
 ## 课后习题
 
-1. 查找 FreeBSD 从 SVN 迁移到 Git 的相关文档，构建一个最小化的源代码获取流程。
+1. 总结从 FreeBSD Git 仓库获取源代码的完整流程，列出所需命令及参数含义。
 
-2. 选取 etcupdate 的冲突解决机制，重构其最小实现。
+2. 使用 etcupdate 管理 **/etc** 目录的配置文件更新，记录一次完整的合并冲突处理过程。
 
-3. 修改 buildworld 的默认行为，增加一个选项让用户可以跳过某些不需要的组件，验证其对编译时间的影响。
+3. 修改 **/etc/src.conf**，排除不需要的组件（如某些调试工具），测量 `make buildworld` 编译时间的变化。
