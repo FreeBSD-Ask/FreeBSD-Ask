@@ -65,7 +65,7 @@
 
 该书采用轻型纸印刷，部分章节需要由读者自行通过 [网络](https://course.cmpreading.com/web/refbook/detail/9661/215) 下载。
 
-该书阅读难度较高，属于高级技术专著范畴，需要具备一定的操作系统理论基础方能理解。
+该书阅读难度较高，属于高级技术专著范畴，需要具备一定的操作系统理论基础才能理解。
 
 主要作者 McKusick M K 在其网站上提供多门 BSD 相关的录制课程，参见 McKusick M K. BSD related courses[EB/OL]. [2026-03-26]. <https://www.mckusick.com/buylist.html>. 目前正在撰写第三版（由 No Starch Press 出版），相关信息可参见 McKusick M K. The History of the BSD Daemon: BSDCan 2025[EB/OL]. [2026-04-18]. <https://www.bsdcan.org/2025/talks/daemon.pdf>.
 
@@ -109,7 +109,7 @@
 - *FreeBSD Mastery: Advanced ZFS*
 - *FreeBSD Mastery: Jails*
 
-该系列书籍内容侧重基础操作，定位类似于面向非计算机专业的计算机导论课程，其历史意义重于实践价值。
+该系列书籍内容侧重基础操作，定位类似于面向非计算机专业的计算机导论课程，其历史意义大于实践价值。
 
 ### *Absolute FreeBSD, 3rd Edition: The Complete Guide to FreeBSD*
 
@@ -123,9 +123,9 @@
 
 Lions J. 莱昂氏 UNIX 源代码分析[M]. 尤晋元，译. 北京：机械工业出版社，2000. ISBN: 978-7-111-08018-3. UNIX 早期教学核心文献，带注释的 UNIX v6 源代码汇编。
 
-该书原作名为 *Lion's Commentary on UNIX with Source Code*，由 Lions J 撰写，最初作为澳大利亚新南威尔士大学的课程讲义，是 UNIX 早期教学的核心文献。该书的中文翻译历程颇具历史意义，反映了中国开源社区对经典技术文献的重视（参见：中华读书报. “地下出版物”浮出水面[N/OL]. (2000-08-02)[2026-03-26]. <https://www.gmw.cn/01ds/2000-08/02/GB/2000%5E311%5E0%5EDS1418.htm>）。
+该书原作名为 *Lion's Commentary on UNIX with Source Code*，由 Lions J 撰写，最初作为澳大利亚新南威尔士大学的课程讲义，是 UNIX 早期教学的核心文献。该书的中文翻译历程具有历史意义，反映了中国开源社区对经典技术文献的重视（参见：中华读书报. “地下出版物”浮出水面[N/OL]. (2000-08-02)[2026-03-26]. <https://www.gmw.cn/01ds/2000-08/02/GB/2000%5E311%5E0%5EDS1418.htm>）。
 
-就学术文献分类而言，该书更接近“带注释的源代码汇编”而非系统的理论分析，其价值在于提供 UNIX 早期实现的原始文本。随着技术演进，其直接技术参考价值已让位于历史研究价值。
+就学术文献分类而言，该书更接近“带注释的源代码汇编”而非系统的理论分析，其价值在于提供 UNIX 早期实现的原始文本。随着技术演进，其直接技术参考价值已转变为历史研究价值。
 
 ### 早期中文 FreeBSD 文献（2000 年代）
 
