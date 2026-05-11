@@ -14,13 +14,13 @@ FreeBSD 网络配置涉及多个核心命令和配置文件：
 
 计算机网络是将地理位置不同、具有独立功能的多台计算机及其外部设备，通过通信线路连接起来，在网络操作系统、网络管理软件及网络通信协议的管理和协调下，实现资源共享和信息传递的系统。
 
-FreeBSD 的网络子系统基于 TCP/IP 协议族实现，该协议族遵循互联网协议套件的分层架构。
+FreeBSD 网络子系统基于 TCP/IP 协议族实现，遵循互联网协议套件的分层架构。
 
 TCP/IP 协议族采用四层模型组织网络功能：
 
-- **网络接口层（Link Layer）**：负责在物理网络介质上发送和接收数据帧，处理硬件地址（MAC 地址）解析。在 FreeBSD 中，该层对应网络接口驱动程序和 `ifconfig` 命令管理的配置。以太网帧的发送与接收、ARP（Address Resolution Protocol）地址解析均在此层完成。
-- **互联网层（Internet Layer）**：负责数据包的路由和转发，核心协议为 IP（Internet Protocol）。该层处理逻辑寻址（IP 地址）、分片与重组、路由选择等功能。在 FreeBSD 中，路由表管理和 `route` 命令操作属于此层范畴。
-- **传输层（Transport Layer）**：提供端到端的通信服务，主要协议为 TCP（Transmission Control Protocol）和 UDP（User Datagram Protocol）。TCP 提供可靠的面向连接的传输，UDP 提供无连接的不可靠传输。FreeBSD 创新性地实现了多 TCP 栈共存架构，允许系统同时加载多个 TCP 协议栈实现。
+- **网络接口层（Link Layer）**：负责在物理网络介质上发送和接收数据帧，处理硬件地址（MAC 地址）解析。该层对应 FreeBSD 中的网络接口驱动程序和 `ifconfig` 命令管理的配置。以太网帧的发送和接收、ARP（Address Resolution Protocol）地址解析均在该层完成。
+- **互联网层（Internet Layer）**：负责数据包的路由和转发，核心协议为 IP（Internet Protocol）。该层处理逻辑寻址（IP 地址）、分片与重组、路由选择等功能。路由表管理和 `route` 命令操作属于该层。
+- **传输层（Transport Layer）**：提供端到端的通信服务，主要协议为 TCP（Transmission Control Protocol）和 UDP（User Datagram Protocol）。TCP 提供可靠的面向连接传输，UDP 提供无连接的不可靠传输。FreeBSD 创新性地实现了多 TCP 栈共存架构，允许系统同时加载多个 TCP 协议栈实现。
 - **应用层（Application Layer）**：包含多种面向用户的网络应用协议，如 HTTP、SSH、DNS、SMTP 等。FreeBSD 通过 Ports 和 pkg 提供了大量网络服务软件。
 
 ### 参考文献
@@ -107,7 +107,7 @@ DHCPACK from 192.168.1.1
 bound to 192.168.1.19 -- renewal in 43200 seconds.
 ```
 
-可在后台启动 dhclient(8) 客户端。后台运行可能导致依赖网络的程序出现问题，但在许多情况下可提供更快的启动速度。
+dhclient(8) 也可在后台启动。后台运行可能影响依赖网络的程序，但多数情况下能加快启动速度。
 
 要在后台执行 dhclient(8)，执行以下命令：
 
@@ -123,7 +123,7 @@ bound to 192.168.1.19 -- renewal in 43200 seconds.
 
 ### 配置静态 IPv4 地址
 
-也可在命令行通过 ifconfig(8) 执行网络接口卡配置。然而，除非同时将这些配置添加到 **/etc/rc.conf** 文件，否则重启后配置将丢失。
+也可在命令行通过 ifconfig(8) 配置网络接口卡，但除非同时将这些配置添加到 **/etc/rc.conf** 文件，重启后配置将丢失。
 
 可通过以下命令设置 IP 地址：
 
@@ -176,7 +176,7 @@ PING www.FreeBSD.org (198.18.0.7): 56 data bytes
 round-trip min/avg/max/stddev = 0.635/0.705/0.776/0.071 ms
 ```
 
-如能正常收到 ICMP 响应报文，则表明网络已连通。
+如能正常收到 ICMP 响应报文，表明网络已连通。
 
 > **注意**
 >
@@ -317,7 +317,7 @@ search 和 domain 选项只能使用其中一个。使用 DHCP 时，dhclient(8)
 
 手动编辑 **/etc/resolv.conf** 文件后，重启系统时该文件可能重置，因为动态主机配置协议（Dynamic Host Configuration Protocol，DHCP）客户端在获取网络配置时会通过 resolvconf 服务重写该文件。
 
-如需使用手动配置的 DNS 服务器而不被系统自动更新覆盖，可通过禁用 resolvconf 服务实现。编辑 **/etc/resolvconf.conf** 文件（如不存在则创建），写入 `resolvconf=NO` 一行，该配置将禁用系统对 DNS 配置文件的自动更新功能。
+若需使用手动配置的 DNS 服务器而不希望系统自动更新覆盖，可禁用 resolvconf 服务。编辑 **/etc/resolvconf.conf** 文件（如不存在则创建），写入 `resolvconf=NO` 一行，该配置将禁用系统对 DNS 配置文件的自动更新。
 
 ### 参考文献
 
