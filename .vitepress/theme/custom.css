@@ -8,7 +8,7 @@
 /* 隐藏 MathJax 3 可复制文本节点 */
 .MathJax_Text,
 .mjx-assistive-mml {
-  display: none; !important;
+  display: none !important;
 }
 
 /* 脚注加粗，非斜体 */
