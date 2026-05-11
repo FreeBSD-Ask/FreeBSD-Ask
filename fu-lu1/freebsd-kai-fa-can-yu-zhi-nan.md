@@ -6,13 +6,13 @@
 
 需要阅读 FreeBSD 项目代码评审与协作开发平台说明文档：<https://wiki.freebsd.org/Phabricator>。
 
-文档中已有详细说明，需先注册一个账号，并可关联 GitHub。但关联后用户名的显示格式可能与预期不同。
+相关文档已有详细说明，需先注册账号，并可关联 GitHub。但关联后用户名的显示格式可能与预期存在差异。
 
 除 Phabricator 外，FreeBSD 目前也接受通过 GitHub Pull Request 提交修改。对于较为简单直接的改动，GitHub PR 是目前推荐的提交方式。具体要求包括：改动应基本可提交（committer 只需少于 10 分钟的额外工作即可合并）、通过 GitHub CI 检查、能及时回应反馈、涉及文件不超过约 10 个且改动不超过约 200 行。同一修改应只通过一种方式提交，避免同时创建 Phabricator 评审和 GitHub PR。
 
 对于代码问题，一种较简单的解决方案是通过 GitHub Fork 原仓库的主分支（main），保持主分支不变，然后创建一个新的分支 B，用于开发和修改。
 
-在完成修改或开发后，将 main 分支和 B 分支同步到最新状态（可在网页上点击更新按钮），然后在分支 B 上执行以下命令：
+在完成修改或开发后，将 main 分支和 B 分支同步到最新状态（可通过网页端同步），然后在分支 B 上执行以下命令：
 
 ```sh
 git pull   # 在当前分支上拉取远程更新
@@ -47,9 +47,9 @@ root@generic:~/freebsd-ports # ls -l 2024.diff
 -rw-r--r--  1 root wheel 18021 Oct  6 03:59 2024.diff
 ```
 
-这样会在分支 B 的根目录下生成 .diff 文件，将其上传至 [此链接](https://reviews.freebsd.org/differential/)（页面右上角有 Create 入口），点击 Create 并填写相关信息，即可提交审阅。
+上述操作将在分支 B 的根目录下生成 .diff 文件，将其上传至 [此链接](https://reviews.freebsd.org/differential/)（页面右上角有 Create 入口），点击 Create 并填写相关信息，即可提交审阅。
 
-这是一个相对简单的方法。需要注意，每次提交的修改量不宜过大。
+此为一种相对简便的提交方式。需注意，每次提交的修改量不宜过大。
 
 提交完成后，在 [https://bugs.freebsd.org/bugzilla](https://bugs.freebsd.org/bugzilla) 新建一个 Bug，说明修改内容，并附上 [https://reviews.freebsd.org](https://reviews.freebsd.org) 的链接。完成后，再在 [https://reviews.freebsd.org](https://reviews.freebsd.org) 中附上该 Bug 页面链接，否则可能长时间无人处理。
 
@@ -89,7 +89,7 @@ $ git checkout A
 
 FreeBSD 的软件以 Port 提供，开发者无需考虑如何打包为二进制软件包等问题。Port 本身也不包含软件源代码，类似于 Gentoo（Gentoo Portage 脱胎于 FreeBSD Ports），因此理论上移植难度较低。
 
-当完成移植后，可以向 Bug 报告系统提交请求合并的报告（也可以直接发送到 [https://reviews.freebsd.org/](https://reviews.freebsd.org/)），具体格式可以参考列表中其他软件的示例。如果长时间无人回应，可向邮件列表发送询问，确认是否有人能够协助提交。如果仍无人回应，可在一周后再次发送。
+完成移植后，可向 Bug 报告系统提交请求合并的报告（也可直接发送到 [https://reviews.freebsd.org/](https://reviews.freebsd.org/)），具体格式可以参考列表中其他软件的示例。如果长时间无人回应，可向邮件列表发送询问，确认是否有人能够协助提交。如果仍无人回应，可在一周后再次发送。
 
 ### 参考文献
 
