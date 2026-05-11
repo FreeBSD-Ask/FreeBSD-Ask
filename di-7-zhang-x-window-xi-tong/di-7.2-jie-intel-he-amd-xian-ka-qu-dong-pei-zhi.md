@@ -8,7 +8,7 @@
 
 > **技巧**
 >
-> 若要使用 pkg 安装，可参照本书其他章节配置的 kernel modules（kmods）内核模块源。
+> 如果要使用 pkg 安装，可参照本书其他章节配置的 kernel modules（kmods）内核模块源。
 
 ```sh
 # cd /usr/ports/graphics/drm-61-kmod
