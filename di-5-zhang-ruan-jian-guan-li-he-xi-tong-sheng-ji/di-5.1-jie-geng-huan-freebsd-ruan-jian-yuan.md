@@ -108,8 +108,6 @@ quarterly 分支类似于 Debian 的 Stable 版本，通过固定软件包版本
 
 ### 参考文献
 
-关于 quarterly 分支的更多信息，可以参考以下官方文档。
-
 - FreeBSD Project. Ports/QuarterlyBranch[EB/OL]. [2026-03-25]. <https://wiki.freebsd.org/Ports/QuarterlyBranch>. 说明 Ports 季度分支的创建规则与维护策略。
 - FreeBSD Project. pkg -- package manager[EB/OL]. [2026-04-17]. <https://man.freebsd.org/cgi/man.cgi?query=pkg&sektion=8>. FreeBSD 包管理器手册页。
 
@@ -465,7 +463,7 @@ USTC-base: {
 
 > **注意**
 >
-> `--depth 1`（仅拉取最新的日志和提交记录）会给服务器带来较大计算压力，请尽量使用参数 `--filter=tree:0` 进行拉取。
+> `--depth 1`（仅拉取最新的日志和提交记录）会给服务器带来较大计算压力，请尽量使用参数 `--filter=tree:0` 拉取。
 
 ### 通过归档文件获取 Ports
 
@@ -518,7 +516,7 @@ MASTER_SITE_OVERRIDE?=https://mirrors.ustc.edu.cn/freebsd-ports/distfiles/${DIST
 
 ### 平衡安全与便利
 
-在配置软件源时，安全性与便利性难以兼顾。使用非官方镜像站虽然提升了下载速度，但引入了中间人攻击的风险——镜像站管理员理论上可以在软件包中注入恶意代码。FreeBSD 官方要求镜像站使用 `zfs send/receive` 而非 rsync 来同步数据，部分原因正是为了降低此类风险。对于安全要求较高的生产环境，建议使用官方源或自行搭建 Poudriere 构建服务器，以完全控制软件包。
+使用非官方镜像站虽然提升了下载速度，但引入了中间人攻击的风险——镜像站管理员理论上可以在软件包中注入恶意代码。FreeBSD 官方要求镜像站使用 `zfs send/receive` 而非 rsync 来同步数据，部分原因正是为了降低此类风险。对于安全要求较高的生产环境，建议使用官方源或自行搭建 Poudriere 构建服务器，以完全控制软件包。
 
 ### 为什么 pkg 配置文件中要写完整选项（mirror_type / signature_type / fingerprints）
 

@@ -151,7 +151,7 @@ usr/lib/clang/18.1.8/include
 
 接下来：更新到最新的点版本及该点版本上最新的补丁版本（如 `X.Z-RELEASE-pN`）
 >
-> 最后：进行大版本（`X.Z-RELEASE-pN`——>`A.0-RELEASE`）的更迭。
+> 最后：完成大版本（`X.Z-RELEASE-pN`——>`A.0-RELEASE`）的更迭。
 >
 > 参见：libsys.so.7 not found when upgrading userland with legacy freebsd-update[EB/OL]. [2026-03-26]. <https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=289769>。
 
@@ -339,7 +339,7 @@ Kernel updates have been installed.  Please reboot and run
 14.3-RELEASE-p6
 ```
 
-可以看到，当前已安装内核的版本和补丁级别是 15.0-RELEASE。但用户空间和当前正在运行的系统仍是 14.3-RELEASE，因此需要按照 `freebsd-update` 的提示进行重启：
+可以看到，当前已安装内核的版本和补丁级别是 15.0-RELEASE。但用户空间和当前正在运行的系统仍是 14.3-RELEASE，因此需要按照 `freebsd-update` 的提示重启：
 
 ```sh
 # reboot

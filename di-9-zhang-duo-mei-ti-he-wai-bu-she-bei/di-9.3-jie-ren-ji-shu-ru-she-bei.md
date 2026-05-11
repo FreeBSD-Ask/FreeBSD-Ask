@@ -30,7 +30,7 @@ $ xinput set-prop 6 "Device Enabled" 0    # 禁用 ID 为 6 的输入设备
 
 ### Apple Magic Trackpad
 
-Apple Magic Trackpad（妙控板）触摸板系列因其压力感应技术带来的精确操作体验而广受认可。
+Apple Magic Trackpad（妙控板）触摸板系列基于压力感应技术提供精确操作体验。
 
 FreeBSD 操作系统支持 Apple 妙控板硬件，但需要加载 `bcm5974` 内核模块才能正常启用其功能：
 

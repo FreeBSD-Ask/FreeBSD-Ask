@@ -1,6 +1,6 @@
 # 5.3 使用 Ports 以源代码方式安装软件
 
-Ports 是 FreeBSD 从源代码构建软件的框架，与 pkg 二进制包互补——当需要自定义编译选项、打补丁或安装 pkg 仓库中未收录的软件时，需使用 Ports。
+Ports 是 FreeBSD 从源代码构建软件的框架，适用于需要自定义编译选项、打补丁或安装 pkg 仓库中未收录的软件。
 
 ## Ports 与 Port 概述
 
@@ -23,7 +23,7 @@ Submitted by:   jkh
 
 > **技巧**
 >
-> 由上述示例可知：对于一个开源项目，无论使用何种版本控制系统，保留完整的提交记录都是非常重要的。读者逐渐会发现，这不仅是考古上的意义。
+> 由上述示例可知：对于一个开源项目，无论使用何种版本控制系统，保留完整的提交记录都是非常重要的。
 
 NetBSD 和 OpenBSD 也使用 Ports，但实现并不通用。
 
@@ -224,7 +224,7 @@ Ports 构建 pkg 软件包的完整流程如下图所示。
 
 ## 使用 Git 获取 Ports
 
-Git 是获取 Ports 源代码的推荐方式，可以方便地进行版本管理和更新。
+Git 是获取 Ports 源代码的推荐方式，可以方便地管理版本和更新。
 
 ### 安装 Git
 
@@ -254,7 +254,7 @@ Git 是获取 Ports 源代码的推荐方式，可以方便地进行版本管理
 
 ### 完全拉取 Ports 存储库（FreeBSD 官方）并指定分支
 
-如果需要完整的提交历史和所有分支，可以进行完整克隆。
+如果需要完整的提交历史和所有分支，可以完整克隆。
 
 ```sh
 # git clone https://git.FreeBSD.org/ports.git /usr/ports
@@ -309,7 +309,7 @@ Git 分支已经切换成功。
 # git pull # 同步更新上游 Ports
 ```
 
-如果提示本地已经修改，可以放弃本地修改后再进行更新：
+如果提示本地已经修改，可以放弃本地修改后再更新：
 
 ```sh
 # git checkout . # 放弃本地修改
@@ -382,7 +382,7 @@ root@ykla:/usr/ports/sysutils/htop # make all-depends-list
 
 ## 如何删除当前 Port 及其依赖的配置文件
 
-如果需要清理之前配置的选项，可以使用以下命令删除当前 Port 及其所有依赖的配置文件。
+如果需要清理之前配置的选项，可以使用以下命令删除当前 Port 及其所有依赖的配置文件。该命令会递归遍历依赖树，逐一清除每个 Port 的 `make config` 设置，恢复为默认构建参数。
 
 ```sh
 # make rmconfig-recursive
@@ -390,7 +390,7 @@ root@ykla:/usr/ports/sysutils/htop # make all-depends-list
 
 ## 如何一次性下载所有需要的软件包
 
-为了避免在编译过程中因网络问题中断，可以先一次性下载所有需要的软件包。
+为了避免在编译过程中因网络问题中断，可以先一次性下载所有需要的软件包。`fetch-recursive` 会递归获取主 Port 及其全部依赖的源代码包，配合 `BATCH=yes` 跳过交互式选项。
 
 ```sh
 # make BATCH=yes fetch-recursive
@@ -398,7 +398,7 @@ root@ykla:/usr/ports/sysutils/htop # make all-depends-list
 
 ## Ports 编译的软件也可以打包为 pkg 包
 
-使用 Ports 编译安装的软件也可以打包为 pkg 格式的二进制包，方便在其他机器上安装。
+使用 Ports 编译安装的软件也可以打包为 pkg 格式的二进制包，方便在其他机器上部署，避免重复编译。打包后的文件默认输出至当前目录，可拷贝到目标机器后用 `pkg add` 安装。
 
 ```sh
 # pkg create nginx
@@ -479,9 +479,9 @@ portupgrade 是另一个常用的 Ports 更新工具。
 - FreeBSD Project. portmaster -- manage your ports without external databases or languages[EB/OL]. [2026-03-25]. <https://man.freebsd.org/cgi/man.cgi?portmaster(8)>. 无需外部数据库的 Ports 管理工具完整说明。
 - FreeBSD Project. portupgrade, portinstall -- tools to upgrade installed packages or install new ones via ports or packages[EB/OL]. [2026-03-25]. <https://man.freebsd.org/cgi/man.cgi?portupgrade(1)>. Ports 升级与安装工具的官方技术文档。
 
-## FreeBSD USE
+## 全局设置 Ports 构建选项
 
-FreeBSD USE 是 Ports 框架中控制构建选项和依赖的机制。
+FreeBSD Ports 框架支持在 **/etc/make.conf** 中全局控制构建选项和依赖。
 
 ### 如何全局屏蔽 MySQL
 
@@ -661,7 +661,7 @@ max cache size                      10.0 GB
 
 ### ccache4
 
-ccache4 是目前的最新版本，提供了更好的性能和功能。
+ccache4 是更新的主要版本，安装与配置方式与 ccache3 相同，仅包名不同。
 
 使用 pkg 安装：
 
@@ -676,39 +676,7 @@ ccache4 是目前的最新版本，提供了更好的性能和功能。
 # make install clean
 ```
 
-安装完成后，同样可以查看软链接情况。
-
-- 查看软链接情况：
-
-```sh
-# ls -al /usr/local/libexec/ccache  # 查看 /usr/local/libexec/ccache 目录下的详细文件信息
-total 55
-drwxr-xr-x   3 root wheel 13  9月 20 02:29 .
-drwxr-xr-x  20 root wheel 54  9月 20 02:29 ..
-lrwxr-xr-x   1 root wheel 21  9月 20 02:29 c++ -> /usr/local/bin/ccache
-lrwxr-xr-x   1 root wheel 21  9月 20 02:29 cc -> /usr/local/bin/ccache
-lrwxr-xr-x   1 root wheel 21  9月 20 02:29 CC -> /usr/local/bin/ccache
-lrwxr-xr-x   1 root wheel 21  9月 20 02:29 clang -> /usr/local/bin/ccache
-lrwxr-xr-x   1 root wheel 21  9月 20 02:29 clang++ -> /usr/local/bin/ccache
-lrwxr-xr-x   1 root wheel 21  9月 20 02:29 clang++15 -> /usr/local/bin/ccache
-lrwxr-xr-x   1 root wheel 21  9月 20 02:29 clang15 -> /usr/local/bin/ccache
-lrwxr-xr-x   1 root wheel 21  9月 20 02:29 cpp13 -> /usr/local/bin/ccache
-lrwxr-xr-x   1 root wheel 21  9月 20 02:29 g++13 -> /usr/local/bin/ccache
-lrwxr-xr-x   1 root wheel 21  9月 20 02:29 gcc13 -> /usr/local/bin/ccache
-drwxr-xr-x   2 root wheel 13  9月 20 02:29 world
-```
-
----
-
-ccache4 的配置方式与 ccache3 类似。
-
-- 修改 **/etc/make.conf** 文件，加入下面一行启用 ccache 加速编译：
-
-```ini
-WITH_CCACHE_BUILD=yes
-```
-
-同样，建议为 ccache4 设置缓存大小上限。
+软链接与 **/etc/make.conf** 配置均与 ccache3 一致，不再赘述。ccache4 的输出格式略有不同：
 
 - 设置编译缓存最大为 20 GB：
 
@@ -716,8 +684,6 @@ WITH_CCACHE_BUILD=yes
 # ccache -M 20G
 Set cache size limit to 20.0 GB
 ```
-
-在使用一段时间后，可以查看 ccache4 的编译缓存统计信息。
 
 - 在 Ports 编译一段时间后，查看编译缓存：
 
@@ -735,9 +701,7 @@ Local storage:
   Misses:          448 /  558 (80.29%)
 ```
 
-如果需要查看 ccache 的详细配置参数，可以使用以下命令。
-
-显示 ccache 的当前配置参数：
+显示 ccache4 的当前配置参数：
 
 ```sh
 # ccache -p
@@ -819,17 +783,6 @@ wget2 参数说明：
 
 ## 附录：Port 安装示例
 
-### 查看 python 的 ports 在哪个位置
-
-可以再次使用 `whereis` 命令来确认 python 的具体位置。
-
-查找 python 可执行文件、源代码及手册页所在路径：
-
-```sh
-# whereis python
-python: /usr/ports/lang/python
-```
-
 ### 安装 python3
 
 现在以安装 python3 为例，演示如何使用 Ports 编译安装软件。
@@ -839,7 +792,7 @@ python: /usr/ports/lang/python
 # make BATCH=yes clean
 ```
 
-其中 `BATCH=yes`（批处理）意味着使用默认参数进行构建。
+其中 `BATCH=yes`（批处理）意味着按默认参数构建。
 
 ### 如何设置所有必需的依赖
 
@@ -916,6 +869,6 @@ make: stopped in /usr/ports/java/openjdk21
 
 ## 课后习题
 
-1. 尝试复活 Gentoo BSD 项目。
+1. 使用 Ports 编译安装 nginx，并通过 `make config` 添加第三方模块支持（如 brotli）。
 2. 修改 pkg 包管理器源代码，使其支持并行下载和安装。
 3. Ports 的源代码编译模型与 pkg 的二进制分发模型代表两种对立的软件交付哲学：编译时定制与运行时效率。分析这两种模型在安全审计、依赖管理与用户体验方面的结构性差异，并讨论二者能否在一个统一的构建与分发管道中共存。

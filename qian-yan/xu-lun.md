@@ -23,17 +23,17 @@
 
 **第 1 章 FreeBSD 初见**：介绍 UNIX 的起源与发展，涵盖 GNU 操作系统与自由软件运动、Linux 与类 UNIX 系统的关系，以及 FreeBSD 的命名渊源与历史背景。
 
-**第 2 章 FreeBSD 安装基础**：指导使用 FreeBSD 内置安装工具 `bsdinstall` 完成系统安装，涵盖 VMware、VirtualBox、Hyper-V 等虚拟化平台上的安装方法及安装故障排除。
+**第 2 章 FreeBSD 安装基础**：指导使用 FreeBSD 内置安装工具 `bsdinstall` 完成系统安装，涵盖 VMware、VirtualBox、Hyper-V 等虚拟化平台上的安装方法、安装故障排除，以及 USB 启动盘恢复为普通存储设备的方法。
 
 **第 3 章 FreeBSD 高级安装**：介绍双系统配置、基于 Apple M1 平台的安装方案，以及腾讯云、阿里云、KVM/QEMU 等云平台和虚拟化环境中的安装方法。
 
 **第 4 章 FreeBSD 基础**：面向 Windows 和 Linux 用户提供迁移指南，涵盖系统目录结构、虚拟控制台、shell 使用、命令行基础、文本编辑器、用户与权限管理及压缩工具等基础操作。
 
-**第 5 章 软件管理和系统升级**：介绍 FreeBSD 软件源的更换方法，使用 pkg 管理二进制包、使用 Ports 以源代码方式安装软件，以及通过 freebsd-update 或源代码方式进行系统更新。
+**第 5 章 软件管理和系统升级**：介绍 FreeBSD 软件源的更换方法，使用 pkg 管理二进制包、使用 Ports 以源代码方式安装软件，系统更新检测、通过 freebsd-update 或源代码方式进行系统更新，以及使用 DVD 安装软件和 FreeBSD 镜像站现状。
 
 **第 6 章 网络管理**：介绍基础与高级网络配置、无线网络（Wi-Fi）配置、USB 网络共享、蓝牙、系统代理及 V2Ray、Mihomo 等代理工具的配置。
 
-**第 7 章 X Window 系统**：介绍 Intel、AMD 和 NVIDIA 显卡驱动的安装与配置，系统字体的替换方法，以及远程桌面访问。
+**第 7 章 X Window 系统**：介绍显卡驱动概述，Intel、AMD 和 NVIDIA 显卡驱动的安装与配置，系统字体的替换方法，以及远程桌面访问。
 
 **第 8 章 桌面环境**：介绍在 FreeBSD 上运行的各类桌面环境与窗口管理器，包括 KDE 6（X11 与 Wayland 会话）、MATE、Xfce、Cinnamon、LXQt、GNOME、LXDE、bspwm、IceWM、Hyprland 及 CDE。
 
@@ -41,11 +41,11 @@
 
 **第 10 章 本地化与输入法**：介绍本地化环境变量配置，以及 Fcitx、IBus 输入法框架和五笔输入法的安装与设置。
 
-**第 11 章 Linux 二进制兼容层**：介绍 FreeBSD 的 Linux 兼容层架构，涵盖 Rocky Linux、Ubuntu/Debian、Arch Linux、Slackware、openSUSE、Gentoo 等多种 Linux 发行版的兼容环境搭建，以及微信、QQ、WPS Office 等 Linux 应用的运行方法。
+**第 11 章 Linux 二进制兼容层**：介绍 FreeBSD 的 Linux 兼容层架构，涵盖 Rocky Linux、Ubuntu/Debian、Arch Linux、Slackware、openSUSE、Gentoo 等多种 Linux 发行版的兼容环境搭建与 Linux Jail，以及微信、QQ、WPS Office 等 Linux 应用的运行方法和故障排除。
 
 **第 12 章 游戏、科学计算和专业工具**：介绍 Ren'Py 视觉小说引擎、Godot 游戏引擎、Minecraft、Steam 客户端和 Wine 配置，以及科研和专业计算工具的使用。
 
-**第 13 章 人工智能（AI）**：介绍在 FreeBSD 上运行人工智能相关工具的方法。
+**第 13 章 人工智能**：介绍人工智能概述与 AI 大模型在 FreeBSD 上的本地部署方法。
 
 **第 14 章 系统管理**：讲解启动引导器、UEFI 固件管理、服务管理、进程与守护进程、用户分级、权限提升工具（sudo、doas 等）、bsdconfig 配置工具、OpenSSH、设备资源提示、定时任务、sysctl 工具、NTP 时间同步及 Live 镜像与系统恢复等系统管理功能。
 
@@ -61,7 +61,7 @@
 
 **第 20 章 虚拟化与容器管理**：介绍使用 bhyve 及 vm-bhyve 工具安装 Windows 11、通过 BVCP 的 Web 界面管理 bhyve 虚拟机，以及 Podman 容器管理和在 FreeBSD 上安装 VirtualBox。
 
-**第 21 章 数据库管理**：介绍 PostgreSQL、MySQL 5.x/8.x 系列及 MongoDB 8.0 在 FreeBSD 上的安装与配置，以及 pgAdmin4 管理工具的使用。
+**第 21 章 数据库管理**：介绍数据库概论，以及 PostgreSQL、MySQL 5.x/8.x 系列及 MongoDB 8.0 在 FreeBSD 上的安装与配置，同时涵盖 pgAdmin4 管理工具的使用。
 
 **第 22 章 服务器**：介绍 FTP 服务器、Rsync 数据同步、Samba 文件共享、NFS 服务器、零配置网络（mDNS/DNS-SD）及 Webmin 管理平台等服务的搭建。
 

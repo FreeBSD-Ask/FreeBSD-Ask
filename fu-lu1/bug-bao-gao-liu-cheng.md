@@ -4,7 +4,7 @@
 >
 > 提交 Bug 报告前，建议先发送到邮件列表咨询，以确认问题性质并避免重复报告浪费社区人力资源。
 
-FreeBSD 缺陷报告系统位于 [https://bugs.freebsd.org/bugzilla](https://bugs.freebsd.org/bugzilla)，提供标准化的缺陷跟踪与管理流程。
+FreeBSD 缺陷报告系统位于 [https://bugs.freebsd.org/bugzilla](https://bugs.freebsd.org/bugzilla)，提供缺陷跟踪与管理功能。
 
 当遇到问题时，建议按照以下流程处理：
 

@@ -2,7 +2,7 @@
 
 从源代码构建 FreeBSD 可以自定义内核选项和编译参数，适用于 freebsd-update 不支持的架构或需要裁剪系统的场景。
 
-基本思路是获取 FreeBSD 的源代码，然后进行编译和安装。可以使用 Git 直接拉取代码，也可以从 ISO 镜像中下载 txz 压缩文件，或者从 GitHub 下载当前 FreeBSD 项目的 zip 压缩包。
+基本思路是获取 FreeBSD 的源代码，然后编译安装。可以使用 Git 直接拉取代码，也可以从 ISO 镜像中下载 txz 压缩文件，或者从 GitHub 下载当前 FreeBSD 项目的 zip 压缩包。
 
 编译流程参见 Handbook 即可。
 

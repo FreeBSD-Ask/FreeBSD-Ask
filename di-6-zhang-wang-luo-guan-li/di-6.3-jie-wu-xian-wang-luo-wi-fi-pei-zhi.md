@@ -123,7 +123,7 @@ test_5G                           50:d6:c5:93:d7:64   36   54M  -78:-95   100 EP
 
 ### 使用 WPA2 认证
 
-对于加密的无线网络，需要使用 Wi-Fi 保护访问（Wi-Fi Protected Access，WPA）配置文件进行连接。WPA2/3 是目前主流的无线网络安全协议，提供了数据加密与身份认证功能。
+对于加密的无线网络，需要使用 Wi-Fi 保护访问（Wi-Fi Protected Access，WPA）配置文件连接。WPA2/3 是目前主流的无线网络安全协议，提供了数据加密与身份认证功能。
 
 无线网络中的认证过程由 wpa_supplicant(8) 管理。创建 **/etc/wpa_supplicant.conf** 配置文件，内容如下：
 
@@ -155,7 +155,7 @@ psk="freebsdcn"
 # service netif restart
 ```
 
-如果网络连接正常，再进行永久性配置。在 **/etc/rc.conf** 文件中添加或修改相关配置条目：
+如果网络连接正常，再做永久性配置。在 **/etc/rc.conf** 文件中添加或修改相关配置条目：
 
 ```ini
 wlans_rtwn0="wlan0"                      # 将物理无线设备 rtwn0 绑定到 wlan0 接口
@@ -216,7 +216,7 @@ psk="WIFI 密码"
 }
 ```
 
-完成配置后，执行以下命令启动 Wi-Fi 进行测试：
+完成配置后，执行以下命令启动 Wi-Fi 测试：
 
 ```sh
 # ifconfig wlan0 create wlandev iwlwifi0
@@ -330,7 +330,7 @@ wlans_bwn0="wlan0"
 # fwget
 ```
 
-如果当前系统没有网络连接，可以通过 USB 网络共享等方式临时获得网络连接后再执行上述命令；也可手动从 [https://mirrors.ustc.edu.cn/freebsd-pkg/FreeBSD%3A14%3Aamd64/kmods_latest_3/All/](https://mirrors.ustc.edu.cn/freebsd-pkg/FreeBSD%3A14%3Aamd64/kmods_latest_3/All/) 等镜像站点下载所需固件包，然后使用以下命令进行安装：
+如果当前系统没有网络连接，可以通过 USB 网络共享等方式临时获得网络连接后再执行上述命令；也可手动从 [https://mirrors.ustc.edu.cn/freebsd-pkg/FreeBSD%3A14%3Aamd64/kmods_latest_3/All/](https://mirrors.ustc.edu.cn/freebsd-pkg/FreeBSD%3A14%3Aamd64/kmods_latest_3/All/) 等镜像站点下载所需固件包，然后使用以下命令安装：
 
 ```sh
 # pkg add /path/to/firmware.pkg
@@ -364,7 +364,7 @@ bwn_v4_n_ucode_load="YES"       # 加载 BWN V4 N 模式无线固件
 bwn_v4_lp_ucode_load="YES"      # 加载 BWN V4 低功耗模式无线固件
 ```
 
-完成后重启系统，使用 `ifconfig` 检查是否存在 `wlan0` 接口，然后按照前文所述方法进行配置。
+完成后重启系统，使用 `ifconfig` 检查是否存在 `wlan0` 接口，然后按照前文所述方法配置。
 
 ### 参考文献
 
