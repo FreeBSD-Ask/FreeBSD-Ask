@@ -841,5 +841,5 @@ text-caps-lock-color=000000FF
 
 ## 课后习题
 
-1. 查找 Hyprland 合成器的 Port 源代码，分析其与 wlroots 的技术关联。
-2. 重构本节，进行全面增补和重写。
+1. 分析 Hyprland 与 wlroots 的技术关联，说明 wlroots 库在 Hyprland 合成器中承担的功能。
+2. 在 Hyprland 的 hyprland.conf 中配置自定义窗口规则，为特定应用（如终端、浏览器）设置默认悬浮或平铺行为。
