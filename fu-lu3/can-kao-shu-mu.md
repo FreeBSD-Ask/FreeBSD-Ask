@@ -38,7 +38,7 @@
 | ![Unix 四分之一世纪](../.gitbook/assets/unix25.png) <br><br> 《Unix 四分之一世纪》 | Peter H. Salus | 978-0201547771 <br><br> Addison-Wesley Professional | UNIX 发展历史书籍，详细记录了 Unix 从诞生到普及的技术演进历程 |
 | ![Unix 痛恨者手册](../.gitbook/assets/unixno.png) <br><br> 《Unix 痛恨者手册》 | Simson Garfinkel、Daniel Weise、Steven Strassmann | 978-1-56884-203-5 <br><br> IDG Books Worldwide, Inc. | Unix 技术批评书籍，从批评视角分析 Unix 系统的设计缺陷和技术局限性 |
 | ![大教堂与集市](../.gitbook/assets/dajiaotang.png) <br><br> 《大教堂与集市》 | [美] Eric S. Raymond <br><br> 卫剑钒 译 | 978-7-111-45247-8 <br><br> 机械工业出版社 | 开源运动历史书籍，阐释集中式与分布式两种软件开发模式的差异 |
-| ![UNIX 传奇：历史与回忆](../.gitbook/assets/unixchuanqi.png) <br><br> 《UNIX 传奇——历史与回忆》 | [美] Brian W. Kernighan 著 <br><br> 韩磊 译 | 978-7-115-55717-9 <br><br> 人民邮电出版社 | UNIX 发展历史书籍，记录 Unix 技术发展的关键节点和历史背景 |
+| ![UNIX 传奇：历史与回忆](../.gitbook/assets/unixchuanqi.png) <br><br> 《UNIX 传奇：历史与回忆》 | [美] Brian W. Kernighan 著 <br><br> 韩磊 译 | 978-7-115-55717-9 <br><br> 人民邮电出版社 | UNIX 发展历史书籍，记录 Unix 技术发展的关键节点和历史背景 |
 
 以下书籍阐述了 UNIX 的设计理念，有助于读者理解其软件工程思想与技术哲学。
 
@@ -109,7 +109,7 @@
 - *FreeBSD Mastery: Advanced ZFS*
 - *FreeBSD Mastery: Jails*
 
-该系列书籍侧重基础操作，类似面向非计算机专业的计算机导论课程。该系列书籍的历史意义重于实践价值。
+该系列书籍内容侧重基础操作，定位类似于面向非计算机专业的计算机导论课程，其历史意义重于实践价值。
 
 ### *Absolute FreeBSD, 3rd Edition: The Complete Guide to FreeBSD*
 
