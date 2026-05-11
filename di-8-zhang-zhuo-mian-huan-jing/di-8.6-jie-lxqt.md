@@ -2,7 +2,7 @@
 
 ## LXQt 桌面环境概述
 
-LXQt 是一款基于 Qt 的轻量级桌面环境。本节通过 pkg 安装 xorg、sddm、lxqt 及输入法、字体等配套组件。
+LXQt 是一款基于 Qt 的轻量级桌面环境。本节通过 pkg 安装 xorg、sddm、lxqt 及输入法、字体等组件。
 
 ## 安装 LXQt 桌面环境
 
