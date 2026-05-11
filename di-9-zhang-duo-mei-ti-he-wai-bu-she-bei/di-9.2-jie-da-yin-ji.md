@@ -1,8 +1,8 @@
 # 9.2 打印机
 
-CUPS（通用 Unix 打印系统，Common Unix Printing System）是一种模块化的打印系统架构，支持多种打印协议和打印机设备，并可将打印机通过 IPP（互联网打印协议，Internet Printing Protocol）或 SMB（服务器消息块，Server Message Block）协议共享到网络中。
+CUPS（通用 Unix 打印系统，Common Unix Printing System）是模块化打印系统架构，支持多种打印协议和打印机设备，可将打印机通过 IPP（互联网打印协议，Internet Printing Protocol）或 SMB（服务器消息块，Server Message Block）协议共享到网络。
 
-打印机通过 USB（通用串行总线，Universal Serial Bus）总线接入打印服务器（即 FreeBSD 系统）。打印服务器将打印机共享到局域网中，供局域网内的设备使用。局域网中的其他计算机可通过发送多播数据包，利用零配置网络技术自动查询局域网中可用的打印机。
+打印机通过 USB（通用串行总线，Universal Serial Bus）总线接入打印服务器（即 FreeBSD 系统）。打印服务器将打印机共享到局域网中。局域网内其他计算机可通过发送多播数据包，利用零配置网络技术自动查询可用打印机。
 
 已在 Android、macOS、Debian 等平台上测试通过，上述系统均可正常发现并使用该打印服务器。
 
