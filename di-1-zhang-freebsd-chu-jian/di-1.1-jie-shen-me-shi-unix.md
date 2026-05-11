@@ -4,7 +4,7 @@ FreeBSD 源自 BSD，即加州大学伯克利分校开发的 UNIX® 版本。
 
 ## 何谓 UNIX？
 
-UNIX 的内涵由具体技术实现演变为文化象征。UNIX 系统起源于美国电话电报公司（American Telephone & Telegraph，AT&T）贝尔实验室。
+UNIX 的内涵已从具体技术实现演变为一种文化象征。UNIX 系统起源于美国电话电报公司（American Telephone & Telegraph，AT&T）贝尔实验室。
 
 20 世纪 60 年代末至 70 年代初，UNIX 作为一款操作系统，最初采用汇编语言编写，后来主要以 C 语言重写。
 
@@ -43,7 +43,7 @@ UNIX 操作系统认证查询网址：[The Open Group official register of UNIX 
 
 ## 传统的 UNIX 哲学观（以《UNIX 编程艺术》为核心）
 
-UNIX 哲学是 UNIX 操作系统长期开发实践中逐渐形成的设计理念，由肯·汤普森（Ken Thompson）与丹尼斯·里奇（Dennis Ritchie）等早期核心开发者共同塑造。其核心主张可归纳为以下原则：
+UNIX 哲学是 UNIX 操作系统于长期开发实践中逐渐形成的设计理念，由肯·汤普森（Ken Thompson）与丹尼斯·里奇（Dennis Ritchie）等早期核心开发者共同塑造。其核心主张可归纳为以下原则：
 
 - **小即美**：程序应设计得简洁小巧，功能单一明确，便于理解和维护。
 - **一个程序只做一件事**：每个工具专注于单一功能，通过组合多个工具协作完成复杂任务。
