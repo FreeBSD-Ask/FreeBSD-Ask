@@ -355,7 +355,7 @@ crw-r-----  1 root operator 0x68 May 10 09:49 cd0	# 光学介质
 
 ## 启动消息 dmesg
 
-当 FreeBSD 启动时，大多数启动消息都与正在检测的设备有关。启动消息的副本保存在 **/var/run/dmesg.boot** 中。
+FreeBSD 启动时，大多数启动消息都与正在检测的设备有关。启动消息的副本保存在 **/var/run/dmesg.boot** 中。
 
 以下示例是 Radxa X4 16G 128G eMMC 款在 15.0-CURRENT 下完整的启动消息内容。
 
