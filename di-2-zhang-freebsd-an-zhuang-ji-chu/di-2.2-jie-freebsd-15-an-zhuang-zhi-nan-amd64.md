@@ -860,5 +860,5 @@ Add another user? (yes/no) [no]: # 是否继续添加其他用户
 ## 课后习题
 
 1. 阅读 bsdinstall 的源代码脚本（**/usr/src/usr.sbin/bsdinstall/**），定位其中处理主机名设置的逻辑，分析未设置主机名时系统回退为默认值的具体机制。
-2. 阅读 bsdinstall ZFS 自动分区脚本（**/usr/src/usr.sbin/bsdinstall/scripts/zfsboot**），分析 swap 卷大小的默认值（2 GB）是如何设定的。讨论是否应当根据物理内存容量动态调整 swap 大小，以及如果实施动态调整，在脚本中应当如何设计相应的计算逻辑。
-3. bsdinstall 的交互式问答风格假定安装者是具备技术判断能力的人类操作者。分析这一假定在 AI 辅助安装工具日益普及的背景下面临的挑战，讨论安装程序是否需要为自动化脚本调用场景重新设计接口。
+2. 阅读 bsdinstall ZFS 自动分区脚本（**/usr/src/usr.sbin/bsdinstall/scripts/zfsboot**），分析 swap 卷大小的默认值（2 GB）的设定依据，说明该值在不同物理内存容量下是否需要调整。
+3. 对比 bsdinstall 的交互安装模式与 scripted 模式（`bsdinstall script`），说明两者的适用场景差异。
