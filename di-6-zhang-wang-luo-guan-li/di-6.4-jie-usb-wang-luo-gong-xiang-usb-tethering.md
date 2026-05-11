@@ -2,13 +2,13 @@
 
 ## 概述
 
-USB 网络共享（USB tethering）是一种通过通用串行总线（Universal Serial Bus，USB）物理层将移动设备（如智能手机、平板电脑）的广域网（WAN）连接共享给计算机系统的技术。
+USB 网络共享（USB tethering）是通过通用串行总线（Universal Serial Bus，USB）物理层将移动设备（如智能手机、平板电脑）的广域网（WAN）连接共享给计算机系统的技术。
 
-以下配置方法已在红米 Note 12 5G 上完成测试验证，从技术原理而言可同时支持 Android 和 iOS 设备。
+以下配置方法已在红米 Note 12 5G 上完成测试验证，可同时支持 Android 和 iOS 设备。
 
 ### Wi-Fi 共享的流量特性
 
-大多数新款 Android 手机可在开启 Wi-Fi 并关闭移动数据的同时将网络共享给 FreeBSD。该功能通过将手机已建立的 Wi-Fi 连接经由 USB 接口转发给 FreeBSD 实现，不会产生移动数据流量消耗。
+大多数新款 Android 手机在开启 Wi-Fi 并关闭移动数据的情况下可将网络共享给 FreeBSD。该功能通过将手机已建立的 Wi-Fi 连接经由 USB 接口转发给 FreeBSD 实现，不产生移动数据流量。
 
 ![USB 网络共享](../.gitbook/assets/tethering.png)
 
