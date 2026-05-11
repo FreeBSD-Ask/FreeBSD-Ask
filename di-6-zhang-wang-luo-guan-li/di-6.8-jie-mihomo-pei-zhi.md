@@ -332,7 +332,7 @@ $ clashctl config regen
 
 以下为 Clash for FreeBSD 项目有待改进之处：
 
-- 与 Bash 解耦，支持默认的 sh，使其更符合 FreeBSD 的默认环境。
+- 与 Bash 解耦，支持默认 sh，更好适配 FreeBSD 默认环境。
 
 ## 课后习题
 
