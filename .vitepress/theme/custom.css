@@ -5,9 +5,9 @@
  /* 只给相邻段落之间加 1em 间距 */
 }
 
-/* 隐藏 MathJax 可复制文本节点 */
-.mjx-script,
-script[type="math/tex"] {
+/* 隐藏 MathJax 3 可复制文本节点 */
+.MathJax_Text,
+.mjx-assistive-mml {
   display: none !important;
 }
 
