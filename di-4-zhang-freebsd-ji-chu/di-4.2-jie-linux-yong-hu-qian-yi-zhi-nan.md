@@ -104,7 +104,7 @@ FreeBSD 基本系统几乎不含任何与 BSD 协议不兼容的软件。
 | Windows | [不固定](https://docs.microsoft.com/zh-cn/lifecycle/faq/windows) | 可选 | 专有 | 可选 | PowerShell | Windows 桌面 |
 | macOS | 1 年/约 3 年 | 无 | [专有](https://www.apple.com/legal/sla/) | clang | Zsh | Aqua |
 
-Linux 广泛使用 GNU 工具，故理论上，凡不依赖特定 Linux 函数库者，均可在 FreeBSD 上运行。
+Linux 广泛使用 GNU 工具，因此理论上，凡不依赖特定 Linux 函数库者，均可在 FreeBSD 上运行。
 
 | Linux 命令/GNU 软件 | BSD Port/命令 | 作用说明 | 备注 |
 | ------------------- | ------------- | -------- | ---- |
