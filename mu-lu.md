@@ -142,9 +142,9 @@
 * [12.5 Wine 配置](di-12-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-12.5-jie-wine-pei-zhi.md)
 * [12.6 科研和专业计算](di-12-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-12.6-jie-ke-yan-he-zhuan-ye-ji-suan-gong-ju.md)
 
-## 第 13 章 人工智能（AI）
+## 第 13 章 人工智能
 
-* [13.1 人工智能哲学](di-13-zhang-ren-gong-zhi-neng-ai/di-13.1-jie-ren-gong-zhi-neng-ai-gai-shu.md)
+* [13.1 人工智能概述](di-13-zhang-ren-gong-zhi-neng-ai/di-13.1-jie-ren-gong-zhi-neng-ai-gai-shu.md)
 * [13.2 大模型本地部署](di-13-zhang-ren-gong-zhi-neng-ai/di-13.2-jie-ai-da-mo-xing-ben-di-bu-shu.md)
 
 ## 第 14 章 系统管理
