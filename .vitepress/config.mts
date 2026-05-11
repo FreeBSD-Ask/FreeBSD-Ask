@@ -34,7 +34,6 @@ export default defineConfig({
         // 开启图片懒加载
         lazyLoading: true
         },
-		math: true, // 数学公式
         lineNumbers: true, // 启用行号于代码块
         config: (md) => {
             // 使用 lightbox plugin
