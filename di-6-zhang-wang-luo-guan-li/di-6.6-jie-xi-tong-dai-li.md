@@ -90,19 +90,11 @@ $ chrome --proxy-server="127.0.0.1:1234"
 --proxy-server="socks4://<IP 地址>:<端口>"
 ```
 
-在图形界面下使 Chromium 默认通过代理启动，可通过修改桌面启动文件实现持久化配置。
+在图形界面下使 Chromium 默认通过代理启动，可修改桌面启动文件实现持久化配置。
 
-找到桌面环境为 Chromium 创建的桌面（desktop）文件，通常位于 **~/.local/share/applications/** 目录下：
+找到桌面环境为 Chromium 创建的 desktop 文件，通常位于 **~/.local/share/applications/** 目录：
 
-```sh
-~/
-└── .local/
-    └── share/
-        └── applications/
-            └── chromium-browser.desktop # Chromium 桌面启动文件
-```
-
-使用编辑器打开上述目录下的 Chromium desktop 文件 `chromium-browser.desktop`，找到 `Exec=chrome %U` 这一行，并在其后添加所需参数：
+使用编辑器打开 Chromium desktop 文件 `chromium-browser.desktop`，找到 `Exec=chrome %U` 一行并在其后添加所需参数：
 
 ```ini
 Comment[zh_CN]=Google web browser based on WebKit
