@@ -98,6 +98,6 @@ $ echo "exec ck-launch-session startlxqt" > ~/.xinitrc
 
 ## 课后习题
 
-1. 验证 LXQt 的 gvfs 依赖机制是否真正有效。
+1. 验证 LXQt 的 gvfs 依赖机制是否有效。
 2. 安装中文输入法进行体验。
-3. 修改 LXQt 桌面的默认图标主题加载机制，验证其界面显示行为变化，并记录到本节。
+3. 修改 LXQt 桌面的默认图标主题，验证其界面显示效果。
