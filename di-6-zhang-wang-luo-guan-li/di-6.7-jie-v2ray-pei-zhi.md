@@ -96,7 +96,7 @@ $ export ALL_PROXY="socks5://127.0.0.1:10808" # 设置 SOCKS5 代理
 
 部分网址无须通过代理服务器访问，例如境内网站或本地网络资源，需要分流处理。
 
-打开 config.json 文件，找到 routing 属性。其中的 rules 子属性用于配置流量分流规则，每条规则通常包含 ip 或 domain 等匹配条件。当 IP 或域名匹配到某条规则时，V2Ray 根据 outboundTag 将流量转发至对应的出站配置（如 proxy 表示代理、direct 表示直连、block 表示拦截）。将需要分流的域名或 IP 配置至相应规则即可，相关细节可参考 [V2Ray 官方文档](https://www.v2ray.com/)。通过 V2Ray 客户端导出的配置文件通常已包含默认的分流规则。
+打开 config.json 文件，找到 routing 属性。其中的 rules 子属性用于配置流量分流规则，每条规则通常包含 ip 或 domain 等匹配条件。IP 或域名匹配到某条规则时，V2Ray 根据 outboundTag 将流量转发至对应的出站配置（如 proxy 表示代理、direct 表示直连、block 表示拦截）。将需要分流的域名或 IP 配置至相应规则即可，相关细节可参考 [V2Ray 官方文档](https://www.v2ray.com/)。通过 V2Ray 客户端导出的配置文件通常已包含默认的分流规则。
 
 V2Ray 还预置了 geosite.dat 和 geoip.dat 两个资源文件：geosite.dat 按分类保存各类域名信息，geoip.dat 按分类保存各类 IP 地址信息。资源文件路径可通过设置环境变量 V2RAY_LOCATION_ASSET 指定，V2Ray 会自动在该路径下查找 geosite.dat 和 geoip.dat 文件。对于 Xray，则使用 XRAY_LOCATION_ASSET 环境变量来指定资源文件路径。注意：如果使用 Xray，请确保正确设置 XRAY_LOCATION_ASSET 环境变量，否则可能导致资源文件加载失败。
 
