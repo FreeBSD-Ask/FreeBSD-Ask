@@ -203,8 +203,8 @@ PC 端的 GUI 客户端建议使用 Cantata（`pkg install cantata`）。
 
 ## 课后习题
 
-1. 查找并安装 ffmpeg 的 Ports，修改其编译选项以启用 libuavs3d（AVS3 解码）和 libdavs2（AVS2 解码）支持，构建并验证其能否解码 AVS2/AVS3 编码文件。
+1. 修改 ffmpeg 的 Port 编译选项以启用 libuavs3d 支持，验证其能否解码 AVS3 编码的音频文件。
 
-2. 选取 MPD 的 OSS 输出配置机制，重构其最小实现。
+2. 配置 MPD 通过 OSS 音频驱动播放 DSD 格式音频，测试 DoP 传输模式是否正常工作。
 
-3. 修改 MPD 配置以同时启用多个音频输出设备，验证其能否正常切换输出。
+3. 为 MPD 配置多个音频输出设备（如内置声卡和 USB DAC），验证输出设备切换功能。
