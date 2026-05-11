@@ -146,6 +146,6 @@ $ cp /usr/local/share/applications/org.fcitx.Fcitx5.desktop ~/.config/autostart/
 
 ## 课后习题
 
-1. 测试 IBus 输入法框架在基于 Wayland 的 KDE 上使用体验，提交 PR。
+1. 在基于 Wayland 的 KDE 上测试 IBus 输入法框架的使用体验，记录输入法切换与候选词显示的稳定性。
 2. 适配 PipeWire 音频。
-3. Wayland 协议将合成器与显示服务器合并为单一进程，取消了 X11 的网络透明性。分析这一架构简化对远程桌面与屏幕共享场景的副作用，并讨论 FreeBSD 上 Wayland 合成器的安全隔离策略是否需要 jail 层面的补充。
+3. 在 FreeBSD 上测试 Wayland 合成器的远程屏幕共享功能（如通过 RDP 或 VNC），记录延迟与带宽占用情况。
