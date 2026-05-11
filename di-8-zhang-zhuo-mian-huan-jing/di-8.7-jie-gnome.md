@@ -271,5 +271,5 @@ $ ./install.sh
 
 1. 查找 GNOME 桌面环境的 Port 构建过程，分析其与 systemd 环境的历史关联，在 QEMU 中验证其在 FreeBSD 非 systemd 环境下的适配实现。
 2. 分析 GNOME 的 IBus 输入法框架集成机制，去除该默认的强制依赖项。
-3. 移植若干主题到 Ports。
-4. 移植若干图标到 Ports。
+3. 移植一些主题到 Ports。
+4. 移植一些图标到 Ports。
