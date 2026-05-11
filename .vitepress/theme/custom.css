@@ -5,10 +5,13 @@
  /* 只给相邻段落之间加 1em 间距 */
 }
 
-/* 隐藏 MathJax 3 可复制文本节点 */
-.MathJax_Text,
-.mjx-assistive-mml {
+mjx-assistive-mml {
   display: none !important;
+}
+
+mjx-container[jax="SVG"] {
+  display: block;
+  text-align: center;
 }
 
 /* 脚注加粗，非斜体 */
