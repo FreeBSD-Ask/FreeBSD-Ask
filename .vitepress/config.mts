@@ -35,6 +35,7 @@ export default defineConfig({
         lazyLoading: true
         },
         lineNumbers: true, // 启用行号于代码块
+        math: true, // 数学公式
         config: (md) => {
             // 使用 lightbox plugin
             md.use(lightbox, {});
