@@ -1,12 +1,12 @@
 # 7.5 系统字体
 
-FreeBSD 默认字体对中文的显示效果有限。本节介绍图形界面引入 Windows TrueType 字体的方法，以及控制台字体的替换配置。
+FreeBSD 默认字体对中文的显示效果欠佳。本节介绍图形界面引入 Windows TrueType 字体的方法，以及控制台字体的替换配置。
 
 ## GUI 图形界面字体
 
 首先提取 Windows `C:\Windows\Fonts` 目录下的所有 `.ttf` 和 `.ttc` 字体文件。macOS 字体文件格式虽同为 `.ttf`，仍需特殊处理。
 
-为便于管理新字体，创建一个目录存放 Windows 字体：
+为管理新字体，创建一个目录存放 Windows 字体：
 
 ```sh
 # mkdir -p /usr/local/share/fonts/WindowsFonts
@@ -70,7 +70,7 @@ vidcontrol -f b16.fnt
 
 ![设置完成后的 tty](../.gitbook/assets/tty1.png)
 
-上述命令为临时生效，如果需永久生效，应加入 **/etc/rc.conf** 文件：
+上述命令为临时生效，如需永久生效，应加入 **/etc/rc.conf** 文件：
 
 ```ini
 # 设置控制台所有屏幕使用 b16 字体
