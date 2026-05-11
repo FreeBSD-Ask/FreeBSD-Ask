@@ -38,7 +38,7 @@ Fiat Lux 出自拉丁文圣经“1.3：Dixitque Deus: Fiat lux. Et facta est lux
 
 如同光一样，BSD 技术渗透在诸多领域而不为人所熟知，从 iPhone 到新能源汽车车机，从索尼 PS5 到 Netflix，都有其身影。
 
-唯有真正理解“Fiat Lux”，方能领悟何以是 BSD，何以是 FreeBSD。
+唯有真正理解"Fiat Lux"，才能领悟为什么是 BSD，为什么是 FreeBSD。
 
 Fiat Lux!
 
