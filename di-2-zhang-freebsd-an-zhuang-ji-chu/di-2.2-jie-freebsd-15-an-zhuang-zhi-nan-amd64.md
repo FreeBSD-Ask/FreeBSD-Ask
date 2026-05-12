@@ -788,7 +788,7 @@ adduser: INFO: Successfully added (ykla) to the user database. # 用户 ykla 已
 Add another user? (yes/no) [no]: # 是否继续添加其他用户
 ```
 
-- ① 如果用户全名为空（即不设置），系统会分配一个默认值 `User &`。这是早期 UNIX 系统 GECOS 字段的遗留行为。相关代码位于 FreeBSD Project. freebsd-src/usr.sbin/pw/pw_user.c[EB/OL]. [2026-03-25]. <https://github.com/freebsd/freebsd-src/blob/main/usr.sbin/pw/pw_user.c> 的 `static struct passwd fakeuser` 结构中。
+- ① 如果用户全名为空（即不设置），系统会分配一个默认值 `User &`，这是早期 UNIX 系统 GECOS 字段的遗留行为。相关代码位于 FreeBSD Project. freebsd-src/usr.sbin/pw/pw_user.c[EB/OL]. [2026-03-25]. <https://github.com/freebsd/freebsd-src/blob/main/usr.sbin/pw/pw_user.c> 的 `static struct passwd fakeuser` 结构中。
 
 - ② 若选择使用随机密码，在最终确认信息前会显示一行：`adduser: INFO: Password for (ykla) is: D1MnujkWMv/m`，其中 `D1MnujkWMv/m` 即为生成的随机密码。
 
