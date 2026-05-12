@@ -160,6 +160,10 @@ adduser: ERROR: you must be the super-user (uid 0) to use this utility.
 
 ### rmuser 删除用户
 
+> **警告**
+>
+> `rmuser` 将永久删除用户账户及其主目录、邮件等所有相关信息，操作不可逆。使用 `-y` 参数将跳过确认步骤，请务必确认用户名正确无误。
+
 `rmuser` 用于删除用户，与 `adduser` 命令一样，也是交互式的脚本。`rmuser` 源代码路径是 `usr.sbin/adduser/rmuser.sh`。
 
 示例：删除用户 test1 test2。

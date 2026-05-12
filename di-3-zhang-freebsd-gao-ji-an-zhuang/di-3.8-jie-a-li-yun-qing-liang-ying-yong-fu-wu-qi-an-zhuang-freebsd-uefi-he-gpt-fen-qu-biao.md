@@ -641,6 +641,10 @@ TinyCorePure64 下载地址为 [x86 Pure 64](http://www.tinycorelinux.net/ports.
 # dd if=TinyCorePure64-16.2.iso of=/dev/vda bs=4M status=progress conv=fdatasync
 ```
 
+> **警告**
+>
+> `dd` 写入块设备将覆盖磁盘上所有现有数据，操作不可逆。请反复确认 `of=` 参数指定的设备路径正确无误。
+
 强制重启实例以启动到 TinyCorePure64。
 
 ![启动到 TinyCorePure64](../.gitbook/assets/tinycorepure-desktop.png)
