@@ -673,7 +673,7 @@ TinyCorePure64 下载地址为 [x86 Pure 64](http://www.tinycorelinux.net/ports.
 $ tce-load -wi exfat-utils parted dosfstools util-linux openssl ca-certificates
 ```
 
-> **技巧**
+> **注意**
 >
 > 该包管理器无法在 root 权限下运行。
 

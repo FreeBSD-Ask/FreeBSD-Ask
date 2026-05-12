@@ -146,7 +146,7 @@ FreeBSD 在中国大陆境内为数不多且能正常同步的镜像站，均未
 - [FreeBSD-pkg 脚本](https://github.com/ustclug/ustcmirror-images/blob/master/freebsd-pkg/sync.sh)
 - [FreeBSD-ports 脚本](https://github.com/ustclug/ustcmirror-images/blob/master/freebsd-ports/sync-ports.sh)
 
-> **注意**
+> **技巧**
 >
 > 呼吁有余力者维护修订上述两个脚本，以减轻 USTC 镜像站的压力，同时为境内提供更好的 FreeBSD 镜像服务。
 

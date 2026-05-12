@@ -52,7 +52,7 @@ mfsBSD 是一款完全载入内存的 FreeBSD 系统，类似于 Windows PE（Pr
 
 校验和（官网链接指向错误，已反馈但未获回复）：[checksums](https://mfsbsd.vx.sk/files/iso/14/amd64/mfsbsd-mini-14.1-RELEASE-amd64.iso.sums.txt)
 
-> **技巧**
+> **注意**
 >
 > 内存小于或等于 4 GB 的机器不建议使用 ZFS 文件系统。
 >
@@ -132,7 +132,7 @@ initrd (hd0,msdos2)/mfsbsd.iso
 boot # 输入 boot 后按回车从 mfsBSD 继续启动
 ```
 
-> **注意**
+> **技巧**
 >
 > 如果遇到问题，可尝试切换到串口控制台（`console=comconsole`），或检查镜像完整性。
 

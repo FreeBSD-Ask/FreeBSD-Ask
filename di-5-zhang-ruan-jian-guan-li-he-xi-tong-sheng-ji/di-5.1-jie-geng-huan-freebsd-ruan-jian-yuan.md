@@ -537,7 +537,7 @@ MASTER_SITE_OVERRIDE?=https://mirrors.ustc.edu.cn/freebsd-ports/distfiles/${DIST
 
 ### 旧版本存档的 pkg 二进制包源（请酌情使用）
 
-> **技巧**
+> **警告**
 >
 > 网易开源镜像站还提供了 FreeBSD 11、12 等过期版本的 pkg 二进制源。可自行配置使用。但可能存在安全风险。
 

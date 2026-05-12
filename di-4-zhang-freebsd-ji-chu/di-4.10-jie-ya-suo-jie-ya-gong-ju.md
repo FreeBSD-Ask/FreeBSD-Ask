@@ -268,7 +268,7 @@ drwxr-xr-x  2 ykla ykla     2 Apr 16 11:53 test
 $ zstd -d test.tar.zst
 ```
 
-> **注意**
+> **技巧**
 >
 > 这样解压出来的是 `test.tar`，还需要再用 `tar` 解压一次。
 
@@ -278,7 +278,7 @@ $ zstd -d test.tar.zst
 $ zstd -d test.tar.zst -o /home/ykla/mytest # 参数 -d 表示 decompress（解压缩）
 ```
 
-> **注意**
+> **技巧**
 >
 > 同上，解压出来的是 `test.tar`，还需要再用 `tar` 解压一次。
 
