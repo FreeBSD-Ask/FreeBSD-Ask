@@ -709,6 +709,10 @@ $ tce-load -wi exfat-utils parted dosfstools util-linux openssl ca-certificates
 
 将 EFI 分区重新格式化为 FAT32 文件系统：
 
+> **警告**
+>
+> `mkfs.vfat` 将格式化指定分区，分区上现有数据将永久丢失。请确认设备路径正确无误。
+
 ```sh
 # mkfs.vfat -F 32 /dev/vda2
 mkfs.fat 4.2 (2021-01-31)
