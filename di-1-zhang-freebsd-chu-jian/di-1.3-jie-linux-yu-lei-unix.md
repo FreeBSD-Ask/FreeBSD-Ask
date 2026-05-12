@@ -93,7 +93,7 @@ Linux 的全称为 GNU/Linux。
 > 4. 如果不能被视为原来的发行版，是在移除哪一类关键组件之后，其不再具备“发行版”的属性？
 > 5. 如果仍然可以被视为原来的发行版，那么哪些部分可以被认为真正继承自原有发行版，依据是什么？
 
-> **注意**
+> **技巧**
 >
 > 如有疑虑，建议亲自安装 [Gentoo](https://www.gentoo.org/downloads/)（stage3）或 [Slackware](http://www.slackware.com/)，若仍存疑虑可亲自体验 [Gentoo (stage1)](https://wiki.gentoo.org/wiki/Stage_file) 或 [LFS](https://www.linuxfromscratch.org/lfs/)。
 >
