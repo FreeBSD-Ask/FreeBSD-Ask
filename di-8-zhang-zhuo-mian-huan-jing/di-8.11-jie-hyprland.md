@@ -102,13 +102,11 @@ export XDG_RUNTIME_DIR=/var/run/user/`id -u`
 
 ## 配置自动启动
 
-如需在不使用显示管理器的前提下开机自动启动 Hyprland，可将下行写入 **~/.profile** 文件：
+如需在不使用显示管理器的前提下开机自动启动 Hyprland（即在 D-Bus 会话中启动 Hyprland 窗口管理器），可将下行写入 **~/.profile** 文件：
 
 ```ini
 dbus-run-session Hyprland
 ```
-
-即在 D-Bus 会话中启动 Hyprland 窗口管理器。
 
 也可以使用命令 `Hyprland -c <配置文件路径>` 来指定配置文件。
 
