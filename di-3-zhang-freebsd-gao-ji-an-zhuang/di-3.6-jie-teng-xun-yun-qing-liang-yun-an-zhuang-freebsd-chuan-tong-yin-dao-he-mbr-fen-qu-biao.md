@@ -64,6 +64,10 @@ boot # 输入 boot 后按回车继续启动
 
 mfsBSD 和 mfsLinux 镜像的默认 `root` 密码均为 `mfsroot`。
 
+> **警告**
+>
+> `dd` 写入块设备将覆盖磁盘上所有现有数据，包括分区表和文件系统，操作不可逆。请反复确认 `of=` 参数指定的设备路径正确无误。
+
 ```sh
 # cd /tmp # 切换至临时目录
 # wget https://mfsbsd.vx.sk/files/images/14/amd64/mfsbsd-se-14.2-RELEASE-amd64.img # 下载 mfsBSD 镜像
