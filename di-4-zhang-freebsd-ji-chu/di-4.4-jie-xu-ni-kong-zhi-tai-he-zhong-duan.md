@@ -189,7 +189,7 @@ Enter root password, or ^D to go multi-user
 Password:
 ```
 
-将此设置更改为 `insecure` 时需谨慎。如果忘记了 root 密码，仍然可以借助安装介质启动进入单用户模式，但对于不熟悉 FreeBSD 启动过程的用户而言可能较为困难。
+将此设置更改为 `insecure` 时需谨慎。如果忘记了 root 密码，仍然可以借助安装介质启动进入单用户模式，但不熟悉 FreeBSD 启动过程的用户可能面临困难。
 
 ## 调整引导界面和 TTY 分辨率
 
