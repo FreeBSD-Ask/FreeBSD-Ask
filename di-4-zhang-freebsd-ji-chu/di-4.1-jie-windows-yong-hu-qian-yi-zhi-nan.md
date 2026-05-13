@@ -219,7 +219,7 @@ b.txt: Unicode text, UTF-8 text, with very long lines (314), with CRLF line term
 
 例如，ASCII（American Standard Code for Information Interchange，ANSI X3.4）编码中，`0x41`（二进制 `0100 0001`）代表大写字母 `A`。ASCII 仅支持英文字母、数字和常见标点，共 128 个字符。
 
-而在 Unicode 编码体系中，“你”这个汉字的代码点是 U+4F60。在 UTF-8（8-bit Unicode Transformation Format，8 位 Unicode 转换格式）编码方式下，其编码后为字节序列 `0xE4 0xBD 0xA0`（二进制为 `11100100 10111101 10100000`）。UTF-8 编码所含字符范围远超 GBK（国标扩展），其中甚至含有埃及圣书体，如果当前屏幕上能看到 𓀀 𓃕 𓌊 这三个字符，则很可能正在使用 UTF-8 编码（如果使用 UTF-8 编码但仍无法显示这些字符，很可能是字体不支持这些字符集，而非编码问题）。
+而在 Unicode 编码体系中，“你”这个汉字的代码点是 U+4F60。在 UTF-8（8-bit Unicode Transformation Format，8 位 Unicode 转换格式）编码方式下，其编码后为字节序列 `0xE4 0xBD 0xA0`（二进制为 `11100100 10111101 10100000`）。UTF-8 编码所含字符范围远超 GBK（国标扩展），甚至包含埃及圣书体，如果当前屏幕上能看到 𓀀 𓃕 𓌊 这三个字符，则很可能正在使用 UTF-8 编码（如果使用 UTF-8 编码但仍无法显示这些字符，很可能是字体不支持这些字符集，而非编码问题）。
 
 程序如何识别文本编码？某些文件会在开头使用特定字节序列（即 BOM，byte order mark，字节顺序标记）标明编码。例如 UTF-8 的 BOM 是 `0xEF 0xBB 0xBF`。但许多文本文件并无 BOM，读取程序需通过上下文猜测编码格式，这往往导致乱码。虽然通过程序分析文本内容（如统计字符分布或抽取字符计算）可猜测编码，但此法未必可靠。编码问题，根本原因在于系统间默认编码不同或未明确指定编码。
 
@@ -252,7 +252,7 @@ FreeBSD 的编码在 [main/usr.bin/login/login.conf](https://github.com/freebsd/
 
 ## 时间与时区差异
 
-中国统一使用东八区，即 UTC+8。UTC（Coordinated Universal Time，协调世界时）在日常使用中与 GMT（Greenwich Mean Time，格林尼治时间）几乎等同。UTC 以国际原子时（temps atomique international，TAI）的秒长为基础（二者并不完全一致）：取铯（Cs）频率 ΔνCs——即铯 133 原子不受干扰的基态超精细跃迁频率——以 Hz（s⁻¹）表示时的固定数值 9,192,631,770 定义秒，此后又对国际原子时进行了多项修正。
+中国统一使用东八区，即 UTC+8。UTC（Coordinated Universal Time，协调世界时）在日常使用中与 GMT（Greenwich Mean Time，格林尼治时间）几乎等同。UTC 以国际原子时（temps atomique international，TAI）的秒长为基础（二者并不完全一致）：取铯（Cs）频率 ΔνCs——即铯 133 原子不受干扰的基态超精细跃迁频率——以 Hz（s⁻¹）表示时的固定数值 9,192,631,770 定义秒，此后又对国际原子时作了多项修正。
 
 有过 Windows 和 UNIX 双系统安装经验的用户会发现，Windows 和 UNIX 的时间总相差 8 小时。现代计算机主板通常配备一颗由纽扣电池供电的 RTC（Real-time clock，实时时钟芯片），用于在系统断电后维持计时。
 
@@ -262,7 +262,7 @@ Windows 直接读取 RTC 的值，并视为本地时间（Local Time，地方时
 
 例如，设 RTC 时间为 2025 年 6 月 6 日中午 12:00（UTC+8）。Windows 下显示为 2025 年 6 月 6 日中午 12:00（UTC+8）；UNIX 下则显示为 2025 年 6 月 6 日晚上 20:00——原因在于 UNIX 将 RTC 中的 12:00 视为 UTC，加上 UTC+8 偏移量后得 12+8=20。由于 UNIX 将 RTC 视为 UTC 而非本地时间，其显示时间比 Windows 快 8 小时。
 
-对于现代计算机网络来说，时间准确性至关重要，通过一个简单实验可验证：将时间调慢 5 分钟，打开浏览器，即可发现绝大部分网站无法访问（HTTPS）。
+对现代计算机网络而言，时间准确性至关重要，通过简单实验可验证：将时间调慢 5 分钟，打开浏览器，即可发现绝大部分网站无法访问（HTTPS）。
 
 计算机中的时区是由 IANA 时区数据库规范的，历史悠久。
 
