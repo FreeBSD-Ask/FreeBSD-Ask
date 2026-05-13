@@ -68,13 +68,13 @@ Finally, make sure to add /usr/local/dt/bin to your path.
 
 To start the Common Desktop Environment:
 % env LANG=C startx /usr/local/dt/bin/Xsession
-# 使用上述命令启动 CDE 桌面环境，设置环境变量 LANG=C 以避免本地化问题。
+# 使用上述命令启动 CDE 桌面环境，设置环境变量 LANG=C 避免本地化问题。
 
 Alternatively, if you want to use the Login Manager as well, create
 /usr/local/etc/X11/Xwrapper.config and add this line:
 
 allowed_users=anybody
-# 如果你想启用图形显示管理器（Login Manager），请创建 Xwrapper.config 并添加 allowed_users=anybody。
+# 如需启用图形显示管理器（Login Manager），请创建 Xwrapper.config 并添加 allowed_users=anybody。
 
 To start the Common Desktop Enviroment Login Manager:
 
@@ -94,7 +94,7 @@ To start the Common Desktop Enviroment Login Manager:
 # service dtlogin enable  # 设置 DTLogin 显示管理器开机自启
 ```
 
-- 配置 X 服务器让任意用户启动：
+- 配置 X 服务器允许任意用户启动：
 
 ```sh
 # echo "allowed_users=anybody" > /usr/local/etc/X11/Xwrapper.config
