@@ -215,21 +215,21 @@ GNU 开源运动的大规模开展与 Linux 的蓬勃发展，使多数人对开
 
 GNU 本身并无独立内核，而以 Linux 为其内核——GNU Hurd 是例外，目前仍在开发中。
 
-不同的操作系统/发行版，不同的世界观。对“发行版”给出一个精确而统一的定义并非易事。
+不同的操作系统/发行版，不同的世界观。对“发行版”下一个精确而统一的定义并非易事。
 
 > **思考题**
 >
 > 如何理解“不同的操作系统/发行版，不同的世界观”这句话？
 
-有观点指出，“看似纷繁复杂的 Linux 发行版，不过是一个假象。它们甚至可能缺乏自主决策权。例如，上游若采用 systemd 初始化系统，发行版通常也会跟进。否则可能无法继续使用部分第三方软件，后果即是自身遭消灭。Linux 发行版从未真正存在过。”
+有观点指出，“看似纷繁复杂的 Linux 发行版，不过是假象。它们甚至可能缺乏自主决策权。例如，上游若采用 systemd 初始化系统，发行版通常也会跟进。否则可能无法继续使用部分第三方软件，后果即是自身遭消灭。Linux 发行版从未真正存在过。”
 
 > **思考题**
 >
-> “Linux 发行版从未真正存在过。”这种说法固然存在一定的局限性，但它向我们提供了一个重要启示，该如何理解？
+> “Linux 发行版从未真正存在过。”这种说法固然存在一定的局限性，但它给出了一个重要启示，该如何理解？
 
-常见的 Linux 发行版及若干基于 Linux 的国产操作系统，其维护工作的重心何在？它们通常并非文件系统、Linux 内核、GNU C 库（glibc）、systemd、桌面环境等上游项目的原始维护者，对大量第三方软件包通常以集成和适配为主。即便是包管理器和软件源，也大多在上游工具和社区资源的基础上配置与管理。
+常见的 Linux 发行版及若干基于 Linux 的国产操作系统，其维护工作的重心何在？它们通常并非文件系统、Linux 内核、GNU C 库（glibc）、systemd、桌面环境等上游项目的原始维护者，对大量第三方软件包通常以集成和适配为主。即便是包管理器和软件源，也大多基于上游工具和社区资源配置与管理。
 
-在长期支持与稳定性方面，红帽企业 Linux（Red Hat Enterprise Linux，RHEL）投入了大量资源。这是其区别于许多其他发行版的重要特征。RHEL 保证应用二进制接口（Application Binary Interface，ABI）和内核应用二进制接口（Kernel Application Binary Interface，kABI）的长期稳定性，提供最长可达十年的支持周期，这与许多其他发行版的支持策略存在明显差异。相关参考如下：
+红帽企业 Linux（Red Hat Enterprise Linux，RHEL）为长期支持与稳定性投入了大量资源。这是其区别于许多其他发行版的重要特征。RHEL 保证应用二进制接口（Application Binary Interface，ABI）和内核应用二进制接口（Kernel Application Binary Interface，kABI）的长期稳定性，提供最长可达十年的支持周期，这与许多其他发行版的支持策略存在明显差异。相关参考如下：
 
 - Red Hat. Red Hat Enterprise Linux 10: Application Compatibility Guide[EB/OL]. [2026-03-25]. <https://access.redhat.com/articles/rhel10-abi-compatibility>.
 - Red Hat. What is Kernel Application Binary Interface (kABI)?[EB/OL]. [2026-03-25]. <https://access.redhat.com/solutions/444773>.
