@@ -246,7 +246,7 @@ Proceed with deinstalling packages? [y/N]: # 输入 y 按回车键就卸载了
 
 > **注意**
 >
-> 只能列出已安装的包的文件，未安装的不能用这个命令。
+> 只能列出已安装软件包的文件，未安装的不能使用该命令。
 
 ```sh
 # pkg info -l xrdp
@@ -443,7 +443,7 @@ jbig2dec-0.20_1: /usr/local/lib/libjbig2dec.so misses libmd.so.6
 
 - lonkamikaze. BSD Administration Scripts II[EB/OL]. [2026-03-25]. <https://github.com/lonkamikaze/bsda2>. 提供 FreeBSD 系统管理辅助工具集，含包完整性检查等功能。
 
-若使用了 pkgbase，`bsdadminscripts2` 可 **检查系统的完整性**，找出哪些系统文件是被篡改过的。
+若使用了 pkgbase，`bsdadminscripts2` 可 **检查系统的完整性**，找出哪些系统文件是遭到篡改过的。
 
 验证已安装软件包的完整性和一致性：
 
