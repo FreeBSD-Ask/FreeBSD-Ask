@@ -4,9 +4,9 @@
 
 台式机如果 CPU 为英特尔处理器且型号以 F（如 [i5-9400F](https://www.intel.cn/content/www/cn/zh/products/sku/190883/intel-core-i59400f-processor-9m-cache-up-to-4-10-ghz/specifications.html)）或 KF（如 [i5-12600KF](https://www.intel.cn/content/www/cn/zh/products/sku/134590/intel-core-i512600kf-processor-20m-cache-up-to-4-90-ghz/specifications.html)）结尾，则该型号无核芯显卡，无需处理核芯显卡相关配置。
 
-如果已拥有独立显卡，且视频输出接口（DP 或 HDMI）直接连接至独立显卡，通常无需配置核芯显卡，仅处理独立显卡驱动即可。
+如果已有独立显卡，且视频输出接口（DP 或 HDMI）直接连接至独立显卡，通常无需配置核芯显卡，仅处理独立显卡驱动即可。
 
-不具备显卡直通能力的笔记本设备，须先按照其他章节安装配置英特尔核芯显卡驱动（相关 DRM 模块），再参照下文进行配置。
+不具备显卡直通能力的笔记本设备，须先按照其他章节安装配置英特尔核芯显卡驱动（相关 DRM 模块），再参照下文配置。
 
 ## 加入 video 组
 
@@ -135,7 +135,7 @@ Mon Jan 19 19:06:59 2026
 
 执行 nvidia-smi 命令时出现错误提示“API mismatch”：该错误表示 API 不匹配，通常源于版本兼容性问题，可能存在以下几种情况：NVIDIA 驱动组件本身版本不匹配、NVIDIA 驱动与其他 NVIDIA 软件包版本不匹配、NVIDIA 驱动与当前 FreeBSD 基本系统版本不匹配。
 
-建议先卸载所有 NVIDIA 软件包，随后将 FreeBSD 基本系统更新到最新版本，再重新执行驱动安装流程。
+建议先卸载所有 NVIDIA 软件包，随后将 FreeBSD 基本系统更新到最新版本，再重新安装驱动。
 
 ### 如何卸载现有的 NVIDIA 相关软件包
 
@@ -147,7 +147,7 @@ Mon Jan 19 19:06:59 2026
 
 ### 如何阻止驱动更新
 
-将 `pkg info -q | grep -i nvidia` 输出的相关软件包逐个使用 `pkg lock` 命令锁定即可。
+对 `pkg info -q | grep -i nvidia` 输出的相关软件包逐个使用 `pkg lock` 命令锁定即可。
 
 例如：
 
