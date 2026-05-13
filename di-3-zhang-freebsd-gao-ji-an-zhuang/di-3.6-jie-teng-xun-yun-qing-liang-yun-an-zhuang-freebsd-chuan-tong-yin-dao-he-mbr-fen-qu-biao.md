@@ -40,7 +40,7 @@ FreeBSD 中文社区. 08-腾讯云轻量云及其他服务器安装 FreeBSD[EB/O
 
 如前所述，由于 FreeBSD 与 Linux 生态不同，需要先引导至一个运行在内存中的 Linux 环境，在该环境中将 mfsBSD 写入硬盘，最后通过 `bsdinstall` 工具完成系统安装。
 
-在 mfsBSD 下载页面的下方，可找到 [mfsLinux](https://mfsbsd.vx.sk/files/iso/mfslinux/mfslinux-0.1.11-94b1466.iso)，即所需的 Linux 环境。由于它仅提供 ISO 格式，无法在当前环境下直接启动。由于其基于纯 initrd 架构，需要从中提取内核和 initrd 文件，存放于硬盘并进行手动引导。
+在 mfsBSD 下载页面的下方，可找到 [mfsLinux](https://mfsbsd.vx.sk/files/iso/mfslinux/mfslinux-0.1.11-94b1466.iso)，即所需的 Linux 环境。由于该文件仅提供 ISO 格式，无法在当前环境下直接启动。由于该环境基于纯 initrd 架构，需要从中提取内核和 initrd 文件，存放于硬盘并进行手动引导。
 
 在典型的 Linux 系统中，initrd 是一个被打包为内存盘的精简根文件系统，内含驱动程序、挂载工具以及启动初始化程序所必需的数据。开机时，引导加载程序（Bootloader）加载内核与 initrd，由 initrd 中的脚本执行启动准备，随后移交控制权给硬盘上的初始化程序。
 
@@ -58,7 +58,7 @@ boot # 输入 boot 后按回车继续启动
 
 ![GRUB 命令行界面](../.gitbook/assets/grub-cli-interface.png)
 
-这个特制的 initrd 启动后，不会加载硬盘上的原系统，而是自行配置网络并启动 SSH 服务器。由此，获得了一个运行在内存中的 Linux 系统。
+这个特制的 initrd 启动后，不会加载硬盘上的原系统，而是自行配置网络并启动 SSH 服务器。由此获得一个运行在内存中的 Linux 系统。
 
 此时应可通过 SSH 连接到服务器，并安全地格式化硬盘。
 
@@ -107,7 +107,7 @@ mfsBSD 和 mfsLinux 镜像的默认 `root` 密码均为 `mfsroot`。
 >
 > 以下命令仅为错误示范，切勿执行。`dd` 写入块设备将覆盖磁盘上所有现有数据，操作不可逆。
 
-在正常的 Linux 系统中，若直接将 mfsBSD 的 img 镜像通过 `dd` 写入硬盘，重启后虽能正常加载引导程序，但可能因系统对硬盘的后续写入操作而导致无法正常挂载内存盘。
+在正常的 Linux 系统中，若直接将 mfsBSD 的 img 镜像通过 `dd` 写入硬盘，重启后虽能正常加载引导程序，但可能因系统对硬盘的后续写入操作导致无法正常挂载内存盘。
 
 下载 mfsBSD 镜像并写入 **/dev/vda**：
 
@@ -126,7 +126,7 @@ mfsBSD 和 mfsLinux 镜像的默认 `root` 密码均为 `mfsroot`。
 
 ### LVM 逻辑卷
 
-如果云服务器使用了 LVM，需要将所有与引导相关的文件放置于 **/boot** 分区内，否则可能无法被正确识别。
+如果云服务器使用了 LVM，需要将所有与引导相关的文件放置于 **/boot** 分区内，否则可能无法正确识别。
 
 ### 腾讯云轻量应用服务器可能无法获取 IPv6 地址
 
