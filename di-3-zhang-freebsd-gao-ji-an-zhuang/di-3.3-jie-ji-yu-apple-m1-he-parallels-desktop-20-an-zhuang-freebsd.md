@@ -54,7 +54,7 @@
 
 ![Parallels Desktop 20 安装 FreeBSD 15.0](../.gitbook/assets/parallels-10.png)
 
-手动安装桌面环境后，桌面正常运行。
+手动安装桌面环境后，桌面即可正常运行。
 
 ## 鼠标无法移动
 
@@ -85,7 +85,7 @@ ums_load="YES"
 
 > **注意**
 >
-> 若通过 Ports 编译安装，需确保当前系统的源代码位于 **/usr/src** 目录下。
+> 若通过 Ports 编译安装，需确保当前系统源代码在 **/usr/src** 目录中。
 
 ### 参考文献
 
