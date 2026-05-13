@@ -10,7 +10,7 @@ KDE 是一套现代化的桌面环境。KDE 桌面环境借鉴了 Windows 等多
 
 > **技巧**
 >
-> 不希望捆绑安装大量附加工具和软件的用户可使用下方的最小化安装方案，不需要自定义的用户可继续使用本方案。
+> 不希望捆绑安装大量附加工具和软件的用户可使用下方的最小化安装方案，无需自定义的用户可继续使用本方案。
 
 - 使用 pkg 安装：
 
@@ -131,7 +131,7 @@ $ echo "exec ck-launch-session startplasma-x11" > ~/.xinitrc
 
 ## 附录：最小化 KDE 桌面安装方案
 
-直接安装 `x11/kde` 会作为依赖安装 `x11/plasma6-plasma` 和 `x11/kde-baseapps`，其中捆绑了大量的工具软件，在某些情况下可能不方便部署与使用。
+直接安装 `x11/kde` 会将 `x11/plasma6-plasma` 和 `x11/kde-baseapps` 作为依赖一并安装，其中捆绑了大量的工具软件，在某些情况下可能不便部署与使用。
 
 ### 使用 pkg 安装
 
@@ -202,13 +202,13 @@ $ echo "exec ck-launch-session startplasma-x11" > ~/.xinitrc
 
 > **注意**
 >
-> 如果采用最小化安装 KDE 方案，必须配置 `.xinitrc` 文件。
+> 如果采用 KDE 最小化安装方案，必须配置 `.xinitrc` 文件。
 
 ### 最小化安装 KDE 图示
 
 > **技巧**
 >
-> 使用此方案安装的 KDE 桌面缺少了很多功能，可以参照 [x11/plasma6-plasma](https://www.freshports.org/x11/plasma6-plasma/) 的“Runtime dependencies”（运行时依赖）和“Library dependencies”（库依赖）进行功能补全。
+> 使用此方案安装的 KDE 桌面缺少了很多功能，可以参照 [x11/plasma6-plasma](https://www.freshports.org/x11/plasma6-plasma/) 的“Runtime dependencies”（运行时依赖）和“Library dependencies”（库依赖）补全功能。
 
 未安装可选包：
 
