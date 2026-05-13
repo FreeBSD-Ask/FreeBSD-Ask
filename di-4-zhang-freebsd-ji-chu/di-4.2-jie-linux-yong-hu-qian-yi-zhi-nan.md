@@ -56,7 +56,7 @@ pkgbase 直接由 freebsd-src 构建：
 
 freebsd-ports = 第三方软件集合（单个称为 Port）= Ports 框架存储库。
 
-Port 是若干文件的集合，由源代码包校验和、说明文件、补丁等构成，其中 Makefile 是核心。Arch 的 PKGBUILD 或 Gentoo 的 ebuild 与此类似，事实上它们是由 Ports 框架衍生出的技术。
+Port 是若干文件的集合，由源代码包校验和、说明文件、补丁等构成，其中 Makefile 是核心。Arch 的 PKGBUILD 或 Gentoo 的 ebuild 与此类似，事实上它们衍生自 Ports 框架。
 
 pkg 包直接由 freebsd-ports 通过 poudriere 构建系统构建而来。
 
@@ -213,7 +213,7 @@ GNU 开源运动的大规模开展与 Linux 的蓬勃发展，使多数人对开
 
 ### 何以称为 GNU/Linux 发行版
 
-GNU 本身并无独立内核，而以 Linux 为其内核——GNU Hurd 是例外，目前仍处于开发阶段。
+GNU 本身并无独立内核，而以 Linux 为其内核——GNU Hurd 是例外，目前仍在开发中。
 
 不同的操作系统/发行版，不同的世界观。对“发行版”给出一个精确而统一的定义并非易事。
 
