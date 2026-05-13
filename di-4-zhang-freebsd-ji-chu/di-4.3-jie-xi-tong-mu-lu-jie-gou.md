@@ -340,7 +340,7 @@ crw-r-----  1 root operator 0x69 May 10 09:49 ada0
 
 设备命名遵循一定的约定：SATA 硬盘以 `ada` 开头（如 `ada0`、`ada1`），SCSI 硬盘和 USB 存储设备以 `da` 开头（如 `da0`），NVMe 存储以 `nda`（通过 CAM 框架，默认）或 `nvd`（非 CAM）开头，CD-ROM 驱动器以 `cd` 开头。编号从 0 开始。GPT 分区在设备名后附加 `p` 加分区号（如 `ada0p1`），MBR 切片附加 `s` 加切片号（如 `ada0s1`）。
 
-如下行所述：
+如下所示：
 
 ```sh
 crw-r-----  1 root operator 0x69 May 10 09:49 ada0	# SATA 硬盘
