@@ -12,7 +12,7 @@ NVIDIA 显卡尚未测试。本节使用 Intel 第 12 代处理器（i7-1260P）
 
 ## 用户权限配置：加入 video 组
 
-将指定用户加入 video 组以获得调用显卡设备的权限：
+将指定用户加入 video 组，获取调用显卡设备的权限：
 
 ```sh
 # pw groupmod video -m 实际用户名
@@ -114,7 +114,7 @@ $ mkdir -p ~/.config/autostart/ # 创建自启动目录
 $ cp /usr/local/share/applications/org.fcitx.Fcitx5.desktop ~/.config/autostart/ # 系统启动时自动启动 Fcitx 5
 ```
 
-初次进入 KDE Wayland 桌面时，KDE 会在右下角提示需在设置的虚拟键盘中配置才能启用输入法。请留意该提示。如果未进行此设置，将无法切换输入法或输入中文。
+初次进入 KDE Wayland 桌面时，KDE 会在右下角提示需在设置的虚拟键盘中配置才能启用输入法。请留意该提示。如未完成此设置，将无法切换输入法或输入中文。
 
 ![KDE Wayland 设置](../.gitbook/assets/kde-wayland-fcitx.png)
 
