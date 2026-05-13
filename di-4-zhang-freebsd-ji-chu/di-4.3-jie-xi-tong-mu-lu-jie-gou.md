@@ -302,7 +302,7 @@ FreeBSD 的目录结构设计遵循以下原则：
 │   │   └── vi.recover vi(1) 编辑器的恢复文件
 │   ├── unbound Unbound 服务器的相关文件和配置，参见 unbound(8)
 │   └── yp NIS 的配置等文件，参见 yp(8)
-└── zroot 由 ZFS 在创建名为 "zroot" 的存储池时自动生成的挂载点目录；zroot 是 FreeBSD 安装程序默认的根池名称（参见 zpool(8) 和 zfs(8) 的 mountpoint 属性）。该目录自身通常为空，其子文件系统（如 zroot/ROOT、zroot/usr、zroot/var 等）分别挂载到对应路径；仅当直接在 zpool 根数据集下创建文件时，内容才会出现在此目录中
+└── zroot 由 ZFS 在创建存储池 "zroot" 时自动生成的挂载点目录；zroot 是 FreeBSD 安装程序默认的根池名称（参见 zpool(8) 和 zfs(8) 的 mountpoint 属性）。该目录自身通常为空，其子文件系统（如 zroot/ROOT、zroot/usr、zroot/var 等）分别挂载到对应路径；仅当直接在 zpool 根数据集下创建文件时，内容才会出现在此目录中
 ```
 
 ①：目录 **/var/empty** 设置了 schg 标志，即系统不可变标志。
@@ -320,7 +320,7 @@ dr-xr-xr-x   2 root    wheel   schg  2 Apr 13 12:38 /var/empty
 
 ## 设备与设备节点
 
-设备是系统中主要用于与硬件相关活动的术语，包括磁盘、打印机、显卡和键盘。
+设备是系统中与硬件活动相关的主要概念，包括磁盘、打印机、显卡和键盘。
 
 每个设备都有一个设备名称和编号。例如，`ada0` 是第一块 SATA 硬盘，而 `kbd0` 代表键盘。
 

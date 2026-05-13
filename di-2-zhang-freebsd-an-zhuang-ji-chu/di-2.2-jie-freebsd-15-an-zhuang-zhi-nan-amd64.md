@@ -741,7 +741,7 @@ CST 为中国标准时间（China Standard Time）的缩写，确认无误后按
 
 如需创建，请按 **回车键** 选择 `Yes`；如果不需要创建普通用户（仅使用 root），请使用 **方向键** 选择 `No`。
 
-> **技巧**
+> **注意**
 >
 > 绝大多数图形显示管理器默认禁止 root 用户直接登录。因此，如果不进行额外配置（参见其他章节），在默认情况下可能无法使用 root 账户登录桌面环境。
 
@@ -788,7 +788,7 @@ adduser: INFO: Successfully added (ykla) to the user database. # 用户 ykla 已
 Add another user? (yes/no) [no]: # 是否继续添加其他用户
 ```
 
-- ① 如果用户全名为空（即不设置），系统会分配一个默认值 `User &`。这是早期 UNIX 系统 GECOS 字段的遗留行为。相关代码位于 FreeBSD Project. freebsd-src/usr.sbin/pw/pw_user.c[EB/OL]. [2026-03-25]. <https://github.com/freebsd/freebsd-src/blob/main/usr.sbin/pw/pw_user.c> 的 `static struct passwd fakeuser` 结构中。
+- ① 如果用户全名为空（即不设置），作为早期 UNIX 系统 GECOS 字段的遗留行为，系统会分配一个默认值 `User &`。相关代码位于 FreeBSD Project. freebsd-src/usr.sbin/pw/pw_user.c[EB/OL]. [2026-03-25]. <https://github.com/freebsd/freebsd-src/blob/main/usr.sbin/pw/pw_user.c> 的 `static struct passwd fakeuser` 结构中。
 
 - ② 若选择使用随机密码，在最终确认信息前会显示一行：`adduser: INFO: Password for (ykla) is: D1MnujkWMv/m`，其中 `D1MnujkWMv/m` 即为生成的随机密码。
 

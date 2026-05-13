@@ -441,7 +441,7 @@ root@mfsbsd:~ # gpart show
     208896  62705631                                 3  linux-data  (30G)
 ```
 
-注意到，大部分分区都被标记为 `[CORRUPT]`，这将影响系统的安装。因此必须先修复 GPT 分区表：
+注意到，大部分分区都被标记为 `[CORRUPT]`，会影响系统的安装，故必须先修复 GPT 分区表：
 
 ```sh
 root@mfsbsd:~ # gpart recover vtbd0	# 恢复 vtbd0 磁盘的分区表信息
@@ -641,6 +641,10 @@ TinyCorePure64 下载地址为 [x86 Pure 64](http://www.tinycorelinux.net/ports.
 # dd if=TinyCorePure64-16.2.iso of=/dev/vda bs=4M status=progress conv=fdatasync
 ```
 
+> **警告**
+>
+> `dd` 写入块设备将覆盖磁盘上所有现有数据，操作不可逆。请反复确认 `of=` 参数指定的设备路径正确无误。
+
 强制重启实例以启动到 TinyCorePure64。
 
 ![启动到 TinyCorePure64](../.gitbook/assets/tinycorepure-desktop.png)
@@ -669,7 +673,7 @@ TinyCorePure64 下载地址为 [x86 Pure 64](http://www.tinycorelinux.net/ports.
 $ tce-load -wi exfat-utils parted dosfstools util-linux openssl ca-certificates
 ```
 
-> **技巧**
+> **注意**
 >
 > 该包管理器无法在 root 权限下运行。
 
@@ -708,6 +712,10 @@ $ tce-load -wi exfat-utils parted dosfstools util-linux openssl ca-certificates
 ```
 
 将 EFI 分区重新格式化为 FAT32 文件系统：
+
+> **警告**
+>
+> `mkfs.vfat` 将格式化指定分区，分区上现有数据将永久丢失。请确认设备路径正确无误。
 
 ```sh
 # mkfs.vfat -F 32 /dev/vda2

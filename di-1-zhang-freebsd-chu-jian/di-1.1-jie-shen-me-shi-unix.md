@@ -37,7 +37,7 @@ UNIX 操作系统认证查询网址：[The Open Group official register of UNIX 
 >
 > macOS/iOS 与 BSD 的关系
 >
-> 从历史角度看，macOS（以及由此衍生的 iOS、iPadOS 等）的核心层（Darwin）确实是基于 BSD 代码，并融合了其他技术。因此可将 macOS 系列操作系统视作独立的、类 BSD 操作系统分支，与 OpenBSD、NetBSD 和 FreeBSD 等系统具有同等地位。参见：Jason Perlow. Apple's Open Source Roots: The BSD Heritage Behind macOS and iOS[EB/OL]. (2024-07-08)[2026-03-26]. <https://thenewstack.io/apples-open-source-roots-the-bsd-heritage-behind-macos-and-ios/>.
+> 从历史角度看，macOS（以及由此衍生的 iOS、iPadOS 等）的核心层（Darwin）确实是基于 BSD 代码，并融合了其他技术，macOS 系列操作系统因此可视作独立的、类 BSD 操作系统分支，与 OpenBSD、NetBSD 和 FreeBSD 等系统具有同等地位。参见：Jason Perlow. Apple's Open Source Roots: The BSD Heritage Behind macOS and iOS[EB/OL]. (2024-07-08)[2026-03-26]. <https://thenewstack.io/apples-open-source-roots-the-bsd-heritage-behind-macos-and-ios/>.
 >
 > 从表面看，这是 Android 与 iOS 之争，实质上则是 Linux 与 BSD 之争。~~这也许还是大教堂与市集之争。~~
 
@@ -53,7 +53,7 @@ UNIX 哲学是 UNIX 操作系统于长期开发实践中逐渐形成的设计理
 - **沉默是金**：程序在正常执行时不应产生冗余输出，仅在出错时提示，成功操作无输出，不显示进度等。
 - **避免仅用户界面**：应提供命令行接口，确保可通过脚本实现自动化操作。
 
-这些原则在当时的软件设计中相辅相成，帮助开发者构建出简洁、高效、可维护的系统。FreeBSD 的开发实践深受 UNIX 哲学影响。FreeBSD 提供先进的网络功能、性能、安全与兼容性，这一目标同 UNIX 哲学中“可移植性先于高效性”及“小即美”等原则一脉相承。
+这些原则在当时的软件设计中相辅相成，帮助开发者构建出简洁、高效、可维护的系统。FreeBSD 的开发实践深受 UNIX 哲学影响。FreeBSD 提供先进的网络功能、性能、安全与兼容性，这些目标与 UNIX 哲学中“可移植性先于高效性”及“小即美”等原则一脉相承。
 
 FreeBSD 的手册页系统是 UNIX 哲学的典型体现：每个命令、系统调用和配置文件均配有独立的手册页，内容简明扼要，便于用户通过 `man` 命令随时查阅。
 
@@ -79,11 +79,11 @@ UNIX 的诞生有特定的历史背景，需追溯至前身 Multics。
 
 ### Multics 项目
 
-Multics 是一个对 UNIX 产生直接影响的重要项目。1961 年，麻省理工学院（Massachusetts Institute of Technology，MIT）演示了 **兼容分时系统**（Compatible Time-Sharing System，CTSS），这是当时最具创新性的操作系统。在此基础上，研究人员于 1964 年决定设计更为先进的版本，即 **多路复用** 信息和计算服务（Multiplexed Information and Computing Service，Multics）系统。
+Multics 是一个对 UNIX 产生直接影响的重要项目。1961 年，麻省理工学院（Massachusetts Institute of Technology，MIT）演示了 **兼容分时系统**（Compatible Time-Sharing System，CTSS）——当时最具创新性的操作系统之一。在此基础上，研究人员于 1964 年决定设计更为先进的版本，即 **多路复用** 信息和计算服务（Multiplexed Information and Computing Service，Multics）系统。
 
-Multics 旨在创造功能强大的新软件，以及比肩 IBM 7094 功能更丰富的新硬件。1965 年，通用电气公司（General Electric，GE）与贝尔实验室加入该项目，形成三方合作。其中，通用电气公司负责设计并生产全新硬件特性的计算机，以更好地支撑分时及多用户体系；贝尔实验室在计算机发展早期就开发了自己的操作系统，具备相关经验。
+Multics 旨在创造功能强大的新软件和比肩 IBM 7094 功能更丰富的新硬件。1965 年，通用电气公司（General Electric，GE）与贝尔实验室加入该项目，形成三方合作。其中，通用电气公司负责设计并生产具有全新硬件特性的计算机，以更好地支撑分时及多用户体系；贝尔实验室在计算机发展早期就开发了自己的操作系统，具备相关经验。
 
-最终 Multics 的开发陷入困境，该系统设计了大量程序及功能，且频繁引入相互矛盾的组件，导致系统过于复杂。1969 年，贝尔实验室认为，Multics 作为信息处理工具已无法为实验室提供计算服务，且设计成本过高。同年 4 月，贝尔实验室退出 Multics 项目，仅麻省理工学院和通用电气公司继续开发。
+最终 Multics 的开发陷入困境。该系统设计了大量程序及功能，且频繁引入相互矛盾的组件，导致系统过于复杂。1969 年，贝尔实验室认为，Multics 作为信息处理工具已无法为实验室提供计算服务，且设计成本过高。同年 4 月，贝尔实验室退出 Multics 项目，仅麻省理工学院和通用电气公司继续开发。
 
 ### UNICS 的诞生
 

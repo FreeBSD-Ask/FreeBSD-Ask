@@ -105,7 +105,7 @@ PSPath
 
 > **注意**
 >
-> ZFS 并不使用 **/etc/fstab** 文件。因此如果在该文件中不存在任何 ZFS 文件系统（**/**），这属于正常现象。
+> ZFS 并不使用 **/etc/fstab** 文件，因此如果在该文件中不存在任何 ZFS 文件系统（**/**），这属于正常现象。
 
 示例：标准 UFS 安装下的 **/etc/fstab** 文件。
 
@@ -162,8 +162,8 @@ FreeBSD 的 ZFS 和 UFS 均**区分大小写（大小写敏感）**。而 macOS 
 - FreeBSD 下 **大小写敏感**
 
 ```sh
-$ touch ABC    # 创建名为 ABC 的文件
-$ touch abc    # 创建名为 abc 的文件
+$ touch ABC    # 创建文件 ABC
+$ touch abc    # 创建文件 abc
 $ ls           # 列出当前目录内容（区分文件名大小写）
 abc    ABC
 ```

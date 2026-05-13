@@ -87,13 +87,13 @@ Linux 的全称为 GNU/Linux。
 
 > **思考题**
 >
-> 1. 如果去掉文件系统、Linux 内核、Shell、systemd（init）、桌面环境、包管理器以及所有第三方软件，一个 Linux 发行版还剩下哪些内容？
+> 1. 如果去掉文件系统、Linux 内核、Shell、systemd（init）、桌面环境、包管理器以及所有第三方软件，一款 Linux 发行版还剩下哪些内容？
 > 2. 在上述组件全部移除，并将其重新组合后，若仍将该系统称为“发行版”，它与传统 Linux 发行版相比存在哪些本质区别？
 > 3. 在这种情况下，该系统是否仍然可以被视为原来的发行版？请说明理由。
 > 4. 如果不能被视为原来的发行版，是在移除哪一类关键组件之后，其不再具备“发行版”的属性？
 > 5. 如果仍然可以被视为原来的发行版，那么哪些部分可以被认为真正继承自原有发行版，依据是什么？
 
-> **注意**
+> **技巧**
 >
 > 如有疑虑，建议亲自安装 [Gentoo](https://www.gentoo.org/downloads/)（stage3）或 [Slackware](http://www.slackware.com/)，若仍存疑虑可亲自体验 [Gentoo (stage1)](https://wiki.gentoo.org/wiki/Stage_file) 或 [LFS](https://www.linuxfromscratch.org/lfs/)。
 >

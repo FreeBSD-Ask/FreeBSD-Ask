@@ -6,7 +6,7 @@
 
 ## zip
 
-zip 格式是 PKZIP 归档格式的实现，由 Info-ZIP 项目维护。zip 是一种压缩和文件打包工具，兼容 PKZIP（Phil Katz 的 ZIP for MSDOS 系统），zip 3.0 版本兼容 PKZIP 2.04 并支持 Zip64 扩展（允许归档和文件超过 2 GB 限制）。zip 使用 deflation 作为默认压缩方法，也可存储不压缩的文件，并自动为每个文件选择更优的方式。
+zip 格式是 PKZIP 归档格式的实现，由 Info-ZIP 项目维护。zip 是一款压缩和文件打包工具，兼容 PKZIP（Phil Katz 的 ZIP for MSDOS 系统），zip 3.0 版本兼容 PKZIP 2.04 并支持 Zip64 扩展（允许归档和文件超过 2 GB 限制）。zip 使用 deflation 作为默认压缩方法，也可存储不压缩的文件，并自动为每个文件选择更优的方式。
 
 zip 格式是 Windows 上最常用的格式，但对 Unicode 文件名支持有限（取决于 zip 工具版本和压缩设置）。在跨平台交换文件时建议使用 tar.xz 或 tar.zst 格式。
 
@@ -268,7 +268,7 @@ drwxr-xr-x  2 ykla ykla     2 Apr 16 11:53 test
 $ zstd -d test.tar.zst
 ```
 
-> **注意**
+> **技巧**
 >
 > 这样解压出来的是 `test.tar`，还需要再用 `tar` 解压一次。
 
@@ -278,7 +278,7 @@ $ zstd -d test.tar.zst
 $ zstd -d test.tar.zst -o /home/ykla/mytest # 参数 -d 表示 decompress（解压缩）
 ```
 
-> **注意**
+> **技巧**
 >
 > 同上，解压出来的是 `test.tar`，还需要再用 `tar` 解压一次。
 

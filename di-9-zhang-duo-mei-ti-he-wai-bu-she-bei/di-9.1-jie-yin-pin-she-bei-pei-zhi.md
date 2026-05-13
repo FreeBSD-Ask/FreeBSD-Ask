@@ -39,7 +39,7 @@ No devices installed from userspace.
 
 输出中标注为 `default` 的设备是 OSS（Open Sound System，开放声音系统）的默认音频设备。OSS 是 FreeBSD 原生的音频子系统，提供直接的音频设备访问接口。如果软件使用 OSS 作为音频输出接口且输出设备设置为默认值，音频将从该设备输出。
 
-如果需获取更详细的声卡信息用于深度诊断，通过调整内核参数提高调试输出等级：
+如果需获取更详细的声卡信息用于深度诊断，可通过调整内核参数提高调试输出等级：
 
 ```sh
 # sysctl hw.snd.verbose=4  # 设置 FreeBSD 声卡驱动调试输出等级为 4
@@ -137,7 +137,7 @@ $ mixer vol=+5%  # 将音量增加 5%
 
 OSS 作为底层音频接口存在一定技术限制：其设计未提供音频流回环机制，因此在使用 `obs-studio` 等软件时无法直接录制 OSS 的输出音频。根据官方论坛说明，可使用 `virtual_oss` 工具模拟音频设备完成该功能（借助 `virtual_oss` 的 `-M` 参数完成声道路由，将 OSS 输出重定向到 OSS 输入）。
 
-`obs-studio` 可录制 PulseAudio 的输出音频（默认的“桌面音频”输入源对应 PulseAudio 输出）。因此，部分软件可配置为使用 PulseAudio 作为音频输出接口。使用 PulseAudio 的软件，其音频输出不受上述 OSS 命令控制，需使用 PulseAudio 混音器管理设备。
+`obs-studio` 可录制 PulseAudio 的输出音频（默认的“桌面音频”输入源对应 PulseAudio 输出），因此部分软件可配置为使用 PulseAudio 作为音频输出接口。使用 PulseAudio 的软件，其音频输出不受上述 OSS 命令控制，需使用 PulseAudio 混音器管理设备。
 
 ### AMD CPU mode 2 reset
 

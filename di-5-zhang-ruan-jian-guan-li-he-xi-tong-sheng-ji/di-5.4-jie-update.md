@@ -34,7 +34,7 @@ hours-between-reminders     8   # 提醒间隔（小时）
 
 ## 图片示例
 
-> **注意**
+> **技巧**
 >
 > 截图为手动执行示例，实际上程序可以在后台自动运行，无需手动验证。如果无法再现，可以将 `freebsd-update-notify.conf` 中两个值都改为 `0`，再手动以 `root` 权限执行 **/usr/local/libexec/freebsd-update-notify**。
 

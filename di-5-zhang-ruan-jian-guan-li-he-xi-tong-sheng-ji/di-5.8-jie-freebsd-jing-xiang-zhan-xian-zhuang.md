@@ -125,7 +125,7 @@ TUNA: <https://github.com/tuna/issues/issues/16>
 
 ## 官方给出的镜像站基本要求
 
-- 服务器的 root 权限，这一要求在国内同样稀缺，开源镜像站通常不会给予；
+- 服务器的 root 权限在国内同样稀缺，开源镜像站通常不会给予；
 - IPv6 及 BGP 网络——国内也很缺乏；其中 CN2 网络在中国大陆同样稀缺，但并非 FreeBSD 官方要求，而是国内网络环境的额外考量；
 - 足够的存储空间（约 50 TB）和 1 G 带宽；
 - 上述服务器共计 5 台；
@@ -146,7 +146,7 @@ FreeBSD 在中国大陆境内为数不多且能正常同步的镜像站，均未
 - [FreeBSD-pkg 脚本](https://github.com/ustclug/ustcmirror-images/blob/master/freebsd-pkg/sync.sh)
 - [FreeBSD-ports 脚本](https://github.com/ustclug/ustcmirror-images/blob/master/freebsd-ports/sync-ports.sh)
 
-> **注意**
+> **技巧**
 >
 > 呼吁有余力者维护修订上述两个脚本，以减轻 USTC 镜像站的压力，同时为境内提供更好的 FreeBSD 镜像服务。
 

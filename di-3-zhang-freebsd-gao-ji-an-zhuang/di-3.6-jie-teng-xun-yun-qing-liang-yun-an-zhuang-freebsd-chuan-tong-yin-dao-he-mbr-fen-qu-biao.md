@@ -40,7 +40,7 @@ FreeBSD 中文社区. 08-腾讯云轻量云及其他服务器安装 FreeBSD[EB/O
 
 如前所述，由于 FreeBSD 与 Linux 生态不同，需要先引导至一个运行在内存中的 Linux 环境，在该环境中将 mfsBSD 写入硬盘，最后通过 `bsdinstall` 工具完成系统安装。
 
-在 mfsBSD 下载页面的下方，可找到 [mfsLinux](https://mfsbsd.vx.sk/files/iso/mfslinux/mfslinux-0.1.11-94b1466.iso)，这正是所需的 Linux 环境。由于它仅提供 ISO 格式，无法在当前环境下直接启动。由于其基于纯 initrd 架构，需要从中提取内核和 initrd 文件，存放于硬盘并进行手动引导。
+在 mfsBSD 下载页面的下方，可找到 [mfsLinux](https://mfsbsd.vx.sk/files/iso/mfslinux/mfslinux-0.1.11-94b1466.iso)，即所需的 Linux 环境。由于它仅提供 ISO 格式，无法在当前环境下直接启动。由于其基于纯 initrd 架构，需要从中提取内核和 initrd 文件，存放于硬盘并进行手动引导。
 
 在典型的 Linux 系统中，initrd 是一个被打包为内存盘的精简根文件系统，内含驱动程序、挂载工具以及启动初始化程序所必需的数据。开机时，引导加载程序（Bootloader）加载内核与 initrd，由 initrd 中的脚本执行启动准备，随后移交控制权给硬盘上的初始化程序。
 
@@ -63,6 +63,10 @@ boot # 输入 boot 后按回车继续启动
 此时应可通过 SSH 连接到服务器，并安全地格式化硬盘。
 
 mfsBSD 和 mfsLinux 镜像的默认 `root` 密码均为 `mfsroot`。
+
+> **警告**
+>
+> `dd` 写入块设备将覆盖磁盘上所有现有数据，包括分区表和文件系统，操作不可逆。请反复确认 `of=` 参数指定的设备路径正确无误。
 
 ```sh
 # cd /tmp # 切换至临时目录
@@ -98,6 +102,10 @@ mfsBSD 和 mfsLinux 镜像的默认 `root` 密码均为 `mfsroot`。
 ## 故障排除与未竟事宜
 
 ### 为何不能直接使用 dd？（错误示范，仅供说明，请勿执行）
+
+> **警告**
+>
+> 以下命令仅为错误示范，切勿执行。`dd` 写入块设备将覆盖磁盘上所有现有数据，操作不可逆。
 
 在正常的 Linux 系统中，若直接将 mfsBSD 的 img 镜像通过 `dd` 写入硬盘，重启后虽能正常加载引导程序，但可能因系统对硬盘的后续写入操作而导致无法正常挂载内存盘。
 
