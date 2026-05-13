@@ -883,7 +883,7 @@
   - “第 1.1 节 UNIX、Unix-like、Linux 和 FreeBSD 简介”：补充“macOS/iOS 等与 BSD 的关系”
 - 2024.11.7
   - “第 6.4 节 NTFS 的挂载”：新建“格式化”、挂载部分。
-  - 针对“[Add new category fs for file systems](https://github.com/freebsd/freebsd-ports/pull/302)” 进行修改
+  - 针对“[Add new category fs for file systems](https://github.com/freebsd/freebsd-ports/pull/302)” 修改
 - 2024.11.2
   - “第 19.2 节 Linux 败局与 FreeBSD 败局” 补充思考题
   - 新建“第 19.3 节 驳《还有人记得 Linux 之前，那个理想又骄傲的 BSD 吗？》”
@@ -1093,7 +1093,7 @@
   - 增补全书兼容层相关章节
 - 2023.8.18
   - “第 30.1 节 Linux 兼容层实现”增补“题外话——使用 Linux 兼容层为什么不是苦难哲学？”
-  - 对来源不明的章节进行版权标注或警告
+  - 对来源不明的章节标注版权或发出警告
 - 2023.8.17
   - 新增“第 0.9 节 谁在使用 FreeBSD”
   - 新增“第 0.10 节 FreeBSD 中文社区文章翻译表”
@@ -1417,7 +1417,7 @@
 
 ## 2021 年第二季度
 
-《FreeBSD 从入门到跑路》项目在 [clean-master/freebsdcn](https://github.com/clean-master/freebsdcn) 进行更新。
+《FreeBSD 从入门到跑路》项目在 [clean-master/freebsdcn](https://github.com/clean-master/freebsdcn) 更新。
 
 ## 2021 年第一季度
 
