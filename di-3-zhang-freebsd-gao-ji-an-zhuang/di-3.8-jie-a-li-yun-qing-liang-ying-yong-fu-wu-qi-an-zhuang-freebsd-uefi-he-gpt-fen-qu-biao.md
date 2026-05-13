@@ -26,7 +26,7 @@
 
 ### 验证服务器是否处于 UEFI 环境
 
-本节针对 UEFI 启动环境和 GPT 分区表，因此必须首先确认服务器是否处于 UEFI 启动环境并使用 GPT 分区表。由于不同服务器环境各异，本节提供多种方法供读者参考。
+本节针对 UEFI 启动环境和 GPT 分区表，因此必须首先确认服务器是否使用 UEFI 启动环境与 GPT 分区表。由于不同服务器环境各异，本节提供多种方法供读者参考。
 
 - 通过系统固件判断当前系统是以 UEFI 还是 BIOS 模式启动：
 
@@ -193,7 +193,7 @@ default via 172.24.63.253 dev eth0 proto dhcp src 172.24.0.80 metric 100
 
 ![写入 FreeBSD ZFS 镜像到整块硬盘](../.gitbook/assets/cloud-zfs-write-disk.png)
 
-随后在阿里云管理控制台中依次选择“更多操作”和“重启”
+随后在阿里云管理控制台中依次选择“更多操作”和“重启”。
 
 ![强制重启实例](../.gitbook/assets/cloud-force-reboot.png)
 
