@@ -64,7 +64,7 @@ UTM（逆构词为 Universal Turing Machine）是开源、基于 QEMU、面向 A
 
 ![安装程序界面](../.gitbook/assets/install_bsd_on_utm/utm-installer.png)
 
-基本系统安装完成，终端能正常运行，在虚拟机内执行 `ifconfig` 命令，查看到 IP 地址后，便可在宿主机的终端仿真器中发起 SSH 连接。
+基本系统安装完成，终端能正常运行，在虚拟机内执行 `ifconfig` 命令，查看 IP 地址后，便可在宿主机的终端仿真器中发起 SSH 连接。
 
 ![终端](../.gitbook/assets/install_bsd_on_utm/utm-terminal.png)
 
@@ -118,7 +118,7 @@ xinit: server error
 voosk@BSDVM:~ $
 ```
 
-在 **/boot/loader.conf** 文件中加入下面两行可启动 TWM，但虚拟机将失去画面输出（ssh 仍然可以连接，表明这仅为显示问题）。
+在 **/boot/loader.conf** 文件中加入下面两行可启动 TWM，但虚拟机将失去画面输出（SSH 仍然可以连接，表明这仅为显示问题）。
 
 ```sh
 hint.virtio_gpu.0.disabled="1"
