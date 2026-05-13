@@ -25,7 +25,7 @@ FreeBSD 上主要的音频播放器包括 Audacious、VLC 和 MPD。本节给出
 
 ### 使用 Audacious
 
-对 `.m4a`（MPEG-4 音频容器格式）、`.flac`（无损音频压缩编码）、`.av3a`（AVS3 音频裸码流格式）等音乐格式进行兼容性测试。`.m4a` 为容器格式，可包含多种编码（如 AAC、ALAC 等）；`.av3a` 为裸码流，实际应用中 AVS3 音频也常封装在 MP4 容器中以 `.m4a` 扩展名存储。
+测试 `.m4a`（MPEG-4 音频容器格式）、`.flac`（无损音频压缩编码）、`.av3a`（AVS3 音频裸码流格式）等音乐格式的兼容性。`.m4a` 为容器格式，可包含多种编码（如 AAC、ALAC 等）；`.av3a` 为裸码流，实际应用中 AVS3 音频也常封装在 MP4 容器中以 `.m4a` 扩展名存储。
 
 > **技巧**
 >
@@ -35,7 +35,7 @@ FreeBSD 上主要的音频播放器包括 Audacious、VLC 和 MPD。本节给出
 
 ## VLC
 
-VLC（VideoLAN Client，视频局域网客户端）播放器的安装方法可参见本书视频播放器相关章节。FreeBSD 中的 `ffmpeg` 多媒体框架（名称中的“FF”无官方缩写含义，“mpeg”指 MPEG 标准，参见 [FFmpeg FAQ](https://ffmpeg.org/faq.html)）默认构建配置未启用 libuavs3d（AVS3 解码）和 libdavs2（AVS2 解码）支持，本节不再展开重新编译配置方法。
+VLC（VideoLAN Client，视频局域网客户端）播放器的安装方法可参见本书视频播放器相关章节。FreeBSD 中的 `ffmpeg` 多媒体框架（名称中的"FF"无官方缩写含义，"mpeg"指 MPEG 标准，参见 [FFmpeg FAQ](https://ffmpeg.org/faq.html)）默认构建配置未启用 libuavs3d（AVS3 解码）和 libdavs2（AVS2 解码）支持，本节不再展开重新编译的配置方法。
 
 经过实际测试，VLC 播放器可以正常播放 AC-4 编码的 m4a 格式音频：
 
@@ -108,7 +108,7 @@ dev.pcm.2.play.vchanmode: vchan format/rate selection: 0=fixed, 1=passthrough, 2
 
 > **技巧**
 >
-> 可使用 `dmesg` 命令查看内核日志中记录的硬件支持的可用采样率。在播放非 DSD 文件时，采样率设置为与音频文件本身采样率相同（或其整数倍）比较合适，如此可避免重采样过程造成的音质损失。采样率并非越高越好，可经多次测试确定最适合当前硬件配置的设置。
+> 可使用 `dmesg` 命令查看内核日志中记录的硬件支持的可用采样率。在播放非 DSD 文件时，采样率设置为与音频文件本身采样率相同（或其整数倍）比较合适，如此可避免重采样造成的音质损失。采样率并非越高越好，可经多次测试确定最适合当前硬件配置的设置。
 
 查看内核消息中与 pcm2 声卡相关的日志：
 
