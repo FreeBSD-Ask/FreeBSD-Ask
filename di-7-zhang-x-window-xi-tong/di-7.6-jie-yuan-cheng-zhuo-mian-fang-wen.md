@@ -376,7 +376,7 @@ root     syslogd     1021 7   udp4   *:514                 *:*
 
 该软件支持 Android 平台 RDP 连接。
 
-将左上鼠标操作改为触摸操作。默认的鼠标操作不够便捷，也可以选择通过 OTG 连接鼠标和键盘来操控。
+将左上鼠标操作改为触摸操作。默认的鼠标操作不够便捷，也可以选择通过 OTG 连接鼠标和键盘操控。
 
 ![Remote Desktop FreeBSD](../.gitbook/assets/windows-rdp-1.png)
 
@@ -477,7 +477,7 @@ Password: # 输入密码，密码不会显示出来 ***。
 
 ### rdesktop（不支持 NLA）
 
-`net/xrdesktop2` 是 rdesktop 的图形化前端，测试中在打开键盘设置时出现无响应的情况。
+`net/xrdesktop2` 是 rdesktop 的图形化前端，测试中在打开键盘设置时出现无响应。
 
 ---
 
@@ -569,7 +569,7 @@ Do you trust this certificate (yes/no)? # 输入 yes，按回车键
 
 ## AnyDesk
 
-使用 AnyDesk 可进行远程访问，FreeBSD 上仅支持 amd64（x86_64）架构：
+使用 AnyDesk 可远程访问，FreeBSD 上仅支持 amd64（x86_64）架构：
 
 由于版权原因（专有软件未经许可禁止分发），必须由用户使用 Ports 自行构建安装：
 
