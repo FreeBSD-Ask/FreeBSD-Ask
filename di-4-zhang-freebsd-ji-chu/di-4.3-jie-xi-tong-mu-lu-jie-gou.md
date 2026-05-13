@@ -92,7 +92,7 @@ FreeBSD 的目录结构设计遵循以下原则：
 │   ├── inetd.conf 配置 BSD inetd，参见 inetd(8)
 │   ├── jail.conf.d 用于 jail 配置的模块化管理，默认为空（jail.conf(5)）
 │   ├── kyua Kyua 测试框架的全局配置文件（kyua(1)、kyua.conf(5)）
-│   ├── localtime 本地时区文件，参见 ctime(3)。在测试系统中，localtime 被链接到了 /usr/share/zoneinfo/Asia/Shanghai
+│   ├── localtime 本地时区文件，参见 ctime(3)。在测试系统中，localtime 链接至 /usr/share/zoneinfo/Asia/Shanghai
 │   ├── login.conf 登录类功能数据库，参见 login.conf(5)
 │   ├── machine-id 系统的 UUID，供 D-Bus 使用
 │   ├── mail Sendmail 相关文件，参见 sendmail(8)
