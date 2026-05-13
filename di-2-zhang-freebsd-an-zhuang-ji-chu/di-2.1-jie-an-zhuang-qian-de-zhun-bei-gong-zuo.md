@@ -67,7 +67,7 @@ bsd-hardware.info. Hardware for BSD[EB/OL]. [2026-03-25]. <https://bsd-hardware.
 
 > **技巧**
 >
-> 随着时间推移，读者进行下载时可能已无 14.2-RELEASE 版本。此时只需选择列表最顶部的 `FreeBSD-X.Y-RELEASE`（该版本推荐用于生产环境）。其中，`X.Y` 应为比 `14.2` 更大的版本号，如 `15.0`、`16.0` 等，但需要注意其应以 `RELEASE` 结尾，而非 `CURRENT`。
+> 随着时间推移，读者下载时可能已无 14.2-RELEASE 版本。此时只需选择列表最顶部的 `FreeBSD-X.Y-RELEASE`（该版本推荐用于生产环境）。其中，`X.Y` 应为比 `14.2` 更大的版本号，如 `15.0`、`16.0` 等，但需要注意其应以 `RELEASE` 结尾，而非 `CURRENT`。
 
 > **警告**
 >
