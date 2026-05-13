@@ -62,7 +62,7 @@ hw.usb.usbhid.enable="0"
 
 usbhid 驱动引入内核的过程始于 [FreeBSD 代码审查 D45658](https://reviews.freebsd.org/D45658)，而替代 ums 作为默认驱动的变更出现在 [D45659](https://reviews.freebsd.org/D45659)。上述两项变更均于 2024 年 6 月提交至 15.0-CURRENT 分支，并从 15.0 起成为系统默认行为。
 
-此问题仍需进一步研究其根本原因，并向 FreeBSD 项目提交 Bug 报告，因为项目计划在未来版本中彻底移除 ums 驱动支持。具体可参考 FreeBSD 期刊 2021/0708 期的相关报道。
+鉴于项目计划在未来版本中彻底移除 ums 驱动支持，此问题仍需进一步研究其根本原因，并应向 FreeBSD 项目提交 Bug 报告。具体可参考 FreeBSD 期刊 2021/0708 期的相关报道。
 
 ## 附录：Fn 键设置
 
