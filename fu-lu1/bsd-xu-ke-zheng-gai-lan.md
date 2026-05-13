@@ -2,7 +2,7 @@
 
 BSD 许可证是自由软件许可证中的重要类别，其使用条款宽松。本文列出主要的 BSD 许可证，包括 OSI（开放源代码促进会）认可的许可证，以及具有历史意义但未被 OSI 认可的 BSD-4-Clause。更多 BSD 许可证信息参见 OSI。
 
-下文列出的所有 BSD 许可证均属于非 copyleft（著佐权）许可证范畴，即不强制要求修改后的衍生版本仍需作为自由软件发布。
+下文列出的所有 BSD 许可证均属非 copyleft（著佐权）许可证，即不强制要求修改后的衍生版本仍需作为自由软件发布。
 
 BSD 许可证条款编号用于表示附加义务和限制条件的复杂度。0BSD 限制最少，BSD-4-Clause 限制最多。
 
@@ -71,7 +71,7 @@ THIS SOFTWARE IS PROVIDED BY [Name of Organization] "AS IS" AND ANY EXPRESS OR I
 
 ## BSD 两条款许可证（The 2-Clause BSD License，BSD-2-Clause）
 
-BSD 两条款许可证应用较为广泛，即 FreeBSD 许可证，亦称简化版 BSD 许可证，为 FreeBSD 项目优先选用。该许可证删除了原始 BSD 许可证（BSD-4-Clause）中的广告条款与背书条款，仅要求在源代码和二进制再发布中保留版权声明、条件列表及免责声明。广告条款本要求在所有宣传材料中提及原作者，因其实际使用不便而被移除。
+BSD 两条款许可证应用较为广泛，即 FreeBSD 许可证，亦称简化版 BSD 许可证，为 FreeBSD 项目优先选用。该许可证删除了原始 BSD 许可证（BSD-4-Clause）中的广告条款与背书条款，仅要求在源代码和二进制再发布中保留版权声明、条件列表及免责声明。广告条款本要求在所有宣传材料中提及原作者，因其实际使用不便，现已移除。
 
 全文如下：
 
@@ -139,7 +139,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 ## BSD 四条款许可证（BSD 4-Clause “Original” or “Old” License，BSD-4-Clause）
 
-BSD 四条款许可证是 BSD 许可证的原始版本，具有较多限制条件。BSD 四条款许可证即原始的 BSD 许可证，目前不被 OSI 认可。此许可证带有广告条款，要求在所有提及本软件功能或用途的广告材料中声明使用了原作者的产品（参见下文第 3 条）。
+BSD 四条款许可证是 BSD 许可证的原始版本，具有较多限制条件。BSD 四条款许可证即原始的 BSD 许可证，目前未获 OSI 认可。此许可证带有广告条款，要求在所有提及本软件功能或用途的广告材料中声明使用了原作者的产品（参见下文第 3 条）。
 
 全文如下：
 
