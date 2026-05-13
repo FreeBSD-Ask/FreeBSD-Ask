@@ -63,9 +63,9 @@
 | --------- | --------- | ----------- | ---- |
 | ![FreeBSD 操作系统设计与实现（原书第二版）](../.gitbook/assets/freebsd2rd.png) <br><br> 《FreeBSD 操作系统设计与实现（原书第 2 版）》 | [美] Marshall McKusick、George V. Neville-Neil、Robert N.M. Watson 等著 <br><br> 陈向群、郭立峰、叶顺平 等译 | 978-7-111-68997-3 <br><br> 机械工业出版社 | FreeBSD 内核设计权威著作，详解现代 FreeBSD 内核架构与实现细节 |
 
-该书采用轻型纸印刷，部分章节需要由读者自行通过 [网络](https://course.cmpreading.com/web/refbook/detail/9661/215) 下载。
+该书采用轻型纸印刷，部分章节需要读者自行通过 [网络](https://course.cmpreading.com/web/refbook/detail/9661/215) 下载。
 
-该书阅读难度较高，属于高级技术专著范畴，需要具备一定的操作系统理论基础才能理解。
+该书阅读难度较高，属高级技术专著，需要具备一定的操作系统理论基础才能理解。
 
 主要作者 McKusick M K 在其网站上提供多门 BSD 相关的录制课程，参见 McKusick M K. BSD related courses[EB/OL]. [2026-03-26]. <https://www.mckusick.com/buylist.html>. 目前正在撰写第三版（由 No Starch Press 出版），相关信息可参见 McKusick M K. The History of the BSD Daemon: BSDCan 2025[EB/OL]. [2026-04-18]. <https://www.bsdcan.org/2025/talks/daemon.pdf>.
 
