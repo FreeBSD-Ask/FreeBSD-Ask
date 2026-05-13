@@ -324,7 +324,7 @@ $ git clone https://github.com/FreeBSD-Ask/FreeBSD-Ask
 
 ### 预览页面
 
-当您提交 PR 时，系统会自动生成一个预览网站。
+当您提交 PR 时，系统会自动生成预览网站。
 
 实际上，所有提交都有对应的网站版本：
 
