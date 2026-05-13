@@ -39,7 +39,7 @@ No devices installed from userspace.
 
 输出中标注为 `default` 的设备是 OSS（Open Sound System，开放声音系统）的默认音频设备。OSS 是 FreeBSD 原生的音频子系统，提供直接的音频设备访问接口。如果软件使用 OSS 作为音频输出接口且输出设备设置为默认值，音频将从该设备输出。
 
-如果需获取更详细的声卡信息用于深度诊断，通过调整内核参数提高调试输出等级：
+如果需获取更详细的声卡信息用于深度诊断，可通过调整内核参数提高调试输出等级：
 
 ```sh
 # sysctl hw.snd.verbose=4  # 设置 FreeBSD 声卡驱动调试输出等级为 4
