@@ -70,7 +70,7 @@ vidcontrol -f b16.fnt
 
 ![设置完成后的 tty](../.gitbook/assets/tty1.png)
 
-上述命令为临时生效，如需永久生效，应加入 **/etc/rc.conf** 文件：
+上述命令仅临时生效，如需永久生效，应加入 **/etc/rc.conf** 文件：
 
 ```ini
 # 设置控制台所有屏幕使用 b16 字体
