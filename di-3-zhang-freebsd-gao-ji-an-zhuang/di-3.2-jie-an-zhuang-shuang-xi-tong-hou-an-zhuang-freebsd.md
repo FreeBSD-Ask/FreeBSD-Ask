@@ -12,7 +12,7 @@
 
 > **注意**
 >
-> 按照本部分所述方法，在使用 ZFS 时，只会创建一个存储池 `zroot`（zpool），并在其中创建一个直接挂载到 **/** 的数据集 `root`。不同于自动安装，不会创建 `zroot/ROOT/default` 及众多数据集。可以在安装后创建数据集并替换，但若希望初始布局就与自动安装相同，请跳转至本节“Shell 分区”部分。
+> 按照本部分所述方法，使用 ZFS 时，只会创建一个存储池 `zroot`（zpool），并在其中创建一个直接挂载到 **/** 的数据集 `root`。与自动安装不同，不会创建 `zroot/ROOT/default` 及众多数据集。可以在安装后创建数据集并替换，但若希望初始布局就与自动安装相同，请跳转至本节"Shell 分区"部分。
 
 使用简单方法安装 FreeBSD，按照以下步骤操作。
 
@@ -31,7 +31,7 @@
   419426304       4063        - free -  (100G)
 ```
 
-应关闭安全启动和快速启动。安全启动会阻止未签名的引导加载程序运行，而 FreeBSD 的引导加载程序目前未被微软签名，因此必须关闭。快速启动将使 Windows 在关机时处于特殊的休眠状态，导致其他系统无法正常访问 NTFS 分区。也可通过 Windows 设置 → 更新与安全 → 恢复 → 高级启动，选择从 U 盘设备启动。随后正常引导 FreeBSD 安装程序，直至进入分区选择界面。
+应关闭安全启动和快速启动。安全启动会阻止未签名的引导加载程序运行，而 FreeBSD 的引导加载程序目前未被微软签名，因此必须关闭。快速启动会使 Windows 在关机时处于特殊的休眠状态，导致其他系统无法正常访问 NTFS 分区。也可通过 Windows 设置 → 更新与安全 → 恢复 → 高级启动，选择从 U 盘设备启动，随后正常引导 FreeBSD 安装程序，直至进入分区选择界面。
 
 ![分区选择界面](../.gitbook/assets/dual-system-1.png)
 
@@ -45,7 +45,7 @@
 
 ![硬盘分区情况](../.gitbook/assets/dual-system-2.png)
 
-此处在第一行输入分区类型（即下方会列出的 `Filesystem type`）。如需添加 swap 分区，请在此步骤首先添加，后续添加则难以控制分区大小，因为分区会从空闲空间的开头或结尾分配，先添加 swap 可以更好地控制其位置。在添加 UFS 或 ZFS 分区时，需在 `Mountpoint` 处填写 **/**，表示将该分区挂载到根目录。`Label` 是 FreeBSD 的卷标（gptlabel），用于识别分区，可根据需要填写或留空。此处使用 ZFS，不添加 swap 分区，并且填入卷标 `zroot`。
+此处在第一行输入分区类型（即下方会列出的 `Filesystem type`）。如需添加 swap 分区，请在此步骤首先添加，后续添加则难以控制分区大小，因为分区会从空闲空间的开头或结尾分配，先添加 swap 可以更好地控制其位置。添加 UFS 或 ZFS 分区时，需在 `Mountpoint` 处填写 **/**，表示将该分区挂载到根目录。`Label` 是 FreeBSD 的卷标（gptlabel），用于识别分区，可根据需要填写或留空。此处使用 ZFS，不添加 swap 分区，并且填入卷标 `zroot`。
 
 ![创建分区](../.gitbook/assets/dual-system-3.png)
 
@@ -53,7 +53,7 @@
 
 ![确认分区创建](../.gitbook/assets/dual-system-4.png)
 
-此处会警告 ZFS 分区可能无法启动，但实际测试表明可以正常启动。这个警告是安装程序的通用提示，对于 UEFI 环境下的配置并不适用。选择 `Yes` 忽略此警告：
+此处会警告 ZFS 分区可能无法启动，但实际测试表明可以正常启动。这个警告是安装程序的通用提示，不适用于 UEFI 环境下的配置。选择 `Yes` 忽略此警告：
 
 ![ZFS 分区警告](../.gitbook/assets/dual-system-5.png)
 
@@ -81,7 +81,7 @@ root  534M    130G   534M  none
 
 ## Shell 分区
 
-仍停留在分区选择界面，此时选择 `Shell`：
+此时仍停留在分区选择界面，选择 `Shell`：
 
 ![选择 Shell 分区](../.gitbook/assets/dual-system-9.png)
 
@@ -190,7 +190,7 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 
 ### 创建 ZFS 数据集
 
-以下数据集的设置参照 FreeBSD 源代码中的 [usr.sbin/bsdinstall/scripts/zfsboot](https://github.com/freebsd/freebsd-src/blob/main/usr.sbin/bsdinstall/scripts/zfsboot) 创建。FreeBSD 本身在持续开发，不同版本间的 ZFS 数据集也有所差异。读者在创建数据集时若希望创建与默认安装相同的数据集结构，应参照对应分支的 `usr.sbin/bsdinstall/scripts/zfsboot` 文件。
+以下数据集的设置参照 FreeBSD 源代码中的 [usr.sbin/bsdinstall/scripts/zfsboot](https://github.com/freebsd/freebsd-src/blob/main/usr.sbin/bsdinstall/scripts/zfsboot) 创建。FreeBSD 本身持续演进，不同版本间的 ZFS 数据集也有所差异。读者创建数据集时若希望创建与默认安装相同的数据集结构，应参照对应分支的 `usr.sbin/bsdinstall/scripts/zfsboot` 文件。
 
 - 创建根数据集
 
