@@ -69,7 +69,7 @@
   - 对全书进行事实核查
 - 2026.4.8
   - 删除赘余的人称和表达
-  - 进行润色以符合出版物要求
+  - 润色以符合出版物要求
 - 2026.4.5
   - 格式化全书
 - 2026.4.3
@@ -94,7 +94,7 @@
 - 2026.3.22
   - 为全书补全目录结构图
 - 2026.3.21
-  - 为所有参考资料进行注解
+  - 为所有参考资料作注解
   - 为全书增补课后习题
 - 2026.3.19
   - 全面修订所有章节，旨在靠近专业出版物
@@ -136,7 +136,7 @@
   - 删除“21.5 基于 archlinux-pacman 的 Arch Linux 兼容层（拟删除）”。原因：存在 Bug 287690 [sysutils/pacman: The archlinux flavor cannot be built or installed.](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=287690) 无法得到解决
   - 删除“6.10 Budgie（拟删除）”，原因：欠缺维护，存在 [Bug 289898 x11/budgie: After logging in with LightDM, it crashes and then shows a black screen](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=289898) 无法得到解决
   - 将“附录：登录界面主题”从“6.3 KDE 6（X11 会话）”彻底删除，因为软件源中仅存在 Port x11-themes/sddm-freebsd-black-theme，且无人维护，存在 [x11-themes/sddm-freebsd-black-theme incompatible with SDDM 0.21.0 (Qt6 greeter)](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=293449) 的问题无法得到解决
-  - 注意到 Lumina 实际上不存在任何维护者，且长期未更新，作删除处理。
+  - 注意到 Lumina 实际上不存在任何维护者，且长期未更新，删除。
   - 删除“7.5 Window Maker”，Bug 较多，基本无法使用
   - 删除“7.6 Fluxbox”，Bug 较多，基本无法使用
   - “第 7 章 窗口管理器”剩余内容迁移到“第 6 章 桌面环境”，
