@@ -184,7 +184,7 @@ sysrc mihomo_datadir="/var/run/mihomo"
 service mihomo init
 ```
 
-- 更新订阅配置。执行 `start` 前先行更新，以确保配置文件为最新版本：
+- 更新订阅配置。执行 `start` 前先行更新，确保配置文件为最新版本：
 
 ```sh
 service mihomo reconfig

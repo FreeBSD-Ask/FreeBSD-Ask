@@ -59,7 +59,7 @@ and retry with 'git restore --source=HEAD :/'
 
 - 若某一技术在最新版本中已移除，应及时移除其在本书中的对应内容
 - 使全书语气温和而坚定
-- 在尽量减少原文引用的前提下，重写各章节内容并删除冗余部分
+- 尽量减少原文引用，重写各章节内容并删除冗余部分
 - 实现 BSD 中文文档协作方式的现代化与简化：
   - 自动化（CI 检查、预览、生成 HTML/PDF）
   - 仅使用最基础的 Markdown 语法，避免复杂扩展和繁琐流程
@@ -320,11 +320,11 @@ $ git clone https://github.com/FreeBSD-Ask/FreeBSD-Ask
 
 - 第一行 `# Table of contents` 绝对不允许变更，否则 GitBook 将无法识别，导致失去同步。
 - 要求格式应为 `* [2.2 使用 bsdinstall 开始安装](di-2-zhang-an-zhuang-freebsd/di-2.2-jie-start-install.md)`，不允许出现 `* [2.2 使用 bsdinstall 开始安装](di-3-zhang-ni-hao/di-2.2-jie-start-install.md)` 这种情况，即目录结构与文件放置位置必须一致（不一致虽不会报错，但本项目要求保持一致）。
-- 通过 `sync-headers.yml`，将自动同步 `SUMMARY.md` 中的章节标题到具体的 Markdown 文件中。因此如果需要修改 `di-2.2-jie-start-install.md` 的一级标题 `# 2.2 使用 bsdinstall 开始安装`，必须仅修改 `SUMMARY.md` 中的 `2.2 使用 bsdinstall 开始安装`，否则会被 `sync-headers.yml` 覆盖。当二者不一致时，若提交时未触发脚本构建，则 GitBook 将以 `SUMMARY.md` 中的目录为准。
+- 通过 `sync-headers.yml`，将自动同步 `SUMMARY.md` 中的章节标题到具体的 Markdown 文件中。因此如果需要修改 `di-2.2-jie-start-install.md` 的一级标题 `# 2.2 使用 bsdinstall 开始安装`，必须仅修改 `SUMMARY.md` 中的 `2.2 使用 bsdinstall 开始安装`，否则会被 `sync-headers.yml` 覆盖。二者不一致时，若提交时未触发脚本构建，则 GitBook 将以 `SUMMARY.md` 中的目录为准。
 
 ### 预览页面
 
-当您提交 PR 时，系统会自动生成预览网站。
+您提交 PR 时，系统会自动生成预览网站。
 
 实际上，所有提交都有对应的网站版本：
 
