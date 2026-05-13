@@ -162,7 +162,7 @@ Makefile		pkg-plist-client	pkg-plist-plpython
 - ① **/usr/ports** 这个文件夹整体称作 Ports，包括几十种不同的分类目录，每个目录下有若干 Port。
 - ② **/usr/ports/databases/postgresql18-server** 这个文件夹整体称作一个 Port，由 `distinfo`（校验和文件）、`pkg-descr`（软件描述文件）、`Makefile`（主文件，包含构建方法、版本号及下载方式等）、`pkg-plist`（安装文件列表及其权限和属组信息）、`files`（一般为补丁文件，该 Port 下还包含安装后的说明文件 `pkg-message`）等文件构成。
 
-之所以称为“Ports Collection”（移植集合，不应理解为“端口集合”），是因为这些软件绝大部分并不由 FreeBSD 控制、管理和维护。Port 提交者的主要工作是将 FreeBSD 上的 Port 更新到上游开发者提供的最新版本，删除上游不再维护的软件 Port。在上游不接受 BSD 特有的 PR 补丁或难以直接通过既有 Ports 框架实现构建的情况下，Port 维护者也需要自行复刻一个分支出来维护（如 [editors/vscode](https://github.com/tagattie/FreeBSD-VSCode)）。
+之所以称为“Ports Collection”（移植集合，不应理解为“端口集合”），是因为这些软件绝大部分并不由 FreeBSD 控制、管理和维护。Port 提交者的主要工作是将 FreeBSD 上的 Port 更新到上游开发者提供的最新版本，删除上游不再维护的软件 Port。在上游不接受 BSD 特有的 PR 补丁或难以直接通过既有 Ports 框架实现构建的情况下，Port 维护者也需要自行复刻一个分支来维护（如 [editors/vscode](https://github.com/tagattie/FreeBSD-VSCode)）。
 
 ## Ports 构建 pkg 软件包的流程
 
@@ -407,8 +407,6 @@ root@ykla:/usr/ports/sysutils/htop # make all-depends-list
 ## 更新 FreeBSD 软件包/Port
 
 更新前需要先同步更新 Ports Git。
-
-先同步 Ports Git。
 
 然后列出过时的 Port 软件：
 
