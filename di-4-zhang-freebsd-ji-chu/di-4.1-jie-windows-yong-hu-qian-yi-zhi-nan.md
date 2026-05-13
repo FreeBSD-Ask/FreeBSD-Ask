@@ -105,7 +105,7 @@ PSPath
 
 > **注意**
 >
-> ZFS 并不使用 **/etc/fstab** 文件，因此如果在该文件中不存在任何 ZFS 文件系统（**/**），这属于正常现象。
+> ZFS 并不使用 **/etc/fstab** 文件，因此，如果该文件中不存在任何 ZFS 文件系统（**/**），这属于正常现象。
 
 示例：标准 UFS 安装下的 **/etc/fstab** 文件。
 
@@ -153,7 +153,7 @@ FreeBSD 的 ZFS 和 UFS 均**区分大小写（大小写敏感）**。而 macOS 
 
 ![大小写敏感](../.gitbook/assets/windows-case-sensitive.png)
 
-在 Windows 中，`abc` 和 `ABC` 被视为同一文件，无法共存。
+在 Windows 中，`abc` 和 `ABC` 视作同一文件，无法共存。
 
 > **技巧**
 >
