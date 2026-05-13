@@ -55,7 +55,7 @@
 
 ## FreeBSD 社区准则（CoC）
 
-原文见 [FreeBSD Community Code of Conduct](https://www.freebsd.org/internal/code-of-conduct/)，确立 FreeBSD 社区包容性与尊重性的行为准则。
+原文见 [FreeBSD Community Code of Conduct](https://www.freebsd.org/internal/code-of-conduct/)，该准则旨在确立 FreeBSD 社区的包容性与尊重性行为准则。
 
 ### FreeBSD 社区行为规范（CoC）
 
