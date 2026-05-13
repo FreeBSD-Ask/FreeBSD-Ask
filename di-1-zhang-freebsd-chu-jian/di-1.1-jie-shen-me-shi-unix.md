@@ -31,7 +31,7 @@ UNIX 操作系统认证查询网址：[The Open Group official register of UNIX 
 1. 技术标准要求：符合 [单一 UNIX 规范](https://www.opengroup.org/openbrand/register/xym0.htm)（Single UNIX Specification，SUS），该规范定义了 UNIX 系统必须实现的接口、命令、实用程序和库函数，确保不同 UNIX 操作系统之间互相兼容。
 2. 法律与费用要求：缴纳相应的 [认证费用](https://www.opengroup.org/openbrand/Brandfees.htm)。
 
-当前经认证的 UNIX 操作系统包括 Apple 公司的 macOS。从商标角度看，macOS 是符合标准的 UNIX 操作系统。~~故，要安装 UNIX 的人可考虑 macOS。~~
+当前经认证的 UNIX 操作系统包括 Apple 公司的 macOS。从商标角度看，macOS 是符合标准的 UNIX 操作系统。~~因此，要安装 UNIX 的人可考虑 macOS。~~
 
 > **技巧**
 >
