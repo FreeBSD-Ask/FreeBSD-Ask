@@ -58,7 +58,7 @@ mfsBSD 是一款完全载入内存的 FreeBSD 系统，类似于 Windows PE（Pr
 >
 > 同时，mfsBSD Mini 可能无法正常加载 `zfs` 内核模块。
 >
-> 此种情况下仅可使用 UFS 文件系统。
+> 此情况下仅可使用 UFS 文件系统。
 
 ### 内存 > 512 MB
 
