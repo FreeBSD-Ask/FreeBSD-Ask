@@ -268,7 +268,7 @@
   - “5.1 FreeBSD 镜像站现状”新增“拒绝开放的可能性原因分析”
 - 2025.12.7
   - 完全重写：“25.5 更新 ZFS 的 zpool”
-  - 完全重写：“5.7 使用 freebsd-update 更新 FreeBSD”。注：在使用 freebsd-update 从 14.3 或更低版本进行更新时，必须先更新到最新的补丁版本再进行大版本间的更迭。否则会挂。方法：`freebsd-update fetch && freebsd-update install` 参见 <https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=289769> 和 <https://www.freebsd.org/releases/15.0R/installation/#upgrade-binary>
+  - 完全重写：“5.7 使用 freebsd-update 更新 FreeBSD”。注：在使用 freebsd-update 从 14.3 或更低版本进行更新时，必须先更新到最新的补丁版本再进行大版本间的更迭。否则会失败。方法：`freebsd-update fetch && freebsd-update install` 参见 <https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=289769> 和 <https://www.freebsd.org/releases/15.0R/installation/#upgrade-binary>
 - 2025.12.6
   - 将“5.9 使用 pkgbase 更新 FreeBSD”完全重写为“5.9 使用 ZFS 启动环境更新 FreeBSD 并实现多版本共存”
 - 2025.12.5
@@ -442,7 +442,7 @@
 - 2025.7.31
   - 新增：附录 2 UEFI/BIOS 注解（基于 AMI BIOS）
 - 2025.7.30
-  - 之前 KDE 在 Wayland 下，启动后桌面右键单击黑屏的问题已得到解决。参见 <https://old.reddit.com/r/freebsd/comments/1m9popo/kde_mini_review/n5dv1uk/> 和 <https://github.com/freebsd/freebsd-ports/pull/431>。目前已安装的只需要 `make reinstall` Port `graphics/qt6-wayland` 和 `/x11/plasma6-layer-shell-qt` 即可。或者等几天通过 `pkg upgrade`、安装的也应该不会有黑屏问题了。
+  - 之前 KDE 在 Wayland 下，启动后桌面右键单击黑屏的问题已得到解决。参见 <https://old.reddit.com/r/freebsd/comments/1m9popo/kde_mini_review/n5dv1uk/> 和 <https://github.com/freebsd/freebsd-ports/pull/431>。目前已安装的只需要 `make reinstall` Port `graphics/qt6-wayland` 和 `/x11/plasma6-layer-shell-qt` 即可。或者等几天通过 `pkg upgrade`、安装后也应该不会有黑屏问题了。
 - 2025.7.23
   - 恢复书名《FreeBSD 从入门到跑路》
 - 2025.7.7
@@ -605,7 +605,7 @@
   - 测试、改写“第 2.8 节 手动安装双系统（后安装 FreeBSD）”
   - NetBSD 10.1 在 VMware 虚拟机中无论 UEFI 与否，进入 kde 4  都会黑屏。
 - 2025.4.9
-  - 使用 <https://gist.github.com/ykla/adf011fea43f5f4b91aa6f065ac09da2> 对全书过长（> 30 行）的代码块进行整理。
+  - 使用 <https://gist.github.com/ykla/adf011fea43f5f4b91aa6f065ac09da2> 对全书过长（> 30 行）的代码块整理。
   - 孤行控制，删除冗余。
   - 从 1238 页到 1209 页，减少了 2.34% 的无效页面。
 - 2025.4.8
@@ -678,10 +678,10 @@
   - “第 3.6 节 通过 DVD 安装软件”更新至 14.2。注意，使用 `bsdinstall` 通过 DVD 安装软件的方法测试失败！
   - 初步重写“第 22.0 节 如何订阅 FreeBSD 的邮件列表”
   - 调整全书章节排序、重命名全书各章节标题以符合实际内容
-  - 删除“第 2.8 节 虚拟机预安装镜像（本书自制）”，过期了
+  - 删除“第 2.8 节 虚拟机预安装镜像（本书自制）”，已过期
   - 压缩“第 25 章 TwinCAT/BSD”
   - 删除献词、后记，无实质性内容
-  - 删除“第 24.4 节 禁用 Sendmail”，过期了
+  - 删除“第 24.4 节 禁用 Sendmail”，已过期
   - 删除“第 5.8 节 Wine”，无实质性内容
   - “第 6.6 节 Ext 2/3/4 等文件系统”已初步重写，仍待测试
   - 删除“第 9.1 节 jail 与 docker 的比较”，无实质性内容
@@ -710,7 +710,7 @@
   - “第 23.4 节 引导界面”新增“屏幕保护”
   - 为 1-5 章的大部分命令补充了英文原名说明解释。
 - 2025.3.19
-  - “第 11.7 节 命令行基础”新增“thefuck：自动纠正错误拼写的命令”，但要注意，有权限的开发者似乎已经跑路了；
+  - “第 11.7 节 命令行基础”新增“thefuck：自动纠正错误拼写的命令”，但要注意，有权限的开发者似乎已经不再维护；
   - “第 11.7 节 命令行基础”新增命令行基础命令
   - 初步重写“第 8.4 节 用户权限”
 - 2025.3.18
