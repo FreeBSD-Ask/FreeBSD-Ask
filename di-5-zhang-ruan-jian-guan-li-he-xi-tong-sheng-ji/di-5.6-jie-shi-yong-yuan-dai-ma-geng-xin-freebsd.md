@@ -64,7 +64,7 @@ $ git clone --depth 1 https://git.FreeBSD.org/src.git /usr/src
 
 参数 `--depth 1` 说明：浅克隆，仅拉取最新的提交，不拉取全部的日志及历史记录。
 
-或者通过 GitHub 拉取（GitHub 是 FreeBSD.org 上 src 仓库的镜像，每 10 分钟同步一次。）
+或者通过 GitHub 拉取（GitHub 是 FreeBSD.org 上 src 仓库的镜像，每 10 分钟同步一次）。
 
 ```sh
 $ git clone --depth 1 https://github.com/freebsd/freebsd-src /usr/src
@@ -104,7 +104,7 @@ $ git clone --branch releng/15.0 --single-branch --depth 1 https://github.com/fr
 
 > **为何要解压到 `/`？**
 >
-> 因为解压到 **/** 会将源代码解压到 **/usr/src**。如果将上面的路径改为 **/usr/src**，会将源代码解压到 **/usr/src/usr/src**。因为该压缩包是包含路径的。
+> 因为解压到 **/** 会将源代码解压到 **/usr/src**。如果将上面的路径改为 **/usr/src**，会将源代码解压到 **/usr/src/usr/src**。因为该压缩包包含路径。
 
 > **技巧**
 >
