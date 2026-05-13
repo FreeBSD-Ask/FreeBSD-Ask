@@ -80,13 +80,13 @@ and retry with 'git restore --source=HEAD :/'
 - 非拉丁字符与拉丁字符之间应添加空格（中英文/数字之间应有一个半角空格），许多 Markdown 格式化工具可自动处理
 - 不应使用 `sudo` 而应使用 `#` 代替，除非是特殊情况（如讲解如何使用 `sudo` 本身）；普通用户权限请使用 `$` 表示
 - 安装软件时，请提供 pkg（FreeBSD 的二进制包管理器，用于安装、更新和管理预编译软件包，提供依赖关系解析和版本管理功能）或 ports 两种方法，除非极不建议使用 pkg（如特定内核模块等）
-- 请注意版权问题。引用内容或受到启发时，请备注文章链接出处，必要时可使用互联网档案馆进行快照保存
+- 请注意版权问题。引用内容或受到启发时，请备注文章链接出处，必要时可使用互联网档案馆快照保存
 - 编辑时请尽量以最新的 FreeBSD RELEASE（FreeBSD 的正式发布版本，经过充分测试和稳定化，适合生产环境使用，每个 RELEASE 版本均有长期支持周期）为基准，绝对避免出现 `pkg_add` 等过时内容。如有必要，必须注明相关版本
-- 关于编写时长，理论上会持续进行，跟随每个 FreeBSD 大版本迭代更新
-- 若因各种原因无法立即验证所写内容的正确性，请编辑者添加“警告：以下内容为理论，未经实际测试，仅供参考，如可使用请提交 issue 以移除本标签。”的提示标签进行区分
+- 编写工作会跟随每个 FreeBSD 大版本持续迭代更新
+- 若因各种原因无法立即验证所写内容的正确性，请编辑者添加“警告：以下内容为理论，未经实际测试，仅供参考，如可使用请提交 issue 以移除本标签。”的提示标签来区分
 - 不应在文学故事章节删减除错别字和排版以外的内容
 - 请勿使用 Gitee 等境内无法确保信息安全与数据稳定的平台（此类平台无法保证文件的长期可访问性，不适合存放需长期归档的内容，未来存在无法获取文件的重大风险）
-- 修改错别字时，请务必确认其确为错别字，可参考《现代汉语词典》第 7 版等资料进行佐证
+- 修改错别字时，请务必确认其确为错别字，可参考《现代汉语词典》第 7 版等资料佐证
 
 ## 实用附录
 
@@ -225,7 +225,7 @@ $ git clone https://github.com/FreeBSD-Ask/FreeBSD-Ask
 │  │      update_progress.sh # 由 Update-commit-progress.yml 调用
 │  │
 │  └─workflows # GitHub Action，用于自动化处理一些简单任务
-│          Auto-Assign.yml # 自动为 issue PR 分配人员进行处理
+│          Auto-Assign.yml # 自动为 issue PR 分配人员处理
 │          AutoCorrect.yml # markdown 格式修正，会自动提交 PR
 │          check-images.yml # 检查图片的调用情况，有无正确引用图片，不正确会生成 issue
 │          create-pdf.yml # 用于在 GitHub release 生成电子书 PDF、EPUB
@@ -234,7 +234,7 @@ $ git clone https://github.com/FreeBSD-Ask/FreeBSD-Ask
 │          markdown-lint2.yml # markdown 格式检查
 │          md-padding.yml # markdown 空格检查与修复
 │          mulu.yml # 从 SUMMARY.md 生成的镜像文件
-│          sync-headers.yml # 从 SUMMARY.md 更新所有 markdown 文件的一级标题。如果你要修改 # 标题，必须在此处进行修改，否则会被其覆盖
+│          sync-headers.yml # 从 SUMMARY.md 更新所有 markdown 文件的一级标题。如果你要修改 # 标题，必须在此处修改，否则会被它覆盖
 │          Update-commit-progress.yml # 进度检查工具，每 3533 次提交为一个版本，用于插入到 README.md
 │          update-ga4.yml # 谷歌统计数据，用于插入到 README.md
 │
