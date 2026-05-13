@@ -104,7 +104,7 @@ quarterly 分支类似于 Debian 的 Stable 版本，通过固定软件包版本
 
 > **注意**
 >
-> 并非所有源都提供 `quarterly` 和 `latest`，具体请参见：pkg.freebsd.org[EB/OL]. [2026-03-26]. <https://pkg.freebsd.org/>。也并非为所有架构都提供了 pkg 源，与平台支持等级有关。
+> 并非所有源都提供 `quarterly` 和 `latest`，具体请参见：pkg.freebsd.org[EB/OL]. [2026-03-26]. <https://pkg.freebsd.org/>。也并非所有架构都提供了 pkg 源，与平台支持等级有关。
 
 ### 参考文献
 
