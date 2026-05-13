@@ -168,7 +168,7 @@ Makefile		pkg-plist-client	pkg-plist-plpython
 
 > **注意**
 >
-> Ports 和 pkg 可以同时使用，多数用户也是如此操作的。但是要注意 Ports 和 pkg 应使用同一分支：如果 Ports 使用 main 分支，则 pkg 应使用 latest 源；如果 Ports 使用 quarterly 分支，则 pkg 使用 quarterly 源即可。分支不一致会导致依赖问题（比如 SSL）。latest 源也比 main 分支下的 Ports 发布得更晚（其软件包由 main 构建而来），因此即使使用 latest 源，也可能会出现上述问题，总之有问题出现时就卸载那个 pkg 安装的包，重新使用 Ports 编译即可。
+> Ports 和 pkg 可以同时使用，多数用户也是如此操作的。但是要注意 Ports 和 pkg 应使用同一分支：如果 Ports 使用 main 分支，则 pkg 应使用 latest 源；如果 Ports 使用 quarterly 分支，则 pkg 使用 quarterly 源即可。分支不一致会导致依赖问题（比如 SSL）。latest 源也比 main 分支下的 Ports 发布得更晚（其软件包由 main 构建而来），因此即使使用 latest 源，也可能会出现上述问题，总之遇到问题时卸载那个 pkg 安装的包，重新使用 Ports 编译即可。
 
 > **警告**
 >
@@ -524,7 +524,7 @@ hw.ncpu: 16
 
 输出值即可作为 `MAKE_JOBS_NUMBER` 取值。
 
-英特尔的处理器搜索 `CPU 型号 ARK` 跳转到英特尔官网可查询线程数。
+搜索英特尔处理器型号加 `ARK`，可跳转至英特尔官网查询线程数。
 
 个别情况下可以通过设置别名加速编译（非永久设置，FreeBSD 14 默认已生效，无需额外设置）：
 
@@ -859,7 +859,7 @@ Stop.
 make: stopped in /usr/ports/java/openjdk21
 ```
 
-观察整个流程可以发现，openjdk21 依赖 autoconf，但系统中没有。于是递归查找 autoconf 的依赖，发现 autoconf 依赖 perl5；结合 ② 可以发现系统中已有 perl5，但是报错“Invalid version”，即 perl5 的版本不对。
+观察整个流程可知，openjdk21 依赖 autoconf，但系统中没有。于是递归查找 autoconf 的依赖，发现 autoconf 依赖 perl5；结合 ② 可以发现系统中已有 perl5，但是报错“Invalid version”，即 perl5 的版本不对。
 
 此问题一般需要先更新 Ports，然后通过 `pkg install -f perl5` 或 `pkg upgrade` 更新 perl5 的版本即可解决。
 
