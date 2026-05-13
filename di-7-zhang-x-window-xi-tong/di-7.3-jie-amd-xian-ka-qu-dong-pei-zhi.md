@@ -42,7 +42,7 @@
 # sysrc -f /etc/rc.conf kld_list+=amdgpu
 ```
 
-- 对于 HD 7000 以前 AMD 显卡，在 **/etc/rc.conf** 文件中添加 `radeonkms` 内核模块到 `kld_list`：
+- HD 7000 以前的 AMD 显卡，在 **/etc/rc.conf** 文件中添加 `radeonkms` 内核模块到 `kld_list`：
 
 ```sh
 # sysrc -f /etc/rc.conf kld_list+=radeonkms
