@@ -291,12 +291,12 @@
 * [FreeBSD 开发参与指南](fu-lu1/freebsd-kai-fa-can-yu-zhi-nan.md)
 * [microSD 卡参数简介](fu-lu1/cun-chu-ka.md)
 
-## 附录 II 文学故事
+## 附录 II 参考文献与术语表
 
-* [我与 FreeBSD 的故事](fu-lu2/wo-yu-freebsd-de-gu-shi.md)
-* [两次告别](fu-lu2/liang-ci-gao-bie.md)
+* [参考书目](fu-lu2/can-kao-shu-mu.md)
+* [术语表](fu-lu2/shu-yu-biao.md)
 
-## 附录 III 参考文献与术语表
+## 后记
 
-* [参考书目](fu-lu3/can-kao-shu-mu.md)
-* [术语表](fu-lu3/shu-yu-biao.md)
+* [我与 FreeBSD 的故事](hou-ji/wo-yu-freebsd-de-gu-shi.md)
+* [两次告别](hou-ji/liang-ci-gao-bie.md)
