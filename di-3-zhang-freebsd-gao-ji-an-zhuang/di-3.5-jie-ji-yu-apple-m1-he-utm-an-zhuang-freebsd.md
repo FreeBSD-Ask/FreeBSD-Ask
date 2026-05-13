@@ -14,7 +14,7 @@ UTM（逆构词为 Universal Turing Machine）是开源、基于 QEMU、面向 A
 
 首先下载 FreeBSD 的安装镜像。
 
-出于性能考虑，此处使用 aarch64 镜像展示。
+出于性能考虑，此处以 aarch64 镜像为例。
 
 ![下载安装镜像](../.gitbook/assets/install_bsd_on_utm/utm-download-mirror.png)
 
@@ -30,7 +30,7 @@ UTM（逆构词为 Universal Turing Machine）是开源、基于 QEMU、面向 A
 
 ![选择操作系统](../.gitbook/assets/install_bsd_on_utm/utm-select-os.png)
 
-默认 4 GB 内存能适应大多数情况，初始状态下 FreeBSD 15 会占用大约 500 MB 内存，可根据实际需求调整内存大小。CPU 核心按需设置，M1 芯片可以设置为 4。
+默认 4 GB 内存能适应大多数情况，初始状态 FreeBSD 15 约占用 500 MB 内存，可根据实际需求调整内存大小。CPU 核心按需设置，M1 芯片可以设置为 4。
 
 ![设置内存和处理器核心数量](../.gitbook/assets/install_bsd_on_utm/utm-set-memory-cpu.png)
 
@@ -60,11 +60,11 @@ UTM（逆构词为 Universal Turing Machine）是开源、基于 QEMU、面向 A
 
 ![系统引导界面](../.gitbook/assets/install_bsd_on_utm/utm-grub-menu.png)
 
-进入安装程序，鼠标默认可用，可以按下 Control + Option 快捷键捕获鼠标光标，再次按下此快捷键释放鼠标。
+进入安装程序，鼠标默认可用。按下 Control + Option 快捷键可捕获鼠标光标，再次按下此快捷键可释放鼠标。
 
 ![安装程序界面](../.gitbook/assets/install_bsd_on_utm/utm-installer.png)
 
-基本系统安装完成，终端能正常运行，在虚拟机内执行 `ifconfig` 命令，查看 IP 地址后，便可在宿主机的终端仿真器中发起 SSH 连接。
+基本系统安装完成，终端能正常运行。在虚拟机内执行 `ifconfig` 命令查看 IP 地址后，便可在宿主机的终端仿真器中发起 SSH 连接。
 
 ![终端](../.gitbook/assets/install_bsd_on_utm/utm-terminal.png)
 
@@ -125,7 +125,7 @@ hint.virtio_gpu.0.disabled="1"
 hint.vtgpu.0.disabled="1"
 ```
 
-重启以后 startx 能够正常启动 TWM，输出如下：
+重启后 startx 能够正常启动 TWM，输出如下：
 
 ```sh
 voosk@BSDVM:~ $ startx
