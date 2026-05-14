@@ -167,7 +167,7 @@ FreeBSD 中 pkg 源分为系统级和用户级两个配置文件。**不建议**
 
 > **警告**
 >
-> 请勿同时启用多个 pkg 镜像站，无论是官方镜像站（如 `pkg.freebsd.org` 与 USTC 混用），还是境内非官方镜像站都不建议混合使用！后果类似于 FreeBSD 季度分支的 Ports 和 latest 分支的 pkg 混用，可能会破坏软件的依赖关系。案例：[混用导致 KDE 桌面被删除](https://blog.mxdyeah.com/post/freebsd-exp-kde6)。
+> 请勿同时启用多个 pkg 镜像站，无论是官方镜像站（如 `pkg.freebsd.org` 与 USTC 混用），还是境内非官方镜像站，都不建议混合使用！后果类似于 FreeBSD 季度分支的 Ports 和 latest 分支的 pkg 混用，可能会破坏软件的依赖关系。案例：[混用导致 KDE 桌面被删除](https://blog.mxdyeah.com/post/freebsd-exp-kde6)。
 
 > **警告**
 >
@@ -363,7 +363,7 @@ FreeBSD-base: {
 
 > **注意**
 >
-> 根据 FreeBSD 源代码 [usr.sbin/bsdinstall/scripts/pkgbase.in](https://github.com/freebsd/freebsd-src/blob/releng/15.0/usr.sbin/bsdinstall/scripts/pkgbase.in) 最后几段源代码，**/etc/pkg/repos/FreeBSD.conf** 中的 FreeBSD-base 源虽然是 `enabled: no`，但是那些在安装中选择了 pkgbase 的用户，会在 **/usr/local/etc/pkg/repos/FreeBSD.conf** 文件中写入 `FreeBSD-base: { enabled: yes }` 这行来显式覆盖默认配置，pkgbase 用户的 FreeBSD-base 源实际上是默认启用的。
+> 根据 FreeBSD 源代码 [usr.sbin/bsdinstall/scripts/pkgbase.in](https://github.com/freebsd/freebsd-src/blob/releng/15.0/usr.sbin/bsdinstall/scripts/pkgbase.in) 最后几段源代码，**/etc/pkg/repos/FreeBSD.conf** 中的 FreeBSD-base 源虽然是 `enabled: no`。但是，那些在安装中选择了 pkgbase 的用户，会在 **/usr/local/etc/pkg/repos/FreeBSD.conf** 文件中写入 `FreeBSD-base: { enabled: yes }` 这行来显式覆盖默认配置。因此，pkgbase 用户的 FreeBSD-base 源实际上是默认启用的。
 
 #### 中国科学技术大学开源软件镜像站
 
