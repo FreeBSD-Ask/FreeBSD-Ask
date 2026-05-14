@@ -1,6 +1,6 @@
 # 9.6 多媒体处理
 
-FreeBSD 支持 Audacity（音频剪辑）、Olive/FFmpeg（视频与字幕处理）及 Inkscape（图形图像处理）等工具。本节按类别给出安装与基本使用方法。
+FreeBSD 支持 Audacity（音频剪辑）、Olive/FFmpeg（视频与字幕处理）及 Inkscape（矢量图形处理）等工具。本节按类别给出安装与基本使用方法。
 
 ## 音频剪辑
 
