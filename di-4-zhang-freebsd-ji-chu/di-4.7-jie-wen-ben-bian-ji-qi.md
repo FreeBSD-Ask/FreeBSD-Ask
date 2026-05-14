@@ -108,7 +108,7 @@ FreeBSD Ports 中的 Vim 默认编译为 console 版本，如需 GUI 支持（gv
 
 临时启用行号：
 
-```vim
+```
 :set number          " 显示绝对行号（简写 :set nu）
 :set relativenumber  " 显示相对行号（简写 :set rnu）
 :set nonumber        " 关闭绝对行号
