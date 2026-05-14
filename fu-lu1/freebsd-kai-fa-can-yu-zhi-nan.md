@@ -123,7 +123,7 @@ FreeBSD 的软件以 Port 形式提供，开发者无需考虑如何打包为二
 
 对原方案的改进：
 
-- `if zgrep -q '.Lb libc' $i && zgrep -q '.Sh LIBRARY' $i; then` 这一句的问题在于 `.Lb libc` 不仅匹配 libc，还会匹配 libcalendar 等以 libc 开头的库。可以改写为 `.Lb libc$` 来解决此问题
+- `if zgrep -q '.Lb libc' $i && zgrep -q '.Sh LIBRARY' $i; then` 这一句的问题在于 `.Lb libc` 不仅匹配 libc，还会匹配 libcalendar 等以 libc 开头的库。可以改写为 `.Lb libc$` 来解决此问题。
 - 正文的组织和排序不够合理，并未按功能模块或其他逻辑编排，因此不适用于系统学习，但可用于快速查阅。
 
 ## 课后习题
