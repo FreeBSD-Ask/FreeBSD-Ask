@@ -859,7 +859,7 @@ make: stopped in /usr/ports/java/openjdk21
 
 观察整个流程可知，openjdk21 依赖 autoconf，但系统中没有。于是递归查找 autoconf 的依赖，发现 autoconf 依赖 perl5；结合 ② 可以发现系统中已有 perl5，但是报错“Invalid version”，即 perl5 的版本不对。
 
-此问题一般需要先更新 Ports，然后通过 `pkg install -f perl5` 或 `pkg upgrade` 更新 perl5 的版本即可解决。
+此问题一般需要先更新 Ports，然后通过 `pkg install -f perl5` 或 `pkg upgrade` 更新 perl5 版本即可解决。
 
 #### 参考文献
 
