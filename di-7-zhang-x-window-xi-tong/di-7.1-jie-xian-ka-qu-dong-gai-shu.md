@@ -24,7 +24,7 @@ DRM 是 Linux 内核的子系统，负责与现代显卡的 GPU 交互。FreeBSD
 
 > **注意**
 >
-> 这种移植并不覆盖 Linux 现有的全部 DRM GPU 驱动，目前仅包括 i915、amdgpu 和 radeon，vmwgfx、xe、virtio 等均未移植。上述未移植的 GPU 通常无法在 Wayland 上运行，只能使用 X11 显示协议。
+> 这种移植并不覆盖 Linux 现有的全部 DRM GPU 驱动，目前仅包括 i915、amdgpu 和 radeon，vmwgfx、xe、virtio 等均未移植。这些未移植的 GPU 通常无法在 Wayland 上运行，只能使用 X11 显示协议。
 
 > **注意**
 >
