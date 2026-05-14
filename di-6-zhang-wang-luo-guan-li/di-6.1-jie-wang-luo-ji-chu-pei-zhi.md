@@ -20,7 +20,7 @@ TCP/IP 协议族采用四层模型组织网络功能：
 
 - **网络接口层（Link Layer）**：负责在物理网络介质上发送和接收数据帧，处理硬件地址（MAC 地址）解析。该层对应 FreeBSD 中的网络接口驱动程序和 `ifconfig` 命令管理的配置。以太网帧的发送和接收、ARP（Address Resolution Protocol）地址解析均在该层完成。
 - **互联网层（Internet Layer）**：负责数据包的路由和转发，核心协议为 IP（Internet Protocol）。该层处理逻辑寻址（IP 地址）、分片与重组、路由选择等功能。路由表管理和 `route` 命令操作属于该层。
-- **传输层（Transport Layer）**：提供端到端的通信服务，主要协议为 TCP（Transmission Control Protocol）和 UDP（User Datagram Protocol）。TCP 提供可靠的面向连接传输，UDP 提供无连接的不可靠传输。FreeBSD 创新性地实现了多 TCP 栈共存架构，允许系统同时加载多个 TCP 协议栈实现。
+- **传输层（Transport Layer）**：提供端到端的通信服务，主要协议为 TCP（Transmission Control Protocol）和 UDP（User Datagram Protocol）。TCP 提供可靠的面向连接传输，UDP 提供无连接的不可靠传输。FreeBSD 实现了一种多 TCP 栈共存架构，允许系统同时加载多个 TCP 协议栈实现。
 - **应用层（Application Layer）**：包含多种面向用户的网络应用协议，如 HTTP、SSH、DNS、SMTP 等。FreeBSD 通过 Ports 和 pkg 提供了大量网络服务软件。
 
 ### 参考文献
@@ -80,7 +80,7 @@ lo0: flags=8049<UP,LOOPBACK,RUNNING,MULTICAST> metric 0 mtu 16384
 	nd6 options=21<PERFORMNUD,AUTO_LINKLOCAL>
 ```
 
-`lo0` 是本地回环接口，用于本机内部通信，不属于物理网卡。如 `ifconfig` 输出中仅包含 `lo0` 接口，说明系统未识别物理网卡，此时需检查网卡硬件连接和驱动加载情况。可通过 `dmesg | grep ether` 命令查看网卡驱动加载日志。
+`lo0` 是本地回环接口，用于本机内部通信，不属于物理网卡。若 `ifconfig` 输出中仅显示 `lo0` 接口，则表示系统未识别物理网卡，此时应检查网卡硬件连接和驱动加载状态。可通过 `dmesg | grep ether` 命令查看网卡驱动加载日志。
 
 ## 配置 IPv4
 
