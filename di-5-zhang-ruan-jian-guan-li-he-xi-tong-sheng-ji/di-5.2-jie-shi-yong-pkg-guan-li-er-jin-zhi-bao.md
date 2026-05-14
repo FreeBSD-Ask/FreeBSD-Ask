@@ -389,17 +389,17 @@ Filename: usr/local/lib/libxcb-icccm.so.4.0.0
 # make BATCH=yes install clean # 使用 Ports 重新安装 pkg
 ```
 
-### `pw: user ‘package’ disappeared during update`
+### `pw: user 'package' disappeared during update`
 
 问题示例：
 
 ```sh
 [1/1] Installing package…
 ===> Creating groups.
-Creating group ‘package’ with gid ‘000’.
+Creating group 'package' with gid '000'.
 ===> Creating users
-Creating user ‘package’ with uid ‘000’.
-pw: user ‘package’ disappeared during update
+Creating user 'package' with uid '000'.
+pw: user 'package' disappeared during update
 pkg: PRE-INSTALL script failed
 ```
 
