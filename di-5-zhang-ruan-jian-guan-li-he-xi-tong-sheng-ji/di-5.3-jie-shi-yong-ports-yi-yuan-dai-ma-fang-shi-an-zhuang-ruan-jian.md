@@ -172,7 +172,7 @@ Makefile		pkg-plist-client	pkg-plist-plpython
 
 > **警告**
 >
-> 补充说明：若通过 `make config` 修改了 Port 的默认构建参数，且希望保留该自定义设置，则后续不应通过 pkg 更新该软件，否则 pkg 安装的软件包将以 Port 开发者默认的构建参数覆盖自定义参数。
+> 若通过 `make config` 修改了 Port 的默认构建参数，且希望保留该自定义设置，则后续不应通过 pkg 更新该软件，否则 pkg 安装的软件包将覆盖自定义参数。
 
 Ports 构建 pkg 软件包的完整流程如下图所示。
 
@@ -382,7 +382,7 @@ root@ykla:/usr/ports/sysutils/htop # make all-depends-list
 
 ## 如何删除当前 Port 及其依赖的配置文件
 
-如果需要清理之前配置的选项，可以使用以下命令删除当前 Port 及其所有依赖的配置文件。该命令会递归遍历依赖树，逐一清除每个 Port 的 `make config` 设置，恢复为默认构建参数。
+如果需要清理之前配置的选项，可以使用以下命令删除当前 Port 及其所有依赖的配置文件。该命令递归遍历依赖树，逐个清除每个 Port 的 `make config` 设置，恢复为默认构建参数。
 
 ```sh
 # make rmconfig-recursive
