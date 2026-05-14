@@ -264,7 +264,7 @@ your environment.
 
 ### 配置 XRDP
 
-配置守护进程
+配置守护进程：
 
 ```sh
 # service xrdp enable          # 设置 xrdp 服务开机自启动
