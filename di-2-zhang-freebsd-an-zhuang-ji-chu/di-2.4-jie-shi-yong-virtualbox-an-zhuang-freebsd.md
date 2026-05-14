@@ -203,7 +203,7 @@ You may ignore the yellow alert that encourages use of VMSVGA.
 编辑 **/etc/sysctl.conf** 文件，添加以下内容：
 
 ```ini
-hw.efi.poweroff=0	# 禁用 EFI 电源关闭功能，使系统通过 ACPI 正常关机
+hw.efi.poweroff=0 # 禁用 EFI 电源关闭功能，使系统通过 ACPI 正常关机
 ```
 
 然后重启系统，再执行关机即可恢复正常，即使用 ACPI 而非 UEFI 接口关机。
