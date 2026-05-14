@@ -94,7 +94,7 @@ login:
 >
 > ⑥、⑦ 分别切换到了哪些用户或执行了哪些操作？
 
-`su` 命令只能切换到在 **/etc/shells** 中列出的 shell。`su -` 或 `su -l` 不仅切换用户，还会将工作目录切换到目标用户的主目录，并重置环境变量。
+`su` 命令只能切换到 **/etc/shells** 中列出的 shell。`su -` 或 `su -l` 不仅切换用户，还会将工作目录切换到目标用户的主目录，并重置环境变量。
 
 BSD 与 GNU `su` 行为比较：
 
@@ -250,7 +250,7 @@ cp: test9: No such file or directory
 
 ### Linux
 
-在 Linux 中，大多数常用命令来自 GNU 等用户空间软件包，Linux 内核本身并不提供用户级命令。来验证这一点：
+在 Linux 中，大多数常用命令来自 GNU 等用户空间软件包，Linux 内核本身并不提供用户级命令。以下为验证过程：
 
 ```bash
 $ dpkg -S /bin/mv
@@ -801,7 +801,7 @@ total 1
 
 关机：
 
-- 使用 `shutdown now` 将不会关机，而是切换到“单用户模式”，将提示：`Enter full pathname of shell or RETURN for /bin/sh :` 回车后进入单用户模式；
+- 使用 `shutdown now` 将不会关机，而是切换到"单用户模式"，将提示：`Enter full pathname of shell or RETURN for /bin/sh :` 回车后进入单用户模式。
 - 使用 `shutdown -h now` 将不会彻底断电，只会停止系统的运行，提示：`The operating system has halted. Please press any key to reboot.` 此处按任意键可重启系统；
 - 正确的关机并断电命令是 `poweroff`，等同于命令 `shutdown -p now`。
 
