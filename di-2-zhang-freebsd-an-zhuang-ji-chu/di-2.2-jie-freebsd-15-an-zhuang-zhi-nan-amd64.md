@@ -410,7 +410,7 @@ Enter passphrase:
 
 ![审查分区设置](../.gitbook/assets/ufs-review-partition.png)
 
-`请审查当前的磁盘分区设置。确认无误后，可选择 “Finish”（完成）`
+`请审查当前的磁盘分区设置。确认无误后，可选择 Finish（完成）`
 
 | 英文 | 中文 |
 | ---- | ---- |
