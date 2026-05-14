@@ -113,7 +113,7 @@ GNOME 捆绑的输入法框架是 IBus。
 
 > **警告**
 >
-> IBus 是 GNOME 的依赖项，不能卸载。即使不使用 IBus，也不能将其卸载，否则将一并卸载 GNOME 本体。
+> IBus 是 GNOME 的依赖项，即使不使用 IBus，也不能将其卸载，否则将一并卸载 GNOME。
 
 ![FreeBSD GNOME](../.gitbook/assets/gnome4-1.png)
 
@@ -259,7 +259,7 @@ $ ./install.sh
 
 ### 对现有的 GNOME 完整版本进行精简
 
-如果安装了完整版本，也可以使用 pkg 包管理器卸载自带的游戏软件：
+如果已安装完整版本，也可使用 pkg 卸载自带的游戏软件：
 
 ```sh
 # pkg delete gnome-2048 gnome-klotski gnome-tetravex gnome-mines gnome-taquin gnome-sudoku gnome-robots gnome-nibbles lightsoff tali quadrapassel swell-foop gnome-mahjongg five-or-more iagno aisleriot four-in-a-row
