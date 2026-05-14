@@ -82,7 +82,7 @@
 
 某些显卡的功耗可能过高，FreeBSD 可以通过特定的配置来降低功耗。
 
-如果使用 graphics/drm-kmod 驱动的 Intel 显卡，可以将以下选项添加到 **/boot/loader.conf** 文件中：
+如果使用 **graphics/drm-kmod** 驱动的 Intel 显卡，可以将以下选项添加到 **/boot/loader.conf** 文件中：
 
 ```ini
 compat.linuxkpi.fastboot=1  	# ①
