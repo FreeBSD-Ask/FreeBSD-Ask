@@ -113,7 +113,7 @@ quarterly 分支类似于 Debian 的 Stable 版本，通过固定软件包版本
 
 ## 15.0-RELEASE 快速切换 pkg 软件源到中国科学技术大学开源软件镜像站
 
-该配置要求读者在安装过程中使用 pkgbase 方式。可以配置 pkg 二进制包源（ports 构建而来）、pkgbase 源、内核模块源。
+该配置要求读者在安装过程中使用 pkgbase 方式，可设置 pkg 二进制包源（由 ports 构建而来）、pkgbase 源、内核模块源。
 
 使用 ee 编辑器打开 **/usr/local/etc/pkg/repos/FreeBSD.conf** 文件。
 
@@ -163,7 +163,7 @@ USTC-base: {
 
 ## pkg 二进制包（由 Ports 构建的二进制包）切换软件源
 
-FreeBSD 中 pkg 源分为系统级和用户级两个配置文件。**不建议** 直接修改 **/etc/pkg/FreeBSD.conf** 文件，**因为该文件会随着基本系统的更新而发生改变。**
+FreeBSD 中 pkg 源分为系统级和用户级两个配置文件。**不建议** 直接修改 **/etc/pkg/FreeBSD.conf** 文件，**因为该文件会随基本系统的更新而改变。**
 
 > **警告**
 >
