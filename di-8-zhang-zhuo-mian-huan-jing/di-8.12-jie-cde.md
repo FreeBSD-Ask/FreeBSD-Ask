@@ -122,7 +122,7 @@ dtspc		6112/tcp
 
 编辑 **/etc/login.conf** 文件：找到 `default:\` 部分，将 `:lang=C.UTF-8` 修改为 `:lang=zh_CN.UTF-8`。
 
-还需根据 **/etc/login.conf** 文件生成能力数据库使配置生效：
+根据 **/etc/login.conf** 文件生成能力数据库使配置生效：
 
 ```sh
 # cap_mkdb /etc/login.conf
