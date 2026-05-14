@@ -29,7 +29,7 @@ FreeBSD 支持多种无线网卡和认证方式。
 net.wlan.devices: rtwn0
 ```
 
-上述输出中的 `rtwn0` 是示例网卡（COMFAST CF-912AC）的设备名称，实际输出可能因硬件而异。如果输出中冒号 `:` 后没有内容，说明无线网卡未被识别，此时需检查硬件连接或更换兼容性更好的无线网卡。
+上述输出中的 `rtwn0` 是示例网卡（COMFAST CF-912AC）的设备名称，实际输出可能因硬件而异。如果输出中冒号 `:` 后没有内容，说明无线网卡未识别，此时需检查硬件连接或更换兼容性更好的无线网卡。
 
 ### 虚拟无线接口机制
 
@@ -41,7 +41,7 @@ net.wlan.devices: rtwn0
 # ifconfig wlan0 create wlandev rtwn0
 ```
 
-上述命令中，`rtwn0` 为 `sysctl net.wlan.devices` 输出中的物理网卡名称，需根据实际硬件进行替换（~~除非也使用 COMFAST CF-912AC 1200M 802.11AC~~）。
+上述命令中，`rtwn0` 为 `sysctl net.wlan.devices` 输出中的物理网卡名称，需根据实际硬件替换（~~除非也使用 COMFAST CF-912AC 1200M 802.11AC~~）。
 
 创建完成后，可使用 `ifconfig` 命令查看接口状态（以下输出已省略以太网卡和 `lo0` 接口）：
 
@@ -110,7 +110,7 @@ test_5G                           50:d6:c5:93:d7:64   36   54M  -78:-95   100 EP
 # ifconfig wlan0 country HR regdomain ETSI
 ```
 
-第一条命令销毁现有 `wlan0` 接口并释放其占用的资源，避免出现 `ifconfig: SIOCS80211: Device busy` 错误；第二条命令重新创建无线接口并绑定到物理设备；第三条命令设置无线国家码为 HR 并使用 ETSI 无线频段规范，在目标网络使用大于 48 的信道（DFS 信道）时需进行此设置，如信道小于 48，可省略该步骤。
+第一条命令销毁现有 `wlan0` 接口并释放其占用的资源，避免出现 `ifconfig: SIOCS80211: Device busy` 错误；第二条命令重新创建无线接口并绑定到物理设备；第三条命令设置无线国家码为 HR 并使用 ETSI 无线频段规范，在目标网络使用大于 48 的信道（DFS 信道）时需执行此设置，如信道小于 48，可省略该步骤。
 
 完成上述配置后，重启网络服务以接入 Wi-Fi：
 
@@ -160,7 +160,7 @@ psk="freebsdcn"
 ```ini
 wlans_rtwn0="wlan0"                      # 将物理无线设备 rtwn0 绑定到 wlan0 接口
 ifconfig_wlan0="WPA SYNCDHCP"           # 配置 wlan0 使用 WPA 并通过 DHCP 自动获取 IP 地址
-create_args_wlan0="country HR regdomain ETSI"  # 创建 wlan0 接口时设置无线国家码为 HR，并使用 ETSI 频段规范。如信道大于 48（DFS），则需进行此设置。
+create_args_wlan0="country HR regdomain ETSI"  # 创建 wlan0 接口时设置无线国家码为 HR，并使用 ETSI 频段规范。如信道大于 48（DFS），则需执行此设置。
 ```
 
 ### 无线网络配置文件结构
