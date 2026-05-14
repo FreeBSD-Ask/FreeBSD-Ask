@@ -4,7 +4,7 @@
 
 Wayland 是取代 X11 的显示服务器协议，KDE 6 自 Plasma 5.27 起逐步完善了 Wayland 支持。
 
-由于 FreeBSD DRM 驱动移植仅覆盖了 Intel、AMD 和 NVIDIA 等 GPU，vmwgfx 和 virtio 等虚拟化 GPU 驱动尚不支持（参见：freebsd/drm-kmod. Request to restore support for vboxvideo and vmwgfx DRM drivers #356[EB/OL]. [2026-04-04]. <https://github.com/freebsd/drm-kmod/issues/356>），因此 VMware、VirtualBox 或基于 Virtio 的虚拟机中无法复现本节内容，需在真实物理机上操作。
+由于 FreeBSD DRM 驱动移植仅覆盖了 Intel、AMD 和 NVIDIA 等 GPU，vmwgfx 和 virtio 等虚拟化 GPU 驱动尚不支持（参见：freebsd/drm-kmod. Request to restore support for vboxvideo and vmwgfx DRM drivers #356[EB/OL]. [2026-04-04]. <https://github.com/freebsd/drm-kmod/issues/356>）。因此，VMware、VirtualBox 或基于 Virtio 的虚拟机中无法复现本节内容，需在真实物理机上操作。
 
 NVIDIA 显卡尚未测试。本节使用 Intel 第 12 代处理器（i7-1260P）的集成显卡测试。
 
