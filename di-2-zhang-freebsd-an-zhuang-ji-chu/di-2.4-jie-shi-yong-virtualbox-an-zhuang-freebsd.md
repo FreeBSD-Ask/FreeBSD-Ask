@@ -28,7 +28,7 @@ VirtualBox 安装完成后，创建并配置虚拟机。以下演示基于 Virtu
 
 > **技巧**
 >
-> UEFI 模式下显卡可以正常驱动；Wayland 下，由于缺少对应的 DRM/KMS（Direct Rendering Manager/Kernel Mode Setting，直接渲染管理器/内核模式设置）驱动支持，暂时无法使用。DRM/KMS 是 Linux/FreeBSD 等系统中用于管理显卡显示的内核子系统。
+> UEFI 模式下显卡可以正常驱动；Wayland 下，缺少对应的 DRM/KMS（Direct Rendering Manager/Kernel Mode Setting，直接渲染管理器/内核模式设置）驱动支持，暂时无法使用。DRM/KMS 是 Linux/FreeBSD 等系统中用于管理显卡显示的内核子系统。
 
 ![硬件设置](../.gitbook/assets/virtualbox-4.png)
 
