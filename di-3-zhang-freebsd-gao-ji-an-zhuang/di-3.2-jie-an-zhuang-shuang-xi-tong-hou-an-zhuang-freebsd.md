@@ -143,7 +143,7 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 # gpart add -a 4k -l zroot -t freebsd-zfs nda0
 ```
 
-上面的设置将使用全部空余空间，请注意替换 nda0 为实际硬盘编号。
+上面的设置将使用全部空余空间，请注意替换 `nda0` 为实际硬盘编号。
 
 #### 查看分区情况
 
