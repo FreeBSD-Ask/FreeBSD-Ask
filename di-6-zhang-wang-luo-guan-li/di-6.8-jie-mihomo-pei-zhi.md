@@ -140,7 +140,7 @@ service mihomo status
 sysrc mihomo_config="https://xxxx.yyy"
 ```
 
-- GeoIP 数据根据 IP 地址的地理归属进行流量分流或规则匹配：
+- GeoIP 数据根据 IP 地址的地理归属实现流量分流或规则匹配：
 
 ```sh
 sysrc mihomo_geoip="https://ghfast.top/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip.dat" # 可选，但建议使用
@@ -214,7 +214,7 @@ mihomo_enable="YES" # 开机启用/服务项
 
 - 如何实现 TUN 虚拟网卡代理？TUN 模式可实现更底层的网络流量拦截。
 
-- 如何根据订阅链接进行节点测速？
+- 如何根据订阅链接测试节点速度？
 
 - 如何指定订阅链接中代理组的特定节点（例如仅使用位于美国的某个代理节点）？这涉及代理节点的精细化选择。
 
