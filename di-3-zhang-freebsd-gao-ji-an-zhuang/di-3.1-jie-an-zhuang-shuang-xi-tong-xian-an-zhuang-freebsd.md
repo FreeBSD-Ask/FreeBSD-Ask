@@ -4,7 +4,7 @@
 
 ## 安装 FreeBSD 14.2-RELEASE
 
-首先安装 FreeBSD 14.2-RELEASE 系统，未特别说明之处均采用默认设置与参数。
+首先安装 FreeBSD 14.2-RELEASE 系统，未作特别说明时均采用默认设置与参数。
 
 ![FreeBSD 安装界面](../.gitbook/assets/dual-boot-1.png)
 
@@ -16,7 +16,7 @@
 
 ![分区方案选择](../.gitbook/assets/dual-boot-3.png)
 
-此处需要设置较大的临时交换分区，该数值表示计划中的交换分区与 Windows 系统分区容量之和。如此设置是为了后续安装 Windows 时能够直接使用这部分空间，避免额外的分区操作。在本节中，交换分区（swap）大小为 8 GB，其余 200 GB 空间预留给 Windows。请修改 `S Swap Size` 的大小。
+此处需要设置较大的临时交换分区，该数值应为计划中的交换分区与 Windows 系统分区容量之和。如此设置是为了后续安装 Windows 时能够直接使用这部分空间，避免额外分区操作。在本节中，交换分区（swap）大小为 8 GB，其余 200 GB 空间预留给 Windows。请修改 `S Swap Size` 的大小。
 
 ![交换分区大小设置](../.gitbook/assets/dual-boot-4.png)
 
@@ -50,7 +50,7 @@ Device              Size     Used    Avail Capacity
 
 可以看到交换分区的大小是所设定的 208 GB（其中 200 GB 预留给 Windows 操作系统）。
 
-编辑 **/etc/fstab** 文件，在 swap 对应行的行首添加 `#` 将其注释。本例中该行是第三行，以此避免系统启动时挂载此交换分区，为后续安装 Windows 作准备：
+编辑 **/etc/fstab** 文件，在 swap 对应行的行首添加 `#` 将其注释。本例中该行是第三行，以避免系统启动时挂载此交换分区，为后续安装 Windows 作准备：
 
 ```sh
 # Device                Mountpoint      FStype  Options         Dump    Pass#
@@ -78,7 +78,7 @@ FreeBSD 安装完成后，安装 Windows 系统。
 
 ## 还原交换分区（swap）
 
-Windows 安装完成后，为 FreeBSD 还原交换分区。此前预留了 208 GB 空间，其中 8 GB 用于交换分区。接下来使用工具 [DiskGenius](https://www.diskgenius.com/)。
+Windows 安装完成后，还原 FreeBSD 的交换分区。此前预留了 208 GB 空间，其中 8 GB 用于交换分区。接下来使用工具 [DiskGenius](https://www.diskgenius.com/)。
 
 ![DiskGenius 主界面](../.gitbook/assets/dual-boot-8.png)
 
@@ -127,7 +127,7 @@ Windows 安装完成后，为 FreeBSD 还原交换分区。此前预留了 208 G
 /dev/nda0p5             none    swap    sw              0       0
 ```
 
-重启后再次查看既有的交换分区情况：
+重启后再次查看当前交换分区情况：
 
 ```sh
 # swapinfo -mh
