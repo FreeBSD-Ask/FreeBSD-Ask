@@ -65,13 +65,13 @@ exec icewm-session
 proc           /proc       procfs  rw  0   0
 ```
 
-该行将 procfs 文件系统以读写模式挂载到 **/proc**。
+将 procfs 文件系统以读写模式挂载到 **/proc**。
 
 ## 配置中文环境
 
 编辑 **/etc/login.conf** 文件，找到 `default:\` 部分，将 `:lang=C.UTF-8` 修改为 `:lang=zh_CN.UTF-8`。
 
-还需要根据 `login.conf` 文件重新生成能力数据库，使配置生效：
+根据 `login.conf` 文件重新生成能力数据库，使配置生效：
 
 ```sh
 # cap_mkdb /etc/login.conf
