@@ -4,7 +4,7 @@
 
 安装前，请在原有的 Linux 系统中查看 IP 地址和子网掩码。
 
-可使用命令 `ip addr` 和 `ip route show` 查看网关信息及最大传输单元（MTU）数值；同时请注意子网和 CIDR 表示法。
+可使用命令 `ip addr` 和 `ip route show` 查看网关信息及最大传输单元（MTU）数值，同时注意子网和 CIDR 表示法。
 
 由于部分服务器未启用 DHCP 服务，可能需要手动配置 IP。
 
@@ -38,7 +38,7 @@ FreeBSD 中文社区. 08-腾讯云轻量云及其他服务器安装 FreeBSD[EB/O
 
 ## 使用 mfsLinux 写入 mfsBSD
 
-如前所述，由于 FreeBSD 与 Linux 生态不同，需要先引导至一个运行在内存中的 Linux 环境，在该环境中将 mfsBSD 写入硬盘，最后通过 `bsdinstall` 工具完成系统安装。
+由于 FreeBSD 与 Linux 生态不同，需要先引导至一个运行在内存中的 Linux 环境，在该环境中将 mfsBSD 写入硬盘，最后通过 `bsdinstall` 工具完成系统安装。
 
 在 mfsBSD 下载页面的下方，可找到 [mfsLinux](https://mfsbsd.vx.sk/files/iso/mfslinux/mfslinux-0.1.11-94b1466.iso)，即所需的 Linux 环境。由于该文件仅提供 ISO 格式，无法在当前环境下直接启动。由于该环境基于纯 initrd 架构，需要从中提取内核和 initrd 文件，存放于硬盘并进行手动引导。
 
