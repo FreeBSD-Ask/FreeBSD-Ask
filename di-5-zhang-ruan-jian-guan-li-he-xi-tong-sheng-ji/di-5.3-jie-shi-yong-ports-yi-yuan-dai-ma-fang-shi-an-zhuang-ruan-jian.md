@@ -162,13 +162,13 @@ Makefile		pkg-plist-client	pkg-plist-plpython
 - ① **/usr/ports** 这个文件夹整体称作 Ports，包括几十种不同的分类目录，每个目录下有若干 Port。
 - ② **/usr/ports/databases/postgresql18-server** 这个文件夹整体称作一个 Port，由 `distinfo`（校验和文件）、`pkg-descr`（软件描述文件）、`Makefile`（主文件，包含构建方法、版本号及下载方式等）、`pkg-plist`（安装文件列表及其权限和属组信息）、`files`（一般为补丁文件，该 Port 下还包含安装后的说明文件 `pkg-message`）等文件构成。
 
-之所以称为“Ports Collection”（移植集合，不应理解为“端口集合”），是因为这些软件绝大部分并不由 FreeBSD 控制、管理和维护。Port 提交者的主要工作是将 FreeBSD 上的 Port 更新到上游开发者提供的最新版本，删除上游不再维护的软件 Port。在上游不接受 BSD 特有的 PR 补丁或难以直接通过既有 Ports 框架实现构建的情况下，Port 维护者也需要自行复刻一个分支来维护（如 [editors/vscode](https://github.com/tagattie/FreeBSD-VSCode)）。
+之所以称为“Ports Collection”（移植集合，不应理解为“端口集合”），是因为这些软件绝大部分并不由 FreeBSD 控制、管理和维护。Port 提交者的主要工作是将 FreeBSD 上的 Port 更新到上游开发者提供的最新版本，删除上游不再维护的软件 Port。在上游不接受 BSD 特有的 PR 补丁或难以直接通过既有 Ports 框架实现构建的情况下，Port 维护者也需要自行复刻一个分支来维护。
 
 ## Ports 构建 pkg 软件包的流程
 
 > **注意**
 >
-> Ports 和 pkg 可以同时使用，多数用户也是如此操作的。但是要注意 Ports 和 pkg 应使用同一分支：如果 Ports 使用 main 分支，则 pkg 应使用 latest 源；如果 Ports 使用 quarterly 分支，则 pkg 使用 quarterly 源即可。分支不一致会导致依赖问题（比如 SSL）。latest 源也比 main 分支下的 Ports 发布得更晚（其软件包由 main 构建而来），因此即使使用 latest 源，也可能会出现上述问题，总之遇到问题时卸载那个 pkg 安装的包，重新使用 Ports 编译即可。
+> Ports 和 pkg 可以同时使用，多数用户也是如此。但是要注意 Ports 和 pkg 应使用同一分支：如果 Ports 使用 main 分支，则 pkg 应使用 latest 源；如果 Ports 使用 quarterly 分支，则 pkg 使用 quarterly 源。分支不一致会导致依赖问题（比如 SSL）。latest 源也比 main 分支下的 Ports 发布更晚（其软件包由 main 构建而来），因此即使使用 latest 源，也可能会出现上述问题。遇到问题时卸载 pkg 安装的包，重新使用 Ports 编译即可。
 
 > **警告**
 >
