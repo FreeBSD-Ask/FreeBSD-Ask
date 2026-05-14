@@ -2,7 +2,7 @@
 
 ## 为什么不去建设《FreeBSD 手册》
 
-FreeBSD 项目对除季度报告外的实质性 PR 多采取长期搁置的处理方式。从提交数据来看，freebsd-doc 项目的活跃度在过去十余年持续走低：
+FreeBSD 项目对除季度报告外的实质性 PR 多长期搁置。从提交数据来看，freebsd-doc 项目的活跃度在过去十余年持续走低：
 
 使用统计分析 git 项目[EB/OL]. [2026-03-26]. <https://gist.github.com/ykla/6c3df44c371d37fc3196ddf5fa87ce5f> 分析 freebsd-doc 的结果参见：freebsd-doc-2025 分析报告[EB/OL]. [2026-03-26]. <https://gist.github.com/ykla/363bf922d0785d0b02dd43f8289368db>。
 
