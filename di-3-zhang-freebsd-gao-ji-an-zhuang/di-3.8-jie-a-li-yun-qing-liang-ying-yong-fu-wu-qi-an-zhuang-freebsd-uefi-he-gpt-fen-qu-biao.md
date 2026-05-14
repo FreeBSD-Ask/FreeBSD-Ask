@@ -6,7 +6,7 @@
 
 ![Rocky Linux 9](../.gitbook/assets/cloud-rocky-linux-1.png)
 
-首先将服务器重置为 Rocky Linux 9，该发行版在服务器市场占据主流地位，通常为大多数厂商所支持。
+首先将服务器重置为 Rocky Linux 9。该发行版在服务器市场占据主流地位，通常为大多数厂商所支持。
 
 ### 救援登录
 
@@ -26,7 +26,7 @@
 
 ### 验证服务器是否处于 UEFI 环境
 
-本节针对 UEFI 启动环境和 GPT 分区表，因此必须首先确认服务器是否使用 UEFI 启动环境与 GPT 分区表。由于不同服务器环境各异，本节提供多种方法供读者参考。
+本节针对 UEFI 启动环境和 GPT 分区表，因此必须首先确认服务器是否使用 UEFI 启动环境与 GPT 分区表。以下提供多种方法供参考。
 
 - 通过系统固件判断当前系统是以 UEFI 还是 BIOS 模式启动：
 
@@ -441,7 +441,7 @@ root@mfsbsd:~ # gpart show
     208896  62705631                                 3  linux-data  (30G)
 ```
 
-注意到，大部分分区都被标记为 `[CORRUPT]`，会影响系统的安装，故必须先修复 GPT 分区表：
+注意到，大部分分区都被标记为 `[CORRUPT]`，会影响系统安装，故必须先修复 GPT 分区表：
 
 ```sh
 root@mfsbsd:~ # gpart recover vtbd0	# 恢复 vtbd0 磁盘的分区表信息
@@ -561,7 +561,7 @@ Ventoy 是新一代多系统启动 U 盘解决方案，其项目官网地址为 
 从南京大学镜像站下载 Ventoy 的 Linux 压缩包：
 
 ```sh
-# wget "http://mirrors.nju.edu.cn/github-release/ventoy/Ventoy/Ventoy%201.1.10%20release/ventoy-1.1.10-linux.tar.gz"
+# wget https://mirrors.nju.edu.cn/github-release/ventoy/Ventoy/Ventoy%201.1.10%20release/ventoy-1.1.10-linux.tar.gz
 ```
 
 在当前目录解压 Ventoy 的文件和目录：
@@ -659,7 +659,7 @@ TinyCorePure64 下载地址为 [x86 Pure 64](http://www.tinycorelinux.net/ports.
 
 ![TinyCorePure64 分区详情](../.gitbook/assets/tinycorepure-disk-detail.png)
 
-由于 TinyCorePure64 是精简发行版，缺少许多 Ventoy 所需工具，因此需要手动安装。
+TinyCorePure64 是精简发行版，缺少许多 Ventoy 所需工具，因此需要手动安装。
 
 配置 Tiny Core Linux 镜像源地址，指定使用网易开源镜像站作为下载源：
 
