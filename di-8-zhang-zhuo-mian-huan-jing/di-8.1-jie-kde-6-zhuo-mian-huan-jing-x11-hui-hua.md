@@ -118,7 +118,7 @@ $ echo "exec ck-launch-session startplasma-x11" > ~/.xinitrc
 
 ### 系统中文环境配置方法 ② 系统设置
 
-点击开始 -> System Settings -> Language & Time，在 Region & Language 的 Language 栏点击 Modify，找到并选择“简体中文”。如果显示为 `□□□□`，请检查中文字体是否已安装。然后单击 Apply 按钮；注销后重新登录，此时系统语言将变为中文。
+点击开始 → System Settings → Language & Time，在 Region & Language 的 Language 栏点击 Modify，找到并选择"简体中文"。如果显示为 `□□□□`，请检查中文字体是否已安装。然后单击 Apply 按钮；注销后重新登录，此时系统语言将变为中文。
 
 ![KDE 6](../.gitbook/assets/kde6-4.png)
 
@@ -131,7 +131,7 @@ $ echo "exec ck-launch-session startplasma-x11" > ~/.xinitrc
 
 ## 附录：最小化 KDE 桌面安装方案
 
-直接安装 `x11/kde` 会将 `x11/plasma6-plasma` 和 `x11/kde-baseapps` 作为依赖一并安装，其中捆绑了大量的工具软件，在某些情况下可能不便部署与使用。
+直接安装 `x11/kde` 会将 `x11/plasma6-plasma` 和 `x11/kde-baseapps` 作为依赖一并安装，其中捆绑了大量工具软件，某些情况下不便部署使用。
 
 ### 使用 pkg 安装
 
@@ -143,7 +143,7 @@ $ echo "exec ck-launch-session startplasma-x11" > ~/.xinitrc
 
 | 软件包 | 作用 |
 | ------ | ---- |
-| **plasma6-kactivitymanagerd** | 用于管理用户活动、跟踪使用模式等的系统服务。缺少该服务可能导致 KDE 桌面无法正常显示 |
+| **plasma6-kactivitymanagerd** | 管理用户活动、跟踪使用模式等的系统服务。缺少该服务可能导致 KDE 桌面无法正常显示 |
 | **plasma6-kscreen** | KDE 屏幕管理器。**没有该软件将无法调整分辨率** |
 | **plasma6-systemsettings** | 系统设置 |
 
