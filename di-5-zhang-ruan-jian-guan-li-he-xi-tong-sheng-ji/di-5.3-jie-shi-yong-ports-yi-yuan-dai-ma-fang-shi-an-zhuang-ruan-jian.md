@@ -23,7 +23,7 @@ Submitted by:   jkh
 
 > **技巧**
 >
-> 由上述示例可知：对于一个开源项目，无论使用何种版本控制系统，保留完整的提交记录都是非常重要的。
+> 上述示例说明：对于开源项目，无论使用何种版本控制系统，保留完整的提交记录都非常重要。
 
 NetBSD 和 OpenBSD 也使用 Ports，但实现并不通用。
 
@@ -33,7 +33,7 @@ NetBSD 和 OpenBSD 也使用 Ports，但实现并不通用。
 
 ### Ports 与 Port 释义
 
-一款软件的相关文件或文件夹（补丁文件、校验和、Makefile 等）的集合（表现为一个文件夹）称为一个 Port，所有 Port（移植软件）的集合即 Ports Collection 或 Ports Tree，简称 Ports。从术语定义角度，Port 指单个软件的移植构建配置，而 Ports 则指整个移植软件集合。
+一款软件的相关文件（补丁文件、校验和、Makefile 等）的集合称为一个 Port，所有 Port（移植软件）的集合即 Ports Collection 或 Ports Tree，简称 Ports。从术语定义角度，Port 指单个软件的移植构建配置，而 Ports 则指整个移植软件集合。
 
 项目结构
 
