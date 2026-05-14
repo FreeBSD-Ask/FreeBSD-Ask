@@ -10,7 +10,7 @@
 
 > **警告**
 >
-> 请勿使用 `sysutils/desktop-installer`，该工具在当前环境下可能引发错误和配置冲突。
+> 请勿使用 **sysutils/desktop-installer**，该工具在当前环境下可能引发错误和配置冲突。
 
 ## 显卡支持情况
 
@@ -32,7 +32,7 @@ DRM 是 Linux 内核的子系统，负责与现代显卡的 GPU 交互。FreeBSD
 
 显卡支持情况：
 
-- 非 LTS 版本（Port graphics/drm-latest-kmod，仅 15.0/16.0，目前为 6.9）：
+- 非 LTS 版本（Port **graphics/drm-latest-kmod**，仅 15.0/16.0，目前为 6.9）：
   - Intel：Meteor Lake 图形在 6.7 后默认启用；
   - AMD：覆盖 GCN 到 RDNA 3 全部架构。RDNA 4 驱动需等待更新的 Linux 内核版本移植。
 
