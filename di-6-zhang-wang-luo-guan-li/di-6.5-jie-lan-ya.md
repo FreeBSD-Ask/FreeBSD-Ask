@@ -17,8 +17,8 @@
 
 服务说明：
 
-- `hcsecd` 服务用于管理蓝牙设备的链路密钥和 PIN 码，负责蓝牙设备的安全认证；
-- `bthidd` 服务用于支持 Bluetooth HID（Human Interface Device）设备，如蓝牙鼠标、键盘等。
+- `hcsecd`：管理蓝牙设备的链路密钥和 PIN 码，负责蓝牙设备的安全认证。
+- `bthidd`：支持 Bluetooth HID（Human Interface Device）设备，如蓝牙鼠标、键盘等。
 
 ## 蓝牙鼠标配对
 
