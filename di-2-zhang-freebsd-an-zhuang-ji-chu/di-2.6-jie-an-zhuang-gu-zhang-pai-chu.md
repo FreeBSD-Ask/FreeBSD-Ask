@@ -23,7 +23,7 @@
 - 是否使用了 Ventoy 工具？
   - 建议使用 Rufus - Create bootable USB drives the easy way <https://rufus.ie/zh/> 刻录，而非 Ventoy - 多系统启动 USB 启动盘制作工具 <https://www.ventoy.net/cn/index.html>.
 
-若仍出现问题，请先在 FreeBSD 官方论坛 <https://forums.freebsd.org/> 以英语提问；如果没有获解答，可按其他章节指引提交 Bug。
+若仍出现问题，请先在 FreeBSD 官方论坛 <https://forums.freebsd.org/> 以英语提问；如未获解答，可按其他章节指引提交 Bug。
 
 ## 重启后又进入了安装界面
 
