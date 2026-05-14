@@ -70,7 +70,7 @@ FreeBSD 中文社区. 001-Windows 11 安装 VMware 17[EB/OL]. [2026-04-04]. <htt
 
 > **警告**
 >
-> 由于 FreeBSD Bug 250580 – VMware UEFI guests crash in virtual hardware after r366691[EB/OL]. (2020-10-24)[2026-04-04]. <https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=250580>，FreeBSD 11-RELEASE/12-RELEASE 在 VMware 的 UEFI 环境下可能无法启动。经测试，FreeBSD 13.0-RELEASE 可正常启动。
+> FreeBSD Bug 250580 – VMware UEFI guests crash in virtual hardware after r366691[EB/OL]. (2020-10-24)[2026-04-04]. <https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=250580>，FreeBSD 11-RELEASE/12-RELEASE 在 VMware 的 UEFI 环境下可能无法启动。经测试，FreeBSD 13.0-RELEASE 可正常启动。
 
 ![VMware 安装 FreeBSD](../.gitbook/assets/vmware-13.png)
 
@@ -300,7 +300,7 @@ Downloads
 
 - 没有声音
 
-加载声卡后如果仍然没有声音，请将音量调至 100% 后再进行确认，因为默认音量极低。
+加载声卡后如果仍然没有声音，请将音量调至 100% 后再确认，因为默认音量极低。
 
 ## 课后习题
 
