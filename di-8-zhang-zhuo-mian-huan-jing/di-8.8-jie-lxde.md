@@ -30,7 +30,7 @@ LXDE 是一款轻量级桌面环境，专注于资源利用效率和交互简洁
 | `xorg` | X 窗口系统 |
 | `lxde-meta` | LXDE 桌面环境的元包 |
 | `lightdm` | 轻量级显示管理器 LightDM |
-| `lightdm-gtk-greeter` | LightDM 的 GTK+ 登录界面插件，LightDM 需要至少一个 greeter 才能正常工作 |
+| `lightdm-gtk-greeter` | LightDM GTK+ 登录界面插件，LightDM 需要至少一个 greeter 才能正常工作 |
 | `wqy-fonts` | 文泉驿中文字体 |
 | `xdg-user-dirs` | 管理用户目录，如“桌面”、“下载”等 |
 
