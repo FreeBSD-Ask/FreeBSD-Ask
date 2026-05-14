@@ -413,7 +413,7 @@ pkg: PRE-INSTALL script failed
 
 ### `Shared object "x.so.x" not found, required by "xxx"`
 
-出现该问题通常是由于 ABI 发生破坏，更新即可解决。
+出现该问题通常是因为 ABI 被破坏，更新即可解决。
 
 使用 pkg 安装 `bsdadminscripts2`：
 
