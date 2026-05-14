@@ -22,7 +22,7 @@ NVIDIA 显卡尚未测试。本节使用 Intel 第 12 代处理器（i7-1260P）
 
 ### 安装 seatd
 
-seatd 是一个 seat 管理守护进程，用于在非 systemd 环境下管理 Wayland 会话和设备访问。
+seatd 是一个 seat 管理守护进程，在非 systemd 环境下管理 Wayland 会话和设备访问。
 
 - 使用 pkg 安装：
 
@@ -126,7 +126,7 @@ $ cp /usr/local/share/applications/org.fcitx.Fcitx5.desktop ~/.config/autostart/
 
 ![Fcitx 5 Wayland 启动器（实验性）](../.gitbook/assets/kde-wayland5.png)
 
-经测试，在 Konsole 终端、Firefox 和 Chromium（使用 `chrome --no-sandbox` 启动）中均可输入中文。
+在 Konsole 终端、Firefox 和 Chromium（使用 `chrome --no-sandbox` 启动）中均可输入中文。
 
 ![Wayland Fcitx 5 演示](../.gitbook/assets/kde-wayland4.png)
 
