@@ -1,10 +1,10 @@
 # 5.5 使用 freebsd-update 更新 FreeBSD
 
-freebsd-update 是 FreeBSD 官方提供的二进制更新工具，仅支持一级架构的 RELEASE 版本，CURRENT 和 STABLE 不提供该更新源。
+freebsd-update 是 FreeBSD 官方提供的二进制更新工具，仅支持一级架构的 RELEASE 版本，CURRENT 和 STABLE 不适用。
 
 > **注意**
 >
-> 只有一级架构的 RELEASE 版本才提供该更新源。也就是说，CURRENT 和 STABLE 不提供该源。关于架构的支持等级说明请参见：FreeBSD Project. Supported Platforms[EB/OL]. [2026-03-26]. <https://www.freebsd.org/platforms>.
+> 只有一级架构的 RELEASE 版本才提供该更新源。也就是说，CURRENT 和 STABLE 不适用。关于架构的支持等级说明请参见：FreeBSD Project. Supported Platforms[EB/OL]. [2026-03-26]. <https://www.freebsd.org/platforms>.
 
 > **注意**
 >
@@ -130,7 +130,7 @@ usr/lib/clang/18.1.8/include
 
 > **注意**
 >
-> `freebsd-update` 下载慢不是因为其更新源在境外（使用境外服务器更新一样慢）。这可能与其设计缺陷有关，`freebsd-update` 是一个由数千行组成的纯 Shell 脚本。[这是一个长期存在的问题](https://freebsd-questions.freebsd.narkive.com/xjVoetUM/why-is-freebsd-update-so-horrible-slow)。
+> `freebsd-update` 下载慢不是因为其更新源在境外（使用境外服务器更新一样慢）。这可能与其设计缺陷有关，`freebsd-update` 是一个由数千行组成的纯 Shell 脚本。[这是长期存在的问题](https://freebsd-questions.freebsd.narkive.com/xjVoetUM/why-is-freebsd-update-so-horrible-slow)。
 
 **以 FreeBSD 14.3-RELEASE 升级到 15.0-RELEASE 为例**
 
