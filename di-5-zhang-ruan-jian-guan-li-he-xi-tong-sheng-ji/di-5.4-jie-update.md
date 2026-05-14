@@ -4,7 +4,7 @@
 >
 > FreeBSD 下的 KDE6 自带类似功能，无需安装 `freebsd-update-notify`，本节仅作示例。
 
-freebsd-update-notify 可以自动检测 FreeBSD 系统和 pkg 包的更新。
+freebsd-update-notify 可自动检测 FreeBSD 系统和 pkg 包的更新。
 
 ## 安装 freebsd-update-notify
 
@@ -23,7 +23,7 @@ freebsd-update-notify 可以自动检测 FreeBSD 系统和 pkg 包的更新。
 
 ## 配置 freebsd-update-notify
 
-freebsd-update-notify 的配置文件位于 **/usr/local/etc/freebsd-update-notify/freebsd-update-notify.conf**：
+freebsd-update-notify 的配置文件位于 **/usr/local/etc/freebsd-update-notify/freebsd-update-notify.conf**。
 
 默认配置的更新间隔较长，可以改为：
 
