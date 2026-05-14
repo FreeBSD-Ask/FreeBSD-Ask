@@ -749,7 +749,7 @@ CST 为中国标准时间（China Standard Time）的缩写，确认无误后按
 
 > **警告**
 >
-> 若创建普通用户，请务必将其同时加入 `wheel` 组（用于 `su` 提权）和 `video` 组（用于图形加速）。仅加入 `wheel` 组可能无法正常调用 GPU。
+> 若创建普通用户，请务必将其同时加入 `wheel` 组（用于 `su` 权限提升）和 `video` 组（用于图形加速）。仅加入 `wheel` 组可能无法正常调用 GPU。
 
 ```sh
 FreeBSD Installer # FreeBSD 安装程序
