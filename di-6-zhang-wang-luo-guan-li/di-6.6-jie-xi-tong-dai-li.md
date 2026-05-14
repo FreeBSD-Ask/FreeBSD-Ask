@@ -24,7 +24,7 @@ $ echo $SHELL
 
 ### 如果使用 sh、Bash 或 Zsh
 
-设置 HTTP 代理环境变量，该变量将被当前 shell 及其子进程继承：
+设置 HTTP 代理环境变量，该变量由当前 shell 及其子进程继承：
 
 ```sh
 # export HTTP_PROXY=http://192.168.X.X:7890
