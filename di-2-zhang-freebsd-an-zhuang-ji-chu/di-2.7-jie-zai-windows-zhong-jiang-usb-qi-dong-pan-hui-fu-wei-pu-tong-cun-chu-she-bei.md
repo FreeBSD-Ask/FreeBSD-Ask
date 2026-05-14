@@ -261,7 +261,7 @@ DISKPART> sel part 1 # 选中主分区 1
 
 分区 1 现在是所选分区。
 
-DISKPART> format fs=exfat quick #  快速将所选分区格式化为 exFAT 文件系统
+DISKPART> format fs=exfat quick # 快速将所选分区格式化为 exFAT 文件系统
 
   100 百分比已完成
 
