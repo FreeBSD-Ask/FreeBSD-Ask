@@ -502,7 +502,7 @@ FORCE_MAKE_JOBS=yes       # 强制启用并行编译
 MAKE_JOBS_NUMBER=4        # 设置并行编译的作业数为 4
 ```
 
-在 Linux（如 Gentoo）上，一般直接使用 `-jX` 或 `-j(X+1)`，其中 `X` 为核心数。
+在 Linux（如 Gentoo）上，一般直接使用 `-jX` 或 `-j(X+1)`，`X` 为核心数。
 
 `4` 表示处理器的并行编译数（通常对应核心数或线程数）。
 
