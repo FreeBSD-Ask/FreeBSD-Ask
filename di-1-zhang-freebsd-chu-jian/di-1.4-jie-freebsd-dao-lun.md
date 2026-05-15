@@ -195,7 +195,7 @@ FreeBSD 不仅在生命周期内不变，大版本更新也具有连贯性和稳
 - 基于 GEOM 框架的全盘加密（含 ZFS、swap）方案。
 - 正在改进软件物料清单（Software Bill of Materials，SBOM），参见 Sovereign Tech Agency 相关赞助。
 - Capsicum 框架，并且已经对基本系统中大量工具进行了能力化加固。参见 Capsicum Wiki：FreeBSD Project. Capsicum - FreeBSD Wiki[EB/OL]. [2026-03-26]. <https://wiki.freebsd.org/Capsicum>.
-- FreeBSD 内核拥有五种不同的安全级别（securelevel）可以自由选择，参见 mitigations 手册页：FreeBSD Project. mitigations - FreeBSD Security Vulnerability Mitigations[EB/OL]. [2026-03-26]. <https://man.freebsd.org/cgi/man.cgi?query=mitigations>. 手册页还介绍了 FreeBSD 上若干安全漏洞缓解手段。
+- FreeBSD 内核拥有五种不同的安全级别（securelevel）可以自由选择，参见 security 手册页：FreeBSD Project. security - introduction to security under FreeBSD[EB/OL]. [2026-03-26]. <https://man.freebsd.org/cgi/man.cgi?query=security&sektion=7>. 另见 mitigations 手册页：FreeBSD Project. mitigations - FreeBSD Security Vulnerability Mitigations[EB/OL]. [2026-03-26]. <https://man.freebsd.org/cgi/man.cgi?query=mitigations>. 手册页还介绍了 FreeBSD 上若干安全漏洞缓解手段。
 
 #### 参考文献
 
