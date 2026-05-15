@@ -1,6 +1,6 @@
 # 5.5 使用 freebsd-update 更新 FreeBSD
 
-freebsd-update 是 FreeBSD 官方提供的二进制更新工具，仅支持一级架构的 RELEASE 版本，CURRENT 和 STABLE 不适用。
+freebsd-update 是 FreeBSD 官方提供的二进制更新工具，仅支持一级架构的 RELEASE、ALPHA、BETA、RC 版本，CURRENT 和 STABLE 不适用。
 
 > **注意**
 >
