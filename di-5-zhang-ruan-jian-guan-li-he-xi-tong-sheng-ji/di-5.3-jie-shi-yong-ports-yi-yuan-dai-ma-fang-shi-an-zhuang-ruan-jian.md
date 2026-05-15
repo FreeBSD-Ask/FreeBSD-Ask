@@ -474,8 +474,8 @@ portupgrade 是另一个常用的 Ports 更新工具。
 
 关于这两个工具的更多信息，可以参考以下官方文档。
 
-- FreeBSD Project. portmaster -- manage your ports without external databases or languages[EB/OL]. [2026-03-25]. <https://man.freebsd.org/cgi/man.cgi?portmaster(8)>. 无需外部数据库的 Ports 管理工具完整说明。
-- FreeBSD Project. portupgrade, portinstall -- tools to upgrade installed packages or install new ones via ports or packages[EB/OL]. [2026-03-25]. <https://man.freebsd.org/cgi/man.cgi?portupgrade(1)>. Ports 升级与安装工具的官方技术文档。
+- FreeBSD Project. portmaster -- manage your ports without external databases or languages[EB/OL]. [2026-03-25]. <https://man.freebsd.org/cgi/man.cgi?query=portmaster&sektion=8>. 无需外部数据库的 Ports 管理工具完整说明。
+- FreeBSD Project. portupgrade, portinstall -- tools to upgrade installed packages or install new ones via ports or packages[EB/OL]. [2026-03-25]. <https://man.freebsd.org/cgi/man.cgi?query=portupgrade&sektion=1>. Ports 升级与安装工具的官方技术文档。
 
 ## 全局设置 Ports 构建选项
 
