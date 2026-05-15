@@ -38,7 +38,7 @@ Xfce 的 Logo 是一只 [老鼠 🐀](https://docs.xfce.org/faq#what_does_it_mea
 | `wqy-fonts` | 文泉驿中文字体 |
 | `xdg-user-dirs` | 管理用户主目录 |
 | `xfce4-goodies` | Xfce 附加组件和插件集合 |
-| `lightdm-gtk-greeter-settings` | 配置 LightDM GTK+ 登录界面的图形工具，缺少该组件将无法启动 |
+| `lightdm-gtk-greeter-settings` | 配置 LightDM GTK+ 登录界面的图形工具 |
 
 ## startx 命令
 
