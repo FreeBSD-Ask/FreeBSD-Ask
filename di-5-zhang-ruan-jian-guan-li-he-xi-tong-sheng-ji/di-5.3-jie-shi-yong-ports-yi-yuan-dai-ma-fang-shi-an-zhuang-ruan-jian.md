@@ -548,7 +548,7 @@ tmpfs /tmp tmpfs rw 0 0
 
 ### 参考文献
 
-- FreeBSD Project. tmpfs -- in-memory file system[EB/OL]. [2026-03-25]. <https://man.freebsd.org/cgi/man.cgi?tmpfs(4)>. 内存文件系统 tmpfs 的官方技术规范。
+- FreeBSD Project. tmpfs -- in-memory file system[EB/OL]. [2026-03-25]. <https://man.freebsd.org/cgi/man.cgi?query=tmpfs&sektion=4>. 内存文件系统 tmpfs 的官方技术规范。
 
 ## ccache
 
