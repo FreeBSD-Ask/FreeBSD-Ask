@@ -321,7 +321,7 @@ search 和 domain 选项只能使用其中一个。使用 DHCP 时，dhclient(8)
 
 ### 参考文献
 
-- FreeBSD Project. resolvconf[EB/OL]. [2026-03-26]. <https://man.freebsd.org/cgi/man.cgi?query=resolvconf>. man 手册，提供 resolvconf 工具的完整技术文档，为 DNS 配置管理提供重要参考。
+- FreeBSD Project. resolvconf[EB/OL]. [2026-03-26]. <https://man.freebsd.org/cgi/man.cgi?query=resolvconf&sektion=8>. man 手册，提供 resolvconf 工具的完整技术文档，为 DNS 配置管理提供重要参考。
 - FreeBSD Forums. 8.8.8.8 or 1.1.1.1 if set in etc resolv conf doesn't stay as an entry in the file after a network restart[EB/OL]. [2026-03-26]. <https://forums.freebsd.org/threads/8-8-8-8-or-1-1-1-1-if-set-in-etc-resolv-conf-doesnt-stay-as-an-entry-in-the-file-after-a-network-restart.85951/>. 实际案例分析，提供防止覆写 DNS 配置的解决方案。
 
 ## 网络故障排除
