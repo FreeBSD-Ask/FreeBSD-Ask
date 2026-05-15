@@ -118,7 +118,7 @@ ThinkPad 可以启用 IBM ACPI 支持和 ACPI 视频支持。
 
 ### 参考文献
 
-- Vadot E. backlight -- configure backlight hardware[EB/OL]. (2022-07-19)[2026-03-25]. <https://man.freebsd.org/cgi/man.cgi?backlight>. 经测试，此部分教程适用于 Renoir 显卡。
+- Vadot E. backlight -- configure backlight hardware[EB/OL]. (2022-07-19)[2026-03-25]. <https://man.freebsd.org/cgi/man.cgi?query=backlight&sektion=8>. 经测试，此部分教程适用于 Renoir 显卡。
 
 ## 状态检查
 
