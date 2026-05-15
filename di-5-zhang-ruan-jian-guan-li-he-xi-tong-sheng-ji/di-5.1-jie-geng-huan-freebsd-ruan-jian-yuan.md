@@ -303,7 +303,7 @@ USTC-kmods: {
 
 ### 15.0-RELEASE
 
-自 `FreeBSD 15.0-RELEASE` 以降，`kmods` 源的名称由 `FreeBSD-kmods` 变更为 `FreeBSD-kmods-ports`。
+自 `FreeBSD 15.0-RELEASE` 以降，`kmods` 源的名称由 `FreeBSD-kmods` 变更为 `FreeBSD-ports-kmods`。
 
 #### 中国科学技术大学开源软件镜像站
 
