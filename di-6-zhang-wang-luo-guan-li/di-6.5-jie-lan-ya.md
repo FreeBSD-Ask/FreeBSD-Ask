@@ -57,7 +57,7 @@ Set it up? [yes]:
 蓝牙设备通过 USB 总线连接，可使用 `usbconfig` 工具查看所有 USB 设备（包括蓝牙设备）。如果系统启动时固件未自动加载，可手动加载。例如，如果蓝牙设备标识为 `ugen1.5`，则可执行：
 
 ```sh
-# iwmbtfw -d ugen1.5
+# iwmbtfw -d ugen1.5 -f /usr/local/share/iwmbt-firmware/
 ```
 
 ## 故障排除与未竟事宜
