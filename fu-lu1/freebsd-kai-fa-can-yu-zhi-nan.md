@@ -51,11 +51,11 @@ root@generic:~/freebsd-ports # ls -l 2024.diff
 
 这是一种相对简便的提交方式。每次提交的修改量不应过大。
 
-提交完成后，在 [https://bugs.freebsd.org/bugzilla](https://bugs.freebsd.org/bugzilla) 新建一个 Bug，说明修改内容，并附上 [https://reviews.freebsd.org](https://reviews.freebsd.org) 的链接。完成后，再在 [https://reviews.freebsd.org](https://reviews.freebsd.org) 中附上该 Bug 页面链接，否则可能长时间得不到处理。
+提交完成后，在 [https://bugs.freebsd.org/bugzilla](https://bugs.freebsd.org/bugzilla) 新建一个 Bug，说明修改内容，并附上 [https://reviews.freebsd.org](https://reviews.freebsd.org) 的链接。完成后，再在 [https://reviews.freebsd.org](https://reviews.freebsd.org) 中附上该 Bug 页面链接，否则可能长时间无人处理。
 
 > **技巧**
 >
-> diff 文件不会被视作修改产生的文件，下次生成 diff 时无需提前删除上一次的 diff 文件。
+> diff 文件不视作修改产生的文件，下次生成 diff 时无需提前删除上一次的 diff 文件。
 
 上述操作适用于 FreeBSD 文档源（doc、src）和 Ports，还有少部分操作需要在 GitHub 上完成，例如状态报告。
 
@@ -123,7 +123,7 @@ FreeBSD 的软件以 Port 形式提供，开发者无需考虑如何打包为二
 
 对原方案的改进：
 
-- `if zgrep -q '.Lb libc' $i && zgrep -q '.Sh LIBRARY' $i; then` 这一句的问题在于 `.Lb libc` 不仅匹配 libc，还会匹配 libcalendar 等以 libc 开头的库。可以改写为 `.Lb libc$` 来解决此问题
+- `if zgrep -q '.Lb libc' $i && zgrep -q '.Sh LIBRARY' $i; then` 这一句的问题在于 `.Lb libc` 不仅匹配 libc，还会匹配 libcalendar 等以 libc 开头的库。可以改写为 `.Lb libc$` 来解决此问题。
 - 正文的组织和排序不够合理，并未按功能模块或其他逻辑编排，因此不适用于系统学习，但可用于快速查阅。
 
 ## 课后习题

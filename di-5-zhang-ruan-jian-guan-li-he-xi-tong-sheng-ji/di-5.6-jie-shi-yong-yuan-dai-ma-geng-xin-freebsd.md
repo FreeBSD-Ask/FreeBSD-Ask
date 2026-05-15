@@ -8,7 +8,7 @@
 
 ## SVN 到 Git 的迁移
 
-FreeBSD 项目在 2020 至 2021 年间从 SVN 迁移到了 Git，即 <https://git.freebsd.org>。其中 src 仓库于 2020 年底完成迁移，Ports 仓库于 2021 年初完成迁移（参见 FreeBSD Foundation. 2021 in Review: Software Development[EB/OL]. [2026-04-16]. <https://freebsdfoundation.org/blog/2021-in-review-software-development/>。该博文回顾了 FreeBSD 2021 年的软件开发进展，包括 SVN 到 Git 的迁移完成情况）。
+FreeBSD 项目在 2020 至 2021 年间从 SVN 迁移到了 Git，即 <https://git.freebsd.org>。其中 src 仓库于 2020 年底完成迁移，Ports 仓库于 2021 年初完成迁移（参见 FreeBSD Foundation. 2021 in Review: Software Development[EB/OL]. [2026-04-16]. <https://freebsdfoundation.org/blog/2021-in-review-software-development/>）。
 
 这一版本控制系统的迁移标志着 FreeBSD 项目开发流程的现代化转型，因此获取源代码的方式也相应发生了变化，不再使用 SVN。
 
@@ -31,7 +31,7 @@ FreeBSD 项目在 2020 至 2021 年间从 SVN 迁移到了 Git，即 <https://gi
 
 ### Git 代理设置方法
 
-在网络环境受限制的情况下，可能需要为 Git 设置代理才能正常拉取源代码。下面分别介绍设置和取消 Git 代理的方法。
+在网络环境受限制的情况下，可能需要为 Git 设置代理才能正常拉取源代码。下面介绍设置和取消 Git 代理的方法。
 
 - 设置 Git 全局代理：
 
@@ -64,7 +64,7 @@ $ git clone --depth 1 https://git.FreeBSD.org/src.git /usr/src
 
 参数 `--depth 1` 说明：浅克隆，仅拉取最新的提交，不拉取全部的日志及历史记录。
 
-或者通过 GitHub 拉取（GitHub 是 FreeBSD.org 上 src 仓库的镜像，每 10 分钟同步一次。）
+或者通过 GitHub 拉取（GitHub 是 FreeBSD.org 上 src 仓库的镜像，每 10 分钟同步一次）。
 
 ```sh
 $ git clone --depth 1 https://github.com/freebsd/freebsd-src /usr/src
@@ -104,7 +104,7 @@ $ git clone --branch releng/15.0 --single-branch --depth 1 https://github.com/fr
 
 > **为何要解压到 `/`？**
 >
-> 因为解压到 **/** 会将源代码解压到 **/usr/src**。如果将上面的路径改为 **/usr/src**，会将源代码解压到 **/usr/src/usr/src**。因为该压缩包是包含路径的。
+> 因为解压到 **/** 会将源代码解压到 **/usr/src**。如果将上面的路径改为 **/usr/src**，会将源代码解压到 **/usr/src/usr/src**。因为该压缩包包含路径。
 
 > **技巧**
 >
@@ -132,7 +132,7 @@ $ git clone --branch releng/15.0 --single-branch --depth 1 https://github.com/fr
 
 > **技巧**
 >
-> 与绝大多数现代 Linux 不同，[FreeBSD](https://github.com/freebsd/freebsd-src/tree/main/contrib/nvi)（OpenBSD）上的 `vi` 是 *[nvi](https://sites.google.com/a/bostic.com/keithbostic/keith-bostic?authuser=0)*（原版 **ex/vi** 的再实现），并不是指向任何 *vim* 的链接符号。鲜有人使用，也无学习的必要，因此有必要更换为其他文本编辑器。
+> 与绝大多数现代 Linux 不同，[FreeBSD](https://github.com/freebsd/freebsd-src/tree/main/contrib/nvi)（OpenBSD）上的 `vi` 是 *[nvi](https://sites.google.com/a/bostic.com/keithbostic/keith-bostic?authuser=0)*（原版 **ex/vi** 的再实现），并非指向任何 *vim* 的符号链接。鲜有人使用，也无学习的必要，因此有必要更换为其他文本编辑器。
 >
 > ```sh
 > export EDITOR=/usr/bin/ee # 切换 vi 为 ee。针对 FreeBSD 14 之前的版本或 csh 使用：setenv EDITOR /usr/bin/ee
@@ -167,7 +167,7 @@ Select: (p) postpone, (df) diff-full, (e) edit,
 可能是系统时间不正确导致的，使用 `pool.ntp.org` 服务器同步系统时间。
 
 ```sh
-# ntpd -q -g -p pool.ntp.org # 当时间相差较大时必须使用该命令
+# ntpd -q -g pool.ntp.org # 当时间相差较大时必须使用该命令
 ```
 
 ## 参考文献

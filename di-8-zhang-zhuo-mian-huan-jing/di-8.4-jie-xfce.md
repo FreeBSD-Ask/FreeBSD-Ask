@@ -33,12 +33,12 @@ Xfce 的 Logo 是一只 [老鼠 🐀](https://docs.xfce.org/faq#what_does_it_mea
 | ---- | -------- |
 | `xorg` | X 窗口系统 |
 | `lightdm` | 轻量级显示管理器 LightDM |
-| `lightdm-gtk-greeter` | LightDM 的 GTK+ 显示界面插件 |
+| `lightdm-gtk-greeter` | LightDM GTK+ 显示界面插件 |
 | `xfce` | Xfce 桌面环境 |
 | `wqy-fonts` | 文泉驿中文字体 |
 | `xdg-user-dirs` | 管理用户主目录 |
-| `xfce4-goodies` | Xfce 的附加组件和插件集合 |
-| `lightdm-gtk-greeter-settings` | 配置 LightDM GTK+ 登录界面的图形工具，缺少该组件将无法启动 |
+| `xfce4-goodies` | Xfce 附加组件和插件集合 |
+| `lightdm-gtk-greeter-settings` | 配置 LightDM GTK+ 登录界面的图形工具 |
 
 ## startx 命令
 
@@ -102,7 +102,7 @@ $ echo "/usr/local/etc/xdg/xfce4/xinitrc" > ~/.xsession
 # cd /usr/ports/x11/appmenu-registrar/ && make install clean
 ```
 
-查看安装后的说明，并根据说明配置。
+查看安装后的说明并据此配置。
 
 ```sh
 $ xfconf-query -c xsettings -p /Gtk/ShellShowsMenubar -n -t bool -s true  # 启用 GTK 菜单栏显示
@@ -209,7 +209,7 @@ fi
 
 ## 故障排除与未竟事宜
 
-如果需进一步动态显示当前进程，目前仅 sh 支持该功能。
+如需进一步动态显示当前进程，目前仅 sh 支持该功能。
 
 ## 课后习题
 

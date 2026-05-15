@@ -17,8 +17,8 @@
 
 服务说明：
 
-- `hcsecd` 服务用于管理蓝牙设备的链路密钥和 PIN 码，负责蓝牙设备的安全认证；
-- `bthidd` 服务用于支持 Bluetooth HID（Human Interface Device）设备，如蓝牙鼠标、键盘等。
+- `hcsecd`：管理蓝牙设备的链路密钥和 PIN 码，负责蓝牙设备的安全认证。
+- `bthidd`：支持 Bluetooth HID（Human Interface Device）设备，如蓝牙鼠标、键盘等。
 
 ## 蓝牙鼠标配对
 
@@ -57,7 +57,7 @@ Set it up? [yes]:
 蓝牙设备通过 USB 总线连接，可使用 `usbconfig` 工具查看所有 USB 设备（包括蓝牙设备）。如果系统启动时固件未自动加载，可手动加载。例如，如果蓝牙设备标识为 `ugen1.5`，则可执行：
 
 ```sh
-# iwmbtfw -d ugen1.5
+# iwmbtfw -d ugen1.5 -f /usr/local/share/iwmbt-firmware/
 ```
 
 ## 故障排除与未竟事宜
@@ -66,7 +66,7 @@ Set it up? [yes]:
 
 此问题可能由 bthidd 服务缓存的设备信息与实际设备状态不一致所致。解决方案：删除 **/var/db/bthidd.hids** 文件中对应鼠标的 `bd_addr` 行（该行包含设备的蓝牙地址，格式为 `xx:xx:xx:xx:xx:xx`，如 `34:88:5d:12:34:56`），清除旧的配对信息。
 
-完成上述操作后，重启蓝牙 HID 守护进程服务以使更改生效：
+完成上述操作后，重启蓝牙 HID 守护进程服务使更改生效：
 
 ```sh
 # service bthidd restart

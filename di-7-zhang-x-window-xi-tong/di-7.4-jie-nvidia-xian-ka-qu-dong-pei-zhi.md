@@ -4,9 +4,9 @@
 
 台式机如果 CPU 为英特尔处理器且型号以 F（如 [i5-9400F](https://www.intel.cn/content/www/cn/zh/products/sku/190883/intel-core-i59400f-processor-9m-cache-up-to-4-10-ghz/specifications.html)）或 KF（如 [i5-12600KF](https://www.intel.cn/content/www/cn/zh/products/sku/134590/intel-core-i512600kf-processor-20m-cache-up-to-4-90-ghz/specifications.html)）结尾，则该型号无核芯显卡，无需处理核芯显卡相关配置。
 
-如果已拥有独立显卡，且视频输出接口（DP 或 HDMI）直接连接至独立显卡，通常无需配置核芯显卡，仅处理独立显卡驱动即可。
+如果已有独立显卡，且视频输出接口（DP 或 HDMI）直接连接至独立显卡，通常无需配置核芯显卡，仅处理独立显卡驱动即可。
 
-不具备显卡直通能力的笔记本设备，须先按照其他章节安装配置英特尔核芯显卡驱动（相关 DRM 模块），再参照下文进行配置。
+不具备显卡直通能力的笔记本设备，须先按照其他章节安装配置英特尔核芯显卡驱动（相关 DRM 模块），再参照下文配置。
 
 ## 加入 video 组
 
@@ -133,13 +133,13 @@ Mon Jan 19 19:06:59 2026
 
 ![nvidia-smi 报错](../.gitbook/assets/no-version-vo.jpg)
 
-执行 nvidia-smi 命令时出现错误提示“API mismatch”：该错误表示 API 不匹配，通常源于版本兼容性问题，可能存在以下几种情况：NVIDIA 驱动组件本身版本不匹配、NVIDIA 驱动与其他 NVIDIA 软件包版本不匹配、NVIDIA 驱动与当前 FreeBSD 基本系统版本不匹配。
+执行 nvidia-smi 命令时出现错误提示“API mismatch”：该错误表示 API 不匹配，通常源于版本兼容性问题。可能原因包括：NVIDIA 驱动组件本身版本不匹配、NVIDIA 驱动与其他 NVIDIA 软件包版本不匹配、NVIDIA 驱动与当前 FreeBSD 基本系统版本不匹配。
 
-建议先卸载所有 NVIDIA 软件包，随后将 FreeBSD 基本系统更新到最新版本，再重新执行驱动安装流程。
+建议先卸载所有 NVIDIA 软件包，随后将 FreeBSD 基本系统更新到最新版本，再重新安装驱动。
 
 ### 如何卸载现有的 NVIDIA 相关软件包
 
-如果提示版本不符，需先卸载所有已安装的 NVIDIA 相关软件包，然后按本节进行配置：
+如果提示版本不符，需先卸载所有已安装的 NVIDIA 相关软件包，然后按本节配置：
 
 ```sh
 # pkg delete *nvidia*
@@ -147,7 +147,7 @@ Mon Jan 19 19:06:59 2026
 
 ### 如何阻止驱动更新
 
-将 `pkg info -q | grep -i nvidia` 输出的相关软件包逐个使用 `pkg lock` 命令锁定即可。
+对 `pkg info -q | grep -i nvidia` 输出的相关软件包逐个使用 `pkg lock` 命令锁定即可。
 
 例如：
 
@@ -165,6 +165,6 @@ Mon Jan 19 19:06:59 2026
 
 ## 课后习题
 
-1. 在显卡直连的笔记本上进行实际测试，提交 PR。
-2. 在 Linux 兼容层下调用 NVIDIA CUDA 进行测试。
+1. 在显卡直连的笔记本上实际测试，提交 PR。
+2. 在 Linux 兼容层下调用 NVIDIA CUDA 测试。
 3. NVIDIA 官方驱动以二进制闭源形式分发，而 FreeBSD 内核采用 BSD 许可证。分析闭源内核模块与 BSD 许可证的兼容性争议，并讨论 nouveau 开源驱动能否在 FreeBSD 上替代闭源方案。

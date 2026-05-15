@@ -1,6 +1,6 @@
 # 7.3 AMD 显卡驱动
 
-本节涵盖 AMD 显卡驱动的安装与配置。读者应先阅读显卡驱动概述。
+本节涵盖 AMD 显卡驱动的安装与配置。请先阅读显卡驱动概述。
 
 ## 安装 AMD 显卡驱动
 
@@ -36,13 +36,13 @@
 
 ## AMD 显卡配置
 
-- 对于 HD 7000 以后 AMD 显卡，在 **/etc/rc.conf** 文件中添加 `amdgpu` 内核模块到 `kld_list`，以便系统启动时加载（多数用户应使用此驱动，如未生效再修改为 `radeonkms`）：
+- HD 7000 以后的 AMD 显卡，在 **/etc/rc.conf** 文件中添加 `amdgpu` 内核模块到 `kld_list`，以便系统启动时加载（多数用户应使用此驱动，如未生效再修改为 `radeonkms`）：
 
 ```sh
 # sysrc -f /etc/rc.conf kld_list+=amdgpu
 ```
 
-- 对于 HD 7000 以前 AMD 显卡，在 **/etc/rc.conf** 文件中添加 `radeonkms` 内核模块到 `kld_list`：
+- HD 7000 以前的 AMD 显卡，在 **/etc/rc.conf** 文件中添加 `radeonkms` 内核模块到 `kld_list`：
 
 ```sh
 # sysrc -f /etc/rc.conf kld_list+=radeonkms

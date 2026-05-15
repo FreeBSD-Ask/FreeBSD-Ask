@@ -88,7 +88,7 @@ FreeBSD 中文社区未通过其他域名部署本书，唯一官方域名为 `b
 
 支付方式支持：VISA 信用卡（可通过 Amazon Pay 或 Google Pay）、万事达品牌借记卡。
 
-可通过 Bing Rewards 积分 [对 FreeBSD 基金会进行捐赠](https://rewards.bing.com/redeem/000999036000?causeId=840-841545163&&PC=EMMX01)。Bing Rewards 是微软必应搜索提供的积分计划。同方式也可以 [捐赠 NetBSD 基金会](https://rewards.bing.com/redeem/000999036000?causeId=840-134134071&PC=EMMX01)。
+可通过 Microsoft Rewards 积分 [捐赠 FreeBSD 基金会](https://rewards.bing.com/redeem/000999036000?causeId=840-841545163&&PC=EMMX01)。Microsoft Rewards 是微软必应搜索提供的积分计划。同方式也可以 [捐赠 NetBSD 基金会](https://rewards.bing.com/redeem/000999036000?causeId=840-134134071&PC=EMMX01)。
 
 ## 贡献者
 
@@ -96,7 +96,7 @@ FreeBSD 中文社区未通过其他域名部署本书，唯一官方域名为 `b
 
 ## 授权协议与法律声明
 
-本项目采用《CC BY 4.0 署名 4.0 协议国际版》，核心条款包括：署名——允许对作品进行复制、发行、修改、再创作，需保留原作者署名，详见 [署名 4.0 协议国际版法律文本](https://creativecommons.org/licenses/by/4.0/legalcode.zh-hans)。
+本项目采用《CC BY 4.0 署名 4.0 协议国际版》，核心条款包括：署名——允许复制、发行、修改、再创作作品，需保留原作者署名，详见 [署名 4.0 协议国际版法律文本](https://creativecommons.org/licenses/by/4.0/legalcode.zh-hans)。
 
 本作品引用的第三方商标、商号、服务标志、商品外观及版权材料，其相关权利均由各自权利人持有。前述引用仅为说明与指称之目的。
 

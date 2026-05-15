@@ -2,14 +2,14 @@
 
 ## 为什么不去建设《FreeBSD 手册》
 
-FreeBSD 项目对除季度报告外的实质性 PR 多采取长期搁置的处理方式。从提交数据来看，freebsd-doc 项目的活跃度在过去十余年持续走低：
+FreeBSD 项目对除季度报告外的实质性 PR 多长期搁置。从提交数据来看，freebsd-doc 项目的活跃度在过去十余年持续走低：
 
-使用统计分析 git 项目[EB/OL]. [2026-03-26]. <https://gist.github.com/ykla/6c3df44c371d37fc3196ddf5fa87ce5f> 对 freebsd-doc 进行分析的结果参见：freebsd-doc-2025 分析报告[EB/OL]. [2026-03-26]. <https://gist.github.com/ykla/363bf922d0785d0b02dd43f8289368db>。
+使用统计分析 git 项目[EB/OL]. [2026-03-26]. <https://gist.github.com/ykla/6c3df44c371d37fc3196ddf5fa87ce5f> 分析 freebsd-doc 的结果参见：freebsd-doc-2025 分析报告[EB/OL]. [2026-03-26]. <https://gist.github.com/ykla/363bf922d0785d0b02dd43f8289368db>。
 
 - 2005–2006 年：第一次显著下滑
 - 2015–2016 年：第二次大幅下滑
 
-该项目结构复杂且混乱，例如在翻译过程中部分数据引用的可复用性难以判断，即使对于维护者而言亦是如此。
+该项目结构复杂且混乱，例如在翻译过程中部分数据引用的可复用性难以判断，即使对维护者而言亦是如此。
 
 此外，其安全报告的文件名包含英文冒号 `:`，这在 Windows 系统中属于非法字符，导致整个项目无法在 Windows 环境下正常检出：
 
@@ -33,8 +33,8 @@ and retry with 'git restore --source=HEAD :/'
 
 若您希望将教程收录至本书，可通过以下方式提交：
 
-- 若您熟悉 GitHub 操作，可点击桌面端网页右侧的“编辑此页”按钮进入项目进行编辑。本项目采用 Markdown 语法配合 GitBook 平台，易于上手（具体操作详见项目 WiKi）。
-- 若上述方式存在困难，您也可发送 PDF、Word 或 TXT 格式的文档至电子邮箱 `yklaxds@gmail.com`（我们将在 3 个工作日内回复。如果没有收到回复，请更换邮箱再次发送或提交 issue）；如果有视频教程，建议提供各大云盘的分享链接。
+- 若您熟悉 GitHub 操作，可点击桌面端网页右侧的“编辑此页”按钮进入项目编辑。本项目采用 Markdown 语法配合 GitBook 平台，易于上手（具体操作详见项目 WiKi）。
+- 若上述方式存在困难，您也可发送 PDF、Word 或 TXT 格式的文档至电子邮箱 `yklaxds@gmail.com`（我们将在 3 个工作日内回复。如果没有收到回复，请更换邮箱再次发送或提交 issue）。如果有视频教程，建议上传至各大云盘并提供分享链接。
 
 本书现收录以下类型的内容：
 
@@ -57,9 +57,9 @@ and retry with 'git restore --source=HEAD :/'
 
 #### 使之成为“一本书”，而不仅是字典或手册
 
-- 若某一技术在最新版本中已被移除，应及时移除其在本书中的对应内容
+- 若某一技术在最新版本中已移除，应及时移除其在本书中的对应内容
 - 使全书语气温和而坚定
-- 在尽量减少原文引用的前提下，重写各章节内容并删除冗余部分
+- 尽量减少原文引用，重写各章节内容并删除冗余部分
 - 实现 BSD 中文文档协作方式的现代化与简化：
   - 自动化（CI 检查、预览、生成 HTML/PDF）
   - 仅使用最基础的 Markdown 语法，避免复杂扩展和繁琐流程
@@ -77,16 +77,16 @@ and retry with 'git restore --source=HEAD :/'
 
 #### 细则
 
-- 非拉丁字符与拉丁字符之间应添加空格（中英文/数字之间应有一个半角空格），许多 Markdown 格式化工具可自动完成此操作
+- 非拉丁字符与拉丁字符之间应添加空格（中英文/数字之间应有一个半角空格），许多 Markdown 格式化工具可自动处理
 - 不应使用 `sudo` 而应使用 `#` 代替，除非是特殊情况（如讲解如何使用 `sudo` 本身）；普通用户权限请使用 `$` 表示
 - 安装软件时，请提供 pkg（FreeBSD 的二进制包管理器，用于安装、更新和管理预编译软件包，提供依赖关系解析和版本管理功能）或 ports 两种方法，除非极不建议使用 pkg（如特定内核模块等）
-- 请注意版权问题。引用内容或受到启发时，请备注文章链接出处，必要时可使用互联网档案馆进行快照保存
+- 请注意版权问题。引用内容或受到启发时，请备注文章链接出处，必要时可使用互联网档案馆快照保存
 - 编辑时请尽量以最新的 FreeBSD RELEASE（FreeBSD 的正式发布版本，经过充分测试和稳定化，适合生产环境使用，每个 RELEASE 版本均有长期支持周期）为基准，绝对避免出现 `pkg_add` 等过时内容。如有必要，必须注明相关版本
-- 关于编写时长，理论上会持续进行，跟随每个 FreeBSD 大版本迭代更新
-- 若因各种原因无法立即验证所写内容的正确性，请编辑者添加“警告：以下内容为理论，未经实际测试，仅供参考，如可使用请提交 issue 以移除本标签。”的提示标签进行区分
-- 不应在文学故事章节进行除错别字和排版以外的删减
+- 编写工作会跟随每个 FreeBSD 大版本持续迭代更新
+- 若因各种原因无法立即验证所写内容的正确性，请编辑者添加“警告：以下内容为理论，未经实际测试，仅供参考，如可使用请提交 issue 以移除本标签。”的提示标签来区分
+- 不应在文学故事章节删减除错别字和排版以外的内容
 - 请勿使用 Gitee 等境内无法确保信息安全与数据稳定的平台（此类平台无法保证文件的长期可访问性，不适合存放需长期归档的内容，未来存在无法获取文件的重大风险）
-- 进行错别字修改时，请务必确认其确为错别字，可参考《现代汉语词典》第 7 版等资料进行佐证
+- 修改错别字时，请务必确认其确为错别字，可参考《现代汉语词典》第 7 版等资料佐证
 
 ## 实用附录
 
@@ -225,7 +225,7 @@ $ git clone https://github.com/FreeBSD-Ask/FreeBSD-Ask
 │  │      update_progress.sh # 由 Update-commit-progress.yml 调用
 │  │
 │  └─workflows # GitHub Action，用于自动化处理一些简单任务
-│          Auto-Assign.yml # 自动为 issue PR 分配人员进行处理
+│          Auto-Assign.yml # 自动为 issue PR 分配人员处理
 │          AutoCorrect.yml # markdown 格式修正，会自动提交 PR
 │          check-images.yml # 检查图片的调用情况，有无正确引用图片，不正确会生成 issue
 │          create-pdf.yml # 用于在 GitHub release 生成电子书 PDF、EPUB
@@ -234,7 +234,7 @@ $ git clone https://github.com/FreeBSD-Ask/FreeBSD-Ask
 │          markdown-lint2.yml # markdown 格式检查
 │          md-padding.yml # markdown 空格检查与修复
 │          mulu.yml # 从 SUMMARY.md 生成的镜像文件
-│          sync-headers.yml # 从 SUMMARY.md 更新所有 markdown 文件的一级标题。如果你要修改 # 标题，必须在此处进行修改，否则会被其覆盖
+│          sync-headers.yml # 从 SUMMARY.md 更新所有 markdown 文件的一级标题。如果你要修改 # 标题，必须在此处修改，否则会被它覆盖
 │          Update-commit-progress.yml # 进度检查工具，每 3533 次提交为一个版本，用于插入到 README.md
 │          update-ga4.yml # 谷歌统计数据，用于插入到 README.md
 │
@@ -320,11 +320,11 @@ $ git clone https://github.com/FreeBSD-Ask/FreeBSD-Ask
 
 - 第一行 `# Table of contents` 绝对不允许变更，否则 GitBook 将无法识别，导致失去同步。
 - 要求格式应为 `* [2.2 使用 bsdinstall 开始安装](di-2-zhang-an-zhuang-freebsd/di-2.2-jie-start-install.md)`，不允许出现 `* [2.2 使用 bsdinstall 开始安装](di-3-zhang-ni-hao/di-2.2-jie-start-install.md)` 这种情况，即目录结构与文件放置位置必须一致（不一致虽不会报错，但本项目要求保持一致）。
-- 通过 `sync-headers.yml`，将自动同步 `SUMMARY.md` 中的章节标题到具体的 Markdown 文件中。因此如果需要修改 `di-2.2-jie-start-install.md` 的一级标题 `# 2.2 使用 bsdinstall 开始安装`，必须仅修改 `SUMMARY.md` 中的 `2.2 使用 bsdinstall 开始安装`，否则会被 `sync-headers.yml` 覆盖。当二者不一致时，若提交时未触发脚本构建，则 GitBook 将以 `SUMMARY.md` 中的目录为准。
+- 通过 `sync-headers.yml`，将自动同步 `SUMMARY.md` 中的章节标题到具体的 Markdown 文件中。因此如果需要修改 `di-2.2-jie-start-install.md` 的一级标题 `# 2.2 使用 bsdinstall 开始安装`，必须仅修改 `SUMMARY.md` 中的 `2.2 使用 bsdinstall 开始安装`，否则会被 `sync-headers.yml` 覆盖。二者不一致时，若提交时未触发脚本构建，则 GitBook 将以 `SUMMARY.md` 中的目录为准。
 
 ### 预览页面
 
-当您提交 PR 时，系统会自动生成一个预览网站。
+您提交 PR 时，系统会自动生成预览网站。
 
 实际上，所有提交都有对应的网站版本：
 
@@ -342,7 +342,7 @@ $ git clone https://github.com/FreeBSD-Ask/FreeBSD-Ask
 
 ## 开放任务
 
-所有任务的排序均为随机，无优先级之分，您可选择感兴趣的任务进行。
+所有任务的排序均为随机，无优先级之分，您可选择感兴趣的任务参与。
 
 ### 开源社区
 

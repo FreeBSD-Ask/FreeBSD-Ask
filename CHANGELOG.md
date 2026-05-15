@@ -2,6 +2,10 @@
 
 ## 2026 年第二季度
 
+- 2026.5.15
+  - 增补重写：“11.1 Linux 兼容层架构”
+  - 通过参考文献和 FreeBSD man 对全书进行事实核查
+  - 进一步去欧化汉语
 - 2026.5.13
   - 增补重写：“第 16 章 ZFS”
 - 2026.5.11
@@ -66,10 +70,10 @@
 - 2026.4.19
   - 审阅全书术语、错别字
   - 增补全书参考文献
-  - 对全书进行事实核查
+  - 核查全书事实
 - 2026.4.8
   - 删除赘余的人称和表达
-  - 进行润色以符合出版物要求
+  - 润色以符合出版物要求
 - 2026.4.5
   - 格式化全书
 - 2026.4.3
@@ -94,7 +98,7 @@
 - 2026.3.22
   - 为全书补全目录结构图
 - 2026.3.21
-  - 为所有参考资料进行注解
+  - 为所有参考资料作注解
   - 为全书增补课后习题
 - 2026.3.19
   - 全面修订所有章节，旨在靠近专业出版物
@@ -136,7 +140,7 @@
   - 删除“21.5 基于 archlinux-pacman 的 Arch Linux 兼容层（拟删除）”。原因：存在 Bug 287690 [sysutils/pacman: The archlinux flavor cannot be built or installed.](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=287690) 无法得到解决
   - 删除“6.10 Budgie（拟删除）”，原因：欠缺维护，存在 [Bug 289898 x11/budgie: After logging in with LightDM, it crashes and then shows a black screen](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=289898) 无法得到解决
   - 将“附录：登录界面主题”从“6.3 KDE 6（X11 会话）”彻底删除，因为软件源中仅存在 Port x11-themes/sddm-freebsd-black-theme，且无人维护，存在 [x11-themes/sddm-freebsd-black-theme incompatible with SDDM 0.21.0 (Qt6 greeter)](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=293449) 的问题无法得到解决
-  - 注意到 Lumina 实际上不存在任何维护者，且长期未更新，作删除处理。
+  - 注意到 Lumina 实际上不存在任何维护者，且长期未更新，删除。
   - 删除“7.5 Window Maker”，Bug 较多，基本无法使用
   - 删除“7.6 Fluxbox”，Bug 较多，基本无法使用
   - “第 7 章 窗口管理器”剩余内容迁移到“第 6 章 桌面环境”，
@@ -157,7 +161,7 @@
   - “23.5 Swap 分区”增补重要警告“在内存压力极高的系统上，无论 swap 空间剩余多少，使用 zvol 作为 swap 设备都可能导致系统锁死。”
   - 根据上游文档增补“23.5 Swap 分区”中“使用 ZFS 卷充当 Swap”
 - 2026.1.19
-  - 增补“6.2 NVIDIA 显卡驱动”，在台式机 3060 显卡上进行实际测试
+  - 增补“6.2 NVIDIA 显卡驱动”，在台式机 3060 显卡上实际测试
   - 为其余链接添加部分存档
 - 2026.1.18
   - 引入归档 CI，同时为其余链接添加部分存档
@@ -268,7 +272,7 @@
   - “5.1 FreeBSD 镜像站现状”新增“拒绝开放的可能性原因分析”
 - 2025.12.7
   - 完全重写：“25.5 更新 ZFS 的 zpool”
-  - 完全重写：“5.7 使用 freebsd-update 更新 FreeBSD”。注：在使用 freebsd-update 从 14.3 或更低版本进行更新时，必须先更新到最新的补丁版本再进行大版本间的更迭。否则会挂。方法：`freebsd-update fetch && freebsd-update install` 参见 <https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=289769> 和 <https://www.freebsd.org/releases/15.0R/installation/#upgrade-binary>
+  - 完全重写：“5.7 使用 freebsd-update 更新 FreeBSD”。注：在使用 freebsd-update 从 14.3 或更低版本更新时，必须先更新到最新的补丁版本再升级大版本。否则会失败。方法：`freebsd-update fetch && freebsd-update install` 参见 <https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=289769> 和 <https://www.freebsd.org/releases/15.0R/installation/#upgrade-binary>
 - 2025.12.6
   - 将“5.9 使用 pkgbase 更新 FreeBSD”完全重写为“5.9 使用 ZFS 启动环境更新 FreeBSD 并实现多版本共存”
 - 2025.12.5
@@ -390,7 +394,7 @@
 - 2025.10.6
   - “1.1 操作系统的历程：UNIX、BSD 和 Linux”：新增“附录：自由软件与开源软件语境下的典型误解与思想偏差探析”
 - 2025.10.1
-  - 非技术性问题及与社区无关话题、纯粹私人聊天及情感讨论等等事宜恕不回复，如有这方面需求请咨询专业人士，其他需求欢迎加群讨论。
+  - 非技术性问题及与社区无关话题、纯粹私人聊天及情感讨论等事宜恕不回复，如有这方面需求请咨询专业人士，其他需求欢迎加群讨论。
 
 ## 2025 年第三季度
 
@@ -419,7 +423,7 @@
   - 重写“9.1 音频设备配置”
   - 新增“6.16 KDE6（Wayland）”
 - 2025.8.31
-  - 目前将无线电（Wi-Fi）区域码设置为 `CN NONE`（`create_args_wlan0="country CN regdomain NONE"`）是不正确的，因为 FreeBSD 的文件没有得到维护，实际上会导致无法协商到 Wi-Fi 5（FreeBSD 为 VHT40），速率始终是 11a，不是应有的 11ac；并且对于 DFS，配置写的也不正确。已经报告 Bug 至 [Missing CN regulatory domain and 11ac/DFS support in regdomain.xml](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=289202)。临时解决方案：如果你的信道 > 48，需要专门在 **/etc/rc.conf** 中修改或写入 `create_args_wlan0="country HR regdomain ETSI"`；如果你的信道 <= 48，且存在 `create_args_wlan0="country CN regdomain NONE"`，请将其删除，因为默认的 FCC US 配置可支持其 Wi-Fi 5 协议。经过测试，即使是 Wi-Fi 6 路由器，开启 WPA3、160MHz，也是受支持的。按照以上临时方案进行配置，Intel AX200 网卡在 FreeBSD 14.3-RELEASE 上可成功协商至 11ac。
+  - 目前将无线电（Wi-Fi）区域码设置为 `CN NONE`（`create_args_wlan0="country CN regdomain NONE"`）是不正确的，因为 FreeBSD 的文件缺乏维护，实际上会导致无法协商到 Wi-Fi 5（FreeBSD 为 VHT40），速率始终是 11a，不是应有的 11ac；并且对于 DFS，配置也不正确。已提交 Bug 报告至 [Missing CN regulatory domain and 11ac/DFS support in regdomain.xml](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=289202)。临时解决方案：如果你的信道 > 48，需要专门在 **/etc/rc.conf** 中修改或写入 `create_args_wlan0="country HR regdomain ETSI"`；如果你的信道 <= 48，且存在 `create_args_wlan0="country CN regdomain NONE"`，请将其删除，因为默认的 FCC US 配置可支持其 Wi-Fi 5 协议。经过测试，即使是 Wi-Fi 6 路由器，开启 WPA3、160MHz，也是受支持的。按照以上临时方案配置，Intel AX200 网卡在 FreeBSD 14.3-RELEASE 上可成功协商至 11ac。
   - 因 budgie 主要维护者 Olivier Duchateau 称已对此项目不感兴趣，放弃维护。且无人主动维护，目前核心组件 Port `sysutils/budgie-control-center` [被标记为](https://www.freshports.org/sysutils/budgie-control-center/) `broken`（破损）。考虑在日后删除 6.10 Budgie。如果 6 个月内仍未得到修复将建议上游删除此项目，并从本书中移除此节。
 - 2025.8.24
   - 新增：“12.5 无线网络环境下使用 bhyve”
@@ -442,7 +446,7 @@
 - 2025.7.31
   - 新增：附录 2 UEFI/BIOS 注解（基于 AMI BIOS）
 - 2025.7.30
-  - 之前 KDE 在 Wayland 下，启动后桌面右键单击黑屏的问题已得到解决。参见 <https://old.reddit.com/r/freebsd/comments/1m9popo/kde_mini_review/n5dv1uk/> 和 <https://github.com/freebsd/freebsd-ports/pull/431>。目前已安装的只需要 `make reinstall` Port `graphics/qt6-wayland` 和 `/x11/plasma6-layer-shell-qt` 即可。或者等几天通过 `pkg upgrade`、安装的也应该不会有黑屏问题了。
+  - 之前 KDE 在 Wayland 下，启动后桌面右键单击黑屏的问题已得到解决。参见 <https://old.reddit.com/r/freebsd/comments/1m9popo/kde_mini_review/n5dv1uk/> 和 <https://github.com/freebsd/freebsd-ports/pull/431>。目前已安装的只需要 `make reinstall` Port `graphics/qt6-wayland` 和 `/x11/plasma6-layer-shell-qt` 即可。或者等几天通过 `pkg upgrade`、安装后也应该不会有黑屏问题了。
 - 2025.7.23
   - 恢复书名《FreeBSD 从入门到跑路》
 - 2025.7.7
@@ -605,7 +609,7 @@
   - 测试、改写“第 2.8 节 手动安装双系统（后安装 FreeBSD）”
   - NetBSD 10.1 在 VMware 虚拟机中无论 UEFI 与否，进入 kde 4  都会黑屏。
 - 2025.4.9
-  - 使用 <https://gist.github.com/ykla/adf011fea43f5f4b91aa6f065ac09da2> 对全书过长（> 30 行）的代码块进行整理。
+  - 使用 <https://gist.github.com/ykla/adf011fea43f5f4b91aa6f065ac09da2> 对全书过长（> 30 行）的代码块整理。
   - 孤行控制，删除冗余。
   - 从 1238 页到 1209 页，减少了 2.34% 的无效页面。
 - 2025.4.8
@@ -678,10 +682,10 @@
   - “第 3.6 节 通过 DVD 安装软件”更新至 14.2。注意，使用 `bsdinstall` 通过 DVD 安装软件的方法测试失败！
   - 初步重写“第 22.0 节 如何订阅 FreeBSD 的邮件列表”
   - 调整全书章节排序、重命名全书各章节标题以符合实际内容
-  - 删除“第 2.8 节 虚拟机预安装镜像（本书自制）”，过期了
+  - 删除“第 2.8 节 虚拟机预安装镜像（本书自制）”，已过期
   - 压缩“第 25 章 TwinCAT/BSD”
   - 删除献词、后记，无实质性内容
-  - 删除“第 24.4 节 禁用 Sendmail”，过期了
+  - 删除“第 24.4 节 禁用 Sendmail”，已过期
   - 删除“第 5.8 节 Wine”，无实质性内容
   - “第 6.6 节 Ext 2/3/4 等文件系统”已初步重写，仍待测试
   - 删除“第 9.1 节 jail 与 docker 的比较”，无实质性内容
@@ -710,7 +714,7 @@
   - “第 23.4 节 引导界面”新增“屏幕保护”
   - 为 1-5 章的大部分命令补充了英文原名说明解释。
 - 2025.3.19
-  - “第 11.7 节 命令行基础”新增“thefuck：自动纠正错误拼写的命令”，但要注意，有权限的开发者似乎已经跑路了；
+  - “第 11.7 节 命令行基础”新增“thefuck：自动纠正错误拼写的命令”，但要注意，有权限的开发者似乎已经不再维护；
   - “第 11.7 节 命令行基础”新增命令行基础命令
   - 初步重写“第 8.4 节 用户权限”
 - 2025.3.18
@@ -883,7 +887,7 @@
   - “第 1.1 节 UNIX、Unix-like、Linux 和 FreeBSD 简介”：补充“macOS/iOS 等与 BSD 的关系”
 - 2024.11.7
   - “第 6.4 节 NTFS 的挂载”：新建“格式化”、挂载部分。
-  - 针对“[Add new category fs for file systems](https://github.com/freebsd/freebsd-ports/pull/302)” 进行修改
+  - 针对“[Add new category fs for file systems](https://github.com/freebsd/freebsd-ports/pull/302)” 修改
 - 2024.11.2
   - “第 19.2 节 Linux 败局与 FreeBSD 败局” 补充思考题
   - 新建“第 19.3 节 驳《还有人记得 Linux 之前，那个理想又骄傲的 BSD 吗？》”
@@ -1093,7 +1097,7 @@
   - 增补全书兼容层相关章节
 - 2023.8.18
   - “第 30.1 节 Linux 兼容层实现”增补“题外话——使用 Linux 兼容层为什么不是苦难哲学？”
-  - 对来源不明的章节进行版权标注或警告
+  - 对来源不明的章节标注版权或发出警告
 - 2023.8.17
   - 新增“第 0.9 节 谁在使用 FreeBSD”
   - 新增“第 0.10 节 FreeBSD 中文社区文章翻译表”
@@ -1417,7 +1421,7 @@
 
 ## 2021 年第二季度
 
-《FreeBSD 从入门到跑路》项目在 [clean-master/freebsdcn](https://github.com/clean-master/freebsdcn) 进行更新。
+《FreeBSD 从入门到跑路》项目在 [clean-master/freebsdcn](https://github.com/clean-master/freebsdcn) 更新。
 
 ## 2021 年第一季度
 

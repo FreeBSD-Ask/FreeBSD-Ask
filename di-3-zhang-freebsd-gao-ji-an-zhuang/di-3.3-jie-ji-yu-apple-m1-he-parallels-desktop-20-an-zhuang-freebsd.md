@@ -1,10 +1,10 @@
 # 3.3 基于 Apple M1 和 Parallels Desktop 20 安装 FreeBSD
 
-基于 macOS 14.7 与 Parallels Desktop 20.1.3 环境，FreeBSD 15.0-CURRENT 的图形界面、键盘和鼠标均可正常运作。因补丁 D42158 未合入 FreeBSD 14，本节仅支持 15 及以上版本。
+基于 macOS 14.7 与 Parallels Desktop 20.1.3 环境，FreeBSD 15.0 的图形界面、键盘和鼠标均可正常运作。因补丁 D42158 未合入 FreeBSD 14，本节仅支持 15 及以上版本。
 
 > **注意**
 >
-> 由于补丁 FreeBSD Project. acpi_ged: Handle events directly[EB/OL]. [2026-03-26]. <https://reviews.freebsd.org/D42158>. 未合入 FreeBSD 14，版本 14 会在安装界面报错（参见 FreeBSD Forums. Virtualizing FreeBSD 14 CURRENT on macOS M2 via Parallels 19[EB/OL]. [2026-03-26]. <https://forums.freebsd.org/threads/virtualizing-freebsd-14-current-on-macos-m2-via-parallels-19.93266/>），因此仅支持安装 15 及以上版本。
+> 由于补丁（FreeBSD Project. acpi_ged: Handle events directly[EB/OL]. [2026-03-26]. <https://reviews.freebsd.org/D42158>）未合入 FreeBSD 14，版本 14 会在安装界面报错（参见 FreeBSD Forums. Virtualizing FreeBSD 14 CURRENT on macOS M2 via Parallels 19[EB/OL]. [2026-03-26]. <https://forums.freebsd.org/threads/virtualizing-freebsd-14-current-on-macos-m2-via-parallels-19.93266/>），因此仅支持安装 15 及以上版本。
 
 ## 安装
 
@@ -42,7 +42,7 @@
 
 > **技巧**
 >
-> Parallels Desktop 20 的默认设置通常已足够，且默认使用 UEFI 引导，通常无需调整硬件配置。
+> Parallels Desktop 20 的默认设置通常已足够，且默认使用 UEFI 引导，无需调整硬件配置。
 
 ![Parallels Desktop 20 安装 FreeBSD 15.0](../.gitbook/assets/parallels-8.png)
 
@@ -54,7 +54,7 @@
 
 ![Parallels Desktop 20 安装 FreeBSD 15.0](../.gitbook/assets/parallels-10.png)
 
-手动安装桌面环境后，桌面正常运行。
+手动安装桌面环境后，桌面环境即可正常运行。
 
 ## 鼠标无法移动
 
@@ -85,7 +85,7 @@ ums_load="YES"
 
 > **注意**
 >
-> 若通过 Ports 编译安装，需确保当前系统的源代码位于 **/usr/src** 目录下。
+> 若通过 Ports 编译安装，需确保系统中已有源代码在 **/usr/src** 目录中。
 
 ### 参考文献
 

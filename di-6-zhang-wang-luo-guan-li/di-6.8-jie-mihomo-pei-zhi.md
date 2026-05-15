@@ -134,13 +134,13 @@ service mihomo stop
 service mihomo status
 ```
 
-- 指定订阅链接地址（示例地址仅作演示之用，需要替换为有效链接）：
+- 指定订阅链接地址（示例地址仅作演示之用，需替换为有效链接）：
 
 ```sh
 sysrc mihomo_config="https://xxxx.yyy"
 ```
 
-- GeoIP 数据根据 IP 地址的地理归属进行流量分流或规则匹配：
+- GeoIP 数据根据 IP 地址的地理归属实现流量分流或规则匹配：
 
 ```sh
 sysrc mihomo_geoip="https://ghfast.top/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip.dat" # 可选，但建议使用
@@ -184,7 +184,7 @@ sysrc mihomo_datadir="/var/run/mihomo"
 service mihomo init
 ```
 
-- 更新订阅配置。执行 `start` 前先行更新，以确保配置文件为最新版本：
+- 更新订阅配置。执行 `start` 前先行更新，确保配置文件为最新版本：
 
 ```sh
 service mihomo reconfig
@@ -214,9 +214,9 @@ mihomo_enable="YES" # 开机启用/服务项
 
 - 如何实现 TUN 虚拟网卡代理？TUN 模式可实现更底层的网络流量拦截。
 
-- 如何根据订阅链接进行节点测速？
+- 如何根据订阅链接测试节点速度？
 
-- 如何指定订阅链接中代理组的特定节点（例如仅使用位于美国的某个代理节点）？此涉及代理节点的精细化选择。
+- 如何指定订阅链接中代理组的特定节点（例如仅使用位于美国的某个代理节点）？这涉及代理节点的精细化选择。
 
 ## Clash for FreeBSD
 

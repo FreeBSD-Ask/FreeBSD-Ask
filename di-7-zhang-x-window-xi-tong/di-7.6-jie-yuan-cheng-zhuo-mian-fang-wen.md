@@ -1,6 +1,6 @@
 # 7.6 远程桌面
 
-远程桌面访问技术可实现通过网络从一台设备远程控制另一台设备的桌面环境。远程桌面协议主要分为两类：基于帧缓冲区的协议（如 VNC，定义于 RFC 6143）和基于指令流的协议（如 RDP，定义于 ITU-T T.128）。本节涵盖两种协议在 FreeBSD 下的配置。
+远程桌面访问技术可通过网络从一台设备远程控制另一台设备的桌面环境。远程桌面协议主要分为两类：基于帧缓冲区的协议（如 VNC，定义于 RFC 6143）和基于指令流的协议（如 RDP，定义于 ITU-T T.128）。本节涵盖两种协议在 FreeBSD 下的配置。
 
 ## 目录结构
 
@@ -173,7 +173,7 @@ Starting applications specified in /home/ykla/.vnc/xstartup
 Log file is /home/ykla/.vnc/ykla:1.log
 ```
 
-其中 `:1` 表示 `DISPLAY=:1`，即指定桌面显示的通信端口为 `1`，对应 VNC 服务端口 `5901`。桌面显示通信端口从 0 开始，但该端口已被当前桌面占用（除非是镜像 VNC），实际执行时 VNC 服务从 `5901` 开始。连接时须指定端口 `5901`。
+其中 `:1` 表示 `DISPLAY=:1`，即指定桌面显示的通信端口为 `1`，对应 VNC 服务端口 `5901`。桌面显示通信端口从 0 开始，但该端口已由当前桌面占用（除非是镜像 VNC），实际执行时 VNC 服务从 `5901` 开始。连接时须指定端口 `5901`。
 
 测试：
 
@@ -264,7 +264,7 @@ your environment.
 
 ### 配置 XRDP
 
-配置守护进程
+配置守护进程：
 
 ```sh
 # service xrdp enable          # 设置 xrdp 服务开机自启动
@@ -376,7 +376,7 @@ root     syslogd     1021 7   udp4   *:514                 *:*
 
 该软件支持 Android 平台 RDP 连接。
 
-将左上鼠标操作改为触摸操作。默认的鼠标操作不够便捷，也可以选择通过 OTG 连接鼠标和键盘来操控。
+将左上鼠标操作改为触摸操作。默认的鼠标操作不够便捷，也可以选择通过 OTG 连接鼠标和键盘操控。
 
 ![Remote Desktop FreeBSD](../.gitbook/assets/windows-rdp-1.png)
 
@@ -477,7 +477,7 @@ Password: # 输入密码，密码不会显示出来 ***。
 
 ### rdesktop（不支持 NLA）
 
-`net/xrdesktop2` 是 rdesktop 的图形化前端，测试中在打开键盘设置时出现无响应的情况。
+`net/xrdesktop2` 是 rdesktop 的图形化前端，测试中在打开键盘设置时出现无响应。
 
 ---
 
@@ -569,7 +569,7 @@ Do you trust this certificate (yes/no)? # 输入 yes，按回车键
 
 ## AnyDesk
 
-使用 AnyDesk 可进行远程访问，FreeBSD 上仅支持 amd64（x86_64）架构：
+使用 AnyDesk 可远程访问，FreeBSD 上仅支持 amd64（x86_64）架构：
 
 由于版权原因（专有软件未经许可禁止分发），必须由用户使用 Ports 自行构建安装：
 

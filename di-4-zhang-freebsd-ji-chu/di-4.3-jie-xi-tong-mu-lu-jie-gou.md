@@ -92,7 +92,7 @@ FreeBSD 的目录结构设计遵循以下原则：
 │   ├── inetd.conf 配置 BSD inetd，参见 inetd(8)
 │   ├── jail.conf.d 用于 jail 配置的模块化管理，默认为空（jail.conf(5)）
 │   ├── kyua Kyua 测试框架的全局配置文件（kyua(1)、kyua.conf(5)）
-│   ├── localtime 本地时区文件，参见 ctime(3)。在测试系统中，localtime 被链接到了 /usr/share/zoneinfo/Asia/Shanghai
+│   ├── localtime 本地时区文件，参见 ctime(3)。在测试系统中，localtime 链接至 /usr/share/zoneinfo/Asia/Shanghai
 │   ├── login.conf 登录类功能数据库，参见 login.conf(5)
 │   ├── machine-id 系统的 UUID，供 D-Bus 使用
 │   ├── mail Sendmail 相关文件，参见 sendmail(8)
@@ -328,7 +328,7 @@ FreeBSD 中的大多数设备通过称为设备节点的特殊文件访问，这
 
 在 FreeBSD 中，设备节点由 devfs(5) 文件系统自动管理。devfs 是一个虚拟文件系统，在系统启动时由内核自动挂载到 **/dev**，并根据当前系统中存在的硬件设备动态创建和删除设备节点。这与传统 UNIX 系统需要手动使用 `mknod` 命令创建设备节点的做法不同。devfs 确保了 **/dev** 目录中只包含当前系统实际存在的设备节点。
 
-传统 UNIX 中，设备节点分为字符设备（character device）和块设备（block device）两种类型。字符设备以字节流方式访问数据，如终端（**/dev/ttyv0**）和串口；块设备以固定大小的块为单位访问数据，通过操作系统的缓冲缓存访问。然而，在现代 FreeBSD 中，块设备已被移除，所有设备节点均为字符设备。
+传统 UNIX 中，设备节点分为字符设备（character device）和块设备（block device）两种类型。字符设备以字节流方式访问数据，如终端（**/dev/ttyv0**）和串口；块设备以固定大小的块为单位访问数据，通过操作系统的缓冲缓存访问。然而，在现代 FreeBSD 中，块设备已移除，所有设备节点均为字符设备。
 
 在 `ls -l /dev/` 的输出中，所有设备均显示为 `c`（字符设备），不会出现 `b`（块设备）标识。
 
@@ -340,7 +340,7 @@ crw-r-----  1 root operator 0x69 May 10 09:49 ada0
 
 设备命名遵循一定的约定：SATA 硬盘以 `ada` 开头（如 `ada0`、`ada1`），SCSI 硬盘和 USB 存储设备以 `da` 开头（如 `da0`），NVMe 存储以 `nda`（通过 CAM 框架，默认）或 `nvd`（非 CAM）开头，CD-ROM 驱动器以 `cd` 开头。编号从 0 开始。GPT 分区在设备名后附加 `p` 加分区号（如 `ada0p1`），MBR 切片附加 `s` 加切片号（如 `ada0s1`）。
 
-如下行所述：
+如下所示：
 
 ```sh
 crw-r-----  1 root operator 0x69 May 10 09:49 ada0	# SATA 硬盘

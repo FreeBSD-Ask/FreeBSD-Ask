@@ -45,13 +45,13 @@ exec icewm-session
 
 ## 启动项
 
-设置 D-Bus 服务开机自启动（作为依赖自动安装）：
+设置 D-Bus 服务开机自启（作为依赖自动安装）：
 
 ```sh
 # service dbus enable
 ```
 
-设置 SLiM 显示管理器开机自启动：
+设置 SLiM 显示管理器开机自启：
 
 ```sh
 # service slim enable
@@ -65,13 +65,13 @@ exec icewm-session
 proc           /proc       procfs  rw  0   0
 ```
 
-该行将 procfs 文件系统以读写模式挂载到 **/proc**。
+将 procfs 文件系统以读写模式挂载到 **/proc**。
 
 ## 配置中文环境
 
 编辑 **/etc/login.conf** 文件，找到 `default:\` 部分，将 `:lang=C.UTF-8` 修改为 `:lang=zh_CN.UTF-8`。
 
-还需要根据 `login.conf` 文件重新生成能力数据库，以使配置生效：
+根据 `login.conf` 文件重新生成能力数据库，使配置生效：
 
 ```sh
 # cap_mkdb /etc/login.conf

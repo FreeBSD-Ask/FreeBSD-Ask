@@ -2,17 +2,17 @@
 
 ## 概述
 
-Wayland 是取代 X11 的显示服务器协议，KDE 6 自 Plasma 5.27 起逐步完善了 Wayland 支持。
+Wayland 是取代 X11 的显示服务器协议，KDE Plasma 自 5.27 起逐步完善了 Wayland 支持，KDE 6 在此基础上进一步增强。
 
-由于 FreeBSD DRM 驱动移植仅覆盖了 Intel、AMD 和 NVIDIA 等 GPU，vmwgfx 和 virtio 等虚拟化 GPU 驱动尚不支持（参见：freebsd/drm-kmod. Request to restore support for vboxvideo and vmwgfx DRM drivers #356[EB/OL]. [2026-04-04]. <https://github.com/freebsd/drm-kmod/issues/356>），因此在 VMware、VirtualBox 或基于 Virtio 的虚拟机中无法复现本节内容，需在真实物理机上操作。
+由于 FreeBSD DRM 驱动移植仅覆盖了 Intel、AMD 和 NVIDIA 等 GPU，vmwgfx 和 virtio 等虚拟化 GPU 驱动尚不支持（参见：freebsd/drm-kmod. Request to restore support for vboxvideo and vmwgfx DRM drivers #356[EB/OL]. [2026-04-04]. <https://github.com/freebsd/drm-kmod/issues/356>）。因此，VMware、VirtualBox 或基于 Virtio 的虚拟机中无法复现本节内容，需在真实物理机上操作。
 
 NVIDIA 显卡尚未测试。本节使用 Intel 第 12 代处理器（i7-1260P）的集成显卡测试。
 
-参照其他章节内容安装 DRM、KDE 6、Fcitx 5、Firefox 浏览器等软件包，**并配置 DRM 显卡驱动。** 其余软件包暂不配置，仅安装即可。确保将用户加入 video 组。
+参照前述章节安装 DRM、KDE 6、Fcitx 5、Firefox 浏览器等软件包，**并配置 DRM 显卡驱动。** 其余软件包暂不配置，仅安装即可。确保将用户加入 video 组。
 
 ## 用户权限配置：加入 video 组
 
-将指定用户加入 video 组以获得调用显卡设备的权限：
+将指定用户加入 video 组，获取调用显卡设备的权限：
 
 ```sh
 # pw groupmod video -m 实际用户名
@@ -22,7 +22,7 @@ NVIDIA 显卡尚未测试。本节使用 Intel 第 12 代处理器（i7-1260P）
 
 ### 安装 seatd
 
-seatd 是一个 seat 管理守护进程，用于在非 systemd 环境下管理 Wayland 会话和设备访问。
+seatd 是一个 seat 管理守护进程，在非 systemd 环境下管理 Wayland 会话和设备访问。
 
 - 使用 pkg 安装：
 
@@ -114,7 +114,7 @@ $ mkdir -p ~/.config/autostart/ # 创建自启动目录
 $ cp /usr/local/share/applications/org.fcitx.Fcitx5.desktop ~/.config/autostart/ # 系统启动时自动启动 Fcitx 5
 ```
 
-初次进入 KDE Wayland 桌面时，KDE 会在右下角提示需在设置的虚拟键盘中配置才能启用输入法。请留意该提示。如果未进行此设置，将无法切换输入法或输入中文。
+初次进入 KDE Wayland 桌面时，KDE 会在右下角提示需在设置的虚拟键盘中配置才能启用输入法。请留意该提示。如未完成此设置，将无法切换输入法或输入中文。
 
 ![KDE Wayland 设置](../.gitbook/assets/kde-wayland-fcitx.png)
 
@@ -126,7 +126,7 @@ $ cp /usr/local/share/applications/org.fcitx.Fcitx5.desktop ~/.config/autostart/
 
 ![Fcitx 5 Wayland 启动器（实验性）](../.gitbook/assets/kde-wayland5.png)
 
-经测试，在 Konsole 终端、Firefox 和 Chromium（使用 `chrome --no-sandbox` 启动）中均可输入中文。
+在 Konsole 终端、Firefox 和 Chromium（使用 `chrome --no-sandbox` 启动）中均可输入中文。
 
 ![Wayland Fcitx 5 演示](../.gitbook/assets/kde-wayland4.png)
 
