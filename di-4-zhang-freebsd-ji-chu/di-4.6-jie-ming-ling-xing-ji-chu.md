@@ -400,7 +400,7 @@ FreeBSD ls 与 GNU ls 比较：
 
 `touch` 的字面含义为“触碰”，表示轻微变动文件时间戳。
 
-FreeBSD 的 `touch` 与 POSIX 标准兼容，来源于 4.3BSD。
+FreeBSD 的 `touch` 与 POSIX 标准兼容，最早出现于 Version 7 AT&T UNIX。
 
 创建一个文件，命名为 `test`：
 
