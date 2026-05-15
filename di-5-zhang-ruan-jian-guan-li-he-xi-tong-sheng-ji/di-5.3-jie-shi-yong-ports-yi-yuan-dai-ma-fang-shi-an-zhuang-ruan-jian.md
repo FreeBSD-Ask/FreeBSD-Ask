@@ -333,7 +333,7 @@ fatal: unable to access 'https://mirrors.ustc.edu.cn/freebsd-ports/ports.git/': 
 Fri May 31 12:09:26 UTC 2024
 ```
 
-时间错误。使用 `ntpd -q -g -p pool.ntp.org` 命令同步系统时间：
+时间错误。使用 `ntpd -q -g pool.ntp.org` 命令同步系统时间：
 
 检查时间：
 
