@@ -74,7 +74,7 @@ For more information on available commands and options see 'pkg help'.
 > 如果提示 `00206176BC680000:error:0A000086:SSL routines:tls_post_process_server_certificate:certificate verify failed:/usr/src/crypto/openssl/ssl/statem/statem_clnt.c:1890:`（SSL 证书验证失败），请先校准时间。
 
 > ```sh
-> # ntpd -q -g -p pool.ntp.org # 使用 pool.ntp.org 同步系统时间
+> # ntpd -q -g pool.ntp.org # 使用 pool.ntp.org 同步系统时间
 > ```
 >
 >> **思考题**
