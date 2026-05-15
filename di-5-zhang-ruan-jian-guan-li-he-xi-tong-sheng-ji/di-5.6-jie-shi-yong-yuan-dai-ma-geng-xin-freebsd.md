@@ -167,7 +167,7 @@ Select: (p) postpone, (df) diff-full, (e) edit,
 可能是系统时间不正确导致的，使用 `pool.ntp.org` 服务器同步系统时间。
 
 ```sh
-# ntpd -q -g -p pool.ntp.org # 当时间相差较大时必须使用该命令
+# ntpd -q -g pool.ntp.org # 当时间相差较大时必须使用该命令
 ```
 
 ## 参考文献
