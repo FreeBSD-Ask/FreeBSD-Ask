@@ -305,7 +305,7 @@ Intel 网卡也是常见的网络适配器类型，FreeBSD 对其支持良好。
 
 参考文献：
 
-- FreeBSD Project. igc: Intel Ethernet Controller I225 driver[EB/OL]. [2026-03-25]. <https://man.freebsd.org/cgi/man.cgi?query=igc>. 手册页，详述了 Intel i225 网卡驱动的使用方法。
+- FreeBSD Project. igc: Intel Ethernet Controller I225 driver[EB/OL]. [2026-03-25]. <https://man.freebsd.org/cgi/man.cgi?query=igc&sektion=4>. 手册页，详述了 Intel i225 网卡驱动的使用方法。
 
 #### 千兆和百兆及其他以太网卡
 
@@ -313,7 +313,7 @@ Intel 网卡也是常见的网络适配器类型，FreeBSD 对其支持良好。
 
 支持列表及更多参见：
 
-- FreeBSD Project. em, lem, igb: Intel(R) PRO/1000 Gigabit Ethernet adapter driver[EB/OL]. [2026-03-25]. <https://man.freebsd.org/cgi/man.cgi?query=em>. 手册页，含 Intel PRO/1000 系列千兆网卡驱动说明。
+- FreeBSD Project. em, lem, igb: Intel(R) PRO/1000 Gigabit Ethernet adapter driver[EB/OL]. [2026-03-25]. <https://man.freebsd.org/cgi/man.cgi?query=em&sektion=4>. 手册页，含 Intel PRO/1000 系列千兆网卡驱动说明。
 
 ## 附录：USB 网卡推荐
 
