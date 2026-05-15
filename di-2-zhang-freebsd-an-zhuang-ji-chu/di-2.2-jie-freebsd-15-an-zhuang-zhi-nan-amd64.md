@@ -798,7 +798,7 @@ Add another user? (yes/no) [no]: # 是否继续添加其他用户
 
 ### 参考文献
 
-- FreeBSD Project. man adduser(8)[EB/OL]. [2026-03-25]. <https://man.freebsd.org/cgi/man.cgi?adduser(8)>. 该手册页说明 FreeBSD 用户添加命令使用方法。
+- FreeBSD Project. man adduser(8)[EB/OL]. [2026-03-25]. <https://man.freebsd.org/cgi/man.cgi?query=adduser&sektion=8>. 该手册页说明 FreeBSD 用户添加命令使用方法。
 
 ## 完成安装
 
