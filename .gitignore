@@ -228,3 +228,4 @@ $RECYCLE.BIN/
 /.trae
 *.ps1
 *.gz
+/.freshports_cache
