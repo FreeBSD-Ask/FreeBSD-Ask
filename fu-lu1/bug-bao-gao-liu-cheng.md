@@ -99,7 +99,7 @@ FreeBSD 开发人员有限，缺陷报告可能长时间无人处理。报告接
 
 ## 参考文献
 
-- FreeBSD Project. Writing FreeBSD Problem Reports[EB/OL]. [2026-04-17]. <https://wiki.freebsd.org/ProblemReports>. FreeBSD 官方问题报告撰写指南，详细说明了 Bug 报告的提交流程与字段含义。
+- FreeBSD Project. Writing FreeBSD Problem Reports[EB/OL]. [2026-04-17]. <https://docs.freebsd.org/en/articles/problem-reports/>. FreeBSD 官方问题报告撰写指南，详细说明了 Bug 报告的提交流程与字段含义。
 
 ## 课后习题
 
