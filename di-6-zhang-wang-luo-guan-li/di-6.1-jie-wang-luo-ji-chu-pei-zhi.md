@@ -321,7 +321,7 @@ search 和 domain 选项只能使用其中一个。使用 DHCP 时，dhclient(8)
 
 ### 参考文献
 
-- FreeBSD Project. resolvconf[EB/OL]. [2026-03-26]. <https://man.freebsd.org/cgi/man.cgi?query=resolvconf>. man 手册，提供 resolvconf 工具的完整技术文档，为 DNS 配置管理提供重要参考。
+- FreeBSD Project. resolvconf[EB/OL]. [2026-03-26]. <https://man.freebsd.org/cgi/man.cgi?query=resolvconf&sektion=8>. man 手册，提供 resolvconf 工具的完整技术文档，为 DNS 配置管理提供重要参考。
 - FreeBSD Forums. 8.8.8.8 or 1.1.1.1 if set in etc resolv conf doesn't stay as an entry in the file after a network restart[EB/OL]. [2026-03-26]. <https://forums.freebsd.org/threads/8-8-8-8-or-1-1-1-1-if-set-in-etc-resolv-conf-doesnt-stay-as-an-entry-in-the-file-after-a-network-restart.85951/>. 实际案例分析，提供防止覆写 DNS 配置的解决方案。
 
 ## 网络故障排除
@@ -379,10 +379,10 @@ ABC_XYZ="ddd"
 如需实时监控网络接口的流量统计信息，可使用 `systat` 工具的网络接口视图。该命令以指定的刷新间隔显示各网络接口的接收和发送流量数据：
 
 ```sh
-# systat -if 2
+# systat -ifstat 2
 ```
 
-其中 `-if` 参数指定显示网络接口信息，数字 2 表示刷新间隔为 2 秒。
+其中 `-ifstat` 参数指定显示网络接口信息，数字 2 表示刷新间隔为 2 秒。
 
 ## 查看 FreeBSD 下载流量（bwm-ng）
 

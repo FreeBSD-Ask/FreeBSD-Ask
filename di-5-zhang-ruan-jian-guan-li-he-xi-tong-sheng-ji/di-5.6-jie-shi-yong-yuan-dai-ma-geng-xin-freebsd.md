@@ -173,7 +173,7 @@ Select: (p) postpone, (df) diff-full, (e) edit,
 ## 参考文献
 
 - FreeBSD 中文社区. FreeBSD 手册[EB/OL]. [2026-03-25]. <https://handbook.bsdcn.org/>. FreeBSD 系统管理的完整中文参考指南。
-- FreeBSD Project. etcupdate -- manage updates to system files not updated by installworld[EB/OL]. [2026-03-25]. <https://man.freebsd.org/cgi/man.cgi?etcupdate(8)>. 系统配置文件更新工具的官方技术文档。
+- FreeBSD Project. etcupdate -- manage updates to system files not updated by installworld[EB/OL]. [2026-03-25]. <https://man.freebsd.org/cgi/man.cgi?query=etcupdate&sektion=8>. 系统配置文件更新工具的官方技术文档。
 
 ## 课后习题
 

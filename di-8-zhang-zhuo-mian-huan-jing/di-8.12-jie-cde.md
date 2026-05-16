@@ -103,7 +103,7 @@ To start the Common Desktop Enviroment Login Manager:
 - 为当前用户创建 Xsession 的符号链接，用于启动桌面会话：
 
 ```sh
-# ln -s /usr/local/dt/bin/Xsession ~/.xinitrc
+$ ln -s /usr/local/dt/bin/Xsession ~/.xinitrc
 ```
 
 - 配置 dtspcd 服务通过 TCP 启动，将以下内容添加到 **/etc/inetd.conf** 文件：
