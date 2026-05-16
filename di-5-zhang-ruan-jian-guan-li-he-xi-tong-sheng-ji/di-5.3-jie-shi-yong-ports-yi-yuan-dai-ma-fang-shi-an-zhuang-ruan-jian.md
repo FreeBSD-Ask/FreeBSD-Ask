@@ -376,7 +376,6 @@ screen-4.9.0_6:
 root@ykla:/usr/ports/sysutils/htop # make all-depends-list
 /usr/ports/ports-mgmt/pkg
 /usr/ports/devel/pkgconf
-/usr/ports/devel/kyua
 ……省略一部分……
 ```
 
