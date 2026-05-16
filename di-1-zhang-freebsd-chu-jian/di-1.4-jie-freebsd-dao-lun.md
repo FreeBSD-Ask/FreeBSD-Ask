@@ -516,7 +516,7 @@ pkg 首次出现在 9.1-RELEASE 中。在 10.0-RELEASE 中，pkg 成为默认的
 
 - 2021 年 4 月 6 日从 Subversion 迁移到 Git
 
-至此，FreeBSD 项目完成了从 Subversion 到 Git 的迁移。此过程始于 2019 年 5 月的 DevSummit，当时成立了一个 Git 工作小组。
+FreeBSD 项目从 Subversion 到 Git 的迁移始于 2019 年 5 月的 DevSummit，当时成立了一个 Git 工作小组。
 
 - 2021 年 4 月 13 日由 OpenSolaris ZFS 切换到 OpenZFS
 
