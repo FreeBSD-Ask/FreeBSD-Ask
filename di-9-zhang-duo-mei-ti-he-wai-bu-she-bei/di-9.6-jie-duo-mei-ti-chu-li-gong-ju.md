@@ -104,27 +104,6 @@ Inkscape 是矢量制图程序，以下演示基本抠图操作。
 
 ### 音乐
 
-#### MIDI 编曲软件 `LMMS`
-
-LMMS 是一款数字音频工作站软件，用于音乐创作和 MIDI 编曲。LMMS 早期全称为 Linux MultiMedia Studio，后因跨平台发展而去除了全称，现仅以缩写 LMMS 作为项目名称。
-
-使用 pkg 安装：
-
-```sh
-# pkg install lmms
-```
-
-或使用 Ports 安装：
-
-```sh
-# cd /usr/ports/audio/lmms/
-# make install clean
-```
-
-软件支持中文，设置后需要重启才能生效。
-
-![LMMS 界面](../.gitbook/assets/lmms.png)
-
 #### 制谱软件 `MuseScore`
 
 MuseScore 是一款开源的音乐制谱软件，支持乐谱创作、编辑和播放。
