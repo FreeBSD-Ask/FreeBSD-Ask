@@ -51,7 +51,7 @@ FreeBSD-STABLE 是用于发布主要版本的开发分支。
 
 CURRENT 分支中的代码在经过充分测试后（需满足 MFC 最短三天的要求，MFC 指 `Merge From CURRENT`，类似于 `backporting` 即向后移植）会推送到 STABLE 分支，但这并不保证两个分支都没有重大缺陷。尽管 FreeBSD-STABLE 分支应该始终能够编译并运行，但这并无保证。
 
-STABLE 仍然是一个开发分支，任何时候，FreeBSD-STABLE 的源代码可能都不适合普遍使用。它仅为另一工程开发轨道，并非面向终端用户。
+STABLE 仍然是一个开发分支，任何时候，FreeBSD-STABLE 的源代码可能都不适合普遍使用。它只是另一条工程开发轨道，并非面向终端用户。
 
 由于更多用户运行 FreeBSD-STABLE 而非 FreeBSD-CURRENT，某些在 FreeBSD-CURRENT 中未发现的缺陷和极端情况会在 FreeBSD-STABLE 中暴露。因此，不能盲目地跟踪 FreeBSD-STABLE。
 
@@ -96,7 +96,7 @@ FreeBSD 的开发模型含存储库、基金会、社区、提交者和核心小
 
 ## 什么是 FreeBSD？
 
-FreeBSD 不是 Linux，亦非 UNIX 的克隆。FreeBSD 是一款自由软件，源代码公开且可自由使用、修改和分发。
+FreeBSD 不是 Linux，也不是 UNIX 的克隆。FreeBSD 是一款自由软件，源代码公开且可自由使用、修改和分发。
 
 ![什么是 FreeBSD？](../.gitbook/assets/freebsd-not-linux.png)
 
