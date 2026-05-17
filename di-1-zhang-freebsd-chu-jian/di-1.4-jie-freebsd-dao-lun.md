@@ -32,13 +32,13 @@ FreeBSD-CURRENT 主要面向三个兴趣群体：
 
 - 想要关注 FreeBSD 状态，使用当前源代码作为参考，或偶尔发表评论或贡献代码的用户。
 
-FreeBSD-CURRENT 不应被视为提前获取新功能的捷径，因为预发布功能尚未经过充分测试，且很可能存在缺陷。它亦非获取缺陷修复的快速途径，因为任何提交同样有可能引入新缺陷，而非修复现有缺陷。FreeBSD-CURRENT 并未得到“正式支持”。
+FreeBSD-CURRENT 不应被视为提前获取新功能的捷径，因为预发布功能尚未经过充分测试，且很可能存在缺陷。它也不是获取缺陷修复的捷径，因为其他提交同样有可能引入新缺陷，而不是修复既有缺陷。FreeBSD-CURRENT 并未得到“正式支持”。
 
 使用 -CURRENT 的用户应跟踪 FreeBSD-CURRENT：
 
 1. 加入 [FreeBSD-CURRENT 邮件列表](https://lists.freebsd.org/subscription/freebsd-current) 和 [源代码仓库主分支提交信息列表](https://lists.freebsd.org/subscription/dev-commits-src-main)。这是 **必需** 的，以便了解人们对系统当前状态的评论，并接收有关 FreeBSD-CURRENT 当前状态的重要公告。[源代码仓库主分支提交信息列表](https://lists.freebsd.org/subscription/dev-commits-src-main) 会记录每个变更的提交日志条目，以及关于可能副作用的相关信息。
 
-   要加入这些列表，请访问 [FreeBSD 列表服务器](https://lists.freebsd.org/)，点击要订阅的列表，并按照说明进行操作。若要跟踪整个源代码树的变更，而不仅是 FreeBSD-CURRENT 的变更，订阅 [所有分支的源代码仓库提交信息列表](https://lists.freebsd.org/subscription/dev-commits-src-all)。
+   要加入这些列表，请访问 [FreeBSD 列表服务器](https://lists.freebsd.org/)，点击要订阅的列表，并按照说明进行操作。如果要跟踪整个源代码树的变更，而不仅是 FreeBSD-CURRENT 的变更，订阅 [所有分支的源代码仓库提交信息列表](https://lists.freebsd.org/subscription/dev-commits-src-all)。
 2. 与 FreeBSD-CURRENT 源代码同步。通常使用 `git` 从 FreeBSD Git 仓库的 `main` 分支检出 -CURRENT 代码。
 3. 由于仓库体积较大，有些用户选择仅同步他们感兴趣的部分源代码或他们正在贡献补丁的部分。但计划从源代码编译操作系统的用户必须下载 **所有** 的 FreeBSD-CURRENT，而不仅是选定的部分。请阅读 [FreeBSD-CURRENT 邮件列表](https://lists.freebsd.org/subscription/freebsd-current) 和 **/usr/src/UPDATING** 以保持更新，了解有时会成为必要的启动过程。
 4. 积极参与！建议 FreeBSD-CURRENT 用户提交增强功能或缺陷修复。附带代码的方案始终受到欢迎。
