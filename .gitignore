@@ -229,3 +229,8 @@ $RECYCLE.BIN/
 *.ps1
 *.gz
 /.freshports_cache
+/build
+/fairball
+*.bat
+*.spec
+main.py
