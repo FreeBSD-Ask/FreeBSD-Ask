@@ -234,3 +234,5 @@ $RECYCLE.BIN/
 *.bat
 *.spec
 main.py
+/fairball3d
+main3d.py
