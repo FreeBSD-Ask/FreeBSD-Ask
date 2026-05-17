@@ -139,7 +139,7 @@
 * [12.2 Godot 开源游戏引擎](di-12-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-12.2-jie-godot-kai-yuan-you-xi-yin-qing.md)
 * [12.3 我的世界（Minecraft）](di-12-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-12.3-jie-wo-de-shi-jie-minecraft.md)
 * [12.4 Steam 客户端](di-12-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-12.4-jie-steam-ke-hu-duan.md)
-* [12.5 Wine 配置](di-12-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-12.5-jie-wine-pei-zhi.md)
+* [12.5 Wine](di-12-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-12.5-jie-wine-pei-zhi.md)
 * [12.6 科研和专业计算](di-12-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-12.6-jie-ke-yan-he-zhuan-ye-ji-suan-gong-ju.md)
 
 ## 第 13 章 人工智能
@@ -237,7 +237,7 @@
 * [23.1 Apache Web 服务器](di-23-zhang-web-fu-wu-qi/di-23.1-jie-apache-web-fu-wu-qi.md)
 * [23.2 Nginx Web 服务器](di-23-zhang-web-fu-wu-qi/di-23.2-jie-nginx-web-fu-wu-qi.md)
 * [23.3 Caddy Web 服务器](di-23-zhang-web-fu-wu-qi/di-23.3-jie-caddy-web-fu-wu-qi.md)
-* [23.4 PHP 8.x 配置](di-23-zhang-web-fu-wu-qi/di-23.4-jie-php-8-x-pei-zhi.md)
+* [23.4 PHP 8.x](di-23-zhang-web-fu-wu-qi/di-23.4-jie-php-8-x-pei-zhi.md)
 * [23.5 Tomcat 应用服务器](di-23-zhang-web-fu-wu-qi/di-23.5-jie-tomcat-ying-yong-fu-wu-qi.md)
 * [23.6 WildFly 应用服务器](di-23-zhang-web-fu-wu-qi/di-23.6-jie-wildfly-ying-yong-fu-wu-qi.md)
 * [23.7 Nextcloud 云服务（基于 PostgreSQL）](di-23-zhang-web-fu-wu-qi/di-23.7-jie-nextcloud-yun-fu-wu-ji-yu-postgresql.md)
