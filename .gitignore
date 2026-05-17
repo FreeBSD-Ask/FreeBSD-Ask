@@ -236,3 +236,4 @@ $RECYCLE.BIN/
 main.py
 /fairball3d
 main3d.py
+/__pycache__
