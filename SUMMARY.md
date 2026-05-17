@@ -159,9 +159,10 @@
 * [14.8 OpenSSH](di-14-zhang-xi-tong-guan-li/di-14.8-jie-OpenSSH.md)
 * [14.9 设备资源提示](di-14-zhang-xi-tong-guan-li/di-14.9-jie-she-bei-zi-yuan-ti-shi-wen-jian-device-hints.md)
 * [14.10 Cron 和 Periodic](di-14-zhang-xi-tong-guan-li/di-14.10-jie-crontab-ji-ding-shi-ren-wu-wen-jian-periodic-conf.md)
-* [14.11 sysctl 工具](di-14-zhang-xi-tong-guan-li/di-14.11-jie-nei-he-zhuang-tai-mo-ren-pei-zhi-wen-jian-sysctl-conf.md)
-* [14.12 NTP 时间同步与时区](di-14-zhang-xi-tong-guan-li/di-14.12-jie-shi-jian-tong-bu-fu-wu.md)
-* [14.13 Live 镜像与系统恢复](di-14-zhang-xi-tong-guan-li/di-14.13-jie-live-jing-xiang-yu-xi-tong-hui-fu.md)
+* [14.11 系统日志管理](di-14-zhang-xi-tong-guan-li/di-14.11-jie-xi-tong-ri-zhi-guan-li.md)
+* [14.12 sysctl 工具](di-14-zhang-xi-tong-guan-li/di-14.12-jie-nei-he-zhuang-tai-mo-ren-pei-zhi-wen-jian-sysctl-conf.md)
+* [14.13 NTP 时间同步与时区](di-14-zhang-xi-tong-guan-li/di-14.13-jie-shi-jian-tong-bu-fu-wu.md)
+* [14.14 Live 镜像与系统恢复](di-14-zhang-xi-tong-guan-li/di-14.14-jie-live-jing-xiang-yu-xi-tong-hui-fu.md)
 
 ## 第 15 章 存储与文件系统管理
 
