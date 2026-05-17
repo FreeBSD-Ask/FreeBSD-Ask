@@ -76,7 +76,7 @@ Alternatively, if you want to use the Login Manager as well, create
 allowed_users=anybody
 # 如需启用图形显示管理器（Login Manager），请创建 Xwrapper.config 并添加 allowed_users=anybody。
 
-To start the Common Desktop Enviroment Login Manager:
+To start the Common Desktop Environment Login Manager:
 
 % /usr/local/dt/bin/dtlogin -daemon
 
