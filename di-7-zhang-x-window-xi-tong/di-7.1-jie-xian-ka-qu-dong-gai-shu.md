@@ -26,9 +26,9 @@ DRM 是 Linux 内核的子系统，负责与现代显卡的 GPU 交互。FreeBSD
 >
 > 这种移植并不覆盖 Linux 现有的全部 DRM GPU 驱动，目前仅包括 i915、amdgpu 和 radeon，vmwgfx、xe、virtio 等均未移植。这些未移植的 GPU 通常无法在 Wayland 上运行，只能使用 X11 显示协议。
 
-> **注意**
+> **技巧**
 >
-> DG2 Arc 显卡尚不受支持（截至 DRM 6.1 版本），相关技术细节可参见：Intel Arc A770: Kernel panic on kldload i915kms.ko #315[EB/OL]. [2026-03-26]. <https://github.com/freebsd/drm-kmod/issues/315>。可能需要等到 6.12 的移植才能提供支持。
+> 自 DRM 6.12 起，DG2 Arc 显卡可以正常工作，参见：<https://github.com/freebsd/drm-kmod/pull/427>.
 
 显卡支持情况：
 
