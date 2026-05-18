@@ -8,10 +8,10 @@
 
 ### 路由基础
 
-使用 netstat(1) 可查看 FreeBSD 系统的路由表：
+使用 netstat(1) 可查看 FreeBSD 系统的路由表。添加 `-n` 选项可避免反向 DNS 解析延迟，这在排查网络问题时尤为重要：
 
 ```sh
-$ netstat -r
+$ netstat -rn
 Routing tables
 
 Internet:	# IPv4
