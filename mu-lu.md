@@ -96,10 +96,9 @@
 * [8.6 LXQt](di-8-zhang-zhuo-mian-huan-jing/di-8.6-jie-lxqt.md)
 * [8.7 GNOME](di-8-zhang-zhuo-mian-huan-jing/di-8.7-jie-gnome.md)
 * [8.8 LXDE](di-8-zhang-zhuo-mian-huan-jing/di-8.8-jie-lxde.md)
-* [8.9 bspwm](di-8-zhang-zhuo-mian-huan-jing/di-8.9-jie-bspwm.md)
-* [8.10 IceWM](di-8-zhang-zhuo-mian-huan-jing/di-8.10-jie-icewm.md)
-* [8.11 Hyprland](di-8-zhang-zhuo-mian-huan-jing/di-8.11-jie-hyprland.md)
-* [8.12 CDE](di-8-zhang-zhuo-mian-huan-jing/di-8.12-jie-cde.md)
+* [8.9 IceWM](di-8-zhang-zhuo-mian-huan-jing/di-8.9-jie-icewm.md)
+* [8.10 Hyprland](di-8-zhang-zhuo-mian-huan-jing/di-8.10-jie-hyprland.md)
+* [8.11 CDE](di-8-zhang-zhuo-mian-huan-jing/di-8.11-jie-cde.md)
 
 ## 第 9 章 多媒体和外部设备
 

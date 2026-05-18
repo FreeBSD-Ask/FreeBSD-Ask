@@ -1,4 +1,4 @@
-# 8.10 IceWM
+# 8.9 IceWM
 
 ## IceWM 窗口管理器概述
 
