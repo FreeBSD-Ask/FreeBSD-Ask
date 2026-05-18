@@ -96,6 +96,8 @@ usr/lib/clang/18.1.8/include
 # freebsd-update install
 ```
 
+若需自动化定期检查更新，可改用 `freebsd-update cron`，该命令会随机延迟 1 至 3600 秒后执行 fetch，并在有可用更新时发送邮件通知（收件人默认为 root，可通过 `-t` 指定）。PAGER 环境变量（默认 `/usr/bin/less`）控制合并报告的分页行为，设为 `cat` 可禁用交互式分页。
+
 ### 验证更新后的 FreeBSD 版本
 
 - 查看更新后的 FreeBSD 版本：
