@@ -1,4 +1,4 @@
-# 8.11 Hyprland
+# 8.10 Hyprland
 
 > **警告**
 >
