@@ -95,6 +95,8 @@ ThinkPad 可以启用 IBM ACPI 支持和 ACPI 视频支持。
 
 ```sh
 # backlight          # 打印当前亮度
+# backlight -q       # 仅输出亮度数值，便于脚本使用
+# backlight -i       # 查询背光设备信息（名称、类型）
 # backlight decr 20  # 降低 20% 亮度
 # backlight +        # 默认调整亮度增加 10%
 # backlight -        # 默认调整亮度减少 10%
@@ -125,6 +127,7 @@ ThinkPad 可以启用 IBM ACPI 支持和 ACPI 视频支持。
 判断显卡是否成功驱动：
 
 ```sh
+$ pciconf -lv | grep -B4 VGA   # 列出系统中所有 VGA 兼容设备及其型号
 $ ls -al /dev/dri/card0
 lrwxr-xr-x  1 root wheel 8 Jul  2 19:39 /dev/dri/card0 -> ../drm/0
 
