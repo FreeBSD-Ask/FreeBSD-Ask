@@ -135,7 +135,7 @@ $ ls -al /dev/backlight/backlight0
 crw-rw---- 1 root video 1, 177 2025年 8月22日 /dev/backlight/backlight0  # 台式机 HDMI 等输出可能没有
 ```
 
-显卡驱动加载成功后，系统中将出现 `card0` 设备（默认编号为 `0`，如有第二块显卡则为 `card1`），同时还可能出现 `backlight0` 设备（HDMI 输出下通常不存在该设备）。
+显卡驱动加载成功后，系统中将出现 `card0` 设备（默认编号为 `0`，如有第二块显卡则为 `card1`），同时还可能出现 `backlight0` 设备（HDMI 输出下通常不存在该设备）。可使用 `kldstat | grep -E "i915kms|amdgpu|radeonkms"` 进一步确认对应的内核模块已成功加载。
 
 ## 故障排除与未竟事宜
 
