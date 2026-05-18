@@ -28,7 +28,7 @@ DRM 是 Linux 内核的子系统，负责与现代显卡的 GPU 交互。FreeBSD
 
 > **注意**
 >
-> DG2 Arc 显卡在DRM6.12从Linux移植完成后，可以在FreeBSD上使用并能过播放视频，参见：https://github.com/freebsd/drm-kmod/pull/427 
+> DG2 Arc 显卡在DRM6.12从Linux移植完成后，可以在FreeBSD上使用并能够播放视频，参见：https://github.com/freebsd/drm-kmod/pull/427 
 
 显卡支持情况：
 
