@@ -101,6 +101,8 @@ ZFS 支持并不在内核中，而是作为可加载模块提供。
 # kldload zfs
 ```
 
+可通过 `kldstat` 验证模块是否已成功加载。
+
 ### 配置 ZFS 对齐方式（仅影响新创建的硬盘分区）
 
 强制 ZFS 文件系统使用 4K 对齐，这样可以更好地适配现代硬盘的物理扇区大小，提高读写性能：
@@ -187,6 +189,8 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 - `-O atime=off` 关闭访问时间记录；
 - `-m none` 不设置挂载点；
 - **/dev/gpt/zroot** 为刚创建的分区。
+
+可通过 `zpool status zroot` 验证池的健康状态。
 
 ### 创建 ZFS 数据集
 

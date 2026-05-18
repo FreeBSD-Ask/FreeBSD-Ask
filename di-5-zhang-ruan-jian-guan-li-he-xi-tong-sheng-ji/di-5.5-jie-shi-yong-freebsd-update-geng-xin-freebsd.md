@@ -96,6 +96,8 @@ usr/lib/clang/18.1.8/include
 # freebsd-update install
 ```
 
+若需自动化定期检查更新，可改用 `freebsd-update cron`，该命令会随机延迟 1 至 3600 秒后执行 fetch，并在有可用更新时发送邮件通知（收件人默认为 root，可通过 `-t` 指定）。PAGER 环境变量（默认 `/usr/bin/less`）控制合并报告的分页行为，设为 `cat` 可禁用交互式分页。
+
 ### 验证更新后的 FreeBSD 版本
 
 - 查看更新后的 FreeBSD 版本：
@@ -131,6 +133,8 @@ usr/lib/clang/18.1.8/include
 > **注意**
 >
 > `freebsd-update` 下载慢不是因为其更新源在境外（使用境外服务器更新一样慢）。这可能与其设计缺陷有关，`freebsd-update` 是一个由数千行组成的纯 Shell 脚本。[这是长期存在的问题](https://freebsd-questions.freebsd.narkive.com/xjVoetUM/why-is-freebsd-update-so-horrible-slow)。
+>
+> `freebsd-update upgrade` 在工作目录（默认 `/var/db/freebsd-update/`）中可能需要最多 500 MB 空间，具体取决于已安装的基本系统组件。若升级因空间不足中断，可使用 `-F` 标志强制继续。
 
 **以 FreeBSD 14.3-RELEASE 升级到 15.0-RELEASE 为例**
 

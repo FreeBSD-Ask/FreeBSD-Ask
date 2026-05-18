@@ -40,16 +40,16 @@ FreeBSD 新型终端 VT 原生支持 CJK 字符集（指中文、日文、韩文
 
 本节基于 FreeBSD 14.2-RELEASE。
 
-字体格式为 `.fnt`（二进制字体文件，而非码表加 PNG 图片的组合），使用命令切换控制台字体为 test.fnt：
+字体格式为 `.fnt`（二进制字体文件，而非码表加 PNG 图片的组合），使用命令切换控制台字体为 test.fnt（仅当前会话生效，重启后恢复默认字体）：
 
 ```sh
 $ vidcontrol -f test.fnt
 ```
 
-FreeBSD 基本系统提供了一款工具，可将 bdf 或 hex 格式转换为 fnt 文件：
+FreeBSD 基本系统提供了一款工具，可将 bdf 或 hex 格式转换为 fnt 文件，其中 `-o` 为必选参数：
 
 ```sh
-$ vtfontcvt [ -h 高度 ] [ -v ] [ -w 宽度] 字体路径
+$ vtfontcvt [ -h 高度 ] [ -v ] [ -w 宽度 ] -o 输出文件.fnt 字体路径
 ```
 
 - 示例：

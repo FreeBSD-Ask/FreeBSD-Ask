@@ -812,7 +812,7 @@ total 1
 
 > **注意**
 >
-> 在 FreeBSD 下，关机与重启操作都只有 root 用户和 operator 组成员可以执行。
+> 在 FreeBSD 下，关机与重启操作都只有 root 用户和 operator 组成员可以执行。执行 shutdown 时会向所有已登录用户广播警告信息，并在指定时间前 1 分钟创建 **/var/run/nologin** 以阻止新登录。
 
 > **技巧**
 >

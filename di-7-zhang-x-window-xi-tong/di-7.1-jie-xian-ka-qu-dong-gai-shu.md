@@ -95,6 +95,8 @@ ThinkPad 可以启用 IBM ACPI 支持和 ACPI 视频支持。
 
 ```sh
 # backlight          # 打印当前亮度
+# backlight -q       # 仅输出亮度数值，便于脚本使用
+# backlight -i       # 查询背光设备信息（名称、类型）
 # backlight decr 20  # 降低 20% 亮度
 # backlight +        # 默认调整亮度增加 10%
 # backlight -        # 默认调整亮度减少 10%
@@ -125,6 +127,7 @@ ThinkPad 可以启用 IBM ACPI 支持和 ACPI 视频支持。
 判断显卡是否成功驱动：
 
 ```sh
+$ pciconf -lv | grep -B4 VGA   # 列出系统中所有 VGA 兼容设备及其型号
 $ ls -al /dev/dri/card0
 lrwxr-xr-x  1 root wheel 8 Jul  2 19:39 /dev/dri/card0 -> ../drm/0
 
@@ -132,7 +135,7 @@ $ ls -al /dev/backlight/backlight0
 crw-rw---- 1 root video 1, 177 2025年 8月22日 /dev/backlight/backlight0  # 台式机 HDMI 等输出可能没有
 ```
 
-显卡驱动加载成功后，系统中将出现 `card0` 设备（默认编号为 `0`，如有第二块显卡则为 `card1`），同时还可能出现 `backlight0` 设备（HDMI 输出下通常不存在该设备）。
+显卡驱动加载成功后，系统中将出现 `card0` 设备（默认编号为 `0`，如有第二块显卡则为 `card1`），同时还可能出现 `backlight0` 设备（HDMI 输出下通常不存在该设备）。可使用 `kldstat | grep -E "i915kms|amdgpu|radeonkms"` 进一步确认对应的内核模块已成功加载。
 
 ## 故障排除与未竟事宜
 

@@ -125,7 +125,7 @@ test_5G                           50:d6:c5:93:d7:64   36   54M  -78:-95   100 EP
 
 加密无线网络需要使用 Wi-Fi 保护访问（Wi-Fi Protected Access，WPA）配置文件连接。WPA2/3 是当前主流的无线网络安全协议，提供数据加密和身份认证功能。
 
-无线网络中的认证过程由 wpa_supplicant(8) 管理。创建 **/etc/wpa_supplicant.conf** 配置文件，内容如下：
+无线网络中的认证过程由 wpa_supplicant(8) 管理。可使用 wpa_passphrase(8) 工具将 SSID 和明文密码转换为安全的 PSK 配置条目，避免在配置文件中直接书写明文密码。wpa_cli(8) 则提供了 wpa_supplicant 的交互式命令行管理接口，可用于运行时调试和状态查询。创建 **/etc/wpa_supplicant.conf** 配置文件，内容如下：
 
 ```ini
 ctrl_interface=/var/run/wpa_supplicant   # 可选，控制接口路径，用于 wpa_supplicant 与 wpa_cli 等工具通信

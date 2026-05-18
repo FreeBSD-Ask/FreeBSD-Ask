@@ -167,7 +167,7 @@ FreeBSD `-RELEASE` 历史版本下载地址：
 
 不同操作系统平台上有不同的镜像刻录工具推荐。
 
-Windows 平台建议优先使用 **Rufus**，Linux 平台可直接使用 `dd` 命令刻录镜像。
+Windows 平台建议优先使用 **Rufus**，Linux/FreeBSD 平台可直接使用 `dd` 命令刻录镜像：`dd if=FreeBSD-*.img of=/dev/daX bs=1M status=progress`（其中 `/dev/daX` 为目标 U 盘设备，请根据实际设备名调整；`status=progress` 显示传输进度）。
 
 Rufus 下载地址为 <https://rufus.ie/zh>，该工具为 Windows 平台开源 USB 启动盘制作工具。
 
@@ -266,7 +266,6 @@ Realtek RTL8125 是一款常见的 2.5 G 以太网卡。在消费级市场中，
 
 ```ini
 if_re_load="YES"                 # 设置开机自动加载 re 网卡驱动模块
-if_re_name="/boot/modules/if_re.ko"   # 指定 re 网卡驱动模块路径
 ```
 
 默认已启用巨型帧。巨型帧是指大于标准以太网帧（1500 字节）的帧，通常为 9000 字节。巨型帧可减少网络开销、提升传输效率，但在某些网络环境下可能导致兼容性问题。如需关闭以优化网速（例如网速过慢时），可执行以下操作：
