@@ -26,9 +26,9 @@ DRM 是 Linux 内核的子系统，负责与现代显卡的 GPU 交互。FreeBSD
 >
 > 这种移植并不覆盖 Linux 现有的全部 DRM GPU 驱动，目前仅包括 i915、amdgpu 和 radeon，vmwgfx、xe、virtio 等均未移植。这些未移植的 GPU 通常无法在 Wayland 上运行，只能使用 X11 显示协议。
 
-> **注意**
+> **技巧**
 >
-> DG2 Arc 显卡在DRM6.12从Linux移植完成后，可以在FreeBSD上使用并能够播放视频，参见：https://github.com/freebsd/drm-kmod/pull/427 
+> 自 DRM 6.12 起，DG2 Arc 显卡可以正常工作，参见：<https://github.com/freebsd/drm-kmod/pull/427>.
 
 显卡支持情况：
 
