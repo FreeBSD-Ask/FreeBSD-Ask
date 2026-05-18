@@ -96,14 +96,6 @@ FreeBSD 中文社区未通过其他域名部署本书，唯一官方域名为 `b
 
 ## 授权协议与法律声明
 
-本项目采用《CC BY 4.0 署名 4.0 协议国际版》，核心条款包括：署名——允许复制、发行、修改、再创作作品，需保留原作者署名，详见 [署名 4.0 协议国际版法律文本](https://creativecommons.org/licenses/by/4.0/legalcode.zh-hans)。
-
-本作品引用的第三方商标、商号、服务标志、商品外观及版权材料，其相关权利均由各自权利人持有。前述引用仅为说明与指称之目的。
-
-为说明、评论或教学目的，本作品合理引用第三方内容（文字、图像、数据等），知识产权归属原始权利人。
-
-作品中涉及的第三方软件、源代码及文档，知识产权由原权利人保留。如认为本作品存在侵权情形，请通过电子邮件 ykla [yklaxds@gmail.com](mailto:yklaxds@gmail.com) 联系。
-
 除特别注明外，本书中的文字、图表等内容依据 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) 协议发布。
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-orange.svg)](https://creativecommons.org/licenses/by/4.0/)
@@ -111,6 +103,10 @@ FreeBSD 中文社区未通过其他域名部署本书，唯一官方域名为 `b
 书中所有代码示例依据 [BSD 2 条款许可](https://opensource.org/license/bsd-2-clause) 发布。
 
 [![License: BSD 2 Clause](https://img.shields.io/badge/License-BSD--2--Clause-EB0028.svg)](https://opensource.org/license/bsd-2-clause)
+
+本作品引用的第三方商标、服务标志、商品外观及版权材料，其相关权利均由各自权利人持有。前述引用仅为说明、评论或教学之目的。
+
+如认为本作品存在侵权情形，请通过电子邮件 ykla [yklaxds@gmail.com](mailto:yklaxds@gmail.com) 联系。
 
 ## 项目历史
 
