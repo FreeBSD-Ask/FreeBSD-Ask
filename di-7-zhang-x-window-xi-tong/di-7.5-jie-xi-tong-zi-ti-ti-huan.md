@@ -40,7 +40,7 @@ FreeBSD 新型终端 VT 原生支持 CJK 字符集（指中文、日文、韩文
 
 本节基于 FreeBSD 14.2-RELEASE。
 
-字体格式为 `.fnt`（二进制字体文件，而非码表加 PNG 图片的组合），使用命令切换控制台字体为 test.fnt：
+字体格式为 `.fnt`（二进制字体文件，而非码表加 PNG 图片的组合），使用命令切换控制台字体为 test.fnt（仅当前会话生效，重启后恢复默认字体）：
 
 ```sh
 $ vidcontrol -f test.fnt
