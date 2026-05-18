@@ -28,7 +28,7 @@ DRM 是 Linux 内核的子系统，负责与现代显卡的 GPU 交互。FreeBSD
 
 > **注意**
 >
-> DG2 Arc 显卡尚不受支持（截至 DRM 6.1 版本），相关技术细节可参见：Intel Arc A770: Kernel panic on kldload i915kms.ko #315[EB/OL]. [2026-03-26]. <https://github.com/freebsd/drm-kmod/issues/315>。可能需要等到 6.12 的移植才能提供支持。
+> DG2 Arc 显卡在DRM6.12从Linux移植完成后，可以在FreeBSD上使用并能过播放视频，参见：https://github.com/freebsd/drm-kmod/pull/427 
 
 显卡支持情况：
 
