@@ -170,7 +170,13 @@ pkg: No packages available to install matching 'chromium' have been found in the
 
 出现错误：`You must upgrade the ports-mgmt/pkg port first`（必须先更新 pkg 本体）。
 
-解决：
+解决（优先使用 pkg 自身升级，或通过 Ports 编译）：
+
+```sh
+# pkg bootstrap -f      # 强制从远端仓库重装 pkg，无需经过 Ports
+```
+
+或：
 
 ```sh
 # cd /usr/ports/ports-mgmt/pkg
@@ -186,7 +192,7 @@ pkg: No packages available to install matching 'chromium' have been found in the
 
 ## 卸载软件
 
-直接使用 `pkg delete` 可能破坏依赖关系，应尽量避免使用（Ports 的 `make deinstall` 也一样），建议改用 `pkg_rmleaves` 命令，该命令所属的软件需要自行安装。
+`pkg delete` 默认会自动将依赖关系不满足的包一并加入删除列表，不会破坏依赖关系；仅当使用 `-f` 参数时才跳过依赖检查。若需清理不再被其他包依赖的"叶子"包，可安装 `pkg_rmleaves`，或使用内建命令 `pkg autoremove` 移除自动安装且已无依赖的包。
 
 ```sh
 # pkg install pkg_rmleaves
