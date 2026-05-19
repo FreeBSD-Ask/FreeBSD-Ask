@@ -14,7 +14,7 @@ NetBSD 的[口号](https://www.netbsd.org/about/portability.html) 是“Of cours
 
 NetBSD 支持[多种架构](https://wiki.netbsd.org/ports/)。其中，一级架构（Tier I）为官方战略重点支持的平台，二级架构（Tier II）为社区自主演进维护的平台。目前 NetBSD 支持 9 个一级架构和 49 个二级架构，其架构支持广度在同类操作系统中处于领先地位。
 
-NetBSD 主要面向技术爱好者和开发者，对于普通用户来说具有一定的学习曲线，开发者构成了该系统的核心用户群体。
+NetBSD 主要面向技术爱好者和开发者，对普通用户而言具有一定的学习曲线，开发者构成了该系统的核心用户群体。
 
 NetBSD 开发的 [pkgsrc](https://www.pkgsrc.org/) 包管理器框架也支持 macOS、Linux 等多个操作系统。pkgsrc 通过可移植的构建脚本实现跨平台软件管理，体现了 NetBSD 在可移植性软件工程方面的设计理念。
 
@@ -26,7 +26,7 @@ NetBSD 对 NVIDIA 显卡大致支持到 Pascal 架构（GeForce GTX 10 系列）
 
 ### 项目支持渠道
 
-为 NetBSD 项目提供支持，最简单的方式是通过 [GitHub Sponsors](https://github.com/sponsors/netbsd) 进行捐赠。~~还能获得一个 GitHub 徽章~~ [~~Public Sponsor~~](https://github.com/orgs/community/discussions/19916)~~。~~
+为 NetBSD 项目提供支持，最简单的方式是通过 [GitHub Sponsors](https://github.com/sponsors/netbsd) 进行捐赠。~~还可获得一个 GitHub 徽章~~ [~~Public Sponsor~~](https://github.com/orgs/community/discussions/19916)~~。~~
 
 > **技巧**
 >
