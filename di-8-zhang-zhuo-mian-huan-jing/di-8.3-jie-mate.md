@@ -80,8 +80,6 @@ IBus 输入法框架测试可用，参见输入法相关章节完成具体配置
 
 ## 桌面欣赏
 
-![FreeBSD 安装 MATE](../.gitbook/assets/cinnamon1.png)
-
 ![FreeBSD 安装 MATE](../.gitbook/assets/mate2.png)
 
 ![FreeBSD 安装 MATE](../.gitbook/assets/mate3.png)
@@ -130,9 +128,3 @@ show-quit=true
 #### 参考文献
 
 - FreeBSD Forums. lightdm not reading slick-greeter.conf[EB/OL]. [2026-03-25]. <https://forums.freebsd.org/threads/lightdm-not-reading-slick-greeter-conf.92256/>. 解决了 LightDM 无法正确读取 slick-greeter 配置文件的技术问题。
-
-## 课后习题
-
-1. 测试 Wayland 环境。
-2. 测试更多的显示管理器。
-3. 修改 MATE 桌面的默认文件管理器权限设置，验证其文件操作行为变化。

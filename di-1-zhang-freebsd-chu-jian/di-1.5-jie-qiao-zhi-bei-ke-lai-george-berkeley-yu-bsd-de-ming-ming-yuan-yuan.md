@@ -177,24 +177,24 @@ BERKELEY G. Verses on the Prospect of Planting Arts and Learning in America[C]//
 
 ## 参考文献
 
-- Berkeley G. 人类知识原理和三篇对话[M]. 张桂权，译. 北京：人民出版社，2022. ISBN: 978-7-01-023684-1. 系统阐述贝克莱唯心主义哲学体系与存在感知理论。
-- 阎吉达. 贝克莱思想新探[M]. 上海：复旦大学出版社，1987. ISBN: 7-309-00033-1. 深入剖析贝克莱哲学思想与科学方法论。
-- Berkeley G. 西利斯[M]. 曹曼，高新民，译. 北京：商务印书馆，2000. ISBN: 978-7-100-02886-8. 西利斯中译本。
+- Berkeley G. 人类知识原理和三篇对话[M]. 张桂权,译. 北京: 人民出版社, 2022. ISBN: 978-7-01-023684-1. 系统阐述贝克莱唯心主义哲学体系与存在感知理论。
+- 阎吉达. 贝克莱思想新探[M]. 上海: 复旦大学出版社, 1987. ISBN: 7-309-00033-1. 深入剖析贝克莱哲学思想与科学方法论。
+- Berkeley G. 西利斯[M]. 曹曼,高新民,译. 北京: 商务印书馆, 2000. ISBN: 978-7-100-02886-8. 西利斯中译本。
 - Downing L. George Berkeley[EB/OL]. (2021)[2026-03-25]. <https://plato.stanford.edu/archives/fall2021/entries/berkeley/>. SEP 贝克莱条目。提供了贝克莱哲学思想的权威学术综述与研究现状。
 - Easwaran K, Hájek A, Mancosu P, et al. Infinity[EB/OL]. (2024)[2026-03-25]. <https://plato.stanford.edu/archives/sum2024/entries/infinity/>. SEP 无穷条目。探讨了数学哲学中无穷概念的历史发展与哲学争议。
-- Urmson J O. 贝克莱[M]. 孟令朋，译. 北京：清华大学出版社，2019. ISBN: 978-7-302-52555-4. 深入浅出介绍贝克莱哲学思想与历史影响。
-- 汪芳庭. 数学基础[M]. 修订版. 北京：高等教育出版社，2018. ISBN: 978-7-04-050242-8. 系统阐述数学基础理论与公理集合论框架。
-- Robinson A. 非标准分析[M]. 申又根，王世强，张锦文，译. 北京：科学出版社，1980. 统一书号：13031-1267. 建立超实数理论，为无穷小量提供数学基础。
-- Tao T. 陶哲轩实分析[M]. 李馨，译. 第4版. 北京：人民邮电出版社，2025. ISBN: 978-7-115-66554-6. 从数学基础（自然数和集合论）构建实分析体系，强调严谨性与直觉的结合。
-- Berkeley G. The Querist, containing several queries proposed to the consideration of the public[M]. Farmington Hills：Gale ECCO，Print Editions，2018. ISBN: 978-1-38541-101-8. 探讨货币、经济与社会问题的哲学思考。
+- Urmson J O. 贝克莱[M]. 孟令朋,译. 北京: 清华大学出版社, 2019. ISBN: 978-7-302-52555-4. 深入浅出介绍贝克莱哲学思想与历史影响。
+- 汪芳庭. 数学基础[M]. 修订版. 北京: 高等教育出版社, 2018. ISBN: 978-7-04-050242-8. 系统阐述数学基础理论与公理集合论框架。
+- Robinson A. 非标准分析[M]. 申又根,王世强,张锦文,译. 北京: 科学出版社, 1980. 统一书号：13031-1267. 建立超实数理论，为无穷小量提供数学基础。
+- Tao T. 陶哲轩实分析[M]. 李馨,译. 第4版. 北京: 人民邮电出版社, 2025. ISBN: 978-7-115-66554-6. 从数学基础（自然数和集合论）构建实分析体系，强调严谨性与直觉的结合。
+- Berkeley G. The Querist, containing several queries proposed to the consideration of the public[M]. Farmington Hills: Gale ECCO, Print Editions, 2018. ISBN: 978-1-38541-101-8. 探讨货币、经济与社会问题的哲学思考。
 - Schabas M. Economics in Early Modern Philosophy[EB/OL]. (2022)[2026-03-25]. <https://plato.stanford.edu/archives/sum2022/entries/economics-early-modern/>. 梳理近代经济思想的哲学根基与历史脉络。
 - Cloyne District Community Council. George Berkeley, Bishop of Cloyne/Philosopher[EB/OL]. [2026-03-25]. <http://cloyne.ie/about/george-berkeley-bishop-of-cloyne/>. 介绍贝克莱主教在克洛因教区的生平与工作。
 - Britannica. George Berkeley[EB/OL]. [2026-03-25]. <https://www.britannica.com/biography/George-Berkeley>. 提供贝克莱生平与思想的权威百科介绍。
-- Stadtman V A, Centennial Publications Staff. The Centennial Record of the University of California, 1868–1968[M/OL]. Berkeley：University of California，1967[2026-04-18]. <https://digicoll.lib.berkeley.edu/record/81096/files/centennial.pdf>. 记载 1866 年 Frederick Billings 援引贝克莱诗句建议将城镇命名为 Berkeley 的历史。
-- 胡化凯. 20 世纪 50-70 年代中国科学批判资料选（上下）[M]. 济南：山东教育出版社，2009. ISBN: 978-7-5328-5386-1. 其中整本下册均涉及对爱因斯坦的批判。记录特定历史时期科学与政治交织的学术史料。
+- Stadtman V A, Centennial Publications Staff. The Centennial Record of the University of California, 1868–1968[M/OL]. Berkeley: University of California, 1967[2026-04-18]. <https://digicoll.lib.berkeley.edu/record/81096/files/centennial.pdf>. 记载 1866 年 Frederick Billings 援引贝克莱诗句建议将城镇命名为 Berkeley 的历史。
+- 胡化凯. 20 世纪 50-70 年代中国科学批判资料选（上下）[M]. 济南: 山东教育出版社, 2009. ISBN: 978-7-5328-5386-1. 其中整本下册均涉及对爱因斯坦的批判。记录特定历史时期科学与政治交织的学术史料。
 - O'Grady P. Berkeley, George[EB/OL]//Dictionary of Irish Biography. [2026-04-18]. <https://www.dib.ie/biography/berkeley-george-a0611>. 爱尔兰传记词典贝克莱条目，提供贝克莱生平最详尽权威之学术传记，含精确日期（如 1696 年 7 月 17 日入基尔肯尼学院、1700 年 3 月 21 日入都柏林圣三一学院、1707 年 6 月当选研究员、1710 年春受按立为牧师等）。
-- Stock J. An Account of the Life of George Berkeley, D.D., Late Bishop of Cloyne in Ireland[M]. Dublin，1776：12. 贝克莱最早之传记，记载其临终时妻子在旁诵读布道文等细节。
-- Popper K R. A Note on Berkeley as Precursor of Mach[J]. The British Journal for the Philosophy of Science，1953，4(13)：26-36. 论证贝克莱对牛顿绝对时空观之批判先于马赫，为爱因斯坦广义相对论之思想先驱。
+- Stock J. An Account of the Life of George Berkeley, D.D., Late Bishop of Cloyne in Ireland[M]. Dublin, 1776: 12. 贝克莱最早之传记，记载其临终时妻子在旁诵读布道文等细节。
+- Popper K R. A Note on Berkeley as Precursor of Mach[J]. The British Journal for the Philosophy of Science, 1953, 4(13): 26-36. 论证贝克莱对牛顿绝对时空观之批判先于马赫，为爱因斯坦广义相对论之思想先驱。
 - Berkeley Historical Society. Why Is Berkeley Called Berkeley?[EB/OL]. [2026-04-18]. <https://berkhistory.org/why-is-berkeley-called-berkeley/>. 伯克利历史学会与博物馆，Frederick Billings 于 1866 年援引贝克莱诗句命名伯克利。
 - Berkeley Plaque Project. How Berkeley Got Its Name[EB/OL]. [2026-04-18]. <https://berkeleyplaques.org/plaque/how-berkeley-got-its-name/>. 1866 年 5 月 24 日采纳 Berkeley 之名。
 

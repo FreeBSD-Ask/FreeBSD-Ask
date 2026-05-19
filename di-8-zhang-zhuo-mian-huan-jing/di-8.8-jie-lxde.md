@@ -91,9 +91,3 @@ lightdm_env="LC_MESSAGES=zh_CN.UTF-8"
 ## 参考文献
 
 - FreeBSD Project. Install & Configure a Desktop Environment: LXDE[EB/OL]. [2026-03-25]. <https://wiki.freebsd.org/LXDE>. LXDE 桌面环境安装与配置指南。
-
-## 课后习题
-
-1. 更新 LXDE 桌面环境的相关 Port。
-2. 为 LXDE 适配更多常用主题。
-3. 修改 LXDE 桌面的默认窗口管理器行为，使其适配 Wayland。

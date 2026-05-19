@@ -200,11 +200,3 @@ audio_output {
 PC 端的 GUI 客户端建议使用 Cantata（`pkg install cantata`）。
 
 命令行环境下建议安装 mpc（`pkg install musicpc`），适合用于绑定桌面环境的全局快捷键。
-
-## 课后习题
-
-1. 修改 ffmpeg 的 Port 编译选项以启用 libuavs3d 支持，验证其能否解码 AVS3 编码的音频文件。
-
-2. 配置 MPD 通过 OSS 音频驱动播放 DSD 格式音频，测试 DoP 传输模式是否正常工作。
-
-3. 为 MPD 配置多个音频输出设备（如内置声卡和 USB DAC），验证输出设备切换功能。

@@ -98,9 +98,3 @@ proc           /proc       procfs  rw  0   0
 ## 参考文献
 
 - FreeBSD Project. icewm-preferences(5)[EB/OL]. [2026-03-25]. <https://man.freebsd.org/cgi/man.cgi?query=icewm-preferences&sektion=5>. IceWM 窗口管理器配置选项的官方手册页，详细说明了各项配置参数。
-
-## 课后习题
-
-1. 测试输入法的可用性。
-2. 为 IceWM 添加 i18n 支持。
-3. 对比 IceWM 与其他轻量级窗口管理器（如 Fluxbox）在资源占用和主题配置上的差异。

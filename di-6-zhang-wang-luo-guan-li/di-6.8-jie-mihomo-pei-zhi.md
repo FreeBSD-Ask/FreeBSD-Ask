@@ -330,12 +330,4 @@ $ clashctl config regen
 
 ### 未竟事宜
 
-以下为 Clash for FreeBSD 项目有待改进之处：
-
-- 与 Bash 解耦，支持默认 sh，更好适配 FreeBSD 默认环境。
-
-## 课后习题
-
-1. 将 Mihomo RC 脚本中 Bash 特有语法改写为 FreeBSD sh 兼容版本，记录语法差异。
-2. 对比 Mihomo 与 Sing-Box 规则匹配引擎的数据结构与算法在万级节点下的性能差异。
-3. 分析代理工具与防火墙在内容过滤逻辑上的知情同意伦理差异。
+与 Bash 解耦，支持默认 sh，更好适配 FreeBSD 默认环境。

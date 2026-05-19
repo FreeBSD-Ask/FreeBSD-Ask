@@ -70,7 +70,7 @@
 
 有人会强调“会者定离”，试图诠释人与人的关系是动态的，取决于经济、物质、年龄、价值观、住所距离的变化。这很正确，也很现实，但并非人们所期望的那样。现在的互联网技术如此先进，但人与人之间的距离却达到了史无前例的遥远。现在甚至可以与太空中的宇航员通话，却联系不上自己的朋友。若还以距离太远为借口，这不显得荒谬吗？
 
-事实上一切的机会都有无数次，但是真正愿意做的次数是不多的。什么是重要的东西，什么是不重要的东西？如果一切都是不重要的，剩下的也不会是重要的。一切回归到原点，无论重复多少次，结果大抵也是如此。看起来我们仍能对一些所谓重要的事情作出改变，但最终的决定无可避免地又会重复过往的一切。换言之，即使选择了新世界，旧世界的一切都值得被否定吗？否定之后，注定会再次重现当下的选择与过往的否定。
+事实上一切机会都有无数次，但是真正愿意做的次数是不多的。什么是重要的东西，什么是不重要的东西？如果一切都是不重要的，剩下的也不会是重要的。一切回归到原点，无论重复多少次，结果大抵也是如此。看起来我们仍能对一些所谓重要的事情作出改变，但最终的决定无可避免地又会重复过往的一切。换言之，即使选择了新世界，旧世界的一切都值得被否定吗？否定之后，注定会再次重现当下的选择与过往的否定。
 
 “终不似，少年游”究竟是不似还是不愿？还是我们根本囿于世界，成为其一部分而不愿改变？少年被现代工业文明规训为绝对精神的一部分，放弃了所有主体性，异化为历史合力的一分子，仅此而已。
 
@@ -190,14 +190,15 @@ FreeBSD 是一款开源的类 UNIX 操作系统，直接继承自 BSD UNIX，广
 
 ## 参考文献
 
-- Knuth D E. Ancient Babylonian algorithms[J]. Communications of the ACM，1972，15(7)：671-677. <https://doi.org/10.1145/361454.361514>. 冯·诺伊曼名言“If people do not believe that mathematics is simple, it is only because they do not realize how complicated life is”出自 1947 年 9 月 15 日在哥伦比亚大学举行的 ACM 首届全国会议上的主题演讲，由 Franz L. Alt 在下文中引述：Alt F L. Archaeology of computers—Reminiscences, 1945–1947[J]. Communications of the ACM，1972，15(7)：693-694. <https://doi.org/10.1145/361454.361528>.
-- 洞真太上太霄琅书[M]//道藏：第 33 册. 北京：文物出版社；上海：上海书店；天津：天津古籍出版社，1988：690b. 人行大道，号曰道士。
+- Knuth D E. Ancient Babylonian algorithms[J]. Communications of the ACM, 1972, 15(7): 671-677. <https://doi.org/10.1145/361454.361514>. 冯·诺伊曼名言“If people do not believe that mathematics is simple, it is only because they do not realize how complicated life is”出自 1947 年 9 月 15 日在哥伦比亚大学举行的 ACM 首届全国会议上的主题演讲，由 Franz L. Alt 在下文中引述: Alt F L. Archaeology of computers—Reminiscences, 1945–1947[J]. Communications of the ACM, 1972, 15(7): 693-694. <https://doi.org/10.1145/361454.361528>.
+- 洞真太上太霄琅书[M]//道藏: 第 33 册. 北京: 文物出版社; 上海: 上海书店; 天津: 天津古籍出版社, 1988: 690b. 人行大道，号曰道士。
 - CIA. The World Factbook: Area Rankings[EB/OL]. [2026-04-17]. <https://www.cia.gov/the-world-factbook/field/area-rankings/>. 俄罗斯面积约 17,098,242 km²。格陵兰面积约 2,166,086 km²，非洲面积约 30,370,000 km²。二者面积之和约 19,264,328 km²，不及非洲面积（约 30,370,000 km²）的三分之二（约 20,246,667 km²）。
-- 龙七（龙榆生），词；黄自，曲. 玫瑰三愿[Z]. 1932. 歌词全文为“玫瑰花/玫瑰花/烂开在碧栏杆下/玫瑰花/玫瑰花/烂开在碧栏杆下/我愿那妒我的无情风雨莫吹打/我愿那爱我的多情游客莫攀摘/我愿那红颜常好不凋谢/好教我留住芳华”。详见龙榆生先生新体歌曲作品选 <https://longyusheng.org/xintigequ/lys-meiguisanyuan.html>。
-- Husserl E. Logische Untersuchungen：Zweiter Band[M]. Halle：Niemeyer，1901. 原文为“zu den Sachen selbst”（面向事情本身），“Zurück zu den Sachen selbst”（回到事物本身）为后世现象学运动口号化表述。见中国社会科学网 <https://www.cssn.cn/zx/wgzx/202210/t20221027_5555580.shtml>。
-- Pascal B. Pensées[M]. Paris：Brunschvicg éd.，1897：frag. 347. “L’homme n’est qu’un roseau, le plus faible de la nature; mais c’est un roseau pensant.”[人不过是一根会思想的芦苇。]
-- Apple Inc. BSD Overview[EB/OL]. (2013-08-08)[2026-04-17]. <https://developer.apple.com/library/archive/documentation/Darwin/Conceptual/KernelProgramming/BSD/BSD.html>. 苹果官方开发者文档指出：“The BSD portion of the OS X kernel is derived primarily from FreeBSD”，但 XNU 内核本身是 Mach 与 BSD 的混合体，源自 NeXTSTEP，并非直接派生自 FreeBSD 内核。
-- 梁济. 梁济遗稿[M]//梁漱溟. 这个世界会好吗：梁漱溟晚年口述. 艾恺（Guy S. Alitto），采访. 北京：东方出版中心，2006. 1918 年 11 月 7 日梁济问其子梁漱溟“这个世界会好吗”，三天后投净业湖自尽，后世多称“梁漱溟之问”，实则发问者为梁济。
+- 龙七(龙榆生), 词; 黄自, 曲. 玫瑰三愿[Z]. 1932. 歌词全文为“玫瑰花/玫瑰花/烂开在碧栏杆下/玫瑰花/玫瑰花/烂开在碧栏杆下/我愿那妒我的无情风雨莫吹打/我愿那爱我的多情游客莫攀摘/我愿那红颜常好不凋谢/好教我留住芳华”。详见龙榆生先生新体歌曲作品选 <https://longyusheng.org/xintigequ/lys-meiguisanyuan.html>。
+- Husserl E. Logische Untersuchungen: Zweiter Band[M]. Halle: Niemeyer, 1901. 原文为“zu den Sachen selbst”（面向事情本身），“Zurück zu den Sachen selbst”（回到事物本身）为后世现象学运动口号化表述。
+- 刘万瑚. “回到事物本身”与“面向事物本身”——胡塞尔与海德格尔的现象学方法之争[J]. 哲学动态, 2019(11): 84-91.
+- Pascal B. Pensées[M]. Paris: Brunschvicg éd., 1897: frag. 347. “L'homme n'est qu'un roseau, le plus faible de la nature; mais c'est un roseau pensant.”[人不过是一根会思想的芦苇。]
+- Apple Inc. BSD Overview[EB/OL]. (2013-08-08)[2026-04-17]. <https://developer.apple.com/library/archive/documentation/Darwin/Conceptual/KernelProgramming/BSD/BSD.html>. 苹果官方开发者文档指出: “The BSD portion of the OS X kernel is derived primarily from FreeBSD”，但 XNU 内核本身是 Mach 与 BSD 的混合体，源自 NeXTSTEP，并非直接派生自 FreeBSD 内核。
+- 梁济. 梁济遗稿[M]//梁漱溟. 这个世界会好吗: 梁漱溟晚年口述. 艾恺(Guy S. Alitto), 采访. 北京: 东方出版中心, 2006. 1918 年 11 月 7 日梁济问其子梁漱溟“这个世界会好吗”，三天后投净业湖自尽，后世多称“梁漱溟之问”，实则发问者为梁济。
 - FreeBSD Project. About the FreeBSD Project[EB/OL]. [2026-04-17]. <https://docs.freebsd.org/en/books/handbook/introduction/>. FreeBSD 项目起源于 1993 年初，首个正式版本于 1993 年 11 月 1 日发布。
 - QNX Software Systems. io-pkt Networking Stack[EB/OL]. [2026-04-17]. <https://www.qnx.com/developers/docs/6.5.0SP1.update/com.qnx.doc.neutrino_sys_arch/tcpip.html>. QNX 官方文档指出“io-pkt is...closely tracks the NetBSD stack source”，其网络栈主要派生自 NetBSD 而非 FreeBSD。
 - Phoronix. Intel Ivy Bridge Borked On FreeBSD[EB/OL]. (2014-01-31)[2026-04-17]. <https://www.phoronix.com/news/MTEyNDg>. FreeBSD 10-RC5 在 Intel HD 4000 (Ivy Bridge) 显卡上存在图形驱动问题，无法正常启动。

@@ -15,7 +15,7 @@
 # service bthidd start   # 立即启动 bthidd 服务
 ```
 
-服务说明：
+相关组件说明：
 
 - `hcsecd`：管理蓝牙设备的链路密钥和 PIN 码，负责蓝牙设备的安全认证。
 - `bthidd`：支持 Bluetooth HID（Human Interface Device）设备，如蓝牙鼠标、键盘等。
@@ -72,11 +72,3 @@ Set it up? [yes]:
 ```sh
 # service bthidd restart
 ```
-
-## 课后习题
-
-1. 在 FreeBSD 上配对蓝牙鼠标，排查配对后自动断开的原因并尝试解决。
-
-2. 在 FreeBSD 上手动配置蓝牙服务栈（hccontrol、hcsecd、bthidd），验证各组件的作用。
-
-3. 尝试使用蓝牙音频设备（如蓝牙耳机），配置必要的服务和驱动，验证音频播放是否正常。

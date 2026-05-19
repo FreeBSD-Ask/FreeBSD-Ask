@@ -90,9 +90,3 @@ ums_load="YES"
 ### 参考文献
 
 - FreshPorts. parallels-tools Parallels Desktop Tools for FreeBSD[EB/OL]. [2026-03-26]. <https://www.freshports.org/emulators/parallels-tools/>. 提供了 Parallels Desktop 虚拟机工具的 FreeBSD Port 信息与安装说明。
-
-## 课后习题
-
-1. 查阅 FreeBSD 源代码中 `acpi_ged` 驱动的提交记录，分析其在 ARM64 平台上处理 ACPI 通用事件的核心逻辑。
-2. 分析 Parallels Desktop 虚拟机工具的 Port 源代码（`emulators/parallels-tools/`），梳理其长期未更新的技术原因。
-3. 查阅 FreeBSD 源代码中 `ums` 与 `usbhid` 两种 USB 鼠标驱动的实现，比较其在设备探测、事件报告和电源管理方面的差异。

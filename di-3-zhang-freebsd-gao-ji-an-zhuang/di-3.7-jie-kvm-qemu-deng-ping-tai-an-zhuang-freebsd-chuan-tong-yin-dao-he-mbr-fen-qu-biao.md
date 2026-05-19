@@ -215,9 +215,3 @@ VirtualBox 用户可尝试将虚拟化引擎选择为“KVM”后再次引导，
 
 - mfsBSD. mfsBSD — minimalistic FreeBSD distribution[EB/OL]. [2026-04-17]. <https://mfsbsd.vx.sk/>. mfsBSD 项目主页，提供完全载入内存的 FreeBSD 系统镜像。
 - syslinux Wiki. MEMDISK[EB/OL]. [2026-04-17]. <https://wiki.syslinux.org/wiki/index.php?title=MEMDISK>. MEMDISK 模块说明，用于将 ISO 镜像加载到内存中作为虚拟磁盘使用。
-
-## 课后习题
-
-1. 查阅 MEMDISK 模块的技术文档，分析其将 ISO 镜像加载至内存作为虚拟磁盘的工作原理，并评估该方案在 UEFI 环境下的兼容性限制。
-2. 使用 `dd` 命令将 FreeBSD VM-IMAGES 镜像写入虚拟磁盘，记录实验结果并从磁盘格式和分区表层面分析失败或成功的技术原因。
-3. 分析 GPT 分区表与 MBR 分区表在无远程控制台安装场景下的技术差异，论证本节仅支持传统 BIOS + MBR 方式的原因，并评估 UEFI + GPT 方案的可行性。

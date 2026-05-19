@@ -62,9 +62,3 @@ usbhid_load="YES"           # 配置系统启动时自动加载 USB HID 驱动
 ### 参考文献
 
 - FreeBSD Forums. Mouse does not work in VMWARE Fusion and Freebsd 14.2[EB/OL]. (2025-01-16)[2026-03-26]. <https://forums.freebsd.org/threads/mouse-does-not-work-in-vmware-fusion-and-freebsd-14-2.96563/>. 详细介绍了 VMware Fusion 中 FreeBSD 鼠标无法工作问题的解决方案与 USB HID 驱动配置方法。
-
-## 课后习题
-
-1. 查阅 FreeBSD 源代码中 USB HID 子系统的实现，分析 `hw.usb.usbhid.enable` 参数如何改变内核对 USB 输入设备的处理路径，并在不同版本 FreeBSD 上对比该参数的行为差异。
-2. 分析 VMware Fusion 中屏幕自动缩放功能缺失的技术障碍，查阅 VMware Tools 的图形驱动实现以定位关键限制。
-3. 对比 macOS 14 与 macOS 15 中 VMware Fusion 的键盘支持差异，查阅 Apple 修订的 HID 驱动变更记录以解释兼容性变化。
