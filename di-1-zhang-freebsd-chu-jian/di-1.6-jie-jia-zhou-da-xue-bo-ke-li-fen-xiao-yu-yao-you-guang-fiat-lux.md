@@ -36,7 +36,7 @@ NetBSD 对 NVIDIA 显卡大致支持到 Pascal 架构（GeForce GTX 10 系列）
 
 ### NetBSD 上的 ZFS
 
-ZFS（Zettabyte File System，泽字节文件系统）作为一个功能强大的企业级文件系统，在 NetBSD 上也有相应的实现。以下为相关资源：
+ZFS（Zettabyte File System，泽字节文件系统）作为一个功能完备的企业级文件系统，在 NetBSD 上也有相应的实现。以下为相关资源：
 
 * 手册页 [zfs(8) - NetBSD Manual Pages](https://man.netbsd.org/zfs.8)，提供 ZFS 文件系统的官方命令参考
 * [Finish ZFS](https://wiki.netbsd.org/projects/project/zfs/)，ZFS 移植项目进展报告
