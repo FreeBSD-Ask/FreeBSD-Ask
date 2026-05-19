@@ -62,9 +62,9 @@ BERKELEY G. Verses on the Prospect of Planting Arts and Learning in America[C]//
 
 在许多著作与文献中，乔治·贝克莱常被称为克洛因主教（Bishop of Cloyne）或贝克莱主教。
 
-“Berkeley”在中文音译上存在不同写法，其美式与英式发音也不同（英 /ˈbɑːkli, ˈbəːkli/ 美 /ˈbɚkli/），但英文拼写保持一致。
+"Berkeley"在中文中有不同的音译写法，其英式与美式发音也有所差异（英 /ˈbɑːkli, ˈbəːkli/，美 /ˈbɚkli/），但英文拼写始终一致。
 
-受历史因素（如贝克莱曾购买黑奴引发的争议）及翻译习惯（历史上曾译作“巴克莱”等）的影响，这一关联在汉语世界与英语世界都不太为人所知。
+受历史因素（如贝克莱曾购买黑奴引发的争议）及翻译习惯（曾译作"巴克莱"等）的影响，伯克利市与贝克莱其人之间的关联，在汉语世界与英语世界都不太为人所知。
 
 以下画像展示这位哲学家的形象：
 
@@ -106,7 +106,7 @@ BERKELEY G. Verses on the Prospect of Planting Arts and Learning in America[C]//
 
 贝克莱在哲学领域影响深远，对微积分基础的批判也是数学史上的重要篇章。贝克莱的著作引发了关于无穷小量的数学哲学讨论（即贝克莱悖论，参见其 1734 年发表的《分析学家；或一篇致一位不信神数学家的论文，其中审查一下近代分析学的对象、原则及论断是不是比宗教的神秘、信仰的要点有更清晰的表达，或更明显的推理》）。
 
-贝克莱悖论本身并未被“解决”，其哲学层面仍是开放性问题。ε-δ 定义只是使实分析在 ZFC 公理体系下变得形式自洽。许多人常以该定义来尝试解决芝诺悖论（Stanford Encyclopedia of Philosophy. Zeno’s Paradoxes[EB/OL]. [2026-04-04]. <https://plato.stanford.edu/entries/paradox-zeno/>.）进而否定其哲学价值。
+贝克莱悖论本身并未被“解决”，其哲学层面仍是开放性问题。ε-δ 定义只是使实分析在 ZFC 公理体系下变得形式自洽。许多人常以该定义来\u7528\u8be5\u5b9a\u4e49\u89e3\u51b3芝诺悖论（Stanford Encyclopedia of Philosophy. Zeno’s Paradoxes[EB/OL]. [2026-04-04]. <https://plato.stanford.edu/entries/paradox-zeno/>.）\uff0c\u4ece\u800c\u5426\u5b9a其哲学价值。
 
 更多相关资源可参阅关于非标准分析、超实数及数学哲学等方面的书籍。
 
@@ -173,7 +173,7 @@ BERKELEY G. Verses on the Prospect of Planting Arts and Learning in America[C]//
 
 贝克莱的思想在他有生之年未被广泛接受，但在其后数百年间影响深远。
 
-几乎每一部主流的哲学史著作均对其思想有所论述[旧版人教版思想政治必修四（生活与哲学）第 13 页即为一例（教育部普通高中思想政治课课程标准实验教材编写组. 思想政治必修 4 生活与哲学[M]. 北京：人民教育出版社，2018. ISBN: 978-7-107-32710-0.）]，而关于他的哲学实验也是哲学考试中经久不衰的论述题。
+几乎每一部主流的哲学史著作都对其思想有所论述[旧版人教版思想政治必修四（生活与哲学）第 13 页即为一例（教育部普通高中思想政治课课程标准实验教材编写组. 思想政治必修 4 生活与哲学[M]. 北京：人民教育出版社，2018. ISBN: 978-7-107-32710-0.）]，而关于他的哲学实验也是哲学考试中经久不衰的论述题。
 
 在高中思想政治教材中，也能看到贝克莱思想的相关介绍 ~~尽管该教材表述被认为有误，教育部组织编写. 普通高中教科书思想政治必修 4 哲学与文化[M]. 北京：人民教育出版社，2019. ISBN: 978-7-107-34195-3. 已删去相关内容~~。
 
@@ -195,7 +195,7 @@ BERKELEY G. Verses on the Prospect of Planting Arts and Learning in America[C]//
 - Cloyne District Community Council. George Berkeley, Bishop of Cloyne/Philosopher[EB/OL]. [2026-03-25]. <http://cloyne.ie/about/george-berkeley-bishop-of-cloyne/>. 介绍贝克莱主教在克洛因教区的生平与工作。
 - Britannica. George Berkeley[EB/OL]. [2026-03-25]. <https://www.britannica.com/biography/George-Berkeley>. 提供贝克莱生平与思想的权威百科介绍。
 - Stadtman V A, Centennial Publications Staff. The Centennial Record of the University of California, 1868–1968[M/OL]. Berkeley: University of California, 1967[2026-04-18]. <https://digicoll.lib.berkeley.edu/record/81096/files/centennial.pdf>. 记载 1866 年 Frederick Billings 援引贝克莱诗句建议将城镇命名为 Berkeley 的历史。
-- 胡化凯. 20 世纪 50-70 年代中国科学批判资料选（上下）[M]. 济南: 山东教育出版社, 2009. ISBN: 978-7-5328-5386-1. 其中整本下册均涉及对爱因斯坦的批判。记录特定历史时期科学与政治交织的学术史料。
+- 胡化凯. 20 世纪 50-70 年代中国科学批判资料选（上下）[M]. 济南: 山东教育出版社, 2009. ISBN: 978-7-5328-5386-1. 其中整本下册都涉及对爱因斯坦的批判。记录特定历史时期科学与政治交织的学术史料。
 - O'Grady P. Berkeley, George[EB/OL]//Dictionary of Irish Biography. [2026-04-18]. <https://www.dib.ie/biography/berkeley-george-a0611>. 爱尔兰传记词典贝克莱条目，提供贝克莱生平最详尽权威之学术传记，含精确日期（如 1696 年 7 月 17 日入基尔肯尼学院、1700 年 3 月 21 日入都柏林圣三一学院、1707 年 6 月当选研究员、1710 年春受按立为牧师等）。
 - Stock J. An Account of the Life of George Berkeley, D.D., Late Bishop of Cloyne in Ireland[M]. Dublin, 1776: 12. 贝克莱最早之传记，记载其临终时妻子在旁诵读布道文等细节。
 - Popper K R. A Note on Berkeley as Precursor of Mach[J]. The British Journal for the Philosophy of Science, 1953, 4(13): 26-36. 论证贝克莱对牛顿绝对时空观之批判先于马赫，为爱因斯坦广义相对论之思想先驱。
