@@ -549,7 +549,7 @@ FreeBSD 的正确读法是新用户普遍关注的问题。目前社区共识和
 ### 参考文献
 
 - FreeBSD Foundation. Timeline[EB/OL]. [2026-03-25]. <https://freebsdfoundation.org/freebsd/timeline/>. FreeBSD 发展历史时间线。
-- McKusick M K, Neville-Neil G V, Watson R N M. FreeBSD 操作系统设计与实现[M]. 陈向群,郭立峰,叶顺平,译. 原书第2版. 北京: 机械工业出版社, 2021: VI. 记载"1995 年 OpenBSD 组从 NetBSD 组中分离出来"。
+- McKusick M K, Neville-Neil G V, Watson R N M. FreeBSD 操作系统设计与实现[M]. 陈向群,郭立峰,叶顺平,译. 原书第2版. 北京: 机械工业出版社, 2021: VI. 记载“1995 年 OpenBSD 组从 NetBSD 组中分离出来”。
 - FreeBSD Foundation. Staff[EB/OL]. [2026-04-16]. <https://freebsdfoundation.org/about-us/our-team/>. 记载 Deb Goodkin 于 2005 年 8 月加入基金会，为首位雇员。
 - SeaGL. 25+ Years of FreeBSD and Why You Should Get Involved![EB/OL]. (2019-11-15)[2026-04-16]. <https://osem.seagl.org/conferences/seagl2019/program/proposals/611>. 记载 Deb Goodkin “joining as the first employee back in August 2005”。
 - FreeBSD Wiki. Jails[EB/OL]. [2026-04-16]. <https://wiki.freebsd.org/Jails>. 记载“Jails were introduced by Poul-Henning Kamp in March 2000 with FreeBSD 4.0-RELEASE”。
