@@ -90,7 +90,7 @@ $ chrome --proxy-server="127.0.0.1:1234"
 --proxy-server="socks4://<IP 地址>:<端口>"
 ```
 
-要使 Chromium 在图形界面下默认通过代理启动，可修改桌面启动文件实现持久化配置。
+要使 Chromium 在图形界面下默认通过代理启动，可修改桌面启动文件以实现持久化配置。
 
 找到桌面环境为 Chromium 创建的 desktop 文件，通常位于 **~/.local/share/applications/** 目录：
 
