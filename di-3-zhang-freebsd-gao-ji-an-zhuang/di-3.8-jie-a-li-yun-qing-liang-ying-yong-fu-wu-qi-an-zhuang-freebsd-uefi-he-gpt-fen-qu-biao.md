@@ -733,9 +733,3 @@ mkfs.fat 4.2 (2021-01-31)
 
 - Ventoy. Ventoy — A New Bootable USB Solution[EB/OL]. [2026-04-17]. <https://www.ventoy.net>. Ventoy 项目主页，新一代多系统启动 U 盘解决方案，支持直接从 ISO 镜像启动。
 - FreeBSD Project. FreeBSD 15.0-RELEASE Release Notes[EB/OL]. [2026-04-17]. <https://www.freebsd.org/releases/15.0R/relnotes/>. FreeBSD 15.0 发行说明，包含 VirtIO 驱动改进与内核可调参数变更。
-
-## 课后习题
-
-1. 查阅 FreeBSD 内核中 `kern.maxphys` 参数的定义与使用位置，分析该参数影响 VirtIO-BLK 驱动 I/O 请求大小的机制，并通过设置不同数值观察系统行为的差异。
-2. 分析 Ventoy 的插件架构，评估新增在线下载 OS 镜像功能的技术路径与实现复杂度。
-3. 云服务商对 FreeBSD 的支持程度参差不齐：阿里云提供官方 FreeBSD 镜像而多数海外云厂商未提供。从云服务商运营视角分析决定是否支持 FreeBSD 的经济与技术因素，并讨论社区驱动的云镜像维护能否弥补商业支持的缺失。

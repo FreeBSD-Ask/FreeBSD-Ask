@@ -856,9 +856,3 @@ Add another user? (yes/no) [no]: # 是否继续添加其他用户
 > 输入密码时，密码在屏幕上不显示，无 `****` 等掩码提示，输入完毕后直接按回车键登录。
 
 ![登录成功](../.gitbook/assets/login-success-15.png)
-
-## 课后习题
-
-1. 阅读 bsdinstall 的源代码脚本（**/usr/src/usr.sbin/bsdinstall/**），定位其中处理主机名设置的逻辑，分析未设置主机名时系统回退为默认值的具体机制。
-2. 阅读 bsdinstall ZFS 自动分区脚本（**/usr/src/usr.sbin/bsdinstall/scripts/zfsboot**），分析 swap 卷大小的默认值（2 GB）的设定依据，说明该值在不同物理内存容量下是否需要调整。
-3. 对比 bsdinstall 的交互安装模式与 scripted 模式（`bsdinstall script`），说明两者的适用场景差异。

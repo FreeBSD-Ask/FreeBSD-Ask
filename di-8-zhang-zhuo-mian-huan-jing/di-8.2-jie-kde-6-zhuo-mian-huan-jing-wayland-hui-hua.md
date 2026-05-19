@@ -143,9 +143,3 @@ $ cp /usr/local/share/applications/org.fcitx.Fcitx5.desktop ~/.config/autostart/
 ## 参考文献
 
 - Euroquis. KDE Plasma 6 Wayland on FreeBSD[EB/OL]. [2026-03-25]. <https://euroquis.nl/kde/2025/09/07/wayland.html>. 提供了在 FreeBSD 上配置 KDE Plasma 6 Wayland 会话的技术指南，明确指出 seatd 服务的必要性。
-
-## 课后习题
-
-1. 在基于 Wayland 的 KDE 上测试 IBus 输入法框架的使用体验，记录输入法切换与候选词显示的稳定性。
-2. 适配 PipeWire 音频。
-3. 在 FreeBSD 上测试 Wayland 合成器的远程屏幕共享功能（如通过 RDP 或 VNC），记录延迟与带宽占用情况。

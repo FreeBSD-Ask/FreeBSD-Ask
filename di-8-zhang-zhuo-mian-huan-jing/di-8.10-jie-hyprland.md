@@ -836,8 +836,3 @@ text-caps-lock-color=000000FF
 - Gentoo Foundation. Hyprland[EB/OL]. [2026-03-25]. <https://wiki.gentoo.org/wiki/Hyprland>. Gentoo 官方维基明确指出 Hyprland 启动命令应为 `dbus-run-session Hyprland`。
 - Arch Linux Project. Hyprland[EB/OL]. [2026-03-25]. <https://wiki.archlinux.org/title/Hyprland>. Arch Linux 官方维基指出虚拟机需 3D 加速且依赖 DRM GPU，同时所有平台 NVIDIA 显卡均不被支持。
 - nth233. Hyprland 的配置[EB/OL]. 个人博客, [2026-03-25]. <https://nth233.top/posts/2023-02-26-Hyprland%E9%85%8D%E7%BD%AE>. Hyprland 窗口管理器配置详解与实践指南。
-
-## 课后习题
-
-1. 分析 Hyprland 与 wlroots 的技术关联，说明 wlroots 库在 Hyprland 合成器中承担的功能。
-2. 在 Hyprland 的 hyprland.conf 中配置自定义窗口规则，为特定应用（如终端、浏览器）设置默认悬浮或平铺行为。

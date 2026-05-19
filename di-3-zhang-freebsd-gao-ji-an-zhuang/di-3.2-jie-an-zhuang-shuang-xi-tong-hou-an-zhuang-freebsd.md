@@ -460,9 +460,3 @@ zroot/var/tmp         96K  91.6G    96K  /var/tmp
 - Stanislas. How to manually install FreeBSD on a remote server (with UFS, ZFS, encryption...)[EB/OL]. (2018-12)[2026-03-26]. <https://stanislas.blog/2018/12/how-to-install-freebsd-server/>. 提供了 FreeBSD 手动安装的完整技术指南，包括 UFS、ZFS 等文件系统配置方法。
 - FreeBSD Project. RootOnZFS/GPTZFSBoot[EB/OL]. [2026-03-26]. <https://wiki.freebsd.org/RootOnZFS/GPTZFSBoot>. 详细介绍了 FreeBSD 在 GPT 分区表上的 ZFS 根文件系统配置方法。
 - FreeBSD Project. bsdinstall(8) -- system installer[EB/OL]. [2026-04-17]. <https://man.freebsd.org/cgi/man.cgi?query=bsdinstall&sektion=8>. FreeBSD 系统安装程序手册页。
-
-## 课后习题
-
-1. 脱离 bsdinstall，通过手动分区、格式化、挂载和安装基本系统完成 FreeBSD 的安装，记录每个步骤中 bsdinstall 自动完成而须手动操作的环节。
-2. 查阅 FreeBSD 源代码中 GPT 分区对齐参数的实现逻辑，分析 NVMe SSD 上 4K 对齐的对象以及对 I/O 性能的影响。
-3. 在 UFS 文件系统下重复本节双系统安装流程，记录 ZFS 与 UFS 在分区布局和引导配置上的差异。

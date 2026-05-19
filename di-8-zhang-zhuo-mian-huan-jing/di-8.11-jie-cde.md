@@ -153,9 +153,3 @@ CDE 整体界面无法切换为中文，仅日历组件可显示中文。
 - FreshPorts. cde Common Desktop Environment[EB/OL]. [2026-03-25]. <https://www.freshports.org/x11/cde>. FreshPorts 提供的 CDE 桌面环境 Port 详情与安装指南。
 - FreeBSD Project. Setting up Common Desktop Environment for modern use[EB/OL]. [2026-03-25]. <https://forums.freebsd.org/threads/setting-up-common-desktop-environment-for-modern-use.69475/>. 详细配置可参考 FreeBSD 论坛相关讨论。
 - CDE Project. CDE - Common Desktop Environment Wiki[EB/OL]. [2026-03-25]. <https://sourceforge.net/p/cdesktopenv/wiki/FreeBSDBuild/>. CDE 项目官方 Wiki 提供的 FreeBSD 平台构建与配置指南。
-
-## 课后习题
-
-1. 安装并启动 CDE 桌面环境，记录在 FreeBSD 上的使用体验。
-2. 为 CDE 补充 i18n 支持。
-3. 对比 CDE 与当代桌面环境（如 KDE）在系统资源占用上的差异。

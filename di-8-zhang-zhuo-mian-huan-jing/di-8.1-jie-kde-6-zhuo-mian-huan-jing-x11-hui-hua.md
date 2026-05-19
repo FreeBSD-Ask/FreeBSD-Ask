@@ -282,9 +282,3 @@ $ echo "exec ck-launch-session startplasma-x11" > ~/.xinitrc
 ### 状态栏不显示时间和日期
 
 打开时区设置，选择“Asia/Shanghai”时区即可。如果仍无效，请先更新相关软件包。
-
-## 课后习题
-
-1. 查找最小化 KDE 6 安装的依赖关系，构建不含捆绑软件的纯桌面环境，在 QEMU 中验证其功能完整性，尝试进一步精简相关 Ports。
-2. 为 SDDM 移植更多主题到 FreeBSD Ports。
-3. 修改 KDE 6 的默认权限模型（如 security.bsd.see_other_uids），验证其菜单功能变化。

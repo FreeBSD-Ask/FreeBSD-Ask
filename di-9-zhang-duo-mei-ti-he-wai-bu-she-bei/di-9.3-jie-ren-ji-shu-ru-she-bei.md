@@ -67,11 +67,3 @@ usbhid 驱动最早出现于 FreeBSD 13.0。[FreeBSD 代码审查 D45658](https:
 ## 附录：Fn 键设置
 
 - David Schlachter. Adjusting acpi_video brightness increments on FreeBSD[EB/OL]. 2020-03-12. <https://www.davidschlachter.com/misc/freebsd-acpi_video-thinkpad-display-brightness>. 介绍在 FreeBSD 上调整 ACPI 视频亮度增量的具体方法，适用于 ThinkPad 等笔记本电脑。
-
-## 课后习题
-
-1. 在 QEMU 中测试 FreeBSD 15.0 的键鼠驱动，对比 usbhid 与 ums 驱动的响应差异。
-
-2. 使用 xinput 工具列出系统中所有输入设备及其属性。
-
-3. 修改系统默认的触摸板行为（如禁用轻触点击或调整灵敏度），验证其行为变化。
