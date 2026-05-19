@@ -106,7 +106,7 @@ OpenBSD 采用 LLVM/Clang 项目构建系统，默认 shell 为 ksh（基于 pdk
 
 相较于其他 BSD 系统，OpenBSD 的设计取向更偏向安全性（例如移除了 Linux 兼容层，用 doas 替代 sudo，并默认 [限制超线程](https://marc.info/?l=openbsd-tech\&m=153504937925732\&w=2)）。对于此，用户体验则见仁见智（整个系统在性能方面表现相对保守，例如包管理器运行速度较慢），毕竟这样的后果之一是软件相对较少，不仅远远落后于 FreeBSD，甚至比起 NetBSD 也略逊一筹。不过，OpenBSD 以极少量的人力和物力维护了 amd64/i386、arm64/armv7 及 riscv64 等诸多架构，是一款实实在在的通用操作系统。为了拓展桌面用户，也打包了 GNOME、MATE 和 XFCE 等桌面环境以及 Blender、Firefox、Krita 和 LibreOffice 等一大批软件。未来，OpenBSD 有望在保持安全特性的前提下逐步优化性能，拓展其使用场景。
 
-在中文互联网上，OpenBSD 被不少人熟知，概因一条让人感慨万千的新闻——在 2014 年，[OpenBSD 项目因欠缴电费，面临关停的风险](https://marc.info/?l=openbsd-misc\&m=138972987203440\&w=2)，但是 OpenBSD 开发的软件几乎所有使用互联网的人每一刻都在使用——OpenSSH 是 OpenBSD 的子项目，这也很常见，整个开源生态都是由少数项目撑起来的，并且可能仅有不到个位数的人在进行维护，但他们往往得不到应有的重视，却践行了自己的开源使命。危机最终由罗马尼亚比特币企业家 Mircea Popescu 捐赠的 2 万美元化解。此后，包括国内罗永浩的 [锤子科技](https://undeadly.org/cgi?action=article\&sid=20161123193708) 在内的多家企业与个人也陆续向 OpenBSD 基金会捐款。
+在中文互联网上，OpenBSD 被不少人熟知，概因一条让人感慨万千的新闻——在 2014 年，[OpenBSD 项目因欠缴电费，面临关停的风险](https://marc.info/?l=openbsd-misc\&m=138972987203440\&w=2)，但是 OpenBSD 开发的软件几乎所有使用互联网的人每一刻都在使用——OpenSSH 是 OpenBSD 的子项目，这也很常见，整个开源生态均由少数项目支撑，并且可能仅有不到个位数的人在进行维护，但他们往往得不到应有的重视，却践行了自己的开源使命。危机最终由罗马尼亚比特币企业家 Mircea Popescu 捐赠的 2 万美元化解。此后，包括国内罗永浩的 [锤子科技](https://undeadly.org/cgi?action=article\&sid=20161123193708) 在内的多家企业与个人也陆续向 OpenBSD 基金会捐款。
 
 很多人对 OpenBSD 有着深深的误解，认为资金或人力不足影响了其开发进度，或者认为其只关注安全而忽视其他方面。然而事实恰恰相反，OpenBSD 在驱动方面实现了现代化（DRM 同步至 Linux 6.12.50，已支持 Intel AX200/AX210 等 Wi-Fi 6/6E 适配器的 [iwx 驱动](https://man.openbsd.org/iwx.4)——但需注意，该驱动目前仅以 802.11ac 模式运行，尚未实现 802.11ax 协议功能），还支持了 [UFS](https://man.openbsd.org/ufshci.4)（Universal Flash Storage）。这表明资金和人力固然重要，但并非决定性因素。这个世界是由广大的草台班子组成的，还是由学院派精英构成，这永远是一个值得深思的问题。
 
