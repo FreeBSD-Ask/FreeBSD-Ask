@@ -28,7 +28,7 @@ DRM 是 Linux 内核的子系统，负责与现代显卡的 GPU 交互。FreeBSD
 
 > **技巧**
 >
-> 自 DRM 6.12 起，DG2 Arc 显卡可以正常工作，参见：<https://github.com/freebsd/drm-kmod/pull/427>.
+> Arc DG2 显卡最迟自 DRM 6.12 起可正常工作，参见：<https://github.com/freebsd/drm-kmod/pull/427>.
 
 显卡支持情况：
 
