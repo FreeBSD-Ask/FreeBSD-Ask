@@ -153,7 +153,7 @@ usr/lib/clang/18.1.8/include
 >
 > 先更新到当前版本最新的补丁版本（如 `X.Y-RELEASE-pN`），然后再更新到最新的点版本（如 `X.Z-RELEASE`）。
 
-接下来：更新到最新的点版本及该点版本上最新的补丁版本（如 `X.Z-RELEASE-pN`）
+接下来，更新到最新的点版本及该点版本上最新的补丁版本（如 `X.Z-RELEASE-pN`）
 >
 > 最后：完成大版本（`X.Z-RELEASE-pN`——>`A.0-RELEASE`）的更迭。
 >
