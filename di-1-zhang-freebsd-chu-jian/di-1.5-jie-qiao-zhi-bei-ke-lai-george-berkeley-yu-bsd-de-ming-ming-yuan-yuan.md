@@ -240,7 +240,7 @@ Fiat Lux 出自拉丁文圣经“1.3：Dixitque Deus: Fiat lux. Et facta est lux
 
 伯克利分校孕育了 BSD、RISC-V、RAID 等重要的计算机技术。以 FreeBSD 为代表的 BSD 操作系统所体现的开源精神（即 BSD 许可证不像 GPL 许可证那样具有“传染性”，不强制使用者开源），致力于知识共享，让技术得到尽可能广泛的应用以产生最大社会效益，忠实恪守了“Fiat Lux”的精神。
 
-如同光一样，BSD 技术渗透在诸多领域而不为人所熟知，从 iPhone 到新能源汽车车机，从索尼 PS5 到 Netflix，都有其身影。
+BSD 技术如同光一样，遍布诸多领域却不为人所熟知，从 iPhone 到新能源汽车车机，从索尼 PS5 到 Netflix，都有其身影。
 
 唯有真正理解“Fiat Lux”，才能领悟为什么是 BSD，为什么是 FreeBSD。
 
