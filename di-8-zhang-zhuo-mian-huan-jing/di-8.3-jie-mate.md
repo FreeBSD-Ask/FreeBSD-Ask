@@ -80,8 +80,6 @@ IBus 输入法框架测试可用，参见输入法相关章节完成具体配置
 
 ## 桌面欣赏
 
-![FreeBSD 安装 MATE](../.gitbook/assets/cinnamon1.png)
-
 ![FreeBSD 安装 MATE](../.gitbook/assets/mate2.png)
 
 ![FreeBSD 安装 MATE](../.gitbook/assets/mate3.png)
