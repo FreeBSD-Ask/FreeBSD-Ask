@@ -4,6 +4,8 @@
 
 - 2026.5.19
   - 非理论章节删除课后习题
+  - “1.5 乔治·贝克莱（George Berkeley）与 BSD 的命名渊源”与“1.6 加州大学伯克利分校与“要有光”（Fiat Lux）”合并为“1.5 乔治·贝克莱（George Berkeley）与 BSD 文化传统”
+  - 新增“1.6 其他 BSD 发行版概述”
 - 2026.5.18
   - 删除：8.9 bspwm，原因：无法复现，存在逻辑错误
   - 如果 CDE 维护者未在 2027 年 1 月前接纳中文补丁，将移除 CDE。参见 [#2157](https://github.com/FreeBSD-Ask/FreeBSD-Ask/pull/2157)。

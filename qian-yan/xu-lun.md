@@ -21,7 +21,7 @@
 
 ## 本书的组织结构
 
-**第 1 章 FreeBSD 初见**：介绍 UNIX 的起源与发展，涵盖 GNU 操作系统与自由软件运动、Linux 与类 UNIX 系统的关系，以及 FreeBSD 的命名渊源与历史背景。
+**第 1 章 FreeBSD 初见**：介绍 UNIX 的起源与发展，涵盖 GNU 操作系统与自由软件运动、Linux 与类 UNIX 系统的关系，以及 FreeBSD 的命名渊源与历史背景、其他 BSD 发行版概述。
 
 **第 2 章 FreeBSD 安装基础**：指导使用 FreeBSD 内置安装工具 `bsdinstall` 完成系统安装，涵盖 VMware、VirtualBox、Hyper-V 等虚拟化平台上的安装方法、安装故障排除，以及 USB 启动盘恢复为普通存储设备的方法。
 
