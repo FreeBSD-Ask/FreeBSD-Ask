@@ -171,7 +171,7 @@ FreeBSD 不仅在生命周期内不变，大版本更新也具有连贯性和稳
 - 由于 Ports 系统的存在，旧版 FreeBSD 系统仍能正常获取并编译软件，并非在达到生命周期终点（EoL）后便无法获得软件更新。
 - 在 FreeBSD 项目中，文档不再是附属品。FreeBSD doc 项目与 src 项目是同等地位的，不分高下。
 - 可便捷地为根分区（**/**）配置使用 ZFS 文件系统。ZFS 被公认为功能最为完备的文件系统之一。
-- 接近 2 年的版本发布周期和 4 年的维护周期（自 FreeBSD 15 起由原先的 5 年调整为 4 年）保障了 FreeBSD 的稳定性。
+- 约 2 至 3 年的版本发布周期和 4 年的维护周期（自 FreeBSD 15 起由原先的 5 年调整为 4 年）保障了 FreeBSD 的稳定性。
 - Jail 与 bhyve 虚拟化不需要额外安装和维护底层虚拟化栈，也不需要为每个实例启动完整的操作系统内核和用户空间，节约系统资源。
 - 传统的 BSD init 引导，回归简单，回归真实可见的纯文本。
 - DTrace 框架与 GEOM 存储框架。
@@ -243,7 +243,7 @@ GNOME、Xorg（X11）、D-Bus、systemd、PulseAudio、Wayland、PipeWire 等主
 
 ### 源代码存储库
 
-FreeBSD 项目历史悠久，其版本控制工具历经 CVS、SVN、Git。多年来，FreeBSD 的中央源代码树由 CVS（Concurrent Versions System）维护。CVS 免费提供源代码控制功能。2008 年 6 月，项目切换至 SVN（Subversion），因为随着源代码树的快速扩张和已存储历史记录的大量增加，CVS 的技术局限性日益明显。文档项目和 Ports 集合的存储库也分别于 2012 年 5 月和 2012 年 7 月从 CVS 迁移至 SVN。2020 年 12 月，项目将源代码和文档存储库迁移至 Git，Ports 集合随后于 2021 年 4 月完成迁移。目前使用 Git 进行协作开发。
+FreeBSD 项目历史悠久，其版本控制工具历经 CVS、SVN、Git。多年来，FreeBSD 的中央源代码树由 CVS（Concurrent Versions System）维护。CVS 免费提供源代码控制功能。2008 年 6 月，项目切换至 SVN（Subversion），因为随着源代码树的快速扩张和已存储历史记录的大量增加，CVS 的技术局限性日益明显。文档项目和 Ports 集合的存储库也分别于 2012 年 5 月和 2012 年 7 月从 CVS 迁移至 SVN。2020 年 12 月项目完成 Git 仓库转换测试，2021 年 4 月正式将源代码和文档存储库迁移至 Git，Ports 集合也同步完成迁移。目前使用 Git 进行协作开发。
 
 FreeBSD 项目的存储库分为三个：freebsd-src（源代码）、freebsd-ports（Ports 软件移植）、freebsd-doc（文档）。三个项目地位平等。
 
