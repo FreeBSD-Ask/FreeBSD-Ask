@@ -359,7 +359,7 @@ English
 - Carse J P. 有限与无限的游戏: 一个哲学家眼中的竞技世界[M]. 马小悟, 余倩, 译. 北京: 电子工业出版社, 2019. ISBN: 978-7-121-36425-9. 该书以游戏视角重新审视人类社会活动与文化现象。
 - 尼采. 善恶的彼岸[M]. 赵千帆, 译. 北京: 商务印书馆, 2015: 146. ISBN: 978-7-100-11749-4. “与恶龙缠斗过久，自身亦成为恶龙；凝视深渊过久，深渊将回以凝视”出自第 §146。
 - Sudo Project. Legacy Releases of sudo[EB/OL]. [2026-04-17]. <https://www.sudo.ws/releases/legacy/>. 记载 sudo 1.7.1 于 2009 年 4 月 19 日发布，首次引入 pwfeedback 选项。
-- Ferrari S.p.A. Great Ferrari Innovations: The F1 semi-automatic gearbox[EB/OL]. (2022-02-04)[2026-04-17]. <https://www.ferrari.com/en-EN/magazine/articles/great-ferrari-innovations-the-f1-semi-automatic-gearbox>. 1989 年 Ferrari 640 赛车首次搭载半自动序列式变速箱(由 John Barnard 设计)，终结了 F1 手动换挡时代。
+- Ferrari S.p.A. Great Ferrari Innovations: The F1 semi-automatic gearbox[EB/OL]. (2022-02-04)[2026-04-17]. <https://www.ferrari.com/en-EN/magazine/articles/great-ferrari-innovations-the-f1-semi-automatic-gearbox>. 1989 年 Ferrari 640 赛车首次搭载半自动序列式变速箱（由 John Barnard 设计），终结了 F1 手动换挡时代。
 - Fédération Internationale de l'Automobile. Formula One technical regulations 1995[EB/OL]. (1995)[2026-04-17]. <https://historicdb.fia.com/sites/default/files/regulations/1728484024/formula_one_techical_regulations_1995.pdf>. 技术规范。
 - Fédération Internationale de l'Automobile. Formula 1 technical regulations 2020[EB/OL]. (2020)[2026-04-17]. <https://api.fia.com/sites/default/files/2021_formula_1_technical_regulations_-_iss_6_-_2020-10-30.pdf>. 技术规范。
 - Fédération Internationale de l'Automobile. FIA Formula Regional technical regulations 2024[EB/OL]. (2024)[2026-04-17]. <https://api.fia.com/sites/default/files/2025_fia_formula_regional_technical_regulations_-_issue_2_-_2024.12.11.pdf>. 技术规范。
