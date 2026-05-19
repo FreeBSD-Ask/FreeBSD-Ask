@@ -1,72 +1,441 @@
-# 1.6 加州大学伯克利分校与“要有光”（Fiat Lux）
+# 1.6 其他 BSD 发行版
 
-本节聚焦于加州大学伯克利分校的校训“Fiat Lux”（Let There Be Light，要有光）。“Fiat Lux”也可以意译为“让世界充满光明”。加州大学伯克利分校的诸多奖项均以“Fiat Lux”命名。
+## NetBSD 项目概述
 
-加州大学伯克利分校成立于 1868 年，是一所公立大学。同年，后来担任中国近代第一所国立大学——北京大学（前身京师大学堂，成立于 1898 年）校长的蔡元培诞生。他“要有良好的社会，必先有良好的个人，要有良好的个人，就要先有良好的教育”的观点，与“Fiat Lux”所倡导的以个人进步推动社会发展的理念不谋而合。蔡元培被尊为北大“永远的校长”。同年，日本启动明治维新，迈入新时代并走上现代化道路，然而这一进程也为日本未来的侵略战争埋下了伏笔。
+在前述章节介绍 FreeBSD 系统的基础上，本附录转向 BSD 家族的另一重要成员 NetBSD。NetBSD 是一个开源、可移植的类 UNIX 操作系统，作为 BSD 家族的重要成员，它起源于 4.3BSD NET/2 和 386BSD，其首个版本 0.8 发布于 1993 年 4 月 19 日（此后也引入了 4.4BSD-Lite 的变更）。
 
-Fiat Lux 出自拉丁文圣经“1.3：Dixitque Deus: Fiat lux. Et facta est lux.”（圣经武加大译本）。“And God said, ‘Let there be light,’ and there was light.”（NIV 版圣经）“1.3：神说、要有光、就有了光。”（《和合本圣经》）
+NetBSD 的学术渊源可追溯至加州大学伯克利分校（UC Berkeley）的 Berkeley Software Distribution（BSD）项目，在操作系统可移植性研究领域具有重要地位。
 
-依据经文，先有光，后有世界。在基督教神学中，上帝先于人类创造了光，这真理之光照耀世人，也被视作人类理性的源泉。
+本节系统介绍 NetBSD 的技术特性、生态系统及实践应用。
 
-作为校训，“Fiat Lux”意味着以知识启蒙世人。正如柏拉图的光照说，知识就像太阳照耀着世界，驱散无知的黑暗。这代表着学生要用知识改造世界，祛除灰暗。然而，光明所至，阴影亦必随行。
+### 技术特性与生态系统
 
-尼采指出，“与恶龙缠斗过久，自身亦成为恶龙；凝视深渊过久，深渊将回以凝视”。
+NetBSD 的[口号](https://www.netbsd.org/about/portability.html) 是“Of course it runs NetBSD”（意为“当然可以运行 NetBSD”），这一口号集中体现了其在跨平台兼容性方面的核心技术追求。
 
-此校训也时刻警醒学生，需注意自身及周遭环境，避免重蹈苏格拉底的覆辙：苏格拉底试图让人们承认自己实际上一无所知，拥有的只是意见而非真理。这与老子《道德经》所言“光而不耀”有相通之处。
+NetBSD 支持[多种架构](https://wiki.netbsd.org/ports/)。其中，一级架构（Tier I）为官方战略重点支持的平台，二级架构（Tier II）为社区自主演进维护的平台。目前 NetBSD 支持 9 个一级架构和 49 个二级架构，其架构支持广度在同类操作系统中处于领先地位。
 
-它警示人们应避免将学术卷入意识形态纷争。然而，在当今美国强调身份政治的氛围下，加州大学伯克利分校图书馆以平等与包容为由，摘除了乔治·贝克莱的画像（因其曾购买奴隶）。而伯克利分校（UC Berkeley）之名正源自贝克莱（Berkeley）。此举与其一贯追求的自由理念相悖，也有违儒家孔子“名不正，则言不顺；言不顺，则事不成”的名正思想。这促使人们反思：初心是否已被遗忘？对黑暗的恐惧是否仍然存在？
+NetBSD 主要面向技术爱好者和开发者，对于普通用户来说具有一定的学习曲线，开发者构成了该系统的核心用户群体。
 
-现代科学对光的认识也异常曲折。研究表明，光同时具有波动性和粒子性。科学研究光的范式不断演变，“Fiat Lux”的精神内涵也随之变化。创校之初，伯克利定位为教育的灯塔；如今则强调每位学生作为独立光源的价值。2024 年的一项研究表明，光也存在影子。
+NetBSD 开发的 [pkgsrc](https://www.pkgsrc.org/) 包管理器框架也支持 macOS、Linux 等多个操作系统。pkgsrc 通过可移植的构建脚本实现跨平台软件管理，体现了 NetBSD 在可移植性软件工程方面的设计理念。
 
-“Fiat Lux”意味着，接受教育、获取知识不仅能改变个人命运，也能改变人类文明的进程。然而，这引出若干哲学追问：启蒙真的是可能的吗？教育是可能的吗？康德认为，“启蒙运动就是人类脱离自己所加之于自己的不成熟状态。”但问题在于，人们真的有勇气承认自己是不成熟的、无知的、愚昧的吗？人们真的愿意以知识的痛苦换取无知的快乐吗？柏拉图笔下洞穴中的人，真的愿意挣脱铁链，回到大地接受光明吗？有责任、有义务、有能力启蒙所有人吗？人人如龙可能吗？这对他们来说是快乐的吗？那些受过现代高等教育的人，是否仍处于“有学识的无知”状态？他们究竟是光，还是暗？是否将现代科学与光简单画等号，而无视了现代科学自身理论根基的未固？
+NetBSD 提供 Linux 兼容层，可运行部分 Linux 二进制程序，主要支持命令行工具和基础图形应用。
 
-叔本华认为，许多人将圆滑世故视为成熟，而这实际上只是另一种不成熟。“Fiat Lux”号召学生永葆赤子之心，追求自由与理想。它鼓励学生不仅止于言说，更重于实践。
+在硬件驱动方面，NetBSD 自带 i915 显卡驱动和 AMD 相关驱动，并支持 UEFI 启动和 NVMe 存储设备。
 
-作为公立大学，Fiat Lux 意味着鼓励学生投身于加州地区乃至美国的建设，提高美国人民的受教育水平，伯克利分校的助学政策使约 38% 的本科生无需自付学费（加州大学系统整体则有 54% 的加州籍本科生免学费），旨在保障所有人接受高等教育的权利，使其不因经济拮据而放弃学业，从而实现大学的教育使命。加州大学伯克利分校在 2025 年的 QS 世界排名为第 12 名。加州大学伯克利分校已诞生 63 位 [诺贝尔奖](https://inspire.berkeley.edu/get-inspired/nobels/)得主，切实履行了大学的学术责任。
+NetBSD 对 NVIDIA 显卡大致支持到 Pascal 架构（GeForce GTX 10 系列）。相关信息可参考 [nouveau / NetBSD](https://nouveau.freedesktop.org/NetBSD.html) 和 [nouveau(4) - NetBSD Manual Pages](https://man.netbsd.org/nouveau.4)（具体硬件支持列表）。
 
-《说文解字》载：“光，明也”。Fiat Lux 意味着追求光明与正义。加州大学伯克利分校学子也始终通过反对越南战争、言论自由运动等一系列运动践行校训。作为中国教育史上的丰碑，国立西南联合大学，其纪念碑碑文载“河山既复，日月重光，联合大学之战时使命既成，奉命于三十五年五月四日结束。”在艰苦卓绝的环境中仍旧保留着学术的火种，散发着大学的光芒。国立西南联大存续时间虽短，却令人久久难忘。学生们或投笔从戎，或勤奋苦学以立志报国。“Fiat Lux”同时也是数十所其他高校的校训。国立西南联合大学的校训是“刚毅坚卓”，虽无“光”字，但师生皆化为光，推动中国现代化的进程。而今再也找不到西南联大了。
+### 项目支持渠道
 
-光也是流行文化中的核心元素之一。《迪迦奥特曼》剧中沙耶香说“每个人心里都有黑暗面，但是也有光明的一面！现在，我已经可以相信，只要努力到最后不轻言放弃，我相信人类，一定能够创造出光明的未来，也能创造出美好的生命。只要珍惜重要的东西，我相信一定能够办到！”正是对“追求光”“要有光”这一主题的深入诠释，使这部特摄作品在奥特曼系列中具有独特的思想深度。作品深刻探讨了诸多社会问题，如环境保护与能源开发的张力、城市化与乡村保护、战争与和平、宇宙探索等。剧中更指出，光明亦可能是极致的黑暗：面对类似《黑客帝国》中的“红蓝药丸”选择，人们是否愿意承认，美好世界或许只是一场空？（45 话《生命永存》）在邪恶迪迦篇章中，真角大古（マドカ ダイゴ）与正木敬吾（マサキ•ケイゴ）之间的张力，象征着光与影的矛盾，阐明光本身并无正邪之分，光影本是一体。《圣经》中，上帝创造了光，而在本作大结局中，只要心有光，人人都可以成为光，成为迪迦奥特曼。迪迦奥特曼乃至于整个奥特曼作品中，都涉及了正义问题。关于如何定义正义目前存在争议，引申问题则是道德的形成。若认为道德是约定俗成的，那么正义的定义便是因时因地而异的。比如基督教和本土国家的礼仪冲突。还有一种观点认为正义等词语是弱者用来欺骗奴役强者的谎言。实现自身能力的强者才是正义。如果认为道德是统治者意志的化身，那么正义的定义就来源于统治本身的合法性与基础。如果认为道德来自神，那么正义的定义是按上帝的旨意行事。如果认为道德是幻觉，根本不存在，那么正义本身即非正义。如果认为道德来自社会契约，那么正义即遵守法律。是什么使之成为正义？正义是否必然获得正向的道德评价与价值判断？是否承认有一些不因时因地而变化的永恒的道德准则？例如，“任何时候都不能杀人”。在某些观点看来，奥特曼打怪兽的行为可能是非正义的（例如，若地球人并非原住民，怪兽未造成实际损害，或怪兽本身是人类受害者转变而来等）。此外，正义与幸福或至高快乐之间是否存在必然联系？《迪迦奥特曼》深入探讨了这些哲学议题。其他奥特曼作品大多聚焦于单纯的战斗，即使是接续《迪迦奥特曼》的《戴拿奥特曼》《盖亚奥特曼》亦如此。迪迦奥特曼的不同之处在于他认识到了正义的多元化与不确定性，甚至在不同的设定中，迪迦奥特曼在远古曾是邪恶的化身。作品也深入探讨了天赋（大古具有巨人的 DNA 等），出身与个人努力之间的张力。该作并未简单地将怪兽定义为邪恶与非正义，也未主张必须消灭所有怪兽。这种简单的观点，只会让作品退化为类似 PVP 游戏的高级录像或单纯的玩具广告。抵抗大众化与娱乐化都难免失败，但不抵抗甚至纵容又令人遗憾。
+为 NetBSD 项目提供支持，最简单的方式是通过 [GitHub Sponsors](https://github.com/sponsors/netbsd) 进行捐赠。~~还能获得一个 GitHub 徽章~~ [~~Public Sponsor~~](https://github.com/orgs/community/discussions/19916)~~。~~
 
-在动漫作品《日常系的异能战斗》第 7 集 10-13 分中，角色栉川鸠子说道“血腥有什么帅的？疯狂有什么好的，我不明白！罪孽深重是什么意思？黑暗又是什么？黑暗就好吗？！正义和邪恶，为什么邪恶更好？为什么坏的反而是好的？！坏不就是因为它坏才叫坏的吗？！”一种观点认为栉川鸠子的话表达了朴素的道德直觉，而男主角安藤寿来的论述则流于表面修辞（中二病发作）。然而，这一判断本身值得重新审视。人们常先入为主地将某些事物视为神圣且毋庸置疑的，而实际上它们可能未经任何严肃的思考与论证。光明之所以是好的，仅仅因为它能照亮事物，而黑暗仅是光明的缺失吗？究竟什么是正义，是柏拉图《理想国》中讨论了数百页而未决的问题。难道仅凭“好”就能断定正义值得追求和向往吗？强迫别人接受光明，走出洞穴，真的是好的，是所谓正义吗？而洞穴中的生活，就一定是邪恶与黑暗的吗？难道能否认，他们身处洞穴之中，或许确实感到快乐这个事实吗？
+> **技巧**
+>
+> 支付后支付方式将绑定，如需解除绑定，可联系 GitHub 客服 [提交工单](https://support.github.com/)，通常在一个工作日内即可处理。
 
-康德限制了自由的地盘以保护人们的道德，但终究是不可知的。光，或许从未真正存在过。现实是，美国社会分化加剧，越来越多学生依靠贷款上学，甚至无家可归。加州大学系统屡次因生活成本问题爆发大规模学术罢工，校园治安环境不佳，校舍等基础设施也难以满足国际化校园的需求。伯克利校区的餐饮服务也曾因品质问题受到学生诟病。
+还可通过 [Donate using Stripe](https://www.netbsd.org/stripe.html) 进行捐赠，该方式支持中国银联、Google Pay 等多种支付方式。
 
-“Fiat Lux”精神不仅关乎教育与知识，同样渗透于伯克利的科技创新之中，并辐射至现代计算机技术领域。
+### NetBSD 上的 ZFS
 
-伯克利分校孕育了 BSD、RISC-V、RAID 等重要的计算机技术。以 FreeBSD 为代表的 BSD 操作系统所体现的开源精神（即 BSD 许可证不像 GPL 许可证那样具有“传染性”，不强制使用者开源），致力于知识共享，让技术得到尽可能广泛的应用以产生最大社会效益，忠实恪守了“Fiat Lux”的精神。
+ZFS（Zettabyte File System，泽字节文件系统）作为一个功能强大的企业级文件系统，在 NetBSD 上也有相应的实现。以下为相关资源：
 
-如同光一样，BSD 技术渗透在诸多领域而不为人所熟知，从 iPhone 到新能源汽车车机，从索尼 PS5 到 Netflix，都有其身影。
+* 手册页 [zfs(8) - NetBSD Manual Pages](https://man.netbsd.org/zfs.8)，提供 ZFS 文件系统的官方命令参考
+* [Finish ZFS](https://wiki.netbsd.org/projects/project/zfs/)，ZFS 移植项目进展报告
+* [Google 编程之夏 2007](https://developers.google.com/open-source/gsoc/2007?hl=zh-cn)，记录了 ZFS 引入计划的早期阶段
+* [Google Summer of Code zfs-port project](https://blog.netbsd.org/tnf/entry/google_summer_of_code_zfs)，ZFS 移植项目的官方技术报告
+* [Root On ZFS](https://wiki.netbsd.org/root_on_zfs/)，提供 ZFS 根分区安装指南
+* [NetBSD zfs Wiki](https://wiki.netbsd.org/zfs/)，NetBSD ZFS 维基，记录 NetBSD 引入 ZFS 代码的过程——最初从 OpenSolaris 移植，后续部分代码取自 FreeBSD，目前仍基于 illumos ZFS 实现（illumos 是 OpenSolaris 的后继开源项目，与 OpenZFS 存在功能差异），未集成 OpenZFS 新特性
 
-唯有真正理解“Fiat Lux”，才能领悟为什么是 BSD，为什么是 FreeBSD。
+在 NetBSD 源代码中，最早可见的 ZFS 提交为 [Import Opensolaris source code used with zfs port. Zfs code si from date](https://github.com/NetBSD/src/commit/c1cb2cd89c023350f357f813e12b526f6f71002f)。从代码提交量分析，该 ZFS 移植项目长期缺乏维护和更新。
 
-Fiat Lux!
+### 参考文献
 
-## 参考文献
+* The NetBSD Foundation. Information about NetBSD 0.8\[EB/OL]. \[2026-04-14]. <https://www.netbsd.org/releases/formal-0.8/>. NetBSD 项目官方发行页面。该页面记载 NetBSD 0.8 发布于 1993 年 4 月 19 日。
+* The NetBSD Foundation. NetBSD Portability\[EB/OL]. \[2026-04-14]. <https://www.netbsd.org/about/portability.html>. NetBSD 官方可移植性说明，阐述跨平台支持策略。
+* The NetBSD Foundation. Platforms Supported by NetBSD\[EB/OL]. \[2026-04-18]. <https://wiki.netbsd.org/ports/>. NetBSD 官方架构支持页面，当前有 9 个一级架构（Tier I）和 49 个二级架构（Tier II）。
+* The NetBSD Foundation. pkgsrc -- The NetBSD Packages Collection\[EB/OL]. \[2026-04-14]. <https://www.pkgsrc.org/>. pkgsrc 包管理器框架官方站点，提供跨平台软件管理方案。
+* The NetBSD Foundation. zfs(8) -- NetBSD Manual Pages\[EB/OL]. \[2026-04-14]. <https://man.netbsd.org/zfs.8>. NetBSD 上 ZFS 文件系统命令参考手册页。
+* The NetBSD Foundation. NetBSD ZFS Wiki\[EB/OL]. \[2026-04-14]. <https://wiki.netbsd.org/zfs/>. NetBSD ZFS 维基，记录 ZFS 移植进展与使用指南。
+* Nouveau Wiki. Feature Matrix\[EB/OL]. \[2026-04-16]. <https://nouveau.freedesktop.org/FeatureMatrix.html>. Nouveau 驱动功能支持列表，列出了各 GPU 架构的功能比较。
+* Nouveau Project. CodeNames\[EB/OL]. \[2025-04-17]. <https://nouveau.freedesktop.org/CodeNames.html>. nouveau GPU 架构与代号映射表。
 
-- University of California, Berkeley. Fiat Lux Scholarship[EB/OL]. [2026-03-25]. <https://financialaid.berkeley.edu/types-of-aid-at-berkeley/scholarships/fiat-lux-scholarship/>. 为加州大学伯克利学生提供经济资助的奖学金项目。
-- 北京大学校史馆. 蔡元培像[EB/OL]. [2026-03-25]. <https://www.xsg.pku.edu.cn/details/1893.html>. 展示蔡元培先生塑像。
-- 山本四郎. 小川又次稿:清国征讨策案[J]. 日本史研究, 1964(75). 随着明治维新，国力渐增，日本逐步迈上了对外侵略扩张的军国主义道路，1887 年，日本参谋本部制定了所谓“清国征讨策略”，逐渐演化为以侵略中国为中心的“大陆政策”。
-- 蔡元培. 蔡元培：言有物，行有伦[M]. 北京: 中国文史出版社, 2023. ISBN: 978-7-5205-3816-9. 阐述蔡元培教育思想与文化理念。
-- Piazza L, Lummen T T A, Quiñonez E, et al. Simultaneous observation of the quantization and the interference pattern of a plasmonic near-field[J]. Nature Communications, 2015, 6: 6407. 揭示等离子体近场的量子化与干涉现象。
-- Kant I. 历史理性批判文集[M]. 何兆武,译. 天津: 天津人民出版社, 2014: 22. 答复这个问题：“什么是启蒙运动？”. ISBN: 978-7-201-08641-5. 系统阐述启蒙运动的哲学内涵与历史意义。
-- University of California, Berkeley Library. Portrait of UC Berkeley namesake no longer on display in Doe Library[EB/OL]. [2026-03-25]. <https://www.lib.berkeley.edu/about/news/george-berkeley-portrait>. 记录大学校园历史争议与文化反思。
-- 尼采. 善恶的彼岸[M]. 赵千帆,译. 北京: 商务印书馆, 2015. ISBN: 978-7-100-11749-4. 探讨道德哲学与价值重估的核心命题。
-- 松原信吾,村石宏实,川崎乡太,等,导演. 迪迦奥特曼[V]. 日本:圆谷株式会社,1996. 第 47 集《告别黑暗》，梅塔莫尔加登场，第 21 分钟，沙耶香。通过特摄作品探讨光明与黑暗的辩证关系。
-- 清华大学. 国立西南联合大学纪念碑碑文[EB/OL]. [2026-03-25]. <https://www.tsinghua.org.cn/info/1952/17852.htm>. 记载西南联大历史使命与学术精神。
-- 闻黎明. 西南联大与现代中国（1937~1946）[M]. 北京: 社会科学文献出版社, 2023. ISBN: 978-7-5201-9805-9. 全面研究西南联大历史地位与文化影响。
-- 大冢雅彦,高桥正典,清水久敏,等,导演. 日常系的异能战斗(異能バトルは日常系のなかで)[V]. 日本:泉光高中文艺部,2014. 以校园日常为背景的动画作品，其中角色对正义与邪恶的质问构成了本节讨论的引用来源。
-- Abrahao R A, Morin H P N, Pagé J T R, et al. Shadow of a laser beam[J]. Optica, 2024, 11(11): 1549-1555. 实验证明激光束存在阴影的光学现象（论文指出，光也有影子）。
-- University of California, Berkeley. Nobelists[EB/OL]. [2026-04-16]. <https://inspire.berkeley.edu/get-inspired/nobels/>. 记载“By our count, there are 63 Berkeley Nobelists”。
-- University of California, Berkeley. History & discoveries[EB/OL]. [2026-04-18]. <https://www.berkeley.edu/about/history/>. 加州大学伯克利分校官方校史，1868 年建校。
-- University of California. Tuition & financial aid[EB/OL]. [2026-04-18]. <https://admission.universityofcalifornia.edu/tuition-financial-aid/>. 加州大学系统官方学费与资助信息，54% 加州籍本科生免学费。
-- University of California, Berkeley. Cost[EB/OL]. [2026-04-18]. <https://admissions.berkeley.edu/cost/>. 伯克利分校官方招生页面，38% 本科生无需自付学费。
-- Patterson D A, Gibson G, Katz R H. A Case for Redundant Arrays of Inexpensive Disks (RAID)[R]. Berkeley: University of California, EECS Department, 1987. CSD-87-391. 加州大学伯克利分校技术报告，首次提出 RAID 概念。
-- Asanović K, Waterman A, Lee Y. RISC-V ISA[EB/OL]. RISC-V International, [2026-04-18]. <https://riscv.org/about/>. RISC-V 指令集架构始于 2010 年加州大学伯克利分校 Par Lab 项目。
-- 北京大学. 北京大学简介[EB/OL]. [2026-04-18]. <https://www.pku.edu.cn/about.html>. 北京大学官方页面，1898 年建校，初名京师大学堂。
+## OpenBSD 项目概述
 
-## 课后习题
+OpenBSD 是 BSD 家族中的重要成员，自 1995 年诞生以来，始终以“安全性优先”为设计理念，其发展历程与开源运动、网络安全以及软件工程方法论密切相关。
 
-1. 编写加州大学伯克利分校校史。
-2. 编写国立西南联合大学校史。
-3. 观看纪录片《在伯克利》（怀斯曼 F, 导演. 在伯克利[V]. 美国: Zipporah Films, 2013.），归纳影片中加州大学伯克利分校在学术治理与教育理念方面的核心特征。
+### 语录摘选
+
+#### Theo de Raadt（OpenBSD 创始人）
+
+> Linux 那群人这样做是因为他们恨微软。我们这样做是因为我们热爱 Unix。
+
+> 这玩意儿垃圾得不行（指 Linux），大家还都在用，完全没意识到问题有多大。那些搞 Linux 的也不想着停下来好好改一改，只知道接着用、继续往上堆砌功能，没人愿意说一句：“这玩意儿真是个垃圾，咱们得重新造轮子。”
+
+> 我偶尔会浏览 DragonFlyBSD 的代码，看看有没有什么东西 OpenBSD 可以用，但迄今为止我还没有发现任何东西。
+
+> 我们面临的最大问题是人们会将 GPL 套在我们的代码上，以同样的方式（此处指以 GPL 许可重新分发 BSD 代码，该代码后续将无法合并回原有 BSD 项目）将我们排除在外。……我们有很多公司一直在回馈代码。但是一旦代码被 GPL 化，我们就无法再获取它。
+
+#### 林纳斯·托瓦兹 Linus Torvalds（Linux 创始人）
+
+> 我觉得 OpenBSD 那帮人就像一群自慰的猴子，整天将“我们专注安全”这事儿当回事儿炒作个不停。
+
+### OpenBSD 官方介绍
+
+OpenBSD 是一款功能完备的多平台类 UNIX 操作系统，基于伯克利网络发布版本 2（Networking Release 2，Net/2）和 4.4BSD-Lite。尽管该家族中有多个操作系统，但 OpenBSD 以“安全性”和“严谨性”优先而独树一帜。OpenBSD 团队致力于实现“默认安全”状态，这意味着 OpenBSD 用户可以确信，新安装的系统不会轻易遭到入侵。通过积极的安全策略，OpenBSD 实现了这一目标。
+
+由于安全漏洞本质上是设计或实现中的错误，OpenBSD 团队不仅注重新代码的编写，也同样重视发现和修复现有的设计缺陷及实现的漏洞。因此，OpenBSD 系统不仅更加安全，也更加稳定。所有关键系统组件的源代码都经过检查，以防止远程访问、本地访问、拒绝服务、数据破坏以及信息收集等问题。
+
+除了修复漏洞，OpenBSD 还将强大的加密功能集成到基本系统中。OpenBSD 系统提供了功能齐全的 IPsec 实现，并支持常用协议，如 SSL 和 SSH。同时，OpenBSD 也内置了网络过滤和监控工具，例如包过滤、NAT 和桥接，以及多种路由服务，如 BGP 和 OSPF。为了满足高性能需求，系统还加入了对硬件加密的支持。尽管安全性通常被认为与可用性存在权衡，OpenBSD 提供尽可能多的安全选项，让用户在享受安全计算的同时，不会感到负担。
+
+由于 OpenBSD 源自加拿大，其加密组件（如 OpenSSH 和 IPsec）出口至全球不受限制。
+
+（注意：若 OpenBSD 进入美国，则不能从美国重新出口。因此，如果位于加拿大和美国以外地区，请勿从位于美国的镜像服务器获取发行版。）
+
+### OpenBSD 简介
+
+OpenBSD 也是一款类 UNIX 计算机操作系统，诞生于 1995 年，由南非出生的加拿大籍程序员 Theo de Raadt 从 NetBSD 复刻而来（他也是 NetBSD 的创始人之一）。根据现存的 [NetBSD 邮件列表](https://mail-index.netbsd.org/netbsd-users/1994/12/23/0000.html) 记载，他因言语不当和攻击他人被开除出核心小组。
+
+> 在 12 月 20 日（指 1994 年），NetBSD 项目中仅存的核心成员要求 Theo de Raadt 下台。这是一个极其艰难的决定，其原因在于 Theo 长期以来对 NetBSD 的用户与开发者表现出的无礼和辱骂行为。我们认为，作为 NetBSD 项目的代表不应有此类行为，并且这种行为从整体上来说对 NetBSD 造成了损害。
+>
+> 这个决定之所以艰难，是因为 Theo 曾长期为 NetBSD 作出积极贡献。他曾是 NetBSD SPARC 支持的主要维护者，并编写了大量代码，数不胜数。我们当然愿意接受（并且非常希望看到）Theo 今后仍为 NetBSD 做出贡献，但我们认为他不再适合继续作为 NetBSD 的“官方”代表。
+
+OpenBSD 每 6 个月发布一次新版本。
+
+OpenBSD 被广泛认为是世界上最安全的操作系统之一（另见 2014 年的德国电影 [*Who Am I – Kein System ist sicher*](https://www.imdb.com/title/tt3042408/) 即《[我是谁：没有绝对安全的系统](https://movie.douban.com/subject/25932086/)》）。OpenBSD 的口号是“Only two remote holes in the default install, in a heck of a long time!”（在如此漫长的时间里，默认安装下仅存在两个远程漏洞！）
+
+OpenBSD 采用 LLVM/Clang 项目构建系统，默认 shell 为 ksh（基于 pdksh，而非 David Korn 的原始 ksh88/ksh93）。OpenBSD 吉祥物是一只名为普菲（Puffy）的河豚。
+
+相较于其他 BSD 系统，OpenBSD 的设计取向更偏向安全性（例如移除了 Linux 兼容层，用 doas 替代 sudo，并默认 [限制超线程](https://marc.info/?l=openbsd-tech\&m=153504937925732\&w=2)）。对于此，用户体验则见仁见智（整个系统在性能方面表现相对保守，例如包管理器运行速度较慢），毕竟这样的后果之一是软件相对较少，不仅远远落后于 FreeBSD，甚至比起 NetBSD 也略逊一筹。不过，OpenBSD 以极少量的人力和物力维护了 amd64/i386、arm64/armv7 及 riscv64 等诸多架构，是一款实实在在的通用操作系统。为了拓展桌面用户，也打包了 GNOME、MATE 和 XFCE 等桌面环境以及 Blender、Firefox、Krita 和 LibreOffice 等一大批软件。未来，OpenBSD 有望在保持安全特性的前提下逐步优化性能，拓展其使用场景。
+
+在中文互联网上，OpenBSD 被不少人熟知，概因一条让人感慨万千的新闻——在 2014 年，[OpenBSD 项目因欠缴电费，面临关停的风险](https://marc.info/?l=openbsd-misc\&m=138972987203440\&w=2)，但是 OpenBSD 开发的软件几乎所有使用互联网的人每一刻都在使用——OpenSSH 是 OpenBSD 的子项目，这也很常见，整个开源生态都是由少数项目撑起来的，并且可能仅有不到个位数的人在进行维护，但他们往往得不到应有的重视，却践行了自己的开源使命。危机最终由罗马尼亚比特币企业家 Mircea Popescu 捐赠的 2 万美元化解。此后，包括国内罗永浩的 [锤子科技](https://undeadly.org/cgi?action=article\&sid=20161123193708) 在内的多家企业与个人也陆续向 OpenBSD 基金会捐款。
+
+很多人对 OpenBSD 有着深深的误解，认为资金或人力不足影响了其开发进度，或者认为其只关注安全而忽视其他方面。然而事实恰恰相反，OpenBSD 在驱动方面实现了现代化（DRM 同步至 Linux 6.12.50，已支持 Intel AX200/AX210 等 Wi-Fi 6/6E 适配器的 [iwx 驱动](https://man.openbsd.org/iwx.4)——但需注意，该驱动目前仅以 802.11ac 模式运行，尚未实现 802.11ax 协议功能），还支持了 [UFS](https://man.openbsd.org/ufshci.4)（Universal Flash Storage）。这表明资金和人力固然重要，但并非决定性因素。这个世界是由广大的草台班子组成的，还是由学院派精英构成，这永远是一个值得深思的问题。
+
+OpenBSD 软件包管理策略较为严格，过时的软件包会被移除。例如，用户几乎无法找到可用的图形显示管理器（GDM 除外）。
+
+OpenBSD 对 NVIDIA 显卡的支持，大致停留在 2009 年左右的 GT200 系列。参见：nv - NVIDIA video driver\[EB/OL]. \[2026-03-26]. <https://man.openbsd.org/nv.4>（具体硬件支持列表）。
+
+#### 文件系统
+
+**FFS（Berkeley Fast File System，伯克利快速文件系统）** 是一种高性能的 UNIX 文件系统，最早于 1983 年在 4.2BSD 中引入，通过优化数据块布局和索引节点设计提升文件 I/O 性能。
+
+OpenBSD 默认使用的文件系统 FFS 在实现上与 FreeBSD 的 UFS 属于同一体系。它们在挂载参数上保持一致。
+
+###### 参考文献
+
+* FreeBSD Project. ffs -- Berkeley fast file system\[EB/OL]. \[2026-04-02]. <https://man.freebsd.org/cgi/man.cgi?ffs(7)>. 详细介绍 FFS 文件系统的技术规范与实现原理，提供系统文件系统设计参考。
+* Leffler S J. Changes to the Kernel in 4.2BSD\[R]. University of California, Berkeley, 1983-07-25. 记载 4.2BSD 的内核变更，FFS 随该版本首次引入。4.2BSD 的正式发布时间为 1983 年 8 月，参见 MCKUSICK M K. Twenty Years of Berkeley Unix\[M]//SALUS P H, ed. Open Sources: Voices from the Open Source Revolution. Sebastopol: O'Reilly, 1999.
+* The Register. Romanian Bitcoin baron stumps up $20k to keep OpenBSD's lights on\[EB/OL]. (2014-01-20)\[2026-04-17]. <https://www.theregister.com/2014/01/20/openbsd_bailed_out/>. 记载 2014 年电费危机由 Mircea Popescu 捐赠 2 万美元化解。
+* OpenBSD Project. iwx(4) Device Drivers Manual\[EB/OL]. \[2026-04-16]. <https://man.openbsd.org/iwx>. OpenBSD iwx 驱动手册页，指出该驱动不支持 802.11ax 功能。
+* OpenBSD Project. OpenBSD 7.8 Release\[EB/OL]. (2025-10-22)\[2026-04-16]. <https://www.openbsd.org/78.html>. OpenBSD 7.8 发行说明，DRM 同步至 Linux 6.12.50。
+* OpenBSD Project. OpenBSD FAQ - Introduction to OpenBSD\[EB/OL]. \[2026-04-17]. <https://www.openbsd.org/faq/faq1.html>. OpenBSD 官方常见问题，记载默认 shell 为 ksh（基于 pdksh），而非 oksh。
+
+### 机遇与挑战
+
+#### 社区与协作
+
+与几位 OpenBSD 维护者和社区交流发现，部分维护者在技术讨论中态度较为坚持己见。例如，有用户反馈 KDE 5 无法正常启动并出现黑屏的情况，经过数月排查后，发现问题实际上出现在虚拟机环境中，尤其是在启用 UEFI 时才会触发该错误。
+
+另一个问题涉及 EFI 分区的处理。OpenBSD 安装器默认创建的分区布局在某些场景下可能不够合理，尤其在仅有 100 GB 磁盘空间时需要仔细规划。默认分区将空间划分得较为细致，实际操作中，例如执行 pkg\_add gnome，需要预留足够空间。在较早版本中，系统不允许用户在安装过程中自定义 EFI 分区：即使用户自行创建 EFI 分区，系统也无法识别。用户必须先让安装器创建默认 EFI 分区，然后手动删除其他分区，仅保留 EFI，才能继续进行自定义分区设置。直到 7.6 版本，这一方面才有所改进。
+
+OpenBSD 安装器在网络处理和错误恢复方面也存在一些可以改进的地方。例如，在安装过程中需要在线下载驱动，但下载失败时的错误处理机制可以更加完善；若用户尝试使用 Ctrl+C 中断，系统可能直接崩溃，只能重新开始安装；在断网状态下，安装器也可能卡在某一步，无法继续。
+
+以上问题已向相关开发者报告。在 KDE 5 移植相关的讨论中，也进行了技术探讨。
+
+#### 开发方式与协作流程
+
+OpenBSD 至今仍沿用传统开发方式，主要通过邮件列表进行协作。项目不接受 GitHub 上的 Pull Request（PR）。整个项目仍然使用 CVS（Concurrent Versions System）进行版本控制，CVS 对 HTTP 代理支持有限。对于许多现代开发者而言，SVN（Subversion）可能已经不太熟悉，更不用说更早期的 CVS 工作流。这种开发方式对新开发者造成了一定困扰。
+
+OpenBSD 的源代码大多缺少详细的注释和说明文件，初学者较难直接理解和学习。
+
+OpenBSD 的 Bug 报告缺乏统一的追踪和报告平台，反馈主要通过邮件列表提交，信息容易丢失。
+
+OpenBSD 的发行公告在结构和可读性方面有待改善，内容呈现较为简略，难以直接阅读。缺少 Wiki 或类似平台来跟踪具体子项目的开发进度。
+
+#### 不稳定的 ABI
+
+**ABI（Application Binary Interface，应用程序二进制接口）** 定义了编译后二进制代码与操作系统内核之间的交互规范，包括系统调用约定、数据结构布局和函数调用机制等。ABI 稳定性是确保跨版本二进制兼容性的关键因素。
+
+据 Rust 维护者反馈（[OpenBSD support](https://github.com/rust-lang/rustup/issues/2168)），OpenBSD 的 ABI 十分不稳定，与 Linux 内核严格保持用户空间 ABI 向后兼容的做法截然不同。因此，Rust 团队无法通过 `rustup` 向 OpenBSD 用户提供预编译的 Rust 工具链。
+
+目前，OpenBSD 用户只能通过 Ports 获取 Rust 工具链，或者拉取源代码自行编译。
+
+> OpenBSD 并不尝试保持向下兼容。在任意时刻，OpenBSD 仅支持两个稳定版本，同时提供一个频繁更新的开发版本，称为 `-current`。通常，较旧稳定版的二进制文件无法在较新的稳定版上运行。也无法保证上周构建的 `-current` 二进制文件能在本周的 `-current` 上正常运行。
+
+有人可能认为不同版本不兼容是正常现象，但需要注意 OpenBSD 的频繁发布周期。
+
+#### 安全考量
+
+在 OpenBSD 中，一些现代操作系统常见的安全模型或安全框架尚未得到支持：
+
+* 不支持安全启动和 TPM
+* 系统和软件包的构建流程尚不够清晰透明，且技术栈相对落后（例如 CVS 的维护明显不足）
+* 几乎未进行过任何合规性认证，甚至未采用 CIS 基准
+* 不支持访问控制列表（ACL），也不支持强制访问控制（MAC，Mandatory Access Control）框架
+* 未提供运行时完整性保护
+* 不支持多级安全（MLS，Multi-Level Security）和 Biba 完整性模型
+* 缺乏基于角色的访问控制（RBAC，Role-Based Access Control）机制
+* 缺乏前沿或权威学术论文对其安全性进行验证
+* 未进行独立的外部安全审计
+* 未获得任何形式的安全认证
+
+一项多年前的研究表明，OpenBSD 中的代码漏洞数量逐年减少，并且已发现的漏洞通常难以被利用进行攻击。（J. Shi, Zou D, Xu S, Deng X, Jin H. Does OpenBSD and Firefox’s Security Improve With Time?\[J]. IEEE Transactions on Dependable and Secure Computing, 2023, 20(4): 2781-2793. doi: 10.1109/TDSC.2022.3153325. 该研究通过时间序列分析验证了开源操作系统安全防护能力的持续改进。）
+
+OpenBSD 的安全策略基于以下判断：超线程机制可能带来潜在的安全风险。因此，其做法并非修补微码，而是直接将超线程功能禁用。其在安全模型和安全理念方面的洞察是否深入，需要更多研究加以验证。
+
+> **思考题**
+>
+> > 有的观点认为：“如果任何操作系统采取像 OpenBSD 这样激进且严格的安全策略，它的安全性将会超过 OpenBSD。但事实真的如此吗？Android 的安全策略被认为在所有操作系统中最为全面，且兼顾软硬件结合。然而，现实情况如何？”
+>
+> 你怎么看？
+
+#### 捐赠 OpenBSD
+
+[Donating to the Foundation](https://www.openbsdfoundation.org/donations.html) 对于中国大陆用户而言，捐赠存在一定困难，因为该基金会仅接受国际 PayPal，提示信息为“此国家或地区不支持捐赠给此收款人”。已通过邮件反馈此问题，并曾写挂号信寄给位于加拿大的 OpenBSD 基金会，但未收到任何回应。即便使用 GitHub Sponsors 方式亦可，但多次沟通仍未得到支持。对此，深感不便。
+
+目前，中国大陆用户可通过国内版本的 PayPal 或普通银联储蓄卡，向 PayPal 账号 `obsd-paypal@openbsdfoundation.org`（该账号为收款账号，并非电子邮件）发起转账，以对 OpenBSD 基金会进行捐赠。具体操作方法请自行搜索“PayPal 个人转账”。
+
+### OpenBSD 服务器与 OpenBSD VPS
+
+推荐来自荷兰的 OpenBSD VPS 供应商 OpenBSD Amsterdam（<https://openbsd.amsterdam>）。VPS 的主机操作系统为 OpenBSD，客户端系统同样为 OpenBSD。配置为 1 GB RAM、50 GB HDD，每年 64 欧元（约合人民币 525 元）。每个 VPS 的费用中，供应商均会向 OpenBSD 基金会捐款。主机地址和配置可在此查看（<https://openbsd.amsterdam/servers.html>），用户可访问并测试 `ping` 延迟。VPS 位于荷兰阿姆斯特丹，路由经美国。以上内容与作者无利益关联。
+
+### 附录：OpenBSD IPsec 协议栈 FBI 后门事件
+
+在 2010 年，Theo de Raadt 收到并向社区公开了 [一封邮件](https://marc.info/?l=openbsd-tech\&m=129236621626462\&w=2)：
+
+> 我收到了一封关于 OpenBSD 最初开发 IPSEC 协议栈的邮件。有人指称，一些前开发者（以及他们曾供职的公司）接受了美国政府的资金，在我们的网络协议栈，特别是 IPSEC 协议栈中植入了后门——约在 2000～2001 年期间。
+>
+> 由于这是我们拥有的首款可自由使用的 IPSEC 协议栈，因此这部分代码现在出现了在许多其他项目或产品中。在过去的十多年里，IPSEC 代码经历了许多变更与修复，因此目前尚不清楚这些指控所造成的实际影响有多大。
+>
+> 这封邮件是由一位我十多年来未曾联系过的人私下寄来的。我拒绝参与这种阴谋，也不会与 Gregory Perry 谈论此事。因此，我决定公开这封信，以便：
+>
+> （a）使用这段代码的人可以审计其中是否存在此类问题；
+>
+> （b）对这种说法感到愤怒的人可以采取其他行动；
+>
+> （c）如果这些说法不属实，被指控的人可以为自己辩护。
+>
+> 我也不喜欢自己的私人邮件被转发。但相比之下，将私人邮件泄露这种“小节有亏”，还远远不及政府出资让公司收买开源开发者（我们社区的成员），在软件中植入侵犯隐私的后门这种“大德有亏”。
+>
+> > 发件人：Gregory Perry <Gregory.Perry@GoVirtual.tv>
+> >
+> > 收件人： “<deraadt@openbsd.org>” <deraadt@openbsd.org>
+> >
+> > 主题：OpenBSD 加密框架
+> >
+> > 日期：2010 年 12 月 11 日 星期六 23:55:25 +0000
+> >
+> > 你好 Theo，
+> >
+> > 好久不见。你可能还记得，早些时候我是 NETSEC 的首席技术官，并为 OpenBSD 加密框架争取了一些资助和捐赠。与此同时，我也曾为 FBI 提供咨询服务，具体是在他们的 GSA 技术支持中心（GSA Technical Support Center）参与一个密码逆向工程项目，旨在为智能卡和其他基于硬件的计算技术植入后门和密钥托管机制。
+> >
+> > 我与 FBI 的保密协议（NDA）最近已到期，我想让你知道，FBI 曾在 OpenBSD 加密框架中植入了一系列后门和侧信道密钥泄露机制，其明确目的是监控美国联邦检察官行政办公室（其隶属于美国司法部，即 FBI 的上级机构）所部署的站点对站点 VPN 加密系统。Jason Wright 和其他几位开发者负责了这些后门的实现，你最好全面检查所有 Wright 提交的代码，以及与他共事的 NETSEC 出身的开发者的代码提交。
+> >
+> > 这很可能也是你当年失去 DARPA（美国国防高级研究计划局）资助的原因——他们很可能察觉到了这些后门的存在，不想基于这些代码开发任何衍生产品。
+> >
+> > 这也是为什么 FBI 内部最近有些人极力鼓吹在虚拟化环境中使用 OpenBSD 进行 VPN 与防火墙部署。例如 Scott Lowe 就是一位在虚拟化领域颇具声望的作者，碰巧也是 FBI 的雇员。他最近还发表了几篇关于在企业 VMware vSphere 部署中使用 OpenBSD 虚拟机的教程。
+> >
+> > 圣诞快乐……
+> >
+> > Gregory Perry
+> >
+> > 首席执行官
+> >
+> > GoVirtual 教育
+> >
+> > “VMware 培训产品与服务”
+> >
+> > 电话：540-645-6955 分机 111（本地）
+> >
+> > 免费电话：866-354-7369 分机 111
+> >
+> > 手机：540-931-9099
+> >
+> > 传真：877-648-0555
+
+号称世界上最安全的操作系统是否存在 FBI（美国联邦调查局，负责情报与安全事务）的后门？OpenBSD 项目迅速对现有代码进行了审计，并未发现后门。
+
+一星期后，Theo de Raadt 又发布了一封信：[关于 OpenBSD IPsec 后门指控的最新进展](https://lwn.net/Articles/420858/)。
+
+> OpenBSD IPsec 后门指控的最新情况
+>
+> 来自：Theo de Raadt \<deraadt-AT-cvs.openbsd.org>
+>
+> 收件人：Kurt Knochner \<cdowlker-AT-googlemail.com>
+>
+> 主题：Re: 有关 OpenBSD IPsec 的指控
+>
+> 时间：2010 年 12 月 21 日 星期二 12:34:54 -0700
+>
+> 抄送：tech-AT-openbsd.org
+>
+> 没有“线索”（不论真假），
+>
+> 确实，这些指控没有提供任何指向具体代码的事实。
+>
+> 目前我的看法大致如下：
+>
+> (a) NETSEC 这家公司从事一种接近华盛顿特区的特殊业务，接受政府某些部门的合同，进行安全与反安全方面的工作。
+>
+> (b) 背景：1999–2001 年是个特殊时期，美国政府的许多部门在放宽加密技术的限制，因为加密技术从国防部（DOD）移交到了商务部（Commerce），以便可以“在某些限制下”出口；结果是私人领域对加密的使用将要爆炸性增长，于是政府为了继续窃听，不仅在发明技术手段，也在发明“正当理由”（他们向来窃听上瘾）。
+>
+> (c) Gregory Perry 曾在 NETSEC 工作，并负责面试与雇佣 Jason（当时刚刚毕业）；Jason 开始工作时，Perry 已因某些未知原因被“驱逐”出公司。
+>
+> (d) Jason 并未专门从事加密工作，他主要编写设备驱动，但由于 ipsec 层也涉及 IPCOMP，他也改动过 ipsec 层的代码。也就是说，他接触的是数据流部分，而非算法部分。
+>
+> (e) Jason 离职后，Angelos 接受了一份 NETSEC 的合同（他已经为 ipsec 栈工作了 4 年，是架构师与主要开发者），并在全球各地旅行的同时编写了加密层，使 ipsec 栈能够将请求传递给 Jason 之前写的驱动程序。这个加密层包含了当时美国政府推崇的一个欠妥且不安全的“半 IV”想法。合同结束后，这段代码就被移除了。不久之后，CBC oracle 问题也被发表出来，加密/ipsec 代码开始转向随机 IV（在那之前也许无法实现，因为我们缺乏高质量快速的伪随机数生成器，比如 arc4random）。我不认为这两个问题，或其他未被发现的问题，是出于恶意。到目前为止，我们挖出的这些问题都是特定历史时期的产物。
+>
+> (f) Jason 和 Angelos 在我们每天依赖的许多系统部分编写了大量代码，而不仅仅是 ipsec 栈。我将点名他们的指控转发了，但我仍难以亲自指责他们。请去看我原始邮件中关于 (a)-(c) 的内容。
+>
+> (g) 我相信 NETSEC 很可能被合同要求编写了后门，如指控所述。
+>
+> (h) 如果这些后门确实被编写了，我不相信它们进入了我们的源代码树。它们可能被部署为 NETSEC 自己的产品。
+>
+> (i) 如果 NETSEC 的这些项目存在，我不知道 Jason、Angelos 或其他人是否知情或参与。
+>
+> (j) 如果 Jason 与 Angelos 知道 NETSEC 在干这种事，我期望他们告诉过我。我和这个项目也许会根据这种情况进行某种调整；具体怎么调整，我也不确定。从这个角度看，我觉得 Jason 的邮件并不完全坦诚。
+>
+> (k) 我很高兴大家开始借此机会审核源代码树中的这个重要部分——太久以来，许多人以为它是“安全的”。
+>
+> 你从哪里开始审计代码？代码太多了。
+>
+> 实际上，这只是源代码树中的一小部分。如果我们每个人都尽自己的一份力，情况会变好。它仍然不会完美，还是太庞大。但我们已经证明了，只要我们从源代码树中开始一点点地寻找小 bug 或不清晰之处加以改进，最终一定会有成果。所以我没法指出具体从哪里开始。
+>
+> 既然我已经开始做了，我会继续，至少从加密代码和伪随机数生成器开始。
+>
+> 你发出邮件之后，至少有 10 个人去研究了这些代码。我自己就在随机数子系统的另一个部分发现了一个小 bug，并正在清理一段结构较为复杂的函数。
+>
+> 这已经是我们能希望的最好结果了。
+>
+> 从“半满的玻璃”角度看，能看到大家去尝试，其实令人欣慰！ :-)
+>
+> 顺便说一句：iTWire 提到，在加密代码中发现了两个 bug。能告诉我这两个 bug 的细节吗？
+>
+> <http://www.itwire.com/opinion-and-analysis/open-sauce/439>...
+>
+> 这是前两个发现的 bug。第一个与前文提到的 CBC oracle 问题相关（Angelos 在软件加密栈中修复了它，但 Jason 维护的所有驱动中都忽略了这个问题。当时 Jason 与 Angelos 都未在 NETSEC 工作，所以我认为这只是一个疏忽，虽然是个相当严重的疏忽）。
+>
+> ```
+> CVSROOT:        /cvs
+> Module name:    src
+> Changes by:     [mikeb@cvs.openbsd.org](mailto:mikeb@cvs.openbsd.org)   2010/12/15 16:34:23
+>
+> 修改文件：
+>    sys/arch/amd64/amd64: aesni.c via.c
+>    sys/arch/i386/i386: via.c
+>    sys/arch/i386/pci: glxsb.c
+>    sys/dev/pci: hifn7751.c hifn7751var.h safe.c safevar.h
+>             ubsec.c ubsecvar.h
+>
+> 日志信息：
+> 将 cryptosoft.c 第 1.32 版中的 CBC oracle 攻击对策引入硬件加速加密驱动。这修复了 aes-ni、via xcrypt、glxsb(4)、hifn(4)、safe(4) 与 ubsec(4) 驱动。
+> ```
+>
+> 原始提交信息（来自 angelos）：
+>
+> ```
+> 在 CBC 模式中，不要保留最后一个 blocksize 字节的密文用于下一条消息的 IV。每条消息应使用 arc4random() 获取新的 IV。
+>
+> 通过并认可：deraadt, markus, djm
+>
+> CVSROOT:        /cvs
+> Module name:    src
+> Changes by:     [jsg@cvs.openbsd.org](mailto:jsg@cvs.openbsd.org)     2010/12/16 09:56:08
+>
+> 修改文件：
+>    sys/crypto: cryptodev.h
+>    lib/libssl/src/crypto/engine: hw_cryptodev.c
+>
+> 日志信息：
+> 将 CRYPTO_VIAC3_MAX 从 cryptodev.h 移除，放入唯一使用它的文件中。
+>
+> 由 mikeb 请求并认可。
+> ```
+>
+> 还有一些更新的提交也源于此次审计。请查看更新日志（Changelog）。
+
+信中提及的 Jason L. Wright 也公开声明自己没有在软件中植入后门：
+
+> 我在此明确声明，我没有在 OpenBSD 操作系统和 OpenBSD 加密框架（OCF）中添加后门。我在这项工作中涉及的代码主要与支持该框架的设备驱动有关。我相信我从未接触过 isakmpd 或 photurisd（用户态密钥管理程序），而且我很少触碰 ipsec 内部实现（但确实涉及过 cryptodev 和 cryptosoft）。不过，我欢迎对所有我提交到 OpenBSD 代码库中的内容进行审计。
+
+Gregory Perry 后来 [回复道](https://cryptome.org/2012/01/0032.htm)：
+
+> FBI、OpenBSD 后门与 RSA 加密漏洞
+>
+> 发件人：Gregory Perry \<Gregory.Perry \[at] govirtual.tv>
+>
+> 主题：关于 OpenBSD 加密框架后门讨论串的后续
+>
+> 日期：2012 年 1 月 12 日 星期四 01:57:39 +0000
+>
+> 如约奉上关于 FBI / OpenBSD / OpenBSD 加密框架加密后门讨论串的后续内容。我们家在圣诞假期期间发生了三级火灾，我也是刚刚恢复上线。
+>
+> 1）大约在 1997 年，FBI 找到了 Lew Jenkins，也就是 Premenos Technology Corp. 的董事长兼 CEO，他们当时在开发一款用于企业间 EDI（电子数据交换）交易的软件套件，名为“Templar”。
+>
+> 2）在当时，加密技术（尤其是公钥加密算法）仍被美国政府视为军火，因此 FBI 可能对 Premenos 关于密钥托管和 RSA 加密会话恢复方面的研究很感兴趣。
+>
+> 3）Jenkins 先生的一部分研究与一位厄瓜多尔人合作进行，后者向 Premenos 提供了至少一个与 RSA 加密算法有关的数学漏洞，该漏洞与对加密后的 RSA 模数在不同进位制下的转换有关。Jenkins 与 Premenos 也和英王室保持着广泛联系，其中包括一些参与互联网通信技术的英国贵族。
+>
+> 4）Premenos 的一位投资者 Ross Pirasteh，据说他曾是伊朗国王（沙阿）的财政部长，甚至可能就是沙阿本人。传说中，1979 年霍梅尼领导的伊斯兰革命爆发前或期间，Ross 与其家人被卷在波斯地毯中秘密送出伊朗。到达美国后，FBI 为其一家提供了新身份，原因不言而喻。我是在 90 年代初一次基于 GPS 的汽车跟踪项目中结识 Ross（非军用 GPS），1995 年我向他介绍了 Templar 的相关信息，不久之后他便成了 Premenos 的投资者。
+>
+> 5）1999 年，我与 Ken Ammon 和 Jerry Harold 共同创办了一家计算机安全工程公司：Network Security Technologies Inc.（NETSEC）。Ken 是 CEO，Jerry 是 COO，我是 CTO。Ken 和 Jerry 是前 NSA（美国国家安全局）信息安全部门的高级员工，在国防部和联邦政府中有着广泛的人脉。我们向联邦政府和私营部门提供托管网络安全、渗透测试、漏洞分析和逆向工程服务。
+>
+> 6）NETSEC 的首位投资者是 Ross Pirasteh，他提供了一笔过桥贷款以启动公司。A 轮早期融资来自 Boca Raton 的一家天使投资团体，我认为是 Ross 介绍给 Ken 和他妻子的，但我不掌握详细内情。
+>
+> 7）我们原本打算推出的第一款产品，是一种基于 ATM 的高速嵌入式网络安全设备，部署在客户网络中进行远程协议分析、监控、入侵检测与防御。每台设备通过加密加速的 VPN 通道连接到 NETSEC 的 NOC（网络运营中心）进行监控。NOC 原型和网络管理系统由我设计。在开发该嵌入式硬件和寻找代工厂过程中，我聘请了 Doug Bostrom 和 Wayne Mitzen 两位工程师，他们此前在 Ross 位于波士顿的某个遥测相关企业工作（如美国专利 6,208,266）。
+>
+> 8）在该项目中，我联系了 OpenBSD 项目的 Theo de Raadt，希望资助并在 OpenBSD 中实现符合 POSIX 的抢占式实时线程能力，以替代成本高昂的 VxWorks RTOS（OpenBSD 及其许可方式是免费且无专利负担的）。NETSEC 为 OpenBSD 项目提供了硬件与资金，支持其加密框架（OCF）的初期开发，该框架基于 HiFN 系列的加密加速芯片，并最终被合并进了 OpenBSD 内核。我们本想采用博通，但由于 Ken 与 HiFN 有关系，所以初期用了 HiFN 的芯片。90 年代末的 x86 硬件无法承担 FIPS 140-1 与 140-2 认证要求下的高速 DES 与 3DES 加密任务，因此需要专用加密处理器以实现 ATM 级别的网络吞吐。
+>
+> 9）不久之后，NETSEC 启动了与美国联邦总务署（GSA）合作的项目，名为 GSA 技术支持中心（GSA Technical Support Center）。该中心是 FBI 与国防部的联合项目，旨在为联邦和军方提供逆向工程与密码分析服务。项目负责人是 FBI 的 Ron Bitner（至少他是这么自称的），GSA 出资代表是 Dave Jarrell。我刚开始参与该项目时，曾对 FBI 与 DoD 之间职责划分模糊（或根本没有划分）表示担忧，这是明显违反《治安官动员法》（Posse Comitatus Act，PCA）的。Ken 的解释是，将使用 Trusted Solaris 这类多级安全系统（MLS），以允许不同机密级别的信息在 FBI 与 DoD 之间共享，从而在名义上维持军事与民政的传统分离。但我看出事态不妙，于是不再参与该项目。
+>
+> 10）同年晚些时候，我在公司会议中宣布辞去 NETSEC 职务，并创办了一家嵌入式无线带宽管理公司。由于与 NETSEC 有两年竞业协议，我在此期间不能再从事安全领域工作。
+>
+> 显然，这个故事远非一页纸能讲完。但我认为值得注意的是，美国与伊朗等“敌对国家”之间看似对立，实则有千丝万缕的联系。1995 年 FBI 坚决反对放宽加密技术出口规定，然而到 1999 年却态度骤变（例如此报导：<https://www.nytimes.com/1999/10/11/business/technology-easing-on-software-exports-has-limits.html>
+>
+> 我个人认为，FBI，或者说当时政府中的某些官员，是在发现 RSA 加密算法中存在关键性漏洞之后，才主动推动放松加密出口限制的。与当时主流的 Diffie-Hellman 公钥加密方法相比，RSA 的确存在未被公开的弱点。同样值得关注的是，RSA Security 公司在 RSA 专利期满后（美国专利 4,405,829）并未寻求延期，这一点令人意外。按常理他们可基于国家安全理由轻松获得延期许可，却主动放弃了专利权，使得 RSA 算法成为公开标准，而该公司靠授权 RSA 算法在美国获得了可观收入。
+>
+> 如果上述推测属实，那么可以合理断言：FBI 出于监听国内通信的目的，故意推动采用了一款在基础上存在弱点的加密算法，从而严重削弱了美国的关键基础设施和军事能力。这对大量基于 RSA 加密算法的技术产生了深远影响，如：用于武器定位的军用 GPS、Common Access Card 智能卡以及用于 RFID 与非接触支付的商用智能卡技术等。对嵌入式系统来说，这些标准几乎已定型，且大多数 OpenBSD / OpenBSD 加密框架安装实例都是嵌入式形式，因其小体积与宽松的 BSD 许可协议，几乎无升级路径。全球可能存在数百万甚至上亿台运行 OpenBSD 的嵌入式设备，如路由器、防火墙、VPN 设备等，此外还有许多操作系统直接集成了 OpenBSD 的加密框架与 PF 防火墙栈，却基于 OpenBSD 项目的安全声誉与可信度未对源代码进行审计。
+>
+> 如果你有其他问题，欢迎随时联系。祝你和 Cryptome 一起度过愉快的 2012。
+>
+> Gregory Perry
+
+至此，事件的主要经过已介绍完毕。从结果来看，事件中包含一些可能引发争议的内容。
+
+
+## DragonFly BSD 概述
+
+DragonFly BSD（蜻蜓 BSD）是一款基于 FreeBSD 4.8 衍生而来的类 UNIX 系统。该项目由 Matthew Dillon（曾参与 Amiga 开发，毕业于加州大学伯克利分校）于 2003 年 6 月启动，并于 2003 年 7 月正式发布于 [FreeBSD 邮件列表](https://lists.freebsd.org/pipermail/freebsd-current/2003-July/006889.html)。
+
+Dillon 启动 DragonFly BSD 项目的核心动因在于对 FreeBSD 5 中采用的 SMP（对称多处理）并行计算架构存在不同技术判断。SMP 是指多个处理器共享同一内存空间的架构设计，他认为该设计可能引入不必要的性能开销。这一技术分歧导致与 FreeBSD 核心开发团队的讨论，并最终促成独立项目的形成。尽管存在技术路径差异，DragonFly BSD 与 FreeBSD 项目在错误修复和驱动程序更新等领域仍保持协作关系。
+
+DragonFly BSD 在继承 FreeBSD 4 技术路线的同时，在多个关键系统层面进行了创新性设计，包括轻量级内核线程实现机制和 HAMMER/HAMMER2 文件系统等核心组件。DragonFly BSD 的部分设计理念受到了 AmigaOS 架构的启发。
+
+从硬件支持现状来看，DragonFly BSD 自带 i915 显卡驱动，架构仅支持 x86-64 平台，未提供 Linux 兼容层。其 DPorts 软件包系统与 FreeBSD Ports 保持兼容。需注意 DragonFly BSD 的驱动支持存在一定滞后性，特别是显卡驱动的更新节奏相对较慢。
+
+捐赠 DragonFly BSD：[Sponsoring projects](https://www.dragonflybsd.org/donations/)，目前仅支持国际 PayPal。
+
+> DragonFly BSD 的文档相对陈旧，但这并不反映其实际开发进度。DragonFly BSD 的开发仍然活跃，不应因官方文档陈旧而放弃使用。
+
+### 附录：其他专注于安全的 BSD 系统
+
+#### HardenedBSD
+
+专注于安全的 BSD 操作系统不仅仅有 OpenBSD，还可以尝试 2014 年从 FreeBSD 复刻而来的[HardenedBSD](https://hardenedbsd.org/)。
+
+其官网称“我们的主要目标是对 Grsecurity 补丁集（增强 Linux 内核安全的内核补丁集）中已公开文档的部分，进行净室开发。”
+
+> Grsecurity 为 Linux 内核提供的补丁集是垃圾。
+>
+> ——Linus Torvalds（Linux 创始人）
+
+#### CheriBSD
+
+[CheriBSD 官网](https://www.cheribsd.org/)
+
+CheriBSD 基于 FreeBSD 实现了 Capability（能力式指针），提供内存保护和软件隔离功能。CheriBSD 主要面向 ARM 和 RISC-V 架构，由国际斯坦福研究所（SRI International）和英国剑桥大学（University of Cambridge）联合开发。
+
+#### FuguIta
+
+[FuguIta 官网](https://fuguita.org/)
+
+FuguIta 是一款基于 OpenBSD 开发的 Live 系统，同时支持部分型号的树莓派（Raspberry Pi）。

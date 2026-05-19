@@ -18,8 +18,8 @@
 * [1.2 GNU 操作系统和自由软件运动](di-1-zhang-freebsd-chu-jian/di-1.2-jie-gnu-cao-zuo-xi-tong-he-zi-you-ruan-jian-yun-dong.md)
 * [1.3 Linux 与类 UNIX](di-1-zhang-freebsd-chu-jian/di-1.3-jie-linux-yu-lei-unix.md)
 * [1.4 FreeBSD 导论](di-1-zhang-freebsd-chu-jian/di-1.4-jie-freebsd-dao-lun.md)
-* [1.5 乔治·贝克莱（George Berkeley）与 BSD 的命名渊源](di-1-zhang-freebsd-chu-jian/di-1.5-jie-qiao-zhi-bei-ke-lai-george-berkeley-yu-bsd-de-ming-ming-yuan-yuan.md)
-* [1.6 加州大学伯克利分校与“要有光”（Fiat Lux）](di-1-zhang-freebsd-chu-jian/di-1.6-jie-jia-zhou-da-xue-bo-ke-li-fen-xiao-yu-yao-you-guang-fiat-lux.md)
+* [1.5 乔治·贝克莱（George Berkeley）与 BSD 文化传统](di-1-zhang-freebsd-chu-jian/di-1.5-jie-qiao-zhi-bei-ke-lai-george-berkeley-yu-bsd-de-ming-ming-yuan-yuan.md)
+* [1.6 其他 BSD 发行版概述](di-1-zhang-freebsd-chu-jian/di-1.6-jie-jia-zhou-da-xue-bo-ke-li-fen-xiao-yu-yao-you-guang-fiat-lux.md)
 
 ## 第 2 章 FreeBSD 安装基础
 
