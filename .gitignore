@@ -230,3 +230,4 @@ $RECYCLE.BIN/
 *.gz
 *.bat
 *.spec
+/scripts
