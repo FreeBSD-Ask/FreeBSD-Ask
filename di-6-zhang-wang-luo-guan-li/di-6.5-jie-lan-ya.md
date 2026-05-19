@@ -15,7 +15,7 @@
 # service bthidd start   # 立即启动 bthidd 服务
 ```
 
-服务说明：
+相关组件说明：
 
 - `hcsecd`：管理蓝牙设备的链路密钥和 PIN 码，负责蓝牙设备的安全认证。
 - `bthidd`：支持 Bluetooth HID（Human Interface Device）设备，如蓝牙鼠标、键盘等。
