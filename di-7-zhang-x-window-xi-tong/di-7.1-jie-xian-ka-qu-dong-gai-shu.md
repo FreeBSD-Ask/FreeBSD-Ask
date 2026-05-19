@@ -124,7 +124,7 @@ ThinkPad 可以启用 IBM ACPI 支持和 ACPI 视频支持。
 
 ## 状态检查
 
-判断显卡是否成功驱动：
+检查显卡是否已成功驱动：
 
 ```sh
 $ pciconf -lv | grep -B4 VGA   # 列出系统中所有 VGA 兼容设备及其型号
