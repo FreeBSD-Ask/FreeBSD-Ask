@@ -898,9 +898,9 @@
   - “第 1.1 节 UNIX、Unix-like、Linux 和 FreeBSD 简介”：补充“macOS/iOS 等与 BSD 的关系”
 - 2024.11.7
   - “第 6.4 节 NTFS 的挂载”：新建“格式化”、挂载部分。
-  - 针对“[Add new category fs for file systems](https://github.com/freebsd/freebsd-ports/pull/302)” 修改
+  - 针对“[Add new category fs for file systems](https://github.com/freebsd/freebsd-ports/pull/302)”修改
 - 2024.11.2
-  - “第 19.2 节 Linux 败局与 FreeBSD 败局” 补充思考题
+  - “第 19.2 节 Linux 败局与 FreeBSD 败局”补充思考题
   - 新建“第 19.3 节 驳《还有人记得 Linux 之前，那个理想又骄傲的 BSD 吗？》”
   - “第 17.6 节 NextCloud——基于 PostgreSQL”补充一节：“在 nextcloud 中挂载 samba 共享”
 - 2024.11.1
@@ -916,7 +916,7 @@
 - 2024.10.27
   - USTC、163、NJU pkg-freebsd 源基本恢复正常
   - 新增一节：“第 17.9 节 AList”
-  - “第 4.16 节 安装 CDE” 测试通过
+  - “第 4.16 节 安装 CDE”测试通过
 - 2024.10.8
   - 同步更新“第 1.5 节 谁在使用 FreeBSD”
   - 重写“第 4.1 节 安装显卡驱动及 Xorg（必看）”
