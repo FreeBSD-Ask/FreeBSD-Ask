@@ -131,7 +131,7 @@ $ echo "exec ck-launch-session startplasma-x11" > ~/.xinitrc
 
 ## 附录：最小化 KDE 桌面安装方案
 
-直接安装 **x11/kde** 会将 **x11/plasma6-plasma** 和 **x11/kde-baseapps** 作为依赖一并安装，其中捆绑了大量工具软件，某些情况下不便部署使用。
+直接安装 **x11/kde** 会将 **x11/plasma6-plasma** 和 **x11/kde-baseapps** 作为依赖一并安装，其中捆绑了大量工具软件，某些情况下不便于部署使用。
 
 ### 使用 pkg 安装
 
@@ -208,7 +208,7 @@ $ echo "exec ck-launch-session startplasma-x11" > ~/.xinitrc
 
 > **技巧**
 >
-> 使用此方案安装的 KDE 桌面缺少了很多功能，可以参照 [x11/plasma6-plasma](https://www.freshports.org/x11/plasma6-plasma/) 的“Runtime dependencies”（运行时依赖）和“Library dependencies”（库依赖）补全功能。
+> 使用此方案安装的 KDE 桌面缺少了很多功能，可以参照 [x11/plasma6-plasma](https://www.freshports.org/x11/plasma6-plasma/) 的“Runtime dependencies”（运行时依赖）和“Library dependencies”（库依赖）来补全功能。
 
 未安装可选包：
 
