@@ -1,10 +1,10 @@
 # 1.5 乔治·贝克莱（George Berkeley）与 BSD 文化传统
 
-20 世纪 70 年代，加州大学伯克利分校计算机系统研究小组（Computer Systems Research Group，CSRG）开始修改与扩展 AT&T 贝尔实验室开发的 AT&T 32V UNIX 操作系统。由于这些修改与扩展最初以软件发行包的形式发布，故称伯克利软件发行版（Berkeley Software Distribution，BSD），FreeBSD 即为 CSRG 工作的继续。
+20 世纪 70 年代，加州大学伯克利分校计算机系统研究小组（Computer Systems Research Group，CSRG）开始修改与扩展 AT&T 贝尔实验室开发的 AT&T 32V UNIX 操作系统。由于这些修改与扩展最初以软件发行包的形式发布，因此称为伯克利软件发行版（Berkeley Software Distribution，BSD），FreeBSD 即为 CSRG 工作的延续。
 
 ## 伯克利市、加州大学伯克利分校、BSD 的命名
 
-BSD 之名源于其发源地——美国加州大学伯克利分校（University of California, Berkeley）——伯克利市——乔治·贝克莱。
+BSD 之名源自其发源地：美国加州大学伯克利分校（University of California, Berkeley），该校所在的伯克利市，以及伯克利市名的由来——乔治·贝克莱。
 
 伯克利市（Berkeley）的命名可以追溯至 1866 年。当时，加州学院（College of California）的受托人弗雷德里克·比林斯（Frederick Billings）援引爱尔兰近代经验论哲学家乔治·贝克莱（George Berkeley，1685—1753）的诗句“Westward the course of empire takes its way”（帝国之路向西延伸），建议将新校址所在城镇命名为 Berkeley。
 
