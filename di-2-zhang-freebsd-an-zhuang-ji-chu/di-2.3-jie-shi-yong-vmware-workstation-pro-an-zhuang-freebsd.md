@@ -288,7 +288,7 @@ Downloads
 
 > **注意**
 >
-> 通过 Windows 远程桌面或其他 XRDP 工具远程另一台 Windows 桌面，再通过其上运行的 VMware 虚拟机操作 FreeBSD，鼠标可能出现异常。此为正常现象。
+> 通过 Windows 远程桌面或其他 XRDP 工具远程连接另一台 Windows 桌面，再通过其上运行的 VMware 虚拟机操作 FreeBSD，鼠标可能出现异常。此为正常现象。
 
 - 每次进入图形界面，窗口都会异常扩大。
 
