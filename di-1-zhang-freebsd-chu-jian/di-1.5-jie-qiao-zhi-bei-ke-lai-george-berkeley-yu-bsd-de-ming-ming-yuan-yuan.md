@@ -106,7 +106,7 @@ BERKELEY G. Verses on the Prospect of Planting Arts and Learning in America[C]//
 
 贝克莱在哲学领域影响深远，对微积分基础的批判也是数学史上的重要篇章。贝克莱的著作引发了关于无穷小量的数学哲学讨论（即贝克莱悖论，参见其 1734 年发表的《分析学家；或一篇致一位不信神数学家的论文，其中审查一下近代分析学的对象、原则及论断是不是比宗教的神秘、信仰的要点有更清晰的表达，或更明显的推理》）。
 
-贝克莱悖论本身并未被“解决”，其哲学层面仍是开放性问题。ε-δ 定义只是使实分析在 ZFC 公理体系下变得形式自洽。许多人常以该定义来\u7528\u8be5\u5b9a\u4e49\u89e3\u51b3芝诺悖论（Stanford Encyclopedia of Philosophy. Zeno’s Paradoxes[EB/OL]. [2026-04-04]. <https://plato.stanford.edu/entries/paradox-zeno/>.）\uff0c\u4ece\u800c\u5426\u5b9a其哲学价值。
+贝克莱悖论本身并未被“解决”，其哲学层面仍是开放性问题。ε-δ 定义只是使实分析在 ZFC 公理体系下变得形式自洽。许多人常以该定义来解决芝诺悖论，从而否定其哲学价值。
 
 更多相关资源可参阅关于非标准分析、超实数及数学哲学等方面的书籍。
 
@@ -188,9 +188,10 @@ BERKELEY G. Verses on the Prospect of Planting Arts and Learning in America[C]//
 - Easwaran K, Hájek A, Mancosu P, et al. Infinity[EB/OL]. (2024)[2026-03-25]. <https://plato.stanford.edu/archives/sum2024/entries/infinity/>. SEP 无穷条目。探讨了数学哲学中无穷概念的历史发展与哲学争议。
 - Urmson J O. 贝克莱[M]. 孟令朋,译. 北京: 清华大学出版社, 2019. ISBN: 978-7-302-52555-4. 深入浅出介绍贝克莱哲学思想与历史影响。
 - 汪芳庭. 数学基础[M]. 修订版. 北京: 高等教育出版社, 2018. ISBN: 978-7-04-050242-8. 系统阐述数学基础理论与公理集合论框架。
-- Robinson A. 非标准分析[M]. 申又根,王世强,张锦文,译. 北京: 科学出版社, 1980. 统一书号：13031-1267. 建立超实数理论，为无穷小量提供数学基础。
+- Robinson A. 非标准分析[M]. 申又根,王世强,张锦文,译. 北京: 科学出版社, 1980. 统一书号:13031-1267. 建立超实数理论，为无穷小量提供数学基础。
 - Tao T. 陶哲轩实分析[M]. 李馨,译. 第4版. 北京: 人民邮电出版社, 2025. ISBN: 978-7-115-66554-6. 从数学基础（自然数和集合论）构建实分析体系，强调严谨性与直觉的结合。
 - Berkeley G. The Querist, containing several queries proposed to the consideration of the public[M]. Farmington Hills: Gale ECCO, Print Editions, 2018. ISBN: 978-1-38541-101-8. 探讨货币、经济与社会问题的哲学思考。
+- Stanford Encyclopedia of Philosophy. Zeno's Paradoxes[EB/OL]. [2026-04-04]. <https://plato.stanford.edu/entries/paradox-zeno/>. 芝诺悖论条目。
 - Schabas M. Economics in Early Modern Philosophy[EB/OL]. (2022)[2026-03-25]. <https://plato.stanford.edu/archives/sum2022/entries/economics-early-modern/>. 梳理近代经济思想的哲学根基与历史脉络。
 - Cloyne District Community Council. George Berkeley, Bishop of Cloyne/Philosopher[EB/OL]. [2026-03-25]. <http://cloyne.ie/about/george-berkeley-bishop-of-cloyne/>. 介绍贝克莱主教在克洛因教区的生平与工作。
 - Britannica. George Berkeley[EB/OL]. [2026-03-25]. <https://www.britannica.com/biography/George-Berkeley>. 提供贝克莱生平与思想的权威百科介绍。
