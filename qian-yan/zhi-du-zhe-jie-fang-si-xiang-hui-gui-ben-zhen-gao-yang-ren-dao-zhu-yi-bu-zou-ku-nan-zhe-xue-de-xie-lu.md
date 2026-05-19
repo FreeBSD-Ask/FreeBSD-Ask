@@ -352,7 +352,7 @@ English
 
 ## 参考文献
 
-- 李征. 何积丰: 以"积"累迎来"丰"收[EB/OL]. (2014-04-02)[2026-03-25]. <https://www.whb.cn/zhuzhan/kandian/20140402/5053.html>. 和年轻人一样，71 岁的何院士现在也在使用智能手机。该文介绍中国科学院院士何积丰的科研历程与育人理念。
+- 李征. 何积丰: 以“积”累迎来“丰”收[EB/OL]. (2014-04-02)[2026-03-25]. <https://www.whb.cn/zhuzhan/kandian/20140402/5053.html>. 和年轻人一样，71 岁的何院士现在也在使用智能手机。该文介绍中国科学院院士何积丰的科研历程与育人理念。
 - RYANHANWU. 提问的智慧(How To Ask Questions The Smart Way)[EB/OL]. [2026-04-19]. <https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/main/README-zh_CN.md>. 原作者之一是大家熟悉的 Eric S. Raymond（《UNIX 编程艺术》作者，[OSI](https://opensource.org/) 开源促进会创始人）~~师出同门~~。该文档是开源社区经典的提问指南，倡导高效沟通方式。
 - Skinner B F. New Methods and New Aims in Teaching[J]. New Scientist, 1964, 22(392): 483-484. <https://www.bfskinner.org/wp-content/uploads/2014/02/New-Methods-aims-in-Teach.pdf>. “教育就是当一个人把在学校所学全部忘光之后剩下的东西”这句话并非爱因斯坦所述。现在以讹传讹，人们获取的知识，真的是那么正确无误吗？Skinner 论述行为主义教育理论，澄清教育名言归属。
 - 谢延龙. 庄子“忘”的教育图景阐释[J]. 大学教育科学, 2022(1): 105-112. 该文从庄子哲学视角探讨“忘”在教育中的积极意义。
