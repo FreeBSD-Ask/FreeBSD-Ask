@@ -168,7 +168,7 @@ Makefile		pkg-plist-client	pkg-plist-plpython
 
 > **注意**
 >
-> Ports 和 pkg 可以同时使用，多数用户也是如此。但是要注意 Ports 和 pkg 应使用同一分支：如果 Ports 使用 main 分支，则 pkg 应使用 latest 源；如果 Ports 使用 quarterly 分支，则 pkg 使用 quarterly 源。分支不一致会导致依赖问题（比如 SSL）。latest 源也比 main 分支下的 Ports 发布更晚（其软件包由 main 构建而来），因此即使使用 latest 源，也可能会出现上述问题。遇到问题时卸载 pkg 安装的包，重新使用 Ports 编译即可。
+> Ports 和 pkg 可以同时使用，多数用户也是如此。但是要注意 Ports 和 pkg 应使用同一分支：如果 Ports 使用 main 分支，则 pkg 应使用 latest 源；如果 Ports 使用 quarterly 分支，则 pkg 应使用 quarterly 源。分支不一致会导致依赖问题（比如 SSL）。latest 源也比 main 分支下的 Ports 发布更晚（其软件包由 main 构建而来），因此即使使用 latest 源，也可能会出现上述问题。遇到问题时卸载 pkg 安装的包，重新使用 Ports 编译即可。
 
 > **警告**
 >
