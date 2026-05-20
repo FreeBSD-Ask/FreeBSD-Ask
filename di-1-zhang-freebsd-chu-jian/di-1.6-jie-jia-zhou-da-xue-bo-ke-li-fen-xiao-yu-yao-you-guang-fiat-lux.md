@@ -112,7 +112,7 @@ OpenBSD 采用 LLVM/Clang 项目构建系统，默认 shell 为 ksh（基于 pdk
 
 OpenBSD 软件包管理策略较为严格，过时的软件包会被移除。例如，用户几乎无法找到可用的图形显示管理器（GDM 除外）。
 
-OpenBSD 对 NVIDIA 显卡的支持，大致停留在 2006 年左右的 GeForce 7 系列。参见：nv - NVIDIA video driver[EB/OL]. [2026-03-26]. <https://man.openbsd.org/nv.4>（具体硬件支持列表）。
+OpenBSD 对 NVIDIA 显卡的支持，大致停留在 2009 年左右的 GT200 系列。参见：nv - NVIDIA video driver[EB/OL]. [2026-03-26]. <https://man.openbsd.org/nv.4>（具体硬件支持列表）。
 
 #### 文件系统
 
