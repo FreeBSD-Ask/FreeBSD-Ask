@@ -94,7 +94,7 @@ microSD 通常也称 TF 卡（TF 为 SanDisk 最初的商品名 TransFlash，后
 
 ![梵想 S690（1 TB）NVMe SSD PCIe4.0 读写速率](../.gitbook/assets/pcie4ssd2.png)
 
-![梵想 S690（1 TB）NVMe SSD PCIe4.0 读写速率](../.gitbook/assets/pcie4ssd1.png)
+![梵想 S690（1 TB）NVMe SSD PCIe 4.0 读写速率](../.gitbook/assets/pcie4ssd1.png)
 
 ### 使用 CrystalDiskMark 测试雷克沙 1066x A2 U3 128 GB 存储卡读写速率（使用 USB 3.0 读卡器）
 
@@ -114,9 +114,9 @@ microSD 通常也称 TF 卡（TF 为 SanDisk 最初的商品名 TransFlash，后
 
 即金属款。
 
-![三星 BAR 升级版 + USB3.1 闪存盘 64 GB 读写速率](../.gitbook/assets/san1.png)
+![三星 BAR 升级版 + USB 3.1 闪存盘 64 GB 读写速率](../.gitbook/assets/san1.png)
 
-![三星 BAR 升级版 + USB3.1 闪存盘 64 GB 读写速率](../.gitbook/assets/san2.png)
+![三星 BAR 升级版 + USB 3.1 闪存盘 64 GB 读写速率](../.gitbook/assets/san2.png)
 
 ## 参考文献
 

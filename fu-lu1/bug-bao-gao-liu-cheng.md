@@ -79,13 +79,13 @@ FreeBSD 缺陷报告系统位于 [https://bugs.freebsd.org/bugzilla](https://bug
 - Category：类别，当前 Bugzilla 采用产品（Product）/组件（Component）两级结构，主要产品如下：
   - Base System：基本系统
     - kern（内核、库、内置驱动，手册 2-4），但 USB 子系统、多线程库除外
-   	- bin（内置程序）
-   	- conf（配置文件或启动脚本，man 5）
-   	- usb（USB 子系统）
-   	- threads（多线程库）
-   	- standards（标准遵循）
-   	- 某具体架构（与特定架构相关的）
-   	- misc（其他，或确实无法归类，建议先在邮件列表中询问）等；
+    - bin（内置程序）
+    - conf（配置文件或启动脚本，man 5）
+    - usb（USB 子系统）
+    - threads（多线程库）
+    - standards（标准遵循）
+    - 某具体架构（与特定架构相关的）
+    - misc（其他，或确实无法归类，建议先在邮件列表中询问）等；
   - Ports & Packages：第三方软件，其下主要组件为 Individual Port(s)；
   - Documentation：文档或网站；
 - Environment（环境）：包括系统版本、程序版本、系统配置等；
