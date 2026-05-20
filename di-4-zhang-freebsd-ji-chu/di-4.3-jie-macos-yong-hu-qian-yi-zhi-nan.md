@@ -2,8 +2,6 @@
 
 macOS 与 FreeBSD 共享大量 BSD 组件，因此从 macOS 迁移到 FreeBSD，命令行上手比从 Windows 迁移容易得多。
 
-从表面看，这是 Android 与 iOS 之争，实质上则是 Linux 与 BSD 之争。~~这也许还是大教堂与市集之争。~~
-
 ## 共同的 BSD 血脉
 
 从历史角度看，macOS（以及由此衍生的 iOS、iPadOS 等）的核心层（Darwin）基于 BSD 代码，并融合了其他技术，macOS 系列操作系统可以看作独立的、类 BSD 操作系统分支，与 OpenBSD、NetBSD 和 FreeBSD 等系统具有同等地位。
@@ -17,17 +15,7 @@ macOS 与 FreeBSD 共享大量 BSD 组件，因此从 macOS 迁移到 FreeBSD，
 | 内存管理 | Mach 虚拟内存管理（VM），受 BSD 内存管理机制部分影响，支持分页、保护和共享内存 |
 | 进程模型 | Mach IPC、Security Trailers、强制访问控制（MAC）机制，支持多任务和安全策略 |
 
-### 参考文献
-
-- Apple Inc. Darwin[EB/OL]. [2026-04-18]. <https://opensource.apple.com/>. Apple 开源的 Darwin 操作系统基础，包含 XNU 内核及 BSD 子系统。
-- LEVIN J. 深入解析Mac OS X & iOS操作系统[M]. 郑思遥, 房佩慈, 译. 北京: 清华大学出版社, 2014. ISBN: 978-7-302-34867-2.
-- Jason Perlow. Apple's Open Source Roots: The BSD Heritage Behind macOS and iOS[EB/OL]. (2024-07-08)[2026-03-26]. <https://thenewstack.io/apples-open-source-roots-the-bsd-heritage-behind-macos-and-ios/>. 比较表格参考此处。
-
-## 基本比较
-
-
-
-### 功能比较
+## 功能比较
 
 | 功能 | macOS | FreeBSD | 说明 |
 | ---- | ----- | ------- | ---- |
@@ -63,7 +51,10 @@ macOS 与 FreeBSD 共享大量 BSD 组件，因此从 macOS 迁移到 FreeBSD，
 
 macOS 的 APFS 默认不区分大小写（Case-Insensitive），而 FreeBSD 的 ZFS 和 UFS 默认均区分大小写。
 
-### 参考文献
+## 参考文献
 
+- Apple Inc. Darwin[EB/OL]. [2026-04-18]. <https://opensource.apple.com/>. Apple 开源的 Darwin 操作系统基础，包含 XNU 内核及 BSD 子系统。
+- LEVIN J. 深入解析Mac OS X & iOS操作系统[M]. 郑思遥, 房佩慈, 译. 北京: 清华大学出版社, 2014. ISBN: 978-7-302-34867-2.
+- Jason Perlow. Apple's Open Source Roots: The BSD Heritage Behind macOS and iOS[EB/OL]. (2024-07-08)[2026-03-26]. <https://thenewstack.io/apples-open-source-roots-the-bsd-heritage-behind-macos-and-ios/>. 比较表格参考此处。
 - Apple Inc. File System[EB/OL]. [2026-04-18]. <https://developer.apple.com/documentation/foundation/about-apple-file-system>. APFS 官方技术指南。
 - OpenZFS. OpenZFS Documentation[EB/OL]. [2026-04-18]. <https://openzfs.org/wiki/Main_Page>. OpenZFS 项目文档。

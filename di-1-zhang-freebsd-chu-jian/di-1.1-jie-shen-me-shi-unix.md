@@ -33,6 +33,8 @@ UNIX 操作系统认证查询网址：[The Open Group official register of UNIX 
 
 当前经认证的 UNIX 操作系统包括 Apple 公司的 macOS。从商标角度看，macOS 是符合标准的 UNIX 操作系统。~~因此，要安装 UNIX 的人可考虑 macOS。~~
 
+从表面看，也许移动端的 Android 与 iOS 之争，实质上是 Linux 与 BSD 之争。~~这也许还是大教堂与市集之争。~~
+
 ## 传统的 UNIX 哲学观（以《UNIX 编程艺术》为核心）
 
 UNIX 哲学是 UNIX 操作系统于长期开发实践中逐渐形成的设计理念，由肯·汤普森（Ken Thompson）与丹尼斯·里奇（Dennis Ritchie）等早期核心开发者共同塑造。其核心主张可归纳为以下原则：
