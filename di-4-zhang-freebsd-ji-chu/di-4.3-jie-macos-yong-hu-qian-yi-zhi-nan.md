@@ -4,7 +4,60 @@ macOS 与 FreeBSD 共享大量 BSD 组件，因此从 macOS 迁移到 FreeBSD，
 
 ## 共同的 BSD 血脉
 
-从历史角度看，macOS（以及由此衍生的 iOS、iPadOS 等）的核心层（Darwin）基于 BSD 代码，并融合了其他技术，macOS 系列操作系统可以看作独立的、类 BSD 操作系统分支，与 OpenBSD、NetBSD 和 FreeBSD 等系统具有同等地位。
+从历史角度看，macOS（以及由此衍生的 iOS、iPadOS 等）的核心层（Darwin）基于 BSD 代码，并融合了其他技术。
+
+```text
+Original Unix
+        |
+        V
+     4.3 BSD ------------------------------------------------------+
+        |                                                          |
+        +----------------------+                                   | (基于 4.3 BSD)
+        |                      |                                   V
+        V                      V                           CMU Mach Project
+   4.3BSD-Reno             386BSD 0.1                              |
+        |                      |                                   V
+        |                      V                                 Mach
+        V                 FreeBSD 1.0                              |
+   4.4BSD-Lite                 |                   +---------------+---------------+
+                               |                   |                               |
+                               V                   V                               V
+                        FreeBSD 4.x/5.x        OSFMK 7.3                     NeXT Mach 2.5
+                               |            (Based on Mach 3.0)              (Integrated 4.3 BSD)
+                               |                   |                               |
+                               |                   |                       +-------+
+                               |                   |                       |       |
+                               |                   |                       |       V
+                               |                   |                       |    NeXTSTEP
+                               |                   |                       |       |
+                               |                   |                       |       V
+                               |                   |                       |    OPENSTEP
+                               |                   |                       |       |
+                               |                   |                       |       V
+                               |                   |                       |    Rhapsody
+                               |                   |                       |       |
+                               +---+               |                       |       |
+                                   |               |                       |       |
+                                   V               V                       V       |
+                               +-----------------------------------------------+   |
+                               |                   XNU Kernel                  |   |
+                               |                                               |   |
+                               |         (Mach 2.5 Base + OSFMK 7.3            |   |
+                               |          + FreeBSD 4.x/5.x VFS/Networking)    |   |
+                               +-----------------------------------------------+   |
+                                                       |                           |
+                                                       V                           |
+                                                     Darwin                        |
+                                       (XNU Kernel + FreeBSD Userland)             |
+                                                       |                           |
+                                                       +---------------------------+
+                                                                     |
+                                                                     V
+                                                                   macOS
+                                                      (Darwin + Aqua UI + Cocoa)
+```
+
+macOS 系列操作系统可以看作独立的、类 BSD 操作系统分支，与 OpenBSD、NetBSD 和 FreeBSD 等系统具有同等地位。
 
 | 组件 | 来源 |
 | ---- | ---- |
@@ -21,18 +74,18 @@ macOS 与 FreeBSD 共享大量 BSD 组件，因此从 macOS 迁移到 FreeBSD，
 | ---- | ----- | ------- | ---- |
 | shell | zsh | sh | FreeBSD 可选支持 zsh |
 | 权限提升 | sudo | 可选 | FreeBSD 可选支持 sudo |
-| 软件管理（二进制包） | 可选，通常为 Homebrew | pkg | |
+| 软件管理（二进制包） | 可选，通常为 Homebrew | pkg | / |
 | 软件管理（基于源代码） | MacPorts | Ports | MacPorts 源自 Ports |
 | 防火墙 | pf (Packet Filter) | 内置 pf (Packet Filter) 等多种防火墙 | 可选支持 |
 | 服务管理 | launchd（命令 `launchctl`） | BSD init + RC 系统 | / |
 | 编译程序 | Clang + LLVM | Clang + LLVM | / |
-| 生命周期 | 3年 | 4年 | |
+| 生命周期 | 3年 | 4年 | / |
 | 文件系统 | APFS（默认） | ZFS（默认） | / |
 | UNIX 认证 | 逐版本认证 | 未认证 | / |
 
 > **注意**
 >
-> macOS 中的许多命令行工具（如 `sed`、`grep`、`awk`）已是较旧版本，与 FreeBSD 当前版本相比存在差异。例如 macOS 的 `sed -i` 需要与 FreeBSD 相同的 `-i ''` 后缀语法，这一点与 GNU sed 不同。
+> macOS 中的许多命令行工具（如 `sed`、`grep`、`awk`）已是较旧版本，与 FreeBSD 当前版本相比存在差异。
 
 ## 文件系统 APFS 与 ZFS 比较
 
