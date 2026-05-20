@@ -15,7 +15,7 @@ macOS 与 FreeBSD 共享大量 BSD 组件，因此从 macOS 迁移到 FreeBSD，
 | 内存管理 | Mach 虚拟内存管理（VM），受 BSD 内存管理机制部分影响，支持分页、保护和共享内存 |
 | 进程模型 | Mach IPC、Security Trailers、强制访问控制（MAC）机制，支持多任务和安全策略 |
 
-## 功能比较
+## 基本比较
 
 | 功能 | macOS | FreeBSD | 说明 |
 | ---- | ----- | ------- | ---- |
@@ -28,6 +28,7 @@ macOS 与 FreeBSD 共享大量 BSD 组件，因此从 macOS 迁移到 FreeBSD，
 | 编译程序 | Clang + LLVM | Clang + LLVM | / |
 | 生命周期 | 3年 | 4年 | |
 | 文件系统 | APFS（默认） | ZFS（默认） | / |
+| UNIX 认证 | 逐版本认证 | 未认证 | / |
 
 > **注意**
 >
