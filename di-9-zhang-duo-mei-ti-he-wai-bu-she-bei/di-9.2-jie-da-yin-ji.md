@@ -180,7 +180,7 @@ Listen IP:631
 
 ### 打印机免驱动支持问题
 
-如需确认打印机是否支持免驱动打印，可在 [OpenPrinting](https://openprinting.github.io/printers/) 查询。以本节使用打印机为例：
+如需确认打印机是否支持免驱动打印，可在 [OpenPrinting](https://openprinting.github.io/printers/) 查询。以本节使用的打印机为例：
 
 ![OpenPrinting 查询](../.gitbook/assets/cup9.png)
 

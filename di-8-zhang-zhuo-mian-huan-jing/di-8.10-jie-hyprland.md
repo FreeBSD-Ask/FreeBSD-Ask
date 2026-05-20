@@ -790,7 +790,7 @@ indicator-radius=360
 indicator-thickness=60
 indicator-caps-lock
 
-key-hl-color=228833
+key-hl-color=ff228833
 
 separator-color=00000000
 

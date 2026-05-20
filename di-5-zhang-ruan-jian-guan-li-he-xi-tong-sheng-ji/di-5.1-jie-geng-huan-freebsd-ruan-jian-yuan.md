@@ -363,7 +363,7 @@ FreeBSD-base: {
 
 > **注意**
 >
-> 根据 FreeBSD 源代码 [usr.sbin/bsdinstall/scripts/pkgbase.in](https://github.com/freebsd/freebsd-src/blob/releng/15.0/usr.sbin/bsdinstall/scripts/pkgbase.in) 最后几段源代码，**/etc/pkg/repos/FreeBSD.conf** 中的 FreeBSD-base 源虽然是 `enabled: no`。但是，那些在安装中选择了 pkgbase 的用户，会在 **/usr/local/etc/pkg/repos/FreeBSD.conf** 文件中写入 `FreeBSD-base: { enabled: yes }` 这行来显式覆盖默认配置。因此，pkgbase 用户的 FreeBSD-base 源实际上是默认启用的。
+> 根据 FreeBSD 源代码 [usr.sbin/bsdinstall/scripts/pkgbase.in](https://github.com/freebsd/freebsd-src/blob/releng/15.0/usr.sbin/bsdinstall/scripts/pkgbase.in) 最后几段源代码，**/etc/pkg/repos/FreeBSD.conf** 中的 FreeBSD-base 源虽然是 `enabled: no`。但是，那些在安装中选择了 pkgbase 的用户，会在 **/usr/local/etc/pkg/repos/FreeBSD.conf** 文件中写入 `FreeBSD-base: { enabled: yes }` 这一行来显式覆盖默认配置。因此，pkgbase 用户的 FreeBSD-base 源实际上是默认启用的。
 
 #### 中国科学技术大学开源软件镜像站
 
@@ -391,7 +391,7 @@ USTC-base: {
 
 > **警告**
 >
-> 对于 **RELEASE** 版本的系统，pkgbase 在整个生命周期内是几乎固定不变的！
+> 对于 **RELEASE** 版本的系统，pkgbase 在整个生命周期内几乎是固定不变的！
 >
 > 仓库 `base_latest` 和 `base_weekly` 仅面向 STABLE 或 CURRENT！
 >
@@ -490,7 +490,7 @@ USTC-base: {
 
 ### Ports 源
 
-该源用于下载 Ports 框架中软件（称 Port）的源代码。
+该源用于下载 Ports 框架中的软件（称为 Port）的源代码。
 
 > **警告**
 >

@@ -83,8 +83,6 @@ proc           /proc       procfs  rw  0   0
 
 安装后的默认界面如上图所示，可以选择更换主题：
 
-![FreeBSD 安装 icewm](../.gitbook/assets/fluxbox1.png)
-
 ![FreeBSD 安装 icewm](../.gitbook/assets/icewm1.png)
 
 ![FreeBSD 安装 icewm](../.gitbook/assets/icewm2.png)

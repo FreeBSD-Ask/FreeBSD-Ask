@@ -1,6 +1,6 @@
 # 9.5 视频播放器
 
-FreeBSD 上主要的视频播放器包括 VLC、SMPlayer 和 Kodi，均支持 pkg 安装。本节另附 MPV 在 TTY 下直接播放视频的配置方法。
+FreeBSD 上主要的视频播放器包括 VLC、SMPlayer 和 Kodi，均支持 pkg 安装。本节另附 mpv 在 TTY 下直接播放视频的配置方法。
 
 ## VLC
 
@@ -116,7 +116,7 @@ Kodi 是一款知名的开源媒体中心软件，其曾用名为 XBMC（Xbox Me
 # make install clean
 ```
 
-切换到 TTY 终端环境后，使用 MPV 播放器播放视频文件 `1.mp4`：
+切换到 TTY 终端环境后，使用 mpv 播放器播放视频文件 `1.mp4`：
 
 ```sh
 $ mpv 1.mp4

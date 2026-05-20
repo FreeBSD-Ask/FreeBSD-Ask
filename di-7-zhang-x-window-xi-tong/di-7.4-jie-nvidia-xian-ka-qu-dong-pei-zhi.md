@@ -58,7 +58,7 @@
 
 ```sh
 # Xorg -configure                     # 自动生成 Xorg 配置文件
-# cp /root/xorg.conf.new /etc/X11/xorg.conf  # 将生成的配置文件复制到 /etc/X11/xorg.conf
+# cp /root/xorg.conf.new /usr/local/etc/X11/xorg.conf.d/xorg.conf  # 将生成的配置文件复制到配置目录
 ```
 
 > **警告**
@@ -123,9 +123,9 @@ Mon Jan 19 19:06:59 2026
 
 ![KDE 系统信息](../.gitbook/assets/nvi2.png)
 
-- 使用 MPV 打开电影，可见显存使用量明显上升（从 3 MB 上升至数百兆），也可使用 SMPlayer 观看。
+- 使用 mpv 打开电影，可见显存使用量明显上升（从 3 MB 上升至数百兆），也可使用 SMPlayer 观看。
 
-![MPV 显存使用](../.gitbook/assets/nvi1.jpg)
+![mpv 显存使用](../.gitbook/assets/nvi1.jpg)
 
 ## 故障排除
 

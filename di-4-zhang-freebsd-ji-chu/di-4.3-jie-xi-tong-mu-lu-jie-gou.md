@@ -631,7 +631,7 @@ vgapci0: Boot video device
 xhci0: <XHCI (generic) USB 3.0 controller> mem 0x6001120000-0x600112ffff at device 13.0 on pci0
 xhci0: 32 bytes context size, 64-bit DMA
 # xHCI（USB 3.0 主控制器，PCI Function 13.0）。context size=32 B 为 xHCI 数据结构大小，
-# 64-bit DMA 表示支持 64 位总线地址——兼容 4GB 以上的物理内存。
+# 64-bit DMA 表示支持 64 位总线地址——兼容 4 GB 以上的物理内存。
 
 usbus0 on xhci0
 # usbus0（USB 总线实例）绑定在 xhci0 上。USB 核心通过此总线管理连接的 USB 设备。
@@ -866,7 +866,7 @@ pcm0: <Realtek ALC269 (Right Analog)> at nid 21 and 24 on hdaa0
 # ===== NVMe 磁盘设备（nda/CAM 路径）=====
 nda0 at nvme0 bus 0 scbus0 target 0 lun 1
 # nda(4)：通过 CAM(4) 框架连接的 NVMe 磁盘设备。
-# nda0：500GB 梵想 S530Q NVMe SSD。
+# nda0：500 GB 梵想 S530Q NVMe SSD。
 # scbus0 target 0 lun 1：SCSI 中层总线的模拟寻址。
 # （FreeBSD 的 CAM 层统一了 nvme(4)→nda(4) 和 ahci(4)→ada(4) 等不同传输协议）
 

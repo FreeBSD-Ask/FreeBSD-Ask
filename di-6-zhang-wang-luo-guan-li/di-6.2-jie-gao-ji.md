@@ -114,7 +114,7 @@ traceroute6 to freebsd.org (2610:1c1:1:606c::50:15) from 240e:341:22b:ae00:f534:
     240e:0:a::c9:3649 (240e:0:a::c9:3649)  16.334 ms *
  8  * * *
  9  *
-    zayo.ae10.mpr4.sjc7.us.zip.zayo.com (2001:438:ffff::407e:2f9)  180.002 ms  179.112ms
+    zayo.ae10.mpr4.sjc7.us.zip.zayo.com (2001:438:ffff::407e:2f9)  180.002 ms  179.112 ms
 10  ae34.mpr1.ewr4.us.zip.zayo.com (2001:438:ffff::407d:1455)  244.026 ms  243.263 ms *
 11  2001:438:fffe::24ba (2001:438:fffe::24ba)  246.736 ms *  245.756 ms
 12  cs89-cs80.nyinternet.net (2610:1c1::2502)  218.700 ms  218.396 ms  217.715 ms
