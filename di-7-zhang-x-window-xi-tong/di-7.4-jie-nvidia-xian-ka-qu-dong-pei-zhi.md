@@ -58,7 +58,7 @@
 
 ```sh
 # Xorg -configure                     # 自动生成 Xorg 配置文件
-# cp /root/xorg.conf.new /etc/X11/xorg.conf  # 将生成的配置文件复制到 /etc/X11/xorg.conf
+# cp /root/xorg.conf.new /usr/local/etc/X11/xorg.conf.d/xorg.conf  # 将生成的配置文件复制到配置目录
 ```
 
 > **警告**
