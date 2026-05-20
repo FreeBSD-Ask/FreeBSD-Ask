@@ -25,7 +25,7 @@
 
 ## 基本比较
 
-macOS 与 FreeBSD 共享大量 BSD 组件，因此从 macOS 迁移至 FreeBSD 时的命令行适应成本低于从 Windows 迁移。
+macOS 与 FreeBSD 共享大量 BSD 组件，因此从 macOS 迁移到 FreeBSD，命令行上手比从 Windows 迁移容易得多。
 
 ### 功能比较
 
