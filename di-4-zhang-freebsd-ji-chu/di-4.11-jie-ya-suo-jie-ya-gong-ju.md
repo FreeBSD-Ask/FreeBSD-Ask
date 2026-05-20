@@ -1,4 +1,4 @@
-# 4.10 压缩和解压缩
+# 4.11 压缩和解压缩
 
 压缩和解压工具是计算机文件管理中的基础工具。数据压缩利用信息的统计冗余性，通过编码算法减少数据表示所需的存储空间。根据是否允许信息丢失，压缩算法可分为无损压缩（lossless compression）和有损压缩（lossy compression）两大类。本节所涉及的工具均采用无损压缩算法，即解压后的数据与原始数据完全一致。
 
@@ -241,7 +241,7 @@ a test
 查看结果：
 
 ```sh
-$ ykla@ykla:~ $ ls -al
+$ ls -al
 drwxr-xr-x  2 ykla ykla     2 Apr 16 11:53 test
 -rw-r--r--  1 ykla ykla    98 Apr 16 11:58 test.tar.zst
 ```
