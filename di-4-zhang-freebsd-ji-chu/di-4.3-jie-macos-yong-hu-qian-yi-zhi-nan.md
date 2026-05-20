@@ -4,6 +4,57 @@ macOS 与 FreeBSD 共享大量 BSD 组件，因此从 macOS 迁移到 FreeBSD，
 
 ## 共同的 BSD 血脉
 
+```text
+Original Unix
+        |
+        V
+     4.3 BSD ------------------------------------------------------+
+        |                                                          |
+        +----------------------+                                   | (基于 4.3 BSD)
+        |                      |                                   V
+        V                      V                           CMU Mach Project
+   4.3BSD-Reno             386BSD 0.1                              |
+        |                      |                                   V
+        |                      V                                 Mach
+        V                 FreeBSD 1.0                              |
+   4.4BSD-Lite                 |                   +---------------+---------------+
+                               |                   |                               |
+                               V                   V                               V
+                        FreeBSD 4.x/5.x        OSFMK 7.3                     NeXT Mach 2.5
+                               |            (Based on Mach 3.0)              (Integrated 4.3 BSD)
+                               |                   |                               |
+                               |                   |                       +-------+
+                               |                   |                       |       |
+                               |                   |                       |       V
+                               |                   |                       |    NeXTSTEP
+                               |                   |                       |       |
+                               |                   |                       |       V
+                               |                   |                       |    OPENSTEP
+                               |                   |                       |       |
+                               |                   |                       |       V
+                               |                   |                       |    Rhapsody
+                               |                   |                       |       |
+                               +---+               |                       |       |
+                                   |               |                       |       |
+                                   V               V                       V       |
+                               +-----------------------------------------------+   |
+                               |                   XNU Kernel                  |   |
+                               |                                               |   |
+                               |         (Mach 2.5 Base + OSFMK 7.3            |   |
+                               |          + FreeBSD 4.x/5.x VFS/Networking)    |   |
+                               +-----------------------------------------------+   |
+                                                       |                           |
+                                                       V                           |
+                                                     Darwin                        |
+                                       (XNU Kernel + FreeBSD Userland)             |
+                                                       |                           |
+                                                       +---------------------------+
+                                                                     |
+                                                                     V
+                                                                   macOS
+                                                      (Darwin + Aqua UI + Cocoa)
+```
+
 从历史角度看，macOS（以及由此衍生的 iOS、iPadOS 等）的核心层（Darwin）基于 BSD 代码，并融合了其他技术，macOS 系列操作系统可以看作独立的、类 BSD 操作系统分支，与 OpenBSD、NetBSD 和 FreeBSD 等系统具有同等地位。
 
 | 组件 | 来源 |
