@@ -1,6 +1,6 @@
 # 4.3 macOS 用户迁移指南
 
-从商标角度看，macOS 是符合标准的 UNIX 操作系统。~~因此，要安装 UNIX 的人可考虑 macOS。~~
+macOS 与 FreeBSD 共享大量 BSD 组件，因此从 macOS 迁移到 FreeBSD，命令行上手比从 Windows 迁移容易得多。
 
 从表面看，这是 Android 与 iOS 之争，实质上则是 Linux 与 BSD 之争。~~这也许还是大教堂与市集之争。~~
 
@@ -11,7 +11,7 @@
 | 组件 | 来源 |
 | ---- | ---- |
 | XNU 内核 | 基于 Mach 微内核（CMU）、NeXTStep/OpenStep 架构，整合 BSD 子系统 |
-| 网络栈 | BSD/FreeBSD TCP/IP 协议栈为核心，支持 IPv4/IPv6，包含 IOKIT 驱动接口；NKE（Network Kernel Extensions，网络内核扩展） |
+| 网络栈 | BSD/FreeBSD TCP/IP 协议栈为核心（IPv4/IPv6），包含 IOKIT 驱动接口；NKE（Network Kernel Extensions，网络内核扩展） |
 | 虚拟文件系统 | 基于 BSD VFS，支持 HFS+、APFS、UFS 等文件系统 |
 | 用户空间工具 | BSD 用户工具（如 ls、cp、grep 等），经过苹果改造和增强 |
 | 内存管理 | Mach 虚拟内存管理（VM），受 BSD 内存管理机制部分影响，支持分页、保护和共享内存 |
@@ -25,7 +25,7 @@
 
 ## 基本比较
 
-macOS 与 FreeBSD 共享大量 BSD 组件，因此从 macOS 迁移到 FreeBSD，命令行上手比从 Windows 迁移容易得多。
+
 
 ### 功能比较
 
