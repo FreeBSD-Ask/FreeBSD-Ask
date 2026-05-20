@@ -99,8 +99,6 @@ FreeBSD 基本系统几乎不含任何与 BSD 协议不兼容的软件。
 | Arch Linux | 滚动更新 | [pacman](https://wiki.archlinux.org/title/pacman) | GNU | gcc | Bash | 可选 |
 | RHEL | [3/最长 12 年](https://access.redhat.com/zh_CN/support/policy/updates/errata) | [RPM（yum、dnf）](https://www.redhat.com/sysadmin/how-manage-packages) | GNU | gcc | Bash | GNOME |
 | FreeBSD | [约 2/4 年](https://www.freebsd.org/security/)（FreeBSD 14 及以前为 5 年，自 FreeBSD 15 起缩短为 4 年） | pkg/Ports | BSD | clang | sh | 可选 |
-| Windows | [不固定](https://docs.microsoft.com/zh-cn/lifecycle/faq/windows) | 可选 | 专有 | 可选 | PowerShell | Windows 桌面 |
-| macOS | 1 年/约 3 年 | 无 | [专有](https://www.apple.com/legal/sla/) | clang | Zsh | Aqua |
 
 Linux 广泛使用 GNU 工具，因此理论上，凡不依赖特定 Linux 函数库者，均可在 FreeBSD 上运行。
 
