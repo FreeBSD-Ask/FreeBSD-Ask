@@ -8,14 +8,14 @@
 
 从历史角度看，macOS（以及由此衍生的 iOS、iPadOS 等）的核心层（Darwin）确实是基于 BSD 代码，并融合了其他技术，macOS 系列操作系统因此可视作独立的、类 BSD 操作系统分支，与 OpenBSD、NetBSD 和 FreeBSD 等系统具有同等地位。
 
-| 组件     | 来源/说明                                                                   |
-| ---- | ----------------------------------------------------------------------- |
-| XNU 内核 | 基于 Mach 微内核（CMU）、NeXTStep/OpenStep 架构，整合 BSD 子系统                        |
-| 网络栈    | BSD/FreeBSD TCP/IP 协议栈为核心，支持 IPv4/IPv6，包含 IOKIT 驱动接口；NKE（Network Kernel Extensions，网络内核扩展） |
-| 虚拟文件系统 | 基于 BSD VFS，支持 HFS+、APFS、UFS 等文件系统                                       |
-| 用户空间工具 | BSD 用户工具（如 ls、cp、grep 等），经过苹果改造和增强                                      |
-| 内存管理   | Mach 虚拟内存管理（VM），受 BSD 内存管理机制部分影响，支持分页、保护和共享内存                           |
-| 进程模型   | Mach IPC、Security Trailers、强制访问控制（MAC）机制，支持多任务和安全策略                     |
+| 组件 | 来源/说明 |
+| ---- | ------- |
+| XNU 内核 | 基于 Mach 微内核（CMU）、NeXTStep/OpenStep 架构，整合 BSD 子系统 |
+| 网络栈 | BSD/FreeBSD TCP/IP 协议栈为核心，支持 IPv4/IPv6，包含 IOKIT 驱动接口；NKE（Network Kernel Extensions，网络内核扩展） |
+| 虚拟文件系统 | 基于 BSD VFS，支持 HFS+、APFS、UFS 等文件系统 |
+| 用户空间工具 | BSD 用户工具（如 ls、cp、grep 等），经过苹果改造和增强 |
+| 内存管理 | Mach 虚拟内存管理（VM），受 BSD 内存管理机制部分影响，支持分页、保护和共享内存 |
+| 进程模型 | Mach IPC、Security Trailers、强制访问控制（MAC）机制，支持多任务和安全策略 |
 
 ### 参考文献
 
