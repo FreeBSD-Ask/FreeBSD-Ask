@@ -32,7 +32,7 @@ macOS 与 FreeBSD 共享大量 BSD 组件，因此从 macOS 迁移到 FreeBSD，
 
 > **注意**
 >
-> macOS 中的许多命令行工具（如 `sed`、`grep`、`awk`）已是较旧版本，与 FreeBSD 当前版本相比存在差异。例如 macOS 的 `sed -i` 需要与 FreeBSD 相同的 `-i ''` 后缀语法，这一点与 GNU sed 不同。
+> macOS 中的许多命令行工具（如 `sed`、`grep`、`awk`）已是较旧版本，与 FreeBSD 当前版本相比存在差异。
 
 ## 文件系统 APFS 与 ZFS 比较
 
