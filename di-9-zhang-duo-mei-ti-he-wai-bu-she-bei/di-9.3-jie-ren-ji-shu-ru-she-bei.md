@@ -66,4 +66,4 @@ usbhid 驱动最早出现于 FreeBSD 13.0。[FreeBSD 代码审查 D45658](https:
 
 ## 附录：Fn 键设置
 
-- David Schlachter. Adjusting acpi_video brightness increments on FreeBSD[EB/OL]. 2020-03-12. <https://www.davidschlachter.com/misc/freebsd-acpi_video-thinkpad-display-brightness>. 介绍在 FreeBSD 上调整 ACPI 视频亮度增量的具体方法，适用于 ThinkPad 等笔记本电脑。
+- David Schlachter. Adjusting acpi_video brightness increments on FreeBSD[EB/OL]. (2020-03-12)[2026-03-25]. <https://www.davidschlachter.com/misc/freebsd-acpi_video-thinkpad-display-brightness>. 介绍在 FreeBSD 上调整 ACPI 视频亮度增量的具体方法，适用于 ThinkPad 等笔记本电脑。
