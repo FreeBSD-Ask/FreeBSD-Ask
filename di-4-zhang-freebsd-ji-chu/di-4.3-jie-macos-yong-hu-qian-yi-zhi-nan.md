@@ -21,12 +21,12 @@ macOS 与 FreeBSD 共享大量 BSD 组件，因此从 macOS 迁移到 FreeBSD，
 | ---- | ----- | ------- | ---- |
 | shell | zsh | sh | FreeBSD 可选支持 zsh |
 | 权限提升 | sudo | 可选 | FreeBSD 可选支持 sudo |
-| 软件管理（二进制包） | 可选，通常为 Homebrew | pkg | |
+| 软件管理（二进制包） | 可选，通常为 Homebrew | pkg | / |
 | 软件管理（基于源代码） | MacPorts | Ports | MacPorts 源自 Ports |
 | 防火墙 | pf (Packet Filter) | 内置 pf (Packet Filter) 等多种防火墙 | 可选支持 |
 | 服务管理 | launchd（命令 `launchctl`） | BSD init + RC 系统 | / |
 | 编译程序 | Clang + LLVM | Clang + LLVM | / |
-| 生命周期 | 3年 | 4年 | |
+| 生命周期 | 3年 | 4年 | / |
 | 文件系统 | APFS（默认） | ZFS（默认） | / |
 | UNIX 认证 | 逐版本认证 | 未认证 | / |
 
