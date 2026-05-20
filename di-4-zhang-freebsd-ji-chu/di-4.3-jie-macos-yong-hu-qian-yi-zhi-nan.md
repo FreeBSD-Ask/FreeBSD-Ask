@@ -39,7 +39,7 @@ macOS 与 FreeBSD 共享大量 BSD 组件，因此从 macOS 迁移到 FreeBSD，
 | 服务管理 | launchd（命令 `launchctl`） | BSD init + RC 系统 | / |
 | 编译程序 | Clang + LLVM | Clang + LLVM | / |
 | 生命周期 | 3年 | 4年 | |
-| 文件系统 | APFS（默认） | ZFS（默认） | |
+| 文件系统 | APFS（默认） | ZFS（默认） | / |
 
 > **注意**
 >
