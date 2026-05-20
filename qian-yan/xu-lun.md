@@ -4,7 +4,7 @@
 
 ## 本书定位
 
-本书涵盖 FreeBSD 15.0-RELEASE 与 14.4-RELEASE 的安装与日常使用，并尽可能向下兼容较早版本，同时包含部分 16.0-CURRENT 的内容。
+本书涵盖 FreeBSD 15.x-RELEASE 与 14.x-RELEASE 的安装与日常使用，并尽可能向下兼容较早版本，同时包含部分 16.0-CURRENT 的内容。
 
 本书主要面向 amd64（x86-64）与 arm64（AArch64）架构，并尽可能支持其他硬件架构。
 
