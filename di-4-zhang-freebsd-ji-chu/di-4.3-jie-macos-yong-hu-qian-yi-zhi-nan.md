@@ -4,6 +4,8 @@ macOS 与 FreeBSD 共享大量 BSD 组件，因此从 macOS 迁移到 FreeBSD，
 
 ## 共同的 BSD 血脉
 
+从历史角度看，macOS（以及由此衍生的 iOS、iPadOS 等）的核心层（Darwin）基于 BSD 代码，并融合了其他技术。
+
 ```text
 Original Unix
         |
@@ -55,7 +57,7 @@ Original Unix
                                                       (Darwin + Aqua UI + Cocoa)
 ```
 
-从历史角度看，macOS（以及由此衍生的 iOS、iPadOS 等）的核心层（Darwin）基于 BSD 代码，并融合了其他技术，macOS 系列操作系统可以看作独立的、类 BSD 操作系统分支，与 OpenBSD、NetBSD 和 FreeBSD 等系统具有同等地位。
+macOS 系列操作系统可以看作独立的、类 BSD 操作系统分支，与 OpenBSD、NetBSD 和 FreeBSD 等系统具有同等地位。
 
 | 组件 | 来源 |
 | ---- | ---- |
