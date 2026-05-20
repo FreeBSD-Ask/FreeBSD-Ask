@@ -147,7 +147,7 @@ Goodbye!
 >
 > 由于输入密码时不会打印在屏幕上，也不会显示为掩码 `*`，请谨慎创建用户账户。
 
-- ① 登录名命名有一些限制，参见 passwd(5)[EB/OL]. [2026-03-26]. <https://man.freebsd.org/cgi/man.cgi?query=passwd&sektion=5&format=html>。但请注意，登录名不支持八位编码字符集，例如不支持中文（即仅支持特定 ASCII 字符）。
+- ① 登录名命名有一些限制，参见 passwd(5)[EB/OL]. [2026-03-26]. <https://man.freebsd.org/cgi/man.cgi?query=passwd&sektion=5>。但请注意，登录名不支持八位编码字符集，例如不支持中文（即仅支持特定 ASCII 字符）。
 
 只有 root 才能使用此命令，否则将报错如下：
 
