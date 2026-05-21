@@ -177,7 +177,7 @@ FreeBSD 不仅在生命周期内不变，大版本更新也具有连贯性和稳
 - DTrace 框架与 GEOM 存储框架。
 - Linux 二进制兼容层可运行 Linux 软件，且运行性能通常不逊色于 Linux。
 - FreeBSD 的驱动大体上与内核解耦。
-- FreeBSD 秉持人人自由开发的理念，可以直接在 GitHub 上[提交代码](https://github.com/freebsd/freebsd-src/pulls)，或者注册账号在 <https://reviews.freebsd.org/> 进行大规模变更。
+- FreeBSD 秉持人人自由开发的理念，可以直接在 GitHub 上[提交代码](https://github.com/freebsd/freebsd-src/pulls)，或者注册账号在 <https://reviews.freebsd.org/> 提交大规模变更。
 - FreeBSD 的代码风格是 Kernighan & Ritchie 经典著作《The C Programming Language》（中译本：Kernighan B W, Ritchie D M. C 程序设计语言[M]. 徐宝文，李志，译. 第 2 版. 北京：机械工业出版社，2019. ISBN: 978-7-111-61794-5.）中使用的风格。
 
 #### 安全原因
@@ -214,7 +214,7 @@ GNOME、Xorg（X11）、D-Bus、systemd、PulseAudio、Wayland、PipeWire 等主
 
 目前 FreeBSD 桌面部件缺失，很大程度上源于对 Linux 特有函数库的强依赖，例如包含 `ip` 命令的 `iproute2` 软件包。更主要的原因则是这些桌面或部件与 systemd 存在深度捆绑或强制依赖关系，比如 `NetworkManager`。而 Samba 开发者则说“We use Linux, we develop for Linux, all others please submit patches”（我们使用 Linux，为 Linux 开发，其他系统的用户请自行提交补丁）。FreeBSD 社区将此类现象称为“Linuxism”（Linux 主义/Linux 偏向）。
 
-这种行为将导致何种后果尚不得而知，但此类程序正变得越来越多，并有成为主流的趋势。许多开发者在开发程序（如 `todesk`）时也不再考虑对传统 init 系统的兼容。Java 程序亦逐渐丧失了可移植性，FreeBSD 上的 Eclipse 近两年未获更新，其原因亦在于此类捆绑问题（D'Pong P. Bug 562443 - SWT spams temp folder with innumerable folders[EB/OL]. (2020-05-26)[2026-04-05]. <https://gitlab.simantics.org/simantics/eclipse/eclipse.platform.swt/-/commit/19153b908d6d4cedcbd59824686717502cfde4f7>.）如果此趋势持续，可运行在 Linux 上的程序的可移植性可能进一步降低。
+这种行为将导致何种后果尚不得而知，但此类程序正变得越来越多，并有成为主流的趋势。许多开发者开发程序（如 `todesk`）时也不再考虑对传统 init 系统的兼容。Java 程序亦逐渐丧失了可移植性，FreeBSD 上的 Eclipse 近两年未获更新，其原因亦在于此类捆绑问题（D'Pong P. Bug 562443 - SWT spams temp folder with innumerable folders[EB/OL]. (2020-05-26)[2026-04-05]. <https://gitlab.simantics.org/simantics/eclipse/eclipse.platform.swt/-/commit/19153b908d6d4cedcbd59824686717502cfde4f7>.）如果此趋势持续，可运行在 Linux 上的程序的可移植性可能进一步降低。
 
 目前 FreeBSD 所面临的困境，可能是未来其他系统也会遇到的。
 
