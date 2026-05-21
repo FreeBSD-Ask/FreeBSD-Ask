@@ -837,7 +837,7 @@ Proceed with this action? [y/N]:
 
 ### `autoconf-2.72 Invalid perl5 version 5.42.`
 
-也可以将其理解为“xxx-yy Invalid zz version aa”这一类报错。
+也可以理解为“xxx-yy Invalid zz version aa”这一类报错。
 
 实例，在使用 Ports 安装 openjdk21 时报错如下：
 
