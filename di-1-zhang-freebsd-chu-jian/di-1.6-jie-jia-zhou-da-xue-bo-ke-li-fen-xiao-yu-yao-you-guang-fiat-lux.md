@@ -100,7 +100,7 @@ OpenBSD 也是一款类 UNIX 计算机操作系统，诞生于 1995 年，由南
 
 OpenBSD 每 6 个月发布一次新版本。
 
-OpenBSD 被广泛认为是世界上最安全的操作系统之一（另见 2014 年的德国电影 [*Who Am I – Kein System ist sicher*](https://www.imdb.com/title/tt3042408/) 即《[我是谁：没有绝对安全的系统](https://movie.douban.com/subject/25932086/)》）。OpenBSD 的口号是“Only two remote holes in the default install, in a heck of a long time!”（在如此漫长的时间里，默认安装下仅存在两个远程漏洞！）
+OpenBSD 被广泛认为是世界上最安全的操作系统。OpenBSD 的口号是“Only two remote holes in the default install, in a heck of a long time!”（在如此漫长的时间里，默认安装下仅存在两个远程漏洞！）
 
 OpenBSD 采用 LLVM/Clang 项目构建系统，默认 shell 为 ksh（基于 pdksh，而非 David Korn 的原始 ksh88/ksh93）。OpenBSD 吉祥物是一只名为普菲（Puffy）的河豚。
 
