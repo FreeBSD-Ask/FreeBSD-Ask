@@ -184,7 +184,7 @@
 
 ## 第 17 章 安全
 
-* [17.1 信息安全哲学](di-17-zhang-an-quan/di-17.1-jie-an-quan-zhe-xue.md)
+* [17.1 信息安全概述](di-17-zhang-an-quan/di-17.1-jie-an-quan-zhe-xue.md)
 * [17.2 账户认证安全](di-17-zhang-an-quan/di-17.2-jie-zhang-hu-ren-zheng-an-quan.md)
 * [17.3 资源限制](di-17-zhang-an-quan/di-17.3-jie-zi-yuan-xian-zhi.md)
 * [17.4 安全等级](di-17-zhang-an-quan/di-17.4-jie-an-quan-ji-bie.md)
