@@ -226,7 +226,7 @@ Other information:
 示例：修改用户 test1 的登录环境为 **/bin/sh**。
 
 ```sh
-# chpass -s sh test1 #
+# chpass -s sh test1
 chpass: user information updated
 ```
 
