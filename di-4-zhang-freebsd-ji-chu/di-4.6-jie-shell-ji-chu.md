@@ -18,7 +18,7 @@ FreeBSD root 用户默认 shell 为 sh（自 FreeBSD 14 起），但基本系统
 
 > **注意**
 >
-> 虽然 csh 与 tcsh 本质上是同一程序，但在使用时存在差异，如果以 csh 的参数调用，则部分 tcsh 扩展会被关闭。
+> 虽然 csh 与 tcsh 本质上是同一程序，但如果以 csh 的参数调用，则部分 tcsh 扩展会被关闭，因而在使用时存在差异。
 
 ## POSIX shell 规范
 
