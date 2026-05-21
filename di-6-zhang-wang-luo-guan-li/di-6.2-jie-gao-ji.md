@@ -94,7 +94,7 @@ ff02::/16          link#3             URS             lo0   # IPv6 多播地址
 
 服务提供商须向主干站点通告自身连接点身份，成为流量进入路径。该过程称为路由传播。
 
-路由传播偶有故障，导致部分站点无法连通。查找路由断点的常用命令是 `traceroute`（IPv6 使用 `traceroute6`），`ping` 失败时尤其有用。
+路由传播偶有故障，导致部分站点无法连通。此时，查找路由断点的常用命令是 `traceroute`（IPv6 使用 `traceroute6`），`ping` 失败时尤其有用。
 
 使用 `traceroute` 须提供远程主机的地址。输出将显示路径上的网关主机，最终抵达目标主机或因连接中断而终止。
 
@@ -143,9 +143,8 @@ traceroute6 to freebsd.org (2610:1c1:1:606c::50:15) from 240e:341:22b:ae00:f534:
 ## TCP/IP 协议栈
 
 传输控制协议（Transmission Control Protocol，TCP）是互联网协议族（Internet Protocol Suite）中的核心传输层协议，软件实现体系称作 TCP 栈（采用层次化结构组织，因此称“栈”）。Vint Cerf 和 Bob Kahn 于 1974 年在论文《A Protocol for Packet Network Intercommunication》中首次提出 TCP 的核心思想（当时为传输与网络转发合一的单一协议），后经迭代，于 1981 年随 RFC 793 将 TCP 与 IP 拆分为两个独立协议。RFC 9293 已于 2022 年 8 月取代了 RFC 793，前者为当前 TCP 协议的最新标准规范。
-TCP 栈提供端到端的可靠数据传输、拥塞控制、流量控制等关键功能。
 
-不同于其他主流操作系统，FreeBSD 创新实现了多 TCP 栈共存架构，该架构允许系统同时加载多个 TCP 协议栈实现，并可为不同的网络连接或系统全局选用不同的 TCP 栈。
+TCP 栈提供端到端的可靠数据传输、拥塞控制、流量控制等关键功能。需要指出的是，不同于其他主流操作系统，FreeBSD 创新实现了多 TCP 栈共存架构，该架构允许系统同时加载多个 TCP 协议栈实现，并可为不同的网络连接或系统全局选用不同的 TCP 栈。
 
 当前主要开发与维护工作集中于 RACK 栈（RACK 算法最初出自 Google，FreeBSD 的 tcp_rack 栈实现出自 Netflix 的 Randall Stewart）和基础栈（基于 4.4BSD 经典栈实现演化而来）。
 

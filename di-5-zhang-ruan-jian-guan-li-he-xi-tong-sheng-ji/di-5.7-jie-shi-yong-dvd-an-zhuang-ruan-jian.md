@@ -66,7 +66,7 @@ COPYRIGHT	etc		mnt		rescue		usr
 
 ### 故障排除与未竟事宜
 
-如果将目录 **/dist** 改为其他路径，则使用环境变量的方法无效，因为 `packages/repos/FreeBSD_install_cdrom.conf` 中的路径是固定值，无法修改。
+因为 `packages/repos/FreeBSD_install_cdrom.conf` 中的路径是固定值，无法修改，所以如果将目录 **/dist** 改为其他路径，则使用环境变量的方法无效。
 
 ## 使用 `bsdconfig` 安装 DVD 软件（当前无效）
 

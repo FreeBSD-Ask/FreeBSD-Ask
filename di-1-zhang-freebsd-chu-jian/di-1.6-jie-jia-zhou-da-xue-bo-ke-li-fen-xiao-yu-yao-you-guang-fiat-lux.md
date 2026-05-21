@@ -16,7 +16,7 @@ NetBSD 支持[多种架构](https://wiki.netbsd.org/ports/)。其中，一级架
 
 NetBSD 主要面向技术爱好者和开发者，对普通用户而言具有一定的学习曲线，开发者是该系统的核心用户。
 
-NetBSD 开发的 [pkgsrc](https://www.pkgsrc.org/) 包管理器框架也支持 macOS、Linux 等多个操作系统。pkgsrc 通过可移植的构建脚本实现跨平台软件管理，体现了 NetBSD 的可移植性设计理念。
+NetBSD 开发的 [pkgsrc](https://www.pkgsrc.org/) 包管理器框架也支持 macOS、Linux 等多个操作系统。pkgsrc 以可移植的构建脚本实现跨平台软件管理，体现了 NetBSD 的可移植性设计理念。
 
 NetBSD 提供 Linux 兼容层，可运行部分 Linux 二进制程序，主要支持命令行工具和基础图形应用。
 
@@ -26,13 +26,13 @@ NetBSD 对 NVIDIA 显卡大致支持到 Pascal 架构（GeForce GTX 10 系列）
 
 ### 项目支持渠道
 
-为 NetBSD 项目提供支持，最简单的方式是通过 [GitHub Sponsors](https://github.com/sponsors/netbsd) 进行捐赠。~~还可获得一个 GitHub 徽章~~ [~~Public Sponsor~~](https://github.com/orgs/community/discussions/19916)~~。~~
+为 NetBSD 项目提供支持，最简单的方式是通过 [GitHub Sponsors](https://github.com/sponsors/netbsd) 捐赠。~~还可获得一个 GitHub 徽章~~ [~~Public Sponsor~~](https://github.com/orgs/community/discussions/19916)~~。~~
 
 > **技巧**
 >
 > 支付后支付方式将绑定，如需解除绑定，可联系 GitHub 客服 [提交工单](https://support.github.com/)，通常在一个工作日内即可处理。
 
-还可通过 [Donate using Stripe](https://www.netbsd.org/stripe.html) 进行捐赠，该方式支持中国银联、Google Pay 等多种支付方式。
+还可通过 [Donate using Stripe](https://www.netbsd.org/stripe.html) 捐赠，该方式支持中国银联、Google Pay 等多种支付方式。
 
 ### NetBSD 上的 ZFS
 
@@ -100,11 +100,11 @@ OpenBSD 也是一款类 UNIX 计算机操作系统，诞生于 1995 年，由南
 
 OpenBSD 每 6 个月发布一次新版本。
 
-OpenBSD 被广泛认为是世界上最安全的操作系统之一（另见 2014 年的德国电影 [*Who Am I – Kein System ist sicher*](https://www.imdb.com/title/tt3042408/) 即《[我是谁：没有绝对安全的系统](https://movie.douban.com/subject/25932086/)》）。OpenBSD 的口号是“Only two remote holes in the default install, in a heck of a long time!”（在如此漫长的时间里，默认安装下仅存在两个远程漏洞！）
+OpenBSD 被广泛认为是世界上最安全的操作系统。OpenBSD 的口号是“Only two remote holes in the default install, in a heck of a long time!”（在如此漫长的时间里，默认安装下仅存在两个远程漏洞！）
 
 OpenBSD 采用 LLVM/Clang 项目构建系统，默认 shell 为 ksh（基于 pdksh，而非 David Korn 的原始 ksh88/ksh93）。OpenBSD 吉祥物是一只名为普菲（Puffy）的河豚。
 
-相较于其他 BSD 系统，OpenBSD 的设计取向更偏向安全性（例如移除了 Linux 兼容层，用 doas 替代 sudo，并默认 [限制超线程](https://marc.info/?l=openbsd-tech&m=153504937925732&w=2)）。对此，用户体验则见仁见智（整个系统在性能方面表现相对保守，例如包管理器运行速度较慢），毕竟这样的后果之一是软件相对较少，不仅远远落后于 FreeBSD，甚至比起 NetBSD 也略逊一筹。不过，OpenBSD 以极少量的人力和物力维护了 amd64/i386、arm64/armv7 及 riscv64 等诸多架构，是一款实实在在的通用操作系统。为了拓展桌面用户，也打包了 GNOME、MATE 和 XFCE 等桌面环境以及 Blender、Firefox、Krita 和 LibreOffice 等一大批软件。未来 OpenBSD 有望在保持安全特性的同时优化性能，拓展使用场景。
+相较于其他 BSD 系统，OpenBSD 的设计取向更偏向安全性（例如移除了 Linux 兼容层，用 doas 替代 sudo，并默认 [限制超线程](https://marc.info/?l=openbsd-tech&m=153504937925732&w=2)）。对此，用户体验则见仁见智（整个系统性能方面表现相对保守，例如包管理器运行速度较慢），毕竟这样的后果之一是软件相对较少，不仅远远落后于 FreeBSD，甚至比起 NetBSD 也略逊一筹。不过，OpenBSD 以极少量的人力和物力维护了 amd64/i386、arm64/armv7 及 riscv64 等诸多架构，是一款实实在在的通用操作系统。为了拓展桌面用户，也打包了 GNOME、MATE 和 XFCE 等桌面环境以及 Blender、Firefox、Krita 和 LibreOffice 等一大批软件。未来 OpenBSD 有望在保持安全特性的同时优化性能，拓展使用场景。
 
 在中文互联网上，OpenBSD 被不少人熟知，概因一条让人感慨万千的新闻——在 2014 年，[OpenBSD 项目因欠缴电费，面临关停的风险](https://marc.info/?l=openbsd-misc&m=138972987203440&w=2)，但是 OpenBSD 开发的软件，几乎所有使用互联网的人每一刻都在使用——OpenSSH 是 OpenBSD 的子项目，这也很常见，整个开源生态均由少数项目支撑，并且可能仅有不到个位数的人在进行维护，但他们往往得不到应有的重视，却践行了自己的开源使命。危机最终由罗马尼亚比特币企业家 Mircea Popescu 捐赠的 2 万美元化解。此后，包括国内罗永浩的 [锤子科技](https://undeadly.org/cgi?action=article&sid=20161123193708) 在内的多家企业与个人也陆续向 OpenBSD 基金会捐款。
 
@@ -149,7 +149,7 @@ OpenBSD 的源代码大多缺少详细的注释和说明文件，初学者较难
 
 OpenBSD 的 Bug 报告缺乏统一的追踪和报告平台，反馈主要通过邮件列表提交，信息容易丢失。
 
-OpenBSD 的发行公告在结构和可读性方面有待改善，内容呈现较为简略，难以直接阅读。缺少 Wiki 或类似平台来跟踪具体子项目的开发进度。
+OpenBSD 的发行公告结构与可读性有待改善，内容呈现较为简略，难以直接阅读。缺少 Wiki 或类似平台来跟踪具体子项目的开发进度。
 
 #### 不稳定的 ABI
 
@@ -165,7 +165,7 @@ OpenBSD 的发行公告在结构和可读性方面有待改善，内容呈现较
 
 #### 安全考量
 
-在 OpenBSD 中，一些现代操作系统常见的安全模型或安全框架尚未得到支持：
+在 OpenBSD 中，一些现代操作系统常见的安全模型或安全框架尚未获支持：
 
 * 不支持安全启动和 TPM
 * 系统和软件包的构建流程尚不够清晰透明，且技术栈相对落后（例如 CVS 的维护明显不足）
@@ -190,7 +190,7 @@ OpenBSD 的安全策略基于以下判断：超线程机制可能带来潜在的
 
 #### 捐赠 OpenBSD
 
-[Donating to the Foundation](https://www.openbsdfoundation.org/donations.html) 对于中国大陆用户而言，捐赠存在一定困难，因为该基金会仅接受国际 PayPal，提示信息为“此国家或地区不支持捐赠给此收款人”。已通过邮件反馈此问题，并曾写挂号信寄给位于加拿大的 OpenBSD 基金会，但未收到任何回应。即便使用 GitHub Sponsors 方式亦可，但多次沟通仍未得到支持。对此，深感不便。
+[Donating to the Foundation](https://www.openbsdfoundation.org/donations.html) 对于中国大陆用户而言，因为该基金会仅接受国际 PayPal，提示信息为“此国家或地区不支持捐赠给此收款人”，捐赠存在一定困难。已通过邮件反馈此问题，并曾写挂号信寄给位于加拿大的 OpenBSD 基金会，但未收到任何回应。即便使用 GitHub Sponsors 方式亦可，但多次沟通仍未得到支持。对此，深感不便。
 
 目前，中国大陆用户可通过国内版本的 PayPal 或普通银联储蓄卡，向 PayPal 账号 `obsd-paypal@openbsdfoundation.org`（该账号为收款账号，并非电子邮件）发起转账，以对 OpenBSD 基金会进行捐赠。具体操作方法请自行搜索“PayPal 个人转账”。
 

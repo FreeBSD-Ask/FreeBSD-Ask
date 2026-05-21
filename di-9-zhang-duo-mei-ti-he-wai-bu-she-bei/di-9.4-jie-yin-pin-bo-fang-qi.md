@@ -88,7 +88,7 @@ dev.pcm.2.play.vchanrate: virtual channel mixing speed/rate
 dev.pcm.2.play.vchanmode: vchan format/rate selection: 0=fixed, 1=passthrough, 2=adaptive
 ```
 
-按照如下所示进行参数设置（可将这些配置写入 `sysctl.conf` 文件以使配置在系统重启后永久生效）：
+按照如下所示设置参数（可将这些配置写入 `sysctl.conf` 文件以使配置在系统重启后永久生效）：
 
 ```sh
 # sysctl dev.pcm.2.bitperfect=1           # 设置声卡 2 为位完美模式

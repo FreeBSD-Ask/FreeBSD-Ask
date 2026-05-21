@@ -163,7 +163,7 @@ USTC-base: {
 
 ## pkg 二进制包（由 Ports 构建的二进制包）切换软件源
 
-FreeBSD 中 pkg 源分为系统级和用户级两个配置文件。**不建议** 直接修改 **/etc/pkg/FreeBSD.conf** 文件，**因为该文件会随基本系统的更新而改变。**
+FreeBSD 中 pkg 源分为系统级和用户级两个配置文件。**因为该文件会随基本系统的更新而改变，所以不建议** 直接修改 **/etc/pkg/FreeBSD.conf** 文件。
 
 > **警告**
 >
@@ -562,7 +562,7 @@ Fetching http://ftp-archive.freebsd.org/pub/FreeBSD-Archive/ports/amd64/packages
 
 > **注意**
 >
-> pkg 是不可用的，会提示找不到 `digests.txz` 和 `repo.txz`，因为当时 pkgng 还没有被官方支持，仍然仅支持使用 `pkg_*` 命令。
+> 因为当时 pkgng 还没有被官方支持，仍然仅支持使用 `pkg_*` 命令，所以 pkg 是不可用的，会提示找不到 `digests.txz` 和 `repo.txz`。
 
 ## 课后习题
 

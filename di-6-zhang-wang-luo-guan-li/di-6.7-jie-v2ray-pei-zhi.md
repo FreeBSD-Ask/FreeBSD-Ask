@@ -172,7 +172,7 @@ export XRAY_LOCATION_ASSET=/usr/local/share/xray-core/      # 指定 Xray 资源
 setenv XRAY_LOCATION_ASSET /usr/local/share/xray-core/
 ```
 
-配置完成后，应重新加载配置文件使更改立即生效。例如，sh 或 Bash 须执行 `source ~/.profile`，csh 须执行 `source ~/.cshrc`，也可以注销并重新登录。对于系统服务运行方式（如 rc.conf），无需此配置，因为它通过 sysrc 注入环境变量。
+配置完成后，应重新加载配置文件使更改立即生效。例如，sh 或 Bash 须执行 `source ~/.profile`，csh 须执行 `source ~/.cshrc`，也可以注销并重新登录。对于系统服务运行方式（如 rc.conf），因为它通过 sysrc 注入环境变量，无需此配置。
 
 建立软链接，使 Xray 无论从何处启动都能找到资源文件：
 
@@ -194,7 +194,7 @@ setenv XRAY_LOCATION_ASSET /usr/local/share/xray-core/
 
 - FreeBSD 的 `security/xray-core` 没有创建独立的 `xray` 用户/组，而是沿用 `net/v2ray` 的 `v2ray:v2ray`，这是为了保持用户权限管理的一致性。
 
-如果 **/usr/local/etc/xray-core/** 目录下存在其他 `.json` 样例文件，应将其移除，避免配置冲突，因 Xray 可能扫描目录下的所有 JSON 文件。
+如果 **/usr/local/etc/xray-core/** 目录下存在其他 `.json` 样例文件，因 Xray 可能扫描目录下的所有 JSON 文件，应将其移除，避免配置冲突。
 
 **2. 配置 rc.conf 文件：**
 
