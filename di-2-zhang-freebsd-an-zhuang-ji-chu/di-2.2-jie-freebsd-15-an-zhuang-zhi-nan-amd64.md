@@ -145,7 +145,7 @@ pkgbase 是一种新型的安装方式，需注意以下要点。
 
 `想从互联网获取软件包，还是使用此安装介质内包含的部分软件包？`
 
-pkgbase 方案起源于 TrueOS 项目（原名 PC-BSD，由 iXsystems 赞助，约 2019-2020 年间开始向 FreeBSD 上游贡献 pkgbase 相关代码）。TrueOS 核心项目此后停止开发，但 pkgbase 的代码贡献已由 FreeBSD 项目维护者接手并持续演进。pkgbase 旨在以软件包形式管理基本系统（内核与用户空间），将其拆分为可由 `pkg` 工具管理的独立二进制包。
+pkgbase 方案起源于 TrueOS 项目（原名 PC-BSD，由 iXsystems 赞助，约 2019-2020 年间开始向 FreeBSD 上游贡献 pkgbase 相关代码）。TrueOS 核心项目此后停止开发，但 pkgbase 的代码贡献已由 FreeBSD 项目维护者接手并持续演进。pkgbase 旨在以软件包形式管理基本系统（内核与用户空间），拆分为可由 `pkg` 工具管理的独立二进制包。
 
 此设计思路与常见 Linux 发行版较为接近。需要注意，pkgbase 在系统稳定性与使用便利性之间有一定张力：
 
@@ -749,7 +749,7 @@ CST 为中国标准时间（China Standard Time）的缩写，确认无误后按
 
 > **警告**
 >
-> 若创建普通用户，请务必将其同时加入 `wheel` 组（用于 `su` 权限提升）和 `video` 组（用于图形加速）。仅加入 `wheel` 组可能无法正常调用 GPU。
+> 若创建普通用户，请务必同时加入 `wheel` 组（用于 `su` 权限提升）和 `video` 组（用于图形加速）。仅加入 `wheel` 组可能无法正常调用 GPU。
 
 ```sh
 FreeBSD Installer # FreeBSD 安装程序
