@@ -1,6 +1,6 @@
 # 1.5 乔治·贝克莱（George Berkeley）与 BSD 文化传统
 
-20 世纪 70 年代，加州大学伯克利分校计算机系统研究小组（Computer Systems Research Group，CSRG）开始修改与扩展 AT&T 贝尔实验室开发的 AT&T 32V UNIX 操作系统。由于这些修改与扩展最初以软件发行包的形式发布，因此称为伯克利软件发行版（Berkeley Software Distribution，BSD），FreeBSD 即为 CSRG 工作的延续。
+20 世纪 70 年代，加州大学伯克利分校计算机系统研究小组（Computer Systems Research Group，CSRG）开始修改与扩展 AT&T 贝尔实验室开发的 AT&T 32V UNIX 操作系统。这些修改与扩展最初以软件发行包的形式发布，故称伯克利软件发行版（Berkeley Software Distribution，BSD），FreeBSD 即为 CSRG 工作的延续。
 
 ## 伯克利市、加州大学伯克利分校、BSD 的命名
 
