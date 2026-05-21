@@ -150,7 +150,7 @@ PS C:\Users\ykla> Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-H
 
 ![Hyper-V](../.gitbook/assets/hyperv-summary.jpg)
 
-删除虚拟机前，必须先将其关闭。
+删除虚拟机前，必须先关闭。
 
 ## 参考文献
 
