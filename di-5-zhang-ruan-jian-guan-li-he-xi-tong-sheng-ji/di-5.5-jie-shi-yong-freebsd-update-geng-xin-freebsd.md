@@ -369,7 +369,7 @@ installed from the ports tree) and then run
 'freebsd-update [options] install' again to finish installing updates.
 ```
 
-重新安装 `pkg` 本身，将其 ABI 更新到 15.0-RELEASE：
+重新安装 `pkg` 本身，将 ABI 更新到 15.0-RELEASE：
 
 ```sh
 # pkg bootstrap -f
