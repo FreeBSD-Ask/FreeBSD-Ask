@@ -516,7 +516,7 @@ pid 1562 (distextract), jid 0, uid 0, was killed: failed to reclaim memory
 
 ## 故障排除与未竟事宜
 
-本节在实际操作中尝试了若干方法，但最终只有两种方法相对成功。为了便于有意探索的读者进行研究，未完成的方法在此处列出，供后续研究参考。
+本节实际操作中尝试了若干方法，但最终只有两种方法相对成功。为了便于有意探索的读者进行研究，未完成的方法在此处列出，供后续研究参考。
 
 ### 安装过程中报错 `sysctl: unknown oid 'vfs.zfs.min_auto_ashift'`
 

@@ -98,14 +98,14 @@ adduser(8) 是交互式的，会逐步引导创建新用户账户。如下所示
 
 完成后，该工具会提示是创建另一名用户还是退出。
 
-示例：创建普通用户 `ykla`，并将其添加到 `video` 组：
+示例：创建普通用户 `ykla`，并添加到 `video` 组：
 
 ```sh
 # adduser -g video -s sh -w yes
 # Username: ykla
 ```
 
-示例：创建用户 test，并将其添加到 wheel 组，设置其默认 shell 为 sh：
+示例：创建用户 test，并添加到 wheel 组，设置其默认 shell 为 sh：
 
 ```sh
 # adduser # 此工具必须由超级用户运行
