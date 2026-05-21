@@ -160,9 +160,7 @@ FreeBSD 不仅在生命周期内不变，大版本更新也具有连贯性和稳
 > - 从基督教来讲，这是主的指引。上帝在永恒的现在中创世。就像《出埃及记》一样，看上去是自己的选择，实际上都是主的安排。
 > - 从黑格尔来讲，由于辩证否定。FreeBSD 是 UNIX 的直接后裔，而很多协议又脱胎于 UNIX，所以注定了要来到这里。
 
-### 选择 FreeBSD 的技术性原因
-
-#### 一般技术原因
+### 选择 FreeBSD 的技术原因
 
 - FreeBSD 基本系统的配置文件与第三方软件配置文件相分离，系统级配置文件与用户配置文件相分离。FreeBSD 的文件系统层次结构遵循明确的组织原则，参见 [hier(7)](https://man.freebsd.org/cgi/man.cgi?query=hier&sektion=7)。~~再也不用到处用 `find` 命令查找某个 `.conf` 文件到底安装在哪了。~~
 - 由于基本系统的存在，第三方的软件几乎不影响系统的稳定性。FreeBSD 在软件更新和系统稳定之间保持了平衡。
@@ -179,23 +177,6 @@ FreeBSD 不仅在生命周期内不变，大版本更新也具有连贯性和稳
 - FreeBSD 的驱动大体上与内核解耦。
 - FreeBSD 秉持人人自由开发的理念，可以直接在 GitHub 上[提交代码](https://github.com/freebsd/freebsd-src/pulls)，或者注册账号在 <https://reviews.freebsd.org/> 提交大规模变更。
 - FreeBSD 的代码风格是 Kernighan & Ritchie 经典著作《The C Programming Language》（中译本：Kernighan B W, Ritchie D M. C 程序设计语言[M]. 徐宝文，李志，译. 第 2 版. 北京：机械工业出版社，2019. ISBN: 978-7-111-61794-5.）中使用的风格。
-
-#### 安全原因
-
-- Leidinger 博客：Leidinger, J. FreeBSD Security Hardening with Compiler Options[EB/OL]. (2025-05-24)[2026-03-26]. <https://www.leidinger.net/blog/2025/05/24/freebsd-security-hardening-with-compiler-options/>. FreeBSD 项目已对部分 Port 实施加固。另见 Bug 284270：FreeBSD Project. Bug 284270 - Security: FreeBSD Security Hardening[EB/OL]. [2026-03-26]. <https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=284270>.
-- 披露的安全漏洞少于其他主流操作系统（尽管可能存在样本数量较少的客观因素）。截至 2025 年 9 月，FreeBSD 基本系统（用户空间与内核）的 CVE 漏洞数量约为 Linux 内核的二十分之一（根据 CVEdetails.com. CVE security vulnerability database. Security vulnerabilities, exploits, references and more[EB/OL]. [2026-03-26]. <https://www.cvedetails.com/>. 统计），而 Linux 内核的 CVE 数量远超 Windows（二者并非同一维度：Linux 内核仅为内核，而 Windows 通常指全部组件）。同期，OpenBSD 的 CVE 漏洞数量约为 FreeBSD 的 40%。
-- 可以避免在产品和架构中出现单点故障。
-- 安全事件审计。
-- Robert Watson, Stacey Son. TrustedBSD - FreeBSD Wiki[EB/OL]. (2022-09-15)[2026-03-26]. <https://wiki.freebsd.org/TrustedBSD/>. FreeBSD 集成了标准 UNIX DAC、ACL、TrustedBSD MAC 安全框架（基于 POSIX®.1e 草案的安全扩展）
-- 集成 W^X 策略，参见 D28050 代码审查：kib. Implement enforcing write XOR execute mapping policy[EB/OL]. (2021-01-08)[2026-03-26]. <https://reviews.freebsd.org/D28050>.
-- 默认启用了内核和用户空间的 PIE 和 ASLR。ASLR 最初由 D27666 代码审查提出（2020-12-18），PIE 默认启用由 D28328 实现，二者合并至 HEAD 后，自 FreeBSD 13.2-RELEASE（2023 年 4 月 11 日）起 ASLR 对 64 位可执行文件默认启用。参见 D27666 代码审查:mw. Enable ASLR by default for 64-bit executables[EB/OL]. (2020-12-18)[2026-04-17]. <https://reviews.freebsd.org/D27666>; D28328 代码审查:mw. Enable PIE by default on 64-bit architectures[EB/OL]. [2026-04-17]. <https://reviews.freebsd.org/D28328>; FreeBSD 13.2-RELEASE 公告:FreeBSD Project. FreeBSD 13.2-RELEASE Announcement[EB/OL]. (2023-04-11)[2026-04-17]. <https://www.freebsd.org/releases/13.2R/announce/>.
-- FreeBSD 通过了 National Institute of Standards and Technology（NIST，美国国家标准及技术研究所）安全软件开发框架（SSDF）认证，参见 FreeBSD 基金会 SSDF 认证新闻：FreeBSD Foundation. FreeBSD Foundation Announces SSDF Attestation[EB/OL]. (2023-11-03)[2026-03-26]. <https://freebsdfoundation.org/news-and-events/latest-news/freebsd-foundation-announces-ssdf-attestation/>.
-- 实现了 FreeBSD 14 CIS 基准。参见 FreeBSD 基金会 CIS 基准博客：FreeBSD Foundation. New CIS® FreeBSD 14 Benchmark: Secure Your Systems with Expert-Guided Best Practices[EB/OL]. (2024-08-19)[2026-03-26]. <https://freebsdfoundation.org/blog/new-cis-freebsd-14-benchmark-secure-your-systems-with-expert-guided-best-practices/>.
-- 正在实现 FreeBSD 的零信任构建，参见 Sovereign Tech Agency 相关赞助。
-- 基于 GEOM 框架的全盘加密（含 ZFS、swap）方案。
-- 正在改进软件物料清单（Software Bill of Materials，SBOM），参见 Sovereign Tech Agency 相关赞助。
-- Capsicum 框架，并且已经对基本系统中大量工具进行了能力化加固。参见 Capsicum Wiki：FreeBSD Project. Capsicum - FreeBSD Wiki[EB/OL]. [2026-03-26]. <https://wiki.freebsd.org/Capsicum>.
-- FreeBSD 内核拥有五种不同的安全级别（securelevel）可以自由选择，参见 security 手册页：FreeBSD Project. security - introduction to security under FreeBSD[EB/OL]. [2026-03-26]. <https://man.freebsd.org/cgi/man.cgi?query=security&sektion=7>. 另见 mitigations 手册页：FreeBSD Project. mitigations - FreeBSD Security Vulnerability Mitigations[EB/OL]. [2026-03-26]. <https://man.freebsd.org/cgi/man.cgi?query=mitigations&sektion=7>. 手册页还介绍了 FreeBSD 上若干安全漏洞缓解手段。
 
 #### 参考文献
 
