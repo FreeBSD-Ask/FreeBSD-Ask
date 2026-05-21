@@ -167,7 +167,7 @@ FreeBSD `-RELEASE` 历史版本下载地址：
 
 ### Windows 平台下 Rufus 刻录方法
 
-不同操作系统平台上有不同的镜像刻录工具推荐。
+不同操作系统平台有不同镜像刻录工具推荐。
 
 Windows 平台建议优先使用 **Rufus**，Linux/FreeBSD 平台可直接使用 `dd` 命令刻录镜像：`dd if=FreeBSD-*.img of=/dev/daX bs=1M status=progress`（其中 `/dev/daX` 为目标 U 盘设备，请根据实际设备名调整；`status=progress` 显示传输进度）。
 
