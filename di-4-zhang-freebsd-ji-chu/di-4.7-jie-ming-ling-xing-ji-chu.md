@@ -380,7 +380,7 @@ ykla@ykla:~ $ ls
 
 > **技巧**
 >
-> 请以普通用户测试，因为 FreeBSD 的 root shell 总是显示隐藏文件。
+> FreeBSD 的 root shell 总是显示隐藏文件，因此请以普通用户测试。
 
 FreeBSD ls 与 GNU ls 比较：
 
@@ -602,7 +602,7 @@ test2 -> test2.pdf
 $ cp test /home/ykla/
 ```
 
-末尾的 **/** 不可省略，如果缺少了末尾的 **/**，且子目录 ykla 不存在，`test` 将被重命名为 `ykla`（ykla 本应为一个目录）：
+如果缺少了末尾的 **/**，且子目录 ykla 不存在，`test` 将被重命名为 `ykla`（ykla 本应为一个目录），因此末尾的 **/** 不可省略：
 
 ```sh
 $ cp test /home/ykla/
