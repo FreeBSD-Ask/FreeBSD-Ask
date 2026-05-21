@@ -197,7 +197,7 @@ GNOME、Xorg（X11）、D-Bus、systemd、PulseAudio、Wayland、PipeWire 等主
 
 这种行为将导致何种后果尚不得而知，但此类程序正变得越来越多，并有成为主流的趋势。许多开发者开发程序（如 `todesk`）时也不再考虑对传统 init 系统的兼容。Java 程序亦逐渐丧失了可移植性，FreeBSD 上的 Eclipse 近两年未获更新，其原因亦在于此类捆绑问题（D'Pong P. Bug 562443 - SWT spams temp folder with innumerable folders[EB/OL]. (2020-05-26)[2026-04-05]. <https://gitlab.simantics.org/simantics/eclipse/eclipse.platform.swt/-/commit/19153b908d6d4cedcbd59824686717502cfde4f7>.）如果此趋势持续，可运行在 Linux 上的程序的可移植性可能进一步降低。
 
-目前 FreeBSD 所面临的困境，可能是未来其他系统也会遇到的。
+目前 FreeBSD 所面临的困境，未来其他系统也可能会遇到。
 
 - 选择 FreeBSD，即选择保留自由软件的根基。
 - 选择 FreeBSD，即选择保留一份真正自由的操作系统。能够使开源事业继续坚持下去，并践行真正的 UNIX 哲学。
