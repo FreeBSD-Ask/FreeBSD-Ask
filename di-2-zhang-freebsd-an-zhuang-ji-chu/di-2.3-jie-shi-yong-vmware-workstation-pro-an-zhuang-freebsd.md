@@ -284,7 +284,7 @@ Downloads
 
 ## 故障排除与未竟事宜
 
-在使用 VMware 安装和运行 FreeBSD 的过程中，可能会遇到以下问题。
+使用 VMware 安装和运行 FreeBSD 时，可能会遇到以下问题。
 
 > **注意**
 >
