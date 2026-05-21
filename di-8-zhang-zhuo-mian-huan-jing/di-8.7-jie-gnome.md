@@ -257,7 +257,7 @@ $ ./install.sh
 | `xorg-minimal` | 精简版 X 图形环境 |
 | `gnome-lite` | 精简版 GNOME 桌面 |
 
-### 对现有的 GNOME 完整版本进行精简
+### 精简现有的 GNOME 完整版本
 
 如果已安装完整版本，也可使用 pkg 卸载自带的游戏软件：
 
