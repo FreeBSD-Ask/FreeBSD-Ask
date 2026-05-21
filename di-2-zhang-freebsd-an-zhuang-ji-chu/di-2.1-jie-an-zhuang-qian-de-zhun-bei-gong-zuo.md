@@ -55,7 +55,7 @@ bsd-hardware.info. Hardware for BSD[EB/OL]. [2026-03-25]. <https://bsd-hardware.
 
 > **注意**
 >
-> 建议实际测试，因为该网站也可能出现错误，例如将 LPDDR5 误识别为 LPDDR4。
+> 因为该网站也可能出现错误（例如将 LPDDR5 误识别为 LPDDR4），建议实际测试。
 
 ## 下载 FreeBSD 镜像
 
@@ -177,7 +177,7 @@ Rufus 下载地址为 <https://rufus.ie/zh>，该工具为 Windows 平台开源 
 
 ![Rufus](../.gitbook/assets/rufus-tool.png)
 
-**不建议** 使用 FreeBSD 手册中提到的 win32diskimager，尽管实际文件校验和正确，但因其处理某些镜像格式时存在缺陷，有时会错误地报告校验失败。同理，**同样不建议** 使用 Ventoy。Ventoy - 多系统启动 USB 启动盘制作工具[EB/OL]. [2026-03-25]. <https://www.ventoy.net/>. 该工具为多系统启动 USB 启动盘制作工具，直接加载 ISO 或 IMG 镜像文件，但 Ventoy 的启动加载机制与 FreeBSD 镜像不完全兼容，可能导致启动失败。
+尽管实际文件校验和正确，但因其处理某些镜像格式时存在缺陷，有时会错误地报告校验失败，**不建议** 使用 FreeBSD 手册中提到的 win32diskimager。同理，**同样不建议** 使用 Ventoy。Ventoy - 多系统启动 USB 启动盘制作工具[EB/OL]. [2026-03-25]. <https://www.ventoy.net/>. 该工具为多系统启动 USB 启动盘制作工具，直接加载 ISO 或 IMG 镜像文件，但 Ventoy 的启动加载机制与 FreeBSD 镜像不完全兼容，可能导致启动失败。
 
 **读者应仅在 Rufus 无效的情况下再使用 win32diskimager 或 Ventoy。**
 
