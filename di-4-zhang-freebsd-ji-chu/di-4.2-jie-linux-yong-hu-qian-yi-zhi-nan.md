@@ -161,11 +161,11 @@ POSIX（IEEE 1003.1）/SUS（UNIX 03）对目录结构无类似要求。POSIX.1-
 
 ### make(1) 命令
 
-FreeBSD 的 make（bmake）与 GNU make（gmake）在语法和内置变量上有显著差异。FreeBSD make 不支持 GNU make 的许多高级特性，如 `$(wildcard ...)` 的某些用法、条件语句语法等。FreeBSD make 使用 `.include` 而 GNU make 使用 `include`；变量赋值语法 `?=`、`:=` 的行为也不同。在 FreeBSD 上，可安装 devel/gmake 以获得 GNU make。
+FreeBSD 的 make（bmake）与 GNU make（gmake）语法与内置变量差异显著。FreeBSD make 不支持 GNU make 的许多高级特性，如 `$(wildcard ...)` 的某些用法、条件语句语法等。FreeBSD make 使用 `.include` 而 GNU make 使用 `include`；变量赋值语法 `?=`、`:=` 的行为也不同。在 FreeBSD 上，可安装 devel/gmake 以获得 GNU make。
 
 ### sed(1) 命令
 
-FreeBSD sed 基于 4.4BSD lite sed，与 GNU sed 在正则表达式语法、一些扩展命令（如 `\l`、`\u`、`\L`、`\U`）、地址范围语法上存在差异。GNU sed 支持 `\w`、`\W`、`\b`、`\B` 等字符类，而 FreeBSD sed 需要使用 `[[:alnum:]]` 等 POSIX 类。
+FreeBSD sed 基于 4.4BSD lite sed，与 GNU sed 在正则表达式语法、一些扩展命令（如 `\l`、`\u`、`\L`、`\U`）、地址范围语法上有差异。GNU sed 支持 `\w`、`\W`、`\b`、`\B` 等字符类，而 FreeBSD sed 需要使用 `[[:alnum:]]` 等 POSIX 类。
 
 与 GNU sed 最显著的差异是 `-i` 选项语法：FreeBSD sed 的 `-i` 必须有后缀参数，即使是空字符串（`-i ''`），最常见的跨平台兼容性问题即在于 GNU sed 的 `-i` 后缀是可选的（`-i[SUFFIX]`）。
 
