@@ -202,7 +202,7 @@ $ echo "exec ck-launch-session startplasma-x11" > ~/.xinitrc
 
 > **注意**
 >
-> 如果采用 KDE 最小化安装方案，必须配置 `.xinitrc` 文件。
+> 如果采用 KDE 最小化安装方案，必须配置 **.xinitrc** 文件。
 
 ### 最小化安装 KDE 图示
 
