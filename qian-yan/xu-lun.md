@@ -63,17 +63,19 @@
 
 **第 21 章 数据库管理**：介绍数据库概论，以及 PostgreSQL、MySQL 5.x/8.x 系列及 MongoDB 8.0 在 FreeBSD 上的安装与配置，同时涵盖 pgAdmin4 管理工具的使用。
 
-**第 22 章 服务器**：介绍 FTP 服务器、Rsync 数据同步、Samba 文件共享、NFS 服务器、零配置网络（mDNS/DNS-SD）及 Webmin 管理平台等服务的搭建。
+**第 22 章 文件传输协议（FTP）**：介绍文件传输协议（FTP）概述，以及 Pure-FTPd（基于 MySQL）、ProFTPd（基于 MySQL）、vsftpd 等 FTP 服务器的配置。
 
-**第 23 章 Web 服务器**：介绍 Apache、Nginx、Caddy Web 服务器的部署，以及 PHP、Tomcat、WildFly 应用服务器的配置，同时涵盖 Nextcloud、GitLab、OnlyOffice 和 OpenList 等应用的部署。
+**第 23 章 服务器**：介绍 Rsync 数据同步、Samba 文件共享、NFS 服务器、零配置网络（mDNS/DNS-SD）及 Webmin 管理平台等服务的搭建。
 
-**第 24 章 监控系统**：介绍 Zabbix、Prometheus 监控系统的部署，以及 Telegraf、InfluxDB 与 Grafana 组成的监控平台架构。
+**第 24 章 Web 服务器**：介绍 Apache、Nginx、Caddy Web 服务器的部署，以及 PHP、Tomcat、WildFly 应用服务器的配置，同时涵盖 Nextcloud、GitLab、OnlyOffice 和 OpenList 等应用的部署。
 
-**第 25 章 嵌入式平台**：介绍树莓派上 FreeBSD 的安装与使用、Linux 兼容层配置，以及 Radxa X4 x86 开发板、Linux 系统上交叉构建 FreeBSD、QEMU 模拟 RISC-V 架构及通用嵌入式开发环境的方法。
+**第 25 章 监控系统**：介绍 Zabbix、Prometheus 监控系统的部署，以及 Telegraf、InfluxDB 与 Grafana 组成的监控平台架构。
 
-**第 26 章 开发环境**：介绍 C/C++、Java、Qt、Python、Rust/Go、Node.js 等语言开发环境的搭建，以及 IDA Pro 调试、code-server 与 clangd 配置、Vim 开发环境和 DTrace 动态追踪工具的使用。
+**第 26 章 嵌入式平台**：介绍树莓派上 FreeBSD 的安装与使用、Linux 兼容层配置，以及 Radxa X4 x86 开发板、Linux 系统上交叉构建 FreeBSD、QEMU 模拟 RISC-V 架构及通用嵌入式开发环境的方法。
 
-**第 27 章 FreeBSD 内核架构**：介绍 FreeBSD 源代码目录结构、内核文件结构、机器相关与无关的内核选项注解、GENERIC 内核选项及定制内核的构建方法。
+**第 27 章 开发环境**：介绍 C/C++、Java、Qt、Python、Rust/Go、Node.js 等语言开发环境的搭建，以及 IDA Pro 调试、code-server 与 clangd 配置、Vim 开发环境和 DTrace 动态追踪工具的使用。
+
+**第 28 章 FreeBSD 内核架构**：介绍 FreeBSD 源代码目录结构、内核文件结构、机器相关与无关的内核选项注解、GENERIC 内核选项及定制内核的构建方法。
 
 **附录 I 工具与资源**：包括 BSD 许可证概览、microSD 卡参数简介、Bug 报告流程、FreeBSD 邮件列表订阅及 FreeBSD 开发参与指南。
 
