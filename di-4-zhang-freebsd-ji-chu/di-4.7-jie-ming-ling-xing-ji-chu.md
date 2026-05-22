@@ -142,8 +142,7 @@ ykla@ykla:/ $ pwd
 total 317
   ……有所省略……
 drwxr-xr-x  2 ykla ykla        2 Mar  9 20:45 下载
-drwxr-xr-x  2 ykla ykla        2 Mar  9 20:45
-桌面
+drwxr-xr-x  2 ykla ykla        2 Mar  9 20:45 桌面
 
 /tmp:
 total 6
