@@ -19,7 +19,7 @@
 * [1.3 Linux 与类 UNIX](di-1-zhang-freebsd-chu-jian/di-1.3-jie-linux-yu-lei-unix.md)
 * [1.4 FreeBSD 导论](di-1-zhang-freebsd-chu-jian/di-1.4-jie-freebsd-dao-lun.md)
 * [1.5 乔治·贝克莱（George Berkeley）与 BSD 文化传统](di-1-zhang-freebsd-chu-jian/di-1.5-jie-qiao-zhi-bei-ke-lai-george-berkeley-yu-bsd-de-ming-ming-yuan-yuan.md)
-* [1.6 其他 BSD 发行版概述](di-1-zhang-freebsd-chu-jian/di-1.6-jie-jia-zhou-da-xue-bo-ke-li-fen-xiao-yu-yao-you-guang-fiat-lux.md)
+* [1.6 其他 BSD 发行版概论](di-1-zhang-freebsd-chu-jian/di-1.6-jie-jia-zhou-da-xue-bo-ke-li-fen-xiao-yu-yao-you-guang-fiat-lux.md)
 
 ## 第 2 章 FreeBSD 安装基础
 
@@ -80,7 +80,7 @@
 
 ## 第 7 章 X Window 系统
 
-* [7.1 显卡驱动概述](di-7-zhang-x-window-xi-tong/di-7.1-jie-xian-ka-qu-dong-gai-shu.md)
+* [7.1 显卡驱动概论](di-7-zhang-x-window-xi-tong/di-7.1-jie-xian-ka-qu-dong-gai-shu.md)
 * [7.2 Intel 显卡驱动](di-7-zhang-x-window-xi-tong/di-7.2-jie-intel-he-amd-xian-ka-qu-dong-pei-zhi.md)
 * [7.3 AMD 显卡驱动](di-7-zhang-x-window-xi-tong/di-7.3-jie-amd-xian-ka-qu-dong-pei-zhi.md)
 * [7.4 NVIDIA 显卡驱动](di-7-zhang-x-window-xi-tong/di-7.4-jie-nvidia-xian-ka-qu-dong-pei-zhi.md)
@@ -144,7 +144,7 @@
 
 ## 第 13 章 人工智能
 
-* [13.1 人工智能概述](di-13-zhang-ren-gong-zhi-neng-ai/di-13.1-jie-ren-gong-zhi-neng-ai-gai-shu.md)
+* [13.1 人工智能概论](di-13-zhang-ren-gong-zhi-neng-ai/di-13.1-jie-ren-gong-zhi-neng-ai-gai-shu.md)
 * [13.2 大模型本地部署](di-13-zhang-ren-gong-zhi-neng-ai/di-13.2-jie-ai-da-mo-xing-ben-di-bu-shu.md)
 
 ## 第 14 章 系统管理
@@ -184,7 +184,7 @@
 
 ## 第 17 章 安全
 
-* [17.1 信息安全概述](di-17-zhang-an-quan/di-17.1-jie-an-quan-zhe-xue.md)
+* [17.1 信息安全概论](di-17-zhang-an-quan/di-17.1-jie-an-quan-zhe-xue.md)
 * [17.2 账户认证安全](di-17-zhang-an-quan/di-17.2-jie-zhang-hu-ren-zheng-an-quan.md)
 * [17.3 资源限制](di-17-zhang-an-quan/di-17.3-jie-zi-yuan-xian-zhi.md)
 * [17.4 安全等级](di-17-zhang-an-quan/di-17.4-jie-an-quan-ji-bie.md)
@@ -197,7 +197,7 @@
 
 ## 第 18 章 防火墙
 
-* [18.1 防火墙概述](di-18-zhang-fang-huo-qiang/di-18.1-jie-fang-huo-qiang-gai-shu.md)
+* [18.1 防火墙概论](di-18-zhang-fang-huo-qiang/di-18.1-jie-fang-huo-qiang-gai-shu.md)
 * [18.2 Packet Filter（PF）](di-18-zhang-fang-huo-qiang/di-18.2-jie-packet-filter-pf.md)
 * [18.3 IPFilter（IPF）](di-18-zhang-fang-huo-qiang/di-18.3-jie-ipfilter-ipf.md)
 * [18.4 ipfirewall（IPFW）](di-18-zhang-fang-huo-qiang/di-18.4-jie-ipfirewall-ipfw.md)
