@@ -74,7 +74,7 @@ $ x11vnc -display :0 -rfbauth ~/.vnc/passwd -auth $(find /var/run/sddm/ -type f)
 
 > **警告**
 >
-> 因为 x11vnc 尚不支持 Wayland，SDDM 左下角选择 `Wayland` 无法进入。
+> 因为 x11vnc 尚不支持 Wayland，若在 SDDM 左下角选择 `Wayland`，将无法进入桌面。
 
 - 使用指定密码文件和 LightDM 授权文件启动 x11vnc：
 
