@@ -12,7 +12,7 @@ FreeBSD 默认字体对中文显示效果欠佳。本节介绍图形界面引入
 # mkdir -p /usr/local/share/fonts/WindowsFonts
 ```
 
-将字体文件复制到 `WindowsFonts` 目录。
+将字体文件复制到 **WindowsFonts** 目录。
 
 字体目录结构：
 
