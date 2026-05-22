@@ -8,7 +8,7 @@
 
 ## SVN 到 Git 的迁移
 
-FreeBSD 项目在 2020 至 2021 年间从 SVN 迁移到了 Git，即 <https://git.freebsd.org>。其中 src 仓库于 2020 年底完成迁移，Ports 仓库于 2021 年初完成迁移（参见 FreeBSD Foundation. 2021 in Review: Software Development[EB/OL]. [2026-04-16]. <https://freebsdfoundation.org/blog/2021-in-review-software-development/>）。
+FreeBSD 项目在 2020 至 2021 年间从 SVN 迁移到了 Git，即 <https://git.freebsd.org>。其中 src 仓库于 2020 年底完成迁移，Ports 仓库于 2021 年初完成迁移。
 
 这一版本控制系统的迁移标志着 FreeBSD 项目开发流程的现代化转型，因此获取源代码的方式也相应发生了变化，不再使用 SVN。
 
@@ -57,11 +57,6 @@ FreeBSD 项目在 2020 至 2021 年间从 SVN 迁移到了 Git，即 <https://gi
 $ git clone --depth 1 https://git.FreeBSD.org/src.git /usr/src
 ```
 
-```sh
-/usr/
-└── src/ # FreeBSD 源代码目录
-```
-
 参数 `--depth 1` 说明：浅克隆，仅拉取最新的提交，不拉取全部的日志及历史记录。
 
 或者通过 GitHub 拉取（GitHub 是 FreeBSD.org 上 src 仓库的镜像，每 10 分钟同步一次）。
@@ -77,6 +72,8 @@ $ git clone --depth 1 https://github.com/freebsd/freebsd-src /usr/src
 ```sh
 $ git clone --branch releng/15.0 --single-branch --depth 1 https://git.freebsd.org/src.git /usr/src
 ```
+
+选项解释：
 
 - `--branch releng/15.0`：指定拉取分支（FreeBSD RELEASE 的版本）
 - `--single-branch`：仅克隆一个分支，除该已克隆的单一分支外不含任何其他引用（refs）。
@@ -180,7 +177,7 @@ Select: (p) postpone, (df) diff-full, (e) edit,
 
 ## 参考文献
 
-- FreeBSD 中文社区. FreeBSD 手册[EB/OL]. [2026-03-25]. <https://handbook.bsdcn.org/>. FreeBSD 系统管理的完整中文参考指南。
+- FreeBSD Foundation. 2021 in Review: Software Development[EB/OL]. [2026-04-16]. <https://freebsdfoundation.org/blog/2021-in-review-software-development/>
 - FreeBSD Project. etcupdate -- manage updates to system files not updated by installworld[EB/OL]. [2026-03-25]. <https://man.freebsd.org/cgi/man.cgi?query=etcupdate&sektion=8>. 系统配置文件更新工具的官方技术文档。
 
 ## 课后习题

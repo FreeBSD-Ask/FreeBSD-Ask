@@ -190,11 +190,11 @@ EndSection
 …………此处省略一部分…………
 ```
 
-### 共享文件夹
+## 共享文件夹
 
 请先安装虚拟机增强工具（Open VM Tools）。
 
-#### 在物理机中设置共享文件夹
+### 在物理机中设置共享文件夹
 
 ![FreeBSD VMware 共享文件夹](../.gitbook/assets/vmware-shared-folder-1.png)
 
@@ -209,7 +209,7 @@ EndSection
 123pan
 ```
 
-#### 加载 fuse 模块
+### 加载 fuse 模块
 
 将以下内容添加到 **/boot/loader.conf** 文件中：
 
@@ -231,9 +231,9 @@ fusefs_load="YES"
     └── hgfs/          # VMware 共享文件夹挂载点
 ```
 
-#### 挂载
+### 挂载
 
-##### 手动挂载
+#### 手动挂载
 
 > **注意**
 >
@@ -245,7 +245,7 @@ fusefs_load="YES"
 # vmhgfs-fuse .host:/123pan /mnt/hgfs
 ```
 
-##### 自动挂载
+#### 自动挂载
 
 编辑 **/etc/fstab** 文件。添加以下挂载条目（请将 `123pan` 替换为实际的共享文件夹名称）：
 
@@ -261,7 +261,7 @@ fusefs_load="YES"
 # mount -al
 ```
 
-#### 查看共享文件夹
+### 查看共享文件夹
 
 列出已挂载的 VMware 共享文件夹内容：
 
@@ -276,7 +276,7 @@ Downloads
 
 文件内容一致。
 
-#### 参考文献
+### 参考文献
 
 - MaRcOGO. 解决 vmware 上 Ubuntu 共享文件夹[EB/OL]. (2022-07)[2026-03-26]. <https://www.cnblogs.com/MaRcOGO/p/16463460.html>. 介绍 VMware 共享文件夹配置方法。
 - FreeBSD Forums. fuse: failed to open fuse device[EB/OL]. [2026-03-26]. <https://forums.freebsd.org/threads/fuse-failed-to-open-fuse-device.44544/>. 解决了 fuse 设备无法打开的问题（如 `fuse: failed to open fuse device: No such file or directory`），为共享文件夹配置提供了关键参考。
