@@ -235,12 +235,11 @@
 
 ## 第 23 章 服务器
 
-* [23.1 FTP 服务器](di-23-zhang-fu-wu-qi/di-23.1-jie-ftp-fu-wu-qi.md)
-* [23.2 Rsync 数据同步](di-23-zhang-fu-wu-qi/di-23.2-jie-rsync-shu-ju-tong-bu.md)
-* [23.3 Samba 文件共享](di-23-zhang-fu-wu-qi/di-23.3-jie-samba-wen-jian-gong-xiang.md)
-* [23.4 NFS 服务器](di-23-zhang-fu-wu-qi/di-23.4-jie-nfs-fu-wu-qi.md)
-* [23.5 零配置网络（mDNS/DNS-SD）](di-23-zhang-fu-wu-qi/di-23.5-jie-mdns.md)
-* [23.6 Webmin 管理平台](di-23-zhang-fu-wu-qi/di-23.6-jie-webmin-guan-li-ping-tai.md)
+* [23.1 Rsync 数据同步](di-23-zhang-fu-wu-qi/di-23.1-jie-rsync-shu-ju-tong-bu.md)
+* [23.2 Samba 文件共享](di-23-zhang-fu-wu-qi/di-23.2-jie-samba-wen-jian-gong-xiang.md)
+* [23.3 NFS 服务器](di-23-zhang-fu-wu-qi/di-23.3-jie-nfs-fu-wu-qi.md)
+* [23.4 零配置网络（mDNS/DNS-SD）](di-23-zhang-fu-wu-qi/di-23.4-jie-mdns.md)
+* [23.5 Webmin 管理平台](di-23-zhang-fu-wu-qi/di-23.5-jie-webmin-guan-li-ping-tai.md)
 
 ## 第 24 章 Web 服务器
 
