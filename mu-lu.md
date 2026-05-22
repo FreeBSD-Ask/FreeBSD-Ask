@@ -277,11 +277,12 @@
 * [27.3 Qt 开发环境](di-27-zhang-kai-fa-huan-jing/di-27.3-jie-qt-kai-fa-huan-jing.md)
 * [27.4 Python 开发环境](di-27-zhang-kai-fa-huan-jing/di-27.4-jie-python-kai-fa-huan-jing.md)
 * [27.5 Rust/Go 开发环境](di-27-zhang-kai-fa-huan-jing/di-27.5-jie-rust-go-kai-fa-huan-jing.md)
-* [27.6 Node.js 开发环境](di-27-zhang-kai-fa-huan-jing/di-27.6-jie-node-js-huan-jing.md)
-* [27.7 code-server 和 clangd 开发环境](di-27-zhang-kai-fa-huan-jing/di-27.7-jie-code-server-he-clangd-kai-fa-pei-zhi.md)
-* [27.8 Vim 开发环境](di-27-zhang-kai-fa-huan-jing/di-27.8-jie-vim-kai-fa-huan-jing-pei-zhi.md)
-* [27.9 使用 IDA Pro 调试 FreeBSD](di-27-zhang-kai-fa-huan-jing/di-27.9-jie-ida-pro-diao-shi-freebsd.md)
-* [27.10 DTrace](di-27-zhang-kai-fa-huan-jing/di-27.10-jie-dTrace.md)
+* [27.6 Go 开发环境](di-27-zhang-kai-fa-huan-jing/di-27.6-jie-go-kai-fa-huan-jing.md)
+* [27.7 Node.js 开发环境](di-27-zhang-kai-fa-huan-jing/di-27.7-jie-node-js-huan-jing.md)
+* [27.8 code-server 和 clangd 开发环境](di-27-zhang-kai-fa-huan-jing/di-27.8-jie-code-server-he-clangd-kai-fa-pei-zhi.md)
+* [27.9 Vim 开发环境](di-27-zhang-kai-fa-huan-jing/di-27.9-jie-vim-kai-fa-huan-jing-pei-zhi.md)
+* [27.10 使用 IDA Pro 调试 FreeBSD](di-27-zhang-kai-fa-huan-jing/di-27.10-jie-ida-pro-diao-shi-freebsd.md)
+* [27.11 DTrace](di-27-zhang-kai-fa-huan-jing/di-27.11-jie-dTrace.md)
 
 ## 第 28 章 FreeBSD 内核架构
 
