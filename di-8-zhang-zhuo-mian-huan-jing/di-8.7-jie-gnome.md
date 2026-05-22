@@ -78,7 +78,7 @@ $ echo "/usr/local/bin/gnome-session" > ~/.xinitrc
 
 使用文本编辑器打开 GDM 本地化配置文件 **/usr/local/etc/gdm/locale.conf**，修改语言设置。将原有内容替换如下：
 
-```sh
+```ini
 LANG="zh_CN.UTF-8"         # 设置系统默认语言为简体中文 UTF-8
 LC_CTYPE="zh_CN.UTF-8"     # 设置字符类型和编码为简体中文 UTF-8
 LC_MESSAGES="zh_CN.UTF-8"  # 设置系统消息显示语言为简体中文 UTF-8
