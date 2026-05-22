@@ -942,7 +942,7 @@ ACPI: \134_SB.WFTE.WQCC: 1 arguments were passed to a non-method ACPI object (Bu
 
 # ===== 网络接口就绪 =====
 lo0: link state changed to UP
-# lo0（loopback 127.0.0.1）接口链路状态变为 UP。loopback 永远在线。
+# lo0（loopback **127.0.0.1**）接口链路状态变为 UP。loopback 永远在线。
 
 igc0: link state changed to UP
 # Intel I226-V 有线网卡链路状态 UP。物理电缆插入且链路协商正常。
