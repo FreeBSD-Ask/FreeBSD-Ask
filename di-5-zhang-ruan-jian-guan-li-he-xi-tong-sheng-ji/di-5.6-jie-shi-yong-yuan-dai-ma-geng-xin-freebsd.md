@@ -57,11 +57,6 @@ FreeBSD 项目在 2020 至 2021 年间从 SVN 迁移到了 Git，即 <https://gi
 $ git clone --depth 1 https://git.FreeBSD.org/src.git /usr/src
 ```
 
-```sh
-/usr/
-└── src/ # FreeBSD 源代码目录
-```
-
 参数 `--depth 1` 说明：浅克隆，仅拉取最新的提交，不拉取全部的日志及历史记录。
 
 或者通过 GitHub 拉取（GitHub 是 FreeBSD.org 上 src 仓库的镜像，每 10 分钟同步一次）。
@@ -77,6 +72,8 @@ $ git clone --depth 1 https://github.com/freebsd/freebsd-src /usr/src
 ```sh
 $ git clone --branch releng/15.0 --single-branch --depth 1 https://git.freebsd.org/src.git /usr/src
 ```
+
+选项解释：
 
 - `--branch releng/15.0`：指定拉取分支（FreeBSD RELEASE 的版本）
 - `--single-branch`：仅克隆一个分支，除该已克隆的单一分支外不含任何其他引用（refs）。
