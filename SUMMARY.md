@@ -229,7 +229,7 @@
 
 * [22.1 文件传输协议（FTP）概述](di-22-zhang-ftp-fu-wu-qi/di-22.1-jie-ftp-gai-shu.md)
 * [22.2 Pure-FTPd（基于 MySQL）](di-22-zhang-ftp-fu-wu-qi/di-22.2-jie-pure-ftpd-ji-yu-mysql.md)
-* [22.3 ProFTPd（基于 MySQL）](di-22-zhang-ftp-fu-wu-qi/di-22.3-jie-proftpd-ji-yu-mysql.md)
+* [22.3 ProFTPD（基于 MySQL）](di-22-zhang-ftp-fu-wu-qi/di-22.3-jie-proftpd-ji-yu-mysql.md)
 * [22.4 vsftpd](di-22-zhang-ftp-fu-wu-qi/di-22.4-jie-vsftpd.md)
 
 ## 第 23 章 服务器
