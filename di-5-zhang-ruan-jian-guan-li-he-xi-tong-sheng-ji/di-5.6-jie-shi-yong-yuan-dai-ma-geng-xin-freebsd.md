@@ -177,7 +177,7 @@ Select: (p) postpone, (df) diff-full, (e) edit,
 
 ## 参考文献
 
--  FreeBSD Foundation. 2021 in Review: Software Development[EB/OL]. [2026-04-16]. <https://freebsdfoundation.org/blog/2021-in-review-software-development/>
+- FreeBSD Foundation. 2021 in Review: Software Development[EB/OL]. [2026-04-16]. <https://freebsdfoundation.org/blog/2021-in-review-software-development/>
 - FreeBSD Project. etcupdate -- manage updates to system files not updated by installworld[EB/OL]. [2026-03-25]. <https://man.freebsd.org/cgi/man.cgi?query=etcupdate&sektion=8>. 系统配置文件更新工具的官方技术文档。
 
 ## 课后习题
