@@ -68,7 +68,7 @@ proc           /proc       procfs  rw  0   0
 
 在 **/etc/rc.conf** 文件中加入：
 
-```sh
+```ini
 lightdm_env="LC_MESSAGES=zh_CN.UTF-8"
 ```
 
