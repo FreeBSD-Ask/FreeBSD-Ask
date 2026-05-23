@@ -125,7 +125,7 @@ hint.virtio_gpu.0.disabled="1"
 hint.vtgpu.0.disabled="1"
 ```
 
-重启后 startx 能够正常启动 TWM，输出如下：
+重启后 `startx` 能够正常启动 `TWM`，输出如下：
 
 ```sh
 voosk@BSDVM:~ $ startx

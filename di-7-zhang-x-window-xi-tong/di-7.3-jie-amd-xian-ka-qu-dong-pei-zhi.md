@@ -83,7 +83,7 @@ Section "Device"
 EndSection
 ```
 
-配置完成后，可使用命令 `mpv --hwdec=auto xxx.mp4` 测试。需自行安装 mpv。
+配置完成后，可使用命令 `mpv --hwdec=auto xxx.mp4` 测试。需自行安装 `mpv`。
 
 ## 参考文献
 
