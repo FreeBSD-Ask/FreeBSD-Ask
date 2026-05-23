@@ -55,7 +55,7 @@ FreeBSD directory layout:      man hier
 To change this login announcement, see motd(5).
 ```
 
-祝贺你！你已经成功登录到 FreeBSD 操作系统。
+至此，已成功登录到 FreeBSD 操作系统。
 
 > **注意**
 >
