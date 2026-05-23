@@ -149,7 +149,7 @@ usr/lib/clang/18.1.8/include
 
 > **警告**
 >
-> 由于大版本间的变动可能影响 `freebsd-update` 更新工具本身，所以一定要：
+> 由于大版本间的变动可能影响 `freebsd-update` 更新工具本身，所以务必：
 >
 > 先更新到当前版本最新的补丁版本（如 `X.Y-RELEASE-pN`），然后再更新到最新的点版本（如 `X.Z-RELEASE`）。
 >
