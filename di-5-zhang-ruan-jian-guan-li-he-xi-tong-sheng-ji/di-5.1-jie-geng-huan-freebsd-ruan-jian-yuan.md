@@ -453,7 +453,7 @@ USTC-base: {
 
 须参照其他章节提前安装 `git`，从略。
 
-使用 git 拉取 Ports 源代码：
+使用 `git` 拉取 Ports 源代码：
 
 ```sh
 # git clone --filter=tree:0 https://mirrors.ustc.edu.cn/freebsd-ports/ports.git /usr/ports

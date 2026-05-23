@@ -311,7 +311,7 @@ nameserver 223.6.6.6
 
 search 和 domain 选项只能使用其中一个。使用 DHCP 时，`dhclient(8)` 通常会用从 DHCP 服务器接收的信息重写 **/etc/resolv.conf** 文件。
 
-手动编辑 **/etc/resolv.conf** 文件后，因为动态主机配置协议（Dynamic Host Configuration Protocol，DHCP）客户端在获取网络配置时会通过 resolvconf 服务重写该文件，重启系统时该文件可能被重置。
+手动编辑 **/etc/resolv.conf** 文件后，因为动态主机配置协议（Dynamic Host Configuration Protocol，DHCP）客户端在获取网络配置时会通过 `resolvconf` 服务重写该文件，重启系统时该文件可能被重置。
 
 若需使用手动配置的 DNS 服务器而不希望系统自动更新覆盖，可禁用 resolvconf 服务。编辑 **/etc/resolvconf.conf** 文件（如不存在则创建），写入 `resolvconf=NO` 一行，该配置将禁用系统对 DNS 配置文件的自动更新。
 
