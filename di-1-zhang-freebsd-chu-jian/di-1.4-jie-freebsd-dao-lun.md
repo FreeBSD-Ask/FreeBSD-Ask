@@ -47,7 +47,7 @@ FreeBSD-CURRENT 主要面向三个兴趣群体：
 
 FreeBSD-STABLE 是用于发布主要版本的开发分支。
 
-与一般 Linux 发行版中的“稳定版”概念不同，其名称中的“稳定”指的是该分支的 ABI（Application Binary Interface，应用程序二进制接口）保持稳定，而非指系统整体稳定性，也可以理解为“固定”。在没有充分测试的开发或测试环境中，不应将任何生产服务器更新到 FreeBSD-STABLE。应使用 FreeBSD 的最新正式版本，即 RELEASE。
+与一般 Linux 发行版中的“稳定版”概念不同，其名称中的“稳定”指的是该分支的 ABI（Application Binary Interface，应用程序二进制接口）保持稳定，而非指系统整体稳定性，亦可理解为“固定”。在没有充分测试的开发或测试环境中，不应将任何生产服务器更新到 FreeBSD-STABLE。应使用 FreeBSD 的最新正式版本，即 RELEASE。
 
 CURRENT 分支中的代码在经过充分测试后（需满足 MFC 最短三天的要求，MFC 指 `Merge From CURRENT`，类似于 `backporting` 即向后移植）会推送到 STABLE 分支，但这并不保证两个分支都没有重大缺陷。尽管 FreeBSD-STABLE 分支应该始终能够编译并运行，但这并无保证。
 
@@ -373,7 +373,7 @@ BSDi 很快就陷入了与 AT&T 的 UNIX System Laboratories（USL，UNIX 系统
 
 - 1993 年 6 月 FreeBSD 的创建
 
-FreeBSD 项目起源于 1993 年初，部分是来自非官方的 386BSDPatchkit 的最后三位协调人的创意：Nate Williams，Rod Grimes 和 Jordan Hubbard。他们最初的目标是制作一个 386BSD 的中间快照，以解决一些补丁包机制无法解决的问题。该项目早期的工作名称是 386BSD 0.5 或 386BSD Interim，正体现了这一事实。386BSD 是 Bill Jolitz 开发的操作系统。当时该系统问世已将近一年，但一直被严重忽视。随着补丁包日益膨胀，臃肿不堪，他们决定通过提供 386BSD 过渡项目来帮助 Bill 摆脱困境。然而，在没有明确提供备选方案的情况下，Bill Jolitz 突然决定退出 386BSD 过渡项目，他们的计划被迫搁浅。三人认为，即使没有 Bill 的支持，这个项目也是值得的，因此他们采用了 David Greenman 创造的“FreeBSD”这个名字。为了改善 FreeBSD 的发行渠道，Jordan Hubbard 随后联系了 Walnut Creek CDROM。Walnut Creek CDROM 不仅支持在 CD 上发行 FreeBSD，还为此项目提供了一台工作用机和高速互联网连接。如果没有 Walnut Creek CDROM 对这一当时完全未知项目的近乎前所未有的信任，FreeBSD 很可能无法如此迅速地发展到今天的程度。1993 年 6 月 19 日，该项目正式选择了“FreeBSD”这个名字。首个 FreeBSD RELEASE（FreeBSD 1.0）发布于 1993 年 11 月，基于 4.3BSD Net/2（“Net/2”）磁带，并包含 386BSD 和自由软件基金会提供的许多组件。
+FreeBSD 项目起源于 1993 年初，部分是来自非官方的 386BSDPatchkit 的最后三位协调人的创意：Nate Williams，Rod Grimes 和 Jordan Hubbard。他们最初的目标是制作一个 386BSD 的中间快照，以解决一些补丁包机制无法解决的问题。该项目早期的工作名称是 386BSD 0.5 或 386BSD Interim，正体现了这一事实。386BSD 是 Bill Jolitz 开发的操作系统。当时该系统问世已将近一年，但一直被严重忽视。随着补丁包日益膨胀，臃肿不堪，他们决定通过提供 386BSD 过渡项目来帮助 Bill 走出困境。然而，在没有明确提供备选方案的情况下，Bill Jolitz 突然决定退出 386BSD 过渡项目，他们的计划被迫搁浅。三人认为，即使没有 Bill 的支持，这个项目也是值得的，因此他们采用了 David Greenman 创造的“FreeBSD”这个名字。为了改善 FreeBSD 的发行渠道，Jordan Hubbard 随后联系了 Walnut Creek CDROM。Walnut Creek CDROM 不仅支持在 CD 上发行 FreeBSD，还为此项目提供了一台工作用机和高速互联网连接。如果没有 Walnut Creek CDROM 对这一当时完全未知项目的近乎前所未有的信任，FreeBSD 很可能无法如此迅速地发展至今天的规模。1993 年 6 月 19 日，该项目正式选择了“FreeBSD”这个名字。首个 FreeBSD RELEASE（FreeBSD 1.0）发布于 1993 年 11 月，基于 4.3BSD Net/2（“Net/2”）磁带，并包含 386BSD 和自由软件基金会提供的许多组件。
 
 - 1994 年 8 月 FreeBSD Ports
 
