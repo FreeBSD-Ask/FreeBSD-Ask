@@ -198,7 +198,7 @@ wlan0: flags=8843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST> metric 0 mtu 1500
 
 ## 英特尔无线网卡驱动概况
 
-英特尔（Intel）网卡是目前广泛使用的无线网卡之一。iwlwifi 驱动 [适用于](https://wiki.freebsd.org/WiFi/Iwlwifi/Chipsets) `AC 8265、AC 9260、AC 9560、AX200、AX201、AX210、AX211`，iwm 驱动 [适用于](https://wiki.freebsd.org/WiFi/Iwm) `AC 3160、AC 3165、AC 3168、AC 7260、AC 7265、AC 8260、AC 8265、AC 9260、AC 9270、AC 946X、AC 9560` 等型号。两者覆盖的芯片范围有部分重叠但不完全包含，见 [英特尔 ® 无线适配器的 Linux* 支持](https://www.intel.cn/content/www/cn/zh/support/articles/000005511/wireless.html)。
+英特尔（Intel）网卡是目前广泛使用的无线网卡之一。iwlwifi 驱动 [适用于](https://wiki.freebsd.org/WiFi/Iwlwifi/Chipsets) AX200、AX201、AX210、AX211、AX411、BE200、BE201 等，iwm 驱动 [适用于](https://wiki.freebsd.org/WiFi/Iwm) AC 3160、AC 3165、AC 3168、AC 7260、AC 7265、AC 8260、AC 8265、AC 9260、AC 9270、AC 946X、AC 9560 等型号。两者覆盖的芯片范围有部分重叠但不完全包含，见 [英特尔 ® 无线适配器的 Linux* 支持](https://www.intel.cn/content/www/cn/zh/support/articles/000005511/wireless.html)。
 
 在 **/etc/rc.conf** 文件中添加以下配置：
 
