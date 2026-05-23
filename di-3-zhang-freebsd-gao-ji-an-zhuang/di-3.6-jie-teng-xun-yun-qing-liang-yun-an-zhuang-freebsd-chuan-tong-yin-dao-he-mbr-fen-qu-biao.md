@@ -22,7 +22,7 @@ FreeBSD 中文社区. 08-腾讯云轻量云及其他服务器安装 FreeBSD[EB/O
 >
 > 请注意数据安全。本节操作具有一定风险，且要求具备相应的操作能力。
 
-上述服务器的管理面板未提供 FreeBSD 镜像，因此需要采用变通方法安装。由于 FreeBSD 与 Linux 在内核及可执行文件格式上不兼容，无法通过 `chroot` 后删除原系统来安装。安装方法为：首先在内存盘中启动 FreeBSD 系统（即先引导 [mfsBSD](https://mfsbsd.vx.sk)），然后格式化硬盘并安装新系统。mfsBSD 是完全载入内存的 FreeBSD 系统，类似于 Windows PE（Preinstallation Environment）环境。
+上述服务器的管理面板未提供 FreeBSD 镜像，因此需要采用变通方法安装。由于 FreeBSD 与 Linux 在内核及可执行文件格式上不兼容，无法在 `chroot` 后删除原系统来安装。安装方法为：首先在内存盘中启动 FreeBSD 系统（即先引导 [mfsBSD](https://mfsbsd.vx.sk)），然后格式化硬盘并安装新系统。mfsBSD 是完全载入内存的 FreeBSD 系统，类似于 Windows PE（Preinstallation Environment）环境。
 
 需要下载 [img 格式的 mfsBSD 镜像](https://mfsbsd.vx.sk/files/images/14/amd64/mfsbsd-se-14.2-RELEASE-amd64.img)，可提前下载后通过 WinSCP 上传至服务器；若直接在服务器上下载，可能耗时较长（约两小时）。
 
@@ -58,7 +58,7 @@ boot # 输入 boot 后按回车继续启动
 
 ![GRUB 命令行界面](../.gitbook/assets/grub-cli-interface.png)
 
-这个特制的 initrd 启动后，不会加载硬盘上的原系统，而是自行配置网络并启动 SSH 服务器。由此获得一个运行在内存中的 Linux 系统。
+在启动此 initrd 后，不会加载硬盘上的原系统，而是自行配置网络并启动 SSH 服务器。由此获得一个运行在内存中的 Linux 系统。
 
 此时应可通过 SSH 连接到服务器，并安全地格式化硬盘。
 
@@ -83,7 +83,7 @@ mfsBSD 和 mfsLinux 镜像的默认 `root` 密码均为 `mfsroot`。
 
 通过 SSH 连接服务器后，执行 `kldload zfs` 加载 ZFS 模块，然后运行 `bsdinstall`。出现图示界面时，选择 `Other` 并输入指定的镜像地址（地址中包含相应版本号即可，可自行更改）：
 
-示例：例如 <https://mirrors.ustc.edu.cn/freebsd/releases/amd64/15.0-RELEASE/> 或 <https://mirrors.nju.edu.cn/freebsd/snapshots/amd64/16.0-CURRENT/>
+例如 <https://mirrors.ustc.edu.cn/freebsd/releases/amd64/15.0-RELEASE/> 或 <https://mirrors.nju.edu.cn/freebsd/snapshots/amd64/16.0-CURRENT/>
 
 ![腾讯云轻量云及其他服务器安装 FreeBSD](../.gitbook/assets/cloud-install-bsd-1.png)
 
