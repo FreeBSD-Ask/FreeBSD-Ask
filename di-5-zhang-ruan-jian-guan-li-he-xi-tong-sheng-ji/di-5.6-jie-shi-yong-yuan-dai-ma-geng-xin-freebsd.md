@@ -1,6 +1,6 @@
 # 5.6 使用源代码更新 FreeBSD
 
-从源代码构建 FreeBSD 可以自定义内核选项和编译参数，适用于 freebsd-update 不支持的架构或需要裁剪系统的场景。
+从源代码构建 FreeBSD 可以自定义内核选项和编译参数，适用于 `freebsd-update` 不支持的架构或需要裁剪系统的场景。
 
 基本思路是获取 FreeBSD 的源代码，然后编译安装。可以使用 Git 直接拉取代码，也可以从 ISO 镜像中下载 txz 压缩文件，或者从 GitHub 下载当前 FreeBSD 项目的 zip 压缩包。
 
@@ -145,11 +145,11 @@ Conflicts remain from previous update, aborting.
 
 `etcupdate` 在合并后会自动触发若干系统文件的后续处理：
 
-- 若 `/etc/master.passwd` 变更则自动调用 `pwd_mkdb`；
-- 若 `/etc/login.conf` 变更则自动调用 `cap_mkdb`；
-- 若 `/etc/mail/aliases` 变更则自动调用 `newaliases`；
-- 若 `/etc/services` 变更则自动调用 `services_mkdb`；
-- 若 `/etc/localtime` 变更且 `/var/db/zoneinfo` 存在则自动调用 `tzsetup`。
+- 若 **/etc/master.passwd** 变更则自动调用 `pwd_mkdb`；
+- 若 **/etc/login.conf** 变更则自动调用 `cap_mkdb`；
+- 若 **/etc/mail/aliases** 变更则自动调用 `newaliases`；
+- 若 **/etc/services** 变更则自动调用 `services_mkdb`；
+- 若 **/etc/localtime** 变更且 **/var/db/zoneinfo** 存在则自动调用 `tzsetup`。
 
 解决冲突：
 

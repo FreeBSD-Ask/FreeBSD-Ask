@@ -22,11 +22,11 @@
 
 ![文件系统基础](../.gitbook/assets/windows-file-explorer.png)
 
-行道树则不同，每棵均独立生长。即便两树紧邻而立，也仍然是独立的个体。行道树正如 Windows 目录，盘符各自独立——`C:\Program Files (x86)\Google\Update`、`D:\BaiduNetdiskDownload\工具列表`、`E:\123\app`：`C`、`D`、`E` 盘彼此隔离、互不干扰。格式化 `D` 盘，不影响 `E` 盘中存储的文件。即便在 PE 中格式化 `C` 盘（可能不会显示为 `C` 盘），`E` 盘文件也不受影响。
+行道树则不同，每棵均独立生长。即便两树紧邻而立，也仍然是独立的个体。行道树正如 Windows 目录，盘符各自独立——**C:\Program Files (x86)\Google\Update**、**D:\BaiduNetdiskDownload\工具列表**、**E:\123\app**：`C`、`D`、`E` 盘彼此隔离、互不干扰。格式化 `D` 盘，不影响 `E` 盘中存储的文件。即便在 PE 中格式化 `C` 盘（可能不会显示为 `C` 盘），`E` 盘文件也不受影响。
 
 Windows 的“盘符”并非固定存在。在 PE 环境中，`C` 盘可能显示为其他盘符（如 `X`）；运行中的 Windows 也可以任意分配盘符。
 
-Windows 判断分区与盘符的对应关系，依据的是 GPT 分区类型 UUID（如 Windows 数据分区类型 UUID 为 `EBD0A0A2-B9E5-4433-87C0-68B6B72699C7`，即 Microsoft Basic Data 类型，适用于所有 Windows 数据分区，而非仅限 C 盘）以及分区的唯一 GUID（相关配置由 Windows 装入管理器 Mount Manager 写入注册表 `HKLM\SYSTEM\MountedDevices`），而非依靠盘符自身。
+Windows 判断分区与盘符的对应关系，依据的是 GPT 分区类型 UUID（如 Windows 数据分区类型 UUID 为 `EBD0A0A2-B9E5-4433-87C0-68B6B72699C7`，即 Microsoft Basic Data 类型，适用于所有 Windows 数据分区，而非仅限 C 盘）以及分区的唯一 GUID（相关配置由 Windows 装入管理器 Mount Manager 写入注册表 **HKLM\SYSTEM\MountedDevices**），而非依靠盘符自身。
 
 查看盘符和卷的映射关系：
 
@@ -58,11 +58,11 @@ PSPath
 
 在操作系统技术层面，挂载（mount）是指将文件系统附加到系统目录树已有目录（挂载点）上的操作。文件系统可视作以 **/** 为根的树形结构，一个文件系统必须挂载到另一文件系统中的某目录上。文件系统 B 挂载至目录 A 后，B 的根目录取代 A，B 所含目录随之显现；A 中原有文件则暂时隐藏，直至 B 从 A 卸载后方重新出现。
 
-工具 mount 调用 nmount(2) 系统调用，将一个特殊设备或远程节点（rhost:path）映射并嫁接到文件系统树中的节点（node）位置。系统维护当前已挂载文件系统的列表。如果不带任何参数调用 mount，将打印此列表。
+工具 `mount` 调用 `nmount`(2) 系统调用，将一个特殊设备或远程节点（rhost:path）映射并嫁接到文件系统树中的节点（node）位置。系统维护当前已挂载文件系统的列表。如果不带任何参数调用 `mount`，将打印此列表。
 
 > **注意**
 >
-> FreeBSD 的 `mount` 源于 4.4BSD，与 Linux 的 `mount` 在选项语法上基本兼容，但 FreeBSD 使用的是 nmount(2) 系统调用而非 Linux 的 mount(2)。FreeBSD 的 `mount` 会根据文件系统类型自动调用 **/sbin/mount_type** 程序（如 `mount_nfs`、`mount_msdosfs`）。
+> FreeBSD 的 `mount` 源于 4.4BSD，与 Linux 的 `mount` 在选项语法上基本兼容，但 FreeBSD 使用的是 `nmount`(2) 系统调用而非 Linux 的 `mount`(2)。FreeBSD 的 `mount` 会根据文件系统类型自动调用 **/sbin/mount_type** 程序（如 `mount_nfs`、`mount_msdosfs`）。
 
 ### 卸载的概念与机制
 
@@ -90,10 +90,10 @@ PSPath
 
 - `设备`：现有设备名。
 - `挂载点`：现有的目录，用于挂载文件系统。
-- `文件系统`：传递给 mount(8) 的文件系统类型。
+- `文件系统`：传递给 `mount`(8) 的文件系统类型。
 - `选项`：`rw` 表示读写文件系统，`ro` 表示只读文件系统，可跟其他选项。常用选项包括 `noauto`，表示启动时不挂载此文件系统。
-- `转储`：供 dump(8) 判断哪些文件系统需要备份。默认值为 `0`。
-- `fsck 检查顺序`：决定在重启后，哪些文件系统应由 fsck(8) 检查，以及检查顺序。应跳过的文件系统设置为 `0`。根文件系统应优先检查，设为 `1`，其他文件系统应设为大于 1 的值。若多个文件系统具有相同的 `passno`，fsck(8) 会尝试并行检查。
+- `转储`：供 `dump`(8) 判断哪些文件系统需要备份。默认值为 `0`。
+- `fsck 检查顺序`：决定在重启后，哪些文件系统应由 `fsck`(8) 检查，以及检查顺序。应跳过的文件系统设置为 `0`。根文件系统应优先检查，设为 `1`，其他文件系统应设为大于 1 的值。若多个文件系统具有相同的 `passno`，`fsck`(8) 会尝试并行检查。
 
 示例：标准 ZFS 安装下的 **/etc/fstab** 文件。
 
@@ -119,7 +119,7 @@ PSPath
 ### 参考文献
 
 - 微软. PARTITION_INFORMATION_GPT[EB/OL]. [2026-04-18]. <https://learn.microsoft.com/en-us/windows/win32/api/winioctl/ns-winioctl-partition_information_gpt>. GPT 分区类型 GUID 定义，其中 Microsoft Basic Data 类型为 EBD0A0A2-B9E5-4433-87C0-68B6B72699C7。
-- 微软. Supporting Mount Manager Requests in a Storage Class Driver[EB/OL]. [2026-04-18]. <https://learn.microsoft.com/en-us/windows-hardware/drivers/storage/supporting-mount-manager-requests-in-a-storage-class-driver>. Windows 装入管理器将盘符与分区的映射关系持久化存储于注册表 `HKLM\SYSTEM\MountedDevices`。
+- 微软. Supporting Mount Manager Requests in a Storage Class Driver[EB/OL]. [2026-04-18]. <https://learn.microsoft.com/en-us/windows-hardware/drivers/storage/supporting-mount-manager-requests-in-a-storage-class-driver>. Windows 装入管理器将盘符与分区的映射关系持久化存储于注册表 **HKLM\SYSTEM\MountedDevices**。
 - GBIF. Bambusoideae Luerss.[EB/OL]. [2026-04-18]. <https://www.gbif.org/species/113642445>. 竹亚科许多物种具有群体开花（gregarious flowering）特性，开花后常因资源耗竭而死亡；竹子通过地下根茎系统进行克隆生长（clonal growth），同一克隆的个体共享资源。
 - Aristotle. Metaphysics[M]. Translated by W. D. Ross. Oxford: Clarendon Press, 1908. Book IX (Theta), Chapter 7, 1049b. 亚里士多德论潜能与现实：种子之所以能长成大树，是因为种子暗含着一种潜能。
 
@@ -191,7 +191,7 @@ Windows 操作系统默认的文本换行符为 CRLF（即 `\r\n`，0x0D 0x0A，
 
 二者互不兼容。将使用 Windows 换行符的文件置于 UNIX 系统，可能导致每行末尾多出 `^M` 字符；某些工具会因此产生识别错误，而对 FreeBSD Port 相关文件而言，则可能将多行识别为单行。
 
-然而两种换行符可以互相转换。在 FreeBSD 中可使用 Port **converters/dos2unix** 实现，该软件包含两个命令：`dos2unix`（Windows 换行符到 UNIX）、`unix2dos`（UNIX 换行符到 Windows）。基本用法是 `$ dos2unix -n a.txt b.txt`，如果不需要保留源文件，可直接 `$ dos2unix a.txt b.txt c.txt`（一次转换多个文件）。可使用命令 `file a.txt` 来判断文件的换行符类型：
+然而两种换行符可以互相转换。在 FreeBSD 中可使用 Port **converters/dos2unix** 实现，该软件包含两个命令：`dos2unix`（Windows 换行符到 UNIX）、`unix2dos`（UNIX 换行符到 Windows）。基本用法是 `dos2unix -n a.txt b.txt`，如果不需要保留源文件，可直接 `dos2unix a.txt b.txt c.txt`（一次转换多个文件）。可使用命令 `file a.txt` 来判断文件的换行符类型：
 
 - 使用普通的 UNIX 换行符文本文件
 
@@ -211,7 +211,7 @@ b.txt: Unicode text, UTF-8 text, with very long lines (314), with CRLF line term
 
 - IETF. RFC 2046: Multipurpose Internet Mail Extensions (MIME) Part Two: Media Types[EB/OL]. [2026-04-18]. <https://datatracker.ietf.org/doc/html/rfc2046>. 规定文本类型的规范行结束符为 CRLF（0x0D 0x0A）。
 - IETF. RFC 20: ASCII format for network interchange[EB/OL]. [2026-04-18]. <https://www.rfc-editor.org/rfc/rfc20.html>. ASCII 字符编码标准，定义 7 位 128 个字符的编码，其中 0x41 为大写字母 A；标准定义 CR 为 0x0D（第 13 号控制字符），LF 为 0x0A（第 10 号控制字符），二者均源自电传打字机时代的物理操作。
-- Wasserburger E. dos2unix / unix2dos - Text file format converters[EB/OL]. [2026-04-18]. <https://dos2unix.sourceforge.io/>. dos2unix 与 unix2dos 命令行工具，用于在 CRLF（Windows）与 LF（UNIX）换行格式之间转换；FreeBSD Port 路径为 converters/dos2unix。基本系统版本与 Port 版本为不同程序。Port 为增强版本，支持更多选项。
+- Wasserburger E. dos2unix / unix2dos - Text file format converters[EB/OL]. [2026-04-18]. <https://dos2unix.sourceforge.io/>. `dos2unix` 与 `unix2dos` 命令行工具，用于在 CRLF（Windows）与 LF（UNIX）换行格式之间转换；FreeBSD Port 路径为 **converters/dos2unix**。基本系统版本与 Port 版本为不同程序。Port 为增强版本，支持更多选项。
 
 ## 字符编码差异
 
@@ -248,7 +248,7 @@ FreeBSD 的编码在 [main/usr.bin/login/login.conf](https://github.com/freebsd/
 - 微软. Code pages[EB/OL]. [2026-03-26]. <https://learn.microsoft.com/en-us/globalization/encoding/code-pages>. 微软官方称，936 即是 GBK，用于中文简体字符编码；代码页 936 最初覆盖 GB 2312 字符集，后扩展为 GBK。
 - Unicode Consortium. UTF-8, UTF-16, UTF-32 BOM[EB/OL]. [2026-04-18]. <https://www.unicode.org/faq/utf_bom.html>. UTF-8 的 BOM 为字节序列 0xEF 0xBB 0xBF。
 - 微软. Use UTF-8 code pages in Windows apps[EB/OL]. [2026-04-18]. <https://learn.microsoft.com/en-us/windows/apps/design/globalizing/use-utf8-code-page>. Windows 10 及后续版本可通过系统区域设置启用 UTF-8 支持（Beta 功能），但可能导致旧应用程序兼容性问题。
-- FreeBSD Project. login.conf(5)[EB/OL]. [2026-04-18]. <https://man.freebsd.org/cgi/man.cgi?query=login.conf&sektion=5>. FreeBSD 登录类能力数据库，源文件位于 `usr.bin/login/login.conf`，编译后路径为 **/etc/login.conf**，用于设置字符编码等用户环境。
+- FreeBSD Project. login.conf(5)[EB/OL]. [2026-04-18]. <https://man.freebsd.org/cgi/man.cgi?query=login.conf&sektion=5>. FreeBSD 登录类能力数据库，源文件位于 **usr.bin/login/login.conf**，编译后路径为 **/etc/login.conf**，用于设置字符编码等用户环境。
 
 ## 时间与时区差异
 
@@ -336,6 +336,6 @@ Windows 直接读取 RTC 的值，并视为本地时间（Local Time，地方时
 
 ## 课后习题
 
-1. 在 FreeBSD 中挂载一个 Windows NTFS 分区，使用 `converters/dos2unix` 批量转换包含 Windows 换行符的文本文件，编写 shell 脚本实现自动化处理。
+1. 在 FreeBSD 中挂载一个 Windows NTFS 分区，使用 **converters/dos2unix** 批量转换包含 Windows 换行符的文本文件，编写 shell 脚本实现自动化处理。
 2. 查阅 FreeBSD 内核源代码中 UFS/ZFS 文件系统处理大小写敏感的逻辑，分析其实现机制与 Windows NTFS 大小写不敏感设计的差异。
 3. 修改 Windows 注册表使其将硬件时钟视为 UTC，记录修改前后 FreeBSD 与 Windows 双系统时间显示的差异。

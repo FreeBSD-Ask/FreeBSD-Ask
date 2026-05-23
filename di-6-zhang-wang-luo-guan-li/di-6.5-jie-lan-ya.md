@@ -19,7 +19,7 @@
 
 - `hcsecd`：管理蓝牙设备的链路密钥和 PIN 码，负责蓝牙设备的安全认证。
 - `bthidd`：支持 Bluetooth HID（Human Interface Device）设备，如蓝牙鼠标、键盘等。
-- `hccontrol`：通过 hccontrol(8) 可对蓝牙 HCI 接口进行底层控制，包括查询设备状态、扫描附近设备、管理连接等操作，是蓝牙调试的核心工具。
+- `hccontrol`：通过 `hccontrol(8)` 可对蓝牙 HCI 接口进行底层控制，包括查询设备状态、扫描附近设备、管理连接等操作，是蓝牙调试的核心工具。
 
 ## 蓝牙鼠标配对
 
@@ -40,7 +40,7 @@ Set it up? [yes]:
 
 ## 附录：英特尔蓝牙
 
-由 iwm 驱动的 Intel 无线网卡通常集成了蓝牙功能，可通过安装 `comms/iwmbt-firmware` 固件包来加载蓝牙硬件所需的微码，该固件主要支持 Intel 7260/8260/8265 等芯片组的蓝牙 USB 设备。
+由 iwm 驱动的 Intel 无线网卡通常集成了蓝牙功能，可通过安装 **comms/iwmbt-firmware** 固件包来加载蓝牙硬件所需的微码，该固件主要支持 Intel 7260/8260/8265 等芯片组的蓝牙 USB 设备。
 
 - 使用 pkg（二进制包管理器）安装：
 

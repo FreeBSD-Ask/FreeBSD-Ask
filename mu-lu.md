@@ -98,8 +98,7 @@
 * [8.7 GNOME](di-8-zhang-zhuo-mian-huan-jing/di-8.7-jie-gnome.md)
 * [8.8 LXDE](di-8-zhang-zhuo-mian-huan-jing/di-8.8-jie-lxde.md)
 * [8.9 IceWM](di-8-zhang-zhuo-mian-huan-jing/di-8.9-jie-icewm.md)
-* [8.10 Hyprland](di-8-zhang-zhuo-mian-huan-jing/di-8.10-jie-hyprland.md)
-* [8.11 CDE](di-8-zhang-zhuo-mian-huan-jing/di-8.11-jie-cde.md)
+* [8.10 CDE（拟删除）](di-8-zhang-zhuo-mian-huan-jing/di-8.10-jie-cde.md)
 
 ## 第 9 章 多媒体和外部设备
 

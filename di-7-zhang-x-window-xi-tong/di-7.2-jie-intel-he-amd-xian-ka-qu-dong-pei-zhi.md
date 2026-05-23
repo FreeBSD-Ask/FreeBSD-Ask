@@ -8,14 +8,14 @@
 
 > **技巧**
 >
-> 如果要使用 pkg 安装，可参照本书其他章节配置的 kernel modules（kmods）内核模块源。
+> 如果要使用 `pkg` 安装，可参照本书其他章节配置的 kernel modules（kmods）内核模块源。
 
 ```sh
 # cd /usr/ports/graphics/drm-61-kmod
 # make BATCH=yes install clean
 ```
 
-或者使用 pkg 安装（如 Ports 安装有问题则使用此方法）：
+或者使用 `pkg` 安装（如 Ports 安装有问题则使用此方法）：
 
 ```sh
 # pkg install drm-61-kmod
@@ -50,7 +50,7 @@
 
 ### 安装 Intel VA-API 媒体驱动
 
-- 使用 pkg 安装：
+- 使用 `pkg` 安装：
 
 ```sh
 # pkg install libva-intel-media-driver
@@ -65,7 +65,7 @@
 
 ### 安装 Mesa 的 Gallium VA-API 和 VDPAU 支持包
 
-- 使用 pkg 安装：
+- 使用 `pkg` 安装：
 
 ```sh
 # pkg install mesa-gallium-va mesa-gallium-vdpau

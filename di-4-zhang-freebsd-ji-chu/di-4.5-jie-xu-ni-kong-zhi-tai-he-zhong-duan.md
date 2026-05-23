@@ -151,7 +151,7 @@ ttyv8	"/usr/local/bin/xdm -nodaemon"	xterm	off secure
 
 注意，最后一个虚拟控制台（ttyv8）用于访问图形环境（如果已安装并配置了 Xorg）。
 
-有关此文件中每列的详细描述和虚拟控制台的可用选项，请参阅 ttys(5)。
+有关此文件中每列的详细描述和虚拟控制台的可用选项，请参阅 `ttys(5)`。
 
 ## 单用户模式
 
@@ -231,7 +231,7 @@ exec="gop set 0"
 
 ### `efi_max_resolution`（UEFI）或 `vbe_max_resolution`（BIOS）
 
-也可以通过配置文件设置 UEFI 或 BIOS 下的分辨率。根据文档 LOADER.CONF(5)，这两个变量可接受以下值：
+也可以通过配置文件设置 UEFI 或 BIOS 下的分辨率。根据文档 `loader.conf(5)`，这两个变量可接受以下值：
 
 ```sh
 值	           分辨率
@@ -256,5 +256,5 @@ exec="gop set 0"
 ## 课后习题
 
 1. 在 FreeBSD 中切换多个虚拟控制台（ttyv0—ttyv3），分别以不同用户登录，使用 `w` 命令记录各终端的会话信息，分析虚拟控制台与伪终端的会话管理差异。
-2. 查阅 FreeBSD 内核中 TTY 子系统的核心源代码（`sys/tty/`），分析其输入输出缓冲区管理和行规程的实现机制。
+2. 查阅 FreeBSD 内核中 TTY 子系统的核心源代码（**sys/tty/**），分析其输入输出缓冲区管理和行规程的实现机制。
 3. 修改 **/etc/motd** 的内容与显示行为（如通过 **/etc/login.conf** 控制），记录修改前后用户登录时的信息输出差异。

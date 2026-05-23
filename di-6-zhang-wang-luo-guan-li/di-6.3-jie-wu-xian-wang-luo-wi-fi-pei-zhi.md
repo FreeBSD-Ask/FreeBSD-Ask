@@ -67,7 +67,7 @@ wlan0: flags=8802<BROADCAST,SIMPLEX,MULTICAST> metric 0 mtu 1500
 
 ### 扫描无线网络
 
-在连接到无线网络之前，需先扫描周围可用的无线网络。可使用 ifconfig(8) 扫描可用的无线网络：
+在连接到无线网络之前，需先扫描周围可用的无线网络。可使用 `ifconfig(8)` 扫描可用的无线网络：
 
 ```sh
 # ifconfig wlan0 up scan
@@ -125,7 +125,7 @@ test_5G                           50:d6:c5:93:d7:64   36   54M  -78:-95   100 EP
 
 加密无线网络需要使用 Wi-Fi 保护访问（Wi-Fi Protected Access，WPA）配置文件连接。WPA2/3 是当前主流的无线网络安全协议，提供数据加密和身份认证功能。
 
-无线网络中的认证过程由 wpa_supplicant(8) 管理。可使用 wpa_passphrase(8) 工具将 SSID 和明文密码转换为安全的 PSK 配置条目，避免在配置文件中直接书写明文密码。此外，wpa_cli(8) 提供了 wpa_supplicant 的交互式命令行管理接口，可用于运行时调试和状态查询。创建 **/etc/wpa_supplicant.conf** 配置文件，内容如下：
+无线网络中的认证过程由 `wpa_supplicant(8)` 管理。可使用 `wpa_passphrase(8)` 工具将 SSID 和明文密码转换为安全的 PSK 配置条目，避免在配置文件中直接书写明文密码。此外，`wpa_cli(8)` 提供了 `wpa_supplicant` 的交互式命令行管理接口，可用于运行时调试和状态查询。创建 **/etc/wpa_supplicant.conf** 配置文件，内容如下：
 
 ```ini
 ctrl_interface=/var/run/wpa_supplicant   # 可选，控制接口路径，用于 wpa_supplicant 与 wpa_cli 等工具通信
@@ -155,7 +155,7 @@ psk="freebsdcn"
 # service netif restart
 ```
 
-如果网络连接正常，再做永久配置。在 **/etc/rc.conf** 文件中添加或修改相关配置：
+如果网络连接正常，再进行永久配置。在 **/etc/rc.conf** 文件中添加或修改相关配置：
 
 ```ini
 wlans_rtwn0="wlan0"                      # 将物理无线设备 rtwn0 绑定到 wlan0 接口
@@ -175,7 +175,7 @@ FreeBSD 无线网络涉及以下配置文件。
 
 完成上述配置后，重启系统或者网络服务使所有配置生效。
 
-重启后，使用 `ifconfig` 查看连接情况，在正常情况下可看到已成功连接（示例输出中 IP 为 192.168.31.178）：
+重启后，使用 `ifconfig` 查看连接情况，在正常情况下可看到已成功连接（示例输出中 IP 为 **192.168.31.178**）：
 
 ```sh
 ……省略一部分输出……
@@ -198,7 +198,7 @@ wlan0: flags=8843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST> metric 0 mtu 1500
 
 ## 英特尔无线网卡驱动概况
 
-英特尔（Intel）网卡是目前使用广泛的无线网卡之一。iwlwifi 驱动 [适用于](https://wiki.freebsd.org/WiFi/Iwlwifi/Chipsets) `AC 8265、AC 9260、AC 9560、AX200、AX201、AX210、AX211`，iwm 驱动 [适用于](https://wiki.freebsd.org/WiFi/Iwm) `AC 3160、AC 3165、AC 3168、AC 7260、AC 7265、AC 8260、AC 8265、AC 9260、AC 9270、AC 946X、AC 9560` 等型号。两者覆盖的芯片范围有部分重叠但不完全包含，见 [英特尔 ® 无线适配器的 Linux* 支持](https://www.intel.cn/content/www/cn/zh/support/articles/000005511/wireless.html)。
+英特尔（Intel）网卡是目前广泛使用的无线网卡之一。iwlwifi 驱动 [适用于](https://wiki.freebsd.org/WiFi/Iwlwifi/Chipsets) `AC 8265、AC 9260、AC 9560、AX200、AX201、AX210、AX211`，iwm 驱动 [适用于](https://wiki.freebsd.org/WiFi/Iwm) `AC 3160、AC 3165、AC 3168、AC 7260、AC 7265、AC 8260、AC 8265、AC 9260、AC 9270、AC 946X、AC 9560` 等型号。两者覆盖的芯片范围有部分重叠但不完全包含，见 [英特尔 ® 无线适配器的 Linux* 支持](https://www.intel.cn/content/www/cn/zh/support/articles/000005511/wireless.html)。
 
 在 **/etc/rc.conf** 文件中添加以下配置：
 
@@ -314,7 +314,7 @@ wlans_bwn0="wlan0"
 
 如果设备无法与接入点关联，需验证配置是否与接入点上的设置匹配，包括认证方案和安全协议。建议尽可能简化配置。如果使用 WPA2 或 WPA 等安全协议，可先将接入点配置为开放认证、关闭安全功能，以验证流量能否通过。
 
-如果系统可以与接入点关联，使用 ping(8) 等工具诊断网络配置。
+如果系统可以与接入点关联，使用 `ping(8)` 等工具诊断网络配置。
 
 ## 附录：更新系统版本后无法使用无线网络
 
