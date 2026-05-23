@@ -117,7 +117,7 @@ GNOME 默认使用的输入法框架是 IBus。
 
 ![FreeBSD GNOME](../.gitbook/assets/gnome4-1.png)
 
-## 不符合常规的设置调整
+## 与常规习惯不同的设置调整
 
 GNOME 的设计理念与部分用户的操作习惯存在差异，例如桌面不允许放置图标、右上角无系统托盘等。~~是否与垃圾桶不能有垃圾、人不能在床上、门不能关、桌子上不能放东西有异曲同工之妙？~~
 
@@ -259,7 +259,7 @@ $ ./install.sh
 
 ### 精简现有的 GNOME 完整版本
 
-如果已安装完整版本，也可使用 pkg 卸载自带的游戏软件：
+如果已安装完整版本，也可使用 pkg 卸载附带的游戏软件：
 
 ```sh
 # pkg delete gnome-2048 gnome-klotski gnome-tetravex gnome-mines gnome-taquin gnome-sudoku gnome-robots gnome-nibbles lightsoff tali quadrapassel swell-foop gnome-mahjongg five-or-more iagno aisleriot four-in-a-row
