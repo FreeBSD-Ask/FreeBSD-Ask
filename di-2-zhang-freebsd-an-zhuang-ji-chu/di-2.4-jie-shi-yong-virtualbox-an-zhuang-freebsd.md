@@ -210,11 +210,18 @@ vboxservice_flags="--disable-timesync"
 
 注意，“文件夹名称”是操作系统（FreeBSD 虚拟机）将看到的文件名，不得包含空格。
 
-在 FreeBSD 虚拟机系统中挂载共享文件夹的命令如下：
+在 FreeBSD 虚拟机中查看待挂载的文件夹：
+
+```sh
+$ dmesg | grep -i VBOXVFS
+VBOXVFS[1]: sfprov_mount: path: [ykla]
+```
+
+在 FreeBSD 虚拟机中挂载共享文件夹的命令如下：
 
 ```sh
 # mkdir -p /mnt/bsdboxshare # 创建上面指定的挂载点
-# mount_vboxvfs -w ykla /mnt/bsdboxshare # 挂载 ykla 文件夹
+# mount_vboxvfs -w ykla /mnt/bsdboxshare # 挂载 ykla 文件夹，默认只读挂载
 ```
 
 列出共享文件夹内容：
