@@ -169,7 +169,7 @@ FreeBSD `-RELEASE` 历史版本下载地址：
 
 不同操作系统平台有不同镜像刻录工具推荐。
 
-Windows 平台建议优先使用 **Rufus**，Linux/FreeBSD 平台可直接使用 `dd` 命令刻录镜像：`dd if=FreeBSD-*.img of=/dev/daX bs=1M status=progress`（其中 `/dev/daX` 为目标 U 盘设备，请根据实际设备名调整；`status=progress` 显示传输进度）。
+Windows 平台建议优先使用 **Rufus**，Linux/FreeBSD 平台可直接使用 `dd` 命令刻录镜像：`dd if=FreeBSD-*.img of=/dev/daX bs=1M status=progress`（其中 **/dev/daX** 为目标 U 盘设备，请根据实际设备名调整；`status=progress` 显示传输进度）。
 
 Rufus 下载地址为 <https://rufus.ie/zh>，该工具为 Windows 平台开源 USB 启动盘制作工具。
 
@@ -253,7 +253,7 @@ Realtek RTL8125 是一款常见的 2.5 G 以太网卡。在消费级市场中，
 
 > **技巧**
 >
-> 如果 Realtek 网卡仍存在断流、时断时续等情况，可尝试使用 net/realtek-re-kmod198[EB/OL]. [2026-03-26]. <https://www.freshports.org/net/realtek-re-kmod198/>，参见：Bug 275882 - net/realtek-re-kmod: Problem with checksum offload since +199.00[EB/OL]. [2026-03-26]. <https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=275882>。
+> 如果 Realtek 网卡仍存在断流、时断时续等情况，可尝试使用 **net/realtek-re-kmod198**[EB/OL]. [2026-03-26]. <https://www.freshports.org/net/realtek-re-kmod198/>，参见：Bug 275882 - **net/realtek-re-kmod**: Problem with checksum offload since +199.00[EB/OL]. [2026-03-26]. <https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=275882>。
 
 相关文件结构：
 
