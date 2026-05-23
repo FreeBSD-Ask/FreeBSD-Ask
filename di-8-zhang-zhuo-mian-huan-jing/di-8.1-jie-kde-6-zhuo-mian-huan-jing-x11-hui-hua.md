@@ -93,7 +93,7 @@ $ echo "exec ck-launch-session startplasma-x11" > ~/.xinitrc
 
 编辑 **/etc/login.conf** 文件：找到 `default:\` 这一部分，将 `:lang=C.UTF-8` 修改为 `:lang=zh_CN.UTF-8`。
 
-编辑后形如下方：
+编辑后如下所示：
 
 ```ini
       ……省略其他部分……
