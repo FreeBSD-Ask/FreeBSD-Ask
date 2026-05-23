@@ -149,7 +149,7 @@ Conflicts remain from previous update, aborting.
 - 若 **/etc/login.conf** 变更则自动调用 `cap_mkdb`；
 - 若 **/etc/mail/aliases** 变更则自动调用 `newaliases`；
 - 若 **/etc/services** 变更则自动调用 `services_mkdb`；
-- 若 `/etc/localtime` 变更且 `/var/db/zoneinfo` 存在则自动调用 `tzsetup`。
+- 若 **/etc/localtime** 变更且 **/var/db/zoneinfo** 存在则自动调用 `tzsetup`。
 
 解决冲突：
 

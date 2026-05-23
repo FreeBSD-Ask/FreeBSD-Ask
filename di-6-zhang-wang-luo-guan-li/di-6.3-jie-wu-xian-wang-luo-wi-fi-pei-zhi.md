@@ -125,7 +125,7 @@ test_5G                           50:d6:c5:93:d7:64   36   54M  -78:-95   100 EP
 
 加密无线网络需要使用 Wi-Fi 保护访问（Wi-Fi Protected Access，WPA）配置文件连接。WPA2/3 是当前主流的无线网络安全协议，提供数据加密和身份认证功能。
 
-无线网络中的认证过程由 wpa_supplicant(8) 管理。可使用 wpa_passphrase(8) 工具将 SSID 和明文密码转换为安全的 PSK 配置条目，避免在配置文件中直接书写明文密码。此外，wpa_cli(8) 提供了 wpa_supplicant 的交互式命令行管理接口，可用于运行时调试和状态查询。创建 **/etc/wpa_supplicant.conf** 配置文件，内容如下：
+无线网络中的认证过程由 `wpa_supplicant(8)` 管理。可使用 `wpa_passphrase(8)` 工具将 SSID 和明文密码转换为安全的 PSK 配置条目，避免在配置文件中直接书写明文密码。此外，`wpa_cli(8)` 提供了 `wpa_supplicant` 的交互式命令行管理接口，可用于运行时调试和状态查询。创建 **/etc/wpa_supplicant.conf** 配置文件，内容如下：
 
 ```ini
 ctrl_interface=/var/run/wpa_supplicant   # 可选，控制接口路径，用于 wpa_supplicant 与 wpa_cli 等工具通信
@@ -314,7 +314,7 @@ wlans_bwn0="wlan0"
 
 如果设备无法与接入点关联，需验证配置是否与接入点上的设置匹配，包括认证方案和安全协议。建议尽可能简化配置。如果使用 WPA2 或 WPA 等安全协议，可先将接入点配置为开放认证、关闭安全功能，以验证流量能否通过。
 
-如果系统可以与接入点关联，使用 ping(8) 等工具诊断网络配置。
+如果系统可以与接入点关联，使用 `ping(8)` 等工具诊断网络配置。
 
 ## 附录：更新系统版本后无法使用无线网络
 
