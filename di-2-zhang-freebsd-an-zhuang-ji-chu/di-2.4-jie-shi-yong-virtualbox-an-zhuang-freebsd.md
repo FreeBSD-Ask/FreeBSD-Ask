@@ -62,11 +62,11 @@ VirtualBox 安装完成后，创建并配置虚拟机。
 
 ![FreeBSD 安装界面](../.gitbook/assets/virtualbox-8.png)
 
-> **注意**
->
-> 使用较低版本的 VirtualBox 时，FreeBSD 安装完成后请手动关机并卸载或删除安装光盘，否则会再次进入安装界面。
+FreeBSD 安装完成后，请手动关机并卸载或删除安装光盘（询问是否强制释放时同意释放），否则仍会再次进入安装界面。
 
-安装后的系统：
+![安装完成后弹出光盘](../.gitbook/assets/virtualbox-removecd.png)
+
+安装后的 FreeBSD 虚拟机系统：
 
 ![FreeBSD 系统界面](../.gitbook/assets/virtualbox-9.png)
 
