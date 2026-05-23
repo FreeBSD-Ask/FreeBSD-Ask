@@ -469,7 +469,7 @@ root 密码强度无强制要求，但不可为空。若密码为空，将提示
 
 ## 网络设置
 
-设置好 root 密码后，接下来需要配置网络，使系统能够连接到互联网或局域网。
+设置好 root 密码后，需配置网络，使系统能够连接到互联网或局域网。
 
 ### 以太网卡
 
@@ -533,7 +533,7 @@ root 密码强度无强制要求，但不可为空。若密码为空，将提示
 
 > **警告**
 >
-> 由于 FreeBSD Project. Bug 287538: Installer error on setting regdomain[EB/OL]. [2026-03-25]. <https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=287538>。该 Bug 报告记录安装程序设置无线管制域错误，目前选择任何无线管制域，都会报错如下：
+> 由于 FreeBSD Project. Bug 287538: Installer error on setting regdomain[EB/OL]. [2026-03-25]. <https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=287538>。该 Bug 报告记录安装程序设置无线管制域错误，目前选择任何无线管制域，均将提示错误如下：
 >
 > ```sh
 > Error while applying chosen settings
@@ -613,7 +613,7 @@ root 密码强度无强制要求，但不可为空。若密码为空，将提示
 
 ## 时区设置
 
-网络配置完成后，接下来需要设置系统的时区，以确保系统时间显示正确。
+网络配置完成后，需设置系统的时区，以确保系统时间显示正确。
 
 ![选择地区](../.gitbook/assets/select-region.png)
 
@@ -679,7 +679,7 @@ CST 为中国标准时间（China Standard Time）的缩写，确认无误后按
 
 ## 安全加固
 
-启动服务设置完成后，接下来需要配置系统安全加固选项，以增强系统的安全性。
+启动服务设置完成后，需配置系统安全加固选项，以增强系统的安全性。
 
 ![安全加固选项](../.gitbook/assets/security-hardening.png)
 
@@ -706,7 +706,7 @@ CST 为中国标准时间（China Standard Time）的缩写，确认无误后按
 
 ## 安装固件
 
-安全加固设置完成后，接下来安装硬件固件。
+安全加固设置完成后，安装硬件固件。
 
 ![虚拟机无固件可安装](../.gitbook/assets/vm-no-firmware.png)
 
@@ -733,7 +733,7 @@ CST 为中国标准时间（China Standard Time）的缩写，确认无误后按
 
 ## 创建普通用户
 
-固件安装完成后，接下来创建普通用户账户。
+固件安装完成后，创建普通用户账户。
 
 ![添加用户](../.gitbook/assets/add-user.png)
 
