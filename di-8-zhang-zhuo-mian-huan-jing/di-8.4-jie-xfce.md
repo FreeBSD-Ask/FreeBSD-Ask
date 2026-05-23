@@ -2,7 +2,7 @@
 
 ## Xfce 桌面环境概述
 
-Xfce 是类 UNIX 系统中的轻量级桌面环境，资源占用率低、响应速度快。颇具趣味的是，Xfce 的 Logo 是一只老鼠 🐀。曾有用户反馈一则轶事，称因 Xfce 的默认壁纸是一只老鼠 🐀，导致自己的电脑屏幕被猫 🐈 抓坏（SanjaytheToilet. [joke] The default desktop startup screen causes damage to monitor![EB/OL]. (2015-08-04)[2026-04-04]. <https://bugzilla.xfce.org/show_bug.cgi?id=12117>.）。
+Xfce 是类 UNIX 系统中的轻量级桌面环境，资源占用率低、响应速度快。颇具趣味的是，Xfce 的 Logo 是一只老鼠 🐀。曾有用户反馈一则轶事，称因 Xfce 的默认壁纸是一只老鼠 🐀，导致电脑屏幕被猫 🐈 抓坏（SanjaytheToilet. [joke] The default desktop startup screen causes damage to monitor![EB/OL]. (2015-08-04)[2026-04-04]. <https://bugzilla.xfce.org/show_bug.cgi?id=12117>.）。
 
 ## 安装 Xfce 桌面环境
 
@@ -70,7 +70,7 @@ $ echo "/usr/local/etc/xdg/xfce4/xinitrc" > ~/.xsession
 
 编辑 **/etc/login.conf** 文件：找到 `default:\` 这一段，将 `:lang=C.UTF-8` 修改为 `:lang=zh_CN.UTF-8`。
 
-还需要根据 **/etc/login.conf** 文件更新系统能力数据库：
+还需要根据 **/etc/login.conf** 文件重建能力数据库：
 
 ```sh
 # cap_mkdb /etc/login.conf
