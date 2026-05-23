@@ -107,17 +107,13 @@ hw.efi.poweroff=0
 
 ### NAT 与仅主机模式
 
-> **注意**
->
-> 与 VMware 不同，VirtualBox 的默认 NAT 模式下，宿主机和虚拟机无法直接互通。虚拟机可以访问宿主机的特殊地址 **10.0.2.2** 及其上运行的服务，但宿主机无法访问虚拟机的端口，各虚拟机之间网络也相互隔离。参见：Oracle. Network Address Translation (NAT)[EB/OL]. [2026-03-26]. <https://www.virtualbox.org/manual/topics/networkingdetails.html#network_nat>. 也可以按照手册中的端口转发来连通网络。
+与 VMware 不同，VirtualBox 的默认 NAT 模式下，宿主机和虚拟机无法直接互通。虚拟机可以访问宿主机的特殊地址 **10.0.2.2** 及其上运行的服务，但宿主机无法访问虚拟机的端口，各虚拟机之间网络也相互隔离。
 
 网络设置较为复杂，桥接模式未必能够生效。如果要通过宿主机（如 Windows 11）控制虚拟机中的 FreeBSD 系统，需设置两块网卡：一块为 NAT 网络模式的网卡用于连接互联网，另一块为仅主机模式的网卡用于与宿主机互通。如图所示：
 
 ![双网卡设置](../.gitbook/assets/virtualbox-dual-nic-1.png)
 
-> **技巧**
->
-> 网卡类型下拉列表中，“网络地址转换（NAT）”与“NAT 网络”选项类似。根据 Oracle Corporation. 6.3. Network Address Translation (NAT)[EB/OL]. [2026-04-04]. <https://www.virtualbox.org/manual/topics/networkingdetails.html#network_nat>. 主要区别在于：“NAT 网络”模式下的虚拟机之间可以互通，而“网络地址转换（NAT）”模式下的虚拟机网络则是相互隔离的。
+网卡类型下拉列表中，“网络地址转换（NAT）”与“NAT 网络”选项类似。主要区别在于：“NAT 网络”模式下的虚拟机之间可以互通，而“网络地址转换（NAT）”模式下的虚拟机网络则是相互隔离的。
 
 ![仅主机模式设置](../.gitbook/assets/virtualbox-dual-nic-2.png)
 
@@ -126,6 +122,11 @@ hw.efi.poweroff=0
 ![NAT 与仅主机模式](../.gitbook/assets/virtualbox-dual-nic-3.png)
 
 按这种方式设定的网络，虚拟机与宿主机所在的局域网无法互通。如果无法连接互联网，请设置 DNS 为 **223.5.5.5**。如果不熟悉相关操作，请参阅本章相关小节。
+
+### 参考文献
+
+- Oracle. Network Address Translation (NAT)[EB/OL]. [2026-03-26]. <https://www.virtualbox.org/manual/topics/networkingdetails.html#network_nat>. 也可以按照手册中的端口转发来连通网络。
+-  Oracle Corporation. 6.3. Network Address Translation (NAT)[EB/OL]. [2026-04-04]. <https://www.virtualbox.org/manual/topics/networkingdetails.html#network_nat>. “网络地址转换（NAT）”与“NAT 网络”选项的区别。
 
 ## 虚拟机增强工具
 
