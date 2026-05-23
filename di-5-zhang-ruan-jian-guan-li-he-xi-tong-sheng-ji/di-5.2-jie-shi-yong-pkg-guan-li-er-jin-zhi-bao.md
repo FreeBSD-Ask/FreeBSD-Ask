@@ -344,7 +344,7 @@ Filename: usr/local/lib/libxcb-icccm.so.4.0.0
 
 ### `ld-elf.so.1: Shared object "libmd.so.6" not found, required by "pkg"`
 
-该问题通常是因为软件源未及时同步基本系统 ABI 的变更。
+该问题通常是由于软件源未及时同步基本系统 ABI 的变更。
 
 对于一般 RELEASE，更新系统即可。对于 CURRENT/STABLE 系统，重新编译 `pkg` 即可。
 
