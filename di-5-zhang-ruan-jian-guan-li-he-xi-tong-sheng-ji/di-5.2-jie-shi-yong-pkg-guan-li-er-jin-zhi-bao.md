@@ -229,7 +229,7 @@ Number of packages to be removed: 87
 
 The operation will free 825 MiB.
 
-Proceed with deinstalling packages? [y/N]: # 输入 y 按回车键就卸载了
+Proceed with deinstalling packages? [y/N]: # 输入 y 按回车键即可完成卸载
 ```
 
 #### 参考文献
