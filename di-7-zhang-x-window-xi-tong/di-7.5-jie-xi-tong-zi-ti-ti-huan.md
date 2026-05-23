@@ -4,7 +4,7 @@ FreeBSD 默认字体对中文显示效果欠佳。本节介绍图形界面引入
 
 ## GUI 图形界面字体
 
-首先提取 Windows `C:\Windows\Fonts` 目录下的所有 `.ttf` 和 `.ttc` 字体文件。macOS 字体文件格式虽同为 `.ttf`，仍需特殊处理。
+首先提取 Windows **C:\Windows\Fonts** 目录下的所有 `.ttf` 和 `.ttc` 字体文件。macOS 字体文件格式虽同为 `.ttf`，仍需特殊处理。
 
 为管理新字体，创建一个目录存放 Windows 字体：
 
