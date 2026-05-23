@@ -420,5 +420,5 @@ touch ~/.bash_profile         # 创建 ~/.bash_profile 文件，用于配置 Bas
 ## 课后习题
 
 1. 在 FreeBSD 中编写一个 sh 脚本，实现文件名补全的最小示例，记录 sh 内建补全机制与 Bash 补全的功能差异。
-2. 查阅 FreeBSD sh 源代码（`bin/sh/`），分析其行编辑和快捷键处理的实现方式，比较其与 Bash 在交互功能上的差距。
+2. 查阅 FreeBSD sh 源代码（**bin/sh/**），分析其行编辑和快捷键处理的实现方式，比较其与 Bash 在交互功能上的差距。
 3. 修改 shell 的默认提示符配置（如通过 `PS1` 或 `set prompt`），记录不同 shell（sh、csh、zsh）中提示符定制的语法差异。
