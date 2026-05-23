@@ -58,29 +58,98 @@ iwm0@pci0:3:0:0: class=0x028000 rev=0x00 hdr=0x00 vendor=0x8086 device=0x4237 su
 
 ### 通过 ifconfig 命令识别网络适配器
 
-使用 `ifconfig` 命令可查看系统中的网络接口列表及其状态。
-
-示例输出：
+使用 `ifconfig` 命令可查看系统中的网络接口列表及其状态。输出应类似于以下内容：
 
 ```sh
-# ifconfig
-genet0: flags=8843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST> metric 0 mtu 1500
-	options=68000b<RXCSUM,TXCSUM,VLAN_MTU,LINKSTATE,RXCSUM_IPV6,TXCSUM_IPV6>
-	ether dc:a6:1a:2e:f4:4f
-	inet 192.168.123.157 netmask 0xffffff00 broadcast 192.168.123.255
+em0: flags=1008843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST,LOWER_UP> metric 0 mtu 1500
+	options=4e504bb<RXCSUM,TXCSUM,VLAN_MTU,VLAN_HWTAGGING,JUMBO_MTU,VLAN_HWCSUM,LRO,VLAN_HWFILTER,VLAN_HWTSO,RXCSUM_IPV6,TXCSUM_IPV6,HWSTATS,MEXTPG>
+	ether 00:0c:29:84:0f:86
+	inet 192.168.5.22 netmask 0xffffff00 broadcast 192.168.5.255
+	inet6 fe80::20c:29ff:fe84:f86%em0 prefixlen 64 scopeid 0x1
+	inet6 240e:341:207:a600:2d60:b653:3a68:8605 prefixlen 64 autoconf pltime 101808 vltime 188208
 	media: Ethernet autoselect (1000baseT <full-duplex>)
 	status: active
-	nd6 options=29<PERFORMNUD,IFDISABLED,AUTO_LINKLOCAL>
-lo0: flags=8049<UP,LOOPBACK,RUNNING,MULTICAST> metric 0 mtu 16384
+	nd6 options=823<PERFORMNUD,ACCEPT_RTADV,AUTO_LINKLOCAL,STABLEADDR>
+lo0: flags=1008049<UP,LOOPBACK,RUNNING,MULTICAST,LOWER_UP> metric 0 mtu 16384
 	options=680003<RXCSUM,TXCSUM,LINKSTATE,RXCSUM_IPV6,TXCSUM_IPV6>
+	inet 127.0.0.1 netmask 0xff000000
 	inet6 ::1 prefixlen 128
 	inet6 fe80::1%lo0 prefixlen 64 scopeid 0x2
-	inet 127.0.0.1 netmask 0xff000000
 	groups: lo
 	nd6 options=21<PERFORMNUD,AUTO_LINKLOCAL>
+wlan0: flags=8843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST> metric 0 mtu 1500
+	options=200001<RXCSUM,RXCSUM_IPV6>
+	ether 20:0d:b0:c4:ab:59
+	inet 192.168.5.23 netmask 0xffffff00 broadcast 192.168.5.255
+	groups: wlan
+	ssid test_5G channel 153 (5765 MHz 11a vht/80-) bssid e4:60:4d:97:00:e8
+	regdomain FCC country US authmode WPA2/802.11i privacy ON
+	deftxkey UNDEF AES-CCM 2:128-bit AES-CCM ucast:128-bit txpower 17
+	bmiss 7 mcastrate 6 mgmtrate 6 scanvalid 60 ampdulimit 64k
+	ampdudensity 2 shortgi -stbc -uapsd vht vht40 vht80 -vht160 -vht80p80
+	wme roaming MANUAL
+	parent interface: rtwn0
+	media: IEEE 802.11 Wireless Ethernet VHT mode 11ac
+	status: associated
+	nd6 options=829<PERFORMNUD,IFDISABLED,AUTO_LINKLOCAL,STABLEADDR>
 ```
 
-`lo0` 是本地回环接口，用于本机内部通信，不属于物理网卡。若 `ifconfig` 输出中仅显示 `lo0` 接口，则表示系统未识别物理网卡，此时应检查网卡硬件连接和驱动加载状态。可通过 `dmesg | grep ether` 命令查看网卡驱动加载日志。
+FreeBSD 使用驱动程序名称后跟一个单元号来命名网络接口适配器。单元号表示适配器在启动时被检测到的顺序，或者稍后发现的顺序。例如，`em0` 是系统中使用 em(4) 驱动程序的第一块网卡。而 `wlan0` 是使用 rtwn(4) 驱动程序的第一块无线网卡。
+
+在这个例子中，显示了以下设备：
+
+- `em0`：以太网接口。
+- `lo0`：本地回环接口，用于本机内部通信，不属于物理网卡。可以用于性能分析、软件测试/本地通信。
+- `wlan0`：通用 WiFi 802.11 链路层接口，用于连接无线网络。
+
+  > **技巧**
+  >
+  > 若 `ifconfig` 输出中仅显示 `lo0` 接口，则表示系统未识别物理网卡，此时应检查网卡硬件连接和驱动加载状态。可通过 `dmesg | grep ether` 命令查看网卡驱动加载日志。
+
+
+该例子显示 `em0`、 `wlan0` 已经启动并在运行。
+
+关键指示项：
+
+1. **UP** 表示接口已配置并准备就绪（当前 `em0` 和 `wlan0` 均已启用）。
+2. **inet**（IPv4 地址）：有线接口 `em0` 的地址更新为 `192.168.5.22`；无线接口 `wlan0` 的地址为 `192.168.5.23`。
+3. **inet6**（IPv6 地址）：`em0` 当前拥有两个 IPv6 地址，分别是链路本地地址 `fe80::20c:29ff:fe84:f86%em0` 和全局动态地址 `240e:341:207:a600:2d60:b653:3a68:8605`。
+4. **netmask**（子网掩码）：`em0` 和 `wlan0` 的掩码均为 `0xffffff00`，这等同于标准的 `255.255.255.0`。
+5. **broadcast**（广播地址）：两个接口当前所在网段的有效广播地址均为 `192.168.5.255`。
+6. **ether**（MAC 地址）：有线接口 `em0` 的物理地址是 `00:0c:29:84:0f:86`；无线接口 `wlan0` 的物理地址是 `20:0d:b0:c4:ab:59`。
+7. **media**（物理媒体）：`em0` 显示为以太网自动选择模式（`Ethernet autoselect (1000baseT <full-duplex>)`）；`wlan0` 显示为无线高速模式（`IEEE 802.11 Wireless Ethernet VHT mode 11ac`）。
+8. **status**（链接状态）：`em0` 的状态为 `active`，说明网线已插好且载波信号正常；`wlan0` 的状态为 `associated`，说明已成功关联到无线基站（SSID 外部显示为 `test_5G`）。
+
+特别的，`wlan0` 关键指示项：
+
+1. **ssid**（无线网络名称）：当前连接的 Wi-Fi 名称为 `test_5G`。
+2. **channel**（工作信道与频率）：当前工作在 153 信道，频率为 5765 MHz（属于 5GHz 频段），且启用了 80MHz 的频宽（vht/80-）。
+3. **bssid**（无线路由器 MAC 地址）：当前所连 Wi-Fi 热点的物理地址是 `e4:60:4d:97:00:e8`。
+4. **country / regdomain**（国家区域代码与无线监管域）：当前遵从美国标准（country US）以及美国联邦通信委员会（regdomain FCC）的无线电法律法规。
+5. **authmode / privacy**（认证与加密模式）：认证方式为 WPA2/802.11i（目前主流的安全无线认证标准），且隐私加密已开启（privacy ON），单播与传输密钥采用 AES-CCM (128-bit)。
+6. **txpower**（发射功率）：当前无线的发射功率为 17 dBm。
+
+如果 ifconfig(8) 输出类似于以下内容，则表示网络接口待配置：
+
+```sh
+em0: flags=1008843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST,LOWER_UP> metric 0 mtu 1500
+        options=4e504bb<RXCSUM,TXCSUM,VLAN_MTU,VLAN_HWTAGGING,JUMBO_MTU,VLAN_HWCSUM,L
+RO,VLAN_HWFILTER,VLAN_HWTSO,RXCSUM_IPV6,TXCSUM_IPV6,HWSTATS,MEXTPG>
+        ether 00:0c:29:84:0f:86
+        inet6 fe80::20c:29ff:fe84:f86%em0 prefixlen 64 scopeid 0x1
+        inet6 240e:341:207:a600:2d60:b653:3a68:8605 prefixlen 64 autoconf pltime 1018
+08 vltime 188208
+        media: Ethernet autoselect (1000baseT <full-duplex>)
+        status: active
+        nd6 options=823<PERFORMNUD,ACCEPT_RTADV,AUTO_LINKLOCAL,STABLEADDR>
+lo0: flags=1008049<UP,LOOPBACK,RUNNING,MULTICAST,LOWER_UP> metric 0 mtu 16384
+        options=680003<RXCSUM,TXCSUM,LINKSTATE,RXCSUM_IPV6,TXCSUM_IPV6>
+        inet 127.0.0.1 netmask 0xff000000
+        inet6 ::1 prefixlen 128
+        inet6 fe80::1%lo0 prefixlen 64 scopeid 0x2
+        groups: lo
+        nd6 options=21<PERFORMNUD,AUTO_LINKLOCAL>
+```
 
 ## 配置 IPv4
 
