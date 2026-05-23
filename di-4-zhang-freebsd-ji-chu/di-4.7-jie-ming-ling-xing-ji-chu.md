@@ -525,7 +525,7 @@ $ rm -rf /home/ykla/test/
 
 > **警告**
 >
-> 使用 `rm -rf` 是相当危险的操作，是不可撤销的。若命令中误输入空格，如将 **/home/ykla/test/** 打错成 **/home/ykla /test/**，会导致删除路径错误：
+> 使用 `rm -rf` 是相当危险的操作，是不可撤销的。若命令中误输入空格，如将 **/home/ykla/test/** 误输为 **/home/ykla /test/**，会导致删除路径错误：
 >
 > ```sh
 > # rm -rf /home/ykla /test
