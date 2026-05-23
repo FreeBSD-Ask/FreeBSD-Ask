@@ -35,7 +35,7 @@
 
 **第 7 章 X Window 系统**：介绍显卡驱动概述，Intel、AMD 和 NVIDIA 显卡驱动的安装与配置，系统字体的替换方法，以及远程桌面访问。
 
-**第 8 章 桌面环境**：介绍在 FreeBSD 上运行的各类桌面环境与窗口管理器，包括 KDE 6（X11 与 Wayland 会话）、MATE、Xfce、Cinnamon、LXQt、GNOME、LXDE、bspwm、IceWM、Hyprland 及 CDE。
+**第 8 章 桌面环境**：介绍在 FreeBSD 上运行的各类桌面环境与窗口管理器，包括 KDE 6（X11 与 Wayland 会话）、MATE、Xfce、Cinnamon、LXQt、GNOME、LXDE、bspwm、IceWM 及 CDE（拟删除）。
 
 **第 9 章 多媒体和外部设备**：介绍 Web 浏览器、声卡配置、音频与视频播放器、打印机、人机输入设备及多媒体处理工具的使用方法。
 
@@ -73,7 +73,7 @@
 
 **第 26 章 嵌入式平台**：介绍树莓派上 FreeBSD 的安装与使用、Linux 兼容层配置，以及 Radxa X4 x86 开发板、Linux 系统上交叉构建 FreeBSD、QEMU 模拟 RISC-V 架构及通用嵌入式开发环境的方法。
 
-**第 27 章 开发环境**：介绍 C/C++、Java、Qt、Python、Rust/Go、Node.js 等语言开发环境的搭建，以及 IDA Pro 调试、code-server 与 clangd 配置、Vim 开发环境和 DTrace 动态追踪工具的使用。
+**第 27 章 开发环境**：介绍 C/C++、Java、Qt、Python、Rust、Go、Node.js 等语言开发环境的搭建，以及 IDA Pro 调试、code-server 与 clangd 配置、Vim 开发环境和 DTrace 动态追踪工具的使用。
 
 **第 28 章 FreeBSD 内核架构**：介绍 FreeBSD 源代码目录结构、内核文件结构、机器相关与无关的内核选项注解、GENERIC 内核选项及定制内核的构建方法。
 
