@@ -4,7 +4,7 @@
 
 > **警告**
 >
-> 目前因 FreeBSD Bugzilla Bug 287955 - x11/gdm: The user cannot log in; the system hangs at the login screen in gdm 47[EB/OL]. [2026-04-04]. <https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=287955>. GDM 无法正常使用，会卡在登录界面，`startx` 正常。
+> 目前因 FreeBSD Bugzilla Bug 287955 - x11/gdm: The user cannot log in; the system hangs at the login screen in gdm 47[EB/OL]. [2026-04-04]. <https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=287955>. GDM 无法正常使用，会停留在登录界面，`startx` 正常。
 >
 > 在虚拟机中可正常使用。
 
