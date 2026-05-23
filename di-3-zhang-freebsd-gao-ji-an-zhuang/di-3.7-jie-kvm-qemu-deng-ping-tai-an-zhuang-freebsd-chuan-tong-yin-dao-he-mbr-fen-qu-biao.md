@@ -197,9 +197,9 @@ VirtualBox 用户可尝试将虚拟化引擎选择为“KVM”后再次引导，
 
 以下方案尚未经过验证，供读者参考尝试。
 
-- `dd` 写入 [VM-IMAGES 列表下的镜像](https://download.freebsd.org/releases/VM-IMAGES/14.3-RELEASE/amd64/Latest/)
-- `dd` 写入 [FreeBSD-14.3-RELEASE-amd64-memstick](https://download.freebsd.org/releases/ISO-IMAGES/14.3/FreeBSD-14.3-RELEASE-amd64-memstick.img)
-- 在 QEMU 平台上，尝试直接使用 `dd`
+- dd 写入 [VM-IMAGES 列表下的镜像](https://download.freebsd.org/releases/VM-IMAGES/14.3-RELEASE/amd64/Latest/)
+- dd 写入 [FreeBSD-14.3-RELEASE-amd64-memstick](https://download.freebsd.org/releases/ISO-IMAGES/14.3/FreeBSD-14.3-RELEASE-amd64-memstick.img)
+- 在 QEMU 平台上，尝试直接使用 dd
 
 ![能进入 BootLoader，但启动失败](../.gitbook/assets/qemu-dd-mfsbsd-result.png)
 
