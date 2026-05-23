@@ -35,18 +35,18 @@ POSIX shell 规范的核心要求包括：
 
 FreeBSD 系统默认采用的 shell 是 `sh`。FreeBSD 的 **/bin/sh** 并非 Stephen R. Bourne 在贝尔实验室为 UNIX V7 编写的原始 Bourne shell，而是基于 Kenneth Almquist 于 1989 年发布的 Almquist shell（`ash`），后者旨在作为 Bourne shell 更紧凑、更高效的替代品。NetBSD 最早将 `ash` 引入 BSD 世界作为 /bin/sh，FreeBSD 随后从 NetBSD 导入了 `ash` 实现，在功能上基本符合 POSIX.1-2024 标准中关于 shell 的规范要求。
 
-Linux 中常见的 shell 是 bash（Bourne Again shell，是对“Born Again”即“重生”的双关，意为“重生的 Bourne shell”）。而 macOS 中的默认 shell 通常是 zsh（Z shell）。
+Linux 中常见的 shell 是 `bash`（Bourne Again shell，是对“Born Again”即“重生”的双关，意为“重生的 Bourne shell”）。而 macOS 中的默认 shell 通常是 `zsh`（Z shell）。
 
-Linux 中同样提供 sh，但通常软链接到其他 shell（如 Debian/Ubuntu 中链接到 dash，部分发行版链接到 bash），它们并不是真正的 sh。
+Linux 中同样提供 `sh`，但通常软链接到其他 shell（如 Debian/Ubuntu 中链接到 `dash`，部分发行版链接到 `bash`），它们并不是真正的 sh。
 
-比如 Ubuntu 24.04 LTS 默认的 shell 是 dash：
+比如 Ubuntu 24.04 LTS 默认的 shell 是 `dash`：
 
 ```bash
 lrwxrwxrwx 1 root root 4  2 月 25 23:19 /bin/sh -> dash
 $ ls -l /bin/sh # 以长格式查看 /bin/sh 这个文件的详细信息
 ```
 
-dash 是 NetBSD 版本 ash（Almquist SHell）的直接后裔。
+`dash` 是 NetBSD 版本 `ash`（Almquist SHell）的直接后裔。
 
 ## 快捷键
 
@@ -124,7 +124,7 @@ round-trip min/avg/max/stddev = 27.580/27.626/27.672/0.046 ms
 
 FreeBSD 的 `ping` 自 13.0 起（提交于 2020-11-26）合并了原 `ping6` 的功能，通过 `-4`/`-6` 选项区分协议版本（Google Summer of Code 2019 项目）。Linux 支持 `-O` 报告未收到回复，FreeBSD 则不支持。FreeBSD 特有 `ping -y`（ICMPv6 Node Information DNS Name 查询）和 `ping -k`（Node Information Node Addresses 查询）。
 
-ping 使用 ICMP 协议的 ECHO_REQUEST 数据报来触发主机的 ECHO_RESPONSE。IPv4 目标使用 ICMP，IPv6 目标使用 ICMPv6（RFC 2463）。默认数据大小为 56 字节，加上 8 字节 ICMP 头共 64 字节。若数据空间不小于 8 字节，前 8 字节用于时间戳以计算往返时间。
+`ping` 使用 ICMP 协议的 ECHO_REQUEST 数据报来触发主机的 ECHO_RESPONSE。IPv4 目标使用 ICMP，IPv6 目标使用 ICMPv6（RFC 2463）。默认数据大小为 56 字节，加上 8 字节 ICMP 头共 64 字节。若数据空间不小于 8 字节，前 8 字节用于时间戳以计算往返时间。
 
 ### 其他
 
@@ -136,7 +136,7 @@ ping 使用 ICMP 协议的 ECHO_REQUEST 数据报来触发主机的 ECHO_RESPONS
 
 对于 C shell（csh/tcsh），登录 shell 读取 **/etc/csh.cshrc**、**/etc/csh.login**、**~/.cshrc**、**~/.login**。
 
-- 在 **~/.cshrc** 文件中加入下行，为 ls 命令设置彩色输出。
+- 在 **~/.cshrc** 文件中加入下行，为 `ls` 命令设置彩色输出。
 
 ```sh
 alias ls ls -G
@@ -144,7 +144,7 @@ alias ls ls -G
 
 并重新登录。
 
-- 如何使 FreeBSD 的 csh 像 Bash 那样按 Tab 列出无法补全的候选文件？在 **~/.cshrc** 文件中加入：
+- 如何使 FreeBSD 的 `csh` 像 `Bash` 那样按 Tab 列出无法补全的候选文件？在 **~/.cshrc** 文件中加入：
 
 ```sh
 set filec              # 启用命令行文件名补全
@@ -157,7 +157,7 @@ set autolist           # 自动显示补全列表
 # source ~/.cshrc
 ```
 
-- 如何使 csh 具备类似 zsh 的命令错误修正功能？
+- 如何使 `csh` 具备类似 `zsh` 的命令错误修正功能？
 
 例如，使用 emacs 编写 C 语言程序时，输入 `emacs ma` 并按 `Tab` 键再按回车键，会匹配所有以 `ma` 开头的文件。此配置可以忽略部分匹配的文件，即按 `Tab` 时不会列出被忽略的文件，便于编程，不会匹配二进制 `.o` 文件等。
 

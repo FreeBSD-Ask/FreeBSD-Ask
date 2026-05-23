@@ -206,12 +206,25 @@ vboxservice_flags="--disable-timesync"
 
 在宿主机和虚拟机之间传输文件的共享文件夹，可通过 `mount_vboxvfs` 挂载访问。可以使用 VirtualBox 图形界面创建共享文件夹。例如，要为虚拟机 *FreeBSD* 创建共享文件夹 **C:\Users\ykla\**，并将其挂载到 **/mnt/bsdboxshare**，请执行：
 
-
+![编辑共享文件夹](../.gitbook/assets/virtualbox-file.png)
 
 注意，共享文件夹名称不得包含空格。在虚拟机系统中挂载共享文件夹的命令如下：
 
 ```sh
-# mount_vboxvfs -w C:\Users\ykla\ /mnt
+# mkdir -p /mnt/bsdboxshare # 创建挂载点
+# mount_vboxvfs -w ykla /mnt/bsdboxshare # 挂载 ykla 文件夹
+```
+
+列出共享文件夹内容：
+
+```
+# ls /mnt/bsdboxshare/
+
+……省略其他输出……
+
+/mnt/bsdboxshare/SendTo/
+/mnt/bsdboxshare/SiYuan/
+/mnt/bsdboxshare/Templates/
 ```
 
 ## 故障排除与未竟事宜
