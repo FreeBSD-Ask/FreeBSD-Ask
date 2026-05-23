@@ -162,7 +162,7 @@ FreeBSD 不仅在生命周期内不变，大版本更新也具有连贯性和稳
 
 ### 选择 FreeBSD 的技术原因
 
-- FreeBSD 基本系统的配置文件与第三方软件配置文件相分离，系统级配置文件与用户配置文件相分离。FreeBSD 的文件系统层次结构遵循明确的组织原则，参见 [hier(7)](https://man.freebsd.org/cgi/man.cgi?query=hier&sektion=7)。~~再也不用到处用 find 命令查找某个 `.conf` 文件到底安装在哪了。~~
+- FreeBSD 基本系统的配置文件与第三方软件配置文件相分离，系统级配置文件与用户配置文件相分离。FreeBSD 的文件系统层次结构遵循明确的组织原则，参见 [hier(7)](https://man.freebsd.org/cgi/man.cgi?query=hier&sektion=7)。~~再也不用到处用 `find` 命令查找某个 `.conf` 文件到底安装在哪了。~~
 - 由于基本系统的存在，第三方的软件几乎不影响系统的稳定性。FreeBSD 在软件更新和系统稳定之间保持了平衡。
 - 通过 BSD 的 Ports 可以编译安装软件，自由配置。
 - 不会锁定软件版本。例如 Python、GCC 等常见的系统依赖软件。但所有的 FreeBSD 都共用相同的 Ports，无论新旧系统，其第三方软件的版本都是相同的；仅极个别软件和系统版本硬捆绑，其余所有软件都可滚动更新。
