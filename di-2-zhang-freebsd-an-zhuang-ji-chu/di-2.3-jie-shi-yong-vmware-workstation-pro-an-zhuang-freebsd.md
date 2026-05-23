@@ -92,7 +92,7 @@ FreeBSD 中文社区. 001-Windows 11 安装 VMware 17[EB/OL]. [2026-04-04]. <htt
 
 > **警告**
 >
-> NAT 模式的“名称”与宿主机的 `控制面板\网络和 Internet\网络连接` 中的 `VMware Network Adapter VMnet8` 绑定，默认绑定的是 `8`。换言之，NAT 模式的“名称”默认必须指定为下图所示的 `VMnet8`，否则虚拟机将无法联网。
+> NAT 模式的"名称"与宿主机的 **控制面板\网络和 Internet\网络连接** 中的 `VMware Network Adapter VMnet8` 绑定，默认绑定的是 `8`。换言之，NAT 模式的"名称"默认必须指定为下图所示的 `VMnet8`，否则虚拟机将无法联网。
 >
 > ![VMware network on FreeBSD](../.gitbook/assets/vmware-nat-vmnet8.png)
 
