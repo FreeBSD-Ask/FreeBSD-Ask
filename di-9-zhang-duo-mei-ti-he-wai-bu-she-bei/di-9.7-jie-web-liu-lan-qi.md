@@ -82,7 +82,7 @@ Chromium 不同于 Chrome，在 FreeBSD 中的启动命令为 `chrome`。
 
 在 [Chromium 89](https://archlinux.org/news/chromium-losing-sync-support-in-early-march/) 版本发布后，Chromium 删除了之前自带的与 Chrome 相同的登录 Google 账号的默认 API。该公告说明了 Chromium 移除同步 API 的原因与影响。
 
-在开始获取 token 之前，需要先加入以下两个 Google 邮件列表论坛：
+在开始获取 token 之前，需要先加入以下两个 Google 邮件列表：
 
 - [Google browser sign-in test account](https://groups.google.com/u/0/a/chromium.org/g/google-browser-signin-testaccounts)
 - [Chromium-dev](https://groups.google.com/a/chromium.org/g/chromium-dev)
@@ -99,7 +99,7 @@ Chromium 不同于 Chrome，在 FreeBSD 中的启动命令为 `chrome`。
 
 ![join-mail-list-for-google-api-error2](../.gitbook/assets/join-chromium-mail-list-2error.png)
 
-用浏览器打开 [谷歌云控制台网站](https://console.cloud.google.com/)。
+在浏览器中打开 [谷歌云控制台网站](https://console.cloud.google.com/)。
 
 > **注意**
 >
@@ -115,7 +115,7 @@ Chromium 不同于 Chrome，在 FreeBSD 中的启动命令为 `chrome`。
 
 ![填写项目信息](../.gitbook/assets/chromium-use-google-api-guide-03.png)
 
-点击左上角的“My First Project”，然后在弹出窗口中选择刚才创建的项目（此处的是 google-sync）。
+点击左上角的“My First Project”，然后在弹出窗口中选择刚才创建的项目（此处为 google-sync）。
 
 ![选择项目](../.gitbook/assets/chromium-use-google-api-guide-04.png)
 
@@ -170,7 +170,7 @@ Chromium 不同于 Chrome，在 FreeBSD 中的启动命令为 `chrome`。
 - 客户端 ID `502882456359-okloi0a7k6vjodss69so97tmqmv0jjj5.apps.googleusercontent.com`
 - 客户端密钥 `GoCSPX-iKHEKZmP4w_zdq0Z8nwOqz6SF2_M`
 
-退回“API 和服务”，点击“+ 创建凭据”，再点击“API 密钥”。
+返回“API 和服务”，点击“+ 创建凭据”，再点击“API 密钥”。
 
 ![创建 API 密钥](../.gitbook/assets/chromium-use-google-api-guide-17.png)
 
