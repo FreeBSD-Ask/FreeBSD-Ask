@@ -57,7 +57,7 @@ Chromium 不同于 Chrome，在 FreeBSD 中的启动命令为 `chrome`。
 
 > **警告**
 >
-> 要编译 Chromium，需要至少 12 GB 内存，或等量的交换分区与内存之和。
+> 要编译 Chromium，需要至少 8 GB 内存（Release 构建），或等量的交换分区与内存之和。若启用 LTO 优化则需 16 GB，若启用 Debug 构建则需 32 GB。Chromium 仅支持 amd64 和 aarch64 架构。
 
 ## Chrome（Linux 兼容层）
 
