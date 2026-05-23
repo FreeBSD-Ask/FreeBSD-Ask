@@ -196,7 +196,7 @@ OpenBSD 的安全策略基于以下判断：超线程机制可能带来潜在的
 
 ### OpenBSD 服务器与 OpenBSD VPS
 
-推荐来自荷兰的 OpenBSD VPS 供应商 OpenBSD Amsterdam（<https://openbsd.amsterdam>）。VPS 的主机操作系统为 OpenBSD，客户端系统同样为 OpenBSD。配置为 1 GB RAM、50 GB HDD，每年 64 欧元（约合人民币 525 元）。每个 VPS 的费用中，供应商均会向 OpenBSD 基金会捐款。主机地址和配置可在此查看（<https://openbsd.amsterdam/servers.html>），用户可访问并测试 `ping` 延迟。VPS 位于荷兰阿姆斯特丹，路由经美国。以上内容与作者无利益关联。
+推荐来自荷兰的 OpenBSD VPS 供应商 OpenBSD Amsterdam（<https://openbsd.amsterdam>）。VPS 的主机操作系统为 OpenBSD，客户端系统同样为 OpenBSD。配置为 1 GB RAM、50 GB HDD，每年 64 欧元（约合人民币 525 元）。每个 VPS 的费用中，供应商均会向 OpenBSD 基金会捐款。主机地址和配置可在此查看（<https://openbsd.amsterdam/servers.html>），用户可访问并测试 ping 延迟。VPS 位于荷兰阿姆斯特丹，路由经美国。以上内容与作者无利益关联。
 
 ### 附录：OpenBSD IPsec 协议栈 FBI 后门事件
 
