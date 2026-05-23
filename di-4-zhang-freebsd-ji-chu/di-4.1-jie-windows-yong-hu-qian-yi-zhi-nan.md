@@ -191,7 +191,7 @@ Windows 操作系统默认的文本换行符为 CRLF（即 `\r\n`，0x0D 0x0A，
 
 二者互不兼容。将使用 Windows 换行符的文件置于 UNIX 系统，可能导致每行末尾多出 `^M` 字符；某些工具会因此产生识别错误，而对 FreeBSD Port 相关文件而言，则可能将多行识别为单行。
 
-然而两种换行符可以互相转换。在 FreeBSD 中可使用 Port **converters/dos2unix** 实现，该软件包含两个命令：`dos2unix`（Windows 换行符到 UNIX）、`unix2dos`（UNIX 换行符到 Windows）。基本用法是 `dos2unix -n a.txt b.txt`，如果不需要保留源文件，可直接 `dos2unix a.txt b.txt c.txt`（一次转换多个文件）。可使用命令 `file a.txt` 来判断文件的换行符类型：
+然而两种换行符可以互相转换。在 FreeBSD 中可使用 Port **converters/dos2unix** 实现，该软件包含两个命令：dos2unix（Windows 换行符到 UNIX）、unix2dos（UNIX 换行符到 Windows）。基本用法是 `dos2unix -n a.txt b.txt`，如果不需要保留源文件，可直接 `dos2unix a.txt b.txt c.txt`（一次转换多个文件）。可使用命令 `file a.txt` 来判断文件的换行符类型：
 
 - 使用普通的 UNIX 换行符文本文件
 
@@ -336,6 +336,6 @@ Windows 直接读取 RTC 的值，并视为本地时间（Local Time，地方时
 
 ## 课后习题
 
-1. 在 FreeBSD 中挂载一个 Windows NTFS 分区，使用 `converters/dos2unix` 批量转换包含 Windows 换行符的文本文件，编写 shell 脚本实现自动化处理。
+1. 在 FreeBSD 中挂载一个 Windows NTFS 分区，使用 **converters/dos2unix** 批量转换包含 Windows 换行符的文本文件，编写 shell 脚本实现自动化处理。
 2. 查阅 FreeBSD 内核源代码中 UFS/ZFS 文件系统处理大小写敏感的逻辑，分析其实现机制与 Windows NTFS 大小写不敏感设计的差异。
 3. 修改 Windows 注册表使其将硬件时钟视为 UTC，记录修改前后 FreeBSD 与 Windows 双系统时间显示的差异。
