@@ -38,7 +38,7 @@ FreeBSD 中文社区. 08-腾讯云轻量云及其他服务器安装 FreeBSD[EB/O
 
 ## 使用 mfsLinux 写入 mfsBSD
 
-由于 FreeBSD 与 Linux 生态不同，需要先引导至一个运行在内存中的 Linux 环境，在该环境中将 mfsBSD 写入硬盘，最后通过 bsdinstall 工具完成系统安装。
+由于 FreeBSD 与 Linux 生态不同，需要先引导至一个运行在内存中的 Linux 环境，在该环境中将 mfsBSD 写入硬盘，最后通过 `bsdinstall` 工具完成系统安装。
 
 在 mfsBSD 下载页面的下方，可找到 [mfsLinux](https://mfsbsd.vx.sk/files/iso/mfslinux/mfslinux-0.1.11-94b1466.iso)，即所需的 Linux 环境。由于该文件仅提供 ISO 格式，无法在当前环境下直接启动。由于该环境基于纯 initrd 架构，需要从中提取内核和 initrd 文件，存放于硬盘并进行手动引导。
 
@@ -81,7 +81,7 @@ mfsBSD 和 mfsLinux 镜像的默认 `root` 密码均为 `mfsroot`。
 
 ## 安装 FreeBSD
 
-通过 SSH 连接服务器后，执行 `kldload zfs` 加载 ZFS 模块，然后运行 bsdinstall。出现图示界面时，选择 `Other` 并输入指定的镜像地址（地址中包含相应版本号即可，可自行更改）：
+通过 SSH 连接服务器后，执行 `kldload zfs` 加载 ZFS 模块，然后运行 `bsdinstall`。出现图示界面时，选择 `Other` 并输入指定的镜像地址（地址中包含相应版本号即可，可自行更改）：
 
 示例：例如 <https://mirrors.ustc.edu.cn/freebsd/releases/amd64/15.0-RELEASE/> 或 <https://mirrors.nju.edu.cn/freebsd/snapshots/amd64/16.0-CURRENT/>
 
@@ -107,7 +107,7 @@ mfsBSD 和 mfsLinux 镜像的默认 `root` 密码均为 `mfsroot`。
 >
 > 以下命令仅为错误示范，切勿执行。`dd` 写入块设备将覆盖磁盘上所有现有数据，操作不可逆。
 
-在正常的 Linux 系统中，若直接将 mfsBSD 的 img 镜像通过 dd 写入硬盘，重启后虽能正常加载引导程序，但可能因系统对硬盘的后续写入操作导致无法正常挂载内存盘。
+在正常的 Linux 系统中，若直接将 mfsBSD 的 img 镜像通过 `dd` 写入硬盘，重启后虽能正常加载引导程序，但可能因系统对硬盘的后续写入操作导致无法正常挂载内存盘。
 
 下载 mfsBSD 镜像并写入 **/dev/vda**：
 
@@ -118,7 +118,7 @@ mfsBSD 和 mfsLinux 镜像的默认 `root` 密码均为 `mfsroot`。
 解释：
 
 - `|` 是管道符号，将上一条命令的标准输出作为下一条命令的标准输入。
-- `-O-` 选项指示 wget 将文件下载并输出到标准输出；dd 在未指定 `if` 参数时会自动从标准输入读取数据。
+- `-O-` 选项指示 `wget` 将文件下载并输出到标准输出；`dd` 在未指定 `if` 参数时会自动从标准输入读取数据。
 
 直接执行此 dd 命令将提示错误，如图所示：
 

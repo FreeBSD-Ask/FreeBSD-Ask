@@ -145,10 +145,10 @@ Conflicts remain from previous update, aborting.
 
 `etcupdate` 在合并后会自动触发若干系统文件的后续处理：
 
-- 若 `/etc/master.passwd` 变更则自动调用 `pwd_mkdb`；
-- 若 `/etc/login.conf` 变更则自动调用 `cap_mkdb`；
-- 若 `/etc/mail/aliases` 变更则自动调用 `newaliases`；
-- 若 `/etc/services` 变更则自动调用 `services_mkdb`；
+- 若 **/etc/master.passwd** 变更则自动调用 `pwd_mkdb`；
+- 若 **/etc/login.conf** 变更则自动调用 `cap_mkdb`；
+- 若 **/etc/mail/aliases** 变更则自动调用 `newaliases`；
+- 若 **/etc/services** 变更则自动调用 `services_mkdb`；
 - 若 `/etc/localtime` 变更且 `/var/db/zoneinfo` 存在则自动调用 `tzsetup`。
 
 解决冲突：
