@@ -114,7 +114,7 @@ $ git clone --branch releng/15.0 --single-branch --depth 1 https://github.com/fr
 # make -j4 buildworld  # 编译世界
 # make -j4 kernel      # 编译并安装内核
 # reboot               # 重启以使用新内核
-# cd /usr/src          # 切回工作目录
+# cd /usr/src          # 切换回工作目录
 # etcupdate -p         # 进行必要的配置文件合并
 # make installworld    # 安装世界
 # etcupdate -B         # 合并更新
