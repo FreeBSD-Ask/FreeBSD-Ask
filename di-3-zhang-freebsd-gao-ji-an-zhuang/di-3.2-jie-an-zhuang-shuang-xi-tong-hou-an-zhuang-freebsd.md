@@ -12,7 +12,7 @@
 
 > **注意**
 >
-> 按照本部分所述方法，使用 ZFS 时，只会创建一个存储池 `zroot`（`zpool`），并在其中创建一个直接挂载到 **/** 的数据集 `root`。与自动安装不同，系统不会创建 `zroot/ROOT/default` 及众多数据集。可以在安装后创建数据集并替换，但若希望初始布局就与自动安装相同，请跳转至本节“Shell 分区”部分。
+> 按照本部分所述方法，使用 ZFS 时，只会创建一个存储池 `zroot`（zpool），并在其中创建一个直接挂载到 **/** 的数据集 `root`。与自动安装不同，系统不会创建 `zroot/ROOT/default` 及众多数据集。可以在安装后创建数据集并替换，但若希望初始布局就与自动安装相同，请跳转至本节“Shell 分区”部分。
 
 使用简单方法安装 FreeBSD，按照以下步骤操作。
 
@@ -304,7 +304,7 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 
 > **技巧**
 >
-> 上述参数参考自 `bsdinstall`(8) 的默认配置。安装后，也可通过命令 `zfs get exec,setuid,mountpoint` 查看相关属性。具体代码位于 [**usr.sbin/bsdinstall/scripts/zfsboot**](https://github.com/freebsd/freebsd-src/blob/main/usr.sbin/bsdinstall/scripts/zfsboot)。
+> 上述参数参考自 bsdinstall(8) 的默认配置。安装后，也可通过命令 `zfs get exec,setuid,mountpoint` 查看相关属性。具体代码位于 [usr.sbin/bsdinstall/scripts/zfsboot](https://github.com/freebsd/freebsd-src/blob/main/usr.sbin/bsdinstall/scripts/zfsboot)。
 
 相关文件结构：
 
