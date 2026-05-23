@@ -20,7 +20,7 @@ KDE 是一套现代化的桌面环境。KDE 桌面环境借鉴了 Windows 等多
 
 > **技巧**
 >
-> 如果提示 `pkg` 找不到或未提供 kde，请访问 [x11/kde](https://www.freshports.org/x11/kde) 查看二进制包是否尚未构建。有时需切换到 quarterly 或 latest 软件源，待上游构建完成后再运行 `pkg upgrade` 更新。类似方法适用于所有软件，后文不再赘述。如无二进制包，则需使用上述 Ports 编译。
+> 如果提示 pkg 找不到或未提供 kde，请访问 [x11/kde](https://www.freshports.org/x11/kde) 查看二进制包是否尚未构建。有时需切换到 quarterly 或 latest 软件源，待上游构建完成后再运行 `pkg upgrade` 更新。类似方法适用于所有软件，后文不再赘述。如无二进制包，则需使用上述 Ports 编译。
 
 - 或者使用 Ports 安装：
 
