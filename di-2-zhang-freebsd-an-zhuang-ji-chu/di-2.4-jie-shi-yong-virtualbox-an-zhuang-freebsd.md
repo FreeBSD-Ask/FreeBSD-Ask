@@ -221,7 +221,7 @@ VBOXVFS[1]: sfprov_mount: path: [ykla]
 
 ```sh
 # mkdir -p /mnt/bsdboxshare # 创建上面指定的挂载点
-# mount_vboxvfs -w ykla /mnt/bsdboxshare # 挂载 ykla 文件夹，默认只读挂载
+# mount_vboxvfs -w ykla /mnt/bsdboxshare # 挂载共享文件夹 ykla，-w 为可写挂载
 ```
 
 列出共享文件夹内容：
