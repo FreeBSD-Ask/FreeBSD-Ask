@@ -351,7 +351,7 @@ root     syslogd     1021 7   udp4   *:514                 *:*
 
 该软件支持 Android 平台 RDP 连接。
 
-将左上鼠标操作改为触摸操作。默认的鼠标操作不够便捷，也可以选择通过 OTG 连接鼠标和键盘操控。
+将左上鼠标操作改为触摸操作。默认的鼠标操作不够便捷，也可选择通过 OTG 连接鼠标和键盘操控。
 
 ![Remote Desktop FreeBSD](../.gitbook/assets/windows-rdp-1.png)
 
