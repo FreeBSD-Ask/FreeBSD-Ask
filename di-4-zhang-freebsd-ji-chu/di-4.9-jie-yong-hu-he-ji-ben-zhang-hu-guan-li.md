@@ -149,7 +149,7 @@ Goodbye!
 
 - ① 登录名命名有一些限制，参见 passwd(5)[EB/OL]. [2026-03-26]. <https://man.freebsd.org/cgi/man.cgi?query=passwd&sektion=5>。但请注意，登录名不支持八位编码字符集，例如不支持中文（即仅支持特定 ASCII 字符）。
 
-只有 root 才能使用此命令，否则将报错如下：
+只有 root 才能使用此命令，否则将提示错误如下：
 
 ```sh
 $ adduser test
@@ -253,7 +253,7 @@ chpass: user information updated
 
 ### passwd 更改用户密码
 
-修改用户密码，如不指定用户则默认为当前用户。普通用户只能修改自己的密码，否则将报错如下：
+修改用户密码，如不指定用户则默认为当前用户。普通用户只能修改自己的密码，否则将提示错误如下：
 
 ```sh
 $ passwd test
