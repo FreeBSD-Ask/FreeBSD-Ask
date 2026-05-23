@@ -50,7 +50,11 @@ VirtualBox 安装完成后，创建并配置虚拟机。
 
 ![显示设置](../.gitbook/assets/virtualbox-5-5.png)
 
-开始安装。
+也可以切换到 NVme 硬盘（非必须）：
+
+![NVme 硬盘](../.gitbook/assets/virtualbox-5-6.png)
+
+点击“启动”开始安装 FreeBSD 虚拟机。
 
 ![FreeBSD 安装界面](../.gitbook/assets/virtualbox-6.png)
 
