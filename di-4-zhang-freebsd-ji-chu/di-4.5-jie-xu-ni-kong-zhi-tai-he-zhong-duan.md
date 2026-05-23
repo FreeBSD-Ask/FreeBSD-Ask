@@ -151,7 +151,7 @@ ttyv8	"/usr/local/bin/xdm -nodaemon"	xterm	off secure
 
 注意，最后一个虚拟控制台（ttyv8）用于访问图形环境（如果已安装并配置了 Xorg）。
 
-有关此文件中每列的详细描述和虚拟控制台的可用选项，请参阅 ttys(5)。
+有关此文件中每列的详细描述和虚拟控制台的可用选项，请参阅 `ttys(5)`。
 
 ## 单用户模式
 
@@ -231,7 +231,7 @@ exec="gop set 0"
 
 ### `efi_max_resolution`（UEFI）或 `vbe_max_resolution`（BIOS）
 
-也可以通过配置文件设置 UEFI 或 BIOS 下的分辨率。根据文档 LOADER.CONF(5)，这两个变量可接受以下值：
+也可以通过配置文件设置 UEFI 或 BIOS 下的分辨率。根据文档 `loader.conf(5)`，这两个变量可接受以下值：
 
 ```sh
 值	           分辨率

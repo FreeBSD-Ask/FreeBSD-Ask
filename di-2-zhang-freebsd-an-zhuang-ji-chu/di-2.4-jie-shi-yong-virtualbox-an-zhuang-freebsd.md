@@ -178,22 +178,25 @@ VirtualBox 的虚拟机增强工具（Guest Additions）是一组运行在虚拟
 
 安装增强工具后，需启用相关服务并设置开机自启。
 
-- 启用服务并开机自启：
+启用 VirtualBox 虚拟机增强驱动：
 
 ```sh
-# service vboxguest enable   # 启用 VirtualBox Guest Additions 驱动
-# service vboxservice enable # 启用 VirtualBox 服务
+# service vboxguest enable
 ```
 
-- 启动服务，调整权限（以普通用户 ykla 为例）：
+启用 VirtualBox 服务：
 
 ```sh
-# service vboxguest restart  # 重启 vboxguest 服务，可能提示找不到模块，但不影响使用
-# service vboxservice restart # 重启 vboxservice 服务
-# pw groupmod wheel -m ykla  # 将普通用户 ykla 添加到 wheel 组以获得管理权限，请替换为实际用户
+# service vboxservice enable
 ```
 
-- 如果使用了 ntpd(8) 时间服务，应禁用宿主时间同步，在 **/etc/rc.conf** 中添加以下内容：：
+将普通用户 ykla 添加到 wheel 组以获得管理权限：
+
+```sh
+# pw groupmod wheel -m ykla
+```
+
+如果使用了 ntpd(8) 时间服务，应禁用宿主时间同步，在 **/etc/rc.conf** 中添加以下内容：：
 
 ```ini
 vboxservice_flags="--disable-timesync"
@@ -201,16 +204,14 @@ vboxservice_flags="--disable-timesync"
 
 ### 文件夹共享
 
-在宿主机和虚拟机之间传输文件的共享文件夹，可通过 `mount_vboxvfs` 挂载访问。可以使用 VirtualBox 图形界面或 `vboxmanage` 创建共享文件夹。例如，要为名为 *BSDBox* 的虚拟机创建一个名为 *myshare* 的共享文件夹，并将其挂载到 **/mnt/bsdboxshare**，请执行：
+在宿主机和虚拟机之间传输文件的共享文件夹，可通过 `mount_vboxvfs` 挂载访问。可以使用 VirtualBox 图形界面创建共享文件夹。例如，要为虚拟机 *FreeBSD* 创建共享文件夹 **C:\Users\ykla\**，并将其挂载到 **/mnt/bsdboxshare**，请执行：
 
-```sh
-# vboxmanage sharedfolder add 'BSDBox' --name myshare --hostpath /mnt/bsdboxshare
-```
+
 
 注意，共享文件夹名称不得包含空格。在虚拟机系统中挂载共享文件夹的命令如下：
 
 ```sh
-# mount_vboxvfs -w myshare /mnt
+# mount_vboxvfs -w C:\Users\ykla\ /mnt
 ```
 
 ## 故障排除与未竟事宜
