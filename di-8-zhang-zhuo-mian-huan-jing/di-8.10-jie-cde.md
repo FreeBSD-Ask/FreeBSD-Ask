@@ -75,7 +75,7 @@ dtspc		6112/tcp
 
 编辑 **/etc/login.conf** 文件：找到 `default:\` 部分，将 `:lang=C.UTF-8` 修改为 `:lang=zh_CN.UTF-8`。
 
-根据 **/etc/login.conf** 文件生成能力数据库，使配置生效：
+根据 **/etc/login.conf** 文件重建能力数据库，使配置生效：
 
 ```sh
 # cap_mkdb /etc/login.conf
@@ -99,7 +99,7 @@ dtspc		6112/tcp
 
 CDE 整体界面无法切换为中文，仅日历组件可显示中文。
 
-根据源代码 <https://sourceforge.net/p/cdesktopenv/code/ci/master/tree/cde/imports/motif/localized/>，CDE 不存在简体中文支持。然而根据 [简体中文 Solaris 用户指南](https://docs.oracle.com/cd/E19683-01/816-0668/6m7500nqp/index.html)，Solaris 版本明显包含简体中文支持，该本地化支持可能在开源过程中丢失，或 Solaris 版本为未合并的分支。已反馈至 [Missing Simplified Chinese locale support under cde/imports/motif/localized](https://sourceforge.net/p/cdesktopenv/discussion/general/thread/c51abcd846/)。
+根据源代码 <https://sourceforge.net/p/cdesktopenv/code/ci/master/tree/cde/imports/motif/localized/>，CDE 不存在简体中文支持。然而根据 [简体中文 Solaris 用户指南](https://docs.oracle.com/cd/E19683-01/816-0668/6m7500nqp/index.html)，Solaris 版本确实包含简体中文支持，该本地化支持可能在开源过程中遗失，或 Solaris 版本为未合并的分支。已反馈至 [Missing Simplified Chinese locale support under cde/imports/motif/localized](https://sourceforge.net/p/cdesktopenv/discussion/general/thread/c51abcd846/)。
 
 ## 参考文献
 
