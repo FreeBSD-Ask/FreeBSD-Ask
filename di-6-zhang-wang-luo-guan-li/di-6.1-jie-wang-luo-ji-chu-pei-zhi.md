@@ -96,17 +96,17 @@ wlan0: flags=8843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST> metric 0 mtu 1500
 
 FreeBSD 使用驱动程序名称后跟一个单元号来命名网络接口适配器。单元号表示适配器在启动时被检测到的顺序，或者稍后发现的顺序。例如，`em0` 是系统中使用 em(4) 驱动程序的第一块网卡。而 `wlan0` 是使用 rtwn(4) 驱动程序的第一块无线网卡。
 
-在这个例子中，显示了以下设备：
+该示例显示以下设备：
 
 - `em0`：以太网接口。
-- `lo0`：本地回环接口，用于本机内部通信，不属于物理网卡。可以用于性能分析、软件测试/本地通信。
+- `lo0`：本地回环接口，用于本机内部通信，不属于物理网卡。可用于性能分析、软件测试与本地通信。
 - `wlan0`：通用 WiFi 802.11 链路层接口，用于连接无线网络。
 
   > **技巧**
   >
   > 若 `ifconfig` 输出中仅显示 `lo0` 接口，则表示系统未识别物理网卡，此时应检查网卡硬件连接和驱动加载状态。可通过 `dmesg | grep ether` 命令查看网卡驱动加载日志。
 
-该例子显示 `em0`、 `wlan0` 已经启动并在运行。
+该示例显示 `em0`、`wlan0` 已启动并正在运行。
 
 关键指示项：
 
@@ -119,7 +119,7 @@ FreeBSD 使用驱动程序名称后跟一个单元号来命名网络接口适配
 7. **media**（物理媒体）：`em0` 显示为以太网自动选择模式（`Ethernet autoselect (1000baseT <full-duplex>)`）；`wlan0` 显示为无线高速模式（`IEEE 802.11 Wireless Ethernet VHT mode 11ac`）。
 8. **status**（链接状态）：`em0` 的状态为 `active`，说明网线已插好且载波信号正常；`wlan0` 的状态为 `associated`，说明已成功关联到无线基站（SSID 外部显示为 `test_5G`）。
 
-特别的，`wlan0` 关键指示项：
+此外，`wlan0` 的关键指示项如下：
 
 1. **ssid**（无线网络名称）：当前连接的 Wi-Fi 名称为 `test_5G`。
 2. **channel**（工作信道与频率）：当前工作在 153 信道，频率为 5765 MHz（属于 5GHz 频段），且启用了 80MHz 的频宽（vht/80-）。
@@ -154,7 +154,7 @@ lo0: flags=1008049<UP,LOOPBACK,RUNNING,MULTICAST,LOWER_UP> metric 0 mtu 16384
 
 ### 配置动态 IPv4 地址
 
-如果网络中有 DHCP 服务器，可使用 DHCP 动态获取 IP 地址。具体来说，FreeBSD 使用 dhclient(8) 作为 DHCP 客户端，dhclient(8) 可自动获取 IP 地址、子网掩码和默认路由器。
+如果网络中有 DHCP 服务器，可使用 DHCP 动态获取 IP 地址。FreeBSD 使用 dhclient(8) 作为 DHCP 客户端，dhclient(8) 可自动获取 IP 地址、子网掩码和默认路由器。
 
 > **注意**
 >
