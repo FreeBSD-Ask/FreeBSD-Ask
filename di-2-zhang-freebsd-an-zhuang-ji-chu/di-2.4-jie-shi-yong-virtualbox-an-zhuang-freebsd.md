@@ -6,9 +6,7 @@ FreeBSD 在 VirtualBox 中作为虚拟机运行稳定。本节演示环境为 Vi
 
 ## 下载 VirtualBox
 
-下载并安装 VirtualBox 虚拟机软件。
-
-访问官方网站 [https://www.virtualbox.org](https://www.virtualbox.org)，点击页面右侧的 `Download` 按钮下载，选择对应平台的安装程序完成安装。
+访问官方网站 [https://www.virtualbox.org](https://www.virtualbox.org)，点击页面右侧的 `Download` 按钮，选择对应平台的安装程序完成安装。
 
 ## 安装设置
 
