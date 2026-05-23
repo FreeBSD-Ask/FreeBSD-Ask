@@ -208,7 +208,7 @@ $ echo "exec ck-launch-session startplasma-x11" > ~/.xinitrc
 
 > **技巧**
 >
-> 使用此方案安装的 KDE 桌面缺少较多功能，可以参照 [x11/plasma6-plasma](https://www.freshports.org/x11/plasma6-plasma/) 的“Runtime dependencies”（运行时依赖）和“Library dependencies”（库依赖）来补全功能。
+> 使用此方案安装的 KDE 桌面缺少较多功能，可参照 [x11/plasma6-plasma](https://www.freshports.org/x11/plasma6-plasma/) 的“Runtime dependencies”（运行时依赖）和“Library dependencies”（库依赖）来补全功能。
 
 未安装可选包：
 
