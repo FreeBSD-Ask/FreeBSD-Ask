@@ -58,11 +58,11 @@ PSPath
 
 在操作系统技术层面，挂载（mount）是指将文件系统附加到系统目录树已有目录（挂载点）上的操作。文件系统可视作以 **/** 为根的树形结构，一个文件系统必须挂载到另一文件系统中的某目录上。文件系统 B 挂载至目录 A 后，B 的根目录取代 A，B 所含目录随之显现；A 中原有文件则暂时隐藏，直至 B 从 A 卸载后方重新出现。
 
-工具 mount 调用 nmount(2) 系统调用，将一个特殊设备或远程节点（rhost:path）映射并嫁接到文件系统树中的节点（node）位置。系统维护当前已挂载文件系统的列表。如果不带任何参数调用 mount，将打印此列表。
+工具 `mount` 调用 `nmount`(2) 系统调用，将一个特殊设备或远程节点（rhost:path）映射并嫁接到文件系统树中的节点（node）位置。系统维护当前已挂载文件系统的列表。如果不带任何参数调用 `mount`，将打印此列表。
 
 > **注意**
 >
-> FreeBSD 的 mount 源于 4.4BSD，与 Linux 的 mount 在选项语法上基本兼容，但 FreeBSD 使用的是 nmount(2) 系统调用而非 Linux 的 mount(2)。FreeBSD 的 mount 会根据文件系统类型自动调用 **/sbin/mount_type** 程序（如 mount_nfs、mount_msdosfs）。
+> FreeBSD 的 `mount` 源于 4.4BSD，与 Linux 的 `mount` 在选项语法上基本兼容，但 FreeBSD 使用的是 `nmount`(2) 系统调用而非 Linux 的 `mount`(2)。FreeBSD 的 `mount` 会根据文件系统类型自动调用 **/sbin/mount_type** 程序（如 `mount_nfs`、`mount_msdosfs`）。
 
 ### 卸载的概念与机制
 
@@ -90,10 +90,10 @@ PSPath
 
 - `设备`：现有设备名。
 - `挂载点`：现有的目录，用于挂载文件系统。
-- `文件系统`：传递给 mount(8) 的文件系统类型。
+- `文件系统`：传递给 `mount`(8) 的文件系统类型。
 - `选项`：`rw` 表示读写文件系统，`ro` 表示只读文件系统，可跟其他选项。常用选项包括 `noauto`，表示启动时不挂载此文件系统。
-- `转储`：供 dump(8) 判断哪些文件系统需要备份。默认值为 `0`。
-- `fsck 检查顺序`：决定在重启后，哪些文件系统应由 fsck(8) 检查，以及检查顺序。应跳过的文件系统设置为 `0`。根文件系统应优先检查，设为 `1`，其他文件系统应设为大于 1 的值。若多个文件系统具有相同的 `passno`，fsck(8) 会尝试并行检查。
+- `转储`：供 `dump`(8) 判断哪些文件系统需要备份。默认值为 `0`。
+- `fsck 检查顺序`：决定在重启后，哪些文件系统应由 `fsck`(8) 检查，以及检查顺序。应跳过的文件系统设置为 `0`。根文件系统应优先检查，设为 `1`，其他文件系统应设为大于 1 的值。若多个文件系统具有相同的 `passno`，`fsck`(8) 会尝试并行检查。
 
 示例：标准 ZFS 安装下的 **/etc/fstab** 文件。
 
@@ -191,7 +191,7 @@ Windows 操作系统默认的文本换行符为 CRLF（即 `\r\n`，0x0D 0x0A，
 
 二者互不兼容。将使用 Windows 换行符的文件置于 UNIX 系统，可能导致每行末尾多出 `^M` 字符；某些工具会因此产生识别错误，而对 FreeBSD Port 相关文件而言，则可能将多行识别为单行。
 
-然而两种换行符可以互相转换。在 FreeBSD 中可使用 Port **converters/dos2unix** 实现，该软件包含两个命令：dos2unix（Windows 换行符到 UNIX）、unix2dos（UNIX 换行符到 Windows）。基本用法是 `dos2unix -n a.txt b.txt`，如果不需要保留源文件，可直接 `dos2unix a.txt b.txt c.txt`（一次转换多个文件）。可使用命令 `file a.txt` 来判断文件的换行符类型：
+然而两种换行符可以互相转换。在 FreeBSD 中可使用 Port **converters/dos2unix** 实现，该软件包含两个命令：`dos2unix`（Windows 换行符到 UNIX）、`unix2dos`（UNIX 换行符到 Windows）。基本用法是 `dos2unix -n a.txt b.txt`，如果不需要保留源文件，可直接 `dos2unix a.txt b.txt c.txt`（一次转换多个文件）。可使用命令 `file a.txt` 来判断文件的换行符类型：
 
 - 使用普通的 UNIX 换行符文本文件
 
@@ -211,7 +211,7 @@ b.txt: Unicode text, UTF-8 text, with very long lines (314), with CRLF line term
 
 - IETF. RFC 2046: Multipurpose Internet Mail Extensions (MIME) Part Two: Media Types[EB/OL]. [2026-04-18]. <https://datatracker.ietf.org/doc/html/rfc2046>. 规定文本类型的规范行结束符为 CRLF（0x0D 0x0A）。
 - IETF. RFC 20: ASCII format for network interchange[EB/OL]. [2026-04-18]. <https://www.rfc-editor.org/rfc/rfc20.html>. ASCII 字符编码标准，定义 7 位 128 个字符的编码，其中 0x41 为大写字母 A；标准定义 CR 为 0x0D（第 13 号控制字符），LF 为 0x0A（第 10 号控制字符），二者均源自电传打字机时代的物理操作。
-- Wasserburger E. dos2unix / unix2dos - Text file format converters[EB/OL]. [2026-04-18]. <https://dos2unix.sourceforge.io/>. dos2unix 与 unix2dos 命令行工具，用于在 CRLF（Windows）与 LF（UNIX）换行格式之间转换；FreeBSD Port 路径为 **converters/dos2unix**。基本系统版本与 Port 版本为不同程序。Port 为增强版本，支持更多选项。
+- Wasserburger E. dos2unix / unix2dos - Text file format converters[EB/OL]. [2026-04-18]. <https://dos2unix.sourceforge.io/>. `dos2unix` 与 `unix2dos` 命令行工具，用于在 CRLF（Windows）与 LF（UNIX）换行格式之间转换；FreeBSD Port 路径为 **converters/dos2unix**。基本系统版本与 Port 版本为不同程序。Port 为增强版本，支持更多选项。
 
 ## 字符编码差异
 

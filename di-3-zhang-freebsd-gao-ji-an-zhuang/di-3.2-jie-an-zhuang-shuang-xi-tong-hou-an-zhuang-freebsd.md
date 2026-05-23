@@ -12,7 +12,7 @@
 
 > **注意**
 >
-> 按照本部分所述方法，使用 ZFS 时，只会创建一个存储池 `zroot`（zpool），并在其中创建一个直接挂载到 **/** 的数据集 `root`。与自动安装不同，系统不会创建 `zroot/ROOT/default` 及众多数据集。可以在安装后创建数据集并替换，但若希望初始布局就与自动安装相同，请跳转至本节“Shell 分区”部分。
+> 按照本部分所述方法，使用 ZFS 时，只会创建一个存储池 `zroot`（`zpool`），并在其中创建一个直接挂载到 **/** 的数据集 `root`。与自动安装不同，系统不会创建 `zroot/ROOT/default` 及众多数据集。可以在安装后创建数据集并替换，但若希望初始布局就与自动安装相同，请跳转至本节“Shell 分区”部分。
 
 使用简单方法安装 FreeBSD，按照以下步骤操作。
 
@@ -101,7 +101,7 @@ ZFS 支持并不在内核中，而是作为可加载模块提供。
 # kldload zfs
 ```
 
-可通过 kldstat 验证模块是否已成功加载。
+可通过 `kldstat` 验证模块是否已成功加载。
 
 ### 配置 ZFS 对齐方式（仅影响新创建的硬盘分区）
 
@@ -122,7 +122,7 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 
 ### 创建交换分区
 
-在 nda0 磁盘上创建 4 GB、4K 对齐的 FreeBSD 交换分区，并标记为 swap：
+在 `nda0` 磁盘上创建 4 GB、4K 对齐的 FreeBSD 交换分区，并标记为 swap：
 
 ```sh
 # gpart add -a 4k -l swap -s 4G -t freebsd-swap nda0
@@ -139,7 +139,7 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 
 ### 创建 ZFS 分区
 
-在 nda0 磁盘上创建 4K 对齐的 FreeBSD ZFS 分区，并标记为 zroot：
+在 `nda0` 磁盘上创建 4K 对齐的 FreeBSD ZFS 分区，并标记为 zroot：
 
 ```sh
 # gpart add -a 4k -l zroot -t freebsd-zfs nda0
@@ -194,7 +194,7 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 
 ### 创建 ZFS 数据集
 
-以下数据集的设置参照 FreeBSD 源代码中的 [usr.sbin/bsdinstall/scripts/zfsboot](https://github.com/freebsd/freebsd-src/blob/main/usr.sbin/bsdinstall/scripts/zfsboot) 创建。FreeBSD 本身持续演进，不同版本间的 ZFS 数据集也有所差异。读者创建数据集时若希望创建与默认安装相同的数据集结构，应参照对应分支的 `usr.sbin/bsdinstall/scripts/zfsboot` 文件。
+以下数据集的设置参照 FreeBSD 源代码中的 [usr.sbin/bsdinstall/scripts/zfsboot](https://github.com/freebsd/freebsd-src/blob/main/usr.sbin/bsdinstall/scripts/zfsboot) 创建。FreeBSD 本身持续演进，不同版本间的 ZFS 数据集也有所差异。读者创建数据集时若希望创建与默认安装相同的数据集结构，应参照对应分支的 **usr.sbin/bsdinstall/scripts/zfsboot** 文件。
 
 - 创建根数据集
 
@@ -394,7 +394,7 @@ Windows 文本文件的行尾通常是 `\r\n`（回车 + 换行）。
 # cp /boot/loader.efi /media/efi/freebsd/
 ```
 
-- 使用 efibootmgr 工具向主板 UEFI 固件添加启动项 `FreeBSD`，这样开机时便能在 UEFI 启动菜单中看到 FreeBSD 选项。
+- 使用 `efibootmgr` 工具向主板 UEFI 固件添加启动项 `FreeBSD`，这样开机时便能在 UEFI 启动菜单中看到 FreeBSD 选项。
 
 ```sh
 # efibootmgr --create --activate --label "FreeBSD" --loader "/media/efi/freebsd/loader.efi"
