@@ -40,7 +40,7 @@ Chromium 不同于 Chrome，在 FreeBSD 中的启动命令为 `chrome`。
 
 > **技巧**
 >
-> 有些项目认为目前移除的组件仍不够彻底，因此提供了 Port `www/ungoogled-chromium`。该软件移除了更多与谷歌相关的不透明组件。
+> 部分项目认为目前移除的组件仍不够彻底，因此提供了 Port `www/ungoogled-chromium`。该软件移除了更多与谷歌相关的不透明组件。
 
 - 使用 pkg 安装 Chromium
 
