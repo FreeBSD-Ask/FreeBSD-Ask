@@ -295,7 +295,7 @@ root@f:/home/ykla #
 
 ### 配置 DNS 名称服务器
 
-FreeBSD 系统访问 Internet 域名系统（DNS）的方式由 `resolv.conf(5)` 控制。**/etc/resolv.conf** 文件中最常见的条目是：
+FreeBSD 系统访问 Internet 域名系统（DNS）的方式由 resolv.conf(5) 控制。**/etc/resolv.conf** 文件中最常见的条目是：
 
 - **nameserver**：解析器应查询的名称服务器的 IP 地址。服务器按列出的顺序查询，最多三个。
 - **search**：主机名查找的搜索列表。通常由本地主机名的域确定。
