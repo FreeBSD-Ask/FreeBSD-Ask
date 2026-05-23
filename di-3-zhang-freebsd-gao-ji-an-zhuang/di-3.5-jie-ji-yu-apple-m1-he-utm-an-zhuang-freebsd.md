@@ -64,7 +64,7 @@ UTM（逆构词为 Universal Turing Machine）是开源、基于 QEMU、面向 A
 
 ![安装程序界面](../.gitbook/assets/install_bsd_on_utm/utm-installer.png)
 
-基本系统安装完成，终端能正常运行。在虚拟机内执行 ifconfig 命令查看 IP 地址后，便可在宿主机的终端仿真器中发起 SSH 连接。
+基本系统安装完成，终端能正常运行。在虚拟机内执行 `ifconfig` 命令查看 IP 地址后，便可在宿主机的终端仿真器中发起 SSH 连接。
 
 ![终端](../.gitbook/assets/install_bsd_on_utm/utm-terminal.png)
 
