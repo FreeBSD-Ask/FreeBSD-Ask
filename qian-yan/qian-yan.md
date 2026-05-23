@@ -200,6 +200,5 @@ FreeBSD 是一款开源的类 UNIX 操作系统，直接继承自 BSD UNIX。
 - Apple Inc. BSD Overview[EB/OL]. (2013-08-08)[2026-04-17]. <https://developer.apple.com/library/archive/documentation/Darwin/Conceptual/KernelProgramming/BSD/BSD.html>. 苹果官方开发者文档指出: “The BSD portion of the OS X kernel is derived primarily from FreeBSD”，但 XNU 内核本身是 Mach 与 BSD 的混合体，源自 NeXTSTEP，并非直接派生自 FreeBSD 内核。
 - 梁济. 梁济遗稿[M]//梁漱溟. 这个世界会好吗: 梁漱溟晚年口述. 艾恺(Guy S. Alitto), 采访. 北京: 东方出版中心, 2006. 1918 年 11 月 7 日梁济问其子梁漱溟“这个世界会好吗”，三天后投净业湖自尽，后世多称“梁漱溟之问”，实则发问者为梁济。
 - FreeBSD Project. About the FreeBSD Project[EB/OL]. [2026-04-17]. <https://docs.freebsd.org/en/books/handbook/introduction/>. FreeBSD 项目起源于 1993 年初，首个正式版本于 1993 年 11 月 1 日发布。
-- QNX Software Systems. io-pkt Networking Stack[EB/OL]. [2026-04-17]. <https://www.qnx.com/developers/docs/6.5.0SP1.update/com.qnx.doc.neutrino_sys_arch/tcpip.html>. QNX 官方文档指出“io-pkt is...closely tracks the NetBSD stack source”，其网络栈主要派生自 NetBSD 而非 FreeBSD。
 - Phoronix. Intel Ivy Bridge Borked On FreeBSD[EB/OL]. (2014-01-31)[2026-04-17]. <https://www.phoronix.com/news/MTEyNDg>. FreeBSD 10-RC5 在 Intel HD 4000 (Ivy Bridge) 显卡上存在图形驱动问题，无法正常启动。
 - procps-ng Project. procps Package Documentation[EB/OL]. [2026-04-17]. <https://gitlab.com/procps-ng/procps>. procps 包中 free 命令通过读取 Linux procfs (**/proc/meminfo**) 获取内存信息，而 FreeBSD 已弃用 procfs，故该命令无法使用。
