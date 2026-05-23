@@ -144,7 +144,7 @@ $ echo "exec ck-launch-session startplasma-x11" > ~/.xinitrc
 | 软件包 | 作用 |
 | ------ | ---- |
 | **plasma6-kactivitymanagerd** | 管理用户活动、跟踪使用模式等的系统服务。缺少该服务可能导致 KDE 桌面无法正常显示 |
-| **plasma6-kscreen** | KDE 屏幕管理器。**没有该软件将无法调整分辨率** |
+| **plasma6-kscreen** | KDE 屏幕管理器。**未安装该软件将无法调整分辨率** |
 | **plasma6-systemsettings** | 系统设置 |
 
 与上文重复的软件包在此不再列出。
@@ -208,7 +208,7 @@ $ echo "exec ck-launch-session startplasma-x11" > ~/.xinitrc
 
 > **技巧**
 >
-> 使用此方案安装的 KDE 桌面缺少了很多功能，可以参照 [x11/plasma6-plasma](https://www.freshports.org/x11/plasma6-plasma/) 的“Runtime dependencies”（运行时依赖）和“Library dependencies”（库依赖）来补全功能。
+> 使用此方案安装的 KDE 桌面缺少较多功能，可以参照 [x11/plasma6-plasma](https://www.freshports.org/x11/plasma6-plasma/) 的“Runtime dependencies”（运行时依赖）和“Library dependencies”（库依赖）来补全功能。
 
 未安装可选包：
 
@@ -253,7 +253,7 @@ $ echo "exec ck-launch-session startplasma-x11" > ~/.xinitrc
 
 如果在 VMware 虚拟机中看不到 SDDM 底部选项，请按照虚拟机配置章节的教程设置屏幕自动缩放。
 
-### 启动 SDDM 提醒 **/usr/bin/xauth**: `(stdin):1: bad display name`，但是可以正常 `startx`
+### 启动 SDDM 提示 **/usr/bin/xauth**: `(stdin):1: bad display name`，但仍可正常 `startx`
 
 需要在 **/etc/rc.conf** 文件中检查是否已设置 `hostname="XXX"`（该条目应当存在，且不应为 `hostname=""`）：
 
