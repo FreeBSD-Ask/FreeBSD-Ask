@@ -114,7 +114,7 @@ $ mkdir -p ~/.config/autostart/ # 创建自启动目录
 $ cp /usr/local/share/applications/org.fcitx.Fcitx5.desktop ~/.config/autostart/ # 系统启动时自动启动 Fcitx 5
 ```
 
-初次进入 KDE Wayland 桌面时，KDE 会在右下角提示需在设置的虚拟键盘中配置才能启用输入法。请留意该提示。如未完成此设置，将无法切换输入法或输入中文。
+初次进入 KDE Wayland 桌面时，KDE 会在右下角提示需在系统设置的虚拟键盘中完成配置后方可启用输入法。请留意该提示。如未完成此设置，将无法切换输入法或输入中文。
 
 ![KDE Wayland 设置](../.gitbook/assets/kde-wayland-fcitx.png)
 
@@ -136,7 +136,7 @@ $ cp /usr/local/share/applications/org.fcitx.Fcitx5.desktop ~/.config/autostart/
 
 ## 故障排除与未竟事宜
 
-### 在 root 账户下没有声音
+### 以 root 账户登录时没有声音
 
 表现为右下角声音控件提示“未连接到音频服务”：可设置 PulseAudio 自启动，方法是在 KDE 设置中添加该服务并赋予可执行权限。
 
