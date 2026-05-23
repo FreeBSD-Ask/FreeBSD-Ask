@@ -98,7 +98,7 @@ ThinkPad 可以启用 IBM ACPI 支持和 ACPI 视频支持。
 # backlight -        # 默认调整亮度减少 10%
 ```
 
-如果上述操作不起作用，可检查 **/dev/backlight** 路径下的可用设备。
+如果上述操作未生效，可检查 **/dev/backlight** 路径下的可用设备。
 
 - 示例（使用 `ls /dev/backlight` 命令查看实际设备）：
 
