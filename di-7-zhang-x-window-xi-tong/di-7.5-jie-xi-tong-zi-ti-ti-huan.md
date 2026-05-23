@@ -79,7 +79,7 @@ allscreens_flags="-f /root/b16.fnt"
 
 ## 附录：安装 Windows 11 字体（自制包）
 
-同时兼容 Debian 和低版本 Ubuntu 的兼容层。安装方法：
+该包同时兼容 Debian 和低版本 Ubuntu 的兼容层。安装方法：
 
 ```sh
 # apt install git                          # 安装 Git
