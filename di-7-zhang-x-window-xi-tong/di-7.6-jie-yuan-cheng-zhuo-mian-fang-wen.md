@@ -276,7 +276,7 @@ export LANG=zh_CN.UTF-8
 
 #### XRDP 下没有声音
 
-此问题可通过火狐浏览器缓解。
+此问题可通过 Firefox 浏览器缓解。
 
 ## 通过 Windows 使用 TigerVNC 远程访问 FreeBSD
 
@@ -440,7 +440,7 @@ rdesktop 无前端 GUI，需在终端输入命令：
 
 如果未手动更改 Windows 配置，无须加 `:端口号`。
 
-对于测试的 Windows 11 24H2 会报错：
+在测试的 Windows 11 24H2 上会报错：
 
 ```sh
 $ rdesktop 192.168.31.213
@@ -532,7 +532,7 @@ Do you trust this certificate (yes/no)? # 输入 yes，按回车键
 # mount -t procfs proc /proc # 临时使用。可以参照上面的说明持久化
 ```
 
-root 用户无法运行 AnyDesk。需要普通用户：
+root 用户无法运行 AnyDesk，须以普通用户身份运行：
 
 ```sh
 $ anydesk
