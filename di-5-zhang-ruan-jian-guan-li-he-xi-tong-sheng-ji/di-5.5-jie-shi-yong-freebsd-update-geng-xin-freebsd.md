@@ -183,7 +183,7 @@ kernel/generic kernel/generic-dbg world/base world/lib32
 The following components of FreeBSD do not seem to be installed:
 world/base-dbg world/lib32-dbg
 
-Does this look reasonable (y/n)? y # 在这里输入 y，然后回车即可，在检查基本组件的安装情况。
+Does this look reasonable (y/n)? y # 在这里输入 y，然后回车即可，此处是在检查基本组件的安装情况。
 
 Fetching metadata signature for 15.0-RELEASE from update1.freebsd.org... done.
 Fetching metadata index... done.
@@ -230,7 +230,7 @@ The following file could not be merged automatically: /etc/pkg/FreeBSD.conf
 Press Enter to edit this file in /usr/bin/ee and resolve the conflicts
 manually...
 
-……这里提示按回车键编辑一些无法自动合并需要手动编辑的文件……
+……这里提示按回车键编辑无法自动合并而需手动处理的文件……
 
 The following changes, which occurred between FreeBSD 14.3-RELEASE and
 FreeBSD 15.0-RELEASE have been merged into /etc/login.conf:
