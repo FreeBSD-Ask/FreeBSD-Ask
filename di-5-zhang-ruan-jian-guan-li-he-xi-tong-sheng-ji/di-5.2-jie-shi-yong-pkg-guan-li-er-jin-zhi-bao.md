@@ -208,7 +208,7 @@ pkg: No packages available to install matching 'chromium' have been found in the
 ### 如何卸载所有自行安装的第三方软件？
 
 ```sh
-# pkg delete -fa # 如果带上参数 f，会将 pkg 包管理器本身也卸载，因为 pkg 也是用户一开始自行安装的软件。
+# pkg delete -fa # 如果带上参数 f，会将 pkg 包管理器本身也卸载，因为 pkg 也是用户最初自行安装的软件。
 Checking integrity... done (0 conflicting)
 Deinstallation has been requested for the following 87 packages (of 0 packages in the universe):
 
