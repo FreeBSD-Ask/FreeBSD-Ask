@@ -208,7 +208,9 @@ vboxservice_flags="--disable-timesync"
 
 ![编辑共享文件夹](../.gitbook/assets/virtualbox-file.png)
 
-注意，“文件夹名称”是操作系统（FreeBSD 虚拟机）将看到的文件名，不得包含空格。在虚拟机系统中挂载共享文件夹的命令如下：
+注意，“文件夹名称”是操作系统（FreeBSD 虚拟机）将看到的文件名，不得包含空格。
+
+在 FreeBSD 虚拟机系统中挂载共享文件夹的命令如下：
 
 ```sh
 # mkdir -p /mnt/bsdboxshare # 创建上面指定的挂载点
@@ -217,7 +219,7 @@ vboxservice_flags="--disable-timesync"
 
 列出共享文件夹内容：
 
-```
+```sh
 # ls /mnt/bsdboxshare/
 
 ……省略其他输出……
