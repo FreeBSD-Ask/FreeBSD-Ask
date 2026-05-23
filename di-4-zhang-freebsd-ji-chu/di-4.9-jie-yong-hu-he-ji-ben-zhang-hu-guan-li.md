@@ -69,7 +69,7 @@ FreeBSD 中主要有三类账户：系统账户、普通用户账户，以及超
 
 事实上，内核根据账户的 EUID（有效用户 ID）是否为 `0` 来判定某账户是否拥有 root 权限。参见：main/sys/kern/kern_priv.c[EB/OL]. [2026-03-26]. <https://github.com/freebsd/freebsd-src/blob/main/sys/kern/kern_priv.c> 中的 `if (suser_enabled(cred))` 代码块部分。
 
-获取超级用户特权有多种方式。虽然可以直接以 root 登录，但这种做法极不推荐，推荐使用 `su(1)` 命令切换为超级用户。
+获取超级用户特权有多种方式。虽然可以直接以 root 登录，但这种做法极不推荐，推荐使用 su(1) 命令切换为超级用户。
 
 ## 账户管理
 
