@@ -10,7 +10,7 @@ KDE 是一套现代化的桌面环境。KDE 桌面环境借鉴了 Windows 等多
 
 > **技巧**
 >
-> 不希望捆绑安装大量附加工具和软件的用户可使用下方的最小化安装方案，无需自定义的用户可继续使用本方案。
+> 不希望捆绑安装大量附加工具和软件的用户可使用下方的最小化安装方案，无需自定义配置的用户可继续使用本方案。
 
 - 使用 pkg 安装：
 
@@ -66,7 +66,7 @@ $ echo "exec ck-launch-session startplasma-x11" > ~/.xinitrc
 
 > **注意**
 >
-> 如果在 root 下已执行过上述命令，新用户仍需再执行一次才能正常使用 startx（无需 root 权限或 sudo）。
+> 如果以 root 身份已执行过上述命令，新用户仍需再执行一次才能正常使用 startx（无需 root 权限或 sudo）。
 
 ## 权限设置
 
@@ -106,7 +106,7 @@ $ echo "exec ck-launch-session startplasma-x11" > ~/.xinitrc
       ……省略其他部分……
 ```
 
-根据 **/etc/login.conf** 文件刷新能力数据库：
+根据 **/etc/login.conf** 文件重建能力数据库：
 
 ```sh
 # cap_mkdb /etc/login.conf
@@ -131,7 +131,7 @@ $ echo "exec ck-launch-session startplasma-x11" > ~/.xinitrc
 
 ## 附录：最小化 KDE 桌面安装方案
 
-直接安装 **x11/kde** 会将 **x11/plasma6-plasma** 和 **x11/kde-baseapps** 作为依赖一并安装，其中捆绑了大量工具软件，某些情况下不便于部署使用。
+直接安装 **x11/kde** 会将 **x11/plasma6-plasma** 和 **x11/kde-baseapps** 作为依赖一并安装，其中捆绑了大量工具软件，在某些场景下不便于部署和使用。
 
 ### 使用 pkg 安装
 
