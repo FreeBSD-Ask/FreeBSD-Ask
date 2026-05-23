@@ -74,11 +74,11 @@ C:\Users\用户名\
 
 确定目标 U 盘后，开始恢复操作。首先删除 U 盘上的所有现有分区。
 
-确认目标 U 盘后，在其上右键单击，选择“删除所有分区”：
+确认目标 U 盘后，右键单击该 U 盘，选择“删除所有分区”：
 
 ![DiskGenius](../.gitbook/assets/diskgenius-7.png)
 
-在确认后选择“是”。
+确认后选择“是”。
 
 ![DiskGenius](../.gitbook/assets/diskgenius-8.png)
 
@@ -102,7 +102,7 @@ C:\Users\用户名\
 
 ![DiskGenius](../.gitbook/assets/diskgenius-13.png)
 
-在确认后选择“是”。
+确认后选择“是”。
 
 ![DiskGenius](../.gitbook/assets/diskgenius-14.png)
 
