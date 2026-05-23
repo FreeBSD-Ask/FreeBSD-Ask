@@ -658,7 +658,7 @@ max cache size                      10.0 GB
 
 ### ccache4
 
-ccache4 是更新的主要版本，安装与配置方式与 ccache3 相同，仅包名不同。
+ccache4 是 ccache 的较新主版本，安装与配置方式与 ccache3 相同，仅包名不同。
 
 使用 pkg 安装：
 
@@ -837,7 +837,7 @@ Proceed with this action? [y/N]:
 
 ### `autoconf-2.72 Invalid perl5 version 5.42.`
 
-也可以理解为“xxx-yy Invalid zz version aa”这一类报错。
+也可理解为“xxx-yy Invalid zz version aa”这一类报错。
 
 实例，在使用 Ports 安装 openjdk21 时报错如下：
 
@@ -856,7 +856,7 @@ Stop.
 make: stopped in /usr/ports/java/openjdk21
 ```
 
-观察整个流程可知，openjdk21 依赖 autoconf，但系统中没有。于是递归查找 autoconf 的依赖，发现 autoconf 依赖 perl5；结合 ② 可以发现系统中已有 perl5，但是报错“Invalid version”，即 perl5 的版本不对。
+观察整个流程可知，openjdk21 依赖 autoconf，但系统中并未安装。于是递归查找 autoconf 的依赖，发现 autoconf 依赖 perl5；结合 ② 可知系统中已有 perl5，但报错"Invalid version"，即 perl5 的版本不符合要求。
 
 此问题一般需要先更新 Ports，然后通过 `pkg install -f perl5` 或 `pkg upgrade` 更新 perl5 版本即可解决。
 
