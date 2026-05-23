@@ -1,6 +1,6 @@
 # 5.1 FreeBSD 软件源
 
-FreeBSD 的软件源分为 `pkg` 二进制包源、Ports 源、系统源和更新源四类，分别配置，默认指向官方服务器，国内用户通常需要切换至镜像站以提升下载速度。
+FreeBSD 的软件源分为 pkg 二进制包源、Ports 源、系统源和更新源四类，分别配置，默认指向官方服务器，国内用户通常需要切换至镜像站以提升下载速度。
 
 ## 软件源概览
 
@@ -11,8 +11,8 @@ FreeBSD 提供了多种类型的软件源，分别服务不同的系统组件和
 | pkg | 类似于传统 Linux 的包管理器，用于安装二进制软件包 | 若不需以二进制方式安装软件则无需配置。默认未安装 `pkg`，输入 `pkg` 回车会提示安装。除 pkgbase 外的 pkg 包实际上都是由 Port 直接构建而来 |
 | Ports 框架 | 拉取 Port 的源代码目录（本身不含源代码，只是对第三方软件的描述文件、补丁集和 Makefile）。Ports 是 Port 的集合，在 `freebsd-ports` 存储库中统一维护 | Gentoo 的包管理器 Portage（命令为 `emerge`）即是借鉴于此，用于帮助用户从源代码编译安装第三方软件。也就是说，Ports（Port 集合）类似 Gentoo 的 [ebuild 数据库](https://mirrors.ustc.edu.cn/help/gentoo.html) |
 | Ports 源 | 在 Port 中的 Makefile 文件里会定义若干软件包源代码的地址，该软件源用于拉取这些源代码（因为从官方上游拉取速度有时不佳） | 等同于 Gentoo 的 [Distfiles 源](https://mirrors.ustc.edu.cn/help/gentoo.html)。不需要以源代码方式编译软件可以不配置 |
-| `freebsd-update` | 用于更新基本系统（内核 + 用户空间） | 仅支持 RELEASE、ALPHA、BETA、RC 版本，不支持 CURRENT 和 STABLE 分支；项目社区曾讨论以 pkgbase 取代，但尚无正式退役时间表 |
-| pkgbase | 将 FreeBSD 基本系统（内核 + 用户空间）打包成 `pkg` 包，使用 `pkg(8)` 管理基本系统，取代传统的 `freebsd-update` 和 distribution | 从 FreeBSD 15.0 开始可选（技术预览，在整个 15.X 周期内可选），预计将在 16.0 成为默认/标准方式。14.x 为实验性支持。基本系统升级/维护使用 `pkg upgrade`。生产环境建议继续使用传统方式。需配置 FreeBSD-base 源（见下文）。参考 [PkgBase Wiki](https://wiki.freebsd.org/PkgBase)。pkgbase 实际上由存储库 `freebsd-src` 构建而来，与 Ports 完全无关。FreeBSD 基本系统始终是独立于 Ports 而自存的 |
+| freebsd-update | 用于更新基本系统（内核 + 用户空间） | FreeBSD 16.0-CURRENT 手册中仍为完整支持状态；项目社区曾讨论以 pkgbase 取代，但尚无正式退役时间表 |
+| pkgbase | 将 FreeBSD 基本系统（内核 + 用户空间）打包成 pkg 包，使用 pkg(8) 管理基本系统，取代传统的 freebsd-update 和 distribution | 从 FreeBSD 15.0 开始可选（技术预览，在整个 15.X 周期内可选），预计将在 16.0 成为默认/标准方式。14.x 为实验性支持。基本系统升级/维护使用 `pkg upgrade`。生产环境建议继续使用传统方式。需配置 FreeBSD-base 源（见下文）。参考 [PkgBase Wiki](https://wiki.freebsd.org/PkgBase)。pkgbase 实际上由存储库 `freebsd-src` 构建而来，与 Ports 完全无关。FreeBSD 基本系统始终是独立于 Ports 而自存的 |
 | kernel modules（kmods） | 内核模块源（包含无线网卡驱动、以太网卡驱动、DRM 显卡驱动等），用于解决小版本之间可能存在的 ABI 不兼容问题 | 参见：Possible solution to the drm-kmod kernel mismatch after upgrade from Bapt[EB/OL]. [2026-03-26]. <https://forums.freebsd.org/threads/possible-solution-to-the-drm-kmod-kernel-mismatch-after-upgrade-from-bapt.96058/#post-682984>、CFT: repository for kernel modules[EB/OL]. [2026-03-26]. <https://lists.freebsd.org/archives/freebsd-ports/2024-December/006997.html>。可以使用命令 `fwget` 自动安装所需固件 |
 | FreeBSD（pub） | 提供 ISO 安装镜像、文档、开发资料和 `snapshots`，在系统安装、系统救援和开发参考时有很大帮助 | 此处的 Pub，指的是官方的 <http://ftp.freebsd.org/pub/FreeBSD/>。其性质类似于普通的镜像分发仓库，与 debian-cd、ubuntu-releases 等属于同一类型。目前已知全量同步 FreeBSD（Pub）源的镜像站：<https://mirrors.nju.edu.cn/freebsd>。其提供了完整的目录结构（如 `snapshots`、`development`），且更新较为及时，参见：FreeBSD.org ftp server[EB/OL]. [2026-03-26]. <http://ftp.freebsd.org/pub/FreeBSD/> 目录结构 |
 
@@ -115,7 +115,7 @@ quarterly 分支类似于 Debian 的 Stable 版本，通过固定软件包版本
 
 该配置要求读者在安装过程中使用 pkgbase 方式，可设置 pkg 二进制包源（由 ports 构建而来）、pkgbase 源、内核模块源。
 
-使用 `ee` 编辑器打开 **/usr/local/etc/pkg/repos/FreeBSD.conf** 文件。
+使用 ee 编辑器打开 **/usr/local/etc/pkg/repos/FreeBSD.conf** 文件。
 
 > **技巧**
 >
@@ -163,11 +163,11 @@ USTC-base: {
 
 ## pkg 二进制包（由 Ports 构建的二进制包）切换软件源
 
-FreeBSD 中 `pkg` 源分为系统级和用户级两个配置文件。**因为该文件会随基本系统的更新而改变，所以不建议** 直接修改 **/etc/pkg/FreeBSD.conf** 文件。
+FreeBSD 中 pkg 源分为系统级和用户级两个配置文件。**因为该文件会随基本系统的更新而改变，所以不建议** 直接修改 **/etc/pkg/FreeBSD.conf** 文件。
 
 > **警告**
 >
-> 请勿同时启用多个 `pkg` 镜像站，无论是官方镜像站（如 `pkg.freebsd.org` 与 USTC 混用），还是境内非官方镜像站，都不建议混合使用！后果类似于 FreeBSD 季度分支的 Ports 和 latest 分支的 `pkg` 混用，可能会破坏软件的依赖关系。案例：[混用导致 KDE 桌面被删除](https://blog.mxdyeah.com/post/freebsd-exp-kde6)。
+> 请勿同时启用多个 pkg 镜像站，无论是官方镜像站（如 `pkg.freebsd.org` 与 USTC 混用），还是境内非官方镜像站，都不建议混合使用！后果类似于 FreeBSD 季度分支的 Ports 和 latest 分支的 pkg 混用，可能会破坏软件的依赖关系。案例：[混用导致 KDE 桌面被删除](https://blog.mxdyeah.com/post/freebsd-exp-kde6)。
 
 > **警告**
 >
@@ -203,7 +203,7 @@ FreeBSD 中 `pkg` 源分为系统级和用户级两个配置文件。**因为该
 
 > **注意**
 >
-> 在本节中，**/usr/local/etc/pkg/repos/USTC.conf** 是 `pkg` 二进制源、模块源和 pkgbase 源共用的配置文件。不再赘述这一过程。
+> 在本节中，**/usr/local/etc/pkg/repos/USTC.conf** 是 pkg 二进制源、模块源和 pkgbase 源共用的配置文件。不再赘述这一过程。
 
 #### 中国科学技术大学开源软件镜像站
 
@@ -455,9 +455,9 @@ USTC-base: {
 
 ### 通过 Git 拉取 Ports
 
-须参照其他章节提前安装 `git`，从略。
+须参照其他章节提前安装 git，从略。
 
-使用 `git` 拉取 Ports 源代码：
+使用 git 拉取 Ports 源代码：
 
 ```sh
 # git clone --filter=tree:0 https://mirrors.ustc.edu.cn/freebsd-ports/ports.git /usr/ports
@@ -518,11 +518,11 @@ MASTER_SITE_OVERRIDE?=https://mirrors.ustc.edu.cn/freebsd-ports/distfiles/${DIST
 
 ### 平衡安全与便利
 
-使用非官方镜像站虽然提升了下载速度，但引入了中间人攻击的风险——镜像站管理员理论上可以在软件包中注入恶意代码。FreeBSD 官方要求镜像站使用 `zfs send/receive` 而非 `rsync` 来同步数据，部分原因正是为了降低此类风险。对于安全要求较高的生产环境，建议使用官方源或自行搭建 Poudriere 构建服务器，以完全控制软件包。
+使用非官方镜像站虽然提升了下载速度，但引入了中间人攻击的风险——镜像站管理员理论上可以在软件包中注入恶意代码。FreeBSD 官方要求镜像站使用 `zfs send/receive` 而非 rsync 来同步数据，部分原因正是为了降低此类风险。对于安全要求较高的生产环境，建议使用官方源或自行搭建 Poudriere 构建服务器，以完全控制软件包。
 
-### 为什么 `pkg` 配置文件中要写完整选项（mirror_type / signature_type / fingerprints）
+### 为什么 pkg 配置文件中要写完整选项（mirror_type / signature_type / fingerprints）
 
-虽然仅写 `url` 和 `enabled: yes` 时 `pkg` 也能正常工作（`pkg` 会默认 `mirror_type: "none"` 和 `signature_type: "none"`），但这样做将 **关闭签名验证**。系统不会检查 `pkg` 下载的包是否被篡改，可能存在安全风险（尤其是 ports、kmods 和 pkgbase 系统包）。
+虽然仅写 `url` 和 `enabled: yes` 时 pkg 也能正常工作（pkg 会默认 `mirror_type: "none"` 和 `signature_type: "none"`），但这样做将 **关闭签名验证**。系统不会检查 pkg 下载的包是否被篡改，可能存在安全风险（尤其是 ports、kmods 和 pkgbase 系统包）。
 
 其优点在于：
 
@@ -566,7 +566,7 @@ Fetching http://ftp-archive.freebsd.org/pub/FreeBSD-Archive/ports/amd64/packages
 
 > **注意**
 >
-> 因为当时 pkgng 还没有被官方支持，仍然仅支持使用 `pkg_*` 命令，所以 `pkg` 是不可用的，会提示找不到 `digests.txz` 和 `repo.txz`。
+> 因为当时 pkgng 还没有被官方支持，仍然仅支持使用 `pkg_*` 命令，所以 pkg 是不可用的，会提示找不到 `digests.txz` 和 `repo.txz`。
 
 ## 课后习题
 

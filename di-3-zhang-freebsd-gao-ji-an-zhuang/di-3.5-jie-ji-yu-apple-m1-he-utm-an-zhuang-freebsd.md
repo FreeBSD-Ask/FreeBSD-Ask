@@ -74,7 +74,7 @@ UTM（逆构词为 Universal Turing Machine）是开源、基于 QEMU、面向 A
 
 ### Xorg 不可用
 
-直接启动 `Xorg` 默认的窗口管理器 TWM 会报错，输出内容如下：
+直接启动 Xorg 默认的窗口管理器 TWM 会报错，输出内容如下：
 
 ```sh
 voosk@BSDVM:~ $ startx
@@ -125,7 +125,7 @@ hint.virtio_gpu.0.disabled="1"
 hint.vtgpu.0.disabled="1"
 ```
 
-重启后 `startx` 能够正常启动 `TWM`，输出如下：
+重启后 startx 能够正常启动 TWM，输出如下：
 
 ```sh
 voosk@BSDVM:~ $ startx

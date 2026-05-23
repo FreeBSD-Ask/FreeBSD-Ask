@@ -189,7 +189,7 @@ default via 172.24.63.253 dev eth0 proto dhcp src 172.24.0.80 metric 100
 - `xzcat`：解压 xz 格式文件，并将解压后的内容输出到标准输出
 - `dd of=/dev/vda`：将输入写入 **/dev/vda** 设备，注意不是某个分区，是写入整块磁盘。
 - `bs=4M`：设置块大小为 4 MB，提高写入效率
-- `status=progress`：显示 `dd` 的写入进度
+- `status=progress`：显示 dd 的写入进度
 
 ![写入 FreeBSD ZFS 镜像到整块硬盘](../.gitbook/assets/cloud-zfs-write-disk.png)
 
@@ -259,7 +259,7 @@ lo0: flags=1008049<UP,LOOPBACK,RUNNING,MULTICAST,LOWER_UP> metric 0 mtu 16384
 	nd6 options=23<PERFORMNUD,ACCEPT_RTADV,AUTO_LINKLOCAL>
 ```
 
-可通过 `ping` 常用网站，确认网络连接正常。
+可通过 ping 常用网站，确认网络连接正常。
 
 显示内核启动信息和内核日志：
 
@@ -603,7 +603,7 @@ Ventoy LiveCD 下载地址为 [安装包](https://www.ventoy.net/cn/download.htm
 
 Ventoy LiveCD 并非 Ventoy 本体，而是用于安装 Ventoy 的内存盘系统镜像。参见：Ventoy 团队. Ventoy LiveCD 使用说明[EB/OL]. [2026-03-26]. <https://www.ventoy.net/cn/doc_livecd.html>.
 
-在使用 `dd` 将镜像写入整块硬盘后，强制重启实例，Ventoy LiveCD 可以正常启动。
+在使用 dd 将镜像写入整块硬盘后，强制重启实例，Ventoy LiveCD 可以正常启动。
 
 ![Ventoy LiveCD 启动界面](../.gitbook/assets/ventoy-livecd-boot.png)
 

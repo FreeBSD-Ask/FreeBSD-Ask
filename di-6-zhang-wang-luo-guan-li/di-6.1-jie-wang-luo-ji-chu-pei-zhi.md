@@ -86,11 +86,11 @@ lo0: flags=8049<UP,LOOPBACK,RUNNING,MULTICAST> metric 0 mtu 16384
 
 ### 配置动态 IPv4 地址
 
-如果网络中有 DHCP 服务器，可使用 DHCP 动态获取 IP 地址。具体而言，FreeBSD 使用 `dhclient(8)` 作为 DHCP 客户端，`dhclient(8)` 可自动获取 IP 地址、子网掩码和默认路由器。
+如果网络中有 DHCP 服务器，可使用 DHCP 动态获取 IP 地址。具体而言，FreeBSD 使用 dhclient(8) 作为 DHCP 客户端，dhclient(8) 可自动获取 IP 地址、子网掩码和默认路由器。
 
 > **注意**
 >
-> `dhclient(8)` **不支持 DHCPv6**（RFC 3315/RFC 8415），IPv6 动态地址需使用 `rtsold(8)`（SLAAC）或第三方 DHCPv6 客户端（如 `dhcp6c`）。
+> dhclient(8) **不支持 DHCPv6**（RFC 3315/RFC 8415），IPv6 动态地址需使用 `rtsold(8)`（SLAAC）或第三方 DHCPv6 客户端（如 `dhcp6c`）。
 
 要使接口使用 DHCP，执行以下命令：
 
@@ -98,7 +98,7 @@ lo0: flags=8049<UP,LOOPBACK,RUNNING,MULTICAST> metric 0 mtu 16384
 # sysrc ifconfig_em0="DHCP"
 ```
 
-可以手动运行 `dhclient(8)`：
+可以手动运行 dhclient(8)：
 
 ```sh
 # dhclient em0
@@ -107,9 +107,9 @@ DHCPACK from 192.168.1.1
 bound to 192.168.1.19 -- renewal in 43200 seconds.
 ```
 
-`dhclient(8)` 也可在后台启动。后台运行可能影响依赖网络的程序，但多数情况下能加快启动速度。
+dhclient(8) 也可在后台启动。后台运行可能影响依赖网络的程序，但多数情况下能加快启动速度。
 
-要在后台执行 `dhclient(8)`，执行以下命令：
+要在后台执行 dhclient(8)，执行以下命令：
 
 ```sh
 # sysrc background_dhclient="YES"
@@ -123,7 +123,7 @@ bound to 192.168.1.19 -- renewal in 43200 seconds.
 
 ### 配置静态 IPv4 地址
 
-也可在命令行通过 `ifconfig(8)` 配置网络接口卡，但若不同时将这些配置添加到 **/etc/rc.conf** 文件，重启后配置将丢失。
+也可在命令行通过 ifconfig(8) 配置网络接口卡，但若不同时将这些配置添加到 **/etc/rc.conf** 文件，重启后配置将丢失。
 
 可通过以下命令设置 IP 地址：
 
@@ -163,7 +163,7 @@ nameserver 223.6.6.6   # 指定备用 DNS 服务器为阿里云公共 DNS 备选
 # service routing restart
 ```
 
-可使用 `ping(8)` 测试连接：
+可使用 ping(8) 测试连接：
 
 ```sh
 $ ping -c2 www.FreeBSD.org
@@ -309,11 +309,11 @@ nameserver 223.5.5.5
 nameserver 223.6.6.6
 ```
 
-search 和 domain 选项只能使用其中一个。使用 DHCP 时，`dhclient(8)` 通常会用从 DHCP 服务器接收的信息重写 **/etc/resolv.conf** 文件。
+search 和 domain 选项只能使用其中一个。使用 DHCP 时，dhclient(8) 通常会用从 DHCP 服务器接收的信息重写 **/etc/resolv.conf** 文件。
 
-手动编辑 **/etc/resolv.conf** 文件后，因为动态主机配置协议（Dynamic Host Configuration Protocol，DHCP）客户端在获取网络配置时会通过 `resolvconf` 服务重写该文件，重启系统时该文件可能被重置。
+手动编辑 **/etc/resolv.conf** 文件后，因为动态主机配置协议（Dynamic Host Configuration Protocol，DHCP）客户端在获取网络配置时会通过 resolvconf 服务重写该文件，重启系统时该文件可能被重置。
 
-若需使用手动配置的 DNS 服务器而不希望系统自动更新覆盖，可禁用 `resolvconf` 服务。编辑 **/etc/resolvconf.conf** 文件（如不存在则创建），写入 `resolvconf=NO` 一行，该配置将禁用系统对 DNS 配置文件的自动更新。
+若需使用手动配置的 DNS 服务器而不希望系统自动更新覆盖，可禁用 resolvconf 服务。编辑 **/etc/resolvconf.conf** 文件（如不存在则创建），写入 `resolvconf=NO` 一行，该配置将禁用系统对 DNS 配置文件的自动更新。
 
 ### 参考文献
 
@@ -334,11 +334,11 @@ search 和 domain 选项只能使用其中一个。使用 DHCP 时，`dhclient(8
 - 防火墙是否正确配置？
 - 网卡是否受 FreeBSD 支持？
 
-如果网卡工作正常但性能不佳，可参阅 `tuning(7)`。因为不正确的网络设置可能导致连接缓慢，同时检查网络配置。
+如果网卡工作正常但性能不佳，可参阅 tuning(7)。因为不正确的网络设置可能导致连接缓慢，同时检查网络配置。
 
 “No route to host”消息表示系统无法将数据包路由到目标主机。这通常是因为未指定默认路由或网线未插入。可使用 `route get <目标地址>` 命令查看系统对特定目标的路由决策，再检查 `netstat -rn` 的输出，确保有到主机的有效路由。
 
-“ping: sendto: Permission denied”错误消息通常由防火墙配置错误引起。如果在 FreeBSD 上启用了防火墙但未定义规则，默认策略是拒绝所有流量，甚至是 `ping(8)`。
+“ping: sendto: Permission denied”错误消息通常由防火墙配置错误引起。如果在 FreeBSD 上启用了防火墙但未定义规则，默认策略是拒绝所有流量，甚至是 ping(8)。
 
 ## 附录：网络配置 rc.conf 示例
 

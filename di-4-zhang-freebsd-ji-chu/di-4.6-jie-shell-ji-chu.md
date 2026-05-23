@@ -8,17 +8,17 @@
 
 shell 是用户与操作系统内核交互的命令解释程序（command interpreter），接受用户输入的命令并传递给内核执行。用户命令在 shell 中运行，通过 shell 与系统交互。shell 提供命令行界面，从输入通道接收命令并执行。许多 shell 提供内置功能以辅助日常任务，如文件管理、文件名通配、命令行编辑、命令宏和环境变量。FreeBSD 基本系统内置多种 shell，包括扩展 POSIX shell（sh(1)）和扩展 C shell（tcsh(1)）。其他 shell 可通过 FreeBSD Ports 获得，例如 Zsh 和 Bash。
 
-FreeBSD root 用户默认 shell 为 `sh`（自 FreeBSD 14 起），但基本系统同时提供 `csh`/`tcsh` 作为替代选择。
+FreeBSD root 用户默认 shell 为 sh（自 FreeBSD 14 起），但基本系统同时提供 csh/tcsh 作为替代选择。
 
 > **技巧**
 >
 > csh 与 tcsh 的关系
 >
-> 需要注意的是，FreeBSD 中 `csh` 和 `tcsh` 是同一个二进制程序，但以不同名称调用时行为有所差异。可通过查看源代码 [https://github.com/freebsd/freebsd-src/blame/main/bin/csh/Makefile](https://github.com/freebsd/freebsd-src/blame/main/bin/csh/Makefile) 及执行 `man csh` 验证：两者均重定向至 `tcsh`。
+> 需要注意的是，FreeBSD 中 csh 和 tcsh 是同一个二进制程序，但以不同名称调用时行为有所差异。可通过查看源代码 [https://github.com/freebsd/freebsd-src/blame/main/bin/csh/Makefile](https://github.com/freebsd/freebsd-src/blame/main/bin/csh/Makefile) 及执行 man csh 验证：两者均重定向至 tcsh。
 
 > **注意**
 >
-> 虽然 `csh` 与 `tcsh` 本质上是同一程序，但如果以 `csh` 的参数调用，则部分 `tcsh` 扩展会被关闭，因而在使用时存在差异。
+> 虽然 csh 与 tcsh 本质上是同一程序，但如果以 csh 的参数调用，则部分 tcsh 扩展会被关闭，因而在使用时存在差异。
 
 ## POSIX shell 规范
 
@@ -33,20 +33,20 @@ POSIX shell 规范的核心要求包括：
 - **条件与循环**：支持 `if`、`while`、`for`、`case` 等控制结构。
 - **内置命令**：必须实现 `cd`、`echo`、`exit`、`export`、`read`、`return`、`set`、`shift`、`trap`、`unset` 等内置命令。
 
-FreeBSD 系统默认采用的 shell 是 `sh`。FreeBSD 的 **/bin/sh** 并非 Stephen R. Bourne 在贝尔实验室为 UNIX V7 编写的原始 Bourne shell，而是基于 Kenneth Almquist 于 1989 年发布的 Almquist shell（`ash`），后者旨在作为 Bourne shell 更紧凑、更高效的替代品。NetBSD 最早将 `ash` 引入 BSD 世界作为 /bin/sh，FreeBSD 随后从 NetBSD 导入了 `ash` 实现，在功能上基本符合 POSIX.1-2024 标准中关于 shell 的规范要求。
+FreeBSD 系统默认采用的 shell 是 sh。FreeBSD 的 **/bin/sh** 并非 Stephen R. Bourne 在贝尔实验室为 UNIX V7 编写的原始 Bourne shell，而是基于 Kenneth Almquist 于 1989 年发布的 Almquist shell（ash），后者旨在作为 Bourne shell 更紧凑、更高效的替代品。NetBSD 最早将 ash 引入 BSD 世界作为 /bin/sh，FreeBSD 随后从 NetBSD 导入了 ash 实现，在功能上基本符合 POSIX.1-2024 标准中关于 shell 的规范要求。
 
-Linux 中常见的 shell 是 `bash`（Bourne Again shell，是对“Born Again”即“重生”的双关，意为“重生的 Bourne shell”）。而 macOS 中的默认 shell 通常是 `zsh`（Z shell）。
+Linux 中常见的 shell 是 bash（Bourne Again shell，是对“Born Again”即“重生”的双关，意为“重生的 Bourne shell”）。而 macOS 中的默认 shell 通常是 zsh（Z shell）。
 
-Linux 中同样提供 `sh`，但通常软链接到其他 shell（如 Debian/Ubuntu 中链接到 `dash`，部分发行版链接到 `bash`），它们并不是真正的 sh。
+Linux 中同样提供 sh，但通常软链接到其他 shell（如 Debian/Ubuntu 中链接到 dash，部分发行版链接到 bash），它们并不是真正的 sh。
 
-比如 Ubuntu 24.04 LTS 默认的 shell 是 `dash`：
+比如 Ubuntu 24.04 LTS 默认的 shell 是 dash：
 
 ```bash
 lrwxrwxrwx 1 root root 4  2 月 25 23:19 /bin/sh -> dash
 $ ls -l /bin/sh # 以长格式查看 /bin/sh 这个文件的详细信息
 ```
 
-`dash` 是 NetBSD 版本 `ash`（Almquist SHell）的直接后裔。
+dash 是 NetBSD 版本 ash（Almquist SHell）的直接后裔。
 
 ## 快捷键
 
@@ -144,7 +144,7 @@ alias ls ls -G
 
 并重新登录。
 
-- 如何使 FreeBSD 的 `csh` 像 `Bash` 那样按 Tab 列出无法补全的候选文件？在 **~/.cshrc** 文件中加入：
+- 如何使 FreeBSD 的 csh 像 Bash 那样按 Tab 列出无法补全的候选文件？在 **~/.cshrc** 文件中加入：
 
 ```sh
 set filec              # 启用命令行文件名补全
@@ -157,7 +157,7 @@ set autolist           # 自动显示补全列表
 # source ~/.cshrc
 ```
 
-- 如何使 `csh` 具备类似 `zsh` 的命令错误修正功能？
+- 如何使 csh 具备类似 zsh 的命令错误修正功能？
 
 例如，使用 emacs 编写 C 语言程序时，输入 `emacs ma` 并按 `Tab` 键再按回车键，会匹配所有以 `ma` 开头的文件。此配置可以忽略部分匹配的文件，即按 `Tab` 时不会列出被忽略的文件，便于编程，不会匹配二进制 `.o` 文件等。
 
@@ -219,7 +219,7 @@ chsh: user information updated
 
 > **注意**
 >
-> chsh、chfn、chpass 是同一个程序，通过不同名称调用。非超级用户只能将 shell 更改为 **/etc/shells** 中列出的标准 shell；从非标准 shell 更改或更改为非标准 shell 均会拒绝。编辑器由 `EDITOR` 环境变量决定，默认使用 vi(1)。修改完成后需要通过 pwd_mkdb(8) 更新用户数据库。
+> `chsh`、`chfn`、`chpass` 是同一个程序，通过不同名称调用。非超级用户只能将 shell 更改为 **/etc/shells** 中列出的标准 shell；从非标准 shell 更改或更改为非标准 shell 均会拒绝。编辑器由 `EDITOR` 环境变量决定，默认使用 vi(1)。修改完成后需要通过 pwd_mkdb(8) 更新用户数据库。
 
 编辑 **~/.zshrc** 文件，添加下面几行：
 
