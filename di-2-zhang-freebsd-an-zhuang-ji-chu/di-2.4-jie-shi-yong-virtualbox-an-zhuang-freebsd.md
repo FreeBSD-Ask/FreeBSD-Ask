@@ -208,9 +208,13 @@ Wayland 下，缺少对应的 DRM/KMS 驱动支持，暂时无法使用。在虚
 
 ![FreeBSD 系统界面](../.gitbook/assets/virtualbox-kde.png)
 
-功能均正常。
+窗口缩放、鼠标无缝切换等功能均正常。
 
-### 文件夹共享
+![FreeBSD 系统界面](../.gitbook/assets/virtualbox-kde2.png)
+
+可以比较流畅地播放网络视频，音量偏低，可以提高最大音量。
+
+### 共享文件夹
 
 在宿主机和虚拟机之间传输文件的共享文件夹，可通过 `mount_vboxvfs` 挂载访问。可以使用 VirtualBox 图形界面创建共享文件夹。例如，要为虚拟机创建共享文件夹 **C:\Users\ykla\\**，并将其挂载到 **/mnt/bsdboxshare**，请执行：
 
