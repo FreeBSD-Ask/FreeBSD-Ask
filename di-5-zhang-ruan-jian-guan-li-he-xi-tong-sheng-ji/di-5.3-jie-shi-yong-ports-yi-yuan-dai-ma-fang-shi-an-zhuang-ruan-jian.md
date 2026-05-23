@@ -25,7 +25,7 @@ Submitted by:   jkh
 >
 > 上述示例说明：对于开源项目，无论使用何种版本控制系统，保留完整的提交记录都非常重要。
 
-NetBSD 和 OpenBSD 也使用 Ports，但实现并不通用。
+NetBSD 和 OpenBSD 也使用 Ports，但实现方式并不通用。
 
 #### 参考文献
 
