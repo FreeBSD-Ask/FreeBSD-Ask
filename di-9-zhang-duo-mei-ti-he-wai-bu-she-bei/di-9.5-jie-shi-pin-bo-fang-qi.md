@@ -101,7 +101,7 @@ Kodi 是一款知名的开源媒体中心软件，其曾用名为 XBMC（Xbox Me
 
 ## 附录：直接在 TTY 播放视频（mpv）
 
-可以直接在 Linux/FreeBSD 的 TTY（电传打字机，Teletypewriter，即纯文本终端）环境中使用 mpv 命令播放视频文件。
+可直接在 Linux/FreeBSD 的 TTY（电传打字机，Teletypewriter，即纯文本终端）环境中使用 mpv 命令播放视频文件。
 
 - 使用 pkg（二进制包管理器）安装：
 

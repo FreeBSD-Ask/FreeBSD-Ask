@@ -80,7 +80,7 @@ No devices installed from userspace.
 
 本实例使用的是 pcm2 设备，其对应的设备文件路径为 **/dev/dsp2**，下文配置中会使用该路径。
 
-可以使用 `sysctl -d dev.pcm.2` 命令查看相关硬件参数的详细含义，摘录关键的三项参数如下：
+可使用 `sysctl -d dev.pcm.2` 命令查看相关硬件参数的详细含义，摘录关键的三项参数如下：
 
 ```sh
 dev.pcm.2.bitperfect: bit-perfect playback/recording (0=disable, 1=enable)
