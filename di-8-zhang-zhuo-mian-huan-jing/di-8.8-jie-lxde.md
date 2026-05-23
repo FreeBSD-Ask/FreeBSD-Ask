@@ -34,9 +34,9 @@ LXDE 是一款轻量级桌面环境，专注于资源利用效率与简洁的交
 | `wqy-fonts` | 文泉驿中文字体 |
 | `xdg-user-dirs` | 管理用户目录，如“桌面”、“下载”等 |
 
-## `startx`
+## startx
 
-编辑 **~/.xinitrc** 文件，加入如下内容，以便通过 `startx` 命令启动 LXDE 桌面环境：
+编辑 **~/.xinitrc** 文件，加入如下内容，以便通过 startx 命令启动 LXDE 桌面环境：
 
 ```sh
 exec startlxde
