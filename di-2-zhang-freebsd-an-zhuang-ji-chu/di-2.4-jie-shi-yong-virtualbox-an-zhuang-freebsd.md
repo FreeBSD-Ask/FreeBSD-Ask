@@ -42,7 +42,7 @@ VirtualBox 安装完成后，依次创建并配置虚拟机。
 
 > **警告**
 >
-> 请勿同时勾选"启用 3D 加速"，否则将导致 `VBoxSVGA` 控制器失效，显卡无法正常驱动。
+> 请勿同时勾选“启用 3D 加速”，否则将导致 `VBoxSVGA` 控制器失效，显卡无法正常驱动。
 
 ![显示设置](../.gitbook/assets/virtualbox-5-5.png)
 
@@ -50,7 +50,7 @@ VirtualBox 安装完成后，依次创建并配置虚拟机。
 
 ![NVMe 硬盘](../.gitbook/assets/virtualbox-5-6.png)
 
-点击"启动"，开始安装 FreeBSD。
+点击“启动”，开始安装 FreeBSD。
 
 ![FreeBSD 安装界面](../.gitbook/assets/virtualbox-6.png)
 
@@ -74,7 +74,7 @@ VirtualBox 安装完成后，依次创建并配置虚拟机。
 hw.efi.poweroff=0
 ```
 
-然后重启系统，再执行关机即可恢复正常，该设置禁用 EFI 电源关闭功能，使系统通过 ACPI 完成关机
+然后重启系统，再执行关机即可恢复正常。该设置禁用 EFI 电源关闭功能，使系统通过 ACPI 完成关机。
 
 ### 参考文献
 
