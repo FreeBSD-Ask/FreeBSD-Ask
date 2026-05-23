@@ -95,7 +95,7 @@ Chromium 不同于 Chrome，在 FreeBSD 中的启动命令为 `chrome`。
 
 ![邮件列表设置](../.gitbook/assets/join-chromium-dev-for-api3.png)
 
-加入 Google browser sign-in test account 群组后，会看到“您无权访问此内容”之类的提示，此属正常现象，无需担心。
+加入 Google browser sign-in test account 群组后，会看到"您无权访问此内容"等提示，此属正常现象，无需担心。
 
 ![join-mail-list-for-google-api-error2](../.gitbook/assets/join-chromium-mail-list-2error.png)
 
@@ -174,7 +174,7 @@ Chromium 不同于 Chrome，在 FreeBSD 中的启动命令为 `chrome`。
 
 ![创建 API 密钥](../.gitbook/assets/chromium-use-google-api-guide-17.png)
 
-即可获得一个 API 密钥（这是示例，读者必须自行生成）：`AIzaSyDVpYvJQUn9HTjAiD89y3xBDOG3oaxV5_E`
+即可获得一个 API 密钥（此为示例，读者必须自行生成）：`AIzaSyDVpYvJQUn9HTjAiD89y3xBDOG3oaxV5_E`
 
 ![API 密钥生成](../.gitbook/assets/chromium-use-google-api-guide-18.png)
 
