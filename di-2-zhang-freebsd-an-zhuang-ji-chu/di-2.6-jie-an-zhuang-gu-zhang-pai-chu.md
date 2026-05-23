@@ -31,13 +31,13 @@
 
 若是虚拟机，请手动弹出或断开虚拟 DVD 光驱的自动连接，而后重启。若是物理机，请拔出 U 盘或弹出安装光盘后重启。
 
-## 启动时输出若干 ACPI 字样的报错信息
+## 启动时输出若干 ACPI 字样的错误信息
 
 > **警告**
 >
 > 某些文章建议关闭 ACPI，该做法已缺乏技术依据。除非是非 x86 架构，否则现代计算机不应关闭 ACPI。ACPI 与电源状态管理、设备节能、多处理器支持等功能密切相关，关闭 ACPI 的选项应视为遗留功能，仅在不支持 UEFI 的旧式计算机上才需考虑。
 
-若出现 ACPI 报错，大多数情况下不影响正常使用。通常可通过更新主板 BIOS 或固件解决。少数情况下可能需要修补 SSDT（Secondary System Description Table，次级系统描述表）和 DSDT（Differentiated System Description Table，差异化系统描述表）。
+若出现 ACPI 错误提示，大多数情况下不影响正常使用。通常可通过更新主板 BIOS 或固件解决。少数情况下可能需要修补 SSDT（Secondary System Description Table，次级系统描述表）和 DSDT（Differentiated System Description Table，差异化系统描述表）。
 
 制造商通常建议非必要不升级主板 BIOS，应仅在出现关键更新时才考虑升级。升级过程 **可能** 出现问题（如意外断电），造成 BIOS 固件不完整，导致计算机无法正常工作。
 
