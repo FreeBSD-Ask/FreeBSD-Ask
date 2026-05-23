@@ -85,7 +85,7 @@ macOS 系列操作系统可以看作独立的、类 BSD 操作系统分支，与
 
 > **注意**
 >
-> macOS 中的许多命令行工具（如 sed、grep、awk）已是较旧版本，与 FreeBSD 当前版本相比存在差异。
+> macOS 中的许多命令行工具（如 `sed`、`grep`、`awk`）已是较旧版本，与 FreeBSD 当前版本相比存在差异。
 
 ## 文件系统 APFS 与 ZFS 比较
 

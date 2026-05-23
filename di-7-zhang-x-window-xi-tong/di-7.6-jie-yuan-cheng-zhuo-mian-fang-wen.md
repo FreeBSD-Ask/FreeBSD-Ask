@@ -235,31 +235,6 @@ $ ps
 
 ```sh
 # pkg info -D xrdp
-xrdp-0.10.2_2,1:
-On install:
-xrdp has been installed.
-# xrdp 已成功安装。
-
-There is an rc.d script, so the service can be enabled by adding this line
-in /etc/rc.conf:
-
-xrdp_enable="YES"
-xrdp_sesman_enable="YES"
-# 提供了 rc.d 启动脚本，可通过在 /etc/rc.conf 中添加以上两行启用服务。
-# 第一个启动 xrdp 主服务，第二个启动会话管理器（sesman）。
-
-Do not forget to edit the configuration files in "/usr/local/etc/xrdp"
-and the "/usr/local/etc/xrdp/startwm.sh" script.
-# 编辑 /usr/local/etc/xrdp 下的配置文件，
-以及修改 /usr/local/etc/xrdp/startwm.sh 来设置登录后启动的桌面环境。
-
-To enable audio redirection, install the following ports/packages to meet
-your environment.
-# 如需启用音频重定向（远程桌面声音传输），请根据当前系统环境安装以下软件包：
-
-- audio/pipewire-module-xrdp
-- audio/pulseaudio-module-xrdp
-# 上述为支持 xrdp 音频的模块，可根据实际使用的音频系统选择安装。
 ```
 
 ### 配置 XRDP
@@ -549,32 +524,6 @@ Do you trust this certificate (yes/no)? # 输入 yes，按回车键
 
 ```sh
 # pkg info -D anydesk
-anydesk-6.1.1_2:
-On install:
-1. Minimum OS version.
-======================
-Anydesk is a binary package for FreeBSD.
-Minimal recommended is 1 GiB system memory
-installed but performance will be reduced.
-For good performance is recommended and 2 GiB
-system memory.
-# Anydesk 是适用于 FreeBSD 的二进制软件包。
-# 最低推荐内存为 1 GiB，但这将导致性能下降。
-要获得良好性能，建议至少配备 2 GiB 系统内存。
-
-2. Important settings
-=====================
-Since Version 2.9.1 the following prerequisites have to be met:
-# 从 2.9.1 版本起，必须满足以下前提条件：
-
-You need a mounted /proc directory. Either mount it manually or add it to your /etc/fstab file:
-# 需要挂载 /proc 目录，可手动挂载，或将其写入 /etc/fstab 以便开机自动挂载：
-
- fstab: proc /proc procfs rw 0 0
-# 在 /etc/fstab 中添加此行以启用 procfs。
-
- manually: # mount -t procfs proc /proc
-# 或者手动执行此命令来挂载 proc 文件系统。
 ```
 
 提示需要挂载 proc 文件系统，经测试未挂载该文件系统时程序无法正常启动。
