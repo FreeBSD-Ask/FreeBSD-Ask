@@ -1,6 +1,6 @@
 # 4.3 macOS 用户迁移指南
 
-macOS 与 FreeBSD 共享大量 BSD 组件，因此从 macOS 迁移到 FreeBSD，命令行上手比从 Windows 迁移容易得多。
+macOS 与 FreeBSD 共享大量 BSD 组件，因此从 macOS 迁移到 FreeBSD，命令行入门较从 Windows 迁移更为容易。
 
 ## 共同的 BSD 血脉
 
