@@ -313,7 +313,7 @@ search 和 domain 选项只能使用其中一个。使用 DHCP 时，`dhclient(8
 
 手动编辑 **/etc/resolv.conf** 文件后，因为动态主机配置协议（Dynamic Host Configuration Protocol，DHCP）客户端在获取网络配置时会通过 `resolvconf` 服务重写该文件，重启系统时该文件可能被重置。
 
-若需使用手动配置的 DNS 服务器而不希望系统自动更新覆盖，可禁用 resolvconf 服务。编辑 **/etc/resolvconf.conf** 文件（如不存在则创建），写入 `resolvconf=NO` 一行，该配置将禁用系统对 DNS 配置文件的自动更新。
+若需使用手动配置的 DNS 服务器而不希望系统自动更新覆盖，可禁用 `resolvconf` 服务。编辑 **/etc/resolvconf.conf** 文件（如不存在则创建），写入 `resolvconf=NO` 一行，该配置将禁用系统对 DNS 配置文件的自动更新。
 
 ### 参考文献
 
@@ -334,7 +334,7 @@ search 和 domain 选项只能使用其中一个。使用 DHCP 时，`dhclient(8
 - 防火墙是否正确配置？
 - 网卡是否受 FreeBSD 支持？
 
-如果网卡工作正常但性能不佳，可参阅 tuning(7)。因为不正确的网络设置可能导致连接缓慢，同时检查网络配置。
+如果网卡工作正常但性能不佳，可参阅 `tuning(7)`。因为不正确的网络设置可能导致连接缓慢，同时检查网络配置。
 
 “No route to host”消息表示系统无法将数据包路由到目标主机。这通常是因为未指定默认路由或网线未插入。可使用 `route get <目标地址>` 命令查看系统对特定目标的路由决策，再检查 `netstat -rn` 的输出，确保有到主机的有效路由。
 
