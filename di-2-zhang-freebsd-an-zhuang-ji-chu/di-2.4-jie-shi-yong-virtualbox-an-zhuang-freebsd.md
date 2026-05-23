@@ -16,7 +16,7 @@ VirtualBox 安装完成后，创建并配置虚拟机。
 
 ![VirtualBox 主界面](../.gitbook/assets/virtualbox-1.png)
 
-在 VirtualBox 主界面中选择选择“新建”。
+在 VirtualBox 主界面中选择"新建"。
 
 ![新建虚拟机](../.gitbook/assets/virtualbox-2.png)
 
