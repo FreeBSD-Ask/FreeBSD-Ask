@@ -87,7 +87,7 @@ ThinkPad 可以启用 IBM ACPI 支持和 ACPI 视频支持。
 
 ### 英特尔/AMD 显卡
 
-backlight 工具自 FreeBSD 13 引入。
+`backlight` 工具自 FreeBSD 13 引入。
 
 ```sh
 # backlight          # 打印当前亮度
