@@ -225,7 +225,7 @@ IPv6 地址有三种不同类型：
 # sysrc rtsold_enable="YES"
 ```
 
-注意，启用 IPv6 数据包转发（即 `ipv6_gateway_enable=YES`）后，除非将 `net.inet6.ip6.rfc6204w3` `sysctl(8)` 变量设置为 1，否则系统不会配置 SLAAC 地址。
+注意，启用 IPv6 数据包转发（即 `ipv6_gateway_enable=YES`）后，除非将 `net.inet6.ip6.rfc6204w3` sysctl(8) 变量设置为 1，否则系统不会配置 SLAAC 地址。
 
 ### 配置静态 IPv6 地址
 
