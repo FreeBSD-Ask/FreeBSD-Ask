@@ -367,7 +367,7 @@ setuid 最典型的应用场景是 `passwd(1)` 命令。
 -r-sr-xr-x  1 root wheel 8368 Apr 13 12:38 /usr/bin/passwd
 ```
 
-普通用户修改密码时需要更新 **/etc/master.passwd** 文件，而该文件只有 root 才有写权限。通过 setuid 机制，`passwd` 命令以 root 的 EUID 运行，从而获得修改密码文件的权限。`passwd(1)` 以普通用户的实际用户 ID 运行，但为了更新密码数据库，该命令以 root 用户的有效 ID 运行，使用户能够更改密码而不会遇到“Permission Denied”错误。
+普通用户修改密码时需要更新 **/etc/master.passwd** 文件，而该文件只有 root 才有写权限。通过 setuid 机制，`passwd` 命令以 root 的 EUID 运行，从而获得修改密码文件的权限。passwd(1) 以普通用户的实际用户 ID 运行，但为了更新密码数据库，该命令以 root 用户的有效 ID 运行，使用户能够更改密码而不会遇到"Permission Denied"错误。
 
 setuid 位数字表示法中在三位权限码前加 `4`（如 `4555`），使用命令显示完整权限（含类型和特殊位，八进制）：
 
