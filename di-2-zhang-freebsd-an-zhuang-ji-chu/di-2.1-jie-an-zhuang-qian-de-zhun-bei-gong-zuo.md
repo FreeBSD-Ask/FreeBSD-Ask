@@ -161,9 +161,9 @@ FreeBSD `-RELEASE` 历史版本下载地址：
 
 制作 U 盘安装介质时，建议使用 `-img` 或 `-img.xz` 格式的镜像。`.iso` 镜像采用混合启动（Hybrid）模式，该模式同时支持从光驱和 U 盘启动，但可能未完全遵循 UEFI 规范，直接写入 U 盘可能导致启动错误。详见 FreeBSD Project. FreeBSD -.iso files not support written to USB drive[EB/OL]. [2026-03-25]. <https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=236786>. 该 Bug 报告记录了 ISO 镜像直接写入 USB 设备的兼容性问题。建议读者仅在使用光学介质、虚拟机或云平台安装时选用 `iso` 结尾的镜像。
 
-然而，也存在例外情况。部分机器的 UEFI 固件支持从 `.iso` 镜像刻录的 U 盘启动（例如一些老款神舟电脑），但并非所有机器都支持此方式（例如部分小米电脑可能无法引导）。
+然而，也存在例外情况。部分主机的 UEFI 固件支持从 `.iso` 镜像刻录的 U 盘启动（例如一些老款神舟电脑），但并非所有主机都支持此方式（例如部分小米电脑可能无法引导）。
 
-由于设备类型多样，即使在某台机器上测试通过，FreeBSD 的两个 ISO 镜像仍可能出现兼容性问题。若遇到引导问题，请首先尝试使用 Rufus 刻录 `img` 镜像。
+由于设备类型多样，即使在某台主机上测试通过，FreeBSD 的两个 ISO 镜像仍可能出现兼容性问题。若遇到引导问题，请首先尝试使用 Rufus 刻录 `img` 镜像。
 
 ### Windows 平台下 Rufus 刻录方法
 
