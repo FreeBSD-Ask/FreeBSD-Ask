@@ -202,4 +202,4 @@ FreeBSD 是一款开源的类 UNIX 操作系统，直接继承自 BSD UNIX，广
 - FreeBSD Project. About the FreeBSD Project[EB/OL]. [2026-04-17]. <https://docs.freebsd.org/en/books/handbook/introduction/>. FreeBSD 项目起源于 1993 年初，首个正式版本于 1993 年 11 月 1 日发布。
 - QNX Software Systems. io-pkt Networking Stack[EB/OL]. [2026-04-17]. <https://www.qnx.com/developers/docs/6.5.0SP1.update/com.qnx.doc.neutrino_sys_arch/tcpip.html>. QNX 官方文档指出“io-pkt is...closely tracks the NetBSD stack source”，其网络栈主要派生自 NetBSD 而非 FreeBSD。
 - Phoronix. Intel Ivy Bridge Borked On FreeBSD[EB/OL]. (2014-01-31)[2026-04-17]. <https://www.phoronix.com/news/MTEyNDg>. FreeBSD 10-RC5 在 Intel HD 4000 (Ivy Bridge) 显卡上存在图形驱动问题，无法正常启动。
-- procps-ng Project. procps Package Documentation[EB/OL]. [2026-04-17]. <https://gitlab.com/procps-ng/procps>. procps 包中 free 命令通过读取 Linux procfs (/proc/meminfo) 获取内存信息，而 FreeBSD 已弃用 procfs，故该命令无法使用。
+- procps-ng Project. procps Package Documentation[EB/OL]. [2026-04-17]. <https://gitlab.com/procps-ng/procps>. procps 包中 free 命令通过读取 Linux procfs (**/proc/meminfo**) 获取内存信息，而 FreeBSD 已弃用 procfs，故该命令无法使用。
