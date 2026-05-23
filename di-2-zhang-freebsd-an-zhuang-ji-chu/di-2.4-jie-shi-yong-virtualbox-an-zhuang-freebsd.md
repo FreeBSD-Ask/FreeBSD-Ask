@@ -135,7 +135,7 @@ default            10.0.2.2           UGS             em0 # 网络地址转换(N
 ### 参考文献
 
 - Oracle. Network Address Translation (NAT)[EB/OL]. [2026-03-26]. <https://www.virtualbox.org/manual/topics/networkingdetails.html#network_nat>. 也可以按照手册中的端口转发来连通网络。
--  Oracle Corporation. 6.3. Network Address Translation (NAT)[EB/OL]. [2026-04-04]. <https://www.virtualbox.org/manual/topics/networkingdetails.html#network_nat>. “网络地址转换（NAT）”与“NAT 网络”选项的区别。
+- Oracle Corporation. 6.3. Network Address Translation (NAT)[EB/OL]. [2026-04-04]. <https://www.virtualbox.org/manual/topics/networkingdetails.html#network_nat>. “网络地址转换（NAT）”与“NAT 网络”选项的区别。
 
 ## 虚拟机增强工具
 
