@@ -255,7 +255,7 @@ $ echo "exec ck-launch-session startplasma-x11" > ~/.xinitrc
 
 ### 启动 SDDM 提醒 **/usr/bin/xauth**: `(stdin):1: bad display name`，但是可以正常 `startx`
 
-需要在 **/etc/rc.conf** 文件中检查是否已设置 `hostname="XXX"`（理论上应当存在该条目，也不应为 `hostname=""`）：
+需要在 **/etc/rc.conf** 文件中检查是否已设置 `hostname="XXX"`（该条目应当存在，且不应为 `hostname=""`）：
 
 ![检查是否设置了主机名](../.gitbook/assets/errornohostname.png)
 
