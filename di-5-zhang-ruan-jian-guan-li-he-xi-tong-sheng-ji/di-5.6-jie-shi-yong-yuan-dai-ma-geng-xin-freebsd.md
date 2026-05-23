@@ -110,7 +110,7 @@ $ git clone --branch releng/15.0 --single-branch --depth 1 https://github.com/fr
 ## 开始编译
 
 ```sh
-# cd /usr/src          # 切到工作目录
+# cd /usr/src          # 切换到工作目录
 # make -j4 buildworld  # 编译世界
 # make -j4 kernel      # 编译并安装内核
 # reboot               # 重启以使用新内核
