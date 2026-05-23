@@ -518,7 +518,7 @@ MASTER_SITE_OVERRIDE?=https://mirrors.ustc.edu.cn/freebsd-ports/distfiles/${DIST
 
 ### 为什么 `pkg` 配置文件中要写完整选项（mirror_type / signature_type / fingerprints）
 
-虽然仅写 `url` 和 `enabled: yes` 时 pkg 也能正常工作（pkg 会默认 `mirror_type: "none"` 和 `signature_type: "none"`），但这样做将 **关闭签名验证**。系统不会检查 pkg 下载的包是否被篡改，可能存在安全风险（尤其是 ports、kmods 和 pkgbase 系统包）。
+虽然仅写 `url` 和 `enabled: yes` 时 `pkg` 也能正常工作（`pkg` 会默认 `mirror_type: "none"` 和 `signature_type: "none"`），但这样做将 **关闭签名验证**。系统不会检查 `pkg` 下载的包是否被篡改，可能存在安全风险（尤其是 ports、kmods 和 pkgbase 系统包）。
 
 其优点在于：
 
@@ -562,7 +562,7 @@ Fetching http://ftp-archive.freebsd.org/pub/FreeBSD-Archive/ports/amd64/packages
 
 > **注意**
 >
-> 因为当时 pkgng 还没有被官方支持，仍然仅支持使用 `pkg_*` 命令，所以 pkg 是不可用的，会提示找不到 `digests.txz` 和 `repo.txz`。
+> 因为当时 pkgng 还没有被官方支持，仍然仅支持使用 `pkg_*` 命令，所以 `pkg` 是不可用的，会提示找不到 `digests.txz` 和 `repo.txz`。
 
 ## 课后习题
 

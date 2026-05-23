@@ -58,11 +58,11 @@ freebsd-ports = 第三方软件集合（单个称为 Port）= Ports 框架存储
 
 Port 是若干文件的集合，由源代码包校验和、说明文件、补丁等构成，其中 Makefile 是核心。Arch 的 PKGBUILD 或 Gentoo 的 ebuild 与此类似，事实上它们衍生自 Ports 框架。
 
-pkg 包直接由 freebsd-ports 通过 poudriere 构建系统构建而来。
+pkg 包直接由 freebsd-ports 通过 `poudriere` 构建系统构建而来。
 
 freebsd-ports 的 main 分支即 latest 源，形如 2026Q1 的分支（最新的那个季度）即 quarter 分支。季度分支直接从 main 按季度切出。
 
-默认基本系统不含任何 Port 软件，甚至不含 pkg 包管理器本体（传统安装模式）。大多数硬件固件也已从基本系统移至 Ports。
+默认基本系统不含任何 Port 软件，甚至不含 `pkg` 包管理器本体（传统安装模式）。大多数硬件固件也已从基本系统移至 Ports。
 
 ### init 系统
 

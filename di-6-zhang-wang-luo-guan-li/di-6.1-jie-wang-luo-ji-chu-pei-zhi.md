@@ -338,13 +338,13 @@ search 和 domain 选项只能使用其中一个。使用 DHCP 时，`dhclient(8
 
 “No route to host”消息表示系统无法将数据包路由到目标主机。这通常是因为未指定默认路由或网线未插入。可使用 `route get <目标地址>` 命令查看系统对特定目标的路由决策，再检查 `netstat -rn` 的输出，确保有到主机的有效路由。
 
-“ping: sendto: Permission denied”错误消息通常由防火墙配置错误引起。如果在 FreeBSD 上启用了防火墙但未定义规则，默认策略是拒绝所有流量，甚至是 ping(8)。
+“ping: sendto: Permission denied”错误消息通常由防火墙配置错误引起。如果在 FreeBSD 上启用了防火墙但未定义规则，默认策略是拒绝所有流量，甚至是 `ping(8)`。
 
 ## 附录：网络配置 rc.conf 示例
 
 > **注意**：
 >
-> 修改 **/etc/rc.conf** 文件后，需重启系统或运行命令 **/etc/rc.d/netif restart** 来应用网络更改。
+> 修改 **/etc/rc.conf** 文件后，需重启系统或运行命令 `/etc/rc.d/netif restart` 来应用网络更改。
 
 ```ini
 hostname="ykla"  # 主机名，不能为空，否则无法使用 Xorg
