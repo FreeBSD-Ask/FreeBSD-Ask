@@ -86,7 +86,7 @@ lo0: flags=8049<UP,LOOPBACK,RUNNING,MULTICAST> metric 0 mtu 16384
 
 ### 配置动态 IPv4 地址
 
-如果网络中有 DHCP 服务器，可使用 DHCP 动态获取 IP 地址。具体而言，FreeBSD 使用 dhclient(8) 作为 DHCP 客户端，dhclient(8) 可自动获取 IP 地址、子网掩码和默认路由器。
+如果网络中有 DHCP 服务器，可使用 DHCP 动态获取 IP 地址。具体来说，FreeBSD 使用 dhclient(8) 作为 DHCP 客户端，dhclient(8) 可自动获取 IP 地址、子网掩码和默认路由器。
 
 > **注意**
 >
@@ -191,7 +191,7 @@ IPv6 是 IP 协议的新版本，也称为 IPv4 的后继。IPv6 相对于 IPv4 
 - 对移动 IP 的支持。
 - IPv6 到 IPv4 的过渡机制。
 
-FreeBSD 包括 KAME 项目 IPv6 参考实现，并附带 IPv6 所需的全部组件。
+FreeBSD 集成了 KAME 项目 IPv6 参考实现，并附带 IPv6 所需的全部组件。
 
 IPv6 地址有三种不同类型：
 
@@ -272,7 +272,7 @@ root@f:/home/ykla #
 
 ## DNS 配置详解
 
-可将 DNS 理解为电话簿，其中 IP 地址与主机名相互对应。除非 **/etc/nsswitch.conf** 文件中另有说明，FreeBSD 将首先查看 **/etc/hosts** 文件中的地址，然后查看 **/etc/resolv.conf** 文件中的 DNS 信息。
+可将 DNS 类比作电话簿，其中 IP 地址与主机名相互对应。除非 **/etc/nsswitch.conf** 文件中另有说明，FreeBSD 将首先查看 **/etc/hosts** 文件中的地址，然后查看 **/etc/resolv.conf** 文件中的 DNS 信息。
 
 相关文件结构：
 
@@ -285,7 +285,7 @@ root@f:/home/ykla #
 
 ### 本地地址 hosts 文件
 
-**/etc/hosts** 文件是一个简单的文本数据库，提供主机名到 IP 地址的映射。通过 LAN 连接的本地计算机条目可添加到此文件中，用于简单的命名目的，无须设置 DNS 服务器。此外，**/etc/hosts** 文件可用于提供 Internet 名称的本地记录，减少对外部 DNS 服务器的查询需求。
+**/etc/hosts** 文件是一个简单的文本数据库，提供主机名到 IP 地址的映射。通过 LAN 连接的本地计算机条目可添加到此文件中，用于简单的主机名解析，无须设置 DNS 服务器。此外，**/etc/hosts** 文件可用于提供 Internet 名称的本地记录，减少对外部 DNS 服务器的查询需求。
 
 例如，在本地环境中有 www/gitlab-ce 的本地实例，可以将如下行添加到 **/etc/hosts** 文件：
 
@@ -334,7 +334,7 @@ search 和 domain 选项只能使用其中一个。使用 DHCP 时，dhclient(8)
 - 防火墙是否正确配置？
 - 网卡是否受 FreeBSD 支持？
 
-如果网卡工作正常但性能不佳，可参阅 tuning(7)。因为不正确的网络设置可能导致连接缓慢，同时检查网络配置。
+如果网卡工作正常但性能不佳，可参阅 tuning(7)。不正确的网络设置可能导致连接缓慢，应同时检查网络配置。
 
 “No route to host”消息表示系统无法将数据包路由到目标主机。这通常是因为未指定默认路由或网线未插入。可使用 `route get <目标地址>` 命令查看系统对特定目标的路由决策，再检查 `netstat -rn` 的输出，确保有到主机的有效路由。
 
