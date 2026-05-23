@@ -81,7 +81,7 @@ proc           /proc       procfs  rw  0   0
 
 ![FreeBSD 安装 icewm](../.gitbook/assets/icewm3.png)
 
-安装后的默认界面如上图所示，可以选择更换主题：
+安装后的默认界面如上图所示，可选择更换主题：
 
 ![FreeBSD 安装 icewm](../.gitbook/assets/icewm1.png)
 
