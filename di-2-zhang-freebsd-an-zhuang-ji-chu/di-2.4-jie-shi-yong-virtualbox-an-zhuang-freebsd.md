@@ -200,7 +200,7 @@ vboxservice_flags="--disable-timesync"
 
 ### 桌面预览
 
-在 Wayland 环境下，由于缺少对应的 DRM/KMS 驱动支持，桌面功能暂不可用。在虚拟机中安装启动 X11 下的 KDE：
+在 Wayland 环境下，由于缺少对应的 DRM/KMS 驱动支持，桌面功能暂不可用。以下演示在虚拟机中安装并启动 X11 下的 KDE：
 
 ![FreeBSD 系统界面](../.gitbook/assets/virtualbox-kde.png)
 
@@ -208,11 +208,11 @@ vboxservice_flags="--disable-timesync"
 
 ![FreeBSD 系统界面](../.gitbook/assets/virtualbox-kde2.png)
 
-视频播放较为流畅，但默认音量偏低，可适当调高系统音量
+视频播放较为流畅，但默认音量偏低，可适当调高系统音量。
 
 ### 共享文件夹
 
-在宿主机和虚拟机之间传输文件的共享文件夹，可通过 `mount_vboxvfs` 挂载访问。可以使用 VirtualBox 图形界面创建共享文件夹。例如，要为虚拟机创建共享文件夹 **C:\Users\ykla\\**，并将其挂载到 **/mnt/bsdboxshare**，请执行：
+共享文件夹用于在宿主机与虚拟机之间传输文件，可通过 `mount_vboxvfs` 命令挂载访问。以下示例在 VirtualBox 图形界面中创建共享文件夹 **C:\Users\ykla\\**，并将其挂载至虚拟机内的 **/mnt/bsdboxshare**：
 
 ![编辑共享文件夹](../.gitbook/assets/virtualbox-file.png)
 
@@ -248,7 +248,7 @@ VBOXVFS[1]: sfprov_mount: path: [ykla]
 
 ### 鼠标被捕获在虚拟机窗口内，无法移出
 
-请先按右侧的 `Ctrl` 键（默认设置下键盘左右各有一个 `Ctrl`），如果因自动缩放需要还原屏幕或找不到菜单栏，请按 `Home` + 右侧 `Ctrl`。
+按下右侧 `Ctrl` 键即可释放鼠标（默认设置下键盘左右各有一个 `Ctrl` 键）。若因自动缩放需要还原屏幕或无法找到菜单栏，请按 `Home` + 右侧 `Ctrl`。
 
 > **技巧**
 >
@@ -256,4 +256,4 @@ VBOXVFS[1]: sfprov_mount: path: [ykla]
 
 ### UEFI 固件设置
 
-开机时连续按 `Esc` 键即可进入 VirtualBox 虚拟机的 UEFI 固件设置。
+开机时连续按 `Esc` 键即可进入 VirtualBox 虚拟机的 UEFI 固件设置界面。
