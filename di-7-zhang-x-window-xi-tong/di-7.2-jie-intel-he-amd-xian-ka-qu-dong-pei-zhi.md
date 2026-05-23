@@ -65,7 +65,7 @@
 
 ### 安装 Mesa 的 Gallium VA-API 和 VDPAU 支持包
 
-- 使用 pkg 安装：
+- 使用 `pkg` 安装：
 
 ```sh
 # pkg install mesa-gallium-va mesa-gallium-vdpau
