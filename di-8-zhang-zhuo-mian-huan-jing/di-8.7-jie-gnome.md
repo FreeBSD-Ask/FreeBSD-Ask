@@ -56,7 +56,7 @@ proc /proc procfs rw 0 0
 # service gdm enable
 ```
 
-输入以下命令，将 GNOME 会话命令写入 **~/.xinitrc** 文件，以便使用命令 startx 启动 GNOME：
+执行以下命令，将 GNOME 会话命令写入 **~/.xinitrc** 文件，以便使用命令 startx 启动 GNOME：
 
 ```sh
 $ echo "/usr/local/bin/gnome-session" > ~/.xinitrc
@@ -74,7 +74,7 @@ $ echo "/usr/local/bin/gnome-session" > ~/.xinitrc
 
 ## 为 GNOME 桌面环境配置中文环境
 
-本小节的配置参数与用户 shell 无关，即使使用 csh 也应如此配置。
+本小节的配置参数与用户 shell 无关，即使使用 csh 也应按此方式配置。
 
 使用文本编辑器打开 GDM 本地化配置文件 **/usr/local/etc/gdm/locale.conf**，修改语言设置。将原有内容替换如下：
 
@@ -90,7 +90,7 @@ IBus、Fcitx 5 二选一即可。
 
 ### IBus
 
-GNOME 捆绑的输入法框架是 IBus。
+GNOME 默认使用的输入法框架是 IBus。
 
 使用 pkg 安装：
 
