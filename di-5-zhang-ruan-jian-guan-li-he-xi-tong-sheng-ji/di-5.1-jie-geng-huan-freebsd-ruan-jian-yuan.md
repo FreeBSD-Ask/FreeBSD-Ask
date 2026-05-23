@@ -500,7 +500,7 @@ USTC-base: {
 >
 > ports 源可能并不完整，这是受 Ports 框架结构的限制。详细信息可参考 <https://github.com/ustclug/discussions/issues/408>。
 
-创建或修改文件 **/etc/make.conf**。写入以下配置文件 **之一**：
+创建或修改文件 **/etc/make.conf**。写入以下配置 **之一**：
 
 - 南京大学开源镜像站
 
@@ -543,7 +543,7 @@ MASTER_SITE_OVERRIDE?=https://mirrors.ustc.edu.cn/freebsd-ports/distfiles/${DIST
 >
 > 网易开源镜像站还提供了 FreeBSD 11、12 等过期版本的 pkg 二进制源。可自行配置使用。但可能存在安全风险。
 
-不受安全支持的版本也是可以使用二进制源的。以下以 `FreeBSD 9.2` 为例：
+不受安全支持的版本同样可以使用二进制源。以下以 `FreeBSD 9.2` 为例：
 
 首先切换到可用的二进制源。
 
