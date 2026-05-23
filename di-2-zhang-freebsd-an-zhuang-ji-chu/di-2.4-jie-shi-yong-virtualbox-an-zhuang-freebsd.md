@@ -30,7 +30,7 @@ VirtualBox 安装完成后，创建并配置虚拟机。
 
 > **技巧**
 >
-> 请使用 UEFI，Xorg 可以自动识别驱动，**无需** 手动配置 **/usr/local/etc/X11/xorg.conf**；Wayland 下，缺少对应的 DRM/KMS 驱动支持，暂时无法使用。
+> 请使用 UEFI，Xorg 可以自动识别驱动，**无需** 手动配置 **/usr/local/etc/X11/xorg.conf**；
 
 ![硬件设置](../.gitbook/assets/virtualbox-4.png)
 
@@ -202,9 +202,17 @@ VirtualBox 的虚拟机增强工具（Guest Additions）是一组运行在虚拟
 vboxservice_flags="--disable-timesync"
 ```
 
+### 桌面预览
+
+Wayland 下，缺少对应的 DRM/KMS 驱动支持，暂时无法使用。在虚拟机中安装启动 X11 下的 KDE：
+
+![FreeBSD 系统界面](../.gitbook/assets/virtualbox-kde.png)
+
+功能均正常。
+
 ### 文件夹共享
 
-在宿主机和虚拟机之间传输文件的共享文件夹，可通过 `mount_vboxvfs` 挂载访问。可以使用 VirtualBox 图形界面创建共享文件夹。例如，要为虚拟机 *FreeBSD* 创建共享文件夹 **C:\Users\ykla\**，并将其挂载到 **/mnt/bsdboxshare**，请执行：
+在宿主机和虚拟机之间传输文件的共享文件夹，可通过 `mount_vboxvfs` 挂载访问。可以使用 VirtualBox 图形界面创建共享文件夹。例如，要为虚拟机创建共享文件夹 **C:\Users\ykla\\**，并将其挂载到 **/mnt/bsdboxshare**，请执行：
 
 ![编辑共享文件夹](../.gitbook/assets/virtualbox-file.png)
 
