@@ -204,7 +204,7 @@ $ ps
 # ipfw add allow tcp from any to me 5900-5910 in keep-state
 ```
 
-上述命令表示放通端口 5900-5910，即 DISPLAY 0-10。执行 `ipfw list` 可查看当前所有防火墙规则以确认已生效。
+上述命令表示开放端口 5900-5910，即 DISPLAY 0-10。执行 `ipfw list` 可查看当前所有防火墙规则以确认已生效。
 
 ### 参考文献
 
