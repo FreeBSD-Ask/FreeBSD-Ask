@@ -70,6 +70,21 @@ FreeBSD 安装完成后，请手动关机并卸载或删除安装光盘（询问
 
 ![FreeBSD 系统界面](../.gitbook/assets/virtualbox-9.png)
 
+## 解决 EFI 下无法正常关机
+
+编辑 **/etc/sysctl.conf** 文件，添加以下内容：
+
+```ini
+hw.efi.poweroff=0
+```
+
+然后重启系统，再执行关机即可恢复正常，即禁用 EFI 电源关闭功能，使系统通过 ACPI 正常关机。
+
+### 参考文献
+
+- mib. 12.0-U8.1 -> 13.0-U2 poweroff problem & solution[EB/OL]. (2022-12-23)[2026-03-26]. <https://www.truenas.com/community/threads/12-0-u8-1-13-0-u2-poweroff-problem-solution.104813/>. 提供了 EFI 环境下 FreeBSD 关机问题的解决方案。
+- FreeBSD Forums. EFI: VirtualBox computer non-stop after successful shutdown of FreeBSD[EB/OL]. (2022-04-28)[2026-03-26]. <https://forums.freebsd.org/threads/efi-virtualbox-computer-non-stop-after-successful-shutdown-of-freebsd.84856/>. 详细分析了 VirtualBox 中 FreeBSD 关机异常的技术原因与修复方法。
+
 ## 网络设置
 
 在虚拟网络方面，VirtualBox 提供 NAT、桥接（Bridged）、内部网络（Internal）、仅主机（Host-Only）等多种网络模式，每种模式对应不同的网络拓扑和连通性。
@@ -83,6 +98,8 @@ FreeBSD 安装完成后，请手动关机并卸载或删除安装光盘（询问
 桥接是实现宿主机与虚拟机互通的简单方法，虚拟机可以获得一个与宿主机在同一网段的 IP 地址。例如，若宿主机 IP 为 **192.168.31.123**，则虚拟机 IP 应为 **192.168.31.x**。
 
 ![桥接网络设置](../.gitbook/assets/virtualbox-bridge-network.png)
+
+请确保上图中“名称(N)”选择的网卡（本例中是一块以太网卡“Realtek Gaming 2.5GbE Family Controller”）是当前正在使用的网卡，否则虚拟机网卡也不会拥有网络。
 
 设置后执行 `dhclient em0` 立即获取 IP 地址，为了长期生效可在 **/etc/rc.conf** 文件中加入 `ifconfig_em0="DHCP"`。
 
@@ -105,6 +122,8 @@ FreeBSD 安装完成后，请手动关机并卸载或删除安装光盘（询问
 ![仅主机模式设置](../.gitbook/assets/virtualbox-dual-nic-2.png)
 
 使用命令 `# ifconfig` 查看状态，如果第二块网卡 `em1` 没有获取到 IP 地址，请手动通过 DHCP 获取：`# dhclient em1`（为了长期生效，可在 **/etc/rc.conf** 文件中加入 `ifconfig_em1="DHCP"`）。
+
+![NAT 与仅主机模式](../.gitbook/assets/virtualbox-dual-nic-3.png)
 
 按这种方式设定的网络，虚拟机与宿主机所在的局域网无法互通。如果无法连接互联网，请设置 DNS 为 **223.5.5.5**。如果不熟悉相关操作，请参阅本章相关小节。
 
@@ -183,21 +202,6 @@ vboxservice_flags="--disable-timesync"
 ```
 
 ## 故障排除与未竟事宜
-
-### EFI 下无法正常关机
-
-编辑 **/etc/sysctl.conf** 文件，添加以下内容：
-
-```ini
-hw.efi.poweroff=0 # 禁用 EFI 电源关闭功能，使系统通过 ACPI 正常关机
-```
-
-然后重启系统，再执行关机即可恢复正常，即使用 ACPI 而非 UEFI 接口关机。
-
-#### 参考文献
-
-- mib. 12.0-U8.1 -> 13.0-U2 poweroff problem & solution[EB/OL]. (2022-12-23)[2026-03-26]. <https://www.truenas.com/community/threads/12-0-u8-1-13-0-u2-poweroff-problem-solution.104813/>. 提供了 EFI 环境下 FreeBSD 关机问题的解决方案。
-- FreeBSD Forums. EFI: VirtualBox computer non-stop after successful shutdown of FreeBSD[EB/OL]. (2022-04-28)[2026-03-26]. <https://forums.freebsd.org/threads/efi-virtualbox-computer-non-stop-after-successful-shutdown-of-freebsd.84856/>. 详细分析了 VirtualBox 中 FreeBSD 关机异常的技术原因与修复方法。
 
 ### 鼠标捕获在虚拟机窗口内，无法移出
 

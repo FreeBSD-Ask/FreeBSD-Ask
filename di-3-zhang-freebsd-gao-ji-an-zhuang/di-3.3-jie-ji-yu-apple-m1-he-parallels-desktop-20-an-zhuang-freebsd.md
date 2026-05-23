@@ -70,7 +70,7 @@ ums_load="YES"
 
 ## 虚拟机工具
 
-使用 `pkg` 安装虚拟机工具：
+使用 pkg 安装虚拟机工具：
 
 ```sh
 # pkg install parallels-tools

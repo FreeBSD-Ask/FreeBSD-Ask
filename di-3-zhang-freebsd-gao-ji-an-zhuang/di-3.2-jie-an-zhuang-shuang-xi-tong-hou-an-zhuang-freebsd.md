@@ -194,7 +194,7 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 
 ### 创建 ZFS 数据集
 
-以下数据集的设置参照 FreeBSD 源代码中的 [usr.sbin/bsdinstall/scripts/zfsboot](https://github.com/freebsd/freebsd-src/blob/main/usr.sbin/bsdinstall/scripts/zfsboot) 创建。FreeBSD 本身持续演进，不同版本间的 ZFS 数据集也有所差异。读者创建数据集时若希望创建与默认安装相同的数据集结构，应参照对应分支的 **usr.sbin/bsdinstall/scripts/zfsboot** 文件。
+以下数据集的设置参照 FreeBSD 源代码中的 [**usr.sbin/bsdinstall/scripts/zfsboot**](https://github.com/freebsd/freebsd-src/blob/main/usr.sbin/bsdinstall/scripts/zfsboot) 创建。FreeBSD 本身持续演进，不同版本间的 ZFS 数据集也有所差异。读者创建数据集时若希望创建与默认安装相同的数据集结构，应参照对应分支的 **usr.sbin/bsdinstall/scripts/zfsboot** 文件。
 
 - 创建根数据集
 
@@ -304,7 +304,7 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 
 > **技巧**
 >
-> 上述参数参考自 bsdinstall(8) 的默认配置。安装后，也可通过命令 `zfs get exec,setuid,mountpoint` 查看相关属性。具体代码位于 [usr.sbin/bsdinstall/scripts/zfsboot](https://github.com/freebsd/freebsd-src/blob/main/usr.sbin/bsdinstall/scripts/zfsboot)。
+> 上述参数参考自 `bsdinstall`(8) 的默认配置。安装后，也可通过命令 `zfs get exec,setuid,mountpoint` 查看相关属性。具体代码位于 [**usr.sbin/bsdinstall/scripts/zfsboot**](https://github.com/freebsd/freebsd-src/blob/main/usr.sbin/bsdinstall/scripts/zfsboot)。
 
 相关文件结构：
 
