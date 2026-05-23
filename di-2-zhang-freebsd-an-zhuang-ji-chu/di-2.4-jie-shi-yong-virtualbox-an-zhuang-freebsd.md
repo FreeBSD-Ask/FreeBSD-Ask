@@ -42,15 +42,15 @@ VirtualBox 安装完成后，依次创建并配置虚拟机。
 
 > **警告**
 >
-> 请勿同时勾选“启用 3D 加速”，否则将导致无法使用 `VBoxSVGA` 控制器，无法驱动显卡。
+> 请勿同时勾选"启用 3D 加速"，否则将导致 `VBoxSVGA` 控制器失效，显卡无法正常驱动。
 
 ![显示设置](../.gitbook/assets/virtualbox-5-5.png)
 
 如有需要，可将虚拟硬盘切换为 NVMe 控制器：
 
-![NVme 硬盘](../.gitbook/assets/virtualbox-5-6.png)
+![NVMe 硬盘](../.gitbook/assets/virtualbox-5-6.png)
 
-点击“启动”开始安装 FreeBSD 虚拟机。
+点击"启动"，开始安装 FreeBSD。
 
 ![FreeBSD 安装界面](../.gitbook/assets/virtualbox-6.png)
 
@@ -58,11 +58,11 @@ VirtualBox 安装完成后，依次创建并配置虚拟机。
 
 ![FreeBSD 安装界面](../.gitbook/assets/virtualbox-8.png)
 
-FreeBSD 安装完成后，请手动关机并卸载或删除安装光盘（询问是否强制释放时同意释放），否则仍会再次进入安装界面。
+安装完成后，需手动关机并在虚拟机设置中移除安装光盘（如弹出强制释放提示，选择同意），否则下次启动仍会进入安装界面。
 
 ![安装完成后弹出光盘](../.gitbook/assets/virtualbox-removecd.png)
 
-安装后的 FreeBSD 虚拟机系统：
+安装完成的 FreeBSD 虚拟机系统：
 
 ![FreeBSD 系统界面](../.gitbook/assets/virtualbox-9.png)
 
