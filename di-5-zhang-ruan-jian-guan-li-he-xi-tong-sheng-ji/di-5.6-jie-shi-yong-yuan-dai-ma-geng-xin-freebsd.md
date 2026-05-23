@@ -76,7 +76,7 @@ $ git clone --branch releng/15.0 --single-branch --depth 1 https://git.freebsd.o
 选项解释：
 
 - `--branch releng/15.0`：指定拉取分支（FreeBSD RELEASE 的版本）
-- `--single-branch`：仅克隆一个分支，除该已克隆的单一分支外不含任何其他引用（refs）。
+- `--single-branch`：仅克隆一个分支，除所克隆的单一分支外不含任何其他引用（refs）。
 
 或者通过 GitHub 拉取。从 GitHub 克隆 FreeBSD 15.0 发布分支源代码到 **/usr/src**，使用浅克隆并仅包含该分支：
 
