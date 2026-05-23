@@ -10,11 +10,11 @@ FreeBSD 在 VirtualBox 中作为虚拟机运行稳定。本节演示环境为 Vi
 
 ## 安装设置
 
-VirtualBox 安装完成后，创建并配置虚拟机。
+VirtualBox 安装完成后，依次创建并配置虚拟机。
 
 ![VirtualBox 主界面](../.gitbook/assets/virtualbox-1.png)
 
-在 VirtualBox 主界面中选择"新建"。
+在 VirtualBox 主界面中选择“新建”。
 
 ![新建虚拟机](../.gitbook/assets/virtualbox-2.png)
 
@@ -26,7 +26,7 @@ VirtualBox 安装完成后，创建并配置虚拟机。
 
 > **技巧**
 >
-> 建议使用 UEFI 引导方式，Xorg 可自动识别显卡驱动，无需手动编写 **/usr/local/etc/X11/xorg.conf**；
+> 建议使用 UEFI 引导方式，Xorg 可自动识别显卡驱动，无需手动编写 **/usr/local/etc/X11/xorg.conf**。
 
 ![硬件设置](../.gitbook/assets/virtualbox-4.png)
 
