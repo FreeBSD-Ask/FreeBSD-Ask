@@ -124,7 +124,7 @@ round-trip min/avg/max/stddev = 27.580/27.626/27.672/0.046 ms
 
 FreeBSD 的 ping 自 13.0 起（提交于 2020-11-26）合并了原 ping6 的功能，通过 `-4`/`-6` 选项区分协议版本（Google Summer of Code 2019 项目）。Linux 支持 `-O` 报告未收到回复，FreeBSD 则不支持。FreeBSD 特有 `ping -y`（ICMPv6 Node Information DNS Name 查询）和 `ping -k`（Node Information Node Addresses 查询）。
 
-`ping` 使用 ICMP 协议的 ECHO_REQUEST 数据报来触发主机的 ECHO_RESPONSE。IPv4 目标使用 ICMP，IPv6 目标使用 ICMPv6（RFC 2463）。默认数据大小为 56 字节，加上 8 字节 ICMP 头共 64 字节。若数据空间不小于 8 字节，前 8 字节用于时间戳以计算往返时间。
+ping 使用 ICMP 协议的 ECHO_REQUEST 数据报来触发主机的 ECHO_RESPONSE。IPv4 目标使用 ICMP，IPv6 目标使用 ICMPv6（RFC 2463）。默认数据大小为 56 字节，加上 8 字节 ICMP 头共 64 字节。若数据空间不小于 8 字节，前 8 字节用于时间戳以计算往返时间。
 
 ### 其他
 
@@ -136,7 +136,7 @@ FreeBSD 的 ping 自 13.0 起（提交于 2020-11-26）合并了原 ping6 的功
 
 对于 C shell（csh/tcsh），登录 shell 读取 **/etc/csh.cshrc**、**/etc/csh.login**、**~/.cshrc**、**~/.login**。
 
-- 在 **~/.cshrc** 文件中加入下行，为 `ls` 命令设置彩色输出。
+- 在 **~/.cshrc** 文件中加入下行，为 ls 命令设置彩色输出。
 
 ```sh
 alias ls ls -G
@@ -260,7 +260,7 @@ chsh: user information updated
 
 > **注意**
 >
-> `chsh`、`chfn`、`chpass` 是同一个程序，通过不同名称调用。非超级用户只能将 shell 更改为 **/etc/shells** 中列出的标准 shell；从非标准 shell 更改或更改为非标准 shell 均会拒绝。编辑器由 `EDITOR` 环境变量决定，默认使用 vi(1)。修改完成后需要通过 pwd_mkdb(8) 更新用户数据库。
+> chsh、chfn、chpass 是同一个程序，通过不同名称调用。非超级用户只能将 shell 更改为 **/etc/shells** 中列出的标准 shell；从非标准 shell 更改或更改为非标准 shell 均会拒绝。编辑器由 `EDITOR` 环境变量决定，默认使用 vi(1)。修改完成后需要通过 pwd_mkdb(8) 更新用户数据库。
 
 编辑 **~/.zshrc** 文件，添加下面几行：
 
