@@ -507,7 +507,7 @@ Do you trust this certificate (yes/no)? # 输入 yes，按回车键
 
 ## AnyDesk
 
-使用 AnyDesk 可远程访问，FreeBSD 上仅支持 amd64（x86_64）架构：
+使用 AnyDesk 可远程访问，FreeBSD 上支持 amd64 和 i386 架构：
 
 由于版权原因（专有软件未经许可禁止分发），必须由用户使用 Ports 自行构建安装：
 
