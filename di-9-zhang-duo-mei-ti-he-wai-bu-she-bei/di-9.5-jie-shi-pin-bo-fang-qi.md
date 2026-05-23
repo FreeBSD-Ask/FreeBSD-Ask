@@ -109,7 +109,7 @@ Kodi 是一款知名的开源媒体中心软件，其曾用名为 XBMC（Xbox Me
 # pkg install mpv
 ```
 
-- 还可以通过 Ports 源代码编译安装：
+- 还可通过 Ports 源代码编译安装：
 
 ```sh
 # cd /usr/ports/multimedia/mpv/
