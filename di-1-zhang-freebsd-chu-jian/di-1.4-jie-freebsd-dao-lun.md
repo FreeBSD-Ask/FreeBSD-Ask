@@ -445,7 +445,7 @@ Jason Evans 于 2004 年初开始构思 jemalloc，2005 年 9 月集成到 FreeB
 
 - 2008 年 3 月 ZFS
 
-ZFS 由 Sun Microsystems 自 2001 年起开始开发，作为一款集成了文件系统和逻辑卷管理器的系统。该系统具有良好的可扩展性，并提供强大的数据完整性保护与高效的数据压缩功能。OpenSolaris 版本的 ZFS 于 2007 年导入 FreeBSD 源代码树，随 2008 年 2 月 27 日发布的 FreeBSD 7.0-RELEASE 首次进入 FreeBSD 系统。
+ZFS 由 Sun Microsystems 自 2001 年起开始开发，作为一种集成了文件系统和逻辑卷管理器的系统。该系统具有良好的可扩展性，并提供强大的数据完整性保护与高效的数据压缩功能。OpenSolaris 版本的 ZFS 于 2007 年导入 FreeBSD 源代码树，随 2008 年 2 月 27 日发布的 FreeBSD 7.0-RELEASE 首次进入 FreeBSD 系统。
 
 - 2009 年 1 月 4 日 DTrace
 
