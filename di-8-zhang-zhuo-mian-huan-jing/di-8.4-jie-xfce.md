@@ -1,8 +1,8 @@
 # 8.4 Xfce
 
-## Xfce 桌面环境概述
+XFCE 是一款基于 GTK+ 的桌面环境，轻量级，提供了简单、高效、易于使用的桌面。它是完全可配置的，拥有包含菜单、小程序和应用程序启动器的主面板，提供文件管理器和声音管理器，并支持主题。由于它快速、轻巧、高效，非常适合旧的或较慢的、内存受限的机器。
 
-Xfce 是类 UNIX 系统中的轻量级桌面环境，资源占用率低、响应速度快。颇具趣味的是，Xfce 的 Logo 是一只老鼠 🐀。曾有用户反馈一则轶事，称因 Xfce 的默认壁纸是一只老鼠 🐀，导致电脑屏幕被猫 🐈 抓坏（SanjaytheToilet. [joke] The default desktop startup screen causes damage to monitor![EB/OL]. (2015-08-04)[2026-04-04]. <https://bugzilla.xfce.org/show_bug.cgi?id=12117>.）。
+颇具趣味的是，Xfce 的 Logo 是一只老鼠 🐀。曾有用户反馈一则轶事，称因 Xfce 的默认壁纸是一只老鼠 🐀，导致电脑屏幕被猫 🐈 抓坏（SanjaytheToilet. [joke] The default desktop startup screen causes damage to monitor![EB/OL]. (2015-08-04)[2026-04-04]. <https://bugzilla.xfce.org/show_bug.cgi?id=12117>.）。
 
 ## 安装 Xfce 桌面环境
 
