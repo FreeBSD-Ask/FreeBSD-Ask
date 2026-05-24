@@ -769,8 +769,8 @@ Enable ZFS encryption? (yes/no) [no]: # 是否启用 ZFS 加密（15.0 新增）
 Use password-based authentication? [yes]:  # 是否启用密码验证
 Use an empty password? (yes/no) [no]:  # 是否使用空密码，即密码为空
 Use a random password? (yes/no) [no]:  # 是否使用随机密码。若设置 yes 将生成随机字符串用作密码。该密码会回显到标准输出。②
-Enter password:  # 输入密码，密码不显示在屏幕上，也不会是 ****，就是什么也没有
-Enter password again:  # 重复输入密码，密码不显示在屏幕上，也不会是 ****，就是什么也没有
+Enter password:  # 输入密码，密码不显示在屏幕上，也不会是 ****，即无任何显示
+Enter password again:  # 重复输入密码，密码不显示在屏幕上，也不会是 ****，即无任何显示
 Lock out the account after creation? [no]: #  创建后是否立即锁定账户（禁用该账户）
 Username    : ykla # 设定的用户名
 Password    : ***** # 设定的用户密码
