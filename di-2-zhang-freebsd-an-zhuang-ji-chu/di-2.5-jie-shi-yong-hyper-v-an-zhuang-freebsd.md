@@ -124,11 +124,9 @@ Hyper-V 安装完成后，创建虚拟机。右键单击 Hyper-V 管理器中的
 
 ![Hyper-V](../.gitbook/assets/hyperv-12.png)
 
+可选择关闭“使用自动检查点”（即关闭自动快照功能）节约空间和时间，其作用详见参考文献。点击“管理”，再次点击“检查点”，在右侧边栏取消勾选“启用检查点”。
 
-
-![Hyper-V](../.gitbook/assets/hyperv-16.jpg)
-
-可选择关闭“使用自动检查点”（即关闭自动快照功能），其作用详见参考文献。
+![Hyper-V](../.gitbook/assets/hyperv-16.png)
 
 ## 安装 FreeBSD
 
