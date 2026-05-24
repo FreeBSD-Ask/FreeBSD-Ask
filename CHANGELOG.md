@@ -15,6 +15,7 @@
   - 更新“27.10 使用 IDA Pro 调试 FreeBSD”到 IDA Pro 9.3
   - 将“通用嵌入式开发环境”拆分为“STM32 开发环境”“乐鑫（Espressif）开发环境”“Arduino 开发环境”
   - 重写“26.7 STM32 开发环境”中的“安装 STM32CubeMX”
+  - 更新“26.9 Arduino 开发环境”
 - 2026.5.23
   - 删除“8.10 Hyprland”，无法复现，缺乏文档维护
   - 完全重写：“2.4 使用 VirtualBox 安装 FreeBSD”
