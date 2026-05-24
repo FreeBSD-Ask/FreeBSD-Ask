@@ -53,7 +53,7 @@
 
 ![确认分区创建](../.gitbook/assets/dual-system-4.png)
 
-此处会警告 ZFS 分区可能无法启动，但实际测试表明可以正常启动。这个警告是安装程序的通用提示，不适用于 UEFI 环境下的配置。选择 `Yes` 忽略此警告：
+此处会警告 ZFS 分区可能无法启动，但实际测试表明可以正常启动。该警告是安装程序的通用提示，不适用于 UEFI 环境下的配置。选择 `Yes` 忽略此警告：
 
 ![ZFS 分区警告](../.gitbook/assets/dual-system-5.png)
 
@@ -327,7 +327,7 @@ zroot/
 
 ### 修改文件夹权限
 
-将 **/mnt/tmp** 和 **/mnt/var/tmp** 的权限设置为 `1777`（粘滞位），以确保临时目录权限正确，这样任何用户都可以在这些目录中创建文件，但只能删除自己创建的文件：
+将 **/mnt/tmp** 和 **/mnt/var/tmp** 的权限设置为 `1777`（粘滞位），以确保临时目录权限正确，使得任何用户都可以在这些目录中创建文件，但只能删除自己创建的文件：
 
 ```sh
 # chmod 1777 /mnt/tmp        # 设置 /mnt/tmp 目录为粘滞位，可读写
@@ -346,7 +346,7 @@ zroot/
 
 > **技巧**
 >
-> `\t` 是制表符（Tab）的转义字符（意味着按一下 **Tab** 键），用于对齐字段，使用空格也可以达到相同效果。也可使用 `ee /tmp/bsdinstall_etc/fstab` 命令手动编辑该文件并写入如下格式的行：
+> `\t` 是制表符（Tab）的转义字符（即 **Tab** 键对应的字符），用于对齐字段，使用空格也可以达到相同效果。也可使用 `ee /tmp/bsdinstall_etc/fstab` 命令手动编辑该文件并写入如下格式的行：
 >
 > ```sh
 > /dev/nda0p5  none  swap  sw  0  0
@@ -394,7 +394,7 @@ Windows 文本文件的行尾通常是 `\r\n`（回车 + 换行）。
 # cp /boot/loader.efi /media/efi/freebsd/
 ```
 
-- 使用 `efibootmgr` 工具向主板 UEFI 固件添加启动项 `FreeBSD`，这样开机时便能在 UEFI 启动菜单中看到 FreeBSD 选项。
+- 使用 `efibootmgr` 工具向主板 UEFI 固件添加启动项 `FreeBSD`，添加后开机时即可在 UEFI 启动菜单中看到 FreeBSD 选项。
 
 ```sh
 # efibootmgr --create --activate --label "FreeBSD" --loader "/media/efi/freebsd/loader.efi"
