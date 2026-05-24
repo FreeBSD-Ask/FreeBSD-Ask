@@ -1,10 +1,12 @@
 # 8.7 GNOME
 
+GNOME 是一款面向用户的桌面环境。它包括用于启动应用和显示状态的面板、桌面、本地工具和应用程序，以及一套使应用程序协同工作并保持一致的设计规范。
+
 ## GNOME 桌面环境概述
 
 > **警告**
 >
-> 目前因 FreeBSD Bugzilla Bug 287955 - x11/gdm: The user cannot log in; the system hangs at the login screen in gdm 47[EB/OL]. [2026-04-04]. <https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=287955>. GDM 无法正常使用，会停留在登录界面，`startx` 正常。
+> 目前因 FreeBSD Bugzilla Bug 287955 - x11/gdm: The user cannot log in; the system hangs at the login screen in gdm 47[EB/OL]. [2026-04-04]. <https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=287955>. GDM 无法正常使用，将停留在登录界面，`startx` 正常。
 >
 > 在虚拟机中可正常使用。
 
