@@ -1,16 +1,12 @@
 # 2.5 使用 Hyper-V 安装 FreeBSD
 
-Hyper-V 是微软为 Windows 开发的企业级 Type-1 虚拟机监视器，分为 Gen 1 与 Gen 2 两种架构。本节介绍在 Hyper-V 中安装与配置 FreeBSD 的完整流程。
+Hyper-V 是微软公司（Microsoft）为 Windows 和 Windows Server 开发的企业级虚拟机监视器，属于系统内置组件。本节介绍在 Hyper-V 中安装与配置 FreeBSD 的完整流程。
 
 ## Hyper-V 简介
 
-虚拟机监视器是一种创建和运行虚拟机的软件，允许多个操作系统同时运行在同一台计算机上。按虚拟化技术的理论分类，Hypervisor 分为 Type-1（裸金属型）和 Type-2（宿主型）两类。Type-1 直接在物理硬件之上运行，Type-2 则在宿主操作系统之上运行。Hyper-V 属于 Type-1 架构，虚拟化层直接管理硬件资源，提供更高的隔离性和性能。
+虚拟机监视器是一种创建和运行虚拟机的软件，允许多个操作系统同时运行在同一台计算机上。按虚拟化技术的理论分类，Hyper-V 属于 Type-1 架构，虚拟化层直接管理硬件资源。
 
-Hyper-V 是微软公司（Microsoft）为 Windows 和 Windows Server 开发的企业级虚拟机监视器，属于系统内置组件。
-
-Hyper-V 分为 Gen 1（第一代）和 Gen 2（第二代）两种虚拟机架构，两种架构在硬件支持和启动方式上有所不同。
-
-Gen 1 与 Gen 2 的区别如下表所示：
+Hyper-V 分为 Gen 1（第一代）和 Gen 2（第二代）两种虚拟机架构，两种架构在硬件支持和启动方式上有所不同。Gen 1 与 Gen 2 的区别如下表所示：
 
 | Hyper-V 代系 | 硬盘 | 启动方式 |
 | ------------ | ---- | -------- |
@@ -21,13 +17,7 @@ Gen 1 与 Gen 2 的区别如下表所示：
 
 > **注意**
 >
-> 使用 Gen 2 时请关闭安全启动，否则系统无法启动。具体操作步骤为：点击“设置”，选择“安全”，取消勾选“启用安全启动”。FreeBSD 自 14.0 起已支持 UEFI 安全启动，但其引导加载程序未经 Microsoft 签名，因此在 Hyper-V 默认的安全启动配置（使用“Microsoft UEFI 证书颁发机构”模板）中无法通过验证。
-
-| Hyper-V 代系 | FreeBSD 版本 | 鼠标 | 键盘 | 备注 |
-| ------------ | ------------ | ---- | ---- | ---- |
-| Gen 1 | 13.0 | 支持 | 不支持 | / |
-| Gen 2 | 13.0 | [不支持](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=221074) | 支持 | 需修改参数 `sysctl kern.evdev.rcpt_mask=6`（启用 evdev，让 Xorg 正确检测 PS/2 设备） |
-| Gen 2 | 14.0 | 支持 | 支持 | 参见：FreeBSD Project. src[EB/OL]. [2026-03-26]. <https://cgit.FreeBSD.org/src/commit/?id=21f4e817fde79d5de79bfbdf180d358ca5f48bf9>. |
+> 使用 Gen 2 时请关闭安全启动，否则系统无法启动。FreeBSD 自 14.0 起已支持 UEFI 安全启动，但其引导加载程序未经 Microsoft 签名，因此在 Hyper-V 默认的安全启动配置（使用“Microsoft UEFI 证书颁发机构”模板）中无法通过验证。
 
 FreeBSD 通过以下内核模块实现对 Hyper-V 的集成支持：
 
@@ -42,9 +32,9 @@ FreeBSD 通过以下内核模块实现对 Hyper-V 的集成支持：
 
 本节基于以下软硬件环境测试与演示，实验结果受环境影响。
 
-- Windows 11 23H2 专业版
-- FreeBSD 14.1-RELEASE（`FreeBSD-14.1-RELEASE-amd64-disc1.iso`）
-- Hyper-V 版本：10.0.22621.4249
+- Windows 11 25H2 专业版
+- FreeBSD 15.0-RELEASE
+- Hyper-V 版本：10.0.26100.7019
 - 使用第二代 Hyper-V 虚拟机
 
 ## 安装 Hyper-V
@@ -53,104 +43,118 @@ FreeBSD 通过以下内核模块实现对 Hyper-V 的集成支持：
 >
 > Windows 家庭版和家庭中文版不支持 Hyper-V。
 
-在 Windows 系统中启用 Hyper-V 功能组件，需以管理员权限执行以下命令。
+在 Windows 系统中启用 Hyper-V 功能组件。右键单击 Windows 徽标，在弹出的菜单中选择“终端（管理员）”或者“Windows PowerShell（管理员）”。输入以下命令：
+
+```powershell
+PS C:\WINDOWS\system32> DISM /Online /Enable-Feature /All /FeatureName:Microsoft-Hyper-V
+```
+
+输出内容如下：
+
+```powershell
+Deployment Image Servicing and Management tool
+Version: 10.0.26100.5074
+
+Image Version: 10.0.26200.8246
+
+启用一个或多个功能
+[==========================100.0%==========================]
+The operation completed successfully.
+```
+
+系统将自动重启，在重启过程中将安装 Hyper-V。
 
 ![Hyper-V](../.gitbook/assets/hyperv-1.png)
 
-右键单击 Windows 徽标，在弹出的菜单中选择“终端（管理员）”。输入以下命令：
-
-```powershell
-PS C:\Users\ykla> Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All
-是否立即重启计算机以完成此操作?
-[Y] Yes  [N] No  [?] 帮助 (默认值为“Y”):
-# 此处按回车键确认重启以完成 Hyper-V 的安装
-```
-
 ## 创建虚拟机
 
-Hyper-V 安装完成后，创建虚拟机。
+Hyper-V 安装完成后，创建虚拟机。右键单击 Hyper-V 管理器中的主机名，选择“新建”→“虚拟机”。
 
 ![Hyper-V](../.gitbook/assets/hyperv-2.png)
 
-右键单击 Hyper-V 管理器中的主机名，选择“新建”→“虚拟机”。
+点击“下一页”。
 
 ![Hyper-V](../.gitbook/assets/hyperv-3.png)
 
-点击“下一页”。
+为虚拟机设置名称，本例中使用“FreeBSD 15.0-RELEASE”，还可以自定义虚拟机的存储路径。然后点击“下一页”。
 
 ![Hyper-V](../.gitbook/assets/hyperv-4.png)
 
-为虚拟机设置名称，然后点击“下一页”。
+选择“第二代”。然后点击“下一页”。
 
 ![Hyper-V](../.gitbook/assets/hyperv-generation-select.png)
 
-选择“第二代”。然后点击“下一页”。
+分配内存大小，然后点击“下一页”。
 
 ![Hyper-V](../.gitbook/assets/hyperv-5.png)
 
-设置内存大小，然后点击“下一页”。
+配置网络，在下拉栏选择“Default Switch”（默认交换机），然后点击“下一页”。
 
 ![Hyper-V](../.gitbook/assets/hyperv-6.png)
 
-设置网络，然后点击“下一页”。
+指定虚拟硬盘的名称、大小及存储位置，然后点击“下一页”。
 
 ![Hyper-V](../.gitbook/assets/hyperv-7.png)
 
-指定虚拟硬盘的名称、大小及存储位置，然后点击“下一页”。
+点击“从可启动的映像文件安装操作系统”，点击“浏览”，找到并选中已下载的 **FreeBSD-15.0-RELEASE-amd64-dvd1.iso** 文件，然后点击“下一页”。
 
 ![Hyper-V](../.gitbook/assets/hyperv-8.png)
 
-点击“浏览”，找到并选中已下载的 `FreeBSD-14.1-RELEASE-amd64-disc1.iso` 文件，然后点击“下一页”。
+进行预览，确认无误后点击“完成”。
 
 ![Hyper-V](../.gitbook/assets/hyperv-9.png)
 
-点击“完成”。
-
 ## 虚拟机配置调整
 
-虚拟机创建完成后，调整部分设置。
+虚拟机创建完成后，选中新建的虚拟机“FreeBSD 15.0-RELEASE”，点击右侧下方的“设置...”调整部分设置。
 
-![Hyper-V](../.gitbook/assets/hyperv-10.png)
+![Hyper-V 设置](../.gitbook/assets/hyperv-10.png)
 
-点击“设置”。
+请务必关闭安全启动（见上文注意事项），否则将无法从安装介质启动安装程序。点击“硬件”，选中“安全”，在右侧边栏中取消选中“启用安全启动”。
 
-![Hyper-V](../.gitbook/assets/hyperv-11.png)
+![Hyper-V 安全启动](../.gitbook/assets/hyperv-11.png)
 
-请务必关闭安全启动（见上文注意事项），否则将无法从安装介质启动安装程序。
+来宾服务是 Hyper-V 集成服务的一部分，提供宿主机与虚拟机之间的文件交换、时间同步等集成功能。其作用详见参考文献。点击“管理”，再次点击“集成服务”，在右侧边栏选中“来宾服务”。
 
-![Hyper-V](../.gitbook/assets/hyperv-12.png)
+![Hyper-V 来宾服务](../.gitbook/assets/hyperv-12.png)
 
-请勾选“来宾服务”。来宾服务是 Hyper-V 集成服务的一部分，提供宿主机与虚拟机之间的文件交换、时间同步等集成功能。其作用详见参考文献。
+可选择关闭“使用自动检查点”（即关闭自动快照功能）节约空间和时间，其作用详见参考文献。点击“管理”，再次点击“检查点”，在右侧边栏取消勾选“启用检查点”。
 
-![Hyper-V](../.gitbook/assets/hyperv-16.jpg)
+![Hyper-V 检查点](../.gitbook/assets/hyperv-16.png)
 
-可选择关闭“使用自动检查点”（即关闭自动快照功能），其作用详见参考文献。
+## 在 Hyper-V 安装 FreeBSD
 
-## 安装 FreeBSD
-
-虚拟机设置调整完成后，安装 FreeBSD 系统。
+虚拟机设置调整完成后，准备安装 FreeBSD 系统。启动虚拟机“FreeBSD 15.0-RELEASE”：
 
 ![Hyper-V](../.gitbook/assets/hyperv-13.png)
 
-启动该虚拟机。
+根据提示安装 FreeBSD。
 
 ![Hyper-V](../.gitbook/assets/hyperv-14.png)
 
-按提示开始安装 FreeBSD。
+安装完成后必须手动弹出 DVD，点击“媒体”，再点击“DVD 驱动器”，选中“弹出 FreeBSD-15.0-RELEASE-amd64-dvd1.iso”。否则还会回到安装界面。
 
-![Hyper-V](../.gitbook/assets/hyperv-15.jpg)
+启动新系统：
 
-安装完成。
+![Hyper-V](../.gitbook/assets/hyperv-15.png)
 
-## 桌面环境验证
+如果因为启动顺序无法启动（需要在 IPv4 界面等待一段时间），请尝试在设置中调整：点击“硬件”，选择“固件”，在右侧边栏选中“硬盘驱动器”，选择“向上移动”，将其置顶。如此，便可直接启动 FreeBSD 虚拟机。
+
+![Hyper-V](../.gitbook/assets/hyperv-15-1.png)
+
+## 桌面环境
 
 安装完成后，测试虚拟机基本功能。
 
-鼠标和键盘均可正常工作，可在宿主机和虚拟机间无缝切换，但虚拟机桌面分辨率无法自适应调整。建议检查 Hyper-V 集成服务安装情况，并参考 FreeBSD 文档配置显示。
+鼠标和键盘均可正常工作，可在宿主机和虚拟机间无缝切换，但虚拟机桌面分辨率无法自适应调整。
 
-![Hyper-V](../.gitbook/assets/hyperv-summary.jpg)
+可以通过 SSH 连接到默认网络接口“hn0”分配的 IP 地址。
 
-删除虚拟机前，必须先关闭。
+![Hyper-V](../.gitbook/assets/hyperv-summary.png)
+
+由于 Hyper-V 的“增强会话模式”尚不支持 FreeBSD，音频不可用。
+
+删除虚拟机前，必须先关闭虚拟机。
 
 ## 参考文献
 
