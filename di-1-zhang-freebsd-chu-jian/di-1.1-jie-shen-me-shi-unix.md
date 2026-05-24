@@ -6,7 +6,7 @@ FreeBSD 源自 BSD，即加州大学伯克利分校开发的 UNIX® 版本。
 
 UNIX 的内涵已从具体技术实现演变为一种文化象征。UNIX 系统起源于美国电话电报公司（American Telephone & Telegraph，AT&T）贝尔实验室。
 
-20 世纪 60 年代末至 70 年代初，UNIX 作为一款操作系统，最初采用汇编语言编写，后来主要以 C 语言重写。
+20 世纪 60 年代末至 70 年代初，UNIX 作为一种操作系统，最初采用汇编语言编写，后来主要以 C 语言重写。
 
 20 世纪 80 年代以后，UNIX 逐渐成为一种 **[标准规范](https://www.opengroup.org/openbrand/register/xym0.htm)**。
 
