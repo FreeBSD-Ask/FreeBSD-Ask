@@ -8,6 +8,7 @@
   - 提交 [Bug 295539 - games/renpy: Maybe need update to 8.x.y not deprecate](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=295539)
   - 提交 [Bug 295538 - java/intellij-ultimate: Please move it to java/intellij](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=295538)
   - 完全重写：“27.2 Java 开发环境”
+  - 完全重写：“27.3 Qt 开发环境”
 - 2026.5.23
   - 删除“8.10 Hyprland”，无法复现，缺乏文档维护
   - 完全重写：“2.4 使用 VirtualBox 安装 FreeBSD”
