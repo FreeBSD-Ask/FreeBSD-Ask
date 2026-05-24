@@ -106,7 +106,7 @@ $ x11vnc -display :0 -rfbauth ~/.vnc/passwd -auth /var/lib/gdm/:0.Xauth # 或 /r
 # pkg install tigervnc-server
 ```
 
-或者使用 ports 安装：
+或者使用 Ports 安装：
 
 ```sh
 # cd /usr/ports/net/tigervnc-server/
@@ -220,7 +220,7 @@ $ ps
 # pkg install xorg kde xrdp wqy-fonts xdg-user-dirs pulseaudio-module-xrdp
 ```
 
-或者使用 ports 安装：
+或者使用 Ports 安装：
 
 ```sh
 # cd /usr/ports/x11/xorg/ && make install clean
@@ -576,7 +576,7 @@ $ anydesk
 # pkg install rustdesk-server
 ```
 
-或者使用 ports 安装：
+或者使用 Ports 安装：
 
 ```sh
 # cd /usr/ports/net/rustdesk-server/
