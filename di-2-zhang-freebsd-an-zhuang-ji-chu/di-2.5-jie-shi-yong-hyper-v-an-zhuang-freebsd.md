@@ -114,45 +114,51 @@ Hyper-V 安装完成后，创建虚拟机。右键单击 Hyper-V 管理器中的
 
 虚拟机创建完成后，选中新建的虚拟机“FreeBSD 15.0-RELEASE”，点击右侧下方的“设置...”调整部分设置。
 
-![Hyper-V](../.gitbook/assets/hyperv-10.png)
+![Hyper-V 设置](../.gitbook/assets/hyperv-10.png)
 
 请务必关闭安全启动（见上文注意事项），否则将无法从安装介质启动安装程序。点击“硬件”，选中“安全”，在右侧边栏中取消选中“启用安全启动”。
 
-![Hyper-V](../.gitbook/assets/hyperv-11.png)
+![Hyper-V 安全启动](../.gitbook/assets/hyperv-11.png)
 
 来宾服务是 Hyper-V 集成服务的一部分，提供宿主机与虚拟机之间的文件交换、时间同步等集成功能。其作用详见参考文献。点击“管理”，再次点击“集成服务”，在右侧边栏选中“来宾服务”。
 
-![Hyper-V](../.gitbook/assets/hyperv-12.png)
+![Hyper-V 来宾服务](../.gitbook/assets/hyperv-12.png)
 
 可选择关闭“使用自动检查点”（即关闭自动快照功能）节约空间和时间，其作用详见参考文献。点击“管理”，再次点击“检查点”，在右侧边栏取消勾选“启用检查点”。
 
-![Hyper-V](../.gitbook/assets/hyperv-16.png)
+![Hyper-V 检查点](../.gitbook/assets/hyperv-16.png)
 
-## 安装 FreeBSD
+## 在 Hyper-V 安装 FreeBSD
 
-虚拟机设置调整完成后，安装 FreeBSD 系统。
+虚拟机设置调整完成后，准备安装 FreeBSD 系统。启动虚拟机“FreeBSD 15.0-RELEASE”：
 
 ![Hyper-V](../.gitbook/assets/hyperv-13.png)
 
-启动该虚拟机。
+根据提示安装 FreeBSD。
 
 ![Hyper-V](../.gitbook/assets/hyperv-14.png)
 
-按提示开始安装 FreeBSD。
+安装完成后必须手动弹出 DVD，点击“媒体”，再点击“DVD 驱动器”，选中“弹出 FreeBSD-15.0-RELEASE-amd64-dvd1.iso”。否则还会回到安装界面。
 
-![Hyper-V](../.gitbook/assets/hyperv-15.jpg)
+启动新系统：
 
-安装完成。
+![Hyper-V](../.gitbook/assets/hyperv-15.png)
+
+如果因为启动顺序无法启动（需要在 IPv4 界面等待一段时间），请尝试在设置中调整：点击“硬件”，选择“固件”，在右侧边栏选中“硬盘驱动器”，选择“向上移动”，将其置顶。如此，便可直接启动 FreeBSD 虚拟机。
+
+![Hyper-V](../.gitbook/assets/hyperv-15-1.png)
 
 ## 桌面环境验证
 
 安装完成后，测试虚拟机基本功能。
 
-鼠标和键盘均可正常工作，可在宿主机和虚拟机间无缝切换，但虚拟机桌面分辨率无法自适应调整。建议检查 Hyper-V 集成服务安装情况，并参考 FreeBSD 文档配置显示。
+鼠标和键盘均可正常工作，可在宿主机和虚拟机间无缝切换，但虚拟机桌面分辨率无法自适应调整。
 
-![Hyper-V](../.gitbook/assets/hyperv-summary.jpg)
+可以通过 SSH 以默认的网络接口“hn0”获取的 IP 地址连接。
 
-删除虚拟机前，必须先关闭。
+![Hyper-V](../.gitbook/assets/hyperv-summary.png)
+
+删除虚拟机前，必须先关闭虚拟机。
 
 ## 参考文献
 
