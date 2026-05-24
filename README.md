@@ -120,18 +120,18 @@ FreeBSD 中文社区未通过其他域名部署本书，唯一官方域名为 `b
 
 | 指标 | 统计数据 |
 | ---- | -------- |
-| 用户总数 | 51,516 位 |
+| 用户总数 | 51,522 位 |
 | 会话数 | 100,797 次 |
-| 浏览次数 | 656,439 次 |
+| 浏览次数 | 656,512 次 |
 | 平均会话时长 | 8 分 24 秒 |
 
 <!-- GA_STATS:END -->
 
 <!-- GA_BADGES:START -->
 
-![总用户数](https://img.shields.io/badge/总用户数-51,516-green)
+![总用户数](https://img.shields.io/badge/总用户数-51,522-green)
 ![会话数](https://img.shields.io/badge/会话数-100,797-orange)
-![浏览次数](https://img.shields.io/badge/浏览次数-656,439-blue)
+![浏览次数](https://img.shields.io/badge/浏览次数-656,512-blue)
 ![平均会话时长](https://img.shields.io/badge/平均会话时长-8min24s-purple)
 
 <!-- GA_BADGES:END -->
