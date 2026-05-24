@@ -2,6 +2,8 @@
 
 ## 2026 年第二季度
 
+- 2026.5.25
+  - 更新“11.11 WPS Office（Linux 版）”中的“基于 Rocky Linux 兼容层（FreeBSD Port）”
 - 2026.5.24
   - 更新“6.1 基础网络”中的“通过 ifconfig 命令识别网络适配器”
   - 更新“21.4 MySQL”到 MySQL 8.4
