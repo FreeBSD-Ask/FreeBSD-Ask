@@ -120,18 +120,18 @@ FreeBSD 中文社区未通过其他域名部署本书，唯一官方域名为 `b
 
 | 指标 | 统计数据 |
 | ---- | -------- |
-| 用户总数 | 51,516 位 |
+| 用户总数 | 51,522 位 |
 | 会话数 | 100,797 次 |
-| 浏览次数 | 656,439 次 |
+| 浏览次数 | 656,512 次 |
 | 平均会话时长 | 8 分 24 秒 |
 
 <!-- GA_STATS:END -->
 
 <!-- GA_BADGES:START -->
 
-![总用户数](https://img.shields.io/badge/总用户数-51,516-green)
+![总用户数](https://img.shields.io/badge/总用户数-51,522-green)
 ![会话数](https://img.shields.io/badge/会话数-100,797-orange)
-![浏览次数](https://img.shields.io/badge/浏览次数-656,439-blue)
+![浏览次数](https://img.shields.io/badge/浏览次数-656,512-blue)
 ![平均会话时长](https://img.shields.io/badge/平均会话时长-8min24s-purple)
 
 <!-- GA_BADGES:END -->
@@ -158,16 +158,16 @@ FreeBSD 中文社区未通过其他域名部署本书，唯一官方域名为 `b
 <!-- CHINESE_CHAR_COUNT_END -->
 
 <!-- commit-progress-start -->
-**第 3 版编纂进度:**   （人工提交数: 1536 / 3533）
+**第 3 版编纂进度:**   （人工提交数: 1556 / 3533）
 
 ![进度徽章](.gitbook/assets/progress.svg)
 
-距离第 3 版还需提交: 1997 次
+距离第 3 版还需提交: 1977 次
 
 提交统计（历史）:
 
-- 人工提交: 8602
-- 机器人提交: 356
+- 人工提交: 8622
+- 机器人提交: 361
 <!-- commit-progress-end -->
 
 ## ⭐ 图
