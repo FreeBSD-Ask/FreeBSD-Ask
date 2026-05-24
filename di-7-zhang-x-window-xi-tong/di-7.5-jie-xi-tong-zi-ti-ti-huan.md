@@ -28,7 +28,7 @@ FreeBSD 默认字体对中文显示效果欠佳。本节介绍图形界面引入
 # chmod -R 755 /usr/local/share/fonts/WindowsFonts
 ```
 
-还需要刷新字体缓存：
+还需刷新字体缓存：
 
 ```sh
 # fc-cache
