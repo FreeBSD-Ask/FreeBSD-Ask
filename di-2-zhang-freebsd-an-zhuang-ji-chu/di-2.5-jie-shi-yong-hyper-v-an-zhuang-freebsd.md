@@ -36,7 +36,7 @@ FreeBSD 通过以下内核模块实现对 Hyper-V 的集成支持：
 
 - Windows 11 25H2 专业版
 - FreeBSD 15.0-RELEASE
-- Hyper-V 版本：10.0.22621.4249
+- Hyper-V 版本：10.0.26100.5074
 - 使用第二代 Hyper-V 虚拟机
 
 ## 安装 Hyper-V
@@ -49,70 +49,82 @@ FreeBSD 通过以下内核模块实现对 Hyper-V 的集成支持：
 
 ![Hyper-V](../.gitbook/assets/hyperv-1.png)
 
-右键单击 Windows 徽标，在弹出的菜单中选择“终端（管理员）”。输入以下命令：
+右键单击 Windows 徽标，在弹出的菜单中选择“终端（管理员）”或者“Windows Powershell (管理器)”。输入以下命令：
 
 ```powershell
-PS C:\Users\ykla> Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All
-是否立即重启计算机以完成此操作?
-[Y] Yes  [N] No  [?] 帮助 (默认值为“Y”):
-# 此处按回车键确认重启以完成 Hyper-V 的安装
+PS C:\WINDOWS\system32> DISM /Online /Enable-Feature /All /FeatureName:Microsoft-Hyper-V
 ```
+
+输出内容如下：
+
+```
+Deployment Image Servicing and Management tool
+Version: 10.0.26100.5074
+
+Image Version: 10.0.26200.8246
+
+启用一个或多个功能
+[==========================100.0%==========================]
+The operation completed successfully.
+```
+
+系统将自动重启，在重启过程中将安装 Hyper-V。
+
+![Hyper-V](../.gitbook/assets/hyperv-1.png)
 
 ## 创建虚拟机
 
-Hyper-V 安装完成后，创建虚拟机。
+Hyper-V 安装完成后，创建虚拟机。右键单击 Hyper-V 管理器中的主机名，选择“新建”→“虚拟机”。
 
 ![Hyper-V](../.gitbook/assets/hyperv-2.png)
 
-右键单击 Hyper-V 管理器中的主机名，选择“新建”→“虚拟机”。
+点击“下一页”。
 
 ![Hyper-V](../.gitbook/assets/hyperv-3.png)
 
-点击“下一页”。
+为虚拟机设置名称，本例中使用“FreeBSD 15.0-RELEASE”，还可以自定义虚拟机的存储路径。然后点击“下一页”。
 
 ![Hyper-V](../.gitbook/assets/hyperv-4.png)
 
-为虚拟机设置名称，然后点击“下一页”。
+选择“第二代”。然后点击“下一页”。
 
 ![Hyper-V](../.gitbook/assets/hyperv-generation-select.png)
 
-选择“第二代”。然后点击“下一页”。
+分配内存大小，然后点击“下一页”。
 
 ![Hyper-V](../.gitbook/assets/hyperv-5.png)
 
-设置内存大小，然后点击“下一页”。
+配置网络，在下拉栏选择“Default Switch”（默认交换机），然后点击“下一页”。
 
 ![Hyper-V](../.gitbook/assets/hyperv-6.png)
 
-设置网络，然后点击“下一页”。
+指定虚拟硬盘的名称、大小及存储位置，然后点击“下一页”。
 
 ![Hyper-V](../.gitbook/assets/hyperv-7.png)
 
-指定虚拟硬盘的名称、大小及存储位置，然后点击“下一页”。
+点击“从可启动的映像文件安装操作系统”，点击“浏览”，找到并选中已下载的 **FreeBSD-15.0-RELEASE-amd64-dvd1.iso** 文件，然后点击“下一页”。
 
 ![Hyper-V](../.gitbook/assets/hyperv-8.png)
 
-点击“浏览”，找到并选中已下载的 `FreeBSD-14.1-RELEASE-amd64-disc1.iso` 文件，然后点击“下一页”。
+进行预览，确认无误后点击“完成”。
 
 ![Hyper-V](../.gitbook/assets/hyperv-9.png)
 
-点击“完成”。
-
 ## 虚拟机配置调整
 
-虚拟机创建完成后，调整部分设置。
+虚拟机创建完成后，选中新建的虚拟机“FreeBSD 15.0-RELEASE”，点击右侧下方的“设置...”调整部分设置。
 
 ![Hyper-V](../.gitbook/assets/hyperv-10.png)
 
-点击“设置”。
+请务必关闭安全启动（见上文注意事项），否则将无法从安装介质启动安装程序。点击“硬件”，选中“安全”，在右侧边栏中取消选中“启用安全启动”。
 
 ![Hyper-V](../.gitbook/assets/hyperv-11.png)
 
-请务必关闭安全启动（见上文注意事项），否则将无法从安装介质启动安装程序。
+来宾服务是 Hyper-V 集成服务的一部分，提供宿主机与虚拟机之间的文件交换、时间同步等集成功能。其作用详见参考文献。点击“管理”，再次点击“集成服务”，在右侧边栏选中“来宾服务”。
 
 ![Hyper-V](../.gitbook/assets/hyperv-12.png)
 
-请勾选“来宾服务”。来宾服务是 Hyper-V 集成服务的一部分，提供宿主机与虚拟机之间的文件交换、时间同步等集成功能。其作用详见参考文献。
+
 
 ![Hyper-V](../.gitbook/assets/hyperv-16.jpg)
 
