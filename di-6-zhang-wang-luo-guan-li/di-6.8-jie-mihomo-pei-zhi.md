@@ -40,7 +40,7 @@ Mihomo 也可通过 FreeBSD 的 Linux 二进制兼容层运行，其网络流量
 
 ## RC 脚本
 
-已向 Ports 维护者提交了合并请求（[Bug 291295 - net/mihomo: Add rc.conf and some Post-installation](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=291295)），旨在为 Mihomo 添加系统服务管理支持，截至撰稿时尚未收到回应。官方集成完成前，可使用下文提供的自定义 RC 脚本实现服务化管理。
+已向 Ports 维护者提交了合并请求（[Bug 291295 - net/mihomo: Add rc.conf and some Post-installation](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=291295)），旨在为 Mihomo 添加系统服务管理支持，截至撰稿时尚未获得回应。官方集成完成前，可使用下文提供的自定义 RC 脚本实现服务化管理。
 
 ### RC 脚本
 
@@ -134,7 +134,7 @@ service mihomo stop
 service mihomo status
 ```
 
-- 指定订阅链接地址（示例地址仅作演示之用，需替换为有效链接）：
+- 指定订阅链接地址（示例地址仅作演示用途，需替换为有效链接）：
 
 ```sh
 sysrc mihomo_config="https://xxxx.yyy"
@@ -280,7 +280,7 @@ $ clashctl status
 
 说明：
 
-- `clashctl autostart on` 只影响 rc.d 服务是否随系统启动。
+- `clashctl autostart on` 仅控制 rc.d 服务是否随系统启动。
 - `service` 与 `autostart` 命令需要 root 权限（请使用 root 或 `sudo`）。
 - FreeBSD 自启动配置文件：**/etc/rc.conf.d/clash_freebsd**。
 

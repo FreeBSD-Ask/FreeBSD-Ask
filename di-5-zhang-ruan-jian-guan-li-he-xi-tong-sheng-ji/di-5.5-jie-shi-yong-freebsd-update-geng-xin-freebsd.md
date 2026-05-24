@@ -96,7 +96,7 @@ usr/lib/clang/18.1.8/include
 # freebsd-update install
 ```
 
-若需自动化定期检查更新，可改用 `freebsd-update cron`，该命令会随机延迟 1 至 3600 秒后执行 fetch，并在有可用更新时发送邮件通知（收件人默认为 root，可通过 `-t` 指定）。PAGER 环境变量（默认 `/usr/bin/less`）控制合并报告的分页行为，设为 `cat` 可禁用交互式分页。
+若需自动化定期检查更新，可改用 `freebsd-update cron`，该命令会随机延迟 1 至 3600 秒后执行 fetch，并在有可用更新时发送邮件通知（收件人默认为 root，可通过 `-t` 指定）。PAGER 环境变量（默认 **/usr/bin/less**）控制合并报告的分页行为，设为 `cat` 可禁用交互式分页。
 
 ### 验证更新后的 FreeBSD 版本
 
@@ -111,7 +111,7 @@ usr/lib/clang/18.1.8/include
 
 > **注意**
 >
-> 有时候补丁不涉及内核，内核版本就不会变，用 `uname -r` 无法体现，但用户空间版本会发生变化。因此可能会看到两个版本号，应以较高者为准。
+> 有时补丁不涉及内核，内核版本不会改变，用 `uname -r` 无法体现，但用户空间版本会发生变化。因此可能会看到两个版本号，应以较高者为准。
 
 重启系统：
 
@@ -134,7 +134,7 @@ usr/lib/clang/18.1.8/include
 >
 > `freebsd-update` 下载慢不是因为其更新源在境外（使用境外服务器更新一样慢）。这可能与其设计缺陷有关，`freebsd-update` 是一个由数千行组成的纯 Shell 脚本。[这是长期存在的问题](https://freebsd-questions.freebsd.narkive.com/xjVoetUM/why-is-freebsd-update-so-horrible-slow)。
 >
-> `freebsd-update upgrade` 在工作目录（默认 `/var/db/freebsd-update/`）中可能需要最多 500 MB 空间，具体取决于已安装的基本系统组件。若升级因空间不足中断，可使用 `-F` 标志强制继续。
+> `freebsd-update upgrade` 在工作目录（默认 **/var/db/freebsd-update/**）中可能需要最多 500 MB 空间，具体取决于已安装的基本系统组件。若升级因空间不足中断，可使用 `-F` 标志强制继续。
 
 **以 FreeBSD 14.3-RELEASE 升级到 15.0-RELEASE 为例**
 
@@ -149,7 +149,7 @@ usr/lib/clang/18.1.8/include
 
 > **警告**
 >
-> 由于大版本间的变动可能影响 `freebsd-update` 更新工具本身，所以一定要：
+> 由于大版本间的变动可能影响 `freebsd-update` 更新工具本身，所以务必：
 >
 > 先更新到当前版本最新的补丁版本（如 `X.Y-RELEASE-pN`），然后再更新到最新的点版本（如 `X.Z-RELEASE`）。
 >
@@ -183,7 +183,7 @@ kernel/generic kernel/generic-dbg world/base world/lib32
 The following components of FreeBSD do not seem to be installed:
 world/base-dbg world/lib32-dbg
 
-Does this look reasonable (y/n)? y # 在这里输入 y，然后回车即可，在检查基本组件的安装情况。
+Does this look reasonable (y/n)? y # 在这里输入 y，然后回车即可，此处是在检查基本组件的安装情况。
 
 Fetching metadata signature for 15.0-RELEASE from update1.freebsd.org... done.
 Fetching metadata index... done.
@@ -230,7 +230,7 @@ The following file could not be merged automatically: /etc/pkg/FreeBSD.conf
 Press Enter to edit this file in /usr/bin/ee and resolve the conflicts
 manually...
 
-……这里提示按回车键编辑一些无法自动合并需要手动编辑的文件……
+……这里提示按回车键编辑无法自动合并而需手动处理的文件……
 
 The following changes, which occurred between FreeBSD 14.3-RELEASE and
 FreeBSD 15.0-RELEASE have been merged into /etc/login.conf:

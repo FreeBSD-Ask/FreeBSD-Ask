@@ -78,9 +78,9 @@ pcm2: <USB audio> (play)
 No devices installed from userspace.
 ```
 
-在本实例中要使用的是 pcm2 设备，其对应的设备文件路径为 **/dev/dsp2**，下文配置中会使用该路径。
+本实例使用的是 pcm2 设备，其对应的设备文件路径为 **/dev/dsp2**，下文配置中会使用该路径。
 
-可以使用 `sysctl -d dev.pcm.2` 命令查看相关硬件参数的详细含义，摘录关键的三项参数如下：
+可使用 `sysctl -d dev.pcm.2` 命令查看相关硬件参数的详细含义，摘录关键的三项参数如下：
 
 ```sh
 dev.pcm.2.bitperfect: bit-perfect playback/recording (0=disable, 1=enable)
@@ -184,7 +184,7 @@ audio_output {
 
 > **技巧**
 >
-> 可以指定多个输出设备，并在各类客户端中按需启用或禁用相应的输出设备。
+> 可指定多个输出设备，并在各类客户端中按需启用或禁用相应的输出设备。
 
 开启 musicpd 服务：
 

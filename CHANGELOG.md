@@ -2,6 +2,19 @@
 
 ## 2026 年第二季度
 
+- 2026.5.24
+  - 更新“6.1 基础网络”中的“通过 ifconfig 命令识别网络适配器”
+  - 更新“21.4 MySQL”到 MySQL 8.4
+  - 提交 [Bug 295539 - games/renpy: Maybe need update to 8.x.y not deprecate](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=295539)
+  - 提交 [Bug 295538 - java/intellij-ultimate: Please move it to java/intellij](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=295538)
+  - 完全重写：“27.2 Java 开发环境”
+  - 完全重写：“27.3 Qt 开发环境”
+  - 完整重写：“27.5 Rust 开发环境”
+  - 更新“27.6 Go 开发环境”
+  - 更新“27.7 Node.js 开发环境”
+- 2026.5.23
+  - 删除“8.10 Hyprland”，无法复现，缺乏文档维护
+  - 完全重写：“2.4 使用 VirtualBox 安装 FreeBSD”
 - 2026.5.22
   - 从“23.1 FTP 服务器”拆分出第 22 章：文件传输协议（FTP）
   - 删除“21.4 MySQL 5.x 系列”，过时且不可用

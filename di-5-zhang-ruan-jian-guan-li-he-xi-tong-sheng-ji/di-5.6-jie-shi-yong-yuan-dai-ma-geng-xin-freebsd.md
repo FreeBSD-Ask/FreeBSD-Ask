@@ -76,7 +76,7 @@ $ git clone --branch releng/15.0 --single-branch --depth 1 https://git.freebsd.o
 选项解释：
 
 - `--branch releng/15.0`：指定拉取分支（FreeBSD RELEASE 的版本）
-- `--single-branch`：仅克隆一个分支，除该已克隆的单一分支外不含任何其他引用（refs）。
+- `--single-branch`：仅克隆一个分支，除所克隆的单一分支外不含任何其他引用（refs）。
 
 或者通过 GitHub 拉取。从 GitHub 克隆 FreeBSD 15.0 发布分支源代码到 **/usr/src**，使用浅克隆并仅包含该分支：
 
@@ -110,11 +110,11 @@ $ git clone --branch releng/15.0 --single-branch --depth 1 https://github.com/fr
 ## 开始编译
 
 ```sh
-# cd /usr/src          # 切到工作目录
+# cd /usr/src          # 切换到工作目录
 # make -j4 buildworld  # 编译世界
 # make -j4 kernel      # 编译并安装内核
 # reboot               # 重启以使用新内核
-# cd /usr/src          # 切回工作目录
+# cd /usr/src          # 切换回工作目录
 # etcupdate -p         # 进行必要的配置文件合并
 # make installworld    # 安装世界
 # etcupdate -B         # 合并更新
@@ -145,11 +145,11 @@ Conflicts remain from previous update, aborting.
 
 `etcupdate` 在合并后会自动触发若干系统文件的后续处理：
 
-- 若 `/etc/master.passwd` 变更则自动调用 `pwd_mkdb`；
-- 若 `/etc/login.conf` 变更则自动调用 `cap_mkdb`；
-- 若 `/etc/mail/aliases` 变更则自动调用 `newaliases`；
-- 若 `/etc/services` 变更则自动调用 `services_mkdb`；
-- 若 `/etc/localtime` 变更且 `/var/db/zoneinfo` 存在则自动调用 `tzsetup`。
+- 若 **/etc/master.passwd** 变更则自动调用 `pwd_mkdb`；
+- 若 **/etc/login.conf** 变更则自动调用 `cap_mkdb`；
+- 若 **/etc/mail/aliases** 变更则自动调用 `newaliases`；
+- 若 **/etc/services** 变更则自动调用 `services_mkdb`；
+- 若 **/etc/localtime** 变更且 **/var/db/zoneinfo** 存在则自动调用 `tzsetup`。
 
 解决冲突：
 

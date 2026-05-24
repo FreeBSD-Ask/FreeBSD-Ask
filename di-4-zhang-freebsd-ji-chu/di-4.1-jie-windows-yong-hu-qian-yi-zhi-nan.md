@@ -22,11 +22,11 @@
 
 ![文件系统基础](../.gitbook/assets/windows-file-explorer.png)
 
-行道树则不同，每棵均独立生长。即便两树紧邻而立，也仍然是独立的个体。行道树正如 Windows 目录，盘符各自独立——`C:\Program Files (x86)\Google\Update`、`D:\BaiduNetdiskDownload\工具列表`、`E:\123\app`：`C`、`D`、`E` 盘彼此隔离、互不干扰。格式化 `D` 盘，不影响 `E` 盘中存储的文件。即便在 PE 中格式化 `C` 盘（可能不会显示为 `C` 盘），`E` 盘文件也不受影响。
+行道树则不同，每棵均独立生长。即便两树紧邻而立，也仍然是独立的个体。行道树正如 Windows 目录，盘符各自独立——**C:\Program Files (x86)\Google\Update**、**D:\BaiduNetdiskDownload\工具列表**、**E:\123\app**：`C`、`D`、`E` 盘彼此隔离、互不干扰。格式化 `D` 盘，不影响 `E` 盘中存储的文件。即便在 PE 中格式化 `C` 盘（可能不会显示为 `C` 盘），`E` 盘文件也不受影响。
 
 Windows 的“盘符”并非固定存在。在 PE 环境中，`C` 盘可能显示为其他盘符（如 `X`）；运行中的 Windows 也可以任意分配盘符。
 
-Windows 判断分区与盘符的对应关系，依据的是 GPT 分区类型 UUID（如 Windows 数据分区类型 UUID 为 `EBD0A0A2-B9E5-4433-87C0-68B6B72699C7`，即 Microsoft Basic Data 类型，适用于所有 Windows 数据分区，而非仅限 C 盘）以及分区的唯一 GUID（相关配置由 Windows 装入管理器 Mount Manager 写入注册表 `HKLM\SYSTEM\MountedDevices`），而非依靠盘符自身。
+Windows 判断分区与盘符的对应关系，依据的是 GPT 分区类型 UUID（如 Windows 数据分区类型 UUID 为 `EBD0A0A2-B9E5-4433-87C0-68B6B72699C7`，即 Microsoft Basic Data 类型，适用于所有 Windows 数据分区，而非仅限 C 盘）以及分区的唯一 GUID（相关配置由 Windows 装入管理器 Mount Manager 写入注册表 **HKLM\SYSTEM\MountedDevices**），而非依靠盘符自身。
 
 查看盘符和卷的映射关系：
 
@@ -119,7 +119,7 @@ PSPath
 ### 参考文献
 
 - 微软. PARTITION_INFORMATION_GPT[EB/OL]. [2026-04-18]. <https://learn.microsoft.com/en-us/windows/win32/api/winioctl/ns-winioctl-partition_information_gpt>. GPT 分区类型 GUID 定义，其中 Microsoft Basic Data 类型为 EBD0A0A2-B9E5-4433-87C0-68B6B72699C7。
-- 微软. Supporting Mount Manager Requests in a Storage Class Driver[EB/OL]. [2026-04-18]. <https://learn.microsoft.com/en-us/windows-hardware/drivers/storage/supporting-mount-manager-requests-in-a-storage-class-driver>. Windows 装入管理器将盘符与分区的映射关系持久化存储于注册表 `HKLM\SYSTEM\MountedDevices`。
+- 微软. Supporting Mount Manager Requests in a Storage Class Driver[EB/OL]. [2026-04-18]. <https://learn.microsoft.com/en-us/windows-hardware/drivers/storage/supporting-mount-manager-requests-in-a-storage-class-driver>. Windows 装入管理器将盘符与分区的映射关系持久化存储于注册表 **HKLM\SYSTEM\MountedDevices**。
 - GBIF. Bambusoideae Luerss.[EB/OL]. [2026-04-18]. <https://www.gbif.org/species/113642445>. 竹亚科许多物种具有群体开花（gregarious flowering）特性，开花后常因资源耗竭而死亡；竹子通过地下根茎系统进行克隆生长（clonal growth），同一克隆的个体共享资源。
 - Aristotle. Metaphysics[M]. Translated by W. D. Ross. Oxford: Clarendon Press, 1908. Book IX (Theta), Chapter 7, 1049b. 亚里士多德论潜能与现实：种子之所以能长成大树，是因为种子暗含着一种潜能。
 
@@ -191,7 +191,7 @@ Windows 操作系统默认的文本换行符为 CRLF（即 `\r\n`，0x0D 0x0A，
 
 二者互不兼容。将使用 Windows 换行符的文件置于 UNIX 系统，可能导致每行末尾多出 `^M` 字符；某些工具会因此产生识别错误，而对 FreeBSD Port 相关文件而言，则可能将多行识别为单行。
 
-然而两种换行符可以互相转换。在 FreeBSD 中可使用 Port **converters/dos2unix** 实现，该软件包含两个命令：`dos2unix`（Windows 换行符到 UNIX）、`unix2dos`（UNIX 换行符到 Windows）。基本用法是 `$ dos2unix -n a.txt b.txt`，如果不需要保留源文件，可直接 `$ dos2unix a.txt b.txt c.txt`（一次转换多个文件）。可使用命令 `file a.txt` 来判断文件的换行符类型：
+然而两种换行符可以互相转换。在 FreeBSD 中可使用 Port **converters/dos2unix** 实现，该软件包含两个命令：`dos2unix`（Windows 换行符到 UNIX）、`unix2dos`（UNIX 换行符到 Windows）。基本用法是 `dos2unix -n a.txt b.txt`，如果不需要保留源文件，可直接 `dos2unix a.txt b.txt c.txt`（一次转换多个文件）。可使用命令 `file a.txt` 来判断文件的换行符类型：
 
 - 使用普通的 UNIX 换行符文本文件
 
@@ -248,7 +248,7 @@ FreeBSD 的编码在 [main/usr.bin/login/login.conf](https://github.com/freebsd/
 - 微软. Code pages[EB/OL]. [2026-03-26]. <https://learn.microsoft.com/en-us/globalization/encoding/code-pages>. 微软官方称，936 即是 GBK，用于中文简体字符编码；代码页 936 最初覆盖 GB 2312 字符集，后扩展为 GBK。
 - Unicode Consortium. UTF-8, UTF-16, UTF-32 BOM[EB/OL]. [2026-04-18]. <https://www.unicode.org/faq/utf_bom.html>. UTF-8 的 BOM 为字节序列 0xEF 0xBB 0xBF。
 - 微软. Use UTF-8 code pages in Windows apps[EB/OL]. [2026-04-18]. <https://learn.microsoft.com/en-us/windows/apps/design/globalizing/use-utf8-code-page>. Windows 10 及后续版本可通过系统区域设置启用 UTF-8 支持（Beta 功能），但可能导致旧应用程序兼容性问题。
-- FreeBSD Project. login.conf(5)[EB/OL]. [2026-04-18]. <https://man.freebsd.org/cgi/man.cgi?query=login.conf&sektion=5>. FreeBSD 登录类能力数据库，源文件位于 `usr.bin/login/login.conf`，编译后路径为 **/etc/login.conf**，用于设置字符编码等用户环境。
+- FreeBSD Project. login.conf(5)[EB/OL]. [2026-04-18]. <https://man.freebsd.org/cgi/man.cgi?query=login.conf&sektion=5>. FreeBSD 登录类能力数据库，源文件位于 **usr.bin/login/login.conf**，编译后路径为 **/etc/login.conf**，用于设置字符编码等用户环境。
 
 ## 时间与时区差异
 
@@ -310,11 +310,11 @@ Windows 直接读取 RTC 的值，并视为本地时间（Local Time，地方时
 ### 天文历法
 
 - 中国科学院紫金山天文台. 2026 年中国天文年历[M]. 北京：科学出版社，2025. ISBN: 978-7-03-082584-1. 注：每年一版。一般日历会写潮起潮落太阳东升西落的时间，该书则是大全，提供精确的天文数据。
-- 胡中为. 天文学教程（上）[M]. 上海：上海交通大学出版社，2019. ISBN: 978-7-3132-1655-7. 天文学历史悠久，这是本现代天文学入门书籍，本科生教材，系统介绍天文学基础。
+- 胡中为. 天文学教程（上）[M]. 上海：上海交通大学出版社，2019. ISBN: 978-7-3132-1655-7. 天文学历史悠久，这是一本现代天文学入门书籍，本科生教材，系统介绍天文学基础。
 - 胡中为. 天文学教程（下）[M]. 上海：上海交通大学出版社，2020. ISBN: 978-7-3132-3572-5. 天文学是一级学科，深入讲解天体物理与宇宙学。
 - Dodelson S, Schmidt F. 现代宇宙学[M]. 于浩然，译. 第 2 版. 北京：科学出版社，2024. ISBN: 978-7-03-078693-7. 该书用数学和物理学描述宇宙宏观整体而非具体天体行星，提供现代宇宙学理论框架。
-- 卢央. 中国古代星占学[M]. 北京：中国科学技术出版社，2013. ISBN: 978-7-5046-6140-1. 中国古代天文学入门，星占学即用哲学或神秘学解释天文学，梳理古代星占文化。
-- Carroll B W, Ostlie D A. 当代天体物理学导论[M]. 姜碧沩，李庆康，高健，等，译. 第 2 版. 北京：科学出版社，2023. ISBN: 978-7-03-076666-3. 天体物理学即用物理学解释天文学，是现代天文学的核心（还有一些测量、分类、天文历法等不属于此范畴），提供天体物理系统介绍。
+- 卢央. 中国古代星占学[M]. 北京：中国科学技术出版社，2013. ISBN: 978-7-5046-6140-1. 中国古代天文学入门，星占学即以哲学或神秘学解释天文学，梳理古代星占文化。
+- Carroll B W, Ostlie D A. 当代天体物理学导论[M]. 姜碧沩，李庆康，高健，等，译. 第 2 版. 北京：科学出版社，2023. ISBN: 978-7-03-076666-3. 天体物理学即以物理学解释天文学，是现代天文学的核心（还有一些测量、分类、天文历法等不属于此范畴），提供天体物理系统介绍。
 
 > **思考题**
 >
@@ -336,6 +336,6 @@ Windows 直接读取 RTC 的值，并视为本地时间（Local Time，地方时
 
 ## 课后习题
 
-1. 在 FreeBSD 中挂载一个 Windows NTFS 分区，使用 `converters/dos2unix` 批量转换包含 Windows 换行符的文本文件，编写 shell 脚本实现自动化处理。
+1. 在 FreeBSD 中挂载一个 Windows NTFS 分区，使用 **converters/dos2unix** 批量转换包含 Windows 换行符的文本文件，编写 shell 脚本实现自动化处理。
 2. 查阅 FreeBSD 内核源代码中 UFS/ZFS 文件系统处理大小写敏感的逻辑，分析其实现机制与 Windows NTFS 大小写不敏感设计的差异。
 3. 修改 Windows 注册表使其将硬件时钟视为 UTC，记录修改前后 FreeBSD 与 Windows 双系统时间显示的差异。

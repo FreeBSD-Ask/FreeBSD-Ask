@@ -98,8 +98,7 @@
 * [8.7 GNOME](di-8-zhang-zhuo-mian-huan-jing/di-8.7-jie-gnome.md)
 * [8.8 LXDE](di-8-zhang-zhuo-mian-huan-jing/di-8.8-jie-lxde.md)
 * [8.9 IceWM](di-8-zhang-zhuo-mian-huan-jing/di-8.9-jie-icewm.md)
-* [8.10 Hyprland](di-8-zhang-zhuo-mian-huan-jing/di-8.10-jie-hyprland.md)
-* [8.11 CDE](di-8-zhang-zhuo-mian-huan-jing/di-8.11-jie-cde.md)
+* [8.10 CDE（拟删除）](di-8-zhang-zhuo-mian-huan-jing/di-8.10-jie-cde.md)
 
 ## 第 9 章 多媒体和外部设备
 
@@ -222,8 +221,8 @@
 * [21.1 数据库概论](di-21-zhang-shu-ju-ku-guan-li/di-21.1-jie-shu-ju-ku-gai-lun.md)
 * [21.2 PostgreSQL](di-21-zhang-shu-ju-ku-guan-li/di-21.2-jie-postgresql-shu-ju-ku.md)
 * [21.3 pgAdmin4](di-21-zhang-shu-ju-ku-guan-li/di-21.3-jie-pgadmin4-guan-li-gong-ju.md)
-* [21.4 MySQL 8.x 系列](di-21-zhang-shu-ju-ku-guan-li/di-21.4-jie-mysql-8-x-xi-lie.md)
-* [21.5 MongoDB 8.0](di-21-zhang-shu-ju-ku-guan-li/di-21.5-jie-mongodb-8-0.md)
+* [21.4 MySQL](di-21-zhang-shu-ju-ku-guan-li/di-21.4-jie-mysql-8-x-xi-lie.md)
+* [21.5 MongoDB](di-21-zhang-shu-ju-ku-guan-li/di-21.5-jie-mongodb-8-0.md)
 
 ## 第 22 章 文件传输协议（FTP）
 

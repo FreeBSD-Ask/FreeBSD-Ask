@@ -46,7 +46,7 @@
 | pkg | / | FreeBSD 的二进制包管理器，用于安装、更新和管理预编译的软件包，旧称 pkgng |
 | PkgBase | / | FreeBSD 的基本系统包管理方案，使用 pkg 包管理器来实现用户空间和内核的更新，于 FreeBSD 14.0 首次引入，自 FreeBSD 15.0 起以技术预览（Technology Preview）形式提供完整安装选项 |
 | freebsd-update | / | FreeBSD 基本系统更新工具，用于获取安全更新和执行系统版本升级 |
-| Poudriere | / | FreeBSD 工具，通过 Jail 环境测试 port 并构建 FreeBSD 软件包镜像 |
+| Poudriere | / | FreeBSD 工具，通过 Jail 环境测试 Port 并构建 FreeBSD 软件包镜像 |
 | 安全启动 | / | Secure Boot，基于 UEFI 固件的安全机制，通过数字签名验证引导加载程序和操作系统内核的完整性 |
 | Linuxism | / | 指软件过度依赖 Linux 特有特性而难以移植到其他类 UNIX 操作系统的现象 |
 | POLA | 最小惊讶原则 | Principle of Least Astonishment，一种设计原则，指设计必须符合用户的习惯、期望与认知能力 |

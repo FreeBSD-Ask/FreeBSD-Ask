@@ -4,7 +4,7 @@ FreeBSD 默认字体对中文显示效果欠佳。本节介绍图形界面引入
 
 ## GUI 图形界面字体
 
-首先提取 Windows `C:\Windows\Fonts` 目录下的所有 `.ttf` 和 `.ttc` 字体文件。macOS 字体文件格式虽同为 `.ttf`，仍需特殊处理。
+首先提取 Windows **C:\Windows\Fonts** 目录下的所有 `.ttf` 和 `.ttc` 字体文件。macOS 字体文件格式虽同为 `.ttf`，仍需特殊处理。
 
 为管理新字体，创建一个目录存放 Windows 字体：
 
@@ -12,7 +12,7 @@ FreeBSD 默认字体对中文显示效果欠佳。本节介绍图形界面引入
 # mkdir -p /usr/local/share/fonts/WindowsFonts
 ```
 
-将字体文件复制到 `WindowsFonts` 目录。
+将字体文件复制到 **WindowsFonts** 目录。
 
 字体目录结构：
 
@@ -79,7 +79,7 @@ allscreens_flags="-f /root/b16.fnt"
 
 ## 附录：安装 Windows 11 字体（自制包）
 
-同时兼容 Debian 和低版本 Ubuntu 兼容层。安装方法：
+该包同时兼容 Debian 和低版本 Ubuntu 的兼容层。安装方法：
 
 ```sh
 # apt install git                          # 安装 Git

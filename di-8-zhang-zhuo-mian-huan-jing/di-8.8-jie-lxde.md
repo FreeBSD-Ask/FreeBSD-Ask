@@ -2,7 +2,7 @@
 
 ## LXDE 桌面环境概述
 
-LXDE 是一款轻量级桌面环境，专注于资源利用效率与交互简洁，在低配置硬件平台上表现优异。
+LXDE 是一款轻量级桌面环境，专注于资源利用效率与简洁的交互体验，在低配置硬件平台上表现优异。
 
 ## 安装 LXDE 桌面环境
 
@@ -34,9 +34,9 @@ LXDE 是一款轻量级桌面环境，专注于资源利用效率与交互简洁
 | `wqy-fonts` | 文泉驿中文字体 |
 | `xdg-user-dirs` | 管理用户目录，如“桌面”、“下载”等 |
 
-## `startx`
+## startx
 
-编辑 **~/.xinitrc** 文件，加入如下内容，以便通过 `startx` 命令启动 LXDE 桌面环境：
+编辑 **~/.xinitrc** 文件，添加以下内容，以便通过 startx 命令启动 LXDE 桌面环境：
 
 ```sh
 exec startlxde
@@ -68,13 +68,13 @@ proc           /proc       procfs  rw  0   0
 
 在 **/etc/rc.conf** 文件中加入：
 
-```sh
+```ini
 lightdm_env="LC_MESSAGES=zh_CN.UTF-8"
 ```
 
 设置 LightDM 环境变量，将系统消息语言指定为中文。
 
-还需要编辑 **/etc/login.conf** 文件，找到 `default:\` 部分，将 `:lang=C.UTF-8` 修改为 `:lang=zh_CN.UTF-8`。最后根据 **/etc/login.conf** 文件生成能力数据库：
+还需要编辑 **/etc/login.conf** 文件，找到 `default:\` 部分，将 `:lang=C.UTF-8` 修改为 `:lang=zh_CN.UTF-8`。最后根据 **/etc/login.conf** 文件重建能力数据库：
 
 ```sh
 # cap_mkdb /etc/login.conf

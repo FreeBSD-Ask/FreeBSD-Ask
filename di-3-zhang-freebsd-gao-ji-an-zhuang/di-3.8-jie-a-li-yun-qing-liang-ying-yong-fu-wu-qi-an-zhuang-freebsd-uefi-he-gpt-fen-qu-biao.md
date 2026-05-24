@@ -478,7 +478,7 @@ root@mfsbsd:~ # gpart show # 查看修复分区表后的磁盘信息
 
 ### ZFS 安装
 
-在 Shell 界面，执行以下命令，手动加载 zfs 内核模块：
+在 Shell 界面，执行以下命令，手动加载 ZFS 内核模块：
 
 ```sh
 # kldload zfs
@@ -486,7 +486,7 @@ root@mfsbsd:~ # gpart show # 查看修复分区表后的磁盘信息
 
 无任何信息输出则加载成功。
 
-还可通过以下命令验证 zfs 模块的加载情况：
+还可通过以下命令验证 ZFS 模块的加载情况：
 
 ```sh
 # kldstat | grep zfs
@@ -520,9 +520,9 @@ pid 1562 (distextract), jid 0, uid 0, was killed: failed to reclaim memory
 
 ### 安装过程中报错 `sysctl: unknown oid 'vfs.zfs.min_auto_ashift'`
 
-分析报错信息：从字面看，该参数用于设置 ZFS 4K 对齐，报错指出该参数是未知的。因此首先将问题定位到 zfs 模块。
+分析报错信息：从字面看，该参数用于设置 ZFS 4K 对齐，报错指出该参数是未知的。因此首先将问题定位到 ZFS 模块。
 
-通常是由于未预先手动加载 zfs 内核模块引发的。
+通常是由于未预先手动加载 ZFS 内核模块引发的。
 
 解决方法为按照上文所述，执行命令 `kldload zfs` 手动加载内核模块。
 

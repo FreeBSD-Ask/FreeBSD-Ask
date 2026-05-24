@@ -2,7 +2,7 @@
 
 ## Xfce 桌面环境概述
 
-Xfce 是类 UNIX 系统中的轻量级桌面环境，资源占用率低、响应速度快。颇具趣味的是，Xfce 的 Logo 是一只老鼠 🐀。曾有用户反馈一则轶事，称因 Xfce 的默认壁纸是一只老鼠 🐀，导致自己的电脑屏幕被猫 🐈 抓坏（SanjaytheToilet. [joke] The default desktop startup screen causes damage to monitor![EB/OL]. (2015-08-04)[2026-04-04]. <https://bugzilla.xfce.org/show_bug.cgi?id=12117>.）。
+Xfce 是类 UNIX 系统中的轻量级桌面环境，资源占用率低、响应速度快。颇具趣味的是，Xfce 的 Logo 是一只老鼠 🐀。曾有用户反馈一则轶事，称因 Xfce 的默认壁纸是一只老鼠 🐀，导致电脑屏幕被猫 🐈 抓坏（SanjaytheToilet. [joke] The default desktop startup screen causes damage to monitor![EB/OL]. (2015-08-04)[2026-04-04]. <https://bugzilla.xfce.org/show_bug.cgi?id=12117>.）。
 
 ## 安装 Xfce 桌面环境
 
@@ -40,7 +40,7 @@ Xfce 是类 UNIX 系统中的轻量级桌面环境，资源占用率低、响应
 
 ## startx 命令
 
-将 Xfce 启动脚本写入 **~/.xinitrc** 文件，以便使用 `startx` 命令启动 Xfce：
+将 Xfce 启动脚本写入 **~/.xinitrc** 文件，以便使用 startx 命令启动 Xfce：
 
 ```sh
 $ echo "/usr/local/etc/xdg/xfce4/xinitrc" > ~/.xinitrc
@@ -70,7 +70,7 @@ $ echo "/usr/local/etc/xdg/xfce4/xinitrc" > ~/.xsession
 
 编辑 **/etc/login.conf** 文件：找到 `default:\` 这一段，将 `:lang=C.UTF-8` 修改为 `:lang=zh_CN.UTF-8`。
 
-还需要根据 **/etc/login.conf** 文件更新系统能力数据库：
+还需要根据 **/etc/login.conf** 文件重建能力数据库：
 
 ```sh
 # cap_mkdb /etc/login.conf
@@ -110,9 +110,9 @@ $ xfconf-query -c xsettings -p /Gtk/Modules -n -t string -s "appmenu-gtk-module"
 
 ## 软件推荐
 
-FreeBSD 的 Xfce 邮箱客户端推荐使用 `mail/evolution` 软件，可搭配 `xfce4-mailwatch-plugin`、`security/gnome-keyring` 一并使用。
+FreeBSD 的 Xfce 邮箱客户端推荐使用 **mail/evolution** 软件，可搭配 **xfce4-mailwatch-plugin**、**security/gnome-keyring** 一并使用。
 
-还有一款桌面插件，名为 `x11/xfce4-verve-plugin`。配合设置智能书签，可以查询网页内容。可通过配置来搜索 FreeBSD 的 man 手册内容。
+还有一款桌面插件，名为 **x11/xfce4-verve-plugin**，配合设置智能书签可用于查询网页内容，也可通过配置搜索 FreeBSD 的 man 手册内容。
 
 ## XTerm 终端动态标题
 

@@ -10,7 +10,7 @@ KDE 是一套现代化的桌面环境。KDE 桌面环境借鉴了 Windows 等多
 
 > **技巧**
 >
-> 不希望捆绑安装大量附加工具和软件的用户可使用下方的最小化安装方案，无需自定义的用户可继续使用本方案。
+> 不希望捆绑安装大量附加工具和软件的用户可使用下方的最小化安装方案，无需自定义配置的用户可继续使用本方案。
 
 - 使用 pkg 安装：
 
@@ -66,7 +66,7 @@ $ echo "exec ck-launch-session startplasma-x11" > ~/.xinitrc
 
 > **注意**
 >
-> 如果在 root 下已执行过上述命令，新用户仍需再执行一次才能正常使用 startx（无需 root 权限或 sudo）。
+> 如果以 root 身份已执行过上述命令，新用户仍需再执行一次才能正常使用 startx（无需 root 权限或 sudo）。
 
 ## 权限设置
 
@@ -93,7 +93,7 @@ $ echo "exec ck-launch-session startplasma-x11" > ~/.xinitrc
 
 编辑 **/etc/login.conf** 文件：找到 `default:\` 这一部分，将 `:lang=C.UTF-8` 修改为 `:lang=zh_CN.UTF-8`。
 
-编辑后形如下方：
+编辑后如下所示：
 
 ```ini
       ……省略其他部分……
@@ -106,7 +106,7 @@ $ echo "exec ck-launch-session startplasma-x11" > ~/.xinitrc
       ……省略其他部分……
 ```
 
-根据 **/etc/login.conf** 文件刷新能力数据库：
+根据 **/etc/login.conf** 文件重建能力数据库：
 
 ```sh
 # cap_mkdb /etc/login.conf
@@ -131,7 +131,7 @@ $ echo "exec ck-launch-session startplasma-x11" > ~/.xinitrc
 
 ## 附录：最小化 KDE 桌面安装方案
 
-直接安装 **x11/kde** 会将 **x11/plasma6-plasma** 和 **x11/kde-baseapps** 作为依赖一并安装，其中捆绑了大量工具软件，某些情况下不便于部署使用。
+直接安装 **x11/kde** 会将 **x11/plasma6-plasma** 和 **x11/kde-baseapps** 作为依赖一并安装，其中捆绑了大量工具软件，在某些场景下不便于部署和使用。
 
 ### 使用 pkg 安装
 
@@ -144,7 +144,7 @@ $ echo "exec ck-launch-session startplasma-x11" > ~/.xinitrc
 | 软件包 | 作用 |
 | ------ | ---- |
 | **plasma6-kactivitymanagerd** | 管理用户活动、跟踪使用模式等的系统服务。缺少该服务可能导致 KDE 桌面无法正常显示 |
-| **plasma6-kscreen** | KDE 屏幕管理器。**没有该软件将无法调整分辨率** |
+| **plasma6-kscreen** | KDE 屏幕管理器。**未安装该软件将无法调整分辨率** |
 | **plasma6-systemsettings** | 系统设置 |
 
 与上文重复的软件包在此不再列出。
@@ -202,13 +202,13 @@ $ echo "exec ck-launch-session startplasma-x11" > ~/.xinitrc
 
 > **注意**
 >
-> 如果采用 KDE 最小化安装方案，必须配置 `.xinitrc` 文件。
+> 如果采用 KDE 最小化安装方案，必须配置 **.xinitrc** 文件。
 
 ### 最小化安装 KDE 图示
 
 > **技巧**
 >
-> 使用此方案安装的 KDE 桌面缺少了很多功能，可以参照 [x11/plasma6-plasma](https://www.freshports.org/x11/plasma6-plasma/) 的“Runtime dependencies”（运行时依赖）和“Library dependencies”（库依赖）来补全功能。
+> 使用此方案安装的 KDE 桌面缺少较多功能，可参照 [x11/plasma6-plasma](https://www.freshports.org/x11/plasma6-plasma/) 的“Runtime dependencies”（运行时依赖）和“Library dependencies”（库依赖）来补全功能。
 
 未安装可选包：
 
@@ -253,9 +253,9 @@ $ echo "exec ck-launch-session startplasma-x11" > ~/.xinitrc
 
 如果在 VMware 虚拟机中看不到 SDDM 底部选项，请按照虚拟机配置章节的教程设置屏幕自动缩放。
 
-### 启动 SDDM 提醒 **/usr/bin/xauth**: `(stdin):1: bad display name`，但是可以正常 `startx`
+### 启动 SDDM 提示 **/usr/bin/xauth**: `(stdin):1: bad display name`，但仍可正常 `startx`
 
-需要在 **/etc/rc.conf** 文件中检查是否已设置 `hostname="XXX"`（理论上应当存在该条目，也不应为 `hostname=""`）：
+需要在 **/etc/rc.conf** 文件中检查是否已设置 `hostname="XXX"`（该条目应当存在，且不应为 `hostname=""`）：
 
 ![检查是否设置了主机名](../.gitbook/assets/errornohostname.png)
 

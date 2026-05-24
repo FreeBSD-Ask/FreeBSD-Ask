@@ -55,7 +55,7 @@ FreeBSD directory layout:      man hier
 To change this login announcement, see motd(5).
 ```
 
-祝贺你！你已经成功登录到 FreeBSD 操作系统。
+至此，已成功登录到 FreeBSD 操作系统。
 
 > **注意**
 >
@@ -91,9 +91,9 @@ login:
 
 ## 虚拟控制台
 
-系统控制台虽可用于交互，但系统消息默认输出至系统控制台，会覆盖用户正在操作的命令或文件，干扰注意力，因此习惯命令行的用户通常选择虚拟控制台而非系统控制台。
+系统控制台虽可用于交互，但系统消息默认输出至系统控制台，会覆盖用户正在操作的命令或文件，影响操作，因此习惯命令行的用户通常选择虚拟控制台而非系统控制台。
 
-默认情况下，FreeBSD 配置了多个虚拟控制台用于输入命令。每个虚拟控制台都有自己的登录提示符和 shell，在虚拟控制台之间切换非常方便。这本质上提供了在图形环境中同时打开多个窗口的命令行等效功能。
+默认情况下，FreeBSD 配置了多个虚拟控制台用于输入命令。每个虚拟控制台都有自己的登录提示符和 shell，在虚拟控制台之间切换颇为便捷。这本质上提供了在图形环境中同时打开多个窗口的命令行等效功能。
 
 FreeBSD 保留了 Alt+F1 至 Alt+F8 的组合键用于在虚拟控制台之间切换。使用 Alt+F1 切换到系统控制台（ttyv0），Alt+F2 访问第一个虚拟控制台（ttyv1），Alt+F3 访问第二个虚拟控制台（ttyv2），依此类推。当使用 Xorg 作为图形控制台时，组合键变为 Ctrl+Alt+F1 以返回基于文本的虚拟控制台。
 
@@ -176,7 +176,7 @@ console	none				unknown	off secure	# 注意此行
 
 默认情况下，状态设置为 `secure`（安全）。此设置假设键盘的物理访问权限归属无需顾虑，或已由物理安全策略管控。
 
-如果将此设置更改为 `insecure`（不安全），则因任何人都可以访问键盘，假设物理环境本身是不安全的。当此行中的 `secure` 更改为 `insecure` 后，即：
+如果将此设置更改为 `insecure`（不安全），则表明物理环境本身被视为不安全，因为任何人均可访问键盘。当此行中的 `secure` 更改为 `insecure` 后，即：
 
 ```ini
 console	none				unknown	off insecure
@@ -250,11 +250,11 @@ exec="gop set 0"
 ### 参考文献
 
 - FreeBSD Project. loader.conf(5)[EB/OL]. [2026-04-17]. <https://man.freebsd.org/cgi/man.cgi?query=loader.conf&sektion=5>.
-- FreeBSD Forums. gop set < mode > being ignored in /boot/loader.conf[EB/OL]. [2026-03-26]. <https://forums.freebsd.org/threads/gop-set-mode-being-ignored-in-boot-loader-conf.77779/>. 讨论 loader.conf 中 GOP 模式设置未生效的原因与解决思路。
+- FreeBSD Forums. gop set < mode > being ignored in **/boot/loader.conf**[EB/OL]. [2026-03-26]. <https://forums.freebsd.org/threads/gop-set-mode-being-ignored-in-boot-loader-conf.77779/>. 讨论 loader.conf 中 GOP 模式设置未生效的原因与解决思路。
 - FreeBSD Forums. How to find the valid values of efi_max_resolution[EB/OL]. [2026-03-26]. <https://forums.freebsd.org/threads/how-to-find-the-valid-values-of-efi_max_resolution.84840/>. 探讨查询 efi_max_resolution 有效取值的方法。
 
 ## 课后习题
 
 1. 在 FreeBSD 中切换多个虚拟控制台（ttyv0—ttyv3），分别以不同用户登录，使用 `w` 命令记录各终端的会话信息，分析虚拟控制台与伪终端的会话管理差异。
-2. 查阅 FreeBSD 内核中 TTY 子系统的核心源代码（`sys/tty/`），分析其输入输出缓冲区管理和行规程的实现机制。
+2. 查阅 FreeBSD 内核中 TTY 子系统的核心源代码（**sys/tty/**），分析其输入输出缓冲区管理和行规程的实现机制。
 3. 修改 **/etc/motd** 的内容与显示行为（如通过 **/etc/login.conf** 控制），记录修改前后用户登录时的信息输出差异。

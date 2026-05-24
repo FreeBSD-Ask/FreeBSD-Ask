@@ -16,7 +16,7 @@
 
 使用简单方法安装 FreeBSD，按照以下步骤操作。
 
-首先需要在硬盘上为 FreeBSD 预留空间。因为在典型的 Windows 安装中，最后一个分区（本例为 `nda0p4`）通常是恢复分区，不适合用来安装系统，该空间不一定位于硬盘末尾，中间位置亦可。
+首先需要在硬盘上为 FreeBSD 预留空间。因为在典型的 Windows 安装中，最后一个分区（本例为 `nda0p4`）通常是恢复分区，不适合用来安装系统，为 FreeBSD 预留的空间不一定位于硬盘末尾，中间位置亦可。
 
 分区完成后，在 FreeBSD 下查看磁盘分区情况，结果如下：
 
@@ -122,7 +122,7 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 
 ### 创建交换分区
 
-在 nda0 磁盘上创建 4 GB、4K 对齐的 FreeBSD 交换分区，并标记为 swap：
+在 `nda0` 磁盘上创建 4 GB、4K 对齐的 FreeBSD 交换分区，并标记为 swap：
 
 ```sh
 # gpart add -a 4k -l swap -s 4G -t freebsd-swap nda0
@@ -139,7 +139,7 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 
 ### 创建 ZFS 分区
 
-在 nda0 磁盘上创建 4K 对齐的 FreeBSD ZFS 分区，并标记为 zroot：
+在 `nda0` 磁盘上创建 4K 对齐的 FreeBSD ZFS 分区，并标记为 zroot：
 
 ```sh
 # gpart add -a 4k -l zroot -t freebsd-zfs nda0
@@ -194,7 +194,7 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 
 ### 创建 ZFS 数据集
 
-以下数据集的设置参照 FreeBSD 源代码中的 [usr.sbin/bsdinstall/scripts/zfsboot](https://github.com/freebsd/freebsd-src/blob/main/usr.sbin/bsdinstall/scripts/zfsboot) 创建。FreeBSD 本身持续演进，不同版本间的 ZFS 数据集也有所差异。读者创建数据集时若希望创建与默认安装相同的数据集结构，应参照对应分支的 `usr.sbin/bsdinstall/scripts/zfsboot` 文件。
+以下数据集的设置参照 FreeBSD 源代码中的 [**usr.sbin/bsdinstall/scripts/zfsboot**](https://github.com/freebsd/freebsd-src/blob/main/usr.sbin/bsdinstall/scripts/zfsboot) 创建。FreeBSD 本身持续演进，不同版本间的 ZFS 数据集也有所差异。读者创建数据集时若希望创建与默认安装相同的数据集结构，应参照对应分支的 **usr.sbin/bsdinstall/scripts/zfsboot** 文件。
 
 - 创建根数据集
 
@@ -394,7 +394,7 @@ Windows 文本文件的行尾通常是 `\r\n`（回车 + 换行）。
 # cp /boot/loader.efi /media/efi/freebsd/
 ```
 
-- 使用 efibootmgr 工具向主板 UEFI 固件添加启动项 `FreeBSD`，这样开机时便能在 UEFI 启动菜单中看到 FreeBSD 选项。
+- 使用 `efibootmgr` 工具向主板 UEFI 固件添加启动项 `FreeBSD`，这样开机时便能在 UEFI 启动菜单中看到 FreeBSD 选项。
 
 ```sh
 # efibootmgr --create --activate --label "FreeBSD" --loader "/media/efi/freebsd/loader.efi"
