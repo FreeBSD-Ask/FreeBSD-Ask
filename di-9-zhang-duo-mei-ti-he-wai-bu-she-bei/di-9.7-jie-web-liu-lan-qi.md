@@ -21,6 +21,8 @@ Firefox 是一款开源浏览器，具有符合标准的 HTML 渲染引擎、标
 # make install clean
 ```
 
+![火狐浏览器](../.gitbook/assets/firefox1.png)
+
 ### 安装火狐浏览器扩展支持版本 (ESR)
 
 - 使用 pkg 安装：
