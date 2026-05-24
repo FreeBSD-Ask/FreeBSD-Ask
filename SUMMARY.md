@@ -221,7 +221,7 @@
 * [21.1 数据库概论](di-21-zhang-shu-ju-ku-guan-li/di-21.1-jie-shu-ju-ku-gai-lun.md)
 * [21.2 PostgreSQL](di-21-zhang-shu-ju-ku-guan-li/di-21.2-jie-postgresql-shu-ju-ku.md)
 * [21.3 pgAdmin4](di-21-zhang-shu-ju-ku-guan-li/di-21.3-jie-pgadmin4-guan-li-gong-ju.md)
-* [21.4 MySQL 8.x 系列](di-21-zhang-shu-ju-ku-guan-li/di-21.4-jie-mysql-8-x-xi-lie.md)
+* [21.4 MySQL 8.4](di-21-zhang-shu-ju-ku-guan-li/di-21.4-jie-mysql-8-x-xi-lie.md)
 * [21.5 MongoDB 8.0](di-21-zhang-shu-ju-ku-guan-li/di-21.5-jie-mongodb-8-0.md)
 
 ## 第 22 章 文件传输协议（FTP）
