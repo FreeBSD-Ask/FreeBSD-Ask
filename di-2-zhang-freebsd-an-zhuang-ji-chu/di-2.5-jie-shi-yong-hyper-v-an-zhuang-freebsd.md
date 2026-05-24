@@ -148,7 +148,7 @@ Hyper-V 安装完成后，创建虚拟机。右键单击 Hyper-V 管理器中的
 
 ![Hyper-V](../.gitbook/assets/hyperv-15-1.png)
 
-## 桌面环境验证
+## 桌面环境
 
 安装完成后，测试虚拟机基本功能。
 
@@ -157,6 +157,8 @@ Hyper-V 安装完成后，创建虚拟机。右键单击 Hyper-V 管理器中的
 可以通过 SSH 以默认的网络接口“hn0”获取的 IP 地址连接。
 
 ![Hyper-V](../.gitbook/assets/hyperv-summary.png)
+
+由于 Hyper-V 的“增强会话模式”尚不支持 FreeBSD，音频不可用。
 
 删除虚拟机前，必须先关闭虚拟机。
 
