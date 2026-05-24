@@ -57,7 +57,7 @@ PS C:\WINDOWS\system32> DISM /Online /Enable-Feature /All /FeatureName:Microsoft
 
 输出内容如下：
 
-```
+```powershell
 Deployment Image Servicing and Management tool
 Version: 10.0.26100.5074
 
