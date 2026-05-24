@@ -1,6 +1,6 @@
 # 8.5 Cinnamon
 
-Cinnamon 是 Linux Mint 项目的核心组件，沿用传统桌面交互风格。提供先进的创新特性以及传统的用户体验。其桌面布局类似于 GNOME 2，底层技术是从 GNOME Shell 分支出来的。Cinnamon 注重让用户感到熟悉，提供一个易于使用且舒适的桌面体验。
+Cinnamon 是 Linux Mint 项目的核心组件，沿用传统桌面交互风格，兼具创新特性与传统用户体验。其桌面布局类似于 GNOME 2，底层技术源自 GNOME Shell。Cinnamon 注重用户熟悉感，提供易于使用且舒适的桌面体验。
 
 ## 安装 Cinnamon 桌面环境
 
