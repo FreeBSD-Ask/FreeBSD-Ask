@@ -61,7 +61,7 @@
 
 **第 20 章 虚拟化与容器管理**：介绍使用 bhyve 及 vm-bhyve 工具安装 Windows 11、通过 BVCP 的 Web 界面管理 bhyve 虚拟机，以及 Podman 容器管理和在 FreeBSD 上安装 VirtualBox。
 
-**第 21 章 数据库管理**：介绍数据库概论，以及 PostgreSQL、MySQL 8.x 系列及 MongoDB 8.0 在 FreeBSD 上的安装与配置，同时涵盖 pgAdmin4 管理工具的使用。
+**第 21 章 数据库管理**：介绍数据库概论，以及 PostgreSQL、MySQL 8.4 及 MongoDB 8.0 在 FreeBSD 上的安装与配置，同时涵盖 pgAdmin4 管理工具的使用。
 
 **第 22 章 文件传输协议（FTP）**：介绍文件传输协议（FTP）概述，以及 Pure-FTPd（基于 MySQL）、ProFTPd（基于 MySQL）、vsftpd 等 FTP 服务器的配置。
 
@@ -71,9 +71,9 @@
 
 **第 25 章 监控系统**：介绍 Zabbix、Prometheus 监控系统的部署，以及 Telegraf、InfluxDB 与 Grafana 组成的监控平台架构。
 
-**第 26 章 嵌入式平台**：介绍树莓派上 FreeBSD 的安装与使用、Linux 兼容层配置，以及 Radxa X4 x86 开发板、Linux 系统上交叉构建 FreeBSD、QEMU 模拟 RISC-V 架构及通用嵌入式开发环境的方法。
+**第 26 章 嵌入式平台**：介绍树莓派上 FreeBSD 的安装与使用、Linux 兼容层配置，以及 Radxa X4 x86 开发板、Linux 系统上交叉构建 FreeBSD、QEMU 模拟 RISC-V 架构，以及 STM32、乐鑫（Espressif）ESP-IDF、Arduino 等嵌入式开发环境的搭建方法。
 
-**第 27 章 开发环境**：介绍 C/C++、Java、Qt、Python、Rust、Go、Node.js 等语言开发环境的搭建，以及 IDA Pro 调试、code-server 与 clangd 配置、Vim 开发环境和 DTrace 动态追踪工具的使用。
+**第 27 章 开发环境**：介绍 C/C++、Java、Qt、Python、Rust、Go、Node.js 等语言开发环境的搭建，以及 IDA Pro 9.3 调试、code-server 与 clangd 配置、Vim 开发环境和 DTrace 动态追踪工具的使用。
 
 **第 28 章 FreeBSD 内核架构**：介绍 FreeBSD 源代码目录结构、内核文件结构、机器相关与无关的内核选项注解、GENERIC 内核选项及定制内核的构建方法。
 
