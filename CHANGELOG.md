@@ -12,6 +12,7 @@
   - 完整重写：“27.5 Rust 开发环境”
   - 更新“27.6 Go 开发环境”
   - 更新“27.7 Node.js 开发环境”
+  - 更新“27.10 使用 IDA Pro 调试 FreeBSD”到 IDA Pro 9.3
 - 2026.5.23
   - 删除“8.10 Hyprland”，无法复现，缺乏文档维护
   - 完全重写：“2.4 使用 VirtualBox 安装 FreeBSD”
