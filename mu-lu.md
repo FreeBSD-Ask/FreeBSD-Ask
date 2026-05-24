@@ -267,7 +267,7 @@
 * [26.5 在 Linux 系统上交叉构建 FreeBSD](di-26-zhang-qian-ru-shi-ping-tai/di-26.5-jie-zai-linux-xi-tong-shang-jiao-cha-gou-jian-freebsd.md)
 * [26.6 QEMU 安装 RISC-V FreeBSD（基于 x86 Windows 主机）](di-26-zhang-qian-ru-shi-ping-tai/di-26.6-jie-shi-yong-qemu-zai-x86-jia-gou-windows-zhu-ji-shang-an-zhuang-risc-v-jia-gou-de-freebsd.md)
 * [26.7 STM32 开发环境](di-26-zhang-qian-ru-shi-ping-tai/di-26.7-jie-STM32.md)
-* [26.8 乐鑫（Espressif）开发环境](di-26-zhang-qian-ru-shi-ping-tai/di-26.8-jie-Espressif.md)
+* [26.8 ESP-IDF 开发环境](di-26-zhang-qian-ru-shi-ping-tai/di-26.8-jie-Espressif.md)
 * [26.9 Arduino 开发环境](di-26-zhang-qian-ru-shi-ping-tai/di-26.9-jie-Arduino.md)
 
 ## 第 27 章 开发环境
