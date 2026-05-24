@@ -1,12 +1,10 @@
 # 2.5 使用 Hyper-V 安装 FreeBSD
 
-Hyper-V 是微软为 Windows 开发的企业级 Type-1 虚拟机监视器，分为 Gen 1 与 Gen 2 两种架构。本节介绍在 Hyper-V 中安装与配置 FreeBSD 的完整流程。
+Hyper-V 是微软公司（Microsoft）为 Windows 和 Windows Server 开发的企业级虚拟机监视器，属于系统内置组件。本节介绍在 Hyper-V 中安装与配置 FreeBSD 的完整流程。
 
 ## Hyper-V 简介
 
 虚拟机监视器是一种创建和运行虚拟机的软件，允许多个操作系统同时运行在同一台计算机上。按虚拟化技术的理论分类，Hypervisor 分为 Type-1（裸金属型）和 Type-2（宿主型）两类。Type-1 直接在物理硬件之上运行，Type-2 则在宿主操作系统之上运行。Hyper-V 属于 Type-1 架构，虚拟化层直接管理硬件资源，提供更高的隔离性和性能。
-
-Hyper-V 是微软公司（Microsoft）为 Windows 和 Windows Server 开发的企业级虚拟机监视器，属于系统内置组件。
 
 Hyper-V 分为 Gen 1（第一代）和 Gen 2（第二代）两种虚拟机架构，两种架构在硬件支持和启动方式上有所不同。
 
@@ -22,12 +20,6 @@ Gen 1 与 Gen 2 的区别如下表所示：
 > **注意**
 >
 > 使用 Gen 2 时请关闭安全启动，否则系统无法启动。具体操作步骤为：点击“设置”，选择“安全”，取消勾选“启用安全启动”。FreeBSD 自 14.0 起已支持 UEFI 安全启动，但其引导加载程序未经 Microsoft 签名，因此在 Hyper-V 默认的安全启动配置（使用“Microsoft UEFI 证书颁发机构”模板）中无法通过验证。
-
-| Hyper-V 代系 | FreeBSD 版本 | 鼠标 | 键盘 | 备注 |
-| ------------ | ------------ | ---- | ---- | ---- |
-| Gen 1 | 13.0 | 支持 | 不支持 | / |
-| Gen 2 | 13.0 | [不支持](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=221074) | 支持 | 需修改参数 `sysctl kern.evdev.rcpt_mask=6`（启用 evdev，让 Xorg 正确检测 PS/2 设备） |
-| Gen 2 | 14.0 | 支持 | 支持 | 参见：FreeBSD Project. src[EB/OL]. [2026-03-26]. <https://cgit.FreeBSD.org/src/commit/?id=21f4e817fde79d5de79bfbdf180d358ca5f48bf9>. |
 
 FreeBSD 通过以下内核模块实现对 Hyper-V 的集成支持：
 
