@@ -157,7 +157,7 @@ FreeBSD 的 ZFS 和 UFS 均**区分大小写（大小写敏感）**。而 macOS 
 
 > **技巧**
 >
-> 判断网站服务器类型的简易方法：若 `https://example.com/path` 和 `https://example.com/PATH` 均可访问且内容相同，则该网站可能运行在 Windows 操作系统上。
+> 判断网站服务器类型的简易方法：如果 `https://example.com/path` 和 `https://example.com/PATH` 均可访问且内容相同，则该网站可能运行在 Windows 操作系统上。
 
 - FreeBSD 下 **大小写敏感**
 
