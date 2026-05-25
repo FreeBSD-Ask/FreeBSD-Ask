@@ -29,7 +29,7 @@
 
 FreeBSD 项目相对保守。FreeBSD 项目奉行最小惊讶原则（Principle of Least Astonishment，POLA），即设计必须符合用户的习惯、期望和心智能力。FreeBSD 配置文件和系统组件不会频繁变化，在大版本变动时尤为如此。FreeBSD 也谨慎对待破坏性变化（Breaking change），要求在大版本内保持 ABI 的稳定。
 
-FreeBSD 不仅在生命周期内保持稳定，大版本更新亦具有连贯性和稳定性，可便捷实现大版本间的迁移。FreeBSD 上的软件版本可以滚动更新，不会锁定特定版本（如 Python 等）。
+FreeBSD 不仅在生命周期内保持稳定，大版本更新也具有连贯性和稳定性，可便捷实现大版本间的迁移。FreeBSD 上的软件版本可以滚动更新，不会锁定特定版本（如 Python 等）。
 
 ### 选择 FreeBSD 的一般原因
 
