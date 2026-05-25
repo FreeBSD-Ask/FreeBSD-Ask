@@ -32,7 +32,7 @@ FreeBSD-CURRENT 主要面向三个兴趣群体：
 
 - 想要关注 FreeBSD 状态，使用当前源代码作为参考，或偶尔发表评论或贡献代码的用户。
 
-预发布功能尚未经过充分测试，且很可能存在缺陷，FreeBSD-CURRENT 不应被视为提前获取新功能的捷径。其他提交同样有可能引入新缺陷，而不是修复既有缺陷，所以它也不是获取缺陷修复的捷径。FreeBSD-CURRENT 并未得到“正式支持”。
+预发布功能尚未经过充分测试，且很可能存在缺陷，FreeBSD-CURRENT 不应被视为提前获取新功能的捷径。其他提交同样有可能引入新缺陷，而不是修复既有缺陷，因此它也不是获取缺陷修复的捷径。FreeBSD-CURRENT 并未得到“正式支持”。
 
 使用 -CURRENT 的用户应跟踪 FreeBSD-CURRENT：
 
@@ -51,11 +51,11 @@ FreeBSD-STABLE 是用于发布主要版本的开发分支。
 
 CURRENT 分支中的代码在经过充分测试后（需满足 MFC 最短三天的要求，MFC 指 `Merge From CURRENT`，类似于 `backporting` 即向后移植）会推送到 STABLE 分支，但这并不保证两个分支都没有重大缺陷。尽管 FreeBSD-STABLE 分支应该始终能够编译并运行，但这并无保证。
 
-STABLE 仍然是一个开发分支，任何时候，FreeBSD-STABLE 的源代码可能都不适合普遍使用。它只是另一条工程开发轨道，并非面向终端用户。
+STABLE 仍然是一个开发分支，任何时候，FreeBSD-STABLE 的源代码都可能不适合普遍使用。它只是另一条工程开发轨道，并非面向终端用户。
 
 更多用户运行 FreeBSD-STABLE 而非 FreeBSD-CURRENT，某些在 FreeBSD-CURRENT 中未发现的缺陷和极端情况会在 FreeBSD-STABLE 中暴露，因此不能盲目地跟踪 FreeBSD-STABLE。
 
-那些希望跟踪或参与 FreeBSD 开发过程，特别是与下一个 FreeBSD 发布相关的开发者，应该考虑跟踪 FreeBSD-STABLE。
+希望跟踪或参与 FreeBSD 开发过程，特别是与下一个 FreeBSD 发布相关的开发者，应该考虑跟踪 FreeBSD-STABLE。
 
 要跟踪 FreeBSD-STABLE：
 
