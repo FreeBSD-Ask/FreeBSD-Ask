@@ -30,6 +30,10 @@ nobody:*:65534:65534::0:0:Unprivileged user:/nonexistent:/usr/sbin/nologin
 ykla:$6$SqMJXrv5aC6Wq.by$nmbZs078aHNBVyh9noLFouJsGHyFSvQIzH0W4zpdfXuPtGtt.FHgWfXDHVBa.g9P0eZ32UwfByzRKdVnTaO7W.:1001:1001::0:0:User &:/home/ykla:/bin/sh
 ```
 
+> **技巧**
+>
+> 本节示例中出现的用户名 `ykla` 及路径 `/home/ykla` 均为示例，请根据自身环境替换为实际用户名和主目录。
+
 可以看到系统中存在若干用户账户。
 
 FreeBSD 中主要有三类账户：系统账户、普通用户账户，以及超级用户账户。
