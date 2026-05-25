@@ -1,7 +1,5 @@
 # 2.4 FreeBSD 简史
 
-## FreeBSD 重要历史节点
-
 - 1961 年分时操作系统（Timesharing OS）
 
 在 20 世纪 60 年代初，分时操作系统诞生。1961 年 11 月，麻省理工学院的 Fernando Corbató 在 IBM 709 上首次演示了兼容分时系统（CTSS），即最早的分时系统之一。同期，英国曼彻斯特项目（Manchester Project in England）设计的 Atlas 计算机上也实现了 Atlas 监控程序，该系统于 1962 年 12 月正式投入运行，首次将虚拟存储器投入实际使用——虚拟存储器的概念则由德国物理学家 Fritz-Rudolf Güntsch 于 1956 年在其博士论文中率先提出（参见：Denning P J. Virtual Memory[J]. ACM Computing Surveys, 1970, 2(3): 153-189）。在那个时代，分时共享系统意味着两个人共用同一台计算机，通常需要安排一张小时时间表来规划使用计算机的时间。
@@ -52,7 +50,7 @@ BSDi 很快就陷入了与 AT&T 的 UNIX System Laboratories（USL，UNIX 系统
 
 - 1993 年 6 月 FreeBSD 项目成立
 
-FreeBSD 项目起源于 1993 年初，部分源自非官方的 386BSDPatchkit 的最后三位协调人的创意：Nate Williams，Rod Grimes 和 Jordan Hubbard。他们最初的目标是制作一个 386BSD 的中间快照，以解决一些补丁包机制无法解决的问题。该项目早期的工作名称是 386BSD 0.5 或 386BSD Interim，正体现了这一事实。386BSD 是 Bill Jolitz 开发的操作系统。当时该系统问世已将近一年，但一直被严重忽视。随着补丁包日益膨胀，臃肿不堪，他们决定通过提供 386BSD 过渡项目来帮助 Bill 走出困境。然而，在没有明确提供备选方案的情况下，Bill Jolitz 突然决定退出 386BSD 过渡项目，他们的计划被迫搁浅。三人认为，即使没有 Bill 的支持，这个项目也是值得的，因此他们采用了 David Greenman 创造的“FreeBSD”之名。为了改善 FreeBSD 的发行渠道，Jordan Hubbard 随后联系了 Walnut Creek CDROM。Walnut Creek CDROM 不仅支持在 CD 上发行 FreeBSD，还为此项目提供了一台工作用机和高速互联网连接。如果没有 Walnut Creek CDROM 对这一当时完全未知项目的近乎前所未有的信任，FreeBSD 很可能无法如此迅速地发展至今天的规模。1993 年 6 月 19 日，该项目正式选择了“FreeBSD”这个名字。首个 FreeBSD RELEASE（FreeBSD 1.0）发布于 1993 年 11 月，基于 4.3BSD Net/2（“Net/2”）磁带，并包含 386BSD 和自由软件基金会提供的许多组件。
+FreeBSD 项目起源于 1993 年初，部分源自非官方的 386BSDPatchkit 的最后三位协调人的创意：Nate Williams，Rod Grimes 和 Jordan Hubbard。他们最初的目标是制作一个 386BSD 的中间快照，以解决一些补丁包机制无法解决的问题。该项目早期的工作名称是 386BSD 0.5 或 386BSD Interim，正体现了这一事实。386BSD 是 Bill Jolitz 开发的操作系统。当时该系统问世已将近一年，但一直被严重忽视。随着补丁包日益膨胀，臃肿不堪，他们决定通过提供 386BSD 过渡项目来帮助 Bill 走出困境。然而，在没有明确提供备选方案的情况下，Bill Jolitz 突然决定退出 386BSD 过渡项目，他们的计划被迫搁浅。三人认为，即使没有 Bill 的支持，这个项目也是值得的，因此他们采用了 David Greenman 创造的“FreeBSD”之名。为了改善 FreeBSD 的发行渠道，Jordan Hubbard 随后联系了 Walnut Creek CDROM。Walnut Creek CDROM 不仅支持在 CD 上发行 FreeBSD，还为此项目提供了一台工作用机和高速互联网连接。如果没有 Walnut Creek CDROM 对这一当时完全未知项目的近乎前所未有的信任，FreeBSD 很可能无法如此迅速地发展至今天的规模。1993 年 6 月 19 日，该项目正式命名为“FreeBSD”。首个 FreeBSD RELEASE（FreeBSD 1.0）发布于 1993 年 11 月，基于 4.3BSD-Lite（“Net/2”）磁带，并包含 386BSD 和自由软件基金会提供的许多组件。
 
 - 1994 年 8 月 FreeBSD Ports
 
