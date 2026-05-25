@@ -172,7 +172,7 @@ export XRAY_LOCATION_ASSET=/usr/local/share/xray-core/      # 指定 Xray 资源
 setenv XRAY_LOCATION_ASSET /usr/local/share/xray-core/
 ```
 
-配置完成后，应重新加载配置文件使更改立即生效。例如，sh 或 Bash 须执行 `source ~/.profile`，csh 须执行 `source ~/.cshrc`，也可以注销并重新登录。对于系统服务运行方式（如 rc.conf），因为系统服务通过 sysrc 注入环境变量，无需此配置。
+配置完成后，应重新加载配置文件使更改立即生效。例如，sh 或 Bash 必须执行 `source ~/.profile`，csh 必须执行 `source ~/.cshrc`，也可以注销并重新登录。对于系统服务运行方式（如 rc.conf），因为系统服务通过 sysrc 注入环境变量，无需此配置。
 
 建立软链接，使 Xray 无论从何处启动都能找到资源文件：
 
