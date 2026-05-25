@@ -26,6 +26,8 @@
 * [2.1 FreeBSD：理想、现实与中道](di-2-zhang-freebsd-dao-lun/di-2.1-jie-freebsd-li-xiang-xian-shi-yu-zhong-dao.md)
 * [2.2 关于 FreeBSD 项目](di-2-zhang-freebsd-dao-lun/di-2.2-jie-guan-yu-freebsd-xiang-mu.md)
 * [2.3 FreeBSD 开发模型](di-2-zhang-freebsd-dao-lun/di-2.3-jie-freebsd-kai-fa-mo-xing.md)
+* [2.4 FreeBSD 简史](di-2-zhang-freebsd-dao-lun/di-2.4-jie-freebsd-jian-shi.md)
+
 ## 第 3 章 FreeBSD 安装基础
 
 * [3.1 安装前的准备工作](di-3-zhang-freebsd-an-zhuang-ji-chu/di-3.1-jie-an-zhuang-qian-de-zhun-bei-gong-zuo.md)
