@@ -396,6 +396,10 @@ Please look at the OpenSSL documentation on how to add a private CA to the store
 Do you trust the above certificate? (Y/T/N) y # 输入 y 按回车键以确认连接
 ```
 
+> **技巧**
+>
+> 上述示例中的 `192.168.31.213`、`ykla`、`z` 为占位符，须替换为实际的值。
+
 解释：`xfreerdp3 /u:ykla /p:z /v:192.168.31.213` 参数：
 
 - `xfreerdp3`，注意其前缀为 `x`。
