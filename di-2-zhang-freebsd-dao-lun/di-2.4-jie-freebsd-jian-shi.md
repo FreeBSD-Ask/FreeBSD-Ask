@@ -228,3 +228,7 @@ Alpha-Omega 项目先后审计了 FreeBSD 的 bhyve 虚拟机监视器、Capsicu
 - FreeBSD Project. FreeBSD 5.3-RELEASE Announcement[EB/OL]. (2004-11-06)[2026-04-17]. <https://www.freebsd.org/releases/5.3R/announce/>. FreeBSD 5.3-RELEASE 发布日期为 2004 年 11 月 6 日，PF 及 Libarchive 均随此版本发布。
 - Libarchive Project. LibarchiveUsers[EB/OL]. [2026-04-17]. <https://github.com/libarchive/libarchive/wiki/LibarchiveUsers>. 记载“libarchive was originally developed for FreeBSD; it was first released with FreeBSD 5.3 in November 2004”。
 - Max Laier. Packet Filter (pf) An Extended Introduction[EB/OL]. (2004-10-21)[2026-04-17]. <https://web.archive.org/web/20250503030531/https://people.freebsd.org/~mlaier/sucon.pdf>. PF 移植者 Max Laier 的演讲，PF 于 2003 年 3 月移植到 FreeBSD，2004 年 2 月 26 日集成到 FreeBSD 基本系统。
+
+## 课后习题
+
+1. 在 QEMU 中运行 FreeBSD 1.0 版本，记录启动过程中与当代 FreeBSD 的显著差异，分析这些差异反映出的系统设计演进。
