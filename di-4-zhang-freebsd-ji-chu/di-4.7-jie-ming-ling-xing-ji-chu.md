@@ -76,10 +76,6 @@ FreeBSD/amd64 (ykla) (ttyv0)
 login:
 ```
 
-> **技巧**
->
-> 本节示例中出现的用户名 `ykla` 及主机名 `ykla` 均为示例，请根据自身环境替换为实际用户名和主机名。
-
 - ① 使用 `su空格用户名` 可以切换到用户 ykla。如果从 root 切换到 ykla，则不需要输入 ykla 的密码：
   - `root@ykla:/`：
   - `root`：当前用户是 root
