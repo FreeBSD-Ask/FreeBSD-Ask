@@ -1,4 +1,4 @@
-# 2.5 使用 Hyper-V 安装 FreeBSD
+# 3.5 使用 Hyper-V 安装 FreeBSD
 
 Hyper-V 是微软公司（Microsoft）为 Windows 和 Windows Server 开发的企业级虚拟机监视器，属于系统内置组件。本节介绍在 Hyper-V 中安装与配置 FreeBSD 的完整流程。
 

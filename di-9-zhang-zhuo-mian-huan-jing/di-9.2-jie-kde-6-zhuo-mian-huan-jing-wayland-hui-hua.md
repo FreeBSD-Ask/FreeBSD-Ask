@@ -1,4 +1,4 @@
-# 8.2 KDE 6 桌面环境（Wayland 会话）
+# 9.2 KDE 6 桌面环境（Wayland 会话）
 
 ## 概述
 

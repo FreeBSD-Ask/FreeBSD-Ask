@@ -1,4 +1,4 @@
-# 2.2 FreeBSD 15 安装指南（AMD64）
+# 3.2 FreeBSD 15 安装指南（AMD64）
 
 FreeBSD 15.0-RELEASE 使用 bsdinstall 工具安装，流程涵盖磁盘分区、网络配置、系统组件选择与用户账户创建。本节以 AMD64 架构的 disc1.iso 镜像为例，记录从系统启动到首次登录的完整操作。
 
