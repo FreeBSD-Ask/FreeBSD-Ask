@@ -47,13 +47,13 @@ FreeBSD-CURRENT 主要面向三个兴趣群体：
 
 FreeBSD-STABLE 是用于发布主要版本的开发分支。
 
-与一般 Linux 发行版中的“稳定版”概念不同，其名称中的“稳定”指的是该分支的 ABI（Application Binary Interface，应用程序二进制接口）保持稳定，而非指系统整体稳定性，亦可理解为“固定”。在没有充分测试的开发或测试环境中，不应将任何生产服务器更新到 FreeBSD-STABLE。应使用 FreeBSD 的最新正式版本，即 RELEASE。
+与一般 Linux 发行版中的“稳定版”概念不同，其名称中的“稳定”指的是该分支的 ABI（Application Binary Interface，应用程序二进制接口）保持稳定，而非指系统整体稳定性，也可以理解为“固定”。在没有充分测试的开发或测试环境中，不应将任何生产服务器更新到 FreeBSD-STABLE。应使用 FreeBSD 的最新正式版本，即 RELEASE。
 
 CURRENT 分支中的代码在经过充分测试后（需满足 MFC 最短三天的要求，MFC 指 `Merge From CURRENT`，类似于 `backporting` 即向后移植）会推送到 STABLE 分支，但这并不保证两个分支都没有重大缺陷。尽管 FreeBSD-STABLE 分支应该始终能够编译并运行，但这并无保证。
 
 STABLE 仍然是一个开发分支，任何时候，FreeBSD-STABLE 的源代码可能都不适合普遍使用。它只是另一条工程开发轨道，并非面向终端用户。
 
-更多用户运行 FreeBSD-STABLE 而非 FreeBSD-CURRENT，某些在 FreeBSD-CURRENT 中未发现的缺陷和极端情况会在 FreeBSD-STABLE 中暴露，故不能盲目地跟踪 FreeBSD-STABLE。
+更多用户运行 FreeBSD-STABLE 而非 FreeBSD-CURRENT，某些在 FreeBSD-CURRENT 中未发现的缺陷和极端情况会在 FreeBSD-STABLE 中暴露，因此不能盲目地跟踪 FreeBSD-STABLE。
 
 那些希望跟踪或参与 FreeBSD 开发过程，特别是与下一个 FreeBSD 发布相关的开发者，应该考虑跟踪 FreeBSD-STABLE。
 

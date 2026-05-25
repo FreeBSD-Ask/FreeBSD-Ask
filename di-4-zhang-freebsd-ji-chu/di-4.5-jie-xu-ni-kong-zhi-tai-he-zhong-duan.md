@@ -65,7 +65,7 @@ To change this login announcement, see motd(5).
 
 ### 故障排除与未竟事宜
 
-- 若用户名正确，但密码不正确：
+- 如果用户名正确，但密码不正确：
 
 ```sh
 login: root
@@ -74,7 +74,7 @@ Login incorrect # 表示登录信息不正确
 login:
 ```
 
-- 若用户名和密码都不正确：
+- 如果用户名和密码都不正确：
 
 ```sh
 login: test # 当前系统中不存在该用户
@@ -139,7 +139,7 @@ ttyv8	"/usr/local/bin/xdm -nodaemon"	xterm	off secure
 
 > **技巧**
 >
-> 若操作失误但已配置 SSHD 服务，仍可通过 SSH 远程连接 FreeBSD 系统，将生成一个 pts(4) 伪终端 **/dev/pts/n**。
+> 如果操作失误但已配置 SSHD 服务，仍可通过 SSH 远程连接 FreeBSD 系统，将生成一个 pts(4) 伪终端 **/dev/pts/n**。
 >
 > ```sh
 > $ w

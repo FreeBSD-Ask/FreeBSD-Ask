@@ -54,7 +54,7 @@
 
 ## 鼠标无法移动
 
-若在 Parallels Desktop 中遇到 FreeBSD 鼠标无法移动的问题，可在 **/boot/loader.conf.local**（推荐使用本地配置扩展文件，避免直接修改系统默认配置 **/boot/loader.conf**）中添加如下配置：
+如果在 Parallels Desktop 中遇到 FreeBSD 鼠标无法移动的问题，可在 **/boot/loader.conf.local**（推荐使用本地配置扩展文件，避免直接修改系统默认配置 **/boot/loader.conf**）中添加如下配置：
 
 ```sh
 ums_load="YES"
@@ -72,7 +72,7 @@ ums_load="YES"
 # pkg install parallels-tools
 ```
 
-若提示找不到软件包，可通过 Ports 编译安装虚拟机工具：
+若示找不到软件包，可通过 Ports 编译安装虚拟机工具：
 
 ```sh
 # cd /usr/ports/emulators/parallels-tools/
@@ -81,7 +81,7 @@ ums_load="YES"
 
 > **注意**
 >
-> 若通过 Ports 编译安装，需确保系统中已有源代码在 **/usr/src** 目录中。
+> 如果通过 Ports 编译安装，需确保系统中已有源代码在 **/usr/src** 目录中。
 
 ### 参考文献
 

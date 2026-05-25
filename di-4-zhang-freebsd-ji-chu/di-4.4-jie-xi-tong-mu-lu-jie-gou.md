@@ -258,7 +258,7 @@ FreeBSD 的目录结构设计遵循以下原则：
 │   ├── heimdal Kerberos 5 用，默认为空，参见 kdc(8)
 │   ├── lib 移植的 Linux 应用程序的状态信息
 │   ├── log 各种系统日志文件
-│   │   ├── Xorg.0.log X 服务器日志（若安装 X(7)），轮替为 Xorg.0.log.old
+│   │   ├── Xorg.0.log X 服务器日志（如果安装 X(7)），轮替为 Xorg.0.log.old
 │   │   ├── aculog 串行线路访问日志，参见 cu(1)
 │   │   ├── auth.log 系统认证日志
 │   │   ├── bsdinstall_log 系统安装日志
@@ -399,7 +399,7 @@ WARNING: WITNESS option enabled, expect reduced performance.
 VT(efifb): resolution 800x600
 # VT（Virtual Terminal，Newcons）：FreeBSD 新一代系统控制台驱动（替代了 syscons）。
 # efifb：通过 EFI 固件提供的帧缓冲区（framebuffer）驱动来显示。
-# UEFI 固件默认将显示分辨率设为 800x600。若 drm（Direct Rendering Manager）驱动加载后，
+# UEFI 固件默认将显示分辨率设为 800x600。如果 drm（Direct Rendering Manager）驱动加载后，
 # 分辨率可升至显示器原生分辨率。
 
 # ===== CPU 检测与特性枚举 =====

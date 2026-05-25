@@ -192,7 +192,7 @@ pkg: No packages available to install matching 'chromium' have been found in the
 
 ## 卸载软件
 
-`pkg delete` 默认会自动将依赖关系不满足的包一并加入删除列表，不会破坏依赖关系；仅当使用 `-f` 参数时才跳过依赖检查。若需清理不再被其他包依赖的“叶子”包，可安装 `pkg_rmleaves`，或使用内建命令 `pkg autoremove` 移除自动安装且已无依赖的包。
+`pkg delete` 默认会自动将依赖关系不满足的包一并加入删除列表，不会破坏依赖关系；仅当使用 `-f` 参数时才跳过依赖检查。如果需要清理不再被其他包依赖的"叶子"包，可安装 `pkg_rmleaves`，或使用内建命令 `pkg autoremove` 移除自动安装且已无依赖的包。
 
 ```sh
 # pkg install pkg_rmleaves
@@ -463,7 +463,7 @@ Ignore the mismatch and continue? [y/N]:
 
 如果要从根源上解决，需要卸载 pkg，从 Ports 安装 `ports-mgmt/pkg`；或者从源代码更新整个系统。
 
-若仅需屏蔽此提示，只需要按照提示将 `IGNORE_OSVERSION=yes` 写入 **/etc/make.conf** 文件中（若文件不存在则新建）即可。
+如果仅需屏蔽此提示，只需要按照提示将 `IGNORE_OSVERSION=yes` 写入 **/etc/make.conf** 文件中（如果文件不存在则新建）即可。
 
 ### `pkg: An error occurred while fetching package: No error`
 

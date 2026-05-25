@@ -88,7 +88,7 @@ OpenBSD 是一种功能完备的多平台类 UNIX 操作系统，基于伯克利
 
 由于 OpenBSD 源自加拿大，其加密组件（如 OpenSSH 和 IPsec）出口至全球不受限制。
 
-（注意：若 OpenBSD 进入美国，则不能从美国重新出口。因此，如果位于加拿大和美国以外地区，请勿从位于美国的镜像服务器获取发行版。）
+（注意：如果 OpenBSD 进入美国，则不能从美国重新出口。因此，如果位于加拿大和美国以外地区，请勿从位于美国的镜像服务器获取发行版。）
 
 ### OpenBSD 简介
 
@@ -190,7 +190,7 @@ OpenBSD 的安全策略基于以下判断：超线程机制可能带来潜在的
 
 #### 捐赠 OpenBSD
 
-[Donating to the Foundation](https://www.openbsdfoundation.org/donations.html) 对于中国大陆用户而言，因为该基金会仅接受国际 PayPal，提示信息为“此国家或地区不支持捐赠给此收款人”，捐赠存在一定困难。已通过邮件反馈此问题，并曾写挂号信寄给位于加拿大的 OpenBSD 基金会，但未收到任何回应。即便使用 GitHub Sponsors 方式亦可，但多次沟通仍未得到支持。对此，深感不便。
+[Donating to the Foundation](https://www.openbsdfoundation.org/donations.html) 对于中国大陆用户而言，因为该基金会仅接受国际 PayPal，提示信息为“此国家或地区不支持捐赠给此收款人”，捐赠存在一定困难。已通过邮件反馈此问题，并曾写挂号信寄给位于加拿大的 OpenBSD 基金会，但未收到任何回应。即便使用 GitHub Sponsors 方式也可以，但多次沟通仍未得到支持。对此，深感不便。
 
 目前，中国大陆用户可通过国内版本的 PayPal 或普通银联储蓄卡，向 PayPal 账号 `obsd-paypal@openbsdfoundation.org`（该账号为收款账号，并非电子邮件）发起转账，以对 OpenBSD 基金会进行捐赠。具体操作方法请自行搜索“PayPal 个人转账”。
 
