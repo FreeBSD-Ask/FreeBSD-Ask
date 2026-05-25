@@ -5,6 +5,7 @@
 - 2026.5.25
   - 更新“11.11 WPS Office（Linux 版）”中的“基于 Rocky Linux 兼容层（FreeBSD Port）”
   - “27.4 Python 开发环境”新增“通过 uv 管理 Python”
+  - 从“1.4 FreeBSD 导论”拆分出第二章 FreeBSD 导论和“1.4 什么是 FreeBSD”
 - 2026.5.24
   - 更新“6.1 基础网络”中的“通过 ifconfig 命令识别网络适配器”
   - 更新“21.4 MySQL”到 MySQL 8.4
