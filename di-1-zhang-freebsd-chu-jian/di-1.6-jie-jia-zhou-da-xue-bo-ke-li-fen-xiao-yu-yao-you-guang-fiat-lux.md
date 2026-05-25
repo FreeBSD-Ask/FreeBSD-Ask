@@ -88,7 +88,7 @@ OpenBSD 是一种功能完备的多平台类 UNIX 操作系统，基于伯克利
 
 由于 OpenBSD 源自加拿大，其加密组件（如 OpenSSH 和 IPsec）出口至全球不受限制。
 
-（注意：若 OpenBSD 进入美国，则不能从美国重新出口。因此，如果位于加拿大和美国以外地区，请勿从位于美国的镜像服务器获取发行版。）
+（注意：如果 OpenBSD 进入美国，则不能从美国重新出口。因此，如果位于加拿大和美国以外地区，请勿从位于美国的镜像服务器获取发行版。）
 
 ### OpenBSD 简介
 
@@ -190,7 +190,7 @@ OpenBSD 的安全策略基于以下判断：超线程机制可能带来潜在的
 
 #### 捐赠 OpenBSD
 
-[Donating to the Foundation](https://www.openbsdfoundation.org/donations.html) 对于中国大陆用户而言，因为该基金会仅接受国际 PayPal，提示信息为“此国家或地区不支持捐赠给此收款人”，捐赠存在一定困难。已通过邮件反馈此问题，并曾写挂号信寄给位于加拿大的 OpenBSD 基金会，但未收到任何回应。即便使用 GitHub Sponsors 方式亦可，但多次沟通仍未得到支持。对此，深感不便。
+[Donating to the Foundation](https://www.openbsdfoundation.org/donations.html) 对于中国大陆用户而言，因为该基金会仅接受国际 PayPal，提示信息为“此国家或地区不支持捐赠给此收款人”，捐赠存在一定困难。已通过邮件反馈此问题，并曾写挂号信寄给位于加拿大的 OpenBSD 基金会，但未收到任何回应。即便使用 GitHub Sponsors 方式也可以，但多次沟通仍未得到支持。对此，深感不便。
 
 目前，中国大陆用户可通过国内版本的 PayPal 或普通银联储蓄卡，向 PayPal 账号 `obsd-paypal@openbsdfoundation.org`（该账号为收款账号，并非电子邮件）发起转账，以对 OpenBSD 基金会进行捐赠。具体操作方法请自行搜索“PayPal 个人转账”。
 
@@ -369,7 +369,7 @@ Gregory Perry 后来 [回复道](https://cryptome.org/2012/01/0032.htm)：
 >
 > 如约奉上关于 FBI / OpenBSD / OpenBSD 加密框架加密后门讨论串的后续内容。我们家在圣诞假期期间发生了三级火灾，我也是刚刚恢复上线。
 >
-> 1）大约在 1997 年，FBI 找到了 Lew Jenkins，也就是 Premenos Technology Corp. 的董事长兼 CEO，他们当时在开发一款用于企业间 EDI（电子数据交换）交易的软件套件，名为“Templar”。
+> 1）大约在 1997 年，FBI 找到了 Lew Jenkins，也就是 Premenos Technology Corp. 的董事长兼 CEO，他们当时在开发一种用于企业间 EDI（电子数据交换）交易的软件套件，名为“Templar”。
 >
 > 2）在当时，加密技术（尤其是公钥加密算法）仍被美国政府视为军火，因此 FBI 可能对 Premenos 关于密钥托管和 RSA 加密会话恢复方面的研究很感兴趣。
 >
@@ -393,7 +393,7 @@ Gregory Perry 后来 [回复道](https://cryptome.org/2012/01/0032.htm)：
 >
 > 我个人认为，FBI，或者说当时政府中的某些官员，是在发现 RSA 加密算法中存在关键性漏洞之后，才主动推动放松加密出口限制的。与当时主流的 Diffie-Hellman 公钥加密方法相比，RSA 的确存在未被公开的弱点。同样值得关注的是，RSA Security 公司在 RSA 专利期满后（美国专利 4,405,829）并未寻求延期，这一点令人意外。按常理他们可基于国家安全理由轻松获得延期许可，却主动放弃了专利权，使得 RSA 算法成为公开标准，而该公司靠授权 RSA 算法在美国获得了可观收入。
 >
-> 如果上述推测属实，那么可以合理断言：FBI 出于监听国内通信的目的，故意推动采用了一款在基础上存在弱点的加密算法，从而严重削弱了美国的关键基础设施和军事能力。这对大量基于 RSA 加密算法的技术产生了深远影响，如：用于武器定位的军用 GPS、Common Access Card 智能卡以及用于 RFID 与非接触支付的商用智能卡技术等。对嵌入式系统来说，这些标准几乎已定型，且大多数 OpenBSD / OpenBSD 加密框架安装实例都是嵌入式形式，因其小体积与宽松的 BSD 许可协议，几乎无升级路径。全球可能存在数百万甚至上亿台运行 OpenBSD 的嵌入式设备，如路由器、防火墙、VPN 设备等，此外还有许多操作系统直接集成了 OpenBSD 的加密框架与 PF 防火墙栈，却基于 OpenBSD 项目的安全声誉与可信度未对源代码进行审计。
+> 如果上述推测属实，那么可以合理断言：FBI 出于监听国内通信的目的，故意推动采用了一种在基础上存在弱点的加密算法，从而严重削弱了美国的关键基础设施和军事能力。这对大量基于 RSA 加密算法的技术产生了深远影响，如：用于武器定位的军用 GPS、Common Access Card 智能卡以及用于 RFID 与非接触支付的商用智能卡技术等。对嵌入式系统来说，这些标准几乎已定型，且大多数 OpenBSD / OpenBSD 加密框架安装实例都是嵌入式形式，因其小体积与宽松的 BSD 许可协议，几乎无升级路径。全球可能存在数百万甚至上亿台运行 OpenBSD 的嵌入式设备，如路由器、防火墙、VPN 设备等，此外还有许多操作系统直接集成了 OpenBSD 的加密框架与 PF 防火墙栈，却基于 OpenBSD 项目的安全声誉与可信度未对源代码进行审计。
 >
 > 如果你有其他问题，欢迎随时联系。祝你和 Cryptome 一起度过愉快的 2012。
 >
@@ -437,7 +437,7 @@ CheriBSD 基于 FreeBSD 实现了 Capability（能力式指针），提供内存
 
 [FuguIta 官网](https://fuguita.org/)
 
-FuguIta 是一款基于 OpenBSD 开发的 Live 系统，同时支持部分型号的树莓派（Raspberry Pi）。
+FuguIta 是一种基于 OpenBSD 开发的 Live 系统，同时支持部分型号的树莓派（Raspberry Pi）。
 
 ## 课后习题
 
