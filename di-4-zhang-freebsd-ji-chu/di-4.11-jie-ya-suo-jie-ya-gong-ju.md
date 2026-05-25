@@ -44,6 +44,10 @@ $ unzip test.zip # 解压 zip 文件到当前路径
 $ unzip test.zip -d /home/ykla/test # 解压到指定路径，-d 即 directory（目录）
 ```
 
+> **技巧**
+>
+> 本节示例中出现的 `/home/ykla` 为示例路径，请根据自身环境替换为实际用户主目录。
+
 unzip 的 `-d` 选项后面跟目录名，可以有空格（如 `-d /path`），也可以紧贴（如 `-d/path`）。
 
 ## tar
