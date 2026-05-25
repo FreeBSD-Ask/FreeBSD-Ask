@@ -35,7 +35,7 @@
 
 x11vnc 提供屏幕镜像功能，用户操作会同步显示在物理显示器上，物理显示器上的操作在 VNC 客户端中同样可见。建议配合 SSH 隧道或 SSL 加密使用，防止 VNC 流量被嗅探。
 
-若无物理显示器则无法使用 x11vnc，但可使用 HDMI 显卡欺骗器代替物理显示器。
+如果没有物理显示器则无法使用 x11vnc，但可使用 HDMI 显卡欺骗器代替物理显示器。
 
 ### 安装 x11vnc
 
@@ -74,7 +74,7 @@ $ x11vnc -display :0 -rfbauth ~/.vnc/passwd -auth $(find /var/run/sddm/ -type f)
 
 > **警告**
 >
-> 因为 x11vnc 尚不支持 Wayland，若在 SDDM 左下角选择 `Wayland`，将无法进入桌面。
+> 因为 x11vnc 尚不支持 Wayland，如果在 SDDM 左下角选择 `Wayland`，将无法进入桌面。
 
 - 使用指定密码文件和 LightDM 授权文件启动 x11vnc：
 
@@ -173,7 +173,7 @@ Starting applications specified in /home/ykla/.vnc/xstartup
 Log file is /home/ykla/.vnc/ykla:1.log
 ```
 
-其中 `:1` 表示 `DISPLAY=:1`，即指定桌面显示的通信端口为 `1`，对应 VNC 服务端口 `5901`。桌面显示通信端口从 0 开始，但该端口已由当前桌面占用（除非是镜像 VNC），实际执行时 VNC 服务从 `5901` 开始。连接时须指定端口 `5901`。
+其中 `:1` 表示 `DISPLAY=:1`，即指定桌面显示的通信端口为 `1`，对应 VNC 服务端口 `5901`。桌面显示通信端口从 0 开始，但该端口已由当前桌面占用（除非是镜像 VNC），实际执行时 VNC 服务从 `5901` 开始。连接时必须指定端口 `5901`。
 
 测试：
 
@@ -303,7 +303,7 @@ root     syslogd     1021 7   udp4   *:514                 *:*
 
 #### 由于目标服务器积极拒绝，无法连接
 
-非镜像 VNC 连接时须指定端口，否则默认使用 5900 端口。由于使用非镜像屏幕（非 x11vnc），无法连接。
+非镜像 VNC 连接时必须指定端口，否则默认使用 5900 端口。由于使用非镜像屏幕（非 x11vnc），无法连接。
 
 ![SDDM VNC](../.gitbook/assets/vnc1.png)
 
@@ -355,7 +355,7 @@ root     syslogd     1021 7   udp4   *:514                 *:*
 
 ![Remote Desktop FreeBSD](../.gitbook/assets/windows-rdp-1.png)
 
-连接示意图（后台正在编译 Chromium，故占用会很高）：
+连接示意图（后台正在编译 Chromium，因此占用会很高）：
 
 ![Remote Desktop FreeBSD](../.gitbook/assets/windows-rdp-2.png)
 
@@ -532,7 +532,7 @@ Do you trust this certificate (yes/no)? # 输入 yes，按回车键
 # mount -t procfs proc /proc # 临时使用。可以参照上面的说明持久化
 ```
 
-root 用户无法运行 AnyDesk，须以普通用户身份运行：
+root 用户无法运行 AnyDesk，必须以普通用户身份运行：
 
 ```sh
 $ anydesk
