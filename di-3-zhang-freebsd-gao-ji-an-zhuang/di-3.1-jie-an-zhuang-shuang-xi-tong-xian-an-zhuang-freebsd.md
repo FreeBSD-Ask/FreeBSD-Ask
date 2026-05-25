@@ -50,7 +50,7 @@ Device              Size     Used    Avail Capacity
 
 可以看到交换分区的大小是所设定的 208 GB（其中 200 GB 预留给 Windows 操作系统）。
 
-编辑 **/etc/fstab** 文件，在 swap 对应行的行首添加 `#` 注释该行。本例中该行是第三行，以避免系统启动时挂载此交换分区，为后续安装 Windows 作准备：
+编辑 **/etc/fstab** 文件，在 swap 对应行的行首添加 `#` 注释该行（本例中该行是第三行），以避免系统启动时挂载此交换分区，从而为后续安装 Windows 作准备：
 
 ```sh
 # Device                Mountpoint      FStype  Options         Dump    Pass#
