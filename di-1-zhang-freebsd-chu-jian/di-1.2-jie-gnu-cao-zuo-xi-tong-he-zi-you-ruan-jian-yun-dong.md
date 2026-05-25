@@ -10,7 +10,7 @@ GNU 项目与自由软件运动的渊源，可从 Linux 内核文档入手理解
 
 UNIX 在后期发展中渐趋封闭，最初作为开放的研究项目（受当时美国法律要求），后来转为商业产品。普通用户无法自由获取和修改其源代码，许可证价格高昂，使用权受商业公司严格限制。理查德·马修·斯托曼（Richard Matthew Stallman，RMS）希望创造一种自由且与 UNIX 兼容的操作系统，这一愿景直接推动了自由软件运动的兴起。
 
-- 1983 年，理查德·马修·斯托曼发表了 GNU 项目初始公告；其中 GNU 即“GNU's Not Unix”（GNU 不是 UNIX）的递归缩写。GNU 是一款旨在完全替代 UNIX 的操作系统。
+- 1983 年，理查德·马修·斯托曼发表了 GNU 项目初始公告；其中 GNU 即“GNU's Not Unix”（GNU 不是 UNIX）的递归缩写。GNU 是一种旨在完全替代 UNIX 的操作系统。
 - 1984 年，理查德·马修·斯托曼正式创建了 [GNU 项目](https://www.gnu.org/)。
 - 1985 年，理查德·马修·斯托曼撰写了 GNU 宣言（Stallman R. The GNU Manifesto[EB/OL]. [2026-03-26]. <https://www.gnu.org/gnu/manifesto.html>）；同年创建了自由软件基金会（Free Software Foundation，FSF）。
 - 1989 年，自由软件基金会发布了 GNU General Public License V1.0（GPLv1，GNU 通用公共许可证第 1 版）。
