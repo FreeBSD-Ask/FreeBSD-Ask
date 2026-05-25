@@ -266,6 +266,10 @@ DISTRIB_CODENAME=noble
 DISTRIB_DESCRIPTION="Ubuntu 24.04 LTS"
 ```
 
+> **技巧**
+>
+> 本节示例中出现的用户名 `ykla` 及主机名 `ykla-ubuntu` 均为示例，请根据自身环境替换为实际用户名和主机名。
+
 在 VMware Workstation 17 Pro 虚拟机上测试 Ubuntu 24.04 LTS 版本（发布于伦敦当地时间 2024 年 4 月 25 日），发现其整体使用体验相较于之前版本有所下降。安装过程中即出现错误提示，且后续使用中遇到了窗口显示异常、鼠标光标消失、输入框无法获取焦点等问题。安装完成后，系统在开机后频繁弹出“内部错误”提示。
 
 ![Ubuntu 24.04 内部错误](../.gitbook/assets/nbcw.jpg)
