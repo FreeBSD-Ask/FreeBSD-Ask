@@ -52,11 +52,11 @@ BSDi 很快就陷入了与 AT&T 的 UNIX System Laboratories（USL，UNIX 系统
 
 - 1993 年 6 月 FreeBSD 项目成立
 
-FreeBSD 项目起源于 1993 年初，部分是来自非官方的 386BSDPatchkit 的最后三位协调人的创意：Nate Williams，Rod Grimes 和 Jordan Hubbard。他们最初的目标是制作一个 386BSD 的中间快照，以解决一些补丁包机制无法解决的问题。该项目早期的工作名称是 386BSD 0.5 或 386BSD Interim，正体现了这一事实。386BSD 是 Bill Jolitz 开发的操作系统。当时该系统问世已将近一年，但一直被严重忽视。随着补丁包日益膨胀，臃肿不堪，他们决定通过提供 386BSD 过渡项目来帮助 Bill 走出困境。然而，在没有明确提供备选方案的情况下，Bill Jolitz 突然决定退出 386BSD 过渡项目，他们的计划被迫搁浅。三人认为，即使没有 Bill 的支持，这个项目也是值得的，因此他们采用了 David Greenman 创造的“FreeBSD”这个名字。为了改善 FreeBSD 的发行渠道，Jordan Hubbard 随后联系了 Walnut Creek CDROM。Walnut Creek CDROM 不仅支持在 CD 上发行 FreeBSD，还为此项目提供了一台工作用机和高速互联网连接。如果没有 Walnut Creek CDROM 对这一当时完全未知项目的近乎前所未有的信任，FreeBSD 很可能无法如此迅速地发展至今天的规模。1993 年 6 月 19 日，该项目正式选择了“FreeBSD”这个名字。首个 FreeBSD RELEASE（FreeBSD 1.0）发布于 1993 年 11 月，基于 4.3BSD Net/2（“Net/2”）磁带，并包含 386BSD 和自由软件基金会提供的许多组件。
+FreeBSD 项目起源于 1993 年初，部分源自非官方的 386BSDPatchkit 的最后三位协调人的创意：Nate Williams，Rod Grimes 和 Jordan Hubbard。他们最初的目标是制作一个 386BSD 的中间快照，以解决一些补丁包机制无法解决的问题。该项目早期的工作名称是 386BSD 0.5 或 386BSD Interim，正体现了这一事实。386BSD 是 Bill Jolitz 开发的操作系统。当时该系统问世已将近一年，但一直被严重忽视。随着补丁包日益膨胀，臃肿不堪，他们决定通过提供 386BSD 过渡项目来帮助 Bill 走出困境。然而，在没有明确提供备选方案的情况下，Bill Jolitz 突然决定退出 386BSD 过渡项目，他们的计划被迫搁浅。三人认为，即使没有 Bill 的支持，这个项目也是值得的，因此他们采用了 David Greenman 创造的“FreeBSD”之名。为了改善 FreeBSD 的发行渠道，Jordan Hubbard 随后联系了 Walnut Creek CDROM。Walnut Creek CDROM 不仅支持在 CD 上发行 FreeBSD，还为此项目提供了一台工作用机和高速互联网连接。如果没有 Walnut Creek CDROM 对这一当时完全未知项目的近乎前所未有的信任，FreeBSD 很可能无法如此迅速地发展至今天的规模。1993 年 6 月 19 日，该项目正式选择了“FreeBSD”这个名字。首个 FreeBSD RELEASE（FreeBSD 1.0）发布于 1993 年 11 月，基于 4.3BSD Net/2（“Net/2”）磁带，并包含 386BSD 和自由软件基金会提供的许多组件。
 
 - 1994 年 8 月 FreeBSD Ports
 
-FreeBSD 的 Ports 和软件包为用户和管理员提供了一种简便的安装应用程序的方式。Ports 现在提供了多达 34,000 个 port。它们首次现身于 1994 年，当时 Jordan Hubbard 将“port make macros”提交到 FreeBSD 的 CVS 存储库中，目的是给他的软件包安装套件 **Makefile** 打补丁。
+FreeBSD 的 Ports 和软件包为用户和管理员提供了一种简便的安装应用程序的方式。Ports 目前提供了多达 34,000 个 port。它们首次现身于 1994 年，当时 Jordan Hubbard 将"port make macros"提交到 FreeBSD 的 CVS 存储库中，目的是给他的软件包安装套件 **Makefile** 打补丁。
 
 - 1994 年 11 月 22 日 IPFW
 
@@ -164,7 +164,7 @@ pkg 首次出现在 9.1-RELEASE 中。在 10.0-RELEASE 中，pkg 成为默认的
 
 - 2014 年 1-2 月 FreeBSD 期刊创刊号
 
-作为 FreeBSD 社区的声音，也是跟进 FreeBSD 最新发布版本和新进展的最佳途径，FreeBSD 期刊的创刊号是 2014 年 1/2 月刊，重点关注 FreeBSD 10。最初是以付费订阅模式进行发行，直至 2019 年 1 月才将 FreeBSD 期刊转为免费出版物，随后同时在基金会网站上进行刊载（同时提供了 HTML 和 PDF）。
+作为 FreeBSD 社区的声音，也是了解 FreeBSD 最新发布版本和新进展的重要途径，FreeBSD 期刊的创刊号是 2014 年 1/2 月刊，重点关注 FreeBSD 10。最初以付费订阅模式发行，直至 2019 年 1 月才将 FreeBSD 期刊转为免费出版物，随后同时在基金会网站上进行刊载（同时提供了 HTML 和 PDF）。
 
 - 2017 年 6 月 19 日首个“FreeBSD 日”
 
