@@ -19,13 +19,13 @@
 
 ### 参考文献
 
-- FreeBSD Foundation. Read how organisations are using FreeBSD across the globe[EB/OL]. [2026-03-25]. <https://freebsdfoundation.org/end-user-stories/>. FreeBSD 基金会官方版本，汇集了 FreeBSD 在各领域的典型应用案例。
+- FreeBSD Foundation. Read how organisations are using FreeBSD across the globe[EB/OL]. [2026-03-25]. <https://freebsdfoundation.org/end-user-stories/>. FreeBSD 基金会官方整理的 FreeBSD 各领域典型应用案例汇总。
 
 ## 为什么选择 FreeBSD
 
 ### 核心缘由：FreeBSD 能在这流变的世界中寻求理想的中道
 
-相较于大多数主流操作系统或内核，FreeBSD 的 Kernel API/ABI 较为稳定。
+相较于大多数主流操作系统或内核，FreeBSD 的内核 API/ABI 较为稳定。
 
 FreeBSD 项目相对保守。FreeBSD 项目奉行最小惊讶原则（Principle of Least Astonishment，POLA），即设计必须符合用户的习惯、期望和心智能力。FreeBSD 配置文件和系统组件不会频繁变化，在大版本变动时尤为如此。FreeBSD 也谨慎对待破坏性变化（Breaking change），要求在大版本内保持 ABI 的稳定。
 
