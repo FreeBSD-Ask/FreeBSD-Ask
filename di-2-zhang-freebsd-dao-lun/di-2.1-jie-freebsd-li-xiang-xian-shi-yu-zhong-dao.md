@@ -116,7 +116,7 @@ GNOME、Xorg（X11）、D-Bus、systemd、PulseAudio、Wayland、PipeWire 等主
 
 FreeBSD 具有诸多优势，但也面临着现实的挑战。
 
-- 大型技术企业对 FreeBSD 支持不足，如未提供 GitHub Actions 原生支持，NVIDIA CUDA 亦未予支持，在 AI 与 LLM 时代存在滞后。
+- 大型技术企业对 FreeBSD 支持不足，如未提供 GitHub Actions 原生支持，NVIDIA CUDA 也未予支持，在 AI 与 LLM 时代存在滞后。
 - FreeBSD 项目缺乏对欧洲和北美以外地区的关注与投入。
 - 相比其他开源项目中“仁慈的终身独裁者”模式，集体领导在 FreeBSD 项目中并未显现出明显优势，有时甚至可能导致责任分散、效率低下的问题（即“集体行动困境”）。部分分管 FreeBSD 子项目的核心成员对项目本身的了解和关注尚有不足，面对若干问题亦难以有效决策和承担责任。
 - FreeBSD 项目整体风格偏于保守，新技术的引入往往需要数年，跨越多个大版本方能完成。通常需等待已有技术轮替一到两代后才会引入；引入后亦往往缺乏后续关注与维护开发。
