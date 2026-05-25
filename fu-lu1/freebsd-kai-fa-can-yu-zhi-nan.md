@@ -71,6 +71,10 @@ root@generic:~/freebsd-ports # ls -l 2024.diff
 $ git config --global http.proxy http://192.168.1.169:7890
 ```
 
+> **技巧**
+>
+> 上述示例中的 `192.168.1.169`、`7890` 为占位符，须替换为实际的值。
+
 - 列出本地和远程的所有分支：
 
 ```sh
