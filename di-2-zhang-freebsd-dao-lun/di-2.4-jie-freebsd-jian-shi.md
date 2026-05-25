@@ -198,8 +198,6 @@ Alpha-Omega 项目先后审计了 FreeBSD 的 bhyve 虚拟机监视器、Capsicu
 
 历经十年岁月磨炼，FreeBSD 终于在 15.0-RELEASE 中新增了 pkgbase 安装方式，以通过软件包来管理基本系统。这种方式最初源于 TrueOS 项目。
 
-
-
 ## 参考文献
 
 - FreeBSD Foundation. Timeline[EB/OL]. [2026-03-25]. <https://freebsdfoundation.org/freebsd/timeline/>. FreeBSD 发展历史时间线。
