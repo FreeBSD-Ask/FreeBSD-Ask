@@ -2,6 +2,8 @@
 
 ## 2026 年第二季度
 
+- 2026.5.26
+  - 近 2 个月从 FreeBSD 合并了一些内容，标志着本书基本成为 Handbook 的超集。可以说，目前 Handbook 已经完全失去价值。
 - 2026.5.25
   - 更新“11.11 WPS Office（Linux 版）”中的“基于 Rocky Linux 兼容层（FreeBSD Port）”
   - “27.4 Python 开发环境”新增“通过 uv 管理 Python”
