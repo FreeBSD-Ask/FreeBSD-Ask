@@ -39,11 +39,11 @@
 
 **第 9 章 桌面环境**：介绍在 FreeBSD 上运行的各类桌面环境与窗口管理器，包括 KDE 6（X11 与 Wayland 会话）、MATE、Xfce、Cinnamon、LXQt、GNOME、LXDE、bspwm、IceWM 及 CDE（拟删除）。
 
-**第 10 章 多媒体和外部设备**：介绍 Web 浏览器、声卡配置、音频与视频播放器、打印机、人机输入设备及多媒体处理工具的使用方法。
+**第 10 章 多媒体和外部设备**：介绍 Web 浏览器、声卡配置、音频与视频播放器、打印机、摄像头、人机输入设备及多媒体处理工具的使用方法。
 
 **第 11 章 本地化与输入法**：介绍本地化环境变量配置，以及 Fcitx、IBus 输入法框架和五笔输入法的安装与设置。
 
-**第 12 章 Linux 二进制兼容层**：介绍 FreeBSD 的 Linux 兼容层架构，涵盖 Rocky Linux、Ubuntu/Debian、Arch Linux、Slackware、openSUSE、Gentoo 等多种 Linux 发行版的兼容环境搭建与 Linux Jail，以及微信、QQ、WPS Office 等 Linux 应用的运行方法和故障排除。
+**第 12 章 Linux 二进制兼容层**：介绍 FreeBSD 的 Linux 兼容层架构，涵盖 Rocky Linux、Ubuntu/Debian、Arch Linux、Slackware、openSUSE、Gentoo 等多种 Linux 发行版的兼容环境搭建，以及微信、QQ、WPS Office 等 Linux 应用的运行方法和故障排除。
 
 **第 13 章 游戏、科学计算和专业工具**：介绍 Ren'Py 视觉小说引擎、Godot 游戏引擎、Minecraft、Steam 客户端和 Wine 配置，以及科研和专业计算工具的使用。
 
@@ -59,25 +59,27 @@
 
 **第 19 章 防火墙**：介绍 FreeBSD 内置防火墙系统，包括 Packet Filter（PF）、IPFilter（IPF）、IPFW 的配置，以及 Fail2Ban 和 blocklistd 工具的使用。
 
-**第 20 章 Jail 容器管理**：介绍 FreeBSD 原生轻量级虚拟化技术 Jail 的基础配置、系统更新及 Qjail 管理工具的使用。
+**第 20 章 Jail 容器管理**：介绍 FreeBSD 原生轻量级虚拟化技术 Jail 的基础配置及 Qjail 管理工具的使用。
 
-**第 21 章 虚拟化与容器管理**：介绍使用 bhyve 及 vm-bhyve 工具安装 Windows 11、通过 BVCP 的 Web 界面管理 bhyve 虚拟机，以及 Podman 容器管理和在 FreeBSD 上安装 VirtualBox。
+**第 21 章 Linux Jail**：介绍在 FreeBSD Jail 中运行 Linux 发行版的方法，涵盖 Linux Jail 基础准备，以及 Debian、Ubuntu、antiX Linux 等发行版的 Jail 创建与 GUI 配置。
 
-**第 22 章 数据库管理**：介绍数据库概论，以及 PostgreSQL、MySQL 8.4 及 MongoDB 8.0 在 FreeBSD 上的安装与配置，同时涵盖 pgAdmin4 管理工具的使用。
+**第 22 章 虚拟化与容器管理**：介绍使用 bhyve 及 vm-bhyve 工具安装 Windows 11、通过 BVCP 的 Web 界面管理 bhyve 虚拟机，以及 Podman 容器管理和在 FreeBSD 上安装 VirtualBox。
 
-**第 23 章 文件传输协议（FTP）**：介绍文件传输协议（FTP）概述，以及 Pure-FTPd（基于 MySQL）、ProFTPd（基于 MySQL）、vsftpd 等 FTP 服务器的配置。
+**第 23 章 数据库管理**：介绍数据库概论，以及 PostgreSQL、MySQL 8.4 及 MongoDB 8.0 在 FreeBSD 上的安装与配置，同时涵盖 pgAdmin4 管理工具的使用。
 
-**第 24 章 服务器**：介绍 Rsync 数据同步、Samba 文件共享、NFS 服务器、零配置网络（mDNS/DNS-SD）及 Webmin 管理平台等服务的搭建。
+**第 24 章 文件传输协议（FTP）**：介绍文件传输协议（FTP）概述，以及 Pure-FTPd（基于 MySQL）、ProFTPd（基于 MySQL）、vsftpd 等 FTP 服务器的配置。
 
-**第 25 章 Web 服务器**：介绍 Apache、Nginx、Caddy Web 服务器的部署，以及 PHP、Tomcat、WildFly 应用服务器的配置，同时涵盖 Nextcloud、GitLab、OnlyOffice 和 OpenList 等应用的部署。
+**第 25 章 服务器**：介绍 Rsync 数据同步、Samba 文件共享、NFS 服务器、零配置网络（mDNS/DNS-SD）及 Webmin 管理平台等服务的搭建。
 
-**第 26 章 监控系统**：介绍 Zabbix、Prometheus 监控系统的部署，以及 Telegraf、InfluxDB 与 Grafana 组成的监控平台架构。
+**第 26 章 Web 服务器**：介绍 Apache、Nginx、Caddy Web 服务器的部署，以及 PHP、Tomcat、WildFly 应用服务器的配置，同时涵盖 Nextcloud、GitLab、OnlyOffice 和 OpenList 等应用的部署。
 
-**第 27 章 嵌入式平台**：介绍树莓派上 FreeBSD 的安装与使用、Linux 兼容层配置，以及 Radxa X4 x86 开发板、Linux 系统上交叉构建 FreeBSD、QEMU 模拟 RISC-V 架构，以及 STM32、乐鑫（Espressif）ESP-IDF、Arduino 等嵌入式开发环境的搭建方法。
+**第 27 章 监控系统**：介绍 Zabbix、Prometheus 监控系统的部署，以及 Telegraf、InfluxDB 与 Grafana 组成的监控平台架构。
 
-**第 28 章 开发环境**：介绍 C/C++、Java、Qt、Python、Rust、Go、Node.js 等语言开发环境的搭建，以及 IDA Pro 9.3 调试、code-server 与 clangd 配置、Vim 开发环境和 DTrace 动态追踪工具的使用。
+**第 28 章 嵌入式平台**：介绍树莓派上 FreeBSD 的安装与使用、Linux 兼容层配置，以及 Radxa X4 x86 开发板、Linux 系统上交叉构建 FreeBSD、QEMU 模拟 RISC-V 架构，以及 STM32、乐鑫（Espressif）ESP-IDF、Arduino 等嵌入式开发环境的搭建方法。
 
-**第 29 章 FreeBSD 内核架构**：介绍 FreeBSD 源代码目录结构、内核文件结构、机器相关与无关的内核选项注解、GENERIC 内核选项及定制内核的构建方法。
+**第 29 章 开发环境**：介绍 C/C++、Java、Qt、Python、Rust、Go、Node.js 等语言开发环境的搭建，以及 IDA Pro 9.3 调试、code-server 与 clangd 配置、Vim 开发环境和 DTrace 动态追踪工具的使用。
+
+**第 30 章 FreeBSD 内核架构**：介绍 FreeBSD 源代码目录结构、内核文件结构、机器相关与无关的内核选项注解、GENERIC 内核选项及定制内核的构建方法。
 
 **附录 I 工具与资源**：包括 BSD 许可证概览、microSD 卡参数简介、Bug 报告流程、FreeBSD 邮件列表订阅及 FreeBSD 开发参与指南。
 
