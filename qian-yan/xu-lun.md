@@ -61,7 +61,7 @@
 
 **第 20 章 Jail 容器管理**：介绍 FreeBSD 原生轻量级虚拟化技术 Jail 的基础配置及 Qjail 管理工具的使用。
 
-**第 21 章 Linux Jail**：介绍在 FreeBSD Jail 中运行 Linux 发行版的方法，涵盖 Linux Jail 基础准备，以及 Debian、Ubuntu、antiX Linux 等发行版的 Jail 创建与 GUI 配置。
+**第 21 章 Linux Jail**：介绍在 FreeBSD Jail 中运行 Linux 发行版的方法，涵盖 Linux Jail 基础准备，以及 Debian、Ubuntu、antiX Linux、Alpine Linux 等发行版的 Jail 创建与 GUI 配置。
 
 **第 22 章 虚拟化与容器管理**：介绍使用 bhyve 及 vm-bhyve 工具安装 Windows 11、通过 BVCP 的 Web 界面管理 bhyve 虚拟机，以及 Podman 容器管理和在 FreeBSD 上安装 VirtualBox。
 

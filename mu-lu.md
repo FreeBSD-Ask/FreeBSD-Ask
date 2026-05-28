@@ -221,7 +221,8 @@
 * [21.2 创建 Debian Jail](di-21-zhang-linux-jail/di-21.2-jie-chuang-jian-debian-jail.md)
 * [21.3 创建 Ubuntu Jail](di-21-zhang-linux-jail/di-21.3-jie-chuang-jian-ubuntu-jail.md)
 * [21.4 创建 antiX Linux Jail](di-21-zhang-linux-jail/di-21.4-jie-chuang-jian-antix-linux-jail.md)
-* [21.5 Jail 中的 GUI](di-21-zhang-linux-jail/di-21.5-jie-jail-zhong-de-gui.md)
+* [21.5 创建 Alpine Jail](di-21-zhang-linux-jail/di-21.5-jie-chuang-jian-alpine-jail.md)
+* [21.6 Jail 中的 GUI](di-21-zhang-linux-jail/di-21.6-jie-jail-zhong-de-gui.md)
 
 ## 第 22 章 虚拟化与容器管理
 
