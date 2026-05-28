@@ -103,9 +103,8 @@
 * [9.5 Cinnamon](di-9-zhang-zhuo-mian-huan-jing/di-9.5-jie-cinnamon.md)
 * [9.6 LXQt](di-9-zhang-zhuo-mian-huan-jing/di-9.6-jie-lxqt.md)
 * [9.7 GNOME](di-9-zhang-zhuo-mian-huan-jing/di-9.7-jie-gnome.md)
-* [9.8 LXDE](di-9-zhang-zhuo-mian-huan-jing/di-9.8-jie-lxde.md)
-* [9.9 IceWM](di-9-zhang-zhuo-mian-huan-jing/di-9.9-jie-icewm.md)
-* [9.10 CDE（拟删除）](di-9-zhang-zhuo-mian-huan-jing/di-9.10-jie-cde.md)
+* [9.8 IceWM](di-9-zhang-zhuo-mian-huan-jing/di-9.8-jie-icewm.md)
+* [9.9 CDE（拟删除）](di-9-zhang-zhuo-mian-huan-jing/di-9.9-jie-cde.md)
 
 ## 第 10 章 多媒体和外部设备
 
