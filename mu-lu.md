@@ -200,6 +200,7 @@
 * [18.8 入侵检测系统（IDS）](di-18-zhang-an-quan/di-18.8-jie-ru-qin-jian-ce-xi-tong.md)
 * [18.9 第三方漏洞与安全公告](di-18-zhang-an-quan/di-18.9-jie-di-san-fang-lou-dong-yu-an-quan-gong-gao.md)
 * [18.10 强制访问控制框架（MAC 框架）](di-18-zhang-an-quan/di-18.10-jie-fang-wen-kong-zhi-kuang-jia-mac-kuang-jia.md)
+* [18.11 加密磁盘分区](di-18-zhang-an-quan/di-18.11-jie-jia-mi-ci-pan-fen-qu.md)
 
 ## 第 19 章 防火墙
 
