@@ -176,7 +176,7 @@
 * [16.2 文件系统自动挂载](di-16-zhang-cun-chu-yu-wen-jian-xi-tong-guan-li/di-16.2-jie-zi-dong-gua-zai-wen-jian-xi-tong.md)
 * [16.3 Linux 文件系统](di-16-zhang-cun-chu-yu-wen-jian-xi-tong-guan-li/di-16.3-jie-linux-wen-jian-xi-tong.md)
 * [16.4 Windows 文件系统](di-16-zhang-cun-chu-yu-wen-jian-xi-tong-guan-li/di-16.4-jie-windows-wen-jian-xi-tong.md)
-* [16.5 增加交换分区](di-16-zhang-cun-chu-yu-wen-jian-xi-tong-guan-li/di-16.5-jie-swap-fen-qu.md)
+* [16.5 新增交换分区](di-16-zhang-cun-chu-yu-wen-jian-xi-tong-guan-li/di-16.5-jie-swap-fen-qu.md)
 
 ## 第 17 章 ZFS 文件系统
 
