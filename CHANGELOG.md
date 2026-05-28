@@ -3,7 +3,7 @@
 ## 2026 年第二季度
 
 - 2026.5.28
-  - 新增第 21 章 Linux Jail，包含 21.1 Linux Jail 基础准备、21.2 创建 Debian Jail、21.3 创建 Ubuntu Jail、21.4 创建 antiX Linux Jail、21.5 创建 Alpine Jail、21.6 Jail 中的 GUI，内容均置空
+  - 从“12.8 Linux Jail”拆分出第 21 章 Linux Jail
   - 新增 10.8 摄像头
   - 删除 20.2 Jail 系统更新，待重写
 - 2026.5.26
