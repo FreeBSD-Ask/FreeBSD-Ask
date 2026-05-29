@@ -251,7 +251,7 @@ round-trip min/avg/max/stddev = 0.635/0.705/0.776/0.071 ms
 IPv6 是 IP 协议的新版本，即 IPv4 的继任者。IPv6 相对于 IPv4 提供了多项优势和新功能：
 
 - 其 128 位地址空间可容纳约 3.4×10^38 个地址，从而解决了 IPv4 地址短缺与耗尽问题。
-- 路由器仅在路由表中存储网络聚合地址，从而将路由表的平均条目数减少到 8192 条。
+- 路由器仅在路由表中存储网络聚合地址，通过地址聚合减少路由表条目，这与 IPv4 相比大幅降低了路由器的内存和 CPU 需求。
 - 地址自动配置（RFC4862）。
 - 强制多播地址。
 - 内置 IPsec（IP 安全）。
@@ -412,7 +412,7 @@ search 和 domain 选项只能使用其中一个。使用 DHCP 时，dhclient(8)
 
 > **注意**：
 >
-> 修改 **/etc/rc.conf** 文件后，需重启系统或运行命令 `/etc/rc.d/netif restart` 来应用网络更改。
+> 修改 **/etc/rc.conf** 文件后，需重启系统或依次运行命令 `service netif restart` 与 `service routing restart` 来应用网络更改。
 
 ```ini
 hostname="ykla"  # 主机名，不能为空，否则无法使用 Xorg

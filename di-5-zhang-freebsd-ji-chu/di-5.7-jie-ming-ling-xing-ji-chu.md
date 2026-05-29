@@ -379,7 +379,7 @@ ykla@ykla:~ $ ls
 
 > **技巧**
 >
-> FreeBSD 的 root shell 总是显示隐藏文件，因此请以普通用户测试。
+> 在 FreeBSD 默认配置中，无论普通用户还是 root，`ls` 命令均需要 `-a` 选项才会显示隐藏文件。
 
 FreeBSD ls 与 GNU ls 比较：
 
