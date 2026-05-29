@@ -103,9 +103,8 @@
 * [9.5 Cinnamon](di-9-zhang-zhuo-mian-huan-jing/di-9.5-jie-cinnamon.md)
 * [9.6 LXQt](di-9-zhang-zhuo-mian-huan-jing/di-9.6-jie-lxqt.md)
 * [9.7 GNOME](di-9-zhang-zhuo-mian-huan-jing/di-9.7-jie-gnome.md)
-* [9.8 LXDE](di-9-zhang-zhuo-mian-huan-jing/di-9.8-jie-lxde.md)
-* [9.9 IceWM](di-9-zhang-zhuo-mian-huan-jing/di-9.9-jie-icewm.md)
-* [9.10 CDE（拟删除）](di-9-zhang-zhuo-mian-huan-jing/di-9.10-jie-cde.md)
+* [9.8 IceWM](di-9-zhang-zhuo-mian-huan-jing/di-9.8-jie-icewm.md)
+* [9.9 CDE（拟删除）](di-9-zhang-zhuo-mian-huan-jing/di-9.9-jie-cde.md)
 
 ## 第 10 章 多媒体和外部设备
 
@@ -121,9 +120,10 @@
 ## 第 11 章 本地化与输入法
 
 * [11.1 本地化环境变量](di-11-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-11.1-jie-ben-di-hua-huan-jing-bian-liang.md)
-* [11.2 Fcitx 输入法框架](di-11-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-11.2-jie-fcitx-shu-ru-fa-kuang-jia.md)
-* [11.3 IBus 输入法框架](di-11-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-11.3-jie-ibus-shu-ru-fa-kuang-jia.md)
-* [11.4 五笔输入法](di-11-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-11.4-jie-wu-bi-shu-ru-fa.md)
+* [11.2 特定语言的区域配置](di-11-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-11.2-jie-te-ding-yu-yan-de-qu-yu-pei-zhi.md)
+* [11.3 Fcitx 输入法框架](di-11-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-11.3-jie-fcitx-shu-ru-fa-kuang-jia.md)
+* [11.4 IBus 输入法框架](di-11-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-11.4-jie-ibus-shu-ru-fa-kuang-jia.md)
+* [11.5 五笔输入法](di-11-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-11.5-jie-wu-bi-shu-ru-fa.md)
 
 ## 第 12 章 Linux 二进制兼容层
 
@@ -176,7 +176,7 @@
 * [16.2 文件系统自动挂载](di-16-zhang-cun-chu-yu-wen-jian-xi-tong-guan-li/di-16.2-jie-zi-dong-gua-zai-wen-jian-xi-tong.md)
 * [16.3 Linux 文件系统](di-16-zhang-cun-chu-yu-wen-jian-xi-tong-guan-li/di-16.3-jie-linux-wen-jian-xi-tong.md)
 * [16.4 Windows 文件系统](di-16-zhang-cun-chu-yu-wen-jian-xi-tong-guan-li/di-16.4-jie-windows-wen-jian-xi-tong.md)
-* [16.5 swap 分区](di-16-zhang-cun-chu-yu-wen-jian-xi-tong-guan-li/di-16.5-jie-swap-fen-qu.md)
+* [16.5 新增交换分区](di-16-zhang-cun-chu-yu-wen-jian-xi-tong-guan-li/di-16.5-jie-swap-fen-qu.md)
 
 ## 第 17 章 ZFS 文件系统
 
@@ -200,6 +200,7 @@
 * [18.8 入侵检测系统（IDS）](di-18-zhang-an-quan/di-18.8-jie-ru-qin-jian-ce-xi-tong.md)
 * [18.9 第三方漏洞与安全公告](di-18-zhang-an-quan/di-18.9-jie-di-san-fang-lou-dong-yu-an-quan-gong-gao.md)
 * [18.10 强制访问控制框架（MAC 框架）](di-18-zhang-an-quan/di-18.10-jie-fang-wen-kong-zhi-kuang-jia-mac-kuang-jia.md)
+* [18.11 加密磁盘分区](di-18-zhang-an-quan/di-18.11-jie-jia-mi-ci-pan-fen-qu.md)
 
 ## 第 19 章 防火墙
 

@@ -34,49 +34,6 @@ FreeBSD 默认字体对中文显示效果欠佳。本节介绍图形界面引入
 # fc-cache
 ```
 
-## TTY 中文控制台
-
-FreeBSD 新型终端 VT 原生支持 CJK 字符集（中日韩统一表意文字），加载字体即可显示中文。
-
-本节基于 FreeBSD 14.2-RELEASE。
-
-字体格式为 `.fnt`（二进制字体文件，而非码表加 PNG 图片的组合），使用命令切换控制台字体为 test.fnt（仅当前会话生效，重启后恢复默认字体）：
-
-```sh
-$ vidcontrol -f test.fnt
-```
-
-FreeBSD 基本系统提供了一款工具，可将 bdf 或 hex 格式转换为 fnt 文件，其中 `-o` 为必选参数：
-
-```sh
-$ vtfontcvt [ -h 高度 ] [ -v ] [ -w 宽度 ] -o 输出文件.fnt 字体路径
-```
-
-- 示例：
-
-![未加入字体的 tty](../.gitbook/assets/tty0.png)
-
-```sh
-# 下载 b16 字体文件
-fetch https://people.freebsd.org/~emaste/newcons/b16.fnt
-
-# 切换控制台字体为 b16
-vidcontrol -f b16.fnt
-```
-
-> **技巧**
->
-> 如果上述链接失效，请访问 <https://github.com/FreeBSD-Ask/fnt-fonts> 下载字体。
-
-![设置完成后的 tty](../.gitbook/assets/tty1.png)
-
-上述命令仅临时生效，如需永久生效，应加入 **/etc/rc.conf** 文件：
-
-```ini
-# 设置控制台所有屏幕使用 b16 字体
-allscreens_flags="-f /root/b16.fnt"
-```
-
 ## 附录：安装 Windows 11 字体（自制包）
 
 该包同时兼容 Debian 和低版本 Ubuntu 的兼容层。安装方法：
@@ -87,17 +44,6 @@ allscreens_flags="-f /root/b16.fnt"
 # cd ttf-mswin11-zh-deb                    # 进入字体包目录
 # dpkg -i ttf-ms-win11-*.deb               # 安装 Windows 11 中文字体包
 ```
-
-### 故障排除与未竟事宜
-
-#### 如何手动生成中文字体的 fnt 文件
-
-[https://github.com/usonianhorizon/vt-fnt](https://github.com/usonianhorizon/vt-fnt) 提供的方法较为复杂，可生成 bdf 文件，但会出现与文中相同的错误提示。该项目探索了 FreeBSD 控制台字体的生成方法。文中提及的 FontForge 软件提供 Windows 版本，下载地址为 [https://fontforge.org/en-US/downloads/windows-dl/](https://fontforge.org/en-US/downloads/windows-dl/)。
-
-### 参考文献
-
-- FreeBSD Project. rc.conf[EB/OL]. [2026-03-25]. <https://man.freebsd.org/cgi/man.cgi?query=rc.conf&sektion=5>. 该手册页详细说明了 rc.conf 系统配置文件的语法与选项。
-- Mariusz. vidcontrol font and color via /etc/rc.conf problem[EB/OL]. [2026-03-25]. <https://forums.freebsd.org/threads/vidcontrol-font-and-color-via-etc-rc-conf-problem.81696/>. 该讨论帖探讨了控制台字体与颜色配置的相关问题。
 
 ## 课后习题
 

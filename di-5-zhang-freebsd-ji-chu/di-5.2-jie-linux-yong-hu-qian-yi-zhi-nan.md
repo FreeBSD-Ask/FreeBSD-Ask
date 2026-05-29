@@ -157,34 +157,6 @@ POSIX（IEEE 1003.1）/SUS（UNIX 03）对目录结构无类似要求。POSIX.1-
 
 - Linux Foundation. Filesystem Hierarchy Standard 3.0[EB/OL]. (2015-06-03)[2026-04-23]. <https://refspecs.linuxfoundation.org/fhs.shtml>. Filesystem Hierarchy Standard, 文件层次标准包含一套关于类 UNIX 操作系统文件和目录放置的要求和指南。这些指南旨在支持应用程序、系统管理工具、开发工具和脚本之间的互操作性，增强上述系统文档的一致性。
 
-## BSD 风格的 make/grep/sed/awk
-
-### make(1) 命令
-
-FreeBSD 的 make（bmake）与 GNU make（gmake）语法与内置变量差异显著。FreeBSD make 不支持 GNU make 的许多高级特性，如 `$(wildcard ...)` 的某些用法、条件语句语法等。FreeBSD make 使用 `.include` 而 GNU make 使用 `include`；变量赋值语法 `?=`、`:=` 的行为也不同。在 FreeBSD 上，可安装 devel/gmake 以获得 GNU make。
-
-### sed(1) 命令
-
-FreeBSD sed 基于 4.4BSD lite sed，与 GNU sed 在正则表达式语法、一些扩展命令（如 `\l`、`\u`、`\L`、`\U`）、地址范围语法上有差异。GNU sed 支持 `\w`、`\W`、`\b`、`\B` 等字符类，而 FreeBSD sed 需要使用 `[[:alnum:]]` 等 POSIX 类。
-
-与 GNU sed 最显著的差异是 `-i` 选项语法：FreeBSD sed 的 `-i` 必须有后缀参数，即使是空字符串（`-i ''`），最常见的跨平台兼容性问题即在于 GNU sed 的 `-i` 后缀是可选的（`-i[SUFFIX]`）。
-
-示例：
-
-```sh
-sed -i '' 's/quarterly/latest/g' /etc/pkg/FreeBSD.conf
-```
-
-必须提供一个空参数 `''`，且不能省略。
-
-### awk(1) 命令
-
-FreeBSD 默认的 awk 是 nawk（New AWK），基于 Aho、Kernighan、Weinberger 的原始实现，与 GNU awk（gawk）有许多差异。GNU awk 有大量扩展，如：多维数组、网络操作、时间函数、`length(array)`、`gensub()`、`strftime()` 等，这些在 FreeBSD nawk 中不可用。在 FreeBSD 上，可安装 lang/gawk 获得 GNU awk。
-
-### grep(1) 命令
-
-FreeBSD 基本系统的 grep 是 BSD grep（基于 GNU grep 2.0 的旧版分支），与 Linux 上的 GNU grep 在正则表达式语法和选项上基本兼容；但 BSD grep 不支持 GNU grep 的 `-P`（Perl 正则表达式）选项，需安装 `textproc/gnugrep` 以获得 PCRE 支持。
-
 ## 附录：GNU/Linux 发行版比较
 
 GNU 开源运动的大规模开展与 Linux 的蓬勃发展，使多数人对开源的理解囿于 GPL 协议与 Linux 系统，对 FreeBSD 等 BSD 世界则接触较少。一些以开源为旗号的社区组织，其活动也主要围绕 Linux 领域展开，鲜有超越这一范畴的探索。

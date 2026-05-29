@@ -17,7 +17,7 @@ Hyper-V 分为 Gen 1（第一代）和 Gen 2（第二代）两种虚拟机架构
 
 > **注意**
 >
-> 使用 Gen 2 时请关闭安全启动，否则系统无法启动。FreeBSD 自 14.0 起已支持 UEFI 安全启动，但其引导加载程序未经 Microsoft 签名，因此在 Hyper-V 默认的安全启动配置（使用“Microsoft UEFI 证书颁发机构”模板）中无法通过验证。
+> 使用 Gen 2 时请关闭安全启动，否则系统无法启动。FreeBSD 的引导加载程序未经 Microsoft 签名，在 Hyper-V 默认的安全启动配置中无法通过验证。FreeBSD 提供 uefisign(8) 工具供用户手动签名引导组件，但开箱即用的 Secure Boot 支持尚未实现。安装前必须关闭安全启动。
 
 FreeBSD 通过以下内核模块实现对 Hyper-V 的集成支持：
 
