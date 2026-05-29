@@ -86,7 +86,7 @@ proc /proc procfs rw 0 0
 
 ![cinnamon on FreeBSD](../.gitbook/assets/cinnamon2.png)
 
-需要指出的是，默认壁纸为黑色，此为正常现象。
+注意：默认壁纸为黑色，此为正常现象。
 
 ![cinnamon on FreeBSD](../.gitbook/assets/cinnamon3.png)
 
