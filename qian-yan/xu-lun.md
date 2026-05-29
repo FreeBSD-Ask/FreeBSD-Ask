@@ -41,7 +41,7 @@
 
 **第 10 章 多媒体和外部设备**：介绍 Web 浏览器、声卡配置、音频与视频播放器、打印机、摄像头、人机输入设备及多媒体处理工具的使用方法。
 
-**第 11 章 本地化与输入法**：介绍本地化环境变量配置，以及 Fcitx、IBus 输入法框架和五笔输入法的安装与设置。
+**第 11 章 本地化与输入法**：介绍本地化环境变量配置、特定语言的区域配置，以及 Fcitx、IBus 输入法框架和五笔输入法的安装与设置。
 
 **第 12 章 Linux 二进制兼容层**：介绍 FreeBSD 的 Linux 兼容层架构，涵盖 Rocky Linux、Ubuntu/Debian、Arch Linux、Slackware、openSUSE、Gentoo 等多种 Linux 发行版的兼容环境搭建，以及微信、QQ、WPS Office 等 Linux 应用的运行方法和故障排除。
 

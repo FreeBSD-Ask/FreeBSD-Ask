@@ -120,9 +120,10 @@
 ## 第 11 章 本地化与输入法
 
 * [11.1 本地化环境变量](di-11-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-11.1-jie-ben-di-hua-huan-jing-bian-liang.md)
-* [11.2 Fcitx 输入法框架](di-11-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-11.2-jie-fcitx-shu-ru-fa-kuang-jia.md)
-* [11.3 IBus 输入法框架](di-11-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-11.3-jie-ibus-shu-ru-fa-kuang-jia.md)
-* [11.4 五笔输入法](di-11-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-11.4-jie-wu-bi-shu-ru-fa.md)
+* [11.2 特定语言的区域配置](di-11-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-11.2-jie-te-ding-yu-yan-de-qu-yu-pei-zhi.md)
+* [11.3 Fcitx 输入法框架](di-11-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-11.3-jie-fcitx-shu-ru-fa-kuang-jia.md)
+* [11.4 IBus 输入法框架](di-11-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-11.4-jie-ibus-shu-ru-fa-kuang-jia.md)
+* [11.5 五笔输入法](di-11-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-11.5-jie-wu-bi-shu-ru-fa.md)
 
 ## 第 12 章 Linux 二进制兼容层
 
