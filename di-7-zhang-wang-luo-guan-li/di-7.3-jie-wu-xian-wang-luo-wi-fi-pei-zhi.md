@@ -361,10 +361,9 @@ FULLER L. FreeBSD Broadcom Wi-Fi Improvements[EB/OL]. [2026-03-26]. <https://web
 然后在 **/boot/loader.conf** 文件中添加以下配置：
 
 ```ini
-hw.bwn_pci.preferred="1"        # 设置首选使用 BWN PCI 无线设备
-if_bwn_pci_load="YES"           # 在启动时加载 bwn_pci 驱动
+hw.bwn.usedma="1"               # 启用 DMA 模式（默认开启，设为 0 则使用 PIO 模式）
+if_bwn_load="YES"               # 在启动时加载 bwn 驱动
 bwn_v4_ucode_load="YES"         # 加载 BWN V4 无线固件
-bwn_v4_n_ucode_load="YES"       # 加载 BWN V4 N 模式无线固件
 bwn_v4_lp_ucode_load="YES"      # 加载 BWN V4 低功耗模式无线固件
 ```
 
