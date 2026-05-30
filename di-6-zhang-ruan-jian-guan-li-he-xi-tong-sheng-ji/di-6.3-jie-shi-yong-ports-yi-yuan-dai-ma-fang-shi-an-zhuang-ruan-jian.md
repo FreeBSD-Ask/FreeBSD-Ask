@@ -306,14 +306,14 @@ Git 分支已经切换成功。
 
 ```sh
 # cd /usr/ports/ # 切换目标目录
-# git pull # 同步更新上游 Ports
+# git pull -p # 同步更新上游 Ports（-p/--prune 用于清理远程已删除的端口）
 ```
 
 如果提示本地已经修改，可以放弃本地修改后再更新：
 
 ```sh
-# git checkout . # 放弃本地修改
-# git pull
+# git restore .
+# git pull -p
 ```
 
 ### 附录：因时间错误导致的证书无效

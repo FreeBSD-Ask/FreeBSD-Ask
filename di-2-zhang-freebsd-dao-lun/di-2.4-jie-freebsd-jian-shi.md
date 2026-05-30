@@ -180,7 +180,7 @@ FreeBSD 项目从 Subversion 到 Git 的迁移始于 2019 年 5 月的 DevSummit
 
 在 13.0-RELEASE 中，由于 OpenSolaris 的继任者 illumos 开发基本停滞，FreeBSD 将 ZFS 实现切换到了 OpenZFS。该迁移计划最早于 2018 年提出。
 
-- 2024 年 9 月笔记本和桌面工作组 LDWG 成立
+- 2024 年 10 月笔记本和桌面工作组 LDWG 成立
 
 笔记本和桌面工作组（LDWG）如其名称所示，致力于通过一系列功能改进和新增，使 FreeBSD 在个人设备上实现“开箱即用”的体验。该工作计划为期 1 至 2 年。
 
