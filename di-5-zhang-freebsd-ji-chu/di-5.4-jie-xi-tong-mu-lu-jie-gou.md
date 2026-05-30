@@ -66,7 +66,7 @@ FreeBSD 的目录结构设计遵循以下原则：
 │   ├── nda0 第一块 NVMe 存储设备（通过 cam(3) 连接）
 │   ├── nda0p1 第一块 NVMe 存储设备的第一个分区
 │   ├── null 空设备，丢弃所有写入的数据，读取时立即返回 EOF
-│   ├── nvd0 第一块 NVMe 存储设备（使用 NVMe 命名空间）
+│   ├── nvd0 nda0 的符号链接（旧版 NVMe 直接驱动兼容名，参见 nda(4)）
 │   ├── pts 伪终端设备，参见 pts(4)
 │   ├── random 熵设备，加密强度的随机数来源，参见 random(4)
 │   ├── reroot reboot -r 使用的重引导设备
@@ -588,7 +588,7 @@ atrtc1: Warning: Couldn't map I/O.
 atrtc1: registered as a time-of-day clock, resolution 1.000000s
 # 传统的 AT RTC（Motorola MC146818A 兼容），提供 date/time 设置/获取。
 # Warning 表明无法映射 I/O 端口（可能 UEFI 模式下固件未分配 I/O 空间），但无实际影响。
-# 现代 UEFI 平台更推荐使用 efiRTC；计划在 FreeBSD 15 中从 GENERIC 移除 AT RTC。
+# 现代 UEFI 平台更推荐使用 efiRTC；已在 FreeBSD 15 中从 GENERIC 移除 AT RTC。
 
 Event timer "RTC" frequency 32768 Hz quality 0
 # RTC 的周期性中断频率 32768 Hz（2^15 Hz），quality 0（最低优先级，仅做最后备选）。
@@ -786,7 +786,7 @@ atrtc0: registered as a time-of-day clock, resolution 1.000000s
 atrtc0: Can't map interrupt.
 atrtc0: non-PNP ISA device will be removed from GENERIC in FreeBSD 15.
 # atrtc(4) 在 ISA 总线侧的探测。两个 Warning 不影响系统运行——ISA I/O 和中断在 UEFI 平台上通常不可映射。
-# FreeBSD 15 计划将 atrtc 从 GENERIC 内核配置中移除（以 efirtc 和 ACPI 时钟替代）。
+# FreeBSD 15 已将 atrtc 从 GENERIC 内核配置中移除（以 efirtc 和 ACPI 时钟替代）。
 
 # ===== Intel Speed Shift (HWP) =====
 hwpstate_intel0: <Intel Speed Shift> on cpu0
