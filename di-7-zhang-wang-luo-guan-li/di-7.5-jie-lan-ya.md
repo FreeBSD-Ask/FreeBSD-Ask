@@ -19,7 +19,7 @@
 
 - `hcsecd`：管理蓝牙设备的链路密钥和 PIN 码，负责蓝牙设备的安全认证。
 - `bthidd`：支持 Bluetooth HID（Human Interface Device）设备，如蓝牙鼠标、键盘等。
-- `hccontrol`：通过 hccontrol(8) 可对蓝牙 HCI 接口进行底层控制，包括查询设备状态、扫描附近设备、管理连接等操作，是蓝牙调试的核心工具。
+- `hccontrol`：通过 hccontrol(8) 可控制蓝牙 HCI 底层接口，包括查询设备状态、扫描附近设备、管理连接等操作，是蓝牙调试的核心工具。
 
 ## 蓝牙鼠标配对
 
