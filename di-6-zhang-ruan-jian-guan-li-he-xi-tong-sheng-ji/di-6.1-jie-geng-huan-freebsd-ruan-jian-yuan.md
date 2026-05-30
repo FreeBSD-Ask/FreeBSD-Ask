@@ -358,7 +358,7 @@ FreeBSD-ports-kmods: { enabled: no }
 
 ### 官方源
 
-默认路径：**/etc/pkg/repos/FreeBSD.conf**（请勿修改，仅做展示）
+默认路径：**/etc/pkg/FreeBSD.conf**（请勿修改，仅做展示）
 
 ```sh
 FreeBSD-base: {
@@ -372,7 +372,7 @@ FreeBSD-base: {
 
 > **注意**
 >
-> 根据 FreeBSD 源代码 [usr.sbin/bsdinstall/scripts/pkgbase.in](https://github.com/freebsd/freebsd-src/blob/releng/15.0/usr.sbin/bsdinstall/scripts/pkgbase.in) 最后几段源代码，**/etc/pkg/repos/FreeBSD.conf** 中的 FreeBSD-base 源虽然是 `enabled: no`。但是，那些在安装中选择了 pkgbase 的用户，会在 **/usr/local/etc/pkg/repos/FreeBSD.conf** 文件中写入 `FreeBSD-base: { enabled: yes }` 这一行来显式覆盖默认配置。因此，pkgbase 用户的 FreeBSD-base 源实际上是默认启用的。
+> 根据 FreeBSD 源代码 [usr.sbin/bsdinstall/scripts/pkgbase.in](https://github.com/freebsd/freebsd-src/blob/releng/15.0/usr.sbin/bsdinstall/scripts/pkgbase.in) 最后几段源代码，**/etc/pkg/FreeBSD.conf** 中的 FreeBSD-base 源虽然是 `enabled: no`。但是，那些在安装中选择了 pkgbase 的用户，会在 **/usr/local/etc/pkg/repos/FreeBSD.conf** 文件中写入 `FreeBSD-base: { enabled: yes }` 这一行来显式覆盖默认配置。因此，pkgbase 用户的 FreeBSD-base 源实际上是默认启用的。
 
 #### 中国科学技术大学开源软件镜像站
 
@@ -523,7 +523,7 @@ MASTER_SITE_OVERRIDE?=https://mirrors.ustc.edu.cn/freebsd-ports/distfiles/${DIST
 
 ### 平衡安全与便利
 
-使用非官方镜像站虽然提升了下载速度，但引入了中间人攻击的风险——镜像站管理员理论上可以在软件包中注入恶意代码。FreeBSD 官方要求镜像站使用 `zfs send/receive` 而非 rsync 来同步数据，部分原因正是为了降低此类风险。对于安全要求较高的生产环境，建议使用官方源或自行搭建 Poudriere 构建服务器，以完全控制软件包。
+使用非官方镜像站虽然提升了下载速度，但引入了中间人攻击的风险——镜像站管理员理论上可以在软件包中注入恶意代码。FreeBSD 官方集群内部使用 `zfs send/receive` 而非 rsync 来同步数据，且官方 rsync 服务不向公众开放，部分原因正是为了降低此类风险。对于安全要求较高的生产环境，建议使用官方源或自行搭建 Poudriere 构建服务器，以完全控制软件包。
 
 ### 为什么 pkg 配置文件中要写完整选项（mirror_type / signature_type / fingerprints）
 
