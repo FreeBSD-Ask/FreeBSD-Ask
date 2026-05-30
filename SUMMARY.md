@@ -173,7 +173,7 @@
 ## 第 16 章 存储管理
 
 * [16.1 USB 存储设备](di-16-zhang-cun-chu-guan-li/di-16.1-jie-usb-cun-chu-she-bei.md)
-* [16.2 内存盘](di-16-zhang-cun-chu-guan-li/di-16.2-jie-nei-cun-pan.md)
+* [16.2 虚拟内存盘](di-16-zhang-cun-chu-guan-li/di-16.2-jie-nei-cun-pan.md)
 * [16.3 文件系统自动挂载](di-16-zhang-cun-chu-guan-li/di-16.3-jie-zi-dong-gua-zai-wen-jian-xi-tong.md)
 * [16.4 新增交换分区](di-16-zhang-cun-chu-guan-li/di-16.4-jie-swap-fen-qu.md)
 * [16.5 加密交换分区](di-16-zhang-cun-chu-guan-li/di-16.5-jie-jia-mi-jiao-huan-fen-qu.md)
