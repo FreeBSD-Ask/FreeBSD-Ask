@@ -202,6 +202,7 @@
 * [19.5 ZFS 委托管理](di-19-zhang-zfs-wen-jian-xi-tong/di-19.5-jie-zfs-wei-tuo-guan-li.md)
 * [19.6 ZFS 启动环境](di-19-zhang-zfs-wen-jian-xi-tong/di-19.6-jie-zfs-qi-dong-huan-jing.md)
 * [19.7 ZFS 启动环境与多版本共存](di-19-zhang-zfs-wen-jian-xi-tong/di-19.7-jie-zfs-qi-dong-huan-jing-yu-duo-ban-ben-gong-cun.md)
+* [19.8 ZFS 调优](di-19-zhang-zfs-wen-jian-xi-tong/di-19.8-jie-zfs-diao-you.md)
 
 ## 第 20 章 安全
 
