@@ -95,7 +95,7 @@
 | 封面/书名 | 作者/译者 | ISBN/出版社 | 说明 |
 | --------- | --------- | ----------- | ---- |
 | 《DTrace 用户指南》 | Oracle | 文件号码 819-5488-10（版本 [Oracle Solaris 10](https://docs.oracle.com/cd/E18752_01/html/819-5488/)，2006） | [在线阅读地址](https://docs.oracle.com/cd/E18752_01/html/819-5488/)、[PDF](https://docs.oracle.com/cd/E18752_01/pdf/819-5488.pdf)。DTrace 入门技术文档，讲解动态跟踪框架的基本概念与使用方法 |
-| 《Solaris 动态跟踪指南》 | Oracle | 文件号码 819-6959-10（版本 [Oracle Solaris 10 8/11](https://docs.oracle.com/cd/E24847_01/)，2011） | [在线阅读地址](http://download.oracle.com/docs/cd/E19253-01/819-6959/index.html)、[PDF](http://download.oracle.com/docs/cd/E19253-01/819-6959/819-6959.pdf)。DTrace 高级技术文档，讲解动态跟踪框架的高级技巧与性能分析方法 |
+| 《Solaris 动态跟踪指南》 | Oracle | 文件号码 819-6959-10（版本 [Oracle Solaris 10 8/11](https://docs.oracle.com/cd/E24847_01/)，2011） | [在线阅读地址](https://download.oracle.com/docs/cd/E19253-01/819-6959/index.html)、[PDF](https://download.oracle.com/docs/cd/E19253-01/819-6959/819-6959.pdf)。DTrace 高级技术文档，讲解动态跟踪框架的高级技巧与性能分析方法 |
 
 ## 文献评述与历史文献
 
