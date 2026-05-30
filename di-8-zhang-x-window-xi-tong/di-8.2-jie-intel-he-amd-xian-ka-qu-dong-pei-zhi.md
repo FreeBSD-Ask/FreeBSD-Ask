@@ -85,9 +85,9 @@
 如果使用 **graphics/drm-kmod** 驱动的 Intel 显卡，可将以下选项添加到 **/boot/loader.conf** 文件中：
 
 ```ini
-compat.linuxkpi.fastboot=1  	# ①
-compat.linuxkpi.enable_dc=2 	# ②
-compat.linuxkpi.enable_fbc=1	# ③
+compat.linuxkpi.i915_fastboot=1  	# ①
+compat.linuxkpi.i915_enable_dc=2 	# ②
+compat.linuxkpi.i915_enable_fbc=1	# ③
 ```
 
 功能说明：
