@@ -14,7 +14,7 @@
 
 ## 显卡支持情况
 
-FreeBSD 的 i915 和 AMD 显卡驱动与基本系统分离，以 Port 形式提供，这些驱动移植自 Linux 内核的 DRM（Direct Rendering Manager，直接渲染管理器），采用长期支持（Long Term Support，LTS）版本。不同系统版本对应的 Linux 内核版本有所不同。
+FreeBSD 的 i915 和 AMD 显卡驱动与基本系统分离，以 Port 形式提供，这些驱动移植自 Linux 内核的直接渲染管理器（DRM，Direct Rendering Manager），采用长期支持（Long Term Support，LTS）版本。不同系统版本对应的 Linux 内核版本有所不同。
 
 > **注意**
 >
