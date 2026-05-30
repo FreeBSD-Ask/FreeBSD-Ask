@@ -251,10 +251,10 @@ round-trip min/avg/max/stddev = 0.635/0.705/0.776/0.071 ms
 IPv6 是 IP 协议的新版本，即 IPv4 的继任者。IPv6 相对于 IPv4 提供了多项优势和新功能：
 
 - 其 128 位地址空间可容纳约 3.4×10^38 个地址，从而解决了 IPv4 地址短缺与耗尽问题。
-- 路由器仅在路由表中存储网络聚合地址，从而将路由表的平均条目数减少到 8192 条。
+- 路由器仅在路由表中存储网络聚合地址，通过地址聚合减少路由表条目，这与 IPv4 相比大幅降低了路由器的内存和 CPU 需求。
 - 地址自动配置（RFC4862）。
-- 强制多播地址。
-- 内置 IPsec（IP 安全）。
+- 以多播取代广播地址。
+- 支持 IPsec（IP 安全），但非强制要求（RFC 4301 已将 IPsec 从必须降级为推荐）。
 - 简化的头部结构。
 - 对移动 IP 的支持。
 - IPv6 到 IPv4 的过渡机制。
@@ -406,13 +406,13 @@ search 和 domain 选项只能使用其中一个。使用 DHCP 时，dhclient(8)
 
 “No route to host”消息表示系统无法将数据包路由到目标主机。这通常是因为未指定默认路由或网线未插入。可使用 `route get <目标地址>` 命令查看系统对特定目标的路由决策，再检查 `netstat -rn` 的输出，确保有到主机的有效路由。
 
-“ping: sendto: Permission denied”错误消息通常由防火墙配置错误引起。如果在 FreeBSD 上启用了防火墙但未定义规则，默认策略是拒绝所有流量，甚至是 ping(8)。
+“ping: sendto: Permission denied”错误消息通常由防火墙配置错误引起。如果直接加载了 IPFW 防火墙模块但未配置任何规则，IPFW 的默认规则 65535 会拒绝所有流量，甚至是 ping(8)。但通过 rc.conf 标准方式启用防火墙时，IPFW 默认 `firewall_type="open"` 会放行所有流量；PF 和 IPFilter 无规则时默认放行。
 
 ## 附录：网络配置 rc.conf 示例
 
 > **注意**：
 >
-> 修改 **/etc/rc.conf** 文件后，需重启系统或运行命令 `/etc/rc.d/netif restart` 来应用网络更改。
+> 修改 **/etc/rc.conf** 文件后，需重启系统或依次运行命令 `service netif restart` 与 `service routing restart` 来应用网络更改。
 
 ```ini
 hostname="ykla"  # 主机名，不能为空，否则无法使用 Xorg

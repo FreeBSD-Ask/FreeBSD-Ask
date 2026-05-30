@@ -202,7 +202,7 @@ wlan0: flags=8843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST> metric 0 mtu 1500
 
 ## 英特尔无线网卡驱动概况
 
-英特尔（Intel）网卡是目前广泛使用的无线网卡之一。iwlwifi 驱动支持的芯片范围是 iwm 的超集：iwlwifi 的 mvm 子驱动覆盖了 iwm 支持的全部芯片，此外还通过 mld 子驱动支持更新的 BZ、SC 等芯片代，见 [英特尔 ® 无线适配器的 Linux* 支持](https://www.intel.cn/content/www/cn/zh/support/articles/000005511/wireless.html)。需要注意的是，iwm 当前仅支持 802.11a/b/g 模式，无法连接仅开启 802.11n/ac 模式的接入点；iwlwifi 支持 802.11a/b/g/n/ac/ax/be，但 802.11n 和 802.11ac 默认处于关闭状态（固件包会针对支持的芯片自动调整）。
+英特尔（Intel）网卡是目前广泛使用的无线网卡之一。iwlwifi 驱动支持的芯片范围是 iwm 的超集：iwlwifi 的 mvm 子驱动覆盖了 iwm 支持的全部芯片，此外还通过 mld 子驱动支持更新的 BZ、SC 等芯片代，见 [英特尔 ® 无线适配器的 Linux* 支持](https://www.intel.cn/content/www/cn/zh/support/articles/000005511/wireless.html)。需要注意的是，iwm 仅支持 802.11a/b/g 模式（不支持 802.11n/ac，无法关联仅配置为 802.11n/ac 模式的接入点）；iwlwifi 支持 802.11a/b/g/n/ac/ax/be，但 802.11n 和 802.11ac 默认处于关闭状态（固件包会针对支持的芯片自动调整）。
 
 在 **/etc/rc.conf** 文件中添加以下配置：
 
