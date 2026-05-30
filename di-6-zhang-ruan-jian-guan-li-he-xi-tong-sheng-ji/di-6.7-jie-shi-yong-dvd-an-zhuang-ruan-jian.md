@@ -1,36 +1,14 @@
 # 6.7 使用 DVD 安装软件
 
-## 挂载 DVD 到 **/dist** 目录
+## 挂载 DVD
 
 使用 DVD 安装软件前，首先需要将 DVD 挂载到系统。挂载方式有两种，分别适用于本地 ISO 文件和物理 DVD 设备。
 
-目录结构：
+要挂载现有的文件系统镜像，请使用 `mdconfig` 为 ISO 文件的指定名称和空闲的单元编号。然后，引用该单元编号将其挂载到现有的挂载点。挂载后，ISO 文件中的文件将显示在挂载点中。
 
-```sh
-/
-└── dist/ # DVD 挂载路径
-    ├── packages/
-    │   └── repos/
-    │       └── FreeBSD_install_cdrom.conf # pkg 仓库配置文件
-    ├── bin/
-    ├── boot/
-    ├── dev/
-    ├── etc/
-    ├── lib/
-    ├── libexec/
-    ├── media/
-    ├── mnt/
-    ├── net/
-    ├── proc/
-    ├── rescue/
-    ├── root/
-    ├── sbin/
-    ├── tmp/
-    ├── usr/
-    └── var/
-```
+此示例将 **diskimage.iso** 附加到内存设备 **/dev/md0**，然后将该内存设备挂载到 **/mnt**：
 
-- 直接挂载本地 ISO：
+### 直接挂载本地 ISO
 
 ```sh
 # mdconfig /home/ykla/FreeBSD-14.2-RELEASE-amd64-dvd1.iso  # 请改为实际路径，可以用 pwd 命令查看当前路径
@@ -39,7 +17,9 @@ md0
 # mount -t cd9660 /dev/md0 /dist # 不能直接挂载 ISO，会报错 block device required
 ```
 
-- 直接使用 DVD 设备（如通过虚拟机直接挂载的 ISO 镜像）：
+注意，`-t cd9660` 用于挂载 ISO 格式。
+
+### 直接使用 DVD 设备（如通过虚拟机直接挂载的 ISO 镜像）
 
 观察 ISO 镜像的挂载情况：
 
@@ -67,22 +47,6 @@ COPYRIGHT	etc		mnt		rescue		usr
 ### 故障排除与未竟事宜
 
 因为 `packages/repos/FreeBSD_install_cdrom.conf` 中的路径是固定值，无法修改，所以如果将目录 **/dist** 改为其他路径，则使用环境变量的方法无效。
-
-## 使用 `bsdconfig` 安装 DVD 软件（当前无效）
-
-先按上述方法完成挂载。
-
-```sh
-# bsdconfig
-```
-
-`3 Packages` → `1 CD/DVD Install from a FreeBSD CD/DVD`
-
-存在 Bug，会报错 `No pkg(8) database found!`。
-
-> **思考题**
->
-> 请读者自行阅读源代码，分析如何解决该问题。
 
 ## 使用环境变量直接安装 DVD 软件
 
@@ -120,12 +84,6 @@ Proceed with this action? [y/N]:
 # cp /dist/packages/repos/FreeBSD_install_cdrom.conf /etc/pkg/
 ```
 
-```sh
-/etc/
-└── pkg/ # pkg 仓库配置目录
-    └── FreeBSD_install_cdrom.conf # DVD 仓库配置文件
-```
-
 ### 测试安装
 
 安装 Xorg 图形系统：
@@ -145,6 +103,17 @@ Number of packages to be installed: 1
 
 Proceed with this action? [y/N]:
 ```
+
+## 弹出 DVD 并释放资源
+
+当不再内存磁盘使用时，应该释放其资源回系统。首先，卸载文件系统，然后使用 `mdconfig` 从系统中分离磁盘并释放其资源。继续此示例：
+
+```sh
+# umount /dist
+# mdconfig -d -u 0
+```
+
+要确定是否仍有内存磁盘附加到系统，请输入 `mdconfig -l` 命令。
 
 ## 参考文献
 
