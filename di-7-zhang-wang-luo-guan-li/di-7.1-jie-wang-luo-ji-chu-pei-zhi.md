@@ -259,7 +259,7 @@ IPv6 是 IP 协议的新版本，即 IPv4 的继任者。IPv6 相对于 IPv4 提
 - 对移动 IP 的支持。
 - IPv6 到 IPv4 的过渡机制。
 
-FreeBSD 集成了 [KAME](http://www.kame.net/) 项目 IPv6 参考实现，并附带 IPv6 所需的全部组件。
+FreeBSD 集成了 [KAME](https://www.kame.net/) 项目 IPv6 参考实现，并附带 IPv6 所需的全部组件。
 
 IPv6 地址有三种不同类型：
 
