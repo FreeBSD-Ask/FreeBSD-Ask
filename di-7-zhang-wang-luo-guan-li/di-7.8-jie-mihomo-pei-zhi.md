@@ -80,7 +80,7 @@ mihomo_reconfig()
 		mv ${mihomo_datadir}/config.yaml.new ${mihomo_datadir}/config.yaml    # 下载成功将覆盖原有配置，下载失败保留原有配置
         startmsg "rename config.yaml.new to config.yaml"
 	else
-		err "fetch config.yaml failed! check $$mihomo_config!"
+		err "fetch config.yaml failed! check ${mihomo_config}!"
 	fi
 }
 mihomo_regeoip()
@@ -91,7 +91,7 @@ mihomo_regeoip()
 		mv ${mihomo_datadir}/geoip.new ${mihomo_datadir}/geoip.dat
         startmsg "rename geoip.new to geoip.dat"
 	else
-		err "fetch geoip.dat failed! check $$mihomo_geoip"
+		err "fetch geoip.dat failed! check ${mihomo_geoip}"
 	fi
 }
 mihomo_init()
