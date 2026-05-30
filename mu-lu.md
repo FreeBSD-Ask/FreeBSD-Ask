@@ -187,7 +187,7 @@
 ## 第 18 章 UFS 文件系统
 
 * [18.1 UFS 文件系统概述](di-18-zhang-ufs-wen-jian-xi-tong/di-18.1-jie-ufs-wen-jian-xi-tong-gai-shu.md)
-* [18.2 UFS 磁盘](di-18-zhang-ufs-wen-jian-xi-tong/di-18.2-jie-ufs-ci-pan.md)
+* [18.2 添加 UFS 磁盘](di-18-zhang-ufs-wen-jian-xi-tong/di-18.2-jie-tian-jia-ufs-ci-pan.md)
 * [18.3 UFS 磁盘扩展](di-18-zhang-ufs-wen-jian-xi-tong/di-18.3-jie-ufs-ci-pan-kuo-zhan.md)
 * [18.4 UFS 磁盘快照](di-18-zhang-ufs-wen-jian-xi-tong/di-18.4-jie-ufs-ci-pan-kuai-zhao.md)
 * [18.5 UFS 磁盘配额](di-18-zhang-ufs-wen-jian-xi-tong/di-18.5-jie-ufs-ci-pan-pei-e.md)
