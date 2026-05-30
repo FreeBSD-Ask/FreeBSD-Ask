@@ -176,7 +176,7 @@ console	none				unknown	off secure	# 注意此行
 
 默认情况下，状态设置为 `secure`（安全）。此设置假设键盘的物理访问权限归属无需顾虑，或已由物理安全策略管控。
 
-如果将此设置更改为 `insecure`（不安全），则表明物理环境本身视为不安全，因为任何人均可访问键盘。当此行中的 `secure` 更改为 `insecure` 后，即：
+因为任何人均可访问键盘，所以如果将此设置更改为 `insecure`（不安全），则表明物理环境本身视为不安全。当此行中的 `secure` 更改为 `insecure` 后，即：
 
 ```ini
 console	none				unknown	off insecure
