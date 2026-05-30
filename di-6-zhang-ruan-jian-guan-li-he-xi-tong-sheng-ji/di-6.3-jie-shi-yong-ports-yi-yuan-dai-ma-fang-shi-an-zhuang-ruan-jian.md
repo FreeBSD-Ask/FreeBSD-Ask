@@ -312,7 +312,7 @@ Git 分支已经切换成功。
 如果提示本地已经修改，可以放弃本地修改后再更新：
 
 ```sh
-# git restore . # 放弃本地修改（Git 2.23+ 推荐语法，等效于旧版 git checkout .）
+# git restore .
 # git pull -p
 ```
 
