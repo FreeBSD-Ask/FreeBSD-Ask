@@ -172,12 +172,11 @@
 
 ## 第 16 章 存储管理
 
-* [16.1 添加磁盘](di-16-zhang-cun-chu-guan-li/di-16.1-jie-tian-jia-ci-pan.md)
-* [16.2 USB 存储设备](di-16-zhang-cun-chu-guan-li/di-16.2-jie-usb-cun-chu-she-bei.md)
-* [16.3 内存盘](di-16-zhang-cun-chu-guan-li/di-16.3-jie-nei-cun-pan.md)
-* [16.4 文件系统自动挂载](di-16-zhang-cun-chu-guan-li/di-16.4-jie-zi-dong-gua-zai-wen-jian-xi-tong.md)
-* [16.5 新增交换分区](di-16-zhang-cun-chu-guan-li/di-16.5-jie-swap-fen-qu.md)
-* [16.6 加密交换分区](di-16-zhang-cun-chu-guan-li/di-16.6-jie-jia-mi-jiao-huan-fen-qu.md)
+* [16.1 USB 存储设备](di-16-zhang-cun-chu-guan-li/di-16.1-jie-usb-cun-chu-she-bei.md)
+* [16.2 内存盘](di-16-zhang-cun-chu-guan-li/di-16.2-jie-nei-cun-pan.md)
+* [16.3 文件系统自动挂载](di-16-zhang-cun-chu-guan-li/di-16.3-jie-zi-dong-gua-zai-wen-jian-xi-tong.md)
+* [16.4 新增交换分区](di-16-zhang-cun-chu-guan-li/di-16.4-jie-swap-fen-qu.md)
+* [16.5 加密交换分区](di-16-zhang-cun-chu-guan-li/di-16.5-jie-jia-mi-jiao-huan-fen-qu.md)
 
 ## 第 17 章 其他文件系统
 
@@ -188,10 +187,11 @@
 ## 第 18 章 UFS 文件系统
 
 * [18.1 UFS 文件系统概述](di-18-zhang-ufs-wen-jian-xi-tong/di-18.1-jie-ufs-wen-jian-xi-tong-gai-shu.md)
-* [18.2 UFS 磁盘扩展](di-18-zhang-ufs-wen-jian-xi-tong/di-18.2-jie-ufs-ci-pan-kuo-zhan.md)
-* [18.3 UFS 磁盘快照](di-18-zhang-ufs-wen-jian-xi-tong/di-18.3-jie-ufs-ci-pan-kuai-zhao.md)
-* [18.4 UFS 磁盘配额](di-18-zhang-ufs-wen-jian-xi-tong/di-18.4-jie-ufs-ci-pan-pei-e.md)
-* [18.5 UFS 磁盘加密](di-18-zhang-ufs-wen-jian-xi-tong/di-18.5-jie-ufs-ci-pan-jia-mi.md)
+* [18.2 UFS 磁盘](di-18-zhang-ufs-wen-jian-xi-tong/di-18.2-jie-ufs-ci-pan.md)
+* [18.3 UFS 磁盘扩展](di-18-zhang-ufs-wen-jian-xi-tong/di-18.3-jie-ufs-ci-pan-kuo-zhan.md)
+* [18.4 UFS 磁盘快照](di-18-zhang-ufs-wen-jian-xi-tong/di-18.4-jie-ufs-ci-pan-kuai-zhao.md)
+* [18.5 UFS 磁盘配额](di-18-zhang-ufs-wen-jian-xi-tong/di-18.5-jie-ufs-ci-pan-pei-e.md)
+* [18.6 UFS 磁盘加密](di-18-zhang-ufs-wen-jian-xi-tong/di-18.6-jie-ufs-ci-pan-jia-mi.md)
 
 ## 第 19 章 ZFS 文件系统
 
