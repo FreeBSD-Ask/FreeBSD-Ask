@@ -299,7 +299,7 @@ Ports 框架可以将源代码编译并打包成 pkg 格式的二进制包，完
 >
 > 如果通过 `make config` 修改了 Port 的默认构建参数，且希望保留该自定义设置，则后续不应通过 pkg 更新该软件，否则 pkg 安装的软件包将覆盖自定义参数。
 
-Ports 构建 pkg 软件包的完整流程如下图所示。
+下图为 Ports 构建软件包的详细流程：
 
 ![Ports 流程图](../.gitbook/assets/ports-pkg.png)
 
