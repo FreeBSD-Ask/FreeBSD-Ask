@@ -63,7 +63,7 @@
 * [5.10 权限](di-5-zhang-freebsd-ji-chu/di-5.10-jie-quan-xian.md)
 * [5.11 压缩和解压缩](di-5-zhang-freebsd-ji-chu/di-5.11-jie-ya-suo-jie-ya-gong-ju.md)
 
-## 第 6 章 软件管理和系统升级
+## 第 6 章 软件管理
 
 * [6.1 FreeBSD 软件源](di-6-zhang-ruan-jian-guan-li-he-xi-tong-sheng-ji/di-6.1-jie-geng-huan-freebsd-ruan-jian-yuan.md)
 * [6.2 使用 pkg 管理二进制包](di-6-zhang-ruan-jian-guan-li-he-xi-tong-sheng-ji/di-6.2-jie-shi-yong-pkg-guan-li-er-jin-zhi-bao.md)
