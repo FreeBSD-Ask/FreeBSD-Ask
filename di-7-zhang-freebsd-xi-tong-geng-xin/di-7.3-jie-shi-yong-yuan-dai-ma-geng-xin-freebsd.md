@@ -169,11 +169,7 @@ Select: (p) postpone, (df) diff-full, (e) edit,
 
 ### Git：`fatal: unable to access 'https://git.FreeBSD.org/src.git/': SSL certificate problem: certificate is not yet valid`
 
-可能是系统时间不正确导致的，使用 `pool.ntp.org` 服务器同步系统时间。
-
-```sh
-# ntpd -q -g pool.ntp.org # 当时间相差较大时必须使用该命令
-```
+系统时间不正确所致，使用 `ntpd -q -g pool.ntp.org` 同步系统时间即可解决。详细说明参考本书其他相关章节。
 
 ## 参考文献
 
