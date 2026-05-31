@@ -120,27 +120,7 @@ Git 分支已经切换成功。
 
 #### 附录：因时间错误导致的证书无效
 
-在使用 Git 拉取代码时，可能会遇到 SSL 证书问题，其中一个常见原因是系统时间不正确。
-
-报错形似：
-
-```sh
-fatal: unable to access 'https://mirrors.ustc.edu.cn/freebsd-ports/ports.git/': SSL certificate problem: certificate is not yet valid
-```
-
-先检查系统时间：
-
-```sh
-# date
-Fri May 31 12:09:26 UTC 2024
-```
-
-时间错误。使用 `ntpd -q -g pool.ntp.org` 命令同步系统时间后，检查时间：
-
-```sh
-# date
-Sat Oct  5 08:39:21 UTC 2024
-```
+在使用 Git 拉取代码时，可能会遇到 SSL 证书问题（报错形如 `SSL certificate problem: certificate is not yet valid`），常见原因是系统时间不正确。使用 `ntpd -q -g pool.ntp.org` 同步系统时间即可解决。详细说明参考本书其他相关章节。
 
 ## 使用 `whereis` 查询软件路径
 
