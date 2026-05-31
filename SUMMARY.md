@@ -114,8 +114,9 @@
 * [10.4 音频播放器](di-10-zhang-duo-mei-ti-he-wai-bu-she-bei/di-10.4-jie-yin-pin-bo-fang-qi.md)
 * [10.5 视频播放器](di-10-zhang-duo-mei-ti-he-wai-bu-she-bei/di-10.5-jie-shi-pin-bo-fang-qi.md)
 * [10.6 多媒体处理](di-10-zhang-duo-mei-ti-he-wai-bu-she-bei/di-10.6-jie-duo-mei-ti-chu-li-gong-ju.md)
-* [10.7 Web 浏览器](di-10-zhang-duo-mei-ti-he-wai-bu-she-bei/di-10.7-jie-web-liu-lan-qi.md)
-* [10.8 摄像头](di-10-zhang-duo-mei-ti-he-wai-bu-she-bei/di-10.8-jie-she-xiang-tou.md)
+* [10.7 文档查看器](di-10-zhang-duo-mei-ti-he-wai-bu-she-bei/di-10.7-jie-wen-dang.md)
+* [10.8 Web 浏览器](di-10-zhang-duo-mei-ti-he-wai-bu-she-bei/di-10.8-jie-web-liu-lan-qi.md)
+* [10.9 摄像头](di-10-zhang-duo-mei-ti-he-wai-bu-she-bei/di-10.9-jie-she-xiang-tou.md)
 
 ## 第 11 章 本地化与输入法
 
@@ -125,7 +126,7 @@
 * [11.4 IBus 输入法框架](di-11-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-11.4-jie-ibus-shu-ru-fa-kuang-jia.md)
 * [11.5 五笔输入法](di-11-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-11.5-jie-wu-bi-shu-ru-fa.md)
 
-## 第 12 章 Linux 二进制兼容层
+## 第 12 章 Linux 兼容层
 
 * [12.1 Linux 兼容层架构](di-12-zhang-linux-er-jin-zhi-jian-rong-ceng/di-12.1-jie-linux-jian-rong-ceng-jia-gou.md)
 * [12.2 Rocky Linux 兼容层](di-12-zhang-linux-er-jin-zhi-jian-rong-ceng/di-12.2-jie-rocky-linux-jian-rong-ceng.md)
@@ -160,7 +161,7 @@
 * [15.3 管理 FreeBSD 中的服务](di-15-zhang-xi-tong-guan-li/di-15.3-jie-init-rc-fu-wu-guan-li.md)
 * [15.4 进程与守护进程](di-15-zhang-xi-tong-guan-li/di-15.4-jie-jin-cheng-yu-shou-hu-jin-cheng.md)
 * [15.5 用户分级](di-15-zhang-xi-tong-guan-li/di-15.5-jie-yong-hu-fen-ji-wen-jian-login-conf.md)
-* [15.6 权限提升工具（sudo、doas 等）](di-15-zhang-xi-tong-guan-li/di-15.6-jie-te-quan-ti-sheng-gong-ju-sudo-doas-deng.md)
+* [15.6 权限提升工具](di-15-zhang-xi-tong-guan-li/di-15.6-jie-te-quan-ti-sheng-gong-ju-sudo-doas-deng.md)
 * [15.7 bsdconfig](di-15-zhang-xi-tong-guan-li/di-15.7-jie-bsdconfig-xi-tong-pei-zhi-gong-ju.md)
 * [15.8 OpenSSH](di-15-zhang-xi-tong-guan-li/di-15.8-jie-OpenSSH.md)
 * [15.9 设备资源提示](di-15-zhang-xi-tong-guan-li/di-15.9-jie-she-bei-zi-yuan-ti-shi-wen-jian-device-hints.md)
@@ -275,7 +276,7 @@
 * [28.1 Apache Web 服务器](di-28-zhang-web-fu-wu-qi/di-28.1-jie-apache-web-fu-wu-qi.md)
 * [28.2 Nginx Web 服务器](di-28-zhang-web-fu-wu-qi/di-28.2-jie-nginx-web-fu-wu-qi.md)
 * [28.3 Caddy Web 服务器](di-28-zhang-web-fu-wu-qi/di-28.3-jie-caddy-web-fu-wu-qi.md)
-* [28.4 PHP 8.x](di-28-zhang-web-fu-wu-qi/di-28.4-jie-php-8-x-pei-zhi.md)
+* [28.4 PHP](di-28-zhang-web-fu-wu-qi/di-28.4-jie-php-8-x-pei-zhi.md)
 * [28.5 Tomcat 应用服务器](di-28-zhang-web-fu-wu-qi/di-28.5-jie-tomcat-ying-yong-fu-wu-qi.md)
 * [28.6 WildFly 应用服务器](di-28-zhang-web-fu-wu-qi/di-28.6-jie-wildfly-ying-yong-fu-wu-qi.md)
 * [28.7 Nextcloud 云服务（基于 PostgreSQL）](di-28-zhang-web-fu-wu-qi/di-28.7-jie-nextcloud-yun-fu-wu-ji-yu-postgresql.md)
