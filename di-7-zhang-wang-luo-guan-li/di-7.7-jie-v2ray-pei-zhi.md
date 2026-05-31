@@ -58,7 +58,7 @@ Xray-core 是 V2Ray 的分支，在保持核心功能的基础上优化了性能
 
 Xray 配置文件与 V2Ray 基本兼容，但部分高级功能的配置方式有所不同。
 
-代理软件启动后，需配置相关软件的代理参数。V2Ray/Xray 采用 inbounds（入站）和 outbounds（出站）的架构设计：inbounds 定义代理软件如何接收流量，outbounds 定义代理软件如何转发流量。
+代理软件启动后，需配置相关软件的代理参数。V2Ray/Xray 采用入站（inbounds）和出站（outbounds）的架构设计：inbounds 定义代理软件如何接收流量，outbounds 定义代理软件如何转发流量。
 
 编辑 config.json 文件，找到对应的 inbounds 属性。inbounds 是一个数组，其中的每个元素表示一项入站接口配置，包括监听地址、端口号和代理协议类型。在需要使用代理的软件中，将代理服务器地址和端口号设置为此处对应的值。
 

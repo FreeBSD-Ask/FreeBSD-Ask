@@ -303,7 +303,7 @@ root     syslogd     1021 7   udp4   *:514                 *:*
 
 #### 由于目标服务器积极拒绝，无法连接
 
-非镜像 VNC 连接时必须指定端口，否则默认使用 5900 端口。由于非镜像 VNC 的服务端口并非 5900，因此连接被拒绝。
+非镜像 VNC 连接时必须指定端口，否则默认使用 5900 端口。由于非镜像 VNC 的服务端口并非 5900，连接被拒绝。
 
 ![SDDM VNC](../.gitbook/assets/vnc1.png)
 
@@ -520,7 +520,7 @@ Do you trust this certificate (yes/no)? # 输入 yes，按回车键
 # make install clean
 ```
 
-不可使用 `BATCH=yes` 参数，因为需要接受许可协议才能使用：
+由于需要接受许可协议才能使用，不可使用 `BATCH=yes` 参数：
 
 ![anydesk](../.gitbook/assets/anydesk1.png)
 
