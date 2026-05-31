@@ -44,7 +44,7 @@ For more information on available commands and options see 'pkg help'.
 
 > **技巧**
 >
-> 如果需要查询某个软件包在 FreeBSD 中的具体情况，可以使用 Google 或 Bing 搜索“freebsd ports 包名”。如果无法使用，可以直接在网站中搜索包名 [https://www.freshports.org/](https://www.freshports.org/)。
+> 如果需要查询某个软件包在 FreeBSD 中的具体情况，可以使用搜索引擎搜索“freebsd ports 包名”，也可以直接在 [FreshPorts](https://www.freshports.org/) 查找。
 
 以安装 Chromium 为例：
 
