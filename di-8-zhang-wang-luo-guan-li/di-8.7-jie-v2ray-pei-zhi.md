@@ -1,4 +1,4 @@
-# 7.7 V2Ray
+# 8.7 V2Ray
 
 V2Ray 是一款支持多种代理协议（VMess、VLESS、Shadowsocks 等）和流量路由功能的代理软件。路由模块可根据目标地址、端口等条件将流量分发至不同的出站代理，实现灵活的流量分流。FreeBSD 系统中，V2Ray 可通过 pkg(8) 或 Ports 安装。
 

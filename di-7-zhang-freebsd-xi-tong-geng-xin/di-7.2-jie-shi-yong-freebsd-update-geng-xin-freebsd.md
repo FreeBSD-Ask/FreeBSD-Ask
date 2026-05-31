@@ -1,4 +1,4 @@
-# 6.5 使用 freebsd-update 更新 FreeBSD
+# 7.2 使用 freebsd-update 更新 FreeBSD
 
 > **警告**
 >

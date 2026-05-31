@@ -1,4 +1,4 @@
-# 8.4 NVIDIA 显卡驱动
+# 9.4 NVIDIA 显卡驱动
 
 ## NVIDIA 显卡驱动概述
 

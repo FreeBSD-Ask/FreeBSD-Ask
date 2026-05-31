@@ -1,4 +1,4 @@
-# 7.4 USB 网络共享（USB tethering）
+# 8.4 USB 网络共享（USB tethering）
 
 ## 概述
 
