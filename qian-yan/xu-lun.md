@@ -125,7 +125,7 @@
 
 > **思考题**
 >
->>美国国家标准与技术研究院（NIST）发布的数字身份指南草案（NIST. NIST SP 800-63B-4: Authentication and Authenticator Management[EB/OL]. (2025-07)[2026-04-04]. <https://pages.nist.gov/800-63-4/sp800-63b.html>）指出：
+>>美国国家标准与技术研究院（NIST）发布的数字身份指南（NIST. NIST SP 800-63B-4: Digital Identity Guidelines: Authentication and Authenticator Management[EB/OL]. (2025-07)[2026-04-04]. <https://pages.nist.gov/800-63-4/sp800-63b.html>）指出：
 >>
 >>必须要求，当密码被用作单因素认证机制时，其长度至少为 15 个字符。可以允许仅作为多因素认证过程一部分使用的密码较短，但必须要求其长度至少为 8 个字符。
 >>
