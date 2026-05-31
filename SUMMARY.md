@@ -114,8 +114,9 @@
 * [10.4 音频播放器](di-10-zhang-duo-mei-ti-he-wai-bu-she-bei/di-10.4-jie-yin-pin-bo-fang-qi.md)
 * [10.5 视频播放器](di-10-zhang-duo-mei-ti-he-wai-bu-she-bei/di-10.5-jie-shi-pin-bo-fang-qi.md)
 * [10.6 多媒体处理](di-10-zhang-duo-mei-ti-he-wai-bu-she-bei/di-10.6-jie-duo-mei-ti-chu-li-gong-ju.md)
-* [10.7 Web 浏览器](di-10-zhang-duo-mei-ti-he-wai-bu-she-bei/di-10.7-jie-web-liu-lan-qi.md)
-* [10.8 摄像头](di-10-zhang-duo-mei-ti-he-wai-bu-she-bei/di-10.8-jie-she-xiang-tou.md)
+* [10.7 文档查看器](di-10-zhang-duo-mei-ti-he-wai-bu-she-bei/di-10.7-jie-wen-dang.md)
+* [10.8 Web 浏览器](di-10-zhang-duo-mei-ti-he-wai-bu-she-bei/di-10.8-jie-web-liu-lan-qi.md)
+* [10.9 摄像头](di-10-zhang-duo-mei-ti-he-wai-bu-she-bei/di-10.9-jie-she-xiang-tou.md)
 
 ## 第 11 章 本地化与输入法
 
