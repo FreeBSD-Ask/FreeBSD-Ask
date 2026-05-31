@@ -374,4 +374,3 @@ make: stopped in /usr/ports/java/openjdk21
 #### 参考文献
 
 - FreeBSD Forums. Invalid perl5 version 5.32[EB/OL]. [2026-03-25]. <https://forums.freebsd.org/threads/invalid-perl5-version-5-32.77628/>. 出现了与上文同样的问题。
-
