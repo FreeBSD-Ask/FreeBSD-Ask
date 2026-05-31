@@ -125,7 +125,7 @@
 * [11.4 IBus 输入法框架](di-11-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-11.4-jie-ibus-shu-ru-fa-kuang-jia.md)
 * [11.5 五笔输入法](di-11-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-11.5-jie-wu-bi-shu-ru-fa.md)
 
-## 第 12 章 Linux 二进制兼容层
+## 第 12 章 Linux 兼容层
 
 * [12.1 Linux 兼容层架构](di-12-zhang-linux-er-jin-zhi-jian-rong-ceng/di-12.1-jie-linux-jian-rong-ceng-jia-gou.md)
 * [12.2 Rocky Linux 兼容层](di-12-zhang-linux-er-jin-zhi-jian-rong-ceng/di-12.2-jie-rocky-linux-jian-rong-ceng.md)
