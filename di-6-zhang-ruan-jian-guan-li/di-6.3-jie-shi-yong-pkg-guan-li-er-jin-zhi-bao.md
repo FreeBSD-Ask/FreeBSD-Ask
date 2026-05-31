@@ -2,47 +2,6 @@
 
 FreeBSD 的二进制包管理器目前是 pkg（旧称 pkgng），名称来源于英文单词“Package”，即软件包的简称。
 
-熟悉 Linux 发行版的读者可将 FreeBSD 的包管理方案类比为两大 Linux 发行版包管理器的功能组合：
-
-- Arch Linux：Pacman，对应 pkg（同样秉持 KISS 理念）。
-- Gentoo Linux：Portage，对应 Ports（Portage 本身借鉴自 Ports）。
-
-`pkg install` 可以缩写为 `pkg ins`，其他命令也类似。
-
-> **注意**
->
-> pkg 仅管理第三方软件包，不承担升级系统或获取安全更新的功能。这是由于 FreeBSD 项目统一维护内核与用户空间，而非像 Linux 那样由 Linus Torvalds 负责内核维护、各发行版负责 GNU 工具链维护（此类组件设计为独立软件包，可通过包管理器完成系统更新与升级）。
->
-> FreeBSD 目前也正 [试图使用 pkg 来实现用户空间和内核的更新](https://wiki.freebsd.org/PkgBase)，以期解决上述问题。
->
-> FreeBSD 使用 `freebsd-update` 来升级系统，获取安全补丁。<https://pkg-status.freebsd.org/> 可以查看当前的 pkg 编译状态。
->
->
-> 需图形化界面的用户可安装并使用 `ports-mgmt/octopkg`，该工具是 pkg 的图形化前端。
-
-> **技巧**
->
-> 如果需要查询某个软件包在 FreeBSD 中的具体情况，可以使用 Google 或 Bing 搜索“freebsd ports 包名”。如果无法使用，可以直接在网站中搜索包名 [https://www.freshports.org/](https://www.freshports.org/)。
-
-## 从 Ports 构建二进制包的流程
-
-Ports 框架可以将源代码编译并打包成 pkg 格式的二进制包，完整构建流程如下图所示。
-
-![pkg 构建流程图](../.gitbook/assets/portstopkg.png)
-
-### 常见问题：在 pkg 中无法找到本书中提及的包
-
-使用 pkg 安装教材中明确提及的软件包时若提示不存在，一般可将原因归纳为以下两种：
-
-- 情况一：Ports 中确实不存在该 Port，可能的原因包括教材内容有误、该 Port 已从 Ports 集合中移除或已更名等。
-- 情况二：Ports 中确实存在该 Port，但 FreeBSD 的 pkg 包是周期性构建的（与 Ports 自身的更新同步），因此时常出现暂时缺少对应 pkg 二进制包的情况。
-
-具体原因建议查询 <https://www.freshports.org/>，上面会显示软件包的依赖情况和 pkg 包的构建情况。
-
-本书中一般会同时列出 Ports 安装方式，比如要查 Port **x11/budgie**，操作方法如下：直接访问 <https://www.freshports.org/x11/budgie/>。
-
-如果 Ports 中有该 Port，但 pkg 中暂时没有，等待 7–14 天通常即可（构建失败的包系统会自动向维护者报告错误）。如要立刻安装使用，请使用 Ports。
-
 ## 安装 pkg 包管理器
 
 > **技巧**
@@ -82,6 +41,10 @@ For more information on available commands and options see 'pkg help'.
 >> 在 SSL 广泛应用的背景下，任何网络问题总是需要检查本机时间是否正确。而用户往往忽略这一点（有时候甚至是 CPU 中负责加密的模块损坏导致的），并且在大多数情况下报错也极不明确。请读者思考，如何解决这个问题？
 
 ## 使用 pkg 安装软件
+
+> **技巧**
+>
+> 如果需要查询某个软件包在 FreeBSD 中的具体情况，可以使用 Google 或 Bing 搜索“freebsd ports 包名”。如果无法使用，可以直接在网站中搜索包名 [https://www.freshports.org/](https://www.freshports.org/)。
 
 以安装 Chromium 为例：
 
@@ -341,6 +304,19 @@ Filename: usr/local/lib/libxcb-icccm.so.4.0.0
 ```
 
 ## 故障排除与未竟事宜
+
+### 在 pkg 中无法找到本书中提及的包
+
+使用 pkg 安装教材中明确提及的软件包时若提示不存在，一般可将原因归纳为以下两种：
+
+- 情况一：Ports 中确实不存在该 Port，可能的原因包括教材内容有误、该 Port 已从 Ports 集合中移除或已更名等。
+- 情况二：Ports 中确实存在该 Port，但 FreeBSD 的 pkg 包是周期性构建的（与 Ports 自身的更新同步），因此时常出现暂时缺少对应 pkg 二进制包的情况。
+
+具体原因建议查询 <https://www.freshports.org/>，上面会显示软件包的依赖情况和 pkg 包的构建情况。
+
+本书中一般会同时列出 Ports 安装方式，比如要查 Port **x11/budgie**，操作方法如下：直接访问 <https://www.freshports.org/x11/budgie/>。
+
+如果 Ports 中有该 Port，但 pkg 中暂时没有，等待 7–14 天通常即可（构建失败的包系统会自动向维护者报告错误）。如要立刻安装使用，请使用 Ports。
 
 ### `ld-elf.so.1: Shared object "libmd.so.6" not found, required by "pkg"`
 
