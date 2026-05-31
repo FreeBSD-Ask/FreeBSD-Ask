@@ -69,8 +69,9 @@
 * [6.2 FreeBSD 软件源](di-6-zhang-ruan-jian-guan-li/di-6.2-jie-freebsd-ruan-jian-yuan.md)
 * [6.3 使用 pkg 管理二进制包](di-6-zhang-ruan-jian-guan-li/di-6.3-jie-shi-yong-pkg-guan-li-er-jin-zhi-bao.md)
 * [6.4 使用 Ports 以源代码方式安装软件](di-6-zhang-ruan-jian-guan-li/di-6.4-jie-shi-yong-ports-yi-yuan-dai-ma-fang-shi-an-zhuang-ruan-jian.md)
-* [6.5 使用 DVD 安装软件](di-6-zhang-ruan-jian-guan-li/di-6.5-jie-shi-yong-dvd-an-zhuang-ruan-jian.md)
-* [6.6 FreeBSD 镜像站现状](di-6-zhang-ruan-jian-guan-li/di-6.6-jie-freebsd-jing-xiang-zhan-xian-zhuang.md)
+* [6.5 Ports 构建调优](di-6-zhang-ruan-jian-guan-li/di-6.5-jie-ports-gou-jian-diao-you.md)
+* [6.6 使用 DVD 安装软件](di-6-zhang-ruan-jian-guan-li/di-6.6-jie-shi-yong-dvd-an-zhuang-ruan-jian.md)
+* [6.7 FreeBSD 镜像站现状](di-6-zhang-ruan-jian-guan-li/di-6.7-jie-freebsd-jing-xiang-zhan-xian-zhuang.md)
 
 ## 第 7 章 FreeBSD 系统更新
 
