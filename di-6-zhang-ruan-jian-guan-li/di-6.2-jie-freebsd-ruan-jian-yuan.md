@@ -458,4 +458,3 @@ Fetching https://ftp-archive.freebsd.org/pub/FreeBSD-Archive/ports/amd64/package
 > **注意**
 >
 > 因为当时 pkgng 还未获官方支持，仍然仅支持使用 `pkg_*` 命令，所以 pkg 是不可用的，会提示找不到 `digests.txz` 和 `repo.txz`。
-
