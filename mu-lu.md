@@ -76,7 +76,7 @@
 * [7.1 系统更新检测](di-7-zhang-freebsd-xi-tong-geng-xin/di-7.1-jie-update.md)
 * [7.2 使用 freebsd-update 更新 FreeBSD](di-7-zhang-freebsd-xi-tong-geng-xin/di-7.2-jie-shi-yong-freebsd-update-geng-xin-freebsd.md)
 * [7.3 使用源代码更新 FreeBSD](di-7-zhang-freebsd-xi-tong-geng-xin/di-7.3-jie-shi-yong-yuan-dai-ma-geng-xin-freebsd.md)
-* [7.4 ZFS 启动环境与多版本共存](di-7-zhang-freebsd-xi-tong-geng-xin/di-7.4-jie-zfs-qi-dong-huan-jing-yu-duo-ban-ben-gong-cun.md)
+* [7.4 使用 pkgbase 更新 FreeBSD](di-7-zhang-freebsd-xi-tong-geng-xin/di-7.4-jie-zfs-qi-dong-huan-jing-yu-duo-ban-ben-gong-cun.md)
 
 ## 第 8 章 网络管理
 
