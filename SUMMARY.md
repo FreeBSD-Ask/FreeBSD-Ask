@@ -346,4 +346,3 @@
 ## 后记
 
 * [我与 FreeBSD 的故事](hou-ji/wo-yu-freebsd-de-gu-shi.md)
-* [两次告别](hou-ji/liang-ci-gao-bie.md)
