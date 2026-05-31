@@ -59,6 +59,10 @@ Git 是获取 Ports 源代码的推荐方式，可以方便地管理版本和更
 # git clone --filter=tree:0 https://mirrors.ustc.edu.cn/freebsd-ports/ports.git /usr/ports
 ```
 
+> **注意**
+>
+> `--depth 1`（仅拉取最新的日志和提交记录）会给服务器带来较大计算压力，请尽量使用参数 `--filter=tree:0` 拉取。
+
 #### 拉取 Ports 存储库（FreeBSD 官方）浅克隆
 
 也可以直接从 FreeBSD 官方仓库获取源代码。
@@ -75,24 +79,7 @@ Git 是获取 Ports 源代码的推荐方式，可以方便地管理版本和更
 # git clone https://git.FreeBSD.org/ports.git /usr/ports
 ```
 
-克隆完成后，可以查看所有可用的分支。
-
-查看所有分支：
-
-```sh
-# cd /usr/ports/ # 切换到 git 项目
-# git branch -a	# 打印 git 分支
-* main # * 代表当前分支
-  remotes/origin/2014Q1
-
-	……省略…………
-
-  remotes/origin/2025Q1
-  remotes/origin/HEAD -> origin/main
-  remotes/origin/main
-```
-
-根据需要，可以切换到特定的分支，例如季度分支。
+关于 quarterly 分支与 latest（main）分支的详细说明，参见第 6.1 节。根据需要，可以切换到特定的分支，例如季度分支。
 
 切换到 `2025Q1` 分支：
 

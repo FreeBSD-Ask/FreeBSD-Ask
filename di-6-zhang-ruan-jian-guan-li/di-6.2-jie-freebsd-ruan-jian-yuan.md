@@ -340,52 +340,9 @@ USTC-base: {
 }
 ```
 
-## Ports：以源代码方式编译安装软件的框架
+## Ports 源（Distfiles）
 
-用于下载 ports 本身（即 [freebsd-ports](https://github.com/freebsd/freebsd-ports) 项目）。
-
-### 通过 Git 拉取 Ports
-
-需要参照其他章节提前安装 git，从略。
-
-使用 git 拉取 Ports 源代码：
-
-```sh
-# git clone --filter=tree:0 https://mirrors.ustc.edu.cn/freebsd-ports/ports.git /usr/ports
-```
-
-> **注意**
->
-> `--depth 1`（仅拉取最新的日志和提交记录）会给服务器带来较大计算压力，请尽量使用参数 `--filter=tree:0` 拉取。
-
-### 通过归档文件获取 Ports
-
-> **警告**
->
-> 通过该方法获取的 Ports 是一次性的：后续将无法更新，建议优先采用 Git 方法。
-
-从南京大学开源镜像拉取：
-
-```sh
-# fetch https://mirrors.nju.edu.cn/freebsd-ports/ports.tar.gz
-```
-
-或者从中国科学技术大学开源镜像拉取：
-
-```sh
-# fetch https://mirrors.ustc.edu.cn/freebsd-ports/ports.tar.gz
-```
-
-然后处理压缩包：
-
-```sh
-# tar -zxvf ports.tar.gz -C /usr/ # 将解压至路径 /usr/ports
-# rm ports.tar.gz # 删除存档
-```
-
-### Ports 源
-
-该源用于下载 Ports 框架中的软件（称为 Port）的源代码。
+获取 Ports 本身的方法（通过 Git 或归档文件）参见第 6.4 节。该源用于下载 Ports 框架中的软件（称为 Port）的源代码。
 
 > **警告**
 >
