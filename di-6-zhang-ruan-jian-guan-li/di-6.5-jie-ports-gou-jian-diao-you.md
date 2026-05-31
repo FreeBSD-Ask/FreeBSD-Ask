@@ -287,4 +287,3 @@ wget2 参数说明：
 ### 参考文献
 
 - FreeBSD Project. ports -- contributed applications[EB/OL]. [2026-03-25]. <https://man.freebsd.org/cgi/man.cgi?query=ports&sektion=7>. Ports 框架的官方文档，包含 FETCH_CMD 与 BATCH 等参数说明。
-
