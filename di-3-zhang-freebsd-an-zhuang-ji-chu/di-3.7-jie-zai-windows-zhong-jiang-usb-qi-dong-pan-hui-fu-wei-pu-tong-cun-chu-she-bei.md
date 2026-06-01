@@ -132,7 +132,7 @@ C:\Users\用户名\
 
 > **技巧**
 >
-> 专业版会提示需要授权码，但 **无需** 关注其微信公众号，在授权码框中填入数字“1122”。参见 AOMEI Technology. 傲梅分区助手常见问题解答[EB/OL]. [2026-03-25]. <https://www.disktool.cn/faq/partition-assistant.html>，该页面提供傲梅分区助手使用常见问题解答，“分区助手使用码：1122”。
+> 专业版会提示需要授权码，输入“1122”即可。参见 AOMEI Technology. 傲梅分区助手常见问题解答[EB/OL]. [2026-03-25]. <https://www.disktool.cn/faq/partition-assistant.html>，该页面提供傲梅分区助手使用常见问题解答，“分区助手使用码：1122”。
 >
 > ![傲梅分区助手专业版使用码](../.gitbook/assets/aomei-partition-2.png)
 

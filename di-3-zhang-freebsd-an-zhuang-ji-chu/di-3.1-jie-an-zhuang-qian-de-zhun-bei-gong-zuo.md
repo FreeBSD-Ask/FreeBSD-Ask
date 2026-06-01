@@ -129,7 +129,7 @@ FreeBSD-14.2-RELEASE-amd64-mini-memstick.img.xz    107445036      2024-Nov-29 13
 
 .xz 是一种高压缩比的文件压缩格式，常用于缩小软件发行包的体积。SHA-256 和 SHA-512 是密码哈希函数，用于生成文件的唯一指纹，校验和（Checksum）则是通过这些函数计算出的固定长度字符串，用于验证文件完整性。
 
-需要说明的是，DVD 镜像并不包含所有离线软件包，仅精选了若干软件包，具体清单可参见源代码文件 FreeBSD Project. freebsd-src/release/scripts/pkg-stage.sh[EB/OL]. [2026-03-25]. <https://github.com/freebsd/freebsd-src/blob/main/release/scripts/pkg-stage.sh>. 该脚本定义 DVD 镜像包含的预安装软件包清单。
+需要说明的是，DVD 镜像仅包含部分离线软件包，而非全部，具体清单可参见源代码文件 FreeBSD Project. freebsd-src/release/scripts/pkg-stage.sh[EB/OL]. [2026-03-25]. <https://github.com/freebsd/freebsd-src/blob/main/release/scripts/pkg-stage.sh>. 该脚本定义 DVD 镜像包含的预安装软件包清单。
 
 FreeBSD 的所有安装介质默认不提供图形界面，需在系统安装后另行安装和配置。DVD 镜像虽包含更多软件包，但由于图形界面依赖关系复杂，且 DVD 上的软件包版本可能较旧，在安装图形界面时仍可能遇到依赖冲突或版本不匹配问题，因此不建议使用 DVD 镜像。
 
@@ -177,7 +177,7 @@ Rufus 下载地址为 <https://rufus.ie/zh>，该工具为 Windows 平台开源 
 
 ![Rufus](../.gitbook/assets/rufus-tool.png)
 
-尽管实际文件校验和正确，但因其处理某些镜像格式时存在缺陷，有时会错误地报告校验失败，**不建议** 使用 FreeBSD 手册中提到的 win32diskimager。同理，**不建议** 使用 Ventoy。Ventoy - 多系统启动 USB 启动盘制作工具[EB/OL]. [2026-03-25]. <https://www.ventoy.net/>. 该工具为多系统启动 USB 启动盘制作工具，直接加载 ISO 或 IMG 镜像文件，但 Ventoy 的启动加载机制与 FreeBSD 镜像不完全兼容，可能导致启动失败。
+尽管镜像文件校验和实际正确，但 win32diskimager 在处理某些镜像格式时存在缺陷，有时会错误地报告校验失败，**不建议** 使用 FreeBSD 手册中提到的 win32diskimager。同理，**不建议** 使用 Ventoy，其启动加载机制与 FreeBSD 镜像不完全兼容，可能导致启动失败。
 
 **读者应仅在 Rufus 无效的情况下再使用 win32diskimager 或 Ventoy。**
 

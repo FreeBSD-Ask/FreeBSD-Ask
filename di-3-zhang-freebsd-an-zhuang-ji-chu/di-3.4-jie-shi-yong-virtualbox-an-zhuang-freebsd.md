@@ -42,7 +42,7 @@ VirtualBox 安装完成后，依次创建并配置虚拟机。
 
 > **警告**
 >
-> 请勿同时勾选“启用 3D 加速”，否则将导致 `VBoxSVGA` 控制器失效，显卡无法正常驱动。
+> 请勿勾选“启用 3D 加速”。FreeBSD 下的 VirtualBox Guest Additions 不支持 3D 加速，启用后将导致显示异常。
 
 ![显示设置](../.gitbook/assets/virtualbox-5-5.png)
 
