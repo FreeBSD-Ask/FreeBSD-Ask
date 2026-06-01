@@ -80,7 +80,7 @@ Hyper-V 安装完成后，创建虚拟机。右键单击 Hyper-V 管理器中的
 
 ![Hyper-V](../.gitbook/assets/hyperv-4.png)
 
-选择“第二代”。然后点击“下一页”。
+选择“第二代”。随后点击“下一页”。
 
 ![Hyper-V](../.gitbook/assets/hyperv-generation-select.png)
 
@@ -96,7 +96,7 @@ Hyper-V 安装完成后，创建虚拟机。右键单击 Hyper-V 管理器中的
 
 ![Hyper-V](../.gitbook/assets/hyperv-7.png)
 
-点击“从可启动的映像文件安装操作系统”，点击“浏览”，找到并选中已下载的 **FreeBSD-15.0-RELEASE-amd64-dvd1.iso** 文件，然后点击“下一页”。
+点击“从可启动的映像文件安装操作系统”，点击“浏览”，找到并选中已下载的 **FreeBSD-15.0-RELEASE-amd64-dvd1.iso** 文件，随后点击“下一页”。
 
 ![Hyper-V](../.gitbook/assets/hyperv-8.png)
 

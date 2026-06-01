@@ -32,7 +32,7 @@ FreeBSD 中文社区. 001-Windows 11 安装 VMware 17[EB/OL]. [2026-04-04]. <htt
 
 ![VMware 安装 FreeBSD](../.gitbook/assets/vmware-4.png)
 
-请选择“其他”，然后选择 FreeBSD。
+请选择“其他”，随后选择 FreeBSD。
 
 > **技巧**
 >
@@ -98,7 +98,7 @@ FreeBSD 中文社区. 001-Windows 11 安装 VMware 17[EB/OL]. [2026-04-04]. <htt
 
 ![VMware network on FreeBSD](../.gitbook/assets/vmware-network-1.png)
 
-通常无需手动设置。如果虚拟机内网络接口持续提示 `no link`，请尝试重启宿主机，然后打开 VMware 的虚拟网络编辑器，再次执行“还原默认设置”操作（不推荐手动配置，可能无效）。
+通常无需手动设置。如果虚拟机内网络接口持续提示 `no link`，请尝试重启宿主机，随后打开 VMware 的虚拟网络编辑器，再次执行“还原默认设置”操作（不推荐手动配置，可能无效）。
 
 如果无法连接网络，可尝试在虚拟机内将 DNS 服务器设置为 **223.5.5.5**。其他网络配置方法请参阅本章其他小节。
 
