@@ -88,7 +88,7 @@ Hyper-V 安装完成后，创建虚拟机。右键单击 Hyper-V 管理器中的
 
 ![Hyper-V](../.gitbook/assets/hyperv-5.png)
 
-配置网络，在下拉栏选择“Default Switch”（默认交换机），然后点击“下一页”。
+配置网络，在下拉栏选择“Default Switch”（默认交换机），随后点击“下一页”。
 
 ![Hyper-V](../.gitbook/assets/hyperv-6.png)
 
