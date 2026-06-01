@@ -44,7 +44,7 @@ Mihomo 也可通过 FreeBSD 的 Linux 二进制兼容层运行，其网络流量
 
 ### RC 脚本
 
-为便于管理 Mihomo 服务，可使用以下脚本。将以下脚本保存为 mihomo，存放至 **/usr/local/etc/rc.d/**，然后使用 root 账户赋予可执行权限：`chmod +x /usr/local/etc/rc.d/mihomo`。
+为便于管理 Mihomo 服务，可使用以下脚本。将以下脚本保存为 mihomo，存放至 **/usr/local/etc/rc.d/**，随后使用 root 账户赋予可执行权限：`chmod +x /usr/local/etc/rc.d/mihomo`。
 
 ```sh
 #!/bin/sh

@@ -358,7 +358,7 @@ FULLER L. FreeBSD Broadcom Wi-Fi Improvements[EB/OL]. [2026-03-26]. <https://web
 
 上述命令中，**/usr/src/** 为 FreeBSD 内核源代码目录，需注意根据实际架构选择相应的配置文件目录。
 
-然后在 **/boot/loader.conf** 文件中添加以下配置：
+随后在 **/boot/loader.conf** 文件中添加以下配置：
 
 ```ini
 hw.bwn.usedma="1"               # 启用 DMA 模式（默认开启，设为 0 则使用 PIO 模式）
@@ -367,7 +367,7 @@ bwn_v4_ucode_load="YES"         # 加载 BWN V4 无线固件
 bwn_v4_lp_ucode_load="YES"      # 加载 BWN V4 低功耗模式无线固件
 ```
 
-完成后重启系统，使用 `ifconfig` 检查是否存在 `wlan0` 接口，然后按照前文所述方法配置。
+完成后重启系统，使用 `ifconfig` 检查是否存在 `wlan0` 接口，随后按照前文所述方法配置。
 
 ### 参考文献
 
