@@ -94,7 +94,7 @@ zroot/ROOT/15.0-RELEASE  99036272 11132688 87903584    11%    /mnt/upgrade
 
 ### 验证当前 FreeBSD 版本
 
-目前 15.0-RELEASE 实际仍是 14.3-RELEASE，可使用 `freebsd-version` 验证：
+该启动环境（ZFS 数据集）15.0-RELEASE 当前实际仍为 14.3-RELEASE，可使用 `freebsd-version` 验证：
 
 在 **/mnt/upgrade** 环境中运行 `freebsd-version`：
 
