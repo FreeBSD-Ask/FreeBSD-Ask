@@ -70,7 +70,7 @@ FreeBSD 安装完成后，安装 Windows 系统。
 
 ![删除交换分区](../.gitbook/assets/dual-boot-6.png)
 
-然后点击创建分区（Create Partition），如果提示出错，点击刷新（Refresh）。Windows 安装程序会自动在未分配空间上创建所需的分区，包括 MSR 分区、系统分区和恢复分区。
+然后点击创建分区（Create Partition），如果出现错误，点击刷新（Refresh）。Windows 安装程序会自动在未分配空间上创建所需的分区，包括 MSR 分区、系统分区和恢复分区。
 
 然后选中 208 GB 的“磁盘 0 未分配空间”，点击“下一步”安装。
 
