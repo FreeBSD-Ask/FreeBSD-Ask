@@ -57,7 +57,7 @@ tmpfs /tmp tmpfs rw 0 0
 
 ### 参考文献
 
-- FreeBSD Project. tmpfs -- in-memory file system[EB/OL]. [2026-03-25]. <https://man.freebsd.org/cgi/man.cgi?query=tmpfs&sektion=4>. 内存文件系统 tmpfs 的官方技术规范。
+- FreeBSD Project. tmpfs -- in-memory file system[EB/OL]. [2026-03-25]. <https://man.freebsd.org/cgi/man.cgi?query=tmpfs&sektion=4&manpath=freebsd-16.0-current>. 内存文件系统 tmpfs 的官方技术规范。
 
 ## 使用 ccache 编译缓存
 
@@ -223,7 +223,7 @@ Local storage:
 关于 ccache 的更多详细信息和使用方法，可以参考以下资料。
 
 - FreeBSD Project. ccache-howto-freebsd.txt.in[EB/OL]. [2026-03-25]. <https://github.com/freebsd/freebsd-ports/blob/main/devel/ccache/files/ccache-howto-freebsd.txt.in>. FreeBSD Ports 中 ccache 的配置指南，说明如何在编译时启用缓存加速。
-- FreeBSD Project. ccache - a fast C/C++ compiler cache[EB/OL]. [2026-03-25]. <https://man.freebsd.org/cgi/man.cgi?query=ccache&sektion=1&n=1>.
+- FreeBSD Project. ccache - a fast C/C++ compiler cache[EB/OL]. [2026-03-25]. <https://man.freebsd.org/cgi/man.cgi?query=ccache&sektion=1&n=1&manpath=freebsd-16.0-current>.
 
 ## 多线程下载
 
@@ -286,4 +286,4 @@ wget2 参数说明：
 
 ### 参考文献
 
-- FreeBSD Project. ports -- contributed applications[EB/OL]. [2026-03-25]. <https://man.freebsd.org/cgi/man.cgi?query=ports&sektion=7>. Ports 框架的官方文档，包含 FETCH_CMD 与 BATCH 等参数说明。
+- FreeBSD Project. ports -- contributed applications[EB/OL]. [2026-03-25]. <https://man.freebsd.org/cgi/man.cgi?query=ports&sektion=7&manpath=freebsd-16.0-current>. Ports 框架的官方文档，包含 FETCH_CMD 与 BATCH 等参数说明。
