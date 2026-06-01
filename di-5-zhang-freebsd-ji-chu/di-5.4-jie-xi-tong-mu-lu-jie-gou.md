@@ -910,7 +910,7 @@ rtw890: successfully loaded firmware image 'rtw89/rtw8852b_fw-1.bin'
 rtw890: loaded firmware rtw89/rtw8852b_fw-1.bin
 rtw890: Firmware version 0.29.29.5 (da87cccd), cmd version 0, type 5
 rtw890: Firmware version 0.29.29.5 (da87cccd), cmd version 0, type 3
-# 固件加载流程：首先加载固件映像文件 .bin，然后验证固件版本。
+# 固件加载流程：首先加载固件映像文件 .bin，随后验证固件版本。
 # 固件版本 0.29.29.5（GIT 提交 da87cccd），cmd version = 0（命令接口版本），
 # type 5 和 type 3 分别是 WiFi MAC 层固件和 Bluetooth 共存/PHY 子固件。
 # 大部分现代 WiFi 芯片都需要运行时加载闭源固件——卡本身是无固件的 ROM+通用 DSP。
