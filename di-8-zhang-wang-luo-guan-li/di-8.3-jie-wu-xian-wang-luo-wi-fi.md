@@ -202,7 +202,7 @@ wlan0: flags=8843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST> metric 0 mtu 1500
 
 ## 英特尔无线网卡驱动概况
 
-英特尔（Intel）网卡是目前广泛使用的无线网卡之一。iwlwifi 驱动支持的芯片范围是 iwm 的超集：iwlwifi 的 mvm 子驱动覆盖了 iwm 支持的全部芯片，此外还通过 mld 子驱动支持更新的 BZ、SC 等芯片代，见 [英特尔 ® 无线适配器的 Linux* 支持](https://www.intel.cn/content/www/cn/zh/support/articles/000005511/wireless.html)。需要注意的是，iwm 仅支持 802.11a/b/g 模式（不支持 802.11n/ac，无法关联仅配置为 802.11n/ac 模式的接入点）；iwlwifi 支持 802.11a/b/g/n/ac/ax/be，但 802.11n 和 802.11ac 默认处于关闭状态（固件包会针对支持的芯片自动调整）。
+英特尔（Intel）网卡是目前广泛使用的无线网卡之一。iwlwifi 驱动支持的芯片范围是 iwm 的超集：iwlwifi 的 mvm 子驱动覆盖了 iwm 支持的全部芯片，此外还通过 mld 子驱动支持更新的 BZ、SC 等芯片代，见 [英特尔 ® 无线适配器的 Linux* 支持](https://www.intel.cn/content/www/cn/zh/support/articles/000005511/wireless.html)。iwm 仅支持 802.11a/b/g 模式（不支持 802.11n/ac，无法关联仅配置为 802.11n/ac 模式的接入点）；iwlwifi 支持 802.11a/b/g/n/ac/ax/be，但 802.11n 和 802.11ac 默认处于关闭状态（固件包会针对支持的芯片自动调整）。
 
 在 **/etc/rc.conf** 文件中添加以下配置：
 
@@ -238,7 +238,7 @@ psk="WIFI 密码"
 
 ## 博通（Broadcom）网卡驱动
 
-博通（Broadcom）是另一家常用的无线网卡厂商。FreeBSD 内置的 Broadcom 网卡驱动主要有两种：`bwi` 和 `bwn`。`bwi` 支持较旧型号，`bwn` 支持较新型号，两者的支持范围部分重叠，但 `bwn` 对硬件的兼容性更好。需要注意的是，这两个驱动仅支持 802.11b/g，现代 802.11ac/ax 博通网卡在 FreeBSD 上尚无原生驱动支持。
+博通（Broadcom）是另一家常用的无线网卡厂商。FreeBSD 内置的 Broadcom 网卡驱动主要有两种：`bwi` 和 `bwn`。`bwi` 支持较旧型号，`bwn` 支持较新型号，两者的支持范围部分重叠，但 `bwn` 对硬件的兼容性更好。这两个驱动仅支持 802.11b/g，现代 802.11ac/ax 博通网卡在 FreeBSD 上尚无原生驱动支持。
 
 关于驱动选择的详细信息，请参考 Fuller L. Broadcom WiFi Improvements for FreeBSD[EB/OL]. (2018-01-22)[2026-04-05]. <https://web.archive.org/web/20240203102135/https://www.landonf.org/code/freebsd/Broadcom_WiFi_Improvements.20180122.html>.
 
