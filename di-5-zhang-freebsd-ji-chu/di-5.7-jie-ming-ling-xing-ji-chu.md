@@ -318,7 +318,7 @@ cd is a shell builtin
 /bin/ls was installed by package FreeBSD-runtime-15.snap20250313173555
 ```
 
-如果缺少某个命令，一般可以通过安装相应的软件包来获取，比如 `lspci` 命令，来自软件包 `sysutils/pciutils`。然而也有许多命令存在 Linux 专有性问题，不兼容其他操作系统，比如 `ip` 命令，来自软件包 iproute2。
+如果缺少某个命令，一般可以通过安装相应的软件包来获取，例如 `lspci` 命令，来自软件包 `sysutils/pciutils`。然而也有许多命令存在 Linux 专有性问题，不兼容其他操作系统，例如 `ip` 命令，来自软件包 iproute2。
 
 ## 常用命令
 
@@ -759,7 +759,7 @@ drw-------  2 ykla ykla 2 Apr 28 00:24 test
 
 > **技巧**
 >
-> 有些命令可以读取输入，比如 sort(1)。要排序该列表，可以这样重定向输入：
+> 有些命令可以读取输入，例如 sort(1)。要排序该列表，可以这样重定向输入：
 
 ```sh
 $ sort < test.txt
