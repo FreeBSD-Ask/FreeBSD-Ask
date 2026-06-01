@@ -9,7 +9,7 @@
 不同邮件列表有不同的受众和讨论主题：
 
 - **freebsd-current**：用于讨论 FreeBSD 当前开发分支（-CURRENT）的相关话题，适合关注最新开发动态的用户和开发者。
-- **freebsd-stable**：用于讨论 FreeBSD 固定分支（-STABLE）的相关话题。
+- **freebsd-stable**：用于讨论 FreeBSD 稳定分支（-STABLE）的相关话题。
 - **freebsd-questions**：适合初学者和一般用户提问。
 - **freebsd-doc**：文档相关讨论。
 - **freebsd-ports**：Ports 相关讨论。
