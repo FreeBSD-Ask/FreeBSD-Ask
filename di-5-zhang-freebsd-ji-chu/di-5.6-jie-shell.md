@@ -14,7 +14,7 @@ FreeBSD root 用户默认 shell 为 sh（自 FreeBSD 14 起），但基本系统
 >
 > csh 与 tcsh 的关系
 >
-> 需要注意的是，FreeBSD 中 csh 和 tcsh 是同一个二进制程序，但以不同名称调用时行为有所差异。可通过查看源代码 [https://github.com/freebsd/freebsd-src/blame/main/bin/csh/Makefile](https://github.com/freebsd/freebsd-src/blame/main/bin/csh/Makefile) 及执行 man csh 验证：两者均重定向至 tcsh。
+> FreeBSD 中 csh 和 tcsh 是同一个二进制程序，但以不同名称调用时行为有所差异。可通过查看源代码 [https://github.com/freebsd/freebsd-src/blame/main/bin/csh/Makefile](https://github.com/freebsd/freebsd-src/blame/main/bin/csh/Makefile) 及执行 man csh 验证：两者均重定向至 tcsh。
 
 > **注意**
 >
@@ -321,7 +321,7 @@ Bash（Bourne Again shell）是 GNU 项目开发的 shell 程序，作为 Bourne
 
 #### 配置 Bash
 
-安装完 Bash 及相关补全库后，需要配置才能正常使用。
+安装完 Bash 及相关补全库后，需要配置才能正常运作。
 
 ```sh
 chsh -s /usr/local/bin/bash   # 将当前用户的默认登录 Shell 切换为 Bash
