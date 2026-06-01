@@ -99,7 +99,7 @@ $ git clone --branch releng/15.0 --single-branch --depth 1 https://github.com/fr
 # tar xvf src.txz -C /                                                    # 将源代码解压到根目录
 ```
 
-> **为何要解压到 `/`？**
+> **为何需解压至 `/`？**
 >
 > 因为该压缩包包含路径，解压到 **/** 会将源代码解压到 **/usr/src**。如果将上面的路径改为 **/usr/src**，会将源代码解压到 **/usr/src/usr/src**。
 
@@ -129,7 +129,7 @@ $ git clone --branch releng/15.0 --single-branch --depth 1 https://github.com/fr
 
 > **技巧**
 >
-> 与绝大多数现代 Linux 不同，[FreeBSD](https://github.com/freebsd/freebsd-src/tree/main/contrib/nvi)（OpenBSD）上的 `vi` 是 *[nvi](https://sites.google.com/a/bostic.com/keithbostic/keith-bostic?authuser=0)*（原版 **ex/vi** 的再实现），并非指向任何 *vim* 的符号链接。鲜有人使用，也无学习的必要，因此有必要更换为其他文本编辑器。
+> 与多数现代 Linux 发行版不同，[FreeBSD](https://github.com/freebsd/freebsd-src/tree/main/contrib/nvi)（OpenBSD）上的 `vi` 为 *[nvi](https://sites.google.com/a/bostic.com/keithbostic/keith-bostic?authuser=0)*（原版 **ex/vi** 的再实现），并非指向 *vim* 的符号链接。该编辑器使用频率较低，因此建议更换为其他文本编辑器。
 >
 > ```sh
 > export EDITOR=/usr/bin/ee # 切换 vi 为 ee。若使用 csh/tcsh，则改用：setenv EDITOR /usr/bin/ee
