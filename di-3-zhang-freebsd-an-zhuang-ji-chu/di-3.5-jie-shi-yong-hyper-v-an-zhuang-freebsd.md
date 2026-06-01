@@ -76,7 +76,7 @@ Hyper-V 安装完成后，创建虚拟机。右键单击 Hyper-V 管理器中的
 
 ![Hyper-V](../.gitbook/assets/hyperv-3.png)
 
-为虚拟机设置名称，本例中使用“FreeBSD 15.0-RELEASE”，还可以自定义虚拟机的存储路径。然后点击“下一页”。
+为虚拟机设置名称，本例中使用“FreeBSD 15.0-RELEASE”，还可以自定义虚拟机的存储路径。随后点击“下一页”。
 
 ![Hyper-V](../.gitbook/assets/hyperv-4.png)
 
@@ -84,7 +84,7 @@ Hyper-V 安装完成后，创建虚拟机。右键单击 Hyper-V 管理器中的
 
 ![Hyper-V](../.gitbook/assets/hyperv-generation-select.png)
 
-分配内存大小，然后点击“下一页”。
+分配内存大小，随后点击“下一页”。
 
 ![Hyper-V](../.gitbook/assets/hyperv-5.png)
 
@@ -92,7 +92,7 @@ Hyper-V 安装完成后，创建虚拟机。右键单击 Hyper-V 管理器中的
 
 ![Hyper-V](../.gitbook/assets/hyperv-6.png)
 
-指定虚拟硬盘的名称、大小及存储位置，然后点击“下一页”。
+指定虚拟硬盘的名称、大小及存储位置，随后点击“下一页”。
 
 ![Hyper-V](../.gitbook/assets/hyperv-7.png)
 
