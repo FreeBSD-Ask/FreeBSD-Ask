@@ -52,7 +52,7 @@
 | POLA | 最小惊讶原则 | Principle of Least Astonishment，一种设计原则，指设计必须符合用户的习惯、期望与认知能力 |
 | Unix | / | 最初由 AT&T 贝尔实验室开发的操作系统，现为一种标准规范和法律商标 |
 | Single UNIX Specification | 单一 UNIX 规范 | SUS，UNIX 操作系统的标准规范 |
-| CDDL | 通用开发及发行许可 | Common Development and Distribution License，由 Sun Microsystems 为 OpenSolaris 创建的开源许可证，ZFS 等项目采用此许可证，允许商业使用和修改 |
+| CDDL | 通用开发与发行许可 | Common Development and Distribution License，由 Sun Microsystems 为 OpenSolaris 创建的开源许可证，ZFS 等项目采用此许可证，允许商业使用和修改 |
 | TCP/IP | 传输控制协议/网际协议 | Transmission Control Protocol/Internet Protocol，互联网的基础协议族 |
 | 校验和 | / | Checksum，通过对数据序列进行特定算法运算得到的固定长度值，用于检测数据在传输或存储过程中是否发生错误 |
 | 哈希函数 | / | Hash Function，又称散列函数，将任意长度的数据映射为固定长度值的函数，用于数据完整性校验和数字签名等 |
