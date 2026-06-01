@@ -661,7 +661,7 @@ CST 为中国标准时间（China Standard Time）的缩写，确认无误后按
 >
 > **请勿全选！**
 >
-> **不要** 选择 `local_unbound`，否则可能影响系统 DNS 解析（参见 FreeBSD Project. Bug 262290: After a normal FreeBSD installation and reboot, **/etc/resolv.conf** will be changed[EB/OL]. [2026-03-25]. <https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=262290>。该 Bug 报告记录 local_unbound 服务导致 resolv.conf 变更问题）。除非明确了解其用途。
+> **切勿** 选择 `local_unbound`，否则可能影响系统 DNS 解析（参见 FreeBSD Project. Bug 262290: After a normal FreeBSD installation and reboot, **/etc/resolv.conf** will be changed[EB/OL]. [2026-03-25]. <https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=262290>。该 Bug 报告记录 local_unbound 服务导致 resolv.conf 变更问题）。除非明确了解其用途。
 
 | 选项 | 解释 |
 | ---- | ---- |
