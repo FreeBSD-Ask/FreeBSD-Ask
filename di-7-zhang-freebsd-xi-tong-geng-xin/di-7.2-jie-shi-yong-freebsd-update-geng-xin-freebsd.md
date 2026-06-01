@@ -277,7 +277,7 @@ locally:
 /etc/ssl/cert.pem
 (END) # 上述为发生变动的文件，确认后输入字母 q（quit，退出）并按回车键
 
-# 上面列出的路径仅为示例输出，实际系统中的路径名称和数量可能会略有不同，以本机实际显示为准。
+# 上述路径仅为示例输出，实际系统中的路径名称和数量可能会略有不同，以本机实际显示为准。
 
 The following files will be removed as part of updating to
 15.0-RELEASE-p0:
