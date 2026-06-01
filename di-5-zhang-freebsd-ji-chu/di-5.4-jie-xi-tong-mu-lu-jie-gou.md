@@ -963,9 +963,9 @@ Security policy loaded: MAC/ntpd (mac_ntpd)
 ## 参考文献
 
 - Linux Foundation. Filesystem Hierarchy Standard 3.0[EB/OL]. (2015-06-03)[2026-04-23]. <https://refspecs.linuxfoundation.org/fhs.shtml>.
-- FreeBSD Project. hier(7)[EB/OL]. [2026-03-26]. <https://man.freebsd.org/cgi/man.cgi?query=hier&sektion=7>. 系统阐述 FreeBSD 文件系统层次结构。
-- FreeBSD Project. chflags(1)[EB/OL]. [2026-04-17]. <https://man.freebsd.org/cgi/man.cgi?query=chflags&sektion=1>.
-- FreeBSD Project. ls(1)[EB/OL]. [2026-04-17]. <https://man.freebsd.org/cgi/man.cgi?query=ls&sektion=1>.
+- FreeBSD Project. hier(7)[EB/OL]. [2026-03-26]. <https://man.freebsd.org/cgi/man.cgi?query=hier&sektion=7&manpath=freebsd-16.0>. 系统阐述 FreeBSD 文件系统层次结构。
+- FreeBSD Project. chflags(1)[EB/OL]. [2026-04-17]. <https://man.freebsd.org/cgi/man.cgi?query=chflags&sektion=1&manpath=freebsd-16.0>.
+- FreeBSD Project. ls(1)[EB/OL]. [2026-04-17]. <https://man.freebsd.org/cgi/man.cgi?query=ls&sektion=1&manpath=freebsd-16.0>.
 
 ## 课后习题
 
