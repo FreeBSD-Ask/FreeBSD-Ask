@@ -259,7 +259,7 @@ FreeBSD 15.0-RELEASE have been merged into /etc/pkg/FreeBSD.conf:
 
 ……此处列出的是发生变动的文件，省略一部分输出……
 
-Does this look reasonable (y/n)?  # 输入 y 回车，此处是在确认系统文件的变动
+Does this look reasonable (y/n)?  # 输入 y 并按回车键，以确认系统文件变动
 
 The following changes, which occurred between FreeBSD 14.3-RELEASE and
 FreeBSD 15.0-RELEASE have been merged into /etc/ssh/sshd_config:
@@ -269,13 +269,13 @@ FreeBSD 15.0-RELEASE have been merged into /etc/ssh/sshd_config:
 ……此处列出的是发生变动的文件，省略一部分输出……
 
  # override default of no subsystems
-Does this look reasonable (y/n)? # 输入 y 回车，此处是在确认系统文件的变动
+Does this look reasonable (y/n)? # 输入 y 并按回车键，以确认系统文件变动
 
 The following files are affected by updates. No changes have
 been downloaded, however, because the files have been modified
 locally:
 /etc/ssl/cert.pem
-(END) # 这里是发生变动的文件，确认后只需输入字母 q（代表“quit”，退出）再按回车键即可。
+(END) # 上述为发生变动的文件，确认后输入字母 q（quit，退出）并按回车键
 
 # 上面列出的路径仅为示例输出，实际系统中的路径名称和数量可能会略有不同，以本机实际显示为准。
 
