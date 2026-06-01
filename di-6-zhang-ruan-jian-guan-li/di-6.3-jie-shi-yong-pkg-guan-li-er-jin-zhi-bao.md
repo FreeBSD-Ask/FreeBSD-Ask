@@ -314,7 +314,7 @@ Filename: usr/local/lib/libxcb-icccm.so.4.0.0
 
 具体原因建议查询 <https://www.freshports.org/>，上面会显示软件包的依赖情况和 pkg 包的构建情况。
 
-本书中一般会同时列出 Ports 安装方式，比如要查 Port **x11/budgie**，操作方法如下：直接访问 <https://www.freshports.org/x11/budgie/>。
+本书中一般会同时列出 Ports 安装方式，例如要查 Port **x11/budgie**，操作方法如下：直接访问 <https://www.freshports.org/x11/budgie/>。
 
 如果 Ports 中有该 Port，但 pkg 中暂时没有，等待 7–14 天通常即可（构建失败的包系统会自动向维护者报告错误）。如要立刻安装使用，请使用 Ports。
 
