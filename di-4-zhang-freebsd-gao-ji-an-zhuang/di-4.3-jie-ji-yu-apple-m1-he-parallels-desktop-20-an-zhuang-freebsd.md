@@ -8,11 +8,11 @@
 
 ![Parallels Desktop 20 安装 FreeBSD 15.0](../.gitbook/assets/parallels-1.png)
 
-选择“通过映像文件安装 Windows、Linux 或 macOS”，然后点击“继续”。
+选择“通过映像文件安装 Windows、Linux 或 macOS”，随后点击“继续”。
 
 ![Parallels Desktop 20 安装 FreeBSD 15.0](../.gitbook/assets/parallels-2.png)
 
-点击“手动选择”，然后继续。
+点击“手动选择”，随后继续。
 
 ![Parallels Desktop 20 安装 FreeBSD 15.0](../.gitbook/assets/parallels-3.png)
 

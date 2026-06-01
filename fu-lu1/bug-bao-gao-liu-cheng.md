@@ -20,12 +20,13 @@ FreeBSD 缺陷报告系统位于 [https://bugs.freebsd.org/bugzilla](https://bug
 相关文件结构：
 
 ```sh
-/usr/
-├── src/
-│   └── UPDATING # 系统升级说明文件
-├── ports/
-│   ├── UPDATING # Ports 升级说明文件
-│   └── CHANGES # Ports 变更记录文件
+/
+├── usr/
+│   ├── src/
+│   │   └── UPDATING # 系统升级说明文件
+│   └── ports/
+│       ├── UPDATING # Ports 升级说明文件
+│       └── CHANGES # Ports 变更记录文件
 └── var/
     └── log/
         └── messages # 系统日志文件
@@ -58,7 +59,7 @@ FreeBSD 缺陷报告系统位于 [https://bugs.freebsd.org/bugzilla](https://bug
 报告的书写提示：
 
 - Summary 栏将作为邮件标题，请勿留空；
-- “Summary”要有代表性，简明扼要；
+- “Summary”应具有代表性，简明扼要；
 - 如果有补丁，务必上传；
 - 注明系统版本和计算机架构，如果是自行编译的软件，还需说明编译设置；
 - 如果问题可以复现，注明问题产生的条件；
@@ -89,7 +90,7 @@ FreeBSD 缺陷报告系统位于 [https://bugs.freebsd.org/bugzilla](https://bug
   - Ports & Packages：第三方软件，其下主要组件为 Individual Port(s)；
   - Documentation：文档或网站；
 - Environment（环境）：包括系统版本、程序版本、系统配置等；
-- Description（问题描述）：内容应完整、详细，不要加入个人猜测。
+- Description（问题描述）：内容应完整、详细，不应加入个人猜测。
 
 FreeBSD 开发人员有限，缺陷报告可能长时间无人处理。报告接收者大多是志愿者，不应苛求。如果有可能，请先自行解决问题，再提交到上游。
 

@@ -491,7 +491,7 @@ ACPI APIC Table: <ALASKA A M I >
 
 WARNING: L3 data cache covers more APIC IDs than a package (7 > 3)
 # L3 缓存共享 APIC ID 范围与 BSP（Bootstrap Processor）报告值不一致，
-# 可能是 BIOS/Firmware ACPI 表存在小问题，不影响正常使用。此问题常见于低功耗平台。
+# 可能是 BIOS/Firmware ACPI 表存在小问题，不影响正常运行。此问题常见于低功耗平台。
 
 # ===== SMP（对称多处理）初始化 =====
 FreeBSD/SMP: Multiprocessor System Detected: 4 CPUs
@@ -910,7 +910,7 @@ rtw890: successfully loaded firmware image 'rtw89/rtw8852b_fw-1.bin'
 rtw890: loaded firmware rtw89/rtw8852b_fw-1.bin
 rtw890: Firmware version 0.29.29.5 (da87cccd), cmd version 0, type 5
 rtw890: Firmware version 0.29.29.5 (da87cccd), cmd version 0, type 3
-# 固件加载流程：首先加载固件映像文件 .bin，然后验证固件版本。
+# 固件加载流程：首先加载固件映像文件 .bin，随后验证固件版本。
 # 固件版本 0.29.29.5（GIT 提交 da87cccd），cmd version = 0（命令接口版本），
 # type 5 和 type 3 分别是 WiFi MAC 层固件和 Bluetooth 共存/PHY 子固件。
 # 大部分现代 WiFi 芯片都需要运行时加载闭源固件——卡本身是无固件的 ROM+通用 DSP。

@@ -49,7 +49,7 @@
 
 ![创建分区](../.gitbook/assets/dual-system-3.png)
 
-使用 **Tab 键** 将焦点移动到 `OK`，然后按回车键确认。
+使用 **Tab 键** 将焦点移动到 `OK`，随后按回车键确认。
 
 ![确认分区创建](../.gitbook/assets/dual-system-4.png)
 

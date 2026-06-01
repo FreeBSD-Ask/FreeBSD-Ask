@@ -94,7 +94,7 @@ usr/lib/clang/18.1.8/include
 
 此处列出的是发生变动的文件，确认后只需输入字母 q（代表“quit”，退出）并按回车键即可。
 
-然后安装更新：
+随后安装更新：
 
 ```sh
 # freebsd-update install
@@ -155,7 +155,7 @@ usr/lib/clang/18.1.8/include
 >
 > 由于大版本间的变动可能影响 `freebsd-update` 更新工具本身，所以务必：
 >
-> 先更新到当前版本最新的补丁版本（如 `X.Y-RELEASE-pN`），然后再更新到最新的点版本（如 `X.Z-RELEASE`）。
+> 先更新到当前版本最新的补丁版本（如 `X.Y-RELEASE-pN`），随后再更新到最新的点版本（如 `X.Z-RELEASE`）。
 >
 > 接下来，更新到最新的点版本及该点版本上最新的补丁版本（如 `X.Z-RELEASE-pN`）
 >
@@ -187,7 +187,7 @@ kernel/generic kernel/generic-dbg world/base world/lib32
 The following components of FreeBSD do not seem to be installed:
 world/base-dbg world/lib32-dbg
 
-Does this look reasonable (y/n)? y # 在这里输入 y，然后回车即可，此处是在检查基本组件的安装情况。
+Does this look reasonable (y/n)? y # 在这里输入 y，随后回车即可，此处是在检查基本组件的安装情况。
 
 Fetching metadata signature for 15.0-RELEASE from update1.freebsd.org... done.
 Fetching metadata index... done.

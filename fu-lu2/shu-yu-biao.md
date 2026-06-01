@@ -9,7 +9,7 @@
 | 内核 | / | 操作系统中常驻内存的核心部分，负责管理系统的进程、内存、设备驱动程序、文件和网络系统等 |
 | 微内核 | / | 一种操作系统内核架构，仅将最基本的服务放入内核态运行，其他服务以用户态进程的形式实现 |
 | 宏内核 | / | 一种操作系统内核架构，将进程管理、内存管理、文件系统、设备驱动等所有核心服务集成在内核空间中运行。又称单内核 |
-| UNIX 哲学 | / | 源于 UNIX 操作系统的开发实践，是一套经过长期演化的软件工程方法论体系，强调小即美、一个程序只做一件事、原型先行、可移植性优先于效率等核心设计原则 |
+| UNIX 哲学 | / | 源于 UNIX 操作系统的开发实践，是一套经过长期演化的软件工程方法论体系，强调小而精、每个程序专注单一任务、原型先行、可移植性优先于效率等核心设计原则 |
 | 可移植性 | / | 软件从一种硬件平台或操作系统环境转移到另一种环境时能够正常运行的难易程度 |
 | 自由软件 | / | 赋予用户运行、复制、分发、研究、修改和改进软件自由的软件 |
 | copyleft | 著佐权 | 通过类似 GPL 的许可证条款，对衍生作品施加版权约束，例如要求源代码公开 |
@@ -31,10 +31,10 @@
 | CURRENT | / | FreeBSD 的主要开发分支，对应一般项目中的 head 或 main 分支，包含最新的代码变更但可能不稳定 |
 | MFC | 合并自 CURRENT | Merge From CURRENT，FreeBSD 开发流程中将 CURRENT 分支的更改合并到稳定分支的过程 |
 | Jail | / | 一种在 Chroot 基础上发展而来的操作系统级隔离技术，通过命名空间隔离、资源限制等机制实现轻量级虚拟化，是现代容器技术的重要早期实践之一 |
-| ZFS | / | 最初为 Zettabyte File System 的缩写，后官方不再赋予其全称。一种集成了文件系统和逻辑卷管理器的先进存储系统，采用写时复制事务模型，具有强大的数据完整性保护机制、高效的数据压缩功能与可扩展存储架构 |
+| ZFS | / | 最初为 Zettabyte File System 的缩写，后官方不再将其视为缩写。一种集成了文件系统和逻辑卷管理器的先进存储系统，采用写时复制事务模型，具有强大的数据完整性保护机制、高效的数据压缩功能与可扩展存储架构 |
 | OpenZFS | / | ZFS 的开源社区版本，统一了 ZFS 的开源开发 |
 | bhyve | / | BSD Hypervisor，FreeBSD 内置的虚拟机管理程序（hypervisor） |
-| DTrace | / | Dynamic Tracing，最初由 Sun Microsystems 为 Solaris 10 开发的动态跟踪框架，可用于实时调试生产系统中的内核和应用程序问题 |
+| DTrace | / | Dynamic Tracing，最初由 Sun Microsystems 开发、随 Solaris 10 首次发布的动态跟踪框架，可用于实时调试生产系统中的内核和应用程序问题 |
 | Capsicum | / | 轻量级的操作系统能力和沙盒框架，用于应用程序沙盒化 |
 | PF | 包过滤器 | Packet Filter，源自 OpenBSD 的防火墙软件，在 FreeBSD 中作为可选防火墙提供，支持 ALTQ 流量整形等功能 |
 | Netgraph | / | FreeBSD 的网络图框架，提供内核级网络节点的图状抽象与可编程互联 |
@@ -50,13 +50,13 @@
 | 安全启动 | / | Secure Boot，基于 UEFI 固件的安全机制，通过数字签名验证引导加载程序和操作系统内核的完整性 |
 | Linuxism | / | 指软件过度依赖 Linux 特有特性而难以移植到其他类 UNIX 操作系统的现象 |
 | POLA | 最小惊讶原则 | Principle of Least Astonishment，一种设计原则，指设计必须符合用户的习惯、期望与认知能力 |
-| Unix | / | 最初由 AT&T 贝尔实验室开发的操作系统，现为一种标准规范和法律商标 |
+| UNIX | / | 最初由 AT&T 贝尔实验室开发的操作系统，现为一种标准规范和法律商标 |
 | Single UNIX Specification | 单一 UNIX 规范 | SUS，UNIX 操作系统的标准规范 |
-| CDDL | 通用开发及发行许可 | Common Development and Distribution License，由 Sun Microsystems 为 OpenSolaris 创建的开源许可证，ZFS 等项目采用此许可证，允许商业使用和修改 |
+| CDDL | 通用开发与发行许可 | Common Development and Distribution License，由 Sun Microsystems 为 OpenSolaris 创建的开源许可证，ZFS 等项目采用此许可证，允许商业使用和修改 |
 | TCP/IP | 传输控制协议/网际协议 | Transmission Control Protocol/Internet Protocol，互联网的基础协议族 |
 | 校验和 | / | Checksum，通过对数据序列进行特定算法运算得到的固定长度值，用于检测数据在传输或存储过程中是否发生错误 |
 | 哈希函数 | / | Hash Function，又称散列函数，将任意长度的数据映射为固定长度值的函数，用于数据完整性校验和数字签名等 |
-| 内核恐慌 | / | Kernel Panic，操作系统内核遇到无法恢复的致命错误时采取的自我保护机制，系统将停止运行并显示错误信息 |
+| 内核错误（Kernel Panic） | / | Kernel Panic，操作系统内核遇到无法恢复的致命错误时采取的自我保护机制，系统将停止运行并显示错误信息 |
 | 分发文件 | / | Distribution Set，FreeBSD 安装介质中按功能划分的压缩包集合，如 base、kernel、src、lib32 等 |
 | 无线管制域 | / | Regulatory Domain，各国或地区对无线设备使用的频率、功率等参数的法律规定区域 |
 | UEFI | 统一可扩展固件接口 | Unified Extensible Firmware Interface，现代计算机的固件接口标准 |
@@ -105,7 +105,7 @@
 | inetd | 互联网超级服务器 | Internet Super Server，统一管理多个网络服务的守护进程 |
 | IPFW | / | ipfirewall，FreeBSD 内置的防火墙系统，采用首次匹配规则 |
 | IPF | / | IPFilter，一种防火墙软件，在 FreeBSD 中曾作为可选防火墙组件 |
-| ALTQ | 替代队列 | Alternate Queuing，由 Kenjiro Cho 开发的流量整形框架，于 1997 年 3 月首次发布，后纳入 KAME 项目，与 PF 防火墙集成，提供队列管理和流量整形功能 |
+| ALTQ | 交替队列 | Alternate Queuing，由 Kenjiro Cho 开发的流量整形框架，于 1997 年 3 月首次发布，后纳入 KAME 项目，与 PF 防火墙集成，提供队列管理和流量整形功能 |
 | 二进制包 | / | Binary Package，预编译的软件包，可直接安装而无需从源代码构建 |
 | 镜像站 | / | Mirror Site，同步复制官方软件仓库或发行版文件的服务器，提供更快的本地下载速度 |
 | 源代码 | / | Source Code，程序员编写的计算机程序原始文本，需经编译或解释后才能执行 |
@@ -125,10 +125,10 @@
 | RISC-V | / | 基于 RISC 原则的开源指令集架构，2010 年由加州大学伯克利分校发起，FreeBSD 支持 RISC-V 架构的硬件平台 |
 | kqueue | / | FreeBSD 的事件通知接口，提供了比 select/poll 更高效和可扩展的事件通知机制 |
 | TrustedBSD | / | FreeBSD 的安全扩展项目，基于 POSIX.1e 草案 |
-| W^X | 写异或执行 | Write XOR Execute，一种安全策略，内存页不可同时具有写入和执行权限 |
+| W^X | 写或执行互斥 | Write XOR Execute，一种安全策略，内存页不可同时具有写入和执行权限 |
 | PIE | 位置无关可执行程序 | Position Independent Executable，一种安全缓解技术，可执行文件可加载到任意地址 |
 | ASLR | 地址空间布局随机化 | Address Space Layout Randomization，一种安全缓解技术，通过随机化进程的内存布局增加攻击难度 |
-| DAC | 自主访问控制 | Discretionary Access Control，标准 Unix 安全模型，资源属主可自主决定访问权限 |
+| DAC | 自主访问控制 | Discretionary Access Control，标准 Unix 安全模型，资源所有者可自主决定访问权限 |
 | ACL | 访问控制列表 | Access Control List，一种以对象为中心的访问控制机制，提供比传统 Unix 权限更细粒度的控制 |
 | CHERI | / | Capability Hardware Enhanced RISC Instructions，由剑桥大学和 SRI International 开发的 CPU 架构扩展，与 Capsicum 同为 Robert N.M. Watson 主导的项目，但两者为平行研究，非衍生关系 |
 | Container | 容器 | 一种轻量级的操作系统级虚拟化技术，通过命名空间隔离和控制组等机制实现进程的隔离与资源限制 |
@@ -188,10 +188,10 @@
 | mac_bsdextended | / | FreeBSD 的强制访问控制（MAC）策略模块 |
 | devd | / | Device Daemon，FreeBSD 的设备状态守护进程，响应硬件事件 |
 | powerd | / | Power Daemon，FreeBSD 的电源管理守护进程 |
-| cron | / | Unix 系统的定时任务执行守护进程，其名称来源存在争议 |
-| DMA | / | ① Direct Memory Access，直接内存访问，一种允许设备直接读写系统内存的技术；② DragonFly Mail Agent，FreeBSD 11.0 起纳入基本系统、14.0 起取代 Sendmail 成为默认的本地邮件传输代理（非功能完整的 MTA），FreeBSD 13 及更早版本的默认 MTA 为 Sendmail |
+| cron | / | Unix 系统的定时任务执行守护进程，用于按预定时间自动执行任务 |
+| DMA | / | ① Direct Memory Access，直接内存访问，一种允许设备直接读写系统内存的技术；② DragonFly Mail Agent，FreeBSD 11.0 起纳入基本系统、14.0 起取代 Sendmail 成为默认的本地邮件传输代理（非全功能 MTA），FreeBSD 13 及更早版本的默认 MTA 为 Sendmail |
 | mtree | / | FreeBSD 的目录树规范和验证工具 |
-| authpf | / | authenticating gateway user shell，PF 防火墙的认证网关 shell |
+| authpf | / | Authenticating Gateway User Shell，PF 防火墙的认证网关 shell |
 | Unbound | / | 一种验证型递归 DNS 服务器 |
 | Kyua | / | FreeBSD 的自动化测试框架 |
 | 内存盘 | / | RAM Disk / mfsBSD，将内存模拟为磁盘设备的技术，数据存储在内存中，断电后丢失 |
