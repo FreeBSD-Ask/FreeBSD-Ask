@@ -152,7 +152,7 @@ Hyper-V 安装完成后，创建虚拟机。右键单击 Hyper-V 管理器中的
 
 ![Hyper-V](../.gitbook/assets/hyperv-summary.png)
 
-由于 Hyper-V 的“增强会话模式”尚不支持 FreeBSD，音频不可用。
+由于 Hyper-V 的“增强会话模式”（Enhanced Session Mode）尚不支持 FreeBSD，音频重定向功能不可用。
 
 删除虚拟机前，必须先关闭虚拟机。
 
