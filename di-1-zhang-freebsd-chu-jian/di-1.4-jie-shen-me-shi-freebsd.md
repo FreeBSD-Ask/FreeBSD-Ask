@@ -50,7 +50,7 @@ FreeBSD 日为 6 月 19 日。FreeBSD 基金会和社区在这天庆祝 FreeBSD 
 >
 > 3. 如果将所有替换下来的组件拼凑起来，组成一艘新船，这艘船是不是忒修斯之船？
 
-BSD 操作系统并非复制品，而是 AT&T Research Unix 操作系统的开源衍生版本，与现代 UNIX® System V 同为 UNIX 的两大主要分支。在 4.4BSD 以前，BSD 全称为 BSD UNIX。
+BSD 操作系统并非复刻品，而是 AT&T Research Unix 操作系统的开源衍生版本，与现代 UNIX® System V 同为 UNIX 的两大主要分支。在 4.4BSD 以前，BSD 全称为 BSD UNIX。
 
 ![UNIX 之船：FreeBSD 是不是 UNIX？](../.gitbook/assets/bsd-unix-history.png)
 
