@@ -4,7 +4,7 @@
 
 ## 何谓 Linux？
 
-Linux 是当今世界广泛使用的开源操作系统。Linux 在不同语境下含义不同：狭义上指 Linux 内核，广义上通常指完整的操作系统，即 GNU/Linux。该组织对这一问题的回答如下：
+Linux 是当今世界广泛使用的开源操作系统。Linux 在不同语境下含义不同：狭义上指 Linux 内核，广义上通常指完整的操作系统，即 GNU/Linux。Linux 内核官方文档对这一问题的回答如下：
 
 > What is Linux?（什么是 Linux？）
 >
