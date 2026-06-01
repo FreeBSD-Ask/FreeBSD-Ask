@@ -83,7 +83,7 @@
 # cd /usr/ports/multimedia/libvdpau-va-gl/ && make install clean
 ```
 
-重新启动后即可正常使用 NVIDIA 驱动。
+重新启动后即可正常启用 NVIDIA 驱动。
 
 ## 查看 NVIDIA 驱动状态
 
