@@ -115,7 +115,7 @@ zroot/ROOT/15.0-RELEASE  99036272 11132688 87903584    11%    /mnt/upgrade
 
 升级之前，需将传统的 FreeBSD 系统转换为 pkgbase 格式。pkgbase 是 FreeBSD 官方提供的基本系统打包方式，使用 pkg 包管理器管理系统组件。
 
-pkgbase 的设计初衷是让 stable、current 和 release（包括 BETA、RC 等）都能使用统一的二进制工具更新。此前，stable 和 current 只能通过编译源代码来更新。
+pkgbase 的设计目标是使 stable、current 与 release（包括 BETA、RC 等）分支均能使用统一的二进制工具进行更新。此前，stable 与 current 分支仅能通过编译源代码进行更新。
 
 > **注意**
 >
