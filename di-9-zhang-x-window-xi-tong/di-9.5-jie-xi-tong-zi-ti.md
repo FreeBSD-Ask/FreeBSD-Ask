@@ -36,7 +36,7 @@ FreeBSD 默认字体对中文显示效果欠佳。本节介绍图形界面引入
 
 ## 附录：安装 Windows 11 字体（自制包）
 
-该包同时兼容 Debian 和低版本 Ubuntu 的兼容层。安装方法：
+该包亦可运行于 Debian 与低版本 Ubuntu 的 FreeBSD 兼容层下。安装方法：
 
 ```sh
 # apt install git                          # 安装 Git
