@@ -117,7 +117,7 @@ quarterly 分支类似于 Debian 的 Stable 版本，固定软件包版本并仅
 
 - FreeBSD Project. Ports/QuarterlyBranch[EB/OL]. [2026-03-25]. <https://wiki.freebsd.org/Ports/QuarterlyBranch>. 说明 Ports 季度分支的创建规则与维护策略。
 - FreeBSD Project. pkg -- package manager[EB/OL]. [2026-04-17]. <https://man.freebsd.org/cgi/man.cgi?query=pkg&sektion=8>. FreeBSD 包管理器手册页。
-- Debian. DebianStability[EB/OL]. [2026-03-26]. <https://wiki.debian.org/DebianStability>. 看起来是稳定的意思
+- Debian. DebianStability[EB/OL]. [2026-03-26]. <https://wiki.debian.org/DebianStability>. 即稳定的意思
 - Debian. Chapter 3. Choosing a Debian distribution[EB/OL]. [2026-03-26]. <https://www.debian.org/doc/manuals/debian-faq/choosing.en.html#s3.1.1>. 根据此处实际上是固定的意思
 - Debian. 选择一个 Debian 发布版本[EB/OL]. [2026-03-26]. <https://www.debian.org/doc/manuals/debian-faq/choosing.zh-cn.html>. 第 3 章中文版。
 - Debian. 2.2. Are there package upgrades in "stable"?[EB/OL]. [2026-03-26]. <https://www.debian.org/doc/manuals/debian-faq/getting-debian.en.html#updatestable>. 此处指出软件不会有功能性更新。
@@ -293,7 +293,7 @@ Ports 框架可以将源代码编译并打包成 pkg 格式的二进制包，完
 
 > **注意**
 >
-> 可以同时使用 Ports 和 pkg，多数用户也是如此。但需要注意 Ports 和 pkg 应使用同一分支：如果 Ports 使用 main 分支，则 pkg 应使用 latest 源；如果 Ports 使用 quarterly 分支，则 pkg 应使用 quarterly 源。分支不一致会导致依赖问题（比如 SSL）。latest 源也比 main 分支下的 Ports 发布更晚（其软件包由 main 构建而来），因此即使使用 latest 源，也可能会出现上述问题。遇到问题时卸载 pkg 安装的包，重新使用 Ports 编译即可。
+> 可以同时使用 Ports 和 pkg，多数用户也是如此。但需要注意 Ports 和 pkg 应使用同一分支：如果 Ports 使用 main 分支，则 pkg 应使用 latest 源；如果 Ports 使用 quarterly 分支，则 pkg 应使用 quarterly 源。分支不一致会导致依赖问题（例如 SSL）。latest 源也比 main 分支下的 Ports 发布更晚（其软件包由 main 构建而来），因此即使使用 latest 源，也可能会出现上述问题。遇到问题时卸载 pkg 安装的包，重新使用 Ports 编译即可。
 
 > **警告**
 >
