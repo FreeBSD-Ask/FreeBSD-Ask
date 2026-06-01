@@ -25,7 +25,7 @@ freebsd-update-notify 可自动检测 FreeBSD 系统和 pkg 包的更新。
 
 freebsd-update-notify 的配置文件位于 **/usr/local/etc/freebsd-update-notify/freebsd-update-notify.conf**。
 
-默认配置的更新间隔较长，可以改为：
+默认配置的更新间隔较长，可修改为：
 
 ```ini
 max-days-between-updates    1   # 更新检测间隔（日）
