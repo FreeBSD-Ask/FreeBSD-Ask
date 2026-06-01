@@ -122,7 +122,7 @@ Proceed with this action? [y/N]:
 
 ## 课后习题
 
-1. 阅读 `bsdconfig` 的源代码，定位 `No pkg(8) database found!` 错误的原因，并尝试修复该问题使其能够正常使用 DVD 安装软件。
+1. 阅读 `bsdconfig` 的源代码，定位 `No pkg(8) database found!` 错误的原因，并尝试修复该问题使其能够正常利用 DVD 安装软件。
 
 2. 分析 DVD 安装方式中路径被硬编码为 **/dist** 的设计，重构这一机制使其支持自定义路径。
 
