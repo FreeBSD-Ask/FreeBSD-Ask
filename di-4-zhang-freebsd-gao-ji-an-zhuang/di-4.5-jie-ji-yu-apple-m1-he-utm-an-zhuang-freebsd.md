@@ -30,7 +30,7 @@ UTM（逆构词为 Universal Turing Machine）是开源、基于 QEMU、面向 A
 
 ![选择操作系统](../.gitbook/assets/install_bsd_on_utm/utm-select-os.png)
 
-默认 4 GB 内存能适应大多数情况，初始状态 FreeBSD 15 约占用 500 MB 内存，可根据实际需求调整内存大小。CPU 核心按需设置，M1 芯片可以设置为 4。
+默认 4 GB 内存可适应大多数情况，初始状态 FreeBSD 15 约占用 500 MB 内存，可根据实际需求调整内存大小。CPU 核心按需设置，M1 芯片可以设置为 4。
 
 ![设置内存和处理器核心数量](../.gitbook/assets/install_bsd_on_utm/utm-set-memory-cpu.png)
 
@@ -64,7 +64,7 @@ UTM（逆构词为 Universal Turing Machine）是开源、基于 QEMU、面向 A
 
 ![安装程序界面](../.gitbook/assets/install_bsd_on_utm/utm-installer.png)
 
-基本系统安装完成，终端能正常运行。在虚拟机内执行 `ifconfig` 命令查看 IP 地址后，便可在宿主机的终端仿真器中发起 SSH 连接。
+基本系统安装完成，终端可正常运行。在虚拟机内执行 `ifconfig` 命令查看 IP 地址后，便可在宿主机的终端仿真器中发起 SSH 连接。
 
 ![终端](../.gitbook/assets/install_bsd_on_utm/utm-terminal.png)
 
