@@ -132,7 +132,7 @@ Hyper-V 安装完成后，创建虚拟机。右键单击 Hyper-V 管理器中的
 
 ![Hyper-V](../.gitbook/assets/hyperv-14.png)
 
-安装完成后必须手动弹出 DVD，点击“媒体”，再点击“DVD 驱动器”，选中“弹出 FreeBSD-15.0-RELEASE-amd64-dvd1.iso”。否则还会回到安装界面。
+安装完成后必须手动弹出 DVD，点击“媒体”，再点击“DVD 驱动器”，选中“弹出 FreeBSD-15.0-RELEASE-amd64-dvd1.iso”。否则将返回安装界面。
 
 启动新系统：
 
