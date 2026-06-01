@@ -50,7 +50,7 @@ DRM 是 Linux 内核的子系统，负责与现代显卡的 GPU 交互。FreeBSD
 
 ## 加入 video 组
 
-video 组是负责访问 DRM 和 DRI 视频设备的用户组。只有加入该组的用户才能正常使用显卡的硬件加速功能以及 Wayland 会话功能。
+video 组是负责访问 DRM 和 DRI 视频设备的用户组。只有加入该组的用户才能正常启用显卡的硬件加速功能以及 Wayland 会话功能。
 
 需将指定用户添加到 video 用户组：
 
