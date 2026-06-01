@@ -8,7 +8,7 @@
 
 ## 下载 FreeBSD
 
-首先需要下载适合 Apple M1 架构的 FreeBSD 镜像。Apple M1 采用 ARM 架构，请下载带有 `aarch64` 字样的镜像。**不要** 下载 `amd64` 架构的镜像，否则无法正常运行。
+首先需要下载适合 Apple M1 架构的 FreeBSD 镜像。Apple M1 采用 ARM 架构，请下载带有 `aarch64` 字样的镜像。**切勿** 下载 `amd64` 架构的镜像，否则无法正常运行。
 
 ## 配置虚拟机
 

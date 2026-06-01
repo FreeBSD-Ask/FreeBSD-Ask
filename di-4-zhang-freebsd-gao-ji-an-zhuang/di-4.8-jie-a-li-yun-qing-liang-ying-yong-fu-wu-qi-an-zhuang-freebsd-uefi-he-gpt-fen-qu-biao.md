@@ -635,7 +635,7 @@ TinyCorePure64 下载地址为 [x86 Pure 64](http://www.tinycorelinux.net/ports.
 
 > **注意**
 >
-> 不要错误地下载“CorePure64”，CorePure64 并不支持 UEFI 启动环境。
+> 切勿错误地下载“CorePure64”，CorePure64 并不支持 UEFI 启动环境。
 
 ```sh
 # dd if=TinyCorePure64-16.2.iso of=/dev/vda bs=4M status=progress conv=fdatasync
