@@ -6,7 +6,7 @@
 
 - 1964 年 MULTICS（**多路复用** 信息和计算服务）
 
-Multics 最初的规划与开发始于 1964 年，地点位于马萨诸塞州的剑桥市。最初，Multics 是由麻省理工学院（Fernando Corbató 领导的 MAC 项目）主导的项目；1965 年，通用电气公司和贝尔实验室加入，形成三方合作。Multics 在专为操作系统设计的通用电气 645 计算机上开发；首个完整的系统于 1967 年 1 月交付给麻省理工学院。
+Multics 最初的规划与开发始于 1964 年，地点位于马萨诸塞州的剑桥市。最初，Multics 是由麻省理工学院（Fernando Corbató 领导的 MAC 项目）主导的项目；1964 年 8 月，通用电气公司签约成为硬件供应商；同年 11 月，贝尔实验室加入，形成三方合作。Multics 在专为操作系统设计的通用电气 645 计算机上开发；首个完整的系统于 1967 年 1 月交付给麻省理工学院。
 
 - 1969 年 UNIX（UNIX 操作系统）
 
@@ -205,7 +205,7 @@ Alpha-Omega 项目先后审计了 FreeBSD 的 bhyve 虚拟机监视器、Capsicu
 - FreeBSD Wiki. Jails[EB/OL]. [2026-04-16]. <https://wiki.freebsd.org/Jails>. 记载“Jails were introduced by Poul-Henning Kamp in March 2000 with FreeBSD 4.0-RELEASE”。
 - Watson R N M, et al. CHERI: A Hybrid Capability-System Architecture for Scalable Software Compartmentalization[C]//ISCA. 2015. CHERI 原始论文，阐述硬件能力架构扩展的设计与实现。
 - ACM. Fernando J (“Corby”) Corbato[EB/OL]. [2026-04-17]. <https://amturing.acm.org/award_winners/corbato_1009471.cfm>. 记载 CTSS 于 1961 年 11 月在 IBM 709 上首次演示。
-- Tom Van Vleck. The Multicians web site[EB/OL]. (2026-04-08)[2026-04-17]. <https://multicians.org/history.html>. 记载 Multics 项目历史，贝尔实验室与通用电气于 1965 年加入。
+- Tom Van Vleck. The Multicians web site[EB/OL]. (2026-04-08)[2026-04-17]. <https://multicians.org/history.html>. 记载 Multics 项目历史，通用电气公司于 1964 年 8 月签约、贝尔实验室于 1964 年 11 月加入。
 - FreeBSD Project. Core Bylaws[EB/OL]. [2026-04-17]. <https://www.freebsd.org/internal/bylaws/>. 记载首次核心团队选举于 2000 年 9 月举行。
 - FreeBSD Foundation. Resolutions Document[EB/OL]. [2026-04-17]. <https://freebsdfoundation.org/wp-content/uploads/2015/12/ResolutionsDocument-1.pdf>. 记载 FreeBSD 基金会成立文件签署日期为 2000 年 3 月 28 日。
 - FreeBSD Project. FreeBSD News Flash October 1999[EB/OL]. [2026-04-17]. <https://ftpmirror.your.org/pub/FreeBSD-CVS/www/data/news/1999/index.html>. 记载 FreeBSDCon'99 参会人数超过 350 人。
