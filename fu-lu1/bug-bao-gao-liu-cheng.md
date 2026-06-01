@@ -20,12 +20,13 @@ FreeBSD 缺陷报告系统位于 [https://bugs.freebsd.org/bugzilla](https://bug
 相关文件结构：
 
 ```sh
-/usr/
-├── src/
-│   └── UPDATING # 系统升级说明文件
-├── ports/
-│   ├── UPDATING # Ports 升级说明文件
-│   └── CHANGES # Ports 变更记录文件
+/
+├── usr/
+│   ├── src/
+│   │   └── UPDATING # 系统升级说明文件
+│   └── ports/
+│       ├── UPDATING # Ports 升级说明文件
+│       └── CHANGES # Ports 变更记录文件
 └── var/
     └── log/
         └── messages # 系统日志文件
