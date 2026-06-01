@@ -139,7 +139,7 @@ BERKELEY G. Verses on the Prospect of Planting Arts and Learning in America[C]//
 >
 > ——George Berkeley
 >
-> 注：贝克莱在《人类知识原理》第 3 节中的原文为拉丁语与英语混用的"esse is percipi"，后世哲学文献中更常以纯拉丁语形式"esse est percipi"归因于他。
+> 注：贝克莱在《人类知识原理》第 3 节中的原文为拉丁语与英语混用的“esse is percipi”，后世哲学文献中更常以纯拉丁语形式“esse est percipi”归因于他。
 
 > **注意**
 >
