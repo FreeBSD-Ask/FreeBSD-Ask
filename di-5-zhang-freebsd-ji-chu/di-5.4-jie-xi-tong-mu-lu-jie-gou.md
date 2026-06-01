@@ -491,7 +491,7 @@ ACPI APIC Table: <ALASKA A M I >
 
 WARNING: L3 data cache covers more APIC IDs than a package (7 > 3)
 # L3 缓存共享 APIC ID 范围与 BSP（Bootstrap Processor）报告值不一致，
-# 可能是 BIOS/Firmware ACPI 表存在小问题，不影响正常使用。此问题常见于低功耗平台。
+# 可能是 BIOS/Firmware ACPI 表存在小问题，不影响正常运行。此问题常见于低功耗平台。
 
 # ===== SMP（对称多处理）初始化 =====
 FreeBSD/SMP: Multiprocessor System Detected: 4 CPUs
