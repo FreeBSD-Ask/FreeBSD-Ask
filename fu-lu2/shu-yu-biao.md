@@ -191,7 +191,7 @@
 | cron | / | Unix 系统的定时任务执行守护进程，用于按预定时间自动执行任务 |
 | DMA | / | ① Direct Memory Access，直接内存访问，一种允许设备直接读写系统内存的技术；② DragonFly Mail Agent，FreeBSD 11.0 起纳入基本系统、14.0 起取代 Sendmail 成为默认的本地邮件传输代理（非全功能 MTA），FreeBSD 13 及更早版本的默认 MTA 为 Sendmail |
 | mtree | / | FreeBSD 的目录树规范和验证工具 |
-| authpf | / | Authenticating Gateway User Shell，PF 防火墙的认证网关 shell，PF 防火墙的认证网关 shell |
+| authpf | / | Authenticating Gateway User Shell，PF 防火墙的认证网关 shell |
 | Unbound | / | 一种验证型递归 DNS 服务器 |
 | Kyua | / | FreeBSD 的自动化测试框架 |
 | 内存盘 | / | RAM Disk / mfsBSD，将内存模拟为磁盘设备的技术，数据存储在内存中，断电后丢失 |
