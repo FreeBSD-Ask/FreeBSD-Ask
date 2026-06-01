@@ -105,7 +105,7 @@
 | inetd | 互联网超级服务器 | Internet Super Server，统一管理多个网络服务的守护进程 |
 | IPFW | / | ipfirewall，FreeBSD 内置的防火墙系统，采用首次匹配规则 |
 | IPF | / | IPFilter，一种防火墙软件，在 FreeBSD 中曾作为可选防火墙组件 |
-| ALTQ | 替代队列 | Alternate Queuing，由 Kenjiro Cho 开发的流量整形框架，于 1997 年 3 月首次发布，后纳入 KAME 项目，与 PF 防火墙集成，提供队列管理和流量整形功能 |
+| ALTQ | 交替队列 | Alternate Queuing，由 Kenjiro Cho 开发的流量整形框架，于 1997 年 3 月首次发布，后纳入 KAME 项目，与 PF 防火墙集成，提供队列管理和流量整形功能 |
 | 二进制包 | / | Binary Package，预编译的软件包，可直接安装而无需从源代码构建 |
 | 镜像站 | / | Mirror Site，同步复制官方软件仓库或发行版文件的服务器，提供更快的本地下载速度 |
 | 源代码 | / | Source Code，程序员编写的计算机程序原始文本，需经编译或解释后才能执行 |
@@ -188,7 +188,7 @@
 | mac_bsdextended | / | FreeBSD 的强制访问控制（MAC）策略模块 |
 | devd | / | Device Daemon，FreeBSD 的设备状态守护进程，响应硬件事件 |
 | powerd | / | Power Daemon，FreeBSD 的电源管理守护进程 |
-| cron | / | Unix 系统的定时任务执行守护进程，其名称来源存在争议 |
+| cron | / | Unix 系统的定时任务执行守护进程，用于按预定时间自动执行任务 |
 | DMA | / | ① Direct Memory Access，直接内存访问，一种允许设备直接读写系统内存的技术；② DragonFly Mail Agent，FreeBSD 11.0 起纳入基本系统、14.0 起取代 Sendmail 成为默认的本地邮件传输代理（非功能完整的 MTA），FreeBSD 13 及更早版本的默认 MTA 为 Sendmail |
 | mtree | / | FreeBSD 的目录树规范和验证工具 |
 | authpf | / | authenticating gateway user shell，PF 防火墙的认证网关 shell |
