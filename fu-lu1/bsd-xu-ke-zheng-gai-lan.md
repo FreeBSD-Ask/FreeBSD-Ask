@@ -71,7 +71,7 @@ THIS SOFTWARE IS PROVIDED BY [Name of Organization] "AS IS" AND ANY EXPRESS OR I
 
 ## BSD 两条款许可证（The 2-Clause BSD License，BSD-2-Clause）
 
-BSD 两条款许可证应用较为广泛，即 FreeBSD 许可证，亦称简化版 BSD 许可证，为 FreeBSD 项目优先选用。该许可证删除了原始 BSD 许可证（BSD-4-Clause）中的广告条款与背书条款，仅要求在源代码和二进制再发布中保留版权声明、条件列表及免责声明。广告条款原本要求在所有宣传材料中提及原作者，因其实际使用不便，现已移除。
+BSD 两条款许可证应用较为广泛，即 FreeBSD 许可证，亦称简化版 BSD 许可证，为 FreeBSD 项目优先选用。该许可证删除了原始 BSD 许可证（BSD-4-Clause）中的广告条款与背书条款，仅要求在源代码和二进制再发布中保留版权声明、条件列表及免责声明。广告条款原本要求在所有提及本软件功能或用途的广告材料中注明使用了原作者开发的软件，因其实际使用不便，现已移除。
 
 全文如下：
 

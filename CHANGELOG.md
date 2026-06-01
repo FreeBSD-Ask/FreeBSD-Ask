@@ -1,5 +1,12 @@
 # 编辑日志
 
+## 2026 年第三季度
+
+- 2026.6.1
+  - 新增章节“第 7 章 FreeBSD 系统更新”，拆分自其他章节
+  - 提交 [Port lang/python version display incorrect, should use Mk/bsd.default-versions.mk
+ #659](https://github.com/FreshPorts/freshports/issues/659)
+ 
 ## 2026 年第二季度
 
 - 2026.5.31

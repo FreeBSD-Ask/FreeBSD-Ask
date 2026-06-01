@@ -31,7 +31,7 @@
 
 **第 5 章 FreeBSD 基础**：面向 Windows、Linux 和 macOS 用户提供迁移指南，涵盖系统目录结构、虚拟控制台、shell 使用、命令行基础、文本编辑器、用户与权限管理及压缩工具等基础操作。
 
-**第 6 章 软件管理**：介绍 FreeBSD 软件源的更换方法，使用 pkg 管理二进制包、使用 Ports 以源代码方式安装软件，以及使用 DVD 安装软件和 FreeBSD 镜像站现状。
+**第 6 章 软件管理**：介绍 FreeBSD 包管理器概述、软件源的更换方法，使用 pkg 管理二进制包、使用 Ports 以源代码方式安装软件、Ports 构建调优，以及使用 DVD 安装软件和 FreeBSD 镜像站现状。
 
 **第 7 章 FreeBSD 系统更新**：介绍系统更新检测、通过 freebsd-update 或源代码方式进行系统更新，以及 ZFS 启动环境与多版本共存。
 
@@ -125,7 +125,7 @@
 
 > **思考题**
 >
->>美国国家标准与技术研究院（NIST）发布的数字身份指南草案（NIST. NIST SP 800-63B-4: Authentication and Authenticator Management[EB/OL]. (2025-07)[2026-04-04]. <https://pages.nist.gov/800-63-4/sp800-63b.html>）指出：
+>>美国国家标准与技术研究院（NIST）发布的数字身份指南（NIST. NIST SP 800-63B-4: Digital Identity Guidelines: Authentication and Authenticator Management[EB/OL]. (2025-07)[2026-04-04]. <https://pages.nist.gov/800-63-4/sp800-63b.html>）指出：
 >>
 >>必须要求，当密码被用作单因素认证机制时，其长度至少为 15 个字符。可以允许仅作为多因素认证过程一部分使用的密码较短，但必须要求其长度至少为 8 个字符。
 >>
