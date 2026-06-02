@@ -2,6 +2,8 @@
 
 ## 2026 年第二季度
 
+- 2026.6.2
+  - “13.2 Rocky Linux 兼容层”：完全重写“通过 Shell 脚本安装 Rocky Linux 10 兼容层”，现在直接引用 WSL 兼容层
 - 2026.6.1
   - 新增章节“第 7 章 FreeBSD 系统更新”，拆分自其他章节
   - 提交 [Port lang/python version display incorrect, should use Mk/bsd.default-versions.mk
