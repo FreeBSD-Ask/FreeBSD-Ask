@@ -52,8 +52,8 @@ FreeBSD 中主要有三类账户：系统账户、普通用户账户，以及超
 
 - **用户名**：在 `login:` 提示符处输入的名称，每个用户必须拥有唯一的用户名。passwd(5) 中记载了创建有效用户名的规则。建议使用八个或更少的全部小写字符作为用户名，以保持向后兼容性。
 - **密码**：每个账户都有一个关联的密码。
-- **用户 ID（UID）**：用于在 FreeBSD 系统中唯一标识用户的数字。根据 adduser(8) 的限制，应小于 32000；实际系统支持的 UID 上限远高于该值。
-- **组 ID（GID）**：用于唯一标识用户所属主组的数字。根据 adduser(8) 的限制，应小于 32000；实际系统支持的 GID 上限远高于该值。
+- **用户 ID（UID）**：用于在 FreeBSD 系统中唯一标识用户的数字。由于较高的值可能导致某些软件的兼容性问题，建议使用小于 65535 的 UID。
+- **组 ID（GID）**：用于唯一标识用户所属主组的数字。建议使用 65535 或更低的 GID。
 - **登录类**：组机制的扩展，在为不同用户定制系统时提供额外的灵活性。
 - **密码更改时间**：在默认情况下密码不会过期，但可以按用户启用密码过期。
 - **账户过期时间**：在默认情况下 FreeBSD 不会使账户过期。
@@ -147,7 +147,7 @@ Goodbye!
 >
 > 由于输入密码时不会打印在屏幕上，也不会显示为掩码 `*`，请谨慎创建用户账户。
 
-- ① 登录名命名有一些限制，参见 passwd(5)[EB/OL]. [2026-03-26]. <https://man.freebsd.org/cgi/man.cgi?query=passwd&sektion=5&manpath=freebsd-16.0>。但请注意，登录名不支持八位编码字符集，例如不支持中文（即仅支持特定 ASCII 字符）。
+- ① 登录名命名有一些限制，参见 passwd(5)[EB/OL]. [2026-03-26]. <https://man.freebsd.org/cgi/man.cgi?query=passwd&sektion=5>。但请注意，登录名不支持八位编码字符集，例如不支持中文（即仅支持特定 ASCII 字符）。
 
 只有 root 才能使用此命令，否则将提示错误如下：
 
@@ -446,7 +446,7 @@ test2:$6$FkxPcs2y.Y8cxyuj$kVDoV1LC.IWKGlSitll3oLArF18aHQYID0JYE.TUuD0YFgba.c7MbG
 
 ## 参考文献
 
-- FreeBSD Project. pw(8)[EB/OL]. [2026-03-26]. <https://man.freebsd.org/cgi/man.cgi?query=pw&sektion=8&manpath=freebsd-16.0>. man 页，介绍了用户和组管理命令。
+- FreeBSD Project. pw(8)[EB/OL]. [2026-03-26]. <https://man.freebsd.org/cgi/man.cgi?query=pw&sektion=8>. man 页，介绍了用户和组管理命令。
 
 ## 课后习题
 
