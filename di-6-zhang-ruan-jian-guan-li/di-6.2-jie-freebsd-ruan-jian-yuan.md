@@ -54,7 +54,7 @@ USTC-base: {
 
 ## pkg 二进制包（由 Ports 构建的二进制包）切换软件源
 
-FreeBSD 中 pkg 源分为系统级和用户级两个配置文件。**因为该文件会随基本系统的更新而改变，所以不建议** 直接修改 **/etc/pkg/FreeBSD.conf** 文件。
+FreeBSD 中 pkg 源分为系统级与用户级两个配置文件。**由于该文件会随基本系统的更新而改变，因此不建议** 直接修改 **/etc/pkg/FreeBSD.conf** 文件。
 
 > **警告**
 >
@@ -366,7 +366,7 @@ MASTER_SITE_OVERRIDE?=https://mirrors.ustc.edu.cn/freebsd-ports/distfiles/${DIST
 
 ### 平衡安全与便利
 
-使用非官方镜像站虽然提升了下载速度，但引入了中间人攻击的风险——镜像站管理员理论上可以在软件包中注入恶意代码。FreeBSD 官方集群内部使用 `zfs send/receive` 而非 rsync 来同步数据，且官方 rsync 服务不向公众开放，部分原因正是为了降低此类风险。对于安全要求较高的生产环境，建议使用官方源或自行搭建 Poudriere 构建服务器，以完全控制软件包。
+使用非官方镜像站虽提升了下载速度，但引入了中间人攻击的风险——镜像站管理员理论上可在软件包中注入恶意代码。FreeBSD 官方集群内部使用 `zfs send/receive` 而非 rsync 同步数据，且官方 rsync 服务不向公众开放，部分原因正是为了降低此类风险。对于安全要求较高的生产环境，建议使用官方源或自行搭建 Poudriere 构建服务器，以完全控制软件包。
 
 ### 为什么 pkg 配置文件中要写完整选项（mirror_type / signature_type / fingerprints）
 
