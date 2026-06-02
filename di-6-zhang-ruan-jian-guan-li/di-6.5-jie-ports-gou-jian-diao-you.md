@@ -2,7 +2,7 @@
 
 ## FreeBSD Ports 多线程编译
 
-为了加快编译速度，可以配置多线程编译选项，利用多核处理器的性能。
+为加快编译速度，可配置多线程编译选项，利用多核处理器的性能。
 
 将以下内容写入 **/etc/make.conf** 文件，若不存在则 `touch` 新建对应文件。
 
@@ -39,13 +39,13 @@ hw.ncpu: 16
 # alias ninja='ninja -j4'	# 为 ninja 命令设置别名，指定并行编译 4 个作业
 ```
 
-关于多线程编译和 CPU 特性的更多信息，可以参考以下资料。
+关于多线程编译和 CPU 特性的更多信息，可参考以下资料。
 
 - FreeBSD Forums. Easy way to get cpu features[EB/OL]. [2026-03-25]. <https://forums.freebsd.org/threads/easy-way-to-get-cpu-features.10553/>. 获取 CPU 线程数量的命令来自此处。
 
 ## 将 /tmp 设置为内存文件系统
 
-为了提高临时文件的读写速度，可以将 **/tmp** 目录挂载为内存文件系统 tmpfs。
+为提高临时文件的读写速度，可将 **/tmp** 目录挂载为内存文件系统 tmpfs。
 
 编辑 **/etc/fstab** 文件，写入下行：
 
@@ -61,7 +61,7 @@ tmpfs /tmp tmpfs rw 0 0
 
 ## 使用 ccache 编译缓存
 
-ccache 是一款编译缓存工具，可以加速重复编译的过程。
+ccache 是一款编译缓存工具，可加速重复编译的过程。
 
 > **警告**
 >
@@ -227,11 +227,11 @@ Local storage:
 
 ## 多线程下载
 
-为了加快 Ports 源代码的下载速度，可以使用多线程下载工具。
+为加快 Ports 源代码的下载速度，可使用多线程下载工具。
 
 ### axel
 
-axel 是一款轻量级的多线程下载工具，可以显著提高下载速度。
+axel 是一款轻量级的多线程下载工具，可显著提高下载速度。
 
 使用 pkg 安装：
 

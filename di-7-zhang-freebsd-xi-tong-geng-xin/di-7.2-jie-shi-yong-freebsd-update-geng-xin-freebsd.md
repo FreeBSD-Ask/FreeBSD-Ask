@@ -4,7 +4,7 @@
 >
 > freebsd-update 支持 amd64、arm64（aarch64）和 i386 架构的 RELEASE、ALPHA、BETA、RC 版本（注意：FreeBSD 15 起已移除 i386 支持，i386 仅适用于 FreeBSD 14 及更早版本）。**CURRENT、STABLE 和 PRERELEASE 分支不提供二进制更新**，若使用 freebsd-update 将直接报错退出。上述分支必须通过源码编译方式或者 pkgbase 更新。
 
-freebsd-update 是 FreeBSD 官方提供的二进制更新工具，适用于 RELEASE、ALPHA、BETA、RC 版本的二进制安全更新与版本升级。
+freebsd-update 是 FreeBSD 的基本系统更新工具，支持从 FreeBSD 官方更新服务器下载、校验并安装二进制更新，亦可用于跨 RELEASE 版本的升级与回滚。
 
 > **注意**
 >

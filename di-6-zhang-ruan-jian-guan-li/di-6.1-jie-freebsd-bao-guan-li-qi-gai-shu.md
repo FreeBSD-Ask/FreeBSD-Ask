@@ -2,9 +2,9 @@
 
 ## 软件源概览
 
-FreeBSD 提供了多种类型的软件源，分别服务于不同的系统组件和软件安装需求。
+FreeBSD 提供了多种类型的软件源，分别服务于不同的系统组件与软件安装需求。
 
-熟悉 Linux 发行版的读者可将 FreeBSD 的包管理方案类比为两大 Linux 发行版包管理器的功能组合：
+对于熟悉 Linux 发行版的读者而言，可将 FreeBSD 的包管理方案类比为两大 Linux 发行版包管理器的功能组合：
 
 - Arch Linux：Pacman，对应 pkg（同样秉持 KISS 理念）。
 - Gentoo Linux：Portage，对应 Ports（Portage 本身借鉴自 Ports）。
@@ -97,7 +97,7 @@ origin/2025Q4 created around 2025-10-01 21:27:17 +0200
 origin/main created around 2025-10-24 12:43:02 +0900
 ```
 
-其中，quarterly 的内容由 main 分支（latest）切出，每年的 1 月、4 月、7 月、10 月 ③ 会发布新的分支（从特定时间点的 main 分支切出 ①），形如 `2014Q3`、`2025Q1`。这是为了便于通过 git 直接拉取所需的分支，但 Ports 管理团队（portmgr）只会维护最新分支，旧分支不再允许任何合并。②
+其中，quarterly 的内容由 main 分支（latest）切出，每年的 1 月、4 月、7 月、10 月 ③ 会发布新的分支（从特定时间点的 main 分支切出 ①），形如 `2014Q3`、`2025Q1`。这是为了便于通过 git 直接拉取所需的分支，但 Ports 管理团队（portmgr）仅维护最新分支，旧分支不再接受任何合并。②
 
 quarterly 实际上类似于 Debian 的 Stable 版本，此处的 Stable 不仅表示“稳定”，也包含“固定”的含义。有必要区分“稳定”和“固定”两个词语：
 
@@ -154,7 +154,7 @@ NetBSD 和 OpenBSD 也使用 Ports，但实现方式并不通用。
 
 ### Ports 与 Port 释义
 
-一款软件的相关文件（补丁文件、校验和、Makefile 等）的集合称为一个 Port，所有 Port（移植软件）的集合即 Ports Collection 或 Ports Tree，简称 Ports。从术语定义角度，Port 指单个软件的移植构建配置，而 Ports 则指整个移植软件集合。
+一款软件的相关文件（补丁文件、校验和、Makefile 等）的集合称为一个 Port，所有 Port（移植软件）的集合即 Ports Collection 或 Ports Tree，简称 Ports。从术语定义角度而言，Port 指单个软件的移植构建配置，Ports 则指整个移植软件集合。
 
 项目结构
 
