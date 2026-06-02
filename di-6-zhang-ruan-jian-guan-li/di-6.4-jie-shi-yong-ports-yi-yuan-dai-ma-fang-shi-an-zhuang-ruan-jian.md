@@ -169,7 +169,7 @@ root@ykla:/usr/ports/sysutils/htop # make all-depends-list
 
 ## 如何一次性下载所有需要的软件包
 
-为了避免在编译过程中因网络问题中断，可以先一次性下载所有需要的软件包。`fetch-recursive` 会递归获取主 Port 及其全部依赖的源代码包，配合 `BATCH=yes` 跳过交互式选项。
+为避免编译过程中因网络问题中断，可先一次性下载所有需要的软件包。`fetch-recursive` 会递归获取主 Port 及其全部依赖的源代码包，配合 `BATCH=yes` 跳过交互式选项。
 
 ```sh
 # make BATCH=yes fetch-recursive
