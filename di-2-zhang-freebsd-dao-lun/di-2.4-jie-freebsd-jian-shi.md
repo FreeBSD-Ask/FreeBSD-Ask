@@ -6,7 +6,7 @@
 
 - 1964 年 MULTICS（**多路复用** 信息和计算服务）
 
-Multics 最初的规划与开发始于 1964 年，地点位于马萨诸塞州的剑桥市。最初，Multics 是由麻省理工学院（Fernando Corbató 领导的 MAC 项目）主导的项目；1965 年，通用电气公司和贝尔实验室加入，形成三方合作。Multics 在专为操作系统设计的通用电气 645 计算机上开发；首个完整的系统于 1967 年 1 月交付给麻省理工学院。
+Multics 最初的规划与开发始于 1964 年，地点位于马萨诸塞州的剑桥市。最初，Multics 是由麻省理工学院（Fernando Corbató 领导的 MAC 项目）主导的项目；1964 年 8 月，通用电气公司签约成为硬件供应商；同年 11 月，贝尔实验室加入，形成三方合作。Multics 在专为操作系统设计的通用电气 645 计算机上开发；首个完整的系统于 1967 年 1 月交付给麻省理工学院。
 
 - 1969 年 UNIX（UNIX 操作系统）
 
@@ -96,10 +96,6 @@ EuroBSDCon 2001 于 2001 年 11 月 9 日至 11 日在英国布莱顿举行（Eu
 
 在 EuroBSDCon 获得成功之后，首届 AsiaBSDCon 于 2004 年 3 月 13 日至 15 日在台湾“中央研究院”举办，紧随其后的是 BSDCan，于 5 月 13 日至 16 日在加拿大渥太华举行。随着 FreeBSD 社区的不断壮大，全球范围内对以 BSD 为主题的会议需求也随之增长。
 
-- 2005 年谷歌编程之夏
-
-FreeBSD 基金会在首年度的谷歌编程之夏就参与其中。谷歌编程之夏始于 2005 年，为新的开发者提供了一个机会，使其参与开源编程项目。在项目结束后，许多参与该项目的学生成为了 FreeBSD 的贡献者。
-
 - 2004 年 11 月 6 日 5.3-RELEASE 移植 PF
 
 PF（Packet Filter）最初设计用于 OpenBSD，于 2003 年 3 月移植到 FreeBSD，2004 年 2 月 26 日集成到基本系统，随 5.3-RELEASE 一同发布。
@@ -107,6 +103,10 @@ PF（Packet Filter）最初设计用于 OpenBSD，于 2003 年 3 月移植到 Fr
 - 2004 年 11 月 6 日 Libarchive
 
 Libarchive 最初是为 FreeBSD 5.3 开发的，随该版本一同发布。它是一种用 C 语言编写的程序库，提供对多种不同存档格式的流式访问功能。
+
+- 2005 年谷歌编程之夏
+
+FreeBSD 基金会在首年度的谷歌编程之夏就参与其中。谷歌编程之夏始于 2005 年，为新的开发者提供了一个机会，使其参与开源编程项目。在项目结束后，许多参与该项目的学生成为了 FreeBSD 的贡献者。
 
 - 2005 年 8 月首位执行董事
 
@@ -180,13 +180,13 @@ FreeBSD 项目从 Subversion 到 Git 的迁移始于 2019 年 5 月的 DevSummit
 
 在 13.0-RELEASE 中，由于 OpenSolaris 的继任者 illumos 开发基本停滞，FreeBSD 将 ZFS 实现切换到了 OpenZFS。该迁移计划最早于 2018 年提出。
 
-- 2024 年 10 月笔记本和桌面工作组 LDWG 成立
-
-笔记本和桌面工作组（LDWG）如其名称所示，致力于通过一系列功能改进和新增，使 FreeBSD 在个人设备上实现“开箱即用”的体验。该工作计划为期 1 至 2 年。
-
 - 2024 年 8 月德国主权技术基金赞助 FreeBSD 项目实施基础设施现代化
 
 该项目的主要目标是改进基本系统、Ports 和软件包的安全工具，更新项目基础设施以加快开发速度、增强构建安全性，并降低新开发者的参与门槛。预计于 2025 年底完成。
+
+- 2024 年 10 月笔记本和桌面工作组 LDWG 成立
+
+笔记本和桌面工作组（LDWG）如其名称所示，致力于通过一系列功能改进和新增，使 FreeBSD 在个人设备上实现“开箱即用”的体验。该工作计划为期 1 至 2 年。
 
 - 2024—2025 Alpha-Omega 审计
 
@@ -205,7 +205,7 @@ Alpha-Omega 项目先后审计了 FreeBSD 的 bhyve 虚拟机监视器、Capsicu
 - FreeBSD Wiki. Jails[EB/OL]. [2026-04-16]. <https://wiki.freebsd.org/Jails>. 记载“Jails were introduced by Poul-Henning Kamp in March 2000 with FreeBSD 4.0-RELEASE”。
 - Watson R N M, et al. CHERI: A Hybrid Capability-System Architecture for Scalable Software Compartmentalization[C]//ISCA. 2015. CHERI 原始论文，阐述硬件能力架构扩展的设计与实现。
 - ACM. Fernando J (“Corby”) Corbato[EB/OL]. [2026-04-17]. <https://amturing.acm.org/award_winners/corbato_1009471.cfm>. 记载 CTSS 于 1961 年 11 月在 IBM 709 上首次演示。
-- Tom Van Vleck. The Multicians web site[EB/OL]. (2026-04-08)[2026-04-17]. <https://multicians.org/history.html>. 记载 Multics 项目历史，贝尔实验室与通用电气于 1965 年加入。
+- Tom Van Vleck. The Multicians web site[EB/OL]. (2026-04-08)[2026-04-17]. <https://multicians.org/history.html>. 记载 Multics 项目历史，通用电气公司于 1964 年 8 月签约、贝尔实验室于 1964 年 11 月加入。
 - FreeBSD Project. Core Bylaws[EB/OL]. [2026-04-17]. <https://www.freebsd.org/internal/bylaws/>. 记载首次核心团队选举于 2000 年 9 月举行。
 - FreeBSD Foundation. Resolutions Document[EB/OL]. [2026-04-17]. <https://freebsdfoundation.org/wp-content/uploads/2015/12/ResolutionsDocument-1.pdf>. 记载 FreeBSD 基金会成立文件签署日期为 2000 年 3 月 28 日。
 - FreeBSD Project. FreeBSD News Flash October 1999[EB/OL]. [2026-04-17]. <https://ftpmirror.your.org/pub/FreeBSD-CVS/www/data/news/1999/index.html>. 记载 FreeBSDCon'99 参会人数超过 350 人。

@@ -517,7 +517,7 @@ rm: /home/ykla/test/: is a directory # 提示 /home/ykla/test/ 为目录
 >
 > “从前有座山，山上有座庙，庙里有个老和尚在给小和尚讲故事。老和尚说：‘从前有座山，山上有座庙……’”这就是递归的实例。
 >
-> 在该操作中，其含义是先进入 **/home/ykla/test/** 下最深层的子目录（如存在），删除其中的文件和子目录本身，随后向上逐层重复该过程。直至删除 **/home/ykla/test/**。即使用深度优先搜索算法（Depth-First-Search，DFS）。
+> 在该操作中，其含义是先进入 **/home/ykla/test/** 下最深层的子目录（如存在），删除其中的文件和子目录本身，随后向上逐层重复该过程。直至删除 **/home/ykla/test/**。即使用深度优先搜索算法（Depth-First Search，DFS）。
 
 ```sh
 $ rm -rf /home/ykla/test/

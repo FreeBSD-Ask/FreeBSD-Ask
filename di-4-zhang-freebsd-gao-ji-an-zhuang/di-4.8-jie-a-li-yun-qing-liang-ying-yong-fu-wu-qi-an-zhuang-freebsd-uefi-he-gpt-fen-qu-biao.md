@@ -6,23 +6,23 @@
 
 ![Rocky Linux 9](../.gitbook/assets/cloud-rocky-linux-1.png)
 
-首先将服务器重置为 Rocky Linux 9。该发行版在服务器市场占据主流地位，通常为大多数厂商所支持。
+将服务器系统重置为 Rocky Linux 9。该发行版在服务器市场占据主流地位，多数服务商均提供支持。
 
 ### 救援登录
 
-环境准备完成后，配置救援登录。
+配置救援登录。
 
 ![Rocky Linux 9](../.gitbook/assets/cloud-rocky-linux-3.png)
 
-本节描述的大部分操作通过 VNC 连接（救援登录）完成。
+本节所述大部分操作通过 VNC 连接（救援登录）完成。
 
 ![Rocky Linux 9](../.gitbook/assets/cloud-rocky-linux-4.png)
 
-为便于使用，读者可将救援登录临时设置为默认登录方式。
+为便于使用，可将救援登录临时设置为默认登录方式。
 
 ![Rocky Linux 9](../.gitbook/assets/cloud-rocky-linux-2.png)
 
-救援登录如上所示。可通过右上角的“复制命令”将较长的命令复制到系统内部。
+救援登录界面如上所示。可通过右上角的“复制命令”将较长的命令复制至终端执行。
 
 ### 验证服务器是否处于 UEFI 环境
 
@@ -53,7 +53,7 @@ Boot0006* rocky
 
 ### 服务器的磁盘分区情况
 
-- 通过文件系统类型与磁盘使用情况（同时请读者注意 **/boot/efi**）判断：
+- 通过文件系统类型与磁盘使用情况判断（同时请读者注意 `/dev/vda2` 挂载于 `/boot/efi`，这表明系统正使用 UEFI 模式）：
 
 ```sh
 # df -Th
@@ -238,7 +238,7 @@ root@freebsd:~ # gpart show
 
 观察发现，系统已自动扩展磁盘容量。
 
-接下来查看 FreeBSD 系统网络接口信息：
+查看 FreeBSD 系统网络接口信息：
 
 ```sh
 root@freebsd:~ # ifconfig
@@ -259,7 +259,7 @@ lo0: flags=1008049<UP,LOOPBACK,RUNNING,MULTICAST,LOWER_UP> metric 0 mtu 16384
 	nd6 options=23<PERFORMNUD,ACCEPT_RTADV,AUTO_LINKLOCAL>
 ```
 
-可通过 ping 常用网站，确认网络连接正常。
+可通过 ping 常用网站，验证网络连接状态。
 
 显示内核启动信息和内核日志：
 

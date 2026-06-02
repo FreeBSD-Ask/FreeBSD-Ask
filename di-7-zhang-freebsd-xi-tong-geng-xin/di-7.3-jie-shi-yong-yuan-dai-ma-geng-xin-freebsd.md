@@ -4,7 +4,7 @@
 
 基本思路是获取 FreeBSD 的源代码，随后编译安装。可以使用 Git 直接拉取代码，也可以从 ISO 镜像中下载 txz 压缩文件，或者从 GitHub 下载当前 FreeBSD 项目的 zip 压缩包。
 
-编译流程参见 Handbook 即可。
+编译流程请参考本书其他章节。
 
 ## SVN 到 Git 的迁移
 
@@ -51,15 +51,15 @@ FreeBSD 项目在 2020 至 2021 年间从 SVN 迁移到了 Git，即 <https://gi
 
 #### 拉取 CURRENT
 
-通过 FreeBSD 官方存储库拉取。克隆 FreeBSD 源代码仓库到 **/usr/src**，使用浅克隆减少下载量：
+从 FreeBSD 官方存储库拉取源代码。将 FreeBSD 源代码仓库克隆至 **/usr/src**，采用浅克隆以减少下载量：
 
 ```sh
 $ git clone --depth 1 https://git.FreeBSD.org/src.git /usr/src
 ```
 
-参数 `--depth 1` 说明：浅克隆，仅拉取最新的提交，不拉取全部的日志及历史记录。
+参数 `--depth 1` 说明：采用浅克隆模式，仅获取最新提交，不包含完整的提交历史记录。
 
-或者通过 GitHub 拉取（GitHub 是 FreeBSD.org 上 src 仓库的镜像，每 10 分钟同步一次）。
+从 GitHub 拉取源代码（GitHub 为 FreeBSD.org 上 src 仓库的镜像，每 10 分钟同步一次）。
 
 ```sh
 $ git clone --depth 1 https://github.com/freebsd/freebsd-src /usr/src
@@ -90,7 +90,7 @@ $ git clone --branch releng/15.0 --single-branch --depth 1 https://github.com/fr
 
 ## 从压缩包获取源代码（方便但非最新）
 
-该方法较为简单快捷。
+该方法操作简便。
 
 以 FreeBSD 15.0-RELEASE 为例：
 
@@ -99,7 +99,7 @@ $ git clone --branch releng/15.0 --single-branch --depth 1 https://github.com/fr
 # tar xvf src.txz -C /                                                    # 将源代码解压到根目录
 ```
 
-> **为何要解压到 `/`？**
+> **为何需解压至 `/`？**
 >
 > 因为该压缩包包含路径，解压到 **/** 会将源代码解压到 **/usr/src**。如果将上面的路径改为 **/usr/src**，会将源代码解压到 **/usr/src/usr/src**。
 
@@ -129,7 +129,7 @@ $ git clone --branch releng/15.0 --single-branch --depth 1 https://github.com/fr
 
 > **技巧**
 >
-> 与绝大多数现代 Linux 不同，[FreeBSD](https://github.com/freebsd/freebsd-src/tree/main/contrib/nvi)（OpenBSD）上的 `vi` 是 *[nvi](https://sites.google.com/a/bostic.com/keithbostic/keith-bostic?authuser=0)*（原版 **ex/vi** 的再实现），并非指向任何 *vim* 的符号链接。鲜有人使用，也无学习的必要，因此有必要更换为其他文本编辑器。
+> 与多数现代 Linux 发行版不同，[FreeBSD](https://github.com/freebsd/freebsd-src/tree/main/contrib/nvi)（OpenBSD）上的 `vi` 为 *[nvi](https://sites.google.com/a/bostic.com/keithbostic/keith-bostic?authuser=0)*（原版 **ex/vi** 的再实现），并非指向 *vim* 的符号链接。该编辑器使用频率较低，因此建议更换为其他文本编辑器。
 >
 > ```sh
 > export EDITOR=/usr/bin/ee # 切换 vi 为 ee。若使用 csh/tcsh，则改用：setenv EDITOR /usr/bin/ee

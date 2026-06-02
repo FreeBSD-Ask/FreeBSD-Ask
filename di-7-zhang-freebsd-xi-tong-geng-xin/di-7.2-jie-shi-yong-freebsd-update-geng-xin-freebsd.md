@@ -90,9 +90,9 @@ usr/lib/clang/18.1.8/include
 : q # 这里输入 q 再按回车键
 ```
 
-上面列出的路径仅为示例输出，实际系统中的路径名称和数量可能会略有不同，请以实际输出为准。
+上述路径仅为示例输出，实际系统中的路径名称和数量可能会略有不同，请以实际输出为准。
 
-此处列出的是发生变动的文件，确认后只需输入字母 q（代表“quit”，退出）并按回车键即可。
+此处列出的是发生变动的文件，确认后输入字母 q（quit，退出）并按回车键即可。
 
 随后安装更新：
 
@@ -115,7 +115,7 @@ usr/lib/clang/18.1.8/include
 
 > **注意**
 >
-> 有时补丁不涉及内核，内核版本不会改变，用 `uname -r` 无法体现，但用户空间版本会发生变化。因此可能会看到两个版本号，应以较高者为准。
+> 有时补丁未涉及内核，内核版本不会改变，使用 `uname -r` 无法体现，但用户空间版本会发生变化。因此可能显示两个版本号，应以较高者为准。
 
 重启系统：
 
@@ -136,7 +136,7 @@ usr/lib/clang/18.1.8/include
 
 > **注意**
 >
-> `freebsd-update` 下载慢并非因为其更新源在境外（使用境外服务器更新一样慢）。这可能与其设计缺陷有关，`freebsd-update` 是一个由数千行组成的纯 Shell 脚本。[这是长期存在的问题](https://freebsd-questions.freebsd.narkive.com/xjVoetUM/why-is-freebsd-update-so-horrible-slow)。
+> `freebsd-update` 下载速率较低并非由于其更新源位于境外（使用境外服务器更新同样存在此问题）。可能与其设计方式有关，`freebsd-update` 是一个由数千行代码组成的纯 Shell 脚本。[这是长期存在的问题](https://freebsd-questions.freebsd.narkive.com/xjVoetUM/why-is-freebsd-update-so-horrible-slow)。
 >
 > `freebsd-update upgrade` 在工作目录（默认 **/var/db/freebsd-update/**）中可能需要最多 500 MB 空间，具体取决于已安装的基本系统组件。如果升级因空间不足中断，可使用 `-F` 标志强制继续。
 
@@ -250,7 +250,7 @@ FreeBSD 15.0-RELEASE have been merged into /etc/login.conf:
  #      :refreshperiod@:\
  #      :sessionlimit@:\
  #      :autodelete@:\
-Does this look reasonable (y/n)? # 输入 y 回车，此处是在确认系统文件的变动
+Does this look reasonable (y/n)? # 输入 y 并按回车键，以确认系统文件变动
 
 The following changes, which occurred between FreeBSD 14.3-RELEASE and
 FreeBSD 15.0-RELEASE have been merged into /etc/pkg/FreeBSD.conf:
@@ -259,7 +259,7 @@ FreeBSD 15.0-RELEASE have been merged into /etc/pkg/FreeBSD.conf:
 
 ……此处列出的是发生变动的文件，省略一部分输出……
 
-Does this look reasonable (y/n)?  # 输入 y 回车，此处是在确认系统文件的变动
+Does this look reasonable (y/n)?  # 输入 y 并按回车键，以确认系统文件变动
 
 The following changes, which occurred between FreeBSD 14.3-RELEASE and
 FreeBSD 15.0-RELEASE have been merged into /etc/ssh/sshd_config:
@@ -269,15 +269,15 @@ FreeBSD 15.0-RELEASE have been merged into /etc/ssh/sshd_config:
 ……此处列出的是发生变动的文件，省略一部分输出……
 
  # override default of no subsystems
-Does this look reasonable (y/n)? # 输入 y 回车，此处是在确认系统文件的变动
+Does this look reasonable (y/n)? # 输入 y 并按回车键，以确认系统文件变动
 
 The following files are affected by updates. No changes have
 been downloaded, however, because the files have been modified
 locally:
 /etc/ssl/cert.pem
-(END) # 这里是发生变动的文件，确认后只需输入字母 q（代表“quit”，退出）再按回车键即可。
+(END) # 上述为发生变动的文件，确认后输入字母 q（quit，退出）并按回车键
 
-# 上面列出的路径仅为示例输出，实际系统中的路径名称和数量可能会略有不同，以本机实际显示为准。
+# 上述路径仅为示例输出，实际系统中的路径名称和数量可能会略有不同，以本机实际显示为准。
 
 The following files will be removed as part of updating to
 15.0-RELEASE-p0:

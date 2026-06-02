@@ -18,11 +18,11 @@ UTM（逆构词为 Universal Turing Machine）是开源、基于 QEMU、面向 A
 
 ![下载安装镜像](../.gitbook/assets/install_bsd_on_utm/utm-download-mirror.png)
 
-接下来新建一个虚拟机，点击窗口上的加号 `+`。
+新建虚拟机，选择窗口上的加号 `+`。
 
 ![新建虚拟机](../.gitbook/assets/install_bsd_on_utm/utm-create-vm.png)
 
-如果下载的是 aarch64 的镜像，选择“虚拟化”；如果是 amd64 的镜像，选择“模拟”。
+aarch64 镜像选择“虚拟化”，amd64 镜像选择“模拟”。
 
 ![选择虚拟化类型](../.gitbook/assets/install_bsd_on_utm/utm-select-virtualize.png)
 
@@ -30,7 +30,7 @@ UTM（逆构词为 Universal Turing Machine）是开源、基于 QEMU、面向 A
 
 ![选择操作系统](../.gitbook/assets/install_bsd_on_utm/utm-select-os.png)
 
-默认 4 GB 内存可适应大多数情况，初始状态 FreeBSD 15 约占用 500 MB 内存，可根据实际需求调整内存大小。CPU 核心按需设置，M1 芯片可以设置为 4。
+内存默认 4 GB，可满足大多数需求。FreeBSD 15 初始运行时约占用 500 MB 内存，可根据实际需求调整。CPU 核心数按需设置，M1 芯片建议设为 4。
 
 ![设置内存和处理器核心数量](../.gitbook/assets/install_bsd_on_utm/utm-set-memory-cpu.png)
 
@@ -38,19 +38,19 @@ UTM（逆构词为 Universal Turing Machine）是开源、基于 QEMU、面向 A
 
 ![设置启动设备](../.gitbook/assets/install_bsd_on_utm/utm-set-boot-device.png)
 
-存储空间默认 64 GB，初始状态的 FreeBSD 会占用约 5 GB 空间，可根据需求调整。
+存储空间默认 64 GB，FreeBSD 初始安装约占用 5 GB 空间，可按需调整。
 
 ![设置存储空间](../.gitbook/assets/install_bsd_on_utm/utm-set-storage.png)
 
-共享目录可以暂时跳过。
+共享目录可暂不配置。
 
 ![跳过共享目录](../.gitbook/assets/install_bsd_on_utm/utm-skip-shared-dir.png)
 
-以上步骤设置完成后，点击“存储”。如需进一步设置，可以勾选“打开虚拟机设置”，或者在保存后点击右上角的设置按钮打开配置界面。
+完成上述设置后，选择“存储”。如需进一步配置，可勾选“打开虚拟机设置”，或在保存后点击右上角的设置按钮进入配置界面。
 
 ![完成设置](../.gitbook/assets/install_bsd_on_utm/utm-setup-complete.png)
 
-点击播放按钮启动虚拟机。
+选择播放按钮启动虚拟机。
 
 ![启动虚拟机](../.gitbook/assets/install_bsd_on_utm/utm-start-vm.png)
 

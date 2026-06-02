@@ -94,7 +94,7 @@ wlan0: flags=8843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST> metric 0 mtu 1500
 	nd6 options=829<PERFORMNUD,IFDISABLED,AUTO_LINKLOCAL,STABLEADDR>
 ```
 
-FreeBSD 使用驱动程序名称后跟一个单元号来命名网络接口适配器。单元号表示适配器在启动时被检测到的顺序，或者后续发现时的顺序。例如，`em0` 是系统中使用 em(4) 驱动程序的第一块网卡。而 `wlan0` 是使用 rtwn(4) 驱动程序的第一块无线网卡。
+FreeBSD 采用驱动程序名称后接单元号的方式为网络接口命名。单元号表示适配器在启动时被检测到的顺序，或后续被发现时的顺序。例如，`em0` 是系统中使用 em(4) 驱动程序的第一块网卡，`wlan0` 是使用 rtwn(4) 驱动程序的第一块无线网卡。
 
 该示例显示以下设备：
 
@@ -254,7 +254,7 @@ IPv6 是 IP 协议的新版本，即 IPv4 的继任者。IPv6 相对于 IPv4 提
 - 路由器仅在路由表中存储网络聚合地址，通过地址聚合减少路由表条目，这与 IPv4 相比大幅降低了路由器的内存和 CPU 需求。
 - 地址自动配置（RFC4862）。
 - 以多播取代广播地址。
-- 支持 IPsec（IP 安全），但非强制要求（RFC 4301 已将 IPsec 从必须降级为推荐）。
+- 支持 IPsec（IP 安全），但非强制要求（RFC 6434 已将 IPv6 节点对 IPsec 的实现要求由 MUST 调整为 SHOULD，因此成为推荐而非必选）。
 - 简化的头部结构。
 - 对移动 IP 的支持。
 - IPv6 到 IPv4 的过渡机制。

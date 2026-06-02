@@ -14,33 +14,31 @@
 
 ## 概述
 
-本节介绍在 KVM、QEMU 等平台上安装 FreeBSD 的方法。多数采用 KVM、QEMU 虚拟化架构的服务商不直接提供 FreeBSD 系统支持，只能通过特殊方法手动安装。
+本节介绍在 KVM、QEMU 等平台上安装 FreeBSD 的方法。多数采用 KVM、QEMU 虚拟化架构的服务商未直接提供 FreeBSD 系统支持，需通过特殊方法手动安装。
 
-这些服务商虽然在某些机型上提供 FreeBSD 系统镜像，但支持并不完善，例如自带镜像默认未启用 `BBR`，而某些机型则完全不提供 FreeBSD 支持。
+部分服务商虽在某些机型上提供 FreeBSD 系统镜像，但支持尚不完善，例如默认镜像未启用 `BBR`，某些机型则完全不提供 FreeBSD 支持。
 
-本方法无需使用 mfsLinux 作为安装介质，也无需通过 `dd` 命令安装。
+本方法无需使用 mfsLinux 作为安装介质，亦无需通过 `dd` 命令安装。
 
-mfsBSD 是一款完全载入内存的 FreeBSD 系统，类似于 Windows PE（Preinstallation Environment）系统。
+mfsBSD 是一款完全载入内存的 FreeBSD 系统，类似于 Windows PE（Preinstallation Environment）。
 
-本节通过 GRUB2 借助 MEMDISK 模块将 mfsBSD 载入内存盘，并从中启动，随后通过 mfsBSD 中的 `bsdinstall` 命令安装 FreeBSD。
+本节通过 GRUB2 借助 MEMDISK 模块将 mfsBSD 载入内存，并从中启动，随后通过 mfsBSD 中的 `bsdinstall` 命令安装 FreeBSD。
 
 ## 获取现有网络配置
 
-部分服务器可能未启用 DHCP 服务，而需要手动指定 IP，多见于小型厂商的服务器。
+部分服务器可能未启用 DHCP 服务，需手动指定 IP，多见于小型服务商。
 
-安装前，请在原 Linux 系统中确认 IP 地址和子网掩码。
-
-可以使用命令 `ip addr` 和 `ip route show` 查看网关信息。
+安装前，请在原 Linux 系统中确认 IP 地址和子网掩码，可使用命令 `ip addr` 和 `ip route show` 查看网关信息。
 
 ## 准备 mfsBSD
 
-需要下载 mfsBSD。可以下载到本地计算机，再通过 SCP、SFTP 或 WinSCP 等工具上传至服务器；也可以直接在服务器上使用命令行下载。
+下载 mfsBSD。可下载至本地计算机后通过 SCP、SFTP 或 WinSCP 等工具上传至服务器；亦可直接使用命令行在服务器上下载。
 
 > **注意**
 >
-> 因为 mfsBSD 的下载地址不支持 IPv6 网络，仅支持 IPv6 的服务器无法通过命令行下载。
->
-> 针对该问题，已通过邮件与作者沟通，但截至发稿时尚未收到回应。
+> 因 mfsBSD 的下载站点不支持 IPv6 网络，仅支持 IPv6 的服务器无法通过命令行下载。
+
+针对此问题，已通过邮件与作者沟通，截至发稿时尚未收到回复。
 
 ### 内存 ≤ 512 MB
 
@@ -72,21 +70,21 @@ mfsBSD 是一款完全载入内存的 FreeBSD 系统，类似于 Windows PE（Pr
 
 ### 准备 mfsBSD.iso
 
-将下载的 mfsBSD 重命名为 `mfsbsd.iso`，并放在 **/boot** 目录中（否则可能因 LVM 导致硬盘分区无法识别）。
+将下载的 mfsBSD 重命名为 `mfsbsd.iso` 并放置于 **/boot** 目录中（若放置于其他目录，可能因 LVM 导致无法识别硬盘分区）。
 
 ## 获取 memdisk
 
-memdisk 是 syslinux 软件提供的工具，用于将 ISO 镜像加载到内存中。
+memdisk 是 syslinux 提供的工具，用于将 ISO 镜像加载到内存中。
 
 > **警告**
 >
-> 请注意，GRUB2 自带的 `memdisk.mod` 模块并非此处所需的 MEMDISK。
+> GRUB2 自带的 `memdisk.mod` 模块并非此处所需的 MEMDISK。
 >
-> memdisk 必须通过包管理器安装的 syslinux 软件提供。
+> memdisk 须通过包管理器安装的 syslinux 提供。
 
 ### 安装 syslinux
 
-不同 Linux 发行版安装 syslinux 的命令有所不同。
+不同 Linux 发行版安装 syslinux 的命令有所差异。
 
 - Debian/Ubuntu
 
@@ -110,7 +108,7 @@ memdisk 是 syslinux 软件提供的工具，用于将 ISO 镜像加载到内存
 
 ## 取消隐藏的 GRUB 菜单
 
-取消 GRUB2 菜单自动隐藏设置：
+取消 GRUB2 菜单的自动隐藏设置：
 
 ```bash
 # grub2-editenv - unset menu_auto_hide
