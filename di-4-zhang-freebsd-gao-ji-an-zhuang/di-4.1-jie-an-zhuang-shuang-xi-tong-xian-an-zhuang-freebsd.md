@@ -66,7 +66,7 @@ FreeBSD 安装完成后，安装 Windows 系统。
 
 ![Windows 安装分区界面](../.gitbook/assets/dual-boot-5.png)
 
-在分区界面中，删除（Delete Partition）整个 208 GB 的交换分区（本例中为"磁盘 0 分区 3"），因为该空间已为 Windows 预留。
+在分区界面中，删除（Delete Partition）整个 208 GB 的交换分区（本例中为“磁盘 0 分区 3”），因为该空间已为 Windows 预留。
 
 ![删除交换分区](../.gitbook/assets/dual-boot-6.png)
 

@@ -12,7 +12,7 @@
 
 ![Parallels Desktop 20 安装 FreeBSD 15.0](../.gitbook/assets/parallels-2.png)
 
-选择"手动选择"并继续。
+选择“手动选择”并继续。
 
 ![Parallels Desktop 20 安装 FreeBSD 15.0](../.gitbook/assets/parallels-3.png)
 
@@ -28,7 +28,7 @@
 
 ![Parallels Desktop 20 安装 FreeBSD 15.0](../.gitbook/assets/parallels-5.png)
 
-界面提示"未能检测操作系统"时，忽略该提示并继续。
+界面提示“未能检测操作系统”时，忽略该提示并继续。
 
 ![Parallels Desktop 20 安装 FreeBSD 15.0](../.gitbook/assets/parallels-6.png)
 

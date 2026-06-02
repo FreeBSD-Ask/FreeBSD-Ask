@@ -46,7 +46,7 @@ aarch64 镜像选择“虚拟化”，amd64 镜像选择“模拟”。
 
 ![跳过共享目录](../.gitbook/assets/install_bsd_on_utm/utm-skip-shared-dir.png)
 
-完成上述设置后，选择"存储"。如需进一步配置，可勾选"打开虚拟机设置"，或在保存后点击右上角的设置按钮进入配置界面。
+完成上述设置后，选择“存储”。如需进一步配置，可勾选“打开虚拟机设置”，或在保存后点击右上角的设置按钮进入配置界面。
 
 ![完成设置](../.gitbook/assets/install_bsd_on_utm/utm-setup-complete.png)
 
