@@ -136,7 +136,7 @@
 
 * [13.1 Linux 兼容层架构](di-13-zhang-linux-er-jin-zhi-jian-rong-ceng/di-13.1-jie-linux-jian-rong-ceng-jia-gou.md)
 * [13.2 Rocky Linux 兼容层](di-13-zhang-linux-er-jin-zhi-jian-rong-ceng/di-13.2-jie-rocky-linux-jian-rong-ceng.md)
-* [13.3 Ubuntu/Debian 兼容层](di-13-zhang-linux-er-jin-zhi-jian-rong-ceng/di-13.3-jie-ubuntu-debian-jian-rong-ceng.md)
+* [13.3 Ubuntu/Debian/Kali Linux 兼容层](di-13-zhang-linux-er-jin-zhi-jian-rong-ceng/di-13.3-jie-ubuntu-debian-jian-rong-ceng.md)
 * [13.4 Arch Linux 兼容层](di-13-zhang-linux-er-jin-zhi-jian-rong-ceng/di-13.4-jie-arch-linux-jian-rong-ceng.md)
 * [13.5 Slackware Linux 兼容层](di-13-zhang-linux-er-jin-zhi-jian-rong-ceng/di-13.5-jie-slackware-linux-jian-rong-ceng.md)
 * [13.6 openSUSE 兼容层](di-13-zhang-linux-er-jin-zhi-jian-rong-ceng/di-13.6-jie-opensuse-jian-rong-ceng.md)
