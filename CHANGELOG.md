@@ -6,6 +6,7 @@
   - 完全重写：“13.3 Ubuntu/Debian 兼容层”，更新到 Ubuntu 26.04 LTS、Debian 13
   - 新增 Kali Linux 兼容层
   - 删除“13.6 openSUSE 兼容层”，因为全面启用了 SELinux，不被支持
+  - 完全重写：“13.6 Gentoo Linux 兼容层”，更新到 2026.6.1 版本（自动构建）
 - 2026.6.2
   - “13.2 Rocky Linux 兼容层”：完全重写“通过 Shell 脚本安装 Rocky Linux 10 兼容层”，现在直接引用 WSL 兼容层
 - 2026.6.1
