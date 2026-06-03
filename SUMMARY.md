@@ -139,12 +139,11 @@
 * [13.3 Ubuntu/Debian/Kali Linux 兼容层](di-13-zhang-linux-er-jin-zhi-jian-rong-ceng/di-13.3-jie-ubuntu-debian-jian-rong-ceng.md)
 * [13.4 Arch Linux 兼容层](di-13-zhang-linux-er-jin-zhi-jian-rong-ceng/di-13.4-jie-arch-linux-jian-rong-ceng.md)
 * [13.5 Slackware Linux 兼容层](di-13-zhang-linux-er-jin-zhi-jian-rong-ceng/di-13.5-jie-slackware-linux-jian-rong-ceng.md)
-* [13.6 openSUSE 兼容层](di-13-zhang-linux-er-jin-zhi-jian-rong-ceng/di-13.6-jie-opensuse-jian-rong-ceng.md)
-* [13.7 Gentoo Linux 兼容层](di-13-zhang-linux-er-jin-zhi-jian-rong-ceng/di-13.7-jie-gentoo-linux-jian-rong-ceng.md)
-* [13.8 微信（Linux 版）](di-13-zhang-linux-er-jin-zhi-jian-rong-ceng/di-13.8-jie-wei-xin-linux-ban.md)
-* [13.9 QQ（Linux 版）](di-13-zhang-linux-er-jin-zhi-jian-rong-ceng/di-13.9-jie-qq-linux-ban.md)
-* [13.10 WPS Office（Linux 版）](di-13-zhang-linux-er-jin-zhi-jian-rong-ceng/di-13.10-jie-wps-office-linux-ban.md)
-* [13.11 故障排除与未竟事宜](di-13-zhang-linux-er-jin-zhi-jian-rong-ceng/di-13.11-jie-gu-zhang-pai-chu-yu-wei-jing-shi-yi.md)
+* [13.6 Gentoo Linux 兼容层](di-13-zhang-linux-er-jin-zhi-jian-rong-ceng/di-13.6-jie-gentoo-linux-jian-rong-ceng.md)
+* [13.7 微信（Linux 版）](di-13-zhang-linux-er-jin-zhi-jian-rong-ceng/di-13.7-jie-wei-xin-linux-ban.md)
+* [13.8 QQ（Linux 版）](di-13-zhang-linux-er-jin-zhi-jian-rong-ceng/di-13.8-jie-qq-linux-ban.md)
+* [13.9 WPS Office（Linux 版）](di-13-zhang-linux-er-jin-zhi-jian-rong-ceng/di-13.9-jie-wps-office-linux-ban.md)
+* [13.10 故障排除与未竟事宜](di-13-zhang-linux-er-jin-zhi-jian-rong-ceng/di-13.10-jie-gu-zhang-pai-chu-yu-wei-jing-shi-yi.md)
 
 ## 第 14 章 游戏、科学计算和专业工具
 

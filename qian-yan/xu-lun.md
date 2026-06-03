@@ -37,7 +37,7 @@
 
 **第 8 章 网络管理**：介绍基础与高级网络配置、无线网络（Wi-Fi）配置、USB 网络共享、蓝牙、系统代理及 V2Ray、Mihomo 等代理工具的配置。
 
-**第 9 章 X Window 系统**：介绍显卡驱动概述，Intel、AMD 和 NVIDIA 显卡驱动的安装与配置，系统字体的替换方法，以及远程桌面访问。
+**第 9 章 X Window 系统**：介绍显卡驱动概论，Intel、AMD 和 NVIDIA 显卡驱动的安装与配置，系统字体的替换方法，以及远程桌面访问。
 
 **第 10 章 桌面环境**：介绍在 FreeBSD 上运行的各类桌面环境与窗口管理器，包括 KDE 6（X11 与 Wayland 会话）、MATE、Xfce、Cinnamon、LXQt、GNOME、IceWM 及 CDE（拟删除）。
 
@@ -45,7 +45,7 @@
 
 **第 12 章 本地化与输入法**：介绍本地化环境变量配置、特定语言的区域配置，以及 Fcitx、IBus 输入法框架和五笔输入法的安装与设置。
 
-**第 13 章 Linux 二进制兼容层**：介绍 FreeBSD 的 Linux 兼容层架构，涵盖 Rocky Linux、Ubuntu/Debian、Arch Linux、Slackware、openSUSE、Gentoo 等多种 Linux 发行版的兼容环境搭建，以及微信、QQ、WPS Office 等 Linux 应用的运行方法和故障排除。
+**第 13 章 Linux 兼容层**：介绍 FreeBSD 的 Linux 兼容层架构，涵盖 Rocky Linux、Ubuntu/Debian/Kali Linux、Arch Linux、Slackware、Gentoo 等多种 Linux 发行版的兼容环境搭建，以及微信、QQ、WPS Office 等 Linux 应用的运行方法和故障排除。
 
 **第 14 章 游戏、科学计算和专业工具**：介绍 Ren'Py 视觉小说引擎、Godot 游戏引擎、Minecraft、Steam 客户端和 Wine 配置，以及科研和专业计算工具的使用。
 
@@ -63,7 +63,7 @@
 
 **第 21 章 安全**：介绍信息安全概论、账户认证安全、资源限制、安全等级、root 账户桌面登录、安全事件审计、OpenSSL、入侵检测系统（IDS）、第三方漏洞与安全公告，以及强制访问控制框架（MAC 框架）。
 
-**第 22 章 防火墙**：介绍 FreeBSD 内置防火墙系统，包括 Packet Filter（PF）、IPFilter（IPF）、IPFW 的配置，以及 Fail2Ban 和 blocklistd 工具的使用。
+**第 22 章 防火墙**：介绍防火墙概论与 FreeBSD 内置防火墙系统，包括 Packet Filter（PF）、IPFilter（IPF）、IPFW 的配置，以及 Fail2Ban 和 blocklistd 工具的使用。
 
 **第 23 章 Jail 容器管理**：介绍 FreeBSD 原生轻量级虚拟化技术 Jail 的基础配置及 Qjail 管理工具的使用。
 
@@ -71,7 +71,7 @@
 
 **第 25 章 虚拟化与容器管理**：介绍使用 bhyve 及 vm-bhyve 工具安装 Windows 11、通过 BVCP 的 Web 界面管理 bhyve 虚拟机，以及 Podman 容器管理和在 FreeBSD 上安装 VirtualBox。
 
-**第 26 章 数据库管理**：介绍数据库概论，以及 PostgreSQL、MySQL 8.4 及 MongoDB 8.0 在 FreeBSD 上的安装与配置，同时涵盖 pgAdmin4 管理工具的使用。
+**第 26 章 数据库管理**：介绍数据库概论，以及 PostgreSQL、MySQL 及 MongoDB 在 FreeBSD 上的安装与配置，同时涵盖 pgAdmin4 管理工具的使用。
 
 **第 27 章 文件传输协议（FTP）**：介绍文件传输协议（FTP）概述，以及 Pure-FTPd（基于 MySQL）、ProFTPd（基于 MySQL）、vsftpd 等 FTP 服务器的配置。
 
