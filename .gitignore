@@ -207,6 +207,9 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+### macOS ###
+.DS_Store
+
 ### yarn ###
 # https://yarnpkg.com/getting-started/qa#which-files-should-be-gitignored
 
