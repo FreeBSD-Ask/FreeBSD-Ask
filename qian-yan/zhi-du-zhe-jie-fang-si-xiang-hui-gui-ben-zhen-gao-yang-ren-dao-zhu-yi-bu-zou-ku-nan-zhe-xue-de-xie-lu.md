@@ -216,7 +216,7 @@
 >
 > From Linus Torvalds < >
 >
-> Subject Re: SCO: “ thread creation is about a thousand times faster than on native
+> Subject Re: SCO: “thread creation is about a thousand times faster than on native”
 >
 >
 > On Fri, 25 Aug 2000, Jamie Lokier wrote:
