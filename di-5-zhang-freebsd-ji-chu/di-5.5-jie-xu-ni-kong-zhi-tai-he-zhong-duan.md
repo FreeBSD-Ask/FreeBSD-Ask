@@ -29,8 +29,8 @@ login:
 ```sh
 FreeBSD/amd64 (ykla) (ttyv0)
 
-login: root # 此处输入用户名，然后按回车键 ①
-Password: # 此处输入密码，然后按回车键
+login: root # 此处输入用户名，随后按回车键 ①
+Password: # 此处输入密码，随后按回车键
 Last login: Tue Mar 18 17:24:48 2025 from 3413e8b6b43f
 FreeBSD 15.0-CURRENT (GENERIC) main-n275981-b0375f78e32a
 

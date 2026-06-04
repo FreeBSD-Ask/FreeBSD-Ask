@@ -86,9 +86,9 @@ FreeBSD 中文社区未通过其他域名部署本书，唯一官方域名为 `b
 
 [前往捐赠 FreeBSD 基金会](https://freebsdfoundation.org/donate-to-freebsd-foundation/)
 
-支付方式支持：VISA 信用卡（可通过 Amazon Pay 或 Google Pay）、万事达品牌借记卡。
+支付方式支持：万事达品牌借记卡、VISA 信用卡（可通过 Amazon Pay 或 Google Pay）。
 
-可通过 Microsoft Rewards 积分 [捐赠 FreeBSD 基金会](https://rewards.bing.com/redeem/000999036000?causeId=840-841545163&&PC=EMMX01)。Microsoft Rewards 是微软必应搜索提供的积分计划。同方式也可以 [捐赠 NetBSD 基金会](https://rewards.bing.com/redeem/000999036000?causeId=840-134134071&PC=EMMX01)。
+Microsoft Rewards 是微软必应搜索提供的积分计划。可通过 Microsoft Rewards 积分 [捐赠 FreeBSD 基金会](https://rewards.bing.com/redeem/000999036000?causeId=840-841545163&&PC=EMMX01)。同方式也可以 [捐赠 NetBSD 基金会](https://rewards.bing.com/redeem/000999036000?causeId=840-134134071&PC=EMMX01)。
 
 ## 贡献者
 
@@ -120,19 +120,19 @@ FreeBSD 中文社区未通过其他域名部署本书，唯一官方域名为 `b
 
 | 指标 | 统计数据 |
 | ---- | -------- |
-| 用户总数 | 51,522 位 |
-| 会话数 | 100,797 次 |
-| 浏览次数 | 656,512 次 |
-| 平均会话时长 | 8 分 24 秒 |
+| 用户总数 | 53,140 位 |
+| 会话数 | 102,510 次 |
+| 浏览次数 | 660,467 次 |
+| 平均会话时长 | 8 分 18 秒 |
 
 <!-- GA_STATS:END -->
 
 <!-- GA_BADGES:START -->
 
-![总用户数](https://img.shields.io/badge/总用户数-51,522-green)
-![会话数](https://img.shields.io/badge/会话数-100,797-orange)
-![浏览次数](https://img.shields.io/badge/浏览次数-656,512-blue)
-![平均会话时长](https://img.shields.io/badge/平均会话时长-8min24s-purple)
+![总用户数](https://img.shields.io/badge/总用户数-53,140-green)
+![会话数](https://img.shields.io/badge/会话数-102,510-orange)
+![浏览次数](https://img.shields.io/badge/浏览次数-660,467-blue)
+![平均会话时长](https://img.shields.io/badge/平均会话时长-8min18s-purple)
 
 <!-- GA_BADGES:END -->
 
@@ -158,16 +158,16 @@ FreeBSD 中文社区未通过其他域名部署本书，唯一官方域名为 `b
 <!-- CHINESE_CHAR_COUNT_END -->
 
 <!-- commit-progress-start -->
-**第 3 版编纂进度:**   （人工提交数: 1556 / 3533）
+**第 3 版编纂进度:**   （人工提交数: 1579 / 3533）
 
 ![进度徽章](.gitbook/assets/progress.svg)
 
-距离第 3 版还需提交: 1977 次
+距离第 3 版还需提交: 1954 次
 
 提交统计（历史）:
 
-- 人工提交: 8622
-- 机器人提交: 361
+- 人工提交: 8645
+- 机器人提交: 364
 <!-- commit-progress-end -->
 
 ## ⭐ 图

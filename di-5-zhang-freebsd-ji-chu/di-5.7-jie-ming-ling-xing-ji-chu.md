@@ -318,7 +318,7 @@ cd is a shell builtin
 /bin/ls was installed by package FreeBSD-runtime-15.snap20250313173555
 ```
 
-如果缺少某个命令，一般可以通过安装相应的软件包来获取，比如 `lspci` 命令，来自软件包 `sysutils/pciutils`。然而也有许多命令存在 Linux 专有性问题，不兼容其他操作系统，比如 `ip` 命令，来自软件包 iproute2。
+如果缺少某个命令，一般可以通过安装相应的软件包来获取，例如 `lspci` 命令，来自软件包 `sysutils/pciutils`。然而也有许多命令存在 Linux 专有性问题，不兼容其他操作系统，例如 `ip` 命令，来自软件包 iproute2。
 
 ## 常用命令
 
@@ -517,7 +517,7 @@ rm: /home/ykla/test/: is a directory # 提示 /home/ykla/test/ 为目录
 >
 > “从前有座山，山上有座庙，庙里有个老和尚在给小和尚讲故事。老和尚说：‘从前有座山，山上有座庙……’”这就是递归的实例。
 >
-> 在该操作中，其含义是先进入 **/home/ykla/test/** 下最深层的子目录（如存在），删除其中的文件和子目录本身，然后向上逐层重复该过程。直至删除 **/home/ykla/test/**。即使用深度优先搜索算法（Depth-First-Search，DFS）。
+> 在该操作中，其含义是先进入 **/home/ykla/test/** 下最深层的子目录（如存在），删除其中的文件和子目录本身，随后向上逐层重复该过程。直至删除 **/home/ykla/test/**。即使用深度优先搜索算法（Depth-First Search，DFS）。
 
 ```sh
 $ rm -rf /home/ykla/test/
@@ -684,7 +684,7 @@ $ rm -rf *
 
 其语义为：仅当前一条命令执行成功（返回退出状态码 0）时，才执行后一条命令；否则跳过后续命令。
 
-使用场景：执行一连串有依赖关系的命令。例如必须先刷新软件源才能更新系统，然后才能重启。以 Ubuntu 为例：`sudo apt update -y && sudo apt upgrade -y && sudo reboot`。只有前面的命令执行成功，才会执行后面的命令。
+使用场景：执行一连串有依赖关系的命令。例如必须先刷新软件源才能更新系统，随后才能重启。以 Ubuntu 为例：`sudo apt update -y && sudo apt upgrade -y && sudo reboot`。只有前面的命令执行成功，才会执行后面的命令。
 
 ### 逻辑运算符 `||`
 
@@ -759,7 +759,7 @@ drw-------  2 ykla ykla 2 Apr 28 00:24 test
 
 > **技巧**
 >
-> 有些命令可以读取输入，比如 sort(1)。要排序该列表，可以这样重定向输入：
+> 有些命令可以读取输入，例如 sort(1)。要排序该列表，可以这样重定向输入：
 
 ```sh
 $ sort < test.txt
@@ -791,7 +791,7 @@ drw-------  2 ykla ykla 2 Apr 28 00:24 test
 total 1
 ```
 
-在此示例中，`test.txt` 的内容将被排序，然后输出传递给 less(1)。这使用户可以按自己的节奏浏览输出内容，防止其在屏幕上滚动消失。
+在此示例中，`test.txt` 的内容将被排序，随后输出传递给 less(1)。这使用户可以按自己的节奏浏览输出内容，防止其在屏幕上滚动消失。
 
 ## 关机与重启
 

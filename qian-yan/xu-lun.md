@@ -31,61 +31,63 @@
 
 **第 5 章 FreeBSD 基础**：面向 Windows、Linux 和 macOS 用户提供迁移指南，涵盖系统目录结构、虚拟控制台、shell 使用、命令行基础、文本编辑器、用户与权限管理及压缩工具等基础操作。
 
-**第 6 章 软件管理和系统升级**：介绍 FreeBSD 软件源的更换方法，使用 pkg 管理二进制包、使用 Ports 以源代码方式安装软件，系统更新检测、通过 freebsd-update 或源代码方式进行系统更新，以及使用 DVD 安装软件和 FreeBSD 镜像站现状。
+**第 6 章 软件管理**：介绍 FreeBSD 包管理器概述、软件源的更换方法，使用 pkg 管理二进制包、使用 Ports 以源代码方式安装软件、Ports 构建调优，以及使用 DVD 安装软件和 FreeBSD 镜像站现状。
 
-**第 7 章 网络管理**：介绍基础与高级网络配置、无线网络（Wi-Fi）配置、USB 网络共享、蓝牙、系统代理及 V2Ray、Mihomo 等代理工具的配置。
+**第 7 章 FreeBSD 系统更新**：介绍系统更新检测，以及通过 freebsd-update、源代码方式或 pkgbase 进行系统更新的方法。
 
-**第 8 章 X Window 系统**：介绍显卡驱动概述，Intel、AMD 和 NVIDIA 显卡驱动的安装与配置，系统字体的替换方法，以及远程桌面访问。
+**第 8 章 网络管理**：介绍基础与高级网络配置、无线网络（Wi-Fi）配置、USB 网络共享、蓝牙、系统代理及 V2Ray、Mihomo 等代理工具的配置。
 
-**第 9 章 桌面环境**：介绍在 FreeBSD 上运行的各类桌面环境与窗口管理器，包括 KDE 6（X11 与 Wayland 会话）、MATE、Xfce、Cinnamon、LXQt、GNOME、IceWM 及 CDE（拟删除）。
+**第 9 章 X Window 系统**：介绍显卡驱动概论，Intel、AMD 和 NVIDIA 显卡驱动的安装与配置，系统字体的替换方法，以及远程桌面访问。
 
-**第 10 章 多媒体和外部设备**：介绍 Web 浏览器、声卡配置、音频与视频播放器、打印机、摄像头、人机输入设备及多媒体处理工具的使用方法。
+**第 10 章 桌面环境**：介绍在 FreeBSD 上运行的各类桌面环境与窗口管理器，包括 KDE 6（X11 与 Wayland 会话）、MATE、Xfce、Cinnamon、LXQt、GNOME、IceWM 及 CDE（拟删除）。
 
-**第 11 章 本地化与输入法**：介绍本地化环境变量配置、特定语言的区域配置，以及 Fcitx、IBus 输入法框架和五笔输入法的安装与设置。
+**第 11 章 多媒体和外部设备**：介绍 Web 浏览器、声卡配置、音频与视频播放器、打印机、摄像头、文档查看器、人机输入设备及多媒体处理工具的使用方法。
 
-**第 12 章 Linux 二进制兼容层**：介绍 FreeBSD 的 Linux 兼容层架构，涵盖 Rocky Linux、Ubuntu/Debian、Arch Linux、Slackware、openSUSE、Gentoo 等多种 Linux 发行版的兼容环境搭建，以及微信、QQ、WPS Office 等 Linux 应用的运行方法和故障排除。
+**第 12 章 本地化与输入法**：介绍本地化环境变量配置、特定语言的区域配置，以及 Fcitx、IBus 输入法框架和五笔输入法的安装与设置。
 
-**第 13 章 游戏、科学计算和专业工具**：介绍 Ren'Py 视觉小说引擎、Godot 游戏引擎、Minecraft、Steam 客户端和 Wine 配置，以及科研和专业计算工具的使用。
+**第 13 章 Linux 兼容层**：介绍 FreeBSD 的 Linux 兼容层架构，涵盖 Rocky Linux、Ubuntu/Debian/Kali Linux、Arch Linux、Slackware、Gentoo 等多种 Linux 发行版的兼容环境搭建，以及微信、QQ、WPS Office 等 Linux 应用的运行方法和故障排除。
 
-**第 14 章 人工智能**：介绍人工智能概论与 AI 大模型在 FreeBSD 上的本地部署方法。
+**第 14 章 游戏、科学计算和专业工具**：介绍 Ren'Py 视觉小说引擎、Godot 游戏引擎、Minecraft、Steam 客户端和 Wine 配置，以及科研和专业计算工具的使用。
 
-**第 15 章 系统管理**：讲解启动引导器、UEFI 固件管理、服务管理、进程与守护进程、用户分级、权限提升工具（sudo、doas 等）、bsdconfig 配置工具、OpenSSH、设备资源提示、定时任务、系统日志管理、sysctl 工具、NTP 时间同步及 Live 镜像与系统恢复等系统管理功能。
+**第 15 章 人工智能**：介绍人工智能概论与 AI 大模型在 FreeBSD 上的本地部署方法。
 
-**第 16 章 存储管理**：介绍 USB 存储设备、内存盘、文件系统自动挂载、交换分区配置及加密交换分区。
+**第 16 章 系统管理**：讲解启动引导器、UEFI 固件管理、服务管理、进程与守护进程、用户分级、权限提升工具（sudo、doas 等）、bsdconfig 配置工具、OpenSSH、设备资源提示、定时任务、系统日志管理、sysctl 工具、NTP 时间同步及 Live 镜像与系统恢复等系统管理功能。
 
-**第 17 章 其他文件系统**：介绍 Windows、Linux 与 macOS 文件系统的使用。
+**第 17 章 存储管理**：介绍 USB 存储设备、内存盘、文件系统自动挂载、交换分区配置及加密交换分区。
 
-**第 18 章 UFS 文件系统**：介绍 UFS 文件系统概述、添加 UFS 磁盘、磁盘扩展、磁盘快照、磁盘配额及磁盘加密。
+**第 18 章 其他文件系统**：介绍 Windows、Linux 与 macOS 文件系统的使用。
 
-**第 19 章 ZFS 文件系统**：涵盖 ZFS 的历史与现实、特性和术语、存储池管理、快照与扩容等 ZFS 核心管理操作、委托管理、启动环境及启动环境与多版本共存。
+**第 19 章 UFS 文件系统**：介绍 UFS 文件系统概述、添加 UFS 磁盘、磁盘扩展、磁盘快照、磁盘配额及磁盘加密。
 
-**第 20 章 安全**：介绍信息安全概论、账户认证安全、资源限制、安全等级、root 账户桌面登录、安全事件审计、OpenSSL、入侵检测系统（IDS）、第三方漏洞与安全公告，以及强制访问控制框架（MAC 框架）。
+**第 20 章 ZFS 文件系统**：涵盖 ZFS 的历史与现实、特性和术语、存储池管理、快照与扩容等 ZFS 核心管理操作、委托管理、启动环境及调优。
 
-**第 21 章 防火墙**：介绍 FreeBSD 内置防火墙系统，包括 Packet Filter（PF）、IPFilter（IPF）、IPFW 的配置，以及 Fail2Ban 和 blocklistd 工具的使用。
+**第 21 章 安全**：介绍信息安全概论、账户认证安全、资源限制、安全等级、root 账户桌面登录、安全事件审计、OpenSSL、入侵检测系统（IDS）、第三方漏洞与安全公告，以及强制访问控制框架（MAC 框架）。
 
-**第 22 章 Jail 容器管理**：介绍 FreeBSD 原生轻量级虚拟化技术 Jail 的基础配置及 Qjail 管理工具的使用。
+**第 22 章 防火墙**：介绍防火墙概论与 FreeBSD 内置防火墙系统，包括 Packet Filter（PF）、IPFilter（IPF）、IPFW 的配置，以及 Fail2Ban 和 blocklistd 工具的使用。
 
-**第 23 章 Linux Jail**：介绍在 FreeBSD Jail 中运行 Linux 发行版的方法，涵盖 Linux Jail 基础准备，以及 Debian、Ubuntu、antiX Linux、Alpine Linux 等发行版的 Jail 创建与 GUI 配置。
+**第 23 章 Jail 容器管理**：介绍 FreeBSD 原生轻量级虚拟化技术 Jail 的基础配置及 Qjail 管理工具的使用。
 
-**第 24 章 虚拟化与容器管理**：介绍使用 bhyve 及 vm-bhyve 工具安装 Windows 11、通过 BVCP 的 Web 界面管理 bhyve 虚拟机，以及 Podman 容器管理和在 FreeBSD 上安装 VirtualBox。
+**第 24 章 Linux Jail**：介绍在 FreeBSD Jail 中运行 Linux 发行版的方法，涵盖 Linux Jail 基础准备，以及 Debian、Ubuntu、antiX Linux、Alpine Linux 等发行版的 Jail 创建与 GUI 配置。
 
-**第 25 章 数据库管理**：介绍数据库概论，以及 PostgreSQL、MySQL 8.4 及 MongoDB 8.0 在 FreeBSD 上的安装与配置，同时涵盖 pgAdmin4 管理工具的使用。
+**第 25 章 虚拟化与容器管理**：介绍使用 bhyve 及 vm-bhyve 工具安装 Windows 11、通过 BVCP 的 Web 界面管理 bhyve 虚拟机，以及 Podman 容器管理和在 FreeBSD 上安装 VirtualBox。
 
-**第 26 章 文件传输协议（FTP）**：介绍文件传输协议（FTP）概述，以及 Pure-FTPd（基于 MySQL）、ProFTPd（基于 MySQL）、vsftpd 等 FTP 服务器的配置。
+**第 26 章 数据库管理**：介绍数据库概论，以及 PostgreSQL、MySQL 及 MongoDB 在 FreeBSD 上的安装与配置，同时涵盖 pgAdmin4 管理工具的使用。
 
-**第 27 章 服务器**：介绍 Rsync 数据同步、Samba 文件共享、NFS 服务器、零配置网络（mDNS/DNS-SD）及 Webmin 管理平台等服务的搭建。
+**第 27 章 文件传输协议（FTP）**：介绍文件传输协议（FTP）概述，以及 Pure-FTPd（基于 MySQL）、ProFTPd（基于 MySQL）、vsftpd 等 FTP 服务器的配置。
 
-**第 28 章 Web 服务器**：介绍 Apache、Nginx、Caddy Web 服务器的部署，以及 PHP、Tomcat、WildFly 应用服务器的配置，同时涵盖 Nextcloud、GitLab、OnlyOffice 和 OpenList 等应用的部署。
+**第 28 章 服务器**：介绍 Rsync 数据同步、Samba 文件共享、NFS 服务器、零配置网络（mDNS/DNS-SD）及 Webmin 管理平台等服务的搭建。
 
-**第 29 章 监控系统**：介绍 Zabbix、Prometheus 监控系统的部署，以及 Telegraf、InfluxDB 与 Grafana 组成的监控平台架构。
+**第 29 章 Web 服务器**：介绍 Apache、Nginx、Caddy Web 服务器的部署，以及 PHP、Tomcat、WildFly 应用服务器的配置，同时涵盖 Nextcloud、GitLab、OnlyOffice 和 OpenList 等应用的部署。
 
-**第 30 章 嵌入式平台**：介绍树莓派上 FreeBSD 的安装与使用、Linux 兼容层配置，以及 Radxa X4 x86 开发板、Linux 系统上交叉构建 FreeBSD、QEMU 模拟 RISC-V 架构，以及 STM32、乐鑫（Espressif）ESP-IDF、Arduino 等嵌入式开发环境的搭建方法。
+**第 30 章 监控系统**：介绍 Zabbix、Prometheus 监控系统的部署，以及 Telegraf、InfluxDB 与 Grafana 组成的监控平台架构。
 
-**第 31 章 开发环境**：介绍 C/C++、Java、Qt、Python、Rust、Go、Node.js 等语言开发环境的搭建，以及 IDA Pro 9.3 调试、code-server 与 clangd 配置、Vim 开发环境和 DTrace 动态追踪工具的使用。
+**第 31 章 嵌入式平台**：介绍树莓派上 FreeBSD 的安装与使用、Linux 兼容层配置，以及 Radxa X4 x86 开发板、Linux 系统上交叉构建 FreeBSD、QEMU 模拟 RISC-V 架构，以及 STM32、乐鑫（Espressif）ESP-IDF、Arduino 等嵌入式开发环境的搭建方法。
 
-**第 32 章 FreeBSD 内核架构**：介绍 FreeBSD 源代码目录结构、内核文件结构、机器相关与无关的内核选项注解、GENERIC 内核选项及定制内核的构建方法。
+**第 32 章 开发环境**：介绍 C/C++、Java、Qt、Python、Rust、Go、Node.js 等语言开发环境的搭建，以及 IDA Pro 9.3 调试、code-server 与 clangd 配置、Vim 开发环境和 DTrace 动态追踪工具的使用。
 
-**附录 I 工具与资源**：包括 BSD 许可证概览、microSD 卡参数简介、Bug 报告流程、FreeBSD 邮件列表订阅及 FreeBSD 开发参与指南。
+**第 33 章 FreeBSD 内核架构**：介绍 FreeBSD 源代码目录结构、内核文件结构、机器相关与无关的内核选项注解、GENERIC 内核选项及定制内核的构建方法。
+
+**附录 I 工具与资源**：包括 BSD 许可证概览、Bug 报告流程、FreeBSD 邮件列表订阅、FreeBSD 开发参与指南及 microSD 卡参数简介。
 
 **附录 II 参考文献与术语表**：列出全书核心参考文献和术语表。
 
@@ -123,7 +125,7 @@
 
 > **思考题**
 >
->>美国国家标准与技术研究院（NIST）发布的数字身份指南草案（NIST. NIST SP 800-63B-4: Authentication and Authenticator Management[EB/OL]. (2025-07)[2026-04-04]. <https://pages.nist.gov/800-63-4/sp800-63b.html>）指出：
+>>美国国家标准与技术研究院（NIST）发布的数字身份指南（NIST. NIST SP 800-63B-4: Digital Identity Guidelines: Authentication and Authenticator Management[EB/OL]. (2025-07)[2026-04-04]. <https://pages.nist.gov/800-63-4/sp800-63b.html>）指出：
 >>
 >>必须要求，当密码被用作单因素认证机制时，其长度至少为 15 个字符。可以允许仅作为多因素认证过程一部分使用的密码较短，但必须要求其长度至少为 8 个字符。
 >>
@@ -147,7 +149,7 @@
 >
 > 问题：我们习以为常的“知识”究竟有没有坚实可靠的根基？我们固守的一些东西，究竟是一种传承，还是一种陈规陋习？如何划分二者的界限？
 
-思考题旨在帮助有意愿探索和有动力追问的读者。这种形式类似于常见的课后习题，不同之处在于思考题的位置是随机的。需要指出的是，尽管可能预设了某些立场和理解，答案通常是开放的，具体取决于读者自身。此外，如果读者感到疲惫，可以选择跳过。
+思考题旨在帮助有意愿探索和有动力追问的读者。这种形式类似于常见的课后习题，不同之处在于思考题的位置是随机的。需要说明的是，尽管可能预设了某些立场和理解，答案通常是开放的，具体取决于读者自身。此外，若读者感到疲惫，可以选择跳过。
 
 ### 特殊章节
 

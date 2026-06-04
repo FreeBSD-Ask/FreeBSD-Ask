@@ -76,27 +76,27 @@ Hyper-V 安装完成后，创建虚拟机。右键单击 Hyper-V 管理器中的
 
 ![Hyper-V](../.gitbook/assets/hyperv-3.png)
 
-为虚拟机设置名称，本例中使用“FreeBSD 15.0-RELEASE”，还可以自定义虚拟机的存储路径。然后点击“下一页”。
+为虚拟机设置名称，本例中使用“FreeBSD 15.0-RELEASE”，还可以自定义虚拟机的存储路径。随后点击“下一页”。
 
 ![Hyper-V](../.gitbook/assets/hyperv-4.png)
 
-选择“第二代”。然后点击“下一页”。
+选择“第二代”。随后点击“下一页”。
 
 ![Hyper-V](../.gitbook/assets/hyperv-generation-select.png)
 
-分配内存大小，然后点击“下一页”。
+分配内存大小，随后点击“下一页”。
 
 ![Hyper-V](../.gitbook/assets/hyperv-5.png)
 
-配置网络，在下拉栏选择“Default Switch”（默认交换机），然后点击“下一页”。
+配置网络，在下拉栏选择“Default Switch”（默认交换机），随后点击“下一页”。
 
 ![Hyper-V](../.gitbook/assets/hyperv-6.png)
 
-指定虚拟硬盘的名称、大小及存储位置，然后点击“下一页”。
+指定虚拟硬盘的名称、大小及存储位置，随后点击“下一页”。
 
 ![Hyper-V](../.gitbook/assets/hyperv-7.png)
 
-点击“从可启动的映像文件安装操作系统”，点击“浏览”，找到并选中已下载的 **FreeBSD-15.0-RELEASE-amd64-dvd1.iso** 文件，然后点击“下一页”。
+点击“从可启动的映像文件安装操作系统”，点击“浏览”，找到并选中已下载的 **FreeBSD-15.0-RELEASE-amd64-dvd1.iso** 文件，随后点击“下一页”。
 
 ![Hyper-V](../.gitbook/assets/hyperv-8.png)
 
@@ -132,7 +132,7 @@ Hyper-V 安装完成后，创建虚拟机。右键单击 Hyper-V 管理器中的
 
 ![Hyper-V](../.gitbook/assets/hyperv-14.png)
 
-安装完成后必须手动弹出 DVD，点击“媒体”，再点击“DVD 驱动器”，选中“弹出 FreeBSD-15.0-RELEASE-amd64-dvd1.iso”。否则还会回到安装界面。
+安装完成后必须手动弹出 DVD，点击“媒体”，再点击“DVD 驱动器”，选中“弹出 FreeBSD-15.0-RELEASE-amd64-dvd1.iso”。否则将返回安装界面。
 
 启动新系统：
 
@@ -152,7 +152,7 @@ Hyper-V 安装完成后，创建虚拟机。右键单击 Hyper-V 管理器中的
 
 ![Hyper-V](../.gitbook/assets/hyperv-summary.png)
 
-由于 Hyper-V 的“增强会话模式”尚不支持 FreeBSD，音频不可用。
+由于 Hyper-V 的“增强会话模式”（Enhanced Session Mode）尚不支持 FreeBSD，音频重定向功能不可用。
 
 删除虚拟机前，必须先关闭虚拟机。
 

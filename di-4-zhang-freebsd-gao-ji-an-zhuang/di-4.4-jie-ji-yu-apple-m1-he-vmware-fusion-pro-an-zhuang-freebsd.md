@@ -8,7 +8,7 @@
 
 ## 下载 FreeBSD
 
-首先需要下载适合 Apple M1 架构的 FreeBSD 镜像。Apple M1 采用 ARM 架构，请下载带有 `aarch64` 字样的镜像。**不要** 下载 `amd64` 架构的镜像，否则无法正常运行。
+首先需要下载适合 Apple M1 架构的 FreeBSD 镜像。Apple M1 采用 ARM 架构，请下载带有 `aarch64` 字样的镜像。**切勿** 下载 `amd64` 架构的镜像，否则无法正常运行。
 
 ## 配置虚拟机
 
@@ -20,7 +20,7 @@
 
 ![选择 FreeBSD 镜像](../.gitbook/assets/vmware-fusion-2.png)
 
-默认的内存大小可能不足，请点击“自定设置”。
+默认内存配置可能不足，请选择“自定设置”进行调整。
 
 ![自定义设置](../.gitbook/assets/vmware-fusion-3.png)
 
@@ -28,7 +28,7 @@
 
 ![处理器和内存设置](../.gitbook/assets/vmware-fusion-4.png)
 
-修改处理器数量和内存大小。`4096 MB` 即 4 GB。
+调整处理器数量和内存大小。`4096 MB` 表示 4 GB。
 
 ## 开始安装
 
@@ -38,7 +38,7 @@
 
 ## 配置桌面
 
-无需安装任何虚拟机增强工具即可正常使用。
+无需安装虚拟机增强工具即可正常运行。
 
 ![桌面界面](../.gitbook/assets/vmware-fusion-7.png)
 

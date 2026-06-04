@@ -8,7 +8,7 @@
 
 相关文档已有详细说明，需先注册账号，并可关联 GitHub。但关联后用户名的显示格式可能与预期存在差异。
 
-除 Phabricator 外，FreeBSD 目前也接受通过 GitHub Pull Request 提交修改。对于较为简单直接的改动，GitHub PR 是目前推荐的提交方式。具体要求包括：改动应基本可提交（committer 只需少于 10 分钟的额外工作即可合并）、通过 GitHub CI 检查、能及时回应反馈、涉及文件不超过约 10 个且改动不超过约 200 行。同一修改应只通过一种方式提交，避免同时创建 Phabricator 评审和 GitHub PR。
+除 Phabricator 外，FreeBSD 目前也接受通过 GitHub Pull Request 提交修改。对于较为简单直接的改动，GitHub PR 是目前推荐的提交方式。具体要求包括：改动应基本可提交（committer 只需少于 10 分钟的额外工作即可合并）、通过 GitHub CI 检查、可及时回应反馈、涉及文件不超过约 10 个且改动不超过约 200 行。同一修改应只通过一种方式提交，避免同时创建 Phabricator 评审和 GitHub PR。
 
 对于代码问题，一种较简单的解决方案是通过 GitHub Fork 原仓库的主分支（main），保持主分支不变，然后创建一个新的分支 B，用于开发和修改。
 
@@ -49,7 +49,7 @@ root@generic:~/freebsd-ports # ls -l 2024.diff
 
 上述操作将在分支 B 的根目录下生成 .diff 文件，将其上传至 [此链接](https://reviews.freebsd.org/differential/)（页面右上角有 Create 入口），点击 Create 并填写相关信息，即可提交审阅。
 
-这是一种相对简便的提交方式。需要注意的是，每次提交的修改量不应过大。
+这是一种相对简便的提交方式。每次提交的修改量不应过大。
 
 提交完成后，在 [https://bugs.freebsd.org/bugzilla](https://bugs.freebsd.org/bugzilla) 新建一个 Bug，说明修改内容，并附上 [https://reviews.freebsd.org](https://reviews.freebsd.org) 的链接。完成后，再在 [https://reviews.freebsd.org](https://reviews.freebsd.org) 中附上该 Bug 页面链接，否则可能长时间无人处理。
 

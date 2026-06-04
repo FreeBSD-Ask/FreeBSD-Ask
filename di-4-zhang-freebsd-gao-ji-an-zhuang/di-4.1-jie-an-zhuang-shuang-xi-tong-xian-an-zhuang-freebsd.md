@@ -16,7 +16,7 @@
 
 ![分区方案选择](../.gitbook/assets/dual-boot-3.png)
 
-此处需要设置较大的临时交换分区，该数值应为计划中的交换分区与 Windows 系统分区容量之和。如此设置是为了后续安装 Windows 时能够直接使用这部分空间，避免额外分区操作。在本节中，交换分区（swap）大小为 8 GB，其余 200 GB 空间预留给 Windows。请修改 `S Swap Size` 的大小。
+此处需要设置较大的临时交换分区，该数值应为计划中的交换分区与 Windows 系统分区容量之和。如此设置是为了后续安装 Windows 时能够直接使用这部分空间，避免额外分区操作。在本节中，交换分区（swap）大小为 8 GB，其余 200 GB 空间预留给 Windows。请调整 `S Swap Size` 的数值。
 
 ![交换分区大小设置](../.gitbook/assets/dual-boot-4.png)
 
@@ -48,7 +48,7 @@ Device              Size     Used    Avail Capacity
 /dev/nda0p3          208G       0B     208G     0%
 ```
 
-可以看到交换分区的大小是所设定的 208 GB（其中 200 GB 预留给 Windows 操作系统）。
+交换分区大小为设定的 208 GB（其中 200 GB 预留给 Windows 操作系统）。
 
 编辑 **/etc/fstab** 文件，在 swap 对应行的行首添加 `#` 注释该行（本例中该行是第三行），以避免系统启动时挂载此交换分区，从而为后续安装 Windows 作准备：
 
@@ -62,31 +62,31 @@ Device              Size     Used    Avail Capacity
 
 FreeBSD 安装完成后，安装 Windows 系统。
 
-插入 Windows 启动盘，设置 BIOS 从该启动盘启动，开始安装 Windows。此时系统会识别到这块硬盘上的现有分区结构，只需要使用之前预留的空间。
+插入 Windows 安装介质，在固件设置中选择从该介质引导，开始安装 Windows。此时安装程序将识别硬盘上的现有分区结构，使用之前预留的空间即可。
 
 ![Windows 安装分区界面](../.gitbook/assets/dual-boot-5.png)
 
-在分区时，删除（Delete Partition）整个 208 GB 的交换分区（本例中为“磁盘 0 分区 3”），因为这部分空间正是为 Windows 预留的。
+在分区界面中，删除（Delete Partition）整个 208 GB 的交换分区（本例中为“磁盘 0 分区 3”），因为该空间已为 Windows 预留。
 
 ![删除交换分区](../.gitbook/assets/dual-boot-6.png)
 
-然后点击创建分区（Create Partition），如果提示出错，点击刷新（Refresh）。Windows 安装程序会自动在未分配空间上创建所需的分区，包括 MSR 分区、系统分区和恢复分区。
+随后选择创建分区（Create Partition）。若出现错误提示，选择刷新（Refresh）。Windows 安装程序将在未分配空间上自动创建所需分区，包括 MSR 分区、系统分区和恢复分区。
 
-然后选中 208 GB 的“磁盘 0 未分配空间”，点击“下一步”安装。
+选择 208 GB 的“磁盘 0 未分配空间”，确认并继续安装。
 
 ![选择未分配空间安装 Windows](../.gitbook/assets/dual-boot-7.png)
 
 ## 还原交换分区（swap）
 
-Windows 安装完成后，还原 FreeBSD 的交换分区。此前预留了 208 GB 空间，其中 8 GB 用于交换分区。接下来使用工具 [DiskGenius](https://www.diskgenius.com/)。
+Windows 安装完成后，恢复 FreeBSD 的交换分区。此前预留了 208 GB 空间，其中 8 GB 用于交换分区。以下操作使用工具 [DiskGenius](https://www.diskgenius.com/)。
 
 ![DiskGenius 主界面](../.gitbook/assets/dual-boot-8.png)
 
-打开 DiskGenius，压缩 C 盘，释放 8 GB 的未分配空间。Windows 系统安装完成后，C 盘占用了之前预留的大部分空间，只需从 C 盘末尾压缩出 8 GB 即可。
+启动 DiskGenius，调整 C 盘分区大小以释放 8 GB 未分配空间。Windows 安装完成后，C 盘占用大部分预留空间，从 C 盘末尾压缩 8 GB 即可。
 
 ![压缩 C 盘](../.gitbook/assets/dual-boot-9.png)
 
-将这 8 GB 空间格式化为 `FreeBSD Swap partition` 类型，然后点击“保存更改”。此步骤将新创建的交换分区标记为 FreeBSD 可以识别的类型。
+将该 8 GB 空间的分区类型设置为 `FreeBSD Swap partition`，保存更改。此步骤将新建的交换分区标记为 FreeBSD 可识别的类型。
 
 ![格式化交换分区](../.gitbook/assets/dual-boot-10.png)
 
@@ -111,13 +111,13 @@ Windows 安装完成后，还原 FreeBSD 的交换分区。此前预留了 208 G
 
 ```
 
-可以看到，`nda0p5`（分区 5）即为新建的交换分区。接下来测试启用指定交换分区 **/dev/nda0p5**：
+分区 5（`nda0p5`）即为新建的交换分区。启用该交换分区：
 
 ```sh
 # swapon /dev/nda0p5
 ```
 
-未产生错误，亦无任何提示，表明操作成功，系统已可正常识别并使用该新建的交换分区。
+无错误输出即表示操作成功，系统已识别并使用该交换分区。
 
 编辑 **/etc/fstab** 文件，在 swap 对应行的行首删去注释符号 `#`，并将分区改为正确的值。本例中的配置如下第三行：
 

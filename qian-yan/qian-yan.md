@@ -180,7 +180,7 @@ FreeBSD 是一款开源的类 UNIX 操作系统，直接继承自 BSD UNIX。
 
 佛教允许比丘还俗的次数可以有七次（参见《增一阿含经》，比丘尼仅能还俗一次）。我也三度放弃 FreeBSD。如今，已经没有机会再继续下去了。
 
-我很久以前写道，“我们必须团结起来做些什么事情，无论大小，哪怕只是谈谈自己的学习体会（但并非出于炫耀）。否则如果只是夸夸其谈的话，我们和那些只会吹嘘的、只会键政的、互称大佬的群或社区有任何区别吗？如果没有区别，那就没有任何意义，那么我宁愿这个社区不再存在。如果大家有时间有精力的话可以考虑翻译文档，如果会编程的话可以考虑移植软件到 BSD，如果能力更高甚至可以参与系统开发。”
+我很久以前写道，“我们必须团结起来做些什么事情，无论大小，哪怕只是谈谈自己的学习体会（但并非出于炫耀）。否则如果只是夸夸其谈，我们和那些只会吹嘘的、只会键政的、互称大佬的群或社区有任何区别吗？如果没有区别，那就没有任何意义，那么我宁愿这个社区不再存在。如果大家有时间有精力，可以考虑翻译文档，如果会编程，可以考虑移植软件到 BSD，如果能力更高甚至可以参与系统开发。”
 
 如果凡是存在的必然有其合乎理性的地方，一切新事物都在不断地获取其存在的理性，而一切的旧事物都在不断地失去其必然的理性。那么只有一个不存在的点是事物绝对完美的那一刻。所以无论是新事物还是旧事物都是破烂而已，都是非充分理性所决定的。即存在即破烂。新事物获得的所谓继承旧事物的理性也不过是一种幻觉而已，因为根本不存在一个状态存在完美的事物，进而构成世界。很明显，现今无论是公众号还是别的什么，都已经没有存在的意义了，都已经让时代解构了。《BanG Dream! It's MyGO!!!!!》中长崎爽世说“只要是我能做的，我什么都愿意做”，我亦如此。我不想再看到，连初一考试倒数的学生都能参照我的简陋教程在 VMware Workstation Pro 上安装好 FreeBSD 和 KDE Plasma 5，竟有成年人在九个月内连在虚拟机里安装系统都做不到，反而理直气壮地空谈这一切。如今早已没有了巴别塔，但人们还是装作不识字，装作看不懂视频，装作看不懂文字。那么只有上帝能救他们了。
 
@@ -192,13 +192,13 @@ FreeBSD 是一款开源的类 UNIX 操作系统，直接继承自 BSD UNIX。
 
 - Knuth D E. Ancient Babylonian algorithms[J]. Communications of the ACM, 1972, 15(7): 671-677. <https://doi.org/10.1145/361454.361514>. 冯·诺伊曼名言“If people do not believe that mathematics is simple, it is only because they do not realize how complicated life is”出自 1947 年 9 月 15 日在哥伦比亚大学举行的 ACM 首届全国会议上的主题演讲，由 Franz L. Alt 在下文中引述: Alt F L. Archaeology of computers—Reminiscences, 1945–1947[J]. Communications of the ACM, 1972, 15(7): 693-694. <https://doi.org/10.1145/361454.361528>.
 - 洞真太上太霄琅书[M]//道藏: 第 33 册. 北京: 文物出版社; 上海: 上海书店; 天津: 天津古籍出版社, 1988: 690b. 人行大道，号曰道士。
-- CIA. The World Factbook: Area Rankings[EB/OL]. [2026-04-17]. <https://www.cia.gov/the-world-factbook/field/area-rankings/>. 俄罗斯面积约 17,098,242 km²。格陵兰面积约 2,166,086 km²，非洲面积约 30,370,000 km²。二者面积之和约 19,264,328 km²，不及非洲面积（约 30,370,000 km²）的三分之二（约 20,246,667 km²）。
+- CIA. The World Factbook: Area Rankings[EB/OL]. (2023-07-06)[2026-04-17]. <https://web.archive.org/web/20210204222711/https://www.cia.gov/the-world-factbook/field/area/country-comparison>. 原 CIA World Factbook 面积排名页面已下线，此为 Internet Archive 存档版本。俄罗斯面积约 17,098,242 km²。格陵兰面积约 2,166,086 km²，非洲面积约 30,370,000 km²。二者面积之和约 19,264,328 km²，不及非洲面积（约 30,370,000 km²）的三分之二（约 20,246,667 km²）。
 - 龙七(龙榆生), 词; 黄自, 曲. 玫瑰三愿[Z]. 1932. 歌词全文为“玫瑰花/玫瑰花/烂开在碧栏杆下/玫瑰花/玫瑰花/烂开在碧栏杆下/我愿那妒我的无情风雨莫吹打/我愿那爱我的多情游客莫攀摘/我愿那红颜常好不凋谢/好教我留住芳华”。详见龙榆生先生新体歌曲作品选 <https://longyusheng.org/xintigequ/lys-meiguisanyuan.html>。
 - Husserl E. Logische Untersuchungen: Zweiter Band[M]. Halle: Niemeyer, 1901. 原文为“zu den Sachen selbst”（面向事情本身），“Zurück zu den Sachen selbst”（回到事物本身）为后世现象学运动口号化表述。
 - 刘万瑚. “回到事物本身”与“面向事物本身”——胡塞尔与海德格尔的现象学方法之争[J]. 哲学动态, 2019(11): 84-91.
 - Pascal B. Pensées[M]. Paris: Brunschvicg éd., 1897: frag. 347. “L'homme n'est qu'un roseau, le plus faible de la nature; mais c'est un roseau pensant.”[人不过是一根会思想的芦苇。]
 - Apple Inc. BSD Overview[EB/OL]. (2013-08-08)[2026-04-17]. <https://developer.apple.com/library/archive/documentation/Darwin/Conceptual/KernelProgramming/BSD/BSD.html>. 苹果官方开发者文档指出: “The BSD portion of the OS X kernel is derived primarily from FreeBSD”，但 XNU 内核本身是 Mach 与 BSD 的混合体，源自 NeXTSTEP，并非直接派生自 FreeBSD 内核。
 - 梁济. 梁济遗稿[M]//梁漱溟. 这个世界会好吗: 梁漱溟晚年口述. 艾恺(Guy S. Alitto), 采访. 北京: 东方出版中心, 2006. 1918 年 11 月 7 日梁济问其子梁漱溟“这个世界会好吗”，三天后投净业湖自尽，后世多称“梁漱溟之问”，实则发问者为梁济。
-- FreeBSD Project. About the FreeBSD Project[EB/OL]. [2026-04-17]. <https://docs.freebsd.org/en/books/handbook/introduction/>. FreeBSD 项目起源于 1993 年初，首个正式版本于 1993 年 11 月 1 日发布。
+- FreeBSD Project. FreeBSD 1.0 RELEASE Announcement[EB/OL]. (1993-11-01)[2026-04-17]. <https://www.freebsd.org/releases/1.0/announce/>. FreeBSD 项目起源于 1993 年初，首个正式版本 FreeBSD 1.0 于 1993 年 11 月 1 日发布。
 - Phoronix. Intel Ivy Bridge Borked On FreeBSD[EB/OL]. (2014-01-31)[2026-04-17]. <https://www.phoronix.com/news/MTEyNDg>. FreeBSD 10-RC5 在 Intel HD 4000 (Ivy Bridge) 显卡上存在图形驱动问题，无法正常启动。
 - procps-ng Project. procps Package Documentation[EB/OL]. [2026-04-17]. <https://gitlab.com/procps-ng/procps>. procps 包中 free 命令通过读取 Linux procfs (**/proc/meminfo**) 获取内存信息，而 FreeBSD 已弃用 procfs，故该命令无法使用。

@@ -2,10 +2,22 @@
 
 ## 2026 年第二季度
 
+- 2026.6.3
+  - 完全重写：“13.3 Ubuntu/Debian 兼容层”，更新到 Ubuntu 26.04 LTS、Debian 13
+  - 新增 Kali Linux 兼容层
+  - 删除“13.6 openSUSE 兼容层”，因为全面启用了 SELinux，不被支持
+  - 完全重写：“13.6 Gentoo Linux 兼容层”，更新到 2026.6.1 版本（自动构建）
+- 2026.6.2
+  - “13.2 Rocky Linux 兼容层”：完全重写“通过 Shell 脚本安装 Rocky Linux 10 兼容层”，现在直接引用 WSL 兼容层
+- 2026.6.1
+  - 新增章节“第 7 章 FreeBSD 系统更新”，拆分自其他章节
+  - 提交 [Port lang/python version display incorrect, should use Mk/bsd.default-versions.mk
+ #659](https://github.com/FreshPorts/freshports/issues/659)
 - 2026.5.31
   - 通过手册增补更新“19.8 ZFS 调优”
+  - 通过手册增补更新“10.7 文档查看器”
 - 2026.5.30
-  - 第 16 章“存储与文件系统管理”改名为"存储管理”
+  - 第 16 章“存储与文件系统管理”改名为“存储管理”
   - “17.1 Windows 文件系统”：完全重写“NTFS 文件系统”
   - 第 16 章新增章节：USB 存储设备、虚拟内存盘
   - 拆分“16.1 UFS 文件系统”到第 18 章“UFS 文件系统”（新增18.2 添加 UFS 磁盘）

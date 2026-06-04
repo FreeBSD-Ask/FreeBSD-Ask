@@ -2,15 +2,15 @@
 
 本附录列出命令行基础、UNIX 内核原理、FreeBSD 技术体系及网络协议等领域的参考书目。
 
-部分书籍可通过中文数字阅读平台获取，包括 [微信读书](https://weread.qq.com/)、[QQ 阅读](https://book.qq.com/)、[京东读书](https://cread.jd.com/custom/custom_pcDownload.action) 等。这些平台提供技术类书籍的数字版本，便于读者在线阅读。
+部分书籍可通过中文数字阅读平台获取，包括 [微信读书](https://weread.qq.com/)、[QQ 阅读](https://book.qq.com/)、[京东读书](https://cread.jd.com/custom/custom_pcDownload.action) 等。上述平台提供技术类书籍的数字版本。
 
-部分书籍可能已经绝版，可通过专业二手书交易平台获取，如 [多抓鱼](https://www.duozhuayu.com/)、[孔夫子旧书网](https://www.kongfz.com/) 等。
+部分书籍业已绝版，可通过专业二手书交易平台获取，如 [多抓鱼](https://www.duozhuayu.com/)、[孔夫子旧书网](https://www.kongfz.com/) 等。
 
 ## 主要参考书目
 
 ### 命令行基础
 
-本小节介绍命令行学习的基础与进阶书籍，适合不同层次的读者选择阅读。
+本小节介绍命令行学习的基础与进阶书籍，适合不同层次的读者阅读。
 
 | 封面/书名 | 作者/译者 | ISBN/出版社 | 说明 |
 | --------- | --------- | ----------- | ---- |
@@ -46,7 +46,7 @@
 | --------- | --------- | ----------- | ---- |
 | ![UNIX 编程艺术](../.gitbook/assets/s11345267.png) <br><br> 《UNIX 编程艺术》（TAOUP） | [美] Eric Raymond 著 <br><br> 姜宏、何源、蔡晓骏 等译 | 978-7-121-17665-4 <br><br> 电子工业出版社 | UNIX 系统设计理念书籍，阐述软件工程思想与技术哲学 |
 
-《UNIX 编程艺术》系统阐述 UNIX 的设计思路与软件工程理论，涵盖类 UNIX 系统的设计原则与实践方法。该书聚焦工程实践，所述设计原则大多源于特定的历史背景。
+《UNIX 编程艺术》系统阐述 UNIX 的设计思路与软件工程理论，涵盖类 UNIX 系统的设计原则与实践方法。该书侧重工程实践，所述设计原则大多源于特定的历史背景。
 
 ### FreeBSD 基础
 
@@ -63,9 +63,9 @@
 | --------- | --------- | ----------- | ---- |
 | ![FreeBSD 操作系统设计与实现（原书第二版）](../.gitbook/assets/freebsd2rd.png) <br><br> 《FreeBSD 操作系统设计与实现（原书第 2 版）》 | [美] Marshall McKusick、George V. Neville-Neil、Robert N.M. Watson 等著 <br><br> 陈向群、郭立峰、叶顺平 等译 | 978-7-111-68997-3 <br><br> 机械工业出版社 | FreeBSD 内核设计权威著作，详解现代 FreeBSD 内核架构与实现细节 |
 
-该书采用轻型纸印刷，部分章节需要读者自行通过 [网络](https://course.cmpreading.com/web/refbook/detail/9661/215) 下载。
+该书部分章节需通过 [网络](https://course.cmpreading.com/web/refbook/detail/9661/215) 下载。
 
-该书阅读难度较高，属高级技术专著，需要具备一定的操作系统理论基础才能理解。
+该书为高级技术专著，阅读前需具备操作系统理论基础。
 
 主要作者 McKusick M K 在其网站上提供多门 BSD 相关的录制课程，参见 McKusick M K. BSD related courses[EB/OL]. [2026-03-26]. <https://www.mckusick.com/buylist.html>. 目前正在撰写第三版（由 No Starch Press 出版），相关信息可参见 McKusick M K. The History of the BSD Daemon: BSDCan 2025[EB/OL]. [2026-04-18]. <https://www.bsdcan.org/2025/talks/daemon.pdf>.
 
@@ -73,8 +73,8 @@
 
 以下书籍逐行解析 FreeBSD IPv6 网络栈（KAME 项目）的设计与实现，是网络协议领域的深度技术专著，适合深入学习网络协议的读者系统研读。
 
-- Li Q, Jinmei T, Shima K. IPv6 详解: 卷 1, 核心协议实现[M]. 陈涓, 赵振平, 译. 北京: 人民邮电出版社, 2009: 846. ISBN: 978-7-115-18950-9(英文影印版本 ISBN: 978-7-115-19551-7). 详解 IPv6 核心协议实现，基于 FreeBSD KAME 项目代码分析。
-- Li Q, Jinmei T, Shima K. IPv6 详解: 卷 2, 高级协议实现[M]. 王嘉祯, 等, 译. 北京: 人民邮电出版社, 2009: 869. ISBN: 978-7-115-20891-0(英文影印版本 ISBN: 978-7-115-19519-7). 详解 IPv6 高级协议与扩展机制，包含移动 IPv6 等关键技术。
+- Li Q, Jinmei T, Shima K. IPv6 详解: 卷 1, 核心协议实现[M]. 陈涓, 赵振平, 译. 北京: 人民邮电出版社, 2009: 846. ISBN: 978-7-115-18950-9(英文影印版本 ISBN: 978-7-115-19551-7). 详解 IPv6 核心协议实现，基于 FreeBSD KAME 项目代码分析。英文原版: *IPv6 Core Protocols Implementation* (Morgan Kaufmann, 2007).
+- Li Q, Jinmei T, Shima K. IPv6 详解: 卷 2, 高级协议实现[M]. 王嘉祯, 等, 译. 北京: 人民邮电出版社, 2009: 869. ISBN: 978-7-115-20891-0(英文影印版本 ISBN: 978-7-115-19519-7). 详解 IPv6 高级协议与扩展机制，包含移动 IPv6 等关键技术。英文原版: *IPv6 Advanced Protocols Implementation* (Morgan Kaufmann, 2007).
 
 ### ZFS
 
@@ -109,7 +109,7 @@
 - *FreeBSD Mastery: Advanced ZFS*
 - *FreeBSD Mastery: Jails*
 
-该系列书籍内容侧重基础操作，定位类似于面向非计算机专业的计算机导论课程，其历史意义大于实践价值。
+该系列书籍内容侧重基础操作，出版时间较早，部分技术内容已随 FreeBSD 版本迭代而过时，但作为 FreeBSD 历史文献仍具参考价值。
 
 ### *Absolute FreeBSD, 3rd Edition: The Complete Guide to FreeBSD*
 
@@ -123,7 +123,7 @@
 
 Lions J. 莱昂氏 UNIX 源代码分析[M]. 尤晋元, 译. 北京: 机械工业出版社, 2000. ISBN: 978-7-111-08018-3. UNIX 早期教学核心文献，带注释的 UNIX v6 源代码汇编。
 
-该书原作名为 *Lion's Commentary on UNIX with Source Code*，由 Lions J 撰写，最初作为澳大利亚新南威尔士大学的课程讲义，是 UNIX 早期教学的核心文献。该书的中文翻译历程具有历史意义，反映了中国开源社区对经典技术文献的重视（参见：中华读书报. “地下出版物”浮出水面[N/OL]. (2000-08-02)[2026-03-26]. <https://www.gmw.cn/01ds/2000-08/02/GB/2000%5E311%5E0%5EDS1418.htm>）。
+该书原作名为 *Lions' Commentary on UNIX 6th Edition with Source Code*，由 Lions J 撰写，最初作为澳大利亚新南威尔士大学的课程讲义，是 UNIX 早期教学的核心文献。该书的中文翻译历程具有历史意义，反映了中国开源社区对经典技术文献的重视（参见：中华读书报. “地下出版物”浮出水面[N/OL]. (2000-08-02)[2026-03-26]. <https://www.gmw.cn/01ds/2000-08/02/GB/2000%5E311%5E0%5EDS1418.htm>）。
 
 就学术文献分类而言，该书更接近“带注释的源代码汇编”而非系统的理论分析，其价值在于提供 UNIX 早期实现的原始文本。随着技术演进，其直接技术参考价值已转变为历史研究价值。
 
