@@ -221,8 +221,8 @@
 >
 > On Fri, 25 Aug 2000, Jamie Lokier wrote:
 >
->> Well well. I think it's possible to over the best of user-space ”fake“
->> threads plus the advantages of ”true“ kernel threads in one blindingly
+>> Well well. I think it's possible to over the best of user-space “fake”
+>> threads plus the advantages of “true” kernel threads in one blindingly
 >> fast combination, in less than 8kB per thread.
 >
 > Talk is cheap. Show me the code.
