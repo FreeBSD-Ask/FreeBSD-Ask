@@ -235,7 +235,7 @@
 
 * [23.1 Jail 基础](di-23-zhang-jail-rong-qi-guan-li/di-23.1-jie-jail-ji-chu.md)
 * [23.2 Qjail](di-23-zhang-jail-rong-qi-guan-li/di-23.2-jie-qjail.md)
-* [23.3 手动创建 Jail 容器](di-23-zhang-jail-rong-qi-guan-li/di-22.3-manual-jail-setup.md)
+* [23.3 手动创建 Jail 容器](di-23-zhang-jail-rong-qi-guan-li/di-23.3-manual-jail-setup.md)
 
 ## 第 24 章 Linux Jail
 
