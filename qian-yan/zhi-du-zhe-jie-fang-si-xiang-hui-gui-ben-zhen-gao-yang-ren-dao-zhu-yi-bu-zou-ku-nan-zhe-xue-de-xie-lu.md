@@ -229,7 +229,7 @@
 >
 > Linus
 >
-> ——Torvalds L. Re: SCO: ”thread creation is about a thousand times faster than on native“[EB/OL]. (2000-08-25)[2026-04-04]. <https://lkml.org/lkml/2000/8/25/132>.
+> ——Torvalds L. Re: SCO: “thread creation is about a thousand times faster than on native”[EB/OL]. (2000-08-25)[2026-04-04]. <https://lkml.org/lkml/2000/8/25/132>.
 
 > **思考题**
 >
