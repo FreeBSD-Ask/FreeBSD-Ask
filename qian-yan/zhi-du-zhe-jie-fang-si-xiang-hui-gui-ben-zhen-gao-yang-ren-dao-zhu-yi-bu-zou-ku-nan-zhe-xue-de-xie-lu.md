@@ -168,7 +168,7 @@
 >
 > Oh, thank you very much. May I ask what's the differences between those two packages(xxx and xxx-dev)? I am new to it. Thanks again.（哦，非常感谢。可以请问一下这两个包（xxx 和 xxx-dev）之间有什么区别吗？我是新手。再次感谢。）
 >
-> Find the answers on Google or StackOverflow. If you are participating in open source software development, this kind of configuration problems should not be proposed as an "issue" unless you have strong evidence of faults existed in the code base or documentation.（在谷歌或 StackOverflow 上可以找到答案。如果你在参与开源软件开发，除非你有充分证据表明代码库或文档中确实存在缺陷，否则这类配置问题不应被作为“issue”提出。）
+> Find the answers on Google or StackOverflow. If you are participating in open source software development, this kind of configuration problems should not be proposed as an “issue” unless you have strong evidence of faults existed in the code base or documentation.（在谷歌或 StackOverflow 上可以找到答案。如果你在参与开源软件开发，除非你有充分证据表明代码库或文档中确实存在缺陷，否则这类配置问题不应被作为“issue”提出。）
 
 注意到 xxx and xxx-dev 的意义本就不明确：
 
@@ -216,20 +216,20 @@
 >
 > From Linus Torvalds < >
 >
-> Subject Re: SCO: " thread creation is about a thousand times faster than on native
+> Subject Re: SCO: “ thread creation is about a thousand times faster than on native
 >
 >
 > On Fri, 25 Aug 2000, Jamie Lokier wrote:
 >
->> Well well. I think it's possible to over the best of user-space "fake"
->> threads plus the advantages of "true" kernel threads in one blindingly
+>> Well well. I think it's possible to over the best of user-space ”fake“
+>> threads plus the advantages of ”true“ kernel threads in one blindingly
 >> fast combination, in less than 8kB per thread.
 >
 > Talk is cheap. Show me the code.
 >
 > Linus
 >
-> ——Torvalds L. Re: SCO: "thread creation is about a thousand times faster than on native"[EB/OL]. (2000-08-25)[2026-04-04]. <https://lkml.org/lkml/2000/8/25/132>.
+> ——Torvalds L. Re: SCO: ”thread creation is about a thousand times faster than on native“[EB/OL]. (2000-08-25)[2026-04-04]. <https://lkml.org/lkml/2000/8/25/132>.
 
 > **思考题**
 >
@@ -366,5 +366,5 @@ English
 - 金寿福, 译注. 古埃及《亡灵书》[M]. 北京: 商务印书馆, 2020. 古埃及人来世信仰中，亡者在 Duat 与奥西里斯合而为一，并追随太阳神拉夜行冥界以期重生。
 - 北岛. 履历[M]. 北京: 生活·读书·新知三联书店, 2015: 16. 北岛的《一切》。
 - 中国奥林匹克委员会. 职业选手何时进入奥运会？[EB/OL]. (2004-08-05)[2026-04-18]. <https://www.olympic.cn/olympic/know/2004/0805/25385.html>. 回顾奥运会从业余原则向允许职业运动员参赛转变的历史过程。
-- International Olympic Committee. "Faster, Higher, Stronger – Together": IOC Session approves historic change in Olympic motto [EB/OL]. (2021-07-20)[2026-04-19]. <https://www.olympics.com/ioc/news/-faster-higher-stronger-together-ioc-session-approves-historic-change-in-olympic-motto>. 2021 年 7 月 20 日国际奥委会第 138 次全会表决通过，在奥林匹克格言“更快、更高、更强”之后加入“更团结”（Together），系格言自 1894 年提出以来首次修改。
+- International Olympic Committee. ”Faster, Higher, Stronger – Together“: IOC Session approves historic change in Olympic motto [EB/OL]. (2021-07-20)[2026-04-19]. <https://www.olympics.com/ioc/news/-faster-higher-stronger-together-ioc-session-approves-historic-change-in-olympic-motto>. 2021 年 7 月 20 日国际奥委会第 138 次全会表决通过，在奥林匹克格言“更快、更高、更强”之后加入“更团结”（Together），系格言自 1894 年提出以来首次修改。
 - IUPAC. New Notations in the Periodic Table[J]. Pure and Applied Chemistry, 1988, 60(3): 431-436. <https://www.iupac.org/publications/pac/1988/pdf/6003x0431.pdf>. IUPAC 于 1988 年发布元素周期表新族编号体系，此后持续修订周期表（包括 1997 年超锕元素命名、2016 年确认第 113、115、117、118 号元素等）。
