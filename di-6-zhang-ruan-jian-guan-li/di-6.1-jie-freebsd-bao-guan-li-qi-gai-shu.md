@@ -120,7 +120,7 @@ quarterly 分支类似于 Debian 的 Stable 版本，固定软件包版本并仅
 - Debian. DebianStability[EB/OL]. [2026-03-26]. <https://wiki.debian.org/DebianStability>. 即稳定的意思
 - Debian. Chapter 3. Choosing a Debian distribution[EB/OL]. [2026-03-26]. <https://www.debian.org/doc/manuals/debian-faq/choosing.en.html#s3.1.1>. 根据此处实际上是固定的意思
 - Debian. 选择一个 Debian 发布版本[EB/OL]. [2026-03-26]. <https://www.debian.org/doc/manuals/debian-faq/choosing.zh-cn.html>. 第 3 章中文版。
-- Debian. 2.2. Are there package upgrades in "stable"?[EB/OL]. [2026-03-26]. <https://www.debian.org/doc/manuals/debian-faq/getting-debian.en.html#updatestable>. 此处指出软件不会有功能性更新。
+- Debian. 2.2. Are there package upgrades in “stable”?[EB/OL]. [2026-03-26]. <https://www.debian.org/doc/manuals/debian-faq/getting-debian.en.html#updatestable>. 此处指出软件不会有功能性更新。
 - FreeBSD Project. pkg.freebsd.org[EB/OL]. [2026-03-26]. <https://pkg.freebsd.org/>. 也并非所有架构都提供了 pkg 源，与平台支持等级有关。
 
 ## Ports 与 Port 概述

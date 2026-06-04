@@ -65,7 +65,7 @@
 
 **第 22 章 防火墙**：介绍防火墙概论与 FreeBSD 内置防火墙系统，包括 Packet Filter（PF）、IPFilter（IPF）、IPFW 的配置，以及 Fail2Ban 和 blocklistd 工具的使用。
 
-**第 23 章 Jail 容器管理**：介绍 FreeBSD 原生轻量级虚拟化技术 Jail 的基础配置及 Qjail 管理工具的使用。
+**第 23 章 Jail 容器管理**：介绍 FreeBSD 原生轻量级虚拟化技术 Jail 的基础配置、Qjail 管理工具的使用及手动创建 Jail 容器的方法。
 
 **第 24 章 Linux Jail**：介绍在 FreeBSD Jail 中运行 Linux 发行版的方法，涵盖 Linux Jail 基础准备，以及 Debian、Ubuntu、antiX Linux、Alpine Linux 等发行版的 Jail 创建与 GUI 配置。
 
@@ -83,7 +83,7 @@
 
 **第 31 章 嵌入式平台**：介绍树莓派上 FreeBSD 的安装与使用、Linux 兼容层配置，以及 Radxa X4 x86 开发板、Linux 系统上交叉构建 FreeBSD、QEMU 模拟 RISC-V 架构，以及 STM32、乐鑫（Espressif）ESP-IDF、Arduino 等嵌入式开发环境的搭建方法。
 
-**第 32 章 开发环境**：介绍 C/C++、Java、Qt、Python、Rust、Go、Node.js 等语言开发环境的搭建，以及 IDA Pro 9.3 调试、code-server 与 clangd 配置、Vim 开发环境和 DTrace 动态追踪工具的使用。
+**第 32 章 开发环境**：介绍 C/C++、Java、Qt、Python、Rust、Go、Node.js 等语言开发环境的搭建，以及 IDA Pro 调试、code-server 与 clangd 配置、Vim 开发环境和 DTrace 动态追踪工具的使用。
 
 **第 33 章 FreeBSD 内核架构**：介绍 FreeBSD 源代码目录结构、内核文件结构、机器相关与无关的内核选项注解、GENERIC 内核选项及定制内核的构建方法。
 
