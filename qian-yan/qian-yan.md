@@ -202,3 +202,4 @@ FreeBSD 是一款开源的类 UNIX 操作系统，直接继承自 BSD UNIX。
 - FreeBSD Project. FreeBSD 1.0 RELEASE Announcement[EB/OL]. (1993-11-01)[2026-04-17]. <https://www.freebsd.org/releases/1.0/announce/>. FreeBSD 项目起源于 1993 年初，首个正式版本 FreeBSD 1.0 于 1993 年 11 月 1 日发布。
 - Phoronix. Intel Ivy Bridge Borked On FreeBSD[EB/OL]. (2014-01-31)[2026-04-17]. <https://www.phoronix.com/news/MTEyNDg>. FreeBSD 10-RC5 在 Intel HD 4000 (Ivy Bridge) 显卡上存在图形驱动问题，无法正常启动。
 - procps-ng Project. procps Package Documentation[EB/OL]. [2026-04-17]. <https://gitlab.com/procps-ng/procps>. procps 包中 free 命令通过读取 Linux procfs (**/proc/meminfo**) 获取内存信息，而 FreeBSD 已弃用 procfs，故该命令无法使用。
+- 1Ferrox.  Lamps in Videogames use real electricity.[EB/OL]. (2019-11-28)[2026-06-04]. <https://www.reddit.com/r/Showerthoughts/comments/e2x6mo/lamps_in_videogames_use_real_electricity>. 在该贴中，提出“电子游戏中的灯具会消耗真实的电力。因为它们会照亮周围区域，所以屏幕需要变得更亮。而更亮的屏幕会消耗更多电力。”
