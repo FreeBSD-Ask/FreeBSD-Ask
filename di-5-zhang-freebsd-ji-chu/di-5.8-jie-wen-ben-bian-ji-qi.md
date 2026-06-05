@@ -185,7 +185,7 @@ NeoVim 和 Vim 共享大部分命令，上述 `:q :q! :wq :wq! :/` 等在 LazyVi
 
 ## Emacs 编辑器
 
-Emacs 是历史悠久、功能极其强大的文本编辑器，以“可扩展性”闻名（几乎所有功能都可以通过 Emacs Lisp 扩展）。Richard Stallman 于 1976 年开发了 Emacs，是 GNU 项目的核心组件之一。Emacs 的设计哲学是“编辑器即操作系统”——通过 Emacs Lisp 语言，Emacs 提供了文件管理器、邮件客户端、终端仿真器、调试器前端等超越文本编辑的功能。
+Emacs 是历史悠久、功能极其强大的文本编辑器，以“可扩展性”闻名（几乎所有功能都可以通过 Emacs Lisp 扩展）。最初的 Emacs 是一组 TECO 宏，由 Guy Steele 在 1976 年于 MIT 发起项目，Richard Stallman 完成并扩展。GNU Emacs 是 GNU 项目的核心组件之一。Emacs 的设计哲学是“编辑器即操作系统”——通过 Emacs Lisp 语言，Emacs 提供了文件管理器、邮件客户端、终端仿真器、调试器前端等超越文本编辑的功能。
 
 ### 安装 Emacs
 
