@@ -2,6 +2,9 @@
 
 ## 2026 年第二季度
 
+- 2026.6.5
+  - 移除“4.5 基于 Apple M1 和 UTM 安装 FreeBSD”。
+    - 参见 <https://reviews.freebsd.org/D55012> 和 [Bug 283646 - x11-drivers/xf86-video-scfb: startx fails: (EE) scfb(0): scfb_mmap: Invalid argument](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=283646)
 - 2026.6.4
   - 完全重写“13.5 Slackware Linux 兼容层”
   - 新增“23.2 厚 Jail（Thick Jail）”
