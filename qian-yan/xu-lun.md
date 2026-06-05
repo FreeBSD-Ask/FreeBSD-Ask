@@ -47,7 +47,7 @@
 
 **第 13 章 Linux 兼容层**：介绍 FreeBSD 的 Linux 兼容层架构，涵盖 Rocky Linux、Ubuntu/Debian/Kali Linux、Arch Linux、Slackware、Gentoo 等多种 Linux 发行版的兼容环境搭建，以及微信、QQ、WPS Office 等 Linux 应用的运行方法和故障排除。
 
-**第 14 章 游戏、科学计算和专业工具**：介绍 Ren'Py 视觉小说引擎、Godot 游戏引擎、Minecraft、Steam 客户端和 Wine 配置，以及科研和专业计算工具的使用。
+**第 14 章 游戏、科学计算和专业工具**：介绍 Godot 游戏引擎、Minecraft、Steam 客户端和 Wine 配置，以及科研和专业计算工具的使用。
 
 **第 15 章 人工智能**：介绍人工智能概论与 AI 大模型在 FreeBSD 上的本地部署方法。
 
