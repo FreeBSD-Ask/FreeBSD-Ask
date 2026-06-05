@@ -30,7 +30,7 @@ aarch64 镜像选择“虚拟化”，amd64 镜像选择“模拟”。
 
 ![选择操作系统](../.gitbook/assets/install_bsd_on_utm/utm-select-os.png)
 
-内存默认 4 GB，可满足大多数需求。FreeBSD 15 初始运行时约占用 500 MB 内存，可根据实际需求调整。CPU 核心数按需设置，M1 芯片建议设为 4。
+内存默认 4 GB 可根据实际需求调整。CPU 核心数按需设置，M1 芯片建议设为 8。
 
 ![设置内存和处理器核心数量](../.gitbook/assets/install_bsd_on_utm/utm-set-memory-cpu.png)
 
@@ -64,7 +64,7 @@ aarch64 镜像选择“虚拟化”，amd64 镜像选择“模拟”。
 
 ![安装程序界面](../.gitbook/assets/install_bsd_on_utm/utm-installer.png)
 
-基本系统安装完成，终端可正常运行。在虚拟机内执行 `ifconfig` 命令查看 IP 地址后，便可在宿主机的终端仿真器中发起 SSH 连接。
+可在宿主机的终端仿真器中发起 SSH 连接。
 
 ![终端](../.gitbook/assets/install_bsd_on_utm/utm-terminal.png)
 
