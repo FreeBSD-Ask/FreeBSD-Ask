@@ -138,7 +138,7 @@ FreeBSD: { enabled: no }
 
 #### 中国科学技术大学开源软件镜像站
 
-编辑 **/usr/local/etc/pkg/repos/USTC.conf** 文件，写入以下配置（quarterly 分支即 2014Q3、2025Q1 等）：
+编辑 **/usr/local/etc/pkg/repos/USTC.conf** 文件，写入以下配置（quarterly 分支即 2024Q3、2025Q1 等）：
 
 ```sh
 USTC-ports: {
@@ -170,7 +170,7 @@ FreeBSD-ports: { enabled: no }
 
 #### 中国科学技术大学开源软件镜像站
 
-编辑 **/usr/local/etc/pkg/repos/USTC.conf** 文件，写入以下配置（quarterly 分支即 2014Q3、2025Q1 等）：
+编辑 **/usr/local/etc/pkg/repos/USTC.conf** 文件，写入以下配置（quarterly 分支即 2024Q3、2025Q1 等）：
 
 如果使用 quarterly 分支，配置如下：
 
@@ -202,7 +202,7 @@ USTC-kmods: {
 
 #### 中国科学技术大学开源软件镜像站
 
-编辑 **/usr/local/etc/pkg/repos/USTC.conf** 文件，写入以下配置（quarterly 分支即 2014Q3、2025Q1 等）：
+编辑 **/usr/local/etc/pkg/repos/USTC.conf** 文件，写入以下配置（quarterly 分支即 2024Q3、2025Q1 等）：
 
 如果使用 quarterly 分支，配置如下：
 
