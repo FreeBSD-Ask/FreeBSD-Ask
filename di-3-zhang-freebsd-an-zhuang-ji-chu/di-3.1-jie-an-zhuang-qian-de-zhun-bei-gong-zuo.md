@@ -188,9 +188,9 @@ Rufus 下载地址为 <https://rufus.ie/zh>，该工具为 Windows 平台开源 
 
 ![Rufus](../.gitbook/assets/rufus-tool.png)
 
-尽管镜像文件校验和实际正确，但 win32diskimager 在处理某些镜像格式时存在缺陷，有时会错误地报告校验失败，**不建议** 使用 FreeBSD 手册中提到的 win32diskimager。同理，**不建议** 使用 Ventoy，其启动加载机制与 FreeBSD 镜像不完全兼容，可能导致启动失败。
+尽管镜像文件校验和实际正确，但 win32diskimager 在处理某些镜像格式时存在缺陷，有时会错误地报告校验失败。Ventoy 的启动加载机制与 FreeBSD 镜像不完全兼容，可能导致启动失败。二者均 **不建议优先使用**。
 
-**读者应优先使用 Rufus；在 Rufus 无效的情况下，可使用 Ventoy 或 win32diskimager。**
+**读者应优先使用 Rufus；仅在 Rufus 无效的情况下，方可考虑使用 Ventoy 或 win32diskimager。**
 
 win32diskimager 的下载地址为 <https://sourceforge.net/projects/win32diskimager/files/Archive/>，选择 `win32diskimager-1.0.0-install.exe` 下载。
 
