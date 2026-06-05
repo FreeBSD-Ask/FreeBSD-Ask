@@ -70,7 +70,7 @@ BERKELEY G. Verses on the Prospect of Planting Arts and Learning in America[C]//
 
 ![George Berkeley](../.gitbook/assets/george-berkeley-portrait.png)
 
-图片出处：[George Berkeley](https://www.npg.org.uk/collections/search/portrait.php?search=ap&npgno=653&eDate=&lDate=)。
+图片出处：[National Portrait Gallery](https://www.npg.org.uk/collections/search/portrait/mw00534/George-Berkeley)（John Smibert 绘，1730 年，藏于伦敦国家肖像馆）。
 
 乔治·贝克莱（1685.3.12—1753.1.14），2023 年是他逝世 270 周年。2025 年也是他的 340 周年诞辰。
 
@@ -94,7 +94,7 @@ BERKELEY G. Verses on the Prospect of Planting Arts and Learning in America[C]//
 - 1734.1.18 48 岁时被爱尔兰教会任命为克洛因主教（Bishop of Cloyne），同年 5 月 19 日祝圣；并发表《分析家》一文。此后专注于基督教事业，逐渐淡出公众视野；
 - 1739 年，伦敦育婴堂医院成立，他曾积极参与其中；
 - 1744 年，59 岁时出版《西利斯：关于焦油水的功效以及与之有关的、相互引发的其他课题的哲学反思和探讨之链》，他在书中主张将松焦油用作包治百病的“万灵药”。该书是其生前销量最高的著作。据记载，他对患者使用此疗法，亦可观察到相应疗效；
-- 1752 年，67 岁时放弃克洛因主教职位，移居牛津；
+- 1752 年，67 岁时委托其弟罗伯特·贝克莱博士（Dr. Robert Berkeley）代理克洛因教区教务，移居牛津；
 - 1753.1.14 67 岁时，在妻子 Anne Forster 诵读布道文的陪伴下，他在牛津安息，归于主怀；
 - 1786 年，妻子 Anne Forster 去世。
 
