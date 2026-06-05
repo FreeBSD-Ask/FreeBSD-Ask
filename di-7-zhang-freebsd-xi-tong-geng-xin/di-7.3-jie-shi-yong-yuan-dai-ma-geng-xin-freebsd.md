@@ -2,13 +2,13 @@
 
 从源代码构建 FreeBSD 可以自定义内核选项和编译参数，适用于 freebsd-update 不支持的架构或需要裁剪系统的场景。
 
-基本思路是获取 FreeBSD 的源代码，随后编译安装。可以使用 Git 直接拉取代码，也可以从 ISO 镜像中下载 txz 压缩文件，或者从 GitHub 下载当前 FreeBSD 项目的 zip 压缩包。
+基本思路是获取 FreeBSD 的源代码，随后编译安装。可以使用 Git 直接拉取代码，也可以从 FreeBSD 下载站点获取 txz 压缩文件，或者从 GitHub 下载当前 FreeBSD 项目的 zip 压缩包。
 
 编译流程请参考本书其他章节。
 
 ## SVN 到 Git 的迁移
 
-FreeBSD 项目在 2020 至 2021 年间从 SVN 迁移到了 Git，即 <https://git.freebsd.org>。其中 src 仓库于 2020 年底完成迁移，Ports 仓库于 2021 年初完成迁移。
+FreeBSD 项目在 2020 至 2021 年间从 SVN 迁移到了 Git，即 <https://git.freebsd.org>。其中 src 仓库于 2020 年底完成迁移，Ports 仓库于 2021 年 4 月完成迁移。
 
 这一版本控制系统的迁移标志着 FreeBSD 项目开发流程的现代化转型，因此获取源代码的方式也相应发生了变化，不再使用 SVN。
 
@@ -112,7 +112,7 @@ $ git clone --branch releng/15.0 --single-branch --depth 1 https://github.com/fr
 ```sh
 # cd /usr/src          # 切换到工作目录
 # make -j4 buildworld  # 编译世界
-# make -j4 kernel      # 编译并安装内核
+# make -j4 kernel      # 编译并安装内核（相当于 buildkernel 后跟 installkernel）
 # reboot               # 重启以使用新内核
 # cd /usr/src          # 切换回工作目录
 # etcupdate -p         # 进行必要的配置文件合并
