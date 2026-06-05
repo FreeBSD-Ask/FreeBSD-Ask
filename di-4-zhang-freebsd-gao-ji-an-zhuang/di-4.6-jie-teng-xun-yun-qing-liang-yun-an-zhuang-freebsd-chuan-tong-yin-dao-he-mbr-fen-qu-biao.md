@@ -38,7 +38,7 @@ FreeBSD 中文社区. 08-腾讯云轻量云及其他服务器安装 FreeBSD[EB/O
 
 在 mfsBSD 下载页面的下方，可找到 [mfsLinux](https://mfsbsd.vx.sk/files/iso/mfslinux/mfslinux-0.1.11-94b1466.iso)，即所需的 Linux 环境。由于该文件仅提供 ISO 格式，无法在当前环境下直接启动，而该环境基于 initramfs 架构，需要从中提取内核和 initramfs 文件，存放于硬盘并进行手动引导。
 
-在典型的 Linux 系统中，initrd 是一个打包为内存盘的精简根文件系统，内含驱动程序、挂载工具以及启动初始化程序所必需的数据。开机时，引导加载程序（Bootloader）加载内核与 initrd，随后由 initrd 中的脚本执行启动准备，最后将控制权移交给硬盘上的初始化程序。
+在典型的 Linux 系统中，initramfs 是一个打包为 cpio 归档的精简根文件系统，内含驱动程序、挂载工具以及启动初始化程序所必需的数据。开机时，引导加载程序（Bootloader）加载内核与 initramfs，随后由 initramfs 中的脚本执行启动准备，最后将控制权移交给硬盘上的初始化程序。
 
 首先，将从该 ISO 中提取的内核和 initrd 文件放置于根目录。重启机器并进入 GRUB 命令行界面（可在引导倒计时时按 `e` 键进入编辑模式，删除原有 `linux` 和 `initrd` 行的内容并修改，完成后按 `Ctrl+X` 启动）。手动指定要启动的内核与 initrd（可使用 `Tab` 键补全路径）。输入 `boot` 并按回车继续启动，也可按 `c` 键进入 GRUB 命令行模式。
 
