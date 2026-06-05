@@ -1,6 +1,6 @@
 # 3.4 使用 VirtualBox 安装 FreeBSD
 
-Oracle VirtualBox 是一款 Type-2 虚拟机监视器（Hypervisor），通过虚拟设备模拟（device emulation）与半虚拟化（paravirtualization）技术为虚拟机提供计算、存储和网络资源。VirtualBox 支持多种虚拟磁盘镜像格式，默认使用 VDI（Virtual Disk Image），同时兼容 VMDK（VMware）、VHD（Microsoft）等格式。该虚拟化软件可在大多数常见操作系统上运行，包括 FreeBSD 本身。
+Oracle VirtualBox 是一款 Type-2 虚拟机监视器（Hypervisor），通过虚拟设备模拟（device emulation）与半虚拟化（paravirtualization）技术为虚拟机提供计算、存储和网络资源。VirtualBox 支持多种虚拟磁盘镜像格式，默认使用 VDI（Virtual Disk Image），同时兼容 VMDK（VMware）、VHD（Microsoft）等格式。该虚拟化软件可在 Windows、macOS、Linux、Oracle Solaris 等主流操作系统上运行，FreeBSD 可通过 Ports 安装 VirtualBox OSE 作为宿主机使用。
 
 FreeBSD 在 VirtualBox 中作为虚拟机运行稳定。本节演示环境为 VirtualBox 7.2.8 和 Windows 11 25H2。
 
