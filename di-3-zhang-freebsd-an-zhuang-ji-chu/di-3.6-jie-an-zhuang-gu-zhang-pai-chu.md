@@ -15,13 +15,13 @@
 - 是否已关闭 BIOS 中的安全启动（Secure Boot）？
 - 镜像是否从 <https://www.freebsd.org> 下载？
 - 是否下载了最新版本的 RELEASE 镜像？
-- 下载的镜像文件扩展名是否为 `img`？
+- 下载的镜像文件扩展名是否为 `img`（USB 设备）或 `iso`（光盘镜像）？
 - 镜像校验（SHA-256）是否通过？
 - 下载的镜像是否带有 `amd64`（标准个人计算机）字样？
-  - 请确认是 `amd64`（适用于标准个人计算机）**而非** `arm64`（适用于开发板）。
+  - 请确认是 `amd64`（适用于标准 x86 个人计算机）**而非** `arm64`（适用于 ARM 架构设备，如树莓派等嵌入式平台）。
 - U 盘是否为扩容盘（伪造容量产品）？
 - 是否使用了 Ventoy 工具？
-  - 建议使用 Rufus - Create bootable USB drives the easy way <https://rufus.ie/zh/> 刻录，而非 Ventoy - 多系统启动 USB 启动盘制作工具 <https://www.ventoy.net/cn/index.html>。
+  - 如果使用 Ventoy - 多系统启动 USB 启动盘制作工具 <https://www.ventoy.net/cn/index.html> 无法启动，可尝试改用 Rufus - Create bootable USB drives the easy way <https://rufus.ie/zh/> 刻录。
 
 如果仍出现问题，请先在 FreeBSD 官方论坛 <https://forums.freebsd.org/> 以英语提问；如未获解答，可按其他章节指引提交 Bug。
 
@@ -35,7 +35,7 @@
 
 > **警告**
 >
-> 某些文章建议关闭 ACPI。该做法在现代硬件上已缺乏技术依据，关闭 ACPI 可能导致系统无法正常启动或功能受限。ACPI 与电源状态管理、设备节能、多处理器支持等功能密切相关，关闭 ACPI 的选项应视为遗留功能，仅在不支持 UEFI 的旧式计算机上才需考虑。
+> 某些文章建议关闭 ACPI。该做法在现代硬件上已缺乏技术依据，关闭 ACPI 可能导致系统无法正常启动或功能受限。ACPI 与电源状态管理、设备节能、多处理器支持等功能密切相关，关闭 ACPI 的选项应视为遗留功能。
 
 如果出现 ACPI 错误提示，大多数情况下不影响正常运行。通常可通过更新主板 BIOS 或固件解决。少数情况下可能需要修补 SSDT（Secondary System Description Table，次级系统描述表）和 DSDT（Differentiated System Description Table，差异化系统描述表）。
 
