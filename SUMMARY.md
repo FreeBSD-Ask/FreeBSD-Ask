@@ -44,10 +44,9 @@
 * [4.2 安装双系统（后安装 FreeBSD）](di-4-zhang-freebsd-gao-ji-an-zhuang/di-4.2-jie-an-zhuang-shuang-xi-tong-hou-an-zhuang-freebsd.md)
 * [4.3 基于 Apple M1 和 Parallels Desktop 20 安装 FreeBSD](di-4-zhang-freebsd-gao-ji-an-zhuang/di-4.3-jie-ji-yu-apple-m1-he-parallels-desktop-20-an-zhuang-freebsd.md)
 * [4.4 基于 Apple M1 和 VMware Fusion Pro 安装 FreeBSD](di-4-zhang-freebsd-gao-ji-an-zhuang/di-4.4-jie-ji-yu-apple-m1-he-vmware-fusion-pro-an-zhuang-freebsd.md)
-* [4.5 基于 Apple M1 和 UTM 安装 FreeBSD](di-4-zhang-freebsd-gao-ji-an-zhuang/di-4.5-jie-ji-yu-apple-m1-he-utm-an-zhuang-freebsd.md)
-* [4.6 腾讯云轻量云安装 FreeBSD（传统引导和 MBR 分区表）](di-4-zhang-freebsd-gao-ji-an-zhuang/di-4.6-jie-teng-xun-yun-qing-liang-yun-an-zhuang-freebsd-chuan-tong-yin-dao-he-mbr-fen-qu-biao.md)
-* [4.7 KVM、QEMU 等平台安装 FreeBSD（传统引导和 MBR 分区表）](di-4-zhang-freebsd-gao-ji-an-zhuang/di-4.7-jie-kvm-qemu-deng-ping-tai-an-zhuang-freebsd-chuan-tong-yin-dao-he-mbr-fen-qu-biao.md)
-* [4.8 阿里云轻量应用服务器安装 FreeBSD（UEFI 和 GPT 分区表）](di-4-zhang-freebsd-gao-ji-an-zhuang/di-4.8-jie-a-li-yun-qing-liang-ying-yong-fu-wu-qi-an-zhuang-freebsd-uefi-he-gpt-fen-qu-biao.md)
+* [4.5 腾讯云轻量云安装 FreeBSD（传统引导和 MBR 分区表）](di-4-zhang-freebsd-gao-ji-an-zhuang/di-4.5-jie-teng-xun-yun-qing-liang-yun-an-zhuang-freebsd-chuan-tong-yin-dao-he-mbr-fen-qu-biao.md)
+* [4.6 KVM、QEMU 等平台安装 FreeBSD（传统引导和 MBR 分区表）](di-4-zhang-freebsd-gao-ji-an-zhuang/di-4.6-jie-kvm-qemu-deng-ping-tai-an-zhuang-freebsd-chuan-tong-yin-dao-he-mbr-fen-qu-biao.md)
+* [4.7 阿里云轻量应用服务器安装 FreeBSD（UEFI 和 GPT 分区表）](di-4-zhang-freebsd-gao-ji-an-zhuang/di-4.7-jie-a-li-yun-qing-liang-ying-yong-fu-wu-qi-an-zhuang-freebsd-uefi-he-gpt-fen-qu-biao.md)
 
 ## 第 5 章 FreeBSD 基础
 
@@ -147,12 +146,11 @@
 
 ## 第 14 章 游戏、科学计算和专业工具
 
-* [14.1 Ren'Py 视觉小说引擎](di-14-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-14.1-jie-renpy-shi-jue-xiao-shuo-yin-qing.md)
-* [14.2 Godot 开源游戏引擎](di-14-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-14.2-jie-godot-kai-yuan-you-xi-yin-qing.md)
-* [14.3 我的世界（Minecraft）](di-14-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-14.3-jie-wo-de-shi-jie-minecraft.md)
-* [14.4 Steam 客户端](di-14-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-14.4-jie-steam-ke-hu-duan.md)
-* [14.5 Wine](di-14-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-14.5-jie-wine.md)
-* [14.6 科研和专业计算](di-14-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-14.6-jie-ke-yan-he-zhuan-ye-ji-suan.md)
+* [14.1 Godot 开源游戏引擎](di-14-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-14.1-jie-godot-kai-yuan-you-xi-yin-qing.md)
+* [14.2 我的世界（Minecraft）](di-14-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-14.2-jie-wo-de-shi-jie-minecraft.md)
+* [14.3 Steam 客户端](di-14-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-14.3-jie-steam-ke-hu-duan.md)
+* [14.4 Wine](di-14-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-14.4-jie-wine.md)
+* [14.5 科研和专业计算](di-14-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-14.5-jie-ke-yan-he-zhuan-ye-ji-suan.md)
 
 ## 第 15 章 人工智能
 

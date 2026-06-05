@@ -80,7 +80,7 @@ Multics 的开发最终陷入困境。该系统设计了大量程序及功能，
 
 ### UNICS 的诞生
 
-UNICS 是 UNIX 的直接前身，其诞生源于一项游戏项目。贝尔实验室退出 Multics 开发项目后，项目组成员肯尼斯·蓝·汤普森（Kenneth Lane Thompson）在实验室找到了一台闲置的数字设备公司（Digital Equipment Corporation，DEC）PDP-7 型计算机。该计算机性能有限，仅 8K 字（约 18 KB）内存，但具备较为完善的图形显示能力。Thompson 此前已在 Multics 系统上编写了游戏 Space Travel（《星际旅行》），随后改写为 Fortran 版本，在 GE 635 计算机的 GECOS 操作系统上运行。但因运行费用高昂且显示效果不佳，Thompson 与 Ritchie 将该游戏移植到了 PDP-7 上。PDP-7 配备了一台大容量单盘片磁盘驱动器，Thompson 编写了磁盘调度算法以最大化磁盘吞吐量。
+UNIX 系统最初被命名为 UNICS，其诞生源于一项游戏项目。贝尔实验室退出 Multics 开发项目后，项目组成员肯尼斯·蓝·汤普森（Kenneth Lane Thompson）在实验室找到了一台闲置的数字设备公司（Digital Equipment Corporation，DEC）PDP-7 型计算机。该计算机性能有限，仅 8K 字（约 18 KB）内存，但具备较为完善的图形显示能力。Thompson 此前已在 Multics 系统上编写了游戏 Space Travel（《星际旅行》），随后改写为 Fortran 版本，在 GE 635 计算机的 GECOS 操作系统上运行。但因运行费用高昂且显示效果不佳，Thompson 与 Ritchie 将该游戏移植到了 PDP-7 上。PDP-7 配备了一台大容量单盘片磁盘驱动器，Thompson 编写了磁盘调度算法以最大化磁盘吞吐量。
 
 > **技巧**
 >

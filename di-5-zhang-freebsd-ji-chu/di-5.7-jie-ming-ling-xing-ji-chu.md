@@ -377,21 +377,6 @@ ykla@ykla:~ $ ls
 
 则不会显示隐藏文件。
 
-> **技巧**
->
-> 在 FreeBSD 默认配置中，无论普通用户还是 root，`ls` 命令均需要 `-a` 选项才会显示隐藏文件。
-
-FreeBSD ls 与 GNU ls 比较：
-
-| 参数 | FreeBSD `ls` 行为 | GNU `ls` 行为 |
-| ---- | ----------------- | ------------- |
-| `-o` | 显示长格式 + 文件 flags（文件标志） | 等同 `-l`，但不显示属组（group） |
-| `-l` | 长格式（权限 / 属主 / 属组 / 时间等） | 长格式（权限 / 属主 / 属组 / 时间等） |
-| `-G` | 启用彩色输出 | 等同 `--no-group`，在长格式列表中不显示属组信息 |
-| `--color` | 不支持 | 启用彩色输出 |
-| `--group-directories-first` | 不支持 | 目录优先排序（目录排在文件前） |
-| 文件 flags（flags） | 支持（如 `schg`, `uchg` 等） | 不支持 |
-
 ### `touch` 创建文件命令
 
 `touch` 的字面含义为“触碰”，表示轻微变动文件时间戳。
@@ -808,7 +793,7 @@ total 1
 
 > **注意**
 >
-> 在 FreeBSD 下，关机与重启操作都只有 root 用户和 operator 组成员可以执行。执行 shutdown 时会向所有已登录用户广播警告信息，并在指定时间前 1 分钟创建 **/var/run/nologin** 以阻止新登录。
+> 在 FreeBSD 下，关机与重启操作都只有 root 用户和 operator 组成员可以执行。执行 shutdown 时会向所有已登录用户广播警告信息，并在指定时间前 5 分钟创建 **/var/run/nologin** 以阻止新登录（若关机时间不足 5 分钟则立即创建）。
 
 > **技巧**
 >
@@ -816,7 +801,7 @@ total 1
 
 ## 参考文献
 
-- FreeBSD Project. make -- maintain program groups[EB/OL]. [2026-04-17]. <https://man.freebsd.org/cgi/man.cgi?query=make&sektion=1>. BSD make 手册页，描述构建工具语法与用法。
+- FreeBSD Project. make -- maintain program dependencies[EB/OL]. [2026-04-17]. <https://man.freebsd.org/cgi/man.cgi?query=make&sektion=1>. BSD make 手册页，描述构建工具语法与用法。
 - FreeBSD Project. grep -- file pattern searcher[EB/OL]. [2026-04-17]. <https://man.freebsd.org/cgi/man.cgi?query=grep&sektion=1>. 文本搜索工具手册页。
 - FreeBSD Project. sed -- stream editor[EB/OL]. [2026-04-17]. <https://man.freebsd.org/cgi/man.cgi?query=sed&sektion=1>. 流编辑器手册页。
 

@@ -46,7 +46,7 @@
 
 本节内容引自 FreeBSD 手册。
 
-- 如果被管理员警告达三次，将被所有邮件列表封禁。
+- 如果被管理员书面警告两次后仍有违规（即第三次违规），将被所有邮件列表封禁。
 - 如需闲聊，请访问 [https://lists.freebsd.org/subscription/freebsd-chat](https://lists.freebsd.org/subscription/freebsd-chat)
 - 除非必要，不应在两个以上的邮件列表上发帖。
 - 严禁发布广告（非 FreeBSD 相关内容），违反者将立即被封禁。

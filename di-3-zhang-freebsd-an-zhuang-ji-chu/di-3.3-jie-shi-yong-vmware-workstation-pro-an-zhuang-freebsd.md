@@ -36,7 +36,7 @@ FreeBSD 中文社区. 001-Windows 11 安装 VMware 17[EB/OL]. [2026-04-04]. <htt
 
 > **技巧**
 >
-> 在测试环境中，选择其他操作系统类型也能正常启动，但为保持配置一致性并避免潜在兼容性问题，建议选择 FreeBSD。对于低版本的 FreeBSD，虚拟机增强工具未开源，可能会出现问题。
+> 在测试环境中，选择其他操作系统类型也能正常启动，但为保持配置一致性并避免潜在兼容性问题，建议选择 FreeBSD。对于低版本的 FreeBSD，旧版 VMware Tools（闭源版本）可能存在兼容性问题。
 
 ![VMware 安装 FreeBSD](../.gitbook/assets/vmware-5.png)
 
@@ -108,7 +108,7 @@ FreeBSD 中文社区. 001-Windows 11 安装 VMware 17[EB/OL]. [2026-04-04]. <htt
 
 ## 虚拟机增强工具与显卡驱动
 
-VMware 的半虚拟化驱动程序（VMware Tools，亦称 Open VM Tools）通过 HGFS（Host-Guest File System）等专有协议提供图形加速、共享文件夹、剪贴板共享等功能，可改善虚拟机的 I/O 性能和用户体验。
+VMware 的半虚拟化驱动程序的开源实现 open-vm-tools 通过 HGFS（Host-Guest File System）等专有协议提供图形加速、共享文件夹、剪贴板共享等功能，可改善虚拟机的 I/O 性能和用户体验。
 
 要实现虚拟机与宿主机的良好集成，需安装 xf86-video-vmware（VMware 显卡驱动）和 xf86-input-vmmouse（VMware 虚拟鼠标驱动）。pkg 命令如下：
 

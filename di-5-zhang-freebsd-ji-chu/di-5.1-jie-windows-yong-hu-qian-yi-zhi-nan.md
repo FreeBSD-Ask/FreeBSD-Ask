@@ -147,7 +147,7 @@ PSPath
 
 ### 大小写敏感性
 
-FreeBSD 的 ZFS 和 UFS 均**区分大小写（大小写敏感）**。而 macOS 的 HFS+（默认不区分大小写）、APFS（默认不区分大小写）以及 Windows 的 FAT32 文件系统均**不区分大小写（大小写不敏感）**。NTFS 本身为大小写保留文件系统，但 Windows 的 Win32 子系统默认以大小写不敏感方式处理文件名（Windows 10 1803 以后可通过 `fsutil.exe file queryCaseSensitiveInfo <路径>` 按目录启用大小写敏感，主要用于 WSL 兼容）。
+FreeBSD 的 ZFS 和 UFS 均**区分大小写（大小写敏感）**。而 macOS 的 HFS+（默认不区分大小写）、APFS（默认不区分大小写）以及 Windows 的 FAT32 文件系统均**不区分大小写（大小写不敏感）**。NTFS 本身为大小写保留文件系统，但 Windows 的 Win32 子系统默认以大小写不敏感方式处理文件名（Windows 10 1803 以后可通过 `fsutil.exe file setCaseSensitiveInfo <路径> enable` 按目录启用大小写敏感，`fsutil.exe file queryCaseSensitiveInfo <路径>` 可查询目录的大小写敏感状态，主要用于 WSL 兼容）。
 
 - Windows 下 **大小写不敏感**
 
@@ -291,7 +291,7 @@ Windows 直接读取 RTC 的值，并视为本地时间（Local Time，地方时
 - 中国计量科学研究院. 秒的定义[EB/OL]. [2026-03-26]. <https://www.nim.ac.cn/520/node/4.html>. 秒的定义，基于铯原子超精细跃迁频率。
 - BIPM. SI base unit: second[EB/OL]. [2026-04-18]. <https://www.bipm.org/en/si-base-units/second>. 国际计量局秒的 SI 定义，铯 133 原子不受干扰的基态超精细跃迁频率取固定数值 9,192,631,770 Hz。
 - IANA. Time Zone Database[EB/OL]. [2026-03-26]. <https://www.iana.org/time-zones>. 时区数据库，提供全球时区信息标准化。
-- IANA. tzdata release 2025b NEWS[EB/OL]. [2026-04-18]. <https://data.iana.org/time-zones/tzdb-2025b/NEWS>. 时区数据库 2025b 版本变更说明，Asia/Urumqi 的 1980 年向 UTC+8 的转换已被移除，现为 UTC+6；Asia/Kashgar 为 Asia/Urumqi 的向后兼容链接。
+- Eggert P. Simplify China's time zones from five to two[EB/OL]. [2026-04-18]. <https://github.com/eggert/tz/commit/15b01c042afa770acd5068054c50e7c5c663cbd2>. 2014 年该修订将中国时区从五个简化为两个，移除了 Asia/Urumqi 的 1980 年向 UTC+8 的转换（现为 UTC+6），并将 Asia/Harbin、Asia/Chongqing、Asia/Kashgar 改为向后兼容链接。
 - 微软. Why does Windows keep your BIOS clock on local time?[EB/OL]. [2026-04-18]. <https://devblogs.microsoft.com/oldnewthing/20040902-00/?p=37983>. Windows 默认将硬件时钟（RTC）视为本地时间而非 UTC 的历史原因。
 - 中国科学院紫金山天文台. 历书基本术语简介[EB/OL]. [2026-03-26]. <http://www.pmo.cas.cn/xwdt2019/kpdt2019/202203/t20220314_6389637.html#b4>. 本节所涉术语，可参考此处的精确解释。
 - 新华网. “北京时间”是怎么来的[EB/OL]. [2026-04-18]. <https://www.xinhuanet.com/politics/2015-10/28/c_1116958394.htm>. 北京时间并非北京（东经 116.4°）地方时，而是东经 120° 经线的区时；中国曾于 1986—1991 年实行夏令时。

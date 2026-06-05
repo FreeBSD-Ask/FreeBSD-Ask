@@ -1,4 +1,4 @@
-# 4.6 腾讯云轻量云安装 FreeBSD（传统引导和 MBR 分区表）
+# 4.5 腾讯云轻量云安装 FreeBSD（传统引导和 MBR 分区表）
 
 本节演示在不依赖额外安装介质的前提下，借助腾讯云轻量云已有的 Linux 系统，通过本地硬盘完成 FreeBSD 的安装与部署。
 
@@ -36,11 +36,11 @@ FreeBSD 中文社区. 08-腾讯云轻量云及其他服务器安装 FreeBSD[EB/O
 
 由于 FreeBSD 与 Linux 生态不同，需要先引导至一个运行在内存中的 Linux 环境，在该环境中将 mfsBSD 写入硬盘，最后通过 `bsdinstall` 工具完成系统安装。
 
-在 mfsBSD 下载页面的下方，可找到 [mfsLinux](https://mfsbsd.vx.sk/files/iso/mfslinux/mfslinux-0.1.11-94b1466.iso)，即所需的 Linux 环境。由于该文件仅提供 ISO 格式，无法在当前环境下直接启动，而该环境基于纯 initrd 架构，需要从中提取内核和 initrd 文件，存放于硬盘并进行手动引导。
+在 mfsBSD 下载页面的下方，可找到 [mfsLinux](https://mfsbsd.vx.sk/files/iso/mfslinux/mfslinux-0.1.11-94b1466.iso)，即所需的 Linux 环境。由于该文件仅提供 ISO 格式，无法在当前环境下直接启动，而该环境基于 initramfs 架构，需要从中提取内核和 initramfs 文件，存放于硬盘并进行手动引导。
 
-在典型的 Linux 系统中，initrd 是一个打包为内存盘的精简根文件系统，内含驱动程序、挂载工具以及启动初始化程序所必需的数据。开机时，引导加载程序（Bootloader）加载内核与 initrd，随后由 initrd 中的脚本执行启动准备，最后将控制权移交给硬盘上的初始化程序。
+在典型的 Linux 系统中，initramfs 是一个打包为 cpio 归档的精简根文件系统，内含驱动程序、挂载工具以及启动初始化程序所必需的数据。开机时，引导加载程序（Bootloader）加载内核与 initramfs，随后由 initramfs 中的脚本执行启动准备，最后将控制权移交给硬盘上的初始化程序。
 
-首先，将从该 ISO 中提取的内核和 initrd 文件放置于根目录。重启机器并进入 GRUB 命令行界面（可在引导倒计时时按 `e` 键进入编辑模式，删除原有 `linux` 和 `initrd` 行的内容并修改，完成后按 `Ctrl+X` 启动）。手动指定要启动的内核与 initrd（可使用 `Tab` 键补全路径）。输入 `boot` 并按回车继续启动，也可按 `c` 键进入 GRUB 命令行模式。
+首先，将从该 ISO 中提取的内核和 initramfs 文件放置于根目录。重启机器并进入 GRUB 命令行界面（可在引导倒计时时按 `e` 键进入编辑模式，删除原有 `linux` 和 `initrd` 行的内容并修改，完成后按 `Ctrl+X` 启动）。手动指定要启动的内核与 initramfs（可使用 `Tab` 键补全路径）。输入 `boot` 并按回车继续启动，也可按 `c` 键进入 GRUB 命令行模式。
 
 ```sh
 linux (hd0,msdos1)/vmlinuz       # 指定内核文件路径
@@ -54,7 +54,7 @@ boot # 输入 boot 后按回车继续启动
 
 ![GRUB 命令行界面](../.gitbook/assets/grub-cli-interface.png)
 
-在启动此 initrd 后，不会加载硬盘上的原系统，而是自行配置网络并启动 SSH 服务器。由此获得一个运行在内存中的 Linux 系统。
+在启动此 initramfs 后，不会加载硬盘上的原系统，而是自行配置网络并启动 SSH 服务器。由此获得一个运行在内存中的 Linux 系统。
 
 此时应可通过 SSH 连接到服务器，并安全地格式化硬盘。
 

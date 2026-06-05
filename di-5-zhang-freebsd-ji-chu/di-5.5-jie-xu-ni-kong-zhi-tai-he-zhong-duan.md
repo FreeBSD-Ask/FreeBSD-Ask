@@ -59,7 +59,7 @@ To change this login announcement, see motd(5).
 
 > **注意**
 >
-> 密码不会回显至屏幕。通常，输入密码时，屏幕上会显示 `******`。但在 FreeBSD 中，凡涉及密码的操作，屏幕均不显示任何回显字符——即便输入了密码，屏幕也仍是空白，直接输入后按回车即可。
+> 密码不会回显至屏幕。FreeBSD 在涉及密码输入时，屏幕不会显示任何回显字符（UNIX 系统通常不显示星号或其他占位符），即便输入了密码，屏幕也仍是空白，直接输入后按回车即可。
 
 - ①：root 是 UNIX 系统中的超级用户账户，拥有最高权限。常见的 Android root、Apple 越狱、Kindle 越狱等操作，均旨在获取此 root 权限。
 
@@ -256,5 +256,5 @@ exec="gop set 0"
 ## 课后习题
 
 1. 在 FreeBSD 中切换多个虚拟控制台（ttyv0—ttyv3），分别以不同用户登录，使用 `w` 命令记录各终端的会话信息，分析虚拟控制台与伪终端的会话管理差异。
-2. 查阅 FreeBSD 内核中 TTY 子系统的核心源代码（**sys/tty/**），分析其输入输出缓冲区管理和行规程的实现机制。
-3. 修改 `/etc/motd.template` 的内容（`/etc/motd` 是其符号链接，参见 motd(5)）与显示行为（如通过 `/etc/login.conf` 的 `hushlogin` 功能控制），记录修改前后用户登录时的信息输出差异。
+2. 查阅 FreeBSD 内核中 TTY 子系统的核心源代码（**sys/kern/tty\*.c** 与 **sys/sys/tty\*.h**），分析其输入输出缓冲区管理和行规程的实现机制。
+3. 修改 `/etc/motd.template` 的内容（`/etc/motd` 是 `/var/run/motd` 的符号链接，启动时由 `/etc/motd.template` 生成，参见 motd(5)）与显示行为（如通过 `/etc/login.conf` 的 `hushlogin` 功能控制），记录修改前后用户登录时的信息输出差异。

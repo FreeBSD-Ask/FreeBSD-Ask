@@ -33,14 +33,6 @@ hw.ncpu: 16
 
 搜索英特尔处理器型号加 `ARK`，可跳转至英特尔官网查询线程数。
 
-个别情况下可以通过设置别名加速编译（非永久设置，FreeBSD 14 默认已生效，无需额外设置）：
-
-```ini
-# alias ninja='ninja -j4'	# 为 ninja 命令设置别名，指定并行编译 4 个作业
-```
-
-关于多线程编译和 CPU 特性的更多信息，可参考以下资料。
-
 - FreeBSD Forums. Easy way to get cpu features[EB/OL]. [2026-03-25]. <https://forums.freebsd.org/threads/easy-way-to-get-cpu-features.10553/>. 获取 CPU 线程数量的命令来自此处。
 
 ## 将 /tmp 设置为内存文件系统

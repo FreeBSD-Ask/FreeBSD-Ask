@@ -91,7 +91,7 @@ $ git checkout A
 
 建议阅读《FreeBSD Port 开发者手册》。
 
-FreeBSD 的软件以 Port 形式提供，开发者无需考虑如何打包为二进制软件包等问题。Port 本身也不包含软件源代码，类似于 Gentoo（Gentoo Portage 脱胎于 FreeBSD Ports），因此理论上移植难度较低。
+FreeBSD 的软件以 Port 形式提供，开发者无需考虑如何打包为二进制软件包等问题。Port 本身也不包含软件源代码，类似于 Gentoo（Gentoo Portage 的设计理念源自 FreeBSD Ports），因此理论上移植难度较低。
 
 完成移植后，可向 Bug 报告系统提交请求合并的报告（也可直接发送到 [https://reviews.freebsd.org/](https://reviews.freebsd.org/)），具体格式可以参考列表中其他软件的示例。如果长时间无人回应，可向邮件列表发送询问，确认是否有人能够协助提交。如果仍无人回应，可在一周后再次发送。
 

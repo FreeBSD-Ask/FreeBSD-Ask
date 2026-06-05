@@ -1,4 +1,4 @@
-# 4.8 阿里云轻量应用服务器安装 FreeBSD（UEFI 和 GPT 分区表）
+# 4.7 阿里云轻量应用服务器安装 FreeBSD（UEFI 和 GPT 分区表）
 
 本节演示在阿里云轻量应用服务器上通过 UEFI + GPT 方式安装 FreeBSD，以 Rocky Linux 9 为中间宿主系统完成部署。
 
@@ -526,7 +526,7 @@ pid 1562 (distextract), jid 0, uid 0, was killed: failed to reclaim memory
 
 解决方法为按照上文所述，执行命令 `kldload zfs` 手动加载内核模块。
 
-这可能是一个长期存在但难以复现的 Bug，参见：FreeBSD Foundation. Bug 249157 - installer reports sysctl: unknown oid 'vfs.zfs.min_auto_ashift' when ZFS module not loaded[EB/OL]. [2026-03-26]. <https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=249157>.
+这可能是一个长期存在但难以复现的 Bug，参见：FreeBSD Project. Bug 249157 - installer reports sysctl: unknown oid 'vfs.zfs.min_auto_ashift' when ZFS module not loaded[EB/OL]. [2026-03-26]. <https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=249157>.
 
 ### 文件系统不支持在线缩小
 

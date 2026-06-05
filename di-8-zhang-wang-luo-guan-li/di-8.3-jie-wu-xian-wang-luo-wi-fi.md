@@ -10,7 +10,7 @@ FreeBSD 支持多种无线网卡和认证方式。
 
 ### 无线网络配置
 
-基本无线网络由多个站点组成，各站点通过 2.4 GHz 与 5 GHz 频段的无线电通信实现互联（6 GHz 频段在 FreeBSD 上处于实验性支持阶段，需特定硬件与驱动配合）。配置无线网络包含三个步骤：
+基本无线网络由多个站点组成，各站点通过 2.4 GHz 与 5 GHz 频段的无线电通信实现互联（6 GHz 频段在 FreeBSD 上尚处于计划阶段，目前不可用）。配置无线网络包含三个步骤：
 
 1. 扫描并选择接入点
 2. 认证站点
@@ -45,7 +45,7 @@ net.wlan.devices: rtwn0
 
 > **技巧**
 >
-> 上述示例中的 `wlan0`、`iwlwifi0`、`192.168.1.100`、`freebsdap`、`freebsdcn` 为占位符，须替换为实际的值。
+> 上述示例中的 `wlan0`、`rtwn0`、`192.168.1.100`、`freebsdap`、`freebsdcn` 为占位符，须替换为实际的值。
 
 创建完成后，可使用 `ifconfig` 命令查看接口状态（以下输出已省略以太网卡和 `lo0` 接口）：
 
@@ -202,7 +202,7 @@ wlan0: flags=8843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST> metric 0 mtu 1500
 
 ## 英特尔无线网卡驱动概况
 
-英特尔（Intel）网卡是目前广泛使用的无线网卡之一。iwlwifi 驱动支持的芯片范围是 iwm 的超集：iwlwifi 的 mvm 子驱动覆盖了 iwm 支持的全部芯片，此外还通过 mld 子驱动支持更新的 BZ、SC 等芯片代，见 [英特尔 ® 无线适配器的 Linux* 支持](https://www.intel.cn/content/www/cn/zh/support/articles/000005511/wireless.html)。iwm 仅支持 802.11a/b/g 模式（不支持 802.11n/ac，无法关联仅配置为 802.11n/ac 模式的接入点）；iwlwifi 支持 802.11a/b/g/n/ac/ax/be，但 802.11n 和 802.11ac 默认处于关闭状态（固件包会针对支持的芯片自动调整）。
+英特尔（Intel）网卡是目前广泛使用的无线网卡之一。iwlwifi 驱动支持的芯片范围是 iwm 的超集：iwlwifi 目前仅移植了 Linux 上游驱动的 mvm 子驱动部分，覆盖了 iwm 支持的全部芯片以及部分更新的芯片（如 BZ 系列设备）。Linux 上游的 iwlwifi 驱动还包含 mld 子驱动（用于 WiFi 7 MLO 多链路操作），但该部分尚未移植至 FreeBSD。
 
 在 **/etc/rc.conf** 文件中添加以下配置：
 

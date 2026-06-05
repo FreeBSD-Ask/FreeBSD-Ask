@@ -27,7 +27,7 @@
 
 **第 3 章 FreeBSD 安装基础**：指导使用 FreeBSD 内置安装工具 `bsdinstall` 完成系统安装，涵盖 VMware、VirtualBox、Hyper-V 等虚拟化平台上的安装方法、安装故障排除，以及 USB 启动盘恢复为普通存储设备的方法。
 
-**第 4 章 FreeBSD 高级安装**：介绍双系统配置、基于 Apple M1 平台的安装方案，以及腾讯云、阿里云、KVM/QEMU 等云平台和虚拟化环境中的安装方法。
+**第 4 章 FreeBSD 高级安装**：介绍双系统配置、基于 Apple M1 平台的安装方案（Parallels Desktop、VMware Fusion Pro），以及腾讯云、阿里云、KVM/QEMU 等云平台和虚拟化环境中的安装方法。
 
 **第 5 章 FreeBSD 基础**：面向 Windows、Linux 和 macOS 用户提供迁移指南，涵盖系统目录结构、虚拟控制台、shell 使用、命令行基础、文本编辑器、用户与权限管理及压缩工具等基础操作。
 
@@ -47,7 +47,7 @@
 
 **第 13 章 Linux 兼容层**：介绍 FreeBSD 的 Linux 兼容层架构，涵盖 Rocky Linux、Ubuntu/Debian/Kali Linux、Arch Linux、Slackware、Gentoo 等多种 Linux 发行版的兼容环境搭建，以及微信、QQ、WPS Office 等 Linux 应用的运行方法和故障排除。
 
-**第 14 章 游戏、科学计算和专业工具**：介绍 Ren'Py 视觉小说引擎、Godot 游戏引擎、Minecraft、Steam 客户端和 Wine 配置，以及科研和专业计算工具的使用。
+**第 14 章 游戏、科学计算和专业工具**：介绍 Godot 游戏引擎、Minecraft、Steam 客户端和 Wine 配置，以及科研和专业计算工具的使用。
 
 **第 15 章 人工智能**：介绍人工智能概论与 AI 大模型在 FreeBSD 上的本地部署方法。
 

@@ -75,7 +75,7 @@ FreeBSD 缺陷报告系统位于 [https://bugs.freebsd.org/bugzilla](https://bug
 
 请注意，邮件是公开的，可能会收到骚扰信息，请采取防护措施或使用公共邮箱。
 
-- Summary：梗概，简明扼要；
+- Summary：概要，简明扼要；
 - Severity：严重程度，只影响我/影响某些人/影响许多人，请勿过高估计严重程度；
 - Category：类别，当前 Bugzilla 采用产品（Product）/组件（Component）两级结构，主要产品如下：
   - Base System：基本系统

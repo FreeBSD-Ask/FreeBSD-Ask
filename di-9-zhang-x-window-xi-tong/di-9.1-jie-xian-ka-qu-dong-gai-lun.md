@@ -24,14 +24,14 @@ DRM 是 Linux 内核的子系统，负责与现代显卡的 GPU 交互。FreeBSD
 
 > **注意**
 >
-> 这种移植并不覆盖 Linux 现有的全部 DRM GPU 驱动，目前仅包括 i915、amdgpu 和 radeon，vmwgfx、xe、virtio 等均未移植。这些未移植的 GPU 通常无法在 Wayland 上运行，只能使用 X11 显示协议。
+> 这种移植并不覆盖 Linux 现有的全部 DRM GPU 驱动，目前仅包括 i915、amdgpu 和 radeon，vmwgfx、xe、virtio 等均未移植。这些未移植的 GPU 缺少 DRM KMS 驱动支持，无法在 Wayland 上运行，在 X11 上也只能使用帧缓冲驱动（如 scfb 或 vesa）而非硬件加速驱动。
 
 显卡支持情况：
 
 - **graphics/drm-latest-kmod**（15.1/16.0）：
   - 对应 Linux 6.12 DRM。
   - Intel：Meteor Lake 图形在 6.7 后默认启用；
-  - AMD：覆盖 GCN 到 RDNA 3 全部架构。RDNA 4 驱动需等待更新的 Linux 内核版本移植。
+  - AMD：覆盖 GCN 到 RDNA 4 全部架构（RDNA 4 支持自 Linux 6.12 引入）。
 
 > **技巧**
 >
@@ -86,7 +86,7 @@ ThinkPad 可启用 IBM ACPI 支持和 ACPI 视频支持。
 # sysrc -f /boot/loader.conf acpi_video_load="YES"
 ```
 
-### 英特尔/AMD 显卡
+### Intel/AMD 显卡
 
 `backlight` 工具自 FreeBSD 13 引入。
 
