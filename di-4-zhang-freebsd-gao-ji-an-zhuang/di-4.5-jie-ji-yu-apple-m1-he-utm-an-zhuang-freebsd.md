@@ -60,7 +60,7 @@ aarch64 镜像选择“虚拟化”，amd64 镜像选择“模拟”。
 
 ![系统引导界面](../.gitbook/assets/install_bsd_on_utm/utm-grub-menu.png)
 
-进入安装程序，鼠标默认可用。按下 Control + Option 快捷键可捕获鼠标光标，再次按下此快捷键可释放鼠标。
+进入安装程序，鼠标默认可用。点击工具栏"捕获鼠标光标"按钮可捕获鼠标，按下 Control + Option 快捷键可释放鼠标。
 
 ![安装程序界面](../.gitbook/assets/install_bsd_on_utm/utm-installer.png)
 
