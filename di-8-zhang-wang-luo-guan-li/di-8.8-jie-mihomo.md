@@ -56,7 +56,7 @@ desc="mihomo server"    # 服务描述信息
 rcvar="mihomo_enable"    # 服务开关变量，控制服务是否开机自启
 
 : ${mihomo_datadir:="/var/run/mihomo"}
-: ${mihomo_user:="root"}    # 默认用户；如使用其他用户，请确保 /etc/mihomo 目录及 $pidfile 和 log 文件可写
+: ${mihomo_user:="root"}    # 默认用户；如使用其他用户，请确保 mihomo_datadir 目录及 $pidfile 和 log 文件可写
 : ${mihomo_extra_flags:=""}	# mihomo 的额外参数，用于传递自定义启动选项
 
 procname="/usr/local/bin/mihomo"    # 与 pidfile 配合，用于检测服务进程
