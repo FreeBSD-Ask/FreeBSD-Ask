@@ -54,7 +54,7 @@ boot # 输入 boot 后按回车继续启动
 
 ![GRUB 命令行界面](../.gitbook/assets/grub-cli-interface.png)
 
-在启动此 initrd 后，不会加载硬盘上的原系统，而是自行配置网络并启动 SSH 服务器。由此获得一个运行在内存中的 Linux 系统。
+在启动此 initramfs 后，不会加载硬盘上的原系统，而是自行配置网络并启动 SSH 服务器。由此获得一个运行在内存中的 Linux 系统。
 
 此时应可通过 SSH 连接到服务器，并安全地格式化硬盘。
 
