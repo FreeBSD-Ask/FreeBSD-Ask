@@ -7,7 +7,7 @@ Mihomo 是 Clash 系列的衍生版本，已收录于 FreeBSD Ports 树中（net
 使用 pkg 安装：
 
 ```sh
-# pkg install net/mihomo
+# pkg install mihomo
 ```
 
 或者使用 Ports 安装：
@@ -222,7 +222,7 @@ mihomo_enable="YES" # 开机启用/服务项
 
 ### 环境准备
 
-FreeBSD 的默认登录 Shell 不一定是 `bash`，执行以下命令前必须先切换至 `bash`：
+FreeBSD 的默认登录 Shell 是 sh 而非 bash，执行以下命令前必须先切换至 `bash`：
 
 ```shell
 $ bash
