@@ -68,7 +68,7 @@ BERKELEY G. Verses on the Prospect of Planting Arts and Learning in America[C]//
 
 以下画像展示这位哲学家的形象：
 
-![George Berkeley](../.gitbook/assets/george-berkeley-portrait.png)
+![George Berkeley](../.gitbook/assets/george-berkeley-portrait.jpg)
 
 图片出处：[National Portrait Gallery](https://www.npg.org.uk/collections/search/portrait/mw00534/George-Berkeley)（John Smibert 绘，1730 年，藏于伦敦国家肖像馆）。
 
