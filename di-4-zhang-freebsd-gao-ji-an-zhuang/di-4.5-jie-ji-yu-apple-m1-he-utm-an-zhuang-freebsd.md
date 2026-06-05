@@ -77,7 +77,7 @@ aarch64 镜像选择“虚拟化”，amd64 镜像选择“模拟”。
 直接启动 Xorg 默认的窗口管理器 TWM 会报错，输出内容如下：
 
 ```sh
-voosk@BSDVM:~ $ startx
+$ startx
 xauth:  file /home/voosk/.serverauth.3074 does not exist
 
 
@@ -115,7 +115,6 @@ Please consult the The X.Org Foundation support
 xinit: giving up
 xinit: unable to connect to X server: Connection refused
 xinit: server error
-voosk@BSDVM:~ $
 ```
 
 在 **/boot/loader.conf** 文件中加入下面两行可启动 TWM，但虚拟机将失去画面输出（SSH 仍可连接，说明这仅为显示问题）。
@@ -128,7 +127,7 @@ hint.vtgpu.0.disabled="1"
 重启后 startx 能够正常启动 TWM，输出如下：
 
 ```sh
-voosk@BSDVM:~ $ startx
+$ startx
 xauth:  file /home/voosk/.serverauth.3072 does not exist
 
 
