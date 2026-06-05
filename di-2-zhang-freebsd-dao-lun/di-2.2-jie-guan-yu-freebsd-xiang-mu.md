@@ -28,7 +28,7 @@ FreeBSD 的治理结构包含存储库、基金会、社区、提交者和核心
 
 ### 源代码存储库
 
-FreeBSD 项目历史悠久，其版本控制工具历经 CVS、SVN、Git。多年来，FreeBSD 的中央源代码树由 CVS（Concurrent Versions System）维护。CVS 免费提供源代码控制功能。随着源代码树的快速扩张和已存储历史记录的大量增加，CVS 的技术局限性日益明显，项目于 2008 年 6 月切换至 SVN（Subversion）。文档项目和 Ports 集合的存储库也分别于 2012 年 5 月和 2012 年 7 月从 CVS 迁移至 SVN。2020 年 12 月项目完成 Git 仓库转换测试，src 仓库于 2020 年 12 月迁移至 Git，doc 存储库于 2020 年 12 月、Ports 存储库于 2021 年 4 月迁移至 Git。目前使用 Git 进行协作开发。
+FreeBSD 项目历史悠久，其版本控制工具历经 CVS、SVN、Git。多年来，FreeBSD 的中央源代码树由 CVS（Concurrent Versions System）维护。CVS 是一款自由软件，提供源代码控制功能。随着源代码树的快速扩张和已存储历史记录的大量增加，CVS 的技术局限性日益明显，项目于 2008 年 6 月切换至 SVN（Subversion）。文档项目和 Ports 集合的存储库也分别于 2012 年 5 月和 2012 年 7 月从 CVS 迁移至 SVN（Ports 于 2012 年 7 月起进入 CVS 与 SVN 双轨运行期，2013 年 2 月正式关闭 CVS 访问）。2020 年 12 月项目完成 Git 仓库转换测试，src 仓库于 2020 年 12 月迁移至 Git，doc 存储库于 2020 年 12 月、Ports 存储库于 2021 年 4 月迁移至 Git。目前使用 Git 进行协作开发。
 
 FreeBSD 项目的存储库分为三个：freebsd-src（源代码）、freebsd-ports（Ports 软件移植）、freebsd-doc（文档）。三个项目地位平等。
 
