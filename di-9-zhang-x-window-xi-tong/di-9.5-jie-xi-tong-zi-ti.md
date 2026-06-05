@@ -1,6 +1,6 @@
 # 9.5 系统字体
 
-FreeBSD 默认字体对中文显示效果欠佳。本节介绍图形界面引入 Windows TrueType 字体的方法及控制台字体的替换配置。
+FreeBSD 默认字体对中文显示效果欠佳。本节介绍图形界面引入 Windows TrueType 字体的方法。
 
 ## GUI 图形界面字体
 
