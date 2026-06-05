@@ -43,7 +43,7 @@ Original Unix
                                |                   XNU Kernel                  |   |
                                |                                               |   |
                                |         (Mach 2.5 Base + OSFMK 7.3            |   |
-                               |          + FreeBSD 4.x/5.x VFS/Networking)    |   |
+                               |          + FreeBSD VFS/Networking)             |   |
                                +-----------------------------------------------+   |
                                                        |                           |
                                                        V                           |
@@ -61,7 +61,7 @@ macOS 系列操作系统可以看作独立的、类 BSD 操作系统分支，与
 
 | 组件 | 来源 |
 | ---- | ---- |
-| XNU 内核 | 基于 Mach 微内核（CMU）、NeXTStep/OpenStep 架构，整合 BSD 子系统 |
+| XNU 内核 | 基于 Mach 微内核（CMU）、NeXTStep/OpenStep 架构，整合 BSD 子系统（最初源自 FreeBSD 4.x/5.x，苹果持续从较新 FreeBSD 版本同步代码） |
 | 网络栈 | BSD/FreeBSD TCP/IP 协议栈为核心（IPv4/IPv6），包含 IOKIT 驱动接口；NKE（Network Kernel Extensions，网络内核扩展） |
 | 虚拟文件系统 | 基于 BSD VFS，支持 HFS+、APFS、UFS 等文件系统 |
 | 用户空间工具 | BSD 用户工具（如 ls、cp、grep 等），经过苹果改造和增强 |
