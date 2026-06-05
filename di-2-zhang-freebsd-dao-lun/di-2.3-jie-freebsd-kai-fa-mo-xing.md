@@ -1,6 +1,6 @@
 # 2.3 FreeBSD 开发模型
 
-FreeBSD 的版本发布遵循 CURRENT → ALPHA → BETA → RC → RELEASE 的迭代周期，STABLE 分支的 ABI 则保持固定，各有明确的适用场景。
+FreeBSD 的版本发布遵循：从 CURRENT（main 分支）分出 STABLE 分支后，在 STABLE 分支上依次经历 ALPHA → BETA → RC → RELEASE 的迭代周期，STABLE 分支的 ABI 则保持固定，各有明确的适用场景。
 
 ## FreeBSD 版本概述
 
