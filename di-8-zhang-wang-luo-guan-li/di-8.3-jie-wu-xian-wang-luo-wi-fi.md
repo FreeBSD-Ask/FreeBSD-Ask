@@ -202,7 +202,7 @@ wlan0: flags=8843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST> metric 0 mtu 1500
 
 ## 英特尔无线网卡驱动概况
 
-英特尔（Intel）网卡是目前广泛使用的无线网卡之一。iwlwifi 驱动支持的芯片范围是 iwm 的超集：iwlwifi 的 mvm 子驱动覆盖了 iwm 支持的全部芯片，此外还通过 mld 子驱动支持更新的 BZ、SC 等芯片世代。
+英特尔（Intel）网卡是目前广泛使用的无线网卡之一。iwlwifi 驱动支持的芯片范围是 iwm 的超集：iwlwifi 目前仅移植了 Linux 上游驱动的 mvm 子驱动部分，覆盖了 iwm 支持的全部芯片以及部分更新的芯片（如 BZ 系列设备）。Linux 上游的 iwlwifi 驱动还包含 mld 子驱动（用于 WiFi 7 MLO 多链路操作），但该部分尚未移植至 FreeBSD。
 
 在 **/etc/rc.conf** 文件中添加以下配置：
 
