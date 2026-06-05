@@ -146,7 +146,7 @@ OpenBSD 安装器在网络处理和错误恢复方面也存在一些可改进之
 
 #### 开发方式与协作流程
 
-OpenBSD 至今仍沿用传统开发方式，主要通过邮件列表进行协作。项目不接受 GitHub 上的 Pull Request（PR）。整个项目仍然使用 CVS（Concurrent Versions System）进行版本控制，CVS 对 HTTP 代理的支持有限。对许多现代开发者而言，SVN（Subversion）可能已不太熟悉，更不用说更早期的 CVS 工作流。这种开发方式对新开发者造成了一定困扰。
+OpenBSD 至今仍沿用传统开发方式，主要通过邮件列表进行协作。项目不接受 GitHub 上的 Pull Request（PR）。整个项目仍然使用 CVS（Concurrent Versions System）进行版本控制，CVS 对 HTTP 代理的支持有限。对许多现代开发者而言，SVN（Subversion）可能已不熟悉，更不用说更早期的 CVS 工作流。这种开发方式对新开发者造成了一定困扰。
 
 OpenBSD 的源代码大多缺少详细的注释和说明文件，初学者较难直接理解和学习。
 
