@@ -1,6 +1,6 @@
 # 4.4 基于 Apple M1 和 VMware Fusion Pro 安装 FreeBSD
 
-基于 macOS 15.3.1 与 VMware Fusion Pro 13.6.2，FreeBSD 15.0 与 14.2-RELEASE 均可正常安装运行。macOS 14 用户需注意键盘兼容性问题。
+基于 macOS 15.3.1 与 VMware Fusion Pro 13.6.2，FreeBSD 15.0 与 14.2-RELEASE 均可正常安装运行。
 
 > **注意**
 >
