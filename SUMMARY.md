@@ -44,10 +44,9 @@
 * [4.2 安装双系统（后安装 FreeBSD）](di-4-zhang-freebsd-gao-ji-an-zhuang/di-4.2-jie-an-zhuang-shuang-xi-tong-hou-an-zhuang-freebsd.md)
 * [4.3 基于 Apple M1 和 Parallels Desktop 20 安装 FreeBSD](di-4-zhang-freebsd-gao-ji-an-zhuang/di-4.3-jie-ji-yu-apple-m1-he-parallels-desktop-20-an-zhuang-freebsd.md)
 * [4.4 基于 Apple M1 和 VMware Fusion Pro 安装 FreeBSD](di-4-zhang-freebsd-gao-ji-an-zhuang/di-4.4-jie-ji-yu-apple-m1-he-vmware-fusion-pro-an-zhuang-freebsd.md)
-* [4.5 基于 Apple M1 和 UTM 安装 FreeBSD](di-4-zhang-freebsd-gao-ji-an-zhuang/di-4.5-jie-ji-yu-apple-m1-he-utm-an-zhuang-freebsd.md)
-* [4.6 腾讯云轻量云安装 FreeBSD（传统引导和 MBR 分区表）](di-4-zhang-freebsd-gao-ji-an-zhuang/di-4.6-jie-teng-xun-yun-qing-liang-yun-an-zhuang-freebsd-chuan-tong-yin-dao-he-mbr-fen-qu-biao.md)
-* [4.7 KVM、QEMU 等平台安装 FreeBSD（传统引导和 MBR 分区表）](di-4-zhang-freebsd-gao-ji-an-zhuang/di-4.7-jie-kvm-qemu-deng-ping-tai-an-zhuang-freebsd-chuan-tong-yin-dao-he-mbr-fen-qu-biao.md)
-* [4.8 阿里云轻量应用服务器安装 FreeBSD（UEFI 和 GPT 分区表）](di-4-zhang-freebsd-gao-ji-an-zhuang/di-4.8-jie-a-li-yun-qing-liang-ying-yong-fu-wu-qi-an-zhuang-freebsd-uefi-he-gpt-fen-qu-biao.md)
+* [4.5 腾讯云轻量云安装 FreeBSD（传统引导和 MBR 分区表）](di-4-zhang-freebsd-gao-ji-an-zhuang/di-4.5-jie-teng-xun-yun-qing-liang-yun-an-zhuang-freebsd-chuan-tong-yin-dao-he-mbr-fen-qu-biao.md)
+* [4.6 KVM、QEMU 等平台安装 FreeBSD（传统引导和 MBR 分区表）](di-4-zhang-freebsd-gao-ji-an-zhuang/di-4.6-jie-kvm-qemu-deng-ping-tai-an-zhuang-freebsd-chuan-tong-yin-dao-he-mbr-fen-qu-biao.md)
+* [4.7 阿里云轻量应用服务器安装 FreeBSD（UEFI 和 GPT 分区表）](di-4-zhang-freebsd-gao-ji-an-zhuang/di-4.7-jie-a-li-yun-qing-liang-ying-yong-fu-wu-qi-an-zhuang-freebsd-uefi-he-gpt-fen-qu-biao.md)
 
 ## 第 5 章 FreeBSD 基础
 

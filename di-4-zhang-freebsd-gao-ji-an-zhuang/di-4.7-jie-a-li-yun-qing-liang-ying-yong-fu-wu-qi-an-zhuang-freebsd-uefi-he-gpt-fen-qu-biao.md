@@ -1,4 +1,4 @@
-# 4.8 阿里云轻量应用服务器安装 FreeBSD（UEFI 和 GPT 分区表）
+# 4.7 阿里云轻量应用服务器安装 FreeBSD（UEFI 和 GPT 分区表）
 
 本节演示在阿里云轻量应用服务器上通过 UEFI + GPT 方式安装 FreeBSD，以 Rocky Linux 9 为中间宿主系统完成部署。
 
