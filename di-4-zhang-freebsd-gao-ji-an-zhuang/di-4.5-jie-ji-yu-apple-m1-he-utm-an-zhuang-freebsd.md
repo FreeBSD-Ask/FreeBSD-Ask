@@ -8,7 +8,7 @@ UTM 官方网站为 <https://getutm.app>。
 
 UTM（逆构词为 Universal Turing Machine）是开源、基于 QEMU、面向 Apple 设备的虚拟机软件，支持 ARM 和 x86 架构虚拟机。建议下载 aarch64（arm64）架构版本。除非有特殊需求，不建议使用 amd64（x86-64）版本。运行相同架构的虚拟机可获得更高性能和更流畅的系统体验（M1 为 aarch64 架构）。
 
-因需向 Apple 缴纳年费以获取开发者资格，开发成本较高，UTM 在 App Store 中为收费软件。可在 [GitHub 项目，utmapp/UTM](https://github.com/utmapp/UTM/releases) 中免费获取 UTM。
+UTM 在 App Store 中为收费软件，购买 App Store 版本可直接资助 UTM 的开发并表达支持（App Store 版本唯一优势为可自动更新，功能与免费版完全相同）。可在 [GitHub 项目，utmapp/UTM](https://github.com/utmapp/UTM/releases) 中免费获取 UTM。
 
 ## 安装说明
 
