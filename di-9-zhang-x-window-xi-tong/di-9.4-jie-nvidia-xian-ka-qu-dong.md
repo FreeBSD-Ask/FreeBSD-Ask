@@ -41,7 +41,7 @@
 
 ### 启动 NVIDIA 相关内核模块
 
-执行以下命令加载 NVIDIA 相关内核模块：
+执行以下命令配置 NVIDIA 内核模块：
 
 ```sh
 # echo 'hw.nvidiadrm.modeset="1"' >> /boot/loader.conf  # 启用 NVIDIA DRM 模式设置
