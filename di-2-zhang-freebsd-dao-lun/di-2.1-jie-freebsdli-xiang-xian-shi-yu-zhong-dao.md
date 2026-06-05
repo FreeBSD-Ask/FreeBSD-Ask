@@ -25,7 +25,7 @@
 
 ### 核心缘由：FreeBSD 能在这流变的世界中寻求理想的中道
 
-相较于大多数主流操作系统或内核，FreeBSD 的内核 API/ABI 较为稳定。
+相较于大多数主流操作系统或内核，FreeBSD 在 STABLE 分支内保持 ABI 稳定，内核 API 则不保证跨版本兼容。
 
 FreeBSD 项目整体风格偏于保守，奉行最小惊讶原则（Principle of Least Astonishment，POLA），即设计必须符合用户的习惯、期望和心智能力。其配置文件和系统组件不会频繁变化，大版本间迁移尤为审慎。FreeBSD 也谨慎对待破坏性变更（Breaking change），要求在大版本内保持 ABI 稳定。
 
@@ -66,9 +66,9 @@ FreeBSD 不仅在生命周期内保持稳定，大版本更新也具有连贯性
 - 传统的 BSD init 引导，回归简洁，回归纯文本的可见性。
 - DTrace 框架与 GEOM 存储框架。
 - Linux 二进制兼容层可运行 Linux 软件，且运行性能通常不逊色于 Linux。
-- FreeBSD 的驱动大致与内核解耦。
+- FreeBSD 的驱动以内核模块形式存在，可动态加载和卸载，便于按需管理硬件。
 - FreeBSD 秉持人人自由开发的理念，可以直接在 GitHub 上[提交代码](https://github.com/freebsd/freebsd-src/pulls)，或者注册账号在 <https://reviews.freebsd.org/> 提交大规模变更。
-- FreeBSD 的代码风格是 BSD KNF（Kernel Normal Form，又称 Allman 风格），与 Kernighan & Ritchie 经典著作《The C Programming Language》（中译本：Kernighan B W, Ritchie D M. C 程序设计语言[M]. 徐宝文，李志，译. 第 2 版. 北京：机械工业出版社，2019. ISBN: 978-7-111-61794-5.）中使用的 K&R 风格不同。
+- FreeBSD 的代码风格是 BSD KNF（Kernel Normal Form），基于 CSRG 的 KNF 规范，其大括号布局与 Allman 风格类似（左大括号独占一行），与 Kernighan & Ritchie 经典著作《The C Programming Language》（中译本：Kernighan B W, Ritchie D M. C 程序设计语言[M]. 徐宝文，李志，译. 第 2 版. 北京：机械工业出版社，2019. ISBN: 978-7-111-61794-5.）中使用的 K&R 风格不同。
 
 #### 参考文献
 
