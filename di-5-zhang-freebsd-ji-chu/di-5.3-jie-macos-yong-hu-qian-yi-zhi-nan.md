@@ -42,8 +42,8 @@ Original Unix
                                +-----------------------------------------------+   |
                                |                   XNU Kernel                  |   |
                                |                                               |   |
-                               |         (Mach 2.5 Base + OSFMK 7.3            |   |
-                               |          + FreeBSD VFS/Networking)             |   |
+                               |        (Mach 2.5 Base + OSFMK 7.3             |   |
+                               |        + FreeBSD VFS/Networking)              |   |
                                +-----------------------------------------------+   |
                                                        |                           |
                                                        V                           |
