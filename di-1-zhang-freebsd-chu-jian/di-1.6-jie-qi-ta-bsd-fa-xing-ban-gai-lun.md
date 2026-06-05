@@ -196,10 +196,6 @@ OpenBSD 的安全策略基于以下判断：超线程机制可能带来潜在的
 
 目前，中国大陆用户可通过国内版本的 PayPal 或普通银联储蓄卡，向 PayPal 账号 `obsd-paypal@openbsdfoundation.org`（该账号为收款账号，并非电子邮件）发起转账，以对 OpenBSD 基金会进行捐赠。具体操作方法请自行搜索“PayPal 个人转账”。
 
-### OpenBSD 服务器与 OpenBSD VPS
-
-推荐来自荷兰的 OpenBSD VPS 供应商 OpenBSD Amsterdam（<https://openbsd.amsterdam>）。VPS 的主机操作系统为 OpenBSD，客户端系统同样为 OpenBSD。配置为 1 GB RAM、50 GB HDD，每年 64 欧元（约合人民币 525 元）。每个 VPS 的费用中，供应商均会向 OpenBSD 基金会捐款。主机地址和配置可在此查看（<https://openbsd.amsterdam/servers.html>），用户可访问并测试 ping 延迟。VPS 位于荷兰阿姆斯特丹，路由经美国。以上内容与作者无利益关联。
-
 ### 附录：OpenBSD IPsec 协议栈 FBI 后门事件
 
 在 2010 年，Theo de Raadt 收到并向社区公开了 [一封邮件](https://marc.info/?l=openbsd-tech&m=129236621626462&w=2)：
