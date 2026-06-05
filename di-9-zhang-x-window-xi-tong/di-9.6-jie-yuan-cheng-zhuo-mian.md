@@ -127,6 +127,8 @@ $ mkdir -p ~/.vnc/
 #!/bin/sh
 unset SESSION_MANAGER        # 清除 SESSION_MANAGER 环境变量
 unset DBUS_SESSION_BUS_ADDRESS  # 清除 DBUS_SESSION_BUS_ADDRESS 环境变量
+# 如果需要使用下方的桌面会话，需要先注释掉或删除上述 xinitrc 的 exec 行，
+# 否则 xinitrc 会替换当前进程，后续桌面会话命令不会被执行
 [ -x /etc/X11/xinit/xinitrc ] && exec /etc/X11/xinit/xinitrc  # 如果 xinitrc 可执行则运行
 [ -f /etc/X11/xinit/xinitrc ] && exec sh /etc/X11/xinit/xinitrc  # 否则以 sh 运行 xinitrc 文件
 xsetroot -solid grey        # 设置 X 根窗口背景为灰色

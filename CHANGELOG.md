@@ -4,7 +4,7 @@
 
 - 2026.6.4
   - 完全重写“13.5 Slackware Linux 兼容层”
-  - 新增“”
+  - 新增“23.2 厚 Jail（Thick Jail）”
 - 2026.6.3
   - 完全重写：“13.3 Ubuntu/Debian 兼容层”，更新到 Ubuntu 26.04 LTS、Debian 13
   - 新增 Kali Linux 兼容层
