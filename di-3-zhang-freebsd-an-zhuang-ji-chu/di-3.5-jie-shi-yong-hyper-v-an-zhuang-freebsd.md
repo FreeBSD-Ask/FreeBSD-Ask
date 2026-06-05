@@ -62,7 +62,7 @@ Image Version: 10.0.26200.8246
 The operation completed successfully.
 ```
 
-系统将自动重启，在重启过程中将安装 Hyper-V。
+系统将提示重启，重启过程中将安装 Hyper-V。
 
 ![Hyper-V](../.gitbook/assets/hyperv-1.png)
 
