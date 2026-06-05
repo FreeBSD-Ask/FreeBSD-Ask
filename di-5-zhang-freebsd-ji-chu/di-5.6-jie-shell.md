@@ -310,7 +310,7 @@ Bash（Bourne Again shell）是 GNU 项目开发的 shell 程序，作为 Bourne
 | 程序 | 说明 |
 | ---- | ---- |
 | `bash` | Bash shell 主程序 |
-| `bash-completion-freebsd` | 针对 FreeBSD 的 Bash 补全库扩展，安装时会自动安装 shells/bash-completion 作为依赖 |
+| `bash-completion-freebsd` | 针对 FreeBSD 的 Bash 补全库扩展，作为依赖自动安装 |
 | `bash-completion-zfs` | 针对 OpenZFS 的 Bash 补全库扩展 |
 
 - 查看安装后配置
