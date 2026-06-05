@@ -68,7 +68,7 @@ FreeBSD 不仅在生命周期内保持稳定，大版本更新也具有连贯性
 - Linux 二进制兼容层可运行 Linux 软件，且运行性能通常不逊色于 Linux。
 - FreeBSD 的驱动大致与内核解耦。
 - FreeBSD 秉持人人自由开发的理念，可以直接在 GitHub 上[提交代码](https://github.com/freebsd/freebsd-src/pulls)，或者注册账号在 <https://reviews.freebsd.org/> 提交大规模变更。
-- FreeBSD 的代码风格是 Kernighan & Ritchie 经典著作《The C Programming Language》（中译本：Kernighan B W, Ritchie D M. C 程序设计语言[M]. 徐宝文，李志，译. 第 2 版. 北京：机械工业出版社，2019. ISBN: 978-7-111-61794-5.）中使用的风格。
+- FreeBSD 的代码风格是 BSD KNF（Kernel Normal Form，又称 Allman 风格），与 Kernighan & Ritchie 经典著作《The C Programming Language》（中译本：Kernighan B W, Ritchie D M. C 程序设计语言[M]. 徐宝文，李志，译. 第 2 版. 北京：机械工业出版社，2019. ISBN: 978-7-111-61794-5.）中使用的 K&R 风格不同。
 
 #### 参考文献
 
