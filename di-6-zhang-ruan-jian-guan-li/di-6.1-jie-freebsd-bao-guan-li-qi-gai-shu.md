@@ -9,7 +9,7 @@ FreeBSD 提供了多种类型的软件源，分别服务于不同的系统组件
 - Arch Linux：Pacman，对应 pkg（同样秉持 KISS 理念）。
 - Gentoo Linux：Portage，对应 Ports（Portage 本身借鉴自 Ports）。
 
-`pkg install` 可以缩写为 `pkg ins`，其他命令也类似。
+`pkg install` 可以缩写为 `pkg ins`，其他命令同理。
 
 下表概括了各类软件源的基本信息：
 
