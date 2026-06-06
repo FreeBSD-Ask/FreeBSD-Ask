@@ -42,7 +42,7 @@ Original Unix
                                +-----------------------------------------------+   |
                                |                   XNU Kernel                  |   |
                                |                                               |   |
-                               |        (Mach 2.5 Base + OSFMK 7.3             |   |
+                               |        (OSFMK 7.3 Based on Mach 3.0          |   |
                                |        + FreeBSD VFS/Networking)              |   |
                                +-----------------------------------------------+   |
                                                        |                           |
@@ -100,7 +100,7 @@ macOS 系列操作系统可以看作独立的、类 BSD 操作系统分支，与
 | 克隆 | 支持 | 支持 |
 | RAID | 不支持 | RAID-Z / RAID-Z2 / RAID-Z3 |
 | 空间共享 | 容器内卷共享 | 存储池内数据集共享 |
-| 最大卷/池大小 | 8 EB | 256 ZiB |
+| 最大卷/池大小 | 8 EB | 256 ZB |
 | 大小写敏感性 | macOS 默认不区分 | 默认区分（可通过属性调节） |
 
 macOS 的 APFS 默认不区分大小写（Case-Insensitive），而 FreeBSD 的 ZFS 和 UFS 默认均区分大小写。
