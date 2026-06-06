@@ -525,22 +525,11 @@ root 密码强度无强制要求，但不可为空。如果密码为空，将提
 
 > **警告**
 >
-> 由于已知的 Bug 289202（中国管制域缺失）与 Bug 287538（安装程序设置管制域错误），安装程序中的无线网络配置功能当前不建议使用。如果需要网络连接，请优先通过以太网卡完成安装，无线网络建议在系统安装完成并重启后参考本书无线网络章节另行配置（尤其对于博通等网卡）。否则安装程序可能长时间无响应或引发内核恐慌（Panic）。
+> 由于已知的 Bug 289202（中国管制域缺失），当前不建议使用安装程序中的无线网络配置功能。如果需要网络连接，请优先通过以太网卡完成安装，建议在系统安装完成并重启后参考本书无线网络章节另行配置无线网络（尤其对于博通等网卡）。否则安装程序可能长时间无响应或引发内核错误（Panic）。
 
 ![选择无线网络接口](../.gitbook/assets/wifi-select-interface.png)
 
 `请选择要配置的无线网络接口`
-
-> **警告**
->
-> 由于 FreeBSD Project. Bug 287538: Installer error on setting regdomain[EB/OL]. [2026-03-25]. <https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=287538>。该 Bug 报告记录安装程序设置无线管制域错误，目前选择任何无线管制域，均将提示错误如下：
->
-> ```sh
-> Error while applying chosen settings
-> (unknown regdomain Expected eval: Use: not found)
-> ```
->
-> 该问题在 FreeBSD 15.0 中已修复。
 
 ![更改无线管制域](../.gitbook/assets/wifi-regulatory-domain.png)
 
@@ -552,7 +541,7 @@ root 密码强度无强制要求，但不可为空。如果密码为空，将提
 
 `请选择您的区域码`
 
-此处应选择 `NONE ROW`。NONE ROW（Rest of World）是一个通用的无线管制域选项，鉴于已知管制域配置存在 Bug，选择此项可允许无线网卡在最保守的信道集上运行，避免选择特定国别引发的错误。
+此处应选择 `NONE ROW`。NONE ROW（Rest of World）是一个通用的无线管制域选项，鉴于中国管制域尚未在 regdomain.xml 中定义（Bug 289202），选择此项可允许无线网卡在最保守的信道集上运行，避免选择特定国别引发的错误。
 
 ![选择所在地区](../.gitbook/assets/wifi-region-select.png)
 
