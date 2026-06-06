@@ -121,7 +121,7 @@ GNOME、Xorg（X11）、D-Bus、systemd、PulseAudio、Wayland、PipeWire 等主
 
 FreeBSD 具有诸多优势，但也面临着现实的挑战。
 
-- 大型技术企业对 FreeBSD 支持不足，如未提供 GitHub Actions 原生支持，NVIDIA CUDA 也未予支持，在 AI 与 LLM 时代存在滞后。
+- 大型技术企业对 FreeBSD 支持不足，如 GitHub Actions 需通过第三方工具（如 `vmactions/freebsd-vm`）实现 CI/CD，NVIDIA CUDA 也未予支持，在 AI 与 LLM 时代存在滞后。
 - FreeBSD 项目缺乏对欧洲和北美以外地区的关注与投入。
 - 相比其他开源项目中“仁慈的终身独裁者”模式，集体领导在 FreeBSD 项目中并未显现出明显优势，有时甚至可能导致责任分散、效率低下的问题（即“集体行动困境”）。部分分管 FreeBSD 子项目的核心成员对项目本身的了解和关注尚有不足，面对若干问题亦难以有效决策和承担责任。
 - FreeBSD 项目整体风格偏于保守，新技术的引入往往需要数年，跨越多个大版本方能完成。通常需等待已有技术轮替一到两代后才会引入；引入后亦往往缺乏后续关注与维护开发。
@@ -132,7 +132,7 @@ FreeBSD 具有诸多优势，但也面临着现实的挑战。
 - FreeBSD 的开发者数量较少，且对外部贡献者的反馈往往不及时。
 - FreeBSD 基金会、期刊、Bug 报告系统等对外部贡献者的反馈也常有不及时的情况。
 - FreeBSD 文档项目曾停滞多年，个人贡献者除季度报告外的提交事实上很难被接纳；src 和 Ports 项目也同样难以接纳新的个人贡献者。
-- 尚未完全支持安全启动（Secure Boot）。
+- 尚未完全支持安全启动（Secure Boot），需通过手动签名 EFI 二进制文件实现（参见：FreeBSD Foundation. FreeBSD UEFI Secure Boot[EB/OL]. [2026-06-06]. <https://freebsdfoundation.org/freebsd-uefi-secure-boot/>.）。
 - 对 TPM 的支持有限。
 - 由于部分软件对 Linux 特有特性存在依赖（Linuxism），导致若干软件无法直接移植。
 - FreeBSD 支持的两款主要文件系统 ZFS 与 UFS，其存储空间通常只能扩大，难以直接缩小。
