@@ -805,10 +805,10 @@ cpufreq3: <CPU frequency control> on cpu3
 
 # ===== 最终 Timecounter 选择 =====
 Timecounter "TSC" frequency 806401362 Hz quality 1000
-# Time Stamp Counter（TSC）频率 = 806.4 MHz = N100 CPU 基础频率（base clock）。
+# Time Stamp Counter（TSC）频率 = 806.4 MHz，即不变 TSC（Invariant TSC）的递增速率。
+# 注意：TSC 频率 ≠ Intel 官方 Processor Base Frequency（N100 官方基础频率为 800 MHz）。
 # quality 1000 是最高优先级——内核最终选择 TSC 为系统主 timecounter。
-# TSC 在每个 CPU 时钟（base clock）递增一次，是最细粒度的时间源。
-# 该 CPU 的 TSC 为 Invariant（不随 P-state/C-state 变化），可作为可靠的单调时钟源。
+# 不变 TSC 以固定速率递增，不受 P-state/C-state 频率变化影响，是最细粒度的可靠时间源。
 
 Timecounters tick every 1.000 msec
 # 内核 timecounter 子系统以 1ms（1000 Hz）的频率更新系统时间基准。
