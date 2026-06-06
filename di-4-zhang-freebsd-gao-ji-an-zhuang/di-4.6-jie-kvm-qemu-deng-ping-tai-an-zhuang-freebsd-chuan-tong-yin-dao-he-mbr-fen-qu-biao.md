@@ -102,8 +102,16 @@ memdisk 是 syslinux 提供的工具，用于将 ISO 镜像加载到内存中。
 
 从已安装的 syslinux 包中提取 memdisk 文件到 **/boot**：
 
+- Debian/Ubuntu
+
 ```sh
 # cp /usr/lib/syslinux/memdisk /boot/
+```
+
+- Rocky Linux
+
+```sh
+# cp /usr/share/syslinux/memdisk /boot/
 ```
 
 ## 取消隐藏的 GRUB 菜单
