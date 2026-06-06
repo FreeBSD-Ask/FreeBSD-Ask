@@ -54,7 +54,7 @@ FreeBSD 不仅在生命周期内保持稳定，大版本更新也具有连贯性
 
 ### 选择 FreeBSD 的技术原因
 
-- FreeBSD 基本系统的配置文件与第三方软件配置文件相分离，系统级配置文件与用户配置文件相分离。FreeBSD 的文件系统层次结构遵循明确的组织原则，参见 [hier(7)](https://man.freebsd.org/cgi/man.cgi?query=hier&sektion=7)。~~再也不用到处用 `find` 命令查找某个 `.conf` 文件到底安装在哪了。~~
+- FreeBSD 基本系统的配置文件与第三方软件配置文件相分离，系统级配置文件与用户配置文件相分离。FreeBSD 的文件系统层次结构遵循明确的组织原则。~~再也不用到处用 `find` 命令查找某个 `.conf` 文件到底安装在哪了。~~
 - 由于基本系统的存在，第三方的软件几乎不影响系统的稳定性。FreeBSD 在软件更新和系统稳定之间保持了平衡。
 - 通过 BSD 的 Ports 可以编译安装软件，自由配置。
 - 不会锁定软件版本。例如 Python、GCC 等常见的系统依赖软件。但所有的 FreeBSD 都共用相同的 Ports，无论新旧系统，其第三方软件的版本都是相同的；仅极个别软件和系统版本硬捆绑，其余所有软件都可滚动更新。
@@ -87,12 +87,17 @@ GNOME、Xorg（X11）、D-Bus、systemd、PulseAudio、Wayland、PipeWire 等主
 
 目前 FreeBSD 桌面部件缺失，在较大程度上源自对 Linux 特有函数库的强依赖，例如包含 ip 命令的 `iproute2` 软件包。更为重要的原因在于这些桌面或部件与 systemd 存在深度捆绑或强制依赖关系，例如 `NetworkManager`。而 Samba 开发者则称“We use Linux, we develop for Linux, all others please submit patches”（我们使用 Linux，为 Linux 开发，其他系统的用户请自行提交补丁）。FreeBSD 社区将此类现象称为“Linuxism”（Linux 主义/Linux 偏向）。
 
-这种行为将导致何种后果尚不得而知，但此类程序正变得越来越多，并有成为主流的趋势。许多开发者开发程序（如 `todesk`）时也不再考虑对传统 init 系统的兼容。Java 程序也逐渐丧失了可移植性；由于此类捆绑问题，FreeBSD 上的 Eclipse 更新曾长期滞后（D'Pong P. Bug 562443 - SWT spams temp folder with innumerable folders[EB/OL]. (2020-05-26)[2026-04-05]. <https://gitlab.simantics.org/simantics/eclipse/eclipse.platform.swt/-/commit/19153b908d6d4cedcbd59824686717502cfde4f7>.），但截至 2026 年，其 Port 已恢复活跃维护（参见：FreshPorts. java/eclipse[EB/OL]. [2026-06-06]. <https://www.freshports.org/java/eclipse/>.）。如果此趋势持续，可运行在 Linux 上的程序的可移植性可能进一步降低。
+这种行为将导致何种后果尚不得而知，但此类程序正变得越来越多，并有成为主流的趋势。许多开发者开发程序（如 `todesk`）时也不再考虑对传统 init 系统的兼容。Java 程序也逐渐丧失了可移植性；由于此类捆绑问题，FreeBSD 上的 Eclipse 更新曾长期滞后。如果此趋势持续，可运行在 Linux 上的程序的可移植性可能进一步降低。
 
 目前 FreeBSD 所面临的困境，未来其他系统也可能会遇到。
 
 - 选择 FreeBSD，即选择保留自由软件的根基。
 - 选择 FreeBSD，即选择保留一份真正自由的操作系统。能够使开源事业持续发展，并践行真正的 UNIX 哲学。
+
+##### 参考文献
+
+- D'Pong P. Bug 562443 - SWT spams temp folder with innumerable folders[EB/OL]. (2020-05-26)[2026-04-05]. <https://gitlab.simantics.org/simantics/eclipse/eclipse.platform.swt/-/commit/19153b908d6d4cedcbd59824686717502cfde4f7>.
+- FreshPorts. java/eclipse[EB/OL]. [2026-06-06]. <https://www.freshports.org/java/eclipse/>. 截至 2026 年，Port **java/eclipse** 已恢复活跃维护
 
 #### FreeBSD 基金会重大捐赠事件
 
