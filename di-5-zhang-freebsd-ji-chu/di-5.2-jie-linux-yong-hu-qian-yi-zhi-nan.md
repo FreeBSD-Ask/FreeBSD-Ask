@@ -97,7 +97,7 @@ FreeBSD 基本系统几乎不含任何与 BSD 协议不兼容的软件。
 | Ubuntu | [2 年/5 年（LTS 标准支持），10 年（需 Ubuntu Pro）](https://ubuntu.com/about/release-cycle) | [apt](https://ubuntu.com/server/docs/package-management) | [GNU](https://ubuntu.com/legal/intellectual-property-policy) | gcc | Bash | GNOME |
 | Gentoo Linux | 滚动更新 | [Portage（emerge）](https://wiki.gentoo.org/wiki/Portage) | GNU | gcc | Bash | 可选 |
 | Arch Linux | 滚动更新 | [pacman](https://wiki.archlinux.org/title/pacman) | GNU | gcc | Bash | 可选 |
-| RHEL | [3/最长 12 年](https://access.redhat.com/zh_CN/support/policy/updates/errata) | [RPM（yum、dnf）](https://www.redhat.com/sysadmin/how-manage-packages) | GNU | gcc | Bash | GNOME |
+| RHEL | [3/最长 13 年](https://access.redhat.com/zh_CN/support/policy/updates/errata) | [RPM（yum、dnf）](https://www.redhat.com/sysadmin/how-manage-packages) | GNU | gcc | Bash | GNOME |
 | FreeBSD | [约 2/4 年](https://www.freebsd.org/security/)（FreeBSD 14 及以前为 5 年，自 FreeBSD 15 起缩短为 4 年） | pkg/Ports | BSD | clang | sh | 可选 |
 
 Linux 广泛使用 GNU 工具，因此理论上，凡不依赖特定 Linux 函数库者，均可在 FreeBSD 上运行。
