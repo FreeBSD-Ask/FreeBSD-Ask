@@ -64,7 +64,7 @@ Git 支持通过 `http.proxy` 和 `core.gitProxy` 等配置项设置代理，详
 
 [chromium](https://www.chromium.org/) 是 Google Chrome 浏览器的开源版本，支持多种命令行参数。
 
-Chromium 浏览器在 **~/.config** 等目录下并无代理配置文件，也不支持通过环境变量指定默认代理服务器，但可通过启动参数设置代理。
+Chromium 浏览器在 **~/.config** 等目录下并无独立的代理配置界面，但支持通过 `http_proxy`/`https_proxy` 环境变量（在非 Gnome/KDE 环境下）及启动参数设置代理。
 
 可按以下格式指定代理服务器和端口：
 

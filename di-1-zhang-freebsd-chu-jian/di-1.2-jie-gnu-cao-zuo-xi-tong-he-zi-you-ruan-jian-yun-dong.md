@@ -4,7 +4,7 @@
 
 ## GNU 操作系统与自由软件运动的缘起
 
-GNU 项目与自由软件运动的渊源，可从 Linux 内核文档入手理解。根据 Linux Kernel Documentation 的相关说明：
+GNU 通用公共许可证（GPL）在自由软件生态中的核心地位，可从 Linux 内核文档中窥见一斑。根据 Linux Kernel Documentation 的相关说明：
 
 > Code is contributed to the Linux kernel under a number of licenses, but all code must be compatible with version 2 of the GNU General Public License (GPLv2), which is the license covering the kernel distribution as a whole. In practice, that means that all code contributions are covered either by GPLv2 (with, optionally, language allowing distribution under later versions of the GPL) or the three-clause BSD license. Any contributions which are not covered by a compatible license will not be accepted into the kernel.（Linux 内核中贡献的代码受多种许可证授权，但所有代码都必须与 GNU 通用公共许可证第 2 版（GPLv2）兼容，因为 GPLv2 覆盖了整个内核发行。实际上这意味着，一切贡献的代码要么受 GPLv2 约束（可选地包含允许在 GPL 后续版本下发布的条款），要么受三条款 BSD 许可证约束。那些由非兼容许可证授权的贡献都不会被内核接纳）
 

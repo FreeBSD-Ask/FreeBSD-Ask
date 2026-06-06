@@ -793,7 +793,7 @@ total 1
 
 > **注意**
 >
-> 在 FreeBSD 下，关机与重启操作都只有 root 用户和 operator 组成员可以执行。执行 shutdown 时会向所有已登录用户广播警告信息，并在指定时间前 5 分钟创建 **/var/run/nologin** 以阻止新登录（若关机时间不足 5 分钟则立即创建）。
+> 在 FreeBSD 下，`shutdown` 可由 root 用户和 operator 组成员执行，但 `reboot` 和 `halt` 仅限 root 用户。执行 shutdown 时会向所有已登录用户广播警告信息，并在指定时间前 5 分钟创建 **/var/run/nologin** 以阻止新登录（若关机时间不足 5 分钟则立即创建）。
 
 > **技巧**
 >

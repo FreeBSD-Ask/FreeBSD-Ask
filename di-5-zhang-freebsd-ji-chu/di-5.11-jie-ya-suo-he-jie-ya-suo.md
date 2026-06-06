@@ -50,7 +50,7 @@ unzip 的 `-d` 选项后面跟目录名，可以有空格（如 `-d /path`），
 
 基本系统自带 `tar`，无需安装。
 
-tar 是“tape archive”（磁带归档）的缩写，最初用于在磁带上进行文件存储。FreeBSD 的 tar 实现基于 libarchive 库（即 bsdtar），替代了早期版本中的 GNU tar。该实现可从 tar、pax、cpio、zip、jar、ar、xar、rar、rpm、7-zip 及 ISO 9660 光盘镜像中提取文件，并可创建 tar、pax、cpio、ar、zip、7-zip 和 shar 格式的归档。
+tar 是“tape archive”（磁带归档）的缩写，最初用于在磁带上进行文件存储。FreeBSD 的 tar 实现基于 libarchive 库（即 bsdtar），替代了早期版本中的 GNU tar。该实现可从 tar、pax、cpio、zip、jar、ar、xar、rar（包括 RAR2、RAR3 及大部分 RAR5 格式，仅限读取，受专有格式限制）、rpm、7-zip 及 ISO 9660 光盘镜像中提取文件，并可创建 tar、pax、cpio、ar、zip、7-zip 和 shar 格式的归档。
 
 bsdtar 的 `-l` 选项遵循 ISO/IEC 9945-1:1996（“POSIX.1”）的定义（检查链接）。
 

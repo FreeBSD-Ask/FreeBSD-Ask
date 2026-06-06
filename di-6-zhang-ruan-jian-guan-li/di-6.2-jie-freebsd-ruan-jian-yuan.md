@@ -182,6 +182,7 @@ USTC-kmods: {
   fingerprints: "/usr/share/keys/pkg",
   enabled: yes
 }
+FreeBSD-kmods: { enabled: no }
 ```
 
 如果使用 latest 分支，配置如下：
@@ -194,6 +195,7 @@ USTC-kmods: {
   fingerprints: "/usr/share/keys/pkg",
   enabled: yes
 }
+FreeBSD-kmods: { enabled: no }
 ```
 
 ### 15.0-RELEASE
@@ -314,6 +316,7 @@ USTC-kmods: {
   fingerprints: "/usr/share/keys/pkg",
   enabled: yes
 }
+FreeBSD-kmods: { enabled: no }
 ```
 
 - 对于 `FreeBSD 15.0-STABLE / FreeBSD 16.0-CURRENT`：
@@ -326,6 +329,7 @@ USTC-ports-kmods: {
   fingerprints: "/usr/share/keys/pkg",
   enabled: yes
 }
+FreeBSD-ports-kmods: { enabled: no }
 ```
 
 ### pkgbase 源

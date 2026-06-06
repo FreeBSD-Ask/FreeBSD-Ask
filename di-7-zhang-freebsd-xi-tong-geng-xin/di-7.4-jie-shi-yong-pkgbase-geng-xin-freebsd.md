@@ -30,7 +30,7 @@ Active 字段解释：
 - `N`：表示该启动环境当前是否处于活动状态（当前是否位于此环境中）
 - `R`：在重启时是否处于活动状态（下次是否选中，用于固定选项）
 - `T`：是否会在下次启动时生效（且仅下次，用于一次性选项）
-- `NRT`：当前活动、重启后活动且仅下一次启动生效
+- `NRT`：当前活动（N）、重启后默认活动（R）且设置了一次性启动（T）。T 在下次启动时优先，之后恢复为 R 指定的默认值
 
 - 列出系统中所有 ZFS 文件系统及其属性：
 
@@ -598,10 +598,10 @@ https://mirrors.163.com/freebsd-pkg/
 | main（16.0-CURRENT） | 每周一次：星期日 20:00 | <https://pkg.freebsd.org/${ABI}/base_weekly> |
 | stable/14 | 每天两次：08:00、20:00 | <https://pkg.freebsd.org/${ABI}/base_latest> |
 | stable/14 | 每周一次：星期日 20:00 | <https://pkg.freebsd.org/${ABI}/base_weekly> |
-| releng/14.0（RELEASE） | 每天两次：08:00、20:00 | <https://pkg.freebsd.org/${ABI}/base_release_0> |
-| releng/14.1（RELEASE） | 每天两次：08:00、20:00 | <https://pkg.freebsd.org/${ABI}/base_release_1> |
-| releng/14.2（RELEASE） | 每天两次：08:00、20:00 | <https://pkg.freebsd.org/${ABI}/base_release_2> |
-| releng/14.3（RELEASE） | 每天两次：08:00、20:00 | <https://pkg.freebsd.org/${ABI}/base_release_3> |
+| stable/15 | 每天两次：08:00、20:00 | <https://pkg.freebsd.org/${ABI}/base_latest> |
+| stable/15 | 每周一次：星期日 20:00 | <https://pkg.freebsd.org/${ABI}/base_weekly> |
+| releng/14.4（RELEASE） | 每天两次：08:00、20:00 | <https://pkg.freebsd.org/${ABI}/base_release_4> |
+| releng/15.0（RELEASE） | 每天两次：08:00、20:00 | <https://pkg.freebsd.org/${ABI}/base_release_0> |
 
 以上表格中的时间已转换为北京时间（东八区），对应 FreeBSD 官方镜像站的发布时间。
 

@@ -122,9 +122,9 @@ PING 163.com (59.111.160.244): 56 data bytes
 round-trip min/avg/max/stddev = 27.580/27.626/27.672/0.046 ms
 ```
 
-FreeBSD 的 `ping` 自 13.0 起（提交于 2020-11-26）合并了原 `ping6` 的功能，通过 `-4`/`-6` 选项区分协议版本（Google Summer of Code 2019 项目）。Linux 支持 `-O` 报告未收到回复；FreeBSD 的 `-O` 含义不同（仅用于 IPv6 的 ICMPv6 Node Information supported query types 查询），不支持报告未收到回复的功能。FreeBSD 特有 `ping -y`（ICMPv6 Node Information DNS Name 查询）和 `ping -k`（Node Information Node Addresses 查询）。
+FreeBSD 的 `ping` 合并了原 `ping6` 的功能，通过 `-4`/`-6` 选项区分协议版本（Google Summer of Code 2019 项目）。Linux 支持 `-O` 报告未收到回复；FreeBSD 的 `-O` 含义不同（仅用于 IPv6 的 ICMPv6 Node Information supported query types 查询），不支持报告未收到回复的功能。FreeBSD 特有 `ping -y`（ICMPv6 Node Information DNS Name 查询）和 `ping -k`（Node Information Node Addresses 查询）。
 
-`ping` 使用 ICMP 协议的 ECHO_REQUEST 数据报来触发主机的 ECHO_RESPONSE。IPv4 目标使用 ICMP，IPv6 目标使用 ICMPv6（RFC 2463）。默认数据大小为 56 字节，加上 8 字节 ICMP 头共 64 字节。如果数据空间不小于 8 字节，前 8 字节用于时间戳以计算往返时间。
+`ping` 使用 ICMP 协议的 ECHO_REQUEST 数据报来触发主机的 ECHO_RESPONSE。IPv4 目标使用 ICMP，IPv6 目标使用 ICMPv6（RFC 4443）。默认数据大小为 56 字节，加上 8 字节 ICMP 头共 64 字节。如果数据空间不小于 8 字节，前 8 字节用于时间戳以计算往返时间。
 
 ### 其他
 
