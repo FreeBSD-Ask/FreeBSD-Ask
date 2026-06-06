@@ -95,7 +95,7 @@ $ git clone --branch releng/15.0 --single-branch --depth 1 https://github.com/fr
 以 FreeBSD 15.0-RELEASE 为例：
 
 ```sh
-# fetch https://download.freebsd.org/ftp/releases/amd64/15.0-RELEASE/src.txz  # 下载 FreeBSD 15.0-RELEASE 的源代码压缩包
+# fetch https://download.freebsd.org/releases/amd64/amd64/15.0-RELEASE/src.txz  # 下载 FreeBSD 15.0-RELEASE 的源代码压缩包
 # tar xvf src.txz -C /                                                    # 将源代码解压到根目录
 ```
 
@@ -105,7 +105,7 @@ $ git clone --branch releng/15.0 --single-branch --depth 1 https://github.com/fr
 
 > **技巧**
 >
-> 如果速度慢可以切换到 <https://mirrors.ustc.edu.cn/freebsd/releases/amd64/15.0-RELEASE/src.txz>
+> 如果速度慢可以切换到 <https://mirrors.ustc.edu.cn/freebsd/releases/amd64/amd64/15.0-RELEASE/src.txz>
 
 ## 开始编译
 
