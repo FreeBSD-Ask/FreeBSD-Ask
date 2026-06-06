@@ -405,8 +405,9 @@ VT(efifb): resolution 800x600
 # ===== CPU 检测与特性枚举 =====
 CPU: Intel(R) N100 (806.40-MHz K8-class CPU)
 # CPU 型号名称。Intel N100 是 Alder Lake-N 架构的低功耗处理器。
-# 806.40 MHz 是启动时 CPU 的基础频率（base frequency），加载 hwpstate_intel(4)
-# 后内核会通过 Intel Speed Shift 动态调整频率（N100 最高睿频可达 ~3.4 GHz）。
+# 806.40 MHz 是内核启动时检测到的 CPU 初始频率（等于不变 TSC 频率），
+# 并非 Intel 官方标注的 Processor Base Frequency（N100 官方基础频率为 800 MHz）。
+# 加载 hwpstate_intel(4) 后内核会通过 Intel Speed Shift 动态调整频率（N100 最高睿频可达 ~3.4 GHz）。
 # "K8-class" 表示该 CPU 支持 AMD64 指令集（AMD K8 是首个 x86-64 处理器）；
 # 内核代码以 AMD K8 为 AMD64 功能基线进行分类。
 
