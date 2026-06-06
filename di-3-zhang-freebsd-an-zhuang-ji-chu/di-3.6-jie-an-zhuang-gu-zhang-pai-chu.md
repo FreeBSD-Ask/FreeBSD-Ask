@@ -49,4 +49,4 @@
 
 ### 参考文献
 
-- FreeBSD Project. FreeBSD 14.0-RELEASE Release Notes[EB/OL]. [2026-04-17]. <https://www.freebsd.org/releases/14.0R/relnotes/>. FreeBSD 14.0 起移除了 sendmail 默认启动配置，解决了旧版本启动卡顿问题。
+- FreeBSD Project. FreeBSD 14.0-RELEASE Release Notes[EB/OL]. [2026-04-17]. <https://www.freebsd.org/releases/14.0R/relnotes/>. FreeBSD 14.0 起将默认邮件传输代理（MTA）从 sendmail 替换为 dma（Dragonfly Mail Agent），sendmail 不再默认启动，解决了旧版本启动卡顿问题。
