@@ -376,9 +376,7 @@ installed from the ports tree) and then run
 重新安装 `pkg` 本身，将 ABI 更新到 15.0-RELEASE：
 
 ```sh
-# pkg bootstrap -f
-The package management tool is not yet installed on your system.
-Do you want to fetch and install it now? [y/N]: y # 此处输入 y 后回车
+# pkg bootstrap -fy
 Bootstrapping pkg from pkg+https://pkg.FreeBSD.org/FreeBSD:15:amd64/quarterly, please wait...
 Verifying signature with trusted certificate pkg.freebsd.org.2013102301... done
 Installing pkg-2.4.2...
