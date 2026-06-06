@@ -33,7 +33,7 @@
 
 **第 6 章 软件管理**：介绍 FreeBSD 包管理器概述、软件源的更换方法，使用 pkg 管理二进制包、使用 Ports 以源代码方式安装软件、Ports 构建调优，以及使用 DVD 安装软件和 FreeBSD 镜像站现状。
 
-**第 7 章 FreeBSD 系统更新**：介绍系统更新检测，以及通过 freebsd-update、源代码方式或 pkgbase 进行系统更新的方法。
+**第 7 章 FreeBSD 系统更新**：介绍通过 freebsd-update、源代码方式或 pkgbase 进行系统更新的方法。
 
 **第 8 章 网络管理**：介绍基础与高级网络配置、无线网络（Wi-Fi）配置、USB 网络共享、蓝牙、系统代理及 V2Ray、Mihomo 等代理工具的配置。
 

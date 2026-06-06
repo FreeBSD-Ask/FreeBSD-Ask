@@ -1,4 +1,4 @@
-# 7.4 使用 pkgbase 更新 FreeBSD
+# 7.3 使用 pkgbase 更新 FreeBSD
 
 借助 ZFS 启动环境，可在同一台机器上保留多个独立的系统版本，升级失败时无需重新安装即可回滚到先前状态，从而实现原子更新、多系统并存与快速回滚。本节所述方法仅适用于使用 ZFS 文件系统的系统。
 
@@ -206,8 +206,11 @@ After verifying those files, restart the system.
 
 ```ini
 FreeBSD-base {
-    url = "https://pkg.freebsd.org/${ABI}/base_release_${VERSION_MINOR}";
-    enabled = yes;
+    url: "pkg+https://pkg.FreeBSD.org/${ABI}/base_release_${VERSION_MINOR}",
+    mirror_type: "srv",
+    signature_type: "fingerprints",
+    fingerprints: "/usr/share/keys/pkg",
+    enabled: yes
 }
 ```
 
@@ -217,7 +220,7 @@ FreeBSD-base {
 
 > **技巧**
 >
-> 需要切换软件源的用户可将 `url` 这行改为 `url = "https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/base_release_${VERSION_MINOR}";`。注重安全性的读者应维持默认设置。
+> 需要切换软件源的用户可将 `url` 这行改为 `url: "https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/base_release_${VERSION_MINOR}",`。注重安全性的读者应维持默认设置。
 
 - 刷新软件源
 
