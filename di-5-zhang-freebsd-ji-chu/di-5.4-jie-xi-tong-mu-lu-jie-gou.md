@@ -392,7 +392,7 @@ FreeBSD clang version 19.1.7 (https://github.com/llvm/llvm-project.git llvmorg-1
 # ----- 调试选项警告 -----
 WARNING: WITNESS option enabled, expect reduced performance.
 # WITNESS 是内核死锁检测和锁顺序验证机制。启用后会令每次锁获取都进行验证，
-# 带来显著的性能开销（通常 10%-30% 的吞吐量损失）。CURRENT 分支内核默认启用，
+# 带来显著的性能开销。CURRENT 分支内核默认启用，
 # 用于在开发过程中捕获锁顺序错误（lock order reversal）。RELEASE 版本禁用此选项。
 
 # ----- 控制台与显示设备 -----
