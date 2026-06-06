@@ -145,8 +145,8 @@ FreeBSD 的所有安装介质默认不提供图形界面，需在系统安装后
 FreeBSD 镜像 BT 种子下载地址（非官方，建议检查文件校验和后使用）：<https://fosstorrents.com/distributions/freebsd/>
 
 - RELEASE 正式版镜像下载地址
-  - 虚拟机用：<https://download.freebsd.org/ftp/releases/amd64/amd64/ISO-IMAGES/15.0/FreeBSD-15.0-RELEASE-amd64-disc1.iso>
-  - 物理机用：<https://download.freebsd.org/ftp/releases/amd64/amd64/ISO-IMAGES/15.0/FreeBSD-15.0-RELEASE-amd64-memstick.img>
+  - 虚拟机用：<https://download.freebsd.org/releases/amd64/amd64/ISO-IMAGES/15.0/FreeBSD-15.0-RELEASE-amd64-disc1.iso>
+  - 物理机用：<https://download.freebsd.org/releases/amd64/amd64/ISO-IMAGES/15.0/FreeBSD-15.0-RELEASE-amd64-memstick.img>
 - CURRENT 开发版下载地址（仅限专业用户）
   - 虚拟机用：<https://download.freebsd.org/snapshots/amd64/amd64/ISO-IMAGES/16.0/>
   - 物理机下载 `-amd64-memstick.img` 或 `-amd64-memstick.img.xz` 结尾的文件
