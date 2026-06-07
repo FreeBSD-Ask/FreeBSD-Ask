@@ -607,16 +607,15 @@ https://mirrors.163.com/freebsd-pkg/
 
 | 分支 | 更新频率 | URL 地址 |
 | ---- | -------- | -------- |
-| main（16.0-CURRENT） | 每天两次：08:00、20:00 | <https://pkg.freebsd.org/${ABI}/base_latest> |
-| main（16.0-CURRENT） | 每周一次：星期日 20:00 | <https://pkg.freebsd.org/${ABI}/base_weekly> |
-| stable/14 | 每天两次：08:00、20:00 | <https://pkg.freebsd.org/${ABI}/base_latest> |
-| stable/14 | 每周一次：星期日 20:00 | <https://pkg.freebsd.org/${ABI}/base_weekly> |
-| stable/15 | 每天两次：08:00、20:00 | <https://pkg.freebsd.org/${ABI}/base_latest> |
-| stable/15 | 每周一次：星期日 20:00 | <https://pkg.freebsd.org/${ABI}/base_weekly> |
-| releng/14.4（RELEASE） | 每天两次：08:00、20:00 | <https://pkg.freebsd.org/${ABI}/base_release_4> |
-| releng/15.0（RELEASE） | 每天两次：08:00、20:00 | <https://pkg.freebsd.org/${ABI}/base_release_0> |
+| main（16.0-CURRENT） | 每天两次 | <https://pkg.freebsd.org/${ABI}/base_latest> |
+| stable/14 | 每天两次 | <https://pkg.freebsd.org/${ABI}/base_latest> |
+| stable/14 | 每周一次：星期日 | <https://pkg.freebsd.org/${ABI}/base_weekly> |
+| stable/15 | 每天两次 | <https://pkg.freebsd.org/${ABI}/base_latest> |
+| stable/15 | 每周一次：星期日 | <https://pkg.freebsd.org/${ABI}/base_weekly> |
+| releng/14.4（RELEASE） | 随勘误和安全更新发布 | <https://pkg.freebsd.org/${ABI}/base_release_4> |
+| releng/15.0（RELEASE） | 随勘误和安全更新发布 | <https://pkg.freebsd.org/${ABI}/base_release_0> |
 
-以上表格中的时间已转换为北京时间（东八区），对应 FreeBSD 官方镜像站的发布时间。
+以上更新频率依据 freebsd-base(7) 手册页：开发分支（CURRENT 与 STABLE）每天构建两次，RELEASE 分支随勘误和安全更新发布。main 分支仅提供 base_latest，不提供 base_weekly（参见 Baptiste Daroussin 在 freebsd-pkgbase 邮件列表中的说明）。
 
 如果官方源下载速度慢，可以考虑改用国内镜像。只需要替换 `https://pkg.freebsd.org` 这部分。
 
