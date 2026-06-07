@@ -405,7 +405,7 @@ $ freebsd-version -kru
 显示当前 ZFS 工具和内核模块的版本信息：
 
 ```sh
-# zfs --version
+# zfs version
 zfs-2.2.7-FreeBSD_ge269af1b3
 zfs-kmod-2.2.7-FreeBSD_ge269af1b3
 ```
@@ -457,7 +457,7 @@ openzfs_load=YES   # 启用 OpenZFS 模块加载
 在重启后，检查 ZFS 版本：
 
 ```sh
-# zfs --version
+# zfs version
 zfs-2.2.7-FreeBSD_ge269af1b3
 zfs-kmod-2.3.5-1
 ```
