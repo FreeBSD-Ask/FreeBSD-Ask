@@ -208,7 +208,7 @@ Alpha-Omega 项目先后审计了 FreeBSD 的 bhyve 虚拟机监视器、Capsicu
 - Dawidek P J. Porting the Solaris ZFS file system to the FreeBSD operating system[C]//AsiaBSDCon, 2007. ZFS 移植报告。
 - National Day Calendar. NEW DAY PROCLAMATION | NATIONAL FREEBSD DAY - June 19[EB/OL]. (2017-06-15)[2026-06-07]. <https://www.nationaldaycalendar.com/proclamations/new-day-proclamation-national-freebsd-day-june-19>. 美国国家日历。
 - FreeBSD Project. FreeBSD.org intrusion announced November 17th 2012[EB/OL]. (2012-11-17)[2026-06-06]. <https://www.freebsd.org/news/2012-compromise/>. FreeBSD 2012 入侵事件。
-- FreshPorts. ports-mgmt/poudriere-devel[EB/OL]. [2026-06-06]. <https://www.freshports.org/ports-mgmt/poudriere-devel/>. Port **poudriere** 添加日期为 2012-08-16）
+- FreshPorts. ports-mgmt/poudriere-devel[EB/OL]. [2026-06-06]. <https://www.freshports.org/ports-mgmt/poudriere-devel/>. Port **poudriere** 添加日期为 2012-08-16
 - FreeBSD Foundation. Development Project Update: Toolchain Modernization[EB/OL]. (202007)[2026-06-06]. <https://freebsdfoundation.org/wp-content/uploads/2020/07/Development-Project-Update-Toolchain-Modernization.pdf>.
 - Ritchie D M. The Evolution of the Unix Time-sharing System[EB/OL]. (1984)[2026-06-07]. <https://www.read.seas.harvard.edu/~kohler/class/aosref/ritchie84evolution.pdf>. 记载“In early 1970 we proposed acquisition of a PDP-11”。
 - Multicians. GE-635s at Project MAC and BTL[EB/OL]. [2026-06-07]. <https://dps8m.gitlab.io/w3/multicians.org/ge635.html>.
