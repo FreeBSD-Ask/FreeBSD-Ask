@@ -79,7 +79,9 @@ Set it up? [yes]:
 # iwmbtfw -d ugen1.5 -f /usr/local/share/iwmbt-firmware/
 ```
 
-> **注意**：FreeBSD 蓝牙协议栈初始化脚本（`/etc/rc.d/bluetooth`）可能在固件引导加载程序（bootloader）阶段导致设备锁定。因此，必须在启动蓝牙协议栈之前先运行 `iwmbtfw` 加载固件，否则需执行完整的断电/重启或挂起/恢复周期才能解锁设备。
+> **注意**
+>
+> FreeBSD 蓝牙协议栈初始化脚本（**/etc/rc.d/bluetooth**）可能在固件引导加载程序（bootloader）阶段导致设备锁定。因此，必须在启动蓝牙协议栈之前先运行 `iwmbtfw` 加载固件，否则需执行完整的断电/重启或挂起/恢复周期才能解锁设备。
 
 ## 故障排除与未竟事宜
 
