@@ -85,7 +85,7 @@ FreeBSD 不仅在生命周期内保持稳定，大版本更新也具有连贯性
 
 GNOME、Xorg（X11）、D-Bus、systemd、PulseAudio、Wayland、PipeWire 等主流 Linux 项目实际上受到红帽公司（Red Hat）的显著影响，且大多难以完全适配其他类 UNIX 操作系统。
 
-目前 FreeBSD 桌面部件缺失，在较大程度上源自对 Linux 特有函数库的强依赖，例如包含 ip 命令的 `iproute2` 软件包。更为重要的原因在于这些桌面或部件与 systemd 存在深度捆绑或强制依赖关系，例如 `NetworkManager`。而 Samba 开发者则称“We use Linux, we develop for Linux, all others please submit patches”（我们使用 Linux，为 Linux 开发，其他系统的用户请自行提交补丁）。FreeBSD 社区将此类现象称为“Linuxism”（Linux 主义/Linux 偏向）。
+目前 FreeBSD 桌面部件缺失，在较大程度上源自对 Linux 特有函数库的强依赖，例如包含 ip 命令的 `iproute2` 软件包。更为重要的原因在于这些桌面或部件与 systemd 存在深度捆绑或强制依赖关系，例如 `NetworkManager`。而 Samba 等项目的开发以 Linux 为中心，对非 Linux 平台的兼容性关注不足。FreeBSD 社区将此类现象称为“Linuxism”（Linux 主义/Linux 歧视）。
 
 这种行为将导致何种后果尚不得而知，但此类程序正变得越来越多，并有成为主流的趋势。许多开发者开发程序（如 `todesk`）时也不再考虑对传统 init 系统的兼容。Java 程序也逐渐丧失了可移植性；由于此类捆绑问题，FreeBSD 上的 Eclipse 更新曾长期滞后。如果此趋势持续，可运行在 Linux 上的程序的可移植性可能进一步降低。
 
@@ -98,6 +98,7 @@ GNOME、Xorg（X11）、D-Bus、systemd、PulseAudio、Wayland、PipeWire 等主
 
 - D'Pong P. Bug 562443 - SWT spams temp folder with innumerable folders[EB/OL]. (2020-05-26)[2026-04-05]. <https://gitlab.simantics.org/simantics/eclipse/eclipse.platform.swt/-/commit/19153b908d6d4cedcbd59824686717502cfde4f7>.
 - FreshPorts. java/eclipse[EB/OL]. [2026-06-06]. <https://www.freshports.org/java/eclipse/>. 截至 2026 年，Port **java/eclipse** 已恢复活跃维护
+- FreeBSD Forums. Are Linuxisms impossible to overcome when porting?[EB/OL]. [2026-06-07]. <https://forums.freebsd.org/threads/are-linuxisms-impossible-to-overcome-when-porting.45805/>.
 
 #### FreeBSD 基金会重大捐赠事件
 
