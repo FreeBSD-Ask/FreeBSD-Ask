@@ -270,7 +270,7 @@ Windows 直接读取 RTC 的值，并视为本地时间（Local Time，地方时
 
 从实际地理时区看，新疆属于东六区（虽全国统一使用北京时间）。北京地区如果在北京时间五点日出，新疆则要到北京时间七点方见日出。
 
-在时区数据库 2025b 中，`Asia/Harbin`、`Asia/Chongqing`、`Asia/Shanghai` 均等同于北京时间。`Asia/Urumqi` 和 `Asia/Kashgar` 则均为 `UTC+6`（东六区时间）。
+在时区数据库 2025b 中，`Asia/Harbin`、`Asia/Chongqing`、`Asia/Shanghai` 均等同于北京时间。`Asia/Urumqi` 和 `Asia/Kashgar` 在 IANA 时区数据库中官方解析为 UTC+8（北京时间），但新疆当地民间实际使用 UTC+6（新疆时间）。
 
 在 FreeBSD 中，北京时间同样为 `Asia/Shanghai`（东八区）。部分国产操作系统自行定义 `Asia/Beijing` 时区，此举不符合国际标准与规范，可能造成严重后果——例如导致时间回退至 UTC。
 
