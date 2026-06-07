@@ -487,8 +487,8 @@ Event timer "LAPIC" quality 600
 
 # ===== ACPI 子系统 =====
 ACPI APIC Table: <ALASKA A M I >
-# ACPI APIC（MADT）表供应商信息。“ALASKA A M I” 表明 BIOS 由 AMI（American Megatrends Inc.）
-# 提供，主板厂商为 ASRock（Alaska 是其产品线内部代号）。
+# ACPI APIC（MADT）表供应商信息。“ALASKA A M I”是 AMI（American Megatrends Inc.）
+# BIOS 的通用默认 ACPI OEM ID，被众多主板厂商使用，并非特定厂商的产品线代号。
 
 WARNING: L3 data cache covers more APIC IDs than a package (7 > 3)
 # L3 缓存共享 APIC ID 范围与 BSP（Bootstrap Processor）报告值不一致，
@@ -547,7 +547,7 @@ aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS,SHA1,SHA256>
 
 # ===== ACPI 根设备 -----
 acpi0: <ALASKA A M I>
-# ACPI 根设备（插槽/主板的ACPI命名空间），OEM ID = ALASKA（ASRock/N100DC-ITX 主板）。
+# ACPI 根设备（插槽/主板的ACPI命名空间），OEM ID = ALASKA（AMI BIOS 通用默认 OEM ID）。
 
 # ----- ACPI 固件错误（非致命）-----
 Firmware Error (ACPI): Could not resolve symbol [\134_SB.PC00.TXHC.RHUB.SS01], AE_NOT_FOUND (20241212/dswload2-315)
