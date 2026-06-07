@@ -135,13 +135,13 @@ FreeBSD 具有诸多优势，但也面临着现实的挑战。
 - 尚未完全支持安全启动（Secure Boot），需通过手动签名 EFI 二进制文件实现。
 - 对 TPM 的支持有限。
 - 由于部分软件对 Linux 特有特性存在依赖（Linuxism），导致若干软件无法直接移植。
-- FreeBSD 支持的两款主要文件系统 ZFS 与 UFS，其存储空间通常只能扩大，难以直接缩小
+- FreeBSD 支持的两款主要文件系统 ZFS 与 UFS，其存储空间通常只能扩大，难以直接缩小（ZFS 自 FreeBSD 13.0 起可通过 `zpool remove` 移除镜像或非冗余顶级 vdev，但无法移除 raidz vdev，且需满足 `device_removal` 特性标志已启用的条件；UFS 则不支持缩小）
 - FreeBSD 在面向最终用户的上层应用生态方面有所欠缺，虚拟化技术 bhyve 也有待改进。
 
 ### 参考文献
 
 - FreeBSD Foundation. FreeBSD UEFI Secure Boot[EB/OL]. [2026-06-06]. <https://freebsdfoundation.org/freebsd-uefi-secure-boot/>.
-- OpenZFS. Feature Flags[EB/OL]. [2026-06-07]. <https://openzfs.github.io/openzfs-docs/Basic%20Concepts/Feature%20Flags.html>. 可通过 zpool remove 缩减存储池
+- OpenZFS. zpool-remove(8)[EB/OL]. [2026-06-07]. <https://openzfs.github.io/openzfs-docs/man/v2.2/8/zpool-remove.8.html>. 可通过 zpool remove 移除镜像或非冗余顶级 vdev，但无法移除 raidz vdev
 
 ## 课后习题
 
