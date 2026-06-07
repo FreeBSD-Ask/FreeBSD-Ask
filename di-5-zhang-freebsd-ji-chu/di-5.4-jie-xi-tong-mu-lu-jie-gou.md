@@ -66,7 +66,7 @@ FreeBSD 的目录结构设计遵循以下原则：
 │   ├── nda0 第一块 NVMe 存储设备（通过 cam(3) 连接）
 │   ├── nda0p1 第一块 NVMe 存储设备的第一个分区
 │   ├── null 空设备，丢弃所有写入的数据，读取时立即返回 EOF
-│   ├── nvd0 nda0 的符号链接（旧版 NVMe 直接驱动兼容名，参见 nda(4)）
+│   ├── nvd0 nda0 的兼容性别名（旧版 NVMe 直接驱动兼容名，参见 nda(4)）
 │   ├── pts 伪终端设备，参见 pts(4)
 │   ├── random 熵设备，加密强度的随机数来源，参见 random(4)
 │   ├── reroot reboot -r 使用的重引导设备
