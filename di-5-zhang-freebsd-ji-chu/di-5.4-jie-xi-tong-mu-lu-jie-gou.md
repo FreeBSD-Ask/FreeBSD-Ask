@@ -371,8 +371,8 @@ Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
 	The Regents of the University of California. All rights reserved.
 FreeBSD is a registered trademark of The FreeBSD Foundation.
 # 第一行声明 FreeBSD 项目的版权（FreeBSD 独有的代码，始于 1992 年）。
-# 第二行声明加州大学董事会（The Regents）的版权——这是 4.3BSD Net/2 及之前 BSD 版本的版权持有者。
-# 年份跨度 1979-1994 代表了 BSD 从 3BSD 到 4.4BSD-Lite2 的完整历史。
+# 第二行声明加州大学董事会（The Regents）的版权——这是 4.4BSD-Lite 及之前 BSD 版本的版权持有者。
+# 年份跨度 1979-1994 代表了 BSD 从 3BSD 到 4.4BSD-Lite 的完整历史（4.4BSD-Lite2 于 1995 年 6 月发布，在其后）。
 # 第三行声明 FreeBSD Foundation 持有“FreeBSD”注册商标。
 
 # ----- 内核版本标识 -----
