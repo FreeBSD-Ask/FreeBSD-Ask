@@ -39,7 +39,7 @@
 
 > **技巧**
 >
-> 实际上此处调用的是软件 `sade`（sysadmins disk editor，系统管理员磁盘编辑器），`bsdconfig` 中的分区模块亦调用此工具。
+> 实际上此处使用的分区编辑器界面与软件 `sade`（sysadmins disk editor，系统管理员磁盘编辑器）相同，两者共享同一代码库。`bsdconfig` 中的 `diskmgmt` 模块则直接调用 `sade`。
 
 此处可查看硬盘分区情况。图中仅有一块硬盘，包含一个 300 MB 的 EFI 系统分区、一个 16 MB 的 MSR 分区、一个 64 GB 的 Windows 系统分区（即 C 盘）以及未显示的空闲空间。直接选择 `Create`（创建）。
 

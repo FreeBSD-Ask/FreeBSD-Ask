@@ -244,7 +244,7 @@ axel 是一款轻量级的多线程下载工具，可显著提高下载速度。
 
 ```ini
 FETCH_CMD=axel                # 设置使用 axel 作为下载工具
-FETCH_BEFORE_ARGS=-n 10 -a    # 设置 axel 下载前的参数：使用 10 个线程并启用自动模式
+FETCH_BEFORE_ARGS=-n 10 -a    # 设置 axel 下载前的参数：使用 10 个线程并显示替代进度条
 FETCH_AFTER_ARGS=              # 下载后执行的命令参数为空
 DISABLE_SIZE=yes               # 禁用文件大小检查
 ```

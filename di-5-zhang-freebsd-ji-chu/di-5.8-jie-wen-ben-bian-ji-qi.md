@@ -47,7 +47,7 @@ FreeBSD 还内置了一款编辑器 `vi`。FreeBSD 的 `vi` 实际上是 nex/nvi
 
 与大多数 Linux 发行版将 `vi` 链接到 `vim` 不同，BSD 系统提供的是原生 `nvi`，其用法较为复杂但功能强大。
 
-`ex`、`vi`、`view` 是同一程序的不同接口，可在编辑会话中切换。`view` 等同于 `vi -R`（只读模式）。nvi 接近 POSIX.1-2008 标准。
+`ex`、`vi`、`view` 是同一程序的不同接口，可在编辑会话中切换。`view` 等同于 `vi -R`（只读模式）。nvi 实现了 POSIX 1003.2 标准中的 vi 编辑器规范。
 
 ### vi 基本使用方法
 

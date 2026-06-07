@@ -91,7 +91,7 @@ login:
 >
 > ⑥、⑦ 分别切换到了哪些用户或执行了哪些操作？
 
-`su` 命令只能切换到 **/etc/shells** 中列出的 shell。`su -` 或 `su -l` 不仅切换用户，还会将工作目录切换到目标用户的主目录，并重置环境变量。
+`su` 命令切换到目标用户在 **/etc/passwd** 中定义的登录 shell。注意：使用 `su -m` 时，如果目标用户的 shell 不在 **/etc/shells** 中且调用者非 root，则 `su` 会失败。`chsh` 命令则只能将 shell 更改为 **/etc/shells** 中列出的标准 shell。`su -` 或 `su -l` 不仅切换用户，还会将工作目录切换到目标用户的主目录，并重置环境变量。
 
 BSD 与 GNU `su` 行为比较：
 
@@ -782,14 +782,11 @@ total 1
 
 关机：
 
-- 使用 `shutdown now` 将不会关机，而是切换到“单用户模式”，将提示：`Enter full pathname of shell or RETURN for /bin/sh :` 回车后进入单用户模式。
-- 使用 `shutdown -h now` 将不会彻底断电，只会停止系统的运行，提示：`The operating system has halted. Please press any key to reboot.` 此处按任意键可重启系统；
-- 正确的关机并断电命令是 `poweroff`，等同于命令 `shutdown -p now`。
+正确的关机并断电命令是 `poweroff`，等同于命令 `shutdown -p now`。
 
 重启：
 
-- 重启命令和 Linux 一致，都是 `reboot`，但参数不通用。
-- 在 FreeBSD 下 `reboot` 等同于 `shutdown -r now`
+推荐使用 `shutdown -r now` 进行重启。
 
 > **注意**
 >
@@ -797,7 +794,7 @@ total 1
 
 > **技巧**
 >
-> 关于 `reboot`、`halt`、`poweroff` 在 FreeBSD 与 Linux 中的行为差异，以及关机时 **/etc/rc.shutdown** 脚本的执行流程，详见第 14.3 节。
+> 关于 `reboot`、`halt`、`poweroff` 在 FreeBSD 与 Linux 中的行为差异，以及关机时 **/etc/rc.shutdown** 脚本的执行流程，详见其他相关章节。
 
 ## 参考文献
 

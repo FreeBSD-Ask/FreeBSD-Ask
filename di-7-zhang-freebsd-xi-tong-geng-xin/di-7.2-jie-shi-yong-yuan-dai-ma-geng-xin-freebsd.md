@@ -1,4 +1,4 @@
-# 7.3 使用源代码更新 FreeBSD
+# 7.2 使用源代码更新 FreeBSD
 
 从源代码构建 FreeBSD 可以自定义内核选项和编译参数，适用于 freebsd-update 不支持的架构或需要裁剪系统的场景。
 
@@ -115,7 +115,7 @@ $ git clone --branch releng/15.0 --single-branch --depth 1 https://github.com/fr
 # make -j4 kernel      # 编译并安装内核（相当于 buildkernel 后跟 installkernel）
 # reboot               # 重启以使用新内核
 # cd /usr/src          # 切换回工作目录
-# etcupdate -p         # 进行必要的配置文件合并
+# etcupdate -p         # 合并 installworld 前必须更新的配置文件
 # make installworld    # 安装世界
 # etcupdate -B         # 合并更新
 # reboot               # 重启以完成更新流程
@@ -136,7 +136,7 @@ $ git clone --branch releng/15.0 --single-branch --depth 1 https://github.com/fr
 > export VISUAL=/usr/bin/ee # 切换 vi 为 ee。若使用 csh/tcsh，则改用：setenv VISUAL /usr/bin/ee
 > ```
 
-合并冲突。使用 `etcupdate` 执行备份模式，以便在更新配置文件前备份现有文件：
+合并冲突。使用 `etcupdate` 合并配置文件更新：
 
 ```sh
 # etcupdate -B
@@ -149,7 +149,8 @@ Conflicts remain from previous update, aborting.
 - 如果 **/etc/login.conf** 变更则自动调用 `cap_mkdb`；
 - 如果 **/etc/mail/aliases** 变更则自动调用 `newaliases`；
 - 如果 **/etc/services** 变更则自动调用 `services_mkdb`；
-- 如果 **/etc/localtime** 变更且 **/var/db/zoneinfo** 存在则自动调用 `tzsetup`。
+- 如果 **/etc/localtime** 变更且 **/var/db/zoneinfo** 存在则自动调用 `tzsetup`；
+- 如果 **/etc/motd** 变更则自动调用 `/etc/rc.d/motd`。
 
 解决冲突：
 

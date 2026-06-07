@@ -114,7 +114,7 @@ Hyper-V 安装完成后，创建虚拟机。右键单击 Hyper-V 管理器中的
 
 ![Hyper-V 安全启动](../.gitbook/assets/hyperv-11.png)
 
-来宾服务是 Hyper-V 集成服务的一部分，提供宿主机与虚拟机之间的文件交换、时间同步等集成功能。其作用详见参考文献。点击“管理”，再次点击“集成服务”，在右侧边栏选中“来宾服务”。
+来宾服务（Guest Service Interface）是 Hyper-V 集成服务的一部分，用于在宿主机与虚拟机之间复制文件。时间同步由独立的时间同步服务（Time Synchronization Service）负责。其作用详见参考文献。点击“管理”，再次点击“集成服务”，在右侧边栏选中“来宾服务”。
 
 ![Hyper-V 来宾服务](../.gitbook/assets/hyperv-12.png)
 

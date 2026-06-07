@@ -392,7 +392,7 @@ FreeBSD clang version 19.1.7 (https://github.com/llvm/llvm-project.git llvmorg-1
 # ----- 调试选项警告 -----
 WARNING: WITNESS option enabled, expect reduced performance.
 # WITNESS 是内核死锁检测和锁顺序验证机制。启用后会令每次锁获取都进行验证，
-# 带来显著的性能开销（通常 10%-30% 的吞吐量损失）。CURRENT 分支内核默认启用，
+# 带来显著的性能开销。CURRENT 分支内核默认启用，
 # 用于在开发过程中捕获锁顺序错误（lock order reversal）。RELEASE 版本禁用此选项。
 
 # ----- 控制台与显示设备 -----
@@ -405,8 +405,9 @@ VT(efifb): resolution 800x600
 # ===== CPU 检测与特性枚举 =====
 CPU: Intel(R) N100 (806.40-MHz K8-class CPU)
 # CPU 型号名称。Intel N100 是 Alder Lake-N 架构的低功耗处理器。
-# 806.40 MHz 是启动时 CPU 的基础频率（base frequency），加载 hwpstate_intel(4)
-# 后内核会通过 Intel Speed Shift 动态调整频率（N100 最高睿频可达 ~3.4 GHz）。
+# 806.40 MHz 是内核启动时检测到的 CPU 初始频率（等于不变 TSC 频率），
+# 并非 Intel 官方标注的 Processor Base Frequency（N100 官方基础频率为 800 MHz）。
+# 加载 hwpstate_intel(4) 后内核会通过 Intel Speed Shift 动态调整频率（N100 最高睿频可达 ~3.4 GHz）。
 # "K8-class" 表示该 CPU 支持 AMD64 指令集（AMD K8 是首个 x86-64 处理器）；
 # 内核代码以 AMD K8 为 AMD64 功能基线进行分类。
 
@@ -486,8 +487,8 @@ Event timer "LAPIC" quality 600
 
 # ===== ACPI 子系统 =====
 ACPI APIC Table: <ALASKA A M I >
-# ACPI APIC（MADT）表供应商信息。“ALASKA A M I” 表明 BIOS 由 AMI（American Megatrends Inc.）
-# 提供，主板厂商为 ASRock（Alaska 是其产品线内部代号）。
+# ACPI APIC（MADT）表供应商信息。“ALASKA A M I”是 AMI（American Megatrends Inc.）
+# BIOS 的通用默认 ACPI OEM ID，被众多主板厂商使用，并非特定厂商的产品线代号。
 
 WARNING: L3 data cache covers more APIC IDs than a package (7 > 3)
 # L3 缓存共享 APIC ID 范围与 BSP（Bootstrap Processor）报告值不一致，
@@ -546,7 +547,7 @@ aesni0: <AES-CBC,AES-CCM,AES-GCM,AES-ICM,AES-XTS,SHA1,SHA256>
 
 # ===== ACPI 根设备 -----
 acpi0: <ALASKA A M I>
-# ACPI 根设备（插槽/主板的ACPI命名空间），OEM ID = ALASKA（ASRock/N100DC-ITX 主板）。
+# ACPI 根设备（插槽/主板的ACPI命名空间），OEM ID = ALASKA（AMI BIOS 通用默认 OEM ID）。
 
 # ----- ACPI 固件错误（非致命）-----
 Firmware Error (ACPI): Could not resolve symbol [\134_SB.PC00.TXHC.RHUB.SS01], AE_NOT_FOUND (20241212/dswload2-315)
@@ -804,10 +805,10 @@ cpufreq3: <CPU frequency control> on cpu3
 
 # ===== 最终 Timecounter 选择 =====
 Timecounter "TSC" frequency 806401362 Hz quality 1000
-# Time Stamp Counter（TSC）频率 = 806.4 MHz = N100 CPU 基础频率（base clock）。
+# Time Stamp Counter（TSC）频率 = 806.4 MHz，即不变 TSC（Invariant TSC）的递增速率。
+# 注意：TSC 频率 ≠ Intel 官方 Processor Base Frequency（N100 官方基础频率为 800 MHz）。
 # quality 1000 是最高优先级——内核最终选择 TSC 为系统主 timecounter。
-# TSC 在每个 CPU 时钟（base clock）递增一次，是最细粒度的时间源。
-# 该 CPU 的 TSC 为 Invariant（不随 P-state/C-state 变化），可作为可靠的单调时钟源。
+# 不变 TSC 以固定速率递增，不受 P-state/C-state 频率变化影响，是最细粒度的可靠时间源。
 
 Timecounters tick every 1.000 msec
 # 内核 timecounter 子系统以 1ms（1000 Hz）的频率更新系统时间基准。
