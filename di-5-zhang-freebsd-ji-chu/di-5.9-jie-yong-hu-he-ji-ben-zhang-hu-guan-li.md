@@ -4,7 +4,7 @@ FreeBSD 系统的所有访问均通过账户实现，所有进程都由用户运
 
 FreeBSD 提供了多种用户管理工具。`adduser` 命令以交互方式添加新用户，自动完成创建 passwd 条目、构建新用户主目录、从 **/usr/share/skel** 复制默认配置文件等操作。
 
-adduser(8) 是一个 shell 脚本，内部调用 pw(8) 完成实际的用户数据库操作。adduser(8) 是 FreeBSD 特有工具。
+adduser(8) 是一个 shell 脚本，内部调用 pw(8) 完成实际的用户数据库操作。adduser(8) 并非 FreeBSD 独有，OpenBSD 和 DragonFly BSD 也有各自的 adduser(8) 实现，但选项和行为有所不同。
 
 `pw` 命令是更底层的用户和组管理工具，支持非交互式批量操作，可直接修改系统用户数据库文件。
 
@@ -38,7 +38,7 @@ FreeBSD 中主要有三类账户：系统账户、普通用户账户，以及超
 
 系统账户用于运行 DNS、邮件和 Web 服务器等服务。如果所有服务均以超级用户身份运行，其操作将不受限制，此即使用系统账户的安全性考量。
 
-系统账户由源代码中的 [main/etc/master.passwd](https://github.com/freebsd/freebsd-src/blob/main/etc/master.passwd) 文件定义，截至写作时共计 27 个，`_dhcp`、`ntpd` 便属于此类系统账户。系统账户是具有受限权限的专用账户，通常用于运行系统服务和守护进程。
+系统账户由源代码中的 [main/etc/master.passwd](https://github.com/freebsd/freebsd-src/blob/main/etc/master.passwd) 文件定义，截至写作时共计 27 个（该数量随版本迭代可能变化），`_dhcp`、`ntpd` 便属于此类系统账户。系统账户是具有受限权限的专用账户，通常用于运行系统服务和守护进程。
 
 `nobody` 是通用的非特权系统账户，但使用 `nobody` 的服务越多，该用户关联的文件和进程就越多，该用户特权越大，因此最佳实践是为每个服务分配独立的系统账户，而非共用 `nobody`。
 
@@ -407,7 +407,7 @@ uid=1001(ykla) gid=1001(ykla) groups=1001(ykla),0(wheel),1002(ykla2)
 
 > **警告**
 >
-> `pw userdel -r` 将永久删除用户及其主目录和所有相关信息，操作不可逆。如果主目录为 ZFS 数据集，还会自动销毁该数据集。请确认用户名正确无误。
+> `pw userdel -r` 将永久删除用户及其主目录和所有相关信息，操作不可逆。如果主目录为 ZFS 数据集且已清空，还会自动销毁该数据集（但不会处理子数据集和快照）。请确认用户名正确无误。
 
 示例：删除用户 test2 及其主目录。
 
