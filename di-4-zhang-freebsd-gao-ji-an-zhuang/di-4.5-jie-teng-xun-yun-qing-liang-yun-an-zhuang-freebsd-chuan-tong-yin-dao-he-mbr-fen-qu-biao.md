@@ -24,7 +24,7 @@ FreeBSD 中文社区. 08-腾讯云轻量云及其他服务器安装 FreeBSD[EB/O
 
 ## 取消隐藏的 GRUB 菜单
 
-目前大多数 Linux 发行版的 GRUB 菜单默认隐藏，需开机时按 Esc 键调出，但该操作有时会直接进入 BIOS 设置界面。
+部分 Linux 发行版（如 Fedora、Ubuntu 23.10+）的 GRUB 菜单默认隐藏，需开机时按 Esc 键调出，但该操作有时会直接进入 BIOS 设置界面。
 
 因此，直接取消 GRUB2 菜单的自动隐藏设置更为便捷：
 
@@ -92,7 +92,7 @@ mfsBSD 和 mfsLinux 镜像的默认 `root` 密码均为 `mfsroot`。
 ```sh
 # mkdir -p /usr/freebsd-dist # 创建目标目录
 # cd /usr/freebsd-dist # 进入该目录
-# fetch http://ftp.freebsd.org/pub/FreeBSD/releases/amd64/14.2-RELEASE/MANIFEST # 下载 MANIFEST 文件
+# fetch https://download.freebsd.org/releases/amd64/14.2-RELEASE/MANIFEST # 下载 MANIFEST 文件
 ```
 
 ## 故障排除与未竟事宜
