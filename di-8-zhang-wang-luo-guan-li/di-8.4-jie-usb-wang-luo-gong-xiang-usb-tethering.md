@@ -8,7 +8,7 @@ USB 网络共享（USB tethering）是通过通用串行总线（USB）物理层
 
 ### Wi-Fi 共享的流量特性
 
-大多数新款 Android 手机开启 Wi-Fi 并关闭移动数据后，可将网络共享给 FreeBSD。该功能通过将手机已建立的 Wi-Fi 连接经由 USB 接口转发给 FreeBSD 实现，不产生移动数据流量。
+部分 Android 手机（如 Google Pixel 3 及更新机型）开启 Wi-Fi 并关闭移动数据后，可将网络共享给 FreeBSD。该功能通过将手机已建立的 Wi-Fi 连接经由 USB 接口转发给 FreeBSD 实现，不产生移动数据流量。
 
 ![USB 网络共享](../.gitbook/assets/tethering.png)
 
@@ -38,15 +38,15 @@ Apple iPhone/iPad 设备需加载以下内核模块：
 
 该命令加载 iPhone/iPad 以太网网络驱动，使系统能够识别 iOS 设备的 USB 网络共享功能。加载成功后，系统通常会创建类似 `ue0` 的网络接口。
 
-### 其他 Android 设备驱动
+### 较新 Android 设备驱动（CDC NCM）
 
-Android 设备使用通信设备类以太网控制模型/网络控制模型（Communication Device Class Ethernet Control Model/Network Control Model，CDC ECM/NCM）协议，需加载以下内核模块：
+自 Google Pixel 6 系列（2021 年）起，Google 已将 Android 原生 USB 网络共享协议从 RNDIS 切换为网络控制模型（Network Control Model，NCM），其他部分厂商的新款设备也逐步跟进。此类设备需加载以下内核模块：
 
 ```sh
 # kldload if_cdce
 ```
 
-该命令加载 USB CDC ECM/Ethernet 网络驱动，使系统能够识别使用 CDC ECM/NCM 协议的 Android 设备。加载成功后，系统通常会创建类似 `ue0` 的网络接口。
+该命令加载 USB CDC ECM/NCM 网络驱动，使系统能够识别使用 NCM 协议的 Android 设备。加载成功后，系统通常会创建类似 `ue0` 的网络接口。
 
 ## 持久化驱动加载机制
 
