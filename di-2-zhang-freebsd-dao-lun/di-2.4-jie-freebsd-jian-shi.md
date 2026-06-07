@@ -201,7 +201,7 @@ Alpha-Omega 项目先后审计了 FreeBSD 的 bhyve 虚拟机监视器、Capsicu
 - OpenZFS. OpenZFS[EB/OL]. [2026-06-07]. <https://en.wikipedia.org/wiki/OpenZFS>.
 - FreeBSD Foundation. Infrastructure Modernization[EB/OL]. (2025-12-19)[2026-06-07]. <https://freebsdfoundation.org/blog/infrastructure-modernization-commissioned-by-the-sovereign-tech-agency/>.
 - FreeBSD Foundation. Contributing to FreeBSD Ports with Git[EB/OL]. [2026-06-07]. <https://freebsdfoundation.org/wp-content/uploads/2022/03/mingrone.pdf>.
-- Watson R N M, et al. CHERI: A Research Platform Deconflating Hardware Virtualization and Protection[C]//RESOLV'12 Workshop, London, UK, 2012-03.
+- Watson R N M, et al. CHERI: A Research Platform Deconflating Hardware Virtualization and Protection[C]//RESoLVE'12 Workshop, London, UK, 2012-03.
 - Gunkies. Power 6/32[EB/OL]. [2026-06-07]. <https://gunkies.org/wiki/Tahoe>.
 - Laier M. Packet Filter (pf) An Extended Introduction[EB/OL]. (2004-10-21)[2026-06-07]. <https://people.freebsd.org/~mlaier/sucon.pdf>. PF 移植报告。
 - Evans J. A Scalable Concurrent malloc(3) Implementation for FreeBSD[C]//BSDCan, 2006. 新型内存分配器的实现。
