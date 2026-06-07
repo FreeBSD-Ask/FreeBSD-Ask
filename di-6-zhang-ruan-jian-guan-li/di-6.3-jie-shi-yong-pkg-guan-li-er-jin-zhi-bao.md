@@ -113,7 +113,7 @@ pkg: No packages available to install matching 'chromium' have been found in the
 
 如果前面显示了“FreeBSD repository update completed. 36804 packages processed.”（FreeBSD 仓库更新完成。处理了 36804 个包），说明当前软件源是可用的，只是找不到 `chromium` 这个软件包而已。
 
-这就是上文所述“原子更新”缺失的体现。
+这就是下文所述“原子更新”缺失的体现。
 
 此外，即使系统已设置 i18n，pkg 的输出仍然是英文。
 
