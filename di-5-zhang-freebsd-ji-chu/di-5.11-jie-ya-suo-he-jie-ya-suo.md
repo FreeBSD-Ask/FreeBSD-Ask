@@ -6,7 +6,7 @@
 
 ## zip
 
-zip 格式是 PKZIP 归档格式的实现，由 Info-ZIP 项目维护。zip 是一款压缩和文件打包工具，兼容 PKZIP（Phil Katz 的 ZIP for MSDOS 系统），zip 3.0 版本兼容 PKZIP 2.04 并支持 Zip64 扩展（允许归档和文件超过 2 GB 限制）。zip 使用 deflation 作为默认压缩方法，也可存储不压缩的文件，并自动为每个文件选择更优的方式。
+zip 格式是 PKZIP 归档格式的实现，其规范由 PKWARE 维护（APPNOTE.TXT），Info-ZIP 项目提供了开源的 zip/unzip 工具实现。zip 是一款压缩和文件打包工具，兼容 PKZIP（Phil Katz 的 ZIP for MSDOS 系统），zip 3.0 版本兼容 PKZIP 2.04 并支持 Zip64 扩展（允许归档和文件超过 2 GB 限制）。zip 使用 deflation 作为默认压缩方法，也可存储不压缩的文件，并自动为每个文件选择更优的方式。
 
 zip 格式是 Windows 上最常用的格式，但对 Unicode 文件名支持有限（取决于 zip 工具版本和压缩设置）。在跨平台交换文件时建议使用 tar.xz 或 tar.zst 格式。
 
