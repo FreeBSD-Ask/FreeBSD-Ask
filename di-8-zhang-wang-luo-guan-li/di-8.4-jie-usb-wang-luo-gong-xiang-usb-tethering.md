@@ -58,7 +58,7 @@ Apple iPhone/iPad 设备需加载以下内核模块：
 
 ```ini
 if_urndis_load="YES"  # 设置系统启动时自动加载 USB RNDIS 网络驱动
-if_cdce_load="YES"    # 设置系统启动时自动加载 USB CDC ECM/Ethernet 网络驱动
+if_cdce_load="YES"    # 设置系统启动时自动加载 USB CDC ECM/NCM 网络驱动
 if_ipheth_load="YES"  # 设置系统启动时自动加载 iPhone/iPad 以太网驱动
 ```
 
