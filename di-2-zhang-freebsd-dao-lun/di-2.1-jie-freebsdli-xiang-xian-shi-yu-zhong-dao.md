@@ -68,7 +68,7 @@ FreeBSD 不仅在生命周期内保持稳定，大版本更新也具有连贯性
 - Linux 二进制兼容层可运行 Linux 软件，性能开销通常在系统调用密集型工作负载下低于 2-3%，计算密集型任务则接近原生性能。
 - FreeBSD 的驱动以内核模块形式存在，可动态加载和卸载，便于按需管理硬件。
 - FreeBSD 秉持人人自由开发的理念，可以直接在 GitHub 上[提交代码](https://github.com/freebsd/freebsd-src/pulls)，或者注册账号在 <https://reviews.freebsd.org/> 提交大规模变更。
-- FreeBSD 的代码风格是 BSD KNF（Kernel Normal Form），基于 CSRG 的 KNF 规范，其大括号布局与 Allman 风格类似（左大括号独占一行），与 Kernighan & Ritchie 经典著作《The C Programming Language》（中译本：Kernighan B W, Ritchie D M. C 程序设计语言[M]. 徐宝文，李志，译. 第 2 版. 北京：机械工业出版社，2019. ISBN: 978-7-111-61794-5.）中使用的 K&R 风格不同。
+- FreeBSD 的代码风格是 BSD KNF（Kernel Normal Form），基于 CSRG 的 KNF 规范，其大括号布局是 K&R 风格的一种变体（函数左大括号独占一行，控制语句左大括号与语句同行），与 Kernighan & Ritchie 经典著作《The C Programming Language》（中译本：Kernighan B W, Ritchie D M. C 程序设计语言[M]. 徐宝文，李志，译. 第 2 版. 北京：机械工业出版社，2019. ISBN: 978-7-111-61794-5.）中使用的 K&R 风格一致。
 
 #### 参考文献
 
@@ -132,11 +132,16 @@ FreeBSD 具有诸多优势，但也面临着现实的挑战。
 - FreeBSD 的开发者数量较少，且对外部贡献者的反馈往往不及时。
 - FreeBSD 基金会、期刊、Bug 报告系统等对外部贡献者的反馈也常有不及时的情况。
 - FreeBSD 文档项目曾停滞多年，个人贡献者除季度报告外的提交事实上很难被接纳；src 和 Ports 项目也同样难以接纳新的个人贡献者。
-- 尚未完全支持安全启动（Secure Boot），需通过手动签名 EFI 二进制文件实现（参见：FreeBSD Foundation. FreeBSD UEFI Secure Boot[EB/OL]. [2026-06-06]. <https://freebsdfoundation.org/freebsd-uefi-secure-boot/>.）。
+- 尚未完全支持安全启动（Secure Boot），需通过手动签名 EFI 二进制文件实现。
 - 对 TPM 的支持有限。
 - 由于部分软件对 Linux 特有特性存在依赖（Linuxism），导致若干软件无法直接移植。
-- FreeBSD 支持的两款主要文件系统 ZFS 与 UFS，其存储空间通常只能扩大，难以直接缩小（ZFS 自 FreeBSD 13.0-RELEASE 起可通过 `zpool remove` 缩减存储池，参见：FreeBSD Project. zpool-remove(8)[EB/OL]. [2026-06-07]. <https://man.freebsd.org/cgi/man.cgi?query=zpool-remove&sektion=8>.）。
+- FreeBSD 支持的两款主要文件系统 ZFS 与 UFS，其存储空间通常只能扩大，难以直接缩小
 - FreeBSD 在面向最终用户的上层应用生态方面有所欠缺，虚拟化技术 bhyve 也有待改进。
+
+### 参考文献
+
+- FreeBSD Foundation. FreeBSD UEFI Secure Boot[EB/OL]. [2026-06-06]. <https://freebsdfoundation.org/freebsd-uefi-secure-boot/>.
+- OpenZFS. Feature Flags[EB/OL]. [2026-06-07]. <https://openzfs.github.io/openzfs-docs/Basic%20Concepts/Feature%20Flags.html>. 可通过 zpool remove 缩减存储池
 
 ## 课后习题
 
