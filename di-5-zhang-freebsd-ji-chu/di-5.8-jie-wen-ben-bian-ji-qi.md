@@ -83,7 +83,7 @@ ABC
 
 ## Vim（增强版 vi）
 
-Vim（vi IMproved）是 vi 的增强版本，提供了语法高亮、插件支持、多窗口等现代功能。Bram Moolenaar 于 1991 年开发了 Vim，基于 vi 的操作模型并大幅扩展了其功能。Vim 采用模态编辑（modal editing）设计：在普通模式下按键执行命令，在插入模式下输入文本，在可视模式下选择文本，在命令行模式下执行 Ex 命令。
+Vim（vi IMproved）是 vi 的增强版本，提供了语法高亮、插件支持、多窗口等现代功能。Bram Moolenaar 于 1988 年开始开发 Vim，1991 年首次公开发布，基于 vi 的操作模型并大幅扩展了其功能。Vim 采用模态编辑（modal editing）设计：在普通模式下按键执行命令，在插入模式下输入文本，在可视模式下选择文本，在命令行模式下执行 Ex 命令。
 
 FreeBSD Ports 中的 Vim 默认编译为 console 版本，如需 GUI 支持（gvim）需安装 Port **editors/vim** 的 GTK 或 Motif 变体；Vim 在处理超大文件时可能消耗大量内存。
 
