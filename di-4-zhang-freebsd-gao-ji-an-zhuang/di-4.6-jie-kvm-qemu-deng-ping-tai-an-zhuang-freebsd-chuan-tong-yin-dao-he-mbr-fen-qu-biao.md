@@ -132,7 +132,7 @@ memdisk 是 syslinux 提供的工具，用于将 ISO 镜像加载到内存中。
 ls # 显示磁盘。如果显示的磁盘为 (hd0,gptxxx)，说明该平台不支持本节方法。
 ls (hd0,msdos2)/
 linux16 (hd0,msdos2)/memdisk iso
-initrd (hd0,msdos2)/mfsbsd.iso
+initrd16 (hd0,msdos2)/mfsbsd.iso
 boot # 输入 boot 后按回车从 mfsBSD 继续启动
 ```
 
