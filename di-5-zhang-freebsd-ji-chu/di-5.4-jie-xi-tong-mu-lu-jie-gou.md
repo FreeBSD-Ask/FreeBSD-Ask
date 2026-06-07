@@ -63,7 +63,7 @@ FreeBSD 的目录结构设计遵循以下原则：
 │   ├── iso9660 ISO 9660 文件系统的设备节点，如光盘
 │   ├── mmcsd0 第一张 SD 存储卡
 │   ├── mmcsd0s1 第一张 SD 存储卡的第一个分区
-│   ├── nda0 第一块 NVMe 存储设备（通过 cam(3) 连接）
+│   ├── nda0 第一块 NVMe 存储设备（通过 cam(4) 连接）
 │   ├── nda0p1 第一块 NVMe 存储设备的第一个分区
 │   ├── null 空设备，丢弃所有写入的数据，读取时立即返回 EOF
 │   ├── nvd0 nda0 的兼容性别名（旧版 NVMe 直接驱动兼容名，参见 nda(4)）
@@ -94,7 +94,7 @@ FreeBSD 的目录结构设计遵循以下原则：
 │   ├── kyua Kyua 测试框架的全局配置目录（kyua(1)、kyua.conf(5)）
 │   ├── localtime 本地时区文件，参见 ctime(3)。在测试系统中，localtime 链接至 /usr/share/zoneinfo/Asia/Shanghai
 │   ├── login.conf 登录类功能数据库，参见 login.conf(5)
-│   ├── machine-id 系统的 UUID，供 D-Bus 使用；FreeBSD 原生使用 /etc/hostid（存储 kern.hostuuid），D-Bus 端口使用 /usr/local/etc/machine-id
+│   ├── machine-id 系统的 UUID，供 D-Bus 使用；FreeBSD 通过 hostid_save 脚本生成（与 /etc/hostid 相同 UUID，去除连字符），D-Bus 端口读取 /usr/local/etc/machine-id
 │   ├── mail Sendmail 相关文件，参见 sendmail(8)
 │   │   ├── aliases 用于投递系统邮件的地址
 │   │   └── mailer.conf mailwrapper(8) 配置文件
@@ -348,8 +348,8 @@ crw-r-----  1 root operator 0x7c May 10 09:56 ada0s1	# SATA 硬盘 MBR 分区的
 crw-r-----  1 root operator 0x6b May 10 09:49 da0	# SCSI 硬盘
 crw-r-----  1 root operator 0x60 May 10 09:49 nda0	# NVMe 硬盘
 crw-r-----  1 root operator 0x62 May 10 09:49 nda0p1	# GPT 分区的首个分区
-lrwxr-xr-x  1 root wheel       4 May 10 09:49 nvd0 -> nda0	# 软连接到 NVMe 硬盘
-lrwxr-xr-x  1 root wheel       6 May 10 09:49 nvd0p1 -> nda0p1	# 软连接到 NVMe 硬盘 GPT 分区的首个分区
+lrwxr-xr-x  1 root wheel       4 May 10 09:49 nvd0 -> nda0	# nda0 的兼容性别名（旧版 NVMe 直接驱动兼容名）
+lrwxr-xr-x  1 root wheel       6 May 10 09:49 nvd0p1 -> nda0p1	# nda0p1 的兼容性别名
 crw-r-----  1 root operator 0x68 May 10 09:49 cd0	# 光学介质
 ```
 
@@ -589,7 +589,7 @@ atrtc1: Warning: Couldn't map I/O.
 atrtc1: registered as a time-of-day clock, resolution 1.000000s
 # 传统的 AT RTC（Motorola MC146818A 兼容），提供 date/time 设置/获取。
 # Warning 表明无法映射 I/O 端口（可能 UEFI 模式下固件未分配 I/O 空间），但无实际影响。
-# 现代 UEFI 平台更推荐使用 efiRTC；已在 FreeBSD 15 中从 GENERIC 移除 AT RTC。
+# 现代 UEFI 平台更推荐使用 efiRTC；非 PNP ISA 的 AT RTC 已推迟至 FreeBSD 16.0 从 GENERIC 移除。
 
 Event timer "RTC" frequency 32768 Hz quality 0
 # RTC 的周期性中断频率 32768 Hz（2^15 Hz），quality 0（最低优先级，仅做最后备选）。
