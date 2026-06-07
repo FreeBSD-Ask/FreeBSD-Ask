@@ -4,6 +4,7 @@
 
 - 2026.6.7
   - 删除“14.5 科研和专业计算”中直接引用的维基百科等内容
+  - 删除“7.1 系统更新检测”，对于 KDE 无用，且不具有实际价值
 - 2026.6.5
   - 移除“4.5 基于 Apple M1 和 UTM 安装 FreeBSD”。
     - 参见 <https://reviews.freebsd.org/D55012> 和 [Bug 283646 - x11-drivers/xf86-video-scfb: startx fails: (EE) scfb(0): scfb_mmap: Invalid argument](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=283646)
