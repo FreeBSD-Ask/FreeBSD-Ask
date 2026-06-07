@@ -117,7 +117,7 @@ $ git clone --branch releng/15.0 --single-branch --depth 1 https://github.com/fr
 # cd /usr/src          # 切换回工作目录
 # etcupdate -p         # 合并 installworld 前必须更新的配置文件
 # make installworld    # 安装世界
-# etcupdate -B         # 合并更新
+# etcupdate -B         # 复用之前构建的对象树来合并更新
 # reboot               # 重启以完成更新流程
 ```
 
