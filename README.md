@@ -158,16 +158,16 @@ Microsoft Rewards 是微软必应搜索提供的积分计划。可通过 Microso
 <!-- CHINESE_CHAR_COUNT_END -->
 
 <!-- commit-progress-start -->
-**第 3 版编纂进度:**   （人工提交数: 1579 / 3533）
+**第 3 版编纂进度:**   （人工提交数: 1603 / 3533）
 
 ![进度徽章](.gitbook/assets/progress.svg)
 
-距离第 3 版还需提交: 1954 次
+距离第 3 版还需提交: 1930 次
 
 提交统计（历史）:
 
-- 人工提交: 8645
-- 机器人提交: 364
+- 人工提交: 8669
+- 机器人提交: 367
 <!-- commit-progress-end -->
 
 ## ⭐ 图
