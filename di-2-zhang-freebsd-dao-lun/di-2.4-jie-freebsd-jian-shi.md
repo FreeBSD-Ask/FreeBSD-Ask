@@ -92,7 +92,7 @@ EuroBSDCon 2001 于 2001 年 11 月 9 日至 11 日在英国布莱顿举行（Eu
 
 在 5.1 版本实验性支持 amd64 架构后，5.2-RELEASE 正式提供了对 amd64 的支持。amd64 成为首个被列为一级（Tier 1）架构的 64 位平台。
 
-- 2004 年 3 月首届 AsiaBSDCon 和 BSDCan
+- 2004 年 3 月首届 AsiaBSDCon；5 月首届 BSDCan
 
 在 EuroBSDCon 获得成功之后，首届 AsiaBSDCon 于 2004 年 3 月 13 日至 15 日在台湾“中央研究院”举办，紧随其后的是 BSDCan，于 5 月 13 日至 16 日在加拿大渥太华举行。随着 FreeBSD 社区的不断壮大，全球范围内对以 BSD 为主题的会议需求也随之增长。
 
