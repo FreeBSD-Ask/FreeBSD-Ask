@@ -209,7 +209,7 @@ FreeBSD-base {
     url: "pkg+https://pkg.FreeBSD.org/${ABI}/base_release_${VERSION_MINOR}",
     mirror_type: "srv",
     signature_type: "fingerprints",
-    fingerprints: "/usr/share/keys/pkg",
+    fingerprints: "/usr/share/keys/pkgbase-${VERSION_MAJOR}",
     enabled: yes
 }
 ```
@@ -217,6 +217,8 @@ FreeBSD-base {
 > **警告**
 >
 > 请检查 `FreeBSD-base.conf` 的内容，尤其是 **不应该** 在其中手动硬编码任何具体的版本（如 `base_release_3`）。
+>
+> 由于 FreeBSD 15.0 使用了新的签名密钥，从 14.x 升级到 15.0 时必须将 `fingerprints` 路径从 pkgbasify 默认生成的 `/usr/share/keys/pkg` 改为 `/usr/share/keys/pkgbase-${VERSION_MAJOR}`，并确保已安装 pkgbase-15 密钥（可通过 `pkg add -f https://pkg.freebsd.org/FreeBSD:15:$(uname -p)/base_release_0/FreeBSD-pkg-bootstrap-15.0.pkg` 安装）。
 
 > **技巧**
 >
