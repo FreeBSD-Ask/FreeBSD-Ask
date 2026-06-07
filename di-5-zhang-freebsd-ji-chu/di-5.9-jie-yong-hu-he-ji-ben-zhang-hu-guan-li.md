@@ -101,7 +101,7 @@ adduser(8) 是交互式的，会逐步引导创建新用户账户。如下所示
 示例：创建普通用户 `ykla`，并添加到 `video` 组：
 
 ```sh
-# adduser -g video -s sh -w yes
+# adduser -G video -s sh -w yes
 # Username: ykla
 ```
 
