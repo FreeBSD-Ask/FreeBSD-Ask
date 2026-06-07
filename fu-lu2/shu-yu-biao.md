@@ -91,7 +91,7 @@
 | SUID | 设置用户 ID | Set User ID，一种文件权限位，使执行该文件的用户临时获得文件属主的权限 |
 | SGID | 设置组 ID | Set Group ID，一种文件权限位，使执行该文件的用户临时获得文件属组的权限 |
 | 设备文件 | / | Device File，操作系统中代表硬件设备或虚拟设备的特殊文件 |
-| procfs | / | Process File System，进程文件系统，以文件系统形式呈现内核进程信息 |
+| procfs | / | Process File System，进程文件系统，以文件系统形式呈现内核进程信息（FreeBSD 默认不挂载，需手动 mount_procfs(8)） |
 | devfs | / | Device File System，设备文件系统，自动管理 **/dev** 目录下的设备节点 |
 | fdescfs | / | File Descriptor File System，文件描述符文件系统，提供对进程文件描述符的文件系统访问 |
 | 伪终端 | / | Pseudo-Terminal，在软件中模拟的终端设备，用于远程登录和窗口系统中的终端模拟 |
