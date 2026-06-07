@@ -295,9 +295,6 @@ wlans_bwi0="wlan0"
 │       └── sys/
 │           └── amd64/
 │               └── conf/              # 内核配置文件目录
-└── home/
-    └── ykla/
-        └── wifi-firmware-iwlwifi-kmod-20241017.1403000_2.pkg  # 英特尔无线网卡固件包
 ```
 
 编辑 **/boot/loader.conf** 文件添加以下配置，设置系统在启动时加载 `bwn` 驱动：
