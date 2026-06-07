@@ -787,7 +787,7 @@ atrtc0: registered as a time-of-day clock, resolution 1.000000s
 atrtc0: Can't map interrupt.
 atrtc0: non-PNP ISA device will be removed from GENERIC in FreeBSD 15.
 # atrtc(4) 在 ISA 总线侧的探测。两个 Warning 不影响系统运行——ISA I/O 和中断在 UEFI 平台上通常不可映射。
-# FreeBSD 15 已将非 PNP ISA 的 atrtc 从 GENERIC 内核配置中移除（ACPI 枚举的 atrtc 仍然存在，以 efirtc 和 ACPI 时钟替代）。
+# 非 PNP ISA 的 atrtc 已推迟至 FreeBSD 16.0 从 GENERIC 内核配置中移除（ACPI 枚举的 atrtc 仍然存在，以 efirtc 和 ACPI 时钟替代）。
 
 # ===== Intel Speed Shift (HWP) =====
 hwpstate_intel0: <Intel Speed Shift> on cpu0
