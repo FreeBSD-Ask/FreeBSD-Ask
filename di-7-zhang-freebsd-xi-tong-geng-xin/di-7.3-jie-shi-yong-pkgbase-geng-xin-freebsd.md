@@ -579,7 +579,11 @@ end
 
 ### 南京大学开源镜像站 NJU
 
-除了 USTC 镜像站外，南京大学也提供了 FreeBSD pkgbase 的镜像源，其地址如下。
+除了 USTC 镜像站外，南京大学也提供了 FreeBSD 的镜像源，其地址如下。
+
+> **注意**
+>
+> 以下镜像站是否同步了 pkgbase 仓库（`base_release_*` 子目录）未经确认，使用前请自行验证。
 
 ```ini
 https://mirrors.nju.edu.cn/freebsd-pkg/
@@ -587,7 +591,11 @@ https://mirrors.nju.edu.cn/freebsd-pkg/
 
 ### 网易开源镜像站 163
 
-网易开源镜像站同样提供了 FreeBSD pkgbase 的镜像服务，地址如下。
+网易开源镜像站同样提供了 FreeBSD 的镜像服务，地址如下。
+
+> **注意**
+>
+> 以下镜像站是否同步了 pkgbase 仓库（`base_release_*` 子目录）未经确认，使用前请自行验证。
 
 ```ini
 https://mirrors.163.com/freebsd-pkg/
