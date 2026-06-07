@@ -193,7 +193,7 @@ $ unrar x archive.rar /home/ykla/桌面/test/ # 解压到指定目录
 
 ## zstd
 
-zstd 是 Facebook 开发的快速压缩算法，兼顾压缩速度和压缩率，是现代系统首选的压缩格式。
+zstd 是 Meta（原 Facebook）开发的快速压缩算法，兼顾压缩速度和压缩率，是现代系统首选的压缩格式。
 
 zstd 是 FreeBSD 12+ 基本系统内置的压缩工具，Linux 发行版通常也预装 zstd；zstd 支持多种预设级别，从最快（`-1`）到极限压缩（`--ultra -22`）。参见：FreeBSD Project. Add support for zstd-compressed user and kernel core dumps.[EB/OL]. [2026-03-26]. <https://github.com/freebsd/freebsd-src/commit/6026dcd7ca888f3433f4df34ede69a77c1eb7701>。该修订记录了 zstd 压缩转储支持的实现细节。
 
