@@ -33,7 +33,7 @@ hw.ncpu: 16
 
 搜索英特尔处理器型号加 `ARK`，可跳转至英特尔官网查询线程数。
 
-- FreeBSD Forums. Easy way to get cpu features[EB/OL]. [2026-03-25]. <https://forums.freebsd.org/threads/easy-way-to-get-cpu-features.10553/>. 获取 CPU 线程数量的命令来自此处。
+- FreeBSD Project. SMP -- symmetric multiprocessing kernel subsystem[EB/OL]. [2026-03-25]. <https://man.freebsd.org/cgi/man.cgi?query=SMP&sektion=4>. SMP 子系统中 kern.smp.cpus 与 hw.ncpu 等 sysctl 变量的文档。
 
 ## 将 /tmp 设置为内存文件系统
 
