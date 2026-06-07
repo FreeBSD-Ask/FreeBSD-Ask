@@ -106,7 +106,7 @@ $ xz test.pdf
 
 ### `unxz` 解压
 
-unxz 实际上是 xz 的符号链接，使用 `xz -d` 或直接 `unxz` 效果相同。
+unxz 实际上是 xz 的硬链接，使用 `xz -d` 或直接 `unxz` 效果相同。
 
 ```sh
 $ unxz -k test.tar.xz  # 解压并保留原文件，参数 -k 即 keep（保留），下同
