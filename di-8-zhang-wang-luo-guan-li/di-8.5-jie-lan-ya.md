@@ -6,18 +6,36 @@
 
 ## 加载蓝牙支持
 
-蓝牙功能的实现依赖多个系统服务协同工作。启用并启动相关服务：
+FreeBSD 蓝牙协议栈基于 Netgraph 框架实现。USB 蓝牙适配器需加载 `ng_ubt` 内核模块。若需开机自动加载，可将以下配置写入 **/boot/loader.conf**：
+
+```ini
+ng_ubt_load="YES"
+```
+
+蓝牙功能的实现依赖多个系统服务协同工作。需在 **/etc/rc.conf** 中添加以下配置（或使用 `service` 命令启用）：
+
+```ini
+hcsecd_enable="YES"
+sdpd_enable="YES"
+bthidd_enable="YES"
+```
+
+也可通过以下命令启用并启动相关服务：
 
 ```sh
 # service hcsecd enable  # 启用 hcsecd 服务
+# service sdpd enable    # 启用 sdpd 服务
 # service bthidd enable  # 启用 bthidd 服务
 # service hcsecd start   # 立即启动 hcsecd 服务
+# service sdpd start     # 立即启动 sdpd 服务
 # service bthidd start   # 立即启动 bthidd 服务
 ```
 
 相关组件说明：
 
+- `ng_ubt`：Netgraph USB 蓝牙驱动，为 USB 蓝牙适配器提供传输层支持，是蓝牙协议栈的基础驱动。
 - `hcsecd`：管理蓝牙设备的链路密钥和 PIN 码，负责蓝牙设备的安全认证。
+- `sdpd`：蓝牙服务发现协议（Service Discovery Protocol）守护进程，负责发现和通告蓝牙服务。
 - `bthidd`：支持 Bluetooth HID（Human Interface Device）设备，如蓝牙鼠标、键盘等。
 - `hccontrol`：通过 hccontrol(8) 可控制蓝牙 HCI 底层接口，包括查询设备状态、扫描附近设备、管理连接等操作，是蓝牙调试的核心工具。
 
@@ -60,6 +78,8 @@ Set it up? [yes]:
 ```sh
 # iwmbtfw -d ugen1.5 -f /usr/local/share/iwmbt-firmware/
 ```
+
+> **注意**：FreeBSD 蓝牙协议栈初始化脚本（`/etc/rc.d/bluetooth`）可能在固件引导加载程序（bootloader）阶段导致设备锁定。因此，必须在启动蓝牙协议栈之前先运行 `iwmbtfw` 加载固件，否则需执行完整的断电/重启或挂起/恢复周期才能解锁设备。
 
 ## 故障排除与未竟事宜
 
