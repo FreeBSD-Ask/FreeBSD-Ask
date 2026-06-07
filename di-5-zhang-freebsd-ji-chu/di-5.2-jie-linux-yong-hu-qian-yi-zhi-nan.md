@@ -41,7 +41,7 @@ FreeBSD 版本分支分为三个主要系列：
 - **STABLE**：固定分支，对应 stable/15 等分支；
 - **RELEASE**：正式发布版本，对应 releng/15.0 等分支。
 
-新特性首先提交到 CURRENT，根据需要回溯到 STABLE，再回溯到点版本的 RELEASE。RELEASE 大版本由 CURRENT 经由短期的 STABLE 发展而来。
+新特性首先提交到 CURRENT（main 分支），经测试后 MFC 到 STABLE 分支，再进入点版本 RELEASE。大版本（dot-zero 版本）直接从 main 分支切出，然后创建对应的 stable/ 分支，点版本则从 stable/ 分支发布。
 
 pkgbase 直接由 freebsd-src 构建：
 
