@@ -152,7 +152,7 @@ sysrc mihomo_geoip="https://github.com/MetaCubeX/meta-rules-dat/releases/downloa
 sysrc mihomo_extra_flags="-m" # 可选，但建议使用
 ```
 
-- `-m`：启用 geodata 模式，使 Mihomo 使用 geosite.dat 和 geoip.dat 文件匹配规则，而非默认的 site.dat 和 ip.dat。
+- `-m`：启用 geodata 模式，使 Mihomo 使用 geoip.dat 和 geosite.dat 文件（DAT 格式）匹配规则，而非默认的 MMDB 格式（Country.mmdb）。
 
 - 指定运行 Mihomo 服务的用户身份：
 
