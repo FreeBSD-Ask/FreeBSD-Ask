@@ -32,7 +32,7 @@ FreeBSD 通过以下内核模块实现对 Hyper-V 的集成支持：
 
 本节基于以下软硬件环境测试与演示，实验结果受环境影响。
 
-- Windows 11 25H2 专业版
+- Windows 11 24H2 专业版
 - FreeBSD 15.0-RELEASE
 - Hyper-V 版本：10.0.26100.7019
 - 使用第二代 Hyper-V 虚拟机
