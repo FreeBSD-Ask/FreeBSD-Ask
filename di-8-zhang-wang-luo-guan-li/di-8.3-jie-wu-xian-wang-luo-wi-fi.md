@@ -224,7 +224,7 @@ psk="WIFI 密码"
 
 ```sh
 # ifconfig wlan0 create wlandev iwlwifi0
-# /etc/rc.d/netif start wlan0
+# service netif start wlan0
 ```
 
 第一条命令创建 `wlan0` 接口并绑定到物理无线设备 `iwlwifi0`，第二条命令启动 `wlan0` 接口。
