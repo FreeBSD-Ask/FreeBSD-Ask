@@ -437,7 +437,7 @@ CheriBSD 基于 FreeBSD 实现了 Capability（能力式指针），提供内存
 
 [FuguIta 官网](https://fuguita.org/)
 
-FuguIta 是一种基于 OpenBSD 开发的 Live 系统，同时支持部分型号的树莓派（Raspberry Pi）。
+FuguIta 是一种基于 OpenBSD 开发的 Live 系统，同时支持部分型号的树莓派（树莓派 3/4/5, arm64 架构）。
 
 ## 课后习题
 
