@@ -36,13 +36,13 @@ Mihomo 的文件结构如下：
     └── rc.conf # 系统服务配置文件
 ```
 
-Mihomo 也可通过 FreeBSD 的 Linux 二进制兼容层运行，其网络流量管控能力在兼容层中同样可用。
+Mihomo 也可通过 FreeBSD 的 Linux 二进制兼容层运行 Linux 版本，但建议优先使用原生 FreeBSD 版本（net/mihomo），兼容层仅作为备选方案。
 
 ## RC 脚本
 
 已向 Ports 维护者提交了合并请求（[Bug 291295 - net/mihomo: Add rc.conf and some Post-installation](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=291295)），旨在为 Mihomo 添加系统服务管理支持，截至撰稿时尚未获得回应。官方集成完成前，可使用下文提供的自定义 RC 脚本实现服务化管理。
 
-### RC 脚本
+### 自定义 RC 脚本
 
 为便于管理 Mihomo 服务，可使用以下脚本。将以下脚本保存为 mihomo，存放至 **/usr/local/etc/rc.d/**，随后使用 root 账户赋予可执行权限：`chmod +x /usr/local/etc/rc.d/mihomo`。
 
