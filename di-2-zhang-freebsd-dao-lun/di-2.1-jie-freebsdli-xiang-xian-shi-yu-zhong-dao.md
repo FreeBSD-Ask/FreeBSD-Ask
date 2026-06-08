@@ -12,7 +12,7 @@
 - The New Stack. Apple’s Open Source Roots: The BSD Heritage Behind macOS and iOS[EB/OL]. [2026-03-26]. <https://thenewstack.io/apples-open-source-roots-the-bsd-heritage-behind-macos-and-ios/>. Apple 的操作系统如 macOS、iOS 等大量复用了 BSD（不限于 FreeBSD）的技术栈。BSD 堪称 macOS 的开源基石。
 - Sony. FreeBSD Kernel[EB/OL]. [2026-03-26]. <https://www.playstation.com/en-us/oss/ps4/freebsd-kernel/>. 索尼（Sony）的游戏机 PlayStation 4（PS4）和 PlayStation 5（PS5）使用的操作系统基于 FreeBSD。PlayStation 3（PS3）的 CellOS 和 PlayStation Vita（PSV）的操作系统也以 FreeBSD 和 NetBSD 为基础构建。
 - FreeBSD Foundation. Netflix Case Study[EB/OL]. [2026-03-26]. <https://freebsdfoundation.org/netflix-case-study/>. 奈飞（Netflix）几乎所有网络活动（内容缓存/CDN）均基于 FreeBSD 设备运行。
-- QNX. Search Results[EB/OL]. [2026-03-26]. <https://www.qnx.com/developers/docs/8.0/search.html?searchQuery=freebsd>. QNX 操作系统。QNX 是一种微内核实时操作系统（RTOS），其内核为自主研发，并非基于 FreeBSD。QNX 以前是黑莓手机的操作系统。QNX 现在被广泛应用为汽车安全操作系统——在主流座舱架构中，QNX Hypervisor 负责安全关键域（如仪表盘、ADAS），同时将 Android Automotive 作为客户操作系统在虚拟机中运行，以实现信息娱乐功能（参见：BlackBerry QNX. QNX Hypervisor 8.0[EB/OL]. [2026-04-17]. <https://blackberry.qnx.com/en/products/foundation-software/qnx-hypervisor>）。国内新能源车辆广泛采用了 QNX 操作系统，QNX 在汽车安全关键系统中占据重要市场份额。QNX 在网络子系统和部分用户空间组件中复用了 FreeBSD 的代码。
+- QNX. Search Results[EB/OL]. [2026-03-26]. <https://www.qnx.com/developers/docs/8.0/search.html?searchQuery=freebsd>. QNX 操作系统。QNX 是一种微内核实时操作系统（RTOS），其内核为自主研发，并非基于 FreeBSD。QNX 以前是黑莓手机的操作系统。QNX 现在被广泛应用为汽车安全操作系统——在主流座舱架构中，QNX Hypervisor 负责安全关键域（如仪表盘、ADAS），同时将 Android Automotive 作为客户操作系统在虚拟机中运行，以实现信息娱乐功能（参见：BlackBerry QNX. QNX Hypervisor 8.0[EB/OL]. [2026-04-17]. <https://blackberry.qnx.com/en/products/foundation-software/qnx-hypervisor>）。国内新能源车辆广泛采用了 QNX 操作系统，QNX 在汽车安全关键系统中占据重要市场份额。QNX 在其新一代网络栈 io-sock（QNX 8.0 起）及部分用户空间组件中复用了 FreeBSD 的代码（旧版网络栈 io-pkt 复用的是 NetBSD 代码）。
 - Dell. PowerScale OneFS：了解基于源的路由[EB/OL]. (2024-05-28)[2026-03-26]. <https://www.dell.com/support/kbdoc/zh-cn/000020056/isilon-onefs-understanding-source-based-routing-sbr-in-isilon?lang=zh>. Dell EMC Isilon，戴尔的 Isilon（面向企业的 NAS 存储设备）设备使用的操作系统 OneFS 基于 FreeBSD 11（OneFS 8.2 及以上版本）。
 - Beckhoff. TwinCAT/BSD: operating system for Industrial PCs[EB/OL]. [2026-03-26]. <https://www.beckhoff.com/en-en/products/ipc/software-and-tools/twincat-bsd/>. Beckhoff 倍福自动化控制系统的操作系统 TwinCAT/BSD，将 TwinCAT 实时核与 FreeBSD 结合，应用于工业 PC 平台。
 - OpenHarmony. kernel_liteos_a[EB/OL]. [2026-03-26]. <https://gitee.com/openharmony/kernel_liteos_a/tree/master>. OpenHarmony LiteOS 内核引入了 FreeBSD 代码用于驱动程序等。
@@ -65,7 +65,7 @@ FreeBSD 不仅在生命周期内保持稳定，大版本更新也具有连贯性
 - Jail 不需要额外安装和维护底层虚拟化栈，也无需为每个实例启动完整的操作系统内核和用户空间，节省系统资源；bhyve 虚拟化同样内置于基本系统，但作为虚拟机管理程序，每个实例需运行完整的客户操作系统。
 - 传统的 BSD init 引导，回归简洁，回归纯文本的可见性。
 - DTrace 框架与 GEOM 存储框架。
-- Linux 二进制兼容层可运行 Linux 软件，性能开销通常在系统调用密集型工作负载下低于 2-3%，计算密集型任务则接近原生性能。
+- Linux 二进制兼容层可运行 Linux 软件，系统调用密集型工作负载下存在少量性能开销，计算密集型任务则接近原生性能。
 - FreeBSD 的驱动以内核模块形式存在，可动态加载和卸载，便于按需管理硬件。
 - FreeBSD 秉持人人自由开发的理念，可以直接在 GitHub 上[提交代码](https://github.com/freebsd/freebsd-src/pulls)，或者注册账号在 <https://reviews.freebsd.org/> 提交大规模变更。
 - FreeBSD 的代码风格是 BSD KNF（Kernel Normal Form），基于 CSRG 的 KNF 规范，其大括号布局是 K&R 风格的一种变体（函数左大括号独占一行，控制语句左大括号与语句同行），与 Kernighan & Ritchie 经典著作《The C Programming Language》（中译本：Kernighan B W, Ritchie D M. C 程序设计语言[M]. 徐宝文，李志，译. 第 2 版. 北京：机械工业出版社，2019. ISBN: 978-7-111-61794-5.）中使用的 K&R 风格一致。
