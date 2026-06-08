@@ -91,7 +91,7 @@
 | SUID | 设置用户 ID | Set User ID，一种文件权限位，使执行该文件的用户临时获得文件属主的权限 |
 | SGID | 设置组 ID | Set Group ID，一种文件权限位，使执行该文件的用户临时获得文件属组的权限 |
 | 设备文件 | / | Device File，操作系统中代表硬件设备或虚拟设备的特殊文件 |
-| procfs | / | Process File System，进程文件系统，以文件系统形式呈现内核进程信息 |
+| procfs | / | Process File System，进程文件系统，以文件系统形式呈现内核进程信息（FreeBSD 默认不挂载，需手动 mount_procfs(8)） |
 | devfs | / | Device File System，设备文件系统，自动管理 **/dev** 目录下的设备节点 |
 | fdescfs | / | File Descriptor File System，文件描述符文件系统，提供对进程文件描述符的文件系统访问 |
 | 伪终端 | / | Pseudo-Terminal，在软件中模拟的终端设备，用于远程登录和窗口系统中的终端模拟 |
@@ -104,7 +104,7 @@
 | 审计 | / | Audit，对系统安全相关事件进行记录、检查和分析的过程 |
 | inetd | 互联网超级服务器 | Internet Super Server，统一管理多个网络服务的守护进程 |
 | IPFW | / | ipfirewall，FreeBSD 内置的防火墙系统，采用首次匹配规则 |
-| IPF | / | IPFilter，一种防火墙软件，在 FreeBSD 中曾作为可选防火墙组件 |
+| IPF | / | IPFilter，一种防火墙软件，在 FreeBSD 中作为可选防火墙组件 |
 | ALTQ | 交替队列 | Alternate Queuing，由 Kenjiro Cho 开发的流量整形框架，于 1997 年 3 月首次发布，后纳入 KAME 项目，与 PF 防火墙集成，提供队列管理和流量整形功能 |
 | 二进制包 | / | Binary Package，预编译的软件包，可直接安装而无需从源代码构建 |
 | 镜像站 | / | Mirror Site，同步复制官方软件仓库或发行版文件的服务器，提供更快的本地下载速度 |

@@ -61,7 +61,7 @@ macOS 系列操作系统可以看作独立的、类 BSD 操作系统分支，与
 
 | 组件 | 来源 |
 | ---- | ---- |
-| XNU 内核 | 基于 Mach 微内核（CMU）、NeXTStep/OpenStep 架构，整合 BSD 子系统（最初源自 FreeBSD 4.x/5.x，苹果持续从较新 FreeBSD 版本同步代码） |
+| XNU 内核 | 基于 Mach 微内核（CMU）、NeXTStep/OpenStep 架构，整合 BSD 子系统（最初源自 4.3BSD，经由 NeXTSTEP 整合，苹果持续从较新 FreeBSD 版本同步代码） |
 | 网络栈 | BSD/FreeBSD TCP/IP 协议栈为核心（IPv4/IPv6），包含 IOKIT 驱动接口；NKE（Network Kernel Extensions，网络内核扩展） |
 | 虚拟文件系统 | 基于 BSD VFS，支持 HFS+、APFS、UFS 等文件系统 |
 | 用户空间工具 | BSD 用户工具（如 ls、cp、grep 等），经过苹果改造和增强 |
@@ -101,7 +101,7 @@ macOS 系列操作系统可以看作独立的、类 BSD 操作系统分支，与
 | RAID | 不支持 | RAID-Z / RAID-Z2 / RAID-Z3 |
 | 空间共享 | 容器内卷共享 | 存储池内数据集共享 |
 | 最大文件大小 | 8 EiB | 16 EiB |
-| 最大池/容器大小 | 8 EiB | 256 ZiB |
+| 最大池/容器大小 | 8 EiB | 2^128 字节（理论寻址上限） |
 | 大小写敏感性 | macOS 默认不区分 | 默认区分（可通过属性调节） |
 
 macOS 的 APFS 默认不区分大小写（Case-Insensitive），而 FreeBSD 的 ZFS 和 UFS 默认均区分大小写。

@@ -6,13 +6,13 @@
 
 ## zip
 
-zip 格式是 PKZIP 归档格式的实现，由 Info-ZIP 项目维护。zip 是一款压缩和文件打包工具，兼容 PKZIP（Phil Katz 的 ZIP for MSDOS 系统），zip 3.0 版本兼容 PKZIP 2.04 并支持 Zip64 扩展（允许归档和文件超过 2 GB 限制）。zip 使用 deflation 作为默认压缩方法，也可存储不压缩的文件，并自动为每个文件选择更优的方式。
+zip 格式是 PKZIP 归档格式的实现，其规范由 PKWARE 维护（APPNOTE.TXT），Info-ZIP 项目提供了开源的 zip/unzip 工具实现。zip 是一款压缩和文件打包工具，兼容 PKZIP（Phil Katz 的 ZIP for MSDOS 系统），zip 3.0 版本兼容 PKZIP 2.04 并支持 Zip64 扩展（允许归档和文件超过 2 GB 限制）。zip 使用 deflation 作为默认压缩方法，也可存储不压缩的文件，并自动为每个文件选择更优的方式。
 
 zip 格式是 Windows 上最常用的格式，但对 Unicode 文件名支持有限（取决于 zip 工具版本和压缩设置）。在跨平台交换文件时建议使用 tar.xz 或 tar.zst 格式。
 
 > **技巧**
 >
-> 在使用 zip 压缩中文或非英文字符时出现乱码是正常现象。由于编码方式不同，zip 3.0 在支持 Unicode 的平台上编译时，会额外存储路径的 UTF-8 翻译，以改善跨平台文件名兼容性。一般国产操作系统（如 UOS、Ubuntu Kylin）通过打补丁解决了此问题。该补丁未提交至上游的具体原因尚待确认。
+> 在使用 zip 压缩中文或非英文字符时出现乱码是正常现象。由于编码方式不同，zip 3.0 在支持 Unicode 的平台上编译时，会额外存储路径的 UTF-8 翻译，以改善跨平台文件名兼容性。解压时可使用 `unzip -O` 选项指定文件名编码（如 `unzip -O GBK`），或使用 convmv 批量转换已解压的乱码文件名。
 
 ### 安装 zip
 
@@ -51,8 +51,6 @@ unzip 的 `-d` 选项后面跟目录名，可以有空格（如 `-d /path`），
 基本系统自带 `tar`，无需安装。
 
 tar 是“tape archive”（磁带归档）的缩写，最初用于在磁带上进行文件存储。FreeBSD 的 tar 实现基于 libarchive 库（即 bsdtar），替代了早期版本中的 GNU tar。该实现可从 tar、pax、cpio、zip、jar、ar、xar、rar（包括 RAR2、RAR3 及大部分 RAR5 格式，仅限读取，受专有格式限制）、rpm、7-zip 及 ISO 9660 光盘镜像中提取文件，并可创建 tar、pax、cpio、ar、zip、7-zip 和 shar 格式的归档。
-
-bsdtar 的 `-l` 选项遵循 ISO/IEC 9945-1:1996（“POSIX.1”）的定义（检查链接）。
 
 GNU tar 支持自动识别多种压缩格式；bsdtar 在解压时同样会自动检测压缩格式（无需手动指定 `-z`、`-j`、`-J` 等选项），并支持从 tar、pax、cpio、zip 等多种格式中提取，GNU tar 仅支持 tar 相关格式。
 
@@ -193,9 +191,9 @@ $ unrar x archive.rar /home/ykla/桌面/test/ # 解压到指定目录
 
 ## zstd
 
-zstd 是 Facebook 开发的快速压缩算法，兼顾压缩速度和压缩率，是现代系统首选的压缩格式。
+zstd 是 Meta（原 Facebook）开发的快速压缩算法，兼顾压缩速度和压缩率，是现代系统首选的压缩格式。
 
-zstd 是 FreeBSD 12+ 基本系统内置的压缩工具，Linux 发行版通常也预装 zstd；zstd 支持多种预设级别，从最快（`-1`）到极限压缩（`--ultra -22`）。参见：FreeBSD Project. Add support for zstd-compressed user and kernel core dumps.[EB/OL]. [2026-03-26]. <https://github.com/freebsd/freebsd-src/commit/6026dcd7ca888f3433f4df34ede69a77c1eb7701>。该修订记录了 zstd 压缩转储支持的实现细节。
+zstd 也是基本系统内置的压缩工具，zstd 支持多种预设级别，从最快（`-1`）到极限压缩（`--ultra -22`）。
 
 ### zstd 压缩
 

@@ -6,7 +6,7 @@
 
 模态编辑器的典型代表是 vi/Vim，其核心特征是将编辑操作划分为多个模式（如普通模式、插入模式、命令模式等），在不同模式下按键的含义不同，例如在普通模式下按 `i` 进入插入模式，而在插入模式下按 `i` 则输入字符 `i`。
 
-无模态编辑器的典型代表是 ee 和 Emacs，其按键操作在所有状态下含义一致，通常直接输入字符即插入文本。模态编辑的设计源于 1976 年 Bill Joy 开发的 vi 编辑器，其设计动机是通过模式切换，在 ADM-3A 终端的有限键盘上实现高效编辑，无需同时按下控制键即可执行编辑命令。
+无模态编辑器的典型代表是 ee 和 Emacs，其按键操作在所有状态下含义一致，通常直接输入字符即插入文本。模态编辑的设计源于 Bill Joy 于 1976 年开始开发的 ex 编辑器中的 visual mode（可视模式，1977—1978 年间逐步加入），该模式在 1979 年 ex 2.0 版本中独立为 vi 命令。其设计动机是通过模式切换，在 ADM-3A 终端的有限键盘上实现高效编辑，无需同时按下控制键即可执行编辑命令。
 
 本节依次介绍 FreeBSD 中常见的几款文本编辑器，涵盖内置基础工具、经典编辑器至现代增强版本与图形化选择：
 
@@ -47,7 +47,7 @@ FreeBSD 还内置了一款编辑器 `vi`。FreeBSD 的 `vi` 实际上是 nex/nvi
 
 与大多数 Linux 发行版将 `vi` 链接到 `vim` 不同，BSD 系统提供的是原生 `nvi`，其用法较为复杂但功能强大。
 
-`ex`、`vi`、`view` 是同一程序的不同接口，可在编辑会话中切换。`view` 等同于 `vi -R`（只读模式）。nvi 实现了 POSIX 1003.2 标准中的 vi 编辑器规范。
+`ex`、`vi`、`view` 是同一程序的不同接口，可在编辑会话中切换。`view` 等同于 `vi -R`（只读模式）。nvi 接近 POSIX 1003.2 标准中的 vi 编辑器规范。
 
 ### vi 基本使用方法
 
@@ -83,7 +83,7 @@ ABC
 
 ## Vim（增强版 vi）
 
-Vim（vi IMproved）是 vi 的增强版本，提供了语法高亮、插件支持、多窗口等现代功能。Bram Moolenaar 于 1991 年开发了 Vim，基于 vi 的操作模型并大幅扩展了其功能。Vim 采用模态编辑（modal editing）设计：在普通模式下按键执行命令，在插入模式下输入文本，在可视模式下选择文本，在命令行模式下执行 Ex 命令。
+Vim（vi IMproved）是 vi 的增强版本，提供了语法高亮、插件支持、多窗口等现代功能。Bram Moolenaar 于 1988 年开始开发 Vim，1991 年首次公开发布，基于 vi 的操作模型并大幅扩展了其功能。Vim 采用模态编辑（modal editing）设计：在普通模式下按键执行命令，在插入模式下输入文本，在可视模式下选择文本，在命令行模式下执行 Ex 命令。
 
 FreeBSD Ports 中的 Vim 默认编译为 console 版本，如需 GUI 支持（gvim）需安装 Port **editors/vim** 的 GTK 或 Motif 变体；Vim 在处理超大文件时可能消耗大量内存。
 
@@ -124,7 +124,7 @@ set number              " 或 set nu
 
 ## NeoVim（现代 vi 改进版）
 
-NeoVim 是 Vim 的重构分支，更加模块化，支持 Lua 脚本，插件生态更活跃，性能更好。Thiago de Arruda 于 2014 年发起了 NeoVim，旨在解决 Vim 的技术债务并引入现代扩展机制。其核心改进包括：内置 LSP（Language Server Protocol）支持、基于 Lua 的配置与插件系统、异步 I/O 架构，以及通过 msgpack-rpc 提供的 GUI/编辑器集成接口。
+NeoVim 是 Vim 的重构分支，更加模块化，支持 Lua 脚本，插件生态更活跃，性能更好。Thiago de Arruda 于 2014 年发起了 NeoVim，旨在解决 Vim 的技术债务并引入现代扩展机制。其核心改进包括：内置 LSP 客户端（Language Server Protocol，需配合第三方语言服务器使用）、基于 Lua 的配置与插件系统、异步 I/O 架构，以及通过 msgpack-rpc 提供的 GUI/编辑器集成接口。
 
 ### 安装 NeoVim
 
@@ -185,7 +185,7 @@ NeoVim 和 Vim 共享大部分命令，上述 `:q :q! :wq :wq! :/` 等在 LazyVi
 
 ## Emacs 编辑器
 
-Emacs 是历史悠久、功能极其强大的文本编辑器，以“可扩展性”闻名（几乎所有功能都可以通过 Emacs Lisp 扩展）。最初的 Emacs 是一组 TECO 宏，由 Guy Steele 在 1976 年于 MIT 发起项目，Richard Stallman 完成并扩展。GNU Emacs 是 GNU 项目的核心组件之一。Emacs 的设计哲学是“编辑器即操作系统”——通过 Emacs Lisp 语言，Emacs 提供了文件管理器、邮件客户端、终端仿真器、调试器前端等超越文本编辑的功能。
+Emacs 是历史悠久、功能极其强大的文本编辑器，以“可扩展性”闻名（几乎所有功能都可以通过 Emacs Lisp 扩展）。最初的 Emacs 是一组 TECO 宏，由 Richard Stallman 于 1976 年在 MIT 编写。Guy L. Steele Jr. 随后发起了统一各 TECO 宏包的项目，由 Stallman 完成整合与扩展工作。GNU Emacs 是 GNU 项目的核心组件之一。Emacs 的设计哲学是“编辑器即操作系统”——通过 Emacs Lisp 语言，Emacs 提供了文件管理器、邮件客户端、终端仿真器、调试器前端等超越文本编辑的功能。
 
 ### 安装 Emacs
 

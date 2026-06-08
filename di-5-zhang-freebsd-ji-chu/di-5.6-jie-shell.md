@@ -33,7 +33,7 @@ POSIX shell 规范的核心要求包括：
 - **条件与循环**：支持 `if`、`while`、`for`、`case` 等控制结构。
 - **内置命令**：必须实现 `cd`、`echo`、`exit`、`export`、`read`、`return`、`set`、`shift`、`trap`、`unset` 等内置命令。
 
-FreeBSD 系统默认采用的 shell 是 sh。FreeBSD 的 **/bin/sh** 并非 Stephen R. Bourne 在贝尔实验室为 UNIX V7 编写的原始 Bourne shell，而是基于 Kenneth Almquist 于 1989 年发布的 Almquist shell（ash），后者旨在作为 Bourne shell 更紧凑、更高效的替代品。NetBSD 最早将 ash 引入 BSD 世界作为 /bin/sh，FreeBSD 随后从 NetBSD 导入了 ash 实现，在功能上基本符合 POSIX.1-2024 标准中关于 shell 的规范要求。
+FreeBSD 系统默认采用的 shell 是 sh。FreeBSD 的 **/bin/sh** 并非 Stephen R. Bourne 在贝尔实验室为 UNIX V7 编写的原始 Bourne shell，而是基于 Kenneth Almquist 于 1989 年发布的 Almquist shell（ash），后者旨在作为 Bourne shell 更紧凑、更高效的替代品。4.3BSD-Reno/Net/2 时期（1990—1991 年）将 ash 引入 BSD 世界，NetBSD 随后将其作为默认 /bin/sh，FreeBSD 又从 NetBSD 导入了 ash 实现，在功能上基本符合 POSIX.1-2024 标准中关于 shell 的规范要求。
 
 Linux 中常见的 shell 是 bash（Bourne Again shell，是对“Born Again”即“重生”的双关，意为“重生的 Bourne shell”）。而 macOS 中的默认 shell 通常是 zsh（Z shell）。
 
@@ -122,7 +122,7 @@ PING 163.com (59.111.160.244): 56 data bytes
 round-trip min/avg/max/stddev = 27.580/27.626/27.672/0.046 ms
 ```
 
-FreeBSD 的 `ping` 合并了原 `ping6` 的功能，通过 `-4`/`-6` 选项区分协议版本（Google Summer of Code 2019 项目）。Linux 支持 `-O` 报告未收到回复；FreeBSD 的 `-O` 含义不同（仅用于 IPv6 的 ICMPv6 Node Information supported query types 查询），不支持报告未收到回复的功能。FreeBSD 特有 `ping -y`（ICMPv6 Node Information DNS Name 查询）和 `ping -k`（Node Information Node Addresses 查询）。
+FreeBSD 的 `ping` 合并了原 `ping6` 的功能，通过 `-4`/`-6` 选项区分协议版本（Google Summer of Code 2019 项目）。Linux 支持 `-O` 报告未收到回复；FreeBSD 的 `-O` 含义不同（仅用于 IPv6 的 ICMPv6 Node Information supported query types 查询），不支持报告未收到回复的功能。`ping -y`（ICMPv6 Node Information DNS Name 查询）和 `ping -k`（Node Information Node Addresses 查询）源自 KAME 项目的 ICMPv6 Node Information 实现。
 
 `ping` 使用 ICMP 协议的 ECHO_REQUEST 数据报来触发主机的 ECHO_RESPONSE。IPv4 目标使用 ICMP，IPv6 目标使用 ICMPv6（RFC 4443）。默认数据大小为 56 字节，加上 8 字节 ICMP 头共 64 字节。如果数据空间不小于 8 字节，前 8 字节用于时间戳以计算往返时间。
 

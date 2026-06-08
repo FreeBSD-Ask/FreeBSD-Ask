@@ -262,7 +262,7 @@ Windows 直接读取 RTC 的值，并视为本地时间（Local Time，地方时
 
 例如，设 RTC 时间为 2025 年 6 月 6 日中午 12:00（UTC+8）。Windows 下显示为 2025 年 6 月 6 日中午 12:00（UTC+8）；UNIX 将 RTC 中的 12:00 视为 UTC，加上 UTC+8 偏移量后得 12+8=20，因此 UNIX 下显示为 2025 年 6 月 6 日晚上 20:00。由于 UNIX 将 RTC 视为 UTC 而非本地时间，其显示时间比 Windows 快 8 小时。
 
-对现代计算机网络而言，时间准确性至关重要，以简单实验即可验证：将时间调慢 5 分钟，打开浏览器，即可发现绝大部分网站无法访问（HTTPS）。
+对现代计算机网络而言，时间准确性至关重要：系统时间偏差可能导致 HTTPS 证书验证失败（TLS 证书包含有效期字段，客户端将系统时间与证书有效期比对，时钟偏移可导致握手失败），以简单实验即可验证——将系统时间调慢至证书有效期之外，打开浏览器，即可发现绝大部分网站无法访问。
 
 计算机中的时区由 IANA 时区数据库规范，历史悠久。
 
@@ -270,7 +270,7 @@ Windows 直接读取 RTC 的值，并视为本地时间（Local Time，地方时
 
 从实际地理时区看，新疆属于东六区（虽全国统一使用北京时间）。北京地区如果在北京时间五点日出，新疆则要到北京时间七点方见日出。
 
-在时区数据库 2025b 中，`Asia/Harbin`、`Asia/Chongqing`、`Asia/Shanghai` 均等同于北京时间。`Asia/Urumqi` 和 `Asia/Kashgar` 则均为 `UTC+6`（东六区时间）。
+在时区数据库 2025b 中，`Asia/Harbin`、`Asia/Chongqing`、`Asia/Shanghai` 均等同于北京时间。`Asia/Urumqi` 在 IANA 时区数据库中解析为 UTC+6（新疆时间），`Asia/Kashgar` 为指向 `Asia/Urumqi` 的向后兼容链接，同样解析为 UTC+6。
 
 在 FreeBSD 中，北京时间同样为 `Asia/Shanghai`（东八区）。部分国产操作系统自行定义 `Asia/Beijing` 时区，此举不符合国际标准与规范，可能造成严重后果——例如导致时间回退至 UTC。
 
@@ -280,7 +280,7 @@ Windows 直接读取 RTC 的值，并视为本地时间（Local Time，地方时
 
 > **技巧**
 >
-> 中国也曾实行过夏令时（在夏季将时钟调快一个小时，因夏季日出较早）。
+> 中国也曾实行过夏令时（1986—1991 年实行了 6 个夏天，1992 年正式暂停；在夏季将时钟调快一个小时，因夏季日出较早）。
 
 > **思考题**
 >
@@ -295,8 +295,8 @@ Windows 直接读取 RTC 的值，并视为本地时间（Local Time，地方时
 - 微软. Why does Windows keep your BIOS clock on local time?[EB/OL]. [2026-04-18]. <https://devblogs.microsoft.com/oldnewthing/20040902-00/?p=37983>. Windows 默认将硬件时钟（RTC）视为本地时间而非 UTC 的历史原因。
 - 中国科学院紫金山天文台. 历书基本术语简介[EB/OL]. [2026-03-26]. <http://www.pmo.cas.cn/xwdt2019/kpdt2019/202203/t20220314_6389637.html#b4>. 本节所涉术语，可参考此处的精确解释。
 - 新华网. “北京时间”是怎么来的[EB/OL]. [2026-04-18]. <https://www.xinhuanet.com/politics/2015-10/28/c_1116958394.htm>. 北京时间并非北京（东经 116.4°）地方时，而是东经 120° 经线的区时；中国曾于 1986—1991 年实行夏令时。
-- IETF. RFC 5246: The Transport Layer Security (TLS) Protocol Version 1.2[EB/OL]. [2026-04-18]. <https://www.rfc-editor.org/rfc/rfc5246>. TLS 协议规定证书包含 notBefore 与 notAfter 有效期字段，客户端验证时将系统时间与证书有效期比对，时钟偏移可导致握手失败。
-- IETF. RFC 6557: Procedures for Maintaining the Time Zone Database[EB/OL]. [2026-04-18]. <https://www.rfc-editor.org/rfc/rfc6557>. IANA 时区数据库维护程序（BCP 175），该数据库自 20 世纪 80 年代初由 Arthur David Olson 开发，2011 年起由 IANA 维护。
+- IETF. RFC 5280: Internet X.509 Public Key Infrastructure Certificate and CRL Profile[EB/OL]. [2026-04-18]. <https://www.rfc-editor.org/rfc/rfc5280>. X.509 证书包含 notBefore 与 notAfter 有效期字段（第 4.1.2.5 节：Validity）；客户端在 TLS 握手时将系统时间与证书有效期比对，时钟偏移可导致握手失败。
+- IETF. RFC 6557: Procedures for Maintaining the Time Zone Database[EB/OL]. [2026-04-18]. <https://www.rfc-editor.org/rfc/rfc6557>. IANA 时区数据库维护程序（BCP 175），该数据库由 Arthur David Olson 于 20 世纪 80 年代中期创建（至少可追溯至 1986 年），2011 年 10 月起由 ICANN/IANA 接管托管。
 
 ## 深入阅读
 

@@ -30,7 +30,7 @@ FreeBSD 的目录结构设计遵循以下原则：
 │   ├── defaults 存放默认引导配置文件，参见 loader.conf(5)
 │   │   └── loader.conf 引导加载程序配置文件，参见 loader.conf(5)
 │   ├── device.hints 用于控制驱动程序的内核变量，参见 device.hints(5)
-│   ├── dtb 编译的扁平化设备树（FDT）文件，参见 fdt(4) 和 dtc(1)；x86 架构下应为空
+│   ├── dtb 编译的扁平化设备树（FDT）文件，参见 fdt(4) 和 dtc(1)；x86 架构下通常为空
 │   │   └── overlays 编译的 FDT 覆盖层，参见 loader.conf(5) 中的 fdt_overlays
 │   ├── efi EFI 系统分区（ESP）挂载点，参见 uefi(8)
 │   ├── firmware 可加载的二进制固件内核模块；pkg kmod 会安装至此，以及通过 fwget 下载的固件
@@ -63,7 +63,7 @@ FreeBSD 的目录结构设计遵循以下原则：
 │   ├── iso9660 ISO 9660 文件系统的设备节点，如光盘
 │   ├── mmcsd0 第一张 SD 存储卡
 │   ├── mmcsd0s1 第一张 SD 存储卡的第一个分区
-│   ├── nda0 第一块 NVMe 存储设备（通过 cam(3) 连接）
+│   ├── nda0 第一块 NVMe 存储设备（通过 cam(4) 连接）
 │   ├── nda0p1 第一块 NVMe 存储设备的第一个分区
 │   ├── null 空设备，丢弃所有写入的数据，读取时立即返回 EOF
 │   ├── nvd0 nda0 的符号链接（旧版 NVMe 直接驱动兼容名，参见 nda(4)）
@@ -91,10 +91,10 @@ FreeBSD 的目录结构设计遵循以下原则：
 │   ├── hosts hosts 文件，优先于 DNS 的本地 IP 域名映射表
 │   ├── inetd.conf 配置 BSD inetd，参见 inetd(8)
 │   ├── jail.conf.d 用于 jail 配置的模块化管理，默认为空（jail.conf(5)）
-│   ├── kyua Kyua 测试框架的全局配置文件（kyua(1)、kyua.conf(5)）
+│   ├── kyua Kyua 测试框架的全局配置目录（kyua(1)、kyua.conf(5)）
 │   ├── localtime 本地时区文件，参见 ctime(3)。在测试系统中，localtime 链接至 /usr/share/zoneinfo/Asia/Shanghai
 │   ├── login.conf 登录类功能数据库，参见 login.conf(5)
-│   ├── machine-id 系统的 UUID，供 D-Bus 使用
+│   ├── machine-id 系统的 UUID，供 D-Bus 使用；FreeBSD 通过 hostid_save 脚本生成（与 /etc/hostid 相同 UUID，去除连字符），D-Bus 端口读取 /usr/local/etc/machine-id
 │   ├── mail Sendmail 相关文件，参见 sendmail(8)
 │   │   ├── aliases 用于投递系统邮件的地址
 │   │   └── mailer.conf mailwrapper(8) 配置文件
@@ -348,8 +348,8 @@ crw-r-----  1 root operator 0x7c May 10 09:56 ada0s1	# SATA 硬盘 MBR 分区的
 crw-r-----  1 root operator 0x6b May 10 09:49 da0	# SCSI 硬盘
 crw-r-----  1 root operator 0x60 May 10 09:49 nda0	# NVMe 硬盘
 crw-r-----  1 root operator 0x62 May 10 09:49 nda0p1	# GPT 分区的首个分区
-lrwxr-xr-x  1 root wheel       4 May 10 09:49 nvd0 -> nda0	# 软连接到 NVMe 硬盘
-lrwxr-xr-x  1 root wheel       6 May 10 09:49 nvd0p1 -> nda0p1	# 软连接到 NVMe 硬盘 GPT 分区的首个分区
+lrwxr-xr-x  1 root wheel       4 May 10 09:49 nvd0 -> nda0	# nda0 的兼容性别名（旧版 NVMe 直接驱动兼容名）
+lrwxr-xr-x  1 root wheel       6 May 10 09:49 nvd0p1 -> nda0p1	# nda0p1 的兼容性别名
 crw-r-----  1 root operator 0x68 May 10 09:49 cd0	# 光学介质
 ```
 
@@ -371,8 +371,8 @@ Copyright (c) 1979, 1980, 1983, 1986, 1988, 1989, 1991, 1992, 1993, 1994
 	The Regents of the University of California. All rights reserved.
 FreeBSD is a registered trademark of The FreeBSD Foundation.
 # 第一行声明 FreeBSD 项目的版权（FreeBSD 独有的代码，始于 1992 年）。
-# 第二行声明加州大学董事会（The Regents）的版权——这是 4.3BSD Net/2 及之前 BSD 版本的版权持有者。
-# 年份跨度 1979-1994 代表了 BSD 从 3BSD 到 4.4BSD-Lite2 的完整历史。
+# 第二行声明加州大学董事会（The Regents）的版权——这是 4.4BSD-Lite 及之前 BSD 版本的版权持有者。
+# 年份跨度 1979-1994 代表了 BSD 从 3BSD 到 4.4BSD-Lite 的完整历史（4.4BSD-Lite2 于 1995 年 6 月发布，在其后）。
 # 第三行声明 FreeBSD Foundation 持有“FreeBSD”注册商标。
 
 # ----- 内核版本标识 -----
@@ -589,7 +589,7 @@ atrtc1: Warning: Couldn't map I/O.
 atrtc1: registered as a time-of-day clock, resolution 1.000000s
 # 传统的 AT RTC（Motorola MC146818A 兼容），提供 date/time 设置/获取。
 # Warning 表明无法映射 I/O 端口（可能 UEFI 模式下固件未分配 I/O 空间），但无实际影响。
-# 现代 UEFI 平台更推荐使用 efiRTC；已在 FreeBSD 15 中从 GENERIC 移除 AT RTC。
+# 现代 UEFI 平台更推荐使用 efiRTC；非 PNP ISA 的 AT RTC 已推迟至 FreeBSD 16.0 从 GENERIC 移除。
 
 Event timer "RTC" frequency 32768 Hz quality 0
 # RTC 的周期性中断频率 32768 Hz（2^15 Hz），quality 0（最低优先级，仅做最后备选）。
@@ -787,7 +787,7 @@ atrtc0: registered as a time-of-day clock, resolution 1.000000s
 atrtc0: Can't map interrupt.
 atrtc0: non-PNP ISA device will be removed from GENERIC in FreeBSD 15.
 # atrtc(4) 在 ISA 总线侧的探测。两个 Warning 不影响系统运行——ISA I/O 和中断在 UEFI 平台上通常不可映射。
-# FreeBSD 15 已将 atrtc 从 GENERIC 内核配置中移除（以 efirtc 和 ACPI 时钟替代）。
+# 非 PNP ISA 的 atrtc 已推迟至 FreeBSD 16.0 从 GENERIC 内核配置中移除（ACPI 枚举的 atrtc 仍然存在，以 efirtc 和 ACPI 时钟替代）。
 
 # ===== Intel Speed Shift (HWP) =====
 hwpstate_intel0: <Intel Speed Shift> on cpu0

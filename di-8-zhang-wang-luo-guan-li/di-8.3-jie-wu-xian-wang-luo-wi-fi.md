@@ -163,7 +163,7 @@ psk="freebsdcn"
 
 ```ini
 wlans_rtwn0="wlan0"                      # 将物理无线设备 rtwn0 绑定到 wlan0 接口
-ifconfig_wlan0="WPA SYNCDHCP"           # 配置 wlan0 使用 WPA 并通过 DHCP 自动获取 IP 地址
+ifconfig_wlan0="WPA SYNCDHCP"           # 配置 wlan0 使用 WPA 并通过 DHCP 自动获取 IP 地址（SYNCDHCP 为同步模式，会暂停启动直至 DHCP 完成；如需异步/后台模式可改用 DHCP）
 create_args_wlan0="country HR regdomain ETSI"  # 创建 wlan0 接口时设置无线国家码为 HR，并使用 ETSI 频段规范。如信道大于 48（DFS），则需执行此设置。
 ```
 
@@ -224,7 +224,7 @@ psk="WIFI 密码"
 
 ```sh
 # ifconfig wlan0 create wlandev iwlwifi0
-# /etc/rc.d/netif start wlan0
+# service netif start wlan0
 ```
 
 第一条命令创建 `wlan0` 接口并绑定到物理无线设备 `iwlwifi0`，第二条命令启动 `wlan0` 接口。
@@ -295,9 +295,6 @@ wlans_bwi0="wlan0"
 │       └── sys/
 │           └── amd64/
 │               └── conf/              # 内核配置文件目录
-└── home/
-    └── ykla/
-        └── wifi-firmware-iwlwifi-kmod-20241017.1403000_2.pkg  # 英特尔无线网卡固件包
 ```
 
 编辑 **/boot/loader.conf** 文件添加以下配置，设置系统在启动时加载 `bwn` 驱动：

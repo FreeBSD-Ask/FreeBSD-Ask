@@ -1,6 +1,6 @@
 # 6.2 FreeBSD 软件源
 
-FreeBSD 的软件源分为 pkg 二进制包源、Ports 源、系统源和更新源四类，分别配置，默认指向官方服务器，国内用户通常需要切换至镜像站以提升下载速度。
+FreeBSD 的软件源分为 pkg 二进制包源、内核模块源、pkgbase 系统源和 Ports 源四类，分别配置，默认指向官方服务器，国内用户通常需要切换至镜像站以提升下载速度。
 
 ## 15.0-RELEASE 快速切换 pkg 软件源到中国科学技术大学开源软件镜像站
 
@@ -393,7 +393,7 @@ MASTER_SITE_OVERRIDE?=https://mirrors.ustc.edu.cn/freebsd-ports/distfiles/${DIST
 
 > **警告**
 >
-> 网易开源镜像站还提供了 FreeBSD 11、12 等过期版本的 pkg 二进制源。可自行配置使用。但可能存在安全风险。
+> 网易开源镜像站提供 FreeBSD 的 pkg 二进制源（使用 `${ABI}/quarterly` 等标准路径），但未在官方帮助页面中列出 FreeBSD 支持，同步状态可能不稳定，且存在安全风险。
 
 不受安全支持的版本同样可以使用二进制源。以下以 `FreeBSD 9.2` 为例：
 
@@ -418,4 +418,4 @@ Fetching https://ftp-archive.freebsd.org/pub/FreeBSD-Archive/ports/amd64/package
 
 > **注意**
 >
-> 因为当时 pkgng 还未获官方支持，仍然仅支持使用 `pkg_*` 命令，所以 pkg 是不可用的，会提示找不到 `digests.txz` 和 `repo.txz`。
+> 因为该存档使用的是旧式包格式（`.tbz`），不包含 pkg 所需的 `digests.txz` 和 `repo.txz` 等仓库元数据，因此 pkg 不可用：将提示找不到 `digests.txz` 和 `repo.txz`。

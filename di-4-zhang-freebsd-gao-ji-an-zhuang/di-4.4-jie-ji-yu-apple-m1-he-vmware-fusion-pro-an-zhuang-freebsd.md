@@ -47,29 +47,3 @@
 ![桌面界面](../.gitbook/assets/vmware-fusion-9.png)
 
 窗口大小无法自由调整。
-
-## 故障排除与未竟事宜
-
-### 鼠标无法移动
-
-在 **/boot/loader.conf.local**（推荐使用本地配置扩展文件，避免直接修改系统默认配置 **/boot/loader.conf**）中添加如下配置：
-
-```sh
-ums_load="YES"
-```
-
-> **技巧**
->
-> 若上述方法无效，可尝试在 **/boot/loader.conf.local** 中添加以下配置作为替代方案：
->
-> ```sh
-> hw.usb.usbhid.enable="1"    # 启用 USB HID 设备支持
-> usbhid_load="YES"           # 配置系统启动时自动加载 USB HID 驱动
-> ```
->
-> 注意：启用 usbhid 后，鼠标设备将由 `hms` 驱动接管，该驱动通过 evdev 协议输出事件，与 `moused(8)` 不兼容。若桌面环境依赖 moused/sysmouse 通道，鼠标可能无法正常工作。
-
-### 参考文献
-
-- FreeBSD Forums. Mouse cursor won't move in VMWARE Fusion and Freebsd 14.3 Stable[EB/OL]. (2025-07-16)[2026-06-07]. <https://forums.freebsd.org/threads/mouse-cursor-wont-move-in-vmware-fusion-and-freebsd-14-3-stable.98565/>. 详细介绍了 VMware Fusion Apple Silicon 上 FreeBSD 鼠标无法工作问题的解决方案。
-- FreeBSD Forums. Mouse does not work in VMWARE Fusion and Freebsd 14.2[EB/OL]. (2025-01-16)[2026-03-26]. <https://forums.freebsd.org/threads/mouse-does-not-work-in-vmware-fusion-and-freebsd-14-2.96563/>. 详细介绍了 VMware Fusion 中 FreeBSD 鼠标无法工作问题的解决方案与 USB HID 驱动配置方法。

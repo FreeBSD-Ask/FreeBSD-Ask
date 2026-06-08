@@ -405,7 +405,7 @@ $ freebsd-version -kru
 显示当前 ZFS 工具和内核模块的版本信息：
 
 ```sh
-# zfs --version
+# zfs version
 zfs-2.2.7-FreeBSD_ge269af1b3
 zfs-kmod-2.2.7-FreeBSD_ge269af1b3
 ```
@@ -457,7 +457,7 @@ openzfs_load=YES   # 启用 OpenZFS 模块加载
 在重启后，检查 ZFS 版本：
 
 ```sh
-# zfs --version
+# zfs version
 zfs-2.2.7-FreeBSD_ge269af1b3
 zfs-kmod-2.3.5-1
 ```
@@ -579,7 +579,11 @@ end
 
 ### 南京大学开源镜像站 NJU
 
-除了 USTC 镜像站外，南京大学也提供了 FreeBSD pkgbase 的镜像源，其地址如下。
+除了 USTC 镜像站外，南京大学也提供了 FreeBSD 的镜像源，其地址如下。
+
+> **注意**
+>
+> 以下镜像站是否同步了 pkgbase 仓库（`base_release_*` 子目录）未经确认，使用前请自行验证。
 
 ```ini
 https://mirrors.nju.edu.cn/freebsd-pkg/
@@ -587,7 +591,11 @@ https://mirrors.nju.edu.cn/freebsd-pkg/
 
 ### 网易开源镜像站 163
 
-网易开源镜像站同样提供了 FreeBSD pkgbase 的镜像服务，地址如下。
+网易开源镜像站同样提供了 FreeBSD 的镜像服务，地址如下。
+
+> **注意**
+>
+> 以下镜像站是否同步了 pkgbase 仓库（`base_release_*` 子目录）未经确认，使用前请自行验证。
 
 ```ini
 https://mirrors.163.com/freebsd-pkg/
@@ -599,16 +607,15 @@ https://mirrors.163.com/freebsd-pkg/
 
 | 分支 | 更新频率 | URL 地址 |
 | ---- | -------- | -------- |
-| main（16.0-CURRENT） | 每天两次：08:00、20:00 | <https://pkg.freebsd.org/${ABI}/base_latest> |
-| main（16.0-CURRENT） | 每周一次：星期日 20:00 | <https://pkg.freebsd.org/${ABI}/base_weekly> |
-| stable/14 | 每天两次：08:00、20:00 | <https://pkg.freebsd.org/${ABI}/base_latest> |
-| stable/14 | 每周一次：星期日 20:00 | <https://pkg.freebsd.org/${ABI}/base_weekly> |
-| stable/15 | 每天两次：08:00、20:00 | <https://pkg.freebsd.org/${ABI}/base_latest> |
-| stable/15 | 每周一次：星期日 20:00 | <https://pkg.freebsd.org/${ABI}/base_weekly> |
-| releng/14.4（RELEASE） | 每天两次：08:00、20:00 | <https://pkg.freebsd.org/${ABI}/base_release_4> |
-| releng/15.0（RELEASE） | 每天两次：08:00、20:00 | <https://pkg.freebsd.org/${ABI}/base_release_0> |
+| main（16.0-CURRENT） | 每天两次 | <https://pkg.freebsd.org/${ABI}/base_latest> |
+| stable/14 | 每天两次 | <https://pkg.freebsd.org/${ABI}/base_latest> |
+| stable/14 | 每周一次：星期日 | <https://pkg.freebsd.org/${ABI}/base_weekly> |
+| stable/15 | 每天两次 | <https://pkg.freebsd.org/${ABI}/base_latest> |
+| stable/15 | 每周一次：星期日 | <https://pkg.freebsd.org/${ABI}/base_weekly> |
+| releng/14.4（RELEASE） | 随勘误和安全更新发布 | <https://pkg.freebsd.org/${ABI}/base_release_4> |
+| releng/15.0（RELEASE） | 随勘误和安全更新发布 | <https://pkg.freebsd.org/${ABI}/base_release_0> |
 
-以上表格中的时间已转换为北京时间（东八区），对应 FreeBSD 官方镜像站的发布时间。
+以上更新频率依据 freebsd-base(7) 手册页：开发分支（CURRENT 与 STABLE）每天构建两次，RELEASE 分支随勘误和安全更新发布。main 分支仅提供 base_latest，不提供 base_weekly（参见 Baptiste Daroussin 在 freebsd-pkgbase 邮件列表中的说明）。
 
 如果官方源下载速度慢，可以考虑改用国内镜像。只需要替换 `https://pkg.freebsd.org` 这部分。
 
