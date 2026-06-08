@@ -541,7 +541,7 @@ root 密码强度无强制要求，但不可为空。如果密码为空，将提
 
 `请选择您的区域码`
 
-此处应选择 `NONE ROW`。NONE ROW（Rest of World）是一个通用的无线管制域选项，鉴于中国管制域尚未在 regdomain.xml 中定义（Bug 289202），选择此项可允许无线网卡在最保守的信道集上运行，避免选择特定国别引发的错误。
+此处应选择 `NONE` 或 `ROW`（Rest of World）。`ROW` 是一个通用的无线管制域选项，鉴于中国管制域尚未在 regdomain.xml 中定义（Bug 289202），选择此项可允许无线网卡在最保守的信道集上运行，避免选择特定国别引发的错误。
 
 ![选择所在地区](../.gitbook/assets/wifi-region-select.png)
 
