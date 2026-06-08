@@ -120,19 +120,19 @@ Microsoft Rewards 是微软必应搜索提供的积分计划。可通过 Microso
 
 | 指标 | 统计数据 |
 | ---- | -------- |
-| 用户总数 | 53,140 位 |
-| 会话数 | 102,510 次 |
-| 浏览次数 | 660,467 次 |
-| 平均会话时长 | 8 分 18 秒 |
+| 用户总数 | 54,611 位 |
+| 会话数 | 103,765 次 |
+| 浏览次数 | 664,202 次 |
+| 平均会话时长 | 8 分 14 秒 |
 
 <!-- GA_STATS:END -->
 
 <!-- GA_BADGES:START -->
 
-![总用户数](https://img.shields.io/badge/总用户数-53,140-green)
-![会话数](https://img.shields.io/badge/会话数-102,510-orange)
-![浏览次数](https://img.shields.io/badge/浏览次数-660,467-blue)
-![平均会话时长](https://img.shields.io/badge/平均会话时长-8min18s-purple)
+![总用户数](https://img.shields.io/badge/总用户数-54,611-green)
+![会话数](https://img.shields.io/badge/会话数-103,765-orange)
+![浏览次数](https://img.shields.io/badge/浏览次数-664,202-blue)
+![平均会话时长](https://img.shields.io/badge/平均会话时长-8min14s-purple)
 
 <!-- GA_BADGES:END -->
 
@@ -147,27 +147,27 @@ Microsoft Rewards 是微软必应搜索提供的积分计划。可通过 Microso
 ---
 
 <!-- CHINESE_CHAR_COUNT_START -->
-文档总字数：90.17 万字；
+文档总字数：90.36 万字；
 
-统计时间：2026-06-07 18:38:50（北京时间）
+统计时间：2026-06-08 11:11:05（北京时间）
 
-与上周相比：+6447 字（+0.72%）
+与上周相比：+8324 字（+0.93%）
 
-与上月相比：+9.14 万字（+11.28%）
+与上月相比：+9.32 万字（+11.51%）
 
 <!-- CHINESE_CHAR_COUNT_END -->
 
 <!-- commit-progress-start -->
-**第 3 版编纂进度:**   （人工提交数: 1579 / 3533）
+**第 3 版编纂进度:**   （人工提交数: 1603 / 3533）
 
 ![进度徽章](.gitbook/assets/progress.svg)
 
-距离第 3 版还需提交: 1954 次
+距离第 3 版还需提交: 1930 次
 
 提交统计（历史）:
 
-- 人工提交: 8645
-- 机器人提交: 364
+- 人工提交: 8669
+- 机器人提交: 367
 <!-- commit-progress-end -->
 
 ## ⭐ 图
