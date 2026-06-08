@@ -33,7 +33,7 @@
 
 **第 6 章 软件管理**：介绍 FreeBSD 包管理器概述、软件源的更换方法，使用 pkg 管理二进制包、使用 Ports 以源代码方式安装软件、Ports 构建调优，以及使用 DVD 安装软件和 FreeBSD 镜像站现状。
 
-**第 7 章 FreeBSD 系统更新**：介绍通过 freebsd-update、源代码方式或 pkgbase 进行系统更新的方法。
+**第 7 章 FreeBSD 系统更新**：介绍使用 freebsd-update、源代码方式或 pkgbase 更新 FreeBSD 的方法。
 
 **第 8 章 网络管理**：介绍基础与高级网络配置、无线网络（Wi-Fi）配置、USB 网络共享、蓝牙、系统代理及 V2Ray、Mihomo 等代理工具的配置。
 
@@ -47,7 +47,7 @@
 
 **第 13 章 Linux 兼容层**：介绍 FreeBSD 的 Linux 兼容层架构，涵盖 Rocky Linux、Ubuntu/Debian/Kali Linux、Arch Linux、Slackware、Gentoo 等多种 Linux 发行版的兼容环境搭建，以及微信、QQ、WPS Office 等 Linux 应用的运行方法和故障排除。
 
-**第 14 章 游戏、科学计算和专业工具**：介绍 Godot 游戏引擎、Minecraft、Steam 客户端和 Wine 配置，以及科研和专业计算工具的使用。
+**第 14 章 游戏、科学计算和专业工具**：介绍 Godot 开源游戏引擎、Minecraft、Steam 客户端和 Wine 配置，以及科研和专业计算工具的使用。
 
 **第 15 章 人工智能**：介绍人工智能概论与 AI 大模型在 FreeBSD 上的本地部署方法。
 
@@ -65,7 +65,7 @@
 
 **第 22 章 防火墙**：介绍防火墙概论与 FreeBSD 内置防火墙系统，包括 Packet Filter（PF）、IPFilter（IPF）、IPFW 的配置，以及 Fail2Ban 和 blocklistd 工具的使用。
 
-**第 23 章 Jail 容器管理**：介绍 FreeBSD 原生轻量级虚拟化技术 Jail 的基础配置、Qjail 管理工具的使用及手动创建 Jail 容器的方法。
+**第 23 章 Jail 容器管理**：介绍 FreeBSD 原生轻量级虚拟化技术 Jail 的基础配置、厚 Jail（Thick Jail）及 Qjail 管理工具的使用。
 
 **第 24 章 Linux Jail**：介绍在 FreeBSD Jail 中运行 Linux 发行版的方法，涵盖 Linux Jail 基础准备，以及 Debian、Ubuntu、antiX Linux、Alpine Linux 等发行版的 Jail 创建与 GUI 配置。
 
