@@ -44,7 +44,7 @@
 | Ports | / | FreeBSD 的软件包管理系统，包含所有 Port 的集合，用于从源代码编译和安装软件 |
 | Ports Collection | / | Ports 系统的完整集合，包含软件分类目录、构建工具和依赖管理机制 |
 | pkg | / | FreeBSD 的二进制包管理器，用于安装、更新和管理预编译的软件包，旧称 pkgng |
-| PkgBase | / | FreeBSD 的基本系统包管理方案，使用 pkg 包管理器来实现用户空间和内核的更新，于 FreeBSD 14.x 起提供实验性支持，自 FreeBSD 15.0 起以技术预览（Technology Preview）形式提供完整安装选项 |
+| PkgBase | / | FreeBSD 的基本系统包管理方案，使用 pkg 包管理器来实现用户空间和内核的更新，自 FreeBSD 15.0 起以技术预览（Technology Preview）形式提供 |
 | freebsd-update | / | FreeBSD 基本系统更新工具，用于获取安全更新和执行系统版本升级 |
 | Poudriere | / | FreeBSD 工具，通过 Jail 环境测试 Port 并构建 FreeBSD 软件包镜像 |
 | 安全启动 | / | Secure Boot，基于 UEFI 固件的安全机制，通过数字签名验证引导加载程序和操作系统内核的完整性 |
