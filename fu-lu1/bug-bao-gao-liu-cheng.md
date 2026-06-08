@@ -89,8 +89,7 @@ FreeBSD 缺陷报告系统位于 [https://bugs.freebsd.org/bugzilla](https://bug
     - misc（其他，或确实无法归类，建议先在邮件列表中询问）等；
   - Ports & Packages：第三方软件，其下主要组件为 Individual Port(s)；
   - Documentation：文档或网站；
-- Environment（环境）：包括系统版本、程序版本、系统配置等；
-- Description（问题描述）：内容应完整、详细，不应加入个人猜测。
+- Description（问题描述）：内容应完整、详细，不应加入个人猜测；同时应在描述中包含运行环境信息（系统版本、程序版本、系统配置等）。
 
 FreeBSD 开发人员有限，缺陷报告可能长时间无人处理。报告接收者大多是志愿者，不应苛求。如果有可能，请先自行解决问题，再提交到上游。
 
