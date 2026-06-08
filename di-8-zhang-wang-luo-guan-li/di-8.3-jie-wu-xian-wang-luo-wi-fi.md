@@ -163,7 +163,7 @@ psk="freebsdcn"
 
 ```ini
 wlans_rtwn0="wlan0"                      # 将物理无线设备 rtwn0 绑定到 wlan0 接口
-ifconfig_wlan0="WPA SYNCDHCP"           # 配置 wlan0 使用 WPA 并通过 DHCP 自动获取 IP 地址
+ifconfig_wlan0="WPA SYNCDHCP"           # 配置 wlan0 使用 WPA 并通过 DHCP 自动获取 IP 地址（SYNCDHCP 为同步模式，会暂停启动直至 DHCP 完成；如需异步/后台模式可改用 DHCP）
 create_args_wlan0="country HR regdomain ETSI"  # 创建 wlan0 接口时设置无线国家码为 HR，并使用 ETSI 频段规范。如信道大于 48（DFS），则需执行此设置。
 ```
 
