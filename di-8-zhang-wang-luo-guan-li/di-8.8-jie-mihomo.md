@@ -86,7 +86,7 @@ mihomo_reconfig()
 mihomo_regeoip()
 {
 	startmsg "begin to refresh geoip.dat"
-	startmsg "geoip.dat : $mihomo_geoip"
+	startmsg "geoip.dat : ${mihomo_geoip}"
 	if ( fetch -o ${mihomo_datadir}/geoip.new "${mihomo_geoip}" );then
 		mv ${mihomo_datadir}/geoip.new ${mihomo_datadir}/geoip.dat
         startmsg "rename geoip.new to geoip.dat"
