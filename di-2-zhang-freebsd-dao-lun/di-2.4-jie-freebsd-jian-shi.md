@@ -142,7 +142,7 @@ Ports 集合自 2012 年 7 月起进入 CVS 与 SVN 双轨运行期，项目于 
 
 - 2012 年 8 月 Poudriere
 
-Poudriere 是一种通过 Jail 测试 port，并构建 FreeBSD 镜像的工具，由 Bryan Drewery 开发，于 2012 年 8 月首次发布。
+Poudriere 是一种通过 Jail 测试 port，并构建 FreeBSD 镜像的工具，由 Baptiste Daroussin 开发，于 2012 年 8 月首次发布。
 
 - 2012 年 11 月 Clang/LLVM
 
