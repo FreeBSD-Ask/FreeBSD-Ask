@@ -13,7 +13,7 @@ BSD 之名源自其发源地：美国加州大学伯克利分校（University of
 下面借贝克莱约 1726 年创作的这首诗《论在美洲传播艺术与学术之前景的诗篇》，了解伯克利之名的由来。该诗正式出版于 1752 年的 Miscellany 文集中，其确切创作年份尚存争议，但学界多据其与百慕大办学计划（1725 年提出）的关联，推定为 1725—1726 年间所作。
 
 The Muse, disgusted at an age and clime
-Barred of every glorious theme,
+Barren of every glorious theme,
 In distant lands now waits a better time,
 Producing subjects worthy fame.
 
@@ -46,7 +46,7 @@ BERKELEY G. Verses on the Prospect of Planting Arts and Learning in America[C]//
 
 译文：
 
-缪斯已厌倦这时代与气候，/一切光辉的题材均被阻绝，/遂在远方静候更好的时光，/孕育值得传颂的主题。
+缪斯已厌倦这时代与气候，/全无辉宏之题可供撷取，/遂在远方静候更好的时光，/孕育值得传颂的主题。
 
 在那幸福的土地上，和煦的阳光/与处女般的原野交相辉映，/艺术之力似被自然超越，/幻想之美亦不及真实。
 
