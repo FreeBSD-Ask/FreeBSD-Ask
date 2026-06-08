@@ -10,7 +10,7 @@ BSD 许可证条款编号用于表示附加义务和限制条件的复杂度。0
 
 BSD 零条款许可证是 BSD 许可证系列中限制最少的一种。该许可证虽然以“BSD”命名，实际上并非源自传统 BSD 家族。
 
-此许可证为 ISC 许可证的变体。ISC 许可证源自 Internet Systems Consortium，属简洁型宽松许可证；0BSD 则近似于公共领域许可证。
+此许可证为 ISC 许可证的变体。ISC 许可证源自 Internet Software Consortium（后更名为 Internet Systems Consortium），属简洁型宽松许可证；0BSD 则近似于公共领域许可证。
 
 全文如下：
 
