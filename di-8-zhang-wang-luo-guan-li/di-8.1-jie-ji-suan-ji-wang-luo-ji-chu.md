@@ -98,7 +98,7 @@ wlan0: flags=8843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST> metric 0 mtu 1500
 	nd6 options=829<PERFORMNUD,IFDISABLED,AUTO_LINKLOCAL,STABLEADDR>
 ```
 
-FreeBSD 采用驱动程序名称后接单元号的方式为网络接口命名。单元号表示适配器在启动时被检测到的顺序，或后续被检测到时的顺序。例如，`em0` 是系统中使用 em(4) 驱动程序的第一块网卡，`wlan0` 是使用 rtwn(4) 驱动程序的第一块无线网卡。
+FreeBSD 采用驱动程序名称后接单元号的方式为网络接口命名。单元号表示适配器在启动时被检测到的顺序，或后续被检测到时的顺序。例如，`em0` 是系统中使用 em(4) 驱动程序的第一块网卡，`wlan0` 是使用 rtwn(4) 驱动创建的第一个无线接口。
 
 该示例显示以下设备：
 
