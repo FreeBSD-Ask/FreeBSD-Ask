@@ -129,7 +129,7 @@ test_5G                           50:d6:c5:93:d7:64   36   54M  -78:-95   100 EP
 
 ### 使用 WPA2 认证
 
-加密无线网络需要使用 Wi-Fi 保护访问（Wi-Fi Protected Access，WPA）配置文件连接。WPA2 是 FreeBSD 当前支持的无线网络安全协议，提供数据加密和身份认证功能（截至 2025 年末，FreeBSD 基本系统暂不支持 WPA3/SAE）。
+加密无线网络需使用 Wi-Fi 保护访问（Wi-Fi Protected Access，WPA）配置文件连接。WPA2 是 FreeBSD 当前支持的无线网络安全协议，提供数据加密和身份认证功能（截至 2025 年末，FreeBSD 基本系统暂不支持 WPA3/SAE）。
 
 无线网络中的认证过程由 wpa_supplicant(8) 管理。可使用 wpa_passphrase(8) 工具将 SSID 和明文密码转换为安全的 PSK 配置条目，避免在配置文件中直接书写明文密码。此外，wpa_cli(8) 提供了 wpa_supplicant 的交互式命令行管理接口，可用于运行时调试和状态查询。创建 **/etc/wpa_supplicant.conf** 配置文件，内容如下：
 
@@ -244,7 +244,7 @@ psk="WIFI 密码"
 
 博通（Broadcom）是另一家常见的无线网卡厂商。FreeBSD 内置的 Broadcom 网卡驱动主要有两种：`bwi` 和 `bwn`。`bwi` 支持较旧型号，`bwn` 支持较新型号，两者的支持范围部分重叠，但 `bwn` 对硬件的兼容性更好。这两个驱动仅支持 802.11b/g，现代 802.11ac/ax 博通网卡在 FreeBSD 上尚无原生驱动支持。
 
-关于驱动选择的详细信息，请参考 Fuller L. Broadcom WiFi Improvements for FreeBSD[EB/OL]. (2018-01-22)[2026-04-05]. <https://web.archive.org/web/20240203102135/https://www.landonf.org/code/freebsd/Broadcom_WiFi_Improvements.20180122.html>.
+关于驱动选择的详细信息，可参考 Fuller L. Broadcom WiFi Improvements for FreeBSD[EB/OL]. (2018-01-22)[2026-04-05]. <https://web.archive.org/web/20240203102135/https://www.landonf.org/code/freebsd/Broadcom_WiFi_Improvements.20180122.html>.
 
 ### 示例：BCM4301、BCM4303、BCM4306 rev 2
 
@@ -263,7 +263,7 @@ if_bwi_load="YES"
 # make install clean
 ```
 
-可先通过 USB 或以太网共享获取网络连接后安装，也可以提前将所需依赖下载到指定目录。
+可先通过 USB 或以太网共享获取网络连接后安装，也可提前将所需依赖下载到指定目录。
 
 在 **/etc/rc.conf** 文件中添加以下配置，将物理无线设备 `bwi0` 绑定到 `wlan0` 接口：
 
