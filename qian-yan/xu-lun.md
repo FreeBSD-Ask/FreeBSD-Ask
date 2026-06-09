@@ -73,7 +73,7 @@
 
 **第 26 章 数据库管理**：介绍数据库概论，以及 PostgreSQL、MySQL 及 MongoDB 在 FreeBSD 上的安装与配置，同时涵盖 pgAdmin4 管理工具的使用。
 
-**第 27 章 文件传输协议（FTP）**：介绍文件传输协议（FTP）概述，以及 Pure-FTPd（基于 MySQL）、ProFTPd（基于 MySQL）、vsftpd 等 FTP 服务器的配置。
+**第 27 章 文件传输协议（FTP）**：介绍文件传输协议（FTP）概述，以及 Pure-FTPd（基于 MySQL）、ProFTPD（基于 MySQL）、vsftpd 等 FTP 服务器的配置。
 
 **第 28 章 服务器**：介绍 Rsync 数据同步、Samba 文件共享、NFS 服务器、零配置网络（mDNS/DNS-SD）及 Webmin 管理平台等服务的搭建。
 
