@@ -129,7 +129,7 @@ test_5G                           50:d6:c5:93:d7:64   36   54M  -78:-95   100 EP
 
 ### 使用 WPA2 认证
 
-加密无线网络需使用 Wi-Fi 保护访问（Wi-Fi Protected Access，WPA）配置文件连接。WPA2 是 FreeBSD 当前支持的无线网络安全协议，提供数据加密和身份认证功能（截至 2025 年末，FreeBSD 基本系统暂不支持 WPA3/SAE）。
+加密无线网络需使用 Wi-Fi 保护访问（Wi-Fi Protected Access，WPA）配置文件连接。WPA2 是 FreeBSD 当前已能正常使用的无线网络安全协议，提供数据加密和身份认证功能。对于 WPA3/SAE，FreeBSD 基本系统的 `wpa_supplicant` 可通过 `CONFIG_SAE=y` 编译选项支持 SAE 协商配置，但内核 net80211 协议栈尚未完成 SAE 认证支持，客户端实际连接会因可用密钥管理类型为空（`available key_mgmt 0x0`）而失败（截至 2025 年末，多名用户在 FreeBSD 14.3、15.0 下的实测均确认此情况）。FreeBSD 基金会已将 net80211 协议栈更新列为在研工作。
 
 无线网络中的认证过程由 wpa_supplicant(8) 管理。可使用 wpa_passphrase(8) 工具将 SSID 和明文密码转换为安全的 PSK 配置条目，避免在配置文件中直接书写明文密码。此外，wpa_cli(8) 提供了 wpa_supplicant 的交互式命令行管理接口，可用于运行时调试和状态查询。创建 **/etc/wpa_supplicant.conf** 配置文件，内容如下：
 
@@ -206,7 +206,7 @@ wlan0: flags=8843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST> metric 0 mtu 1500
 
 ## 英特尔无线网卡驱动概况
 
-英特尔（Intel）网卡是目前广泛使用的无线网卡之一。iwlwifi 驱动支持的芯片范围是 iwm 的超集：iwlwifi 目前仅移植了 Linux 上游驱动的 mvm 子驱动部分，覆盖了 iwm 支持的全部芯片以及部分更新的芯片（如 BZ 系列设备）。Linux 上游的 iwlwifi 驱动还包含 MLD/MLO 扩展功能（用于 WiFi 7 MLO 多链路操作），该部分正在移植至 FreeBSD（截至 2025 年末已部分合并），但尚未完全稳定。
+英特尔（Intel）网卡是目前广泛使用的无线网卡之一。iwlwifi 驱动支持的芯片范围是 iwm 的超集：iwlwifi 目前仅移植了 Linux 上游驱动的 mvm 子驱动部分，覆盖了 iwm 支持的全部芯片以及更新的 Wi-Fi 6E/7 芯片（如 BE200、BE201、BE202 等，该系列在 Linux 驱动代码中以 Bz 设备家族标识，型号字符串曾标记为 "Intel(R) TBD Bz device"）。Linux 上游的 iwlwifi 驱动还包含 MLD/MLO 扩展功能（用于 Wi-Fi 7 MLO 多链路操作），FreeBSD 14.3 已实现对部分 iwlwifi 芯片的 802.11ac 支持（iWX 驱动自 OpenBSD 移植到 FreeBSD 15.0 后也已支持 802.11ac），但 MLO 等 Wi-Fi 7 新特性在 FreeBSD 上仍处于开发阶段。
 
 在 **/etc/rc.conf** 文件中添加以下配置：
 
@@ -449,7 +449,7 @@ htcaps=207002d<LDPC,SHORTGI20>
 
 ## 附录：图形化网络配置工具
 
-FreeBSD 也提供了图形化网络管理工具，功能类似于 Linux 的 NetworkManager：
+FreeBSD 提供了图形化网络管理工具，功能类似于 Linux 的 NetworkManager：
 
 使用 pkg 安装：
 
