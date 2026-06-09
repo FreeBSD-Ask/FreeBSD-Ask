@@ -13,7 +13,7 @@ lagg 接口支持的聚合协议决定了哪些端口用于发送流量以及是
 
 ## 配置示例
 
-本节演示如何配置交换机和 FreeBSD 系统以进行 LACP 负载均衡。随后介绍如何将两个以太网接口配置为故障转移模式，以及如何在以太网接口和无线接口之间配置故障转移模式。
+本节演示如何配置交换机和 FreeBSD 系统以实现 LACP 负载均衡。随后介绍如何将两个以太网接口配置为故障转移模式，以及如何在以太网接口和无线接口之间配置故障转移模式。
 
 ### 示例 1. 使用交换机进行 LACP 聚合
 
@@ -106,7 +106,7 @@ ifconfig_lagg0="laggproto failover laggport em0 laggport em1 DHCP"
 
 > **注意**
 >
-> 理论上，以太网或无线 MAC 地址都可以更改以匹配对方。然而，部分常见的无线接口不支持覆盖 MAC 地址，因此建议覆写以太网 MAC 地址。
+> 理论上，以太网或无线 MAC 地址都可更改以匹配对方。然而，部分常见的无线接口不支持覆盖 MAC 地址，因此建议覆写以太网 MAC 地址。
 
 > **注意**
 >
@@ -118,7 +118,7 @@ ifconfig_lagg0="laggproto failover laggport em0 laggport em1 DHCP"
 # ifconfig wlan0 create wlandev rtwn0
 ```
 
-现在可以确定无线接口的 MAC 地址：
+现在可确定无线接口的 MAC 地址：
 
 ```sh
 # ifconfig wlan0 ether
