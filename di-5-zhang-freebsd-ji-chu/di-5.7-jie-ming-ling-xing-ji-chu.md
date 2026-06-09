@@ -42,7 +42,7 @@ USER       TTY      FROM           LOGIN@  IDLE WHAT
 root       pts/0    3413e8b6b43f   3:00PM     - w
 ```
 
-BSD `w` 与 GNU/Linux 的 `w` 差异较大；FreeBSD 的 `w` 不支持 Linux `w` 的 `-f`（省略 FROM 列）、`-s`（短格式）、`-u`（省略 USER 列）等选项。
+BSD `w` 与 GNU/Linux 的 `w` 差异较大；FreeBSD 的 `w` 不支持 Linux `w` 的 `-f` 、`-s` 、`-u` 等选项。
 
 ## 我在哪？
 
