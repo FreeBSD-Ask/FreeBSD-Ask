@@ -58,7 +58,7 @@ iwm0@pci0:3:0:0: class=0x028000 rev=0x00 hdr=0x00 vendor=0x8086 device=0x4237 su
     class      = network
 ```
 
-`@` 符号前的文本是控制设备的驱动程序名称。在此示例中，分别是 em(4) 和 iwm(4)。
+`@` 符号前的文本是控制该设备的驱动程序名称。在此示例中，分别是 em(4) 和 iwm(4)。
 
 ### 通过 ifconfig 命令识别网络适配器
 
