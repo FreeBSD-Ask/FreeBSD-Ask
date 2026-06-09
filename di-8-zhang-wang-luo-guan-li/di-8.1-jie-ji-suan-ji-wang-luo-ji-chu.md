@@ -192,7 +192,7 @@ fe80::%lo0/10      link#3             URS             lo0   # 链路本地 IPv6 
 fe80::%em0/64      link#1             U               em0   # em0 接口链路本地 IPv6 地址
 fe80::20c:29ff:fe8 link#3             UHS             lo0   # 静态主机路由
 fe80::%em1/64      link#2             U               em1   # em1 接口链路本地 IPv6 地址
-fe80::20c:29ff:fe8 link#3             UHS             lo0   # 静态主机路由（与第37行重复，属路由表缓存正常现象）
+fe80::20c:29ff:fe8 link#3             UHS             lo0   # 静态主机路由（与前条 fe80::20c:29ff:fe8 条目重复，属路由表缓存正常现象）
 fe80::%lo0/64      link#3             U               lo0   # lo0 接口链路本地子网
 fe80::1%lo0        link#3             UHS             lo0   # lo0 单一本地主机链路本地地址，静态主机路由
 ff02::/16          link#3             URS             lo0   # IPv6 多播地址
