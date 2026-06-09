@@ -230,7 +230,7 @@ Alpha-Omega 项目先后审计了 FreeBSD 的 bhyve 虚拟机监视器和 Capsic
 - OpenZFS. History[EB/OL]. [2026-04-17]. <https://www.openzfs.org/wiki/History>. 记载 ZFS 开发始于 2001 年，2008 年随 FreeBSD 7.0 移植发布。
 - FreeBSD Project. FreeBSD 7.0-RELEASE Announcement[EB/OL]. (2008-02-27)[2026-04-17]. <https://www.freebsd.org/releases/7.0R/announce/>. FreeBSD 7.0-RELEASE 发布日期为 2008 年 2 月 27 日。
 - FreeBSD Project. FreeBSD 7.1-RELEASE Announcement[EB/OL]. (2009-01-04)[2026-04-17]. <https://www.freebsd.org/releases/7.1R/announce/>. FreeBSD 7.1-RELEASE 发布日期为 2009 年 1 月 4 日，DTrace 随此版本引入。
-- Watson R N M, Neumann P G, Woodruff J, et al. CHERI: A Research Platform Deconflating Hardware Virtualization and Protection[C]//RESOLV'12 Workshop, London, UK, 2012-03. CHERI 首篇论文。
+- Watson R N M, Neumann P G, Woodruff J, et al. CHERI: A Research Platform Deconflating Hardware Virtualization and Protection[C]//RESoLVE'12 Workshop, London, UK, 2012-03. CHERI 首篇论文。
 - SRI International. CTSRD Final Technical Report[EB/OL]. [2026-04-17]. <https://web.archive.org/web/20251122133531/https://www.csl.sri.com/~neumann/20191213-ctsrd-ftr-final.pdf>. 记载 CTSRD/CHERI 项目始于 2010 年 9 月 24 日。
 - MCKUSICK M K. Twenty Years of Berkeley Unix: From AT&T-Owned to Freely Redistributable[M]//SALUS P H, ed. Open Sources: Voices from the Open Source Revolution. Sebastopol: O'Reilly, 1999. 记载 DARPA 合同始于 1980 年 4 月，为期 18 个月。
 - FreeBSD Core Team. Change to FreeBSD release scheduling and support period[EB/OL]. (2024-07-10)[2026-04-18]. <https://lists.freebsd.org/archives/freebsd-announce/2024-July/000143.html>. 自 FreeBSD 15 起，稳定分支支持周期由 5 年缩短为 4 年。
