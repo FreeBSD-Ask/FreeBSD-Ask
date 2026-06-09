@@ -121,24 +121,16 @@ ifconfig_lagg0="laggproto failover laggport em0 laggport em1 DHCP"
 现在可以确定无线接口的 MAC 地址：
 
 ```sh
-# ifconfig wlan0
-wlan0: flags=8843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST> metric 0 mtu 1500
-	ether b8:ee:65:5b:32:59
-	groups: wlan
-	ssid Bbox-A3BD2403 channel 6 (2437 MHz 11g ht/20) bssid 00:37:b7:56:4b:60
-	regdomain ETSI country FR indoor ecm authmode WPA2/802.11i privacy ON
-	deftxkey UNDEF AES-CCM 2:128-bit txpower 30 bmiss 7 scanvalid 60
-	protmode CTS ampdulimit 64k ampdudensity 8 shortgi -stbctx stbcrx
-	-ldpc wme burst roaming MANUAL
-	media: IEEE 802.11 Wireless Ethernet MCS mode 11ng
-	status: associated
-	nd6 options=29<PERFORMNUD,IFDISABLED,AUTO_LINKLOCAL>
+# ifconfig wlan0 ether
+wlan0: flags=8802<BROADCAST,SIMPLEX,MULTICAST> metric 0 mtu 1500
+	options=200001<RXCSUM,RXCSUM_IPV6>
+	ether 20:0d:b0:c4:ab:59
 ```
 
 `ether` 行将显示指定接口的 MAC 地址。现在，将以太网接口的 MAC 地址更改无线网卡的 MAC 地址：
 
 ```sh
-# ifconfig em0 ether b8:ee:65:5b:32:59
+# ifconfig em0 ether 20:0d:b0:c4:ab:59
 ```
 
 确保 **em0** 接口已启用，然后创建 lagg(4) 接口，以 **em0** 作为主接口并故障转移到 **wlan0**：
@@ -149,34 +141,35 @@ wlan0: flags=8843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST> metric 0 mtu 1500
 # ifconfig lagg0 up laggproto failover laggport em0 laggport wlan0
 ```
 
-虚拟接口的状态应如下所示：
-
-```sh
-# ifconfig lagg0
-lagg0: flags=8843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST> metric 0 mtu 1500
-        options=8<VLAN_MTU>
-        ether b8:ee:65:5b:32:59
-        laggproto failover lagghash l2,l3,l4
-        laggport: em0 flags=5<MASTER,ACTIVE>
-        laggport: wlan0 flags=0<>
-        groups: lagg
-        media: Ethernet autoselect
-        status: active
-```
-
 然后，启动 DHCP 客户端以获取 IP 地址：
 
 ```sh
 # dhclient lagg0
 ```
 
+虚拟接口的状态应如下所示：
+
+```sh
+# ifconfig lagg0
+lagg0: flags=1008843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST,LOWER_UP> metric 0 mtu 1500
+	options=4e504bb<RXCSUM,TXCSUM,VLAN_MTU,VLAN_HWTAGGING,JUMBO_MTU,VLAN_HWCSUM,LRO,VLAN_HWFILTER,VLAN_HWTSO,RXCSUM_IPV6,TXCSUM_IPV6,HWSTATS,MEXTPG>
+	ether 20:0d:b0:c4:ab:59
+	hwaddr 00:00:00:00:00:00
+	inet 192.168.5.7 netmask 0xffffff00 broadcast 192.168.5.255
+	laggproto failover lagghash l2,l3,l4
+	laggport: em0 flags=5<MASTER,ACTIVE>
+	groups: lagg
+	media: Ethernet autoselect
+	status: active
+	nd6 options=829<PERFORMNUD,IFDISABLED,AUTO_LINKLOCAL,STABLEADDR>
+```
+
 为确保此配置在重启后仍然生效，需在 **/etc/rc.conf** 文件中添加以下条目：
 
 ```sh
-ifconfig_em0="ether b8:ee:65:5b:32:59"
+ifconfig_em0="ether 20:0d:b0:c4:ab:59"
 wlans_rtwn0="wlan0"
 ifconfig_wlan0="WPA"
-create_args_wlan0="country FR"
 cloned_interfaces="lagg0"
 ifconfig_lagg0="up laggproto failover laggport em0 laggport wlan0 DHCP"
 ```
