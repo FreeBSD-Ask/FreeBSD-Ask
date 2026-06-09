@@ -9,7 +9,7 @@
 不同邮件列表有不同的受众和讨论主题：
 
 | 邮件列表 | 用途 |
-|---|---|
+| -------- | ---- |
 | **freebsd-current** | 用于讨论 FreeBSD 当前开发分支（-CURRENT）的相关话题，适合关注最新开发动态的用户和开发者 |
 | **freebsd-stable** | 用于讨论 FreeBSD 稳定分支（-STABLE）的相关话题 |
 | **freebsd-questions** | 适合初学者和一般用户提问 |
