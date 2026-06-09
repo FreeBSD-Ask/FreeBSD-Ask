@@ -2,7 +2,15 @@
 
 压缩和解压工具是计算机文件管理中的基础工具。数据压缩利用信息的统计冗余性，通过编码算法减少数据表示所需的存储空间。根据是否允许信息丢失，压缩算法可分为无损压缩（lossless compression）和有损压缩（lossy compression）两大类。本节所涉及的工具均采用无损压缩算法，即解压后的数据与原始数据完全一致。
 
-常见的无损压缩算法包括：DEFLATE（结合 LZ77 与 Huffman 编码，用于 zip/gzip）、LZMA/LZMA2（用于 xz）、LZ4（高速压缩）、Zstandard（兼顾速度与压缩率，用于 zstd）以及 bzip2（基于 Burrows-Wheeler 变换）。这些算法在压缩率与压缩/解压速度之间存在不同的权衡点，用户可根据实际场景选择。
+常见的无损压缩算法及其特征如下：
+
+| 算法 | 所用格式 | 技术基础 | 特点 |
+| ---- | -------- | -------- | ---- |
+| DEFLATE | zip/gzip | LZ77 + Huffman 编码 | 经典通用 |
+| LZMA/LZMA2 | xz | LZMA 链式压缩 | 高压缩率 |
+| LZ4 | lz4 | 字节级 LZ77 | 极高速度 |
+| Zstandard | zstd | 有限状态熵 + LZ77 | 兼顾速度与压缩率 |
+| bzip2 | bz2 | Burrows-Wheeler 变换 + Huffman | 较高压缩率，速度较慢 |
 
 ## zip
 
