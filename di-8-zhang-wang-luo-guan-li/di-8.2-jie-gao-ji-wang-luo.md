@@ -139,6 +139,42 @@ traceroute6 to freebsd.org (2610:1c1:1:606c::50:15) from 240e:341:22b:ae00:f534:
 | 13 | **2610:1c1::803 (2610:1c1::803)** | NYInternet 核心骨干节点，负责 freebsd.org 服务器的流量分发 |
 | 14 | **wfe0.nyi.freebsd.org (2610:1c1:1:606c::50:15)** | freebsd.org 服务器终端节点，traceroute6 的目标 |
 
+## 网卡别名
+
+FreeBSD 的常见用途之一是虚拟站点托管，其中一台服务器在网络中表现为多个服务器。这是通过将多个网络地址分配给单个接口来实现的。
+
+一个网络接口有一个“真实”地址，但可以拥有任意数量的“别名”地址。这些别名通常通过在 **/etc/rc.conf** 中添加别名条目来实现，如下所示：
+
+```sh
+# sysrc ifconfig_fxp0_alias0="inet xxx.xxx.xxx.xxx netmask xxx.xxx.xxx.xxx"
+```
+
+别名条目必须以 `alias0` 开头，使用递增的数字，如 `alias0`、`alias1`，依此类推。配置过程将在第一个缺失的数字处停止。
+
+别名子网掩码的计算非常重要。对于给定的接口，必须有一个地址正确表示网络的子网掩码。任何其他属于该网络的地址必须使用全 `1` 的子网掩码，表示为 `255.255.255.255` 或 `0xffffffff`。
+
+例如，考虑以下情况：`fxp0` 接口连接到两个网络：`10.1.1.0`，子网掩码为 `255.255.255.0`，以及 `202.0.75.16`，子网掩码为 `255.255.255.240`。系统需要配置为在范围 `10.1.1.1` 到 `10.1.1.5` 和 `202.0.75.17` 到 `202.0.75.20` 中出现。只有给定网络范围中的第一个地址应具有实际的子网掩码。其余地址（`10.1.1.2` 到 `10.1.1.5` 和 `202.0.75.18` 到 `202.0.75.20`）必须配置为子网掩码为 `255.255.255.255`。
+
+以下 **/etc/rc.conf** 条目将接口配置为适应此场景：
+
+```sh
+# sysrc ifconfig_fxp0="inet 10.1.1.1 netmask 255.255.255.0"
+# sysrc ifconfig_fxp0_alias0="inet 10.1.1.2 netmask 255.255.255.255"
+# sysrc ifconfig_fxp0_alias1="inet 10.1.1.3 netmask 255.255.255.255"
+# sysrc ifconfig_fxp0_alias2="inet 10.1.1.4 netmask 255.255.255.255"
+# sysrc ifconfig_fxp0_alias3="inet 10.1.1.5 netmask 255.255.255.255"
+# sysrc ifconfig_fxp0_alias4="inet 202.0.75.17 netmask 255.255.255.240"
+# sysrc ifconfig_fxp0_alias5="inet 202.0.75.18 netmask 255.255.255.255"
+# sysrc ifconfig_fxp0_alias6="inet 202.0.75.19 netmask 255.255.255.255"
+# sysrc ifconfig_fxp0_alias7="inet 202.0.75.20 netmask 255.255.255.255"
+```
+
+一种更简洁的表达方式是使用以空格分隔的 IP 地址范围。第一个地址将使用指定的子网掩码，而额外的地址将使用子网掩码 `255.255.255.255`。
+
+```sh
+# sysrc ifconfig_fxp0_aliases="inet 10.1.1.1-5/24 inet 202.0.75.17-20/28"
+```
+
 ## TCP/IP 协议栈
 
 传输控制协议（Transmission Control Protocol，TCP）是互联网协议族（Internet Protocol Suite）中的核心传输层协议，软件实现体系称作 TCP 栈（采用层次化结构进行组织，因此称“栈”）。Vint Cerf 和 Bob Kahn 于 1974 年在论文《A Protocol for Packet Network Intercommunication》中首次提出 TCP 的核心思想（当时为传输与网络转发合一的单一协议），后经迭代，约在 1978 至 1979 年间决定将 TCP 与 IP 拆分为两个独立协议，并于 1981 年 9 月分别发布为 RFC 791（IP）和 RFC 793（TCP）。RFC 9293 已于 2022 年 8 月取代了 RFC 793，前者为当前 TCP 协议的最新标准规范。

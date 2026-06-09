@@ -86,8 +86,6 @@
 * [8.4 USB 网络共享（USB tethering）](di-8-zhang-wang-luo-guan-li/di-8.4-jie-usb-wang-luo-gong-xiang-usb-tethering.md)
 * [8.5 蓝牙](di-8-zhang-wang-luo-guan-li/di-8.5-jie-lan-ya.md)
 * [8.6 系统代理](di-8-zhang-wang-luo-guan-li/di-8.6-jie-xi-tong-dai-li.md)
-* [8.7 V2Ray](di-8-zhang-wang-luo-guan-li/di-8.7-jie-v2ray.md)
-* [8.8 Mihomo](di-8-zhang-wang-luo-guan-li/di-8.8-jie-mihomo.md)
 
 ## 第 9 章 X Window 系统
 
@@ -336,6 +334,8 @@
 * [FreeBSD 邮件列表订阅](fu-lu1/freebsd-you-jian-lie-biao-ding-yue.md)
 * [FreeBSD 开发参与指南](fu-lu1/freebsd-kai-fa-can-yu-zhi-nan.md)
 * [microSD 卡参数简介](fu-lu1/cun-chu-ka.md)
+* [V2Ray](fu-lu1/v2ray.md)
+* [Mihomo](fu-lu1/mihomo.md)
 
 ## 附录 II 参考文献与术语表
 
