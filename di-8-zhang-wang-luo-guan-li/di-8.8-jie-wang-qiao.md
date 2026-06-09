@@ -373,16 +373,18 @@ ifconfig_em1="up"
 
 ```sh
 # 创建网桥
-ifconfig bridge0 create
+# ifconfig bridge0 create
 
-# 把两个网卡加入网桥
-ifconfig bridge0 addm em0 addm em1
+# 把两块网卡加入网桥
+# ifconfig bridge0 addm em0 addm em1
 
 # 开启 STP 功能
 # ifconfig bridge0 stp em0 stp em1
 
 # 启动网桥
-ifconfig bridge0 up
+# ifconfig bridge0 up
+# ifconfig em0 up
+# ifconfig em1 up
 ```
 
 查看该网桥：
