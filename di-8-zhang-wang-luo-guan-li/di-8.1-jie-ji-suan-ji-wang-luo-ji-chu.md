@@ -294,6 +294,3 @@ traceroute6 to freebsd.org (2610:1c1:1:606c::50:15) from 240e:341:22b:ae00:f534:
 | 12 | **cs89-cs80.nyinternet.net (2610:1c1::2502)** | NYInternet 美国运营商核心路由器，接入 freebsd.org 网络 |
 | 13 | **2610:1c1::803 (2610:1c1::803)** | NYInternet 核心骨干节点，负责 freebsd.org 服务器的流量分发 |
 | 14 | **wfe0.nyi.freebsd.org (2610:1c1:1:606c::50:15)** | freebsd.org 服务器终端节点，traceroute6 的目标 |
-
-
-
