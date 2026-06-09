@@ -2,7 +2,7 @@
 
 VLAN（虚拟局域网）是一个局域网的逻辑分段（每个段都拥有自己的广播域）。VLAN 与局域网的其他分段隔离，并且只有通过具有过滤功能的连接单元才能被在其他分段上的计算机访问。
 
-在 FreeBSD 上，VLAN 必须由网络卡驱动程序支持。要查看哪些驱动程序支持 VLAN，请参阅 [vlan(4)](https://man.freebsd.org/cgi/man.cgi?query=vlan&sektion=4&format=html) 手册页。
+在 FreeBSD 上，VLAN 硬件卸载功能需要网卡驱动程序支持；若驱动不支持，VLAN 标签处理将由软件完成，但性能可能受影响。要查看哪些驱动程序支持 VLAN 硬件卸载，请参阅 [vlan(4)](https://man.freebsd.org/cgi/man.cgi?query=vlan&sektion=4&format=html) 手册页。
 
 在配置 VLAN 时，需要知道几个信息。首先，哪个网络接口？其次，VLAN 标签是什么？
 
