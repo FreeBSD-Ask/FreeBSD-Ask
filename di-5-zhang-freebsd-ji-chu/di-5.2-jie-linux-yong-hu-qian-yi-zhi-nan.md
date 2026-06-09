@@ -37,9 +37,11 @@ freebsd-src = 基本系统存储库 = 用户空间 + 内核。
 
 FreeBSD 版本分支分为三个主要系列：
 
-- **CURRENT**：开发版，对应 main 分支；
-- **STABLE**：固定分支，对应 stable/15 等分支；
-- **RELEASE**：正式发布版本，对应 releng/15.0 等分支。
+| 分支 | 类型 | 对应分支示例 |
+| ---- | ---- | ------------ |
+| CURRENT | 开发版 | main |
+| STABLE | 固定分支 | stable/15 |
+| RELEASE | 正式发布版本 | releng/15.0 |
 
 新特性首先提交到 CURRENT（main 分支），经测试后 MFC 到 STABLE 分支，再进入点版本 RELEASE。stable/ 分支从 main 分支切出，大版本（dot-zero 版本）的 releng/ 分支再从 stable/ 分支切出，点版本则从 stable/ 分支发布。
 
