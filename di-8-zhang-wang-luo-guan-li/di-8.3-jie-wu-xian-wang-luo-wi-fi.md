@@ -144,8 +144,10 @@ psk="freebsdcn"
 
 配置说明：
 
-- `ssid` 指定要连接的无线网络 SSID（Wi-Fi 名称），此处示例为 `test_5G`
-- `psk` 指定无线网络的密码，此处示例为 `freebsdcn`
+| 参数 | 说明 |
+| ---- | ---- |
+| `ssid` | 指定要连接的无线网络 SSID（Wi-Fi 名称），此处示例为 `test_5G` |
+| `psk` | 指定无线网络的密码，此处示例为 `freebsdcn` |
 
 如果无法获取无线网络的服务集标识符（SSID）和预共享密钥（PSK，Pre-Shared Key），可联系网络管理员或重置网络设备以获取凭据。
 
