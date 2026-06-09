@@ -14,7 +14,7 @@
 | 自由软件 | / | 赋予用户运行、复制、分发、研究、修改和改进软件自由的软件 |
 | copyleft | 著佐权 | 通过类似 GPL 的许可证条款，对衍生作品施加版权约束，例如要求源代码公开 |
 | 开源软件 | / | 源代码公开、允许用户自由使用、修改和分发的软件 |
-| 专有软件 | / | Proprietary Software，非自由软件，又称为私有软件。用户无权自由使用、修改和分发的软件，大部分商业软件属此类型 |
+| 专有软件 | / | Proprietary Software，非自由软件的一种，又称为私有软件。用户无权自由使用、修改和分发的软件，大部分商业软件属此类型 |
 | 许可证 | / | License，授权他人使用、修改或分发软件的法律协议 |
 | GNU | / | GNU's Not Unix，自由软件基金会发起的操作系统项目 |
 | GPL | / | GNU General Public License，GNU 通用公共许可证，一种强 copyleft 许可证 |
@@ -30,7 +30,7 @@
 | STABLE | / | FreeBSD 的固定开发分支，提供 ABI 稳定性保证，但仍处于开发阶段 |
 | CURRENT | / | FreeBSD 的主要开发分支，对应一般项目中的 head 或 main 分支，包含最新的代码变更但可能不稳定 |
 | MFC | 合并自 CURRENT | Merge From CURRENT，FreeBSD 开发流程中将 CURRENT 分支的更改合并到稳定分支的过程 |
-| Jail | / | 一种在 Chroot 基础上发展而来的操作系统级隔离技术，通过命名空间隔离、资源限制等机制实现轻量级虚拟化，是现代容器技术的重要早期实践之一 |
+| Jail | / | 一种在 Chroot 基础上发展而来的操作系统级隔离技术，通过文件系统、进程、网络和用户等维度的隔离机制实现轻量级虚拟化，是现代容器技术的重要早期实践之一 |
 | ZFS | / | 最初为 Zettabyte File System 的缩写，后官方不再将其视为缩写。一种集成了文件系统和逻辑卷管理器的先进存储系统，采用写时复制事务模型，具有强大的数据完整性保护机制、高效的数据压缩功能与可扩展存储架构 |
 | OpenZFS | / | ZFS 的开源社区版本，统一了 ZFS 的开源开发 |
 | bhyve | / | BSD Hypervisor，FreeBSD 内置的虚拟机管理程序（hypervisor） |
@@ -44,7 +44,7 @@
 | Ports | / | FreeBSD 的软件包管理系统，包含所有 Port 的集合，用于从源代码编译和安装软件 |
 | Ports Collection | / | Ports 系统的完整集合，包含软件分类目录、构建工具和依赖管理机制 |
 | pkg | / | FreeBSD 的二进制包管理器，用于安装、更新和管理预编译的软件包，旧称 pkgng |
-| PkgBase | / | FreeBSD 的基本系统包管理方案，使用 pkg 包管理器来实现用户空间和内核的更新，于 FreeBSD 14.0 首次引入，自 FreeBSD 15.0 起以技术预览（Technology Preview）形式提供完整安装选项 |
+| PkgBase | / | FreeBSD 的基本系统包管理方案，使用 pkg 包管理器来实现用户空间和内核的更新，自 FreeBSD 15.0 起以技术预览（Technology Preview）形式提供 |
 | freebsd-update | / | FreeBSD 基本系统更新工具，用于获取安全更新和执行系统版本升级 |
 | Poudriere | / | FreeBSD 工具，通过 Jail 环境测试 Port 并构建 FreeBSD 软件包镜像 |
 | 安全启动 | / | Secure Boot，基于 UEFI 固件的安全机制，通过数字签名验证引导加载程序和操作系统内核的完整性 |
@@ -130,8 +130,8 @@
 | ASLR | 地址空间布局随机化 | Address Space Layout Randomization，一种安全缓解技术，通过随机化进程的内存布局增加攻击难度 |
 | DAC | 自主访问控制 | Discretionary Access Control，标准 Unix 安全模型，资源所有者可自主决定访问权限 |
 | ACL | 访问控制列表 | Access Control List，一种以对象为中心的访问控制机制，提供比传统 Unix 权限更细粒度的控制 |
-| CHERI | / | Capability Hardware Enhanced RISC Instructions，由剑桥大学和 SRI International 开发的 CPU 架构扩展，与 Capsicum 同为 Robert N.M. Watson 主导的项目，但两者为平行研究，非衍生关系 |
-| Container | 容器 | 一种轻量级的操作系统级虚拟化技术，通过命名空间隔离和控制组等机制实现进程的隔离与资源限制 |
+| CHERI | / | Capability Hardware Enhanced RISC Instructions，由剑桥大学和 SRI International 开发的 CPU 架构扩展，与 Capsicum 同为 Robert N.M. Watson 主导的项目，CHERI 在概念上受 Capsicum 启发，将能力模型从软件扩展至硬件，但两者为独立项目，非衍生关系 |
+| Container | 容器 | 一种轻量级的操作系统级虚拟化技术，通过隔离机制和资源限制等手段实现进程的隔离与资源控制 |
 | NAT | 网络地址转换 | Network Address Translation，将 IP 数据包头部中的地址转换为另一个地址的技术 |
 | 代理服务器 | / | Proxy Server，充当客户端与服务器之间中介的服务器，转发请求和响应 |
 | 防火墙 | / | Firewall，在网络之间执行访问控制策略的系统，通过允许或拒绝数据包的传输来保护网络安全 |
@@ -152,7 +152,7 @@
 | OpenBSD | / | 1995 年由 Theo de Raadt 从 NetBSD 分叉创立的注重安全的 BSD 操作系统 |
 | NetBSD | / | 于 1993 年创立的注重可移植性的 BSD 操作系统 |
 | DragonFly BSD | / | 于 2003 年由 Matthew Dillon 从 FreeBSD 4.8 分叉出来的 BSD 操作系统 |
-| LLVM | / | 指一组模块化和可重用的编译程序和工具链技术项目（参见 LLVM Project. LLVM FAQ[EB/OL]. [2026-04-16]. <https://llvm.org/>。该页面为 LLVM 官方概览页） |
+| LLVM | / | LLVM 不是缩写（曾代表 Low Level Virtual Machine，后官方不再将其视为缩写），指一组模块化和可重用的编译程序和工具链技术项目（参见 LLVM Project. LLVM FAQ[EB/OL]. [2026-04-16]. <https://llvm.org/>。该页面为 LLVM 官方概览页） |
 | 编译程序 | / | Compiler，又称编译器，将高级编程语言源代码翻译为机器码或中间代码的程序 |
 | 解释程序 | / | Interpreter，又称解释器，逐条读取并执行高级编程语言源代码的程序 |
 | Clang | / | LLVM 项目的 C/C++ 语言前端和工具基础设施 |
@@ -185,7 +185,7 @@
 | sysctl | / | System Control，FreeBSD 内核运行时参数的读取和设置接口 |
 | securelevel | / | 安全级别，FreeBSD 内核的安全等级机制，级别越高限制越严格 |
 | rctl | / | Resource Control，FreeBSD 的资源限制工具 |
-| mac_bsdextended | / | FreeBSD 的强制访问控制（MAC）策略模块 |
+| mac_bsdextended | / | FreeBSD 的强制访问控制（MAC）策略模块，为文件系统提供类防火墙规则的访问控制 |
 | devd | / | Device Daemon，FreeBSD 的设备状态守护进程，响应硬件事件 |
 | powerd | / | Power Daemon，FreeBSD 的电源管理守护进程 |
 | cron | / | Unix 系统的定时任务执行守护进程，用于按预定时间自动执行任务 |
@@ -193,8 +193,8 @@
 | mtree | / | FreeBSD 的目录树规范和验证工具 |
 | authpf | / | Authenticating Gateway User Shell，PF 防火墙的认证网关 shell |
 | Unbound | / | 一种验证型递归 DNS 服务器 |
-| Kyua | / | FreeBSD 的自动化测试框架 |
-| 内存盘 | / | RAM Disk / mfsBSD，将内存模拟为磁盘设备的技术，数据存储在内存中，断电后丢失 |
+| Kyua | / | FreeBSD 基本系统采用的自动化测试框架，用于运行回归测试。最初为 NetBSD 项目开发，后被 FreeBSD 纳入基本系统 |
+| 内存盘 | / | RAM Disk，将内存模拟为磁盘设备的技术，数据存储在内存中，断电后丢失。FreeBSD 通过 mdconfig 和 md(4) 驱动提供内存盘功能。mfsBSD 是一种基于内存盘运行的极简 FreeBSD 发行版 |
 | GRUB | / | Grand Unified Bootloader，一种通用的多操作系统引导加载程序 |
 | init | / | UNIX 系统中进程号为 1 的初始化进程，负责系统启动后的初始化工作 |
 | 调试器 | / | Debugger，用于检测和定位程序错误的工具 |

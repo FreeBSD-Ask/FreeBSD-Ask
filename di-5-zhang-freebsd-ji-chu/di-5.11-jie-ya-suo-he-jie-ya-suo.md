@@ -37,7 +37,7 @@ $ zip test.zip test # 压缩成 zip 文件
 
 ### zip 解压
 
-zip 文件解压时，需要安装 `unzip` 工具（FreeBSD 基本系统自带的 `unzip` 基于 libarchive，功能有限；如需完整功能，可通过 `pkg install unzip` 安装 Info-ZIP 版本）。
+zip 文件解压时，需要安装 `unzip` 工具（FreeBSD 基本系统自带的 `bsdunzip` 基于 libarchive，功能有限；如需完整功能，可通过 `pkg install unzip` 安装 Info-ZIP 版本）。
 
 ```sh
 $ unzip test.zip # 解压 zip 文件到当前路径
@@ -79,10 +79,12 @@ $ tar -xvf test.tar -C /home/ykla/mytest # 解压 test.tar 到指定路径
 
 选项说明：
 
-- `x`：Extract，解压
-- `v`：verbose，输出详细信息模式
-- `f`：file，指定文件
-- `C`：即 cd，指定路径
+| 选项 | 含义 |
+| ---- | ---- |
+| `x` | Extract，解压 |
+| `v` | verbose，输出详细信息模式 |
+| `f` | file，指定文件 |
+| `C` | 即 cd，指定路径 |
 
 ## xz
 

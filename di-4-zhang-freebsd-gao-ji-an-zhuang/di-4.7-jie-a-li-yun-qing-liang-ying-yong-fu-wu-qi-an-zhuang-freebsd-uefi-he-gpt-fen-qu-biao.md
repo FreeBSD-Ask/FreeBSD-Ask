@@ -185,11 +185,13 @@ default via 172.24.63.253 dev eth0 proto dhcp src 172.24.0.80 metric 100
 
 参数说明：
 
-- `wget -qO- URL`：`-q` 静默模式，不显示下载过程；`-O-` 将下载内容输出到标准输出（stdout）
-- `xzcat`：解压 xz 格式文件，并将解压后的内容输出到标准输出
-- `dd of=/dev/vda`：将输入写入 **/dev/vda** 设备，注意不是某个分区，是写入整块磁盘。
-- `bs=4M`：设置块大小为 4 MB，提高写入效率
-- `status=progress`：显示 dd 的写入进度
+| 参数 | 说明 |
+| ---- | ---- |
+| `wget -qO- URL` | `-q` 静默模式，不显示下载过程；`-O-` 将下载内容输出到标准输出（stdout） |
+| `xzcat` | 解压 xz 格式文件，并将解压后的内容输出到标准输出 |
+| `dd of=/dev/vda` | 将输入写入 **/dev/vda** 设备（整块磁盘，不是某个分区） |
+| `bs=4M` | 设置块大小为 4 MB，提高写入效率 |
+| `status=progress` | 显示 dd 的写入进度 |
 
 ![写入 FreeBSD ZFS 镜像到整块硬盘](../.gitbook/assets/cloud-zfs-write-disk.png)
 

@@ -20,7 +20,7 @@ FreeBSD 中文社区. 08-腾讯云轻量云及其他服务器安装 FreeBSD[EB/O
 
 上述服务器的管理面板未提供 FreeBSD 镜像，因此需要采用变通方法安装。由于 FreeBSD 与 Linux 在内核及可执行文件格式上不兼容，无法在 `chroot` 后删除原系统来安装。安装方法为：首先在内存盘中启动 FreeBSD 系统（即先引导 [mfsBSD](https://mfsbsd.vx.sk)），随后格式化硬盘并安装新系统。mfsBSD 是完全载入内存的 FreeBSD 系统，类似于 Windows PE（Preinstallation Environment）环境。
 
-需要下载 [img 格式的 mfsBSD 镜像](https://mfsbsd.vx.sk/files/images/14/amd64/mfsbsd-se-14.2-RELEASE-amd64.img)，可提前下载后通过 WinSCP 上传至服务器；如果直接在服务器上下载，可能耗时较长（约两小时）。
+需要下载 img 格式的 mfsBSD 镜像（可从 [mfsBSD 官方下载页](https://mfsbsd.vx.sk/) 获取，选择 USB memstick images 中对应版本的 special edition），可提前下载后通过 WinSCP 上传至服务器；如果直接在服务器上下载，可能耗时较长（约两小时）。
 
 ## 取消隐藏的 GRUB 菜单
 
@@ -66,7 +66,7 @@ mfsBSD 和 mfsLinux 镜像的默认 `root` 密码均为 `mfsroot`。
 
 ```sh
 # cd /tmp # 切换至临时目录
-# wget https://mfsbsd.vx.sk/files/images/14/amd64/mfsbsd-se-14.2-RELEASE-amd64.img # 下载 mfsBSD 镜像
+# wget https://mfsbsd.vx.sk/files/images/14/amd64/mfsbsd-se-14.2-RELEASE-amd64.img # 下载 mfsBSD 镜像（URL 以官网实际提供为准）
 # dd if=mfsbsd-se-14.2-RELEASE-amd64.img of=/dev/vda # 请确认硬盘设备是否为 /dev/vda
 # reboot # 重启系统
 ```

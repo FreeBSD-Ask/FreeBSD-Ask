@@ -35,7 +35,7 @@
 
 | 封面/书名 | 作者/译者 | ISBN/出版社 | 说明 |
 | --------- | --------- | ----------- | ---- |
-| ![Unix 四分之一世纪](../.gitbook/assets/unix25.png) <br><br> 《Unix 四分之一世纪》 | Peter H. Salus | 978-0201547771 <br><br> Addison-Wesley Professional | UNIX 发展历史书籍，详细记录了 Unix 从诞生到普及的技术演进历程 |
+| ![Unix 四分之一世纪](../.gitbook/assets/unix25.png) <br><br> 《Unix 四分之一世纪》 | Peter H. Salus | 978-0-201-54777-1 <br><br> Addison-Wesley Professional | UNIX 发展历史书籍，详细记录了 Unix 从诞生到普及的技术演进历程 |
 | ![Unix 痛恨者手册](../.gitbook/assets/unixno.png) <br><br> 《Unix 痛恨者手册》 | Simson Garfinkel、Daniel Weise、Steven Strassmann | 978-1-56884-203-5 <br><br> IDG Books Worldwide, Inc. | Unix 技术批评书籍，从批评视角分析 Unix 系统的设计缺陷和技术局限性 |
 | ![大教堂与集市](../.gitbook/assets/dajiaotang.png) <br><br> 《大教堂与集市》 | [美] Eric S. Raymond <br><br> 卫剑钒 译 | 978-7-111-45247-8 <br><br> 机械工业出版社 | 开源运动历史书籍，阐释集中式与分布式两种软件开发模式的差异 |
 | ![UNIX 传奇：历史与回忆](../.gitbook/assets/unixchuanqi.png) <br><br> 《UNIX 传奇：历史与回忆》 | [美] Brian W. Kernighan 著 <br><br> 韩磊 译 | 978-7-115-55717-9 <br><br> 人民邮电出版社 | UNIX 发展历史书籍，记录 Unix 技术发展的关键节点和历史背景 |
@@ -129,8 +129,8 @@ Lions J. 莱昂氏 UNIX 源代码分析[M]. 尤晋元, 译. 北京: 机械工业
 
 ### 早期中文 FreeBSD 文献（2000 年代）
 
-- 王波. FreeBSD 使用大全[M]. 北京：机械工业出版社，1999. ISBN: 978-7-111-07482-3. 国内最早的 FreeBSD 中文入门书籍之一，出版于 1999 年。作者王波是早期 FreeBSD 中文社区的重要推动者。
-- 王波. FreeBSD 使用大全[M]. 第 2 版. 北京：机械工业出版社，2002. ISBN: 978-7-111-10286-1. FreeBSD 中文入门书籍修订版，技术内容更新并在台湾地区发行。
+- 王波. FreeBSD 使用大全[M]. 北京: 机械工业出版社, 1999. ISBN: 978-7-111-07482-3. 国内最早的 FreeBSD 中文入门书籍之一，出版于 1999 年。作者王波是早期 FreeBSD 中文社区的重要推动者。
+- 王波. FreeBSD 使用大全[M]. 第 2 版. 北京: 机械工业出版社, 2002. ISBN: 978-7-111-10286-1. FreeBSD 中文入门书籍修订版，技术内容更新并在台湾地区发行。
 - 冯宝坤, 陈子鸿. FreeBSD 完全攻略[M]. 北京: 中国物资出版社; 北京: 北京希望电子出版社, 2004. ISBN: 978-7-5047-2160-0. 早期 FreeBSD 中文入门文献。
 
 这些书籍反映了二十一世纪初中文世界对 FreeBSD 操作系统的早期探索，具有历史研究价值。由于技术快速迭代，书中的具体技术内容大多已过时。
