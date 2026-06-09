@@ -496,4 +496,4 @@ bridge0: flags=1008843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST,LOWER_UP> metric 0
 
 ## 参考文献
 
-- H3C. H3C 交换机配置 VLAN 与 Trunk 的应用示例[EB/OL]. [2026-06-09]. <https://www.h3c.com/cn/d_200805/605742_30003_0.htm>. 关于网桥的简介参照此处。
+- H3C. 网桥技术介绍[EB/OL]. [2026-06-09]. <https://www.h3c.com/cn/d_200805/605742_30003_0.htm>. 关于网桥的简介参照此处。
