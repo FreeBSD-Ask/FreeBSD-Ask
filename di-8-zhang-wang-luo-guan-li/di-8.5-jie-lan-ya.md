@@ -33,11 +33,13 @@ bthidd_enable="YES"
 
 相关组件说明：
 
-- `ng_ubt`：Netgraph USB 蓝牙驱动，为 USB 蓝牙适配器提供传输层支持，是蓝牙协议栈的基础驱动。
-- `hcsecd`：管理蓝牙设备的链路密钥和 PIN 码，负责蓝牙设备的安全认证。
-- `sdpd`：蓝牙服务发现协议（Service Discovery Protocol）守护进程，负责发现和通告蓝牙服务。
-- `bthidd`：支持 Bluetooth HID（Human Interface Device）设备，如蓝牙鼠标、键盘等。
-- `hccontrol`：通过 hccontrol(8) 可控制蓝牙 HCI 底层接口，包括查询设备状态、扫描附近设备、管理连接等操作，是蓝牙调试的核心工具。
+| 组件 | 说明 |
+| ------ | ------ |
+| `ng_ubt` | Netgraph USB 蓝牙驱动，为 USB 蓝牙适配器提供传输层支持，是蓝牙协议栈的基础驱动 |
+| `hcsecd` | 管理蓝牙设备的链路密钥和 PIN 码，负责蓝牙设备的安全认证 |
+| `sdpd` | 蓝牙服务发现协议（Service Discovery Protocol）守护进程，负责发现和通告蓝牙服务 |
+| `bthidd` | 支持 Bluetooth HID（Human Interface Device）设备，如蓝牙鼠标、键盘等 |
+| `hccontrol` | 通过 hccontrol(8) 可控制蓝牙 HCI 底层接口，包括查询设备状态、扫描附近设备、管理连接等操作，是蓝牙调试的核心工具 |
 
 ## 蓝牙鼠标配对
 
