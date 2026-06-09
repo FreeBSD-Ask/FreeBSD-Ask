@@ -155,24 +155,20 @@ FreeBSD 在中国大陆境内为数不多且能正常同步的镜像站，均未
 
 FreeBSD 目前在大陆有若干个非官方镜像站：
 
-- 中国科学技术大学镜像站（USTC）（pkg、ports、pub）<https://mirrors.ustc.edu.cn/>
-  - FreeBSD Pub <https://mirrors.ustc.edu.cn/freebsd/>
-  - FreeBSD Packages <https://mirrors.ustc.edu.cn/freebsd-pkg/>
-  - FreeBSD Ports
-    - [使用文档](https://mirrors.ustc.edu.cn/help/freebsd-ports.html)
-    - <https://mirrors.ustc.edu.cn/freebsd-ports/>
-  - 联系方式：[lug@ustc.edu.cn](mailto:lug@ustc.edu.cn)
-
-- 网易 163 镜像站（pkg 和 ports 上游均为中国科学技术大学）<https://mirrors.163.com/>
-  - FreeBSD Pub <https://mirrors.163.com/freebsd/>
-  - FreeBSD Packages <https://mirrors.163.com/freebsd-pkg/>
-  - FreeBSD Ports <https://mirrors.163.com/freebsd-ports/>
-
-- 南京大学开源镜像站（pkg 和 ports 上游均为中国科学技术大学）<https://mirrors.nju.edu.cn/>
-  - FreeBSD Pub <https://mirrors.nju.edu.cn/freebsd/>
-  - FreeBSD Packages <https://mirrors.nju.edu.cn/freebsd-pkg/>
-  - FreeBSD Ports <https://mirrors.nju.edu.cn/freebsd-ports/>
-  - 联系方式：[GitHub Issue](https://github.com/nju-lug/NJU-Mirror-Issue/issues)
+| 镜像站 | 服务类型 | 链接 | 备注 |
+| ------ | -------- | ---- | ---- |
+| 中国科学技术大学镜像站（USTC） | pkg、ports、pub | <https://mirrors.ustc.edu.cn/> | 联系方式：[lug@ustc.edu.cn](mailto:lug@ustc.edu.cn) |
+| 中国科学技术大学镜像站（USTC） | FreeBSD Pub | <https://mirrors.ustc.edu.cn/freebsd/> | / |
+| 中国科学技术大学镜像站（USTC） | FreeBSD Packages | <https://mirrors.ustc.edu.cn/freebsd-pkg/> | / |
+| 中国科学技术大学镜像站（USTC） | FreeBSD Ports | <https://mirrors.ustc.edu.cn/freebsd-ports/> | [使用文档](https://mirrors.ustc.edu.cn/help/freebsd-ports.html) |
+| 网易 163 镜像站 | pkg、ports（上游均为 USTC） | <https://mirrors.163.com/> | / |
+| 网易 163 镜像站 | FreeBSD Pub | <https://mirrors.163.com/freebsd/> | / |
+| 网易 163 镜像站 | FreeBSD Packages | <https://mirrors.163.com/freebsd-pkg/> | / |
+| 网易 163 镜像站 | FreeBSD Ports | <https://mirrors.163.com/freebsd-ports/> | / |
+| 南京大学开源镜像站 | pkg、ports（上游均为 USTC） | <https://mirrors.nju.edu.cn/> | 联系方式：[GitHub Issue](https://github.com/nju-lug/NJU-Mirror-Issue/issues) |
+| 南京大学开源镜像站 | FreeBSD Pub | <https://mirrors.nju.edu.cn/freebsd/> | / |
+| 南京大学开源镜像站 | FreeBSD Packages | <https://mirrors.nju.edu.cn/freebsd-pkg/> | / |
+| 南京大学开源镜像站 | FreeBSD Ports | <https://mirrors.nju.edu.cn/freebsd-ports/> | / |
 
 FreeBSD 官方联系方式：
 
