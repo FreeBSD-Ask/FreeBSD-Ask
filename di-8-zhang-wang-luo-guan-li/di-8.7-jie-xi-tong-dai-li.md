@@ -58,7 +58,7 @@ $ echo $SHELL
 
 ## 配置 Git 代理
 
-Git 支持通过 `http.proxy` 和 `core.gitProxy` 等配置项设置代理，详见本书软件管理相关章节。
+Git 支持通过 `http.proxy` 和 `core.gitProxy` 等配置项设置代理。
 
 ## 为浏览器配置代理
 
