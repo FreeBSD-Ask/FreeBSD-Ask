@@ -4,7 +4,7 @@ FreeBSD 支持多种无线网卡和认证方式。
 
 > **技巧**
 >
-> Wi-Fi 并不是任何单词的缩写。该词仅为 [Wi-Fi 联盟](https://www.wi-fi.org/)（Wi-Fi Alliance）持有的注册商标，并无任何引申义，如“Wireless Fidelity”。（Doctorow C. WiFi isn’t short for “Wireless Fidelity”[EB/OL]. (2005-11-08)[2026-04-21]. <https://boingboing.net/2005/11/08/wifi-isnt-short-for.html>.）
+> Wi-Fi 并不是任何单词的缩写。该词仅为 [Wi-Fi 联盟](https://www.wi-fi.org/)（Wi-Fi Alliance）持有的注册商标，并无“Wireless Fidelity”等引申含义。（Doctorow C. WiFi isn’t short for “Wireless Fidelity”[EB/OL]. (2005-11-08)[2026-04-21]. <https://boingboing.net/2005/11/08/wifi-isnt-short-for.html>.）
 
 ## 快速连接（基于 COMFAST CF-912AC 1200M 802.11AC）
 
@@ -129,7 +129,7 @@ test_5G                           50:d6:c5:93:d7:64   36   54M  -78:-95   100 EP
 
 ### 使用 WPA2 认证
 
-加密无线网络需要使用 Wi-Fi 保护访问（Wi-Fi Protected Access，WPA）配置文件连接。WPA2 是当前 FreeBSD 支持的无线网络安全协议，提供数据加密和身份认证功能（截至 2025 年末，FreeBSD 基本系统暂不支持 WPA3/SAE）。
+加密无线网络需要使用 Wi-Fi 保护访问（Wi-Fi Protected Access，WPA）配置文件连接。WPA2 是 FreeBSD 当前支持的无线网络安全协议，提供数据加密和身份认证功能（截至 2025 年末，FreeBSD 基本系统暂不支持 WPA3/SAE）。
 
 无线网络中的认证过程由 wpa_supplicant(8) 管理。可使用 wpa_passphrase(8) 工具将 SSID 和明文密码转换为安全的 PSK 配置条目，避免在配置文件中直接书写明文密码。此外，wpa_cli(8) 提供了 wpa_supplicant 的交互式命令行管理接口，可用于运行时调试和状态查询。创建 **/etc/wpa_supplicant.conf** 配置文件，内容如下：
 
@@ -242,7 +242,7 @@ psk="WIFI 密码"
 
 ## 博通（Broadcom）网卡驱动
 
-博通（Broadcom）是另一家常用的无线网卡厂商。FreeBSD 内置的 Broadcom 网卡驱动主要有两种：`bwi` 和 `bwn`。`bwi` 支持较旧型号，`bwn` 支持较新型号，两者的支持范围部分重叠，但 `bwn` 对硬件的兼容性更好。这两个驱动仅支持 802.11b/g，现代 802.11ac/ax 博通网卡在 FreeBSD 上尚无原生驱动支持。
+博通（Broadcom）是另一家常见的无线网卡厂商。FreeBSD 内置的 Broadcom 网卡驱动主要有两种：`bwi` 和 `bwn`。`bwi` 支持较旧型号，`bwn` 支持较新型号，两者的支持范围部分重叠，但 `bwn` 对硬件的兼容性更好。这两个驱动仅支持 802.11b/g，现代 802.11ac/ax 博通网卡在 FreeBSD 上尚无原生驱动支持。
 
 关于驱动选择的详细信息，请参考 Fuller L. Broadcom WiFi Improvements for FreeBSD[EB/OL]. (2018-01-22)[2026-04-05]. <https://web.archive.org/web/20240203102135/https://www.landonf.org/code/freebsd/Broadcom_WiFi_Improvements.20180122.html>.
 

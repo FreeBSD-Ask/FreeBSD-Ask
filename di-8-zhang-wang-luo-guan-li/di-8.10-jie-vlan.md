@@ -1,6 +1,6 @@
 # 8.10 VLAN
 
-VLAN（虚拟局域网）是将网络虚拟划分为多个子网络的一种方式，也称为网络分段。每个段将拥有自己的广播域，并与其他 VLAN 隔离。
+VLAN（虚拟局域网）是一个局域网的逻辑分段（每个段都拥有自己的广播域）。VLAN 与局域网的其他分段隔离，并且只有通过具有过滤功能的连接单元才能被在其他分段上的计算机访问。
 
 在 FreeBSD 上，VLAN 必须由网络卡驱动程序支持。要查看哪些驱动程序支持 VLAN，请参阅 [vlan(4)](https://man.freebsd.org/cgi/man.cgi?query=vlan&sektion=4&format=html) 手册页。
 
