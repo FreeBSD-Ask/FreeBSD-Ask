@@ -397,7 +397,7 @@ Windows 文本文件的行尾通常是 `\r\n`（回车 + 换行）。
 - 使用 `efibootmgr` 工具向主板 UEFI 固件添加启动项 `FreeBSD`，添加后开机时即可在 UEFI 启动菜单中看到 FreeBSD 选项。
 
 ```sh
-# efibootmgr --create --activate --label "FreeBSD" --loader "/media/efi/freebsd/loader.efi"
+# efibootmgr -c -a -L "FreeBSD" -l "/media/efi/freebsd/loader.efi"
 ```
 
 - 卸载 EFI 系统分区
