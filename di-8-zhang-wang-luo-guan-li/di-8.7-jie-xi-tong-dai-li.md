@@ -1,4 +1,4 @@
-# 8.6 系统代理
+# 8.7 系统代理
 
 代理（Proxy）技术是计算机网络中的基础概念，其核心原理是在客户端与目标服务器之间引入中间节点，由中间节点代为转发请求和响应。
 
@@ -58,7 +58,7 @@ $ echo $SHELL
 
 ## 配置 Git 代理
 
-Git 支持通过 `http.proxy` 和 `core.gitProxy` 等配置项设置代理，详见本书软件管理相关章节。
+Git 支持通过 `http.proxy` 和 `core.gitProxy` 等配置项设置代理。
 
 ## 为浏览器配置代理
 
@@ -66,7 +66,7 @@ Git 支持通过 `http.proxy` 和 `core.gitProxy` 等配置项设置代理，详
 
 [chromium](https://www.chromium.org/) 是 Google Chrome 浏览器的开源版本，支持多种命令行参数。
 
-Chromium 浏览器在 **~/.config** 等目录下并无独立的代理配置界面，但支持通过 `http_proxy`/`https_proxy` 环境变量（在非 Gnome/KDE 环境下）及启动参数设置代理。
+Chromium 浏览器在 **~/.config** 等目录下并无独立的代理配置界面，但支持通过 `http_proxy`/`https_proxy` 环境变量（非 Gnome/KDE 环境下）及启动参数设置代理。
 
 可按以下格式指定代理服务器和端口：
 
