@@ -93,7 +93,7 @@ compat.linuxkpi.i915_enable_fbc=1	# ③
 功能说明：
 
 | 配置项 | 值 | 说明 |
-| -------- | ---- | ------ |
+| ------ | --- | ---- |
 | `compat.linuxkpi.i915_fastboot` | `1` | 尝试跳过启动时不必要的模式设置 |
 | `compat.linuxkpi.i915_enable_dc` | `2` | 启用省电显示 C 状态 |
 | `compat.linuxkpi.i915_enable_fbc` | `1` | 启用帧缓冲压缩以节省电力 |
