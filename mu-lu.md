@@ -149,8 +149,9 @@
 * [14.2 我的世界（Minecraft）服务器](di-14-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-14.2-jie-wo-de-shi-jie-minecraft-fu-wu-qi.md)
 * [14.3 我的世界（Minecraft）](di-14-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-14.3-jie-wo-de-shi-jie-minecraft.md)
 * [14.4 Steam 客户端](di-14-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-14.4-jie-steam-ke-hu-duan.md)
-* [14.5 Wine](di-14-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-14.5-jie-wine.md)
-* [14.6 科研和专业计算](di-14-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-14.6-jie-ke-yan-he-zhuan-ye-ji-suan.md)
+* [14.5 R 语言](di-14-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-14.5-jie-R-yu-yan.md)
+* [14.6 Wine](di-14-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-14.6-jie-wine.md)
+* [14.7 科研和专业计算](di-14-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-14.7-jie-ke-yan-he-zhuan-ye-ji-suan.md)
 
 ## 第 15 章 人工智能
 
