@@ -311,6 +311,37 @@ search 和 domain 选项只能使用其中一个。使用 DHCP 时，dhclient(8)
 
 “ping: sendto: Permission denied”错误消息通常由防火墙配置错误引起。如果直接加载了 IPFW 防火墙模块但未配置任何规则，IPFW 的默认规则 65535 会拒绝所有流量，甚至是 ping(8)。但通过 rc.conf 标准方式启用防火墙时，IPFW 默认 `firewall_type="open"` 会放行所有流量；PF 和 IPFilter 无规则时默认放行。
 
+## 查看网卡速率
+
+如需实时监控网络接口的流量统计信息，可使用 `systat` 工具的网络接口视图。该命令以指定的刷新间隔显示各网络接口的接收和发送流量数据：
+
+```sh
+# systat -ifstat 2
+```
+
+其中 `-ifstat` 参数指定显示网络接口信息，数字 2 表示刷新间隔为 2 秒。
+
+## 查看 FreeBSD 下载流量（bwm-ng）
+
+如需查看更详细的网络流量统计，可安装 `bwm-ng` 工具，该工具提供多种流量显示格式和交互功能：
+
+```sh
+# pkg install bwm-ng  # 安装 bwm-ng
+# bwm-ng
+  bwm-ng v0.6.3 (probing every 0.500s), press 'h' for help
+  input: getifaddrs type: rate
+  /         iface                   Rx                   Tx                Total
+  ==============================================================================
+              em0:           2.04 MB/s            6.03 KB/s            2.05 MB/s
+              lo0:           0.00  B/s            0.00  B/s            0.00  B/s
+        vm-public:           2.04 MB/s            2.05 MB/s            4.09 MB/s
+             tap0:           5.49 KB/s            2.04 MB/s            2.04 MB/s
+  ------------------------------------------------------------------------------
+            total:           4.09 MB/s            4.09 MB/s            8.18 MB/s
+```
+
+按字母 d 可切换流量显示格式，按 h 可查阅更多使用方法。
+
 ## 附录：/etc/rc.conf 网络配置示例
 
 > **注意**：
@@ -383,37 +414,6 @@ route_static1="-net 192.168.50.0/24 192.168.1.1"
 ```ini
 route_static2="-net 10.88.200.0/24 10.10.10.254"
 ```
-
-## 查看网卡速率
-
-如需实时监控网络接口的流量统计信息，可使用 `systat` 工具的网络接口视图。该命令以指定的刷新间隔显示各网络接口的接收和发送流量数据：
-
-```sh
-# systat -ifstat 2
-```
-
-其中 `-ifstat` 参数指定显示网络接口信息，数字 2 表示刷新间隔为 2 秒。
-
-## 查看 FreeBSD 下载流量（bwm-ng）
-
-如需查看更详细的网络流量统计，可安装 `bwm-ng` 工具，该工具提供多种流量显示格式和交互功能：
-
-```sh
-# pkg install bwm-ng  # 安装 bwm-ng
-# bwm-ng
-  bwm-ng v0.6.3 (probing every 0.500s), press 'h' for help
-  input: getifaddrs type: rate
-  /         iface                   Rx                   Tx                Total
-  ==============================================================================
-              em0:           2.04 MB/s            6.03 KB/s            2.05 MB/s
-              lo0:           0.00  B/s            0.00  B/s            0.00  B/s
-        vm-public:           2.04 MB/s            2.05 MB/s            4.09 MB/s
-             tap0:           5.49 KB/s            2.04 MB/s            2.04 MB/s
-  ------------------------------------------------------------------------------
-            total:           4.09 MB/s            4.09 MB/s            8.18 MB/s
-```
-
-按字母 d 可切换流量显示格式，按 h 可查阅更多使用方法。
 
 ## 课后习题
 
