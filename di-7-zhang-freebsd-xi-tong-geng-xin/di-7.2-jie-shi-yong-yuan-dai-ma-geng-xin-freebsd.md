@@ -146,7 +146,7 @@ Conflicts remain from previous update, aborting.
 `etcupdate` 在合并后会自动触发若干系统文件的后续处理：
 
 | 变更文件 | 触发命令 |
-|----------|----------|
+| -------- | -------- |
 | **/etc/master.passwd** | `pwd_mkdb` |
 | **/etc/login.conf** | `cap_mkdb` |
 | **/etc/mail/aliases** | `newaliases` |
