@@ -216,7 +216,15 @@ C:\Users\用户名\
 
 除了图形界面工具外，还可以使用 Windows 自带的命令行工具 diskpart 来恢复 U 盘。使用命令行工具恢复 U 盘，首先需要以管理员身份打开 PowerShell，随后根据 U 盘分区表类型选择相应的操作步骤。
 
-MBR（Master Boot Record，主引导记录）和 GPT（GUID Partition Table，全局唯一标识符分区表）是两种常见的磁盘分区表格式。MBR 是传统格式，适用于老式计算机；GPT 是现代格式，支持更大容量磁盘和更多分区，与 UEFI 配合使用。
+MBR（Master Boot Record，主引导记录）和 GPT（GUID Partition Table，全局唯一标识符分区表）是两种常见的磁盘分区表格式，对比如下：
+
+| 特性 | MBR | GPT |
+|------|-----|-----|
+| 全称 | Master Boot Record（主引导记录） | GUID Partition Table（全局唯一标识符分区表） |
+| 适用场景 | 老式计算机 | 现代计算机 |
+| 最大磁盘容量 | 2 TB | 9.4 ZB |
+| 最大分区数 | 4 个主分区 | 128 个（Windows） |
+| 引导方式 | BIOS/Legacy | UEFI |
 
 打开 PowerShell：右键单击 Windows 图标，选择“Windows PowerShell（管理员）”。
 
