@@ -79,10 +79,12 @@ $ tar -xvf test.tar -C /home/ykla/mytest # 解压 test.tar 到指定路径
 
 选项说明：
 
-- `x`：Extract，解压
-- `v`：verbose，输出详细信息模式
-- `f`：file，指定文件
-- `C`：即 cd，指定路径
+| 选项 | 含义 |
+| ---- | ---- |
+| `x` | Extract，解压 |
+| `v` | verbose，输出详细信息模式 |
+| `f` | file，指定文件 |
+| `C` | 即 cd，指定路径 |
 
 ## xz
 
