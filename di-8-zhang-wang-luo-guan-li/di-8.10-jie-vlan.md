@@ -42,6 +42,7 @@ ifconfig_em0_5="inet 192.168.20.20/24"
 > ```sh
 > ifconfig_em0="up"
 > ```
+
 ## 为接口指定符号名称
 
 为接口指定符号名称具有实用价值：当更换关联的硬件时，只需更新少数几个配置变量。例如，安全摄像头需在 `em0` 上运行 VLAN 1，若日后将 `em0` 网卡替换为使用 ixgbe(4) 驱动程序的网卡，则无需将所有指向 `em0.1` 的引用更改为 `ixgbe0.1`。
@@ -52,7 +53,7 @@ ifconfig_em0_5="inet 192.168.20.20/24"
 # ifconfig em0.5 create vlan 5 vlandev em0 name cameras inet 192.168.20.20/24
 ```
 
-如果接口名为 `video`，则使用以下命令：
+如果父接口使用的是其他网卡（例如 `video`，代表系统中另一块物理网卡），则使用以下命令：
 
 ```sh
 # ifconfig video.5 create vlan 5 vlandev video name cameras inet 192.168.20.20/24
