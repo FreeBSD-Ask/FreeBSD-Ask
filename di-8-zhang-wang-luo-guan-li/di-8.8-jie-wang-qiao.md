@@ -507,7 +507,7 @@ begemotSnmpdModulePath."bridge" = "/usr/lib/snmp_bridge.so"
 # service bsnmpd start
 ```
 
-以下示例使用 Net-SNMP 软件（[net-mgmt/net-snmp](https://cgit.freebsd.org/ports/tree/net-mgmt/net-snmp/)) 从客户端系统查询网桥。也可以使用 [net-mgmt/bsnmptools](https://cgit.freebsd.org/ports/tree/net-mgmt/bsnmptools/) Port。在运行 Net-SNMP 的 SNMP 客户端中，将以下行添加到 **$HOME/.snmp/snmp.conf** 文件中，以导入网桥 MIB 定义：
+以下示例使用 Net-SNMP 软件（[net-mgmt/net-snmp](https://cgit.freebsd.org/ports/tree/net-mgmt/net-snmp/)) 从客户端系统查询网桥。也可以使用 [net-mgmt/bsnmptools](https://cgit.freebsd.org/ports/tree/net-mgmt/bsnmptools/) Port。在运行 Net-SNMP 的 SNMP 客户端中，将以下行添加到 **~/.snmp/snmp.conf** 文件中，以导入网桥 MIB 定义：
 
 ```sh
 mibdirs +/usr/share/snmp/mibs
