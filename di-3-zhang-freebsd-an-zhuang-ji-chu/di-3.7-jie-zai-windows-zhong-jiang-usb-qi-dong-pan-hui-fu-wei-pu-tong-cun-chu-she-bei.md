@@ -219,7 +219,7 @@ C:\Users\用户名\
 MBR（Master Boot Record，主引导记录）和 GPT（GUID Partition Table，全局唯一标识符分区表）是两种常见的磁盘分区表格式，对比如下：
 
 | 特性 | MBR | GPT |
-|------|-----|-----|
+| ---- | --- | --- |
 | 全称 | Master Boot Record（主引导记录） | GUID Partition Table（全局唯一标识符分区表） |
 | 适用场景 | 老式计算机 | 现代计算机 |
 | 最大磁盘容量 | 2 TB | 9.4 ZB |
