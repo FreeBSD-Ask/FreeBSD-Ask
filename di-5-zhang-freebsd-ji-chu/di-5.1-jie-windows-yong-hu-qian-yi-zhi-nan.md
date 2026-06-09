@@ -149,7 +149,16 @@ PSPath
 
 ### 大小写敏感性
 
-FreeBSD 的 ZFS 和 UFS 均**区分大小写（大小写敏感）**。而 macOS 的 HFS+（默认不区分大小写）、APFS（默认不区分大小写）以及 Windows 的 FAT32 文件系统均**不区分大小写（大小写不敏感）**。NTFS 本身为大小写保留文件系统，但 Windows 的 Win32 子系统默认以大小写不敏感方式处理文件名（Windows 10 1803 以后可通过 `fsutil.exe file setCaseSensitiveInfo <路径> enable` 按目录启用大小写敏感，`fsutil.exe file queryCaseSensitiveInfo <路径>` 可查询目录的大小写敏感状态，主要用于 WSL 兼容）。
+常见文件系统的大小写敏感性对比如下：
+
+| 操作系统/文件系统 | 大小写行为 | 备注 |
+| ----------------- | ---------- | ---- |
+| FreeBSD ZFS | 区分大小写 | 默认 |
+| FreeBSD UFS | 区分大小写 | 默认 |
+| macOS HFS+ | 默认不区分 | 格式化时可选择区分大小写变体 |
+| macOS APFS | 默认不区分 | 格式化时可选择区分大小写变体 |
+| Windows FAT32 | 不区分 | / |
+| Windows NTFS | 大小写保留，默认不敏感 | Windows 10 1803 以后可通过 `fsutil.exe file setCaseSensitiveInfo <路径> enable` 按目录启用大小写敏感，`fsutil.exe file queryCaseSensitiveInfo <路径>` 可查询目录的大小写敏感状态，主要用于 WSL 兼容 |
 
 - Windows 下 **大小写不敏感**
 
