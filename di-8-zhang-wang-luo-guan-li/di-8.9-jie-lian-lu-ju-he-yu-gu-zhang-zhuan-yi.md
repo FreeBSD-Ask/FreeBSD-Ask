@@ -39,7 +39,7 @@ lagg0: flags=1008843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST,LOWER_UP> metric 0 m
         ether 00:50:56:29:a9:45
         hwaddr 00:00:00:00:00:00
         inet 10.0.0.3 netmask 0xffffff00 broadcast 10.0.0.255
-        laggproto lacp lagghash 12,13,14
+        laggproto lacp lagghash l2,l3,l4
         laggport: em0 flags=0<>
         laggport: em1 flags=0<>
         groups: lagg
