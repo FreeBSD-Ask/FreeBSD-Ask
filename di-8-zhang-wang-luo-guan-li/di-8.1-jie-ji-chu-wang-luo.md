@@ -437,7 +437,7 @@ ifconfig_igc0="DHCP"
 静态 IP 方式：将网卡 igc0 的 IPv4 设置为 **192.168.5.77**，子网掩码为 **255.255.255.0**：
 
 ```ini
-ifconfig_igc0="inet 192.168.5.77 netmask 255.255.255.0"  # 
+ifconfig_igc0="inet 192.168.5.77 netmask 255.255.255.0"
 ```
 
 默认网关/默认路由，通常为路由器 IP 地址：
