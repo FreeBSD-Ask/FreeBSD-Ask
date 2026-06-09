@@ -273,10 +273,10 @@ DD:DD:DD:DD:DD:01 → 接口 2
 
 | MAC 地址 | 对应接口 |
 | -------- | -------- |
-| AA:AA:AA:AA:AA:01 | 接口 1  |
-| BB:BB:BB:BB:BB:01 | 接口 1  |
-| CC:CC:CC:CC:CC:01 | 接口 2  |
-| DD:DD:DD:DD:DD:01 | 接口 2  |
+| AA:AA:AA:AA:AA:01 | 接口 1 |
+| BB:BB:BB:BB:BB:01 | 接口 1 |
+| CC:CC:CC:CC:CC:01 | 接口 2 |
+| DD:DD:DD:DD:DD:01 | 接口 2 |
 
 IP 地址仅用于主机通信；网桥工作在数据链路层（第二层），学习和转发依据的是 MAC 地址，而不是 IP 地址。
 
