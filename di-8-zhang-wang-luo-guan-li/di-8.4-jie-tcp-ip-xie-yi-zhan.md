@@ -1,471 +1,84 @@
 # 8.4 TCP/IP 协议栈
 
-FreeBSD 支持多种无线网卡和认证方式。
+## TCP/IP 协议栈
 
-> **技巧**
->
-> Wi-Fi 并不是任何单词的缩写。该词仅为 [Wi-Fi 联盟](https://www.wi-fi.org/)（Wi-Fi Alliance）持有的注册商标，并无任何引申义，如“Wireless Fidelity”。（Doctorow C. WiFi isn’t short for “Wireless Fidelity”[EB/OL]. (2005-11-08)[2026-04-21]. <https://boingboing.net/2005/11/08/wifi-isnt-short-for.html>.）
+传输控制协议（Transmission Control Protocol，TCP）是互联网协议族（Internet Protocol Suite）中的核心传输层协议，软件实现体系称作 TCP 栈（采用层次化结构进行组织，因此称“栈”）。Vint Cerf 和 Bob Kahn 于 1974 年在论文《A Protocol for Packet Network Intercommunication》中首次提出 TCP 的核心思想（当时为传输与网络转发合一的单一协议），后经迭代，约在 1978 至 1979 年间决定将 TCP 与 IP 拆分为两个独立协议，并于 1981 年 9 月分别发布为 RFC 791（IP）和 RFC 793（TCP）。RFC 9293 已于 2022 年 8 月取代了 RFC 793，前者为当前 TCP 协议的最新标准规范。
 
-## 快速连接（基于 COMFAST CF-912AC 1200M 802.11AC）
+TCP 栈提供端到端的可靠数据传输、拥塞控制、流量控制等关键功能。不同于其他主流操作系统，FreeBSD 创新性地实现了多 TCP 栈共存架构，该架构允许系统同时加载多个 TCP 协议栈实现，并可为不同的网络连接或系统全局选用不同的 TCP 栈。
 
-### 无线网络配置
+当前主要开发与维护工作集中于 RACK 栈（RACK 算法最初出自 Google，FreeBSD 的 tcp\_rack 栈实现出自 Netflix 的 Randall Stewart）和基础栈（基于 4.4BSD 经典栈实现演化而来，默认拥塞控制算法为 CUBIC）。
 
-基本无线网络由多个站点组成，各站点通过 2.4 GHz 与 5 GHz 频段的无线电通信实现互联（6 GHz 频段在 FreeBSD 上尚处于计划阶段，目前不可用）。配置无线网络包含三个步骤：
+## 使用 RACK 栈
 
-1. 扫描并选择接入点
-2. 认证站点
-3. 配置 IP 地址或使用 DHCP
-
-### 示例网卡
-
-本节以 COMFAST CF-912AC 1200M 802.11AC 无线网卡为例，介绍一般无线网卡的驱动配置方法。该网卡采用 Realtek 芯片组。其他采用 Realtek 芯片的网卡配置方法类似。
-
-### 识别无线网卡
-
-在配置无线网络前，需确认系统是否识别了无线网卡。可查询内核无线设备列表来确认硬件识别状态：
+如需启用 RACK 栈：
 
 ```sh
-# sysctl net.wlan.devices
-net.wlan.devices: rtwn0
+# echo "net.inet.tcp.functions_default=rack" >> /etc/sysctl.conf
+# sysrc kld_list+="tcp_rack"
+# kldload tcp_rack
+# sysctl net.inet.tcp.functions_default=rack
 ```
 
-上述输出中的 `rtwn0` 是示例网卡（COMFAST CF-912AC）的设备名称，实际输出因硬件而异。若输出中冒号 `:` 后为空，表示无线网卡未被识别，此时需检查硬件连接或更换兼容性更好的无线网卡。
-
-### 虚拟无线接口机制
-
-在 FreeBSD 中，无线网络采用分层架构，需创建虚拟无线接口 `wlan0` 并将其绑定至物理无线网卡方可使用。
-
-创建一个新的无线接口 `wlan0`，并将其绑定到物理设备 `rtwn0`：
+重启系统或加载内核模块后，用以下命令显示系统中可用 TCP 栈列表：
 
 ```sh
-# ifconfig wlan0 create wlandev rtwn0
+# sysctl net.inet.tcp.functions_available
+net.inet.tcp.functions_available:
+Stack                           D Alias                            PCB count
+freebsd                           freebsd                          3
+rack                            * rack                             0
 ```
 
-上述命令中，`rtwn0` 为 `sysctl net.wlan.devices` 输出中的物理网卡名称，需根据实际硬件替换（~~除非也使用 COMFAST CF-912AC 1200M 802.11AC~~）。
+输出中标记 `*` 的栈为当前系统默认使用的 TCP 协议栈。
 
-> **技巧**
->
-> 上述示例中的 `wlan0`、`rtwn0`、`192.168.1.100`、`freebsdap`、`freebsdcn` 为占位符，须替换为实际的值。
+## BBR 拥塞控制算法
 
-创建完成后，可使用 `ifconfig` 命令查看接口状态（以下输出已省略以太网卡和 `lo0` 接口）：
+* 充分利用可用网络带宽。
+* 最小化网络传输延迟。
+
+BBR（Bottleneck Bandwidth and Round-trip propagation time，瓶颈带宽与往返传播时间）不以丢包为拥塞信号，而是根据探测到的带宽和延迟动态调整发送速率，在高带宽长延迟的网络环境中更具优势。
+
+## BBR 在 FreeBSD 中的实现与应用
+
+将 `tcp_rack` 和 `tcp_bbr` 添加到系统启动列表：
 
 ```sh
-# ifconfig
-
-……此处省略一部分……
-
-wlan0: flags=8802<BROADCAST,SIMPLEX,MULTICAST> metric 0 mtu 1500
-	options=200001<RXCSUM,RXCSUM_IPV6>
-	ether 20:0d:b0:c4:ab:59
-	groups: wlan
-	ssid "" channel 1 (2412 MHz 11b)
-	regdomain FCC country US authmode OPEN privacy OFF txpower 30 bmiss 7
-	scanvalid 60 wme bintval 0
-	parent interface: rtwn0
-	media: IEEE 802.11 Wireless Ethernet autoselect (autoselect)
-	status: no carrier
-	nd6 options=29<PERFORMNUD,IFDISABLED,AUTO_LINKLOCAL>
+# sysrc kld_list+="tcp_rack tcp_bbr"
 ```
 
-在正常情况下，输出中应包含 `wlan0` 接口。
-
-### 扫描无线网络
-
-在连接到无线网络之前，需先扫描周围可用的无线网络。可使用 ifconfig(8) 扫描可用的无线网络：
+将系统默认 TCP 拥塞控制算法设置为 BBR：
 
 ```sh
-# ifconfig wlan0 up scan
-SSID/MESH ID                      BSSID              CHAN RATE    S:N     INT CAPS
-
-……此处省略一部分……
-
-test_5G                           50:d6:c5:93:d7:64   36   54M  -78:-95   100 EP   APCHANREP WPA RSN WPS BSSLOAD HTCAP VHTCAP VHTOPMODE WME
+# echo 'net.inet.tcp.functions_default=bbr' >> /etc/sysctl.conf
 ```
 
-参数说明：
-
-| 参数 | 含义 |
-| ---- | ---- |
-| **SSID/MESH ID** | 标识网络名称 |
-| **BSSID** | 标识接入点的 MAC 地址 |
-| **CHAN** | 信道 |
-| **RATE** | 速率 |
-| **S:N** | 信号强度和质量 |
-| **INT** | 信标间隔 |
-| **CAPS** | 标识每个网络的类型和站点支持的功能特性 |
-
-扫描结果会显示可用的无线网络列表。
-
-### SSID 的定义与作用
-
-服务集标识符（Service Set Identifier，SSID）是无线网络的名称，用于区分不同的无线网络。
-
-将 `wlan0` 接口连接到 SSID 为 `test_5G` 的无线网络（适用于无密码的开放网络）：
+重启系统：
 
 ```sh
-# ifconfig wlan0 ssid test_5G
+# reboot
 ```
 
-上述命令中，`test_5G` 为示例 Wi-Fi 名称（SSID），需替换为实际网络名称。
-
-如果无法扫描到 Wi-Fi 网络，可能需要修改无线区域设置或路由器信道，可按以下步骤重新配置：
+查看当前系统使用的默认 TCP 拥塞控制算法：
 
 ```sh
-# ifconfig wlan0 destroy
-# ifconfig wlan0 create wlandev rtwn0
-# ifconfig wlan0 country HR regdomain ETSI
+# sysctl net.inet.tcp.functions_default
 ```
 
-第一条命令销毁现有 `wlan0` 接口并释放其占用的资源，避免出现 `ifconfig: SIOCS80211: Device busy` 错误；第二条命令重新创建无线接口并绑定到物理设备；第三条命令设置无线国家码为 HR 并使用 ETSI 无线频段规范，在目标网络使用大于 48 的信道（DFS 信道）时需执行此设置，如信道小于 48，可省略该步骤。
+如果输出结果为 `net.inet.tcp.functions_default: bbr`，则 TCP BBR 启用成功。
 
-完成上述配置后，重启网络服务以接入 Wi-Fi：
+## 故障排除与未竟事宜
 
-```sh
-# service netif restart
-# dhclient wlan0
-```
+在测试环境中，RACK 和 BBR 在局域网中表现良好，但在互联网环境下带宽显著下降：RACK 约为默认栈的三分之一，BBR 约为默认栈的六分之一。该测试在特定网络条件下完成（如高延迟跨境链路），实际性能可能因网络环境而异。需注意，RACK 与 BBR 的设计目标是提升而非降低吞吐量，上述结果可能源于特定丢包/延迟环境的系统性偏差，不代表这些栈在典型部署场景中的表现。
 
-第一条命令重启网络接口服务，第二条命令为 `wlan0` 接口获取动态 IP 地址。
+## 参考文献
 
-### 使用 WPA2 认证
-
-加密无线网络需要使用 Wi-Fi 保护访问（Wi-Fi Protected Access，WPA）配置文件连接。WPA2 是当前 FreeBSD 支持的无线网络安全协议，提供数据加密和身份认证功能（截至 2025 年末，FreeBSD 基本系统暂不支持 WPA3/SAE）。
-
-无线网络中的认证过程由 wpa_supplicant(8) 管理。可使用 wpa_passphrase(8) 工具将 SSID 和明文密码转换为安全的 PSK 配置条目，避免在配置文件中直接书写明文密码。此外，wpa_cli(8) 提供了 wpa_supplicant 的交互式命令行管理接口，可用于运行时调试和状态查询。创建 **/etc/wpa_supplicant.conf** 配置文件，内容如下：
-
-```ini
-ctrl_interface=/var/run/wpa_supplicant   # 可选，控制接口路径，用于 wpa_supplicant 与 wpa_cli 等工具通信
-fast_reauth=1                             # 可选，启用快速重新认证，加快已认证网络的重连速度
-network={
-ssid="test_5G"
-psk="freebsdcn"
-}
-```
-
-配置说明：
-
-| 参数 | 说明 |
-| ---- | ---- |
-| `ssid` | 指定要连接的无线网络 SSID（Wi-Fi 名称），此处示例为 `test_5G` |
-| `psk` | 指定无线网络的密码，此处示例为 `freebsdcn` |
-
-如果无法获取无线网络的服务集标识符（SSID）和预共享密钥（PSK，Pre-Shared Key），可联系网络管理员或重置网络设备以获取凭据。
-
-下一步在 **/etc/rc.conf** 文件中配置无线连接。使用动态地址：
-
-```sh
-# sysrc ifconfig_wlan0="WPA DHCP"
-```
-
-随后重启网络：
-
-```sh
-# service netif restart
-```
-
-如果网络连接正常，则可永久配置。在 **/etc/rc.conf** 文件中添加或修改相关配置：
-
-```ini
-wlans_rtwn0="wlan0"                      # 将物理无线设备 rtwn0 绑定到 wlan0 接口
-ifconfig_wlan0="WPA SYNCDHCP"           # 配置 wlan0 使用 WPA 并通过 DHCP 自动获取 IP 地址（SYNCDHCP 为同步模式，会暂停启动直至 DHCP 完成；如需异步/后台模式可改用 DHCP）
-create_args_wlan0="country HR regdomain ETSI"  # 创建 wlan0 接口时设置无线国家码为 HR，并使用 ETSI 频段规范。如信道大于 48（DFS），则需执行此设置。
-```
-
-### 无线网络配置文件结构
-
-FreeBSD 无线网络涉及以下配置文件。
-
-```sh
-/etc/
-├── rc.conf              # 系统启动配置文件
-└── wpa_supplicant.conf  # WPA 无线网络配置文件
-```
-
-完成上述配置后，重启系统或网络服务使所有配置生效。
-
-重启后，使用 `ifconfig` 查看连接情况，在正常情况下可看到已成功连接（示例输出中 IP 为 **192.168.31.178**）：
-
-```sh
-……省略一部分输出……
-
-wlan0: flags=8843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST> metric 0 mtu 1500
-	options=200001<RXCSUM,RXCSUM_IPV6>
-	ether 11:7c:e8:c4:ab:58
-	inet 192.168.31.178 netmask 0xffffff00 broadcast 192.168.31.255
-	groups: wlan
-	ssid test_5G channel 36 (5180 MHz 11a ht/20) bssid 50:d6:c5:93:d7:64
-	regdomain NONE country CN authmode WPA2/802.11i privacy ON
-	deftxkey UNDEF TKIP 2:128-bit txpower 17 bmiss 7 mcastrate 6
-	mgmtrate 6 scanvalid 60 ht20 ampdulimit 64k ampdudensity 4 shortgi
-	-stbc -uapsd wme roaming MANUAL
-	parent interface: rtwn0
-	media: IEEE 802.11 Wireless Ethernet MCS mode 11na
-	status: associated
-	nd6 options=29<PERFORMNUD,IFDISABLED,AUTO_LINKLOCAL>
-```
-
-## 英特尔无线网卡驱动概况
-
-英特尔（Intel）网卡是目前广泛使用的无线网卡之一。iwlwifi 驱动支持的芯片范围是 iwm 的超集：iwlwifi 目前仅移植了 Linux 上游驱动的 mvm 子驱动部分，覆盖了 iwm 支持的全部芯片以及部分更新的芯片（如 BZ 系列设备）。Linux 上游的 iwlwifi 驱动还包含 mld 子驱动（用于 WiFi 7 MLO 多链路操作），该部分正在移植至 FreeBSD（截至 2025 年末已部分合并），但尚未完全稳定。
-
-在 **/etc/rc.conf** 文件中添加以下配置：
-
-```ini
-wlans_iwlwifi0="wlan0"        # 将物理无线设备 iwlwifi0 绑定到 wlan0 接口
-ifconfig_wlan0="WPA SYNCDHCP"  # 配置 wlan0 使用 WPA 并通过 DHCP 自动获取 IP 地址
-```
-
-创建 **/etc/wpa_supplicant.conf** 配置文件：
-
-```sh
-network={
-ssid="WIFI 名称（SSID）"
-psk="WIFI 密码"
-}
-```
-
-完成配置后，执行以下命令启动 Wi-Fi 测试：
-
-```sh
-# ifconfig wlan0 create wlandev iwlwifi0
-# service netif start wlan0
-```
-
-第一条命令创建 `wlan0` 接口并绑定到物理无线设备 `iwlwifi0`，第二条命令启动 `wlan0` 接口。
-
-故障排除与未竟事宜请参考：[wiki/WiFi/Iwlwifi](https://wiki.freebsd.org/WiFi/Iwlwifi)
-
-### 参考文献
-
-- FreeBSD Project. iwm(4) -- Intel IEEE 802.11ac wireless network driver[EB/OL]. [2026-04-17]. <https://man.freebsd.org/cgi/man.cgi?query=iwm&sektion=4>. Intel 无线网卡驱动技术文档。
-- FreeBSD Project. iwlwifi(4) -- Intel IEEE 802.11a/b/g/n/ac/ax/be wireless network driver[EB/OL]. [2026-04-17]. <https://man.freebsd.org/cgi/man.cgi?query=iwlwifi&sektion=4>. Intel 无线网卡驱动技术文档。
-
-## 博通（Broadcom）网卡驱动
-
-博通（Broadcom）是另一家常用的无线网卡厂商。FreeBSD 内置的 Broadcom 网卡驱动主要有两种：`bwi` 和 `bwn`。`bwi` 支持较旧型号，`bwn` 支持较新型号，两者的支持范围部分重叠，但 `bwn` 对硬件的兼容性更好。这两个驱动仅支持 802.11b/g，现代 802.11ac/ax 博通网卡在 FreeBSD 上尚无原生驱动支持。
-
-关于驱动选择的详细信息，请参考 Fuller L. Broadcom WiFi Improvements for FreeBSD[EB/OL]. (2018-01-22)[2026-04-05]. <https://web.archive.org/web/20240203102135/https://www.landonf.org/code/freebsd/Broadcom_WiFi_Improvements.20180122.html>.
-
-### 示例：BCM4301、BCM4303、BCM4306 rev 2
-
-根据参考文献，上述型号的网卡只能使用 `bwi` 驱动。
-
-首先，在 **/boot/loader.conf** 文件中添加以下配置，设置系统在启动时加载 `bwi` 驱动：
-
-```sh
-if_bwi_load="YES"
-```
-
-随后使用 Ports 安装 Broadcom 无线设备的固件（该固件未提供二进制包）：
-
-```sh
-# cd /usr/ports/net/bwi-firmware-kmod/
-# make install clean
-```
-
-可先通过 USB 或以太网共享获取网络连接后安装，也可以提前将所需依赖下载到指定目录。
-
-在 **/etc/rc.conf** 文件中添加以下配置，将物理无线设备 `bwi0` 绑定到 `wlan0` 接口：
-
-```ini
-wlans_bwi0="wlan0"
-```
-
-完成上述配置后，重启系统。
-
-### 示例：配置 bwn 驱动
-
-安装 Broadcom 无线设备的固件：
-
-```sh
-# cd /usr/ports/net/bwn-firmware-kmod/
-# make install clean
-```
-
-### 博通网卡驱动相关的文件结构
-
-博通网卡驱动涉及以下文件：
-
-```sh
-/
-├── boot/
-│   └── loader.conf        # 系统启动加载配置文件
-├── usr/
-│   ├── ports/
-│   │   └── net/
-│   │       ├── bwi-firmware-kmod/   # Broadcom bwi 固件 Port
-│   │       └── bwn-firmware-kmod/   # Broadcom bwn 固件 Port
-│   └── src/
-│       └── sys/
-│           └── amd64/
-│               └── conf/              # 内核配置文件目录
-```
-
-编辑 **/boot/loader.conf** 文件添加以下配置，设置系统在启动时加载 `bwn` 驱动：
-
-```ini
-if_bwn_load="YES"
-```
-
-在 **/etc/rc.conf** 文件中添加以下配置，将物理无线设备 `bwn0` 绑定到 `wlan0` 接口：
-
-```ini
-wlans_bwn0="wlan0"
-```
-
-## 无线网络故障排除
-
-如果扫描时未列出接入点，可尝试切换路由器的信道，或将协议降级至 Wi-Fi 4。
-
-如果设备无法与接入点关联，需验证配置是否与接入点上的设置匹配，包括认证方案和安全协议。建议尽可能简化配置。如果使用 WPA2 或 WPA 等安全协议，可先将接入点配置为开放认证、关闭安全功能，以验证流量能否通过。
-
-如果系统可以与接入点关联，使用 ping(8) 等工具诊断网络配置。
-
-## 附录：更新系统版本后无法使用无线网络
-
-### 固件与系统更新的兼容性问题
-
-FreeBSD 中，固件（Firmware）是硬件设备正常工作所需的底层软件，提供硬件设备与操作系统内核之间的通信接口。固件接口可能随内核版本更新而变化。
-
-### 固件重新获取方法
-
-系统版本更新后如果无法使用无线网络，需重新获取与当前内核版本兼容的固件。FreeBSD 提供 `fwget` 工具用于自动获取和安装所需固件：
-
-```sh
-# fwget
-```
-
-如果当前系统没有网络连接，可通过 USB 网络共享等方式临时获得网络连接后再执行上述命令；也可手动从 [USTC 镜像站点](https://mirrors.ustc.edu.cn/freebsd-pkg/FreeBSD%3A14%3Aamd64/kmods_latest_3/All/) 下载所需固件包，随后使用以下命令安装：
-
-```sh
-# pkg add /path/to/firmware.pkg
-```
-
-## 附录：特殊型号需要编译内核
-
-特殊型号的博通无线网卡可能需要重新编译内核才能获得完整支持。
-
-FULLER L. FreeBSD Broadcom Wi-Fi Improvements[EB/OL]. [2026-03-26]. <https://web.archive.org/web/20240203102135/https://www.landonf.org/code/freebsd/Broadcom_WiFi_Improvements.20180122.html> 中列出的部分型号带有 `$` 注释：`The optional bwn(4) PHY driver is derived from b43 GPL code, and must be explicitly enabled.`，表示该驱动依赖于基于 GNU 通用公共许可证（GNU General Public License，GPL）协议的代码。FreeBSD 基本系统及内核默认不包含 GPL 许可证下的代码，需重新编译内核以启用该选项。
-
-```sh
-# cd /usr/src/  # 此处是 FreeBSD 内核源代码安装目录
-# cd sys/amd64/conf/  # 切换到 FreeBSD 内核配置文件目录。注意架构！
-# cp GENERIC MYKERNEL  # 复制默认内核配置文件 GENERIC 为自定义内核 MYKERNEL
-# echo "options BWN_GPL_PHY" >> MYKERNEL  # 向 MYKERNEL 内核配置文件添加 BWN_GPL_PHY 选项
-# cd /usr/src  # 此处是 FreeBSD 内核源代码安装目录
-# make -j4 buildkernel KERNCONF=MYKERNEL  # 使用 MYKERNEL 配置并启用 4 个并行任务编译内核
-# make -j4 installkernel KERNCONF=MYKERNEL  # 安装使用 MYKERNEL 配置编译的内核，并启用 4 个并行任务
-```
-
-上述命令中，**/usr/src/** 为 FreeBSD 内核源代码目录，需注意根据实际架构选择相应的配置文件目录。
-
-随后在 **/boot/loader.conf** 文件中添加以下配置：
-
-```ini
-hw.bwn.usedma="1"               # 启用 DMA 模式（默认开启，设为 0 则使用 PIO 模式）
-if_bwn_load="YES"               # 在启动时加载 bwn 驱动
-bwn_v4_ucode_load="YES"         # 加载 BWN V4 无线固件
-bwn_v4_lp_ucode_load="YES"      # 加载 BWN V4 低功耗模式无线固件
-```
-
-完成后重启系统，使用 `ifconfig` 检查是否存在 `wlan0` 接口，随后按照前文所述方法配置。
-
-### 参考文献
-
-- FreeBSD Foundation. Broadcom Wi-Fi Modernization[EB/OL]. [2026-03-26]. <https://freebsdfoundation.org/project/broadcom-wi-fi-modernization/>. FreeBSD 基金会资助的博通 Wi-Fi 驱动现代化项目概述。
-- FreeBSD Project. Revision 326841[EB/OL]. [2026-03-26]. <https://svnweb.freebsd.org/base?view=revision&revision=326841>. 将博通无线驱动纳入 FreeBSD 基本系统的代码提交记录。
-- FreeBSD Forums. Installing Broadcom BCM43236 WiFi on 11.3 missing firmware error[EB/OL]. [2026-03-26]. <https://forums.freebsd.org/threads/installing-broadcom-bcm43236-wifi-on-11-3-missing-firmware-error.76470/>. 博通无线网卡固件缺失导致无法使用的论坛讨论。
-- helloSystem. ISO[EB/OL]. [2026-03-26]. <https://github.com/helloSystem/ISO/issues/78>. helloSystem 项目中关于 Wi-Fi 支持问题的反馈。
-
-## 故障排除概述
-
-### 无法连接或无法搜索到特定信道
-
-无线网络的区域码设置会影响可用的信道列表。可尝试调整无线区域码设置。
-
-在 **/etc/rc.conf** 文件中添加以下配置：
-
-```ini
-create_args_wlan0="country CN regdomain NONE"
-```
-
-该配置在创建 `wlan0` 接口时设置无线国家码为 CN，不设特定无线频段限制。
-
-完成配置后，重启系统。
-
-### 断开 Wi-Fi
-
-禁用 `wlan0` 接口：
-
-```sh
-# ifconfig wlan0 down
-```
-
-### WPA 验证
-
-在 **/etc/rc.conf** 文件中配置 `wlan0` 接口使用 WPA，并设置静态 IP 地址和子网掩码：
-
-```ini
-ifconfig_wlan0="WPA inet 192.168.1.100 netmask 255.255.255.0"
-```
-
-### 设置静态 IP
-
-为 `wlan0` 接口配置静态 IPv4 地址和子网掩码：
-
-```sh
-# ifconfig wlan0 inet 192.168.0.100 netmask 255.255.255.0
-```
-
-### 开启无线热点
-
-配置无线热点前，需确认网卡是否支持 hostap 模式。可通过以下命令列出 `wlan0` 接口支持的无线功能和能力：
-
-```sh
-# ifconfig wlan0 list caps
-drivercaps=591c541<STA,FF,IBSS,HOSTAP,SHSLOT,SHPREAMBLE,MONITOR,WPA1,WPA2,WME>
-cryptocaps=b<WEP,TKIP,AES_CCM>
-htcaps=207002d<LDPC,SHORTGI20>
-```
-
-如果输出中包含 `HOSTAP`，则表明该网卡支持 hostap 功能。
-
-确认网卡支持后，销毁现有 `wlan0` 接口并释放其占用的资源：
-
-```sh
-# ifconfig wlan0 destroy
-```
-
-重新创建 `wlan0` 接口并配置为热点模式：
-
-```sh
-# ifconfig wlan0 create wlandev rtwn0 wlanmode hostap
-# ifconfig wlan0 inet 192.168.0.1 netmask 255.255.255.0 ssid freebsdap mode 11g channel 1
-```
-
-第一条命令创建 `wlan0` 接口，绑定到 `rtwn0` 并设置为 Host AP 模式；第二条命令配置 `wlan0` 的 IP 地址、SSID、无线模式和信道。
-
-![创建无线热点](../.gitbook/assets/wifi-hotspot.png)
-
-## 附录：图形化网络配置工具
-
-FreeBSD 也提供了图形化网络管理工具，功能类似于 Linux 的 NetworkManager：
-
-使用 pkg 安装：
-
-```sh
-# pkg install net-mgmt/networkmgr
-```
-
-或者使用 Ports 安装：
-
-```sh
-# cd /usr/ports/net-mgmt/networkmgr/
-# make install clean
-```
+* Netflix. netflix/tcplog\_dumper\[EB/OL]. \[2026-03-26]. <https://github.com/netflix/tcplog_dumper>. Netflix 开源项目，提供 TCP 日志转储工具，为 TCP 协议分析提供实用工具。
+* Cheng Y, Cardwell N, Dukkipati N, et al. The RACK-TLP Loss Detection Algorithm for TCP: RFC 8985\[S/OL]. (2021-02)\[2026-04-17]. <https://www.rfc-editor.org/rfc/rfc8985>. RACK-TLP 丢包检测算法的 IETF 标准文档，Google Yuchung Cheng、Neal Cardwell 等人撰写。
+* FreeBSD Project. tcp -- Internet Transmission Control Protocol\[EB/OL]. \[2026-04-14]. <https://man.freebsd.org/cgi/man.cgi?query=tcp&sektion=4>. TCP 协议栈手册页，描述传输控制协议实现与套接字选项。
+* FreeBSD Project. ip -- Internet Protocol\[EB/OL]. \[2026-04-14]. <https://man.freebsd.org/cgi/man.cgi?query=ip&sektion=4>. IP 协议手册页，描述网际协议实现与套接字选项。
 
 ## 课后习题
 
-1. 使用两种不同厂商的无线网卡（如 Realtek 和 Intel），分别在 FreeBSD 上创建虚拟无线接口并连接同一 AP，使用 `systat -if` 监控两者的吞吐量与延迟差异，分析驱动实现差异对性能的影响。
-2. 配置 FreeBSD 为无线热点（Host AP 模式），修改默认信道和发射功率参数，使用另一设备连接并测试信号强度与吞吐量变化，分析 Host AP 模式下的信道选择策略。
-3. 查阅 FreeBSD 源代码中 `wlan` 接口的创建逻辑，分析系统采用“物理网卡 + 虚拟接口”分层架构而非直接管理物理设备的设计考量。
+1. 依次启用 FreeBSD 默认栈、RACK 栈和 BBR 栈，使用 `iperf3` 在局域网和互联网环境中分别测试吞吐量和延迟，记录三种栈在不同网络场景下的性能差异，并从拥塞控制算法原理角度分析差异成因。
+2. 查阅 `tcp_bbr` 模块的源代码，找出控制 BBR 算法行为的关键参数，修改其中两个参数并重新加载模块，记录参数变化对传输性能的影响。
+3. 分析 FreeBSD 多 TCP 栈共存架构的实现机制，设计一个测试场景，在同一系统中为不同网络连接指定不同的 TCP 栈，记录配置方法与验证结果。
