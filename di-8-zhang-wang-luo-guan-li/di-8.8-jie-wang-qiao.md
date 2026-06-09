@@ -493,10 +493,10 @@ bridge0: flags=1008843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST,LOWER_UP> metric 0
 begemotSnmpdModulePath."bridge" = "/usr/lib/snmp_bridge.so"
 ```
 
-可能还需要修改文件中的其他配置设置，例如社区名称和访问列表。保存这些更改后，在 **/etc/rc.conf** 中添加以下行：
+可能还需要修改文件中的其他配置设置，例如社区名称和访问列表。保存这些更改后，执行以下命令启用服务：
 
 ```sh
-bsnmpd_enable="YES"
+# service bsnmpd enable
 ```
 
 然后，启动 bsnmpd：
