@@ -34,17 +34,19 @@ lagg 接口支持的聚合协议决定了哪些端口用于发送流量以及是
 
 ```sh
 # ifconfig lagg0
-lagg0: flags=8843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST> metric 0 mtu 1500
-        options=8<VLAN_MTU>
-        ether 00:05:5d:71:8d:b8
+lagg0: flags=1008843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST,LOWER_UP> metric 0 mtu 1500
+        options=4e504bb<RXCSUM,TXCSUM,VLAN_MTU,VLAN_HWTAGGING,JUMBO_MTU,VLAN_HWCSUM,LRO,VLAN_HWFILTER,VLAN_HWTSO,RXCSUM_IPV6,TXCSUM_IPV6,HWSTATS,MEXTPG>
+        ether 00:50:56:29:a9:45
+        hwaddr 00:00:00:00:00:00
         inet 10.0.0.3 netmask 0xffffff00 broadcast 10.0.0.255
+        laggproto lacp lagghash 12,13,14
+        laggport: em0 flags=0<>
+        laggport: em1 flags=0<>
+        groups: lagg
         media: Ethernet autoselect
         status: active
-        laggproto lacp
-        laggport: em1 flags=1c<ACTIVE,COLLECTING,DISTRIBUTING>
-        laggport: em0 flags=1c<ACTIVE,COLLECTING,DISTRIBUTING>
+        nd6 options=829<PERFORMNUD,IFDISABLED,AUTO_LINKLOCAL,STABLEADDR>
 ```
-
 
 为确保此配置在重启后仍然生效，需在 FreeBSD 系统的 **/etc/rc.conf** 文件中添加以下条目：
 
@@ -55,33 +57,37 @@ cloned_interfaces="lagg0"
 ifconfig_lagg0="laggproto lacp laggport em0 laggport em1 10.0.0.3/24"
 ```
 
-**示例 2. 故障转移模式**
+### 示例 2. 故障转移模式
 
-故障转移模式可用于在主接口的链路丢失时切换到备用接口。要配置故障转移，确保底层物理接口已启用，然后创建 lagg(4) 接口。在此示例中，*em0* 是主接口，*em1* 是备用接口，虚拟接口被分配 IP 地址 *10.0.0.15/24*：
+故障转移模式可用于在主接口的链路丢失时切换到备用接口。要配置故障转移，确保底层物理接口已启用，然后创建 lagg(4) 接口。在此示例中，**em0** 是主接口，**em1** 是备用接口，虚拟接口通过 DHCP 分配 IP 地址：
 
 ```sh
 # ifconfig em0 up
 # ifconfig em1 up
 # ifconfig lagg0 create
-# ifconfig lagg0 up laggproto failover laggport em0 laggport em1 10.0.0.15/24
+# ifconfig lagg0 up laggproto failover laggport em0 laggport em1
+# dhclient lagg0
 ```
 
 虚拟接口的状态应如下所示：
 
 ```sh
 # ifconfig lagg0
-lagg0: flags=8843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST> metric 0 mtu 1500
-        options=8<VLAN_MTU>
-        ether 00:05:5d:71:8d:b8
-        inet 10.0.0.15 netmask 0xffffff00 broadcast 10.0.0.255
-        media: Ethernet autoselect
-        status: active
-        laggproto failover
-        laggport: em1 flags=0<>
-        laggport: em0 flags=5<MASTER,ACTIVE>
+lagg0: flags=1008843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST,LOWER_UP> metric 0 mtu 1500
+	options=4e504bb<RXCSUM,TXCSUM,VLAN_MTU,VLAN_HWTAGGING,JUMBO_MTU,VLAN_HWCSUM,LRO,VLAN_HWFILTER,VLAN_HWTSO,RXCSUM_IPV6,TXCSUM_IPV6,HWSTATS,MEXTPG>
+	ether 00:50:56:29:a9:45
+	hwaddr 00:00:00:00:00:00
+	inet 192.168.5.5 netmask 0xffffff00 broadcast 192.168.5.255
+	laggproto failover lagghash l2,l3,l4
+	laggport: em0 flags=5<MASTER,ACTIVE>
+	laggport: em1 flags=0<>
+	groups: lagg
+	media: Ethernet autoselect
+	status: active
+	nd6 options=829<PERFORMNUD,IFDISABLED,AUTO_LINKLOCAL,STABLEADDR>
 ```
 
-流量将在 *em0* 上发送和接收。如果 *em0* 上的链路丢失，*em1* 将成为活动链路。如果主接口的链路恢复，它将重新成为活动链路。
+流量将在 **em0** 上发送和接收。如果 **em0** 上的链路丢失，**em1** 将成为活动链路。如果主接口的链路恢复，它将重新成为活动链路。
 
 为确保此配置在重启后仍然生效，需在 **/etc/rc.conf** 文件中添加以下条目：
 
@@ -89,27 +95,27 @@ lagg0: flags=8843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST> metric 0 mtu 1500
 ifconfig_em0="up"
 ifconfig_em1="up"
 cloned_interfaces="lagg0"
-ifconfig_lagg0="laggproto failover laggport em0 laggport em1 10.0.0.15/24"
+ifconfig_lagg0="laggproto failover laggport em0 laggport em1 DHCP"
 ```
 
-**示例 3. 以太网与无线接口之间的故障转移模式**
+### 示例 3. 以太网与无线接口之间的故障转移模式
 
 对于笔记本电脑用户，通常希望将无线设备配置为备用接口，仅在以太网连接不可用时使用。使用 lagg(4) 可以配置故障转移模式，优先选择以太网连接，出于性能和安全性考虑，同时保持通过无线连接传输数据的能力。
 
-此配置通过将以太网接口的 MAC 地址覆盖为无线接口的 MAC 地址来实现。
+此配置通过将以太网接口的 MAC 地址覆写为无线接口的 MAC 地址来实现。
 
 > **注意**
 >
-> 理论上，以太网或无线 MAC 地址都可以更改以匹配对方。然而，一些流行的无线接口不支持覆盖 MAC 地址。因此，我们建议为此目的覆盖以太网 MAC 地址。
+> 理论上，以太网或无线 MAC 地址都可以更改以匹配对方。然而，一些常见的无线接口不支持覆盖 MAC 地址。因此，我们建议为此目的覆写以太网 MAC 地址。
 
 > **注意**
 >
-> 如果无线接口的驱动程序未在 `GENERIC` 或定制内核中加载，请在 `/boot/loader.conf` 中加载相应的 `.ko` 文件，通过添加 `driver_load="YES"` 到该文件并重启。另一种更好的方法是通过将其添加到 `/etc/rc.conf` 的 `kld_list` 中加载驱动程序，然后重启。否则，在设置 lagg(4) 接口时驱动程序尚未加载。
+> 请将无线接口的驱动程序添加到 `/etc/rc.conf` 的 `kld_list` 中以加载驱动程序，然后重启。否则在设置 lagg(4) 接口时驱动程序尚未加载会影响正常运行。
 
-在此示例中，*re0* 是主接口，*wlan0* 是故障转移接口。*wlan0* 接口是由 *ath0* 物理无线接口创建的，并且以太网接口将配置为无线接口的 MAC 地址。首先，启用无线接口（将 *FR* 替换为你的国家/地区的两位字母代码），但不设置 IP 地址。将 *wlan0* 替换为系统的无线接口名称：
+在此示例中，**em0** 是主接口，**wlan0** 是故障转移接口。**wlan0** 接口是由 **rtwn0** 物理无线接口创建的，并且以太网接口将配置为无线接口的 MAC 地址。首先，启用无线接口，请将 **rtwn0** 替换为系统的无线接口名称：
 
 ```sh
-# ifconfig wlan0 create wlandev ath0 country FR ssid my_router up
+# ifconfig wlan0 create wlandev rtwn0
 ```
 
 现在可以确定无线接口的 MAC 地址：
@@ -129,18 +135,18 @@ wlan0: flags=8843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST> metric 0 mtu 1500
 	nd6 options=29<PERFORMNUD,IFDISABLED,AUTO_LINKLOCAL>
 ```
 
-`ether` 行将显示指定接口的 MAC 地址。现在，将以太网接口的 MAC 地址更改为匹配：
+`ether` 行将显示指定接口的 MAC 地址。现在，将以太网接口的 MAC 地址更改无线网卡的 MAC 地址：
 
 ```sh
-# ifconfig re0 ether b8:ee:65:5b:32:59
+# ifconfig em0 ether b8:ee:65:5b:32:59
 ```
 
-确保 *re0* 接口已启用，然后创建 lagg(4) 接口，以 *re0* 作为主接口并故障转移到 *wlan0*：
+确保 **em0** 接口已启用，然后创建 lagg(4) 接口，以 **em0** 作为主接口并故障转移到 **wlan0**：
 
 ```sh
-# ifconfig re0 up
+# ifconfig em0 up
 # ifconfig lagg0 create
-# ifconfig lagg0 up laggproto failover laggport re0 laggport wlan0
+# ifconfig lagg0 up laggproto failover laggport em0 laggport wlan0
 ```
 
 虚拟接口的状态应如下所示：
@@ -151,7 +157,7 @@ lagg0: flags=8843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST> metric 0 mtu 1500
         options=8<VLAN_MTU>
         ether b8:ee:65:5b:32:59
         laggproto failover lagghash l2,l3,l4
-        laggport: re0 flags=5<MASTER,ACTIVE>
+        laggport: em0 flags=5<MASTER,ACTIVE>
         laggport: wlan0 flags=0<>
         groups: lagg
         media: Ethernet autoselect
@@ -167,10 +173,10 @@ lagg0: flags=8843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST> metric 0 mtu 1500
 为确保此配置在重启后仍然生效，需在 **/etc/rc.conf** 文件中添加以下条目：
 
 ```sh
-ifconfig_re0="ether b8:ee:65:5b:32:59"
-wlans_ath0="wlan0"
+ifconfig_em0="ether b8:ee:65:5b:32:59"
+wlans_rtwn0="wlan0"
 ifconfig_wlan0="WPA"
 create_args_wlan0="country FR"
 cloned_interfaces="lagg0"
-ifconfig_lagg0="up laggproto failover laggport re0 laggport wlan0 DHCP"
+ifconfig_lagg0="up laggproto failover laggport em0 laggport wlan0 DHCP"
 ```
