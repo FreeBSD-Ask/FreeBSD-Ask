@@ -608,7 +608,8 @@ $ anydesk
 创建专用用户运行 RustDesk 中继服务，避免以 root 身份运行：
 
 ```sh
-# pw useradd rustdesk -s /usr/sbin/nologin -c "RustDesk Server"
+# pw useradd rustdesk -s /bin/sh -c "RustDesk Server"
+# pw lock rustdesk
 ```
 
 - 启动 hbbs：
