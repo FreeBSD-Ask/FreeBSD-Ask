@@ -6,7 +6,7 @@ FreeBSD 在 VirtualBox 中作为虚拟机运行稳定。本节演示环境为 Vi
 
 > **注意**
 >
-> VirtualBox 7.1.x 系列已于 2026 年 4 月结束生命周期（EOL），FreeBSD Ports 中 `emulators/virtualbox-ose-71` 已被标记为 DEPRECATED，建议迁移至 `emulators/virtualbox-ose-72`。7.2 系列为当前活跃维护分支，截至 2026 年 4 月最新版本为 7.2.8。
+> VirtualBox 当前维护两个并行分支：7.1.x 与 7.2.x。7.2 系列于 2025 年 8 月首次发布，新增 Windows/Arm 平台支持，为当前主线版本；7.1.x 系列仍持续接收维护更新。FreeBSD Ports 中 `emulators/virtualbox-ose`（6.1.x）已被标记为 DEPRECATED，过期日期为 2026-12-31，建议使用 `emulators/virtualbox-ose-72`。
 
 ## 下载 VirtualBox
 
