@@ -40,7 +40,7 @@ Apple iPhone/iPad 设备需加载以下内核模块：
 
 > **注意**
 >
-> 自 iPhone 14 系列起，Apple 已将 USB 网络共享协议从传统 IP-over-USB 切换为 NCM 协议。FreeBSD 的 if_ipheth 驱动目前不支持 NCM 模式，if_cdce 驱动对 Apple 的 NCM 实现也存在兼容性问题（Apple 的 NCM 实现不完全符合标准），可能导致连接不可用。截至 2025 年末，此问题尚无完善的解决方案。
+> 自 iPhone 14 系列起，Apple 已将 USB 网络共享协议从传统 IP-over-USB 切换为 NCM 协议。FreeBSD 的 if_ipheth 驱动目前不支持 NCM 模式，if_cdce 驱动对 Apple 的 NCM 实现也存在兼容性问题（Apple 的 NCM 实现不完全符合标准），可能导致连接不可用。此问题尚无完善的解决方案。
 
 ### 较新 Android 设备驱动（CDC NCM）
 
