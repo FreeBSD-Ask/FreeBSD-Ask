@@ -727,59 +727,9 @@ CST 为中国标准时间（China Standard Time）的缩写，确认无误后按
 
 > **警告**
 >
-> 建议在此步骤取消所有勾选，即不安装任何固件。在线安装可能因网络问题失败或耗时过长，且此步骤不影响系统的基本启动与核心功能。如需安装固件，可在系统安装完成后使用 `fwget` 命令另行获取。
+> 建议在此步骤取消所有勾选，即不安装任何固件。在线安装可能因网络问题失败或耗时过长，且此步骤不影响系统的基本启动与核心功能。取消固件安装后，无线网卡、GPU 等硬件在系统首次启动时将无法正常工作，需在安装完成并联网后通过 `fwget` 命令补充安装固件；
 >
 > 在 FreeBSD 14 的物理机安装中，此步骤可能会显示需要安装的固件列表（如显卡固件等），请同样取消勾选，待安装完成后使用 `fwget` 命令获取。
-
-> **注意**
->
-> 取消固件安装后，以下硬件在系统首次启动时将无法正常工作，需在安装完成并联网后通过 `fwget` 命令补充安装固件：
->
-> - 无线网卡：Intel Wi-Fi 系列（iwlwifi，如 AX201/AX210 等）、Realtek rtw88/rtw89 系列（如 RTL8821CE、RTL8852BE 等）、Ralink 系列 USB 无线网卡等。缺少固件时，驱动程序将无法加载固件镜像，网卡不会被识别为可用的网络接口。
-> - GPU：Intel 集成显卡（如 Alder Lake-N UHD Graphics）及部分 AMD 显卡。缺少固件时，DRM 驱动（如 `drm-kmod`）可能无法正常初始化，导致图形界面无法启动或显示异常。
-> - CPU 微码：部分 Intel CPU 可能需要 `cpu-microcode-intel` 包以获取微码更新，缺少时不影响基本启动，但可能遗漏安全修复与稳定性改进。
->
-> 以太网卡通常不需要额外固件（部分型号如 RTL8125 除外，参见 Bug 289862），基本系统启动与核心功能不受固件缺失影响。
-
-### 附录：使用 fwget 获取固件
-
-`fwget` 是 FreeBSD 自带的固件获取工具，首次出现于 FreeBSD 14.0。该工具扫描当前系统的硬件设备，自动检测并安装所需的固件包。其基本用法如下：
-
-```sh
-# fwget
-```
-
-该命令将扫描所有支持的硬件子系统（PCI 和 USB），检测缺少的固件并自动安装。
-
-常用选项：
-
-| 选项 | 说明 |
-| ---- | ---- |
-| `-n` | 干运行模式，仅显示需要安装的固件包名称，不实际安装 |
-| `-v` | 显示更详细的输出信息 |
-| `pci` | 仅扫描 PCI 子系统（如内置无线网卡、GPU 等） |
-| `usb` | 仅扫描 USB 子系统（如 USB 无线网卡等） |
-
-示例：
-
-```sh
-# fwget -n        # 仅查看需要安装的固件包，不执行安装
-# fwget pci       # 仅扫描 PCI 设备并安装所需固件
-# fwget usb       # 仅扫描 USB 设备并安装所需固件
-```
-
-> **注意**
->
-> `fwget` 需要网络连接以从软件源下载固件包。如果当前系统没有网络连接，可通过 USB 网络共享等方式临时获得网络连接后再执行；也可手动从镜像站点下载所需固件包（`.pkg` 文件），随后使用 `pkg add` 命令安装。
->
-> 系统版本更新后，已安装的固件可能与新内核不兼容，需重新执行 `fwget` 以获取与当前内核版本匹配的固件。
-
-### 参考文献
-
-- FreeBSD Project. fwget(8)[EB/OL]. [2026-03-25]. <https://man.freebsd.org/cgi/man.cgi?query=fwget&sektion=8>. 该手册页说明 fwget 工具的使用方法。
-- FreeBSD Project. Bug 287654: bsdinstall: fwget failure silently results in non-working Wi-Fi[EB/OL]. [2026-06-10]. <https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=287654>. 该 Bug 报告记录 bsdinstall 中 fwget 失败导致 Wi-Fi 不可用的问题。
-- FreeBSD Project. Bug 289862: fwget(8) does not support Realtek Ethernet (RTL8125 2.5GbE, realtek-re-kmod)[EB/OL]. [2026-03-25]. <https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=289862>. 该 Bug 报告记录 fwget 不支持 RTL8125 以太网卡固件的问题。
-- FreeBSD Project. Bug 286402: fwget(8) not documented in the FreeBSD Handbook[EB/OL]. [2026-06-10]. <https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=286402>. 该 Bug 报告记录 fwget 在 FreeBSD Handbook 中缺少文档的问题。
 
 ### 附录：视频教程
 
