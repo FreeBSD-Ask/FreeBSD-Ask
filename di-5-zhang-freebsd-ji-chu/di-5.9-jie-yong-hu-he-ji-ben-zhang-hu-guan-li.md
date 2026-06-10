@@ -38,7 +38,7 @@ FreeBSD 中主要有三类账户：系统账户、普通用户账户，以及超
 
 系统账户用于运行 DNS、邮件和 Web 服务器等服务。如果所有服务均以超级用户身份运行，其操作将不受限制，此即使用系统账户的安全性考量。
 
-系统账户由源代码中的 [main/etc/master.passwd](https://github.com/freebsd/freebsd-src/blob/main/etc/master.passwd) 文件定义，共计 27 个（26 个 UID < 1000 的账户加上 nobody(65534)，该数量随版本迭代可能变化），`_dhcp`、`ntpd` 便属于此类系统账户。系统账户是具有受限权限的专用账户，通常用于运行系统服务和守护进程。
+系统账户由源代码中的 [main/etc/master.passwd](https://github.com/freebsd/freebsd-src/blob/main/etc/master.passwd) 文件定义，截至写作时共计 27 个（26 个 UID < 1000 的账户加上 nobody(65534)，该数量随版本迭代可能变化），`_dhcp`、`ntpd` 便属于此类系统账户。系统账户是具有受限权限的专用账户，通常用于运行系统服务和守护进程。
 
 `nobody` 是通用的非特权系统账户，但使用 `nobody` 的服务越多，该用户关联的文件和进程就越多，该用户特权越大，因此最佳实践是为每个服务分配独立的系统账户，而非共用 `nobody`。
 
