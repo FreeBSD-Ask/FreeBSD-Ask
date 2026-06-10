@@ -254,7 +254,7 @@ Realtek RTL8125 是一款常见的 2.5 G 以太网卡。在消费级市场中，
 
 > **技巧**
 >
-> 如果 Realtek 网卡仍存在断流、时断时续等情况，可尝试使用 **net/realtek-re-kmod198**[EB/OL]. [2026-03-26]. <https://www.freshports.org/net/realtek-re-kmod198/>.
+> 如果 Realtek 网卡仍存在断流、时断时续等情况，可尝试使用 Port **net/realtek-re-kmod198** 替代 **realtek-re-kmod**。
 
 相关文件结构：
 
