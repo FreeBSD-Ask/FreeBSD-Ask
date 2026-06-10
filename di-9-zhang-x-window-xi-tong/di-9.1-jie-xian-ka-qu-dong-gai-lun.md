@@ -28,14 +28,19 @@ DRM 是 Linux 内核的子系统，负责与现代显卡的 GPU 交互。FreeBSD
 
 显卡支持情况：
 
-- **graphics/drm-latest-kmod**（15.1/16.0）：
-  - 对应 Linux 6.12 DRM。
-  - Intel：Meteor Lake 图形在 6.7 后默认启用；
-  - AMD：覆盖 GCN 到 RDNA 4 全部架构（RDNA 4 支持自 Linux 6.12 引入）。
+| Port 名称 | Linux DRM 版本 | 适用 FreeBSD 版本 | 说明 |
+|---|---|---|---|
+| **graphics/drm-515-kmod** | 5.15 LTS | 14.x 及以上 | 适用于 14.x（i386/aarch64）或较旧的 15.x |
+| **graphics/drm-61-kmod** | 6.1 LTS | 14.x 及以上（amd64） | 14.x amd64 的默认选择；也支持 powerpc64/powerpc64le |
+| **graphics/drm-66-kmod** | 6.6 LTS | 15.0 及以上（amd64） | 15.0 的默认选择 |
+| **graphics/drm-612-kmod** | 6.12 LTS | 15.1/16.0/main（amd64） | 15.1 及以上的默认选择；Intel Meteor Lake 图形在 6.7 后默认启用；AMD 覆盖 GCN 到 RDNA 4 全部架构（RDNA 4 支持自 Linux 6.12 引入） |
+| **graphics/drm-latest-kmod** | 跟踪最新 | 15.1/16.0/main（amd64） | 跟踪 drm-kmod 仓库 master 分支，当前为 Linux 6.12；可能不如 LTS 版本稳定 |
 
-> **技巧**
+> **注意**
 >
-> 可在 port 开发者手册的最后一章中查询 OSVERSION 对应的版本和 Git 提交。
+> 通过元 Port **graphics/drm-kmod** 安装时，系统会根据 OSVERSION 自动选择合适的版本：OSVERSION >= 1500509（15.1 及以上）选择 drm-612-kmod，OSVERSION >= 1500031（15.0）选择 drm-66-kmod，其余选择 drm-61-kmod。如需指定版本，可直接安装对应的 Port。
+>
+>可在 port 开发者手册的最后一章中查询 OSVERSION 对应的版本和 Git 提交。
 >
 > 查看本机 `OSVERSION`，显示系统版本构建标识符：
 >
