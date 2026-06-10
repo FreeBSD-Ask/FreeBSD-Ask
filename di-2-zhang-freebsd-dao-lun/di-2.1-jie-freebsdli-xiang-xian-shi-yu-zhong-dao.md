@@ -97,7 +97,7 @@ GNOME、Xorg（X11）、D-Bus、systemd、PulseAudio、Wayland、PipeWire 等主
 ##### 参考文献
 
 - D'Pong P. Bug 562443 - SWT spams temp folder with innumerable folders[EB/OL]. (2020-05-26)[2026-04-05]. <https://gitlab.simantics.org/simantics/eclipse/eclipse.platform.swt/-/commit/19153b908d6d4cedcbd59824686717502cfde4f7>.
-- FreshPorts. java/eclipse[EB/OL]. [2026-06-06]. <https://www.freshports.org/java/eclipse/>. Port **java/eclipse** 已恢复活跃维护
+- FreshPorts. java/eclipse[EB/OL]. [2026-06-06]. <https://www.freshports.org/java/eclipse/>. 截至 2026 年，Port **java/eclipse** 已恢复活跃维护
 - FreeBSD Forums. Are Linuxisms impossible to overcome when porting?[EB/OL]. [2026-06-07]. <https://forums.freebsd.org/threads/are-linuxisms-impossible-to-overcome-when-porting.45805/>.
 
 #### FreeBSD 基金会重大捐赠事件
