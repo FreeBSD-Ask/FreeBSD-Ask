@@ -1,10 +1,10 @@
 # 6.2 FreeBSD 软件源
 
-FreeBSD 的软件源分为 pkg 二进制包源、内核模块源、pkgbase 系统源和 Ports 源四类，分别配置，默认指向官方服务器，国内用户通常需要切换至镜像站以提升下载速度。
+FreeBSD 的软件源分为 pkg 二进制包源、内核模块源、PkgBase 系统源和 Ports 源四类，分别配置，默认指向官方服务器，国内用户通常需要切换至镜像站以提升下载速度。
 
 ## 15.0-RELEASE 快速切换 pkg 软件源到中国科学技术大学开源软件镜像站
 
-该配置要求读者在安装过程中使用 pkgbase 方式，可设置 pkg 二进制包源（由 Ports 构建而来）、pkgbase 源、内核模块源。
+该配置要求读者在安装过程中使用 PkgBase 方式，可设置 pkg 二进制包源（由 Ports 构建而来）、PkgBase 源、内核模块源。
 
 使用 ee 编辑器打开 **/usr/local/etc/pkg/repos/FreeBSD.conf** 文件。
 
