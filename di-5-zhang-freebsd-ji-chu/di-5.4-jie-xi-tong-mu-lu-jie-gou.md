@@ -95,7 +95,7 @@ FreeBSD 的目录结构设计遵循以下原则：
 │   ├── localtime 本地时区文件，参见 ctime(3)。在测试系统中，localtime 链接至 /usr/share/zoneinfo/Asia/Shanghai
 │   ├── login.conf 登录类功能数据库，参见 login.conf(5)
 │   ├── machine-id 系统的 UUID，供 D-Bus 使用；FreeBSD 通过 hostid_save 脚本生成（与 /etc/hostid 相同 UUID，去除连字符），D-Bus 端口读取 /usr/local/etc/machine-id
-│   ├── mail Sendmail 相关文件，参见 sendmail(8)
+│   ├── mail 邮件系统配置文件（别名、mailer.conf），参见 mailwrapper(8)
 │   │   ├── aliases 用于投递系统邮件的地址
 │   │   └── mailer.conf mailwrapper(8) 配置文件
 │   ├── motd.template TTY 登录后显示的信息，参见 motd(5)
@@ -269,7 +269,7 @@ FreeBSD 的目录结构设计遵循以下原则：
 │   │   ├── devd.log 设备状态变更守护进程的默认日志
 │   │   ├── dmesg.today 系统消息缓冲区日志，轮替为 dmesg.yesterday
 │   │   ├── lpd-errs 行式打印机假脱机守护进程日志，参见 lpd(8)
-│   │   ├── maillog sendmail(8) 日志，轮替并压缩为 maillog.0.bz2
+│   │   ├── maillog 邮件系统日志，轮替并压缩为 maillog.0.bz2
 │   │   ├── messages 通用系统日志，参见 syslogd(8)
 │   │   ├── mount.today 当前加载的 fstab(5)，轮替为 mount.yesterday
 │   │   ├── pf.today 包过滤防火墙日志，参见 pf(4)

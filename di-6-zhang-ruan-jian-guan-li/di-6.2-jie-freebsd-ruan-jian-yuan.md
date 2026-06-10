@@ -236,9 +236,9 @@ FreeBSD-ports-kmods: { enabled: no }
 >
 > 建议保持 Ports 源和 kmods 源（如果开启 PkgBase，则还需要纳入 PkgBase 源）为同一镜像站，以避免发生潜在的依赖等问题。
 
-## 面向基本系统的 PkgBase 源（适用 FreeBSD 14.3-RELEASE 及以上）
+## 面向基本系统的 PkgBase 源（FreeBSD 15.0 技术预览，14.x 可手动启用）
 
-`PkgBase` 在 `FreeBSD 15.0-RELEASE` 中作为技术预览出现，FreeBSD 项目仍支持传统方式直至 15.X 结束。在生产环境中使用 `PkgBase` 升级系统时应注意备份。
+`PkgBase` 在 `FreeBSD 15.0-RELEASE` 中作为技术预览引入，虚拟机与云镜像默认使用 PkgBase，物理机默认仍为传统方式。FreeBSD 项目仍支持传统方式直至 15.X 结束（计划在 FreeBSD 16 中移除）。在生产环境中使用 `PkgBase` 升级系统时应注意备份。
 
 > **技巧**
 >

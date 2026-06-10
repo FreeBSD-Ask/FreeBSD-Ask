@@ -2,6 +2,10 @@
 
 VMware Workstation Pro 是 Type-2 虚拟机监视器（Hypervisor），运行在宿主操作系统之上，借助二进制翻译（binary translation）和硬件辅助虚拟化（hardware-assisted virtualization，基于 Intel VT-x 或 AMD-V 技术）完成 x86 指令集的虚拟化。
 
+> **提示**
+>
+> 自 2024 年 11 月 11 日起，Broadcom 宣布 VMware Workstation Pro 对所有用户（个人、教育及商业用途）免费开放，无需许可证密钥。安装时在许可证密钥界面选择免费版本即可。免费政策适用于 Workstation Pro 17.5.2 及以上版本。
+
 ## 视频教程
 
 以下视频教程演示了在 Windows 11 上安装 VMware Workstation Pro 17 的过程：
