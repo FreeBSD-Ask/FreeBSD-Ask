@@ -18,6 +18,10 @@
 
 此处需要设置较大的临时交换分区，该数值应为计划中的交换分区与 Windows 系统分区容量之和。如此设置是为了后续安装 Windows 时能够直接使用这部分空间，避免额外分区操作。在本节中，交换分区（swap）大小为 8 GB，其余 200 GB 空间预留给 Windows。请调整 `S Swap Size` 的数值。
 
+> **注意**
+>
+> `Partition Scheme` 分区表应选择 `GPT (uefi)`！否则将生成一个多余的 `freebsd-boot` 分区。
+
 ![交换分区大小设置](../.gitbook/assets/dual-boot-4.png)
 
 列出系统磁盘分区情况：
@@ -32,7 +36,6 @@
 
 =>       40  629145520  nda0 GPT  (300G)
          40     532480    1  efi  (260M)
-     532520       1024    2  freebsd-boot  (512K)
      533544        984       - free -  (492K)
      534528  436207616    3  freebsd-swap  (208G)
   436742144  192401408    4  freebsd-zfs  (92G)
@@ -99,7 +102,6 @@ Windows 安装完成后，恢复 FreeBSD 的交换分区。此前预留了 208 G
 =>       34  629145533  nda0  GPT  (300G)
          34          6        - free -  (3.0K)
          40     532480     1  efi  (260M)
-     532520       1024     2  freebsd-boot  (512K)
      533544        984        - free -  (492K)
      534528      32768     3  ms-reserved  (16M)
      567296  417953792     4  ms-basic-data  (199G)

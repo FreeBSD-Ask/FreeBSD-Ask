@@ -14,22 +14,18 @@
 | **反向代理（Reverse Proxy）** | 代理代表服务器接收客户端请求，客户端不知道真实服务器的地址 | 负载均衡、SSL 终结和静态内容缓存 |
 | **透明代理（Transparent Proxy）** | 客户端无需配置，网络设备（如路由器）将流量重定向至代理 | 企业网络的内容过滤和流量监控 |
 
-配置系统代理前，需查看当前用户正在使用的 shell 类型。不同 shell 对环境变量的设置方式存在差异，执行以下命令可查看当前 shell：
-
-```sh
-$ echo $SHELL
-```
+配置系统代理前，需了解 FreeBSD 提供的环境变量配置方式。
 
 ## 配置 HTTP_PROXY 代理
 
 通过设置 HTTP_PROXY、HTTPS_PROXY、ALL_PROXY 等环境变量，可使多数命令行工具通过代理转发流量。以下为配置方法。
 
-### 如果使用 sh、Bash 或 Zsh
+### 临时设置
 
-设置 HTTP 代理环境变量，该变量由当前 shell 及其子进程继承：
+在当前 shell 会话中临时设置代理环境变量：
 
 ```sh
-# export HTTP_PROXY=http://192.168.X.X:7890
+$ export HTTP_PROXY=http://192.168.X.X:7890
 ```
 
 > **警告**
@@ -39,22 +35,25 @@ $ echo $SHELL
 取消已设置的 HTTP 代理环境变量：
 
 ```sh
-# unset HTTP_PROXY
+$ unset HTTP_PROXY
 ```
 
-### 如果使用 csh
+### 持久化配置（用户分级方法）
 
-在 csh 或 tcsh 中设置 HTTP 代理环境变量，需使用该 shell 特有的 `setenv` 命令：
+通过用户分级方法持久化配置，使代理环境变量在每次登录时自动生效，且与 Shell 类型无关。编辑 **~/.login_conf** 文件：
+
+```ini
+me:\
+	:setenv=HTTP_PROXY=http://192.168.X.X:7890,HTTPS_PROXY=http://192.168.X.X:7890:
+```
+
+编辑后，需要执行以下命令来更新登录能力数据库：
 
 ```sh
-# setenv http_proxy http://192.168.X.X:7890
+$ cap_mkdb ~/.login_conf
 ```
 
-在 csh 或 tcsh 中取消已设置的 HTTP 代理环境变量，使用对应的 `unsetenv` 命令：
-
-```sh
-# unsetenv http_proxy
-```
+重新登录后生效。
 
 ## 配置 Git 代理
 
@@ -115,7 +114,7 @@ Exec=chrome %U --proxy-server="192.168.2.163:20172"
 
 > **技巧**
 >
-> 上述示例中的 `192.168.2.163`、`20172` 为占位符，须替换为实际的值。
+> 上述示例中的 **192.168.2.163**、`20172` 为占位符，须替换为实际的值。
 
 ### 为 Firefox 单独配置代理
 

@@ -462,14 +462,14 @@ bridge0: flags=1008843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST,LOWER_UP> metric 0
 
 如果一个网桥成员接口被标记为 `sticky`，那么动态学习到的地址条目会被当作静态条目处理，并存储在转发缓存中。即使该地址在另一个接口上被检测到，`sticky` 条目也永远不会从缓存中被删除或替换。这提供了静态地址条目的优势，而无需预先填充转发表。客户端在网桥的某个段上学习到的地址不能跳转到其他段。
 
-将 sticky 地址与 VLAN 结合使用的一个例子是：隔离客户网络，而不浪费 IP 地址空间。假设 `CustomerA` 在 `vlan100` 上，`CustomerB` 在 `vlan101` 上，且网桥有地址 `192.168.0.1`：
+将 sticky 地址与 VLAN 结合使用的一个例子是：隔离客户网络，而不浪费 IP 地址空间。假设 `CustomerA` 在 `vlan100` 上，`CustomerB` 在 `vlan101` 上，且网桥有地址 **192.168.0.1**：
 
 ```sh
 # ifconfig bridge0 addm vlan100 sticky vlan100 addm vlan101 sticky vlan101
 # ifconfig bridge0 inet 192.168.0.1/24
 ```
 
-在这个例子中，两个客户都将 `192.168.0.1` 作为默认网关。由于网桥缓存是 sticky 的，一个主机无法伪造另一个客户的 MAC 地址来截取其流量。
+在这个例子中，两个客户都将 **192.168.0.1** 作为默认网关。由于网桥缓存是 sticky 的，一个主机无法伪造另一个客户的 MAC 地址来截取其流量。
 
 可使用防火墙或如上所示的私有接口来阻止 VLAN 之间的任何通信：
 

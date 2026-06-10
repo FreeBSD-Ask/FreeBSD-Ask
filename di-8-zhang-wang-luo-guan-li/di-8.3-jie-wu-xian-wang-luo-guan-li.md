@@ -45,7 +45,7 @@ net.wlan.devices: rtwn0
 
 > **技巧**
 >
-> 上述示例中的 `wlan0`、`rtwn0`、`192.168.1.100`、`freebsdap`、`freebsdcn` 为占位符，须替换为实际的值。
+> 上述示例中的 `wlan0`、`rtwn0`、**192.168.1.100**、`freebsdap`、`freebsdcn` 为占位符，须替换为实际的值。
 
 创建完成后，可使用 `ifconfig` 命令查看接口状态（以下输出已省略以太网卡和 `lo0` 接口）：
 

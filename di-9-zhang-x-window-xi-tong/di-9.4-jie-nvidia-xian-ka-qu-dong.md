@@ -44,8 +44,8 @@
 执行以下命令配置 NVIDIA 内核模块：
 
 ```sh
-# echo 'hw.nvidiadrm.modeset="1"' >> /boot/loader.conf  # 启用 NVIDIA DRM 模式设置
-# sysrc -f /etc/rc.conf kld_list+=nvidia-modeset       # 添加 nvidia-modeset 内核模块以便启动时加载
+# sysrc -f /boot/loader.conf hw.nvidiadrm.modeset=1  # 启用 NVIDIA DRM 模式设置
+# sysrc -f /etc/rc.conf kld_list+=nvidia-modeset      # 添加 nvidia-modeset 内核模块以便启动时加载
 ```
 
 > **警告**
@@ -141,8 +141,11 @@ Mon Jan 19 19:06:59 2026
 
 如果提示版本不符，需先卸载所有已安装的 NVIDIA 相关软件包，随后按本节配置：
 
+先列出已安装的 NVIDIA 相关软件包，再逐个删除：
+
 ```sh
-# pkg delete *nvidia*
+# pkg info -q | grep -i nvidia
+# pkg delete nvidia-drm-kmod nvidia-driver nvidia-settings
 ```
 
 ### 如何阻止驱动更新
