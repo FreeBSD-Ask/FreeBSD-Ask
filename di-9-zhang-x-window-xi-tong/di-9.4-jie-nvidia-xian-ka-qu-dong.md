@@ -156,7 +156,7 @@ Mon Jan 19 19:06:59 2026
 # pkg lock nvidia-settings
 ```
 
-但如果运行 `freebsd-update` 命令，或通过 pkgbase 对系统打补丁或更新，也可能影响驱动兼容性，因此需根据实际情况权衡安全需求与可用性。
+但如果运行 `freebsd-update` 命令，或通过 PkgBase 对系统打补丁或更新，也可能影响驱动兼容性，因此需根据实际情况权衡安全需求与可用性。
 
 ## 参考文献
 
