@@ -42,19 +42,15 @@ FreeBSD 是一款真正自由（Liberty）的 **操作系统**，在这波谲云
 
 - EPUB（适用于移动端离线阅读）下载地址：<https://docs.bsdcn.org/bsdbook.epub> ![EPUB 文件状态](https://img.shields.io/website?url=https%3A%2F%2Fdocs.bsdcn.org%2Fbsdbook.epub&up_message=%E6%96%87%E4%BB%B6%E5%8F%AF%E7%94%A8&down_message=%E6%96%87%E4%BB%B6%E4%B8%8D%E5%8F%AF%E7%94%A8&style=for-the-badge&label=%E6%96%87%E6%A1%A3%E7%8A%B6%E6%80%81)
 
-> **注意**
->
-> 以上下载地址以 `docs.bsdcn.org` 域名开头，非 `book.bsdcn.org`。
-
-EPUB 格式文档在移动端可使用 [微信读书](https://play.google.com/store/apps/details?id=com.tencent.weread&hl=zh) 打开，格式显示完整；在桌面端可使用 [CAJViewer 9](https://cajviewer.cnki.net/download.html) 打开。
+移动端建议使用 [微信读书](https://play.google.com/store/apps/details?id=com.tencent.weread&hl=zh) 打开 EPUB 文档，桌面端建议使用 [CAJViewer 9](https://cajviewer.cnki.net/download.html)。
 
 电子文档内容与网页版实时同步，随 Git 提交更新，文件名保持不变。
 
-电子书生成由 [safreya](https://github.com/safreya) 开发的 [GitBook PDF/EPUB 导出工具](https://github.com/FreeBSD-Ask/gitbook-pdf-export) 提供支持，该工具可将 GitBook 格式内容转换为 PDF 和 EPUB 格式。
+电子书生成由 [safreya](https://github.com/safreya) 开发的 [GitBook PDF/EPUB 导出工具](https://github.com/FreeBSD-Ask/gitbook-pdf-export) 提供支持，该工具可将 GitBook 项目内容转换为 PDF 和 EPUB 格式。
 
 ## 部署地址
 
-本书通过三个域名提供访问服务，各域名使用不同网站架构：
+本书通过三个子域名提供访问服务，各域名使用不同网站架构：
 
 - <https://book.bsdcn.org>
 - <https://docs.bsdcn.org>
