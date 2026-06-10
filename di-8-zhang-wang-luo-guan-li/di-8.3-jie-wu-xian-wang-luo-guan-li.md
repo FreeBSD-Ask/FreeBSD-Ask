@@ -129,7 +129,7 @@ test_5G                           50:d6:c5:93:d7:64   36   54M  -78:-95   100 EP
 
 ### 使用 WPA2 认证
 
-加密无线网络需使用 Wi-Fi 保护访问（Wi-Fi Protected Access，WPA）配置文件连接。WPA2 是 FreeBSD 当前已能正常使用的无线网络安全协议，提供数据加密和身份认证功能。对于 WPA3/SAE，FreeBSD 基本系统的 `wpa_supplicant` 可通过 `CONFIG_SAE=y` 编译选项支持 SAE 协商配置，但内核 net80211 协议栈尚未完成 SAE 认证支持，客户端实际连接会因可用密钥管理类型为空（`available key_mgmt 0x0`）而失败（多名用户在 FreeBSD 14.3、15.0 下的实测均确认此情况）。FreeBSD 基金会已将 net80211 协议栈更新列为在研工作。
+加密无线网络需使用 Wi-Fi 保护访问（Wi-Fi Protected Access，WPA）配置文件连接。WPA2 是 FreeBSD 当前已能正常使用的无线网络安全协议，提供数据加密和身份认证功能。对于 WPA3/SAE，FreeBSD 基本系统的 `wpa_supplicant` 可通过 `CONFIG_SAE=y` 编译选项支持 SAE 协商配置，但内核 net80211 协议栈尚未完成 SAE 认证支持，客户端实际连接会因可用密钥管理类型为空（`available key_mgmt 0x0`）而失败（截至 2025 年末，多名用户在 FreeBSD 14.3、15.0 下的实测均确认此情况）。FreeBSD 基金会已将 net80211 协议栈更新列为在研工作。
 
 无线网络中的认证过程由 wpa_supplicant(8) 管理。可使用 wpa_passphrase(8) 工具将 SSID 和明文密码转换为安全的 PSK 配置条目，避免在配置文件中直接书写明文密码。此外，wpa_cli(8) 提供了 wpa_supplicant 的交互式命令行管理接口，可用于运行时调试和状态查询。创建 **/etc/wpa_supplicant.conf** 配置文件，内容如下：
 
