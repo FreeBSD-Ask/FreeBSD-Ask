@@ -49,7 +49,7 @@ zroot/ROOT/15.0-RELEASE     8K  83.8G  10.6G  /
 
 ## 将启动环境中的系统版本更新到 15.0-RELEASE
 
-创建启动环境后，需要更新到目标版本。操作分为挂载、验证版本、转换为 pkgbase、升级四个步骤。
+创建启动环境后，需要更新到目标版本。操作分为挂载、验证版本、转换为 PkgBase、升级四个步骤。
 
 ### 挂载启动环境 15.0-RELEASE
 
@@ -69,7 +69,7 @@ zroot/ROOT/15.0-RELEASE     8K  83.8G  10.6G  /
             └── etc/
                 └── pkg/
                     └── repos/
-                        └── FreeBSD-base.conf # pkgbase 源配置文件
+                        └── FreeBSD-base.conf # PkgBase 源配置文件
 ```
 
 - 将启动环境（实际上是一个数据集）15.0-RELEASE 挂载到指定路径
@@ -111,15 +111,15 @@ zroot/ROOT/15.0-RELEASE  99036272 11132688 87903584    11%    /mnt/upgrade
 - `-r`：打印正在运行中的内核的版本和补丁级别。不同于 uname(1)，`freebsd-version` 不受环境变量影响。
 - `-u`：打印已安装用户态的版本和补丁级别。这些信息在构建过程中会写入程序 `freebsd-version` 中。
 
-### 使用 pkgbase 将启动环境中的 14.3-RELEASE（系统版本）转换为 pkgbase
+### 使用 PkgBase 将启动环境中的 14.3-RELEASE（系统版本）转换为 PkgBase
 
-升级之前，需将传统的 FreeBSD 系统转换为 pkgbase 格式。pkgbase 是 FreeBSD 官方提供的基本系统打包方式，使用 pkg 包管理器管理系统组件。
+升级之前，需将传统的 FreeBSD 系统转换为 PkgBase 格式。PkgBase 是 FreeBSD 官方提供的基本系统打包方式，使用 pkg 包管理器管理系统组件。
 
-pkgbase 的设计目标是使 stable、current 与 release（包括 BETA、RC 等）分支均能使用统一的二进制工具进行更新。此前，stable 与 current 分支仅能通过编译源代码进行更新。
+PkgBase 的设计目标是使 stable、current 与 release（包括 BETA、RC 等）分支均能使用统一的二进制工具进行更新。此前，stable 与 current 分支仅能通过编译源代码进行更新。
 
 > **注意**
 >
-> 仅 FreeBSD 14.0-RELEASE 及更高版本才能直接转换为 pkgbase。旧版仍需要通过 `freebsd-update` 更新（运行时 pkgbasify 会提示 `Unsupported FreeBSD version`，即 FreeBSD 版本不受支持）。
+> 仅 FreeBSD 14.0-RELEASE 及更高版本才能直接转换为 PkgBase。旧版仍需要通过 `freebsd-update` 更新（运行时 pkgbasify 会提示 `Unsupported FreeBSD version`，即 FreeBSD 版本不受支持）。
 
 > **警告**
 >
@@ -133,10 +133,10 @@ pkg-2.4.2_1: lock this package? [y/N]: y # 输入 y 按回车键确认锁定 pkg
 Locking pkg-2.4.2_1
 ```
 
-- 下载 pkgbase 转换脚本
+- 下载 PkgBase 转换脚本
 
 ```sh
-# fetch -o /mnt/upgrade https://raw.githubusercontent.com/FreeBSDFoundation/pkgbasify/main/pkgbasify.lua  # 下载 pkgbase 转换脚本
+# fetch -o /mnt/upgrade https://raw.githubusercontent.com/FreeBSDFoundation/pkgbasify/main/pkgbasify.lua  # 下载 PkgBase 转换脚本
 ```
 
 - 使用 pkgbasify 转换
@@ -184,25 +184,25 @@ After verifying those files, restart the system.
 14.3-RELEASE-p6
 ```
 
-### 使用 pkgbase 将启动环境中的系统版本更新到 15.0-RELEASE
+### 使用 PkgBase 将启动环境中的系统版本更新到 15.0-RELEASE
 
-转换为 pkgbase 后，即可使用 pkg 包管理器升级系统。下面配置 pkgbase 源并执行升级。
+转换为 PkgBase 后，即可使用 pkg 包管理器升级系统。下面配置 PkgBase 源并执行升级。
 
 软件源结构：
 
 ```sh
 /usr/local/etc/pkg/
 └── repos/ # pkg 仓库配置目录
-    └── FreeBSD-base.conf # pkgbase 源配置文件
+    └── FreeBSD-base.conf # PkgBase 源配置文件
 ```
 
-- 创建 pkgbase 软件源目录
+- 创建 PkgBase 软件源目录
 
 ```sh
-# mkdir -p /mnt/upgrade/usr/local/etc/pkg/repos/  # 创建 pkgbase 软件源目录
+# mkdir -p /mnt/upgrade/usr/local/etc/pkg/repos/  # 创建 PkgBase 软件源目录
 ```
 
-- 编辑 **/mnt/upgrade/usr/local/etc/pkg/repos/FreeBSD-base.conf** 文件，添加 pkgbase 源
+- 编辑 **/mnt/upgrade/usr/local/etc/pkg/repos/FreeBSD-base.conf** 文件，添加 PkgBase 源
 
 ```ini
 FreeBSD-base {
@@ -230,7 +230,7 @@ FreeBSD-base {
 # pkg -c /mnt/upgrade update -r FreeBSD-base  # 刷新软件源
 ```
 
-- 使用 pkgbase 将 14.3-RELEASE 更新到 15.0-RELEASE（即将 ABI 指定为 15）
+- 使用 PkgBase 将 14.3-RELEASE 更新到 15.0-RELEASE（即将 ABI 指定为 15）
 
 ```sh
 # env ABI=FreeBSD:15:amd64 pkg-static -c /mnt/upgrade upgrade -r FreeBSD-base  # 在 /mnt/upgrade 环境中使用指定 ABI 升级 FreeBSD 基本系统包
@@ -273,7 +273,7 @@ Proceed with this action? [y/N]: y # 此处输入 y 后继续
 
 > **技巧**
 >
-> 如果检查不到任何更新，请确认当前是否已成功转换为 pkgbase，并检查软件源配置是否正确。
+> 如果检查不到任何更新，请确认当前是否已成功转换为 PkgBase，并检查软件源配置是否正确。
 
 - 检查启动环境 15.0-RELEASE 中的系统版本
 
@@ -583,7 +583,7 @@ end
 
 > **注意**
 >
-> 以下镜像站是否同步了 pkgbase 仓库（`base_release_*` 子目录）未经确认，使用前请自行验证。
+> 以下镜像站是否同步了 PkgBase 仓库（`base_release_*` 子目录）未经确认，使用前请自行验证。
 
 ```ini
 https://mirrors.nju.edu.cn/freebsd-pkg/
@@ -595,7 +595,7 @@ https://mirrors.nju.edu.cn/freebsd-pkg/
 
 > **注意**
 >
-> 以下镜像站是否同步了 pkgbase 仓库（`base_release_*` 子目录）未经确认，使用前请自行验证。
+> 以下镜像站是否同步了 PkgBase 仓库（`base_release_*` 子目录）未经确认，使用前请自行验证。
 
 ```ini
 https://mirrors.163.com/freebsd-pkg/
@@ -603,7 +603,7 @@ https://mirrors.163.com/freebsd-pkg/
 
 ## 附录：配置软件源
 
-为了帮助读者更好地配置 pkgbase 源，下面整理了 FreeBSD 官方源的 pkgbase 信息，包括各分支的更新频率和对应的 URL 地址。
+为了帮助读者更好地配置 PkgBase 源，下面整理了 FreeBSD 官方源的 PkgBase 信息，包括各分支的更新频率和对应的 URL 地址。
 
 | 分支 | 更新频率 | URL 地址 |
 | ---- | -------- | -------- |
