@@ -15,11 +15,11 @@ FreeBSD 提供了多种类型的软件源，分别服务于不同的系统组件
 
 | 软件源 | 简介 | 备注 |
 | ------ | ---- | ---- |
-| pkg | 类似于传统 Linux 的包管理器，用于安装二进制软件包 | 如果不需要以二进制方式安装软件则无需配置。默认未安装 `pkg`，输入 `pkg` 回车会提示安装。**除 pkgbase 外的 pkg 包实际上都是由 Port 直接构建而来** |
+| pkg | 类似于传统 Linux 的包管理器，用于安装二进制软件包 | 如果不需要以二进制方式安装软件则无需配置。默认未安装 `pkg`，输入 `pkg` 回车会提示安装。**除 PkgBase 外的 pkg 包实际上都是由 Port 直接构建而来** |
 | Ports 框架 | 拉取 Port 的源代码目录（本身不含源代码，只是对第三方软件的描述文件、补丁集和 Makefile）。Ports 是 Port 的集合，在 `freebsd-ports` 存储库中统一维护 | Gentoo 的包管理器 Portage（命令为 `emerge`）正是借鉴于此，用于帮助用户从源代码编译安装第三方软件。也就是说，Ports（Port 集合）类似 Gentoo 的 [ebuild 数据库](https://mirrors.ustc.edu.cn/help/gentoo.html) |
 | Ports 源 | 在 Port 中的 Makefile 文件里会定义若干软件包源代码的地址，该软件源用于拉取这些源代码（因为从官方上游拉取速度有时不理想） | 等同于 Gentoo 的 [Distfiles 源](https://mirrors.ustc.edu.cn/help/gentoo.html)。如果不需要以源代码方式编译软件，可以不配置 |
 | freebsd-update | 用于更新基本系统（内核 + 用户空间） | 支持 ALPHA、BETA、RC、RELEASE 版本；STABLE/CURRENT 分支不提供二进制更新 |
-| pkgbase | 将 FreeBSD 基本系统（内核 + 用户空间）打包成 pkg 包，使用 pkg(8) 管理基本系统，是 FreeBSD 提供的新的基本系统安装与更新方式 | 14.x 为实验性支持；从 FreeBSD 15.0 开始，安装时可在 bsdinstall(8) 中选择使用 pkgbase（FreeBSD-base 源），原有 freebsd-update(8) 与 distribution 集方式在 15.x 生命周期内仍受支持（计划在 FreeBSD 16 中移除）。基本系统升级/维护使用 `pkg upgrade`。生产环境建议继续评估稳定性。需配置 FreeBSD-base 源（见下文）。参考 [PkgBase Wiki](https://wiki.freebsd.org/PkgBase)。pkgbase 实际上由存储库 `freebsd-src` 构建而来，与 Ports 完全无关。FreeBSD 基本系统始终是独立于 Ports 而自存的 |
+| PkgBase | 将 FreeBSD 基本系统（内核 + 用户空间）打包成 pkg 包，使用 pkg(8) 管理基本系统，是 FreeBSD 提供的新的基本系统安装与更新方式 | 14.x 为实验性支持；从 FreeBSD 15.0 开始，安装时可在 bsdinstall(8) 中选择使用 PkgBase（FreeBSD-base 源），原有 freebsd-update(8) 与 distribution 集方式在 15.x 生命周期内仍受支持（计划在 FreeBSD 16 中移除）。基本系统升级/维护使用 `pkg upgrade`。生产环境建议继续评估稳定性。需配置 FreeBSD-base 源（见下文）。参考 [PkgBase Wiki](https://wiki.freebsd.org/PkgBase)。PkgBase 实际上由存储库 `freebsd-src` 构建而来，与 Ports 完全无关。FreeBSD 基本系统始终是独立于 Ports 而自存的 |
 | kernel modules（kmods） | 内核模块源（包含无线网卡驱动、以太网卡驱动、DRM 显卡驱动等），用于解决小版本之间可能存在的 ABI 不兼容问题 | 参见：Possible solution to the drm-kmod kernel mismatch after upgrade from Bapt[EB/OL]. [2026-03-26]. <https://forums.freebsd.org/threads/possible-solution-to-the-drm-kmod-kernel-mismatch-after-upgrade-from-bapt.96058/#post-682984>、CFT: repository for kernel modules[EB/OL]. [2026-03-26]. <https://lists.freebsd.org/archives/freebsd-ports/2024-December/006997.html>。可以使用命令 `fwget` 自动安装所需固件 |
 | FreeBSD（pub） | 提供 ISO 安装镜像、文档、开发资料和 `snapshots`，在系统安装、系统救援和开发参考时有很大帮助 | 此处的 Pub，指的是官方的 <https://ftp.freebsd.org/pub/FreeBSD/>。其性质类似于普通的镜像分发仓库，与 debian-cd、ubuntu-releases 等属于同一类型。目前已知全量同步 FreeBSD（Pub）源的镜像站：<https://mirrors.nju.edu.cn/freebsd>。其提供了完整的目录结构（如 `snapshots`、`development`），且更新较为及时，参见：FreeBSD.org ftp server[EB/OL]. [2026-03-26]. <https://ftp.freebsd.org/pub/FreeBSD/> 目录结构 |
 

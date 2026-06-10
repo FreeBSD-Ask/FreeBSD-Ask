@@ -112,7 +112,7 @@ microSD 通常也称 TF 卡（TF 为 SanDisk 最初的商品名 TransFlash，后
 
 因此，市场上只要标称速度超过 UHS-I 理论上限且并非 UHS-II 的产品，通常都通过非标准协议实现。**这种非标准协议只能由配套的官方读卡器支持（售价较高且通常捆绑销售），其他设备均不支持该速率，不具备实际意义。**
 
-### 使用 CrystalDiskMark 测试三星 BAR 升级版 + USB 3.1 闪存盘 64 G 读写速率
+### 使用 CrystalDiskMark 测试三星 BAR 升级版 + USB 3.1 闪存盘 64 GB 读写速率
 
 即金属款。
 

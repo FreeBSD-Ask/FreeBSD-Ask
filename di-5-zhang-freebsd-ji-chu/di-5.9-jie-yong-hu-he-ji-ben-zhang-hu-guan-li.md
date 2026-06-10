@@ -448,7 +448,7 @@ test2:$6$FkxPcs2y.Y8cxyuj$kVDoV1LC.IWKGlSitll3oLArF18aHQYID0JYE.TUuD0YFgba.c7MbG
 
 ## 参考文献
 
-- FreeBSD Project. pw(8)[EB/OL]. [2026-03-26]. <https://man.freebsd.org/cgi/man.cgi?query=pw&sektion=8>. man 页，介绍了用户和组管理命令。
+- FreeBSD Project. pw(8)[EB/OL]. [2026-03-26]. <https://man.freebsd.org/cgi/man.cgi?query=pw&sektion=8>. 手册页，介绍了用户和组管理命令。
 
 ## 课后习题
 

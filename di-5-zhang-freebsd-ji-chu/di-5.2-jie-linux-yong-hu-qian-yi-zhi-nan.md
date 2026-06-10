@@ -45,13 +45,13 @@ FreeBSD 版本分支分为三个主要系列：
 
 新特性首先提交到 CURRENT（main 分支），经测试后 MFC 到 STABLE 分支，再进入点版本 RELEASE。stable/ 分支从 main 分支切出，大版本（dot-zero 版本）的 releng/ 分支再从 stable/ 分支切出，点版本则从 stable/ 分支发布。
 
-pkgbase 直接由 freebsd-src 构建：
+PkgBase 直接由 freebsd-src 构建：
 
 ```sh
 # cd /usr/src # 需要预先拉取 freebsd-src 到该路径
 # make -j8 buildworld # 世界即用户空间
 # make -j8 buildkernel # 内核
-# make -j8 packages # 构建 pkgbase 二进制包
+# make -j8 packages # 构建 PkgBase 二进制包
 ```
 
 ### 安装第三方软件的 Ports 框架与 pkg 包管理器
