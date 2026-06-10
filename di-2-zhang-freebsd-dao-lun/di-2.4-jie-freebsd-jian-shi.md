@@ -192,9 +192,9 @@ FreeBSD 项目从 Subversion 到 Git 的迁移始于 2019 年 5 月的 DevSummit
 
 Alpha-Omega 项目先后审计了 FreeBSD 的 bhyve 虚拟机监视器和 Capsicum 沙盒框架，以提升 FreeBSD 项目的安全性。
 
-- 2025 年 12 月 2 日引入 pkgbase
+- 2025 年 12 月 2 日引入 PkgBase
 
-历经十年岁月磨炼，FreeBSD 终于在 15.0-RELEASE 中新增了 pkgbase 安装方式，以通过软件包来管理基本系统。这种方式最初源于 TrueOS 项目。
+历经十年岁月磨炼，FreeBSD 终于在 15.0-RELEASE 中新增了 PkgBase 安装方式，以通过软件包来管理基本系统。这种方式最初源于 TrueOS 项目。
 
 ## 参考文献
 
