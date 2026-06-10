@@ -36,18 +36,24 @@ DRM 是 Linux 内核的子系统，负责与现代显卡的 GPU 交互。FreeBSD
 | **graphics/drm-612-kmod** | 6.12 LTS | 15.1 及以上 | 15.1 及以上的默认选择；Intel Meteor Lake 图形在 6.7 后默认启用；AMD 覆盖 GCN 到 RDNA 4 全部架构（RDNA 4 支持自 Linux 6.12 引入） |
 | **graphics/drm-latest-kmod** | 跟踪最新 | 15.1 及以上 | 跟踪 drm-kmod 仓库 master 分支，当前为 Linux 6.12；可能不如 LTS 版本稳定 |
 
-> **注意**
->
-> 通过元 Port **graphics/drm-kmod** 安装时，系统会根据 OSVERSION 自动选择合适的版本：OSVERSION >= 1500509（15.1 及以上）选择 drm-612-kmod，OSVERSION >= 1500031（15.0）选择 drm-66-kmod，其余选择 drm-61-kmod。如需指定版本，可直接安装对应的 Port。上述 OSVERSION 阈值为 ports 树中的硬编码数值，会随 ports 树更新而变化，以 ports 中的实际 Makefile 为准。
->
->可在 port 开发者手册的最后一章中查询 OSVERSION 对应的版本和 Git 提交。
->
-> 查看本机 `OSVERSION`，显示系统版本构建标识符：
->
-> ```sh
-> # uname -U
-> 1500019
-> ```
+通过元 Port **graphics/drm-kmod** 安装时，系统会根据 OSVERSION 自动选择合适的版本：
+
+| OSVERSION 条件 | 选择的 Port | 对应 FreeBSD 版本 |
+|---|---|---|
+| >= 1500509 | drm-612-kmod | 15.1 及以上 |
+| >= 1500031 | drm-66-kmod | 15.0 |
+| 其余 | drm-61-kmod | 14.x |
+
+如需指定版本，可直接安装对应的 Port。上述 OSVERSION 阈值为 ports 树中的硬编码数值，会随 ports 树更新而变化，以 ports 中的实际 Makefile 为准。
+
+可在 port 开发者手册的最后一章中查询 OSVERSION 对应的版本和 Git 提交。
+
+查看本机 `OSVERSION`，显示系统版本构建标识符：
+
+```sh
+# uname -U
+1500019
+```
 
 > **警告**
 >
