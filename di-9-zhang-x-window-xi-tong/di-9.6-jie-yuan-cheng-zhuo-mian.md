@@ -398,9 +398,13 @@ Please look at the OpenSSL documentation on how to add a private CA to the store
 Do you trust the above certificate? (Y/T/N) y # 输入 y 按回车键以确认连接
 ```
 
+> **警告**
+>
+> 通过 `/p` 参数在命令行中直接传递密码，密码会出现在进程列表中（可通过 `ps` 等命令查看），存在安全隐患。建议省略 `/p` 参数，由程序交互式提示输入密码。
+
 > **技巧**
 >
-> 上述示例中的 `192.168.31.213`、`ykla`、`z` 为占位符，须替换为实际的值。
+> 上述示例中的 `192.168.31.213`、`ykla` 为占位符，须替换为实际的值。
 
 `xfreerdp3 /u:ykla /p:z /v:192.168.31.213` 参数说明：
 
@@ -457,7 +461,17 @@ Failed to connect, CredSSP required by server (check if server has disabled old 
 
 根据 rdesktop team. CredSSP does not work[EB/OL]. [2026-04-04]. <https://github.com/rdesktop/rdesktop/issues/71>. 此问题由来已久。
 
-存在安全风险的解决方案是禁用网络级身份验证（NLA），在需要远程连接的 Windows 上操作：
+> **危险**
+>
+> 禁用网络级身份验证（NLA）会使 RDP 服务暴露于严重安全威胁之下，包括但不限于：
+>
+> - **凭据转发攻击**：禁用 NLA 后，用户凭据将被发送至远程主机并存储于其内存中，攻击者可利用 pass-the-hash 等技术窃取凭据并在会话断开后继续冒充用户。
+> - **暴力破解攻击**：缺少会话前身份验证，攻击者可无限制地尝试登录。
+> - **拒绝服务攻击**：服务器在未验证身份的情况下即为每个连接分配会话资源。
+>
+> **强烈建议优先使用支持 NLA/CredSSP 的 freerdp3（见上文），而非禁用 NLA。** 若确需禁用，请在操作完成后立即重新启用，并确保 RDP 端口不直接暴露于公网。
+
+禁用 NLA 的操作步骤如下，在需要远程连接的 Windows 上执行：
 
 ```powershell
 PS C:\Users\ykla> reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp" /v UserAuthentication /t REG_DWORD /d 0 /f  # 导入相关注册表
@@ -593,10 +607,16 @@ $ anydesk
 
 配置 RustDesk 中继服务器：
 
+创建专用用户运行 RustDesk 中继服务，避免以 root 身份运行：
+
+```sh
+# pw useradd rustdesk -s /usr/sbin/nologin -c "RustDesk Server"
+```
+
 - 启动 hbbs：
 
 ```sh
-# /usr/local/bin/hbbs
+# su -m rustdesk -c '/usr/local/bin/hbbs'
 [2024-08-10 23:02:13.782550 +08:00] INFO [src/common.rs:122] Private key comes from id_ed25519
 [2024-08-10 23:02:13.782587 +08:00] INFO [src/rendezvous_server.rs:1191] Key: mgRwOWJy9Vnz3LqQYjtNHwZQYg73uhdj9iCTMmIyoP4=  #	此处是 Key
 [2024-08-10 23:02:13.782655 +08:00] INFO [src/peer.rs:84] DB_URL=./db_v2.sqlite3
@@ -619,7 +639,7 @@ $ anydesk
 - 再启动 hbbr：
 
 ```sh
-# /usr/local/bin/hbbr
+# su -m rustdesk -c '/usr/local/bin/hbbr'
 [2024-08-10 22:58:26.593397 +08:00] INFO [src/relay_server.rs:61] #blacklist(blacklist.txt): 0
 [2024-08-10 22:58:26.593439 +08:00] INFO [src/relay_server.rs:76] #blocklist(blocklist.txt): 0
 [2024-08-10 22:58:26.593445 +08:00] INFO [src/relay_server.rs:82] Listening on tcp :21117
