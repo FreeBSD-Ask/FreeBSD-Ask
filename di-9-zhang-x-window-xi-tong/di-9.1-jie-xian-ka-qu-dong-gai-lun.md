@@ -46,7 +46,7 @@ DRM 是 Linux 内核的子系统，负责与现代显卡的 GPU 交互。FreeBSD
 
 如需指定版本，可直接安装对应的 Port。上述 OSVERSION 阈值为 ports 树中的硬编码数值，会随 ports 树更新而变化，以 ports 中的实际 Makefile 为准。
 
-可在 port 开发者手册的最后一章中查询 OSVERSION 对应的版本和 Git 提交。
+可在 Ports 开发者手册的最后一章中查询 OSVERSION 对应的版本和 Git 提交。
 
 查看本机 `OSVERSION`，显示系统版本构建标识符：
 
