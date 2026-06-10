@@ -15,7 +15,7 @@ FreeBSD 提供了多种类型的软件源，分别服务于不同的系统组件
 
 | 软件源 | 简介 | 备注 |
 | ------ | ---- | ---- |
-| pkg | 类似于传统 Linux 的包管理器，用于安装二进制软件包 | 如果不需要以二进制方式安装软件则无需配置。默认未安装 `pkg`，输入 `pkg` 回车会提示安装。**除 pkgbase 外的 pkg 包实际上都是由 Port 直接构建而来** |
+| pkg | 类似于传统 Linux 的包管理器，用于安装二进制软件包 | 如果不需要以二进制方式安装软件则无需配置。默认未安装 `pkg`，输入 `pkg` 回车会提示安装。**除 PkgBase 外的 pkg 包实际上都是由 Port 直接构建而来** |
 | Ports 框架 | 拉取 Port 的源代码目录（本身不含源代码，只是对第三方软件的描述文件、补丁集和 Makefile）。Ports 是 Port 的集合，在 `freebsd-ports` 存储库中统一维护 | Gentoo 的包管理器 Portage（命令为 `emerge`）正是借鉴于此，用于帮助用户从源代码编译安装第三方软件。也就是说，Ports（Port 集合）类似 Gentoo 的 [ebuild 数据库](https://mirrors.ustc.edu.cn/help/gentoo.html) |
 | Ports 源 | 在 Port 中的 Makefile 文件里会定义若干软件包源代码的地址，该软件源用于拉取这些源代码（因为从官方上游拉取速度有时不理想） | 等同于 Gentoo 的 [Distfiles 源](https://mirrors.ustc.edu.cn/help/gentoo.html)。如果不需要以源代码方式编译软件，可以不配置 |
 | freebsd-update | 用于更新基本系统（内核 + 用户空间） | 支持 ALPHA、BETA、RC、RELEASE 版本；STABLE/CURRENT 分支不提供二进制更新 |

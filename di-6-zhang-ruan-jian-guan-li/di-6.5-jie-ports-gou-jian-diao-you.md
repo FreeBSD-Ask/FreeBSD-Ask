@@ -231,7 +231,7 @@ axel 是一款轻量级的多线程下载工具，可显著提高下载速度。
 # pkg install axel
 ```
 
-或者使用 ports 安装：
+或者使用 Ports 安装：
 
 ```sh
 # cd /usr/ports/ftp/axel/
