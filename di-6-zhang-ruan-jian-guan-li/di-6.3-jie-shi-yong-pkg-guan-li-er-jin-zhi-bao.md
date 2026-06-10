@@ -403,7 +403,7 @@ jbig2dec-0.20_1: /usr/local/lib/libjbig2dec.so misses libmd.so.6
 
 - lonkamikaze. BSD Administration Scripts II[EB/OL]. [2026-03-25]. <https://github.com/lonkamikaze/bsda2>. 提供 FreeBSD 系统管理辅助工具集，含包完整性检查等功能。
 
-若使用了 pkgbase，`bsdadminscripts2` 可 **检查系统的完整性**，找出哪些系统文件遭到了篡改。
+若使用了 PkgBase，`bsdadminscripts2` 可 **检查系统的完整性**，找出哪些系统文件遭到了篡改。
 
 验证已安装软件包的完整性和一致性：
 
