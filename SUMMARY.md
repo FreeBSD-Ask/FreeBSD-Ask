@@ -286,8 +286,8 @@
 * [29.5 Tomcat 应用服务器](di-29-zhang-web-fu-wu-qi/di-29.5-jie-tomcat-ying-yong-fu-wu-qi.md)
 * [29.6 WildFly 应用服务器](di-29-zhang-web-fu-wu-qi/di-29.6-jie-wildfly-ying-yong-fu-wu-qi.md)
 * [29.7 Nextcloud 云服务（基于 PostgreSQL）](di-29-zhang-web-fu-wu-qi/di-29.7-jie-nextcloud-yun-fu-wu-ji-yu-postgresql.md)
-* [29.8 GitLab Enterprise Edition 部署](di-29-zhang-web-fu-wu-qi/di-29.8-jie-gitlab-enterprise-edition-bu-shu.md)
-* [29.9 OnlyOffice 部署（基于 PostgreSQL）](di-29-zhang-web-fu-wu-qi/di-29.9-jie-onlyoffice-bu-shu-ji-yu-postgresql.md)
+* [29.8 OnlyOffice 部署（基于 PostgreSQL）](di-29-zhang-web-fu-wu-qi/di-29.8-jie-onlyoffice-bu-shu-ji-yu-postgresql.md)
+* [29.9 GitLab Enterprise Edition 部署](di-29-zhang-web-fu-wu-qi/di-29.9-jie-gitlab-enterprise-edition-bu-shu.md)
 * [29.10 OpenList 部署](di-29-zhang-web-fu-wu-qi/di-29.10-jie-openlist-bu-shu.md)
 
 ## 第 30 章 监控系统
