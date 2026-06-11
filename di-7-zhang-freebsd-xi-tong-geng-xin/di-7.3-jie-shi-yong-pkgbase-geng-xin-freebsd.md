@@ -8,7 +8,7 @@
 
 ## 创建启动环境 15.0-RELEASE
 
-ZFS 启动环境（Boot Environment，BE）允许在系统中创建多个独立的系统环境，实现不同版本的共存与安全切换。以下操作将创建名为 15.0-RELEASE 的启动环境。
+ZFS 启动环境（Boot Environment，BE）允许在系统中创建多个独立的系统环境，实现不同版本的共存与安全切换。以下操作将创建启动环境 15.0-RELEASE。
 
 - 使用工具 bectl 创建启动环境 `15.0-RELEASE`：
 
