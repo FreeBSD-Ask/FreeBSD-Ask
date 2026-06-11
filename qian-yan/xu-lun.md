@@ -81,7 +81,7 @@
 
 **第 28 章 服务器**：介绍 Rsync 数据同步、Samba 文件共享、NFS 服务器、零配置网络（mDNS/DNS-SD）及 Webmin 管理平台等服务的搭建。
 
-**第 29 章 Web 服务器**：介绍 Apache、Nginx、Caddy Web 服务器的部署，以及 PHP、Tomcat、WildFly 应用服务器的配置，同时涵盖 Nextcloud、GitLab、OnlyOffice 和 OpenList 等应用的部署。
+**第 29 章 Web 服务器**：介绍 Apache、Nginx、Caddy Web 服务器的部署，以及 PHP、Tomcat、WildFly 应用服务器的配置，同时涵盖 Nextcloud、OnlyOffice、GitLab 和 OpenList 等应用的部署。
 
 **第 30 章 监控系统**：介绍 Zabbix、Prometheus 监控系统的部署，以及 Telegraf、InfluxDB 与 Grafana 组成的监控平台架构。
 

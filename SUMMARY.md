@@ -23,7 +23,7 @@
 
 ## 第 2 章 FreeBSD 导论
 
-* [2.1 FreeBSD：理想、现实与中道](di-2-zhang-freebsd-dao-lun/di-2.1-jie-freebsdli-xiang-xian-shi-yu-zhong-dao.md)
+* [2.1 FreeBSD：理想、现实与中道](di-2-zhang-freebsd-dao-lun/di-2.1-jie-freebsd-li-xiang-xian-shi-yu-zhong-dao.md)
 * [2.2 关于 FreeBSD 项目](di-2-zhang-freebsd-dao-lun/di-2.2-jie-guan-yu-freebsd-xiang-mu.md)
 * [2.3 FreeBSD 开发模型](di-2-zhang-freebsd-dao-lun/di-2.3-jie-freebsd-kai-fa-mo-xing.md)
 * [2.4 FreeBSD 简史](di-2-zhang-freebsd-dao-lun/di-2.4-jie-freebsd-jian-shi.md)
@@ -136,7 +136,7 @@
 
 * [13.1 Linux 兼容层架构](di-13-zhang-linux-er-jin-zhi-jian-rong-ceng/di-13.1-jie-linux-jian-rong-ceng-jia-gou.md)
 * [13.2 Rocky Linux 兼容层](di-13-zhang-linux-er-jin-zhi-jian-rong-ceng/di-13.2-jie-rocky-linux-jian-rong-ceng.md)
-* [13.3 Ubuntu/Debian/Kali Linux 兼容层](di-13-zhang-linux-er-jin-zhi-jian-rong-ceng/di-13.3-jie-ubuntu-debian-jian-rong-ceng.md)
+* [13.3 Ubuntu/Debian/Kali Linux 兼容层](di-13-zhang-linux-er-jin-zhi-jian-rong-ceng/di-13.3-jie-ubuntu-debian-kali-linux-jian-rong-ceng.md)
 * [13.4 Arch Linux 兼容层](di-13-zhang-linux-er-jin-zhi-jian-rong-ceng/di-13.4-jie-arch-linux-jian-rong-ceng.md)
 * [13.5 Slackware Linux 兼容层](di-13-zhang-linux-er-jin-zhi-jian-rong-ceng/di-13.5-jie-slackware-linux-jian-rong-ceng.md)
 * [13.6 Gentoo Linux 兼容层](di-13-zhang-linux-er-jin-zhi-jian-rong-ceng/di-13.6-jie-gentoo-linux-jian-rong-ceng.md)
@@ -286,8 +286,8 @@
 * [29.5 Tomcat 应用服务器](di-29-zhang-web-fu-wu-qi/di-29.5-jie-tomcat-ying-yong-fu-wu-qi.md)
 * [29.6 WildFly 应用服务器](di-29-zhang-web-fu-wu-qi/di-29.6-jie-wildfly-ying-yong-fu-wu-qi.md)
 * [29.7 Nextcloud 云服务（基于 PostgreSQL）](di-29-zhang-web-fu-wu-qi/di-29.7-jie-nextcloud-yun-fu-wu-ji-yu-postgresql.md)
-* [29.8 GitLab Enterprise Edition 部署](di-29-zhang-web-fu-wu-qi/di-29.8-jie-gitlab-enterprise-edition-bu-shu.md)
-* [29.9 OnlyOffice 部署（基于 PostgreSQL）](di-29-zhang-web-fu-wu-qi/di-29.9-jie-onlyoffice-bu-shu-ji-yu-postgresql.md)
+* [29.8 OnlyOffice 部署（基于 PostgreSQL）](di-29-zhang-web-fu-wu-qi/di-29.8-jie-onlyoffice-bu-shu-ji-yu-postgresql.md)
+* [29.9 GitLab Enterprise Edition 部署](di-29-zhang-web-fu-wu-qi/di-29.9-jie-gitlab-enterprise-edition-bu-shu.md)
 * [29.10 OpenList 部署](di-29-zhang-web-fu-wu-qi/di-29.10-jie-openlist-bu-shu.md)
 
 ## 第 30 章 监控系统
@@ -319,7 +319,7 @@
 * [32.7 Node.js 开发环境](di-32-zhang-kai-fa-huan-jing/di-32.7-jie-node-js-kai-fa-huan-jing.md)
 * [32.8 code-server 和 clangd 开发环境](di-32-zhang-kai-fa-huan-jing/di-32.8-jie-code-server-he-clangd-kai-fa-huan-jing.md)
 * [32.9 Vim 开发环境](di-32-zhang-kai-fa-huan-jing/di-32.9-jie-vim-kai-fa-huan-jing.md)
-* [32.10 使用 IDA Pro 调试 FreeBSD](di-32-zhang-kai-fa-huan-jing/di-32.10-jie-shi-yong-ida-pro-diao-shi-freebsd.md)
+* [32.10 使用 IDA Pro 调试 FreeBSD](di-32-zhang-kai-fa-huan-jing/di-32.10-jie-shi-yong-ida-pro-tiao-shi-freebsd.md)
 * [32.11 DTrace](di-32-zhang-kai-fa-huan-jing/di-32.11-jie-dtrace.md)
 
 ## 第 33 章 FreeBSD 内核架构
