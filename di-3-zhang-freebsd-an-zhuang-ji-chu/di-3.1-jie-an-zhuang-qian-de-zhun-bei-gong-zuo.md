@@ -126,7 +126,7 @@ FreeBSD 的所有安装介质默认不提供图形界面，需在系统安装后
 
 STABLE 和 CURRENT 均为开发分支，不适用于生产环境，生产环境应选用 RELEASE。
 
-要使用开发分支，或者为非 amd64 架构下载镜像，在主页选择“other” 即可。
+要使用开发分支，或者为非 amd64 架构下载镜像，在主页选择“other”即可。
 
 ![下载 FreeBSD](../.gitbook/assets/download-freebsd.png)
 

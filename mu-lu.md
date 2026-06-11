@@ -273,7 +273,7 @@
 
 * [28.1 Rsync 数据同步](di-28-zhang-fu-wu-qi/di-28.1-jie-rsync-shu-ju-tong-bu.md)
 * [28.2 Samba 文件共享](di-28-zhang-fu-wu-qi/di-28.2-jie-samba-wen-jian-gong-xiang.md)
-* [28.3 NFS 服务器](di-28-zhang-fu-wu-qi/di-28.3-jie-nfs-fu-wu-qi.md)
+* [28.3 网络文件系统（NFS）](di-28-zhang-fu-wu-qi/di-28.3-jie-wang-luo-wen-jian-xi-tong-nfs.md)
 * [28.4 零配置网络（mDNS/DNS-SD）](di-28-zhang-fu-wu-qi/di-28.4-jie-ling-pei-zhi-wang-luo-mdns-dns-sd.md)
 * [28.5 Webmin 管理平台](di-28-zhang-fu-wu-qi/di-28.5-jie-webmin-guan-li-ping-tai.md)
 
