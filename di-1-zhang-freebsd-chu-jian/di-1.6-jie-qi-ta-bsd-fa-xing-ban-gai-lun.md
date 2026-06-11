@@ -103,7 +103,7 @@ OpenBSD 每 6 个月发布一次新版本。
 
 OpenBSD 被广泛认为是世界上最安全的操作系统。OpenBSD 的口号是“Only two remote holes in the default install, in a heck of a long time!”（在如此漫长的时间里，默认安装下仅存在两个远程漏洞！）
 
-OpenBSD 采用 LLVM/Clang 项目构建系统，默认 shell 为 ksh（基于 pdksh，而非 David Korn 的原始 ksh88/ksh93）。OpenBSD 吉祥物是一只名为普菲（Puffy）的河豚。
+OpenBSD 采用 LLVM/Clang 项目构建系统，默认 shell 为 ksh（基于 pdksh，而非 David Korn 的原始 ksh88/ksh93）。OpenBSD 吉祥物是一只河豚：普菲（Puffy）。
 
 相较于其他 BSD 系统，OpenBSD 的设计取向更偏向安全性（例如移除了 Linux 兼容层，用 doas 替代 sudo，并默认 [限制超线程](https://marc.info/?l=openbsd-tech&m=153504937925732&w=2)）。对此，用户体验则见仁见智（整个系统性能方面表现相对保守，例如包管理器运行速度较慢），毕竟这样的后果之一是软件相对较少，不仅远远落后于 FreeBSD，甚至比起 NetBSD 也略逊一筹。不过，OpenBSD 以极少量的人力和物力维护了 amd64/i386、arm64/armv7 及 riscv64 等诸多架构，是一款实实在在的通用操作系统。为了拓展桌面用户，也打包了 GNOME、MATE 和 Xfce 等桌面环境以及 Blender、Firefox、Krita 和 LibreOffice 等一大批软件。未来 OpenBSD 有望在保持安全特性的同时优化性能，拓展使用场景。
 
@@ -369,7 +369,7 @@ Gregory Perry 后来 [回复道](https://cryptome.org/2012/01/0032.htm)：
 >
 > 如约奉上关于 FBI / OpenBSD / OpenBSD 加密框架加密后门讨论串的后续内容。我们家在圣诞假期期间发生了三级火灾，我也是刚刚恢复上线。
 >
-> 1）大约在 1997 年，FBI 找到了 Lew Jenkins，也就是 Premenos Technology Corp. 的董事长兼 CEO，他们当时在开发一种用于企业间 EDI（电子数据交换）交易的软件套件，名为“Templar”。
+> 1）大约在 1997 年，FBI 找到了 Lew Jenkins，也就是 Premenos Technology Corp. 的董事长兼 CEO，他们当时在开发一种用于企业间 EDI（电子数据交换）交易的软件套件“Templar”。
 >
 > 2）在当时，加密技术（尤其是公钥加密算法）仍被美国政府视为军火，因此 FBI 可能对 Premenos 关于密钥托管和 RSA 加密会话恢复方面的研究很感兴趣。
 >
@@ -385,7 +385,7 @@ Gregory Perry 后来 [回复道](https://cryptome.org/2012/01/0032.htm)：
 >
 > 8）在该项目中，我联系了 OpenBSD 项目的 Theo de Raadt，希望资助并在 OpenBSD 中实现符合 POSIX 的抢占式实时线程能力，以替代成本高昂的 VxWorks RTOS（OpenBSD 及其许可方式是免费且无专利负担的）。NETSEC 为 OpenBSD 项目提供了硬件与资金，支持其加密框架（OCF）的初期开发，该框架基于 HiFN 系列的加密加速芯片，并最终被合并进了 OpenBSD 内核。我们本想采用博通，但由于 Ken 与 HiFN 有关系，所以初期用了 HiFN 的芯片。90 年代末的 x86 硬件无法承担 FIPS 140-1 与 140-2 认证要求下的高速 DES 与 3DES 加密任务，因此需要专用加密处理器以实现 ATM 级别的网络吞吐。
 >
-> 9）不久之后，NETSEC 启动了与美国联邦总务署（GSA）合作的项目，名为 GSA 技术支持中心（GSA Technical Support Center）。该中心是 FBI 与国防部的联合项目，旨在为联邦和军方提供逆向工程与密码分析服务。项目负责人是 FBI 的 Ron Bitner（至少他是这么自称的），GSA 出资代表是 Dave Jarrell。我刚开始参与该项目时，曾对 FBI 与 DoD 之间职责划分模糊（或根本没有划分）表示担忧，这是明显违反《治安官动员法》（Posse Comitatus Act，PCA）的。Ken 的解释是，将使用 Trusted Solaris 这类多级安全系统（MLS），以允许不同机密级别的信息在 FBI 与 DoD 之间共享，从而在名义上维持军事与民政的传统分离。但我看出事态不妙，于是不再参与该项目。
+> 9）不久之后，NETSEC 启动了与美国联邦总务署（GSA）合作的项目，即 GSA 技术支持中心（GSA Technical Support Center）。该中心是 FBI 与国防部的联合项目，旨在为联邦和军方提供逆向工程与密码分析服务。项目负责人是 FBI 的 Ron Bitner（至少他是这么自称的），GSA 出资代表是 Dave Jarrell。我刚开始参与该项目时，曾对 FBI 与 DoD 之间职责划分模糊（或根本没有划分）表示担忧，这是明显违反《治安官动员法》（Posse Comitatus Act，PCA）的。Ken 的解释是，将使用 Trusted Solaris 这类多级安全系统（MLS），以允许不同机密级别的信息在 FBI 与 DoD 之间共享，从而在名义上维持军事与民政的传统分离。但我看出事态不妙，于是不再参与该项目。
 >
 > 10）同年晚些时候，我在公司会议中宣布辞去 NETSEC 职务，并创办了一家嵌入式无线带宽管理公司。由于与 NETSEC 有两年竞业协议，我在此期间不能再从事安全领域工作。
 >
