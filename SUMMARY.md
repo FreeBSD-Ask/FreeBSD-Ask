@@ -226,9 +226,9 @@
 ## 第 22 章 防火墙
 
 * [22.1 防火墙概论](di-22-zhang-fang-huo-qiang/di-22.1-jie-fang-huo-qiang-gai-lun.md)
-* [22.2 Packet Filter（PF）](di-22-zhang-fang-huo-qiang/di-22.2-jie-packet-filter-pf.md)
+* [22.2 ipfirewall（IPFW）](di-22-zhang-fang-huo-qiang/di-22.2-jie-ipfirewall-ipfw.md)
 * [22.3 IPFilter（IPF）](di-22-zhang-fang-huo-qiang/di-22.3-jie-ipfilter-ipf.md)
-* [22.4 ipfirewall（IPFW）](di-22-zhang-fang-huo-qiang/di-22.4-jie-ipfirewall-ipfw.md)
+* [22.4 Packet Filter（PF）](di-22-zhang-fang-huo-qiang/di-22.4-jie-packet-filter-pf.md)
 * [22.5 Fail2Ban（基于 IPFW、PF 与 IPF）](di-22-zhang-fang-huo-qiang/di-22.5-jie-fail2ban-ji-yu-ipfw-pf-yu-ipf.md)
 * [22.6 blocklistd](di-22-zhang-fang-huo-qiang/di-22.6-jie-blocklistd.md)
 

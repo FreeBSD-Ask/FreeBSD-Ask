@@ -67,7 +67,7 @@
 
 **第 21 章 安全**：介绍信息安全概论、账户认证安全、资源限制、安全等级、root 账户桌面登录、安全事件审计、OpenSSL、入侵检测系统（IDS）、第三方漏洞与安全公告，以及强制访问控制框架（MAC 框架）。
 
-**第 22 章 防火墙**：介绍防火墙概论与 FreeBSD 内置防火墙系统，包括 Packet Filter（PF）、IPFilter（IPF）、IPFW 的配置，以及 Fail2Ban 和 blocklistd 工具的使用。
+**第 22 章 防火墙**：介绍防火墙概论与 FreeBSD 内置防火墙系统，包括 ipfirewall（IPFW）、IPFilter（IPF）、Packet Filter（PF）的配置，以及 Fail2Ban 和 blocklistd 工具的使用。
 
 **第 23 章 Jail 容器管理**：介绍 FreeBSD 原生轻量级虚拟化技术 Jail 的基础配置、厚 Jail（Thick Jail）及 Qjail 管理工具的使用。
 
