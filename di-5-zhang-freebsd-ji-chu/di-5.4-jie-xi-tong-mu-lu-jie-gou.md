@@ -105,7 +105,6 @@ FreeBSD 的目录结构设计遵循以下原则：
 │   ├── periodic 存放定期执行的维护脚本，由 cron 调用，参见 periodic(8)
 │   ├── pf.conf PF 防火墙配置文件，参见 pf(4)
 │   ├── pkg PKG 相关配置文件，参见 pkg(8)
-│   ├── ppp PPP 相关配置，参见 ppp(8)
 │   ├── profile.d 存放用户登录时可执行的 shell 脚本，不会自动加载
 │   ├── rc.conf 系统启动配置文件，参见 rc.conf(5)
 │   ├── rc.conf.d 存放特定服务的配置文件，默认为空
@@ -166,7 +165,6 @@ FreeBSD 的目录结构设计遵循以下原则：
 │   │   ├── dwatch dwatch(1) 的配置文件
 │   │   ├── fwget fwget(8) 调用的实用程序
 │   │   ├── hyperv 与 Hyper-V 虚拟机管理程序通信的脚本
-│   │   ├── lpr 行式打印机系统的实用程序和过滤器，参见 lpr(1)
 │   │   ├── sendmail sendmail(8) 二进制文件，参见 mailwrapper(8)
 │   │   ├── sm.bin sendmail(8) 的受限 shell，参见 smrsh(8)
 │   │   └── zfs Z 文件系统实用程序
@@ -266,13 +264,11 @@ FreeBSD 的目录结构设计遵循以下原则：
 │   │   ├── debug.log 未丢弃的调试 syslog 消息
 │   │   ├── devd.log 设备状态变更守护进程的默认日志
 │   │   ├── dmesg.today 系统消息缓冲区日志，轮替为 dmesg.yesterday
-│   │   ├── lpd-errs 行式打印机假脱机守护进程日志，参见 lpd(8)
 │   │   ├── maillog 邮件系统日志，轮替并压缩为 maillog.0.bz2
 │   │   ├── messages 通用系统日志，参见 syslogd(8)
 │   │   ├── mount.today 当前加载的 fstab(5)，轮替为 mount.yesterday
 │   │   ├── pf.today 包过滤防火墙日志，参见 pf(4)
 │   │   ├── pflog pflogd(8) 捕获的已保存数据包
-│   │   ├── ppp.log 参见 ppp(8)
 │   │   ├── security 安全事件日志
 │   │   ├── setuid.today 以提升权限运行的可执行文件列表，轮替为 setuid.yesterday
 │   │   ├── userlog 用户或组变更日志
@@ -284,7 +280,6 @@ FreeBSD 的目录结构设计遵循以下原则：
 │   ├── quotas UFS 配额信息文件
 │   ├── run 用来存放 PID 文件和运行时数据，包含自系统启动以来的操作系统信息
 │   │   ├── bhyve bhyve(8) 虚拟机的 unix(4) 域套接字
-│   │   ├── ppp 可由 "network" 组写入的命令连接套接字，参见 ppp(8)
 │   │   ├── utx.active 当前用户数据库，参见 getutxent(3)
 │   │   └── wpa_supplicant IEEE 802.11 WiFi 运行时文件
 │   ├── rwho 存储由 rwhod 收集的网络中其他计算机的用户登录信息，参见 rwhod(8)。默认为空
@@ -293,9 +288,7 @@ FreeBSD 的目录结构设计遵循以下原则：
 │   │   ├── cups CUPS 的打印作业和临时文件，参见 cups(1)
 │   │   ├── dma DragonFly 邮件代理的未投递邮件队列，参见 dma(8)
 │   │   ├── lock 串行设备锁，参见 uucplock(3)
-│   │   ├── lpd 行式打印机假脱机守护进程的假脱机
-│   │   ├── mqueue sendmail(8) 的未投递邮件队列
-│   │   └── output 行式打印机假脱机目录
+│   │   └── mqueue sendmail(8) 的未投递邮件队列
 │   ├── tmp 通常会在系统重启后保留的临时文件
 │   │   └── vi.recover vi(1) 编辑器的恢复文件
 │   ├── unbound Unbound 服务器的相关文件和配置，参见 unbound(8)
