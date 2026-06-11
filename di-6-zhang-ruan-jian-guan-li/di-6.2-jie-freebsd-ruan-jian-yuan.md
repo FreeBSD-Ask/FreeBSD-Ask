@@ -389,33 +389,4 @@ MASTER_SITE_OVERRIDE?=https://mirrors.ustc.edu.cn/freebsd-ports/distfiles/${DIST
 >
 > 对于安全性要求较高的用户，应该使用默认的官方镜像 `pkg.freebsd.org`！其由 FreeBSD 项目官方构建、分发和维护。
 
-### 旧版本存档的 pkg 二进制包源（请酌情使用）
 
-> **警告**
->
-> 网易开源镜像站提供 FreeBSD 的 pkg 二进制源（使用 `${ABI}/quarterly` 等标准路径），但未在官方帮助页面中列出 FreeBSD 支持，同步状态可能不稳定，且存在安全风险。
-
-不受安全支持的版本同样可以使用二进制源。以下以 `FreeBSD 9.2` 为例：
-
-首先切换到可用的二进制源。
-
-```sh
-# setenv PACKAGESITE https://ftp-archive.freebsd.org/pub/FreeBSD-Archive/ports/amd64/packages-9.2-release/Latest
-```
-
-如果 shell 不是 csh，那么：
-
-```sh
-# export PACKAGESITE=https://ftp-archive.freebsd.org/pub/FreeBSD-Archive/ports/amd64/packages-9.2-release/Latest
-```
-
-安装示例：现在安装 `bsdinfo`。
-
-```sh
-# pkg_add -r bsdinfo
-Fetching https://ftp-archive.freebsd.org/pub/FreeBSD-Archive/ports/amd64/packages-9.2-release/Latest/bsdinfo.tbz... Done.
-```
-
-> **注意**
->
-> 因为该存档使用的是旧式包格式（`.tbz`），不包含 pkg 所需的 `digests.txz` 和 `repo.txz` 等仓库元数据，因此 pkg 不可用：将提示找不到 `digests.txz` 和 `repo.txz`。
