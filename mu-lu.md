@@ -162,8 +162,10 @@
 
 ## 第 17 章 人工智能
 
-* [17.1 人工智能概论](di-17-zhang-ren-gong-zhi-neng-ai/di-17.1-jie-ren-gong-zhi-neng-gai-lun.md)
-* [17.2 大模型本地部署](di-17-zhang-ren-gong-zhi-neng-ai/di-17.2-jie-da-mo-xing-ben-di-bu-shu.md)
+* [17.1 人工智能术语与概念](di-17-zhang-ren-gong-zhi-neng-ai/di-17.1-jie-ren-gong-zhi-neng-shu-yu-yu-gai-nian.md)
+* [17.2 Transformer 数学基础与程序演示](di-17-zhang-ren-gong-zhi-neng-ai/di-17.2-jie-transformer-shu-xue-ji-chu-yu-cheng-xu-yan-shi.md)
+* [17.3 人工智能哲学原著选读](di-17-zhang-ren-gong-zhi-neng-ai/di-17.3-jie-ren-gong-zhi-neng-zhe-xue-yuan-zhu-xuan-du.md)
+* [17.4 大模型本地部署](di-17-zhang-ren-gong-zhi-neng-ai/di-17.4-jie-da-mo-xing-ben-di-bu-shu.md)
 
 ## 第 18 章 系统管理
 

@@ -127,7 +127,7 @@ $ git clone --branch releng/15.0 --single-branch --depth 1 https://github.com/fr
 >
 > ```sh
 > export EDITOR=/usr/bin/ee # 切换默认编辑器为 ee。若使用 csh/tcsh，改用 setenv EDITOR /usr/bin/ee
-export VISUAL=/usr/bin/ee # 切换可视化编辑器为 ee。若使用 csh/tcsh，改用 setenv VISUAL /usr/bin/ee
+> export VISUAL=/usr/bin/ee # 切换可视化编辑器为 ee。若使用 csh/tcsh，改用 setenv VISUAL /usr/bin/ee
 > ```
 
 合并冲突。使用 `etcupdate` 合并配置文件更新：
