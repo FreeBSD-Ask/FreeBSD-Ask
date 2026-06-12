@@ -127,7 +127,7 @@ hw.efi.poweroff=0
 
 ```sh
 # netstat -rn -f inet | egrep 'default|10\.0\.2\.0/24|192\.168\.56\.0/24'
-default            10.0.2.2           UGS             em0 # 网络地址转换(NAT)网卡，默认网关，
+default            10.0.2.2           UGS             em0 # 网络地址转换（NAT）网卡，默认网关
 10.0.2.0/24        link#1             U               em0
 192.168.56.0/24    link#2             U               em1 # 仅主机(Host-only)网络网卡，用于与宿主机互通
 ```
