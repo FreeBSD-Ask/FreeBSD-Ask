@@ -1,0 +1,163 @@
+# 5.1 安装双系统（先安装 FreeBSD）
+
+本节介绍在同一物理设备上部署 FreeBSD 与 Windows 双系统，先安装 FreeBSD，再安装 Windows。
+
+## 安装 FreeBSD 14.2-RELEASE
+
+首先安装 FreeBSD 14.2-RELEASE 系统，未作特别说明时均采用默认设置与参数。
+
+![FreeBSD 安装界面](../.gitbook/assets/dual-boot-1.png)
+
+![FreeBSD 安装界面](../.gitbook/assets/dual-boot-2.png)
+
+> **技巧**
+>
+> 如果在此处设置 `P Partition Scheme` 为 `GPT (UEFI)` 而非其他（仅较早的计算机才需选择 `GPT (BIOS+UEFI)` 等选项），后续分区与系统更新过程更为简便，同时可实现 4K 对齐。
+
+![分区方案选择](../.gitbook/assets/dual-boot-3.png)
+
+此处需要设置较大的临时交换分区，该数值应为计划中的交换分区与 Windows 系统分区容量之和。如此设置是为了后续安装 Windows 时能够直接使用这部分空间，避免额外分区操作。在本节中，交换分区（swap）大小为 8 GB，其余 200 GB 空间预留给 Windows。请调整 `S Swap Size` 的数值。
+
+> **注意**
+>
+> `Partition Scheme` 分区表应选择 `GPT (uefi)`！否则将生成一个多余的 `freebsd-boot` 分区。
+
+![交换分区大小设置](../.gitbook/assets/dual-boot-4.png)
+
+列出系统磁盘分区情况：
+
+```sh
+# gpart show
+=>     9  639659  cd0  MBR  (1.2G)
+       9  639659       - free -  (1.2G)
+
+=>     9  639659  iso9660/14_2_RELEASE_AMD64_CD  MBR  (1.2G)
+       9  639659                                 - free -  (1.2G)
+
+=>       40  629145520  nda0 GPT  (300G)
+         40     532480    1  efi  (260M)
+     533544        984       - free -  (492K)
+     534528  436207616    3  freebsd-swap  (208G)
+  436742144  192401408    4  freebsd-zfs  (92G)
+  629143552       2008       - free -  (1.0M)
+
+```
+
+显示交换分区和交换文件的使用情况（单位为 MB/GB）：
+
+```sh
+# swapinfo -mh
+Device              Size     Used    Avail Capacity
+/dev/nda0p3          208G       0B     208G     0%
+```
+
+交换分区大小为设定的 208 GB（其中 200 GB 预留给 Windows 操作系统）。
+
+编辑 **/etc/fstab** 文件，在 swap 对应行的行首添加 `#` 注释该行（本例中该行是第三行），以避免系统启动时挂载此交换分区，从而为后续安装 Windows 作准备：
+
+```sh
+# Device                Mountpoint      FStype  Options         Dump    Pass#
+/dev/gpt/efiboot0               /boot/efi       msdosfs rw              2       2
+#/dev/nda0p3             none    swap    sw              0       0
+```
+
+## 安装 Windows 11
+
+FreeBSD 安装完成后，安装 Windows 系统。
+
+插入 Windows 安装介质，在固件设置中选择从该介质引导，开始安装 Windows。此时安装程序将识别硬盘上的现有分区结构，使用之前预留的空间即可。
+
+![Windows 安装分区界面](../.gitbook/assets/dual-boot-5.png)
+
+在分区界面中，删除（Delete Partition）整个 208 GB 的交换分区（本例中为“磁盘 0 分区 3”），因为该空间已为 Windows 预留。
+
+![删除交换分区](../.gitbook/assets/dual-boot-6.png)
+
+随后选择创建分区（Create Partition）。若出现错误提示，选择刷新（Refresh）。Windows 安装程序将在未分配空间上自动创建所需分区，包括 MSR 分区、系统分区和恢复分区。
+
+选择 208 GB 的“磁盘 0 未分配空间”，确认并继续安装。
+
+![选择未分配空间安装 Windows](../.gitbook/assets/dual-boot-7.png)
+
+## 还原交换分区（swap）
+
+Windows 安装完成后，恢复 FreeBSD 的交换分区。此前预留了 208 GB 空间，其中 8 GB 用于交换分区。以下操作使用工具 [DiskGenius](https://www.diskgenius.com/)。
+
+![DiskGenius 主界面](../.gitbook/assets/dual-boot-8.png)
+
+启动 DiskGenius，调整 C 盘分区大小以释放 8 GB 未分配空间。Windows 安装完成后，C 盘占用大部分预留空间，从 C 盘末尾压缩 8 GB 即可。
+
+![压缩 C 盘](../.gitbook/assets/dual-boot-9.png)
+
+将该 8 GB 空间的分区类型设置为 `FreeBSD Swap partition`，保存更改。此步骤将新建的交换分区标记为 FreeBSD 可识别的类型。
+
+![格式化交换分区](../.gitbook/assets/dual-boot-10.png)
+
+![保存分区更改](../.gitbook/assets/dual-boot-11.png)
+
+回到 FreeBSD，查看磁盘分区情况：
+
+```sh
+# gpart show
+=>       34  629145533  nda0  GPT  (300G)
+         34          6        - free -  (3.0K)
+         40     532480     1  efi  (260M)
+     533544        984        - free -  (492K)
+     534528      32768     3  ms-reserved  (16M)
+     567296  417953792     4  ms-basic-data  (199G)
+  418521088   16777216     5  freebsd-swap  (8.0G)
+  435298304    1441792     6  ms-recovery  (704M)
+  436740096       2048        - free -  (1.0M)
+  436742144  192401408     7  freebsd-zfs  (92G)
+  629143552       2015        - free -  (1.0M)
+
+```
+
+分区 5（`nda0p5`）即为新建的交换分区。启用该交换分区：
+
+```sh
+# swapon /dev/nda0p5
+```
+
+无错误输出即表示操作成功，系统已识别并使用该交换分区。
+
+编辑 **/etc/fstab** 文件，在 swap 对应行的行首删去注释符号 `#`，并将分区改为正确的值。本例中的配置如下第三行：
+
+```sh
+# Device                Mountpoint      FStype  Options         Dump    Pass#
+/dev/gpt/efiboot0               /boot/efi       msdosfs rw              2       2
+/dev/nda0p5             none    swap    sw              0       0
+```
+
+重启后再次查看当前交换分区情况：
+
+```sh
+# swapinfo -mh
+Device              Size     Used    Avail Capacity
+/dev/nda0p5         8.0G       0B     8.0G     0%
+```
+
+列出系统中所有 ZFS 池及其状态：
+
+```sh
+# zpool list
+NAME    SIZE  ALLOC   FREE  CKPOINT  EXPANDSZ   FRAG    CAP  DEDUP    HEALTH  ALTROOT
+zroot  91.5G   922M  90.6G        -         -     0%     0%  1.00x    ONLINE  -
+# zfs list
+NAME                 USED  AVAIL  REFER  MOUNTPOINT
+zroot                922M  87.8G    96K  /zroot
+zroot/ROOT           919M  87.8G    96K  none
+zroot/ROOT/default   919M  87.8G   919M  /
+zroot/home           224K  87.8G    96K  /home
+zroot/home/ykla      128K  87.8G   128K  /home/ykla
+zroot/tmp            104K  87.8G   104K  /tmp
+zroot/usr            288K  87.8G    96K  /usr
+zroot/usr/ports       96K  87.8G    96K  /usr/ports
+zroot/usr/src         96K  87.8G    96K  /usr/src
+zroot/var            668K  87.8G    96K  /var
+zroot/var/audit       96K  87.8G    96K  /var/audit
+zroot/var/crash       96K  87.8G    96K  /var/crash
+zroot/var/log        188K  87.8G   188K  /var/log
+zroot/var/mail        96K  87.8G    96K  /var/mail
+zroot/var/tmp         96K  87.8G    96K  /var/tmp
+```

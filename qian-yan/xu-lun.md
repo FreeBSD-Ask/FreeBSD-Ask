@@ -25,73 +25,75 @@
 
 ## 本书的组织结构
 
-**第 1 章 FreeBSD 初见**：介绍 UNIX 的起源与发展，涵盖 GNU 操作系统与自由软件运动、Linux 与类 UNIX 系统的关系，以及 FreeBSD 的命名渊源与历史背景、其他 BSD 发行版概述。
+**第 1 章 FreeBSD 初见**：介绍 UNIX 的起源与发展，涵盖 GNU 操作系统与自由软件运动、Linux 与类 UNIX 系统的关系，以及 FreeBSD 的命名渊源与历史背景。
 
 **第 2 章 FreeBSD 导论**：深入探讨 FreeBSD 的理想与现实、项目宗旨与治理结构、开发模型与社区生态，并追溯 FreeBSD 的发展简史。
 
-**第 3 章 FreeBSD 安装基础**：指导使用 FreeBSD 内置安装工具 `bsdinstall` 完成系统安装，涵盖 VMware、VirtualBox、Hyper-V 等虚拟化平台上的安装方法、安装故障排除，以及 USB 启动盘恢复为普通存储设备的方法。
+**第 3 章 迁移指南**：面向 Windows、Linux 和 macOS 用户提供迁移指南，介绍其他 BSD 发行版概论和 BSD 许可证概览，帮助不同操作系统的用户顺利过渡到 FreeBSD。
 
-**第 4 章 FreeBSD 高级安装**：介绍双系统配置、基于 Apple M1 平台的安装方案（Parallels Desktop、VMware Fusion Pro），以及腾讯云、阿里云、KVM/QEMU 等云平台和虚拟化环境中的安装方法。
+**第 4 章 FreeBSD 安装基础**：指导使用 FreeBSD 内置安装工具 `bsdinstall` 完成系统安装，涵盖 VMware、VirtualBox、Hyper-V 等虚拟化平台上的安装方法、安装故障排除，以及 USB 启动盘恢复为普通存储设备的方法。
 
-**第 5 章 FreeBSD 基础**：面向 Windows、Linux 和 macOS 用户提供迁移指南，涵盖系统目录结构、虚拟控制台、shell 使用、命令行基础、文本编辑器、用户与权限管理及压缩工具等基础操作。
+**第 5 章 FreeBSD 高级安装**：介绍双系统配置、基于 Apple M1 平台的安装方案（Parallels Desktop、VMware Fusion Pro），以及腾讯云、阿里云、KVM/QEMU 等云平台和虚拟化环境中的安装方法。
 
-**第 6 章 软件管理**：介绍 FreeBSD 包管理器概述、软件源的更换方法，使用 pkg 管理二进制包、使用 Ports 以源代码方式安装软件、Ports 构建调优，以及使用 DVD 安装软件和 FreeBSD 镜像站现状。
+**第 6 章 FreeBSD 基础**：涵盖系统目录结构、虚拟控制台、shell 使用、命令行基础、文本编辑器、用户与权限管理及压缩工具等基础操作。
 
-**第 7 章 FreeBSD 系统更新**：介绍使用 freebsd-update、源代码方式或 PkgBase 更新 FreeBSD 的方法，以及使用 PkgBase 转换基本系统和使用 ZFS 启动环境更新 FreeBSD。
+**第 7 章 软件管理**：介绍 FreeBSD 包管理器概述、软件源的更换方法，使用 pkg 管理二进制包、使用 Ports 以源代码方式安装软件、Ports 构建调优，以及使用 DVD 安装软件和 FreeBSD 镜像站现状。
 
-**第 8 章 网络管理**：介绍计算机网络基础、基础网络管理、无线网络管理、TCP/IP 协议栈、蓝牙、USB 网络共享、系统代理、网桥、链路聚合与故障转移及 VLAN 的配置方法。
+**第 8 章 FreeBSD 系统更新**：介绍使用 freebsd-update、源代码方式或 PkgBase 更新 FreeBSD 的方法，以及使用 PkgBase 转换基本系统和使用 ZFS 启动环境更新 FreeBSD。
 
-**第 9 章 X Window 系统**：介绍显卡驱动概论，Intel、AMD 和 NVIDIA 显卡驱动的安装与配置，系统字体的替换方法，以及远程桌面访问。
+**第 9 章 网络管理**：介绍计算机网络基础、基础网络管理、无线网络管理、TCP/IP 协议栈、蓝牙、USB 网络共享、系统代理、网桥、链路聚合与故障转移及 VLAN 的配置方法。
 
-**第 10 章 桌面环境**：介绍在 FreeBSD 上运行的各类桌面环境与窗口管理器，包括 KDE 6（X11 与 Wayland 会话）、MATE、Xfce、Cinnamon、LXQt、GNOME、IceWM 及 CDE（拟删除）。
+**第 10 章 X Window 系统**：介绍显卡驱动概论，Intel、AMD 和 NVIDIA 显卡驱动的安装与配置，系统字体的替换方法，以及远程桌面访问。
 
-**第 11 章 多媒体和外部设备**：介绍 Web 浏览器、声卡配置、音频与视频播放器、打印机、摄像头、文档查看器、人机输入设备及多媒体处理工具的使用方法。
+**第 11 章 桌面环境**：介绍在 FreeBSD 上运行的各类桌面环境与窗口管理器，包括 KDE 6（X11 与 Wayland 会话）、MATE、Xfce、Cinnamon、LXQt、GNOME、IceWM 及 CDE（拟删除）。
 
-**第 12 章 本地化与输入法**：介绍本地化环境变量配置、特定语言的区域配置，以及 Fcitx、IBus 输入法框架和五笔输入法的安装与设置。
+**第 12 章 多媒体和外部设备**：介绍 Web 浏览器、声卡配置、音频与视频播放器、打印机、摄像头、文档查看器、人机输入设备及多媒体处理工具的使用方法。
 
-**第 13 章 Linux 兼容层**：介绍 FreeBSD 的 Linux 兼容层架构，涵盖 Rocky Linux、Ubuntu/Debian/Kali Linux、Arch Linux、Slackware、Gentoo 等多种 Linux 发行版的兼容环境搭建，以及微信、QQ、WPS Office 等 Linux 应用的运行方法和故障排除。
+**第 13 章 本地化与输入法**：介绍本地化环境变量配置、特定语言的区域配置，以及 Fcitx、IBus 输入法框架和五笔输入法的安装与设置。
 
-**第 14 章 游戏、科学计算和专业工具**：介绍 Godot 开源游戏引擎、我的世界（Minecraft）服务器、Minecraft、Steam 客户端、R 语言、Wine 配置，以及科研和专业计算工具的使用。
+**第 14 章 Linux 兼容层**：介绍 FreeBSD 的 Linux 兼容层架构，涵盖 Rocky Linux、Ubuntu/Debian/Kali Linux、Arch Linux、Slackware、Gentoo 等多种 Linux 发行版的兼容环境搭建，以及微信、QQ、WPS Office 等 Linux 应用的运行方法和故障排除。
 
-**第 15 章 人工智能**：介绍人工智能概论与 AI 大模型在 FreeBSD 上的本地部署方法。
+**第 15 章 游戏、科学计算和专业工具**：介绍 Godot 开源游戏引擎、我的世界（Minecraft）服务器、Minecraft、Steam 客户端、R 语言、Wine 配置，以及科研和专业计算工具的使用。
 
-**第 16 章 系统管理**：讲解启动引导器、UEFI 固件管理、服务管理、进程与守护进程、用户分级、权限提升工具（sudo、doas 等）、bsdconfig 配置工具、OpenSSH、设备资源提示、定时任务、系统日志管理、sysctl 工具、NTP 时间同步及 Live 镜像与系统恢复等系统管理功能。
+**第 16 章 人工智能**：介绍人工智能概论与 AI 大模型在 FreeBSD 上的本地部署方法。
 
-**第 17 章 存储管理**：介绍 USB 存储设备、内存盘、文件系统自动挂载、交换分区配置及加密交换分区。
+**第 17 章 系统管理**：讲解启动引导器、UEFI 固件管理、服务管理、进程与守护进程、用户分级、权限提升工具（sudo、doas 等）、bsdconfig 配置工具、OpenSSH、设备资源提示、定时任务、系统日志管理、sysctl 工具、NTP 时间同步及 Live 镜像与系统恢复等系统管理功能。
 
-**第 18 章 其他文件系统**：介绍 Windows、Linux 与 macOS 文件系统的使用。
+**第 18 章 存储管理**：介绍 USB 存储设备、内存盘、文件系统自动挂载、交换分区配置及加密交换分区。
 
-**第 19 章 UFS 文件系统**：介绍 UFS 文件系统概述、添加 UFS 磁盘、磁盘扩展、磁盘快照、磁盘配额及磁盘加密。
+**第 19 章 其他文件系统**：介绍 Windows、Linux 与 macOS 文件系统的使用。
 
-**第 20 章 ZFS 文件系统**：涵盖 ZFS 的历史与现实、特性和术语、存储池管理、快照与扩容等 ZFS 核心管理操作、委托管理、启动环境、更新 OpenZFS 版本及调优。
+**第 20 章 UFS 文件系统**：介绍 UFS 文件系统概述、添加 UFS 磁盘、磁盘扩展、磁盘快照、磁盘配额及磁盘加密。
 
-**第 21 章 安全**：介绍信息安全概论、账户认证安全、资源限制、安全等级、root 账户桌面登录、安全事件审计、OpenSSL、入侵检测系统（IDS）、第三方漏洞与安全公告，以及强制访问控制框架（MAC 框架）。
+**第 21 章 ZFS 文件系统**：涵盖 ZFS 的历史与现实、特性和术语、存储池管理、快照与扩容等 ZFS 核心管理操作、委托管理、启动环境、更新 OpenZFS 版本及调优。
 
-**第 22 章 防火墙**：介绍防火墙概论与 FreeBSD 内置防火墙系统，包括 ipfirewall（IPFW）、IPFilter（IPF）、Packet Filter（PF）的配置，以及 Fail2Ban 和 blocklistd 工具的使用。
+**第 22 章 安全**：介绍信息安全概论、账户认证安全、资源限制、安全等级、root 账户桌面登录、安全事件审计、OpenSSL、入侵检测系统（IDS）、第三方漏洞与安全公告，以及强制访问控制框架（MAC 框架）。
 
-**第 23 章 Jail 容器管理**：介绍 FreeBSD 原生轻量级虚拟化技术 Jail 的基础配置、厚 Jail（Thick Jail）及 Qjail 管理工具的使用。
+**第 23 章 防火墙**：介绍防火墙概论与 FreeBSD 内置防火墙系统，包括 ipfirewall（IPFW）、IPFilter（IPF）、Packet Filter（PF）的配置，以及 Fail2Ban 和 blocklistd 工具的使用。
 
-**第 24 章 Linux Jail**：介绍在 FreeBSD Jail 中运行 Linux 发行版的方法，涵盖 Linux Jail 基础准备，以及 Debian、Ubuntu、antiX Linux、Alpine Linux 等发行版的 Jail 创建与 GUI 配置。
+**第 24 章 Jail 容器管理**：介绍 FreeBSD 原生轻量级虚拟化技术 Jail 的基础配置、厚 Jail（Thick Jail）及 Qjail 管理工具的使用。
 
-**第 25 章 虚拟化与容器管理**：介绍使用 bhyve 及 vm-bhyve 工具安装 Windows 11、通过 BVCP 的 Web 界面管理 bhyve 虚拟机，以及 Podman 容器管理和在 FreeBSD 上安装 VirtualBox。
+**第 25 章 Linux Jail**：介绍在 FreeBSD Jail 中运行 Linux 发行版的方法，涵盖 Linux Jail 基础准备，以及 Debian、Ubuntu、antiX Linux、Alpine Linux 等发行版的 Jail 创建与 GUI 配置。
 
-**第 26 章 数据库管理**：介绍数据库概论，以及 PostgreSQL、MySQL 及 MongoDB 在 FreeBSD 上的安装与配置，同时涵盖 pgAdmin4 管理工具的使用。
+**第 26 章 虚拟化与容器管理**：介绍使用 bhyve 及 vm-bhyve 工具安装 Windows 11、通过 BVCP 的 Web 界面管理 bhyve 虚拟机，以及 Podman 容器管理和在 FreeBSD 上安装 VirtualBox。
 
-**第 27 章 文件传输协议（FTP）**：介绍文件传输协议（FTP）概述，以及 Pure-FTPd（基于 MySQL）、ProFTPD（基于 MySQL）、vsftpd 等 FTP 服务器的配置。
+**第 27 章 数据库管理**：介绍数据库概论，以及 PostgreSQL、MySQL 及 MongoDB 在 FreeBSD 上的安装与配置，同时涵盖 pgAdmin4 管理工具的使用。
 
-**第 28 章 服务器**：介绍 Rsync 数据同步、Samba 文件共享、网络文件系统（NFS）、零配置网络（mDNS/DNS-SD）及 Webmin 管理平台等服务的搭建。
+**第 28 章 文件传输协议（FTP）**：介绍文件传输协议（FTP）概述，以及 Pure-FTPd（基于 MySQL）、ProFTPD（基于 MySQL）、vsftpd 等 FTP 服务器的配置。
 
-**第 29 章 Web 服务器**：介绍 Apache、Nginx、Caddy Web 服务器的部署，以及 PHP、Tomcat、WildFly 应用服务器的配置，同时涵盖 Nextcloud、OnlyOffice、GitLab 和 OpenList 等应用的部署。
+**第 29 章 服务器**：介绍 Rsync 数据同步、Samba 文件共享、网络文件系统（NFS）、零配置网络（mDNS/DNS-SD）及 Webmin 管理平台等服务的搭建。
 
-**第 30 章 监控系统**：介绍 Zabbix、Prometheus 监控系统的部署，以及 Telegraf、InfluxDB 与 Grafana 组成的监控平台架构。
+**第 30 章 Web 服务器**：介绍 Apache、Nginx、Caddy Web 服务器的部署，以及 PHP、Tomcat、WildFly 应用服务器的配置，同时涵盖 Nextcloud、OnlyOffice、GitLab 和 OpenList 等应用的部署。
 
-**第 31 章 嵌入式平台**：介绍树莓派上 FreeBSD 的安装与使用、Linux 兼容层配置，以及 Radxa X4 x86 开发板、Linux 系统上交叉构建 FreeBSD、QEMU 模拟 RISC-V 架构，以及 STM32、乐鑫（Espressif）ESP-IDF、Arduino 等嵌入式开发环境的搭建方法。
+**第 31 章 监控系统**：介绍 Zabbix、Prometheus 监控系统的部署，以及 Telegraf、InfluxDB 与 Grafana 组成的监控平台架构。
 
-**第 32 章 开发环境**：介绍 C/C++、Java、Qt、Python、Rust、Go、Node.js 等语言开发环境的搭建，以及 IDA Pro 调试、code-server 与 clangd 配置、Vim 开发环境和 DTrace 动态追踪工具的使用。
+**第 32 章 嵌入式平台**：介绍树莓派上 FreeBSD 的安装与使用、Linux 兼容层配置，以及 Radxa X4 x86 开发板、Linux 系统上交叉构建 FreeBSD、QEMU 模拟 RISC-V 架构，以及 STM32、乐鑫（Espressif）ESP-IDF、Arduino 等嵌入式开发环境的搭建方法。
 
-**第 33 章 FreeBSD 内核架构**：介绍 FreeBSD 源代码目录结构、内核文件结构、机器相关与无关的内核选项注解、GENERIC 内核选项及定制内核的构建方法。
+**第 33 章 开发环境**：介绍 C/C++、Java、Qt、Python、Rust、Go、Node.js 等语言开发环境的搭建，以及 IDA Pro 调试、code-server 与 clangd 配置、Vim 开发环境和 DTrace 动态追踪工具的使用。
 
-**附录 I 工具与资源**：包括 BSD 许可证概览、Bug 报告流程、FreeBSD 邮件列表订阅、FreeBSD 开发参与指南、microSD 卡参数简介，以及 V2Ray、Mihomo 的配置方法。
+**第 34 章 FreeBSD 内核架构**：介绍 FreeBSD 源代码目录结构、内核文件结构、机器相关与无关的内核选项注解、GENERIC 内核选项及定制内核的构建方法。
+
+**附录 I 工具与资源**：包括 Bug 报告流程、FreeBSD 邮件列表订阅、FreeBSD 开发参与指南、microSD 卡参数简介，以及 V2Ray、Mihomo 的配置方法。
 
 **附录 II 参考文献与术语表**：列出全书核心参考文献和术语表。
 
