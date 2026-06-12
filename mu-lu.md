@@ -208,7 +208,8 @@
 * [20.4 ZFS 管理](di-20-zhang-zfs-wen-jian-xi-tong/di-20.4-jie-zfs-guan-li.md)
 * [20.5 ZFS 委托管理](di-20-zhang-zfs-wen-jian-xi-tong/di-20.5-jie-zfs-wei-tuo-guan-li.md)
 * [20.6 ZFS 启动环境](di-20-zhang-zfs-wen-jian-xi-tong/di-20.6-jie-zfs-qi-dong-huan-jing.md)
-* [20.7 ZFS 调优](di-20-zhang-zfs-wen-jian-xi-tong/di-20.7-jie-zfs-diao-you.md)
+* [20.7 更新 OpenZFS 版本](di-20-zhang-zfs-wen-jian-xi-tong/di-20.7-jie-geng-xin-openzfs-ban-ben.md)
+* [20.8 ZFS 调优](di-20-zhang-zfs-wen-jian-xi-tong/di-20.8-jie-zfs-diao-you.md)
 
 ## 第 21 章 安全
 
