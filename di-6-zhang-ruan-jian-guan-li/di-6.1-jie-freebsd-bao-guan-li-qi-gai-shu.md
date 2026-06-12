@@ -130,7 +130,7 @@ quarterly 分支类似于 Debian 的 Stable 版本，固定软件包版本并仅
 Ports 是一种从源代码（也支持闭源二进制包）构建软件的框架。该框架由 Jordan K. Hubbard（<jkh@FreeBSD.org>）创建，最初于 1994 年 8 月公开发布。
 
 ```sh
-# git log --reverse --max-parents=0 --pretty=format:"commit: %h%nAuthor: %an%nDate: %ci%n%n%B" # 打印第一次提交
+# git log --reverse --max-parents=0 --pretty=format:"commit: %h%nAuthor: %an%nDate: %ci%n%n%B" # 查看仓库首次提交记录
 commit: d27f048e966a
 Author: Jordan K. Hubbard
 Date: 1994-08-21 13:12:57 +0000
