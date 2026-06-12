@@ -334,8 +334,8 @@ zroot/
 将 **/mnt/tmp** 和 **/mnt/var/tmp** 的权限设置为 `1777`（粘滞位），以确保临时目录权限正确，使得任何用户都可以在这些目录中创建文件，但只能删除自己创建的文件：
 
 ```sh
-# chmod 1777 /mnt/tmp        # 设置 /mnt/tmp 目录为粘滞位，可读写
-# chmod 1777 /mnt/var/tmp    # 设置 /mnt/var/tmp 目录为粘滞位，可读写
+# chmod 1777 /mnt/tmp        # 为 /mnt/tmp 设置粘滞位，允许所有用户读写但仅文件所有者可删除
+# chmod 1777 /mnt/var/tmp    # 为 /mnt/var/tmp 设置粘滞位，允许所有用户读写但仅文件所有者可删除
 ```
 
 ### 配置交换分区到 `fstab`
