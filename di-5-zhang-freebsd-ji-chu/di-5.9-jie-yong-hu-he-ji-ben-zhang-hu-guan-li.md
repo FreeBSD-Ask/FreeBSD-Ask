@@ -388,7 +388,7 @@ uid=1001(ykla) gid=1001(ykla) groups=1001(ykla),0(wheel),1002(ykla2)
 示例：创建用户 test2。
 
 ```sh
-# pw useradd test2 -u 1200 -m -d /tmp/test -g test2 -G wheel -s sh -c test2 # 创建用户 test2，uid 为 1200，创建主目录，主目录为 /tmp/test，主组为 test2，有 wheel 权限，登录环境 /bin/sh，全名 test2
+# pw useradd test2 -u 1200 -m -d /tmp/test -g test2 -G wheel -s sh -c test2 # 创建用户 test2：UID 1200，创建主目录 /tmp/test，主组 test2，附加 wheel 组，登录 shell 为 sh，全名 test2
 ```
 
 ### 修改用户信息
