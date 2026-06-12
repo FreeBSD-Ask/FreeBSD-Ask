@@ -126,8 +126,8 @@ $ git clone --branch releng/15.0 --single-branch --depth 1 https://github.com/fr
 > 与多数现代 Linux 发行版不同，[FreeBSD](https://github.com/freebsd/freebsd-src/tree/main/contrib/nvi)（OpenBSD）上的 `vi` 为 *[nvi](https://sites.google.com/a/bostic.com/keithbostic/keith-bostic?authuser=0)*（原版 **ex/vi** 的再实现），并非指向 *vim* 的符号链接。该编辑器使用频率较低，因此建议更换为其他文本编辑器。
 >
 > ```sh
-> export EDITOR=/usr/bin/ee # 切换 vi 为 ee。若使用 csh/tcsh，则改用：setenv EDITOR /usr/bin/ee
-> export VISUAL=/usr/bin/ee # 切换 vi 为 ee。若使用 csh/tcsh，则改用：setenv VISUAL /usr/bin/ee
+> export EDITOR=/usr/bin/ee # 切换默认编辑器为 ee。若使用 csh/tcsh，改用 setenv EDITOR /usr/bin/ee
+export VISUAL=/usr/bin/ee # 切换可视化编辑器为 ee。若使用 csh/tcsh，改用 setenv VISUAL /usr/bin/ee
 > ```
 
 合并冲突。使用 `etcupdate` 合并配置文件更新：
