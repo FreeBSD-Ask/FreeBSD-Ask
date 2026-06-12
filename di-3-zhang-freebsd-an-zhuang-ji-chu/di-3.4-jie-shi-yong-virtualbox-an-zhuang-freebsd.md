@@ -232,8 +232,8 @@ VBOXVFS[1]: sfprov_mount: path: [ykla]
 在 FreeBSD 虚拟机中挂载共享文件夹的命令如下：
 
 ```sh
-# mkdir -p /mnt/bsdboxshare # 创建上面指定的挂载点
-# mount_vboxvfs -w ykla /mnt/bsdboxshare # 挂载共享文件夹 ykla，-w 为可写挂载
+# mkdir -p /mnt/bsdboxshare # 创建共享文件夹挂载点
+# mount_vboxvfs -w ykla /mnt/bsdboxshare # 以可写方式挂载共享文件夹 ykla
 ```
 
 列出共享文件夹内容：
