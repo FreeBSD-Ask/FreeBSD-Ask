@@ -19,7 +19,6 @@
 * [1.3 Linux 与类 UNIX](di-1-zhang-freebsd-chu-jian/di-1.3-jie-linux-yu-lei-unix.md)
 * [1.4 什么是 FreeBSD](di-1-zhang-freebsd-chu-jian/di-1.4-jie-shen-me-shi-freebsd.md)
 * [1.5 乔治·贝克莱（George Berkeley）与 BSD 文化传统](di-1-zhang-freebsd-chu-jian/di-1.5-jie-qiao-zhi-bei-ke-lai-george-berkeley-yu-bsd-wen-hua-chuan-tong.md)
-* [1.6 其他 BSD 发行版概论](di-1-zhang-freebsd-chu-jian/di-1.6-jie-qi-ta-bsd-fa-xing-ban-gai-lun.md)
 
 ## 第 2 章 FreeBSD 导论
 
@@ -33,6 +32,8 @@
 * [3.1 Windows 用户迁移指南](di-3-zhang-qian-yi-zhi-nan/di-3.1-jie-windows-yong-hu-qian-yi-zhi-nan.md)
 * [3.2 Linux 用户迁移指南](di-3-zhang-qian-yi-zhi-nan/di-3.2-jie-linux-yong-hu-qian-yi-zhi-nan.md)
 * [3.3 macOS 用户迁移指南](di-3-zhang-qian-yi-zhi-nan/di-3.3-jie-macos-yong-hu-qian-yi-zhi-nan.md)
+* [3.4 其他 BSD 发行版概论](di-3-zhang-qian-yi-zhi-nan/di-3.4-jie-qi-ta-bsd-fa-xing-ban-gai-lun.md)
+* [3.5 BSD 许可证概览](di-3-zhang-qian-yi-zhi-nan/di-3.5-jie-bsd-xu-ke-zheng-gai-lan.md)
 
 ## 第 4 章 FreeBSD 安装基础
 
@@ -338,7 +339,6 @@
 
 ## 附录 I 工具与资源
 
-* [BSD 许可证概览](fu-lu1/bsd-xu-ke-zheng-gai-lan.md)
 * [Bug 报告流程](fu-lu1/bug-bao-gao-liu-cheng.md)
 * [FreeBSD 邮件列表订阅](fu-lu1/freebsd-you-jian-lie-biao-ding-yue.md)
 * [FreeBSD 开发参与指南](fu-lu1/freebsd-kai-fa-can-yu-zhi-nan.md)

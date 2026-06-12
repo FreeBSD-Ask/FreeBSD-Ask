@@ -25,11 +25,11 @@
 
 ## 本书的组织结构
 
-**第 1 章 FreeBSD 初见**：介绍 UNIX 的起源与发展，涵盖 GNU 操作系统与自由软件运动、Linux 与类 UNIX 系统的关系，以及 FreeBSD 的命名渊源与历史背景、其他 BSD 发行版概述。
+**第 1 章 FreeBSD 初见**：介绍 UNIX 的起源与发展，涵盖 GNU 操作系统与自由软件运动、Linux 与类 UNIX 系统的关系，以及 FreeBSD 的命名渊源与历史背景。
 
 **第 2 章 FreeBSD 导论**：深入探讨 FreeBSD 的理想与现实、项目宗旨与治理结构、开发模型与社区生态，并追溯 FreeBSD 的发展简史。
 
-**第 3 章 迁移指南**：面向 Windows、Linux 和 macOS 用户提供迁移指南，帮助不同操作系统的用户顺利过渡到 FreeBSD。
+**第 3 章 迁移指南**：面向 Windows、Linux 和 macOS 用户提供迁移指南，介绍其他 BSD 发行版概论和 BSD 许可证概览，帮助不同操作系统的用户顺利过渡到 FreeBSD。
 
 **第 4 章 FreeBSD 安装基础**：指导使用 FreeBSD 内置安装工具 `bsdinstall` 完成系统安装，涵盖 VMware、VirtualBox、Hyper-V 等虚拟化平台上的安装方法、安装故障排除，以及 USB 启动盘恢复为普通存储设备的方法。
 
@@ -93,7 +93,7 @@
 
 **第 34 章 FreeBSD 内核架构**：介绍 FreeBSD 源代码目录结构、内核文件结构、机器相关与无关的内核选项注解、GENERIC 内核选项及定制内核的构建方法。
 
-**附录 I 工具与资源**：包括 BSD 许可证概览、Bug 报告流程、FreeBSD 邮件列表订阅、FreeBSD 开发参与指南、microSD 卡参数简介，以及 V2Ray、Mihomo 的配置方法。
+**附录 I 工具与资源**：包括 Bug 报告流程、FreeBSD 邮件列表订阅、FreeBSD 开发参与指南、microSD 卡参数简介，以及 V2Ray、Mihomo 的配置方法。
 
 **附录 II 参考文献与术语表**：列出全书核心参考文献和术语表。
 
