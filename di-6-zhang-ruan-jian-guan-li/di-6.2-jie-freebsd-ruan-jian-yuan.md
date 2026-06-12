@@ -388,5 +388,3 @@ MASTER_SITE_OVERRIDE?=https://mirrors.ustc.edu.cn/freebsd-ports/distfiles/${DIST
 > 目前中国大陆境内不存在任何 FreeBSD 官方镜像站。
 >
 > 对于安全性要求较高的用户，应该使用默认的官方镜像 `pkg.freebsd.org`！其由 FreeBSD 项目官方构建、分发和维护。
-
-
