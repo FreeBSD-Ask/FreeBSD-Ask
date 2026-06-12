@@ -174,7 +174,7 @@ boot # 输入 boot 后按回车继续启动
 
 ```sh
 ls                                # 列出所有磁盘和分区
-ls (hd0,gpt2)/                     # 列出 (hd0,gpt2) 分区下的内容。MBR 分区表可能为 (hd0,msdosx)，具体以实际情况为准
+ls (hd0,gpt2)/                     # 列出 (hd0,gpt2) 分区下的内容。MBR 分区表下可能为 (hd0,msdosx)，以实际情况为准
 linux16 (hd0,gpt2)/memdisk iso     # 指定 memdisk 内核镜像
 initrd16 (hd0,gpt2)/bsd.iso         # 指定初始 RAM 磁盘映像
 boot                               # 输入 boot 后回车以启动系统
