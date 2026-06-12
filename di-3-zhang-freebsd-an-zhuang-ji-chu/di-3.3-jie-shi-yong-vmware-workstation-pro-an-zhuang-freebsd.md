@@ -178,14 +178,14 @@ Section "ServerLayout"
         Screen          0  "Screen0" 0 0
         InputDevice    "Mouse0" "CorePointer"
         InputDevice    "Keyboard0" "CoreKeyboard"
-        Option          "AutoAddDevices" "Off"  # 添加此行到此处：禁止 Xorg 自动添加输入设备
+        Option          "AutoAddDevices" "Off"  # 禁止 Xorg 自动添加输入设备
 EndSection
 
 …………此处省略一部分…………
 
 Section "InputDevice"
       Identifier  "Mouse0"
-      Driver      "vmmouse"  # 修改 mouse 为 vmmouse：使用 VMware 虚拟鼠标驱动
+      Driver      "vmmouse"  # 使用 VMware 虚拟鼠标驱动
       Option      "Protocol" "auto"
       Option      "Device" "/dev/sysmouse"
       Option      "ZAxisMapping" "4 5 6 7"
