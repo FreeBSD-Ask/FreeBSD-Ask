@@ -186,11 +186,13 @@ vfs.zfs.vdev.min_auto_ashift: 9 -> 12
 
 选项说明如下：
 
-- `-o altroot=/mnt` 将其临时挂载至 **/mnt**；
-- `-O compress=lz4` 启用 lz4 压缩（可换为 zstd 等）；
-- `-O atime=off` 关闭访问时间记录；
-- `-m none` 不设置挂载点；
-- **/dev/gpt/zroot** 为刚创建的分区。
+| 选项 | 说明 |
+| ---- | ---- |
+| `-o altroot=/mnt` | 将其临时挂载至 **/mnt** |
+| `-O compress=lz4` | 启用 lz4 压缩（可换为 zstd 等） |
+| `-O atime=off` | 关闭访问时间记录 |
+| `-m none` | 不设置挂载点 |
+| **/dev/gpt/zroot** | 刚创建的分区 |
 
 可通过 `zpool status zroot` 验证池的健康状态。
 
