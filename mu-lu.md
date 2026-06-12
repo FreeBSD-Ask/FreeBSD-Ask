@@ -92,13 +92,9 @@
 * [10.1 计算机网络基础](di-10-zhang-wang-luo-guan-li/di-10.1-jie-ji-suan-ji-wang-luo-ji-chu.md)
 * [10.2 基础网络管理](di-10-zhang-wang-luo-guan-li/di-10.2-jie-ji-chu-wang-luo-guan-li.md)
 * [10.3 无线网络管理](di-10-zhang-wang-luo-guan-li/di-10.3-jie-wu-xian-wang-luo-guan-li.md)
-* [10.4 TCP/IP 协议栈](di-10-zhang-wang-luo-guan-li/di-10.4-jie-tcp-ip-xie-yi-zhan.md)
-* [10.5 蓝牙](di-10-zhang-wang-luo-guan-li/di-10.5-jie-lan-ya.md)
-* [10.6 USB 网络共享（USB tethering）](di-10-zhang-wang-luo-guan-li/di-10.6-jie-usb-wang-luo-gong-xiang-usb-tethering.md)
-* [10.7 系统代理](di-10-zhang-wang-luo-guan-li/di-10.7-jie-xi-tong-dai-li.md)
-* [10.8 网桥](di-10-zhang-wang-luo-guan-li/di-10.8-jie-wang-qiao.md)
-* [10.9 链路聚合与故障转移](di-10-zhang-wang-luo-guan-li/di-10.9-jie-lian-lu-ju-he-yu-gu-zhang-zhuan-yi.md)
-* [10.10 VLAN](di-10-zhang-wang-luo-guan-li/di-10.10-jie-vlan.md)
+* [10.4 蓝牙](di-10-zhang-wang-luo-guan-li/di-10.4-jie-lan-ya.md)
+* [10.5 USB 网络共享（USB tethering）](di-10-zhang-wang-luo-guan-li/di-10.5-jie-usb-wang-luo-gong-xiang-usb-tethering.md)
+* [10.6 系统代理](di-10-zhang-wang-luo-guan-li/di-10.6-jie-xi-tong-dai-li.md)
 
 ## 第 11 章 X Window 系统
 
@@ -186,159 +182,166 @@
 * [18.13 NTP 时间同步与时区](di-18-zhang-xi-tong-guan-li/di-18.13-jie-ntp-shi-jian-tong-bu-yu-shi-qu.md)
 * [18.14 Live 镜像与系统恢复](di-18-zhang-xi-tong-guan-li/di-18.14-jie-live-jing-xiang-yu-xi-tong-hui-fu.md)
 
-## 第 19 章 存储管理
+## 第 19 章 高级网络
 
-* [19.1 USB 存储设备](di-19-zhang-cun-chu-guan-li/di-19.1-jie-usb-cun-chu-she-bei.md)
-* [19.2 虚拟内存盘](di-19-zhang-cun-chu-guan-li/di-19.2-jie-xu-ni-nei-cun-pan.md)
-* [19.3 文件系统自动挂载](di-19-zhang-cun-chu-guan-li/di-19.3-jie-wen-jian-xi-tong-zi-dong-gua-zai.md)
-* [19.4 新增交换分区](di-19-zhang-cun-chu-guan-li/di-19.4-jie-xin-zeng-jiao-huan-fen-qu.md)
-* [19.5 加密交换分区](di-19-zhang-cun-chu-guan-li/di-19.5-jie-jia-mi-jiao-huan-fen-qu.md)
+* [19.1 TCP/IP 协议栈](di-19-zhang-gao-ji-wang-luo/di-19.1-jie-tcp-ip-xie-yi-zhan.md)
+* [19.2 网桥](di-19-zhang-gao-ji-wang-luo/di-19.2-jie-wang-qiao.md)
+* [19.3 链路聚合与故障转移](di-19-zhang-gao-ji-wang-luo/di-19.3-jie-lian-lu-ju-he-yu-gu-zhang-zhuan-yi.md)
+* [19.4 VLAN](di-19-zhang-gao-ji-wang-luo/di-19.4-jie-vlan.md)
 
-## 第 20 章 其他文件系统
+## 第 20 章 存储管理
 
-* [20.1 Windows 文件系统](di-20-zhang-qi-ta-wen-jian-xi-tong/di-20.1-jie-windows-wen-jian-xi-tong.md)
-* [20.2 Linux 文件系统](di-20-zhang-qi-ta-wen-jian-xi-tong/di-20.2-jie-linux-wen-jian-xi-tong.md)
-* [20.3 macOS 文件系统](di-20-zhang-qi-ta-wen-jian-xi-tong/di-20.3-jie-macos-wen-jian-xi-tong.md)
+* [20.1 USB 存储设备](di-20-zhang-cun-chu-guan-li/di-20.1-jie-usb-cun-chu-she-bei.md)
+* [20.2 虚拟内存盘](di-20-zhang-cun-chu-guan-li/di-20.2-jie-xu-ni-nei-cun-pan.md)
+* [20.3 文件系统自动挂载](di-20-zhang-cun-chu-guan-li/di-20.3-jie-wen-jian-xi-tong-zi-dong-gua-zai.md)
+* [20.4 新增交换分区](di-20-zhang-cun-chu-guan-li/di-20.4-jie-xin-zeng-jiao-huan-fen-qu.md)
+* [20.5 加密交换分区](di-20-zhang-cun-chu-guan-li/di-20.5-jie-jia-mi-jiao-huan-fen-qu.md)
 
-## 第 21 章 UFS 文件系统
+## 第 21 章 其他文件系统
 
-* [21.1 UFS 文件系统概述](di-21-zhang-ufs-wen-jian-xi-tong/di-21.1-jie-ufs-wen-jian-xi-tong-gai-shu.md)
-* [21.2 添加 UFS 磁盘](di-21-zhang-ufs-wen-jian-xi-tong/di-21.2-jie-tian-jia-ufs-ci-pan.md)
-* [21.3 UFS 磁盘扩展](di-21-zhang-ufs-wen-jian-xi-tong/di-21.3-jie-ufs-ci-pan-kuo-zhan.md)
-* [21.4 UFS 磁盘快照](di-21-zhang-ufs-wen-jian-xi-tong/di-21.4-jie-ufs-ci-pan-kuai-zhao.md)
-* [21.5 UFS 磁盘配额](di-21-zhang-ufs-wen-jian-xi-tong/di-21.5-jie-ufs-ci-pan-pei-e.md)
-* [21.6 UFS 磁盘加密](di-21-zhang-ufs-wen-jian-xi-tong/di-21.6-jie-ufs-ci-pan-jia-mi.md)
+* [21.1 Windows 文件系统](di-21-zhang-qi-ta-wen-jian-xi-tong/di-21.1-jie-windows-wen-jian-xi-tong.md)
+* [21.2 Linux 文件系统](di-21-zhang-qi-ta-wen-jian-xi-tong/di-21.2-jie-linux-wen-jian-xi-tong.md)
+* [21.3 macOS 文件系统](di-21-zhang-qi-ta-wen-jian-xi-tong/di-21.3-jie-macos-wen-jian-xi-tong.md)
 
-## 第 22 章 ZFS 文件系统
+## 第 22 章 UFS 文件系统
 
-* [22.1 ZFS 历史与现实](di-22-zhang-zfs-wen-jian-xi-tong/di-22.1-jie-zfs-li-shi-yu-xian-shi.md)
-* [22.2 ZFS 特性和术语](di-22-zhang-zfs-wen-jian-xi-tong/di-22.2-jie-zfs-te-xing-he-shu-yu.md)
-* [22.3 ZFS 存储池管理](di-22-zhang-zfs-wen-jian-xi-tong/di-22.3-jie-zfs-cun-chu-chi-guan-li.md)
-* [22.4 ZFS 管理](di-22-zhang-zfs-wen-jian-xi-tong/di-22.4-jie-zfs-guan-li.md)
-* [22.5 ZFS 委托管理](di-22-zhang-zfs-wen-jian-xi-tong/di-22.5-jie-zfs-wei-tuo-guan-li.md)
-* [22.6 ZFS 启动环境](di-22-zhang-zfs-wen-jian-xi-tong/di-22.6-jie-zfs-qi-dong-huan-jing.md)
-* [22.7 更新 OpenZFS 版本](di-22-zhang-zfs-wen-jian-xi-tong/di-22.7-jie-geng-xin-openzfs-ban-ben.md)
-* [22.8 ZFS 调优](di-22-zhang-zfs-wen-jian-xi-tong/di-22.8-jie-zfs-diao-you.md)
+* [22.1 UFS 文件系统概述](di-22-zhang-ufs-wen-jian-xi-tong/di-22.1-jie-ufs-wen-jian-xi-tong-gai-shu.md)
+* [22.2 添加 UFS 磁盘](di-22-zhang-ufs-wen-jian-xi-tong/di-22.2-jie-tian-jia-ufs-ci-pan.md)
+* [22.3 UFS 磁盘扩展](di-22-zhang-ufs-wen-jian-xi-tong/di-22.3-jie-ufs-ci-pan-kuo-zhan.md)
+* [22.4 UFS 磁盘快照](di-22-zhang-ufs-wen-jian-xi-tong/di-22.4-jie-ufs-ci-pan-kuai-zhao.md)
+* [22.5 UFS 磁盘配额](di-22-zhang-ufs-wen-jian-xi-tong/di-22.5-jie-ufs-ci-pan-pei-e.md)
+* [22.6 UFS 磁盘加密](di-22-zhang-ufs-wen-jian-xi-tong/di-22.6-jie-ufs-ci-pan-jia-mi.md)
 
-## 第 23 章 安全
+## 第 23 章 ZFS 文件系统
 
-* [23.1 信息安全概论](di-23-zhang-an-quan/di-23.1-jie-xin-xi-an-quan-gai-lun.md)
-* [23.2 账户认证安全](di-23-zhang-an-quan/di-23.2-jie-zhang-hu-ren-zheng-an-quan.md)
-* [23.3 资源限制](di-23-zhang-an-quan/di-23.3-jie-zi-yuan-xian-zhi.md)
-* [23.4 安全等级](di-23-zhang-an-quan/di-23.4-jie-an-quan-deng-ji.md)
-* [23.5 启用 root 账户桌面登录](di-23-zhang-an-quan/di-23.5-jie-qi-yong-root-zhang-hu-zhuo-mian-deng-lu.md)
-* [23.6 安全事件审计](di-23-zhang-an-quan/di-23.6-jie-an-quan-shi-jian-shen-ji.md)
-* [23.7 OpenSSL](di-23-zhang-an-quan/di-23.7-jie-openssl.md)
-* [23.8 入侵检测系统（IDS）](di-23-zhang-an-quan/di-23.8-jie-ru-qin-jian-ce-xi-tong-ids.md)
-* [23.9 第三方漏洞与安全公告](di-23-zhang-an-quan/di-23.9-jie-di-san-fang-lou-dong-yu-an-quan-gong-gao.md)
-* [23.10 强制访问控制框架（MAC 框架）](di-23-zhang-an-quan/di-23.10-jie-qiang-zhi-fang-wen-kong-zhi-kuang-jia-mac-kuang-jia.md)
+* [23.1 ZFS 历史与现实](di-23-zhang-zfs-wen-jian-xi-tong/di-23.1-jie-zfs-li-shi-yu-xian-shi.md)
+* [23.2 ZFS 特性和术语](di-23-zhang-zfs-wen-jian-xi-tong/di-23.2-jie-zfs-te-xing-he-shu-yu.md)
+* [23.3 ZFS 存储池管理](di-23-zhang-zfs-wen-jian-xi-tong/di-23.3-jie-zfs-cun-chu-chi-guan-li.md)
+* [23.4 ZFS 管理](di-23-zhang-zfs-wen-jian-xi-tong/di-23.4-jie-zfs-guan-li.md)
+* [23.5 ZFS 委托管理](di-23-zhang-zfs-wen-jian-xi-tong/di-23.5-jie-zfs-wei-tuo-guan-li.md)
+* [23.6 ZFS 启动环境](di-23-zhang-zfs-wen-jian-xi-tong/di-23.6-jie-zfs-qi-dong-huan-jing.md)
+* [23.7 更新 OpenZFS 版本](di-23-zhang-zfs-wen-jian-xi-tong/di-23.7-jie-geng-xin-openzfs-ban-ben.md)
+* [23.8 ZFS 调优](di-23-zhang-zfs-wen-jian-xi-tong/di-23.8-jie-zfs-diao-you.md)
 
-## 第 24 章 防火墙
+## 第 24 章 安全
 
-* [24.1 防火墙概论](di-24-zhang-fang-huo-qiang/di-24.1-jie-fang-huo-qiang-gai-lun.md)
-* [24.2 ipfirewall（IPFW）](di-24-zhang-fang-huo-qiang/di-24.2-jie-ipfirewall-ipfw.md)
-* [24.3 IPFilter（IPF）](di-24-zhang-fang-huo-qiang/di-24.3-jie-ipfilter-ipf.md)
-* [24.4 Packet Filter（PF）](di-24-zhang-fang-huo-qiang/di-24.4-jie-packet-filter-pf.md)
-* [24.5 Fail2Ban（基于 IPFW、PF 与 IPF）](di-24-zhang-fang-huo-qiang/di-24.5-jie-fail2ban-ji-yu-ipfw-pf-yu-ipf.md)
-* [24.6 blocklistd](di-24-zhang-fang-huo-qiang/di-24.6-jie-blocklistd.md)
+* [24.1 信息安全概论](di-24-zhang-an-quan/di-24.1-jie-xin-xi-an-quan-gai-lun.md)
+* [24.2 账户认证安全](di-24-zhang-an-quan/di-24.2-jie-zhang-hu-ren-zheng-an-quan.md)
+* [24.3 资源限制](di-24-zhang-an-quan/di-24.3-jie-zi-yuan-xian-zhi.md)
+* [24.4 安全等级](di-24-zhang-an-quan/di-24.4-jie-an-quan-deng-ji.md)
+* [24.5 启用 root 账户桌面登录](di-24-zhang-an-quan/di-24.5-jie-qi-yong-root-zhang-hu-zhuo-mian-deng-lu.md)
+* [24.6 安全事件审计](di-24-zhang-an-quan/di-24.6-jie-an-quan-shi-jian-shen-ji.md)
+* [24.7 OpenSSL](di-24-zhang-an-quan/di-24.7-jie-openssl.md)
+* [24.8 入侵检测系统（IDS）](di-24-zhang-an-quan/di-24.8-jie-ru-qin-jian-ce-xi-tong-ids.md)
+* [24.9 第三方漏洞与安全公告](di-24-zhang-an-quan/di-24.9-jie-di-san-fang-lou-dong-yu-an-quan-gong-gao.md)
+* [24.10 强制访问控制框架（MAC 框架）](di-24-zhang-an-quan/di-24.10-jie-qiang-zhi-fang-wen-kong-zhi-kuang-jia-mac-kuang-jia.md)
 
-## 第 25 章 Jail 容器管理
+## 第 25 章 防火墙
 
-* [25.1 Jail 基础](di-25-zhang-jail-rong-qi-guan-li/di-25.1-jie-jail-ji-chu.md)
-* [25.2 厚 Jail（Thick Jail）](di-25-zhang-jail-rong-qi-guan-li/di-25.2-jie-hou-jail-thick-jail.md)
-* [25.3 Qjail](di-25-zhang-jail-rong-qi-guan-li/di-25.3-jie-qjail.md)
+* [25.1 防火墙概论](di-25-zhang-fang-huo-qiang/di-25.1-jie-fang-huo-qiang-gai-lun.md)
+* [25.2 ipfirewall（IPFW）](di-25-zhang-fang-huo-qiang/di-25.2-jie-ipfirewall-ipfw.md)
+* [25.3 IPFilter（IPF）](di-25-zhang-fang-huo-qiang/di-25.3-jie-ipfilter-ipf.md)
+* [25.4 Packet Filter（PF）](di-25-zhang-fang-huo-qiang/di-25.4-jie-packet-filter-pf.md)
+* [25.5 Fail2Ban（基于 IPFW、PF 与 IPF）](di-25-zhang-fang-huo-qiang/di-25.5-jie-fail2ban-ji-yu-ipfw-pf-yu-ipf.md)
+* [25.6 blocklistd](di-25-zhang-fang-huo-qiang/di-25.6-jie-blocklistd.md)
 
-## 第 26 章 Linux Jail
+## 第 26 章 Jail 容器管理
 
-* [26.1 Linux Jail 基础](di-26-zhang-linux-jail/di-26.1-jie-linux-jail-ji-chu.md)
-* [26.2 Debian Jail](di-26-zhang-linux-jail/di-26.2-jie-debian-jail.md)
-* [26.3 Ubuntu Jail](di-26-zhang-linux-jail/di-26.3-jie-ubuntu-jail.md)
-* [26.4 antiX Linux Jail](di-26-zhang-linux-jail/di-26.4-jie-antix-linux-jail.md)
-* [26.5 Alpine Jail](di-26-zhang-linux-jail/di-26.5-jie-alpine-jail.md)
-* [26.6 Linux Jail 中的 GUI](di-26-zhang-linux-jail/di-26.6-jie-linux-jail-zhong-de-gui.md)
+* [26.1 Jail 基础](di-26-zhang-jail-rong-qi-guan-li/di-26.1-jie-jail-ji-chu.md)
+* [26.2 厚 Jail（Thick Jail）](di-26-zhang-jail-rong-qi-guan-li/di-26.2-jie-hou-jail-thick-jail.md)
+* [26.3 Qjail](di-26-zhang-jail-rong-qi-guan-li/di-26.3-jie-qjail.md)
 
-## 第 27 章 虚拟化与容器管理
+## 第 27 章 Linux Jail
 
-* [27.1 使用 bhyve 及 vm-bhyve 工具安装 Windows 11](di-27-zhang-xu-ni-hua-yu-rong-qi-guan-li/di-27.1-jie-shi-yong-bhyve-ji-vm-bhyve-gong-ju-an-zhuang-windows-11.md)
-* [27.2 使用 BVCP 通过 Web 界面管理 bhyve 虚拟机](di-27-zhang-xu-ni-hua-yu-rong-qi-guan-li/di-27.2-jie-shi-yong-bvcp-tong-guo-web-jie-mian-guan-li-bhyve-xu-ni-ji.md)
-* [27.3 Podman 容器管理](di-27-zhang-xu-ni-hua-yu-rong-qi-guan-li/di-27.3-jie-podman-rong-qi-guan-li.md)
-* [27.4 在 FreeBSD 上安装 VirtualBox](di-27-zhang-xu-ni-hua-yu-rong-qi-guan-li/di-27.4-jie-zai-freebsd-shang-an-zhuang-virtualbox.md)
+* [27.1 Linux Jail 基础](di-27-zhang-linux-jail/di-27.1-jie-linux-jail-ji-chu.md)
+* [27.2 Debian Jail](di-27-zhang-linux-jail/di-27.2-jie-debian-jail.md)
+* [27.3 Ubuntu Jail](di-27-zhang-linux-jail/di-27.3-jie-ubuntu-jail.md)
+* [27.4 antiX Linux Jail](di-27-zhang-linux-jail/di-27.4-jie-antix-linux-jail.md)
+* [27.5 Alpine Jail](di-27-zhang-linux-jail/di-27.5-jie-alpine-jail.md)
+* [27.6 Linux Jail 中的 GUI](di-27-zhang-linux-jail/di-27.6-jie-linux-jail-zhong-de-gui.md)
 
-## 第 28 章 数据库管理
+## 第 28 章 虚拟化与容器管理
 
-* [28.1 数据库概论](di-28-zhang-shu-ju-ku-guan-li/di-28.1-jie-shu-ju-ku-gai-lun.md)
-* [28.2 PostgreSQL](di-28-zhang-shu-ju-ku-guan-li/di-28.2-jie-postgresql.md)
-* [28.3 pgAdmin4](di-28-zhang-shu-ju-ku-guan-li/di-28.3-jie-pgadmin4.md)
-* [28.4 MySQL](di-28-zhang-shu-ju-ku-guan-li/di-28.4-jie-mysql.md)
-* [28.5 MongoDB](di-28-zhang-shu-ju-ku-guan-li/di-28.5-jie-mongodb.md)
+* [28.1 使用 bhyve 及 vm-bhyve 工具安装 Windows 11](di-28-zhang-xu-ni-hua-yu-rong-qi-guan-li/di-28.1-jie-shi-yong-bhyve-ji-vm-bhyve-gong-ju-an-zhuang-windows-11.md)
+* [28.2 使用 BVCP 通过 Web 界面管理 bhyve 虚拟机](di-28-zhang-xu-ni-hua-yu-rong-qi-guan-li/di-28.2-jie-shi-yong-bvcp-tong-guo-web-jie-mian-guan-li-bhyve-xu-ni-ji.md)
+* [28.3 Podman 容器管理](di-28-zhang-xu-ni-hua-yu-rong-qi-guan-li/di-28.3-jie-podman-rong-qi-guan-li.md)
+* [28.4 在 FreeBSD 上安装 VirtualBox](di-28-zhang-xu-ni-hua-yu-rong-qi-guan-li/di-28.4-jie-zai-freebsd-shang-an-zhuang-virtualbox.md)
 
-## 第 29 章 文件传输协议（FTP）
+## 第 29 章 数据库管理
 
-* [29.1 文件传输协议（FTP）概述](di-29-zhang-ftp-fu-wu-qi/di-29.1-jie-wen-jian-chuan-shu-xie-yi-ftp-gai-shu.md)
-* [29.2 Pure-FTPd（基于 MySQL）](di-29-zhang-ftp-fu-wu-qi/di-29.2-jie-pure-ftpd-ji-yu-mysql.md)
-* [29.3 ProFTPD（基于 MySQL）](di-29-zhang-ftp-fu-wu-qi/di-29.3-jie-proftpd-ji-yu-mysql.md)
-* [29.4 vsftpd](di-29-zhang-ftp-fu-wu-qi/di-29.4-jie-vsftpd.md)
+* [29.1 数据库概论](di-29-zhang-shu-ju-ku-guan-li/di-29.1-jie-shu-ju-ku-gai-lun.md)
+* [29.2 PostgreSQL](di-29-zhang-shu-ju-ku-guan-li/di-29.2-jie-postgresql.md)
+* [29.3 pgAdmin4](di-29-zhang-shu-ju-ku-guan-li/di-29.3-jie-pgadmin4.md)
+* [29.4 MySQL](di-29-zhang-shu-ju-ku-guan-li/di-29.4-jie-mysql.md)
+* [29.5 MongoDB](di-29-zhang-shu-ju-ku-guan-li/di-29.5-jie-mongodb.md)
 
-## 第 30 章 服务器
+## 第 30 章 文件传输协议（FTP）
 
-* [30.1 Rsync 数据同步](di-30-zhang-fu-wu-qi/di-30.1-jie-rsync-shu-ju-tong-bu.md)
-* [30.2 Samba 文件共享](di-30-zhang-fu-wu-qi/di-30.2-jie-samba-wen-jian-gong-xiang.md)
-* [30.3 网络文件系统（NFS）](di-30-zhang-fu-wu-qi/di-30.3-jie-wang-luo-wen-jian-xi-tong-nfs.md)
-* [30.4 零配置网络（mDNS/DNS-SD）](di-30-zhang-fu-wu-qi/di-30.4-jie-ling-pei-zhi-wang-luo-mdns-dns-sd.md)
-* [30.5 Webmin 管理平台](di-30-zhang-fu-wu-qi/di-30.5-jie-webmin-guan-li-ping-tai.md)
+* [30.1 文件传输协议（FTP）概述](di-30-zhang-ftp-fu-wu-qi/di-30.1-jie-wen-jian-chuan-shu-xie-yi-ftp-gai-shu.md)
+* [30.2 Pure-FTPd（基于 MySQL）](di-30-zhang-ftp-fu-wu-qi/di-30.2-jie-pure-ftpd-ji-yu-mysql.md)
+* [30.3 ProFTPD（基于 MySQL）](di-30-zhang-ftp-fu-wu-qi/di-30.3-jie-proftpd-ji-yu-mysql.md)
+* [30.4 vsftpd](di-30-zhang-ftp-fu-wu-qi/di-30.4-jie-vsftpd.md)
 
-## 第 31 章 Web 服务器
+## 第 31 章 服务器
 
-* [31.1 Apache Web 服务器](di-31-zhang-web-fu-wu-qi/di-31.1-jie-apache-web-fu-wu-qi.md)
-* [31.2 Nginx Web 服务器](di-31-zhang-web-fu-wu-qi/di-31.2-jie-nginx-web-fu-wu-qi.md)
-* [31.3 Caddy Web 服务器](di-31-zhang-web-fu-wu-qi/di-31.3-jie-caddy-web-fu-wu-qi.md)
-* [31.4 PHP](di-31-zhang-web-fu-wu-qi/di-31.4-jie-php.md)
-* [31.5 Tomcat 应用服务器](di-31-zhang-web-fu-wu-qi/di-31.5-jie-tomcat-ying-yong-fu-wu-qi.md)
-* [31.6 WildFly 应用服务器](di-31-zhang-web-fu-wu-qi/di-31.6-jie-wildfly-ying-yong-fu-wu-qi.md)
-* [31.7 Nextcloud 云服务（基于 PostgreSQL）](di-31-zhang-web-fu-wu-qi/di-31.7-jie-nextcloud-yun-fu-wu-ji-yu-postgresql.md)
-* [31.8 OnlyOffice 部署（基于 PostgreSQL）](di-31-zhang-web-fu-wu-qi/di-31.8-jie-onlyoffice-bu-shu-ji-yu-postgresql.md)
-* [31.9 GitLab Enterprise Edition 部署](di-31-zhang-web-fu-wu-qi/di-31.9-jie-gitlab-enterprise-edition-bu-shu.md)
-* [31.10 OpenList 部署](di-31-zhang-web-fu-wu-qi/di-31.10-jie-openlist-bu-shu.md)
+* [31.1 Rsync 数据同步](di-31-zhang-fu-wu-qi/di-31.1-jie-rsync-shu-ju-tong-bu.md)
+* [31.2 Samba 文件共享](di-31-zhang-fu-wu-qi/di-31.2-jie-samba-wen-jian-gong-xiang.md)
+* [31.3 网络文件系统（NFS）](di-31-zhang-fu-wu-qi/di-31.3-jie-wang-luo-wen-jian-xi-tong-nfs.md)
+* [31.4 零配置网络（mDNS/DNS-SD）](di-31-zhang-fu-wu-qi/di-31.4-jie-ling-pei-zhi-wang-luo-mdns-dns-sd.md)
+* [31.5 Webmin 管理平台](di-31-zhang-fu-wu-qi/di-31.5-jie-webmin-guan-li-ping-tai.md)
 
-## 第 32 章 监控系统
+## 第 32 章 Web 服务器
 
-* [32.1 Zabbix 监控系统（基于 PostgreSQL）](di-32-zhang-jian-kong-xi-tong/di-32.1-jie-zabbix-jian-kong-xi-tong-ji-yu-postgresql.md)
-* [32.2 Prometheus 监控部署](di-32-zhang-jian-kong-xi-tong/di-32.2-jie-prometheus-jian-kong-bu-shu.md)
-* [32.3 Telegraf、InfluxDB 与 Grafana 监控平台架构](di-32-zhang-jian-kong-xi-tong/di-32.3-jie-telegraf-influxdb-yu-grafana-jian-kong-ping-tai-jia-gou.md)
+* [32.1 Apache Web 服务器](di-32-zhang-web-fu-wu-qi/di-32.1-jie-apache-web-fu-wu-qi.md)
+* [32.2 Nginx Web 服务器](di-32-zhang-web-fu-wu-qi/di-32.2-jie-nginx-web-fu-wu-qi.md)
+* [32.3 Caddy Web 服务器](di-32-zhang-web-fu-wu-qi/di-32.3-jie-caddy-web-fu-wu-qi.md)
+* [32.4 PHP](di-32-zhang-web-fu-wu-qi/di-32.4-jie-php.md)
+* [32.5 Tomcat 应用服务器](di-32-zhang-web-fu-wu-qi/di-32.5-jie-tomcat-ying-yong-fu-wu-qi.md)
+* [32.6 WildFly 应用服务器](di-32-zhang-web-fu-wu-qi/di-32.6-jie-wildfly-ying-yong-fu-wu-qi.md)
+* [32.7 Nextcloud 云服务（基于 PostgreSQL）](di-32-zhang-web-fu-wu-qi/di-32.7-jie-nextcloud-yun-fu-wu-ji-yu-postgresql.md)
+* [32.8 OnlyOffice 部署（基于 PostgreSQL）](di-32-zhang-web-fu-wu-qi/di-32.8-jie-onlyoffice-bu-shu-ji-yu-postgresql.md)
+* [32.9 GitLab Enterprise Edition 部署](di-32-zhang-web-fu-wu-qi/di-32.9-jie-gitlab-enterprise-edition-bu-shu.md)
+* [32.10 OpenList 部署](di-32-zhang-web-fu-wu-qi/di-32.10-jie-openlist-bu-shu.md)
 
-## 第 33 章 嵌入式平台
+## 第 33 章 监控系统
 
-* [33.1 树莓派 FreeBSD 安装](di-33-zhang-qian-ru-shi-ping-tai/di-33.1-jie-shu-mei-pai-freebsd-an-zhuang.md)
-* [33.2 树莓派 FreeBSD 使用](di-33-zhang-qian-ru-shi-ping-tai/di-33.2-jie-shu-mei-pai-freebsd-shi-yong.md)
-* [33.3 树莓派 Linux 兼容层](di-33-zhang-qian-ru-shi-ping-tai/di-33.3-jie-shu-mei-pai-linux-jian-rong-ceng.md)
-* [33.4 Radxa X4 x86 开发板](di-33-zhang-qian-ru-shi-ping-tai/di-33.4-jie-radxa-x4-x86-kai-fa-ban.md)
-* [33.5 在 Linux 系统上交叉构建 FreeBSD](di-33-zhang-qian-ru-shi-ping-tai/di-33.5-jie-zai-linux-xi-tong-shang-jiao-cha-gou-jian-freebsd.md)
-* [33.6 STM32 开发环境](di-33-zhang-qian-ru-shi-ping-tai/di-33.6-jie-stm32-kai-fa-huan-jing.md)
-* [33.7 ESP-IDF 开发环境](di-33-zhang-qian-ru-shi-ping-tai/di-33.7-jie-esp-idf-kai-fa-huan-jing.md)
-* [33.8 Arduino 开发环境](di-33-zhang-qian-ru-shi-ping-tai/di-33.8-jie-arduino-kai-fa-huan-jing.md)
+* [33.1 Zabbix 监控系统（基于 PostgreSQL）](di-33-zhang-jian-kong-xi-tong/di-33.1-jie-zabbix-jian-kong-xi-tong-ji-yu-postgresql.md)
+* [33.2 Prometheus 监控部署](di-33-zhang-jian-kong-xi-tong/di-33.2-jie-prometheus-jian-kong-bu-shu.md)
+* [33.3 Telegraf、InfluxDB 与 Grafana 监控平台架构](di-33-zhang-jian-kong-xi-tong/di-33.3-jie-telegraf-influxdb-yu-grafana-jian-kong-ping-tai-jia-gou.md)
 
-## 第 34 章 开发环境
+## 第 34 章 嵌入式平台
 
-* [34.1 C/C++ 开发环境](di-34-zhang-kai-fa-huan-jing/di-34.1-jie-c-c-kai-fa-huan-jing.md)
-* [34.2 Java 开发环境](di-34-zhang-kai-fa-huan-jing/di-34.2-jie-java-kai-fa-huan-jing.md)
-* [34.3 Qt 开发环境](di-34-zhang-kai-fa-huan-jing/di-34.3-jie-qt-kai-fa-huan-jing.md)
-* [34.4 Python 开发环境](di-34-zhang-kai-fa-huan-jing/di-34.4-jie-python-kai-fa-huan-jing.md)
-* [34.5 Rust 开发环境](di-34-zhang-kai-fa-huan-jing/di-34.5-jie-rust-kai-fa-huan-jing.md)
-* [34.6 Go 开发环境](di-34-zhang-kai-fa-huan-jing/di-34.6-jie-go-kai-fa-huan-jing.md)
-* [34.7 Node.js 开发环境](di-34-zhang-kai-fa-huan-jing/di-34.7-jie-node-js-kai-fa-huan-jing.md)
-* [34.8 code-server 和 clangd 开发环境](di-34-zhang-kai-fa-huan-jing/di-34.8-jie-code-server-he-clangd-kai-fa-huan-jing.md)
-* [34.9 Vim 开发环境](di-34-zhang-kai-fa-huan-jing/di-34.9-jie-vim-kai-fa-huan-jing.md)
-* [34.10 使用 IDA Pro 调试 FreeBSD](di-34-zhang-kai-fa-huan-jing/di-34.10-jie-shi-yong-ida-pro-tiao-shi-freebsd.md)
-* [34.11 DTrace](di-34-zhang-kai-fa-huan-jing/di-34.11-jie-dtrace.md)
+* [34.1 树莓派 FreeBSD 安装](di-34-zhang-qian-ru-shi-ping-tai/di-34.1-jie-shu-mei-pai-freebsd-an-zhuang.md)
+* [34.2 树莓派 FreeBSD 使用](di-34-zhang-qian-ru-shi-ping-tai/di-34.2-jie-shu-mei-pai-freebsd-shi-yong.md)
+* [34.3 树莓派 Linux 兼容层](di-34-zhang-qian-ru-shi-ping-tai/di-34.3-jie-shu-mei-pai-linux-jian-rong-ceng.md)
+* [34.4 Radxa X4 x86 开发板](di-34-zhang-qian-ru-shi-ping-tai/di-34.4-jie-radxa-x4-x86-kai-fa-ban.md)
+* [34.5 在 Linux 系统上交叉构建 FreeBSD](di-34-zhang-qian-ru-shi-ping-tai/di-34.5-jie-zai-linux-xi-tong-shang-jiao-cha-gou-jian-freebsd.md)
+* [34.6 STM32 开发环境](di-34-zhang-qian-ru-shi-ping-tai/di-34.6-jie-stm32-kai-fa-huan-jing.md)
+* [34.7 ESP-IDF 开发环境](di-34-zhang-qian-ru-shi-ping-tai/di-34.7-jie-esp-idf-kai-fa-huan-jing.md)
+* [34.8 Arduino 开发环境](di-34-zhang-qian-ru-shi-ping-tai/di-34.8-jie-arduino-kai-fa-huan-jing.md)
 
-## 第 35 章 FreeBSD 内核架构
+## 第 35 章 开发环境
 
-* [35.1 FreeBSD 源代码目录结构](di-35-zhang-freebsd-nei-he-jia-gou/di-35.1-jie-freebsd-yuan-dai-ma-mu-lu-jie-gou.md)
-* [35.2 FreeBSD 内核文件结构](di-35-zhang-freebsd-nei-he-jia-gou/di-35.2-jie-freebsd-nei-he-wen-jian-jie-gou.md)
-* [35.3 机器相关的内核选项注解](di-35-zhang-freebsd-nei-he-jia-gou/di-35.3-jie-ji-qi-xiang-guan-de-nei-he-xuan-xiang-zhu-jie.md)
-* [35.4 机器无关的内核选项注解](di-35-zhang-freebsd-nei-he-jia-gou/di-35.4-jie-ji-qi-wu-guan-de-nei-he-xuan-xiang-zhu-jie.md)
-* [35.5 GENERIC 内核选项注解（AMD64）](di-35-zhang-freebsd-nei-he-jia-gou/di-35.5-jie-generic-nei-he-xuan-xiang-zhu-jie-amd64.md)
-* [35.6 构建定制内核](di-35-zhang-freebsd-nei-he-jia-gou/di-35.6-jie-gou-jian-ding-zhi-nei-he.md)
+* [35.1 C/C++ 开发环境](di-35-zhang-kai-fa-huan-jing/di-35.1-jie-c-c-kai-fa-huan-jing.md)
+* [35.2 Java 开发环境](di-35-zhang-kai-fa-huan-jing/di-35.2-jie-java-kai-fa-huan-jing.md)
+* [35.3 Qt 开发环境](di-35-zhang-kai-fa-huan-jing/di-35.3-jie-qt-kai-fa-huan-jing.md)
+* [35.4 Python 开发环境](di-35-zhang-kai-fa-huan-jing/di-35.4-jie-python-kai-fa-huan-jing.md)
+* [35.5 Rust 开发环境](di-35-zhang-kai-fa-huan-jing/di-35.5-jie-rust-kai-fa-huan-jing.md)
+* [35.6 Go 开发环境](di-35-zhang-kai-fa-huan-jing/di-35.6-jie-go-kai-fa-huan-jing.md)
+* [35.7 Node.js 开发环境](di-35-zhang-kai-fa-huan-jing/di-35.7-jie-node-js-kai-fa-huan-jing.md)
+* [35.8 code-server 和 clangd 开发环境](di-35-zhang-kai-fa-huan-jing/di-35.8-jie-code-server-he-clangd-kai-fa-huan-jing.md)
+* [35.9 Vim 开发环境](di-35-zhang-kai-fa-huan-jing/di-35.9-jie-vim-kai-fa-huan-jing.md)
+* [35.10 使用 IDA Pro 调试 FreeBSD](di-35-zhang-kai-fa-huan-jing/di-35.10-jie-shi-yong-ida-pro-tiao-shi-freebsd.md)
+* [35.11 DTrace](di-35-zhang-kai-fa-huan-jing/di-35.11-jie-dtrace.md)
+
+## 第 36 章 FreeBSD 内核架构
+
+* [36.1 FreeBSD 源代码目录结构](di-36-zhang-freebsd-nei-he-jia-gou/di-36.1-jie-freebsd-yuan-dai-ma-mu-lu-jie-gou.md)
+* [36.2 FreeBSD 内核文件结构](di-36-zhang-freebsd-nei-he-jia-gou/di-36.2-jie-freebsd-nei-he-wen-jian-jie-gou.md)
+* [36.3 机器相关的内核选项注解](di-36-zhang-freebsd-nei-he-jia-gou/di-36.3-jie-ji-qi-xiang-guan-de-nei-he-xuan-xiang-zhu-jie.md)
+* [36.4 机器无关的内核选项注解](di-36-zhang-freebsd-nei-he-jia-gou/di-36.4-jie-ji-qi-wu-guan-de-nei-he-xuan-xiang-zhu-jie.md)
+* [36.5 GENERIC 内核选项注解（AMD64）](di-36-zhang-freebsd-nei-he-jia-gou/di-36.5-jie-generic-nei-he-xuan-xiang-zhu-jie-amd64.md)
+* [36.6 构建定制内核](di-36-zhang-freebsd-nei-he-jia-gou/di-36.6-jie-gou-jian-ding-zhi-nei-he.md)
 
 ## 附录 I 工具与资源
 
