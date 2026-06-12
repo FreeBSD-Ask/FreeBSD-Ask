@@ -316,7 +316,7 @@ Bash（Bourne Again shell）是 GNU 项目开发的 shell 程序，作为 Bourne
 - 查看安装后配置
 
 ```sh
-# pkg info -D bash-completion # 作为依赖安装的
+# pkg info -D bash-completion # 查看作为依赖安装的 bash-completion 的配置说明
 ```
 
 #### 配置 Bash
