@@ -583,52 +583,10 @@ end
 >
 > 注重安全性的读者应保持默认设置。
 
-### 南京大学开源镜像站 NJU
-
-除了 USTC 镜像站外，南京大学也提供了 FreeBSD 的镜像源，其地址如下。
-
-> **注意**
->
-> 以下镜像站是否同步了 PkgBase 仓库（`base_release_*` 子目录）未经确认，使用前请自行验证。
-
-```ini
-https://mirrors.nju.edu.cn/freebsd-pkg/
-```
-
-### 网易开源镜像站 163
-
-网易开源镜像站同样提供了 FreeBSD 的镜像服务，地址如下。
-
-> **注意**
->
-> 以下镜像站是否同步了 PkgBase 仓库（`base_release_*` 子目录）未经确认，使用前请自行验证。
-
-```ini
-https://mirrors.163.com/freebsd-pkg/
-```
-
-## 附录：配置软件源
-
-为了帮助读者更好地配置 PkgBase 源，下面整理了 FreeBSD 官方源的 PkgBase 信息，包括各分支的更新频率和对应的 URL 地址。
-
-| 分支 | 更新频率 | URL 地址 |
-| ---- | -------- | -------- |
-| main（16.0-CURRENT） | 每天两次 | <https://pkg.freebsd.org/${ABI}/base_latest> |
-| stable/14 | 每天两次 | <https://pkg.freebsd.org/${ABI}/base_latest> |
-| stable/14 | 每周一次：星期日 | <https://pkg.freebsd.org/${ABI}/base_weekly> |
-| stable/15 | 每天两次 | <https://pkg.freebsd.org/${ABI}/base_latest> |
-| stable/15 | 每周一次：星期日 | <https://pkg.freebsd.org/${ABI}/base_weekly> |
-| releng/14.4（RELEASE） | 随勘误和安全更新发布 | <https://pkg.freebsd.org/${ABI}/base_release_4> |
-| releng/15.0（RELEASE） | 随勘误和安全更新发布 | <https://pkg.freebsd.org/${ABI}/base_release_0> |
-
-以上更新频率依据 freebsd-base(7) 手册页：开发分支（CURRENT 与 STABLE）每天构建两次，RELEASE 分支随勘误和安全更新发布。main 分支仅提供 base_latest，不提供 base_weekly（参见 Baptiste Daroussin 在 freebsd-pkgbase 邮件列表中的说明）。
-
-如果官方源下载速度慢，可以考虑改用国内镜像。只需要替换 `https://pkg.freebsd.org` 这部分。
+其他开源镜像站参见软件源章节。
 
 ## 参考文献
 
 - vermaden. ZFS Boot Environments Explained[EB/OL]. [2026-03-25]. <https://vermaden.wordpress.com/2025/11/25/zfs-boot-environments-explained/>. 详细阐释 ZFS 启动环境的原理与实践，包含跨版本 ZFS 池兼容方案。
 - FreeBSD Project. BootEnvironments[EB/OL]. [2026-03-25]. <https://wiki.freebsd.org/BootEnvironments>. FreeBSD 官方关于启动环境的 Wiki。
 - FreeBSD Project. bectl(8)[EB/OL]. [2026-03-25]. <https://man.freebsd.org/cgi/man.cgi?query=bectl&sektion=8>. ZFS 启动环境管理工具的官方技术规范。
-- FreeBSD Project. freebsd-version -- print the version and patch level of the installed FreeBSD[EB/OL]. [2026-04-17]. <https://man.freebsd.org/cgi/man.cgi?query=freebsd-version&sektion=1>. 系统版本查询命令手册页。
-- FreeBSD Project. uname -- print operating system name[EB/OL]. [2026-04-17]. <https://man.freebsd.org/cgi/man.cgi?query=uname&sektion=1>. 系统信息查询命令手册页。
