@@ -188,11 +188,9 @@ Rufus 下载地址为 <https://rufus.ie/zh>，该工具为 Windows 平台开源 
 
 ![Rufus](../.gitbook/assets/rufus-tool.png)
 
-尽管镜像文件校验和实际正确，但 win32diskimager 在处理某些镜像格式时存在缺陷，有时会错误地报告校验失败。Ventoy 的启动加载机制与 FreeBSD 镜像不完全兼容，可能导致启动失败。二者均 **不建议优先使用**。
+尽管镜像文件校验和实际正确，但 win32diskimager 在处理某些镜像格式时存在缺陷，有时会错误地报告校验失败。此外，win32diskimager 自 2017 年 3 月发布 1.0.0 版本后已停止更新超过 9 年，其可执行文件未经代码签名，不支持压缩镜像格式（如 `.img.xz`），在现代 UEFI 环境下的兼容性也不如 Rufus 和 balenaEtcher。Ventoy 的启动加载机制与 FreeBSD 镜像不完全兼容，可能导致启动失败。二者均 **不建议使用**。
 
-**读者应优先使用 Rufus；仅在 Rufus 无效的情况下，方可考虑使用 Ventoy 或 win32diskimager。**
-
-win32diskimager 的下载地址为 <https://sourceforge.net/projects/win32diskimager/files/Archive/>，选择 `win32diskimager-1.0.0-install.exe` 下载。
+**读者应优先使用 Rufus；若 Rufus 不可用，可使用 balenaEtcher 作为替代。** balenaEtcher 是一款跨平台（Windows/macOS/Linux）开源镜像刻录工具，支持直接刻录压缩镜像（如 `.img.xz`，无需解压），写入后自动校验数据完整性，且仍在积极维护中。balenaEtcher 下载地址为 <https://etcher.balena.io/>。
 
 > **思考题**
 >
