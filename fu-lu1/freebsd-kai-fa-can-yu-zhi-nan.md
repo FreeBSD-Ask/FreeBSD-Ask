@@ -17,7 +17,7 @@
 ```sh
 git pull   # 在当前分支上拉取远程更新
 git checkout B   # 切换到分支 B
-git diff -U999999 origin/main > 2023-1-24.diff   # 在分支 B 下生成与远程 main 分支的差异，并保存到 2023-1-24.diff 文件
+git diff -U999999 origin/main > 2023-1-24.diff   # 生成当前分支与远程 main 分支的差异，输出至 2023-1-24.diff
 ```
 
 ## 完整的 git 提交操作示例
@@ -39,10 +39,10 @@ root@generic:~/freebsd-ports # git branch -a # 查看分支
   remotes/origin/HEAD -> origin/main
   remotes/origin/main
   remotes/origin/rpi-firmware
-root@generic:~/freebsd-ports # git checkout rpi-firmware # 切换到 rpi-firmware 分支，这是通过 GitHub 网页创建的分支
+root@generic:~/freebsd-ports # git checkout rpi-firmware # 切换到 rpi-firmware 分支（通过 GitHub 网页创建）
 branch 'rpi-firmware' set up to track 'origin/rpi-firmware'.
 Switched to a new branch 'rpi-firmware'
-root@generic:~/freebsd-ports # git diff -U999999 origin/main > 2024.diff # 生成与远程 main 分支的差异，并保存到 2024.diff 文件中
+root@generic:~/freebsd-ports # git diff -U999999 origin/main > 2024.diff # 生成与远程 main 分支的差异，输出至 2024.diff
 root@generic:~/freebsd-ports # ls -l 2024.diff
 -rw-r--r--  1 root wheel 18021 Oct  6 03:59 2024.diff
 ```
