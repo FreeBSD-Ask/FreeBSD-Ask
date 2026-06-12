@@ -87,7 +87,7 @@ usr/include/c++/v1/unwind-itanium.h usr/include/c++/v1/unwind.h
 usr/include/crypto/cryptodev.h usr/include/crypto/cbcmac.h usr/include/crypto/deflate.h usr/include/crypto/gfmult.h usr/include/crypto/gmac.h
 usr/include/crypto/rijndael.h usr/include/crypto/rmd160.h usr/include/crypto/xform.h
 usr/lib/clang/19.1.7/include
-: q # 这里输入 q 再按回车键
+: q # 输入 q 并回车退出
 ```
 
 上述路径仅为示例输出，实际系统中的路径名称和数量可能会略有不同，请以实际输出为准。
@@ -187,7 +187,7 @@ kernel/generic kernel/generic-dbg world/base world/lib32
 The following components of FreeBSD do not seem to be installed:
 world/base-dbg world/lib32-dbg
 
-Does this look reasonable (y/n)? y # 在这里输入 y，随后回车即可，此处是在检查基本组件的安装情况。
+Does this look reasonable (y/n)? y # 输入 y 并回车，确认基本组件的安装情况
 
 Fetching metadata signature for 15.0-RELEASE from update1.freebsd.org... done.
 Fetching metadata index... done.
@@ -275,7 +275,7 @@ The following files are affected by updates. No changes have
 been downloaded, however, because the files have been modified
 locally:
 /etc/ssl/cert.pem
-(END) # 上述为发生变动的文件，确认后输入字母 q（quit，退出）并按回车键
+(END) # 上述为发生变动的文件，确认后输入 q 并回车退出
 
 # 上述路径仅为示例输出，实际系统中的路径名称和数量可能会略有不同，以本机实际显示为准。
 
@@ -290,7 +290,7 @@ The following files will be removed as part of updating to
 …………中间省略，这些是将删除的文件………………
 
 /usr/share/examples/sound/sndstat_nv.c
-: # 这里输入 q，确认变动，直至没有新内容出现
+: # 输入 q 确认变动，直至无新内容出现
 
 …………中间省略………………
 
@@ -306,7 +306,7 @@ The following files will be added as part of updating to
 /boot/kernel/nvmf_transport.ko
 /boot/kernel/nvmft.ko
 /boot/kernel/p9fs.ko
-: # 这里输入 q，确认变动，直至没有新内容出现
+: # 输入 q 确认变动，直至无新内容出现
 
 The following files will be updated as part of updating to
 15.0-RELEASE-p0:
@@ -407,11 +407,11 @@ New packages to be INSTALLED:
 The process will require 45 MiB more space.
 687 MiB to be downloaded.
 
-Proceed with this action? [y/N]:  # 此处输入 y 再回车即可
+Proceed with this action? [y/N]:  # 输入 y 并回车继续
 
-…………中间省略………………
+…………中间省略…………
 
-Proceed with this action? [y/N]:  # 此处输入 y 再回车即可，可能会出现多次，下同
+Proceed with this action? [y/N]:  # 输入 y 并回车继续，可能会出现多次，下同
 ```
 
 第三方程序的更新至此完成。
