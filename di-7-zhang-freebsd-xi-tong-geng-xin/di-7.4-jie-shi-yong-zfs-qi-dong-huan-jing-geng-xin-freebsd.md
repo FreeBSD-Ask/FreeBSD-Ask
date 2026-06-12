@@ -1,4 +1,4 @@
-# 7.4 使用 PkgBase 更新 FreeBSD
+# 7.4 使用 ZFS 启动环境更新 FreeBSD
 
 借助 ZFS 启动环境，可在同一台机器上保留多个独立的系统版本，升级失败时无需重新安装即可回滚到先前状态，从而实现原子更新、多系统并存与快速回滚。本节所述方法仅适用于使用 ZFS 文件系统的系统。
 
@@ -114,193 +114,7 @@ zroot/ROOT/15.0-RELEASE  99036272 11132688 87903584    11%    /mnt/upgrade
 
 升级之前，需将传统的 FreeBSD 系统转换为 PkgBase 格式。PkgBase 是 FreeBSD 官方提供的基本系统打包方式，使用 pkg 包管理器管理系统组件。
 
-PkgBase 的设计目标是使 stable、current 与 release（包括 BETA、RC 等）分支均能使用统一的二进制工具进行更新。此前，stable 与 current 分支仅能通过编译源代码进行更新。
-
-> **注意**
->
-> 仅 FreeBSD 14.0-RELEASE 及更高版本才能直接转换为 PkgBase。旧版仍需要通过 `freebsd-update` 更新（运行时 pkgbasify 会提示 `Unsupported FreeBSD version`，即 FreeBSD 版本不受支持）。
-
-> **警告**
->
-> **存在风险，可能会丢失所有数据！建议在操作前做好备份。**
-
-- 在 **/mnt/upgrade** 环境中锁定 pkg 软件包，防止升级或修改：
-
-```sh
-# pkg -c /mnt/upgrade lock pkg  # 在 /mnt/upgrade 环境中锁定 pkg 软件包
-pkg-2.4.2_1: lock this package? [y/N]: y # 输入 y 按回车键确认锁定 pkg
-Locking pkg-2.4.2_1
-```
-
-- 下载 PkgBase 转换脚本
-
-```sh
-# fetch -o /mnt/upgrade https://raw.githubusercontent.com/FreeBSDFoundation/pkgbasify/main/pkgbasify.lua  # 下载 PkgBase 转换脚本
-```
-
-- 使用 pkgbasify 转换
-
-> **警告**
->
-> 确认 `Do you accept this risk and wish to continue? (y/n)` 风险提示后便无二次确认步骤！
-
-```sh
-# chroot /mnt/upgrade /usr/libexec/flua pkgbasify.lua  # 使用 pkgbasify 转换
-Running this tool will irreversibly modify your system to use pkgbase.
-This tool and pkgbase are experimental and may result in a broken system.
-It is highly recommended to backup your system before proceeding.
-Do you accept this risk and wish to continue? (y/n) y # 这里是风险提示，确认
-Updating FreeBSD repository catalogue...
-
-……此处省略……
-
-The following 370 package(s) will be affected (of 0 checked):
-
-New packages to be INSTALLED:
-        FreeBSD-acct: 14.3p6 [FreeBSD-base]
-        FreeBSD-acct-man: 14.3p6 [FreeBSD-base]
-        FreeBSD-acpi: 14.3p6 [FreeBSD-base]
-        FreeBSD-acpi-man: 14.3p6 [FreeBSD-base]
-
-……此处省略……
-
-Conversion finished.
-
-Please verify that the contents of the following critical files are as expected:
-/etc/master.passwd
-/etc/group
-/etc/ssh/sshd_config
-
-After verifying those files, restart the system.
-```
-
-- 检查启动环境 15.0-RELEASE 中的系统版本
-
-```sh
-# chroot /mnt/upgrade freebsd-version -kru
-14.3-RELEASE-p6
-14.3-RELEASE
-14.3-RELEASE-p6
-```
-
-### 使用 PkgBase 将启动环境中的系统版本更新到 15.0-RELEASE
-
-转换为 PkgBase 后，即可使用 pkg 包管理器升级系统。下面配置 PkgBase 源并执行升级。
-
-软件源结构：
-
-```sh
-/usr/local/etc/pkg/
-└── repos/ # pkg 仓库配置目录
-    └── FreeBSD-base.conf # PkgBase 源配置文件
-```
-
-- 创建 PkgBase 软件源目录
-
-```sh
-# mkdir -p /mnt/upgrade/usr/local/etc/pkg/repos/  # 创建 PkgBase 软件源目录
-```
-
-- 编辑 **/mnt/upgrade/usr/local/etc/pkg/repos/FreeBSD-base.conf** 文件，添加 PkgBase 源
-
-```ini
-FreeBSD-base {
-    url: "pkg+https://pkg.FreeBSD.org/${ABI}/base_release_${VERSION_MINOR}",
-    mirror_type: "srv",
-    signature_type: "fingerprints",
-    fingerprints: "/usr/share/keys/pkgbase-${VERSION_MAJOR}",
-    enabled: yes
-}
-```
-
-> **警告**
->
-> 请检查 `FreeBSD-base.conf` 的内容，尤其是 **不应该** 在其中手动硬编码任何具体的版本（如 `base_release_3`）。
->
-> 由于 FreeBSD 15.0 使用了新的签名密钥，从 14.x 升级到 15.0 时必须将 `fingerprints` 路径从 pkgbasify 默认生成的 `/usr/share/keys/pkg` 改为 `/usr/share/keys/pkgbase-${VERSION_MAJOR}`，并确保已安装 pkgbase-15 密钥（可通过 `pkg add -f https://pkg.freebsd.org/FreeBSD:15:$(uname -p)/base_release_0/FreeBSD-pkg-bootstrap-15.0.pkg` 安装）。
-
-> **技巧**
->
-> 需要切换软件源的用户可将 `url` 这行改为 `url: "https://mirrors.ustc.edu.cn/freebsd-pkg/${ABI}/base_release_${VERSION_MINOR}",`。注重安全性的读者应维持默认设置。
-
-- 刷新软件源
-
-```sh
-# pkg -c /mnt/upgrade update -r FreeBSD-base  # 刷新软件源
-```
-
-- 使用 PkgBase 将 14.3-RELEASE 更新到 15.0-RELEASE（即将 ABI 指定为 15）
-
-```sh
-# env ABI=FreeBSD:15:amd64 pkg-static -c /mnt/upgrade upgrade -r FreeBSD-base  # 在 /mnt/upgrade 环境中使用指定 ABI 升级 FreeBSD 基本系统包
-pkg-static: Setting ABI requires setting OSVERSION, guessing the OSVERSION as: 1500000
-pkg-static: Warning: Major OS version upgrade detected.  Running "pkg bootstrap -f" recommended
-Updating FreeBSD-base repository catalogue...
-pkg-static: Repository FreeBSD-base has a wrong packagesite, need to re-create database
-Fetching meta.conf: 100%    179 B   0.2kB/s    00:01
-Fetching data.pkg: 100%   80 KiB  81.6kB/s    00:01
-Processing entries:   0%
-Newer FreeBSD version for package FreeBSD-zlib-dbg:
-To ignore this error set IGNORE_OSVERSION=yes
-- package: 1500068
-- running userland: 1500000
-Ignore the mismatch and continue? [y/N]: y # 此处输入 y 后继续
-Processing entries: 100%
-FreeBSD-base repository update completed. 496 packages processed.
-FreeBSD-base is up to date.
-Checking for upgrades (230 candidates): 100%
-Processing candidates (230 candidates): 100%
-The following 290 package(s) will be affected (of 0 checked):
-
-New packages to be INSTALLED:
-        FreeBSD-atf: 15.0 [FreeBSD-base]
-        FreeBSD-atf-dev: 15.0 [FreeBSD-base]
-        FreeBSD-atf-lib: 15.0 [FreeBSD-base]
-
-        ……此处省略一部分…
-
-        FreeBSD-zoneinfo: 14.3p6 -> 15.0 [FreeBSD-base]
-
-Number of packages to be installed: 61
-Number of packages to be upgraded: 229
-
-The operation will free 100 MiB.
-473 MiB to be downloaded.
-
-Proceed with this action? [y/N]: y # 此处输入 y 后继续
-```
-
-> **技巧**
->
-> 如果检查不到任何更新，请确认当前是否已成功转换为 PkgBase，并检查软件源配置是否正确。
-
-- 检查启动环境 15.0-RELEASE 中的系统版本
-
-```sh
-# chroot /mnt/upgrade freebsd-version -kru
-15.0-RELEASE
-14.3-RELEASE
-15.0-RELEASE
-```
-
-其中 `r` 显示为 14.3-RELEASE 并无异常，表明当前运行的仍是 14.3-RELEASE。结合其他参数，可知重启后才会切换至 15.0-RELEASE。
-
-- 解锁 pkg
-
-```sh
-# chroot /mnt/upgrade pkg unlock pkg  # 解锁 pkg
-pkg: Warning: Major OS version upgrade detected.  Running "pkg bootstrap -f" recommended
-pkg-2.4.2_1: unlock this package? [y/N]: y
-Unlocking pkg-2.4.2_1
-```
-
-- 将所有第三方软件包的 ABI 更新至 FreeBSD 15.0
-
-```sh
-# chroot /mnt/upgrade pkg upgrade  # 将所有第三方软件包的 ABI 更新到 FreeBSD 15.0
-```
-
-更新过程中需要多次确认才能完成。
+升级方法参见 PkgBase 转换基本系统相关章节。
 
 ### 启动到启动环境 15.0-RELEASE
 
@@ -366,7 +180,7 @@ default                        R      -          10.9G 2025-01-14 20:36
 
 将参数 `要销毁的启动环境名称` 替换为命令 `bectl list` 输出中 `BE` 列对应的启动环境名称即可销毁。
 
-## 将基本系统中的 ZFS 替换为 Ports 版本
+### 将基本系统中的 ZFS 替换为 Ports 版本
 
 需实现多版本共存的读者可直接重启，进入启动环境 `default`（14.3-RELEASE），升级 14.3-RELEASE 中的 OpenZFS 版本。升级细节参照其他相关章节。
 

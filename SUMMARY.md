@@ -77,7 +77,7 @@
 * [7.1 使用 freebsd-update 更新 FreeBSD](di-7-zhang-freebsd-xi-tong-geng-xin/di-7.1-jie-shi-yong-freebsd-update-geng-xin-freebsd.md)
 * [7.2 使用源代码更新 FreeBSD](di-7-zhang-freebsd-xi-tong-geng-xin/di-7.2-jie-shi-yong-yuan-dai-ma-geng-xin-freebsd.md)
 * [7.3 使用 PkgBase 转换基本系统](di-7-zhang-freebsd-xi-tong-geng-xin/di-7.3-jie-shi-yong-pkgbase-zhuan-huan-ji-ben-xi-tong.md)
-* [7.4 使用 PkgBase 更新 FreeBSD](di-7-zhang-freebsd-xi-tong-geng-xin/di-7.4-jie-shi-yong-pkgbase-geng-xin-freebsd.md)
+* [7.4 使用 ZFS 启动环境更新 FreeBSD](di-7-zhang-freebsd-xi-tong-geng-xin/di-7.4-jie-shi-yong-zfs-qi-dong-huan-jing-geng-xin-freebsd.md)
 
 ## 第 8 章 网络管理
 

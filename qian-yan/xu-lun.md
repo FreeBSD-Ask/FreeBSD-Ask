@@ -37,7 +37,7 @@
 
 **第 6 章 软件管理**：介绍 FreeBSD 包管理器概述、软件源的更换方法，使用 pkg 管理二进制包、使用 Ports 以源代码方式安装软件、Ports 构建调优，以及使用 DVD 安装软件和 FreeBSD 镜像站现状。
 
-**第 7 章 FreeBSD 系统更新**：介绍使用 freebsd-update、源代码方式或 PkgBase 更新 FreeBSD 的方法，以及使用 PkgBase 转换基本系统。
+**第 7 章 FreeBSD 系统更新**：介绍使用 freebsd-update、源代码方式或 PkgBase 更新 FreeBSD 的方法，以及使用 PkgBase 转换基本系统和使用 ZFS 启动环境更新 FreeBSD。
 
 **第 8 章 网络管理**：介绍计算机网络基础、基础网络管理、无线网络管理、TCP/IP 协议栈、蓝牙、USB 网络共享、系统代理、网桥、链路聚合与故障转移及 VLAN 的配置方法。
 
