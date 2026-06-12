@@ -299,6 +299,54 @@ Windows 直接读取 RTC 的值，并视为本地时间（Local Time，地方时
 >
 > 外太空（飞船，星球等）用什么时区？为什么？
 
+## SSH 和 SCP 客户端
+
+### WinSCP
+
+SCP 即 Secure Copy（安全复制），是一款用于在不同设备间安全传输文件的工具，其功能类似于安全版的 `cp` 命令。
+
+WinSCP 是 `scp` 命令的图形化封装软件，同时支持 FTP 等多种协议，可在 Windows 系统与 Linux 或 BSD 系统之间传输文件。
+
+WinSCP 官方下载地址：[https://winscp.net/eng/download.php](https://winscp.net/eng/download.php)
+
+自 OpenSSH 9.0 起，`scp` 命令默认使用 `SFTP` 协议进行文件传输。WinSCP 默认使用 `SFTP`。FreeBSD 用户无需任何修改即可使用 WinSCP。
+
+### Xshell
+
+Xshell 是 Windows 平台上的终端工具，支持串口、SSH 和 Telnet 协议。
+
+Xshell 下载地址（输入用户名和邮件即可）：
+
+[https://www.netsarang.com/zh/free-for-home-school](https://www.netsarang.com/zh/free-for-home-school)
+
+如提示需要重新验证，可访问上述网站重新获取安装程序。
+
+### MobaXterm
+
+MobaXterm 是集成了 `scp` 功能和多种网络工具的终端软件。
+
+MobaXterm 目前不支持中文，下载地址 <https://mobaxterm.mobatek.net/download-home-edition.html>，任选其一。
+
+![MobaXterm](../.gitbook/assets/mobaxterm-1.jpg)
+
+![MobaXterm](../.gitbook/assets/mobaxterm-2.jpg)
+
+鼠标操作方式与 Xshell 类似。
+
+### PuTTY
+
+下载地址：<https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html>
+
+PuTTY 界面操作相对不便，不支持国际化（i18n），存在已知安全漏洞（[CVE-2024-31497](https://nvd.nist.gov/vuln/detail/CVE-2024-31497)，已在 PuTTY 0.81 中修复），通常作为其他软件的组件间接使用。历史上有中文修改版被发现注入恶意代码（[参考](https://safe.it168.com/a2012/0201/1305/000001305829.shtml)），建议用户仅从官方渠道获取。
+
+### Termius
+
+![Termius](../.gitbook/assets/termius.jpg)
+
+Termius 下载地址：<https://termius.com/download/>
+
+目前不支持中文，使用前需登录和注册。Termius 的鼠标操作方式与 PuTTY 类似，但右键操作与 Xshell 不同。
+
 ### 参考文献
 
 - 中国计量科学研究院. 秒的定义[EB/OL]. [2026-03-26]. <https://www.nim.ac.cn/520/node/4.html>. 秒的定义，基于铯原子超精细跃迁频率。
