@@ -349,7 +349,7 @@ FULLER L. FreeBSD Broadcom Wi-Fi Improvements[EB/OL]. [2026-03-26]. <https://web
 
 ```sh
 # cd /usr/src/  # 此处是 FreeBSD 内核源代码安装目录
-# cd sys/amd64/conf/  # 切换到 FreeBSD 内核配置文件目录。注意架构！
+# cd sys/amd64/conf/  # 切换到 FreeBSD 内核配置文件目录，注意选择对应架构
 # cp GENERIC MYKERNEL  # 复制默认内核配置文件 GENERIC 为自定义内核 MYKERNEL
 # echo "options BWN_GPL_PHY" >> MYKERNEL  # 向 MYKERNEL 内核配置文件添加 BWN_GPL_PHY 选项
 # cd /usr/src  # 此处是 FreeBSD 内核源代码安装目录

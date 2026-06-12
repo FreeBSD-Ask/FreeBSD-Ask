@@ -85,7 +85,7 @@ dash 是 NetBSD 版本 ash（Almquist SHell）的直接后裔。
 - 补全命令
 
 ```sh
-# lo # 如果此时按 Tab 键，输出如下。可继续输入一个字母后再次按 Tab 键以查看更多匹配项
+# lo # 此时按 Tab 键可查看以 lo 开头的命令列表；继续输入更多字母后再次按 Tab 可进一步筛选
 local                    localedef                login
 local-unbound            locate                   logins
 local-unbound-anchor     lock                     logname
@@ -316,7 +316,7 @@ Bash（Bourne Again shell）是 GNU 项目开发的 shell 程序，作为 Bourne
 - 查看安装后配置
 
 ```sh
-# pkg info -D bash-completion # 作为依赖安装的
+# pkg info -D bash-completion # 查看作为依赖安装的 bash-completion 的配置说明
 ```
 
 #### 配置 Bash

@@ -180,11 +180,11 @@ drwxrwxrwt  2 root    wheel  3 Mar 18 17:23 .ICE-unix
 还需要注意，命令行本身不具备自动纠错功能，即使仅拼错一个字母或少输入一个字符，命令也无法正确执行。
 
 ```sh
-# LS # 试试全大写
+# LS # 测试全大写命令名
 -sh: LS: not found
-# Ls # 一大一小呢
+# Ls # 测试混合大小写
 -sh: Ls: not found
-# ls /hom1 # 实为 /home
+# ls /hom1 # 实际路径应为 /home
 ls: /hom1: No such file or directory
 # ls -z /home # 不存在选项 -z
 ls: invalid option -- z

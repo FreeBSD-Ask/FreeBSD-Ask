@@ -63,7 +63,7 @@ tmpfs          tmpfs     447M     0  447M   0% /dev/shm
 tmpfs          tmpfs     179M  2.8M  176M   2% /run
 efivarfs       efivarfs  256K  7.4K  244K   3% /sys/firmware/efi/efivars
 /dev/vda3      xfs        30G  3.4G   27G  12% /
-/dev/vda2      vfat      100M  7.1M   93M   8% /boot/efi	# 标志着系统可能正在使用 UEFI 模式
+/dev/vda2      vfat      100M  7.1M   93M   8% /boot/efi	# 表明系统正在使用 UEFI 模式
 tmpfs          tmpfs      90M     0   90M   0% /run/user/0
 ```
 

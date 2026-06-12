@@ -240,14 +240,14 @@ Microsoft DiskPart 版本 10.0.26100.1150
 Copyright (C) Microsoft Corporation.
 在计算机上: DESKTOP-M5P610N
 
-DISKPART> list disk # 列出所有磁盘，下图磁盘 1 没有 GPT 标识，代表这可能是 MBR 分区表的磁盘
+DISKPART> list disk # 列出所有磁盘。磁盘 1 无 GPT 标识，表明其采用 MBR 分区表
 
   磁盘 ###  状态           大小     可用     Dyn  GPT
   --------  -------------  -------  -------  ---  ---
   磁盘 0    联机              931 GB    41 MB        *
   磁盘 1    联机               57 GB  5120 KB
 
-DISKPART> sel disk 1 # 选中磁盘 1。在上述 list disk 命令输出中，磁盘 1 没有 GPT 标记，表明其可能采用 MBR 分区表。
+DISKPART> sel disk 1 # 选中磁盘 1
 
 磁盘 1 现在是所选磁盘。
 

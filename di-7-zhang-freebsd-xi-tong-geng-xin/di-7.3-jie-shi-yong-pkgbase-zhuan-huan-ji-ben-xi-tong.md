@@ -35,7 +35,7 @@ Locking pkg-2.4.2_1
 Running this tool will irreversibly modify your system to use pkgbase.
 This tool and pkgbase are experimental and may result in a broken system.
 It is highly recommended to backup your system before proceeding.
-Do you accept this risk and wish to continue? (y/n) y # 这里是风险提示，确认
+Do you accept this risk and wish to continue? (y/n) y # 风险提示，确认后继续
 Updating FreeBSD repository catalogue...
 
 ……此处省略……
@@ -130,7 +130,7 @@ Newer FreeBSD version for package FreeBSD-zlib-dbg:
 To ignore this error set IGNORE_OSVERSION=yes
 - package: 1500068
 - running userland: 1500000
-Ignore the mismatch and continue? [y/N]: y # 此处输入 y 后继续
+Ignore the mismatch and continue? [y/N]: y # 输入 y 并回车继续
 Processing entries: 100%
 FreeBSD-base repository update completed. 496 packages processed.
 FreeBSD-base is up to date.
@@ -153,7 +153,7 @@ Number of packages to be upgraded: 229
 The operation will free 100 MiB.
 473 MiB to be downloaded.
 
-Proceed with this action? [y/N]: y # 此处输入 y 后继续
+Proceed with this action? [y/N]: y # 输入 y 并回车继续
 ```
 
 > **技巧**

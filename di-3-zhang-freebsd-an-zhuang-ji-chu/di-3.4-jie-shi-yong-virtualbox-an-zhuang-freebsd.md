@@ -127,7 +127,7 @@ hw.efi.poweroff=0
 
 ```sh
 # netstat -rn -f inet | egrep 'default|10\.0\.2\.0/24|192\.168\.56\.0/24'
-default            10.0.2.2           UGS             em0 # 网络地址转换(NAT)网卡，默认网关，
+default            10.0.2.2           UGS             em0 # 网络地址转换（NAT）网卡，默认网关
 10.0.2.0/24        link#1             U               em0
 192.168.56.0/24    link#2             U               em1 # 仅主机(Host-only)网络网卡，用于与宿主机互通
 ```
@@ -232,8 +232,8 @@ VBOXVFS[1]: sfprov_mount: path: [ykla]
 在 FreeBSD 虚拟机中挂载共享文件夹的命令如下：
 
 ```sh
-# mkdir -p /mnt/bsdboxshare # 创建上面指定的挂载点
-# mount_vboxvfs -w ykla /mnt/bsdboxshare # 挂载共享文件夹 ykla，-w 为可写挂载
+# mkdir -p /mnt/bsdboxshare # 创建共享文件夹挂载点
+# mount_vboxvfs -w ykla /mnt/bsdboxshare # 以可写方式挂载共享文件夹 ykla
 ```
 
 列出共享文件夹内容：
