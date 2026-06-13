@@ -84,8 +84,8 @@
 
 * [9.1 使用 freebsd-update 更新 FreeBSD](di-9-zhang-freebsd-xi-tong-geng-xin/di-9.1-jie-shi-yong-freebsd-update-geng-xin-freebsd.md)
 * [9.2 使用源代码更新 FreeBSD](di-9-zhang-freebsd-xi-tong-geng-xin/di-9.2-jie-shi-yong-yuan-dai-ma-geng-xin-freebsd.md)
-* [9.3 使用 PkgBase 转换基本系统](di-9-zhang-freebsd-xi-tong-geng-xin/di-9.3-jie-shi-yong-pkgbase-zhuan-huan-ji-ben-xi-tong.md)
-* [9.4 使用 ZFS 启动环境更新 FreeBSD](di-9-zhang-freebsd-xi-tong-geng-xin/di-9.4-jie-shi-yong-zfs-qi-dong-huan-jing-geng-xin-freebsd.md)
+* [9.3 使用 PkgBase 更新基本系统](di-9-zhang-freebsd-xi-tong-geng-xin/di-9.3-jie-shi-yong-pkgbase-geng-xin-ji-ben-xi-tong.md)
+* [9.4 通过 ZFS 启动环境实现多版本共存](di-9-zhang-freebsd-xi-tong-geng-xin/di-9.4-jie-tong-guo-zfs-qi-dong-huan-jing-shi-xian-duo-ban-ben-gong-cun.md)
 
 ## 第 10 章 网络管理
 
