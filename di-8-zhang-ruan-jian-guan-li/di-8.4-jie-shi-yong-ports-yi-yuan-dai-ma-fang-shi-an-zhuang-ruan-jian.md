@@ -83,7 +83,7 @@ Git 是获取 Ports 源代码的推荐方式，可以方便地管理版本和更
 # git clone https://git.FreeBSD.org/ports.git /usr/ports
 ```
 
-关于 quarterly 分支与 latest（main）分支的详细说明，参见第 7.1 节。根据需要，可以切换到特定的分支，例如季度分支。
+关于 quarterly 分支与 latest（main）分支的详细说明，参见其他相关章节。根据需要，可以切换到特定的分支，例如季度分支。
 
 切换到 `2025Q1` 分支：
 
@@ -196,8 +196,8 @@ root@ykla:/usr/ports/sysutils/htop # make all-depends-list
 ```sh
 # pkg version -l '<'
 chromium-127.0.6533.99             <
-curl-7.9.1_1                       <
-ffmpeg-7.1.2,1                     <
+curl-8.9.1_1                       <
+ffmpeg-6.1.2,1                     <
 vlc-3.0.21_4,4                     <
 w3m-0.5.3.20230718_1               <
 ```

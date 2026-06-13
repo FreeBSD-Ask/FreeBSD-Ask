@@ -114,7 +114,7 @@ WITH_CCACHE_BUILD=yes
 
 ```sh
 # ccache -M 10G
-Set cache size limit to 7.0 GB
+Set cache size limit to 10.0 GB
 root@ykla:/usr/ports/www/chromium # ccache -s
 cache directory                     /root/.ccache
 primary config                      /root/.ccache/ccache.conf
@@ -126,7 +126,7 @@ cache hit rate                      0.00 %
 cleanups performed                     0
 files in cache                         0
 cache size                           0.0 kB
-max cache size                      7.0 GB
+max cache size                      10.0 GB
 ```
 
 在使用一段时间后，可以查看 ccache 的统计信息，了解缓存的命中情况。
@@ -153,7 +153,7 @@ no input file                         71
 cleanups performed                     0
 files in cache                      2305
 cache size                           0.0 kB
-max cache size                      7.0 GB
+max cache size                      10.0 GB
 ```
 
 ### 安装 ccache4
