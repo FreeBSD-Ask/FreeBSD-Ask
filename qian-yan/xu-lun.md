@@ -63,7 +63,7 @@
 
 **第 19 章 游戏、科学计算和专业工具**：介绍 Godot 开源游戏引擎、我的世界（Minecraft）服务器与客户端、Steam 客户端、R 语言、Wine 配置，以及科研和专业计算工具的使用。
 
-**第 20 章 人工智能**：介绍人工智能术语与概念、Transformer 数学基础与程序演示、人工智能哲学原著选读，以及大模型本地部署方法。
+**第 20 章 人工智能**：介绍人工智能术语与概念、Transformer 数学基础与程序演示、人工智能哲学原著选读，以及大模型本地部署与 AI 编程工具（llama.cpp、Ollama、Claude Code、GitHub Copilot CLI）。
 
 **第 21 章 开发环境**：介绍 C/C++、Java、Qt、Python、Rust、Go、Node.js 等语言开发环境的搭建。
 
