@@ -90,43 +90,43 @@
 * [9.8 IceWM](di-9-zhang-zhuo-mian-huan-jing/di-9.8-jie-icewm.md)
 * [9.9 CDE（拟删除）](di-9-zhang-zhuo-mian-huan-jing/di-9.9-jie-cde-ni-shan-chu.md)
 
-## 第 10 章 FreeBSD 系统更新
+## 第 10 章 FreeBSD 基础
 
-* [10.1 使用 freebsd-update 更新 FreeBSD](di-10-zhang-freebsd-xi-tong-geng-xin/di-10.1-jie-shi-yong-freebsd-update-geng-xin-freebsd.md)
-* [10.2 使用源代码更新 FreeBSD](di-10-zhang-freebsd-xi-tong-geng-xin/di-10.2-jie-shi-yong-yuan-dai-ma-geng-xin-freebsd.md)
-* [10.3 使用 PkgBase 更新基本系统](di-10-zhang-freebsd-xi-tong-geng-xin/di-10.3-jie-shi-yong-pkgbase-geng-xin-ji-ben-xi-tong.md)
-* [10.4 通过 ZFS 启动环境实现多版本共存](di-10-zhang-freebsd-xi-tong-geng-xin/di-10.4-jie-tong-guo-zfs-qi-dong-huan-jing-shi-xian-duo-ban-ben-gong-cun.md)
+* [10.1 系统目录结构](di-10-zhang-freebsd-ji-chu/di-10.1-jie-xi-tong-mu-lu-jie-gou.md)
+* [10.2 虚拟控制台和终端](di-10-zhang-freebsd-ji-chu/di-10.2-jie-xu-ni-kong-zhi-tai-he-zhong-duan.md)
+* [10.3 shell](di-10-zhang-freebsd-ji-chu/di-10.3-jie-shell.md)
+* [10.4 命令行基础](di-10-zhang-freebsd-ji-chu/di-10.4-jie-ming-ling-xing-ji-chu.md)
+* [10.5 文本编辑器](di-10-zhang-freebsd-ji-chu/di-10.5-jie-wen-ben-bian-ji-qi.md)
+* [10.6 用户和基本账户管理](di-10-zhang-freebsd-ji-chu/di-10.6-jie-yong-hu-he-ji-ben-zhang-hu-guan-li.md)
+* [10.7 权限](di-10-zhang-freebsd-ji-chu/di-10.7-jie-quan-xian.md)
+* [10.8 压缩和解压缩](di-10-zhang-freebsd-ji-chu/di-10.8-jie-ya-suo-he-jie-ya-suo.md)
 
-## 第 11 章 FreeBSD 基础
+## 第 11 章 多媒体和外部设备
 
-* [11.1 系统目录结构](di-11-zhang-freebsd-ji-chu/di-11.1-jie-xi-tong-mu-lu-jie-gou.md)
-* [11.2 虚拟控制台和终端](di-11-zhang-freebsd-ji-chu/di-11.2-jie-xu-ni-kong-zhi-tai-he-zhong-duan.md)
-* [11.3 shell](di-11-zhang-freebsd-ji-chu/di-11.3-jie-shell.md)
-* [11.4 命令行基础](di-11-zhang-freebsd-ji-chu/di-11.4-jie-ming-ling-xing-ji-chu.md)
-* [11.5 文本编辑器](di-11-zhang-freebsd-ji-chu/di-11.5-jie-wen-ben-bian-ji-qi.md)
-* [11.6 用户和基本账户管理](di-11-zhang-freebsd-ji-chu/di-11.6-jie-yong-hu-he-ji-ben-zhang-hu-guan-li.md)
-* [11.7 权限](di-11-zhang-freebsd-ji-chu/di-11.7-jie-quan-xian.md)
-* [11.8 压缩和解压缩](di-11-zhang-freebsd-ji-chu/di-11.8-jie-ya-suo-he-jie-ya-suo.md)
+* [11.1 声卡](di-11-zhang-duo-mei-ti-he-wai-bu-she-bei/di-11.1-jie-sheng-ka.md)
+* [11.2 打印机](di-11-zhang-duo-mei-ti-he-wai-bu-she-bei/di-11.2-jie-da-yin-ji.md)
+* [11.3 人机输入设备](di-11-zhang-duo-mei-ti-he-wai-bu-she-bei/di-11.3-jie-ren-ji-shu-ru-she-bei.md)
+* [11.4 音频播放器](di-11-zhang-duo-mei-ti-he-wai-bu-she-bei/di-11.4-jie-yin-pin-bo-fang-qi.md)
+* [11.5 视频播放器](di-11-zhang-duo-mei-ti-he-wai-bu-she-bei/di-11.5-jie-shi-pin-bo-fang-qi.md)
+* [11.6 多媒体处理](di-11-zhang-duo-mei-ti-he-wai-bu-she-bei/di-11.6-jie-duo-mei-ti-chu-li.md)
+* [11.7 文档查看器](di-11-zhang-duo-mei-ti-he-wai-bu-she-bei/di-11.7-jie-wen-dang-cha-kan-qi.md)
+* [11.8 Web 浏览器](di-11-zhang-duo-mei-ti-he-wai-bu-she-bei/di-11.8-jie-web-liu-lan-qi.md)
+* [11.9 摄像头](di-11-zhang-duo-mei-ti-he-wai-bu-she-bei/di-11.9-jie-she-xiang-tou.md)
 
-## 第 12 章 多媒体和外部设备
+## 第 12 章 本地化与输入法
 
-* [12.1 声卡](di-12-zhang-duo-mei-ti-he-wai-bu-she-bei/di-12.1-jie-sheng-ka.md)
-* [12.2 打印机](di-12-zhang-duo-mei-ti-he-wai-bu-she-bei/di-12.2-jie-da-yin-ji.md)
-* [12.3 人机输入设备](di-12-zhang-duo-mei-ti-he-wai-bu-she-bei/di-12.3-jie-ren-ji-shu-ru-she-bei.md)
-* [12.4 音频播放器](di-12-zhang-duo-mei-ti-he-wai-bu-she-bei/di-12.4-jie-yin-pin-bo-fang-qi.md)
-* [12.5 视频播放器](di-12-zhang-duo-mei-ti-he-wai-bu-she-bei/di-12.5-jie-shi-pin-bo-fang-qi.md)
-* [12.6 多媒体处理](di-12-zhang-duo-mei-ti-he-wai-bu-she-bei/di-12.6-jie-duo-mei-ti-chu-li.md)
-* [12.7 文档查看器](di-12-zhang-duo-mei-ti-he-wai-bu-she-bei/di-12.7-jie-wen-dang-cha-kan-qi.md)
-* [12.8 Web 浏览器](di-12-zhang-duo-mei-ti-he-wai-bu-she-bei/di-12.8-jie-web-liu-lan-qi.md)
-* [12.9 摄像头](di-12-zhang-duo-mei-ti-he-wai-bu-she-bei/di-12.9-jie-she-xiang-tou.md)
+* [12.1 本地化环境变量](di-12-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-12.1-jie-ben-di-hua-huan-jing-bian-liang.md)
+* [12.2 特定语言的区域配置](di-12-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-12.2-jie-te-ding-yu-yan-de-qu-yu-pei-zhi.md)
+* [12.3 Fcitx 输入法框架](di-12-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-12.3-jie-fcitx-shu-ru-fa-kuang-jia.md)
+* [12.4 IBus 输入法框架](di-12-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-12.4-jie-ibus-shu-ru-fa-kuang-jia.md)
+* [12.5 五笔输入法](di-12-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-12.5-jie-wu-bi-shu-ru-fa.md)
 
-## 第 13 章 本地化与输入法
+## 第 13 章 FreeBSD 系统更新
 
-* [13.1 本地化环境变量](di-13-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-13.1-jie-ben-di-hua-huan-jing-bian-liang.md)
-* [13.2 特定语言的区域配置](di-13-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-13.2-jie-te-ding-yu-yan-de-qu-yu-pei-zhi.md)
-* [13.3 Fcitx 输入法框架](di-13-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-13.3-jie-fcitx-shu-ru-fa-kuang-jia.md)
-* [13.4 IBus 输入法框架](di-13-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-13.4-jie-ibus-shu-ru-fa-kuang-jia.md)
-* [13.5 五笔输入法](di-13-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-13.5-jie-wu-bi-shu-ru-fa.md)
+* [13.1 使用 freebsd-update 更新 FreeBSD](di-13-zhang-freebsd-xi-tong-geng-xin/di-13.1-jie-shi-yong-freebsd-update-geng-xin-freebsd.md)
+* [13.2 使用源代码更新 FreeBSD](di-13-zhang-freebsd-xi-tong-geng-xin/di-13.2-jie-shi-yong-yuan-dai-ma-geng-xin-freebsd.md)
+* [13.3 使用 PkgBase 更新基本系统](di-13-zhang-freebsd-xi-tong-geng-xin/di-13.3-jie-shi-yong-pkgbase-geng-xin-ji-ben-xi-tong.md)
+* [13.4 通过 ZFS 启动环境实现多版本共存](di-13-zhang-freebsd-xi-tong-geng-xin/di-13.4-jie-tong-guo-zfs-qi-dong-huan-jing-shi-xian-duo-ban-ben-gong-cun.md)
 
 ## 第 14 章 FreeBSD 高级安装
 
