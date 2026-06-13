@@ -323,7 +323,7 @@
 * [36.2 Prometheus 监控部署](di-36-zhang-jian-kong-xi-tong/di-36.2-jie-prometheus-jian-kong-bu-shu.md)
 * [36.3 Telegraf、InfluxDB 与 Grafana 监控平台架构](di-36-zhang-jian-kong-xi-tong/di-36.3-jie-telegraf-influxdb-yu-grafana-jian-kong-ping-tai-jia-gou.md)
 
-## 第 37 章 嵌入式平台
+## 第 37 章 嵌入式平台及开发环境
 
 * [37.1 树莓派 FreeBSD 安装](di-37-zhang-qian-ru-shi-ping-tai-ji-kai-fa-huan-jing/di-37.1-jie-shu-mei-pai-freebsd-an-zhuang.md)
 * [37.2 树莓派 FreeBSD 使用](di-37-zhang-qian-ru-shi-ping-tai-ji-kai-fa-huan-jing/di-37.2-jie-shu-mei-pai-freebsd-shi-yong.md)
