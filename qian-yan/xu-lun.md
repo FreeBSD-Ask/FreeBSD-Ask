@@ -97,7 +97,7 @@
 
 **第 36 章 监控系统**：介绍 Zabbix 监控系统（基于 PostgreSQL）、Prometheus 监控部署，以及 Telegraf、InfluxDB 与 Grafana 监控平台架构。
 
-**第 37 章 嵌入式平台**：介绍树莓派上 FreeBSD 的安装与使用、Linux 兼容层配置，Radxa X4 x86 开发板，以及 STM32、ESP-IDF、Arduino 等嵌入式开发环境的搭建方法。
+**第 37 章 嵌入式平台及开发环境**：介绍树莓派上 FreeBSD 的安装与使用、Linux 兼容层配置，Radxa X4 x86 开发板，以及 STM32、ESP-IDF、Arduino 等嵌入式开发环境的搭建方法。
 
 **第 38 章 开发环境**：介绍 C/C++、Java、Qt、Python、Rust、Go、Node.js 等语言开发环境的搭建。
 

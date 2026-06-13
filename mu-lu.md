@@ -325,13 +325,13 @@
 
 ## 第 37 章 嵌入式平台
 
-* [37.1 树莓派 FreeBSD 安装](di-37-zhang-qian-ru-shi-ping-tai/di-37.1-jie-shu-mei-pai-freebsd-an-zhuang.md)
-* [37.2 树莓派 FreeBSD 使用](di-37-zhang-qian-ru-shi-ping-tai/di-37.2-jie-shu-mei-pai-freebsd-shi-yong.md)
-* [37.3 树莓派 Linux 兼容层](di-37-zhang-qian-ru-shi-ping-tai/di-37.3-jie-shu-mei-pai-linux-jian-rong-ceng.md)
-* [37.4 Radxa X4 x86 开发板](di-37-zhang-qian-ru-shi-ping-tai/di-37.4-jie-radxa-x4-x86-kai-fa-ban.md)
-* [37.5 STM32 开发环境](di-37-zhang-qian-ru-shi-ping-tai/di-37.5-jie-stm32-kai-fa-huan-jing.md)
-* [37.6 ESP-IDF 开发环境](di-37-zhang-qian-ru-shi-ping-tai/di-37.6-jie-esp-idf-kai-fa-huan-jing.md)
-* [37.7 Arduino 开发环境](di-37-zhang-qian-ru-shi-ping-tai/di-37.7-jie-arduino-kai-fa-huan-jing.md)
+* [37.1 树莓派 FreeBSD 安装](di-37-zhang-qian-ru-shi-ping-tai-ji-kai-fa-huan-jing/di-37.1-jie-shu-mei-pai-freebsd-an-zhuang.md)
+* [37.2 树莓派 FreeBSD 使用](di-37-zhang-qian-ru-shi-ping-tai-ji-kai-fa-huan-jing/di-37.2-jie-shu-mei-pai-freebsd-shi-yong.md)
+* [37.3 树莓派 Linux 兼容层](di-37-zhang-qian-ru-shi-ping-tai-ji-kai-fa-huan-jing/di-37.3-jie-shu-mei-pai-linux-jian-rong-ceng.md)
+* [37.4 Radxa X4 x86 开发板](di-37-zhang-qian-ru-shi-ping-tai-ji-kai-fa-huan-jing/di-37.4-jie-radxa-x4-x86-kai-fa-ban.md)
+* [37.5 STM32 开发环境](di-37-zhang-qian-ru-shi-ping-tai-ji-kai-fa-huan-jing/di-37.5-jie-stm32-kai-fa-huan-jing.md)
+* [37.6 ESP-IDF 开发环境](di-37-zhang-qian-ru-shi-ping-tai-ji-kai-fa-huan-jing/di-37.6-jie-esp-idf-kai-fa-huan-jing.md)
+* [37.7 Arduino 开发环境](di-37-zhang-qian-ru-shi-ping-tai-ji-kai-fa-huan-jing/di-37.7-jie-arduino-kai-fa-huan-jing.md)
 
 ## 第 38 章 开发环境
 
