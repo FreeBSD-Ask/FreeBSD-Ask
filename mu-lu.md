@@ -1,5 +1,16 @@
 # 目录
 
+* [FreeBSD 从入门到跑路](README.md)
+* [编辑日志](CHANGELOG.md)
+* [贡献指南与开放任务](CONTRIBUTING.md)
+* [目录](mu-lu.md)
+
+## 前言
+
+* [前言](qian-yan/qian-yan.md)
+* [绪论](qian-yan/xu-lun.md)
+* [致读者：解放思想，回归本真，高扬人道主义，不走苦难哲学的邪路](qian-yan/zhi-du-zhe-jie-fang-si-xiang-hui-gui-ben-zhen-gao-yang-ren-dao-zhu-yi-bu-zou-ku-nan-zhe-xue-de-xie-lu.md)
+* [致谢](qian-yan/zhi-xie.md)
 
 ## 第 1 章 FreeBSD 初见
 
@@ -346,3 +357,21 @@
 * [40.4 机器无关的内核选项注解](di-40-zhang-freebsd-nei-he-jia-gou/di-40.4-jie-ji-qi-wu-guan-de-nei-he-xuan-xiang-zhu-jie.md)
 * [40.5 GENERIC 内核选项注解（AMD64）](di-40-zhang-freebsd-nei-he-jia-gou/di-40.5-jie-generic-nei-he-xuan-xiang-zhu-jie-amd64.md)
 * [40.6 构建定制内核](di-40-zhang-freebsd-nei-he-jia-gou/di-40.6-jie-gou-jian-ding-zhi-nei-he.md)
+
+## 附录 I 工具与资源
+
+* [Bug 报告流程](fu-lu1/bug-bao-gao-liu-cheng.md)
+* [FreeBSD 邮件列表订阅](fu-lu1/freebsd-you-jian-lie-biao-ding-yue.md)
+* [FreeBSD 开发参与指南](fu-lu1/freebsd-kai-fa-can-yu-zhi-nan.md)
+* [microSD 卡参数简介](fu-lu1/cun-chu-ka.md)
+* [V2Ray](fu-lu1/v2ray.md)
+* [Mihomo](fu-lu1/mihomo.md)
+
+## 附录 II 参考文献与术语表
+
+* [参考书目](fu-lu2/can-kao-shu-mu.md)
+* [术语表](fu-lu2/shu-yu-biao.md)
+
+## 后记
+
+* [我与 FreeBSD 的故事](hou-ji/wo-yu-freebsd-de-gu-shi.md)
