@@ -39,53 +39,54 @@
 * [5.4 基于 Apple M1 和 Parallels Desktop 20 安装 FreeBSD](di-5-zhang-xu-ni-hua-ping-tai-an-zhuang-freebsd/di-5.4-jie-ji-yu-apple-m1-he-parallels-desktop-20-an-zhuang-freebsd.md)
 * [5.5 基于 Apple M1 和 VMware Fusion Pro 安装 FreeBSD](di-5-zhang-xu-ni-hua-ping-tai-an-zhuang-freebsd/di-5.5-jie-ji-yu-apple-m1-he-vmware-fusion-pro-an-zhuang-freebsd.md)
 
-## 第 6 章 网络管理
+## 第 6 章 命令行环境
 
-* [6.1 计算机网络基础](di-6-zhang-wang-luo-guan-li/di-6.1-jie-ji-suan-ji-wang-luo-ji-chu.md)
-* [6.2 基础网络管理](di-6-zhang-wang-luo-guan-li/di-6.2-jie-ji-chu-wang-luo-guan-li.md)
-* [6.3 无线网络管理](di-6-zhang-wang-luo-guan-li/di-6.3-jie-wu-xian-wang-luo-guan-li.md)
-* [6.4 蓝牙](di-6-zhang-wang-luo-guan-li/di-6.4-jie-lan-ya.md)
-* [6.5 USB 网络共享](di-6-zhang-wang-luo-guan-li/di-6.5-jie-usb-wang-luo-gong-xiang.md)
-* [6.6 系统代理](di-6-zhang-wang-luo-guan-li/di-6.6-jie-xi-tong-dai-li.md)
+* [6.1 虚拟控制台和终端](di-6-zhang-ming-ling-xing-huan-jing/di-6.1-jie-xu-ni-kong-zhi-tai-he-zhong-duan.md)
+* [6.2 shell 基础](di-6-zhang-ming-ling-xing-huan-jing/di-6.2-jie-shell.md)
+* [6.3 切换 shell](di-6-zhang-ming-ling-xing-huan-jing/di-6.3-jie-qie-huan-shell.md)
+* [6.4 命令行基础](di-6-zhang-ming-ling-xing-huan-jing/di-6.4-jie-ming-ling-xing-ji-chu.md)
+* [6.5 文本编辑器](di-6-zhang-ming-ling-xing-huan-jing/di-6.5-jie-wen-ben-bian-ji-qi.md)
+* [6.6 压缩和解压缩](di-6-zhang-ming-ling-xing-huan-jing/di-6.6-jie-ya-suo-he-jie-ya-suo.md)
 
-## 第 7 章 软件管理
+## 第 7 章 网络管理
 
-* [7.1 FreeBSD 包管理器概述](di-7-zhang-ruan-jian-guan-li/di-7.1-jie-freebsd-bao-guan-li-qi-gai-shu.md)
-* [7.2 FreeBSD 软件源](di-7-zhang-ruan-jian-guan-li/di-7.2-jie-freebsd-ruan-jian-yuan.md)
-* [7.3 使用 pkg 管理二进制包](di-7-zhang-ruan-jian-guan-li/di-7.3-jie-shi-yong-pkg-guan-li-er-jin-zhi-bao.md)
-* [7.4 使用 Ports 以源代码方式安装软件](di-7-zhang-ruan-jian-guan-li/di-7.4-jie-shi-yong-ports-yi-yuan-dai-ma-fang-shi-an-zhuang-ruan-jian.md)
-* [7.5 Ports 构建调优](di-7-zhang-ruan-jian-guan-li/di-7.5-jie-ports-gou-jian-diao-you.md)
-* [7.6 使用 DVD 安装软件](di-7-zhang-ruan-jian-guan-li/di-7.6-jie-shi-yong-dvd-an-zhuang-ruan-jian.md)
-* [7.7 FreeBSD 镜像站现状](di-7-zhang-ruan-jian-guan-li/di-7.7-jie-freebsd-jing-xiang-zhan-xian-zhuang.md)
+* [7.1 计算机网络基础](di-7-zhang-wang-luo-guan-li/di-7.1-jie-ji-suan-ji-wang-luo-ji-chu.md)
+* [7.2 基础网络管理](di-7-zhang-wang-luo-guan-li/di-7.2-jie-ji-chu-wang-luo-guan-li.md)
+* [7.3 无线网络管理](di-7-zhang-wang-luo-guan-li/di-7.3-jie-wu-xian-wang-luo-guan-li.md)
+* [7.4 蓝牙](di-7-zhang-wang-luo-guan-li/di-7.4-jie-lan-ya.md)
+* [7.5 USB 网络共享](di-7-zhang-wang-luo-guan-li/di-7.5-jie-usb-wang-luo-gong-xiang.md)
+* [7.6 系统代理](di-7-zhang-wang-luo-guan-li/di-7.6-jie-xi-tong-dai-li.md)
 
-## 第 8 章 X Window 系统
+## 第 8 章 软件管理
 
-* [8.1 显卡驱动概论](di-8-zhang-x-window-xi-tong/di-8.1-jie-xian-ka-qu-dong-gai-lun.md)
-* [8.2 Intel 显卡驱动](di-8-zhang-x-window-xi-tong/di-8.2-jie-intel-xian-ka-qu-dong.md)
-* [8.3 AMD 显卡驱动](di-8-zhang-x-window-xi-tong/di-8.3-jie-amd-xian-ka-qu-dong.md)
-* [8.4 NVIDIA 显卡驱动](di-8-zhang-x-window-xi-tong/di-8.4-jie-nvidia-xian-ka-qu-dong.md)
-* [8.5 系统字体](di-8-zhang-x-window-xi-tong/di-8.5-jie-xi-tong-zi-ti.md)
-* [8.6 远程桌面](di-8-zhang-x-window-xi-tong/di-8.6-jie-yuan-cheng-zhuo-mian.md)
+* [8.1 FreeBSD 包管理器概述](di-8-zhang-ruan-jian-guan-li/di-8.1-jie-freebsd-bao-guan-li-qi-gai-shu.md)
+* [8.2 FreeBSD 软件源](di-8-zhang-ruan-jian-guan-li/di-8.2-jie-freebsd-ruan-jian-yuan.md)
+* [8.3 使用 pkg 管理二进制包](di-8-zhang-ruan-jian-guan-li/di-8.3-jie-shi-yong-pkg-guan-li-er-jin-zhi-bao.md)
+* [8.4 使用 Ports 以源代码方式安装软件](di-8-zhang-ruan-jian-guan-li/di-8.4-jie-shi-yong-ports-yi-yuan-dai-ma-fang-shi-an-zhuang-ruan-jian.md)
+* [8.5 Ports 构建调优](di-8-zhang-ruan-jian-guan-li/di-8.5-jie-ports-gou-jian-diao-you.md)
+* [8.6 使用 DVD 安装软件](di-8-zhang-ruan-jian-guan-li/di-8.6-jie-shi-yong-dvd-an-zhuang-ruan-jian.md)
+* [8.7 FreeBSD 镜像站现状](di-8-zhang-ruan-jian-guan-li/di-8.7-jie-freebsd-jing-xiang-zhan-xian-zhuang.md)
 
-## 第 9 章 桌面环境
+## 第 9 章 X Window 系统
 
-* [9.1 KDE 6 桌面环境（X11 会话）](di-9-zhang-zhuo-mian-huan-jing/di-9.1-jie-kde-6-zhuo-mian-huan-jing-x11-hui-hua.md)
-* [9.2 KDE 6 桌面环境（Wayland 会话）](di-9-zhang-zhuo-mian-huan-jing/di-9.2-jie-kde-6-zhuo-mian-huan-jing-wayland-hui-hua.md)
-* [9.3 MATE](di-9-zhang-zhuo-mian-huan-jing/di-9.3-jie-mate.md)
-* [9.4 Xfce](di-9-zhang-zhuo-mian-huan-jing/di-9.4-jie-xfce.md)
-* [9.5 Cinnamon](di-9-zhang-zhuo-mian-huan-jing/di-9.5-jie-cinnamon.md)
-* [9.6 LXQt](di-9-zhang-zhuo-mian-huan-jing/di-9.6-jie-lxqt.md)
-* [9.7 GNOME](di-9-zhang-zhuo-mian-huan-jing/di-9.7-jie-gnome.md)
-* [9.8 IceWM](di-9-zhang-zhuo-mian-huan-jing/di-9.8-jie-icewm.md)
-* [9.9 CDE（拟删除）](di-9-zhang-zhuo-mian-huan-jing/di-9.9-jie-cde-ni-shan-chu.md)
+* [9.1 显卡驱动概论](di-9-zhang-x-window-xi-tong/di-9.1-jie-xian-ka-qu-dong-gai-lun.md)
+* [9.2 Intel 显卡驱动](di-9-zhang-x-window-xi-tong/di-9.2-jie-intel-xian-ka-qu-dong.md)
+* [9.3 AMD 显卡驱动](di-9-zhang-x-window-xi-tong/di-9.3-jie-amd-xian-ka-qu-dong.md)
+* [9.4 NVIDIA 显卡驱动](di-9-zhang-x-window-xi-tong/di-9.4-jie-nvidia-xian-ka-qu-dong.md)
+* [9.5 系统字体](di-9-zhang-x-window-xi-tong/di-9.5-jie-xi-tong-zi-ti.md)
+* [9.6 远程桌面](di-9-zhang-x-window-xi-tong/di-9.6-jie-yuan-cheng-zhuo-mian.md)
 
-## 第 10 章 命令行环境
+## 第 10 章 桌面环境
 
-* [10.1 虚拟控制台和终端](di-10-zhang-ming-ling-xing-huan-jing/di-10.1-jie-xu-ni-kong-zhi-tai-he-zhong-duan.md)
-* [10.2 shell](di-10-zhang-ming-ling-xing-huan-jing/di-10.2-jie-shell.md)
-* [10.3 命令行基础](di-10-zhang-ming-ling-xing-huan-jing/di-10.3-jie-ming-ling-xing-ji-chu.md)
-* [10.4 文本编辑器](di-10-zhang-ming-ling-xing-huan-jing/di-10.4-jie-wen-ben-bian-ji-qi.md)
-* [10.5 压缩和解压缩](di-10-zhang-ming-ling-xing-huan-jing/di-10.5-jie-ya-suo-he-jie-ya-suo.md)
+* [10.1 KDE 6 桌面环境（X11 会话）](di-10-zhang-zhuo-mian-huan-jing/di-10.1-jie-kde-6-zhuo-mian-huan-jing-x11-hui-hua.md)
+* [10.2 KDE 6 桌面环境（Wayland 会话）](di-10-zhang-zhuo-mian-huan-jing/di-10.2-jie-kde-6-zhuo-mian-huan-jing-wayland-hui-hua.md)
+* [10.3 MATE](di-10-zhang-zhuo-mian-huan-jing/di-10.3-jie-mate.md)
+* [10.4 Xfce](di-10-zhang-zhuo-mian-huan-jing/di-10.4-jie-xfce.md)
+* [10.5 Cinnamon](di-10-zhang-zhuo-mian-huan-jing/di-10.5-jie-cinnamon.md)
+* [10.6 LXQt](di-10-zhang-zhuo-mian-huan-jing/di-10.6-jie-lxqt.md)
+* [10.7 GNOME](di-10-zhang-zhuo-mian-huan-jing/di-10.7-jie-gnome.md)
+* [10.8 IceWM](di-10-zhang-zhuo-mian-huan-jing/di-10.8-jie-icewm.md)
+* [10.9 CDE（拟删除）](di-10-zhang-zhuo-mian-huan-jing/di-10.9-jie-cde-ni-shan-chu.md)
 
 ## 第 11 章 用户账户与权限
 

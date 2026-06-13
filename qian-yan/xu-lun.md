@@ -35,15 +35,15 @@
 
 **第 5 章 虚拟化平台安装 FreeBSD**：介绍使用 VMware Workstation Pro、VirtualBox、Hyper-V 安装 FreeBSD 的方法，以及基于 Apple M1 和 Parallels Desktop 20、VMware Fusion Pro 的安装方案。
 
-**第 6 章 网络管理**：介绍计算机网络基础、基础网络管理、无线网络管理、蓝牙、USB 网络共享及系统代理的配置方法。
+**第 6 章 命令行环境**：涵盖虚拟控制台和终端、shell 基础、切换 shell、命令行基础、文本编辑器及压缩和解压缩等基础操作。
 
-**第 7 章 软件管理**：介绍 FreeBSD 包管理器概述、FreeBSD 软件源、使用 pkg 管理二进制包、使用 Ports 以源代码方式安装软件、Ports 构建调优、使用 DVD 安装软件及 FreeBSD 镜像站现状。
+**第 7 章 网络管理**：介绍计算机网络基础、基础网络管理、无线网络管理、蓝牙、USB 网络共享及系统代理的配置方法。
 
-**第 8 章 X Window 系统**：介绍显卡驱动概论，Intel、AMD 和 NVIDIA 显卡驱动的安装与配置，系统字体及远程桌面。
+**第 8 章 软件管理**：介绍 FreeBSD 包管理器概述、FreeBSD 软件源、使用 pkg 管理二进制包、使用 Ports 以源代码方式安装软件、Ports 构建调优、使用 DVD 安装软件及 FreeBSD 镜像站现状。
 
-**第 9 章 桌面环境**：介绍在 FreeBSD 上运行的各类桌面环境与窗口管理器，包括 KDE 6（X11 与 Wayland 会话）、MATE、Xfce、Cinnamon、LXQt、GNOME、IceWM 及 CDE（拟删除）。
+**第 9 章 X Window 系统**：介绍显卡驱动概论，Intel、AMD 和 NVIDIA 显卡驱动的安装与配置，系统字体及远程桌面。
 
-**第 10 章 命令行环境**：涵盖虚拟控制台和终端、shell、命令行基础、文本编辑器及压缩和解压缩等基础操作。
+**第 10 章 桌面环境**：介绍在 FreeBSD 上运行的各类桌面环境与窗口管理器，包括 KDE 6（X11 与 Wayland 会话）、MATE、Xfce、Cinnamon、LXQt、GNOME、IceWM 及 CDE（拟删除）。
 
 **第 11 章 用户账户与权限**：介绍用户和基本账户管理、权限、用户分级及权限提升工具。
 
