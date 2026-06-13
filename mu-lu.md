@@ -93,7 +93,7 @@
 * [10.2 基础网络管理](di-10-zhang-wang-luo-guan-li/di-10.2-jie-ji-chu-wang-luo-guan-li.md)
 * [10.3 无线网络管理](di-10-zhang-wang-luo-guan-li/di-10.3-jie-wu-xian-wang-luo-guan-li.md)
 * [10.4 蓝牙](di-10-zhang-wang-luo-guan-li/di-10.4-jie-lan-ya.md)
-* [10.5 USB 网络共享（USB tethering）](di-10-zhang-wang-luo-guan-li/di-10.5-jie-usb-wang-luo-gong-xiang-usb-tethering.md)
+* [10.5 USB 网络共享](di-10-zhang-wang-luo-guan-li/di-10.5-jie-usb-wang-luo-gong-xiang.md)
 * [10.6 系统代理](di-10-zhang-wang-luo-guan-li/di-10.6-jie-xi-tong-dai-li.md)
 
 ## 第 11 章 X Window 系统
