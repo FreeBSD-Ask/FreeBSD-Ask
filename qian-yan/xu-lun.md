@@ -59,7 +59,7 @@
 
 **第 17 章 人工智能**：介绍人工智能术语与概念、Transformer 数学基础与程序演示、人工智能哲学原著选读，以及大模型本地部署方法。
 
-**第 18 章 系统管理**：讲解启动引导器、引导管理器与 UEFI 固件、服务管理、进程与守护进程、用户分级、权限提升工具、bsdconfig 配置工具、OpenSSH、设备资源提示、Cron 和 Periodic、系统日志管理、sysctl 工具、NTP 时间同步与时区及 Live 镜像与系统恢复等系统管理功能。
+**第 18 章 系统管理**：讲解启动引导器、引导管理器与 UEFI 固件、管理 FreeBSD 中的服务、进程与守护进程、用户分级、权限提升工具、bsdconfig 配置工具、OpenSSH、设备资源提示、Cron 和 Periodic、系统日志管理、sysctl 工具、NTP 时间同步与时区及 Live 镜像与系统恢复等系统管理功能。
 
 **第 19 章 高级网络**：介绍 TCP/IP 协议栈、网桥、链路聚合与故障转移及 VLAN 的配置方法。
 
@@ -73,7 +73,7 @@
 
 **第 24 章 安全**：介绍信息安全概论、账户认证安全、资源限制、安全等级、启用 root 账户桌面登录、安全事件审计、OpenSSL、入侵检测系统（IDS）、第三方漏洞与安全公告，以及强制访问控制框架（MAC 框架）。
 
-**第 25 章 防火墙**：介绍防火墙概论与 FreeBSD 内置防火墙系统，包括 ipfirewall（IPFW）、IPFilter（IPF）、Packet Filter（PF）的配置，以及 Fail2Ban 和 blocklistd 工具的使用。
+**第 25 章 防火墙**：介绍防火墙概论与 FreeBSD 内置防火墙系统，包括 ipfirewall（IPFW）、IPFilter（IPF）、Packet Filter（PF）的配置，以及 Fail2Ban（基于 IPFW、PF 与 IPF）和 blocklistd 工具的使用。
 
 **第 26 章 Jail 容器管理**：介绍 FreeBSD 原生轻量级虚拟化技术 Jail 的基础配置、厚 Jail（Thick Jail）及 Qjail 管理工具的使用。
 
@@ -87,7 +87,7 @@
 
 **第 31 章 服务器**：介绍 Rsync 数据同步、Samba 文件共享、网络文件系统（NFS）、零配置网络（mDNS/DNS-SD）及 Webmin 管理平台等服务的搭建。
 
-**第 32 章 Web 服务器**：介绍 Apache、Nginx、Caddy Web 服务器的部署，以及 PHP、Tomcat、WildFly 应用服务器的配置，同时涵盖 Nextcloud、OnlyOffice、GitLab Enterprise Edition 和 OpenList 等应用的部署。
+**第 32 章 Web 服务器**：介绍 Apache、Nginx、Caddy Web 服务器的部署，以及 PHP、Tomcat、WildFly 应用服务器的配置，同时涵盖 Nextcloud 云服务（基于 PostgreSQL）、OnlyOffice 部署（基于 PostgreSQL）、GitLab Enterprise Edition 部署和 OpenList 部署。
 
 **第 33 章 监控系统**：介绍 Zabbix 监控系统（基于 PostgreSQL）、Prometheus 监控部署，以及 Telegraf、InfluxDB 与 Grafana 监控平台架构。
 
@@ -95,9 +95,9 @@
 
 **第 35 章 开发环境**：介绍 C/C++、Java、Qt、Python、Rust、Go、Node.js 等语言开发环境的搭建。
 
-**第 36 章 开发工具**：介绍 code-server 与 clangd 开发环境、Vim 开发环境、IDA Pro 调试及 DTrace 动态追踪工具的使用。
+**第 36 章 开发工具**：介绍 code-server 和 clangd 开发环境、Vim 开发环境、使用 IDA Pro 调试 FreeBSD 及 DTrace 动态追踪工具的使用。
 
-**第 37 章 FreeBSD 内核架构**：介绍 FreeBSD 源代码目录结构、内核文件结构、机器相关与无关的内核选项注解、GENERIC 内核选项注解（AMD64）及构建定制内核的方法。
+**第 37 章 FreeBSD 内核架构**：介绍 FreeBSD 源代码目录结构、内核文件结构、机器相关与机器无关的内核选项注解、GENERIC 内核选项注解（AMD64）及构建定制内核的方法。
 
 **附录 I 工具与资源**：包括 Bug 报告流程、FreeBSD 邮件列表订阅、FreeBSD 开发参与指南、microSD 卡参数简介，以及 V2Ray、Mihomo 的配置方法。
 
