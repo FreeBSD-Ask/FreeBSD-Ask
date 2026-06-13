@@ -241,7 +241,7 @@
 * [26.2 账户认证安全](di-26-zhang-an-quan/di-26.2-jie-zhang-hu-ren-zheng-an-quan.md)
 * [26.3 资源限制](di-26-zhang-an-quan/di-26.3-jie-zi-yuan-xian-zhi.md)
 * [26.4 安全等级](di-26-zhang-an-quan/di-26.4-jie-an-quan-deng-ji.md)
-* [26.6 OpenSSL](di-26-zhang-an-quan/di-26.6-jie-openssl.md)
+* [26.5 OpenSSL](di-26-zhang-an-quan/di-26.5-jie-openssl.md)
 
 ## 第 27 章 安全审计
 
