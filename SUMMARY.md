@@ -136,8 +136,6 @@
 
 ## 第 15 章 系统引导
 
-## 第 15 章 系统引导
-
 * [15.1 启动引导器](di-15-zhang-xi-tong-yin-dao/di-15.1-jie-qi-dong-yin-dao-qi.md)
 * [15.2 启动消息（dmesg）](di-15-zhang-xi-tong-yin-dao/di-15.2-jie-qi-dong-xiao-xi-dmesg.md)
 * [15.3 引导管理器与 UEFI 固件](di-15-zhang-xi-tong-yin-dao/di-15.3-jie-yin-dao-guan-li-qi-yu-uefi-gu-jian.md)
