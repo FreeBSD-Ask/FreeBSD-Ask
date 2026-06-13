@@ -1,4 +1,4 @@
-# 11.1 使用 freebsd-update 更新 FreeBSD
+# 9.1 使用 freebsd-update 更新 FreeBSD
 
 > **警告**
 >

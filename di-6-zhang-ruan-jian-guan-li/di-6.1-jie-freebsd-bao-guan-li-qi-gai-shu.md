@@ -1,4 +1,4 @@
-# 10.1 FreeBSD 包管理器概述
+# 6.1 FreeBSD 包管理器概述
 
 ## 软件源概览
 
@@ -34,7 +34,7 @@ remote: Enumerating objects: 6715646, done.
 remote: Counting objects: 100% (936/936), done.
 remote: Compressing objects: 100% (120/120), done.
 remote: Total 6715646 (delta 923), reused 816 (delta 816), pack-reused 6714710 (from 1)
-接收对象中: 100% (6715646/6715646), 1.50 GiB | 10.26 MiB/s, 完成.
+接收对象中: 100% (6715646/6715646), 1.50 GiB | 6.26 MiB/s, 完成.
 处理 delta 中: 100% (4065984/4065984), 完成.
 正在更新文件: 100% (168004/168004), 完成.
 root@ykla:/home/ykla # cd /usr/ports/ # 切换到 git 的 Ports 路径

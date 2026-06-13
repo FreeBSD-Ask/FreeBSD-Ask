@@ -1,4 +1,4 @@
-# 10.4 使用 Ports 以源代码方式安装软件
+# 6.4 使用 Ports 以源代码方式安装软件
 
 Ports 是 FreeBSD 从源代码构建软件的框架，适用于需要自定义编译选项、打补丁或安装 pkg 仓库中未收录的软件。
 
@@ -196,7 +196,7 @@ root@ykla:/usr/ports/sysutils/htop # make all-depends-list
 ```sh
 # pkg version -l '<'
 chromium-127.0.6533.99             <
-curl-10.9.1_1                       <
+curl-6.9.1_1                       <
 ffmpeg-6.1.2,1                     <
 vlc-3.0.21_4,4                     <
 w3m-0.5.3.20230718_1               <

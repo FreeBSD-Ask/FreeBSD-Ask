@@ -50,14 +50,15 @@
 * [5.4 基于 Apple M1 和 Parallels Desktop 20 安装 FreeBSD](di-5-zhang-xu-ni-hua-ping-tai-an-zhuang-freebsd/di-5.4-jie-ji-yu-apple-m1-he-parallels-desktop-20-an-zhuang-freebsd.md)
 * [5.5 基于 Apple M1 和 VMware Fusion Pro 安装 FreeBSD](di-5-zhang-xu-ni-hua-ping-tai-an-zhuang-freebsd/di-5.5-jie-ji-yu-apple-m1-he-vmware-fusion-pro-an-zhuang-freebsd.md)
 
-## 第 6 章 FreeBSD 高级安装
+## 第 6 章 软件管理
 
-* [6.1 安装双系统（先安装 FreeBSD）](di-6-zhang-freebsd-gao-ji-an-zhuang/di-6.1-jie-an-zhuang-shuang-xi-tong-xian-an-zhuang-freebsd.md)
-* [6.2 安装双系统（后安装 FreeBSD）](di-6-zhang-freebsd-gao-ji-an-zhuang/di-6.2-jie-an-zhuang-shuang-xi-tong-hou-an-zhuang-freebsd.md)
-* [6.3 腾讯云轻量云安装 FreeBSD（传统引导和 MBR 分区表）](di-6-zhang-freebsd-gao-ji-an-zhuang/di-6.3-jie-teng-xun-yun-qing-liang-yun-an-zhuang-freebsd-chuan-tong-yin-dao-he-mbr-fen-qu-biao.md)
-* [6.4 KVM、QEMU 等平台安装 FreeBSD（传统引导和 MBR 分区表）](di-6-zhang-freebsd-gao-ji-an-zhuang/di-6.4-jie-kvm-qemu-deng-ping-tai-an-zhuang-freebsd-chuan-tong-yin-dao-he-mbr-fen-qu-biao.md)
-* [6.5 阿里云轻量应用服务器安装 FreeBSD（UEFI 和 GPT 分区表）](di-6-zhang-freebsd-gao-ji-an-zhuang/di-6.5-jie-a-li-yun-qing-liang-ying-yong-fu-wu-qi-an-zhuang-freebsd-uefi-he-gpt-fen-qu-biao.md)
-* [6.6 QEMU 安装 RISC-V FreeBSD（基于 x86 Windows 主机）](di-6-zhang-freebsd-gao-ji-an-zhuang/di-6.6-jie-qemu-an-zhuang-risc-v-freebsd-ji-yu-x86-windows-zhu-ji.md)
+* [6.1 FreeBSD 包管理器概述](di-6-zhang-ruan-jian-guan-li/di-6.1-jie-freebsd-bao-guan-li-qi-gai-shu.md)
+* [6.2 FreeBSD 软件源](di-6-zhang-ruan-jian-guan-li/di-6.2-jie-freebsd-ruan-jian-yuan.md)
+* [6.3 使用 pkg 管理二进制包](di-6-zhang-ruan-jian-guan-li/di-6.3-jie-shi-yong-pkg-guan-li-er-jin-zhi-bao.md)
+* [6.4 使用 Ports 以源代码方式安装软件](di-6-zhang-ruan-jian-guan-li/di-6.4-jie-shi-yong-ports-yi-yuan-dai-ma-fang-shi-an-zhuang-ruan-jian.md)
+* [6.5 Ports 构建调优](di-6-zhang-ruan-jian-guan-li/di-6.5-jie-ports-gou-jian-diao-you.md)
+* [6.6 使用 DVD 安装软件](di-6-zhang-ruan-jian-guan-li/di-6.6-jie-shi-yong-dvd-an-zhuang-ruan-jian.md)
+* [6.7 FreeBSD 镜像站现状](di-6-zhang-ruan-jian-guan-li/di-6.7-jie-freebsd-jing-xiang-zhan-xian-zhuang.md)
 
 ## 第 7 章 X Window 系统
 
@@ -80,33 +81,32 @@
 * [8.8 IceWM](di-8-zhang-zhuo-mian-huan-jing/di-8.8-jie-icewm.md)
 * [8.9 CDE（拟删除）](di-8-zhang-zhuo-mian-huan-jing/di-8.9-jie-cde-ni-shan-chu.md)
 
-## 第 9 章 FreeBSD 基础
+## 第 9 章 FreeBSD 系统更新
 
-* [9.1 系统目录结构](di-9-zhang-freebsd-ji-chu/di-9.1-jie-xi-tong-mu-lu-jie-gou.md)
-* [9.2 虚拟控制台和终端](di-9-zhang-freebsd-ji-chu/di-9.2-jie-xu-ni-kong-zhi-tai-he-zhong-duan.md)
-* [9.3 shell](di-9-zhang-freebsd-ji-chu/di-9.3-jie-shell.md)
-* [9.4 命令行基础](di-9-zhang-freebsd-ji-chu/di-9.4-jie-ming-ling-xing-ji-chu.md)
-* [9.5 文本编辑器](di-9-zhang-freebsd-ji-chu/di-9.5-jie-wen-ben-bian-ji-qi.md)
-* [9.6 用户和基本账户管理](di-9-zhang-freebsd-ji-chu/di-9.6-jie-yong-hu-he-ji-ben-zhang-hu-guan-li.md)
-* [9.7 权限](di-9-zhang-freebsd-ji-chu/di-9.7-jie-quan-xian.md)
-* [9.8 压缩和解压缩](di-9-zhang-freebsd-ji-chu/di-9.8-jie-ya-suo-he-jie-ya-suo.md)
+* [9.1 使用 freebsd-update 更新 FreeBSD](di-9-zhang-freebsd-xi-tong-geng-xin/di-9.1-jie-shi-yong-freebsd-update-geng-xin-freebsd.md)
+* [9.2 使用源代码更新 FreeBSD](di-9-zhang-freebsd-xi-tong-geng-xin/di-9.2-jie-shi-yong-yuan-dai-ma-geng-xin-freebsd.md)
+* [9.3 使用 PkgBase 更新基本系统](di-9-zhang-freebsd-xi-tong-geng-xin/di-9.3-jie-shi-yong-pkgbase-geng-xin-ji-ben-xi-tong.md)
+* [9.4 通过 ZFS 启动环境实现多版本共存](di-9-zhang-freebsd-xi-tong-geng-xin/di-9.4-jie-tong-guo-zfs-qi-dong-huan-jing-shi-xian-duo-ban-ben-gong-cun.md)
 
-## 第 10 章 软件管理
+## 第 10 章 FreeBSD 基础
 
-* [10.1 FreeBSD 包管理器概述](di-10-zhang-ruan-jian-guan-li/di-10.1-jie-freebsd-bao-guan-li-qi-gai-shu.md)
-* [10.2 FreeBSD 软件源](di-10-zhang-ruan-jian-guan-li/di-10.2-jie-freebsd-ruan-jian-yuan.md)
-* [10.3 使用 pkg 管理二进制包](di-10-zhang-ruan-jian-guan-li/di-10.3-jie-shi-yong-pkg-guan-li-er-jin-zhi-bao.md)
-* [10.4 使用 Ports 以源代码方式安装软件](di-10-zhang-ruan-jian-guan-li/di-10.4-jie-shi-yong-ports-yi-yuan-dai-ma-fang-shi-an-zhuang-ruan-jian.md)
-* [10.5 Ports 构建调优](di-10-zhang-ruan-jian-guan-li/di-10.5-jie-ports-gou-jian-diao-you.md)
-* [10.6 使用 DVD 安装软件](di-10-zhang-ruan-jian-guan-li/di-10.6-jie-shi-yong-dvd-an-zhuang-ruan-jian.md)
-* [10.7 FreeBSD 镜像站现状](di-10-zhang-ruan-jian-guan-li/di-10.7-jie-freebsd-jing-xiang-zhan-xian-zhuang.md)
+* [10.1 系统目录结构](di-10-zhang-freebsd-ji-chu/di-10.1-jie-xi-tong-mu-lu-jie-gou.md)
+* [10.2 虚拟控制台和终端](di-10-zhang-freebsd-ji-chu/di-10.2-jie-xu-ni-kong-zhi-tai-he-zhong-duan.md)
+* [10.3 shell](di-10-zhang-freebsd-ji-chu/di-10.3-jie-shell.md)
+* [10.4 命令行基础](di-10-zhang-freebsd-ji-chu/di-10.4-jie-ming-ling-xing-ji-chu.md)
+* [10.5 文本编辑器](di-10-zhang-freebsd-ji-chu/di-10.5-jie-wen-ben-bian-ji-qi.md)
+* [10.6 用户和基本账户管理](di-10-zhang-freebsd-ji-chu/di-10.6-jie-yong-hu-he-ji-ben-zhang-hu-guan-li.md)
+* [10.7 权限](di-10-zhang-freebsd-ji-chu/di-10.7-jie-quan-xian.md)
+* [10.8 压缩和解压缩](di-10-zhang-freebsd-ji-chu/di-10.8-jie-ya-suo-he-jie-ya-suo.md)
 
-## 第 11 章 FreeBSD 系统更新
+## 第 11 章 FreeBSD 高级安装
 
-* [11.1 使用 freebsd-update 更新 FreeBSD](di-11-zhang-freebsd-xi-tong-geng-xin/di-11.1-jie-shi-yong-freebsd-update-geng-xin-freebsd.md)
-* [11.2 使用源代码更新 FreeBSD](di-11-zhang-freebsd-xi-tong-geng-xin/di-11.2-jie-shi-yong-yuan-dai-ma-geng-xin-freebsd.md)
-* [11.3 使用 PkgBase 更新基本系统](di-11-zhang-freebsd-xi-tong-geng-xin/di-11.3-jie-shi-yong-pkgbase-geng-xin-ji-ben-xi-tong.md)
-* [11.4 通过 ZFS 启动环境实现多版本共存](di-11-zhang-freebsd-xi-tong-geng-xin/di-11.4-jie-tong-guo-zfs-qi-dong-huan-jing-shi-xian-duo-ban-ben-gong-cun.md)
+* [11.1 安装双系统（先安装 FreeBSD）](di-11-zhang-freebsd-gao-ji-an-zhuang/di-11.1-jie-an-zhuang-shuang-xi-tong-xian-an-zhuang-freebsd.md)
+* [11.2 安装双系统（后安装 FreeBSD）](di-11-zhang-freebsd-gao-ji-an-zhuang/di-11.2-jie-an-zhuang-shuang-xi-tong-hou-an-zhuang-freebsd.md)
+* [11.3 腾讯云轻量云安装 FreeBSD（传统引导和 MBR 分区表）](di-11-zhang-freebsd-gao-ji-an-zhuang/di-11.3-jie-teng-xun-yun-qing-liang-yun-an-zhuang-freebsd-chuan-tong-yin-dao-he-mbr-fen-qu-biao.md)
+* [11.4 KVM、QEMU 等平台安装 FreeBSD（传统引导和 MBR 分区表）](di-11-zhang-freebsd-gao-ji-an-zhuang/di-11.4-jie-kvm-qemu-deng-ping-tai-an-zhuang-freebsd-chuan-tong-yin-dao-he-mbr-fen-qu-biao.md)
+* [11.5 阿里云轻量应用服务器安装 FreeBSD（UEFI 和 GPT 分区表）](di-11-zhang-freebsd-gao-ji-an-zhuang/di-11.5-jie-a-li-yun-qing-liang-ying-yong-fu-wu-qi-an-zhuang-freebsd-uefi-he-gpt-fen-qu-biao.md)
+* [11.6 QEMU 安装 RISC-V FreeBSD（基于 x86 Windows 主机）](di-11-zhang-freebsd-gao-ji-an-zhuang/di-11.6-jie-qemu-an-zhuang-risc-v-freebsd-ji-yu-x86-windows-zhu-ji.md)
 
 ## 第 12 章 网络管理
 
