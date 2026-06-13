@@ -51,19 +51,19 @@
 
 **第 13 章 本地化与输入法**：介绍本地化环境变量配置、特定语言的区域配置，以及 Fcitx、IBus 输入法框架和五笔输入法的安装与设置。
 
-**第 14 章 系统引导**：介绍启动引导器、引导管理器与 UEFI 固件、管理 FreeBSD 中的服务及进程与守护进程。
+**第 14 章 FreeBSD 系统更新**：介绍使用 freebsd-update、源代码方式更新 FreeBSD 的方法，以及使用 PkgBase 更新基本系统和通过 ZFS 启动环境实现多版本共存。
 
-**第 15 章 FreeBSD 系统更新**：介绍使用 freebsd-update、源代码方式更新 FreeBSD 的方法，以及使用 PkgBase 更新基本系统和通过 ZFS 启动环境实现多版本共存。
+**第 15 章 系统引导**：介绍启动引导器、启动消息（dmesg）、引导管理器与 UEFI 固件、管理 FreeBSD 中的服务及进程与守护进程。
 
 **第 16 章 FreeBSD 高级安装**：介绍安装双系统（先安装 FreeBSD 与后安装 FreeBSD），腾讯云轻量云、KVM/QEMU 等平台安装 FreeBSD（传统引导和 MBR 分区表），阿里云轻量应用服务器安装 FreeBSD（UEFI 和 GPT 分区表），以及 QEMU 安装 RISC-V FreeBSD（基于 x86 Windows 主机）。
 
-**第 17 章 Linux 兼容层**：介绍 FreeBSD 的 Linux 兼容层架构，涵盖 Rocky Linux、Ubuntu/Debian/Kali Linux、Arch Linux、Slackware、Gentoo 等多种 Linux 发行版的兼容环境搭建，以及微信、QQ、WPS Office 等 Linux 应用的运行方法和故障排除。
+**第 17 章 系统管理**：讲解系统目录结构、bsdconfig 配置工具、OpenSSH、设备资源提示、Cron 和 Periodic、系统日志管理、sysctl 工具、NTP 时间同步与时区及 Live 镜像与系统恢复等系统管理功能。
 
-**第 18 章 游戏、科学计算和专业工具**：介绍 Godot 开源游戏引擎、我的世界（Minecraft）服务器与客户端、Steam 客户端、R 语言、Wine 配置，以及科研和专业计算工具的使用。
+**第 18 章 Linux 兼容层**：介绍 FreeBSD 的 Linux 兼容层架构，涵盖 Rocky Linux、Ubuntu/Debian/Kali Linux、Arch Linux、Slackware、Gentoo 等多种 Linux 发行版的兼容环境搭建，以及微信、QQ、WPS Office 等 Linux 应用的运行方法和故障排除。
 
-**第 19 章 人工智能**：介绍人工智能术语与概念、Transformer 数学基础与程序演示、人工智能哲学原著选读，以及大模型本地部署方法。
+**第 19 章 游戏、科学计算和专业工具**：介绍 Godot 开源游戏引擎、我的世界（Minecraft）服务器与客户端、Steam 客户端、R 语言、Wine 配置，以及科研和专业计算工具的使用。
 
-**第 20 章 系统管理**：讲解系统目录结构、bsdconfig 配置工具、OpenSSH、设备资源提示、Cron 和 Periodic、系统日志管理、sysctl 工具、NTP 时间同步与时区及 Live 镜像与系统恢复等系统管理功能。
+**第 20 章 人工智能**：介绍人工智能术语与概念、Transformer 数学基础与程序演示、人工智能哲学原著选读，以及大模型本地部署方法。
 
 **第 21 章 高级网络**：介绍 TCP/IP 协议栈、网桥、链路聚合与故障转移及 VLAN 的配置方法。
 

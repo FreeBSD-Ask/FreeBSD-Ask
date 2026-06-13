@@ -127,19 +127,20 @@
 * [13.4 IBus 输入法框架](di-13-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-13.4-jie-ibus-shu-ru-fa-kuang-jia.md)
 * [13.5 五笔输入法](di-13-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-13.5-jie-wu-bi-shu-ru-fa.md)
 
-## 第 14 章 系统引导
+## 第 14 章 FreeBSD 系统更新
 
-* [14.1 启动引导器](di-14-zhang-xi-tong-yin-dao/di-14.1-jie-qi-dong-yin-dao-qi.md)
-* [14.2 引导管理器与 UEFI 固件](di-14-zhang-xi-tong-yin-dao/di-14.2-jie-yin-dao-guan-li-qi-yu-uefi-gu-jian.md)
-* [14.3 管理 FreeBSD 中的服务](di-14-zhang-xi-tong-yin-dao/di-14.3-jie-guan-li-freebsd-zhong-de-fu-wu.md)
-* [14.4 进程与守护进程](di-14-zhang-xi-tong-yin-dao/di-14.4-jie-jin-cheng-yu-shou-hu-jin-cheng.md)
+* [14.1 使用 freebsd-update 更新 FreeBSD](di-14-zhang-freebsd-xi-tong-geng-xin/di-14.1-jie-shi-yong-freebsd-update-geng-xin-freebsd.md)
+* [14.2 使用源代码更新 FreeBSD](di-14-zhang-freebsd-xi-tong-geng-xin/di-14.2-jie-shi-yong-yuan-dai-ma-geng-xin-freebsd.md)
+* [14.3 使用 PkgBase 更新基本系统](di-14-zhang-freebsd-xi-tong-geng-xin/di-14.3-jie-shi-yong-pkgbase-geng-xin-ji-ben-xi-tong.md)
+* [14.4 通过 ZFS 启动环境实现多版本共存](di-14-zhang-freebsd-xi-tong-geng-xin/di-14.4-jie-tong-guo-zfs-qi-dong-huan-jing-shi-xian-duo-ban-ben-gong-cun.md)
 
-## 第 15 章 FreeBSD 系统更新
+## 第 15 章 系统引导
 
-* [15.1 使用 freebsd-update 更新 FreeBSD](di-15-zhang-freebsd-xi-tong-geng-xin/di-15.1-jie-shi-yong-freebsd-update-geng-xin-freebsd.md)
-* [15.2 使用源代码更新 FreeBSD](di-15-zhang-freebsd-xi-tong-geng-xin/di-15.2-jie-shi-yong-yuan-dai-ma-geng-xin-freebsd.md)
-* [15.3 使用 PkgBase 更新基本系统](di-15-zhang-freebsd-xi-tong-geng-xin/di-15.3-jie-shi-yong-pkgbase-geng-xin-ji-ben-xi-tong.md)
-* [15.4 通过 ZFS 启动环境实现多版本共存](di-15-zhang-freebsd-xi-tong-geng-xin/di-15.4-jie-tong-guo-zfs-qi-dong-huan-jing-shi-xian-duo-ban-ben-gong-cun.md)
+* [15.1 启动引导器](di-15-zhang-xi-tong-yin-dao/di-15.1-jie-qi-dong-yin-dao-qi.md)
+* [15.2 启动消息（dmesg）](di-15-zhang-xi-tong-yin-dao/di-15.2-jie-qi-dong-xiao-xi-dmesg.md)
+* [15.3 引导管理器与 UEFI 固件](di-15-zhang-xi-tong-yin-dao/di-15.3-jie-yin-dao-guan-li-qi-yu-uefi-gu-jian.md)
+* [15.4 管理 FreeBSD 中的服务](di-15-zhang-xi-tong-yin-dao/di-15.4-jie-guan-li-freebsd-zhong-de-fu-wu.md)
+* [15.5 进程与守护进程](di-15-zhang-xi-tong-yin-dao/di-15.5-jie-jin-cheng-yu-shou-hu-jin-cheng.md)
 
 ## 第 16 章 FreeBSD 高级安装
 
@@ -150,47 +151,47 @@
 * [16.5 阿里云轻量应用服务器安装 FreeBSD（UEFI 和 GPT 分区表）](di-16-zhang-freebsd-gao-ji-an-zhuang/di-16.5-jie-a-li-yun-qing-liang-ying-yong-fu-wu-qi-an-zhuang-freebsd-uefi-he-gpt-fen-qu-biao.md)
 * [16.6 QEMU 安装 RISC-V FreeBSD（基于 x86 Windows 主机）](di-16-zhang-freebsd-gao-ji-an-zhuang/di-16.6-jie-qemu-an-zhuang-risc-v-freebsd-ji-yu-x86-windows-zhu-ji.md)
 
-## 第 17 章 Linux 兼容层
+## 第 17 章 系统管理
 
-* [17.1 Linux 兼容层架构](di-17-zhang-linux-er-jin-zhi-jian-rong-ceng/di-17.1-jie-linux-jian-rong-ceng-jia-gou.md)
-* [17.2 Rocky Linux 兼容层](di-17-zhang-linux-er-jin-zhi-jian-rong-ceng/di-17.2-jie-rocky-linux-jian-rong-ceng.md)
-* [17.3 Ubuntu/Debian/Kali Linux 兼容层](di-17-zhang-linux-er-jin-zhi-jian-rong-ceng/di-17.3-jie-ubuntu-debian-kali-linux-jian-rong-ceng.md)
-* [17.4 Arch Linux 兼容层](di-17-zhang-linux-er-jin-zhi-jian-rong-ceng/di-17.4-jie-arch-linux-jian-rong-ceng.md)
-* [17.5 Slackware Linux 兼容层](di-17-zhang-linux-er-jin-zhi-jian-rong-ceng/di-17.5-jie-slackware-linux-jian-rong-ceng.md)
-* [17.6 Gentoo Linux 兼容层](di-17-zhang-linux-er-jin-zhi-jian-rong-ceng/di-17.6-jie-gentoo-linux-jian-rong-ceng.md)
-* [17.7 微信（Linux 版）](di-17-zhang-linux-er-jin-zhi-jian-rong-ceng/di-17.7-jie-wei-xin-linux-ban.md)
-* [17.8 QQ（Linux 版）](di-17-zhang-linux-er-jin-zhi-jian-rong-ceng/di-17.8-jie-qq-linux-ban.md)
-* [17.9 WPS Office（Linux 版）](di-17-zhang-linux-er-jin-zhi-jian-rong-ceng/di-17.9-jie-wps-office-linux-ban.md)
-* [17.10 故障排除与未竟事宜](di-17-zhang-linux-er-jin-zhi-jian-rong-ceng/di-17.10-jie-gu-zhang-pai-chu-yu-wei-jing-shi-yi.md)
+* [17.1 系统目录结构](di-17-zhang-xi-tong-guan-li/di-17.1-jie-xi-tong-mu-lu-jie-gou.md)
+* [17.2 bsdconfig](di-17-zhang-xi-tong-guan-li/di-17.2-jie-bsdconfig.md)
+* [17.3 OpenSSH](di-17-zhang-xi-tong-guan-li/di-17.3-jie-openssh.md)
+* [17.4 设备资源提示](di-17-zhang-xi-tong-guan-li/di-17.4-jie-she-bei-zi-yuan-ti-shi.md)
+* [17.5 Cron 和 Periodic](di-17-zhang-xi-tong-guan-li/di-17.5-jie-cron-he-periodic.md)
+* [17.6 系统日志管理](di-17-zhang-xi-tong-guan-li/di-17.6-jie-xi-tong-ri-zhi-guan-li.md)
+* [17.7 sysctl 工具](di-17-zhang-xi-tong-guan-li/di-17.7-jie-sysctl-gong-ju.md)
+* [17.8 NTP 时间同步与时区](di-17-zhang-xi-tong-guan-li/di-17.8-jie-ntp-shi-jian-tong-bu-yu-shi-qu.md)
+* [17.9 Live 镜像与系统恢复](di-17-zhang-xi-tong-guan-li/di-17.9-jie-live-jing-xiang-yu-xi-tong-hui-fu.md)
 
-## 第 18 章 游戏、科学计算和专业工具
+## 第 18 章 Linux 兼容层
 
-* [18.1 Godot 开源游戏引擎](di-18-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-18.1-jie-godot-kai-yuan-you-xi-yin-qing.md)
-* [18.2 我的世界（Minecraft）服务器](di-18-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-18.2-jie-wo-de-shi-jie-minecraft-fu-wu-qi.md)
-* [18.3 我的世界（Minecraft）](di-18-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-18.3-jie-wo-de-shi-jie-minecraft.md)
-* [18.4 Steam 客户端](di-18-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-18.4-jie-steam-ke-hu-duan.md)
-* [18.5 R 语言](di-18-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-18.5-jie-R-yu-yan.md)
-* [18.6 Wine](di-18-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-18.6-jie-wine.md)
-* [18.7 科研和专业计算](di-18-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-18.7-jie-ke-yan-he-zhuan-ye-ji-suan.md)
+* [18.1 Linux 兼容层架构](di-18-zhang-linux-er-jin-zhi-jian-rong-ceng/di-18.1-jie-linux-jian-rong-ceng-jia-gou.md)
+* [18.2 Rocky Linux 兼容层](di-18-zhang-linux-er-jin-zhi-jian-rong-ceng/di-18.2-jie-rocky-linux-jian-rong-ceng.md)
+* [18.3 Ubuntu/Debian/Kali Linux 兼容层](di-18-zhang-linux-er-jin-zhi-jian-rong-ceng/di-18.3-jie-ubuntu-debian-kali-linux-jian-rong-ceng.md)
+* [18.4 Arch Linux 兼容层](di-18-zhang-linux-er-jin-zhi-jian-rong-ceng/di-18.4-jie-arch-linux-jian-rong-ceng.md)
+* [18.5 Slackware Linux 兼容层](di-18-zhang-linux-er-jin-zhi-jian-rong-ceng/di-18.5-jie-slackware-linux-jian-rong-ceng.md)
+* [18.6 Gentoo Linux 兼容层](di-18-zhang-linux-er-jin-zhi-jian-rong-ceng/di-18.6-jie-gentoo-linux-jian-rong-ceng.md)
+* [18.7 微信（Linux 版）](di-18-zhang-linux-er-jin-zhi-jian-rong-ceng/di-18.7-jie-wei-xin-linux-ban.md)
+* [18.8 QQ（Linux 版）](di-18-zhang-linux-er-jin-zhi-jian-rong-ceng/di-18.8-jie-qq-linux-ban.md)
+* [18.9 WPS Office（Linux 版）](di-18-zhang-linux-er-jin-zhi-jian-rong-ceng/di-18.9-jie-wps-office-linux-ban.md)
+* [18.10 故障排除与未竟事宜](di-18-zhang-linux-er-jin-zhi-jian-rong-ceng/di-18.10-jie-gu-zhang-pai-chu-yu-wei-jing-shi-yi.md)
 
-## 第 19 章 人工智能
+## 第 19 章 游戏、科学计算和专业工具
 
-* [19.1 人工智能术语与概念](di-19-zhang-ren-gong-zhi-neng-ai/di-19.1-jie-ren-gong-zhi-neng-shu-yu-yu-gai-nian.md)
-* [19.2 Transformer 数学基础与程序演示](di-19-zhang-ren-gong-zhi-neng-ai/di-19.2-jie-transformer-shu-xue-ji-chu-yu-cheng-xu-yan-shi.md)
-* [19.3 人工智能哲学原著选读](di-19-zhang-ren-gong-zhi-neng-ai/di-19.3-jie-ren-gong-zhi-neng-zhe-xue-yuan-zhu-xuan-du.md)
-* [19.4 大模型本地部署](di-19-zhang-ren-gong-zhi-neng-ai/di-19.4-jie-da-mo-xing-ben-di-bu-shu.md)
+* [19.1 Godot 开源游戏引擎](di-19-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-19.1-jie-godot-kai-yuan-you-xi-yin-qing.md)
+* [19.2 我的世界（Minecraft）服务器](di-19-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-19.2-jie-wo-de-shi-jie-minecraft-fu-wu-qi.md)
+* [19.3 我的世界（Minecraft）](di-19-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-19.3-jie-wo-de-shi-jie-minecraft.md)
+* [19.4 Steam 客户端](di-19-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-19.4-jie-steam-ke-hu-duan.md)
+* [19.5 R 语言](di-19-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-19.5-jie-R-yu-yan.md)
+* [19.6 Wine](di-19-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-19.6-jie-wine.md)
+* [19.7 科研和专业计算](di-19-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-19.7-jie-ke-yan-he-zhuan-ye-ji-suan.md)
 
-## 第 20 章 系统管理
+## 第 20 章 人工智能
 
-* [20.1 系统目录结构](di-20-zhang-xi-tong-guan-li/di-20.1-jie-xi-tong-mu-lu-jie-gou.md)
-* [20.2 bsdconfig](di-20-zhang-xi-tong-guan-li/di-20.2-jie-bsdconfig.md)
-* [20.3 OpenSSH](di-20-zhang-xi-tong-guan-li/di-20.3-jie-openssh.md)
-* [20.4 设备资源提示](di-20-zhang-xi-tong-guan-li/di-20.4-jie-she-bei-zi-yuan-ti-shi.md)
-* [20.5 Cron 和 Periodic](di-20-zhang-xi-tong-guan-li/di-20.5-jie-cron-he-periodic.md)
-* [20.6 系统日志管理](di-20-zhang-xi-tong-guan-li/di-20.6-jie-xi-tong-ri-zhi-guan-li.md)
-* [20.7 sysctl 工具](di-20-zhang-xi-tong-guan-li/di-20.7-jie-sysctl-gong-ju.md)
-* [20.8 NTP 时间同步与时区](di-20-zhang-xi-tong-guan-li/di-20.8-jie-ntp-shi-jian-tong-bu-yu-shi-qu.md)
-* [20.9 Live 镜像与系统恢复](di-20-zhang-xi-tong-guan-li/di-20.9-jie-live-jing-xiang-yu-xi-tong-hui-fu.md)
+* [20.1 人工智能术语与概念](di-20-zhang-ren-gong-zhi-neng-ai/di-20.1-jie-ren-gong-zhi-neng-shu-yu-yu-gai-nian.md)
+* [20.2 Transformer 数学基础与程序演示](di-20-zhang-ren-gong-zhi-neng-ai/di-20.2-jie-transformer-shu-xue-ji-chu-yu-cheng-xu-yan-shi.md)
+* [20.3 人工智能哲学原著选读](di-20-zhang-ren-gong-zhi-neng-ai/di-20.3-jie-ren-gong-zhi-neng-zhe-xue-yuan-zhu-xuan-du.md)
+* [20.4 大模型本地部署](di-20-zhang-ren-gong-zhi-neng-ai/di-20.4-jie-da-mo-xing-ben-di-bu-shu.md)
 
 ## 第 21 章 高级网络
 
