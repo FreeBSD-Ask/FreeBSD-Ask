@@ -331,19 +331,22 @@
 * [35.5 Rust 开发环境](di-35-zhang-kai-fa-huan-jing/di-35.5-jie-rust-kai-fa-huan-jing.md)
 * [35.6 Go 开发环境](di-35-zhang-kai-fa-huan-jing/di-35.6-jie-go-kai-fa-huan-jing.md)
 * [35.7 Node.js 开发环境](di-35-zhang-kai-fa-huan-jing/di-35.7-jie-node-js-kai-fa-huan-jing.md)
-* [35.8 code-server 和 clangd 开发环境](di-35-zhang-kai-fa-huan-jing/di-35.8-jie-code-server-he-clangd-kai-fa-huan-jing.md)
-* [35.9 Vim 开发环境](di-35-zhang-kai-fa-huan-jing/di-35.9-jie-vim-kai-fa-huan-jing.md)
-* [35.10 使用 IDA Pro 调试 FreeBSD](di-35-zhang-kai-fa-huan-jing/di-35.10-jie-shi-yong-ida-pro-tiao-shi-freebsd.md)
-* [35.11 DTrace](di-35-zhang-kai-fa-huan-jing/di-35.11-jie-dtrace.md)
 
-## 第 36 章 FreeBSD 内核架构
+## 第 36 章 开发工具
 
-* [36.1 FreeBSD 源代码目录结构](di-36-zhang-freebsd-nei-he-jia-gou/di-36.1-jie-freebsd-yuan-dai-ma-mu-lu-jie-gou.md)
-* [36.2 FreeBSD 内核文件结构](di-36-zhang-freebsd-nei-he-jia-gou/di-36.2-jie-freebsd-nei-he-wen-jian-jie-gou.md)
-* [36.3 机器相关的内核选项注解](di-36-zhang-freebsd-nei-he-jia-gou/di-36.3-jie-ji-qi-xiang-guan-de-nei-he-xuan-xiang-zhu-jie.md)
-* [36.4 机器无关的内核选项注解](di-36-zhang-freebsd-nei-he-jia-gou/di-36.4-jie-ji-qi-wu-guan-de-nei-he-xuan-xiang-zhu-jie.md)
-* [36.5 GENERIC 内核选项注解（AMD64）](di-36-zhang-freebsd-nei-he-jia-gou/di-36.5-jie-generic-nei-he-xuan-xiang-zhu-jie-amd64.md)
-* [36.6 构建定制内核](di-36-zhang-freebsd-nei-he-jia-gou/di-36.6-jie-gou-jian-ding-zhi-nei-he.md)
+* [36.1 code-server 和 clangd 开发环境](di-36-zhang-kai-fa-gong-ju/di-36.1-jie-code-server-he-clangd-kai-fa-huan-jing.md)
+* [36.2 Vim 开发环境](di-36-zhang-kai-fa-gong-ju/di-36.2-jie-vim-kai-fa-huan-jing.md)
+* [36.3 使用 IDA Pro 调试 FreeBSD](di-36-zhang-kai-fa-gong-ju/di-36.3-jie-shi-yong-ida-pro-tiao-shi-freebsd.md)
+* [36.4 DTrace](di-36-zhang-kai-fa-gong-ju/di-36.4-jie-dtrace.md)
+
+## 第 37 章 FreeBSD 内核架构
+
+* [37.1 FreeBSD 源代码目录结构](di-37-zhang-freebsd-nei-he-jia-gou/di-37.1-jie-freebsd-yuan-dai-ma-mu-lu-jie-gou.md)
+* [37.2 FreeBSD 内核文件结构](di-37-zhang-freebsd-nei-he-jia-gou/di-37.2-jie-freebsd-nei-he-wen-jian-jie-gou.md)
+* [37.3 机器相关的内核选项注解](di-37-zhang-freebsd-nei-he-jia-gou/di-37.3-jie-ji-qi-xiang-guan-de-nei-he-xuan-xiang-zhu-jie.md)
+* [37.4 机器无关的内核选项注解](di-37-zhang-freebsd-nei-he-jia-gou/di-37.4-jie-ji-qi-wu-guan-de-nei-he-xuan-xiang-zhu-jie.md)
+* [37.5 GENERIC 内核选项注解（AMD64）](di-37-zhang-freebsd-nei-he-jia-gou/di-37.5-jie-generic-nei-he-xuan-xiang-zhu-jie-amd64.md)
+* [37.6 构建定制内核](di-37-zhang-freebsd-nei-he-jia-gou/di-37.6-jie-gou-jian-ding-zhi-nei-he.md)
 
 ## 附录 I 工具与资源
 
