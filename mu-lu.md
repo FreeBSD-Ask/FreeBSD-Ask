@@ -193,32 +193,32 @@
 * [20.3 人工智能哲学原著选读](di-20-zhang-ren-gong-zhi-neng-ai/di-20.3-jie-ren-gong-zhi-neng-zhe-xue-yuan-zhu-xuan-du.md)
 * [20.4 大模型本地部署](di-20-zhang-ren-gong-zhi-neng-ai/di-20.4-jie-da-mo-xing-ben-di-bu-shu.md)
 
-## 第 21 章 嵌入式平台及开发环境
+## 第 21 章 开发环境
 
-* [21.1 树莓派 FreeBSD 安装](di-21-zhang-qian-ru-shi-ping-tai-ji-kai-fa-huan-jing/di-21.1-jie-shu-mei-pai-freebsd-an-zhuang.md)
-* [21.2 树莓派 FreeBSD 使用](di-21-zhang-qian-ru-shi-ping-tai-ji-kai-fa-huan-jing/di-21.2-jie-shu-mei-pai-freebsd-shi-yong.md)
-* [21.3 树莓派 Linux 兼容层](di-21-zhang-qian-ru-shi-ping-tai-ji-kai-fa-huan-jing/di-21.3-jie-shu-mei-pai-linux-jian-rong-ceng.md)
-* [21.4 Radxa X4 x86 开发板](di-21-zhang-qian-ru-shi-ping-tai-ji-kai-fa-huan-jing/di-21.4-jie-radxa-x4-x86-kai-fa-ban.md)
-* [21.5 STM32 开发环境](di-21-zhang-qian-ru-shi-ping-tai-ji-kai-fa-huan-jing/di-21.5-jie-stm32-kai-fa-huan-jing.md)
-* [21.6 ESP-IDF 开发环境](di-21-zhang-qian-ru-shi-ping-tai-ji-kai-fa-huan-jing/di-21.6-jie-esp-idf-kai-fa-huan-jing.md)
-* [21.7 Arduino 开发环境](di-21-zhang-qian-ru-shi-ping-tai-ji-kai-fa-huan-jing/di-21.7-jie-arduino-kai-fa-huan-jing.md)
+* [21.1 C/C++ 开发环境](di-21-zhang-kai-fa-huan-jing/di-21.1-jie-c-c-kai-fa-huan-jing.md)
+* [21.2 Java 开发环境](di-21-zhang-kai-fa-huan-jing/di-21.2-jie-java-kai-fa-huan-jing.md)
+* [21.3 Qt 开发环境](di-21-zhang-kai-fa-huan-jing/di-21.3-jie-qt-kai-fa-huan-jing.md)
+* [21.4 Python 开发环境](di-21-zhang-kai-fa-huan-jing/di-21.4-jie-python-kai-fa-huan-jing.md)
+* [21.5 Rust 开发环境](di-21-zhang-kai-fa-huan-jing/di-21.5-jie-rust-kai-fa-huan-jing.md)
+* [21.6 Go 开发环境](di-21-zhang-kai-fa-huan-jing/di-21.6-jie-go-kai-fa-huan-jing.md)
+* [21.7 Node.js 开发环境](di-21-zhang-kai-fa-huan-jing/di-21.7-jie-node-js-kai-fa-huan-jing.md)
 
-## 第 22 章 开发环境
+## 第 22 章 开发工具
 
-* [22.1 C/C++ 开发环境](di-22-zhang-kai-fa-huan-jing/di-22.1-jie-c-c-kai-fa-huan-jing.md)
-* [22.2 Java 开发环境](di-22-zhang-kai-fa-huan-jing/di-22.2-jie-java-kai-fa-huan-jing.md)
-* [22.3 Qt 开发环境](di-22-zhang-kai-fa-huan-jing/di-22.3-jie-qt-kai-fa-huan-jing.md)
-* [22.4 Python 开发环境](di-22-zhang-kai-fa-huan-jing/di-22.4-jie-python-kai-fa-huan-jing.md)
-* [22.5 Rust 开发环境](di-22-zhang-kai-fa-huan-jing/di-22.5-jie-rust-kai-fa-huan-jing.md)
-* [22.6 Go 开发环境](di-22-zhang-kai-fa-huan-jing/di-22.6-jie-go-kai-fa-huan-jing.md)
-* [22.7 Node.js 开发环境](di-22-zhang-kai-fa-huan-jing/di-22.7-jie-node-js-kai-fa-huan-jing.md)
+* [22.1 code-server 和 clangd 开发环境](di-22-zhang-kai-fa-gong-ju/di-22.1-jie-code-server-he-clangd-kai-fa-huan-jing.md)
+* [22.2 Vim 开发环境](di-22-zhang-kai-fa-gong-ju/di-22.2-jie-vim-kai-fa-huan-jing.md)
+* [22.3 使用 IDA Pro 调试 FreeBSD](di-22-zhang-kai-fa-gong-ju/di-22.3-jie-shi-yong-ida-pro-tiao-shi-freebsd.md)
+* [22.4 DTrace](di-22-zhang-kai-fa-gong-ju/di-22.4-jie-dtrace.md)
 
-## 第 23 章 开发工具
+## 第 23 章 嵌入式平台及开发环境
 
-* [23.1 code-server 和 clangd 开发环境](di-23-zhang-kai-fa-gong-ju/di-23.1-jie-code-server-he-clangd-kai-fa-huan-jing.md)
-* [23.2 Vim 开发环境](di-23-zhang-kai-fa-gong-ju/di-23.2-jie-vim-kai-fa-huan-jing.md)
-* [23.3 使用 IDA Pro 调试 FreeBSD](di-23-zhang-kai-fa-gong-ju/di-23.3-jie-shi-yong-ida-pro-tiao-shi-freebsd.md)
-* [23.4 DTrace](di-23-zhang-kai-fa-gong-ju/di-23.4-jie-dtrace.md)
+* [23.1 树莓派 FreeBSD 安装](di-23-zhang-qian-ru-shi-ping-tai-ji-kai-fa-huan-jing/di-23.1-jie-shu-mei-pai-freebsd-an-zhuang.md)
+* [23.2 树莓派 FreeBSD 使用](di-23-zhang-qian-ru-shi-ping-tai-ji-kai-fa-huan-jing/di-23.2-jie-shu-mei-pai-freebsd-shi-yong.md)
+* [23.3 树莓派 Linux 兼容层](di-23-zhang-qian-ru-shi-ping-tai-ji-kai-fa-huan-jing/di-23.3-jie-shu-mei-pai-linux-jian-rong-ceng.md)
+* [23.4 Radxa X4 x86 开发板](di-23-zhang-qian-ru-shi-ping-tai-ji-kai-fa-huan-jing/di-23.4-jie-radxa-x4-x86-kai-fa-ban.md)
+* [23.5 STM32 开发环境](di-23-zhang-qian-ru-shi-ping-tai-ji-kai-fa-huan-jing/di-23.5-jie-stm32-kai-fa-huan-jing.md)
+* [23.6 ESP-IDF 开发环境](di-23-zhang-qian-ru-shi-ping-tai-ji-kai-fa-huan-jing/di-23.6-jie-esp-idf-kai-fa-huan-jing.md)
+* [23.7 Arduino 开发环境](di-23-zhang-qian-ru-shi-ping-tai-ji-kai-fa-huan-jing/di-23.7-jie-arduino-kai-fa-huan-jing.md)
 
 ## 第 24 章 高级网络
 

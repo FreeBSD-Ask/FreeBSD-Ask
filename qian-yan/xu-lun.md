@@ -65,11 +65,11 @@
 
 **第 20 章 人工智能**：介绍人工智能术语与概念、Transformer 数学基础与程序演示、人工智能哲学原著选读，以及大模型本地部署方法。
 
-**第 21 章 嵌入式平台及开发环境**：介绍树莓派上 FreeBSD 的安装与使用、Linux 兼容层配置，Radxa X4 x86 开发板，以及 STM32、ESP-IDF、Arduino 等嵌入式开发环境的搭建方法。
+**第 21 章 开发环境**：介绍 C/C++、Java、Qt、Python、Rust、Go、Node.js 等语言开发环境的搭建。
 
-**第 22 章 开发环境**：介绍 C/C++、Java、Qt、Python、Rust、Go、Node.js 等语言开发环境的搭建。
+**第 22 章 开发工具**：介绍 code-server 和 clangd 开发环境、Vim 开发环境、使用 IDA Pro 调试 FreeBSD 及 DTrace 动态追踪工具的使用。
 
-**第 23 章 开发工具**：介绍 code-server 和 clangd 开发环境、Vim 开发环境、使用 IDA Pro 调试 FreeBSD 及 DTrace 动态追踪工具的使用。
+**第 23 章 嵌入式平台及开发环境**：介绍树莓派上 FreeBSD 的安装与使用、Linux 兼容层配置，Radxa X4 x86 开发板，以及 STM32、ESP-IDF、Arduino 等嵌入式开发环境的搭建方法。
 
 **第 24 章 高级网络**：介绍 TCP/IP 协议栈、网桥、链路聚合与故障转移及 VLAN 的配置方法。
 
