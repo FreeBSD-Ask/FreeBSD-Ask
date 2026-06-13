@@ -346,7 +346,7 @@ USTC-base: {
 
 ## Ports 源（Distfiles）
 
-获取 Ports 本身的方法（通过 Git 或归档文件）参见第 7.4 节。该源用于下载 Ports 框架中的软件（称为 Port）的源代码。
+获取 Ports 本身的方法（通过 Git 或归档文件）参见其他章节。该源用于下载 Ports 框架中的软件（称为 Port）的源代码。
 
 > **警告**
 >
