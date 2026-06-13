@@ -41,29 +41,29 @@
 
 **第 8 章 软件管理**：介绍 FreeBSD 包管理器概述、FreeBSD 软件源、使用 pkg 管理二进制包、使用 Ports 以源代码方式安装软件、Ports 构建调优、使用 DVD 安装软件及 FreeBSD 镜像站现状。
 
-**第 9 章 X Window 系统**：介绍显卡驱动概论，Intel、AMD 和 NVIDIA 显卡驱动的安装与配置，系统字体及远程桌面。
+**第 9 章 X Window 系统**：介绍显卡驱动概论，Intel、AMD 和 NVIDIA 显卡驱动的安装与配置，系统字体、远程桌面及 root 用户桌面登录。
 
 **第 10 章 桌面环境**：介绍在 FreeBSD 上运行的各类桌面环境与窗口管理器，包括 KDE 6（X11 与 Wayland 会话）、MATE、Xfce、Cinnamon、LXQt、GNOME、IceWM 及 CDE（拟删除）。
 
-**第 11 章 用户账户与权限**：介绍用户和基本账户管理、权限、用户分级及权限提升工具。
+**第 11 章 多媒体和外部设备**：介绍声卡、打印机、摄像头、人机输入设备、音频播放器、视频播放器、多媒体处理、文档查看器及 Web 浏览器的使用方法。
 
-**第 12 章 多媒体和外部设备**：介绍声卡、打印机、人机输入设备、音频播放器、视频播放器、多媒体处理、文档查看器、Web 浏览器及摄像头的使用方法。
+**第 12 章 本地化与输入法**：介绍本地化环境变量配置、特定语言的区域配置，以及 Fcitx、IBus 输入法框架和五笔输入法的安装与设置。
 
-**第 13 章 本地化与输入法**：介绍本地化环境变量配置、特定语言的区域配置，以及 Fcitx、IBus 输入法框架和五笔输入法的安装与设置。
+**第 13 章 FreeBSD 系统更新**：介绍使用 freebsd-update、源代码方式更新 FreeBSD 的方法，以及使用 PkgBase 更新基本系统和通过 ZFS 启动环境实现多版本共存。
 
-**第 14 章 系统引导**：介绍启动引导器、引导管理器与 UEFI 固件、管理 FreeBSD 中的服务及进程与守护进程。
+**第 14 章 用户账户与权限**：介绍用户和基本账户管理、权限、用户分级及权限提升工具。
 
-**第 15 章 FreeBSD 系统更新**：介绍使用 freebsd-update、源代码方式更新 FreeBSD 的方法，以及使用 PkgBase 更新基本系统和通过 ZFS 启动环境实现多版本共存。
+**第 15 章 系统引导**：介绍启动引导器、启动消息（dmesg）、引导管理器与 UEFI 固件、进程与守护进程及管理 FreeBSD 中的服务。
 
 **第 16 章 FreeBSD 高级安装**：介绍安装双系统（先安装 FreeBSD 与后安装 FreeBSD），腾讯云轻量云、KVM/QEMU 等平台安装 FreeBSD（传统引导和 MBR 分区表），阿里云轻量应用服务器安装 FreeBSD（UEFI 和 GPT 分区表），以及 QEMU 安装 RISC-V FreeBSD（基于 x86 Windows 主机）。
 
-**第 17 章 Linux 兼容层**：介绍 FreeBSD 的 Linux 兼容层架构，涵盖 Rocky Linux、Ubuntu/Debian/Kali Linux、Arch Linux、Slackware、Gentoo 等多种 Linux 发行版的兼容环境搭建，以及微信、QQ、WPS Office 等 Linux 应用的运行方法和故障排除。
+**第 17 章 系统管理**：讲解系统目录结构、bsdconfig 配置工具、OpenSSH、设备资源提示、Cron 和 Periodic、系统日志管理、sysctl 工具、NTP 时间同步与时区及 Live 镜像与系统恢复等系统管理功能。
 
-**第 18 章 游戏、科学计算和专业工具**：介绍 Godot 开源游戏引擎、我的世界（Minecraft）服务器与客户端、Steam 客户端、R 语言、Wine 配置，以及科研和专业计算工具的使用。
+**第 18 章 Linux 兼容层**：介绍 FreeBSD 的 Linux 兼容层架构，涵盖 Rocky Linux、Ubuntu/Debian/Kali Linux、Arch Linux、Slackware、Gentoo 等多种 Linux 发行版的兼容环境搭建，以及微信、QQ、WPS Office 等 Linux 应用的运行方法和故障排除。
 
-**第 19 章 人工智能**：介绍人工智能术语与概念、Transformer 数学基础与程序演示、人工智能哲学原著选读，以及大模型本地部署方法。
+**第 19 章 游戏、科学计算和专业工具**：介绍 Godot 开源游戏引擎、我的世界（Minecraft）服务器与客户端、Steam 客户端、R 语言、Wine 配置，以及科研和专业计算工具的使用。
 
-**第 20 章 系统管理**：讲解系统目录结构、bsdconfig 配置工具、OpenSSH、设备资源提示、Cron 和 Periodic、系统日志管理、sysctl 工具、NTP 时间同步与时区及 Live 镜像与系统恢复等系统管理功能。
+**第 20 章 人工智能**：介绍人工智能术语与概念、Transformer 数学基础与程序演示、人工智能哲学原著选读，以及大模型本地部署方法。
 
 **第 21 章 高级网络**：介绍 TCP/IP 协议栈、网桥、链路聚合与故障转移及 VLAN 的配置方法。
 
@@ -75,7 +75,7 @@
 
 **第 25 章 ZFS 文件系统**：涵盖 ZFS 的历史与现实、特性和术语、存储池管理、更新 ZFS 存储池、ZFS 管理、ZFS 调优、ZFS 委托管理、更新 OpenZFS 及启动环境。
 
-**第 26 章 安全**：介绍信息安全概论、账户认证安全、资源限制、安全等级、启用 root 账户桌面登录及 OpenSSL。
+**第 26 章 安全**：介绍信息安全概论、账户认证安全、资源限制、安全等级及 OpenSSL。
 
 **第 27 章 安全审计**：介绍安全事件审计、入侵检测系统（IDS）、第三方漏洞与安全公告，以及强制访问控制框架（MAC 框架）。
 
