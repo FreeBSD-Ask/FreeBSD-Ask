@@ -111,13 +111,13 @@
 
 * [12.1 声卡](di-12-zhang-duo-mei-ti-he-wai-bu-she-bei/di-12.1-jie-sheng-ka.md)
 * [12.2 打印机](di-12-zhang-duo-mei-ti-he-wai-bu-she-bei/di-12.2-jie-da-yin-ji.md)
-* [12.3 人机输入设备](di-12-zhang-duo-mei-ti-he-wai-bu-she-bei/di-12.3-jie-ren-ji-shu-ru-she-bei.md)
-* [12.4 音频播放器](di-12-zhang-duo-mei-ti-he-wai-bu-she-bei/di-12.4-jie-yin-pin-bo-fang-qi.md)
-* [12.5 视频播放器](di-12-zhang-duo-mei-ti-he-wai-bu-she-bei/di-12.5-jie-shi-pin-bo-fang-qi.md)
-* [12.6 多媒体处理](di-12-zhang-duo-mei-ti-he-wai-bu-she-bei/di-12.6-jie-duo-mei-ti-chu-li.md)
-* [12.7 文档查看器](di-12-zhang-duo-mei-ti-he-wai-bu-she-bei/di-12.7-jie-wen-dang-cha-kan-qi.md)
-* [12.8 Web 浏览器](di-12-zhang-duo-mei-ti-he-wai-bu-she-bei/di-12.8-jie-web-liu-lan-qi.md)
-* [12.9 摄像头](di-12-zhang-duo-mei-ti-he-wai-bu-she-bei/di-12.9-jie-she-xiang-tou.md)
+* [12.3 摄像头](di-12-zhang-duo-mei-ti-he-wai-bu-she-bei/di-12.3-jie-she-xiang-tou.md)
+* [12.4 人机输入设备](di-12-zhang-duo-mei-ti-he-wai-bu-she-bei/di-12.4-jie-ren-ji-shu-ru-she-bei.md)
+* [12.5 音频播放器](di-12-zhang-duo-mei-ti-he-wai-bu-she-bei/di-12.5-jie-yin-pin-bo-fang-qi.md)
+* [12.6 视频播放器](di-12-zhang-duo-mei-ti-he-wai-bu-she-bei/di-12.6-jie-shi-pin-bo-fang-qi.md)
+* [12.7 多媒体处理](di-12-zhang-duo-mei-ti-he-wai-bu-she-bei/di-12.7-jie-duo-mei-ti-chu-li.md)
+* [12.8 文档查看器](di-12-zhang-duo-mei-ti-he-wai-bu-she-bei/di-12.8-jie-wen-dang-cha-kan-qi.md)
+* [12.9 Web 浏览器](di-12-zhang-duo-mei-ti-he-wai-bu-she-bei/di-12.9-jie-web-liu-lan-qi.md)
 
 ## 第 13 章 本地化与输入法
 
