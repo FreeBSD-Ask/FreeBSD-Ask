@@ -108,34 +108,34 @@
 * [11.7 权限](di-11-zhang-freebsd-ji-chu/di-11.7-jie-quan-xian.md)
 * [11.8 压缩和解压缩](di-11-zhang-freebsd-ji-chu/di-11.8-jie-ya-suo-he-jie-ya-suo.md)
 
-## 第 12 章 FreeBSD 高级安装
+## 第 12 章 多媒体和外部设备
 
-* [12.1 安装双系统（先安装 FreeBSD）](di-12-zhang-freebsd-gao-ji-an-zhuang/di-12.1-jie-an-zhuang-shuang-xi-tong-xian-an-zhuang-freebsd.md)
-* [12.2 安装双系统（后安装 FreeBSD）](di-12-zhang-freebsd-gao-ji-an-zhuang/di-12.2-jie-an-zhuang-shuang-xi-tong-hou-an-zhuang-freebsd.md)
-* [12.3 腾讯云轻量云安装 FreeBSD（传统引导和 MBR 分区表）](di-12-zhang-freebsd-gao-ji-an-zhuang/di-12.3-jie-teng-xun-yun-qing-liang-yun-an-zhuang-freebsd-chuan-tong-yin-dao-he-mbr-fen-qu-biao.md)
-* [12.4 KVM、QEMU 等平台安装 FreeBSD（传统引导和 MBR 分区表）](di-12-zhang-freebsd-gao-ji-an-zhuang/di-12.4-jie-kvm-qemu-deng-ping-tai-an-zhuang-freebsd-chuan-tong-yin-dao-he-mbr-fen-qu-biao.md)
-* [12.5 阿里云轻量应用服务器安装 FreeBSD（UEFI 和 GPT 分区表）](di-12-zhang-freebsd-gao-ji-an-zhuang/di-12.5-jie-a-li-yun-qing-liang-ying-yong-fu-wu-qi-an-zhuang-freebsd-uefi-he-gpt-fen-qu-biao.md)
-* [12.6 QEMU 安装 RISC-V FreeBSD（基于 x86 Windows 主机）](di-12-zhang-freebsd-gao-ji-an-zhuang/di-12.6-jie-qemu-an-zhuang-risc-v-freebsd-ji-yu-x86-windows-zhu-ji.md)
+* [12.1 声卡](di-12-zhang-duo-mei-ti-he-wai-bu-she-bei/di-12.1-jie-sheng-ka.md)
+* [12.2 打印机](di-12-zhang-duo-mei-ti-he-wai-bu-she-bei/di-12.2-jie-da-yin-ji.md)
+* [12.3 人机输入设备](di-12-zhang-duo-mei-ti-he-wai-bu-she-bei/di-12.3-jie-ren-ji-shu-ru-she-bei.md)
+* [12.4 音频播放器](di-12-zhang-duo-mei-ti-he-wai-bu-she-bei/di-12.4-jie-yin-pin-bo-fang-qi.md)
+* [12.5 视频播放器](di-12-zhang-duo-mei-ti-he-wai-bu-she-bei/di-12.5-jie-shi-pin-bo-fang-qi.md)
+* [12.6 多媒体处理](di-12-zhang-duo-mei-ti-he-wai-bu-she-bei/di-12.6-jie-duo-mei-ti-chu-li.md)
+* [12.7 文档查看器](di-12-zhang-duo-mei-ti-he-wai-bu-she-bei/di-12.7-jie-wen-dang-cha-kan-qi.md)
+* [12.8 Web 浏览器](di-12-zhang-duo-mei-ti-he-wai-bu-she-bei/di-12.8-jie-web-liu-lan-qi.md)
+* [12.9 摄像头](di-12-zhang-duo-mei-ti-he-wai-bu-she-bei/di-12.9-jie-she-xiang-tou.md)
 
-## 第 13 章 多媒体和外部设备
+## 第 13 章 本地化与输入法
 
-* [13.1 声卡](di-13-zhang-duo-mei-ti-he-wai-bu-she-bei/di-13.1-jie-sheng-ka.md)
-* [13.2 打印机](di-13-zhang-duo-mei-ti-he-wai-bu-she-bei/di-13.2-jie-da-yin-ji.md)
-* [13.3 人机输入设备](di-13-zhang-duo-mei-ti-he-wai-bu-she-bei/di-13.3-jie-ren-ji-shu-ru-she-bei.md)
-* [13.4 音频播放器](di-13-zhang-duo-mei-ti-he-wai-bu-she-bei/di-13.4-jie-yin-pin-bo-fang-qi.md)
-* [13.5 视频播放器](di-13-zhang-duo-mei-ti-he-wai-bu-she-bei/di-13.5-jie-shi-pin-bo-fang-qi.md)
-* [13.6 多媒体处理](di-13-zhang-duo-mei-ti-he-wai-bu-she-bei/di-13.6-jie-duo-mei-ti-chu-li.md)
-* [13.7 文档查看器](di-13-zhang-duo-mei-ti-he-wai-bu-she-bei/di-13.7-jie-wen-dang-cha-kan-qi.md)
-* [13.8 Web 浏览器](di-13-zhang-duo-mei-ti-he-wai-bu-she-bei/di-13.8-jie-web-liu-lan-qi.md)
-* [13.9 摄像头](di-13-zhang-duo-mei-ti-he-wai-bu-she-bei/di-13.9-jie-she-xiang-tou.md)
+* [13.1 本地化环境变量](di-13-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-13.1-jie-ben-di-hua-huan-jing-bian-liang.md)
+* [13.2 特定语言的区域配置](di-13-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-13.2-jie-te-ding-yu-yan-de-qu-yu-pei-zhi.md)
+* [13.3 Fcitx 输入法框架](di-13-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-13.3-jie-fcitx-shu-ru-fa-kuang-jia.md)
+* [13.4 IBus 输入法框架](di-13-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-13.4-jie-ibus-shu-ru-fa-kuang-jia.md)
+* [13.5 五笔输入法](di-13-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-13.5-jie-wu-bi-shu-ru-fa.md)
 
-## 第 14 章 本地化与输入法
+## 第 14 章 FreeBSD 高级安装
 
-* [14.1 本地化环境变量](di-14-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-14.1-jie-ben-di-hua-huan-jing-bian-liang.md)
-* [14.2 特定语言的区域配置](di-14-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-14.2-jie-te-ding-yu-yan-de-qu-yu-pei-zhi.md)
-* [14.3 Fcitx 输入法框架](di-14-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-14.3-jie-fcitx-shu-ru-fa-kuang-jia.md)
-* [14.4 IBus 输入法框架](di-14-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-14.4-jie-ibus-shu-ru-fa-kuang-jia.md)
-* [14.5 五笔输入法](di-14-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-14.5-jie-wu-bi-shu-ru-fa.md)
+* [14.1 安装双系统（先安装 FreeBSD）](di-14-zhang-freebsd-gao-ji-an-zhuang/di-14.1-jie-an-zhuang-shuang-xi-tong-xian-an-zhuang-freebsd.md)
+* [14.2 安装双系统（后安装 FreeBSD）](di-14-zhang-freebsd-gao-ji-an-zhuang/di-14.2-jie-an-zhuang-shuang-xi-tong-hou-an-zhuang-freebsd.md)
+* [14.3 腾讯云轻量云安装 FreeBSD（传统引导和 MBR 分区表）](di-14-zhang-freebsd-gao-ji-an-zhuang/di-14.3-jie-teng-xun-yun-qing-liang-yun-an-zhuang-freebsd-chuan-tong-yin-dao-he-mbr-fen-qu-biao.md)
+* [14.4 KVM、QEMU 等平台安装 FreeBSD（传统引导和 MBR 分区表）](di-14-zhang-freebsd-gao-ji-an-zhuang/di-14.4-jie-kvm-qemu-deng-ping-tai-an-zhuang-freebsd-chuan-tong-yin-dao-he-mbr-fen-qu-biao.md)
+* [14.5 阿里云轻量应用服务器安装 FreeBSD（UEFI 和 GPT 分区表）](di-14-zhang-freebsd-gao-ji-an-zhuang/di-14.5-jie-a-li-yun-qing-liang-ying-yong-fu-wu-qi-an-zhuang-freebsd-uefi-he-gpt-fen-qu-biao.md)
+* [14.6 QEMU 安装 RISC-V FreeBSD（基于 x86 Windows 主机）](di-14-zhang-freebsd-gao-ji-an-zhuang/di-14.6-jie-qemu-an-zhuang-risc-v-freebsd-ji-yu-x86-windows-zhu-ji.md)
 
 ## 第 15 章 Linux 兼容层
 

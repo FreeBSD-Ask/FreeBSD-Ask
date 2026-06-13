@@ -47,11 +47,11 @@
 
 **第 11 章 FreeBSD 基础**：涵盖系统目录结构、虚拟控制台和终端、shell、命令行基础、文本编辑器、用户和基本账户管理、权限及压缩和解压缩等基础操作。
 
-**第 12 章 FreeBSD 高级安装**：介绍安装双系统（先安装 FreeBSD 与后安装 FreeBSD），腾讯云轻量云、KVM/QEMU 等平台安装 FreeBSD（传统引导和 MBR 分区表），阿里云轻量应用服务器安装 FreeBSD（UEFI 和 GPT 分区表），以及 QEMU 安装 RISC-V FreeBSD（基于 x86 Windows 主机）。
+**第 12 章 多媒体和外部设备**：介绍声卡、打印机、人机输入设备、音频播放器、视频播放器、多媒体处理、文档查看器、Web 浏览器及摄像头的使用方法。
 
-**第 13 章 多媒体和外部设备**：介绍声卡、打印机、人机输入设备、音频播放器、视频播放器、多媒体处理、文档查看器、Web 浏览器及摄像头的使用方法。
+**第 13 章 本地化与输入法**：介绍本地化环境变量配置、特定语言的区域配置，以及 Fcitx、IBus 输入法框架和五笔输入法的安装与设置。
 
-**第 14 章 本地化与输入法**：介绍本地化环境变量配置、特定语言的区域配置，以及 Fcitx、IBus 输入法框架和五笔输入法的安装与设置。
+**第 14 章 FreeBSD 高级安装**：介绍安装双系统（先安装 FreeBSD 与后安装 FreeBSD），腾讯云轻量云、KVM/QEMU 等平台安装 FreeBSD（传统引导和 MBR 分区表），阿里云轻量应用服务器安装 FreeBSD（UEFI 和 GPT 分区表），以及 QEMU 安装 RISC-V FreeBSD（基于 x86 Windows 主机）。
 
 **第 15 章 Linux 兼容层**：介绍 FreeBSD 的 Linux 兼容层架构，涵盖 Rocky Linux、Ubuntu/Debian/Kali Linux、Arch Linux、Slackware、Gentoo 等多种 Linux 发行版的兼容环境搭建，以及微信、QQ、WPS Office 等 Linux 应用的运行方法和故障排除。
 
