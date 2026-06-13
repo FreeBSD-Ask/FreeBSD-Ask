@@ -30,7 +30,7 @@ FreeBSD 是一款真正自由（Liberty）的 **操作系统**，在这波谲云
 
 ![FreeBSD 中文社区 QQ 群](.gitbook/assets/2025-qq.png)
 
-- 微信群：受微信平台限制，需先加入 QQ 群，再联系群主获取最新入群二维码。
+- 微信群：受微信平台限制，需先加入 QQ 群，再联系群主获取新鲜的入群二维码。
 - Discord：<https://discord.gg/j7VhWrhp3e>（需代理，可通过网页端访问）
 - Telegram 群组：[https://t.me/oh_my_BSD](https://t.me/oh_my_BSD)（需代理）
 
@@ -42,11 +42,11 @@ FreeBSD 是一款真正自由（Liberty）的 **操作系统**，在这波谲云
 
 - EPUB（适用于移动端离线阅读）下载地址：<https://docs.bsdcn.org/bsdbook.epub> ![EPUB 文件状态](https://img.shields.io/website?url=https%3A%2F%2Fdocs.bsdcn.org%2Fbsdbook.epub&up_message=%E6%96%87%E4%BB%B6%E5%8F%AF%E7%94%A8&down_message=%E6%96%87%E4%BB%B6%E4%B8%8D%E5%8F%AF%E7%94%A8&style=for-the-badge&label=%E6%96%87%E6%A1%A3%E7%8A%B6%E6%80%81)
 
-移动端建议使用 [微信读书](https://play.google.com/store/apps/details?id=com.tencent.weread&hl=zh) 打开 EPUB 文档，桌面端建议使用 [CAJViewer 9](https://cajviewer.cnki.net/download.html)。
-
 电子文档内容与网页版实时同步，随 Git 提交更新，文件名保持不变。
 
-电子书生成由 [safreya](https://github.com/safreya) 开发的 [GitBook PDF/EPUB 导出工具](https://github.com/FreeBSD-Ask/gitbook-pdf-export) 提供支持，该工具可将 GitBook 项目内容转换为 PDF 和 EPUB 格式。
+移动端建议使用 [微信读书](https://play.google.com/store/apps/details?id=com.tencent.weread&hl=zh) 阅读 EPUB 文档，桌面端建议使用 [CAJViewer 9](https://cajviewer.cnki.net/download.html)。
+
+电子书由 [safreya](https://github.com/safreya) 开发的 [GitBook PDF/EPUB 导出工具](https://github.com/FreeBSD-Ask/gitbook-pdf-export) 提供支持，该工具可将 GitBook 项目转换为 PDF 和 EPUB 格式的文档。
 
 ## 部署地址
 
