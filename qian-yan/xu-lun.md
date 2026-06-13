@@ -37,17 +37,17 @@
 
 **第 6 章 FreeBSD 高级安装**：介绍安装双系统（先安装 FreeBSD 与后安装 FreeBSD），腾讯云轻量云、KVM/QEMU 等平台安装 FreeBSD（传统引导和 MBR 分区表），阿里云轻量应用服务器安装 FreeBSD（UEFI 和 GPT 分区表），以及 QEMU 安装 RISC-V FreeBSD（基于 x86 Windows 主机）。
 
-**第 7 章 FreeBSD 基础**：涵盖系统目录结构、虚拟控制台和终端、shell、命令行基础、文本编辑器、用户和基本账户管理、权限及压缩和解压缩等基础操作。
+**第 7 章 X Window 系统**：介绍显卡驱动概论，Intel、AMD 和 NVIDIA 显卡驱动的安装与配置，系统字体及远程桌面。
 
-**第 8 章 软件管理**：介绍 FreeBSD 包管理器概述、FreeBSD 软件源、使用 pkg 管理二进制包、使用 Ports 以源代码方式安装软件、Ports 构建调优、使用 DVD 安装软件及 FreeBSD 镜像站现状。
+**第 8 章 桌面环境**：介绍在 FreeBSD 上运行的各类桌面环境与窗口管理器，包括 KDE 6（X11 与 Wayland 会话）、MATE、Xfce、Cinnamon、LXQt、GNOME、IceWM 及 CDE（拟删除）。
 
-**第 9 章 FreeBSD 系统更新**：介绍使用 freebsd-update、源代码方式更新 FreeBSD 的方法，以及使用 PkgBase 更新基本系统和通过 ZFS 启动环境实现多版本共存。
+**第 9 章 FreeBSD 基础**：涵盖系统目录结构、虚拟控制台和终端、shell、命令行基础、文本编辑器、用户和基本账户管理、权限及压缩和解压缩等基础操作。
 
-**第 10 章 网络管理**：介绍计算机网络基础、基础网络管理、无线网络管理、蓝牙、USB 网络共享及系统代理的配置方法。
+**第 10 章 软件管理**：介绍 FreeBSD 包管理器概述、FreeBSD 软件源、使用 pkg 管理二进制包、使用 Ports 以源代码方式安装软件、Ports 构建调优、使用 DVD 安装软件及 FreeBSD 镜像站现状。
 
-**第 11 章 X Window 系统**：介绍显卡驱动概论，Intel、AMD 和 NVIDIA 显卡驱动的安装与配置，系统字体及远程桌面。
+**第 11 章 FreeBSD 系统更新**：介绍使用 freebsd-update、源代码方式更新 FreeBSD 的方法，以及使用 PkgBase 更新基本系统和通过 ZFS 启动环境实现多版本共存。
 
-**第 12 章 桌面环境**：介绍在 FreeBSD 上运行的各类桌面环境与窗口管理器，包括 KDE 6（X11 与 Wayland 会话）、MATE、Xfce、Cinnamon、LXQt、GNOME、IceWM 及 CDE（拟删除）。
+**第 12 章 网络管理**：介绍计算机网络基础、基础网络管理、无线网络管理、蓝牙、USB 网络共享及系统代理的配置方法。
 
 **第 13 章 多媒体和外部设备**：介绍声卡、打印机、人机输入设备、音频播放器、视频播放器、多媒体处理、文档查看器、Web 浏览器及摄像头的使用方法。
 
