@@ -350,8 +350,6 @@
 * [39.2 Prometheus 监控部署](di-39-zhang-jian-kong-xi-tong/di-39.2-jie-prometheus-jian-kong-bu-shu.md)
 * [39.3 Telegraf、InfluxDB 与 Grafana 监控平台架构](di-39-zhang-jian-kong-xi-tong/di-39.3-jie-telegraf-influxdb-yu-grafana-jian-kong-ping-tai-jia-gou.md)
 
-## 第 40 章
-
 ## 第 40 章 FreeBSD 内核架构
 
 * [40.1 FreeBSD 源代码目录结构](di-40-zhang-freebsd-nei-he-jia-gou/di-40.1-jie-freebsd-yuan-dai-ma-mu-lu-jie-gou.md)
