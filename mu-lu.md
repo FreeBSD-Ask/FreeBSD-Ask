@@ -139,8 +139,8 @@
 * [15.1 启动引导器](di-15-zhang-xi-tong-yin-dao/di-15.1-jie-qi-dong-yin-dao-qi.md)
 * [15.2 启动消息（dmesg）](di-15-zhang-xi-tong-yin-dao/di-15.2-jie-qi-dong-xiao-xi-dmesg.md)
 * [15.3 引导管理器与 UEFI 固件](di-15-zhang-xi-tong-yin-dao/di-15.3-jie-yin-dao-guan-li-qi-yu-uefi-gu-jian.md)
-* [15.4 管理 FreeBSD 中的服务](di-15-zhang-xi-tong-yin-dao/di-15.4-jie-guan-li-freebsd-zhong-de-fu-wu.md)
-* [15.5 进程与守护进程](di-15-zhang-xi-tong-yin-dao/di-15.5-jie-jin-cheng-yu-shou-hu-jin-cheng.md)
+* [15.4 进程与守护进程](di-15-zhang-xi-tong-yin-dao/di-15.4-jie-jin-cheng-yu-shou-hu-jin-cheng.md)
+* [15.5 管理 FreeBSD 中的服务](di-15-zhang-xi-tong-yin-dao/di-15.5-jie-guan-li-freebsd-zhong-de-fu-wu.md)
 
 ## 第 16 章 FreeBSD 高级安装
 

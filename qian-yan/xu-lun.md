@@ -53,7 +53,7 @@
 
 **第 14 章 用户账户与权限**：介绍用户和基本账户管理、权限、用户分级及权限提升工具。
 
-**第 15 章 系统引导**：介绍启动引导器、启动消息（dmesg）、引导管理器与 UEFI 固件、管理 FreeBSD 中的服务及进程与守护进程。
+**第 15 章 系统引导**：介绍启动引导器、启动消息（dmesg）、引导管理器与 UEFI 固件、进程与守护进程及管理 FreeBSD 中的服务。
 
 **第 16 章 FreeBSD 高级安装**：介绍安装双系统（先安装 FreeBSD 与后安装 FreeBSD），腾讯云轻量云、KVM/QEMU 等平台安装 FreeBSD（传统引导和 MBR 分区表），阿里云轻量应用服务器安装 FreeBSD（UEFI 和 GPT 分区表），以及 QEMU 安装 RISC-V FreeBSD（基于 x86 Windows 主机）。
 
