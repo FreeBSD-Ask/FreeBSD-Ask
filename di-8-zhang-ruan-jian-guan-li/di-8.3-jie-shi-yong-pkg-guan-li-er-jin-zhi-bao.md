@@ -75,7 +75,7 @@ The following 6 package(s) will be affected (of 0 checked): # 有 6 个软件包
 New packages to be INSTALLED:
         chromium: 142.0.7444.162 [FreeBSD]
         dconf: 0.49.0 [FreeBSD]
-        harfbuzz-icu: 7.3.0 [FreeBSD]
+        harfbuzz-icu: 10.3.0 [FreeBSD]
         jsoncpp: 1.9.6_1 [FreeBSD]
         sndio: 1.10.0_1 [FreeBSD]
         speex: 1.2.1_1,1 [FreeBSD]
@@ -178,12 +178,12 @@ Deinstallation has been requested for the following 87 packages (of 0 packages i
 Installed packages to be REMOVED:
 	alsa-lib: 1.2.12
 	brotli: 1.1.0,1
-	curl: 7.8.0
+	curl: 9.8.0
 ……省略一部分……
-	pcre2: 7.43
+	pcre2: 10.43
 	perl5: 5.36.3_1
 	pkg: 1.21.3   # 如果带上参数 -f，会将 pkg 本身也删除，因为 pkg 也是用户最初自行安装的软件
-	png: 1.7.43
+	png: 1.6.43
 	xorg-fonts-truetype: 7.7_1
 	xorgproto: 2024.1
 	zstd: 1.5.6
