@@ -221,10 +221,10 @@
 * [23.3 ZFS 存储池管理](di-23-zhang-zfs-wen-jian-xi-tong/di-23.3-jie-zfs-cun-chu-chi-guan-li.md)
 * [23.4 更新 ZFS 存储池](di-23-zhang-zfs-wen-jian-xi-tong/di-23.4-jie-geng-xin-zfs-cun-chu-chi.md)
 * [23.5 ZFS 管理](di-23-zhang-zfs-wen-jian-xi-tong/di-23.5-jie-zfs-guan-li.md)
-* [23.6 ZFS 委托管理](di-23-zhang-zfs-wen-jian-xi-tong/di-23.6-jie-zfs-wei-tuo-guan-li.md)
-* [23.7 更新 OpenZFS](di-23-zhang-zfs-wen-jian-xi-tong/di-23.7-jie-geng-xin-openzfs.md)
-* [23.8 ZFS 启动环境](di-23-zhang-zfs-wen-jian-xi-tong/di-23.8-jie-zfs-qi-dong-huan-jing.md)
-* [23.9 ZFS 调优](di-23-zhang-zfs-wen-jian-xi-tong/di-23.9-jie-zfs-diao-you.md)
+* [23.6 ZFS 调优](di-23-zhang-zfs-wen-jian-xi-tong/di-23.6-jie-zfs-diao-you.md)
+* [23.7 ZFS 委托管理](di-23-zhang-zfs-wen-jian-xi-tong/di-23.7-jie-zfs-wei-tuo-guan-li.md)
+* [23.8 更新 OpenZFS](di-23-zhang-zfs-wen-jian-xi-tong/di-23.8-jie-geng-xin-openzfs.md)
+* [23.9 ZFS 启动环境](di-23-zhang-zfs-wen-jian-xi-tong/di-23.9-jie-zfs-qi-dong-huan-jing.md)
 
 ## 第 24 章 安全
 
