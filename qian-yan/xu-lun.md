@@ -97,13 +97,13 @@
 
 **第 36 章 监控系统**：介绍 Zabbix 监控系统（基于 PostgreSQL）、Prometheus 监控部署，以及 Telegraf、InfluxDB 与 Grafana 监控平台架构。
 
-**第 37 章 嵌入式平台**：介绍树莓派上 FreeBSD 的安装与使用、Linux 兼容层配置，Radxa X4 x86 开发板，在 Linux 系统上交叉构建 FreeBSD，以及 STM32、ESP-IDF、Arduino 等嵌入式开发环境的搭建方法。
+**第 37 章 嵌入式平台**：介绍树莓派上 FreeBSD 的安装与使用、Linux 兼容层配置，Radxa X4 x86 开发板，以及 STM32、ESP-IDF、Arduino 等嵌入式开发环境的搭建方法。
 
 **第 38 章 开发环境**：介绍 C/C++、Java、Qt、Python、Rust、Go、Node.js 等语言开发环境的搭建。
 
 **第 39 章 开发工具**：介绍 code-server 和 clangd 开发环境、Vim 开发环境、使用 IDA Pro 调试 FreeBSD 及 DTrace 动态追踪工具的使用。
 
-**第 40 章 FreeBSD 内核架构**：介绍 FreeBSD 源代码目录结构、内核文件结构、机器相关与机器无关的内核选项注解、GENERIC 内核选项注解（AMD64）及构建定制内核的方法。
+**第 40 章 FreeBSD 内核架构**：介绍 FreeBSD 源代码目录结构、内核文件结构、机器相关与机器无关的内核选项注解、GENERIC 内核选项注解（AMD64）、构建定制内核的方法，以及在 Linux 系统上交叉构建 FreeBSD。
 
 **附录 I 工具与资源**：包括 Bug 报告流程、FreeBSD 邮件列表订阅、FreeBSD 开发参与指南、microSD 卡参数简介，以及 V2Ray、Mihomo 的配置方法。
 
