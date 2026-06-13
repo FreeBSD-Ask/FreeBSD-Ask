@@ -83,7 +83,7 @@ Git 是获取 Ports 源代码的推荐方式，可以方便地管理版本和更
 # git clone https://git.FreeBSD.org/ports.git /usr/ports
 ```
 
-关于 quarterly 分支与 latest（main）分支的详细说明，参见第 6.1 节。根据需要，可以切换到特定的分支，例如季度分支。
+关于 quarterly 分支与 latest（main）分支的详细说明，参见其他相关章节。根据需要，可以切换到特定的分支，例如季度分支。
 
 切换到 `2025Q1` 分支：
 

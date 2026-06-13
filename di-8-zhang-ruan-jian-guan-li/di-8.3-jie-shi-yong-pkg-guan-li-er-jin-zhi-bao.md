@@ -178,7 +178,7 @@ Deinstallation has been requested for the following 87 packages (of 0 packages i
 Installed packages to be REMOVED:
 	alsa-lib: 1.2.12
 	brotli: 1.1.0,1
-	curl: 8.8.0
+	curl: 9.8.0
 ……省略一部分……
 	pcre2: 10.43
 	perl5: 5.36.3_1

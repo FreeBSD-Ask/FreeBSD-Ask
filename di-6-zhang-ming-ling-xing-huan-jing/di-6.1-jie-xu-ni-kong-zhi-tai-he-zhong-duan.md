@@ -1,0 +1,261 @@
+# 6.1 虚拟控制台和终端
+
+虚拟控制台（Virtual Console）是 FreeBSD 提供的多终端机制，用户可在同一物理显示器和键盘上同时使用多个独立的登录会话。每个虚拟控制台拥有自己的登录提示符和 Shell，用户可通过 Alt+F1 至 Alt+F8 键组合在它们之间切换。
+
+终端（Terminal）的概念源于早期计算机系统中用于与主机通信的物理设备（电传打字机 TTY），在现代系统中演变为软件模拟的终端设备。FreeBSD 的虚拟控制台设备名称为 ttyv0 至 ttyvf（共 16 个，使用十六进制后缀），默认启用 ttyv0 至 ttyv7，其中 ttyv0 为系统控制台（System Console），系统消息默认输出到该控制台。虚拟控制台的数量由 **/etc/ttys** 文件配置。
+
+## 登录到 FreeBSD
+
+FreeBSD 系统安装完成并正常启动后，用户将在屏幕上看到以下系统提示符界面：
+
+```sh
+FreeBSD/amd64 (ykla) (ttyv0)
+
+login:
+```
+
+这一屏幕界面在计算机技术史上称作 TTY（teletypewriter，电传打字机），也可称为物理终端。TTY 是用户与操作系统内核交互的早期接口形式，在图形用户界面（GUI）普及之前是主要的人机交互（HCI）手段。
+
+解释：
+
+| 项目 | 说明 |
+| ---- | ---- |
+| `FreeBSD` | 操作系统名称 |
+| `amd64` | 体系架构，英特尔和 AMD 处理器通常使用 amd64（即 x86-64） |
+| `ykla` | 主机名，是在安装系统时用户自行设置的 |
+| `ttyv0` | 首个 TTY，计算机中许多事物的编号序列都从 0 开始 |
+| `login:` | 指示用户登录 |
+
+输入用户名和密码，登录系统：
+
+```sh
+FreeBSD/amd64 (ykla) (ttyv0)
+
+login: root # 此处输入用户名，随后按回车键 ①
+Password: # 此处输入密码，随后按回车键
+Last login: Tue Mar 18 17:24:48 2025 from 3413e8b6b43f
+FreeBSD 15.0-CURRENT (GENERIC) main-n275981-b0375f78e32a
+
+Welcome to FreeBSD!
+
+Release Notes, Errata: https://www.FreeBSD.org/releases/
+Security Advisories:   https://www.FreeBSD.org/security/
+FreeBSD Handbook:      https://www.FreeBSD.org/handbook/
+FreeBSD FAQ:           https://www.FreeBSD.org/faq/
+Questions List:        https://www.FreeBSD.org/lists/questions/
+FreeBSD Forums:        https://forums.FreeBSD.org/
+
+Documents installed with the system are in the /usr/local/share/doc/freebsd/
+directory, or can be installed later with:  pkg install en-freebsd-doc
+For other languages, replace "en" with a language code like de or fr.
+
+Show the version of FreeBSD installed:  freebsd-version ; uname -a
+Please include that output and any error messages when posting questions.
+Introduction to manual pages:  man man
+FreeBSD directory layout:      man hier
+
+To change this login announcement, see motd(5).
+```
+
+至此，已成功登录到 FreeBSD 操作系统。
+
+> **注意**
+>
+> 密码不会回显至屏幕。FreeBSD 在涉及密码输入时，屏幕不会显示任何回显字符（UNIX 系统通常不显示星号或其他占位符），即便输入了密码，屏幕也仍是空白，直接输入后按回车即可。
+
+- ①：root 是 UNIX 系统中的超级用户账户，拥有最高权限。常见的 Android root、Apple 越狱、Kindle 越狱等操作，均旨在获取此 root 权限。
+
+### 故障排除与未竟事宜
+
+- 如果用户名正确，但密码不正确：
+
+```sh
+login: root
+Password:
+Login incorrect # 表示登录信息不正确
+login:
+```
+
+- 如果用户名和密码都不正确：
+
+```sh
+login: test # 当前系统中不存在该用户
+Password:
+Login incorrect
+login:
+```
+
+如果无法确认用户名，建议找回 root 密码后查看系统中的用户账户列表，或直接重装系统。
+
+### 参考文献
+
+- ItsFOSS. What is TTY in Linux?[EB/OL]. [2026-03-25]. <https://itsfoss.com/what-is-tty-in-linux/>. 详细介绍 TTY 概念与历史。
+
+## 虚拟控制台
+
+系统控制台虽可用于交互，但系统消息默认输出至系统控制台，会覆盖用户正在操作的命令或文件，影响操作，因此习惯命令行的用户通常选择虚拟控制台而非系统控制台。
+
+默认情况下，FreeBSD 配置了多个虚拟控制台用于输入命令。每个虚拟控制台都有自己的登录提示符和 shell，在虚拟控制台之间切换颇为便捷。这本质上提供了在图形环境中同时打开多个窗口的命令行等效功能。
+
+FreeBSD 保留了 Alt+F1 至 Alt+F8 的组合键用于在虚拟控制台之间切换。使用 Alt+F1 切换到系统控制台（ttyv0），Alt+F2 访问第一个虚拟控制台（ttyv1），Alt+F3 访问第二个虚拟控制台（ttyv2），依此类推。当使用 Xorg 作为图形控制台时，组合键变为 Ctrl+Alt+F1 以返回基于文本的虚拟控制台。
+
+从一个控制台切换到另一个时，FreeBSD 管理屏幕输出，从而实现多个虚拟屏幕与键盘的并行会话效果，可供用户输入命令并交由 FreeBSD 执行。在虚拟控制台中启动的程序不会因为用户切换到另一虚拟控制台而停止运行。
+
+在 FreeBSD 中，可用虚拟控制台的数量在 **/etc/ttys** 文件的以下部分中配置：
+
+```ini
+……其他省略……
+
+# name	getty				type	status		comments
+#
+# If console is marked "insecure", init will ask for the root password
+# when going to single-user mode.
+console	none				unknown	off insecure
+#
+ttyv0	"/usr/libexec/getty Pc"		xterm	onifexists secure
+# Virtual terminals
+ttyv1	"/usr/libexec/getty Pc"		xterm	onifexists secure
+ttyv2	"/usr/libexec/getty Pc"		xterm	onifexists secure
+ttyv3	"/usr/libexec/getty Pc"		xterm	onifexists secure
+ttyv4	"/usr/libexec/getty Pc"		xterm	onifexists secure
+ttyv5	"/usr/libexec/getty Pc"		xterm	onifexists secure
+ttyv6	"/usr/libexec/getty Pc"		xterm	onifexists secure
+ttyv7	"/usr/libexec/getty Pc"		xterm	onifexists secure
+ttyv8	"/usr/local/bin/xdm -nodaemon"	xterm	off secure
+
+……其他省略……
+```
+
+要禁用某个虚拟控制台，在该虚拟控制台对应行的开头加上注释符号 `#`。例如，要将可用虚拟控制台的数量从八个减少到四个，在代表虚拟控制台 ttyv5 至 ttyv8 的最后四行开头加上 `#`：
+
+```ini
+……其他省略……
+
+#ttyv5	"/usr/libexec/getty Pc"		xterm	onifexists secure
+#ttyv6	"/usr/libexec/getty Pc"		xterm	onifexists secure
+#ttyv7	"/usr/libexec/getty Pc"		xterm	onifexists secure
+#ttyv8	"/usr/local/bin/xdm -nodaemon"	xterm	off secure
+
+……其他省略……
+```
+
+> **技巧**
+>
+> 如果操作失误但已配置 SSHD 服务，仍可通过 SSH 远程连接 FreeBSD 系统，将生成一个 pts(4) 伪终端 **/dev/pts/n**。
+>
+> ```sh
+> $ w
+> 10:22PM  up 27 mins, 3 users, load averages: 0.03, 0.04, 0.00
+> USER       TTY      FROM            LOGIN@  IDLE WHAT
+> ykla       pts/0    192.168.179.1   9:55PM     4 su (sh)
+> ykla       pts/1    192.168.179.1  10:22PM     - w
+> ```
+
+注意，最后一个虚拟控制台（ttyv8）用于访问图形环境（如果已安装并配置了 Xorg）。
+
+有关此文件中每列的详细描述和虚拟控制台的可用选项，请参阅 ttys(5)。
+
+## 单用户模式
+
+FreeBSD 启动菜单提供了标记为“Boot Single User”的选项。如果选择此选项，系统将启动进入称为“单用户模式”的特殊模式。此模式通常用于修复无法启动的系统，或在不知道 root 密码时重置 root 密码。
+
+在单用户模式下，网络和其他虚拟控制台不可用。但用户可以获得完整的 root 访问权限，并且默认情况下不需要 root 密码。出于这些原因，需要物理访问键盘才能启动进入此模式，因此在保护 FreeBSD 系统安全时，键盘的物理访问权限归属是重要的安全考量因素。
+
+控制单用户模式的设置位于 **/etc/ttys** 文件的以下部分：
+
+```ini
+……以上省略……
+
+# name	getty				type	status		comments
+#
+# If console is marked "insecure", init will ask for the root password
+# when going to single-user mode.
+console	none				unknown	off secure	# 注意此行
+#
+
+……以下省略……
+```
+
+默认情况下，状态设置为 `secure`（安全）。此设置假设键盘的物理访问权限归属无需顾虑，或已由物理安全策略管控。
+
+因为任何人均可访问键盘，所以如果将此设置更改为 `insecure`（不安全），则表明物理环境本身视为不安全。当此行中的 `secure` 更改为 `insecure` 后，即：
+
+```ini
+console	none				unknown	off insecure
+```
+
+FreeBSD 将在用户选择启动进入单用户模式时提示输入 root 密码：
+
+```sh
+Enter root password, or ^D to go multi-user
+Password:
+```
+
+将此设置更改为 `insecure` 时需谨慎。如果忘记了 root 密码，仍然可以借助安装介质启动进入单用户模式，但不熟悉 FreeBSD 启动过程的用户可能面临困难。
+
+## 调整引导界面和 TTY 分辨率
+
+### 修改“gop”（通用方法）
+
+在出现 FreeBSD 菜单时，按 **ESC** 键退出引导，出现提示符 `OK`。输入 `gop list` 可查看所有支持的分辨率列表：
+
+```sh
+OK gop list
+mode 0: 1920x1080x32, stride=1920   # 显示模式 0，分辨率 1920x1080，颜色深度 32 位，行跨度 1920
+mode 1: 640x480x32, stride=640       # 显示模式 1，分辨率 640x480，颜色深度 32 位，行跨度 640
+mode 2: 800x600x32, stride=800       # 显示模式 2，分辨率 800x600，颜色深度 32 位，行跨度 800
+mode 3: 1024x768x32, stride=1024     # 显示模式 3，分辨率 1024x768，颜色深度 32 位，行跨度 1024
+mode 4: 1280x720x32, stride=1280     # 显示模式 4，分辨率 1280x720，颜色深度 32 位，行跨度 1280
+mode 5: 1280x1024x32, stride=1280    # 显示模式 5，分辨率 1280x1024，颜色深度 32 位，行跨度 1280
+```
+
+此处选择 `mode 0` 进行效果测试：
+
+```sh
+OK gop set 0
+```
+
+效果会立即显示。
+
+确认效果合适后，继续引导：
+
+```sh
+OK menu
+```
+
+该命令表示操作确认或进入菜单界面。
+
+将该配置写入 **/boot/loader.conf** 文件，设置 GOP 模式为 0：
+
+```ini
+exec="gop set 0"
+```
+
+### `efi_max_resolution`（UEFI）或 `vbe_max_resolution`（BIOS）
+
+也可以通过配置文件设置 UEFI 或 BIOS 下的分辨率。根据文档 LOADER.CONF(5)，这两个变量可接受以下值：
+
+| 值 | 分辨率 |
+| -- | ------ |
+| `480p` | 640x480 |
+| `720p` | 1280x720 |
+| `1080p` | 1920x1080 |
+| `1440p` | 2560x1440 |
+| `2160p` | 3840x2160 |
+| `4k` | 3840x2160 |
+| `5k` | 5120x2880 |
+| `宽 x 高` | 宽 x 高 |
+
+本节测试使用 `efi_max_resolution` 变量：将 `efi_max_resolution="1080p"` 写入 **/boot/loader.conf** 文件，重启后效果与 gop 方法一致。
+
+### 参考文献
+
+- FreeBSD Project. loader.conf(5)[EB/OL]. [2026-04-17]. <https://man.freebsd.org/cgi/man.cgi?query=loader.conf&sektion=5>.
+- FreeBSD Forums. gop set < mode > being ignored in **/boot/loader.conf**[EB/OL]. [2026-03-26]. <https://forums.freebsd.org/threads/gop-set-mode-being-ignored-in-boot-loader-conf.77779/>. 讨论 loader.conf 中 GOP 模式设置未生效的原因与解决思路。
+- FreeBSD Forums. How to find the valid values of efi_max_resolution[EB/OL]. [2026-03-26]. <https://forums.freebsd.org/threads/how-to-find-the-valid-values-of-efi_max_resolution.84840/>. 探讨查询 efi_max_resolution 有效取值的方法。
+
+## 课后习题
+
+1. 在 FreeBSD 中切换多个虚拟控制台（ttyv0—ttyv3），分别以不同用户登录，使用 `w` 命令记录各终端的会话信息，分析虚拟控制台与伪终端的会话管理差异。
+2. 查阅 FreeBSD 内核中 TTY 子系统的核心源代码（**sys/kern/tty\*.c** 与 **sys/sys/tty\*.h**），分析其输入输出缓冲区管理和行规程的实现机制。
+3. 修改 `/etc/motd.template` 的内容（`/etc/motd` 是 `/var/run/motd` 的符号链接，启动时由 `/etc/motd.template` 生成，参见 motd(5)）与显示行为（如通过 `/etc/login.conf` 的 `hushlogin` 功能控制），记录修改前后用户登录时的信息输出差异。
