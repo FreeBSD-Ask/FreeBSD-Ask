@@ -1,14 +1,14 @@
 # 5.5 基于 Apple M1 和 VMware Fusion Pro 安装 FreeBSD
 
-基于 macOS 15.7.3 与 VMware Fusion Professional 26H1 (25388279)，FreeBSD 16.0 可正常安装运行。
+在 macOS 15.7.3 与 VMware Fusion Professional 26H1 (25388279) 环境下，FreeBSD 16.0 可正常安装运行。
 
 > **注意**
 >
-> 不建议使用 macOS 14，可能存在键盘无法输入的兼容性问题，需特别注意。
+> 不建议使用 macOS 14，可能因兼容性问题导致键盘无法输入，需特别注意。
 
 ## 下载 FreeBSD
 
-首先需要下载适合 Apple M1 架构的 FreeBSD 镜像。Apple M1 采用 ARM 架构，请下载带有 `aarch64` 字样的镜像。**切勿** 下载 `amd64` 架构的镜像，否则虚拟机将无法正常运行。
+首先需下载适用于 Apple M1 架构的 FreeBSD 镜像。Apple M1 采用 ARM 架构，请下载名称中包含 `aarch64` 的镜像。**切勿** 下载 `amd64` 架构的镜像，否则虚拟机将无法正常运行。
 
 ## 配置虚拟机
 
@@ -16,19 +16,19 @@
 
 ![创建自定义虚拟机](../.gitbook/assets/vmware-fusion-1.png)
 
-在操作系统选择界面中，点击“Other”，右侧选择当前最新的 “FreeBSD 15 64-bit Arm”，然后点击继续（Continue）：
+在操作系统选择界面，点击“Other”，右侧选择当前最新的 “FreeBSD 15 64-bit Arm”，然后点击继续（Continue）：
 
 ![选择操作系统](../.gitbook/assets/vmware-fusion-1-2.png)
 
-选择虚拟磁盘：选中“新建虚拟磁盘”，容量可后续调整。然后点击继续（Continue）：
+选择虚拟磁盘：选中“新建虚拟磁盘”，容量稍后可调整。然后点击继续（Continue）：
 
 ![选择虚拟磁盘](../.gitbook/assets/vmware-fusion-1-3.png)
 
-在“完成”页面中，预览配置后点击继续（Continue）：
+在“完成”页面，预览配置后点击继续（Continue）：
 
 ![完成](../.gitbook/assets/vmware-fusion-1-4.png)
 
-在“命名虚拟机”页面中，“存储为”字段用于设置虚拟机名称，此处设为“FreeBSD 16 64-bit Arm”，标签和位置均可自定义。然后点击存储。
+在“命名虚拟机”页面，“存储为”可设置虚拟机名称，此处设为“FreeBSD 16 64-bit Arm”，标签和位置均可自定义。然后点击存储。
 
 ![命名虚拟机](../.gitbook/assets/vmware-fusion-1-5.png)
 
@@ -46,7 +46,7 @@
 
 ![CD/DVD 设备](../.gitbook/assets/vmware-fusion-1-8.png)
 
-点击选择镜像（Choose a disc or disc image），选择下载的 FreeBSD 镜像。
+点击“选择镜像”（Choose a disc or disc image），选择下载的 FreeBSD 镜像。
 
 ![选择镜像](../.gitbook/assets/vmware-fusion-1-9.png)
 
@@ -71,13 +71,12 @@
 # make install clean
 ```
 
-无需任何配置。
+无需额外配置。
 
 ## 调整分辨率
 
-将 `efi_max_resolution="1080p"` 写入 **/boot/loader.conf** 文件即可为虚拟机设置 1080x1920 分辨率。参见虚拟控制台和终端章节。
+将 `efi_max_resolution="1080p"` 写入 **/boot/loader.conf** 文件即可将虚拟机分辨率设为 1080x1920。参见虚拟控制台和终端章节。
 
 ## 配置桌面
 
 ![桌面界面](../.gitbook/assets/vmware-fusion-7.png)
-
