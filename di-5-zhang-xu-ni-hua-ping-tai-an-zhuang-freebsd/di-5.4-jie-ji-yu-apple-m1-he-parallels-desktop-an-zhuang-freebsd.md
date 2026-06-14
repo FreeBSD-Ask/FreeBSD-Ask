@@ -2,6 +2,10 @@
 
 在 macOS 15.7.3 与 Parallels Desktop 26.3.3（57507）环境下，FreeBSD 16.0 的图形界面、键盘和鼠标均可正常使用。
 
+> **警告**
+>
+> 本节基于 Apple M1，因此应选择 aarch64 架构的 FreeBSD。
+
 ## 配置虚拟机
 
 环境准备就绪后，安装 FreeBSD。下图所示为新建页面，选中“通过映像文件安装 Windows、Linux 或 macOS”，确认并继续。
@@ -29,10 +33,6 @@
 ![名称和位置](../.gitbook/assets/parallels-3-4.png)
 
 在顶部选择“硬件”选项卡，在左侧边栏选择“CD/DVD”，在右侧“源”中选择下载的 FreeBSD 镜像。
-
-> **警告**
->
-> 本节基于 Apple M1，因此应选择 aarch64 架构的 FreeBSD。
 
 ![CD/DVD](../.gitbook/assets/parallels-4.png)
 
