@@ -47,7 +47,7 @@
 * [5.1 使用 VMware Workstation Pro 安装 FreeBSD](di-5-zhang-xu-ni-hua-ping-tai-an-zhuang-freebsd/di-5.1-jie-shi-yong-vmware-workstation-pro-an-zhuang-freebsd.md)
 * [5.2 使用 VirtualBox 安装 FreeBSD](di-5-zhang-xu-ni-hua-ping-tai-an-zhuang-freebsd/di-5.2-jie-shi-yong-virtualbox-an-zhuang-freebsd.md)
 * [5.3 使用 Hyper-V 安装 FreeBSD](di-5-zhang-xu-ni-hua-ping-tai-an-zhuang-freebsd/di-5.3-jie-shi-yong-hyper-v-an-zhuang-freebsd.md)
-* [5.4 基于 Apple M1 和 Parallels Desktop 20 安装 FreeBSD](di-5-zhang-xu-ni-hua-ping-tai-an-zhuang-freebsd/di-5.4-jie-ji-yu-apple-m1-he-parallels-desktop-20-an-zhuang-freebsd.md)
+* [5.4 基于 Apple M1 和 Parallels Desktop 安装 FreeBSD](di-5-zhang-xu-ni-hua-ping-tai-an-zhuang-freebsd/di-5.4-jie-ji-yu-apple-m1-he-parallels-desktop-an-zhuang-freebsd.md)
 * [5.5 基于 Apple M1 和 VMware Fusion Pro 安装 FreeBSD](di-5-zhang-xu-ni-hua-ping-tai-an-zhuang-freebsd/di-5.5-jie-ji-yu-apple-m1-he-vmware-fusion-pro-an-zhuang-freebsd.md)
 
 ## 第 6 章 命令行环境
