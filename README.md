@@ -116,19 +116,19 @@ Microsoft Rewards 是微软必应搜索提供的积分计划。可通过 Microso
 
 | 指标 | 统计数据 |
 | ---- | -------- |
-| 用户总数 | 54,611 位 |
-| 会话数 | 103,765 次 |
-| 浏览次数 | 664,202 次 |
-| 平均会话时长 | 8 分 14 秒 |
+| 用户总数 | 55,790 位 |
+| 会话数 | 105,265 次 |
+| 浏览次数 | 666,981 次 |
+| 平均会话时长 | 8 分 8 秒 |
 
 <!-- GA_STATS:END -->
 
 <!-- GA_BADGES:START -->
 
-![总用户数](https://img.shields.io/badge/总用户数-54,611-green)
-![会话数](https://img.shields.io/badge/会话数-103,765-orange)
-![浏览次数](https://img.shields.io/badge/浏览次数-664,202-blue)
-![平均会话时长](https://img.shields.io/badge/平均会话时长-8min14s-purple)
+![总用户数](https://img.shields.io/badge/总用户数-55,790-green)
+![会话数](https://img.shields.io/badge/会话数-105,265-orange)
+![浏览次数](https://img.shields.io/badge/浏览次数-666,981-blue)
+![平均会话时长](https://img.shields.io/badge/平均会话时长-8min8s-purple)
 
 <!-- GA_BADGES:END -->
 
