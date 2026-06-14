@@ -1,4 +1,4 @@
-# 5.4 基于 Apple M1 和 Parallels Desktop 20 安装 FreeBSD
+# 5.4 基于 Apple M1 和 Parallels Desktop 安装 FreeBSD
 
 基于 macOS 15.7.3 与 Parallels Desktop 26.3.3（57507）环境，FreeBSD 16.0 的图形界面、键盘和鼠标均可正常运作。
 
