@@ -4,11 +4,11 @@
 
 > **注意**
 >
-> 不建议使用 macOS 14，可能存在键盘无法输入的问题，需特别注意此兼容性问题。
+> 不建议使用 macOS 14，可能存在键盘无法输入的兼容性问题，需特别注意。
 
 ## 下载 FreeBSD
 
-首先需要下载适合 Apple M1 架构的 FreeBSD 镜像。Apple M1 采用 ARM 架构，请下载带有 `aarch64` 字样的镜像。**切勿** 下载 `amd64` 架构的镜像，否则无法正常运行。
+首先需要下载适合 Apple M1 架构的 FreeBSD 镜像。Apple M1 采用 ARM 架构，请下载带有 `aarch64` 字样的镜像。**切勿** 下载 `amd64` 架构的镜像，否则虚拟机将无法正常运行。
 
 ## 配置虚拟机
 
@@ -16,29 +16,29 @@
 
 ![创建自定义虚拟机](../.gitbook/assets/vmware-fusion-1.png)
 
-选择操作系统，点击“Other”，右侧选择当前最新的 “FreeBSD 15 64-bit Arm”，然后点击继续（Continue）：
+在操作系统选择界面中，点击“Other”，右侧选择当前最新的 “FreeBSD 15 64-bit Arm”，然后点击继续（Continue）：
 
 ![选择操作系统](../.gitbook/assets/vmware-fusion-1-2.png)
 
-选择虚拟磁盘：选择虚拟磁盘选项选中“新建虚拟磁盘”，容量可后续调整。然后点击继续（Continue）：
+选择虚拟磁盘：选中“新建虚拟磁盘”，容量可后续调整。然后点击继续（Continue）：
 
-![选选择虚拟磁盘](../.gitbook/assets/vmware-fusion-1-3.png)
+![选择虚拟磁盘](../.gitbook/assets/vmware-fusion-1-3.png)
 
-完成：预览后点击继续（Continue）：
+在“完成”页面中，预览配置后点击继续（Continue）：
 
 ![完成](../.gitbook/assets/vmware-fusion-1-4.png)
 
-命名虚拟机：“存储为”可以为该虚拟机命名，此处将其命名为“FreeBSD 16 64-bit Arm”，标签和位置均可自定义。然后点击存储。
+在“命名虚拟机”页面中，“存储为”字段用于设置虚拟机名称，此处设为“FreeBSD 16 64-bit Arm”，标签和位置均可自定义。然后点击存储。
 
 ![命名虚拟机](../.gitbook/assets/vmware-fusion-1-5.png)
 
-打开设置。
+完成创建后，打开虚拟机设置。
 
-调整处理器数量和内存容量。默认内存配置可能不足，`4096 MB` 表示 4 GB。
+调整处理器数量和内存容量。默认内存配置可能不足（`4096 MB` 即 4 GB），建议适当增加。
 
 ![处理器数量和内存容量](../.gitbook/assets/vmware-fusion-1-6.png)
 
-调整虚拟磁盘容量，自定义完成后，点击应用（Apply）
+调整虚拟磁盘容量后，点击应用（Apply）。
 
 ![调整虚拟磁盘容量](../.gitbook/assets/vmware-fusion-1-7.png)
 
@@ -67,7 +67,7 @@
 - 使用 Ports 安装：
 
 ```sh
-# cd /usr/ports/emulators/open-vm-tools/ 
+# cd /usr/ports/emulators/open-vm-tools/
 # make install clean
 ```
 

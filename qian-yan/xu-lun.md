@@ -33,7 +33,7 @@
 
 **第 4 章 FreeBSD 安装基础**：介绍安装前的准备工作、FreeBSD 15 安装指南（AMD64）、安装故障排除，以及在 Windows 中将 USB 启动盘恢复为普通存储设备的方法。
 
-**第 5 章 虚拟化平台安装 FreeBSD**：介绍使用 VMware Workstation Pro、VirtualBox、Hyper-V 安装 FreeBSD 的方法，以及基于 Apple M1 和 Parallels Desktop 20、VMware Fusion Pro 的安装方案。
+**第 5 章 虚拟化平台安装 FreeBSD**：介绍使用 VMware Workstation Pro、VirtualBox、Hyper-V 安装 FreeBSD 的方法，以及基于 Apple M1 和 Parallels Desktop、VMware Fusion Pro 的安装方案。
 
 **第 6 章 命令行环境**：涵盖虚拟控制台和终端、shell 基础、切换 shell、命令行基础、文本编辑器及压缩和解压缩等基础操作。
 
