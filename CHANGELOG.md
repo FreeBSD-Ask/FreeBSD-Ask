@@ -2,6 +2,13 @@
 
 ## 2026 年第二季度
 
+---
+
+- 2025.4.21-2026.6.22
+  - 《FreeBSD 从入门到跑路》第三版完成（TAG 2026.6.22）
+
+---
+
 - 2026.6.14
   - 更新“5.5 基于 Apple M1 和 VMware Fusion Pro 安装 FreeBSD”到 VMware Fusion Pro 26H1
   - 更新“5.4 基于 Apple M1 和 Parallels Desktop 安装 FreeBSD”到 Parallels Desktop 26.3.3
