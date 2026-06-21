@@ -234,3 +234,4 @@ $RECYCLE.BIN/
 *.bat
 *.spec
 /scripts
+/script
