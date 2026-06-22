@@ -86,7 +86,7 @@
 * [9.4 NVIDIA 显卡驱动](di-9-zhang-x-window-xi-tong/di-9.4-jie-nvidia-xian-ka-qu-dong.md)
 * [9.5 系统字体](di-9-zhang-x-window-xi-tong/di-9.5-jie-xi-tong-zi-ti.md)
 * [9.6 远程桌面](di-9-zhang-x-window-xi-tong/di-9.6-jie-yuan-cheng-zhuo-mian.md)
-* [9.9 root 用户桌面登录](di-9-zhang-x-window-xi-tong/di-9.9-jie-root-yong-hu-zhuo-mian-deng-lu.md)
+* [9.7 root 用户桌面登录](di-9-zhang-x-window-xi-tong/di-9.7-jie-root-yong-hu-zhuo-mian-deng-lu.md)
 
 ## 第 10 章 桌面环境
 
