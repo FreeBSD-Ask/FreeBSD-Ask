@@ -767,7 +767,7 @@ Username: ykla # 输入用户名。只能使用小写字母（不支持非拉丁
 Full name: # 输入用户全名 ①。可留空。不能包含英文冒号 :。
 Uid (Leave empty for default):  # 用户 UID，留空则使用默认值。手动设置需小于 32000（历史原因：兼容早期 NFS 等仍使用 16 位 UID 的协议，UID 超出此范围可能导致身份映射异常。现代 NFSv4 已不再使用数值 UID，但为保持向后兼容性，建议遵循此限制）。
 Login group [ykla]: # 用户主组
-Login group is ykla. Invite ykla into other groups? []: wheel video operator # 邀请用户加入其他组，用空格分隔 16.0 还需要加入 audio 组以获得音频支持
+Login group is ykla. Invite ykla into other groups? []: wheel video operator # 邀请用户加入其他组，用空格分隔。在 16.0 中还需要加入 audio 组以获得音频支持
 Login class [default]: # 用户分级
 Shell (sh csh tcsh nologin) [sh]: # 用户默认 shell，默认是 sh
 Home directory [/home/ykla]: # 用户主目录路径，普通用户默认在 /home 下面
