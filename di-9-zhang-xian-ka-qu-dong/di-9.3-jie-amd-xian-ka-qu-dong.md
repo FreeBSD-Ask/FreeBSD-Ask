@@ -19,7 +19,7 @@
 # make BATCH=yes install clean
 ```
 
-或者使用 pkg 安装（如 Ports 安装有问题则使用此方法）：
+或使用 pkg 安装（如 Ports 安装有问题则使用此方法）：
 
 ```sh
 # pkg install drm-61-kmod
