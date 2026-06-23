@@ -45,7 +45,7 @@
 
 **第 10 章 X Window 系统**：介绍 X Window 系统概论、显示管理器、X11 窗口管理器、系统字体及远程桌面。
 
-**第 11 章 Wayland 系统**：介绍 Wayland 概论、混成器、Wayland 登录管理器及 Wayland 的远程桌面。
+**第 11 章 Wayland 系统**：介绍 Wayland 概论、混成器、Wayland 显示管理器及 Wayland 的远程桌面。
 
 **第 12 章 桌面环境**：介绍在 FreeBSD 上运行的各类桌面环境与窗口管理器，包括 KDE 6（X11 与 Wayland 会话）、MATE、Xfce、Cinnamon、LXQt、GNOME、IceWM 及 CDE（拟删除）。
 
