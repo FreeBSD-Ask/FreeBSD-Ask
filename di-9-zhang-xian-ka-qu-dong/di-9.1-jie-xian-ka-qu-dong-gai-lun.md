@@ -44,6 +44,30 @@ DRM 是 Linux 内核的子系统，负责与现代显卡的 GPU 交互。FreeBSD
 | >= 1500031 | drm-66-kmod | 15.0 |
 | 其余 | drm-61-kmod | 14.x |
 
+drm-kmod 元 Port 自动选择驱动版本的逻辑如下：
+
+```text
+drm-kmod 版本选择流程
+
+  FreeBSD 版本
+       │
+       ▼
+  uname -U（获取 OSVERSION）
+       │
+       ├── OSVERSION >= 1500509 ──► drm-612-kmod（Linux 6.12 LTS）
+       │                           FreeBSD 15.1+
+       │
+       ├── OSVERSION >= 1500031 ──► drm-66-kmod（Linux 6.6 LTS）
+       │                           FreeBSD 15.0
+       │
+       └── 其他 ──► drm-61-kmod（Linux 6.1 LTS）
+                   FreeBSD 14.x
+
+  也可手动安装特定版本：
+    drm-515-kmod  → Linux 5.15 LTS（14.0–15.x）
+    drm-latest-kmod → 跟踪最新开发版（15.1+）
+```
+
 如需指定版本，可直接安装对应的 Port。上述 OSVERSION 阈值为 ports 树中的硬编码数值，会随 ports 树更新而变化，以 ports 中的实际 Makefile 为准。
 
 可在 Ports 开发者手册的最后一章中查询 OSVERSION 对应的版本和 Git 提交。
