@@ -24,6 +24,24 @@
 
 行道树则不同，每棵均独立生长。即便两树紧邻而立，也仍然是独立的个体。行道树正如 Windows 目录，盘符各自独立——**C:\Program Files (x86)\Google\Update**、**D:\BaiduNetdiskDownload\工具列表**、**E:\123\app**：`C`、`D`、`E` 盘彼此隔离、互不干扰。格式化 `D` 盘，不影响 `E` 盘中存储的文件。即便在 PE 中格式化 `C` 盘（可能不会显示为 `C` 盘），`E` 盘文件也不受影响。
 
+```text
+UNIX 与 Windows 目录结构对比
+
+UNIX：所有目录共享同一个根 /
+
+         /
+    ┌────┼────┐
+    │    │    │
+  home  etc  usr
+
+
+Windows：每个盘符是独立的根
+
+  C:\       D:\       E:\
+  │         │         │
+  Users     Downloads  app
+```
+
 Windows 的“盘符”并非固定存在。在 PE 环境中，`C` 盘可能显示为其他盘符（如 `X`）；运行中的 Windows 也可以任意分配盘符。
 
 Windows 判断分区与盘符的对应关系，依据的是 GPT 分区类型 UUID（如 Windows 数据分区类型 UUID 为 `EBD0A0A2-B9E5-4433-87C0-68B6B72699C7`，即 Microsoft Basic Data 类型，适用于所有 Windows 数据分区，而非仅限 C 盘）以及分区的唯一 GUID（相关配置由 Windows 装入管理器 Mount Manager 写入注册表 **HKLM\SYSTEM\MountedDevices**），而非依靠盘符自身。
@@ -274,6 +292,20 @@ FreeBSD 的编码在 [main/usr.bin/login/login.conf](https://github.com/freebsd/
 Windows 直接读取 RTC 的值，并视为本地时间（Local Time，地方时）；UNIX 则将 RTC 数据视为 UTC 时间，双系统时间由此相差 8 小时。
 
 例如，设 RTC 时间为 2025 年 6 月 6 日中午 12:00（UTC+8）。Windows 下显示为 2025 年 6 月 6 日中午 12:00（UTC+8）；UNIX 将 RTC 中的 12:00 视为 UTC，加上 UTC+8 偏移量后得 12+8=20，因此 UNIX 下显示为 2025 年 6 月 6 日晚上 20:00。由于 UNIX 将 RTC 视为 UTC 而非本地时间，其显示时间比 Windows 快 8 小时。
+
+```text
+RTC 时间处理差异（以 UTC+8 为例）
+
+RTC 硬件时钟：12:00（无时区标注）
+  │
+  ├─ Windows：将 RTC 视为本地时间
+  │    显示时间 = 12:00（UTC+8）
+  │
+  └─ UNIX：将 RTC 视为 UTC
+       显示时间 = 12:00 + 8 = 20:00（UTC+8）
+
+两者相差 8 小时。
+```
 
 对现代计算机网络而言，时间准确性至关重要：系统时间偏差可能导致 HTTPS 证书验证失败（TLS 证书包含有效期字段，客户端将系统时间与证书有效期比对，时钟偏移可导致握手失败），以简单实验即可验证——将系统时间调慢至证书有效期之外，打开浏览器，即可发现绝大部分网站无法访问。
 
