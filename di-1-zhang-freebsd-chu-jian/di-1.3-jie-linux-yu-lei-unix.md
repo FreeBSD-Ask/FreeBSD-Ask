@@ -6,6 +6,23 @@
 
 Linux 是当今世界广泛使用的开源操作系统。Linux 在不同语境下含义不同：狭义上指 Linux 内核，广义上通常指完整的操作系统，即 GNU/Linux。Linux 内核官方文档对这一问题的回答如下：
 
+```text
+Linux 的狭义与广义
+
+  狭义 Linux                         广义 Linux
+  (Linux 内核)                       (GNU/Linux 发行版)
+  ┌──────────┐                      ┌────────────────┐
+  │ 进程管理  │                      │  应用程序层     │
+  │ 内存管理  │     + GNU 工具       │  (桌面/服务器)  │
+  │ 文件系统  │ ──────────────────►  │  ────────────  │
+  │ 网络协议栈│     + 包管理器       │  GNU 工具链     │
+  │ 设备驱动  │     + 初始化系统     │  ────────────  │
+  └──────────┘                      │  Linux 内核     │
+                                    │  ────────────  │
+                                    │  硬件层         │
+                                    └────────────────┘
+```
+
 > What is Linux?（什么是 Linux？）
 >
 > Linux is a clone of the operating system Unix, written from scratch by Linus Torvalds with assistance from a loosely-knit team of hackers across the Net. It aims towards POSIX and Single UNIX Specification compliance.（Linux 是 UNIX 操作系统的克隆版本，由 Linus Torvalds 从零开始编写，并在网络上一支组织松散的极客团队协助下完成。Linux 旨在实现对 POSIX 和单一 UNIX 规范的兼容）
