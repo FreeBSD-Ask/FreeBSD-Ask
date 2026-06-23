@@ -92,7 +92,6 @@
 * [10.3 X11 窗口管理器](di-10-zhang-x-window-xi-tong/di-10.3-jie-x11-chuang-kou-guan-li-qi.md)
 * [10.4 系统字体](di-10-zhang-x-window-xi-tong/di-10.4-jie-xi-tong-zi-ti.md)
 * [10.5 远程桌面](di-10-zhang-x-window-xi-tong/di-10.5-jie-yuan-cheng-zhuo-mian.md)
-* [10.6 root 用户桌面登录](di-10-zhang-x-window-xi-tong/di-10.6-jie-root-yong-hu-zhuo-mian-deng-lu.md)
 
 ## 第 11 章 Wayland 系统
 

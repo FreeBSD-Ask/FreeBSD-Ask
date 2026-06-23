@@ -43,7 +43,7 @@
 
 **第 9 章 显卡驱动**：介绍显卡驱动概论，Intel、AMD 和 NVIDIA 显卡驱动的安装与配置。
 
-**第 10 章 X Window 系统**：介绍 X Window 系统概论、显示管理器、X11 窗口管理器、系统字体、远程桌面及 root 用户桌面登录。
+**第 10 章 X Window 系统**：介绍 X Window 系统概论、显示管理器、X11 窗口管理器、系统字体及远程桌面。
 
 **第 11 章 Wayland 系统**：介绍 Wayland 概论、混成器、Wayland 登录管理器及 Wayland 的远程桌面。
 
