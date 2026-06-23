@@ -10,6 +10,24 @@ BSD 之名源自其发源地：美国加州大学伯克利分校（University of
 
 1868 年，加利福尼亚州的立法机构决定在 Berkeley 上建立加州大学。
 
+BSD 之名的命名渊源可归纳如下：
+
+```text
+乔治·贝克莱（1685—1753，哲学家）
+  │  诗句"Westward the course of empire takes its way"
+  ↓
+弗雷德里克·比林斯（1866 年）
+  │  援引诗句，建议将城镇命名为 Berkeley
+  ↓
+加州大学伯克利分校（1868 年建校）
+  │  CSRG（计算机系统研究小组）成立
+  ↓
+BSD（Berkeley Software Distribution，伯克利软件发行版）
+  │
+  ↓
+FreeBSD（CSRG 工作的延续）
+```
+
 下面借贝克莱约 1726 年创作的这首诗《论在美洲传播艺术与学术之前景的诗篇》，了解伯克利之名的由来。该诗正式出版于 1752 年的 Miscellany 文集中，其确切创作年份尚存争议，但学界多据其与百慕大办学计划（1725 年提出）的关联，推定为 1725—1726 年间所作。
 
 The Muse, disgusted at an age and clime
