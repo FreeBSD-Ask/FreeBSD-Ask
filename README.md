@@ -92,6 +92,36 @@ Microsoft Rewards 是微软必应搜索提供的积分计划。可通过 Microso
 
 ## 授权协议与法律声明
 
+本书部分内容参考、翻译或改写自 FreeBSD 文档项目，原著版权归属于 The FreeBSD Project。许可证如下：
+
+```text
+Copyright 1994-2026 The FreeBSD Project.
+
+Redistribution and use in source (AsciiDoc) and 'compiled' forms (HTML, PDF,
+EPUB and so forth) with or without modification, are permitted provided that
+the following conditions are met:
+
+1. Redistributions of source code (AsciiDoc) must retain the above copyright
+   notice, this list of conditions and the following disclaimer as the first
+   lines of this file unmodified.
+
+2. Redistributions in compiled form (converted to PDF, EPUB and other formats)
+   must reproduce the above copyright notice, this list of conditions and the
+   following disclaimer in the documentation and/or other materials provided
+   with the distribution.
+
+THIS DOCUMENTATION IS PROVIDED BY THE FREEBSD DOCUMENTATION PROJECT "AS IS" AND
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE FREEBSD DOCUMENTATION PROJECT BE LIABLE FOR
+ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+DOCUMENTATION, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+```
+
 除特别注明外，本书中的文字、图表等内容依据 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) 协议发布。
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-orange.svg)](https://creativecommons.org/licenses/by/4.0/)
