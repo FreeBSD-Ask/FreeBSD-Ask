@@ -1,5 +1,23 @@
 # 2.4 FreeBSD 简史
 
+```text
+FreeBSD 发展关键里程碑
+
+1961 │ CTSS 分时系统
+1969 │ UNIX 诞生
+1973 │ UNIX 内核用 C 语言重写
+1978 │ 1BSD 发布
+1983 │ 4.2BSD 发布
+1991 │ Net/2 与 386BSD
+1993 │ FreeBSD 项目成立（6 月 19 日）
+1994 │ FreeBSD Ports；USL 诉讼和解
+2000 │ Jail；FreeBSD 基金会成立；kqueue
+2008 │ ZFS 进入 FreeBSD
+2012 │ Clang/LLVM 成为默认编译器
+2020 │ src 仓库迁移至 Git
+2025 │ PkgBase 引入（15.0-RELEASE）
+```
+
 - 1961 年分时操作系统（Timesharing OS）
 
 在 20 世纪 60 年代初，分时操作系统诞生。1961 年 11 月，麻省理工学院的 Fernando Corbató 在 IBM 709 上首次演示了兼容分时系统（CTSS），即最早的分时系统之一。同期，曼彻斯特大学设计的 Atlas 计算机上也实现了 Atlas 监控程序，该系统于 1962 年 12 月 7 日正式投入运行，首次将虚拟存储器投入实际使用——虚拟存储器的概念则由德国物理学家 Fritz-Rudolf Güntsch 于 1957 年在其博士论文中率先提出（参见：Denning P J. Virtual Memory[J]. ACM Computing Surveys, 1970, 2(3): 153-189）。在那个时代，分时共享系统意味着两个人共用同一台计算机，通常需要安排一张小时时间表来规划使用计算机的时间。
