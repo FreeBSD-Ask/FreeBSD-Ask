@@ -96,6 +96,19 @@ UNIX 系统最初被命名为 UNICS，其诞生源于一项游戏项目。贝尔
 
 Thompson 在 PDP-7 上完成新操作系统的初步开发后，与数位同事讨论时，该系统尚无正式名称。直到 1970 年，布莱恩·柯尼汉（Brian Kernighan）建议将其命名为**UNICS**（**Uniplexed** Information and Computing Service, **单路复用** 信息和计算服务），作为对 **Multics**（**Multiplexed** Information and Computing Service, **多路复用** 信息和计算服务）的戏仿。该名称后来演变为 **UNIX**。
 
+上述从 Multics 到 UNIX 的关键演进节点可归纳如下：
+
+```text
+1961 │  MIT 演示 CTSS（兼容分时系统）
+     │
+1964 │  08 月  通用电气公司签约，提供硬件
+     │  11 月  贝尔实验室加入，形成三方合作
+     │
+1969 │  04 月  贝尔实验室退出 Multics 项目
+     │
+1970 │  柯尼汉建议命名 UNICS（后演变为 UNIX）
+```
+
 ## 参考文献
 
 - Raymond E S. UNIX 编程艺术[M]. 姜宏,何源,蔡晓骏,译. 北京: 电子工业出版社, 2012. ISBN: 978-7-121-17665-4. 阐述 UNIX 哲学与软件工程实践原则。
