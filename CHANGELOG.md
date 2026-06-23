@@ -2,6 +2,8 @@
 
 ## 2026 年第二季度
 
+- 2022.6.24
+  - X11 的归 X11、Wayland 的归 Wayland
 - 2026.6.22
   - “10.2 KDE 6 桌面环境（Wayland 会话）”新增“通过 Ly 启动桌面”
   - 使用 Port **www/code-server** 重新整理“22.1 code-server 和 clangd 开发环境”
