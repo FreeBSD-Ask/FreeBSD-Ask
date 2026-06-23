@@ -95,9 +95,7 @@
 ## 第 11 章 Wayland 系统
 
 * [11.1 Wayland 概论](di-11-zhang-wayland-xi-tong/di-11.1-jie-wayland-gai-lun.md)
-* [11.2 混成器](di-11-zhang-wayland-xi-tong/di-11.2-jie-hun-cheng-qi.md)
-* [11.3 Wayland 显示管理器](di-11-zhang-wayland-xi-tong/di-11.3-jie-wayland-xian-shi-guan-li-qi.md)
-* [11.4 Wayland 的远程桌面](di-11-zhang-wayland-xi-tong/di-11.4-jie-wayland-de-yuan-cheng-zhuo-mian.md)
+* [11.2 Wayland 显示管理器](di-11-zhang-wayland-xi-tong/di-11.2-jie-wayland-xian-shi-guan-li-qi.md)
 
 ## 第 12 章 桌面环境
 
