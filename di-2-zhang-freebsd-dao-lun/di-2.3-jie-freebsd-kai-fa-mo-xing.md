@@ -8,26 +8,6 @@ FreeBSD 的版本管理体系包含两个开发分支（CURRENT 与 STABLE）和
 
 具体流程：CURRENT → 分出 STABLE 分支 → ALPHA → BETA → RC → RELEASE。
 
-```sh
-FreeBSD 版本发布流程
-
-main 分支（CURRENT）
-  │  实验性变更，最前沿源代码
-  │
-  │  MFC（Merge From CURRENT）
-  │  最短 3 天测试要求
-  ↓
-stable/X 分支（STABLE，ABI 固定）
-  │
-  ├─ ALPHA（预发布快照）
-  │
-  ├─ BETA
-  │
-  ├─ RC（Release Candidate）
-  │
-  └─ RELEASE（生产环境）
-```
-
 RELEASE 版本经过完整的 BETA→RC 测试周期，发布后仅接受安全与稳定性修复，适用于生产环境。
 
 ![FreeBSD 版本更迭](../.gitbook/assets/bsd-release-versions.png)
