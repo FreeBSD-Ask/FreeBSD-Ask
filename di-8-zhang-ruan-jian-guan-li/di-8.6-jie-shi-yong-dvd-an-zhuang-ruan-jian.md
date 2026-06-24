@@ -10,16 +10,16 @@
 DVD 安装软件流程
 
   ISO 文件
-      │
-      │ mdconfig
+      │　
+      │ mdconfig　　　　　　　　　　
       ▼
   /dev/md0
-      │
-      │ mount -t cd9660
+      │　
+      │ mount -t cd9660　　　　　　　　　　　　　　　　　
       ▼
   /dist（挂载点）
-      │
-      │ pkg install
+      │　
+      │ pkg install　　　　　　　　　　　　　
       ▼
   软件安装完成（离线）
 ```

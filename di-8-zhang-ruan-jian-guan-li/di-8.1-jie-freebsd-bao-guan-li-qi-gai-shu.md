@@ -18,27 +18,27 @@ FreeBSD 软件管理体系
 
               freebsd-ports 存储库
               （Ports 框架：Makefile + 补丁）
-                      │
-         ┌────────────┼────────────┐
-         │            │            │
+                      │　
+         ┌────────────┼────────────┐　　　　　　　　　　　　　　　　　　　　　　　　　　　
+         │            │            │　　　　　　　　　　　　　　　　　　　　　　　　　　　
          ▼            ▼            ▼
     main 分支   2025Q1 分支   2025Q2 分支 ...
    （滚动更新）  （季度分支）  （季度分支）
-         │            │            │
-         │ 构建       │ 构建       │ 构建
+         │            │            │　　　　　　　　　　　　　　　　　　　　　　　　　　　
+         │ 构建       │ 构建       │ 构建      　　　　　　　　　　　　　　　　　　　　
          ▼            ▼            ▼
     latest pkg    quarterly pkg  quarterly pkg
    （最新软件包） （稳定软件包） （稳定软件包）
-         │            │
-         └─────┬──────┘
-               │
+         │            │　　　　　　　　　　　　　　
+         └─────┬──────┘　　　　　　　　　　　　　　
+               │　
                ▼
          pkg install
        （用户安装命令）
 
   基本系统更新（独立于 Ports）：
-    freebsd-src 存储库 ──► freebsd-update（传统）
-                       ──► PkgBase（pkg 管理，技术预览）
+    freebsd-src 存储库 ──► freebsd-update（传统）       　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　
+                       ──► PkgBase（pkg 管理，技术预览）         　　　　　　　　　　　　　　　
 ```
 
 下表概括了各类软件源的基本信息：
@@ -190,90 +190,90 @@ NetBSD 和 OpenBSD 也使用 Ports，但实现方式并不通用。
 
 ```sh
 /usr/
-└── ports/ # Ports 目录
-    ├── accessibility/ # 分类目录
-    ├── arabic/
-    ├── archivers/
-    ├── astro/
-    ├── audio/
-    ├── benchmarks/
-    ├── biology/
-    ├── cad/
-    ├── chinese/
-    ├── comms/
-    ├── converters/
-    ├── databases/ # 数据库分类
-    │   ├── postgresql18-server/ # 单个 Port 示例
-    │   │   ├── Makefile # 主文件
-    │   │   ├── distinfo # 校验和文件
-    │   │   ├── pkg-descr # 软件描述
-    │   │   ├── files/ # 补丁文件目录
-    │   │   └── pkg-plist-* # 安装文件列表
-    │   └── ……其他 Port……
-    ├── deskutils/
-    ├── devel/
-    ├── dns/
-    ├── editors/
-    ├── emulators/
-    ├── filesystems/
-    ├── finance/
-    ├── french/
-    ├── ftp/
-    ├── games/
-    ├── german/
-    ├── graphics/
-    ├── hebrew/
-    ├── hungarian/
-    ├── irc/
-    ├── japanese/
-    ├── java/
-    ├── korean/
-    ├── lang/
-    ├── mail/
-    ├── math/
-    ├── misc/
-    ├── multimedia/
-    ├── net/
-    ├── net-im/
-    ├── net-mgmt/
-    ├── net-p2p/
-    ├── news/
-    ├── polish/
-    ├── portuguese/
-    ├── print/
-    ├── russian/
-    ├── science/
-    ├── security/
-    ├── shells/
-    ├── sysutils/
-    ├── textproc/
-    ├── ukrainian/
-    ├── vietnamese/
-    ├── www/
-    ├── x11/
-    ├── x11-clocks/
-    ├── x11-drivers/
-    ├── x11-fm/
-    ├── x11-fonts/
-    ├── x11-servers/
-    ├── x11-themes/
-    ├── x11-toolkits/
-    ├── x11-wm/
-    ├── ports-mgmt/
-    ├── Mk/
-    ├── Templates/
-    ├── Tools/
-    ├── Keywords/
-    ├── distfiles/ # 下载源文件目录
-    ├── COPYRIGHT
-    ├── GIDs
-    ├── UIDs
-    ├── README
-    ├── CHANGES
-    ├── MOVED
-    ├── UPDATING
-    ├── Makefile
-    └── CONTRIBUTING.md
+└── ports/ # Ports 目录  　　　　　　　　　　　　　　　　　　　
+    ├── accessibility/ # 分类目录    　　　　　　　　　　　　　　　　　　　　　
+    ├── arabic/　　　　　　　　　　　
+    ├── archivers/　　　　　　　　　　　　　　
+    ├── astro/　　　　　　　　　　
+    ├── audio/　　　　　　　　　　
+    ├── benchmarks/　　　　　　　　　　　　　　　
+    ├── biology/　　　　　　　　　　　　
+    ├── cad/　　　　　　　　
+    ├── chinese/　　　　　　　　　　　　
+    ├── comms/　　　　　　　　　　
+    ├── converters/　　　　　　　　　　　　　　　
+    ├── databases/ # 数据库分类     　　　　　　　　　　　　　　　　　
+    │   ├── postgresql18-server/ # 单个 Port 示例    　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　
+    │   │   ├── Makefile # 主文件   　　　　　　　　　　　　　　　　　　　　　　　
+    │   │   ├── distinfo # 校验和文件     　　　　　　　　　　　　　　　　　　　　　　　
+    │   │   ├── pkg-descr # 软件描述    　　　　　　　　　　　　　　　　　　　　　　　　
+    │   │   ├── files/ # 补丁文件目录      　　　　　　　　　　　　　　　　　　　　　
+    │   │   └── pkg-plist-* # 安装文件列表      　　　　　　　　　　　　　　　　　　　　　　　　　　
+    │   └── ……其他 Port……      　　　　　　　　　　　　　
+    ├── deskutils/　　　　　　　　　　　　　　
+    ├── devel/　　　　　　　　　　
+    ├── dns/　　　　　　　　
+    ├── editors/　　　　　　　　　　　　
+    ├── emulators/　　　　　　　　　　　　　　
+    ├── filesystems/　　　　　　　　　　　　　　　　
+    ├── finance/　　　　　　　　　　　　
+    ├── french/　　　　　　　　　　　
+    ├── ftp/　　　　　　　　
+    ├── games/　　　　　　　　　　
+    ├── german/　　　　　　　　　　　
+    ├── graphics/　　　　　　　　　　　　　
+    ├── hebrew/　　　　　　　　　　　
+    ├── hungarian/　　　　　　　　　　　　　　
+    ├── irc/　　　　　　　　
+    ├── japanese/　　　　　　　　　　　　　
+    ├── java/　　　　　　　　　
+    ├── korean/　　　　　　　　　　　
+    ├── lang/　　　　　　　　　
+    ├── mail/　　　　　　　　　
+    ├── math/　　　　　　　　　
+    ├── misc/　　　　　　　　　
+    ├── multimedia/　　　　　　　　　　　　　　　
+    ├── net/　　　　　　　　
+    ├── net-im/　　　　　　　　　　　
+    ├── net-mgmt/　　　　　　　　　　　　　
+    ├── net-p2p/　　　　　　　　　　　　
+    ├── news/　　　　　　　　　
+    ├── polish/　　　　　　　　　　　
+    ├── portuguese/　　　　　　　　　　　　　　　
+    ├── print/　　　　　　　　　　
+    ├── russian/　　　　　　　　　　　　
+    ├── science/　　　　　　　　　　　　
+    ├── security/　　　　　　　　　　　　　
+    ├── shells/　　　　　　　　　　　
+    ├── sysutils/　　　　　　　　　　　　　
+    ├── textproc/　　　　　　　　　　　　　
+    ├── ukrainian/　　　　　　　　　　　　　　
+    ├── vietnamese/　　　　　　　　　　　　　　　
+    ├── www/　　　　　　　　
+    ├── x11/　　　　　　　　
+    ├── x11-clocks/　　　　　　　　　　　　　　　
+    ├── x11-drivers/　　　　　　　　　　　　　　　　
+    ├── x11-fm/　　　　　　　　　　　
+    ├── x11-fonts/　　　　　　　　　　　　　　
+    ├── x11-servers/　　　　　　　　　　　　　　　　
+    ├── x11-themes/　　　　　　　　　　　　　　　
+    ├── x11-toolkits/　　　　　　　　　　　　　　　　　
+    ├── x11-wm/　　　　　　　　　　　
+    ├── ports-mgmt/　　　　　　　　　　　　　　　
+    ├── Mk/　　　　　　　
+    ├── Templates/　　　　　　　　　　　　　　
+    ├── Tools/　　　　　　　　　　
+    ├── Keywords/　　　　　　　　　　　　　
+    ├── distfiles/ # 下载源文件目录       　　　　　　　　　　　　　　　　　
+    ├── COPYRIGHT　　　　　　　　　　　　　
+    ├── GIDs　　　　　　　　
+    ├── UIDs　　　　　　　　
+    ├── README　　　　　　　　　　
+    ├── CHANGES　　　　　　　　　　　
+    ├── MOVED　　　　　　　　　
+    ├── UPDATING　　　　　　　　　　　　
+    ├── Makefile　　　　　　　　　　　　
+    └── CONTRIBUTING.md　　　　　　　　　　　　　　　　　　　
 ```
 
 查看 Ports 框架结构：
@@ -340,7 +340,7 @@ Ports 框架可以将源代码编译并打包成 pkg 格式的二进制包，完
 
 ```sh
 /usr/ports/
-└── distfiles/ # Ports 的下载路径
+└── distfiles/ # Ports 的下载路径     　　　　　　　　　　　　　　　　　　　　　　　
 ```
 
 ## PkgBase 源分类
