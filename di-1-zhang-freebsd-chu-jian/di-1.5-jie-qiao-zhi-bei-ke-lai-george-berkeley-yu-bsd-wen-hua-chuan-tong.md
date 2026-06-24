@@ -12,7 +12,7 @@ BSD 之名源自其发源地：美国加州大学伯克利分校（University of
 
 BSD 之名的命名渊源可归纳如下：
 
-```text
+```sh
 乔治·贝克莱（1685—1753，哲学家）
   │  诗句"Westward the course of empire takes its way"
   ↓
