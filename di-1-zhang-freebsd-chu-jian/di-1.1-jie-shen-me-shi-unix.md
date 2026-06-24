@@ -23,15 +23,15 @@ UNIX 的三重含义
 　　│　　　　　　│　　　　　　│
 　　▼　　　　　　▼　　　　　　▼
 ┌──────────┐　┌──────────┐　┌──────────────┐
-│　商标　　 │　│　规范　　 │　│　哲学思想　　 │
+│　商标　　　│　│　规范　　　│　│　哲学思想　　　│
 ├──────────┤　├──────────┤　├──────────────┤
-│　法律　　 │　│　技术　　 │　│　设计　　　　 │
-│　认证　　 │　│　标准　　 │　│　理念　　　　 │
-│　持有　　 │　│　SUS　　　│　│　小即美　　　 │
-│　方：开放 │　│　POSIX　　│　│　沉默是金　　 │
-│　组织　　 │　│　　　　　 │　│　组合优先　　 │
-│　　　　   │　│　　　　　 │　│　简洁至上　　 │
-└──────────┘　└──────────┘　└──────────────┘                          
+│　法律　　　│　│　技术　　　│　│　设计　　　　　│
+│　认证　　　│　│　标准　　　│　│　理念　　　　　│
+│　持有　　　│　│　SUS　　　│　│　小即美　　　　│
+│　方：开放　│　│　POSIX　　│　│　沉默是金　　　│
+│　组织　　　│　│　　　　　　│　│　组合优先　　　│
+│　　　　　　│　│　　　　　　│　│　简洁至上　　　│
+└──────────┘　└──────────┘　└──────────────┘                    
 ```
 
 根据当前 UNIX 商标持有者开放组织（The Open Group）官网 [UNIX® Certification](https://www.opengroup.org/openbrand/register/) 所述：“Only systems that are fully compliant and certified according to the Single UNIX Specification are qualified to use the UNIX® trademark.”（只有完全符合《单一 UNIX 规范》并通过认证的系统，才有资格使用 UNIX® 商标）
