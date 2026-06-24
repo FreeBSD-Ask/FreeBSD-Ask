@@ -276,10 +276,10 @@ $ msedit abc.txt
 ```sh
 ~/.vimrc  # Vim 配置文件
 ~/.config/
-└── nvim/
-    └── init.lua  # NeoVim 配置文件
+└── nvim/　　　　　　　　　
+    └── init.lua  # NeoVim 配置文件    　　　　　　　　　　　　　　　　　　　　　　　
 ~/.emacs.d/
-└── init.el  # Emacs 配置文件
+└── init.el  # Emacs 配置文件    　　　　　　　　　　　　　　　　　　　　　
 ```
 
 ## 课后习题

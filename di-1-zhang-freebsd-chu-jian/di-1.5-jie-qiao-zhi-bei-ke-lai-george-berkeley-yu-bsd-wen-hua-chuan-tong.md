@@ -14,16 +14,16 @@ BSD 之名的命名渊源可归纳如下：
 
 ```sh
 乔治·贝克莱（1685—1753，哲学家）
-  │  诗句"Westward the course of empire takes its way"
+  │  诗句"Westward the course of empire takes its way"  　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　
   ↓
 弗雷德里克·比林斯（1866 年）
-  │  援引诗句，建议将城镇命名为 Berkeley
+  │  援引诗句，建议将城镇命名为 Berkeley             　　　　　　　　　　　　
   ↓
 加州大学伯克利分校（1868 年建校）
-  │  CSRG（计算机系统研究小组）成立
+  │  CSRG（计算机系统研究小组）成立             　　　　　　　
   ↓
 BSD（Berkeley Software Distribution，伯克利软件发行版）
-  │
+  │　
   ↓
 FreeBSD（CSRG 工作的延续）
 ```
