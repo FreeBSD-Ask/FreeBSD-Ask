@@ -6,6 +6,24 @@
 
 要挂载现有的文件系统镜像，请使用 `mdconfig` 为 ISO 文件的指定名称和空闲的单元编号。随后，引用该单元编号将其挂载到现有的挂载点。挂载后，ISO 文件中的文件将显示在挂载点中。
 
+```text
+DVD 安装软件流程
+
+  ISO 文件
+      │
+      │ mdconfig
+      ▼
+  /dev/md0
+      │
+      │ mount -t cd9660
+      ▼
+  /dist（挂载点）
+      │
+      │ pkg install
+      ▼
+  软件安装完成（离线）
+```
+
 此示例将 **FreeBSD-14.2-RELEASE-amd64-dvd1.iso** 附加到内存设备 **/dev/md0**，随后将该内存设备挂载到 **/dist**：
 
 ### 直接挂载本地 ISO
