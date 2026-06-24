@@ -177,8 +177,8 @@ FreeBSD 无线网络涉及以下配置文件。
 
 ```sh
 /etc/
-├── rc.conf              # 系统启动配置文件        　　　　　　　　　　　　　　　　　　　　　　　　　　　
-└── wpa_supplicant.conf  # WPA 无线网络配置文件        　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　
+├── rc.conf              # 系统启动配置文件
+└── wpa_supplicant.conf  # WPA 无线网络配置文件
 ```
 
 完成上述配置后，重启系统或网络服务使所有配置生效。
@@ -288,17 +288,17 @@ wlans_bwi0="wlan0"
 
 ```sh
 /
-├── boot/　　　　　　　　　
-│   └── loader.conf        # 系统启动加载配置文件          　　　　　　　　　　　　　　　　　　　　　　　　　　　　　
-├── usr/　　　　　　　　
-│   ├── ports/　　　　　　　　　　　　　　
-│   │   └── net/　　　　　　　　　　　　　　　　
-│   │       ├── bwi-firmware-kmod/   # Broadcom bwi 固件 Port  　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　
-│   │       └── bwn-firmware-kmod/   # Broadcom bwn 固件 Port  　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　
-│   └── src/　　　　　　　　　　　　
-│       └── sys/　　　　　　　　　　　　　　　　
-│           └── amd64/　　　　　　　　　　　　　　　　　　　　　　
-│               └── conf/              # 内核配置文件目录        　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　
+├── boot/
+│   └── loader.conf        # 系统启动加载配置文件
+├── usr/
+│   ├── ports/
+│   │   └── net/
+│   │       ├── bwi-firmware-kmod/   # Broadcom bwi 固件 Port
+│   │       └── bwn-firmware-kmod/   # Broadcom bwn 固件 Port
+│   └── src/
+│       └── sys/
+│           └── amd64/
+│               └── conf/              # 内核配置文件目录
 ```
 
 编辑 **/boot/loader.conf** 文件添加以下配置，设置系统在启动时加载 `bwn` 驱动：
