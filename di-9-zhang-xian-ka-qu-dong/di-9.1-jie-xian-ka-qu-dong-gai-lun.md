@@ -46,7 +46,7 @@ DRM 是 Linux 内核的子系统，负责与现代显卡的 GPU 交互。FreeBSD
 
 drm-kmod 元 Port 自动选择驱动版本的逻辑如下：
 
-```text
+```sh
 drm-kmod 版本选择流程
 
   FreeBSD 版本
