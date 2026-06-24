@@ -6,13 +6,13 @@
 
 首先，观察以下两幅图像：
 
-![文件系统基础](../.gitbook/assets/filesystem-bamboo-2.jpg)
+![屋后竹林](../.gitbook/assets/filesystem-bamboo-2.jpg)
 
-![文件系统基础](../.gitbook/assets/filesystem-bamboo-3.jpg)
+![傍晚的行道树](../.gitbook/assets/filesystem-bamboo-3.jpg)
 
 前一幅图像展示的是竹子（Bambusoideae），后一幅图像展示的是若干棵行道树。
 
-亚里士多德认为种子之所以能长成大树，是因为种子蕴含一种潜能，环境条件具备时便可能长成一棵树（参见《形而上学》IX.7, 1049b）。人与器物的差别，在于人没有固定不变的潜能——这契合了儒家“君子不器”（何晏，注；邢昺，疏. 论语注疏[M]. 北京：中国致公出版社，2016. ISBN: 978-7-5145-0846-8.）和萨特“存在先于本质”之说（参见 Sartre J P. 萨特哲学论文集[M]. 潘培庆，等，译. 合肥：安徽文艺出版社，1998. ISBN: 7-5396-1632-6.）。由此观之，理解 UNIX 目录与 Windows 目录的异同，便能洞悉操作系统设计与实现的逻辑。
+亚里士多德认为种子之所以能长成大树，是因为种子蕴含一种潜能，环境条件具备时便可能长成一棵树（《形而上学》IX.7, 1049b）。人与器物的差别，在于人没有固定不变的潜能——这契合了儒家“君子不器”和萨特“存在先于本质”之说。由此观之，理解 UNIX 目录与 Windows 目录的异同，便能洞悉操作系统设计与实现的逻辑。
 
 ![文件系统基础](../.gitbook/assets/filesystem-bamboo.png)
 
@@ -120,6 +120,8 @@ PSPath
 
 ### 参考文献
 
+- Sartre J P. 萨特哲学论文集[M]. 潘培庆，等，译. 合肥：安徽文艺出版社，1998. ISBN: 7-5396-1632-6.
+- 何晏，注；邢昺，疏. 论语注疏[M]. 北京：中国致公出版社，2016. ISBN: 978-7-5145-0846-8.
 - 微软. PARTITION_INFORMATION_GPT[EB/OL]. [2026-04-18]. <https://learn.microsoft.com/en-us/windows/win32/api/winioctl/ns-winioctl-partition_information_gpt>. GPT 分区类型 GUID 定义，其中 Microsoft Basic Data 类型为 EBD0A0A2-B9E5-4433-87C0-68B6B72699C7。
 - 微软. Supporting Mount Manager Requests in a Storage Class Driver[EB/OL]. [2026-04-18]. <https://learn.microsoft.com/en-us/windows-hardware/drivers/storage/supporting-mount-manager-requests-in-a-storage-class-driver>. Windows 装入管理器将盘符与分区的映射关系持久化存储于注册表 **HKLM\SYSTEM\MountedDevices**。
 - GBIF. Bambusoideae Luerss.[EB/OL]. [2026-04-18]. <https://www.gbif.org/species/113642445>. 竹亚科许多物种具有群体开花（gregarious flowering）特性，开花后常因资源耗竭而死亡；竹子通过地下根茎系统进行克隆生长（clonal growth），同一克隆的个体共享资源。
