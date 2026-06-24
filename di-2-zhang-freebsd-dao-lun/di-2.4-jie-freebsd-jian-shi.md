@@ -3,20 +3,20 @@
 ```sh
 FreeBSD 发展关键里程碑
 
-1961 │ CTSS 分时系统    　　　　　　　　　　　　
-1969 │ UNIX 诞生  　　　　　　　　　　　　
-1973 │ UNIX 内核用 C 语言重写       　　　　　　　　　　　　　　　
-1978 │ 1BSD 发布  　　　　　　　　　　　　
-1983 │ 4.2BSD 发布  　　　　　　　　　　　　　　
-1991 │ Net/2　　　　　　　　　　　　
-1992 │ 386BSD　　　　　　　　　　　　　
-1993 │ FreeBSD 项目成立（6 月 19 日）        　　　　　　　　　　　　　　　　　　　　　
-1994 │ FreeBSD Ports；USL 诉讼和解     　　　　　　　　　　　　　　　　　　　　　　　　
-2000 │ Jail；FreeBSD 基金会成立；kqueue       　　　　　　　　　　　　　　　　　　　　　　　　　
-2008 │ ZFS 进入 FreeBSD  　　　　　　　　　　　　　　　　　　　
-2012 │ Clang/LLVM 成为默认编译器       　　　　　　　　　　　　　　　　　　
-2020 │ src 仓库迁移至 Git     　　　　　　　　　　　　　　　
-2025 │ PkgBase 引入（15.0-RELEASE）    　　　　　　　　　　　　　　　　　　　　　　　　　　　
+1961 │ CTSS 分时系统
+1969 │ UNIX 诞生
+1973 │ UNIX 内核用 C 语言重写
+1978 │ 1BSD 发布
+1983 │ 4.2BSD 发布
+1991 │ Net/2
+1992 │ 386BSD
+1993 │ FreeBSD 项目成立（6 月 19 日）
+1994 │ FreeBSD Ports；USL 诉讼和解
+2000 │ Jail；FreeBSD 基金会成立；kqueue
+2008 │ ZFS 进入 FreeBSD
+2012 │ Clang/LLVM 成为默认编译器
+2020 │ src 仓库迁移至 Git
+2025 │ PkgBase 引入（15.0-RELEASE）
 ```
 
 - 1961 年分时操作系统（Timesharing OS）

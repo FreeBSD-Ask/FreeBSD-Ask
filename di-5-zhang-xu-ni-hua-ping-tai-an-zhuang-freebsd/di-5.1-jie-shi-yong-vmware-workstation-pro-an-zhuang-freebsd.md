@@ -160,14 +160,14 @@ VMware 的半虚拟化驱动程序的开源实现 open-vm-tools 通过 HGFS（Ho
 
 ```sh
 /
-├── root/　　　　　　　　　
-│   └── xorg.conf.new # 生成的 Xorg 默认配置文件         　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　
-└── usr/　　　　　　　　
-    └── local/　　　　　　　　　　
-        └── etc/　　　　　　　　
-            └── X11/　　　　　　　　
-                └── xorg.conf.d/　　　　　　　　　　　　　　　　
-                    └── xorg.conf # 最终安装的 Xorg 配置文件         　　　　　　　　　　　　　　　　　　　　　　
+├── root/
+│   └── xorg.conf.new # 生成的 Xorg 默认配置文件
+└── usr/
+    └── local/
+        └── etc/
+            └── X11/
+                └── xorg.conf.d/
+                    └── xorg.conf # 最终安装的 Xorg 配置文件
 ```
 
 编辑 **/usr/local/etc/X11/xorg.conf.d/xorg.conf** 文件，修改以下段落（其他部分保持不变）：
@@ -227,12 +227,12 @@ fusefs_load="YES"
 
 ```sh
 /
-├── boot/　　　　　　　　　
-│   └── loader.conf    # 系统启动加载配置文件          　　　　　　　　　　　　　　　　　　　　　　　　　
-├── etc/　　　　　　　　
-│   └── fstab          # 文件系统挂载配置        　　　　　　　　　　　　　　　　　　　　　　　　　
-└── mnt/　　　　　　　　
-    └── hgfs/          # VMware 共享文件夹挂载点        　　　　　　　　　　　　　　　　　　　　　　　　　　　　
+├── boot/
+│   └── loader.conf    # 系统启动加载配置文件
+├── etc/
+│   └── fstab          # 文件系统挂载配置
+└── mnt/
+    └── hgfs/          # VMware 共享文件夹挂载点
 ```
 
 ### 挂载

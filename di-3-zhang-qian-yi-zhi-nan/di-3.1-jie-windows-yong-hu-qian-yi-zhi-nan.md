@@ -30,15 +30,15 @@ UNIX 与 Windows 目录结构对比
 UNIX：所有目录共享同一个根 /
 
          /
-    ┌────┼────┐　　　　　　　　　　　
-    │    │    │　　　　　　　　　　　
+    ┌────┼────┐
+    │    │    │
   home  etc  usr
 
 
 Windows：每个盘符是独立的根
 
   C:\       D:\       E:\
-  │         │         │　　　　　　　　　　　　　　　　　　　　　
+  │         │         │
   Users     Downloads  app
 ```
 
@@ -297,11 +297,11 @@ Windows 直接读取 RTC 的值，并视为本地时间（Local Time，地方时
 RTC 时间处理差异（以 UTC+8 为例）
 
 RTC 硬件时钟：12:00（无时区标注）
-  │　
-  ├─ Windows：将 RTC 视为本地时间        　　　　　　　　　　　　　　　
-  │    显示时间 = 12:00（UTC+8）      　　　　　　　　　　　　　　　　　　
-  │　
-  └─ UNIX：将 RTC 视为 UTC    　　　　　　　　　　　　　　　　
+  │
+  ├─ Windows：将 RTC 视为本地时间
+  │    显示时间 = 12:00（UTC+8）
+  │
+  └─ UNIX：将 RTC 视为 UTC
        显示时间 = 12:00 + 8 = 20:00（UTC+8）
 
 两者相差 8 小时。
