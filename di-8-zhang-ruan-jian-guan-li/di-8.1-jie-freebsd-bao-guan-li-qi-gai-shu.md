@@ -215,6 +215,7 @@ NetBSD 和 OpenBSD 也使用 Ports，但实现方式并不通用。
     ├── dns/
     ├── editors/
     ├── emulators/
+    ├── filesystems/
     ├── finance/
     ├── french/
     ├── ftp/
