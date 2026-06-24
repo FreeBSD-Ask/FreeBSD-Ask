@@ -78,7 +78,7 @@ login:
 
 账户切换与退出流程如下：
 
-```text
+```sh
 su / exit 用户切换流程
 
   root 用户
