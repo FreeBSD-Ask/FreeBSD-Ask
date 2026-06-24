@@ -6,7 +6,7 @@ macOS 与 FreeBSD 共享大量 BSD 组件，因此从 macOS 迁移到 FreeBSD，
 
 从历史角度看，macOS（以及由此衍生的 iOS、iPadOS 等）的核心层（Darwin）基于 BSD 代码，并融合了其他技术。
 
-```text
+```sh
 Original Unix
         |
         V

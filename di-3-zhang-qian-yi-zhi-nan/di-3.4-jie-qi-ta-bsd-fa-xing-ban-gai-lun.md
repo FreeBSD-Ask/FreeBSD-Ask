@@ -314,7 +314,7 @@ OpenBSD 的安全策略基于以下判断：超线程机制可能带来潜在的
 >
 > 这是前两个发现的 bug。第一个与前文提到的 CBC oracle 问题相关（Angelos 在软件加密栈中修复了它，但 Jason 维护的所有驱动中都忽略了这个问题。当时 Jason 与 Angelos 都未在 NETSEC 工作，所以我认为这只是一个疏忽，虽然是个相当严重的疏忽）。
 >
-> ```text
+> ```sh
 > CVSROOT:        /cvs
 > Module name:    src
 > Changes by:     [mikeb@cvs.openbsd.org](mailto:mikeb@cvs.openbsd.org)   2010/12/15 16:34:23
@@ -332,7 +332,7 @@ OpenBSD 的安全策略基于以下判断：超线程机制可能带来潜在的
 >
 > 原始提交信息（来自 angelos）：
 >
-> ```text
+> ```sh
 > 在 CBC 模式中，不要保留最后一个 blocksize 字节的密文用于下一条消息的 IV。每条消息应使用 arc4random() 获取新的 IV。
 >
 > 通过并认可：deraadt, markus, djm

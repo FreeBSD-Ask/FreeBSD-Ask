@@ -4,9 +4,11 @@
 
 ## 概述
 
-![什么是 shell](../.gitbook/assets/what-is-shell.png)
-
 shell 是用户与操作系统内核交互的命令解释程序（command interpreter），接受用户输入的命令并传递给内核执行。用户命令在 shell 中运行，通过 shell 与系统交互。shell 提供命令行界面，从输入通道接收命令并执行。许多 shell 提供内置功能以辅助日常任务，如文件管理、文件名通配、命令行编辑、命令宏和环境变量。FreeBSD 基本系统内置多种 shell，包括扩展 POSIX shell（sh(1)）和扩展 C shell（tcsh(1)）。其他 shell 可通过 FreeBSD Ports 获得，例如 Zsh 和 Bash。
+
+shell 在操作系统中的位置如下：
+
+![什么是 shell](../.gitbook/assets/what-is-shell.png)
 
 FreeBSD root 用户默认 shell 为 sh（自 FreeBSD 14 起），但基本系统同时提供 csh/tcsh 作为替代选择。
 
