@@ -50,17 +50,17 @@ drm-kmod 元 Port 自动选择驱动版本的逻辑如下：
 drm-kmod 版本选择流程
 
   FreeBSD 版本
-       │　
+       │
        ▼
   uname -U（获取 OSVERSION）
-       │　
-       ├── OSVERSION >= 1500509 ──► drm-612-kmod（Linux 6.12 LTS）  　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　
-       │                             FreeBSD 15.1+　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　
-       │　
-       ├── OSVERSION >= 1500031 ──► drm-66-kmod（Linux 6.6 LTS）  　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　
-       │                             FreeBSD 15.0　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　
-       │　
-       └── 其他 ──► drm-61-kmod（Linux 6.1 LTS）    　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　
+       │
+       ├── OSVERSION >= 1500509 ──► drm-612-kmod（Linux 6.12 LTS）
+       │                             FreeBSD 15.1+
+       │
+       ├── OSVERSION >= 1500031 ──► drm-66-kmod（Linux 6.6 LTS）
+       │                             FreeBSD 15.0
+       │
+       └── 其他 ──► drm-61-kmod（Linux 6.1 LTS）
                     FreeBSD 14.x
 
   也可手动安装特定版本：
