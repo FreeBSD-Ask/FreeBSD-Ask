@@ -13,7 +13,7 @@ FreeBSD 提供了多种类型的软件源，分别服务于不同的系统组件
 
 FreeBSD 软件管理体系的整体架构如下：
 
-```text
+```sh
 FreeBSD 软件管理体系
 
               freebsd-ports 存储库
