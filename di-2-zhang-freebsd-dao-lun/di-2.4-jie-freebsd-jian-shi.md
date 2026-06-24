@@ -1,6 +1,6 @@
 # 2.4 FreeBSD 简史
 
-```text
+```sh
 FreeBSD 发展关键里程碑
 
 1961 │ CTSS 分时系统

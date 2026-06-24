@@ -8,7 +8,7 @@ FreeBSD 的版本管理体系包含两个开发分支（CURRENT 与 STABLE）和
 
 具体流程：CURRENT → 分出 STABLE 分支 → ALPHA → BETA → RC → RELEASE。
 
-```text
+```sh
 FreeBSD 版本发布流程
 
 main 分支（CURRENT）
