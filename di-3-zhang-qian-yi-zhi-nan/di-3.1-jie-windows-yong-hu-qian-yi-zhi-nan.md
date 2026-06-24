@@ -24,7 +24,7 @@
 
 行道树则不同，每棵均独立生长。即便两树紧邻而立，也仍然是独立的个体。行道树正如 Windows 目录，盘符各自独立——**C:\Program Files (x86)\Google\Update**、**D:\BaiduNetdiskDownload\工具列表**、**E:\123\app**：`C`、`D`、`E` 盘彼此隔离、互不干扰。格式化 `D` 盘，不影响 `E` 盘中存储的文件。即便在 PE 中格式化 `C` 盘（可能不会显示为 `C` 盘），`E` 盘文件也不受影响。
 
-```text
+```sh
 UNIX 与 Windows 目录结构对比
 
 UNIX：所有目录共享同一个根 /
