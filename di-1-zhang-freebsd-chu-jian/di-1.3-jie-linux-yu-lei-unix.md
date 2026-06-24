@@ -6,23 +6,6 @@
 
 Linux 是当今世界广泛使用的开源操作系统。Linux 在不同语境下含义不同：狭义上指 Linux 内核，广义上通常指完整的操作系统，即 GNU/Linux。Linux 内核官方文档对这一问题的回答如下：
 
-```sh
-Linux 的狭义与广义
-
-  狭义 Linux                         广义 Linux
-  (Linux 内核)                       (GNU/Linux 发行版)
-  ┌──────────┐                      ┌────────────────┐
-  │ 进程管理  │                      │  应用程序层     │
-  │ 内存管理  │     + GNU 工具       │  (桌面/服务器)  │
-  │ 文件系统  │ ──────────────────►  │  ────────────  │
-  │ 网络协议栈│     + 包管理器       │  GNU 工具链     │
-  │ 设备驱动  │     + 初始化系统     │  ────────────  │
-  └──────────┘                      │  Linux 内核     │
-                                    │  ────────────  │
-                                    │  硬件层         │
-                                    └────────────────┘
-```
-
 > What is Linux?（什么是 Linux？）
 >
 > Linux is a clone of the operating system Unix, written from scratch by Linus Torvalds with assistance from a loosely-knit team of hackers across the Net. It aims towards POSIX and Single UNIX Specification compliance.（Linux 是 UNIX 操作系统的克隆版本，由 Linus Torvalds 从零开始编写，并在网络上一支组织松散的极客团队协助下完成。Linux 旨在实现对 POSIX 和单一 UNIX 规范的兼容）
@@ -35,26 +18,7 @@ Linux 的狭义与广义
 
 以下框架图可更清晰地展示 Linux 系统的层次结构：
 
-```sh
-+----------------------------------------+
-|               应用程序层               |
-|    (浏览器/办公软件/开发工具/数据库等) |
-+----------------------------------------+
-|            图形界面（可选）            |
-|         (GNOME / KDE / Xfce 等)        |
-+----------------------------------------+
-|             核心系统工具层             |
-|  · GNU 基础工具 (bash/gcc/glibc 等)    |
-|  · 包管理器 (apt/yum/pacman 等)        |
-|  · 初始化系统 (systemd/OpenRC 等)      |
-+----------------------------------------+
-|              Linux 内核层              |
-|       (狭义 Linux，直接控制硬件)       |
-+----------------------------------------+
-|                 硬件层                 |
-|        (CPU/内存/硬盘/网卡/外设)       |
-+----------------------------------------+
-```
+![Linux 的狭义与广义](../.gitbook/assets/mermaid-gnulinux.png)
 
 **核心系统工具层**包含 GNU 基础工具（如 bash、gcc、glibc 等）、包管理器和初始化系统等组件。**GNU 基础工具**是 GNU 项目开发的命令行工具和系统库，为操作系统提供基本功能。
 
