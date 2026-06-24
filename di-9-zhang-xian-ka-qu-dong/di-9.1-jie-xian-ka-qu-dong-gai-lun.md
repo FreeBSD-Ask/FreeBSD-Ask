@@ -55,16 +55,16 @@ drm-kmod 版本选择流程
   uname -U（获取 OSVERSION）
        │
        ├── OSVERSION >= 1500509 ──► drm-612-kmod（Linux 6.12 LTS）
-       │                           FreeBSD 15.1+
+       │                             FreeBSD 15.1+
        │
        ├── OSVERSION >= 1500031 ──► drm-66-kmod（Linux 6.6 LTS）
-       │                           FreeBSD 15.0
+       │                             FreeBSD 15.0
        │
        └── 其他 ──► drm-61-kmod（Linux 6.1 LTS）
-                   FreeBSD 14.x
+                    FreeBSD 14.x
 
   也可手动安装特定版本：
-    drm-515-kmod  → Linux 5.15 LTS（14.0–15.x）
+    drm-515-kmod    → Linux 5.15 LTS（14.0–15.x）
     drm-latest-kmod → 跟踪最新开发版（15.1+）
 ```
 
