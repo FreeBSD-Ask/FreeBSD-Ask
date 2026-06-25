@@ -13,33 +13,7 @@ FreeBSD 提供了多种类型的软件源，分别服务于不同的系统组件
 
 FreeBSD 软件管理体系的整体架构如下：
 
-```sh
-FreeBSD 软件管理体系
-
-              freebsd-ports 存储库
-              （Ports 框架：Makefile + 补丁）
-                      │
-         ┌────────────┼────────────┐
-         │            │            │
-         ▼            ▼            ▼
-    main 分支   2025Q1 分支   2025Q2 分支 ...
-   （滚动更新）  （季度分支）  （季度分支）
-         │            │            │
-         │ 构建       │ 构建       │ 构建
-         ▼            ▼            ▼
-    latest pkg    quarterly pkg  quarterly pkg
-   （最新软件包） （稳定软件包） （稳定软件包）
-         │            │
-         └─────┬──────┘
-               │
-               ▼
-         pkg install
-       （用户安装命令）
-
-  基本系统更新（独立于 Ports）：
-    freebsd-src 存储库 ──► freebsd-update（传统）
-                       ──► PkgBase（pkg 管理，技术预览）
-```
+![FreeBSD 软件管理体系](../.gitbook/assets/freebsd-update-src.png)
 
 下表概括了各类软件源的基本信息：
 
