@@ -1,4 +1,4 @@
-# 3.1 乔治·贝克莱（George Berkeley）与 BSD 文化传统
+# 3.1 乔治·贝克莱与 BSD 文化传统
 
 20 世纪 80 年代初，加州大学伯克利分校计算机系统研究小组（Computer Systems Research Group，CSRG）正式成立，开始修改与扩展 AT&T 贝尔实验室开发的 UNIX 操作系统。这些修改与扩展最初以软件发行包的形式发布，因此称为伯克利软件发行版（Berkeley Software Distribution，BSD），FreeBSD 即为 CSRG 工作的延续。
 
