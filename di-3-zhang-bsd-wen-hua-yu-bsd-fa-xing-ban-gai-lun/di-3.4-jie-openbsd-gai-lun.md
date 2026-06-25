@@ -340,6 +340,30 @@ Gregory Perry 后来 [回复道](https://cryptome.org/2012/01/0032.htm)：
 
 至此，事件的主要经过已介绍完毕。从结果来看，事件中包含一些可能引发争议的内容。
 
+## 附录：其他专注于安全的 BSD 系统
+
+### HardenedBSD
+
+专注于安全的 BSD 操作系统不仅有 OpenBSD，还可以尝试 2014 年从 FreeBSD 复刻而来的[HardenedBSD](https://hardenedbsd.org/)。
+
+其官网称“我们的主要目标是对 Grsecurity 补丁集（增强 Linux 内核安全的内核补丁集）中已公开文档的部分，进行净室开发。”
+
+> Grsecurity 为 Linux 内核提供的补丁集是垃圾。
+>
+> ——Linus Torvalds（Linux 创始人）
+
+### CheriBSD
+
+[CheriBSD 官网](https://www.cheribsd.org/)
+
+CheriBSD 基于 FreeBSD 实现了 Capability（能力式指针），提供内存保护和软件隔离功能。CheriBSD 主要面向 ARM 和 RISC-V 架构，由国际斯坦福研究所（SRI International）和英国剑桥大学（University of Cambridge）联合开发。
+
+### FuguIta
+
+[FuguIta 官网](https://fuguita.org/)
+
+FuguIta 是一种基于 OpenBSD 开发的 Live 系统，同时支持部分型号的树莓派（树莓派 3/4/5, arm64 架构）。
+
 ## 课后习题
 
 1. 不同 BSD 发行版与不同 Linux 发行版之间的根本不同是什么？
