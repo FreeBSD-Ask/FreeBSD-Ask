@@ -28,7 +28,7 @@
 
 ## 第 3 章 BSD 文化与 BSD 发行版概论
 
-* [3.1 乔治·贝克莱（George Berkeley）与 BSD 文化传统](di-3-zhang-bsd-wen-hua-yu-bsd-fa-xing-ban-gai-lun/di-3.1-jie-qiao-zhi-bei-ke-lai-george-berkeley-yu-bsd-wen-hua-chuan-tong.md)
+* [3.1 乔治·贝克莱与 BSD 文化传统](di-3-zhang-bsd-wen-hua-yu-bsd-fa-xing-ban-gai-lun/di-3.1-jie-qiao-zhi-bei-ke-lai-george-berkeley-yu-bsd-wen-hua-chuan-tong.md)
 * [3.2 BSD 许可证概览](di-3-zhang-bsd-wen-hua-yu-bsd-fa-xing-ban-gai-lun/di-3.2-jie-bsd-xu-ke-zheng-gai-lan.md)
 * [3.3 NetBSD 概论](di-3-zhang-bsd-wen-hua-yu-bsd-fa-xing-ban-gai-lun/di-3.3-jie-netbsd-gai-lun.md)
 * [3.4 OpenBSD 概论](di-3-zhang-bsd-wen-hua-yu-bsd-fa-xing-ban-gai-lun/di-3.4-jie-openbsd-gai-lun.md)
