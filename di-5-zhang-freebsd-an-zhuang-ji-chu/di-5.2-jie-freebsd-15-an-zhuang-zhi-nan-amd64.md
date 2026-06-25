@@ -1,0 +1,971 @@
+# 5.2 FreeBSD 15 安装指南（AMD64）
+
+FreeBSD 15.0-RELEASE 使用 bsdinstall 工具安装，流程涵盖磁盘分区、网络配置、系统组件选择与用户账户创建。本节以 AMD64 架构的 disc1.iso 镜像为例，记录从系统启动到首次登录的完整操作。
+
+> **注意**
+>
+> 本节内容基于作者在特定硬件与虚拟化环境中的实际操作记录，部分结论（如内存阈值、超时时间、故障表现）来自个人测试经验，在不同硬件配置或后续版本中可能有所差异。涉及源代码行为的分析以 FreeBSD 15.0-RELEASE 发布版本的源代码为准。
+
+以下安装说明基于 `FreeBSD-15.0-RELEASE-amd64-disc1.iso`。`-dvd1.iso` 和 `-memstick.img` 的安装流程与之类似。
+
+> **注意**
+>
+> 本节基于 VMware Workstation Pro 17 演示（使用 UEFI），在 VMware Workstation Pro 26H1 上测试通过。
+>
+> 如果在物理机上安装，可考虑使用 Rufus <https://rufus.ie/zh/> 工具配合 <https://download.freebsd.org/releases/amd64/amd64/ISO-IMAGES/15.0/FreeBSD-15.0-RELEASE-amd64-memstick.img> 镜像刻录。该文件为 FreeBSD 15.0-RELEASE amd64 架构的 U 盘安装镜像。Rufus 为第三方工具，其版本更新可能改变操作界面；镜像文件路径以 FreeBSD 官方发布页面为准。本建议基于 2026 年 3 月的工具版本与镜像发布状态。
+
+## 启动安装盘
+
+完成前期准备后，从安装盘启动系统，进入系统安装程序。
+
+![启动界面](../.gitbook/assets/boot-screen-15.png)
+
+在此界面无需任何操作，等待十秒可自动进入 `1. Boot Installer [Enter]`；也可直接按 **回车键** 进入。
+
+如果按下任意其他键将暂停启动流程，此时可按数字键继续，或按 **ESC** 键进入 **OK 提示符**。
+
+![OK 提示符](../.gitbook/assets/boot-ok-prompt.png)
+
+在此界面输入 `menu` 并按 **回车键** 可返回主菜单。输入 `?` 可查看所有可用命令。
+
+操作方式：按选项开头的数字键选定。引导菜单各选项的状态列中，`on` 表示已开启，`off` 表示已关闭。
+
+| 选项 | 解释 |
+| ---- | ---- |
+| `1. Boot Installer [Enter]` | 用于安装系统 |
+| `2. Boot Single user` | 单用户模式，用于找回 root 密码或修复磁盘。如果启用安全加固中的 `secure_console` 选项，则进入单用户模式仍需 root 密码。此功能仅在拥有物理访问权限或远程控制台（如 IPMI/IP-KVM）的条件下可用 |
+| `3. Escape to loader prompt` | 退出菜单，进入加载器命令行，输入 `reboot` 并按回车键可重启系统 |
+| `4. Reboot` | 重启 |
+| `5. Cons: Video` | 选择控制台输出模式：视频（`Video`）、串口（`Serial`）、串口优先的双模式（`Dual (Serial primary)`）或视频优先的双模式（`Dual (Video primary)`） |
+| `6. kernel (1 of 1)` | 选择要启动的内核 |
+| `7. Boot Options` | 启动选项 |
+
+![启动选项](../.gitbook/assets/boot-options.png)
+
+| `7. Boot Options` | 默认值 | 说明 |
+| ----------------- | ------ | ---- |
+| `1. Back to main menu [Backspace]` | On（开） | 按 **Backspace** 键可返回上级菜单 |
+| `2. Load System Defaults` | off（关） | 恢复默认配置 |
+| `3. ACPI` | off（关） | Advanced Configuration and Power Interface（高级配置与电源接口）。默认 off 表示此选项初始未选中。除非必要，不建议手动开启；如确需开启，通常用于 ACPI 相关故障诊断 |
+| `4. Safe Mode` | off（关） | 安全模式 |
+| `5. Single user` | off（关） | 单用户模式 |
+| `6. Verbose` | off（关） | 详细模式，增加更多调试信息输出 |
+
+## bsdinstall 安装流程
+
+启动安装盘后，将进入由 `bsdinstall` 工具提供的安装界面。
+
+按回车键或等待十秒，将自动进入以下界面。
+
+![FreeBSD 安装程序的欢迎界面](../.gitbook/assets/install-welcome.png)
+
+> **技巧**
+>
+> 此界面由 `bsdinstall` 工具提供。
+>
+> 本节指导用户如何使用该工具安装 FreeBSD。该工具不仅存在于安装镜像中，安装完成后在新系统中仍然存在，并且还可用于执行普通的安装流程（此要点在高级安装方式中具有重要参考价值）。
+>
+> `bsdinstall` 工具本质上由一系列 sh 脚本构成，其源代码位于 FreeBSD Project. freebsd-src/usr.sbin/bsdinstall[EB/OL]. [2026-03-25]. <https://github.com/freebsd/freebsd-src/tree/main/usr.sbin/bsdinstall>。该仓库提供 FreeBSD 系统安装工具源代码，脚本位于“scripts”文件夹下。
+
+安装程序显示欢迎菜单：
+
+`欢迎使用 FreeBSD！您希望开始安装，还是使用 Live 系统？`
+
+bsdinstall 安装流程如下：
+
+```sh
+bsdinstall 安装流程总览
+
+  ┌──────────────┐
+  │  启动安装盘   │
+  └──────┬───────┘
+         │
+         ▼
+  ┌──────────────┐
+  │ 设定键盘布局  │
+  └──────┬───────┘
+         │
+         ▼
+  ┌──────────────┐
+  │ 设定主机名    │
+  └──────┬───────┘
+         │
+         ▼
+  ┌──────────────┐
+  │ 选择安装类型  │
+  │ (PkgBase/发行)│
+  └──────┬───────┘
+         │
+         ▼
+  ┌──────────────┐
+  │ 分配磁盘空间  │
+  │ (ZFS/UFS)    │
+  └──────┬───────┘
+         │
+         ▼
+  ┌──────────────┐
+  │ 设置 root 密码│
+  └──────┬───────┘
+         │
+         ▼
+  ┌──────────────┐
+  │ 网络设置      │
+  └──────┬───────┘
+         │
+         ▼
+  ┌──────────────┐
+  │ 时区设置      │
+  └──────┬───────┘
+         │
+         ▼
+  ┌──────────────┐
+  │ 启动服务设置  │
+  └──────┬───────┘
+         │
+         ▼
+  ┌──────────────┐
+  │ 安全加固      │
+  └──────┬───────┘
+         │
+         ▼
+  ┌──────────────┐
+  │ 安装固件      │
+  └──────┬───────┘
+         │
+         ▼
+  ┌──────────────┐
+  │ 创建普通用户  │
+  └──────┬───────┘
+         │
+         ▼
+  ┌──────────────┐
+  │ 完成安装/重启 │
+  └──────────────┘
+```
+
+选中左侧的 `Install` 并按 **回车键** 开始安装；中间的 `Shell` 可进入命令行；右侧的 `Live System` 则为 LiveCD 模式。
+
+如果没有特别说明，以下操作中可使用 **Tab 键** 或 **方向键** 切换选项，按 **回车键** 确认当前高亮选项。请注意界面中选项的红色加粗首字母（例如 `Install`、`Shell`、`Live System` 中的 **I**、**S**、**L**）。直接按下键盘上对应的字母键（不区分大小写）快速选定并进入相应界面。
+
+选择 Live CD 选项可在安装前测试部分功能。在使用 Live CD 前应注意以下几点：
+
+- 登录系统需要身份验证，用户名为 `root`，密码为空（直接按 **回车键** 即可）。
+
+- 由于系统直接从安装介质运行，性能通常弱于安装在硬盘上的系统。在极端情况下（如内置硬盘为机械硬盘而外接设备为固态 U 盘），LiveCD 的 I/O 性能可能优于硬盘安装的系统，但受 USB 总线带宽限制与无缓存策略影响，此种情况在实际操作中较为罕见且不易预测。
+
+- 此功能仅提供命令提示符，未提供图形界面。
+
+> **警告**
+>
+> 在任何步骤按下 **Esc 键** 均 **无法** 返回上一级菜单，而是会直接跳至后续步骤，直至退出或完成安装流程。
+
+## 设定键盘布局
+
+进入安装程序后，首先需要设定键盘布局。
+
+![键盘布局选择](../.gitbook/assets/keyboard-layout-15.png)
+
+`FreeBSD 系统控制台驱动程序默认使用标准 US（美式）键盘布局。可以在下面选择别的键盘布局。`
+
+此为键盘布局菜单，直接按 **回车键** 使用默认的美式（US）键盘布局（目前中国普遍使用美式键盘布局）。
+
+## 设定主机名
+
+设定键盘布局后，设置系统主机名。
+
+![设置主机名](../.gitbook/assets/set-hostname.png)
+
+`请选择此机器的主机名。如果正运行在受管理的网络上，请向网络管理员询问合适的名称。`
+
+此步骤用于设置系统主机名。
+
+> **警告**
+>
+> **请勿** 在此步骤直接按 **回车键**！这将导致主机名为空，进而可能使显示管理器（如 SDDM）无法正常启动。
+
+> **警告**
+>
+> FreeBSD 源代码默认假定将通过 DHCP 获取主机名，如果不设置主机名，系统不会自动分配任何值（包括“Amnesiac”），根据当前源代码逻辑，使用 DHCP 时不会有空主机名提示；仅当无网络连接时，登录信息中才会显示“Amnesiac”并伴随一条错误提示。
+
+### 参考文献
+
+- FreeBSD Project. Bug 286847: If the hostname is not set for the host, the value “Amnesiac” should be written to rc.conf.[EB/OL]. [2026-03-25]. <https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=286847>. 该 Bug 报告提出空主机名时应写入默认值，该 Bug 报告由作者发现。
+- FreeBSD Project. freebsd-src/libexec/getty/main.c[EB/OL]. [2026-03-25]. <https://github.com/freebsd/freebsd-src/blob/80c12959679ab203459dc20eb9ece3a7328b7de5/libexec/getty/main.c#L178>. 该代码段包含登录提示符显示逻辑，`Amnesiac` 源代码。
+- FreeBSD Project. bsdinstall: Warn if hostname is empty[EB/OL]. [2026-03-25]. <https://github.com/freebsd/freebsd-src/pull/1700>. 该 PR 为空主机名添加警告。
+
+## 选择安装类型
+
+设定主机名后，选择系统的安装类型。FreeBSD 15 提供了两种安装方式，分别是传统的发行组件安装和新型的软件包安装。
+
+> **注意**
+>
+> 在 FreeBSD 14 中，安装程序不提供软件包（PkgBase）安装方式，仅支持传统的发行组件（Distribution Sets）安装。此时安装界面标题为“选择安装组件”，直接进入组件选择步骤。
+
+![选择安装类型](../.gitbook/assets/select-components-15.png)
+
+`您希望使用传统的发行组件（Distribution Sets）还是软件包（Packages，技术预览）来安装基本系统？`
+
+### 软件包（PkgBase，技术预览）
+
+PkgBase 是一种新型的安装方式，需注意以下要点。
+
+> **警告**
+>
+> 网络与分区配置详见下文。请在通读相关章节后再选择。
+
+![网络或离线安装](../.gitbook/assets/network-install-15.png)
+
+`想从互联网获取软件包，还是使用此安装介质内包含的部分软件包？`
+
+PkgBase 方案起源于 TrueOS 项目（原名 PC-BSD，由 iXsystems 赞助，约 2019—2020 年间独立维护了基于 FreeBSD 的 PkgBase 二进制仓库，为后续 FreeBSD 官方采纳该方案提供了重要参考）。TrueOS 核心项目此后停止开发，但 PkgBase 的相关工作已由 FreeBSD 项目维护者接手并持续演进。PkgBase 旨在以软件包形式管理基本系统（内核与用户空间），拆分为可由 `pkg` 工具管理的独立二进制包。
+
+此设计思路与常见 Linux 发行版较为接近。需要注意，PkgBase 在系统稳定性与使用便利性之间有一定张力：
+
+- 可能影响稳定性：基本系统受损风险增大（该问题在社区广泛使用后反馈增多，逐渐受到重视）；
+- 提升了易用性：降低了在 FreeBSD 不同版本分支间切换的成本，开发者能更便捷地在 stable、current 等分支间更新，普通用户也无需经历 freebsd-update 工具较长的等待时间。
+
+#### 在线安装（Network）
+
+如果选择在线安装方式，系统将从互联网下载所需的软件包。在此步骤中，可以选择需要额外安装的组件。
+
+![选择安装组件](../.gitbook/assets/select-distribution-15.png)
+
+`适用于多用户系统的最小软件包集将被默认安装。请选择您希望额外安装的软件包。`
+
+| 组件 | 说明 |
+| ---- | ---- |
+| `[X] base` | 完整的基本系统（包含 devel 和 optional） |
+| `[ ] debug` | 所选组件的调试符号 |
+| `[ ] devel` | C/C++ 编译程序及相关工具 |
+| `[X] kernel-dbg` | 内核调试符号 |
+| `[X] lib32` | 32 位兼容库 |
+| `[ ] optional` | 可选软件（不含编译程序） |
+| `[ ] src` | 系统源代码树 |
+| `[ ] tests` | 测试套件 |
+
+#### 离线安装（Offline，Limited Packages）
+
+如果无法联网，可选择离线安装方式。离线安装使用安装介质内包含的有限软件包，无需联网即可完成安装。
+
+![选择安装组件](../.gitbook/assets/select-distribution-15.png)
+
+`适用于多用户系统的最小软件包集始终会被安装。请选择要安装的其他软件包。`
+
+| 组件 | 说明 |
+| ---- | ---- |
+| `[X] base` | 完整的基本系统（包含 devel 和 optional） |
+| `[ ] debug` | 所选组件的调试符号 |
+| `[ ] devel` | C/C++ 编译程序及相关工具 |
+| `[X] kernel-dbg` | 内核调试符号 |
+| `[X] lib32` | 32 位兼容库 |
+| `[ ] optional` | 可选软件（不含编译程序） |
+| `[ ] src` | 系统源代码树 |
+| `[ ] tests` | 测试套件 |
+
+经测试，即使全部选中，也能实现完全离线安装。
+
+### 发行组件（Distribution Sets）
+
+除了软件包安装方式外，还可以选择传统的发行组件安装方式，该方式成熟稳定。
+
+![选择安装组件](../.gitbook/assets/select-distribution-15-2.png)
+
+`选择要安装的可选系统组件`
+
+> **技巧**
+>
+> 如果没有特别说明，以下操作中按 **空格键** 可选中或取消选中条目（`[ ]` 变为 `[ * ]`）。
+>
+> 由于部分显卡驱动程序（如 `drm`）及其他程序需要源代码，且经测试 `lib32` 组件在系统安装后单独安装可能无法正常工作，建议在安装时即选中 `lib32` 和 `src`。建议在默认选项基础上，额外选中 `src` 和 `lib32`。
+
+> **警告**
+>
+> **请勿** 选择 `kernel-dbg`、`lib32`、`src` 之外的组件，这些组件需要从网络下载安装，速度可能较慢。如有需要可在系统安装完成后另行安装。
+>
+> 如果在安装过程中出现选择镜像站的提示，通常是因为选择了需要联网下载的额外组件，请避免此操作。
+
+| 选项 | 解释 |
+| ---- | ---- |
+| `base-dbg` | 基本系统的调试符号文件 |
+| `kernel-dbg` | 内核调试符号文件 |
+| `lib32-dbg` | 32 位兼容库的调试符号文件 |
+| `lib32` | 用于在 64 位系统上运行 32 位应用程序的兼容库 |
+| `ports` | FreeBSD Ports 集合 |
+| `src` | 系统源代码树 |
+| `tests` | 操作系统测试套件 |
+
+## 分配磁盘空间
+
+选定安装方式和组件后，为系统分配磁盘空间。
+
+FreeBSD 15.0-RELEASE 支持选择 UFS 或 ZFS 作为根文件系统。在旧版本中，`bsdinstall` 工具仅支持 UFS；FreeBSD Project. Revision 256361: bsdinstall: add ZFS support[EB/OL]. [2026-03-25]. <https://svn.freebsd.org/viewvc/base?view=revision&revision=256361>。该修订记录 bsdinstall 增加 ZFS 支持，`bsdinstall` 开始支持 ZFS。通过手动安装方式，则早在 FreeBSD 8.0-CURRENT 开发阶段就已支持从 ZFS 启动（参见 delphij. ZFS 做 / 是个好主意吗？[EB/OL]. [2026-03-25]. <https://blog.delphij.net/posts/2008/11/zfs-1/>）。该博客讨论了早期 FreeBSD ZFS 根分区启动的技术可行性。
+
+![磁盘分区菜单](../.gitbook/assets/disk-partition-menu-15.png)
+
+分区菜单。`您希望如何对磁盘进行分区？`
+
+| 配置选项 | 中文说明 |
+| -------- | -------- |
+| `Auto (ZFS) – Guided Root-on-ZFS` | 自动（ZFS）– 引导式 ZFS root 分区 |
+| `Auto (UFS) – Guided UFS Disk Setup` | 自动（UFS）– 引导式 UFS 磁盘设置 |
+| `Manual – Manual Disk Setup (experts)` | 手动 – 手动磁盘设置（适合专家） |
+| `Shell – Open a shell and partition by hand` | shell – 打开 shell 并手动分区 |
+
+文件系统详情请参阅其他章节（可手动分区解压 `txz` 文件以自定义）。此处推荐选择默认的 `Auto (ZFS)` 选项。可用内存小于 8 GB 时，ZFS ARC 缓存可能与应用程序竞争内存资源，此时 UFS 可能在日常桌面或轻量服务器负载下提供更可预测的性能。8 GB 不是硬性限制，ZFS 在更小内存下仍可运行（参见下文低内存测试），但性能可能显著下降。
+
+手动分区及通过 shell 分区的详细方法，请参见本书手动安装 FreeBSD 的相关章节。
+
+### Auto (ZFS)（使用 ZFS 作为 **/** 文件系统）
+
+> **技巧**
+>
+> 在极端实验条件下（仅执行 login 和 ls 等基本操作，无任何实际工作负载），128 MB（传统 BIOS）/256 MB（UEFI）内存下的 ZFS 系统可以完成启动，但完全不具备生产可行性。ZFS 生产环境建议至少 2 GB 内存（OpenZFS 官方建议 8 GB 以上以获得最佳性能，2 GB 以下亦可运行但不推荐）。
+
+> **注意**
+>
+> 如果手动分区时反复提示分区表“损坏”（`corrupted`）等错误，请先退出安装程序，重启后进入 shell 模式，尝试刷新分区表：
+>
+> ```sh
+> # gpart recover ada0
+> ```
+>
+>预期输出（示例）：
+>
+> ```sh
+> # gpart recover ada0
+> ada0 recovered
+> ```
+>
+>请根据实际硬盘设备确定 `ada0` 参数（如可能是 `da0`、`nda0` 等）。
+>
+> 如不确定当前硬盘设备名，可参考图示命令查看。
+>
+> ![查看硬盘设备](../.gitbook/assets/view-disk-devices.png)
+>
+> 刷新后，执行 `bsdinstall` 命令可重新进入安装程序界面。
+>
+> 此问题可能与分区表调整有关。
+
+![探测设备](../.gitbook/assets/zfs-detect-device.png)
+
+`正在探测设备，请稍候（此过程可能需要一些时间）……`
+
+![ZFS 配置](../.gitbook/assets/zfs-config-15.png)
+
+2016 年以后出厂的大多数 PC 及兼容机默认使用 UEFI 固件，应选择 `GPT (UEFI)`，请勿使用默认选项，否则将创建一个 512 KB 的 `freebsd-boot` 分区（纯 UEFI 启动并不需要此分区）。
+
+较老的计算机（如 2013 年以前）才应考虑选择 `GPT (BIOS)` 选项，该选项仅支持 BIOS 启动；2013-2015 年间的过渡期设备可能同时支持 Legacy BIOS 与 UEFI（通过 CSM），如需同时兼容两者，应选择 `GPT (BIOS+UEFI)`。
+
+| 配置选项 | 中文 | 说明 |
+| -------- | ---- | ---- |
+| `>> Install Proceed with Installation` | >> 安装 | 继续安装 |
+| `T Pool Type/Disks: stripe: 0 disks` | 存储池类型/磁盘：条带化：0 块磁盘 | 详细说明见下 |
+| `- Rescan Devices *` | - 重新扫描设备 * | |
+| `- Disk Info *` | - 磁盘信息 * | |
+| `N Pool Name zroot` | 存储池名称 `zroot` | 默认池名 `zroot` |
+| `4 Force 4K Sectors? YES` | 强制 4K 扇区？是 | 4K 对齐 |
+| `E Encrypt Disks? NO` | 加密磁盘？否 | 加密后的登录系统方案请参考本书其他章节 |
+| `P Partition Scheme` | 分区方案 GPT (UEFI) | 仅较早的计算机（2013 年以前）才需选择 `GPT (BIOS+UEFI)` 等选项 |
+| `S Swap Size 2g` | 交换分区大小 2 GB | 如果确实不需要交换分区，可在 `Swap Size` 处输入 `0` 或 `0G` 以跳过创建 |
+| `M Mirror Swap? NO` | 交换分区镜像？否 | 是否在多块磁盘之间镜像交换分区，如果选否，则每块磁盘的交换分区是独立的 |
+| `W Encrypt Swap? NO` | 加密交换分区？否 | |
+
+> **技巧**
+>
+> 如果将此项设置为 `GPT (UEFI)` 而非其他，后续分区与系统更新过程将更为简单。
+
+> **注意**
+>
+> 请慎重设置交换分区（`Swap Size`）的大小。如果系统用于桌面环境且需要休眠功能，交换空间至少应为物理内存的 1 倍；如果为纯服务器环境且内存大于 16 GB，交换空间在 4-8 GB 通常已足够；如果内存大于 64 GB 且不需要内核崩溃转储，交换空间可以更小甚至为零。物理内存较小的旧式系统如需运行大型应用，可视情况适当增大。因 ZFS 和 UFS 文件系统创建后不易缩小，而使用 `dd` 命令创建交换文件或后续调整可能带来性能开销或复杂度。
+
+> **技巧**
+>
+> 如果无法确定后续应选择哪块磁盘，可在此步骤选择 `- Disk Info *` 查看各磁盘的详细信息：
+>
+> ![磁盘信息](../.gitbook/assets/disk-info.png)
+>
+> 在此界面中，选中磁盘并按 **回车键** 可查看详情；选中 `<Back>` 可返回上一菜单。
+>
+> ![磁盘详情](../.gitbook/assets/disk-detail.png)
+>
+> 此界面按 **上下方向键** 可浏览。按 **回车键** 可返回到上一菜单。
+
+![选择虚拟设备类型](../.gitbook/assets/zfs-vdev-type-15.png)
+
+`选择虚拟设备类型：`
+
+| 配置选项 | 中文 | 特点 |
+| -------- | ---- | ---- |
+| `Stripe` | 条带化，即 `RAID 0` | 无冗余，一块硬盘即可 |
+| `mirror` | 镜像，即 `RAID 1` | n 路镜像，最少需要 2 块硬盘 |
+| `raid10` | RAID 1+0 | n 组 2 路镜像，最少需要 4 块硬盘（要求偶数块硬盘） |
+| `raidz1` | RAID-Z1 | 单冗余 RAID，最少需要 3 块硬盘 |
+| `raidz2` | RAID-Z2 | 双冗余 RAID，最少需要 4 块硬盘 |
+| `raidz3` | RAID-Z3 | 三重冗余 RAID，最少需要 5 块硬盘 |
+
+各 vdev 类型的磁盘排列与冗余关系示意如下（`D` 表示数据盘，`P` 表示校验盘，`M` 表示镜像盘）：
+
+```sh
+Stripe（条带化，最少 1 块盘）
+  ┌───┐ ┌───┐ ┌───┐
+  │D1 │ │D2 │ │D3 │   无冗余，任一盘损坏即丢失全部数据
+  └───┘ └───┘ └───┘
+
+mirror（镜像，最少 2 块盘）
+  ┌───┐ ┌───┐
+  │D1 │ │M1 │   两盘内容相同，互为镜像
+  └───┘ └───┘
+
+raid10（RAID 1+0，最少 4 块盘）
+  ┌───┐ ┌───┐  ┌───┐ ┌───┐
+  │D1 │ │M1 │  │D2 │ │M2 │   先镜像后条带，每组 2 路镜像
+  └───┘ └───┘  └───┘ └───┘
+
+raidz1（单冗余，最少 3 块盘）
+  ┌───┐ ┌───┐ ┌───┐
+  │D1 │ │D2 │ │P1 │   可容忍 1 块盘损坏
+  └───┘ └───┘ └───┘
+
+raidz2（双冗余，最少 4 块盘）
+  ┌───┐ ┌───┐ ┌───┐ ┌───┐
+  │D1 │ │D2 │ │P1 │ │P2 │   可容忍 2 块盘损坏
+  └───┘ └───┘ └───┘ └───┘
+
+raidz3（三重冗余，最少 5 块盘）
+  ┌───┐ ┌───┐ ┌───┐ ┌───┐ ┌───┐
+  │D1 │ │D2 │ │P1 │ │P2 │ │P3 │   可容忍 3 块盘损坏
+  └───┘ └───┘ └───┘ └───┘ └───┘
+```
+
+直接按 **回车键** 使用默认的 `Stripe` 类型。
+
+![选择目标硬盘](../.gitbook/assets/zfs-target-disk-15.png)
+
+选中目标硬盘，按 **回车键** 确认选择。
+
+> **技巧**
+>
+> 如果要将系统安装到 U 盘或移动硬盘但未能识别，请尝试重新插拔该设备，随后选择上方的 `- Rescan Devices *` 重新扫描设备列表。
+
+> **注意**
+>
+> 如果硬盘为 eMMC 类型，可能会出现 `mmcsd0`、`mmcsd0boot0`、`mmcsd0boot1` 等选项，请选择 `mmcsd0`。此外，如果多硬盘与 eMMC 共存，且另一块硬盘的分区数量超过 5 个，安装在 eMMC 中的 FreeBSD 可能会在启动时停留在 `Mounting from zfs:zroot/ROOT/default failed with error 22: retrying for 3 more seconds` 提示处。如果手动指定参数，则可能导致内核恐慌（Panic）。此问题目前尚无更详细的报告信息。如读者在类似配置下遇到此问题，建议在 FreeBSD Bugzilla 提交详细报告，包括：主板型号、eMMC 容量与版本、另一硬盘的分区表结构与分区数量、内核日志及相关 dmesg 输出。
+
+![确认格式化](../.gitbook/assets/zfs-confirm-format-15.png)
+
+`最后确认！您确定要销毁以下磁盘上的所有现有数据吗：`
+
+这是最终的警告与确认。请确保已备份重要数据，所选磁盘将被完全格式化。使用 **方向键** 或 **Tab 键** 将焦点切换至 `<YES>`，按 **回车键** 确认。
+
+> **警告**
+>
+> 此操作将执行全盘安装，目标磁盘上的所有数据都将丢失！如需非全盘安装（如双系统），请参考本书其他相关章节。
+
+#### 附录：geli 加密 ZFS 根分区的挂载与解密
+
+如果在安装时通过 bsdinstall 的“Encrypt Disks”选项对 ZFS 根分区启用了加密（该选项使用 geli(8) 进行磁盘级加密），后续挂载该磁盘的方法如下。注意，此处的 geli 磁盘级加密与 ZFS 原生加密（数据集级 AES-256-GCM 加密）是不同的功能：ZFS 原生加密用于加密用户主目录数据集，相关解密操作见下文用户创建步骤中的说明。
+
+以 NVMe 硬盘为例，启用 geli 磁盘加密（同时加密交换空间）后的磁盘结构如下：
+
+| 分区类型 | 挂载点 | 设备 |
+| -------- | ------ | ---- |
+| efi | | **/dev/nda0p1** |
+| freebsd-zfs | / | **/dev/nda0p2**、**/dev/nda0p2.eli** |
+| freebsd-swap | | **/dev/nda0p3**、**/dev/nda0p3.eli** |
+
+EFI 系统分区与正常安装一致，无特殊变化。系统启动时将提示输入密码以解密并挂载根分区。
+如果需要在 LiveCD 环境中挂载该加密分区，操作较为便捷（不需要密钥文件，仅需输入密码）。假设根分区为 **/dev/nda0p2**，执行以下命令：
+
+```sh
+# geli attach /dev/nda0p2
+```
+
+预期输出：
+
+```sh
+# geli attach /dev/nda0p2
+Enter passphrase:
+```
+
+输入正确的加密密码后，无任何错误消息即表示解密成功。通过命令 `# zpool import zroot` 导入 ZFS 池，再通过命令 `# zfs mount zroot/ROOT/default` 挂载根文件系统。
+
+### Auto (UFS)（使用 UFS 作为 **/** 文件系统）
+
+![UFS 分区菜单](../.gitbook/assets/ufs-partition-menu.png)
+
+`您希望如何对磁盘进行分区？`
+
+> **技巧**
+>
+> 如果选择 `Partition`（分区），选项同下文。
+
+![选择磁盘使用方式](../.gitbook/assets/ufs-disk-usage.png)
+
+`您希望使用整块磁盘，还是对磁盘进行分区以与其他操作系统共存？使用整块磁盘将清除该磁盘上的所有现有数据。`
+
+![选择分区方案](../.gitbook/assets/ufs-partition-scheme.png)
+
+`为该卷选择分区方案`
+
+| 英文 | 中文 | 注释 |
+| ---- | ---- | ---- |
+| `APM Apple Partition Map` | Apple 分区表 | Apple `PowerPC` 使用（2006 以前） |
+| `BSD BSD Labels` | BSD 磁盘标签 | 仅 BSD 可识别 |
+| `GPT GUID Partition Table` | GPT 全局唯一标识分区表 | 现代计算机使用（2013+） |
+| `MBR DOS Partitions` | MBR 主引导记录分区表 | 老式计算机使用（XP、Win7 年代） |
+
+![审查分区设置](../.gitbook/assets/ufs-review-partition.png)
+
+`请审查当前的磁盘分区设置。确认无误后，可选择 Finish（完成）`
+
+| 英文 | 中文 |
+| ---- | ---- |
+| `Create` | 创建 |
+| `Delete` | 删除 |
+| `Modify` | 调整 |
+| `Revert` | 还原 |
+| `Auto` | 自动 |
+| `Finish` | 完成 |
+
+![确认提交更改](../.gitbook/assets/ufs-confirm-commit.png)
+
+`您的更改尚未写入磁盘。若您选择了覆盖现有数据，这些数据将被永久删除。确定要提交更改吗？`
+
+| 英文 | 中文 |
+| ---- | ---- |
+| `Commit` | 提交 |
+| `Revert & Exit` | 还原并退出 |
+| `Back` | 返回 |
+
+![初始化磁盘](../.gitbook/assets/ufs-initialize-disk.png)
+
+正在初始化磁盘，此界面通常在极短时间内完成。
+
+---
+
+如果之前选择了 PkgBase 安装方式：
+
+![安装过程](../.gitbook/assets/installing-progress-15.png)
+
+正在校验相关分发文件：
+
+![校验分发文件](../.gitbook/assets/verify-distribution.png)
+
+正在解压并安装相关分发文件：
+
+![解压安装](../.gitbook/assets/extract-install.png)
+
+## 设置 root 密码
+
+磁盘分区完成后，为系统管理员账户设置密码。
+
+![设置 root 密码](../.gitbook/assets/set-root-password-15.png)
+
+`请为系统管理员账户（root）设置密码：输入的字符将不可见。正在修改待安装系统的 root 密码。`
+
+> **技巧**
+>
+> 在此界面，需使用 **上下方向键** 或 **Tab 键** 在不同密码输入框间移动焦点。输入完成后按 **回车键** 确认。
+
+此处输入 root 密码。注意：上述界面提示“输入的字符将不可见”，但实际行为因版本或终端环境而异——部分情况下以 `*` 掩码回显，部分情况下完全无回显。无论哪种情况，输入完成后按 **回车键** 确认。
+
+要求重复输入两次以确认一致性，如果两次输入的密码不同，将提示 `The passwords do not match`（密码不匹配）。
+
+root 密码强度无强制要求，但不可为空。如果密码为空，将提示 `The password cannot be empty`，必须输入有效密码才能继续。
+
+## 网络设置
+
+设置好 root 密码后，需配置网络，使系统能够连接到互联网或局域网。
+
+### 以太网卡
+
+首先介绍以太网卡的配置方法。
+
+![选择网络接口](../.gitbook/assets/select-network-if-15.png)
+
+`请选择要配置的网络接口及其配置模式`
+
+- `Auto`：自动
+- `Manual`：手动
+- `Cancel`：取消
+
+此处选择要配置的网卡。使用 **方向键** 可切换，按 **回车键** 可确认选择。
+
+> **注意**
+>
+> 在 FreeBSD 14 中，网络接口选择界面仅提示“请选择一个网络接口进行配置”，不提供 Auto/Manual/Cancel 选项，直接选择网卡后进入 IPv4 配置步骤。
+
+#### 自动（`Auto`）
+
+![自动配置网络](../.gitbook/assets/auto-config-network-15.png)
+
+`正在发送路由器请求`，安装程序将自动检测并配置网络环境。
+
+#### 手动（`Manual`）
+
+![配置 IPv4](../.gitbook/assets/config-ipv4.png)
+
+`希望为此接口配置 IPv4 吗？`
+
+是否配置 IPv4。按 **回车键** 确认选择。
+
+![使用 DHCP](../.gitbook/assets/use-dhcp.png)
+
+`希望使用 DHCP 配置此接口吗？`
+
+是否使用 DHCP 自动配置。按 **回车键** 确认选择。如果网络环境中无 DHCP 服务器或 DHCP 获取失败，安装程序将提示手动输入 IPv4 地址、子网掩码与默认网关，请事先确认这些信息。
+
+![配置 IPv6](../.gitbook/assets/config-ipv6.png)
+
+`希望为此接口配置 IPv6 吗？`
+
+是否配置 IPv6。本书不涉及 IPv6，因此选择 `No` 并按 **回车键**。如有需要可自行配置。
+
+![配置 DNS](../.gitbook/assets/config-dns.png)
+
+`配置解析器`
+
+通常可保留 DHCP 分配的 DNS 设置，也可手动指定。图中示例使用了阿里云公共 DNS **223.5.5.5**。以下是常见的公共 DNS 选项：
+
+| 服务商 | 首选地址 | 备用地址 | 特点 |
+| ------ | -------- | -------- | ---- |
+| 阿里云公共 DNS | 223.5.5.5 | 223.6.6.6 | 国内节点多，解析国内域名速度快 |
+| 腾讯 DNSPod | 119.29.29.29 | 182.254.116.116 | 国内节点多，支持 DoH/DoT |
+| Cloudflare | 1.1.1.1 | 1.0.0.1 | 全球最快，承诺不记录用户日志，支持 DoH/DoT |
+| Google | 8.8.8.8 | 8.8.4.4 | 全球稳定可靠，支持 DoH/DoT，日志保留 24–48 小时 |
+| Quad9 | 9.9.9.9 | 149.112.112.112 | 瑞士非营利运营，自动拦截恶意域名，不记录用户 IP |
+
+> **注意**
+>
+> 传统 DNS 查询以明文传输，可能被第三方监听或篡改（如 DNS 劫持、DNS 污染）。建议优先选择支持加密 DNS 协议（DoH 或 DoT）的服务商，以保护 DNS 查询的隐私与安全。国内用户访问国内网站时，阿里云或腾讯 DNS 通常延迟更低；需要访问国际网站时，Cloudflare 或 Google DNS 可能表现更优。
+
+使用 **方向键** 切换选项，按 **回车键** 确认。
+
+### 无线网卡/Wi-Fi 设置
+
+> **警告**
+>
+> 由于已知的 Bug 289202（中国管制域缺失），当前不建议使用安装程序中的无线网络配置功能。如果需要网络连接，请优先通过以太网卡完成安装，建议在系统安装完成并重启后参考本书无线网络章节另行配置无线网络（尤其对于博通等网卡）。否则安装程序可能长时间无响应或引发内核错误（Panic）。
+
+![选择无线网络接口](../.gitbook/assets/wifi-select-interface.png)
+
+`请选择要配置的无线网络接口`
+
+![更改无线管制域](../.gitbook/assets/wifi-regulatory-domain.png)
+
+`更改无线管制域（当前为 FCC/US）？`
+
+修改无线管制域，按回车键确认。
+
+![选择区域码](../.gitbook/assets/wifi-country-code.png)
+
+`请选择您的区域码`
+
+此处应选择 `NONE` 或 `ROW`（Rest of World）。`ROW` 是一个通用的无线管制域选项，鉴于中国管制域尚未在 regdomain.xml 中定义（Bug 289202），选择此项可允许无线网卡在最保守的信道集上运行，避免选择特定国别引发的错误。
+
+![选择所在地区](../.gitbook/assets/wifi-region-select.png)
+
+`请选择您所在的地区`
+
+选择对应的地区：
+
+![扫描无线网络](../.gitbook/assets/wifi-scan-networks.png)
+
+`请等待 5 秒，正在扫描可用的无线网络……`
+
+扫描。
+
+> **技巧**
+>
+> 只要系统能识别网卡，即表明其驱动程序可用。但安装程序可能无法正确扫描到所有 Wi-Fi 网络。建议此处留空跳过，待系统安装完成后重启，再参考本书无线网络章节配置。
+
+在列表中找到您的 Wi-Fi 网络。如果未找到，可尝试更改无线路由器的信道后重试。
+
+![选择 Wi-Fi 网络](../.gitbook/assets/wifi-select-network.png)
+
+`请选择要连接的无线网络`
+
+输入 Wi-Fi 密码以连接：
+
+![输入 Wi-Fi 密码](../.gitbook/assets/wifi-enter-password.png)
+
+![配置 IPv4](../.gitbook/assets/config-ipv4.png)
+
+`想要为此接口配置 IPv4 吗？`
+
+配置 IPv4，按 **回车键** 可选定。
+
+![使用 DHCP](../.gitbook/assets/use-dhcp.png)
+
+`希望使用 DHCP 配置此接口吗？`
+
+配置使用 DHCP，按 **回车键** 可选定。
+
+![配置 IPv6](../.gitbook/assets/config-ipv6.png)
+
+`希望为此接口配置 IPv6 吗？`
+
+配置 IPv6，因本书未使用 IPv6，故选 `No`，按 **回车键** 可选定。如有需要可自行配置 IPv6。
+
+![配置 DNS](../.gitbook/assets/config-dns.png)
+
+`配置解析器`
+
+通常可保留 DHCP 分配的 DNS 设置，也可手动指定。图中示例使用了阿里云公共 DNS **223.5.5.5**。其他常见的公共 DNS 选项见上文表格。使用 **方向键** 切换选项，按 **回车键** 确认。
+
+### 参考文献
+
+- FreeBSD Project. Regulatory Domain Support[EB/OL]. [2026-03-25]. <https://wiki.freebsd.org/WiFi/RegulatoryDomainSupport>. 该页面介绍 FreeBSD 无线管制域支持状态。
+- FreeBSD Project. freebsd-src/lib/lib80211/regdomain.xml[EB/OL]. [2026-03-25]. <https://github.com/freebsd/freebsd-src/blob/main/lib/lib80211/regdomain.xml>. 该文件定义 802.11 无线管制域配置，regdomain.xml 在源代码的位置。
+- FreeBSD Project. regdomain.xml -- 802.11 wireless regulatory definitions[EB/OL]. [2026-03-25]. <https://man.freebsd.org/cgi/man.cgi?query=regdomain&sektion=5>. 该手册页说明无线管制域配置文件格式，对应编码请参考系统中的 **/etc/regdomain.xml** 文件。
+- Alibaba Cloud. 阿里云公共 DNS[EB/OL]. [2026-03-25]. <https://www.alidns.com/>. 该服务提供公共 DNS 解析。
+- Tencent Cloud. DNSPod 公共 DNS[EB/OL]. [2026-06-10]. <https://www.dnspod.cn/Products/Public.DNS>. 腾讯提供的免费公共 DNS 递归解析服务。
+- Cloudflare. Cloudflare DNS[EB/OL]. [2026-06-10]. <https://1.1.1.1/>. Cloudflare 提供的注重隐私与速度的公共 DNS 服务。
+- Google. Google Public DNS[EB/OL]. [2026-06-10]. <https://dns.google/>. 谷歌提供的全球公共 DNS 解析服务。
+- Quad9 Foundation. Quad9 DNS[EB/OL]. [2026-06-10]. <https://quad9.net/>. 瑞士非营利组织运营的注重安全的公共 DNS 服务。
+
+## 时区设置
+
+网络配置完成后，需设置系统的时区，以确保系统时间显示正确。
+
+![选择地区](../.gitbook/assets/select-region.png)
+
+`请选择您所在的地区`
+
+设置系统时区。中国属于 `5 Asia`（亚洲）。使用 **方向键** 选择，按 **回车键** 确认。
+
+![选择国家或地区](../.gitbook/assets/select-country.png)
+
+`设置国家或地区`
+
+选择 `9 China`（中国）。使用 **方向键** 选择，按 **回车键** 确认。
+
+![选择时区](../.gitbook/assets/select-timezone.png)
+
+中国统一使用东八区时间（北京时间），请选择 `1 Beijing Time`。使用 **方向键** 选择，按 **回车键** 确认。
+
+![确认时区](../.gitbook/assets/confirm-timezone.png)
+
+`时区缩写 'CST' 是否合适？`
+
+CST 为中国标准时间（China Standard Time）的缩写，确认无误后按 **回车键** 选择 `Yes`。
+
+![设置时间日期](../.gitbook/assets/set-datetime.png)
+
+`设置时间与日期`
+
+直接按 **回车键** 使用默认设置。
+
+![确认时间日期](../.gitbook/assets/confirm-datetime.png)
+
+`时间与日期`
+
+按 **回车键** 确认。
+
+## 启动服务设置
+
+时区设置完成后，选择系统启动时自动运行的服务。
+
+![选择启动服务](../.gitbook/assets/select-services-15.png)
+
+`请选择您希望系统启动时自动运行的服务`
+
+> **警告**
+>
+> **请勿全选！**
+>
+> **切勿** 选择 `local_unbound`，否则可能影响系统 DNS 解析（参见 FreeBSD Project. Bug 262290: After a normal FreeBSD installation and reboot, **/etc/resolv.conf** will be changed[EB/OL]. [2026-03-25]. <https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=262290>。该 Bug 报告记录 local_unbound 服务导致 resolv.conf 变更问题）。除非明确了解其用途。
+
+| 选项 | 解释 |
+| ---- | ---- |
+| `sshd` | 启用 SSH 远程访问服务 |
+| `ntpd` | 启用 NTP 网络时间协议守护进程，用于自动时钟同步 |
+| `ntpd_sync_on_start` | 系统启动时立即同步时间 |
+| `local_unbound` | 启用本地 Unbound DNS 缓存转发解析器。注意：启用后需手动配置 DNS，否则可能无法正常联网。不建议未充分了解其功能的用户启用 |
+| `powerd` | 启用电源管理守护进程，动态调整 CPU 频率以节约能耗 |
+| `moused` | 在文本控制台（tty）中启用鼠标支持 |
+| `dumpdev` | 启用内核崩溃转储功能，便于系统调试 |
+
+> **注意**
+>
+> 在 FreeBSD 14 中，服务列表的显示顺序不同：`local_unbound` 位于列表首位，其后依次为 `sshd`、`moused`、`ntpd`、`ntpd_sync_on_start`、`powerd`、`dumpdev`。
+
+## 安全加固
+
+启动服务设置完成后，需配置系统安全加固选项，以增强系统的安全性。
+
+![安全加固选项](../.gitbook/assets/security-hardening.png)
+
+`请选择系统安全加固方案`
+
+此处为系统安全加固选项，可根据实际需求选择启用。
+
+> **技巧**
+>
+> 在 FreeBSD 14 以前版本的安装中，此步骤会出现 `disable_sendmail` 选项，建议选定。如果不禁用该服务，每次开机时可能会延迟数分钟，且该服务主要用于邮件发送，一般用户无需使用。
+
+| 选项 | 解释 |
+| ---- | ---- |
+| `0 hide_uids` | 隐藏其他用户拥有的进程 |
+| `1 hide_gids` | 隐藏其他组拥有的进程 |
+| `2 hide_jail` | 隐藏 jail 内的进程 |
+| `3 read_msgbuf` | 禁止非特权用户读取内核消息缓冲区（通常通过 `dmesg` 命令访问） |
+| `4 proc_debug` | 禁用非特权用户的进程调试功能 |
+| `5 random_pid` | 启用进程 PID 随机化 |
+| `6 clear_tmp` | 系统启动时自动清理 **/tmp** 目录 |
+| `7 disable_syslogd` | 禁用 syslogd 的网络套接字（即禁用远程日志接收） |
+| `8 secure_console` | 启用控制台安全保护（单用户模式也需 root 密码） |
+| `9 disable_ddtrace` | 禁用 DTrace 的破坏性（destructive）操作模式 |
+
+## 安装固件
+
+安全加固设置完成后，安装硬件固件。
+
+![虚拟机无固件可安装](../.gitbook/assets/vm-no-firmware.png)
+
+自动检测并安装所需的硬件固件。
+
+（此图为虚拟机安装界面截图）
+
+![物理机也许有些固件需要安装](../.gitbook/assets/physical-machine-firmware.png)
+
+**（此图为使用采集卡获得的物理机安装界面截图）**
+
+> **警告**
+>
+> 建议在此步骤取消所有勾选，即不安装任何固件。在线安装可能因网络问题失败或耗时过长，且此步骤不影响系统的基本启动与核心功能。取消固件安装后，无线网卡、GPU 等硬件在系统首次启动时将无法正常工作，需在安装完成并联网后通过 `fwget` 命令补充安装固件；
+>
+> 在 FreeBSD 14 的物理机安装中，此步骤可能会显示需要安装的固件列表（如显卡固件等），请同样取消勾选，待安装完成后使用 `fwget` 命令获取。
+
+### 附录：视频教程
+
+以下视频为 FreeBSD 14.2 的安装演示，FreeBSD 15.0 的安装流程与之高度相似，可供参考。视频链接的有效性以访问日期为准：
+
+- Bilibili. FreeBSD 14.2 基础安装配置教程[EB/OL]. [2026-03-25]. <https://www.bilibili.com/video/BV1STExzEEhh>（物理机）
+- Bilibili. 002-VMware17 安装 FreeBSD 14.2[EB/OL]. [2026-03-25]. <https://www.bilibili.com/video/BV1gji2YLEoC>（虚拟机）
+
+## 创建普通用户
+
+固件安装完成后，创建普通用户账户。
+
+![添加用户](../.gitbook/assets/add-user.png)
+
+`现在希望向已安装的系统添加用户吗？`
+
+如需创建，请按 **回车键** 选择 `Yes`；如果不需要创建普通用户（仅使用 root），请使用 **方向键** 选择 `No`。
+
+> **注意**
+>
+> 绝大多数图形显示管理器默认禁止 root 用户直接登录。因此，如不额外配置（参见其他章节），默认可能无法使用 root 账户登录桌面环境。
+
+![填写用户信息](../.gitbook/assets/user-info-15.png)
+
+> **警告**
+>
+> 如果创建普通用户，请务必同时加入 `wheel` 组（用于 `su` 权限提升）和 `video` 组（用于图形加速）。仅加入 `wheel` 组可能无法正常调用 GPU。
+
+```sh
+FreeBSD Installer # FreeBSD 安装程序
+========================
+Add Users # 添加用户
+
+Username: ykla # 输入用户名。只能使用小写字母（不支持非拉丁字符）或数字，不能以连字符开头。最大长度 16 个字符（历史原因）。
+Full name: # 输入用户全名 ①。可留空。不能包含英文冒号 :。
+Uid (Leave empty for default):  # 用户 UID，留空则使用默认值。手动设置需小于 32000（历史原因：兼容早期 NFS 等仍使用 16 位 UID 的协议，UID 超出此范围可能导致身份映射异常。现代 NFSv4 已不再使用数值 UID，但为保持向后兼容性，建议遵循此限制）。
+Login group [ykla]: # 用户主组
+Login group is ykla. Invite ykla into other groups? []: wheel video operator # 邀请用户加入其他组，用空格分隔。在 16.0 中还需要加入 audio 组以获得音频支持
+Login class [default]: # 用户分级
+Shell (sh csh tcsh nologin) [sh]: # 用户默认 shell，默认是 sh
+Home directory [/home/ykla]: # 用户主目录路径，普通用户默认在 /home 下面
+Home directory permissions (Leave empty for default): # 用户主目录权限，留空使用默认值
+Enable ZFS encryption? (yes/no) [no]: # 是否启用 ZFS 加密（14.1 新增）
+Use password-based authentication? [yes]:  # 是否启用密码验证
+Use an empty password? (yes/no) [no]:  # 是否使用空密码，即密码为空
+Use a random password? (yes/no) [no]:  # 是否使用随机密码。设置 yes 将生成随机字符串并回显到标准输出。②
+Enter password:  # 输入密码，密码输入时无任何回显（不会显示 **** 等掩码）
+Enter password again:  # 再次输入密码以确认，同样无回显
+Lock out the account after creation? [no]: #  创建后是否立即锁定账户（禁用该账户）
+Username    : ykla # 设定的用户名
+Password    : ***** # 设定的用户密码
+Full Name   : # 设定的用户全名
+Uid         : 1001 # 设定的用户 UID
+ZFS dataset : zroot/home/ykla # 主目录对应的 ZFS 数据集（自 14.1 引入）
+Class       :  # 设定的用户分级
+Groups      : ykla wheel video # 所属的用户组
+Home        : /home/ykla # 设定的用户主（家）目录路径
+Home Mode   :  # 设定的用户主（家）目录权限
+Shell       : /bin/sh # 设定的用户默认的 shell
+Locked      : no # 是否锁定（禁用）用户
+OK? (yes/no) [yes]: #  确认上述设置是否正确
+adduser: INFO: Successfully added (ykla) to the user database. # 用户 ykla 已成功添加至数据库
+Add another user? (yes/no) [no]: # 是否继续添加其他用户
+```
+
+- ① 如果用户全名为空（即不设置），作为早期 UNIX 系统 GECOS 字段的遗留行为，系统会分配一个默认值 `User &`。相关代码位于 FreeBSD Project. freebsd-src/usr.sbin/pw/pw_user.c[EB/OL]. [2026-03-25]. <https://github.com/freebsd/freebsd-src/blob/main/usr.sbin/pw/pw_user.c> 的 `static struct passwd fakeuser` 结构中。
+
+- ② 如果选择使用随机密码，在最终确认信息前会显示一行：`adduser: INFO: Password for (ykla) is: D1MnujkWMv/m`，其中 `D1MnujkWMv/m` 即为生成的随机密码。
+
+其余参数通常可保持默认。自 FreeBSD 14 起，root 用户的默认 shell 已改为 **/bin/sh**（此前为 **/bin/csh**）。
+
+最后会询问 `Add another user? (yes/no) [no]`，按 **回车键** 可结束用户添加流程；输入 `yes` 并按 **回车键**，则可继续添加第二个用户。
+
+### 参考文献
+
+- FreeBSD Project. man adduser(8)[EB/OL]. [2026-03-25]. <https://man.freebsd.org/cgi/man.cgi?query=adduser&sektion=8>. 该手册页说明 FreeBSD 用户添加命令使用方法。
+
+## 完成安装
+
+普通用户创建完成后，完成安装流程。
+
+![完成安装](../.gitbook/assets/install-complete-15.png)
+
+`您的 FreeBSD 系统设置即将完成。现在可以返回修改先前的配置选项。在此菜单之后，您还可以进入 Shell 进行更复杂的调整。`
+
+按 **回车键** 选择 `Finish` 以完成安装。
+
+| 配置选项 | 功能描述 |
+| -------- | -------- |
+| `Finish` | 应用所有配置并退出安装程序 |
+| `Add User` | 添加系统用户 |
+| `Root Password` | 重新设置 root 密码 |
+| `Hostname` | 修改系统主机名 |
+| `Network` | 重新配置网络 |
+| `Services` | 调整系统启动时运行的服务 |
+| `System Hardening` | 修改安全加固方案 |
+| `Time Zone` | 重新设置时区 |
+| `Firmware` | 安装固件（需要网络） |
+| `Handbook` | 安装 FreeBSD 手册（需要网络） |
+
+![是否进入 Shell](../.gitbook/assets/enter-shell-15.png)
+
+`安装现已完成。在退出安装程序前，您是否希望在新系统中打开 Shell 以作最终的手动调整？`
+
+按 **回车键** 选择 `No` 以直接完成安装（或选择 `Yes` 进入 shell）。
+
+![确认重启](../.gitbook/assets/confirm-reboot.png)
+
+`FreeBSD 安装完成！您现在是否希望重启并进入新安装的系统？`
+
+按 **回车键** 确认重启。
+
+## 欢迎进入 FreeBSD 世界
+
+安装完成后重启，进入 FreeBSD 新系统：
+
+![系统启动](../.gitbook/assets/system-boot-15.png)
+
+系统完全启动后：
+
+> **技巧**
+>
+> FreeBSD 基本系统默认不包含图形界面（未安装 Xorg），因此启动后将进入文本控制台界面（TTY）。
+
+![登录界面](../.gitbook/assets/login-screen-15.png)
+
+输入用户名 `root` 及安装时设置的 root 密码以登录系统。
+
+> **技巧**
+>
+> 输入密码时，密码在屏幕上不显示，无 `****` 等掩码提示，输入完毕后直接按回车键登录。
+
+![登录成功](../.gitbook/assets/login-success-15.png)
