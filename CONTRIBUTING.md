@@ -246,17 +246,17 @@ $ git clone https://github.com/FreeBSD-Ask/FreeBSD-Ask
 │          index.js
 │          Layout.vue
 │
-├─di-1-zhang-zou-jin-freebsd # 第 1 章的章节目录
-│      di-1.1-unix.md # 第 1 章的文件
-│      di-1.2-dao-lun.md
-│      di-1.3-jie-freebsd-jian-shi.md
-│      di-1.4-Fiat-Lux.md
+├─di-1-zhang-freebsd-chu-jian # 第 1 章的章节目录
+│      di-1.1-jie-shen-me-shi-unix.md # 第 1 章的文件
+│      di-1.2-jie-gnu-cao-zuo-xi-tong-he-zi-you-ruan-jian-yun-dong.md
+│      di-1.3-jie-linux-yu-lei-unix.md
+│      di-1.4-jie-shen-me-shi-freebsd.md
 │
-├─di-10-zhang-vpn-yu-dai-li # 第 10 章的章节目录
-│      di-10.1-jie-http-dai-li.md # 第 10 章的文件
-│      di-10.2-jie-v2ray.md
-│      di-10.3-jie-clash.md
-│      di-10.4-jie-openvpn.md
+├─di-10-zhang-xian-ka-qu-dong # 第 10 章的章节目录
+│      di-10.1-jie-xian-ka-qu-dong-gai-lun.md # 第 10 章的文件
+│      di-10.2-jie-intel-xian-ka-qu-dong.md
+│      di-10.3-jie-amd-xian-ka-qu-dong.md
+│      di-10.4-jie-nvidia-xian-ka-qu-dong.md
 │
 └─其他目录和文件从略
 │
