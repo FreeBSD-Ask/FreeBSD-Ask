@@ -12,7 +12,7 @@ FreeBSD 赓续了计算机系统研究小组（Computer Systems Research Group, 
 
 > **注意**
 >
-> 现在为你呈现的是第四版（开发版本），已有的章节虽经审阅和修订，但仍非最终版本。可通过 <https://book.bsdcn.org/~/revisions/VTW7N8Fk2VPNH6J1vTUi> 访问第三版。
+> 现在为你呈现的是第四版（开发版本），已有的章节虽经审阅和修订，但仍非最终版本。章节结构可能会频繁变动，**不建议**将任何章、节设添加为书签，可能很快便会失效。
 
 本书是一本关于 FreeBSD 操作系统的开源研究著作。
 
@@ -122,7 +122,7 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 DOCUMENTATION, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 ```
 
-除特别注明外，本书中的文字、图表等内容依据 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) 协议发布。
+除特别注明外，本书中的文字、图表等内容依据 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) 协议发布。您无需精确标注章节出处，仅标注项目主页即可。
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-orange.svg)](https://creativecommons.org/licenses/by/4.0/)
 
