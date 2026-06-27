@@ -358,14 +358,14 @@ $ git clone https://github.com/FreeBSD-Ask/FreeBSD-Ask
 - [ ] 24.8.基于 FreeBSD 的 Xen™ 虚拟机（过时、支持差。真的支持 Windows 11 吗？10 也行。Xen 真难用，而且删除了 PV 支持）
 - [ ] 31.4.Sendmail（过时，用 Postfix 等代替）
 - [ ] 32.2.inetd 超级服务器（过时。谁在用？）
-- [ ] 32.4.网络信息系统（NIS）（过时，用 SSSD-LADP 代替）
+- [ ] 32.4.网络信息系统（NIS）（过时，用 SSSD-LDAP 代替）
 - [ ] 30.5.使用 ATM 上的 PPP (PPPoA)（过时）
 - [ ] 29.4.拨入服务（过时）
 - [ ] gbde 相关加密（已从 [源代码](https://github.com/freebsd/freebsd-src/commit/8d2d1d651678178aa7f24f0530347f860423fd9e)移除）
 - [ ] 29.5.拨出服务（过时）
 - [ ] 30.2.配置 PPP（过时）
-- [ ] 31.3.DragonFly 邮件代理（DMA）（过时，用 Postfix 等代替）
-- [ ] 20.10.文件系统快照（UFS）（UFS 快照？？？）
+- [ ] 31.3.DragonFly 邮件代理（DMA）（DMA 为 FreeBSD 14.0 起默认 MTA，可用 Postfix 等代替）
+- [ ] 20.10.文件系统快照（UFS）（与 ZFS 快照相比功能有限）
 - [ ] 21.8.通过 GEOM 实现 UFS 日志（无意义）
 
 **Just for fun**（可有可无）
