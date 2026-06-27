@@ -12,7 +12,7 @@ UNIX 在后期发展中渐趋封闭，最初作为开放的研究项目（受当
 
 - 1983 年，理查德·马修·斯托曼发表了 GNU 项目初始公告；其中 GNU 即“GNU's Not Unix”（GNU 不是 UNIX）的递归缩写。GNU 是一种旨在完全替代 UNIX 的操作系统。
 - 1984 年，理查德·马修·斯托曼正式创建了 [GNU 项目](https://www.gnu.org/)。
-- 1985 年，理查德·马修·斯托曼撰写了 GNU 宣言；同年创建了自由软件基金会（Free Software Foundation，FSF）。
+- 1985 年，理查德·马修·斯托曼撰写了 GNU 宣言；同年创建了非营利组织（**501(c)(3)**）自由软件基金会（Free Software Foundation，FSF）。
 - 1989 年，自由软件基金会发布了 GNU General Public License V1.0（GPLv1，GNU 通用公共许可证第 1 版）。
 - 1991 年，自由软件基金会发布了 GNU General Public License V2.0（GPLv2，GNU 通用公共许可证第 2 版）。
 - 2007 年，自由软件基金会发布 GNU General Public License V3.0（GPLv3，GNU 通用公共许可证第 3 版）。
