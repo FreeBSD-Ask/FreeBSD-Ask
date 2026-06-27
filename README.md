@@ -122,6 +122,8 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 DOCUMENTATION, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 ```
 
+作为项目目标的一部分，我们将尽快完整重写此部分直接转引自手册的内容。
+
 除特别注明外，本书中的文字、图表等内容依据 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) 协议发布。您无需精确标注章节出处，仅标注项目主页即可。
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-orange.svg)](https://creativecommons.org/licenses/by/4.0/)
