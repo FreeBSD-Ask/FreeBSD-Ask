@@ -6,21 +6,19 @@
 
 FreeBSD 赓续了计算机系统研究小组（Computer Systems Research Group, CSRG）的未竟事业，是一款真正自由（Liberty）的 **操作系统**，在这波谲云诡的世界中仍然坚守 BSD UNIX 哲学——**恪守古老的法则，追寻真正的自由**。
 
-“入门”本是一种快乐，“跑路”亦是一种豁达。“本乘兴而行，兴尽而反，何必 FreeBSD 邪！”（化用晋书·王羲之传附王徽之传[M]//房玄龄.晋书.北京:中华书局,1996）
-
 ## 内容提要
-
-> **注意**
->
-> 现在为你呈现的是第四版（开发版本），已有的章节虽经审阅和修订，但仍非最终版本。开发版本的章节结构并不稳定，**不建议**将任何章、节设添加为书签，可能很快便会失效。
 
 本书是一本关于 FreeBSD 操作系统的开源研究著作。
 
 [~~FreeBSD 项目即将归档（Archived）~~，为了保护我们心爱的操作系统……我们能做的事情就是，写一本书！](https://www.bilibili.com/bangumi/media/md3068)（化用 Love Live! School Idol Project[Z]. 日本: SUNRISE, 2013-01-06. 中的经典口号）
 
-## 关于作者
+“入门”本是一种快乐，“跑路”亦是一种豁达。“本乘兴而行，兴尽而反，何必 FreeBSD 邪！”（化用晋书·王羲之传附王徽之传[M]//房玄龄.晋书.北京:中华书局,1996）
 
-本书由 FreeBSD 中文社区多位成员共同编写完成。
+> **注意**
+>
+> 现在为你呈现的是第四版（开发版本），已有章节虽经审阅和修订，但仍非最终版本。开发版本的章节结构并不稳定，**不建议**将任何章、节添加为书签，可能很快便会失效。
+
+## 关于 FreeBSD 中文社区
 
 ![微信公众号](.gitbook/assets/wechatnew.png)
 
@@ -64,15 +62,15 @@ FreeBSD 中文社区未通过其他域名部署本书，唯一官方域名为 `b
 
 如遇内容问题或网站技术问题，请发送邮件至 ykla [yklaxds@gmail.com](mailto:yklaxds@gmail.com)。关于内容问题，也可以通过 GitHub 提交 PR，入口位于桌面端网页当前页面的右下角或底部左下角。
 
-社区相关问题请加入 QQ 群后联系群主。
+FreeBSD 中文社区相关问题，请加入 QQ 群后联系群主。
 
-请遵循 [FreeBSD 中文社区行为规范（CoC）](https://docs.bsdcn.org/CODE_OF_CONDUCT)。
+请确保您遵循 [FreeBSD 中文社区行为规范（CoC）](https://docs.bsdcn.org/CODE_OF_CONDUCT)。
 
 留言功能需使用 GitHub 账户登录，评论将公开至 GitHub 存储库 [Handbook-giscus-discussions](https://github.com/FreeBSD-Ask/Handbook-giscus-discussions) 的 Discussions 板块，可前往该位置管理历史留言。
 
 ## 目标与方向
 
-详见 [贡献指南与开放任务](CONTRIBUTING.md)。
+在既有基础上逐步实现中文社区的《FreeBSD 操作系统设计与实现》。
 
 ## 捐赠
 
