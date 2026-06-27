@@ -358,7 +358,7 @@ $ git clone https://github.com/FreeBSD-Ask/FreeBSD-Ask
 - [ ] 24.8.基于 FreeBSD 的 Xen™ 虚拟机（过时、支持差。真的支持 Windows 11 吗？10 也行。Xen 真难用，而且删除了 PV 支持）
 - [ ] 31.4.Sendmail（过时，用 Postfix 等代替）
 - [ ] 32.2.inetd 超级服务器（过时。谁在用？）
-- [ ] 32.4.网络信息系统（NIS）（过时，用 SSSD-LADP 代替）
+- [ ] 32.4.网络信息系统（NIS）（过时，用 SSSD-LDAP 代替）
 - [ ] 30.5.使用 ATM 上的 PPP (PPPoA)（过时）
 - [ ] 29.4.拨入服务（过时）
 - [ ] gbde 相关加密（已从 [源代码](https://github.com/freebsd/freebsd-src/commit/8d2d1d651678178aa7f24f0530347f860423fd9e)移除）
