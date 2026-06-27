@@ -92,7 +92,7 @@ Linux 的全称为 GNU/Linux。
 
 Linux 基金会的官方网站是 <https://www.linuxfoundation.org>。
 
-501(c)(6) 是指美国《国内税收法典》（*Internal Revenue Code*, IRC）中 C 章 6 款，现将其与 C 章 3 款做比较：
+501(c)(6) 是指美国《国内税收法典》（*Internal Revenue Code*, IRC）中第 C 章第 6 款，现将其与第 C 章第 3 款做比较：
 
 | 维度 | §501(c)(3) | §501(c)(6) |
 | ---- | ----------- | ----------- |
