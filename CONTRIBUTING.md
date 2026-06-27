@@ -364,8 +364,8 @@ $ git clone https://github.com/FreeBSD-Ask/FreeBSD-Ask
 - [ ] gbde 相关加密（已从 [源代码](https://github.com/freebsd/freebsd-src/commit/8d2d1d651678178aa7f24f0530347f860423fd9e)移除）
 - [ ] 29.5.拨出服务（过时）
 - [ ] 30.2.配置 PPP（过时）
-- [ ] 31.3.DragonFly 邮件代理（DMA）（过时，用 Postfix 等代替）
-- [ ] 20.10.文件系统快照（UFS）（UFS 快照？？？）
+- [ ] 31.3.DragonFly 邮件代理（DMA）（DMA 为 FreeBSD 14.0 起默认 MTA，可用 Postfix 等代替）
+- [ ] 20.10.文件系统快照（UFS）（与 ZFS 快照相比功能有限）
 - [ ] 21.8.通过 GEOM 实现 UFS 日志（无意义）
 
 **Just for fun**（可有可无）
