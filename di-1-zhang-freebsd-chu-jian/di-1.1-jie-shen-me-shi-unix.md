@@ -96,7 +96,7 @@ UNIX 系统最初被命名为 UNICS，其诞生源于一项游戏项目。贝尔
 
 他以每周一个程序的速度，先后完成了三项工作：用于编写代码的编辑器、将代码转换为 PDP-7 可执行机器语言的汇编器，以及“内核的外层，即操作系统”，最终初步构建了操作系统。
 
-Thompson 在 PDP-7 上完成新操作系统的初步开发后，与数位同事讨论时，该系统尚无正式名称。直到 1970 年，布莱恩·柯尼汉（Brian Kernighan）建议将其命名为**UNICS**（**Uniplexed** Information and Computing Service, **单路复用** 信息和计算服务），作为对 **Multics**（**Multiplexed** Information and Computing Service, **多路复用** 信息和计算服务）的戏仿。该名称后来演变为 **UNIX**。
+Thompson 在 PDP-7 上完成新操作系统的初步开发后，与数位同事讨论时，该系统尚无正式名称。直到 1970 年，布莱恩·柯尼汉（Brian Kernighan）建议将其命名为 **UNICS**（**Uniplexed** Information and Computing Service, **单路复用** 信息和计算服务），作为对 **Multics**（**Multiplexed** Information and Computing Service, **多路复用** 信息和计算服务）的戏仿。该名称后来演变为 **UNIX**。
 
 上述从 Multics 到 UNIX 的关键演进节点可归纳如下：
 
