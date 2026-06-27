@@ -12,7 +12,7 @@ UNIX 在后期发展中渐趋封闭，最初作为开放的研究项目（受当
 
 - 1983 年，理查德·马修·斯托曼发表了 GNU 项目初始公告；其中 GNU 即“GNU's Not Unix”（GNU 不是 UNIX）的递归缩写。GNU 是一种旨在完全替代 UNIX 的操作系统。
 - 1984 年，理查德·马修·斯托曼正式创建了 [GNU 项目](https://www.gnu.org/)。
-- 1985 年，理查德·马修·斯托曼撰写了 GNU 宣言；同年创建了自由软件基金会（Free Software Foundation，FSF）。
+- 1985 年，理查德·马修·斯托曼撰写了 GNU 宣言；同年创建了非营利组织（**501(c)(3)**）自由软件基金会（Free Software Foundation，FSF）。
 - 1989 年，自由软件基金会发布了 GNU General Public License V1.0（GPLv1，GNU 通用公共许可证第 1 版）。
 - 1991 年，自由软件基金会发布了 GNU General Public License V2.0（GPLv2，GNU 通用公共许可证第 2 版）。
 - 2007 年，自由软件基金会发布 GNU General Public License V3.0（GPLv3，GNU 通用公共许可证第 3 版）。
@@ -33,7 +33,7 @@ UNIX 在后期发展中渐趋封闭，最初作为开放的研究项目（受当
 2007 │  发布 GPLv3
 ```
 
-在 GNU 项目初期，理查德·马修·斯托曼为 UNIX 开发了大量实用程序（用户空间组件），然而 GNU 始终未能产出稳定的内核。[**GNU Hurd**](https://hurd.gnu.org/) 是 GNU 项目的内核，采用微内核架构设计，开发始于 1990 年。尽管 Debian GNU/Hurd 移植团队已于 **2025 年 8 月 10 日**发布了 **Debian GNU/Hurd 2025**（该版本是 Debian sid 在 Debian 13 Trixie 发布时的快照，大部分源代码与 Trixie 相同；这是官方的 Debian GNU/Hurd 移植版发布，但非官方的 Debian 发行版），但其硬件支持和软件生态仍不成熟。Linux 内核的诞生打破了这一技术僵局。
+在 GNU 项目初期，理查德·马修·斯托曼为 UNIX 开发了大量实用程序（用户空间组件），然而 GNU 始终未能产出稳定的内核。[**GNU Hurd**](https://hurd.gnu.org/) 是 GNU 项目的内核，采用微内核架构设计，开发始于 1990 年。尽管 Debian GNU/Hurd 移植团队已于 **2025 年 8 月 10 日** 发布了 **Debian GNU/Hurd 2025**（该版本是 Debian sid 在 Debian 13 Trixie 发布时的快照，大部分源代码与 Trixie 相同；这是官方的 Debian GNU/Hurd 移植版发布，但非官方的 Debian 发行版），但其硬件支持和软件生态仍不成熟。Linux 内核的诞生打破了这一技术僵局。
 
 Linux 是 Linux 内核与 GNU 软件的组合体，在发展过程中不断融入 GNU 理念，最终形成 GNU/Linux 操作系统。尽管 GNU 的贡献巨大，其作用却常被低估。这一现象的部分原因在于 Linux 内核的开发由林纳斯·托瓦兹（Linus Torvalds）主导，而托瓦兹对自由软件基金会及理查德·马修·斯托曼的理念并不完全认同。Linux 内核项目与自由软件运动乃至严格的开源理念之间存在一定的分歧（例如，Linux 内核包含了一些不符合自由软件或严格开源定义的二进制固件模块〔参见 **Linux-libre**〕）。此外，Linux 内核采用的是 GPLv2 许可证，而非 GNU 所推荐的 GPLv3。
 
