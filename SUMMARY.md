@@ -282,7 +282,7 @@
 
 * [33.1 数据库概论](di-33-zhang-shu-ju-ku-guan-li/di-33.1-jie-shu-ju-ku-gai-lun.md)
 * [33.2 PostgreSQL](di-33-zhang-shu-ju-ku-guan-li/di-33.2-jie-postgresql.md)
-* [33.3 pgAdmin4](di-33-zhang-shu-ju-ku-guan-li/di-33.3-jie-pgadmin4.md)
+* [33.3 pgAdmin 4](di-33-zhang-shu-ju-ku-guan-li/di-33.3-jie-pgadmin4.md)
 * [33.4 MySQL](di-33-zhang-shu-ju-ku-guan-li/di-33.4-jie-mysql.md)
 * [33.5 MongoDB](di-33-zhang-shu-ju-ku-guan-li/di-33.5-jie-mongodb.md)
 
