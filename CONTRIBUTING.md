@@ -246,17 +246,17 @@ $ git clone https://github.com/FreeBSD-Ask/FreeBSD-Ask
 │          index.js
 │          Layout.vue
 │
-├─di-1-zhang-zou-jin-freebsd # 第 1 章的章节目录
-│      di-1.1-unix.md # 第 1 章的文件
-│      di-1.2-dao-lun.md
-│      di-1.3-jie-freebsd-jian-shi.md
-│      di-1.4-Fiat-Lux.md
+├─di-1-zhang-freebsd-chu-jian # 第 1 章的章节目录
+│      di-1.1-jie-shen-me-shi-unix.md # 第 1 章的文件
+│      di-1.2-jie-gnu-cao-zuo-xi-tong-he-zi-you-ruan-jian-yun-dong.md
+│      di-1.3-jie-linux-yu-lei-unix.md
+│      di-1.4-jie-shen-me-shi-freebsd.md
 │
-├─di-10-zhang-vpn-yu-dai-li # 第 10 章的章节目录
-│      di-10.1-jie-http-dai-li.md # 第 10 章的文件
-│      di-10.2-jie-v2ray.md
-│      di-10.3-jie-clash.md
-│      di-10.4-jie-openvpn.md
+├─di-10-zhang-xian-ka-qu-dong # 第 10 章的章节目录
+│      di-10.1-jie-xian-ka-qu-dong-gai-lun.md # 第 10 章的文件
+│      di-10.2-jie-intel-xian-ka-qu-dong.md
+│      di-10.3-jie-amd-xian-ka-qu-dong.md
+│      di-10.4-jie-nvidia-xian-ka-qu-dong.md
 │
 └─其他目录和文件从略
 │
@@ -286,30 +286,23 @@ $ git clone https://github.com/FreeBSD-Ask/FreeBSD-Ask
 ## 前言
 
 * [前言](qian-yan/qian-yan.md)
-* [致读者](qian-yan/zhi-du-zhe.md)
-* [致谢](qian-yan/zhi-xie.md)
 * [绪论](qian-yan/xu-lun.md)
+* [致读者：解放思想，回归本真，高扬人道主义，不走苦难哲学的邪路](qian-yan/zhi-du-zhe-jie-fang-si-xiang-hui-gui-ben-zhen-gao-yang-ren-dao-zhu-yi-bu-zou-ku-nan-zhe-xue-de-xie-lu.md)
+* [致谢](qian-yan/zhi-xie.md)
 
 ## 第 1 章 FreeBSD 初见
 
-* [1.1 操作系统的历程：UNIX、BSD 和 Linux](di-1-zhang-zou-jin-freebsd/di-1.1-unix.md)
-* [1.2 FreeBSD 导论](di-1-zhang-zou-jin-freebsd/di-1.2-dao-lun.md)
-* [1.3 George Berkeley（乔治·贝克莱）与 BSD 命名的文化背景](di-1-zhang-zou-jin-freebsd/di-1.3-jie-freebsd-jian-shi.md)
-* [1.4 加州大学伯克利分校和“Fiat Lux”（要有光）](di-1-zhang-zou-jin-freebsd/di-1.4-Fiat-Lux.md)
+* [1.1 什么是 UNIX？](di-1-zhang-freebsd-chu-jian/di-1.1-jie-shen-me-shi-unix.md)
+* [1.2 GNU 操作系统和自由软件运动](di-1-zhang-freebsd-chu-jian/di-1.2-jie-gnu-cao-zuo-xi-tong-he-zi-you-ruan-jian-yun-dong.md)
+* [1.3 Linux 与类 UNIX](di-1-zhang-freebsd-chu-jian/di-1.3-jie-linux-yu-lei-unix.md)
+* [1.4 什么是 FreeBSD](di-1-zhang-freebsd-chu-jian/di-1.4-jie-shen-me-shi-freebsd.md)
 
-## 第 2 章 安装 FreeBSD
+## 第 2 章 FreeBSD 导论
 
-* [2.1 安装前的准备工作](di-2-zhang-an-zhuang-freebsd/di-2.1-install-pre.md)
-* [2.2 使用 bsdinstall 开始安装](di-2-zhang-an-zhuang-freebsd/di-2.2-jie-start-install.md)
-* [2.3 键盘布局和主机名](di-2-zhang-an-zhuang-freebsd/di-2.3-jie-use-bsdinstall.md)
-* [2.4 选择安装组件](di-2-zhang-an-zhuang-freebsd/di-2.4-jie-select.md)
-* [2.5 分配磁盘空间](di-2-zhang-an-zhuang-freebsd/di-2.5-jie-fen-pei-disk.md)
-* [2.6 设置 root 密码](di-2-zhang-an-zhuang-freebsd/di-2.6-root-jie.md)
-* [2.7 网络设置](di-2-zhang-an-zhuang-freebsd/di-2.7-jie-net.md)
-* [2.8 时区、服务、安全、固件和账户](di-2-zhang-an-zhuang-freebsd/di-2.8-jie-more.md)
-* [2.9 完成安装](di-2-zhang-an-zhuang-freebsd/di-2.9-end-jie.md)
-* [2.10 故障排除](di-2-zhang-an-zhuang-freebsd/di-2.10-jie-eol.md)
-* [2.11 将 U 盘启动盘恢复为普通 U 盘（基于 Windows）](di-2-zhang-an-zhuang-freebsd/di-2.11-jie-usb.md)
+* [2.1 FreeBSD：理想、现实与中道](di-2-zhang-freebsd-dao-lun/di-2.1-jie-freebsd-li-xiang-xian-shi-yu-zhong-dao.md)
+* [2.2 关于 FreeBSD 项目](di-2-zhang-freebsd-dao-lun/di-2.2-jie-guan-yu-freebsd-xiang-mu.md)
+* [2.3 FreeBSD 开发模型](di-2-zhang-freebsd-dao-lun/di-2.3-jie-freebsd-kai-fa-mo-xing.md)
+* [2.4 FreeBSD 简史](di-2-zhang-freebsd-dao-lun/di-2.4-jie-freebsd-jian-shi.md)
 
 其他从略
 ```
