@@ -173,13 +173,13 @@ DOCUMENTATION, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 ---
 
 <!-- CHINESE_CHAR_COUNT_START -->
-文档总字数：94.94 万字；
+文档总字数：95.49 万字；
 
-统计时间：2026-06-21 14:59:14（北京时间）
+统计时间：2026-06-28 14:44:33（北京时间）
 
-与上周相比：+61 字（+0.01%）
+与上周相比：+5563 字（+0.59%）
 
-与上月相比：+8.24 万字（+9.51%）
+与上月相比：+7.56 万字（+8.59%）
 
 <!-- CHINESE_CHAR_COUNT_END -->
 
