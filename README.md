@@ -146,19 +146,19 @@ DOCUMENTATION, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 | 指标 | 统计数据 |
 | ---- | -------- |
-| 用户总数 | 57,935 位 |
-| 会话数 | 108,358 次 |
-| 浏览次数 | 671,504 次 |
-| 平均会话时长 | 7 分 56 秒 |
+| 用户总数 | 59,932 位 |
+| 会话数 | 110,972 次 |
+| 浏览次数 | 676,146 次 |
+| 平均会话时长 | 7 分 47 秒 |
 
 <!-- GA_STATS:END -->
 
 <!-- GA_BADGES:START -->
 
-![总用户数](https://img.shields.io/badge/总用户数-57,935-green)
-![会话数](https://img.shields.io/badge/会话数-108,358-orange)
-![浏览次数](https://img.shields.io/badge/浏览次数-671,504-blue)
-![平均会话时长](https://img.shields.io/badge/平均会话时长-7min56s-purple)
+![总用户数](https://img.shields.io/badge/总用户数-59,932-green)
+![会话数](https://img.shields.io/badge/会话数-110,972-orange)
+![浏览次数](https://img.shields.io/badge/浏览次数-676,146-blue)
+![平均会话时长](https://img.shields.io/badge/平均会话时长-7min47s-purple)
 
 <!-- GA_BADGES:END -->
 
