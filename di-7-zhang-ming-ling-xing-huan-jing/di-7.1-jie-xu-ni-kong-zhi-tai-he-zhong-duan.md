@@ -281,4 +281,4 @@ exec="gop set 0"
 
 1. 在 FreeBSD 中切换多个虚拟控制台（ttyv0—ttyv3），分别以不同用户登录，使用 `w` 命令记录各终端的会话信息，分析虚拟控制台与伪终端的会话管理差异。
 2. 查阅 FreeBSD 内核中 TTY 子系统的核心源代码（**sys/kern/tty\*.c** 与 **sys/sys/tty\*.h**），分析其输入输出缓冲区管理和行规程的实现机制。
-3. 修改 `/etc/motd.template` 的内容（`/etc/motd` 是 `/var/run/motd` 的符号链接，启动时由 `/etc/motd.template` 生成，参见 motd(5)）与显示行为（如通过 `/etc/login.conf` 的 `hushlogin` 功能控制），记录修改前后用户登录时的信息输出差异。
+3. 修改 **/etc/motd.template** 的内容（**/etc/motd** 是 **/var/run/motd** 的符号链接，启动时由 **/etc/motd.template** 生成，参见 motd(5)）与显示行为（如通过 **/etc/login.conf** 的 `hushlogin` 功能控制），记录修改前后用户登录时的信息输出差异。
