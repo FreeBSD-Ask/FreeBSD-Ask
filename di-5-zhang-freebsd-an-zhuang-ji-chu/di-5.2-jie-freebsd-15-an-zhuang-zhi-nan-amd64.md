@@ -708,7 +708,7 @@ CST 为中国标准时间（China Standard Time）的缩写，确认无误后按
 | ---- | ---- |
 | `0 hide_uids` | 隐藏其他用户拥有的进程 |
 | `1 hide_gids` | 隐藏其他组拥有的进程 |
-| `2 hide_jail` | 隐藏 jail 内的进程 |
+| `2 hide_jail` | 隐藏 Jail 内的进程 |
 | `3 read_msgbuf` | 禁止非特权用户读取内核消息缓冲区（通常通过 `dmesg` 命令访问） |
 | `4 proc_debug` | 禁用非特权用户的进程调试功能 |
 | `5 random_pid` | 启用进程 PID 随机化 |
