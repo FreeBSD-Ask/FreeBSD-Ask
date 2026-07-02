@@ -16,7 +16,7 @@
 
 ![创建自定义虚拟机](../.gitbook/assets/vmware-fusion-1.png)
 
-在操作系统选择界面，点击“Other”，右侧选择当前最新的 “FreeBSD 15 64-bit Arm”（Fusion 目前只有 15 的模板但对 16 同样适用），然后点击继续（Continue）：
+在操作系统选择界面，点击“Other”，右侧选择当前最新的“FreeBSD 15 64-bit Arm”（Fusion 目前只有 15 的模板但对 16 同样适用），然后点击继续（Continue）：
 
 ![选择操作系统](../.gitbook/assets/vmware-fusion-1-2.png)
 
