@@ -39,18 +39,15 @@ export default defineConfig({
         config: (md) => {
             // 使用 lightbox plugin
             md.use(lightbox, {});
+            const MAX_LEVEL = 6; // 支持的最大标题层级
+            const counters = new Array<number>(MAX_LEVEL + 1).fill(0); // 索引 1~6 对应 H1~H6，0 未使用
             let h1Prefix = "";
-            let h2 = 0,
-                h3 = 0,
-                h4 = 0,
-                h5 = 0,
-                h6 = 0;
-            let skipNumbering = false; // 新增：是否跳过编号的标志
+            let skipNumbering = false; // 是否跳过编号的标志
 
             md.core.ruler.push("auto_heading_number", (state) => {
-                h2 = h3 = h4 = h5 = h6 = 0;
+                counters.fill(0);
                 h1Prefix = "";
-                skipNumbering = false; // 重置标志
+                skipNumbering = false;
 
                 for (let i = 0; i < state.tokens.length; i++) {
                     const tok = state.tokens[i];
@@ -60,7 +57,7 @@ export default defineConfig({
                     const inline = state.tokens[i + 1];
                     if (!inline || inline.type !== "inline") continue;
 
-                    // H1 处理
+                    // H1 处理：解析数字前缀，决定是否对子标题编号
                     if (level === 1) {
                         const textNode = inline.children.find(
                             (t) => t.type === "text",
@@ -72,50 +69,36 @@ export default defineConfig({
                                 // 包含数字前缀的 H1
                                 h1Prefix = m[1];
                                 textNode.content = `${h1Prefix} ${m[2]}`;
-                                skipNumbering = false; // 重置跳过标志
-                                h2 = h3 = h4 = h5 = h6 = 0; // 重置子标题计数器
+                                skipNumbering = false;
+                                counters.fill(0, 2); // 重置 H2~H6 计数器
                             } else {
-                                // 不包含数字前缀的 H1（如"前言"）
+                                // 不包含数字前缀的 H1（如“前言”）
                                 h1Prefix = "";
-                                skipNumbering = true; // 设置跳过标志
+                                skipNumbering = true;
                             }
                         }
                         continue;
                     }
 
-                    // 如果处于跳过编号状态，直接跳过处理
+                    // 处于跳过编号状态时直接跳过
                     if (skipNumbering) continue;
 
-                    // 2~6 级标题自增并构造编号
-                    let prefix = "";
-                    if (level === 2) {
-                        h2++;
-                        h3 = h4 = h5 = h6 = 0;
-                        prefix = h1Prefix ? `${h1Prefix}.${h2}` : `${h2}`;
-                    } else if (level === 3) {
-                        h3++;
-                        h4 = h5 = h6 = 0;
-                        prefix = h1Prefix
-                            ? `${h1Prefix}.${h2}.${h3}`
-                            : `${h2}.${h3}`;
-                    } else if (level === 4) {
-                        h4++;
-                        h5 = h6 = 0;
-                        prefix = h1Prefix
-                            ? `${h1Prefix}.${h2}.${h3}.${h4}`
-                            : `${h2}.${h3}.${h4}`;
-                    } else if (level === 5) {
-                        h5++;
-                        h6 = 0;
-                        prefix = h1Prefix
-                            ? `${h1Prefix}.${h2}.${h3}.${h4}.${h5}`
-                            : `${h2}.${h3}.${h4}.${h5}`;
-                    } else if (level === 6) {
-                        h6++;
-                        prefix = h1Prefix
-                            ? `${h1Prefix}.${h2}.${h3}.${h4}.${h5}.${h6}`
-                            : `${h2}.${h3}.${h4}.${h5}.${h6}`;
+                    // 仅处理 H2~H6
+                    if (level < 2 || level > MAX_LEVEL) continue;
+
+                    // 自增当前层级计数器，并重置所有更深层级计数器
+                    counters[level]++;
+                    for (let l = level + 1; l <= MAX_LEVEL; l++) {
+                        counters[l] = 0;
                     }
+
+                    // 数据驱动构造编号：按需拼接 h1Prefix 与 H2~当前层级的计数
+                    const parts: string[] = [];
+                    if (h1Prefix) parts.push(h1Prefix);
+                    for (let l = 2; l <= level; l++) {
+                        parts.push(String(counters[l]));
+                    }
+                    const prefix = parts.join(".");
 
                     if (prefix) {
                         // 创建编号文本节点并插入到标题开头
