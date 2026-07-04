@@ -2,7 +2,6 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-
 ## Lint 配置
 
 - 不带选项和参数的裸命令，如 mv cp 等，一般不加反引号 “`”，即不进行包裹。
