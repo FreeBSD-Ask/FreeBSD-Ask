@@ -46,9 +46,39 @@ FreeBSD 日为 6 月 19 日。FreeBSD 基金会和社区在这天庆祝 FreeBSD 
 
 ## 吉祥物
 
-FreeBSD 或者说 BSD 家族吉祥物是 BSD Daemon，名为“beastie”，如下图所示：
+FreeBSD 或者说 BSD 家族吉祥物是 BSD Daemon（守护进程），名为“beastie”，发音接近“BSD”，如下图所示：
 
-![beastie](../.gitbook/assets/beastie.png)
+![beastie](../.gitbook/assets/beastie2.png)
+
+此图出自源代码 **share/examples/BSD_daemon/beastie.svg** 文件。
+
+根据作者要求（[Statement on the Use of the BSD Daemon Figure:](https://www.mckusick.com/beastie/mainpage/copyright.html)）标注版权信息如下：
+
+```text
+    BSD Daemon Copyright 1988 by Marshall Kirk McKusick.
+    All Rights Reserved.
+
+    Permission to use the daemon may be obtained from:
+	Marshall Kirk McKusick
+	1614 Oxford St
+	Berkeley, CA 94709-1608
+	USA
+    or via email at mckusick@mckusick.com
+```
+
+Daemon 出自希腊语“δαίμων”（代蒙），原指一种非善非恶，介于神人之间的实体。
+
+Beastie 身着运动鞋、手持草叉，表情愉悦。其三叉戟意味着进程的分叉（`fork()`）。
+
+>**思考题**
+>
+> 苏格拉底被控的罪证之一就是引入新神：
+>
+>> ἔχει δέ πως ὧδε· Σωκράτη φησὶν ἀδικεῖν τούς τε νέους διαφθείροντα καὶ θεοὺς οὓς ἡ πόλις νομίζει οὐ νομίζοντα, ἕτερα δὲ **δαιμόνια καινά**.(Plato, Apology 24b–c.）. 此处 δαιμόνια 是 δαίμων 名词化而来的中性复数形式。“起诉书大概是这样写的：它声称苏格拉底犯有不义之罪——他败坏青年，并且不承认城邦所承认的神，而承认新的神灵。（申辩篇）”
+>
+>>其实类似的天命观表述在中国哲学中也可以找到，例如孔子的“天命”：子曰：“莫我知也夫！”子贡曰：“何为其莫知子也？”子曰：“不怨天，不尤人。下学而上达。知我者，其天乎！”（《论语·宪问》）子曰：“天生德于予，桓魋其如予何？”（《论语·述而》）苏格拉底的 δαιμόνιον 与孔子的天命虽处于不同文化传统，但都体现了一种思想：他们都不是简单意义上的人格神，而是某种超越个人经验的神圣秩序或召唤。
+>
+> 请读者思考：
 
 ## UNIX 之船：FreeBSD 是不是 UNIX？
 
