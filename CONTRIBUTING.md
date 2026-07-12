@@ -1,34 +1,5 @@
 # 贡献指南与开放任务
 
-## 为什么不去建设《FreeBSD 手册》
-
-FreeBSD 项目对除季度报告外的实质性 PR 多长期搁置。从提交数据来看，freebsd-doc 项目的活跃度在过去十余年持续走低：
-
-使用统计分析 git 项目[EB/OL]. [2026-03-26]. <https://gist.github.com/ykla/6c3df44c371d37fc3196ddf5fa87ce5f> 分析 freebsd-doc 的结果参见：freebsd-doc-2025 分析报告[EB/OL]. [2026-03-26]. <https://gist.github.com/ykla/363bf922d0785d0b02dd43f8289368db>。
-
-- 2005–2006 年：第一次显著下滑
-- 2015–2016 年：第二次大幅下滑
-
-该项目结构复杂且混乱，例如在翻译过程中部分数据引用的可复用性难以判断，即使对维护者而言亦是如此。
-
-此外，其安全报告的文件名包含英文冒号 `:`，这在 Windows 系统中属于非法字符，导致整个项目无法在 Windows 环境下正常检出：
-
-```powershell
-PS C:\Users\ykla> git clone https://github.com/freebsd/freebsd-doc
-Cloning into 'freebsd-doc'...
-remote: Enumerating objects: 617155, done.
-remote: Counting objects: 100% (294/294), done.
-remote: Compressing objects: 100% (120/120), done.
-remote: Total 617155 (delta 217), reused 219 (delta 174), pack-reused 616861 (from 4)
-Receiving objects: 100% (617155/617155), 483.71 MiB | 786.00 KiB/s, done.
-Resolving deltas: 100% (358420/358420), done.
-error: invalid path 'website/static/security/advisories/FreeBSD-EN-04:01.twe.asc' # 观察 FreeBSD-EN-04:01.twe.asc，该文件名在 Windows 下是非法的
-fatal: unable to checkout working tree
-warning: Clone succeeded, but checkout failed.
-You can inspect what was checked out with 'git status'
-and retry with 'git restore --source=HEAD :/'
-```
-
 ## 贡献指南概述
 
 若您希望将教程收录至本书，可通过以下方式提交：
