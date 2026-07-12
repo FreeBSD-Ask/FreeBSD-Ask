@@ -38,7 +38,7 @@ and retry with 'git restore --source=HEAD :/'
 
 本书现收录以下类型的内容：
 
-- 一切与 BSD 相关（包括但不限于 FreeBSD、OpenBSD、NetBSD）及各种体系架构的教程。您既可以扩充现有教程，也可以创建新的章节。
+- 一切与 FreeBSD 相关及各种体系架构的教程。您既可以扩充现有教程，也可以创建新的章节。
 - 下方的 ToDo 列表或 GitHub Project 中的任务。
 - 您也可以在文学故事章节分享您与 BSD 的故事及个人心得体会。
 
