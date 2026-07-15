@@ -17,6 +17,7 @@ FreeBSD 发展关键里程碑
 2012 │ Clang/LLVM 成为默认编译器
 2020 │ src 仓库迁移至 Git
 2025 │ PkgBase 引入（15.0-RELEASE）
+2026 | 真正自由的操作系统：基本系统完全移除 GPL 代码
 ```
 
 - 1961 年分时操作系统（Timesharing OS）
@@ -215,6 +216,14 @@ Alpha-Omega 项目先后审计了 FreeBSD 的 bhyve 虚拟机监视器和 Capsic
 
 历经十年岁月磨炼，FreeBSD 终于在 15.0-RELEASE 中新增了 PkgBase 安装方式，以通过软件包来管理基本系统。这种方式最初源于 TrueOS 项目。
 
+- 2026.7.14 真正自由的操作系统：基本系统完全移除 GPL 代码
+
+随着 <https://github.com/freebsd/freebsd-src/commit/134a4c78d070f8c4ea43a060a7ae28d22ac39558> 的提交，FreeBSD 基本系统中的 GPL 代码已经完全移除。现在 FreeBSD 是一款真正自由的操作系统！这一过程肇始于 2007 年 GPLv3（一种强著佐权许可协议）的发布，而同一时期的 GCC 亦转向了该协议。自此以后，FreeBSD 项目开始了长达近 20 年的征程。这同时也标志着 FreeBSD 工具链的集成化、现代化、宽松许可。
+
+>**技巧**
+>
+>这只是基本系统变更，不影响用户软件 Ports，用户仍可自由安装任意软件。
+
 ## 参考文献
 
 - OpenZFS. OpenZFS[EB/OL]. [2026-06-07]. <https://en.wikipedia.org/wiki/OpenZFS>.
@@ -259,6 +268,7 @@ Alpha-Omega 项目先后审计了 FreeBSD 的 bhyve 虚拟机监视器和 Capsic
 - FreeBSD Project. FreeBSD 5.3-RELEASE Announcement[EB/OL]. (2004-11-06)[2026-04-17]. <https://www.freebsd.org/releases/5.3R/announce/>. FreeBSD 5.3-RELEASE 发布日期为 2004 年 11 月 6 日，PF 及 Libarchive 均随此版本发布。
 - Libarchive Project. LibarchiveUsers[EB/OL]. [2026-04-17]. <https://github.com/libarchive/libarchive/wiki/LibarchiveUsers>. 记载“libarchive was originally developed for FreeBSD; it was first released with FreeBSD 5.3 in November 2004”。
 - Max Laier. Packet Filter (pf) An Extended Introduction[EB/OL]. (2004-10-21)[2026-04-17]. <https://web.archive.org/web/20250503030531/https://people.freebsd.org/~mlaier/sucon.pdf>. PF 移植者 Max Laier 的演讲，PF 于 2003 年 3 月移植到 FreeBSD，2004 年 2 月 26 日集成到 FreeBSD 基本系统。
+- FreeBSD Foundation. Development Project Update: Toolchain Modernization[EB/OL]. (2020-03-19)[2026-07-15]. <https://freebsdfoundation.org/blog/project-update-toolchain-modernization/>. 记录了 FreeBSD 工具链去 GPL 化的一些历史。
 
 ## 课后习题
 
