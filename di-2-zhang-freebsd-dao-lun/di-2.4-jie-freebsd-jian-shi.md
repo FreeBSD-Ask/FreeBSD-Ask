@@ -269,6 +269,7 @@ Alpha-Omega 项目先后审计了 FreeBSD 的 bhyve 虚拟机监视器和 Capsic
 - Libarchive Project. LibarchiveUsers[EB/OL]. [2026-04-17]. <https://github.com/libarchive/libarchive/wiki/LibarchiveUsers>. 记载“libarchive was originally developed for FreeBSD; it was first released with FreeBSD 5.3 in November 2004”。
 - Max Laier. Packet Filter (pf) An Extended Introduction[EB/OL]. (2004-10-21)[2026-04-17]. <https://web.archive.org/web/20250503030531/https://people.freebsd.org/~mlaier/sucon.pdf>. PF 移植者 Max Laier 的演讲，PF 于 2003 年 3 月移植到 FreeBSD，2004 年 2 月 26 日集成到 FreeBSD 基本系统。
 - FreeBSD Foundation. Development Project Update: Toolchain Modernization[EB/OL]. (2020-03-19)[2026-07-15]. <https://freebsdfoundation.org/blog/project-update-toolchain-modernization/>. 记录了 FreeBSD 工具链去 GPL 化的一些历史。
+- FreeBSD Project. GPLinBase[EB/OL]. [2026-07-15]. <https://wiki.freebsd.org/GPLinBase>. FreeBSD 基本系统去 GPL 化的一些历史。
 
 ## 课后习题
 
