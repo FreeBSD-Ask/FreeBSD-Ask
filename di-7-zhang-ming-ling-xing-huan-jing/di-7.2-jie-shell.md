@@ -37,7 +37,7 @@ POSIX shell 规范的核心要求包括：
 
 FreeBSD 系统默认采用的 shell 是 sh。FreeBSD 的 **/bin/sh** 并非 **Stephen R. Bourne** 在贝尔实验室为 UNIX V7 编写的原始 Bourne shell（Bourne 来自作者姓名），而是基于 Kenneth Almquist 于 1989 年发布的 Almquist shell（ash），后者旨在作为 Bourne shell 更紧凑、更高效的替代品。4.3BSD-Reno/Net/2 时期（1990—1991 年）将 ash 引入 BSD 世界，NetBSD 随后将其作为默认 /bin/sh，FreeBSD 又从 NetBSD 导入了 ash 实现，在功能上基本符合 POSIX.1-2024 标准中关于 shell 的规范要求。
 
-Linux 中常见的 shell 是 GNU 工具 bash。bash 全拼为 Bourne Again shell，是对“Born Again”即“重生”的双关，意为“重生的 Bourne shell”）。作者是 Brian Fox。
+Linux 中常见的 shell 是 GNU 工具 bash（作者 Brian Fox）。bash 全拼为 Bourne Again shell，是对“Born Again”即“重生”的双关，意为“重生的 Bourne shell”。
 
 Linux 中同样提供 sh，但通常符号链接到其他 shell（如 Debian/Ubuntu 中链接到 dash，部分发行版链接到 bash），它们并不是真正的 sh。
 
