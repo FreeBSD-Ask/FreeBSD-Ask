@@ -33,7 +33,7 @@ UNIX 在后期发展中渐趋封闭，最初作为开放的研究项目（受当
 2007 │  发布 GPLv3
 ```
 
-在 GNU 项目初期，理查德·马修·斯托曼为 UNIX 开发了大量实用程序（用户空间组件），**许多常用的 BSD 工具被在 GNU 项目中以 GPL 许可证重新实现**，然而 GNU 始终未能产出稳定的内核。[**GNU Hurd**](https://hurd.gnu.org/) 是 GNU 项目的内核，采用微内核架构设计，开发始于 1990 年。尽管 Debian GNU/Hurd 移植团队已于 **2025 年 8 月 10 日** 发布了 **Debian GNU/Hurd 2025**（该版本是 Debian sid 在 Debian 13 Trixie 发布时的快照，大部分源代码与 Trixie 相同；这是官方的 Debian GNU/Hurd 移植版发布，但非官方的 Debian 发行版），但其硬件支持和软件生态仍不成熟。Linux 内核的诞生打破了这一技术僵局。
+在 GNU 项目初期，理查德·马修·斯托曼为 UNIX 开发了大量实用程序（用户空间组件），**在 GNU 项目中，还以 GPL 许可证重新实现了许多常用的 BSD 工具**，然而 GNU 始终未能产出稳定的内核。[**GNU Hurd**](https://hurd.gnu.org/) 是 GNU 项目的内核，采用微内核架构设计，开发始于 1990 年。尽管 Debian GNU/Hurd 移植团队已于 **2025 年 8 月 10 日** 发布了 **Debian GNU/Hurd 2025**（该版本是 Debian sid 在 Debian 13 Trixie 发布时的快照，大部分源代码与 Trixie 相同；这是官方的 Debian GNU/Hurd 移植版发布，但非官方的 Debian 发行版），但其硬件支持和软件生态仍不成熟。Linux 内核的诞生打破了这一技术僵局。
 
 >**思考题**
 >
