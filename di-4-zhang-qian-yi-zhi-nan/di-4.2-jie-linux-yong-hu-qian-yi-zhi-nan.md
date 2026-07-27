@@ -10,7 +10,8 @@ Linux 与 FreeBSD 同属类 UNIX 操作系统，但二者在内核架构、包�
 - 发行版（distribution）概念框架；
 - sudo 工具最初面向 4.1BSD；
 - Gentoo 采用的 Ports 包管理方法论，技术渊源可追溯至 BSD Ports 框架；
-- BSD 是最早的开源理念实践者
+- Gentoo 采用的 World 设置集（Portage set）概念，实际上源于 BSD 中的 World（用户空间）；
+- BSD 是最早的开源理念实践者；
 - BSD 许可证也是历史上最早出现的自由软件许可证之一（早于 1989 年的 GPL，但晚于 1985 年的 GNU Emacs 许可证）。
 
 > **思考题**
@@ -24,6 +25,7 @@ Linux 与 FreeBSD 同属类 UNIX 操作系统，但二者在内核架构、包�
 - FreeBSD Foundation. FreeBSD: The Torchbearer of the Original Operating System Distribution[EB/OL]. [2026-04-04]. <https://freebsdfoundation.org/blog/freebsd-the-torchbearer-of-the-original-operating-system-distribution/>. BSD 最早提出并实践了“发行版”概念框架。
 - Linux Foundation. A Brief Look at the Roots of Linux Containers[EB/OL]. [2026-04-18]. <https://www.linuxfoundation.org/blog/blog/a-brief-look-at-the-roots-of-linux-containers>. 该文指出：“In 2000, FreeBSD extended chroot to FreeBSD Jails”，容器技术原型可追溯至 FreeBSD Jail。
 - Amadio G, Xu B. Portage: Bringing Hackers' Wisdom to Science[EB/OL]. arXiv preprint arXiv:1610.02742, 2016. [2026-04-18]. <https://arxiv.org/abs/1610.02742>. 该论文指出：“Portage, written in Python and inspired by the ports system from FreeBSD”及“Portage is a GPLv2 package management system based on FreeBSD's ports collection”，Gentoo Portage 技术渊源可追溯至 BSD Ports。
+- Gentoo Wiki. World set (Portage)[EB/OL].  (2026-06-09)[2027-07-27]. <https://wiki.gentoo.org/wiki/Package_sets>. 指出“@world 集合包含了系统上安装的所有软件包：即由系统管理员定义的软件包以及由 Gentoo 开发团队定义的软件包。”
 - FreeBSD Project. Why you should use a BSD style license for your Open Source Project[EB/OL]. [2026-04-18]. <https://www.freebsd.org/doc/en/articles/bsdl-gpl/>. 该文记载了 BSD 许可证自 20 世纪 70 年代末起即以源代码自由分发的方式实践开源理念，早于 1985 年的 GNU Emacs 许可证和 1989 年的 GPL。
 - Red Hat. 什么是 Linux 容器？[EB/OL]. [2026-04-04]. <https://www.redhat.com/zh/topics/containers/whats-a-linux-container>. 介绍 Linux 容器的基本概念与技术原理。
 - Open Source Initiative. The Open Source Definition[EB/OL]. [2026-04-17]. <https://opensource.org/osd>. 虽然“开源”（Open Source）一词直到 1998 年才由 Christine Peterson 正式提出，但 BSD 许可证自 20 世纪 80 年代起便以源代码自由分发的方式实践了这一理念。
