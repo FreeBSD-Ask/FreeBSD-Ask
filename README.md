@@ -187,9 +187,9 @@ DOCUMENTATION, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 <a href="https://www.star-history.com/?repos=FreeBSD-Ask%2FFreeBSD-Ask&type=date&legend=top-left">
  <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=FreeBSD-Ask/FreeBSD-Ask&type=date&theme=dark&legend=top-left&sealed_token=HSsYtOf5fdBczd8O4iUKnvpUsJHhrNfodYNLpyG5Jwq2ZwV8JOWyOnqDXq-YeOppiWbTQtMnFjHggx8B8Izn_qQsRr3vp_QjlTG-KVzScWsMTAl9yG240A" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=FreeBSD-Ask/FreeBSD-Ask&type=date&legend=top-left&sealed_token=HSsYtOf5fdBczd8O4iUKnvpUsJHhrNfodYNLpyG5Jwq2ZwV8JOWyOnqDXq-YeOppiWbTQtMnFjHggx8B8Izn_qQsRr3vp_QjlTG-KVzScWsMTAl9yG240A" />
-   <img alt="⭐ 图" src="https://api.star-history.com/chart?repos=FreeBSD-Ask/FreeBSD-Ask&type=date&legend=top-left&sealed_token=HSsYtOf5fdBczd8O4iUKnvpUsJHhrNfodYNLpyG5Jwq2ZwV8JOWyOnqDXq-YeOppiWbTQtMnFjHggx8B8Izn_qQsRr3vp_QjlTG-KVzScWsMTAl9yG240A" />
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=FreeBSD-Ask/FreeBSD-Ask&type=date&theme=dark&legend=top-left&sealed_token=m4veCu3-50Wb7qK0-YeYJKjFj34xrgYZkPf5Ulj9xhD2JSvGokY40UGIvabwLZLyZcLpfUDO9Fofznig3228xRTTln79uKGwBIB-9imIqabfi3cmwINO0A" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=FreeBSD-Ask/FreeBSD-Ask&type=date&legend=top-left&sealed_token=m4veCu3-50Wb7qK0-YeYJKjFj34xrgYZkPf5Ulj9xhD2JSvGokY40UGIvabwLZLyZcLpfUDO9Fofznig3228xRTTln79uKGwBIB-9imIqabfi3cmwINO0A" />
+   <img alt="⭐ 图" src="https://api.star-history.com/chart?repos=FreeBSD-Ask/FreeBSD-Ask&type=date&legend=top-left&sealed_token=m4veCu3-50Wb7qK0-YeYJKjFj34xrgYZkPf5Ulj9xhD2JSvGokY40UGIvabwLZLyZcLpfUDO9Fofznig3228xRTTln79uKGwBIB-9imIqabfi3cmwINO0A" />
  </picture>
 </a>
 
