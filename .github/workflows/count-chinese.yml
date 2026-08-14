@@ -2,7 +2,7 @@ name: 📊 更新文档字数统计
 
 on:
   schedule:
-    - cron: '20 5 * * 0'
+    - cron: '10 20 1 * *'
   workflow_dispatch:
 
 permissions:
