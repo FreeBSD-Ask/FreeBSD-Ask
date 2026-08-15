@@ -2,6 +2,8 @@
 
 ## 2026 年第三季度
 
+- 2026.8.15
+  - <https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=296052> 修复 KDE 6 Wayland 无法登录的 Bug 
 - 2026.7.2
   - 格式清理（空格、大小写统一、统一格式）
 
