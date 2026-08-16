@@ -2,9 +2,11 @@
 
 ![🎉 欢迎来到 BSD 的世界！](.gitbook/assets/web-logo.png)
 
-🎉 欢迎来到 BSD（Berkeley Software Distribution, 伯克利软件**发行版**）的世界！！！
+🎉 欢迎来到 BSD（Berkeley Software Distribution, 伯克利软件发行版）的世界！！！
 
-FreeBSD 项目赓续了计算机系统研究小组（Computer Systems Research Group, CSRG）的未竟事业。FreeBSD 是一款真正自由（Liberty）的 **操作系统**，在这云谲波诡的世界中仍然坚守 BSD UNIX 哲学——**恪守古老的法则，追寻真正的自由**。
+FreeBSD 项目赓续了 **计算机系统研究小组（Computer Systems Research Group, CSRG）** 的未竟事业。
+
+FreeBSD 是一款真正自由（Liberty）的 **操作系统**，在这云谲波诡的世界中仍然坚守 BSD UNIX 哲学——**恪守古老的法则，追寻真正的自由**。
 
 ## 内容提要
 
@@ -185,12 +187,10 @@ DOCUMENTATION, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ## ⭐ 图
 
-<a href="https://www.star-history.com/?repos=FreeBSD-Ask%2FFreeBSD-Ask&type=date&legend=top-left">
- <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=FreeBSD-Ask/FreeBSD-Ask&type=date&theme=dark&legend=top-left&sealed_token=m4veCu3-50Wb7qK0-YeYJKjFj34xrgYZkPf5Ulj9xhD2JSvGokY40UGIvabwLZLyZcLpfUDO9Fofznig3228xRTTln79uKGwBIB-9imIqabfi3cmwINO0A" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=FreeBSD-Ask/FreeBSD-Ask&type=date&legend=top-left&sealed_token=m4veCu3-50Wb7qK0-YeYJKjFj34xrgYZkPf5Ulj9xhD2JSvGokY40UGIvabwLZLyZcLpfUDO9Fofznig3228xRTTln79uKGwBIB-9imIqabfi3cmwINO0A" />
-   <img alt="⭐ 图" src="https://api.star-history.com/chart?repos=FreeBSD-Ask/FreeBSD-Ask&type=date&legend=top-left&sealed_token=m4veCu3-50Wb7qK0-YeYJKjFj34xrgYZkPf5Ulj9xhD2JSvGokY40UGIvabwLZLyZcLpfUDO9Fofznig3228xRTTln79uKGwBIB-9imIqabfi3cmwINO0A" />
- </picture>
-</a>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=FreeBSD-Ask/FreeBSD-Ask&type=date&theme=dark&legend=top-left&sealed_token=m4veCu3-50Wb7qK0-YeYJKjFj34xrgYZkPf5Ulj9xhD2JSvGokY40UGIvabwLZLyZcLpfUDO9Fofznig3228xRTTln79uKGwBIB-9imIqabfi3cmwINO0A" />
+  <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=FreeBSD-Ask/FreeBSD-Ask&type=date&legend=top-left&sealed_token=m4veCu3-50Wb7qK0-YeYJKjFj34xrgYZkPf5Ulj9xhD2JSvGokY40UGIvabwLZLyZcLpfUDO9Fofznig3228xRTTln79uKGwBIB-9imIqabfi3cmwINO0A" />
+  <img alt="⭐ 图" src="https://api.star-history.com/chart?repos=FreeBSD-Ask/FreeBSD-Ask&type=date&legend=top-left&sealed_token=m4veCu3-50Wb7qK0-YeYJKjFj34xrgYZkPf5Ulj9xhD2JSvGokY40UGIvabwLZLyZcLpfUDO9Fofznig3228xRTTln79uKGwBIB-9imIqabfi3cmwINO0A" />
+</picture>
 
 若本书对您有所帮助，欢迎为 [GitHub 项目存储库](https://github.com/FreeBSD-Ask/FreeBSD-Ask) 加星标 ⭐。

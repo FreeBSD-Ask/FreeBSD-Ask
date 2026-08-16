@@ -7,7 +7,13 @@
 
 ## 前言
 
-* [前言](qian-yan/qian-yan.md)
+* [四版前言：和解与等待（草稿）](qian-yan/qian-yan4.md)
+* [三版前言：且有大觉而后知此其大梦也](qian-yan/qian-yan3.md)
+* [再版前言：回到复制粘贴，面向教程本身](qian-yan/qian-yan2.md)
+* [初版前言：好望角与塔式起重机](qian-yan/qian-yan1.md)
+
+***
+
 * [绪论](qian-yan/xu-lun.md)
 * [致读者：解放思想，回归本真，高扬人道主义，不走苦难哲学的邪路](qian-yan/zhi-du-zhe-jie-fang-si-xiang-hui-gui-ben-zhen-gao-yang-ren-dao-zhu-yi-bu-zou-ku-nan-zhe-xue-de-xie-lu.md)
 * [致谢](qian-yan/zhi-xie.md)
