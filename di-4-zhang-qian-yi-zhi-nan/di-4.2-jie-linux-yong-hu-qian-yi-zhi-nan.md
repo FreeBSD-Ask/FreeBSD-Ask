@@ -7,7 +7,7 @@ Linux 与 FreeBSD 同属类 UNIX 操作系统，但二者在内核架构、包�
 许多 Linux 世界的核心概念与技术实践，最早由 BSD 系统提出并实践。这意味着 Linux 世界存在着大量的文化挪用现象，包括：
 
 - 容器技术的原型可追溯至 FreeBSD Jail 机制；
-- 发行版（distribution）概念框架；
+- 发行版（distribution）概念框架：请理解为何应将 BSD（Berkeley Software Distribution）译为“伯克利软件发行版”而非“伯克利软件套件”；
 - sudo 工具最初面向 4.1BSD；
 - Gentoo 采用的 Ports 包管理方法论，技术渊源可追溯至 BSD Ports 框架；
 - Gentoo 采用的 World 设置集（Portage set）概念，实际上源于 BSD 中的 World（用户空间）；
