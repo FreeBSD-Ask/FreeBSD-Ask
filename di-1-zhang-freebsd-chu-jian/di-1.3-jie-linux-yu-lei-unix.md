@@ -1,6 +1,6 @@
 # 1.3 Linux 与类 UNIX
 
-本节以 Linux 内核官方文档的定义为起点，阐述 Linux 作为 UNIX 克隆操作系统的技术架构与许可证体系，并说明其“类 UNIX”属性的法律与功能依据。
+本节以 Linux 内核官方文档的定义为起点，阐述 Linux 作为 UNIX 克隆操作系统的技术架构与许可证体系，并说明其“类 UNIX”属性的法律与功能依据。MINIX 和 Linux 是独立实现的、与 UNIX 兼容或相似的类 UNIX 系统，而不是从 UNIX 源代码派生出来的 UNIX 派生物。
 
 ## 何谓 Linux？
 
