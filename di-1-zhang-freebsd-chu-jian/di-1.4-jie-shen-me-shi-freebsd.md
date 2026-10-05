@@ -130,6 +130,7 @@ BSD 操作系统并非复刻品，而是 AT&T Research Unix 操作系统的开�
 
 - Marshall Kirk McKusick. History of the BSD Daemon[EB/OL]. [2026-06-01]. <https://www.mckusick.com/beastie/index.html>. 此页面说明了 BSD Daemon 的历史。
 - M.D.Fuller, BSD For Linux Users[EB/OL]. [2026-06-01]. <https://www.over-yonder.net/~fullermd/rants/bsd4linux/01>. 文章转述了“Linux is what you get when a bunch of PC hackers sit down and try to write a Unix system for the PC. BSD is what you get when a bunch of Unix hackers sit down to try to port a Unix system to the PC.”这一名言。
+- FreeBSD Project. The UNIX system family tree: Research and BSD[EB/OL]. [2026-10-05]. <https://github.com/freebsd/freebsd-src/blob/main/share/misc/bsd-family-tree>. FreeBSD 项目官方的研究 UNIX 和 BSD 树。
 - FreeBSD Foundation. Join us to celebrate FreeBSD Day![EB/OL]. [2026-03-26]. <https://freebsdfoundation.org/freebsd-day/>.
 - Identity Over Time[EB/OL]. [2026-03-26]. <https://plato.stanford.edu/entries/identity-time>. SEP 条目：跨时间的同一性。
 - Sorites Paradox[EB/OL]. [2026-03-26]. <https://plato.stanford.edu/entries/sorites-paradox/>. SEP 条目：沙堆问题、秃头问题。
