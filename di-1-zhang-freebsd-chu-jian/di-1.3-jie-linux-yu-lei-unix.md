@@ -114,11 +114,15 @@ Linux 基金会的官方网站是 <https://www.linuxfoundation.org>。
 
 除获得正式 UNIX 认证的系统外，还有许多采用类似 UNIX 设计理念的操作系统。
 
-UNIX-like 即类 UNIX，指基本符合 UNIX 标准，或基本遵守 POSIX 规范但未获得相应认证、商标使用权的操作系统。
+UNIX-like 即类 UNIX，指基本符合 UNIX 标准，或基本遵守 POSIX 规范但未获得相应认证、商标使用权的操作系统。但前提是与 UNIX 无代码谱系关系。
 
 该术语用于描述设计理念和技术实现上与 UNIX 高度相似但缺乏正式认证的系统。
 
-当前主流操作系统中，许多遵循 POSIX 规范或采用类 UNIX 设计理念的操作系统可称为 UNIX-like，其典型代表包括 Linux 和各种 BSD 系统。
+当前主流操作系统中，许多遵循 POSIX 规范或采用类 UNIX 设计理念的操作系统可称为 UNIX-like，其典型代表包括各种 Linux 发行版。
+
+> **注意**
+>
+> BSD 是 UNIX 的伯克利分支（UNIX 直接衍生系统），而不是类 UNIX；Linux 才是典型的类 UNIX 系统。因此使用类（like，像）这个字词形容 BSD 谱系也是一种遮蔽和文化挪用的表现。
 
 ## 课后习题
 
