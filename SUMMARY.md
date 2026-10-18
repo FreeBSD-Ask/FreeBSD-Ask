@@ -79,6 +79,7 @@
 * [8.5 Ports 构建调优](di-8-zhang-ruan-jian-guan-li/di-8.5-jie-ports-gou-jian-diao-you.md)
 * [8.6 使用 DVD 安装软件](di-8-zhang-ruan-jian-guan-li/di-8.6-jie-shi-yong-dvd-an-zhuang-ruan-jian.md)
 * [8.7 FreeBSD 镜像站现状](di-8-zhang-ruan-jian-guan-li/di-8.7-jie-freebsd-jing-xiang-zhan-xian-zhuang.md)
+* [8.8 制作 FreeBSD 二进制包（pkg）](di-8-zhang-ruan-jian-guan-li/di-8.8-jie-zhi-zuo-freebsd-er-jin-zhi-bao.md)
 
 ## 第 9 章 网络管理
 
