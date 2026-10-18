@@ -67,11 +67,11 @@ $ chmod 755 ~/hello-pkg/stage/usr/local/bin/hello
 
 字段含义见 pkg-create(8)。`name` 与 `version` 共同决定包的文件名；`origin` 沿用 Ports 的 `分类/目录` 形式；`comment` 是一行简介，`desc` 是较长的描述；`prefix` 是安装前缀，常规取值为 **/usr/local**。
 
-`pkg create` 只打包 plist 中列出的文件，因此还需要生成一份 plist。plist 就是文件路径的列表，以 `/` 开头的路径按绝对路径处理，否则视为相对于 `prefix`：
+`pkg create` 只打包 plist 中列出的文件，因此还需要生成一份 plist。plist 就是文件路径的列表，以 `/` 开头的路径按绝对路径处理，否则视为相对于 `prefix`。注意符号链接也要列入：`-type f` 只匹配普通文件，若暂存目录中含有符号链接，需同时匹配 `-type l`，否则这些链接不会被打包。
 
 ```sh
 $ cd ~/hello-pkg
-$ find stage -type f | sed 's|^stage||' > meta/files.plist
+$ find stage \( -type f -o -type l \) | sed 's|^stage||' > meta/files.plist
 $ cat meta/files.plist
 /usr/local/bin/hello
 ```
@@ -101,7 +101,24 @@ hello-1.0.pkg
   }
 ```
 
-安装时由 pkg(8) 按包名与来源解析这些依赖。若待打包的程序依赖某个已安装的包（例如它链接了该包提供的共享库），可以直接从该包的元数据中读出这份依赖表：
+`deps` 中必须包含程序在运行期真正需要的每一个包。判断依据是它链接了哪些共享库、这些库由哪个包提供——`pkg info -d` 在列出直接依赖之后，会接着列出所需的共享库及其提供者：
+
+```sh
+# pkg info -d curl
+curl-8.22.0:
+	brotli-1.2.0,1
+	libidn2-2.3.8
+	libnghttp2-1.69.0
+	……
+	brotli-1.2.0,1 (libbrotlidec.so.1)
+	FreeBSD-clibs-15.1 (libc.so.7)
+	libnghttp2-1.69.0 (libnghttp2.so.14)
+	……
+```
+
+括号中是共享库的文件名，其前面的包就是该库的提供者。
+
+若要沿用一个已安装包在构建时所链接的那组依赖，可以直接从它的元数据中读出这份依赖表：
 
 ```sh
 # pkg query -e '%n = curl' '%dn %do %dv'
@@ -111,9 +128,9 @@ libnghttp2 www/libnghttp2 1.69.0
 ……
 ```
 
-`%dn`、`%do`、`%dv` 分别表示依赖包的包名、来源与版本，其输出正好对应 `deps` 所需的三个字段。这样得到的版本就是本次构建实际链接的版本。
+`%dn`、`%do`、`%dv` 分别表示依赖包的包名、来源与版本，正好对应 `deps` 所需的三个字段。需要注意，查询得到的是被查询包自身的依赖，其中并不包含被查询包自己；若程序依赖的正是被查询包提供的文件（例如链接了它安装的共享库），必须把该包本身也一并写入 `deps`。
 
-安装后可用 `pkg info -d` 查看某个包的依赖，用 `pkg check -d` 检查依赖是否完整：
+把上文 `hello` 的 `+MANIFEST` 中的 `deps` 改为声明一个依赖，重新执行 `pkg create` 并安装后，即可看到效果：
 
 ```sh
 # pkg info -d hello
@@ -180,11 +197,16 @@ name: Build FreeBSD package
 
 on: [push]
 
+permissions:
+  contents: read
+
 jobs:
   package:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
 
       - name: 在 FreeBSD 虚拟机中构建
         uses: vmactions/freebsd-vm@v1
@@ -207,6 +229,8 @@ jobs:
 ```
 
 其中 `release` 指定虚拟机的 FreeBSD 版本，`envs` 列出需要传入虚拟机的环境变量，`run` 中的命令在虚拟机内执行。虚拟机是每次运行临时启动的，构建脚本应当自行完成依赖安装（`pkg install`）等准备工作。
+
+需要注意凭据问题。`actions/checkout` 默认会把仓库凭据写入工作区 `.git` 的配置中，而虚拟机动作会把整个工作区（含 `.git`）同步进虚拟机；一旦构建脚本或其调用的代码被篡改，虚拟机内即可读出该凭据。因此上面用 `persist-credentials: false` 关闭凭据写入，并用 `permissions` 把工作流令牌限制为只读。
 
 ## 移植与打包时的注意事项
 
