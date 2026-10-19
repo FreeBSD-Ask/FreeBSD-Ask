@@ -174,6 +174,7 @@
 * [19.2 使用源代码更新 FreeBSD](di-19-zhang-freebsd-xi-tong-geng-xin/di-19.2-jie-shi-yong-yuan-dai-ma-geng-xin-freebsd.md)
 * [19.3 使用 PkgBase 更新基本系统](di-19-zhang-freebsd-xi-tong-geng-xin/di-19.3-jie-shi-yong-pkgbase-geng-xin-ji-ben-xi-tong.md)
 * [19.4 通过 ZFS 启动环境实现多版本共存](di-19-zhang-freebsd-xi-tong-geng-xin/di-19.4-jie-tong-guo-zfs-qi-dong-huan-jing-shi-xian-duo-ban-ben-gong-cun.md)
+* [19.5 使用 PkgBase 跨版本升级](di-19-zhang-freebsd-xi-tong-geng-xin/di-19.5-jie-shi-yong-pkgbase-kua-ban-ben-sheng-ji.md)
 
 ## 第 20 章 Linux 兼容层
 
