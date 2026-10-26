@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event_name == 'issues' || github.event_name == 'workflow_dispatch'
     steps:
-      - uses: pozil/auto-assign-issue@v4.0.1
+      - uses: pozil/auto-assign-issue@v4.1.0
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           assignees: ykla
