@@ -119,7 +119,7 @@
 * [13.6 LXQt](di-13-zhang-zhuo-mian-huan-jing/di-13.6-jie-lxqt.md)
 * [13.7 GNOME](di-13-zhang-zhuo-mian-huan-jing/di-13.7-jie-gnome.md)
 * [13.8 IceWM](di-13-zhang-zhuo-mian-huan-jing/di-13.8-jie-icewm.md)
-* [13.9 CDE（拟删除）](di-13-zhang-zhuo-mian-huan-jing/di-13.9-jie-cde-ni-shan-chu.md)
+* [13.9 Budgie](di-13-zhang-zhuo-mian-huan-jing/di-13.9-jie-budgie.md)
 
 ## 第 14 章 多媒体和外部设备
 

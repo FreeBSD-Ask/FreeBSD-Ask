@@ -55,7 +55,7 @@
 
 **第 12 章 Wayland 系统**：介绍 Wayland 概论及 Wayland 显示管理器。
 
-**第 13 章 桌面环境**：介绍在 FreeBSD 上运行的各类桌面环境与窗口管理器，包括 KDE 6（X11 与 Wayland 会话）、MATE、Xfce、Cinnamon、LXQt、GNOME、IceWM 及 CDE（拟删除）。
+**第 13 章 桌面环境**：介绍在 FreeBSD 上运行的各类桌面环境与窗口管理器，包括 KDE 6（X11 与 Wayland 会话）、MATE、Xfce、Cinnamon、LXQt、GNOME、IceWM 及 Budgie。
 
 **第 14 章 多媒体和外部设备**：介绍声卡、打印机、摄像头、人机输入设备、音频播放器、视频播放器、多媒体处理、文档查看器及 Web 浏览器的使用方法。
 

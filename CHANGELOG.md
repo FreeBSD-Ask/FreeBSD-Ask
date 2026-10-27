@@ -2,6 +2,9 @@
 
 ## 2026 年第四季度
 
+- 2026.10.27
+  - 删除“13.9 CDE（拟删除）”。原因：CDE 维护者未接纳中文补丁，参见 [#2157](https://github.com/FreeBSD-Ask/FreeBSD-Ask/pull/2157)
+  - 恢复“13.9 Budgie”（原“6.10 Budgie”），原因：[Bug 289898 x11/budgie: After logging in with LightDM, it crashes and then shows a black screen](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=289898) 已于 2026-10-26 修复，x11/budgie 已恢复入 Ports
 - 2026.10.19
   - 新增“19.5 使用 PkgBase 跨版本升级”
 - 2026.10.18
@@ -10,7 +13,7 @@
 ## 2026 年第三季度
 
 - 2026.8.15
-  - <https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=296052> 修复 KDE 6 Wayland 无法登录的 Bug 
+  - <https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=296052> 修复 KDE 6 Wayland 无法登录的 Bug
 - 2026.7.2
   - 格式清理（空格、大小写统一、统一格式）
 
