@@ -228,17 +228,18 @@ FreeBSD 的默认登录 Shell 是 sh 而非 bash，执行以下命令前必须�
 $ bash
 ```
 
-建议使用 `root` 权限账号。
+建议使用 `root` 权限账号（FreeBSD 默认不提供 `sudo`，可使用 `su -` 切换）。
 
 ```shell
 # pkg update
-# pkg install -y bash curl gtar gzip
+# pkg install -y bash curl unzip gtar gzip
 ```
 
 说明：
 
 - 当前脚本通过 `bash` 执行。
 - `freebsd-rc` 后端依赖 `service` 与 **/usr/local/etc/rc.d**。
+- TUN 模式额外依赖 `tun2socks`（安装脚本会尝试自动安装）。
 
 ### 安装与初始化
 
@@ -255,9 +256,15 @@ $ export KERNEL_TYPE=mihomo
 $ clashctl add <订阅链接> <名称>
 $ clashctl use
 $ clashctl select
+$ clashctl select <策略组> <节点>
 $ clashon
 $ clashctl status
 ```
+
+说明：
+
+- `clashctl select` 为交互式切换节点。
+- `clashctl select <策略组> <节点>` 为非交互切换，例如 `clashctl select PROXY DIRECT`。
 
 ### FreeBSD 服务管理（rc.d）
 
@@ -281,26 +288,37 @@ $ clashctl status
 说明：
 
 - `clashctl autostart on` 仅控制 rc.d 服务是否随系统启动。
-- `service` 与 `autostart` 命令需要 root 权限（请使用 root 或 `sudo`）。
+- `service` 与 `autostart` 命令需要 root 权限（请使用 root）。
+- 即使 autostart 为 off，`clashctl on` / `clashctl off` 仍可手动启停。
 - FreeBSD 自启动配置文件：**/etc/rc.conf.d/clash_freebsd**。
 
 ### Tun 与路由诊断（FreeBSD）
 
-Tun 设备通常为 **/dev/tun\***。
+上游 mihomo 内核在 FreeBSD 上不包含 TUN 实现（sing-tun 仅支持 Linux/Windows/macOS），本项目通过 `tun2socks` 提供 TUN 后端，mihomo 内核保持不变。
 
 ```shell
+# pkg install -y tun2socks
 # clashctl tun on
 # clashctl tun off
+# clashctl tun status
 # clashctl tun doctor
 $ route -n get default
 $ netstat -rn -f inet
 ```
 
+说明：
+
+- `tun2socks` 创建 **/dev/tun** 设备，经 mihomo 的 SOCKS 端口（**127.0.0.1:7890**）转发流量。
+- `tun on/off` 需要 root 权限；`tun status/doctor` 可用普通用户执行。
+- 开启后默认路由切换到 **tun0**，并自动为私有网段（**10/8**、**172.16/12**、**192.168/16**）与代理服务器 IP 添加直连路由，避免 SSH 断连与流量回环。
+- UDP 需要节点支持 UDP；建议使用支持 UDP 的节点处理 DNS。
+- 关闭后自动恢复原默认路由并销毁 TUN 设备。
+
 Tun 未生效时优先检查：
 
 - `tun on/off` 需要 root 权限
 - `ls -l /dev/tun*`
-- 当前用户权限（建议 root）
+- `kldstat -m if_tun`
 - 默认路由是否已接管到 tun 接口
 
 ### 常用排障命令
