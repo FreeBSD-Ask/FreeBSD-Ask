@@ -228,11 +228,11 @@ FreeBSD 的默认登录 Shell 是 sh 而非 bash，执行以下命令前必须�
 $ bash
 ```
 
-建议使用 `root` 权限账号（FreeBSD 默认不提供 `sudo`，可使用 `su -` 切换）。
+建议使用 `root` 权限账号。
 
 ```shell
 # pkg update
-# pkg install -y bash curl unzip gtar gzip
+# pkg install -y bash curl gtar gzip
 ```
 
 说明：
