@@ -2,8 +2,6 @@
 
 本文件面向 AI 代理与自动化协作者，规定在本仓库中读取、修改、校验与提交的方式。人类贡献者的完整规范见 CONTRIBUTING.md。执行写作或批量修改之前，须先阅读 CONTRIBUTING.md 与 .github/workflows/ 中相关的工作流配置；本文件与二者冲突时，以其为准，并向维护者报告，不得自行取舍。
 
-早先的 CLAUDE.md 已并入本文件并删除。外部笔记、检索结果或既往对话若与其记载的版本号、表格对齐公式相抵，以本文件为准；下述数值均经本机实跑核对，可依文中所附命令复现。
-
 ## 仓库定位
 
 《FreeBSD 从入门到跑路》的正文仓库，Markdown 编写，GitBook 渲染（book.bsdcn.org）。VitePress 站点由 FreeBSD-Ask/FreeBSD-Ask.github.io 单独维护，本仓库只提供内容。收录一切与 FreeBSD 及各体系架构相关的教程，既可扩充既有章节，也可新建章节；文学故事章节接受个人经历与心得。
