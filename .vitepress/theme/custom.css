@@ -97,12 +97,16 @@ mjx-container[jax="SVG"] {
   word-break: break-word;
 }
 
-/* 正文文字列宽度：只限文字列，右目录由主题的 flex 布局跟随其后。
-   margin-inline 归零（主题是 0 auto）：超宽屏上文字列不再在列内居中，
-   而是从正文列左侧固定 4rem 处起排 —— 这样导航栏搜索框（同样 4rem）
-   才能在 2K/4K/带鱼屏上也与正文首字严格对齐。 */
-.VPDoc.has-aside .content-container {
+/* 正文文字列宽度：带侧栏的文档页统一限宽（有无右目录都生效）。
+   margin-inline 归零（主题是 0 auto）只用于「有右目录」的页面：
+   此时文字列从列左侧固定 4rem 处起排，导航栏搜索框（同样 4rem）才能在
+   2K/4K/带鱼屏上也与正文首字严格对齐；无右目录的页面文字列仍居中，
+   因为那种版式下不存在需要对齐的左侧基准。 */
+.VPDoc.has-sidebar .content-container {
   max-width: min(var(--doc-text-max), 100%) !important;
+}
+
+.VPDoc.has-aside .content-container {
   margin-inline: 0 !important;
 }
 
@@ -161,8 +165,9 @@ mjx-container[jax="SVG"] {
   }
 }
 
-  /* RSS 左移一个自身宽度：与夜间模式互换次序（RSS 在左、夜间模式压角）。
-     同时抹掉主题给 .social-links 的 -0.5rem 右外扩，让整组右缘不带悬出。 */
+/* RSS 左移一个自身宽度：与夜间模式互换次序（RSS 在左、夜间模式压角）。
+   同时抹掉主题给 .social-links 的 -0.5rem 右外扩，让整组右缘不带悬出。 */
+@media (min-width: 60rem) {
   .VPNavBar .content-body > .social-links {
     order: 1;
     margin-inline-end: 0 !important;
@@ -176,8 +181,6 @@ mjx-container[jax="SVG"] {
     order: 3;
   }
 }
-
-
 
 .outline-link
 {
