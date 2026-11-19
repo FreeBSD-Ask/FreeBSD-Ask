@@ -2,6 +2,8 @@
 
 本文件面向 AI 代理与自动化协作者，规定在本仓库中读取、修改、校验与提交的方式。人类贡献者的完整规范见 CONTRIBUTING.md。执行写作或批量修改之前，须先阅读 CONTRIBUTING.md 与 .github/workflows/ 中相关的工作流配置；本文件与二者冲突时，以其为准，并向维护者报告，不得自行取舍。
 
+早先的 CLAUDE.md 已并入本文件并删除。外部笔记、检索结果或既往对话若与其记载的版本号、表格对齐公式相抵，以本文件为准；下述数值均经本机实跑核对，可依文中所附命令复现。
+
 ## 仓库定位
 
 《FreeBSD 从入门到跑路》的正文仓库，Markdown 编写，GitBook 渲染（book.bsdcn.org）。VitePress 站点由 FreeBSD-Ask/FreeBSD-Ask.github.io 单独维护，本仓库只提供内容。收录一切与 FreeBSD 及各体系架构相关的教程，既可扩充既有章节，也可新建章节；文学故事章节接受个人经历与心得。
@@ -24,7 +26,7 @@ CI 承担格式检查、目录同步、链接与图片校验、字数统计与 P
 - 顿号、逗号、斜杠、冒号、间隔号、空格一律转为连字符；括号内的限定语一并转写，接在其所修饰的词之后：`（pkg）` 写作 `-pkg`，`（X11）` 写作 `-x11`
 - 不得增补标题以外的词，也不得省略标题以内的限定语。附加英文对照、删除括号内容、只取标题前半段，均属违反
 - 节标题前的序号（形如 `10.4`）及其后的空格不进入拼音段，节号已由 `di-10.4-jie-` 承担；概要性标题即使仅为单个词，亦须完整转写，不得以该词截断
-- 唯一例外为与上游产品名书写习惯一致的连写词，如 `pgAdmin 4` 写作 `pgadmin4`；采用例外须在 CHANGELOG.md 注明理由
+- 例外须逐一在 CHANGELOG.md 注明理由，典型情形为与上游产品名书写习惯一致的连写词，如 `pgAdmin 4` 写作 `pgadmin4`
 - 文件名只允许 `a-z`、`0-9`、`.` 与 `-`，不得出现中文、大写字母、空格、下划线、全角标点与声调符号
 
 示例：
@@ -65,31 +67,35 @@ CI 的格式检查均不构成合并门禁，提交前须在本地自查。
 
 | 工具 | 本地版本 | 作用 |
 | ---- | -------- | ---- |
-| markdownlint-cli2 | v0.24.1（markdownlint v0.42.1） | 语法、空行、表格结构，`--fix` 可修复多数问题 |
+| markdownlint-cli2 | v0.24.1（内置 markdownlint v0.42.1） | 语法、空行、表格结构，`--fix` 可修复多数问题 |
 | md-padding | 1.10.0 | 在 CJK 与拉丁字符之间补空格 |
 | autocorrect | 未纳入本地依赖 | 空格与全角标点；CI 以 yarn 临时安装，仓库无 package.json |
 
+版本以 `markdownlint-cli2 --version` 的输出为准。该输出中的 markdownlint 版本是 cli2 的内置依赖，与另行安装的 markdownlint 包不必然相同；本机全局 cli2 为 v0.24.1、内置 markdownlint 为 v0.42.1，而全局 markdownlint 包为 v0.42.0，比对版本时须看清取的是哪一个。仓库无 package.json，这几个版本各自独立升级，不随仓库锁定。
+
 ```sh
 # 检查
-markdownlint-cli2 "**/*.md" "!en/**" "!.github/**" "!.gitbook/**" "!node_modules/**" "!script/**" --config .github/.markdownlint.json
+markdownlint-cli2 "**/*.md" "!en/**" "!.github/**" "!.gitbook/**" "!node_modules/**" "!script/**" "!.workbuddy/**" --config .github/.markdownlint.json
 
 # 修复
-markdownlint-cli2 "**/*.md" "!en/**" "!.github/**" "!.gitbook/**" "!node_modules/**" "!script/**" --config .github/.markdownlint.json --fix
+markdownlint-cli2 "**/*.md" "!en/**" "!.github/**" "!.gitbook/**" "!node_modules/**" "!script/**" "!.workbuddy/**" --config .github/.markdownlint.json --fix
 ```
 
-markdown-lint2.yml 在 CI 中使用无排除的 `**/*.md`；本地排除 .github/ 以免改动工作流与其配置，en/ 为英文版预留、当前不存在。全库 `--fix` 之后必须复核 diff，避免无关文件被夹带修改。
+markdown-lint2.yml 在 CI 中使用无排除的 `**/*.md`；本地排除 .github/ 以免改动工作流与其配置，排除 .workbuddy/ 与 script/ 是因为二者已被 .gitignore 忽略、不会进入 CI 检出，其中 .workbuddy/ 存有工具写入的工作记录，若被 `--fix` 改写会破坏原格式；en/ 为英文版预留、当前不存在。全库 `--fix` 之后必须复核 diff，避免无关文件被夹带修改。
 
 ## 表格格式（MD060）
 
 `.github/.markdownlint.json` 对 MD060 启用 `compact` 与 `aligned_delimiter`：单元格与管道符之间恰有一个空格，分隔行的管道符须与表头按显示宽度对齐。`--fix` 只补管道符两侧空格，对齐部分须手算。
 
-计宽方式为 CJK 字符按 2、ASCII 按 1。设表头某列内容显示宽度为 W，单元格内宽为 W + 2，分隔行内宽须与之一致，故 dash 数为：
+计宽方式为 CJK 字符按 2、ASCII 按 1。设表头某列内容显示宽度为 W，表头单元格连同两侧各一个空格共占 W + 2 列；分隔行单元格也须占 W + 2 列，其中由 dash 与对齐冒号构成的内容恰为 W 列，两侧各留一个空格。据此，dash 数为：
 
 - 无对齐冒号（`---`）：W
 - 左对齐或右对齐（`:---`、`---:`）：W − 1
 - 居中（`:---:`）：W − 2
 
-表头 `| FreeBSD 版本 | 支持情况 |` 的两列 W 分别为 12 与 8，无冒号时分隔行为 `| ------------ | -------- |`，居中时写作 `| :----------: | :------: |`。
+表头 `| FreeBSD 版本 | 支持情况 |` 的两列 W 分别为 12 与 8，无冒号时分隔行为 `| ------------ | -------- |`，居中时写作 `| :----------: | :------: |`，两列分别是 10 个与 6 个 dash。
+
+对齐与否只取决于管道位置。上例居中时若误写为 8 个与 4 个 dash，内容宽只剩 10 与 6，较表头各窄 2 列，管道随之前移，检查时报 `MD060/table-column-style`，提示管道未与表头对齐。存疑时把示例表格写入临时文件，按上节命令跑一次，不报错即为正确。
 
 正文行的管道符不参与对齐检查，只须保持单空格；空单元格写作 `| |`。表头声明几列，数据行就必须有几列（MD056）。
 
@@ -111,9 +117,10 @@ markdown-lint2.yml 在 CI 中使用无排除的 `**/*.md`；本地排除 .github
 | markdown-lint2.yml | 仅 workflow_dispatch | markdownlint 检查并以 fix 回写，失败时建 PR |
 | AutoCorrect.yml | repository_dispatch、workflow_dispatch | autocorrect 修正空格与全角标点，建 PR |
 | md-padding.yml | repository_dispatch、workflow_dispatch | md-padding 补 CJK 空格，建 PR |
-| links.yml | 每月 15 日 18:00（UTC）、手动 | lychee 检查全库链接，失败时建 issue |
+| links.yml | 每月 15 日 18:00（UTC）、repository_dispatch、手动 | lychee 检查全库链接，失败时建 issue |
+| link-arch.yml | 仅 workflow_dispatch | 运行 .github/scripts/link.py，把正文外链提交至 Wayback、archive.today、Megalodon，取回存档地址回写，有变动时建 PR |
 | file-name-check.yml | push（`**/*.md`） | 校验 SUMMARY.md 条目所指文件存在，缺失时建 issue（label summary-check） |
-| check-images.yml | push（`.gitbook/assets/**`） | check_images.py 比对图片引用与实存，缺失或未使用时建 issue |
+| check-images.yml | push（`.gitbook/assets/**`）、手动 | check_images.py 比对图片引用与实存，缺失或未使用时建 issue |
 | mulu.yml | push（SUMMARY.md） | 生成 mu-lu.md 并自动提交 |
 | sync-headers.yml | push、mulu.yml 完成后 | 按 SUMMARY.md 覆盖各文件一级标题并自动提交 |
 | count-chinese.yml | 每月 1 日 20:10（UTC） | 统计字数写入 README 标记块并提交 |
