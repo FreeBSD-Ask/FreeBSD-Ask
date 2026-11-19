@@ -34,7 +34,7 @@
 
 ## 第 3 章 BSD 文化与 BSD 发行版概论
 
-* [3.1 乔治·贝克莱与 BSD 文化传统](di-3-zhang-bsd-wen-hua-yu-bsd-fa-xing-ban-gai-lun/di-3.1-jie-qiao-zhi-bei-ke-lai-george-berkeley-yu-bsd-wen-hua-chuan-tong.md)
+* [3.1 乔治·贝克莱与 BSD 文化传统](di-3-zhang-bsd-wen-hua-yu-bsd-fa-xing-ban-gai-lun/di-3.1-jie-qiao-zhi-bei-ke-lai-yu-bsd-wen-hua-chuan-tong.md)
 * [3.2 BSD 许可证概览](di-3-zhang-bsd-wen-hua-yu-bsd-fa-xing-ban-gai-lun/di-3.2-jie-bsd-xu-ke-zheng-gai-lan.md)
 * [3.3 NetBSD 概论](di-3-zhang-bsd-wen-hua-yu-bsd-fa-xing-ban-gai-lun/di-3.3-jie-netbsd-gai-lun.md)
 * [3.4 OpenBSD 概论](di-3-zhang-bsd-wen-hua-yu-bsd-fa-xing-ban-gai-lun/di-3.4-jie-openbsd-gai-lun.md)
@@ -64,7 +64,7 @@
 ## 第 7 章 命令行环境
 
 * [7.1 虚拟控制台和终端](di-7-zhang-ming-ling-xing-huan-jing/di-7.1-jie-xu-ni-kong-zhi-tai-he-zhong-duan.md)
-* [7.2 shell 基础](di-7-zhang-ming-ling-xing-huan-jing/di-7.2-jie-shell.md)
+* [7.2 shell 基础](di-7-zhang-ming-ling-xing-huan-jing/di-7.2-jie-shell-ji-chu.md)
 * [7.3 切换 shell](di-7-zhang-ming-ling-xing-huan-jing/di-7.3-jie-qie-huan-shell.md)
 * [7.4 命令行基础](di-7-zhang-ming-ling-xing-huan-jing/di-7.4-jie-ming-ling-xing-ji-chu.md)
 * [7.5 文本编辑器](di-7-zhang-ming-ling-xing-huan-jing/di-7.5-jie-wen-ben-bian-ji-qi.md)
@@ -79,7 +79,7 @@
 * [8.5 Ports 构建调优](di-8-zhang-ruan-jian-guan-li/di-8.5-jie-ports-gou-jian-diao-you.md)
 * [8.6 使用 DVD 安装软件](di-8-zhang-ruan-jian-guan-li/di-8.6-jie-shi-yong-dvd-an-zhuang-ruan-jian.md)
 * [8.7 FreeBSD 镜像站现状](di-8-zhang-ruan-jian-guan-li/di-8.7-jie-freebsd-jing-xiang-zhan-xian-zhuang.md)
-* [8.8 制作 FreeBSD 二进制包（pkg）](di-8-zhang-ruan-jian-guan-li/di-8.8-jie-zhi-zuo-freebsd-er-jin-zhi-bao.md)
+* [8.8 制作 FreeBSD 二进制包（pkg）](di-8-zhang-ruan-jian-guan-li/di-8.8-jie-zhi-zuo-freebsd-er-jin-zhi-bao-pkg.md)
 
 ## 第 9 章 网络管理
 
@@ -95,7 +95,8 @@
 * [10.1 显卡驱动概论](di-10-zhang-xian-ka-qu-dong/di-10.1-jie-xian-ka-qu-dong-gai-lun.md)
 * [10.2 Intel 显卡驱动](di-10-zhang-xian-ka-qu-dong/di-10.2-jie-intel-xian-ka-qu-dong.md)
 * [10.3 AMD 显卡驱动](di-10-zhang-xian-ka-qu-dong/di-10.3-jie-amd-xian-ka-qu-dong.md)
-* [10.4 NVIDIA 显卡驱动](di-10-zhang-xian-ka-qu-dong/di-10.4-jie-nvidia-xian-ka-qu-dong.md)
+* [10.4 NVIDIA 显卡驱动（X11）](di-10-zhang-xian-ka-qu-dong/di-10.4-jie-nvidia-xian-ka-qu-dong-x11.md)
+* [10.5 NVIDIA 显卡驱动（Wayland）](di-10-zhang-xian-ka-qu-dong/di-10.5-jie-nvidia-xian-ka-qu-dong-wayland.md)
 
 ## 第 11 章 X Window 系统
 
@@ -111,15 +112,14 @@
 
 ## 第 13 章 桌面环境
 
-* [13.1 KDE 6 桌面环境（X11 会话）](di-13-zhang-zhuo-mian-huan-jing/di-13.1-jie-kde-6-zhuo-mian-huan-jing-x11-hui-hua.md)
-* [13.2 KDE 6 桌面环境（Wayland 会话）](di-13-zhang-zhuo-mian-huan-jing/di-13.2-jie-kde-6-zhuo-mian-huan-jing-wayland-hui-hua.md)
-* [13.3 MATE](di-13-zhang-zhuo-mian-huan-jing/di-13.3-jie-mate.md)
-* [13.4 Xfce](di-13-zhang-zhuo-mian-huan-jing/di-13.4-jie-xfce.md)
-* [13.5 Cinnamon](di-13-zhang-zhuo-mian-huan-jing/di-13.5-jie-cinnamon.md)
-* [13.6 LXQt](di-13-zhang-zhuo-mian-huan-jing/di-13.6-jie-lxqt.md)
-* [13.7 GNOME](di-13-zhang-zhuo-mian-huan-jing/di-13.7-jie-gnome.md)
-* [13.8 IceWM](di-13-zhang-zhuo-mian-huan-jing/di-13.8-jie-icewm.md)
-* [13.9 Budgie](di-13-zhang-zhuo-mian-huan-jing/di-13.9-jie-budgie.md)
+* [13.1 KDE 6 桌面环境](di-13-zhang-zhuo-mian-huan-jing/di-13.1-jie-kde-6-zhuo-mian-huan-jing.md)
+* [13.2 MATE](di-13-zhang-zhuo-mian-huan-jing/di-13.2-jie-mate.md)
+* [13.3 Xfce](di-13-zhang-zhuo-mian-huan-jing/di-13.3-jie-xfce.md)
+* [13.4 Cinnamon](di-13-zhang-zhuo-mian-huan-jing/di-13.4-jie-cinnamon.md)
+* [13.5 LXQt](di-13-zhang-zhuo-mian-huan-jing/di-13.5-jie-lxqt.md)
+* [13.6 GNOME](di-13-zhang-zhuo-mian-huan-jing/di-13.6-jie-gnome.md)
+* [13.7 IceWM](di-13-zhang-zhuo-mian-huan-jing/di-13.7-jie-icewm.md)
+* [13.8 Budgie](di-13-zhang-zhuo-mian-huan-jing/di-13.8-jie-budgie.md)
 
 ## 第 14 章 多媒体和外部设备
 
@@ -135,11 +135,11 @@
 
 ## 第 15 章 本地化与输入法
 
-* [15.1 本地化环境变量](di-15-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-15.1-jie-ben-di-hua-huan-jing-bian-liang.md)
-* [15.2 特定语言的区域配置](di-15-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-15.2-jie-te-ding-yu-yan-de-qu-yu-pei-zhi.md)
-* [15.3 Fcitx 输入法框架](di-15-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-15.3-jie-fcitx-shu-ru-fa-kuang-jia.md)
-* [15.4 IBus 输入法框架](di-15-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-15.4-jie-ibus-shu-ru-fa-kuang-jia.md)
-* [15.5 五笔输入法](di-15-zhang-ben-di-hua-yu-zhong-wen-zhi-chi/di-15.5-jie-wu-bi-shu-ru-fa.md)
+* [15.1 本地化环境变量](di-15-zhang-ben-di-hua-yu-shu-ru-fa/di-15.1-jie-ben-di-hua-huan-jing-bian-liang.md)
+* [15.2 特定语言的区域配置](di-15-zhang-ben-di-hua-yu-shu-ru-fa/di-15.2-jie-te-ding-yu-yan-de-qu-yu-pei-zhi.md)
+* [15.3 Fcitx 输入法框架](di-15-zhang-ben-di-hua-yu-shu-ru-fa/di-15.3-jie-fcitx-shu-ru-fa-kuang-jia.md)
+* [15.4 IBus 输入法框架](di-15-zhang-ben-di-hua-yu-shu-ru-fa/di-15.4-jie-ibus-shu-ru-fa-kuang-jia.md)
+* [15.5 五笔输入法](di-15-zhang-ben-di-hua-yu-shu-ru-fa/di-15.5-jie-wu-bi-shu-ru-fa.md)
 
 ## 第 16 章 系统引导
 
@@ -178,16 +178,16 @@
 
 ## 第 20 章 Linux 兼容层
 
-* [20.1 Linux 兼容层架构](di-20-zhang-linux-er-jin-zhi-jian-rong-ceng/di-20.1-jie-linux-jian-rong-ceng-jia-gou.md)
-* [20.2 Rocky Linux 兼容层](di-20-zhang-linux-er-jin-zhi-jian-rong-ceng/di-20.2-jie-rocky-linux-jian-rong-ceng.md)
-* [20.3 Ubuntu/Debian/Kali Linux 兼容层](di-20-zhang-linux-er-jin-zhi-jian-rong-ceng/di-20.3-jie-ubuntu-debian-kali-linux-jian-rong-ceng.md)
-* [20.4 Arch Linux 兼容层](di-20-zhang-linux-er-jin-zhi-jian-rong-ceng/di-20.4-jie-arch-linux-jian-rong-ceng.md)
-* [20.5 Slackware Linux 兼容层](di-20-zhang-linux-er-jin-zhi-jian-rong-ceng/di-20.5-jie-slackware-linux-jian-rong-ceng.md)
-* [20.6 Gentoo Linux 兼容层](di-20-zhang-linux-er-jin-zhi-jian-rong-ceng/di-20.6-jie-gentoo-linux-jian-rong-ceng.md)
-* [20.7 微信（Linux 版）](di-20-zhang-linux-er-jin-zhi-jian-rong-ceng/di-20.7-jie-wei-xin-linux-ban.md)
-* [20.8 QQ（Linux 版）](di-20-zhang-linux-er-jin-zhi-jian-rong-ceng/di-20.8-jie-qq-linux-ban.md)
-* [20.9 WPS Office（Linux 版）](di-20-zhang-linux-er-jin-zhi-jian-rong-ceng/di-20.9-jie-wps-office-linux-ban.md)
-* [20.10 故障排除与未竟事宜](di-20-zhang-linux-er-jin-zhi-jian-rong-ceng/di-20.10-jie-gu-zhang-pai-chu-yu-wei-jing-shi-yi.md)
+* [20.1 Linux 兼容层架构](di-20-zhang-linux-jian-rong-ceng/di-20.1-jie-linux-jian-rong-ceng-jia-gou.md)
+* [20.2 Rocky Linux 兼容层](di-20-zhang-linux-jian-rong-ceng/di-20.2-jie-rocky-linux-jian-rong-ceng.md)
+* [20.3 Ubuntu/Debian/Kali Linux 兼容层](di-20-zhang-linux-jian-rong-ceng/di-20.3-jie-ubuntu-debian-kali-linux-jian-rong-ceng.md)
+* [20.4 Arch Linux 兼容层](di-20-zhang-linux-jian-rong-ceng/di-20.4-jie-arch-linux-jian-rong-ceng.md)
+* [20.5 Slackware Linux 兼容层](di-20-zhang-linux-jian-rong-ceng/di-20.5-jie-slackware-linux-jian-rong-ceng.md)
+* [20.6 Gentoo Linux 兼容层](di-20-zhang-linux-jian-rong-ceng/di-20.6-jie-gentoo-linux-jian-rong-ceng.md)
+* [20.7 微信（Linux 版）](di-20-zhang-linux-jian-rong-ceng/di-20.7-jie-wei-xin-linux-ban.md)
+* [20.8 QQ（Linux 版）](di-20-zhang-linux-jian-rong-ceng/di-20.8-jie-qq-linux-ban.md)
+* [20.9 WPS Office（Linux 版）](di-20-zhang-linux-jian-rong-ceng/di-20.9-jie-wps-office-linux-ban.md)
+* [20.10 故障排除与未竟事宜](di-20-zhang-linux-jian-rong-ceng/di-20.10-jie-gu-zhang-pai-chu-yu-wei-jing-shi-yi.md)
 
 ## 第 21 章 FreeBSD 高级安装
 
@@ -296,10 +296,10 @@
 
 ## 第 34 章 文件传输协议（FTP）
 
-* [34.1 文件传输协议（FTP）概述](di-34-zhang-ftp-fu-wu-qi/di-34.1-jie-wen-jian-chuan-shu-xie-yi-ftp-gai-shu.md)
-* [34.2 Pure-FTPd（基于 MySQL）](di-34-zhang-ftp-fu-wu-qi/di-34.2-jie-pure-ftpd-ji-yu-mysql.md)
-* [34.3 ProFTPD（基于 MySQL）](di-34-zhang-ftp-fu-wu-qi/di-34.3-jie-proftpd-ji-yu-mysql.md)
-* [34.4 vsftpd](di-34-zhang-ftp-fu-wu-qi/di-34.4-jie-vsftpd.md)
+* [34.1 文件传输协议（FTP）概述](di-34-zhang-wen-jian-chuan-shu-xie-yi-ftp/di-34.1-jie-wen-jian-chuan-shu-xie-yi-ftp-gai-shu.md)
+* [34.2 Pure-FTPd（基于 MySQL）](di-34-zhang-wen-jian-chuan-shu-xie-yi-ftp/di-34.2-jie-pure-ftpd-ji-yu-mysql.md)
+* [34.3 ProFTPD（基于 MySQL）](di-34-zhang-wen-jian-chuan-shu-xie-yi-ftp/di-34.3-jie-proftpd-ji-yu-mysql.md)
+* [34.4 vsftpd](di-34-zhang-wen-jian-chuan-shu-xie-yi-ftp/di-34.4-jie-vsftpd.md)
 
 ## 第 35 章 服务器
 
@@ -334,16 +334,16 @@
 * [38.2 我的世界（Minecraft）服务器](di-38-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-38.2-jie-wo-de-shi-jie-minecraft-fu-wu-qi.md)
 * [38.3 我的世界（Minecraft）](di-38-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-38.3-jie-wo-de-shi-jie-minecraft.md)
 * [38.4 Steam 客户端](di-38-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-38.4-jie-steam-ke-hu-duan.md)
-* [38.5 R 语言](di-38-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-38.5-jie-R-yu-yan.md)
+* [38.5 R 语言](di-38-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-38.5-jie-r-yu-yan.md)
 * [38.6 Wine](di-38-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-38.6-jie-wine.md)
 * [38.7 科研和专业计算](di-38-zhang-you-xi-ke-xue-ji-suan-he-zhuan-ye-gong-ju/di-38.7-jie-ke-yan-he-zhuan-ye-ji-suan.md)
 
 ## 第 39 章 人工智能
 
-* [39.1 人工智能术语与概念](di-39-zhang-ren-gong-zhi-neng-ai/di-39.1-jie-ren-gong-zhi-neng-shu-yu-yu-gai-nian.md)
-* [39.2 Transformer 数学基础与程序演示](di-39-zhang-ren-gong-zhi-neng-ai/di-39.2-jie-transformer-shu-xue-ji-chu-yu-cheng-xu-yan-shi.md)
-* [39.3 人工智能哲学原著选读](di-39-zhang-ren-gong-zhi-neng-ai/di-39.3-jie-ren-gong-zhi-neng-zhe-xue-yuan-zhu-xuan-du.md)
-* [39.4 大模型本地部署](di-39-zhang-ren-gong-zhi-neng-ai/di-39.4-jie-da-mo-xing-ben-di-bu-shu.md)
+* [39.1 人工智能术语与概念](di-39-zhang-ren-gong-zhi-neng/di-39.1-jie-ren-gong-zhi-neng-shu-yu-yu-gai-nian.md)
+* [39.2 Transformer 数学基础与程序演示](di-39-zhang-ren-gong-zhi-neng/di-39.2-jie-transformer-shu-xue-ji-chu-yu-cheng-xu-yan-shi.md)
+* [39.3 人工智能哲学原著选读](di-39-zhang-ren-gong-zhi-neng/di-39.3-jie-ren-gong-zhi-neng-zhe-xue-yuan-zhu-xuan-du.md)
+* [39.4 大模型本地部署](di-39-zhang-ren-gong-zhi-neng/di-39.4-jie-da-mo-xing-ben-di-bu-shu.md)
 
 ## 第 40 章 开发环境
 
