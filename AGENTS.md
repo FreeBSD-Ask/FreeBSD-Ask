@@ -41,7 +41,9 @@ CI 承担格式检查、目录同步、链接与图片校验、字数统计与 P
 
 ### 改名与重排
 
-- 一律以 `git mv` 迁移，禁止先删后建，以保留提交历史；仅大小写不同时须经临时文件名两段式迁移
+- 一律以 `git mv` 迁移，禁止先删后建，以保留提交历史
+- 仅大小写不同时，须经临时文件名两段式迁移；`core.ignorecase` 为 true 的仓库中，`git add` 与 `git reset` 仍可能把索引路径还原为原大小写，故迁移后须以 `git ls-files` 复核，必要时用 `git update-index --force-remove` 配合 `git update-index --add --cacheinfo` 显式写入新写法
+- 提交前以 `git ls-tree -r HEAD` 核对 SUMMARY.md 所列路径，Windows 端本地可见而 Linux 端判定缺失的问题多源于大小写差异
 - 改名须同步更新 SUMMARY.md 的登记路径；mu-lu.md 由 mulu.yml 从 SUMMARY.md 重生，不得手工编辑
 - 改名、新增章节或删除章节后，在 CHANGELOG.md 当季分节下记明旧名与新名、改动与原因
 - 增删节导致节号空缺时，其后各节依次递补，文件名、一级标题与 SUMMARY.md 三处同步，不得出现 13.1 直接跳到 13.3 一类断号
