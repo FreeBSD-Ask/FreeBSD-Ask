@@ -199,7 +199,9 @@ export default defineConfig({
         ],
     ],
     themeConfig: {
-        socialLinks: [],
+        socialLinks: [
+            { icon: "rss", link: "/feed.rss" },
+        ],
         siteTitle: "FreeBSD 中文社区",
         langMenuLabel: "多语言",
         returnToTopLabel: "回到顶部",

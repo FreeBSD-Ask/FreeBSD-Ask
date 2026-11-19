@@ -32,90 +32,159 @@ mjx-container[jax="SVG"] {
   text-indent: 2em;
 }
 
-/* 响应式布局变量 - 大屏幕（≥1920px） */
-@media (min-width: 1920px) {
-  :root {
-    --sidebar-width: 17.5%;
-    --sidebar-padding-left: 2.5%;
-    --sidebar-item-padding: 0.25% 0;
-    --aside-right: 7.5%;
-    --aside-max-width: 10%;
-    --aside-container-max-width: 15%;
-    --doc-max-width: 65%;
-    --doc-margin: 2.5% auto;
-    --navbar-content-padding-left: 20.5%;
-    --navbar-title-padding-left: 3.25%;
-  }
+/* ==========================================================================
+   响应式布局
+   --------------------------------------------------------------------------
+   VitePress 2.x 的桌面布局是“单变量推导”的：
+     --vp-sidebar-width  ──┬─→ .VPSidebar 的宽度（左栏灰底）
+                           ├─→ .VPContent 的左内边距（正文让开左栏）
+                           ├─→ .VPNavBar.has-sidebar .title 的占位宽度
+                           └─→ --vp-nav-col-offset（导航栏底色与分隔线的起点）
+   因此这里【只覆写 --vp-sidebar-width 和 --vp-layout-max-width 两个变量】，
+   不再用百分比去挪 .VPNavBar .content / .VPContent / .VPSidebar。
+   只要宽度变量唯一，四个派生位置在任何分辨率下都必然对齐：
+     logo+站名 居中于左栏 TOC 文字列 · 导航栏底色无缝衔接 · 搜索框与正文首字对齐 ·
+     右侧动作组（主题/RSS/⋯）整组居中于右 TOC 中线。
 
-/* 左侧边栏 */
-.VPSidebar {
-  position: fixed !important;
-  left: 0% !important;
-  width: var(--sidebar-width) !important;         /* 用 width 代替 max-width */
-  max-width: none !important;    /* 禁用最大宽度限制 */
-  padding-left: var(--sidebar-padding-left) !important;
+   旧写法的问题（百分比硬编码）：
+     .VPNavBar .content{padding-left:20.5%} 与 .VPSidebar{width:17.5%} 各自漂移，
+     两者差值处（左栏右缘 → 导航栏底色起点）无人绘制，正文滚上去就从顶部漏出；
+     且 20.5% 挤掉了导航菜单所需宽度，菜单被迫向右溢出。
+   ========================================================================== */
+
+:root {
+  /* 左栏宽度：桌面断点下由主题接管，其余位置全部由它推导 */
+  --vp-sidebar-width: 17rem;
+  /* 正文文字列最大宽度（rem 为绝对单位，不随视口百分比漂移） */
+  --doc-text-max: 68rem;
+  /* 导航链接组与右侧动作组之间的间距 */
+  --nav-menu-gap: 1.5rem;
+  /* 右 TOC 的可见宽度（.aside-container 为 14rem；.aside 外层 16rem 里含 2rem 左内边距，
+     所以“中位线”要按 14rem 算，而不是 16rem） */
+  --nav-toc-w: 14rem;
 }
 
-/* 选中分组中的项目 */
+/* 常见笔记本/小桌面（≥1200px）左栏略宽 */
+@media (min-width: 75rem) {
+  :root {
+    --vp-sidebar-width: 18rem;
+  }
+}
+
+/* 2K 及以上：左栏随视口线性变宽，但设上下限，避免 4K 上被拉成空白条 */
+@media (min-width: 90rem) {
+  :root {
+    --vp-sidebar-width: clamp(18rem, 15vw, 22rem);
+  }
+}
+
+/* 超宽屏放宽整体版心，否则 4K / 带鱼屏中间只剩一条窄带 */
+@media (min-width: 120rem) {
+  :root {
+    --vp-layout-max-width: 110rem;
+  }
+}
+
+@media (min-width: 160rem) {
+  :root {
+    --vp-layout-max-width: 130rem;
+  }
+}
+
+/* 左侧边栏：位置与宽度交给主题，这里只补长词换行与条目间距 */
 .VPSidebarItem {
-  padding: var(--sidebar-item-padding);
+  padding: 0.25rem 0;
   word-break: break-word;
 }
 
-/* 右侧边栏 */
-.aside {
-  position: fixed !important;
-  right: var(--aside-right) !important;
-  max-width: var(--aside-max-width) !important; /* 右栏宽度占页面 10% */
-  padding-left: 0 !important;
+/* 正文文字列宽度：带侧栏的文档页统一限宽（有无右目录都生效）。
+   margin-inline 归零（主题是 0 auto）只用于「有右目录」的页面：
+   此时文字列从列左侧固定 4rem 处起排，导航栏搜索框（同样 4rem）才能在
+   2K/4K/带鱼屏上也与正文首字严格对齐；无右目录的页面文字列仍居中，
+   因为那种版式下不存在需要对齐的左侧基准。 */
+.VPDoc.has-sidebar .content-container {
+  max-width: min(var(--doc-text-max), 100%) !important;
 }
 
-	.aside-container
-	{
-  /* 右 TOC 文本宽度*/
-		max-width: var(--aside-container-max-width) !important;
-	}
-
-/* 主体内容居中 */
-.VPContent.has-sidebar {
-  padding: 0 0% !important;
-}
-
-/* 文档正文不被遮挡 */
-.VPDoc.has-aside .content-container {
-  max-width: 100% !important;
-}
-
-/* 主体部分 */
-.VPDoc {
-  max-width: var(--doc-max-width) !important; /* 主体部分限制宽度 */
-  margin: var(--doc-margin) !important; /* 主体部分距离导航栏的高度 */
-}
-
-	.VPNavBar .content
-	{
-    /* 导航栏左侧最远至，为 0 时到达最左侧，覆盖原来的位置 */
-		padding-left: var(--navbar-content-padding-left) !important;
-    /* 导航栏右侧最远至，为 0 时到达最右侧，覆盖原来的位置 */
-		padding-right: 0 !important;
-	}
-  /* 导航栏标题左、右侧缩进，同时 padding-left 决定了搜索框的位置  */
-/* 导航栏标题 */
-	.VPNavBar .title
-	{
-    /* 导航栏标题左侧缩进 */
-		padding-left: var(--navbar-title-padding-left) !important;
-	}
-}
-
-/* 超大屏幕（≥3840px）仅覆盖导航栏内容左侧缩进 */
-@media (min-width: 3840px) {
-  :root {
-    --navbar-content-padding-left: 22.5%;
+/* 只有右目录真正显示（≥80rem）时才取消居中：更窄处 .aside 为 display:none，
+   单栏版式应回到主题的居中，否则文字会贴到正文列左侧。 */
+@media (min-width: 80rem) {
+  .VPDoc.has-aside .content-container {
+    margin-inline: 0 !important;
   }
 }
 
+@media (min-width: 60rem) {
+  /* 导航栏标题：主题为左栏预留了 (--vp-sidebar-width - 2rem) 的盒子，
+     但盒子左缘带着 .wrapper 的 2rem 内边距。右侧同样补 2rem，
+     内容盒就与左栏目录文字列等宽，居中即“左栏 TOC 文字列正中”。 */
+  .VPNavBar.has-sidebar .title {
+    padding-inline: 0 2rem !important;
+  }
 
+  /* 主题把 .VPNavBarTitle 限宽为 (左栏宽 - 4rem)，会让居中窗口偏左，
+     放开限制，让 logo + 站名占满这块预留区（仍受上一条 2rem 右内边距约束）。 */
+  .VPNavBarTitle.has-sidebar {
+    max-width: none !important;
+  }
+
+  /* logo 与站名整体居中于左栏目录文字列 */
+  .VPNavBarTitle .title {
+    justify-content: center;
+  }
+
+  /* 搜索框不要弹性撑开：pagefind 给 .blog-search 设了 flex:1，
+     盒子会吃掉一大段空白（1920 下盒子 355px、按钮只有 126px）。 */
+  .VPNavBar .content-body > .search {
+    flex: 0 0 auto !important;
+    /* 左缘对齐正文首字：正文列左侧内边距 = .VPDoc 2rem + .content 2rem，
+       而 .VPNavBarSearch 自带 2rem 左内边距，再补 2rem 即与正文左缘重合。 */
+    margin-inline: 2rem 0 !important;
+  }
+
+  /* 导航菜单贴着右侧动作组左缘、依次向左排列 */
+  .VPNavBar .content-body > .menu {
+    justify-content: flex-end !important;
+    padding-inline: 0 var(--nav-menu-gap);
+  }
+
+  .VPNavBar .content-body > .menu .list {
+    justify-content: flex-end !important;
+  }
+}
+
+/* ≥80rem 才出现右侧目录（更窄时 .aside 为 display:none）。
+   右 TOC 可见宽度 14rem（.aside-container），右缘与内容区右缘齐平
+   → 其中位线距右缘 7rem。
+
+   注意必须用 margin 而不是 padding：主题的溢出引擎用 content-body.clientWidth
+   判断可用宽度，padding 会计入 clientWidth，引擎便误判“还有空间”，
+   在 1280/1366 这类临界宽度上会让菜单直接压到搜索框上；margin 会真正缩小 clientWidth。
+
+   对齐只在 ≥90rem 生效：1280–1439 这段窗口放不下「6 个链接 + RSS + 夜间模式 + 让位」，
+   强行让位会把主题/RSS 顶进 ⋯，所以这段优先保证控件可见，让位交给 ≥90rem。 */
+@media (min-width: 90rem) {
+  .VPNavBar .content-body {
+    margin-inline-end: calc(var(--nav-toc-w) / 2);
+  }
+}
+
+/* RSS 左移一个自身宽度：与夜间模式互换次序（RSS 在左、夜间模式压角）。
+   同时抹掉主题给 .social-links 的 -0.5rem 右外扩，让整组右缘不带悬出。 */
+@media (min-width: 60rem) {
+  .VPNavBar .content-body > .social-links {
+    order: 1;
+    margin-inline-end: 0 !important;
+  }
+
+  .VPNavBar .content-body > .appearance {
+    order: 2;
+  }
+
+  .VPNavBar .content-body > .extra {
+    order: 3;
+  }
+}
 
 .outline-link
 {
@@ -182,5 +251,17 @@ strong, b
 	--vp-c-brand-1: #3dd68c;
 	--vp-c-brand-2: #30a46c;
 	--vp-c-brand-3: #298459;
+
+	/* OLED 纯黑：所有背景层统一为 #000（正文 / 侧栏 / 导航栏 / 浮层 / 代码块），
+	   文字与描边维持原亮度，层级改由 --vp-c-divider 等描边表达 */
+	--vp-c-bg: #000000;
+	--vp-c-bg-alt: #000000;
+	--vp-c-bg-elv: #000000;
+	--vp-c-bg-soft: #000000;
+}
+
+/* 纯黑底上代码块与正文同色，补一圈极淡内描边维持边界 */
+.dark .vp-doc div[class*='language-'] {
+	box-shadow: inset 0 0 0 1px var(--vp-c-divider);
 }
 
