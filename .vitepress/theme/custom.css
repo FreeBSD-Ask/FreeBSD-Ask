@@ -106,8 +106,12 @@ mjx-container[jax="SVG"] {
   max-width: min(var(--doc-text-max), 100%) !important;
 }
 
-.VPDoc.has-aside .content-container {
-  margin-inline: 0 !important;
+/* 只有右目录真正显示（≥80rem）时才取消居中：更窄处 .aside 为 display:none，
+   单栏版式应回到主题的居中，否则文字会贴到正文列左侧。 */
+@media (min-width: 80rem) {
+  .VPDoc.has-aside .content-container {
+    margin-inline: 0 !important;
+  }
 }
 
 @media (min-width: 60rem) {
