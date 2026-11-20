@@ -236,3 +236,4 @@ $RECYCLE.BIN/
 *.spec
 /scripts
 /script
+/.workbuddy-ai
