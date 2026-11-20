@@ -4,6 +4,7 @@
 
 - 2026.11.21
   - 补全“10.5 NVIDIA 显卡驱动（Wayland）”正文。来源：[issue #2377](https://github.com/FreeBSD-Ask/FreeBSD-Ask/issues/2377) 中 intronbbs 提交的草稿；原因：该节此前仅有标题，现补入 Wayland 下的驱动版本与型号支持、安装配置、测试方法以及常见问题。作者署名保留为 intronbbs
+  - 按评审意见修订 10.5：Chromium 启动脚本改用 `--ozone-platform=x11` 强制 X11 Ozone 后端，并补上 `"$@"` 引号；注明 KDE Plasma 6.8.3 与 Chromium 158.0.8127.36；统一章节结构、参考文献格式与术语
 - 2026.11.19
   - “10.4 NVIDIA 显卡驱动”改为“10.4 NVIDIA 显卡驱动（X11）”，并新增“10.5 NVIDIA 显卡驱动（Wayland）”，正文待补。原因：X11 与 Wayland 的驱动配置路径差异较大，分列两节便于各自独立展开
   - “13.1 KDE 6 桌面环境（X11 会话）”改为“13.1 KDE 6 桌面环境”，删除“13.2 KDE 6 桌面环境（Wayland 会话）”，原 13.3 至 13.9 依次递补为 13.2 至 13.8。原因：KDE 6 桌面环境不再按 X11 与 Wayland 会话分列，会话差异归入同一节说明
