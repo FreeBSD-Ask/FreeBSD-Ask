@@ -51,6 +51,7 @@ Ubuntu 吧前吧主 Simple 曾建议修改项目的章节文件名与许可协�
 - freyr
 - [gua-leopard](https://github.com/gua-leopard)
 - heguru5
+- [intronbbs](https://github.com/intronbbs)
 - isNijikawa
 - Jack
 - Jiacong Fang（[zldrobit](https://github.com/zldrobit)）
@@ -58,6 +59,7 @@ Ubuntu 吧前吧主 Simple 曾建议修改项目的章节文件名与许可协�
 - kuntop
 - LFour86
 - [LuoTianyi-arm64](https://github.com/LuoTianyi-arm64)
+- [Lxs / Lux-Solaris](https://github.com/Lux-Solaris)
 - [李大鹏](https://dapeng.li/)
 - [liguangsheng](https://github.com/liguangsheng)
 - livrth
