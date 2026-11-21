@@ -2,14 +2,10 @@
 
 ## 2026 年第四季度
 
-- 2026.11.21
-  - 补全“10.5 NVIDIA 显卡驱动（Wayland）”正文。原因：该节此前仅有标题，现补入驱动版本与 GPU 支持、安装配置、验证方法及故障排除
 - 2026.11.19
-  - “10.4 NVIDIA 显卡驱动”改为“10.4 NVIDIA 显卡驱动（X11）”，并新增“10.5 NVIDIA 显卡驱动（Wayland）”。原因：X11 与 Wayland 的驱动配置路径差异较大，分列两节便于各自独立展开
   - “13.1 KDE 6 桌面环境（X11 会话）”改为“13.1 KDE 6 桌面环境”，删除“13.2 KDE 6 桌面环境（Wayland 会话）”，原 13.3 至 13.9 依次递补为 13.2 至 13.8。原因：KDE 6 桌面环境不再按 X11 与 Wayland 会话分列，会话差异归入同一节说明
   - 13.1 删除“桌面主题美化（WhiteSur）”一节。原因：原步骤面向 X11 会话编写，尚未在 Wayland 会话下验证，待重新实测后补入
   - 统一章节文件名的拼音 slug，使其与标题逐字对应：3.1 删去标题中不存在的 george-berkeley；7.2 补 ji-chu；8.8 补 pkg；10.4 补 x11；13.1 删去已从标题移除的 x11-hui-hua；38.5 的大写 R 改为小写 r。原因：AGENTS.md 规定文件名只用 ASCII 小写拼音与连字符，且须与标题一致。原路径已失效，GitBook 与 PDF 旧链接需相应更新
-  - 章节目录名一并对齐标题：第 15 章由 `di-15-zhang-ben-di-hua-yu-zhong-wen-zhi-chi` 改为 `di-15-zhang-ben-di-hua-yu-shu-ru-fa`（原拼音意为“中文支持”，与章名“本地化与输入法”不符）；第 20 章由 `di-20-zhang-linux-er-jin-zhi-jian-rong-ceng` 改为 `di-20-zhang-linux-jian-rong-ceng`（标题已无“二进制”）；第 34 章由 `di-34-zhang-ftp-fu-wu-qi` 改为 `di-34-zhang-wen-jian-chuan-shu-xie-yi-ftp`（原为“FTP 服务器”，与章名“文件传输协议（FTP）”不符）；第 39 章由 `di-39-zhang-ren-gong-zhi-neng-ai` 改为 `di-39-zhang-ren-gong-zhi-neng`（`ai` 与“人工智能”重复）。四章共 23 条链接随之变更
   - AGENTS.md 增设“拼音转写规则”与“改名与重排”两节，把上述约定固化为可执行的规范
 - 2026.10.27
   - 删除“13.9 CDE（拟删除）”。原因：CDE 维护者接纳中文补丁后未发布新版本，参见 [#2157](https://github.com/FreeBSD-Ask/FreeBSD-Ask/pull/2157)

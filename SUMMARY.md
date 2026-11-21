@@ -95,8 +95,7 @@
 * [10.1 显卡驱动概论](di-10-zhang-xian-ka-qu-dong/di-10.1-jie-xian-ka-qu-dong-gai-lun.md)
 * [10.2 Intel 显卡驱动](di-10-zhang-xian-ka-qu-dong/di-10.2-jie-intel-xian-ka-qu-dong.md)
 * [10.3 AMD 显卡驱动](di-10-zhang-xian-ka-qu-dong/di-10.3-jie-amd-xian-ka-qu-dong.md)
-* [10.4 NVIDIA 显卡驱动（X11）](di-10-zhang-xian-ka-qu-dong/di-10.4-jie-nvidia-xian-ka-qu-dong-x11.md)
-* [10.5 NVIDIA 显卡驱动（Wayland）](di-10-zhang-xian-ka-qu-dong/di-10.5-jie-nvidia-xian-ka-qu-dong-wayland.md)
+* [10.4 NVIDIA 显卡驱动](di-10-zhang-xian-ka-qu-dong/di-10.4-jie-nvidia-xian-ka-qu-dong.md)
 
 ## 第 11 章 X Window 系统
 
