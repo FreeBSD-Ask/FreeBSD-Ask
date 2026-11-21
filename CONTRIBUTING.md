@@ -227,8 +227,7 @@ $ git clone https://github.com/FreeBSD-Ask/FreeBSD-Ask
 │      di-10.1-jie-xian-ka-qu-dong-gai-lun.md # 第 10 章的文件
 │      di-10.2-jie-intel-xian-ka-qu-dong.md
 │      di-10.3-jie-amd-xian-ka-qu-dong.md
-│      di-10.4-jie-nvidia-xian-ka-qu-dong-x11.md
-│      di-10.5-jie-nvidia-xian-ka-qu-dong-wayland.md
+│      di-10.4-jie-nvidia-xian-ka-qu-dong.md
 │
 └─其他目录和文件从略
 │
