@@ -11,13 +11,11 @@ from google.analytics.data_v1beta.types import (
 # GA4 Property ID
 PROPERTY_ID = "317797940"
 
-# 写入服务账户 JSON 文件
-key_json = os.environ["GA4_SERVICE_KEY"]
-with open("ga4_key.json", "w", encoding="utf-8") as f:
-    f.write(key_json)
+# 从环境变量解析服务账户凭据，不写入工作区文件
+key_info = json.loads(os.environ["GA4_SERVICE_KEY"])
 
 # 初始化 GA4 客户端（google-analytics-data）
-client = BetaAnalyticsDataClient.from_service_account_file("ga4_key.json")
+client = BetaAnalyticsDataClient.from_service_account_info(key_info)
 
 # 请求自 2022-06-01 起累计数据
 request = RunReportRequest(
