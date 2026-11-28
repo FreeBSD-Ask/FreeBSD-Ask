@@ -10,16 +10,16 @@ on:
     - cron: '30 15 * * 0'  # 每周日 UTC 时间 15:30 运行
   workflow_dispatch:       # 可手动触发
 
-concurrency:
-  group: create-pdf-publish
-  # 后到运行排队等待而非取消前者，串行化发布，避免重叠运行互相覆盖标签与 Release
-  cancel-in-progress: false
-
 jobs:
   build:
     # 仅允许从默认分支发布，防止手动触发时把日期标签与 Release 改写为非默认分支的内容；
     # 不依赖 github.event.repository（schedule 事件的 payload 不保证包含该字段），本仓库默认分支固定为 main
     if: github.ref == 'refs/heads/main'
+    # 并发控制置于 job 级：被上面条件跳过的非 main 运行不进入队列，
+    # 不会替换排队中的 main 发布（并发组只保留一个待运行任务）；后到运行排队而非取消前者
+    concurrency:
+      group: create-pdf-publish
+      cancel-in-progress: false
     runs-on: ubuntu-latest
 
     steps:
@@ -103,10 +103,11 @@ jobs:
                 repo: context.repo.repo,
                 tag
               });
-              // 仅当两个附件齐全且发布说明已写入时视为发布完成；
-              // 上次运行中断留下的不完整 Release 允许重试补全
+              // 仅当非草稿、两个附件齐全且发布说明已写入时视为发布完成；
+              // 上次运行中断留下的不完整 Release 与草稿 Release 均允许重试补全
               const assets = release.assets.map(asset => asset.name);
-              const complete = assets.includes(`${tag}.pdf`) && assets.includes(`${tag}.epub`)
+              const complete = !release.draft
+                && assets.includes(`${tag}.pdf`) && assets.includes(`${tag}.epub`)
                 && !!release.body;
               if (complete) {
                 core.setOutput('skip', 'true');
@@ -166,6 +167,24 @@ jobs:
           echo "$CHANGES" >> $GITHUB_ENV
           echo "EOF" >> $GITHUB_ENV
 
+      - name: 🔎 验证日期标签可恢复性
+        if: steps.publish_state.outputs.skip != 'true'
+        working-directory: FreeBSD-Ask
+        run: |
+          # 只读验证，置于 Release 创建/更新之前：标签无效时不应先改动 Release 再失败
+          git fetch --tags --force
+          if git rev-parse -q --verify "refs/tags/${{ env.RELEASE_TAG }}" >/dev/null; then
+            if git merge-base --is-ancestor "${{ env.RELEASE_TAG }}" HEAD \
+              || git merge-base --is-ancestor HEAD "${{ env.RELEASE_TAG }}"; then
+              echo "标签 ${{ env.RELEASE_TAG }} 已存在且与 HEAD 同源，可安全恢复"
+            else
+              echo "标签 ${{ env.RELEASE_TAG }} 指向的提交与当前 HEAD 无历史关联，非本工作流遗留的待恢复标签，终止发布以免发布内容与标签不一致" >&2
+              exit 1
+            fi
+          else
+            echo "标签 ${{ env.RELEASE_TAG }} 不存在，将在发布成功后创建"
+          fi
+
       - name: ✨ 创建 GitHub Release
         if: steps.publish_state.outputs.skip != 'true'
         uses: ncipollo/release-action@339a81892b84b4eeb0f6e744e4574d79d0d9b8dd # v1.21.0
@@ -190,19 +209,16 @@ jobs:
           git config --global user.email "yklaxds@gmail.com"
           git config --global user.name "ykla"
           # 此步骤置于 Release 创建/更新成功之后：发布失败时标签保持原位，不会出现标签已被移动而 Release 尚未更新的不一致状态；
-          # Release 步骤可能经 GitHub API 自动创建标签，先同步远端标签再判断
+          # 标签可恢复性已由前面的验证步骤确认；Release 步骤可能经 GitHub API 自动创建标签，先同步远端标签再判断
           git fetch --tags --force
           if git rev-parse -q --verify "refs/tags/${{ env.RELEASE_TAG }}" >/dev/null; then
             if [ "$(git rev-list -1 "${{ env.RELEASE_TAG }}")" = "$(git rev-parse HEAD)" ]; then
               echo "标签 ${{ env.RELEASE_TAG }} 已指向当前 HEAD，无需移动"
-            elif git merge-base --is-ancestor "${{ env.RELEASE_TAG }}" HEAD; then
-              # 标签指向当前 main 历史内的旧提交，为上次失败运行遗留的待恢复标签，重置到本次构建的 HEAD
-              echo "标签 ${{ env.RELEASE_TAG }} 指向 main 历史内的旧提交，重置到当前 HEAD"
+            else
+              # 标签与 HEAD 同源但指向不同提交（上次失败运行遗留，或 Release 步骤自动创建时 main 已前进），重置到本次构建的 HEAD
+              echo "标签 ${{ env.RELEASE_TAG }} 与当前 HEAD 同源但指向不同提交，重置到本次构建的 HEAD"
               git tag -f ${{ env.RELEASE_TAG }} HEAD
               git push --force origin ${{ env.RELEASE_TAG }}
-            else
-              echo "标签 ${{ env.RELEASE_TAG }} 指向的提交不在当前 HEAD 历史内，非本工作流遗留的待恢复标签，保留原标签并终止发布，请人工核查" >&2
-              exit 1
             fi
           else
             git tag ${{ env.RELEASE_TAG }}
