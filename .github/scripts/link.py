@@ -188,16 +188,16 @@ def request_archive(service, url, tid):
             if service["type"] == "wayback":
                 r = requests.get(service["api"] + url, headers=headers, timeout=service["timeout"])
                 if "web.archive.org/web/" in r.url: return r.url
-                last_err = f"HTTP {r.status_code}"
+                last_err = f"HTTP {r.status_code}" if not 200 <= r.status_code < 300 else "响应未包含存档地址"
             elif service["type"] == "archive_ph":
                 r = requests.post(f"https://{random.choice(service['domains'])}/submit/", data={"url": url}, headers=headers, timeout=service["timeout"])
                 m = re.search(r'https?://(?:archive\.is|archive\.today|archive\.ph)/(?:[A-Za-z0-9]+|wb/\d+/)', r.text)
                 if m: return m.group(0)
-                last_err = f"HTTP {r.status_code}"
+                last_err = f"HTTP {r.status_code}" if not 200 <= r.status_code < 300 else "响应未包含存档地址"
             elif service["type"] == "megalodon":
                 r = requests.post(service["api"], data={"url": url, "agree": "1"}, headers=headers, timeout=service["timeout"])
                 if "megalodon.jp" in r.url and re.search(r'\d{4}-\d{4}', r.url): return r.url
-                last_err = f"HTTP {r.status_code}"
+                last_err = f"HTTP {r.status_code}" if not 200 <= r.status_code < 300 else "响应未包含存档地址"
         except Exception as e: last_err = type(e).__name__
         time.sleep(random.uniform(*THREAD_DELAY))
     return last_err

@@ -98,15 +98,24 @@ glob_ignore_case = false
 exclude = [
     # 原有排除项
     '.*ip:.*', '.*ftp.freebsd.org.*', '.*localhost.*', '.*\$.*', '.*0\.0\.0\.0.*', 'http://ip/.*',
-    # 镜像站对脚本请求返回 302 循环重定向，仅排除正文实际引用的路径
-    '^https?://mirrors?\.nju\.edu\.cn/(gentoo|freebsd|freebsd-pkg|freebsd-ports|github-release)(/|$)',
-    '^https?://mirrors?\.nju\.edu\.cn/$',
+    # 镜像站对脚本请求返回 302 循环重定向，仅排除正文实际引用的 URL
+    '^https?://mirror\.nju\.edu\.cn/gentoo/?$',
+    '^https?://mirror\.nju\.edu\.cn/gentoo/releases/amd64/autobuilds/?$',
+    '^https?://mirror\.nju\.edu\.cn/gentoo/releases/amd64/autobuilds/latest-stage3-amd64-llvm-openrc\.txt$',
+    '^https?://mirrors\.nju\.edu\.cn/?$',
+    '^https?://mirrors\.nju\.edu\.cn/freebsd/?$',
+    '^https?://mirrors\.nju\.edu\.cn/freebsd-pkg/?$',
+    '^https?://mirrors\.nju\.edu\.cn/freebsd-ports/?$',
+    '^https?://mirrors\.nju\.edu\.cn/freebsd-ports/ports\.tar\.gz$',
+    '^https?://mirrors\.nju\.edu\.cn/freebsd/releases/ISO-IMAGES/15\.0/FreeBSD-15\.0-RELEASE-amd64-bootonly\.iso$',
+    '^https?://mirrors\.nju\.edu\.cn/freebsd/releases/VM-IMAGES/15\.0-RELEASE/amd64/Latest/FreeBSD-15\.0-RELEASE-amd64-zfs\.raw\.xz$',
+    '^https?://mirrors\.nju\.edu\.cn/github-release/ventoy/Ventoy/Ventoy%201\.1\.10%20release/ventoy-1\.1\.10-linux\.tar\.gz$',
     '^https?://mirrors\.jlu\.edu\.cn/archlinuxarm/os/ArchLinuxARM-rpi-aarch64-latest\.tar\.gz$',
     '^https?://movie\.douban\.com/subject/(1291843|25932086)/?$',
     '^https?://www\.dib\.ie/biography/berkeley-george-a0611$',
-    # 防盗链与反爬站点，仅排除正文实际引用的路径
-    '^https?://([^/]+\.)?bilibili\.com/(video|read|bangumi)/',
-    '^https?://gitee\.com/openharmony/kernel_liteos_a(/|$)',
+    # 防盗链与反爬站点，仅排除正文实际引用的 URL
+    '^https?://www\.bilibili\.com/(video/(BV12zAYeKEej|BV13ji2YLE3m|BV13ji2YLELM|BV13ji2YLEkV|BV1BM41187pD|BV1Kvq2BiEqT|BV1Qji2YLEgS|BV1STExzEEhh|BV1bT4y1F7qK|BV1gji2YLE2o|BV1gji2YLEoC|BV1iM4y1j7E9|BV1wg4y1w7QV|BV1y8411d7pp)/?|read/(mobile\?id=21681916|cv21681916/?)|bangumi/media/(md3068|md77552))$',
+    '^https?://gitee\.com/openharmony/kernel_liteos_a/tree/master$',
     '^https?://gitlab\.gnome\.org/World/ShellExtensions/desktop-icons(/|$)',
     '^https?://www\.imdb\.com/title/tt3042408(/|$)',
     '^https?://berkeleyplaques\.org/plaque/how-berkeley-got-its-name(/|$)',
