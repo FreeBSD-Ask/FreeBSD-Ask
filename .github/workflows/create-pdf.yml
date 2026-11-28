@@ -213,9 +213,14 @@ jobs:
         run: |
           timedatectl
           CHANGES=$(cat CHANGELOG.md | sed 's/\"/\\"/g')
-          echo "CHANGES_CONTENT<<EOF" >> $GITHUB_ENV
-          echo "$CHANGES" >> $GITHUB_ENV
-          echo "EOF" >> $GITHUB_ENV
+          # 用随机分隔符写入多行环境变量：CHANGELOG 正文若出现 EOF 行，
+          # 固定分隔符会提前结束 heredoc 并把后续内容当成新的环境变量
+          DELIM="CHANGES_$(openssl rand -hex 8)"
+          {
+            echo "CHANGES_CONTENT<<$DELIM"
+            echo "$CHANGES"
+            echo "$DELIM"
+          } >> "$GITHUB_ENV"
 
       - name: ✨ 创建 GitHub Release
         if: steps.publish_state.outputs.skip != 'true'
