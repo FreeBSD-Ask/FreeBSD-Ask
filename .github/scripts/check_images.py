@@ -13,9 +13,9 @@ for root, _, files in os.walk(repo_root):
         if file.lower().endswith('.md'):
             md_files.append(Path(root) / file)
 
-# 正则表达式匹配图片引用
+# 正则表达式匹配图片引用；使用线性模式避免回溯导致的超线性耗时
 image_pattern = re.compile(
-    r'!\[.*?\]\(\s*([^\)\s]*)(?:\s+["\'].*?["\'])?\s*\)',
+    r'!\[[^\]]*\]\(\s*<?([^)\s>]+)',
     re.IGNORECASE
 )
 

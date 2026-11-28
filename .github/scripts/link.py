@@ -68,6 +68,7 @@ SESSION_UPDATED_FILES = []
 # 新增：全局进度变量
 TOTAL_FILES = 0
 PROCESSED_FILES = 0
+SCAN_ROOT = None
 
 # ================= UI & 日志 =================
 
@@ -261,6 +262,9 @@ def process_url_task(url):
 
 def process_file(path):
     global PROCESSED_FILES
+    if SCAN_ROOT and not is_within(SCAN_ROOT, path):
+        with LIST_LOCK: PROCESSED_FILES += 1
+        return
     try:
         with open(path, "r", encoding="utf-8") as f: content = f.read()
     except: 
@@ -302,24 +306,40 @@ def process_file(path):
 
 # ================= 递归收集文件 =================
 
+def is_within(root, path):
+    """判断 path 解析真实路径后是否仍位于 root 之内。"""
+    try:
+        root_real = os.path.realpath(root)
+        path_real = os.path.realpath(path)
+        common = os.path.commonpath([root_real, path_real])
+        return os.path.normcase(common) == os.path.normcase(root_real)
+    except ValueError:
+        return False
+
 def collect_md_files(path):
     md_files = []
     if os.path.isfile(path) and path.endswith(".md"):
         md_files.append(path)
     elif os.path.isdir(path):
         for entry in os.scandir(path):
+            # 不跟随符号链接，避免经链接读写到扫描根之外
+            if entry.is_symlink(): continue
             md_files.extend(collect_md_files(entry.path))
     return md_files
 
 # ================= 主函数 =================
 
 def main():
-    global TOTAL_FILES
+    global TOTAL_FILES, SCAN_ROOT
     if len(sys.argv) != 2:
         print("用法: python link.py <文件或目录>")
         return
 
     target = sys.argv[1]
+    if not is_within(os.getcwd(), target):
+        print("错误: 目标路径必须位于当前工作目录内。")
+        return
+    SCAN_ROOT = os.path.realpath(target)
     
     # 递归收集文件
     all_files = collect_md_files(target)
