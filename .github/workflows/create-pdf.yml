@@ -23,17 +23,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # ================= 字体安装部分 =================
-      - name: 安装字体
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y fonts-wqy-microhei ttf-wqy-zenhei fonts-noto-core fonts-noto-cjk
-
-      - name: 设置时区
-        run: |
-          sudo timedatectl set-timezone Asia/Shanghai
-          timedatectl
-
       # ================= 仓库检出部分 =================
       - name: 检出 FreeBSD-Ask 主仓库
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
@@ -48,45 +37,7 @@ jobs:
           repository: FreeBSD-Ask/gitbook-pdf-export
           path: pdf-generator
 
-      # ================= 初始化标签检查 =================
-      - name: 检查或创建初始标签
-        working-directory: FreeBSD-Ask
-        run: |
-          timedatectl
-          if ! git describe --tags --abbrev=0 2>/dev/null; then
-            echo "创建初始标签 v0.0.0"
-            git config --global user.email "actions@github.com"
-            git config --global user.name "GitHub Actions"
-            git tag v0.0.0
-            git push origin v0.0.0
-          fi
-
-      # ================= 环境配置部分 =================
-      - name: 设置 Python 环境
-        uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7
-        with:
-          python-version: '3.15'
-          check-latest: true
-
-      - name: 安装 Python 依赖
-        run: |
-          sudo apt-get install -y \
-            libpango-1.0-0 \
-            libpangoft2-1.0-0 \
-            libpangocairo-1.0-0
-          # 直接采用 pdf-generator 的 requirements.txt：python-docx 必需，
-          # 且上游刻意收紧版本上限（mdconv 会 patch WeasyPrint 内部）
-          pip install -r pdf-generator/requirements.txt
-      # ================= PDF 生成部分 =================
-      - name: 生成 PDF 文档
-        run: |
-          cd pdf-generator
-          python mdconv.py ../FreeBSD-Ask
-          mv build/final.pdf build/$(date +'%Y.%m.%d').pdf
-          mv build/final.epub build/$(date +'%Y.%m.%d').epub
-        env:
-          PYTHONPATH: ${{ github.workspace }}/pdf-generator
-      # ================= 发布流程部分 =================
+      # ================= 发布状态判断 =================
       - name: 🚀 设置发布日期标签
         id: set_tag
         run: echo "RELEASE_TAG=$(date +'%Y.%m.%d')" >> $GITHUB_ENV
@@ -103,28 +54,103 @@ jobs:
                 repo: context.repo.repo,
                 tag
               });
-              // 仅当非草稿、两个附件齐全且发布说明已写入时视为发布完成；
-              // 上次运行中断留下的不完整 Release 与草稿 Release 均允许重试补全
-              const assets = release.assets.map(asset => asset.name);
+              // 仅当非草稿、非预发布、两个附件均已上传完成且发布说明已写入时视为发布完成；
+              // 附件上传中断会留下 starter 状态的占位资产，同样视为不完整
+              const pdf = release.assets.find(asset => asset.name === `${tag}.pdf`);
+              const epub = release.assets.find(asset => asset.name === `${tag}.epub`);
               const complete = !release.draft
-                && assets.includes(`${tag}.pdf`) && assets.includes(`${tag}.epub`)
+                && !release.prerelease
+                && pdf && pdf.state === 'uploaded'
+                && epub && epub.state === 'uploaded'
                 && !!release.body;
               if (complete) {
                 core.setOutput('skip', 'true');
-                core.info(`Release ${tag} 已完整发布，跳过发布流程`);
+                core.info(`Release ${tag} 已完整发布，跳过构建与发布流程`);
               } else {
                 core.setOutput('skip', 'false');
-                core.info(`Release ${tag} 不完整（附件：${assets.join(', ') || '无'}；发布说明：${release.body ? '有' : '空'}），继续发布流程以补全`);
+                core.info(`Release ${tag} 不完整（草稿：${release.draft}；预发布：${release.prerelease}；附件：${release.assets.map(a => `${a.name}:${a.state}`).join(', ') || '无'}；发布说明：${release.body ? '有' : '空'}），继续流程以补全`);
               }
             } catch (err) {
               if (err.status === 404) {
                 core.setOutput('skip', 'false');
-                core.info(`Release ${tag} 不存在，继续发布流程`);
+                core.info(`Release ${tag} 不存在，执行完整发布流程`);
               } else {
                 throw err;
               }
             }
 
+      # ================= 构建目标确定 =================
+      - name: 📌 确定构建目标提交
+        if: steps.publish_state.outputs.skip != 'true'
+        working-directory: FreeBSD-Ask
+        run: |
+          # 当日标签已存在说明上次运行中断于发布阶段：检出该标签指向的提交进行构建，
+          # 使发布附件与标签始终一致；标签一经创建便不再移动
+          git fetch --tags --force
+          if git rev-parse -q --verify "refs/tags/${{ env.RELEASE_TAG }}" >/dev/null; then
+            git checkout "${{ env.RELEASE_TAG }}"
+            echo "检出当日既有标签 ${{ env.RELEASE_TAG }} 指向的提交进行构建"
+          else
+            echo "当日标签尚不存在，基于当前检出提交构建"
+          fi
+          echo "BUILD_COMMIT=$(git rev-parse HEAD)" >> $GITHUB_ENV
+
+      # ================= 字体安装部分 =================
+      - name: 安装字体
+        if: steps.publish_state.outputs.skip != 'true'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y fonts-wqy-microhei ttf-wqy-zenhei fonts-noto-core fonts-noto-cjk
+
+      - name: 设置时区
+        if: steps.publish_state.outputs.skip != 'true'
+        run: |
+          sudo timedatectl set-timezone Asia/Shanghai
+          timedatectl
+
+      # ================= 初始化标签检查 =================
+      - name: 检查或创建初始标签
+        if: steps.publish_state.outputs.skip != 'true'
+        working-directory: FreeBSD-Ask
+        run: |
+          timedatectl
+          if ! git describe --tags --abbrev=0 2>/dev/null; then
+            echo "创建初始标签 v0.0.0"
+            git config --global user.email "actions@github.com"
+            git config --global user.name "GitHub Actions"
+            git tag v0.0.0
+            git push origin v0.0.0
+          fi
+
+      # ================= 环境配置部分 =================
+      - name: 设置 Python 环境
+        if: steps.publish_state.outputs.skip != 'true'
+        uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7
+        with:
+          python-version: '3.15'
+          check-latest: true
+
+      - name: 安装 Python 依赖
+        if: steps.publish_state.outputs.skip != 'true'
+        run: |
+          sudo apt-get install -y \
+            libpango-1.0-0 \
+            libpangoft2-1.0-0 \
+            libpangocairo-1.0-0
+          # 直接采用 pdf-generator 的 requirements.txt：python-docx 必需，
+          # 且上游刻意收紧版本上限（mdconv 会 patch WeasyPrint 内部）
+          pip install -r pdf-generator/requirements.txt
+      # ================= PDF 生成部分 =================
+      - name: 生成 PDF 文档
+        if: steps.publish_state.outputs.skip != 'true'
+        run: |
+          cd pdf-generator
+          python mdconv.py ../FreeBSD-Ask
+          mv build/final.pdf build/$(date +'%Y.%m.%d').pdf
+          mv build/final.epub build/$(date +'%Y.%m.%d').epub
+        env:
+          PYTHONPATH: ${{ github.workspace }}/pdf-generator
+      # ================= 发布流程部分 =================
       - name: 🔍 获取前一个标签 (优化版本)
         if: steps.publish_state.outputs.skip != 'true'
         working-directory: FreeBSD-Ask
@@ -146,6 +172,7 @@ jobs:
         run: |
           echo "本次发布标签 (RELEASE_TAG): ${{ env.RELEASE_TAG }}"
           echo "上次发布标签 (PREVIOUS_TAG): ${{ env.PREVIOUS_TAG }}"
+          echo "构建提交 (BUILD_COMMIT): ${{ env.BUILD_COMMIT }}"
           echo "------------------------------------------------------"
 
       - name: 📜 生成增量变更日志
@@ -167,22 +194,26 @@ jobs:
           echo "$CHANGES" >> $GITHUB_ENV
           echo "EOF" >> $GITHUB_ENV
 
-      - name: 🔎 验证日期标签可恢复性
+      - name: 🏷️ 创建 Git 标签并推送
         if: steps.publish_state.outputs.skip != 'true'
         working-directory: FreeBSD-Ask
         run: |
-          # 只读验证，置于 Release 创建/更新之前：标签无效时不应先改动 Release 再失败
+          timedatectl
+          git config --global user.email "yklaxds@gmail.com"
+          git config --global user.name "ykla"
           git fetch --tags --force
+          # 标签一经创建便不移动：仅在不存在时创建并推送，指向本次构建的提交；
+          # 已存在则核对是否指向构建提交（前面已检出该标签，正常应一致），不一致说明运行期间标签被并发改动，交人工核查
           if git rev-parse -q --verify "refs/tags/${{ env.RELEASE_TAG }}" >/dev/null; then
-            if git merge-base --is-ancestor "${{ env.RELEASE_TAG }}" HEAD \
-              || git merge-base --is-ancestor HEAD "${{ env.RELEASE_TAG }}"; then
-              echo "标签 ${{ env.RELEASE_TAG }} 已存在且与 HEAD 同源，可安全恢复"
+            if [ "$(git rev-list -1 "${{ env.RELEASE_TAG }}")" = "${{ env.BUILD_COMMIT }}" ]; then
+              echo "标签 ${{ env.RELEASE_TAG }} 已存在且指向构建提交，无需操作"
             else
-              echo "标签 ${{ env.RELEASE_TAG }} 指向的提交与当前 HEAD 无历史关联，非本工作流遗留的待恢复标签，终止发布以免发布内容与标签不一致" >&2
+              echo "标签 ${{ env.RELEASE_TAG }} 在运行期间被改指向其他提交，保留原标签并终止发布，请人工核查" >&2
               exit 1
             fi
           else
-            echo "标签 ${{ env.RELEASE_TAG }} 不存在，将在发布成功后创建"
+            git tag "${{ env.RELEASE_TAG }}" "${{ env.BUILD_COMMIT }}"
+            git push origin "${{ env.RELEASE_TAG }}"
           fi
 
       - name: ✨ 创建 GitHub Release
@@ -197,33 +228,9 @@ jobs:
             pdf-generator/build/${{ env.RELEASE_TAG }}.epub
           token: ${{ secrets.GITHUB_TOKEN }}
           makeLatest: true
-          # 当日 Release 不完整（附件缺失或发布说明为空）时仍会执行到此，更新它以补全；
+          # 当日 Release 不完整（附件缺失、上传中断、草稿或预发布）时仍会执行到此，更新它以补全；
           # replacesArtifacts 默认为 true，同名附件自动替换
           allowUpdates: true
-
-      - name: 🏷️ 创建或修正 Git 标签并推送
-        if: steps.publish_state.outputs.skip != 'true'
-        working-directory: FreeBSD-Ask
-        run: |
-          timedatectl
-          git config --global user.email "yklaxds@gmail.com"
-          git config --global user.name "ykla"
-          # 此步骤置于 Release 创建/更新成功之后：发布失败时标签保持原位，不会出现标签已被移动而 Release 尚未更新的不一致状态；
-          # 标签可恢复性已由前面的验证步骤确认；Release 步骤可能经 GitHub API 自动创建标签，先同步远端标签再判断
-          git fetch --tags --force
-          if git rev-parse -q --verify "refs/tags/${{ env.RELEASE_TAG }}" >/dev/null; then
-            if [ "$(git rev-list -1 "${{ env.RELEASE_TAG }}")" = "$(git rev-parse HEAD)" ]; then
-              echo "标签 ${{ env.RELEASE_TAG }} 已指向当前 HEAD，无需移动"
-            else
-              # 标签与 HEAD 同源但指向不同提交（上次失败运行遗留，或 Release 步骤自动创建时 main 已前进），重置到本次构建的 HEAD
-              echo "标签 ${{ env.RELEASE_TAG }} 与当前 HEAD 同源但指向不同提交，重置到本次构建的 HEAD"
-              git tag -f ${{ env.RELEASE_TAG }} HEAD
-              git push --force origin ${{ env.RELEASE_TAG }}
-            fi
-          else
-            git tag ${{ env.RELEASE_TAG }}
-            git push origin ${{ env.RELEASE_TAG }}
-          fi
 
       - name: 📝 更新 Release 说明 (包含变更日志)
         if: steps.publish_state.outputs.skip != 'true'

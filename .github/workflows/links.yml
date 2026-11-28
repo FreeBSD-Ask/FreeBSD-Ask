@@ -32,17 +32,17 @@ jobs:
           args: --config ./.github/lychee.toml './**/*.md'
 
       # 死链持续存在时，复用既有开放报告 issue 而非每次运行都新建，避免重复累积；
-      # 默认分支的报告使用固定标题，其他分支的报告带分支名后缀，防止分支运行覆盖主报告
+      # 默认分支的报告使用固定标题，其他 ref 的报告带完整 ref 后缀，防止不同 ref 的运行互相覆盖报告
       - name: 查找现有报告 issue
         id: find_issue
         if: steps.lychee.outputs.exit_code != 0
         uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9
         with:
           script: |
-            const isMain = context.ref === 'refs/heads/main';
-            const reportTitle = isMain
+            // 非 main 的报告使用完整 ref（refs/heads/… 或 refs/tags/…）作后缀，避免分支与同名标签共用同一份报告
+            const reportTitle = context.ref === 'refs/heads/main'
               ? 'Link Checker Report'
-              : `Link Checker Report (${context.ref.replace('refs/heads/', '')})`;
+              : `Link Checker Report (${context.ref})`;
             core.setOutput('title', reportTitle);
             // 用 paginate 取回所有分页，防止报告 issue 位于第一页之外而被漏查
             const issues = await github.paginate(github.rest.issues.listForRepo, {
