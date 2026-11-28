@@ -12,7 +12,9 @@ on:
 
 concurrency:
   group: linkChecker
-  # 后到运行排队等待而非取消前者，串行化检查与建 issue，避免重叠运行各自新建报告
+  # 串行化检查与建 issue，避免重叠运行各自新建报告。
+  # 注意 GitHub 并发组并非 FIFO 队列：最多保留一个等待中的运行，更晚到达的运行会替换它；
+  # 被替换的运行由下一次定时或手动触发补足（报告已按 ref 分离，不影响正确性）
   cancel-in-progress: false
 
 jobs:
@@ -39,10 +41,14 @@ jobs:
         uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9
         with:
           script: |
-            // 非 main 的报告使用完整 ref（refs/heads/… 或 refs/tags/…）作后缀，避免分支与同名标签共用同一份报告
+            // 非 main 的报告使用完整 ref（refs/heads/… 或 refs/tags/…）作后缀，避免分支与同名标签共用同一份报告；
+            // 标题须低于 GitHub 的 256 字符限制，超长 ref 截断并附提交短哈希以保持可区分
+            const refLabel = context.ref.length > 180
+              ? `${context.ref.slice(0, 160)}…${context.sha.slice(0, 7)}`
+              : context.ref;
             const reportTitle = context.ref === 'refs/heads/main'
               ? 'Link Checker Report'
-              : `Link Checker Report (${context.ref})`;
+              : `Link Checker Report (${refLabel})`;
             core.setOutput('title', reportTitle);
             // 用 paginate 取回所有分页，防止报告 issue 位于第一页之外而被漏查
             const issues = await github.paginate(github.rest.issues.listForRepo, {
