@@ -13,9 +13,6 @@ from datetime import datetime
 from urllib.parse import urlparse
 from tqdm import tqdm
 
-# 禁用 HTTPS 警告
-requests.packages.urllib3.disable_warnings()
-
 # ================= 基本配置 =================
 
 CACHE_FILE = "archive_cache.json"
@@ -188,14 +185,14 @@ def request_archive(service, url, tid):
         try:
             headers = {"User-Agent": random.choice(USER_AGENTS), "Referer": url}
             if service["type"] == "wayback":
-                r = requests.get(service["api"] + url, headers=headers, timeout=service["timeout"], verify=False)
+                r = requests.get(service["api"] + url, headers=headers, timeout=service["timeout"])
                 if "web.archive.org/web/" in r.url: return r.url
             elif service["type"] == "archive_ph":
-                r = requests.post(f"https://{random.choice(service['domains'])}/submit/", data={"url": url}, headers=headers, timeout=service["timeout"], verify=False)
+                r = requests.post(f"https://{random.choice(service['domains'])}/submit/", data={"url": url}, headers=headers, timeout=service["timeout"])
                 m = re.search(r'https?://(?:archive\.is|archive\.today|archive\.ph)/(?:[A-Za-z0-9]+|wb/\d+/)', r.text)
                 if m: return m.group(0)
             elif service["type"] == "megalodon":
-                r = requests.post(service["api"], data={"url": url, "agree": "1"}, headers=headers, timeout=service["timeout"], verify=False)
+                r = requests.post(service["api"], data={"url": url, "agree": "1"}, headers=headers, timeout=service["timeout"])
                 if "megalodon.jp" in r.url and re.search(r'\d{4}-\d{4}', r.url): return r.url
         except Exception as e: last_err = type(e).__name__
         time.sleep(random.uniform(*THREAD_DELAY))
