@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event_name == 'issues' || github.event_name == 'workflow_dispatch'
     steps:
-      - uses: pozil/auto-assign-issue@v4.1.0
+      - uses: pozil/auto-assign-issue@d6e511896e5f1d2408e74db74416647d8ff80c8c # v4.1.0
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           assignees: ykla
@@ -27,7 +27,7 @@ jobs:
     if: github.event_name == 'pull_request' || github.event_name == 'workflow_dispatch'
     steps:
       - name: Auto Assign PR
-        uses: kentaro-m/auto-assign-action@v2.0.2
+        uses: kentaro-m/auto-assign-action@0a2c53d3721e4c5cfcce6afd4014aecc337979f6 # v2.0.2
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           configuration-path: '.github/auto_assign.yml'

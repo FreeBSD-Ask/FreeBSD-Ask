@@ -1,5 +1,9 @@
 name: 🔗 检查 SUMMARY.md 目录
 
+permissions:
+  contents: read   # 检出仓库
+  issues: write    # 创建目录校验 issue
+
 on:
   push:
     paths:

@@ -1,5 +1,8 @@
 name: 🔗 从 SUMMARY.md 更新目录
 
+permissions:
+  contents: write   # 提交并推送 mu-lu.md
+
 on:
   push:
     paths:
@@ -53,7 +56,7 @@ jobs:
 
       - name: Commit and push changes
         if: steps.process.outputs.changed == 'true'
-        uses: stefanzweifel/git-auto-commit-action@v7
+        uses: stefanzweifel/git-auto-commit-action@d0b01107b5db882071f96de5dd4b54961ea93f4c # v7
         with:
           commit_message: "从 SUMMARY.md 更新 mu-lu.md [skip ci]"
           file_pattern: "mu-lu.md"

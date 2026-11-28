@@ -1,5 +1,10 @@
 name: 🔗 markdownlint-cli2 语法检查
 
+permissions:
+  contents: write        # 创建分支与提交
+  pull-requests: write   # 创建 Pull Request
+  issues: write          # 为 Pull Request 添加标签
+
 # Disable automatic runs
 on: [workflow_dispatch]
 
@@ -8,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
-      - uses: DavidAnson/markdownlint-cli2-action@v25.1.0
+      - uses: DavidAnson/markdownlint-cli2-action@3ce8f712b5d8f31acd8e201be6d97e3d2bb23eb7 # v25.1.0
         with:
           config: '.github/.markdownlint.json'
           fix: true
@@ -16,7 +21,7 @@ jobs:
 
       - name: markdownlint cli2 RP
         if: failure()
-        uses: peter-evans/create-pull-request@v8
+        uses: peter-evans/create-pull-request@3ffccacd46053766916f087ce41d627c0b8cf2d1 # v8
         with:
           commit-message: "Markdown 格式化"
           labels: "Markdown"
