@@ -99,7 +99,7 @@ hw.efi.poweroff=0
 
 ![桥接网络设置](../.gitbook/assets/virtualbox-bridge-network.png)
 
-请确保上图中“名称(N)”选择的网卡是当前正在使用的网卡，否则虚拟机将无法访问网络。
+请确保上图中“名称 (N)”选择的网卡是当前正在使用的网卡，否则虚拟机将无法访问网络。
 
 设置后执行 `dhclient em0` 可立即获取 IP 地址。为保证长期有效，可在 **/etc/rc.conf** 中添加 `ifconfig_em0="DHCP"`。
 

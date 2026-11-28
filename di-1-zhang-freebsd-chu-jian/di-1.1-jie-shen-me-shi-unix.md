@@ -59,7 +59,7 @@ FreeBSD 的手册页系统是 UNIX 哲学的典型体现：每个命令、系统
 >
 >> 1. UNIX 哲学一言以蔽之，大道至简。“Keep it simple, stupid”。
 >
->> 2. Brooks F P Jr. 人月神话[M]. UMLChina，译. 纪念典藏版. 北京：清华大学出版社，2023. ISBN: 978-7-302-63538-3
+>> 2. Brooks F P Jr. 人月神话[M]. UMLChina，译。纪念典藏版。北京：清华大学出版社，2023. ISBN: 978-7-302-63538-3
 >
 > 阅读上述文本和参考文献，如何理解 UNIX 哲学的局限性及其背后的时代背景。
 
@@ -113,8 +113,8 @@ Thompson 在 PDP-7 上完成新操作系统的初步开发后，与数位同事�
 
 ## 参考文献
 
-- Raymond E S. UNIX 编程艺术[M]. 姜宏,何源,蔡晓骏,译. 北京: 电子工业出版社, 2012. ISBN: 978-7-121-17665-4. 阐述 UNIX 哲学与软件工程实践原则。
-- Gancarz M. Linux/Unix 设计思想[M]. 漆犇,译. 北京: 人民邮电出版社, 2012. ISBN: 978-7-115-26692-7. （已绝版）提炼 UNIX 系统设计核心思想与实践方法。
+- Raymond E S. UNIX 编程艺术[M]. 姜宏，何源，蔡晓骏，译。北京：电子工业出版社，2012. ISBN: 978-7-121-17665-4. 阐述 UNIX 哲学与软件工程实践原则。
+- Gancarz M. Linux/Unix 设计思想[M]. 漆犇，译。北京：人民邮电出版社，2012. ISBN: 978-7-115-26692-7. （已绝版）提炼 UNIX 系统设计核心思想与实践方法。
 - The Open Group. The Open Group Standards Process[EB/OL]. [2026-03-25]. <https://www.opengroup.org/standardsprocess/certification.html>. 规范 UNIX 认证流程与技术标准框架。
 - National Academy of Engineering. Dr. Fernando J. Corbato[EB/OL]. [2026-04-16]. <https://www.nae.edu/29551/Dr-Fernando-J-Corbato>. Corbato 主持开发了 CTSS，据该文记载，CTSS 于 1961 年 11 月在 IBM 709 上首次演示。
 - Ritchie D M. The Development of the C Language[EB/OL]. [2026-04-16]. <https://www.bell-labs.com/usr/dmr/www/chist.html>. Ritchie 回忆 C 语言与早期 UNIX 开发历程，提及 PDP-7 内存为 8K 18-bit words。
@@ -122,7 +122,7 @@ Thompson 在 PDP-7 上完成新操作系统的初步开发后，与数位同事�
 - Computer History Museum. Atlas computer[EB/OL]. [2026-04-17]. <https://www.computerhistory.org/timeline/1962/>. 记载 Atlas 计算机于 1962 年首次投入运行，引入虚拟存储器概念。
 - Ritchie D M. The Evolution of the Unix Time-sharing System[EB/OL]. (1984)[2026-04-18]. <https://www.read.seas.harvard.edu/~kohler/class/aosref/ritchie84evolution.pdf>. Ritchie 详述 Unix 从 PDP-7 到 PDP-11 的演进历程，记载 Space Travel 最初在 Multics 上编写，后改写为 Fortran 在 GECOS/GE 635 上运行，最终移植至 PDP-7。
 - Van Vleck T. Multics: Bell Labs withdrawal[EB/OL]. [2026-04-18]. <https://www.multicians.org/general.html>. 记载贝尔实验室于 1969 年 4 月退出 Multics 项目。
-- 克尼汉 B W. UNIX 传奇：历史与回忆[M]. 韩磊,译. 北京: 人民邮电出版社, 2021: 31-42. ISBN: 978-7-115-55717-9. 2.3 节记载 Thompson 编写磁盘调度算法以最大化 PDP-7 磁盘吞吐量，并以每周一款程序的速度编写了编辑器、汇编器与内核。
+- 克尼汉 B W. UNIX 传奇：历史与回忆[M]. 韩磊，译。北京：人民邮电出版社，2021: 31-42. ISBN: 978-7-115-55717-9. 2.3 节记载 Thompson 编写磁盘调度算法以最大化 PDP-7 磁盘吞吐量，并以每周一款程序的速度编写了编辑器、汇编器与内核。
 - SPENCER H. space news from Sept 28 AW&ST[EB/OL]. sci.space.shuttle, Google Groups, (1987-11-15)[2026-04-17]. <https://groups.google.com/g/sci.space.shuttle/c/L8-Upf8gZoY/m/NN6ngTI0K0QJ>. 亨利·斯宾塞言语出处。
 
 ## 课后习题

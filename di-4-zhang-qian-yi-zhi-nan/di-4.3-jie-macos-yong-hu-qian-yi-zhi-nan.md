@@ -109,7 +109,7 @@ macOS 的 APFS 默认不区分大小写（Case-Insensitive），而 FreeBSD 的 
 ## 参考文献
 
 - Apple Inc. Darwin[EB/OL]. [2026-04-18]. <https://opensource.apple.com/>. Apple 开源的 Darwin 操作系统基础，包含 XNU 内核及 BSD 子系统。
-- LEVIN J. 深入解析 Mac OS X & iOS 操作系统[M]. 郑思遥, 房佩慈, 译. 北京: 清华大学出版社, 2014. ISBN: 978-7-302-34867-2.
+- LEVIN J. 深入解析 Mac OS X & iOS 操作系统[M]. 郑思遥，房佩慈，译。北京：清华大学出版社，2014. ISBN: 978-7-302-34867-2.
 - Jason Perlow. Apple's Open Source Roots: The BSD Heritage Behind macOS and iOS[EB/OL]. (2024-07-08)[2026-03-26]. <https://thenewstack.io/apples-open-source-roots-the-bsd-heritage-behind-macos-and-ios/>. 比较表格参考此处。
 - Apple Inc. File System[EB/OL]. [2026-04-18]. <https://developer.apple.com/documentation/foundation/about-apple-file-system>. APFS 官方技术指南。
 - OpenZFS. OpenZFS Documentation[EB/OL]. [2026-04-18]. <https://openzfs.org/wiki/Main_Page>. OpenZFS 项目文档。

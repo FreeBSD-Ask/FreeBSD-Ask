@@ -24,7 +24,7 @@ Linux 是当今世界广泛使用的开源操作系统。Linux 在不同语境�
 
 Linux 的开发受 Minix 启发，后者是一种专用于教学的微内核操作系统，诞生于 UNIX 版权受限的背景之下。Linus Torvalds 时年 21 岁，就读于芬兰赫尔辛基大学计算机科学系。彼时芬兰大学体系中，学生入学后通常直接攻读硕士学位，本科仅为中间学位而非独立招生阶段，因此学制较为灵活；1991 年 Torvalds 仍处于学业的早期阶段。
 
-GNU 与 Linux 的成功离不开 Minix 引发的社区讨论。1992 年，Andrew Stuart “Andy” Tanenbaum（Minix 作者）就内核架构与 Linus 展开激烈辩论，认为 Linux 的宏内核设计已然过时；Linus 则承认微内核在理论上更优，但从实用性角度为宏内核设计辩护。Linux 自始即采用宏内核架构，这场论战并未改变其架构选择，但使宏内核与微内核的优劣之争成为操作系统领域的经典议题。同一时期，Linus 原有的许可证禁止任何收费分发（包括收取介质成本），在社区请求与 GNU copyleft 兼容的推动下，Linus 于 Linux 0.12 版本将许可证更改为 GPL，并吸收 GNU 组件，逐步完善 Linux 的生态体系。
+GNU 与 Linux 的成功离不开 Minix 引发的社区讨论。1992 年，Andrew Stuart“Andy”Tanenbaum（Minix 作者）就内核架构与 Linus 展开激烈辩论，认为 Linux 的宏内核设计已然过时；Linus 则承认微内核在理论上更优，但从实用性角度为宏内核设计辩护。Linux 自始即采用宏内核架构，这场论战并未改变其架构选择，但使宏内核与微内核的优劣之争成为操作系统领域的经典议题。同一时期，Linus 原有的许可证禁止任何收费分发（包括收取介质成本），在社区请求与 GNU copyleft 兼容的推动下，Linus 于 Linux 0.12 版本将许可证更改为 GPL，并吸收 GNU 组件，逐步完善 Linux 的生态体系。
 
 Linus Torvalds 的硕士毕业论文是 [《Linux: A Portable Operating System》](https://www.cs.helsinki.fi/u/kutvonen/index_files/linus.pdf)（Linux：一种可移植的操作系统），他在 1997 年（27 岁）获得理学硕士学位。由于赫尔辛基大学当时并无最长学习期限限制，他得以长期保留学籍。根据该校官网的说明，课程成绩的有效期为十年，但课程到期不会影响在大学继续学习的权利。官网明确指出：“课程到期不会影响在大学继续学习的权利。”（注：芬兰《大学法》（UNIVERSITIES ACT）规定了自 2005 年 8 月 1 日起，学位完成的目标时间和最长时间。）
 
@@ -42,8 +42,8 @@ UNIX 标准 SUS 包含 POSIX 标准，前者是后者的超集。Single UNIX Spe
 
 ### 参考文献
 
-- 杨天平，金如意.博洛尼亚进程述论[J].华东师范大学学报(教育科学版),2009,27(01):9-22.DOI:10.16382/j.cnki.1000-5560.2009.01.007. 关于芬兰学制的发展。
-- 芬兰. Universities Act (No. 558/2009, amendments up to No. 644/2016 included) [Z]. 2009-07-24.
+- 杨天平，金如意。博洛尼亚进程述论[J].华东师范大学学报 (教育科学版),2009,27(01):9-22.DOI:10.16382/j.cnki.1000-5560.2009.01.007. 关于芬兰学制的发展。
+- 芬兰。Universities Act (No. 558/2009, amendments up to No. 644/2016 included) [Z]. 2009-07-24.
 - The Open Group. The Base Specifications Issue 6, Preface[EB/OL]. [2026-04-23]. <https://pubs.opengroup.org/onlinepubs/009604299/frontmatter/preface.html>. 指出“These were selected since they were a superset of the existing POSIX.1 and POSIX.2 specifications and had some organizational aspects that would benefit the audience for the new revision.”
 - Portnoy E, Eckersley P. Intel's Management Engine is a security hazard[EB/OL]. (2017-05-08)[2026-04-23]. <https://www.eff.org/deeplinks/2017/05/intels-management-engine-security-hazard-and-users-need-way-disable-it>.
 - HandWiki. Intel Management Engine[EB/OL]. [2026-04-23]. <https://handwiki.org/wiki/Intel_Management_Engine>.

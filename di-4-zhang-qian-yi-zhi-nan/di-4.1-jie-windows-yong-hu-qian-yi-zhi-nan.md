@@ -120,10 +120,10 @@ PSPath
 
 ### 参考文献
 
-- Sartre J P. 萨特哲学论文集[M]. 潘培庆，等，译. 合肥：安徽文艺出版社，1998. ISBN: 7-5396-1632-6.
-- 何晏，注；邢昺，疏. 论语注疏[M]. 北京：中国致公出版社，2016. ISBN: 978-7-5145-0846-8.
-- 微软. PARTITION_INFORMATION_GPT[EB/OL]. [2026-04-18]. <https://learn.microsoft.com/en-us/windows/win32/api/winioctl/ns-winioctl-partition_information_gpt>. GPT 分区类型 GUID 定义，其中 Microsoft Basic Data 类型为 EBD0A0A2-B9E5-4433-87C0-68B6B72699C7。
-- 微软. Supporting Mount Manager Requests in a Storage Class Driver[EB/OL]. [2026-04-18]. <https://learn.microsoft.com/en-us/windows-hardware/drivers/storage/supporting-mount-manager-requests-in-a-storage-class-driver>. Windows 装入管理器将盘符与分区的映射关系持久化存储于注册表 **HKLM\SYSTEM\MountedDevices**。
+- Sartre J P. 萨特哲学论文集[M]. 潘培庆，等，译。合肥：安徽文艺出版社，1998. ISBN: 7-5396-1632-6.
+- 何晏，注；邢昺，疏。论语注疏[M]. 北京：中国致公出版社，2016. ISBN: 978-7-5145-0846-8.
+- 微软。PARTITION_INFORMATION_GPT[EB/OL]. [2026-04-18]. <https://learn.microsoft.com/en-us/windows/win32/api/winioctl/ns-winioctl-partition_information_gpt>. GPT 分区类型 GUID 定义，其中 Microsoft Basic Data 类型为 EBD0A0A2-B9E5-4433-87C0-68B6B72699C7。
+- 微软。Supporting Mount Manager Requests in a Storage Class Driver[EB/OL]. [2026-04-18]. <https://learn.microsoft.com/en-us/windows-hardware/drivers/storage/supporting-mount-manager-requests-in-a-storage-class-driver>. Windows 装入管理器将盘符与分区的映射关系持久化存储于注册表 **HKLM\SYSTEM\MountedDevices**。
 - GBIF. Bambusoideae Luerss.[EB/OL]. [2026-04-18]. <https://www.gbif.org/species/113642445>. 竹亚科许多物种具有群体开花（gregarious flowering）特性，开花后常因资源耗竭而死亡；竹子通过地下根茎系统进行克隆生长（clonal growth），同一克隆的个体共享资源。
 - Aristotle. Metaphysics[M]. Translated by W. D. Ross. Oxford: Clarendon Press, 1908. Book IX (Theta), Chapter 7, 1049b. 亚里士多德论潜能与现实：种子之所以能长成大树，是因为种子暗含着一种潜能。
 
@@ -143,7 +143,7 @@ PSPath
 
 ![非法字符](../.gitbook/assets/windows-invalid-char-2.png)
 
-更多要求参见：微软. 命名文件、路径和命名空间[EB/OL]. [2026-03-26]. <https://learn.microsoft.com/zh-cn/windows/win32/fileio/naming-a-file>.
+更多要求参见：微软。命名文件、路径和命名空间[EB/OL]. [2026-03-26]. <https://learn.microsoft.com/zh-cn/windows/win32/fileio/naming-a-file>.
 
 > **技巧**
 >
@@ -185,8 +185,8 @@ abc    ABC
 
 #### 参考文献
 
-- 微软. 调整区分大小写[EB/OL]. [2026-03-26]. <https://learn.microsoft.com/en-us/windows/wsl/case-sensitivity>. Windows 文件系统支持使用属性标志按目录设置区分大小写，提供跨平台文件兼容性支持。
-- 微软. FAT32 File System[EB/OL]. [2026-04-18]. <https://learn.microsoft.com/en-us/previous-versions/aa364047(v=vs.85)>. FAT 文件系统卷不区分大小写。
+- 微软。调整区分大小写[EB/OL]. [2026-03-26]. <https://learn.microsoft.com/en-us/windows/wsl/case-sensitivity>. Windows 文件系统支持使用属性标志按目录设置区分大小写，提供跨平台文件兼容性支持。
+- 微软。FAT32 File System[EB/OL]. [2026-04-18]. <https://learn.microsoft.com/en-us/previous-versions/aa364047(v=vs.85)>. FAT 文件系统卷不区分大小写。
 - Apple. File system formats available in Disk Utility[EB/OL]. [2026-04-18]. <https://support.apple.com/guide/disk-utility/file-system-formats-dsku19ed921c/mac>. APFS 和 HFS+ 默认均不区分大小写，但可在格式化时选择区分大小写变体。
 
 ## 换行符差异
@@ -260,9 +260,9 @@ FreeBSD 的编码在 [main/usr.bin/login/login.conf](https://github.com/freebsd/
 
 ### 参考文献
 
-- 微软. Code pages[EB/OL]. [2026-03-26]. <https://learn.microsoft.com/en-us/globalization/encoding/code-pages>. 微软官方称，936 即是 GBK，用于中文简体字符编码；代码页 936 最初覆盖 GB 2312 字符集，后扩展为 GBK。严格来说，CP936 与 GBK 存在两处差异：CP936 增加了 Euro 符号（U+20AC → 0x80），但缺少 GBK 1.0 中定义的 95 个 PUA（Private Use Area）字符映射，二者并非完全等同。
+- 微软。Code pages[EB/OL]. [2026-03-26]. <https://learn.microsoft.com/en-us/globalization/encoding/code-pages>. 微软官方称，936 即是 GBK，用于中文简体字符编码；代码页 936 最初覆盖 GB 2312 字符集，后扩展为 GBK。严格来说，CP936 与 GBK 存在两处差异：CP936 增加了 Euro 符号（U+20AC → 0x80），但缺少 GBK 1.0 中定义的 95 个 PUA（Private Use Area）字符映射，二者并非完全等同。
 - Unicode Consortium. UTF-8, UTF-16, UTF-32 BOM[EB/OL]. [2026-04-18]. <https://www.unicode.org/faq/utf_bom.html>. UTF-8 的 BOM 为字节序列 0xEF 0xBB 0xBF。
-- 微软. Use UTF-8 code pages in Windows apps[EB/OL]. [2026-04-18]. <https://learn.microsoft.com/en-us/windows/apps/design/globalizing/use-utf8-code-page>. Windows 10 及后续版本可通过系统区域设置启用 UTF-8 支持（Beta 功能），但可能导致旧应用程序兼容性问题。
+- 微软。Use UTF-8 code pages in Windows apps[EB/OL]. [2026-04-18]. <https://learn.microsoft.com/en-us/windows/apps/design/globalizing/use-utf8-code-page>. Windows 10 及后续版本可通过系统区域设置启用 UTF-8 支持（Beta 功能），但可能导致旧应用程序兼容性问题。
 - FreeBSD Project. login.conf(5)[EB/OL]. [2026-04-18]. <https://man.freebsd.org/cgi/man.cgi?query=login.conf&sektion=5>. FreeBSD 登录类能力数据库，源文件位于 **usr.bin/login/login.conf**，编译后路径为 **/etc/login.conf**，用于设置字符编码等用户环境。
 
 ## 时间与时区差异
@@ -365,13 +365,13 @@ Termius 下载地址：<https://termius.com/download/>
 
 ### 参考文献
 
-- 中国计量科学研究院. 秒的定义[EB/OL]. [2026-03-26]. <https://www.nim.ac.cn/520/node/4.html>. 秒的定义，基于铯原子超精细跃迁频率。
+- 中国计量科学研究院。秒的定义[EB/OL]. [2026-03-26]. <https://www.nim.ac.cn/520/node/4.html>. 秒的定义，基于铯原子超精细跃迁频率。
 - BIPM. SI base unit: second[EB/OL]. [2026-04-18]. <https://www.bipm.org/en/si-base-units/second>. 国际计量局秒的 SI 定义，铯 133 原子不受干扰的基态超精细跃迁频率取固定数值 9,192,631,770 Hz。
 - IANA. Time Zone Database[EB/OL]. [2026-03-26]. <https://www.iana.org/time-zones>. 时区数据库，提供全球时区信息标准化。
 - Eggert P. Simplify China's time zones from five to two[EB/OL]. [2026-04-18]. <https://github.com/eggert/tz/commit/15b01c042afa770acd5068054c50e7c5c663cbd2>. 2014 年该修订将中国时区从五个简化为两个，移除了 Asia/Urumqi 的 1980 年向 UTC+8 的转换（现为 UTC+6），并将 Asia/Harbin、Asia/Chongqing、Asia/Kashgar 改为向后兼容链接。
-- 微软. Why does Windows keep your BIOS clock on local time?[EB/OL]. [2026-04-18]. <https://devblogs.microsoft.com/oldnewthing/20040902-00/?p=37983>. Windows 默认将硬件时钟（RTC）视为本地时间而非 UTC 的历史原因。
-- 中国科学院紫金山天文台. 历书基本术语简介[EB/OL]. [2026-03-26]. <http://www.pmo.cas.cn/xwdt2019/kpdt2019/202203/t20220314_6389637.html#b4>. 本节所涉术语，可参考此处的精确解释。
-- 新华网. “北京时间”是怎么来的[EB/OL]. [2026-04-18]. <https://www.xinhuanet.com/politics/2015-10/28/c_1116958394.htm>. 北京时间并非北京（东经 116.4°）地方时，而是东经 120° 经线的区时；中国曾于 1986—1991 年实行夏令时。
+- 微软。Why does Windows keep your BIOS clock on local time?[EB/OL]. [2026-04-18]. <https://devblogs.microsoft.com/oldnewthing/20040902-00/?p=37983>. Windows 默认将硬件时钟（RTC）视为本地时间而非 UTC 的历史原因。
+- 中国科学院紫金山天文台。历书基本术语简介[EB/OL]. [2026-03-26]. <http://www.pmo.cas.cn/xwdt2019/kpdt2019/202203/t20220314_6389637.html#b4>. 本节所涉术语，可参考此处的精确解释。
+- 新华网。“北京时间”是怎么来的[EB/OL]. [2026-04-18]. <https://www.xinhuanet.com/politics/2015-10/28/c_1116958394.htm>. 北京时间并非北京（东经 116.4°）地方时，而是东经 120° 经线的区时；中国曾于 1986—1991 年实行夏令时。
 - IETF. RFC 5280: Internet X.509 Public Key Infrastructure Certificate and CRL Profile[EB/OL]. [2026-04-18]. <https://www.rfc-editor.org/rfc/rfc5280>. X.509 证书包含 notBefore 与 notAfter 有效期字段（第 4.1.2.5 节：Validity）；客户端在 TLS 握手时将系统时间与证书有效期比对，时钟偏移可导致握手失败。
 - IETF. RFC 6557: Procedures for Maintaining the Time Zone Database[EB/OL]. [2026-04-18]. <https://www.rfc-editor.org/rfc/rfc6557>. IANA 时区数据库维护程序（BCP 175），该数据库由 Arthur David Olson 于 20 世纪 80 年代中期创建（至少可追溯至 1986 年），2011 年 10 月起由 ICANN/IANA 接管托管。
 
@@ -381,17 +381,17 @@ Termius 下载地址：<https://termius.com/download/>
 
 以下书籍可供读者进一步研究 Windows 操作系统设计与实现：
 
-- Russinovich M, Solomon D, Ionescu A, 等. 深入解析 Windows 操作系统：第 7 版. 卷 1[M]. 刘晖，译. 北京：人民邮电出版社，2021. ISBN: 978-7-115-55694-3. 微软官方教材，系统阐述 Windows 内核架构。
-- Russinovich M, Solomon D, Ionescu A, 等. 深入解析 Windows 操作系统：第 7 版. 卷 2[M]. 刘晖，译. 北京：人民邮电出版社，2024. ISBN: 978-7-115-61974-7. 微软官方教材，详解 Windows 系统组件。
+- Russinovich M, Solomon D, Ionescu A, 等。深入解析 Windows 操作系统：第 7 版。卷 1[M]. 刘晖，译。北京：人民邮电出版社，2021. ISBN: 978-7-115-55694-3. 微软官方教材，系统阐述 Windows 内核架构。
+- Russinovich M, Solomon D, Ionescu A, 等。深入解析 Windows 操作系统：第 7 版。卷 2[M]. 刘晖，译。北京：人民邮电出版社，2024. ISBN: 978-7-115-61974-7. 微软官方教材，详解 Windows 系统组件。
 
 ### 天文历法
 
-- 中国科学院紫金山天文台. 2026 年中国天文年历[M]. 北京：科学出版社，2025. ISBN: 978-7-03-082584-1. 注：每年一版。一般日历会写潮起潮落太阳东升西落的时间，该书则是大全，提供精确的天文数据。
-- 胡中为. 天文学教程（上）[M]. 上海：上海交通大学出版社，2019. ISBN: 978-7-3132-1655-7. 天文学历史悠久，这是一本现代天文学入门书籍，本科生教材，系统介绍天文学基础。
-- 胡中为. 天文学教程（下）[M]. 上海：上海交通大学出版社，2020. ISBN: 978-7-3132-3572-5. 天文学是一级学科，深入讲解天体物理与宇宙学。
-- Dodelson S, Schmidt F. 现代宇宙学[M]. 于浩然，译. 第 2 版. 北京：科学出版社，2024. ISBN: 978-7-03-078693-7. 该书用数学和物理学描述宇宙宏观整体而非具体天体行星，提供现代宇宙学理论框架。
-- 卢央. 中国古代星占学[M]. 北京：中国科学技术出版社，2013. ISBN: 978-7-5046-6140-1. 中国古代天文学入门，星占学即以哲学或神秘学解释天文学，梳理古代星占文化。
-- Carroll B W, Ostlie D A. 当代天体物理学导论[M]. 姜碧沩，李庆康，高健，等，译. 第 2 版. 北京：科学出版社，2023. ISBN: 978-7-03-076666-3. 天体物理学即以物理学解释天文学，是现代天文学的核心（还有一些测量、分类、天文历法等不属于此范畴），提供天体物理系统介绍。
+- 中国科学院紫金山天文台。2026 年中国天文年历[M]. 北京：科学出版社，2025. ISBN: 978-7-03-082584-1. 注：每年一版。一般日历会写潮起潮落太阳东升西落的时间，该书则是大全，提供精确的天文数据。
+- 胡中为。天文学教程（上）[M]. 上海：上海交通大学出版社，2019. ISBN: 978-7-3132-1655-7. 天文学历史悠久，这是一本现代天文学入门书籍，本科生教材，系统介绍天文学基础。
+- 胡中为。天文学教程（下）[M]. 上海：上海交通大学出版社，2020. ISBN: 978-7-3132-3572-5. 天文学是一级学科，深入讲解天体物理与宇宙学。
+- Dodelson S, Schmidt F. 现代宇宙学[M]. 于浩然，译。第 2 版。北京：科学出版社，2024. ISBN: 978-7-03-078693-7. 该书用数学和物理学描述宇宙宏观整体而非具体天体行星，提供现代宇宙学理论框架。
+- 卢央。中国古代星占学[M]. 北京：中国科学技术出版社，2013. ISBN: 978-7-5046-6140-1. 中国古代天文学入门，星占学即以哲学或神秘学解释天文学，梳理古代星占文化。
+- Carroll B W, Ostlie D A. 当代天体物理学导论[M]. 姜碧沩，李庆康，高健，等，译。第 2 版。北京：科学出版社，2023. ISBN: 978-7-03-076666-3. 天体物理学即以物理学解释天文学，是现代天文学的核心（还有一些测量、分类、天文历法等不属于此范畴），提供天体物理系统介绍。
 
 > **思考题**
 >
@@ -401,7 +401,7 @@ Termius 下载地址：<https://termius.com/download/>
 >
 > 你认为通过哲学和神秘学/宗教神学解释世界的缺点是什么？如果排除实用主义和经验主义，那么还能剩下什么？
 >
->>马克思还认为只有必要的自由时间才能确保真正的自由（邓晓芒. 马克思论“存在与时间”[J]. 哲学动态，2000(6): 11-14）：
+>>马克思还认为只有必要的自由时间才能确保真正的自由（邓晓芒。马克思论“存在与时间”[J]. 哲学动态，2000(6): 11-14）：
 >>
 >>“必须将感性的时间从强制性的、社会一般的抽象时间中解放出来。”
 >>

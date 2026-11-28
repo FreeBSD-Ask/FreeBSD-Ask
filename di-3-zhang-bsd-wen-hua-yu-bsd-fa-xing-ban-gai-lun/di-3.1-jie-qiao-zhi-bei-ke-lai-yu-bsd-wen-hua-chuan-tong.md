@@ -195,30 +195,30 @@ BERKELEY G. Verses on the Prospect of Planting Arts and Learning in America[C]//
 
 贝克莱的思想在他有生之年未被广泛接受，但在其后数百年间影响深远。
 
-几乎每一部主流的哲学史著作都对其思想有所论述[旧版人教版思想政治必修四（生活与哲学）第 13 页即为一例（教育部普通高中思想政治课课程标准实验教材编写组. 思想政治必修 4 生活与哲学[M]. 北京: 人民教育出版社, 2018. ISBN: 978-7-107-32710-0.）]，关于他的哲学实验亦是哲学考试中经久不衰的论述题。
+几乎每一部主流的哲学史著作都对其思想有所论述[旧版人教版思想政治必修四（生活与哲学）第 13 页即为一例（教育部普通高中思想政治课课程标准实验教材编写组。思想政治必修 4 生活与哲学 [M]. 北京：人民教育出版社，2018. ISBN: 978-7-107-32710-0.）]，关于他的哲学实验亦是哲学考试中经久不衰的论述题。
 
-在高中思想政治教材中，也能看到贝克莱思想的相关介绍 ~~尽管该教材表述被认为有误，教育部组织编写. 普通高中教科书思想政治必修 4 哲学与文化[M]. 北京: 人民教育出版社, 2019. ISBN: 978-7-107-34195-3. 已删去相关内容~~。
+在高中思想政治教材中，也能看到贝克莱思想的相关介绍 ~~尽管该教材表述被认为有误，教育部组织编写。普通高中教科书思想政治必修 4 哲学与文化[M]. 北京：人民教育出版社，2019. ISBN: 978-7-107-34195-3. 已删去相关内容~~。
 
 ![教材教科书高中思想政治必修 4 生活与哲学人教版第 13 页](../.gitbook/assets/berkeley-textbook-china.png)
 
 ### 参考文献
 
-- Berkeley G. 人类知识原理和三篇对话[M]. 张桂权,译. 北京: 人民出版社, 2022. ISBN: 978-7-01-023684-1. 系统阐述贝克莱唯心主义哲学体系与存在感知理论。
-- 阎吉达. 贝克莱思想新探[M]. 上海: 复旦大学出版社, 1987. ISBN: 7-309-00033-1. 深入剖析贝克莱哲学思想与科学方法论。
-- Berkeley G. 西利斯[M]. 曹曼,高新民,译. 北京: 商务印书馆, 2000. ISBN: 978-7-100-02886-8. 西利斯中译本。
+- Berkeley G. 人类知识原理和三篇对话[M]. 张桂权，译。北京：人民出版社，2022. ISBN: 978-7-01-023684-1. 系统阐述贝克莱唯心主义哲学体系与存在感知理论。
+- 阎吉达。贝克莱思想新探[M]. 上海：复旦大学出版社，1987. ISBN: 7-309-00033-1. 深入剖析贝克莱哲学思想与科学方法论。
+- Berkeley G. 西利斯[M]. 曹曼，高新民，译。北京：商务印书馆，2000. ISBN: 978-7-100-02886-8. 西利斯中译本。
 - Downing L. George Berkeley[EB/OL]. (2021)[2026-03-25]. <https://plato.stanford.edu/archives/fall2021/entries/berkeley/>. SEP 贝克莱条目。提供了贝克莱哲学思想的权威学术综述与研究现状。
 - Easwaran K, Hájek A, Mancosu P, et al. Infinity[EB/OL]. (2024)[2026-03-25]. <https://plato.stanford.edu/archives/sum2024/entries/infinity/>. SEP 无穷条目。探讨了数学哲学中无穷概念的历史发展与哲学争议。
-- Urmson J O. 贝克莱[M]. 孟令朋,译. 北京: 清华大学出版社, 2019. ISBN: 978-7-302-52555-4. 深入浅出介绍贝克莱哲学思想与历史影响。
-- 汪芳庭. 数学基础[M]. 修订版. 北京: 高等教育出版社, 2018. ISBN: 978-7-04-050242-8. 系统阐述数学基础理论与公理集合论框架。
-- Robinson A. 非标准分析[M]. 申又根,王世强,张锦文,译. 北京: 科学出版社, 1980. 统一书号:13031-1267. 建立超实数理论，为无穷小量提供数学基础。
-- Tao T. 陶哲轩实分析[M]. 李馨,译. 第 4 版. 北京: 人民邮电出版社, 2025. ISBN: 978-7-115-66554-6. 从数学基础（自然数和集合论）构建实分析体系，强调严谨性与直觉的结合。
+- Urmson J O. 贝克莱[M]. 孟令朋，译。北京：清华大学出版社，2019. ISBN: 978-7-302-52555-4. 深入浅出介绍贝克莱哲学思想与历史影响。
+- 汪芳庭。数学基础[M]. 修订版。北京：高等教育出版社，2018. ISBN: 978-7-04-050242-8. 系统阐述数学基础理论与公理集合论框架。
+- Robinson A. 非标准分析[M]. 申又根，王世强，张锦文，译。北京：科学出版社，1980. 统一书号:13031-1267. 建立超实数理论，为无穷小量提供数学基础。
+- Tao T. 陶哲轩实分析[M]. 李馨，译。第 4 版。北京：人民邮电出版社，2025. ISBN: 978-7-115-66554-6. 从数学基础（自然数和集合论）构建实分析体系，强调严谨性与直觉的结合。
 - Berkeley G. The Querist, containing several queries proposed to the consideration of the public[M]. Farmington Hills: Gale ECCO, Print Editions, 2018. ISBN: 978-1-38541-101-8. 探讨货币、经济与社会问题的哲学思考。
 - Stanford Encyclopedia of Philosophy. Zeno's Paradoxes[EB/OL]. [2026-04-04]. <https://plato.stanford.edu/entries/paradox-zeno/>. 芝诺悖论条目。
 - Schabas M. Economics in Early Modern Philosophy[EB/OL]. (2022)[2026-03-25]. <https://plato.stanford.edu/archives/sum2022/entries/economics-early-modern/>. 梳理近代经济思想的哲学根基与历史脉络。
 - Cloyne District Community Council. George Berkeley, Bishop of Cloyne/Philosopher[EB/OL]. [2026-03-25]. <http://cloyne.ie/about/george-berkeley-bishop-of-cloyne/>. 介绍贝克莱主教在克洛因教区的生平与工作。
 - Britannica. George Berkeley[EB/OL]. [2026-03-25]. <https://www.britannica.com/biography/George-Berkeley>. 提供贝克莱生平与思想的权威百科介绍。
 - Stadtman V A, Centennial Publications Staff. The Centennial Record of the University of California, 1868–1968[M/OL]. Berkeley: University of California, 1967[2026-04-18]. <https://digicoll.lib.berkeley.edu/record/81096/files/centennial.pdf>. 记载 1866 年 Frederick Billings 援引贝克莱诗句建议将城镇命名为 Berkeley 的历史。
-- 胡化凯. 20 世纪 50-70 年代中国科学批判资料选（上下）[M]. 济南: 山东教育出版社, 2009. ISBN: 978-7-5328-5386-1. 其中整本下册都涉及对爱因斯坦的批判。记录特定历史时期科学与政治交织的学术史料。
+- 胡化凯。20 世纪 50-70 年代中国科学批判资料选（上下）[M]. 济南：山东教育出版社，2009. ISBN: 978-7-5328-5386-1. 其中整本下册都涉及对爱因斯坦的批判。记录特定历史时期科学与政治交织的学术史料。
 - O'Grady P. Berkeley, George[EB/OL]//Dictionary of Irish Biography. [2026-04-18]. <https://www.dib.ie/biography/berkeley-george-a0611>. 爱尔兰传记词典贝克莱条目，提供贝克莱生平最详尽权威之学术传记，含精确日期（如 1696 年 7 月 17 日入基尔肯尼学院、1700 年 3 月 21 日入都柏林圣三一学院、1707 年 6 月当选研究员、1710 年春受按立为牧师等）。
 - Stock J. An Account of the Life of George Berkeley, D.D., Late Bishop of Cloyne in Ireland[M]. Dublin, 1776: 12. 贝克莱最早之传记，记载其临终时妻子在旁诵读布道文等细节。
 - Popper K R. A Note on Berkeley as Precursor of Mach[J]. The British Journal for the Philosophy of Science, 1953, 4(13): 26-36. 论证贝克莱对牛顿绝对时空观之批判先于马赫，为爱因斯坦广义相对论之思想先驱。
@@ -231,7 +231,7 @@ BERKELEY G. Verses on the Prospect of Planting Arts and Learning in America[C]//
 
 加州大学伯克利分校成立于 1868 年，是一所公立大学。同年，后来担任中国近代第一所国立大学——北京大学（前身京师大学堂，成立于 1898 年）校长的蔡元培诞生。他“要有良好的社会，必先有良好的个人，要有良好的个人，就要先有良好的教育”的观点，与“Fiat Lux”所倡导的以个人进步推动社会发展的理念不谋而合。蔡元培被尊为北大“永远的校长”。同年，日本启动明治维新，迈入新时代并走上现代化道路，然而这一进程也为日本未来的侵略战争埋下了伏笔。
 
-Fiat Lux 出自拉丁文圣经“1.3：Dixitque Deus: Fiat lux. Et facta est lux.”（圣经武加大译本）。“And God said, ‘Let there be light,’ and there was light.”（NIV 版圣经）“1.3：神说、要有光、就有了光。”（《和合本圣经》）
+Fiat Lux 出自拉丁文圣经“1.3：Dixitque Deus: Fiat lux. Et facta est lux.”（圣经武加大译本）。“And God said, ‘Let there be light,’and there was light.”（NIV 版圣经）“1.3：神说、要有光、就有了光。”（《和合本圣经》）
 
 依据经文，先有光，后有世界。在基督教神学中，上帝先于人类创造了光，这真理之光照耀世人，也被视作人类理性的源泉。
 
@@ -272,17 +272,17 @@ Fiat Lux!
 ### 参考文献
 
 - University of California, Berkeley. Fiat Lux Scholarship[EB/OL]. [2026-03-25]. <https://financialaid.berkeley.edu/types-of-aid-at-berkeley/scholarships/fiat-lux-scholarship/>. 为加州大学伯克利学生提供经济资助的奖学金项目。
-- 北京大学校史馆. 蔡元培像[EB/OL]. [2026-03-25]. <https://www.xsg.pku.edu.cn/details/1893.html>. 展示蔡元培先生塑像。
-- 山本四郎. 小川又次稿:清国征讨策案[J]. 日本史研究, 1964(75). 随着明治维新，国力渐增，日本逐步迈上了对外侵略扩张的军国主义道路，1887 年，日本参谋本部制定了所谓“清国征讨策略”，逐渐演化为以侵略中国为中心的“大陆政策”。
-- 蔡元培. 蔡元培：言有物，行有伦[M]. 北京: 中国文史出版社, 2023. ISBN: 978-7-5205-3816-9. 阐述蔡元培教育思想与文化理念。
+- 北京大学校史馆。蔡元培像[EB/OL]. [2026-03-25]. <https://www.xsg.pku.edu.cn/details/1893.html>. 展示蔡元培先生塑像。
+- 山本四郎。小川又次稿：清国征讨策案[J]. 日本史研究，1964(75). 随着明治维新，国力渐增，日本逐步迈上了对外侵略扩张的军国主义道路，1887 年，日本参谋本部制定了所谓“清国征讨策略”，逐渐演化为以侵略中国为中心的“大陆政策”。
+- 蔡元培。蔡元培：言有物，行有伦[M]. 北京：中国文史出版社，2023. ISBN: 978-7-5205-3816-9. 阐述蔡元培教育思想与文化理念。
 - Piazza L, Lummen T T A, Quiñonez E, et al. Simultaneous observation of the quantization and the interference pattern of a plasmonic near-field[J]. Nature Communications, 2015, 6: 6407. 揭示等离子体近场的量子化与干涉现象。
-- Kant I. 历史理性批判文集[M]. 何兆武,译. 天津: 天津人民出版社, 2014: 22. 答复这个问题：“什么是启蒙运动？”. ISBN: 978-7-201-08641-5. 系统阐述启蒙运动的哲学内涵与历史意义。
+- Kant I. 历史理性批判文集[M]. 何兆武，译。天津：天津人民出版社，2014: 22. 答复这个问题：“什么是启蒙运动？”. ISBN: 978-7-201-08641-5. 系统阐述启蒙运动的哲学内涵与历史意义。
 - University of California, Berkeley Library. Portrait of UC Berkeley namesake no longer on display in Doe Library[EB/OL]. [2026-03-25]. <https://www.lib.berkeley.edu/about/news/george-berkeley-portrait>. 记录大学校园历史争议与文化反思。
-- 尼采. 善恶的彼岸[M]. 赵千帆,译. 北京: 商务印书馆, 2015. ISBN: 978-7-100-11749-4. 探讨道德哲学与价值重估的核心命题。
-- 松原信吾,村石宏实,川崎乡太,等,导演. 迪迦奥特曼[V]. 日本:圆谷株式会社,1996. 第 47 集《告别黑暗》，梅塔莫尔加登场，第 21 分钟，沙耶香。通过特摄作品探讨光明与黑暗的辩证关系。
-- 清华大学. 国立西南联合大学纪念碑碑文[EB/OL]. [2026-03-25]. <https://www.tsinghua.org.cn/info/1952/17852.htm>. 记载西南联大历史使命与学术精神。
-- 闻黎明. 西南联大与现代中国（1937~1946）[M]. 北京: 社会科学文献出版社, 2023. ISBN: 978-7-5201-9805-9. 全面研究西南联大历史地位与文化影响。
-- 大冢雅彦,高桥正典,清水久敏,等,导演. 日常系的异能战斗(異能バトルは日常系のなかで)[V]. 日本:泉光高中文艺部,2014. 以校园日常为背景的动画作品，其中角色对正义与邪恶的质问构成了本节讨论的引用来源。
+- 尼采。善恶的彼岸[M]. 赵千帆，译。北京：商务印书馆，2015. ISBN: 978-7-100-11749-4. 探讨道德哲学与价值重估的核心命题。
+- 松原信吾，村石宏实，川崎乡太，等，导演。迪迦奥特曼[V]. 日本：圆谷株式会社，1996. 第 47 集《告别黑暗》，梅塔莫尔加登场，第 21 分钟，沙耶香。通过特摄作品探讨光明与黑暗的辩证关系。
+- 清华大学。国立西南联合大学纪念碑碑文[EB/OL]. [2026-03-25]. <https://www.tsinghua.org.cn/info/1952/17852.htm>. 记载西南联大历史使命与学术精神。
+- 闻黎明。西南联大与现代中国（1937~1946）[M]. 北京：社会科学文献出版社，2023. ISBN: 978-7-5201-9805-9. 全面研究西南联大历史地位与文化影响。
+- 大冢雅彦，高桥正典，清水久敏，等，导演。日常系的异能战斗 (異能バトルは日常系のなかで)[V]. 日本：泉光高中文艺部，2014. 以校园日常为背景的动画作品，其中角色对正义与邪恶的质问构成了本节讨论的引用来源。
 - Abrahao R A, Morin H P N, Pagé J T R, et al. Shadow of a laser beam[J]. Optica, 2024, 11(11): 1549-1555. 实验证明激光束存在阴影的光学现象（论文指出，光也有影子）。
 - University of California, Berkeley. Nobelists[EB/OL]. [2026-04-16]. <https://inspire.berkeley.edu/get-inspired/nobels/>. 记载“By our count, there are 63 Berkeley Nobelists”。
 - University of California, Berkeley. History & discoveries[EB/OL]. [2026-04-18]. <https://www.berkeley.edu/about/history/>. 加州大学伯克利分校官方校史，1868 年建校。
@@ -290,11 +290,11 @@ Fiat Lux!
 - University of California, Berkeley. Cost[EB/OL]. [2026-04-18]. <https://admissions.berkeley.edu/cost/>. 伯克利分校官方招生页面，38% 本科生无需自付学费。
 - Patterson D A, Gibson G, Katz R H. A Case for Redundant Arrays of Inexpensive Disks (RAID)[R]. Berkeley: University of California, EECS Department, 1987. CSD-87-391. 加州大学伯克利分校技术报告，首次提出 RAID 概念。
 - Asanović K, Waterman A, Lee Y. RISC-V ISA[EB/OL]. RISC-V International, [2026-04-18]. <https://riscv.org/about/>. RISC-V 指令集架构始于 2010 年加州大学伯克利分校 Par Lab 项目。
-- 北京大学. 北京大学简介[EB/OL]. [2026-04-18]. <https://www.pku.edu.cn/about.html>. 北京大学官方页面，1898 年建校，初名京师大学堂。
+- 北京大学。北京大学简介[EB/OL]. [2026-04-18]. <https://www.pku.edu.cn/about.html>. 北京大学官方页面，1898 年建校，初名京师大学堂。
 
 ## 课后习题
 
 1. 将 *The analyst; or, a discourse addressed to an infidel mathematician. Wherein it is examined whether the object, principles, and inferences of the modern analysis are more distinctly conceived, or more evidently deduced, than religious mysteries and points of faith*（《分析学家；或一篇致一位不信神数学家的论文，其中审查一下近代分析学的对象、原则及论断是不是比宗教的神秘、信仰的要点有更清晰的表达，或更明显的推理》）翻译为中文，并尝试将之公理化。
 2. 比较贝克莱《人类知识原理》的原始文本与中文译本，复现其中关于存在与感知关系的核心论证，并用一阶逻辑符号重构其推理结构。
 3. 编写加州大学伯克利分校校史与国立西南联合大学校史。
-4. 观看纪录片《在伯克利》（怀斯曼 F, 导演. 在伯克利[V]. 美国: Zipporah Films, 2013.），归纳影片中加州大学伯克利分校在学术治理与教育理念方面的核心特征。
+4. 观看纪录片《在伯克利》（怀斯曼 F, 导演。在伯克利[V]. 美国：Zipporah Films, 2013.），归纳影片中加州大学伯克利分校在学术治理与教育理念方面的核心特征。
