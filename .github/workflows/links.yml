@@ -31,13 +31,19 @@ jobs:
           output: ./lychee/out.md
           args: --config ./.github/lychee.toml './**/*.md'
 
-      # 死链持续存在时，复用既有开放报告 issue 而非每次运行都新建，避免重复累积
+      # 死链持续存在时，复用既有开放报告 issue 而非每次运行都新建，避免重复累积；
+      # 默认分支的报告使用固定标题，其他分支的报告带分支名后缀，防止分支运行覆盖主报告
       - name: 查找现有报告 issue
         id: find_issue
         if: steps.lychee.outputs.exit_code != 0
         uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9
         with:
           script: |
+            const isMain = context.ref === 'refs/heads/main';
+            const reportTitle = isMain
+              ? 'Link Checker Report'
+              : `Link Checker Report (${context.ref.replace('refs/heads/', '')})`;
+            core.setOutput('title', reportTitle);
             // 用 paginate 取回所有分页，防止报告 issue 位于第一页之外而被漏查
             const issues = await github.paginate(github.rest.issues.listForRepo, {
               owner: context.repo.owner,
@@ -45,7 +51,7 @@ jobs:
               state: 'open',
               labels: 'report, automated issue'
             });
-            const existing = issues.find(issue => !issue.pull_request && issue.title === 'Link Checker Report');
+            const existing = issues.find(issue => !issue.pull_request && issue.title === reportTitle);
             core.setOutput('number', existing ? String(existing.number) : '');
 
       # issue-number 为空时新建，非空时更新对应 issue
@@ -53,7 +59,7 @@ jobs:
         if: steps.lychee.outputs.exit_code != 0
         uses: peter-evans/create-issue-from-file@fca9117c27cdc29c6c4db3b86c48e4115a786710 # v6
         with:
-          title: Link Checker Report
+          title: ${{ steps.find_issue.outputs.title }}
           content-filepath: ./lychee/out.md
           labels: report, automated issue
           issue-number: ${{ steps.find_issue.outputs.number }}

@@ -17,8 +17,14 @@ permissions:
 jobs:
   analyze:
     name: Analyze (${{ matrix.language }})
-    # dependabot 提交的 PR 上 GITHUB_TOKEN 只读，上传分析结果会失败，故跳过
-    if: github.triggering_actor != 'dependabot[bot]'
+    # 以下场景 GITHUB_TOKEN 为只读，无法上传分析结果，须跳过：
+    # fork 仓库的 PR、dependabot[bot] 创建的 PR（维护者重跑时事件 payload 不变，判断依然生效）
+    if: >-
+      github.event_name != 'pull_request'
+      || (
+        github.event.pull_request.head.repo.full_name == github.repository
+        && github.event.pull_request.user.login != 'dependabot[bot]'
+      )
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false

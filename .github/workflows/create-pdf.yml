@@ -17,8 +17,9 @@ concurrency:
 
 jobs:
   build:
-    # 仅允许从默认分支发布，防止手动触发时把日期标签与 Release 改写为非默认分支的内容
-    if: github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
+    # 仅允许从默认分支发布，防止手动触发时把日期标签与 Release 改写为非默认分支的内容；
+    # 不依赖 github.event.repository（schedule 事件的 payload 不保证包含该字段），本仓库默认分支固定为 main
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
 
     steps:
@@ -90,20 +91,30 @@ jobs:
         id: set_tag
         run: echo "RELEASE_TAG=$(date +'%Y.%m.%d')" >> $GITHUB_ENV
 
-      - name: 🔍 判断当日是否已发布
+      - name: 🔍 判断当日发布状态
         id: publish_state
         uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9
         with:
           script: |
             const tag = process.env.RELEASE_TAG;
             try {
-              await github.rest.repos.getReleaseByTag({
+              const { data: release } = await github.rest.repos.getReleaseByTag({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
                 tag
               });
-              core.setOutput('skip', 'true');
-              core.info(`Release ${tag} 已存在，当日已发布，跳过发布流程`);
+              // 仅当两个附件齐全且发布说明已写入时视为发布完成；
+              // 上次运行中断留下的不完整 Release 允许重试补全
+              const assets = release.assets.map(asset => asset.name);
+              const complete = assets.includes(`${tag}.pdf`) && assets.includes(`${tag}.epub`)
+                && !!release.body;
+              if (complete) {
+                core.setOutput('skip', 'true');
+                core.info(`Release ${tag} 已完整发布，跳过发布流程`);
+              } else {
+                core.setOutput('skip', 'false');
+                core.info(`Release ${tag} 不完整（附件：${assets.join(', ') || '无'}；发布说明：${release.body ? '有' : '空'}），继续发布流程以补全`);
+              }
             } catch (err) {
               if (err.status === 404) {
                 core.setOutput('skip', 'false');
@@ -136,24 +147,6 @@ jobs:
           echo "上次发布标签 (PREVIOUS_TAG): ${{ env.PREVIOUS_TAG }}"
           echo "------------------------------------------------------"
 
-      - name: 🏷️ 创建 Git 标签并推送
-        if: steps.publish_state.outputs.skip != 'true'
-        working-directory: FreeBSD-Ask
-        run: |
-          timedatectl
-          git config --global user.email "yklaxds@gmail.com"
-          git config --global user.name "ykla"
-          # 此步骤仅在当日 Release 尚未发布时执行：标签已存在说明上次运行失败于发布阶段，
-          # 重置到当前 HEAD 使标签与本次构建内容一致；当日 Release 已发布的场景已被上面的跳过判断拦截，不会改写已发布版本
-          if git rev-parse -q --verify "refs/tags/${{ env.RELEASE_TAG }}" >/dev/null; then
-            echo "标签 ${{ env.RELEASE_TAG }} 已存在且当日 Release 未发布，强制重置到当前 HEAD"
-            git tag -f ${{ env.RELEASE_TAG }} HEAD
-            git push --force origin ${{ env.RELEASE_TAG }}
-          else
-            git tag ${{ env.RELEASE_TAG }}
-            git push origin ${{ env.RELEASE_TAG }}
-          fi
-
       - name: 📜 生成增量变更日志
         if: steps.publish_state.outputs.skip != 'true'
         uses: janheinrichmerker/action-github-changelog-generator@e60b5a2bd9fcd88dadf6345ff8327863fb8b490f # v2.4
@@ -185,9 +178,36 @@ jobs:
             pdf-generator/build/${{ env.RELEASE_TAG }}.epub
           token: ${{ secrets.GITHUB_TOKEN }}
           makeLatest: true
-          # 常规路径已由“判断当日是否已发布”保证 Release 不存在；此处允许更新作为兜底，
-          # 若 Release 被先行创建则更新而非失败；replacesArtifacts 默认为 true，附件自动替换
+          # 当日 Release 不完整（附件缺失或发布说明为空）时仍会执行到此，更新它以补全；
+          # replacesArtifacts 默认为 true，同名附件自动替换
           allowUpdates: true
+
+      - name: 🏷️ 创建或修正 Git 标签并推送
+        if: steps.publish_state.outputs.skip != 'true'
+        working-directory: FreeBSD-Ask
+        run: |
+          timedatectl
+          git config --global user.email "yklaxds@gmail.com"
+          git config --global user.name "ykla"
+          # 此步骤置于 Release 创建/更新成功之后：发布失败时标签保持原位，不会出现标签已被移动而 Release 尚未更新的不一致状态；
+          # Release 步骤可能经 GitHub API 自动创建标签，先同步远端标签再判断
+          git fetch --tags --force
+          if git rev-parse -q --verify "refs/tags/${{ env.RELEASE_TAG }}" >/dev/null; then
+            if [ "$(git rev-list -1 "${{ env.RELEASE_TAG }}")" = "$(git rev-parse HEAD)" ]; then
+              echo "标签 ${{ env.RELEASE_TAG }} 已指向当前 HEAD，无需移动"
+            elif git merge-base --is-ancestor "${{ env.RELEASE_TAG }}" HEAD; then
+              # 标签指向当前 main 历史内的旧提交，为上次失败运行遗留的待恢复标签，重置到本次构建的 HEAD
+              echo "标签 ${{ env.RELEASE_TAG }} 指向 main 历史内的旧提交，重置到当前 HEAD"
+              git tag -f ${{ env.RELEASE_TAG }} HEAD
+              git push --force origin ${{ env.RELEASE_TAG }}
+            else
+              echo "标签 ${{ env.RELEASE_TAG }} 指向的提交不在当前 HEAD 历史内，非本工作流遗留的待恢复标签，保留原标签并终止发布，请人工核查" >&2
+              exit 1
+            fi
+          else
+            git tag ${{ env.RELEASE_TAG }}
+            git push origin ${{ env.RELEASE_TAG }}
+          fi
 
       - name: 📝 更新 Release 说明 (包含变更日志)
         if: steps.publish_state.outputs.skip != 'true'
