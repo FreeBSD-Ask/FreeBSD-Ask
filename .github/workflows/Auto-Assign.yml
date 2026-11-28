@@ -2,8 +2,6 @@ name: 🔗 自动分配 issue & PR
 
 permissions:
   contents: read    # 读取仓库内容（包括配置文件）
-  issues: write     # 写入 issues
-  pull-requests: write  # 写入 pull requests
 on:
   issues:
     types: [opened, reopened]
@@ -14,6 +12,9 @@ on:
 jobs:
   assign-issue:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read   # 读取 .github/auto_assign.yml
+      issues: write    # 写入 issues
     if: github.event_name == 'issues' || github.event_name == 'workflow_dispatch'
     steps:
       - uses: pozil/auto-assign-issue@d6e511896e5f1d2408e74db74416647d8ff80c8c # v4.1.0
@@ -24,6 +25,9 @@ jobs:
 
   assign-pr:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read        # 读取 .github/auto_assign.yml
+      pull-requests: write  # 写入 pull requests
     if: github.event_name == 'pull_request' || github.event_name == 'workflow_dispatch'
     steps:
       - name: Auto Assign PR
