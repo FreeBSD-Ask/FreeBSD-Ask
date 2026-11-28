@@ -1,5 +1,10 @@
 name: 🔗 AutoCorrect 空格语法检查
 
+permissions:
+  contents: write        # 创建分支与提交
+  pull-requests: write   # 创建 Pull Request
+  issues: write          # 为 Pull Request 添加标签
+
 on: 
   repository_dispatch:
   workflow_dispatch:
@@ -28,7 +33,7 @@ jobs:
           run: yarn autocorrect --config .github/.autocorrectrc --fix **/*.md
 
         - name: Markdown add spaces
-          uses: peter-evans/create-pull-request@v8
+          uses: peter-evans/create-pull-request@3ffccacd46053766916f087ce41d627c0b8cf2d1 # v8
           with:
              commit-message: "Markdown add spaces"
              labels: "Markdown"

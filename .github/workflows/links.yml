@@ -1,5 +1,9 @@
 name: 🔗 链接检查
 
+permissions:
+  contents: read   # 检出仓库
+  issues: write    # 创建链接检查报告 issue
+
 on:
   repository_dispatch:
   workflow_dispatch:
@@ -14,7 +18,7 @@ jobs:
 
       - name: Link Checker
         id: lychee
-        uses: lycheeverse/lychee-action@v2
+        uses: lycheeverse/lychee-action@e7477775783ea5526144ba13e8db5eec57747ce8 # v2
         with: 
           fail: true
           format: markdown
@@ -23,7 +27,7 @@ jobs:
 
       - name: Create Issue From File
         if: env.lychee_exit_code != 0
-        uses: peter-evans/create-issue-from-file@v6
+        uses: peter-evans/create-issue-from-file@fca9117c27cdc29c6c4db3b86c48e4115a786710 # v6
         with:
           title: Link Checker Report
           content-filepath: ./lychee/out.md

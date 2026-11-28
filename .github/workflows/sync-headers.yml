@@ -1,5 +1,8 @@
 name: 🔗 从 SUMMARY.md 更新一级标题
 
+permissions:
+  contents: write   # 提交并推送一级标题同步
+
 on:
   push:
   workflow_run:

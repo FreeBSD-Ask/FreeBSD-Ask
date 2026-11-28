@@ -1,5 +1,8 @@
 name: 🔗 更新谷歌分析
 
+permissions:
+  contents: write   # 提交并推送 README 统计数据
+
 on:
   schedule:
     - cron: '10 15 1 * *'  # 每月 1 日 15:10 运行（UTC 时间）

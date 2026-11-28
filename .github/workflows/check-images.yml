@@ -1,5 +1,9 @@
 name: "🔗 检查 Markdown 图片引用"
 
+permissions:
+  contents: read   # 检出仓库
+  issues: write    # 创建图片检查报告 issue
+
 on:
   push:
     paths:
@@ -33,7 +37,7 @@ jobs:
 
       - name: Create Issue
         if: steps.image-check.outputs.report_exists == '1'
-        uses: peter-evans/create-issue-from-file@v6
+        uses: peter-evans/create-issue-from-file@fca9117c27cdc29c6c4db3b86c48e4115a786710 # v6
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           title: "图片检查报告"
