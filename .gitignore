@@ -6,6 +6,11 @@
 
 archive_log*
 archive_cache.json
+
+### Mimosa 本地扫描状态
+
+*.mimosa*
+
 ### Linux ###
 *~
 
