@@ -71,6 +71,5 @@ watch(isDark, (dark) => {
 .medium-zoom-overlay,
 .medium-zoom-image--opened {
   z-index: 999;
-  scrollOffset: 9999;
 }
 </style>

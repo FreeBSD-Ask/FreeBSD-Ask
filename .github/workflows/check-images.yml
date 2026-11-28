@@ -25,7 +25,7 @@ jobs:
       - name: Run image check script
         id: image-check
         run: |
-          pip install regex
+          pip install --only-binary :all: regex==2026.11.25
           python .github/scripts/check_images.py
 
           # 判断报告是否存在且不为空

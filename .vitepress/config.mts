@@ -64,11 +64,11 @@ export default defineConfig({
                         );
                         if (textNode) {
                             const m =
-                                textNode.content.match(/^(\d+\.\d+)\s+(.*)$/);
+                                textNode.content.match(/^(\d+\.\d+)\s+/);
                             if (m) {
                                 // 包含数字前缀的 H1
                                 h1Prefix = m[1];
-                                textNode.content = `${h1Prefix} ${m[2]}`;
+                                textNode.content = `${h1Prefix} ${textNode.content.slice(m[0].length)}`;
                                 skipNumbering = false;
                                 counters.fill(0, 2); // 重置 H2~H6 计数器
                             } else {

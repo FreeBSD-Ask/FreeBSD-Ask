@@ -24,10 +24,10 @@ jobs:
             node-version: '24'
           
         - name: Install Node.js dependencies 
-          run: npm i -g md-padding@latest
+          run: npm i -g --ignore-scripts md-padding@1.10.0
         
         - name: Run md-padding lint
-          run: find "$(pwd)" -type f -name "*.md" | npx md-padding --ignore-words='-' ':' '>' '=' '<' -f --read-files -i
+          run: find "$(pwd)" -type f -name "*.md" | md-padding --ignore-words='-' ':' '>' '=' '<' -f --read-files -i
 
         - name: Markdown add spaces
           uses: peter-evans/create-pull-request@3ffccacd46053766916f087ce41d627c0b8cf2d1 # v8

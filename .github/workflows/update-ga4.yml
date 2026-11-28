@@ -24,7 +24,7 @@ jobs:
           python-version: '3.14'
 
       - name: Install dependencies
-        run: pip install google-analytics-data requests packaging
+        run: "pip install --only-binary :all: google-analytics-data==0.23.3 requests==2.34.2 packaging==26.4"
 
       - name: Update README with GA4 data
         env:
