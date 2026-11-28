@@ -304,7 +304,12 @@ def process_file(path):
         # 以文件描述符写入；POSIX 下 O_NOFOLLOW 拒绝末段符号链接
         flags = os.O_WRONLY | os.O_CREAT | os.O_TRUNC
         if hasattr(os, "O_NOFOLLOW"): flags |= os.O_NOFOLLOW
-        fd = os.open(write_path, flags)
+        try:
+            fd = os.open(write_path, flags)
+        except OSError:
+            # 打开失败（权限、符号链接竞态等）只跳过该文件，不终止整轮
+            with LIST_LOCK: PROCESSED_FILES += 1
+            return
         with os.fdopen(fd, "w", encoding="utf-8") as f: f.write(new_content)
         with LIST_LOCK:
             SESSION_UPDATED_FILES.append(os.path.basename(write_path))
