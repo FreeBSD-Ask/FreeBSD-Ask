@@ -12,7 +12,7 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
       - uses: DavidAnson/markdownlint-cli2-action@3ce8f712b5d8f31acd8e201be6d97e3d2bb23eb7 # v25.1.0
         with:
           config: '.github/.markdownlint.json'
