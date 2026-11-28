@@ -10,6 +10,11 @@ on:
   schedule:
     - cron: "00 18 15 * *"
 
+concurrency:
+  group: linkChecker
+  # 后到运行排队等待而非取消前者，串行化检查与建 issue，避免重叠运行各自新建报告
+  cancel-in-progress: false
+
 jobs:
   linkChecker:
     runs-on: ubuntu-latest
@@ -33,7 +38,8 @@ jobs:
         uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9
         with:
           script: |
-            const { data: issues } = await github.rest.issues.listForRepo({
+            // 用 paginate 取回所有分页，防止报告 issue 位于第一页之外而被漏查
+            const issues = await github.paginate(github.rest.issues.listForRepo, {
               owner: context.repo.owner,
               repo: context.repo.repo,
               state: 'open',

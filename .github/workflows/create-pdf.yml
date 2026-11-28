@@ -10,8 +10,15 @@ on:
     - cron: '30 15 * * 0'  # 每周日 UTC 时间 15:30 运行
   workflow_dispatch:       # 可手动触发
 
+concurrency:
+  group: create-pdf-publish
+  # 后到运行排队等待而非取消前者，串行化发布，避免重叠运行互相覆盖标签与 Release
+  cancel-in-progress: false
+
 jobs:
   build:
+    # 仅允许从默认分支发布，防止手动触发时把日期标签与 Release 改写为非默认分支的内容
+    if: github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
     runs-on: ubuntu-latest
 
     steps:
@@ -83,7 +90,31 @@ jobs:
         id: set_tag
         run: echo "RELEASE_TAG=$(date +'%Y.%m.%d')" >> $GITHUB_ENV
 
+      - name: 🔍 判断当日是否已发布
+        id: publish_state
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9
+        with:
+          script: |
+            const tag = process.env.RELEASE_TAG;
+            try {
+              await github.rest.repos.getReleaseByTag({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                tag
+              });
+              core.setOutput('skip', 'true');
+              core.info(`Release ${tag} 已存在，当日已发布，跳过发布流程`);
+            } catch (err) {
+              if (err.status === 404) {
+                core.setOutput('skip', 'false');
+                core.info(`Release ${tag} 不存在，继续发布流程`);
+              } else {
+                throw err;
+              }
+            }
+
       - name: 🔍 获取前一个标签 (优化版本)
+        if: steps.publish_state.outputs.skip != 'true'
         working-directory: FreeBSD-Ask
         run: |
           git fetch --tags --force
@@ -99,34 +130,32 @@ jobs:
           echo "PREVIOUS_TAG=$PREVIOUS_TAG" >> $GITHUB_ENV
 
       - name: 调试 - 检查提取到的标签值
+        if: steps.publish_state.outputs.skip != 'true'
         run: |
           echo "本次发布标签 (RELEASE_TAG): ${{ env.RELEASE_TAG }}"
           echo "上次发布标签 (PREVIOUS_TAG): ${{ env.PREVIOUS_TAG }}"
           echo "------------------------------------------------------"
 
       - name: 🏷️ 创建 Git 标签并推送
+        if: steps.publish_state.outputs.skip != 'true'
         working-directory: FreeBSD-Ask
         run: |
           timedatectl
           git config --global user.email "yklaxds@gmail.com"
           git config --global user.name "ykla"
-          # 同日重试时标签可能已存在（上次运行失败于发布阶段），
-          # 此时重用标签而非失败；标签指向与当前 HEAD 不一致时强制重置，保证发布内容与标签一致
+          # 此步骤仅在当日 Release 尚未发布时执行：标签已存在说明上次运行失败于发布阶段，
+          # 重置到当前 HEAD 使标签与本次构建内容一致；当日 Release 已发布的场景已被上面的跳过判断拦截，不会改写已发布版本
           if git rev-parse -q --verify "refs/tags/${{ env.RELEASE_TAG }}" >/dev/null; then
-            echo "标签 ${{ env.RELEASE_TAG }} 已存在，重用该标签"
-            if [ "$(git rev-list -1 "${{ env.RELEASE_TAG }}")" != "$(git rev-parse HEAD)" ]; then
-              echo "标签指向与当前 HEAD 不一致，强制重置到 HEAD"
-              git tag -f ${{ env.RELEASE_TAG }} HEAD
-              git push --force origin ${{ env.RELEASE_TAG }}
-            else
-              git push origin ${{ env.RELEASE_TAG }}
-            fi
+            echo "标签 ${{ env.RELEASE_TAG }} 已存在且当日 Release 未发布，强制重置到当前 HEAD"
+            git tag -f ${{ env.RELEASE_TAG }} HEAD
+            git push --force origin ${{ env.RELEASE_TAG }}
           else
             git tag ${{ env.RELEASE_TAG }}
             git push origin ${{ env.RELEASE_TAG }}
           fi
 
       - name: 📜 生成增量变更日志
+        if: steps.publish_state.outputs.skip != 'true'
         uses: janheinrichmerker/action-github-changelog-generator@e60b5a2bd9fcd88dadf6345ff8327863fb8b490f # v2.4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -136,6 +165,7 @@ jobs:
 
       - name: 📥 读取变更日志内容
         id: read_changelog
+        if: steps.publish_state.outputs.skip != 'true'
         run: |
           timedatectl
           CHANGES=$(cat CHANGELOG.md | sed 's/\"/\\"/g')
@@ -144,6 +174,7 @@ jobs:
           echo "EOF" >> $GITHUB_ENV
 
       - name: ✨ 创建 GitHub Release
+        if: steps.publish_state.outputs.skip != 'true'
         uses: ncipollo/release-action@339a81892b84b4eeb0f6e744e4574d79d0d9b8dd # v1.21.0
         id: create_release
         with:
@@ -154,10 +185,12 @@ jobs:
             pdf-generator/build/${{ env.RELEASE_TAG }}.epub
           token: ${{ secrets.GITHUB_TOKEN }}
           makeLatest: true
-          # 同日重试时 Release 可能已存在，更新它以完成发布；replacesArtifacts 默认为 true，附件自动替换
+          # 常规路径已由“判断当日是否已发布”保证 Release 不存在；此处允许更新作为兜底，
+          # 若 Release 被先行创建则更新而非失败；replacesArtifacts 默认为 true，附件自动替换
           allowUpdates: true
 
       - name: 📝 更新 Release 说明 (包含变更日志)
+        if: steps.publish_state.outputs.skip != 'true'
         uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
