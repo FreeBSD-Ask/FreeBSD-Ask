@@ -110,8 +110,21 @@ jobs:
           timedatectl
           git config --global user.email "yklaxds@gmail.com"
           git config --global user.name "ykla"
-          git tag ${{ env.RELEASE_TAG }}
-          git push origin ${{ env.RELEASE_TAG }}
+          # 同日重试时标签可能已存在（上次运行失败于发布阶段），
+          # 此时重用标签而非失败；标签指向与当前 HEAD 不一致时强制重置，保证发布内容与标签一致
+          if git rev-parse -q --verify "refs/tags/${{ env.RELEASE_TAG }}" >/dev/null; then
+            echo "标签 ${{ env.RELEASE_TAG }} 已存在，重用该标签"
+            if [ "$(git rev-list -1 "${{ env.RELEASE_TAG }}")" != "$(git rev-parse HEAD)" ]; then
+              echo "标签指向与当前 HEAD 不一致，强制重置到 HEAD"
+              git tag -f ${{ env.RELEASE_TAG }} HEAD
+              git push --force origin ${{ env.RELEASE_TAG }}
+            else
+              git push origin ${{ env.RELEASE_TAG }}
+            fi
+          else
+            git tag ${{ env.RELEASE_TAG }}
+            git push origin ${{ env.RELEASE_TAG }}
+          fi
 
       - name: 📜 生成增量变更日志
         uses: janheinrichmerker/action-github-changelog-generator@e60b5a2bd9fcd88dadf6345ff8327863fb8b490f # v2.4
@@ -141,6 +154,8 @@ jobs:
             pdf-generator/build/${{ env.RELEASE_TAG }}.epub
           token: ${{ secrets.GITHUB_TOKEN }}
           makeLatest: true
+          # 同日重试时 Release 可能已存在，更新它以完成发布；replacesArtifacts 默认为 true，附件自动替换
+          allowUpdates: true
 
       - name: 📝 更新 Release 说明 (包含变更日志)
         uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9

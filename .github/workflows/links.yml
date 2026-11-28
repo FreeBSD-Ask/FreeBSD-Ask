@@ -26,6 +26,23 @@ jobs:
           output: ./lychee/out.md
           args: --config ./.github/lychee.toml './**/*.md'
 
+      # 死链持续存在时，复用既有开放报告 issue 而非每次运行都新建，避免重复累积
+      - name: 查找现有报告 issue
+        id: find_issue
+        if: steps.lychee.outputs.exit_code != 0
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9
+        with:
+          script: |
+            const { data: issues } = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              labels: 'report, automated issue'
+            });
+            const existing = issues.find(issue => !issue.pull_request && issue.title === 'Link Checker Report');
+            core.setOutput('number', existing ? String(existing.number) : '');
+
+      # issue-number 为空时新建，非空时更新对应 issue
       - name: Create Issue From File
         if: steps.lychee.outputs.exit_code != 0
         uses: peter-evans/create-issue-from-file@fca9117c27cdc29c6c4db3b86c48e4115a786710 # v6
@@ -33,3 +50,4 @@ jobs:
           title: Link Checker Report
           content-filepath: ./lychee/out.md
           labels: report, automated issue
+          issue-number: ${{ steps.find_issue.outputs.number }}
