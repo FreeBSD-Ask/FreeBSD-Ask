@@ -183,6 +183,10 @@ def is_archive_result(service_type, url):
         return re.search(r"\d{4}-\d{4}", parsed.path) is not None
     return False
 
+def is_archive_result_any(url):
+    """不区分服务类型地校验缓存地址，兼容旧缓存与手工修改过的缓存条目。"""
+    return any(is_archive_result(t, url) for t in set(ARCHIVE_RESULT_HOSTS.values()))
+
 def load_cache():
     with CACHE_LOCK:
         if os.path.exists(CACHE_FILE):
@@ -232,18 +236,20 @@ def process_url_task(url):
     tid = threading.get_ident() % 1000
     with TASK_LOCK: ACTIVE_TASKS[tid] = {"url": url, "start_time": time.time(), "service": "Wait"}
     try:
-        h = hashlib.md5(url.encode()).hexdigest()
+        h = hashlib.sha256(url.encode()).hexdigest()
         cache = load_cache()
-        if h in cache and cache[h].get("archive_url"):
-            res = cache[h]["archive_url"]
-            with LIST_LOCK: SESSION_SUCCESS.append((url, res))
-            return res
+        cached = cache.get(h)
+        cached_url = cached.get("archive_url") if isinstance(cached, dict) else None
+        # 缓存可能来自旧版本或被人工修改，只有通过地址校验才可回写正文
+        if cached_url and is_archive_result_any(cached_url):
+            with LIST_LOCK: SESSION_SUCCESS.append((url, cached_url))
+            return cached_url
         services = ARCHIVE_SERVICES[:]
         random.shuffle(services)
         errors = []
         for s in services:
             res = request_archive(s, url, tid)
-            if isinstance(res, str) and res.startswith("http"):
+            if isinstance(res, str) and res.startswith("http") and is_archive_result(s["type"], res):
                 save_cache_item(h, {"archive_url": res, "service": s["name"]})
                 with LIST_LOCK: SESSION_SUCCESS.append((url, res))
                 return res
