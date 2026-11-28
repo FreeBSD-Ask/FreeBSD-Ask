@@ -9,3 +9,6 @@ updates:
     directory: "/" # Location of package manifests
     schedule:
       interval: "daily"
+    # 新版本发布后先等待 7 天，降低被投毒版本立即进入工作流的风险
+    cooldown:
+      default-days: 7
