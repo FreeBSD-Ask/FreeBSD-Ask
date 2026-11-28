@@ -2,7 +2,7 @@
 
 FreeBSD 是一款直接衍生自 BSD UNIX 的开源操作系统。
 
-自 2004 年 9 月后，中文世界就再也没有一本 FreeBSD 的入门和基础教程了（此前最后一本为冯宝坤，陈子鸿. FreeBSD 完全攻略[M]. 北京：中国物资出版社；北京：北京希望电子出版社，2004. ISBN: 978-7-5047-2160-0；此前尚有 McKusick M. K, Bostic K, Karels M. J, Quarterman J. S. 4.4BSD 操作系统设计与实现（中文版）[M]. 李善平，等，译. 北京：中国电力出版社，2003.）。知网上的硕博论文（需要说明的是，部分高校如清华大学、复旦大学等部分硕博论文未上传知网，但仍能说明一种趋势），有关 FreeBSD 的论文仅有 10 篇，均为硕士论文；而 Linux 则有 2 万余篇，其中百余篇为博士论文。在国内招聘网站上几乎找不到任何与 FreeBSD 相关的工作岗位，学校也不会开设相关课程。看起来市场完全不需要了，是这样吗？
+自 2004 年 9 月后，中文世界就再也没有一本 FreeBSD 的入门和基础教程了（此前最后一本为冯宝坤，陈子鸿。FreeBSD 完全攻略[M]. 北京：中国物资出版社；北京：北京希望电子出版社，2004. ISBN: 978-7-5047-2160-0；此前尚有 McKusick M. K, Bostic K, Karels M. J, Quarterman J. S. 4.4BSD 操作系统设计与实现（中文版）[M]. 李善平，等，译。北京：中国电力出版社，2003.）。知网上的硕博论文（需要说明的是，部分高校如清华大学、复旦大学等部分硕博论文未上传知网，但仍能说明一种趋势），有关 FreeBSD 的论文仅有 10 篇，均为硕士论文；而 Linux 则有 2 万余篇，其中百余篇为博士论文。在国内招聘网站上几乎找不到任何与 FreeBSD 相关的工作岗位，学校也不会开设相关课程。看起来市场完全不需要了，是这样吗？
 
 当初那些推广宣传 FreeBSD 的人，如今在哪里？是否还会偶尔访问一下 <https://freebsd.org> 呢？水木年华的《一生有你》中唱道，“多少人曾爱慕你年轻时的容颜/可知谁愿承受岁月无情的变迁/多少人曾在你生命中来了又还/可知一生有你我都陪在你身边”。只有与你同行的才是你的朋友，无论在先还是在后，都会被人遗忘。
 
@@ -55,8 +55,8 @@ FreeBSD 是一款直接衍生自 BSD UNIX 的开源操作系统。
 ## 参考文献
 
 - CIA. The World Factbook: Area Rankings[EB/OL]. (2023-07-06)[2026-04-17]. <https://web.archive.org/web/20210204222711/https://www.cia.gov/the-world-factbook/field/area/country-comparison>. 原 CIA World Factbook 面积排名页面已下线，此为 Internet Archive 存档版本。俄罗斯面积约 17,098,242 km²。格陵兰面积约 2,166,086 km²，非洲面积约 30,370,000 km²。二者面积之和约 19,264,328 km²，不及非洲面积（约 30,370,000 km²）的三分之二（约 20,246,667 km²）。
-- 龙七(龙榆生), 词; 黄自, 曲. 玫瑰三愿[Z]. 1932. 歌词全文为“玫瑰花/玫瑰花/烂开在碧栏杆下/玫瑰花/玫瑰花/烂开在碧栏杆下/我愿那妒我的无情风雨莫吹打/我愿那爱我的多情游客莫攀摘/我愿那红颜常好不凋谢/好教我留住芳华”。详见龙榆生先生新体歌曲作品选 <https://longyusheng.org/xintigequ/lys-meiguisanyuan.html>。
-- Apple Inc. BSD Overview[EB/OL]. (2013-08-08)[2026-04-17]. <https://developer.apple.com/library/archive/documentation/Darwin/Conceptual/KernelProgramming/BSD/BSD.html>. 苹果官方开发者文档指出: “The BSD portion of the OS X kernel is derived primarily from FreeBSD”，但 XNU 内核本身是 Mach 与 BSD 的混合体，源自 NeXTSTEP，并非直接派生自 FreeBSD 内核。
+- 龙七 (龙榆生), 词; 黄自，曲。玫瑰三愿[Z]. 1932. 歌词全文为“玫瑰花/玫瑰花/烂开在碧栏杆下/玫瑰花/玫瑰花/烂开在碧栏杆下/我愿那妒我的无情风雨莫吹打/我愿那爱我的多情游客莫攀摘/我愿那红颜常好不凋谢/好教我留住芳华”。详见龙榆生先生新体歌曲作品选 <https://longyusheng.org/xintigequ/lys-meiguisanyuan.html>。
+- Apple Inc. BSD Overview[EB/OL]. (2013-08-08)[2026-04-17]. <https://developer.apple.com/library/archive/documentation/Darwin/Conceptual/KernelProgramming/BSD/BSD.html>. 苹果官方开发者文档指出：“The BSD portion of the OS X kernel is derived primarily from FreeBSD”，但 XNU 内核本身是 Mach 与 BSD 的混合体，源自 NeXTSTEP，并非直接派生自 FreeBSD 内核。
 - FreeBSD Project. FreeBSD 1.0 RELEASE Announcement[EB/OL]. (1993-11-01)[2026-04-17]. <https://www.freebsd.org/releases/1.0/announce/>. FreeBSD 项目起源于 1993 年初，首个正式版本 FreeBSD 1.0 于 1993 年 11 月 1 日发布。
 - Phoronix. Intel Ivy Bridge Borked On FreeBSD[EB/OL]. (2012-06-22)[2026-04-17]. <https://www.phoronix.com/news/MTEyNDg>. 该文测试了 Intel Ivy Bridge HD 4000 显卡在 FreeBSD/PC-BSD 上的图形驱动兼容性问题。
 - procps-ng Project. procps Package Documentation[EB/OL]. [2026-04-17]. <https://gitlab.com/procps-ng/procps>. procps 包中 free 命令通过读取 Linux procfs (**/proc/meminfo**) 获取内存信息，而 FreeBSD 已弃用 procfs，故该命令无法使用。

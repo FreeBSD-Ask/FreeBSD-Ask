@@ -156,7 +156,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 本软件由版权持有者和贡献者按“原样”提供，不作任何明示或暗示的保证，包括但不限于对适销性和特定用途适用性的暗示保证。在任何情况下，版权持有者或贡献者均不对因使用本软件而引起的任何直接、间接、附带、特殊、惩罚性或后果性损害（包括但不限于采购替代商品或服务、使用、数据或利润的损失，或业务中断）承担责任，无论责任主张基于合同、严格责任或侵权行为（包括过失或其他），即使已被告知可能发生此类损害。
 ```
 
-## BSD 四条款许可证（BSD 4-Clause “Original” or “Old” License，BSD-4-Clause）
+## BSD 四条款许可证（BSD 4-Clause“Original”or“Old”License，BSD-4-Clause）
 
 BSD 四条款许可证是 BSD 许可证的原始版本，具有较多限制条件。BSD 四条款许可证即原始的 BSD 许可证，目前未获 OSI 认可。此许可证带有广告条款，要求在所有提及本软件功能或用途的广告材料中声明使用了原作者的产品（参见下文第 3 条）。
 

@@ -55,7 +55,7 @@ Linux 是 Linux 内核与 GNU 软件的组合体，在发展过程中不断融�
 - Linux Kernel Documentation. Linux kernel licensing rules — The Linux Kernel documentation[EB/OL]. [2026-03-26]. <https://www.kernel.org/doc/html/latest/process/license-rules.html>.
 - Stallman R. The GNU Manifesto[EB/OL]. [2026-03-26]. <https://www.gnu.org/gnu/manifesto.html>. GNU 宣言。
 - Linux-libre Project. Linux-libre[EB/OL]. [2026-03-26]. <https://www.fsfla.org/ikiwiki/selibre/linux-libre/>. 一款由拉丁美洲自由软件基金会（FSFLA）维护的去除所有二进制固件的 Linux 内核变体
-- 海德格尔. 存在与时间[M]. 陈嘉映, 王庆节, 译. 修订第 2 版. 北京: 商务印书馆, 2015: 28. ISBN：978-7-100-11067-9.
+- 海德格尔。存在与时间[M]. 陈嘉映，王庆节，译。修订第 2 版。北京：商务印书馆，2015: 28. ISBN：978-7-100-11067-9.
 
 ## 自由软件运动与开源运动的张力
 
@@ -107,8 +107,8 @@ Linux 是 Linux 内核与 GNU 软件的组合体，在发展过程中不断融�
 
 这两个词语含义和用法均不相同。
 
-- “盈利”：名词，扣除成本后获得的利润，也作赢利。引自中国社会科学院语言研究所词典编辑室，编. 现代汉语词典[M]. 第 7 版. 北京：商务印书馆，2016：1572. ISBN: 978-7-100-12450-8.
-- “营利”：动词，谋求利润。引自中国社会科学院语言研究所词典编辑室，编. 现代汉语词典[M]. 第 7 版. 北京：商务印书馆，2016：1572. ISBN: 978-7-100-12450-8.
+- “盈利”：名词，扣除成本后获得的利润，也作赢利。引自中国社会科学院语言研究所词典编辑室，编。现代汉语词典[M]. 第 7 版。北京：商务印书馆，2016:1572. ISBN: 978-7-100-12450-8.
+- “营利”：动词，谋求利润。引自中国社会科学院语言研究所词典编辑室，编。现代汉语词典[M]. 第 7 版。北京：商务印书馆，2016:1572. ISBN: 978-7-100-12450-8.
 
 ### 自由软件定义：四项基本自由
 
@@ -149,9 +149,9 @@ OSI 基于开源定义（OSD）所认证的开源许可证，已成为全球公�
 
 ### 关于各种软件的定义
 
-根据自由软件基金会. 自由与非自由软件的分类[EB/OL]. (2025-12-28)[2026-03-26]. <https://www.gnu.org/philosophy/categories.zh-cn.html>. 定义如下：
+根据自由软件基金会。自由与非自由软件的分类[EB/OL]. (2025-12-28)[2026-03-26]. <https://www.gnu.org/philosophy/categories.zh-cn.html>. 定义如下：
 
-- 自由软件：符合上述四项基本自由定义的软件即称为自由软件。推论：商业软件可以是自由软件，商业不等于非自由。引证 1：自由软件基金会. 什么是自由软件？[EB/OL]. [2026-03-26]. <https://www.gnu.org/philosophy/free-sw.zh-cn.html>. 引证 2：Free Software Foundation. Words to Avoid (or Use with Care) Because They Are Loaded or Confusing[EB/OL]. [2026-03-26]. <https://www.gnu.org/philosophy/words-to-avoid.html>.“Commercial”部分。
+- 自由软件：符合上述四项基本自由定义的软件即称为自由软件。推论：商业软件可以是自由软件，商业不等于非自由。引证 1：自由软件基金会。什么是自由软件？[EB/OL]. [2026-03-26]. <https://www.gnu.org/philosophy/free-sw.zh-cn.html>. 引证 2：Free Software Foundation. Words to Avoid (or Use with Care) Because They Are Loaded or Confusing[EB/OL]. [2026-03-26]. <https://www.gnu.org/philosophy/words-to-avoid.html>.“Commercial”部分。
 - 开源软件：使用上述开源协议授权的软件。所有自由软件都是开源软件，但并非所有开源软件都是自由软件。二者的定义与理念均存在差异。自由软件是开源软件的充分不必要条件。
 
 ![自由软件与开源软件的包含关系](../.gitbook/assets/mermaid-freesoft.png)
@@ -194,11 +194,11 @@ OSI 基于开源定义（OSD）所认证的开源许可证，已成为全球公�
 
 ### 参考文献
 
-- 自由软件基金会. 自由与非自由软件的分类[EB/OL]. [2026-03-26]. <https://www.gnu.org/philosophy/categories.zh-cn.html>.
+- 自由软件基金会。自由与非自由软件的分类[EB/OL]. [2026-03-26]. <https://www.gnu.org/philosophy/categories.zh-cn.html>.
 - Open Source Initiative. Licenses - Open Source Initiative[EB/OL]. [2026-03-26]. <https://opensource.org/licenses>.
 - Open Source Initiative. International Authority & Recognition - Open Source Initiative[EB/OL]. (2025-06-03)[2026-03-26]. <https://opensource.org/about/authority>.
 - Debian Project. Debian Social Contract[EB/OL]. (2022-10-01)[2026-03-26]. <https://www.debian.org/social_contract#guidelines>. DFSG。
-- 自由软件基金会. 什么是自由软件？[EB/OL]. [2026-03-26]. <https://www.gnu.org/philosophy/free-sw.zh-cn.html>. 引用自由软件基金会相关内容来定义自由软件的自由。
+- 自由软件基金会。什么是自由软件？[EB/OL]. [2026-03-26]. <https://www.gnu.org/philosophy/free-sw.zh-cn.html>. 引用自由软件基金会相关内容来定义自由软件的自由。
 
 ## 课后习题
 

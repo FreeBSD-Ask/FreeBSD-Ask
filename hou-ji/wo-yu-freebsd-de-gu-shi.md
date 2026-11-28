@@ -238,12 +238,12 @@ FreeBSD 就像集市，而 Linux 就像大教堂。集市，会者定离，大�
 - FreeBSD Project. FreeBSD Security Advisory FreeBSD-SA-20:16.cryptodev[EB/OL]. (2020-05-12)[2026-04-18]. <https://bsdsec.net/articles/freebsd-announce-freebsd-security-advisory-freebsd-sa-20-16-cryptodev>. FreeBSD 安全公告命名格式为 FreeBSD-SA-XX:YY，其中包含英文冒号，导致含该格式文件名的文档无法在 Windows 下通过 Git 拉取。
 - Gade C B N. The historical development of the written discourses on Ubuntu[J]. South African Journal of Philosophy, 2011, 30(3): 303-330. Ubuntu 源自恩古尼语（Nguni）语言群中的祖鲁语和科萨语，是一种强调人性、社会团结与慷慨精神的非洲哲学。
 - FreeBSD Foundation. FreeBSD and Google Summer of Code 2025[EB/OL]. (2025-10)[2026-04-18]. <https://freebsdfoundation.org/our-work/journal/browser-based-edition/freebsd-15-0/freebsd-and-google-summer-of-code-2025/>. 历年 GSoC 项目完成率较高（2024 年 9/11 完成，2025 年 12/12 全部完成），但合并入主线比例较低。
-- 邱锋, 常孙昊田. 论衡[M]. 北京: 中华书局, 2024. 王充提出“性自有善恶，命自有吉凶”，认为德行与福报之间不存在必然因果关系，即“德福不一致”。
-- Raymond E S. 大教堂与集市[M]. 卫剑钒, 译. 北京: 机械工业出版社, 2014: 1-194.（原作名: The Cathedral & the Bazaar）Raymond 以 Linux 为“集市”模式（开放、去中心化），以 GNU Emacs、GCC 等封闭开发模式的开源软件为“大教堂”模式（封闭、集中化），与本文作者就社区人员流动性所作的比喻方向相反。
+- 邱锋，常孙昊田。论衡[M]. 北京：中华书局，2024. 王充提出“性自有善恶，命自有吉凶”，认为德行与福报之间不存在必然因果关系，即“德福不一致”。
+- Raymond E S. 大教堂与集市[M]. 卫剑钒，译。北京：机械工业出版社，2014: 1-194.（原作名：The Cathedral & the Bazaar）Raymond 以 Linux 为“集市”模式（开放、去中心化），以 GNU Emacs、GCC 等封闭开发模式的开源软件为“大教堂”模式（封闭、集中化），与本文作者就社区人员流动性所作的比喻方向相反。
 - FreeBSD Foundation. The Road to Better Wi-Fi on FreeBSD[EB/OL]. (2025-06-05)[2026-04-18]. <https://freebsdfoundation.org/blog/the-road-to-better-wi-fi-on-freebsd/>. FreeBSD 基金会自 2023 年起资助多名无线网络开发者，包括 Björn Zeeb、Cheng Cui、Tom Jones 等。
 - FreeBSD Project. About the FreeBSD Project[EB/OL]. [2026-04-17]. <https://docs.freebsd.org/en/books/handbook/introduction/>. FreeBSD 项目起源于 1993 年初，首个正式版本于 1993 年 11 月 1 日发布。
 - Canonical. Canonical and Chinese standards body announce Ubuntu collaboration[EB/OL]. (2013-03-21)[2026-04-17]. <https://canonical.com/blog/canonical-and-chinese-standards-body-announce-ubuntu-collaboration>. CCN 联合实验室由 CSIP、NUDT 和 Canonical 三方组建。
-- 优麒麟团队. Ubuntu Kylin 新闻了解优麒麟最新资讯，关注社区和产品动态[EB/OL]. (2014-12-26)[2026-04-18]. <https://ubuntukylin.com/news/397-cn.html>. CCN 开源软件创新联合实验室的正式名称。
+- 优麒麟团队。Ubuntu Kylin 新闻了解优麒麟最新资讯，关注社区和产品动态[EB/OL]. (2014-12-26)[2026-04-18]. <https://ubuntukylin.com/news/397-cn.html>. CCN 开源软件创新联合实验室的正式名称。
 - The New York Times. Dennis Ritchie, C Programming Language Creator, Dies at 70[EB/OL]. (2011-10-13)[2026-04-17]. <https://web.archive.org/web/20260206064048/https://www.nytimes.com/2011/10/14/technology/dennis-ritchie-programming-trailblazer-dies-at-70.html>. 里奇于 2011 年 10 月 12 日逝世，乔布斯于同年 10 月 5 日逝世。
-- 鸟哥. 鸟哥的 Linux 私房菜：基础学习篇[M]. 第 4 版. 北京：人民邮电出版社，2018. ISBN: 978-7-115-47258-8. 该书基于 CentOS 7.x 编写，一版一印封面标注“基于 Linux 7.x”。
+- 鸟哥。鸟哥的 Linux 私房菜：基础学习篇[M]. 第 4 版。北京：人民邮电出版社，2018. ISBN: 978-7-115-47258-8. 该书基于 CentOS 7.x 编写，一版一印封面标注“基于 Linux 7.x”。
 - InfoQ. Allegations of a Backdoor in OpenBSD Are Not Confirmed[EB/OL]. (2010-12-17)[2026-04-18]. <https://www.infoq.com/news/2010/12/OpenBSD-Backdoor/>. 前 NETSEC CTO Gregory Perry 于 2010 年指控 FBI 曾资助开发者在 OpenBSD IPSec 协议栈中植入后门，但代码审计未予确认。

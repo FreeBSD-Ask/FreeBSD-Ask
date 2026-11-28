@@ -10,7 +10,7 @@ VMware Workstation Pro 是 Type-2 虚拟机监视器（Hypervisor），运行在
 
 以下视频教程演示了在 Windows 11 上安装 VMware Workstation Pro 17 的过程：
 
-FreeBSD 中文社区. 001-Windows 11 安装 VMware 17[EB/OL]. [2026-04-04]. <https://www.bilibili.com/video/BV1Qji2YLEgS>.
+FreeBSD 中文社区。001-Windows 11 安装 VMware 17[EB/OL]. [2026-04-04]. <https://www.bilibili.com/video/BV1Qji2YLEgS>.
 
 ## 镜像下载
 

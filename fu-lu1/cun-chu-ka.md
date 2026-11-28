@@ -126,12 +126,12 @@ microSD 通常也称 TF 卡（TF 为 SanDisk 最初的商品名 TransFlash，后
 - Kingston Technology. SD 卡和 microSD 卡速度等级指南[EB/OL]. [2026-03-25]. <https://www.kingston.com/cn/blog/personal-storage/memory-card-speed-classes>. 解读速度等级标识的含义与选购参考。
 - Kingston Technology. 了解 SD 卡和 microSD 卡的命名惯例和标签[EB/OL]. [2026-03-25]. <https://www.kingston.com/cn/blog/personal-storage/microsd-sd-memory-card-naming-conventions>. 说明存储卡产品标签中各字段所代表的性能参数。
 - odinkuo. 電腦概論中的考古題，關於光碟機的倍數是指什麼[EB/OL]. [2026-03-25]. <https://www.mobile01.com/topicdetail.php?f=300&t=2126605&p=3>. 解释光驱倍速概念及其与原始 CD 传输速率的换算关系。
-- RC丸钢. 移速（MOVE SPEED）64 GB TF（MicroSD）存储卡测试[EB/OL]. [2026-03-25]. <https://www.bilibili.com/read/mobile?id=21681916>. 对移速品牌 TF 卡的实际读写速度测试与评价。
+- RC 丸钢。移速（MOVE SPEED）64 GB TF（MicroSD）存储卡测试[EB/OL]. [2026-03-25]. <https://www.bilibili.com/read/mobile?id=21681916>. 对移速品牌 TF 卡的实际读写速度测试与评价。
 - SilentNocturne. 移速这个卡虚标了，速度只有标注的二分之一[EB/OL]. [2026-03-25]. <https://post.smzdm.com/talk/p/az6o8zkr/>. 指出移速存储卡实测速度与标称值存在较大差距。
-- 远航的加菲猫. Mvespeed 移速 400G 内存卡简单测评[EB/OL]. [2026-03-25]. <https://post.smzdm.com/p/arq759g7/>. 对大容量移速存储卡的容量与性能实测。
-- 尼奥叔叔. 移速 TF 卡翻不翻车？看来没翻（附游戏测试）[EB/OL]. [2026-03-25]. <https://post.smzdm.com/p/awzqn9z4/>. 从游戏加载角度验证移速 TF 卡的实际使用体验。
-- Western Digital. 闪迪至尊超极速移动 ™ microSDXC™ UHS-I 存储卡: 128GB[EB/OL]. [2026-03-25]. <https://www.westerndigital.com/zh-cn/products/memory-cards/sandisk-extreme-pro-uhs-i-microsd?sku=SDSQXCY-128G-ZN6MA>. 参见注释 8：“采用专利技术”。
-- 滕飞et. 存储卡也超频？实测结果非常意外[EB/OL]. [2026-03-25]. <https://mp.weixin.qq.com/s/CMioVrUx0YJbF_v7zvQMRA>. 实测发现部分存储卡在特定条件下可超出标称速度运行。
+- 远航的加菲猫。Mvespeed 移速 400G 内存卡简单测评[EB/OL]. [2026-03-25]. <https://post.smzdm.com/p/arq759g7/>. 对大容量移速存储卡的容量与性能实测。
+- 尼奥叔叔。移速 TF 卡翻不翻车？看来没翻（附游戏测试）[EB/OL]. [2026-03-25]. <https://post.smzdm.com/p/awzqn9z4/>. 从游戏加载角度验证移速 TF 卡的实际使用体验。
+- Western Digital. 闪迪至尊超极速移动 ™ microSDXC™ UHS-I 存储卡：128GB[EB/OL]. [2026-03-25]. <https://www.westerndigital.com/zh-cn/products/memory-cards/sandisk-extreme-pro-uhs-i-microsd?sku=SDSQXCY-128G-ZN6MA>. 参见注释 8：“采用专利技术”。
+- 滕飞 et. 存储卡也超频？实测结果非常意外[EB/OL]. [2026-03-25]. <https://mp.weixin.qq.com/s/CMioVrUx0YJbF_v7zvQMRA>. 实测发现部分存储卡在特定条件下可超出标称速度运行。
 - Samsung. BAR 升级版 + USB3.1 闪存盘[EB/OL]. [2026-03-25]. <https://www.samsung.com.cn/memory-storage/usb-flash-drive/usb-3-1-flash-drive-bar-plus-64gb-titanium-gray-muf-64be4-cn/>. 三星 USB 3.1 闪存盘产品规格与性能参数。
 - 参见 SD Association. Capacity SD/SDHC/SDXC/SDUC[EB/OL]. [2026-04-16]. <https://www.sdcard.org/developers/sd-standard-overview/capacity-sd-sdhc-sdxc-sduc/>. 该页面定义 SD/SDHC/SDXC/SDUC 容量标准。
 - Lexar. Lexar Professional 667x microSDXC UHS-I 产品规格[EB/OL]. [2026-04-16]. <https://resources.lexar.com/download/236/667x-microsdxc/1963/lexar-productsheet-pro-667x-microsd-en-201911.pdf>. 该文档为雷克沙 667x microSD 卡产品规格表。雷克沙官方 667x 存储卡标称读取速度为 100 MB/s。

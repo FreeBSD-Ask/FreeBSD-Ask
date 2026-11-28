@@ -8,7 +8,7 @@
 
 图片来源 [FreeBSD 基金会宣传图](https://i.imgur.com/qW0IePB.png)。
 
-- 华纳兄弟. 黑客帝国[EB/OL]. [2026-03-26]. <https://movie.douban.com/subject/1291843/>. 黑客帝国的特效正是在一组 FreeBSD 集群上制作的。另见 Urban M, Tiemann B. FreeBSD 技术内幕[M]. 智慧东方工作室，译. 北京：机械工业出版社，2002：2. ISBN: 978-7-111-10201-4、FreeBSD Project. FreeBSD Press Release: April 22, 1999[EB/OL]. (1999-04-22)[2026-03-26]. <https://www.freebsd.org/press/press-rel-1/>.
+- 华纳兄弟。黑客帝国[EB/OL]. [2026-03-26]. <https://movie.douban.com/subject/1291843/>. 黑客帝国的特效正是在一组 FreeBSD 集群上制作的。另见 Urban M, Tiemann B. FreeBSD 技术内幕[M]. 智慧东方工作室，译。北京：机械工业出版社，2002:2. ISBN: 978-7-111-10201-4、FreeBSD Project. FreeBSD Press Release: April 22, 1999[EB/OL]. (1999-04-22)[2026-03-26]. <https://www.freebsd.org/press/press-rel-1/>.
 - The New Stack. Apple’s Open Source Roots: The BSD Heritage Behind macOS and iOS[EB/OL]. [2026-03-26]. <https://thenewstack.io/apples-open-source-roots-the-bsd-heritage-behind-macos-and-ios/>. Apple 的操作系统如 macOS、iOS 等大量复用了 BSD（不限于 FreeBSD）的技术栈。BSD 堪称 macOS 的开源基石。
 - Sony. FreeBSD Kernel[EB/OL]. [2026-03-26]. <https://www.playstation.com/en-us/oss/ps4/freebsd-kernel/>. 索尼（Sony）的游戏机 PlayStation 4（PS4）和 PlayStation 5（PS5）使用的操作系统基于 FreeBSD。PlayStation 3（PS3）的 CellOS 和 PlayStation Vita（PSV）的操作系统也以 FreeBSD 和 NetBSD 为基础构建。
 - FreeBSD Foundation. Netflix Case Study[EB/OL]. [2026-03-26]. <https://freebsdfoundation.org/netflix-case-study/>. 奈飞（Netflix）几乎所有网络活动（内容缓存/CDN）均基于 FreeBSD 设备运行。
@@ -93,7 +93,7 @@ FreeBSD 文件系统层次结构
 - Linux 二进制兼容层可运行 Linux 软件，系统调用密集型工作负载下存在少量性能开销，计算密集型任务则接近原生性能。
 - FreeBSD 的驱动以内核模块形式存在，可动态加载和卸载，便于按需管理硬件。
 - FreeBSD 秉持人人自由开发的理念，可以直接在 GitHub 上[提交代码](https://github.com/freebsd/freebsd-src/pulls)，或者注册账号在 <https://reviews.freebsd.org/> 提交大规模变更。
-- FreeBSD 的代码风格是 BSD KNF（Kernel Normal Form），基于 CSRG 的 KNF 规范，其大括号布局是 K&R 风格的一种变体（函数左大括号独占一行，控制语句左大括号与语句同行），与 Kernighan & Ritchie 经典著作《The C Programming Language》（中译本：Kernighan B W, Ritchie D M. C 程序设计语言[M]. 徐宝文，李志，译. 第 2 版. 北京：机械工业出版社，2019. ISBN: 978-7-111-61794-5.）中使用的 K&R 风格一致。
+- FreeBSD 的代码风格是 BSD KNF（Kernel Normal Form），基于 CSRG 的 KNF 规范，其大括号布局是 K&R 风格的一种变体（函数左大括号独占一行，控制语句左大括号与语句同行），与 Kernighan & Ritchie 经典著作《The C Programming Language》（中译本：Kernighan B W, Ritchie D M. C 程序设计语言[M]. 徐宝文，李志，译。第 2 版。北京：机械工业出版社，2019. ISBN: 978-7-111-61794-5.）中使用的 K&R 风格一致。
 
 #### 参考文献
 
@@ -141,7 +141,7 @@ GNOME、Xorg（X11）、D-Bus、systemd、PulseAudio、Wayland、PipeWire 等主
 
 ##### 参考文献
 
-- 王波. FreeBSD 在中国的未来[M]//王波. FreeBSD 使用大全. 第 2 版. 北京: 机械工业出版社, 2002: 前言. ISBN: 978-7-111-10286-1. 探讨了 FreeBSD 在中国的发展前景与应用前景。
+- 王波。FreeBSD 在中国的未来[M]//王波。FreeBSD 使用大全。第 2 版。北京：机械工业出版社，2002: 前言。ISBN: 978-7-111-10286-1. 探讨了 FreeBSD 在中国的发展前景与应用前景。
 
 ## FreeBSD 当前的技术局限性
 
