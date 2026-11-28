@@ -243,3 +243,4 @@ $RECYCLE.BIN/
 /script
 /.workbuddy-ai
 *.mimosa*
+/.github/scripts/__pycache__
