@@ -40,15 +40,46 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
 
+      # LGTM_INDEX_INCLUDE 会被多个语言的提取器读取，故仅为 JavaScript/TypeScript 单独定义步骤，
+      # 避免空值对其他语言（如 Python）造成 include 列表为空的副作用
       - name: Initialize CodeQL
+        if: matrix.language != 'javascript-typescript'
         uses: github/codeql-action/init@915412ff23e8b7659517e607487dbeae018f2934 # v4.39.5
         with:
           languages: ${{ matrix.language }}
           build-mode: none
-          queries: security-extended
-          threat-model: remote_and_local
+          # threat-model 不是 init 的输入参数，须经 config 传入（代码扫描默认即 remote_and_local，此处显式声明）；
+          # 查询套件也写入 config——内联 config 优先于 queries 输入，单独传 queries 会被忽略
+          config: |
+            threat-model: remote_and_local
+            queries:
+              - uses: security-extended
+
+      - name: Initialize CodeQL (JavaScript/TypeScript)
+        if: matrix.language == 'javascript-typescript'
+        uses: github/codeql-action/init@915412ff23e8b7659517e607487dbeae018f2934 # v4.39.5
+        env:
+          # JS 提取器默认跳过隐藏目录（仅 .github 例外），将 .vitepress 设为提取根以纳入 JS/TS 源码；
+          # 提取根本身不受隐藏目录规则限制
+          LGTM_INDEX_INCLUDE: .vitepress
+        with:
+          languages: ${{ matrix.language }}
+          build-mode: none
+          config: |
+            threat-model: remote_and_local
+            queries:
+              - uses: security-extended
 
       - name: Perform CodeQL Analysis
+        if: matrix.language != 'javascript-typescript'
         uses: github/codeql-action/analyze@915412ff23e8b7659517e607487dbeae018f2934 # v4.39.5
+        with:
+          category: "/language:${{ matrix.language }}"
+
+      - name: Perform CodeQL Analysis (JavaScript/TypeScript)
+        if: matrix.language == 'javascript-typescript'
+        uses: github/codeql-action/analyze@915412ff23e8b7659517e607487dbeae018f2934 # v4.39.5
+        env:
+          LGTM_INDEX_INCLUDE: .vitepress
         with:
           category: "/language:${{ matrix.language }}"
