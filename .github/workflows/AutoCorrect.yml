@@ -24,7 +24,7 @@ jobs:
             node-version: '24'
           
         - name: Install nodejs dependencies
-          run: yarn add autocorrect-node
+          run: yarn add --ignore-scripts autocorrect-node@2.14.0
         
         - name: Run autocorrect lint
           run: yarn autocorrect --config .github/.autocorrectrc --lint --no-diff-bg-color **/*.md  || true 
