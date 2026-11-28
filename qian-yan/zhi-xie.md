@@ -36,7 +36,7 @@ Ubuntu 吧前吧主 Simple 曾建议修改项目的章节文件名与许可协�
 - [algotao](https://github.com/algotao)
 - [Alex6357](https://github.com/Alex6357)
 - April Simone🍥
-- [VZstless](https://github.com/atlarator)
+- [VZstless](https://github.com/VZstless)
 - [bduath](https://github.com/bduath)
 - [blu10ph](https://github.com/blu10ph)
 - bsdwiki
@@ -79,7 +79,7 @@ Ubuntu 吧前吧主 Simple 曾建议修改项目的章节文件名与许可协�
 - 清热解毒口服液
 - [Rintim](https://github.com/Rintim)
 - [ruur](https://github.com/ruur)
-- [Sayunosyjou](https://github.com/Sayunosyjou)
+- Sayunosyjou
 - 施主
 - [Suyun114](https://github.com/Suyun114)
 - [tergel93](https://github.com/tergel93)

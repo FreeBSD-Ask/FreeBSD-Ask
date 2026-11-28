@@ -347,5 +347,3 @@ $ git clone https://github.com/FreeBSD-Ask/FreeBSD-Ask
 - [ ] 16.9.Kerberos（谁在用？）
 
 **需要重写** 的内容（请撰写这些内容）：
-
-参见：Projects[EB/OL]. [2026-03-26]. <https://github.com/FreeBSD-Ask/FreeBSD-Ask/projects>。
