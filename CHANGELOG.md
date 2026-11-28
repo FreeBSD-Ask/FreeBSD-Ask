@@ -4,7 +4,7 @@
 
 - 2026.11.28
   - 修复 2026 年 11 月链接检查报告（参见 [#2384](https://github.com/FreeBSD-Ask/FreeBSD-Ask/issues/2384)）中的失效链接：腾讯云章节的 MANIFEST 示例与 QEMU 安装章节的虚拟机镜像、RISC-V 镜像示例更新至当前发行版；mfsBSD 校验和链接改指镜像目录；HMCL 平台支持文档改用上游当前文件名；iTWire 引文改用互联网档案馆快照
-  - 43.4 节将 RADclock 项目主页改引 `ffclock(4)` 手册页，OpenWrt 讨论帖注明原址失效；36.9 节删除已不可访问的 GitLab 参考文献；38.3 节删去已下架的 Prism Launcher 离线登录绕过链接；43.6 节获取内核源码的示例由 `-CURRENT` 改为 `-STABLE`；18.3 节 SSH URI 示例改用具体端口写法。原因：上述引用均已失效，且官方镜像站不再提供 `-CURRENT` 的源码归档文件，原 SSH URI 示例含非数字端口，链接检查无法解析
+  - 43.4 节将 RADclock 项目主页改引 `ffclock(4)` 手册页，OpenWrt 讨论帖注明原址失效；36.9 节删除已不可访问的 GitLab 参考文献；38.3 节删去已下架的 Prism Launcher 离线登录绕过链接；43.6 节获取内核源码的示例由 `-CURRENT` 改为 `-STABLE`；18.3 节 SSH 端口示例改用 `ssh -p` 与 `scp -P` 写法。原因：上述引用均已失效，官方镜像站不再提供 `-CURRENT` 的源码归档文件，且 OpenSSH 命令行客户端不接受 URI 形式的登录目标
   - 修正 3.4 节关于 OpenBSD 支持 `nouveau` 驱动的错误表述，并删除参考文献中的对应条目。原因：`nouveau` 从未移植到 OpenBSD，原文所述与事实不符
   - 贡献者名单中 VZstless 的链接改为其现用账号；Sayunosyjou 账号已注销，保留姓名并去掉链接
   - README 的贡献者图片由 contrib.nn.ci 改为 contrib.rocks。原因：原服务频繁返回 500

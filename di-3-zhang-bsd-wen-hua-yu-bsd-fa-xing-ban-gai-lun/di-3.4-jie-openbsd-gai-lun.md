@@ -52,7 +52,7 @@ OpenBSD 采用 LLVM/Clang 项目构建系统，默认 shell 为 ksh（基于 pdk
 
 OpenBSD 软件包管理策略较为严格，过时的软件包会被移除。例如，用户几乎无法找到可用的图形显示管理器（GDM 除外）。
 
-OpenBSD 对 NVIDIA 显卡的支持，仅限 `nv` 这一 Xorg 用户态驱动，它大致停留在 2009 年左右的 GT200 系列。Linux 上的开源内核驱动 `nouveau` 从未移植到 OpenBSD，较新的 NVIDIA 显卡在 OpenBSD 下只能以 VESA 帧缓冲方式运行，无法进行硬件加速。
+OpenBSD 对 NVIDIA 显卡的支持，仅限 Xorg 的 `nv` 驱动，其 2D 加速大致停留在 2009 年左右的 GT200 系列。OpenBSD 的 Xorg 驱动集合（Xenocara）中不含 `nouveau`，较新的 NVIDIA 显卡只能以 VESA 帧缓冲方式运行，无法进行硬件加速。
 
 ### 文件系统
 
@@ -63,6 +63,7 @@ OpenBSD 默认使用的文件系统 FFS 在实现上与 FreeBSD 的 UFS 属于�
 ### 参考文献
 
 - nv - NVIDIA video driver[EB/OL]. [2026-03-26]. <https://man.openbsd.org/nv.4>.`nv` 驱动具体硬件支持列表。
+- OpenBSD. Xenocara: X.Org drivers[EB/OL]. [2026-11-28]. <https://cvsweb.openbsd.org/xenocara/driver/>. 官方 Xorg 驱动集合，其中 NVIDIA 驱动仅有 `xf86-video-nv`，不含 `nouveau`。
 
 - FreeBSD Project. ffs -- Berkeley fast file system[EB/OL]. [2026-04-02]. <https://man.freebsd.org/cgi/man.cgi?query=ffs&sektion=7>. 详细介绍 FFS 文件系统的技术规范与实现原理，提供系统文件系统设计参考。
 - Leffler S J. Changes to the Kernel in 4.2BSD[R]. University of California, Berkeley, 1983-07-25. 记载 4.2BSD 的内核变更，FFS 随该版本首次引入。4.2BSD 的正式发布时间为 1983 年 8 月，参见 MCKUSICK M K. Twenty Years of Berkeley Unix[M]//SALUS P H, ed. Open Sources: Voices from the Open Source Revolution. Sebastopol: O'Reilly, 1999.

@@ -212,13 +212,15 @@ def process_url_task(url):
             return res
         services = ARCHIVE_SERVICES[:]
         random.shuffle(services)
+        errors = []
         for s in services:
             res = request_archive(s, url, tid)
             if isinstance(res, str) and res.startswith("http"):
                 save_cache_item(h, {"archive_url": res, "service": s["name"]})
                 with LIST_LOCK: SESSION_SUCCESS.append((url, res))
                 return res
-        with LIST_LOCK: SESSION_FAILED.append((url, "Fail"))
+            errors.append(f"{s['name']}: {res}")
+        with LIST_LOCK: SESSION_FAILED.append((url, "; ".join(errors)))
         return None
     finally:
         with TASK_LOCK: ACTIVE_TASKS.pop(tid, None)
@@ -306,6 +308,11 @@ def main():
         STOP_EVENT.set()
         time.sleep(1)
         print("\n" + "="*50)
+        if SESSION_FAILED:
+            print(f"警告：{len(SESSION_FAILED)} 个 URL 未能归档：")
+            for failed_url, err in SESSION_FAILED:
+                print(f"  - {failed_url}（{err}）")
+            print(f"::warning::{len(SESSION_FAILED)} 个 URL 未能归档，详见上方清单")
         print(f"完成！共处理 {PROCESSED_FILES} 个文件。")
 
 if __name__ == "__main__":
