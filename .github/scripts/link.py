@@ -13,9 +13,6 @@ from datetime import datetime
 from urllib.parse import urlparse
 from tqdm import tqdm
 
-# 禁用 HTTPS 警告
-requests.packages.urllib3.disable_warnings()
-
 # ================= 基本配置 =================
 
 CACHE_FILE = "archive_cache.json"
@@ -54,6 +51,7 @@ SKIP_DOMAINS = {
     "rewards.bing.com",
     "creativecommons.org",
     "contrib.nn.ci",
+    "contrib.rocks",
 }
 
 STOP_EVENT = threading.Event()
@@ -188,15 +186,18 @@ def request_archive(service, url, tid):
         try:
             headers = {"User-Agent": random.choice(USER_AGENTS), "Referer": url}
             if service["type"] == "wayback":
-                r = requests.get(service["api"] + url, headers=headers, timeout=service["timeout"], verify=False)
+                r = requests.get(service["api"] + url, headers=headers, timeout=service["timeout"])
                 if "web.archive.org/web/" in r.url: return r.url
+                last_err = f"HTTP {r.status_code}" if not 200 <= r.status_code < 300 else "响应未包含存档地址"
             elif service["type"] == "archive_ph":
-                r = requests.post(f"https://{random.choice(service['domains'])}/submit/", data={"url": url}, headers=headers, timeout=service["timeout"], verify=False)
+                r = requests.post(f"https://{random.choice(service['domains'])}/submit/", data={"url": url}, headers=headers, timeout=service["timeout"])
                 m = re.search(r'https?://(?:archive\.is|archive\.today|archive\.ph)/(?:[A-Za-z0-9]+|wb/\d+/)', r.text)
                 if m: return m.group(0)
+                last_err = f"HTTP {r.status_code}" if not 200 <= r.status_code < 300 else "响应未包含存档地址"
             elif service["type"] == "megalodon":
-                r = requests.post(service["api"], data={"url": url, "agree": "1"}, headers=headers, timeout=service["timeout"], verify=False)
+                r = requests.post(service["api"], data={"url": url, "agree": "1"}, headers=headers, timeout=service["timeout"])
                 if "megalodon.jp" in r.url and re.search(r'\d{4}-\d{4}', r.url): return r.url
+                last_err = f"HTTP {r.status_code}" if not 200 <= r.status_code < 300 else "响应未包含存档地址"
         except Exception as e: last_err = type(e).__name__
         time.sleep(random.uniform(*THREAD_DELAY))
     return last_err
@@ -214,13 +215,15 @@ def process_url_task(url):
             return res
         services = ARCHIVE_SERVICES[:]
         random.shuffle(services)
+        errors = []
         for s in services:
             res = request_archive(s, url, tid)
             if isinstance(res, str) and res.startswith("http"):
                 save_cache_item(h, {"archive_url": res, "service": s["name"]})
                 with LIST_LOCK: SESSION_SUCCESS.append((url, res))
                 return res
-        with LIST_LOCK: SESSION_FAILED.append((url, "Fail"))
+            errors.append(f"{s['name']}: {res}")
+        with LIST_LOCK: SESSION_FAILED.append((url, "; ".join(errors)))
         return None
     finally:
         with TASK_LOCK: ACTIVE_TASKS.pop(tid, None)
@@ -308,6 +311,11 @@ def main():
         STOP_EVENT.set()
         time.sleep(1)
         print("\n" + "="*50)
+        if SESSION_FAILED:
+            print(f"警告：{len(SESSION_FAILED)} 个 URL 未能归档：")
+            for failed_url, err in SESSION_FAILED:
+                print(f"  - {failed_url}（{err}）")
+            print(f"::warning::{len(SESSION_FAILED)} 个 URL 未能归档，详见上方清单")
         print(f"完成！共处理 {PROCESSED_FILES} 个文件。")
 
 if __name__ == "__main__":

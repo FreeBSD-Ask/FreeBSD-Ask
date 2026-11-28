@@ -52,8 +52,7 @@ retry_wait_time = 3
 # accept = "200..=204, 429"
 # accept = ["200", "429"]
 # accept = "200, 429"
-# 202 为部分站点（IMDb、Berkeley 等）的防爬应答；405（Gitee）、406（GitLab GNOME）、412（Bilibili）为防盗链与反爬应答，均表明服务器存活
-accept = ["200", "429", "403", "418", "402", "202", "405", "406", "412"]
+accept = ["200", "429", "403", "418", "402"]
 
 # Proceed for server connections considered insecure (invalid TLS).
 insecure = true
@@ -99,36 +98,55 @@ glob_ignore_case = false
 exclude = [
     # 原有排除项
     '.*ip:.*', '.*ftp.freebsd.org.*', '.*localhost.*', '.*\$.*', '.*0\.0\.0\.0.*', 'http://ip/.*',
-    # 镜像站对脚本请求返回 302 循环重定向（南京大学、吉林大学、豆瓣、爱尔兰传记词典）
-    '.*mirrors?\.nju\.edu\.cn.*',
-    '.*mirrors\.jlu\.edu\.cn.*',
-    '.*douban\.com.*',
-    '.*dib\.ie.*',
-    # 反爬站点，HTTP/2 层报错或对无浏览器请求返回 404（ST、奥林匹克官网、Google Play）
-    '.*www\.st\.com.*',
-    '.*olympics\.com.*',
-    '.*play\.google\.com.*',
-    # 响应过慢的站点，CI 超时（McKusick 个人站、Open Sound System、DragonFly BSD 捐赠页、个人博客等）
-    '.*mckusick\.com.*',
-    '.*opensound\.com.*',
-    '.*www\.dragonflybsd\.org/donations.*',
-    '.*yooer\.me.*',
-    '.*src\.uniontech\.com.*',
-    '.*ubuntukylin\.com.*',
-    '.*goupsec\.com.*',
-    '.*posixcertified\.ieee\.org.*',
+    # 镜像站对脚本请求返回 302 循环重定向，仅排除正文实际引用的 URL
+    '^https?://mirror\.nju\.edu\.cn/gentoo/?$',
+    '^https?://mirror\.nju\.edu\.cn/gentoo/releases/amd64/autobuilds/?$',
+    '^https?://mirror\.nju\.edu\.cn/gentoo/releases/amd64/autobuilds/latest-stage3-amd64-llvm-openrc\.txt$',
+    '^https?://mirrors\.nju\.edu\.cn/?$',
+    '^https?://mirrors\.nju\.edu\.cn/freebsd/?$',
+    '^https?://mirrors\.nju\.edu\.cn/freebsd-pkg/?$',
+    '^https?://mirrors\.nju\.edu\.cn/freebsd-ports/?$',
+    '^https?://mirrors\.nju\.edu\.cn/freebsd-ports/ports\.tar\.gz$',
+    '^https?://mirrors\.nju\.edu\.cn/freebsd/releases/ISO-IMAGES/15\.0/FreeBSD-15\.0-RELEASE-amd64-bootonly\.iso$',
+    '^https?://mirrors\.nju\.edu\.cn/freebsd/releases/VM-IMAGES/15\.0-RELEASE/amd64/Latest/FreeBSD-15\.0-RELEASE-amd64-zfs\.raw\.xz$',
+    '^https?://mirrors\.nju\.edu\.cn/github-release/ventoy/Ventoy/Ventoy%201\.1\.10%20release/ventoy-1\.1\.10-linux\.tar\.gz$',
+    '^https?://mirrors\.jlu\.edu\.cn/archlinuxarm/os/ArchLinuxARM-rpi-aarch64-latest\.tar\.gz$',
+    '^https?://movie\.douban\.com/subject/(1291843|25932086)/?$',
+    '^https?://www\.dib\.ie/biography/berkeley-george-a0611$',
+    # 防盗链与反爬站点，仅排除正文实际引用的 URL
+    '^https?://www\.bilibili\.com/(video/(BV12zAYeKEej|BV13ji2YLE3m|BV13ji2YLELM|BV13ji2YLEkV|BV1BM41187pD|BV1Kvq2BiEqT|BV1Qji2YLEgS|BV1STExzEEhh|BV1bT4y1F7qK|BV1gji2YLE2o|BV1gji2YLEoC|BV1iM4y1j7E9|BV1wg4y1w7QV|BV1y8411d7pp)/?|read/(mobile\?id=21681916|cv21681916/?)|bangumi/media/(md3068|md77552))$',
+    '^https?://gitee\.com/openharmony/kernel_liteos_a/tree/master$',
+    '^https?://gitlab\.gnome\.org/World/ShellExtensions/desktop-icons(/|$)',
+    '^https?://www\.imdb\.com/title/tt3042408(/|$)',
+    '^https?://berkeleyplaques\.org/plaque/how-berkeley-got-its-name(/|$)',
+    '^https?://digicoll\.lib\.berkeley\.edu/record/81096(/|$)',
+    '^https?://www\.st\.com/en/development-tools/stm32cubemx\.html$',
+    '^https?://www\.olympics\.com/ioc/news/-faster-higher-stronger-together-ioc-session-approves-historic-change-in-olympic-motto$',
+    '^https?://play\.google\.com/store/apps/details\?id=com\.sonelli\.juicessh$',
+    # 响应过慢或持续 5xx 的站点，仅排除正文实际引用的页面
+    '^https?://www\.mckusick\.com/($|beastie/|buylist\.html)',
+    '^https?://www\.opensound\.com/bsd\.html$',
+    '^https?://www\.dragonflybsd\.org/donations/?$',
+    '^https?://yooer\.me/(宝塔面板|%E5%AE%9D)',
+    '^https?://src\.uniontech\.com/#?/security_advisory_detail\?utsa_id=UTSA-2024-003941$',
+    '^https?://ubuntukylin\.com/news/397-cn\.html$',
+    '^https?://www\.goupsec\.com/news/17579\.html$',
+    '^https?://get\.posixcertified\.ieee\.org/docs/POSIX_Certification_Policy_v1\.1\.pdf$',
+    '^https?://www\.leidinger\.net/blog/2025/05/24/freebsd-security-hardening-with-compiler-options/?$',
+    # 原讨论帖已失效，正文为便于考据保留原址
+    '^https?://forum\.openwrt\.org/viewtopic\.php\?pid=70060$',
     # 代码块与行内代码中的语法示例，并非真实链接
-    'ssh://.*',
-    'file://.*',
+    '^ssh://',
+    '^file://',
     '.*X\.Y-(RELEASE|STABLE).*',
-    '.*https://xx+x\.yyy.*',
-    '.*releases/download/auto-\d+$',
-    '.*book\.bsdcn\.org/changel.*',
-    '.*id=NNNNNN.*',
-    # QQ 官方直链随版本滚动失效，正文已注明从官方下载页获取最新链接
-    '.*dldir1(v6)?\.qq\.com.*',
+    '^https?://xx+x\.yyy(/|$)',
+    '^https://github\.com/ykla/slackware-WSL/releases/download/auto-\d+$',
+    '^https?://book\.bsdcn\.org/changel',
+    '^https?://cgit\.freebsd\.org/src/commit/\?id=NNNNNN$',
+    # QQ 官方直链随版本滚动失效，正文已注明从官方下载页获取最新链接；微信等其他路径仍照常检查
+    '^https?://dldir1(v6)?\.qq\.com/qqfile/qq/QQNT/Linux/',
     # GitHub 对该 issue 偶发返回 404，经核实真实存在
-    '.*zstd/issues/1526.*',
+    '^https://github\.com/facebook/zstd/issues/1526$',
 ]
 
 # Exclude these filesystem paths from getting checked.

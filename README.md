@@ -88,7 +88,7 @@ Microsoft Rewards 是微软必应搜索提供的积分计划。可通过 Microso
 
 ## 贡献者
 
-![贡献者](https://contrib.nn.ci/api?no_bot=true&repo=FreeBSD-Ask/FreeBSD-Ask)
+![贡献者](https://contrib.rocks/image?repo=FreeBSD-Ask/FreeBSD-Ask)
 
 ## 授权协议与法律声明
 
