@@ -117,6 +117,8 @@ exclude = [
     '.*ubuntukylin\.com.*',
     '.*goupsec\.com.*',
     '.*leidinger\.net.*',
+    # 原讨论帖已失效，正文为便于考据保留原址
+    '.*forum\.openwrt\.org.*',
     '.*posixcertified\.ieee\.org.*',
     # 代码块与行内代码中的语法示例，并非真实链接
     'ssh://.*',
