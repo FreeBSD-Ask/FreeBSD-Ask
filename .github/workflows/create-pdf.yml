@@ -12,20 +12,18 @@ on:
 
 jobs:
   build:
+    # 仅允许从默认分支发布，防止手动触发时把日期标签与 Release 改写为非默认分支的内容；
+    # 不依赖 github.event.repository（schedule 事件的 payload 不保证包含该字段），本仓库默认分支固定为 main
+    if: github.ref == 'refs/heads/main'
+    # 并发控制置于 job 级：被上面条件跳过的非 main 运行不进入队列。
+    # 注意 GitHub 并发组并非 FIFO 队列：最多保留一个等待中的运行，更晚到达的运行会替换它；
+    # 本工作流按周运行且可手动补跑，被替换的运行由下一次触发补足
+    concurrency:
+      group: create-pdf-publish
+      cancel-in-progress: false
     runs-on: ubuntu-latest
 
     steps:
-      # ================= 字体安装部分 =================
-      - name: 安装字体
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y fonts-wqy-microhei ttf-wqy-zenhei fonts-noto-core fonts-noto-cjk
-
-      - name: 设置时区
-        run: |
-          sudo timedatectl set-timezone Asia/Shanghai
-          timedatectl
-
       # ================= 仓库检出部分 =================
       - name: 检出 FreeBSD-Ask 主仓库
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
@@ -40,8 +38,101 @@ jobs:
           repository: FreeBSD-Ask/gitbook-pdf-export
           path: pdf-generator
 
+      # ================= 发布状态判断 =================
+      - name: 🚀 设置发布日期标签
+        id: set_tag
+        # 显式使用北京时间取日期，避免运行器 UTC 日期与后续产物命名所用时区不一致
+        run: echo "RELEASE_TAG=$(TZ=Asia/Shanghai date +'%Y.%m.%d')" >> $GITHUB_ENV
+
+      - name: 🔍 判断当日发布状态
+        id: publish_state
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9
+        with:
+          script: |
+            const tag = process.env.RELEASE_TAG;
+            try {
+              const { data: release } = await github.rest.repos.getReleaseByTag({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                tag
+              });
+              // 仅当非草稿、非预发布、两个附件均已上传完成、发布说明已写入，
+              // 且日期标签存在并指向 main 历史内的提交时视为发布完成；
+              // 附件上传中断会留下 starter 状态的占位资产，标签被删除或移走同样视为不完整
+              const pdf = release.assets.find(asset => asset.name === `${tag}.pdf`);
+              const epub = release.assets.find(asset => asset.name === `${tag}.epub`);
+              let tagOk = false;
+              try {
+                const { data: tagRef } = await github.rest.git.getRef({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  ref: `tags/${tag}`
+                });
+                const { execSync } = require('child_process');
+                execSync(`git -C FreeBSD-Ask merge-base --is-ancestor ${tagRef.object.sha} HEAD`);
+                tagOk = true;
+              } catch (err) {
+                core.info(`标签 ${tag} 校验未通过：${err.message}`);
+              }
+              const complete = !release.draft
+                && !release.prerelease
+                && pdf && pdf.state === 'uploaded'
+                && epub && epub.state === 'uploaded'
+                && !!release.body
+                && tagOk;
+              if (complete) {
+                core.setOutput('skip', 'true');
+                core.info(`Release ${tag} 已完整发布，跳过构建与发布流程`);
+              } else {
+                core.setOutput('skip', 'false');
+                core.info(`Release ${tag} 不完整（草稿：${release.draft}；预发布：${release.prerelease}；附件：${release.assets.map(a => `${a.name}:${a.state}`).join(', ') || '无'}；发布说明：${release.body ? '有' : '空'}），继续流程以补全`);
+              }
+            } catch (err) {
+              if (err.status === 404) {
+                core.setOutput('skip', 'false');
+                core.info(`Release ${tag} 不存在，执行完整发布流程`);
+              } else {
+                throw err;
+              }
+            }
+
+      # ================= 构建目标确定 =================
+      - name: 📌 确定构建目标提交
+        if: steps.publish_state.outputs.skip != 'true'
+        working-directory: FreeBSD-Ask
+        run: |
+          # 当日标签已存在说明上次运行中断于发布阶段：先验证标签指向 main 历史内的提交，
+          # 再检出该提交构建，使发布附件与标签始终一致；标签一经创建便不再移动
+          git fetch --tags --force
+          if git rev-parse -q --verify "refs/tags/${{ env.RELEASE_TAG }}" >/dev/null; then
+            if git merge-base --is-ancestor "${{ env.RELEASE_TAG }}" HEAD; then
+              git checkout "${{ env.RELEASE_TAG }}"
+              echo "检出当日既有标签 ${{ env.RELEASE_TAG }} 指向的提交进行构建"
+            else
+              echo "标签 ${{ env.RELEASE_TAG }} 指向 main 历史之外的提交，拒绝基于无关提交发布，请人工核查" >&2
+              exit 1
+            fi
+          else
+            echo "当日标签尚不存在，基于当前检出提交构建"
+          fi
+          echo "BUILD_COMMIT=$(git rev-parse HEAD)" >> $GITHUB_ENV
+
+      # ================= 字体安装部分 =================
+      - name: 安装字体
+        if: steps.publish_state.outputs.skip != 'true'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y fonts-wqy-microhei ttf-wqy-zenhei fonts-noto-core fonts-noto-cjk
+
+      - name: 设置时区
+        if: steps.publish_state.outputs.skip != 'true'
+        run: |
+          sudo timedatectl set-timezone Asia/Shanghai
+          timedatectl
+
       # ================= 初始化标签检查 =================
       - name: 检查或创建初始标签
+        if: steps.publish_state.outputs.skip != 'true'
         working-directory: FreeBSD-Ask
         run: |
           timedatectl
@@ -55,12 +146,14 @@ jobs:
 
       # ================= 环境配置部分 =================
       - name: 设置 Python 环境
+        if: steps.publish_state.outputs.skip != 'true'
         uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7
         with:
           python-version: '3.15'
           check-latest: true
 
       - name: 安装 Python 依赖
+        if: steps.publish_state.outputs.skip != 'true'
         run: |
           sudo apt-get install -y \
             libpango-1.0-0 \
@@ -71,19 +164,18 @@ jobs:
           pip install -r pdf-generator/requirements.txt
       # ================= PDF 生成部分 =================
       - name: 生成 PDF 文档
+        if: steps.publish_state.outputs.skip != 'true'
         run: |
           cd pdf-generator
           python mdconv.py ../FreeBSD-Ask
-          mv build/final.pdf build/$(date +'%Y.%m.%d').pdf
-          mv build/final.epub build/$(date +'%Y.%m.%d').epub
+          # 与 RELEASE_TAG 使用同一日期来源，保证产物名与标签、Release 附件名一致
+          mv build/final.pdf "build/${RELEASE_TAG}.pdf"
+          mv build/final.epub "build/${RELEASE_TAG}.epub"
         env:
           PYTHONPATH: ${{ github.workspace }}/pdf-generator
       # ================= 发布流程部分 =================
-      - name: 🚀 设置发布日期标签
-        id: set_tag
-        run: echo "RELEASE_TAG=$(date +'%Y.%m.%d')" >> $GITHUB_ENV
-
       - name: 🔍 获取前一个标签 (优化版本)
+        if: steps.publish_state.outputs.skip != 'true'
         working-directory: FreeBSD-Ask
         run: |
           git fetch --tags --force
@@ -99,34 +191,15 @@ jobs:
           echo "PREVIOUS_TAG=$PREVIOUS_TAG" >> $GITHUB_ENV
 
       - name: 调试 - 检查提取到的标签值
+        if: steps.publish_state.outputs.skip != 'true'
         run: |
           echo "本次发布标签 (RELEASE_TAG): ${{ env.RELEASE_TAG }}"
           echo "上次发布标签 (PREVIOUS_TAG): ${{ env.PREVIOUS_TAG }}"
+          echo "构建提交 (BUILD_COMMIT): ${{ env.BUILD_COMMIT }}"
           echo "------------------------------------------------------"
 
-      - name: 🏷️ 创建 Git 标签并推送
-        working-directory: FreeBSD-Ask
-        run: |
-          timedatectl
-          git config --global user.email "yklaxds@gmail.com"
-          git config --global user.name "ykla"
-          # 同日重试时标签可能已存在（上次运行失败于发布阶段），
-          # 此时重用标签而非失败；标签指向与当前 HEAD 不一致时强制重置，保证发布内容与标签一致
-          if git rev-parse -q --verify "refs/tags/${{ env.RELEASE_TAG }}" >/dev/null; then
-            echo "标签 ${{ env.RELEASE_TAG }} 已存在，重用该标签"
-            if [ "$(git rev-list -1 "${{ env.RELEASE_TAG }}")" != "$(git rev-parse HEAD)" ]; then
-              echo "标签指向与当前 HEAD 不一致，强制重置到 HEAD"
-              git tag -f ${{ env.RELEASE_TAG }} HEAD
-              git push --force origin ${{ env.RELEASE_TAG }}
-            else
-              git push origin ${{ env.RELEASE_TAG }}
-            fi
-          else
-            git tag ${{ env.RELEASE_TAG }}
-            git push origin ${{ env.RELEASE_TAG }}
-          fi
-
       - name: 📜 生成增量变更日志
+        if: steps.publish_state.outputs.skip != 'true'
         uses: janheinrichmerker/action-github-changelog-generator@e60b5a2bd9fcd88dadf6345ff8327863fb8b490f # v2.4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -136,6 +209,7 @@ jobs:
 
       - name: 📥 读取变更日志内容
         id: read_changelog
+        if: steps.publish_state.outputs.skip != 'true'
         run: |
           timedatectl
           CHANGES=$(cat CHANGELOG.md | sed 's/\"/\\"/g')
@@ -144,34 +218,44 @@ jobs:
           echo "EOF" >> $GITHUB_ENV
 
       - name: ✨ 创建 GitHub Release
+        if: steps.publish_state.outputs.skip != 'true'
         uses: ncipollo/release-action@339a81892b84b4eeb0f6e744e4574d79d0d9b8dd # v1.21.0
         id: create_release
         with:
           tag: ${{ env.RELEASE_TAG }}
           name: ${{ env.RELEASE_TAG }}
+          # 显式指定构建提交：标签不存在时由 GitHub 以此创建，保证标签与构建、附件同源
+          commit: ${{ env.BUILD_COMMIT }}
+          # 发布说明随 Release 创建/更新一并写入，避免独立更新步骤造成的说明与发布时间窗
+          body: ${{ env.CHANGES_CONTENT }}
           artifacts: |
             pdf-generator/build/${{ env.RELEASE_TAG }}.pdf
             pdf-generator/build/${{ env.RELEASE_TAG }}.epub
           token: ${{ secrets.GITHUB_TOKEN }}
           makeLatest: true
-          # 同日重试时 Release 可能已存在，更新它以完成发布；replacesArtifacts 默认为 true，附件自动替换
+          # 当日 Release 不完整（附件缺失、上传中断、草稿或预发布）时仍会执行到此，更新它以补全；
+          # replacesArtifacts 默认为 true，同名附件自动替换
           allowUpdates: true
 
-      - name: 📝 更新 Release 说明 (包含变更日志)
-        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          script: |
-            const { data: release } = await github.rest.repos.getReleaseByTag({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              tag: process.env.RELEASE_TAG
-            });
-            console.log(`找到 Release ID: ${release.id}`);
-            await github.rest.repos.updateRelease({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              release_id: release.id,
-              body: process.env.CHANGES_CONTENT
-            });
-            console.log('Release body 更新完成。');
+      - name: 🏷️ 核对 Git 标签
+        if: steps.publish_state.outputs.skip != 'true'
+        working-directory: FreeBSD-Ask
+        run: |
+          timedatectl
+          git config --global user.email "yklaxds@gmail.com"
+          git config --global user.name "ykla"
+          git fetch --tags --force
+          # Release 步骤会经 GitHub API 以构建提交自动创建标签；此步骤在发布成功后核对，
+          # 标签缺失则补建并推送，指向不一致则保留原标签并终止，交人工核查
+          if git rev-parse -q --verify "refs/tags/${{ env.RELEASE_TAG }}" >/dev/null; then
+            if [ "$(git rev-list -1 "${{ env.RELEASE_TAG }}")" = "${{ env.BUILD_COMMIT }}" ]; then
+              echo "标签 ${{ env.RELEASE_TAG }} 已存在且指向构建提交"
+            else
+              echo "标签 ${{ env.RELEASE_TAG }} 指向与构建提交不一致，保留原标签并终止，请人工核查" >&2
+              exit 1
+            fi
+          else
+            echo "标签 ${{ env.RELEASE_TAG }} 不存在，补建并推送"
+            git tag "${{ env.RELEASE_TAG }}" "${{ env.BUILD_COMMIT }}"
+            git push origin "${{ env.RELEASE_TAG }}"
+          fi
