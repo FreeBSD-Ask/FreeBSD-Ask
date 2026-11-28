@@ -262,11 +262,13 @@ def process_url_task(url):
 
 def process_file(path):
     global PROCESSED_FILES
-    if SCAN_ROOT and not is_within(SCAN_ROOT, path):
+    # 打开解析后的真实路径并在打开前复检，避免检查后路径被替换为越界符号链接
+    real_path = os.path.realpath(path)
+    if SCAN_ROOT and not is_within(SCAN_ROOT, real_path):
         with LIST_LOCK: PROCESSED_FILES += 1
         return
     try:
-        with open(path, "r", encoding="utf-8") as f: content = f.read()
+        with open(real_path, "r", encoding="utf-8") as f: content = f.read()
     except: 
         with LIST_LOCK: PROCESSED_FILES += 1
         return
@@ -295,10 +297,18 @@ def process_file(path):
             count += 1
 
     if count > 0:
-        with open(path, "w", encoding="utf-8") as f: f.write(new_content)
+        write_path = safe_write_path(SCAN_ROOT, real_path)
+        if write_path is None:
+            with LIST_LOCK: PROCESSED_FILES += 1
+            return
+        # 以文件描述符写入；POSIX 下 O_NOFOLLOW 拒绝末段符号链接
+        flags = os.O_WRONLY | os.O_CREAT | os.O_TRUNC
+        if hasattr(os, "O_NOFOLLOW"): flags |= os.O_NOFOLLOW
+        fd = os.open(write_path, flags)
+        with os.fdopen(fd, "w", encoding="utf-8") as f: f.write(new_content)
         with LIST_LOCK:
-            SESSION_UPDATED_FILES.append(os.path.basename(path))
-        safe_log(f"已更新: {os.path.basename(path)} (+{count})", "32")
+            SESSION_UPDATED_FILES.append(os.path.basename(write_path))
+        safe_log(f"已更新: {os.path.basename(write_path)} (+{count})", "32")
     
     # 文件处理结束，增加进度计数
     with LIST_LOCK:
@@ -315,6 +325,20 @@ def is_within(root, path):
         return os.path.normcase(common) == os.path.normcase(root_real)
     except ValueError:
         return False
+
+def safe_write_path(root, path):
+    """返回限制在 root 内且不含 .. 段的真实写入路径；越界或无法解析时返回 None。"""
+    if not root:
+        return None
+    try:
+        root_real = os.path.realpath(root)
+        path_real = os.path.realpath(path)
+        rel = os.path.relpath(path_real, root_real)
+    except ValueError:
+        return None
+    if rel == ".." or rel.startswith(".." + os.sep) or os.path.isabs(rel):
+        return None
+    return os.path.join(root_real, rel)
 
 def collect_md_files(path):
     md_files = []
@@ -333,12 +357,12 @@ def main():
     global TOTAL_FILES, SCAN_ROOT
     if len(sys.argv) != 2:
         print("用法: python link.py <文件或目录>")
-        return
+        return 2
 
     target = sys.argv[1]
     if not is_within(os.getcwd(), target):
         print("错误: 目标路径必须位于当前工作目录内。")
-        return
+        return 1
     SCAN_ROOT = os.path.realpath(target)
     
     # 递归收集文件
@@ -347,7 +371,7 @@ def main():
     TOTAL_FILES = len(all_files)
     if TOTAL_FILES == 0:
         print("错误: 未找到任何 .md 文件。")
-        return
+        return 1
 
     ui = threading.Thread(target=ui_monitor_thread, daemon=True)
     ui.start()
@@ -368,6 +392,7 @@ def main():
                 print(f"  - {failed_url}（{err}）")
             print(f"::warning::{len(SESSION_FAILED)} 个 URL 未能归档，详见上方清单")
         print(f"完成！共处理 {PROCESSED_FILES} 个文件。")
+    return 0
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())

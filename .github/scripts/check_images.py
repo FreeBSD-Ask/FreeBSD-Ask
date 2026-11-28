@@ -1,5 +1,4 @@
 import os
-import re
 from pathlib import Path
 
 # 配置目录
@@ -13,11 +12,55 @@ for root, _, files in os.walk(repo_root):
         if file.lower().endswith('.md'):
             md_files.append(Path(root) / file)
 
-# 正则表达式匹配图片引用；使用线性模式避免回溯导致的超线性耗时
-image_pattern = re.compile(
-    r'!\[[^\]]*\]\(\s*<?([^)\s>]+)',
-    re.IGNORECASE
-)
+def extract_image_targets(text):
+    """提取 Markdown 图片目标；处理转义与平衡方括号，并要求闭合的右括号。"""
+    targets = []
+    i = 0
+    n = len(text)
+    while i < n:
+        start = text.find("![", i)
+        if start < 0:
+            break
+        j = start + 2
+        depth = 1
+        while j < n and depth > 0:
+            ch = text[j]
+            if ch == "\\":
+                j += 2
+                continue
+            if ch == "[":
+                depth += 1
+            elif ch == "]":
+                depth -= 1
+            j += 1
+        if depth != 0 or j >= n or text[j] != "(":
+            i = start + 2
+            continue
+        k = j + 1
+        while k < n and text[k] in " \t\r\n":
+            k += 1
+        if k < n and text[k] == "<":
+            end = text.find(">", k + 1)
+            if end < 0:
+                i = start + 2
+                continue
+            target = text[k + 1:end].strip()
+            close = text.find(")", end + 1)
+        else:
+            tstart = k
+            while k < n and text[k] not in " \t\r\n)":
+                if text[k] == "\\" and k + 1 < n:
+                    k += 2
+                    continue
+                k += 1
+            target = text[tstart:k]
+            close = text.find(")", k)
+        if close < 0 or not target:
+            i = start + 2
+            continue
+        targets.append(target)
+        i = close + 1
+    return targets
 
 # 收集所有使用的图片路径
 used_images = set()
@@ -26,8 +69,8 @@ for md_file in md_files:
     md_path = Path(md_file)
     content = md_path.read_text(encoding='utf-8')
 
-    for match in image_pattern.findall(content):
-        img_path = match.strip().replace('\\', '/')
+    for target in extract_image_targets(content):
+        img_path = target.strip().replace('\\', '/')
         if any(img_path.startswith(p) for p in ('http://', 'https://', '//')):
             continue
 
