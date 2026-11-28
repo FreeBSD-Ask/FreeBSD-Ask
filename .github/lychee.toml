@@ -108,7 +108,7 @@ exclude = [
     '.*www\.st\.com.*',
     '.*olympics\.com.*',
     '.*play\.google\.com.*',
-    # 响应过慢的站点，CI 超时（McKusick 个人站、Open Sound System、DragonFly BSD 捐赠页、个人博客等）
+    # 响应过慢或持续 5xx 的站点（McKusick 个人站、Open Sound System、DragonFly BSD 捐赠页、个人博客等）
     '.*mckusick\.com.*',
     '.*opensound\.com.*',
     '.*www\.dragonflybsd\.org/donations.*',
@@ -116,6 +116,7 @@ exclude = [
     '.*src\.uniontech\.com.*',
     '.*ubuntukylin\.com.*',
     '.*goupsec\.com.*',
+    '.*leidinger\.net.*',
     '.*posixcertified\.ieee\.org.*',
     # 代码块与行内代码中的语法示例，并非真实链接
     'ssh://.*',
