@@ -160,8 +160,9 @@ jobs:
             libpangoft2-1.0-0 \
             libpangocairo-1.0-0
           # 直接采用 pdf-generator 的 requirements.txt：python-docx 必需，
-          # 且上游刻意收紧版本上限（mdconv 会 patch WeasyPrint 内部）
-          pip install -r pdf-generator/requirements.txt
+          # 且上游刻意收紧版本上限（mdconv 会 patch WeasyPrint 内部）；
+          # 仅允许二进制 wheel，避免安装阶段执行上游 setup 脚本
+          pip install --only-binary :all: -r pdf-generator/requirements.txt
       # ================= PDF 生成部分 =================
       - name: 生成 PDF 文档
         if: steps.publish_state.outputs.skip != 'true'
