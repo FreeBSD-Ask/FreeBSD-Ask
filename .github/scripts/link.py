@@ -158,6 +158,35 @@ def should_skip_url(url):
         return not host or "." not in host or host in SKIP_DOMAINS
     except: return True
 
+ARCHIVE_RESULT_HOSTS = {
+    "web.archive.org": "wayback",
+    "archive.is": "archive_ph",
+    "archive.today": "archive_ph",
+    "archive.ph": "archive_ph",
+    "megalodon.jp": "megalodon",
+}
+
+def is_archive_result(service_type, url):
+    """校验存档服务返回的地址属于对应服务的已知主机，避免把任意外部地址回写正文。"""
+    try:
+        parsed = urlparse(url)
+        host = (parsed.hostname or "").lower()
+    except ValueError:
+        return False
+    if parsed.scheme not in ("http", "https") or ARCHIVE_RESULT_HOSTS.get(host) != service_type:
+        return False
+    if service_type == "wayback":
+        return parsed.path.startswith("/web/")
+    if service_type == "archive_ph":
+        return re.match(r"^/(?:[A-Za-z0-9]+|wb/\d+/)", parsed.path) is not None
+    if service_type == "megalodon":
+        return re.search(r"\d{4}-\d{4}", parsed.path) is not None
+    return False
+
+def is_archive_result_any(url):
+    """不区分服务类型地校验缓存地址，兼容旧缓存与手工修改过的缓存条目。"""
+    return any(is_archive_result(t, url) for t in set(ARCHIVE_RESULT_HOSTS.values()))
+
 def load_cache():
     with CACHE_LOCK:
         if os.path.exists(CACHE_FILE):
@@ -187,16 +216,16 @@ def request_archive(service, url, tid):
             headers = {"User-Agent": random.choice(USER_AGENTS), "Referer": url}
             if service["type"] == "wayback":
                 r = requests.get(service["api"] + url, headers=headers, timeout=service["timeout"])
-                if "web.archive.org/web/" in r.url: return r.url
+                if is_archive_result("wayback", r.url): return r.url
                 last_err = f"HTTP {r.status_code}" if not 200 <= r.status_code < 300 else "响应未包含存档地址"
             elif service["type"] == "archive_ph":
                 r = requests.post(f"https://{random.choice(service['domains'])}/submit/", data={"url": url}, headers=headers, timeout=service["timeout"])
                 m = re.search(r'https?://(?:archive\.is|archive\.today|archive\.ph)/(?:[A-Za-z0-9]+|wb/\d+/)', r.text)
-                if m: return m.group(0)
+                if m and is_archive_result("archive_ph", m.group(0)): return m.group(0)
                 last_err = f"HTTP {r.status_code}" if not 200 <= r.status_code < 300 else "响应未包含存档地址"
             elif service["type"] == "megalodon":
                 r = requests.post(service["api"], data={"url": url, "agree": "1"}, headers=headers, timeout=service["timeout"])
-                if "megalodon.jp" in r.url and re.search(r'\d{4}-\d{4}', r.url): return r.url
+                if is_archive_result("megalodon", r.url): return r.url
                 last_err = f"HTTP {r.status_code}" if not 200 <= r.status_code < 300 else "响应未包含存档地址"
         except Exception as e: last_err = type(e).__name__
         time.sleep(random.uniform(*THREAD_DELAY))
@@ -207,18 +236,20 @@ def process_url_task(url):
     tid = threading.get_ident() % 1000
     with TASK_LOCK: ACTIVE_TASKS[tid] = {"url": url, "start_time": time.time(), "service": "Wait"}
     try:
-        h = hashlib.md5(url.encode()).hexdigest()
+        h = hashlib.sha256(url.encode()).hexdigest()
         cache = load_cache()
-        if h in cache and cache[h].get("archive_url"):
-            res = cache[h]["archive_url"]
-            with LIST_LOCK: SESSION_SUCCESS.append((url, res))
-            return res
+        cached = cache.get(h)
+        cached_url = cached.get("archive_url") if isinstance(cached, dict) else None
+        # 缓存可能来自旧版本或被人工修改，只有通过地址校验才可回写正文
+        if cached_url and is_archive_result_any(cached_url):
+            with LIST_LOCK: SESSION_SUCCESS.append((url, cached_url))
+            return cached_url
         services = ARCHIVE_SERVICES[:]
         random.shuffle(services)
         errors = []
         for s in services:
             res = request_archive(s, url, tid)
-            if isinstance(res, str) and res.startswith("http"):
+            if isinstance(res, str) and res.startswith("http") and is_archive_result(s["type"], res):
                 save_cache_item(h, {"archive_url": res, "service": s["name"]})
                 with LIST_LOCK: SESSION_SUCCESS.append((url, res))
                 return res

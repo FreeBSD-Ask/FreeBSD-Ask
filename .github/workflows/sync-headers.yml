@@ -35,6 +35,13 @@ jobs:
             # 跳过无效条目
             [ -z "$title" ] || [ ! -f "$path" ] && continue
 
+            # 仅允许同步仓库内的 Markdown 文件：SUMMARY.md 条目若含 ..、绝对路径
+            # 或指向仓库外的符号链接，一律跳过，避免越界覆盖工作区外的文件
+            case "$(realpath -m -- "$path")" in
+              "$(pwd -P)"/*.md) ;;
+              *) echo "跳过越界条目：$path" >&2; continue ;;
+            esac
+
             # 获取文件第一行并清理格式
             first_line=$(head -n 1 "$path" | sed 's/^#*//; s/^[[:space:]]*//; s/[[:space:]]*$//')
             clean_title=$(sed 's/^[[:space:]]*//; s/[[:space:]]*$//' <<< "$title")
