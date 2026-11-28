@@ -51,6 +51,7 @@ SKIP_DOMAINS = {
     "rewards.bing.com",
     "creativecommons.org",
     "contrib.nn.ci",
+    "contrib.rocks",
 }
 
 STOP_EVENT = threading.Event()

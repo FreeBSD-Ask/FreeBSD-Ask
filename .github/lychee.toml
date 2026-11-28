@@ -52,8 +52,7 @@ retry_wait_time = 3
 # accept = "200..=204, 429"
 # accept = ["200", "429"]
 # accept = "200, 429"
-# 202 为部分站点（IMDb、Berkeley 等）的防爬应答；405（Gitee）、406（GitLab GNOME）、412（Bilibili）为防盗链与反爬应答，均表明服务器存活
-accept = ["200", "429", "403", "418", "402", "202", "405", "406", "412"]
+accept = ["200", "429", "403", "418", "402"]
 
 # Proceed for server connections considered insecure (invalid TLS).
 insecure = true
@@ -100,38 +99,44 @@ exclude = [
     # 原有排除项
     '.*ip:.*', '.*ftp.freebsd.org.*', '.*localhost.*', '.*\$.*', '.*0\.0\.0\.0.*', 'http://ip/.*',
     # 镜像站对脚本请求返回 302 循环重定向（南京大学、吉林大学、豆瓣、爱尔兰传记词典）
-    '.*mirrors?\.nju\.edu\.cn.*',
-    '.*mirrors\.jlu\.edu\.cn.*',
-    '.*douban\.com.*',
-    '.*dib\.ie.*',
-    # 反爬站点，HTTP/2 层报错或对无浏览器请求返回 404（ST、奥林匹克官网、Google Play）
-    '.*www\.st\.com.*',
-    '.*olympics\.com.*',
-    '.*play\.google\.com.*',
+    '^https?://([^/]+\.)?mirrors?\.nju\.edu\.cn(/|$)',
+    '^https?://([^/]+\.)?mirrors\.jlu\.edu\.cn(/|$)',
+    '^https?://([^/]+\.)?douban\.com(/|$)',
+    '^https?://([^/]+\.)?dib\.ie(/|$)',
+    # 防盗链与反爬站点：对脚本请求返回 404、202、405、406、412 或在 HTTP/2 层拒绝
+    '^https?://([^/]+\.)?bilibili\.com(/|$)',
+    '^https?://([^/]+\.)?gitee\.com(/|$)',
+    '^https?://([^/]+\.)?gitlab\.gnome\.org(/|$)',
+    '^https?://([^/]+\.)?imdb\.com(/|$)',
+    '^https?://([^/]+\.)?berkeleyplaques\.org(/|$)',
+    '^https?://([^/]+\.)?digicoll\.lib\.berkeley\.edu(/|$)',
+    '^https?://www\.st\.com(/|$)',
+    '^https?://([^/]+\.)?olympics\.com(/|$)',
+    '^https?://([^/]+\.)?play\.google\.com(/|$)',
     # 响应过慢或持续 5xx 的站点（McKusick 个人站、Open Sound System、DragonFly BSD 捐赠页、个人博客等）
-    '.*mckusick\.com.*',
-    '.*opensound\.com.*',
-    '.*www\.dragonflybsd\.org/donations.*',
-    '.*yooer\.me.*',
-    '.*src\.uniontech\.com.*',
-    '.*ubuntukylin\.com.*',
-    '.*goupsec\.com.*',
-    '.*leidinger\.net.*',
+    '^https?://([^/]+\.)?mckusick\.com(/|$)',
+    '^https?://([^/]+\.)?opensound\.com(/|$)',
+    '^https?://www\.dragonflybsd\.org/donations(/|$)',
+    '^https?://([^/]+\.)?yooer\.me(/|$)',
+    '^https?://([^/]+\.)?src\.uniontech\.com(/|$)',
+    '^https?://([^/]+\.)?ubuntukylin\.com(/|$)',
+    '^https?://([^/]+\.)?goupsec\.com(/|$)',
+    '^https?://([^/]+\.)?posixcertified\.ieee\.org(/|$)',
+    '^https?://([^/]+\.)?leidinger\.net(/|$)',
     # 原讨论帖已失效，正文为便于考据保留原址
-    '.*forum\.openwrt\.org.*',
-    '.*posixcertified\.ieee\.org.*',
+    '^https?://([^/]+\.)?forum\.openwrt\.org/viewtopic\.php\?pid=70060$',
     # 代码块与行内代码中的语法示例，并非真实链接
-    'ssh://.*',
-    'file://.*',
+    '^ssh://',
+    '^file://',
     '.*X\.Y-(RELEASE|STABLE).*',
-    '.*https://xx+x\.yyy.*',
-    '.*releases/download/auto-\d+$',
-    '.*book\.bsdcn\.org/changel.*',
-    '.*id=NNNNNN.*',
-    # QQ 官方直链随版本滚动失效，正文已注明从官方下载页获取最新链接
-    '.*dldir1(v6)?\.qq\.com.*',
+    '^https?://xx+x\.yyy(/|$)',
+    '^https://github\.com/ykla/slackware-WSL/releases/download/auto-\d+$',
+    '^https?://book\.bsdcn\.org/changel',
+    '^https?://cgit\.freebsd\.org/src/commit/\?id=NNNNNN$',
+    # QQ 官方直链随版本滚动失效，正文已注明从官方下载页获取最新链接；微信等其他路径仍照常检查
+    '^https?://dldir1(v6)?\.qq\.com/qqfile/qq/QQNT/Linux/',
     # GitHub 对该 issue 偶发返回 404，经核实真实存在
-    '.*zstd/issues/1526.*',
+    '^https://github\.com/facebook/zstd/issues/1526$',
 ]
 
 # Exclude these filesystem paths from getting checked.
